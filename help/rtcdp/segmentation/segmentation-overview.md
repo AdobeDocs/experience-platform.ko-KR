@@ -1,0 +1,28 @@
+---
+title: 세그멘테이션 서비스 개요
+seo-title: Adobe 실시간 고객 데이터 플랫폼의 세분화 서비스
+description: 세그멘테이션 서비스를 설명하는 개요입니다.
+seo-description: Adobe 실시간 고객 데이터 플랫폼의 세분화 서비스 및 세그먼트를 설명하는 개요입니다.
+translation-type: tm+mt
+source-git-commit: bcb4279d04e39905fa64b817fdadd8a875e27697
+
+---
+
+
+# 실시간 고객 데이터 플랫폼의 세분화 서비스
+
+실시간 고객 데이터 플랫폼(실시간 CDP)을 사용하면 여러 소스에서 데이터를 가져와 고객의 기대에 부응하는 일관된 경험을 제공할 수 있습니다. Adobe Experience Platform의 일부인 세그멘테이션 서비스를 사용하여 연관성 있는 개인화된 마케팅 캠페인을 제공할 수 있습니다.
+
+실시간 CDP는 Adobe Experience Platform을 기반으로 구축되었으며 많은 경험 플랫폼 서비스 및 기능을 사용합니다. 세그멘테이션 서비스를 사용하면 유사한 트레이트를 사용하여 고객을 작은 그룹으로 나누어 맞춤 마케팅을 제공할 수 있습니다.
+
+## 세그먼테이션
+
+세그먼테이션은 프로필 하위 세트가 프로필 스토어와 공유한 특정 특성 또는 행동을 정의하여 마케팅 가능한 사용자 그룹과 고객 기반을 구별하는 프로세스입니다. 예를 들어 &quot;운동화 구입을 잊으셨습니까?&quot;라는 이메일 캠페인에서 지난 30일 이내에 운동화를 검색했지만 구매를 완료하지 않은 모든 사용자를 원할 수 있습니다. 다양한 세그먼트를 사용하여 다양한 고객에 초점을 맞춰 보다 맞춤화된 마케팅 경험을 제공할 수 있습니다.
+
+## 세그먼트 빌더
+
+플랫폼을 사용하면 세그먼트를 쉽게 만들고 액세스할 수 있을 뿐만 아니라, 다른 구성 요소를 사용하여 세그먼트를 더 자세히 특정할 수 있습니다. 세그먼트 빌더 사용 방법에 대한 자세한 내용은 세그먼트 빌더 [안내서를](./segment-builder-guide.md)참조하십시오.
+
+## 다음 단계
+
+이 개요를 본 후에는 실시간 CDP가 세그멘테이션 서비스를 사용하여 마케팅 캠페인의 맞춤화 및 개인화를 향상시키는 방법을 이해해야 합니다. 세그멘테이션 서비스에 대한 자세한 내용은 Adobe I/ [O에 대한 세그멘테이션 설명서를 참조하십시오](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/segmentation/segmentation-overview.md).
