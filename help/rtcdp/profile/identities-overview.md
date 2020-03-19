@@ -1,0 +1,30 @@
+---
+title: ID 및 ID 네임스페이스
+seo-title: Adobe Experience Platform ID 서비스
+description: 설명
+seo-description: seo description
+translation-type: tm+mt
+source-git-commit: 5cba5a1e8139dd85f23250d42a1cd8d2318eb916
+
+---
+
+
+# 실시간 CDP의 ID
+
+Adobe Experience Platform Identity Service를 사용하면 다양한 디바이스와 시스템에서 ID를 통합하여 고객 및 고객의 행동을 보다 정확하게 파악할 수 있습니다. 일반적으로 고객은 여러 채널에서 브랜드와 인터랙션할 수 있습니다. 온라인 웹 사이트 탐색, 매장 내 구입, 고객 충성도 프로그램 가입, 지원 센터 요청 등이 여기에 포함됩니다. 이러한 여러 시스템에서 해당 고객을 위해 만들어진 ID가 있으며 ID 서비스를 통해 이러한 ID를 결합하여 전체 상황을 파악할 수 있습니다.
+
+5개의 서로 다른 채널을 통해 브랜드와 상호 작용하는 5개의 개별 고객이 아니라 이 고객이 동일한 고객임을 인식하고 각 상호 작용을 통해 일관성 있고 개인화된 경험을 제공할 수 있습니다. 고객에 대한 자세한 정보(예: 웹 사이트의 익명 브라우저가 계정 및 로그인 신청)가 제공됨에 따라 해당 정보가 함께 결합되고 고객의 모습이 더욱 명확해집니다.
+
+## ID 네임스페이스
+
+ID 네임스페이스는 ID 서비스의 구성 요소이며 고객 ID에 대한 추가 컨텍스트를 제공하는 지표 역할을 합니다. 일반적으로 사용되는 ID 네임스페이스의 예로는 &quot;이메일&quot;이 있습니다. 여기서 여러 웹 사이트에서 동일한 이메일 주소를 사용하면 동일한 고객에 속하는 고유한 고객 ID로 여러 개의 서로 다른 ID를 연결할 수 있습니다. Experience Platform을 사용하면 ID 네임스페이스를 사용하여 사용자 인터페이스 내에서 개별 프로파일을 검색할 수 있습니다. 프로필 보기에 대한 자세한 내용은 [프로필 뷰어 개요를](/help/rtcdp/profile/profile-viewer.md)참조하십시오. ID 네임스페이스에 대한 자세한 내용은 Adobe I/O의 [ID 네임스페이스 개요를 참조하십시오](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/identity_namespace_overview/identity_namespace_overview.md).
+
+## ID 그래프
+
+ID 그래프는 서로 다른 ID 네임스페이스 간의 관계 맵으로, 고객이 다양한 채널에서 브랜드와 상호 작용하는 방식을 시각적으로 보여줍니다. 모든 고객 ID 그래프는 고객 활동에 대한 대응으로 Identity Service에서 신속하게 통합 관리 및 업데이트됩니다.
+
+Identity Service는 조직만 표시하고 데이터를 기반으로 하여 개인 그래프라고 하는 ID 그래프를 관리합니다. 인제스트된 데이터 레코드에 둘 이상의 ID가 포함되어 있는 경우 Identity Service가 개인 그래프를 늘리며 검색된 ID 간의 관계를 추가합니다.
+
+## 다음 단계
+
+ID와 ID 간의 관계는 ID 서비스에 의해 정의 및 유지되며 실시간 고객 프로필에서 활용하여 각 개인 고객과 이들의 상호 작용에 대한 전체 그림을 만듭니다. 자세한 내용은 Adobe I/ [O에 대한 ID 서비스 설명서를 참조하십시오](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/identity_services_architectural_overview/identity_services_architectural_overview.md).
