@@ -40,13 +40,13 @@ Some information is shown in different ways on both the leaderboard and metric c
 
 ### 데이터 집합
 
-데이터 **[!UICONTROL 집합]** 카운터는 시스템의 데이터 집합 수와 플랫폼의 데이터 양을 표시합니다. 이 카운터는 데이터 세트를 만들 때 업데이트됩니다.
+카운터는 시스템의 데이터 집합 수와 플랫폼의 데이터 양을 표시합니다 **[!UICONTROL Datasets]** . 이 카운터는 데이터 세트를 만들 때 업데이트됩니다.
 
 데이터 세트에 대한 자세한 내용은 Adobe Experience [Platform으로 데이터 인제스트를 참조하십시오](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/data_ingestion_tutorial/data_ingestion_tutorial.md).
 
 ### 프로필
 
-프로필 **[!UICONTROL 수는]** 실시간 고객 프로필에 프로파일이 있는 총 사람 수를 보여줍니다. 프로필 조각은 포함되지 않습니다. 전체 주소 지정 가능 고객입니다.
+이 **[!UICONTROL Profiles]** 수는 실시간 고객 프로필에 프로파일이 있는 총 사람 수를 보여줍니다. 프로필 조각은 포함되지 않습니다. 전체 주소 지정 가능 고객입니다.
 
 이 계산에서는 통합 프로필의 병합 정책 구성에 설정된 대로 기본 [병합 정책을](profile/merge-policies.md) 사용합니다.
 
@@ -56,13 +56,13 @@ Some information is shown in different ways on both the leaderboard and metric c
 
 ### 세그먼트
 
-**[!UICONTROL 세그먼트는]** 조직에 대해 생성된 총 세그먼트 수를 보여줍니다. 이 번호는 새 세그먼트를 만들 때 업데이트됩니다.
+**[!UICONTROL Segments]** 조직에 대해 생성된 총 세그먼트 수를 표시합니다. 이 번호는 새 세그먼트를 만들 때 업데이트됩니다.
 
 세그먼트에 대한 자세한 내용은 세그멘테이션 [서비스 개요를](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/segmentation/segmentation-overview.md)참조하십시오.
 
 ### 대상
 
-**[!UICONTROL 대상은]** 조직에 대해 생성된 총 대상 수를 보여줍니다. 이 번호는 새 대상을 만들 때 업데이트됩니다.
+**[!UICONTROL Destinations]** 조직에 대해 생성된 총 대상 수를 표시합니다. 이 번호는 새 대상을 만들 때 업데이트됩니다.
 
 대상에 대한 자세한 내용은 대상 [개요를](destinations/destinations-overview.md)참조하십시오.
 
@@ -102,32 +102,32 @@ The number of failed profile records is updated hourly. -->
 
 ### 최근 데이터 집합
 
-최근 **[!UICONTROL 데이터 집합]** 카드는 조직 내에서 생성된 가장 최근 데이터 집합 5개를 보여줍니다. 이 목록은 새 데이터 세트를 만들 때 업데이트됩니다.
+이 **[!UICONTROL Recent datasets]** 카드에는 조직 내에서 생성된 최근 데이터 세트 5개가 표시됩니다. 이 목록은 새 데이터 세트를 만들 때 업데이트됩니다.
 
-데이터 세트를 클릭하여 해당 항목에 대한 세부 사항을 보거나 데이터 집합 **[!UICONTROL 목록을 보려면 모두]** 보기를 클릭합니다. 여기에서 자세한 내용을 보려면 특정 소스를 클릭하면 됩니다.
+데이터 세트를 클릭하여 해당 항목에 대한 세부 사항을 보거나 데이터 집합 목록을 **[!UICONTROL View all]** 봅니다. 여기에서 자세한 내용을 보려면 특정 소스를 클릭하면 됩니다.
 
 데이터 세트에 대한 자세한 내용은 Adobe Experience [Platform으로 데이터 인제스트를 참조하십시오](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/data_ingestion_tutorial/data_ingestion_tutorial.md).
 
 ### 최근 소스
 
-최근 **[!UICONTROL 소스]** 지표 카드는 조직 내에서 생성된 가장 최근 소스 5개를 보여줍니다. 이 목록은 새 소스를 만들 때 업데이트됩니다.
+지표 **[!UICONTROL Recent sources]** 카드는 조직 내에서 만들어진 가장 최근 5개의 소스를 보여줍니다. 이 목록은 새 소스를 만들 때 업데이트됩니다.
 
-소스를 클릭하여 해당 항목에 대한 세부 사항을 보거나 모두 **[!UICONTROL 보기를]** 클릭하여 소스 목록을 봅니다. 여기에서 자세한 내용을 보려면 특정 소스를 클릭하면 됩니다.
+소스를 클릭하여 해당 항목에 대한 세부 사항을 보거나 소스 목록을 **[!UICONTROL View all]** 봅니다. 여기에서 자세한 내용을 보려면 특정 소스를 클릭하면 됩니다.
 
 소스에 대한 자세한 내용은 소스 개요를 [참조하십시오](sources/sources-overview.md).
 
 ### 최근 세그먼트
 
-최근 **[!UICONTROL 세그먼트]** 지표 카드는 조직 내에서 생성된 가장 최근 세그먼트 5개를 보여줍니다. 이 목록은 새 세그먼트를 만들 때 업데이트됩니다.
+지표 **[!UICONTROL Recent segments]** 카드는 조직 내에서 만들어진 가장 최근 5개의 세그먼트를 보여줍니다. 이 목록은 새 세그먼트를 만들 때 업데이트됩니다.
 
-세그먼트를 클릭하여 해당 항목에 대한 세부 사항을 보거나 모두 **[!UICONTROL 보기를]** 클릭하여 추가 세그먼트에 대한 정보를 봅니다.
+세그먼트를 클릭하여 해당 항목에 대한 세부 사항을 보거나 추가 세그먼트에 **[!UICONTROL View all]** 대한 정보를 봅니다.
 
 세그먼트에 대한 자세한 내용은 세그멘테이션 [서비스 개요를](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/segmentation/segmentation-overview.md)참조하십시오.
 
 ### 최근 대상
 
-최근 **[!UICONTROL 대상]** 지표 카드는 조직 내에서 만든 가장 최근 5개의 대상을 보여줍니다. 이 목록은 새 대상을 만들 때 업데이트됩니다.
+지표 **[!UICONTROL Recent destinations]** 카드는 조직 내에서 만들어진 가장 최근 5개의 대상을 보여줍니다. 이 목록은 새 대상을 만들 때 업데이트됩니다.
 
-대상을 클릭하여 해당 항목에 대한 세부 사항을 보거나, **[!UICONTROL 모두]** 보기를 클릭하여 추가 대상에 대한 정보를 봅니다.
+대상을 클릭하여 해당 항목에 대한 세부 사항을 보거나 추가 대상에 **[!UICONTROL View all]** 대한 정보를 봅니다.
 
 대상에 대한 자세한 내용은 대상 [개요를](destinations/destinations-overview.md)참조하십시오.
