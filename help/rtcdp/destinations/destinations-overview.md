@@ -15,11 +15,11 @@ source-git-commit: b4b02913467c43d004574a1aa5cb2f793964ad1e
 
 ## 대상 및 소스
 
-실시간 CDP의 핵심 기능 중 하나는 자사 데이터를 수집하여 비즈니스 요구에 맞게 활성화하는 것입니다. Sources **[!UICONTROL 를]** 사용하여 데이터를 실시간 CDP 및 **[!UICONTROL 대상으로]** 인제스트하여 실시간 CDP에서 데이터를 내보낼 수 있습니다.
+실시간 CDP의 핵심 기능 중 하나는 자사 데이터를 수집하여 비즈니스 요구에 맞게 활성화하는 것입니다. 데이터를 **[!UICONTROL Sources]** 실시간 CDP로 인제스트하고 실시간 CDP에서 데이터를 내보낼 **[!UICONTROL Destinations]** 수 있습니다.
 
 ## 대상 단계
 
-* 대상을 **[!UICONTROL 사용하여]** 프로필 또는 세그먼트를 [활성화하고](/help/rtcdp/destinations/activate-destinations.md) 마케팅 자동화 플랫폼, 디지털 광고 플랫폼 등으로 보낼 수 있습니다.
+* 프로필 또는 세그먼트를 **[!UICONTROL Destinations]** 활성화하고 [](/help/rtcdp/destinations/activate-destinations.md) 마케팅 자동화 플랫폼, 디지털 광고 플랫폼 등으로 보낼 수 있습니다.
 * 실시간 CDP에서 사용할 수 있는 모든 대상의 [셀프 서비스 카탈로그](/help/rtcdp/destinations/destinations-catalog.md) 중에서 선택할 수 있습니다.
 * 데이터 내보내기를 주기적으로 원하는 대상으로 예약합니다.
 
@@ -53,6 +53,6 @@ Adobe Real-time CDP에는 프로파일 내보내기 대상 및 세그먼트 내�
 
 ## 대상 및 액세스 제어
 
-실시간 **[!UICONTROL CDP의]** 대상 기능은 Adobe Experience Platform 액세스 제어 권한과 함께 작동합니다. 사용자의 권한 수준에 따라 대상을 보고, 관리하고, 활성화할 수 있습니다. 개별 권한에 대한 자세한 내용은 [Adobe Experience Platform의](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/access-control/access-control-overview.md) 액세스 제어를 참조하고 페이지 아래쪽으로 스크롤을 참조하십시오.
+실시간 CDP의 **[!UICONTROL Destinations]** 기능은 Adobe Experience Platform 액세스 제어 권한과 연동됩니다. 사용자의 권한 수준에 따라 대상을 보고, 관리하고, 활성화할 수 있습니다. 개별 권한에 대한 자세한 내용은 [Adobe Experience Platform의](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/access-control/access-control-overview.md) 액세스 제어를 참조하고 페이지 아래쪽으로 스크롤을 참조하십시오.
 
 액세스 컨트롤에 대한 자세한 내용은 액세스 [제어 사용 안내서를](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/access-control/access-control-user-guide.md)참조하십시오.
