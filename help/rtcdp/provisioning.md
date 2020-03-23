@@ -25,4 +25,4 @@ source-git-commit: cd7c10fa789cf749296144b36e805da2ed76be8b
 
 > [!VIDEO](https://youtu.be/ypS_CKym5NQ)
 
-편집 > 처리 [!UICONTROL 규칙을] 선택하여 작업을 수행합니다. 활동을 만들려면 [!DNL Microsoft Visual Code].
+[편집] > [ [!UICONTROL Processing Rules] 작업을 선택합니다. 활동을 만들려면 [!DNL Microsoft Visual Code].
