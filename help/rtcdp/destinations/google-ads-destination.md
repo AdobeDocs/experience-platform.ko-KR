@@ -48,7 +48,7 @@ Adobe Real-time CDP에서 Google 광고 대상을 만들기 전에 Google에 데
 
 ## 대상 만들기
 
-1. 연결 **[!UICONTROL > 대상에서]** Google 광고를 선택하고 대상 **[!UICONTROL 만들기를 선택합니다]**.
+1. 에서 **[!UICONTROL Connections > Destinations]** Google 광고를 선택하고 **[!UICONTROL Create destination]**선택합니다.
    ![Google 광고 대상 연결](/help/rtcdp/destinations/assets/google-2-destination.png)
 
 2. 대상 만들기 마법사에서 대상에 대한 기본 정보를 입력합니다.
