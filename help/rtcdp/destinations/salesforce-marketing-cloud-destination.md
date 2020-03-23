@@ -19,11 +19,11 @@ source-git-commit: 3b9584cca8943c52bb3d8e4512d327d3dbeb9e04
 
 ## 연결 대상 {#connect-destination}
 
-1. 연결 **[!UICONTROL >대상에서]** Salesforce Marketing Cloud를 선택한 다음 연결 **[!UICONTROL 대상을]**&#x200B;선택합니다.
+1. 에서 **[!UICONTROL Connections > Destinations]** Salesforce Marketing Cloud를 선택한 다음 **[!UICONTROL Connect destination]**&#x200B;선택합니다.
 
    ![Salesforce에 연결](/help/rtcdp/destinations/assets/connect-salesforce.png)
 
-1. Connect 대상 마법사에서 저장소 **[!UICONTROL 위치에 대한 연결 유형을]** 선택합니다. Salesforce Marketing Cloud의 경우 암호를 사용하는 **SFTP와** SSH 키를 **사용하는 SFTP 중에서 선택할 수 있습니다**. 연결 유형에 따라 아래 정보를 입력하고 Connect를 **[!UICONTROL 선택합니다]**.
+1. Connect 대상 마법사에서 저장소 위치에 **[!UICONTROL Connection type]** 대한 을 선택합니다. Salesforce Marketing Cloud의 경우 암호를 사용하는 **SFTP와** SSH 키를 **사용하는 SFTP 중에서 선택할 수 있습니다**. 연결 유형에 따라 아래 정보를 입력하고 **[!UICONTROL Connect]**&#x200B;선택합니다.
 
    ![Salesforce 마법사 설정](/help/rtcdp/destinations/assets/salesforce-step1.png)
 
