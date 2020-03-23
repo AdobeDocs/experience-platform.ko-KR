@@ -15,11 +15,11 @@ source-git-commit: 9221c11a30bda3a155d73afec16be55ef8f5d133
 
 이 페이지에서는 Adobe 실시간 고객 데이터 플랫폼의 클라우드 스토리지 위치에 연결하는 방법을 설명합니다.
 
-1. [ **[!UICONTROL 연결] > [대상]**]에서 원하는 클라우드 저장소 대상을 선택한 다음 [연결 대상] **[!UICONTROL 을]**&#x200B;선택합니다.
+1. 에서 **[!UICONTROL Connections > Destinations]**&#x200B;원하는 클라우드 스토리지 대상을 선택한 다음 **[!UICONTROL Connect destination]**&#x200B;을 선택합니다.
 
    ![클라우드 스토리지 대상에 연결](/help/rtcdp/destinations/assets/connect-cloud-destination.png)
 
-2. 인증 **단계에서** 이전에 클라우드 스토리지 대상에 대한 연결을 설정한 경우 기존 계정을 **[!UICONTROL 선택하고]** 기존 연결을 선택합니다. 또는 새 계정을 선택하여 **[!UICONTROL 클라우드]** 스토리지 대상에 새 연결을 설정할 수 있습니다. 계정 인증 자격 증명을 입력하고 대상에 **[!UICONTROL 연결을]**&#x200B;선택합니다.
+2. 인증 **단계에서** 이전에 클라우드 스토리지 대상에 대한 연결을 설정한 경우 기존 연결을 **[!UICONTROL Existing Account]** 선택하고 선택합니다. 또는 클라우드 스토리지 대상에 대한 새 연결을 **[!UICONTROL New Account]** 설정하도록 선택할 수 있습니다. 계정 인증 자격 증명을 입력하고 **[!UICONTROL Connect to destination]**&#x200B;선택합니다.
 
    >[!NOTE]
    >
@@ -27,12 +27,12 @@ source-git-commit: 9221c11a30bda3a155d73afec16be55ef8f5d133
 
    ![클라우드 스토리지 대상에 연결 - 인증 단계](/help/rtcdp/destinations/assets/cloud-destinations-authentication-step.png)
 
-3. 설정 **[!UICONTROL 단계에서]** 이름 **[!UICONTROL 및]** 활성화 **[!UICONTROL 흐름에 대한 설명을]** 입력합니다.
-   1. Amazon S3 대상의 경우, **[!UICONTROL 버킷 이름]** 및 **[!UICONTROL 폴더 경로를]** 클라우드 스토리지 대상에 삽입하여 파일이 배달됩니다. 위의 **[!UICONTROL 필드를]** 채운 후 대상 만들기를 선택합니다.
-   2. SFTP 대상의 경우 폴더 **[!UICONTROL 경로를 삽입합니다.]**
+3. 단계에서 활성화 흐름에 대해 a **[!UICONTROL Setup]** 및 **[!UICONTROL Name]** **[!UICONTROL Description]** a를 입력합니다.
+   1. Amazon S3 대상의 경우, 파일이 배달될 클라우드 스토리지 대상에 **[!UICONTROL Bucket name]** 및 **[!UICONTROL Folder path]** 를 삽입합니다. 위의 필드를 채운 **[!UICONTROL Create Destination]** 후 선택합니다.
+   2. SFTP 대상의 경우 **[!UICONTROL Folder path]**
    ![클라우드 스토리지 대상에 연결 - 인증 단계](/help/rtcdp/destinations/assets/cloud-destinations-setup-step.png)
 
-4. 이제 대상이 만들어집니다. 나중에 세그먼트를 **[!UICONTROL 활성화하거나]** 다음을 선택하여 워크플로우를 **[!UICONTROL 계속하고 활성화할 세그먼트를 선택할 수]** 있습니다. 두 경우 모두, 나머지 워크플로우에서 [데이터를 내보낼 다음 섹션인 세그먼트](#activate-segments)활성화를 참조하십시오.
+4. 이제 대상이 만들어집니다. 나중에 세그먼트를 활성화할지 **[!UICONTROL Save & Exit]** 또는 워크플로우를 계속하기 위해 선택하고 활성화할 세그먼트를 선택할 **[!UICONTROL Next]** 수 있습니다. 두 경우 모두, 나머지 워크플로우에서 [데이터를 내보낼 다음 섹션인 세그먼트](#activate-segments)활성화를 참조하십시오.
 
 ## 세그먼트 활성화 {#activate-segments}
 
