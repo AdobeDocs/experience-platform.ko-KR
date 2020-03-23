@@ -19,11 +19,11 @@ Adobe Campaign은 온라인과 오프라인의 모든 채널에서 캠페인을 
 
 ## 연결 대상 {#connect-destination}
 
-1. 연결 **[!UICONTROL > 대상에서]** Adobe Campaign을 선택한 다음 연결 **[!UICONTROL 대상을]**&#x200B;선택합니다.
+1. 에서 **[!UICONTROL Connections > Destinations]** Adobe Campaign을 선택한 다음 **[!UICONTROL Connect destination]**&#x200B;선택합니다.
 
    ![Adobe 캠페인에 연결](/help/rtcdp/destinations/assets/connect-adobe-campaign.png)
 
-1. Connect 대상 마법사에서 저장소 **[!UICONTROL 위치에 대한 연결 유형을]** 선택합니다. Adobe Campaign의 경우, Amazon S3 **, Password**&#x200B;가 있는 SFTP **및** SSH 키가 있는 SFTP 중에서 **선택할**&#x200B;수있습니다. 연결 유형에 따라 아래 정보를 입력한 다음 Connect를 **[!UICONTROL 선택합니다]**.
+1. Connect 대상 마법사에서 저장소 위치에 **[!UICONTROL Connection type]** 대한 을 선택합니다. Adobe Campaign의 경우, Amazon S3 **, Password**&#x200B;가 있는 SFTP **및** SSH 키가 있는 SFTP 중에서 **선택할**&#x200B;수있습니다. 연결 유형에 따라 아래 정보를 입력한 다음 을 **[!UICONTROL Connect]**&#x200B;선택합니다.
 
    ![캠페인 설정 마법사](/help/rtcdp/destinations/assets/adobe-campaign-wizard.png)
 
