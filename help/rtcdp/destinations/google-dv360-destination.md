@@ -43,7 +43,7 @@ Adobe Real-time CDP에서 Google Display &amp; Video 360 대상을 만들기 전
 
 ## 대상 만들기
 
-1. [ **[!UICONTROL 연결] > [대상]**]에서 [Google 표시 및 비디오 360]을 선택하고 [대상 **[!UICONTROL 만들기]**]를 선택합니다.
+1. 에서 Google **[!UICONTROL Connections > Destinations]** Display &amp; Video 360을 선택하고 **[!UICONTROL Create destination]**선택합니다.
    ![Google Display &amp; Video 360 대상 연결](/help/rtcdp/destinations/assets/google-dv360-destination.png)
 
 2. 대상 만들기 마법사에서 대상에 대한 기본 정보를 입력합니다.
