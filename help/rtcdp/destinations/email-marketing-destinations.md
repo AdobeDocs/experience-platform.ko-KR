@@ -21,11 +21,11 @@ ESP(Email Service Providers)를 사용하면 프로모션 이메일 캠페인 �
 
 ## 1단계 - 연결 대상 {#connect-destination}
 
-1. [ **[!UICONTROL 연결]**] > [대상]에서 연결할 이메일 마케팅 대상을 선택한 다음 [연결 대상] **[!UICONTROL 을]**&#x200B;선택합니다.
+1. 에서 **[!UICONTROL Connections > Destinations]**&#x200B;연결할 이메일 마케팅 대상을 선택한 다음 **[!UICONTROL Connect destination]**&#x200B;선택합니다.
 
    ![대상에 연결](/help/rtcdp/destinations/assets/connect-destination.png)
 
-2. Connect 마법사에서 저장소 위치에 **[!UICONTROL 대한 연결 유형을]** 선택합니다. Amazon S3 **, 암호가**&#x200B;있는 SFTP, **SSH 키가 있는** SFTP 중에서 **선택할 수 있습니다**. 연결 유형에 따라 아래 정보를 입력한 다음 Connect를 **[!UICONTROL 선택합니다]**.
+2. Connect 마법사에서 저장소 위치에 **[!UICONTROL Connection type]** 대한 을 선택합니다. Amazon S3 **, 암호가**&#x200B;있는 SFTP, **SSH 키가 있는** SFTP 중에서 **선택할 수 있습니다**. 연결 유형에 따라 아래 정보를 입력한 다음 을 **[!UICONTROL Connect]**&#x200B;선택합니다.
 
 S3 **연결의**&#x200B;경우 액세스 키 ID 및 비밀 액세스 키를 제공해야 합니다.
 
