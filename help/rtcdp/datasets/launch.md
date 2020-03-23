@@ -31,7 +31,7 @@ source-git-commit: 3083f6fb25a331eb6dd1d9a63b65aa206481dcb3
 
 먼저 Adobe Experience Platform 웹 SDK 익스텐션을 설치합니다.
 
-1. In Launch, open the **[!UICONTROL Extensions]** tab.
+1. Launch에서 **[!UICONTROL Extensions]** 탭을 엽니다.
 
    ![이미지](assets/launch-overview.png)
 
@@ -48,13 +48,13 @@ source-git-commit: 3083f6fb25a331eb6dd1d9a63b65aa206481dcb3
    * **구성 ID:** Adobe 담당자로부터 받은 구성 ID를 지정합니다.
    * **Edge Domain:** Adobe 담당자로부터 받은 Edge 도메인을 지정합니다.
 
-1. 저장을 **[!UICONTROL 클릭하고]** 다음 단계를 계속합니다.
+1. 을 **[!UICONTROL Save]** 클릭하고 다음 단계로 진행합니다.
 
 ## 론치에 전송할 데이터를 알려주는 규칙 만들기
 
 그런 다음 Launch에 Adobe Experience Platform으로 전송할 데이터와 전송 시기를 알리는 규칙을 만듭니다.
 
-1. 규칙 **[!UICONTROL 탭에서]** 시작 라이브러리가 로드될 때 웹 사이트의 새 각 페이지에서 트리거되는 이벤트를 구성합니다.
+1. 이 **[!UICONTROL Rules]** 탭에서 시작 라이브러리가 로드될 때 웹 사이트의 새 각 페이지에서 트리거되는 이벤트를 구성합니다.
 
    ![이미지](assets/launch-make-a-rule.png)
 
@@ -66,7 +66,7 @@ source-git-commit: 3083f6fb25a331eb6dd1d9a63b65aa206481dcb3
 
    전송한 데이터 개체는 구성 ID에 연결된 데이터 집합에 사용되는 스키마에 대한 유효성 검사를 전달하는 유효한 XDM이어야 합니다.
 
-1. Click **[!UICONTROL Keep Changes]**.
+1. **[!UICONTROL Keep Changes]**&#x200B;를 클릭합니다.
 
 자세한 내용은 론치 [설명서의](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/rules.html) 규칙을 참조하십시오.
 
