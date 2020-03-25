@@ -4,7 +4,7 @@ seo-title: 클라우드 스토리지 대상 워크플로우
 description: 클라우드 스토리지 위치에 연결하는 지침
 seo-description: 클라우드 스토리지 위치에 연결하는 지침
 translation-type: tm+mt
-source-git-commit: 9221c11a30bda3a155d73afec16be55ef8f5d133
+source-git-commit: c4f1c0a6ef4d16e5fe763826016d56506fdca5dc
 
 ---
 
@@ -19,7 +19,7 @@ source-git-commit: 9221c11a30bda3a155d73afec16be55ef8f5d133
 
    ![클라우드 스토리지 대상에 연결](/help/rtcdp/destinations/assets/connect-cloud-destination.png)
 
-2. 인증 **단계에서** 이전에 클라우드 스토리지 대상에 대한 연결을 설정한 경우 기존 연결을 **[!UICONTROL Existing Account]** 선택하고 선택합니다. 또는 클라우드 스토리지 대상에 대한 새 연결을 **[!UICONTROL New Account]** 설정하도록 선택할 수 있습니다. 계정 인증 자격 증명을 입력하고 **[!UICONTROL Connect to destination]**&#x200B;선택합니다.
+1. 인증 **단계에서** 이전에 클라우드 스토리지 대상에 대한 연결을 설정한 경우 기존 연결을 **[!UICONTROL Existing Account]** 선택하고 선택합니다. 또는 클라우드 스토리지 대상에 대한 새 연결을 **[!UICONTROL New Account]** 설정하도록 선택할 수 있습니다. 계정 인증 자격 증명을 입력하고 **[!UICONTROL Connect to destination]**&#x200B;선택합니다. 인증 [단계의 자격 증명 입력에 대한 자세한 내용은 Amazon S3 대상](/help/rtcdp/destinations/amazon-s3-destination.md) 및 [SFTP 대상을](/help/rtcdp/destinations/sftp-destination.md) **** 참조하십시오.
 
    >[!NOTE]
    >
@@ -27,12 +27,18 @@ source-git-commit: 9221c11a30bda3a155d73afec16be55ef8f5d133
 
    ![클라우드 스토리지 대상에 연결 - 인증 단계](/help/rtcdp/destinations/assets/cloud-destinations-authentication-step.png)
 
-3. 단계에서 활성화 흐름에 대해 a **[!UICONTROL Setup]** 및 **[!UICONTROL Name]** **[!UICONTROL Description]** a를 입력합니다.
-   1. Amazon S3 대상의 경우, 파일이 배달될 클라우드 스토리지 대상에 **[!UICONTROL Bucket name]** 및 **[!UICONTROL Folder path]** 를 삽입합니다. 위의 필드를 채운 **[!UICONTROL Create Destination]** 후 선택합니다.
-   2. SFTP 대상의 경우 **[!UICONTROL Folder path]**
-   ![클라우드 스토리지 대상에 연결 - 인증 단계](/help/rtcdp/destinations/assets/cloud-destinations-setup-step.png)
+1. 단계에서 활성화 흐름에 대해 a **[!UICONTROL Setup]** 및 **[!UICONTROL Name]** **[!UICONTROL Description]** a를 입력합니다. <br>
+Amazon S3 대상의 경우, 파일이 배달될 클라우드 스토리지 대상에 **[!UICONTROL Bucket name]** 및 **[!UICONTROL Folder path]** 를 삽입합니다. 위의 필드를 채운 **[!UICONTROL Create Destination]** 후 선택합니다.
 
-4. 이제 대상이 만들어집니다. 나중에 세그먼트를 활성화할지 **[!UICONTROL Save & Exit]** 또는 워크플로우를 계속하기 위해 선택하고 활성화할 세그먼트를 선택할 **[!UICONTROL Next]** 수 있습니다. 두 경우 모두, 나머지 워크플로우에서 [데이터를 내보낼 다음 섹션인 세그먼트](#activate-segments)활성화를 참조하십시오.
+   ![Amazon S3 클라우드 스토리지 대상에 연결 - 인증 단계](/help/rtcdp/destinations/assets/cloud-destinations-setup-step.png)
+
+
+
+   <br>SFTP 대상의 경우 **[!UICONTROL Folder path]**
+
+   ![SFTP 클라우드 저장소 대상에 연결 - 인증 단계](/help/rtcdp/destinations/assets/sftp-destinations-setup-step.png)
+
+1. 이제 대상이 만들어집니다. 나중에 세그먼트를 활성화할지 **[!UICONTROL Save & Exit]** 또는 워크플로우를 계속하기 위해 선택하고 활성화할 세그먼트를 선택할 **[!UICONTROL Next]** 수 있습니다. 두 경우 모두, 나머지 워크플로우에서 [데이터를 내보낼 다음 섹션인 세그먼트](#activate-segments)활성화를 참조하십시오.
 
 ## 세그먼트 활성화 {#activate-segments}
 
