@@ -4,7 +4,7 @@ seo-title: 클라우드 스토리지 대상 워크플로우
 description: 클라우드 스토리지 위치에 연결하는 지침
 seo-description: 클라우드 스토리지 위치에 연결하는 지침
 translation-type: tm+mt
-source-git-commit: c4f1c0a6ef4d16e5fe763826016d56506fdca5dc
+source-git-commit: 60b10aa823af55d6f38651308dc93eeb57a7fee6
 
 ---
 
@@ -32,9 +32,7 @@ Amazon S3 대상의 경우, 파일이 배달될 클라우드 스토리지 대상
 
    ![Amazon S3 클라우드 스토리지 대상에 연결 - 인증 단계](/help/rtcdp/destinations/assets/cloud-destinations-setup-step.png)
 
-
-
-   <br>SFTP 대상의 경우 **[!UICONTROL Folder path]**
+   SFTP 대상의 경우 파일이 배달될 **[!UICONTROL Folder path]** 위치를 삽입합니다.
 
    ![SFTP 클라우드 저장소 대상에 연결 - 인증 단계](/help/rtcdp/destinations/assets/sftp-destinations-setup-step.png)
 
