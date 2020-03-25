@@ -4,7 +4,7 @@ seo-title: Salesforce Marketing Cloud
 description: Salesforce Marketing Cloud는 방문자와 고객이 자신의 경험을 개인화할 수 있도록 여정 경로를 구축하고 사용자 정의할 수 있도록 이전에 ExactTarget으로 알려진 디지털 마케팅 패키지입니다.
 seo-description: Salesforce Marketing Cloud는 방문자와 고객이 자신의 경험을 개인화할 수 있도록 여정 경로를 구축하고 사용자 정의할 수 있도록 이전에 ExactTarget으로 알려진 디지털 마케팅 패키지입니다.
 translation-type: tm+mt
-source-git-commit: 3b9584cca8943c52bb3d8e4512d327d3dbeb9e04
+source-git-commit: afe8032be1d96a63a3d43c5a552a0d6152e14552
 
 ---
 
@@ -23,23 +23,21 @@ source-git-commit: 3b9584cca8943c52bb3d8e4512d327d3dbeb9e04
 
    ![Salesforce에 연결](/help/rtcdp/destinations/assets/connect-salesforce.png)
 
-1. Connect 대상 마법사에서 저장소 위치에 **[!UICONTROL Connection type]** 대한 을 선택합니다. Salesforce Marketing Cloud의 경우 암호를 사용하는 **SFTP와** SSH 키를 **사용하는 SFTP 중에서 선택할 수 있습니다**. 연결 유형에 따라 아래 정보를 입력하고 **[!UICONTROL Connect]**&#x200B;선택합니다.
-
-   ![Salesforce 마법사 설정](/help/rtcdp/destinations/assets/salesforce-step1.png)
+1. 인증 **단계에서** 이전에 클라우드 스토리지 대상에 대한 연결을 설정한 경우 기존 연결을 **[!UICONTROL Existing Account]** 선택하고 선택합니다. 또는 새 연결을 **[!UICONTROL New Account]** 설정하도록 선택할 수 있습니다. 계정 인증 자격 증명을 입력하고 **[!UICONTROL Connect to destination]**&#x200B;선택합니다. Salesforce Marketing Cloud의 경우 암호를 사용하는 **SFTP와** SSH 키를 **사용하는 SFTP 중에서 선택할 수 있습니다**. 연결 유형에 따라 아래 정보를 입력하고 **[!UICONTROL Connect to destination]**&#x200B;선택합니다.
 
    암호 **연결이 있는 SFTP의** 경우 도메인, 포트, 사용자 이름 및 암호를 제공해야 합니다.
 SSH **키 연결이 있는 SFTP의** 경우 도메인, 포트, 사용자 이름 및 SSH 키를 제공해야 합니다.
 
-   ![Salesforce 정보 입력](/help/rtcdp/destinations/assets/salesforce-wizard.png)
+   ![Salesforce 정보 입력](/help/rtcdp/destinations/assets/salesforce-authenticate.png)
 
-1. 기본 **정보에서**&#x200B;아래에 표시된 대로 대상에 대한 관련 정보를 입력합니다.
+1. 설정 **단계에서** 다음과 같이 대상에 대한 관련 정보를 입력합니다.
    * **이름**:대상의 관련 이름을 선택합니다.
    * **설명**:대상에 대한 설명을 입력합니다.
    * **폴더 경로**:실시간 CDP를 통해 내보내기 데이터를 CSV 또는 탭으로 구분된 파일로 저장할 스토리지 위치에 경로를 제공합니다.
    * **파일 형식**:CSV ******또는** TAB_SEPARATED. 저장소 위치로 내보낼 파일 형식을 선택합니다.
    ![Salesforce 기본 정보](/help/rtcdp/destinations/assets/salesforce-basic-information.png)
 
-1. 기본 **정보의** 필드를 채운 후 만들기를 **클릭합니다**. 대상이 연결되었으며 세그먼트를 [대상에](/help/rtcdp/destinations/activate-destinations.md) 활성화할 수 있습니다.
+1. 기본 **정보의 필드를 채운 후 대상** 만들기를 **클릭합니다**. 대상이 연결되었으며 세그먼트를 [대상에](/help/rtcdp/destinations/activate-destinations.md) 활성화할 수 있습니다.
 
 ## 대상 속성 {#destination-attributes}
 
