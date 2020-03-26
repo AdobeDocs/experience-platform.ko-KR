@@ -4,7 +4,7 @@ seo-title: Oracle Responsys 대상
 description: Responsys는 이메일, 모바일, 디스플레이 및 소셜 간의 상호 작용을 개인화하기 위해 Oracle에서 제공하는 크로스채널 마케팅 캠페인을 위한 기업 이메일 마케팅 툴입니다.
 seo-description: Responsys는 이메일, 모바일, 디스플레이 및 소셜 간의 상호 작용을 개인화하기 위해 Oracle에서 제공하는 크로스채널 마케팅 캠페인을 위한 기업 이메일 마케팅 툴입니다.
 translation-type: tm+mt
-source-git-commit: fe56fe71c36e06f2eeed45436cb36b5a371d0484
+source-git-commit: c3fe5753fb23f99076f9c85b4e07af2d25a121a9
 
 ---
 
@@ -23,21 +23,21 @@ source-git-commit: fe56fe71c36e06f2eeed45436cb36b5a371d0484
 
    ![Responsys에 연결](/help/rtcdp/destinations/assets/connect-oracle-responsys.png)
 
-1. 인증 **단계에서** 이전에 클라우드 스토리지 대상에 대한 연결을 설정한 경우 기존 연결을 **[!UICONTROL Existing Account]** 선택하고 선택합니다. 또는 새 연결을 **[!UICONTROL New Account]** 설정하도록 선택할 수 있습니다. 계정 인증 자격 증명을 입력하고 **[!UICONTROL Connect to destination]**&#x200B;선택합니다. Oracle Responsys의 경우 비밀번호가 있는 SFTP와 **SSH 키가 있는** SFTP 중에서 **선택할 수 있습니다**. 연결 유형에 따라 아래 정보를 입력하고 **[!UICONTROL Connect to destination]**&#x200B;선택합니다.
+2. 인증 **단계에서** 이전에 클라우드 스토리지 대상에 대한 연결을 설정한 경우 기존 연결 **[!UICONTROL Existing Account]** 중 하나를 선택하고 선택합니다. 또는 새 연결을 **[!UICONTROL New Account]** 설정하도록 선택할 수 있습니다. 계정 인증 자격 증명을 입력하고 **[!UICONTROL Connect to destination]**&#x200B;선택합니다. Oracle Responsys의 경우 비밀번호가 있는 SFTP와 **SSH 키가 있는** SFTP 중에서 **선택할 수 있습니다**. 연결 유형에 따라 아래 정보를 입력하고 **[!UICONTROL Connect to destination]**&#x200B;선택합니다.
 
    암호 **연결이 있는 SFTP의** 경우 도메인, 포트, 사용자 이름 및 암호를 제공해야 합니다.
 SSH **키 연결이 있는 SFTP의** 경우 도메인, 포트, 사용자 이름 및 SSH 키를 제공해야 합니다.
 
    ![Responsys 정보 입력](/help/rtcdp/destinations/assets/responsys-authentication.png)
 
-1. 설정 **단계에서** 다음과 같이 대상에 대한 관련 정보를 입력합니다.
+3. 설정 **단계에서** 다음과 같이 대상에 대한 관련 정보를 입력합니다.
    * **이름**:대상의 관련 이름을 선택합니다.
    * **설명**:대상에 대한 설명을 입력합니다.
    * **폴더 경로**:실시간 CDP를 통해 내보내기 데이터를 CSV 또는 탭으로 구분된 파일로 저장할 스토리지 위치에 경로를 제공합니다.
    * **파일 형식**:CSV ******또는** TAB_SEPARATED. 저장소 위치로 내보낼 파일 형식을 선택합니다.
    ![Responsys 기본 정보](/help/rtcdp/destinations/assets/responsys-basic-information.png)
 
-1. 위의 **필드를 채운 후 대상** 만들기를 클릭합니다. 대상이 연결되었으며 세그먼트를 [대상에](/help/rtcdp/destinations/activate-destinations.md) 활성화할 수 있습니다.
+4. 위의 **필드를 채운 후 대상** 만들기를 클릭합니다. 대상이 연결되었으며 세그먼트를 [대상에](/help/rtcdp/destinations/activate-destinations.md) 활성화할 수 있습니다.
 
 ## 대상 속성 {#destination-attributes}
 
