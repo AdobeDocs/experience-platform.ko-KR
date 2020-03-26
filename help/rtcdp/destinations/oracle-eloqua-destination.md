@@ -4,7 +4,7 @@ seo-title: Oracle Furnar 대상
 description: Oracle Fura는 B2B 마케터 및 조직이 마케팅 캠페인과 영업 리드 생성을 관리하는 데 도움이 되는 Oracle의 마케팅 자동화를 위한 SaaS(서비스) 플랫폼입니다.
 seo-description: Oracle Fura는 B2B 마케터 및 조직이 마케팅 캠페인과 영업 리드 생성을 관리하는 데 도움이 되는 Oracle의 마케팅 자동화를 위한 SaaS(서비스) 플랫폼입니다.
 translation-type: tm+mt
-source-git-commit: fe56fe71c36e06f2eeed45436cb36b5a371d0484
+source-git-commit: c3fe5753fb23f99076f9c85b4e07af2d25a121a9
 
 ---
 
@@ -23,7 +23,7 @@ source-git-commit: fe56fe71c36e06f2eeed45436cb36b5a371d0484
 
    ![Furnar에 연결](/help/rtcdp/destinations/assets/connect-oracle-eloqua.png)
 
-2. 인증 **단계에서** 이전에 클라우드 스토리지 대상에 대한 연결을 설정한 경우 기존 연결을 **[!UICONTROL Existing Account]** 선택하고 선택합니다. 또는 새 연결을 **[!UICONTROL New Account]** 설정하도록 선택할 수 있습니다. 계정 인증 자격 증명을 입력하고 **[!UICONTROL Connect to destination]**&#x200B;선택합니다. Oracle Fura의 경우, 암호를 사용하는 **SFTP와 SSH 키를** 사용하는 **SFTP를 선택할 수 있습니다**. 연결 유형에 따라 아래 정보를 입력하고 **[!UICONTROL Connect to destination]**&#x200B;선택합니다.
+2. 인증 **단계에서** 이전에 클라우드 스토리지 대상에 대한 연결을 설정한 경우 기존 연결 **[!UICONTROL Existing Account]** 중 하나를 선택하고 선택합니다. 또는 새 연결을 **[!UICONTROL New Account]** 설정하도록 선택할 수 있습니다. 계정 인증 자격 증명을 입력하고 **[!UICONTROL Connect to destination]**&#x200B;선택합니다. Oracle Fura의 경우, 암호를 사용하는 **SFTP와 SSH 키를** 사용하는 **SFTP를 선택할 수 있습니다**. 연결 유형에 따라 아래 정보를 입력하고 **[!UICONTROL Connect to destination]**&#x200B;선택합니다.
 
    암호 **연결이 있는 SFTP의** 경우 도메인, 포트, 사용자 이름 및 암호를 제공해야 합니다.
 SSH **키 연결이 있는 SFTP의** 경우 도메인, 포트, 사용자 이름 및 SSH 키를 제공해야 합니다.
