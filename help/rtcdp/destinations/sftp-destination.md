@@ -4,7 +4,7 @@ seo-title: SFTP 대상
 description: SFTP 서버에 대한 실시간 아웃바운드 연결을 만들어 Experience Platform에서 구분된 데이터 파일을 주기적으로 내보냅니다.
 seo-description: SFTP 서버에 대한 실시간 아웃바운드 연결을 만들어 Experience Platform에서 구분된 데이터 파일을 주기적으로 내보냅니다.
 translation-type: tm+mt
-source-git-commit: f3c6c27b7ad07ada0df18aabe0e8503253b38342
+source-git-commit: c3fe5753fb23f99076f9c85b4e07af2d25a121a9
 
 ---
 
@@ -23,7 +23,6 @@ SFTP를 [비롯한 클라우드 스토리지 대상에 연결하는 ](/help/rtcd
 
 SFTP 대상의 경우 [인증] 단계에서 대상 만들기 워크플로우에 다음 정보를 **입력합니다** .
 
-* **호스트**
-* **사용자 이름**
-* **암호**
-
+* **호스트**:SFTP 저장소 위치의 주소
+* **사용자 이름**:SFTP 저장소 위치에 로그인할 사용자 이름
+* **암호**:SFTP 저장소 위치에 로그인하는 암호
