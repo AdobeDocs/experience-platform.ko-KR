@@ -4,7 +4,7 @@ seo-title: 클라우드 스토리지 대상 워크플로우
 description: 클라우드 스토리지 위치에 연결하는 지침
 seo-description: 클라우드 스토리지 위치에 연결하는 지침
 translation-type: tm+mt
-source-git-commit: c3fe5753fb23f99076f9c85b4e07af2d25a121a9
+source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
 
 ---
 
@@ -19,7 +19,7 @@ source-git-commit: c3fe5753fb23f99076f9c85b4e07af2d25a121a9
 
    ![클라우드 스토리지 대상에 연결](/help/rtcdp/destinations/assets/connect-cloud-destination.png)
 
-2. 인증 **단계에서** 이전에 클라우드 스토리지 대상에 대한 연결을 설정한 경우 기존 연결을 **[!UICONTROL Existing Account]** 선택하고 선택합니다. 또는 클라우드 스토리지 대상에 대한 새 연결을 **[!UICONTROL New Account]** 설정하도록 선택할 수 있습니다. 계정 인증 자격 증명을 입력하고 **[!UICONTROL Connect to destination]**&#x200B;선택합니다. 인증 [단계의 자격 증명 입력에 대한 자세한 내용은 Amazon S3 대상](/help/rtcdp/destinations/amazon-s3-destination.md) 및 [SFTP 대상을](/help/rtcdp/destinations/sftp-destination.md) **** 참조하십시오.
+2. 이전에 클라우드 스토리지 대상에 대한 연결을 설정한 경우 **[!UICONTROL Authentication]** 단계에서 기존 연결을 선택하고 **[!UICONTROL Existing Account]** 선택합니다. 또는 클라우드 스토리지 대상에 대한 새 연결을 **[!UICONTROL New Account]** 설정하도록 선택할 수 있습니다. 계정 인증 자격 증명을 입력하고 **[!UICONTROL Connect to destination]**&#x200B;선택합니다. 인증 [단계의 자격 증명 입력에 대한 자세한 내용은 Amazon S3 대상](/help/rtcdp/destinations/amazon-s3-destination.md) 및 [SFTP 대상을](/help/rtcdp/destinations/sftp-destination.md) **** 참조하십시오.
 
    >[!NOTE]
    >
