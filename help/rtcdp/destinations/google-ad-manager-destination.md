@@ -4,7 +4,7 @@ seo-title: Google 광고 관리자 대상
 description: '이전에 발행자를 위한 DoubleClick 또는 DoubleClick AdX로 알려진 Google Ad Manager는 발행자가 비디오 및 모바일 앱을 통해 웹 사이트에서 광고 표시를 관리할 수 있는 Google의 광고 서비스 플랫폼입니다. '
 seo-description: '이전에 발행자를 위한 DoubleClick 또는 DoubleClick AdX로 알려진 Google Ad Manager는 발행자가 비디오 및 모바일 앱을 통해 웹 사이트에서 광고 표시를 관리할 수 있는 Google의 광고 서비스 플랫폼입니다. '
 translation-type: tm+mt
-source-git-commit: 3e510c891c84fb3dc1632bd1182ef1e010ea898f
+source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
 
 ---
 
@@ -48,14 +48,14 @@ Adobe Real-time CDP에서 Google Ad Manager 대상을 만들기 전에 Google에
 1. 에서 **[!UICONTROL Connections > Destinations]** Google 광고 관리자를 선택하고 **[!UICONTROL Create destination]**선택합니다.
    ![Google 광고 관리자 대상 연결](/help/rtcdp/destinations/assets/google-1-destination.png)
 
-2. 대상 만들기 마법사에서 대상에 대한 기본 정보를 입력합니다.
+2. 대상 만들기 워크플로우에서 대상에 대한 [!UICONTROL Basic Information] 을 입력합니다.
    ![기본 정보 Google 광고 관리자](/help/rtcdp/destinations/assets/google-1-basic-information.png)
-* **이름**:이 대상에 대한 기본 이름을 입력합니다.
-* **설명**:선택 사항입니다. 예를 들어 이 대상을 사용하는 캠페인을 언급할 수 있습니다.
-* **계정 유형**:Google의 계정에 따라 옵션을 선택합니다.
+* **[!UICONTROL Name]**:이 대상에 대한 기본 이름을 입력합니다.
+* **[!UICONTROL Description]**: 선택 사항입니다. 예를 들어 이 대상을 사용하는 캠페인을 언급할 수 있습니다.
+* **[!UICONTROL Account Type]**:Google의 계정에 따라 옵션을 선택합니다.
    * 게시자에 `DFP by Google` 대해 DoubleClick 사용
    * Google AdX `AdX buyer` 에 사용
-* **계정 ID**:Google로 계정 ID를 입력합니다. 네트워크 ID 또는 대상 링크 ID일 수 있습니다. 일반적으로 8자리 ID입니다.
+* **[!UICONTROL Account ID]**:Google로 계정 ID를 입력합니다. 네트워크 ID 또는 대상 링크 ID일 수 있습니다. 일반적으로 8자리 ID입니다.
 
 >[!NOTE]
 >
