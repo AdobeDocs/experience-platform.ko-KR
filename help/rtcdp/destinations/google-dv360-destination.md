@@ -4,7 +4,7 @@ seo-title: Google Display & Video 360 대상
 description: Display & Video 360(이전 DoubleClick Bid Manager)은 디스플레이, 비디오 및 모바일 인벤토리 소스에서 타겟팅된 디지털 캠페인 및 대상 리타겟팅을 실행하는 데 사용되는 도구입니다.
 seo-description: 'Display & Video 360(이전 DoubleClick Bid Manager)은 디스플레이, 비디오 및 모바일 인벤토리 소스에서 타겟팅된 디지털 캠페인 및 대상 리타겟팅을 실행하는 데 사용되는 도구입니다. '
 translation-type: tm+mt
-source-git-commit: 810028edc662a7f52484e37cf0fbdfafe5db650f
+source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
 
 ---
 
@@ -46,14 +46,14 @@ Adobe Real-time CDP에서 Google Display &amp; Video 360 대상을 만들기 전
 1. 에서 Google **[!UICONTROL Connections > Destinations]** Display &amp; Video 360을 선택하고 **[!UICONTROL Create destination]**선택합니다.
    ![Google Display &amp; Video 360 대상 연결](/help/rtcdp/destinations/assets/google-dv360-destination.png)
 
-2. 대상 만들기 마법사에서 대상에 대한 기본 정보를 입력합니다.
+2. 대상 만들기 워크플로우에서 대상에 대한 [!UICONTROL Basic Information] 을 입력합니다.
    ![기본 정보 Google Display &amp; Video 360](/help/rtcdp/destinations/assets/google-dv360-basic-information.png)
-* **이름**:이 대상에 대한 기본 이름을 입력합니다.
-* **설명**:선택 사항입니다. 예를 들어 이 대상을 사용하는 캠페인을 언급할 수 있습니다.
-* **계정 유형**:Google의 계정에 따라 옵션을 선택합니다.
+* **[!UICONTROL Name]**:이 대상에 대한 기본 이름을 입력합니다.
+* **[!UICONTROL Description]**: 선택 사항입니다. 예를 들어 이 대상을 사용하는 캠페인을 언급할 수 있습니다.
+* **[!UICONTROL Account Type]**:Google의 계정에 따라 옵션을 선택합니다.
    * 디스플레이 및 비디오 360 계정에서 특정 브랜드에만 대상을 공유할 수 `Invite Advertiser` 있도록 하는 데 사용합니다.
    * 디스플레이 및 비디오 360 계정의 모든 브랜드에 대상을 공유할 수 `Invite Partner` 있도록 허용하는 데 사용합니다.
-* **계정 ID**:Google로 **[!DNL Invite partner]** 또는 **[!DNL Invite advertiser]** 계정 ID를 입력합니다. 일반적으로 이것은 6 또는 7자리 ID입니다.
+* **[!UICONTROL Account ID]**:Google로 **[!DNL Invite partner]** 또는 **[!DNL Invite advertiser]** 계정 ID를 입력합니다. 일반적으로 이것은 6 또는 7자리 ID입니다.
 
 >[!NOTE]
 >
