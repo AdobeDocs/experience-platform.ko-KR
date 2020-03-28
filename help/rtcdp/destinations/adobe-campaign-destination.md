@@ -4,7 +4,7 @@ seo-title: Adobe Campaign
 description: Adobe Campaign은 온라인과 오프라인의 모든 채널에서 캠페인을 개인화하고 전달할 수 있는 솔루션 세트입니다.
 seo-description: Adobe Campaign은 온라인과 오프라인의 모든 채널에서 캠페인을 개인화하고 전달할 수 있는 솔루션 세트입니다.
 translation-type: tm+mt
-source-git-commit: 3b9584cca8943c52bb3d8e4512d327d3dbeb9e04
+source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
 
 ---
 
@@ -23,25 +23,25 @@ Adobe Campaign은 온라인과 오프라인의 모든 채널에서 캠페인을 
 
    ![Adobe 캠페인에 연결](/help/rtcdp/destinations/assets/connect-adobe-campaign.png)
 
-1. Connect 대상 마법사에서 저장소 위치에 **[!UICONTROL Connection type]** 대한 을 선택합니다. Adobe Campaign의 경우, Amazon S3 **, Password**&#x200B;가 있는 SFTP **및** SSH 키가 있는 SFTP 중에서 **선택할**&#x200B;수있습니다. 연결 유형에 따라 아래 정보를 입력한 다음 을 **[!UICONTROL Connect]**&#x200B;선택합니다.
+1. Connect 대상 워크플로우에서 저장소 위치에 **[!UICONTROL Connection type]** 사용할 항목을 선택합니다. Adobe Campaign의 경우, **[!UICONTROL Amazon S3]**&#x200B;및 **[!UICONTROL SFTP with Password]** 을 선택할 수 **[!UICONTROL SFTP with SSH Key]**&#x200B;있습니다. 연결 유형에 따라 아래 정보를 입력한 다음 을 **[!UICONTROL Connect]**&#x200B;선택합니다.
 
    ![캠페인 설정 마법사](/help/rtcdp/destinations/assets/adobe-campaign-wizard.png)
 
-   S3 **** 연결의 경우 액세스 키 ID와 비밀 액세스 키를 제공해야 합니다.
-암호 **연결이 있는 SFTP의** 경우 도메인, 포트, 사용자 이름 및 암호를 제공해야 합니다.
-SSH **키 연결이 있는 SFTP의** 경우 도메인, 포트, 사용자 이름 및 SSH 키를 제공해야 합니다.
+   연결의 **[!UICONTROL Amazon S3]** 경우 액세스 키 ID 및 비밀 액세스 키를 제공해야 합니다.
+연결의 경우 도메인, 포트, 사용자 이름 및 암호를 제공해야 **[!UICONTROL SFTP with Password]** 합니다.
+연결의 경우 도메인, 포트, 사용자 이름 및 SSH 키를 제공해야 **[!UICONTROL SFTP with SSH Key]** 합니다.
 
    ![캠페인 정보 입력](/help/rtcdp/destinations/assets/adobe-campaign-step2.png)
 
-1. 기본 **정보에서**&#x200B;아래에 표시된 대로 대상에 대한 관련 정보를 입력합니다.
-   * **이름**:대상의 관련 이름을 선택합니다.
-   * **설명**:대상에 대한 설명을 입력합니다.
-   * **버킷 이름**:S3 *연결에*&#x200B;대해. S3 버킷의 위치를 입력하여 실시간 CDP를 통해 내보내기 데이터를 CSV 또는 탭으로 구분된 파일로 저장할 수 있습니다.
-   * **폴더 경로**:실시간 CDP를 통해 내보내기 데이터를 CSV 또는 탭으로 구분된 파일로 저장할 스토리지 위치에 경로를 제공합니다.
-   * **파일 형식**:CSV ******또는** TAB_SEPARATED. 저장소 위치로 내보낼 파일 형식을 선택합니다.
+1. 에서 **[!UICONTROL Basic Information]**&#x200B;아래 표시된 대로 대상에 대한 관련 정보를 입력합니다.
+   * **[!UICONTROL Name]**:대상의 관련 이름을 선택합니다.
+   * **[!UICONTROL Description]**:대상에 대한 설명을 입력합니다.
+   * **[!UICONTROL Bucket Name]**:S3 *연결에*&#x200B;대해. S3 버킷의 위치를 입력하여 실시간 CDP를 통해 내보내기 데이터를 CSV 또는 탭으로 구분된 파일로 저장할 수 있습니다.
+   * **[!UICONTROL Folder Path]**:실시간 CDP를 통해 내보내기 데이터를 CSV 또는 탭으로 구분된 파일로 저장할 스토리지 위치에 경로를 제공합니다.
+   * **[!UICONTROL File Format]**:CSV ******또는** TAB_SEPARATED. 저장소 위치로 내보낼 파일 형식을 선택합니다.
    ![캠페인 기본 정보](/help/rtcdp/destinations/assets/adobe-campaign-basic-information.png)
 
-1. 기본 **정보의** 필드를 채운 후 만들기를 **클릭합니다**. 대상이 연결되었으며 세그먼트를 [대상에](/help/rtcdp/destinations/activate-destinations.md) 활성화할 수 있습니다.
+1. 위의 필드를 채운 **[!UICONTROL Create]** 후 을 클릭합니다. 대상이 연결되었으며 세그먼트를 [대상에](/help/rtcdp/destinations/activate-destinations.md) 활성화할 수 있습니다.
 
 ## 대상 속성 {#destination-attributes}
 
