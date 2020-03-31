@@ -4,7 +4,7 @@ seo-title: 실시간 고객 데이터 플랫폼의 데이터 거버넌스
 description: '데이터 거버넌스를 사용하면 고객 데이터를 관리하고 데이터 사용에 적용되는 규정, 제한 및 정책을 준수할 수 있습니다. '
 seo-description: '데이터 거버넌스를 사용하면 고객 데이터를 관리하고 데이터 사용에 적용되는 규정, 제한 및 정책을 준수할 수 있습니다. '
 translation-type: tm+mt
-source-git-commit: f5fbb1434b7154dcdbef12de7882ecd3d2f18d52
+source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
 
 ---
 
@@ -17,11 +17,11 @@ Adobe Experience Platform 데이터 거버넌스를 사용하면 고객 데이�
 
 실시간 CDP는 Adobe Experience Platform을 기반으로 구축되므로 대부분의 데이터 거버넌스 기능은 Experience Platform 문서에서 다룹니다. 본 문서는 경험 플랫폼의 데이터 거버넌스 [개요를](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html#!api-specification/markdown/narrative/technical_overview/data_governance/dule_overview.md) 보완하기 위해 작성되었으며 실시간 CDP에서 사용할 수 있는 거버넌스 기능에 대해 간략히 설명합니다. 다음 주제에 대해 다룹니다.
 
-* [데이터에 사용 레이블 적용](#apply-usage-labels-to-your-data)
-* [데이터 사용 정책 관리](#manage-data-usage-policies)
-* [데이터 사용 규정 준수](#enforce-data-usage-compliance)
+* [데이터에 사용 레이블 적용](#labels)
+* [데이터 사용 정책 관리](#policies)
+* [데이터 사용 규정 준수](#enforcement)
 
-## 데이터에 사용 레이블 적용
+## 데이터에 사용 레이블 적용 {#labels}
 
 데이터 거버넌스를 사용하면 데이터 세트 또는 데이터 세트 필드 수준에서 데이터에 사용 레이블을 적용할 수 있습니다. 데이터 사용 레이블을 사용하면 해당 데이터에 적용되는 사용 정책에 따라 데이터를 분류할 수 있습니다.
 
@@ -34,7 +34,7 @@ Adobe Experience Platform 데이터 거버넌스를 사용하면 고객 데이�
 마케팅 사용 사례는 설정 단계에서 _대상 편집_ 워크플로우에 대해 _정의할 수_ 있습니다. 자세한 내용은 대상 설명서를 참조하십시오.
 
 
-## 데이터 사용 정책 관리
+## 데이터 사용 정책 관리 {#policies}
 
 데이터 사용 레이블이 데이터 규정 준수를 효과적으로 지원하려면 데이터 사용 정책을 정의하고 활성화해야 합니다. 데이터 사용 정책은 실시간 CDP 내에서 데이터에 대해 수행할 수 있거나 제한된 마케팅 작업의 종류를 설명하는 규칙입니다. 자세한 내용은 경험 플랫폼 데이터 거버넌스 개요의 [&quot;데이터 사용 정책&quot; 섹션을](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html#!api-specification/markdown/narrative/technical_overview/data_governance/dule_overview.md) 참조하십시오.
 
@@ -56,7 +56,7 @@ Adobe Experience Platform은 일반적인 고객 경험 사용 사례를 위한 
 * 활성화할 세그먼트 내의 필드 및 데이터 세트에 적용되는 데이터 사용 레이블입니다.
 * 대상의 마케팅 목적입니다.
 
-### 정책 위반 메시지
+### 정책 위반 메시지 {#enforcement}
 
 정책 위반이 세그먼트를 활성화하려고 시도하지 않거나 이미 활성화된 세그먼트를 [](#policy-enforcement-for-activated-segments)편집하지 않으면 작업이 금지되고 하나 이상의 정책이 위반되었음을 나타내는 팝업이 나타납니다. 팝업 왼쪽 열에서 정책 위반을 선택하여 해당 위반에 대한 세부 정보를 표시합니다.
 
