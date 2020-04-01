@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 조합
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: fabaabc3cc5b82cba084bddd081f5bba670b89f0
+source-git-commit: 7f61cee8fb5160d0f393f8392b4ce2462d602981
 
 ---
 
@@ -31,7 +31,7 @@ See the [Identity Service documentation](../../identity-service/home.md) for mor
 
 ### 세그먼트 멤버십 맵
 
-맵은 `segmentMembership` 세그먼트 평가 결과를 저장합니다. 실시간 고객 프로필 API를 사용하여 세그먼트 작업을 [성공적으로](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)실행하면 맵이 업데이트됩니다. `segmentMembership` 또한 Adobe Audience Manager와 같은 다른 솔루션과의 통합을 위해 인제스트된 사전 평가 대상 세그먼트를 플랫폼에 저장합니다.
+맵은 `segmentMembership` 세그먼트 평가 결과를 저장합니다. 세그먼트 작업이 세그멘테이션 API를 사용하여 성공적으로 [실행되면](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)맵이 업데이트됩니다. `segmentMembership` 또한 Adobe Audience Manager와 같은 다른 솔루션과의 통합을 위해 인제스트된 사전 평가 대상 세그먼트를 플랫폼에 저장합니다.
 
 자세한 내용은 API를 사용하여 세그먼트를 [만드는](../../segmentation/tutorials/create-a-segment.md) 방법에 대한 자습서를 참조하십시오.
 
