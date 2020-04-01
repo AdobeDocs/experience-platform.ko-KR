@@ -3,25 +3,44 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Help
 translation-type: tm+mt
-source-git-commit: d4ce988304532bb0381fa58c67b4fea26e9ef21f
+source-git-commit: 63005d0fe03444c2c0e12bea3570441bf39ec75b
 
 ---
 
 
 # Adobe Experience Platform {#landing}
 
-* [Experience Platform 홈](home.md)
+* [경험 플랫폼 개요](home.md)
 * [시작하기](get-started.md)
-* [제품 개요](https://www.adobe.io/apis/experienceplatform/home/overview.html)
-* 경험 플랫폼 참조 {#ref}
-   * [릴리스 노트](https://www.adobe.io/apis/experienceplatform/home/services/release-notes.html#!end-user/markdown/release-notes/release-notes.md)
-   * [용어 설명](https://www.adobe.io/apis/experienceplatform/home/services/acp-glossary.html)
-   * [문제 해결 안내서](https://www.adobe.io/apis/experienceplatform/home/services/troubleshooting.html)
-* [Experience Platform 서비스 설명서](https://www.adobe.io/apis/experienceplatform/home/services.html)
-* [실시간 고객 데이터 프로필 가이드](https://docs.adobe.com/content/help/en/experience-platform/rtcdp/overview.html)
+* Experience Platform 설명서 {#documentation}
+   * [설명서 개요](documentation/overview.md)
+   * [액세스 제어](https://docs.adobe.com/content/help/en/experience-platform/access-control/home.html)
+   * [감사기](https://docs.adobe.com/content/help/en/auditor/using/overview.html)
+   * [카탈로그 및 데이터 집합](https://docs.adobe.com/content/help/en/experience-platform/catalog/home.html)
+   * [데이터 액세스](https://docs.adobe.com/content/help/en/experience-platform/data-access/home.html)
+   * [데이터 거버넌스](https://docs.adobe.com/content/help/en/experience-platform/data-governance/home.html)
+   * [데이터 통합(일괄 처리 및 스트리밍)](https://docs.adobe.com/content/help/en/experience-platform/ingestion/home.html)
+   * [데이터 과학 작업 영역](https://docs.adobe.com/content/help/en/experience-platform/data-science-workspace/home.html)
+   * [디버거](https://docs.adobe.com/content/help/en/debugger/using/experience-cloud-debugger.html)
+   * [의사 결정 서비스](https://docs.adobe.com/content/help/en/experience-platform/decisioning/home.html)
+   * [대상](https://docs.adobe.com/content/help/en/experience-platform/rtcdp/destinations/destinations-overview.html)
+   * [ETL(추출, 변형, 로드)](https://docs.adobe.com/content/help/en/experience-platform/etl/home.html)
+   * [Experience Platform Web SDK(베타)](https://docs.adobe.com/content/help/en/experience-platform/edge/home.html)
+   * [ID 서비스](https://docs.adobe.com/content/help/en/experience-platform/identity/home.html)
+   * [지능형 서비스](https://docs.adobe.com/content/help/en/experience-platform/intelligent-services/home.html)
+   * [Launch](https://docs.adobe.com/content/help/en/launch/using/overview.html)
+   * [통찰력 통찰력](https://docs.adobe.com/content/help/en/experience-platform/observability/home.html)
+   * [개인 정보 서비스](https://docs.adobe.com/content/help/en/experience-platform/privacy/home.html)
+   * [프로필(실시간 고객 프로필)](https://docs.adobe.com/content/help/en/experience-platform/profile/home.html)
+   * [쿼리 서비스](https://docs.adobe.com/content/help/en/experience-platform/query/home.html)
+   * [실시간 고객 데이터 플랫폼](https://docs.adobe.com/content/help/en/experience-platform/rtcdp/overview.html)
+   * [샌드박스](https://docs.adobe.com/content/help/en/experience-platform/sandbox/home.html)
+   * [세그먼테이션](https://docs.adobe.com/content/help/en/experience-platform/segmentation/home.html)
+   * [소스(커넥터)](https://docs.adobe.com/content/help/en/experience-platform/source-connectors/home.html)
+   * [XDM(경험 데이터 모델)](https://docs.adobe.com/content/help/en/experience-platform/xdm/home.html)
+* [경험 플랫폼 자습서](https://docs.adobe.com/content/help/en/experience-platform/tutorials/home.html)
+* [릴리스 노트](https://docs.adobe.com/content/help/en/experience-platform/release-notes/latest.html)
+* [용어 설명](glossary.md)
+* [문제 해결 가이드](troubleshooting.md)
+* [API 기본 사항](api-fundamentals.md)
 * [API 참조](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)
-* Launch {#launch}
-   * [Experience Platform Launch](https://docs.adobe.com/content/help/en/launch/using/overview.html)
-   * [Experience Platform Auditor](https://docs.adobe.com/content/help/en/auditor/using/overview.html)
-   * [Experience Cloud Debugger](https://docs.adobe.com/content/help/en/debugger/using/experience-cloud-debugger.html)
-   * [(베타) Experience Platform Web SDK](https://docs.adobe.com/content/help/en/experience-platform/edge/home.html)
