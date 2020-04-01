@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 고객 세그먼트에 대한 데이터 사용 규정 준수
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 76032cca825eb75f7a8056cbbbc230343bed27a0
+source-git-commit: 7f61cee8fb5160d0f393f8392b4ce2462d602981
 
 ---
 
@@ -52,7 +52,7 @@ source-git-commit: 76032cca825eb75f7a8056cbbbc230343bed27a0
 
 이 워크플로우는 알려진 대상 세그먼트에 액세스하여 시작합니다. 실시간 고객 프로필에서 사용할 수 있는 세그먼트에는 세그먼트 정의 내에 병합 정책 ID가 포함되어 있습니다. 이 병합 정책에는 세그먼트에 포함할 데이터 집합에 대한 정보가 포함되며, 여기에는 적용 가능한 데이터 사용 레이블이 포함됩니다.
 
-실시간 [고객 프로필 API를](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)사용하여 세그먼트 정의를 ID로 조회하여 관련 병합 정책을 찾을 수 있습니다.
+세그멘테이션 [API를](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)사용하여 ID로 세그먼트 정의를 조회하여 연관된 병합 정책을 찾을 수 있습니다.
 
 **API 형식**
 
