@@ -609,7 +609,7 @@ curl -X POST \
 | `filter.fromIngestTimestamp` for **profiles**, if provided | 병합된 업데이트된 타임스탬프가 지정된 타임스탬프보다 큰 병합된 프로필을 모두 포함합니다. 피연산자를 `greater_than` 지원합니다. |
 | `filter.fromTimestamp` 이벤트 | 이 타임스탬프 이후에 인제스트된 모든 이벤트는 결과 프로필 결과에 따라 내보내집니다. 이벤트 시간 자체가 아니라 이벤트에 대한 수집 시간입니다. |
 | `filter.emptyProfiles` | *(선택 사항)* 부울 값. 프로필에는 프로필 레코드, ExperienceEvent 레코드 또는 둘 다를 포함할 수 있습니다. 프로필 레코드가 없고 ExperienceEvent 레코드만 있는 프로필을 &quot;emptyProfiles&quot;라고 합니다. &quot;emptyProfiles&quot;를 포함하여 프로필 저장소에서 모든 프로필을 내보내려면 `emptyProfiles` 의 값을 `true`로 설정합니다. 로 `emptyProfiles` 설정하면 `false`저장소에 프로필 레코드가 있는 프로필만 내보내집니다. 기본적으로 속성이 포함되지 않은 경우 `emptyProfiles` 프로필 레코드가 포함된 프로파일만 내보내집니다. |
-| `additionalFields.eventList` | *(선택 사항)* 다음 설정 중 하나 이상을 제공하여 하위 또는 연관된 개체에 대해 내보낸 시계열 이벤트 필드를 제어합니다. |
+| `additionalFields.eventList` | *(선택 사항)* 다음 설정 중 하나 이상을 제공하여 하위 또는 관련 개체에 대해 내보낸 시계열 이벤트 필드를 제어합니다. |
 | `additionalFields.eventList.fields` | 내보낼 필드를 제어합니다. |
 | `additionalFields.eventList.filter` | 관련 개체에서 포함된 결과를 제한하는 기준을 지정합니다. 내보내기에 필요한 최소 값(일반적으로 날짜)이 필요합니다. |
 | `additionalFields.eventList.filter.fromIngestTimestamp` | 제공된 타임스탬프 이후에 인제스트된 이벤트까지 시간 시리즈 이벤트를 필터링합니다. 이벤트 시간 자체가 아니라 이벤트에 대한 수집 시간입니다. |
