@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform FAQ 및 문제 해결 가이드
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 260eddee41d337f25b90ab365a76ab2ffd3dedef
+source-git-commit: 7f61cee8fb5160d0f393f8392b4ce2462d602981
 
 ---
 
@@ -247,3 +247,4 @@ API 요청에서 `Authorization` 헤더가 누락되면 이 오류 메시지가 
 | 쿼리 서비스 | [쿼리 서비스 API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/qs-api.yaml) | [쿼리 서비스 문제 해결 가이드](../query-service/troubleshooting-guide.md) |
 | 실시간 고객 프로필 | [실시간 고객 프로필 API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml) |  |
 | 샌드박스 | [샌드박스 API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) | [샌드박스 문제 해결 가이드](../sandboxes/troubleshooting-guide.md) |
+| 세그먼테이션 | [세그멘테이션 API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml) |
