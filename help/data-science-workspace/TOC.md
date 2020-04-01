@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Data Science Workspace Help
 translation-type: tm+mt
-source-git-commit: 34fff508f49327ce314a517d77efabb286ef055c
+source-git-commit: 01cfbc86516a05df36714b8c91666983f7a1b0e8
 
 ---
 
@@ -25,6 +25,7 @@ source-git-commit: 34fff508f49327ce314a517d77efabb286ef055c
    * [모델](api/models.md)
    * [MLServices](api/mlservices.md)
    * [인사이트](api/insights.md)
+   * [부록](api/appendix.md)
 * 사전 빌드된 레서피 {#pre-built-recipes}
    * [제품 추천 레서피](pre-built-recipes/product-recommendations.md)
    * [제품 구매 예측](pre-built-recipes/product-purchase-prediction.md)
