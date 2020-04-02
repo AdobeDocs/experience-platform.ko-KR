@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Jupiter 노트북을 사용하여 레서피 만들기
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 3190f2f01ae13d25cc3a3a540b83cc1fc0819f0a
+source-git-commit: 9f3fc3ec3ce560534b057185e3fef2cc2bc1234d
 
 ---
 
@@ -495,6 +495,6 @@ def save(configProperties, prediction):
 
 다음 비디오는 모델 구축 및 배포에 대한 사용자의 이해를 지원하기 위해 만들어졌습니다.
 
->[!VIDEO](https://images-tv.adobe.com/mpcv3/65884d30-94fe-47ef-8d4e-efafe5303260_1578451719.1920x1080at3000_h264.mp4)
+>[!VIDEO](https://video.tv.adobe.com/v/30575?quality=12&enable10seconds=on&speedcontrol=on)
 
 
