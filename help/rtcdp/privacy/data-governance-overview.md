@@ -4,7 +4,7 @@ seo-title: 실시간 고객 데이터 플랫폼의 데이터 거버넌스
 description: '데이터 거버넌스를 사용하면 고객 데이터를 관리하고 데이터 사용에 적용되는 규정, 제한 및 정책을 준수할 수 있습니다. '
 seo-description: '데이터 거버넌스를 사용하면 고객 데이터를 관리하고 데이터 사용에 적용되는 규정, 제한 및 정책을 준수할 수 있습니다. '
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: e21cf6794e6c9ee522482cd9ccb95d66b06d330a
 
 ---
 
@@ -15,7 +15,7 @@ source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
 
 Adobe Experience Platform 데이터 거버넌스를 사용하면 고객 데이터를 관리하고 데이터 사용에 적용되는 규정, 제한 및 정책을 준수할 수 있습니다. 실시간 CDP에서 중요한 역할을 하는 Adobe Marketing Cloud를 사용하면 사용 정책을 정의하고, 해당 정책을 기반으로 데이터를 분류하고, 특정 마케팅 활동을 수행할 때 정책 위반을 확인할 수 있습니다.
 
-실시간 CDP는 Adobe Experience Platform을 기반으로 구축되므로 대부분의 데이터 거버넌스 기능은 Experience Platform 문서에서 다룹니다. 본 문서는 경험 플랫폼의 데이터 거버넌스 [개요를](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html#!api-specification/markdown/narrative/technical_overview/data_governance/dule_overview.md) 보완하기 위해 작성되었으며 실시간 CDP에서 사용할 수 있는 거버넌스 기능에 대해 간략히 설명합니다. 다음 주제에 대해 다룹니다.
+실시간 CDP는 Adobe Experience Platform을 기반으로 구축되므로 대부분의 데이터 거버넌스 기능은 Experience Platform 문서에서 다룹니다. 본 문서는 경험 플랫폼의 데이터 거버넌스 [개요를](../../data-governance/home.md) 보완하기 위해 작성되었으며 실시간 CDP에서 사용할 수 있는 거버넌스 기능에 대해 간략히 설명합니다. 다음 주제에 대해 다룹니다.
 
 * [데이터에 사용 레이블 적용](#labels)
 * [데이터 사용 정책 관리](#policies)
@@ -25,7 +25,7 @@ Adobe Experience Platform 데이터 거버넌스를 사용하면 고객 데이�
 
 데이터 거버넌스를 사용하면 데이터 세트 또는 데이터 세트 필드 수준에서 데이터에 사용 레이블을 적용할 수 있습니다. 데이터 사용 레이블을 사용하면 해당 데이터에 적용되는 사용 정책에 따라 데이터를 분류할 수 있습니다.
 
-데이터 사용 레이블 작업에 대한 자세한 내용은 Adobe Experience Platform용 [데이터 사용 레이블 사용 안내서를](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html#!api-specification/markdown/narrative/tutorials/dule/dule_working_with_labels.md) 참조하십시오.
+데이터 사용 레이블 작업에 대한 자세한 내용은 Adobe Experience Platform용 [데이터 사용 레이블 사용 안내서를](../../data-governance/labels/overview.md) 참조하십시오.
 
 ## 대상에 대한 제한 설정
 
@@ -36,9 +36,9 @@ Adobe Experience Platform 데이터 거버넌스를 사용하면 고객 데이�
 
 ## 데이터 사용 정책 관리 {#policies}
 
-데이터 사용 레이블이 데이터 규정 준수를 효과적으로 지원하려면 데이터 사용 정책을 정의하고 활성화해야 합니다. 데이터 사용 정책은 실시간 CDP 내에서 데이터에 대해 수행할 수 있거나 제한된 마케팅 작업의 종류를 설명하는 규칙입니다. 자세한 내용은 경험 플랫폼 데이터 거버넌스 개요의 [&quot;데이터 사용 정책&quot; 섹션을](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html#!api-specification/markdown/narrative/technical_overview/data_governance/dule_overview.md) 참조하십시오.
+데이터 사용 레이블이 데이터 규정 준수를 효과적으로 지원하려면 데이터 사용 정책을 정의하고 활성화해야 합니다. 데이터 사용 정책은 실시간 CDP 내에서 데이터에 대해 수행할 수 있거나 제한된 마케팅 작업의 종류를 설명하는 규칙입니다. 자세한 내용은 경험 플랫폼 데이터 거버넌스 개요의 [&quot;데이터 사용 정책&quot; 섹션을](../../data-governance/home.md) 참조하십시오.
 
-Adobe Experience Platform은 일반적인 고객 경험 사용 사례를 위한 몇 가지 **핵심 정책을** 제공합니다. 이러한 정책은 정책 서비스 개발자 안내서의 &quot;모든 정책 [목록](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml)&quot; 섹션에 나와 있는 것처럼 DULE Policy Service API에 요청하여 [볼 수 있습니다](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html#!api-specification/markdown/narrative/technical_overview/data_governance/dule_policy_service_developer_guide.md). 개발자 안내서의 &quot;정책 만들기&quot; 섹션에 나와 있는 것처럼 사용자 지정 사용 제한을 모델링하기 위한 사용자 **지정 정책을** 만들 수도 있습니다.
+Adobe Experience Platform은 일반적인 고객 경험 사용 사례를 위한 몇 가지 **핵심 정책을** 제공합니다. 이러한 정책은 정책 서비스 개발자 안내서의 &quot;모든 정책 [목록](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml)&quot; 섹션에 나와 있는 것처럼 DULE Policy Service API에 요청하여 [볼 수 있습니다](../../data-governance/policies/overview.md). 개발자 안내서의 &quot;정책 만들기&quot; 섹션에 나와 있는 것처럼 사용자 지정 사용 제한을 모델링하기 위한 사용자 **지정 정책을** 만들 수도 있습니다.
 
 ## (베타) 데이터 사용 규정 준수 강화 {#enforce-data-usage-compliance}
 
@@ -70,7 +70,7 @@ Adobe Experience Platform은 일반적인 고객 경험 사용 사례를 위한 
 
 위반이 트리거되면 해당 **구성 요소가** 데이터 사용 정책을 준수하도록 업데이트될 때까지 활성화 시 저장 단추가 비활성화됩니다.
 
-### 활성화된 세그먼트에 대한 정책 적용
+### 활성화된 세그먼트에 대한 정책 적용 {#policy-enforcement-for-activated-segments}
 
 정책 적용은 활성화된 후에도 세그먼트에 적용되므로, 정책 위반의 결과로 세그먼트나 대상에 대한 변경 사항을 제한할 수 있습니다. 대상으로 세그먼트를 활성화하는 것과 관련된 많은 구성 요소로 인해 다음 작업 중 하나가 잠재적으로 위반을 유발할 수 있습니다.
 
@@ -83,4 +83,4 @@ Adobe Experience Platform은 일반적인 고객 경험 사용 사례를 위한 
 
 ## 다음 단계
 
-실시간 CDP의 주요 데이터 거버넌스 기능과 경험 플랫폼을 통해 데이터 거버넌스 기능을 어떻게 활용하는지 소개합니다. Adobe Experience Platform의 데이터 거버넌스 [설명서를 계속 읽어 보시기 바랍니다](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html). 이 설명서에서는 데이터 사용 레이블 및 정책 관리를 위한 단계별 워크플로우뿐만 아니라 필수 데이터 거버넌스 개념에 대한 개요를 제공합니다.
+실시간 CDP의 주요 데이터 거버넌스 기능과 경험 플랫폼을 통해 데이터 거버넌스 기능을 어떻게 활용하는지 소개합니다. Adobe Experience Platform의 데이터 거버넌스 [설명서를 계속 읽어 보시기 바랍니다](../../data-governance/home.md). 이 설명서에서는 데이터 사용 레이블 및 정책 관리를 위한 단계별 워크플로우뿐만 아니라 필수 데이터 거버넌스 개념에 대한 개요를 제공합니다.
