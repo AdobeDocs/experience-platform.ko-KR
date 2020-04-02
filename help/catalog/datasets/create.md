@@ -4,7 +4,7 @@ solution: Experience Platform
 title: API를 사용하여 데이터 세트 만들기
 topic: datasets
 translation-type: tm+mt
-source-git-commit: 6d24637dc6cc282f98288b6416e4a3b7cebe42ea
+source-git-commit: a6a1ecd9ce49c0a55e14b0d5479ca7315e332904
 
 ---
 
@@ -454,7 +454,7 @@ curl -X GET \
 
 데이터 액세스 API를 사용하여 이름, 크기(바이트) 및 링크를 반환하여 파일이나 폴더를 다운로드할 수도 있습니다.
 
-데이터 액세스 API 작업에 대한 자세한 단계는 데이터 액세스 개발자 안내서를 [참조하십시오](../../data-access/api.md).
+데이터 액세스 API 작업에 대한 자세한 단계는 데이터 액세스 개발자 안내서를 [참조하십시오](../../data-access/home.md).
 
 ## 데이터 집합 스키마 업데이트
 
