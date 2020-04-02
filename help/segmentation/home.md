@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform 세그멘테이션 서비스
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: a6a1ecd9ce49c0a55e14b0d5479ca7315e332904
 
 ---
 
@@ -35,7 +35,7 @@ API를 사용하거나 세그먼트 빌더를 사용하든 관계없이 세그�
 
 세그먼트 빌더(세그멘테이션 서비스의 UI 구현)에서 세그먼트를 만들고 사용하는 방법에 대해 알아보려면 세그먼트 빌더 [안내서를](./ui/overview.md)참조하십시오.
 
-API를 사용하여 세그먼트 정의를 만드는 방법에 대한 자세한 내용은 API를 사용하여 대상 세그먼트를 [만드는 방법에 대한 자습서를 참조하십시오](./tutorials/create-a-segment.md).
+API를 사용하여 세그먼트 정의를 만드는 방법에 대한 자세한 내용은 API를 사용하여 대상 세그먼트 [만들기에 대한 자습서를 참조하십시오](./tutorials/create-a-segment.md).
 
 >[!NOTE] 스키마가 확장되는 경우 모든 향후 업로드가 그에 따라 새로 추가된 필드를 업데이트해야 합니다. XDM(Experience Data Model) 사용자 지정에 대한 자세한 내용은 스키마 [편집기 자습서를](../xdm/tutorials/create-schema-ui.md)참조하십시오.
 
@@ -47,7 +47,7 @@ API를 사용하여 세그먼트 정의를 만드는 방법에 대한 자세한 
 
 스트리밍 세그멘테이션은 사용자 활동에 대한 응답으로 세그먼트를 업데이트하는 지속적인 데이터 선택 프로세스입니다. 세그먼트를 작성하고 저장하면 세그먼트 정의가 들어오는 데이터에 대해 실시간 고객 프로필에 적용됩니다. 세그먼트 추가 및 제거는 정기적으로 처리되므로 타겟 고객의 관심사와 연관성 유지
 
-스트리밍 세그멘테이션에 대한 자세한 내용은 [스트리밍 세그멘테이션 설명서를](./ui/streaming-segmentation.md)참조하십시오.
+스트리밍 세그멘테이션에 대한 자세한 내용은 [스트리밍 세그멘테이션 설명서를](./api/streaming-segmentation.md)참조하십시오.
 
 ### 일괄 세분화
 
