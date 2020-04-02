@@ -4,14 +4,18 @@ solution: Experience Platform
 title: 데이터 통합 자습서
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: eef56cfc20eb8e4ac131bee20c5c3afbf82971d2
+source-git-commit: 2020f4b88f81f2d4fe3cfbd91cd18119ae580f4f
 
 ---
 
 
 # 경험 플랫폼으로 데이터 인제스트
 
-Adobe Experience Platform은 마케터가 고객의 행동을 보다 효과적으로 파악할 수 있도록 다양한 소스의 데이터를 취합합니다. Adobe Experience Platform 데이터 수집은 플랫폼이 이러한 소스의 데이터를 수집하는 여러 방법뿐만 아니라 다운스트림 플랫폼 서비스에서 사용하기 위해 Data Lake 내에서 데이터가 지속되는 방식을 나타냅니다. 데이터 통합에는 일괄 처리, 스트리밍 통합 및 소스 커넥터를 사용한 통합 기능이 포함됩니다. 자세한 내용은 데이터 통합 [개요](../ingestion/home.md) 및 소스 개요를 [참조하십시오](../source-connectors/home.md).
+Adobe Experience Platform은 마케터가 고객의 행동을 보다 효과적으로 파악할 수 있도록 다양한 소스의 데이터를 취합합니다. Adobe Experience Platform 데이터 수집은 플랫폼이 이러한 소스의 데이터를 수집하는 여러 방법뿐만 아니라 다운스트림 플랫폼 서비스에서 사용하기 위해 Data Lake 내에서 데이터가 지속되는 방식을 나타냅니다. 데이터 통합에는 일괄 처리, 스트리밍 통합 및 소스 커넥터를 사용한 통합 기능이 포함됩니다. 자세한 내용은 데이터 통합 [개요를](../ingestion/home.md) 참조하거나 소스 [문서로](../source-connectors/home.md)직접 진행하십시오.
+
+## UI 및 API에서 소스 커넥터 만들기
+
+소스 커넥터를 사용하면 여러 소스에서 데이터를 인제스트할 수 있으며, 여기에서 플랫폼 서비스를 사용하여 레이블 지정, 구조 지정 및 개선할 수 있습니다. UI를 사용하여 커넥터를 만들려면 UI 개요에서 [소스 커넥터](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-ui-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/ui/sources-ui-tutorial.md)만들기를 참조하십시오. API를 사용하여 소스 커넥터를 만들려면 흐름 서비스 API 개요를 [사용하여 소스 커넥터를](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-api-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/api/sources-api-tutorial.md)만듭니다.
 
 ## 일괄 처리 데이터 인제스트
 
@@ -37,7 +41,5 @@ Authenticated Data Collection을 사용하면 실시간 고객 프로필 및 ID�
 
 Adobe Experience Platform으로 데이터를 스트리밍할 때 많은 HTTP 호출을 하는 것은 비용이 들 수 있습니다. 예를 들어, 1KB 페이로드로 200개의 HTTP 요청을 만드는 대신 200KB의 단일 페이로드를 사용하여 각각 1KB의 200개의 메시지를 포함하는 1개의 HTTP 요청을 만드는 것이 훨씬 효율적입니다. 올바르게 사용할 경우 단일 요청 내에서 여러 메시지를 그룹화하는 것은 Experience Platform으로 전송되는 데이터를 최적화하는 좋은 방법입니다. 스트리밍 통합 기능을 사용하여 하나의 HTTP 요청 내에서 여러 메시지를 Experience Platform으로 전송하는 방법을 알아보려면 여러 메시지 [보내기 자습서를](../ingestion/tutorials/streaming-multiple-messages.md)따르십시오.
 
-## UI 및 API에서 소스 커넥터 만들기
 
-소스 커넥터를 사용하면 여러 소스에서 데이터를 인제스트할 수 있으며, 여기에서 플랫폼 서비스를 사용하여 레이블 지정, 구조 지정 및 개선할 수 있습니다. UI를 사용하여 커넥터를 만들려면 UI 개요에서 [소스 커넥터](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-ui-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/ui/sources-ui-tutorial.md)만들기를 참조하십시오. API를 사용하여 소스 커넥터를 만들려면 흐름 서비스 API 개요를 [사용하여 소스 커넥터를](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-api-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/api/sources-api-tutorial.md)만듭니다.
 
