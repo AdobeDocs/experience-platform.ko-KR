@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Segmentation Service Help
 translation-type: tm+mt
-source-git-commit: 7f61cee8fb5160d0f393f8392b4ce2462d602981
+source-git-commit: 4db66d34afa814715cbcf6fdf409e01b3fe2c0b8
 
 ---
 
@@ -12,6 +12,8 @@ source-git-commit: 7f61cee8fb5160d0f393f8392b4ce2462d602981
 
 - [개요](home.md)
 - 세그멘테이션 API {#api}
+   - [시작하기](api/getting-started.md)
+   - [세그먼트 작업](api/segment-jobs.md)
    - [스트리밍 세분화](api/streaming-segmentation.md)
 - 세그멘테이션 UI {#ui}
    - [개요](ui/overview.md)
