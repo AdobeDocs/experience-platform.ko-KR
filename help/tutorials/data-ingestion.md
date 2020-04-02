@@ -27,7 +27,7 @@ CSV 데이터를 Adobe Experience Platform으로 인제스트하려면 데이터
 
 ## 스트리밍 연결 만들기
 
-Experience Platform에 데이터를 스트리밍하기 시작하려면 먼저 스트리밍 HTTP 연결을 만들어야 합니다. 스트리밍 연결을 만들 때 스트리밍 데이터의 소스, 신뢰할 수 있는(인증된) 소스 또는 신뢰할 수 없는(인증되지 않은) 소스에서 데이터를 전송할지 여부와 같은 주요 세부 정보를 제공해야 합니다. 플랫폼 사용자 인터페이스 또는 경험 플랫폼 API를 사용하여 수행할 수 있습니다. 자세한 내용은 UI를 사용하여 스트리밍 연결을 [만들거나 API를 사용하여 스트리밍 연결을](../ingestion/tutorials/create-streaming-connection-ui.md) 만드는 [자습서를](../ingestion/tutorials/create-streaming-connection.md)따르십시오.
+Experience Platform에 대한 스트리밍 데이터를 시작하려면 먼저 스트리밍 HTTP 연결을 만들어야 합니다. 스트리밍 연결을 만들 때 스트리밍 데이터의 소스, 신뢰할 수 있는(인증된) 소스 또는 신뢰할 수 없는(인증되지 않은) 소스에서 데이터를 전송할지 여부와 같은 주요 세부 정보를 제공해야 합니다. 플랫폼 사용자 인터페이스 또는 경험 플랫폼 API를 사용하여 수행할 수 있습니다. 자세한 내용은 UI를 사용하여 스트리밍 연결을 [만들거나 API를 사용하여 스트리밍 연결을](../ingestion/tutorials/create-streaming-connection-ui.md) 만드는 [자습서를](../ingestion/tutorials/create-streaming-connection.md)따르십시오.
 
 ## 인증된 스트리밍 연결 만들기
 
