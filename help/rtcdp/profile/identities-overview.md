@@ -1,10 +1,10 @@
 ---
 title: ID 및 ID 네임스페이스
 seo-title: Adobe Experience Platform ID 서비스
-description: 설명
+description: description
 seo-description: seo description
 translation-type: tm+mt
-source-git-commit: 5cba5a1e8139dd85f23250d42a1cd8d2318eb916
+source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
 
 ---
 
@@ -17,7 +17,7 @@ Adobe Experience Platform Identity Service를 사용하면 다양한 디바이�
 
 ## ID 네임스페이스
 
-ID 네임스페이스는 ID 서비스의 구성 요소이며 고객 ID에 대한 추가 컨텍스트를 제공하는 지표 역할을 합니다. 일반적으로 사용되는 ID 네임스페이스의 예로는 &quot;이메일&quot;이 있습니다. 여기서 여러 웹 사이트에서 동일한 이메일 주소를 사용하면 동일한 고객에 속하는 고유한 고객 ID로 여러 개의 서로 다른 ID를 연결할 수 있습니다. Experience Platform을 사용하면 ID 네임스페이스를 사용하여 사용자 인터페이스 내에서 개별 프로파일을 검색할 수 있습니다. 프로필 보기에 대한 자세한 내용은 [프로필 뷰어 개요를](/help/rtcdp/profile/profile-viewer.md)참조하십시오. ID 네임스페이스에 대한 자세한 내용은 Adobe I/O의 [ID 네임스페이스 개요를 참조하십시오](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/identity_namespace_overview/identity_namespace_overview.md).
+ID 네임스페이스는 ID 서비스의 구성 요소이며 고객 ID에 대한 추가 컨텍스트를 제공하는 지표 역할을 합니다. 일반적으로 사용되는 ID 네임스페이스의 예로는 &quot;이메일&quot;이 있습니다. 여기서 여러 웹 사이트에서 동일한 이메일 주소를 사용하면 동일한 고객에 속하는 고유한 고객 ID로 여러 개의 서로 다른 ID를 연결할 수 있습니다. Experience Platform을 사용하면 ID 네임스페이스를 사용하여 사용자 인터페이스 내에서 개별 프로파일을 검색할 수 있습니다. 프로필 보기에 대한 자세한 내용은 [프로필 뷰어 개요를](/help/rtcdp/profile/profile-viewer.md)참조하십시오. ID 네임스페이스에 대한 자세한 내용은 [ID 네임스페이스 개요를](../../identity-service/namespaces.md)참조하십시오.
 
 ## ID 그래프
 
@@ -27,4 +27,4 @@ Identity Service는 조직만 표시하고 데이터를 기반으로 하여 개�
 
 ## 다음 단계
 
-ID와 ID 간의 관계는 ID 서비스에 의해 정의 및 유지되며 실시간 고객 프로필에서 활용하여 각 개인 고객과 이들의 상호 작용에 대한 전체 그림을 만듭니다. 자세한 내용은 Adobe I/ [O에 대한 ID 서비스 설명서를 참조하십시오](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/identity_services_architectural_overview/identity_services_architectural_overview.md).
+ID와 ID 간의 관계는 ID 서비스에 의해 정의 및 유지되며 실시간 고객 프로필에서 활용하여 각 개인 고객과 이들의 상호 작용에 대한 전체 그림을 만듭니다. 자세한 내용은 ID 서비스 [설명서를](../../identity-service/home.md)참조하십시오.
