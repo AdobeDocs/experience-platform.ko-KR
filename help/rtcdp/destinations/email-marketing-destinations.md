@@ -4,7 +4,7 @@ seo-title: 이메일 마케팅 대상
 description: ESP(Email Service Providers)를 사용하면 프로모션 이메일 캠페인 전송과 같은 이메일 마케팅 활동을 관리할 수 있습니다.
 seo-description: ESP(Email Service Providers)를 사용하면 프로모션 이메일 캠페인 전송과 같은 이메일 마케팅 활동을 관리할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 463212a8fabb9dd5962b4d3f523a6f2d88bb1d9d
+source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
 
 ---
 
@@ -41,11 +41,11 @@ SSH **키 연결이 있는 SFTP의** 경우 도메인, 포트, 사용자 이름 
 
 ### ID {#identity}
 
-[조합 스키마에서](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/unified_profile_architectural_overview/unified_profile_architectural_overview.md)고유 식별자를 선택하는 것이 좋습니다. 사용자 ID가 꺼져 있는 필드입니다. 일반적으로 이 필드는 이메일 주소이지만 충성도 프로그램 ID 또는 전화 번호일 수도 있습니다. 통합 스키마에서 가장 일반적인 고유 식별자 및 XDM 필드를 보려면 아래 표를 참조하십시오.
+[조합 스키마에서](../../profile/home.md#profile-fragments-and-union-schemas)고유 식별자를 선택하는 것이 좋습니다. 사용자 ID가 꺼져 있는 필드입니다. 일반적으로 이 필드는 이메일 주소이지만 충성도 프로그램 ID 또는 전화 번호일 수도 있습니다. 통합 스키마에서 가장 일반적인 고유 식별자 및 XDM 필드를 보려면 아래 표를 참조하십시오.
 
 | 고유 식별자 | 통합 스키마의 XDM 필드 |
 ---------|----------
-| Email Address | `personalEmail.address` |
+| 이메일 주소 | `personalEmail.address` |
 | 전화 | `mobilePhone.number` |
 | 충성도 프로그램 ID | `Customer-defined XDM field` |
 
