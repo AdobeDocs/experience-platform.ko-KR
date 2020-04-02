@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 세그먼트 평가
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 7f61cee8fb5160d0f393f8392b4ce2462d602981
+source-git-commit: a6a1ecd9ce49c0a55e14b0d5479ca7315e332904
 
 ---
 
@@ -951,7 +951,7 @@ curl -X GET \
 
 내보내기가 성공적으로 완료되면 Experience Platform의 Data Lake 내에서 데이터를 사용할 수 있습니다. 그런 다음 데이터 액세스 [API를](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) 사용하여 내보내기와 `batchId` 연결된 데이터를 사용하여 데이터에 액세스할 수 있습니다. 세그먼트 크기에 따라 데이터가 청크 단위일 수 있으며 일괄 처리는 여러 파일로 구성될 수 있습니다.
 
-데이터 액세스 API를 사용하여 배치 파일에 액세스하고 다운로드하는 방법에 대한 단계별 지침을 보려면 데이터 액세스 [자습서를](../../data-access/api.md)따르십시오.
+데이터 액세스 API를 사용하여 배치 파일에 액세스하고 다운로드하는 방법에 대한 단계별 지침을 보려면 데이터 액세스 [자습서를](../../data-access/tutorials/dataset-data.md)따르십시오.
 
 Adobe Experience Platform 쿼리 서비스를 사용하여 성공적으로 내보낸 세그먼트 데이터에 액세스할 수도 있습니다. UI 또는 RESTful API를 사용하여 쿼리 서비스를 사용하여 데이터 레이크 내의 데이터에 대한 쿼리를 작성, 유효성 확인 및 실행할 수 있습니다.
 
