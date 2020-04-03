@@ -4,7 +4,7 @@ seo-title: Adobe 실시간 고객 데이터 플랫폼의 세분화 서비스
 description: 세그멘테이션 서비스를 설명하는 개요입니다.
 seo-description: Adobe 실시간 고객 데이터 플랫폼의 세분화 서비스 및 세그먼트를 설명하는 개요입니다.
 translation-type: tm+mt
-source-git-commit: bcb4279d04e39905fa64b817fdadd8a875e27697
+source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
 
 ---
 
@@ -25,4 +25,4 @@ source-git-commit: bcb4279d04e39905fa64b817fdadd8a875e27697
 
 ## 다음 단계
 
-이 개요를 본 후에는 실시간 CDP가 세그멘테이션 서비스를 사용하여 마케팅 캠페인의 맞춤화 및 개인화를 향상시키는 방법을 이해해야 합니다. 세그멘테이션 서비스에 대한 자세한 내용은 Adobe I/ [O에 대한 세그멘테이션 설명서를 참조하십시오](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/segmentation/segmentation-overview.md).
+이 개요를 본 후에는 실시간 CDP가 세그멘테이션 서비스를 사용하여 마케팅 캠페인의 맞춤화 및 개인화를 향상시키는 방법을 이해해야 합니다. 세그멘테이션 서비스에 대한 자세한 내용은 세그멘테이션 [설명서를](../../segmentation/home.md)참조하십시오.
