@@ -4,7 +4,7 @@ seo-title: 실시간 고객 데이터 플랫폼 홈 페이지 및 대시보드
 description: 대시보드, 홈 페이지 및 Adobe Experience Platform의 신규 사용자 경험
 seo-description: 대시보드, 홈 페이지 및 Adobe Experience Platform의 신규 사용자 경험
 translation-type: tm+mt
-source-git-commit: 6c8d0757d7e7568b1976823d9c52221374e67cbb
+source-git-commit: 69692f100389abb3fdb251b9b9258421254a2494
 
 ---
 
@@ -42,7 +42,7 @@ Some information is shown in different ways on both the leaderboard and metric c
 
 카운터는 시스템의 데이터 집합 수와 플랫폼의 데이터 양을 표시합니다 **[!UICONTROL Datasets]** . 이 카운터는 데이터 세트를 만들 때 업데이트됩니다.
 
-데이터 세트에 대한 자세한 내용은 Adobe Experience [Platform으로 데이터 인제스트를 참조하십시오](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/data_ingestion_tutorial/data_ingestion_tutorial.md).
+데이터 집합에 대한 자세한 내용은 [데이터 집합 개요를](../catalog/datasets/overview.md)참조하십시오.
 
 ### 프로필
 
@@ -58,7 +58,7 @@ Some information is shown in different ways on both the leaderboard and metric c
 
 **[!UICONTROL Segments]** 조직에 대해 생성된 총 세그먼트 수를 표시합니다. 이 번호는 새 세그먼트를 만들 때 업데이트됩니다.
 
-세그먼트에 대한 자세한 내용은 세그멘테이션 [서비스 개요를](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/segmentation/segmentation-overview.md)참조하십시오.
+세그먼트에 대한 자세한 내용은 세그멘테이션 [서비스 개요를](segmentation/segmentation-overview.md)참조하십시오.
 
 ### 대상
 
@@ -106,7 +106,7 @@ The number of failed profile records is updated hourly. -->
 
 데이터 세트를 클릭하여 해당 항목에 대한 세부 사항을 보거나 데이터 집합 목록을 **[!UICONTROL View all]** 봅니다. 여기에서 자세한 내용을 보려면 특정 소스를 클릭하면 됩니다.
 
-데이터 세트에 대한 자세한 내용은 Adobe Experience [Platform으로 데이터 인제스트를 참조하십시오](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/data_ingestion_tutorial/data_ingestion_tutorial.md).
+데이터 집합에 대한 자세한 내용은 [데이터 집합 개요를](../catalog/datasets/overview.md)참조하십시오.
 
 ### 최근 소스
 
@@ -122,7 +122,7 @@ The number of failed profile records is updated hourly. -->
 
 세그먼트를 클릭하여 해당 항목에 대한 세부 사항을 보거나 추가 세그먼트에 **[!UICONTROL View all]** 대한 정보를 봅니다.
 
-세그먼트에 대한 자세한 내용은 세그멘테이션 [서비스 개요를](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/segmentation/segmentation-overview.md)참조하십시오.
+세그먼트에 대한 자세한 내용은 세그멘테이션 [서비스 개요를](segmentation/segmentation-overview.md)참조하십시오.
 
 ### 최근 대상
 
