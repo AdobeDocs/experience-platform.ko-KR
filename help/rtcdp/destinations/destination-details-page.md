@@ -4,7 +4,7 @@ seo-title: 대상 세부 사항 페이지
 description: '개별 대상에 대한 세부 사항 페이지에서는 대상 이름, ID, 대상에 매핑된 세그먼트, 활성화를 편집하고 데이터 흐름을 활성화 및 비활성화하는 컨트롤과 같은 대상 세부 사항에 대한 개요를 제공합니다. '
 seo-description: '개별 대상에 대한 세부 사항 페이지에서는 대상 이름, ID, 대상에 매핑된 세그먼트, 활성화를 편집하고 데이터 흐름을 활성화 및 비활성화하는 컨트롤과 같은 대상 세부 사항에 대한 개요를 제공합니다. '
 translation-type: tm+mt
-source-git-commit: b784b67092ea8d30ad00cda9a40779b3890862fd
+source-git-commit: e21cf6794e6c9ee522482cd9ccb95d66b06d330a
 
 ---
 
@@ -51,9 +51,9 @@ source-git-commit: b784b67092ea8d30ad00cda9a40779b3890862fd
 | 카테고리 | 대상 유형을 나타냅니다. 자세한 [내용은 대상](/help/rtcdp/destinations/destinations-catalog.md) 카탈로그를 참조하십시오. |
 | 연결 유형 | 대상이 대상으로 전송되는 양식을 나타냅니다. 쿠키 **또는** 프로필 **기반일**&#x200B;수 있습니다. |
 | 빈도 | 대상이 대상으로 전송되는 빈도를 나타냅니다. 스트리밍 **또는 일괄** 처리 가능 ****. |
-| ID | 대상이 허용하는 ID 네임스페이스를 나타냅니다. 예를 들어 ID 필드는 GAID, IDFA, 이메일이 될 수 있습니다. 허용되는 모든 ID 네임스페이스에 대해서는 ID 네임스페이스 개요의 표준 [네임스페이스를](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/identity_namespace_overview/identity_namespace_overview.md)참조하십시오. |
+| ID | 대상이 허용하는 ID 네임스페이스를 나타냅니다. 예를 들어 ID 필드는 GAID, IDFA, 이메일이 될 수 있습니다. 허용되는 모든 ID 네임스페이스에 대해서는 ID 네임스페이스 개요의 표준 [네임스페이스를](../../identity-service/namespaces.md)참조하십시오. |
 | 작성자 | 이 대상 흐름을 만든 사용자를 나타냅니다. |
-| 생성됨 | 이 대상 흐름을 만든 UTC 날짜 및 시간을 나타냅니다. |
+| 작성일 | 이 대상 흐름을 만든 UTC 날짜 및 시간을 나타냅니다. |
 
 ## 4.활성화 편집 및 데이터 흐름 활성화/비활성화 컨트롤
 
