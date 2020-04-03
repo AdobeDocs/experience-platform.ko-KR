@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 세그먼트 빌더 UI 안내서
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: 902ba5efbb5f18a2de826fffd023195d804309cc
+source-git-commit: 91792f81a50d5752e46236d61b6ad645e3fda86c
 
 ---
 
@@ -173,6 +173,14 @@ On-Demand 평가는 API를 사용하여 평가를 수행하고 필요에 따라 
 ![](../images/segment-builder/enable-streaming-segmentation.png)
 
 스트리밍 세그멘테이션이 활성화되면 베이스라인을 설정해야 합니다(세그먼트가 항상 최신 상태로 유지되는 이후 초기 실행). 시스템은 자동으로 기본 설정을 처리하지만, 이는 예약된 세그먼테이션이 활성화된 경우에만 가능합니다. 예약된 세그멘테이션 활성화에 대한 자세한 내용은 [이 사용 안내서의](#enable-scheduled-segmentation)이전 섹션을 참조하십시오.
+
+## 일정 정책 위반
+
+>[!NOTE] DULE 정책 위반은 대상에 지정된 세그먼트를 만드는 경우에만 적용됩니다.
+
+세그먼트 작성을 완료하면 세그먼트 내에 정책 위반이 없도록 데이터 거버넌스에 의해 세그먼트가 분석됩니다. DULE 및 정책 위반에 대한 자세한 내용은 [데이터 사용 레이블 개요를](../../data-governance/labels/overview.md)참조하십시오.
+
+![](../images/segment-builder/segment-dule-policy-violations.png)
 
 ## 다음 단계
 
