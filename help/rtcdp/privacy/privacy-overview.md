@@ -4,7 +4,7 @@ seo-title: 실시간 고객 데이터 프로필의 개인 정보
 description: 실시간 고객 데이터 프로필을 사용하면 개인 정보 보호 규정을 준수하는 데이터 작업을 간소화할 수 있습니다.
 seo-description: 실시간 고객 데이터 프로필을 사용하면 개인 정보 보호 규정을 준수하는 데이터 작업을 간소화할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 5d3bedd97208d9eed3977a35e16a10f4864aedd9
+source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
 
 ---
 
@@ -17,12 +17,12 @@ source-git-commit: 5d3bedd97208d9eed3977a35e16a10f4864aedd9
 
 ## 개인 정보 서비스
 
-Adobe Experience Platform Privacy Service를 사용하면 개인 정보 보호 규정(GDPR) 및 CCPA(California Consumer Privacy Act)와 같은 개인 정보 보호 규정을 준수하는 데이터 운영을 간소화할 수 있습니다. 실시간 CDP는 데이터 수집 및 스토리지를 위한 경험 플랫폼 기능을 활용하므로 GDPR 및 CPA에 대한 액세스 및 삭제 요청은 플랫폼에서 관리해야 합니다. 서비스에 [대한 자세한 내용은 개인정보 보호 서비스 개요](https://www.adobe.io/apis/experiencecloud/gdpr/docs/alldocs.html#!api-specification/markdown/narrative/technical_overview/privacy_service_overview/privacy_service_overview.md) 문서를 참조하십시오.
+Adobe Experience Platform Privacy Service를 사용하면 개인 정보 보호 규정(GDPR) 및 CCPA(California Consumer Privacy Act)와 같은 개인 정보 보호 규정을 준수하는 데이터 운영을 간소화할 수 있습니다. 실시간 CDP는 데이터 수집 및 스토리지를 위한 경험 플랫폼 기능을 활용하므로 GDPR 및 CPA에 대한 액세스 및 삭제 요청은 플랫폼에서 관리해야 합니다. 서비스에 [대한 자세한 내용은 개인정보 보호 서비스 개요](../../privacy-service/home.md) 문서를 참조하십시오.
 
 고객 데이터에 액세스하고 삭제할 수 있도록 개별 GDPR 및 CPA 데이터 주체의 요청을 제출하는 방법에는 두 가지가 있습니다.
 
-* 개인 정보 [서비스 UI를](https://gdprui.cloud.adobe.io/) 사용하여 시각적 작업 영역 내에서 액세스 및 삭제 요청을 만들고 모니터링합니다. 단계별 지침은 [개인정보 보호 서비스 UI 자습서를](https://www.adobe.io/apis/experiencecloud/gdpr/docs/alldocs.html#!api-specification/markdown/narrative/tutorials/privacy_service_tutorial/privacy_service_ui_tutorial.md) 참조하십시오.
-* 개인정보 보호 서비스 [API를](https://www.adobe.io/apis/experiencecloud/gdpr/api-reference.html) 사용하여 RESTful API 호출을 사용하여 액세스 및 삭제 요청을 관리합니다. 단계별 지침은 [개인정보 보호 서비스 API 자습서를](https://www.adobe.io/apis/experiencecloud/gdpr/docs/alldocs.html#!api-specification/markdown/narrative/tutorials/privacy_service_tutorial/privacy_service_api_tutorial.md) 참조하십시오.
+* 개인 정보 [서비스 UI를](https://gdprui.cloud.adobe.io/) 사용하여 시각적 작업 영역 내에서 액세스 및 삭제 요청을 만들고 모니터링합니다. 단계별 지침은 [개인정보 보호 서비스 UI 자습서를](../../privacy-service/ui/overview.md) 참조하십시오.
+* 개인정보 보호 서비스 [API를](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml) 사용하여 RESTful API 호출을 사용하여 액세스 및 삭제 요청을 관리합니다. 단계별 지침은 [개인정보 보호 서비스 API 자습서를](../../privacy-service/api/getting-started.md) 참조하십시오.
 
 <!-- (Capability will not be available for November GA) 
 ## Opt-out capabilities
@@ -35,4 +35,4 @@ Real-time CDP provides two types of consumer opt-out capabilities:
 
 ## 다음 단계
 
-이 문서에서는 실시간 CDP의 개인 정보 보호 기능에 대해 간략하게 소개합니다. 액세스/삭제 요청을 제출하는 모범 사례 및 단계에 대한 자세한 내용은 개인 정보 서비스 [설명서를](https://www.adobe.io/apis/experiencecloud/gdpr/docs.html)참조하십시오.
+이 문서에서는 실시간 CDP의 개인 정보 보호 기능에 대해 간략하게 소개합니다. 액세스/삭제 요청을 제출하는 모범 사례 및 단계에 대한 자세한 내용은 개인 정보 서비스 [설명서를](../../privacy-service/home.md)참조하십시오.
