@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 개인 정보 서비스 사용 안내서
 topic: UI guide
 translation-type: tm+mt
-source-git-commit: 4b7cbfcbcbaa602d92f3dfe814b1269f770e3fe7
+source-git-commit: 8a488944d530a4850f8946ed30af769ecb6e954f
 
 ---
 
@@ -74,16 +74,18 @@ source-git-commit: 4b7cbfcbcbaa602d92f3dfe814b1269f770e3fe7
 
 ## 새 개인 정보 작업 요청 만들기
 
+>[!NOTE] 개인 정보 작업 요청을 만들려면 액세스하거나 삭제할 특정 고객에 대한 ID 정보를 제공해야 합니다. 이 섹션을 계속하기 전에 [ID 데이터에 대한 문서를 통해 개인 정보 보호 요청을](../identity-data.md) 검토하십시오.
+
 개인 정보 서비스 UI는 새 작업 요청을 만드는 두 가지 방법을 제공합니다.
 
-* 요청 빌더 사용
-* JSON 파일 업로드
+* [요청 빌더 사용](#request-builder)
+* [JSON 파일 업로드](#json)
 
 이러한 방법 각각에 대한 사용 단계는 다음 섹션에 제공됩니다.
 
-### 요청 빌더 사용
+### 요청 빌더 사용 {#request-builder}
 
-요청 빌더를 사용하면 사용자 인터페이스에서 새 개인 정보 작업 요청을 수동으로 만들 수 있습니다. 요청 빌더는 요청에서 사용자당 ID 유형만 포함하도록 제한되므로 더 간단하고 작은 요청 세트에 가장 적합합니다. 보다 복잡한 요청의 경우 JSON 파일을 [대신](#upload-a-json-file) 업로드하는 것이 좋습니다.
+요청 빌더를 사용하면 사용자 인터페이스에서 새 개인 정보 작업 요청을 수동으로 만들 수 있습니다. 요청 빌더는 요청에서 사용자당 ID 유형만 포함하도록 제한되므로 더 간단하고 작은 요청 세트에 가장 적합합니다. 보다 복잡한 요청의 경우 JSON 파일을 [대신](#json) 업로드하는 것이 좋습니다.
 
 요청 빌더 사용을 시작하려면 화면 **오른쪽의** 상태 보고서 위젯 아래에 있는 요청 만들기를 클릭합니다.
 
@@ -91,19 +93,31 @@ source-git-commit: 4b7cbfcbcbaa602d92f3dfe814b1269f770e3fe7
 
 요청 *만들기* 대화 상자가 열리고 현재 선택된 규칙 유형에 대한 개인 정보 작업 요청을 제출하기 위한 사용 가능한 옵션이 표시됩니다.
 
-![](../images/user-guide/request-builder.png)
+<img src="../images/user-guide/request-builder.png" width="500" /><br/>
 
-요청의 **작업 유형** (&quot;삭제&quot; 또는 &quot;액세스&quot;)과 목록에서 하나 이상의 사용 가능한 **제품을** 선택합니다. 고객 **ID의**&#x200B;드롭다운 메뉴(이메일, ECID 또는 AID)에서 ID 유형을 선택합니다. 오른쪽에 있는 텍스트 상자에 ID 값을 입력하고 **\&lt;enter>** 키를 눌러 목록에 추가합니다.
+요청의 **작업 유형** (&quot;삭제&quot; 또는 &quot;액세스&quot;)과 목록에서 하나 이상의 사용 가능한 **제품을** 선택합니다.
 
-![](../images/user-guide/request-builder-fillout.png)
+<img src="../images/user-guide/type-and-products.png" width="500" /><br/>
 
-이 목록에 포함된 ID는 개인 정보 보호 서비스에서 보낸 이메일 알림 사본을 수신하게 됩니다. 이 이메일은 작업이 완료되거나 오류가 있거나 시간이 초과될 때 전송됩니다. 완료되면 만들기를 **클릭합니다**.
+네임스페이스 *유형에서*&#x200B;개인 정보 서비스로 전송될 고객 ID에 적합한 네임스페이스 유형을 선택합니다.
 
-![](../images/user-guide/request-builder-create.png)
+<img src="../images/user-guide/namespace-type.png" width="500" /><br/>
+
+표준 _네임스페이스 유형을 사용하는 경우 드롭다운 메뉴(이메일, ECID 또는 AID)에서 네임스페이스를 선택한 다음 오른쪽에 있는 텍스트 상자에 ID 값을 입력하고 각 ID에 대해_ \&lt;enter> **** 키를 눌러 목록에 추가합니다.
+
+<img src="../images/user-guide/standard-namespace.png" width="500" /><br/>
+
+사용자 _지정_ 네임스페이스 유형을 사용할 때는 아래 ID 값을 제공하기 전에 네임스페이스를 수동으로 입력해야 합니다.
+
+<img src="../images/user-guide/custom-namespace.png" width="500" /><br/>
+
+완료되면 만들기를 **클릭합니다**.
+
+<img src="../images/user-guide/request-builder-create.png" width="500" /><br/>
 
 대화 상자가 사라지고 새 작업(또는 작업)이 현재 처리 상태와 함께 작업 요청 위젯에 나열됩니다.
 
-### JSON 파일 업로드
+### JSON 파일 업로드 {#json}
 
 처리 중인 각 데이터 주체에 대해 여러 ID 유형을 사용하는 요청과 같이 더 복잡한 요청을 만들 때 JSON 파일을 업로드하여 요청을 만들 수 있습니다.
 
@@ -113,12 +127,12 @@ source-git-commit: 4b7cbfcbcbaa602d92f3dfe814b1269f770e3fe7
 
 JSON *업로드* 대화 상자가 나타나 JSON 파일을 드래그하여 놓을 수 있는 창을 제공합니다.
 
-![](../images/user-guide/upload-json.png)
+<img src="../images/user-guide/upload-json.png" width="500" /><br/>
 
 업로드할 JSON 파일이 없는 경우 Adobe- **GDPR-Request.json** 다운로드를 클릭하여 데이터 주체로부터 수집한 값에 따라 템플릿을 다운로드할 수 있습니다.
 
 
-![](../images/user-guide/privacy-template.png)
+<img src="../images/user-guide/privacy-template.png" width="500" /><br/>
 
 
 컴퓨터에서 JSON 파일을 찾아 대화 상자 창으로 드래그합니다. 업로드가 성공하면 대화 상자에 파일 이름이 나타납니다. JSON 파일을 대화 상자로 드래그하여 놓아 필요에 따라 계속 추가할 수 있습니다.
