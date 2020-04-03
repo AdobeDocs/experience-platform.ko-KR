@@ -4,7 +4,7 @@ seo-title: Google Display & Video 360 대상
 description: Display & Video 360(이전 DoubleClick Bid Manager)은 디스플레이, 비디오 및 모바일 인벤토리 소스에서 타겟팅된 디지털 캠페인 및 대상 리타겟팅을 실행하는 데 사용되는 도구입니다.
 seo-description: 'Display & Video 360(이전 DoubleClick Bid Manager)은 디스플레이, 비디오 및 모바일 인벤토리 소스에서 타겟팅된 디지털 캠페인 및 대상 리타겟팅을 실행하는 데 사용되는 도구입니다. '
 translation-type: tm+mt
-source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
+source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
 
 ---
 
@@ -19,7 +19,7 @@ source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
 
 Google Display &amp; Video 360 대상에만 해당되는 다음 세부 사항을 참고하십시오.
 
-* Google Display &amp; Video 360 대상으로 다음 [ID를](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/identity_namespace_overview/identity_namespace_overview.md) 전송할 수 있습니다.Google **쿠키 ID, IDFA, GAID, Roku ID, Microsoft ID, Amazon Fire TV ID**.
+* Google Display &amp; Video 360 대상으로 다음 [ID를](../../identity-service/namespaces.md) 전송할 수 있습니다.Google **쿠키 ID, IDFA, GAID, Roku ID, Microsoft ID, Amazon Fire TV ID**.
 * 활성화된 대상은 Google 플랫폼에서 프로그래밍 방식으로 생성됩니다.
 * Adobe Real-time CDP에는 현재 성공적인 활성화를 확인하는 측정 지표가 포함되어 있지 않습니다. 통합을 확인하고 대상 타깃팅 크기를 이해하려면 Google의 대상 수를 참조하십시오.
 
