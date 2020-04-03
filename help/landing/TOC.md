@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Help
 translation-type: tm+mt
-source-git-commit: 63005d0fe03444c2c0e12bea3570441bf39ec75b
+source-git-commit: 2020f4b88f81f2d4fe3cfbd91cd18119ae580f4f
 
 ---
 
@@ -19,7 +19,7 @@ source-git-commit: 63005d0fe03444c2c0e12bea3570441bf39ec75b
    * [카탈로그 및 데이터 집합](https://docs.adobe.com/content/help/en/experience-platform/catalog/home.html)
    * [데이터 액세스](https://docs.adobe.com/content/help/en/experience-platform/data-access/home.html)
    * [데이터 거버넌스](https://docs.adobe.com/content/help/en/experience-platform/data-governance/home.html)
-   * [데이터 통합(일괄 처리 및 스트리밍)](https://docs.adobe.com/content/help/en/experience-platform/ingestion/home.html)
+   * [데이터 통합](https://docs.adobe.com/content/help/en/experience-platform/ingestion/home.html)
    * [데이터 과학 작업 영역](https://docs.adobe.com/content/help/en/experience-platform/data-science-workspace/home.html)
    * [디버거](https://docs.adobe.com/content/help/en/debugger/using/experience-cloud-debugger.html)
    * [의사 결정 서비스](https://docs.adobe.com/content/help/en/experience-platform/decisioning/home.html)
