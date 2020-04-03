@@ -4,7 +4,7 @@ seo-title: 실시간 고객 데이터 플랫폼의 실시간 고객 프로필
 description: 실시간 고객 데이터 플랫폼을 통해 실시간으로 고객 프로파일을 이용하여 고객의 기대에 부응하는 일관된 경험을 제공하는 방법을 소개합니다.
 seo-description: 실시간 고객 데이터 플랫폼, 프로파일, 데이터, 경험, 채널
 translation-type: tm+mt
-source-git-commit: 5cba5a1e8139dd85f23250d42a1cd8d2318eb916
+source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
 
 ---
 
@@ -31,4 +31,4 @@ source-git-commit: 5cba5a1e8139dd85f23250d42a1cd8d2318eb916
 
 ## 다음 단계
 
-이 개요를 본 후에는 실시간 고객 프로파일을 활용하여 크로스채널 개인화를 규모에 맞게 강화한 실시간 CDP 활용 방법을 이해해야 합니다. 서로 다른 소스의 ID를 결합하면 각 개별 고객의 전체 상황을 파악할 수 있으므로 마케팅 캠페인을 완전히 새로운 수준으로 끌어올릴 수 있습니다. 사용자 인터페이스 및 API를 통해 실시간 고객 프로필 데이터를 사용하기 위한 모범 사례와 자습서를 비롯한 자세한 내용은 Adobe I/O에 [대한 실시간 고객 프로필 설명서를 참조하십시오](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/unified_profile_architectural_overview/unified_profile_architectural_overview.md).
+이 개요를 본 후에는 실시간 고객 프로파일을 활용하여 크로스채널 개인화를 규모에 맞게 강화한 실시간 CDP 활용 방법을 이해해야 합니다. 서로 다른 소스의 ID를 결합하면 각 개별 고객의 전체 상황을 파악할 수 있으므로 마케팅 캠페인을 완전히 새로운 수준으로 끌어올릴 수 있습니다. 사용자 인터페이스와 API를 통해 실시간 고객 프로필 데이터를 사용하기 위한 모범 사례와 자습서를 비롯한 자세한 내용은 실시간 고객 [프로필 설명서를](../../profile/home.md)참조하십시오.
