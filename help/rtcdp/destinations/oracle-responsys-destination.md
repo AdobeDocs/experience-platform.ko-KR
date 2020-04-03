@@ -4,7 +4,7 @@ seo-title: Oracle Responsys 대상
 description: Responsys는 이메일, 모바일, 디스플레이 및 소셜 간의 상호 작용을 개인화하기 위해 Oracle에서 제공하는 크로스채널 마케팅 캠페인을 위한 기업 이메일 마케팅 툴입니다.
 seo-description: Responsys는 이메일, 모바일, 디스플레이 및 소셜 간의 상호 작용을 개인화하기 위해 Oracle에서 제공하는 크로스채널 마케팅 캠페인을 위한 기업 이메일 마케팅 툴입니다.
 translation-type: tm+mt
-source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
+source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
 
 ---
 
@@ -41,7 +41,7 @@ source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
 
 ## 대상 속성 {#destination-attributes}
 
-세그먼트를 [Oracle Responsys 대상으로](/help/rtcdp/destinations/activate-destinations.md) 활성화할 때 [조합 스키마에서](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/unified_profile_architectural_overview/unified_profile_architectural_overview.md)고유 식별자를 선택하는 것이 좋습니다. 대상으로 내보낼 고유 식별자 및 기타 XDM 필드를 선택합니다. 자세한 내용은 이메일 마케팅 [대상의 내보낸 파일에서](/help/rtcdp/destinations/email-marketing-destinations.md#destination-attributes) 대상 특성으로 사용할 스키마 필드 선택을 참조하십시오.
+세그먼트를 [Oracle Responsys 대상으로](/help/rtcdp/destinations/activate-destinations.md) 활성화할 때 [조합 스키마에서](../../profile/home.md#profile-fragments-and-union-schemas)고유 식별자를 선택하는 것이 좋습니다. 대상으로 내보낼 고유 식별자 및 기타 XDM 필드를 선택합니다. 자세한 내용은 이메일 마케팅 [대상의 내보낸 파일에서](/help/rtcdp/destinations/email-marketing-destinations.md#destination-attributes) 대상 특성으로 사용할 스키마 필드 선택을 참조하십시오.
 
 ## Oracle Responsys로 데이터 가져오기 설정 {#import-data-into-responsys}
 
