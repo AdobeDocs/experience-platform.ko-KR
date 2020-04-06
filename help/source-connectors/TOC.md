@@ -1,9 +1,9 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Adobe Experience Platform Source Connectors Help
+user-guide-title: Adobe Experience Platform 소스 커넥터 도움말
 translation-type: tm+mt
-source-git-commit: e9b3ca0fa76456e2e6757bcc37cd813f3e64fbf7
+source-git-commit: 10893353215296546fffde109b6f87d90c4c1a55
 
 ---
 
@@ -11,10 +11,10 @@ source-git-commit: e9b3ca0fa76456e2e6757bcc37cd813f3e64fbf7
 # 소스 커넥터 {#source-connectors}
 
 - [소스 커넥터 개요](home.md)
-- 소스 커넥터 UI {#ui}
-   - Adobe 애플리케이션 {#adobe-applications}
-      - [Analytics 데이터 커넥터](ui/adobe-applications/analytics.md)
-      - [Analytics 매핑 필드](ui/adobe-applications/analytics-mapping.md)
-      - [Audience Manager 커넥터](ui/adobe-applications/audience-manager.md)
-      - [Audience Manager 매핑 필드](ui/adobe-applications/audience-manager-mapping.md)
-      - [타겟 매핑 필드](ui/adobe-applications/target-mapping.md)
+- Adobe 응용 프로그램 커넥터 {#adobe-applications}
+   - [Adobe Analytics 커넥터](ui/adobe-applications/analytics.md)
+   - [Adobe Audience Manager 커넥터](ui/adobe-applications/audience-manager.md)
+   - Adobe 응용 프로그램 커넥터 필드를 XDM 스키마에 매핑
+      - [Adobe Analytics](ui/adobe-applications/analytics-mapping.md)
+      - [Adobe Audience Manager](ui/adobe-applications/audience-manager-mapping.md)
+      - [Adobe Target](ui/adobe-applications/target-mapping.md)
