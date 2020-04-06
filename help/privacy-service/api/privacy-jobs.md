@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 작업
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 8102610e2733a75f22cf62d70c0408e3832d0803
+source-git-commit: cde7acc2fd112b9a5d0b86b40b3bc712c6505064
 
 ---
 
@@ -238,7 +238,7 @@ curl -X POST \
 | `expandIDs` | 로 설정되면 응용 프로그램에서 ID 처리를 위한 최적화를 나타내는 선택적 속성입니다(현재 Analytics에서만 지원). `true` If omitted, this value defaults to `false`. |
 | `priority` | 요청 처리 우선 순위를 설정하는 Adobe Analytics에서 사용하는 선택적 속성입니다. 허용된 값은 `normal` 및 `low`입니다. 을 `priority` 생략하면 기본 동작이 `normal`사용됩니다. |
 | `analyticsDeleteMethod` | Adobe Analytics에서 개인 데이터를 처리하는 방법을 지정하는 선택적 속성입니다. 이 속성에 사용할 수 있는 두 가지 값이 있습니다. <ul><li>`anonymize`:지정된 사용자 ID 컬렉션에서 참조한 모든 데이터는 익명으로 처리됩니다. 이 `analyticsDeleteMethod` 값을 생략하면 기본 비헤이비어가 됩니다.</li><li>`purge`:모든 데이터가 완전히 제거됩니다.</li></ul> |
-| `regulation` **(필수 여부)** | 요청에 대한 규정(&quot;gdpr&quot; 또는 &quot;ccpa&quot; 중 하나여야 함) |
+| `regulation` **(필수 여부)** | 요청에 대한 규정. 다음 세 값 중 하나여야 합니다. <ul><li>gdpr</li><li>ccpa</li><li>pdpa_tha</li></ul> |
 
 **응답**
 
