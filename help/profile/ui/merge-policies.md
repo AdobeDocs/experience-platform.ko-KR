@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: 정책 병합 사용 안내서
 topic: guide
 translation-type: tm+mt
-source-git-commit: 83c7ff45af7266904121b7ff6edcb0f9b0559fee
+source-git-commit: 3669d740b22b650d4079d83026f122ffee42b9a0
 
 ---
 
@@ -86,6 +86,15 @@ Experience Platform 사용자 인터페이스 내에서, 병합 정책을 사용
 
 ![](../images/merge-policies/edited.png)
 
+## 데이터 거버넌스 정책 위반
+
+병합 정책을 만들거나 업데이트할 때 병합 정책이 조직에서 정의한 데이터 사용 정책을 위반하는지 확인하는 검사가 수행됩니다. 데이터 사용 정책은 Adobe Experience Platform 데이터 거버넌스의 일부이며, 특정 플랫폼 데이터에서 수행하도록 허용되거나 제한된 마케팅 활동의 종류를 설명하는 규칙입니다. 예를 들어, 병합 정책을 사용하여 서드 파티 대상으로 활성화된 세그먼트를 만들고 조직에서 데이터 사용 정책을 통해 특정 데이터를 서드 파티로 내보낼 수 없는 경우 병합 정책을 저장하려고 하면 &quot;데이터 거버넌스 정책 위반이 감지됨&quot; 알림을 받게 됩니다.
+
+이 알림에는 위반된 데이터 사용 정책 목록이 포함되어 있으며 목록에서 정책을 선택하여 위반 세부 사항을 볼 수 있습니다. 위반된 정책을 선택하면 데이터 *계보* 탭에 위반의 *원인* 및 영향 *활동이*&#x200B;제공되므로 데이터 사용 정책을 위반했던 방법에 대한 세부 정보가 제공됩니다.
+
+Adobe Experience Platform에서 데이터 거버넌스가 수행되는 방법에 대한 자세한 내용은 데이터 거버넌스 [개요를](../../data-governance/home.md)읽어 보시기 바랍니다.
+
+![](../images/merge-policies/policy-violation.png)
 
 ## 다음 단계
 
