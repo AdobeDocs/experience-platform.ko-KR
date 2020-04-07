@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 고객 세그먼트에 대한 데이터 사용 규정 준수
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 7f61cee8fb5160d0f393f8392b4ce2462d602981
+source-git-commit: f5bc9beb59e83b0411d98d901d5055122a124d07
 
 ---
 
@@ -42,7 +42,7 @@ source-git-commit: 7f61cee8fb5160d0f393f8392b4ce2462d602981
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
-> [!NOTE] 플랫폼의 샌드박스에 대한 자세한 내용은 [샌드박스 개요 설명서를](../../sandboxes/home.md)참조하십시오.
+>[!NOTE] 플랫폼의 샌드박스에 대한 자세한 내용은 [샌드박스 개요 설명서를](../../sandboxes/home.md)참조하십시오.
 
 페이로드(POST, PUT, PATCH)가 포함된 모든 요청에는 추가 헤더가 필요합니다.
 
@@ -253,7 +253,7 @@ curl -X GET \
 
 ## 데이터 필드 필터링
 
-> [!NOTE] 이 단계는 선택 사항입니다. 데이터 사용 레이블을 [찾는 이전 단계의 결과를 기반으로 세그먼트에 포함된 데이터를 조정하지 않으려면 정책 위반에](#lookup-data-usage-labels-for-the-source-datasets)대한 데이터를 [](#evaluate-data-for-policy-violations)평가하는 마지막 단계로 건너뛸 수 있습니다.
+>[!NOTE] 이 단계는 선택 사항입니다. 데이터 사용 레이블을 [찾는 이전 단계의 결과를 기반으로 세그먼트에 포함된 데이터를 조정하지 않으려면 정책 위반에](#lookup-data-usage-labels-for-the-source-datasets)대한 데이터를 [](#evaluate-data-for-policy-violations)평가하는 마지막 단계로 건너뛸 수 있습니다.
 
 대상 세그먼트에 포함된 데이터를 조정하려면 다음 두 방법 중 하나를 사용하여 조정할 수 있습니다.
 
