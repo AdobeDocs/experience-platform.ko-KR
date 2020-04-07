@@ -1,9 +1,9 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Adobe Experience Platform Data Governance Help
+user-guide-title: Adobe Experience Platform 데이터 거버넌스 도움말
 translation-type: tm+mt
-source-git-commit: 2997243622a7483ae23e21487128cea6badecb80
+source-git-commit: 608f3f61764e6b578107f4ea7991bca12621330a
 
 ---
 
@@ -17,6 +17,7 @@ source-git-commit: 2997243622a7483ae23e21487128cea6badecb80
    * [지원되는 데이터 사용 레이블](labels/reference.md)
 * 데이터 사용 정책 {#policies}
    * [데이터 사용 정책 개요](policies/overview.md)
+   * [데이터 사용 정책 사용 안내서](policies/user-guide.md)
    * [정책 서비스 API를 사용하여 데이터 사용 정책 만들기](policies/create.md)
 * 정책 집행 {#enforcement}
    * [정책 적용 개요](enforcement/overview.md)
