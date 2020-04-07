@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: March 4, 2020
 author: ens71067
 translation-type: tm+mt
-source-git-commit: b3ee2839412c9949d67c2ae976e3df32fea7731e
+source-git-commit: 3f3704cc1e11a4d11278a34800c8bfdc24a80753
 
 ---
 
@@ -13,6 +13,23 @@ source-git-commit: b3ee2839412c9949d67c2ae976e3df32fea7731e
 # Adobe Experience Platform 릴리스 노트
 
 ## 릴리스 날짜: 2020년 4월 8일
+
+## 지능형 서비스
+
+마케팅 분석가 및 전문가는 지능형 서비스를 통해 고객 경험 사용 사례에서 인공 지능과 머신 러닝의 기능을 활용할 수 있습니다. 이를 통해 마케팅 분석가는 데이터 과학에 대한 전문 지식 없이도 비즈니스 수준 구성을 사용하여 기업의 요구 사항에 맞는 예측을 설정할 수 있습니다. 또한 마케팅 전문가는 Adobe Experience Cloud, Adobe Experience Platform 및 타사 애플리케이션에서 예측을 활성화할 수 있습니다.
+
+**주요 기능**
+
+| 기능 | 설명 |
+|---|---|
+| 고객 AI | 고객 AI는 마케터에게 개별 수준에서 고객 예측을 생성할 수 있는 기능을 제공합니다. 고객 AI는 영향력 있는 요소의 도움을 통해 고객의 관심사와 이유를 파악할 수 있습니다. 또한 마케터는 고객 AI 예측과 인사이트를 활용하여 가장 적합한 제안과 메시지를 제공하여 고객 경험을 개인화할 수 있습니다. |
+| 기여도 AI | 기여도 분석 AI는 지정된 결과에 대한 고객 인터랙션의 영향과 점진적 영향을 계산하는 멀티채널 알고리즘 방식의 기여도 분석 서비스입니다. 기여도 분석 AI를 사용하면 마케터는 고객 여정의 각 단계에서 개별 고객과의 인터랙션이 미치는 영향을 파악하여 마케팅 및 광고 지출을 측정하고 최적화할 수 있습니다. |
+
+**알려진 문제**
+
+* 현재 알려진 문제가 없습니다.
+
+Intelligent Services 및 Intelligent Services의 제공 사항에 대한 자세한 내용은 Intelligent Services [개요를](../../intelligent-services/home.md)참조하십시오.
 
 ## 개인 정보 서비스
 
