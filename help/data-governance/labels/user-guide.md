@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 데이터 사용 레이블 사용 안내서
 topic: labels
 translation-type: tm+mt
-source-git-commit: 4a60956ade2d742ac83e138a2921a6a4893e06ef
+source-git-commit: a19a9a31743002eb5fd3a5ecb6668b4c760faa9a
 
 ---
 
@@ -98,6 +98,8 @@ source-git-commit: 4a60956ade2d742ac83e138a2921a6a4893e06ef
 ## 다음 단계
 
 데이터 세트 및 필드 수준에서 데이터 사용 레이블을 추가했으므로 이제 데이터를 Experience Platform으로 인제스트할 수 있습니다. 자세한 내용은 [데이터 수집 설명서를](../../ingestion/home.md)참조하십시오.
+
+적용된 레이블을 기반으로 데이터 사용 정책을 정의할 수도 있습니다. 자세한 내용은 [데이터 사용 정책 개요를](../policies/overview.md)참조하십시오.
 
 ## Journey Orchestration용
 
