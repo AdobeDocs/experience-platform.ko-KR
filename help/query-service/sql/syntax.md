@@ -4,7 +4,7 @@ solution: Experience Platform
 title: SQL 구문
 topic: syntax
 translation-type: tm+mt
-source-git-commit: 45da024d45b5eebdfc393ee14890e24aed6021ce
+source-git-commit: f5bc9beb59e83b0411d98d901d5055122a124d07
 
 ---
 
@@ -317,7 +317,7 @@ where option can be one of:
 - `FORMAT`:TEXT, XML, JSON 또는 YAML의 출력 형식을 지정합니다. 텍스트가 아닌 출력에는 텍스트 출력 형식과 동일한 정보가 포함되지만 프로그램에서 쉽게 구문 분석할 수 있습니다. 이 매개 변수의 기본값은 `TEXT`입니다.
 - `statement`:모든 `SELECT`것, `INSERT``UPDATE`, `DELETE`그 실행 계획, `VALUES`즉, 당신이 보고 싶어하는 실행 계획을 가진 모든 것, `EXECUTE`그, `DECLARE``CREATE TABLE AS``CREATE MATERIALIZED VIEW AS` 모든 것, 또는 진술들.
 
-> [!IMPORTANT] 이 `ANALYZE` 옵션이 사용될 때 문이 실제로 실행된다는 점을 염두에 두십시오. 어떤 결과물도 `EXPLAIN` 폐기하더라도 명령문의 다른 `SELECT` 부작용은 평소대로 발생합니다.
+>[!IMPORTANT] 이 `ANALYZE` 옵션이 사용될 때 문이 실제로 실행된다는 점을 염두에 두십시오. 어떤 결과물도 `EXPLAIN` 폐기하더라도 명령문의 다른 `SELECT` 부작용은 평소대로 발생합니다.
 
 #### 예
 
