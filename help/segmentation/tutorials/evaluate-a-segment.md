@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 세그먼트 평가
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: a6a1ecd9ce49c0a55e14b0d5479ca7315e332904
+source-git-commit: f5bc9beb59e83b0411d98d901d5055122a124d07
 
 ---
 
@@ -34,7 +34,7 @@ source-git-commit: a6a1ecd9ce49c0a55e14b0d5479ca7315e332904
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
-> [!NOTE] 플랫폼의 샌드박스에 대한 자세한 내용은 [샌드박스 개요 설명서를](../../sandboxes/home.md)참조하십시오.
+>[!NOTE] 플랫폼의 샌드박스에 대한 자세한 내용은 [샌드박스 개요 설명서를](../../sandboxes/home.md)참조하십시오.
 
 모든 POST, PUT 및 PATCH 요청에는 추가 헤더가 필요합니다.
 
@@ -52,7 +52,7 @@ source-git-commit: a6a1ecd9ce49c0a55e14b0d5479ca7315e332904
 
 예약된 평가를 통해 IMS 조직에서 반복 일정을 생성하여 자동으로 내보내기 작업을 실행할 수 있습니다.
 
-> [!NOTE] XDM 개별 프로필에 대해 최대 5개의 병합 정책을 포함하는 샌드박스에 대해 예약된 평가를 활성화할 수 있습니다. 조직에서 단일 샌드박스 환경 내에서 XDM 개별 프로필에 대한 병합 정책이 5개 이상 있는 경우 예약된 평가를 사용할 수 없습니다.
+>[!NOTE] XDM 개별 프로필에 대해 최대 5개의 병합 정책을 포함하는 샌드박스에 대해 예약된 평가를 활성화할 수 있습니다. 조직에서 단일 샌드박스 환경 내에서 XDM 개별 프로필에 대한 병합 정책이 5개 이상 있는 경우 예약된 평가를 사용할 수 없습니다.
 
 ### 일정 만들기
 
@@ -410,7 +410,7 @@ curl -X GET \
 
 ## 세그먼트 결과 해석
 
-세그먼트 작업이 성공적으로 실행되면 세그먼트 내에 포함된 각 프로필에 대해 `segmentMembership` 맵이 업데이트됩니다. `segmentMembership` 또한 Adobe Audience Manager와 같은 다른 솔루션과의 통합을 위해 인제스트된 사전 평가 대상 세그먼트를 플랫폼에 저장합니다.
+세그먼트 작업이 성공적으로 실행되면 세그먼트 내에 포함된 각 프로필에 대해 `segmentMembership` 맵이 업데이트됩니다. `segmentMembership` 또한 Adobe Audience Manager와 같은 다른 솔루션과 통합할 수 있도록 인제스트된 사전 평가 대상 세그먼트를 플랫폼에 저장합니다.
 
 다음 예는 각 개별 프로필 레코드에 대한 `segmentMembership` 속성의 모양을 보여줍니다.
 
