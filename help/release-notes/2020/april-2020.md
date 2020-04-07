@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: March 4, 2020
 author: ens71067
 translation-type: tm+mt
-source-git-commit: 3f3704cc1e11a4d11278a34800c8bfdc24a80753
+source-git-commit: 1e2299980572116d589e7164dd20e171433a284a
 
 ---
 
@@ -13,6 +13,26 @@ source-git-commit: 3f3704cc1e11a4d11278a34800c8bfdc24a80753
 # Adobe Experience Platform 릴리스 노트
 
 ## 릴리스 날짜: 2020년 4월 8일
+
+## 데이터 거버넌스
+
+Adobe Experience Platform 데이터 거버넌스는 고객 데이터를 관리하고 데이터 사용에 적용되는 규정, 제한 및 정책을 준수하는 데 사용되는 일련의 전략과 기술입니다. Adobe Experience Platform은 카탈로그 작성, 데이터 계보, 데이터 사용 레이블 지정, 데이터 액세스 정책, 마케팅 활동을 위한 데이터 액세스 제어 등 다양한 수준에서 핵심적인 역할을 합니다.
+
+데이터 거버넌스를 시작하려면 고객 데이터에 적용되는 규정, 계약 의무 및 기업 정책을 철저하게 이해해야 합니다. 여기에서 데이터는 적절한 데이터 사용 레이블을 적용하여 분류할 수 있으며 데이터 사용 정책의 정의를 통해 데이터를 사용할 수 있습니다.
+
+DULE 프레임워크는 Experience Platform 사용자 인터페이스 및 DULE Policy Service API를 통해 데이터를 분류하고 데이터 사용 정책을 만드는 과정을 간소화하고 간소화합니다.
+
+### 새로운 기능
+
+| 기능 | 설명 |
+| -----------| ---------- |
+| UI에서 데이터 사용 정책 관리 | 이제 경험 플랫폼 UI의 정책 _작업_ 영역에서 데이터 사용 정책을 관리할 수 있습니다. 자세한 내용은 [정책 사용 안내서를](../../data-governance/policies/user-guide.md) 참조하십시오. |
+
+**알려진 문제**
+
+* 없음.
+
+자세한 내용은 데이터 거버넌스 [개요를](../../data-governance/home.md)참조하십시오.
 
 ## 지능형 서비스
 
@@ -68,31 +88,3 @@ Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 
 * 없음
 
 소스에 대한 자세한 내용은 [소스 개요를](../../source-connectors/home.md)참조하십시오.
-
-<!-- ## Access control
-
-Experience Platform leverages [Adobe Admin Console](https://adminconsole.adobe.com) product profiles to link users with permissions and sandboxes. Permissions control access to a variety of Platform capabilities, including data modeling, profile management, and sandbox administration.
-
-### Key features
-
-|Feature | Description|
-|--- | ---|
-|Permissions | In the Admin Console, the _Permissions_ tab within a Platform product profile allows you customize which Platform capabilities are available for the users attached to that profile. Available permission categories include: Data Modeling, Data Management, Profile Management, Identities, Data Monitoring, Sandbox Administration, Destinations, Sources.|
-|Access to sandboxes | The _Permissions_ tab within a Platform product profile can grant users access to specific sandboxes. See the section on [sandboxes](#sandboxes) below for more information.|
-
-For more information, please see the [access control overview](../../access-control/home.md).
-
-## Sandboxes
-
-Experience Platform is built to enrich digital experience applications on a global scale. Companies often run multiple digital experience applications in parallel and need to cater for the development, testing, and deployment of these applications while ensuring operational compliance. In order to address this need, Experience Platform provides sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
-
-### Key features
-
-|Feature | Description|
-|--- | ---|
-|Production sandbox | Experience Platform provides a single production sandbox, which cannot be deleted or reset.|
-|Non-production sandboxes | Multiple non-production sandboxes can be created for a single Platform instance, allowing you to test features, run experiments, and make custom configurations without impacting your production sandbox.|
-|Sandbox switcher | In the Experience Platform user interface, the sandbox switcher in the top-left corner of the screen allows you to switch between available sandboxes through a dropdown menu.|
-|`x-sandbox-name` header | All calls to Experience Platform APIs must now include the new `x-sandbox-name` header, whose value references the `name` attribute of the sandbox the operation will take place in.|
-
-For more information, please see the [sandboxes overview](../../sandboxes/home.md). -->
