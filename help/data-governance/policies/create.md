@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 데이터 사용 정책 만들기
 topic: policies
 translation-type: tm+mt
-source-git-commit: 04b2e07ba39df9f530c9c93c4bf1af9e2cf30169
+source-git-commit: da4fe8be360d5530d96078e4ef024bccf7f080f5
 
 ---
 
@@ -266,7 +266,7 @@ curl -X POST \
 
 **응답**
 
-성공적인 응답은 HTTP 상태 201(작성됨) 및 새로 만든 정책의 세부 정보를 반환합니다.
+성공적인 응답은 HTTP 상태 201(작성됨)과 새로 만든 정책의 세부 정보를 반환합니다.
 
 ```json
 {
@@ -409,6 +409,8 @@ curl -X PATCH \
 
 ## 다음 단계
 
-이 자습서를 따라 마케팅 작업에 대한 DULE 정책을 만들었습니다. 이제 DULE 정책 [적용에 대한 자습서를](../enforcement/api-enforcement.md) 계속 진행하여 정책 위반을 확인하고 경험 애플리케이션에서 처리하는 방법을 살펴볼 수 있습니다.
+이 자습서를 따라 마케팅 작업에 대한 데이터 사용 정책을 만들었습니다. 이제 데이터 사용 정책 [적용에 대한 자습서를](../enforcement/api-enforcement.md) 계속 진행하여 정책 위반을 확인하고 경험 애플리케이션에서 처리하는 방법을 살펴볼 수 있습니다.
 
-정책 서비스 API에서 사용할 수 있는 다양한 작업에 대한 자세한 내용은 정책 서비스 [개발자 안내서를](../api/getting-started.md)참조하십시오. 실시간 고객 프로필 데이터에 대한 DULE 정책을 적용하는 방법에 대한 자세한 내용은 대상 세그먼트에 [대한 데이터 사용 규정 준수를](../../segmentation/tutorials/governance.md)적용하는 자습서를 참조하십시오.
+정책 서비스 API에서 사용할 수 있는 다양한 작업에 대한 자세한 내용은 정책 서비스 [개발자 안내서를](../api/getting-started.md)참조하십시오. 실시간 고객 프로필 데이터에 대한 정책을 적용하는 방법에 대한 자세한 내용은 대상 세그먼트에 [대한 데이터 사용 규정 준수를](../../segmentation/tutorials/governance.md)적용하는 자습서를 참조하십시오.
+
+Experience Platform 사용자 인터페이스에서 사용 정책을 관리하는 방법에 대한 자세한 내용은 [정책 사용 안내서를](user-guide.md)참조하십시오.
