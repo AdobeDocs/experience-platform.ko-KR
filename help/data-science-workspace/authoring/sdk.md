@@ -4,7 +4,7 @@ solution: Experience Platform
 title: SDK 개발자 가이드
 topic: Overview
 translation-type: tm+mt
-source-git-commit: 13b6c08b1038d48cdff7147dfcd7b65ea2f95599
+source-git-commit: 897e897c80421c8eddd779222ddfa20298e72298
 
 ---
 
@@ -245,7 +245,7 @@ DataSaver 클래스는 점수 지정 또는 기능 엔지니어링 등의 출력
     <tbody>
         <tr>
             <td>
-                <p><code class=" language-undefined">save(configProperties, sparkSession)</code></p>
+                <p><code class=" language-undefined">save(configProperties, dataFrame)</code></p>
                 <p>출력 데이터를 DataFrame으로 받아 플랫폼 데이터 세트에 저장</p>
             </td>
             <td>
