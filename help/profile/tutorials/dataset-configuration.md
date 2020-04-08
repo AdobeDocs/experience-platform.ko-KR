@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: API를 사용하여 프로필 및 ID 서비스에 대한 데이터 집합 구성
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 5aad9fa71051a58fe1c4678553f47077d81d23fc
+source-git-commit: 409d98818888f2758258441ea2d993ced48caf9a
 
 ---
 
@@ -169,7 +169,6 @@ curl -X GET \
         "createdUser": "{CREATED_BY}",
         "updatedUser": "{CREATED_BY}",
         "viewId": "5b020a27e7040801dedbf46f",
-        "aspect": "production",
         "status": "enabled",
         "fileDescription": {
             "persisted": true,
@@ -246,7 +245,7 @@ curl -X PATCH \
 
 ## 실시간 고객 프로필별 데이터 인제스트 확인 {#confirm-data-ingest-by-real-time-customer-profile}
 
-새 데이터 세트에 처음 데이터를 업로드하거나 새 ETL 또는 데이터 소스를 포함하는 프로세스의 일부로 데이터를 업로드하는 경우 데이터가 예상대로 업로드되었는지 신중하게 확인하는 것이 좋습니다. 실시간 고객 프로파일 액세스 API를 사용하면 일괄 처리 데이터가 데이터 세트에 로드될 때 가져올 수 있습니다. 원하는 엔티티를 검색할 수 없는 경우 데이터 세트에 실시간 고객 프로필이 활성화되지 않을 수 있습니다. 데이터 세트가 활성화되었는지 확인한 후 소스 데이터 형식 및 식별자가 사용자의 기대를 지원하는지 확인하십시오. 실시간 고객 프로필 API를 사용하여 프로필 데이터에 액세스하는 방법에 대한 자세한 지침은 &quot;프로필 액세스 API&quot;라고도 하는 엔티티의 [하위 안내서를 따르십시오](../api/entities.md).
+새 데이터 세트에 처음 데이터를 업로드하거나 새 ETL 또는 데이터 소스를 포함하는 프로세스의 일부로 데이터를 업로드하는 경우 데이터가 예상대로 업로드되었는지 신중하게 확인하는 것이 좋습니다. 실시간 고객 프로필 액세스 API를 사용하여 일괄 데이터가 데이터 세트에 로드될 때 이를 검색할 수 있습니다. 원하는 엔티티를 검색할 수 없는 경우 데이터 세트에 실시간 고객 프로필이 활성화되지 않을 수 있습니다. 데이터 세트가 활성화되었는지 확인한 후 소스 데이터 형식 및 식별자가 사용자의 기대를 지원하는지 확인하십시오. 실시간 고객 프로필 API를 사용하여 프로필 데이터에 액세스하는 방법에 대한 자세한 지침은 &quot;프로필 액세스 API&quot;라고도 하는 엔티티의 [하위 안내서를 따르십시오](../api/entities.md).
 
 ## ID 서비스별 데이터 인제스트 확인 {#confirm-data-ingest-by-identity-service}
 
