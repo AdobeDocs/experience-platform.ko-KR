@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 카탈로그 서비스 개발자 가이드 부록
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 4b2524fcfda578d0debb89623bec6edb537db852
+source-git-commit: 409d98818888f2758258441ea2d993ced48caf9a
 
 ---
 
@@ -131,7 +131,6 @@ curl -X POST \
       "method": "post",
       "body": {
         "status": "enabled",
-        "aspect": "production",
         "dataSetId": "<<firstObjectId.id>>"
       }
     }
