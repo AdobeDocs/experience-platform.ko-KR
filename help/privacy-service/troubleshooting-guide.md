@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 개인 정보 서비스 FAQ
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: 7e2e36e13cffdb625b7960ff060f8158773c0fe3
+source-git-commit: 64cb2de507921fcb4aaade67132024a3fc0d3dee
 
 ---
 
@@ -14,6 +14,52 @@ source-git-commit: 7e2e36e13cffdb625b7960ff060f8158773c0fe3
 이 문서에서는 Adobe Experience Platform 개인 정보 보호 서비스에 대한 질문과 답변을 제공합니다.
 
 개인정보 보호 서비스는 회사가 고객 데이터 개인 정보 보호 요청을 관리하는 데 도움이 되는 RESTful API 및 사용자 인터페이스를 제공합니다. 개인 정보 보호 서비스를 사용하면 개인 또는 개인 고객 데이터에 액세스하고 삭제할 것을 요청할 수 있으므로 조직 및 법적 개인 정보 보호 규정을 자동으로 준수할 수 있습니다.
+
+## API 파섹 {#user-ids}
+
+API에서 새로운 개인 정보 작업을 수행하기 위해 요청의 JSON 페이로드에 개인 정보 요청이 적용되는 각 사용자에 대한 특정 정보가 나열된 `users` 배열이 있어야 합니다. 배열의 각 항목은 해당 `users` `key` 값으로 식별된 특정 사용자를 나타내는 객체입니다.
+
+따라서 각 사용자 객체(또는 `key`)에는 자체 `userIDs` 배열이 포함됩니다. 이 배열은 특정 사용자에 **대한 특정 ID 값을 나열합니다**.
+
+Consider the following example `users` array:
+
+```json
+"users": [
+  {
+    "key": "DavidSmith",
+    "action": ["access"],
+    "userIDs": [
+      {
+        "namespace": "email",
+        "value": "dsmith@acme.com",
+        "type": "standard"
+      }
+    ]
+  },
+  {
+    "key": "user12345",
+    "action": ["access", "delete"],
+    "userIDs": [
+      {
+        "namespace": "email",
+        "value": "ajones@acme.com",
+        "type": "standard"
+      },
+      {
+        "namespace": "ECID",
+        "type": "standard",
+        "value":  "443636576799758681021090721276",
+        "isDeletedClientSide": false
+      }
+    ]
+  }
+]
+```
+
+이 배열에는 두 개의 개체가 포함되어 있으며, 이 개체는 `key` 값으로 식별된 개별 사용자를 나타냅니다(&quot;DavidSmith&quot; 및 &quot;user12345&quot;). &quot;DavidSmith&quot;에는 하나의 ID(이메일 주소)만 있는 반면 &quot;user12345&quot;에는 두 개의 ID(이메일 주소와 ECID)가 있습니다.
+
+사용자 ID 정보를 제공하는 방법에 대한 자세한 내용은 개인 정보 요청에 [](identity-data.md)대한 ID 데이터에 대한 안내서를 참조하십시오.
+
 
 ## Privacy Service를 사용하여 실수로 Platform으로 전송된 데이터를 정리할 수 있습니까?
 
