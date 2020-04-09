@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 세그멘테이션 서비스 개발자 가이드
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 38762fa57188ed018c4347c07765f3d09daef2e6
+source-git-commit: 3fbacf57d5f6741726cb54fb55eab05042046f49
 
 ---
 
@@ -40,7 +40,7 @@ source-git-commit: 38762fa57188ed018c4347c07765f3d09daef2e6
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->**참고:** 경험 플랫폼의 샌드박스 작업에 대한 자세한 내용은 [샌드박스 개요 설명서를](../../sandboxes/home.md)참조하십시오.
+>[!NOTE] 경험 플랫폼의 샌드박스 작업에 대한 자세한 내용은 [샌드박스 개요 설명서를](../../sandboxes/home.md)참조하십시오.
 
 <!-- ## Estimates
 
