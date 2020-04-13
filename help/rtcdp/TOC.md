@@ -3,7 +3,7 @@ product: adobe experience platform
 audience: user
 user-guide-title: 실시간 고객 데이터 플랫폼 도움말
 translation-type: tm+mt
-source-git-commit: 4b021ce8fd81708fac5de7508cd19d99295634d9
+source-git-commit: ff91395844c239415123a33d65fa0deb2221ae25
 
 ---
 
@@ -99,12 +99,12 @@ source-git-commit: 4b021ce8fd81708fac5de7508cd19d99295634d9
          * [Gainsight(Experience Platform Launch 확장)](/help/rtcdp/destinations/gainsight-extension.md)
          * [Kickfire(Experience Platform Launch 확장)](/help/rtcdp/destinations/kickfire-extension.md)
          * [Marketing To Web Personalization(Experience Platform Launch 확장)](destinations/marketo-web-personalization-extension.md)
-      * 소셜 네트워크 대상{#social-network-destinations}
+      * 소셜 네트워크 대상{#social-destinations}
          * [소셜 네트워크 대상 개요](/help/rtcdp/destinations/social-network-destinations.md)
          * [소셜 네트워크 대상 인증 흐름](/help/rtcdp/destinations/social-network-destinations-workflow.md)
          * [Adobe Livefyre(Experience Platform Launch 확장)](/help/rtcdp/destinations/adobe-livefyre-extension.md)
          * [Facebook 대상](/help/rtcdp/destinations/facebook-destination.md)
-      * 설문 조사 대상 {#surveys}
+      * 설문 조사 대상 {#survey-destinations}
          * [설문 조사 대상 개요](/help/rtcdp/destinations/survey-destinations.md)
          * [Foresee(Experience Platform Launch 확장)](/help/rtcdp/destinations/foresee-extension.md)
          * [InMoment(Experience Platform Launch 확장)](/help/rtcdp/destinations/inmoment-extension.md)
