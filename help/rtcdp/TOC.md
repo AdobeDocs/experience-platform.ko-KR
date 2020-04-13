@@ -3,7 +3,7 @@ product: adobe experience platform
 audience: user
 user-guide-title: 실시간 고객 데이터 플랫폼 도움말
 translation-type: tm+mt
-source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
+source-git-commit: 4b021ce8fd81708fac5de7508cd19d99295634d9
 
 ---
 
@@ -30,11 +30,11 @@ source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
       * Adobe 대상{#adobe-destinations}
          * [Adobe 대상 개요](destinations/adobe-destinations.md)
          * [Adobe Campaign](destinations/adobe-campaign-destination.md)
-      * 광고 대상{#advertiser-destinations}
+      * 광고 대상{#advertising-destinations}
          * [광고 대상 개요](destinations/advertising-destinations.md)
          * [Adobe Advertising Cloud(Experience Platform Launch 확장)](/help/rtcdp/destinations/adobe-advertising-cloud-extension.md)
          * [Awin 광고 전환 태그(경험 플랫폼 실행 확장)](/help/rtcdp/destinations/awin-conversiontag-extension.md)
-         * [Awin 광고 Mastertag(Experience Platform Launch 확장)](/help/rtcdp/destinations/awin-mastertag-extension.md)
+         * [Awin Advertising Mastertag(Experience Platform Launch 확장)](/help/rtcdp/destinations/awin-mastertag-extension.md)
          * [Beemray(Experience Platform Launch 확장)](/help/rtcdp/destinations/beemray-extension.md)
          * [분기(Experience Platform Launch 확장)](/help/rtcdp/destinations/branch-extension.md)
          * [DoubleClick Floodlight(경험 플랫폼 실행 확장)](/help/rtcdp/destinations/doubleclick-floodlight-extension.md)
