@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 사용 가능한 지표
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 6a988c990d3d4df706a44cdbc82f77bef20c2ea1
+source-git-commit: ff299a69a81f00cad3e90a83f7411e4b15d4f850
 
 ---
 
@@ -18,7 +18,7 @@ source-git-commit: 6a988c990d3d4df706a44cdbc82f77bef20c2ea1
 다음 표에서는 Adobe Experience Platform 데이터 수집에 대한 지표에 대해 간략히 설명합니다. 굵게 표시된 **지표는** 스트리밍 통합 지표입니다.
 
 | 인사이트 지표 | 설명 | ID 쿼리 매개 변수 |
-| ---- | ---- | ---- | ---- |
+| ---- | ---- | ---- |
 | timeseries.ingestion.dataset.new.count | 생성된 총 데이터 집합 수입니다. | N/A |
 | timeseries.ingestion.dataset.size | 데이터 세트 하나 또는 모든 데이터 세트에 대해 수집되는 모든 데이터의 누적 크기입니다. | 데이터 집합 ID(선택 사항) |
 | timeseries.ingestion.dataset.dailysize | 하나의 데이터 세트 또는 모든 데이터 세트에 대해 일별 사용 기반으로 데이터 인제스트 크기 | 데이터 집합 ID(선택 사항) |
@@ -46,7 +46,7 @@ source-git-commit: 6a988c990d3d4df706a44cdbc82f77bef20c2ea1
 다음 표에서는 Adobe Experience Platform ID Service에 대한 지표에 대해 간략히 설명합니다.
 
 | 인사이트 지표 | 설명 | ID 쿼리 매개 변수 |
-| ---- | ---- | ---- | ---- |
+| ---- | ---- | ---- |
 | timeseries.identity.dataset.recordsuccess.count | 하나의 데이터 세트 또는 모든 데이터 세트에 대해 ID 서비스가 데이터 소스에 쓴 레코드 수입니다. | 데이터 집합 ID(선택 사항) |
 | timeseries.identity.dataset.recordfailed.count | ID 서비스에서 한 데이터 세트 또는 모든 데이터 세트에 대해 실패한 레코드 수입니다. | 데이터 집합 ID(선택 사항) |
 | timeseries.identity.dataset.namespacecode.recordsuccess.count | 네임스페이스에 대해 인제스트된 ID 레코드 수입니다. | 네임스페이스 ID(**필수**) |
@@ -62,7 +62,7 @@ source-git-commit: 6a988c990d3d4df706a44cdbc82f77bef20c2ea1
 다음 표는 Adobe Experience Platform Privacy Service에 대한 지표에 대해 간략히 설명합니다.
 
 | 인사이트 지표 | 설명 | ID 쿼리 매개 변수 |
-| ---- | ---- | ---- | ---- |
+| ---- | ---- | ---- |
 | timeseries.gdpr.jobs.totaljobs.count | GDPR에서 만든 총 작업 수입니다. | ENV(**필수**) |
 | timeseries.gdpr.jobs.completedjobs.count | GDPR에서 완료된 총 작업 수입니다. | ENV(**필수**) |
 | timeseries.gdpr.jobs.errorjobs.count | GDPR의 총 오류 작업 수입니다. | ENV(**필수**) |
@@ -72,7 +72,7 @@ source-git-commit: 6a988c990d3d4df706a44cdbc82f77bef20c2ea1
 다음 표에서는 Adobe Experience Platform 쿼리 서비스에 대한 지표에 대해 간략히 설명합니다.
 
 | 인사이트 지표 | 설명 | ID 쿼리 매개 변수 |
-| ---- | ---- | ---- | ---- |
+| ---- | ---- | ---- |
 | timeseries.queryservice.query.scheduleonce.count | 반복되지 않는 총 예약된 쿼리 수입니다. | N/A |
 | timeseries.queryservice.query.scheduledrecurring.count | 반복 예약된 총 쿼리 수입니다. | N/A |
 | timeseries.queryservice.query.batchquery.count | 실행된 일괄 처리 쿼리의 총 수입니다. | N/A |
@@ -85,7 +85,7 @@ source-git-commit: 6a988c990d3d4df706a44cdbc82f77bef20c2ea1
 다음 표에서는 실시간 고객 프로필에 대한 지표에 대해 간략히 설명합니다.
 
 | 인사이트 지표 | 설명 | ID 쿼리 매개 변수 |
-| ---- | ---- | ---- | ---- |
+| ---- | ---- | ---- |
 | timeseries.profiles.dataset.recordread.count | 하나의 데이터 세트 또는 모든 데이터 세트에 대해 프로필별로 데이터 레이크에서 읽은 레코드 수입니다. | 데이터 집합 ID(선택 사항) |
 | timeseries.profiles.dataset.recordsuccess.count | 하나의 데이터 세트 또는 모든 데이터 세트에 대해 프로필별로 데이터 소스에 기록된 레코드 수입니다. | 데이터 집합 ID(선택 사항) |
 | timeseries.profiles.dataset.recordfailed.count | 한 데이터 세트 또는 모든 데이터 세트에 대해 프로필에 의해 실패한 레코드 수입니다. | 데이터 집합 ID(선택 사항) |
