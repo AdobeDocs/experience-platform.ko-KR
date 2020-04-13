@@ -4,7 +4,7 @@ seo-title: 대상에 프로필 및 세그먼트 활성화
 description: 세그먼트를 대상에 매핑하여 Adobe 실시간 고객 데이터 플랫폼의 데이터를 활성화합니다. 이를 수행하려면 아래 단계를 따르십시오.
 seo-description: 세그먼트를 대상에 매핑하여 Adobe 실시간 고객 데이터 플랫폼의 데이터를 활성화합니다. 이를 수행하려면 아래 단계를 따르십시오.
 translation-type: tm+mt
-source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
+source-git-commit: 2eddd5bb7b62dcc414ad906647b05ce10c766ac6
 
 ---
 
@@ -28,7 +28,14 @@ source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
 5. *조건부*. 이 단계는 이메일 마케팅 대상에 매핑된 세그먼트에만 적용됩니다. <br> 페이지에서 **[!UICONTROL Destination Attributes]** 대상으로 전송할 속성을 **[!UICONTROL Add new field]** 선택하고 선택합니다.
 특성 중 하나를 조합 스키마에서 [고유 식별자로](/help/rtcdp/destinations/email-marketing-destinations.md#identity) 지정하는 것이 좋습니다. 필수 속성에 대한 자세한 내용은 이메일 마케팅 [대상](/help/rtcdp/destinations/email-marketing-destinations.md#identity) 아티클의 ID를 참조하십시오.
    ![destination-attributes](/help/rtcdp/destinations/assets/destination-attributes.png)
-6. 이 **[!UICONTROL Schedule]** 페이지에서는 대상으로 데이터를 전송하는 시작 날짜와 대상으로 데이터를 보내는 빈도를 볼 수 있습니다.
+6. 이 **[!UICONTROL Segment schedule]** 페이지에서는 대상으로 데이터를 전송하는 시작 날짜와 대상으로 데이터를 보내는 빈도를 볼 수 있습니다.
+
+   >[!IMPORTANT]
+   >
+   >소셜 대상의 경우 이 단계에서 대상의 출처를 선택해야 합니다. 아래 이미지에서 옵션 중 하나를 선택한 후에만 다음 단계로 진행할 수 있습니다.
+
+   ![데이터 원본 선택](/help/rtcdp/destinations/assets/choose-data-origin.png)
+
 7. 페이지에서 **[!UICONTROL Review]** 선택 사항의 요약을 볼 수 있습니다. 흐름을 **[!UICONTROL Cancel]** 분류하거나 **[!UICONTROL Back]** **[!UICONTROL Finish]** 설정을 수정하거나 선택 사항을 확인하고 대상에 데이터를 보내기 시작하려면 선택합니다.
 
 ![확인 선택](/help/rtcdp/destinations/assets/confirm-selection.png)
@@ -60,6 +67,10 @@ Salesforce_id3544_20191122124530.csv
 ### 광고 대상
 
 데이터를 활성화할 각 광고 대상을 확인합니다. 정품 인증이 완료되면 광고 플랫폼에 대상이 채워집니다.
+
+### 소셜 네트워크 대상
+
+Facebook의 경우 활성화가 성공하면 Facebook 광고 관리자에서 프로그래밍 방식으로 Facebook 사용자 지정 대상자를 [만듭니다](https://www.facebook.com/adsmanager/manage/). 사용자가 활성화된 세그먼트에 대해 자격이 부여되거나 자격 미달될 때 대상의 세그먼트 멤버십이 추가 및 제거됩니다.
 
 ## 활성화 비활성화 {#disable-activation}
 
