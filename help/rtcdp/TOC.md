@@ -3,7 +3,7 @@ product: adobe experience platform
 audience: user
 user-guide-title: 실시간 고객 데이터 플랫폼 도움말
 translation-type: tm+mt
-source-git-commit: ff91395844c239415123a33d65fa0deb2221ae25
+source-git-commit: 51963edad2f903a4a91e1b7c5114bf81323346bc
 
 ---
 
@@ -36,6 +36,7 @@ source-git-commit: ff91395844c239415123a33d65fa0deb2221ae25
          * [Awin 광고 전환 태그(경험 플랫폼 실행 확장)](/help/rtcdp/destinations/awin-conversiontag-extension.md)
          * [Awin Advertising Mastertag(Experience Platform Launch 확장)](/help/rtcdp/destinations/awin-mastertag-extension.md)
          * [Beemray(Experience Platform Launch 확장)](/help/rtcdp/destinations/beemray-extension.md)
+         * [Bing 광고 유니버설 이벤트 추적(경험 플랫폼 실행 확장)](/help/rtcdp/destinations/bing-ads-extension.md)
          * [분기(Experience Platform Launch 확장)](/help/rtcdp/destinations/branch-extension.md)
          * [DoubleClick Floodlight(경험 플랫폼 실행 확장)](/help/rtcdp/destinations/doubleclick-floodlight-extension.md)
          * [Facebook 픽셀(Experience Platform Launch 확장)](/help/rtcdp/destinations/facebook-pixel-extension.md)
