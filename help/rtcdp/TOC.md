@@ -3,7 +3,7 @@ product: adobe experience platform
 audience: user
 user-guide-title: 실시간 고객 데이터 플랫폼 도움말
 translation-type: tm+mt
-source-git-commit: 51963edad2f903a4a91e1b7c5114bf81323346bc
+source-git-commit: ee2a490ebc802684a0761dc6589d6b30defc0398
 
 ---
 
@@ -133,7 +133,6 @@ source-git-commit: 51963edad2f903a4a91e1b7c5114bf81323346bc
    * [세그먼트 빌더 가이드](segmentation/segment-builder-guide.md)
 * 소스 {#sources}
    * [소스 개요](sources/sources-overview.md)
-   * [소스 자습서](sources/sources-tutorials.md)
    * [Adobe Launch를 사용하여 웹 사이트 태그 구현](sources/launch.md)
-* [릴리스 노트](https://www.adobe.io/apis/experienceplatform/home/services/release-notes.html#!end-user/markdown/release-notes/release-notes.md)
-* [용어 설명](https://www.adobe.io/apis/experienceplatform/home/services/acp-glossary.html)
+* [릴리스 노트](https://www.adobe.com/go/platform-release-notes-en)
+* [용어 설명](https://www.adobe.com/go/platform-glossary-en)
