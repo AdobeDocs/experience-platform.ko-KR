@@ -4,7 +4,7 @@ seo-title: Bizible extension
 description: eBizible 익스텐션은 Adobe 실시간 고객 데이터 플랫폼의 이메일 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 seo-description: Bizible 익스텐션은 Adobe 실시간 고객 데이터 플랫폼의 이메일 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
+source-git-commit: 2a94444b35cac0c002d729798d96fd54aaafbacd
 
 ---
 
@@ -18,6 +18,8 @@ Bizible은 데이터에 대한 탁월한 가시성을 제공하는 업계 선도
 Bizible은 Adobe 실시간 고객 데이터 플랫폼의 이메일 확장자입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 [참조하십시오](https://exchange.adobe.com/experiencecloud.details.101055.bizible-analytics.html).
 
 이 대상은 경험 플랫폼 론치 확장자입니다. Launch 익스텐션이 Adobe Real-time CDP에서 작동하는 방법에 대한 자세한 내용은 Experience Platform [Launch 익스텐션 개요를](/help/rtcdp/destinations/experience-platform-launch-extensions.md)참조하십시오.
+
+![Bizible extension](assets/bizible-extension.png)
 
 ## 전제 조건 {#prerequisites}
 
