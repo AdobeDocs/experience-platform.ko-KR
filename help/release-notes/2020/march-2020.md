@@ -4,8 +4,9 @@ description: Experience Platform 릴리스 노트(2020년 3월 11일)
 doc-type: release notes
 last-update: March 10, 2020
 author: ens71067
+keywords: release notes;
 translation-type: tm+mt
-source-git-commit: 7335a258a53d2685933b401dc4cd00bb60aa6c07
+source-git-commit: c2495b463d713f85ba621a7bf687c5959ec13adb
 
 ---
 
@@ -22,8 +23,7 @@ Adobe Experience Platform 데이터 거버넌스는 고객 데이터를 관리�
 
 ### 새로운 기능
 
->[!NOTE]
->다음 새로운 기능 중 일부는 현재 베타 버전으로 일부 사용자는 사용할 수 없습니다. 베타 기능은 변경될 수 있습니다.
+>[!NOTE] 다음 새로운 기능 중 일부는 현재 베타 버전으로 일부 사용자는 사용할 수 없습니다. 베타 기능은 변경될 수 있습니다.
 
 | 기능 | 설명 |
 | ------- | ----------- |
@@ -45,7 +45,7 @@ Adobe Experience Platform은 모든 유형의 데이터와 지연 시간을 인�
 
 | 기능 | 설명 |
 |------- | -----------|
-| 부분 일괄 처리 | 부분 일괄 처리란 오류가 포함된 데이터를 특정 임계값까지 인제스트하는 기능입니다. 이 기능을 사용하면 모든 정확한 데이터를 Adobe Experience Platform으로 성공적으로 인제스트할 수 있고 모든 잘못된 데이터를 별도로 일괄 처리할 수 있습니다. 실패한 배치에는 유효성 검사에 합격하지 않은 이유를 설명하는 세부 사항이 추가됩니다. 부분 일괄 처리에 대한 자세한 내용은 [부분 일괄 처리 통합 문서에서](../../ingestion/batch-ingestion/partial.md)확인할 수 있습니다. |
+| 부분 일괄 처리 | 부분 일괄 처리란 오류가 포함된 데이터를 특정 임계값까지 인제스트하는 기능입니다. 이 기능을 사용하면 모든 정확한 데이터를 Adobe Experience Platform으로 성공적으로 인제스트할 수 있고 모든 잘못된 데이터를 별도로 일괄 처리할 수 있습니다. 실패한 배치에는 유효성 검사에 합격하지 않은 이유를 설명하는 세부 사항이 추가됩니다. 부분 일괄 처리에 대한 자세한 내용은 [부분 일괄 처리 통합 문서를](../../ingestion/batch-ingestion/partial.md)참조하십시오. |
 
 ### 알려진 문제
 
