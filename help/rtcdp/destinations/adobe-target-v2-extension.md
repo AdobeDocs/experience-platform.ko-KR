@@ -4,12 +4,12 @@ seo-title: Adobe Target v2 확장
 description: Adobe Target v2 익스텐션은 Adobe 실시간 고객 데이터 플랫폼의 개인화 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 seo-description: null
 translation-type: tm+mt
-source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
+source-git-commit: 51963edad2f903a4a91e1b7c5114bf81323346bc
 
 ---
 
 
-# Adobe Target v2 익스텐션(#adobe-target-v2-extension)
+# Adobe Target v2 확장 {#adobe-target-v2-extension}
 
 ## 개요 {#overview}
 
