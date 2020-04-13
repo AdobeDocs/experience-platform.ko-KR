@@ -4,7 +4,7 @@ seo-title: 광고 대상
 description: '실시간 고객 데이터 플랫폼을 타사 광고 플랫폼(예: DSP, 광고 네트워크, SSP)에 연결하고 익명의 고객을 이러한 플랫폼에 공유할 수 있습니다.'
 seo-description: '실시간 고객 데이터 플랫폼을 타사 광고 플랫폼(예: DSP, 광고 네트워크, SSP)에 연결하고 익명의 고객을 이러한 플랫폼에 공유할 수 있습니다.'
 translation-type: tm+mt
-source-git-commit: 2eddd5bb7b62dcc414ad906647b05ce10c766ac6
+source-git-commit: 4b021ce8fd81708fac5de7508cd19d99295634d9
 
 ---
 
@@ -19,7 +19,7 @@ source-git-commit: 2eddd5bb7b62dcc414ad906647b05ce10c766ac6
 
 * [Adobe Advertising Cloud(Experience Platform Launch 확장)](/help/rtcdp/destinations/adobe-advertising-cloud-extension.md)
 * [Awin 광고 전환 태그(경험 플랫폼 실행 확장)](/help/rtcdp/destinations/awin-conversiontag-extension.md)
-* [Awin 광고 Mastertag(Experience Platform Launch 확장)](/help/rtcdp/destinations/awin-mastertag-extension.md)
+* [Awin Advertising Mastertag(Experience Platform Launch 확장)](/help/rtcdp/destinations/awin-mastertag-extension.md)
 * [Beemray(Experience Platform Launch 확장)](beemray-extension.md)
 * [Bing 광고 유니버설 이벤트 추적(경험 플랫폼 실행 확장)](/help/rtcdp/destinations/bing-ads-extension.md)
 * [분기(Experience Platform Launch 확장)](/help/rtcdp/destinations/branch-extension.md)
