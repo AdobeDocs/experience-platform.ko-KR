@@ -4,12 +4,12 @@ seo-title: Adobe Livefyre 익스텐션
 description: Adobe Livefyre 익스텐션은 Adobe 실시간 고객 데이터 플랫폼의 소셜 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 seo-description: null
 translation-type: tm+mt
-source-git-commit: 4b021ce8fd81708fac5de7508cd19d99295634d9
+source-git-commit: ff91395844c239415123a33d65fa0deb2221ae25
 
 ---
 
 
-# Adobe Livefyre 익스텐션 {#bing-ads-extension}
+# Adobe Livefyre 익스텐션 {#adobe-livefyre-extension}
 
 ## 개요 {#overview}
 
