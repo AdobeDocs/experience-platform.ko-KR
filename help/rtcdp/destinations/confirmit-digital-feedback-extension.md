@@ -4,7 +4,7 @@ seo-title: 디지털 피드백 확장 확인
 description: Confirm Digital Feedback 익스텐션은 Adobe 실시간 고객 데이터 플랫폼에서 고객의 의견을 수렴합니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 seo-description: null
 translation-type: tm+mt
-source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
+source-git-commit: ff91395844c239415123a33d65fa0deb2221ae25
 
 ---
 
@@ -25,6 +25,9 @@ source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
 디지털 피드백은 Adobe 실시간 고객 데이터 플랫폼의 고객 익스텐션의 목소리인지 확인합니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 [참조하십시오](https://exchange.adobe.com/experiencecloud.details.103247.confirmit-digital-feedback-for-adobe-launch.html).
 
 이 대상은 경험 플랫폼 론치 확장자입니다. Launch 익스텐션이 Adobe Real-time CDP에서 작동하는 방법에 대한 자세한 내용은 Experience Platform [Launch 익스텐션 개요를](/help/rtcdp/destinations/experience-platform-launch-extensions.md)참조하십시오.
+
+
+![디지털 피드백 확장 확인](assets/confirmit-digital-feedback-extension.png)
 
 ## 전제 조건 {#prerequisites}
 
