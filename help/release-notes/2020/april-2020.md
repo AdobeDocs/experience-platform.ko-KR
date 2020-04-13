@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: April 7, 2020
 author: ens71067
 translation-type: tm+mt
-source-git-commit: 7335a258a53d2685933b401dc4cd00bb60aa6c07
+source-git-commit: 61b2df88bfe8cadd975eaa0b98872710aa3832d3
 
 ---
 
@@ -33,6 +33,22 @@ DULE 프레임워크는 Experience Platform 사용자 인터페이스 및 DULE P
 * 없음.
 
 자세한 내용은 데이터 거버넌스 [개요를](../../data-governance/home.md)참조하십시오.
+
+
+## 대상
+
+Adobe [실시간 고객 데이터 플랫폼에서](../../rtcdp/overview.md)대상은 대상 플랫폼과 사전 구축된 통합으로 이러한 파트너에 대한 데이터를 원활하게 활성화할 수 있습니다.
+
+### 새 대상
+
+Adobe Real-time CDP는 50개 이상의 Experience Cloud Launch 익스텐션에 대한 데이터 활성화를 지원하므로 분석, 개인화 및 기타 사용 사례를 지원합니다. 자세한 내용은 아래를 참조하십시오.
+
+| 설명서 | 설명 |
+|--- | ---|
+| [대상 유형 및 카테고리](/help/rtcdp/destinations/destination-types.md) | 이 문서에서는 Adobe Real-time CDP 인터페이스의 연결과 익스텐션의 차이점을 설명하고 각 대상을 사용할 시기를 권장합니다. |
+| [Experience Platform Launch 확장](/help/rtcdp/destinations/experience-platform-launch-extensions.md) | 이 페이지에서는 Launch Extensions의 의미와 사용 사례를 나열하고 Adobe Real-time CDP의 각 Launch Extension에 대한 설명서 링크를 제공합니다. |
+
+자세한 내용은 대상 개요를 [참조하십시오](/help/rtcdp/destinations/destinations-overview.md).
 
 ## 지능형 서비스
 
