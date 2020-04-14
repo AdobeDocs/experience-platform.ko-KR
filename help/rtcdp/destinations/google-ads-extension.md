@@ -4,12 +4,12 @@ seo-title: Google 광고 확장
 description: Google 광고 익스텐션은 Adobe 실시간 고객 데이터 플랫폼의 광고 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 seo-description: Google 광고 익스텐션은 Adobe 실시간 고객 데이터 플랫폼의 광고 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: ff91395844c239415123a33d65fa0deb2221ae25
+source-git-commit: 98c3356db178507e0a8d94b47030e9490e721e46
 
 ---
 
 
-# Google 광고 대상
+# Google 광고 확장
 
 ## 개요 {#overview}
 
@@ -19,7 +19,7 @@ Google Ads는 Adobe 실시간 고객 데이터 플랫폼의 광고 확장입니�
 
 이 대상은 경험 플랫폼 론치 확장자입니다. Launch 익스텐션이 Adobe Real-time CDP에서 작동하는 방법에 대한 자세한 내용은 Experience Platform [Launch 익스텐션 개요를](/help/rtcdp/destinations/experience-platform-launch-extensions.md)참조하십시오.
 
-![Google 광고 확장](/help/rtcdp/destinations/assets/google-ads-extension.png)
+![Google 광고 확장](/help/rtcdp/destinations/assets/google-extension-2.png)
 
 ## 전제 조건 {#prerequisites}
 
