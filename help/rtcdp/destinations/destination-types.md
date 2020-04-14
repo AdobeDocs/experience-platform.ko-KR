@@ -4,7 +4,7 @@ seo-title: 대상 유형 및 카테고리
 description: 'Adobe 실시간 고객 데이터 플랫폼에서 프로필/세그먼트 내보내기 대상은 이벤트 데이터를 캡처하고, 다른 데이터 소스와 결합하고, 세그멘테이션을 적용하며, 세그먼트와 적격한 프로필을 대상에 내보냅니다. 익스텐션을 실행하면 원시 이벤트 데이터가 여러 유형의 대상으로 전달됩니다. '
 seo-description: Adobe 실시간 고객 데이터 플랫폼에서 프로필/세그먼트 내보내기 대상은 이벤트 데이터를 캡처하고, 다른 데이터 소스와 결합하고, 세그멘테이션을 적용하며, 세그먼트와 적격한 프로필을 대상에 내보냅니다. 익스텐션을 실행하면 원시 이벤트 데이터가 여러 유형의 대상으로 전달됩니다.
 translation-type: tm+mt
-source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
+source-git-commit: bc3f57d636c363c94555b2a779f5bb98a9eca13f
 
 ---
 
@@ -23,7 +23,7 @@ Adobe는 실시간 고객 데이터 플랫폼에서 연결과 확장이라는 �
 
 ### 연결
 
-**프로파일 내보내기** 및 **세그먼트 내보내기** Adobe 실시간 고객 데이터 플랫폼의 대상: 이벤트 데이터를 캡처하고, 다른 데이터 소스와 결합하여 [실시간 고객 프로파일을](https://docs.adobe.com/content/help/en/experience-platform/profile/home.html)만들고, 세그먼테이션을 적용하며, 세그먼트와 자격이 있는 프로파일을 대상에 내보낼 수 있습니다.
+**프로파일 내보내기** 및 **세그먼트 내보내기** Adobe 실시간 고객 데이터 플랫폼의 대상: 이벤트 데이터를 캡처하고, 다른 데이터 소스와 결합하여 [실시간 고객 프로파일을](/help/profile/home.md)만들고, 세그먼테이션을 적용하며, 세그먼트와 자격이 있는 프로파일을 대상에 내보낼 수 있습니다.
 
 <br> 
 
@@ -68,7 +68,7 @@ Experience Platform Launch 확장 기능에 대한 자세한 내용은 Launch [�
 
 ## 대상 카테고리
 
-대상 카탈로그의 [대상 및 대상은](https://platform.adobe.com/destination/catalog) 대상에 따라&#x200B;**분류됩니다(**&#x200B;대상 카탈로그의 **대상 및**&#x200B;대상 카테고리 **, 설문 조사 플랫폼,**&#x200B;설문 조사 플랫폼, 이메일 마케팅, 확장 등 **)**. 각 카테고리 및 각 카테고리에 포함된 대상에 대한 자세한 내용은 대상 [카탈로그 설명서를](/help/rtcdp/destinations/destinations-catalog.md)참조하십시오.
+대상 카탈로그의 [연결 및](https://platform.adobe.com/destination/catalog) 관계는&#x200B;**목표 카테고리(**&#x200B;대상 스토리지 **,**&#x200B;설문 조사 **플랫폼,******&#x200B;설문 조사 플랫폼, 이메일 마케팅, 확장 등)별로 그룹화되며, 이러한 데이터가 얻는 데 도움이 되는 마케팅 사용 사례에 따라 달라집니다. 각 카테고리 및 각 카테고리에 포함된 대상에 대한 자세한 내용은 대상 [카탈로그 설명서를](/help/rtcdp/destinations/destinations-catalog.md)참조하십시오.
 
-![대상 카테고리](/help/rtcdp/destinations/assets/destination-categories.png)
+![대상 카테고리](/help/rtcdp/destinations/assets/destination-categories-menu.png)
 
