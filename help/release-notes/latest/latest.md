@@ -6,7 +6,7 @@ last-update: April 13, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: f90da5067121f7e00fd26a4dd5462cf567a7b09d
+source-git-commit: dc1c9b7dd9ff4c8b20de96e4ee123d90be4580cc
 
 ---
 
@@ -14,6 +14,28 @@ source-git-commit: f90da5067121f7e00fd26a4dd5462cf567a7b09d
 # Adobe Experience Platform 릴리스 노트
 
 ## 릴리스 날짜: 2020년 4월 8일
+
+## XDM(Experience Data Model) 시스템
+
+Adobe Experience Platform의 주요 개념은 표준화 및 상호 운용성 Adobe 기반의 XDM(Experience Data Model)은 고객 경험 데이터를 표준화하고 고객 경험 관리를 위한 스키마를 정의하려는 노력의 일환입니다.
+
+XDM은 디지털 경험의 성능을 개선하기 위해 고안된 문서화된 사양입니다. Adobe Experience Platform에서 제공하는 서비스와 커뮤니케이션할 수 있는 모든 애플리케이션에 대한 공통 구조와 정의를 제공합니다. XDM 표준을 준수하여 모든 고객 경험 데이터를 보다 신속하고 통합된 방식으로 인사이트를 제공하는 일반적인 표현으로 통합할 수 있습니다. 고객 행동을 통해 유용한 인사이트를 얻고 세그먼트를 통해 고객 고객을 정의하며 개인화를 위해 고객 속성을 사용할 수 있습니다.
+
+### 새로운 기능
+
+| 기능 | 설명 |
+| --- | --- |
+| 자동 대체 표시 정보 | 스키마 레지스트리는 `alternateDisplayInfo` 설명자에 구성된 사용자 지정된 제목 및 설명 값을 자동으로 적용합니다. |
+| 스칼라 필드 제한 | 스키마 레지스트리는 단일 스키마에서 6000개 이상의 스칼라 필드를 허용하지 않습니다. |
+| 성과 점검 | 스키마 레지스트리가 Experience Platform의 요구를 충족하기 위해 재편되었습니다. |
+
+**버그 수정**
+
+* 표준 XDM의 중첩된 URI 필드에 대해 보다 깔끔한 XDM 형식을 지원하도록 변환된 XDM을 XDM으로 업데이트했습니다.
+
+**알려진 문제**
+
+* 알려진 항목
 
 ## 데이터 거버넌스
 
