@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 세그먼트 평가
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 8d77fc6c5b2824624ba308269f743a432a5288d2
+source-git-commit: 21935bb36d8c2a0ef17e586c0909cf316ef026cf
 
 ---
 
@@ -452,7 +452,7 @@ curl -X GET \
 
 사용하려는 특정 프로필을 알고 있는 경우 실시간 고객 프로필 API를 사용하여 액세스할 수 있습니다. 개별 프로필에 액세스하는 전체 단계는 프로필 API [자습서를 사용하여 실시간 고객 프로필 데이터에 액세스하십시오](../../profile/api/entities.md) .
 
-## 세그먼트 내보내기
+## 세그먼트 내보내기 {#export}
 
 세그멘테이션 작업이 성공적으로 완료된 후( `status` 속성 값이 &quot;성공&quot;됨), 대상을 액세스 및 작동 가능한 데이터 세트로 내보낼 수 있습니다.
 
