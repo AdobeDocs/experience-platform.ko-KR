@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: 실시간 고객 프로파일 API 개발자 가이드
 topic: guide
 translation-type: tm+mt
-source-git-commit: 5aad9fa71051a58fe1c4678553f47077d81d23fc
+source-git-commit: 21935bb36d8c2a0ef17e586c0909cf316ef026cf
 
 ---
 
@@ -418,7 +418,7 @@ curl -X POST \
 
 병합 정책을 구성하는 각 개별 요소에 대한 자세한 내용은 이 문서의 시작 부분에 있는 병합 정책 [](#components-of-merge-policies) 구성 요소 섹션을 참조하십시오.
 
-## 병합 정책 업데이트
+## 병합 정책 업데이트 {#update}
 
 개별 특성(PATCH)을 편집하거나 새 특성(PUT)으로 전체 병합 정책을 덮어써서 기존 병합 정책을 수정할 수 있습니다. 각 예는 아래에 나와 있습니다.
 
