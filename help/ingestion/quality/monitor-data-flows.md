@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 데이터 통합 모니터링
 topic: overview
 translation-type: tm+mt
-source-git-commit: 8577d9b93098d5d6ec778d549bf5fc1e29c32d86
+source-git-commit: 9cbc22a34613aeb58a2c5090b10978ae4428dbdb
 
 ---
 
@@ -21,13 +21,19 @@ Experience [Platform UI에서](https://platform.adobe.com)**왼쪽 탐색** 메�
 
 ![](../images/quality/monitor-data-flows/click-streaming-end-to-end.png)
 
-Streaming *end-to-end* 모니터링 페이지가 나타납니다. 이 작업 공간에서는 스트리밍되는 메시지 비율과 수신 데이터의 세부 목록을 표시하는 그래프를 제공합니다.
+Streaming *end-to-end* 모니터링 페이지가 나타납니다. 이 작업 공간은 플랫폼이 수신하는 스트리밍 이벤트 비율, 실시간 고객 프로파일에서 성공적으로 처리된 스트리밍 이벤트 비율, [들어오는 데이터의 세부 목록을 표시하는 그래프](../../profile/home.md)그래프를 제공합니다.
 
 ![](../images/quality/monitor-data-flows/list-streams.png)
 
-기본적으로 그래프는 지난 7일 동안의 섭취 비율을 보여줍니다. 이 날짜 범위는 강조 표시된 단추를 클릭하여 다양한 기간을 표시하도록 조정할 수 있습니다.
+기본적으로 상단 그래프는 지난 7일 동안의 통합 비율을 보여줍니다. 이 날짜 범위는 강조 표시된 단추를 클릭하여 다양한 기간을 표시하도록 조정할 수 있습니다.
 
-![](../images/quality/monitor-data-flows/list-streams-focus-on-graph.png)
+![](../images/quality/monitor-data-flows/list-streams-focus-on-top-graph.png)
+
+하단 그래프는 지난 7일 동안 프로필에서 성공적으로 스트리밍한 이벤트의 비율을 보여줍니다. 이 날짜 범위는 강조 표시된 단추를 클릭하여 다양한 기간을 표시하도록 조정할 수 있습니다.
+
+> [!NOTE] 데이터가 이 그래프에 표시되려면 프로필에 대해 데이터를 **명시적으로** 활성화해야 합니다. 프로필에 대한 스트리밍 데이터를 활성화하는 방법에 대한 자세한 내용은 [데이터 세트 사용 안내서를](../../catalog/datasets/user-guide.md#enable-a-dataset-for-real-time-customer-profile)참조하십시오.
+
+![](../images/quality/monitor-data-flows/list-streams-focus-on-bottom-graph.png)
 
 그래프 아래에는 위에 표시된 날짜 범위와 일치하는 모든 스트리밍 통합 레코드 목록이 있습니다. 나열된 각 일괄 처리에는 ID, 데이터 세트 이름, 마지막으로 업데이트된 시간, 배치의 레코드 수 및 오류 수(있는 경우)가 표시됩니다. 레코드를 클릭하면 해당 레코드에 대한 자세한 정보를 볼 수 있습니다.
 
