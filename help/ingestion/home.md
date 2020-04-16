@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform 데이터 통합 개요
 topic: overview
 translation-type: tm+mt
-source-git-commit: 4817162fe2b7cbf4ae4c1ed325db2af31da5b5d3
+source-git-commit: 2f0f155beacbc6a4ba2892ae211a9c0305e969ac
 
 ---
 
@@ -35,7 +35,7 @@ Adobe Experience Platform은 마케터가 고객의 행동을 보다 효과적�
 
 소스 연결은 다른 Adobe 응용 프로그램(예: Adobe Analytics 및 Adobe Audience Manager), 타사 클라우드 스토리지 소스(예: Azure Blob, Amazon S3, FTP 서버 및 SFTP 서버) 및 타사 CRM 시스템(예: Microsoft Dynamics 및 Salesforce)에서 데이터를 수집하도록 구성할 수 있습니다.
 
-자세한 내용은 [소스 개요를](../source-connectors/home.md) 참조하십시오.
+자세한 내용은 [소스 개요를](../sources/home.md) 참조하십시오.
 
 ## 다음 단계
 
