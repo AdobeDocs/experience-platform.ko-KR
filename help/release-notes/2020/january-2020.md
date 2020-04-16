@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: January 15, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 38acbb4a0130763fe0c565215eda7c0713e1ff6e
+source-git-commit: 2f0f155beacbc6a4ba2892ae211a9c0305e969ac
 
 ---
 
@@ -78,7 +78,7 @@ Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 
 
 * 없음
 
-소스에 대한 자세한 내용은 [소스 개요를 참조하십시오](../../source-connectors/home.md)
+소스에 대한 자세한 내용은 [소스 개요를 참조하십시오](../../sources/home.md)
 
 ## 대상
 
