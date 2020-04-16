@@ -4,7 +4,7 @@ seo-title: 설문 조사 대상
 description: 설문 조사 플랫폼은 설문 조사 이벤트를 탐지하고 데이터 요소를 통해 실시간으로 고객 피드백을 수집하며 Adobe 실시간 CDP와 데이터를 공유합니다.
 seo-description: 설문 조사 플랫폼은 설문 조사 이벤트를 탐지하고 데이터 요소를 통해 실시간으로 고객 피드백을 수집하며 Adobe 실시간 CDP와 데이터를 공유합니다.
 translation-type: tm+mt
-source-git-commit: e3b7dd4788042deaeba68bfdbe08e8448b46c270
+source-git-commit: e4da80338dbfbad70dfb3cf7df9fe589e949e788
 
 ---
 
