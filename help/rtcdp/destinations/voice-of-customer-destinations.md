@@ -4,7 +4,7 @@ seo-title: 고객 대상의 음성
 description: 음성 플랫폼은 음성 메시지, 통화 데이터 및 채팅 대화를 비롯한 다양한 소스의 데이터를 수집하고 취합합니다. 수집된 정보를 필터링하고 분석하여 회사가 자사의 웹 사이트를 최적화하여 요구 사항을 충족할 수 있도록 합니다.
 seo-description: 음성 플랫폼은 음성 메시지, 통화 데이터 및 채팅 대화를 비롯한 다양한 소스의 데이터를 수집하고 취합합니다. 수집된 정보를 필터링하고 분석하여 회사가 자사의 웹 사이트를 최적화하여 요구 사항을 충족할 수 있도록 합니다.
 translation-type: tm+mt
-source-git-commit: e3b7dd4788042deaeba68bfdbe08e8448b46c270
+source-git-commit: e4da80338dbfbad70dfb3cf7df9fe589e949e788
 
 ---
 
