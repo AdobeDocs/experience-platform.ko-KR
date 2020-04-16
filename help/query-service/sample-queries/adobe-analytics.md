@@ -4,14 +4,14 @@ solution: Experience Platform
 title: 샘플 쿼리
 topic: queries
 translation-type: tm+mt
-source-git-commit: 45da024d45b5eebdfc393ee14890e24aed6021ce
+source-git-commit: 2f0f155beacbc6a4ba2892ae211a9c0305e969ac
 
 ---
 
 
 # Adobe Analytics 데이터에 대한 샘플 쿼리
 
-선택한 Adobe Analytics 보고서 세트의 데이터는 XDM ExperienceEvents로 변환되고 데이터 세트로 Adobe Experience Platform로 인제스트됩니다. 이 문서에서는 Adobe Experience Platform 쿼리 서비스가 이 데이터를 사용하고 포함된 샘플 쿼리가 Adobe Analytics 데이터 세트와 함께 작동해야 하는 여러 가지 사용 사례를 간략하게 설명합니다. XDM [ExperienceEvents 매핑에 대한 자세한 내용은 Analytics 필드 매핑 설명서를](../../source-connectors/ui/adobe-applications/analytics-mapping.md) 참조하십시오.
+선택한 Adobe Analytics 보고서 세트의 데이터는 XDM ExperienceEvents로 변환되고 데이터 세트로 Adobe Experience Platform로 인제스트됩니다. 이 문서에서는 Adobe Experience Platform 쿼리 서비스가 이 데이터를 사용하고 포함된 샘플 쿼리가 Adobe Analytics 데이터 세트와 함께 작동해야 하는 여러 가지 사용 사례를 간략하게 설명합니다. XDM [ExperienceEvents 매핑에 대한 자세한 내용은 Analytics 필드 매핑 설명서를](../../sources/connectors/adobe-applications/analytics-mapping.md) 참조하십시오.
 
 ## 시작하기
 
