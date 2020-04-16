@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform 소스 커넥터 개요
 topic: overview
 translation-type: tm+mt
-source-git-commit: 92ba230d71e419e33567833ad562e6ffef996d0a
+source-git-commit: e81f138f933d4bb2c36260480e360dfacd412da0
 
 ---
 
@@ -26,9 +26,10 @@ Adobe Experience Platform을 사용하면 서로 다른 소스로부터 수집�
 Adobe Experience Platform을 사용하면 Adobe Analytics, Adobe Audience Manager, Experience Platform Launch 등 다른 Adobe 애플리케이션에서 데이터를 인제스트할 수 있습니다. 자세한 내용은 다음 관련 문서를 참조하십시오.
 
 - [Adobe Audience Manager 커넥터 개요](connectors/adobe-applications/audience-manager.md)
-- [UI에서 Adobe Audience Manager 소스 커넥터 만들기](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-ui-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/ui/adobe-applications/aam-ui-tutorial.md)
+- [UI에서 Adobe Audience Manager 소스 커넥터 만들기](./tutorials/ui/create/adobe-applications/audience-manager.md)
 - [Adobe Analytics 데이터 커넥터 개요](connectors/adobe-applications/analytics.md)
-- [UI에서 Adobe Analytics 소스 커넥터 만들기](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-ui-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/ui/adobe-applications/adobe-analytics-ui-tutorial.md)
+- [UI에서 Adobe Analytics 소스 커넥터 만들기](./tutorials/ui/create/adobe-applications/analytics.md)
+- [UI에서 고객 속성 소스 커넥터 만들기](./tutorials/ui/create/adobe-applications/customer-attributes.md)
 
 ### 광고
 
