@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: November 18, 2019
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 9bfb2ca8726421363c8446ecf581ed58d427eabf
+source-git-commit: 2f0f155beacbc6a4ba2892ae211a9c0305e969ac
 
 ---
 
@@ -98,7 +98,7 @@ Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 
 
 * 클라우드 기반 스토리지용 소스 커넥터는 압축된 파일 섭취를 지원하지 않습니다.
 
-소스에 대한 자세한 내용은 소스 개요를 [참조하십시오](../../source-connectors/home.md).
+소스에 대한 자세한 내용은 소스 개요를 [참조하십시오](../../sources/home.md).
 
 ## 데이터 과학 작업 영역
 
