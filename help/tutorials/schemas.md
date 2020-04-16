@@ -4,7 +4,7 @@ solution: Experience Platform
 title: XDM 스키마 및 설명자
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: ee08f43400fa72abce95ed52aff879f954f4b4d6
+source-git-commit: 2f0f155beacbc6a4ba2892ae211a9c0305e969ac
 
 ---
 
@@ -23,7 +23,7 @@ Adobe Experience Platform은 고객 간의 관계와 다양한 채널에서 브�
 
 ## 임시 스키마 만들기
 
-특정 상황에서 단일 데이터 세트에서만 사용하도록 지정된 필드가 있는 XDM(경험 데이터 모델) 스키마를 만들어야 할 수 있습니다. 이를 &quot;임시&quot; 스키마라고 합니다. 애드혹 스키마는 CSV 파일 인제스트 및 특정 종류의 [소스 연결](../ingestion/home.md) 만들기를 포함하여, 경험 플랫폼의 다양한 [데이터 통합](../source-connectors/home.md)워크플로에서 사용됩니다. 임시 스키마 만들기는 스키마 레지스트리 API를 사용하여 완료되며, 작업 과정의 일부로 임시 스키마를 만들어야 하는 다른 Experience Platform 자습서와 함께 사용됩니다. 임시 스키마 만들기를 시작하려면 API를 사용하여 임시 스키마를 [만드는 자습서를 참조하십시오](../xdm/tutorials/ad-hoc.md).
+특정 상황에서 단일 데이터 세트에서만 사용하도록 지정된 필드가 있는 XDM(경험 데이터 모델) 스키마를 만들어야 할 수 있습니다. 이를 &quot;임시&quot; 스키마라고 합니다. 애드혹 스키마는 CSV 파일 인제스트 및 특정 종류의 [소스 연결](../ingestion/home.md) 만들기를 포함하여, 경험 플랫폼의 다양한 [데이터 통합](../sources/home.md)워크플로에서 사용됩니다. 임시 스키마 만들기는 스키마 레지스트리 API를 사용하여 완료되며, 작업 과정의 일부로 임시 스키마를 만들어야 하는 다른 Experience Platform 자습서와 함께 사용됩니다. 임시 스키마 만들기를 시작하려면 API를 사용하여 임시 스키마를 [만드는 자습서를 참조하십시오](../xdm/tutorials/ad-hoc.md).
 
 ## 다음 단계
 
