@@ -4,18 +4,18 @@ solution: Experience Platform
 title: 데이터 통합 자습서
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 2020f4b88f81f2d4fe3cfbd91cd18119ae580f4f
+source-git-commit: e4da80338dbfbad70dfb3cf7df9fe589e949e788
 
 ---
 
 
 # 경험 플랫폼으로 데이터 인제스트
 
-Adobe Experience Platform은 마케터가 고객의 행동을 보다 효과적으로 파악할 수 있도록 다양한 소스의 데이터를 취합합니다. Adobe Experience Platform 데이터 수집은 플랫폼이 이러한 소스의 데이터를 수집하는 여러 방법뿐만 아니라 다운스트림 플랫폼 서비스에서 사용하기 위해 Data Lake 내에서 데이터가 지속되는 방식을 나타냅니다. 데이터 통합에는 일괄 처리, 스트리밍 통합 및 소스 커넥터를 사용한 통합 기능이 포함됩니다. 자세한 내용은 데이터 통합 [개요를](../ingestion/home.md) 참조하거나 소스 [문서로](../source-connectors/home.md)직접 진행하십시오.
+Adobe Experience Platform은 마케터가 고객의 행동을 보다 효과적으로 파악할 수 있도록 다양한 소스의 데이터를 취합합니다. Adobe Experience Platform 데이터 수집은 플랫폼이 이러한 소스의 데이터를 수집하는 여러 방법뿐만 아니라 다운스트림 플랫폼 서비스에서 사용하기 위해 Data Lake 내에서 데이터가 지속되는 방식을 나타냅니다. 데이터 통합에는 일괄 처리, 스트리밍 통합 및 소스 커넥터를 사용한 통합 기능이 포함됩니다. 자세한 내용은 데이터 통합 [개요를](../ingestion/home.md) 참조하거나 소스 [문서로](../sources/home.md)직접 진행하십시오.
 
 ## UI 및 API에서 소스 커넥터 만들기
 
-소스 커넥터를 사용하면 여러 소스에서 데이터를 인제스트할 수 있으며, 여기에서 플랫폼 서비스를 사용하여 레이블 지정, 구조 지정 및 개선할 수 있습니다. UI를 사용하여 커넥터를 만들려면 UI 개요에서 [소스 커넥터](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-ui-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/ui/sources-ui-tutorial.md)만들기를 참조하십시오. API를 사용하여 소스 커넥터를 만들려면 흐름 서비스 API 개요를 [사용하여 소스 커넥터를](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-api-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/api/sources-api-tutorial.md)만듭니다.
+소스 커넥터를 사용하면 여러 소스에서 데이터를 인제스트할 수 있으며, 여기에서 플랫폼 서비스를 사용하여 레이블 지정, 구조 지정 및 개선할 수 있습니다. 소스 커넥터를 만들려면 [소스 개요를](../sources/home.md)참조하십시오.
 
 ## 일괄 처리 데이터 인제스트
 
