@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform 소스 커넥터
 topic: overview
 translation-type: tm+mt
-source-git-commit: 4817162fe2b7cbf4ae4c1ed325db2af31da5b5d3
+source-git-commit: 2f0f155beacbc6a4ba2892ae211a9c0305e969ac
 
 ---
 
@@ -15,4 +15,4 @@ Adobe Experience Platform을 사용하면 외부 소스에서 데이터를 인�
 
 Experience Platform은 다양한 데이터 제공업체에 대한 소스 연결을 쉽게 설정할 수 있는 RESTful API와 인터랙티브한 UI를 제공합니다. 이러한 소스 접속을 통해 스토리지 시스템 및 CRM 서비스를 인증하고 통합 실행 시간을 설정하며 데이터 통합 처리량을 관리할 수 있습니다.
 
-이러한 소스 커넥터에 대한 자세한 내용은 [소스 커넥터 설명서를](../source-connectors/home.md)참조하십시오.
+이러한 소스 커넥터에 대한 자세한 내용은 [소스 커넥터 설명서를](../sources/home.md)참조하십시오.
