@@ -4,7 +4,7 @@ seo-title: 대상 개요
 description: 대상은 실시간 고객 데이터 플랫폼에서 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과의 사전 구축된 통합입니다. Adobe의 실시간 고객 데이터 플랫폼에서 대상을 사용하여 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타깃팅된 광고 및 기타 많은 사용 사례를 위해 알려진 알 수 없는 데이터를 활성화할 수 있습니다.
 seo-description: 대상은 실시간 고객 데이터 플랫폼에서 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과의 사전 구축된 통합입니다. Adobe의 실시간 고객 데이터 플랫폼에서 대상을 사용하여 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타깃팅된 광고 및 기타 많은 사용 사례를 위해 알려진 알 수 없는 데이터를 활성화할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
+source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
 
 ---
 
@@ -33,7 +33,7 @@ source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
 * 카탈로그의 대상에 대한 데이터 흐름 만들기, 편집, 활성화 및 비활성화
 * 스토리지 위치에 계정을 만들거나 타겟 플랫폼의 계정에 실시간 CDP 연결
 * 대상에 활성화할 세그먼트를 선택합니다.
-* 세그먼트를 이메일 [마케팅 대상으로 활성화할 때 내보낼 경험 데이터 모델(XDM) 필드를](https://www.adobe.io/apis/experienceplatform/home/xdm/xdmservices.html#!api-specification/markdown/narrative/technical_overview/schema_registry/xdm_system/xdm_system_in_experience_platform.md) 선택합니다.
+* 세그먼트를 이메일 [마케팅 대상으로 활성화할 때 내보낼 경험 데이터 모델(XDM) 필드를](../../xdm/home.md) 선택합니다.
 
 ## 대상 유형 및 카테고리
 
@@ -41,6 +41,6 @@ source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
 
 ## 대상 및 액세스 제어
 
-실시간 CDP의 대상 기능은 Adobe Experience Platform 액세스 제어 권한과 연동됩니다. 사용자의 권한 수준에 따라 대상을 보고, 관리하고, 활성화할 수 있습니다. 개별 권한에 대한 자세한 내용은 [Adobe Experience Platform의](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/access-control/access-control-overview.md) 액세스 제어를 참조하고 페이지 아래쪽으로 스크롤을 참조하십시오.
+실시간 CDP의 대상 기능은 Adobe Experience Platform 액세스 제어 권한과 연동됩니다. 사용자의 권한 수준에 따라 대상을 보고, 관리하고, 활성화할 수 있습니다. 개별 권한에 대한 자세한 내용은 [Adobe Experience Platform의](../../access-control/home.md) 액세스 제어를 참조하고 페이지 아래쪽으로 스크롤을 참조하십시오.
 
-액세스 컨트롤에 대한 자세한 내용은 액세스 [제어 사용 안내서를](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/access-control/access-control-user-guide.md)참조하십시오.
+액세스 컨트롤에 대한 자세한 내용은 액세스 [제어 사용 안내서를](../../access-control/ui/overview.md)참조하십시오.
