@@ -1,9 +1,9 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Intelligent Services Help
+user-guide-title: 지능형 서비스 도움말
 translation-type: tm+mt
-source-git-commit: 0f6424c5afbf9b23016e1c40d156f6226f853cd6
+source-git-commit: 7d3f64db787aebe46179c0e08ad01878b0ad2877
 
 ---
 
@@ -11,6 +11,7 @@ source-git-commit: 0f6424c5afbf9b23016e1c40d156f6226f853cd6
 # Adobe Intelligent Services {#intelligent-services}
 
 * [지능형 서비스 개요](home.md)
+* [지능형 서비스에서 사용할 데이터 준비](data-preparation.md)
 * 기여도 AI {#attribution-ai}
    * [개요](attribution-ai/overview.md)
    * [Attribution AI 시작하기](attribution-ai/getting-started.md)
