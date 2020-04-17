@@ -4,7 +4,7 @@ seo-title: Adobe Experience Platform 웹 SDK 이벤트 추적
 description: Experience Platform 웹 SDK 이벤트를 추적하는 방법 학습
 seo-description: Experience Platform 웹 SDK 이벤트를 추적하는 방법 학습
 translation-type: tm+mt
-source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
+source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
 
 ---
 
@@ -24,7 +24,7 @@ Adobe Experience Cloud로 전송된 데이터는 다음 두 가지 카테고리�
 
 ## XDM 데이터 전송
 
-XDM 데이터는 컨텐츠 및 구조가 Adobe Experience Platform 내에서 생성한 스키마와 일치하는 객체입니다. [스키마를 만드는 방법에 대한 자세한 내용을 살펴보십시오.](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/schema_editor_tutorial/schema_editor_tutorial.md)
+XDM 데이터는 컨텐츠 및 구조가 Adobe Experience Platform 내에서 생성한 스키마와 일치하는 객체입니다. [스키마를 만드는 방법에 대한 자세한 내용을 살펴보십시오.](../../xdm/tutorials/create-schema-ui.md)
 
 분석, 개인화, 고객 또는 대상의 일부로 사용하려는 모든 XDM 데이터는 `xdm` 옵션을 사용하여 전송해야 합니다.
 
