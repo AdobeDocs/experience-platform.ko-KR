@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Audience Manager 커넥터
 topic: overview
 translation-type: tm+mt
-source-git-commit: 9f0200af0310eafbcc1851b089cfc254cb34af8f
+source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
 
 ---
 
@@ -19,7 +19,7 @@ Adobe Audience Manager 데이터 커넥터는 Adobe Audience Manager에서 수�
 
 Audience Manager 커넥터는 이러한 데이터 카테고리를 XDM(Experience Data Model) 스키마로 매핑하여 플랫폼에 보냅니다. 실시간 데이터와 온보드 데이터는 XDM ExperienceEvent 데이터로 전송되고 프로필 데이터는 XDM 개별 프로필로 전송됩니다.
 
-플랫폼 UI를 사용하여 Adobe Audience Manager와의 연결을 만드는 방법에 대한 지침은 Audience Manager [커넥터 자습서를](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-ui-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/ui/adobe-applications/aam-ui-tutorial.md)참조하십시오.
+플랫폼 UI를 사용하여 Adobe Audience Manager와의 연결을 만드는 방법에 대한 지침은 Audience Manager [커넥터 자습서를](../../tutorials/ui/create/adobe-applications/audience-manager.md)참조하십시오.
 
 ## XDM(Experience Data Model) 소개
 
