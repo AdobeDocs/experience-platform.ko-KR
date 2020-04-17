@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 허용되는 ID 네임스페이스 및 한정자
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d0fcae6b1b75584a2c26d6eee5b47e0d60a142ba
+source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
 
 ---
 
@@ -13,7 +13,7 @@ source-git-commit: d0fcae6b1b75584a2c26d6eee5b47e0d60a142ba
 
 ## 표준 ID 네임스페이스
 
-개인정보 보호 서비스로 전송되는 모든 ID는 특정 ID 네임스페이스로 제공되어야 합니다. ID 네임스페이스는 ID [와 관련된 컨텍스트를](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/identity_services_architectural_overview/identity_services_architectural_overview.md) 나타내는 Adobe Experience Platform Identity Service의 구성 요소입니다.
+개인정보 보호 서비스로 전송되는 모든 ID는 특정 ID 네임스페이스로 제공되어야 합니다. ID 네임스페이스는 ID [와 관련된 컨텍스트를](../../identity-service/home.md) 나타내는 Adobe Experience Platform Identity Service의 구성 요소입니다.
 
 다음 표는 경험 플랫폼에서 사용할 수 있도록 미리 정의된 여러 가지 ID 유형과 관련 `namespace` 값을 대략적으로 보여줍니다.
 
@@ -31,7 +31,7 @@ source-git-commit: d0fcae6b1b75584a2c26d6eee5b47e0d60a142ba
 
 >[!NOTE] 또한 각 ID 유형에는 `namespaceId` 정수 값이 있으며, ID의 `namespace` `type` 속성을 &quot;namespaceId&quot;로 설정할 때 문자열 대신 사용할 수 있습니다. 자세한 내용은 [네임스페이스 한정자의](#namespace-qualifiers) 섹션을 참조하십시오.
 
-ID 서비스 API의 `idnamespace/identities` 종단점에 GET 요청을 만들어 조직에서 사용 중인 ID 네임스페이스 목록을 검색할 수 있습니다. 자세한 내용은 [ID 서비스 개발자 안내서를](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/identity_services_architectural_overview/identity_services_api.md) 참조하십시오.
+ID 서비스 API의 `idnamespace/identities` 종단점에 GET 요청을 만들어 조직에서 사용 중인 ID 네임스페이스 목록을 검색할 수 있습니다. 자세한 내용은 [ID 서비스 개발자 안내서를](../../identity-service/api/getting-started.md) 참조하십시오.
 
 ## 네임스페이스 한정자
 
@@ -56,7 +56,7 @@ Privacy Service API에서 `namespace` 값을 지정할 때 **네임스페이스 
 | Adobe Advertising Cloud | &quot;AdCloud&quot; |
 | Adobe Analytics | &quot;Analytics&quot; |
 | Adobe Audience Manager | &quot;AudienceManager&quot; |
-| Adobe Campaign | &quot;캠페인&quot; |
+| Adobe Campaign | &quot;Campaign&quot; |
 | Adobe Experience Platform | &quot;aepDataLake&quot; |
 | Adobe Primetime 인증 | &quot;primetimeAuthentication&quot; |
 | Adobe Target | &quot;Target&quot; |
