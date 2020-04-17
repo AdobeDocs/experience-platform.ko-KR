@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 데이터 집합 사용 안내서
 topic: datasets
 translation-type: tm+mt
-source-git-commit: 5aad9fa71051a58fe1c4678553f47077d81d23fc
+source-git-commit: 7d3f64db787aebe46179c0e08ad01878b0ad2877
 
 ---
 
@@ -50,7 +50,7 @@ Experience Platform은 데이터에 액세스하는 보다 강력한 방법을 �
 * [쿼리 서비스 개요](../../query-service/home.md)
 * [JupiterLab 사용 안내서](../../data-science-workspace/jupyterlab/overview.md)
 
-## 데이터 세트 만들기
+## 데이터 세트 만들기 {#create}
 
 새 데이터 세트를 만들려면 먼저 데이터 집합 **대시보드에서 데이터 집합** 만들기를 *클릭합니다* .
 
@@ -114,7 +114,7 @@ DULE(Data Usage Lawring and Enforcement)는 경험 플랫폼의 핵심 데이터
 
 먼저 데이터 집합 활동 ** 화면에 액세스하여 데이터 집합을 삭제할 수 있습니다. 그런 다음 데이터 **세트** 삭제를 클릭하여 삭제합니다.
 
->[!NOTE] Adobe 애플리케이션 및 서비스(예: Adobe Analytics, Adobe Audience Manager 또는 Decision Service)에서 생성 및 사용되는 데이터 세트는 삭제할 수 없습니다.
+>[!NOTE] Adobe 애플리케이션 및 서비스(예: Adobe Analytics, Adobe Audience Manager 또는 Decision Service)에서 만들고 사용하는 데이터 집합은 삭제할 수 없습니다.
 
 ![](../images/datasets/user-guide/delete_dataset.png)
 
