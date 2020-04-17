@@ -1,9 +1,9 @@
 ---
-source-git-commit: d6149bdf74ef8cec10264c414bd21bfdf3491bef
+source-git-commit: 792d6962154a8cdca74b3c4e72d6f7a7663cbd6f
 translation-type: tm+mt
 
 ---
-# 기여자 문서
+# 컨텐츠 기여
 
 Adobe는 Adobe 커뮤니티와 설명서 팀이 아닌 Adobe 직원들의 내용 기여를 환영합니다.
 
@@ -11,7 +11,7 @@ Adobe는 Adobe 커뮤니티와 설명서 팀이 아닌 Adobe 직원들의 내용
 
 이 프로젝트에서는 [Adobe 오픈소스 행동 수칙](code-of-conduct.md) 또는 [.NET Foundation 행동 수칙](https://dotnetfoundation.org/code-of-conduct)을 채택했습니다. 자세한 내용은 [기여](contributing.md) 문서를 참조하십시오.
 
-## Adobe 내용에 대한 귀하의 기여 관련 정보
+## Adobe 컨텐츠에 기여하는 방법
 
 [Adobe Docs 기여자 안내서](https://docs.adobe.com/help/en/contributor/contributor-guide/introduction.html)를 참조하십시오.
 
@@ -33,26 +33,32 @@ Adobe 커뮤니티 멤버가 문서를 만들거나 주요 변경 사항을 제�
 If you submit a pull request with significant changes to documentation and code examples, you'll see a message in the pull request asking you to submit an online contribution license agreement (CLA). You must complete the online form before we can review your pull request.
 -->
 
-### Adobe 직원의 주요 변경 사항
+### Adobe 직원의 주요 변경 사항 또는 새로운 문서
 
-[!UICONTROL Adobe Experience Cloud] 솔루션에 대한 제품 팀의 테크니컬 라이터, 프로그램 관리자 또는 개발자이고 기술 문서에 기여하거나 기술 문서를 작성하는 것이 본인의 직무인 경우 개인 리포지토리(`https://git.corp.adobe.com/AdobeDocs`)를 사용해야 합니다. 내부 협업 [안내서를 참조하십시오](https://docs.adobe.com/content/help/en/collaborative-doc-instructions/collaboration-guide/home.html).
+Adobe Experience Cloud 솔루션에 대한 제품 팀의 테크니컬 라이터, 프로그램 관리자 또는 개발자이고 기술 문서에 기여하거나 기술 문서를 작성하는 것이 본인의 직무인 경우 개인 리포지토리(`https://git.corp.adobe.com/AdobeDocs`)를 사용해야 합니다. See the [Internal Collaboration Guide](https://docs.adobe.com/content/help/en/collaborative-doc-instructions/collaboration-guide/home.html) for more information.
 
 <!--Employees from other parts of the Adobe world should use the public repo for minor updates.-->
 
+## Experience Platform 설명서 팀에 문의
+
+위에 명시된 바와 같이, Adobe 커뮤니티 구성원은 해당 작성자에게 지정되는 문제를 제출할 수 있습니다. Adobe 직원은 문제를 제출하거나 Experience Platform 설명서 팀에 직접 문의하십시오. 특정 플랫폼 영역에 대한 리드 작성기를 찾으려면 Adobe Experience Platform [설명서 위키를 참조하십시오](https://wiki.corp.adobe.com/display/DMSArchitecture/Adobe+Experience+Platform+Documentation).
+
 ## 도구 및 설정
+
+### GitHub UI
 
 커뮤니티 기여자는 기본 편집에 GitHub UI를 사용하거나 리포지토리를 포크하여 큰 기여를 할 수 있습니다.
 
 자세한 내용은 [Adobe Docs 기여자 안내서](https://docs.adobe.com/help/en/contributor/contributor-guide/introduction.html)를 참조하십시오.
 
-## Markdown을 사용하여 주제 서식을 지정하는 방법
+### Markdown
 
 이 리포지토리의 모든 문서는 GitHub 버전의 Markdown을 사용합니다. Markdown에 익숙하지 않은 경우 다음을 참조하십시오.
 
 * [Markdown 기본 사항](https://help.github.com/articles/getting-started-with-writing-and-formatting-on-github/)
 * [인쇄 가능 Markdown 치트시트](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf)
 
-## 레이블
+### 레이블
 
 공용 리포지토리에서는 당사가 끌어오기 요청 워크플로우를 관리하고 끌어오기 요청에 대한 진행 상황을 사용자에게 알리는 데 도움이 되도록 끌어오기 요청에 자동화된 레이블이 지정됩니다.
 
