@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Analytics 데이터 커넥터
 topic: overview
 translation-type: tm+mt
-source-git-commit: 9f0200af0310eafbcc1851b089cfc254cb34af8f
+source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
 
 ---
 
@@ -37,7 +37,7 @@ XDM에 대한 자세한 내용은 XDM 시스템 [개요를](../../../xdm/home.md
 
 ## Adobe Analytics에서 XDM으로 필드를 매핑하는 방법은 무엇입니까?
 
-플랫폼 사용자 인터페이스를 사용하여 Analytics 데이터를 Experience Platform으로 가져오기 위해 소스 연결이 설정되면 데이터 필드가 자동으로 매핑되고 몇 분 내에 실시간 고객 프로필에 인제스트됩니다. 플랫폼 UI를 사용하여 Adobe Analytics와의 소스 연결을 만드는 방법에 대한 지침은 Analytics 데이터 [커넥터 자습서를](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-ui-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/ui/adobe-applications/adobe-analytics-ui-tutorial.md)참조하십시오.
+플랫폼 사용자 인터페이스를 사용하여 Analytics 데이터를 Experience Platform으로 가져오기 위해 소스 연결이 설정되면 데이터 필드가 자동으로 매핑되고 몇 분 내에 실시간 고객 프로필에 인제스트됩니다. 플랫폼 UI를 사용하여 Adobe Analytics와의 소스 연결을 만드는 방법에 대한 지침은 Analytics 데이터 [커넥터 자습서를](../../tutorials/ui/create/adobe-applications/analytics.md)참조하십시오.
 
 Analytics와 Experience Platform 간에 발생하는 필드 매핑에 대한 자세한 내용은 Adobe Analytics [필드 매핑](./analytics-mapping.md) 안내서를 참조하십시오.
 
