@@ -4,7 +4,7 @@ solution: Experience Platform
 title: JupiterLab 사용 안내서
 topic: Overview
 translation-type: tm+mt
-source-git-commit: 700c927680d9b9ba4dabc2d2e068e4da3c801cce
+source-git-commit: d42a5de7094d305249b05454ce4aba79776a46e1
 
 ---
 
@@ -56,7 +56,7 @@ JupiterLab의 주요 기능 및 일반적인 작업 수행에 대한 지침은 �
 
 ### JupiterLab 액세스
 
-Adobe <a href="https://platform.adobe.com" target="_blank">Experience Platform</a>에서 **왼쪽 탐색** 열에서 모델을 **클릭한 다음 위쪽 탐색에서** 찾은노트북을 클릭하여 JupiterLab에 액세스합니다. JupiterLab이 완전히 초기화하는 데 약간의 시간이 소요됩니다.
+Adobe [Experience Platform](https://platform.adobe.com)의 왼쪽 **탐색** 열에서 전자 필기장을 선택합니다. JupiterLab이 완전히 초기화하는 데 약간의 시간이 소요됩니다.
 
 ![](../images/jupyterlab/user-guide/access_jupyterlab.png)
 
@@ -116,11 +116,9 @@ JupiterLab의 기본 작업 영역을 사용하면 문서 및 기타 활동을 �
 
 ### 커널 {#kernels}
 
-<!-- will need to edit this sparkmagic %% for data bricks not supported -->
-
 노트북 커널은 노트북 셀을 처리하기 위한 언어별 컴퓨팅 엔진입니다. Python 외에도 JupiterLab은 R, PySpark 및 Spark에서 추가 언어 지원을 제공합니다. 전자 필기장 문서를 열면 연관된 커널이 실행됩니다. 노트북 셀이 실행되면 커널은 계산을 수행하고 상당한 CPU 및 메모리 리소스를 소모할 수 있는 결과를 생성합니다. 할당된 메모리는 커널이 종료될 때까지 해제되지 않습니다.
 
->[!NOTE] Sparkmagic에서 PySpark 및 Spark 기능을 <a href="https://github.com/jupyter-incubator/sparkmagic" target="_blank">지원합니다</a>.
+>[!IMPORTANT] JupiterLab Launcher가 Spark 2.3에서 Spark 2.4로 업데이트되었습니다.Spark 및 PySpark 커널은 Spark 2.4 노트북에서 더 이상 지원되지 않습니다.
 
 특정 기능 및 기능은 아래 표에 설명된 대로 특정 커널로 제한됩니다.
 
@@ -128,8 +126,9 @@ JupiterLab의 기본 작업 영역을 사용하면 문서 및 기타 활동을 �
 | :----: | :--------------------------: | :-------------------- |
 | **Python** | 예 | <ul><li>Sensei ML Framework</li><li>카탈로그 서비스</li><li>쿼리 서비스</li></ul> |
 | **R** | 예 | <ul><li>Sensei ML Framework</li><li>카탈로그 서비스</li></ul> |
-| **PySpark** | 아니요 | <ul><li>Sensei ML Framework</li><li>카탈로그 서비스</li></ul> |
-| **Spark** | 아니요 | <ul><li>Sensei ML Framework</li><li>카탈로그 서비스</li></ul> |
+| **PySpark - 가치 하락** | 아니요 | <ul><li>Sensei ML Framework</li><li>카탈로그 서비스</li></ul> |
+| **Spark - 가치 하락** | 아니요 | <ul><li>Sensei ML Framework</li><li>카탈로그 서비스</li></ul> |
+| **Scala** | 아니요 | <ul><li>Sensei ML Framework</li><li>카탈로그 서비스</li></ul> |
 
 ### 커널 세션
 
@@ -143,9 +142,23 @@ JupiterLab의 각 활성 전자 필기장 또는 활동은 커널 세션을 사�
 
 ### PySpark/Spark 실행 리소스 {#execution-resource}
 
-<!-- need to update with databricks -->
+>[!IMPORTANT]
+>Spark 2.3에서 Spark 2.4로 전환하면 Spark와 PySpark 커널 모두 사용이 중단됩니다.
+>
+>새로운 PySpark 3(Spark 2.4) 노트북은 Python3 커널을 사용합니다. 기존 노트북 업데이트에 대한 [자세한 자습서는 Pyspark 3(Spark 2.3)](../recipe-notebook-migration.md) 을 PySpark 3(Spark 2.4)로 전환하는 방법에 대한 가이드를 참조하십시오.
+>
+>새로운 Spark 노트북은 Scala 커널을 활용해야 합니다. 기존 노트북 업데이트에 대한 [자세한 자습서는 Spark 2.3을 Scala(Spark 2.4)](../recipe-notebook-migration.md) 변환 가이드를 참조하십시오.
 
 PySpark 및 Spark 커널을 사용하면 구성 명령(`%%configure`) 및 구성 목록을 제공하여 PySpark 또는 Spark 노트북 내에서 Spark 클러스터 리소스를 구성할 수 있습니다. 이러한 구성은 Spark 응용 프로그램이 초기화되기 전에 정의됩니다. Spark 애플리케이션이 활성 상태인 동안 구성을 수정하려면 명령(`%%configure -f`) 다음에 애플리케이션을 다시 시작해야 변경 사항이 적용됩니다.
+
+>[!CAUTION]
+>PySpark 3(Spark 2.4) 및 Scala(Spark 2.4) 노트북이 있으면 `%%` 스파크매직이 더 이상 지원되지 않습니다. 다음 작업은 더 이상 사용할 수 없습니다.
+* `%%help`
+* `%%info`
+* `%%cleanup`
+* `%%delete`
+* `%%configure`
+* `%%local`
 
 ```python
 %%configure -f 
@@ -160,8 +173,6 @@ PySpark 및 Spark 커널을 사용하면 구성 명령(`%%configure`) 및 구성
     }
 }
 ```
-
->[!TIP] 도움말 명령(`%%help`)을 사용하여 사용 가능한 모든 명령을 봅니다.
 
 구성 가능한 모든 속성은 아래 표에 나열되어 있습니다.
 
@@ -183,8 +194,6 @@ PySpark 및 Spark 커널을 사용하면 구성 명령(`%%configure`) 및 구성
 | conf | Spark 구성 속성 | 키=val 매핑 |
 
 ### 론처
-
-<!-- Databricks update -->
 
 [//]: # (Talk about the different Notebooks, introduce that certain starter notebooks are limited to particular kernels)
 
@@ -242,7 +251,7 @@ PySpark 및 Spark 커널을 사용하면 구성 명령(`%%configure`) 및 구성
         <td >아니요</td>
     </tr>
     <tr>
-        <th  ><strong>PySpark</strong></th>
+        <th  ><strong>PySpark 3(Spark 2.3 - 더 이상 사용되지 않음)</strong></th>
         <td >yes</td>
         <td >yes</td>
         <td >아니요</td>
@@ -254,7 +263,31 @@ PySpark 및 Spark 커널을 사용하면 구성 명령(`%%configure`) 및 구성
         <td >아니요</td>
     </tr>
     <tr>
-        <th ><strong>Spark</strong></th>
+        <th ><strong>Spark(Spark 2.3 - 더 이상 사용되지 않음)</strong></th>
+        <td >yes</td>
+        <td >yes</td>
+        <td >아니요</td>
+        <td >아니요</td>
+        <td >아니요</td>
+        <td >아니요</td>
+        <td >아니요</td>
+        <td >아니요</td>
+        <td >yes</td>
+    </tr>
+      <tr>
+        <th  ><strong>PySpark 3(Spark 2.4)</strong></th>
+        <td >아니요</td>
+        <td >yes</td>
+        <td >아니요</td>
+        <td >아니요</td>
+        <td >아니요</td>
+        <td >아니요</td>
+        <td >yes</td>
+        <td >yes</td>
+        <td >아니요</td>
+    </tr>
+    <tr>
+        <th ><strong>Scala</strong></th>
         <td >yes</td>
         <td >yes</td>
         <td >아니요</td>
@@ -341,12 +374,21 @@ df <- dataset_reader$limit(100L)$offset(10L)$read()
 
 * `{DATASET_ID}`:액세스할 데이터 집합의 고유 ID
 
-### PySpark/Spark의 데이터 세트에서 읽기
+### PySpark/Spark/Scala의 데이터 세트 보기
+
+>[!IMPORTANT]
+>Spark 2.3에서 Spark 2.4로 전환하면 Spark와 PySpark 커널 모두 사용이 중단됩니다.
+>
+>새로운 PySpark 3(Spark 2.4) 노트북은 Python3 커널을 사용합니다. 기존 Spark 2.3 코드를 [변환하려면 Pyspark 3(Spark 2.3)](../recipe-notebook-migration.md) 을 PySpark 3(Spark 2.4)로 변환하는 방법에 대한 가이드를 참조하십시오. 새 노트북은 아래 PySpark [3(Spark 2.4)](#pyspark2.4) 예제를 따라야 합니다.
+>
+>새로운 Spark 노트북은 Scala 커널을 활용해야 합니다. 기존 Spark 2.3 코드를 [변환하려면 Spark 2.3을 Scala(Spark 2.4)](../recipe-notebook-migration.md) 변환 가이드를 참조하십시오. 새 노트북은 아래의 Scala( [Spark 2.4)](#spark2.4) 예를 따라야 합니다.
 
 활성 PySpark 또는 Spark 노트북이 열리면 왼쪽 사이드바에서 **데이터** 탐색기 탭을 확장하고 데이터 세트를 두 번 클릭하여 **사용 가능한 데이터** 세트 목록을 봅니다. 액세스하려는 데이터 세트 목록을 마우스 오른쪽 단추로 클릭하고 노트북에서 데이터 **탐색을 클릭합니다**. 다음 코드 셀이 생성됩니다.
 
+#### PySpark(Spark 2.3 - 더 이상 사용되지 않음)
+
 ```python
-# PySpark
+# PySpark 3 (Spark 2.3 - deprecated)
 
 pd0 = spark.read.format("com.adobe.platform.dataset").\
     option('orgId', "YOUR_IMS_ORG_ID@AdobeOrg").\
@@ -355,8 +397,22 @@ pd0.describe()
 pd0.show(10, False)
 ```
 
+#### PySpark(Spark 2.4) {#pyspark2.4}
+
+Spark 2.4가 도입됨에 따라 [`%dataset`](#magic) 사용자 정의 기능이 제공됩니다.
+
+```python
+# PySpark 3 (Spark 2.4)
+
+%dataset read --datasetId {DATASET_ID} --dataFrame pd0
+pd0.describe()
+pd0.show(10, False)
+```
+
+#### Spark(Spark 2.3 - 더 이상 사용되지 않음)
+
 ```scala
-// Spark
+// Spark (Spark 2.3 - deprecated)
 
 import com.adobe.platform.dataset.DataSetOptions
 val dataFrame = spark.read.
@@ -366,6 +422,54 @@ val dataFrame = spark.read.
 dataFrame.printSchema()
 dataFrame.show()
 ```
+
+#### Scala(Spark 2.4) {#spark2.4}
+
+```scala
+// Scala (Spark 2.4)
+
+// initialize the session
+import org.apache.spark.sql.{Dataset, SparkSession}
+val spark = SparkSession.builder().master("local").getOrCreate()
+
+val dataFrame = spark.read.format("com.adobe.platform.query")
+    .option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN"))
+    .option("ims-org", sys.env("IMS_ORG_ID"))
+    .option("api-key", sys.env("PYDASDK_IMS_CLIENT_ID"))
+    .option("service-token", sys.env("PYDASDK_IMS_SERVICE_TOKEN"))
+    .option("mode", "batch")
+    .option("dataset-id", "{DATASET_ID}")
+    .load()
+dataFrame.printSchema()
+dataFrame.show()
+```
+
+>[!TIP]
+>Scala에서 를 사용하여 `sys.env()` 내에서 값을 선언하고 반환할 수 `option`있습니다.
+
+### PySpark 3(Spark 2.4) 노트북에서 %dataset 매직 사용 {#magic}
+
+Spark 2.4가 도입됨에 따라 `%dataset` 새로운 PySpark 3(Spark 2.4) 노트북(Python 3 커널)에 사용자 정의 기능이 제공됩니다.
+
+**사용**
+
+`%dataset {action} --datasetId {id} --dataFrame {df}`
+
+**설명**
+
+Python 노트북(Python 3 커널)에서 데이터 세트를 읽거나 쓰는 사용자 정의 데이터 과학 작업 영역 매직 명령입니다.
+
+* **{action}**:데이터 세트에 대해 수행할 작업 유형입니다. 두 가지 작업을 &quot;읽기&quot; 또는 &quot;쓰기&quot;로 사용할 수 있습니다.
+* **—datasetId {id}**:데이터 집합의 ID를 읽고 쓰는 데 사용됩니다. 이것은 필수 인수입니다.
+* **—dataFrame {df}**:팬더 데이터 프레임 이것은 필수 인수입니다.
+   * 작업이 &quot;읽기&quot;인 경우 {df}은(는) 데이터 집합 읽기 작업의 결과를 사용할 수 있는 변수입니다.
+   * 작업이 &quot;write&quot;이면 이 데이터 프레임 {df}이(가) 데이터 세트에 기록됩니다.
+* **—mode(선택 사항)**:허용되는 매개 변수는 &quot;batch&quot; 및 &quot;interactive&quot;입니다. 기본적으로 모드는 &quot;interactive&quot;로 설정됩니다. 대량의 데이터를 읽을 때는 &quot;일괄 처리&quot; 모드를 사용하는 것이 좋습니다.
+
+**예**
+
+* **보기 예**: `%dataset read --datasetId 5e68141134492718af974841 --dataFrame pd0`
+* **예제**&#x200B;작성: `%dataset write --datasetId 5e68141134492718af974842 --dataFrame pd0`
 
 ### Python의 쿼리 서비스를 사용하여 데이터 쿼리
 
@@ -453,12 +557,21 @@ df <- dataset_reader$
 
 ### PySpark/Spark에서 경험 이벤트 데이터 필터링
 
+>[!IMPORTANT]
+>Spark 2.3에서 Spark 2.4로 전환하면 Spark와 PySpark 커널 모두 사용이 중단됩니다.
+>
+>새로운 PySpark 3(Spark 2.4) 노트북은 Python3 커널을 사용합니다. 기존 코드 변환에 대한 자세한 내용은 [Pyspark 3(Spark 2.3)](../recipe-notebook-migration.md) 변환 가이드를 참조하십시오. 새 PySpark 전자 필기장을 만드는 경우 ExperienceEvent 데이터 필터링에 PySpark [3(spark 2.4)](#pyspark3-spark2.4) 예제를 사용합니다.
+>
+>새로운 Spark 노트북은 Scala 커널을 활용해야 합니다. 기존 코드 변환에 대한 자세한 [내용은 Spark 2.3을 Scala(Spark 2.4)](../recipe-notebook-migration.md) 변환 가이드를 참조하십시오. 새 Spark 전자 필기장을 만드는 경우 Scala(spark [2.4)](#scala-spark) 예제를 사용하여 ExperienceEvent 데이터를 필터링합니다.
+
 PySpark 또는 Spark 노트북에서 ExperienceEvent 데이터 세트에 액세스하고 이를 필터링하려면 데이터 세트 ID(`{DATASET_ID}`), 조직의 IMS ID 및 특정 시간 범위를 정의하는 필터 규칙을 제공해야 합니다. 필터링 시간 범위는 함수 매개 변수가 SQL 쿼리 문자열인 함수를 `spark.sql()`사용하여 정의됩니다.
 
 다음 셀에서는 2019년 1월 1일부터 2019년 12월 31일 말까지 독점적으로 존재하는 데이터로 ExperienceEvent 데이터 세트를 필터링합니다.
 
+#### PySpark 3(Spark 2.3 - 더 이상 사용되지 않음)
+
 ```python
-# PySpark
+# PySpark 3 (Spark 2.3 - deprecated)
 
 pd = spark.read.format("com.adobe.platform.dataset").\
     option("orgId", "YOUR_IMS_ORG_ID@AdobeOrg").\
@@ -473,8 +586,30 @@ timepd = spark.sql("""
 """)
 ```
 
+#### PySpark 3(Spark 2.4) {#pyspark3-spark2.4}
+
+```python
+# PySpark 3 (Spark 2.4)
+
+from pyspark.sql import SparkSession
+spark = SparkSession.builder.getOrCreate()
+
+%dataset read --datasetId {DATASET_ID} --dataFrame df
+
+df.createOrReplaceTempView("event")
+timepd = spark.sql("""
+    SELECT *
+    FROM event
+    WHERE timestamp > CAST('2019-01-01 00:00:00.0' AS TIMESTAMP)
+    AND timestamp < CAST('2019-12-31 23:59:59.9' AS TIMESTAMP)
+""")
+timepd.show()
+```
+
+#### Spark(Spark 2.3 - 더 이상 사용되지 않음)
+
 ```scala
-// Spark
+// Spark (Spark 2.3 - deprecated)
 
 import com.adobe.platform.dataset.DataSetOptions
 val dataFrame = spark.read.
@@ -491,6 +626,53 @@ val timedf = spark.sql("""
 """)
 ```
 
+#### Scala(Spark 2.4) {#scala-spark}
+
+```scala
+// Spark (Spark 2.4)
+
+// Turn off extra logging
+import org.apache.log4j.{Level, Logger}
+Logger.getLogger("org").setLevel(Level.OFF)
+Logger.getLogger("com").setLevel(Level.OFF)
+
+import org.apache.spark.sql.{Dataset, SparkSession}
+val spark = org.apache.spark.sql.SparkSession.builder().appName("Notebook")
+  .master("local")
+  .getOrCreate()
+
+// Stage Exploratory
+val dataSetId: String = "{DATASET_ID}"
+val orgId: String = sys.env("IMS_ORG_ID")
+val clientId: String = sys.env("PYDASDK_IMS_CLIENT_ID")
+val userToken: String = sys.env("PYDASDK_IMS_USER_TOKEN")
+val serviceToken: String = sys.env("PYDASDK_IMS_SERVICE_TOKEN")
+val mode: String = "batch"
+
+var df = spark.read.format("com.adobe.platform.query")
+  .option("user-token", userToken)
+  .option("ims-org", orgId)
+  .option("api-key", clientId)
+  .option("mode", mode)
+  .option("dataset-id", dataSetId)
+  .option("service-token", serviceToken)
+  .load()
+df.createOrReplaceTempView("event")
+val timedf = spark.sql("""
+    SELECT * 
+    FROM event 
+    WHERE timestamp > CAST('2019-01-01 00:00:00.0' AS TIMESTAMP)
+    AND timestamp < CAST('2019-12-31 23:59:59.9' AS TIMESTAMP)
+""")
+timedf.show()
+```
+
+>[!TIP]
+>Scala에서 를 사용하여 `sys.env()` 내에서 값을 선언하고 반환할 수 `option`있습니다. 이렇게 하면 변수가 한 번만 사용된다는 것을 알고 있으면 변수를 정의할 필요가 없습니다. 다음 예제에서는 위의 `val userToken` 예제에서 가져온 다음 이 예제의 대안으로 인라인 `option` 내에 선언합니다.
+> 
+```scala
+> .option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN"))
+> ```
 
 ## 지원되는 라이브러리 {#supported-libraries}
 
