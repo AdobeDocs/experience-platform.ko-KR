@@ -1,9 +1,9 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Adobe Experience Platform Data Science Workspace Help
+user-guide-title: Adobe Experience Platform 데이터 과학 작업 영역 도움말
 translation-type: tm+mt
-source-git-commit: 01cfbc86516a05df36714b8c91666983f7a1b0e8
+source-git-commit: 8825ed17f4e1c8b325fab9256dfbc666f3ea8462
 
 ---
 
@@ -50,5 +50,6 @@ source-git-commit: 01cfbc86516a05df36714b8c91666983f7a1b0e8
    * [모델을 서비스로 게시(UI)](models-recipes/publish-model-service-ui.md)
    * [모델을 서비스로 게시(API)](models-recipes/publish-model-service-api.md)
    * [서비스의 자동 트레이닝 및 점수 지정(UI) 예약](models-recipes/schedule-models-ui.md)
+* [레서피 및 노트북 마이그레이션 가이드](recipe-notebook-migration.md)
 * [문제 해결 가이드](troubleshooting-guide.md)
 * [API 참조](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)
