@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Jupiter 노트북을 사용하여 레서피 만들기
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 9f3fc3ec3ce560534b057185e3fef2cc2bc1234d
+source-git-commit: 10f157e0c9f8ab6e487b7dc83416b9e3b2f324c4
 
 ---
 
@@ -38,9 +38,10 @@ source-git-commit: 9f3fc3ec3ce560534b057185e3fef2cc2bc1234d
 
 Recipe Builder 전자 필기장을 사용하면 노트북 내에서 트레이닝 및 점수 지정 실행을 실행할 수 있습니다. 이렇게 하면 교육 실행 `train()` 및 점수 지정 데이터 간의 해당 방법과 `score()` 방법을 변경할 수 있습니다. 트레이닝 및 점수의 결과에 만족하면 Recipe Builder 노트북에 내장된 레서피 기능을 사용하여 데이터 과학 작업 공간에서 사용할 레서피를 만들 수 있습니다.
 
->[!NOTE] Recipe Builder 전자 필기장은 모든 파일 포맷을 사용하여 작업할 수 있지만 현재 레서피 만들기 기능은 Python만 지원합니다.
+>[!NOTE]
+>Recipe Builder 전자 필기장은 모든 파일 포맷을 사용하여 작업할 수 있지만 현재 레서피 만들기 기능은 Python만 지원합니다.
 
-![](../images/jupyterlab/create-recipe/notebook_launcher.png)
+![](../images/jupyterlab/create-recipe/recipe-builder.png)
 
 launcher에서 Recipe Builder 전자 필기장을 클릭하면 해당 전자 필기장이 탭에 열립니다. 전자 필기장에 사용되는 템플릿은 Python Retail Sales Forecast Recipe이며 [이 공용 저장소에서 찾을 수 있습니다](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail/)
 
@@ -50,7 +51,6 @@ launcher에서 Recipe Builder 전자 필기장을 클릭하면 해당 전자 필
 
 ## 레서피 파일을 편집합니다.
 
-<!-- Databricks update to recipe needed -->
 레서피 파일을 편집하려면 파일 경로에 해당하는 Jupiter의 셀로 이동합니다. 예를 들어, 를 변경하려면 `evaluator.py`를 `%%writefile demo-recipe/evaluator.py`찾습니다.
 
 셀에 필요한 변경 작업을 시작하고 완료되면 셀을 실행하기만 하면 됩니다. 이 `%%writefile filename.py` 명령은 셀의 내용을 에 씁니다 `filename.py`. 변경 사항이 있는 각 파일에 대해 셀을 수동으로 실행해야 합니다.
@@ -69,9 +69,6 @@ launcher에서 Recipe Builder 전자 필기장을 클릭하면 해당 전자 필
 - [평가기 파일](#evaluator-file)
 - [데이터 보호기 파일](#data-saver-file)
 
-
-
-
 ### 요구 사항 파일
 
 요구 사항 파일은 레서피에 사용할 추가 라이브러리를 선언하는 데 사용됩니다. 종속성이 있는 경우 버전 번호를 지정할 수 있습니다. 추가 라이브러리를 보려면 https://anaconda.org을 참조하십시오. 이미 사용 중인 기본 라이브러리 목록은 다음과 같습니다.
@@ -84,9 +81,8 @@ numpy
 data_access_sdk_python
 ```
 
->[!NOTE] 추가한 라이브러리 또는 특정 버전은 위의 라이브러리와 호환되지 않을 수 있습니다.
-
-
+>[!NOTE]
+>추가한 라이브러리 또는 특정 버전은 위의 라이브러리와 호환되지 않을 수 있습니다.
 
 ### 구성 파일
 
@@ -101,9 +97,9 @@ data_access_sdk_python
 
 데이터 세트 및 스키마 ID를 찾으려면 왼쪽 탐색 막대의 전자 필기장 내 데이터 탭으로 이동합니다(폴더 아이콘 아래).
 
-![](../images/jupyterlab/create-recipe/data_tab.png)
+![](../images/jupyterlab/create-recipe/datasets.png)
 
-Adobe Experience Platform에서 스키마 [및 데이터](https://platform.adobe.com/) 집합 **[탭 아래에서](https://platform.adobe.com/schema)**동일한**[&#x200B;정보를](https://platform.adobe.com/dataset/overview)** 찾을 수있습니다.
+Adobe Experience Platform에서 스키마 [및 데이터](https://platform.adobe.com/) 집합 **[탭 아래에서](https://platform.adobe.com/schema)**동일한**[정보를](https://platform.adobe.com/dataset/overview)** 찾을 수있습니다.
 
 기본적으로 다음 구성 매개 변수는 데이터에 액세스할 때 설정됩니다.
 
@@ -111,8 +107,6 @@ Adobe Experience Platform에서 스키마 [및 데이터](https://platform.adobe
 - `ML_FRAMEWORK_IMS_TOKEN`
 - `ML_FRAMEWORK_IMS_ML_TOKEN`
 - `ML_FRAMEWORK_IMS_TENANT_ID`
-
-
 
 ## 교육 데이터 로더
 
@@ -129,7 +123,8 @@ Adobe Experience Platform에서 스키마 [및 데이터](https://platform.adobe
 - [플랫폼 SDK](#platform-sdk)
 - [외부 소스](#external-sources)
 
->[!NOTE] Recipe Builder 전자 필기장에서 데이터는 `platform_sdk` 데이터 로더를 통해 로드됩니다.
+>[!NOTE]
+>Recipe Builder 전자 필기장에서 데이터는 `platform_sdk` 데이터 로더를 통해 로드됩니다.
 
 ### 플랫폼 SDK
 
@@ -155,11 +150,10 @@ df = pd.read_json(data)
 
 이제 데이터가 데이터 프레임 개체에 있으며 [다음 섹션에서](#data-preparation-and-feature-engineering)분석 및 조작할 수 있습니다.
 
-
-
 ### 데이터 액세스 SDK에서(더 이상 사용되지 않음)
 
->[!CAUTION]  더 `data_access_sdk_python` 이상 권장되지 않습니다. 데이터 [로더 사용에 대한 지침은 데이터 액세스 코드를 플랫폼 SDK로](../authoring/platform-sdk.md) 변환을 참조하십시오 `platform_sdk` .
+>[!CAUTION]
+> `data_access_sdk_python` 는 더 이상 권장되지 않습니다. [데이터 로더 사용에 대한](../authoring/platform-sdk.md) 지침은 데이터 액세스 코드를 플랫폼 SDK로 `platform_sdk` 변환을 참조하십시오.
 
 사용자는 데이터 액세스 SDK를 사용하여 데이터를 로드할 수 있습니다. 다음 줄을 포함하여 페이지 맨 위에 라이브러리를 가져올 수 있습니다.
 
@@ -176,7 +170,8 @@ df = prodreader.load(data_set_id=configProperties['trainingDataSetId'],
                      ims_org=configProperties['ML_FRAMEWORK_IMS_TENANT_ID'])
 ```
 
->[!NOTE] 구성 파일 [섹션에](#configuration-files)설명된 대로, 경험 플랫폼에서 데이터에 액세스할 때 다음 구성 매개 변수가 설정됩니다.
+>[!NOTE]
+>구성 파일 [섹션에](#configuration-files)설명된 대로, 경험 플랫폼에서 데이터에 액세스할 때 다음 구성 매개 변수가 설정됩니다.
 > - `ML_FRAMEWORK_IMS_USER_CLIENT_ID`
 > - `ML_FRAMEWORK_IMS_TOKEN`
 > - `ML_FRAMEWORK_IMS_ML_TOKEN`
@@ -297,17 +292,16 @@ df.dropna(0, inplace=True)
 
 점수 데이터 로더의 `load()` 함수는 점수 데이터 세트를 출력로 완료해야 합니다.
 
-
-
 ### 파이프라인 파일
 
-이 `pipeline.py` 파일에는 트레이닝 및 점수 책정기가 포함됩니다. 다음 두 개 부문으로 모두 검토해 보겠습니다.
+이 `pipeline.py` 파일에는 트레이닝 및 점수 책정기가 포함됩니다.
 
 ### 트레이닝
 
 트레이닝의 목적은 트레이닝 데이터 세트에 있는 기능과 레이블을 사용하여 모델을 만드는 것입니다.
 
->[!NOTE]  기능은 _기계 학습 모델에서_ 레이블을 __&#x200B;예측하기 위해 사용하는 입력 변수를 나타냅니다.
+>[!NOTE]\
+>_기능은_ 기계 학습 모델에서 _레이블을_&#x200B;예측하기 위해 사용하는 입력 변수를 나타냅니다.
 
 이 `train()` 기능에는 트레이닝 모델이 포함되고 훈련 모델을 돌려주어야 합니다. 다양한 모델의 몇 가지 예는 [과학 기술 학습 사용 설명서](https://scikit-learn.org/stable/user_guide.html)문서를 참조하십시오.
 
@@ -346,8 +340,6 @@ def train(configProperties, data):
 ```
 
 애플리케이션에 따라 `GradientBoostingRegressor()` 함수에 인수가 있습니다. `xTrainingDataset` 에는 트레이닝에 사용되는 기능이 포함되어 있어야 하며 레이블은 `yTrainingDataset` 포함되어야 합니다.
-
-
 
 ### 점수 지정
 
@@ -456,7 +448,6 @@ def save(configProperties, prediction):
     print(prediction)
 ```
 
-
 ## 트레이닝 및 점수
 
 전자 필기장을 변경하고 레서피를 교육하려면 막대 맨 위에 있는 관련 단추를 클릭하여 셀에서 교육 실행을 만들 수 있습니다. 이 단추를 클릭하면 교육 스크립트의 명령 및 출력 로그가 `evaluator.py` 셀 아래에 있는 전자 필기장에 나타납니다. Conda가 먼저 모든 종속성을 설치한 다음 교육이 시작됩니다.
@@ -467,7 +458,11 @@ def save(configProperties, prediction):
 
 ## 레서피 만들기
 
-레서피 편집이 완료되고 교육/점수 출력에 만족하면 레서피 만들기를 눌러 수첩에서 레서피를 만들 **수 있습니다**. 단추를 누르면 레서피 이름을 입력하라는 메시지가 표시됩니다. 이 이름은 플랫폼에서 만든 실제 레시피를 나타냅니다.
+레서피 편집이 완료되고 교육/점수 출력에 만족하면 오른쪽 위 탐색에서 레서피 **만들기를** 눌러 수첩에서 레서피를 만들 수 있습니다.
+
+![](../images/jupyterlab/create-recipe/create-recipe.png)
+
+단추를 누르면 레서피 이름을 입력하라는 메시지가 표시됩니다. 이 이름은 플랫폼에서 만든 실제 레시피를 나타냅니다.
 
 ![](../images/jupyterlab/create-recipe/enter_recipe_name.png)
 
