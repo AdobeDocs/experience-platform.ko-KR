@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 레서피 및 노트북 마이그레이션 가이드
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 105317c0b9a7cf74d55e3436a49e1dc6eeb31b32
+source-git-commit: bb6fe494933606d428d7bdf20ee38b7ac51c23ea
 
 ---
 
@@ -427,11 +427,11 @@ PySpark 3(Spark 2.4)을 사용하면 로딩에 `sc = spark.sparkContext` 정의�
 
 ![로드 1](./images/migration/pyspark-migration/2.4-load.png)
 
-**PySpark 2.3에서 경험 로드 시 플랫폼 데이터 - 가치 하락**
+**PySpark 2.3에서 Experience Cloud 플랫폼 데이터 로드 - 더 이상 사용되지 않음**
 
 ![로드 2](./images/migration/pyspark-migration/2.3-load-alt.png)
 
-**PySpark 2.4에서 경험 로드 시 플랫폼 데이터 활용**
+**PySpark 2.4에서 Experience Cloud 플랫폼 데이터 로드**
 
 PySpark 3(Spark 2.4)을 사용하면 `org_id` 더 이상 정의할 `dataset_id` 필요가 없습니다. 또한 데이터 `df = spark.read.format` 세트를 손쉽게 읽고 쓸 수 [`%dataset`](#magic) 있도록 사용자 정의 마법으로 대체되었습니다.
 
