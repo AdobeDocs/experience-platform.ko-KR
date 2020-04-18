@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 패키지된 레서피 가져오기(UI)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: a7db31793d33d4571a867f5632243c59b5cb7975
 
 ---
 
@@ -15,7 +15,7 @@ source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
 
 ## 전제 조건
 
-이 자습서에서는 Docker 이미지 URL 또는 바이너리 파일의 형태로 패키지된 레시피가 필요합니다. 자세한 내용은 소스 파일을 [레서피로 패키지하는 방법에](./package-source-files-recipe.md) 대한 자습서를 참조하십시오.
+이 자습서에서는 Docker 이미지 URL 형식의 패키지된 레시피가 필요합니다. 자세한 내용은 소스 파일을 [레서피로 패키지하는 방법에](./package-source-files-recipe.md) 대한 자습서를 참조하십시오.
 
 ## UI 워크플로우
 
@@ -23,10 +23,14 @@ source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
 
 패키지 레서피를 가져오는 워크플로우는 다음 단계로 구성됩니다.
 - [레서피 구성](#configure)
-- [바이너리 기반의 레서피 가져오기 - PySpark](#pyspark)
-- [바이너리 기반의 레서피 가져오기 - Scala Spark](#scala)
 - [Docker 기반 레시피 가져오기 - Python](#python)
 - [Docker 기반 레서피 가져오기 - R](#r)
+- [Docker 기반의 레서피 가져오기 - PySpark](#pyspark)
+- [Docker 기반 레서피 가져오기 - Scala](#scala)
+
+더 이상 사용되지 않는 워크플로우:
+- [바이너리 기반의 레서피 가져오기 - PySpark](#pyspark-deprecated)
+- [바이너리 기반의 레서피 가져오기 - Scala Spark](#scala-deprecated)
 
 ### 레서피 구성 {#configure}
 
@@ -115,7 +119,147 @@ Data Science Workspace의 모든 레서피 인스턴스에는 특정 사용 사�
 
 이 자습서를 위해 데이터 과학 작업 공간 참조에서 소매 영업 레서피에 대한 기본 구성 파일을 있는 그대로 둘 수 있습니다.
 
-### 바이너리 기반의 레서피 가져오기 - PySpark {#pyspark}
+### Docker 기반 레시피 가져오기 - Python {#python}
+
+먼저 플랫폼 UI **의** 왼쪽 상단에 있는 워크플로우를 찾아 선택합니다. 그런 다음 레서피 *가져오기를* 선택하고 시작을 **클릭합니다**.
+
+![](../images/models-recipes/import-package-ui/launch-import.png)
+
+레서피 *가져오기* 워크플로우에 대한 *구성* 페이지가 나타납니다. 레서피에 대한 이름과 설명을 입력한 다음 **오른쪽 위** 모서리에서 다음을 선택합니다.
+
+![워크플로우 구성](../images/models-recipes/import-package-ui/configure-workflow.png)
+
+>[!NOTE]
+> Package [source files into a Recipe](./package-source-files-recipe.md) tutorial, a Docker URL was provided at the end of building the Retail Sales recipe using Python Python source files.
+
+소스 선택 *페이지에서 Python 소스* 소스 파일을 사용하여 만든 패키지된 레서피에 해당하는 Docker URL을 소스 URL **필드에 붙여 넣습니다** . 그런 다음 드래그 앤 드롭하여 제공된 구성 파일을 가져오거나 파일 시스템 브라우저를 **사용합니다**. 제공된 구성 파일은 에서 찾을 수 `experience-platform-dsw-reference/recipes/python/retail/retail.config.json`있습니다. 런타임 **드롭다운에서** Python *을* 선택하고 **유형 드롭다운에서** 분류를 ** 선택합니다. 모든 내용이 채워지면 오른쪽 **위** 모서리에서 [다음]을 클릭하여 스키마 *관리로*&#x200B;진행합니다.
+
+>[!NOTE]
+> *유형은&#x200B;*분류&#x200B;**및 회귀**기능을&#x200B;**지원합니다**. 모델이 이러한 유형 중 하나에 해당되지 않는 경우 사용자 지정을&#x200B;**선택합니다**.
+
+![](../images/models-recipes/import-package-ui/recipe_source_python.png)
+
+그런 다음 스키마 관리 섹션에서 소매 판매 입력 및 출력 스키마를 *선택하면*&#x200B;소매 판매 스키마 [및 데이터 세트](../models-recipes/create-retails-sales-dataset.md) 자습서 만들기에서 제공된 부트스트랩 스크립트를 사용하여 만들어집니다.
+
+![](../images/models-recipes/import-package-ui/recipe_schema.png)
+
+기능 *관리* 섹션에서 스키마 뷰어에서 임차인 ID를 클릭하여 소매 판매 입력 스키마를 확장합니다. 원하는 기능을 강조 표시하고 오른쪽 필드 속성 **창에서 입력 기능** 또는 **대상** 기능을 선택하여 **입력 및 출력** 기능을선택합니다. 이 자습서를 위해 weeklySales **를** Target **기능으로** 설정하고 그 외의 모든 것을 **입력 기능으로**&#x200B;설정합니다. 다음을 **클릭하여** 새로 구성된 레서피를 검토합니다.
+
+필요에 따라 레시피를 검토하고 구성을 추가, 수정 또는 제거합니다. 마침을 **클릭하여** 레서피를 생성합니다.
+
+![](../images/models-recipes/import-package-ui/recipe_review.png)
+
+새로 만든 소매 판매 레서피를 사용하여 데이터 과학 작업 공간에서 모델을 생성하는 방법을 찾으려면 [다음 단계를](#next-steps) 수행합니다.
+
+### Docker 기반 레서피 가져오기 - R {#r}
+
+먼저 플랫폼 UI **의** 왼쪽 상단에 있는 워크플로우를 찾아 선택합니다. 그런 다음 레서피 *가져오기를* 선택하고 시작을 **클릭합니다**.
+
+![](../images/models-recipes/import-package-ui/launch-import.png)
+
+레서피 *가져오기* 워크플로우에 대한 *구성* 페이지가 나타납니다. 레서피에 대한 이름과 설명을 입력한 다음 **오른쪽 위** 모서리에서 다음을 선택합니다.
+
+![워크플로우 구성](../images/models-recipes/import-package-ui/configure-workflow.png)
+
+>[!NOTE]
+> 소스 파일을 [레서피](./package-source-files-recipe.md) 자습서로 패키징하면 R 소스 파일을 사용하여 소매 영업 레서피 작성 종료 시 Docker URL이 제공되었습니다.
+
+소스 선택 *페이지에서 소스* URL 필드에 R 소스 파일을 사용하여 만든 패키지된 레서피에 해당하는 Docker URL을 **붙여 넣습니다** . 그런 다음 드래그 앤 드롭하여 제공된 구성 파일을 가져오거나 파일 시스템 브라우저를 **사용합니다**. 제공된 구성 파일은 에서 찾을 수 `experience-platform-dsw-reference/recipes/R/Retail\ -\ GradientBoosting/retail.config.json`있습니다. 런타임 **드롭다운에서** R *을* 선택하고 **유형 드롭다운에서***분류를* 선택합니다. 모든 내용이 채워지면 오른쪽 **위** 모서리에서 [다음]을 클릭하여 스키마 *관리로*&#x200B;진행합니다.
+
+>[!NOTE]
+> *유형은&#x200B;*분류&#x200B;**및 회귀**기능을&#x200B;**지원합니다**. 모델이 이러한 유형 중 하나에 해당되지 않는 경우 사용자 지정을&#x200B;**선택합니다**.
+
+![](../images/models-recipes/import-package-ui/recipe_source_R.png)
+
+그런 다음 스키마 관리 섹션에서 소매 판매 입력 및 출력 스키마를 *선택하면*&#x200B;소매 판매 스키마 [및 데이터 세트](../models-recipes/create-retails-sales-dataset.md) 자습서 만들기에서 제공된 부트스트랩 스크립트를 사용하여 만들어집니다.
+
+![](../images/models-recipes/import-package-ui/recipe_schema.png)
+
+기능 *관리* 섹션에서 스키마 뷰어에서 임차인 ID를 클릭하여 소매 판매 입력 스키마를 확장합니다. 원하는 기능을 강조 표시하고 오른쪽 필드 속성 **창에서 입력 기능** 또는 **대상** 기능을 선택하여 **입력 및 출력** 기능을선택합니다. 이 자습서를 위해 weeklySales **를** Target **기능으로** 설정하고 그 외의 모든 것을 **입력 기능으로**&#x200B;설정합니다. 다음을 **클릭하여** 새 구성된 레서피를 검토합니다.
+
+필요에 따라 레시피를 검토하고 구성을 추가, 수정 또는 제거합니다. 마침을 **클릭하여** 레서피를 생성합니다.
+
+![](../images/models-recipes/import-package-ui/recipe_review.png)
+
+새로 만든 소매 판매 레서피를 사용하여 데이터 과학 작업 공간에서 모델을 생성하는 방법을 찾으려면 [다음 단계를](#next-steps) 수행합니다.
+
+### Docker 기반의 레서피 가져오기 - PySpark {#pyspark}
+
+먼저 플랫폼 UI **의** 왼쪽 상단에 있는 워크플로우를 찾아 선택합니다. 그런 다음 레서피 *가져오기를* 선택하고 시작을 **클릭합니다**.
+
+![](../images/models-recipes/import-package-ui/launch-import.png)
+
+레서피 *가져오기* 워크플로우에 대한 *구성* 페이지가 나타납니다. 레서피에 대한 이름과 설명을 입력한 다음 **오른쪽 위** 모서리에서 다음을 선택하여 진행합니다.
+
+![워크플로우 구성](../images/models-recipes/import-package-ui/configure-workflow.png)
+
+>[!NOTE]
+> Package [source files into a Recipe](./package-source-files-recipe.md) tutorial, a Docker URL was provided at the end of building the Retail Sales recipe using PySpark source files.
+
+소스 선택 *페이지에 있으면 소스* URL 필드에 PySpark 소스 파일을 사용하여 만든 패키지된 레서피에 해당하는 Docker URL을 **붙여 넣습니다** . 그런 다음 드래그 앤 드롭하여 제공된 구성 파일을 가져오거나 파일 시스템 브라우저를 **사용합니다**. 제공된 구성 파일은 에서 찾을 수 `experience-platform-dsw-reference/recipes/pyspark/retail/pipeline.json`있습니다. Runtime **드롭다운에서 PySpark** 를 *선택합니다* . PySpark 런타임을 선택하면 기본 가공물이 Docker에 자동으로 **채워집니다**. 그런 다음 **유형** 드롭다운에서 분류를 *선택합니다* . 모든 내용이 채워지면 오른쪽 **위** 모서리에서 [다음]을 클릭하여 스키마 *관리로*&#x200B;진행합니다.
+
+>[!NOTE]
+> *유형은&#x200B;*분류&#x200B;**및 회귀**기능을&#x200B;**지원합니다**. 모델이 이러한 유형 중 하나에 해당되지 않는 경우 사용자 지정을&#x200B;**선택합니다**.
+
+![](../images/models-recipes/import-package-ui/pyspark-databricks.png)
+
+그런 다음 스키마 관리 섹션에서 소매 판매 입력 및 출력 스키마를 *선택하면*&#x200B;소매 판매 스키마 [및 데이터 세트](../models-recipes/create-retails-sales-dataset.md) 자습서 만들기에서 제공된 부트스트랩 스크립트를 사용하여 만들어집니다.
+
+![](../images/models-recipes/import-package-ui/recipe_schema.png)
+
+기능 *관리* 섹션에서 스키마 뷰어에서 임차인 ID를 클릭하여 소매 판매 입력 스키마를 확장합니다. 원하는 기능을 강조 표시하고 오른쪽 필드 속성 **창에서 입력 기능** 또는 **대상** 기능을 선택하여 **입력 및 출력** 기능을선택합니다. 이 자습서를 위해 weeklySales **를** Target **기능으로** 설정하고 그 외의 모든 것을 **입력 기능으로**&#x200B;설정합니다. 다음을 **클릭하여** 새로 구성된 레서피를 검토합니다.
+
+필요에 따라 레시피를 검토하고 구성을 추가, 수정 또는 제거합니다. 마침을 **클릭하여** 레서피를 생성합니다.
+
+![](../images/models-recipes/import-package-ui/recipe_review.png)
+
+새로 만든 소매 판매 레서피를 사용하여 데이터 과학 작업 공간에서 모델을 생성하는 방법을 찾으려면 [다음 단계를](#next-steps) 수행합니다.
+
+### Docker 기반 레서피 가져오기 - Scala {#scala}
+
+먼저 플랫폼 UI **의** 왼쪽 상단에 있는 워크플로우를 찾아 선택합니다. 그런 다음 레서피 *가져오기를* 선택하고 시작을 **클릭합니다**.
+
+![](../images/models-recipes/import-package-ui/launch-import.png)
+
+레서피 *가져오기* 워크플로우에 대한 *구성* 페이지가 나타납니다. 레서피에 대한 이름과 설명을 입력한 다음 **오른쪽 위** 모서리에서 다음을 선택하여 진행합니다.
+
+![워크플로우 구성](../images/models-recipes/import-package-ui/configure-workflow.png)
+
+>[!NOTE]
+> 소스 파일을 [레서피](./package-source-files-recipe.md) 자습서로 패키징하는 경우 Spark(Scala) 소스 파일을 사용하여 소매 영업 레서피를 빌드하는 끝에 Docker URL이 제공되었습니다.
+
+소스 선택 *페이지에서 소스* URL 필드에 Scala 소스 파일을 사용하여 만든 패키지된 레서피에 해당하는 Docker URL을 *붙여 넣습니다* . 그런 다음 드래그 앤 드롭하여 제공된 구성 파일을 가져오거나 파일 시스템 브라우저를 **사용합니다**. 제공된 구성 파일은 에서 찾을 수 `experience-platform-dsw-reference/recipes/scala/retail/pipelineservice.json`있습니다. 런타임 **드롭다운에서** Spark *를* 선택합니다. Spark 런타임을 선택하면 기본 가공물이 Docker로 자동 **채워집니다**. 그런 다음 **유형** 드롭다운에서 회귀 *를* 선택합니다. 모든 내용이 채워지면 오른쪽 **위** 모서리에서 [다음]을 클릭하여 스키마 *관리로*&#x200B;진행합니다.
+
+>[!NOTE]
+> *유형은&#x200B;*분류&#x200B;**및 회귀**기능을&#x200B;**지원합니다**. 모델이 이러한 유형 중 하나에 해당되지 않는 경우 사용자 지정을&#x200B;**선택합니다**.
+
+![](../images/models-recipes/import-package-ui/scala-databricks.png)
+
+그런 다음 스키마 관리 섹션에서 소매 판매 입력 및 출력 스키마를 *선택하면*&#x200B;소매 판매 스키마 [및 데이터 세트](../models-recipes/create-retails-sales-dataset.md) 자습서 만들기에서 제공된 부트스트랩 스크립트를 사용하여 만들어집니다.
+
+![](../images/models-recipes/import-package-ui/recipe_schema.png)
+
+기능 *관리* 섹션에서 스키마 뷰어에서 임차인 ID를 클릭하여 소매 판매 입력 스키마를 확장합니다. 원하는 기능을 강조 표시하고 오른쪽 필드 속성 **창에서 입력 기능** 또는 **대상** 기능을 선택하여 **입력 및 출력** 기능을선택합니다. 이 자습서를 위해 weeklySales **를** Target **기능으로** 설정하고 그 외의 모든 것을 **입력 기능으로**&#x200B;설정합니다. 다음을 **클릭하여** 새로 구성된 레서피를 검토합니다.
+
+필요에 따라 레시피를 검토하고 구성을 추가, 수정 또는 제거합니다. 마침을 **클릭하여** 레서피를 생성합니다.
+
+![](../images/models-recipes/import-package-ui/recipe_review.png)
+
+새로 만든 소매 판매 레서피를 사용하여 데이터 과학 작업 공간에서 모델을 생성하는 방법을 찾으려면 [다음 단계를](#next-steps) 수행합니다.
+
+## 다음 단계
+
+이 자습서에서는 레서피 구성 및 데이터 과학 작업 공간으로 레서피를 가져오는 방법에 대한 통찰력을 제공합니다. 이제 새로 만든 레시피를 사용하여 모델을 생성, 교육 및 평가할 수 있습니다.
+
+- [UI에서 모델 트레이닝 및 평가](./train-evaluate-model-ui.md)
+- [API를 사용하여 모델 트레이닝 및 평가](./train-evaluate-model-api.md)
+
+## 더 이상 사용되지 않는 워크플로우
+
+>[!CAUTION]
+>PySpark 3(Spark 2.4) 및 Scala(Spark 2.4)에서는 바이너리 기반의 레서피 가져오기가 더 이상 지원되지 않습니다.
+
+### 바이너리 기반의 레서피 가져오기 - PySpark {#pyspark-deprecated}
 
 소스 파일을 [Recipe 튜토리얼로 패키징하면](./package-source-files-recipe.md) Retail Sales PySpark 소스 파일을 사용하여 EGG **** 바이너리 파일이 제작되었습니다.
 
@@ -132,10 +276,10 @@ Data Science Workspace의 모든 레서피 인스턴스에는 특정 사용 사�
 5. 필요에 따라 레시피를 검토하고 구성을 추가, 수정 또는 제거합니다. 마침을 **클릭하여** 레서피를 생성합니다.
    ![](../images/models-recipes/import-package-ui/recipe_review.png)
 
-축하합니다. 소매 영업 레서피를 만들었습니다. 새로 만든 소매 영업 레서피를 사용하여 데이터 과학 작업 공간에서 모델을 생성하는 방법을 [살펴보려면 다음 단계로](#next-steps) 이동합니다.
+새로 만든 소매 판매 레서피를 사용하여 데이터 과학 작업 공간에서 모델을 생성하는 방법을 찾으려면 [다음 단계를](#next-steps) 수행합니다.
 
 
-### 바이너리 기반의 레서피 가져오기 - Scala Spark {#scala}
+### 바이너리 기반의 레서피 가져오기 - Scala Spark {#scala-deprecated}
 
 소스 파일을 [Recipe 튜토리얼로 패키징](./package-source-files-recipe.md) 시 Retail Sales Spark 소스 파일을 사용하여 JAR **** 바이너리 파일이 제작되었습니다.
 
@@ -151,39 +295,4 @@ Data Science Workspace의 모든 레서피 인스턴스에는 특정 사용 사�
 5. 필요에 따라 레시피를 검토하고 구성을 추가, 수정 또는 제거합니다. 마침을 **클릭하여** 레서피를 생성합니다.
    ![](../images/models-recipes/import-package-ui/recipe_review.png)
 
-축하합니다. 소매 영업 레서피를 만들었습니다. 새로 만든 소매 영업 레서피를 사용하여 데이터 과학 작업 공간에서 모델을 생성하는 방법을 [살펴보려면 다음 단계로](#next-steps) 이동합니다.
-
-### Docker 기반 레시피 가져오기 - Python {#python}
-
-Package [source files into a Recipe](./package-source-files-recipe.md) tutorial, a Docker URL was provided at the end of building the Retail Sales recipe using Python Python source files.
-
-1. 소스 URL 필드에 Python 소스 파일을 사용하여 만든 패키지된 레시피에 해당하는 Docker **URL을** 붙여 넣습니다. 그런 다음 드래그 앤 드롭하여 제공된 구성 파일을 가져오거나 파일 시스템 브라우저를 **사용합니다**. 제공된 구성 파일은 에서 찾을 수 `experience-platform-dsw-reference/recipes/python/retail/retail.config.json`있습니다. 두 **항목이** 모두 제공되면 [다음]을 클릭합니다.
-   ![](../images/models-recipes/import-package-ui/recipe_source_python.png)
-2. 스키마 관리 섹션에서 소매 판매 입력 및 출력 스키마를 **선택합니다**. 이 스키마는 소매 판매 스키마 [만들기 및 데이터 세트](../models-recipes/create-retails-sales-dataset.md) 자습서에서 제공된 부트스트랩 스크립트를 사용하여 만들어졌습니다.
-   ![](../images/models-recipes/import-package-ui/recipe_schema.png)
-기능 **관리** 섹션에서 스키마 뷰어에서 임차인 ID를 클릭하여 소매 판매 입력 스키마를 확장합니다. 원하는 기능을 강조 표시하고 오른쪽 필드 속성 **창에서 입력 기능** 또는 **대상** 기능을 선택하여 **입력 및 출력** 기능을선택합니다. 이 자습서를 위해 weeklySales **를** Target **기능으로** 설정하고 그 외의 모든 것을 **입력 기능으로**&#x200B;설정합니다. 다음을 **클릭하여** 새로 구성된 레서피를 검토합니다.
-3. 필요에 따라 레시피를 검토하고 구성을 추가, 수정 또는 제거합니다. 마침을 **클릭하여** 레서피를 생성합니다.
-   ![](../images/models-recipes/import-package-ui/recipe_review.png)
-
-축하합니다. 소매 영업 레서피를 만들었습니다. 새로 만든 소매 영업 레서피를 사용하여 데이터 과학 작업 공간에서 모델을 생성하는 방법을 [살펴보려면 다음 단계로](#next-steps) 이동합니다.
-
-### Docker 기반 레서피 가져오기 - R {#r}
-
-소스 파일을 [레서피](./package-source-files-recipe.md) 자습서로 패키징하면 R 소스 파일을 사용하여 소매 영업 레서피 작성 종료 시 Docker URL이 제공되었습니다.
-
-1. 소스 URL 필드에 R 소스 파일을 사용하여 작성한 패키지된 레서피에 해당하는 Docker URL을 **붙여 넣습니다** . 그런 다음 드래그 앤 드롭하여 제공된 구성 파일을 가져오거나 파일 시스템 브라우저를 **사용합니다**. 제공된 구성 파일은 에서 찾을 수 `experience-platform-dsw-reference/recipes/R/Retail\ -\ GradientBoosting/retail.config.json`있습니다. 두 **항목이** 모두 제공되면 [다음]을 클릭합니다.
-   ![](../images/models-recipes/import-package-ui/recipe_source_R.png)
-2. 스키마 관리 섹션에서 소매 판매 입력 및 출력 스키마를 **선택합니다**. 이 스키마는 소매 판매 스키마 [만들기 및 데이터 세트](../models-recipes/create-retails-sales-dataset.md) 자습서에서 제공된 부트스트랩 스크립트를 사용하여 만들어졌습니다.
-   ![](../images/models-recipes/import-package-ui/recipe_schema.png)
-기능 **관리** 섹션에서 스키마 뷰어에서 임차인 ID를 클릭하여 소매 판매 입력 스키마를 확장합니다. 원하는 기능을 강조 표시하고 오른쪽 필드 속성 **창에서 입력 기능** 또는 **대상** 기능을 선택하여 **입력 및 출력** 기능을선택합니다. 이 자습서를 위해 weeklySales **를** Target **기능으로** 설정하고 그 외의 모든 것을 **입력 기능으로**&#x200B;설정합니다. 다음을 **클릭하여** 새로 구성된 레서피를 검토합니다.
-3. 필요에 따라 레시피를 검토하고 구성을 추가, 수정 또는 제거합니다. 마침을 **클릭하여** 레서피를 생성합니다.
-   ![](../images/models-recipes/import-package-ui/recipe_review.png)
-
-축하합니다. 소매 영업 레서피를 만들었습니다. 새로 만든 소매 영업 레서피를 사용하여 데이터 과학 작업 공간에서 모델을 생성하는 방법을 [살펴보려면 다음 단계로](#next-steps) 이동합니다.
-
-## 다음 단계
-
-이 자습서에서는 레서피 구성 및 데이터 과학 작업 공간으로 레서피를 가져오는 방법에 대한 통찰력을 제공합니다. 이제 새로 만든 레시피를 사용하여 모델을 생성, 교육 및 평가할 수 있습니다.
-
-- [UI에서 모델 트레이닝 및 평가](./train-evaluate-model-ui.md)
-- [API를 사용하여 모델 트레이닝 및 평가](./train-evaluate-model-api.md)
+새로 만든 소매 판매 레서피를 사용하여 데이터 과학 작업 공간에서 모델을 생성하는 방법을 찾으려면 [다음 단계를](#next-steps) 수행합니다.
