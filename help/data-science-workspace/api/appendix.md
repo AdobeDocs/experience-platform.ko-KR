@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 부록
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 0081cbd414e983d767b4a6f3aceed85d72a34816
+source-git-commit: 2940f69d193ff8a4ec6ad4a58813b5426201ef45
 
 ---
 
@@ -67,7 +67,7 @@ Python Engine은 교육 또는 채점 목적으로 CPU 또는 GPU 중에서 선�
 
 ## PySpark 및 Spark 리소스 구성 {#resource-config}
 
-PySpark 및 Spark Engines는 교육 및 채점 목적으로 연산 리소스를 수정할 수 있는 기능을 갖추고 있습니다. 이러한 리소스는 다음 표에 설명되어 있습니다.
+Spark Engines는 교육 및 채점 목적으로 컴퓨터 리소스를 수정할 수 있습니다. 이러한 리소스는 다음 표에 설명되어 있습니다.
 
 | 리소스 | 설명 | 유형 |
 | -------- | ----------- | ---- |
