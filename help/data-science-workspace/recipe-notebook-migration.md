@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 레서피 및 노트북 마이그레이션 가이드
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: bb6fe494933606d428d7bdf20ee38b7ac51c23ea
+source-git-commit: 61cf05b989bfbae4e26978fa915347f350d7364c
 
 ---
 
@@ -291,6 +291,10 @@ JupiterLab 노트북의 최근 변경 사항은 기존 PySpark 및 Spark 2.3 노
 
 - [PySpark 2.3 - 2.4 마이그레이션 안내서](#pyspark-notebook-migration)
 - [Spark 2.3에서 Spark 2.4(Scala) 마이그레이션 가이드](#spark-notebook-migration)
+
+다음 비디오는 JupiterLab 노트북에 필요한 변경 사항을 이해하는 데 도움이 되도록 설계되었습니다.
+
+>[!VIDEO](https://video.tv.adobe.com/v/33444?quality=12&learn=on)
 
 ## PySpark 2.3-2.4 노트북 마이그레이션 안내서 {#pyspark-notebook-migration}
 
