@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform 소스 커넥터 도움말
 translation-type: tm+mt
-source-git-commit: 85af933c14b3768790100a649de05a5e6bdb8560
+source-git-commit: 2fb034dced679d48c90c41ab3254a30fc14b43e0
 
 ---
 
@@ -16,6 +16,10 @@ source-git-commit: 85af933c14b3768790100a649de05a5e6bdb8560
       - [Analytics 데이터 커넥터](connectors/adobe-applications/analytics.md)
       - [Audience Manager 커넥터](connectors/adobe-applications/audience-manager.md)
       - [고객 속성 커넥터](connectors/adobe-applications/customer-attributes.md)
+      - Adobe 애플리케이션 필드 매핑 {#mapping}
+         - [Analytics 매핑 필드](connectors/adobe-applications/mapping/analytics.md)
+         - [Audience Manager 매핑 필드](connectors/adobe-applications/mapping/audience-manager.md)
+         - [타겟 매핑 필드](connectors/adobe-applications/mapping/target.md)
    - 광고 {#advertising}
       - [Google 광고 커넥터](connectors/advertising/ads.md)
    - 클라우드 스토리지 {#cloud-storage}
