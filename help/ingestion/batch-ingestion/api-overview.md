@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform 일괄 처리 통합 개발자 가이드
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 79466c78fd78c0f99f198b11a9117c946736f47a
+source-git-commit: 6c17351b04fedefd4b57b9530f1d957da8183a68
 
 ---
 
@@ -54,7 +54,7 @@ source-git-commit: 79466c78fd78c0f99f198b11a9117c946736f47a
 
 데이터를 인제스트할 때는 XDM(Experience Data Model) 스키마가 어떻게 작동하는지 이해하는 것이 중요합니다. XDM 필드 유형이 다른 형식으로 매핑되는 방법에 대한 자세한 내용은 스키마 레지스트리 [개발자 안내서를](../../xdm/api/getting-started.md)참조하십시오.
 
-데이터 인제스트 시 몇 가지 유연성이 있습니다. 형식이 대상 스키마에 있는 내용과 일치하지 않으면 데이터가 표현된 대상 유형으로 변환됩니다.  그렇지 않으면, A로 일괄 처리가 실패합니다 `TypeCompatibilityException`.
+데이터 인제스트 시 몇 가지 유연성이 있습니다. 형식이 대상 스키마에 있는 내용과 일치하지 않으면 데이터가 표현된 대상 유형으로 변환됩니다. 그렇지 않으면, A로 일괄 처리가 실패합니다 `TypeCompatibilityException`.
 
 예를 들어 JSON이나 CSV에는 날짜 또는 날짜-시간 유형이 없습니다. 따라서 이러한 값은 ISO 8061 형식 문자열 [](https://www.iso.org/iso-8601-date-and-time-format.html) (&quot;2018-07-10T15:05:59.000-08:00&quot;) 또는 Unix 시간 형식(밀리초 단위: 153126395 9000) 및 통합 시 대상 XDM 유형으로 변환됩니다.
 
@@ -382,7 +382,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 ```
 
 | 매개 변수 | 설명 |
-| --------- | -----------  |
+| --------- | ----------- |
 | `{DATASET_ID}` | 참조 데이터 집합의 ID입니다. |
 
 **응답**
@@ -790,7 +790,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 200 OK
 ```
 
-## 일괄 처리 삭제
+## 일괄 처리 삭제 {#delete-a-batch}
 
 삭제하려는 배치의 ID에 대한 `action=REVERT` 쿼리 매개 변수와 함께 다음 POST 요청을 수행하여 배치를 삭제할 수 있습니다. 일괄 처리는 &quot;비활성&quot;으로 표시되어 가비지 수집을 사용할 수 있도록 합니다. 일괄 처리는 비동기적으로 수집되며, 이 때 &quot;삭제됨&quot;으로 표시됩니다.
 
