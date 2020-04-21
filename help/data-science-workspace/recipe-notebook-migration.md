@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 레서피 및 노트북 마이그레이션 가이드
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 61cf05b989bfbae4e26978fa915347f350d7364c
+source-git-commit: 5191eb9ba48cc6dd4e2d42bd2a50539be7ea163e
 
 ---
 
@@ -66,11 +66,9 @@ Spark 레서피에 대한 업데이트를 통해 많은 값을 추가하고 변�
   </td>
   <td>
 <pre class="JSON language-JSON hljs">
-import com.adobe.platform.query.QSOption
-
-var df = sparkSession.read.format(&quot;com.adobe.platform.query&quot;).option(QSOption.userToken&quot;, {userToken}).option(QSOption.serviceToken, {serviceToken}).option(QSOption.imsOrg, {orgId}).option(QSOption.option apiKey, {apiKey}).option(QSOption.mode, &quot;interactive&quot;).option(QSOption.datasetId, {dataSetId}).load()
-</pre>
-</td>
+import com.adobe.platform.query.QSOptionvar df = sparkSession.read.format("com.adobe.platform.query") .option(QSOption.userToken", {userToken}) .option(QSOption.serviceToken, {serviceToken}) .option(QSOption.imsOrg, {QOS ORGId}) .OPTION(QSOption.apiKey, {apiKey}) .option(QSOption.mode, "interactive") .option(QSOption.datasetId, {dataSetId}) .load()
+  </pre>
+  </td>
   </tr>
 </table>
 
@@ -94,11 +92,9 @@ Spark 레서피에 대한 업데이트를 통해 많은 값을 추가하고 변�
   </td>
   <td>
 <pre class="JSON language-JSON hljs">
-import com.adobe.platform.query.QSOption
-
-df.write.format(&quot;com.adobe.platform.query&quot;).option(QSOption.userToken&quot;, {userToken}).option(QSOption.serviceToken, {serviceToken}).option(QSOption.imsOrg, {orgId}).option(QSOption.api키, {QSOapiKey}).option(QSOption.datasetId, {dataSetId}).save()
+import com.adobe.platform.query.QSOptiondf.write.format("com.adobe.platform.query") .option(QSOption.userToken", {userToken}) .option(QSOption.serviceToken, {serviceToken}) .option(QSOption.imsOrg, {orgId}) .option(QSOption.apiKey, {apiKey}) .option(QSOption.datasetId, {dataSetId}) .save()
 </pre>
-</td>
+  </td>
   </tr>
 </table>
 
@@ -186,18 +182,14 @@ Spark 레서피에 대한 업데이트를 통해 많은 값을 추가하고 변�
   <tr>
   <td>
   <pre class="JSON language-JSON hljs">
-dataset_options = get_dataset_options(spark.sparkContext)
-
-pd = spark.read.format(&quot;com.adobe.platform.dataset&quot;).option(dataset_options.serviceToken(), service_token).option(dataset_options.userToken(), user_token).option(dataset_options.orgId(), org_id).option(dataset_options.serviceApiKey(), api_id)
+dataset_options = get_dataset_options(spark.sparkContext)pd = spark.read.format("com.adobe.platform.dataset") .option(dataset_options.serviceToken(), service_token) .option(dataset_options.userToken(), user_token) .option(dataset_options.api) Key(), api_key) .load(dataset_id)
 </pre>
-</td>
+  </td>
   <td>
 <pre class="JSON language-JSON hljs">
-qs_option = spark_context._jvm.com.adobe.platform.query.QSOption
-
-pd = sparkSession.read.format(&quot;com.adobe.platform.query&quot;).option(qs_option.userToken, {userToken}).option(qs_option.serviceToken, {serviceToken}).option(qs_option.imsOrg, {orgId}).option(qs_option.apiKey, {apiKey}).option (qs_option.mode, &quot;interactive&quot;).option(qs_option.datasetId, {dataSetId}).load()
-</pre>
-</td>
+qs_option = spark_context._jvm.com.adobe.platform.query.QSOptionpd = sparkSession.read.format("com.adobe.platform.query") .option(qs_option.userToken, {userToken}) .option(qs_option.serviceToken, {serviceToken}) .option(qs_option.imsOrg, {orgId}) option.apiKey, {apiKey}) .option(qs_option.mode, "interactive") .option(qs_option.datasetId, {dataSetId}) .load()
+  </pre>
+  </td>
   </tr>
 </table>
 
@@ -221,11 +213,9 @@ df.write.format("com.adobe.platform.dataset") .option(DataSetOptions.orgId, orgI
   </td>
   <td>
 <pre class="JSON language-JSON hljs">
-qs_option = spark_context._jvm.com.adobe.platform.query.QSOption
-
-scored_df.write.format(&quot;com.adobe.platform.query&quot;).option(qs_option.userToken, {userToken}).option(qs_option.serviceToken, {serviceToken}).option(qs_option.imsOrg, {orgId}).option(qs_option.apiKey, {apiKey}).option option.datasetId, {dataSetId}).save()
+qs_option = spark_context._jvm.com.adobe.platform.query.QSOptionscored_df.write.format("com.adobe.platform.query") .option(qs_option.userToken, {userToken}) .option(qs_option.serviceToken, {serviceToken}) .option(qs_option.imsOrg, {orgId}) .option Key, {apiKey}) .option(qs_option.datasetId, {dataSetId}) .save()
 </pre>
-</td>
+  </td>
   </tr>
 </table>
 
@@ -401,11 +391,9 @@ Spark 2.4가 도입됨에 따라 [`%dataset`](#magic) 사용자 정의 기능이
   <th>코드</th>
   <td>
   <pre class="JSON language-JSON hljs">
-dataset_options = sc._jvm.com.adobe.platform.dataset.DataSetOptions
-
-pd0 = spark.read.format(&quot;com.adobe.platform.dataset&quot;).option(dataset_options.orgId(), &quot;310C6D375BA5248F0A494212@AdobeOrg&quot;).load(&quot;5e68141134492718af974844&quot;)
+dataset_options = sc._jvm.com.adobe.platform.dataset.dataset.dataSetOptionspd0 = spark.read.format("com.adobe.platform.dataset") .option(dataset_options.orgId(), "310C6D375BA5248F0A494212@AdobeOrg") .load("5e68141134492718af948 44형)
 </pre>
-</td>
+  </td>
   <td>
   <pre class="JSON language-JSON hljs">
 %dataset read —datasetId 5e6814134492718af97484 —dataFrame pd0
@@ -529,20 +517,14 @@ Spark 2.4가 도입되면서 [`%dataset`](#magic) 데이터 세트 작성을 간
   <th>코드</th>
   <td>
   <pre class="JSON language-JSON hljs">
-userToken = spark.sparkContext.getConf().get("spark.yarn.appMasterEnv.USER_TOKEN")serviceToken = spark.sparkContext.getConf().get("spark.yarn.appMasterEnv.SERVICE_TOKEN")serviceSparkApiKey =.sparkSparkSparkKey Context.getConf().get("spark.yarn.appMasterEnv.SERVICE_API_KEY")
-
-dataset_options = sc._jvm.com.adobe.platform.dataset.DataSetOptions
-
-pd0.write.format(&quot;com.adobe.platform.dataset&quot;).option(dataset_options.orgId(), &quot;310C6D375BA5248F0A494212@AdobeOrg&quot;).option(dataset_options.userToken(), userToken).option(dataset_options.serviceToken(), serviceApiKey(), serviceApiKey).save (&quot;5e68141134492718af974844&quot;)
-</pre>
-</td>
+userToken = spark.sparkContext.getConf().get("spark.yarn.appMasterEnv.USER_TOKEN")serviceToken = spark.sparkContext.getConf().get("spark.yarn.appMasterEnv.SERVICE_TOKEN")serviceSparkApiKey =.sparkSparkSparkKey Context.getConf().get("spark.yarn.appMasterEnv.SERVICE_API_KEY")dataset_options = sc._jvm.com.adobe.platform.dataset.dataSetOptionspd0.write.format("com.adobe.platform.dataset") .option(dataset_options.orgId(), "310C6D375BA5248F0A494212@AdobeOrg") .option(dataset_options.userToken(), userToken) .option(dataset_options.serviceToken), servicedataset_options ApiKey(), serviceApiKey) .save("5e68141134492718af974844")
+  </pre>
+  </td>
   <td>
   <pre class="JSON language-JSON hljs">
-%dataset write —datasetId 5e6814134492718af97484 —dataFrame pd0
-
-pd0.describe()pd0.show(10, False)
+%dataset write —datasetId 5e6814134492718af97484 —dataFrame pd0pd0.describe()pd0.show(10, False)
 </pre>
-</td>
+  </td>
   </tr>
 </table>
 
@@ -714,20 +696,14 @@ Spark 2.3에서는 데이터를 읽거나 코드 셀에서 원시 값을 사용�
   <th>code</th>
   <td>
   <pre class="JSON language-JSON hljs">
-
-import com.adobe.platform.dataset.DataSetOptions
-
-var df1 = spark.read.format(&quot;com.adobe.platform.dataset&quot;).option(DataSetOptions.orgId, &quot;310C6D375BA5248F0A494212@AdobeOrg&quot;).option(DataSetOptions.batchId, &quot;dbe154d3-197a-4e6c-80f8-9b7025eea2b9&quot;).load(&quot;5e68141134492718af974844&quot;)
+import com.adobe.platform.dataset.dataSetOptionsvar1 = spark.read.format("com.adobe.platform.dataset") .option(DataSetOptions.orgId, "310C6D375BA5248F0A494212@AdobeOrg") .option(DataSetOptions.batchId, "dbe154d3-197a-4e6c-80f8-9b7025eea2b9") .load("5e6814134492718af974844")
 </pre>
-</td>
+  </td>
   <td>
   <pre class="JSON language-JSON hljs">
-
-org.apache.spark.sql을 가져옵니다.{Dataset, SparkSession}val spark = SparkSession.builder().master(&quot;local&quot;).getOrCreate()
-
-val1 = spark.read.format(&quot;com.adobe.platform.query&quot;).option(&quot;user-token&quot;, sys.env(&quot;PYDASDK_IMS_USER_TOKEN&quot;)).option(&quot;ims-org&quot;, sys.env(&quot;IMS_ORG_ID&quot;)).option(&quot;api-key&quot;, sys.env( &quot;PYDASDK_IMS_CLIENT_ID&quot;).option(&quot;service-token&quot;, sys.env(&quot;PYDASDK_IMS_SERVICE_TOKEN&quot;)).option(&quot;mode&quot;, &quot;interactive&quot;).option(&quot;dataset-id&quot;, &quot;5e68141344444 92718af974844&quot;).load()
+org.apache.spark.sql을 가져옵니다.{Dataset, SparkSession}val spark = SparkSession.builder().master("local").getOrCreate()val1 = spark.read.format("com.adobe.platform.query") .option("user-token", sys.env("PYDASDK_IMS._USER_TOKEN")))) s-org", sys.env("IMS_ORG_ID")) .option("api-key", sys.env("PYDASDK_IMS._CLIENT_ID"))) .option("service-token", sys.env("PYDASDK_IMS._SERVICE_TOKEN"))) 옵션 ("mode", "interactive") .option("dataset-id", "5e68141134492718af974844") .load()
 </pre>
-</td>
+  </td>
   </tr>
 </table>
 
@@ -776,22 +752,14 @@ Scala(Spark 2.4) 노트북에서는 첫 번째 코드 셀에서 강조 표시된
   <th>code</th>
   <td>
   <pre class="JSON language-JSON hljs">
-
-import com.adobe.platform.dataset.DataSetOptions
-
-var userToken = spark.sparkContext.getConf.getOption(&quot;spark.yarn.appMasterEnv.USER_TOKEN&quot;).getvar serviceToken = spark.sparkContext.getConf.getOption(&quot;spark.yarn.appMasterEnv.SERVICE_TOKEN&quot;).getvar serviceserviceServiceServiceServiceOptionServiceEventServiceServiceEventEventOption apiKey = spark.sparkContext.getConf.getOption(&quot;spark.yarn.appMasterEnv.SERVICE_API_KEY&quot;).get
-
-df1.write.format(&quot;com.adobe.platform.dataset&quot;).option(DataSetOptions.orgId, &quot;310C6D375BA5248F0A494212@AdobeOrg&quot;).option(DataSetOptions.userToken, userToken).option(DataSetOptions.serviceToken).option(DataSetOptions.serviceApiApi key, serviceApiKey).save(&quot;5e6814134492718af974844&quot;)
-</pre>
-</td>
+import com.adobe.platform.dataset.dataset.DataSetOptionsvar userToken = spark.sparkContext.getConf.getOption("spark.yarn.appMasterEnv.USER_TOKEN").getvar serviceToken = sparkContext.getConf.getOption("spark.appMaster Env.SERVICE_TOKEN").getvar serviceApiKey = spark.sparkContext.getConf.getOption("spark.yarn.appMasterEnv.SERVICE_API_KEY").getdf1.write.format("com.adobe.platform.DATASET") .option(DataSetOptions Id, "310C6D375BA5248F0A494212@AdobeOrg") .option(DataSetOptions.userToken, userToken) .option(DataSetOptions.serviceToken, serviceToken) .option(DataSetOptions.serviceApiKey, serviceApiKey) .save("5e6814113 4492718af974844형)
+  </pre>
+  </td>
   <td>
   <pre class="JSON language-JSON hljs">
-
-org.apache.spark.sql을 가져옵니다.{Dataset, SparkSession}val spark = SparkSession.builder().master(&quot;local&quot;).getOrCreate()
-
-df1.write.format(&quot;com.adobe.platform.query&quot;).option(&quot;user-token&quot;, sys.env(&quot;PYDASDK_IMS_USER_TOKEN&quot;)).option(&quot;service-token&quot;, sys.env(&quot;PYDASDK_IMS.SERVICE_TOKEN&quot;)).option(&quot;ims-org&quot;,.env(&quot;IMS_ORG_ID&quot;)).option(&quot;api-key&quot;, sys.env(&quot;PYDASDK_IMS_CLIENT_ID&quot;)).option(&quot;mode&quot;, &quot;interactive&quot;).option(&quot;dataset-id&quot;, &quot;5e6814113444999 2718af974844&quot;).save()
+org.apache.spark.sql을 가져옵니다.{Dataset, SparkSession}val spark = SparkSession.builder().master("local").getOrCreate()df1.write.format("com.adobe.platform.query") .option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN"))) .option("service-token") sys.env("PYDASDK_IMS_SERVICE_TOKEN") .option("ims-org", sys.env("IMS_ORG_ID")) .option("API-key", sys.env("PYDASDK_IMS._CLIENT_ID"))) .option("mode ", "interactive") .option("dataset-id", "5e68141134492718af974844") .save()
 </pre>
-</td>
+  </td>
   </tr>
 </table>
 
