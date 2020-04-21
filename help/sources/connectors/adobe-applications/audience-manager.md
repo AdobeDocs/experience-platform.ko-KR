@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Audience Manager 커넥터
 topic: overview
 translation-type: tm+mt
-source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
+source-git-commit: 75c446aed75100bd2b5b4a3d365c090cb01dcc69
 
 ---
 
@@ -43,7 +43,7 @@ XDM을 Experience Platform에서 사용하는 방법에 대한 자세한 내용�
 
 ## Adobe Audience Manager에서 XDM으로 필드를 매핑하려면 어떻게 해야 합니까?
 
-자세한 내용은 Audience Manager [매핑 필드에][audience-manager-mapping-fields] 대한 설명서를 참조하십시오.
+자세한 내용은 Audience Manager [매핑 필드에](./mapping/audience-manager.md) 대한 설명서를 참조하십시오.
 
 ## 플랫폼의 데이터 관리
 
