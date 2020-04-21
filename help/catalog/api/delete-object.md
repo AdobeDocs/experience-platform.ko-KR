@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 개체 삭제
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 85b497d87fcfb54f390302036ce24c98c6dba6ff
+source-git-commit: 6c17351b04fedefd4b57b9530f1d957da8183a68
 
 ---
 
@@ -21,9 +21,11 @@ DELETE 요청의 경로에 카탈로그 개체의 ID를 제공하여 삭제할 �
 DELETE /{OBJECT_TYPE}/{OBJECT_ID}
 ```
 
+>[!IMPORTANT] 끝점은 더 이상 사용되지 `DELETE /batches/{ID}` 않습니다. 배치를 삭제하려면 일괄 처리 통합 API를 사용해야 [합니다](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch).
+
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 삭제할 카탈로그 개체의 유형입니다. 유효한 개체는 다음과 같습니다. <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 삭제할 카탈로그 개체의 유형입니다. 유효한 개체는 다음과 같습니다. <ul><li>`accounts`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | 업데이트할 특정 개체의 식별자입니다. |
 
 **요청**
