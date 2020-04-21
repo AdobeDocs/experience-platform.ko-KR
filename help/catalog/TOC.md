@@ -1,9 +1,9 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Catalog and Datasets Help
+user-guide-title: 카탈로그 및 데이터 집합 도움말
 translation-type: tm+mt
-source-git-commit: ee500b03bc0984fa24666867867d19a5d7446ced
+source-git-commit: 30ea8b4eeeb5f11bfca65f2931902aae63e8f08e
 
 ---
 
@@ -22,6 +22,7 @@ source-git-commit: ee500b03bc0984fa24666867867d19a5d7446ced
    * [개체 삭제](api/delete-object.md)
    * [데이터 세트 만들기](api/create-dataset.md)
    * [일괄 처리 만들기](api/create-batch.md)
+   * [데이터 사용 레이블](api/labels.md)
    * [부록](api/appendix.md)
 * 데이터 집합 {#datasets}
    * [데이터 집합 개요](datasets/overview.md)
