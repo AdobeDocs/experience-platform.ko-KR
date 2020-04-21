@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 데이터 사용 레이블 개요
 topic: labels
 translation-type: tm+mt
-source-git-commit: 4d817a439cbc277c3df03e08554d5003b9f68a76
+source-git-commit: 4411018aa1d531b53bbe2431df71829fa07fee75
 
 ---
 
@@ -25,4 +25,4 @@ Experience Platform에서 사용 가능한 데이터 사용 레이블 및 사용
 
 ## 다음 단계
 
-이제 데이터 사용 레이블이 도입되었으므로 [사용 안내서를](user-guide.md) 참조하여 경험 플랫폼 UI에서 레이블을 관리하는 방법을 배울 수 있습니다.
+이제 데이터 사용 레이블이 도입되었으므로 [사용 안내서를](user-guide.md) 참조하여 경험 플랫폼 UI에서 레이블을 관리하는 방법을 배울 수 있습니다. API를 사용하여 레이블을 관리하는 방법에 대한 단계는 카탈로그 서비스 개발자 안내서의 [해당 섹션을 참조하십시오](../../catalog/api/labels.md).
