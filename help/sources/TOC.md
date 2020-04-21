@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform 소스 커넥터 도움말
 translation-type: tm+mt
-source-git-commit: 5b036baba864b2b0f0c98d017d40f4d3c60ab80e
+source-git-commit: fcab7fbb955e85006eeebe5fb45b2a62188adaa7
 
 ---
 
@@ -17,7 +17,7 @@ source-git-commit: 5b036baba864b2b0f0c98d017d40f4d3c60ab80e
       - [Audience Manager 커넥터](connectors/adobe-applications/audience-manager.md)
       - [고객 속성 커넥터](connectors/adobe-applications/customer-attributes.md)
    - 광고 {#advertising}
-      - [Google AdWords 커넥터](connectors/advertising/ads.md)
+      - [Google 광고 커넥터](connectors/advertising/ads.md)
    - 클라우드 스토리지 {#cloud-storage}
       - [Azure Data Lake Storage Gen2 커넥터](connectors/cloud-storage/adls-gen2.md)
       - [Azure Blob 및 Amazon S3 커넥터](connectors/cloud-storage/blob-s3.md)
@@ -58,7 +58,6 @@ source-git-commit: 5b036baba864b2b0f0c98d017d40f4d3c60ab80e
          - [Google 클라우드 스토리지 커넥터](tutorials/api/create/cloud-storage/google.md)
          - [SFTP 커넥터](tutorials/api/create/cloud-storage/sftp.md)
       - CRM {#crm}
-         - [Google AdWords 커넥터](tutorials/api/create/crm/adwords.md)
          - [HubSpot 커넥터](tutorials/api/create/crm/hubspot.md)
          - [Microsoft Dynamics 커넥터](tutorials/api/create/crm/ms-dynamics.md)
          - [Salesforce 커넥터](tutorials/api/create/crm/salesforce.md)
