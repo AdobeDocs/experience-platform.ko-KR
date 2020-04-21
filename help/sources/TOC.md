@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform 소스 커넥터 도움말
 translation-type: tm+mt
-source-git-commit: fcab7fbb955e85006eeebe5fb45b2a62188adaa7
+source-git-commit: 85af933c14b3768790100a649de05a5e6bdb8560
 
 ---
 
@@ -105,8 +105,8 @@ source-git-commit: fcab7fbb955e85006eeebe5fb45b2a62188adaa7
 - UI 자습서 {#ui-tutorials}
    - 소스 커넥터 만들기 {#create}
       - Adobe 애플리케이션 {#adobe-applications}
-         - [Adobe Audience Manager 커넥터](tutorials/ui/create/adobe-applications/analytics.md)
-         - [Adobe Analytics 커넥터](tutorials/ui/create/adobe-applications/audience-manager.md)
+         - [Adobe Analytics 커넥터](tutorials/ui/create/adobe-applications/analytics.md)
+         - [Adobe Audience Manager 커넥터](tutorials/ui/create/adobe-applications/audience-manager.md)
          - [고객 속성 커넥터](tutorials/ui/create/adobe-applications/customer-attributes.md)
       - 광고 {#create}
          - [Google 광고 커넥터](tutorials/ui/create/advertising/ads.md)
