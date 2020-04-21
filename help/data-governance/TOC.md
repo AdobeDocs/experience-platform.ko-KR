@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform 데이터 거버넌스 도움말
 translation-type: tm+mt
-source-git-commit: 608f3f61764e6b578107f4ea7991bca12621330a
+source-git-commit: 30ea8b4eeeb5f11bfca65f2931902aae63e8f08e
 
 ---
 
@@ -13,7 +13,8 @@ source-git-commit: 608f3f61764e6b578107f4ea7991bca12621330a
 * [데이터 거버넌스 개요](home.md)
 * 데이터 사용 레이블 {#labels}
    * [데이터 사용 레이블 개요](labels/overview.md)
-   * [데이터 사용 레이블 사용 안내서](labels/user-guide.md)
+   * [UI에서 데이터 사용 레이블 관리](labels/user-guide.md)
+   * [API에서 데이터 사용 레이블 관리](labels/api.md)
    * [지원되는 데이터 사용 레이블](labels/reference.md)
 * 데이터 사용 정책 {#policies}
    * [데이터 사용 정책 개요](policies/overview.md)
