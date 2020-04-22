@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 지능형 서비스에서 사용할 데이터 준비
 topic: Intelligent Services
 translation-type: tm+mt
-source-git-commit: 03135f564bd72fb60e41b02557cb9ca9ec11e6e8
+source-git-commit: 702ac3860e06951574fe48f7d8771a11f68bedc4
 
 ---
 
@@ -23,32 +23,150 @@ Consumer ExperienceEvent 스키마는 디지털 마케팅 이벤트(웹 또는 �
 
 믹싱의 전체 예는 [공용 XDM 저장소에서](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md)찾을 수 있으며 아래 섹션에 설명된 키 필드에 대한 참조로 사용해야 합니다.
 
-### 키 필드
+## 키 필드
 
-아래 표는 CEE 믹스에서 활용해야 하는 주요 필드를 중점적으로 다루며, 지능형 서비스가 유용한 통찰력을 도출해내기 위해 설명 및 참조 설명서에 대한 링크 등을 제공합니다.
+아래 섹션에서는 CEE 믹스에서 활용해야 하는 주요 필드를 강조 표시하여 Intelligent Services가 추가 예제에 대한 설명 및 참조 설명서에 대한 링크 등 유용한 인사이트를 생성합니다.
 
-| XDM 필드 | 설명 | 참조 |
-| --- | --- | --- |
-| `xdm:channel` | ExperienceEvent와 관련된 마케팅 채널입니다. 이 필드에는 채널 유형, 미디어 유형 및 위치 유형에 대한 정보가 포함되어 있습니다. **속성 AI가 데이터와&#x200B;_연동되도록 하려면 이 필드를 제공해야_**&#x200B;합니다. 일부 예제 매핑은 아래 [](#example-channels) 표를 참조하십시오. | [경험 채널 스키마](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/channels/channel.schema.md) |
-| `xdm:productListItems` | 제품 SKU, 이름, 가격 및 수량을 포함하여 고객이 선택한 제품을 나타내는 항목 배열입니다. | [상거래 세부 정보 스키마](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-commerce.schema.md) |
-| `xdm:commerce` | 구매 발주 번호 및 지불 정보를 포함하여 ExperienceEvent에 대한 상거래 관련 정보를 포함합니다. | [상거래 세부 정보 스키마](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-commerce.schema.md) |
-| `xdm:web` | 상호 작용, 페이지 세부 사항 및 레퍼러 등 ExperienceEvent와 관련된 웹 세부 사항을 나타냅니다. | [ExperienceEvent 웹 세부 사항 스키마](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-web.schema.md) |
+### xdm:채널
 
-### 채널 예 {#example-channels}
+이 필드는 ExperienceEvent와 관련된 마케팅 채널을 나타냅니다. 이 필드에는 채널 유형, 미디어 유형 및 위치 유형에 대한 정보가 포함되어 있습니다. **속성 AI가 데이터와&#x200B;_연동되도록 하려면 이 필드를 제공해야_**&#x200B;합니다.
 
-이 `xdm:channel` 필드는 ExperienceEvent와 관련된 마케팅 채널을 나타냅니다. 다음 표에서는 XDM에 매핑되는 마케팅 채널의 몇 가지 예를 제공합니다.
+**스키마 예**
 
-| Channel | `channel.mediaType` | `channel._type` | `channel.mediaAction` |
+```json
+{
+  "@id": "https://ns.adobe.com/xdm/channels/facebook-feed",
+  "@type": "https://ns.adobe.com/xdm/channel-types/social",
+  "xdm:mediaType": "earned",
+  "xdm:mediaAction": "clicks"
+}
+```
+
+에 대한 각 필수 하위 필드에 대한 자세한 `xdm:channel`내용은 [경험 채널 스키마](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/channels/channel.schema.md) 사양을 참조하십시오. 일부 매핑 예는 아래 [표를](#example-channels)참조하십시오.
+
+#### 채널 매핑 예 {#example-channels}
+
+다음 표에서는 `xdm:channel` 스키마에 매핑된 마케팅 채널의 몇 가지 예를 제공합니다.
+
+| Channel | `@type` | `mediaType` | `mediaAction` |
 | --- | --- | --- | --- |
-| 유료 검색 | 유료 | 검색 | 클릭 |
-| 소셜 - 마케팅 | 획득 | SOCIAL | 클릭 |
-| 표시 | 유료 | 표시 | 클릭 |
-| 이메일 | 유료 | 이메일 | 클릭 |
-| 내부 레퍼러 | 소유 | DIRECT | 클릭 |
-| ViewThrough 표시 | 유료 | 표시 | 노출 횟수 |
-| QR 코드 리디렉션 | 소유 | DIRECT | 클릭 |
-| SMS 문자 메시지 | 소유 | SMS | 클릭 |
-| 모바일 | 소유 | 모바일 | 클릭 |
+| 유료 검색 | https:/<span>/ns.adobe.com/xdm/channel-types/search | paid | 클릭 수 |
+| 소셜 - 마케팅 | https:/<span>/ns.adobe.com/xdm/channel-types/social | even | 클릭 수 |
+| 표시 | https:/<span>/ns.adobe.com/xdm/channel-types/display | paid | 클릭 수 |
+| 이메일 | https:/<span>/ns.adobe.com/xdm/channel-types/email | paid | 클릭 수 |
+| 내부 레퍼러 | https:/<span>/ns.adobe.com/xdm/channel-types/direct | 소유 | 클릭 수 |
+| ViewThrough 표시 | https:/<span>/ns.adobe.com/xdm/channel-types/display | paid | 노출 횟수 |
+| QR 코드 리디렉션 | https:/<span>/ns.adobe.com/xdm/channel-types/direct | 소유 | 클릭 수 |
+| 모바일 | https:/<span>/ns.adobe.com/xdm/channel-types/mobile | 소유 | 클릭 수 |
+
+### xdm:productListItems
+
+이 필드는 제품 SKU, 이름, 가격 및 수량을 포함하여 고객이 선택한 제품을 나타내는 항목 배열입니다.
+
+**스키마 예**
+
+```json
+[
+  {
+    "xdm:SKU": "1002352692",
+    "xdm:lineItemId": "12345678",
+    "xdm:name": "24-Watt 8-Light Chrome Integrated LED Bath Light",
+    "xdm:currencyCode": "USD",
+    "xdm:quantity": 1,
+    "xdm:priceTotal": 159
+  },
+  {
+    "xdm:SKU": "3398033623",
+    "xdm:lineItemId": "48693817",
+    "xdm:name": "16ft RGB LED Strips",
+    "xdm:currencyCode": "USD",
+    "xdm:quantity": 1,
+    "xdm:priceTotal": 80
+  }
+]
+```
+
+에 대한 각 필수 하위 필드에 대한 자세한 `xdm:productListItems`내용은 [상거래 세부 정보 스키마](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-commerce.schema.md) 사양을 참조하십시오.
+
+### xdm:commerce
+
+이 필드에는 구매 발주 번호 및 지불 정보를 비롯하여 ExperienceEvent에 대한 상거래 관련 정보가 포함되어 있습니다.
+
+**스키마 예**
+
+```json
+{
+    "xdm:order": {
+      "xdm:purchaseID": "a8g784hjq1mnp3",
+      "xdm:purchaseOrderNumber": "123456",
+      "xdm:payments": [
+        {
+          "xdm:transactionID": "transactid-a111",
+          "xdm:paymentAmount": 59,
+          "xdm:paymentType": "credit_card",
+          "xdm:currencyCode": "USD"
+        },
+        {
+          "xdm:transactionId": "transactid-a222",
+          "xdm:paymentAmount": 100,
+          "xdm:paymentType": "gift_card",
+          "xdm:currencyCode": "USD"
+        }
+      ],
+      "xdm:currencyCode": "USD",
+      "xdm:priceTotal": 159
+    },
+    "xdm:purchases": {
+      "xdm:value": 1
+    }
+  }
+```
+
+에 대한 각 필수 하위 필드에 대한 자세한 `xdm:commerce`내용은 [상거래 세부 정보 스키마](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-commerce.schema.md) 사양을 참조하십시오.
+
+### xdm:웹
+
+이 필드는 상호 작용, 페이지 세부 사항 및 레퍼러 등 ExperienceEvent와 관련된 웹 세부 사항을 나타냅니다.
+
+**스키마 예**
+
+```json
+{
+  "xdm:webPageDetails": {
+    "xdm:siteSection": "Shopping Cart",
+    "xdm:server": "example.com",
+    "xdm:name": "Purchase Confirmation",
+    "xdm:URL": "https://www.example.com/orderConf",
+    "xdm:errorPage": false,
+    "xdm:homePage": false,
+    "xdm:pageViews": {
+      "xdm:value": 1
+    }
+  },
+  "xdm:webReferrer": {
+    "xdm:URL": "https://www.example.com/checkout",
+    "xdm:referrerType": "internal"
+  }
+}
+```
+
+에 대한 각 필수 하위 필드에 대한 자세한 `xdm:productListItems`내용은 ExperienceEvent [웹 세부 사항 스키마](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-web.schema.md) 사양을 참조하십시오.
+
+### xdm:마케팅
+
+이 필드에는 접점에서 활성 상태인 마케팅 활동과 관련된 정보가 포함되어 있습니다.
+
+**스키마 예**
+
+```json
+{
+  "xdm:trackingCode": "marketingcampaign111",
+  "xdm:campaignGroup": "50%_DISCOUNT",
+  "xdm:campaignName": "50%_DISCOUNT_USA"
+}
+```
+
+에 대한 각 필수 하위 필드에 대한 자세한 `xdm:productListItems`내용은 [마케팅 섹션 사양을 참조하십시오](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/marketing.schema.md) .
 
 ## 데이터 매핑 및 인제스트
 
