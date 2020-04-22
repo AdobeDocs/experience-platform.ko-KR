@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: 카탈로그 및 데이터 집합 도움말
 translation-type: tm+mt
-source-git-commit: 30ea8b4eeeb5f11bfca65f2931902aae63e8f08e
+source-git-commit: e135bc33e6c3daa411e85cb37e407322fd0bca5b
 
 ---
 
@@ -31,3 +31,4 @@ source-git-commit: 30ea8b4eeeb5f11bfca65f2931902aae63e8f08e
 * [Data Lake의 개인 정보 요청 처리](privacy.md)
 * [경험 플랫폼의 데이터 보호](data-protection.md)
 * [API 참조](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)
+* [플랫폼 릴리스 노트](https://www.adobe.com/go/platform-release-notes-en)
