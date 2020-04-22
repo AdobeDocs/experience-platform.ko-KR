@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 데이터 과학 작업 공간 문제 해결 가이드
 topic: Troubleshooting
 translation-type: tm+mt
-source-git-commit: 1f756e7bc71c9ff227757aee64af29e0772c24af
+source-git-commit: ef7c37438990d3bc42024e7fb106d781a5ebbd12
 
 ---
 
@@ -15,9 +15,9 @@ source-git-commit: 1f756e7bc71c9ff227757aee64af29e0772c24af
 
 ## JupiterLab 환경이 Google Chrome에서 로드되지 않음
 
-Google Chrome 브라우저의 최신 버전 80.x로 업데이트하면 기본적으로 모든 타사 쿠키가 차단됩니다. 이 새로운 정책은 JupiterLab이 Adobe Experience Platform 내에서 로드되지 않도록 할 수 있습니다.
+>[!IMPORTANT] 이 문제는 해결되었지만 Google Chrome 80.x 브라우저에 계속 있을 수 있습니다. Chrome 브라우저가 최신 버전인지 확인하십시오.
 
->[!NOTE] 이것은 일시적인 문제입니다. 타사 쿠키에 대한 종속성은 향후 릴리스에서 제거되도록 설정됩니다.
+Google Chrome 브라우저 버전 80.x에서는 기본적으로 모든 타사 쿠키가 차단됩니다. 이 정책은 JupiterLab이 Adobe Experience Platform 내에서 로드되지 않도록 할 수 있습니다.
 
 이 문제를 해결하려면 다음 단계를 수행하십시오.
 
@@ -45,7 +45,19 @@ Chrome 브라우저에서 오른쪽 상단으로 이동하고 설정을 선택�
 
 ## Safari에서 JupiterLab에 액세스할 수 없는 이유는 무엇입니까?
 
-Safari는 기본적으로 타사 쿠키를 비활성화합니다. Jupiter 가상 컴퓨터 인스턴스는 상위 프레임과 다른 도메인에 있으므로 Adobe Experience Platform에서는 현재 타사 쿠키를 활성화해야 합니다. 타사 쿠키를 활성화하거나 Google Chrome과 같은 다른 브라우저로 전환하십시오.
+Safari는 Safari &lt; 12에서 기본적으로 타사 쿠키를 비활성화합니다. Jupiter 가상 컴퓨터 인스턴스는 상위 프레임과 다른 도메인에 있으므로 Adobe Experience Platform에서는 현재 타사 쿠키를 활성화해야 합니다. 타사 쿠키를 활성화하거나 Google Chrome과 같은 다른 브라우저로 전환하십시오.
+
+Safari 12의 경우 사용자 에이전트를 &#39;Chrome&#39; 또는 &#39;Firefox&#39;로 전환해야 합니다. 사용자 에이전트를 전환하려면 Safari 메뉴를 열고 *환경* 설정을 **선택합니다**. 기본 설정 창이 나타납니다.
+
+![Safari 환경 설정](./images/faq/preferences.png)
+
+Safari 환경 설정 창에서 고급을 **선택합니다**. 그런 다음 메뉴 *모음에서* 현상 표시 메뉴를 선택합니다. 이 단계가 완료된 후 기본 설정 창을 닫을 수 있습니다.
+
+![Safari 고급](./images/faq/advanced.png)
+
+그런 다음 상단 내비게이션 막대에서 현상 **메뉴를 선택합니다** . 현상 드롭다운 내에서 *사용자 에이전트* 위로 *이동합니다*. 사용할 **Chrome** 또는 **Firefox** 사용자 에이전트 문자열을 선택할 수 있습니다.
+
+![현상 메뉴](./images/faq/user-agent.png)
 
 ## JupiterLab에서 파일을 업로드하거나 삭제하려고 할 때 &#39;403 금지&#39; 메시지가 표시되는 이유는 무엇입니까?
 
