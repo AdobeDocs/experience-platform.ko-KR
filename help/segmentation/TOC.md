@@ -1,9 +1,9 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Adobe Experience Platform Segmentation Service Help
+user-guide-title: Adobe Experience Platform 세그멘테이션 서비스 도움말
 translation-type: tm+mt
-source-git-commit: 4db66d34afa814715cbcf6fdf409e01b3fe2c0b8
+source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
 
 ---
 
@@ -39,3 +39,4 @@ source-git-commit: 4db66d34afa814715cbcf6fdf409e01b3fe2c0b8
    - [데이터를 내보낼 데이터 세트 만들기](tutorials/create-dataset-export-segment.md)
    - [세그먼트에 대한 데이터 사용 규정 준수 적용](tutorials/governance.md)
 - [API 참조](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)
+- [플랫폼 릴리스 노트](https://www.adobe.com/go/platform-release-notes-en)
