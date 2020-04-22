@@ -1,9 +1,9 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Experience Data Model (XDM) System Help
+user-guide-title: XDM(Experience Data Model) 시스템 도움말
 translation-type: tm+mt
-source-git-commit: eae597b5102f82bcf510695566bfaca606dc9e80
+source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
 
 ---
 
@@ -37,3 +37,4 @@ source-git-commit: eae597b5102f82bcf510695566bfaca606dc9e80
    * [임시 스키마(API) 만들기](tutorials/ad-hoc.md)
 * [문제 해결 가이드](troubleshooting-guide.md)
 * [API 참조](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)
+* [플랫폼 릴리스 노트](https://www.adobe.com/go/platform-release-notes-en)
