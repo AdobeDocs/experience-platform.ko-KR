@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform 데이터 거버넌스 도움말
 translation-type: tm+mt
-source-git-commit: 30ea8b4eeeb5f11bfca65f2931902aae63e8f08e
+source-git-commit: e135bc33e6c3daa411e85cb37e407322fd0bca5b
 
 ---
 
@@ -29,3 +29,4 @@ source-git-commit: 30ea8b4eeeb5f11bfca65f2931902aae63e8f08e
    * [마케팅 작업](api/marketing-actions.md)
    * [평가](api/evaluation.md)
 * [API 참조](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml)
+* [플랫폼 릴리스 노트](https://www.adobe.com/go/platform-release-notes-en)
