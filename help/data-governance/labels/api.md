@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 'API를 사용하여 데이터 사용 레이블 관리 '
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: cac6ab568f030cf86ee68a1df9e45a3ac9d421cb
+source-git-commit: d685f1851badf54ce1d1ac3cbacd69d62894c33f
 
 ---
 
@@ -143,8 +143,6 @@ curl -X POST \
 
 DELETE 요청을 수행하여 데이터 세트에 적용된 레이블을 삭제할 수 있습니다.
 
->[!NOTE] 이 작업은 상위 데이터 집합을 삭제하도록 준비하는 경우에만 사용해야 합니다.
-
 **API 형식**
 
 ```http
@@ -168,7 +166,7 @@ curl -X DELETE \
 
 **응답**
 
-성공적인 응답 HTTP 상태 200(확인)은 레이블이 삭제되었음을 나타냅니다. 별도의 호출에서 데이터 세트에 대한 기존 레이블을 [](#lookup) 검색하여 확인할 수 있습니다.
+레이블이 삭제되었음을 나타내는 HTTP 상태 200(확인)에 성공한 응답 별도의 호출에서 데이터 세트에 대한 기존 레이블을 [](#lookup) 검색하여 확인할 수 있습니다.
 
 ## 다음 단계
 
