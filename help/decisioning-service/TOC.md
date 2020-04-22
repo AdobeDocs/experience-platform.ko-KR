@@ -1,9 +1,9 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Adobe Experience Platform Decisioning Service
+user-guide-title: Adobe Experience Platform 의사 결정 서비스
 translation-type: tm+mt
-source-git-commit: bfe2854730f0b84e15848230808c4dd4ede2336a
+source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
 
 ---
 
@@ -17,3 +17,4 @@ source-git-commit: bfe2854730f0b84e15848230808c4dd4ede2336a
    - [API를 사용하여 의사 결정 서비스 런타임 사용](tutorials/runtime.md)
    - [API를 사용하여 의사 결정 서비스 엔티티 관리](tutorials/entities.md)
 - [API 참조](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/decisioning-ode.yaml)
+- [플랫폼 릴리스 노트](https://www.adobe.com/go/platform-release-notes-en)
