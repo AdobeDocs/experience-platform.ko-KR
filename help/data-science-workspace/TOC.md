@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform 데이터 과학 작업 영역 도움말
 translation-type: tm+mt
-source-git-commit: 8825ed17f4e1c8b325fab9256dfbc666f3ea8462
+source-git-commit: 721e12606227a0c61d3d25c4f50df2046e47dd8e
 
 ---
 
@@ -53,3 +53,5 @@ source-git-commit: 8825ed17f4e1c8b325fab9256dfbc666f3ea8462
 * [레서피 및 노트북 마이그레이션 가이드](recipe-notebook-migration.md)
 * [문제 해결 가이드](troubleshooting-guide.md)
 * [API 참조](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)
+* [플랫폼 릴리스 노트](../release-notes/latest/latest.md)
+* [플랫폼 릴리스 노트](http://www.adobe.com/go/platform-release-notes-en)
