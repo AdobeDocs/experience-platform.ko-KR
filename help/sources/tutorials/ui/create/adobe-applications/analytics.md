@@ -4,7 +4,7 @@ solution: Experience Platform
 title: UI에서 Adobe Analytics 소스 커넥터 만들기
 topic: overview
 translation-type: tm+mt
-source-git-commit: f09ff4d1b159a6989868c5cfc35b361cfb640a99
+source-git-commit: ac1e5dbe435d9e85e8ce3ad90c60dd31ba9248ff
 
 ---
 
@@ -23,7 +23,7 @@ Adobe Experience <a href="https://platform.adobe.com" target="_blank">Platform�
 
 >[!NOTE] 서로 다른 데이터를 가져오기 위해 소스에 대한 여러 연결 기능을 사용할 수 있습니다.
 
-![](../../../..//images/tutorials/create/analytics/AA-source_activity.png)
+![](/help/sources/images/tutorials/create/analytics/AA-source_activity.png)
 
 사용 가능한 보고서 세트 목록에서 플랫폼으로 가져올 보고서 세트를 선택하고 다음을 **클릭합니다**.
 
