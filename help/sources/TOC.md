@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform 소스 커넥터 도움말
 translation-type: tm+mt
-source-git-commit: 2fb034dced679d48c90c41ab3254a30fc14b43e0
+source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
 
 ---
 
@@ -153,3 +153,4 @@ source-git-commit: 2fb034dced679d48c90c41ab3254a30fc14b43e0
       - [프로토콜 커넥터에 대한 데이터 흐름 구성](tutorials/ui/dataflow/protocols.md)
    - [인바운드 데이터를 활성화하여 고객 프로필 채우기](tutorials/ui/profile.md)
    - [계정 및 데이터 세트 흐름 모니터링](tutorials/ui/monitor.md)
+- [플랫폼 릴리스 노트](https://www.adobe.com/go/platform-release-notes-en)
