@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 하나의 HTTP 요청으로 여러 메시지 스트리밍
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 79466c78fd78c0f99f198b11a9117c946736f47a
+source-git-commit: cd251c0816a7e653596b6c3faaceb0cebad367ea
 
 ---
 
@@ -47,7 +47,7 @@ Experience Platform에 스트리밍 데이터를 시작하려면 먼저 스트�
 **API 형식**
 
 ```http
-POST /collection/{CONNECTION_ID}
+POST /collection/batch/{CONNECTION_ID}
 ```
 
 | 속성 | 설명 |
@@ -57,7 +57,7 @@ POST /collection/{CONNECTION_ID}
 **요청**
 
 ```shell
-curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID} \
+curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
   -H 'Content-Type: application/json' \
   -d '{
   "messages": [
@@ -229,7 +229,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID} \
 **API 형식**
 
 ```http
-POST /collection/{CONNECTION_ID}
+POST /collection/batch/{CONNECTION_ID}
 ```
 
 | 속성 | 설명 |
@@ -239,7 +239,7 @@ POST /collection/{CONNECTION_ID}
 **요청**
 
 ```shell
-curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID} \
+curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
   -H 'Content-Type: application/json' \
   -d '{
   "messages": [
