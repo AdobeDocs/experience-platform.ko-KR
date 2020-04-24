@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: 지능형 서비스 도움말
 translation-type: tm+mt
-source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
+source-git-commit: 9bdd2b17953c1c72243ae07be3e40d53ced9360b
 
 ---
 
@@ -21,7 +21,10 @@ source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
 * 고객 AI {#customer-ai}
    * [개요](customer-ai/overview.md)
    * [고객 AI 시작하기](customer-ai/getting-started.md)
-   * [유저 인터페이스 가이드](customer-ai/user-guide.md)
-   * [인사이트 검색](customer-ai/discover-insights.md)
-   * [스코어 다운로드](customer-ai/download-scores.md)
+   * [입력 및 출력](customer-ai/input-output.md)
+   * 유저 인터페이스 가이드 {#user-guide}
+      * [인스턴스 구성](customer-ai/user-guide/configure.md)
+      * [인사이트 검색](customer-ai/user-guide/discover-insights.md)
+      * [고객 AI 점수를 사용하여 세그먼트 만들기](customer-ai/user-guide/create-segment.md)
+      * [스코어 다운로드](customer-ai/user-guide/download-scores.md)
 * [플랫폼 릴리스 노트](https://www.adobe.com/go/platform-release-notes-en)
