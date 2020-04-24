@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 피쳐 파이프라인 만들기
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: b9b0578a43182650b3cfbd71f46bcb817b3b0cda
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -14,17 +14,6 @@ source-git-commit: b9b0578a43182650b3cfbd71f46bcb817b3b0cda
 Adobe Experience Platform을 사용하면 Sensei Machine Learning Framework 런타임(이하 &quot;런타임&quot;이라 한다)을 통해 기능 엔지니어링의 규모에 맞게 사용자 정의 기능 파이프라인을 구축 및 생성할 수 있습니다.
 
 이 문서에서는 기능 파이프라인에서 발견되는 다양한 클래스에 대해 설명하고 PySpark 및 Spark에서 모델 작성 SDK를 사용하여 사용자 정의 기능 파이프라인을 만드는 [단계별](./sdk.md) 자습서를 제공합니다.
-
-이 자습서에서는 다음 단계를 다룹니다.
-- [Feature Pipeline 클래스 구현](#implement-your-feature-pipeline-classes)
-   - [구성 파일에서 변수 정의](#define-variables-in-the-configuration-json-file)
-   - [DataLoader를 사용하여 입력 데이터 준비](#prepare-the-input-data-with-dataloader)
-   - [DatasetTransformer를 사용하여 데이터 세트 변환](#transform-a-dataset-with-datasettransformer)
-   - [Feature PipelineFactory를 사용하여 데이터 기능 엔지니어링](#engineer-data-features-with-featurepipelinefactory)
-   - [DataSaver를 사용하여 기능 데이터 세트 저장](#store-your-feature-dataset-with-datasaver)
-   - [응용 프로그램 파일에서 구현된 클래스 이름을 지정합니다](#specify-your-implemented-class-names-in-the-application-file)
-- [이진 객체 작성](#build-the-binary-artifact)
-- [API를 사용하여 피쳐 파이프라인 엔진 생성](#create-a-feature-pipeline-engine-using-the-api)
 
 ## 기능 파이프라인 클래스
 
@@ -44,11 +33,11 @@ Feature Pipeline 작업이 시작되면 Runtime은 먼저 DataLoader를 실행�
 ![](../images/authoring/feature-pipeline/FeaturePipeline_Runtime_flow.png)
 
 
-## Feature Pipeline 클래스 구현
+## Feature Pipeline 클래스 구현 {#implement-your-feature-pipeline-classes}
 
 다음 섹션에서는 기능 파이프라인에 대한 필수 클래스 구현에 대한 세부 사항과 예제를 제공합니다.
 
-### 구성 JSON 파일에서 변수 정의
+### 구성 JSON 파일에서 변수 정의 {#define-variables-in-the-configuration-json-file}
 
 구성 JSON 파일은 키-값 쌍으로 구성되며 런타임 동안 나중에 정의할 변수를 지정할 수 있도록 고안되었습니다. 이러한 키-값 쌍은 입력 데이터 집합 위치, 출력 데이터 집합 ID, 테넌트 ID, 열 머리글 등과 같은 속성을 정의할 수 있습니다.
 
@@ -96,7 +85,7 @@ val input_dataset_id: String = configProperties.get("datasetId")
 ```
 
 
-### DataLoader를 사용하여 입력 데이터 준비
+### DataLoader를 사용하여 입력 데이터 준비 {#prepare-the-input-data-with-dataloader}
 
 DataLoader는 입력 데이터의 검색 및 필터링을 담당합니다. DataLoader의 구현은 추상 클래스를 `DataLoader` 확장하고 추상 메서드를 재정의해야 합니다 `load`.
 
@@ -200,7 +189,7 @@ class MyDataLoader extends DataLoader {
 
 
 
-### DatasetTransformer를 사용하여 데이터 세트 변환
+### DatasetTransformer를 사용하여 데이터 세트 변환 {#transform-a-dataset-with-datasettransformer}
 
 DatasetTransformer는 입력 DataFrame을 변형하기 위한 논리를 제공하고 새로운 파생된 DataFrame을 반환합니다. 이 클래스는 FeaturePipelineFactory와 함께 작업하거나, 단독 기능 엔지니어링 구성 요소로 작업하거나, 이 클래스를 구현하지 않도록 선택할 수 있습니다.
 
@@ -255,7 +244,7 @@ class MyDatasetTransformer extends DatasetTransformer {
 
 
 
-### Feature PipelineFactory를 사용하여 데이터 기능 엔지니어링
+### Feature PipelineFactory를 사용하여 데이터 기능 엔지니어링 {#engineer-data-features-with-featurepipelinefactory}
 
 Feature PipelineFactory를 사용하면 Spark Pipeline을 통해 일련의 Spark Transformers를 정의 및 연결함으로써 기능 엔지니어링 로직을 구현할 수 있습니다. 이 클래스는 DatasetTransformer와 함께 작업하거나 단독 기능 엔지니어링 구성 요소로 작업하거나 이 클래스를 구현하지 않도록 선택할 수 있습니다.
 
@@ -334,7 +323,7 @@ class MyFeaturePipelineFactory(uid:String) extends FeaturePipelineFactory(uid) {
 
 
 
-### DataSaver를 사용하여 기능 데이터 세트 저장
+### DataSaver를 사용하여 기능 데이터 세트 저장 {#store-your-feature-dataset-with-datasaver}
 
 DataSaver는 결과 기능 데이터 세트를 스토리지 위치에 저장할 책임이 있습니다. DataSaver를 구현하려면 개요 클래스를 `DataSaver` 확장하고 추상 방법을 무시해야 합니다 `save`.
 
@@ -467,7 +456,7 @@ class MyDataSaver extends DataSaver {
 }
 ```
 
-### 응용 프로그램 파일에서 구현된 클래스 이름을 지정합니다
+### 응용 프로그램 파일에서 구현된 클래스 이름을 지정합니다 {#specify-your-implemented-class-names-in-the-application-file}
 
 Feature Pipeline 클래스가 정의 및 구현되었으므로 애플리케이션 파일에서 클래스 이름을 지정해야 합니다.
 
@@ -515,7 +504,7 @@ feature.dataSaver=MyDataSaver
 
 
 
-## 이진 객체 작성
+## 이진 객체 작성 {#build-the-binary-artifact}
 
 이제 Feature Pipeline 클래스가 구현되었으므로 이를 작성하여 바이너리 객체에 컴파일한 다음 API 호출을 통해 Feature Pipeline을 생성하는 데 사용할 수 있습니다.
 
@@ -543,11 +532,11 @@ mvn clean install
 
 피쳐 파이프라인을 성공적으로 작성하면 `.jar` `/dist` 디렉토리에 가공물이 생성되며, 이 가공물은 피쳐 파이프라인을 생성하는 데 사용됩니다.
 
-## API를 사용하여 피쳐 파이프라인 엔진 생성
+## API를 사용하여 피쳐 파이프라인 엔진 생성 {#create-a-feature-pipeline-engine-using-the-api}
 
 이제 Feature Pipeline을 제작하여 바이너리 객체를 만들었으므로 Sensei Machine Learning API를 사용하여 Feature Pipeline Engine을 [만들 수 있습니다](../api/engines.md#create-a-feature-pipeline-engine-using-binary-artifacts). Feature Pipeline Engine을 성공적으로 생성하면 응답 본문의 일부로 엔진 ID가 제공되므로 다음 단계를 계속하기 전에 이 값을 저장해야 합니다.
 
-## 다음 단계
+## 다음 단계 {#next-steps}
 
 [//]: # (Next steps section should refer to tutorials on how to score data using the Feature Pipeline Engine. Update this document once those tutorials are available)
 
