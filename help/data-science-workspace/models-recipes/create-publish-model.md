@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 기계 학습 모델 연습 만들기 및 게시
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -47,7 +47,7 @@ Adobe Experience Platform Data Science Workspace는 미리 작성된 제품 추�
    * 배치:데이터 세트는 배치로 구성됩니다. 일괄 처리란 일정 기간 동안 수집된 데이터 집합이며 하나의 단위로 함께 처리됩니다.
    * JupiterLab:Jupiter [Lab은](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) Project Jupiter를 위한 오픈 소스 웹 기반 인터페이스로 Experience Platform과 긴밀하게 통합되어 있습니다.
 
-## 데이터 준비
+## 데이터 준비 {#prepare-your-data}
 
 고객에게 개인화된 제품을 추천할 수 있는 기계 학습 모델을 만들려면 웹 사이트에서 구매한 이전 고객을 분석해야 합니다. 이 섹션에서는 Adobe Analytics를 통해 이 데이터를 플랫폼으로 인제스트하는 방법과 이 데이터를 머신 러닝 모델에서 사용할 기능 데이터 세트로 변환하는 방법을 설명합니다.
 
@@ -68,7 +68,7 @@ Adobe Experience Platform Data Science Workspace는 미리 작성된 제품 추�
 | 추천 입력 데이터 집합 | 권장 사항 입력 스키마 | Analytics 데이터는 기능 파이프라인을 사용하여 교육 데이터 세트로 변환됩니다. 이 데이터는 제품 권장 사항 기계 학습 모델을 교육하는 데 사용됩니다. `itemid` 해당 고객이 구매한 제품에 `userid` 해당합니다. |
 | Recommendations 출력 데이터 집합 | Recommendations 출력 스키마 | 점수 지정 결과가 저장되는 데이터 세트에 각 고객에 대해 권장되는 제품 목록이 포함됩니다. |
 
-## 모델 작성
+## 모델 작성 {#author-your-model}
 
 데이터 과학 작업 공간 라이프사이클의 두 번째 구성 요소에는 레서피 및 모델 작성이 포함됩니다. 제품 권장 사항 레서피는 이전 구매 데이터 및 머신 러닝을 활용하여 제품 권장 사항을 규모에 맞게 생성하도록 설계되었습니다.
 
@@ -85,7 +85,7 @@ Adobe Experience Platform Data Science Workspace는 미리 작성된 제품 추�
 
 이제 제품 추천 레서피에 필요한 입력 및 출력 스키마를 검토했습니다. 이제 다음 섹션으로 이동하여 제품 추천 모델을 만들고, 교육하고, 평가하는 방법을 확인할 수 있습니다.
 
-## 모델 트레이닝 및 평가
+## 모델 트레이닝 및 평가 {#train-and-evaluate-your-model}
 
 이제 데이터가 준비되고 레서피 사용 준비가 되었으므로 머신 러닝 모델을 생성, 트레이닝 및 평가할 수 있습니다.
 
@@ -130,7 +130,7 @@ Adobe Experience Platform Data Science Workspace는 미리 작성된 제품 추�
 3. 오른쪽 레일에서 각 교육 실행에 사용되는 데이터 집합, 스키마 및 구성 매개 변수를 볼 수 있습니다.
 4. [모델] 페이지로 돌아가서 평가 지표를 관찰하여 가장 성과가 좋은 교육 실행을 확인합니다.
 
-## 모델 운영
+## 모델 운영 {#operationalize-your-model}
 
 데이터 과학 워크플로우의 마지막 단계는 데이터 저장소에서 인사이트를 얻고 사용하기 위해 모델을 조작하는 것입니다.
 
