@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 고객 AI에서 점수 다운로드
 topic: Downloading scores
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: 387cbdebccb9ae54a2907d1afe220e9711927ca6
 
 ---
 
@@ -34,7 +34,7 @@ source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
 
 ![데이터 집합 ID](./images/download-scores/access-scores.png)
 
-## 배치 ID 검색
+## 배치 ID 검색 {#retrieve-your-batch-id}
 
 이전 단계에서 데이터 세트 ID를 사용하여 일괄 처리 ID를 검색하려면 카탈로그 API를 호출해야 합니다. 조직에 속한 배치 목록 대신 단일 배치를 반환하기 위해 이 API 호출에 추가 쿼리 매개 변수가 사용됩니다. 사용 가능한 쿼리 매개 변수 유형에 대한 자세한 내용은 쿼리 매개 변수를 [사용하여 카탈로그 데이터](../../catalog/api/filter-data.md)필터링에 대한 가이드를 참조하십시오.
 
@@ -98,7 +98,7 @@ score batch ID 개체 내에는 `relatedObjects` 배열이 있습니다. 이 배
 }
 ```
 
-## 배치 ID로 다음 API 호출 검색
+## 배치 ID로 다음 API 호출 검색 {#retrieve-the-next-api-call-with-your-batch-id}
 
 배치 ID가 있으면 새 GET 요청을 만들 수 `/batches`있습니다. 요청은 다음 API 요청으로 사용되는 링크를 반환합니다.
 
@@ -152,7 +152,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/035e2520-5
 }
 ```
 
-## 파일 검색
+## 파일 검색 {#retrieving-your-files}
 
 이전 단계에서 얻은 `href` 값을 API 호출로 사용하여 새 GET 요청을 만들어 파일 디렉토리를 검색합니다.
 
