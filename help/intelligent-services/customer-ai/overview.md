@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 고객 AI 개요
 topic: Customer AI overview
 translation-type: tm+mt
-source-git-commit: 7987cec12c22e9b48ddc9fdc263d7cd28bd172f2
+source-git-commit: f4deee30f0f03b75dc7ee02152ceb6c519858c7c
 
 ---
 
@@ -42,4 +42,4 @@ source-git-commit: 7987cec12c22e9b48ddc9fdc263d7cd28bd172f2
 
 ## 다음 단계
 
-먼저 [시작](./getting-started.md) 안내서를 팔로우하십시오. 이 안내서에서는 고객 AI에 필요한 모든 사전 요청 설정을 안내합니다. 이미 모든 자격 증명과 데이터를 준비했다면 고객 AI [사용 안내서를](./user-guide.md)참조하십시오. 고객 AI를 사용하기 위한 단계를 제공하고 성향 점수를 사용하여 고객 세그먼트를 만드는 방법을 보여줍니다.
+먼저 [시작](./getting-started.md) 안내서를 팔로우하십시오. 이 안내서에서는 고객 AI에 필요한 모든 사전 요구 사항 설정을 안내합니다. 이미 모든 자격 증명과 데이터를 준비했다면 고객 AI 인스턴스 [구성을 방문하십시오](./user-guide/configure.md). 고객 AI를 사용하기 위한 단계를 제공합니다.
