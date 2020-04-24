@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 데이터 과학 작업 공간 연습
 topic: Walkthrough
 translation-type: tm+mt
-source-git-commit: 1f756e7bc71c9ff227757aee64af29e0772c24af
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -45,7 +45,7 @@ Adobe Experience Platform UI 파섹 이 페이지에서 JupiterLab launcher를 �
 
 ![](./images/walkthrough/retail_sales.png)
 
-### 설정
+### 설정 {#setup}
 
 소매 판매 전자 필기장이 열리면 먼저 워크플로우에 필요한 라이브러리를 불러오는 것이 좋습니다. 다음 목록은 각 용도에 대한 간략한 설명을 제공합니다.
 - **숫자** - 다차원 배열 및 행렬에 대한 지원이 추가된 과학 컴퓨팅 라이브러리
@@ -55,7 +55,7 @@ Adobe Experience Platform UI 파섹 이 페이지에서 JupiterLab launcher를 �
 - **sklearn** - 분류, 회귀, 지원 벡터 및 클러스터 알고리즘을 제공하는 머신 러닝 라이브러리
 - **경고** - 경고 메시지를 제어하는 라이브러리
 
-### 데이터 살펴보기
+### 데이터 살펴보기 {#exploring-data}
 
 #### 데이터 로드
 
@@ -93,7 +93,7 @@ df.describe()
 
 이를 통해 각 특성에 대해 6435개의 인스턴스가 있음을 확인할 수 있습니다. 또한 평균, 표준 편차(표준 편차), 최소, 최대 및 사분위수와 같은 통계 정보가 제공됩니다. 이렇게 하면 데이터의 편차에 대한 정보가 제공됩니다. 다음 섹션에서는 이 정보와 함께 작동하는 시각화를 검토하여 데이터에 대한 완벽한 이해를 제공할 것입니다.
 
-에 대한 최소 및 최대 값을 `store`보면 데이터가 나타내는 45개의 고유 스토어가 있습니다. 또한 `storeTypes` 스토어가 무엇인지 구별하는 것이 있습니다. 다음 작업을 `storeTypes` 수행하여 분포를 확인할 수 있습니다.
+에 대한 최소 및 최대 값을 `store`보면 데이터가 나타내는 고유 저장소가 45개 있음을 알 수 있습니다. 또한 `storeTypes` 스토어가 무엇인지 구별하는 것이 있습니다. 다음 작업을 `storeTypes` 수행하여 분포를 확인할 수 있습니다.
 
 ![](./images/walkthrough/df_groupby.png)
 
@@ -129,7 +129,7 @@ df.describe()
 
 가운데 아래에 있는 대각선을 보세요. 이것은 변수를 자신과 비교할 때 완전한 긍정적인 상관관계가 있음을 보여줍니다. 긍정적인 상관관계는 1에 가깝고 약한 상관관계는 0에 가깝다. 음수 상관 관계는 역 트렌드를 나타내는 음수 계수와 함께 표시됩니다.
 
-### 기능 엔지니어링
+### 기능 엔지니어링 {#feature-engineering}
 
 이 섹션에서는 소매 데이터 세트를 수정할 것입니다. 다음 작업을 수행합니다.
 
@@ -177,7 +177,7 @@ df.describe()
 
 ![](./images/walkthrough/df_info_new.png)
 
-### 교육 및 확인
+### 교육 및 확인 {#training-and-verification}
 
 이제 데이터의 모델을 만들고 미래의 매출을 예측할 수 있는 가장 효과적인 모델을 선택해야 합니다. 다음 5가지 알고리즘을 평가합니다.
 
