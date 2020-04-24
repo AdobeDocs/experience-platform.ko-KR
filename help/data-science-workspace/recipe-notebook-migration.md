@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 레서피 및 노트북 마이그레이션 가이드
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 057001b0b4488f578bdd07387a66c647a91798c8
+source-git-commit: 36305d9098f24b40efd333e7d8a331ebca41ca59
 
 ---
 
@@ -144,12 +144,12 @@ COPY target/ml-retail-sample-spark-*-jar-with-dependencies.jar /application.jar
 
 ### 종속성 변경(Spark) {#change-dependencies-spark}
 
-기존 레서피를 사용하는 경우, mum.xml 파일에서 종속성을 변경해야 합니다. model-authoring-sdk 종속성 버전을 1.0.0으로 변경합니다.그런 다음 파일 내의 Spark 버전을 2.4.3으로 업데이트하고 Scala 버전을 2.11.12로 업데이트합니다.
+기존 레서피를 사용하는 경우, mum.xml 파일에서 종속성을 변경해야 합니다. model-authoring-sdk 종속성 버전을 2.0.0으로 변경합니다.그런 다음 파일 내의 Spark 버전을 2.4.3으로 업데이트하고 Scala 버전을 2.11.12로 업데이트합니다.
 
 ```json
 <groupId>com.adobe.platform.ml</groupId>
 <artifactId>authoring-sdk_2.11</artifactId>
-<version>1.0.0</version>
+<version>2.0.0</version>
 <classifier>jar-with-dependencies</classifier>
 ```
 
