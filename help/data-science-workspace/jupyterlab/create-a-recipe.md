@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Jupiter 노트북을 사용하여 레서피 만들기
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 10f157e0c9f8ab6e487b7dc83416b9e3b2f324c4
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -12,18 +12,6 @@ source-git-commit: 10f157e0c9f8ab6e487b7dc83416b9e3b2f324c4
 # Jupiter 노트북을 사용하여 레서피 만들기
 
 이 자습서는 두 개의 주요 섹션으로 구성됩니다. 먼저 JupiterLab Notebook 내에서 템플릿을 사용하여 기계 학습 모델을 만듭니다. 그런 다음 JupiterLab에서 레서피 워크플로우에 대한 노트북을 실행하여 데이터 과학 작업 공간 내에서 레서피를 만들 수 있습니다.
-- [JupiterLab 노트북 환경 시작하기](#get-started-with-the-jupyterlab-notebook-environment)
-- [레서피 파일을 편집합니다.](#make-edits-to-recipe-files)
-- [Recipe Builder 노트북 시작하기](#get-started-with-the-recipe-builder-notebook)
-   - [요구 사항 파일](#requirements-file)
-   - [구성 파일](#configuration-files)
-   - [교육 데이터 로더](#training-data-loader)
-   - [점수 데이터 로더](#scoring-data-loader)
-   - [파이프라인 파일](#pipeline-file)
-   - [평가기 파일](#evaluator-file)
-   - [데이터 보호기 파일](#data-saver-file)
-- [트레이닝 및 점수](#training-and-scoring)
-- [레서피 만들기](#create-recipe)
 
 ## 개념 도입:
 
@@ -45,7 +33,7 @@ Recipe Builder 전자 필기장을 사용하면 노트북 내에서 트레이닝
 
 launcher에서 Recipe Builder 전자 필기장을 클릭하면 해당 전자 필기장이 탭에 열립니다. 전자 필기장에 사용되는 템플릿은 Python Retail Sales Forecast Recipe이며 [이 공용 저장소에서 찾을 수 있습니다](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail/)
 
-도구 모음에는 기차, 점수, 레서피 만들기 등 세 가지 추가 **작업이****** **있습니다**. 이러한 아이콘은 Recipe Builder 전자 필기장에만 나타납니다. 이러한 작업에 대한 자세한 내용은 전자 필기장에서 레서피를 [작성한 후 교육 및 점수 지정 섹션에서](#training-and-scoring) 설명합니다.
+도구 모음에는 세 가지 추가 작업 즉, **[!UICONTROL Train]****[!UICONTROL Score]** 및 **[!UICONTROL Create Recipe]**&#x200B;가 있습니다. 이러한 아이콘은 Recipe Builder 전자 필기장에만 나타납니다. 이러한 작업에 대한 자세한 내용은 전자 필기장에서 레서피를 [작성한 후 교육 및 점수 지정 섹션에서](#training-and-scoring) 설명합니다.
 
 ![](../images/jupyterlab/create-recipe/toolbar_actions.png)
 
@@ -69,7 +57,7 @@ launcher에서 Recipe Builder 전자 필기장을 클릭하면 해당 전자 필
 - [평가기 파일](#evaluator-file)
 - [데이터 보호기 파일](#data-saver-file)
 
-### 요구 사항 파일
+### 요구 사항 파일 {#requirements-file}
 
 요구 사항 파일은 레서피에 사용할 추가 라이브러리를 선언하는 데 사용됩니다. 종속성이 있는 경우 버전 번호를 지정할 수 있습니다. 추가 라이브러리를 보려면 https://anaconda.org을 참조하십시오. 이미 사용 중인 기본 라이브러리 목록은 다음과 같습니다.
 
@@ -84,7 +72,7 @@ data_access_sdk_python
 >[!NOTE]
 >추가한 라이브러리 또는 특정 버전은 위의 라이브러리와 호환되지 않을 수 있습니다.
 
-### 구성 파일
+### 구성 파일 {#configuration-files}
 
 구성 파일 `training.conf` 및 `scoring.conf`는 하이퍼링크 매개 변수를 추가하는 것뿐만 아니라 교육 및 점수 지정에 사용할 데이터 세트를 지정하는 데 사용됩니다. 트레이닝 및 채점에는 별도의 구성이 있습니다.
 
@@ -108,7 +96,7 @@ Adobe Experience Platform에서 스키마 [및 데이터](https://platform.adobe
 - `ML_FRAMEWORK_IMS_ML_TOKEN`
 - `ML_FRAMEWORK_IMS_TENANT_ID`
 
-## 교육 데이터 로더
+## 교육 데이터 로더 {#training-data-loader}
 
 교육 데이터 로더의 목적은 시스템 학습 모델을 만드는 데 사용되는 데이터를 인스턴스화하기 위한 것입니다. 일반적으로 교육 데이터 로더에서 수행하는 두 가지 작업이 있습니다.
 - 플랫폼에서 데이터 로드
@@ -116,7 +104,7 @@ Adobe Experience Platform에서 스키마 [및 데이터](https://platform.adobe
 
 다음 두 섹션은 데이터 로드 및 데이터 준비 단계를 진행합니다.
 
-### 데이터 로드
+### 데이터 로드 {#loading-data}
 
 이 단계에서는 [팬더 데이터 프레임을 사용합니다](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html). 플랫폼 SDK(`platform_sdk`)를 사용하여 Adobe Experience Platform의 파일에서 또는 팬더의 `read_csv()` 기능이나 `read_json()` 기능을 사용하여 외부 소스에서 데이터를 로드할 수 있습니다.
 
@@ -126,11 +114,11 @@ Adobe Experience Platform에서 스키마 [및 데이터](https://platform.adobe
 >[!NOTE]
 >Recipe Builder 전자 필기장에서 데이터는 `platform_sdk` 데이터 로더를 통해 로드됩니다.
 
-### 플랫폼 SDK
+### 플랫폼 SDK {#platform-sdk}
 
 데이터 로더 사용에 대한 자세한 자습서는 `platform_sdk` 플랫폼 SDK [가이드를](../authoring/platform-sdk.md)참조하십시오. 이 자습서에서는 인증 빌드, 기본 데이터 읽기 및 기본적인 데이터 쓰기에 대한 정보를 제공합니다.
 
-### 외부 소스
+### 외부 소스 {#external-sources}
 
 이 섹션에서는 JSON 또는 CSV 파일을 팬더 개체에 가져오는 방법을 보여 줍니다. 팬더 라이브러리의 공식 설명서는 다음과 같습니다.
 - [read_csv](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html)
@@ -180,7 +168,7 @@ df = prodreader.load(data_set_id=configProperties['trainingDataSetId'],
 
 이제 데이터를 준비하면 데이터 준비 및 기능 엔지니어링부터 시작할 수 있습니다.
 
-### 데이터 준비 및 기능 엔지니어링
+### 데이터 준비 및 기능 엔지니어링 {#data-preparation-and-feature-engineering}
 
 데이터가 로드되면 데이터가 준비되고 `train` 및 `val` 데이터 세트로 분할됩니다. 샘플 코드는 다음과 같습니다.
 
@@ -222,7 +210,7 @@ dataframe.drop('date', axis=1, inplace=True)
 
 이 `load()` 함수는 `train` 및 `val` 데이터 세트를 출력물로 작성해야 합니다.
 
-### 점수 데이터 로더
+### 점수 데이터 로더 {#scoring-data-loader}
 
 점수 지정을 위해 데이터를 로드하는 절차는 `split()` 함수의 로드 교육 데이터와 유사합니다. Adobe는 데이터 액세스 SDK를 사용하여 `scoringDataSetId` `recipe.conf` 파일에 있는 데이터로부터 데이터를 로드합니다.
 
@@ -292,11 +280,11 @@ df.dropna(0, inplace=True)
 
 점수 데이터 로더의 `load()` 함수는 점수 데이터 세트를 출력로 완료해야 합니다.
 
-### 파이프라인 파일
+### 파이프라인 파일 {#pipeline-file}
 
 이 `pipeline.py` 파일에는 트레이닝 및 점수 책정기가 포함됩니다.
 
-### 트레이닝
+### 트레이닝 {#training}
 
 트레이닝의 목적은 트레이닝 데이터 세트에 있는 기능과 레이블을 사용하여 모델을 만드는 것입니다.
 
@@ -341,7 +329,7 @@ def train(configProperties, data):
 
 애플리케이션에 따라 `GradientBoostingRegressor()` 함수에 인수가 있습니다. `xTrainingDataset` 에는 트레이닝에 사용되는 기능이 포함되어 있어야 하며 레이블은 `yTrainingDataset` 포함되어야 합니다.
 
-### 점수 지정
+### 점수 지정 {#scoring}
 
 이 `score()` 함수에는 점수 지정 알고리즘이 포함되어 있어야 하며 모델이 얼마나 성공적으로 수행되는지를 나타내는 측정을 반환합니다. 이 `score()` 기능은 점수 데이터 세트 레이블과 트레이닝된 모델을 사용하여 예측된 기능 세트를 생성합니다. 그런 다음 이러한 예측된 값을 점수 데이터 세트의 실제 기능과 비교합니다. 이 예에서는 이 `score()` 함수가 교육 모델을 사용하여 점수 지정 데이터 세트의 레이블을 사용하여 기능을 예측합니다. 예측된 기능이 반환됩니다.
 
@@ -363,11 +351,11 @@ def score(configProperties, data, model):
     return data
 ```
 
-### 평가기 파일
+### 평가기 파일 {#evaluator-file}
 
 이 `evaluator.py` 파일에는 트레이닝된 레서피를 평가하는 방법과 교육 데이터를 분할하는 방법에 대한 로직이 포함되어 있습니다. 소매 판매 예에서 교육 데이터를 로드하고 준비하는 논리가 포함됩니다. 아래 두 부분으로 넘어가겠습니다
 
-### 데이터 세트 분할
+### 데이터 세트 분할 {#split-the-dataset}
 
 교육 데이터 준비 단계에서는 교육 및 테스트에 사용할 데이터 세트를 분할해야 합니다. 이 `val` 데이터는 교육 후 모델을 평가하는 데 암시적으로 사용됩니다. 이 프로세스는 채점과는 별개입니다.
 
@@ -386,7 +374,7 @@ def split(self, configProperties={}, dataframe=None):
     return train, val
 ```
 
-### 교육된 모델 평가
+### 교육된 모델 평가 {#evaluate-the-trained-model}
 
 이 `evaluate()` 기능은 모델이 교육된 후에 수행되며 모델이 얼마나 성공적으로 작동하는지 나타내는 지표를 반환합니다. 이 `evaluate()` 함수는 테스트 데이터 세트 레이블과 교육된 모델을 사용하여 기능 세트를 예측합니다. 그런 다음 이러한 예측된 값을 테스트 데이터 세트의 실제 기능과 비교합니다. 일반적인 점수 알고리즘에는 다음이 포함됩니다.
 - [평균 절대 백분율 오류(MAPE)](https://en.wikipedia.org/wiki/Mean_absolute_percentage_error)
@@ -415,7 +403,7 @@ def evaluate(self, data=[], model={}, configProperties={}):
 
 이 함수는 평가 지표 배열을 포함하는 `metric` 객체를 반환합니다. 이러한 지표는 훈련된 모델이 얼마나 잘 작동하는지 평가하는 데 사용됩니다.
 
-### 데이터 보호기 파일
+### 데이터 보호기 파일 {#data-saver-file}
 
 이 `datasaver.py` 파일에는 점수 지정 시 예측을 저장하는 `save()` 함수가 들어 있습니다. 이 `save()` 함수는 예측을 가져와 Experience Platform Catalog API를 사용하여 데이터를 `scoringResultsDataSetId` `scoring.conf` 파일에 지정한 데이터에 기록합니다.
 
@@ -448,17 +436,17 @@ def save(configProperties, prediction):
     print(prediction)
 ```
 
-## 트레이닝 및 점수
+## 트레이닝 및 점수 {#training-and-scoring}
 
 전자 필기장을 변경하고 레서피를 교육하려면 막대 맨 위에 있는 관련 단추를 클릭하여 셀에서 교육 실행을 만들 수 있습니다. 이 단추를 클릭하면 교육 스크립트의 명령 및 출력 로그가 `evaluator.py` 셀 아래에 있는 전자 필기장에 나타납니다. Conda가 먼저 모든 종속성을 설치한 다음 교육이 시작됩니다.
 
-점수를 매기려면 먼저 적어도 한 번은 교육을 실행해야 합니다. [점수 **실행** ] 단추를 클릭하면 교육 중에 생성된 교육 모델에서 점수가 매겨집니다. 점수 지정 스크립트가 아래에 표시됩니다 `datasaver.py`.
+점수를 매기려면 먼저 적어도 한 번은 교육을 실행해야 합니다. 이 **[!UICONTROL Run Scoring]** 단추를 클릭하면 교육 중에 생성된 교육 모델에서 점수가 매겨집니다. 점수 지정 스크립트가 아래에 표시됩니다 `datasaver.py`.
 
 디버깅을 위해 숨겨진 출력을 보려면 출력 셀의 `debug` 끝에 추가한 후 다시 실행하십시오.
 
-## 레서피 만들기
+## 레서피 만들기 {#create-recipe}
 
-레서피 편집이 완료되고 교육/점수 출력에 만족하면 오른쪽 위 탐색에서 레서피 **만들기를** 눌러 수첩에서 레서피를 만들 수 있습니다.
+레서피 편집이 완료되고 교육/점수 출력에 만족하면 오른쪽 위 탐색에서 레서피를 만들 **[!UICONTROL Create Recipe]** 수 있습니다.
 
 ![](../images/jupyterlab/create-recipe/create-recipe.png)
 
@@ -466,7 +454,7 @@ def save(configProperties, prediction):
 
 ![](../images/jupyterlab/create-recipe/enter_recipe_name.png)
 
-확인을 **누르면** Adobe Experience Platform에서 새로운 레시피로 이동할 [수 있습니다](https://platform.adobe.com/). 레서피 보기 **버튼을 클릭하여** ML 모델 아래의 **레서피** 탭으로 **이동할 수있습니다.**
+Adobe Experience **[!UICONTROL Ok]** Platform을 누르면 새로운 레서피로 [이동할 수 있습니다](https://platform.adobe.com/). 버튼을 클릭하면 아래 **[!UICONTROL View Recipes]** **[!UICONTROL Recipes]** 탭으로 이동합니다. **[!UICONTROL ML Models]**
 
 ![](../images/jupyterlab/create-recipe/recipe_creation_started.png)
 
@@ -480,13 +468,13 @@ def save(configProperties, prediction):
 > - 여러 전자 필기장에서 동시에 레서피 만들기 안 함
 
 
-## 다음 단계
+## 다음 단계 {#next-steps}
 
 이 튜토리얼을 완료하여 Recipe Builder 노트북에서 머신 러닝 모델을 만드는 방법을 알아보았습니다. 또한 노트북 내에서 레서피 워크플로우에 노트북을 사용하여 데이터 과학 작업 공간 내에서 레서피를 만드는 방법을 학습했습니다.
 
 데이터 과학 작업 공간에서 리소스를 사용하여 작업하는 방법을 계속 학습하려면 데이터 과학 작업 공간 레서피 및 모델 드롭다운을 방문하십시오.
 
-## Journey Orchestration용
+## 추가 리소스 {#additional-resources}
 
 다음 비디오는 모델 구축 및 배포에 대한 사용자의 이해를 지원하기 위해 만들어졌습니다.
 
