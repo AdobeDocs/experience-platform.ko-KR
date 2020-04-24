@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 패키지된 레서피(API) 가져오기
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: ebf7c883ce89fdf8b0d468ab21d1c3a1ba8aca06
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -46,7 +46,7 @@ API 요청의 일부로 포함할 패키지된 레서피 파일의 형식에 따
 - [Docker URL을 사용하여 엔진 만들기](#create-an-engine-with-a-docker-url)
 - [이진 가공물로 엔진 만들기(더 이상 사용되지 않음)](#create-an-engine-with-a-binary-artifact-deprecated)
 
-### Docker URL을 사용하여 엔진 만들기
+### Docker URL을 사용하여 엔진 만들기 {#create-an-engine-with-a-docker-url}
 
 Docker 컨테이너에 저장된 패키지된 Recipe 파일이 있는 엔진을 만들려면 패키지된 Recipe 파일에 Docker URL을 제공해야 합니다.
 
@@ -199,11 +199,11 @@ curl -X POST \
 
 성공적인 응답은 새로 만든 엔진에 대한 정보가 포함된 JSON 페이로드를 보여줍니다. 이 `id` 키는 고유한 엔진 식별자를 나타내며 다음 자습서에서 MLInstance를 만들어야 합니다. 다음 단계를 계속하기 전에 엔진 식별자가 저장되었는지 확인합니다.
 
-## 다음 단계
+## 다음 단계 {#next-steps}
 
 API를 사용하여 엔진을 만들었으며 고유한 엔진 식별자를 응답 본문의 일부로 받았습니다. 다음 자습서에서는 API를 사용하여 모델을 [만들고, 교육하고, 평가하는 방법을 배울 때 이 엔진 식별자를 사용할 수 있습니다](./train-evaluate-model-api.md).
 
-### 이진 가공물로 엔진 만들기(더 이상 사용되지 않음)
+### 이진 가공물로 엔진 만들기(더 이상 사용되지 않음) {#create-an-engine-with-a-binary-artifact-deprecated}
 
 <!-- Will need to remove binary artifact documentation once the old flags are turned off -->
 
