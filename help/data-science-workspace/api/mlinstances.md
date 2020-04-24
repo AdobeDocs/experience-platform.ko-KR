@@ -4,7 +4,7 @@ solution: Experience Platform
 title: MLInesses
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 01cfbc86516a05df36714b8c91666983f7a1b0e8
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -13,7 +13,7 @@ source-git-commit: 01cfbc86516a05df36714b8c91666983f7a1b0e8
 
 MLInstance는 교육 매개 변수, 점수 [매개 변수](./engines.md) 또는 하드웨어 리소스 구성을 정의하는 적절한 구성 세트와 기존 엔진의 결합입니다.
 
-## MLInstance 만들기
+## MLInstance 만들기 {#create-an-mlinstance}
 
 유효한 엔진 ID(`{ENGINE_ID}`)와 적절한 기본 구성 세트로 구성된 요청 페이로드를 제공하면서 POST 요청을 수행하여 MLInstance를 만들 수 있습니다.
 
