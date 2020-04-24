@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 엔진
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+source-git-commit: 45f310eb5747300e13f3c57b3f979c983a03d49d
 
 ---
 
@@ -22,7 +22,7 @@ Docker 호스트 URL, 사용자 이름 및 암호를 포함하여 패키지된 �
 
 **API 형식**
 
-```http
+```https
 GET /engines/dockerRegistry
 ```
 
@@ -57,7 +57,7 @@ curl -X GET https://platform.adobe.io/data/sensei/engines/dockerRegistry \
 
 **API 형식**
 
-```http
+```https
 POST /engines
 ```
 
@@ -165,13 +165,93 @@ curl -X POST \
 }
 ```
 
+## Docker URL 파섹 {#feature-pipeline-docker}
+
+POST 요청을 수행하는 동안 Docker 이미지를 참조하는 Docker URL과 메타데이터를 제공하여 기능 파이프라인 엔진을 만들 수 있습니다.
+
+**API 형식**
+
+```https
+POST /engines
+```
+
+**요청**
+
+```shell
+curl -X POST \
+ https://platform.adobe.io/data/sensei/engines \
+    -H 'Authorization: Bearer ' \
+    -H 'x-gw-ims-org-id: 20655D0F5B9875B20A495E23@AdobeOrg' \
+    -H 'Content-Type: application/vnd.adobe.platform.sensei+json;profile=engine.v1.json' \
+    -H 'x-api-key: acp_foundation_machineLearning' \
+    -H 'Content-Type: text/plain' \
+    -F '{
+    "type": "PySpark",
+    "algorithm":"fp",
+    "name": "Feature_Pipeline_Engine",
+    "description": "Feature_Pipeline_Engine",
+    "mlLibrary": "databricks-spark",
+    "artifacts": {
+       "default": {
+           "image": {
+                "location": "v7d1cs2mimnlttw.azurecr.io/ml-featurepipeline-pyspark:0.2.1",
+                "name": "datatransformation",
+                "executionType": "PySpark",
+                "packagingType": "docker"
+            },
+           "defaultMLInstanceConfigs": [
+           ]
+       }
+   }
+}'
+```
+
+| 속성 | 설명 |
+| --- | --- |
+| `type` | 엔진의 실행 유형입니다. 이 값은 Docker 이미지를 기반으로 하는 언어에 해당합니다. 이 값은 Spark 또는 PySpark로 설정할 수 있습니다. |
+| `algorithm` | 사용 중인 알고리즘에서 이 값을 `fp` (기능 파이프라인)으로 설정합니다. |
+| `name` | 피쳐 파이프라인 엔진에 대해 원하는 이름입니다. 이 엔진에 해당하는 레서피는 이 값을 상속하여 레서피 이름으로 UI에 표시합니다. |
+| `description` | 엔진에 대한 선택적 설명입니다. 이 엔진에 해당하는 레시피는 레서피의 설명으로 UI에 표시할 이 값을 상속합니다. 이 속성은 필수입니다. 설명을 제공하지 않으려면 값을 빈 문자열로 설정합니다. |
+| `mlLibrary` | PySpark 및 Scala 레시피용 엔진을 만들 때 필요한 필드입니다. 이 필드는 로 설정해야 합니다 `databricks-spark`. |
+| `artifacts.default.image.location` | Docker 이미지의 위치입니다. Azure ACR 또는 공개(인증되지 않은) Dockerhub만 지원됩니다. |
+| `artifacts.default.image.executionType` | 엔진의 실행 유형입니다. 이 값은 Docker 이미지를 기반으로 하는 언어에 해당합니다. &quot;Spark&quot; 또는 &quot;PySpark&quot;일 수 있습니다. |
+| `artifacts.default.image.packagingType` | 엔진의 패키징 유형입니다. 이 값은 로 `docker`설정해야 합니다. |
+
+**응답**
+
+성공적인 응답은 고유 식별자(`id`)를 포함하여 새로 만든 기능 파이프라인 엔진의 세부 사항이 포함된 페이로드를 반환합니다. 다음은 PySpark 기능 파이프라인 엔진에 대한 응답입니다.
+
+```json
+{
+    "id": "88236891-4309-4fd9-acd0-3de7827cecd1",
+    "name": "Feature_Pipeline_Engine",
+    "description": "Feature_Pipeline_Engine",
+    "type": "PySpark",
+    "algorithm": "fp",
+    "mlLibrary": "databricks-spark",
+    "created": "2020-04-24T20:46:58.382Z",
+    "updated": "2020-04-24T20:46:58.382Z",
+    "deprecated": false,
+    "artifacts": {
+        "default": {
+            "image": {
+                "location": "v7d1cs3mimnlttw.azurecr.io/ml-featurepipeline-pyspark:0.2.1",
+                "name": "datatransformation",
+                "executionType": "PySpark",
+                "packagingType": "docker"
+            }
+        }
+    }
+}
+```
+
 ## 엔진 목록 검색
 
 단일 GET 요청을 수행하여 엔진 목록을 검색할 수 있습니다. 결과를 필터링하는 데 도움이 되도록 요청 경로에서 쿼리 매개 변수를 지정할 수 있습니다. 사용 가능한 쿼리 목록은 자산 검색을 [위한](./appendix.md#query)쿼리 매개 변수의 부록 섹션을 참조하십시오.
 
 **API 형식**
 
-```http
+```https
 GET /engines
 GET /engines?parameter_1=value_1
 GET /engines?parameter_1=value_1&parameter_2=value_2
@@ -246,7 +326,7 @@ curl -X GET \
 
 **API 형식**
 
-```http
+```https
 GET /engines/{ENGINE_ID}
 ```
 
@@ -321,7 +401,7 @@ curl -X GET \
 
 **API 형식**
 
-```http
+```https
 PUT /engines/{ENGINE_ID}
 ```
 
@@ -389,7 +469,7 @@ curl -X PUT \
 
 **API 형식**
 
-```http
+```https
 DELETE /engines/{ENGINE_ID}
 ```
 
@@ -429,7 +509,7 @@ curl -X DELETE \
 
 **API 형식**
 
-```http
+```https
 POST /engines
 ```
 
@@ -498,7 +578,7 @@ POST 요청을 수행하는 동안 여러 부분으로 된 양식에서 해당 �
 
 **API 형식**
 
-```http
+```https
 POST /engines
 ```
 
