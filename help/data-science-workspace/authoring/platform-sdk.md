@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 플랫폼 SDK 안내서
 topic: SDK authoring
 translation-type: tm+mt
-source-git-commit: a68aa62c3c3cc3e42083d6b0a1d1003f4137840f
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -17,7 +17,7 @@ source-git-commit: a68aa62c3c3cc3e42083d6b0a1d1003f4137840f
 - [데이터 기본 읽기](#basic-reading-of-data)
 - [데이터 기본 작성](#basic-writing-of-data)
 
-## 인증 빌드
+## 인증 빌드 {#build-authentication}
 
 Adobe Experience Platform을 호출하려면 인증이 필요하며 API 키, IMS 조직 ID, 사용자 토큰 및 서비스 토큰으로 구성됩니다.
 
@@ -64,7 +64,7 @@ client_context <- psdk$client_context$ClientContext(api_key={API_KEY},
               service_token={SERVICE_TOKEN})
 ```
 
-## 데이터 기본 읽기
+## 데이터 기본 읽기 {#basic-reading-of-data}
 
 새로운 플랫폼 SDK를 사용하면 최대 읽기 크기는 32GB이며 최대 읽기 시간은 10분입니다.
 
@@ -99,7 +99,7 @@ df <- dataset_reader$read()
 df
 ```
 
-## 오프셋 및 제한별 필터링
+## 오프셋 및 제한별 필터링 {#filter-by-offset-and-limit}
 
 더 이상 일괄 처리 ID로 필터링이 지원되지 않으므로 데이터 읽기 범위를 지정하려면 `offset` 및 `limit`을 사용해야 합니다.
 
@@ -117,7 +117,7 @@ df <- dataset_reader$limit(100L)$offset(1L)$read()
 df
 ```
 
-## 날짜별 필터링
+## 날짜별 필터링 {#filter-by-date}
 
 이제 날짜의 세부기간을 요일로 설정하는 것이 아니라 타임스탬프에 의해 필터링이 정의됩니다.
 
@@ -153,7 +153,7 @@ df2
 | And (`&`) | `And()` |
 | 또는 (`|`) | `Or()` |
 
-## 선택한 열로 필터링
+## 선택한 열로 필터링 {#filter-by-selected-columns}
 
 데이터 읽기를 더 세밀하게 조정하기 위해 열 이름별로 필터링할 수도 있습니다.
 
@@ -169,7 +169,7 @@ df = dataset_reader.select(['column-a','column-b']).read()
 df <- dataset_reader$select(c('column-a','column-b'))$read() 
 ```
 
-## 정렬된 결과 가져오기
+## 정렬된 결과 가져오기 {#get-sorted-results}
 
 수신한 결과는 대상 데이터 집합의 지정된 열과 순서(asc/desc)별로 정렬할 수 있습니다.
 
@@ -187,7 +187,7 @@ df = dataset_reader.sort([('column-a', 'asc'), ('column-b', 'desc')])
 df <- dataset_reader$sort(c(('column-a', 'asc'), ('column-b', 'desc')))$read()
 ```
 
-## 데이터 기본 작성
+## 데이터 기본 작성 {#basic-writing-of-data}
 
 >[!NOTE] IMS 조직은 에 설정되어 `client_context`있습니다.
 
