@@ -4,18 +4,16 @@ solution: Experience Platform
 title: 리소스 목록
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 4b052cdd3aca9c771855b2dc2a97ca48c7b8ffb0
+source-git-commit: 58549241f05f1bd604f33762f681c60946fa52f5
 
 ---
 
 
 # 리소스 목록
 
-단일 GET 요청을 수행하여 컨테이너 내의 모든 리소스(스키마, 클래스, 믹싱 또는 데이터 유형) 목록을 볼 수 있습니다.
+단일 GET 요청을 수행하여 컨테이너 내에 특정 유형(클래스, 믹싱, 스키마, 데이터 유형 또는 설명자)의 모든 스키마 레지스트리 리소스 목록을 볼 수 있습니다.
 
 >[!NOTE] 리소스를 나열할 때 스키마 레지스트리는 결과 집합을 300개 항목으로 제한합니다. 이 제한을 초과하는 리소스를 반환하려면 [페이징 매개 변수를](#paging)사용해야 합니다. 쿼리 매개 변수를 사용하여 결과를 [필터링하고 반환된 리소스](#filtering) 수를 줄이는 것도 좋습니다.
->
-> 300개 항목 제한을 완전히 무시하려면 승인 헤더를 사용하여 단일 요청에서 모든 결과를 반환해야 `application/vnd.adobe.xdm-v2+json` 합니다.
 
 **API 형식**
 
@@ -27,7 +25,7 @@ GET /{CONTAINER_ID}/{RESOURCE_TYPE}?{QUERY_PARAMS}
 | 매개 변수 | 설명 |
 | --- | --- |
 | `{CONTAINER_ID}` | 리소스가 있는 컨테이너(&quot;전역&quot; 또는 &quot;테넌트&quot;). |
-| `{RESOURCE_TYPE}` | 스키마 라이브러리에서 검색할 리소스 유형입니다. 유효한 유형은 `datatypes`, `mixins`, `schemas`및 `classes`입니다. |
+| `{RESOURCE_TYPE}` | 스키마 라이브러리에서 검색할 리소스 유형입니다. 유효한 유형은 `classes`, `mixins`, `schemas``datatypes`및 `descriptors`입니다. |
 | `{QUERY_PARAMS`} | 결과를 필터링하는 선택적 쿼리 매개 변수입니다. 자세한 내용은 [쿼리 매개 변수에](#query) 대한 섹션을 참조하십시오. |
 
 **요청**
@@ -48,7 +46,7 @@ curl -X GET \
 | ------- | ------------ |
 | application/vnd.adobe.xed-id+json | 각 리소스에 대한 간단한 요약을 반환합니다. 리소스를 나열하는 데 권장되는 헤더입니다. (제한:300) |
 | application/vnd.adobe.xed+json | 원본 및 `$ref` `allOf` 포함된 각 리소스에 대한 전체 JSON 스키마를 반환합니다. (제한:300) |
-| application/vnd.adobe.xdm-v2+json | 단일 요청의 모든 결과에 대한 전체 JSON 스키마를 반환하며 300항목 제한을 무시합니다. |
+| application/vnd.adobe.xdm-v2+json | 끝점을 사용할 때 `/descriptors` 페이징 기능을 활용하려면 이 승인 헤더를 사용해야 합니다. |
 
 **응답**
 
