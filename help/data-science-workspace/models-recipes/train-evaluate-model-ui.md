@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 모델 트레이닝 및 평가(UI)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -79,7 +79,7 @@ Adobe Experience Platform 데이터 과학 작업 공간에서 기계 학습 모
 
 이 자습서에서는 데이터 과학 작업 공간에서 모델을 만들고, 교육하고, 평가하는 과정을 안내합니다. 최적화된 모델에 도달하면 UI 튜토리얼에서 모델 점수 지정 [자습서를 따라 훈련된 모델을 사용하여 인사이트를 생성할 수](./score-model-ui.md) 있습니다.
 
-## 참조
+## 참조 {#reference}
 
 ### 소매 영업 레서피 구성
 
