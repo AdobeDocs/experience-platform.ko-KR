@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 지능형 서비스에서 사용할 데이터 준비
 topic: Intelligent Services
 translation-type: tm+mt
-source-git-commit: 702ac3860e06951574fe48f7d8771a11f68bedc4
+source-git-commit: 1b367eb65d1e592412d601d089725671e42b7bbd
 
 ---
 
@@ -19,6 +19,10 @@ Intelligent Services가 마케팅 이벤트 데이터로부터 통찰력을 얻�
 
 Consumer ExperienceEvent 스키마는 디지털 마케팅 이벤트(웹 또는 모바일)뿐만 아니라 온라인 또는 오프라인 상거래 활동과 관련된 개인의 행동에 대해 설명합니다. 이 스키마는 의미적으로 잘 정의된 필드(열) 때문에 데이터를 덜 명확하게 하는 알 수 없는 이름을 피하여 Intelligent Services에 사용해야 합니다.
 
+Intelligent Services는 이 스키마 내의 여러 주요 필드를 활용하여 마케팅 이벤트 데이터로부터 통찰력을 생성합니다. 이 모든 요소는 루트 수준에서 찾을 수 있으며 필요한 하위 필드를 표시하도록 확장됩니다.
+
+![](./images/data-preparation/schema-expansion.gif)
+
 모든 XDM 스키마와 마찬가지로 CEE 믹스도 확장할 수 있습니다. 즉, CEE 믹스에 추가 필드를 추가할 수 있으며 필요한 경우 여러 스키마에 다른 변형을 포함할 수 있습니다.
 
 믹싱의 전체 예는 [공용 XDM 저장소에서](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md)찾을 수 있으며 아래 섹션에 설명된 키 필드에 대한 참조로 사용해야 합니다.
@@ -30,6 +34,8 @@ Consumer ExperienceEvent 스키마는 디지털 마케팅 이벤트(웹 또는 �
 ### xdm:채널
 
 이 필드는 ExperienceEvent와 관련된 마케팅 채널을 나타냅니다. 이 필드에는 채널 유형, 미디어 유형 및 위치 유형에 대한 정보가 포함되어 있습니다. **속성 AI가 데이터와&#x200B;_연동되도록 하려면 이 필드를 제공해야_**&#x200B;합니다.
+
+![](./images/data-preparation/channel.png)
 
 **스키마 예**
 
@@ -63,25 +69,25 @@ Consumer ExperienceEvent 스키마는 디지털 마케팅 이벤트(웹 또는 �
 
 이 필드는 제품 SKU, 이름, 가격 및 수량을 포함하여 고객이 선택한 제품을 나타내는 항목 배열입니다.
 
+![](./images/data-preparation/productListItems.png)
+
 **스키마 예**
 
 ```json
 [
   {
     "xdm:SKU": "1002352692",
-    "xdm:lineItemId": "12345678",
     "xdm:name": "24-Watt 8-Light Chrome Integrated LED Bath Light",
     "xdm:currencyCode": "USD",
     "xdm:quantity": 1,
-    "xdm:priceTotal": 159
+    "xdm:priceTotal": 159.45
   },
   {
     "xdm:SKU": "3398033623",
-    "xdm:lineItemId": "48693817",
     "xdm:name": "16ft RGB LED Strips",
     "xdm:currencyCode": "USD",
     "xdm:quantity": 1,
-    "xdm:priceTotal": 80
+    "xdm:priceTotal": 79.99
   }
 ]
 ```
@@ -91,6 +97,8 @@ Consumer ExperienceEvent 스키마는 디지털 마케팅 이벤트(웹 또는 �
 ### xdm:commerce
 
 이 필드에는 구매 발주 번호 및 지불 정보를 비롯하여 ExperienceEvent에 대한 상거래 관련 정보가 포함되어 있습니다.
+
+![](./images/data-preparation/commerce.png)
 
 **스키마 예**
 
@@ -128,6 +136,8 @@ Consumer ExperienceEvent 스키마는 디지털 마케팅 이벤트(웹 또는 �
 
 이 필드는 상호 작용, 페이지 세부 사항 및 레퍼러 등 ExperienceEvent와 관련된 웹 세부 사항을 나타냅니다.
 
+![](./images/data-preparation/web.png)
+
 **스키마 예**
 
 ```json
@@ -155,6 +165,8 @@ Consumer ExperienceEvent 스키마는 디지털 마케팅 이벤트(웹 또는 �
 ### xdm:마케팅
 
 이 필드에는 접점에서 활성 상태인 마케팅 활동과 관련된 정보가 포함되어 있습니다.
+
+![](./images/data-preparation/marketing.png)
 
 **스키마 예**
 
