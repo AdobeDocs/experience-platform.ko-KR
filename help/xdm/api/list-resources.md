@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 리소스 목록
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: fe7b6acf86ebf39da728bb091334785a24d86b49
+source-git-commit: 4b052cdd3aca9c771855b2dc2a97ca48c7b8ffb0
 
 ---
 
@@ -12,6 +12,10 @@ source-git-commit: fe7b6acf86ebf39da728bb091334785a24d86b49
 # 리소스 목록
 
 단일 GET 요청을 수행하여 컨테이너 내의 모든 리소스(스키마, 클래스, 믹싱 또는 데이터 유형) 목록을 볼 수 있습니다.
+
+>[!NOTE] 리소스를 나열할 때 스키마 레지스트리는 결과 집합을 300개 항목으로 제한합니다. 이 제한을 초과하는 리소스를 반환하려면 [페이징 매개 변수를](#paging)사용해야 합니다. 쿼리 매개 변수를 사용하여 결과를 [필터링하고 반환된 리소스](#filtering) 수를 줄이는 것도 좋습니다.
+>
+> 300개 항목 제한을 완전히 무시하려면 승인 헤더를 사용하여 단일 요청에서 모든 결과를 반환해야 `application/vnd.adobe.xdm-v2+json` 합니다.
 
 **API 형식**
 
@@ -42,8 +46,9 @@ curl -X GET \
 
 | 헤더 수락 | 설명 |
 | ------- | ------------ |
-| application/vnd.adobe.xed-id+json | 각 리소스의 간단한 요약(일반적으로 나열할 때 선호하는 헤더)을 반환합니다. |
-| application/vnd.adobe.xed+json | 원본 및 `$ref` `allOf` 포함된 각 리소스에 대한 전체 JSON 스키마를 반환합니다. |
+| application/vnd.adobe.xed-id+json | 각 리소스에 대한 간단한 요약을 반환합니다. 리소스를 나열하는 데 권장되는 헤더입니다. (제한:300) |
+| application/vnd.adobe.xed+json | 원본 및 `$ref` `allOf` 포함된 각 리소스에 대한 전체 JSON 스키마를 반환합니다. (제한:300) |
+| application/vnd.adobe.xdm-v2+json | 단일 요청의 모든 결과에 대한 전체 JSON 스키마를 반환하며 300항목 제한을 무시합니다. |
 
 **응답**
 
@@ -74,7 +79,7 @@ curl -X GET \
 
 >[!NOTE] 여러 쿼리 매개 변수를 결합할 때는 앰퍼샌드(`&`)로 구분해야 합니다.
 
-### 페이징
+### 페이징 {#paging}
 
 페이징 시 가장 일반적인 쿼리 매개 변수는 다음과 같습니다.
 
@@ -84,7 +89,7 @@ curl -X GET \
 | `limit` | 반환된 리소스 수를 제한합니다. 예:5개의 리소스 목록을 `limit=5` 반환합니다. |
 | `orderby` | 특정 속성별로 결과를 정렬합니다. 예:제목별로 결과를 오름차순(A-Z)으로 `orderby=title` 정렬합니다. 제목 `-` 앞에 추가(`orderby=-title`)를 추가하면 항목들이 내림차순(Z-A)으로 정렬됩니다. |
 
-### 필터링
+### 필터링 {#filtering}
 
 검색된 리소스 내의 지정된 JSON 속성에 대해 특정 연산자를 적용하는 데 사용되는 `property` 매개 변수를 사용하여 결과를 필터링할 수 있습니다. 지원되는 연산자는 다음과 같습니다.
 
