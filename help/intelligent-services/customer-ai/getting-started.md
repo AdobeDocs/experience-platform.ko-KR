@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 고객 AI에서 시작하기
 topic: Getting started
 translation-type: tm+mt
-source-git-commit: 0eeb41fa06864cc28b3a76c2a69c76ea5430d45a
+source-git-commit: f7c59ef097c00073fbf9f6522b6e70ed24cc8bf1
 
 ---
 
@@ -22,7 +22,7 @@ source-git-commit: 0eeb41fa06864cc28b3a76c2a69c76ea5430d45a
 
 ## 고객 AI 점수 다운로드
 
->[!NOTE] Raw 점수를 다운로드할 필요가 없는 경우 이 단계를 건너뛰고 사용자 인터페이스 가이드로 진행할 수 있습니다.
+>[!NOTE] Raw 점수를 다운로드할 필요가 없는 경우 이 단계를 건너뛰고 [구성 안내서를](./user-guide/configure.md)계속 진행할 수 있습니다.
 
 고객 AI 점수 다운로드는 API 호출 조합을 통해 이루어집니다. 플랫폼 API를 호출하려면 먼저 [인증 자습서를](../../tutorials/authentication.md)완료해야 합니다. 인증 튜토리얼을 완료하면 다음과 같이 모든 Experience Platform API 호출에서 각 필수 헤더에 대한 값이 제공됩니다.
 
@@ -42,4 +42,4 @@ source-git-commit: 0eeb41fa06864cc28b3a76c2a69c76ea5430d45a
 
 ## 다음 단계
 
-모든 자격 증명과 스키마를 준비했으면 고객 AI [사용자 인터페이스 가이드를](./user-guide.md)따라 시작하십시오. 이 안내서에서는 인스턴스를 만들고 이를 교육 및 점수 책정용으로 제출하는 과정을 안내합니다.
+위의 문서에 설명된 단계를 완료하면 입력 및 출력 [문서를](./input-output.md) 참조하십시오. 이 문서에서는 고객 AI에서 사용 및 생성되는 데이터 유형에 대한 간략한 개요를 제공합니다.
