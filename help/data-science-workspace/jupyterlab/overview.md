@@ -4,7 +4,7 @@ solution: Experience Platform
 title: JupiterLab 사용 안내서
 topic: Overview
 translation-type: tm+mt
-source-git-commit: d42a5de7094d305249b05454ce4aba79776a46e1
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -51,16 +51,16 @@ JupiterLab의 주요 기능 및 일반적인 작업 수행에 대한 지침은 �
 * [코드 셀](#code-cells)
 * [커널](#kernels)
 * [커널 세션](#kernel-sessions)
-* [PySpark/Spark 실행 리소스](#pysparkspark-execution-resource)
+* [PySpark/Spark 실행 리소스](#execution-resource)
 * [론처](#launcher)
 
-### JupiterLab 액세스
+### JupiterLab 액세스 {#access-jupyterlab}
 
 Adobe [Experience Platform](https://platform.adobe.com)의 왼쪽 **탐색** 열에서 전자 필기장을 선택합니다. JupiterLab이 완전히 초기화하는 데 약간의 시간이 소요됩니다.
 
 ![](../images/jupyterlab/user-guide/access_jupyterlab.png)
 
-### JupiterLab 인터페이스
+### JupiterLab 인터페이스 {#jupyterlab-interface}
 
 JupiterLab 인터페이스는 메뉴 막대, 축소 가능한 왼쪽 사이드바 및 문서와 활동의 탭이 포함된 기본 작업 영역으로 구성됩니다.
 
@@ -98,7 +98,7 @@ JupiterLab의 기본 작업 영역을 사용하면 문서 및 기타 활동을 �
 
 ![](../images/jupyterlab/user-guide/main_work_area.gif)
 
-### 코드 셀
+### 코드 셀 {#code-cells}
 
 코드 셀은 노트북의 주요 컨텐츠입니다. 여기에는 전자 필기장의 관련 커널의 언어로 된 소스 코드와 코드 셀을 실행한 결과로 출력된 소스 코드가 포함됩니다. 실행 횟수는 실행 순서를 나타내는 모든 코드 셀의 오른쪽에 표시됩니다.
 
@@ -130,7 +130,7 @@ JupiterLab의 기본 작업 영역을 사용하면 문서 및 기타 활동을 �
 | **Spark - 가치 하락** | 아니요 | <ul><li>Sensei ML Framework</li><li>카탈로그 서비스</li></ul> |
 | **Scala** | 아니요 | <ul><li>Sensei ML Framework</li><li>카탈로그 서비스</li></ul> |
 
-### 커널 세션
+### 커널 세션 {#kernel-sessions}
 
 JupiterLab의 각 활성 전자 필기장 또는 활동은 커널 세션을 사용합니다. 모든 활성 세션은 왼쪽 사이드바에서 실행 **터미널 및 커널** 탭을 확장하여 찾을 수 있습니다. 전자 필기장의 커널의 유형과 상태는 전자 필기장 인터페이스의 오른쪽 상단을 관찰하여 확인할 수 있습니다. 아래 다이어그램에서 노트북의 관련 커널은 Python **3이며** 현재 상태는 오른쪽 회색 원으로 표시됩니다. 빈 원은 유휴 커널을 의미하고 단색 원은 사용 중인 커널을 의미합니다.
 
@@ -193,7 +193,7 @@ PySpark 및 Spark 커널을 사용하면 구성 명령(`%%configure`) 및 구성
 | 이름 | 응용 프로그램의 이름 | 문자열 |
 | conf | Spark 구성 속성 | 키=val 매핑 |
 
-### 론처
+### 론처 {#launcher}
 
 [//]: # (Talk about the different Notebooks, introduce that certain starter notebooks are limited to particular kernels)
 
@@ -799,7 +799,7 @@ timedf.show()
 | 비단뱀 | 3.6.7 |
 | mkl-rt | 11.1 |
 
-## 쿼리 서비스에 대한 선택적 SQL 플래그
+## 쿼리 서비스에 대한 선택적 SQL 플래그 {#optional-sql-flags-for-query-service}
 
 이 표에서는 쿼리 서비스에 사용할 수 있는 선택적 SQL 플래그에 대해 간략하게 설명합니다.
 
