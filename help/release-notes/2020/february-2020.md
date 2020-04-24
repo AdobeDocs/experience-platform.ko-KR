@@ -5,14 +5,14 @@ doc-type: release notes
 last-update: February 14, 2019
 author: ens71067
 translation-type: tm+mt
-source-git-commit: 5199a344a66381ef9d7eea1ea8314e5de7152e3b
+source-git-commit: e5fa12b92f7006f2c5c428b25f81dade57733498
 
 ---
 
 
 # Adobe Experience Platform 릴리스 노트
 
-## 릴리스 날짜: 2020년 2월 12일
+**릴리스 날짜: 2020년 2월 12일**
 
 Adobe Experience Platform의 기존 기능 업데이트:
 
