@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 스키마 레지스트리 API 개발자 가이드
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: eec5b07427aa9daa44d23f09cfaf1b38f8e811f3
+source-git-commit: 387cbdebccb9ae54a2907d1afe220e9711927ca6
 
 ---
 
@@ -52,7 +52,7 @@ source-git-commit: eec5b07427aa9daa44d23f09cfaf1b38f8e811f3
 
 * 컨텐츠 유형:application/json
 
-## 테넌트 ID 알아보기 {#know-your-tenant-id}
+## 테넌트 ID 알아보기 {#know-your-tenant_id}
 
 이 안내서 전체에서 에 대한 참조가 표시됩니다 `TENANT_ID`. 이 ID는 사용자가 만든 리소스가 IMS 조직 내에 적절하게 지정되어 있는지 확인하는 데 사용됩니다. ID를 모르는 경우 다음 GET 요청을 수행하여 ID에 액세스할 수 있습니다.
 
@@ -164,7 +164,7 @@ curl -X GET \
 
 ### 테넌트 컨테이너
 
-고유한 요소와 혼동하지 않도록 임차인 컨테이너는 IMS 조직에 의해 정의된 모든 클래스, 믹싱, 데이터 유형, 스키마 및 설명자를 보유합니다. `TENANT_ID` 이는 다른 IMS 조직에서 볼 수 없거나 관리할 수 없음을 의미합니다. 테넌트 컨테이너에서 만든 리소스에 대해 모든 CRUD 작업(GET, POST, PUT, PATCH, DELETE)을 수행할 수 있습니다.
+고유한 요소와 혼동하지 않도록 임차인 컨테이너는 IMS 조직에 의해 정의된 모든 클래스, 믹싱, 데이터 유형, 스키마 및 설명자를 보유합니다. `TENANT_ID` 이는 다른 IMS 조직에서 볼 수 없거나 관리할 수 없음을 의미합니다. 테넌트 컨테이너에 만드는 리소스에 대해 모든 CRUD 작업(GET, POST, PUT, PATCH, DELETE)을 수행할 수 있습니다.
 
 테넌트 컨테이너에서 클래스, 혼합, 스키마 또는 데이터 유형을 만들 때 해당 클래스는 스키마 레지스트리에 저장되고 `$id` 해당 항목이 포함된 URI가 할당됩니다 `TENANT_ID`. 이 `$id` 기능은 API 전체에서 특정 리소스를 참조하기 위해 사용됩니다. 값의 예는 다음 섹션에 제공됩니다. `$id`
 
