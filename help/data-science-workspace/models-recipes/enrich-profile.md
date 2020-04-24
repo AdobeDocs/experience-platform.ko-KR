@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 머신 러닝 인사이트를 통해 실시간 고객 프로파일 강화
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: b0b44f4aaf365f58086cfa17d27fbba6ed2a2a97
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -32,7 +32,7 @@ Adobe Experience Platform Data Science Workspace는 머신 러닝 모델을 생�
 * [스키마 컴포지션의](../../xdm/schema/composition.md)기본 사항:Experience Platform에서 사용할 스키마를 작성하기 위한 XDM 스키마, 빌딩 블록, 원칙 및 모범 사례에 대해 설명합니다.
 * [스키마 편집기 자습서](../../xdm/tutorials/create-schema-ui.md):경험 플랫폼 내에서 스키마 편집기를 사용하여 스키마를 생성하는 방법에 대한 자세한 지침을 제공합니다.
 
-## 출력 스키마 및 데이터 집합 만들기
+## 출력 스키마 및 데이터 집합 만들기 {#create-an-output-schema-and-dataset}
 
 채점 인사이트를 통해 실시간 고객 프로파일을 강화하는 첫 번째 단계는 데이터가 정의하는 실제 개체(예: 사람)를 파악하는 것입니다. 데이터에 대한 이해를 통해 관계형 데이터베이스를 디자인하는 것과 같이 데이터에 의미가 있는 구조를 설명하고 설계할 수 있습니다.
 
@@ -73,7 +73,7 @@ Adobe Experience Platform Data Science Workspace는 머신 러닝 모델을 생�
 
 출력 스키마 데이터 세트를 만들었다면 다음 섹션을 계속 사용하여 프로파일 향상을 구성하고 활성화할 수 있습니다.
 
-## 출력 스키마 및 데이터 집합 구성
+## 출력 스키마 및 데이터 집합 구성 {#configure-an-output-schema-and-dataset}
 
 프로필에 대한 데이터 집합을 사용하려면 먼저 데이터 집합의 스키마로 기본 ID 필드를 포함하도록 구성한 다음 프로필에 대한 스키마를 사용하도록 설정해야 합니다. 새 스키마를 만들고 활성화하려면 스키마 편집기를 사용하여 스키마 [만들기에 대한 자습서를 참조할 수 있습니다](../../xdm/tutorials/create-schema-ui.md). 그렇지 않은 경우 아래 지침에 따라 기존 스키마와 데이터 세트를 활성화합니다.
 
@@ -97,7 +97,7 @@ Adobe Experience Platform Data Science Workspace는 머신 러닝 모델을 생�
 
 데이터를 프로파일이 활성화된 데이터 세트에 인제스트하면 동일한 데이터를 프로필 레코드와 인제스트됩니다. 스키마와 데이터 세트가 준비되었으므로 적절한 모델을 사용하여 점수 실행을 수행하여 데이터 세트에 일부 데이터를 생성하고 이 튜토리얼을 통해 세그먼트 빌더를 사용하여 인사이트 세그먼트를 만듭니다.
 
-## 세그먼트 빌더를 사용하여 세그먼트 만들기
+## 세그먼트 빌더를 사용하여 세그먼트 만들기 {#create-segments-using-the-segment-builder}
 
 이제 프로필 사용 데이터 세트에 대한 인사이트를 생성하고 인사이트를 수집했으므로 세그먼트 빌더를 사용하여 관련 요소의 하위 세트를 식별하여 해당 데이터를 관리할 수 있습니다. 아래 절차에 따라 고유한 세그먼트를 만듭니다.
 
@@ -117,6 +117,6 @@ Adobe Experience Platform Data Science Workspace는 머신 러닝 모델을 생�
    ![](../images/models-recipes/enrich-rtcdp/save_segment.png)
 
 
-## 다음 단계
+## 다음 단계 {#next-steps}
 
 이 문서에서는 프로필에 대한 스키마와 데이터 세트를 활성화하는 데 필요한 단계를 안내하고 세그먼트 빌더를 사용하여 인사이트 세그먼트를 만드는 워크플로우를 간략히 설명했습니다. 세그먼트 및 세그먼트 빌더에 대한 자세한 내용은 세그멘테이션 [서비스 개요를](../../segmentation/home.md)참조하십시오.
