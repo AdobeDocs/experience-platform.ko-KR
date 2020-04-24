@@ -4,7 +4,7 @@ solution: Experience Platform
 title: SDK 개발자 가이드
 topic: Overview
 translation-type: tm+mt
-source-git-commit: 897e897c80421c8eddd779222ddfa20298e72298
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -15,16 +15,7 @@ Model Authoring SDK를 사용하면 Adobe Experience Platform Data Science Works
 
 이 문서에서는 모델 작성 SDK 내에 있는 다양한 클래스에 대한 정보를 제공합니다.
 
-- [DataLoader](#dataloader)
-   - [플랫폼 데이터 세트에서 데이터 로드](#load-data-from-a-platform-dataset)
-- [DataSaver](#datasaver)
-   - [플랫폼 데이터 세트에 데이터 저장](#save-data-to-a-platform-dataset)
-- [DatasetTransformer](#datasettransformer)
-- [FeaturePipelineFactory](#featurepipelinefactory)
-- [PipelineFactory](#pipelinefactory)
-- [MLEvaluator](#mlevaluator)
-
-## DataLoader
+## DataLoader {#dataloader}
 
 DataLoader 클래스는 원시 입력 데이터의 검색, 필터링 및 반환과 관련된 모든 것을 캡슐화합니다. 입력 데이터의 예로는 트레이닝, 점수 지정 또는 기능 엔지니어링 등이 있습니다. 데이터 로더는 추상 클래스를 `DataLoader` 확장하고 추상 메서드를 재정의해야 합니다 `load`.
 
@@ -83,7 +74,7 @@ DataLoader 클래스는 원시 입력 데이터의 검색, 필터링 및 반환�
     </tbody>
 </table>
 
-### 플랫폼 데이터 세트에서 데이터 로드
+### 플랫폼 데이터 세트에서 데이터 로드 {#load-data-from-a-platform-dataset}
 
 다음 예제에서는 ID로 플랫폼 데이터를 검색하고 DataFrame을 반환합니다. 여기서 데이터 세트 ID(`datasetId`)는 구성 파일에서 정의된 속성입니다.
 
@@ -199,7 +190,7 @@ class MyDataLoader extends DataLoader {
 }
 ```
 
-## DataSaver
+## DataSaver {#datasaver}
 
 DataSaver 클래스는 점수 지정 또는 기능 엔지니어링 등의 출력 데이터 저장과 관련된 모든 것을 캡슐화합니다. 데이터 보호자는 추상 클래스를 `DataSaver` 확장하고 추상 메서드를 재정의해야 합니다 `save`.
 
@@ -258,7 +249,7 @@ DataSaver 클래스는 점수 지정 또는 기능 엔지니어링 등의 출력
     </tbody>
 </table>
 
-### 플랫폼 데이터 세트에 데이터 저장
+### 플랫폼 데이터 세트에 데이터 저장 {#save-data-to-a-platform-dataset}
 
 플랫폼 데이터 세트에 데이터를 저장하려면 구성 파일에서 속성을 제공하거나 정의해야 합니다.
 
@@ -398,7 +389,7 @@ class ScoringDataSaver extends DataSaver {
 }
 ```
 
-## DatasetTransformer
+## DatasetTransformer {#datasettransformer}
 
 DatasetTransformer 클래스는 데이터 집합의 구조를 수정 및 변환합니다. Sensei 기계 학습 런타임은 이 구성 요소를 정의할 필요가 없으며 사용자의 요구 사항에 따라 구현됩니다.
 
@@ -459,7 +450,7 @@ DatasetTransformer 클래스는 데이터 집합의 구조를 수정 및 변환�
     </tbody>
 </table>
 
-## FeaturePipelineFactory
+## FeaturePipelineFactory {#featurepipelinefactory}
 
 FeaturePipelineFactory 클래스에는 기능 추출 알고리즘이 포함되어 있으며 처음부터 끝까지 피쳐 파이프라인의 단계가 정의됩니다.
 
@@ -541,7 +532,7 @@ FeaturePipelineFactory 클래스에는 기능 추출 알고리즘이 포함되�
     </tbody>
 </table>
 
-## PipelineFactory
+## PipelineFactory {#pipelinefactory}
 
 PipelineFactory 클래스는 트레이닝 로직과 알고리즘이 Spark Pipeline 형식으로 정의되는 모델 트레이닝 및 점수에 대한 메서드 및 정의를 캡슐화합니다.
 
@@ -650,7 +641,7 @@ PipelineFactory 클래스는 트레이닝 로직과 알고리즘이 Spark Pipeli
     </tbody>
 </table>
 
-## MLEvaluator
+## MLEvaluator {#mlevaluator}
 
 MLEvaluator 클래스는 평가 지표를 정의하고 교육 집합 및 테스트 데이터 집합을 확인하는 메서드를 제공합니다.
 
