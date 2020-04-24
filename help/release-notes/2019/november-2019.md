@@ -5,14 +5,14 @@ doc-type: release notes
 last-update: November 18, 2019
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 817f994fc0622b1c46e98f8d773a4d91c1064824
+source-git-commit: e5fa12b92f7006f2c5c428b25f81dade57733498
 
 ---
 
 
 # Adobe Experience Platform 릴리스 노트
 
-## 릴리스 날짜: 2019년 11월 18일
+**릴리스 날짜: 2019년 11월 18일**
 
 Adobe Experience Platform의 새로운 기능:
 * [실시간 고객 데이터 플랫폼](#rtcdp)
