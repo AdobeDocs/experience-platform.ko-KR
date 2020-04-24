@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 소스 파일을 레서피로 패키지화
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 4001e4fd6a2e04a04e7ea594175d9e3e5c8a00d6
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -29,7 +29,7 @@ source-git-commit: 4001e4fd6a2e04a04e7ea594175d9e3e5c8a00d6
 
 레서피 생성은 소스 파일을 패키징하여 아카이브 파일을 작성하는 것부터 시작합니다. 소스 파일은 특정 문제를 해결하는 데 사용되는 기계 학습 로직과 알고리즘을 정의하며 Python, R, PySpark 또는 Scala로 작성됩니다. 작성된 아카이브 파일은 Docker 이미지 형식을 취합니다. 작성된 아카이브 파일을 데이터 과학 작업 영역으로 가져와 UI [에서 또는 API를](./import-packaged-recipe-ui.md) [사용하여 레서피를 만듭니다](./import-packaged-recipe-api.md).
 
-### Docker 기반의 모델 제작
+### Docker 기반의 모델 제작 {#docker-based-model-authoring}
 
 개발자는 Docker 이미지를 사용하여 라이브러리 및 기타 종속성 등 필요한 모든 부분으로 애플리케이션을 패키지하여 하나의 패키지로 전달할 수 있습니다.
 
