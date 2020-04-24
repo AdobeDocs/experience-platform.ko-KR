@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 모델을 서비스로 게시(API)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -123,7 +123,7 @@ JSON 응답에서 해당 값이 `scoringExperimentId` 있는 키는 요청에 �
 
 교육 또는 채점 실험을 예약하지 않고도 ML 인스턴스를 사용하여 ML 서비스를 만들 수 있습니다. 이러한 ML 서비스는 일반적인 실험 실체와 트레이닝과 점수 매기기를 위한 단일 실험 실행을 만듭니다.
 
-### 점수 매기기로 예약된 ML 서비스
+### 점수 매기기로 예약된 ML 서비스 {#ml-service-with-scheduled-experiment-for-scoring}
 
 채점용으로 예약된 실험 실행을 사용하여 ML 인스턴스를 게시하여 ML 서비스를 만들면 일반 교육 실험 개체가 생성됩니다. 생성된 교육 실험 실행은 예약된 모든 점수 지정 실험 실행에 사용됩니다. ML 서비스 생성에 `mlInstanceId`필요한 XML `trainingDataSetId``scoringDataSetId` Service가 존재하며 유효한 값인지 확인합니다.
 
@@ -197,7 +197,7 @@ curl -X POST
 
 응답에서 키 `JSON` 및 `trainingExperimentId` `scoringExperimentId` 제안은 이 ML 서비스에 대해 새로운 트레이닝 및 점수 지정 실체가 생성되었음을 나타냅니다. 객체가 존재하면 실험 실행 일정 `scoringSchedule` 점수에 대한 세부 사항이 표시됩니다. 응답의 `id` 키는 방금 만든 ML 서비스를 나타냅니다.
 
-### 트레이닝 및 채점용 시험 일정이 잡힌 ML 서비스
+### 트레이닝 및 채점용 시험 일정이 잡힌 ML 서비스 {#ml-service-with-scheduled-experiments-for-training-and-scoring}
 
 예약된 트레이닝 및 점수 지정 실험 실행을 사용하여 기존 ML 인스턴스를 ML 서비스로 게시하려면 교육 및 점수 지정 일정을 모두 제공해야 합니다. 이 구성의 ML 서비스가 생성되면 교육 및 점수 모두에 대해 예약된 실험 엔티티도 생성됩니다. 교육 및 점수 지정 일정은 동일할 필요는 없습니다. 점수 지정 작업 실행 동안 예약된 교육 실험 실행으로 제작된 최신 교육 모델이 가져와 예약된 점수 책정기에 사용됩니다.
 
@@ -281,7 +281,7 @@ curl -X POST "https://platform-int.adobe.io/data/sensei/mlServices"
 
 응답 본문에 `trainingExperimentId` 및 `scoringExperimentId` 를 추가하면 트레이닝과 점수 모두에 대해 실험 개체가 생성됩니다. 위에 언급된 `trainingSchedule` 교육 및 점수 지정 실험 엔티티가 예약된 실험임을 `scoringSchedule` 표시하고 제안합니다. 응답의 `id` 키는 방금 만든 ML 서비스를 나타냅니다.
 
-## ML 서비스 검색
+## ML 서비스 검색 {#retrieving-ml-services}
 
 기존 ML 서비스를 검색하는 것은 종단점에 대한 `GET` 요청을 하는 것만큼 간단합니다 `/mlServices` . 검색하려는 특정 ML 서비스에 대한 ML 서비스 ID가 있어야 합니다.
 
