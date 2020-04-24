@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 모델 예약(UI)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 541acd9e1df8a53ae372f71230a705fb6a95d92b
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -24,7 +24,7 @@ Adobe Experience Platform 데이터 과학 작업 영역을 사용하면 머신 
 
 이 자습서에는 기존 서비스가 필요합니다. 액세스할 수 있는 서비스가 없는 경우 UI 튜토리얼의 서비스로 모델 [게시 서비스를 따라 서비스를 만들 수](./publish-model-service-ui.md) 있습니다.
 
-## 예약된 점수 구성
+## 예약된 점수 구성 {#configure-scheduled-scoring}
 
 모델 점수 책정기는 예약 기반으로 자동화된 프로세스로 구성할 수 있습니다. 서비스가 만들어지면 아래 절차에 따라 점수 지정 일정을 구성하고 적용할 수 있습니다.
 
@@ -41,7 +41,7 @@ Adobe Experience Platform 데이터 과학 작업 영역을 사용하면 머신 
    ![](../images/models-recipes/schedule/service_with_scoring_schedule.png)
 
 
-## 예약된 교육 구성
+## 예약된 교육 구성 {#configure-scheduled-training}
 
 서비스에서 예약된 교육 실행을 구성하면 시스템 학습 모델이 최신 데이터 패턴으로 업데이트됩니다. 예정된 트레이닝 실행이 완료될 때마다, 다음 예정된 트레이닝이 실행될 때까지 서비스에 전원을 공급하는 데 훈련 모델이 사용됩니다.
 
