@@ -4,7 +4,7 @@ seo-title: Adobe Experience Platform 웹 SDK 도움말
 description: Adobe Experience Platform Web SDK의 정의와 사용 방법을 살펴볼 수 있습니다.
 seo-description: adobe Experience Cloud 고객이 Experience Cloud의 다양한 서비스와 상호 작용할 수 있도록 허용
 translation-type: tm+mt
-source-git-commit: 68361835437026c86af2402cc8400a3b3f32cb81
+source-git-commit: 6ad09df6f6867ebe057d0043dea4bc97de2b66b3
 
 ---
 
