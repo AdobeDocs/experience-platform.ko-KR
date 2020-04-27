@@ -4,7 +4,7 @@ seo-title: Adobe Experience Platform 웹 SDK 도움말
 description: Adobe Experience Platform Web SDK의 정의와 사용 방법을 살펴볼 수 있습니다.
 seo-description: adobe Experience Cloud 고객이 Experience Cloud의 다양한 서비스와 상호 작용할 수 있도록 허용
 translation-type: tm+mt
-source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
+source-git-commit: 68361835437026c86af2402cc8400a3b3f32cb81
 
 ---
 
@@ -15,7 +15,7 @@ source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
 >
 >Adobe Experience Platform Web SDK는 현재 베타 버전이며 일부 사용자는 사용할 수 없습니다. 설명서 및 기능은 변경될 수 있습니다.
 
-Adobe Experience Platform Web SDK는 Adobe Experience Cloud 고객이 Experience Cloud의 다양한 서비스와 상호 작용할 수 있도록 하는 클라이언트측 JavaScript 라이브러리입니다.
+Adobe Experience Platform Web SDK는 Adobe Experience Cloud 고객이 Adobe Experience Platform Edge Network를 통해 Experience Cloud의 다양한 서비스와 상호 작용할 수 있도록 하는 클라이언트측 JavaScript 라이브러리입니다.
 
 ## Adobe Experience Platform 웹 SDK로 대체된 SDK
 
