@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 데이터 사용 정책 사용 안내서
 topic: policies
 translation-type: tm+mt
-source-git-commit: 304a84b81758b2f2a343977533f9120857a1fb33
+source-git-commit: 235a43ad72dee45db1b3d35ae84ce9a1c4d729b8
 
 ---
 
@@ -66,4 +66,4 @@ Experience Platform UI에서 을 클릭하여 **[!UICONTROL Policies]** *[!UICON
 
 ## 다음 단계
 
-이 문서에서는 Experience Platform UI에서 데이터 사용 정책을 관리하는 방법에 대한 개요를 제공합니다. DULE 정책 API를 사용하여 정책을 관리하는 방법에 대한 자세한 내용은 API [정책 만들기 자습서를](./create.md)참조하십시오. 데이터 사용 정책을 적용하는 방법에 대한 자세한 내용은 [정책 적용 개요를](../enforcement/overview.md)참조하십시오.
+이 문서에서는 Experience Platform UI에서 데이터 사용 정책을 관리하는 방법에 대한 개요를 제공합니다. DULE 정책 API를 사용하여 정책을 관리하는 방법에 대한 단계는 [개발자 안내서를](../api/getting-started.md)참조하십시오. 데이터 사용 정책을 적용하는 방법에 대한 자세한 내용은 [정책 적용 개요를](../enforcement/overview.md)참조하십시오.
