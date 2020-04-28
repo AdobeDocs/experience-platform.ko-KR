@@ -6,14 +6,14 @@ last-update: April 13, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: 8cc3b63fc91877ca1337f65e8f5c0e949b7ef01f
+source-git-commit: 43db1992ae45e27134bc0c4405963c405275750e
 
 ---
 
 
 # Adobe Experience Platform 릴리스 노트
 
-## 릴리스 날짜: 2020년 4월 8일
+**릴리스 날짜: 2020년 4월 8일**
 
 Adobe Experience Platform의 새로운 기능:
 * [지능형 서비스](#intelligent)
