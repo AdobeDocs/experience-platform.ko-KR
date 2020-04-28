@@ -1,8 +1,14 @@
 ---
-source-git-commit: 1cf1e9c814601bdd4c7198463593be78452004dc
+keywords: Experience Platform;insights; customer ai;popular topics
+solution: Experience Platform
+title: 예측된 점수가 있는 고객 세그먼트 만들기
+topic: Create a segment
 translation-type: tm+mt
+source-git-commit: 66ccea896846c1da4310c1077e2dc7066a258063
 
 ---
+
+
 # 예측된 점수가 있는 고객 세그먼트 만들기
 
 예측 실행이 완료되면 예측된 성향 점수는 프로필에 의해 자동으로 사용됩니다. 고객 AI 점수와 프로파일 강화를 통해 고객 세그먼트를 만들어 고객 성향 점수를 기반으로 고객을 찾을 수 있습니다. 이 섹션에서는 세그먼트 빌더를 사용하여 세그먼트를 만드는 단계를 제공합니다. 세그먼트 만들기에 대한 보다 강력한 자습서는 세그먼트 빌더 [사용 안내서를](../../../segmentation/tutorials/create-a-segment.md)참조하십시오.
