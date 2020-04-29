@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: 실시간 고객 프로필 사용 안내서
 topic: guide
 translation-type: tm+mt
-source-git-commit: b5412b891a9457fa5e801d1f0479fc59fb08bf1b
+source-git-commit: ab289f07475abcbe966c723423825fd392eb3615
 
 ---
 
@@ -73,7 +73,7 @@ source-git-commit: b5412b891a9457fa5e801d1f0479fc59fb08bf1b
 
 ![](../images/user-guide/profile-merge-policies.png)
 
-UI에서 정책 병합 작업에 대한 자세한 내용은 정책 병합 [사용 안내서를](merge-policies.md)참조하십시오.
+UI에서 정책 병합 작업에 대한 자세한 내용은 정책 [병합 사용 안내서를](merge-policies.md)참조하십시오.
 
 ## 공용 스키마
 
