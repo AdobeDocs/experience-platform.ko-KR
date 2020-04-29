@@ -4,19 +4,21 @@ solution: Experience Platform
 title: Adobe Experience Platform 부분 일괄 처리 개요
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: d560e8dd07e9590376728ae6575766cc382325a5
 
 ---
 
 
 
-# 부분 일괄 처리
+# 부분 일괄 처리(베타)
 
 부분 일괄 처리란 오류가 포함된 데이터를 특정 임계값까지 인제스트하는 기능입니다. 이 기능을 사용하면 모든 올바른 데이터를 Adobe Experience Platform으로 성공적으로 인제스트할 수 있으며, 잘못된 모든 데이터를 잘못된 이유에 대한 세부 정보와 함께 별도로 일괄 처리할 수 있습니다.
 
 이 문서에서는 부분 일괄 처리를 관리하는 자습서를 제공합니다.
 
-또한 이 자습서의 [부록에서는](#partial-batch-ingestion-error-types) 부분 배치 처리 오류 유형에 대한 참조를 제공합니다.
+또한 이 자습서의 [부록에서는](#appendix) 부분 배치 처리 오류 유형에 대한 참조를 제공합니다.
+
+>[!IMPORTANT] 이 기능은 API를 사용해서만 존재합니다. 이 기능을 이용하려면 팀에 문의하십시오.
 
 ## 시작하기
 
@@ -47,7 +49,7 @@ source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
 
 ## API에서 부분 일괄 처리를 위해 데이터 세트 활성화
 
->[!NOTE] 이 섹션에서는 API를 사용하여 부분 일괄 처리를 위한 데이터 세트 활성화에 대해 설명합니다. UI 사용에 대한 지침은 UI 단계에서 데이터 세트 [활성화를 참조하십시오](#enable-a-dataset-for-partial-batch-ingestion-in-the-ui) .
+<!-- >[!NOTE] This section describes enabling a dataset for partial batch ingestion using the API. For instructions on using the UI, please read the [enable a dataset for partial batch ingestion in the UI](#enable-a-dataset-for-partial-batch-ingestion-in-the-ui) step. -->
 
 새 데이터 세트를 만들거나 부분 처리가 활성화된 기존 데이터 세트를 수정할 수 있습니다.
 
@@ -71,35 +73,35 @@ source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
 
 데이터 집합 내에서 위에 설명된 태그를 추가해야 합니다.
 
-## UI에서 부분 일괄 처리를 위한 데이터 세트 활성화
+<!-- ## Enable a dataset for partial batch ingestion in the UI
 
->[!NOTE] 이 섹션에서는 UI를 사용하여 부분 일괄 처리를 위한 데이터 세트 활성화에 대해 설명합니다. API를 사용하여 부분 일괄 처리를 위해 이미 데이터 세트를 활성화한 경우 다음 섹션으로 건너뛸 수 있습니다.
+>[!NOTE] This section describes enabling a dataset for partial batch ingestion using the UI. If you have already enabled a dataset for partial batch ingestion using the API, you can skip ahead to the next section.
 
-플랫폼 UI를 통해 데이터 세트를 부분 수집할 수 있도록 하려면 왼쪽 탐색 **영역에서 데이터** 세트를 클릭합니다. 새 데이터 세트를 [만들거나](#create-a-new-dataset-with-partial-batch-ingestion-enabled) 기존 데이터 세트를 [수정할 수 있습니다](#modify-an-existing-dataset-to-enable-partial-batch-ingestion).
+To enable a dataset for partial ingestion through the Platform UI, click **Datasets** in the left navigation. You can either [create a new dataset](#create-a-new-dataset-with-partial-batch-ingestion-enabled) or [modify an existing dataset](#modify-an-existing-dataset-to-enable-partial-batch-ingestion).
 
-### 부분 일괄 처리가 활성화된 새 데이터 세트 만들기
+### Create a new dataset with partial batch ingestion enabled
 
-새 데이터 세트를 만들려면 [데이터 세트 사용 안내서의](../../catalog/datasets/user-guide.md)단계를 따르십시오. 데이터 세트 구성 *단계에 도달하면 부분 통합* 및 *오류 진단* ** 필드를메모해둡니다.
+To create a new dataset, follow the steps in the [dataset user guide](../../catalog/datasets/user-guide.md). Once you reach the *Configure dataset* step, take note of the *Partial Ingestion* and *Error Diagnostics* fields.
 
 ![](../images/batch-ingestion/partial-ingestion/configure-dataset-focus.png)
 
-부분 *통합* 토글을 사용하면 부분 일괄 처리를 사용하거나 사용하지 않을 수 있습니다.
+The *Partial ingestion* toggle allows you to enable or disable the use of partial batch ingestion.
 
-오류 *진단* 토글은 부분 통합 토글이 꺼진 경우에만 ** 나타납니다. 이 기능을 사용하면 플랫폼에서 인제스트된 배치에 대한 자세한 오류 메시지를 생성할 수 있습니다. 부분 통합 *전환이* 켜져 있으면 향상된 오류 진단 기능이 자동으로 적용됩니다.
+The *Error Diagnostics* toggle only appears when the *Partial Ingestion* toggle is off. This feature allows Platform to generate detailed error messages about your ingested batches. If the *Partial Ingestion* toggle is turned on, enhanced error diagnostics are automatically enforced.
 
 ![](../images/batch-ingestion/partial-ingestion/configure-dataset-partial-ingestion-focus.png)
 
-오류 *임계값을* 사용하면 전체 배치가 실패하기 전에 허용되는 오류 비율을 설정할 수 있습니다. 기본적으로 이 값은 5%로 설정됩니다.
+The *Error threshold* allows you to set the percentage of acceptable errors before the entire batch will fail. By default, this value is set to 5%.
 
-### 기존 데이터 세트를 수정하여 부분 일괄 처리 통합 활성화
+### Modify an existing dataset to enable partial batch ingestion
 
-기존 데이터 세트를 수정하려면 수정할 데이터 세트를 선택합니다. 오른쪽의 세로 막대는 데이터 세트에 대한 정보로 채워집니다.
+To modify an existing dataset, select the dataset you want to modify. The sidebar on the right populates with information about the dataset. 
 
 ![](../images/batch-ingestion/partial-ingestion/modify-dataset-focus.png)
 
-부분 *통합* 토글을 사용하면 부분 일괄 처리를 사용하거나 사용하지 않을 수 있습니다.
+The *Partial ingestion* toggle allows you to enable or disable the use of partial batch ingestion.
 
-오류 *임계값을* 사용하면 전체 배치가 실패하기 전에 허용되는 오류 비율을 설정할 수 있습니다. 기본적으로 이 값은 5%로 설정됩니다.
+The *Error threshold* allows you to set the percentage of acceptable errors before the entire batch will fail. By default, this value is set to 5%. -->
 
 ## 부분 일괄 처리 오류 검색
 
@@ -176,7 +178,7 @@ curl -X GET https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID}
 
 이 자습서에서는 데이터 세트를 만들거나 수정하여 부분 일괄 처리를 활성화하는 방법에 대해 다룹니다. 일괄 처리에 대한 자세한 내용은 [일괄 처리 통합 개발자 안내서를](./api-overview.md)참조하십시오.
 
-## 부분 일괄 처리 오류 유형
+## 부분 일괄 처리 오류 유형 {#appendix}
 
 데이터 인제스트 시 부분 일괄 처리에는 4가지 오류 유형이 있습니다.
 
