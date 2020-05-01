@@ -4,7 +4,7 @@ seo-title: Adobe Experience Platform 웹 SDK 이벤트 추적
 description: Experience Platform 웹 SDK 이벤트를 추적하는 방법 학습
 seo-description: Experience Platform 웹 SDK 이벤트를 추적하는 방법 학습
 translation-type: tm+mt
-source-git-commit: 3c6f9663ef5b83ceeb93539171017e2b282a613f
+source-git-commit: 45ee1f79ac5953b7c407083b4352b2c751e8aec9
 
 ---
 
@@ -43,7 +43,7 @@ alloy("event", {
 });
 ```
 
->[!Note]
+>[!NOTE]
 >XDM 필드의 각 이벤트에서 전송할 수 있는 데이터에는 32KB 제한이 있습니다.
 
 ### XDM 이외의 데이터 전송
