@@ -1,9 +1,14 @@
 ---
-source-git-commit: 792d6962154a8cdca74b3c4e72d6f7a7663cbd6f
+source-git-commit: 14cd3d17c7d9ba602d02925abddec9e0b246a8c8
 translation-type: tm+mt
 
 ---
 # 컨텐츠 기여
+
+| 프로덕션 | 스테이지 |
+|---|---|
+| [![빌드 상태](https://docs.ci.corp.adobe.com/job/experience-platform.en_production/badge/icon)](https://docs.ci.corp.adobe.com/job/experience-platform.en_production/lastBuild) | [![빌드 상태](https://docs.ci.corp.adobe.com/job/experience-platform.en_stage/badge/icon)](https://docs.ci.corp.adobe.com/job/experience-platform.en_stage/lastBuild) |
+| [출력 제품](https://docs.adobe.com/content/help/ko-KR/experience-platform/landing/home.html) | [출력 단계](https://docs-stg.corp.adobe.com/content/help/en/experience-platform/landing/home.html) |
 
 Adobe는 Adobe 커뮤니티와 설명서 팀이 아닌 Adobe 직원들의 내용 기여를 환영합니다.
 
@@ -39,9 +44,9 @@ Adobe Experience Cloud 솔루션에 대한 제품 팀의 테크니컬 라이터,
 
 <!--Employees from other parts of the Adobe world should use the public repo for minor updates.-->
 
-## Experience Platform 설명서 팀에 문의
+## Experience Platform 설명서 팀 문의
 
-위에 명시된 바와 같이, Adobe 커뮤니티 구성원은 해당 작성자에게 지정되는 문제를 제출할 수 있습니다. Adobe 직원은 문제를 제출하거나 Experience Platform 설명서 팀에 직접 문의하십시오. 특정 플랫폼 영역에 대한 리드 작성기를 찾으려면 Adobe Experience Platform [설명서 위키를 참조하십시오](https://wiki.corp.adobe.com/display/DMSArchitecture/Adobe+Experience+Platform+Documentation).
+위에 명시된 바와 같이, Adobe 커뮤니티 구성원은 해당 작성자에게 지정될 문제를 제출할 수 있습니다. Adobe 직원은 문제를 제출하거나 Experience Platform 설명서 팀에 직접 문의하십시오. 특정 플랫폼 영역에 대한 리드 작성기를 찾으려면 [Adobe Experience Platform 문서 위키를 참조하십시오](https://wiki.corp.adobe.com/display/DMSArchitecture/Adobe+Experience+Platform+Documentation).
 
 ## 도구 및 설정
 
