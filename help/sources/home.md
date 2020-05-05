@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform 소스 커넥터 개요
 topic: overview
 translation-type: tm+mt
-source-git-commit: 8ee88b27c79610827ff2627999e303b5fc43e1c6
+source-git-commit: b58b933fce9d1abe658a908ec07f390e4991c5c6
 
 ---
 
@@ -65,6 +65,7 @@ Adobe Experience Platform은 타사 고객 성공 애플리케이션의 데이�
 경험 플랫폼은 타사 데이터베이스의 데이터 인제스트를 지원합니다. 특정 소스 커넥터에 대한 자세한 내용은 다음 관련 문서를 참조하십시오.
 
 - [Amazon Redshift 커넥터](connectors/databases/redshift.md)
+- [Apache Cassandra 커넥터](connectors/databases/cassandra.md)
 - [Azure HDInsights 커넥터의 Apache Hive](connectors/databases/hive.md)
 - [Azure HDInsights 커넥터의 Apache Spark](connectors/databases/spark.md)
 - [Azure 데이터 탐색기 커넥터](connectors/databases/data-explorer.md)
