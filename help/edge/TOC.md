@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Edge Network 도움말
 translation-type: tm+mt
-source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
+source-git-commit: db4bfec04a1116ce2b6a0be7ca0e8cb2f9639ad6
 
 ---
 
@@ -17,12 +17,14 @@ source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
 * 기본 사항 {#fundamentals}
    * [SDK 설치](fundamentals/installing-the-sdk.md)
    * [명령 실행](fundamentals/executing-commands.md)
+   * [에지 구성](fundamentals/edge-configuration.md)
    * [SDK 구성](fundamentals/configuring-the-sdk.md)
    * [이벤트 추적](fundamentals/tracking-events.md)
    * [이벤트 데이터 병합](fundamentals/merging-event-data.md)
    * [디버깅](fundamentals/debugging.md)
    * [여러 속성을 사용한 인터랙션](fundamentals/interacting-with-multiple-properties.md)
    * [맞춤형 컨텐츠 렌더링](fundamentals/rendering-personalization-content.md)
+   * [Flicker 관리](fundamentals/managing-flicker.md)
    * [지원 동의](fundamentals/supporting-consent.md)
    * [인앱 브라우저 지원](fundamentals/supporting-in-app-browsers.md)
 * 구현할 사항 {#implement}
@@ -31,7 +33,9 @@ source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
    * Analytics {#analytics}
       * [분석 개요](solution-specific/analytics/analytics-overview.md)
       * [자동으로 매핑된 변수](solution-specific/analytics/automatically-mapped-vars.md)
+   * Target {#target}
+      * [Target 개요](solution-specific/target/target-overview.md)
 * 참조 {#ref}
    * [자동으로 수집된 정보](reference/automatic-information.md)
    * [라이브러리 정보 검색](reference/retrieving-library-information.md)
-* [플랫폼 릴리스 노트](https://www.adobe.com/go/platform-release-notes-en)
+* [플랫폼 릴리스 정보](https://www.adobe.com/go/platform-release-notes-en)
