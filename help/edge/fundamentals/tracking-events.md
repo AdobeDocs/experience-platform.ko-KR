@@ -4,7 +4,7 @@ seo-title: Adobe Experience Platform 웹 SDK 이벤트 추적
 description: Experience Platform 웹 SDK 이벤트를 추적하는 방법 학습
 seo-description: Experience Platform 웹 SDK 이벤트를 추적하는 방법 학습
 translation-type: tm+mt
-source-git-commit: 45ee1f79ac5953b7c407083b4352b2c751e8aec9
+source-git-commit: c49ac064d310fbe12e19d58b80c2267a35d585e8
 
 ---
 
@@ -81,35 +81,6 @@ alloy("event", {
 });
 ```
 
-### 보기 시작
-
-보기가 시작되면 명령 내 `viewStart` 로 설정하여 SDK에 `true` 알려야 `event` 합니다. 이는 SDK가 개인화된 컨텐츠를 검색하고 렌더링해야 함을 의미합니다. 현재 개인화를 사용하고 있지 않더라도 페이지 내 코드를 수정할 필요가 없기 때문에 나중에에서 개인화 또는 기타 기능을 간편하게 사용할 수 있습니다. 또한 데이터 수집 후 분석 보고서를 볼 때 보기 추적을 하면 유용합니다.
-
-뷰의 정의는 컨텍스트에 따라 달라질 수 있습니다.
-
-* 일반 웹 사이트에서 각 웹 페이지는 일반적으로 고유한 보기로 간주됩니다. 이 경우, 설정된 이벤트 `viewStart` 는 페이지 맨 위에서 가능한 빨리 `true` 실행해야 합니다.
-* 단일 페이지 응용 프로그램 \(SPA\)에서 보기가 덜 정의되어 있습니다. 이는 일반적으로 사용자가 애플리케이션 내에서 탐색했으며 대부분의 컨텐츠가 변경되었음을 의미합니다. 단일 페이지 애플리케이션의 기술적 기초 위에 익숙한 사용자는 일반적으로 애플리케이션이 새로운 경로를 로드할 때 발생합니다. 사용자가 새 보기로 이동할 때마다 _보기를_&#x200B;정의하도록 선택하면 `viewStart` 설정된 이벤트가 `true` 실행됩니다.
-
-다음으로 설정된 이벤트 `viewStart` `true` 는 Adobe Experience Cloud로 데이터를 보내고 Adobe Experience Cloud에서 콘텐츠를 요청하는 기본 메커니즘입니다. 보기를 시작하는 방법은 다음과 같습니다.
-
-```javascript
-alloy("event", {
-  "viewStart": true,
-  "xdm": {
-    "commerce": {
-      "order": {
-        "purchaseID": "a8g784hjq1mnp3",
-        "purchaseOrderNumber": "VAU3123",
-        "currencyCode": "USD",
-        "priceTotal": 999.98
-      }
-    }
-  }
-});
-```
-
-데이터가 전송되면 서버는 개인화된 컨텐츠로 응답합니다. 이 개인화된 컨텐츠는 사용자의 관점에서 자동으로 렌더링됩니다. 링크 핸들러는 새 보기의 컨텐츠에도 자동으로 첨부됩니다.
-
 ## sendBeacon API 사용
 
 웹 페이지 사용자가 다른 곳으로 이동하기 전에 이벤트 데이터를 전송하기가 어려울 수 있습니다. 요청이 너무 길면 브라우저가 요청을 취소할 수 있습니다. 일부 브라우저는 이 시간 동안 데이터를 보다 쉽게 수집할 수 있도록 `sendBeacon` 하는 웹 표준 API를 구현했습니다. 사용 `sendBeacon`시 브라우저는 글로벌 브라우징 컨텍스트에서 웹 요청을 수행합니다. 즉, 브라우저가 백그라운드에서 비콘 요청을 수행하고 페이지 탐색을 유지하지 않습니다. Adobe Experience Platform 웹 SDK에 사용할 수 있도록 하려면 이벤트 명령 `sendBeacon``"documentUnloading": true` 에 옵션을 추가합니다.  다음은 한 예입니다.
@@ -138,7 +109,7 @@ alloy("event", {
 
 ```javascript
 alloy("event", {
-  "viewStart": true,
+  "renderDecisions": true,
   "xdm": {
     "commerce": {
       "order": {
@@ -149,7 +120,7 @@ alloy("event", {
       }
     }
   }
-}).then(function() {
+}).then(function(results) {
     // Tracking the event succeeded.
   })
   .catch(function(error) {
