@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform 소스 커넥터 도움말
 translation-type: tm+mt
-source-git-commit: 30f36d18f0e670ede02041db04f1cc8be55d11a3
+source-git-commit: 2d22f48cc8f461774a77c3351332f21849d56545
 
 ---
 
@@ -35,6 +35,7 @@ source-git-commit: 30f36d18f0e670ede02041db04f1cc8be55d11a3
       - [ServiceNow 커넥터](connectors/customer-success/servicenow.md)
    - 데이터베이스 {#databases}
       - [Amazon Redshift 커넥터](connectors/databases/redshift.md)
+      - [Apache Cassandra 커넥터](connectors/databases/cassandra.md)
       - [Azure HDInsights 커넥터의 Apache Hive](connectors/databases/hive.md)
       - [Azure HDInsights 커넥터의 Apache Spark](connectors/databases/spark.md)
       - [Azure 데이터 탐색기 커넥터](connectors/databases/data-explorer.md)
@@ -73,6 +74,7 @@ source-git-commit: 30f36d18f0e670ede02041db04f1cc8be55d11a3
          - [ServiceNow 커넥터](tutorials/api/create/customer-success/servicenow.md)
       - 데이터베이스 {#databases}
          - [Amazon Redshift 커넥터](tutorials/api/create/databases/redshift.md)
+         - [Apache Cassandra 커넥터](tutorials/api/create/databases/cassandra.md)
          - [Azure HDInsights 커넥터의 Apache Hive](tutorials/api/create/databases/hive.md)
          - [Azure HDInsights 커넥터의 Apache Spark](tutorials/api/create/databases/spark.md)
          - [Azure 데이터 탐색기 커넥터](tutorials/api/create/databases/data-explorer.md)
