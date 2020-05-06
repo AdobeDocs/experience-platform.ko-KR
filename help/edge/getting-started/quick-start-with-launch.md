@@ -4,7 +4,10 @@ seo-title: Adobe Experience Platform 웹 SDK 빠른 시작(Launch)
 description: Experience Platform 웹 SDK 익스텐션을 사용하여 데이터를 수집하는 빠른 시작 가이드
 seo-description: Experience Platform 웹 SDK 익스텐션을 사용하여 데이터를 수집하는 빠른 시작 가이드
 translation-type: tm+mt
-source-git-commit: e23b0ce9c20d5d2d770d1c1261fe08de5743325a
+source-git-commit: 51acb07efe624c7cf1dfaabc4b03f04c76ac88f8
+workflow-type: tm+mt
+source-wordcount: '391'
+ht-degree: 4%
 
 ---
 
@@ -25,10 +28,7 @@ source-git-commit: e23b0ce9c20d5d2d770d1c1261fe08de5743325a
 
 Adobe Experience Platform으로 데이터를 전송하려면 XDM 스키마 및 해당 스키마를 사용하는 데이터 세트를 만들어야 합니다.
 
-- [다음과 같은 혼합으로 스키마를](../../xdm/tutorials/create-schema-ui.md) 만듭니다.
-   - ExperienceEvent 구현 세부 정보
-   - ExperienceEvent 환경 세부 사항
-   - ExperienceEvent 웹 세부 사항
+- [스키마 만들기](../../xdm/tutorials/create-schema-ui.md)
 - 만든 스키마에 Adobe Experience Platform 웹 SDK 믹신 추가
 - [데이터](https://platform.adobe.com/dataset/overview) 육지에 사용할 스키마로 데이터 집합 만들기
 
