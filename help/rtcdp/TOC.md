@@ -3,7 +3,10 @@ product: adobe experience platform
 audience: user
 user-guide-title: 실시간 고객 데이터 플랫폼 도움말
 translation-type: tm+mt
-source-git-commit: 6f27a5eb12991fce0fbeef2d77622dfcf4a97cae
+source-git-commit: e0807f32ff5f3d16a6805074951e3b09723c5181
+workflow-type: tm+mt
+source-wordcount: '407'
+ht-degree: 11%
 
 ---
 
@@ -23,21 +26,21 @@ source-git-commit: 6f27a5eb12991fce0fbeef2d77622dfcf4a97cae
    * [대상 개요](destinations/destinations-overview.md)
    * [대상 유형 및 카테고리](/help/rtcdp/destinations/destination-types.md)
    * 대상 인터페이스  {#destinations-interface}
-      * [대상 작업 영역](destinations/destinations-workspace.md)
-      * [대상 세부 사항 페이지](destinations/destination-details-page.md)
-   * 대상 카탈로그 {#destinations-cat}
+      * [대상 작업 공간](destinations/destinations-workspace.md)
+      * [대상 세부 정보 페이지](destinations/destination-details-page.md)
+   * 대상 카탈로그  {#destinations-cat}
       * [대상 카탈로그 개요](destinations/destinations-catalog.md)
       * Adobe 대상{#adobe-destinations}
          * [Adobe 대상 개요](destinations/adobe-destinations.md)
          * [Adobe Campaign](destinations/adobe-campaign-destination.md)
       * 광고 대상{#advertising-destinations}
          * [광고 대상 개요](destinations/advertising-destinations.md)
-         * [Adobe Advertising Cloud 확장](/help/rtcdp/destinations/adobe-advertising-cloud-extension.md)
+         * [Adobe Advertising Cloud 익스텐션](/help/rtcdp/destinations/adobe-advertising-cloud-extension.md)
          * [Awin 광고 전환 태그 확장](/help/rtcdp/destinations/awin-conversiontag-extension.md)
          * [Awin 광고 마스터태그 확장](/help/rtcdp/destinations/awin-mastertag-extension.md)
          * [Beemray 확장](/help/rtcdp/destinations/beemray-extension.md)
          * [Bing 광고 유니버설 이벤트 추적 확장](/help/rtcdp/destinations/bing-ads-extension.md)
-         * [분기 확장](/help/rtcdp/destinations/branch-extension.md)
+         * [지점 확장](/help/rtcdp/destinations/branch-extension.md)
          * [DoubleClick Floodlight 확장](/help/rtcdp/destinations/doubleclick-floodlight-extension.md)
          * [Facebook 픽셀 확장](/help/rtcdp/destinations/facebook-pixel-extension.md)
          * [Flashtalking OneTag 확장](/help/rtcdp/destinations/flashtalking-extension.md)
@@ -50,23 +53,23 @@ source-git-commit: 6f27a5eb12991fce0fbeef2d77622dfcf4a97cae
          * [Pinterest 전환 추적 확장](destinations/pinterest-extension.md)
          * [Twitter 범용 웹 사이트 태그 확장](destinations/twitter-uwt-extension.md)
       * 분석 대상 {#analytics-destinations}
-         * [Analytics 대상 개요](destinations/analytics-destinations.md)
-         * [Adform Website Tracking 확장](/help/rtcdp/destinations/adform-extension.md)
+         * [분석 대상 개요](destinations/analytics-destinations.md)
+         * [웹 사이트 추적 확장 기능](/help/rtcdp/destinations/adform-extension.md)
          * [Adobe Analytics 확장](/help/rtcdp/destinations/adobe-analytics-extension.md)
          * [Adobe Media Analytics for Audio 및 Video 확장](/help/rtcdp/destinations/adobe-video-analytics-extension.md)
          * [클릭 확장](/help/rtcdp/destinations/clicktale-extension.md)
-         * [Contentsquare 확장](/help/rtcdp/destinations/contentsquare-extension.md)
+         * [Contentsquare 익스텐션](/help/rtcdp/destinations/contentsquare-extension.md)
          * [데시벨 확장](/help/rtcdp/destinations/decibel-extension.md)
          * [Demandbase 확장](/help/rtcdp/destinations/demandbase-extension.md)
          * [Dialogtech 확장](/help/rtcdp/destinations/dialogtech-extension.md)
          * [Google 글로벌 사이트 태그 분석 확장](/help/rtcdp/destinations/gtag-analytics-extension.md)
          * [Google Universal Analytics 확장](/help/rtcdp/destinations/google-universal-analytics-extension.md)
-         * [JW Player Analytics(베타) 확장](/help/rtcdp/destinations/jw-player-analytics-extension.md)
-         * [Nielsen BSDK 확장](destinations/nielsen-bsdk-extension.md)
+         * [JW 플레이어 분석(베타) 확장](/help/rtcdp/destinations/jw-player-analytics-extension.md)
+         * [Nielsen BSDK 익스텐션](destinations/nielsen-bsdk-extension.md)
          * [Nielsen IMA 처리기 확장](destinations/nielsen-ima-extension.md)
          * [Nielsen VideoJS 플레이어 처리기 확장](destinations/nielsen-videojs-extension.md)
          * [Parse.ly Analytics 확장](destinations/parsely-extension.md)
-         * [Quantum 지표 확장](destinations/quantum-metric-extension.md)
+         * [양자계 확장](destinations/quantum-metric-extension.md)
          * [SessionCam 확장](destinations/sessioncam-extension.md)
          * [TMMData 확장](destinations/tmmdata-extension.md)
          * [텍스트 전환 추적 확장](destinations/yext-extension.md)
@@ -75,21 +78,21 @@ source-git-commit: 6f27a5eb12991fce0fbeef2d77622dfcf4a97cae
          * [클라우드 스토리지 대상을 만드는 워크플로우](/help/rtcdp/destinations/cloud-storage-destinations-workflow.md)
          * [Amazon S3 대상](destinations/amazon-s3-destination.md)
          * [SFTP 대상](destinations/sftp-destination.md)
-      * 데이터 관리 플랫폼 대상 {dmp-destinations}
+      * 데이터 관리 플랫폼 대상 {#dmp-destinations}
          * [데이터 관리 플랫폼 대상 개요](destinations/dmp-destinations.md)
-         * [Audience Manager DIL 확장](/help/rtcdp/destinations/aam-dil-extension.md)
+         * [Audience Manager DIL 익스텐션](/help/rtcdp/destinations/aam-dil-extension.md)
       * 이메일 마케팅 대상{#email-destinations}
          * [이메일 마케팅 대상 개요](destinations/email-marketing-destinations.md)
          * [Adobe Campaign](destinations/adobe-campaign-destination.md)
-         * [Bizable Analytics 확장](/help/rtcdp/destinations/bizible-extension.md)
-         * [Marketing To 확장](destinations/marketo-extension.md)
+         * [모바일 분석 확장](/help/rtcdp/destinations/bizible-extension.md)
+         * [마케팅 확장](destinations/marketo-extension.md)
          * [Marketo Munchkin 확장 프로그램](destinations/marketo-munchkin-extension.md)
          * [Oracle Furnar](destinations/oracle-eloqua-destination.md)
          * [Oracle Responsys](destinations/oracle-responsys-destination.md)
-         * [PebblePost 익스텐션](destinations/pebblepost-extension.md)
+         * [페블포스트 연장](destinations/pebblepost-extension.md)
          * [Salesforce Marketing Cloud](destinations/salesforce-marketing-cloud-destination.md)
       * Experience Platform Launch extensions{#launch-extensions}
-         * [Experience Platform Launch 확장 개요](/help/rtcdp/destinations/experience-platform-launch-extensions.md)
+         * [경험 플랫폼 론치 확장 개요](/help/rtcdp/destinations/experience-platform-launch-extensions.md)
       * 개인화 대상 {#personalization-destinations}
          * [개인화 대상 개요](/help/rtcdp/destinations/personalization-destinations.md)
          * [Adobe Target 확장](/help/rtcdp/destinations/adobe-target-extension.md)
@@ -97,8 +100,8 @@ source-git-commit: 6f27a5eb12991fce0fbeef2d77622dfcf4a97cae
          * [Beemray 확장](/help/rtcdp/destinations/beemray-extension.md)
          * [D&amp;B 방문자 인텔리전스 확장](/help/rtcdp/destinations/dnb-extension.md)
          * [Experience Cloud ID 서비스 확장](/help/rtcdp/destinations/adobe-ecid-extension.md)
-         * [Gainsight 확장](/help/rtcdp/destinations/gainsight-extension.md)
-         * [킥파이어 익스텐션](/help/rtcdp/destinations/kickfire-extension.md)
+         * [승자 연장](/help/rtcdp/destinations/gainsight-extension.md)
+         * [킥파이어 확장](/help/rtcdp/destinations/kickfire-extension.md)
          * [Marketing to Web Personalization 확장](destinations/marketo-web-personalization-extension.md)
       * 소셜 네트워크 대상{#social-destinations}
          * [소셜 네트워크 대상 개요](/help/rtcdp/destinations/social-network-destinations.md)
@@ -110,12 +113,12 @@ source-git-commit: 6f27a5eb12991fce0fbeef2d77622dfcf4a97cae
          * [Foresee 확장](/help/rtcdp/destinations/foresee-extension.md)
          * [InMoment 확장](/help/rtcdp/destinations/inmoment-extension.md)
          * [Qualtrics 웹 사이트 피드백 확장](destinations/qualtrics-extension.md)
-         * [Web Intercept 설문 조사 - QuestionPro 익스텐션](/help/rtcdp/destinations/web-intercept-surveys-extension.md)
-      * 고객 대상의 음성 {#voice-of-customer-destinations}
+         * [웹 출구 설문 조사 - QuestionPro 확장](/help/rtcdp/destinations/web-intercept-surveys-extension.md)
+      * 고객 대상 음성 {#voice-of-customer-destinations}
          * [고객 대상 개요](/help/rtcdp/destinations/voice-of-customer-destinations.md)
          * [디지털 피드백 확장 확인](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md)
-         * [Invoca 태그 확장](/help/rtcdp/destinations/invoca-extension.md)
-         * [메달리아 확장](destinations/medallia-extension.md)
+         * [태그 확장](/help/rtcdp/destinations/invoca-extension.md)
+         * [메달리아 익스텐션](destinations/medallia-extension.md)
          * [Talk URL 받은 편지함 확장](destinations/talkurl-extension.md)
    * 대상 자습서 {#dest-tutorials}
       * [대상에 연결](/help/rtcdp/destinations/connect-destination.md)
