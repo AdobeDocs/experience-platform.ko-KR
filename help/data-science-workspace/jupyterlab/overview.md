@@ -4,7 +4,7 @@ solution: Experience Platform
 title: JupiterLab 사용 안내서
 topic: Overview
 translation-type: tm+mt
-source-git-commit: 606ae8784760e54a597b189958889199f85ebd0d
+source-git-commit: 37213f29e8099f8587cde9eb66f9b75de3ad8a3a
 workflow-type: tm+mt
 source-wordcount: '3356'
 ht-degree: 5%
@@ -54,7 +54,7 @@ JupiterLab의 주요 기능 및 일반적인 작업 수행에 대한 지침은 �
 * [코드 셀](#code-cells)
 * [커널](#kernels)
 * [커널 세션](#kernel-sessions)
-* [PySpark/Spark 실행 리소스](#pyspark-spark-execution-resource)
+* [PySpark/Spark 실행 리소스](#execution-resource)
 * [론처](#launcher)
 
 ### Access JupiterLab {#access-jupyterlab}
@@ -143,7 +143,7 @@ JupiterLab의 각 활성 노트북 또는 활동은 커널 세션을 활용합�
 
 ![](../images/jupyterlab/user-guide/switch_kernel.gif)
 
-### PySpark/Spark 실행 리소스 {#pyspark-spark-execution-resource}
+### PySpark/Spark 실행 리소스 {#execution-resource}
 
 >[!IMPORTANT]
 >Spark 2.3이 Spark 2.4로 바뀌면서 Spark와 PySpark 커널 모두 없어졌습니다.
