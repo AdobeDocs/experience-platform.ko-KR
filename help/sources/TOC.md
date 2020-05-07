@@ -3,7 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform 소스 커넥터 도움말
 translation-type: tm+mt
-source-git-commit: 2d22f48cc8f461774a77c3351332f21849d56545
+source-git-commit: de523ebef35564ebc2e5991ee14ae1c7284bf092
+workflow-type: tm+mt
+source-wordcount: '513'
+ht-degree: 0%
 
 ---
 
@@ -35,7 +38,6 @@ source-git-commit: 2d22f48cc8f461774a77c3351332f21849d56545
       - [ServiceNow 커넥터](connectors/customer-success/servicenow.md)
    - 데이터베이스 {#databases}
       - [Amazon Redshift 커넥터](connectors/databases/redshift.md)
-      - [Apache Cassandra 커넥터](connectors/databases/cassandra.md)
       - [Azure HDInsights 커넥터의 Apache Hive](connectors/databases/hive.md)
       - [Azure HDInsights 커넥터의 Apache Spark](connectors/databases/spark.md)
       - [Azure 데이터 탐색기 커넥터](connectors/databases/data-explorer.md)
@@ -74,7 +76,6 @@ source-git-commit: 2d22f48cc8f461774a77c3351332f21849d56545
          - [ServiceNow 커넥터](tutorials/api/create/customer-success/servicenow.md)
       - 데이터베이스 {#databases}
          - [Amazon Redshift 커넥터](tutorials/api/create/databases/redshift.md)
-         - [Apache Cassandra 커넥터](tutorials/api/create/databases/cassandra.md)
          - [Azure HDInsights 커넥터의 Apache Hive](tutorials/api/create/databases/hive.md)
          - [Azure HDInsights 커넥터의 Apache Spark](tutorials/api/create/databases/spark.md)
          - [Azure 데이터 탐색기 커넥터](tutorials/api/create/databases/data-explorer.md)
@@ -112,8 +113,8 @@ source-git-commit: 2d22f48cc8f461774a77c3351332f21849d56545
       - [마케팅 자동화 데이터 수집](tutorials/api/collect/marketing-automation.md)
       - [결제 데이터 수집](tutorials/api/collect/payments.md)
       - [프로토콜 데이터 수집](tutorials/api/collect/protocols.md)
-   - [타사 클라우드 스토리지 시스템에서 쪽모이 세공 데이터를 인제스트](tutorials/api/create-dataset-base-connection.md)
-   - [Flow Service API를 사용하여 데이터 세트 기본 연결 만들기](tutorials/api/cloud-storage-parquet.md)
+   - [타사 클라우드 스토리지 시스템에서 쪽모이 세공 데이터를 인제스트](tutorials/api/cloud-storage-parquet.md)
+   - [Flow Service API를 사용하여 데이터 세트 기본 연결 만들기](tutorials/api/create-dataset-base-connection.md)
 - UI 자습서 {#ui-tutorials}
    - 소스 커넥터 만들기 {#create}
       - Adobe 애플리케이션 {#adobe-applications}
