@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Azure 데이터 탐색기 커넥터
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1fb07723aedcf6dfd49765c10342b70b0a7d24f3
+source-git-commit: 58cc359527a590fce3825f41682cbb32be88f8d1
 workflow-type: tm+mt
 source-wordcount: '140'
 ht-degree: 0%
@@ -28,5 +28,5 @@ Adobe Experience Platform은 Microsoft, MySQL 및 Azure와 같은 데이터베�
 
 ## UI를 사용하여 Azure 데이터 탐색기를 플랫폼에 연결
 
-- [UI에서 Azure 데이터 탐색기 소스 커넥터 만들기](../../tutorials/ui/create/databases/ats.md)
+- [UI에서 Azure 데이터 탐색기 소스 커넥터 만들기](../../tutorials/ui/create/databases/data-explorer.md)
 - [UI에서 데이터베이스 커넥터에 대한 데이터 흐름 구성](../../tutorials/ui/dataflow/databases.md)
