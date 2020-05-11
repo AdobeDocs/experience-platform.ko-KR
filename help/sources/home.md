@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform 소스 커넥터 개요
 topic: overview
 translation-type: tm+mt
-source-git-commit: eadf285ef5fd373eec54e6680b5f253b0b16dcf9
+source-git-commit: 492adad9b38c8850130931d3d393f28c67057d07
 workflow-type: tm+mt
-source-wordcount: '742'
+source-wordcount: '746'
 ht-degree: 0%
 
 ---
@@ -46,6 +46,7 @@ Adobe Experience Platform은 서드파티 광고 시스템의 데이터 인제�
 
 - [Azure Data Lake Storage Gen2 커넥터](connectors/cloud-storage/adls-gen2.md)
 - [Azure Blob 및 Amazon S3 커넥터](connectors/cloud-storage/blob-s3.md)
+- [Azure 파일 저장소 커넥터](connectors/cloud-storage/azure-file-storage.md)
 - [FTP 및 SFTP 커넥터](connectors/cloud-storage/ftp-sftp.md)
 - [Google 클라우드 스토리지 커넥터](connectors/cloud-storage/google-cloud-storage.md)
 
