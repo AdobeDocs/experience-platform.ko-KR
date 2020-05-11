@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: 실시간 고객 프로필 API 개발자 가이드
 topic: guide
 translation-type: tm+mt
-source-git-commit: 4bab89c981f7e30b28477068625d1b6f534fa838
+source-git-commit: 824e9eda41488efc362a6105c552f522185c046d
 workflow-type: tm+mt
 source-wordcount: '2057'
 ht-degree: 1%
@@ -264,55 +264,59 @@ curl -X POST \
 성공적인 응답은 HTTP 상태 207(다중 상태)과 POST 요청에 ID가 제공된 병합 정책의 세부 정보를 반환합니다.
 
 ```json
-{
-    "id": "0bf16e61-90e9-4204-b8fa-ad250360957b",
-    "name": "Profile Default Merge Policy",
-    "imsOrgId": "{IMS_ORG}",
-    "sandbox": {
-        "sandboxId": "ff0f6870-c46d-11e9-8ca3-036939a64204",
-        "sandboxName": "prod",
-        "type": "production",
-        "default": true
-    },
-    "schema": {
-        "name": "_xdm.context.profile"
-    },
-    "version": 1,
-    "identityGraph": {
-        "type": "none"
-    },
-    "attributeMerge": {
-        "type": "timestampOrdered"
-    },
-    "default": true,
-    "updateEpoch": 1552086578
-},
-{
-    "id": "42d4a596-b1c6-46c0-994e-ca5ef1f85130",
-    "name": "Dataset Precedence Merge Policy",
-    "imsOrgId": "{IMS_ORG}",
-    "sandbox": {
-        "sandboxId": "ff0f6870-c46d-11e9-8ca3-036939a64204",
-        "sandboxName": "prod",
-        "type": "production",
-        "default": true
-    },
-    "schema": {
-        "name": "_xdm.context.profile"
-    },
-    "version": 1,
-    "identityGraph": {
-        "type": "pdg"
-    },
-    "attributeMerge": {
-        "type": "dataSetPrecedence",
-        "order": [
-            "5b76f86b85d0e00000be5c8b",
-            "5b76f8d787a6af01e2ceda18"
-        ]
-    },
-    "default": false,
-    "updateEpoch": 1576099719
+{ 
+    "results": { 
+        "0bf16e61-90e9-4204-b8fa-ad250360957b": {
+            "id": "0bf16e61-90e9-4204-b8fa-ad250360957b",
+            "name": "Profile Default Merge Policy",
+            "imsOrgId": "{IMS_ORG}",
+            "sandbox": {
+                "sandboxId": "ff0f6870-c46d-11e9-8ca3-036939a64204",
+                "sandboxName": "prod",
+                "type": "production",
+                "default": true
+            },
+            "schema": {
+                "name": "_xdm.context.profile"
+            },
+            "version": 1,
+            "identityGraph": {
+                "type": "none"
+            },
+            "attributeMerge": {
+                "type": "timestampOrdered"
+            },
+            "default": true,
+            "updateEpoch": 1552086578
+        },
+        "42d4a596-b1c6-46c0-994e-ca5ef1f85130": {
+            "id": "42d4a596-b1c6-46c0-994e-ca5ef1f85130",
+            "name": "Dataset Precedence Merge Policy",
+            "imsOrgId": "{IMS_ORG}",
+            "sandbox": {
+                "sandboxId": "ff0f6870-c46d-11e9-8ca3-036939a64204",
+                "sandboxName": "prod",
+                "type": "production",
+                "default": true
+            },
+            "schema": {
+                "name": "_xdm.context.profile"
+            },
+            "version": 1,
+            "identityGraph": {
+                "type": "pdg"
+            },
+            "attributeMerge": {
+                "type": "dataSetPrecedence",
+                "order": [
+                    "5b76f86b85d0e00000be5c8b",
+                    "5b76f8d787a6af01e2ceda18"
+                ]
+            },
+            "default": false,
+            "updateEpoch": 1576099719
+        }
+    }
 }
 ```
 
@@ -473,7 +477,7 @@ curl -X POST \
 | `name` | 목록 보기에서 병합 정책을 식별할 수 있는 친숙한 이름입니다. |
 | `identityGraph.type` | 병합할 관련 ID를 가져올 ID 그래프 유형입니다. 가능한 값: &quot;none&quot; 또는 &quot;pdg&quot;(비공개 그래프) |
 | `attributeMerge` | 데이터 충돌 시 프로필 속성 값의 우선 순위를 지정하는 방식입니다. |
-| `schema` | 병합 정책에 연결된 XDM 스키마 클래스입니다. |
+| `schema` | 병합 정책과 연결된 XDM 스키마 클래스입니다. |
 | `default` | 이 병합 정책이 스키마의 기본값인지 여부를 지정합니다. |
 
 자세한 내용은 병합 정책 [구성](#components-of-merge-policies) 요소를 참조하십시오.
