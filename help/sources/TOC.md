@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform 소스 커넥터 도움말
 translation-type: tm+mt
-source-git-commit: b3512cd4d1e024597a47e1aa52a2e23e5fce5e44
+source-git-commit: 1eb6883ec9b78e5d4398bb762bba05a61c0f8308
 workflow-type: tm+mt
-source-wordcount: '534'
+source-wordcount: '551'
 ht-degree: 0%
 
 ---
@@ -26,8 +26,10 @@ ht-degree: 0%
    - 광고 {#advertising}
       - [Google 광고 커넥터](connectors/advertising/ads.md)
    - 클라우드 스토리지 {#cloud-storage}
+      - [Amazon Kinesis 커넥터](connectors/cloud-storage/kinesis.md)
       - [Azure Data Lake Storage Gen2 커넥터](connectors/cloud-storage/adls-gen2.md)
       - [Azure Blob 및 Amazon S3 커넥터](connectors/cloud-storage/blob-s3.md)
+      - [Azure 이벤트 허브 커넥터](connectors/cloud-storage/eventhub.md)
       - [Azure 파일 저장소 커넥터](connectors/cloud-storage/azure-file-storage.md)
       - [FTP 및 SFTP 커넥터](connectors/cloud-storage/ftp-sftp.md)
       - [Google 클라우드 스토리지 커넥터](connectors/cloud-storage/google-cloud-storage.md)
@@ -159,7 +161,8 @@ ht-degree: 0%
          - [범용 OData 커넥터](tutorials/ui/create/protocols/odata.md)
    - 데이터 흐름 구성 {#dataflow}
       - [광고 커넥터에 대한 데이터 흐름 구성](tutorials/ui/dataflow/advertising.md)
-      - [클라우드 저장소 커넥터에 대한 데이터 흐름 구성](tutorials/ui/dataflow/cloud-storage.md)
+      - [일괄 처리 클라우드 스토리지 커넥터에 대한 데이터 흐름 구성](tutorials/ui/dataflow/batch/cloud-storage.md)
+      - [스트리밍 클라우드 스토리지 커넥터에 대한 데이터 흐름 구성](tutorials/ui/dataflow/streaming/cloud-storage.md)
       - [데이터베이스 커넥터에 대한 데이터 흐름 구성](tutorials/ui/dataflow/databases.md)
       - [CRM 커넥터에 대한 데이터 흐름 구성](tutorials/ui/dataflow/crm.md)
       - [고객 성공 커넥터에 대한 데이터 흐름 구성](tutorials/ui/dataflow/customer-success.md)
