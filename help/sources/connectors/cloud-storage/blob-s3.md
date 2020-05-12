@@ -4,27 +4,30 @@ solution: Experience Platform
 title: Azure Blob 및 Amazon S3 커넥터
 topic: overview
 translation-type: tm+mt
-source-git-commit: ca3d2e7ac6d32b71e19e150f301f21b2d87c08ad
+source-git-commit: 799445eca080175e2bffc49c6714f0c812b9bbea
+workflow-type: tm+mt
+source-wordcount: '193'
+ht-degree: 0%
 
 ---
 
 
 # Azure Blob 및 Amazon S3 커넥터
 
-Adobe Experience Platform을 사용하면 외부 소스에서 데이터를 인제스트할 수 있을 뿐만 아니라 플랫폼 서비스를 사용하여 들어오는 데이터를 구조화, 레이블 지정 및 향상시킬 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 등 다양한 소스의 데이터를 인제스트할 수 있습니다.
+Adobe Experience Platform은 AWS, Google Cloud Platform 및 Azure와 같은 클라우드 제공업체를 위한 기본 연결을 제공합니다. 이러한 시스템의 데이터를 플랫폼으로 가져올 수 있습니다.
 
-클라우드 스토리지 소스는 다운로드, 형식 지정 또는 업로드하지 않고도 고유한 데이터를 플랫폼에 가져올 수 있습니다. 인제스트된 데이터는 XDM JSON, XDM 쪽모이 세공 마루 또는 구분된 형태로 포맷될 수 있습니다. 프로세스의 모든 단계는 사용자 인터페이스를 사용하여 소스 워크플로우에 통합됩니다. 클라우드 저장소 공급자에 대한 지원에는 Azure Blob 및 Amazon S3가 포함됩니다.
+클라우드 스토리지 소스는 다운로드, 포맷 또는 업로드 없이도 직접 데이터를 플랫폼에 가져올 수 있습니다. 인제스트된 데이터는 XDM JSON, XDM 쪽모이 세공식 또는 구분 기호로 형식을 지정할 수 있습니다. 프로세스의 모든 단계는 소스 워크플로우에 통합됩니다. 플랫폼을 사용하면 Azure Blob 및 S3의 데이터를 일괄적으로 가져올 수 있습니다.
 
 아래 설명서에서는 API 또는 사용자 인터페이스를 사용하여 Azure Blob 및 S3를 플랫폼에 연결하는 방법에 대한 정보를 제공합니다.
 
 ## API를 사용하여 Azure Blob 및 S3를 플랫폼에 연결
 
-- [흐름 서비스 API를 사용하여 Azure Blob 커넥터 만들기](../../tutorials/api/create/cloud-storage/blob.md)
+- [Flow Service API를 사용하여 Azure Blob 커넥터 만들기](../../tutorials/api/create/cloud-storage/blob.md)
 - [Flow Service API를 사용하여 S3 커넥터 만들기](../../tutorials/api/create/cloud-storage/s3.md)
 - [Flow Service API를 사용하여 클라우드 스토리지 시스템 살펴보기](../../tutorials/api/explore/cloud-storage.md)
 - [Flow Service API를 사용하여 클라우드 스토리지 데이터 수집](../../tutorials/api/collect/cloud-storage.md)
 
-## UI를 사용하여 Blob 및 S3를 플랫폼에 연결
+## UI를 사용하여 Blob 및 S3을 플랫폼에 연결
 
-- [UI 파섹](../../tutorials/ui/create/cloud-storage/blob-s3.md)
-- [UI에서 클라우드 스토리지 커넥터에 대한 데이터 흐름 구성](../../tutorials/ui/dataflow/cloud-storage.md)
+- [UI에서 Azure Blob 또는 Amazon S3 소스 커넥터 만들기](../../tutorials/ui/create/cloud-storage/blob-s3.md)
+- [UI에서 클라우드 스토리지 커넥터에 대한 데이터 흐름 구성](../../tutorials/ui/dataflow/batch/cloud-storage.md)
