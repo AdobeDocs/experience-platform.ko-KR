@@ -3,10 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Edge Network 도움말
 translation-type: tm+mt
-source-git-commit: 44f8fceda91d4ee1044491d7eec363e501d46e70
+source-git-commit: 1d864707226087d63a8f0afd9156efed0e369742
 workflow-type: tm+mt
-source-wordcount: '89'
-ht-degree: 7%
+source-wordcount: '91'
+ht-degree: 9%
 
 ---
 
@@ -30,13 +30,15 @@ ht-degree: 7%
    * [Flicker 관리](fundamentals/managing-flicker.md)
    * [지원 동의](fundamentals/supporting-consent.md)
    * [인앱 브라우저 지원](fundamentals/supporting-in-app-browsers.md)
-   * [Experience Cloud ID 검색 중](fundamentals/retrieving-experience-cloud-id.md)
+   * [ID](fundamentals/identity.md)
 * 구현할 사항 {#implement}
    * [제품](what-to-implement/commerce.md)
 * 솔루션별 고려 사항 {#solutions}
    * Analytics {#analytics}
       * [분석 개요](solution-specific/analytics/analytics-overview.md)
       * [자동으로 매핑된 변수](solution-specific/analytics/automatically-mapped-vars.md)
+   * Audience Manager {#aam}
+      * [Audience Manager 개요](solution-specific/audience-manager/audience-manager-overview.md)
    * Target {#target}
       * [Target 개요](solution-specific/target/target-overview.md)
 * 참조 {#ref}
