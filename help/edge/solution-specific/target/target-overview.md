@@ -4,42 +4,129 @@ seo-title: Adobe Experience Platform 웹 SDK 및 Adobe Target 사용
 description: Adobe Target을 사용하여 Experience Platform 웹 SDK로 개인화된 컨텐츠를 렌더링하는 방법 학습
 seo-description: Adobe Target을 사용하여 Experience Platform 웹 SDK로 개인화된 컨텐츠를 렌더링하는 방법 학습
 translation-type: tm+mt
-source-git-commit: db4bfec04a1116ce2b6a0be7ca0e8cb2f9639ad6
+source-git-commit: 9d66e926ff86f23b3dea34f37d3bb16ba97eb0ef
+workflow-type: tm+mt
+source-wordcount: '651'
+ht-degree: 2%
 
 ---
 
 
 # Target 개요
 
-Adobe Experience Platform Web SDK는 개인화 기능을 통해 Adobe Target과 [통합되어](../../fundamentals/rendering-personalization-content.md) 개인화된 콘텐츠와 의사 결정을 간단하게 제공할 수 있습니다.
+Adobe Experience Platform 웹 SDK는 Adobe Target에서 관리되는 개인화된 경험을 웹 채널에 제공하고 렌더링할 수 있습니다. VEC( [Visual Experience Composer](https://docs.adobe.com/content/help/en/target/using/experiences/vec/visual-experience-composer.html) )라고 하는 WYSIWYG 편집기 또는 [양식 기반 Experience Composer](https://docs.adobe.com/content/help/en/target/using/experiences/form-experience-composer.html)비시각적 인터페이스를 사용하여 활동 및 개인화 경험을 만들고 활성화하고 제공할 수 있습니다.
 
 ## Adobe Target 활성화
 
 Target을 활성화하려면 다음을 수행해야 합니다.
 
-- 적절한 클라이언트 코드를 사용하여 [Edge 구성에서](../../fundamentals/edge-configuration.md) target을 활성화합니다.
-- 이벤트에 `renderDecisions` 옵션을 추가합니다.
+1. Target UI에서 activity.id 및 experience.id 응답 토큰을 설정합니다.
+
+![target_reponse_token](../../solution-specific/target/assets/target_response_token.png)
+
+1. 적절한 클라이언트 코드를 사용하여 [Edge 구성에서](../../fundamentals/edge-configuration.md) target을 활성화합니다.
+1. 이벤트에 `renderDecisions` 옵션을 추가합니다.
 
 그런 다음 다음을 수행할 수도 있습니다.
 
-- 이벤트 `scopes` 에 추가하여 특정 활동을 검색할 수 있습니다(양식 기반 컴포저를 사용하여 만든 활동에 유용함).
-- 코드 [조각을](../../fundamentals/managing-flicker.md) 추가하여 페이지의 특정 부분만 숨깁니다.
+* 이벤트 `decisionScopes` 에 추가하여 특정 활동을 검색합니다(양식 기반 컴포저를 사용하여 만든 활동에 유용함).
+* 코드 [조각을](../../solution-specific/target/flicker-management.md) 추가하여 페이지의 특정 부분만 숨깁니다.
 
-## VEC 사용
+## Adobe Target VEC 사용
 
-SDK를 사용하면 VEC를 일반적으로 사용할 수 있습니다. 단, [대상 VEC 도우미 확장이](https://docs.adobe.com/content/help/en/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html) 설치 및 활성화되어 있어야 합니다.
+SDK에서는 VEC를 일반적으로 다음 한 가지 예외를 사용할 수 있습니다. 대상 VEC [도우미 익스텐션을](https://docs.adobe.com/content/help/en/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html) 설치하고 활성화해야 합니다.
+
+## VEC 활동 자동 렌더링
+
+AEP 웹 SDK는 사용자를 위해 웹에서 Adobe Target의 VEC를 통해 정의된 경험을 자동으로 렌더링할 수 있는 강력한 기능을 제공합니다. AEP 웹 SDK에서 VEC 활동을 자동 렌더링하도록 나타내려면 다음을 사용하여 이벤트를 전송합니다. `renderDecisions = true`
+
+```javascript
+alloy
+("event", 
+  { 
+  "renderDecisions": true, 
+  "xdm": {
+    "commerce": { 
+      "order": {
+        "purchaseID": "a8g784hjq1mnp3", 
+         "purchaseOrderNumber": "VAU3123", 
+         "currencyCode": "USD", 
+         "priceTotal": 999.98 
+         } 
+      } 
+    }
+  }
+);
+```
 
 ## 양식 기반 컴포저 사용
 
-양식 기반 컴포저를 사용하여 컨텐츠를 반환할 수도 있습니다. 범위는 타겟 UI에 위치(mBox)로 표시됩니다. 또한 범위를 사용하려는 경우 개발자가 응답을 찾고 있는지 확인해야 합니다.
+양식 기반 경험 작성기는 JSON, HTML, 이미지 등과 같은 다양한 응답 유형을 갖는 A/B 테스트, 경험 타깃팅, 자동화된 개인화 및 추천 활동을 구성하는 데 유용한 비시각적 인터페이스입니다. Adobe Target에서 반환된 응답 유형 또는 결정에 따라 핵심 비즈니스 로직을 실행할 수 있습니다. 양식 기반 컴포저 활동에 대한 결정을 검색하려면 결정을 검색할 모든 &#39;decisionScopes&#39;가 있는 이벤트를 보냅니다.
+
+```javascript
+alloy
+  ("event", { 
+    decisionScopes: [
+      "foo", "bar"], 
+      "xdm": {
+        "commerce": { 
+          "order": { 
+            "purchaseID": "a8g784hjq1mnp3", 
+            "purchaseOrderNumber": "VAU3123", 
+            "currencyCode": "USD", 
+            "priceTotal": 999.98 
+          } 
+        } 
+      } 
+    }
+  );
+```
+
+## 결정 범위
+
+`decisionScopes` 개인화된 경험을 렌더링할 페이지의 섹션, 위치 또는 일부를 정의합니다. 사용자 정의 `decisionScopes` 가능하고 사용자가 정의할 수 있습니다. 현재 Target 고객의 경우 `decisionScopes` &quot;mbox&quot;라고도 합니다. 타겟 UI에서 &quot;위치&quot;로 `decisionScopes` 나타납니다.
+
+## __범위__ 보기
+
+AEP 웹 SDK는 AEP 웹 SDK에 의존하지 않고 VEC 작업을 검색할 수 있는 기능을 제공합니다. &quot;a&quot;로 `__view__` 정의된 이벤트를 전송합니다 `decisionScopes`.
+
+```javascript
+alloy("event", {
+  decisionScopes: [“__view__”,"foo", "bar"], 
+  "xdm": { 
+    "web": { 
+      "webPageDetails": { 
+        "name": "Home Page"
+       }
+      } 
+     }
+    }
+   ).then(results){
+  for (decision of results.decisions){
+     if(decision.decisionScope == "__view__")
+       console.log(decision.content)
+}
+};
+```
 
 ## XDM 고객
 
-Target XDM 데이터 내에 사용자 지정 매개 변수로 Audience Builder에 표시됩니다. XDM은 점 표기법(예: `web.webPageDetails.name`)
+AEP 웹 SDK를 통해 전달할 타겟 활동에 대한 대상을 정의할 때 [XDM을](https://docs.adobe.com/content/help/en/experience-platform/xdm/home.html) 정의하고 사용해야 합니다. XDM 스키마, 클래스 및 믹스를 정의한 후 타깃팅을 위해 XDM 데이터로 정의된 Target 대상 규칙을 만들 수 있습니다. Target 내에서 XDM 데이터는 Audience Builder에 사용자 지정 매개 변수로 표시됩니다. XDM은 점 표기법(예: )을 사용하여 `web.webPageDetails.name`정리됩니다.
+
+사용자 지정 매개 변수 또는 사용자 프로필을 사용하는 사전 정의된 대상이 있는 타겟 활동이 있는 경우 AEP 웹 SDK를 통해 올바로 전달되지 않습니다. 사용자 지정 매개 변수 또는 사용자 프로필을 사용하는 대신 XDM을 사용해야 합니다. 그러나 XDM이 필요하지 않은 AEP 웹 SDK를 통해 지원되는 기본 대상 타깃팅 필드가 있습니다. 다음은 XDM이 필요하지 않은 Target UI에서 사용할 수 있는 필드입니다.
+
+* 타겟 라이브러리
+* 지역
+* 네트워크
+* 운영 체제
+* 사이트 페이지
+* 브라우저
+* 트래픽 소스
+* 시간대
 
 ## 용어
 
-__결정__ - Target에서 이러한 상관 관계는 활동에서 선택한 경험과 관련이 있습니다.
+__의사 결정__ - Target에서 이러한 상관 관계는 활동에서 선택한 경험과 관련이 있습니다.
 
 __범위__ - 결정의 범위입니다. Target에서 mBox입니다. 글로벌 mBox는 `__view__` 범위입니다.
 
