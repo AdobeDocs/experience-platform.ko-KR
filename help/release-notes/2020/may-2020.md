@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: May 13, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 47e03d3f58bd31b1aec45cbf268e3285dd5921ea
+source-git-commit: 0eca2f6e50024ec43c025dd75c34ca876d71c3f2
 workflow-type: tm+mt
-source-wordcount: '875'
-ht-degree: 5%
+source-wordcount: '959'
+ht-degree: 6%
 
 ---
 
@@ -20,10 +20,21 @@ ht-degree: 5%
 Adobe Experience Platform의 기존 기능 업데이트:
 
 - [Adobe Experience Platform 릴리스 노트](#adobe-experience-platform-release-notes)
+   - [사용자 인터페이스 업데이트 {#ux}](#user-interface-updates-ux)
    - [데이터 과학 작업 공간 {#dsw}](#data-science-workspace-dsw)
    - [대상 {#destinations}](#destinations-destinations)
    - [경험 플랫폼 웹 SDK 및 경험 플랫폼 에지 네트워크 {#edge}](#experience-platform-web-sdk-and-experience-platform-edge-network-edge)
    - [소스 {#sources}](#sources-sources)
+
+## 사용자 인터페이스 업데이트 {#ux}
+
+Adobe Experience Platform은 경험을 향상시키고 다른 Experience Cloud 애플리케이션과 통합할 수 있도록 도메인 및 헤더 막대에 대한 업데이트를 출시하고 있습니다.
+
+- 조직 간 또는 다른 애플리케이션으로 쉽게 전환할 수 있습니다
+- 도움말 메뉴의 주요 아티클 및 컨텍스트 관련 설명서를 비롯한 향상된 사용자 도움말
+- 경험 플랫폼 및 파일 지원 티켓에 대한 피드백 제공
+
+새로운 경험에서 점차 벗어나고 있다. https://experience.adobe.com/platform에서 경험을 볼 수 [있습니다](https://experience.adobe.com/platform).
 
 ## 데이터 과학 작업 공간 {#dsw}
 
