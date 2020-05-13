@@ -3,10 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Edge Network 도움말
 translation-type: tm+mt
-source-git-commit: 1d864707226087d63a8f0afd9156efed0e369742
+source-git-commit: e00dc3e8dec0117617081ca4fc9ffa752b01b3b7
 workflow-type: tm+mt
 source-wordcount: '91'
-ht-degree: 9%
+ht-degree: 12%
 
 ---
 
@@ -27,7 +27,6 @@ ht-degree: 9%
    * [디버깅](fundamentals/debugging.md)
    * [여러 속성을 사용한 인터랙션](fundamentals/interacting-with-multiple-properties.md)
    * [맞춤형 컨텐츠 렌더링](fundamentals/rendering-personalization-content.md)
-   * [Flicker 관리](fundamentals/managing-flicker.md)
    * [지원 동의](fundamentals/supporting-consent.md)
    * [인앱 브라우저 지원](fundamentals/supporting-in-app-browsers.md)
    * [ID](fundamentals/identity.md)
@@ -41,6 +40,7 @@ ht-degree: 9%
       * [Audience Manager 개요](solution-specific/audience-manager/audience-manager-overview.md)
    * Target {#target}
       * [Target 개요](solution-specific/target/target-overview.md)
+      * [깜박임 관리](solution-specific/target/flicker-management.md)
 * 참조 {#ref}
    * [자동으로 수집된 정보](reference/automatic-information.md)
    * [라이브러리 정보 검색](reference/retrieving-library-information.md)
