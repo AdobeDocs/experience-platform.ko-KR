@@ -4,15 +4,20 @@ seo-title: Amazon Kinesis 대상
 description: Amazon Kinesis 스토리지에 대한 실시간 아웃바운드 연결을 생성하여 Adobe Experience Platform에서 데이터를 스트리밍합니다.
 seo-description: Amazon Kinesis 스토리지에 대한 실시간 아웃바운드 연결을 생성하여 Adobe Experience Platform에서 데이터를 스트리밍합니다.
 translation-type: tm+mt
-source-git-commit: a18f89531cf024f61b054b47a660bd26766bebf6
+source-git-commit: 47e03d3f58bd31b1aec45cbf268e3285dd5921ea
 workflow-type: tm+mt
-source-wordcount: '422'
-ht-degree: 0%
+source-wordcount: '446'
+ht-degree: 2%
 
 ---
 
 
-# Amazon Kinesis 대상
+# (베타) Amazon Kinesis 대상
+
+
+>[!IMPORTANT]
+>
+>Adobe Real-time CDP의 [!DNL Amazon Kinesis] 대상은 현재 베타 버전입니다. 설명서 및 기능은 변경될 수 있습니다.
 
 ## 개요 {#overview}
 
@@ -21,7 +26,7 @@ Amazon Web Services의 [!DNL Kinesis Data Streams] 서비스를 사용하면 대
 Adobe Experience Platform에서 데이터를 스트리밍하기 위해 스토리지에 대한 실시간 아웃바운드 연결을 생성할 수 있습니다. [!DNL Amazon Kinesis]
 
 * 자세한 내용 [!DNL Amazon Kinesis]은 [Amazon 설명서를 참조하십시오](https://docs.aws.amazon.com/streams/latest/dev/introduction.html).
-* API 호출 [!DNL Amazon Kinesis] 을 사용하여 연결하려면 [스트리밍 대상 API 자습서를 참조하십시오].
+* API 호출 [!DNL Amazon Kinesis] 을 사용하여 연결하려면 [스트리밍 대상 API 자습서를 참조하십시오](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md).
 * Adobe 실시간 CDP 사용자 인터페이스를 [!DNL Amazon Kinesis] 사용하여 연결하려면 아래 섹션을 참조하십시오.
 
 ![UI의 Amazon Kinesis](/help/rtcdp/destinations/assets/aws-kinesis-destination.png)
@@ -97,7 +102,7 @@ Amazon Kinesis와 같은 스트리밍 대상을 사용하면 고부가가치 세
 
 >[!MORELIKETHIS]
 >
->* Amazon Kinesis API 튜토리얼 링크
+>* [Amazon Kinesis에 연결하고 API 호출을 사용하여 데이터 활성화](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
 >* [Azure 이벤트 허브 대상](/help/rtcdp/destinations/azure-event-hubs-destination.md)
 >* [대상 유형 및 카테고리](/help/rtcdp/destinations/destination-types.md)
 
