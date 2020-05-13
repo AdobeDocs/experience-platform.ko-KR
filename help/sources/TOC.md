@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform 소스 커넥터 도움말
 translation-type: tm+mt
-source-git-commit: 1eb6883ec9b78e5d4398bb762bba05a61c0f8308
+source-git-commit: 71080a1741ea0d660f63e2009f045c0e34f6c44b
 workflow-type: tm+mt
-source-wordcount: '551'
+source-wordcount: '563'
 ht-degree: 0%
 
 ---
@@ -65,9 +65,11 @@ ht-degree: 0%
       - 광고 {#advertising}
          - [Google 광고 커넥터](tutorials/api/create/advertising/ads.md)
       - 클라우드 스토리지 {#cloud-storage}
+         - [Amazon Kinesis](tutorials/api/create/cloud-storage/kinesis.md)
          - [Amazon S3 커넥터](tutorials/api/create/cloud-storage/s3.md)
          - [Azure Blob 커넥터](tutorials/api/create/cloud-storage/blob.md)
          - [Azure Data Lake Storage Gen2 커넥터](tutorials/api/create/cloud-storage/adls-gen2.md)
+         - [Azure 이벤트 허브 커넥터](tutorials/api/create/cloud-storage/eventhub.md)
          - [Azure 파일 저장소 커넥터](tutorials/api/create/cloud-storage/azure-file-storage.md)
          - [Google 클라우드 스토리지 커넥터](tutorials/api/create/cloud-storage/google.md)
          - [SFTP 커넥터](tutorials/api/create/cloud-storage/sftp.md)
@@ -128,8 +130,10 @@ ht-degree: 0%
       - 광고 {#create}
          - [Google 광고 커넥터](tutorials/ui/create/advertising/ads.md)
       - 클라우드 스토리지 {#cloud-storage}
+         - [Amazon Kinesis](tutorials/ui/create/cloud-storage/kinesis.md)
          - [Azure Data Lake Storage Gen2 커넥터](tutorials/ui/create/cloud-storage/adls-gen2.md)
          - [Azure Blob 및 Amazon S3 커넥터](tutorials/ui/create/cloud-storage/blob-s3.md)
+         - [Azure 이벤트 허브 커넥터](tutorials/ui/create/cloud-storage/eventhub.md)
          - [Azure 파일 저장소 커넥터](tutorials/ui/create/cloud-storage/azure-file-storage.md)
          - [FTP 및 SFTP 커넥터](tutorials/ui/create/cloud-storage/ftp-sftp.md)
          - [Google 클라우드 스토리지 커넥터](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
