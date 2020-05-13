@@ -4,7 +4,10 @@ seo-title: 대상에 프로필 및 세그먼트 활성화
 description: 세그먼트를 대상에 매핑하여 Adobe 실시간 고객 데이터 플랫폼의 데이터를 활성화합니다. 이를 수행하려면 아래 단계를 따르십시오.
 seo-description: 세그먼트를 대상에 매핑하여 Adobe 실시간 고객 데이터 플랫폼의 데이터를 활성화합니다. 이를 수행하려면 아래 단계를 따르십시오.
 translation-type: tm+mt
-source-git-commit: 2eddd5bb7b62dcc414ad906647b05ce10c766ac6
+source-git-commit: 7dafdf0dd1ad3af2defab3bf6b784fd37e777062
+workflow-type: tm+mt
+source-wordcount: '639'
+ht-degree: 0%
 
 ---
 
@@ -15,20 +18,20 @@ source-git-commit: 2eddd5bb7b62dcc414ad906647b05ce10c766ac6
 
 ## 전제 조건 {#prerequisites}
 
-대상에 데이터를 활성화하려면 대상을 [연결했어야](/help/rtcdp/destinations/assets/connect-destination.png)합니다. 아직 설정하지 않은 경우 [대상 카탈로그로](/help/rtcdp/destinations/destinations-catalog.md)이동하여 지원되는 대상을 찾아 하나 이상의 대상을 설정합니다.
+대상에 데이터를 활성화하려면 대상을 [연결했어야 합니다](/help/rtcdp/destinations/assets/connect-destination.png). 아직 수행하지 않은 경우 [대상 카탈로그로](/help/rtcdp/destinations/destinations-catalog.md)이동하여 지원되는 대상을 탐색하고 하나 이상의 대상을 설정합니다.
 
 ## 데이터 활성화 {#activate-data}
 
-1. 에서 **[!UICONTROL Destinations > Browse]**&#x200B;세그먼트를 활성화할 대상을 선택합니다.
-2. 대상의 이름을 클릭합니다. 그러면 활성화 흐름이 표시됩니다.
-   ![활성화](/help/rtcdp/destinations/assets/activate-flow.png)-흐름 대상에 대한 활성화 흐름이 이미 있는 경우 대상으로 현재 전송되는 세그먼트를 볼 수 있습니다. 오른쪽 **[!UICONTROL Edit activation]** 레일에서 선택한 다음 아래 단계에 따라 정품 인증 세부 사항을 수정합니다.
-3. 선택 **[!UICONTROL Activate]**;
-4. 워크플로우의 **[!UICONTROL Activate destination]** **[!UICONTROL Select Segments]** 페이지에서 대상으로 전송할 세그먼트를 선택합니다.
-   ![세그먼트 대 대상](/help/rtcdp/destinations/assets/select-segments.png)
-5. *조건부*. 이 단계는 이메일 마케팅 대상에 매핑된 세그먼트에만 적용됩니다. <br> 페이지에서 **[!UICONTROL Destination Attributes]** 대상으로 전송할 속성을 **[!UICONTROL Add new field]** 선택하고 선택합니다.
-특성 중 하나를 조합 스키마에서 [고유 식별자로](/help/rtcdp/destinations/email-marketing-destinations.md#identity) 지정하는 것이 좋습니다. 필수 속성에 대한 자세한 내용은 이메일 마케팅 [대상](/help/rtcdp/destinations/email-marketing-destinations.md#identity) 아티클의 ID를 참조하십시오.
+1. 대상 **[!UICONTROL > 찾아보기에서]**&#x200B;세그먼트를 활성화할 대상을 선택합니다.
+2. 대상의 이름을 클릭합니다. 활성화 흐름으로 이동합니다.
+   ![activate-flow](/help/rtcdp/destinations/assets/activate-flow.png)대상에 대한 활성화 흐름이 이미 있는 경우 대상에 현재 전송되고 있는 세그먼트를 볼 수 있습니다. 오른쪽 레일에서 **[!UICONTROL 활성화]** 편집을 선택하고 아래 단계에 따라 정품 인증 세부 사항을 수정합니다.
+3. 활성화 **[!UICONTROL 를]**&#x200B;선택합니다.
+4. 대상 **[!UICONTROL 활성화]** 워크플로의 세그먼트 **[!UICONTROL 선택]** 페이지에서 대상에 전송할 세그먼트를 선택합니다.
+   ![세그먼트-대상](/help/rtcdp/destinations/assets/select-segments.png)
+5. *조건부*. 이 단계는 클라우드 스토리지 대상 및 이메일 마케팅 대상에 매핑된 세그먼트에 대해서만 적용됩니다. <br> [ **[!UICONTROL 대상 속성]** ] 페이지에서 **[!UICONTROL 새 필드]** 추가를 선택하고 대상에 전송할 속성을 선택합니다.
+특성 중 하나를 조합 스키마에서 [고유한](/help/rtcdp/destinations/email-marketing-destinations.md#identity) 식별자로 사용하는 것이 좋습니다. 필수 속성에 대한 자세한 내용은 [이메일 마케팅 대상](/help/rtcdp/destinations/email-marketing-destinations.md#identity) 아티클의 ID를 참조하십시오.
    ![destination-attributes](/help/rtcdp/destinations/assets/destination-attributes.png)
-6. 이 **[!UICONTROL Segment schedule]** 페이지에서는 대상으로 데이터를 전송하는 시작 날짜와 대상으로 데이터를 보내는 빈도를 볼 수 있습니다.
+6. [ **[!UICONTROL 세그먼트 예약]** ] 페이지에서는 대상으로 데이터를 전송하는 시작 날짜와 대상으로 데이터를 보내는 빈도를 확인할 수 있습니다.
 
    >[!IMPORTANT]
    >
@@ -36,22 +39,22 @@ source-git-commit: 2eddd5bb7b62dcc414ad906647b05ce10c766ac6
 
    ![데이터 원본 선택](/help/rtcdp/destinations/assets/choose-data-origin.png)
 
-7. 페이지에서 **[!UICONTROL Review]** 선택 사항의 요약을 볼 수 있습니다. 흐름을 **[!UICONTROL Cancel]** 분류하거나 **[!UICONTROL Back]** **[!UICONTROL Finish]** 설정을 수정하거나 선택 사항을 확인하고 대상에 데이터를 보내기 시작하려면 선택합니다.
+7. [ **[!UICONTROL 검토]** ] 페이지에서 선택 사항의 요약을 볼 수 있습니다. 흐름을 구분하려면 **[!UICONTROL 취소]** 를, 설정을 **[!UICONTROL 수정하려면]** [뒤로]를, **[!UICONTROL 마침을]** 선택하여 선택을 확인하고 데이터를 대상에 보내기 시작합니다.
 
-![확인 선택](/help/rtcdp/destinations/assets/confirm-selection.png)
+![선택 확인](/help/rtcdp/destinations/assets/confirm-selection.png)
 
 ## 활성화 편집 {#edit-activation}
 
-아래 절차에 따라 실시간 CDP에서 기존 활성화 흐름을 편집합니다.
+아래 절차에 따라 실시간 CDP에서 기존 정품 인증 과정을 편집합니다.
 
-1. 왼쪽 탐색 **[!UICONTROL Destinations]** 막대에서 선택한 다음 **[!UICONTROL Browse]** 탭을 클릭하고 대상 이름을 클릭합니다.
-2. 오른쪽 레일에서 **[!UICONTROL Edit activation]** 선택하여 대상에 전송할 세그먼트를 변경합니다.
+1. 왼쪽 **[!UICONTROL 탐색 막대에서 대상을]** 선택한 다음 **[!UICONTROL 찾아보기]** 탭을 클릭하고 대상 이름을 클릭합니다.
+2. 오른쪽 레일에서 **[!UICONTROL 활성화]** 편집을 선택하여 대상으로 전송할 세그먼트를 변경합니다.
 
 ## 세그먼트 활성화 성공 여부 확인 {#verify-activation}
 
 ### 이메일 마케팅 대상 및 클라우드 스토리지 대상
 
-이메일 마케팅 대상 및 클라우드 스토리지 대상의 경우 Adobe Real-time CDP는 사용자가 제공한 스토리지 위치에 탭으로 구분된 `.txt` 파일이나 `.csv` 파일을 생성합니다. 매일 저장 위치에 새 파일이 만들어집니다. The file format is:
+이메일 마케팅 대상 및 클라우드 스토리지 대상의 경우 Adobe Real-time CDP는 사용자가 제공한 스토리지 위치에 탭으로 구분된 `.txt` 파일이나 `.csv` 파일을 생성합니다. 저장 위치에 매일 새 파일이 만들어집니다. The file format is:
 `<destination name>id<destination id><timestamp-yyyymmddhhmmss>`
 
 3일 연속으로 받은 파일은 다음과 같습니다.
@@ -66,17 +69,17 @@ Salesforce_id3544_20191122124530.csv
 
 ### 광고 대상
 
-데이터를 활성화할 각 광고 대상을 확인합니다. 정품 인증이 완료되면 광고 플랫폼에 대상이 채워집니다.
+데이터를 활성화할 각 광고 대상을 확인합니다. 정품 인증이 성공적으로 완료되면 광고 플랫폼에 대상이 채워집니다.
 
 ### 소셜 네트워크 대상
 
-Facebook의 경우 활성화가 성공하면 Facebook 광고 관리자에서 프로그래밍 방식으로 Facebook 사용자 지정 대상자를 [만듭니다](https://www.facebook.com/adsmanager/manage/). 사용자가 활성화된 세그먼트에 대해 자격이 부여되거나 자격 미달될 때 대상의 세그먼트 멤버십이 추가 및 제거됩니다.
+Facebook의 경우 활성화는 Facebook 광고 관리자에서 프로그래밍 방식으로 Facebook 사용자 지정 대상을 [만들게 됩니다](https://www.facebook.com/adsmanager/manage/). 사용자가 활성화된 세그먼트에 대해 자격이 부여되거나 자격이 부여되면 대상의 세그먼트 멤버십이 추가되고 제거됩니다.
 
 ## 활성화 비활성화 {#disable-activation}
 
-기존 활성화 흐름을 비활성화하려면 아래 단계를 따르십시오.
+기존 활성화 흐름을 비활성화하려면 아래 단계를 수행하십시오.
 
-1. 왼쪽 탐색 **[!UICONTROL Destinations]** 막대에서 선택한 다음 **[!UICONTROL Browse]** 탭을 클릭하고 대상 이름을 클릭합니다.
-2. 오른쪽 레일의 **[!UICONTROL Enabled]** 컨트롤을 클릭하여 활성화 흐름 상태를 변경합니다.
-3. 데이터 **흐름 상태** 업데이트 창에서 확인을 선택하여 **활성화 흐름을** 비활성화합니다.
+1. 왼쪽 **[!UICONTROL 탐색 막대에서 대상을]** 선택한 다음 **[!UICONTROL 찾아보기]** 탭을 클릭하고 대상 이름을 클릭합니다.
+2. 오른쪽 레일에 **[!UICONTROL 있는]** Enabled 컨트롤을 클릭하여 활성화 흐름 상태를 변경합니다.
+3. 데이터 흐름 상태 **업데이트** 창에서 **확인** 을 선택하여 활성화 흐름을 비활성화합니다.
 
