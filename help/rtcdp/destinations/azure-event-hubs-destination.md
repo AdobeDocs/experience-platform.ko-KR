@@ -1,18 +1,22 @@
 ---
-title: Azure 이벤트 허브 대상
-seo-title: Azure 이벤트 허브 대상
+title: (베타) Azure 이벤트 허브 대상
+seo-title: (베타) Azure 이벤트 허브 대상
 description: Azure 이벤트 허브 저장소에 대한 실시간 아웃바운드 연결을 만들어 경험 플랫폼에서 데이터를 스트리밍합니다.
 seo-description: Azure 이벤트 허브 저장소에 대한 실시간 아웃바운드 연결을 만들어 경험 플랫폼에서 데이터를 스트리밍합니다.
 translation-type: tm+mt
-source-git-commit: a18f89531cf024f61b054b47a660bd26766bebf6
+source-git-commit: 47e03d3f58bd31b1aec45cbf268e3285dd5921ea
 workflow-type: tm+mt
-source-wordcount: '444'
-ht-degree: 0%
+source-wordcount: '470'
+ht-degree: 2%
 
 ---
 
 
-# Azure 이벤트 허브 대상
+# (베타) Azure 이벤트 허브 대상
+
+>[!IMPORTANT]
+>
+>Adobe Real-time CDP의 [!DNL Azure Event Hubs] 대상은 현재 베타 버전입니다. 설명서 및 기능은 변경될 수 있습니다.
 
 ## 개요 {#overview}
 
@@ -21,7 +25,7 @@ ht-degree: 0%
 Adobe Experience Platform에서 데이터를 스트리밍하기 위해 스토리지에 대한 실시간 아웃바운드 연결을 생성할 수 있습니다. [!DNL Azure Event Hubs]
 
 * 자세한 내용 [!DNL Azure Event Hubs]은 [Microsoft 설명서를 참조하십시오](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-about).
-* API 호출 [!DNL Azure Event Hubs] 을 사용하여 연결하려면 [스트리밍 대상 API 자습서를 참조하십시오].
+* API 호출 [!DNL Azure Event Hubs] 을 사용하여 연결하려면 [스트리밍 대상 API 자습서를 참조하십시오](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md).
 * Adobe 실시간 CDP 사용자 인터페이스를 [!DNL Azure Event Hubs] 사용하여 연결하려면 아래 섹션을 참조하십시오.
 
 ![UI의 AWS Kinesis](/help/rtcdp/destinations/assets/azure-event-hubs-destination.png)
@@ -89,6 +93,6 @@ Azure 이벤트 허브와 같은 스트리밍 대상을 사용하면 고부가�
 
 >[!MORELIKETHIS]
 >
->* Azure 이벤트 허브 API 자습서에 연결
+>* [Azure 이벤트 허브에 연결하고 API 호출을 사용하여 데이터 활성화](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
 >* [AWS Kinesis 대상](/help/rtcdp/destinations/amazon-kinesis-destination.md)
 >* [대상 유형 및 카테고리](/help/rtcdp/destinations/destination-types.md)
