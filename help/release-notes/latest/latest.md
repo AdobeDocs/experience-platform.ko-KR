@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: May 13, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 9d4c645e830790a7d5430fe3d514464ca8bef025
+source-git-commit: 47e03d3f58bd31b1aec45cbf268e3285dd5921ea
 workflow-type: tm+mt
-source-wordcount: '664'
-ht-degree: 4%
+source-wordcount: '875'
+ht-degree: 5%
 
 ---
 
@@ -19,9 +19,11 @@ ht-degree: 4%
 
 Adobe Experience Platform의 기존 기능 업데이트:
 
-- [데이터 과학 작업 공간](#dsw)
-- [경험 플랫폼 웹 SDK 및 경험 플랫폼 에지 네트워크](#edge)
-- [소스](#sources)
+- [Adobe Experience Platform 릴리스 노트](#adobe-experience-platform-release-notes)
+   - [데이터 과학 작업 공간 {#dsw}](#data-science-workspace-dsw)
+   - [대상 {#destinations}](#destinations-destinations)
+   - [경험 플랫폼 웹 SDK 및 경험 플랫폼 에지 네트워크 {#edge}](#experience-platform-web-sdk-and-experience-platform-edge-network-edge)
+   - [소스 {#sources}](#sources-sources)
 
 ## 데이터 과학 작업 공간 {#dsw}
 
@@ -37,6 +39,26 @@ Data Science Workspace는 머신 러닝과 인공 지능을 사용하여 데이�
 | 레서피 | 새로운 PySpark 및 Spark 레시피가 Python 및 R 레시피와 유사한 Docker 워크플로우를 따릅니다. |
 
 Spark 2.4 사용을 위한 노트북 및 레시피 마이그레이션에 대한 자세한 내용은 [노트북 마이그레이션 가이드를 참조하십시오](../../data-science-workspace/recipe-notebook-migration.md). 데이터 과학 작업 공간에 대한 자세한 내용은 [개요 설명서를 참조하십시오](../../data-science-workspace/home.md).
+
+## 대상 {#destinations}
+
+실시간 고객 데이터 플랫폼 [](../../rtcdp/overview.md)에서 대상은 대상 플랫폼과 사전 구축된 통합으로, 해당 파트너에게 데이터를 원활하게 활성화할 수 있습니다.
+
+**새 대상**
+
+이제 Adobe 실시간 CDP는 스트리밍 클라우드 스토리지 대상에 대한 데이터 활성화를 지원하므로 JSON 포맷으로 대상 데이터와 이벤트를 이러한 대상으로 내보낼 수 있습니다. 그런 다음 대상에 있는 이러한 이벤트 위에 비즈니스 논리를 설명할 수 있습니다. 자세한 내용은 아래를 참조하십시오.
+
+>[!NOTE]
+>
+>Adobe Real-time CDP의 [!DNL Amazon Kinesis] 대상 및 [!DNL Azure Event Hubs] 대상은 현재 베타 버전입니다. 설명서 및 기능은 변경될 수 있습니다.
+
+| 설명서 | 설명 |
+|--- | ---|
+| [(베타) Amazon Kinesis 대상](/help/rtcdp/destinations/amazon-kinesis-destination.md) | 이 문서에서는 Adobe Experience Platform에서 데이터를 스트리밍하기 위해 스토리지에 대한 실시간 아웃바운드 연결을 만드는 방법에 대해 설명합니다. [!DNL Amazon Kinesis] |
+| [(베타) Azure 이벤트 허브 대상](/help/rtcdp/destinations/azure-event-hubs-destination.md) | 이 문서에서는 Adobe Experience Platform에서 데이터를 스트리밍하기 위해 스토리지에 대한 실시간 아웃바운드 연결을 만드는 방법에 대해 설명합니다. [!DNL Azure Event Hubs] |
+| [API 자습서 - 스트리밍 대상에 연결 및 데이터 활성화](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md) | 이 자습서에서는 API 호출을 사용하여 Adobe Experience Platform 데이터에 연결하고, 스트리밍 클라우드 스토리지 대상(Amazon Kinesis 또는 Azure 이벤트 허브)에 연결을 만들고, 데이터 흐름을 새로 만든 대상에 만들고, 데이터를 새로 만든 대상에 활성화하는 방법을 설명합니다. |
+
+자세한 내용은 대상 [개요를 참조하십시오](/help/rtcdp/destinations/destinations-overview.md).
 
 ## 경험 플랫폼 웹 SDK 및 경험 플랫폼 에지 네트워크 {#edge}
 
