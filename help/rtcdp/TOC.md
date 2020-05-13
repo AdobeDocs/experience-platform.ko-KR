@@ -3,9 +3,9 @@ product: adobe experience platform
 audience: user
 user-guide-title: 실시간 고객 데이터 플랫폼 도움말
 translation-type: tm+mt
-source-git-commit: e0807f32ff5f3d16a6805074951e3b09723c5181
+source-git-commit: 72511172c07b79c485660d59595aa6c8fdd6bdaa
 workflow-type: tm+mt
-source-wordcount: '407'
+source-wordcount: '413'
 ht-degree: 11%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 11%
    * 대상 인터페이스  {#destinations-interface}
       * [대상 작업 공간](destinations/destinations-workspace.md)
       * [대상 세부 정보 페이지](destinations/destination-details-page.md)
-   * 대상 카탈로그  {#destinations-cat}
+   * 대상 카탈로그 {#destinations-cat}
       * [대상 카탈로그 개요](destinations/destinations-catalog.md)
       * Adobe 대상{#adobe-destinations}
          * [Adobe 대상 개요](destinations/adobe-destinations.md)
@@ -76,7 +76,9 @@ ht-degree: 11%
       * 클라우드 스토리지 대상{#cloud-storage}
          * [클라우드 스토리지 대상 개요](destinations/cloud-storage-destinations.md)
          * [클라우드 스토리지 대상을 만드는 워크플로우](/help/rtcdp/destinations/cloud-storage-destinations-workflow.md)
+         * [Amazon Kinesis 대상](/help/rtcdp/destinations/amazon-kinesis-destination.md)
          * [Amazon S3 대상](destinations/amazon-s3-destination.md)
+         * [Azure EventHub 대상](/help/rtcdp/destinations/azure-event-hubs-destination.md)
          * [SFTP 대상](destinations/sftp-destination.md)
       * 데이터 관리 플랫폼 대상 {#dmp-destinations}
          * [데이터 관리 플랫폼 대상 개요](destinations/dmp-destinations.md)
