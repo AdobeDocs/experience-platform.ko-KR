@@ -3,10 +3,10 @@ product: adobe experience platform
 audience: user
 user-guide-title: 실시간 고객 데이터 플랫폼 도움말
 translation-type: tm+mt
-source-git-commit: 72511172c07b79c485660d59595aa6c8fdd6bdaa
+source-git-commit: be885faf8c1408f372d2eb6cd8d6a8fa8fc69e14
 workflow-type: tm+mt
-source-wordcount: '413'
-ht-degree: 11%
+source-wordcount: '439'
+ht-degree: 10%
 
 ---
 
@@ -122,9 +122,12 @@ ht-degree: 11%
          * [태그 확장](/help/rtcdp/destinations/invoca-extension.md)
          * [메달리아 익스텐션](destinations/medallia-extension.md)
          * [Talk URL 받은 편지함 확장](destinations/talkurl-extension.md)
-   * 대상 자습서 {#dest-tutorials}
+   * 대상 UI 자습서 {#dest-tutorials}
       * [대상에 연결](/help/rtcdp/destinations/connect-destination.md)
       * [대상에 프로필 및 세그먼트 활성화](destinations/activate-destinations.md)
+   * 대상 API 자습서 {api-tutorials}
+      * [스트리밍 대상(AWS Kinesis 및 Azure 이벤트 허브)에 연결하고 데이터 활성화](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
+      * [이메일 마케팅 대상에 연결 및 데이터 활성화](/help/tutorials/destinations/email-marketing-api.md)
 * 개인 정보 및 데이터 거버넌스 {#privacy}
    * [개인 정보 보호 개요](privacy/privacy-overview.md)
    * [데이터 거버넌스 개요](privacy/data-governance-overview.md)
