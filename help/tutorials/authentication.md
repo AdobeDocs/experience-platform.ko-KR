@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 인증 및 액세스 경험 플랫폼 API
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: e1ba476fffc164b78decd7168192714993c791bc
+source-git-commit: 8c73363e88aab242ae258037deb80eeec872e519
 workflow-type: tm+mt
 source-wordcount: '849'
 ht-degree: 1%
@@ -127,9 +127,9 @@ curl -X GET https://platform.adobe.io/data/foundation/schemaregistry/global/clas
   -H 'x-gw-ims-org-id: {IMS_ORG}'
 ```
 
-응답이 아래에 표시된 응답과 유사한 경우 자격 증명이 유효하고 작동합니다. 이 응답은 공간에 대해 잘렸습니다.
-
 **응답**
+
+응답이 아래에 표시된 응답과 유사한 경우 자격 증명이 유효하고 작동합니다. 이 응답은 공간에 대해 잘렸습니다.
 
 ```JSON
 {
