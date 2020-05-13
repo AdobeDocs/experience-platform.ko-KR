@@ -4,7 +4,7 @@ seo-title: Adobe Experience Platform 웹 SDK를 사용하여 Adobe Audience Mana
 description: Experience Platform 웹 SDK를 사용하여 Adobe Audience Manager로 데이터를 전송하는 방법 학습
 seo-description: Experience Platform 웹 SDK를 사용하여 Adobe Audience Manager로 데이터를 전송하는 방법 학습
 translation-type: tm+mt
-source-git-commit: cfb23e7fde246ca224d5e1f2688651aa7d992b2c
+source-git-commit: dfe9ea2889b3ba2e74f8b10296bfb2d123ad9d57
 workflow-type: tm+mt
 source-wordcount: '318'
 ht-degree: 2%
@@ -12,7 +12,7 @@ ht-degree: 2%
 ---
 
 
-# (베타) Adobe Experience Platform Edge Network의 고객 관리자
+# (베타) Experience Platform Edge Network의 Audience Manager
 
 >[!IMPORTANT]
 >
