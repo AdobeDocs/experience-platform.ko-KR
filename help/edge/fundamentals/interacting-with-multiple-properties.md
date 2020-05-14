@@ -4,7 +4,7 @@ seo-title: Adobe Experience Platform 웹 SDK와 여러 속성 상호 작용
 description: 여러 Experience Platform 웹 SDK 속성과 상호 작용하는 방법 학습
 seo-description: 여러 Experience Platform 웹 SDK 속성과 상호 작용하는 방법 학습
 translation-type: tm+mt
-source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+source-git-commit: 4bff4b20ccc1913151aa1783d5123ffbb141a7d0
 workflow-type: tm+mt
 source-wordcount: '256'
 ht-degree: 0%
@@ -44,7 +44,7 @@ mycustomname1("configure", {
   "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg"
 });
 
-mycustomname1("event", {
+mycustomname1("sendEvent", {
   "data": {
     "key": "value"
   }
@@ -55,7 +55,7 @@ mycustomname2("configure", {
   "orgId": "ADB3NUMBERSANDLETTERS2@AdobeOrg"
 });
 
-mycustomname2("event", {
+mycustomname2("sendEvent", {
   "data": {
     "key": "value"
   }
