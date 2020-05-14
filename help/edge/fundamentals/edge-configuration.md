@@ -4,16 +4,15 @@ seo-title: Experience Platform 웹 SDK용 Edge 구성
 description: '경험 플랫폼 에지 네트워크를 구성하는 방법을 알아봅니다. '
 seo-description: '경험 플랫폼 에지 네트워크를 구성하는 방법을 알아봅니다. '
 translation-type: tm+mt
-source-git-commit: efbc080117754cee01f21c9f9ec409204648e757
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+workflow-type: tm+mt
+source-wordcount: '883'
+ht-degree: 2%
 
 ---
 
 
-# (베타) 에지 구성
-
->[!IMPORTANT]
->
->Adobe Experience Platform Web SDK는 현재 베타 버전이며 일부 사용자는 사용할 수 없습니다. 설명서 및 기능은 변경될 수 있습니다.
+# 에지 구성
 
 Adobe Experience Platform Web SDK에 대한 구성은 두 곳 간에 분할됩니다. SDK의 [구성 명령은](configuring-the-sdk.md) 클라이언트와 마찬가지로 클라이언트에서 처리해야 하는 작업을 제어합니다 `edgeDomain`. Edge Configuration handles all other configuration for the SDK. Adobe Experience Platform Edge Network로 요청이 전송되면 이 `edgeConfigId` 는 서버측 구성을 참조하는 데 사용됩니다. 따라서 웹 사이트에서 코드를 변경하지 않고도 구성을 업데이트할 수 있습니다.
 
@@ -39,17 +38,17 @@ SDK에서 구성 및 환경 `edgeConfigId` 을 지정하는 복합 ID로 사용�
 
 다음은 환경에서 사용할 수 있는 각 설정입니다. 대부분의 섹션은 활성화하거나 비활성화할 수 있습니다. 비활성화하면 설정이 저장되지만 활성화되지 않습니다.
 
-#### [!UICONTROL Identity]
+#### [!UICONTROL ID]
 
 ID 섹션은 항상 켜져 있는 유일한 섹션입니다. 두 가지 사용 가능한 설정이 있습니다. ID 동기화 활성화 및 ID 동기화 컨테이너 ID.
 
 ![구성 UI의 ID 섹션](../../assets/edge_configuration_identity.png)
 
-##### [!UICONTROL ID Sync Enabled]
+##### [!UICONTROL ID 동기화 사용]
 
 SDK가 타사 파트너와 ID 동기화를 수행하는지 여부를 제어합니다.
 
-##### [!UICONTROL ID Sync Container ID]
+##### [!UICONTROL ID 동기화 컨테이너 ID]
 
 ID 동기화를 컨테이너로 그룹화하여 서로 다른 시간에 다른 ID 동기화를 실행할 수 있습니다. 지정된 구성 ID에 대해 실행되는 ID 동기화 컨테이너를 제어합니다.
 
@@ -59,17 +58,17 @@ ID 동기화를 컨테이너로 그룹화하여 서로 다른 시간에 다른 I
 
 ![Adobe Experience Platform 설정 블록](../../assets/edge_configuration_aep.png)
 
-##### [!UICONTROL Sandbox]
+##### [!UICONTROL 샌드박스]
 
 샌드박스는 고객이 데이터 및 구현을 서로 분리할 수 있도록 Adobe Experience Platform의 위치입니다. 작동 방식에 대한 자세한 내용은 [샌드박스 설명서에 있습니다](../../sandboxes/home.md).
 
-##### [!UICONTROL Streaming Inlet]
+##### [!UICONTROL 스트리밍 입구]
 
-스트리밍 유입은 Adobe Experience Platform의 HTTP 소스입니다. 이러한 템플릿은 Adobe Experience Platform의 [!UICONTROL Sources] 탭 아래에서 HTTP API로 만들어집니다.
+스트리밍 유입은 Adobe Experience Platform의 HTTP 소스입니다. 이러한 템플릿은 Adobe Experience Platform의 [!UICONTROL 소스] 탭 아래에서 HTTP API로 만들어집니다.
 
-##### [!UICONTROL Event Dataset]
+##### [!UICONTROL 이벤트 데이터 집합]
 
-에지 구성은 클래스 스키마가 있는 데이터 세트에 데이터 전송을 지원합니다 [!UICONTROL Experience Event].
+Edge 구성은 클래스 [!UICONTROL 경험 이벤트의 스키마가 있는 데이터 세트에 데이터 전송을 지원합니다].
 
 #### Adobe Target
 
@@ -81,21 +80,21 @@ Adobe Target을 구성하려면 클라이언트 코드를 제공해야 합니다
 >
 >클라이언트 코드와 연관된 조직은 구성 ID가 생성된 조직과 일치해야 합니다.
 
-##### [!UICONTROL Client Code]
+##### [!UICONTROL 클라이언트 코드]
 
-타겟 계정의 고유 ID. 이를 찾으려면 [!UICONTROL Adobe Target] > [!UICONTROL Setup]> > [!UICONTROL Implementation] 단추 [!UICONTROL edit settings] 의 [!UICONTROL download] 다음 [!UICONTROL at.js] 또는 [!UICONTROL mbox.js]
+타겟 계정의 고유 ID. 이를 찾으려면 [!UICONTROL Adobe Target] > [!UICONTROL Setup][!UICONTROL >] 구현 [!UICONTROL >] 편집 설정 [!UICONTROL 을 다음]  [!UICONTROL 으로Adobe TargetJs 또는 mbox에 대한 DownloadButton을 다운로드할 수 있습니다.jjsAppJectorJectiveBox.로 이동합니다.]
 
-##### [!UICONTROL Property Token]
+##### [!UICONTROL 속성 토큰]
 
 Target을 사용하면 속성을 통해 권한을 제어할 수 있습니다. 세부 사항은 Target 설명서의 [엔터프라이즈 권한](https://docs.adobe.com/content/help/en/target/using/administer/manage-users/enterprise/properties-overview.html) 섹션에서 찾을 수 있습니다.
 
-속성 토큰은 [!UICONTROL Adobe Target] > [!UICONTROL setup] > UICONTROL [속성에서 찾을 수 있습니다.]
+속성 토큰은 [!UICONTROL Adobe Target] > [!UICONTROL 설정] > [UICONTROL 속성에서 찾을 수 있습니다.]
 
-##### [!UICONTROL Target Environment ID]
+##### [!UICONTROL 타겟 환경 ID]
 
 [Adobe Target의 환경을](https://docs.adobe.com/content/help/en/target/using/administer/hosts.html) 사용하면 모든 개발 단계를 통해 구현을 관리할 수 있습니다. 이 설정은 각 환경에서 사용할 환경을 지정합니다.
 
-Adobe에서는 이러한 설정을 각 `dev`, `stage`및 `prod` Edge 구성 환경에 대해 다르게 설정하여 간소화할 것을 권장합니다. 하지만 이미 정의된 경우 [!UICONTROL Adobe Target environments] 사용할 수 있습니다.
+Adobe에서는 이러한 설정을 각 `dev`, `stage`및 `prod` Edge 구성 환경에 대해 다르게 설정하여 간소화할 것을 권장합니다. 하지만 이미 [!UICONTROL Adobe Target 환경을] 정의한 경우에는 이러한 환경을 사용할 수 있습니다.
 
 #### Adobe Audience Manager
 
@@ -103,11 +102,11 @@ Adobe Audience Manager로 데이터를 전송하는 데 필요한 모든 것은 
 
 ![Adobe Audience Manage 설정 블록](../../assets/edge_configuration_aam.png)
 
-##### [!UICONTROL Cookie Destinations Enabled]
+##### [!UICONTROL 쿠키 대상 사용]
 
 SDK가 Audience Manager의 [쿠키 대상을 통해](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/destinations/custom-destinations/create-cookie-destination.html) 세그먼트 정보를 공유할 수 있습니다.
 
-##### [!UICONTROL URL Destinations Enabled]
+##### [!UICONTROL URL 대상 사용]
 
 SDK에서 [URL 대상을 통해 세그먼트 정보를 공유할 수 있습니다](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/destinations/custom-destinations/create-url-destination.html). Audience Manager에서 구성됩니다.
 
@@ -117,6 +116,6 @@ SDK에서 [URL 대상을 통해 세그먼트 정보를 공유할 수 있습니�
 
 ![Adobe Analytics 설정 블록](../../assets/edge_configuration_aa.png)
 
-##### [!UICONTROL Report Suite ID]
+##### [!UICONTROL 보고서 세트 ID]
 
-보고서 세트는 아래의 Adobe Analytics 관리 섹션에서 찾을 수 있습니다 [!UICONTROL Admin > ReportSuites]. 여러 보고서 세트가 지정된 경우 데이터는 각 보고서 세트에 복사됩니다.
+보고서 세트는 관리 > 보고서 세트 아래의 Adobe Analytics 관리 섹션에서 [!UICONTROL 찾을 수 있습니다]. 여러 보고서 세트가 지정된 경우 데이터는 각 보고서 세트에 복사됩니다.
