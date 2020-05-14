@@ -4,18 +4,17 @@ seo-title: Adobe Experience Platform 웹 SDK에서 자동으로 수집한 정보
 description: Adobe Experience Cloud SDK가 자동으로 수집하는 각 정보에 대한 설명
 seo-description: Adobe Experience Cloud SDK가 자동으로 수집하는 각 정보에 대한 설명
 translation-type: tm+mt
-source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+workflow-type: tm+mt
+source-wordcount: '382'
+ht-degree: 5%
 
 ---
 
 
-# (베타) 자동으로 수집된 정보
+# 자동으로 수집된 정보
 
->[!IMPORTANT]
->
->Adobe Experience Platform Web SDK는 현재 베타 버전이며 일부 사용자는 사용할 수 없습니다. 설명서 및 기능은 변경될 수 있습니다.
-
-Adobe Experience Cloud SDK 파섹 그러나 필요한 경우 `context` 명령의 `configure` 옵션을 사용하여 이 정보를 비활성화할 수 있습니다. [SDK 구성을 참조하십시오](../fundamentals/configuring-the-sdk.md). 다음은 이러한 정보의 목록입니다. 괄호 안의 이름은 컨텍스트를 구성할 때 사용할 문자열을 나타냅니다.
+Adobe Experience Cloud SDK는 특별한 구성 없이 다양한 정보를 자동으로 수집합니다. 그러나 필요한 경우 명령의 옵션을 사용하여 이 정보 `context` 를 비활성화할 수 `configure` 있습니다. [SDK 구성을 참조하십시오](../fundamentals/configuring-the-sdk.md). 아래는 그러한 정보의 목록입니다. 괄호 안의 이름은 컨텍스트를 구성할 때 사용할 문자열을 나타냅니다.
 
 ## 장치 (`device`)
 
@@ -23,7 +22,7 @@ Adobe Experience Cloud SDK 파섹 그러나 필요한 경우 `context` 명령의
 
 ### 화면 높이
 
-| **페이로드 경로:** | **예:** |
+| **페이로드의 경로:** | **예:** |
 | ---------------------------------- | ------------ |
 | `events[].xdm.device.screenHeight` | `900` |
 
@@ -31,7 +30,7 @@ Adobe Experience Cloud SDK 파섹 그러나 필요한 경우 `context` 명령의
 
 ### 화면 방향
 
-| **페이로드 경로:** | **가능한 값:** |
+| **페이로드의 경로:** | **가능한 값:** |
 | --------------------------------------- | ------------------------- |
 | `events[].xdm.device.screenOrientation` | `landscape` 또는 `portrait` |
 
@@ -39,7 +38,7 @@ Adobe Experience Cloud SDK 파섹 그러나 필요한 경우 `context` 명령의
 
 ### 화면 너비
 
-| **페이로드 경로:** | **예:** |
+| **페이로드의 경로:** | **예:** |
 | --------------------------------- | ------------ |
 | `events[].xdm.device.screenWidth` | `1440` |
 
@@ -53,15 +52,15 @@ Adobe Experience Cloud SDK 파섹 그러나 필요한 경우 `context` 명령의
 
 브라우저
 
-| **페이로드 경로:** | **예:** |
+| **페이로드의 경로:** | **예:** |
 | ------------------------------- | ------------ |
 | `events[].xdm.environment.type` | `browser` |
 
-그 경험이 드러난 환경의 유형은 다음과 같다. JavaScript용 Adobe Experience Platform SDK는 항상 `browser`설정됩니다.
+그 경험이 표면화된 환경의 유형. JavaScript용 Adobe Experience Platform SDK는 항상 설정됩니다 `browser`.
 
 ### 뷰포트 높이
 
-| **페이로드 경로:** | **예:** |
+| **페이로드의 경로:** | **예:** |
 | -------------------------------------------------------- | ------------ |
 | `events[].xdm.environment.browserDetails.viewportHeight` | `679` |
 
@@ -69,59 +68,59 @@ Adobe Experience Cloud SDK 파섹 그러나 필요한 경우 `context` 명령의
 
 ### 뷰포트 너비
 
-| **페이로드 경로:** | **예:** |
+| **페이로드의 경로:** | **예:** |
 | ------------------------------------------------------- | ------------ |
 | `events[].xdm.environment.browserDetails.viewportWidth` | `642` |
 
-브라우저 컨텐츠 영역의 너비(픽셀 단위)입니다.
+브라우저 컨텐츠 영역의 너비(픽셀 단위).
 
 ## 구현 세부 정보
 
-이벤트 수집에 사용되는 SDK에 대한 정보입니다.
+이벤트를 수집하는 데 사용되는 SDK에 대한 정보입니다.
 
 ### 이름
 
-| **페이로드 경로:** | **예:** |
+| **페이로드의 경로:** | **예:** |
 | ----------------------------------------- | --------------------------------------- |
 | `events[].xdm.implementationDetails.name` | `https://ns.adobe.com/experience/alloy` |
 
-SDK(Software Development Kit) 식별자입니다.  이 필드는 URI를 사용하여 다른 소프트웨어 라이브러리에서 제공하는 식별자 간의 고유성을 개선합니다.
+SDK(소프트웨어 개발 키트) 식별자입니다.  이 필드는 URI를 사용하여 다른 소프트웨어 라이브러리에서 제공하는 식별자 간의 고유성을 향상시킵니다.
 
 ### 버전
 
-| **페이로드 경로:** | **예:** |
+| **페이로드의 경로:** | **예:** |
 | -------------------------------------------- | ------------ |
 | `events[].xdm.implementationDetails.version` | `0.11.0` |
 
-## 컨텍스트 배치(`placeContext`)
+## 배치 컨텍스트(`placeContext`)
 
 최종 사용자의 위치에 대한 정보입니다.
 
 ### 현지 시간
 
-| **페이로드 경로:** | **예:** |
+| **페이로드의 경로:** | **예:** |
 | ------------------------------------- | ------------------------------- |
 | `events[].xdm.placeContext.localTime` | `2019-08-07T15:47:17.129-07:00` |
 
-간소화된 확장 ISO 포맷 ISO 8601의 최종 사용자를 위한 [로컬 타임스탬프](https://tools.ietf.org/html/rfc3339#section-5.6).
+간소화된 확장 ISO 형식 [ISO 8601의 최종 사용자를 위한 로컬 타임스탬프](https://tools.ietf.org/html/rfc3339#section-5.6).
 
 ### 로컬 시간대 오프셋
 
-| **페이로드 경로:** | **예:** |
+| **페이로드의 경로:** | **예:** |
 | ----------------------------------------------- | ------------ |
 | `events[].xdm.placeContext.localTimezoneOffset` | `360` |
 
-사용자가 GMT에서 오프셋되는 시간(분)입니다.
+사용자가 GMT에서 옵트되는 시간(분).
 
 ## 타임스탬프
 
-| **페이로드 경로:** | **예:** |
+| **페이로드의 경로:** | **예:** |
 | ------------------------ | -------------------------- |
 | `events[].xdm.timestamp` | `2019-08-07T22:47:17.129Z` |
 
-이벤트의 타임스탬프입니다.  컨텍스트의 이 부분은 제거할 수 없습니다.
+이벤트의 타임스탬프입니다.  이 컨텍스트 부분은 제거할 수 없습니다.
 
-간소화된 확장 ISO 형식 ISO 8601의 최종 사용자를 위한 [UTC 타임스탬프](https://tools.ietf.org/html/rfc3339#section-5.6).
+단순화된 확장 ISO 형식 [ISO 8601의 최종 사용자에 대한 UTC 타임스탬프](https://tools.ietf.org/html/rfc3339#section-5.6).
 
 ## 웹 세부 사항(`web`)
 
@@ -129,7 +128,7 @@ SDK(Software Development Kit) 식별자입니다.  이 필드는 URI를 사용�
 
 ### 현재 페이지 URL
 
-| **페이로드 경로:** | **예:** |
+| **페이로드의 경로:** | **예:** |
 | ------------------------------------- | ------------------------------------ |
 | `events[].xdm.web.webPageDetails.URL` | `https://somesite.com/somepage.html` |
 
@@ -137,7 +136,7 @@ SDK(Software Development Kit) 식별자입니다.  이 필드는 URI를 사용�
 
 ### 레퍼러 URL
 
-| **페이로드 경로:** | **예:** |
+| **페이로드의 경로:** | **예:** |
 | ---------------------------------- | ----------------------------------------- |
 | `events[].xdm.web.webReferrer.URL` | `http://somereferrer.com/linkedpage.html` |
 
