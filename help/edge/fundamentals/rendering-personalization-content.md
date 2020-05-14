@@ -4,7 +4,7 @@ seo-title: Adobe Experience Platform 웹 SDK 맞춤형 컨텐츠 렌더링
 description: Experience Platform 웹 SDK를 사용하여 개인화된 콘텐츠를 렌더링하는 방법 학습
 seo-description: Experience Platform 웹 SDK를 사용하여 개인화된 콘텐츠를 렌더링하는 방법 학습
 translation-type: tm+mt
-source-git-commit: 4bea14d18ce119bdec0d428f885d240f92244cfc
+source-git-commit: 4bff4b20ccc1913151aa1783d5123ffbb141a7d0
 workflow-type: tm+mt
 source-wordcount: '236'
 ht-degree: 0%
@@ -21,7 +21,7 @@ Adobe Experience Platform 웹 SDK는 Adobe Target을 비롯한 Adobe에서 개�
 이벤트를 서버로 보내고 이벤트에서 옵션으로 설정하면 SDK에서 개인화된 컨텐츠 `renderDecisions` `true` 를 자동으로 렌더링합니다.
 
 ```javascript
-alloy("event", {
+alloy("sendEvent", {
   "renderDecisions": true,
   "xdm": {
     "commerce": {
@@ -43,7 +43,7 @@ alloy("event", {
 을 사용하여 명령에서 약속으로 반환되는 결정 목록을 `event` 요청할 수 있습니다 `scopes`. 범위는 개인화 솔루션이 원하는 결정을 알 수 있도록 해주는 문자열입니다.
 
 ```javascript
-alloy("event",{
+alloy("sendEvent",{
     xdm:{...},
     scopes:['demo-1', 'demo-2']
   }).then(function(result){
