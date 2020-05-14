@@ -4,15 +4,15 @@ solution: Experience Platform
 title: Azure 파일 저장소 커넥터
 topic: overview
 translation-type: tm+mt
-source-git-commit: 70c8f4657fcc54e87b91f7b263b7da9e1e3d9677
+source-git-commit: b8ebe57482fdd10ccd8bdcf1a86009a373ea579e
 workflow-type: tm+mt
-source-wordcount: '176'
+source-wordcount: '177'
 ht-degree: 0%
 
 ---
 
 
-# Azure 파일 저장소 커넥터
+# (베타) Azure 파일 저장소 커넥터
 
 Adobe Experience Platform은 AWS, Google Cloud Platform 및 Azure와 같은 클라우드 제공업체를 위한 기본 연결을 제공합니다. 이러한 시스템의 데이터를 플랫폼으로 가져올 수 있습니다.
 
