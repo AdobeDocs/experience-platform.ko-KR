@@ -1,35 +1,34 @@
 ---
 title: Adobe Analytics로 데이터 보내기
-seo-title: Adobe Experience Platform 웹 SDK를 사용하여 Adobe Analytics로 데이터 보내기
+seo-title: Adobe Experience Platform 웹 SDK를 사용하여 Adobe Analytics로 데이터 전송
 description: Experience Platform 웹 SDK를 사용하여 Adobe Analytics로 데이터를 전송하는 방법 학습
 seo-description: Experience Platform 웹 SDK를 사용하여 Adobe Analytics로 데이터를 전송하는 방법 학습
 translation-type: tm+mt
-source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+workflow-type: tm+mt
+source-wordcount: '206'
+ht-degree: 0%
 
 ---
 
 
-# (베타) Adobe Analytics로 데이터 보내기
+# Adobe Analytics로 데이터 보내기
 
->[!IMPORTANT]
->
->Adobe Experience Platform Web SDK는 현재 베타 버전이며 일부 사용자는 사용할 수 없습니다. 설명서 및 기능은 변경될 수 있습니다.
-
-Adobe Experience Platform 웹 SDK는 Adobe Analytics로 데이터를 전송할 수 있습니다. Adobe Analytics에서 사용할 수 `xdm` 있는 형식으로 변환하여 작동합니다.
+Adobe Experience Platform 웹 SDK는 데이터를 Adobe Analytics로 보낼 수 있습니다. Adobe Analytics에서 사용할 수 있는 형식 `xdm` 으로 변환하여 작동합니다.
 
 ## 설정
 
-고객 구성 UI에 매핑된 보고서 세트가 있는 경우 Adobe Analytics는 전송하려는 데이터를 자동으로 선택합니다. 여기에서 하나 이상의 보고서를 지정된 구성에 매핑할 수 있습니다. 보고서 세트가 매핑되면 데이터가 자동으로 이동하기 시작합니다.
+고객 구성 UI에 매핑된 보고서 세트가 있는 경우 Adobe Analytics는 전송하는 데이터를 자동으로 선택합니다. 여기에서 하나 이상의 보고서를 지정된 구성에 매핑할 수 있습니다. 보고서 세트가 매핑되면 데이터가 자동으로 이동하기 시작합니다.
 
 ## 자동으로 매핑된 데이터
 
-Adobe Experience Platform Edge Network는 많은 XDM 변수를 자동으로 매핑합니다. 자동으로 매핑되는 변수의 전체 목록은 [여기에](../analytics/automatically-mapped-vars.md)나와 있습니다.
+Adobe Experience Platform Edge Network는 많은 XDM 변수를 자동으로 매핑합니다. 자동으로 매핑된 변수의 전체 목록은 [여기에 나와 있습니다](../analytics/automatically-mapped-vars.md).
 
 ## 수동으로 매핑된 데이터
 
 Edge Network에서 수집한 모든 데이터는 처리 규칙을 통해 액세스할 수 있습니다. 데이터는 점 표기법을 사용하여 분리되고 contextData로 사용할 수 있습니다.
 
-이렇게 보이는 스키마를 가지고 있다면
+이렇게 생긴 스키마가 있다면
 
 ```javascript
 {
@@ -54,7 +53,7 @@ Edge Network에서 수집한 모든 데이터는 처리 규칙을 통해 액세�
 }
 ```
 
-컨텍스트 데이터 키가 될 수 있습니다.
+그런 다음 컨텍스트 데이터 키를 사용할 수 있습니다.
 
 ```javascript
 a.x.key //value
