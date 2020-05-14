@@ -4,19 +4,19 @@ seo-title: Adobe Experience Platform 웹 SDK 이벤트 데이터 병합
 description: Experience Platform 웹 SDK 이벤트 데이터를 병합하는 방법 살펴보기
 seo-description: Experience Platform 웹 SDK 이벤트 데이터를 병합하는 방법 살펴보기
 translation-type: tm+mt
-source-git-commit: 767f0e1bfdfcc898313b546c804ba1287f2aec50
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
 workflow-type: tm+mt
-source-wordcount: '444'
-ht-degree: 2%
+source-wordcount: '436'
+ht-degree: 0%
 
 ---
 
 
-# (베타) 이벤트 데이터 병합
+# 이벤트 데이터 병합
 
 >[!IMPORTANT]
 >
->Adobe Experience Platform Web SDK는 현재 베타 버전이며 일부 사용자는 사용할 수 없습니다. 설명서 및 기능은 변경될 수 있습니다.
+>이 기능은 아직 개발 중이며 일부 솔루션이 이 데이터를 병합할 수는 없습니다.
 
 이벤트 발생 시 일부 데이터를 사용할 수 없는 경우가 있습니다. 예를 들어 사용자가 브라우저를 닫으면 데이터가 손실되지 않도록 _보유하고_ 있는 데이터를 캡처할 수 있습니다. 반면에 나중에 사용할 수 있게 될 데이터도 포함할 수 있습니다.
 
