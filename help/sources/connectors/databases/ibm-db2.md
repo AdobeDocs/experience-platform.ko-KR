@@ -4,15 +4,15 @@ solution: Experience Platform
 title: IBM DB2 커넥터
 topic: overview
 translation-type: tm+mt
-source-git-commit: e77dadb4257c16e19113f6224790fbb3b8207a52
+source-git-commit: 45ce6e876a42c5594ae4b7787757e5db7024a22f
 workflow-type: tm+mt
-source-wordcount: '132'
+source-wordcount: '133'
 ht-degree: 0%
 
 ---
 
 
-# IBM DB2 커넥터
+# (베타) IBM DB2 커넥터
 
 Adobe Experience Platform은 Microsoft, MySQL 및 Azure와 같은 데이터베이스 제공업체를 위한 기본 연결을 제공합니다. 이러한 시스템의 데이터를 플랫폼으로 가져올 수 있습니다.
 
