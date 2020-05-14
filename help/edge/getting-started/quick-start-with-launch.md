@@ -4,9 +4,9 @@ seo-title: Adobe Experience Platform 웹 SDK 빠른 시작(Launch)
 description: Experience Platform 웹 SDK 익스텐션을 사용하여 데이터를 수집하는 빠른 시작 가이드
 seo-description: Experience Platform 웹 SDK 익스텐션을 사용하여 데이터를 수집하는 빠른 시작 가이드
 translation-type: tm+mt
-source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+source-git-commit: 2ccb2c17590780f7f1bd5e553164209763ab9e24
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '539'
 ht-degree: 3%
 
 ---
@@ -17,14 +17,16 @@ ht-degree: 3%
 이 가이드는 Launch에서 Adobe Experience Platform 웹 SDK를 설정하는 다양한 방법을 설명합니다. 이 기능을 사용하려면 허용 목록에 포함되어야 합니다. 대기자 명단에 오르시려면 CSM으로 연락하십시오.
 
 - 자사 도메인(CNAME)이 [활성화되어 있어야](https://docs.adobe.com/content/help/en/core-services/interface/ec-cookies/cookies-first-party.html) 합니다. 이미 Analytics용 CNAME이 있는 경우 이 CNAME을 사용해야 합니다. 개발 중인 테스트는 CNAME 없이 작동하지만 프로덕션으로 이동하기 전에 필요합니다
-- Adobe Experience Platform 데이터 플랫폼을 이용할 수 있습니다. 플랫폼을 구매하지 않은 경우, SDK와 함께 사용할 수 있도록 Experience Platform Data Services Foundation을 제공할 것입니다.
+- Adobe Experience Platform 데이터 플랫폼을 이용할 수 있습니다. 귀하가 플랫폼을 구매하지 않은 경우, Adobe는 귀하에게 SDK와 함께 제한된 방식으로 사용할 수 있도록 Experience Platform Data Services Foundation을 추가 비용 없이 제공할 것입니다.
 - 최신 버전의 방문자 ID 서비스 사용
 
 ## 구성 ID 만들기
 
 실행 시 [에지 구성 도구를 사용하여 구성 ID를](../fundamentals/edge-configuration.md) 만들 수 있습니다. 이를 통해 Edge Network에서 데이터를 다양한 솔루션으로 보낼 수 있습니다. 각 옵션을 찾는 방법에 대한 자세한 내용은 [에지 구성 도구](../fundamentals/edge-configuration.md) 페이지를 참조하십시오.
 
->참고: 이 기능을 사용하려면 조직에서 허용 목록에 포함되어야 합니다. 최종 허용 목록에 포함하려면 CSM에 문의하십시오.
+>[!NOTE]
+>
+>이 기능을 사용하려면 조직에서 허용 목록에 포함되어야 합니다. 최종 허용 목록에 포함하려면 CSM에 문의하십시오.
 
 ## 스키마 준비
 
@@ -56,6 +58,7 @@ Launch에 로그인하여 `AEP Web SDK` 익스텐션을 설치합니다. SDK 설
 데이터 흐름을 마치면 다음을 수행할 수 있습니다.
 
 - [스키마 구축](https://docs.adobe.com/content/help/en/experience-platform/xdm/schema/composition.html)
+- [디버깅에 대한 자세한 내용](../fundamentals/debugging.md)
 - 경험 [개인화](../fundamentals/rendering-personalization-content.md)
 - 여러 솔루션으로 데이터 전송 방법 살펴보기
    - [Adobe Analytics](../solution-specific/analytics/analytics-overview.md)
