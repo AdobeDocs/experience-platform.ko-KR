@@ -4,15 +4,18 @@ solution: Experience Platform
 title: UI에서 Oracle DB 소스 커넥터 생성
 topic: overview
 translation-type: tm+mt
-source-git-commit: 2e10056a3dcbff1075d786327ea7a7ea2ccc776c
+source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
 workflow-type: tm+mt
-source-wordcount: '476'
+source-wordcount: '490'
 ht-degree: 1%
 
 ---
 
 
 # UI에서 Oracle 소스 커넥터 생성
+
+> [!NOTE]
+> Oracle 커넥터가 베타 상태입니다. 기능 및 설명서는 변경될 수 있습니다.
 
 Adobe Experience Platform의 소스 커넥터는 외부에서 소스 데이터를 예약된 기준으로 인제스트하는 기능을 제공합니다. 이 자습서에서는 플랫폼 사용자 인터페이스를 사용하여 Oracle 소스 커넥터를 생성하는 단계를 제공합니다.
 
