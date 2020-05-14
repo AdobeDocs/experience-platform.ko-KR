@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: May 13, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 53d72e6460c1ab3bc4459d8e108630f652b62dd6
+source-git-commit: e6731b54840eaf9dd2cdaeff5205e14277e78a3b
 workflow-type: tm+mt
-source-wordcount: '961'
-ht-degree: 6%
+source-wordcount: '1026'
+ht-degree: 5%
 
 ---
 
@@ -104,6 +104,7 @@ Adobe Experience Platform을 사용하면 외부 소스에서 데이터를 인�
 | ------- | ----------- |
 | 클라우드 스토리지 시스템에 대한 추가 API 및 UI 지원 | Azure 파일 저장소의 새 소스 커넥터를 사용합니다. |
 | 데이터베이스에 대한 추가 API 및 UI 지원 | Azure 데이터 탐색기, IBM DB2 및 Oracle DB에 대한 새 소스 커넥터입니다. |
+| Adobe Audience Manager에서 경험 플랫폼 데이터 공유 | Audience Manager 커넥터에 대한 프로비저닝 프로세스가 업데이트되었습니다. 이제 실시간 고객 프로필에 대한 Audience Manager 데이터 세트를 기본적으로 사용할 수 없습니다. 프로필로 승격할 데이터 세트를 수동으로 선택할 수 있습니다. 새 기본 설정은 소급 적용되지 않으며 새 Audience Manager 커넥터에 대한 프로비저닝에만 영향을 줍니다. 데이터 집합 사용자 안내서에서 자세한 [내용을 참조하십시오](../../catalog/datasets/user-guide.md). |
 
 **알려진 문제**
 
