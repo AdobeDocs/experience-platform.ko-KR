@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: May 13, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 0eca2f6e50024ec43c025dd75c34ca876d71c3f2
+source-git-commit: 53d72e6460c1ab3bc4459d8e108630f652b62dd6
 workflow-type: tm+mt
-source-wordcount: '959'
+source-wordcount: '961'
 ht-degree: 6%
 
 ---
@@ -87,7 +87,7 @@ Experience Platform 웹 SDK 및 Experience Platform Edge Network를 사용하면
 | Adobe Analytics | 에지 구성을 통해 데이터를 Analytics 보고서 세트로 보냅니다. XDM은 컨텍스트 데이터로 분리되며 다중 세트 태그 지정 지원 |
 | Adobe Target | Adobe Target 지원. VEC, 양식 기반 컴포저, A/B, XT, 자동화된 개인화, MVT 포함 |
 | Adobe Audience Manager 지원 | Audience Manager ID 동기화, URL 대상 및 쿠키 대상 지원 |
-| `synceIdnetity` | 더 명확하게 하기 `setCustomersIds` 로 `syncIdentity` 이름 변경 |
+| ID 동기화 | 더 명확하게 하기 `setCustomersIds` 로 `syncIdentity` 이름 변경 |
 | XDM 개체 빌더 | 론치 익스텐션에서 이제 XDM 개체를 데이터 요소로 만들 수 있습니다 |
 
 플랫폼 웹 SDK 및 에지 네트워크에 대한 자세한 내용은 [설명서를 참조하십시오](../../edge/home.md).
