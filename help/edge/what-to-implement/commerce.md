@@ -4,7 +4,7 @@ seo-title: Adobe Experience Platform 웹 SDK를 사용한 제품 지원
 description: Experience Platform Web SDK가 있는 제품 또는 장바구니를 사용하는 경우 데이터를 추가하는 방법 학습
 seo-description: Experience Platform Web SDK가 있는 제품 또는 장바구니를 사용하는 경우 데이터를 추가하는 방법 학습
 translation-type: tm+mt
-source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+source-git-commit: 4bff4b20ccc1913151aa1783d5123ffbb141a7d0
 workflow-type: tm+mt
 source-wordcount: '1314'
 ht-degree: 5%
@@ -44,7 +44,7 @@ ht-degree: 5%
 다음은 SDK에서 이러한 설정을 설정하는 방법 `Measures` 의 예입니다.
 
 ```javascript
-alloy("event", {
+alloy("sendEvent", {
   "xdm":{
     "commerce":{
       "productViews":{
@@ -72,12 +72,12 @@ alloy("event", {
 다음은 SDK에서 일반적인 구매의 예입니다.
 
 ```javascript
-alloy("event",{
+alloy("sendEvent",{
   "xdm":{
     "commerce":{
       "order":{
         "purchaseID":"123456789",
-        "currenceCode":"USD",
+        "currencyCode":"USD",
         "priceTotal":39.98,
         "payments":[
           {
@@ -100,7 +100,7 @@ alloy("event",{
         "SKU":"HT104",
         "name":"The Small Floppy Hat",
         "priceTotal":9.99,
-        "qauntity":1
+        "quantity":1
       }
     ]
   }
@@ -126,7 +126,7 @@ alloy("event",{
 `productView` event
 
 ```javascript
-alloy("event",{
+alloy("sendEvent",{
   "xdm":{
     "commerce":{
       "productViews":{
@@ -150,7 +150,7 @@ alloy("event",{
 `productView` event
 
 ```javascript
-alloy("event",{
+alloy("sendEvent",{
   "xdm":{
     "commerce":{
       "productListAdds":{
@@ -180,7 +180,7 @@ alloy("event",{
 `checkout` event
 
 ```javascript
-alloy("event",{
+alloy("sendEvent",{
   "xdm":{
     "commerce":{
       "checkouts":{
@@ -208,12 +208,12 @@ alloy("event",{
 `purchase` event
 
 ```javascript
-alloy("event",{
+alloy("sendEvent",{
   "xdm":{
     "commerce":{
       "order":{
         "purchaseID":"123456789",
-        "currenceCode":"USD",
+        "currencyCode":"USD",
         "priceTotal":39.98,
         "payments":[
           {
@@ -236,7 +236,7 @@ alloy("event",{
         "SKU":"HT104",
         "name":"The Small Floppy Hat",
         "priceTotal":9.99,
-        "qauntity":1
+        "quantity":1
       }
     ]
   }
