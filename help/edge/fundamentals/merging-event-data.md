@@ -4,7 +4,7 @@ seo-title: Adobe Experience Platform 웹 SDK 이벤트 데이터 병합
 description: Experience Platform 웹 SDK 이벤트 데이터를 병합하는 방법 살펴보기
 seo-description: Experience Platform 웹 SDK 이벤트 데이터를 병합하는 방법 살펴보기
 translation-type: tm+mt
-source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+source-git-commit: 4bff4b20ccc1913151aa1783d5123ffbb141a7d0
 workflow-type: tm+mt
 source-wordcount: '436'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 이러한 경우 다음과 같은 명령 옵션으로 전달하여 이전 이벤트 `eventMergeId` 와 데이터를 `event` 병합할 수 있습니다.
 
 ```javascript
-alloy("event", {
+alloy("sendEvent", {
   "xdm": {
     "commerce": {
       "order": {
@@ -39,7 +39,7 @@ alloy("event", {
 
 // Time passes and more data becomes available
 
-alloy("event", {
+alloy("sendEvent", {
   "xdm": {
     "commerce": {
       "order": {
@@ -72,7 +72,7 @@ alloy("event", {
 var eventMergeIdPromise = alloy("createEventMergeId");
 
 eventMergeIdPromise.then(function(results) {
-  alloy("event", {
+  alloy("sendEvent", {
     "xdm": {
       "commerce": {
         "order": {
@@ -90,7 +90,7 @@ eventMergeIdPromise.then(function(results) {
 // Time passes and more data becomes available
 
 eventMergeIdPromise.then(function(results) {
-  alloy("event", {
+  alloy("sendEvent", {
     "xdm": {
       "commerce": {
         "order": {
@@ -126,7 +126,7 @@ eventMergeIdPromise.then(function(results) {
 이벤트 명령 내부에 페이로드 `mergeId` 에 실제로 `xdm` 추가됩니다.  원하는 경우 다음과 같이 xdm 옵션의 일부로 전송할 `mergeId` 수 있습니다.
 
 ```javascript
-alloy("event", {
+alloy("sendEvent", {
   "xdm": {
     "commerce": {
       "order": {
