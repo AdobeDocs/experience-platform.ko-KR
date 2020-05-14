@@ -4,19 +4,15 @@ seo-title: Adobe Experience Platform 웹 SDK Experience Cloud ID 검색
 description: Adobe Experience Cloud ID를 가져오는 방법을 알아봅니다.
 seo-description: Adobe Experience Cloud ID를 가져오는 방법을 알아봅니다.
 translation-type: tm+mt
-source-git-commit: 9bd6feb767e39911097bbe15eb2c370d61d9842a
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
 workflow-type: tm+mt
-source-wordcount: '424'
-ht-degree: 7%
+source-wordcount: '398'
+ht-degree: 6%
 
 ---
 
 
-# (베타) Experience Cloud ID 검색
-
->[!IMPORTANT]
->
->Adobe Experience Platform Web SDK는 현재 베타 버전이며 일부 사용자는 사용할 수 없습니다. 설명서 및 기능은 변경될 수 있습니다.
+# Experience Cloud ID 검색 중
 
 Adobe Experience Platform 웹 SDK는 [Adobe Identity Service를 활용합니다](../../identity-service/ecid.md). 이렇게 하면 각 장치에 페이지 간의 활동을 함께 연결할 수 있도록 장치에서 지속되는 고유한 식별자가 있습니다.
 
