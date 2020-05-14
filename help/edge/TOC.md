@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Edge Network 도움말
 translation-type: tm+mt
-source-git-commit: 4bea14d18ce119bdec0d428f885d240f92244cfc
+source-git-commit: 5998473c665cb80ffddc092847533f51d81cf581
 workflow-type: tm+mt
-source-wordcount: '85'
+source-wordcount: '89'
 ht-degree: 12%
 
 ---
@@ -16,6 +16,7 @@ ht-degree: 12%
 * [Edge Network 개요](home.md)
 * 시작하기 {#get-started}
    * [빠른 시작](getting-started/quick-start-with-launch.md)
+   * [실행 없이 빠른 시작](getting-started/quick-start-without-launch.md)
 * 기본 사항 {#fundamentals}
    * [SDK 설치](fundamentals/installing-the-sdk.md)
    * [명령 실행](fundamentals/executing-commands.md)
