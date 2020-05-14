@@ -4,15 +4,15 @@ solution: Experience Platform
 title: Oracle 커넥터
 topic: overview
 translation-type: tm+mt
-source-git-commit: 2e10056a3dcbff1075d786327ea7a7ea2ccc776c
+source-git-commit: 45ce6e876a42c5594ae4b7787757e5db7024a22f
 workflow-type: tm+mt
-source-wordcount: '124'
+source-wordcount: '125'
 ht-degree: 0%
 
 ---
 
 
-# Oracle 커넥터
+# (베타) Oracle 커넥터
 
 Adobe Experience Platform은 Microsoft, MySQL 및 Azure와 같은 데이터베이스 제공업체를 위한 기본 연결을 제공합니다. 이러한 시스템의 데이터를 플랫폼으로 가져올 수 있습니다.
 
