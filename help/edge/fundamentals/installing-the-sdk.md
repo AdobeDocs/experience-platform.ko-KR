@@ -4,15 +4,21 @@ seo-title: SDK 설치 Adobe Experience Platform 웹 SDK
 description: Experience Platform 웹 SDK 설치 방법 살펴보기
 seo-description: Experience Platform 웹 SDK 설치 방법 살펴보기
 translation-type: tm+mt
-source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+source-git-commit: 5998473c665cb80ffddc092847533f51d81cf581
 workflow-type: tm+mt
-source-wordcount: '498'
+source-wordcount: '566'
 ht-degree: 0%
 
 ---
 
 
 # SDK 설치
+
+AEP 웹 SDK는 CDN에서 사용할 수 있습니다. 이 파일을 참조하거나 다운로드하여 자체 인프라에서 호스팅할 수 있습니다. 축소 및 축소 버전이 아닌 버전으로 사용할 수 있습니다. 분류되지 않은 버전은 디버깅에 유용합니다.
+
+[https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js)[https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js)
+
+## 코드 추가
 
 Adobe Experience Platform 웹 SDK를 구현하는 첫 번째 단계는 다음 &quot;기본 코드&quot;를 복사하여 HTML의 `<head>` 태그에 최대한 붙여넣는 것입니다.
 
@@ -23,7 +29,7 @@ Adobe Experience Platform 웹 SDK를 구현하는 첫 번째 단계는 다음 &q
   function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
   (window,["alloy"]);
 </script>
-<script src="alloy.js" async></script>
+<script src="https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js" async></script>
 ```
 
 기본 코드는 이름이 인 전역 함수를 만듭니다 `alloy`. 이 함수를 사용하여 SDK와 상호 작용합니다. 전역 함수 이름을 다른 이름으로 지정하려면 다음과 같이 `alloy` 이름을 변경할 수 있습니다.
@@ -35,7 +41,7 @@ Adobe Experience Platform 웹 SDK를 구현하는 첫 번째 단계는 다음 &q
   function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
   (window,["mycustomname"]);
 </script>
-<script src="alloy.js" async></script>
+<script src="https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js" async></script>
 ```
 
 이 예에서 전역 함수의 이름이 대신 `mycustomname`로 변경되었습니다 `alloy`.
@@ -80,5 +86,5 @@ Adobe Experience Platform 웹 SDK를 구현하는 첫 번째 단계는 다음 &q
   function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
   (window,["alloy"]);
 </script>
-<script src="alloy.js"></script>
+<script src="https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js"></script>
 ```
