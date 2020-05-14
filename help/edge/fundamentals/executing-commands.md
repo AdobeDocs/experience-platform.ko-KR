@@ -4,19 +4,15 @@ seo-title: Adobe Experience Platform 웹 SDK 명령 실행
 description: Experience Platform 웹 SDK 명령 실행 방법 살펴보기
 seo-description: Experience Platform 웹 SDK 명령 실행 방법 살펴보기
 translation-type: tm+mt
-source-git-commit: 9bd6feb767e39911097bbe15eb2c370d61d9842a
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
 workflow-type: tm+mt
-source-wordcount: '445'
-ht-degree: 2%
+source-wordcount: '419'
+ht-degree: 0%
 
 ---
 
 
-# (베타) 명령 실행
-
->[!IMPORTANT]
->
->Adobe Experience Platform Web SDK는 현재 베타 버전이며 일부 사용자는 사용할 수 없습니다. 설명서 및 기능은 변경될 수 있습니다.
+# 명령 실행
 
 웹 페이지에 기본 코드가 구현되면 SDK로 명령 실행을 시작할 수 있습니다. 명령을 실행하기 전에 서버에서 외부 파일 \(`alloy.js`\)을 로드할 때까지 기다릴 필요가 없습니다. SDK의 로딩이 완료되지 않으면 SDK에서 가능한 한 빨리 명령을 큐에 넣고 처리합니다.
 
