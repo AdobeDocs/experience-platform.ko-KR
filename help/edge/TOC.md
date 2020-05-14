@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Edge Network 도움말
 translation-type: tm+mt
-source-git-commit: e00dc3e8dec0117617081ca4fc9ffa752b01b3b7
+source-git-commit: 4bea14d18ce119bdec0d428f885d240f92244cfc
 workflow-type: tm+mt
-source-wordcount: '91'
+source-wordcount: '85'
 ht-degree: 12%
 
 ---
@@ -16,7 +16,6 @@ ht-degree: 12%
 * [Edge Network 개요](home.md)
 * 시작하기 {#get-started}
    * [빠른 시작](getting-started/quick-start-with-launch.md)
-   * [모든 제품 배포](getting-started/deploying-all-products.md)
 * 기본 사항 {#fundamentals}
    * [SDK 설치](fundamentals/installing-the-sdk.md)
    * [명령 실행](fundamentals/executing-commands.md)
@@ -28,7 +27,6 @@ ht-degree: 12%
    * [여러 속성을 사용한 인터랙션](fundamentals/interacting-with-multiple-properties.md)
    * [맞춤형 컨텐츠 렌더링](fundamentals/rendering-personalization-content.md)
    * [지원 동의](fundamentals/supporting-consent.md)
-   * [인앱 브라우저 지원](fundamentals/supporting-in-app-browsers.md)
    * [ID](fundamentals/identity.md)
 * 구현할 사항 {#implement}
    * [제품](what-to-implement/commerce.md)
