@@ -4,12 +4,18 @@ solution: Experience Platform
 title: 흐름 서비스 API를 사용하여 Azure 데이터 탐색기 커넥터 만들기
 topic: overview
 translation-type: tm+mt
-source-git-commit: c4162d88a688ce2028de08b63e7b7eab954a0e29
+source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
+workflow-type: tm+mt
+source-wordcount: '676'
+ht-degree: 1%
 
 ---
 
 
 # 흐름 서비스 API를 사용하여 Azure 데이터 탐색기 커넥터 만들기
+
+>[!NOTE]
+>Azure 데이터 탐색기 커넥터가 베타 버전입니다. 기능 및 설명서는 변경될 수 있습니다.
 
 Flow Service는 Adobe Experience Platform에서 다양한 소스의 고객 데이터를 수집하고 중앙에서 관리하는 데 사용됩니다. 이 서비스는 지원되는 모든 소스가 연결되어 있는 사용자 인터페이스와 RESTful API를 제공합니다.
 
