@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 개인정보 보호 서비스 및 Experience Cloud 응용 프로그램
 topic: overview
 translation-type: tm+mt
-source-git-commit: 14cd3d17c7d9ba602d02925abddec9e0b246a8c8
+source-git-commit: f4a007b66806cb0d322226e1e1837cfce7ca4095
+workflow-type: tm+mt
+source-wordcount: '600'
+ht-degree: 14%
 
 ---
 
@@ -30,13 +33,11 @@ Experience Cloud 응용 프로그램의 설명서를 검토하여 개인정보 �
 | Adobe Analytics | ✓ | ✓ | <ul><li>[설명서 액세스/삭제](https://docs.adobe.com/content/help/en/analytics/admin/data-governance/an-gdpr-overview.html)</li><li>Analytics는 [개인 정보 보고 변수를 사용하여 옵트아웃 요청을 처리합니다.](https://docs.adobe.com/content/help/ko-KR/analytics/admin/data-governance/consent-variables.html)</li></ul> |
 | Adobe Audience Manager | ✓ | ✓ | <ul><li>[설명서 액세스/삭제](https://docs.adobe.com/content/help/ko-KR/audience-manager/user-guide/overview/data-privacy/data-privacy-requests.html)</li><li>[옵트아웃 설명서](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/declared-ids.html)</li></ul> |
 | Adobe Campaign Standard | ✓ | ✓ | <ul><li>[설명서 액세스/삭제](https://docs.campaign.adobe.com/doc/standard/getting_started/en/ACS_GDPR.html)</li><li>[옵트아웃 설명서](../segmentation/honoring-opt-outs.md)</li></ul> |
+| Adobe 고객 속성(CRS) | ✓ | N/A | <ul><li>[GDPR 문서 액세스/삭제](https://docs.adobe.com/content/help/en/core-services/interface/customer-attributes/gdpr.html)</li><li>[CPA용 문서 액세스/삭제](https://docs.adobe.com/content/help/en/core-services/interface/customer-attributes/ccpa.html)</li><li>고객 속성에는 데이터를 전송할 수 있는 기능이 없으므로 판매 거부 요청은 적용되지 않습니다.</li></ul> |
 | Adobe Experience Platform | ✓ | ✓ | <ul><li>[Data Lake에 대한 문서 액세스/삭제](../catalog/privacy.md)</li><li>[실시간 고객 프로파일에 대한 문서 액세스/삭제](../profile/privacy.md)</li><li>경험 플랫폼은 대상 세그먼트에 대한 [옵트아웃 요청을 처리합니다](../segmentation/honoring-opt-outs.md).</li></ul> |
 | Adobe Primetime 인증 | ✓ | N/A | <ul><li>[설명서 액세스/삭제](http://tve.helpdocsonline.com/how-to-make-a-privacy-request)</li><li>Primetime에는 데이터를 전송할 수 있는 기능이 없으므로 판매 거부 요청은 적용되지 않습니다.</li></ul> |
 | Adobe Target | ✓ | N/A | <ul><li>[설명서 액세스/삭제](https://docs.adobe.com/content/help/ko-KR/target/using/implement-target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.html)</li><li>Target에는 데이터를 전송할 수 있는 기능이 없으므로 판매 거부 요청을 적용할 수 없습니다.</li></ul> |
 
-<!-- (To include once access/delete documentation is available)
-Adobe Customer Attributes (CRS) | ✓ | N/A | <ul><li>Customer Attributes does not have the capability to transfer data, therefore opt-out-of-sale requests are not applicable.</li></ul>
--->
 
 ## 셀프 서비스 애플리케이션 {#self-serve}
 
