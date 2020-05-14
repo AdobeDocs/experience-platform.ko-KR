@@ -4,19 +4,15 @@ seo-title: Adobe Experience Platform 웹 SDK를 사용하여 Adobe Audience Mana
 description: Experience Platform 웹 SDK를 사용하여 Adobe Audience Manager로 데이터를 전송하는 방법 학습
 seo-description: Experience Platform 웹 SDK를 사용하여 Adobe Audience Manager로 데이터를 전송하는 방법 학습
 translation-type: tm+mt
-source-git-commit: dfe9ea2889b3ba2e74f8b10296bfb2d123ad9d57
+source-git-commit: 4bea14d18ce119bdec0d428f885d240f92244cfc
 workflow-type: tm+mt
-source-wordcount: '318'
-ht-degree: 2%
+source-wordcount: '292'
+ht-degree: 0%
 
 ---
 
 
-# (베타) Experience Platform Edge Network의 Audience Manager
-
->[!IMPORTANT]
->
->Adobe Experience Platform Web SDK는 현재 베타 버전이며 일부 사용자는 사용할 수 없습니다. 설명서 및 기능은 변경될 수 있습니다.
+# Adobe Experience Platform Edge Network의 Audience Manager
 
 Adobe Experience Platform 웹 SDK는 Adobe Audience Manager와 통합되어 있으며, Audience Manager, 쿠키 및 URL 대상 및 ID 동기화에서 데이터 전송 및 받기를 지원합니다.
 
