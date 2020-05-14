@@ -4,18 +4,17 @@ seo-title: Adobe Experience Platform 웹 SDK 맞춤형 컨텐츠 렌더링
 description: Experience Platform 웹 SDK를 사용하여 개인화된 콘텐츠를 렌더링하는 방법 학습
 seo-description: Experience Platform 웹 SDK를 사용하여 개인화된 콘텐츠를 렌더링하는 방법 학습
 translation-type: tm+mt
-source-git-commit: bb3841da8a566105fde1b7ac78dccd79a7ea15d4
+source-git-commit: 4bea14d18ce119bdec0d428f885d240f92244cfc
+workflow-type: tm+mt
+source-wordcount: '236'
+ht-degree: 0%
 
 ---
 
 
-# (베타) 개인화 옵션 개요
+# 개인화 옵션 개요
 
->[!IMPORTANT]
->
->Adobe Experience Platform Web SDK는 현재 베타 버전이며 일부 사용자는 사용할 수 없습니다. 설명서 및 기능은 변경될 수 있습니다.
-
-Adobe Experience Platform 웹 SDK는 Adobe Target을 비롯한 Adobe에서 개인화 솔루션 쿼리를 지원합니다. 개인화 모드에는 자동으로 렌더링될 수 있는 컨텐츠 및 개발자가 렌더링해야 하는 컨텐츠 검색 또한 SDK는 깜박임을 [관리하는 기능도 제공합니다](managing-flicker.md).
+Adobe Experience Platform 웹 SDK는 Adobe Target을 비롯한 Adobe에서 개인화 솔루션 쿼리를 지원합니다. 개인화 모드에는 자동으로 렌더링될 수 있는 컨텐츠 및 개발자가 렌더링해야 하는 컨텐츠 검색 또한 SDK는 깜박임을 [관리하는 기능도 제공합니다](../../edge/solution-specific/target/flicker-management.md).
 
 ## 컨텐츠 자동 렌더링
 
