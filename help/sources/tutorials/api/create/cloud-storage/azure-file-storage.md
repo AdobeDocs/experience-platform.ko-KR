@@ -4,15 +4,18 @@ solution: Experience Platform
 title: Flow Service API를 사용하여 Azure 파일 저장소 커넥터 만들기
 topic: overview
 translation-type: tm+mt
-source-git-commit: 8beee3f15aa867026b28f9c395553d1c934ef7a3
+source-git-commit: 3a882656f93b86093b356be5dbc12b3e4321cfb8
 workflow-type: tm+mt
-source-wordcount: '621'
+source-wordcount: '636'
 ht-degree: 1%
 
 ---
 
 
 # Flow Service API를 사용하여 Azure 파일 저장소 커넥터 만들기
+
+>[!NOTE]
+>Azure 파일 저장소 커넥터가 베타 버전입니다. 기능 및 설명서는 변경될 수 있습니다.
 
 Flow Service는 Adobe Experience Platform에서 다양한 소스의 고객 데이터를 수집하고 중앙에서 관리하는 데 사용됩니다. 이 서비스는 지원되는 모든 소스가 연결되어 있는 사용자 인터페이스와 RESTful API를 제공합니다.
 
