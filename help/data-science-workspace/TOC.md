@@ -3,10 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform 데이터 과학 작업 공간 도움말
 translation-type: tm+mt
-source-git-commit: 37213f29e8099f8587cde9eb66f9b75de3ad8a3a
+source-git-commit: 8f9454730e3bab451ac75070fcd1623698df9196
 workflow-type: tm+mt
-source-wordcount: '195'
-ht-degree: 2%
+source-wordcount: '210'
+ht-degree: 3%
 
 ---
 
@@ -29,6 +29,11 @@ ht-degree: 2%
    * [MLSservices](api/mlservices.md)
    * [인사이트](api/insights.md)
    * [부록](api/appendix.md)
+* 실시간 기계 학습(알파) {#real-time-machine-learning}
+   * [개요](real-time-machine-learning/home.md)
+   * [시작하기](real-time-machine-learning/getting-started.md)
+   * [RTML 작성 노트북 사용자 가이드](real-time-machine-learning/rtml-authoring-notebook.md)
+   * [노드 참조 가이드](real-time-machine-learning/node-reference.md)
 * 사전 구성된 레시피 {#pre-built-recipes}
    * [제품 추천 레시피](pre-built-recipes/product-recommendations.md)
    * [제품 구매 예측](pre-built-recipes/product-purchase-prediction.md)
