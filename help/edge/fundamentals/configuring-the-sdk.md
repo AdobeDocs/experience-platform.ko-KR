@@ -4,19 +4,15 @@ seo-title: Adobe Experience Platform 웹 SDK 구성
 description: Experience Platform 웹 SDK를 구성하는 방법 학습
 seo-description: Experience Platform 웹 SDK를 구성하는 방법 학습
 translation-type: tm+mt
-source-git-commit: 767f0e1bfdfcc898313b546c804ba1287f2aec50
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
 workflow-type: tm+mt
-source-wordcount: '765'
-ht-degree: 12%
+source-wordcount: '739'
+ht-degree: 11%
 
 ---
 
 
-# (베타) SDK 구성
-
->[!IMPORTANT]
->
->Adobe Experience Platform Web SDK는 현재 베타 버전이며 일부 사용자는 사용할 수 없습니다. 설명서 및 기능은 변경될 수 있습니다.
+# SDK 구성
 
 SDK에 대한 구성은 `configure` 명령으로 수행됩니다.
 
