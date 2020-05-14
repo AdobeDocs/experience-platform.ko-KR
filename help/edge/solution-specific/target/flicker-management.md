@@ -1,11 +1,17 @@
 ---
-source-git-commit: e00dc3e8dec0117617081ca4fc9ffa752b01b3b7
-workflow-type: tm+mt
+title: 개인화된 경험을 위한 깜박임 관리
+seo-title: 깜박임을 관리하는 Adobe Experience Platform 웹 SDK
+description: 사용자 경험의 깜박임을 관리하는 방법 살펴보기
+seo-description: Experience Platform 웹 SDK 속성을 사용하여 깜박임을 관리하는 방법 살펴보기
 translation-type: tm+mt
-source-wordcount: '459'
+source-git-commit: 4bea14d18ce119bdec0d428f885d240f92244cfc
+workflow-type: tm+mt
+source-wordcount: '491'
 ht-degree: 0%
 
 ---
+
+
 # 깜박임 관리
 
 개인화 콘텐츠를 렌더링할 때 SDK에서 깜박임이 없도록 해야 합니다. FOOC(Flash of Original Content)이라고도 하는 Flicker는 테스트/개인화 도중 대체 요소가 표시되기 전에 원본 컨텐츠가 잠시 표시되는 경우입니다. SDK는 개인화 컨텐츠가 성공적으로 렌더링될 때까지 이러한 요소가 숨겨지도록 페이지의 요소에 CSS 스타일을 적용하려고 합니다.
