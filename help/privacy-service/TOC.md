@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform 개인 정보 보호 서비스 도움말
 translation-type: tm+mt
-source-git-commit: 284768c0f5416972e51d2fa2078ad5267e1b8628
+source-git-commit: 63412f07b2e9237bbceaee8f1febef3ff655c286
 workflow-type: tm+mt
-source-wordcount: '86'
+source-wordcount: '87'
 ht-degree: 11%
 
 ---
@@ -19,6 +19,7 @@ ht-degree: 11%
 * Privacy Service API {#api}
    * [시작하기](api/getting-started.md)
    * [개인 정보 작업](api/privacy-jobs.md)
+   * [동의](api/consent.md)
    * [부록](api/appendix.md)
 * 개인정보 보호 서비스 UI {#ui}
    * [개인정보 보호 서비스 UI 개요](ui/overview.md)
