@@ -4,9 +4,9 @@ seo-title: 대상에 프로필 및 세그먼트 활성화
 description: 세그먼트를 대상에 매핑하여 Adobe 실시간 고객 데이터 플랫폼의 데이터를 활성화합니다. 이를 수행하려면 아래 단계를 따르십시오.
 seo-description: 세그먼트를 대상에 매핑하여 Adobe 실시간 고객 데이터 플랫폼의 데이터를 활성화합니다. 이를 수행하려면 아래 단계를 따르십시오.
 translation-type: tm+mt
-source-git-commit: 7dafdf0dd1ad3af2defab3bf6b784fd37e777062
+source-git-commit: faaa4eda5174bb8d27a76d767891df15df69e30a
 workflow-type: tm+mt
-source-wordcount: '639'
+source-wordcount: '775'
 ht-degree: 0%
 
 ---
@@ -28,9 +28,12 @@ ht-degree: 0%
 3. 활성화 **[!UICONTROL 를]**&#x200B;선택합니다.
 4. 대상 **[!UICONTROL 활성화]** 워크플로의 세그먼트 **[!UICONTROL 선택]** 페이지에서 대상에 전송할 세그먼트를 선택합니다.
    ![세그먼트-대상](/help/rtcdp/destinations/assets/select-segments.png)
-5. *조건부*. 이 단계는 클라우드 스토리지 대상 및 이메일 마케팅 대상에 매핑된 세그먼트에 대해서만 적용됩니다. <br> [ **[!UICONTROL 대상 속성]** ] 페이지에서 **[!UICONTROL 새 필드]** 추가를 선택하고 대상에 전송할 속성을 선택합니다.
+5. *조건부*. 이 단계는 세그먼트를 활성화하려는 대상 유형에 따라 다릅니다. <br> *이메일 대상* 및 *클라우드 스토리지 대상*&#x200B;의 경우 [속성 **[!UICONTROL 선택]** ] 페이지에서 새 필드 **** 추가새 필드를 선택하고 대상에 보낼 속성을 선택합니다.
 특성 중 하나를 조합 스키마에서 [고유한](/help/rtcdp/destinations/email-marketing-destinations.md#identity) 식별자로 사용하는 것이 좋습니다. 필수 속성에 대한 자세한 내용은 [이메일 마케팅 대상](/help/rtcdp/destinations/email-marketing-destinations.md#identity) 아티클의 ID를 참조하십시오.
-   ![destination-attributes](/help/rtcdp/destinations/assets/destination-attributes.png)
+   ![대상 속성](/help/rtcdp/destinations/assets/select-attributes-step.png)*소셜 네트워크 대상*&#x200B;의 경우 **[!UICONTROL ID 매핑]** 단계에서 대상 ID에 매핑할 소스 속성을 선택합니다.
+   ![필드를 채우기 전 ID 매핑](/help/rtcdp/destinations/assets/facebook-identity-mapping-1.png)아래 예에서 ID 스키마의 개인 이메일 주소는 Facebook [이메일 해싱 요구 사항을 준수하기 위해 Experience Platform으로 수집되었습니다](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements). 매핑을 **[!UICONTROL 선택한]** 후 [다음]을 누릅니다.
+   ![필드 채우기 후 ID 매핑](/help/rtcdp/destinations/assets/facebook-identity-mapping-2.png)
+
 6. [ **[!UICONTROL 세그먼트 예약]** ] 페이지에서는 대상으로 데이터를 전송하는 시작 날짜와 대상으로 데이터를 보내는 빈도를 확인할 수 있습니다.
 
    >[!IMPORTANT]
@@ -75,6 +78,10 @@ Salesforce_id3544_20191122124530.csv
 
 Facebook의 경우 활성화는 Facebook 광고 관리자에서 프로그래밍 방식으로 Facebook 사용자 지정 대상을 [만들게 됩니다](https://www.facebook.com/adsmanager/manage/). 사용자가 활성화된 세그먼트에 대해 자격이 부여되거나 자격이 부여되면 대상의 세그먼트 멤버십이 추가되고 제거됩니다.
 
+>[!TIP]
+>
+>Adobe Real-time CDP와 Facebook의 통합으로 이전 고객 채우기가 지원됩니다. 세그먼트를 대상으로 활성화하면 모든 내역 세그먼트 자격 조건은 Facebook으로 전송됩니다.
+
 ## 활성화 비활성화 {#disable-activation}
 
 기존 활성화 흐름을 비활성화하려면 아래 단계를 수행하십시오.
@@ -83,3 +90,4 @@ Facebook의 경우 활성화는 Facebook 광고 관리자에서 프로그래밍 
 2. 오른쪽 레일에 **[!UICONTROL 있는]** Enabled 컨트롤을 클릭하여 활성화 흐름 상태를 변경합니다.
 3. 데이터 흐름 상태 **업데이트** 창에서 **확인** 을 선택하여 활성화 흐름을 비활성화합니다.
 
+AWS Kinesis에서 액세스 키(비밀 액세스 키 쌍)를 생성하여 Adobe에서 AWS Kinesis 계정에 대한 실시간 CDP 액세스를 부여합니다. 자세한 내용은 [AWS Kinesis 설명서를 참조하십시오](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
