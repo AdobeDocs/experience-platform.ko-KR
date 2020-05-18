@@ -4,10 +4,10 @@ seo-title: Adobe Experience Platform 웹 SDK Experience Cloud ID 검색
 description: Adobe Experience Cloud ID를 가져오는 방법을 알아봅니다.
 seo-description: Adobe Experience Cloud ID를 가져오는 방법을 알아봅니다.
 translation-type: tm+mt
-source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+source-git-commit: a9dd5fd93397e57d0876bec334d54c517fa86939
 workflow-type: tm+mt
-source-wordcount: '398'
-ht-degree: 6%
+source-wordcount: '416'
+ht-degree: 7%
 
 ---
 
@@ -77,6 +77,14 @@ alloy("syncIdentity",{
 | 문자열 | 예 | none |
 
 지정된 네임스페이스에 대해 동기화할 ID입니다.
+
+#### `authenticationState`
+
+| **유형** | **필수 여부** | **기본값** | **가능한 값** |
+| -------- | ------------ | ----------------- | ------------------------------------ |
+| 문자열 | 예 | 모호해 | 모호함, 인증됨 및 로그아웃됨 |
+
+ID의 인증 상태입니다.
 
 #### `primary`
 
