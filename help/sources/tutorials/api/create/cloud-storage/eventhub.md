@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 흐름 서비스 API를 사용하여 Azure 이벤트 허브 커넥터를 만들기
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1eb6883ec9b78e5d4398bb762bba05a61c0f8308
+source-git-commit: fdffdd34d1ccb61d6c82fecc249ddeb501d79d0e
 workflow-type: tm+mt
-source-wordcount: '572'
+source-wordcount: '590'
 ht-degree: 2%
 
 ---
@@ -38,9 +38,10 @@ Flow Service는 Adobe Experience Platform에서 다양한 소스의 고객 데�
 | ---------- | ----------- |
 | `sasKeyName` | SAS 키 이름이라고도 하는 인증 규칙의 이름입니다. |
 | `sasKey` | 생성된 공유 액세스 서명. |
-| `namespace` | 액세스하는 EventHub의 네임스페이스입니다. |
+| `namespace` | 액세스하는 이벤트 허브의 네임스페이스입니다. |
+| `connectionSpec.id` | Azure 이벤트 허브 연결 사양 ID: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
 
-이러한 값에 대한 자세한 내용은 [이 EventHub 문서를 참조하십시오](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
+이러한 값에 대한 자세한 내용은 [이 이벤트 허브 문서를 참조하십시오](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
 
 ### 샘플 API 호출 읽기
 
@@ -86,10 +87,11 @@ curl -X POST \
         "name": "Azure Event Hubs connection",
         "description": "Connector for Azure Event Hubs",
         "auth": {
-            "specName": "Basic Authentication for EventHub",
+            "specName": "Basic Authentication for Event Hubs",
             "params": {
                 "sasKeyName": "sasKeyName",
-                "sasKey": "sasKey"
+                "sasKey": "sasKey",
+                "namespace": "namespace"
             }
         },
         "connectionSpec": {
@@ -103,6 +105,7 @@ curl -X POST \
 | -------- | ----------- |
 | `auth.params.sasKeyName` | SAS 키 이름이라고도 하는 인증 규칙의 이름입니다. |
 | `auth.params.sasKey` | 생성된 공유 액세스 서명. |
+| `namespace` | 액세스하는 이벤트 허브의 네임스페이스입니다. |
 | `connectionSpec.id` | Azure 이벤트 허브 연결 사양 ID: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
 
 **응답**
