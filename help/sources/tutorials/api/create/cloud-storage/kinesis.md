@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Flow Service API를 사용하여 Amazon Kinesis 커넥터 생성
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1eb6883ec9b78e5d4398bb762bba05a61c0f8308
+source-git-commit: dcd6293a71178fee14647f5b2c8b56d03d1ec7df
 workflow-type: tm+mt
-source-wordcount: '551'
+source-wordcount: '563'
 ht-degree: 2%
 
 ---
@@ -38,9 +38,10 @@ Flow Service가 Amazon Kinesis 계정과 연결하려면 다음 연결 속성에
 | ---------- | ----------- |
 | `accessKeyId` | Kinesis 계정의 액세스 키 ID. |
 | `secretKey` | Kinesis 계정의 비밀 액세스 키. |
+| `region` |  | Kinesis 계정의 영역입니다. |
 | `connectionSpec.id` | Kinesis 연결 사양 ID: `86043421-563b-46ec-8e6c-e23184711bf6` |
 
-이러한 값에 대한 자세한 내용은 [이 EventHub 문서를 참조하십시오](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
+이러한 값에 대한 자세한 내용은 [이 Kinesis 문서를 참조하십시오](https://docs.aws.amazon.com/streams/latest/dev/getting-started.html).
 
 ### 샘플 API 호출 읽기
 
@@ -103,6 +104,7 @@ curl -X POST \
 | -------- | ----------- |
 | `auth.params.accessKeyId` | Kinesis 계정의 액세스 키 ID. |
 | `auth.params.secretKey` | Kinesis 계정의 비밀 액세스 키. |
+| `auth.params.region` | Kinesis 계정의 영역입니다. |
 | `connectionSpec.id` | Kinesis 연결 사양 ID: `86043421-563b-46ec-8e6c-e23184711bf6` |
 
 **응답**
