@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform 소스 커넥터 도움말
 translation-type: tm+mt
-source-git-commit: 71080a1741ea0d660f63e2009f045c0e34f6c44b
+source-git-commit: f23684ee152836bab85eeb8360436e4059f44417
 workflow-type: tm+mt
-source-wordcount: '563'
+source-wordcount: '578'
 ht-degree: 0%
 
 ---
@@ -47,6 +47,8 @@ ht-degree: 0%
       - [Azure Synapse Analytics 커넥터](connectors/databases/synapse-analytics.md)
       - [Azure 테이블 저장소 커넥터](connectors/databases/ats.md)
       - [Google BigQuery 커넥터](connectors/databases/bigquery.md)
+      - [GreenPlum 커넥터](connectors/databases/greenplum.md)
+      - [HP Vertica 커넥터](connectors/databases/hp-vertica.md)
       - [IBM DB2 커넥터](connectors/databases/ibm-db2.md)
       - [MariaDB 커넥터](connectors/databases/mariadb.md)
       - [Microsoft SQL Server 커넥터](connectors/databases/sql-server.md)
@@ -88,6 +90,8 @@ ht-degree: 0%
          - [Azure Synapse Analytics 커넥터](tutorials/api/create/databases/synapse-analytics.md)
          - [Azure 테이블 저장소 커넥터](tutorials/api/create/databases/ats.md)
          - [Google BigQuery 커넥터](tutorials/api/create/databases/bigquery.md)
+         - [GreenPlum 커넥터](tutorials/api/create/databases/greenplum.md)
+         - [HP Vertica 커넥터](tutorials/api/create/databases/hp-vertica.md)
          - [IBM DB2 커넥터](tutorials/api/create/databases/ibm-db2.md)
          - [MariaDB 커넥터](tutorials/api/create/databases/mariadb.md)
          - [MySQL 커넥터](tutorials/api/create/databases/mysql.md)
@@ -150,6 +154,8 @@ ht-degree: 0%
          - [Azure Synapse Analytics 커넥터](tutorials/ui/create/databases/synapse-analytics.md)
          - [Azure 테이블 저장소 커넥터](tutorials/ui/create/databases/ats.md)
          - [Google Big Query 커넥터](tutorials/ui/create/databases/bigquery.md)
+         - [GreenPlum 커넥터](tutorials/ui/create/databases/greenplum.md)
+         - [HP Vertica 커넥터](tutorials/ui/create/databases/hp-vertica.md)
          - [IBM DB2 커넥터](tutorials/ui/create/databases/ibm-db2.md)
          - [MariaDB 커넥터](tutorials/ui/create/databases/mariadb.md)
          - [Microsoft SQL Server 커넥터](tutorials/ui/create/databases/sql-server.md)
