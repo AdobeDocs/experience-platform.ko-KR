@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform 소스 커넥터 개요
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1eb6883ec9b78e5d4398bb762bba05a61c0f8308
+source-git-commit: 7c94d7a0aace7525e776f13e2975f91cf2b29e23
 workflow-type: tm+mt
-source-wordcount: '753'
+source-wordcount: '758'
 ht-degree: 0%
 
 ---
@@ -77,6 +77,8 @@ Adobe Experience Platform은 타사 고객 성공 애플리케이션의 데이�
 - [Azure Synapse Analytics 커넥터](connectors/databases/synapse-analytics.md)
 - [Azure 테이블 저장소 커넥터](connectors/databases/ats.md)
 - [Google BigQuery 커넥터](connectors/databases/bigquery.md)
+- [GreenPlum 커넥터](connectors/databases/greenplum.md)
+- [HP Vertica 커넥터](connectors/databases/hp-vertica.md)
 - [IBM DB2 커넥터](connectors/databases/ibm-db2.md)
 - [MariaDB 커넥터](connectors/databases/mariadb.md)
 - [Microsoft SQL Server 커넥터](connectors/databases/sql-server.md)
