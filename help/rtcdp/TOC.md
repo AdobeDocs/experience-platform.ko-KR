@@ -3,9 +3,9 @@ product: adobe experience platform
 audience: user
 user-guide-title: 실시간 고객 데이터 플랫폼 도움말
 translation-type: tm+mt
-source-git-commit: be885faf8c1408f372d2eb6cd8d6a8fa8fc69e14
+source-git-commit: 75581529ede3772606bc18fea683da5d396996c5
 workflow-type: tm+mt
-source-wordcount: '439'
+source-wordcount: '440'
 ht-degree: 10%
 
 ---
@@ -78,7 +78,7 @@ ht-degree: 10%
          * [클라우드 스토리지 대상을 만드는 워크플로우](/help/rtcdp/destinations/cloud-storage-destinations-workflow.md)
          * [Amazon Kinesis 대상](/help/rtcdp/destinations/amazon-kinesis-destination.md)
          * [Amazon S3 대상](destinations/amazon-s3-destination.md)
-         * [Azure EventHub 대상](/help/rtcdp/destinations/azure-event-hubs-destination.md)
+         * [Azure 이벤트 허브 대상](/help/rtcdp/destinations/azure-event-hubs-destination.md)
          * [SFTP 대상](destinations/sftp-destination.md)
       * 데이터 관리 플랫폼 대상 {#dmp-destinations}
          * [데이터 관리 플랫폼 대상 개요](destinations/dmp-destinations.md)
