@@ -4,7 +4,7 @@ solution: Experience Platform
 title: UI에서 Amazon Kinesis 소스 커넥터 만들기
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1eb6883ec9b78e5d4398bb762bba05a61c0f8308
+source-git-commit: dcd6293a71178fee14647f5b2c8b56d03d1ec7df
 workflow-type: tm+mt
 source-wordcount: '451'
 ht-degree: 1%
@@ -50,7 +50,7 @@ Adobe [Experience Platform에](https://platform.adobe.com) 로그인한 다음 �
 
 *클라우드 스토리지* 카테고리 아래에서 **Amazon Kinesis를** 선택하고 + 아이콘(+) **을 클릭하여 새 Kinesis 커넥터를** 만듭니다.
 
-![](../../../../images/tutorials/create/eventhub/catalog.png)
+![](../../../../images/tutorials/create/kinesis/catalog.png)
 
 Amazon *Kinesis에* 연결 대화 상자가 나타납니다. 이 페이지에서 새 자격 증명이나 기존 자격 증명을 사용할 수 있습니다.
 
@@ -58,13 +58,13 @@ Amazon *Kinesis에* 연결 대화 상자가 나타납니다. 이 페이지에서
 
 새 자격 증명을 사용하는 경우 새 계정 **을 선택합니다**. 표시되는 입력 양식에서 이름, 선택적 설명 및 Kinesis 자격 증명을 입력합니다. 완료되면 **Connect를** 선택한 다음 새 연결이 설정될 때까지 잠시 기다립니다.
 
-![](../../../../images/tutorials/create/eventhub/new.png)
+![](../../../../images/tutorials/create/kinesis/new.png)
 
 ### 기존 계정
 
 기존 계정을 연결하려면 연결할 Kinesis 계정을 선택한 다음 **다음을** 선택하여 진행합니다.
 
-![](../../../../images/tutorials/create/eventhub/existing.png)
+![](../../../../images/tutorials/create/kinesis/existing.png)
 
 ## 다음 단계
 
