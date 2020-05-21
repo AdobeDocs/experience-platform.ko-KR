@@ -4,9 +4,9 @@ seo-title: 대상에 프로필 및 세그먼트 활성화
 description: 세그먼트를 대상에 매핑하여 Adobe 실시간 고객 데이터 플랫폼의 데이터를 활성화합니다. 이를 수행하려면 아래 단계를 따르십시오.
 seo-description: 세그먼트를 대상에 매핑하여 Adobe 실시간 고객 데이터 플랫폼의 데이터를 활성화합니다. 이를 수행하려면 아래 단계를 따르십시오.
 translation-type: tm+mt
-source-git-commit: faaa4eda5174bb8d27a76d767891df15df69e30a
+source-git-commit: 237ca5fc950b46ae4718850ab1360cdf52b8b112
 workflow-type: tm+mt
-source-wordcount: '775'
+source-wordcount: '889'
 ht-degree: 0%
 
 ---
@@ -30,9 +30,26 @@ ht-degree: 0%
    ![세그먼트-대상](/help/rtcdp/destinations/assets/select-segments.png)
 5. *조건부*. 이 단계는 세그먼트를 활성화하려는 대상 유형에 따라 다릅니다. <br> *이메일 대상* 및 *클라우드 스토리지 대상*&#x200B;의 경우 [속성 **[!UICONTROL 선택]** ] 페이지에서 새 필드 **** 추가새 필드를 선택하고 대상에 보낼 속성을 선택합니다.
 특성 중 하나를 조합 스키마에서 [고유한](/help/rtcdp/destinations/email-marketing-destinations.md#identity) 식별자로 사용하는 것이 좋습니다. 필수 속성에 대한 자세한 내용은 [이메일 마케팅 대상](/help/rtcdp/destinations/email-marketing-destinations.md#identity) 아티클의 ID를 참조하십시오.
-   ![대상 속성](/help/rtcdp/destinations/assets/select-attributes-step.png)*소셜 네트워크 대상*&#x200B;의 경우 **[!UICONTROL ID 매핑]** 단계에서 대상 ID에 매핑할 소스 속성을 선택합니다.
-   ![필드를 채우기 전 ID 매핑](/help/rtcdp/destinations/assets/facebook-identity-mapping-1.png)아래 예에서 ID 스키마의 개인 이메일 주소는 Facebook [이메일 해싱 요구 사항을 준수하기 위해 Experience Platform으로 수집되었습니다](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements). 매핑을 **[!UICONTROL 선택한]** 후 [다음]을 누릅니다.
-   ![필드 채우기 후 ID 매핑](/help/rtcdp/destinations/assets/facebook-identity-mapping-2.png)
+   ![destination-attributes](/help/rtcdp/destinations/assets/select-attributes-step.png)
+
+   <br> 
+
+   *소셜 대상의*&#x200B;경우 **[!UICONTROL ID 매핑]** 단계에서 소스 속성을 선택하여 대상의 타겟 ID로 매핑할 수 있습니다. 이 단계는 스키마에서 사용 중인 기본 ID에 따라 선택 사항이거나 필수 사항입니다. <br> 
+
+   *기본 ID로 이메일 주소*: 스키마의 기본 ID로 이메일 주소를 사용하는 경우 아래와 같이 ID 매핑 단계를 건너뛸 수 있습니다.
+
+   ![ID로 이메일 주소](/help/rtcdp/destinations/assets/email-as-identity.gif)
+
+   <br> 
+
+   *기본 ID로 다른 ID*: 스키마의 기본 ID로 *보상 ID* 또는 *충성도 ID와*&#x200B;같은 다른 ID를 사용하는 경우 아래와 같이 ID 스키마의 이메일 주소를 소셜 대상의 대상 ID로 수동으로 매핑해야 합니다.
+
+   ![충성도 ID(ID)](/help/rtcdp/destinations/assets/rewardsid-as-identity.gif)
+
+
+   Facebook `Email_LC_SHA256` 이메일 해싱 요구 사항 [에 따라 Adobe Experience Platform의 데이터 인제스트 시 고객 이메일 주소를 해시 처리한 경우 타겟 ID로 선택하십시오](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements). <br> 사용 `Email` 중인 이메일 주소가 해시되지 않은 경우 타겟 ID로 선택합니다. Adobe 실시간 CDP는 Facebook 요구 사항을 준수하기 위해 이메일 주소를 해시합니다.
+
+   ![필드 채우기 후 ID 매핑](/help/rtcdp/destinations/assets/identity-mapping.png)
 
 6. [ **[!UICONTROL 세그먼트 예약]** ] 페이지에서는 대상으로 데이터를 전송하는 시작 날짜와 대상으로 데이터를 보내는 빈도를 확인할 수 있습니다.
 
