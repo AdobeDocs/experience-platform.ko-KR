@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: May 13, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: d41952e5905d4ebc579a29ad3282a8f732b7c331
+source-git-commit: db3acec75c24a0cb75d1d88e7aa2171e794abc4f
 workflow-type: tm+mt
-source-wordcount: '1075'
-ht-degree: 5%
+source-wordcount: '1299'
+ht-degree: 7%
 
 ---
 
@@ -19,20 +19,20 @@ ht-degree: 5%
 
 Adobe Experience Platform의 기존 기능 업데이트:
 
-- [Adobe Experience Platform 릴리스 노트](#adobe-experience-platform-release-notes)
-   - [사용자 인터페이스 업데이트 {#ux}](#user-interface-updates-ux)
-   - [데이터 과학 작업 공간 {#dsw}](#data-science-workspace-dsw)
-   - [대상 {#destinations}](#destinations-destinations)
-   - [경험 플랫폼 웹 SDK 및 경험 플랫폼 에지 네트워크 {#edge}](#experience-platform-web-sdk-and-experience-platform-edge-network-edge)
-   - [소스 {#sources}](#sources-sources)
+- [사용자 인터페이스 업데이트](#ux)
+- [데이터 과학 작업 공간](#dsw)
+- [대상](#destinations)
+- [경험 플랫폼 웹 SDK 및 경험 플랫폼 에지 네트워크](#edge)
+- [실시간 고객 프로필](#profile)
+- [소스](#sources)
 
 ## 사용자 인터페이스 업데이트 {#ux}
 
 Adobe Experience Platform은 경험을 향상시키고 다른 Experience Cloud 애플리케이션과 통합할 수 있도록 도메인 및 헤더 막대에 대한 업데이트를 출시하고 있습니다.
 
 - 조직 간 또는 다른 애플리케이션으로 쉽게 전환할 수 있습니다
-- 도움말 메뉴의 주요 아티클 및 컨텍스트 관련 설명서를 비롯한 향상된 사용자 도움말
-- 경험 플랫폼 및 파일 지원 티켓에 대한 피드백 제공
+- 도움말 메뉴의 주요 문서 및 컨텍스트 관련 설명서를 비롯한 사용자 도움말이 개선되었습니다
+- Experience Platform 및 파일 지원 티켓에 대한 피드백 제공 기능
 
 새로운 경험에서 점차 벗어나고 있다. https://experience.adobe.com/platform에서 경험을 볼 수 [있습니다](https://experience.adobe.com/platform).
 
@@ -100,6 +100,29 @@ Experience Platform 웹 SDK 및 Experience Platform Edge Network를 사용하면
 
 플랫폼 웹 SDK 및 에지 네트워크에 대한 자세한 내용은 [설명서를 참조하십시오](../../edge/home.md).
 
+## 실시간 고객 프로필 {#profile}
+
+Adobe Experience Platform을 사용하면 고객이 브랜드와 상호 작용하는 장소 또는 시간에 상관없이 고객의 관심사와 연관성 있고 조율되는 경험을 제공할 수 있습니다. 실시간 고객 프로파일을 이용하면 온라인, 오프라인, CRM 및 서드파티 데이터를 비롯한 다양한 채널의 데이터를 취합하는 각 개별 고객의 전체 상황을 파악할 수 있습니다. 프로필을 사용하면 서로 다른 고객 데이터를 하나의 통합 뷰로 통합하여 고객 상호 작용에 대해 실행 가능하고 타임스탬프가 지정된 계정을 제공할 수 있습니다.
+
+**새로운 기능**
+
+| 기능 | 설명 |
+| -----------| ---------- |
+| 새 프로필 내보내기 지표 | 각 네임스페이스에 있는 내보낸 프로필의 총 수와 프로필 수를 보여주는 지표를 프로필 내보내기 작업에 추가했습니다. |
+| 새로운 통찰력 통찰력 지표 | Observability Insights API에는 이제 프로필로 인제스트를 스트리밍하기 위한 다음과 같은 지표가 있습니다. 들어오는 요청 비율, 성공적인 섭취 비율, 인제스트된 레코드 크기. |
+| 벌크 GET 끝점 | 단일 API 호출에서 여러 결과를 검색할 수 있도록 실시간 고객 프로필 API에 벌크 GET 끝점을 추가했습니다. 이제 세그먼트 정의, 세그먼트 작업 및 병합 정책에 대해 최대 100개의 ID를 일괄 가져올 수 있습니다. |
+| ID로 프로필 검색 | 이제 플랫폼 UI에서 ID 네임스페이스를 선택하고 ID 값을 제공하여 프로필을 검색할 수 있습니다. |
+
+**버그 수정**
+
+- 없음.
+
+**알려진 문제**
+
+- 없음.
+
+프로필 데이터 작업을 위한 자습서 및 모범 사례를 비롯하여 실시간 고객 프로필에 대한 자세한 내용은 [실시간 고객 프로필 개요를 참조하십시오](../../profile/home.md).
+
 ## 소스 {#sources}
 
 Adobe Experience Platform을 사용하면 외부 소스에서 데이터를 인제스트할 수 있으며, 플랫폼 서비스를 사용하여 해당 데이터를 구조화, 레이블 지정 및 개선할 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 타사 소프트웨어 및 CRM 시스템과 같은 다양한 소스의 데이터를 인제스트할 수 있습니다.
@@ -116,6 +139,6 @@ Adobe Experience Platform을 사용하면 외부 소스에서 데이터를 인�
 
 **알려진 문제**
 
-- 없음
+- 없음.
 
 소스에 대한 자세한 내용은 [소스 개요를 참조하십시오](../../sources/home.md).
