@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform 데이터 과학 작업 공간 도움말
 translation-type: tm+mt
-source-git-commit: 8f9454730e3bab451ac75070fcd1623698df9196
+source-git-commit: 8a613237d3d835039185954e580d3c86a5e465ae
 workflow-type: tm+mt
-source-wordcount: '210'
+source-wordcount: '215'
 ht-degree: 3%
 
 ---
@@ -20,6 +20,7 @@ ht-degree: 3%
    * [노트북으로 데이터 분석](jupyterlab/analyze-your-data.md)
    * [Jupiter 전자 필기장의 쿼리 서비스](jupyterlab/query-service.md)
    * [Jupiter 노트북을 사용하여 레시피 만들기](jupyterlab/create-a-recipe.md)
+   * [Git을 사용하여 JupiterLab에서 공동 작업](jupyterlab/using-git-for-collaboration.md)
 * Sensei Machine Learning API {#api}
    * [시작하기](api/getting-started.md)
    * [엔진](api/engines.md)
