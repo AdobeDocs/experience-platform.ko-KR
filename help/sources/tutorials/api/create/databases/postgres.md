@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Flow Service API를 사용하여 PostgreSQL 커넥터 만들기
 topic: overview
 translation-type: tm+mt
-source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '656'
-ht-degree: 1%
+source-wordcount: '583'
+ht-degree: 2%
 
 ---
 
@@ -36,9 +36,10 @@ Flow Service가 PSQL에 연결하려면 다음 연결 속성을 제공해야 합
 
 | 자격 증명 | 설명 |
 | ---------- | ----------- |
-| `connectionString` | PSQL 계정과 연결된 연결 문자열입니다. |
+| `connectionString` | PSQL 계정과 연결된 연결 문자열입니다. PSQL 연결 문자열 패턴은 다음과 같습니다. `Server={SERVER};Database={DATABASE};Port={PORT};UID={USERNAME};Password={PASSWORD}`. |
+| `connectionSpec.id` | 연결을 생성하는 데 사용되는 ID. PSQL에 대한 연결 사양 ID가 수정되었습니다 `74a1c565-4e59-48d7-9d67-7c03b8a13137`. |
 
-시작하는 방법에 대한 자세한 내용은 이 [PSQL 문서를 참조하십시오](https://www.postgresql.org/docs/9.2/app-psql.html).
+연결 문자열을 얻는 방법에 대한 자세한 내용은 [이 PSQL 문서를 참조하십시오](https://www.postgresql.org/docs/9.2/app-psql.html).
 
 ### 샘플 API 호출 읽기
 
@@ -60,72 +61,9 @@ Flow Service에 속하는 리소스를 비롯하여 경험 플랫폼의 모든 �
 
 * 컨텐츠 유형: `application/json`
 
-## 연결 사양 조회
+## 연결 만들기
 
-PSQL 연결을 만들려면 Flow Service 내에 PSQL 연결 사양 세트가 있어야 합니다. 플랫폼을 PSQL에 연결하는 첫 번째 단계는 이러한 사양을 가져오는 것입니다.
-
-**API 형식**
-
-사용 가능한 각 소스에는 인증 요구 사항과 같은 커넥터 속성을 설명하는 고유한 연결 사양이 있습니다. GET 요청을 `/connectionSpecs` 끝점으로 보내면 사용 가능한 모든 소스에 대한 연결 사양이 반환됩니다. 또한 쿼리를 포함하여 PSQL에 대한 정보 `property=name=="postgre-sql"` 를 얻을 수도 있습니다.
-
-```http
-GET /connectionSpecs
-GET /connectionSpecs?property=name=="postgre-sql"
-```
-
-**요청**
-
-다음 요청은 PSQL에 대한 연결 사양을 검색합니다.
-
-```shell
-curl -X GET \
-    'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs?property=name=="postgre-sql"' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**응답**
-
-성공적인 응답은 PSQL의 고유 식별자(`id`)를 포함하여 연결 사양을 반환합니다. 이 ID는 기본 연결을 만들려면 다음 단계에서 필요합니다.
-
-```json
-{
-    "items": [
-        {
-            "id": "74a1c565-4e59-48d7-9d67-7c03b8a13137",
-            "name": "postgre-sql",
-            "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
-            "version": "1.0",
-            "authSpec": [
-                {
-                    "name": "Basic Authentication for PostgreSQL",
-                    "spec": {
-                        "$schema": "http://json-schema.org/draft-07/schema#",
-                        "type": "object",
-                        "description": "defines auth params required for connecting to PostgreSQL",
-                        "properties": {
-                            "connectionString": {
-                                "type": "string",
-                                "description": "An ODBC connection string to connect to Azure Database for PostgreSQL.",
-                                "format": "password"
-                            }
-                        },
-                        "required": [
-                            "connectionString"
-                        ]
-                    }
-                }
-            ],
-        }
-    ]
-}
-```
-
-## 기본 연결 만들기
-
-기본 연결은 소스를 지정하고 해당 소스에 대한 자격 증명을 포함합니다. 여러 소스 커넥터를 만들어 다른 데이터를 가져올 수 있으므로 PSQL 계정당 하나의 기본 연결만 필요합니다.
+연결은 소스를 지정하고 해당 소스에 대한 자격 증명을 포함합니다. 여러 소스 커넥터를 만들어 다른 데이터를 가져올 수 있으므로 PSQL 계정당 하나의 연결만 필요합니다.
 
 **API 형식**
 
@@ -134,6 +72,8 @@ POST /connections
 ```
 
 **요청**
+
+PSQL 연결을 만들려면 고유한 연결 사양 ID를 POST 요청의 일부로 제공해야 합니다. PSQL에 대한 연결 사양 ID입니다 `74a1c565-4e59-48d7-9d67-7c03b8a13137`.
 
 ```shell
 curl -X POST \
@@ -144,12 +84,12 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Base connection for PostgreSQL",
-        "description": "Base connection for PostgreSQL",
+        "name": "Test connection for PostgreSQL",
+        "description": "Test connection for PostgreSQL",
         "auth": {
             "specName": "Connection String Based Authentication",
             "params": {
-                "connectionString": "{CONNECTION_STRING}"
+                "connectionString": "Server={SERVER};Database={DATABASE};Port={PORT};UID={USERNAME};Password={PASSWORD}"
             }
         },
         "connectionSpec": {
@@ -161,8 +101,8 @@ curl -X POST \
 
 | 속성 | 설명 |
 | ------------- | --------------- |
-| `auth.params.connectionString` | PSQL 계정과 연결된 연결 문자열입니다. |
-| `connectionSpec.id` | 이전 단계 `id` 에서 검색된 PSQL 계정의 연결 사양입니다. |
+| `auth.params.connectionString` | PSQL 계정과 연결된 연결 문자열입니다. PSQL 연결 문자열 패턴은 다음과 같습니다. `Server={SERVER};Database={DATABASE};Port={PORT};UID={USERNAME};Password={PASSWORD}`. |
+| `connectionSpec.id` | PSQL에 대한 연결 사양 ID는 다음과 같습니다. `74a1c565-4e59-48d7-9d67-7c03b8a13137`. |
 
 **응답**
 
@@ -177,4 +117,4 @@ curl -X POST \
 
 ## 다음 단계
 
-이 자습서를 따라 Flow Service API를 사용하여 PSQL 기본 연결을 만들고 연결의 고유 ID 값을 받았습니다. Flow Service API를 사용하여 데이터베이스 또는 NoSQL 시스템을 [탐색하는 방법을 배울 때 다음 자습서에서 이 기본 연결 ID를 사용할 수 있습니다](../../explore/database-nosql.md).
+이 자습서를 따라 Flow Service API를 사용하여 PSQL 연결을 만들고 연결의 고유 ID 값을 받았습니다. 다음 자습서에서는 Flow Service API를 사용하여 데이터베이스 또는 NoSQL 시스템을 [탐색하는 방법을 배울 때 이 연결 ID를 사용할 수 있습니다](../../explore/database-nosql.md).
