@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI에서 Azure Blob 또는 Amazon S3 소스 커넥터 만들기
 topic: overview
 translation-type: tm+mt
-source-git-commit: 799445eca080175e2bffc49c6714f0c812b9bbea
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '558'
+source-wordcount: '591'
 ht-degree: 1%
 
 ---
@@ -37,9 +37,22 @@ Experience Platform은 외부 스토리지에서 인제스트할 다음 파일 �
 
 ### 필요한 자격 증명 수집
 
-플랫폼의 Blob 저장소에 액세스하려면 올바른 **Azure 저장소 연결 문자열을 제공해야 합니다**. 이 Microsoft Azure 문서를 통해 연결 문자열을 가져오는 방법을 포함하여 연결 문자열에 대해 <a href="https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string" target="_blank">자세히 알아볼 수 있습니다</a>.
+플랫폼의 Blob 저장소에 액세스하려면 다음 자격 증명에 유효한 값을 제공해야 합니다.
 
-마찬가지로, 플랫폼에서 S3 버킷에 액세스하려면 **S3 액세스 키** 및 **S3 비밀 키를 제공해야 합니다**. 자세한 내용은 <a href="https://aws.amazon.com/blogs/security/wheres-my-secret-access-key/" target="_blank">이 AWS 문서를 참조하십시오</a>.
+| 자격 증명 | 설명 |
+| ---------- | ----------- |
+| `connectionString` | Blob 저장소의 데이터에 액세스하는 데 필요한 연결 문자열입니다. 물방울 연결 문자열 패턴은 다음과 같습니다. `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
+
+시작하는 방법에 대한 자세한 내용은 [이 Azure Blob 문서를 참조하십시오](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string).
+
+마찬가지로, 플랫폼에서 S3 버킷에 액세스하려면 다음 자격 증명에 유효한 값을 제공해야 합니다.
+
+| 자격 증명 | 설명 |
+| ---------- | ----------- |
+| `s3AccessKey` | S3 저장소의 액세스 키 ID입니다. |
+| `s3SecretKey` | S3 저장소의 비밀 키 ID입니다. |
+
+시작하는 방법에 대한 자세한 내용은 [이 AWS 문서를 참조하십시오](https://aws.amazon.com/blogs/security/wheres-my-secret-access-key/).
 
 ## Blob 또는 S3 계정 연결
 
