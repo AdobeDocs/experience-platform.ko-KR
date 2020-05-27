@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Flow Service API를 사용하여 Azure Blob 커넥터 만들기
 topic: overview
 translation-type: tm+mt
-source-git-commit: 7ffe560f455973da3a37ad102fbb8cc5969d5043
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '556'
-ht-degree: 2%
+source-wordcount: '619'
+ht-degree: 1%
 
 ---
 
@@ -35,9 +35,10 @@ Flow Service가 Blob 저장소에 연결하려면 다음 연결 속성에 값을
 
 | 자격 증명 | 설명 |
 | ---------- | ----------- |
-| `connectionString` | Blob 저장소의 데이터에 액세스하는 데 필요한 연결 문자열입니다. |
+| `connectionString` | Blob 저장소의 데이터에 액세스하는 데 필요한 연결 문자열입니다. 물방울 연결 문자열 패턴은 다음과 같습니다. `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
+| `connectionSpec.id` | 연결을 만드는 데 필요한 고유 식별자입니다. Blob에 대한 연결 사양 ID는 다음과 같습니다. `4c10e202-c428-4796-9208-5f1f5732b1cf` |
 
-시작하는 방법에 대한 자세한 내용은 [이 Azure Blob 문서를 참조하십시오](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string).
+연결 문자열을 얻는 방법에 대한 자세한 내용은 [이 Azure Blob 문서를 참조하십시오](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string).
 
 ### 샘플 API 호출 읽기
 
@@ -71,6 +72,8 @@ POST /connections
 
 **요청**
 
+Blob 연결을 만들려면 고유한 연결 사양 ID를 POST 요청의 일부로 제공해야 합니다. Blob에 대한 연결 사양 ID가 입니다 `4c10e202-c428-4796-9208-5f1f5732b1cf`.
+
 ```shell
 curl -X POST \
     'http://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -85,7 +88,7 @@ curl -X POST \
         "auth": {
             "specName": "ConnectionString",
             "params": {
-                "connectionString": "{CONNECTION_STRING}"
+                "connectionString": "DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}"
             }
         },
         "connectionSpec": {
@@ -97,8 +100,8 @@ curl -X POST \
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `auth.params.connectionString` | Blob 저장소의 연결 문자열입니다. |
-| `connectionSpec.id` | Blob 저장소 연결 사양 ID: `4c10e202-c428-4796-9208-5f1f5732b1cf` |
+| `auth.params.connectionString` | Blob 저장소의 데이터에 액세스하는 데 필요한 연결 문자열입니다. 물방울 연결 문자열 패턴은 다음과 같습니다. `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
+| `connectionSpec.id` | Blob 저장소 연결 사양 ID는 다음과 같습니다. `4c10e202-c428-4796-9208-5f1f5732b1cf` |
 
 **응답**
 
