@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 실시간 머신 러닝 개요
 topic: Overview
 translation-type: tm+mt
-source-git-commit: 8f9454730e3bab451ac75070fcd1623698df9196
+source-git-commit: 626bb7a0856a663e235ecd2b19954f4617fe9b6f
 workflow-type: tm+mt
 source-wordcount: '513'
 ht-degree: 1%
@@ -61,7 +61,7 @@ Experience Edge에 모델을 배포하여 예측 API 끝점을 사용하여 서�
 > 알파 제한:
 > - 현재 ONNX 기반 모델만 지원됩니다.
 > - 노드에 사용된 함수를 직렬화할 수 없습니다. 예를 들어 팬더 노드에서 사용되는 람다 함수입니다.
-> - Edge 배포가 수동으로 완료된 후 60초 동안 재활용할 수 있습니다.
+> - Edge 배포를 수동으로 수행한 후 20초 동안 재활용할 수 있습니다.
 > - 심층적인 학습을 위해서는 데이터를 DL 모델에서 허용하는 어레이 `df.values` 를 반환하는 방식으로 전송해야 합니다. 이것은 ONNX 모델 점수 지정 노드가 모델을 기준으로 점수를 매기도록 출력을 사용하고 `df.values` 보내기 때문입니다.
 
 
