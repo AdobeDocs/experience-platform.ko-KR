@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 흐름 서비스 API를 사용하여 Azure 테이블 저장소 커넥터 만들기
 topic: overview
 translation-type: tm+mt
-source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '578'
+source-wordcount: '597'
 ht-degree: 2%
 
 ---
@@ -36,10 +36,10 @@ Flow Service가 ATS와 연결하려면 다음 연결 속성에 대한 값을 제
 
 | 자격 증명 | 설명 |
 | ---------- | ----------- |
-| `connectionString` | Azure 테이블 저장소 인스턴스에 연결하는 연결 문자열입니다. |
-| `connectionSpec.id` | 연결을 만드는 데 필요한 고유 식별자입니다. ATS의 연결 사양 ID입니다 `ecde33f2-c56f-46cc-bdea-ad151c16cd69`. |
+| `connectionString` | ATS 인스턴스에 연결하는 데 사용되는 연결 문자열입니다. ATS의 연결 문자열 패턴은 다음과 같습니다. `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
+| `connectionSpec.id` | 연결을 생성하는 데 사용되는 ID. ATS에 대한 연결 사양 ID가 수정되었습니다 `ecde33f2-c56f-46cc-bdea-ad151c16cd69`. |
 
-시작하는 방법에 대한 자세한 내용은 [이 ATS 문서를 참조하십시오](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction).
+연결 문자열을 얻는 방법에 대한 자세한 내용은 [이 ATS 문서를 참조하십시오](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction).
 
 ### 샘플 API 호출 읽기
 
@@ -73,7 +73,7 @@ POST /connections
 
 **요청**
 
-ATS 연결을 만들려면 고유한 연결 사양 ID를 POST 요청의 일부로 제공해야 합니다. ATS의 연결 사양 ID입니다 `ecde33f2-c56f-46cc-bdea-ad151c16cd69`.
+ATS 연결을 만들려면 고유한 연결 사양 ID를 POST 요청의 일부로 제공해야 합니다. ATS에 대한 연결 사양 ID입니다 `ecde33f2-c56f-46cc-bdea-ad151c16cd69`.
 
 ```shell
 curl -X POST \
@@ -89,7 +89,7 @@ curl -X POST \
         "auth": {
             "specName": "Connection String Based Authentication",
             "params": {
-                "connectionString": "{CONNECTION_STRING}"
+                "connectionString": "DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}"
             }
         },
         "connectionSpec": {
@@ -101,8 +101,8 @@ curl -X POST \
 
 | 매개 변수 | 설명 |
 | --------- | ----------- |
-| `auth.params.connectionString` | ATS 계정과 연결된 연결 문자열입니다. |
-| `connectionSpec.id` | ATS 연결 사양 ID: `ecde33f2-c56f-46cc-bdea-ad151c16cd69`. |
+| `auth.params.connectionString` | ATS 인스턴스에 연결하는 데 사용되는 연결 문자열입니다. ATS의 연결 문자열 패턴은 다음과 같습니다. `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
+| `connectionSpec.id` | ATS 연결 사양 ID는 다음과 같습니다. `ecde33f2-c56f-46cc-bdea-ad151c16cd69`. |
 
 **응답**
 
