@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform 소스 커넥터 개요
 topic: overview
 translation-type: tm+mt
-source-git-commit: 7c94d7a0aace7525e776f13e2975f91cf2b29e23
+source-git-commit: 22425c33e39cf788eec6fd0a54f65fb89fdaff4f
 workflow-type: tm+mt
 source-wordcount: '758'
 ht-degree: 0%
@@ -38,7 +38,7 @@ Adobe Experience Platform을 사용하면 Adobe Analytics, Adobe Audience Manage
 
 Adobe Experience Platform은 서드파티 광고 시스템의 데이터 인제스트를 지원합니다. 특정 소스 커넥터에 대한 자세한 내용은 다음 관련 문서를 참조하십시오.
 
-- [Google 광고 커넥터](connectors/advertising/ads.md)
+- [Google AdWords 커넥터](connectors/advertising/ads.md)
 
 ### 클라우드 스토리지
 
