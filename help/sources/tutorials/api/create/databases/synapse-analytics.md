@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Flow Service API를 사용하여 Azure Synapse Analytics 커넥터 만들기
 topic: overview
 translation-type: tm+mt
-source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '590'
-ht-degree: 2%
+source-wordcount: '603'
+ht-degree: 1%
 
 ---
 
@@ -36,10 +36,10 @@ Flow Service가 Synapse와 연결하려면 다음 연결 속성에 대한 값을
 
 | 자격 증명 | 설명 |
 | ---------- | ----------- |
-| `connectionString` | Azure 구문 분석에 연결하는 데 사용되는 연결 문자열입니다. |
+| `connectionString` | Synapse에 연결하는 데 사용되는 연결 문자열입니다. Synapse 연결 문자열 패턴은 입니다 `Server=tcp:{SERVER_NAME}.database.windows.net,1433;Database={DATABASE};User ID={USERNAME}@{SERVER_NAME};Password={PASSWORD};Trusted_Connection=False;Encrypt=True;Connection Timeout=30`. |
 | `connectionSpec.id` | 연결을 만드는 데 필요한 고유 식별자입니다. Synapse의 연결 사양 ID는 다음과 같습니다. `a49bcc7d-8038-43af-b1e4-5a7a089a7d79` |
 
-시작하는 방법에 대한 자세한 내용은 [이 Synapse 문서를 참조하십시오](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-aad-authentication-configure?toc=%2Fazure%2Fsynapse-analytics%2Fsql-data-warehouse%2Ftoc.json&amp;bc=%2Fazure%2Fsynapse-analytics%2Fsql-data-warehouse%2Fbreadcrumb%2Ftoc.json&amp;tabs=azure-powershell).
+연결 문자열을 얻는 방법에 대한 자세한 내용은 이 Synapse 문서 [를 참조하십시오](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-aad-authentication-configure?toc=%2Fazure%2Fsynapse-analytics%2Fsql-data-warehouse%2Ftoc.json&amp;bc=%2Fazure%2Fsynapse-analytics%2Fsql-data-warehouse%2Fbreadcrumb%2Ftoc.json&amp;tabs=azure-powershell).
 
 ### 샘플 API 호출 읽기
 
@@ -89,7 +89,7 @@ curl -X POST \
         "auth": {
             "specName": "Connection String Based Authentication",
             "params": {
-                "connectionString": "{CONNECTION_STRING}"
+                "connectionString": "Server=tcp:{SERVER_NAME}.database.windows.net,1433;Database={DATABASE};User ID={USERNAME}@{SERVER_NAME};Password={PASSWORD};Trusted_Connection=False;Encrypt=True;Connection Timeout=30"
             }
         },
         "connectionSpec": {
@@ -101,12 +101,12 @@ curl -X POST \
 
 | 매개 변수 | 설명 |
 | --------- | ----------- |
-| `auth.params.connectionString` | Synapse 계정과 연결된 연결 문자열입니다. |
+| `auth.params.connectionString` | Synapse에 연결하는 데 사용되는 연결 문자열입니다. Synapse 연결 문자열 패턴은 입니다 `Server=tcp:{SERVER_NAME}.database.windows.net,1433;Database={DATABASE};User ID={USERNAME}@{SERVER_NAME};Password={PASSWORD};Trusted_Connection=False;Encrypt=True;Connection Timeout=30`. |
 | `connectionSpec.id` | Synapse 연결 사양 ID: `a49bcc7d-8038-43af-b1e4-5a7a089a7d79`. |
 
 **응답**
 
-성공적인 응답은 고유 식별자(`id`)를 포함하여 새로 만든 연결의 세부 정보를 반환합니다. 이 ID는 다음 튜토리얼에서 데이터를 탐색하는 데 필요합니다.
+성공적인 응답은 고유 식별자(`id`)를 포함하여 새로 만든 연결의 세부 정보를 반환합니다. 다음 자습서에서 데이터베이스를 살펴보려면 이 ID가 필요합니다.
 
 ```json
 {
