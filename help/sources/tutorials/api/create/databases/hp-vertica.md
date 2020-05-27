@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Flow Service API를 사용하여 HP Vertica 커넥터 생성
 topic: overview
 translation-type: tm+mt
-source-git-commit: a015d2612bc5a72004e15dc5706c7718617a0af4
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '622'
-ht-degree: 1%
+source-wordcount: '630'
+ht-degree: 3%
 
 ---
 
@@ -26,7 +26,7 @@ Flow Service는 Adobe Experience Platform에서 다양한 소스의 고객 데�
 이 가이드에서는 Adobe Experience Platform의 다음 구성 요소에 대해 작업해야 합니다.
 
 - [소스](https://docs.adobe.com/content/help/en/experience-platform/source-connectors/home.html): Adobe Experience Platform을 사용하면 다양한 소스에서 데이터를 인제스트할 수 있으며, 플랫폼 서비스를 사용하여 들어오는 데이터를 구조화, 매핑 및 향상시킬 수 있습니다.
-- [샌드박스](https://docs.adobe.com/content/help/en/experience-platform/sandbox/home.html): 경험 플랫폼은 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되도록 단일 플랫폼 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
+- [샌드박스](https://docs.adobe.com/content/help/ko-KR/experience-platform/sandbox/home.html): 경험 플랫폼은 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되도록 단일 플랫폼 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
 
 다음 섹션에서는 Flow Service API를 사용하여 HP Vertica에 성공적으로 연결하기 위해 알아야 할 추가 정보를 제공합니다.
 
@@ -36,7 +36,7 @@ Flow Service가 HP Vertica와 연결하려면 다음 연결 속성에 대한 값
 
 | 자격 증명 | 설명 |
 | ---------- | ----------- |
-| `connectionString` | HP Vertica 인스턴스에 연결하는 데 사용되는 연결 문자열입니다. HP Vertica의 연결 문자열 패턴은 `Server=<server>;Port=<port>;Database=<database>;UID=<user name>;PWD=<password>` |
+| `connectionString` | HP Vertica 인스턴스에 연결하는 데 사용되는 연결 문자열입니다. HP Vertica의 연결 문자열 패턴은 `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}` |
 | `connectionSpec.id` | 연결을 만드는 데 필요한 식별자입니다. HP Vertica의 고정 연결 사양 ID: `a8b6a1a4-5735-42b4-952c-85dce0ac38b5` |
 
 연결 문자열을 얻는 방법에 대한 자세한 내용은 [이 HP Vertica 문서를 참조하십시오](https://www.vertica.com/docs/9.2.x/HTML/Content/Authoring/ConnectingToVertica/ClientJDBC/CreatingAndConfiguringAConnection.htm).
@@ -89,7 +89,7 @@ curl -X POST \
         "auth": {
             "specName": "Connection String Based Authentication",
             "params": {
-                "connectionString": "Server=<server>;Port=<port>;Database=<database>;UID=<user name>;PWD=<password>"
+                "connectionString": "Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}"
             }
         },
         "connectionSpec": {
@@ -101,7 +101,7 @@ curl -X POST \
 
 | 매개 변수 | 설명 |
 | --------- | ----------- |
-| `auth.params.connectionString` | HP Vertica 계정과 연결된 연결 문자열입니다. |
+| `auth.params.connectionString` | HP Vertica 계정과 연결된 연결 문자열입니다. HP Vertica의 연결 문자열 패턴은 다음과 같습니다. `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
 | `connectionSpec.id` | HP Vertica 연결 사양 ID: `a8b6a1a4-5735-42b4-952c-85dce0ac38b5`. |
 
 **응답**
