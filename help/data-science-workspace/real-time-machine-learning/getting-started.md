@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 실시간 머신 러닝 시작하기
 topic: Getting started
 translation-type: tm+mt
-source-git-commit: dc63ad0c0764355aed267eccd1bcc4965b04dba4
+source-git-commit: 626bb7a0856a663e235ecd2b19954f4617fe9b6f
 workflow-type: tm+mt
 source-wordcount: '411'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 실시간 머신 러닝 가이드는 Python 3, Jupiter 노트북 [](../jupyterlab/overview.md), 데이터 과학 및 머신 러닝에 대한 실무 이해를 필요로 합니다.
 
-주요 약관:
+**주요 약관:**
 
 - **DSL:** 도메인별 언어.
 - **Edge:** 실시간 머신 러닝 점수 서비스는 Edge 클러스터에서 활성화와 애플리케이션에 가까운 곳에서 실행할 수 있습니다.
