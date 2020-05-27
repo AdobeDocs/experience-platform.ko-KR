@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI에서 MySQL 소스 커넥터 만들기
 topic: overview
 translation-type: tm+mt
-source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '484'
 ht-degree: 1%
 
 ---
@@ -36,7 +36,7 @@ Adobe Experience Platform의 소스 커넥터는 외부에서 소스 데이터�
 
 | 자격 증명 | 설명 |
 | ---------- | ----------- |
-| `connectionString` | 계정과 연결된 MySQL 연결 문자열. |
+| `connectionString` | 계정과 연결된 MySQL 연결 문자열. MySQL 연결 문자열 패턴은 다음과 같습니다. `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
 
 연결 문자열에 대한 자세한 내용과 [MySQL 문서를 읽어 연결 문자열을 얻는 방법을 살펴볼 수 있습니다](https://dev.mysql.com/doc/connector-net/en/connector-net-connections-string.html).
 
