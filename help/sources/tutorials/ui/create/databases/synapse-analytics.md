@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI에서 Azure Synapse Analytics 원본 커넥터 만들기
 topic: overview
 translation-type: tm+mt
-source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '489'
+source-wordcount: '495'
 ht-degree: 1%
 
 ---
@@ -36,7 +36,7 @@ Adobe Experience Platform의 소스 커넥터는 외부에서 소스 데이터�
 
 | 자격 증명 | 설명 |
 | ---------- | ----------- |
-| `connectionString` | Synapse 인증과 연결된 연결 문자열. |
+| `connectionString` | Synapse 인증과 연결된 연결 문자열. Synapse 연결 문자열 패턴은 입니다 `Server=tcp:{SERVER_NAME}.database.windows.net,1433;Database={DATABASE};User ID={USERNAME}@{SERVER_NAME};Password={PASSWORD};Trusted_Connection=False;Encrypt=True;Connection Timeout=30`. |
 
 이 값에 대한 자세한 내용은 [이 Synapse 문서를 참조하십시오](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-sql-data-warehouse).
 
