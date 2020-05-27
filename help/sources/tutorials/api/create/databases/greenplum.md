@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Flow Service API를 사용하여 GreenPlum 커넥터 만들기
 topic: overview
 translation-type: tm+mt
-source-git-commit: a015d2612bc5a72004e15dc5706c7718617a0af4
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '559'
+source-wordcount: '566'
 ht-degree: 2%
 
 ---
@@ -32,7 +32,7 @@ Flow Service는 Adobe Experience Platform에서 다양한 소스의 고객 데�
 
 | 자격 증명 | 설명 |
 | ---------- | ----------- |
-| `connectionString` | GreenPlum 인스턴스에 연결하는 데 사용되는 연결 문자열입니다. GreenPlum의 연결 문자열 패턴은 `HOST=<server>;PORT=<port>;DB=<database>;UID=<user name>;PWD=<password>` |
+| `connectionString` | GreenPlum 인스턴스에 연결하는 데 사용되는 연결 문자열입니다. GreenPlum의 연결 문자열 패턴은 `HOST={SERVER};PORT={PORT};DB={DATABASE};UID={USERNAME};PWD={PASSWORD}` |
 | `connectionSpec.id` | 연결을 만드는 데 필요한 식별자입니다. GreenPlum의 고정 연결 사양 ID입니다 `37b6bf40-d318-4655-90be-5cd6f65d334b`. |
 
 연결 문자열 인수에 대한 자세한 내용은 이 GreenPlum 문서 [를 참조하십시오](https://gpdb.docs.pivotal.io/580/security-guide/topics/Authenticate.html#topic_fzv_wb2_jr__config_ssl_client_conn).
@@ -85,7 +85,7 @@ curl -X POST \
         "auth": {
             "specName": "Basic Authentication",
             "params": {
-                    "connectionString": "HOST=<server>;PORT=<port>;DB=<database>;UID=<user name>;PWD=<password>"
+                    "connectionString": "HOST={SERVER};PORT={PORT};DB={DATABASE};UID={USERNAME};PWD={PASSWORD}"
                 }
         },
         "connectionSpec": {
@@ -97,8 +97,8 @@ curl -X POST \
 
 | 매개 변수 | 설명 |
 | --------- | ----------- |
-| `auth.params.connectionString` | GreenPlum 계정과 연결된 연결 문자열입니다. |
-| `connectionSpec.id` | DB2 연결 사양 ID: `37b6bf40-d318-4655-90be-5cd6f65d334b`. |
+| `auth.params.connectionString` | GreenPlum 계정에 연결하는 데 사용되는 연결 문자열입니다. 연결 문자열 패턴은 다음과 같습니다. `HOST={SERVER};PORT={PORT};DB={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
+| `connectionSpec.id` | GreenPlum 연결 사양 ID: `37b6bf40-d318-4655-90be-5cd6f65d334b`. |
 
 **응답**
 
