@@ -4,7 +4,7 @@ solution: Experience Platform
 title: UI에서 GreenPlum 소스 커넥터 만들기
 topic: overview
 translation-type: tm+mt
-source-git-commit: a015d2612bc5a72004e15dc5706c7718617a0af4
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
 source-wordcount: '495'
 ht-degree: 1%
@@ -36,7 +36,7 @@ Adobe Experience Platform의 소스 커넥터는 외부에서 소스 데이터�
 
 | 자격 증명 | 설명 |
 | ---------- | ----------- |
-| `connectionString` | GreenPlum 인스턴스에 연결하는 데 사용되는 연결 문자열입니다. GreenPlum의 연결 문자열 패턴은 `HOST=<server>;PORT=<port>;DB=<database>;UID=<user name>;PWD=<password>` |
+| `connectionString` | GreenPlum 인스턴스에 연결하는 데 사용되는 연결 문자열입니다. GreenPlum의 연결 문자열 패턴은 `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}` |
 
 시작하는 방법에 대한 자세한 내용은 [이 GreenPlum 문서를 참조하십시오](https://gpdb.docs.pivotal.io/580/security-guide/topics/Authenticate.html#topic_fzv_wb2_jr__config_ssl_client_conn).
 
