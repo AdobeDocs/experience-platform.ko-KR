@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform 소스 커넥터 도움말
 translation-type: tm+mt
-source-git-commit: f23684ee152836bab85eeb8360436e4059f44417
+source-git-commit: 165d76224f4aeb292e72df1e2574ae1d0821c44c
 workflow-type: tm+mt
 source-wordcount: '578'
 ht-degree: 0%
@@ -24,7 +24,7 @@ ht-degree: 0%
          - [Audience Manager 매핑 필드](connectors/adobe-applications/mapping/audience-manager.md)
          - [대상 매핑 필드](connectors/adobe-applications/mapping/target.md)
    - 광고 {#advertising}
-      - [Google 광고 커넥터](connectors/advertising/ads.md)
+      - [Google AdWords 커넥터](connectors/advertising/ads.md)
    - 클라우드 스토리지 {#cloud-storage}
       - [Amazon Kinesis 커넥터](connectors/cloud-storage/kinesis.md)
       - [Azure Data Lake Storage Gen2 커넥터](connectors/cloud-storage/adls-gen2.md)
@@ -65,7 +65,7 @@ ht-degree: 0%
 - API 자습서 {#api-tutorials}
    - 소스 커넥터 만들기 {#create}
       - 광고 {#advertising}
-         - [Google 광고 커넥터](tutorials/api/create/advertising/ads.md)
+         - [Google AdWords 커넥터](tutorials/api/create/advertising/ads.md)
       - 클라우드 스토리지 {#cloud-storage}
          - [Amazon Kinesis](tutorials/api/create/cloud-storage/kinesis.md)
          - [Amazon S3 커넥터](tutorials/api/create/cloud-storage/s3.md)
@@ -132,7 +132,7 @@ ht-degree: 0%
          - [Adobe Audience Manager 커넥터](tutorials/ui/create/adobe-applications/audience-manager.md)
          - [고객 속성 커넥터](tutorials/ui/create/adobe-applications/customer-attributes.md)
       - 광고 {#create}
-         - [Google 광고 커넥터](tutorials/ui/create/advertising/ads.md)
+         - [Google AdWords 커넥터](tutorials/ui/create/advertising/ads.md)
       - 클라우드 스토리지 {#cloud-storage}
          - [Amazon Kinesis](tutorials/ui/create/cloud-storage/kinesis.md)
          - [Azure Data Lake Storage Gen2 커넥터](tutorials/ui/create/cloud-storage/adls-gen2.md)
