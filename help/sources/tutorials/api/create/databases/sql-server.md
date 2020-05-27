@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Flow Service API를 사용하여 SQL Server 커넥터 만들기
 topic: overview
 translation-type: tm+mt
-source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '679'
+source-wordcount: '607'
 ht-degree: 1%
 
 ---
@@ -36,9 +36,10 @@ SQL Server에 연결하려면 다음 연결 속성을 제공해야 합니다.
 
 | 자격 증명 | 설명 |
 | ---------- | ----------- |
-| `connectionString` | SQL Server 계정과 연결된 연결 문자열입니다. |
+| `connectionString` | SQL Server 계정과 연결된 연결 문자열입니다. SQL Server 연결 문자열 패턴은 다음과 같습니다. `Data Source={SERVER_NAME}\\<{INSTANCE_NAME} if using named instance>;Initial Catalog={DATABASE};Integrated Security=False;User ID={USERNAME};Password={PASSWORD};`. |
+| `connectionSpec.id` | 연결을 생성하는 데 사용되는 ID. SQL Server에 대한 연결 사양 ID가 수정되었습니다 `1f372ff9-38a4-4492-96f5-b9a4e4bd00ec`. |
 
-SQL Server [를 시작하는 방법에 대한 자세한 내용은 이 문서를](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/authentication-in-sql-server) 참조하십시오.
+연결 문자열을 얻는 방법에 대한 자세한 내용은 [이 SQL Server 문서를 참조하십시오](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/authentication-in-sql-server).
 
 ### 샘플 API 호출 읽기
 
@@ -60,77 +61,9 @@ Flow Service에 속하는 리소스를 비롯하여 경험 플랫폼의 모든 �
 
 * 컨텐츠 유형: `application/json`
 
-## 연결 사양 조회
+## 연결 만들기
 
-SQL Server 연결을 만들려면 Flow Service 내에 SQL Server 연결 사양 집합이 있어야 합니다. 플랫폼을 SQL Server에 연결하는 첫 번째 단계는 이러한 사양을 가져오는 것입니다.
-
-**API 형식**
-
-사용 가능한 각 소스에는 인증 요구 사항과 같은 커넥터 속성을 설명하는 고유한 연결 사양이 있습니다. GET 요청을 `/connectionSpecs` 끝점으로 보내면 사용 가능한 모든 소스에 대한 연결 사양이 반환됩니다. SQL Server에 대한 특정 정보 `property=name=="sql-server"` 를 얻을 수 있는 쿼리를 포함할 수도 있습니다.
-
-```http
-GET /connectionSpecs
-GET /connectionSpecs?property=name=="sql-server"
-```
-
-**요청**
-
-다음 요청은 SQL Server에 대한 연결 사양을 검색합니다.
-
-```shell
-curl -X GET \
-    'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs?property=name=="sql-server"' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**응답**
-
-성공적인 응답으로 SQL Server에 대한 고유 식별자(`id`)를 비롯한 연결 사양이 반환됩니다. 이 ID는 기본 연결을 만들려면 다음 단계에서 필요합니다.
-
-```json
-{
-    "items": [
-        {
-            "id": "1f372ff9-38a4-4492-96f5-b9a4e4bd00ec",
-            "name": "sql-server",
-            "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
-            "version": "1.0",
-            "authSpec": [
-                {
-                    "name": "Connection String Based Authentication",
-                    "type": "connectionString",
-                    "spec": {
-                        "$schema": "http://json-schema.org/draft-07/schema#",
-                        "type": "object",
-                        "description": "defines auth params required for connecting to SQL Server database",
-                        "properties": {
-                            "connectionString": {
-                                "type": "string",
-                                "description": "connection string to connect to any SQL Server database.",
-                                "format": "password",
-                                "pattern": "^(Data Source=)(.*)(;Initial Catalog=)(.*)(;Integrated Security=)(.*)(;User ID=)(.*)(;Password=)(.*)(;)",
-                                "examples": [
-                                    "Data Source=<servername>\\<instance name if using named instance>;Initial Catalog=<databasename>;Integrated Security=False;User ID=<username>;Password=<password>;"
-                                ]
-                            }
-                        },
-                        "required": [
-                            "connectionString"
-                        ]
-                    }
-                }
-            ]
-        }
-    ]
-}
-```
-
-## 기본 연결 만들기
-
-기본 연결은 소스를 지정하고 해당 소스에 대한 자격 증명을 포함합니다. 여러 소스 커넥터를 만들어 다른 데이터를 가져올 수 있으므로 SQL Server 계정당 하나의 기본 연결만 필요합니다.
+연결은 소스를 지정하고 해당 소스에 대한 자격 증명을 포함합니다. 여러 소스 커넥터를 만들어 다른 데이터를 가져올 수 있으므로 SQL Server 계정당 하나의 연결만 필요합니다.
 
 **API 형식**
 
@@ -139,6 +72,8 @@ POST /connections
 ```
 
 **요청**
+
+SQL Server 연결을 만들려면 POST 요청의 일부로 고유한 연결 사양 ID를 제공해야 합니다. SQL Server의 연결 사양 ID입니다 `1f372ff9-38a4-4492-96f5-b9a4e4bd00ec`.
 
 ```shell
 curl -X POST \
@@ -154,7 +89,7 @@ curl -X POST \
         "auth": {
             "specName": "Connection String Based Authentication",
             "params": {
-                "connectionString": "{CONNECTION_STRING}"
+                "connectionString": "Data Source={SERVER_NAME}\\<{INSTANCE_NAME} if using named instance>;Initial Catalog={DATABASE};Integrated Security=False;User ID={USERNAME};Password={PASSWORD};"
             }
         },
         "connectionSpec": {
@@ -165,12 +100,12 @@ curl -X POST \
 
 | 속성 | 설명 |
 | --------- | ----------- |
-| `auth.params.connectionString` | SQL Server 인증과 연결된 연결 문자열입니다. |
-| `connectionSpec.id` | 이전 단계에서 수집한 연결 사양(`id`)입니다. |
+| `auth.params.connectionString` | SQL Server 계정과 연결된 연결 문자열입니다. SQL Server 연결 문자열 패턴은 다음과 같습니다. `Data Source={SERVER_NAME}\\<{INSTANCE_NAME} if using named instance>;Initial Catalog={DATABASE};Integrated Security=False;User ID={USERNAME};Password={PASSWORD};`. |
+| `connectionSpec.id` | SQL Server의 연결 사양 ID는 다음과 같습니다. `1f372ff9-38a4-4492-96f5-b9a4e4bd00ec`. |
 
 **응답**
 
-성공적인 응답은 고유 식별자(`id`)를 포함하여 새로 만든 기본 연결의 세부 정보를 반환합니다. 이 ID는 다음 튜토리얼에서 데이터를 탐색하는 데 필요합니다.
+성공적인 응답은 고유 식별자(`id`)를 포함하여 새로 만든 연결의 세부 정보를 반환합니다. 다음 자습서에서 데이터베이스를 살펴보려면 이 ID가 필요합니다.
 
 ```json
 {
@@ -181,4 +116,4 @@ curl -X POST \
 
 ## 다음 단계
 
-이 자습서에 따라 Flow Service API를 사용하여 SQL Server 기본 연결을 만들고 연결의 고유 ID 값을 받았습니다. Flow Service API를 사용하여 데이터베이스 또는 NoSQL 시스템을 [탐색하는 방법을 배울 때 다음 자습서에서 이 기본 연결 ID를 사용할 수 있습니다](../../explore/database-nosql.md).
+이 자습서에 따라 Flow Service API를 사용하여 SQL Server 연결을 만들고 연결의 고유 ID 값을 받았습니다. 다음 자습서에서는 Flow Service API를 사용하여 데이터베이스 또는 NoSQL 시스템을 [탐색하는 방법을 배울 때 이 연결 ID를 사용할 수 있습니다](../../explore/database-nosql.md).
