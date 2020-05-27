@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 실시간 머신 러닝 노트북 사용자 가이드
 topic: Training and scoring a ML model
 translation-type: tm+mt
-source-git-commit: dc63ad0c0764355aed267eccd1bcc4965b04dba4
+source-git-commit: 695eba3885dc319a9b7f73eb710b2ada0b17d24d
 workflow-type: tm+mt
-source-wordcount: '1570'
+source-wordcount: '1659'
 ht-degree: 0%
 
 ---
@@ -82,6 +82,8 @@ pprint(nf.discover_nodes())
 >[!NOTE]
 >실시간 **ML** 템플릿에서 [자동차 보험 CSV 데이터](https://github.com/adobe/experience-platform-dsw-reference/tree/master/datasets/insurance) 세트를 Github에서 가져올 수 있습니다.
 
+![데이터 로드](../images/rtml/load_training.png)
+
 Adobe Experience Platform 내에서 데이터 세트를 사용하려면 아래 셀의 주석을 해제합니다. 다음으로 적절한 값 `DATASET_ID` 으로 교체해야 합니다.
 
 ![rtml 데이터 집합](../images/rtml/rtml-dataset.png)
@@ -114,7 +116,7 @@ config_properties = {
 실시간 *ML* 템플릿 *데이터 변환* 셀을 수정하여 데이터 세트에 사용해야 합니다. 일반적으로 열 이름 변경, 데이터 롤업 및 데이터 준비/기능 엔지니어링이 포함됩니다.
 
 >[!NOTE]
->다음 예는 가독성(readability) 사용 용도로 요약되어 있습니다 `[ ... ]`. 전체 코드 셀의 *실시간 ML* 템플릿을 참조하십시오.
+>다음 예는 가독성(readability) 사용 용도로 요약되어 있습니다 `[ ... ]`. 전체 코드 셀의 *실시간 ML* 템플릿 데이터 변형 섹션을 보고 확장하십시오.
 
 ```python
 df1.rename(columns = {config_properties['ten_id']+'.identification.ecid' : 'ecid',
@@ -189,7 +191,7 @@ cat_cols = ['age_bucket', 'gender', 'city', 'dayofweek', 'country', 'carbrand', 
 df_final = pd.get_dummies(df_final, columns = cat_cols)
 ```
 
-제공된 셀을 실행하여 예제 결과를 확인합니다. 데이터 세트에서 반환된 출력 테이블은 정의된 수정 사항을 `carinsurancedataset.csv` 반환합니다.
+제공된 셀을 실행하여 예제 결과를 확인합니다. 데이터 세트에서 반환된 출력 테이블은 `carinsurancedataset.csv` 사용자가 정의한 수정 사항을 반환합니다.
 
 ![데이터 변형 예](../images/rtml/table-return.png)
 
@@ -237,18 +239,23 @@ import skl2onnx, subprocess
 model.generate_onnx_resources()
 ```
 
+>[!NOTE]
+>모델 이름을 변경하려면 `model_path` 문자열 값(`model.onnx`)을 변경합니다.
+
 ```python
 model_path = "model.onnx"
+```
 
+>[!NOTE]
+>다음 셀은 편집 또는 삭제할 수 없으며 실시간 기계 학습 응용 프로그램이 작동하기 위해 필요합니다.
+
+```python
 model = ModelUpload(params={'model_path': model_path})
 msg_model = model.process(None, 1)
 model_id = msg_model.model['model_id']
  
 print("Model ID : ", model_id)
 ```
-
->[!NOTE]
->모델 이름을 지정하려면 `model_path` 문자열 값을 변경합니다.
 
 ![ONNX 모델](../images/rtml/onnx-model-rail.png)
 
@@ -272,7 +279,7 @@ JupiterLab 노트북에 있는 업로드 단추를 사용하여 미리 교육된
 ### 노드 작성
 
 >[!NOTE]
-> 사용되는 데이터 유형에 따라 여러 개의 노드가 있을 수 있습니다. 다음 예제에서는 *실시간 ML* 템플릿의 단일 노드만 간략하게 설명합니다. 전체 코드 셀의 *실시간 ML* 템플릿을 참조하십시오.
+> 사용되는 데이터 유형에 따라 여러 개의 노드가 있을 수 있습니다. 다음 예제에서는 *실시간 ML* 템플릿의 단일 노드만 간략하게 설명합니다. 전체 코드 셀의 *실시간 ML* 템플릿 *노드 작성* 섹션을참조하십시오.
 
 아래의 Fanda 노드는 매개 변수 `"import": "map"` 에서 메서드 이름을 문자열로 가져온 다음 매개 변수를 지도 함수로 입력하는 데 사용합니다. 아래 예제는 다음을 사용하여 수행합니다 `{'arg': {'dataLayerNull': 'notgiven', 'no': 'no', 'yes': 'yes', 'notgiven': 'notgiven'}}`. 맵을 제자리에 두고 나면, 또는 `inplace` 으로 설정할 수 `True` 있습니다 `False`. 변형 `inplace` 을 즉석 `True` 으로 적용할지 여부 `False` 를 기준으로 설정할 수 있습니다. 기본적으로 새 열 `"inplace": False` 이 만들어집니다. 새 열 이름을 제공하기 위한 지원이 이후 릴리스에서 추가되도록 설정되어 있습니다. 마지막 줄은 단일 열 이름 또는 열 목록일 `cols` 수 있습니다. 변형을 적용할 열을 지정합니다. 이 예에서 `leasing` 는 지정됩니다. 사용 가능한 노드 및 사용 방법에 대한 자세한 내용은 [노드 참조 안내서를 참조하십시오](./node-reference.md).
 
@@ -323,7 +330,7 @@ nodes = [json_df_node,
 edges = [(nodes[i], nodes[i+1]) for i in range(len(nodes)-1)]
 ```
 
-노드가 연결되면 그래프를 만듭니다.
+노드가 연결되면 그래프를 만듭니다. 아래 셀은 필수 항목이므로 편집하거나 삭제할 수 없습니다.
 
 ```python
 dsl = GraphBuilder.generate_dsl(nodes=nodes, edges=edges)
@@ -413,10 +420,33 @@ Edge 서비스에 대해 점수를 매기려면 *실시간 ML* 템플릿 내에�
 
 점수 지정이 완료되면 Edge URL, Payload 및 Edge의 점수가 출력됩니다.
 
-## Edge에서 배포된 앱 삭제(선택 사항)
+## Edge에서 배포된 앱 나열
 
->!![CAUTION]
-이 셀은 배포된 Edge 응용 프로그램을 삭제하는 데 사용됩니다. 배포된 Edge 애플리케이션을 삭제할 필요가 없는 경우 다음 셀을 사용하지 마십시오.
+현재 배포된 앱의 목록을 가장자리에 생성하려면 다음 코드 셀을 실행하십시오. 이 셀은 편집하거나 삭제할 수 없습니다.
+
+```python
+services = edge_utils.list_deployed_services()
+print(services)
+```
+
+반환된 응답은 배포된 서비스의 배열입니다.
+
+```json
+[
+    {
+        "created": "2020-05-25T19:18:52.731Z",
+        "deprecated": false,
+        "id": "40eq76c0-1c6f-427a-8f8f-54y9cdf041b7",
+        "type": "edge",
+        "updated": "2020-05-25T19:18:52.731Z"
+    }
+]
+```
+
+## Edge에서 배포된 앱 또는 서비스 ID 삭제(선택 사항)
+
+>[!CAUTION]
+>이 셀은 배포된 Edge 응용 프로그램을 삭제하는 데 사용됩니다. 배포된 Edge 애플리케이션을 삭제할 필요가 없는 경우 다음 셀을 사용하지 마십시오.
 
 ```python
 if edge_utils.delete_from_edge(service_id=service_id):
