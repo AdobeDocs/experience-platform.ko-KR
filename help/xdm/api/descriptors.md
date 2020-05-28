@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 설명자
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: c8cc57a8629f04c7af68b6f5cfee365527caa3c1
+source-git-commit: c3d23ce0081932e61f50d426ac6d98ab7f4dfa3b
 workflow-type: tm+mt
 source-wordcount: '1499'
 ht-degree: 1%
@@ -334,7 +334,7 @@ ID 설명자는 &quot;sourceSchema&quot;의 &quot;sourceProperty&quot;가 [Adobe
 | `xdm:sourceProperty` | ID가 될 특정 속성의 경로입니다. 경로는 &quot;/&quot;로 시작하고 하나로 끝나지 않아야 합니다. 경로에 &quot;속성&quot;을 포함하지 마십시오(예: &quot;/properties/personalEmail/properties/address&quot; 대신 &quot;/personalEmail/address&quot;를 사용). |
 | `xdm:title` | 제목 사례에 작성된 이 필드에 표시할 새 제목입니다. |
 | `xdm:description` | 선택적인 설명은 제목과 함께 추가할 수 있습니다. |
-| `meta:enum` | 로 표시된 필드가 문자열 필드 `xdm:sourceProperty` 인 경우, 경험 플랫폼 UI에 있는 필드에 대해 제안된 값의 목록을 `meta:enum` 결정합니다. 열거형을 선언하거나 XDM 필드에 대한 데이터 유효성 검사를 제공하지 `meta:enum` 않는다는 점에 유의하십시오.<br><br>Adobe에서 정의한 핵심 XDM 필드에만 사용해야 합니다. 소스 속성이 조직에서 정의한 사용자 지정 필드인 경우 대신 PUT 요청을 통해 필드 `meta:enum` 속성을 직접 [편집해야 합니다](./update-resource.md). |
+| `meta:enum` | 로 표시된 필드가 문자열 필드 `xdm:sourceProperty` 인 경우, 경험 플랫폼 UI에 있는 필드에 대해 제안된 값의 목록을 `meta:enum` 결정합니다. 열거형을 선언하거나 XDM 필드에 대한 데이터 유효성 검사를 제공하지 `meta:enum` 않는다는 점에 유의하십시오.<br><br>Adobe에서 정의한 핵심 XDM 필드에만 사용해야 합니다. 소스 속성이 조직에서 정의한 사용자 지정 필드인 경우 대신 `meta:enum` PATCH 요청을 통해 직접 필드 [속성을 편집해야 합니다](./update-resource.md). |
 
 #### 관계 설명자
 
