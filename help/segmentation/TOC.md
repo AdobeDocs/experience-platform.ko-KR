@@ -3,7 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform 세그멘테이션 서비스 도움말
 translation-type: tm+mt
-source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
+source-git-commit: 4eafccb54c07cba54ecef652ffdd1c9a4277f89f
+workflow-type: tm+mt
+source-wordcount: '100'
+ht-degree: 8%
 
 ---
 
@@ -14,6 +17,7 @@ source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
 - 세그멘테이션 API {#api}
    - [시작하기](api/getting-started.md)
    - [세그먼트 작업](api/segment-jobs.md)
+   - [세그먼트 검색](api/segment-search.md)
    - [스트리밍 세분화](api/streaming-segmentation.md)
 - 세그멘테이션 UI {#ui}
    - [개요](ui/overview.md)
@@ -23,8 +27,8 @@ source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
    - [개요](pql/overview.md)
    - [부울 함수](pql/boolean-functions.md)
    - [비교 함수](pql/comparison-functions.md)
-   - [배열, 목록 및 설정 함수](pql/array-functions.md)
-   - [맵 함수](pql/map-functions.md)
+   - [배열, 목록 및 집합 함수](pql/array-functions.md)
+   - [매핑 함수](pql/map-functions.md)
    - [문자열 함수](pql/string-functions.md)
    - [산술 함수](pql/arithmetic-functions.md)
    - [집계 함수](pql/aggregation-functions.md)
@@ -37,6 +41,6 @@ source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
    - [세그먼트 평가](tutorials/evaluate-a-segment.md)
    - [데이터 내보내기](tutorials/export-data.md)
    - [데이터를 내보낼 데이터 세트 만들기](tutorials/create-dataset-export-segment.md)
-   - [세그먼트에 대한 데이터 사용 규정 준수 적용](tutorials/governance.md)
+   - [세그먼트에 대한 데이터 사용 규정 준수](tutorials/governance.md)
 - [API 참조](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)
-- [플랫폼 릴리스 노트](https://www.adobe.com/go/platform-release-notes-en)
+- [플랫폼 릴리스 정보](https://www.adobe.com/go/platform-release-notes-en)
