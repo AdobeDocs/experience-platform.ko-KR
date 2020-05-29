@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: 실시간 고객 프로필 API 개발자 가이드
 topic: guide
 translation-type: tm+mt
-source-git-commit: 824e9eda41488efc362a6105c552f522185c046d
+source-git-commit: 9600f315f162b6cd86e2dbe2fffc793cc91c9319
 workflow-type: tm+mt
 source-wordcount: '2057'
 ht-degree: 1%
@@ -45,8 +45,8 @@ Adobe Experience Platform을 사용하면 여러 소스에서 데이터를 취�
         "attributeMerge": {
             "type": "{ATTRIBUTE_MERGE_TYPE}"
         },
-        "default": {BOOLEAN},
-        "updateEpoch": {UPDATE_TIME}
+        "default": "{BOOLEAN}",
+        "updateEpoch": "{UPDATE_TIME}"
     }
 ```
 
