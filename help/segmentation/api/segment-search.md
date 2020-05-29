@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: 세그멘테이션 API 개발자 가이드
 topic: guide
 translation-type: tm+mt
-source-git-commit: 7c33ba8edc886d2b689e1125b5c378e16a487324
+source-git-commit: f489e9f9dfc9c7e94f76a6825e7ca24c41ee8a66
 workflow-type: tm+mt
-source-wordcount: '1198'
+source-wordcount: '1172'
 ht-degree: 2%
 
 ---
@@ -41,8 +41,8 @@ GET /search/namespaces?schema.name={SCHEMA}&s={SEARCH_TERM}
 
 | 매개 변수 | 설명 |
 | ---------- | ----------- | 
-| schema.name={SCHEMA} | **(필수)** 여기서 {SCHEMA}은 검색 개체와 관련된 스키마 클래스 값을 나타냅니다. 현재, 만 `_xdm.context.segmentdefinition` 지원됩니다. |
-| s={SEARCH_TERM} | *(선택 사항)* 여기서 {SEARCH_TERM}은(는) Microsoft의 [Lucene의 검색 구문 구현을 준수하는 쿼리를 나타냅니다](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). 검색어를 지정하지 않으면 연결된 모든 레코드가 `schema.name` 반환됩니다. 더 자세한 설명은 이 문서의 [부록에](#appendix) 나와 있다. |
+| `schema.name={SCHEMA}` | **(필수)** 여기서 {SCHEMA}은 검색 개체와 관련된 스키마 클래스 값을 나타냅니다. 현재, 만 `_xdm.context.segmentdefinition` 지원됩니다. |
+| `s={SEARCH_TERM}` | *(선택 사항)* 여기서 {SEARCH_TERM}은(는) Microsoft의 [Lucene의 검색 구문 구현을 준수하는 쿼리를 나타냅니다](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). 검색어를 지정하지 않으면 연결된 모든 레코드가 `schema.name` 반환됩니다. 더 자세한 설명은 이 문서의 [부록에](#appendix) 나와 있다. |
 
 **요청**
 
@@ -65,18 +65,22 @@ curl -X GET \
 {
   "namespaces": [
     {
-      "name": "AAMTraits",
+      "namespace": "AAMTraits",
+      "displayName": "AAMTraits",
       "count": 45
     },
     {
-      "name": "AAMSegments",
+      "namespace": "AAMSegments",
+      "displayName": "AAMSegment",
       "count": 10
     },
     {
-      "name": "SegmentsAISegments",
+      "namespace": "SegmentsAISegments",
+      "displayName": "SegmentSAISegment",
       "count": 3
     }
   ],
+  "totalCount": 3,
   "status": {
     "message": "Success"
   }
@@ -97,12 +101,12 @@ GET /search/entities?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 
 | 매개 변수 | 설명 |
 | ---------- | ----------- | 
-| schema.name={SCHEMA} | **(필수)** {SCHEMA}에 검색 개체와 관련된 스키마 클래스 값이 포함된 경우 현재, 만 `_xdm.context.segmentdefinition` 지원됩니다. |
-| namespace={NAMESPACE} | **(필수)** {NAMESPACE}에 검색할 네임스페이스가 포함되어 있습니다. |
-| s={SEARCH_TERM} | *(선택 사항)* {SEARCH_TERM}에 Microsoft의 [Lucene 검색 구문 구현을 준수하는 쿼리가 포함되어 있는 경우](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). 검색어를 지정하지 않으면 연결된 모든 레코드가 `schema.name` 반환됩니다. 더 자세한 설명은 이 문서의 [부록에](#appendix) 나와 있다. |
-| entityId={ENTITY_ID} | *(선택 사항)* {ENTITY_ID}로 지정된 지정된 폴더 내에서 검색을 제한합니다. |
-| limit={LIMIT} | *(선택 사항)* 여기서 {LIMIT}은(는) 반환할 검색 결과 수를 나타냅니다. 기본값은 50입니다. |
-| page={PAGE} | *(선택 사항)* 여기서 {PAGE}은(는) 검색된 쿼리 결과의 페이지 매김에 사용되는 페이지 번호를 나타냅니다. 페이지 번호는 **0**&#x200B;부터 시작됩니다. |
+| `schema.name={SCHEMA}` | **(필수)** {SCHEMA}에 검색 개체와 관련된 스키마 클래스 값이 포함된 경우 현재, 만 `_xdm.context.segmentdefinition` 지원됩니다. |
+| `namespace={NAMESPACE}` | **(필수)** {NAMESPACE}에 검색할 네임스페이스가 포함되어 있습니다. |
+| `s={SEARCH_TERM}` | *(선택 사항)* {SEARCH_TERM}에 Microsoft의 [Lucene 검색 구문 구현을 준수하는 쿼리가 포함되어 있는 경우](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). 검색어를 지정하지 않으면 연결된 모든 레코드가 `schema.name` 반환됩니다. 더 자세한 설명은 이 문서의 [부록에](#appendix) 나와 있다. |
+| `entityId={ENTITY_ID}` | *(선택 사항)* {ENTITY_ID}로 지정된 지정된 폴더 내에서 검색을 제한합니다. |
+| `limit={LIMIT}` | *(선택 사항)* 여기서 {LIMIT}은(는) 반환할 검색 결과 수를 나타냅니다. 기본값은 50입니다. |
+| `page={PAGE}` | *(선택 사항)* 여기서 {PAGE}은(는) 검색된 쿼리 결과의 페이지 매김에 사용되는 페이지 번호를 나타냅니다. 페이지 번호는 **0**&#x200B;부터 시작됩니다. |
 
 
 **요청**
@@ -168,9 +172,9 @@ GET /search/taxonomy?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 
 | 매개 변수 | 설명 |
 | ---------- | ----------- | 
-| schema.name={SCHEMA} | **(필수)** {SCHEMA}에 검색 개체와 관련된 스키마 클래스 값이 포함된 경우 현재, 만 `_xdm.context.segmentdefinition` 지원됩니다. |
-| namespace={NAMESPACE} | **(필수)** {NAMESPACE}에 검색할 네임스페이스가 포함되어 있습니다. |
-| entityId={ENTITY_ID} | **(필수)** {ENTITY_ID}로 지정된 구조 정보를 가져올 검색 개체의 ID입니다. |
+| `schema.name={SCHEMA}` | **(필수)** {SCHEMA}에 검색 개체와 관련된 스키마 클래스 값이 포함된 경우 현재, 만 `_xdm.context.segmentdefinition` 지원됩니다. |
+| `namespace={NAMESPACE}` | **(필수)** {NAMESPACE}에 검색할 네임스페이스가 포함되어 있습니다. |
+| `entityId={ENTITY_ID}` | **(필수)** {ENTITY_ID}로 지정된 구조 정보를 가져올 검색 개체의 ID입니다. |
 
 **요청**
 
