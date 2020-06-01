@@ -4,26 +4,29 @@ solution: Experience Platform
 title: 세그먼트 작업
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: db4cdbfb7719d94919c896162ca7875fdf7d2502
+source-git-commit: b0554d931718bb6a8dd7d4f971daf3652a19a2a8
+workflow-type: tm+mt
+source-wordcount: '657'
+ht-degree: 3%
 
 ---
 
 
 # 세그먼트 작업 개발자 가이드
 
-세그먼트 작업은 새 대상 세그먼트를 만드는 비동기 프로세스입니다. 세그먼트 정의뿐만 아니라 실시간 고객 프로파일을 프로필 조각에 겹치는 속성을 병합하는 방법을 제어하는 모든 병합 정책을 참조합니다. 세그먼트 작업이 성공적으로 완료되면 처리 중에 발생한 오류와 대상의 최종 크기 등 세그먼트에 대한 다양한 정보를 수집할 수 있습니다.
+세그먼트 작업은 새 대상 세그먼트를 만드는 비동기 프로세스입니다. 세그먼트 정의를 참조하고, 실시간 고객 프로필에서 프로필 조각에 겹쳐진 속성을 병합하는 방법을 제어하는 모든 병합 정책을 참조합니다. 세그먼트 작업이 성공적으로 완료되면 처리 중에 발생한 오류와 대상의 최종 크기 등 세그먼트에 대한 다양한 정보를 수집할 수 있습니다.
 
 이 안내서에서는 세그먼트 작업을 더 잘 이해하는 데 도움이 되는 정보를 제공하고 API를 사용하여 기본 작업을 수행하기 위한 샘플 API 호출을 포함합니다.
 
 ## 시작하기
 
-이 안내서에서 사용되는 API 끝점은 세그멘테이션 API의 일부입니다. 계속하기 전에 세그멘테이션 개발자 [안내서를](./getting-started.md)검토하십시오.
+이 안내서에서 사용되는 API 끝점은 세그멘테이션 API의 일부입니다. 계속하기 전에 세그멘테이션 개발자 [안내서를 검토하십시오](./getting-started.md).
 
-특히 세그멘테이션 개발자 안내서의 [시작 섹션은](./getting-started.md#getting-started) 관련 항목에 대한 링크, 문서에서 샘플 API 호출 읽기에 대한 안내, 모든 Experience Platform API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요한 정보를 포함합니다.
+특히 세그멘테이션 개발자 안내서의 [시작 섹션에는 관련 항목에 대한 링크, 문서에서 샘플 API 호출 읽기 안내서, 모든 경험 플랫폼 API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요한 정보가 포함되어 있습니다](./getting-started.md#getting-started) .
 
 ## 세그먼트 작업 목록 검색
 
-IMS에 대한 모든 세그먼트 작업 목록을 `/segment/jobs` 끝점에 GET 요청을 수행하여 검색할 수 있습니다.
+IMS 조직에 대한 모든 세그먼트 작업 목록을 `/segment/jobs` 끝점에 GET 요청을 수행하여 검색할 수 있습니다.
 
 **API 형식**
 
@@ -32,18 +35,18 @@ GET /segment/jobs
 GET /segment/jobs?{QUERY_PARAMETERS}
 ```
 
-- `{QUERY_PARAMETERS}`:(*선택*&#x200B;사항) 응답에서 반환된 결과를 구성하는 요청 경로에 추가된 매개 변수입니다. 여러 매개 변수를 앰퍼샌드(`&`)로 구분하여 포함할 수 있습니다. 사용 가능한 매개 변수는 아래에 나열되어 있습니다.
+- `{QUERY_PARAMETERS}`: (*선택*&#x200B;사항) 응답에서 반환된 결과를 구성하는 요청 경로에 추가된 매개 변수입니다. 여러 매개 변수를 앰퍼샌드(앰퍼샌드)로 구분하여 포함할 수`&`있습니다. 사용 가능한 매개 변수는 아래에 나열되어 있습니다.
 
 **쿼리 매개 변수**
 
-다음은 세그먼트 작업을 나열하기 위한 사용 가능한 쿼리 매개 변수 목록입니다. 이러한 매개 변수는 모두 선택 사항입니다. 매개 변수 없이 이 끝점을 호출하면 조직에서 사용할 수 있는 모든 세그먼트 작업이 검색됩니다.
+다음은 세그먼트 작업을 나열하기 위한 사용 가능한 쿼리 매개 변수 목록입니다. 이러한 매개 변수는 모두 선택 사항입니다. 매개 변수가 없는 이 끝점을 호출하면 조직에서 사용할 수 있는 모든 세그먼트 작업이 검색됩니다.
 
 | 매개 변수 | 설명 |
 | --------- | ----------- |
 | `start` | 반환된 세그먼트 작업의 시작 오프셋을 지정합니다. |
 | `limit` | 페이지당 반환되는 세그먼트 작업 수를 지정합니다. |
 | `status` | 상태에 따라 결과를 필터링합니다. 지원되는 값은 신규, 대기 중, 처리 중, 성공, 실패, 취소, 취소됨 |
-| `sort` | 반환된 세그먼트 작업을 주문합니다. 형식으로 `[attributeName]:[desc|asc]`작성됩니다. |
+| `sort` | 반환된 세그먼트 작업을 주문합니다. 형식을 사용합니다 `[attributeName]:[desc|asc]`. |
 | `property` | 세그먼트 작업을 필터링하고 주어진 필터에 대한 정확한 일치를 가져옵니다. 다음 형식 중 하나로 작성할 수 있습니다. <ul><li>`[jsonObjectPath]==[value]` - 개체 키 필터링</li><li>`[arrayTypeAttributeName]~[objectKey]==[value]` - 배열 내에서 필터링</li></ul> |
 
 **요청**
@@ -154,7 +157,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 
 ## 새 세그먼트 작업 만들기
 
-종단점에 POST 요청을 만들어 새 세그먼트 작업을 만들 수 `/segment/jobs` 있습니다.
+종단점에 대한 POST 요청을 만들어 새 세그먼트 작업을 만들 수 `/segment/jobs` 있습니다.
 
 **API 형식**
 
@@ -237,7 +240,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 
 ## 특정 세그먼트 작업 검색
 
-종단점에 GET 요청을 하고 요청 경로에서 세그먼트 작업의 `/segment/jobs` `id` 값을 제공하여 특정 세그먼트 작업에 대한 자세한 정보를 검색할 수 있습니다.
+종단점에 GET 요청을 수행하고 요청 경로에 세그먼트 작업의 `/segment/jobs` `id` 값을 제공하여 특정 세그먼트 작업에 대한 자세한 정보를 검색할 수 있습니다.
 
 **API 형식**
 
@@ -247,7 +250,7 @@ GET /segment/jobs/{SEGMENT_JOB_ID}
 
 | 속성 | 설명 |
 | -------- | ----------- | 
-| `{SEGMENT_JOB_ID}` | 검색할 세그먼트 작업의 `id` 값입니다. |
+| `{SEGMENT_JOB_ID}` | 검색할 세그먼트 작업의 `id` 값. |
 
 **요청**
 
@@ -323,9 +326,105 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-4
 }
 ```
 
+## 세그먼트 일괄 검색 작업
+
+종단점에 POST 요청을 수행하고 요청 본문에 세그먼트 작업의 `/segment/jobs/bulk-get` `id` 값을 제공하여 지정된 여러 세그먼트 작업에 대한 자세한 정보를 검색할 수 있습니다.
+
+**API 형식**
+
+```http
+POST /segment/jobs/bulk-get
+```
+
+**요청**
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+        "ids": [
+            {
+                "id": "cc3419d3-0389-47f1-b174-fead6b3c830d"
+            },
+            {
+                "id": "c527dc3f-07fe-4b96-be4e-23f38e734ff8"
+            }
+        ]
+    }'
+```
+
+**응답**
+
+성공적인 응답은 요청된 세그먼트 작업이 있는 HTTP 상태 207을 반환합니다.
+
+>[!NOTE] 다음 응답이 공간에 대해 잘려서 각 세그먼트 작업의 일부 세부 정보만 표시합니다. 전체 응답에는 요청된 세그먼트 작업에 대한 전체 세부 정보가 표시됩니다.
+
+```json
+{
+    "results": {
+        "cc3419d3-0389-47f1-b174-fead6b3c830d": {
+            "id": "cc3419d3-0389-47f1-b174-fead6b3c830d",
+            "imsOrgId": "{IMS_ORG}",
+            "status": "SUCCEEDED",
+            "segments": [
+                {
+                    "segmentId": "30230300-ccf1-48ad-8012-c5563a007069",
+                    "segment": {
+                        "id": "30230300-ccf1-48ad-8012-c5563a007069",
+                        "expression": {
+                            "type": "PQL",
+                            "format": "pql/json",
+                            "value": "{PQL_EXPRESSION}"
+                        },
+                        "mergePolicyId": "b83185bb-0bc6-489c-9363-0075eb30b4c8",
+                        "mergePolicy": {
+                            "id": "b83185bb-0bc6-489c-9363-0075eb30b4c8",
+                            "version": 1
+                        }
+                    }
+                }
+            ],
+            "updateTime": 1573204395000,
+            "creationTime": 1573203600535,
+            "updateEpoch": 1573204395
+        },
+        "c527dc3f-07fe-4b96-be4e-23f38e734ff8": {
+            "id": "c527dc3f-07fe-4b96-be4e-23f38e734ff8",
+            "imsOrgId": "{IMS_ORG}",
+            "status": "SUCCEEDED",
+            "segments": [
+                {
+                    "segmentId": "4afe34ae-8c98-4513-8a1d-67ccaa54bc05",
+                    "segment": {
+                        "id": "4afe34ae-8c98-4513-8a1d-67ccaa54bc05",
+                        "expression": {
+                            "type": "PQL",
+                            "format": "pql/json",
+                            "value": "{PQL_EXPRESSION}"
+                        },
+                        "mergePolicyId": "b83185bb-0bc6-489c-9363-0075eb30b4c8",
+                        "mergePolicy": {
+                            "id": "b83185bb-0bc6-489c-9363-0075eb30b4c8",
+                            "version": 1
+                        }
+                    }
+                }
+            ],
+            "updateTime": 1573204395000,
+            "creationTime": 1573203600535,
+            "updateEpoch": 1573204395
+        }
+    }
+}
+```
+
 ## 특정 세그먼트 작업 취소 또는 삭제
 
-종단점에 DELETE 요청을 하고 요청 경로에서 세그먼트 작업의 `/segment/jobs` `id` 값을 제공하여 지정된 세그먼트 작업을 삭제하도록 요청할 수 있습니다.
+종단점에 DELETE 요청을 하고 요청 경로에 세그먼트 작업 `/segment/jobs` `id` 의 값을 제공하여 지정된 세그먼트 작업 삭제를 요청할 수 있습니다.
 
 **API 형식**
 
@@ -360,4 +459,4 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfe
 
 ## 다음 단계
 
-이제 이 가이드를 읽고 세그먼트 작업 작동 방식을 더 잘 이해할 수 있습니다. 세그멘테이션에 대한 자세한 내용은 세그멘테이션 [개요를](../home.md)참조하십시오.
+이 안내서를 읽고 나면 세그먼트 작업 방식을 더 잘 이해할 수 있습니다. 세그멘테이션에 대한 자세한 내용은 세그멘테이션 [개요를 참조하십시오](../home.md).
