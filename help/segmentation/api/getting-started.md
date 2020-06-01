@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 세그멘테이션 서비스 개발자 가이드
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: e25ce403034a94d7024e8c244cb438bd9dfe0c5f
+source-git-commit: bbca6d8f4ab7a684e8bfb1d39b538d937a99244f
 workflow-type: tm+mt
-source-wordcount: '429'
+source-wordcount: '494'
 ht-degree: 0%
 
 ---
@@ -73,13 +73,13 @@ For more information on using this endpoint, please read the [PQL conversions de
 
 Schedules are a tool that can be used to automatically run export jobs once a day. You can use the `/config/schedules` endpoint to retrieve a list of schedules, create a new schedule, retrieve details of a specific schedule, update a specific schedule, or delete a specific schedule. 
 
-For more information on using this endpoint, please read the [schedules developer guide](./schedules.md).
+For more information on using this endpoint, please read the [schedules developer guide](./schedules.md). -->
 
-## Segment definitions
+## 세그먼트 정의
 
-Segment definitions define which profiles will be part of which audience segments. You can use the `/segment/definitions` endpoint to retrieve a list of segment definitions, create a new segment definition, retrieve details of a specific segment definition, delete a specific segment definition, or overwrite details of a specific segment definition.
+세그먼트 정의는 대상 세그먼트의 일부가 될 프로파일을 정의합니다. 끝점을 사용하여 세그먼트 정의 목록을 검색하고, 새 세그먼트 정의를 만들고, 특정 세그먼트 정의의 세부 정보를 검색하고, 특정 세그먼트 정의를 삭제하거나, 특정 세그먼트 정의의 세부 사항을 덮어쓸 수 있습니다. `/segment/definitions`
 
-For more information on using this endpoint, please read the [segment definitions developer guide](./segment-definitions.md). -->
+이 끝점 사용에 대한 자세한 내용은 [세그먼트 정의 개발자 안내서를 참조하십시오](./segment-definitions.md).
 
 ## 세그먼트 작업
 
