@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 스트리밍 대상에 연결 및 데이터 활성화
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 47e03d3f58bd31b1aec45cbf268e3285dd5921ea
+source-git-commit: 883bea4aba0548e96b891987f17b8535c4d2eba7
 workflow-type: tm+mt
-source-wordcount: '1861'
-ht-degree: 1%
+source-wordcount: '1847'
+ht-degree: 2%
 
 ---
 
@@ -310,8 +310,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "region": "{REGION}"
     },
     "params": { // use these values for Azure Event Hubs connections
-        "eventHubName": "{EVENT_HUB_NAME}",
-        "namespace": "EVENT_HUB_NAMESPACE"
+        "eventHubName": "{EVENT_HUB_NAME}"
     }
 }'
 ```
@@ -321,7 +320,6 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 * `{NAME_OF_DATA_STREAM}`: *Amazon Kinesis 연결용.* Amazon Kinesis 계정에서 기존 데이터 스트림의 이름을 제공합니다. Adobe 실시간 CDP는 데이터를 이 스트림으로 내보냅니다.
 * `{REGION}`: *Amazon Kinesis 연결용.* Adobe 실시간 CDP가 데이터를 스트리밍하는 Amazon Kinesis 계정의 영역입니다.
 * `{EVENT_HUB_NAME}`: *Azure 이벤트 허브 연결에 대해.* Adobe 실시간 CDP가 데이터를 스트리밍하는 Azure 이벤트 허브 이름을 입력합니다. 자세한 내용은 [Microsoft 설명서에서 이벤트 허브](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) 만들기를 참조하십시오.
-* `{EVENT_HUB_NAMESPACE}`: *Azure 이벤트 허브 연결에 대해.* Adobe 실시간 CDP가 데이터를 스트리밍하는 Azure 이벤트 허브 네임스페이스를 채웁니다. 자세한 내용은 [Microsoft 문서에서 이벤트 허브 네임스페이스](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) 만들기를 참조하십시오.
 
 **응답**
 
@@ -376,7 +374,7 @@ curl -X POST \
     }
 ```
 
-* `{FLOW_SPEC_ID}`: 연결할 스트리밍 대상의 흐름을 사용합니다. 흐름 사양을 가져오려면 종단점에 대해 GET 작업을 `flowspecs` 수행하십시오. Swagger 설명서를 참조하십시오. https://platform.adobe.io/data/foundation/flowservice/swagger#/Flow%20Specs%20API/getFlowSpecs. 응답에서 연결할 스트리밍 대상의 해당 ID를 찾아 `upsTo` 복사합니다.
+* `{FLOW_SPEC_ID}`: 프로필 기반 대상에 대한 흐름 사양 ID입니다 `71471eba-b620-49e4-90fd-23f1fa0174d8`. 호출에서 이 값을 사용합니다.
 * `{SOURCE_CONNECTION_ID}`: 경험 플랫폼에 [연결 단계에서 얻은 소스 연결 ID를 사용하십시오](#connect-to-your-experience-platform-data).
 * `{TARGET_CONNECTION_ID}`: 스트리밍 대상에 [연결 단계에서 얻은 대상 연결 ID를 사용합니다](#connect-to-streaming-destination).
 
@@ -392,7 +390,7 @@ curl -X POST \
 ```
 
 
-## 새 대상에 데이터 활성화
+## 새 대상에 데이터 활성화 {#activate-data}
 
 ![대상 단계 개요 단계 5](/help/rtcdp/destinations/assets/step5-create-streaming-destination-api.png)
 
@@ -451,6 +449,18 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
                 "path": "{PROFILE_ATTRIBUTE}"
             }
         }
+    },
+        },
+        {
+        "op": "add",
+        "path": "/transformations/0/params/profileSelectors/selectors/-",
+        "value": {
+            "type": "JSON_PATH",
+            "value": {
+                "operator": "EXISTS",
+                "path": "{PROFILE_ATTRIBUTE}"
+            }
+        }
     }
 ]
 ```
@@ -458,7 +468,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 * `{DATAFLOW_ID}`: 이전 단계에서 얻은 데이터 흐름을 사용합니다.
 * `{ETAG}`: 이전 단계에서 얻은 태그를 사용합니다.
 * `{SEGMENT_ID}`: 이 대상으로 내보낼 세그먼트 ID를 제공합니다. 활성화할 세그먼트의 세그먼트 ID를 검색하려면 https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/으로 이동하고 왼쪽 탐색 메뉴에서 **세그멘테이션 서비스 API** 를 선택한 다음 작업을 `GET /segment/jobs` 찾습니다.
-* `{PROFILE_ATTRIBUTE}`: 예, `"person.lastName"`
+* `{PROFILE_ATTRIBUTE}`: 예: `personalEmail.address` 또는 `person.lastName`
 
 **응답**
 
@@ -503,8 +513,23 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
         "name": "GeneralTransform",
         "params": {
             "profileSelectors": {
-                "selectors": []
-            },
+                        "selectors": [
+                            {
+                                "type": "JSON_PATH",
+                                "value": {
+                                    "path": "personalEmail.address",
+                                    "operator": "EXISTS"
+                                }
+                            },
+                            {
+                                "type": "JSON_PATH",
+                                "value": {
+                                    "path": "person.lastname",
+                                    "operator": "EXISTS"
+                                }
+                            }
+                        ]
+                    },
             "segmentSelectors": {
                 "selectors": [
                     {
@@ -520,6 +545,50 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
         }
     }
 ],
+```
+
+**내보낸 데이터**
+
+>[!IMPORTANT]
+>
+> 새 대상에 대한 데이터 [활성화](#activate-data)단계의 프로필 속성 및 세그먼트 외에도 AWS Kinesis 및 Azure 이벤트 허브의 내보낸 데이터에는 ID 맵에 대한 정보도 포함됩니다. 내보낸 프로필의 ID를 나타냅니다(예: [ECID](https://docs.adobe.com/content/help/ko-KR/id-service/using/intro/id-request.html), 모바일 ID, Google ID, 이메일 주소 등). 아래 예를 참조하십시오.
+
+```
+{
+  "person": {
+    "email": "yourstruly@adobe.con"
+  },
+  "segmentMembership": {
+    "ups": {
+      "72ddd79b-6b0a-4e97-a8d2-112ccd81bd02": {
+        "lastQualificationTime": "2020-03-03T21:24:39Z",
+        "status": "exited"
+      },
+      "7841ba61-23c1-4bb3-a495-00d695fe1e93": {
+        "lastQualificationTime": "2020-03-04T23:37:33Z",
+        "status": "existing"
+      }
+    }
+  },
+  "identityMap": {
+    "ecid": [
+      {
+        "id": "14575006536349286404619648085736425115"
+      },
+      {
+        "id": "66478888669296734530114754794777368480"
+      }
+    ],
+    "email_lc_sha256": [
+      {
+        "id": "655332b5fa2aea4498bf7a290cff017cb4"
+      },
+      {
+        "id": "66baf76ef9de8b42df8903f00e0e3dc0b7"
+      }
+    ]
+  }
+}
 ```
 
 ## 다음 단계
