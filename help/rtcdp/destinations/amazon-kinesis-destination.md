@@ -4,9 +4,9 @@ seo-title: Amazon Kinesis 대상
 description: Amazon Kinesis 스토리지에 대한 실시간 아웃바운드 연결을 생성하여 Adobe Experience Platform에서 데이터를 스트리밍합니다.
 seo-description: Amazon Kinesis 스토리지에 대한 실시간 아웃바운드 연결을 생성하여 Adobe Experience Platform에서 데이터를 스트리밍합니다.
 translation-type: tm+mt
-source-git-commit: 47e03d3f58bd31b1aec45cbf268e3285dd5921ea
+source-git-commit: 883bea4aba0548e96b891987f17b8535c4d2eba7
 workflow-type: tm+mt
-source-wordcount: '446'
+source-wordcount: '458'
 ht-degree: 2%
 
 ---
@@ -73,29 +73,44 @@ Amazon Kinesis와 같은 스트리밍 대상을 사용하면 고부가가치 세
 
 ## 내보낸 데이터 {#exported-data}
 
-내보낸 경험 플랫폼 데이터는 JSON 형식 [!DNL Amazon Kinesis] 으로 배치됩니다. 예를 들어 특정 세그먼트를 종료한 대상의 해시된 이메일 ID가 포함된 이벤트는 다음과 같을 수 있습니다.
+내보낸 경험 플랫폼 데이터는 JSON 형식 [!DNL Amazon Kinesis] 으로 배치됩니다. 예를 들어, 아래 이벤트에는 특정 세그먼트에 자격을 부여하여 다른 세그먼트를 종료한 대상자의 이메일 주소 프로필 속성이 포함되어 있습니다. 이 잠재 고객의 ID는 ECID와 이메일입니다.
 
 ```
 {
-   "segmentMembership":{
-      "ups":{
-         "7841ba61-23c1-4bb3-a495-00d695fe1e93":{
-            "lastQualificationTime":"2020-03-03T21:24:39Z",
-            "status":"exited"
-         }
+  "person": {
+    "email": "yourstruly@adobe.con"
+  },
+  "segmentMembership": {
+    "ups": {
+      "7841ba61-23c1-4bb3-a495-00d3g5fe1e93": {
+        "lastQualificationTime": "2020-05-25T21:24:39Z",
+        "status": "exited"
+      },
+      "59bd2fkd-3c48-4b18-bf56-4f5c5e6967ae": {
+        "lastQualificationTime": "2020-05-25T23:37:33Z",
+        "status": "existing"
       }
-   }
-},
-"identityMap":{
-   "email_lc_sha256":[
+    }
+  },
+  "identityMap": {
+    "ecid": [
       {
-         "id":"655332b5fa2aea4498bf7a290cff017cb4"
+        "id": "14575006536349286404619648085736425115"
       },
       {
-         "id":"66baf76ef9de8b42df8903f00e0e3dc0b7"
+        "id": "66478888669296734530114754794777368480"
       }
-   ]
-},
+    ],
+    "email_lc_sha256": [
+      {
+        "id": "655332b5fa2aea4498bf7a290cff017cb4"
+      },
+      {
+        "id": "66baf76ef9de8b42df8903f00e0e3dc0b7"
+      }
+    ]
+  }
+}
 ```
 
 
