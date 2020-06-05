@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 고객 AI 개요
 topic: Customer AI overview
 translation-type: tm+mt
-source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+workflow-type: tm+mt
+source-wordcount: '487'
+ht-degree: 0%
 
 ---
 
@@ -32,7 +35,7 @@ source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
 
 - 고객 AI를 사용하여 동적 가격 또는 고객이 구매하려는 가격 포인트를 예측할 수 없습니다.
 - 고객 AI는 제안을 제공하면 고객이 품목을 더 구매할 가능성이 있는지 여부를 결정할 수 없습니다. 성향 점수를 기반으로 할인 혜택을 전송하기로 결정할 수 있지만 이러한 고객을 전환하기 위한 최상의 방법은 아닙니다.
-- 고객 AI는 제품 추천 도구가 아닙니다. 수천 개의 SKU가 있는 경우 Adobe Target과 같은 실제 제품 추천 솔루션을 위한 프록시로 고객 AI를 사용하지 마십시오.
+- 고객 AI는 제품 추천 도구가 아닙니다. 수천 개의 SKU가 있는 경우 실제 제품 추천 솔루션에 대해 고객 AI를 프록시로 사용하지 마십시오 [!DNL Adobe Target].
 - 고객 AI는 고객이 &quot;인지도&quot;, &quot;고려&quot;, &quot;구매&quot; 또는 &quot;유지&quot; 단계에 있는 경우 등 고객이 어떤 고객 여정을 구매하는지 예측할 수 없습니다.
 - 나중에 출시될 제품을 구매할 가능성이 있는 고객을 파악하기 위해 고객 AI를 사용하지 마십시오. 이를 위해서는 고객 AI가 데이터에 대한 머신 러닝 알고리즘을 성공적으로 교육하기 위해 특정 성공 이벤트가 과거에 있어야 합니다.
 
