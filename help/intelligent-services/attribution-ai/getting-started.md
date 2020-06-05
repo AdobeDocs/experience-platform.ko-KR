@@ -4,17 +4,20 @@ solution: Experience Platform
 title: Attribution AI에서 시작하기
 topic: Getting started
 translation-type: tm+mt
-source-git-commit: 6161f5a9ca0df341272a96a8a19ce6c34f6d5d3e
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+workflow-type: tm+mt
+source-wordcount: '499'
+ht-degree: 0%
 
 ---
 
 
 # Attribution AI에서 시작하기
 
-다음 가이드에서는 Attribution AI 사용과 관련된 다양한 Adobe Experience Platform 서비스를 이해해야 합니다. 자습서를 시작하기 전에 다음 문서를 검토하십시오.
+다음 안내서에서는 Attribution AI 사용과 관련된 다양한 [!DNL Adobe Experience Platform] 서비스를 이해해야 합니다. 자습서를 시작하기 전에 다음 문서를 검토하십시오.
 
-- [XDM(Experience Data Model) 시스템 개요](../../xdm/home.md): XDM은 경험 플랫폼 기반의 Adobe Experience Cloud를 통해 정확한 타이밍에 적합한 고객에게 올바른 메시지를 전달할 수 있는 기본 프레임워크입니다. XDM System은 EXPERIENCE Platform(경험 플랫폼)이 구축되는 방법론을 통해 플랫폼 서비스에서 사용하기 위해 경험 데이터 모델 스키마를 운영하게 합니다.
-- [스키마 컴포지션의 기본 사항](../../xdm/schema/composition.md): 이 문서에서는 XDM(Experience Data Model) 스키마 및 Adobe Experience Platform에서 사용할 스키마를 작성하기 위한 기본 블록, 원칙 및 모범 사례에 대해 소개합니다.
+- [XDM(Experience Data Model) 시스템 개요](../../xdm/home.md): XDM은 경험 플랫폼 [!DNL Adobe Experience Cloud]을 기반으로 올바른 고객에게 올바른 메시지를 적시에 적합한 채널로 전달할 수 있는 기본 프레임워크입니다. XDM System은 EXPERIENCE Platform(경험 플랫폼)이 구축되는 방법론을 통해 플랫폼 서비스에서 사용하기 위해 경험 데이터 모델 스키마를 운영하게 합니다.
+- [스키마 컴포지션의 기본 사항](../../xdm/schema/composition.md): 이 문서에서는 XDM(Experience Data Model) 스키마 및 사용할 스키마 작성에 대한 기본 블록, 원칙 및 모범 사례에 대해 소개합니다 [!DNL Adobe Experience Platform].
 - [스키마 빌드](../../xdm/tutorials/create-schema-ui.md): 이 자습서에서는 경험 플랫폼 내의 스키마 편집기를 사용하여 스키마를 만드는 단계를 설명합니다.
 
 기여도 AI를 사용하려면 데이터 세트가 XDM( [경험 데이터 모델](../../xdm/home.md) )의 혼합인 CEE(Consumer Experience Events) 스키마를 따라야 합니다. 이 데이터를 구현하거나 변경하려면 attributionai-support@adobe.com의 Adobe 지원 센터에 문의하십시오. 미디어 지출 데이터가 있는 경우 매출 및 ROI와 같은 추가 분석을 수행할 수 있습니다. 고객 프로파일 데이터를 사용할 수 있는 경우 크레딧을 고객 프로파일 레벨에 더 적용할 수 있습니다.
@@ -23,7 +26,7 @@ source-git-commit: 6161f5a9ca0df341272a96a8a19ce6c34f6d5d3e
 
 - **전환 이벤트:** 고객이 목표를 향해 이정표를 나타내기 위해 수행하는 모든 디지털 이벤트 또는 디지털 인터랙션(예: 컨퍼런스 등록) 추가 예로는 유료 전환, 무료 계정 등록 또는 트레이트 자격증이 있습니다.
 
-- **터치포인트:** 고객이 목표를 향해 가는 모든 디지털 이벤트 또는 디지털 인터랙션 구매 전 관련 마케팅 노력, 열람한 광고 노출 수, 유료 검색 클릭 수 등이 그 예입니다.
+- **터치포인트:** 고객이 목표를 향해 가는 모든 디지털 이벤트 또는 디지털 인터랙션 구매 전 관련 마케팅 활동, 열람한 광고 노출 수 및 유료 검색 클릭 수 등이 그 예입니다.
 
 ## 기여도 AI 점수 다운로드
 
