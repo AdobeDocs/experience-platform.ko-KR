@@ -4,7 +4,7 @@ seo-title: Adobe Experience Platform 웹 SDK 디버깅
 description: Experience Platform 웹 SDK 디버깅 전환 방법 살펴보기
 seo-description: Experience Platform 웹 SDK 디버깅 전환 방법 살펴보기
 translation-type: tm+mt
-source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+source-git-commit: 31a527cb4ad1348262131f827c7e932404542c4b
 workflow-type: tm+mt
 source-wordcount: '323'
 ht-degree: 1%
@@ -19,7 +19,7 @@ ht-degree: 1%
 디버깅은 기본적으로 비활성화되지만 다음 세 가지 방법으로 전환할 수 있습니다.
 
 * `configure` command
-* `debug` command
+* `setDebug` command
 * 쿼리 문자열 매개 변수가 포함된 랜딩 페이지 URL이 있는지 확인합니다
 
 ## 구성 명령을 사용하여 디버깅 전환
@@ -42,7 +42,7 @@ alloy("configure", {
 다음과 같이 별도의 명령으로 디버깅을 `debug` 전환합니다.
 
 ```javascript
-alloy("debug", {
+alloy("setDebug", {
   "enabled": true
 });
 ```
