@@ -4,7 +4,7 @@ solution: Experience Platform
 title: UI에서 Microsoft SQL Server 소스 커넥터 만들기
 topic: overview
 translation-type: tm+mt
-source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
+source-git-commit: 75ba0bce7ce070af851bbf7e220dbf08febc4c20
 workflow-type: tm+mt
 source-wordcount: '511'
 ht-degree: 0%
@@ -48,7 +48,7 @@ Adobe <a href="https://platform.adobe.com" target="_blank">Experience Platform�
 
 [ *데이터베이스* ] 범주 아래에서 **Microsoft SQL Server** 를 선택하여 화면 오른쪽에 정보 막대를 표시합니다. 정보 표시줄에는 선택한 소스에 대한 간단한 설명과 소스와 연결하거나 설명서를 보는 옵션이 제공됩니다. 새 인바운드 기본 연결을 만들려면 **Connect 소스를 선택합니다**.
 
-![](../../../../images/tutorials/create/microsoft-sql-server/sources-catalog.png)
+![](../../../../images/tutorials/create/microsoft-sql-server/catalog.png)
 
 [ *Microsoft SQL Server에* 연결] 페이지가 나타납니다. 이 페이지에서 새 자격 증명이나 기존 자격 증명을 사용할 수 있습니다.
 
@@ -56,13 +56,13 @@ Adobe <a href="https://platform.adobe.com" target="_blank">Experience Platform�
 
 새 자격 증명을 사용 중인 경우 **새 계정을 선택합니다**. 표시되는 입력 양식에서 이름, 선택적 설명 및 SQL Server 자격 증명을 사용하여 기본 연결을 제공합니다. 완료되면 **Connect를** 선택한 다음 새 기본 연결이 설정될 때까지 잠시 기다려 주십시오.
 
-![](../../../../images/tutorials/create/microsoft-sql-server/new-credentials.png)
+![](../../../../images/tutorials/create/microsoft-sql-server/new.png)
 
 ### 기존 계정
 
 기존 계정을 연결하려면 연결할 SQL Server 계정을 선택한 다음 다음을 선택하여 **계속** 진행하십시오.
 
-![](../../../../images/tutorials/create/microsoft-sql-server/existing-credentials.png)
+![](../../../../images/tutorials/create/microsoft-sql-server/existing.png)
 
 ## 다음 단계
 
