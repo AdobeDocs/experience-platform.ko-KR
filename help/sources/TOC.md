@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform 소스 커넥터 도움말
 translation-type: tm+mt
-source-git-commit: 165d76224f4aeb292e72df1e2574ae1d0821c44c
+source-git-commit: 328b897c54453f23ad7b68fb2a288712cb4fe538
 workflow-type: tm+mt
 source-wordcount: '578'
 ht-degree: 0%
@@ -142,7 +142,8 @@ ht-degree: 0%
          - [FTP 및 SFTP 커넥터](tutorials/ui/create/cloud-storage/ftp-sftp.md)
          - [Google 클라우드 스토리지 커넥터](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
       - CRM {#crm}
-         - [Microsoft Dynamics 및 Salesforce 커넥터](tutorials/ui/create/crm/dynamics-salesforce.md)
+         - [Microsoft Dynamics 커넥터](tutorials/ui/create/crm/dynamics.md)
+         - [Salesforce 커넥터](tutorials/ui/create/crm/salesforce.md)
       - 고객 성공 사례 {#customer-success}
          - [Salesforce Service Cloud 커넥터](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow 커넥터](tutorials/ui/create/customer-success/servicenow.md)
