@@ -4,7 +4,7 @@ solution: Experience Platform
 title: UI에서 ServiceNow 소스 커넥터 만들기
 topic: overview
 translation-type: tm+mt
-source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
+source-git-commit: 75ba0bce7ce070af851bbf7e220dbf08febc4c20
 workflow-type: tm+mt
 source-wordcount: '519'
 ht-degree: 0%
@@ -60,13 +60,13 @@ ServiceNow *에 연결* 페이지가 나타납니다. 이 페이지에서 새 �
 
 새 자격 증명을 사용 중인 경우 **새 계정을 선택합니다**. 표시되는 입력 양식에서 이름, 선택적 설명 및 ServiceNow 자격 증명으로 연결을 제공합니다. 완료되면 **Connect를** 선택한 다음 새 계정이 설정되기까지 약간의 시간이 소요됩니다.
 
-![](../../../../images/tutorials/create/servicenow/new-credentials.png)
+![](../../../../images/tutorials/create/servicenow/new.png)
 
 ### 기존 계정
 
 기존 계정을 연결하려면 연결하려는 ServiceNow 계정을 선택한 다음 **다음을** 선택하여 진행합니다.
 
-![](../../../../images/tutorials/create/servicenow/existing-credentials.png)
+![](../../../../images/tutorials/create/servicenow/existing.png)
 
 ## 다음 단계
 
