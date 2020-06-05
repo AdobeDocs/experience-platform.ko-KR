@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 기계 학습 모델 연습 만들기 및 게시
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+workflow-type: tm+mt
+source-wordcount: '1582'
+ht-degree: 0%
 
 ---
 
@@ -15,7 +18,7 @@ source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
 
 온라인 소매 웹 사이트를 소유하고 있다고 가정해 보십시오. 고객이 소매 웹 사이트에서 쇼핑할 때 개인화된 제품 권장 사항을 제시하여 비즈니스에 제공하는 다양한 기타 제품을 표시하고 싶을 것입니다. 웹 사이트 존재의 기간 동안 고객 데이터를 지속적으로 수집하여 이 데이터를 통해 맞춤형 제품 추천을 생성하고자 합니다.
 
-Adobe Experience Platform Data Science Workspace는 미리 작성된 [제품 추천 레시피를 사용하여 목표를 달성할 수 있는 방법을 제공합니다](../pre-built-recipes/product-recommendations.md). 이 튜토리얼을 따라 소매 데이터에 액세스하고, 이해하고, 기계 학습 모델을 만들고, 최적화하고, 데이터 과학 작업 공간에서 통찰력을 생성하는 방법을 확인하십시오.
+[!DNL Adobe Experience Platform] 데이터 과학 작업 공간은 미리 작성된 [제품 추천 레시피를 사용하여 목표를 달성할 수 있는 방법을 제공합니다](../pre-built-recipes/product-recommendations.md). 이 튜토리얼을 따라 소매 데이터에 액세스하고, 이해하고, 기계 학습 모델을 만들고, 최적화하고, 데이터 과학 작업 공간에서 통찰력을 생성하는 방법을 확인하십시오.
 
 이 자습서는 데이터 과학 작업 영역의 작업 과정을 반영하고, 머신 러닝 모델을 만들기 위한 다음 단계를 다룹니다.
 
@@ -28,7 +31,7 @@ Adobe Experience Platform Data Science Workspace는 미리 작성된 [제품 추
 
 이 튜토리얼을 시작하기 전에 다음 전제 조건이 필요합니다.
 
-* Adobe Experience Platform 이용 Experience Platform에서 IMS 조직에 액세스할 수 없는 경우 시스템 관리자에게 문의하십시오.
+* 액세스 권한 [!DNL Adobe Experience Platform]. Experience Platform에서 IMS 조직에 액세스할 수 없는 경우 시스템 관리자에게 문의하십시오.
 
 * 활성 에셋. 다음 항목을 제공하려면 계정 담당자에게 문의하십시오.
    * 추천 레서피
@@ -49,13 +52,13 @@ Adobe Experience Platform Data Science Workspace는 미리 작성된 [제품 추
 
 ## 데이터 준비 {#prepare-your-data}
 
-고객에게 개인화된 제품을 추천할 수 있는 기계 학습 모델을 만들려면 웹 사이트에서 이전에 구입한 고객을 분석해야 합니다. 이 섹션에서는 Adobe Analytics를 통해 이 데이터를 플랫폼으로 수집되는 방법과 이 데이터가 기계 학습 모델에서 사용할 기능 데이터 세트로 변형되는 방법을 설명합니다.
+고객에게 개인화된 제품을 추천할 수 있는 기계 학습 모델을 만들려면 웹 사이트에서 이전에 구입한 고객을 분석해야 합니다. 이 섹션에서는 이 데이터를 어떻게 플랫폼에서 인제스트하는지 [!DNL Adobe Analytics]및 이 데이터를 어떻게 시스템 학습 모델에서 사용할 기능 데이터 세트로 변환하는지 설명합니다.
 
 ### 데이터 탐색 및 스키마 이해
 
-1. Adobe [Experience Platform](https://platform.adobe.com/) 에 로그인한 다음 클릭하여 기존 데이터 세트를 모두 나열하고 **[!UICONTROL Datasets]** 탐색할 데이터 세트를 선택합니다. 이 경우, Analytics 데이터 세트 **골든 데이터 세트 postValues가 표시됩니다**.
+1. Adobe [Experience Platform에](https://platform.adobe.com/) 로그인한 다음 **[!UICONTROL 데이터 세트를 클릭하여]** 기존 데이터 세트를 모두 나열하고 탐색할 데이터 세트를 선택합니다. 이 경우, Analytics 데이터 세트 **골든 데이터 세트 postValues가 표시됩니다**.
    ![](../images/models-recipes/model-walkthrough/datasets_110.png)
-2. 오른쪽 위 **[!UICONTROL Preview Dataset]** 에서 샘플을 선택한 다음 을 클릭합니다 **[!UICONTROL Close]**.
+2. 오른쪽 위 **[!UICONTROL 의 데이터 세트]** 미리 보기를 선택하여 샘플 레코드를 검사한 다음 닫기를 **[!UICONTROL 클릭합니다]**.
    ![](../images/models-recipes/model-walkthrough/golden_data_set_110.png)
 3. 오른쪽 레일의 스키마 아래 링크를 선택하여 데이터 세트에 대한 스키마를 본 다음 데이터 세트 세부 정보 페이지로 돌아갑니다.&quot;
    ![](../images/models-recipes/model-walkthrough/golden_schema_110.png)
@@ -76,11 +79,11 @@ Adobe Experience Platform Data Science Workspace는 미리 작성된 [제품 추
 
 ### 제품 추천 레시피 살펴보기
 
-1. Adobe Experience Platform에서 왼쪽 탐색 열 **[!UICONTROL Models]** 으로 이동한 다음 맨 위 **[!UICONTROL Recipes]** 에서 을 클릭하여 조직에 대해 사용 가능한 레서피 목록을 확인합니다.
+1. 에서 왼쪽 탐색 [!DNL Adobe Experience Platform]열 **[!UICONTROL 에서]** 모델 **[!UICONTROL 으로 이동한 다음]** 맨 위에 있는 레서피를 클릭하여 조직에서 사용할 수 있는 레서피 목록을 확인합니다.
    ![](../images/models-recipes/model-walkthrough/browse_recipes.png)
-2. 해당 이름을 클릭하여 제공된 **[!UICONTROL Recommendations Recipe]** 을 찾아 엽니다.
+2. 해당 이름을 클릭하여 제공된 **[!UICONTROL Recommendations]** 레서피를 찾아 엽니다.
    ![](../images/models-recipes/model-walkthrough/recommendations_recipe_110.png)
-3. 오른쪽 레일에서 를 클릭하여 레시피를 향상시키는 스키마 **[!UICONTROL Recommendations Input Schema]** 를 봅니다. 스키마 필드 **[!UICONTROL itemId]** 와 **[!UICONTROL userId]** 는 특정 시간(**[!UICONTROL interactionType]**)에 해당 고객이 구매한 제품에&#x200B;**[!UICONTROL timestamp]**&#x200B;해당합니다. 동일한 단계에 따라 필드의 필드를 검토하십시오 **[!UICONTROL Recommendations Output Schema]**.
+3. 오른쪽 레일에서 **[!UICONTROL 권장 사항 입력 스키마를]** 클릭하여 레서피를 강력하게 하는 스키마를 봅니다. 스키마 필드 **[!UICONTROL itemId]** 및 **[!UICONTROL userId]** 는 특정 시간(타임스탬프)에 해당 고객이 구매한 제품(**[!UICONTROL interactionType]**)에&#x200B;****&#x200B;해당합니다. 동일한 단계에 따라 **[!UICONTROL Recommendations 출력 스키마의 필드를 검토하십시오]**.
    ![](../images/models-recipes/model-walkthrough/preview_schemas.png)
 
 이제 제품 권장 사항 레서피에 필요한 입력 및 출력 스키마를 검토했습니다. 이제 다음 섹션으로 이동하여 제품 추천 모델을 만들고, 교육하고, 평가하는 방법을 확인할 수 있습니다.
@@ -93,13 +96,13 @@ Adobe Experience Platform Data Science Workspace는 미리 작성된 [제품 추
 
 모델은 레서피 인스턴스로, 데이터를 규모에 따라 트레이닝하고 점수를 매길 수 있습니다.
 
-1. Adobe Experience Platform에서 왼쪽 탐색 열 **[!UICONTROL Models]** **[!UICONTROL Recipes]** 으로 이동한 다음 페이지 상단에서 을 클릭하여 조직에 대해 사용 가능한 모든 레서피 목록을 표시합니다.
+1. 에서 왼쪽 탐색 [!DNL Adobe Experience Platform]열 **[!UICONTROL 에서]** 모델 **[!UICONTROL 으로 이동한 다음 페이지]** 맨 위에 있는 레서피를 클릭하여 조직에 대해 사용 가능한 모든 레서피 목록을 표시합니다.
    ![](../images/models-recipes/model-walkthrough/browse_recipes.png)
-2. 해당 이름을 클릭하여 제공된 **[!UICONTROL Recommendations Recipe]** 을 찾아 열고 레서피 개요 페이지를 입력합니다. 가운데(기존 모델이 없는 경우) 또는 레서피 개요 페이지의 오른쪽 상단에서 을 클릭합니다. **[!UICONTROL Create a Model]**
+2. 해당 이름을 클릭하고 레서피 **[!UICONTROL 의]** 개요 페이지를 입력하여 제공된 Recommendations 레서피를 찾아 엽니다. 중심(기존 모델이 없는 경우) **[!UICONTROL 이나 레서피]** 개요 페이지의 오른쪽 상단에서 모델 만들기를 클릭합니다.
    ![](../images/models-recipes/model-walkthrough/recommendations_recipe_110.png)
-3. 교육에 사용할 수 있는 입력 데이터 집합 목록이 표시되고, 선택하고 **[!UICONTROL Recommendations Input Dataset]** 클릭합니다 **[!UICONTROL Next]**.
+3. 교육에 사용할 수 있는 입력 데이터 세트 목록이 표시되면 [ **[!UICONTROL 권장 사항 입력 데이터 세트]** ]를 선택하고 **[!UICONTROL 다음을 클릭합니다]**.
    ![](../images/models-recipes/model-walkthrough/select_dataset.png)
-4. &quot;제품 권장 사항 모델&quot;과 같은 모델 이름을 제공합니다. 모델의 기본 교육 및 점수 지정 동작에 대한 설정이 포함된 모델에 대한 사용 가능한 구성이 나열됩니다. 이러한 구성은 조직에 따라 다르므로 변경할 필요가 없습니다. 구성을 검토하고 을 클릭합니다 **[!UICONTROL Finish]**.
+4. &quot;제품 권장 사항 모델&quot;과 같은 모델 이름을 제공합니다. 모델의 기본 교육 및 점수 지정 동작에 대한 설정이 포함된 모델에 대한 사용 가능한 구성이 나열됩니다. 이러한 구성은 조직에 따라 다르므로 변경할 필요가 없습니다. 구성을 검토하고 마침을 **[!UICONTROL 클릭합니다]**.
    ![](../images/models-recipes/model-walkthrough/configure_model.png)
 5. 이제 모델이 생성되고 모델의 *개요* 페이지가 새로 생성된 교육 실행 내에 나타납니다. 모델이 생성될 때 기본적으로 교육 실행이 생성됩니다.
    ![](../images/models-recipes/model-walkthrough/model_post_creation.png)
@@ -108,13 +111,13 @@ Adobe Experience Platform Data Science Workspace는 미리 작성된 [제품 추
 
 ### 사용자 지정 하이퍼매개 변수를 사용하여 모델 트레이닝
 
-1. [ *모델 개요* ] 페이지에서 오른쪽 위 **[!UICONTROL Train]** 를 클릭하여 새 교육 실행을 만듭니다. 모델을 만들 때 사용한 것과 동일한 입력 데이터 세트를 선택하고 을 클릭합니다 **[!UICONTROL Next]**.
+1. [ *모델 개요* ] 페이지에서 오른쪽 위 **[!UICONTROL 의]** [교육]을 클릭하여 새 교육 실행을 만듭니다. 모델을 만들 때 사용한 것과 동일한 입력 데이터 세트를 선택하고 **[!UICONTROL 다음을 클릭합니다]**.
    ![](../images/models-recipes/model-walkthrough/training_select_dataset.png)
-2. 구성 *페이지가* 나타납니다. 여기서는 Hyperparameter라고도 하는 교육 실행 **[!UICONTROL num_recommendations]** 값을 구성할 수 있습니다. 훈련되고 최적화된 모델은 트레이닝 실행 결과를 기반으로 가장 성과가 좋은 하이퍼링크 매개 변수를 활용합니다.
+2. 구성 *페이지가* 나타납니다. 여기서는 Hyperparameter라고도 하는 교육 실행의 **[!UICONTROL num_recommendations]** 값을 구성할 수 있습니다. 훈련되고 최적화된 모델은 트레이닝 실행 결과를 기반으로 가장 성과가 좋은 하이퍼링크 매개 변수를 활용합니다.
 
    하이퍼매개 변수는 알 수 없으므로, 교육이 실행되기 전에 할당해야 합니다. 하이퍼매개 변수를 조정하면 훈련된 모델의 정확도가 변경될 수 있습니다. 모델 최적화는 반복적인 프로세스이므로 만족스러운 평가가 이루어지기 전에 여러 개의 교육 실행이 필요할 수 있습니다.
 
-   >[!TIP] 10 **[!UICONTROL num_recommendations]** 으로 설정합니다.
+   >[!TIP] num_recommendations **[!UICONTROL 를]** 10으로 설정합니다.
 
    ![](../images/models-recipes/model-walkthrough/configure_hyperparameter.png)
 3. 새 교육 실행이 완료되면 모델 평가 차트에 추가 데이터 포인트가 나타납니다. 이 작업은 최대 몇 분 정도 걸릴 수 있습니다.
@@ -137,12 +140,12 @@ Adobe Experience Platform Data Science Workspace는 미리 작성된 [제품 추
 ### 성과 및 인사이트 생성
 
 1. 제품 권장 사항 모델 *개요* 페이지에서 가장 높은 회수 및 정밀도 값으로 성과가 좋은 교육 실행 이름을 클릭합니다.
-2. 교육 실행 세부 정보 페이지의 오른쪽 위에서 을 클릭합니다 **[!UICONTROL Score]**.
-3. 모델 **[!UICONTROL Recommendations Input Dataset]** 을 만들고 해당 교육 실행을 실행할 때 사용한 데이터 세트와 동일한 점수 입력 데이터 세트로 선택합니다. Then, click **[!UICONTROL Next]**.
+2. 교육 실행 세부 사항 페이지의 오른쪽 맨 위에서 **[!UICONTROL 점수를 클릭합니다]**.
+3. 모델을 **[!UICONTROL 만들고]** 해당 교육 실행을 실행할 때 사용한 데이터 세트와 동일한 점수 입력 데이터 세트로 권장 사항 입력 데이터 세트를 선택합니다. 그런 다음 **[!UICONTROL 다음을 클릭합니다]**.
    ![](../images/models-recipes/model-walkthrough/scoring_input.png)
-4. 점수 출력 데이터 세트 **[!UICONTROL Recommendations Output Dataset]** 로 선택합니다. 점수 지정 결과는 이 데이터 세트에 일괄 저장됩니다.
+4. 점수 **[!UICONTROL 출력 데이터]** 세트로 Recommendations 출력 데이터 세트를 선택합니다. 점수 지정 결과는 이 데이터 세트에 일괄 저장됩니다.
    ![](../images/models-recipes/model-walkthrough/scoring_output.png)
-5. 점수 구성 검토 이러한 매개 변수에는 해당 스키마와 함께 이전에 선택한 입력 및 출력 데이터 집합이 포함됩니다. 점수 **[!UICONTROL Finish]** 실행을 시작하려면 을 클릭합니다. 실행을 완료하는 데 몇 분 정도 걸릴 수 있습니다.
+5. 점수 구성 검토 이러한 매개 변수에는 해당 스키마와 함께 이전에 선택한 입력 및 출력 데이터 집합이 포함됩니다. 마침 **[!UICONTROL 을]** 클릭하여 점수 실행을 시작합니다. 실행을 완료하는 데 몇 분 정도 걸릴 수 있습니다.
    ![](../images/models-recipes/model-walkthrough/scoring_configure.png)
 
 
@@ -150,9 +153,9 @@ Adobe Experience Platform Data Science Workspace는 미리 작성된 [제품 추
 
 점수부여 실행이 성공적으로 완료되면 결과를 미리 보고 생성된 인사이트를 볼 수 있습니다.
 
-1. 점수 지정 실행 페이지에서 완료된 점수 실행 을 클릭한 다음 오른쪽 레일 **[!UICONTROL Preview Scoring Results Dataset]** 을 클릭합니다.
+1. 점수 지정 실행 페이지에서 완료된 점수 실행을 클릭한 다음 오른쪽 레일에 있는 **[!UICONTROL 미리 보기 점수]** 결과 데이터 세트를 클릭합니다.
    ![](../images/models-recipes/model-walkthrough/score_complete.png)
-2. 미리 보기 테이블에서 각 행은 특정 고객에 대한 제품 권장 사항을 포함하며 각각 **[!UICONTROL recommendations]** 및 **[!UICONTROL userId]** 레이블로 표시됩니다. 샘플 스크린샷에서 **[!UICONTROL num_recommendations]** Hyperparameter가 10으로 설정되었으므로 권장 사항의 각 행은 숫자 기호(#)로 구분된 제품 ID를 최대 10개까지 포함할 수 있습니다.
+2. 미리 보기 테이블에서 각 행은 특정 고객에 대한 제품 권장 사항을 포함하며 각각 **[!UICONTROL recommendations]** 및 **[!UICONTROL userId로 레이블이]** 지정됩니다. 샘플 스크린샷에서 **[!UICONTROL num_recommendations]** Hyperparameter가 10으로 설정되었으므로 권장 사항의 각 행은 숫자 기호(#)로 구분된 최대 10개의 제품 ID를 포함할 수 있습니다.
    ![](../images/models-recipes/model-walkthrough/preview_score_results.png)
 
 ## 다음 단계 {#next-steps}
