@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 지능형 서비스에서 사용할 데이터 준비
 topic: Intelligent Services
 translation-type: tm+mt
-source-git-commit: 8e24c7c50d700bc3644ce710f77073e537207a6f
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
 workflow-type: tm+mt
-source-wordcount: '1445'
+source-wordcount: '1437'
 ht-degree: 0%
 
 ---
@@ -191,7 +191,7 @@ Intelligent Services는 이 스키마 내의 여러 주요 필드를 활용하�
 
 전송할 데이터 범위를 정한 후 Adobe 컨설팅 서비스에 문의하여 스키마에 데이터를 매핑하고 서비스에 인제스트합니다.
 
-Adobe Experience Platform 구독을 보유하고 있고 데이터를 직접 매핑하고 인제스트하려면 아래 섹션에 설명된 단계를 따르십시오.
+구독을 보유하고 있고 직접 데이터를 매핑하고 인제스트하려면 아래 섹션에 설명된 단계를 따르십시오. [!DNL Adobe Experience Platform]
 
 ### Adobe Experience Platform 사용
 
@@ -217,7 +217,7 @@ Adobe Experience Platform 구독을 보유하고 있고 데이터를 직접 매�
 
 #### 데이터 세트에 기본 ID 네임스페이스 태그 추가
 
-Adobe Audience Manager, Adobe Analytics 또는 다른 외부 소스에서 데이터를 가져오는 경우 데이터 세트에 `primaryIdentityNameSpace` 태그를 추가해야 합니다. 이 작업은 카탈로그 서비스 API에 PATCH 요청을 수행하여 수행할 수 있습니다.
+다른 외부 소스 [!DNL Adobe Audience Manager], [!DNL Adobe Analytics]또는 다른 외부 소스에서 데이터를 가져오는 경우 `primaryIdentityNameSpace` 태그를 데이터 세트에 추가해야 합니다. 이 작업은 카탈로그 서비스 API에 PATCH 요청을 수행하여 수행할 수 있습니다.
 
 로컬 CSV 파일의 데이터를 인제스트하는 경우 데이터 [매핑 및 인제스트 관련 다음 섹션으로 건너뛸 수 있습니다](#ingest).
 
