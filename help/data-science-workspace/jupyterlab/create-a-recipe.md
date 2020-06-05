@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Jupiter 노트북을 사용하여 레시피 만들기
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 1447196da7dbf59c1f498de40f12ed74c328c0e6
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+workflow-type: tm+mt
+source-wordcount: '2330'
+ht-degree: 0%
 
 ---
 
@@ -22,7 +25,7 @@ source-git-commit: 1447196da7dbf59c1f498de40f12ed74c328c0e6
 
 ## JupiterLab 노트북 환경 시작하기
 
-처음부터 만드는 방법은 데이터 과학 작업 공간에서 수행할 수 있습니다. 시작하려면 [Adobe Experience Platform](https://platform.adobe.com) 으로 이동하고 왼쪽의 **[!UICONTROL Notebooks]** 탭을 클릭합니다. JupiterLab Launcher에서 Recipe Builder 템플릿을 선택하여 새 전자 필기장을 만듭니다.
+처음부터 만드는 방법은 데이터 과학 작업 공간에서 수행할 수 있습니다. 시작하려면 [Adobe Experience Platform](https://platform.adobe.com) 으로 이동하고 왼쪽의 **[!UICONTROL 노트북]** 탭을 클릭합니다. JupiterLab Launcher에서 Recipe Builder 템플릿을 선택하여 새 전자 필기장을 만듭니다.
 
 Recipe Builder 전자 필기장을 사용하면 노트북 내에서 트레이닝과 점수 지정 실행을 실행할 수 있습니다. 이렇게 하면 교육 실행 및 점수 지정 데이터 간 `train()` 의 해당 방법과 `score()` 방법을 변경할 수 있습니다. 트레이닝 및 점수 출력 결과에 만족하면 Recipe Builder 노트북에 내장된 레서피 기능을 사용하여 노트북을 사용하여 데이터 과학 작업 공간에 사용할 레시피를 만들 수 있습니다.
 
@@ -33,7 +36,7 @@ Recipe Builder 전자 필기장을 사용하면 노트북 내에서 트레이닝
 
 론쳐에서 레서피 빌더 노트북을 클릭하면 해당 노트가 탭에서 열립니다. 노트북에 사용되는 템플릿은 Python Retail Sales Forecast Recipe이며 [이 공용 저장소에서 찾을 수 있습니다](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail/)
 
-도구 모음에는 세 가지 추가 작업( **[!UICONTROL Train]**&#x200B;및 **[!UICONTROL Score]** )이 있습니다 **[!UICONTROL Create Recipe]**. 이러한 아이콘은 레서피 빌더 노트북에만 나타납니다. 이러한 작업에 대한 자세한 내용은 노트북 [에서 레서피](#training-and-scoring) 작성 후 교육 및 점수 지정 섹션에서 다룹니다.
+도구 모음에는 세 가지 추가 작업( **[!UICONTROL 기차]**, 점수 **** 및 레서피 **[!UICONTROL 만들기)이 있습니다]**. 이러한 아이콘은 레서피 빌더 노트북에만 나타납니다. 이러한 작업에 대한 자세한 내용은 노트북 [에서 레서피](#training-and-scoring) 작성 후 교육 및 점수 지정 섹션에서 다룹니다.
 
 ![](../images/jupyterlab/create-recipe/toolbar_actions.png)
 
@@ -106,7 +109,7 @@ data_access_sdk_python
 
 ### 데이터 로드 중 {#loading-data}
 
-이 단계에서는 [판다 데이터 프레임을 사용합니다](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html). 플랫폼 SDK(`platform_sdk`Platform SDK)를 사용하여 Adobe Experience Platform의 파일 또는 팬더의 `read_csv()` 기능 또는 `read_json()` 기능을 사용하는 외부 소스에서 데이터를 로드할 수 있습니다.
+이 단계에서는 [판다 데이터 프레임을 사용합니다](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html). 플랫폼 SDK( [!DNL Adobe Experience Platform] Platform SDK)를`platform_sdk`사용하여 파일 또는 판다나 기능을 사용하는 외부 소스에서 데이터를 로드할 수 `read_csv()` `read_json()` 있습니다.
 
 - [플랫폼 SDK](#platform-sdk)
 - [외부 소스](#external-sources)
@@ -284,7 +287,7 @@ df.dropna(0, inplace=True)
 
 이 `pipeline.py` 파일에는 트레이닝 및 점수에 대한 논리가 포함되어 있습니다.
 
-### 트레이닝 {#training}
+### 교육 {#training}
 
 교육 목적은 교육 데이터 세트에 있는 기능과 레이블을 사용하여 모델을 만드는 것입니다.
 
@@ -440,13 +443,13 @@ def save(configProperties, prediction):
 
 전자 필기장을 변경하고 레서피 교육을 수행하려는 경우 막대 맨 위에 있는 관련 단추를 클릭하여 셀에서 교육 실행을 만들 수 있습니다. 이 단추를 클릭하면 교육 스크립트의 명령 및 출력 로그가 `evaluator.py` 셀 아래에 있는 전자 필기장에 나타납니다. Conda는 먼저 모든 종속성을 설치한 다음, 교육을 시작합니다.
 
-점수를 매기려면 최소 한 번은 교육을 실행해야 합니다. 이 **[!UICONTROL Run Scoring]** 단추를 클릭하면 교육 중에 생성된 교육된 모델의 점수가 매겨집니다. 점수 지정 스크립트가 아래에 나타납니다 `datasaver.py`.
+점수를 매기려면 최소 한 번은 교육을 실행해야 합니다. [점수 **[!UICONTROL 실행]** ] 단추를 클릭하면 교육 중에 생성된 교육 모델에 점수가 지정됩니다. 점수 지정 스크립트가 아래에 나타납니다 `datasaver.py`.
 
 디버깅을 위해 숨겨진 출력을 보려면 출력 셀 끝 `debug` 에 추가하고 다시 실행하십시오.
 
 ## 레서피 만들기 {#create-recipe}
 
-레서피 편집 작업이 완료되고 교육/점수 출력 결과에 만족하면 오른쪽 위 탐색 **[!UICONTROL Create Recipe]** 에서 레서피 레시피를 만들 수 있습니다.
+레서피 편집 작업이 완료되고 교육/점수 출력 결과에 만족하면 오른쪽 위 탐색 영역에서 레서피 **[!UICONTROL 만들기]** 를 눌러 노트북에서 레서피 레시피를 만들 수 있습니다.
 
 ![](../images/jupyterlab/create-recipe/create-recipe.png)
 
@@ -454,7 +457,7 @@ def save(configProperties, prediction):
 
 ![](../images/jupyterlab/create-recipe/enter_recipe_name.png)
 
-누르면 **[!UICONTROL Ok]** Adobe Experience Platform [의 새로운 레시피로 이동할 수 있습니다](https://platform.adobe.com/). 버튼을 클릭하면 아래 **[!UICONTROL View Recipes]** 의 **[!UICONTROL Recipes]** 탭으로 이동합니다 **[!UICONTROL ML Models]**
+확인 **[!UICONTROL 을]** 누르면 [Adobe Experience Platform의 새로운 레시피로 이동할 수 있습니다](https://platform.adobe.com/). 레서피 **[!UICONTROL 보기]** 단추를 클릭하여 **[!UICONTROL ML 모델 아래의]** 레서피 **[!UICONTROL 탭으로이동할 수있습니다]**
 
 ![](../images/jupyterlab/create-recipe/recipe_creation_started.png)
 
