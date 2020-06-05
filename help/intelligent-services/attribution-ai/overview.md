@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 기여도 AI 개요
 topic: Attribution AI
 translation-type: tm+mt
-source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+workflow-type: tm+mt
+source-wordcount: '654'
+ht-degree: 1%
 
 ---
 
@@ -19,7 +22,7 @@ Attribution AI는 Intelligent Services의 일부인 알고리즘에 의한 멀�
 
 기여도 AI 결과는 다양한 차원으로 구분할 수 있으며 고객 여정의 여러 단계에서 활용할 수 있습니다. 이 작업은 머신 러닝 문제, 알고리즘 선택, 트레이닝 또는 모델 배포 등의 비즈니스 요구 사항을 번역할 필요 없이 이루어집니다.
 
-기여도 AI 데이터는 Adobe(예: Analytics) 또는 비 Adobe 데이터 소스에서 얻을 수 있습니다.
+기여도 AI 데이터는 Adobe(예: [!DNL Analytics]) 또는 비 Adobe 데이터 소스.
 
 기여도 AI는 두 가지 카테고리, 알고리즘 및 규칙 기반 카테고리를 지원합니다. 알고리즘 점수에는 증분 및 영향을 받은 점수가 포함됩니다. 규칙 기반 점수로는 첫 번째 터치, 마지막 터치, 선형, U자 모양 및 시간 감소 등이 있습니다.
 
@@ -57,7 +60,7 @@ Attribution AI는 Intelligent Services의 일부인 알고리즘에 의한 멀�
 
 ### 추가 기능
 
-또한 기여도 AI는 Adobe Analytics와 같은 다른 Adobe 솔루션과의 통합을 제공합니다. 이를 통해 이러한 솔루션을 사용하여 사용자 정의 가능한 알고리즘 모델을 활용하여 미디어 성과를 평가하고 분석 통찰력을 제공할 수 있습니다.
+또한 기여도 AI는 다음과 같은 다른 Adobe 솔루션과의 통합을 제공합니다 [!DNL Adobe Analytics]. 이를 통해 이러한 솔루션을 사용하여 사용자 정의 가능한 알고리즘 모델을 활용하여 미디어 성과를 평가하고 분석 통찰력을 제공할 수 있습니다.
 
 ## 다음 단계
 
