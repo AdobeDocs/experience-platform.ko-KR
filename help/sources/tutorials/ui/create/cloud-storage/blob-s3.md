@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI에서 Azure Blob 또는 Amazon S3 소스 커넥터 만들기
 topic: overview
 translation-type: tm+mt
-source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
+source-git-commit: 9fd00ec198f61843bb9a395103215e5441b23745
 workflow-type: tm+mt
-source-wordcount: '591'
+source-wordcount: '644'
 ht-degree: 1%
 
 ---
@@ -56,18 +56,30 @@ Experience Platform은 외부 스토리지에서 인제스트할 다음 파일 �
 
 ## Blob 또는 S3 계정 연결
 
-클라우드 스토리지의 자격 증명이 준비되면 아래 단계에 따라 Blob 또는 S3 계정을 플랫폼에 연결하는 새로운 인바운드 기본 연결을 만들 수 있습니다.
+필요한 자격 증명을 수집했으면 아래 절차에 따라 플랫폼에 연결할 새 Blob 또는 S3 계정을 만들 수 있습니다.
 
-Adobe <a href="https://platform.adobe.com" target="_blank">Experience Platform</a> 에 로그인한 다음 왼쪽 탐색 **모음에서** Sources를선택하여 소스 작업 영역에 액세스합니다. [ *카탈로그* ] 화면에는 인바운드 기본 연결을 만들 수 있는 다양한 소스가 표시되며, 각 소스에는 연관된 기존 기본 연결의 수가 표시됩니다.
+Adobe [Experience Platform에](https://platform.adobe.com) 로그인한 다음 왼쪽 탐색 **[!UICONTROL 모음에서]** Sources를 *[!UICONTROL 선택하여]* Sources 작업 영역에액세스합니다. [ *[!UICONTROL 카탈로그]* ] 화면에는 인바운드 계정을 만들 수 있는 다양한 소스가 표시되며, 각 소스에는 계정과 연결된 기존 데이터 흐름 수가 표시됩니다.
 
-*클라우드 스토리지* 카테고리 아래에서 **Azure Blob 저장소** 또는 **Amazon S3를** 선택하여 화면 오른쪽에 정보 막대를 표시합니다. 정보 표시줄에는 선택한 소스에 대한 간단한 설명과 해당 설명서를 보거나 소스와 연결할 수 있는 옵션이 제공됩니다. 새 인바운드 기본 연결을 만들려면 **Connect 소스를 클릭합니다**.
+화면의 왼쪽에 있는 카탈로그에서 해당 범주를 선택할 수 있습니다. 또는 검색 옵션을 사용하여 작업할 특정 소스를 찾을 수 있습니다.
 
-![](../../../../images/tutorials/create/s3/s3_sources_catalog.png)
+데이터베이스 *[!UICONTROL 카테고리 아래에서]* Azure Blob 저장소를 **[!UICONTROL 선택하거나]** Amazon S3 **[!UICONTROL 을 클릭하여 + 아이콘(+)을]** **** 클릭하여 새 Blob S3 커넥터를 만듭니다.
 
-입력 양식에서 이름, 선택적 설명 및 Blob 또는 S3 자격 증명을 사용하여 기본 연결을 제공합니다. 마지막으로 **Connect를** 클릭한 다음 새 기본 연결이 설정되기까지 약간의 시간이 소요됩니다.
+![카탈로그](../../../../images/tutorials/create/blob/catalog.png)
 
-![](../../../../images/tutorials/create/s3/s3_credentials.png)
+Azure Blob 저장소 *[!UICONTROL 에 연결]* 페이지가 나타납니다. 이 페이지에서 새 자격 증명이나 기존 자격 증명을 사용할 수 있습니다.
+
+### 새 계정
+
+새 자격 증명을 사용 중인 경우 **[!UICONTROL 새 계정을 선택합니다]**. 표시되는 입력 양식에서 이름, 선택적 설명 및 Blob 또는 S3 자격 증명을 사용하여 연결을 제공합니다. 완료되면 **[!UICONTROL Connect를]** 선택한 다음 새 계정이 설정되기까지 약간의 시간이 소요됩니다.
+
+![connect](../../../../images/tutorials/create/blob/new.png)
+
+### 기존 계정
+
+기존 계정을 연결하려면 연결할 Blob 또는 S3 계정을 선택한 다음 **[!UICONTROL 다음을]** 선택하여 진행하십시오.
+
+![기존](../../../../images/tutorials/create/blob/existing.png)
 
 ## 다음 단계
 
-이 튜토리얼을 따라 Azure Blob 또는 Amazon S3 계정에 기본 연결을 설정했습니다. 이제 다음 튜토리얼로 계속 진행하여 데이터 흐름을 [구성하여 Platform으로 데이터를 가져올 수 있습니다](../../dataflow/batch/cloud-storage.md).
+이 튜토리얼을 따라 Blob 또는 S3 계정에 대한 연결을 설정했습니다. 이제 다음 튜토리얼로 계속 진행하여 데이터 흐름을 [구성하여 클라우드 스토리지의 데이터를 Platform으로 가져올 수 있습니다](../../dataflow/batch/cloud-storage.md).
