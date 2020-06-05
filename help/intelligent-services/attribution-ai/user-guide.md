@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 기여도 AI 사용자 가이드
 topic: User guide
 translation-type: tm+mt
-source-git-commit: 3e1e7bea7113b5db6b9bd02ce0dbe8cfd486206c
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+workflow-type: tm+mt
+source-wordcount: '1430'
+ht-degree: 0%
 
 ---
 
@@ -17,7 +20,7 @@ Attribution AI는 Intelligent Services의 일부인 알고리즘에 의한 멀�
 
 ## 인스턴스 만들기
 
-Adobe Experience Platform UI의 왼쪽 탐색 영역에서 **서비스를** 클릭합니다. 서비스 *브라우저가* 나타나고 사용 가능한 Adobe 지능형 서비스가 표시됩니다. 속성 AI의 컨테이너에서 열기를 **클릭합니다**.
+UI [!DNL Adobe Experience Platform] 에서 왼쪽 탐색 **영역에서 서비스** 를 클릭합니다. 서비스 *브라우저가* 나타나고 사용 가능한 Adobe 지능형 서비스가 표시됩니다. 속성 AI의 컨테이너에서 열기를 **클릭합니다**.
 
 ![인스턴스 액세스](./images/user-guide/open_Attribution_ai.png)
 
