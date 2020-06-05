@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 기여도 AI에서 인사이트 검색
 topic: Attribution AI insights
 translation-type: tm+mt
-source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+workflow-type: tm+mt
+source-wordcount: '1164'
+ht-degree: 1%
 
 ---
 
@@ -21,7 +24,7 @@ source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
 
 ## 서비스 인스턴스 인사이트 개요
 
-Adobe Experience Platform UI의 왼쪽 탐색 영역에서 **서비스를** 클릭합니다. 서비스 *브라우저가* 나타나고 사용 가능한 Adobe Intelligent Services가 표시됩니다. 속성 AI의 컨테이너에서 열기를 **클릭합니다**.
+UI [!DNL Adobe Experience Platform] 에서 왼쪽 탐색 **영역에서 서비스** 를 클릭합니다. 서비스 *브라우저가* 나타나고 사용 가능한 Adobe Intelligent Services가 표시됩니다. 속성 AI의 컨테이너에서 열기를 **클릭합니다**.
 
 ![인스턴스 액세스](./images/insights/open_Attribution_ai.png)
 
