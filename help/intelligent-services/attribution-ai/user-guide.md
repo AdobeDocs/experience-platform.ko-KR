@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 기여도 AI 사용자 가이드
 topic: User guide
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: 0ea96de956adb5a6c5286433a547772118c43aee
 workflow-type: tm+mt
 source-wordcount: '1430'
 ht-degree: 0%
@@ -52,7 +52,7 @@ UI [!DNL Adobe Experience Platform] 에서 왼쪽 탐색 **영역에서 서비�
 - **조회 창:** 전환 이벤트 터치포인트를 포함하기 전 며칠을 나타내는 기간을 제공합니다.
 - **터치포인트:** 전환의 숫자 또는 매출 기반 영향을 평가하는 데 사용되는 수신자, 개인 및 쿠키 수준 마케팅 이벤트.
 
-### 전환 이벤트 정의
+### 전환 이벤트 정의 {#define-conversion-events}
 
 전환 이벤트를 정의하려면 [필드 이름 **입력] 드롭다운 메뉴를 클릭하여 이벤트에 이름을 지정하고 이벤트 유형을 선택해야** 합니다.
 
@@ -144,7 +144,7 @@ UI [!DNL Adobe Experience Platform] 에서 왼쪽 탐색 **영역에서 서비�
 
 ![시계 아이콘](./images/user-guide/time_of_day.png)
 
-### 지역 기반 모델링(선택 사항)
+### 지역 기반 모델링(선택 사항) {#region-based-modeling-optional}
 
 고객의 행동은 국가와 지역에 따라 크게 다를 수 있습니다. 글로벌 비즈니스의 경우 국가 기반 또는 지역 기반 모델을 사용하면 기여도 정확도를 높일 수 있습니다. 추가된 각 영역은 해당 지역의 데이터를 사용하여 새 모델을 생성합니다.
 
