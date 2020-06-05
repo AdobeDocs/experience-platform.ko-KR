@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Git을 사용하여 JupiterLab에서 공동 작업
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 0134c21bc35c0cb1bde7f0201a33517a81addae3
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
 workflow-type: tm+mt
-source-wordcount: '276'
+source-wordcount: '273'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ Data Science Workspace JupiterLab 환경은 호스팅 환경이므로 기업 방
 
 ## Git을 데이터 과학 작업 공간 JupiterLab 노트북 환경에 연결
 
-먼저 Adobe Experience Platform을 실행하고 JupiterLabs [노트북](https://platform.adobe.com/notebooks/jupyterLab) 환경으로 이동합니다.
+먼저 JupiterLabs 노트북 [!DNL Adobe Experience Platform] 환경을 시작하고 [탐색합니다](https://platform.adobe.com/notebooks/jupyterLab) .
 
 JupiterLab 내에서 **[!UICONTROL 파일]** 을 선택한 다음 새로 만들기 위로 **[!UICONTROL 이동합니다]**. 표시되는 드롭다운에서 터미널 **[!UICONTROL 을 선택합니다]**.
 
