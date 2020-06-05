@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 기여도 AI에서 인사이트 검색
 topic: Attribution AI insights
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: 0ea96de956adb5a6c5286433a547772118c43aee
 workflow-type: tm+mt
 source-wordcount: '1164'
 ht-degree: 1%
@@ -57,7 +57,7 @@ UI [!DNL Adobe Experience Platform] 에서 왼쪽 탐색 **영역에서 서비�
 
 ![팝업 편집](./images/insights/edit-popover.png)
 
-### 추가 작업
+### 추가 작업 {#more-actions}
 
 추가 *작업* 단추는 *편집*&#x200B;옆에 있는 오른쪽 위 탐색에 있습니다. 추가 작업 **을** 클릭하면 다음 작업 중 하나를 선택할 수 있는 드롭다운이 열립니다.
 
