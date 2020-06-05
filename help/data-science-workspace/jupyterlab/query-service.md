@@ -4,56 +4,59 @@ solution: Experience Platform
 title: Jupiter 전자 필기장의 쿼리 서비스
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 1447196da7dbf59c1f498de40f12ed74c328c0e6
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+workflow-type: tm+mt
+source-wordcount: '799'
+ht-degree: 1%
 
 ---
 
 
 # Jupiter 전자 필기장의 쿼리 서비스
 
-Adobe Experience Platform을 사용하면 Query Service를 JupiterLab에 표준 기능으로 통합하여 데이터 과학 작업 공간에서 구조화된 쿼리 언어(SQL)를 사용할 수 있습니다.
+[!DNL Adobe Experience Platform] 쿼리 서비스를 JupiterLab에 표준 기능으로 통합하여 데이터 과학 작업 공간에서 구조화된 쿼리 언어(SQL)를 사용할 수 있습니다.
 
-이 자습서는 Adobe Analytics 데이터를 탐색, 변환 및 분석하는 일반적인 사용 사례를 위한 샘플 SQL 쿼리를 보여줍니다.
+이 자습서에서는 일반적인 사용 사례를 위해 [!DNL Adobe Analytics] 데이터를 탐색, 변환 및 분석하는 샘플 SQL 쿼리를 보여 줍니다.
 
 ## 시작하기
 
 이 튜토리얼을 시작하기 전에 다음 전제 조건이 필요합니다.
 
-- Adobe Experience Platform 이용 IMS Organization in Experience Platform(IMS 플랫폼)에 액세스할 수 없는 경우 시스템 관리자에게 문의하시기 바랍니다
+- 액세스 권한 [!DNL Adobe Experience Platform]. IMS Organization in Experience Platform(IMS 플랫폼)에 액세스할 수 없는 경우 시스템 관리자에게 문의하시기 바랍니다
 
-- Adobe Analytics 데이터 세트
+- 데이터 [!DNL Adobe Analytics] 집합
 
 - 이 튜토리얼에서 사용되는 다음 주요 개념에 대한 작업 이해:
    - [XDM(Experience Data Model) 및 XDM 시스템](../../xdm/home.md)
    - [쿼리 서비스](../../query-service/home.md)
    - [쿼리 서비스 SQL 구문](../../query-service/sql/overview.md)
-   - Adobe Analytics
+   - [!DNL Adobe Analytics]
 
 ## JupiterLab 및 쿼리 서비스 액세스 {#access-jupyterlab-and-query-service}
 
-1. 경험 [플랫폼](https://platform.adobe.com)에서 왼쪽 탐색 열 **[!UICONTROL Notebooks]** 으로 이동합니다. JupiterLab이 로드될 때까지 잠시 기다려 주십시오.
+1. 경험 [플랫폼](https://platform.adobe.com)에서 왼쪽 탐색 **[!UICONTROL 열에서 전자 필기장]** 으로 이동합니다. JupiterLab이 로드될 때까지 잠시 기다려 주십시오.
 
    ![](../images/jupyterlab/query/jupyterlab_launcher.png)
 
-   > [!NOTE] 새 시작 관리자 탭이 자동으로 나타나지 않으면 을 클릭하여 새 시작 관리자 탭 **[!UICONTROL File]** 을 연 다음 을 선택합니다 **[!UICONTROL New Launcher]**.
+   > [!NOTE] 새 시작 관리자 탭이 자동으로 나타나지 않으면 **[!UICONTROL 파일]** 을 클릭하여 새 시작 관리자 탭을 연 다음 **[!UICONTROL 새 시작 관리자를 선택합니다]**.
 
-2. 론처 탭에서 Python 3 환경의 **[!UICONTROL Blank]** 아이콘을 클릭하여 빈 전자 필기장을 엽니다.
+2. 론처 탭에서 Python 3 환경의 **[!UICONTROL 빈]** 아이콘을 클릭하여 빈 전자 필기장을 엽니다.
 
    ![](../images/jupyterlab/query/blank_notebook.png)
 
    > [!NOTE] 현재 Python 3은 전자 필기장에서 쿼리 서비스에 대해 지원되는 유일한 환경입니다.
 
-3. 왼쪽 선택 레일에서 **[!UICONTROL Data]** 아이콘을 클릭하고 **[!UICONTROL Datasets]** 디렉토리를 두 번 클릭하여 모든 데이터 세트를 나열합니다.
+3. 왼쪽 선택 레일에서 **[!UICONTROL 데이터]** 아이콘을 클릭하고 **[!UICONTROL 데이터 집합]** 디렉토리를 두 번 클릭하여 모든 데이터 세트를 나열합니다.
 
    ![](../images/jupyterlab/query/dataset.png)
 
-4. Adobe Analytics 데이터 세트를 찾아 목록을 마우스 오른쪽 버튼으로 클릭하고 빈 노트북 **[!UICONTROL Query Data in Notebook]** 에서 SQL 쿼리를 생성하려면 을(를) 클릭합니다.
+4. 탐색할 데이터 [!DNL Adobe Analytics] 세트를 찾고 목록을 마우스 오른쪽 단추로 클릭한 다음 노트북의 **[!UICONTROL 데이터]** 쿼리를 클릭하여 빈 전자 필기장에서 SQL 쿼리를 생성합니다.
 
 5. 함수가 들어 있는 첫 번째 생성된 셀을 클릭하고 재생 단추 `qs_connect()` 를 클릭하여 실행합니다. 이 함수는 전자 필기장 인스턴스와 쿼리 서비스 간에 연결을 만듭니다.
 
    ![](../images/jupyterlab/query/execute.png)
 
-6. 두 번째 생성된 SQL 쿼리에서 Adobe Analytics 데이터 집합 이름을 복사하면 그 다음 값이 됩니다 `FROM`.
+6. 두 번째 생성된 SQL 쿼리에서 데이터 [!DNL Adobe Analytics] 집합 이름을 복사하면 그 뒤의 값이 됩니다 `FROM`.
 
    ![](../images/jupyterlab/query/dataset_name.png)
 
@@ -78,7 +81,7 @@ Adobe Experience Platform을 사용하면 Query Service를 JupiterLab에 표준 
    target_day = "01"
    ```
 
-   - `target_table` : Adobe Analytics 데이터 세트 이름입니다.
+   - `target_table` : 데이터 세트 [!DNL Adobe Analytics] 이름입니다.
    - `target_year` : 대상 데이터가 있는 특정 연도입니다.
    - `target_month` : 대상이 있는 특정 월입니다.
    - `target_day` : 대상 데이터가 있는 특정 요일.
@@ -86,13 +89,13 @@ Adobe Experience Platform을 사용하면 Query Service를 JupiterLab에 표준 
 
 ## 데이터 쿼리 {#query-your-data}
 
-개별 전자 필기장 셀에 다음 SQL 쿼리를 입력합니다. 해당 셀을 클릭한 다음 단추를 클릭하여 쿼리를 **[!UICONTROL play]** 실행합니다. 성공적인 쿼리 결과 또는 오류 로그가 실행된 셀 아래에 표시됩니다.
+개별 전자 필기장 셀에 다음 SQL 쿼리를 입력합니다. 셀을 클릭한 다음 **[!UICONTROL 재생]** 단추를 클릭하여 쿼리를 실행합니다. 성공적인 쿼리 결과 또는 오류 로그가 실행된 셀 아래에 표시됩니다.
 
-장시간 노트북이 비활성화되면 노트북과 쿼리 서비스 간의 연결이 끊어질 수 있습니다. 이 경우 오른쪽 상단 모서리에 있는 **[!UICONTROL Power]** 단추를 클릭하여 JupiterLab을 다시 시작합니다.
+장시간 노트북이 비활성화되면 노트북과 쿼리 서비스 간의 연결이 끊어질 수 있습니다. 이러한 경우 오른쪽 상단 모서리에 있는 **[!UICONTROL 전원]** 버튼을 클릭하여 JupiterLab을 다시 시작합니다.
 
 ![](../images/jupyterlab/query/restart_button.png)
 
-노트북 커널이 재설정되지만 셀이 남아 있게 되고, **[!UICONTROL all]** 셀을 다시 실행하여 중단한 부분을 계속합니다.
+노트북 커널이 재설정되지만 셀이 남아 있게 되고 **[!UICONTROL 모든]** 셀을 다시 실행하여 중단한 부분을 계속 진행합니다.
 
 ### 시간별 방문자 수 {#hourly-visitor-count}
 
