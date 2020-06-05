@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 고객 AI를 통한 인사이트 검색
 topic: Discovering insights
 translation-type: tm+mt
-source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+workflow-type: tm+mt
+source-wordcount: '1059'
+ht-degree: 0%
 
 ---
 
@@ -21,7 +24,7 @@ source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
 
 ## 서비스 인스턴스 개요
 
-Adobe Experience Platform UI에서 왼쪽 탐색 **[!UICONTROL Services]** 을 클릭합니다. 서비스 *브라우저가* 나타나고 사용 가능한 지능형 서비스가 표시됩니다. 고객 AI 컨테이너에서 을 클릭합니다 **[!UICONTROL Open]**.
+UI [!DNL Adobe Experience Platform] 에서 왼쪽 탐색 **[!UICONTROL 영역에서 서비스]** 를 클릭합니다. 서비스 *브라우저가* 나타나고 사용 가능한 지능형 서비스가 표시됩니다. 고객 AI의 컨테이너에서 열기를 **[!UICONTROL 클릭합니다]**.
 
 ![인스턴스 액세스](../images/insights/navigate-to-service.png)
 
@@ -44,7 +47,7 @@ Adobe Experience Platform UI에서 왼쪽 탐색 **[!UICONTROL Services]** 을 �
 
 두 가지 방법으로 서비스 인스턴스 세부 사항을 볼 수 있으며, 첫 번째 방법은 대시보드에서, 두 번째 방법은 서비스 인스턴스 내에서 확인할 수 있습니다.
 
-대시보드 내에서 세부 사항을 보려면 서비스 인스턴스 컨테이너를 클릭하여 이름에 연결된 하이퍼링크를 방지합니다. 설명, 점수 주기, 예측 목표 및 적격한 모집단과 같은 추가 세부 정보를 제공하는 오른쪽 레일이 열립니다. 또는 을 클릭하여 인스턴스를 편집하고 삭제할 수도 **[!UICONTROL Edit]** 있습니다 **[!UICONTROL Delete]**.
+대시보드 내에서 세부 사항을 보려면 서비스 인스턴스 컨테이너를 클릭하여 이름에 연결된 하이퍼링크를 방지합니다. 설명, 점수 주기, 예측 목표 및 적격한 모집단과 같은 추가 세부 정보를 제공하는 오른쪽 레일이 열립니다. 또한 편집(Edit) **[!UICONTROL 또는 삭제(Delete)를 클릭하여 인스턴스를 편집하고 삭제하도록 선택할 수]** 있습니다 ****.
 
 ![오른쪽 레일](../images/insights/success-run.png)
 
@@ -52,7 +55,7 @@ Adobe Experience Platform UI에서 왼쪽 탐색 **[!UICONTROL Services]** 을 �
 
 ![실패한 실행 메시지](../images/insights/failed-run.png)
 
-서비스 인스턴스에 대한 추가 세부 정보를 보는 두 번째 방법은 인사이트 페이지 내에 있습니다. 오른쪽 상단 **[!UICONTROL Show more]** 에서 을 클릭하여 드롭다운을 채울 수 있습니다. 점수 정의, 생성 시간, 성향 유형 등의 세부 사항이 나열됩니다. 나열된 속성에 대한 자세한 내용은 고객 AI 인스턴스 [구성을 참조하십시오](./configure.md).
+서비스 인스턴스에 대한 추가 세부 정보를 보는 두 번째 방법은 인사이트 페이지 내에 있습니다. 오른쪽 **[!UICONTROL 상단에 있는 자세히]** 표시를 클릭하여 드롭다운을 채울 수 있습니다. 점수 정의, 생성 시간, 성향 유형 등의 세부 사항이 나열됩니다. 나열된 속성에 대한 자세한 내용은 고객 AI 인스턴스 [구성을 참조하십시오](./configure.md).
 
 ![더 보기](../images/insights/landing-show-more.png)
 
@@ -60,21 +63,21 @@ Adobe Experience Platform UI에서 왼쪽 탐색 **[!UICONTROL Services]** 을 �
 
 ### 인스턴스 편집
 
-인스턴스를 편집하려면 오른쪽 위 탐색 **[!UICONTROL Edit]** 에서 을 클릭합니다.
+인스턴스를 편집하려면 오른쪽 **[!UICONTROL 상단]** 탐색에서 편집을 클릭합니다.
 
 ![편집 단추 클릭](../images/insights/edit-button.png)
 
-편집 대화 상자가 표시되어 인스턴스의 *설명* 및 *점수* 주기를 편집할 수 있습니다. 변경 사항을 확인하고 대화 상자를 닫으려면 오른쪽 아래 모서리 **[!UICONTROL Edit]** 에서 을 클릭합니다.
+편집 대화 상자가 표시되어 인스턴스의 *설명* 및 *점수* 주기를 편집할 수 있습니다. 변경 사항을 확인하고 대화 상자를 닫으려면 오른쪽 **[!UICONTROL 아래 모서리에서 편집을]** 클릭합니다.
 
 ![팝업 편집](../images/insights/edit-instance.png)
 
 ### 추가 작업
 
-이 **[!UICONTROL More actions]** 단추는 옆에 있는 오른쪽 위 탐색에 있습니다 **[!UICONTROL Edit]**. 을 클릭하면 다음 작업 중 하나를 선택할 수 있는 드롭다운이 **[!UICONTROL More actions]** 열립니다.
+추가 **[!UICONTROL 작업]** 단추는 **[!UICONTROL 편집]**&#x200B;옆에 있는 오른쪽 위 탐색에 있습니다. 추가 작업 **[!UICONTROL 을]** 클릭하면 다음 작업 중 하나를 선택할 수 있는 드롭다운이 열립니다.
 
-- **[!UICONTROL Delete]**: 인스턴스를 삭제합니다.
-- **[!UICONTROL Access scores]**: 액세스 점수 *를* 클릭하면 고객 AI [자습서의](./download-scores.md) 다운로드 점수에 대한 링크를 제공하는 대화 상자가 열리고 API 호출을 수행하는 데 필요한 데이터 세트 ID도 대화 상자에 제공됩니다.
-- **[!UICONTROL View run history]**: 서비스 인스턴스와 연관된 모든 점수 실행 목록이 포함된 대화 상자가 나타납니다.
+- **[!UICONTROL 삭제]**: 인스턴스를 삭제합니다.
+- **[!UICONTROL 액세스 점수]**: 액세스 점수 *를* 클릭하면 고객 AI [자습서의](./download-scores.md) 다운로드 점수에 대한 링크를 제공하는 대화 상자가 열리고 API 호출을 수행하는 데 필요한 데이터 세트 ID도 대화 상자에 제공됩니다.
+- **[!UICONTROL 실행 내역 보기]**: 서비스 인스턴스와 연관된 모든 점수 실행 목록이 포함된 대화 상자가 나타납니다.
 
 ![추가 작업](../images/insights/more-actions.png)
 
@@ -100,22 +103,22 @@ Adobe Experience Platform UI에서 왼쪽 탐색 **[!UICONTROL Services]** 을 �
 
 ### 세그먼트 만들기
 
-[낮음], [보통] 및 [높음] 버킷의 **[!UICONTROL Create Segment]** 단추를 클릭하면 세그먼트 빌더로 이동합니다.
+[ **[!UICONTROL 낮음], [중간] 및 [높음] 성향]** 버킷의 [세그먼트 만들기] 단추를 클릭하면 세그먼트 빌더로 리디렉션됩니다.
 
 >[!NOTE]
->이 **[!UICONTROL Create Segment]** 단추는 데이터 세트에 대해 실시간 고객 프로필을 활성화한 경우에만 사용할 수 있습니다. 실시간 고객 프로필을 활성화하는 방법에 대한 자세한 내용은 [실시간 고객 프로필 개요를 참조하십시오](../../../rtcdp/overview.md).
+>세그먼트 **[!UICONTROL 만들기]** 단추는 데이터 세트에 대해 실시간 고객 프로필을 활성화한 경우에만 사용할 수 있습니다. 실시간 고객 프로필을 활성화하는 방법에 대한 자세한 내용은 [실시간 고객 프로필 개요를 참조하십시오](../../../rtcdp/overview.md).
 
 ![세그먼트 만들기를 클릭합니다.](../images/insights/influential-factors-create-segment.png)
 
 ![세그먼트 만들기](../images/insights/create-segment.png)
 
-세그먼트 빌더는 세그먼트를 정의하는 데 사용됩니다. 인사이트 페이지 **[!UICONTROL Create Segment]** 에서 선택하면 고객 AI가 선택한 버킷 정보를 세그먼트에 자동으로 추가합니다. 세그먼트 만들기를 완료하려면 세그먼트 빌더 사용자 인터페이스의 오른쪽 레일에 있는 *이름* 및 *설명* 컨테이너를간단히 채우십시오. 세그먼트에 이름과 설명을 지정한 후 오른쪽 상단 **[!UICONTROL Save]** 에서 을 클릭합니다.
+세그먼트 빌더는 세그먼트를 정의하는 데 사용됩니다. 인사이트 **[!UICONTROL 페이지에서]** 세그먼트 만들기를 선택하면 고객 AI가 선택한 버킷 정보를 세그먼트에 자동으로 추가합니다. 세그먼트 만들기를 완료하려면 세그먼트 빌더 사용자 인터페이스의 오른쪽 레일에 있는 *이름* 및 *설명* 컨테이너를간단히 채우십시오. 세그먼트에 이름과 설명을 지정한 후 오른쪽 **[!UICONTROL 상단에서 저장을]** 클릭합니다.
 
 >!![NOTE] 성향 점수는 개별 프로필에 작성되므로 다른 프로필 속성과 마찬가지로 세그먼트 빌더에서 사용할 수 있습니다. 세그먼트 빌더로 이동하여 새 세그먼트를 만들면 사용자의 네임스페이스 Customer AI에서 모든 다양한 성향 점수를 볼 수 있습니다.
 
 ![세그먼트 채우기](../images/insights/segment-saving.png)
 
-플랫폼 UI에서 새 세그먼트를 보려면 왼쪽 탐색 **[!UICONTROL Segments]** 에서 을 클릭합니다. 검색 *페이지가* 나타나고 사용 가능한 모든 세그먼트가 표시됩니다.
+플랫폼 UI에서 새 세그먼트를 보려면 왼쪽 탐색 **[!UICONTROL 에서]** 세그먼트를 클릭합니다. 검색 *페이지가* 나타나고 사용 가능한 모든 세그먼트가 표시됩니다.
 
 ![모든 세그먼트](../images/insights/Segments-dashboard.png)
 
