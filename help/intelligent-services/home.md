@@ -4,14 +4,17 @@ solution: Experience Platform
 title: 지능형 서비스 개요
 topic: Intelligent Services overview
 translation-type: tm+mt
-source-git-commit: c9d1fca0b14607f83657d5d8a751c2d0cc46bea0
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+workflow-type: tm+mt
+source-wordcount: '428'
+ht-degree: 0%
 
 ---
 
 
 # 지능형 서비스 개요
 
-마케팅 분석가 및 전문가는 지능형 서비스를 통해 고객 경험 사용 사례에서 인공 지능(AI)과 머신 러닝의 힘을 활용할 수 있습니다. 따라서 마케팅 분석가는 데이터 과학 전문 지식 없이도 비즈니스 수준 구성을 사용하여 기업의 요구 사항에 맞는 예측을 설정할 수 있습니다. 또한 마케팅 전문가는 Adobe Experience Cloud, Adobe Experience Platform 및 타사 애플리케이션에서 예측을 활성화할 수 있습니다.
+마케팅 분석가 및 전문가는 지능형 서비스를 통해 고객 경험 사용 사례에서 인공 지능(AI)과 머신 러닝의 힘을 활용할 수 있습니다. 따라서 마케팅 분석가는 데이터 과학 전문 지식 없이도 비즈니스 수준 구성을 사용하여 기업의 요구 사항에 맞는 예측을 설정할 수 있습니다. 또한 마케팅 전문가는 타사 애플리케이션에서 예측 [!DNL Adobe Experience Cloud]을 활성화할 수 [!DNL Adobe Experience Platform]있습니다.
 
 다음 비디오는 지능형 서비스에 대한 귀하의 이해를 지원하기 위해 만들어졌습니다. 이 비디오에서는 비즈니스 사례 예를 들어 고급 워크플로우에 대해 설명하고 속성 AI와 고객 AI의 기능에 대해 간략히 설명합니다.
 
@@ -19,7 +22,7 @@ source-git-commit: c9d1fca0b14607f83657d5d8a751c2d0cc46bea0
 
 ## 지능형 서비스의 이점
 
-Adobe Experience Platform 기반의 지능형 서비스는 고객 경험을 담당하는 마케터가 AI-a-Service에 액세스할 수 있도록 함으로써 고객 행동을 손쉽게 예측하고 캠페인의 영향력을 측정하거나 모든 투자에 대한 수익을 높일 수 있도록 해줍니다. 다음은 Intelligent Services가 제공하는 몇 가지 이점입니다.
+내장된 지능형 서비스를 통해 고객 경험 [!DNL Adobe Experience Platform]을 담당하는 마케터는 AIas-a-service에 액세스할 수 있으므로 누구나 고객 행동을 손쉽게 예측하고 캠페인의 영향력을 측정하거나 모든 투자에 대한 수익을 높일 수 있습니다. 다음은 Intelligent Services가 제공하는 몇 가지 이점입니다.
 
 ### 시장 출시 시간 단축
 
@@ -37,7 +40,7 @@ Adobe는 AI/ML에 대한 전문 지식을 CXM 경험과 접목시켜 운영하�
 
 ### 인제스트
 
-고객 데이터는 Adobe Experience Platform의 XDM(Experience Data Model)을 통해 수집되고 변형됩니다. XDM에 대한 자세한 내용은 [XDM 개요를 참조하십시오](../xdm/home.md).
+고객 데이터는 XDM(Experience Data Model)을 기반으로 수집되고 변형됩니다 [!DNL Adobe Experience Platform]. XDM에 대한 자세한 내용은 [XDM 개요를 참조하십시오](../xdm/home.md).
 
 ### 메시지에 대한
 
@@ -49,7 +52,7 @@ Adobe는 AI/ML에 대한 전문 지식을 CXM 경험과 접목시켜 운영하�
 
 ### 조치 수행
 
-마지막으로 인사이트 소비, Adobe Experience Cloud에서 애플리케이션 활성화, 맞춤형 대시보드 구축 등 예측과 관련된 작업을 결정할 수 있습니다.
+마지막으로 인사이트 소비, 전체 애플리케이션 활성화, 맞춤형 대시보드 구축 등 예측 작업에 필요한 작업을 결정할 수 [!DNL Adobe Experience Cloud]있습니다.
 
 ## 다음 단계
 
