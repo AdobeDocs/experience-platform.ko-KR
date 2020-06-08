@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 소스 파일을 레서피로 패키지
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
+source-git-commit: f2a7300d4ad75e3910abbdf2ecc2946a2dfe553c
+workflow-type: tm+mt
+source-wordcount: '1106'
+ht-degree: 0%
 
 ---
 
@@ -35,24 +38,24 @@ source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
 
 레서피 만들기 작업 과정 중에 제공된 자격 증명을 사용하여 빌드된 Docker 이미지가 Azure 컨테이너 레지스트리로 푸시됩니다.
 
-Azure 컨테이너 레지스트리 자격 증명을 얻으려면 <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform에 로그인합니다</a>. 왼쪽 탐색 열에서 탐색합니다 **[!UICONTROL Workflows]**. 다음 **[!UICONTROL Import Recipe]** 을 선택하고 선택합니다 **[!UICONTROL Launch]**. 자세한 내용은 아래 스크린샷을 참조하십시오.
+Azure 컨테이너 레지스트리 자격 증명을 얻으려면 <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform에 로그인합니다</a>. 왼쪽 탐색 열에서 워크플로우로 **[!UICONTROL 이동합니다]**. 레서피 **[!UICONTROL 가져오기]** 후 론치를 **[!UICONTROL 선택합니다]**. 자세한 내용은 아래 스크린샷을 참조하십시오.
 
 ![](../images/models-recipes/package-source-files/import.png)
 
-구성 *페이지가* 열립니다. 적절한 *레서피 이름*(예: &quot;소매 영업 레서피&quot;)을 제공하고 선택적으로 설명 또는 설명서 URL을 제공합니다. 완료되면 을 클릭합니다 **[!UICONTROL Next]**.
+구성 *페이지가* 열립니다. 적절한 *레서피 이름*(예: &quot;소매 영업 레서피&quot;)을 제공하고 선택적으로 설명 또는 설명서 URL을 제공합니다. 완료되면 [다음]을 **[!UICONTROL 클릭합니다]**.
 
 ![](../images/models-recipes/package-source-files/configure.png)
 
-적절한 *런타임*&#x200B;을 선택한 다음 유형 **[!UICONTROL Classification]** 을 *선택합니다*. Azure 컨테이너 레지스트리 자격 증명이 완료되면 생성됩니다.
+적절한 *런타임을*&#x200B;선택한 다음 **[!UICONTROL 유형에]** 대한 *분류를*&#x200B;선택합니다. Azure 컨테이너 레지스트리 자격 증명이 완료되면 생성됩니다.
 
 >[!NOTE]
 >*유형은&#x200B;*레서피가 설계된 기계 학습 문제의 클래스로, 교육 실행 평가를 위한 교육 후에 사용됩니다.
 
 >[!TIP]
->- Python 레시피의 경우 런타임을 **[!UICONTROL Python]** 선택합니다.
->- R 레서피의 경우 런타임을 **[!UICONTROL R]** 선택합니다.
->- PySpark 레서피의 경우 런타임을 **[!UICONTROL PySpark]** 선택합니다. 객체 유형이 자동으로 채워집니다.
->- Scala 레시피의 경우 런타임을 **[!UICONTROL Spark]** 선택합니다. 객체 유형이 자동으로 채워집니다.
+>- Python 조리법의 경우 **[!UICONTROL Python 런타임을]** 선택합니다.
+>- R 레서피의 경우 **[!UICONTROL R 런타임을]** 선택합니다.
+>- PySpark 레서피의 경우 **[!UICONTROL PySpark 런타임을]** 선택합니다. 객체 유형이 자동으로 채워집니다.
+>- Scala 레시피의 경우 **[!UICONTROL Spark]** 런타임을 선택합니다. 객체 유형이 자동으로 채워집니다.
 
 
 ![](../images/models-recipes/package-source-files/docker-creds.png)
@@ -193,46 +196,3 @@ git clone https://github.com/adobe/experience-platform-dsw-reference.git
 
 - [UI에서 패키지된 레서피 가져오기](./import-packaged-recipe-ui.md)
 - [API를 사용하여 패키지된 레서피 가져오기](./import-packaged-recipe-api.md)
-
-## 이진 파일 빌드(더 이상 사용되지 않음)
-
->[!CAUTION]
-> 바이너리는 새로운 PySpark 및 Scala 레시피에서 지원되지 않으며 향후 릴리스에서 제거될 예정입니다. PySpark 및 Scala에서 [작업할 때 Docker 워크플로우를](#docker-based-model-authoring) 따르십시오. 다음 워크플로우는 Spark 2.3 레시피에만 적용됩니다.
-
-### PySpark 이진 파일 작성(더 이상 사용되지 않음)
-
-이렇게 하지 않은 경우 다음 명령을 사용하여 github 저장소를 로컬 시스템에 복제합니다.
-
-```BASH
-git clone https://github.com/adobe/experience-platform-dsw-reference.git
-```
-
-로컬 시스템의 복제된 저장소로 이동하여 다음 명령을 실행하여 PySpark 레서피 가져오기에 필요한 `.egg` 파일을 작성합니다.
-
-```BASH
-cd recipes/pyspark
-./build.sh
-```
-
-이 `.egg` 파일은 `dist` 폴더에 생성됩니다.
-
-이제 [다음 단계로 이동할 수 있습니다](#next-steps).
-
-#### Scala 이진 파일 빌드(더 이상 사용되지 않음)
-
-아직 수행하지 않은 경우 다음 명령을 실행하여 Github 저장소를 로컬 시스템으로 복제합니다.
-
-```BASH
-git clone https://github.com/adobe/experience-platform-dsw-reference.git
-```
-
-Scala 레시피를 가져오는 데 사용되는 `.jar` 객체를 작성하려면 복제된 저장소로 이동하고 아래 단계를 따르십시오.
-
-```BASH
-cd recipes/scala/
-./build.sh
-```
-
-종속성이 있는 생성된 `.jar` 아티팩트가 `/target` 디렉토리에 있습니다.
-
-이제 [다음 단계로 이동할 수 있습니다](#next-steps).
