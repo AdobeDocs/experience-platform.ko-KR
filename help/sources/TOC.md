@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform 소스 커넥터 도움말
 translation-type: tm+mt
-source-git-commit: 328b897c54453f23ad7b68fb2a288712cb4fe538
+source-git-commit: bfbaaf0367b601c4ad521f42cd5ff6bdd25a8274
 workflow-type: tm+mt
-source-wordcount: '578'
+source-wordcount: '586'
 ht-degree: 0%
 
 ---
@@ -33,6 +33,7 @@ ht-degree: 0%
       - [Azure 파일 저장소 커넥터](connectors/cloud-storage/azure-file-storage.md)
       - [FTP 및 SFTP 커넥터](connectors/cloud-storage/ftp-sftp.md)
       - [Google 클라우드 스토리지 커넥터](connectors/cloud-storage/google-cloud-storage.md)
+      - [HDFS 커넥터](connectors/cloud-storage/hdfs.md)
    - CRM {#crm}
       - [Microsoft Dynamics 커넥터](connectors/crm/ms-dynamics.md)
       - [Salesforce 커넥터](connectors/crm/salesforce.md)
@@ -46,6 +47,7 @@ ht-degree: 0%
       - [Azure 데이터 탐색기 커넥터](connectors/databases/data-explorer.md)
       - [Azure Synapse Analytics 커넥터](connectors/databases/synapse-analytics.md)
       - [Azure 테이블 저장소 커넥터](connectors/databases/ats.md)
+      - [CouchBase 커넥터](connectors/databases/couchbase.md)
       - [Google BigQuery 커넥터](connectors/databases/bigquery.md)
       - [GreenPlum 커넥터](connectors/databases/greenplum.md)
       - [HP Vertica 커넥터](connectors/databases/hp-vertica.md)
@@ -74,6 +76,7 @@ ht-degree: 0%
          - [Azure 이벤트 허브 커넥터](tutorials/api/create/cloud-storage/eventhub.md)
          - [Azure 파일 저장소 커넥터](tutorials/api/create/cloud-storage/azure-file-storage.md)
          - [Google 클라우드 스토리지 커넥터](tutorials/api/create/cloud-storage/google.md)
+         - [HDFS 커넥터](tutorials/api/create/cloud-storage/hdfs.md)
          - [SFTP 커넥터](tutorials/api/create/cloud-storage/sftp.md)
       - CRM {#crm}
          - [HubSpot 커넥터](tutorials/api/create/crm/hubspot.md)
@@ -89,6 +92,7 @@ ht-degree: 0%
          - [Azure 데이터 탐색기 커넥터](tutorials/api/create/databases/data-explorer.md)
          - [Azure Synapse Analytics 커넥터](tutorials/api/create/databases/synapse-analytics.md)
          - [Azure 테이블 저장소 커넥터](tutorials/api/create/databases/ats.md)
+         - [CouchBase 커넥터](tutorials/api/create/databases/couchbase.md)
          - [Google BigQuery 커넥터](tutorials/api/create/databases/bigquery.md)
          - [GreenPlum 커넥터](tutorials/api/create/databases/greenplum.md)
          - [HP Vertica 커넥터](tutorials/api/create/databases/hp-vertica.md)
