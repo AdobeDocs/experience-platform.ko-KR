@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform 소스 커넥터 개요
 topic: overview
 translation-type: tm+mt
-source-git-commit: 22425c33e39cf788eec6fd0a54f65fb89fdaff4f
+source-git-commit: f181d544e93f0924bf4c239fad93d78c974afdc0
 workflow-type: tm+mt
-source-wordcount: '758'
+source-wordcount: '762'
 ht-degree: 0%
 
 ---
@@ -51,6 +51,7 @@ Adobe Experience Platform은 서드파티 광고 시스템의 데이터 인제�
 - [Azure 파일 저장소 커넥터](connectors/cloud-storage/azure-file-storage.md)
 - [FTP 및 SFTP 커넥터](connectors/cloud-storage/ftp-sftp.md)
 - [Google 클라우드 스토리지 커넥터](connectors/cloud-storage/google-cloud-storage.md)
+- [HDFS 커넥터](connectors/cloud-storage/hdfs.md)
 
 ### 고객 관계 관리(CRM)
 
@@ -76,6 +77,7 @@ Adobe Experience Platform은 타사 고객 성공 애플리케이션의 데이�
 - [Azure 데이터 탐색기 커넥터](connectors/databases/data-explorer.md)
 - [Azure Synapse Analytics 커넥터](connectors/databases/synapse-analytics.md)
 - [Azure 테이블 저장소 커넥터](connectors/databases/ats.md)
+- [CouchBase 커넥터](connectors/databases/couchbase.md)
 - [Google BigQuery 커넥터](connectors/databases/bigquery.md)
 - [GreenPlum 커넥터](connectors/databases/greenplum.md)
 - [HP Vertica 커넥터](connectors/databases/hp-vertica.md)
