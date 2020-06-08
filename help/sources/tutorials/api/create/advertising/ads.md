@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Flow Service API를 사용하여 Google AdWords 커넥터 만들기
 topic: overview
 translation-type: tm+mt
-source-git-commit: 00f785577999d2ec3147a3cc2b8edd1028be2471
+source-git-commit: 0ed2ed3b08f262100746f255a78c248a1748eb5e
 workflow-type: tm+mt
-source-wordcount: '647'
+source-wordcount: '632'
 ht-degree: 1%
 
 ---
@@ -74,7 +74,8 @@ POST /connections
 
 **요청**
 
-Google AdWords 연결을 만들려면 고유한 연결 사양 ID를 POST 요청의 일부로 제공해야 합니다. Google AdWords에 대한 연결 사양 ID는 입니다 `221c7626-58f6-4eec-8ee2-042b0226f03b`.
+다음 요청은 페이로드에서 제공하는 속성으로 구성된 새 AdWords 연결을 만듭니다.
+
 
 ```shell
 curl -X POST \
