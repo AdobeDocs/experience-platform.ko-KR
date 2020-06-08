@@ -4,10 +4,10 @@ solution: Experience Platform
 title: JupiterLab 사용 안내서
 topic: Overview
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: f2a7300d4ad75e3910abbdf2ecc2946a2dfe553c
 workflow-type: tm+mt
-source-wordcount: '3349'
-ht-degree: 5%
+source-wordcount: '2773'
+ht-degree: 6%
 
 ---
 
@@ -119,9 +119,7 @@ JupiterLab의 주요 작업 영역을 사용하면 문서 및 기타 활동을 �
 
 ### 커널 {#kernels}
 
-노트북 커널은 노트북 전지를 처리하기 위한 언어별 컴퓨팅 엔진이다. Python 외에도 JupiterLab은 R, PySpark 및 Spark에서 추가 언어 지원을 제공합니다. 노트북 문서를 열면 연관된 커널이 실행됩니다. 노트북 셀이 실행되면 커널이 계산을 수행하고 상당한 CPU 및 메모리 리소스를 소모할 수 있는 결과를 생성합니다. 커널이 종료될 때까지 할당된 메모리는 해제되지 않습니다.
-
->[!IMPORTANT] Spark 2.3에서 Spark 2.4로 업데이트되는 JupiterLab Launcher입니다. Spark 및 PySpark 커넬은 Spark 2.4 노트북에서 더 이상 지원되지 않습니다.
+노트북 커널은 노트북 전지를 처리하기 위한 언어별 컴퓨팅 엔진이다. Python 외에도 JupiterLab은 R, PySpark 및 Spark(Scala)에서 추가 언어 지원을 제공합니다. 노트북 문서를 열면 연관된 커널이 실행됩니다. 노트북 셀이 실행되면 커널이 계산을 수행하고 상당한 CPU 및 메모리 리소스를 소모할 수 있는 결과를 생성합니다. 커널이 종료될 때까지 할당된 메모리는 해제되지 않습니다.
 
 아래 표에 설명된 특정 기능과 기능은 특정 커널로 제한됩니다.
 
@@ -129,8 +127,6 @@ JupiterLab의 주요 작업 영역을 사용하면 문서 및 기타 활동을 �
 | :----: | :--------------------------: | :-------------------- |
 | **Python** | 예 | <ul><li>Sensei ML 프레임워크</li><li>카탈로그 서비스</li><li>쿼리 서비스</li></ul> |
 | **R** | 예 | <ul><li>Sensei ML 프레임워크</li><li>카탈로그 서비스</li></ul> |
-| **PySpark - 가치 하락** | 아니요 | <ul><li>Sensei ML 프레임워크</li><li>카탈로그 서비스</li></ul> |
-| **Spark - 가치 하락** | 아니요 | <ul><li>Sensei ML 프레임워크</li><li>카탈로그 서비스</li></ul> |
 | **Scala** | 아니요 | <ul><li>Sensei ML 프레임워크</li><li>카탈로그 서비스</li></ul> |
 
 ### 커널 세션 {#kernel-sessions}
@@ -142,59 +138,6 @@ JupiterLab의 각 활성 노트북 또는 활동은 커널 세션을 활용합�
 커널이 장기간 종료되거나 비활성 상태인 경우 **커널 없음!** 단색 원이 표시됩니다. 커널 상태를 클릭하고 아래에 설명된 대로 적절한 커널 유형을 선택하여 커널을 활성화합니다.
 
 ![](../images/jupyterlab/user-guide/switch_kernel.gif)
-
-### PySpark/Spark 실행 리소스 {#execution-resource}
-
->[!IMPORTANT]
->Spark 2.3이 Spark 2.4로 바뀌면서 Spark와 PySpark 커널 모두 없어졌습니다.
->
->새로운 PySpark 3(Spark 2.4) 노트북은 Python3 커널을 사용합니다. 기존 노트북 업데이트에 대한 자세한 자습서를 보려면 [Pyspark 3(Spark 2.3)](../recipe-notebook-migration.md) (PySpark 3)로 변환하기 위한 가이드를 참조하십시오.
->
->새로운 Spark 노트북은 Scala 커널을 활용해야 합니다. 기존 노트북 업데이트에 대한 자세한 자습서는 [Spark 2.3을 Scala(Spark 2.4)](../recipe-notebook-migration.md) 로 전환하는 방법에 대한 가이드를 참조하십시오.
-
-PySpark 및 Spark 커널을 사용하면 구성 명령(configure command)을 사용하여 Spark 또는 Spark 노트북 내에서 Spark 클러스터 리소스`%%configure`를 구성할 수 있습니다. 이러한 구성은 Spark 응용 프로그램이 초기화되기 전에 정의됩니다. Spark 응용 프로그램이 활성화된 상태에서 구성을 수정하려면 다음과 같이 명령(`%%configure -f`) 다음에 변경 사항을 적용하기 위해 응용 프로그램을 다시 시작할 추가 힘 플래그가 필요합니다.
-
->[!CAUTION]
->PySpark 3(Spark 2.4) 및 Scala(Spark 2.4) 노트북이 있으면 `%%` 스파크마스트가 지원되지 않습니다. 다음 작업은 더 이상 활용할 수 없습니다.
-* `%%help`
-* `%%info`
-* `%%cleanup`
-* `%%delete`
-* `%%configure`
-* `%%local`
-
-```python
-%%configure -f 
-{
-    "numExecutors": 10,
-    "executorMemory": "8G",
-    "executorCores":4,
-    "driverMemory":"2G",
-    "driverCores":2,
-    "conf": {
-        "spark.cores.max": "40"
-    }
-}
-```
-
-구성 가능한 모든 속성은 아래 표에 나열되어 있습니다.
-
-| 속성 | 설명 | 유형 |
-| :------- | :---------- | :-----:|
-| 종류 | 세션 종류(필수) | `session kind`_ |
-| proxyUser | 이 세션을 실행할 대상 사용자(예: bob) | 문자열 |
-| 병 | java에 배치할 파일 `classpath` | 경로 목록 |
-| pyFiles | 파일을 `PYTHONPATH` | 경로 목록 |
-| 파일 | Executor 작업 디렉토리에 넣을 파일 | 경로 목록 |
-| driverMemory | 드라이버(MB 또는 GB) 메모리(예: 1000M, 2G) | 문자열 |
-| driverCore | 드라이버에서 사용하는 코어 수(YARN 모드만 해당) | int |
-| executorMemory | Executor용 메모리(MB 또는 GB)(예: 1000M, 2G) | 문자열 |
-| executorCoers | 시행자가 사용한 코어 수 | int |
-| numExecuters | 수행자 수(YARN 모드 전용) | int |
-| 아카이브 | Executor 작업 디렉토리에서 압축되지 않도록 보관(YARN 모드 전용) | 경로 목록 |
-| 큐 | 제출할 YARN 큐(YARN 모드만 해당) | 문자열 |
-| 이름 | 응용 프로그램 이름 | 문자열 |
-| conf | Spark 구성 속성 | 키=val 맵 |
 
 ### 론처 {#launcher}
 
@@ -252,30 +195,6 @@ PySpark 및 Spark 커널을 사용하면 구성 명령(configure command)을 사
         <td >아니요</td>
         <td >아니요</td>
         <td >아니요</td>
-    </tr>
-    <tr>
-        <th  ><strong>PySpark 3(Spark 2.3 - 더 이상 사용되지 않음)</strong></th>
-        <td >yes</td>
-        <td >yes</td>
-        <td >아니요</td>
-        <td >아니요</td>
-        <td >아니요</td>
-        <td >아니요</td>
-        <td >yes</td>
-        <td >yes</td>
-        <td >아니요</td>
-    </tr>
-    <tr>
-        <th ><strong>Spark(Spark 2.3 - 더 이상 사용되지 않음)</strong></th>
-        <td >yes</td>
-        <td >yes</td>
-        <td >아니요</td>
-        <td >아니요</td>
-        <td >아니요</td>
-        <td >아니요</td>
-        <td >아니요</td>
-        <td >아니요</td>
-        <td >yes</td>
     </tr>
       <tr>
         <th  ><strong>PySpark 3(Spark 2.4)</strong></th>
@@ -377,28 +296,9 @@ df <- dataset_reader$limit(100L)$offset(10L)$read()
 
 * `{DATASET_ID}`: 액세스할 데이터 집합의 고유 ID
 
-### PySpark/Spark/Scala의 데이터 세트 보기
+### PySpark/Scala의 데이터 세트에서 읽기
 
->[!IMPORTANT]
->Spark 2.3이 Spark 2.4로 바뀌면서 Spark와 PySpark 커널 모두 없어졌습니다.
->
->새로운 PySpark 3(Spark 2.4) 노트북은 Python3 커널을 사용합니다. 기존 Spark 2.3 코드를 변환하려는 경우 [Pyspark 3(Spark 2.3)](../recipe-notebook-migration.md) (PySpark 3)로 전환하는 방법에 대한 가이드를 참조하십시오. 새 노트북은 아래의 [PySpark 3(Spark 2.4)](#pyspark2.4) 예제를 따라야 합니다.
->
->새로운 Spark 노트북은 Scala 커널을 활용해야 합니다. 기존 Spark 2.3 코드를 변환하려는 경우 [Spark 2.3을 Scala(Spark 2.4)](../recipe-notebook-migration.md) 로 전환하는 방법에 대한 가이드를 참조하십시오. 새 노트북은 아래의 [Scala(Spark 2.4)](#spark2.4) 예제를 따라야 합니다.
-
-활성 PySpark 또는 Spark 전자 필기장이 열리면 왼쪽 사이드바에서 **데이터 탐색기** 탭을 확장하고 데이터 세트 **를 두 번 클릭하여 사용 가능한 데이터 세트** 목록을 봅니다. 액세스할 데이터 세트 목록을 마우스 오른쪽 단추로 클릭하고 **노트북에서 데이터 탐색을 클릭합니다**. 다음 코드 셀이 생성됩니다.
-
-#### PySpark(Spark 2.3 - 더 이상 사용되지 않음)
-
-```python
-# PySpark 3 (Spark 2.3 - deprecated)
-
-pd0 = spark.read.format("com.adobe.platform.dataset").\
-    option('orgId', "YOUR_IMS_ORG_ID@AdobeOrg").\
-    load("{DATASET_ID}")
-pd0.describe()
-pd0.show(10, False)
-```
+활성 PySpark 또는 Scala 노트북을 열고 왼쪽 사이드바에서 **데이터 탐색기** 탭을 확장한 다음 데이터 세트 **를 두 번 클릭하여 사용 가능한 데이터 집합** 목록을 봅니다. 액세스할 데이터 세트 목록을 마우스 오른쪽 단추로 클릭하고 **노트북에서 데이터 탐색을 클릭합니다**. 다음 코드 셀이 생성됩니다.
 
 #### PySpark(Spark 2.4) {#pyspark2.4}
 
@@ -410,20 +310,6 @@ Spark 2.4가 도입됨에 따라 [`%dataset`](#magic) 맞춤형 기능이 제공
 %dataset read --datasetId {DATASET_ID} --dataFrame pd0
 pd0.describe()
 pd0.show(10, False)
-```
-
-#### Spark(Spark 2.3 - 더 이상 사용되지 않음)
-
-```scala
-// Spark (Spark 2.3 - deprecated)
-
-import com.adobe.platform.dataset.DataSetOptions
-val dataFrame = spark.read.
-    format("com.adobe.platform.dataset").
-    option(DataSetOptions.orgId, "YOUR_IMS_ORG_ID@AdobeOrg").
-    load("{DATASET_ID}")
-dataFrame.printSchema()
-dataFrame.show()
 ```
 
 #### 스칼라(Spark 2.4) {#spark2.4}
@@ -560,34 +446,9 @@ df <- dataset_reader$
 
 ### PySpark/Spark에서 경험 이벤트 데이터 필터링
 
->[!IMPORTANT]
->Spark 2.3이 Spark 2.4로 바뀌면서 Spark와 PySpark 커널 모두 없어졌습니다.
->
->새로운 PySpark 3(Spark 2.4) 노트북은 Python3 커널을 사용합니다. 기존 코드 변환에 대한 자세한 내용은 [Pyspark 3(Spark 2.3)을 PySpark 3(Spark 2.4)](../recipe-notebook-migration.md) 로 전환하는 방법에 대한 가이드를 참조하십시오. 새로운 PySpark 노트북을 만드는 경우 ExperienceEvent 데이터 필터링에 [PySpark 3(spark 2.4)](#pyspark3-spark2.4) 예제를 사용하십시오.
->
->새로운 Spark 노트북은 Scala 커널을 활용해야 합니다. 기존 코드 변환에 대한 자세한 내용은 [Spark 2.3을 Scala(Spark 2.4)](../recipe-notebook-migration.md) 변환 가이드를 참조하십시오. 새 Spark 전자 필기장을 만드는 경우 ExperienceEvent 데이터 필터링에 [Scala(spark 2.4)](#scala-spark) 예제를 사용하십시오.
-
-PySpark 또는 Spark 노트북에서 ExperienceEvent 데이터 세트에 액세스하고 이를 필터링하려면 데이터 세트 ID(`{DATASET_ID}`), 조직의 IMS ID 및 특정 시간 범위를 정의하는 필터 규칙을 제공해야 합니다. 필터링 시간 범위는 함수 매개 변수가 SQL 쿼리 문자열 `spark.sql()`인 함수를 사용하여 정의됩니다.
+PySpark 또는 Scala 전자 필기장에서 ExperienceEvent 데이터 세트에 액세스하고 이를 필터링하려면 데이터 세트 ID(`{DATASET_ID}`), 조직의 IMS ID 및 특정 시간 범위를 정의하는 필터 규칙을 제공해야 합니다. 필터링 시간 범위는 함수 매개 변수가 SQL 쿼리 문자열 `spark.sql()`인 함수를 사용하여 정의됩니다.
 
 다음 셀에서는 2019년 1월 1일부터 2019년 12월 31일 종료 사이에만 존재하는 데이터로 ExperienceEvent 데이터 세트를 필터링합니다.
-
-#### PySpark 3(Spark 2.3 - 더 이상 사용되지 않음)
-
-```python
-# PySpark 3 (Spark 2.3 - deprecated)
-
-pd = spark.read.format("com.adobe.platform.dataset").\
-    option("orgId", "YOUR_IMS_ORG_ID@AdobeOrg").\
-    load("{DATASET_ID}")
-
-pd.createOrReplaceTempView("event")
-timepd = spark.sql("""
-    SELECT *
-    FROM event
-    WHERE timestamp > CAST('2019-01-01 00:00:00.0' AS TIMESTAMP)
-    AND timestamp < CAST('2019-12-31 23:59:59.9' AS TIMESTAMP)
-""")
-```
 
 #### PySpark 3(Spark 2.4) {#pyspark3-spark2.4}
 
@@ -607,26 +468,6 @@ timepd = spark.sql("""
     AND timestamp < CAST('2019-12-31 23:59:59.9' AS TIMESTAMP)
 """)
 timepd.show()
-```
-
-#### Spark(Spark 2.3 - 더 이상 사용되지 않음)
-
-```scala
-// Spark (Spark 2.3 - deprecated)
-
-import com.adobe.platform.dataset.DataSetOptions
-val dataFrame = spark.read.
-    format("com.adobe.platform.dataset").
-    option(DataSetOptions.orgId, "YOUR_IMS_ORG_ID@AdobeOrg").
-    load("{DATASET_ID}")
-
-dataFrame.createOrReplaceTempView("event")
-val timedf = spark.sql("""
-    SELECT * 
-    FROM event 
-    WHERE timestamp > CAST('2019-01-01 00:00:00.0' AS TIMESTAMP)
-    AND timestamp < CAST('2019-12-31 23:59:59.9' AS TIMESTAMP)
-""")
 ```
 
 #### 스칼라(Spark 2.4) {#scala-spark}
