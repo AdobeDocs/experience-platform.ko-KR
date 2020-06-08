@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Google 클라우드 스토리지 커넥터
 topic: overview
 translation-type: tm+mt
-source-git-commit: 256a193e56e69078d1c01c622656f0b1a18e73ff
+source-git-commit: 0ed2ed3b08f262100746f255a78c248a1748eb5e
 workflow-type: tm+mt
-source-wordcount: '377'
+source-wordcount: '376'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Google 클라우드 스토리지 커넥터
 
-Adobe Experience Platform은 AWS, Google Cloud Platform 및 Azure와 같은 클라우드 제공업체를 위한 기본 연결을 제공합니다. 이러한 시스템의 데이터를 플랫폼으로 가져올 수 있습니다.
+Adobe Experience Platform은 AWS, Google Cloud Platform 및 Azure와 같은 클라우드 제공업체를 위한 기본 연결을 제공하므로 이러한 시스템에서 데이터를 가져올 수 있습니다.
 
 클라우드 스토리지 소스는 다운로드, 포맷 또는 업로드 없이도 직접 데이터를 플랫폼에 가져올 수 있습니다. 인제스트된 데이터는 XDM JSON, XDM 쪽모이 세공식 또는 구분 기호로 형식을 지정할 수 있습니다. 프로세스의 모든 단계는 소스 워크플로우에 통합됩니다. 플랫폼을 사용하면 Google Cloud Storage에서 일괄로 데이터를 가져올 수 있습니다.
 
