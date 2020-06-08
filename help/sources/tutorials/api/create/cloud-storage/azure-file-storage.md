@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Flow Service API를 사용하여 Azure 파일 저장소 커넥터 만들기
 topic: overview
 translation-type: tm+mt
-source-git-commit: 3a882656f93b86093b356be5dbc12b3e4321cfb8
+source-git-commit: 0ed2ed3b08f262100746f255a78c248a1748eb5e
 workflow-type: tm+mt
-source-wordcount: '636'
+source-wordcount: '622'
 ht-degree: 1%
 
 ---
@@ -75,7 +75,8 @@ POST /connections
 
 **요청**
 
-Azure 파일 저장소 연결을 만들려면 고유한 연결 사양 ID를 POST 요청의 일부로 제공해야 합니다. Azure 파일 저장소의 연결 사양 ID입니다 `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8`.
+다음 요청은 페이로드에서 제공하는 속성으로 구성된 새 Azure 파일 저장소 연결을 만듭니다.
+
 
 ```shell
 curl -X POST \
