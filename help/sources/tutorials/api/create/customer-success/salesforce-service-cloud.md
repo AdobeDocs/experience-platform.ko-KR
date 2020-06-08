@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Flow Service API를 사용하여 Salesforce Service Cloud 커넥터 만들기
 topic: overview
 translation-type: tm+mt
-source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
+source-git-commit: 0ed2ed3b08f262100746f255a78c248a1748eb5e
 workflow-type: tm+mt
-source-wordcount: '701'
+source-wordcount: '700'
 ht-degree: 1%
 
 ---
