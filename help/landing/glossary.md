@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform 제품 설명서
 topic: getting started
 translation-type: tm+mt
-source-git-commit: a5268c2d31d356ce479bdcc143050cd513259235
+source-git-commit: f2a7300d4ad75e3910abbdf2ecc2946a2dfe553c
 workflow-type: tm+mt
-source-wordcount: '6973'
+source-wordcount: '6961'
 ht-degree: 0%
 
 ---
@@ -426,7 +426,7 @@ ht-degree: 0%
 
 **규칙 구성 요소:** 경험 플랫폼 론치에서 규칙 구성 요소는 규칙을 구성하는 이벤트, 조건 및 작업입니다.
 
-**런타임:** 런타임은 기계 학습 레서피에 대한 런타임 환경을 지정합니다. Spark 및 PySpark 런타임을 사용하면 바이너리 레서피 소스(.jar) 파일을 직접 업로드할 수 있습니다. Python, R 및 Tensorflow 런타임은 레시피 소스를 위해 문서 이미지에 URL을 입력할 수 있도록 해줍니다.
+**런타임:** 런타임은 기계 학습 레서피에 대한 런타임 환경을 지정합니다. Python, R, Spark, PySpark 및 Tensorflow 런타임을 사용하면 레시피 소스의 문서 이미지에 URL을 입력할 수 있습니다.
 
 [맨 위로](#adobe-experience-platform-glossary)
 
