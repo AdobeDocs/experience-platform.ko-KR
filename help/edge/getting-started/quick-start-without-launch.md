@@ -4,19 +4,19 @@ seo-title: 'Adobe Experience Platform 웹 SDK 빠른 시작 '
 description: Experience Platform 웹 SDK를 사용하여 데이터를 수집하는 빠른 시작 가이드
 seo-description: Experience Platform 웹 SDK를 사용하여 데이터를 수집하는 빠른 시작 가이드
 translation-type: tm+mt
-source-git-commit: 7c5d4306f9964553cf48a208166fce265dcdd94d
+source-git-commit: 2d58f7f95c6ad125e66856350aee2f29a0499061
 workflow-type: tm+mt
-source-wordcount: '511'
-ht-degree: 3%
+source-wordcount: '515'
+ht-degree: 5%
 
 ---
 
 
 # 시작
 
-이 가이드는 Adobe Experience Platform 웹 SDK를 설정하는 다양한 방법을 안내합니다. 이 기능을 사용하려면 허용 목록에 포함되어야 합니다. 대기 목록에 오르려면 CSM에 문의하십시오.
+이 가이드는 Adobe Experience Platform 웹 SDK를 설정하는 다양한 방법을 안내합니다. 이 기능을 사용하려면 허용 목록에 있어야 합니다. 대기 목록에 오르려면 CSM에 문의하십시오.
 
-- 자사 도메인(CNAME)이 [활성화되어 있어야](https://docs.adobe.com/content/help/en/core-services/interface/ec-cookies/cookies-first-party.html) 합니다. 이미 Analytics용 CNAME이 있는 경우 이 CNAME을 사용해야 합니다. CNAME이 없는 개발 환경에서 테스트가 작동하지만 프로덕션으로 이동하려면 먼저 테스트가 필요합니다
+- 자사 도메인(CNAME)이 [활성화되어 있어야](https://docs.adobe.com/content/help/ko-KR/core-services/interface/ec-cookies/cookies-first-party.html) 합니다. 이미 Analytics용 CNAME이 있는 경우 이 CNAME을 사용해야 합니다. CNAME이 없는 개발 환경에서 테스트가 작동하지만 프로덕션으로 이동하려면 먼저 테스트가 필요합니다
 - Adobe Experience Platform 데이터 플랫폼을 이용할 수 있습니다.  플랫폼을 구매하지 않은 경우, Adobe는 SDK와 함께 제한된 방식으로 사용할 수 있도록 Experience Platform Data Services Foundation을 추가 비용 없이 제공할 것입니다.
 - 최신 버전의 방문자 ID 서비스 사용
 
@@ -26,7 +26,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->이 기능을 사용하려면 조직에서 허용 목록에 포함되어야 합니다. 최종 허용 목록에 포함하려면 CSM에 문의하십시오.
+>해당 기능에 대한 허용 목록에 조직이 있어야 합니다. 허용 목록에 포함하려면 CSM에 문의하십시오.
 
 ## 스키마 준비
 
@@ -92,7 +92,7 @@ alloy("sendEvent", {
 
 데이터를 이동한 후 다음을 수행할 수 있습니다.
 
-- [스키마 구축](https://docs.adobe.com/content/help/en/experience-platform/xdm/schema/composition.html)
+- [스키마 구축](https://docs.adobe.com/content/help/ko-KR/experience-platform/xdm/schema/composition.html)
 - [디버깅에 대한 자세한 내용](../fundamentals/debugging.md)
 - 경험 [개인화](../fundamentals/rendering-personalization-content.md)
 - 여러 솔루션으로 데이터 전송 방법 살펴보기
