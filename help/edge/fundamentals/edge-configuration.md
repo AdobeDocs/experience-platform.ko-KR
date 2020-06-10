@@ -4,9 +4,9 @@ seo-title: Experience Platform 웹 SDK용 Edge 구성
 description: '경험 플랫폼 에지 네트워크를 구성하는 방법을 알아봅니다. '
 seo-description: '경험 플랫폼 에지 네트워크를 구성하는 방법을 알아봅니다. '
 translation-type: tm+mt
-source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+source-git-commit: 2d58f7f95c6ad125e66856350aee2f29a0499061
 workflow-type: tm+mt
-source-wordcount: '883'
+source-wordcount: '886'
 ht-degree: 2%
 
 ---
@@ -24,7 +24,7 @@ Edge 구성 ID는 Launch에서 Edge 구성 도구를 사용하여 만들 수 있
 
 >[!NOTE]
 >
->Edge 구성 도구는 Launch를 태그 관리자로 사용하는지에 관계없이 화이트리스트 고객에게 사용할 수 있습니다. 또한 사용자는 Launch에서 현상 권한을 필요로 합니다. 자세한 내용은 [론치](https://docs.adobe.com/content/help/ko-KR/launch/using/reference/admin/user-permissions.html) 설명서의 사용자 권한 문서를 참조하십시오.
+>고객은 Launch를 태그 관리자로 사용하는지에 관계없이 Edge 구성 도구를 허용 목록에 사용할 수 있습니다. 또한 사용자는 Launch에서 현상 권한을 필요로 합니다. 자세한 내용은 [론치](https://docs.adobe.com/content/help/ko-KR/launch/using/reference/admin/user-permissions.html) 설명서의 사용자 권한 문서를 참조하십시오.
 
 화면의 오른쪽 상단 영역에서 UICONTROL **[새 에지 구성을]** 클릭하여 Edge 구성을 만들 수 있습니다. 이름과 설명을 입력하면 각 환경에 대한 기본 설정을 묻는 메시지가 표시됩니다.
 
