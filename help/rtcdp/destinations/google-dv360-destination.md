@@ -4,9 +4,9 @@ seo-title: Google 디스플레이 및 비디오 360 대상
 description: 디스플레이 및 비디오 360(이전 DoubleClick 입찰 관리자)은 디스플레이, 비디오 및 모바일 재고 소스에서 타깃팅된 디지털 캠페인 및 대상 재타깃팅을 실행하는 데 사용되는 도구입니다.
 seo-description: '디스플레이 및 비디오 360(이전 DoubleClick 입찰 관리자)은 디스플레이, 비디오 및 모바일 재고 소스에서 타깃팅된 디지털 캠페인 및 대상 재타깃팅을 실행하는 데 사용되는 도구입니다. '
 translation-type: tm+mt
-source-git-commit: 121ae74e9c352b1f6fc12093d815e711ebd817b8
+source-git-commit: dc5ee796ca390d06fc8e08bd6c30e88a0d96dd53
 workflow-type: tm+mt
-source-wordcount: '574'
+source-wordcount: '586'
 ht-degree: 0%
 
 ---
@@ -32,13 +32,13 @@ Google Display &amp; Video 360 목적지에만 해당되는 다음 세부 사항
 
 ## 전제 조건
 
-### 화이트 리스트
+### 허용 목록
 
 >[!NOTE]
 >
->Adobe 실시간 CDP에서 첫 번째 Google Display &amp; Video 360 대상을 설정하기 전에 화이트 리스트는 필수입니다. 대상을 만들기 전에 Google에서 아래 설명된 허용 목록 프로세스가 완료되었는지 확인하십시오.
+>Adobe 실시간 CDP에서 첫 번째 Google Display &amp; Video 360 대상을 설정하기 전에 허용 목록이 필수입니다. 대상을 만들기 전에 아래에 설명된 목록 허용 프로세스가 Google에서 완료되었는지 확인하십시오.
 
-Adobe 실시간 CDP에서 Google Display &amp; Video 360 대상을 만들기 전에 Google에 데이터 제공자로 허용 목록에 추가되어야 하며 계정을 허용 목록에 추가해야 합니다. Google에 연락하여 다음 정보를 제공합니다.
+Adobe 실시간 CDP에서 Google Display &amp; Video 360 대상을 만들기 전에 Google에 연락하여 Adobe가 허용된 데이터 제공업체 목록에 포함되도록 요청해야 하며, 계정이 허용 목록에 추가되도록 해야 합니다. Google에 연락하여 다음 정보를 제공합니다.
 
 * **계정 ID** : Google의 Adobe 계정 ID입니다. 이 ID를 얻으려면 Adobe 고객 지원 센터 또는 Adobe 담당자에게 문의하십시오.
 * **고객 ID** : Google의 Adobe 고객 계정 ID입니다. 이 ID를 얻으려면 Adobe 고객 지원 센터 또는 Adobe 담당자에게 문의하십시오.
@@ -50,6 +50,7 @@ Adobe 실시간 CDP에서 Google Display &amp; Video 360 대상을 만들기 전
    ![Connect Google 표시 및 비디오 360 대상](/help/rtcdp/destinations/assets/google-dv360-destination.png)
 
 2. 대상 만들기 워크플로우에서 대상에 대한 [!UICONTROL 기본 정보를] 입력합니다. <br>
+
    ![기본 정보 Google Display &amp; Video 360](/help/rtcdp/destinations/assets/google-dv360-basic-information.png)
 * **[!UICONTROL 이름]**: 이 대상에 대한 기본 이름을 입력합니다.
 * **[!UICONTROL 설명]**: 선택 사항. 예를 들어 이 대상을 사용하는 캠페인을 언급할 수 있습니다.
