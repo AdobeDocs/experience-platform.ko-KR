@@ -4,9 +4,9 @@ seo-title: Google 광고 관리자 대상
 description: '이전에 발행자를 위한 DoubleClick 또는 DoubleClick AdX로 알려진 Google Ad Manager는 발행자가 비디오 및 모바일 앱을 통해 자사 웹 사이트에서 광고 표시를 관리할 수 있는 수단을 제공하는 Google의 광고 서비스 플랫폼입니다. '
 seo-description: '이전에 발행자를 위한 DoubleClick 또는 DoubleClick AdX로 알려진 Google Ad Manager는 발행자가 비디오 및 모바일 앱을 통해 자사 웹 사이트에서 광고 표시를 관리할 수 있는 수단을 제공하는 Google의 광고 서비스 플랫폼입니다. '
 translation-type: tm+mt
-source-git-commit: 121ae74e9c352b1f6fc12093d815e711ebd817b8
+source-git-commit: dc5ee796ca390d06fc8e08bd6c30e88a0d96dd53
 workflow-type: tm+mt
-source-wordcount: '588'
+source-wordcount: '599'
 ht-degree: 0%
 
 ---
@@ -32,13 +32,13 @@ Google Ad Manager 대상에만 해당되는 다음 세부 사항을 참고하십
 
 ## 전제 조건
 
-### 화이트 리스트
+### 허용 목록
 
 >[!NOTE]
 >
->Adobe 실시간 CDP에서 첫 번째 Google Ad Manager 대상을 설정하기 전에 허용 목록은 필수 사항입니다. 대상을 만들기 전에 Google에서 아래 설명된 허용 목록 프로세스가 완료되었는지 확인하십시오.
+>Adobe 실시간 CDP에서 첫 번째 Google Ad Manager 대상을 설정하기 전에 허용 목록이 필수입니다. 대상을 만들기 전에 아래에 설명된 목록 허용 프로세스가 Google에서 완료되었는지 확인하십시오.
 
-Adobe Real-time CDP에서 Google Ad Manager 대상을 만들기 전에 Google에 데이터 제공업체로 허용 목록에 추가되고 계정을 허용 목록에 추가하도록 요청해야 합니다. Google에 연락하여 다음 정보를 제공합니다.
+Adobe 실시간 CDP에서 Google Ad Manager 대상을 만들려면 Google에 연락하여 Adobe가 허용된 데이터 공급자 목록에 포함되고, 계정이 허용 목록에 추가되도록 해야 합니다. Google에 연락하여 다음 정보를 제공합니다.
 
 * **계정 ID** : Google의 Adobe 계정 ID입니다. 이 ID를 얻으려면 Adobe 고객 지원 센터 또는 Adobe 담당자에게 문의하십시오.
 * **고객 ID** : Google의 Adobe 고객 계정 ID입니다. 이 ID를 얻으려면 Adobe 고객 지원 센터 또는 Adobe 담당자에게 문의하십시오.
@@ -52,6 +52,7 @@ Adobe Real-time CDP에서 Google Ad Manager 대상을 만들기 전에 Google에
    ![Google 광고 관리자 대상 연결](/help/rtcdp/destinations/assets/google-1-destination.png)
 
 2. 대상 만들기 워크플로우에서 대상에 대한 [!UICONTROL 기본 정보를] 입력합니다. <br>
+
    ![기본 정보 Google 광고 관리자](/help/rtcdp/destinations/assets/google-1-basic-information.png)
 * **[!UICONTROL 이름]**: 이 대상에 대한 기본 이름을 입력합니다.
 * **[!UICONTROL 설명]**: 선택 사항. 예를 들어 이 대상을 사용하는 캠페인을 언급할 수 있습니다.
