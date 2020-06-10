@@ -1,25 +1,25 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Flow Service API를 사용하여 HDFS 커넥터 만들기
+title: Flow Service API를 사용하여 Apache HDFS 커넥터 만들기
 topic: overview
 translation-type: tm+mt
-source-git-commit: 0ed2ed3b08f262100746f255a78c248a1748eb5e
+source-git-commit: e5789a10c49b2933a0727692dedf2601a214dbc2
 workflow-type: tm+mt
-source-wordcount: '554'
+source-wordcount: '558'
 ht-degree: 2%
 
 ---
 
 
-# Flow Service API를 사용하여 HDFS 커넥터 만들기
+# Flow Service API를 사용하여 Apache HDFS 커넥터 만들기
 
 >[!NOTE]
->HDFS 커넥터가 베타 버전입니다. 기능 및 설명서는 변경될 수 있습니다.
+>Apache HDFS 커넥터가 베타 버전입니다. 기능 및 설명서는 변경될 수 있습니다.
 
 Flow Service는 다양한 소스에서 수집한 고객 데이터를 중앙에서 수집하여 Adobe Experience Platform으로 가져오는 데 사용됩니다. 이 서비스는 지원되는 모든 소스가 연결되어 있는 사용자 인터페이스와 RESTful API를 제공합니다.
 
-이 자습서에서는 Flow Service API를 사용하여 Hadoop 분산 파일 시스템(이하 &quot;HDFS&quot;라 한다)을 Experience Platform에 연결하는 단계를 안내합니다.
+이 자습서에서는 Flow Service API를 사용하여 Apache Hadoop 분산 파일 시스템(이하 &quot;HDFS&quot;라 한다)을 Experience Platform에 연결하는 단계를 안내합니다.
 
 ## 시작하기
 
