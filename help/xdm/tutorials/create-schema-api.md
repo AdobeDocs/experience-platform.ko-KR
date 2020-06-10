@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 스키마 레지스트리 API를 사용하여 스키마 만들기
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: 14cd3d17c7d9ba602d02925abddec9e0b246a8c8
+source-git-commit: 7cf873d19d26df9ebb70d11ee6e6513173ab45bb
+workflow-type: tm+mt
+source-wordcount: '2418'
+ht-degree: 1%
 
 ---
 
@@ -178,7 +181,7 @@ curl -X GET \
 
 선택한 스키마의 클래스에 따라 사용 가능한 표준 혼합이 다릅니다. 각 혼합에는 믹싱과 호환되는 클래스를 정의하는 필드가 포함되어 있습니다. `intendedToExtend`
 
-믹스는 동일한 정보를 캡처해야 하는 모든 스키마에서 재사용할 수 있는 &quot;이름&quot; 또는 &quot;주소&quot;와 같은 개념을 정의합니다.
+믹스는 동일한 정보를 캡처해야 하는 스키마에서 재사용할 수 있는 &quot;이름&quot; 또는 &quot;주소&quot;와 같은 개념을 정의합니다.
 
 **API 형식**
 
@@ -1775,7 +1778,7 @@ curl -X GET \
                         "active": "Active",
                         "incomplete": "Incomplete",
                         "pending_verification": "Pending Verification",
-                        "blacklisted": "Blacklisted",
+                        "denylist": "Deny List",
                         "blocked": "Blocked"
                     },
                     "meta:xdmField": "xdm:status",
@@ -1850,7 +1853,7 @@ curl -X GET \
                         "active": "Active",
                         "incomplete": "Incomplete",
                         "pending_verification": "Pending Verification",
-                        "blacklisted": "Blacklisted",
+                        "denylist": "Deny List",
                         "blocked": "Blocked"
                     },
                     "meta:xdmField": "xdm:status",
@@ -1902,7 +1905,7 @@ curl -X GET \
                     "meta:enum": {
                         "active": "Active",
                         "incomplete": "Incomplete",
-                        "blacklisted": "Blacklisted",
+                        "denylist": "Deny List",
                         "blocked": "Blocked"
                     },
                     "meta:xdmField": "xdm:status",
@@ -1967,7 +1970,7 @@ curl -X GET \
                     "meta:enum": {
                         "active": "Active",
                         "incomplete": "Incomplete",
-                        "blacklisted": "Blacklisted",
+                        "denylist": "Deny List",
                         "blocked": "Blocked"
                     },
                     "meta:xdmField": "xdm:status",
@@ -2032,7 +2035,7 @@ curl -X GET \
                     "meta:enum": {
                         "active": "Active",
                         "incomplete": "Incomplete",
-                        "blacklisted": "Blacklisted",
+                        "denylist": "Deny List",
                         "blocked": "Blocked"
                     },
                     "meta:xdmField": "xdm:status",
