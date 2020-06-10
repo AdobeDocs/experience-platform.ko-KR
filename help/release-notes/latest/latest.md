@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: June 10, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: b6cfdf56c20065bdc3e8a9fedf6007ddd74eaeaa
+source-git-commit: 35af498a41d779cc155cff7f030cccb57f68b8fa
 workflow-type: tm+mt
-source-wordcount: '306'
-ht-degree: 6%
+source-wordcount: '429'
+ht-degree: 5%
 
 ---
 
@@ -20,6 +20,7 @@ ht-degree: 6%
 Adobe Experience Platform의 기존 기능 업데이트:
 
 - [데이터 과학 작업 공간](#dsw)
+- [세그먼테이션](#segmentation)
 - [소스](#sources)
 
 ## 데이터 과학 작업 공간 {#dsw}
@@ -35,6 +36,20 @@ Data Science Workspace는 실시간 머신 러닝을 통해 향상된 경험과 
 | JupiterLab Launcher 실시간 ML 스타터 | JupiterLab Launcher에는 실시간 머신 러닝(Alpha)을 위한 Python 노트북 시작 도구가 포함되어 있습니다. |
 
 실시간 기계 학습 알파에 대한 자세한 내용은 [실시간 기계 학습 개요를 참조하십시오](../../data-science-workspace/real-time-machine-learning/home.md).
+
+## 세그먼테이션 {#segmentation}
+
+Adobe Experience Platform 세그멘테이션 서비스는 세그먼트를 작성하고 실시간 고객 프로필 데이터를 통해 대상을 생성할 수 있도록 해주는 유저 인터페이스와 RESTful API를 제공합니다. 이러한 세그먼트는 중앙에서 구성 및 관리되므로, 모든 Adobe 애플리케이션에서 쉽게 액세스할 수 있습니다.
+
+세분화 서비스는 고객 기반 내에서 마케팅 가능한 사람들을 구분하는 기준을 설명함으로써 특정 프로필 하위 집합을 정의합니다. 세그먼트는 브랜드와의 고객 상호 작용을 나타내는 레코드 데이터(인구 통계 정보 등) 또는 시간 시리즈 이벤트를 기반으로 할 수 있습니다.
+
+**새로운 기능**
+
+| 기능 | 설명 |
+| ------- | ----------- |
+| 날짜 필드 | 날짜 기능에 대한 &quot;만료 날짜&quot; 기능이 추가되어 사용자가 연도 없이 날짜를 평가할 수 있습니다. |
+
+세그멘테이션에 대한 자세한 내용은 세그멘테이션 [개요를 참조하십시오.](../../segmentation/home.md)
 
 ## 소스 {#sources}
 
