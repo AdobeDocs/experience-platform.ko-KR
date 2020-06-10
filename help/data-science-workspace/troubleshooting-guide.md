@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 데이터 과학 작업 공간 문제 해결 가이드
 topic: Troubleshooting
 translation-type: tm+mt
-source-git-commit: 1447196da7dbf59c1f498de40f12ed74c328c0e6
+source-git-commit: e77b76bdcfa5137d9bd77400b15f2fe8db3b7c0b
+workflow-type: tm+mt
+source-wordcount: '704'
+ht-degree: 0%
 
 ---
 
@@ -35,7 +38,7 @@ Google Chrome 브라우저 버전 80.x에서는 기본적으로 모든 타사 �
 
 ![chrome](./images/faq/toggle-off.png)
 
->[!NOTE] 또는 타사 쿠키 및 화이트 리스트 [*를 비활성화할 수 있습니다.]ds.adobe.net
+>[!NOTE] 또는 타사 쿠키를 비활성화하고 [* 추가할 수도 있습니다.]ds.adobe.net을 허용 목록에 추가합니다.
 
 주소 표시줄의 &quot;chrome://flags/&quot;으로 이동합니다. 오른쪽의 드롭다운 메뉴를 사용하여 *&quot;기본 쿠키로* SameSite&quot;라는 플래그를 검색하고 비활성화합니다.
 
@@ -61,7 +64,7 @@ Safari 환경 설정 창에서 **고급을 선택합니다**. 그런 다음 메�
 
 ## JupiterLab에서 파일을 업로드하거나 삭제할 때 &#39;403 금지&#39; 메시지가 표시되는 이유는 무엇입니까?
 
-Ghostery 또는 AdBlock Plus와 같은 광고 차단 소프트웨어에서 사용 중인 브라우저가 사용 가능한 경우 JupiterLab이 정상적으로 작동하도록 하기 위해 각 광고 차단 소프트웨어에서 &quot;\*.adobe.net&quot; 도메인을 허용 목록에 포함해야 합니다. 이는 JupiterLab 가상 컴퓨터가 경험 플랫폼 도메인과 다른 도메인에서 실행되기 때문입니다.
+Ghostery 또는 AdBlock Plus와 같은 광고 차단 소프트웨어를 사용하는 브라우저가 활성화되어 있는 경우 JupiterLab이 정상적으로 작동하려면 각 광고 차단 소프트웨어에 &quot;\*.adobe.net&quot; 도메인이 허용되어야 합니다. 이는 JupiterLab 가상 컴퓨터가 경험 플랫폼 도메인과 다른 도메인에서 실행되기 때문입니다.
 
 ## 내 Jupiter Notebook의 일부 부분이 스크램블되거나 코드로 렌더링되지 않는 이유는 무엇입니까?
 
