@@ -4,7 +4,7 @@ solution: Experience Platform
 title: UI에서 Oracle DB 소스 커넥터 생성
 topic: overview
 translation-type: tm+mt
-source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
+source-git-commit: c04106b42bef92344fb0474a986ec7dfd64a17d9
 workflow-type: tm+mt
 source-wordcount: '490'
 ht-degree: 1%
@@ -36,7 +36,7 @@ Adobe Experience Platform의 소스 커넥터는 외부에서 소스 데이터�
 
 | 자격 증명 | 설명 |
 | ---------- | ----------- |
-| `connectionString` | Oracle에 연결하는 데 사용되는 연결 문자열. Oracle 연결 문자열 패턴은 다음과 같습니다. `Host={HOST};Port={PORT};Sid={SID};UserId={USERNAME};Password={PASSWORD}`. |
+| `connectionString` | Oracle에 연결하는 데 사용되는 연결 문자열. Oracle 연결 문자열 패턴은 다음과 같습니다. `Host={HOST};Port={PORT};Sid={SID};User Id={USERNAME};Password={PASSWORD}`. |
 | `connectionSpec.id` | 연결을 만드는 데 필요한 고유 식별자입니다. Oracle에 대한 연결 사양 ID입니다 `d6b52d86-f0f8-475f-89d4-ce54c8527328`. |
 
 시작하는 방법에 대한 자세한 내용은 [이 Oracle 문서를 참조하십시오](https://docs.oracle.com/database/121/ODPNT/featConnecting.htm#ODPNT199).
