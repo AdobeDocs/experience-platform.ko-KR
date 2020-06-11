@@ -4,10 +4,10 @@ seo-title: Adobe Experience Platform 웹 SDK 빠른 시작(Launch)
 description: Experience Platform 웹 SDK 익스텐션을 사용하여 데이터를 수집하는 빠른 시작 가이드
 seo-description: Experience Platform 웹 SDK 익스텐션을 사용하여 데이터를 수집하는 빠른 시작 가이드
 translation-type: tm+mt
-source-git-commit: dc5ee796ca390d06fc8e08bd6c30e88a0d96dd53
+source-git-commit: 62b18ed8f70ad87b04f60ade5730ff30d8985415
 workflow-type: tm+mt
-source-wordcount: '548'
-ht-degree: 4%
+source-wordcount: '511'
+ht-degree: 5%
 
 ---
 
@@ -17,7 +17,6 @@ ht-degree: 4%
 이 가이드는 Launch에서 Adobe Experience Platform 웹 SDK를 설정하는 방법에 대한 다양한 단계를 안내합니다. 이 기능을 사용하려면 권한이 있어야 하며 허용 목록에 있어야 합니다. 대기자 명단에 오르시려면 CSM으로 연락하십시오.
 
 - 자사 도메인(CNAME)이 [활성화되어 있어야](https://docs.adobe.com/content/help/ko-KR/core-services/interface/ec-cookies/cookies-first-party.html) 합니다. 이미 Analytics용 CNAME이 있는 경우 이 CNAME을 사용해야 합니다. 개발 중인 테스트는 CNAME 없이 작동하지만 프로덕션으로 이동하기 전에 필요합니다
-- Adobe Experience Platform 데이터 플랫폼을 이용할 수 있습니다. 귀하가 플랫폼을 구매하지 않은 경우, Adobe는 귀하에게 SDK와 함께 제한된 방식으로 사용할 수 있도록 Experience Platform Data Services Foundation을 추가 비용 없이 제공할 것입니다.
 - 최신 버전의 방문자 ID 서비스 사용
 
 ## 구성 ID 만들기
