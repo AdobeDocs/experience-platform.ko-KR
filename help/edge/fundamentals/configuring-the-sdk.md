@@ -4,7 +4,7 @@ seo-title: Adobe Experience Platform 웹 SDK 구성
 description: Experience Platform 웹 SDK를 구성하는 방법 학습
 seo-description: Experience Platform 웹 SDK를 구성하는 방법 학습
 translation-type: tm+mt
-source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+source-git-commit: 7d4f364ebb9df1ce58481a35007ea75f86ab7825
 workflow-type: tm+mt
 source-wordcount: '739'
 ht-degree: 11%
@@ -21,7 +21,7 @@ SDK에 대한 구성은 `configure` 명령으로 수행됩니다.
 
 ```javascript
 alloy("configure", {
-  "configId": "ebebf826-a01f-4458-8cec-ef61de241c93",
+  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
   "orgId":"ADB3LETTERSANDNUMBERS@AdobeOrg"
 });
 ```
@@ -30,13 +30,13 @@ alloy("configure", {
 
 ## 일반 옵션
 
-### `configId`
+### `edgeConfigId`
 
 | **유형** | **필수 여부** | **기본값** |
 | -------- | ------------ | ----------------- |
 | 문자열 | 예 | none |
 
-SDK를 해당 계정 및 구성에 연결하는 할당된 구성 ID입니다.  단일 페이지 내에서 여러 인스턴스를 구성할 때 각 인스턴스에 대해 다른 인스턴스 `configId` 를 구성해야 합니다.
+SDK를 해당 계정 및 구성에 연결하는 할당된 구성 ID입니다.  단일 페이지 내에서 여러 인스턴스를 구성할 때 각 인스턴스에 대해 다른 인스턴스 `edgeConfigId` 를 구성해야 합니다.
 
 ### `context`
 
