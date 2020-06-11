@@ -4,7 +4,7 @@ seo-title: Adobe Experience Platform 웹 SDK와 여러 속성 상호 작용
 description: 여러 Experience Platform 웹 SDK 속성과 상호 작용하는 방법 학습
 seo-description: 여러 Experience Platform 웹 SDK 속성과 상호 작용하는 방법 학습
 translation-type: tm+mt
-source-git-commit: 4bff4b20ccc1913151aa1783d5123ffbb141a7d0
+source-git-commit: 7d4f364ebb9df1ce58481a35007ea75f86ab7825
 workflow-type: tm+mt
 source-wordcount: '256'
 ht-degree: 0%
@@ -40,7 +40,7 @@ SDK에서는 기본 코드의 배열에 다른 이름을 추가하여 각 속성
 
 ```javascript
 mycustomname1("configure", {
-  "configId": "ebebf826-a01f-4458-8cec-ef61de241c93",
+  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
   "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg"
 });
 
@@ -51,7 +51,7 @@ mycustomname1("sendEvent", {
 });
 
 mycustomname2("configure", {
-  "configId": "f46e981f-fd03-4bdd-a9d9-73ce4447f870",
+  "edgeConfigId": "f46e981f-fd03-4bdd-a9d9-73ce4447f870",
   "orgId": "ADB3NUMBERSANDLETTERS2@AdobeOrg"
 });
 
@@ -66,4 +66,4 @@ mycustomname2("sendEvent", {
 
 ## 제한
 
-쿠키와 충돌하지 않도록 하기 위해 한 페이지 내의 Adobe Experience Platform 웹 SDK의 한 인스턴스에만 특정 인스턴스가 있을 수 있습니다 `configId`.  마찬가지로 Adobe Experience Platform 웹 SDK의 한 인스턴스만 특정 인스턴스를 가질 수 있습니다 `orgId`.
+쿠키와 충돌하지 않도록 하기 위해 한 페이지 내의 Adobe Experience Platform 웹 SDK의 한 인스턴스에만 특정 인스턴스가 있을 수 있습니다 `edgeConfigId`.  마찬가지로 Adobe Experience Platform 웹 SDK의 한 인스턴스만 특정 인스턴스를 가질 수 있습니다 `orgId`.
