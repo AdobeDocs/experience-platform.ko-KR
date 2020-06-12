@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 지능형 서비스에서 사용할 데이터 준비
 topic: Intelligent Services
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: 9a2e6f7db441b804f17ec91d06d359439c3d5da5
 workflow-type: tm+mt
-source-wordcount: '1437'
+source-wordcount: '1595'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,26 @@ Intelligent Services가 마케팅 이벤트 데이터에서 얻은 통찰력을 
 
 이 문서에서는 여러 채널에서 이 스키마로 마케팅 이벤트 데이터를 매핑하는 방법에 대한 일반적인 지침을 제공하며, 스키마 내의 중요한 필드에 대한 정보를 요약하여 데이터를 해당 구조에 효과적으로 매핑하는 방법을 결정하는 데 도움이 됩니다.
 
-## CEE 스키마 이해
+## 워크플로우 요약
+
+준비 프로세스는 데이터가 Adobe Experience Platform에 저장되었는지 또는 외부에 저장되었는지에 따라 달라집니다. 이 섹션에서는 두 가지 시나리오에서 수행해야 하는 필수 단계를 요약합니다.
+
+### 외부 데이터 준비
+
+데이터가 외부에 저장되는 [!DNL Experience Platform]경우 아래 절차를 따르십시오.
+
+1. 전용 Azure Blob 저장소 컨테이너에 대한 액세스 자격 증명을 요청하려면 Adobe 컨설팅 서비스에 문의하십시오.
+1. 액세스 자격 증명을 사용하여 데이터를 Blob 컨테이너에 업로드합니다.
+1. Adobe Consulting Services와 협력하여 데이터를 [Consumer ExperienceEvent 스키마에](#cee-schema) 매핑하고 이를 Intelligent Services에 인제스트합니다.
+
+### [!DNL Experience Platform] 데이터 준비
+
+데이터가 이미 저장된 경우 아래 단계 [!DNL Platform]를 따르십시오.
+
+1. Consumer ExperienceEvent 스키마의 구조를 [검토하고](#cee-schema) 데이터를 해당 필드에 매핑할 수 있는지 여부를 결정합니다.
+1. Adobe Consulting Services에 연락하여 데이터를 스키마에 매핑하고 이를 Intelligent Services에 인제스트하는 데 도움이 되도록 하거나 데이터를 직접 매핑하려면 이 안내서의 [](#mapping) 단계를 따르십시오.
+
+## CEE 스키마 이해 {#cee-schema}
 
 Consumer ExperienceEvent 스키마는 디지털 마케팅 이벤트(웹 또는 모바일)뿐만 아니라 온라인 또는 오프라인 상거래 활동과 관련된 개인의 행동에 대해 설명합니다. 지능적인 서비스의 경우 이 스키마를 사용하는 것이 필요합니다. 이유는 의미상 잘 정의된 필드(열)가 있기 때문에 데이터를 더 명확하게 하는 알 수 없는 이름은 사용할 수 없습니다.
 
@@ -185,7 +204,7 @@ Intelligent Services는 이 스키마 내의 여러 주요 필드를 활용하�
 
 에 대한 각 필수 하위 필드에 대한 자세한 내용 `xdm:productListItems`은 [마케팅 섹션 사양을](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/marketing.schema.md) 참조하십시오.
 
-## 데이터 매핑 및 인제스트
+## 데이터 매핑 및 인제스트(#mapping)
 
 마케팅 이벤트 데이터를 CEE 스키마에 매핑할 수 있는지 여부를 확인한 후, 다음 단계는 지능형 서비스에 가져올 데이터를 결정하는 것입니다. Intelligent Services에서 사용되는 모든 내역 데이터는 최소 4개월 데이터 기간 내에 포함되고, 조회 기간으로 의도한 일수는 포함되어야 합니다.
 
