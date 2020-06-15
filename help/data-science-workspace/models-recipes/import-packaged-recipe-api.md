@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 패키지된 레서피(API) 가져오기
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: f2a7300d4ad75e3910abbdf2ecc2946a2dfe553c
+source-git-commit: 20e26c874204da75cac7e8d001770702658053f1
 workflow-type: tm+mt
-source-wordcount: '974'
+source-wordcount: '976'
 ht-degree: 2%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 이 자습서는 [Sensei 기계 학습 API를](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) 사용하여 [엔진](../api/engines.md)(사용자 인터페이스의 레서피)을 만듭니다.
 
-시작하기 전에 Adobe Experience Platform Data Science Workspace에서 서로 다른 용어를 사용하여 API 및 UI 내의 유사한 요소를 참조하는 것이 중요합니다. API 용어는 이 자습서 전체에서 사용되며 다음 표에서는 상관 관계 용어의 개요를 설명합니다.
+시작하기 전에 Adobe Experience Platform 데이터 과학 작업 공간에서는 API와 UI 내의 유사한 요소를 참조하는 서로 다른 용어를 사용해야 합니다. API 용어는 이 자습서 전체에서 사용되며 다음 표에서는 상관 관계 용어의 개요를 설명합니다.
 
 | UI 용어 | API 용어 |
 | ---- | ---- |
@@ -35,24 +35,22 @@ ht-degree: 2%
 
 - `{DOCKER_URL}`: 지능형 서비스의 Docker 이미지에 대한 URL 주소입니다.
 
-이 자습서에서는 플랫폼 API를 성공적으로 호출하려면 Adobe [Experience Platform에 대한 인증 자습서](../../tutorials/authentication.md) 를 완료해야 합니다. 인증 자습서를 완료하면 아래와 같이 모든 경험 플랫폼 API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
+이 자습서에서는 Platform API를 성공적으로 호출하려면 Adobe Experience Platform [에 대한 인증 자습서를](../../tutorials/authentication.md) 완료해야 합니다. 인증 자습서를 완료하면 아래와 같이 모든 Experience Platform API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
 
 - `{ACCESS_TOKEN}`: 인증 후 제공된 특정 베어러 토큰 값.
-- `{IMS_ORG}`: 고유한 Adobe Experience Platform 통합에서 IMS 조직 자격 증명을 찾을 수 있습니다.
-- `{API_KEY}`: 고유한 Adobe Experience Platform 통합에 있는 특정 API 키 값
+- `{IMS_ORG}`: 고유한 Adobe Experience Platform 통합에서 IMS 조직 자격 증명을 찾았습니다.
+- `{API_KEY}`: 고유한 Adobe Experience Platform 통합에 있는 특정 API 키 값입니다.
 
 ## 엔진 만들기
 
-API 요청의 일부로 포함할 패키지된 레서피 파일의 형식에 따라, 엔진은 다음 두 가지 방법 중 하나를 통해 만들어집니다.
-
-- [문서 URL을 사용하여 엔진 만들기](#create-an-engine-with-a-docker-url)
+/engine 종단점에 POST 요청을 수행하여 엔진을 만들 수 있습니다. 생성된 엔진은 API 요청의 일부로 포함되어야 하는 패키지된 레서피 파일 형식을 기반으로 구성됩니다.
 
 ### 문서 URL을 사용하여 엔진 만들기 {#create-an-engine-with-a-docker-url}
 
 Docker 컨테이너에 저장된 패키징 레서피 파일이 있는 엔진을 만들려면 패키지된 레서피 파일에 Docker URL을 제공해야 합니다.
 
 >[!CAUTION]
-> Python 또는 R을 사용하는 경우 아래 요청을 사용하십시오. PySpark 또는 Scala를 사용하는 경우 Python/R 예제 아래에 있는 PySpark/Scala 요청 예제를 사용합니다.
+> Python 또는 R을 사용하는 경우 아래 요청을 사용하십시오. PySpark 또는 Scala를 사용하는 경우 Python/R 예제 아래에 있는 PySpark/Scala 요청 예제를 사용하십시오.
 
 **API 형식**
 
