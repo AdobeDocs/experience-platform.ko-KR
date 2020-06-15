@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;Tutorial;Feature Pipeline;Data Science Workspace;popular topics
-solution: Experience Platform
+keywords: Experience Platform;Tutorial;feature pipeline;Data Science Workspace;popular topics
+solution: Adobe Experience Platform Data Science Workspace
 title: 피쳐 파이프라인 만들기
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: 20e26c874204da75cac7e8d001770702658053f1
 workflow-type: tm+mt
-source-wordcount: '971'
+source-wordcount: '1380'
 ht-degree: 0%
 
 ---
@@ -14,9 +14,32 @@ ht-degree: 0%
 
 # 피쳐 파이프라인 만들기
 
-[!DNL Adobe Experience Platform] Sensei Machine Learning Framework Runtime(이하 &quot;Runtime&quot;이라 한다)을 통해 기능 엔지니어링을 규모에 맞게 수행하는 사용자 정의 기능 파이프라인을 만들고 만들 수 있습니다.
+>[!IMPORTANT]
+> 기능 파이프라인은 현재 API를 통해서만 사용할 수 있습니다.
 
-이 문서에서는 기능 파이프라인에 있는 다양한 클래스에 대해 설명하고 PySpark 및 Spark에서 [모델 작성 SDK를 사용하여 사용자 정의 기능 파이프라인을 만드는 단계별 자습서를](./sdk.md) 제공합니다.
+Adobe Experience Platform을 사용하면 Sensei Machine Learning Framework Runtime(이하 &quot;Runtime&quot;이라 한다)을 통해 기능 엔지니어링을 규모에 맞게 수행하는 사용자 정의 기능 파이프라인을 만들고 만들 수 있습니다.
+
+이 문서에서는 기능 파이프라인에서 발견되는 다양한 클래스에 대해 설명하고 PySpark에서 [모델 작성 SDK를 사용하여 사용자 정의 기능 파이프라인을 만드는 단계별 자습서를](./sdk.md) 제공합니다.
+
+피쳐 파이프라인이 실행될 때 다음 워크플로우가 수행됩니다.
+
+1. 레시피는 데이터 세트를 파이프라인으로 로드합니다.
+2. 기능 변환은 데이터 세트에 수행되어 Adobe Experience Platform에 다시 기록됩니다.
+3. 변형된 데이터가 교육을 위해 로드됩니다.
+4. 피쳐 파이프라인은 그라디언트 증폭 회귀(Gradient Bosting Regression) 또는 선택한 모델로 스테이지를 정의합니다.
+5. 파이프라인은 교육 데이터에 맞는 데 사용되며, 훈련된 모델이 생성됩니다.
+6. 점수 데이터 세트로 모델이 변형됩니다.
+7. 그런 다음 흥미로운 출력 열이 선택되고 관련 데이터와 다시 [!DNL Experience Platform] 함께 저장됩니다.
+
+## 시작하기
+
+조직에서 레서피를 실행하려면 다음이 필요합니다.
+- 입력 데이터 집합입니다.
+- 데이터 집합의 스키마입니다.
+- 변형된 스키마 및 해당 스키마를 기반으로 빈 데이터 집합입니다.
+- 출력 스키마 및 해당 스키마를 기반으로 빈 데이터 집합입니다.
+
+위의 모든 데이터 세트를 [!DNL Platform] UI에 업로드해야 합니다. 이를 설정하려면 Adobe에서 제공하는 [부트스트랩 스크립트를 사용하십시오](https://github.com/adobe/experience-platform-dsw-reference/tree/master/bootstrap).
 
 ## 기능 파이프라인 클래스
 
@@ -29,7 +52,7 @@ ht-degree: 0%
 | FeaturePipelineFactory | FeaturePipelineFactory 클래스는 기능 엔지니어링 작업을 수행하기 위해 일련의 Spark Transformers로 구성된 Spark Pipeline을 만듭니다. FeaturePipelineFactory 클래스를 제공하지 않고 DatasetTransformer 클래스 내에서 기능 엔지니어링 논리를 구현할 수 있습니다. |
 | DataSaver | DataSaver 클래스는 기능 데이터 세트에 대한 저장 논리를 제공합니다. |
 
-Feature Pipeline 작업이 시작되면 Runtime은 먼저 DataLoader를 실행하여 입력 데이터를 DataFrame으로 로드한 다음 DatasetTransformer 또는 FeaturePipelineFactory 또는 둘 다를 실행하여 DataFrame을 수정합니다. 마지막으로, 결과 기능 데이터 세트는 DataSaver를 통해 저장됩니다.
+기능 파이프라인 작업이 시작되면 런타임은 먼저 DataLoader를 실행하여 입력 데이터를 DataFrame으로 로드한 다음 DatasetTransformer, FeaturePipelineFactory 또는 둘 다를 실행하여 DataFrame을 수정합니다. 마지막으로, 결과 기능 데이터 세트는 DataSaver를 통해 저장됩니다.
 
 다음 순서도는 런타임의 실행 순서를 보여줍니다.
 
@@ -44,8 +67,7 @@ Feature Pipeline 작업이 시작되면 Runtime은 먼저 DataLoader를 실행�
 
 구성 JSON 파일은 키-값 쌍으로 구성되며 런타임 동안 나중에 정의할 변수를 지정하기 위해 만들어졌습니다. 이러한 키-값 쌍은 입력 데이터 집합 위치, 출력 데이터 집합 ID, 테넌트 ID, 열 헤더 등의 속성을 정의할 수 있습니다.
 
-다음 예는 구성 파일 내에 있는 키-값 쌍을 보여 줍니다. 예제를 확장하여 세부 사항을 봅니다.
-
+다음 예는 구성 파일 내에 있는 키-값 쌍을 보여 줍니다.
 
 **구성 JSON 예**
 
@@ -55,7 +77,7 @@ Feature Pipeline 작업이 시작되면 Runtime은 먼저 DataLoader를 실행�
         "name": "fp",
         "parameters": [
             {
-                "key": "datasetId",
+                "key": "dataset_id",
                 "value": "000"
             },
             {
@@ -71,132 +93,74 @@ Feature Pipeline 작업이 시작되면 Runtime은 먼저 DataLoader를 실행�
 ]
 ```
 
-
-
-매개 변수로 정의된 모든 클래스 메서드를 통해 구성 JSON에 액세스할 수 `configProperties` 있습니다. 예:
+매개 변수로 정의된 모든 클래스 메서드를 통해 구성 JSON에 액세스할 수 `config_properties` 있습니다. 예:
 
 **PySpark**
 
 ```python
-input_dataset_id = str(configProperties.get("datasetId"))
+dataset_id = str(config_properties.get(dataset_id))
 ```
 
-**Spark**
-
-```scala
-val input_dataset_id: String = configProperties.get("datasetId")
-```
-
+자세한 구성 예는 [데이터 과학 작업 공간에서 제공하는 pipeline.json](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/feature_pipeline_recipes/pyspark/pipeline.json) 파일을 참조하십시오.
 
 ### DataLoader를 사용하여 입력 데이터 준비 {#prepare-the-input-data-with-dataloader}
 
 DataLoader는 입력 데이터의 검색 및 필터링을 담당합니다. DataLoader의 구현은 추상 클래스를 확장하고 추상 메서드 `DataLoader` 를 재정의해야 합니다 `load`.
 
-다음 예제에서는 ID로 플랫폼 데이터 세트를 검색하고 이를 DataFrame으로 반환합니다. 여기서 데이터 세트 ID(`datasetId`)는 구성 파일에서 정의된 속성입니다. 각 예제를 확장하여 세부 사항을 확인합니다.
-
+다음 예제에서는 ID로 데이터 [!DNL Platform] 세트를 검색하고 이를 DataFrame으로 반환합니다. 여기서 데이터 세트 ID(`dataset_id`)는 구성 파일에서 정의된 속성입니다.
 
 **PySpark 예**
 
 ```python
 # PySpark
 
-from sdk.data_loader import DataLoader
+from pyspark.sql.types import StringType, TimestampType
+from pyspark.sql.functions import col, lit, struct
+import logging
 
 class MyDataLoader(DataLoader):
-    def load(self, configProperties, spark):
+    def load_dataset(config_properties, spark, tenant_id, dataset_id):
+    PLATFORM_SDK_PQS_PACKAGE = "com.adobe.platform.query"
+    PLATFORM_SDK_PQS_INTERACTIVE = "interactive"
 
-        # preliminary checks
-        if configProperties is None :
-            raise ValueError("configProperties parameter is null")
-        if spark is None:
-            raise ValueError("spark parameter is null")
+    service_token = str(spark.sparkContext.getConf().get("ML_FRAMEWORK_IMS_ML_TOKEN"))
+    user_token = str(spark.sparkContext.getConf().get("ML_FRAMEWORK_IMS_TOKEN"))
+    org_id = str(spark.sparkContext.getConf().get("ML_FRAMEWORK_IMS_ORG_ID"))
+    api_key = str(spark.sparkContext.getConf().get("ML_FRAMEWORK_IMS_CLIENT_ID"))
 
-        # prepare variables
-        dataset_id = str(
-            configProperties.get("datasetId"))
-        service_token = str(
-            spark.sparkContext.getConf().get("ML_FRAMEWORK_IMS_ML_TOKEN"))
-        user_token = str(
-            spark.sparkContext.getConf().get("ML_FRAMEWORK_IMS_TOKEN"))
-        org_id = str(
-            spark.sparkContext.getConf().get("ML_FRAMEWORK_IMS_ORG_ID"))
-        api_key = str(
-            spark.sparkContext.getConf().get("ML_FRAMEWORK_IMS_CLIENT_ID"))
+    dataset_id = str(config_properties.get(dataset_id))
 
-        # validate variables
-        for arg in ['dataset_id', 'service_token', 'user_token', 'org_id', 'api_key']:
-            if eval(arg) == 'None':
-                raise ValueError("%s is empty" % arg)
+    for arg in ['service_token', 'user_token', 'org_id', 'dataset_id', 'api_key']:
+        if eval(arg) == 'None':
+            raise ValueError("%s is empty" % arg)
 
-        # load dataset through Spark session
-        df = spark.read.format("com.adobe.platform.dataset") \
-            .option('serviceToken', service_token) \
-            .option('userToken', user_token) \
-            .option('orgId', org_id) \
-            .option('serviceApiKey', api_key) \
-            .load(dataset_id)
+    query_options = get_query_options(spark.sparkContext)
 
-        # return as DataFrame
-        return df
+    pd = spark.read.format(PLATFORM_SDK_PQS_PACKAGE) \
+        .option(query_options.userToken(), user_token) \
+        .option(query_options.serviceToken(), service_token) \
+        .option(query_options.imsOrg(), org_id) \
+        .option(query_options.apiKey(), api_key) \
+        .option(query_options.mode(), PLATFORM_SDK_PQS_INTERACTIVE) \
+        .option(query_options.datasetId(), dataset_id) \
+        .load()
+    pd.show()
+
+    # Get the distinct values of the dataframe
+    pd = pd.distinct()
+
+    # Flatten the data
+    if tenant_id in pd.columns:
+        pd = pd.select(col(tenant_id + ".*"))
+
+    return pd
 ```
-
-
-
-
-**Spark 예**
-
-```scala
-// Spark
-
-import com.adobe.platform.ml.config.ConfigProperties
-import com.adobe.platform.ml.sdk.DataLoader
-import org.apache.spark.sql.{DataFrame, SparkSession}
-
-class MyDataLoader extends DataLoader {
-    override def load(configProperties: ConfigProperties, sparkSession: SparkSession): DataFrame = {
-
-        // preliminary checks
-        require(configProperties != null)
-        require(sparkSession != null)
-
-        // prepare variables
-        val dataSetId: String = configProperties
-            .get("datasetId").getOrElse("")
-        val serviceToken: String = sparkSession.sparkContext.getConf
-            .get("ML_FRAMEWORK_IMS_ML_TOKEN", "").toString
-        val userToken: String = sparkSession.sparkContext.getConf
-            .get("ML_FRAMEWORK_IMS_TOKEN", "").toString
-        val orgId: String = sparkSession.sparkContext.getConf
-            .get("ML_FRAMEWORK_IMS_ORG_ID", "").toString
-        val apiKey: String = sparkSession.sparkContext.getConf
-            .get("ML_FRAMEWORK_IMS_CLIENT_ID", "").toString
-
-        // validate variables
-        List(dataSetId, serviceToken, userToken, orgId, apiKey).foreach(
-            value => required(value != "")
-        )
-
-        // load dataset through Spark session
-        var df = sparkSession.read.format("com.adobe.platform.dataset")
-            .option(DataSetOptions.orgId, orgId)
-            .option(DataSetOptions.serviceToken, serviceToken)
-            .option(DataSetOptions.userToken, userToken)
-            .option(DataSetOptions.serviceApiKey, apiKey)
-            .load(dataSetId)
-        
-        // return as DataFrame
-        df
-    }
-}
-```
-
-
 
 ### DatasetTransformer를 사용하여 데이터 세트 변환 {#transform-a-dataset-with-datasettransformer}
 
 DatasetTransformer는 입력 DataFrame을 변형하기 위한 논리를 제공하고 새로운 파생된 DataFrame을 반환합니다. 이 클래스는 FeaturePipelineFactory와 함께 작업하거나, 단독 기능 엔지니어링 구성 요소로 작업하거나, 이 클래스를 구현하지 않도록 선택할 수 있습니다.
 
-다음 예제에서는 DatasetTransformer 클래스를 확장합니다. 각 예제를 확장하여 세부 사항을 확인합니다.
+다음 예제에서는 DatasetTransformer 클래스를 확장합니다.
 
 
 **PySpark 예**
@@ -205,54 +169,59 @@ DatasetTransformer는 입력 DataFrame을 변형하기 위한 논리를 제공�
 # PySpark
 
 from sdk.dataset_transformer import DatasetTransformer
+from pyspark.ml.feature import StringIndexer
+from pyspark.sql.types import IntegerType
+from pyspark.sql.functions import unix_timestamp, from_unixtime, to_date, lit, lag, udf, date_format, lower, col, split, explode
+from pyspark.sql import Window
+from .helper import setupLogger
 
 class MyDatasetTransformer(DatasetTransformer):
+    logger = setupLogger(__name__)
 
-    def transform(self, configProperties, dataset):
-        transformed = dataset
+    def transform(self, config_properties, dataset):
+        tenant_id = str(config_properties.get("tenantId"))
 
-        '''
-        Transformations
-        '''
+        # Flatten the data
+        if tenant_id in dataset.columns:
+            self.logger.info("Flatten the data before transformation")
+            dataset = dataset.select(col(tenant_id + ".*"))
+            dataset.show()
 
-        # return new DataFrame
-        return transformed
+        # Convert isHoliday boolean value to Int
+        # Rename the column to holiday and drop isHoliday
+        pd = dataset.withColumn("holiday", col("isHoliday").cast(IntegerType())).drop("isHoliday")
+        pd.show()
+
+        # Get the week and year from date
+        pd = pd.withColumn("week", date_format(to_date("date", "MM/dd/yy"), "w").cast(IntegerType()))
+        pd = pd.withColumn("year", date_format(to_date("date", "MM/dd/yy"), "Y").cast(IntegerType()))
+
+        # Convert the date to TimestampType
+        pd = pd.withColumn("date", to_date(unix_timestamp(pd["date"], "MM/dd/yy").cast("timestamp")))
+
+        # Convert categorical data
+        indexer = StringIndexer(inputCol="storeType", outputCol="storeTypeIndex")
+        pd = indexer.fit(pd).transform(pd)
+
+        # Get the WeeklySalesAhead and WeeklySalesLag column values
+        window = Window.orderBy("date").partitionBy("store")
+        pd = pd.withColumn("weeklySalesLag", lag("weeklySales", 1).over(window)).na.drop(subset=["weeklySalesLag"])
+        pd = pd.withColumn("weeklySalesAhead", lag("weeklySales", -1).over(window)).na.drop(subset=["weeklySalesAhead"])
+        pd = pd.withColumn("weeklySalesScaled", lag("weeklySalesAhead", -1).over(window)).na.drop(subset=["weeklySalesScaled"])
+        pd = pd.withColumn("weeklySalesDiff", (pd['weeklySales'] - pd['weeklySalesLag'])/pd['weeklySalesLag'])
+
+        pd = pd.na.drop()
+        self.logger.debug("Transformed dataset count is %s " % pd.count())
+
+        # return transformed dataframe
+        return pd
 ```
-
-
-
-
-**Spark 예**
-
-```scala
-// Spark
-
-import com.adobe.platform.ml.config.ConfigProperties
-import com.adobe.platform.ml.sdk.DatasetTransformer
-
-class MyDatasetTransformer extends DatasetTransformer {
-
-    override def transform(configProperties: ConfigProperties, dataset: Dataset[_]): Dataset[_] = {
-        val transformed = dataset
-
-        /*
-        transformations
-        */
-        
-        // return new DataFrame
-        transformed
-    }
-}
-```
-
-
 
 ### Feature PipelineFactory를 사용하여 데이터 기능 엔지니어링 {#engineer-data-features-with-featurepipelinefactory}
 
 FeaturePipelineFactory를 사용하면 Spark Transformers를 여러 개의 Spark Transformers와 연결시켜 기능 엔지니어링 로직을 구현할 수 있습니다. 이 클래스는 DatasetTransformer와 함께 작업하거나 유일한 기능 엔지니어링 구성 요소로 작업하거나 이 클래스를 구현하지 않도록 선택할 수 있습니다.
 
-다음 예에서는 FeaturePipelieFactory 클래스를 확장하고 Spark Pipeline에서 여러 단계로 구성된 일련의 Spark Transformers를 구현합니다. 각 예제를 확장하여 세부 사항을 확인합니다.
-
+다음 예제에서는 FeaturePipelineFactory 클래스를 확장합니다.
 
 **PySpark 예**
 
@@ -260,78 +229,64 @@ FeaturePipelineFactory를 사용하면 Spark Transformers를 여러 개의 Spark
 # PySpark
 
 from pyspark.ml import Pipeline
-from pyspark.ml.feature import HashingTF, Tokenizer
-from sdk.feature_pipeline_factory import FeaturePipelineFactory
+from pyspark.ml.regression import GBTRegressor
+from pyspark.ml.feature import VectorAssembler
+
+import numpy as np
+
+from sdk.pipeline_factory import PipelineFactory
 
 class MyFeaturePipelineFactory(FeaturePipelineFactory):
 
-    def create_pipeline(self, configProperties):
+    def apply(self, config_properties):
+        if config_properties is None:
+            raise ValueError("config_properties parameter is null")
 
-        # Spark Transformers
-        tokenizer = Tokenizer(inputCol="lower_text", outputCol="words")
-        hashingTF = HashingTF(inputCol=tokenizer.getOutputCol(), outputCol="features")
+        tenant_id = str(config_properties.get("tenantId"))
+        input_features = str(config_properties.get("ACP_DSW_INPUT_FEATURES"))
 
-        # Chain together Spark Transformers as Spark Pipeline Stages
-        pipeline = Pipeline(stages=[tokenizer, hashingTF])
+        if input_features is None:
+            raise ValueError("input_features parameter is null")
+        if input_features.startswith(tenant_id):
+            input_features = input_features.replace(tenant_id + ".", "")
 
-        # return a Spark Pipeline
+        learning_rate = float(config_properties.get("learning_rate"))
+        n_estimators = int(config_properties.get("n_estimators"))
+        max_depth = int(config_properties.get("max_depth"))
+
+        feature_list = list(input_features.split(","))
+        feature_list.remove("date")
+        feature_list.remove("storeType")
+
+        cols = np.array(feature_list)
+
+        # Gradient-boosted tree estimator
+        gbt = GBTRegressor(featuresCol='features', labelCol='weeklySalesAhead', predictionCol='prediction',
+                       maxDepth=max_depth, maxBins=n_estimators, stepSize=learning_rate)
+
+        # Assemble the fields to a vector
+        assembler = VectorAssembler(inputCols=cols, outputCol="features")
+
+        # Construct the pipeline
+        pipeline = Pipeline(stages=[assembler, gbt])
+
         return pipeline
 
-    def get_param_map(self, configProperties, sparkSession):
+    def train(self, config_properties, dataframe):
         pass
+
+    def score(self, config_properties, dataframe, model):
+        pass
+
+    def getParamMap(self, config_properties, sparkSession):
+        return None
 ```
-
-
-
-
-**Spark 예**
-
-```scala
-// Spark
-
-import com.adobe.platform.ml.config.ConfigProperties
-import com.adobe.platform.ml.sdk.FeaturePipelineFactory
-import org.apache.spark.ml.feature.{HashingTF, Tokenizer}
-import org.apache.spark.ml.Pipeline
-import org.apache.spark.ml.param.ParamMap
-import org.apache.spark.sql.SparkSession
-
-class MyFeaturePipelineFactory(uid:String) extends FeaturePipelineFactory(uid) {
-    def this() = this("MyFeaturePipeline")
-
-    override def createPipeline(configProperties: ConfigProperties): Pipeline = {
-        
-        // Spark Transformers
-        val tokenizer = new Tokenizer()
-            .setInputCol("lower_text")
-            .setOutputCol("words")
-        val hashingTF = new HashingTF()
-            .setInputCol(tokenizer.getOutputCol())
-            .setOutputCol("features")
-
-        // Chain together Spark Transformers as Spark Pipeline Stages
-        val pipeline = new Pipeline()
-            .setStages(Array(tokenizer, hashingTF))
-        
-        // return a Spark Pipeline
-        pipeline
-    }
-
-    override def getParamMap(configProperties: ConfigProperties, sparkSession: SparkSession): ParamMap = {
-        val map = new ParamMap()
-        map
-    }
-}
-```
-
-
 
 ### 데이터 보호기를 사용하여 기능 데이터 세트 저장 {#store-your-feature-dataset-with-datasaver}
 
 DataSaver는 결과 기능 데이터 세트를 스토리지 위치에 저장할 책임이 있습니다. DataSaver를 구현하려면 개요 클래스를 확장하고 추상 메서드 `DataSaver` 를 무시해야 합니다 `save`.
 
-다음 예에서는 데이터 세트 데이터를 ID로 플랫폼 데이터 세트에 저장하는 DataSaver 클래스를 확장합니다. 여기서 데이터 세트 ID(`featureDatasetId`) 및 테넌트 ID(`tenantId`)는 구성 파일에서 속성을 정의합니다. 각 예제를 확장하여 세부 사항을 확인합니다.
-
+다음 예제에서는 데이터세트 ID( [!DNL Platform] ) 및 테넌트 ID(`featureDatasetId``tenantId`)가 구성에 정의된 속성인 ID로 데이터를 저장하는 DataSaver 클래스를 확장합니다.
 
 **PySpark 예**
 
@@ -395,152 +350,89 @@ class MyDataSaver(DataSaver):
 ```
 
 
-
-
-**Spark 예**
-
-```scala
-// Spark
-
-import com.adobe.platform.dataset.DataSetOptions
-import com.adobe.platform.ml.config.ConfigProperties
-import com.adobe.platform.ml.impl.Constants
-import com.adobe.platform.ml.sdk.DataSaver
-import org.apache.spark.sql.DataFrame
-import org.apache.spark.sql.functions._
-import org.apache.spark.sql.types.TimestampType
-
-class MyDataSaver extends DataSaver {
-    override def save(configProperties: ConfigProperties, dataFrame: DataFrame): Unit =  {
-
-        // Spark session
-        val sparkSession = dataFrame.sparkSession
-
-        // preliminary checks
-        require(configProperties != null)
-        require(dataFrame != null)
-
-        // prepare variables
-        val timestamp:String = "2019-01-01 00:00:00"
-        val output_dataset_id: String = configProperties
-            .get("featureDatasetId").getOrElse("")
-        val tenant_id:String = configProperties
-            .get("tenantId").getOrElse("")
-        val serviceToken: String = sparkSession.sparkContext.getConf
-            .get("ML_FRAMEWORK_IMS_ML_TOKEN", "").toString
-        val userToken: String = sparkSession.sparkContext.getConf
-            .get("ML_FRAMEWORK_IMS_TOKEN", "").toString
-        val orgId: String = sparkSession.sparkContext.getConf
-            .get("ML_FRAMEWORK_IMS_ORG_ID", "").toString
-        val apiKey: String = sparkSession.sparkContext.getConf
-            .get("ML_FRAMEWORK_IMS_CLIENT_ID", "").toString
-
-        // validate variables
-        List(output_dataset_id, tenant_id, serviceToken, userToken, orgId, apiKey).foreach(
-            value => require(value != "")
-        )
-
-        // create and prepare DataFrame with valid columns
-        import sparkSession.implicits._
-
-        var output_df  = dataFrame.withColumn("date", $"date".cast("String"))
-        output_df = output_df.withColumn("timestamp", lit(timestamp).cast(TimestampType))
-        output_df = output_df.withColumn("_id", lit("empty"))
-        output_df = output_df.withColumn("eventType", lit("empty"))
-
-        // store data into dataset
-        output_df.select(tenant_id, "_id", "eventType", "timestamp").write.format("com.adobe.platform.dataset")
-            .option(DataSetOptions.orgId, orgId)
-            .option(DataSetOptions.serviceToken, serviceToken)
-            .option(DataSetOptions.userToken, userToken)
-            .option(DataSetOptions.serviceApiKey, apiKey)
-            .save(output_dataset_id)
-    }
-}
-```
-
 ### 응용 프로그램 파일에 구현된 클래스 이름을 지정합니다 {#specify-your-implemented-class-names-in-the-application-file}
 
-피쳐 파이프라인 클래스가 정의 및 구현되었으므로 애플리케이션 파일에 클래스 이름을 지정해야 합니다.
+이제 피쳐 파이프라인 클래스가 정의 및 구현되었으므로 응용 프로그램 YAML 파일에서 클래스 이름을 지정해야 합니다.
 
-다음 예제에서는 구현된 클래스 이름을 지정합니다. 예제를 확장하여 세부 사항을 봅니다.
-
+다음 예제에서는 구현된 클래스 이름을 지정합니다.
 
 **PySpark 예**
 
 ```yaml
-# application.yaml
+#Name of the class which contains implementation to get the input data.
+feature.dataLoader: InputDataLoaderForFeaturePipeline
 
-# Name of the implementation of DataLoader abstract class
-feature.dataLoader: MyDataLoader
-
-# Name of the implementation of DatasetTransformer abstract class
+#Name of the class which contains implementation to get the transformed data.
 feature.dataset.transformer: MyDatasetTransformer
 
-# Name of the implementation of FeaturePipelineFactory abstract class
-feature.pipeline.class: MyFeaturePipelineFactory
+#Name of the class which contains implementation to save the transformed data.
+feature.dataSaver: DatasetSaverForTransformedData
 
-# Name of the implementation of DataSaver abstract class
-feature.dataSaver: MyDataSaver
+#Name of the class which contains implementation to get the training data
+training.dataLoader: TrainingDataLoader
+
+#Name of the class which contains pipeline. It should implement PipelineFactory.scala
+pipeline.class: TrainPipeline
+
+#Name of the class which contains implementation for evaluation metrics.
+evaluator: Evaluator
+evaluateModel: True
+
+#Name of the class which contains implementation to get the scoring data.
+scoring.dataLoader: ScoringDataLoader
+
+#Name of the class which contains implementation to save the scoring data.
+scoring.dataSaver: MyDatasetSaver
 ```
 
+## API를 사용하여 피쳐 파이프라인 엔진 생성 {#create-feature-pipeline-engine-api}
 
+이제 기능 파이프라인을 작성했으므로 Sensei Machine Learning API의 기능 파이프라인 끝점에 대한 호출을 하려면 Docker 이미지를 만들어야 합니다. 피쳐 파이프라인 끝점에 대한 호출을 하려면 Docker 이미지 URL이 필요합니다.
 
+>[!TIP]
+>Docker URL이 없는 경우 [패키지 소스 파일을 레시피](../models-recipes/package-source-files-recipe.md) 자습서로 이동하여 Docker 호스트 URL을 만드는 단계별 연습을 참조하십시오.
 
-**Spark 예**
+선택적으로 다음 Postman 컬렉션을 사용하여 기능 파이프라인 API 작업 과정을 완료할 수도 있습니다.
 
-```properties
-# application.properties
+https://www.getpostman.com/collections/c5fc0d1d5805a5ddd41a
 
-# Name of the implementation of DataLoader abstract class
-feature.pipeline.class=MyDataLoader
+### 피쳐 파이프라인 엔진 생성 {#create-engine-api}
 
-# Name of the implementation of DatasetTransformer abstract class
-feature.dataset.transformer=MyDatasetTransformer
+Docker 이미지 위치가 지정되면 POST를 수행하여 Sensei Machine Learning API를 사용하여 [기능 파이프라인](../api/engines.md#feature-pipeline-docker) 엔진을 만들 수 `/engines`있습니다. 피쳐 파이프라인 엔진을 성공적으로 생성하면 엔진 고유 식별자(`id`)가 제공됩니다. 계속하기 전에 이 값을 저장해야 합니다.
 
-# Name of the implementation of FeaturePipelineFactory abstract class
-feature.dataLoader=MyFeaturePipelineFactory
+### MLInestment 만들기 {#create-mlinstance}
 
-# Name of the implementation of DataSaver abstract class
-feature.dataSaver=MyDataSaver
-```
+새로 만든 사용자 `engineID`를 사용하여 [종단점에 POST 요청을 만들어 MLIstice](../api/mlinstances.md#create-an-mlinstance) 를 만들어야 합니다 `/mlInstance` . 성공적인 응답은 다음 API 호출에서 사용되는 고유 식별자(`id`)를 포함하여 새로 만든 MLIninstance의 세부 정보가 포함된 페이로드를 반환합니다.
 
+### 실험 만들기 {#create-experiment}
 
+그런 다음 실험을 [만들어야 합니다](../api/experiments.md#create-an-experiment). 실험을 만들려면 MLIerence 고유 식별자(`id`)를 가지고 종단점에 POST 요청을 해야 `/experiment` 합니다. 성공적인 응답은 다음 API 호출에서 사용되는 고유 식별자(`id`)를 포함하여 새로 만든 Experiment의 세부 정보가 포함된 페이로드를 반환합니다.
 
-## 바이너리 객체 구축 {#build-the-binary-artifact}
+### 실험 실행 피쳐 파이프라인 작업 지정 {#specify-feature-pipeline-task}
 
-Feature Pipeline 클래스가 구현되었으므로 이를 작성하여 이진 아티팩트에 컴파일한 다음 API 호출을 통해 Feature Pipeline을 만드는 데 사용할 수 있습니다.
+실험을 만든 후 실험 모드를 다음으로 변경해야 합니다 `featurePipeline`. 모드를 변경하려면 피쳐 파이프라인 실험 실행을 지정하기 위해 본문과 함께 추가 POST [`experiments/{EXPERIMENT_ID}/runs`](../api/experiments.md#experiment-training-scoring) 를 `EXPERIMENT_ID` 만들고 본문 `{ "mode":"featurePipeline"}` 에서 피쳐 파이프라인 실행을 지정합니다.
 
-**PySpark**
+완료되면 실험 상태를 `/experiments/{EXPERIMENT_ID}` 검색하기 위해 GET 요청 [](../api/experiments.md#retrieve-specific) 을 수행하고 실험 상태가 완료될 때까지 기다립니다.
 
-PySpark 기능 파이프라인을 만들려면 모델 작성 SDK의 루트 디렉토리에 있는 Python `setup.py` 스크립트를 실행합니다.
+### 실험 실행 교육 작업 지정 {#training}
 
->[!NOTE] PySpark 기능 파이프라인을 만들려면 Python 3을 컴퓨터에 설치해야 합니다.
+그런 다음 교육 실행 작업을 [지정해야 합니다](../api/experiments.md#experiment-training-scoring). 교육 매개 변수를 포함하는 일련의 작업 `experiments/{EXPERIMENT_ID}/runs` 을 보낼 수 있도록 POST를 만들고 본문에 `train` 교육 모드를 설정할 수 있도록 합니다. 성공적인 응답은 요청된 실험들의 세부 정보가 포함된 페이로드를 반환합니다.
 
-```shell
-python3 setup.py bdist_egg
-```
+완료되면 실험 상태를 `/experiments/{EXPERIMENT_ID}` 검색하기 위해 GET 요청 [](../api/experiments.md#retrieve-specific) 을 수행하고 실험 상태가 완료될 때까지 기다립니다.
 
-피쳐 파이프라인을 성공적으로 구축하면 `.egg` `/dist` 디렉토리에 가공물이 생성되며 이 가공물은 피쳐 파이프라인을 생성하는 데 사용됩니다.
+### 실험 실행 점수 지정 작업 {#scoring}
 
-**Spark**
+>[!NOTE]
+> 이 단계를 완료하려면 Experiment와 연결된 하나 이상의 성공적인 교육 실행이 있어야 합니다.
 
-Spark Feature Pipeline을 빌드하려면 모델 작성 SDK의 루트 디렉토리에서 다음 콘솔 명령을 실행합니다.
+성공적인 교육 실행 후 점수 지정 실행 [작업을 지정해야 합니다](../api/experiments.md#experiment-training-scoring). POST를 만들고 본문에 속성 `experiments/{EXPERIMENT_ID}/runs` 을 &quot;score&quot;로 `mode` 설정합니다. 그러면 점수 지정 실험 실행이 시작됩니다.
 
->[!NOTE] Spark Feature Pipeline을 빌드하려면 시스템에 Scala 및 sbt가 설치되어 있어야 합니다.
+완료되면 실험 상태를 `/experiments/{EXPERIMENT_ID}` 검색하기 위해 GET 요청 [](../api/experiments.md#retrieve-specific) 을 수행하고 실험 상태가 완료될 때까지 기다립니다.
 
-```shell
-mvn clean install
-```
-
-피쳐 파이프라인을 성공적으로 구축하면 `.jar` `/dist` 디렉토리에 가공물이 생성되며 이 가공물은 피쳐 파이프라인을 생성하는 데 사용됩니다.
-
-## API를 사용하여 피쳐 파이프라인 엔진 생성 {#create-a-feature-pipeline-engine-using-the-api}
-
-Feature Pipeline을 제작하고 바이너리 객체를 구축했으므로 Sensei Machine Learning API를 사용하여 Feature Pipeline 엔진 [을 만들 수 있습니다](../api/engines.md#create-a-feature-pipeline-engine-using-binary-artifacts). 피쳐 파이프라인 엔진을 성공적으로 생성하면 응답 본문의 일부로 엔진 ID가 제공됩니다. 다음 단계를 진행하기 전에 이 값을 저장해야 합니다.
+점수 지정이 완료되면 기능 파이프라인이 작동되어야 합니다.
 
 ## 다음 단계 {#next-steps}
 
-[//]: # (Next steps section should refer to tutorials on how to score data using the Feature Pipeline Engine. Update this document once those tutorials are available)
+[//]: # (Next steps section should refer to tutorials on how to score data using the feature pipeline Engine. Update this document once those tutorials are available)
 
-이 문서를 읽음으로써 모델 작성 SDK를 사용하여 피쳐 파이프라인을 만들고 이진 객체를 작성한 다음 이 객체를 사용하여 API 호출을 통해 피쳐 파이프라인 엔진을 생성했습니다. 이제 새로 만든 엔진을 사용하여 [피쳐 파이프라인 모델을](../api/mlinstances.md#create-an-mlinstance) 생성하고 데이터 세트 변형과 데이터 기능 확장을 시작할 수 있습니다.
+이 문서를 읽음으로써 모델 작성 SDK를 사용하여 기능 파이프라인을 작성하고 Docker 이미지를 만든 다음 Sensei Machine Learning API를 사용하여 Docker 이미지 URL을 사용하여 기능 파이프라인 모델을 만들었습니다. 이제 Sensei Machine Learning API를 사용하여 데이터 세트를 계속 변환하고 데이터 기능을 [추출할 수 있습니다](../api/getting-started.md).
