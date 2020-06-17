@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Adobe Experience Platform 개요
 topic: getting started
 translation-type: tm+mt
-source-git-commit: efc8598d14bcae9637ce80c25f1285d93aeee742
+source-git-commit: 19b67b57fa277c7ff85646a341cfb5dba1dd92e1
 workflow-type: tm+mt
-source-wordcount: '526'
-ht-degree: 3%
+source-wordcount: '637'
+ht-degree: 2%
 
 ---
 
@@ -16,15 +16,44 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->Adobe Experience Platform 문서가 최근 이전되었습니다. 잠시 시간을 내어 새 탐색 메뉴를 검토하고 기존 책갈피를 업데이트하십시오.
+>Adobe Experience Platform 문서가 최근 이동되었습니다. 잠시 시간을 내어 새 탐색 메뉴를 검토하고 기존 책갈피를 업데이트하십시오.
 
-Adobe Experience Platform은 고객 경험을 향상시키는 완벽한 솔루션을 구축하고 관리하기 위해 시장에서 가장 강력하고 유연하며 개방적인 시스템입니다. 기업은 경험 플랫폼을 통해 모든 시스템의 고객 데이터와 콘텐츠를 통합 관리하고 표준화하고 데이터 과학 및 머신 러닝을 적용하여 개인화된 풍부한 경험의 디자인과 전달을 대폭 향상시킬 수 있습니다.
+Adobe Experience Platform은 고객 경험을 향상시키는 완벽한 솔루션을 구축하고 관리하기 위해 시장에서 가장 강력하고 유연하며 개방적인 시스템입니다. Experience Platform을 통해 기업은 모든 시스템의 고객 데이터와 콘텐츠를 통합 관리하고 표준화하고 데이터 과학 및 머신 러닝을 적용하여 개인화된 풍부한 경험의 디자인과 전달을 대폭 향상시킬 수 있습니다.
 
-개방형 API를 기반으로 구축된 경험 플랫폼은 개발자에게 시스템의 모든 기능을 제공하여 익숙한 툴을 사용하여 기업 솔루션을 손쉽게 통합할 수 있도록 지원합니다. 또한 Adobe Experience Platform은 파트너가 자신의 제품과 기술을 필요에 따라 구축 및 통합할 수 있도록 지원합니다. 이러한 강력한 기능과 유연성을 통해 Adobe Experience Platform(경험 플랫폼)은 시장에서 유일무이합니다. 파트너, 고객 및 개발자 커뮤니티에서는 경험 비즈니스를 주도하는 혁신적인 솔루션을 구축할 수 있는 기반을 제공합니다. 고객의 전체 상황 및 개별 고객의 취향에 따라 완벽하게 개인화된 경험을 지속적으로 개선하여 고객의 기대치를 높입니다.
+오픈 API를 기반으로 구축된 Experience Platform은 익숙한 툴을 사용하여 기업 솔루션을 손쉽게 통합할 수 있도록 시스템의 모든 기능을 개발자에게 제공합니다. 또한 Experience Platform은 파트너가 필요에 따라 자체 제품과 기술을 구축하고 통합할 수 있도록 지원합니다. 이러한 기능과 유연성으로 인해 Experience Platform은 시장 고유의 가치를 갖습니다. 파트너, 고객 및 개발자 커뮤니티에서는 경험 비즈니스를 주도하는 혁신적인 솔루션을 구축할 수 있는 기반을 제공합니다. 고객의 전체 상황 및 개별 고객의 취향에 따라 완벽하게 개인화된 경험을 지속적으로 개선하여 고객의 기대치를 높입니다.
+
+## 언어 지원
+
+Adobe Experience Platform 유저 인터페이스와 설명서는 여러 언어로 제공됩니다.
+
+### 유저 인터페이스 언어
+
+Adobe Experience Platform 사용자 인터페이스는 현재 다음 언어로 제공됩니다.
+
+* 영어
+* 프랑스어
+* 독일어
+* 일본어
+
+기본 사용자 인터페이스 언어는 사용자 프로필에 지정된 영역에 따라 결정됩니다. 언어를 변경하려면 다음을 수행하십시오.
+
+>[!NOTE]
+>
+> 지역을 선택하면 Adobe.com의 언어와 내용이 결정됩니다.
+
+1. Experience Platform 인터페이스의 바닥글에 있는 현재 언어를 클릭합니다.
+1. 프로필 설정에서 영역 **[!UICONTROL 변경을 클릭합니다]**.
+1. 지역을 선택합니다.
+
+### 설명서 언어
+
+Adobe Experience Platform 설명서는 여러 언어로 제공됩니다. 언어를 변경하려면 언어 드롭다운을 클릭하고 원하는 언어를 선택합니다.
+
+![image](assets/lang.jpg)
 
 ## Experience Platform 설명서
 
-Experience Platform 설명서는 다양한 기능과 서비스를 위한 다양한 형식으로 제공됩니다. 사용 가능한 문서 유형에 대한 자세한 내용과 각 플랫폼 서비스에 대한 간단한 설명을 보려면 [경험 플랫폼 설명서 개요를 참조하십시오](documentation/overview.md). 또는 특정 플랫폼 서비스에 대한 자세한 내용을 바로 알려면 왼쪽 탐색 메뉴의 알파벳 목록에서 가이드를 선택하십시오.
+Experience Platform 설명서는 다양한 기능과 서비스를 위해 다양한 형식으로 제공됩니다. 사용 가능한 문서 유형에 대한 자세한 내용과 각 Platform 서비스에 대한 간단한 설명을 보려면 [Experience Platform 설명서 개요를 참조하십시오](documentation/overview.md). 또는 특정 Platform 서비스에 대한 자세한 내용을 바로 배우려면 왼쪽 탐색 메뉴의 알파벳 목록에서 가이드를 선택하십시오.
 
 >[!NOTE]
 >
@@ -32,17 +61,18 @@ Experience Platform 설명서는 다양한 기능과 서비스를 위한 다양�
 >
 >* 주요 아티클에 대한 링크
 >* 상황에 맞는 설명서 추천
->* 경험 플랫폼 및 보고서 문제에 대한 피드백 제공
+>* Experience Platform 및 보고서 문제에 대한 피드백 제공
 >* 커뮤니티 포럼 및 비디오 컨텐츠의 결과도 포함하는 검색 결과가 개선되었습니다.
+
 >
 > 
 때때로 추가 피드백을 위해 설문 조사를 받을 수 있습니다.
 >
 >이 롤아웃은 점차적으로 진행되므로 변경 사항이 즉시 표시되지 않을 수 있습니다. https://experience.adobe.com/platform으로 이동하여 업데이트된 경험을 언제든지 볼 수 [있습니다](https://experience.adobe.com/platform).
 
-## 경험 플랫폼 자습서
+## Experience Platform 자습서
 
-데이터를 수집하기 위한 준비, 고급 기계 학습 알고리즘에 이르기까지 모든 작업을 위한 단계별 튜토리얼과 함께 Platform을 빠르고 손쉽게 시작할 수 있습니다. 이러한 자습서는 Experience Platform 설명서에 있는 정보를 보완하도록 설계되었으므로 최상의 결과를 얻으려면 자습서를 완성하는 동안 문서를 최신 상태로 유지할 수 있습니다. Experience [Platform 튜토리얼을](../tutorials/home.md) 방문하여 시작해 보십시오.
+데이터 섭취 준비, 고급 기계 학습 알고리즘 등 다양한 단계별 튜토리얼을 통해 Platform을 빠르고 손쉽게 시작할 수 있습니다. 이 자습서는 Experience Platform 설명서에 있는 정보를 보완하기 위해 설계되었으므로 최상의 결과를 얻으려면 자습서를 완성하면서 문서를 최신 상태로 유지할 수 있습니다. 시작하려면 [Experience Platform 자습서를](../tutorials/home.md) 참조하십시오.
 
 ## 비디오 자습서
 
@@ -50,15 +80,16 @@ Experience Platform 설명서는 다양한 기능과 서비스를 위한 다양�
 
 ## 참조 문서 및 리소스
 
-* [**릴리스 노트&#x200B;**](../release-notes/latest/latest.md)<br/>최신 Experience Platform 릴리스에 대한 정보를 확인하고 이전 릴리스를 검토합니다.
+* [**릴리스 노트&#x200B;**](../release-notes/latest/latest.md)<br/>최신 Experience Platform 릴리스에 대한 정보를 확인하고 이전 릴리스를 검토할 수 있습니다.
 
-* [**용어집&#x200B;**](glossary.md)<br/>Adobe Experience Platform 용어를 검토합니다.
+* [**용어집&#x200B;**](glossary.md)<br/>Adobe Experience Platform 용어 검토
 
 * [**문제 해결 가이드&#x200B;**](troubleshooting.md)<br/>일반적인 오류에 대한 해결 방법과 FAQ에 대한 답변을 찾을 수 있습니다.
 
-* [**API 기본&#x200B;**](api-fundamentals.md)<br/>플랫폼 API 작업에 대한 기본 사항을 학습합니다.
+* [**API 기본&#x200B;**](api-fundamentals.md)<br/>Platform API 작업에 대한 기본 사항을 학습합니다.
 
-* [**API 참조&#x200B;**](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)<br/>헤더, 매개 변수, 샘플 요청 및 응답을 비롯한 Discover Experience Platform API입니다.*이러한 문서는 Adobe I/O에서 호스팅됩니다.*
+* [**API 참조&#x200B;**](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)<br/>헤더, 매개 변수, 샘플 요청 및 응답을 비롯한 Experience Platform API를 검색합니다.
+*이러한 문서는 Adobe I/O에서 호스팅됩니다.*
 
 
 
