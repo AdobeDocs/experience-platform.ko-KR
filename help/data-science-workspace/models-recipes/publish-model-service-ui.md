@@ -4,54 +4,52 @@ solution: Experience Platform
 title: 모델을 서비스로 게시(UI)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+source-git-commit: 7dc5075d3101b4780af92897c0381e73a9c5aef0
+workflow-type: tm+mt
+source-wordcount: '418'
+ht-degree: 0%
 
 ---
 
 
 # 모델을 서비스로 게시(UI)
 
-Adobe Experience Platform Data Science Workspace를 사용하면 교육되고 평가된 모델을 서비스로 게시하여 IMS 조직 내에서 사용자가 모델을 직접 만들지 않고도 데이터를 평가할 수 있습니다.
-
-이 자습서에서는 모델을 서비스로 게시하고 서비스 갤러리를 통해 서비스를 사용하여 데이터를 평가하는 단계를 *안내합니다*. 다음과 같은 주요 섹션으로 구분됩니다.
-
-- [모델 게시](#publish-a-model)
-- [서비스를 사용한 점수](#access-a-service)
+Adobe Experience Platform 데이터 과학 작업 공간을 사용하면 교육되고 평가된 모델을 서비스로 게시하여 IMS 조직 내의 사용자가 자신의 모델을 만들지 않고도 데이터를 평가할 수 있습니다.
 
 ## 시작하기
 
-이 튜토리얼을 완료하려면 Experience Platform에 액세스할 수 있어야 합니다. Experience Platform에서 IMS 조직에 액세스할 수 없는 경우 시스템 관리자에게 문의하십시오.
+이 자습서를 완료하려면 액세스 권한이 있어야 합니다 [!DNL Experience Platform]. 에서 IMS 조직에 액세스할 수 없는 경우 시스템 관리자 [!DNL Experience Platform]에게 연락하여 진행하십시오.
 
-이 자습서에서는 성공적인 트레이닝 실행이 있는 기존 모델이 필요합니다. 게시 가능한 모델이 없는 경우 계속하기 전에 UI [자습서에서 모델 트레이닝을](./train-evaluate-model-ui.md) 따라 평가하십시오.
+이 자습서에서는 성공적인 트레이닝 실행을 가진 기존 모델이 필요합니다. 게시 가능한 모델이 없는 경우 계속하기 전에 UI [에서 모델을 교육하고 평가하십시오](./train-evaluate-model-ui.md) .
 
-Sensei Machine Learning API를 사용하여 모델을 게시하려면 API [자습서를](./publish-model-service-api.md)참조하십시오.
+Sensei Machine Learning API를 사용하여 모델을 게시하려면 [API 자습서를 참조하십시오](./publish-model-service-api.md).
 
 ## 모델 게시 {#publish-a-model}
 
-1. Adobe Experience Platform에서 왼쪽 탐색 열에 있는 **[!UICONTROL Models]** 링크를 클릭하여 모든 기존 모델을 나열합니다. 서비스로 게시할 모델의 이름을 찾아 클릭합니다.
+1. Adobe Experience Platform에서 왼쪽 탐색 열에 있는 **[!UICONTROL 모델]** 링크를 클릭하여 모든 기존 모델을 나열합니다. 서비스로 게시될 모델의 이름을 찾아 클릭합니다.
    ![](../images/models-recipes/publish-model/1_browse_model.png)
-2. 모델 개요 페이지의 오른쪽 상단 **[!UICONTROL Publish]** 근처에 있는 를 클릭하여 서비스 생성 프로세스를 시작합니다.
+2. 모델 **[!UICONTROL 개요]** 페이지 오른쪽 상단의 게시(Publish)를 클릭하여 서비스 생성 프로세스를 시작합니다.
    ![](../images/models-recipes/publish-model/2_view_training_runs.png)
-3. 원하는 서비스 이름을 입력하고 선택적으로 서비스 설명을 입력하고, 완료되면 을 클릭합니다. **[!UICONTROL Next]**
+3. 원하는 서비스 이름을 입력하고, 필요에 따라 서비스 설명을 입력하고, 완료되면 **[!UICONTROL 다음]** 을 클릭합니다.
    ![](../images/models-recipes/publish-model/3_configure_service.png)
-4. 모델에 대한 모든 성공적인 교육 실행이 나열됩니다. 새 서비스는 선택한 교육 실행에서 트레이닝 및 점수 지정 구성을 상속받게 됩니다.
+4. 모델에 대해 실행된 모든 교육이 나열됩니다. 새 서비스는 선택한 교육 실행에서 트레이닝 및 점수 지정 구성을 상속받게 됩니다.
    ![](../images/models-recipes/publish-model/4_select_training_run.png)
-5. 서비스를 **[!UICONTROL Finish]** 만들려면 을 클릭하고 새로 만든 서비스를 포함하여 사용 가능한 모든 서비스를 **[!UICONTROL Service Gallery]** 표시하도록 리디렉션합니다.
+5. 마침 **[!UICONTROL 을]** 클릭하여 서비스를 만들고 **[!UICONTROL 서비스 갤러리로]** 이동하여 새로 만든 서비스를 포함하여 사용 가능한 모든 서비스를 표시합니다.
    ![](../images/models-recipes/publish-model/service_gallery.png)
 
 ## 서비스를 사용한 점수 {#access-a-service}
 
-1. Adobe Experience Platform에서 왼쪽 탐색 열에 있는 **[!UICONTROL Services]** 탭을 클릭하여 서비스 갤러리에 *액세스합니다*. 사용할 서비스를 찾아 클릭합니다 **[!UICONTROL Score]**.
+1. Adobe Experience Platform에서 왼쪽 탐색 열에 있는 **[!UICONTROL 서비스]** 탭을 클릭하여 *서비스 갤러리에 액세스합니다*. 사용할 서비스를 찾아 **[!UICONTROL 점수를 클릭합니다]**.
    ![](../images/models-recipes/publish-model/click_to_score.png)
-2. 점수 실행을 위한 적절한 입력 데이터 세트를 선택한 다음 을 **[!UICONTROL Next]**클릭합니다.
+2. 점수 실행 시 적절한 입력 데이터 세트를 선택한 다음 **[!UICONTROL 다음을 클릭합니다]**.
    ![](../images/models-recipes/publish-model/6_scoring_input.png)
-3. 점수 지정 결과에 해당하는 출력 데이터 세트를 선택한 다음 을 **[!UICONTROL Next]**클릭합니다.
+3. 점수 결과에 적합한 출력 데이터 세트를 선택한 다음 **[!UICONTROL 다음을 클릭합니다]**.
    ![](../images/models-recipes/publish-model/7_scoring_output.png)
-4. 서비스가 생성되면, 이것은 기본 점수 지정 구성을 상속합니다. 이러한 구성을 검토하고 필요에 따라 값을 두 번 클릭하여 조정할 수 있습니다. 구성이 만족스러우면 을 클릭하여 점수 **[!UICONTROL Finish]** 매기기를 시작합니다.
+4. 서비스가 생성되면 기본 점수 지정 구성이 상속됩니다. 이러한 구성을 검토하고 필요에 따라 값을 두 번 클릭하여 조정할 수 있습니다. 구성에 만족하면 **[!UICONTROL 마침을]** 클릭하여 점수 실행을 시작합니다.
    ![](../images/models-recipes/publish-model/8_scoring_configure.png)
-5. 서비스의 개요 *페이지에서* 새 채점 작업과 진행 상태에 대한 세부 정보가 표시됩니다. 작업이 완료되면 **[!UICONTROL Most Recent]** 점수 지정 작업이 업데이트됩니다.
+5. 서비스의 *개요* 페이지에 새로운 점수 지정 작업과 진행 상황에 대한 세부 정보가 표시됩니다. 작업이 완료되면 **[!UICONTROL 최근]** 점수 지정 작업이 업데이트됩니다.
    ![](../images/models-recipes/publish-model/score_pending.png)
 
 ## 다음 단계 {#next-steps}
 
-이 튜토리얼을 따라 액세스 가능한 서비스로 모델을 게시하고 서비스 갤러리를 통해 새로운 서비스를 사용하여 데이터를 *집계했습니다*. 다음 튜토리얼을 통해 서비스의 자동 트레이닝 및 점수 매기기를 [예약하는 방법을 살펴볼 수 있습니다](./schedule-models-ui.md).
+이 튜토리얼을 따라 액세스 가능한 서비스로 모델을 성공적으로 게시하고 서비스 갤러리를 통해 새로운 서비스를 사용하여 데이터를 *획득한 것입니다*. 서비스에서 자동 트레이닝 및 점수 지정을 [예약하는 방법에 대해 알려면 다음 튜토리얼을 계속 사용하십시오](./schedule-models-ui.md).
