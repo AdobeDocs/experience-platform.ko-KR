@@ -4,10 +4,10 @@ solution: Experience Platform
 title: JupiterLab 사용 안내서
 topic: Overview
 translation-type: tm+mt
-source-git-commit: 440310339003bf23c9fcfc69a6ec1eacddc9f413
+source-git-commit: 49f0678cf8bf4349d0b63f3525a1f707f725ede9
 workflow-type: tm+mt
-source-wordcount: '3672'
-ht-degree: 11%
+source-wordcount: '3782'
+ht-degree: 10%
 
 ---
 
@@ -18,31 +18,31 @@ JupiterLab은 Project Jupiter를 위한 웹 기반의 <a href="https://jupyter.o
 
 이 문서에서는 JupiterLab 및 그 기능에 대한 개요와 일반적인 작업 수행 지침을 제공합니다.
 
-## 경험 플랫폼의 JupiterLab
+## Experience Platform에 대한 JupiterLab
 
-Adobe Experience Platform의 JupiterLab 통합은 아키텍처 변경 사항, 디자인 고려 사항, 맞춤형 노트북 익스텐션, 사전 설치된 라이브러리 및 Adobe 테마 인터페이스와 함께 제공됩니다.
+Experience Platform의 JupiterLab과의 통합은 아키텍처 변경 사항, 디자인 고려 사항, 맞춤형 노트북 익스텐션, 사전 설치된 라이브러리 및 Adobe 테마 인터페이스와 함께 제공됩니다.
 
-다음 목록은 Platform의 JupiterLab에만 고유한 일부 기능에 대해 간략하게 설명합니다.
+다음 목록은 Platform에서 JupiterLab에만 고유한 일부 기능에 대해 간략하게 설명합니다.
 
 | 기능 | 설명 |
 | --- | --- |
 | **커널** | Kernels는 노트북 및 기타 JupiterLab을 통해 다양한 프로그래밍 언어로 코드를 실행하고 검사할 수 있는 기능을 제공합니다. Experience Platform은 Python, R, PySpark 및 Spark의 개발을 지원하기 위한 추가 커널을 제공합니다. 자세한 내용은 [커널](#kernels) 섹션을 참조하십시오. |
 | **데이터 액세스** | 읽기 및 쓰기 기능을 완벽하게 지원하므로 JupiterLab에서 바로 기존 데이터 세트에 액세스할 수 있습니다. |
-| **플랫폼 서비스 통합** | 내장된 통합을 통해 JupiterLab에서 바로 다른 플랫폼 서비스를 이용할 수 있습니다. 지원되는 통합에 대한 전체 목록은 다른 플랫폼 서비스와의 [통합 섹션에 나와 있습니다](#service-integration). |
-| **인증** | JupiterLab <a href="https://jupyter-notebook.readthedocs.io/en/latest/security.html" target="_blank">의 내장된 보안 모델</a>외에도 플랫폼 서비스 간 커뮤니케이션을 비롯한 애플리케이션과 경험 플랫폼 간의 모든 상호 작용은 <a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System] (IMS)을 통해 암호화되어 인증됩니다</a>. |
+| **Platform 서비스 통합** | 내장된 통합을 통해 JupiterLab에서 바로 다른 Platform 서비스를 이용할 수 있습니다. 지원되는 통합에 대한 전체 목록은 다른 Platform 서비스와 [통합 섹션에 나와 있습니다](#service-integration). |
+| **인증** | JupiterLab <a href="https://jupyter-notebook.readthedocs.io/en/latest/security.html" target="_blank">의 내장된 보안 모델</a>외에도 Platform 서비스 간 커뮤니케이션을 비롯한 애플리케이션과 Experience Platform 간의 모든 상호 작용은 <a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System] (IMS)를 통해 암호화되어 인증됩니다</a>. |
 | **개발 라이브러리** | Experience Platform에서 JupiterLab은 미리 설치된 Python, R 및 PySpark 라이브러리를 제공합니다. 지원되는 라이브러리의 전체 [목록은 부록을](#supported-libraries) 참조하십시오. |
-| **라이브러리 컨트롤러** | 사전 설치된 라이브러리가 사용자의 요구 사항에 맞지 않을 경우 Python 및 R용으로 추가 라이브러리를 설치할 수 있으며, 플랫폼의 무결성을 유지하고 데이터를 안전하게 유지하기 위해 격리된 컨테이너에 임시로 저장할 수 있습니다. 자세한 내용은 [커널](#kernels) 섹션을 참조하십시오. |
+| **라이브러리 컨트롤러** | 사전 설치된 라이브러리가 사용자의 요구 사항에 맞지 않을 경우 Python 및 R용으로 추가 라이브러리를 설치할 수 있으며 Platform의 무결성을 유지하고 데이터를 안전하게 유지하기 위해 고립된 컨테이너에 임시로 저장할 수 있습니다. 자세한 내용은 [커널](#kernels) 섹션을 참조하십시오. |
 
 >[!NOTE] 추가 라이브러리는 설치된 세션에서만 사용할 수 있습니다. 새 세션을 시작할 때 필요한 추가 라이브러리를 다시 설치해야 합니다.
 
-## 다른 플랫폼 서비스와의 통합 {#service-integration}
+## 다른 Platform 서비스와 통합 {#service-integration}
 
 표준화와 상호 운용성은 그 이면의 핵심 개념입니다 [!DNL Experience Platform]. 내장된 IDE로 JupiterLab을 통합하면 다른 [!DNL Platform] 서비스와 인터랙션할 수 있으므로 모든 가능성을 활용할 수 [!DNL Platform] [!DNL Platform] 있습니다. JupiterLab에서 다음 [!DNL Platform] 서비스를 이용할 수 있습니다.
 
 * **카탈로그 서비스:** 읽기 및 쓰기 기능을 사용하여 데이터 세트에 액세스하고 탐색할 수 있습니다.
 * **쿼리 서비스:** SQL을 사용하여 데이터 세트에 액세스하고 탐색할 수 있으므로 대량의 데이터를 처리할 때 낮은 데이터 액세스 오버헤드를 제공할 수 있습니다.
 * **Sensei ML 프레임워크:** 한 번의 클릭으로 레서피 제작뿐만 아니라 데이터 트레이닝 및 점수 측정 기능을 사용하여 개발 모델을 모델링할 수 있습니다.
-* **XDM(Experience Data Model):** 표준화 및 상호 운용성은 Adobe Experience Platform의 주요 개념입니다. [Adobe에서 주도하는 XDM(Experience Data Model)](https://www.adobe.com/go/xdm-home-en)은 고객 경험 데이터를 표준화하고 고객 경험 관리를 위한 스키마를 정의하는 것입니다.
+* **XDM(Experience Data Model):** 표준화와 상호 운용성은 Adobe Experience Platform의 주요 개념입니다. [Adobe에서 주도하는 XDM(Experience Data Model)](https://www.adobe.com/go/xdm-home-en)은 고객 경험 데이터를 표준화하고 고객 경험 관리를 위한 스키마를 정의하는 것입니다.
 
 >[!NOTE] JupiterLab의 일부 [!DNL Platform] 서비스 통합은 특정 커널로 제한됩니다. 자세한 내용은 [커널의](#kernels) 섹션을 참조하십시오.
 
@@ -60,7 +60,7 @@ JupiterLab의 주요 기능 및 일반적인 작업 수행에 대한 지침은 �
 
 ### Access JupiterLab {#access-jupyterlab}
 
-Adobe [Experience Platform](https://platform.adobe.com)의 왼쪽 탐색 **열에서 전자 필기장** 을 선택합니다. JupiterLab이 완전히 초기화되는 데 약간의 시간이 소요됩니다.
+Adobe Experience Platform [의](https://platform.adobe.com)왼쪽 탐색 **열에서 전자 필기장** 을 선택합니다. JupiterLab이 완전히 초기화되는 데 약간의 시간이 소요됩니다.
 
 ![](../images/jupyterlab/user-guide/access_jupyterlab.png)
 
@@ -124,7 +124,7 @@ JupiterLab의 주요 작업 영역을 사용하면 문서 및 기타 활동을 �
 
 아래 표에 설명된 특정 기능과 기능은 특정 커널로 제한됩니다.
 
-| 커널 | 라이브러리 설치 지원 | 플랫폼 통합 |
+| 커널 | 라이브러리 설치 지원 | Platform 통합 |
 | :----: | :--------------------------: | :-------------------- |
 | **Python** | 예 | <ul><li>Sensei ML 프레임워크</li><li>카탈로그 서비스</li><li>쿼리 서비스</li></ul> |
 | **R** | 예 | <ul><li>Sensei ML 프레임워크</li><li>카탈로그 서비스</li></ul> |
@@ -227,9 +227,18 @@ JupiterLab의 각 활성 노트북 또는 활동은 커널 세션을 활용합�
 
 ![](../images/jupyterlab/user-guide/new_launcher.gif)
 
-## 노트북을 사용하여 플랫폼 데이터에 액세스
+### Python/R의 GPU 및 메모리 서버 구성
 
-지원되는 각 커널은 노트북 내의 데이터 세트에서 플랫폼 데이터를 읽을 수 있도록 해주는 내장 기능을 제공합니다. 그러나 페이지 매김 데이터에 대한 지원은 Python 및 R 노트북으로 제한됩니다.
+오른쪽 상단 모서리의 톱니바퀴 아이콘 [!DNL JupyterLab] 을 선택하여 *노트북 서버 구성을 엽니다*. 슬라이더를 사용하여 GPU를 켜거나 필요한 메모리 양을 할당할 수 있습니다. 할당할 수 있는 메모리 양은 조직이 프로비저닝한 양에 따라 다릅니다. 저장할 **[!UICONTROL 구성]** 업데이트를 선택합니다.
+
+>[!NOTE]
+>노트북에 대해 조직당 하나의 GPU만 제공됩니다. GPU를 사용 중인 경우 현재 GPU를 출시할 수 있도록 예약한 사용자가 대기해야 합니다. 이 작업은 4시간 이상 GPU를 유휴 상태로 전환하거나 로그아웃하여 수행할 수 있습니다.
+
+![](../images/jupyterlab/user-guide/notebook-gpu-config.png)
+
+## 전자 필기장을 사용하여 Platform 데이터에 액세스
+
+지원되는 각 커널은 노트북 내의 데이터 세트에서 Platform 데이터를 읽을 수 있도록 해주는 내장 기능을 제공합니다. 그러나 페이지 매김 데이터에 대한 지원은 Python 및 R 노트북으로 제한됩니다.
 
 ### 노트북 데이터 제한
 
@@ -439,7 +448,7 @@ Python 노트북(Python 3 커널)에서 데이터 세트를 읽거나 쓰는 사
 
 ### Python의 쿼리 서비스를 사용하여 데이터 쿼리
 
-플랫폼의 JupiterLab을 사용하면 Python 노트북에서 SQL을 사용하여 <a href="https://www.adobe.com/go/query-service-home-en" target="_blank">Adobe Experience Platform 쿼리 서비스를 통해 데이터에 액세스할 수 있습니다</a>. 쿼리 서비스를 통해 데이터에 액세스하는 것은 실행 시간이 매우 짧기 때문에 큰 데이터 세트를 처리하는 데 유용합니다. 쿼리 서비스를 사용하여 데이터를 쿼리하는 데 처리 시간 제한이 10분입니다.
+Platform의 JupiterLab을 사용하면 Python 전자 필기장에서 SQL을 사용하여 <a href="https://www.adobe.com/go/query-service-home-en" target="_blank">Adobe Experience Platform 쿼리 서비스를 통해 데이터에 액세스할 수 있습니다</a>. 쿼리 서비스를 통해 데이터에 액세스하는 것은 실행 시간이 매우 짧기 때문에 큰 데이터 세트를 처리하는 데 유용합니다. 쿼리 서비스를 사용하여 데이터를 쿼리하는 데 처리 시간 제한이 10분입니다.
 
 JupiterLab에서 쿼리 서비스를 사용하려면 먼저 <a href="https://www.adobe.com/go/query-service-sql-syntax-en" target="_blank">쿼리 서비스 SQL 구문에 대한 작업 이해를 해야 합니다</a>.
 
