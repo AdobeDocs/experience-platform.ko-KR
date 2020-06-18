@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI에서 Apache HDFS 소스 커넥터 만들기
 topic: overview
 translation-type: tm+mt
-source-git-commit: adb9c46e7337897e2336971e58ebc90b0e497ea0
+source-git-commit: 855f543a1cef394d121502f03471a60b97eae256
 workflow-type: tm+mt
-source-wordcount: '485'
+source-wordcount: '490'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 1%
 # UI에서 Apache HDFS 소스 커넥터 만들기
 
 >[!NOTE]
->Apache HDFS가 베타 버전입니다. 기능 및 설명서는 변경될 수 있습니다.
+>Apache HDFS 커넥터가 베타 버전입니다. 베타 [레이블이 지정된 커넥터 사용에 대한 자세한 내용은 소스 개요를](../../../../home.md#terms-and-conditions) 참조하십시오.
 
 의 소스 커넥터는 [!DNL Adobe Experience Platform] 외부에서 가져온 데이터를 예약된 기준으로 인제스트하는 기능을 제공합니다. 이 자습서에서는 [!DNL Platform] 사용자 인터페이스를 사용하여 Apache Hadoop 분산 파일 시스템(이하 &quot;HDFS&quot;) 소스 커넥터를 인증하는 단계를 제공합니다.
 
@@ -42,7 +42,7 @@ HDFS 소스 커넥터를 인증하려면 다음 연결 속성 값을 제공해�
 
 필요한 자격 증명을 수집했으면 아래 절차에 따라 연결할 새 HDFS 계정을 만들 수 있습니다 [!DNL Platform].
 
-Adobe [Experience Platform에](https://platform.adobe.com) 로그인한 다음 왼쪽 탐색 **[!UICONTROL 모음에서]** Sources를 *[!UICONTROL 선택하여]* Sources 작업 영역에액세스합니다. [ *[!UICONTROL 카탈로그]* ] 화면에는 인바운드 계정을 만들 수 있는 다양한 소스가 표시되며, 각 소스에는 계정과 연결된 기존 데이터 흐름 수가 표시됩니다.
+Adobe Experience Platform에 [로그인한](https://platform.adobe.com) 다음 왼쪽 탐색 **[!UICONTROL 모음에서]** 소스 *[!UICONTROL 를 선택하여]* 소스 작업 영역에액세스합니다. [ *[!UICONTROL 카탈로그]* ] 화면에는 인바운드 계정을 만들 수 있는 다양한 소스가 표시되며, 각 소스에는 계정과 연결된 기존 데이터 흐름 수가 표시됩니다.
 
 화면의 왼쪽에 있는 카탈로그에서 해당 범주를 선택할 수 있습니다. 또는 검색 옵션을 사용하여 작업할 특정 소스를 찾을 수 있습니다.
 
