@@ -4,9 +4,9 @@ seo-title: Google 광고 대상
 description: 이전에 Google AdWords로 알려졌던 Google Ads는 기업에서 텍스트 기반 검색, 그래픽 디스플레이, YouTube 비디오 및 인앱 모바일 디스플레이에서 클릭당 광고를 지불하는 온라인 광고 서비스입니다.
 seo-description: 이전에 Google AdWords로 알려졌던 Google Ads는 기업에서 텍스트 기반 검색, 그래픽 디스플레이, YouTube 비디오 및 인앱 모바일 디스플레이에서 클릭당 광고를 지불하는 온라인 광고 서비스입니다.
 translation-type: tm+mt
-source-git-commit: dc5ee796ca390d06fc8e08bd6c30e88a0d96dd53
+source-git-commit: 3c598454a868139b7604c5c7ca2b98fa0f1bb961
 workflow-type: tm+mt
-source-wordcount: '544'
+source-wordcount: '613'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Google 광고 대상에만 해당되는 다음 세부 사항을 참고하십시�
 
 >[!IMPORTANT]
 >
->Google Ads를 사용하여 첫 번째 대상을 만들려는 경우 이전에 Experience Cloud ID Service에서 [ID 동기화 기능을](https://docs.adobe.com/content/help/en/id-service/using/id-service-api/methods/idsync.html) 활성화하지 않은 경우(Audience Manager 또는 다른 응용 프로그램 사용) Adobe Consulting 또는 고객 지원 센터에 연락하여 ID 동기화를 활성화하십시오. 이전에 Audience Manager에서 Google 통합을 설정한 경우 설정한 ID 동기화가 Adobe Real-time CDP로 전달됩니다.
+>Google Ads를 사용하여 첫 번째 대상을 만들려는 경우 이전에 Experience Cloud ID 서비스에서 [ID 동기화 기능을](https://docs.adobe.com/content/help/en/id-service/using/id-service-api/methods/idsync.html) 활성화하지 않은 경우(Audience Manager 또는 기타 애플리케이션 포함) Adobe Consulting 또는 고객 지원 센터에 연락하여 ID 동기화를 활성화하십시오. 이전에 Audience Manager에서 Google 통합을 설정한 경우 설정한 ID 시크는 Adobe 실시간 CDP로 이월됩니다.
 
 ## 전제 조건
 
@@ -54,13 +54,14 @@ Adobe 실시간 CDP에서 Google 광고 대상을 만들기 전에 Adobe가 허�
 1. 연결 **[!UICONTROL > 대상에서]** Google 광고를 선택하고 대상 **[!UICONTROL 만들기를 선택합니다]**.
    ![Google 광고 대상 연결](/help/rtcdp/destinations/assets/google-2-destination.png)
 
-2. 대상 만들기 워크플로우에서 대상에 대한 [!UICONTROL 기본 정보를] 입력합니다. <br>
+2. 대상 **만들기 작업** 과정의 설정 단계에서 대상에 대한 [!UICONTROL 기본 정보] 를 입력합니다. <br>
 
-   ![기본 정보 Google 광고](/help/rtcdp/destinations/assets/google-2-basic-information.png)
+   ![기본 정보 Google 광고](/help/rtcdp/destinations/assets/google-ads-setup-step.png)
 * **[!UICONTROL 이름]**: 이 대상에 대한 기본 이름을 입력합니다.
 * **[!UICONTROL 설명]**: 선택 사항. 예를 들어 이 대상을 사용하는 캠페인을 언급할 수 있습니다.
 * **[!UICONTROL 계정 유형]**: AdWords만 사용할 수 있습니다.
 * **[!UICONTROL 계정 ID]**: Google 광고로 계정 ID를 입력합니다. ID 형식은 일반적으로 123-456-7890입니다.
+* **[!UICONTROL 마케팅 활용 사례]**: 마케팅 사용 사례에서는 데이터를 대상으로 내보내려는 의도를 나타냅니다. Adobe에서 정의한 마케팅 사용 사례에서 선택하거나 고유한 마케팅 사용 사례를 만들 수 있습니다. 마케팅 활용 사례에 대한 자세한 내용은 실시간 CDP의 [데이터 거버넌스](/help/rtcdp/privacy/data-governance-overview.md#destinations) 페이지를 참조하십시오. 개별 Adobe에서 정의한 마케팅 사용 사례에 대한 자세한 내용은 [데이터 사용 정책 개요를 참조하십시오](/help/data-governance/policies/overview.md#core-actions).
 
 ## Google 광고에 세그먼트 활성화
 
