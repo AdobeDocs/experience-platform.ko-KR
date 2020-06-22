@@ -4,17 +4,17 @@ seo-title: 이메일 마케팅 대상
 description: ESP(Email Service Providers)를 사용하면 이메일 캠페인 전송과 같은 이메일 마케팅 활동을 관리할 수 있습니다.
 seo-description: ESP(Email Service Providers)를 사용하면 이메일 캠페인 전송과 같은 이메일 마케팅 활동을 관리할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 121ae74e9c352b1f6fc12093d815e711ebd817b8
+source-git-commit: 3c598454a868139b7604c5c7ca2b98fa0f1bb961
 workflow-type: tm+mt
-source-wordcount: '498'
-ht-degree: 2%
+source-wordcount: '731'
+ht-degree: 1%
 
 ---
 
 
 # 이메일 마케팅 대상 {#email-marketing-destinations}
 
-ESP(Email Service Providers)를 사용하면 프로모션 이메일 캠페인 전송과 같은 이메일 마케팅 활동을 관리할 수 있습니다. 실시간 고객 데이터 플랫폼은 이메일 마케팅 대상으로 세그먼트를 활성화할 수 있으므로 ESP와 통합됩니다.
+ESP(Email Service Providers)를 사용하면 프로모션 이메일 캠페인 전송과 같은 이메일 마케팅 활동을 관리할 수 있습니다. Adobe 실시간 고객 데이터 Platform은 이메일 마케팅 대상으로 세그먼트를 활성화할 수 있으므로 ESP와 통합됩니다.
 
 캠페인을 위한 이메일 마케팅 대상으로 세그먼트를 전송하려면 Adobe 실시간 CDP가 먼저 대상에 연결해야 합니다.
 
@@ -26,17 +26,28 @@ ESP(Email Service Providers)를 사용하면 프로모션 이메일 캠페인 �
 
 1. [ **[!UICONTROL 연결] > [대상]**]에서 연결할 이메일 마케팅 대상을 선택한 다음 **[!UICONTROL 연결 대상을 선택합니다]**.
 
-   ![대상에 연결](/help/rtcdp/destinations/assets/connect-destination-1.png)
+   ![대상에 연결](/help/rtcdp/destinations/assets/connect-email-marketing.png)
 
-2. Connect 마법사에서 저장소 위치에 대한 **[!UICONTROL 연결 유형을]** 선택합니다. Amazon **S3**, 암호가 **있는 SFTP**, **SSH 키가 있는** SFTP중에서 선택할 수 있습니다. 연결 유형에 따라 아래 정보를 입력한 다음 **[!UICONTROL Connect를 선택합니다]**.
+2. 이전에 이메일 마케팅 대상에 대한 연결을 **[!UICONTROL 설정한 경우 인증]** 단계에서 기존 계정 **[!UICONTROL 을]** 선택하고 기존 연결을 선택합니다. 또는 새 계정 **[!UICONTROL 을]** 선택하여 이메일 마케팅 대상에 새 연결을 설정할 수 있습니다. 연결 유형 **[!UICONTROL 선택기에서]** Amazon S3 **, 암호가 있는** SFTP, SSH 키가 있는 **SFTP를 선택할 수******&#x200B;있습니다. 연결 유형에 따라 아래 정보를 입력한 다음 **[!UICONTROL Connect를 선택합니다]**.
 
-S3 **연결의**&#x200B;경우 액세스 키 ID와 비밀 액세스 키를 제공해야 합니다.
+   S3 **연결의**&#x200B;경우 Amazon 액세스 키 ID 및 비밀 액세스 키를 제공해야 합니다.
 
-암호 **가** 연결된 SFTP의 경우 도메인, 포트, 사용자 이름 및 암호를 제공해야 합니다.
+   암호 **가** 연결된 SFTP의 경우 SFTP 서버의 도메인, 포트, 사용자 이름 및 암호를 제공해야 합니다.
 
-SSH 키 **** 연결이 있는 SFTP의 경우 도메인, 포트, 사용자 이름 및 SSH 키를 제공해야 합니다.
+   SSH 키 **** 연결이 있는 SFTP의 경우 SFTP 서버에 대한 도메인, 포트, 사용자 이름 및 SSH 키를 제공해야 합니다.
 
-## 2단계 - 내보낸 파일에서 대상 특성으로 사용할 스키마 필드를 선택합니다. {#destination-attributes}
+3. [ **[!UICONTROL 설정]** ] **[!UICONTROL 단계에서 새 대상에 대한]** 이름 **[!UICONTROL 과]** 설명 **[!UICONTROL 과 내보낸 파일에 대한 파일 형식]** 을 입력합니다. <br>
+이전 단계에서 Amazon S3를 저장소 옵션으로 선택한 경우, 파일이 배달될 클라우드 스토리지 대상에 **[!UICONTROL 버킷 이름]** 및 **[!UICONTROL 폴더 경로를]** 삽입합니다. SFTP 저장소 옵션의 경우 파일이 배달될 **[!UICONTROL 폴더 경로를]** 삽입합니다. <br>
+또한 이 단계에서는 이 대상에 **[!UICONTROL 적용되어야 하는 모든]** 마케팅 사용 사례를 선택할 수 있습니다. 마케팅 사용 사례에서는 데이터를 대상으로 내보내려는 의도를 나타냅니다. Adobe에서 정의한 마케팅 사용 사례에서 선택하거나 고유한 마케팅 사용 사례를 만들 수 있습니다. 마케팅 활용 사례에 대한 자세한 내용은 실시간 CDP의 [데이터 거버넌스](/help/rtcdp/privacy/data-governance-overview.md#destinations) 페이지를 참조하십시오. 개별 Adobe에서 정의한 마케팅 사용 사례에 대한 자세한 내용은 [데이터 사용 정책 개요를 참조하십시오](/help/data-governance/policies/overview.md#core-actions). <br>
+   ![이메일 설정 단계](/help/rtcdp/destinations/assets/email-setup-step.png)
+
+## 2단계 - 대상 내보내기에 포함할 세그먼트 멤버를 선택합니다. {#select-segments}
+
+세그먼트 **[!UICONTROL 선택]** 페이지에서 대상에 전송할 세그먼트를 선택합니다. 아래 섹션에서 필드에 대한 자세한 내용을 살펴보십시오.
+
+![세그먼트 선택](/help/rtcdp/destinations/assets/email-select-segments.png)
+
+## 3단계 - 내보낸 파일에서 대상 특성으로 사용할 스키마 필드를 선택합니다. {#destination-attributes}
 
 이 단계에서는 이메일 마케팅 대상으로 내보낼 필드를 선택합니다.
 
@@ -44,7 +55,7 @@ SSH 키 **** 연결이 있는 SFTP의 경우 도메인, 포트, 사용자 이름
 
 ### ID {#identity}
 
-조합 스키마에서 고유 식별자를 선택하는 것이 [좋습니다](../../profile/home.md#profile-fragments-and-union-schemas). 사용자 ID가 꺼져 있는 필드입니다. 일반적으로 이 필드는 이메일 주소이지만 충성도 프로그램 ID 또는 전화 번호일 수도 있습니다. 통합 스키마에서 가장 일반적인 고유 식별자 및 XDM 필드는 아래 표를 참조하십시오.
+조합 스키마에서 고유 식별자를 선택하는 것이 [좋습니다](../../profile/home.md#profile-fragments-and-union-schemas). 사용자 ID가 꺼져 있는 필드입니다. 일반적으로 이 필드는 이메일 주소이지만 충성도 프로그램 ID 또는 전화 번호일 수도 있습니다. 조합 스키마에서 가장 일반적인 고유 식별자 및 XDM 필드는 아래 표를 참조하십시오.
 
 | 고유 식별자 | 통합 스키마의 XDM 필드 |
 ---------|----------
