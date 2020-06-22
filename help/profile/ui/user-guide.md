@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: 실시간 고객 프로필 사용 안내서
 topic: guide
 translation-type: tm+mt
-source-git-commit: da3793a528fa919633e777423d77e7be9cbc0154
+source-git-commit: 4589d0cdca36992feea208850abdda1a9dc246c0
 workflow-type: tm+mt
-source-wordcount: '1206'
+source-wordcount: '1208'
 ht-degree: 0%
 
 ---
@@ -32,19 +32,21 @@ Experience Platform [UI에서](http://platform.adobe.com)왼쪽 탐색 **에서*
 
 ![](../images/user-guide/profiles-overview.png)
 
-## 프로필 찾아보기
+## 찾아보기
 
-ID **로** 프로파일을 찾아보려면 [찾아보기] 탭을 클릭합니다.
+ID *로* 프로파일을 찾아보려면 [찾아보기] 탭을 선택합니다.
+
+![](../images/user-guide/profiles-browse.png)
 
 ### 프로필 지표 {#profile-metrics}
 
-[ **검색** ] 탭 오른쪽에는 전체 [프로필 수](#profile-count) 및 네임스페이스별 [프로필 목록 등 프로필 데이터와 관련된 몇 가지 중요한 프로필 지표가 있습니다](#profiles-by-namespace).
+[ *검색* ] 탭 오른쪽에는 전체 [프로필 수](#profile-count) 및 네임스페이스별 [프로필 목록 등 프로필 데이터와 관련된 몇 가지 중요한 지표가 있습니다](#profiles-by-namespace).
 
 이러한 프로필 지표는 조직의 기본 병합 정책을 사용하여 평가됩니다. 기본 병합 정책을 정의하는 방법을 비롯하여 병합 정책을 사용하는 방법에 대한 자세한 내용은 정책 [병합 사용 설명서를 참조하십시오](merge-policies.md).
 
 이러한 지표 외에도 프로필 지표 섹션에서는 지표가 마지막으로 평가된 시기를 보여주는 *마지막 업데이트* 날짜 및 시간도 제공합니다.
 
-![](../images/user-guide/profiles-browse.png)
+![](../images/user-guide/profiles-profile-metrics.png)
 
 ### 프로필 수 {#profile-count}
 
@@ -92,13 +94,13 @@ ID **네임스페이스를**&#x200B;선택한 후 *ID* 값을 입력할 수 있�
 
 ![](../images/user-guide/profiles-profile-detail.png)
 
-프로필이 회원인 속성, 이벤트 및 세그먼트를 비롯하여 프로필과 관련된 추가 정보를 볼 수 있습니다.
+프로필이 회원인 *속성*, *이벤트*&#x200B;및 *세그먼트를* 포함하여프로필과 관련된 추가 정보를 볼 수 있습니다.
 
 ![](../images/user-guide/profiles-attributes-events-segments.png)
 
 ## 정책 병합
 
-정책 **병합을** 클릭하여 조직에 속하는 병합 정책 목록을 봅니다. 나열된 각 정책에는 해당 이름, 기본 병합 정책인지 여부 및 해당 정책이 적용되는 스키마가 표시됩니다.
+정책 *병합* 탭을 선택하여 조직에 속하는 병합 정책 목록을 봅니다. 나열된 각 정책에는 해당 이름, 기본 병합 정책인지 여부 및 해당 정책이 적용되는 스키마가 표시됩니다.
 
 병합 정책에 대한 자세한 내용은 정책 [병합 사용자 안내서를 참조하십시오](merge-policies.md).
 
@@ -106,7 +108,7 @@ ID **네임스페이스를**&#x200B;선택한 후 *ID* 값을 입력할 수 있�
 
 ## 결합 스키마
 
-프로파일 **저장소에 대한 결합 스키마를** 보려면 조합 스키마를 누릅니다. 결합 스키마는 동일한 클래스 아래의 모든 XDM(경험 데이터 모델) 필드의 병합으로서, 스키마는 실시간 고객 프로필에서 사용할 수 있도록 설정되었습니다. 캔버스에서 해당 결합 스키마의 구조를 보려면 왼쪽 목록에서 클래스를 클릭합니다.
+[ *공용 스키마* ] 탭을 선택하여 프로필 저장소에 대한 결합 스키마를 봅니다. 결합 스키마는 동일한 클래스 아래의 모든 XDM(경험 데이터 모델) 필드의 병합으로서, 스키마는 실시간 고객 프로필에서 사용할 수 있도록 설정되었습니다. 캔버스에서 해당 결합 스키마의 구조를 보려면 왼쪽 목록에서 클래스를 선택합니다.
 
 예를 들어 &quot;XDM 프로필&quot;을 선택하면 XDM 개별 프로필 클래스에 대한 결합 스키마가 표시됩니다.
 
