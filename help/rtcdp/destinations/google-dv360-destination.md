@@ -4,9 +4,9 @@ seo-title: Google 디스플레이 및 비디오 360 대상
 description: 디스플레이 및 비디오 360(이전 DoubleClick 입찰 관리자)은 디스플레이, 비디오 및 모바일 재고 소스에서 타깃팅된 디지털 캠페인 및 대상 재타깃팅을 실행하는 데 사용되는 도구입니다.
 seo-description: '디스플레이 및 비디오 360(이전 DoubleClick 입찰 관리자)은 디스플레이, 비디오 및 모바일 재고 소스에서 타깃팅된 디지털 캠페인 및 대상 재타깃팅을 실행하는 데 사용되는 도구입니다. '
 translation-type: tm+mt
-source-git-commit: dc5ee796ca390d06fc8e08bd6c30e88a0d96dd53
+source-git-commit: 3c598454a868139b7604c5c7ca2b98fa0f1bb961
 workflow-type: tm+mt
-source-wordcount: '586'
+source-wordcount: '668'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Google Display &amp; Video 360 목적지에만 해당되는 다음 세부 사항
 
 >[!IMPORTANT]
 >
->Google Display &amp; Video 360을 사용하여 첫 번째 대상을 만들고 이전에 Experience Cloud ID Service에서 [ID 동기화 기능을](https://docs.adobe.com/content/help/en/id-service/using/id-service-api/methods/idsync.html) 활성화하지 않은 경우(Adobe Audience Manager 또는 기타 애플리케이션 포함) Adobe Consulting 또는 고객 지원 센터에 연락하여 ID 동기화를 활성화하십시오. 이전에 Audience Manager에서 Google 통합을 설정한 경우 설정한 ID 동기화가 Adobe Real-time CDP로 전달됩니다.
+>Google Display &amp; Video 360을 사용하여 첫 번째 대상을 만들고 이전에 Experience Cloud ID 서비스에서 [ID 동기화 기능을](https://docs.adobe.com/content/help/en/id-service/using/id-service-api/methods/idsync.html) 활성화하지 않은 경우(Adobe Audience Manager 또는 기타 애플리케이션 포함) Adobe 컨설팅 또는 고객 지원 센터에 연락하여 ID 동기화를 활성화하십시오. 이전에 Audience Manager에서 Google 통합을 설정한 경우 설정한 ID 시크는 Adobe 실시간 CDP로 이월됩니다.
 
 ## 전제 조건
 
@@ -49,15 +49,16 @@ Adobe 실시간 CDP에서 Google Display &amp; Video 360 대상을 만들기 전
 1. [ **[!UICONTROL 연결] > [대상]**]에서 Google 표시 및 비디오 360을 선택하고 [대상 **[!UICONTROL 만들기]를 선택합니다]**.
    ![Connect Google 표시 및 비디오 360 대상](/help/rtcdp/destinations/assets/google-dv360-destination.png)
 
-2. 대상 만들기 워크플로우에서 대상에 대한 [!UICONTROL 기본 정보를] 입력합니다. <br>
+2. 대상 **만들기 작업** 과정의 설정 [!UICONTROL 단계에서 대상에 대한] 기본 정보및 이 대상에 적용할 마케팅 사용 사례를 입력합니다. <br>
 
-   ![기본 정보 Google Display &amp; Video 360](/help/rtcdp/destinations/assets/google-dv360-basic-information.png)
+   ![기본 정보 Google Display &amp; Video 360](/help/rtcdp/destinations/assets/dv360-setup-step.png)
 * **[!UICONTROL 이름]**: 이 대상에 대한 기본 이름을 입력합니다.
 * **[!UICONTROL 설명]**: 선택 사항. 예를 들어 이 대상을 사용하는 캠페인을 언급할 수 있습니다.
 * **[!UICONTROL 계정 유형]**: Google의 계정에 따라 옵션을 선택합니다.
    * 표시 및 비디오 360 계정 `Invite Advertiser` 에서 대상을 특정 브랜드에만 공유할 수 있도록 허용하는 데 사용합니다.
    * 디스플레이 및 비디오 360 계정 `Invite Partner` 의 모든 브랜드에 대상을 공유할 수 있도록 허용하는 데 사용합니다.
 * **[!UICONTROL 계정 ID]**: Google에서 **[!DNL Invite partner]** 또는 **[!DNL Invite advertiser]** 계정 ID를 입력합니다. 일반적으로 6 또는 7자리 ID입니다.
+* **[!UICONTROL 마케팅 활용 사례]**: 마케팅 사용 사례에서는 데이터를 대상으로 내보내려는 의도를 나타냅니다. Adobe에서 정의한 마케팅 사용 사례에서 선택하거나 고유한 마케팅 사용 사례를 만들 수 있습니다. 마케팅 활용 사례에 대한 자세한 내용은 실시간 CDP의 [데이터 거버넌스](/help/rtcdp/privacy/data-governance-overview.md#destinations) 페이지를 참조하십시오. 개별 Adobe에서 정의한 마케팅 사용 사례에 대한 자세한 내용은 [데이터 사용 정책 개요를 참조하십시오](/help/data-governance/policies/overview.md#core-actions).
 
 >[!NOTE]
 >
