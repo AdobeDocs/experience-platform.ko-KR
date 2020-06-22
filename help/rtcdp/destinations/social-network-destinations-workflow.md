@@ -4,9 +4,9 @@ seo-title: 소셜 네트워크 대상 워크플로우
 description: 소셜 네트워크 및 계정에 연결하는 지침
 seo-description: 소셜 네트워크 및 계정에 연결하는 지침
 translation-type: tm+mt
-source-git-commit: ab53e2efffed536e8028beabd64aee843d1eeee8
+source-git-commit: 3c598454a868139b7604c5c7ca2b98fa0f1bb961
 workflow-type: tm+mt
-source-wordcount: '386'
+source-wordcount: '473'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 ## 소셜 네트워크 대상을 만드는 워크플로
 
-이 자습서는 Facebook을 예로 사용하지만 제품에 한 번 더 추가되면 Adobe 실시간 고객 데이터 플랫폼의 워크플로우는 모든 소셜 네트워크 대상에 대해 동일합니다.
+이 자습서는 Facebook을 예로 사용하지만 제품에 한 번 더 추가되면 Adobe 실시간 고객 데이터 Platform의 워크플로우는 모든 소셜 네트워크 대상에 대해 동일합니다.
 
 1. 대상 **[!UICONTROL > 카탈로그에서]****[!UICONTROL 소셜]** 카테고리로 스크롤합니다. 원하는 소셜 네트워크 대상을 선택한 다음 **[!UICONTROL 연결 대상을 선택합니다]**.
 
@@ -34,28 +34,18 @@ ht-degree: 0%
 
    ![자격 증명 확인됨](/help/rtcdp/destinations/assets/facebook-post-connection-view.png)
 
-4. 설정 **[!UICONTROL 단계에서]** **[!UICONTROL 이름]** 과 **[!UICONTROL 활성화]** 과정에 대한 설명 **[!UICONTROL 을 입력하고 소셜 네트워크 및 계정의]** 계정 ID를 입력합니다. 이 대상에 적용할 마케팅 사용 사례를 선택합니다. 위 필드 **[!UICONTROL 를]** 채운 후 대상 만들기를 선택합니다.
+4. 설정 **[!UICONTROL 단계에서]** **[!UICONTROL 이름]** 과 **[!UICONTROL 활성화]** 과정에 대한 설명 **[!UICONTROL 을 입력하고 소셜 네트워크 및 계정의]** 계정 ID를 입력합니다. <br> 또한 이 단계에서는 이 대상에 **[!UICONTROL 적용되어야 하는 모든]** 마케팅 사용 사례를 선택할 수 있습니다. 마케팅 사용 사례에서는 데이터를 대상으로 내보내려는 의도를 나타냅니다. Adobe에서 정의한 마케팅 사용 사례에서 선택하거나 고유한 마케팅 사용 사례를 만들 수 있습니다. 마케팅 활용 사례에 대한 자세한 내용은 실시간 CDP의 [데이터 거버넌스](/help/rtcdp/privacy/data-governance-overview.md#destinations) 페이지를 참조하십시오. 개별 Adobe에서 정의한 마케팅 사용 사례에 대한 자세한 내용은 [데이터 사용 정책 개요를 참조하십시오](/help/data-governance/policies/overview.md#core-actions). <br> 위 필드 **[!UICONTROL 를]** 채운 후 대상 만들기를 선택합니다.
 
    >[!IMPORTANT]
    >
-   > Facebook 대상. **[!UICONTROL 계정 ID는]** Facebook 광고 계정 ID입니다. Facebook 광고 관리자에서 이 ID를 찾을 수 있습니다. 아래 표시된 대로 ID에 접두사를 `act_` 붙입니다.
+   > * 소셜 네트워크 *대상에 대해 기본적으로 단일 ID 개인화* 마케팅 사용 사례가 선택되므로 제거할 수 없습니다.
+   > * Facebook 대상. **[!UICONTROL 계정 ID는]** Facebook 광고 계정 ID입니다. Facebook 광고 관리자에서 이 ID를 찾을 수 있습니다. 아래 표시된 대로 ID에 접두사를 `act_` 붙입니다.
 
-   ![소셜 네트워크 대상에 연결 - 설정 단계](/help/rtcdp/destinations/assets/social-network-setup-step.png)
+
+   ![소셜 네트워크 대상에 연결 - 설정 단계](/help/rtcdp/destinations/assets/social-networks-setup-step.png)
 
 5. 이제 대상이 만들어집니다. 나중에 세그먼트 **[!UICONTROL 를]** 활성화하려면 저장 및 종료를 **[!UICONTROL 선택하거나]** 다음을 선택하여 워크플로우를 계속하고 활성화할 세그먼트를 선택할 수 있습니다. 다음 섹션, 소셜 네트워크에 세그먼트 [활성화](#activate-segments), 나머지 작업 과정을 참조하십시오.
 
 ## 소셜 네트워크에 세그먼트 활성화 {#activate-segments}
 
 소셜 네트워크에 세그먼트를 활성화하는 방법에 대한 지침은 대상에 [데이터 활성화를 참조하십시오](/help/rtcdp/destinations/activate-destinations.md).
-
-
-<!--
-
-// update IMPORTANT note in step 4 after marketing use cases are released for RTCDP
-
-    >[!IMPORTANT]
-    >
-    > * The *Single Identity Personalization* marketing use case is selected by default for social network destinations and cannot be removed. 
-    > * For Facebook destinations. **[!UICONTROL Account ID]** is your Facebook Ad Account ID. You can find this ID in the Facebook Ads Manager. Prefix the ID with `act_` as shown below: 
-
-    ![Connect to social network destination - setup step](/help/rtcdp/destinations/assets/social-networks-setup-step.png)
