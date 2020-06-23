@@ -4,21 +4,21 @@ solution: Experience Platform
 title: 스트리밍 대상에 연결 및 데이터 활성화
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 883bea4aba0548e96b891987f17b8535c4d2eba7
+source-git-commit: ed9d6eadeb00db51278ea700f7698a1b5590632f
 workflow-type: tm+mt
-source-wordcount: '1847'
+source-wordcount: '1857'
 ht-degree: 2%
 
 ---
 
 
-# API를 사용하여 Adobe의 실시간 고객 데이터 플랫폼에서 스트리밍 대상에 연결하고 데이터 활성화
+# API를 사용하여 Adobe의 실시간 고객 데이터 Platform에서 스트리밍 대상에 연결하고 데이터 활성화
 
 >[!NOTE]
 >
 >Adobe Real-time CDP의 [!DNL Amazon Kinesis] 대상 및 [!DNL Azure Event Hubs] 대상은 현재 베타 버전입니다. 설명서 및 기능은 변경될 수 있습니다.
 
-이 자습서에서는 API 호출을 사용하여 Adobe Experience Platform 데이터에 연결하고, 스트리밍 클라우드 스토리지 대상에 대한 연결([Amazon Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md) 또는 [Azure 이벤트 허브](/help/rtcdp/destinations/azure-event-hubs-destination.md))을 만들고, 새로 만든 대상에 데이터 흐름을 만들고, 새로 만든 대상에 데이터를 활성화하는 방법을 설명합니다.
+이 자습서에서는 API 호출을 사용하여 Adobe Experience Platform 데이터에 연결하고, 스트리밍 클라우드 스토리지 대상([Amazon Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md) 또는 [Azure 이벤트 허브](/help/rtcdp/destinations/azure-event-hubs-destination.md))에 연결을 만들고, 데이터 흐름을 새로 만든 대상에 만들고, 데이터를 새로 만든 대상에 활성화하는 방법을 설명합니다.
 
 이 자습서는 모든 예에서 [!DNL Amazon Kinesis] 대상을 사용하지만 단계는 동일합니다 [!DNL Azure Event Hubs].
 
@@ -28,11 +28,11 @@ Adobe의 실시간 CDP에서 사용자 인터페이스를 사용하여 대상에
 
 ## 시작하기
 
-이 가이드에서는 Adobe Experience Platform의 다음 구성 요소에 대해 작업해야 합니다.
+이 가이드는 다음과 같은 Adobe Experience Platform 구성 요소에 대해 작업해야 합니다.
 
-* [XDM(Experience Data Model) 시스템](../../xdm/home.md): 고객 경험 데이터를 구성하는 표준 프레임워크
-* [카탈로그 서비스](../../catalog/home.md): Catalog는 Experience Platform 내의 데이터 위치 및 계열에 대한 기록 시스템입니다.
-* [샌드박스](../../sandboxes/home.md): 경험 플랫폼은 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되도록 단일 플랫폼 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
+* [XDM(Experience Data Model) 시스템](../../xdm/home.md): Experience Platform이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
+* [카탈로그 서비스](../../catalog/home.md): 카탈로그는 Experience Platform 내 데이터 위치 및 계열에 대한 기록 시스템이다.
+* [샌드박스](../../sandboxes/home.md): Experience Platform은 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되도록 단일 Platform 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
 
 다음 섹션에서는 Adobe Real-time CDP에서 스트리밍 대상으로 데이터를 활성화하기 위해 알아야 할 추가 정보를 제공합니다.
 
@@ -45,22 +45,22 @@ Adobe의 실시간 CDP에서 사용자 인터페이스를 사용하여 대상에
 
 ### 샘플 API 호출 읽기 {#reading-sample-api-calls}
 
-이 자습서에서는 요청의 서식을 지정하는 방법을 보여주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 올바른 형식의 요청 페이로드가 포함됩니다. API 응답으로 반환된 샘플 JSON도 제공됩니다. 샘플 API 호출에 대한 설명서에 사용된 규칙에 대한 자세한 내용은 경험 플랫폼 문제 해결 안내서에서 예제 API 호출 [](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 읽기를 참조하십시오.
+이 자습서에서는 요청의 서식을 지정하는 방법을 보여주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 올바른 형식의 요청 페이로드가 포함됩니다. API 응답으로 반환된 샘플 JSON도 제공됩니다. 샘플 API 호출 설명서에 사용된 규칙에 대한 자세한 내용은 Experience Platform 문제 해결 안내서의 예제 API 호출 [](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 읽기 방법에 대한 섹션을 참조하십시오.
 
 ### 필수 및 선택적 헤더에 대한 값 수집 {#gather-values}
 
-플랫폼 API를 호출하려면 먼저 [인증 자습서를 완료해야 합니다](/help/tutorials/authentication.md). 인증 자습서를 완료하면 아래와 같이 모든 경험 플랫폼 API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
+Platform API를 호출하려면 먼저 [인증 자습서를 완료해야 합니다](/help/tutorials/authentication.md). 인증 자습서를 완료하면 아래와 같이 모든 Experience Platform API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
 
 * 인증: 무기명 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-경험 플랫폼의 리소스는 특정 가상 샌드박스로 분리할 수 있습니다. 플랫폼 API에 대한 요청에서 작업을 수행할 샌드박스의 이름과 ID를 지정할 수 있습니다. 선택적 매개 변수입니다.
+Experience Platform의 리소스는 특정 가상 샌드박스로 분리할 수 있습니다. Platform API에 대한 요청에서 작업을 수행할 샌드박스의 이름과 ID를 지정할 수 있습니다. 선택적 매개 변수입니다.
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
->[!Note]
->경험 플랫폼의 샌드박스에 대한 자세한 내용은 [샌드박스 개요 설명서를 참조하십시오](../../sandboxes/home.md).
+>[!N참고]
+>Experience Platform의 샌드박스에 대한 자세한 내용은 [샌드박스 개요 설명서를 참조하십시오](../../sandboxes/home.md).
 
 페이로드(POST, PUT, PATCH)가 포함된 모든 요청에는 추가 미디어 유형 헤더가 필요합니다.
 
@@ -68,7 +68,7 @@ Adobe의 실시간 CDP에서 사용자 인터페이스를 사용하여 대상에
 
 ### Swagger 설명서 {#swagger-docs}
 
-이 자습서에서는 Swagger에서 모든 API 호출에 대한 참조 설명서를 찾을 수 있습니다. https://platform.adobe.io/data/foundation/flowservice/swagger#/을 참조하십시오. 이 자습서와 Swagger 설명서 페이지를 동시에 사용하는 것이 좋습니다.
+이 자습서에서는 Swagger에서 모든 API 호출에 대한 참조 설명서를 찾을 수 있습니다. Adobe.io에 대한 [Flow Service API 설명서를 참조하십시오](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml). 이 자습서와 Swagger 설명서 페이지를 동시에 사용하는 것이 좋습니다.
 
 ## 사용 가능한 스트리밍 대상 목록 보기 {#get-the-list-of-available-streaming-destinations}
 
@@ -114,17 +114,17 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 }
 ```
 
-## 경험 플랫폼 데이터에 연결 {#connect-to-your-experience-platform-data}
+## Experience Platform 데이터에 연결 {#connect-to-your-experience-platform-data}
 
 ![대상 단계 개요 단계 2](/help/rtcdp/destinations/assets/step2-create-streaming-destination-api.png)
 
-다음으로 프로필 데이터를 내보내고 원하는 대상에서 활성화할 수 있도록 경험 플랫폼 데이터에 연결해야 합니다. 이것은 아래에 설명된 두 가지 하위 단계로 구성됩니다.
+다음으로 프로필 데이터를 내보내고 원하는 대상에서 활성화할 수 있도록 Experience Platform 데이터에 연결해야 합니다. 이것은 아래에 설명된 두 가지 하위 단계로 구성됩니다.
 
-1. 먼저 기본 연결을 설정하여 경험 플랫폼에서 데이터에 대한 액세스를 인증하는 호출을 수행해야 합니다.
-2. 그런 다음 기본 연결 ID를 사용하여 소스 연결을 만들고 경험 플랫폼 데이터에 대한 연결을 설정하는 다른 호출을 만듭니다.
+1. 먼저 기본 연결을 설정하여 Experience Platform에서 데이터에 대한 액세스를 인증하는 호출을 수행해야 합니다.
+2. 그런 다음 기본 연결 ID를 사용하여 소스 연결을 만들고 Experience Platform 데이터에 대한 연결을 설정하는 다른 호출을 만듭니다.
 
 
-### 경험 플랫폼에서 데이터에 대한 액세스 권한 부여
+### Experience Platform에서 데이터에 대한 액세스 권한 부여
 
 **API 형식**
 
@@ -164,7 +164,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }
 ```
 
-### 경험 플랫폼 데이터에 연결
+### Experience Platform 데이터에 연결
 
 **API 형식**
 
@@ -201,7 +201,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **응답**
 
-성공적인 응답은 새로 만든 통합 프로필 서비스에 대한 소스 연결에 대한 고유 식별자(`id`)를 반환합니다. 경험 플랫폼 데이터에 성공적으로 연결되었음을 확인합니다. 이 값은 이후 단계에서 필요에 따라 저장합니다.
+성공적인 응답은 새로 만든 통합 프로필 서비스에 대한 소스 연결에 대한 고유 식별자(`id`)를 반환합니다. Experience Platform 데이터에 성공적으로 연결되었음을 확인합니다. 이 값은 이후 단계에서 필요에 따라 저장합니다.
 
 ```json
 {
@@ -335,7 +335,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 ![대상 단계 개요 단계 4](/help/rtcdp/destinations/assets/step4-create-streaming-destination-api.png)
 
-이전 단계에서 얻은 ID를 사용하여 이제 경험 플랫폼 데이터와 데이터를 활성화할 대상 간에 데이터 흐름을 만들 수 있습니다. 이 단계를 경험 플랫폼과 원하는 대상 간에 나중에 데이터가 흐르도록 파이프라인을 구성하는 것으로 생각해 보십시오.
+이전 단계에서 얻은 ID를 사용하여 이제 Experience Platform 데이터와 데이터를 활성화할 대상 사이에 데이터 흐름을 만들 수 있습니다. 이 단계를 Experience Platform과 원하는 대상 간에 나중에 데이터가 플로우되는 파이프라인을 구성하는 것으로 생각해 보십시오.
 
 데이터 흐름을 만들려면, 아래와 같이 POST 요청을 수행하고 페이로드 내에 아래 언급된 값을 제공합니다.
 
@@ -375,7 +375,7 @@ curl -X POST \
 ```
 
 * `{FLOW_SPEC_ID}`: 프로필 기반 대상에 대한 흐름 사양 ID입니다 `71471eba-b620-49e4-90fd-23f1fa0174d8`. 호출에서 이 값을 사용합니다.
-* `{SOURCE_CONNECTION_ID}`: 경험 플랫폼에 [연결 단계에서 얻은 소스 연결 ID를 사용하십시오](#connect-to-your-experience-platform-data).
+* `{SOURCE_CONNECTION_ID}`: Experience Platform에 [연결 단계에서 얻은 소스 연결 ID를 사용합니다](#connect-to-your-experience-platform-data).
 * `{TARGET_CONNECTION_ID}`: 스트리밍 대상에 [연결 단계에서 얻은 대상 연결 ID를 사용합니다](#connect-to-streaming-destination).
 
 **응답**
