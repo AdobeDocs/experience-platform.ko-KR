@@ -4,7 +4,7 @@ seo-title: Google 광고 관리자 대상
 description: '이전에 발행자를 위한 DoubleClick 또는 DoubleClick AdX로 알려진 Google Ad Manager는 발행자가 비디오 및 모바일 앱을 통해 자사 웹 사이트에서 광고 표시를 관리할 수 있는 수단을 제공하는 Google의 광고 서비스 플랫폼입니다. '
 seo-description: '이전에 발행자를 위한 DoubleClick 또는 DoubleClick AdX로 알려진 Google Ad Manager는 발행자가 비디오 및 모바일 앱을 통해 자사 웹 사이트에서 광고 표시를 관리할 수 있는 수단을 제공하는 Google의 광고 서비스 플랫폼입니다. '
 translation-type: tm+mt
-source-git-commit: 3c598454a868139b7604c5c7ca2b98fa0f1bb961
+source-git-commit: db2084024f7c25cb1f914f9b8da35298691fd95f
 workflow-type: tm+mt
 source-wordcount: '668'
 ht-degree: 0%
@@ -52,7 +52,7 @@ Adobe 실시간 CDP에서 Google Ad Manager 대상을 만들려면 Google에 연
    ![Google 광고 관리자 대상 연결](/help/rtcdp/destinations/assets/google-1-destination.png)
 
 2. 대상 **만들기 작업** 과정의 설정 단계에서 대상에 대한 [!UICONTROL 기본 정보] 를 입력합니다. <br>
-   ![기본 정보 Google 광고 관리자](/help/rtcdp/destinations/assets/ad-manager-setup-step.png)
+   ![기본 정보 Google 광고 관리자](/help/rtcdp/destinations/assets/google-1-destination-setup-step.png)
 * **[!UICONTROL 이름]**: 이 대상에 대한 기본 이름을 입력합니다.
 * **[!UICONTROL 설명]**: 선택 사항. 예를 들어 이 대상을 사용하는 캠페인을 언급할 수 있습니다.
 * **[!UICONTROL 계정 유형]**: Google의 계정에 따라 옵션을 선택합니다.
