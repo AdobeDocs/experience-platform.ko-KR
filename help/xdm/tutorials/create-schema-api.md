@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 스키마 레지스트리 API를 사용하여 스키마 만들기
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: 7cf873d19d26df9ebb70d11ee6e6513173ab45bb
+source-git-commit: b3fa5a17c3a5c2406d368d165da63f2f8c01154d
 workflow-type: tm+mt
 source-wordcount: '2418'
 ht-degree: 1%
@@ -14,18 +14,18 @@ ht-degree: 1%
 
 # 스키마 레지스트리 API를 사용하여 스키마 만들기
 
-스키마 레지스트리는 Adobe Experience Platform 내의 스키마 라이브러리에 액세스하는 데 사용됩니다. 스키마 라이브러리에는 Adobe, Experience Platform 파트너 및 사용자가 애플리케이션을 사용하는 공급업체가 제공하는 리소스가 포함되어 있습니다. 레지스트리는 사용 가능한 모든 라이브러리 리소스에 액세스할 수 있는 사용자 인터페이스 및 RESTful API를 제공합니다.
+스키마 레지스트리는 Adobe Experience Platform 내의 스키마 라이브러리에 액세스하는 데 사용됩니다. 스키마 라이브러리에는 Adobe, Experience Platform 파트너 및 응용 프로그램을 사용하는 공급업체가 제공하는 리소스가 포함되어 있습니다. 레지스트리는 사용 가능한 모든 라이브러리 리소스에 액세스할 수 있는 사용자 인터페이스 및 RESTful API를 제공합니다.
 
 이 자습서에서는 스키마 레지스트리 API를 사용하여 표준 클래스를 사용하여 스키마를 구성하는 단계를 안내합니다. Experience Platform에서 사용자 인터페이스를 사용하려는 경우 스키마 편집기 자습서 [](create-schema-ui.md) 는 스키마 편집기에서 유사한 작업을 수행하기 위한 단계별 지침을 제공합니다.
 
 ## 시작하기
 
-이 가이드에서는 Adobe Experience Platform의 다음 구성 요소에 대해 작업해야 합니다.
+이 가이드는 다음과 같은 Adobe Experience Platform 구성 요소에 대해 작업해야 합니다.
 
-* [XDM(Experience Data Model) 시스템](../home.md): 고객 경험 데이터를 구성하는 표준 프레임워크
+* [XDM(Experience Data Model) 시스템](../home.md): Experience Platform이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
    * [스키마 컴포지션의 기본 사항](../schema/composition.md): 스키마 컴포지션의 주요 원칙 및 모범 사례 등 XDM 스키마의 기본 구성 요소에 대해 알아봅니다.
 * [실시간 고객 프로필](../../profile/home.md): 여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
-* [샌드박스](../../sandboxes/home.md): 경험 플랫폼은 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되도록 단일 플랫폼 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
+* [샌드박스](../../sandboxes/home.md): Experience Platform은 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되도록 단일 Platform 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
 
 이 자습서를 시작하기 전에 [개발자 가이드에서](../api/getting-started.md) 스키마 레지스트리 API를 성공적으로 호출하기 위해 알아야 할 중요한 정보를 검토하십시오. 여기에는 사용자 `{TENANT_ID}`, &quot;컨테이너&quot;의 개념 및 요청 시 필요한 헤더가 포함됩니다(수락 헤더와 가능한 값에 특별히 주의).
 
@@ -135,7 +135,7 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xed+json; version=1'
 ```
 
-**응답 **
+**응답**
 
 응답 형식은 요청과 함께 전송된 수락 헤더에 따라 다릅니다. 요구 사항에 가장 적합한 헤더를 확인하려면 다른 수락 헤더를 시도해 보십시오.
 
@@ -952,7 +952,7 @@ curl -X PATCH \
 
 ### ID 설명자 정의
 
-스키마는 Experience Platform에 데이터를 인제스트하는 데 사용됩니다. 이 데이터는 궁극적으로 여러 서비스에서 사용되어 하나의 통합된 개별 뷰를 생성합니다. 이 프로세스를 돕기 위해 키 필드를 &quot;ID&quot;로 표시하고 데이터 수집 시 해당 필드의 데이터가 해당 개인의 &quot;ID 그래프&quot;에 삽입됩니다. 그러면 [실시간 고객 프로필](../../profile/home.md) 및 기타 경험 플랫폼 서비스에서 그래프 데이터에 액세스하여 각 개별 고객에 대한 연결된 보기를 제공할 수 있습니다.
+스키마는 데이터를 Experience Platform으로 인제스트하는 데 사용됩니다. 이 데이터는 궁극적으로 여러 서비스에서 사용되어 하나의 통합된 개별 뷰를 생성합니다. 이 프로세스를 돕기 위해 키 필드를 &quot;ID&quot;로 표시하고 데이터 수집 시 해당 필드의 데이터가 해당 개인의 &quot;ID 그래프&quot;에 삽입됩니다. 그러면 [실시간 고객 프로필](../../profile/home.md) 및 기타 Experience Platform 서비스에서 그래프 데이터에 액세스하여 각 개별 고객에 대한 연결된 보기를 제공할 수 있습니다.
 
 일반적으로 &quot;ID&quot;로 표시된 필드는 다음과 같습니다. 이메일 주소, 전화 번호, [Experience Cloud ID(ECID)](https://docs.adobe.com/content/help/ko-KR/id-service/using/home.html), CRM ID 또는 기타 고유한 ID 필드
 
@@ -970,7 +970,7 @@ POST /tenant/descriptors
 
 **요청**
 
-다음 요청은 &quot;loyaltyId&quot; 필드에 ID 설명자를 정의합니다. 이는 경험 플랫폼이 개인 정보를 연결하는 데 도움이 되도록 고유한 충성도 프로그램 멤버 식별자(이 경우 멤버의 이메일 주소)를 사용하도록 지시합니다.
+다음 요청은 &quot;loyaltyId&quot; 필드에 ID 설명자를 정의합니다. 이는 Experience Platform이 개인 정보를 연결하는 데 도움이 되도록 고유한 로열티 프로그램 멤버 식별자(이 경우 멤버의 이메일 주소)를 사용하라는 지시입니다.
 
 ```SHELL
 curl -X POST \
@@ -1165,7 +1165,7 @@ curl -X GET \
 
 ## 다음 단계
 
-이 튜토리얼을 따라 사용자가 정의한 표준 믹스와 믹스를 사용하여 스키마를 성공적으로 구성했습니다. 이제 이 스키마를 사용하여 데이터 세트를 만들고 Adobe Experience Platform에 레코드 데이터를 인제스트할 수 있습니다.
+이 튜토리얼을 따라 사용자가 정의한 표준 믹스와 믹스를 사용하여 스키마를 성공적으로 구성했습니다. 이제 이 스키마를 사용하여 데이터 세트를 만들고 레코드 데이터를 Adobe Experience Platform에 인제스트할 수 있습니다.
 
 이 자습서 전체에서 생성된 전체 충성도 멤버 스키마는 다음의 부록에서 사용할 수 있습니다. 스키마를 살펴보면 믹싱이 전체 구조에 기여하는 방법과 데이터 수집에 사용할 수 있는 필드를 확인할 수 있습니다.
 
