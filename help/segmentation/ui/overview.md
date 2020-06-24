@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 세그먼트 빌더 UI 안내서
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: 822f43b139b68b96b02f9a5fe0549736b2524ab7
+source-git-commit: d00973a07c5fb137f756040fb1dc6eac5a1630f5
 workflow-type: tm+mt
 source-wordcount: '2562'
 ht-degree: 0%
@@ -165,7 +165,7 @@ on-demand 평가에는 API를 사용하여 평가를 수행하고 필요에 따�
 
 ![](../images/segment-builder/scheduled-segmentation.png)
 
-## 스트리밍 세분화
+## 스트리밍 세분화 {#streaming-segmentation}
 
 >[!NOTE] 스트리밍 세그멘테이션이 작동하려면 고객은 조직의 예약된 세그멘테이션을 활성화해야 합니다. 예약된 세그먼테이션 활성화에 대한 자세한 내용은 이 사용자 안내서 [의 이전 섹션을 참조하십시오](#enable-scheduled-segmentation).
 
