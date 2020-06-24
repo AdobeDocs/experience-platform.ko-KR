@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 세그멘테이션 자습서
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 636fae71f9c826ce9715bd96a974e5f6afbffb42
+source-git-commit: b0ef50e25c27aba121bb01c602867953eb2a5f7e
 workflow-type: tm+mt
-source-wordcount: '576'
+source-wordcount: '556'
 ht-degree: 0%
 
 ---
@@ -36,10 +36,7 @@ Adobe Experience Platform을 사용하면 여러 소스에서 데이터를 취�
 
 실시간 고객 프로필에서 사용할 수 있는 세그먼트에는 해당 세그먼트 정의 내에 병합 정책 ID가 포함됩니다. 이 병합 정책에는 세그먼트에 포함할 데이터 집합에 대한 정보가 포함되며, 이 정보에는 적용 가능한 데이터 사용 레이블이 포함됩니다. 대상 세그먼트에 대한 데이터 사용 규정 준수를 적용하는 특정 단계에 대해서는 세그먼트에 대한 [데이터 사용 규정 준수 시행 자습서를 따르십시오](../segmentation/tutorials/governance.md).
 
-## (베타) 스트리밍 세분화
-
->[!NOTE]
->스트리밍 세그멘테이션은 베타 버전이며 요청 시 이용할 수 있습니다. 기능 및 설명서는 변경될 수 있습니다.
+## 스트리밍 세분화
 
 스트리밍 세그멘테이션은 이벤트가 특정 세그먼트 그룹에 포함되면 즉시 고객을 평가하는 기능입니다. 이 기능을 사용하면 이제 데이터가 Adobe Experience Platform으로 전달되면 대부분의 세그먼트 규칙을 평가할 수 있으므로, 세그먼트 멤버십은 예약된 세그멘테이션 작업을 실행하지 않고 최신 상태로 유지됩니다. 자세한 내용은 [스트리밍 세그멘테이션 개요를 참조하십시오](../segmentation/api/streaming-segmentation.md).
 
