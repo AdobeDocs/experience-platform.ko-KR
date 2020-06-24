@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 세그먼트 빌더 UI 안내서
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: d00973a07c5fb137f756040fb1dc6eac5a1630f5
+source-git-commit: b5a425714b6d69ca241c8ad81eff779b993633a5
 workflow-type: tm+mt
-source-wordcount: '2562'
+source-wordcount: '2683'
 ht-degree: 0%
 
 ---
@@ -103,11 +103,23 @@ Lucene의 [!UICONTROL 검색 구문을 활용하는] 검색 막대를 사용하�
 
 대상을 *[!UICONTROL 대상]* 탭에서 규칙 빌더 캔버스로 드래그하여 놓아 새 세그먼트 정의에서 대상 멤버십을 참조할 수 있습니다. 이렇게 하면 대상 멤버십을 새 세그먼트 규칙에 속성으로 포함 또는 제외할 수 있습니다.
 
-세그먼트 빌더를 사용하여 만든 [!DNL Platform] 대상의 경우 대상을 해당 대상의 세그먼트 정의에 사용된 규칙 세트로 전환할 수 있는 옵션이 제공됩니다. 이 변환은 규칙 로직의 복사본을 만들며, 그런 다음 원래 세그먼트 정의에 영향을 주지 않고 수정할 수 있습니다.
+세그먼트 빌더를 사용하여 [!DNL Platform] 만든 [!UICONTROL 대상의 경우]대상을 해당 대상의 세그먼트 정의에 사용된 규칙 세트로 전환할 수 있는 옵션이 제공됩니다. 이 변환은 규칙 로직의 복사본을 만들며, 그런 다음 원래 세그먼트 정의에 영향을 주지 않고 수정할 수 있습니다. 세그먼트 정의를 규칙 논리로 변환하기 전에 최근에 변경한 내용을 저장했는지 확인하십시오.
 
 >[!NOTE] 외부 소스에서 대상을 추가하는 경우 대상 멤버십만 참조됩니다. 대상을 규칙으로 변환할 수 없으므로 원래 대상을 만드는 데 사용되는 규칙은 새 세그먼트 정의에서 수정할 수 없습니다.
 
 ![](../images/segment-builder/add-audience-to-segment.png)
+
+대상을 규칙으로 변환할 때 충돌이 발생하는 경우 [!UICONTROL 세그먼트 빌더] 는 기존 옵션을 최대한 보존하려고 시도합니다.
+
+### 코드 보기
+
+또는 세그먼트 빌더에서 만든 규칙의 코드 기반 버전을 [!UICONTROL 볼 수 있습니다]. 규칙 빌더 캔버스 내에서 규칙을 만들면 **[!UICONTROL 코드 보기를 선택하여]** 세그먼트를 PQL으로 볼 수 있습니다.
+
+![](../images/segment-builder/code-view.png)
+
+코드 보기는 API 호출에 사용할 세그먼트 값을 복사할 수 있는 단추를 제공합니다. 최신 버전의 세그먼트를 가져오려면 세그먼트에 최신 변경 사항을 저장했는지 확인하십시오.
+
+![](../images/segment-builder/copy-code.png)
 
 ## 컨테이너
 
