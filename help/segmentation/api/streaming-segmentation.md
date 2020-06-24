@@ -4,15 +4,17 @@ solution: Experience Platform
 title: 스트리밍 세분화
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 822f43b139b68b96b02f9a5fe0549736b2524ab7
+source-git-commit: d00973a07c5fb137f756040fb1dc6eac5a1630f5
 workflow-type: tm+mt
-source-wordcount: '1343'
+source-wordcount: '1370'
 ht-degree: 1%
 
 ---
 
 
 # 스트리밍 세분화를 통해 거의 실시간으로 이벤트 평가
+
+>[!NOTE] 다음 문서에서는 API를 사용하여 스트리밍 세그멘테이션을 사용하는 방법을 설명합니다. UI를 사용한 스트리밍 세그멘테이션 사용에 대한 자세한 내용은 [세그먼트 빌더 안내서를 참조하십시오](../ui/overview.md#streaming-segmentation).
 
 스트리밍 세그먼테이션을 통해 [!DNL Adobe Experience Platform] 고객은 데이터 풍부함에 주력하면서 거의 실시간으로 세분화할 수 있습니다. 이제 스트리밍 세분화를 통해 데이터가 유입되면 세그먼트 자격 조건 [!DNL Platform]이 높아져 세분화 작업을 예약하고 실행할 필요가 없습니다. 이 기능을 사용하면 이제 데이터가 전달될 때 대부분의 세그먼트 규칙을 평가할 수 [!DNL Platform]있으므로, 세그먼트 멤버십은 예약된 세그멘테이션 작업을 실행하지 않고 최신 상태로 유지됩니다.
 
