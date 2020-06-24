@@ -4,17 +4,17 @@ seo-title: SDK 설치 Adobe Experience Platform 웹 SDK
 description: Experience Platform 웹 SDK 설치 방법 살펴보기
 seo-description: Experience Platform 웹 SDK 설치 방법 살펴보기
 translation-type: tm+mt
-source-git-commit: 5998473c665cb80ffddc092847533f51d81cf581
+source-git-commit: e0dee4e39143ae9d7f5e4aaf9c352555f1c7f5d0
 workflow-type: tm+mt
-source-wordcount: '566'
-ht-degree: 0%
+source-wordcount: '571'
+ht-degree: 1%
 
 ---
 
 
 # SDK 설치
 
-AEP 웹 SDK는 CDN에서 사용할 수 있습니다. 이 파일을 참조하거나 다운로드하여 자체 인프라에서 호스팅할 수 있습니다. 축소 및 축소 버전이 아닌 버전으로 사용할 수 있습니다. 분류되지 않은 버전은 디버깅에 유용합니다.
+Adobe Experience Platform 웹 SDK는 CDN(Content Delivery Network)에서 사용할 수 있습니다. 이 파일을 참조하거나 다운로드하여 자체 인프라에서 호스팅할 수 있습니다. 축소 및 축소 버전이 아닌 버전으로 사용할 수 있습니다. 분류되지 않은 버전은 디버깅에 유용합니다.
 
 [https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js)[https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js)
 
@@ -53,7 +53,7 @@ Adobe Experience Platform 웹 SDK를 구현하는 첫 번째 단계는 다음 &q
 
 ## Internet Explorer 지원
 
-이 SDK는 비동기 작업의 완료를 통신하는 방법인 약속 기능을 사용합니다. SDK에서 [사용하는 Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) 구현은 기본적으로 Internet Explorer를 제외한 모든 대상 브라우저에서 지원됩니다. Internet Explorer에서 SDK를 사용하려면 `window.Promise` 다각형 [이 있어야 합니다](https://remysharp.com/2010/10/08/what-is-a-polyfill).
+이 SDK는 비동기 작업의 완료를 통신하는 방법인 약속 기능을 사용합니다. SDK에서 [사용하는 Promise](https://developer.mozilla.org/ko-KR/docs/Web/JavaScript/Reference/Global_Objects/Promise) 구현은 기본적으로 Internet Explorer를 제외한 모든 대상 브라우저에서 지원됩니다. Internet Explorer에서 SDK를 사용하려면 `window.Promise` 다각형 [이 있어야 합니다](https://remysharp.com/2010/10/08/what-is-a-polyfill).
 
 폴리칠이 이미 있는지 확인하려면 다음을 `window.Promise` 수행하십시오.
 
