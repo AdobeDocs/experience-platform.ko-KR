@@ -4,10 +4,10 @@ seo-title: 실시간 고객 데이터 Platform의 데이터 거버넌스
 description: '데이터 거버넌스를 사용하면 고객 데이터를 관리하고 데이터 사용에 적용되는 규정, 제한 사항 및 정책을 준수할 수 있습니다. '
 seo-description: '데이터 거버넌스를 사용하면 고객 데이터를 관리하고 데이터 사용에 적용되는 규정, 제한 사항 및 정책을 준수할 수 있습니다. '
 translation-type: tm+mt
-source-git-commit: c81723d00f6b0a9338c8dd3be8c79385677b4e93
+source-git-commit: 490154c23b0ae764ac30b7e93d42b33d09b8a5d6
 workflow-type: tm+mt
-source-wordcount: '1085'
-ht-degree: 1%
+source-wordcount: '1056'
+ht-degree: 0%
 
 ---
 
@@ -22,7 +22,7 @@ Adobe Experience Platform 데이터 거버넌스를 사용하면 고객 데이�
 
 * [데이터에 사용 레이블 적용](#labels)
 * [데이터 사용 정책 관리](#policies)
-* [데이터 사용 규정 준수](#enforcement)
+* [데이터 사용 규정 준수](#enforce-data-usage-compliance)
 
 ## 데이터에 사용 레이블 적용 {#labels}
 
@@ -47,10 +47,7 @@ Adobe Experience Platform 데이터 거버넌스를 사용하면 고객 데이�
 
 Adobe Experience Platform은 일반적인 고객 경험 사용 사례를 위한 몇 가지 **핵심 정책을** 제공합니다. 이러한 정책은 정책 작업 영역으로 이동한 후 **[!UICONTROL 찾아보기]** **[!UICONTROL 탭을 선택하여 UI에서 볼 수]** 있습니다. 고유한 사용자 지정 정책을 만드는 방법을 포함하여 UI에서 정책 작업에 대한 자세한 단계는 Experience Platform 설명서의 [정책 사용자 안내서를](../../data-governance/policies/user-guide.md) 참조하십시오.
 
-## (베타) 데이터 사용 규정 준수 {#enforce-data-usage-compliance}
-
->[!IMPORTANT]
->이 기능은 현재 베타 버전이며 모든 사용자가 사용할 수 없습니다. 요청 시 활성화할 수 있습니다. 설명서 및 기능은 변경될 수 있습니다.
+## 데이터 사용 규정 준수 {#enforce-data-usage-compliance}
 
 데이터가 레이블이 지정되고 사용 정책이 정의되면 데이터 사용 규정을 정책으로 적용할 수 있습니다. 실시간 CDP의 대상에 고객 세그먼트를 활성화할 때 데이터 거버넌스는 위반이 발생하는 경우 사용 정책을 자동으로 적용합니다.
 
