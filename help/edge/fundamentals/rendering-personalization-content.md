@@ -1,12 +1,12 @@
 ---
 title: 맞춤형 컨텐츠 렌더링
 seo-title: Adobe Experience Platform 웹 SDK 맞춤형 컨텐츠 렌더링
-description: Experience Platform 웹 SDK를 사용하여 개인화된 콘텐츠를 렌더링하는 방법 학습
-seo-description: Experience Platform 웹 SDK를 사용하여 개인화된 콘텐츠를 렌더링하는 방법 학습
+description: Experience Platform 웹 SDK를 사용하여 개인화된 컨텐츠를 렌더링하는 방법 학습
+seo-description: Experience Platform 웹 SDK를 사용하여 개인화된 컨텐츠를 렌더링하는 방법 학습
 translation-type: tm+mt
-source-git-commit: 4bff4b20ccc1913151aa1783d5123ffbb141a7d0
+source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
 workflow-type: tm+mt
-source-wordcount: '236'
+source-wordcount: '232'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ alloy("sendEvent", {
 });
 ```
 
-개인화된 컨텐츠의 렌더링은 비동기 방식이므로 특정 컨텐츠가 페이지의 일부인 경우를 가정하지 마십시오.
+개인화된 컨텐츠의 렌더링은 비동기 방식이므로 특정 컨텐츠가 페이지의 일부일 때는 추측하지 마십시오.
 
 ## 수동으로 컨텐츠 렌더링
 
@@ -90,9 +90,10 @@ alloy("sendEvent",{
 }
 ```
 
-{info}Target 범위를 사용하는 경우 서버에서 mBox가 됩니다. 이 범위는 개별적으로 수행하는 것이 아니라 한 번에 모든 요청입니다. 글로벌 mbox는 항상 전송됩니다.
-{info}
+>[!TIP]
+>
+> Target 범위를 사용하는 경우 서버에서 mBox가 됩니다. 이러한 범위는 개별적으로 하지 않고 한 번에 모든 요청만 가능합니다. 글로벌 mbox는 항상 전송됩니다.
 
 ### 자동 컨텐츠 검색
 
-자동 렌더링 가능 결정 `result.decisions` 을 포함하려면 false로 설정하고 특수 범위를 포함할 수 `renderDecisions` 있습니다 `__view__`
+자동 렌더링 가능 결정 `result.decisions` 을 포함하려면 false로 설정하고 특수 범위를 포함할 수 있습니다 `renderDecisions` `__view__`.
