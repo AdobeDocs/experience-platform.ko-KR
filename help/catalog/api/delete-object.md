@@ -4,14 +4,17 @@ solution: Experience Platform
 title: 개체 삭제
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 6c17351b04fedefd4b57b9530f1d957da8183a68
+source-git-commit: 327be13cbaaa40e4d0409cbb49a051b7067759bf
+workflow-type: tm+mt
+source-wordcount: '178'
+ht-degree: 2%
 
 ---
 
 
 # 개체 삭제
 
-DELETE 요청의 경로에 카탈로그 개체의 ID를 제공하여 삭제할 수 있습니다.
+DELETE 요청 경로에 카탈로그 ID를 제공하여 카탈로그 개체를 삭제할 수 있습니다.
 
 >[!WARNING] 실행 취소할 수 없으며 Experience Platform의 다른 곳에서 변경 사항이 발생할 수 있으므로 개체를 삭제할 때 각별히 주의하십시오.
 
@@ -21,7 +24,9 @@ DELETE 요청의 경로에 카탈로그 개체의 ID를 제공하여 삭제할 �
 DELETE /{OBJECT_TYPE}/{OBJECT_ID}
 ```
 
->[!IMPORTANT] 끝점은 더 이상 사용되지 `DELETE /batches/{ID}` 않습니다. 배치를 삭제하려면 일괄 처리 통합 API를 사용해야 [합니다](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch).
+>[!IMPORTANT]
+>
+>끝점은 `DELETE /batches/{ID}` 더 이상 사용되지 않습니다. 배치를 삭제하려면 일괄 처리 통합 [API를 사용해야 합니다](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch).
 
 | 매개 변수 | 설명 |
 | --- | --- |
@@ -43,7 +48,7 @@ curl -X DELETE \
 
 **응답**
 
-성공적인 응답은 HTTP 상태 200(OK)과 삭제된 데이터 세트의 ID가 포함된 배열을 반환합니다. 이 ID는 DELETE 요청에서 전송된 ID와 일치해야 합니다. 삭제된 개체에 대한 GET 요청을 수행하면 HTTP 상태 404(찾을 수 없음)가 반환되어 데이터 집합이 성공적으로 삭제되었음을 확인합니다.
+성공적인 응답은 HTTP 상태 200(OK)과 삭제된 데이터 세트의 ID가 포함된 배열을 반환합니다. 이 ID는 DELETE 요청에 전송된 ID와 일치해야 합니다. 삭제된 개체에 대한 GET 요청을 수행하면 HTTP 상태 404(찾을 수 없음)가 반환되어 데이터 집합이 성공적으로 삭제되었음을 확인합니다.
 
 ```json
 [
