@@ -4,9 +4,9 @@ seo-title: Adobe Experience Platform 웹 SDK 디버깅
 description: Experience Platform 웹 SDK 디버깅 전환 방법 살펴보기
 seo-description: Experience Platform 웹 SDK 디버깅 전환 방법 살펴보기
 translation-type: tm+mt
-source-git-commit: 7d4f364ebb9df1ce58481a35007ea75f86ab7825
+source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
 workflow-type: tm+mt
-source-wordcount: '323'
+source-wordcount: '324'
 ht-degree: 1%
 
 ---
@@ -34,7 +34,8 @@ alloy("configure", {
 });
 ```
 
->[!Hint]
+>[!TIP]
+>
 >따라서 개인 브라우저만이 아니라 웹 페이지의 모든 사용자에 대한 디버깅이 가능합니다.
 
 ## 디버그 명령을 사용하여 디버깅 전환
@@ -61,7 +62,7 @@ http://example.com/?alloy_debug=true
 
 ## 우선 순위 및 기간
 
-명령 또는 쿼리 문자열 매개 변수를 통해 디버깅을 설정하면 `debug` 명령에 설정된 모든 `debug` 옵션을 `configure` 무시합니다. 이러한 두 경우 세션 동안 디버깅도 전환된 상태로 유지됩니다. 즉, 디버그 명령이나 쿼리 문자열 매개 변수를 사용하여 디버깅을 활성화하면 다음 중 하나가 실행되기 전까지 활성화됩니다.
+명령 또는 쿼리 문자열 매개 변수를 통해 디버깅을 설정하면 `debug` 명령에 설정된 모든 `debug` 옵션을 `configure` 무시합니다. 이러한 두 경우 세션 동안 디버깅도 계속 켜져 있습니다. 즉, 디버그 명령이나 쿼리 문자열 매개 변수를 사용하여 디버깅을 활성화하면 다음 중 하나가 실행되기 전까지 활성화됩니다.
 
 * 세션 종료
 * 명령을 `debug` 실행합니다
