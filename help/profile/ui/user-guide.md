@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: 실시간 고객 프로필 사용 안내서
 topic: guide
 translation-type: tm+mt
-source-git-commit: 62ed8892b4f359da3f0368013b5bfd0b9380cc22
+source-git-commit: 59dff7687f8a0c5b5084eb1ce7dd222cc18d8dbf
 workflow-type: tm+mt
 source-wordcount: '1208'
 ht-degree: 0%
@@ -48,11 +48,11 @@ ID *로* 프로파일을 찾아보려면 [찾아보기] 탭을 선택합니다.
 
 ![](../images/user-guide/profiles-profile-metrics.png)
 
-### Profile count {#profile-count}
+### 프로필 수 {#profile-count}
 
-The profile count displays the total number of profiles your organization has within Experience Platform, after your organization&#39;s default merge policy has merged together profile fragments to form a single profile for each individual customer. In other words, your organization may have multiple profile fragments related to a single customer who interacts with your brand across different channels, but these fragments would be merged together (according to the default merge policy) and would return a count of &quot;1&quot; profile because they are all related to the same individual.
+조직의 기본 병합 정책이 프로필 조각을 병합하여 각 개별 고객을 위한 단일 프로필을 구성한 후 프로필 수는 조직에서 Experience Platform 내에 가지고 있는 총 프로필 수를 표시합니다. 즉, 조직은 여러 채널에서 브랜드와 상호 작용하는 단일 고객과 관련된 여러 프로필 조각을 가질 수 있지만 이러한 조각은 기본 병합 정책에 따라 병합되며 &quot;1&quot; 프로필의 개수가 반환됩니다. 모두 동일한 개인과 관련되어 있기 때문입니다.
 
-프로필 수에는 속성(레코드 데이터)이 있는 프로필 및 Adobe Analytics 프로파일과 같은 시간 시리즈(이벤트) 데이터만 포함된 프로파일도 포함됩니다. The profile count is refreshed regularly to provide an up-to-date total number of profiles within Platform.
+프로필 수에는 속성(레코드 데이터)이 있는 프로필 및 Adobe Analytics 프로파일과 같은 시간 시리즈(이벤트) 데이터만 포함된 프로파일도 포함됩니다. Platform 내의 총 프로필 수를 최신 상태로 제공하기 위해 프로필 수가 정기적으로 새로 고쳐집니다.
 
 프로필 스토어에 레코드를 수집하면 카운트가 5% 이상 증가하거나 감소하면 작업이 트리거되어 카운트가 업데이트됩니다. 스트리밍 데이터 워크플로우의 경우 시간별로 검사하여 5% 증가 또는 감소 임계값이 충족되었는지 확인합니다. 있는 경우 프로필 카운트를 업데이트하도록 작업이 자동으로 트리거됩니다. 일괄 처리를 위해, 성공적으로 배치를 프로필 스토어에 인제스트한 후 15분 이내에 5% 증가 또는 감소 임계값이 충족되면 작업이 실행되어 프로필 카운트를 업데이트합니다.
 
@@ -60,7 +60,7 @@ The profile count displays the total number of profiles your organization has wi
 
 네임스페이스별 *프로필* 지표는 프로필 스토어의 병합된 모든 프로필에서 네임스페이스의 전체 개수와 분류를 표시합니다. 네임스페이스별 총 프로필 수(즉, 각 네임스페이스에 대해 표시된 값을 함께 추가)는 하나의 프로필에 여러 네임스페이스가 연결되어 있으므로 항상 프로필 수 지표보다 높습니다. 예를 들어 고객이 두 개 이상의 채널에서 브랜드와 상호 작용하는 경우 해당 개별 고객과 여러 개의 네임스페이스가 연결됩니다.
 
-Similar to the [profile count](#profile-count) metric, when the ingestion of profiles into the Profile Store increases or decreases the count by more than 5%, a job is triggered to update the namespace metrics. 스트리밍 데이터 워크플로우의 경우 시간별로 검사하여 5% 증가 또는 감소 임계값이 충족되었는지 확인합니다. 있는 경우 프로필 카운트를 업데이트하도록 작업이 자동으로 트리거됩니다. 일괄 처리를 위해, 성공적으로 배치를 프로필 스토어에 인제스트한 후 15분 이내에 5% 증가 또는 감소 임계값이 충족되면 작업을 실행하여 지표를 업데이트합니다.
+프로필 수 지표와 유사하게, 프로필 스토어에 레코드를 수집하여 카운트가 5% 이상 증가하거나 감소하면 [네임스페이스 지표를 업데이트하기 위해 작업이 트리거됩니다](#profile-count) . 스트리밍 데이터 워크플로우의 경우 시간별로 검사하여 5% 증가 또는 감소 임계값이 충족되었는지 확인합니다. 있는 경우 프로필 카운트를 업데이트하도록 작업이 자동으로 트리거됩니다. 일괄 처리를 위해, 성공적으로 배치를 프로필 스토어에 인제스트한 후 15분 이내에 5% 증가 또는 감소 임계값이 충족되면 작업을 실행하여 지표를 업데이트합니다.
 
 ### 정책 병합
 
