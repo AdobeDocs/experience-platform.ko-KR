@@ -4,23 +4,21 @@ solution: Adobe Experience Platform
 title: 실시간 고객 프로필 API 개발자 가이드
 topic: guide
 translation-type: tm+mt
-source-git-commit: 9600f315f162b6cd86e2dbe2fffc793cc91c9319
+source-git-commit: d464a6b4abd843f5f8545bc3aa8000f379a86c6d
 workflow-type: tm+mt
-source-wordcount: '1694'
+source-wordcount: '1690'
 ht-degree: 1%
 
 ---
 
 
-# 엔티티(프로파일 액세스)
+# 엔터티 끝점(프로필 액세스)
 
-Adobe Experience Platform을 사용하면 RESTful API 또는 사용자 인터페이스를 사용하여 실시간 고객 프로필 데이터에 액세스할 수 있습니다. 이 안내서에서는 API를 사용하여 일반적으로 &quot;프로필&quot;이라고 하는 엔터티에 액세스하는 방법을 설명합니다. 플랫폼 UI를 사용하여 프로필 데이터에 액세스하는 방법에 대한 자세한 내용은 [프로필 사용 안내서를 참조하십시오](../ui/user-guide.md).
+Adobe Experience Platform을 사용하면 RESTful API 또는 사용자 인터페이스를 사용하여 실시간 고객 프로필 데이터에 액세스할 수 있습니다. 이 안내서에서는 API를 사용하여 일반적으로 &quot;프로필&quot;이라고 하는 엔터티에 액세스하는 방법을 설명합니다. Platform UI를 사용하여 프로파일에 액세스하는 방법에 대한 자세한 내용은 [프로필 사용 안내서를 참조하십시오](../ui/user-guide.md).
 
 ## 시작하기
 
-이 안내서에 사용되는 API 끝점은 실시간 고객 프로필 API의 일부입니다. 계속하기 전에 [실시간 고객 프로필 API 개발자 안내서를 검토하십시오](getting-started.md).
-
-특히 프로필 개발자 안내서의 [시작 섹션은](getting-started.md#getting-started) 관련 항목에 대한 링크, 이 문서에서 샘플 API 호출 읽기 안내서, 모든 Experience Platform API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요한 정보를 포함합니다.
+이 안내서에서 사용되는 API 끝점은 [실시간 고객 프로필 API의 일부입니다](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). 계속하기 전에 [시작하기 가이드](getting-started.md) (관련 문서 링크, 이 문서에서 샘플 API 호출 읽기 안내서)와 Experience Platform API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요 정보를 검토하십시오.
 
 ## ID로 프로필 데이터 액세스
 
@@ -776,7 +774,7 @@ curl -X POST \
 
 ## 여러 스키마 엔티티에서 시간 시리즈 이벤트에 액세스
 
-관계 설명자를 통해 연결된 여러 개체에 액세스할 수 있습니다. 다음 예제 API 호출에서는 두 스키마 사이에 관계가 이미 정의되어 있다고 가정합니다. 관계 설명자에 대한 자세한 내용은 스키마 레지스트리 API 개발자 가이드 [설명자 하위 안내서를 참조하십시오](../../xdm/api/descriptors.md).
+관계 설명자를 통해 연결된 여러 개체에 액세스할 수 있습니다. 다음 예제 API 호출에서는 두 스키마 사이에 관계가 이미 정의되어 있다고 가정합니다. 관계 설명자에 대한 자세한 내용은 스키마 레지스트리 API 개발자 가이드 [끝점 안내서를 참조하십시오](../../xdm/api/descriptors.md).
 
 액세스할 데이터를 지정하기 위해 요청 경로에 쿼리 매개 변수를 포함할 수 있습니다. 앰퍼샌드(&amp;)로 구분된 여러 매개 변수를 포함할 수 있습니다. 부칙의 [쿼리 매개 변수](#query-parameters) 섹션에 유효한 매개 변수의 전체 목록이 제공됩니다.
 
@@ -886,7 +884,7 @@ curl -X GET \
 
 ## 다음 단계
 
-이 안내서를 따르면 실시간 고객 프로필 데이터 필드, 프로필 및 시계열 데이터에 성공적으로 액세스했습니다. 플랫폼에 저장된 다른 데이터 리소스에 액세스하는 방법을 알아보려면 [데이터 액세스 개요를 참조하십시오](../../data-access/home.md).
+이 안내서를 따르면 실시간 고객 프로필 데이터 필드, 프로필 및 시계열 데이터에 성공적으로 액세스했습니다. Platform에 저장된 다른 데이터 리소스에 액세스하는 방법을 알아보려면 [데이터 액세스 개요를 참조하십시오](../../data-access/home.md).
 
 ## 부록 {#appendix}
 
