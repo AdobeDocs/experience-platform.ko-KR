@@ -4,21 +4,21 @@ solution: Adobe Experience Platform
 title: 실시간 고객 프로필 API 개발자 가이드
 topic: guide
 translation-type: tm+mt
-source-git-commit: 9600f315f162b6cd86e2dbe2fffc793cc91c9319
+source-git-commit: d464a6b4abd843f5f8545bc3aa8000f379a86c6d
 workflow-type: tm+mt
-source-wordcount: '1940'
+source-wordcount: '1919'
 ht-degree: 2%
 
 ---
 
 
-# 에지 대상 및 예상
+# 가장자리 투영 구성 및 대상 끝점
 
-여러 채널에서 실시간으로 고객의 기대에 부응하는 개인화된 경험을 제공하기 위해서는 변경 사항이 발생하면 즉시 정확한 데이터를 제공하고 지속적으로 업데이트해야 합니다. Adobe Experience Platform을 사용하면 데이터를 실시간으로 액세스할 수 있습니다. Edge는 데이터를 저장하고 애플리케이션에서 쉽게 액세스할 수 있도록 하는 지리적으로 배치된 서버입니다. 예를 들어 Adobe Target 및 Adobe Campaign과 같은 Adobe 애플리케이션은 고객 경험을 실시간으로 개인화합니다. 데이터는 투영에 의해 모서리로 라우팅되고, 투영 대상은 데이터가 전송될 가장자리를 정의하며, 가장자리에서 사용할 특정 정보를 정의하는 투영 구성이 있습니다. 이 안내서에서는 대상 및 구성을 포함하여 에지 예상 작업에 실시간 고객 프로필 API를 사용하는 방법에 대한 자세한 지침을 제공합니다.
+여러 채널에서 실시간으로 고객의 기대에 부응하는 개인화된 경험을 제공하기 위해서는 변경 사항이 발생하면 즉시 정확한 데이터를 제공하고 지속적으로 업데이트해야 합니다. Adobe Experience Platform을 사용하면 가장자리라고 하는 요소를 사용하여 데이터에 대한 실시간 액세스를 가능하게 합니다. Edge는 데이터를 저장하고 애플리케이션에서 쉽게 액세스할 수 있도록 하는 지리적으로 배치된 서버입니다. 예를 들어 Adobe Target 및 Adobe Campaign과 같은 Adobe 애플리케이션은 실시간으로 개인화된 고객 경험을 제공하기 위해 가장자리를 사용합니다. 데이터는 투영에 의해 모서리로 라우팅되고, 투영 대상은 데이터가 전송될 가장자리를 정의하며, 가장자리에서 사용할 특정 정보를 정의하는 투영 구성이 있습니다. 이 안내서에서는 대상 및 구성을 포함하여 에지 예상 작업에 실시간 고객 프로필 API를 사용하는 방법에 대한 자세한 지침을 제공합니다.
 
 ## 시작하기
 
-이 안내서에 사용되는 API 끝점은 실시간 고객 프로필 API의 일부입니다. 계속하기 전에 [실시간 고객 프로필 개발자 안내서를 검토하십시오](getting-started.md). 특히 프로필 개발자 안내서의 [시작 섹션은](getting-started.md#getting-started) 관련 항목에 대한 링크, 이 문서에서 샘플 API 호출 읽기 안내서, 모든 Experience Platform API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요한 정보를 포함합니다.
+이 안내서에서 사용되는 API 끝점은 [실시간 고객 프로필 API의 일부입니다](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). 계속하기 전에 [시작하기 가이드](getting-started.md) (관련 문서 링크, 이 문서에서 샘플 API 호출 읽기 안내서)와 Experience Platform API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요 정보를 검토하십시오.
 
 >[!NOTE]
 >페이로드(POST, PUT, PATCH)가 포함된 요청에는 `Content-Type` 헤더가 필요합니다. 이 문서 `Content-Type` 에 둘 이상이 사용됩니다. 각 요청에 대해 정확성을 유지하려면 샘플 호출의 헤더에 특히 주의하십시오 `Content-Type` .
@@ -107,7 +107,7 @@ curl -X GET \
 
 개별 대상의 속성에 대한 자세한 내용은 다음에 나오는 대상 [을 만드는 섹션을](#create-a-destination) 참조하십시오.
 
-### 대상 만들기 {#create-a-destination}
+### Create a destination {#create-a-destination}
 
 필요한 대상이 아직 없는 경우 종단점에 POST 요청을 수행하여 새 투영 대상을 만들 수 `/config/destinations` 있습니다.
 
@@ -292,7 +292,7 @@ curl -X PUT \
 
 ### 대상 삭제
 
-조직에서 더 이상 프로젝션 대상이 필요하지 않은 경우 종단점에 대한 DELETE 요청을 수행하고 요청 경로에서 삭제하려는 대상의 ID를 포함하여 삭제할 수 있습니다. `/config/destinations`
+조직에서 더 이상 프로젝션 대상이 필요하지 않은 경우 종단점에 DELETE 요청을 수행하고 요청 경로에서 삭제하려는 대상의 ID를 포함하여 삭제할 수 있습니다. `/config/destinations`
 
 >[!CAUTION]
 >삭제 요청에 대한 API 응답은 즉시 발생하지만 가장자리에 있는 데이터의 실제 변경 사항은 비동기적으로 발생합니다. 즉, 프로파일 데이터가 투영 대상에 지정된 모든 모서리 `dataCenters` 에서 제거되지만 완료하는 데 시간이 걸립니다.
@@ -349,7 +349,7 @@ GET /config/projections?schemaName={SCHEMA_NAME}&name={PROJECTION_NAME}
 
 **요청**
 
-다음 요청은 경험 데이터 모델 스키마 클래스 XDM 개별 프로파일과 연관된 모든 프로젝션 구성을 나열합니다. 플랫폼 내의 XDM 및 그 역할에 대한 자세한 내용은 [XDM 시스템 개요를 읽어 보시기 바랍니다](../../xdm/home.md).
+다음 요청은 경험 데이터 모델 스키마 클래스 XDM 개별 프로파일과 연관된 모든 프로젝션 구성을 나열합니다. XDM 및 Platform 내의 역할에 대한 자세한 내용은 [XDM 시스템 개요를 읽어 보시기 바랍니다](../../xdm/home.md).
 
 ```shell
 curl -X GET \
@@ -639,4 +639,4 @@ curl -X POST \
 
 ## 다음 단계
 
-이 안내서에서는 매개 변수의 형식을 제대로 지정하는 방법을 포함하여 에지 예상 및 대상을 구성하는 데 관련된 단계를 `selector` 보여 줍니다. 이제 조직의 요구 사항에 맞는 새로운 Edge Destination과 예상치를 만들 수 있습니다. 프로필 API를 통해 사용 가능한 추가 작업을 살펴보려면 [실시간 고객 프로필 API 개발자 안내서를 참조하십시오](getting-started.md).
+이 안내서에서는 매개 변수의 형식을 제대로 지정하는 방법을 포함하여 예상 및 대상을 구성하는 데 관련된 단계를 `selector` 보여 줍니다. 이제 조직의 요구 사항에 맞는 새로운 투영 대상 및 구성을 만들 수 있습니다.
