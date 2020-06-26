@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: 실시간 고객 프로필 API 개발자 가이드
 topic: guide
 translation-type: tm+mt
-source-git-commit: 9600f315f162b6cd86e2dbe2fffc793cc91c9319
+source-git-commit: d464a6b4abd843f5f8545bc3aa8000f379a86c6d
 workflow-type: tm+mt
-source-wordcount: '2057'
+source-wordcount: '2052'
 ht-degree: 1%
 
 ---
@@ -14,15 +14,15 @@ ht-degree: 1%
 
 # 정책 병합
 
-Adobe Experience Platform을 사용하면 여러 소스에서 데이터를 취합하여 각 개별 고객의 전체 상황을 파악할 수 있습니다. 이러한 데이터를 취합할 때 병합 정책은 Platform에서 데이터의 우선 순위를 결정하는 방법과 데이터를 결합하여 통합 뷰를 생성하는 데 사용하는 규칙입니다. RESTful API 또는 사용자 인터페이스를 사용하여 새 병합 정책을 만들고 기존 정책을 관리하고 조직에 대한 기본 병합 정책을 설정할 수 있습니다. 이 안내서에서는 API를 사용하여 병합 정책을 사용하는 단계를 보여 줍니다. UI를 사용하여 병합 정책을 사용하려면 [병합 정책 사용 안내서를 참조하십시오](../ui/merge-policies.md).
+Adobe Experience Platform을 사용하면 여러 소스에서 데이터를 취합하여 각 개별 고객에 대한 전체 상황을 파악할 수 있습니다. 이 데이터를 취합할 때 병합 정책은 Platform에서 데이터의 우선 순위를 결정하는 방법과 데이터를 결합하여 통합 뷰를 생성하는 데 사용하는 규칙입니다. RESTful API 또는 사용자 인터페이스를 사용하여 새 병합 정책을 만들고 기존 정책을 관리하고 조직에 대한 기본 병합 정책을 설정할 수 있습니다. 이 안내서에서는 API를 사용하여 병합 정책을 사용하는 단계를 보여 줍니다. UI를 사용하여 병합 정책을 사용하려면 [병합 정책 사용 안내서를 참조하십시오](../ui/merge-policies.md).
 
 ## 시작하기
 
-이 안내서에 사용되는 API 끝점은 실시간 고객 프로필 API의 일부입니다. 계속하기 전에 [실시간 고객 프로필 API 개발자 안내서를 검토하십시오](getting-started.md). 특히 프로필 개발자 안내서의 [시작 섹션은](getting-started.md#getting-started) 관련 항목에 대한 링크, 이 문서에서 샘플 API 호출 읽기 안내서, 모든 Experience Platform API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요한 정보를 포함합니다.
+이 안내서에서 사용되는 API 끝점은 [실시간 고객 프로필 API의 일부입니다](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). 계속하기 전에 [시작하기 가이드](getting-started.md) (관련 문서 링크, 이 문서에서 샘플 API 호출 읽기 안내서)와 Experience Platform API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요 정보를 검토하십시오.
 
 ## 병합 정책의 구성 요소 {#components-of-merge-policies}
 
-병합 정책은 IMS 조직에 대한 개인 정책이므로 필요한 특정 방식으로 스키마를 병합하기 위해 다른 정책을 만들 수 있습니다. 프로필 데이터에 액세스하는 모든 API에는 병합 정책이 필요하지만, 명시적으로 제공되지 않으면 기본값이 사용됩니다. Platform(플랫폼)은 기본 병합 정책을 제공하거나 특정 스키마에 대한 병합 정책을 만들어 조직의 기본값으로 표시할 수 있습니다. 각 조직에는 스키마당 여러 개의 병합 정책이 있을 수 있지만 각 스키마에는 하나의 기본 병합 정책만 있을 수 있습니다. 기본적으로 설정된 병합 정책은 스키마 이름을 제공하고 병합 정책이 필요하지만 제공되지 않는 경우에 사용됩니다. 병합 정책을 기본값으로 설정하면 이전에 기본값으로 설정된 기존 병합 정책이 더 이상 기본값으로 사용되지 않도록 자동으로 업데이트됩니다.
+병합 정책은 IMS 조직에 대한 개인 정책이므로 필요한 특정 방식으로 스키마를 병합하기 위해 다른 정책을 만들 수 있습니다. 프로필 데이터에 액세스하는 모든 API에는 병합 정책이 필요하지만, 명시적으로 제공되지 않으면 기본값이 사용됩니다. Platform은 기본 병합 정책을 제공하거나 특정 스키마에 대한 병합 정책을 만들어 조직의 기본값으로 표시할 수 있습니다. 각 조직에는 스키마당 여러 개의 병합 정책이 있을 수 있지만 각 스키마에는 하나의 기본 병합 정책만 있을 수 있습니다. 기본적으로 설정된 병합 정책은 스키마 이름을 제공하고 병합 정책이 필요하지만 제공되지 않는 경우에 사용됩니다. 병합 정책을 기본값으로 설정하면 이전에 기본값으로 설정된 기존 병합 정책이 더 이상 기본값으로 사용되지 않도록 자동으로 업데이트됩니다.
 
 ### 전체 병합 정책 개체
 
@@ -59,7 +59,7 @@ Adobe Experience Platform을 사용하면 여러 소스에서 데이터를 취�
 | `attributeMerge` | [병합](#attribute-merge) 정책이 데이터 충돌 시 프로필 속성 값의 우선 순위를 지정하는 방법을 나타내는 속성 병합 개체입니다. |
 | `schema` | 병합 정책을 사용할 수 있는 [스키마](#schema) 개체입니다. |
 | `default` | 이 병합 정책이 지정된 스키마의 기본값인지 여부를 나타내는 부울 값입니다. |
-| `version` | 플랫폼 유지 관리 버전의 병합 정책 이 읽기 전용 값은 병합 정책이 업데이트될 때마다 증가합니다. |
+| `version` | 병합 정책의 Platform 유지 버전 이 읽기 전용 값은 병합 정책이 업데이트될 때마다 증가합니다. |
 | `updateEpoch` | 병합 정책에 대한 마지막 업데이트 날짜 |
 
 **병합 정책 예**
@@ -86,7 +86,7 @@ Adobe Experience Platform을 사용하면 여러 소스에서 데이터를 취�
 
 ### ID 그래프 {#identity-graph}
 
-[Adobe Experience Platform ID Service](../../identity-service/home.md) 는 Experience Platform의 각 조직 및 전역으로 사용되는 ID 그래프를 관리합니다. 병합 정책의 `identityGraph` 속성은 사용자의 관련 ID를 결정하는 방법을 정의합니다.
+[Adobe Experience Platform ID 서비스](../../identity-service/home.md) (Identity Service)는 Experience Platform의 각 조직 및 글로벌 환경에 사용되는 ID 그래프를 관리합니다. 병합 정책의 `identityGraph` 속성은 사용자의 관련 ID를 결정하는 방법을 정의합니다.
 
 **identityGraph 객체**
 
@@ -693,7 +693,7 @@ curl -X PUT \
 
 ## 병합 정책 삭제
 
-종단점에 대한 DELETE 요청을 만들고 요청 경로에서 삭제하려는 병합 정책의 ID를 포함하여 병합 정책을 삭제할 수 있습니다. `/config/mergePolicies`
+종단점에 DELETE 요청을 만들고 요청 경로에서 삭제하려는 병합 정책의 ID를 포함하여 병합 정책을 삭제할 수 있습니다. `/config/mergePolicies`
 
 **API 형식**
 
