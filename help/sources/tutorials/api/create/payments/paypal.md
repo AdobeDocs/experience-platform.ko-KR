@@ -4,58 +4,58 @@ solution: Experience Platform
 title: Flow Service API를 사용하여 PayPal 커넥터 만들기
 topic: overview
 translation-type: tm+mt
-source-git-commit: 7328226b8349ffcdddadbd27b74fc54328b78dc5
+source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
 workflow-type: tm+mt
-source-wordcount: '604'
-ht-degree: 1%
+source-wordcount: '560'
+ht-degree: 2%
 
 ---
 
 
-# Flow Service API를 사용하여 PayPal 커넥터 만들기
+# API를 [!DNL PayPal] 사용하여 커넥터 [!DNL Flow Service] 만들기
 
 >[!NOTE]
->PayPal 커넥터가 베타 버전입니다. 베타 [레이블이 지정된 커넥터 사용에 대한 자세한 내용은 소스 개요를](../../../../home.md#terms-and-conditions) 참조하십시오.
+>커넥터의 [!DNL PayPal] 베타입니다. 베타 [레이블이 지정된 커넥터 사용에 대한 자세한 내용은 소스 개요를](../../../../home.md#terms-and-conditions) 참조하십시오.
 
-Flow Service는 Adobe Experience Platform 내의 다양한 소스에서 수집한 고객 데이터를 중앙에서 수집하고 관리하는 데 사용됩니다. 이 서비스는 지원되는 모든 소스가 연결되어 있는 사용자 인터페이스와 RESTful API를 제공합니다.
+[!DNL Flow Service] 는 Adobe Experience Platform 내의 다양한 소스에서 수집된 고객 데이터를 수집하고 중앙 집중화하는 데 사용됩니다. 이 서비스는 지원되는 모든 소스가 연결되어 있는 사용자 인터페이스와 RESTful API를 제공합니다.
 
-이 자습서에서는 Flow Service API를 사용하여 PayPal과 Experience Platform을 연결하는 단계를 단계별로 안내합니다.
+이 자습서에서는 [!DNL Flow Service] API를 사용하여 Experience Platform에 연결하는 단계를 안내합니다 [!DNL PayPal] .
 
 ## 시작하기
 
 이 가이드는 다음과 같은 Adobe Experience Platform 구성 요소에 대해 작업해야 합니다.
 
-* [소스](../../../../home.md): Experience Platform을 사용하면 Platform 서비스를 사용하여 들어오는 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 다양한 소스에서 데이터를 수집할 수 있습니다.
-* [샌드박스](../../../../../sandboxes/home.md): Experience Platform은 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되도록 단일 Platform 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
+* [소스](../../../../home.md): [!DNL Experience Platform] 서비스를 사용하여 들어오는 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 다양한 소스에서 데이터를 수집할 수 [!DNL Platform] 있습니다.
+* [샌드박스](../../../../../sandboxes/home.md): [!DNL Experience Platform] 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되도록 단일 Platform 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
 
-다음 섹션에서는 Flow Service API를 사용하여 PayPal에 성공적으로 연결하기 위해 알아야 할 추가 정보를 제공합니다.
+다음 섹션에서는 API를 [!DNL PayPal] 사용하기 위해 연결하기 위해 알아야 할 추가 정보를 [!DNL Flow Service] 제공합니다.
 
 ### 필요한 자격 증명 수집
 
-Flow Service가 PayPal에 연결하려면 다음 연결 속성에 대한 값을 제공해야 합니다.
+연결 [!DNL Flow Service] 을 [!DNL PayPal]하려면 다음 연결 속성에 값을 제공해야 합니다.
 
 | 자격 증명 | 설명 |
 | ---------- | ----------- |
-| 호스트 | PayPal 인스턴스의 URL. (기본값: api.sandbox.paypal.com)을 참조하십시오. |
-| 클라이언트 ID | PayPal 응용 프로그램과 연결된 클라이언트 ID입니다. |
-| 클라이언트 암호 | PayPal 응용 프로그램과 관련된 클라이언트 암호입니다. |
-| 연결 사양 ID | 연결을 만드는 데 필요한 고유 식별자입니다. PayPal의 연결 사양 ID는 다음과 같습니다. `221c7626-58f6-4eec-8ee2-042b0226f03b` |
+| 호스트 | 인스턴스의 [!DNL PayPal] URL. (기본값: api.sandbox.paypal.com)을 참조하십시오. |
+| 클라이언트 ID | 응용 프로그램과 연결된 클라이언트 [!DNL PayPal] ID. |
+| 클라이언트 암호 | 응용 프로그램과 연결된 클라이언트 [!DNL PayPal] 암호입니다. |
+| 연결 사양 ID | 연결을 만드는 데 필요한 고유 식별자입니다. 에 대한 연결 사양 ID [!DNL PayPal] 는 다음과 같습니다. `221c7626-58f6-4eec-8ee2-042b0226f03b` |
 
 시작하는 방법에 대한 자세한 내용은 [이 PayPal 문서를 참조하십시오](https://developer.paypal.com/docs/api/overview/#get-credentials).
 
 ### 샘플 API 호출 읽기
 
-이 자습서에서는 요청의 서식을 지정하는 방법을 보여주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 올바른 형식의 요청 페이로드가 포함됩니다. API 응답으로 반환된 샘플 JSON도 제공됩니다. 샘플 API 호출 설명서에 사용된 규칙에 대한 자세한 내용은 Experience Platform 문제 해결 안내서의 예제 API 호출 [](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) 읽기 방법에 대한 섹션을 참조하십시오.
+이 자습서에서는 요청의 서식을 지정하는 방법을 보여주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 올바른 형식의 요청 페이로드가 포함됩니다. API 응답으로 반환된 샘플 JSON도 제공됩니다. 샘플 API 호출 설명서에 사용된 규칙에 대한 자세한 내용은 문제 해결 안내서의 예제 API 호출 [을 읽는](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) 방법에 대한 섹션을 [!DNL Experience Platform] 참조하십시오.
 
 ### 필수 헤더에 대한 값 수집
 
-Platform API를 호출하려면 먼저 [인증 자습서를 완료해야 합니다](../../../../../tutorials/authentication.md). 인증 자습서를 완료하면 아래와 같이 모든 Experience Platform API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
+API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 합니다](../../../../../tutorials/authentication.md). 인증 자습서를 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
 
 * 인증: 무기명 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-흐름 서비스에 속하는 리소스를 포함하여 Experience Platform의 모든 리소스는 특정 가상 샌드박스와 분리됩니다. Platform API에 대한 모든 요청에는 작업이 수행할 샌드박스의 이름을 지정하는 헤더가 필요합니다.
+에 속하는 리소스를 [!DNL Experience Platform]포함한 모든 리소스 [!DNL Flow Service]는 특정 가상 샌드박스와 분리됩니다. API에 대한 모든 [!DNL Platform] 요청에는 작업이 수행할 샌드박스의 이름을 지정하는 헤더가 필요합니다.
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -65,7 +65,7 @@ Platform API를 호출하려면 먼저 [인증 자습서를 완료해야 합니�
 
 ## 연결 만들기
 
-연결은 소스를 지정하고 해당 소스에 대한 자격 증명을 포함합니다. 여러 소스 커넥터를 만들어 다른 데이터를 가져올 수 있으므로 PayPal 계정당 하나의 연결만 필요합니다.
+연결은 소스를 지정하고 해당 소스에 대한 자격 증명을 포함합니다. 다른 데이터를 가져오기 위해 여러 소스 커넥터를 만드는 데 사용할 수 있으므로 계정당 하나의 연결만 필요합니다. [!DNL PayPal]
 
 **API 형식**
 
@@ -75,7 +75,7 @@ POST /connections
 
 **요청**
 
-PayPal 연결을 만들려면 고유한 연결 사양 ID를 POST 요청의 일부로 제공해야 합니다. PayPal의 연결 사양 ID는 입니다 `221c7626-58f6-4eec-8ee2-042b0226f03b`.
+연결을 만들려면 [!DNL PayPal] 고유한 연결 사양 ID를 POST 요청의 일부로 제공해야 합니다. 에 대한 연결 사양 ID [!DNL PayPal] 는 `221c7626-58f6-4eec-8ee2-042b0226f03b`입니다.
 
 ```shell
 curl -X POST \
@@ -105,10 +105,10 @@ curl -X POST \
 
 | 속성 | 설명 |
 | --------- | ----------- |
-| `auth.params.host` | PayPal 인스턴스의 URL. |
-| `auth.params.clientId` | PayPal 인스턴스와 연결된 클라이언트 ID입니다. |
-| `auth.params.clientSecret` | PayPal 인스턴스와 연결된 클라이언트 암호입니다. |
-| `connectionSpec.id` | PayPal 연결 사양 ID: `221c7626-58f6-4eec-8ee2-042b0226f03b`. |
+| `auth.params.host` | 인스턴스의 [!DNL PayPal] URL. |
+| `auth.params.clientId` | 인스턴스와 연결된 클라이언트 [!DNL PayPal] ID. |
+| `auth.params.clientSecret` | 인스턴스와 연결된 클라이언트 [!DNL PayPal] 암호입니다. |
+| `connectionSpec.id` | 연결 [!DNL PayPal] 사양 ID: `221c7626-58f6-4eec-8ee2-042b0226f03b`. |
 
 **응답**
 
@@ -123,4 +123,4 @@ curl -X POST \
 
 ## 다음 단계
 
-이 튜토리얼을 따라 Flow Service API를 사용하여 PayPal 연결을 만들고 연결의 고유 ID 값을 받았습니다. 다음 자습서에서 Flow Service API를 사용하여 결제 애플리케이션을 [탐색하는 방법을 학습할 때 이 ID를 사용할 수 있습니다](../../explore/payments.md).
+이 튜토리얼을 따라 API를 사용하여 [!DNL PayPal] 연결을 만들고 연결 [!DNL Flow Service] 의 고유 ID 값을 얻게 되었습니다. 다음 자습서에서 Flow Service API를 사용하여 결제 애플리케이션을 [탐색하는 방법을 학습할 때 이 ID를 사용할 수 있습니다](../../explore/payments.md).
