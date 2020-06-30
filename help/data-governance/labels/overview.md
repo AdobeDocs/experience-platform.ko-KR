@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 데이터 사용 레이블 개요
 topic: labels
 translation-type: tm+mt
-source-git-commit: e3c69589e0d4f8224b74a663b23f67e6731ddec4
+source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
 workflow-type: tm+mt
-source-wordcount: '365'
+source-wordcount: '351'
 ht-degree: 0%
 
 ---
@@ -16,23 +16,23 @@ ht-degree: 0%
 
 데이터 사용 표시 및 실행(DULE)은 Adobe Experience Platform 데이터 거버넌스의 핵심 메커니즘입니다. DULE 기능을 사용하면 데이터 세트 및 필드에 데이터 사용 레이블을 적용하여 관련 데이터 사용 정책에 따라 각 데이터를 분류할 수 있습니다.
 
-이 문서에서는 Experience Platform의 데이터 사용 레이블(DULE 레이블이라고도 함)에 대한 개요를 제공합니다. 이 안내서를 읽기 전에 [데이터 거버넌스 개요를](../home.md) 참조하여 DULE 프레임워크에 대한 보다 강력한 소개를 확인하십시오.
+이 문서에서는 데이터 사용 레이블(DULE 레이블이라고도 함)에 대한 개요를 제공합니다 [!DNL Experience Platform]. 이 안내서를 읽기 전에 [데이터 거버넌스 개요를](../home.md) 참조하여 DULE 프레임워크에 대한 보다 강력한 소개를 확인하십시오.
 
 ## 데이터 사용 레이블 이해
 
-데이터 사용 레이블을 사용하면 해당 데이터에 적용되는 사용 정책에 따라 데이터 세트와 필드를 분류할 수 있습니다. 레이블은 언제든지 적용할 수 있으므로 데이터 관리 방식을 유연하게 선택할 수 있습니다. 모범 사례는 Experience Platform으로 인제스트되는 즉시 또는 Platform에서 데이터를 사용할 수 있게 되는 즉시 레이블 데이터를 권장합니다.
+데이터 사용 레이블을 사용하면 해당 데이터에 적용되는 사용 정책에 따라 데이터 세트와 필드를 분류할 수 있습니다. 레이블은 언제든지 적용할 수 있으므로 데이터 관리 방식을 유연하게 선택할 수 있습니다. 우수 사례는 데이터를 인제스트되는 즉시 [!DNL Experience Platform]또는 데이터를 사용할 수 있게 되는 즉시 레이블 지정 데이터를 권장합니다 [!DNL Platform].
 
 데이터 집합 수준에서 적용되는 데이터 사용 레이블은 데이터 집합 내의 모든 필드에 전파됩니다. 또한 데이터 세트에 전달하지 않고 개별 필드(열 헤더)에 직접 레이블을 적용할 수 있습니다.
 
-Experience Platform에서 사용 가능한 데이터 사용 레이블 및 해당 정책이 나타내는 사용 정책에 대한 자세한 내용은 [지원되는 데이터 사용 레이블에 대한 안내서를 참조하십시오](reference.md).
+사용 가능한 데이터 사용 레이블 및 데이터 [!DNL Experience Platform] 가 나타내는 사용 정책에 대한 자세한 내용은 [지원되는 데이터 사용 레이블에 대한 가이드를 참조하십시오](reference.md).
 
 ## 대상 세그먼트에 대한 레이블 상속
 
-Adobe Experience Platform [세그멘테이션 서비스를 통해](../../segmentation/home.md) 만들어진 모든 대상 세그먼트는 해당 데이터 세트에 대한 사용 레이블을 상속합니다. 이를 통해 Experience Platform(실시간 고객 데이터 Platform 등)을 기반으로 구축된 애플리케이션에서 세그먼트를 대상으로 활성화할 때 데이터 사용 정책 적용을 자동으로 수행할 수 있습니다.
+Adobe Experience Platform [세그멘테이션 서비스를 통해](../../segmentation/home.md) 만들어진 모든 대상 세그먼트는 해당 데이터 세트에 대한 사용 레이블을 상속합니다. 이를 통해 [!DNL Experience Platform] (예: [!DNL Real-time Customer Data Platform]) 위에 구축된 애플리케이션에서 세그먼트를 대상에 활성화할 때 데이터 사용 정책 적용을 자동으로 수행할 수 있습니다.
 
-데이터 세트 수준 레이블을 상속하는 것 외에도 세그먼트는 기본적으로 연결된 데이터 세트에서 모든 필드 수준 레이블을 상속받습니다. Platform 기반 애플리케이션에서 세그먼트를 사용하는 방법에 따라, 사용할 필드를 잠재적으로 지정하여 세그먼트가 제외된 필드에서 레이블을 상속할 수 없게 할 수 있습니다.
+데이터 세트 수준 레이블을 상속하는 것 외에도 세그먼트는 기본적으로 연결된 데이터 세트에서 모든 필드 수준 레이블을 상속받습니다. 기반 애플리케이션에서 세그먼트를 사용하는 방법에 따라, 사용할 필드를 잠재적으로 지정하여 세그먼트가 제외된 필드에서 레이블을 상속할 수 없게 할 수 있습니다. [!DNL Platform]
 
-실시간 CDP에서 자동 실행이 작동하는 방법에 대한 자세한 내용은 [실시간 CDP 데이터 거버넌스 개요를 참조하십시오](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance).
+실시간 CDP에서 자동 실행이 작동하는 방법에 대한 자세한 내용은 [Adobe 실시간 CDP 데이터 거버넌스 개요를 참조하십시오](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance).
 
 <!-- (Add after DEC mapping reference is added to AAM docs to link out to)
 ### Inheritance from Adobe Audience Manager Data Export Controls
@@ -44,4 +44,4 @@ For a reference on how specific Data Export Controls map to data usage labels in
 
 ## 다음 단계
 
-데이터 사용 레이블이 도입되었으므로 Experience Platform UI에서 레이블을 관리하는 방법을 알아보려면 [사용 안내서](user-guide.md) 읽기를 계속할 수 있습니다. API를 사용하여 레이블을 관리하는 방법에 대한 단계는 [카탈로그 서비스 개발자 안내서의 해당 섹션을 참조하십시오](../../catalog/api/labels.md).
+데이터 사용 레이블이 도입되었으므로 [사용 안내서를](user-guide.md) 참조하여 UI에서 레이블을 관리하는 방법을 계속 살펴볼 수 [!DNL Experience Platform] 있습니다. API를 사용하여 레이블을 관리하는 방법에 대한 단계는 [카탈로그 서비스 개발자 안내서의 해당 섹션을 참조하십시오](../../catalog/api/labels.md).
