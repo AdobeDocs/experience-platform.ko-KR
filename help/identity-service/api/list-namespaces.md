@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 사용 가능한 네임스페이스 목록
 topic: API guide
 translation-type: tm+mt
-source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
+source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+workflow-type: tm+mt
+source-wordcount: '68'
+ht-degree: 5%
 
 ---
 
@@ -30,9 +33,9 @@ curl -X GET \
 
 **응답**
 
-응답에는 사용 가능한 네임스페이스를 나타내는 각 개체가 포함된 개체 배열이 포함됩니다. &quot;custom&quot; 값이 &quot;false&quot;인 네임스페이스는 표준 네임스페이스이며, &quot;true&quot;의 &quot;custom&quot; 값이 &quot;true&quot;인 네임스페이스는 조직에서 만든 네임스페이스입니다.
+응답에는 사용 가능한 네임스페이스를 나타내는 각 개체가 포함된 개체 배열이 포함됩니다. &quot;[!UICONTROL false]&quot; 값이 &quot;[!UICONTROL custom]&quot;인 네임스페이스는 표준 네임스페이스이며, &quot;trueValue&quot;의 &quot;custom[!UICONTROL &quot;이 있는 네임스페이스는]조직에서 만든 네임스페이스입니다.
 
->[!NOTE] 이 응답은 공간에 대해 잘렸습니다.
+>[!NOTE] 공간이 잘렸습니다.
 
 ```json
 [
@@ -74,4 +77,4 @@ curl -X GET \
 
 ## 다음 단계
 
-다음 자습서로 진행하여 사용자 정의 네임스페이스를 [만듭니다.](./create-custom-namespace.md)
+다음 자습서로 진행하여 사용자 정의 네임스페이스 [만들기](./create-custom-namespace.md)
