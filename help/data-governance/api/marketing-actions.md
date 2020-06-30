@@ -4,20 +4,23 @@ solution: Experience Platform
 title: 마케팅 작업
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 08d02e7323f75c450e7a250835f26a569685cdd1
+source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
+workflow-type: tm+mt
+source-wordcount: '536'
+ht-degree: 1%
 
 ---
 
 
 # 마케팅 작업
 
-Adobe Experience Platform 데이터 거버넌스의 맥락에서 마케팅 작업은 경험 플랫폼 데이터 소비자가 취하는 조치이며, 데이터 사용 정책 위반을 확인해야 합니다.
+Adobe Experience Platform 데이터 거버넌스 컨텍스트에서 마케팅 작업은 [!DNL Experience Platform] 데이터 소비자가 취하는 동작으로, 데이터 사용 정책 위반을 확인해야 합니다.
 
-API에서 마케팅 작업을 사용하려면 `/marketingActions` 끝점을 사용해야 합니다.
+API에서 마케팅 작업을 사용하려면 끝점을 사용해야 `/marketingActions` 합니다.
 
 ## 모든 마케팅 작업 나열
 
-모든 마케팅 작업의 목록을 보려면 지정된 컨테이너에 대한 모든 정책을 반환하거나 `/marketingActions/core` GET 요청을 `/marketingActions/custom` 수행할 수 있습니다.
+모든 마케팅 작업 목록을 보려면 지정된 컨테이너에 대한 모든 정책을 반환하거나 GET 요청 `/marketingActions/core` 을 수행할 수 `/marketingActions/custom` 있습니다.
 
 **API 형식**
 
@@ -41,7 +44,7 @@ curl -X GET \
 
 **응답**
 
-응답 개체는 컨테이너의 총 마케팅 작업(`count`)을 제공하며 `children` 배열은 마케팅 작업에 대한 `name` 및 `href` 정보를 포함하여 각 마케팅 작업에 대한 세부 사항을 포함합니다. 이 경로(`_links.self.href`)는 데이터 사용 정책을 `marketingActionsRefs` [만들 때](policies.md#create-policy)배열을 완료하는 데 사용됩니다.
+응답 개체는 컨테이너(`count`)의 총 마케팅 작업 수를 제공하며 이 배열은 마케팅 작업 `children` 및 `name` `href` 에 대한 정보를 포함하여 각 마케팅 작업에 대한 세부 사항을 포함합니다. 이 경로(`_links.self.href`)는 데이터 사용 정책을 `marketingActionsRefs` 만들 때 [배열을 완료하는 데 사용됩니다](policies.md#create-policy).
 
 ```JSON
 {
@@ -92,9 +95,9 @@ curl -X GET \
 }
 ```
 
-## 특정 마케팅 활동 보기
+## 특정 마케팅 작업 보기
 
-특정 마케팅 작업의 세부 사항을 보기 위해 조회(GET) 요청을 수행할 수도 있습니다. 이 작업은 마케팅 `name` 작업의 기능을 사용하여 수행됩니다. 이름을 알 수 없으면 이전에 표시된 목록(GET) 요청을 사용하여 찾을 수 있습니다.
+특정 마케팅 작업의 세부 사항을 보기 위해 조회(GET) 요청을 수행할 수도 있습니다. 마케팅 작업의 `name` 기능을 사용하여 수행됩니다. 이름을 알 수 없으면 이전에 표시된 목록(GET) 요청을 사용하여 찾을 수 있습니다.
 
 **API 형식**
 
@@ -139,7 +142,7 @@ curl -X GET \
 
 ## 마케팅 작업 만들기 또는 업데이트
 
-정책 서비스 API를 사용하면 고유한 마케팅 작업을 정의하고 기존 마케팅 작업을 업데이트할 수 있습니다. 생성 및 업데이트는 모두 마케팅 작업의 이름에 PUT 작업을 사용하여 수행됩니다.
+API를 [!DNL Policy Service] 사용하면 고유한 마케팅 작업을 정의하고 기존 작업을 업데이트할 수 있습니다. 만들기 및 업데이트는 모두 마케팅 작업의 이름에 PUT 작업을 사용하여 수행됩니다.
 
 **API 형식**
 
@@ -149,9 +152,9 @@ PUT /marketingActions/custom/{marketingActionName}
 
 **요청**
 
-다음과 같은 요청에서 요청 페이로드의 `name` 내용이 API `{marketingActionName}` 호출의 요청과 동일함을 알 수 있습니다. 읽기 전용 및 시스템에서 생성된 `id` 정책의 정책과 달리 마케팅 작업을 만들려면 마케팅 작업의 _의도된_ 이름을 제공해야 합니다.
+다음과 같은 요청에서 요청 페이로드의 `name` 는 API 호출의 `{marketingActionName}` 와 동일합니다. 읽기 `id` 전용 및 시스템에서 생성된 정책의 정책과 달리 마케팅 작업을 만들려면 마케팅 작업의 _의도된_ 이름을 제공해야 합니다.
 
->[!NOTE] 호출에서 PUT을 `{marketingActionName}` 직접 수행할 수 없으므로 405 오류(메서드가 허용되지 않음)가 `/marketingActions/custom` 발생합니다. 또한 페이로드의 `name` 내용이 경로의 항목과 일치하지 `{marketingActionName}` 않으면 400 오류(잘못된 요청)가 표시됩니다.
+>[!NOTE] 호출에서 `{marketingActionName}` 를 공급하지 않으면 끝점에 직접 PUT을 수행할 수 없으므로 405 오류(메서드 허용되지 않음)가 `/marketingActions/custom` 발생합니다. 또한 페이로드 `name` 의 내용이 경로의 항목과 일치하지 `{marketingActionName}` 않으면 400 오류(잘못된 요청)가 표시됩니다.
 
 ```SHELL
 curl -X PUT \
@@ -169,7 +172,7 @@ curl -X PUT \
 
 **응답**
 
-성공적으로 만들어지면 HTTP 상태 201(작성됨)이 수신되고 새로 만든 마케팅 작업의 세부 정보가 응답 본문에 포함됩니다. 응답의 `name` 값은 요청에서 전송된 것과 일치해야 합니다.
+성공적으로 만들어지면 HTTP 상태 201(만들어짐)이 수신되고 응답 본문에 새로 만든 마케팅 작업의 세부 정보가 포함됩니다. 응답 `name` 의 값은 요청에서 보낸 것과 일치해야 합니다.
 
 ```JSON
 {
@@ -192,9 +195,9 @@ curl -X PUT \
 
 ## 마케팅 작업 삭제
 
-제거하려는 마케팅 작업에 DELETE 요청을 보내 마케팅 작업을 삭제할 `{marketingActionName}` 수 있습니다.
+제거하려는 마케팅 작업의 일부로 DELETE 요청을 보내 마케팅 작업 `{marketingActionName}` 을 삭제할 수 있습니다.
 
->[!NOTE] 기존 정책에서 참조하는 마케팅 작업은 삭제할 수 없습니다. 이렇게 하면 삭제하려는 마케팅 작업에 대한 참조가 포함된 정책(또는 정책의 여러 ID)의 `id` (또는)을 포함하는 오류 메시지와 함께 400 오류(잘못된 요청)가 발생합니다.
+>[!NOTE] 기존 정책에서 참조하는 마케팅 작업은 삭제할 수 없습니다. 그렇게 하려고 하면 삭제하려는 마케팅 작업에 대한 참조를 포함하는 정책(또는 정책)의 `id` (또는 여러 ID)이 포함된 오류 메시지와 함께 400 오류(잘못된 요청)가 발생합니다.
 
 **API 형식**
 
@@ -215,6 +218,6 @@ curl -X DELETE \
 
 **응답**
 
-마케팅 작업이 성공적으로 삭제되면 HTTP 상태 200(확인)으로 응답 본문이 비어 있게 됩니다.
+마케팅 작업을 성공적으로 삭제하면 응답 본문이 HTTP 상태 200(확인)으로 비어 있게 됩니다.
 
-마케팅 작업을 조회(GET)하여 삭제를 확인할 수 있습니다. 마케팅 작업이 제거되었기 때문에 &quot;찾을 수 없음&quot; 오류 메시지와 함께 HTTP 상태 404(찾을 수 없음)를 받아야 합니다.
+마케팅 작업을 조회(GET)하여 삭제를 확인할 수 있습니다. 마케팅 작업이 제거되었기 때문에 &quot;찾을 수 없음&quot; 오류 메시지와 함께 HTTP 상태 404(찾을 수 없음)를 받게 됩니다.
