@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Jupiter 노트북을 사용하여 레시피 만들기
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
 workflow-type: tm+mt
-source-wordcount: '2330'
+source-wordcount: '2292'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Jupiter 노트북을 사용하여 레시피 만들기
 
-이 튜토리얼은 두 개의 기본 섹션을 살펴봅니다. 먼저 JupiterLab 노트북 내에서 템플릿을 사용하여 기계 학습 모델을 만듭니다. 그런 다음 JupiterLab 내에서 레서피 워크플로우에 맞게 노트북을 실행함으로써 데이터 과학 작업 공간 내에 레서피 작업을 만들 수 있습니다.
+이 튜토리얼은 두 개의 기본 섹션을 살펴봅니다. 먼저, 안에 템플릿을 사용하여 기계 학습 모델을 만듭니다 [!DNL JupyterLab Notebook]. 그런 다음 노트북 내에서 레서피 작업 과정 [!DNL JupyterLab] 을 수행하여 레서피 내의 레서피 [!DNL Data Science Workspace]를 만듭니다.
 
 ## 개념 도입:
 
@@ -23,20 +23,20 @@ ht-degree: 0%
 - **교육:** 트레이닝은 레이블이 지정된 데이터에서 패턴과 인사이트를 배우는 프로세스입니다.
 - **점수 지정:** 채점이란 교육된 모델을 사용하여 데이터로부터 통찰력을 생성하는 프로세스입니다.
 
-## JupiterLab 노트북 환경 시작하기
+## 노트북 환경 [!DNL JupyterLab] 시작하기
 
-처음부터 만드는 방법은 데이터 과학 작업 공간에서 수행할 수 있습니다. 시작하려면 [Adobe Experience Platform](https://platform.adobe.com) 으로 이동하고 왼쪽의 **[!UICONTROL 노트북]** 탭을 클릭합니다. JupiterLab Launcher에서 Recipe Builder 템플릿을 선택하여 새 전자 필기장을 만듭니다.
+처음부터 조리법을 만드는 것은 안에서 할 수 [!DNL Data Science Workspace]있다. 시작하려면 [Adobe Experience Platform](https://platform.adobe.com) 로 이동하고 **[!UICONTROL 왼쪽에 있는 노트북]** 탭을 클릭합니다. 폴더에서 레서피 빌더 템플릿을 선택하여 새 노트를 만듭니다 [!DNL JupyterLab Launcher].
 
-Recipe Builder 전자 필기장을 사용하면 노트북 내에서 트레이닝과 점수 지정 실행을 실행할 수 있습니다. 이렇게 하면 교육 실행 및 점수 지정 데이터 간 `train()` 의 해당 방법과 `score()` 방법을 변경할 수 있습니다. 트레이닝 및 점수 출력 결과에 만족하면 Recipe Builder 노트북에 내장된 레서피 기능을 사용하여 노트북을 사용하여 데이터 과학 작업 공간에 사용할 레시피를 만들 수 있습니다.
+Recipe [!UICONTROL Builder] 전자 필기장을 사용하면 노트북 내에서 트레이닝과 점수 지정을 실행할 수 있습니다. 이렇게 하면 교육 실행 및 점수 지정 데이터 간 `train()` 의 해당 방법과 `score()` 방법을 변경할 수 있습니다. 트레이닝 및 점수 출력 결과에 만족하면 Recipe Builder 노트북에 내장된 레서피 기능을 사용하여 전자 필기장을 [!DNL Data Science Workspace] 사용하는 레시피를 만들 수 있습니다.
 
 >[!NOTE]
->Recipe Builder 전자 필기장은 모든 파일 포맷을 사용하여 작업할 수 있지만 현재 레서피 만들기 기능은 Python만 지원합니다.
+>Recipe Builder 전자 필기장은 모든 파일 포맷을 사용하여 작업할 수 있지만 현재 레서피 만들기 기능은 지원만 합니다 [!DNL Python].
 
 ![](../images/jupyterlab/create-recipe/recipe-builder.png)
 
 론쳐에서 레서피 빌더 노트북을 클릭하면 해당 노트가 탭에서 열립니다. 노트북에 사용되는 템플릿은 Python Retail Sales Forecast Recipe이며 [이 공용 저장소에서 찾을 수 있습니다](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail/)
 
-도구 모음에는 세 가지 추가 작업( **[!UICONTROL 기차]**, 점수 **** 및 레서피 **[!UICONTROL 만들기)이 있습니다]**. 이러한 아이콘은 레서피 빌더 노트북에만 나타납니다. 이러한 작업에 대한 자세한 내용은 노트북 [에서 레서피](#training-and-scoring) 작성 후 교육 및 점수 지정 섹션에서 다룹니다.
+도구 모음에는 세 가지 추가 작업( **[!UICONTROL 기차]**, 점수 **** 및 레서피 **[!UICONTROL 만들기)이 있습니다]**. 이러한 아이콘은 [!UICONTROL 레서피 빌더] 노트북에만 나타납니다. 이러한 작업에 대한 자세한 내용은 노트북 [에서 레서피](#training-and-scoring) 작성 후 교육 및 점수 지정 섹션에서 다룹니다.
 
 ![](../images/jupyterlab/create-recipe/toolbar_actions.png)
 
@@ -50,7 +50,7 @@ Recipe Builder 전자 필기장을 사용하면 노트북 내에서 트레이닝
 
 ## Recipe Builder 노트북 시작하기
 
-이제 JupiterLab 노트북 환경의 기본 사항을 알고 있으므로 머신 러닝 모델 레시피를 구성하는 파일을 살펴볼 수 있습니다. Adobe가 설명하는 파일은 다음과 같습니다.
+이제 노트북 환경의 기본 사항을 알고 있으므로 기계 학습 모델 레시피를 구성하는 파일을 볼 수 있습니다. [!DNL JupyterLab] Adobe가 설명하는 파일은 다음과 같습니다.
 
 - [요구 사항 파일](#requirements-file)
 - [구성 파일](#configuration-files)
@@ -90,7 +90,7 @@ data_access_sdk_python
 
 ![](../images/jupyterlab/create-recipe/datasets.png)
 
-동일한 정보가 [Adobe Experience Platform](https://platform.adobe.com/) 에서 스키마 **[및](https://platform.adobe.com/schema)**데이터 집합**[탭 아래에](https://platform.adobe.com/dataset/overview)** 있을 수있습니다.
+스키마 및 데이터 집합 탭 아래의 [Adobe Experience Platform에서](https://platform.adobe.com/) 동일한 **[정보](https://platform.adobe.com/schema)**를**[찾을](https://platform.adobe.com/dataset/overview)** 수있습니다.
 
 기본적으로 다음 구성 매개 변수는 데이터에 액세스할 때 설정됩니다.
 
@@ -102,24 +102,24 @@ data_access_sdk_python
 ## 교육 데이터 로더 {#training-data-loader}
 
 교육 데이터 로더의 목적은 기계 학습 모델을 만드는 데 사용되는 데이터를 인스턴스화하는 것입니다. 일반적으로 교육 데이터 로더가 수행하는 두 가지 작업이 있습니다.
-- 플랫폼에서 데이터 로드
+- 데이터 로드 위치 [!DNL Platform]
 - 데이터 준비 및 기능 엔지니어링
 
 다음 두 섹션에서는 데이터 및 데이터 준비를 자세히 설명합니다.
 
 ### 데이터 로드 중 {#loading-data}
 
-이 단계에서는 [판다 데이터 프레임을 사용합니다](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html). 플랫폼 SDK( [!DNL Adobe Experience Platform] Platform SDK)를`platform_sdk`사용하여 파일 또는 판다나 기능을 사용하는 외부 소스에서 데이터를 로드할 수 `read_csv()` `read_json()` 있습니다.
+이 단계에서는 [판다 데이터 프레임을 사용합니다](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html). SDK( [!DNL Adobe Experience Platform] SDK)를 [!DNL Platform] 사용하여 파일`platform_sdk`에서 또는 판다의 `read_csv()` 기능이나 기능을 사용하는 외부 소스에서 데이터를 로드할 수 `read_json()` 있습니다.
 
-- [플랫폼 SDK](#platform-sdk)
+- [!DNL Platform SDK](#platform-sdk)
 - [외부 소스](#external-sources)
 
 >[!NOTE]
 >레서피 빌더 노트북에서 데이터는 `platform_sdk` 데이터 로더를 통해 로드됩니다.
 
-### 플랫폼 SDK {#platform-sdk}
+### [!DNL Platform] SDK {#platform-sdk}
 
-데이터 로더 사용에 대한 자세한 자습서는 `platform_sdk` 플랫폼 SDK 가이드를 참조하십시오 [](../authoring/platform-sdk.md). 이 자습서에서는 인증 빌드, 데이터 기본 읽기 및 데이터 기본 쓰기에 대한 정보를 제공합니다.
+데이터 로더 사용에 대한 자세한 자습서는 `platform_sdk` Platform SDK 안내서를 참조하십시오 [](../authoring/platform-sdk.md). 이 자습서에서는 인증 빌드, 데이터 기본 읽기 및 데이터 기본 쓰기에 대한 정보를 제공합니다.
 
 ### 외부 소스 {#external-sources}
 
@@ -144,7 +144,7 @@ df = pd.read_json(data)
 ### 데이터 액세스 SDK에서(더 이상 사용되지 않음)
 
 >[!CAUTION]
-> `data_access_sdk_python` 는 더 이상 권장되지 않습니다. 데이터 로더 사용에 대한 [가이드는 데이터 액세스 코드를 플랫폼 SDK로](../authoring/platform-sdk.md) 변환을 `platform_sdk` 참조하십시오.
+> `data_access_sdk_python` 는 더 이상 권장되지 않습니다. 데이터 로더 사용에 대한 [가이드는 데이터 액세스 코드를 Platform SDK로](../authoring/platform-sdk.md) 변환을 `platform_sdk` 참조하십시오.
 
 사용자는 데이터 액세스 SDK를 사용하여 데이터를 로드할 수 있습니다. 다음 줄을 포함하여 페이지 맨 위에 라이브러리를 가져올 수 있습니다.
 
@@ -162,7 +162,7 @@ df = prodreader.load(data_set_id=configProperties['trainingDataSetId'],
 ```
 
 >[!NOTE]
->구성 파일 섹션에 [](#configuration-files)설명된 대로, 경험 플랫폼에서 데이터에 액세스할 때 다음 구성 매개 변수가 설정됩니다.
+>구성 [파일 섹션에](#configuration-files)[!DNL Experience Platform]설명된 대로, 다음 구성 매개 변수는
 > - `ML_FRAMEWORK_IMS_USER_CLIENT_ID`
 > - `ML_FRAMEWORK_IMS_TOKEN`
 > - `ML_FRAMEWORK_IMS_ML_TOKEN`
@@ -203,7 +203,7 @@ dataframe.drop('date', axis=1, inplace=True)
 - 차후 `weeklySales` 의 판매 가치 및 이전
 - 데이터를 날짜별로, 데이터 `train` 및 `val` 데이터 세트에 분할
 
-첫 번째, `week` 및 `year` 열이 만들어지고 원래 `date` 열이 Python 날짜/ [시간으로 변환됩니다](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.to_datetime.html). datetime 개체에서 주 및 연도 값이 추출됩니다.
+첫 번째, `week` 및 `year` 열이 만들어지고 원래 `date` 열이 datetime으로 [!DNL Python][변환됩니다](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.to_datetime.html). datetime 개체에서 주 및 연도 값이 추출됩니다.
 
 다음으로 `storeType` 세 가지 다른 스토어 유형(`A`, `B`및 `C`)을 나타내는 세 개의 열로 변환됩니다. 각에는 true인 부울 값 `storeType` 이 포함됩니다. 열이 `storeType` 삭제됩니다.
 
@@ -408,9 +408,9 @@ def evaluate(self, data=[], model={}, configProperties={}):
 
 ### 데이터 보호기 파일 {#data-saver-file}
 
-이 `datasaver.py` 파일에는 점수 지정 시 예측을 저장하는 `save()` 함수가 들어 있습니다. 이 `save()` 함수는 예측을 가져와 Experience Platform Catalog API를 사용하여 파일에 지정한 데이터 `scoringResultsDataSetId` 를 `scoring.conf` 기록합니다.
+이 `datasaver.py` 파일에는 점수 지정 시 예측을 저장하는 `save()` 함수가 들어 있습니다. 이 `save()` 함수를 사용하면 예측 및 [!DNL Experience Platform Catalog] API를 사용할 수 있으며, 데이터를 `scoringResultsDataSetId` 파일에 지정한 데이터 `scoring.conf` 에 작성할 수 있습니다.
 
-소매 판매 샘플 레서피에 사용된 예는 여기에 나와 있습니다. 라이브러리를 사용하여 플랫폼에 데이터를 `DataSetWriter` 작성할 수 있습니다.
+소매 판매 샘플 레서피에 사용된 예는 여기에 나와 있습니다. 라이브러리를 사용하여 Platform에 데이터를 `DataSetWriter` 기록합니다.
 
 ```PYTHON
 from data_access_sdk_python.writer import DataSetWriter
@@ -453,11 +453,11 @@ def save(configProperties, prediction):
 
 ![](../images/jupyterlab/create-recipe/create-recipe.png)
 
-단추를 누른 후 레서피 이름을 입력하라는 메시지가 표시됩니다. 이 이름은 플랫폼에서 만든 실제 레시피를 나타냅니다.
+단추를 누른 후 레서피 이름을 입력하라는 메시지가 표시됩니다. 이 이름은 에서 만든 실제 레시피를 나타냅니다 [!DNL Platform].
 
 ![](../images/jupyterlab/create-recipe/enter_recipe_name.png)
 
-확인 **[!UICONTROL 을]** 누르면 [Adobe Experience Platform의 새로운 레시피로 이동할 수 있습니다](https://platform.adobe.com/). 레서피 **[!UICONTROL 보기]** 단추를 클릭하여 **[!UICONTROL ML 모델 아래의]** 레서피 **[!UICONTROL 탭으로이동할 수있습니다]**
+확인 **[!UICONTROL 을]** 누르면 [Adobe Experience Platform](https://platform.adobe.com/)에서 새로운 레시피로 이동할 수 있습니다. 레서피 **[!UICONTROL 보기]** 단추를 클릭하여 **[!UICONTROL ML 모델 아래의]** 레서피 **[!UICONTROL 탭으로이동할 수있습니다]**
 
 ![](../images/jupyterlab/create-recipe/recipe_creation_started.png)
 
@@ -473,9 +473,9 @@ def save(configProperties, prediction):
 
 ## 다음 단계 {#next-steps}
 
-이 튜토리얼을 완료하여 Recipe Builder 노트북에서 기계 학습 모델을 만드는 방법을 학습했습니다. 또한 노트북 내에서 레서피 워크플로우에 노트북을 사용하여 데이터 과학 작업 공간 내에서 레서피 작업을 수행하는 방법을 알아보았습니다.
+이 튜토리얼을 완료하여 Recipe Builder 노트북에서 기계 학습 모델을 만드는 방법을 학습했습니다. 또한 노트북 내에서 레서피 워크플로우에 노트를 적용하는 방법을 학습하여 레서피 내에 레서피를 만드는 방법을 학습했습니다 [!DNL Data Science Workspace].
 
-데이터 과학 작업 공간 내에서 리소스를 사용하여 작업하는 방법을 계속 학습하려면 데이터 과학 작업 공간 레시피 및 모델 드롭다운을 방문하십시오.
+내에서 리소스를 사용하여 작업하는 방법을 계속 학습하려면 [!DNL Data Science Workspace]레서피 및 모델 드롭다운을 [!DNL Data Science Workspace] 방문하십시오.
 
 ## 추가 리소스 {#additional-resources}
 
