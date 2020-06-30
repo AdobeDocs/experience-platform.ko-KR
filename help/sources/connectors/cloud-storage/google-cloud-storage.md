@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Google 클라우드 스토리지 커넥터
 topic: overview
 translation-type: tm+mt
-source-git-commit: 0ed2ed3b08f262100746f255a78c248a1748eb5e
+source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
 workflow-type: tm+mt
-source-wordcount: '376'
+source-wordcount: '337'
 ht-degree: 0%
 
 ---
@@ -14,17 +14,17 @@ ht-degree: 0%
 
 # Google 클라우드 스토리지 커넥터
 
-Adobe Experience Platform은 AWS, Google Cloud Platform 및 Azure와 같은 클라우드 제공업체를 위한 기본 연결을 제공하므로 이러한 시스템에서 데이터를 가져올 수 있습니다.
+Adobe Experience Platform은 AWS, [!DNL Google Cloud Platform]및 [!DNL Azure]와 같은 클라우드 제공업체를 위한 기본 연결을 제공하므로 이러한 시스템에서 데이터를 가져올 수 있습니다.
 
-클라우드 스토리지 소스는 다운로드, 포맷 또는 업로드 없이도 직접 데이터를 플랫폼에 가져올 수 있습니다. 인제스트된 데이터는 XDM JSON, XDM 쪽모이 세공식 또는 구분 기호로 형식을 지정할 수 있습니다. 프로세스의 모든 단계는 소스 워크플로우에 통합됩니다. 플랫폼을 사용하면 Google Cloud Storage에서 일괄로 데이터를 가져올 수 있습니다.
+클라우드 스토리지 소스는 다운로드, 형식 지정 또는 업로드할 필요 [!DNL Platform] 없이 고유한 데이터를 가져올 수 있습니다. 인제스트된 데이터는 XDM JSON, XDM 쪽모이 세공식 또는 구분 기호로 형식을 지정할 수 있습니다. 프로세스의 모든 단계는 소스 워크플로우에 통합됩니다. [!DNL Platform] 배치에서 데이터를 가져올 수 [!DNL Google Cloud Storage] 있습니다.
 
-## Google 클라우드 스토리지 계정 연결을 위한 필수 설정
+## 계정 연결을 위한 사전 요구 사항 [!DNL Google Cloud Storage] 설정
 
-플랫폼에 연결하려면 먼저 Google 클라우드 스토리지 계정에 대한 상호 운용성을 활성화해야 합니다. 상호 운용성 설정에 액세스하려면 Google Cloud Platform을 열고 탐색 패널의 **[!UICONTROL 저장소]** 옵션 **[!UICONTROL 에서]** 설정을 선택합니다.
+연결하려면 먼저 계정 [!DNL Platform]에 대한 상호 운용성을 활성화해야 [!DNL Google Cloud Storage] 합니다. 상호 운용성 설정에 액세스하려면 탐색 패널 [!DNL Google Cloud Platform] 의 **[!UICONTROL 저장소]** 옵션 **[!UICONTROL 에서 설정]** 을열고 선택합니다.
 
 ![](../../images/tutorials/create/google-cloud-storage/nav.png)
 
-설정 **[!UICONTROL 페이지가]** 나타납니다. 여기에서 Google 프로젝트 ID와 관련된 정보와 Google 클라우드 스토리지 계정에 대한 세부 정보를 볼 수 있습니다. 상호 운용성 설정에 액세스하려면 상단 헤더에서 **[!UICONTROL 상호]** 운용성을 선택합니다.
+설정 **[!UICONTROL 페이지가]** 나타납니다. 여기에서 프로젝트 ID와 계정 세부 사항에 대한 정보를 볼 수 [!DNL Google] [!DNL Google Cloud Storage] 있습니다. 상호 운용성 설정에 액세스하려면 상단 헤더에서 **[!UICONTROL 상호]** 운용성을 선택합니다.
 
 ![](../../images/tutorials/create/google-cloud-storage/project-access.png)
 
@@ -34,13 +34,13 @@ Adobe Experience Platform은 AWS, Google Cloud Platform 및 Azure와 같은 클�
 
 ![](../../images/tutorials/create/google-cloud-storage/interoperability.png)
 
-새로 생성된 액세스 키 ID 및 비밀 액세스 키를 사용하여 Google 클라우드 스토리지 계정을 플랫폼에 연결할 수 있습니다.
+새로 생성된 액세스 키 ID와 비밀 액세스 키를 사용하여 [!DNL Google Cloud Storage] 계정을 연결할 수 있습니다 [!DNL Platform].
 
-아래 설명서에서는 API 또는 사용자 인터페이스를 사용하여 Google 클라우드 스토리지를 플랫폼에 연결하는 방법에 대한 정보를 제공합니다.
+아래 설명서에서는 API 또는 사용자 인터페이스 [!DNL Google Cloud Storage] 를 [!DNL Platform] 사용하여 연결하는 방법에 대해 설명합니다.
 
-## Google 클라우드 스토리지를 플랫폼에 연결
+## 연결 [!DNL Google Cloud Storage] 을 [!DNL Platform]
 
-아래 설명서에서는 API 또는 사용자 인터페이스를 사용하여 Google 클라우드 스토리지를 플랫폼에 연결하는 방법에 대한 정보를 제공합니다.
+아래 설명서에서는 API 또는 사용자 인터페이스 [!DNL Google Cloud Storage] 를 [!DNL Platform] 사용하여 연결하는 방법에 대해 설명합니다.
 
 ### API 사용
 
