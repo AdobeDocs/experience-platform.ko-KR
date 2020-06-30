@@ -4,30 +4,30 @@ solution: Experience Platform
 title: 데이터 사용 정책 사용 안내서
 topic: policies
 translation-type: tm+mt
-source-git-commit: c4554e3fbc0dd527606b81e2767cb5777b6e81e7
+source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
 workflow-type: tm+mt
-source-wordcount: '739'
-ht-degree: 1%
+source-wordcount: '727'
+ht-degree: 0%
 
 ---
 
 
 # 데이터 사용 정책 사용 안내서
 
-Adobe Experience Platform 데이터 거버넌스는 데이터 사용 정책을 만들고 관리할 수 있는 사용자 인터페이스를 제공합니다. 이 문서에서는 Experience Platform 사용자 인터페이스의 _정책_ 작업 영역에서 수행할 수 있는 작업에 대한 개요를 제공합니다.
+Adobe Experience Platform 데이터 거버넌스는 데이터 사용 정책을 만들고 관리할 수 있는 사용자 인터페이스를 제공합니다. 이 문서에서는 _사용자 인터페이스의 정책 작업 공간에서 수행할 수 있는 작업에_ 대한 개요를 제공합니다 [!DNL Experience Platform] .
 
 >[!IMPORTANT] 모든 데이터 사용 정책(Adobe에서 제공하는 핵심 정책 포함)은 기본적으로 비활성화됩니다. 개별 정책이 적용을 위해 고려되려면 해당 정책을 수동으로 활성화해야 합니다. UI에서 [이 작업을 수행하는 방법에 대한 단계는 정책](#enable) 활성화에 대한 섹션을 참조하십시오.
 
 ## 전제 조건
 
-이 가이드에서는 다음 Experience Platform 개념을 제대로 이해해야 합니다.
+이 안내서에서는 다음 [!DNL Experience Platform] 개념을 제대로 이해해야 합니다.
 
-- [데이터 거버넌스](../home.md)
+- [!DNL Data Governance](../home.md)
 - [데이터 사용 정책](./overview.md)
 
 ## 데이터 사용 정책 보기 {#view-policies}
 
-Experience Platform UI에서 **[!UICONTROL 정책]** 을 클릭하여 *[!UICONTROL 정책 작업]* 공간을 엽니다. 검색 **** 탭에서 관련 레이블, 마케팅 작업 및 상태를 비롯한 사용 가능한 정책 목록을 볼 수 있습니다.
+UI [!DNL Experience Platform] 에서 정책 **** 을 클릭하여 *[!UICONTROL 정책 작업 영역을]* 엽니다. 검색 **** 탭에서 관련 레이블, 마케팅 작업 및 상태를 비롯한 사용 가능한 정책 목록을 볼 수 있습니다.
 
 ![](../images/policies/browse-policies.png)
 
@@ -37,7 +37,7 @@ Experience Platform UI에서 **[!UICONTROL 정책]** 을 클릭하여 *[!UICONTR
 
 ## 사용자 지정 데이터 사용 정책 만들기 {#create-policy}
 
-새 사용자 지정 데이터 사용 정책을 만들려면 **[!UICONTROL 정책]** 작업 영역의 **[!UICONTROL 찾아보기]** 탭 오른쪽 상단에서 정책 *만들기를* 클릭합니다.
+새 사용자 지정 데이터 사용 정책을 만들려면 **[!UICONTROL 정책]** 작업 영역의 **[!UICONTROL 찾아보기]** 탭 오른쪽 상단에서 정책 *[!UICONTROL 만들기를]* 클릭합니다.
 
 ![](../images/policies/create-policy-button.png)
 
@@ -107,8 +107,8 @@ Experience Platform UI에서 **[!UICONTROL 정책]** 을 클릭하여 *[!UICONTR
 
 ## 다음 단계
 
-이 문서에서는 Experience Platform UI에서 데이터 사용 정책을 관리하는 방법에 대한 개요를 제공합니다. DULE 정책 API를 사용하여 정책을 관리하는 방법에 대한 자세한 내용은 [개발자 안내서를 참조하십시오](../api/getting-started.md). 데이터 사용 정책을 적용하는 방법에 대한 자세한 내용은 [정책 실행 개요를 참조하십시오](../enforcement/overview.md).
+이 문서에서는 [!DNL Experience Platform] UI에서 데이터 사용 정책을 관리하는 방법에 대한 개요를 제공합니다. DULE 정책 API를 사용하여 정책을 관리하는 방법에 대한 자세한 내용은 [개발자 안내서를 참조하십시오](../api/getting-started.md). 데이터 사용 정책을 적용하는 방법에 대한 자세한 내용은 [정책 실행 개요를 참조하십시오](../enforcement/overview.md).
 
-다음 비디오에서는 Experience Platform UI에서 사용 정책을 사용하는 방법에 대한 데모를 제공합니다.
+다음 비디오에서는 [!DNL Experience Platform] UI에서 사용 정책을 사용하는 방법에 대한 데모를 제공합니다.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32977?quality=12&learn=on)
