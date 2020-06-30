@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 지원되는 데이터 사용 레이블
 topic: labels
 translation-type: tm+mt
-source-git-commit: 2f8da8688897476f89ca1b176e0c988d6e79264b
+source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
 workflow-type: tm+mt
-source-wordcount: '1882'
+source-wordcount: '1878'
 ht-degree: 2%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 Adobe Experience Platform에는 데이터 사용 레이블 지정 및 실행(DULE)을 핵심 조건으로 하는 데이터 거버넌스 인프라를 포함합니다.  DULE 기능을 사용하면 데이터 세트 및 필드에 데이터 사용 레이블을 적용하여 해당 데이터에 적용되는 사용 정책 유형에 따라 데이터를 분류할 수 있습니다.
 
-이 문서에서는 Experience Platform에서 현재 지원하는 모든 데이터 사용 레이블에 대해 간략하게 설명합니다. 데이터 거버넌스 및 DULE에 대한 자세한 내용은 [데이터 거버넌스 개요를 참조하십시오](../home.md).
+이 문서에서는 현재 지원되는 모든 데이터 사용 레이블에 대해 간략하게 설명합니다 [!DNL Experience Platform]. 데이터 거버넌스 개요 [!DNL Data Governance] 에서 [및 DULE에 대한 자세한 내용을 확인할 수 있습니다](../home.md).
 
 ## 계약 레이블
 
