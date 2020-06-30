@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 데이터 사용 정책 만들기
 topic: policies
 translation-type: tm+mt
-source-git-commit: ba9d4b31cfc3b7924879a91bd125f72159e55fc4
+source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
 workflow-type: tm+mt
-source-wordcount: '1216'
+source-wordcount: '1194'
 ht-degree: 2%
 
 ---
@@ -16,22 +16,22 @@ ht-degree: 2%
 
 데이터 사용 표시 및 실행(DULE)은 Adobe Experience Platform 데이터 거버넌스의 핵심 메커니즘입니다. DULE [Policy Service API를](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) 사용하면 DULE 정책을 만들고 관리하여 특정 DULE 레이블이 포함된 데이터에 대해 수행할 수 있는 마케팅 작업을 결정할 수 있습니다.
 
-이 문서에서는 정책 서비스 API를 사용하여 DULE 정책을 만들기 위한 단계별 자습서를 제공합니다. API에서 제공되는 다양한 작업에 대한 보다 포괄적인 지침은 [정책 서비스 개발자 안내서를 참조하십시오](../api/getting-started.md).
+이 문서에서는 [!DNL Policy Service] API를 사용하여 DULE 정책을 만들기 위한 단계별 자습서를 제공합니다. API에서 제공되는 다양한 작업에 대한 보다 포괄적인 지침은 [정책 서비스 개발자 안내서를 참조하십시오](../api/getting-started.md).
 
 ## 시작하기
 
 이 자습서에서는 DULE 정책 만들기 및 평가와 관련된 다음 주요 개념을 제대로 이해해야 합니다.
 
-* [데이터 거버넌스](../home.md): Platform이 데이터 사용 규정을 적용하는 프레임워크입니다.
+* [데이터 거버넌스](../home.md): 데이터 사용 규정 준수를 [!DNL Platform] 적용하는 프레임워크입니다.
 * [데이터 사용 레이블](../labels/overview.md): 데이터 사용 레이블은 XDM 데이터 필드에 적용되어 데이터 액세스 방법에 대한 제한을 지정합니다.
-* [XDM(Experience Data Model)](../../xdm/home.md): Platform이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
-* [샌드박스](../../sandboxes/home.md): Experience Platform은 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되도록 단일 Platform 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
+* [XDM(Experience Data Model)](../../xdm/home.md): 고객 경험 데이터를 [!DNL Platform] 구성하는 표준화된 프레임워크
+* [샌드박스](../../sandboxes/home.md): [!DNL Experience Platform] 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되도록 단일 [!DNL Platform] 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
 
-이 자습서를 시작하기 전에 필수 헤더 및 예제 API 호출 읽기 방법 등 DULE Policy Service API를 성공적으로 호출하기 위해 알아야 하는 중요한 정보는 [개발자 안내서를](../api/getting-started.md) 참조하십시오.
+이 자습서를 시작하기 전에 필수 헤더 및 예제 API 호출 읽기 방법 등 DULE [API를 성공적으로 호출하기 위해 알아야 하는 중요한 정보는](../api/getting-started.md) 개발자 안내서를 [!DNL Policy Service] 참조하십시오.
 
 ## 마케팅 작업 정의 {#define-action}
 
-데이터 거버넌스 프레임워크에서 마케팅 작업은 Experience Platform 데이터 소비자가 취하는 조치로서 데이터 사용 정책 위반을 확인해야 합니다.
+이 [!DNL Data Governance] 프레임워크에서 마케팅 작업은 [!DNL Experience Platform] 데이터 소비자가 취하는 동작으로, 데이터 사용 정책 위반을 확인해야 합니다.
 
 DULE 정책을 만드는 첫 번째 단계는 정책이 평가할 마케팅 작업을 결정하는 것입니다. 다음 옵션 중 하나를 사용하여 수행할 수 있습니다.
 
@@ -44,7 +44,7 @@ DULE 정책을 만드는 첫 번째 단계는 정책이 평가할 마케팅 작�
 
 **API 형식**
 
-Experience Platform에서 제공하는 마케팅 작업 또는 조직에서 만든 사용자 지정 마케팅 작업을 조회하는지 여부에 따라 각각 `marketingActions/core` 또는 `marketingActions/custom` 끝점을 사용합니다.
+조직에서 제공하는 마케팅 작업 [!DNL Experience Platform] 또는 조직에서 만든 사용자 지정 마케팅 작업을 조회하는지 여부에 따라 각각 `marketingActions/core` 또는 `marketingActions/custom` 끝점을 사용합니다.
 
 ```http
 GET /marketingActions/core
@@ -414,6 +414,6 @@ curl -X PATCH \
 
 이 튜토리얼을 따라 마케팅 작업에 대한 데이터 사용 정책을 만들었습니다. 이제 데이터 사용 정책 [을](../enforcement/api-enforcement.md) 적용하는 튜토리얼에서 정책 위반을 확인하고 경험 애플리케이션에서 이를 처리하는 방법을 배울 수 있습니다.
 
-정책 서비스 API에서 사용 가능한 다양한 작업에 대한 자세한 내용은 [정책 서비스 개발자 안내서를 참조하십시오](../api/getting-started.md). 실시간 고객 프로필 데이터에 대한 정책을 적용하는 방법에 대한 자세한 내용은 대상 세그먼트에 대한 데이터 [사용 규정 준수를 적용하는 자습서를 참조하십시오](../../segmentation/tutorials/governance.md).
+API에서 사용 가능한 다양한 작업에 대한 자세한 내용은 [!DNL Policy Service] 정책 서비스 개발자 안내서를 참조하십시오 [](../api/getting-started.md). 데이터에 대한 정책을 적용하는 방법에 대한 자세한 내용은 대상 세그먼트에 대한 데이터 사용 규정 [!DNL Real-time Customer Profile] 준수 적용 자습서를 참조하십시오 [](../../segmentation/tutorials/governance.md).
 
-Experience Platform 사용자 인터페이스에서 사용 정책을 관리하는 방법에 대해 알아보려면 [정책 사용 안내서를 참조하십시오](user-guide.md).
+사용자 인터페이스에서 사용 정책을 관리하는 방법에 대한 자세한 내용은 [!DNL Experience Platform] 정책 사용 설명서를 참조하십시오 [](user-guide.md).
