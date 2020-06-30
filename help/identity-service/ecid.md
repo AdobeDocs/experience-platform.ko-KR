@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Adobe Experience Platform ECID
 topic: overview
 translation-type: tm+mt
-source-git-commit: 14cd3d17c7d9ba602d02925abddec9e0b246a8c8
+source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+workflow-type: tm+mt
+source-wordcount: '162'
+ht-degree: 9%
 
 ---
 
 
 # ECID 개요
 
-ECID(Experience Cloud Identifier)는 ID 관리에 대한 액세스를 제공하는 클라이언트측 모듈로, 세 가지 주요 기능을 제공합니다.
+( [!DNL Experience Cloud Identifier] ECID)는 ID 관리에 대한 액세스를 제공하는 클라이언트 측 모듈로, 세 가지 주요 기능을 제공합니다.
 
 - 각 방문자 식별
 - 파트너와 동기화 제공
@@ -25,5 +28,5 @@ ECID(Experience Cloud Identifier)는 ID 관리에 대한 액세스를 제공하�
 
 Adobe Launch를 사용하는 경우 이러한 툴을 배포하기 쉽고 [관리할 수 있습니다](https://docs.adobe.com/content/help/ko-KR/launch/using/overview.html).
 
-또한 GDPR 준수를 위해 [ECID를 사용하는 방법에 대한 자세한 내용은 개인 정보 서비스 설명서를](../privacy-service/identity-data.md) 참조하십시오.
+또한 GDPR 준수를 위한 ECID 사용에 대한 자세한 내용은 [Privacy Service 설명서를](../privacy-service/identity-data.md) 참조하십시오.
 
