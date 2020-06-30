@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 모델 최적화
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 7dc5075d3101b4780af92897c0381e73a9c5aef0
+source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
 workflow-type: tm+mt
-source-wordcount: '1242'
+source-wordcount: '1219'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Model Insights 프레임워크를 사용하여 모델 최적화
 
-Model Insights Framework는 데이터 과학자에게 실험을 기반으로 최적의 기계 학습 모델을 위한 신속하고 정확한 선택을 할 수 있는 데이터 과학 작업 공간의 툴을 제공합니다. 이 프레임워크는 머신 러닝 워크플로우의 속도와 효율성을 향상시키고 데이터 과학자의 사용 용이성을 향상시킵니다. 이 작업은 모델 조정을 지원하기 위해 각 기계 학습 알고리즘 유형에 대한 기본 템플릿을 제공하여 수행됩니다. 최종 결과를 통해 데이터 과학자와 시민 데이터 과학자는 최종 고객을 위한 보다 효과적인 모델 최적화 결정을 내릴 수 있습니다.
+Model Insights Framework는 실험을 기반으로 최적의 기계 학습 모델을 위한 신속하고 정확한 선택 [!DNL Data Science Workspace] 을 할 수 있는 도구를 데이터 과학자에게 제공합니다. 이 프레임워크는 머신 러닝 워크플로우의 속도와 효율성을 향상시키고 데이터 과학자의 사용 용이성을 향상시킵니다. 이 작업은 모델 조정을 지원하기 위해 각 기계 학습 알고리즘 유형에 대한 기본 템플릿을 제공하여 수행됩니다. 최종 결과를 통해 데이터 과학자와 시민 데이터 과학자는 최종 고객을 위한 보다 효과적인 모델 최적화 결정을 내릴 수 있습니다.
 
 ## 지표란?
 
@@ -28,7 +28,7 @@ Model Insights Framework는 데이터 과학자에게 실험을 기반으로 최
 
 현재 Model Insights Framework는 다음 런타임을 지원합니다.
 - [Scala](#scala)
-- [Python/Tensorflow](#pythontensorflow)
+- [!DNL Python/Tensorflow](#pythontensorflow)
 - [R](#r)
 
 레서피 샘플 코드는 아래의 [experience-platform-dsw-reference](https://github.com/adobe/experience-platform-dsw-reference) 저장소에서 찾을 수 있습니다 `recipes`. 이 저장소의 특정 파일은 이 자습서 전체에서 참조됩니다.
@@ -95,19 +95,19 @@ evaluation.metrics=com.adobe.platform.ml.impl.Constants.FSCORE
 evaluation.class=com.adobe.platform.ml.Evaluator
 ```
 
-데이터 과학 작업 공간에서 사용자는 실험 페이지의 &quot;평가 지표&quot; 탭에서 통찰력을 볼 수 있습니다.
+이 [!DNL Data Science Workspace]에서 사용자는 실험 페이지의 &quot;평가 지표&quot; 탭에서 통찰력을 볼 수 있습니다.
 
-### Python/Tensorflow {#pythontensorflow}
+### [!DNL Python/Tensorflow] {#pythontensorflow}
 
-현재 Python 또는 Tensorflow에 대한 기본 평가 지표가 없습니다. 따라서 Python 또는 Tensorflow에 대한 평가 지표를 얻으려면 사용자 정의 평가 지표를 만들어야 합니다. 이 작업은 클래스를 구현하여 수행할 수 `Evaluator` 있습니다.
+현재 또는 [!DNL Python] 에 대한 기본 평가 지표가 없습니다 [!DNL Tensorflow]. 따라서 [!DNL Python] 또는 [!DNL Tensorflow]에 대한 평가 지표를 얻으려면 사용자 지정 평가 지표를 만들어야 합니다. 이 작업은 클래스를 구현하여 수행할 수 `Evaluator` 있습니다.
 
-#### Python에 대한 사용자 정의 평가 지표
+#### 사용자 지정 평가 지표 [!DNL Python]
 
 사용자 지정 평가 지표의 경우 평가기에 대해 구현해야 하는 두 가지 기본 방법이 있습니다. `split()` 및 `evaluate()`.
 
-Python의 경우 이러한 메서드는 [클래스에 대해](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) eager.py `Evaluator` 로정의됩니다. 의 예를 보려면 [evaluator.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) 링크를 `Evaluator`따르십시오.
+예를 들어 [!DNL Python]이러한 메서드는 [클래스에 대한](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) evaluer.py `Evaluator` 에 정의됩니다. 의 예를 보려면 [evaluator.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) 링크를 `Evaluator`따르십시오.
 
-Python에서 평가 지표를 만들려면 사용자가 `evaluate()` 및 `split()` 메서드를 구현해야 합니다.
+에서 평가 지표를 만들려면 [!DNL Python] 사용자가 `evaluate()` 및 `split()` 메서드를 구현해야 합니다.
 
 이 `evaluate()` 메서드는 속성, 및 `name`의 지표 개체 배열을 포함하는 지표 `value`개체를 반환합니다 `valueType`.
 
@@ -117,7 +117,7 @@ Python에서 평가 지표를 만들려면 사용자가 `evaluate()` 및 `split(
 
 #### Tensorflow에 대한 사용자 정의 평가 지표
 
-텐소플로우의 경우, 파이톤과 유사한 방법 `evaluate()` 과 수업 `split()` 의 방법을 `Evaluator` 시행해야 한다. 예를 `evaluate()`들어, 기차 및 테스트 데이터 세트를 반환하면서 지표를 `split()` 반환해야 합니다.
+예를 들어 [!DNL Tensorflow]클래스 [!DNL Python]의 메서드 `evaluate()` 및 `split()` 는 구현되어야 `Evaluator` 합니다. 예를 `evaluate()`들어, 기차 및 테스트 데이터 세트를 반환하면서 지표를 `split()` 반환해야 합니다.
 
 ```PYTHON
 from ml.runtime.python.Interfaces.AbstractEvaluator import AbstractEvaluator
@@ -152,7 +152,7 @@ class Evaluator(AbstractEvaluator):
 
 ## 미리 작성된 지표 및 시각화 차트 사용
 
-Sensei Model Insights Framework는 각 유형의 기계 학습 알고리즘에 대해 하나의 기본 템플릿을 지원합니다. 아래 표는 일반적인 고급 기계 학습 알고리즘 클래스와 해당 평가 지표 및 시각화를 보여줍니다.
+이 [!DNL Sensei Model Insights Framework] 는 각 유형의 기계 학습 알고리즘에 대해 하나의 기본 템플릿을 지원합니다. 아래 표는 일반적인 고급 기계 학습 알고리즘 클래스와 해당 평가 지표 및 시각화를 보여줍니다.
 
 | ML 알고리즘 유형 | 평가 지표 | 시각화 |
 --- | --- | ---
@@ -160,7 +160,7 @@ Sensei Model Insights Framework는 각 유형의 기계 학습 알고리즘에 �
 | 이진 분류 | - 혼동 매트릭스<br>- 정밀도<br>-회수<br>- 정확도<br>- F-점수(구체적으로 F1,F2)<br>- AUC- ROC | ROC 곡선 및 혼동 매트릭스 |
 | 다중 클래스 분류 | -혼동 매트릭스 <br>- 각 클래스에 대해: <br>- 정밀도 회수 정확도 <br>- F 스코어(특히 F1, F2) | ROC 곡선 및 혼동 매트릭스 |
 | 클러스터링(기본 진실 포함) | - NMI(정상화된 상호 정보 점수), AMI(조정된 상호 정보 점수)<br>- RI(랜드 색인), ARI(조정된 랜드 인덱스)<br>- 동질점수, 완전점 및 V-measure<br>- FMI(파울크-멜로우 인덱스)<br>- 지수에서<br>- 지차르트 | 클러스터 플롯 플롯 - 클러스터 내에 있는 데이터 포인트를 반사하는 상대 클러스터 크기의 클러스터 및 중앙 ID 표시 |
-| 클러스터링(근거 없음) | - 관성<br>- 실루엣 계수<br>- CHI (Calinski-Harabaz index)<br>- DBI (Davis-Bouldin index)<br>- Dunn index | 클러스터 플롯 플롯 - 상대 클러스터 크기가 클러스터 내에 있는 데이터 포인트를 반영하도록 클러스터 및 중앙 ID 표시 |
+| 클러스터링(근거 없음) | - 관성<br>- 실루엣 계수<br>- CHI (Calinski-Harabaz index)<br>- DBI (Davis-Bouldin index)<br>- Dunn index | 클러스터 플롯 플롯 - 클러스터 내에 있는 데이터 포인트를 반사하는 상대 클러스터 크기의 클러스터 및 중앙 ID 표시 |
 | 권장 사항 | -평균 평균 정밀도(MAP) <br>표준화된 할인 누적 <br>게인 평균 상호 순위 <br>지표 K | TBD |
 | 텐서흐름 사용 사례 | 텐서흐름 모델 분석(TFMA) | 신경망 모델 비교/시각화 심층 비교 |
 | 기타/오류 캡처 메커니즘 | 모델 작성자가 정의한 사용자 지정 지표 논리(및 해당 평가 차트). 템플릿이 일치하지 않는 경우 적절한 오류 처리 | 평가 지표에 대한 키-값 쌍이 있는 표 |
