@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;developer guide;SDK;Data Access SDK;Data Science Workspace;popular topics
 solution: Experience Platform
-title: 플랫폼 SDK 안내서
+title: Platform SDK 안내서
 topic: SDK authoring
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
 workflow-type: tm+mt
-source-wordcount: '451'
+source-wordcount: '447'
 ht-degree: 1%
 
 ---
 
 
-# 플랫폼 SDK 안내서
+# [!DNL Platform] SDK 안내서
 
 이 자습서에서는 Python 및 R에서 새 Python `data_access_sdk_python` 으로 전환하는 방법에 대한 정보 `platform_sdk` 를 제공합니다. 이 자습서에서는 다음 작업에 대한 정보를 제공합니다.
 
@@ -69,7 +69,7 @@ client_context <- psdk$client_context$ClientContext(api_key={API_KEY},
 
 ## 데이터 기본 읽기 {#basic-reading-of-data}
 
-새로운 플랫폼 SDK를 사용하면 최대 읽기 크기는 32GB이며 최대 읽기 시간은 10분입니다.
+새로운 [!DNL Platform] SDK에서 최대 읽기 크기는 32GB이며 최대 읽기 시간은 10분입니다.
 
 읽기 시간이 너무 오래 걸리는 경우 다음 필터링 옵션 중 하나를 사용할 수 있습니다.
 
@@ -144,7 +144,7 @@ df2 <- dataset_reader$where(
 df2
 ```
 
-새 플랫폼 SDK는 다음 작업을 지원합니다.
+새 [!DNL Platform] SDK는 다음 작업을 지원합니다.
 
 | 작업 | 함수 |
 | --------- | -------- |
@@ -217,4 +217,4 @@ write_tracker <- dataset_writer$write({PANDA_DATAFRAME}, file_format='json')
 
 ## 다음 단계
 
-데이터 로더를 구성하면 데이터가 준비를 거쳐 `platform_sdk` 및 `train` `val` 데이터 세트로 분할됩니다. 데이터 준비 및 기능 엔지니어링에 대한 자세한 내용은 JupiterLab 노트북을 사용한 레서피 작성을 위한 자습서의 [데이터 준비 및 기능 엔지니어링](../jupyterlab/create-a-recipe.md#data-preparation-and-feature-engineering) 관련 섹션을 참조하십시오.
+데이터 로더를 구성하면 데이터가 준비를 거쳐 `platform_sdk` 및 `train` `val` 데이터 세트로 분할됩니다. 데이터 준비 및 기능 엔지니어링에 대한 자세한 내용은 [노트북 사용 레서피 만들기 튜토리얼에서](../jupyterlab/create-a-recipe.md#data-preparation-and-feature-engineering) 데이터 준비 및 기능 엔지니어링 [!DNL JupyterLab] 관련 섹션을 참조하십시오.
