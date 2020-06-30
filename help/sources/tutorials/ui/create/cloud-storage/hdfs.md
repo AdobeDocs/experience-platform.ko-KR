@@ -4,20 +4,20 @@ solution: Experience Platform
 title: UI에서 Apache HDFS 소스 커넥터 만들기
 topic: overview
 translation-type: tm+mt
-source-git-commit: 855f543a1cef394d121502f03471a60b97eae256
+source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
 workflow-type: tm+mt
-source-wordcount: '490'
+source-wordcount: '483'
 ht-degree: 1%
 
 ---
 
 
-# UI에서 Apache HDFS 소스 커넥터 만들기
+# UI에서 [!DNL Apache] HDFS 소스 커넥터 만들기
 
 >[!NOTE]
->Apache HDFS 커넥터가 베타 버전입니다. 베타 [레이블이 지정된 커넥터 사용에 대한 자세한 내용은 소스 개요를](../../../../home.md#terms-and-conditions) 참조하십시오.
+>HDFS [!DNL Apache] 커넥터가 베타 버전입니다. 베타 [레이블이 지정된 커넥터 사용에 대한 자세한 내용은 소스 개요를](../../../../home.md#terms-and-conditions) 참조하십시오.
 
-의 소스 커넥터는 [!DNL Adobe Experience Platform] 외부에서 가져온 데이터를 예약된 기준으로 인제스트하는 기능을 제공합니다. 이 자습서에서는 [!DNL Platform] 사용자 인터페이스를 사용하여 Apache Hadoop 분산 파일 시스템(이하 &quot;HDFS&quot;) 소스 커넥터를 인증하는 단계를 제공합니다.
+의 소스 커넥터는 [!DNL Adobe Experience Platform] 외부에서 가져온 데이터를 예약된 기준으로 인제스트하는 기능을 제공합니다. 이 자습서에서는 [!DNL Apache Hadoop Distributed File System] 사용자 인터페이스를 사용하여 소스 커넥터 [!DNL Platform] (이하 &quot;HDFS&quot;라 한다)를 인증하는 단계를 제공합니다.
 
 ## 시작하기
 
