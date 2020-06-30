@@ -4,9 +4,9 @@ solution: Adobe Experience Platform Data Science Workspace
 title: 피쳐 파이프라인 만들기
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 20e26c874204da75cac7e8d001770702658053f1
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
 workflow-type: tm+mt
-source-wordcount: '1380'
+source-wordcount: '1367'
 ht-degree: 0%
 
 ---
@@ -387,7 +387,7 @@ scoring.dataSaver: MyDatasetSaver
 
 ## API를 사용하여 피쳐 파이프라인 엔진 생성 {#create-feature-pipeline-engine-api}
 
-이제 기능 파이프라인을 작성했으므로 Sensei Machine Learning API의 기능 파이프라인 끝점에 대한 호출을 하려면 Docker 이미지를 만들어야 합니다. 피쳐 파이프라인 끝점에 대한 호출을 하려면 Docker 이미지 URL이 필요합니다.
+이제 피쳐 파이프라인을 작성했으므로 API의 피쳐 파이프라인 끝점에 대한 호출을 하려면 Docker 이미지를 만들어야 [!DNL Sensei Machine Learning] 합니다. 피쳐 파이프라인 끝점에 대한 호출을 하려면 Docker 이미지 URL이 필요합니다.
 
 >[!TIP]
 >Docker URL이 없는 경우 [패키지 소스 파일을 레시피](../models-recipes/package-source-files-recipe.md) 자습서로 이동하여 Docker 호스트 URL을 만드는 단계별 연습을 참조하십시오.
@@ -398,7 +398,7 @@ https://www.getpostman.com/collections/c5fc0d1d5805a5ddd41a
 
 ### 피쳐 파이프라인 엔진 생성 {#create-engine-api}
 
-Docker 이미지 위치가 지정되면 POST를 수행하여 Sensei Machine Learning API를 사용하여 [기능 파이프라인](../api/engines.md#feature-pipeline-docker) 엔진을 만들 수 `/engines`있습니다. 피쳐 파이프라인 엔진을 성공적으로 생성하면 엔진 고유 식별자(`id`)가 제공됩니다. 계속하기 전에 이 값을 저장해야 합니다.
+Docker 이미지 위치가 지정되면 POST를 수행하여 [API를 사용하여 피쳐 파이프라인 엔진을](../api/engines.md#feature-pipeline-docker) 만들 수 [!DNL Sensei Machine Learning] `/engines`있습니다. 피쳐 파이프라인 엔진을 성공적으로 생성하면 엔진 고유 식별자(`id`)가 제공됩니다. 계속하기 전에 이 값을 저장해야 합니다.
 
 ### MLInestment 만들기 {#create-mlinstance}
 
@@ -435,4 +435,4 @@ Docker 이미지 위치가 지정되면 POST를 수행하여 Sensei Machine Lear
 
 [//]: # (Next steps section should refer to tutorials on how to score data using the feature pipeline Engine. Update this document once those tutorials are available)
 
-이 문서를 읽음으로써 모델 작성 SDK를 사용하여 기능 파이프라인을 작성하고 Docker 이미지를 만든 다음 Sensei Machine Learning API를 사용하여 Docker 이미지 URL을 사용하여 기능 파이프라인 모델을 만들었습니다. 이제 Sensei Machine Learning API를 사용하여 데이터 세트를 계속 변환하고 데이터 기능을 [추출할 수 있습니다](../api/getting-started.md).
+이 문서를 읽음으로써 모델 작성 SDK를 사용하여 피쳐 파이프라인을 만들고, Docker 이미지를 만들고, Docker 이미지 URL을 사용하여 [!DNL Sensei Machine Learning] API를 사용하여 피쳐 파이프라인 모델을 생성합니다. 이제 데이터 세트를 계속 변환하고 데이터 기능을 확장할 준비가 되었습니다 [!DNL Sensei Machine Learning API](../api/getting-started.md).
