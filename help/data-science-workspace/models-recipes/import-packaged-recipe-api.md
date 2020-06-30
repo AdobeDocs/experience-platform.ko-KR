@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 패키지된 레서피(API) 가져오기
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 20e26c874204da75cac7e8d001770702658053f1
+source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
 workflow-type: tm+mt
-source-wordcount: '976'
+source-wordcount: '955'
 ht-degree: 2%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 2%
 
 # 패키지된 레서피(API) 가져오기
 
-이 자습서는 [Sensei 기계 학습 API를](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) 사용하여 [엔진](../api/engines.md)(사용자 인터페이스의 레서피)을 만듭니다.
+이 자습서는 사용자 인터페이스 [!DNL Sensei Machine Learning API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) 에서 [레서피](../api/engines.md)(Recipe)라고도 하는 엔진을 만드는 데 사용됩니다.
 
-시작하기 전에 Adobe Experience Platform 데이터 과학 작업 공간에서는 API와 UI 내의 유사한 요소를 참조하는 서로 다른 용어를 사용해야 합니다. API 용어는 이 자습서 전체에서 사용되며 다음 표에서는 상관 관계 용어의 개요를 설명합니다.
+시작하기 전에 Adobe Experience Platform은 API와 UI 내의 유사한 요소를 참조하는 서로 다른 용어를 [!DNL Data Science Workspace] 사용한다는 점에 유의해야 합니다. API 용어는 이 자습서 전체에서 사용되며 다음 표에서는 상관 관계 용어의 개요를 설명합니다.
 
 | UI 용어 | API 용어 |
 | ---- | ---- |
@@ -25,7 +25,7 @@ ht-degree: 2%
 | 트레이닝 및 평가 | [실험](../api/experiments.md) |
 | 서비스 | [MLService](../api/mlservices.md) |
 
-엔진은 특정 문제를 해결하기 위한 기계 학습 알고리즘과 논리를 포함합니다. 아래 다이어그램에서는 데이터 과학 작업 공간의 API 작업 과정을 보여주는 시각화를 제공합니다. 이 자습서에서는 기계 학습 모델의 두뇌인 엔진을 만드는 데 중점을 둡니다.
+엔진은 특정 문제를 해결하기 위한 기계 학습 알고리즘과 논리를 포함합니다. 아래 다이어그램에서는 API 작업 과정을 보여주는 시각화를 제공합니다 [!DNL Data Science Workspace]. 이 자습서에서는 기계 학습 모델의 두뇌인 엔진을 만드는 데 중점을 둡니다.
 
 ![](../images/models-recipes/import-package-api/engine_hierarchy_api.png)
 
@@ -35,7 +35,7 @@ ht-degree: 2%
 
 - `{DOCKER_URL}`: 지능형 서비스의 Docker 이미지에 대한 URL 주소입니다.
 
-이 자습서에서는 Platform API를 성공적으로 호출하려면 Adobe Experience Platform [에 대한 인증 자습서를](../../tutorials/authentication.md) 완료해야 합니다. 인증 자습서를 완료하면 아래와 같이 모든 Experience Platform API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
+이 자습서에서는 API를 성공적으로 호출하려면 Adobe Experience Platform [에 대한 인증 자습서를](../../tutorials/authentication.md) 완료해야 [!DNL Platform] 합니다. 인증 자습서를 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
 
 - `{ACCESS_TOKEN}`: 인증 후 제공된 특정 베어러 토큰 값.
 - `{IMS_ORG}`: 고유한 Adobe Experience Platform 통합에서 IMS 조직 자격 증명을 찾았습니다.
@@ -50,7 +50,7 @@ ht-degree: 2%
 Docker 컨테이너에 저장된 패키징 레서피 파일이 있는 엔진을 만들려면 패키지된 레서피 파일에 Docker URL을 제공해야 합니다.
 
 >[!CAUTION]
-> Python 또는 R을 사용하는 경우 아래 요청을 사용하십시오. PySpark 또는 Scala를 사용하는 경우 Python/R 예제 아래에 있는 PySpark/Scala 요청 예제를 사용하십시오.
+> 아래 요청을 사용 [!DNL Python] 또는 R하는 경우 PySpark 또는 Scala를 사용하는 경우 Python/R 예제 아래에 있는 PySpark/Scala 요청 예제를 사용하십시오.
 
 **API 형식**
 
@@ -86,8 +86,8 @@ curl -X POST \
 
 | 속성 | 설명 |
 | -------  | ----------- |
-| `engine.name` | 엔진에 대해 원하는 이름입니다. 이 엔진에 해당하는 레시피는 이 값을 상속하여 Data Science Workspace 사용자 인터페이스에 레서피 이름으로 표시됩니다. |
-| `engine.description` | 엔진에 대한 선택적 설명입니다. 이 엔진에 해당하는 레시피는 이 값을 상속하여 레서피 설명으로 데이터 과학 작업 공간 사용자 인터페이스에 표시됩니다. 이 속성을 제거하지 마십시오. 설명을 제공하지 않기로 선택하면 이 값이 빈 문자열이 되도록 하십시오. |
+| `engine.name` | 엔진에 대해 원하는 이름입니다. 이 엔진에 해당하는 레시피는 이 값을 상속하여 레서피 이름으로 [!DNL Data Science Workspace] 사용자 인터페이스에 표시됩니다. |
+| `engine.description` | 엔진에 대한 선택적 설명입니다. 이 엔진에 해당하는 레시피는 이 값을 상속하여 레서피 설명으로 [!DNL Data Science Workspace] 사용자 인터페이스에 표시됩니다. 이 속성을 제거하지 마십시오. 설명을 제공하지 않기로 선택하면 이 값이 빈 문자열이 되도록 하십시오. |
 | `engine.type` | 엔진의 실행 유형입니다. 이 값은 Docker 이미지가 개발되는 언어에 해당합니다. 엔진을 만들기 위해 Docker URL을 제공하는 경우, `type` 는 `Python`, `R``PySpark`, `Spark` (Scala) `Tensorflow`또는입니다. |
 | `artifacts.default.image.location` | 여기 `{DOCKER_URL}` 가세요 전체 문서 URL의 구조는 다음과 같습니다. `your_docker_host.azurecr.io/docker_image_file:version` |
 | `artifacts.default.image.name` | Docker 이미지 파일의 추가 이름입니다. 이 속성을 제거하지 마십시오. 추가 Docker 이미지 파일 이름을 제공하지 않기로 선택하면 이 값이 빈 문자열이 되도록 하십시오. |
@@ -169,7 +169,7 @@ curl -X POST \
 
 **응답**
 
-성공적인 응답은 고유 식별자(`id`)를 포함하여 새로 만든 엔진의 세부 정보를 포함하는 페이로드를 반환합니다. 다음 예제 응답은 Python 엔진에 대한 것입니다. 제공된 POST를 기준으로 `executionType` 및 `type` 키가 변경됩니다.
+성공적인 응답은 고유 식별자(`id`)를 포함하여 새로 만든 엔진의 세부 정보를 포함하는 페이로드를 반환합니다. 다음 예제 응답은 [!DNL Python] 엔진용입니다. 제공된 POST를 기준으로 `executionType` 및 `type` 키가 변경됩니다.
 
 ```json
 {
