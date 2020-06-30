@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 데이터 과학 작업 공간 자습서
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 4d7d61660e6691d77701db1c089b84eee7f60974
+source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
 workflow-type: tm+mt
-source-wordcount: '1253'
+source-wordcount: '1252'
 ht-degree: 0%
 
 ---
@@ -137,7 +137,7 @@ Adobe Experience Platform을 사용하면 Sensei Machine Learning Framework 런�
 
 ## 실시간 머신 러닝 애플리케이션 구축(알파)
 
-허브와 에지(Edge) 모두에서 매끄러운 계산으로 인해 관련이 있고 응답성이 높은 고도로 개인화된 경험을 제공하기 위해 전통적으로 관련된 지연이 크게 줄어듭니다. 따라서 실시간 머신 러닝은 동기적 의사 결정을 위한 매우 낮은 지연율을 제공합니다. 예를 들어 맞춤형 웹 페이지 컨텐츠 렌더링, 제안 표시, 이탈률 감소 및 웹 스토어의 구매 전환율 증가를 위한 할인 등이 있습니다.
+허브와 허브에서 매끄러운 계산을 함께 사용하면 일반적으로 적절하고 응답성이 높은 고도로 개인화된 경험을 구현하는데 관련된 지연을 크게 줄일 수 있습니다. [!DNL Edge] 따라서 실시간 머신 러닝은 동기적 의사 결정을 위한 매우 낮은 지연율을 제공합니다. 예를 들어 맞춤형 웹 페이지 컨텐츠 렌더링, 제안 표시, 이탈률 감소 및 웹 스토어의 구매 전환율 증가를 위한 할인 등이 있습니다.
 
 **이 가이드는 다음과 같은 도움을 줍니다.**
 - 실시간 머신 러닝 아키텍처를 파악합니다.
