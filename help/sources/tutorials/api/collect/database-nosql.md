@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 소스 커넥터 및 API를 통해 타사 데이터베이스의 데이터 수집
 topic: overview
 translation-type: tm+mt
-source-git-commit: 4a831a0e72ac614bb4646ea3aa5f511984e5aa07
+source-git-commit: 84ea3e45a3db749359f3ce4a0ea25429eee8bb66
 workflow-type: tm+mt
-source-wordcount: '1607'
+source-wordcount: '1522'
 ht-degree: 1%
 
 ---
@@ -14,38 +14,38 @@ ht-degree: 1%
 
 # 소스 커넥터 및 API를 통해 타사 데이터베이스의 데이터 수집
 
-Flow Service는 Adobe Experience Platform에서 다양한 소스의 고객 데이터를 수집하고 중앙에서 관리하는 데 사용됩니다. 이 서비스는 지원되는 모든 소스가 연결되어 있는 사용자 인터페이스와 RESTful API를 제공합니다.
+[!DNL Flow Service] 는 Adobe Experience Platform 내의 다양한 소스에서 수집된 고객 데이터를 수집하고 중앙 집중화하는 데 사용됩니다. 이 서비스는 지원되는 모든 소스가 연결되어 있는 사용자 인터페이스와 RESTful API를 제공합니다.
 
-이 자습서에서는 소스 커넥터 및 API를 통해 타사 데이터베이스에서 데이터를 검색하고 이를 플랫폼으로 인제스트하는 단계를 다룹니다.
+이 자습서에서는 타사 데이터베이스에서 데이터를 검색하고 소스 커넥터 및 API를 통해 데이터를 인제스트하는 절차 [!DNL Platform] 에 대해 설명합니다.
 
 ## 시작하기
 
-이 자습서에서는 플랫폼에 가져올 파일(파일의 경로 및 구조 포함)에 대한 정보는 물론 타사 데이터베이스에 대한 유효한 연결이 필요합니다. 이 정보가 없는 경우 이 자습서를 시작하기 전에 Flow Service API를 [사용하여 데이터베이스를 탐색하는](../explore/database-nosql.md) 자습서를 참조하십시오.
+이 자습서에서는 가져올 파일(파일의 경로 및 구조 포함)에 대한 정보는 물론 타사 데이터베이스에 대한 유효한 연결 [!DNL Platform] 을 필요로 합니다. 이 정보가 없는 경우 이 자습서를 시작하기 전에 Flow Service API를 [사용하여 데이터베이스를 탐색하는](../explore/database-nosql.md) 자습서를 참조하십시오.
 
-또한 이 튜토리얼을 사용하려면 Adobe Experience Platform의 다음 구성 요소에 대해 제대로 이해해야 합니다.
+또한 이 자습서에서는 다음과 같은 Adobe Experience Platform 구성 요소에 대해 작업해야 합니다.
 
-* [XDM(Experience Data Model) 시스템](../../../../xdm/home.md): 고객 경험 데이터를 구성하는 표준 프레임워크
+* [XDM(Experience Data Model) 시스템](../../../../xdm/home.md): 고객 경험 데이터를 [!DNL Experience Platform] 구성하는 표준화된 프레임워크
    * [스키마 컴포지션의 기본 사항](../../../../xdm/schema/composition.md): 스키마 컴포지션의 주요 원칙 및 모범 사례 등 XDM 스키마의 기본 구성 요소에 대해 알아봅니다.
    * [스키마 레지스트리 개발자 가이드](../../../../xdm/api/getting-started.md): 스키마 레지스트리 API에 대한 호출을 성공적으로 수행하기 위해 알아야 하는 중요한 정보를 포함합니다. 여기에는 사용자 `{TENANT_ID}`, &quot;컨테이너&quot;의 개념 및 요청 시 필요한 헤더가 포함됩니다(수락 헤더와 가능한 값에 특별히 주의).
-* [카탈로그 서비스](../../../../catalog/home.md): Catalog는 Experience Platform 내의 데이터 위치 및 계열에 대한 기록 시스템입니다.
-* [일괄 처리](../../../../ingestion/batch-ingestion/overview.md): 일괄 처리 통합 API를 사용하면 데이터를 일괄 처리 파일로 경험 플랫폼에 인제스트할 수 있습니다.
-* [샌드박스](../../../../sandboxes/home.md): 경험 플랫폼은 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되도록 단일 플랫폼 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
+* [카탈로그 서비스](../../../../catalog/home.md): 카탈로그는 내부 데이터 위치 및 계열에 대한 기록 시스템이다 [!DNL Experience Platform].
+* [일괄 처리](../../../../ingestion/batch-ingestion/overview.md): 일괄 처리 통합 API를 사용하면 데이터를 일괄 처리 파일 [!DNL Experience Platform] 로 인제스트할 수 있습니다.
+* [샌드박스](../../../../sandboxes/home.md): [!DNL Experience Platform] 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되도록 단일 [!DNL Platform] 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
 
 다음 섹션에서는 Flow Service API를 사용하여 데이터베이스 또는 NoSQL 시스템에 성공적으로 연결하기 위해 알아야 하는 추가 정보를 제공합니다.
 
 ### 샘플 API 호출 읽기
 
-이 자습서에서는 요청의 서식을 지정하는 방법을 보여주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 올바른 형식의 요청 페이로드가 포함됩니다. API 응답으로 반환된 샘플 JSON도 제공됩니다. 샘플 API 호출에 대한 설명서에 사용된 규칙에 대한 자세한 내용은 경험 플랫폼 문제 해결 안내서에서 예제 API 호출 [](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) 읽기를 참조하십시오.
+이 자습서에서는 요청의 서식을 지정하는 방법을 보여주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 올바른 형식의 요청 페이로드가 포함됩니다. API 응답으로 반환된 샘플 JSON도 제공됩니다. 샘플 API 호출 설명서에 사용된 규칙에 대한 자세한 내용은 문제 해결 안내서의 예제 API 호출 [을 읽는](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) 방법에 대한 섹션을 [!DNL Experience Platform] 참조하십시오.
 
 ### 필수 헤더에 대한 값 수집
 
-플랫폼 API를 호출하려면 먼저 [인증 자습서를 완료해야 합니다](../../../../tutorials/authentication.md). 인증 자습서를 완료하면 아래와 같이 모든 경험 플랫폼 API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
+API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 합니다](../../../../tutorials/authentication.md). 인증 자습서를 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
 
 * 인증: 무기명 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Flow Service에 속하는 리소스를 비롯하여 경험 플랫폼의 모든 리소스는 특정 가상 샌드박스와 분리됩니다. 플랫폼 API에 대한 모든 요청에는 작업이 수행할 샌드박스의 이름을 지정하는 헤더가 필요합니다.
+에 속하는 리소스를 [!DNL Experience Platform]포함한 모든 리소스 [!DNL Flow Service]는 특정 가상 샌드박스와 분리됩니다. API에 대한 모든 [!DNL Platform] 요청에는 작업이 수행할 샌드박스의 이름을 지정하는 헤더가 필요합니다.
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -55,7 +55,7 @@ Flow Service에 속하는 리소스를 비롯하여 경험 플랫폼의 모든 �
 
 ## 임시 XDM 클래스 및 스키마 만들기
 
-소스 커넥터를 통해 외부 데이터를 플랫폼으로 가져오려면 원시 소스 데이터에 대해 임시 XDM 클래스 및 스키마를 만들어야 합니다.
+소스 커넥터를 [!DNL Platform] 통해 외부 데이터를 가져오려면 원시 소스 데이터에 대해 임시 XDM 클래스 및 스키마를 만들어야 합니다.
 
 애드혹 클래스 및 스키마를 만들려면 [애드혹 스키마 자습서에 설명된 단계를 따릅니다](../../../../xdm/tutorials/ad-hoc.md). 애드혹 클래스를 만들 때 소스 데이터에 있는 모든 필드는 요청 본문 내에 설명되어야 합니다.
 
@@ -63,7 +63,7 @@ Flow Service에 속하는 리소스를 비롯하여 경험 플랫폼의 모든 �
 
 ## 소스 연결 만들기 {#source}
 
-임시 XDM 스키마를 만든 경우 이제 Flow Service API에 대한 POST 요청을 사용하여 소스 연결을 만들 수 있습니다. 소스 연결은 기본 연결, 소스 데이터 파일 및 소스 데이터를 설명하는 스키마에 대한 참조로 구성됩니다.
+임시 XDM 스키마를 만든 경우 이제 API에 대한 POST 요청을 사용하여 소스 연결을 만들 수 [!DNL Flow Service] 있습니다. 소스 연결은 기본 연결, 소스 데이터 파일 및 소스 데이터를 설명하는 스키마에 대한 참조로 구성됩니다.
 
 **API 형식**
 
@@ -122,9 +122,9 @@ curl -X POST \
 
 ## 대상 XDM 스키마 만들기 {#target}
 
-이전 단계에서는 소스 데이터를 구조화하기 위해 임시 XDM 스키마를 만들었습니다. 소스 데이터를 플랫폼에서 사용하려면 필요에 따라 소스 데이터를 구조화하기 위해 대상 스키마를 만들어야 합니다. 그런 다음 대상 스키마를 사용하여 소스 데이터가 포함된 플랫폼 데이터 세트를 만듭니다. 이 대상 XDM 스키마는 XDM 개별 프로필 클래스도 확장합니다.
+이전 단계에서는 소스 데이터를 구조화하기 위해 임시 XDM 스키마를 만들었습니다. 소스 데이터를 사용하려면 필요에 따라 소스 데이터 [!DNL Platform]를 구조화하기 위해 대상 스키마를 만들어야 합니다. 그런 다음 대상 스키마를 사용하여 소스 데이터가 포함된 [!DNL Platform] 데이터 세트를 만듭니다. 이 대상 XDM 스키마도 [!DNL XDM Individual Profile] 클래스를 확장합니다.
 
-대상 XDM 스키마는 스키마 레지스트리 API에 대한 POST 요청을 수행하여 [만들 수 있습니다](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). 경험 플랫폼에서 사용자 인터페이스를 사용하려는 경우 스키마 편집기 자습서 [](../../../../xdm/tutorials/create-schema-ui.md) 는 스키마 편집기에서 유사한 작업을 수행하기 위한 단계별 지침을 제공합니다.
+대상 XDM 스키마는 스키마 레지스트리 API에 대한 POST 요청을 수행하여 [만들 수 있습니다](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). 사용자 인터페이스를 에서 사용하려는 경우 스키마 편집기 자습서 [!DNL Experience Platform]는 스키마 편집기에서 유사한 작업 [](../../../../xdm/tutorials/create-schema-ui.md) 을 수행하기 위한 단계별 지침을 제공합니다.
 
 **API 형식**
 
@@ -134,7 +134,7 @@ POST /tenant/schemas
 
 **요청**
 
-다음 예제 요청에서는 XDM 개별 프로필 클래스를 확장하는 XDM 스키마를 만듭니다.
+다음 예제 요청에서는 XDM 클래스를 확장하는 XDM 스키마를 [!DNL Individual Profile] 만듭니다.
 
 ```shell
 curl -X POST \
@@ -269,7 +269,7 @@ curl -X POST \
 
 ## 데이터 집합 기본 연결 만들기
 
-외부 데이터를 플랫폼에 인제스트하려면 먼저 경험 플랫폼 데이터 세트 기본 연결을 확보해야 합니다.
+외부 데이터를 인제스트하려면 데이터 세트 [!DNL Platform]기본 [!DNL Experience Platform] 연결을 먼저 가져와야 합니다.
 
 데이터 집합 기본 연결을 만들려면 데이터 집합 [기본 연결 자습서에 설명된 단계를 따릅니다](../create-dataset-base-connection.md).
 
@@ -277,7 +277,7 @@ curl -X POST \
 
 ## 대상 연결 만들기
 
-이제 데이터 집합 기본 연결, 대상 스키마 및 대상 데이터 집합에 대한 고유한 식별자가 있습니다. 이러한 식별자를 사용하여 Flow Service API를 사용하여 대상 연결을 만들어 인바운드 소스 데이터를 포함할 데이터 세트를 지정할 수 있습니다.
+이제 데이터 집합 기본 연결, 대상 스키마 및 대상 데이터 집합에 대한 고유한 식별자가 있습니다. 이러한 식별자를 사용하여 [!DNL Flow Service] API를 사용하여 대상 연결을 만들어 인바운드 소스 데이터를 포함할 데이터 세트를 지정할 수 있습니다.
 
 **API 형식**
 
@@ -338,7 +338,7 @@ curl -X POST \
 
 ## 매핑 만들기 {#mapping}
 
-소스 데이터를 대상 데이터 세트에 수집하려면 먼저 대상 데이터 세트가 준수하는 대상 스키마에 매핑해야 합니다. 이것은 요청 페이로드 내에 정의된 데이터 매핑이 있는 전환 서비스 API에 대한 POST 요청을 수행하여 얻습니다.
+소스 데이터를 대상 데이터 세트에 수집하려면 먼저 대상 데이터 세트가 준수하는 대상 스키마에 매핑해야 합니다. 이것은 요청 페이로드 내에 정의된 데이터 매핑이 있는 API에 대한 [!DNL Conversion Service] POST 요청을 수행하여 얻습니다.
 
 **API 형식**
 
@@ -468,7 +468,7 @@ curl -X POST \
 
 ## 데이터 흐름 사양 검색 {#specs}
 
-데이터 프롤은 소스에서 데이터를 수집하여 플랫폼으로 가져와야 합니다. 데이터 흐름을 만들려면 먼저 Flow Service API에 대한 GET 요청을 수행하여 데이터 흐름 사양을 얻어야 합니다. 데이터 흐름 사양은 외부 데이터베이스 또는 NoSQL 시스템에서 데이터를 수집하는 책임을 집니다.
+데이터 프롤은 소스에서 데이터를 수집하여 데이터 센터로 가져옵니다 [!DNL Platform]. 데이터 흐름을 만들려면 먼저 API에 대한 GET 요청을 수행하여 데이터 흐름 사양을 [!DNL Flow Service] 얻어야 합니다. 데이터 흐름 사양은 외부 데이터베이스 또는 NoSQL 시스템에서 데이터를 수집하는 책임을 집니다.
 
 **API 형식**
 
@@ -488,7 +488,7 @@ curl -X GET \
 
 **응답**
 
-성공적인 응답으로 데이터베이스 또는 NoSQL 시스템에서 Platform으로 데이터를 가져오는 작업을 담당하는 데이터 흐름 세부 항목의 세부 정보를 반환합니다. 이 ID는 새 데이터 흐름을 만들려면 다음 단계에서 필요합니다.
+성공적인 응답으로 데이터베이스 또는 NoSQL 시스템에서 데이터를 가져오는 작업을 담당하는 데이터 흐름 세부 항목의 세부 정보를 반환합니다 [!DNL Platform]. 이 ID는 새 데이터 흐름을 만들려면 다음 단계에서 필요합니다.
 
 ```json
 {
@@ -615,7 +615,7 @@ curl -X GET \
 데이터 수집을 위한 마지막 단계는 데이터 흐름을 만드는 것입니다. 이때 다음 필수 값이 준비되어야 합니다.
 
 * [원본 연결 ID](#source)
-* [대상 연결 ID](#target)
+* [Target 연결 ID](#target)
 * [매핑 ID](#mapping)
 * [데이터 흐름 사양 ID](#specs)
 
@@ -685,7 +685,7 @@ curl -X POST \
 
 ## 다음 단계
 
-이 자습서에 따라, 원본 커넥터를 만들어 서드 파티 데이터베이스의 데이터를 정기적으로 수집합니다. 이제 실시간 고객 프로필 및 데이터 과학 작업 공간과 같은 다운스트림 플랫폼 서비스에서 들어오는 데이터를 사용할 수 있습니다. 자세한 내용은 다음 문서를 참조하십시오.
+이 자습서에 따라, 원본 커넥터를 만들어 서드 파티 데이터베이스의 데이터를 정기적으로 수집합니다. 이제 및 같은 다운스트림 [!DNL Platform] 서비스에서 들어오는 데이터를 사용할 수 [!DNL Real-time Customer Profile] 있습니다 [!DNL Data Science Workspace]. 자세한 내용은 다음 문서를 참조하십시오.
 
 * [실시간 고객 프로필 개요](../../../../profile/home.md)
 * [데이터 과학 작업 공간 개요](../../../../data-science-workspace/home.md)
@@ -698,18 +698,18 @@ curl -X POST \
 
 | 커넥터 이름 | 연결 사양 ID |
 | -------------- | --------------- |
-| Amazon Redshift | `3416976c-a9ca-4bba-901a-1f08f66978ff` |
-| Azure HDInsights의 Apache Hive | `aac9bbd4-6c01-46ce-b47e-51c6f0f6db3f` |
-| Azure HDInsights의 Apache Spark | `6a8d82bc-1caf-45d1-908d-cadabc9d63a6` |
-| Azure 데이터 탐색기 | `0479cc14-7651-4354-b233-7480606c2ac3` |
-| Azure 구문 분석 | `a49bcc7d-8038-43af-b1e4-5a7a089a7d79` |
-| Azure 테이블 저장소 | `ecde33f2-c56f-46cc-bdea-ad151c16cd69` |
-| CouchBase | `1fe283f6-9bec-11ea-bb37-0242ac130002` |
-| Google BigQuery | `3c9b37f8-13a6-43d8-bad3-b863b941fedd` |
-| IBM DB2 | `09182899-b429-40c9-a15a-bf3ddbc8ced7` |
-| MariaDB | `000eb99-cd47-43f3-827c-43caf170f015` |
-| Microsoft SQL Server | `1f372ff9-38a4-4492-96f5-b9a4e4bd00ec` |
-| MySQL | `26d738e0-8963-47ea-aadf-c60de735468a` |
-| Oracle | `d6b52d86-f0f8-475f-89d4-ce54c8527328` |
-| 피닉스 | `102706fb-a5cd-42ee-afe0-bc42f017ff43` |
-| PostgreSQL | `74a1c565-4e59-48d7-9d67-7c03b8a13137` |
+| [!DNL Amazon Redshift] | `3416976c-a9ca-4bba-901a-1f08f66978ff` |
+| [!DNL Apache Hive] on [!DNL Azure HDInsights] | `aac9bbd4-6c01-46ce-b47e-51c6f0f6db3f` |
+| [!DNL Apache Spark] on [!DNL Azure HDInsights] | `6a8d82bc-1caf-45d1-908d-cadabc9d63a6` |
+| [!DNL Azure Data Explorer] | `0479cc14-7651-4354-b233-7480606c2ac3` |
+| [!DNL Azure Synapse Analytics] | `a49bcc7d-8038-43af-b1e4-5a7a089a7d79` |
+| [!DNL Azure Table Storage] | `ecde33f2-c56f-46cc-bdea-ad151c16cd69` |
+| [!DNL CouchBase] | `1fe283f6-9bec-11ea-bb37-0242ac130002` |
+| [!DNL Google BigQuery] | `3c9b37f8-13a6-43d8-bad3-b863b941fedd` |
+| [!DNL IBM DB2] | `09182899-b429-40c9-a15a-bf3ddbc8ced7` |
+| [!DNL MariaDB] | `000eb99-cd47-43f3-827c-43caf170f015` |
+| [!DNL Microsoft SQL Server] | `1f372ff9-38a4-4492-96f5-b9a4e4bd00ec` |
+| [!DNL MySQL] | `26d738e0-8963-47ea-aadf-c60de735468a` |
+| [!DNL Oracle] | `d6b52d86-f0f8-475f-89d4-ce54c8527328` |
+| [!DNL Phoenix] | `102706fb-a5cd-42ee-afe0-bc42f017ff43` |
+| [!DNL PostgreSQL] | `74a1c565-4e59-48d7-9d67-7c03b8a13137` |
