@@ -4,18 +4,21 @@ solution: Experience Platform
 title: 사용자 정의 네임스페이스 만들기
 topic: API guide
 translation-type: tm+mt
-source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
+source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+workflow-type: tm+mt
+source-wordcount: '75'
+ht-degree: 5%
 
 ---
 
 
 # 사용자 정의 네임스페이스 만들기
 
-ID 네임스페이스 API를 사용하여 조직에서만 사용할 수 있는 사용자 지정 ID 네임스페이스를 만들 수 있습니다.
+API를 사용하여 [!DNL Identity Namespace] 조직에서만 사용할 수 있는 사용자 지정 ID 네임스페이스를 만들 수 있습니다.
 
-사용자 정의 네임스페이스 만들기에 대한 권장 사항은 ID 서비스 [FAQ 설명서를](../troubleshooting-guide.md)참조하십시오.
+사용자 정의 네임스페이스 만들기에 대한 권장 사항 [은 Identity Service FAQ 설명서를 참조하십시오](../troubleshooting-guide.md).
 
->[!NOTE] 네임스페이스는 ID의 한정자입니다. 따라서 네임스페이스가 만들어지면 삭제할 수 없습니다.
+>[!NOTE] 네임스페이스는 ID의 한정자입니다. 따라서 네임스페이스를 만들면 삭제할 수 없습니다.
 
 **API 형식**
 
@@ -59,4 +62,4 @@ curl -X POST \
 
 ## 다음 단계
 
-다음 자습서로 진행하여 ID의 기본 ID를 [나열합니다.](./list-native-id.md)
+다음 자습서로 진행하여 ID의 기본 ID를 [나열합니다](./list-native-id.md)
