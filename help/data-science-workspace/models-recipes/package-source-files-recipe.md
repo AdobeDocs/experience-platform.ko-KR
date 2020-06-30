@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 소스 파일을 레서피로 패키지
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: f2a7300d4ad75e3910abbdf2ecc2946a2dfe553c
+source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
 workflow-type: tm+mt
-source-wordcount: '1106'
+source-wordcount: '1077'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # 소스 파일을 레서피로 패키지
 
-이 자습서에서는 제공된 소매 판매 샘플 소스 파일을 보관 파일로 패키지하는 방법에 대한 지침을 제공합니다. 이 지침은 레서피 가져오기 작업 과정을 UI나 API를 사용하여 Adobe Experience Platform 데이터 과학 작업 공간에서 레서피를 만드는 데 사용할 수 있습니다.
+이 자습서에서는 제공된 소매 판매 샘플 소스 파일을 보관 파일로 패키지하는 방법에 대한 지침을 제공합니다. 이 지침은 레시피 가져오기 작업 과정을 UI나 API를 사용하여 Adobe Experience Platform에서 레서피 [!DNL Data Science Workspace] 를 만드는 데 사용할 수 있습니다.
 
 이해할 개념:
 
@@ -23,14 +23,14 @@ ht-degree: 0%
 
 ## 전제 조건
 
-- [도커](https://docs.docker.com/install/#supported-platforms)
-- [Python 3 및 pip](https://docs.conda.io/en/latest/miniconda.html)
-- [Scala](https://www.scala-sbt.org/download.html?_ga=2.42231906.690987621.1558478883-2004067584.1558478883)
-- [마벤](https://maven.apache.org/install.html)
+- [!DNL Docker](https://docs.docker.com/install/#supported-platforms)
+- [!DNL Python 3 and pip](https://docs.conda.io/en/latest/miniconda.html)
+- [!DNL Scala](https://www.scala-sbt.org/download.html?_ga=2.42231906.690987621.1558478883-2004067584.1558478883)
+- [!DNL Maven](https://maven.apache.org/install.html)
 
 ## 레서피 제작
 
-레서피 생성은 소스 파일을 패키징하여 아카이브 파일을 작성하는 것부터 시작합니다. 소스 파일은 특정 문제를 해결하는 데 사용되는 기계 학습 논리와 알고리즘을 정의하며 Python, R, PySpark 또는 Scala로 작성됩니다. 작성된 아카이브 파일은 Docker 이미지 형식을 취합니다. 일단 빌드되면 패키지된 아카이브 파일을 데이터 과학 작업 공간 [으로 가져와 UI에서 레서피](./import-packaged-recipe-ui.md) 또는 API를 [사용합니다](./import-packaged-recipe-api.md).
+레서피 생성은 소스 파일을 패키징하여 아카이브 파일을 작성하는 것부터 시작합니다. 소스 파일은 특정 문제를 해결하는 데 사용되는 기계 학습 논리 및 알고리즘을 정의하며, R, PySpark 또는 Scala로 [!DNL Python]작성됩니다. 작성된 아카이브 파일은 Docker 이미지 형식을 취합니다. 일단 빌드되면 패키지된 아카이브 파일을 로 가져와 UI [!DNL Data Science Workspace][에서 레서피](./import-packaged-recipe-ui.md) 를 생성하거나 API를 [사용합니다](./import-packaged-recipe-api.md).
 
 ### Docker 기반의 모델 저작 {#docker-based-model-authoring}
 
@@ -46,13 +46,13 @@ Azure 컨테이너 레지스트리 자격 증명을 얻으려면 <a href="https:
 
 ![](../images/models-recipes/package-source-files/configure.png)
 
-적절한 *런타임을*&#x200B;선택한 다음 **[!UICONTROL 유형에]** 대한 *분류를*&#x200B;선택합니다. Azure 컨테이너 레지스트리 자격 증명이 완료되면 생성됩니다.
+적절한 *런타임*&#x200B;을 선택한 다음 **[!UICONTROL 유형에]** 대한 *분류를*&#x200B;선택합니다. Azure 컨테이너 레지스트리 자격 증명이 완료되면 생성됩니다.
 
 >[!NOTE]
 >*유형은&#x200B;*레서피가 설계된 기계 학습 문제의 클래스로, 교육 실행 평가를 위한 교육 후에 사용됩니다.
 
 >[!TIP]
->- Python 조리법의 경우 **[!UICONTROL Python 런타임을]** 선택합니다.
+>- 레시피 [!DNL Python] 의 경우 Python **[!UICONTROL 런타임을]** 선택합니다.
 >- R 레서피의 경우 **[!UICONTROL R 런타임을]** 선택합니다.
 >- PySpark 레서피의 경우 **[!UICONTROL PySpark 런타임을]** 선택합니다. 객체 유형이 자동으로 채워집니다.
 >- Scala 레시피의 경우 **[!UICONTROL Spark]** 런타임을 선택합니다. 객체 유형이 자동으로 채워집니다.
@@ -60,29 +60,29 @@ Azure 컨테이너 레지스트리 자격 증명을 얻으려면 <a href="https:
 
 ![](../images/models-recipes/package-source-files/docker-creds.png)
 
-Docker 호스트, *사용자 이름*&#x200B;및 *암호*&#x200B;값을 *확인합니다*. 이러한 이미지는 아래 나와 있는 워크플로우에서 Docker 이미지를 만들고 푸시하는 데 사용됩니다.
+Docker 호스트, *사용자 이름*&#x200B;및 *암호*&#x200B;값을 *확인합니다*. 이러한 이미지는 아래 나와 있는 워크플로우에서 [!DNL Docker] 이미지를 만들고 푸시하는 데 사용됩니다.
 
 >[!NOTE]
 >소스 URL은 아래 설명된 단계를 완료한 후 제공됩니다. 구성 파일은 [다음 단계에 있는 다음 자습서에서 설명합니다](#next-steps).
 
 ### 소스 파일 패키지
 
-먼저 <a href="https://github.com/adobe/experience-platform-dsw-reference" target="_blank">경험 플랫폼 데이터 과학 작업 공간 참조 보관소에 있는 샘플 코드 베이스를</a> 입수합니다.
+먼저 <a href="https://github.com/adobe/experience-platform-dsw-reference" target="_blank">Experience Platform 데이터 과학 작업 공간 참조 보관소에 있는 샘플 코드 베이스를</a> 입수합니다.
 
 - [Python Docker 이미지 제작](#python-docker)
 - [R Docker 이미지 제작](#r-docker)
 - [PySpark Docker 이미지 제작](#pyspark-docker)
 - [Build Scala (Spark) Docker 이미지](#scala-docker)
 
-### Python Docker 이미지 제작 {#python-docker}
+### 문서 작성 [!DNL Python] 이미지 {#python-docker}
 
-이렇게 하지 않은 경우 다음 명령을 사용하여 github 저장소를 로컬 시스템에 복제합니다.
+그렇지 않은 경우 다음 명령을 사용하여 로컬 시스템에 [!DNL GitHub] 저장소를 복제합니다.
 
 ```shell
 git clone https://github.com/adobe/experience-platform-dsw-reference.git
 ```
 
-Navigate to the directory `experience-platform-dsw-reference/recipes/python/retail`. 여기에서 스크립트 `login.sh` 를 찾아 Docker에 `build.sh` 로그인하고 Python Docker 이미지를 만드는 데 사용됩니다. Docker 자격 증명을 [사용할](#docker-based-model-authoring) 준비가 되었으면 다음 명령을 순서대로 입력합니다.
+Navigate to the directory `experience-platform-dsw-reference/recipes/python/retail`. 여기에서 스크립트 `login.sh` 를 찾아 Docker에 `build.sh` 로그인하고 [!DNL Python Docker] 이미지를 만드는 데 사용됩니다. Docker 자격 증명을 [사용할](#docker-based-model-authoring) 준비가 되었으면 다음 명령을 순서대로 입력합니다.
 
 ```BASH
 # for logging in to Docker
@@ -103,9 +103,9 @@ Navigate to the directory `experience-platform-dsw-reference/recipes/python/reta
 
 이 URL을 복사하고 [다음 단계로 이동합니다](#next-steps).
 
-### R Docker 이미지 제작 {#r-docker}
+### 빌드 R [!DNL Docker] 이미지 {#r-docker}
 
-이렇게 하지 않은 경우 다음 명령을 사용하여 github 저장소를 로컬 시스템에 복제합니다.
+그렇지 않은 경우 다음 명령을 사용하여 로컬 시스템에 [!DNL GitHub] 저장소를 복제합니다.
 
 ```BASH
 git clone https://github.com/adobe/experience-platform-dsw-reference.git
@@ -134,7 +134,7 @@ git clone https://github.com/adobe/experience-platform-dsw-reference.git
 
 ### PySpark Docker 이미지 제작 {#pyspark-docker}
 
-다음 명령을 사용하여 github 저장소를 로컬 시스템에 복제하여 시작합니다.
+다음 명령을 사용하여 [!DNL GitHub] 리포지토리를 로컬 시스템에 복제하여 시작합니다.
 
 ```shell
 git clone https://github.com/adobe/experience-platform-dsw-reference.git
@@ -163,7 +163,7 @@ Navigate to the directory `experience-platform-dsw-reference/recipes/pyspark/ret
 
 ### Scala Docker 이미지 만들기 {#scala-docker}
 
-터미널에서 다음 명령을 사용하여 github 저장소를 로컬 시스템에 복제하여 시작합니다.
+터미널에서 다음 명령을 사용하여 로컬 시스템에 [!DNL GitHub] 저장소를 복제하여 시작합니다.
 
 ```shell
 git clone https://github.com/adobe/experience-platform-dsw-reference.git
@@ -192,7 +192,7 @@ git clone https://github.com/adobe/experience-platform-dsw-reference.git
 
 ## 다음 단계 {#next-steps}
 
-이 자습서에서는 소스 파일을 Recipe로 가져오기 위한 사전 요구 단계인 Recipe로 패키징했습니다. 이제 Azure 컨테이너 레지스트리에서 해당 이미지 URL과 함께 Docker 이미지가 있어야 합니다. 이제 패키지된 레시피를 데이터 과학 작업 영역으로 가져오는 방법에 대한 자습서를 시작할 준비가 되었습니다. 시작하려면 아래 자습서 링크 중 하나를 선택하십시오.
+이 자습서에서는 소스 파일을 레서피로 가져오기 위한 사전 요구 단계인 레서피로 패키징했습니다 [!DNL Data Science Workspace]. 이제 Azure 컨테이너 레지스트리에서 해당 이미지 URL과 함께 Docker 이미지가 있어야 합니다. 이제 패키지된 레시피를 로 가져오는 방법에 대한 자습서를 시작할 준비가 되었습니다 [!DNL Data Science Workspace]. 시작하려면 아래 자습서 링크 중 하나를 선택하십시오.
 
 - [UI에서 패키지된 레서피 가져오기](./import-packaged-recipe-ui.md)
 - [API를 사용하여 패키지된 레서피 가져오기](./import-packaged-recipe-api.md)
