@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Jupiter 전자 필기장의 쿼리 서비스
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
 workflow-type: tm+mt
-source-wordcount: '799'
+source-wordcount: '764'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Jupiter 전자 필기장의 쿼리 서비스
 
-[!DNL Adobe Experience Platform] 쿼리 서비스를 JupiterLab에 표준 기능으로 통합하여 데이터 과학 작업 공간에서 구조화된 쿼리 언어(SQL)를 사용할 수 있습니다.
+[!DNL Adobe Experience Platform] 표준 기능으로 통합하여 SQL(Structured Query Language)을 사용할 수 [!DNL Data Science Workspace] [!DNL Query Service] [!DNL JupyterLab] 있습니다.
 
 이 자습서에서는 일반적인 사용 사례를 위해 [!DNL Adobe Analytics] 데이터를 탐색, 변환 및 분석하는 샘플 SQL 쿼리를 보여 줍니다.
 
@@ -22,19 +22,19 @@ ht-degree: 1%
 
 이 튜토리얼을 시작하기 전에 다음 전제 조건이 필요합니다.
 
-- 액세스 권한 [!DNL Adobe Experience Platform]. IMS Organization in Experience Platform(IMS 플랫폼)에 액세스할 수 없는 경우 시스템 관리자에게 문의하시기 바랍니다
+- 액세스 권한 [!DNL Adobe Experience Platform]. 에서 IMS 조직에 액세스할 수 없는 경우 시스템 관리자 [!DNL Experience Platform]에게 연락하여 진행하십시오
 
 - 데이터 [!DNL Adobe Analytics] 집합
 
 - 이 튜토리얼에서 사용되는 다음 주요 개념에 대한 작업 이해:
-   - [XDM(Experience Data Model) 및 XDM 시스템](../../xdm/home.md)
-   - [쿼리 서비스](../../query-service/home.md)
-   - [쿼리 서비스 SQL 구문](../../query-service/sql/overview.md)
-   - [!DNL Adobe Analytics]
+   - [!DNL Experience Data Model (XDM) and XDM System](../../xdm/home.md)
+   - [!DNL Query Service](../../query-service/home.md)
+   - [!DNL Query Service SQL Syntax](../../query-service/sql/overview.md)
+   - [Adobe Analytics]
 
-## JupiterLab 및 쿼리 서비스 액세스 {#access-jupyterlab-and-query-service}
+## 액세스 [!DNL JupyterLab] 및 [!DNL Query Service] {#access-jupyterlab-and-query-service}
 
-1. 경험 [플랫폼](https://platform.adobe.com)에서 왼쪽 탐색 **[!UICONTROL 열에서 전자 필기장]** 으로 이동합니다. JupiterLab이 로드될 때까지 잠시 기다려 주십시오.
+1. 에서 왼쪽 탐색 [!DNL Experience Platform](https://platform.adobe.com)열 **** 에서 전자 필기장으로 이동합니다. JupiterLab이 로드될 때까지 잠시 기다려 주십시오.
 
    ![](../images/jupyterlab/query/jupyterlab_launcher.png)
 
@@ -52,7 +52,7 @@ ht-degree: 1%
 
 4. 탐색할 데이터 [!DNL Adobe Analytics] 세트를 찾고 목록을 마우스 오른쪽 단추로 클릭한 다음 노트북의 **[!UICONTROL 데이터]** 쿼리를 클릭하여 빈 전자 필기장에서 SQL 쿼리를 생성합니다.
 
-5. 함수가 들어 있는 첫 번째 생성된 셀을 클릭하고 재생 단추 `qs_connect()` 를 클릭하여 실행합니다. 이 함수는 전자 필기장 인스턴스와 쿼리 서비스 간에 연결을 만듭니다.
+5. 함수가 들어 있는 첫 번째 생성된 셀을 클릭하고 재생 단추 `qs_connect()` 를 클릭하여 실행합니다. 이 함수는 노트북 인스턴스와 노트북 인스턴스 간에 연결을 만듭니다 [!DNL Query Service].
 
    ![](../images/jupyterlab/query/execute.png)
 
@@ -91,7 +91,7 @@ ht-degree: 1%
 
 개별 전자 필기장 셀에 다음 SQL 쿼리를 입력합니다. 셀을 클릭한 다음 **[!UICONTROL 재생]** 단추를 클릭하여 쿼리를 실행합니다. 성공적인 쿼리 결과 또는 오류 로그가 실행된 셀 아래에 표시됩니다.
 
-장시간 노트북이 비활성화되면 노트북과 쿼리 서비스 간의 연결이 끊어질 수 있습니다. 이러한 경우 오른쪽 상단 모서리에 있는 **[!UICONTROL 전원]** 버튼을 클릭하여 JupiterLab을 다시 시작합니다.
+장시간 노트북이 비활성화되면 노트북과 노트북 간의 연결이 끊어질 [!DNL Query Service] 수 있습니다. 이러한 경우 오른쪽 상단 모서리에 있는 [!DNL JupyterLab] 전원 **** 단추 를 클릭하여 다시 시작합니다.
 
 ![](../images/jupyterlab/query/restart_button.png)
 
@@ -119,7 +119,7 @@ ORDER  BY Hour;
 
 위 쿼리에서 절의 대상 `_acp_year` 은 `WHERE` 의 값으로 설정됩니다 `target_year`. 중괄호(중괄호)로 묶어서 SQL 쿼리에 변수를`{}`포함합니다.
 
-쿼리의 첫 번째 줄에는 선택 변수가 포함됩니다 `hourly_visitor`. 쿼리 결과는 이 변수에 판다들의 데이터 프레임으로 저장됩니다. 결과를 데이터 프레임에 저장하면 원하는 Python 패키지를 사용하여 나중에 쿼리 결과를 시각화할 수 있습니다. 새 셀에서 다음 Python 코드를 실행하여 막대 그래프를 생성합니다.
+쿼리의 첫 번째 줄에는 선택 변수가 포함됩니다 `hourly_visitor`. 쿼리 결과는 이 변수에 판다들의 데이터 프레임으로 저장됩니다. 결과를 데이터 프레임에 저장하면 원하는 [!DNL Python] 패키지를 사용하여 나중에 쿼리 결과를 시각화할 수 있습니다. 새 셀에서 다음 [!DNL Python] 코드를 실행하여 막대 그래프를 생성합니다.
 
 ```python
 trace = go.Bar(
@@ -209,7 +209,7 @@ GROUP BY aaid_sess_key
 ORDER BY Count DESC;
 ```
 
-다음 Python 코드를 실행하여 방문 세션당 이벤트 수에 대한 히스토그램을 생성합니다.
+다음 코드를 실행하여 방문 세션당 이벤트 수에 대한 히스토그램을 생성합니다. [!DNL Python]
 
 ```python
 data = [go.Histogram(x = events_per_session['Count'])]
@@ -283,4 +283,4 @@ LIMIT  10;
 
 ## 다음 단계 <!-- omit in toc -->
 
-이 자습서에서는 Jupiter 전자 필기장에서 쿼리 서비스를 활용하는 일부 샘플 사용 사례를 설명했습니다. 데이터 [액세스 SDK를 사용하여 비슷한 작업이 수행되는 방식을 보려면 Jupiter 전자 필기장을 사용하여 데이터 분석](./analyze-your-data.md) 자습서에 따릅니다.
+이 자습서에서는 전자 필기장 사용에 대한 몇 가지 샘플 사용 사례 [!DNL Query Service] 를 [!DNL Jupyter] 시연했습니다. 데이터 [액세스 SDK를 사용하여 비슷한 작업이 수행되는 방식을 보려면 Jupiter 전자 필기장을 사용하여 데이터 분석](./analyze-your-data.md) 자습서에 따릅니다.
