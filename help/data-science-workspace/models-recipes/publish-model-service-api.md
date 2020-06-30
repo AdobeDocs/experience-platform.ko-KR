@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 모델을 서비스로 게시(API)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 967ca85efba315819c6241d034dc3c25a5b1fc70
+source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
 workflow-type: tm+mt
-source-wordcount: '1487'
+source-wordcount: '1478'
 ht-degree: 1%
 
 ---
@@ -14,15 +14,15 @@ ht-degree: 1%
 
 # 모델을 서비스로 게시(API)
 
-이 자습서에서는 Sensei Machine Learning API를 사용하여 모델을 서비스로 게시하 [는 프로세스를 다룹니다](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml).
+이 자습서에서는 모델을 서비스를 사용하여 서비스로 게시하는 프로세스에 대해 설명합니다 [!DNL Sensei Machine Learning API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml).
 
 ## 시작하기
 
-이 자습서에서는 Adobe Experience Platform 데이터 과학 작업 영역에 대한 작업 이해를 필요로 합니다. 이 자습서를 시작하기 전에 [데이터 과학 작업 공간 개요를](../home.md) 검토하여 서비스에 대한 자세한 내용을 살펴보십시오.
+이 자습서에서는 Adobe Experience Platform 데이터 과학 작업 공간에 대한 작업 이해를 필요로 합니다. 이 자습서를 시작하기 전에 [데이터 과학 작업 공간 개요를](../home.md) 검토하여 서비스에 대한 자세한 내용을 살펴보십시오.
 
 이 튜토리얼을 따라 하려면 기존 ML 엔진, ML 인스턴스 및 실험 버전이 있어야 합니다. API에서 이러한 항목을 만드는 방법에 대한 단계는 패키지된 레시피 [가져오기에 대한 자습서를 참조하십시오](./import-packaged-recipe-api.md).
 
-마지막으로, 이 자습서를 시작하기 전에 개발자 안내서의 [시작](../api/getting-started.md) 섹션에서 Sensei Machine Learning API를 성공적으로 호출하기 위해 이 자습서 전체에 사용되는 필수 헤더를 비롯하여 필요한 중요한 정보를 검토하십시오.
+마지막으로, 이 자습서를 시작하기 전에 개발자 안내서의 [시작하기](../api/getting-started.md) 섹션 [!DNL Sensei Machine Learning] 에서 API를 성공적으로 호출하기 위해 이 자습서 전체에 사용된 필수 헤더를 포함하여, 알아야 하는 중요한 정보가 필요하면 이자습서를 참조하십시오.
 
 - `{ACCESS_TOKEN}`
 - `{IMS_ORG}`
@@ -38,7 +38,7 @@ ht-degree: 1%
 
 | 용어 | 정의 |
 --- | ---
-| **기계 학습 인스턴스(ML 인스턴스)** | 특정 데이터, 매개 변수 및 Sensei 코드를 포함하는 특정 테넌트에 대한 Sensei 엔진 인스턴스입니다. |
+| **기계 학습 인스턴스(ML 인스턴스)** | 특정 데이터, 매개 변수 및 [!DNL Sensei] [!DNL Sensei] 코드를 포함하는 특정 테넌트에 대한 엔진 인스턴스입니다. |
 | **실험** | 교육 실험 실행, 점수 지정 실험 실행 또는 둘 모두를 보유하는 상위 엔티티. |
 | **실험 예약** | 사용자 정의 일정에 의해 제어되는 교육 또는 점수 실험 실행의 자동화를 설명하는 용어입니다. |
 | **실험 실행** | 트레이닝 또는 채점 실험의 특정 인스턴스. 특정 실험에서의 다중 실험 실행은 교육 또는 점수 지정에 사용되는 데이터 세트 값에서 다를 수 있습니다. |
@@ -338,7 +338,7 @@ curl -X GET 'https://platform.adobe.io/data/sensei/mlServices/{SERVICE_ID}'
 }
 ```
 
->[!NOTE] 다른 ML 서비스를 검색하면 키-값 쌍보다 많거나 적은 수의 응답이 반환될 수 있습니다. 위 응답은 예약된 트레이닝과 점수 지정 실험 실행 [](#ml-service-with-scheduled-experiments-for-training-and-scoring)기능이 있는 ML 서비스의 표현입니다.
+>[!NOTE] 다른 ML 서비스를 검색하면 키-값 쌍보다 많거나 적은 수의 응답이 반환될 수 있습니다. 위의 응답은 예약된 트레이닝과 점수 지정 실험 실행 [](#ml-service-with-scheduled-experiments-for-training-and-scoring)기능이 있는 ML 서비스의 표현입니다.
 
 
 ## 트레이닝 또는 점수 지정 예약
