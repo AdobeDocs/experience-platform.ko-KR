@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 실시간 기계 학습 노드 참조 안내서
 topic: Nodes reference
 translation-type: tm+mt
-source-git-commit: dc63ad0c0764355aed267eccd1bcc4965b04dba4
+source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
 workflow-type: tm+mt
-source-wordcount: '595'
+source-wordcount: '594'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 1%
 
 ## ML 파이프라인에서 사용할 노드 검색
 
-다음 코드를 Python 전자 필기장에 복사하여 사용할 수 있는 모든 노드를 확인합니다.
+다음 코드를 [!DNL Python] 전자 필기장에 복사하여 사용할 수 있는 모든 노드를 확인합니다.
 
 ```python
 from pprint import pprint
@@ -121,7 +121,7 @@ msg6 = model_train.process(msg5)
 | 값 | 설명 |
 | --- | --- |
 | features | 모델에 기능 입력(문자열 목록). <br> 예: `browser`, `device`, `login_page`, `product_page`, `search_page` |
-| label | 대상 열 이름(문자열). |
+| label | Target 열 이름(문자열). |
 | mode | 기차/테스트(문자열). |
 | model_path | 로컬(onnx 형식)으로 저장 모델에 대한 경로입니다. |
 | params.model | 모델(문자열)에 대한 절대 가져오기 경로(예: `sklearn.linear_model.LogisticRegression`. |
