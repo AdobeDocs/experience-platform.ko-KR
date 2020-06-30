@@ -4,61 +4,64 @@ solution: Experience Platform
 title: 모델 트레이닝 및 평가(UI)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
+source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+workflow-type: tm+mt
+source-wordcount: '975'
+ht-degree: 2%
 
 ---
 
 
 # 모델 트레이닝 및 평가(UI)
 
-Adobe Experience Platform 데이터 과학 작업 공간에서 기계 학습 모델은 모델의 의도에 적합한 기존 레서피를 통합하여 만들어집니다. 그런 다음 연관된 하이퍼매개 변수를 세밀하게 조정하여 모델의 운영 효율성과 효과를 최적화하기 위해 교육을 받고 평가합니다. 레서피는 재사용할 수 있습니다. 즉, 하나의 레서피를 사용하여 여러 모델을 생성하고 특정 목적에 맞게 변경할 수 있습니다.
+Adobe Experience Platform 데이터 과학 작업 공간에서 기계 학습 모델은 모델의 의도에 적합한 기존 레서피를 결합함으로써 만들어집니다. 그런 다음 연관된 하이퍼매개 변수를 세밀하게 조정하여 모델의 운영 효율성과 효과를 최적화하기 위해 교육을 받고 평가합니다. 레서피는 재사용할 수 있습니다. 즉, 하나의 레서피를 사용하여 여러 모델을 생성하고 특정 목적에 맞게 변경할 수 있습니다.
 
 이 자습서에서는 모델을 생성, 교육 및 평가하는 단계를 안내합니다.
 
 ## 시작하기
 
-이 튜토리얼을 완료하려면 경험 플랫폼에 대한 액세스 권한이 있어야 합니다. Experience Platform에서 IMS 조직에 액세스할 수 없는 경우 시스템 관리자에게 문의하십시오.
+이 자습서를 완료하려면 액세스 권한이 있어야 합니다 [!DNL Experience Platform]. 에서 IMS 조직에 액세스할 수 없는 경우 시스템 관리자 [!DNL Experience Platform]에게 연락하여 진행하십시오.
 
 이 자습서에는 기존 레서피가 필요합니다. 레서피가 없는 경우 계속하기 전에 UI [에서 패키지된 레서피 가져오기 자습서를](./import-packaged-recipe-ui.md) 따르십시오.
 
 ## 모델 만들기
 
-1. Adobe Experience Platform에서 왼쪽 탐색 열에 있는 **[!UICONTROL Models]** 링크를 클릭하여 모든 기존 모델을 나열합니다. 페이지 오른쪽 상단 **[!UICONTROL Create Model]** 을 클릭하여 모델 생성 프로세스를 시작합니다.
+1. Adobe Experience Platform에서 왼쪽 탐색 열에 있는 **[!UICONTROL 모델]** 링크를 클릭하여 모든 기존 모델을 나열합니다. 페이지 **[!UICONTROL 오른쪽 상단의 모델]** 만들기를 클릭하여 모델 생성 프로세스를 시작합니다.
    ![](../images/models-recipes/train-evaluate-ui/models_browse.png)
 
-2. 기존 레서피 목록을 탐색하고, 모델을 생성하는 데 사용할 레서피(Recipe)를 찾아 선택하고 를 클릭합니다 **[!UICONTROL Next]**.
+2. 기존 레서피 목록을 탐색하고, 모델을 생성하는 데 사용할 레서피(Recipe)를 찾아 선택하고 **[!UICONTROL 다음]**을 클릭합니다.
    ![](../images/models-recipes/train-evaluate-ui/select_recipe.png)
 
-3. 적절한 입력 데이터 세트를 선택하고 을 클릭합니다 **[!UICONTROL Next]**. 그러면 모델의 기본 입력 교육 데이터 세트가 설정됩니다.
+3. 적절한 입력 데이터 세트를 선택하고 **[!UICONTROL 다음을 클릭합니다]**. 그러면 모델의 기본 입력 교육 데이터 세트가 설정됩니다.
    ![](../images/models-recipes/train-evaluate-ui/select_dataset.png)
 
-4. 모델 이름을 입력하고 기본 모델 구성을 검토하십시오. 기본 구성은 레서피 생성 중에 적용되었으며 값을 두 번 클릭하여 구성 값을 검토하고 수정했습니다. 새 구성 세트를 제공하려면 모델 구성을 포함하는 JSON 파일 **[!UICONTROL Upload New Config]** 을 클릭하고 브라우저 창으로 드래그합니다. 모델 **[!UICONTROL Finish]** 을 생성하려면 를 클릭합니다.
+4. 모델 이름을 입력하고 기본 모델 구성을 검토하십시오. 기본 구성은 레서피 생성 중에 적용되었으며 값을 두 번 클릭하여 구성 값을 검토하고 수정했습니다. 새 구성 세트를 제공하려면 새 구성 **[!UICONTROL 업로드]** 를 클릭하고 모델 구성이 포함된 JSON 파일을 브라우저 창으로 드래그합니다. 마침 **[!UICONTROL 을]** 클릭하여 모델을 생성합니다.
    >[!NOTE]구성은 의도한 배합식에 고유하며, 이것은 소매 영업 레서피에 대한 구성이 제품 추천 레시피에 대해 작동하지 않음을 의미합니다. 소매 영업 [레서피 구성 목록은 참조](#reference) 섹션을 참조하십시오.
 
    ![](../images/models-recipes/train-evaluate-ui/name_and_configure.png)
 
 ## 교육 실행 만들기
 
-1. Adobe Experience Platform에서 왼쪽 탐색 열에 있는 **[!UICONTROL Models]** 링크를 클릭하여 모든 기존 모델을 나열합니다. 교육할 모델의 이름을 찾아 클릭합니다.
+1. Adobe Experience Platform에서 왼쪽 탐색 열에 있는 **[!UICONTROL 모델]** 링크를 클릭하여 모든 기존 모델을 나열합니다. 교육할 모델의 이름을 찾아 클릭합니다.
    ![](../images/models-recipes/train-evaluate-ui/models_browse.png)
 
-2. 현재 교육 상태와 함께 모든 기존 교육이 나열됩니다. 데이터 과학 작업 공간 사용자 인터페이스를 사용하여 만든 모델의 경우 기본 구성 및 입력 교육 데이터 세트를 사용하여 교육 실행이 자동으로 생성되고 실행됩니다.
+2. 현재 교육 상태와 함께 모든 기존 교육이 나열됩니다. 사용자 인터페이스를 사용하여 생성된 모델의 경우 기본 구성 및 입력 교육 데이터 세트를 사용하여 교육 실행이 자동으로 생성되고 실행됩니다. [!DNL Data Science Workspace]
    ![](../images/models-recipes/train-evaluate-ui/model_overview.png)
 
-3. 모델 개요 페이지의 오른쪽 상단 **[!UICONTROL Train]** 근처에 있는 를 클릭하여 새 교육 실행을 만듭니다.
+3. 모델 개요 페이지의 오른쪽 **[!UICONTROL 위]** 근처에 있는 기차를 클릭하여 새 교육 실행을 만듭니다.
    ![](../images/models-recipes/train-evaluate-ui/training_input.png)
 
-4. 교육 실행에 대한 교육 입력 데이터 세트를 선택하고 을 클릭합니다 **[!UICONTROL Next]**.
+4. 교육 실행에 대한 교육 입력 데이터 세트를 선택하고 [다음]을 **[!UICONTROL 클릭합니다]**.
    ![](../images/models-recipes/train-evaluate-ui/training_configuration.png)
 
-5. 모델을 생성하는 동안 제공된 기본 구성이 표시되고 값을 두 번 클릭하여 변경하고 이에 따라 수정합니다. 을 **[!UICONTROL Finish]** 클릭하여 교육 실행을 만들고 실행합니다.
+5. 모델을 생성하는 동안 제공된 기본 구성이 표시되고 값을 두 번 클릭하여 변경하고 이에 따라 수정합니다. [ **[!UICONTROL 마침]** ]을 클릭하여 교육 실행을 만들고 실행합니다.
    >[!NOTE]구성은 의도한 배합식에 고유하며, 이것은 소매 영업 레서피에 대한 구성이 제품 추천 레시피에 대해 작동하지 않음을 의미합니다. 소매 영업 [레서피 구성 목록은 참조](#reference) 섹션을 참조하십시오.
 
    ![](../images/models-recipes/train-evaluate-ui/training_configuration.png)
 
 ## 모델 평가
 
-1. Adobe Experience Platform에서 왼쪽 탐색 열에 있는 **[!UICONTROL Models]** 링크를 클릭하여 모든 기존 모델을 나열합니다. 평가할 모델의 이름을 찾아 클릭합니다.
+1. Adobe Experience Platform에서 왼쪽 탐색 열에 있는 **[!UICONTROL 모델]** 링크를 클릭하여 모든 기존 모델을 나열합니다. 평가할 모델의 이름을 찾아 클릭합니다.
    ![](../images/models-recipes/train-evaluate-ui/models_browse.png)
 
 2. 현재 교육 상태와 함께 모든 기존 교육이 나열됩니다. 완료된 여러 개의 교육 실행이 있는 경우, 평가 지표를 모델 평가 차트의 여러 교육 실행 간에 비교할 수 있습니다. 그래프 위의 드롭다운 목록을 사용하여 평가 지표를 선택합니다.
@@ -77,7 +80,7 @@ Adobe Experience Platform 데이터 과학 작업 공간에서 기계 학습 모
 
 ## 다음 단계
 
-이 자습서에서는 데이터 과학 작업 공간에서 모델을 만들고, 교육하고, 평가하는 과정을 안내합니다. 최적화된 모델에 도달하고 나면 UI [튜토리얼에서 모델](./score-model-ui.md) 점수 지정 튜토리얼을 따라 훈련된 모델을 사용하여 통찰력을 생성할 수 있습니다.
+이 자습서에서는 모델을 만들고, 교육하고, 평가하는 과정을 안내합니다 [!DNL Data Science Workspace]. 최적화된 모델에 도달하고 나면 UI [튜토리얼에서 모델](./score-model-ui.md) 점수 지정 튜토리얼을 따라 훈련된 모델을 사용하여 통찰력을 생성할 수 있습니다.
 
 ## 참조 {#reference}
 
