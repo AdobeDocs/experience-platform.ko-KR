@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 정책
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: ba9d4b31cfc3b7924879a91bd125f72159e55fc4
+source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
 workflow-type: tm+mt
-source-wordcount: '866'
+source-wordcount: '862'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # 정책
 
-데이터 사용 정책은 Experience Platform 내에서 데이터에 대해 수행하도록 허용되거나 제한된 마케팅 활동의 종류를 설명하는 조직에서 선택하는 규칙입니다.
+데이터 사용 정책은 조직에서 데이터 내에서 수행할 수 있거나 제한된 마케팅 작업의 종류를 설명하는 규칙입니다 [!DNL Experience Platform].
 
 끝점은 데이터 사용 정책 보기, 만들기, 업데이트 또는 삭제와 관련된 모든 API 호출에 사용됩니다. `/policies`
 
@@ -406,7 +406,7 @@ curl -X PUT \
 
 PATCH 요청을 사용하여 정책의 특정 부분을 업데이트할 수 있습니다. 정책을 _다시 쓰는_ PUT 요청과는 달리, PATCH 요청은 요청 본문에 지정된 경로만 업데이트합니다. 이 기능은 업데이트(`/status`)할 특정 경로 및 해당 값(`ENABLE` 또는 `DISABLE`)만 보내야 하므로 정책을 활성화하거나 비활성화할 때 특히 유용합니다.
 
-정책 서비스 API는 현재 &quot;add&quot;, &quot;replace&quot; 및 &quot;remove&quot; PATCH 작업을 지원하고 다음 예제와 같이, 여러 업데이트를 배열 내에 하나의 개체로 추가하여 하나의 호출로 결합할 수 있습니다.
+API는 현재 &quot;add&quot;, &quot;replace&quot; 및 &quot;remove&quot; PATCH 작업을 지원하고 다음 예제와 같이, 각 업데이트를 배열 내에 개체로 추가하여 하나의 호출로 결합할 수 있습니다. [!DNL Policy Service]
 
 **API 형식**
 
