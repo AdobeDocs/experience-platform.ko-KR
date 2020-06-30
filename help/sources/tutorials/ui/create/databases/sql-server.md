@@ -4,20 +4,20 @@ solution: Experience Platform
 title: UI에서 Microsoft SQL Server 소스 커넥터 만들기
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5ad763d2167c68f3293a2813248efaee22230a52
+source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
 workflow-type: tm+mt
-source-wordcount: '514'
+source-wordcount: '508'
 ht-degree: 0%
 
 ---
 
 
-# UI에서 Microsoft SQL Server 소스 커넥터 만들기
+# UI에서 [!DNL Microsoft] SQL Server 소스 커넥터 만들기
 
 > [!NOTE]
-> Microsoft SQL Server 커넥터가 베타 버전입니다. 베타 [레이블이 지정된 커넥터 사용에 대한 자세한 내용은 소스 개요를](../../../../home.md#terms-and-conditions) 참조하십시오.
+> SQL [!DNL Microsoft] Server 커넥터가 베타에 있습니다. 베타 [레이블이 지정된 커넥터 사용에 대한 자세한 내용은 소스 개요를](../../../../home.md#terms-and-conditions) 참조하십시오.
 
-Adobe Experience Platform의 소스 커넥터는 외부에서 가져온 데이터를 예약된 기준으로 인제스트하는 기능을 제공합니다. 이 자습서에서는 Platform 사용자 인터페이스를 사용하여 Microsoft SQL Server(이하 &quot;SQL Server&quot;) 소스 커넥터를 만드는 단계를 제공합니다.
+Adobe Experience Platform의 소스 커넥터는 외부에서 가져온 데이터를 예약된 기준으로 인제스트하는 기능을 제공합니다. 이 자습서에서는 사용자 인터페이스를 사용하여 [!DNL Microsoft] SQL Server(이하 &quot;SQL Server&quot;) 소스 커넥터를 만드는 단계를 [!DNL Platform] 제공합니다.
 
 ## 시작하기
 
@@ -32,7 +32,7 @@ Adobe Experience Platform의 소스 커넥터는 외부에서 가져온 데이�
 
 ### 필요한 자격 증명 수집
 
-Platform의 SQL Server에 연결하려면 다음 연결 속성을 제공해야 합니다.
+SQL Server에 연결하려면 다음 연결 속성을 제공해야 [!DNL Platform]합니다.
 
 | 자격 증명 | 설명 |
 | ---------- | ----------- |
@@ -42,25 +42,25 @@ SQL Server [를 시작하는 방법에 대한 자세한 내용은 이 문서를]
 
 ## SQL Server 계정 연결
 
-필요한 자격 증명을 수집했으면 아래 절차에 따라 새 인바운드 기본 연결을 만들어 SQL Server 계정을 Platform에 연결할 수 있습니다.
+필요한 자격 증명을 수집했으면 아래 절차에 따라 새 인바운드 기본 연결을 만들어 SQL Server 계정을 연결할 수 있습니다 [!DNL Platform].
 
-Adobe Experience Platform에 <a href="https://platform.adobe.com" target="_blank">로그인한</a> 다음 왼쪽 탐색 **모음에서** 소스 *를 선택하여* 소스 작업 영역에액세스합니다. [ *카탈로그* ] 화면에는 인바운드 기본 연결을 만들 수 있는 다양한 소스가 표시되며, 각 소스에는 연관된 기존 기본 연결의 수가 표시됩니다.
+Adobe Experience Platform에 <a href="https://platform.adobe.com" target="_blank">로그인한</a> 다음 왼쪽 탐색 **[!UICONTROL 모음에서]** 소스 *[!UICONTROL 를 선택하여]* 소스 작업 영역에액세스합니다. [ *[!UICONTROL 카탈로그]* ] 화면에는 인바운드 기본 연결을 만들 수 있는 다양한 소스가 표시되며, 각 소스에는 연관된 기존 기본 연결의 수가 표시됩니다.
 
-[ *데이터베이스* ] 범주 아래에서 **Microsoft SQL Server** 를 선택하여 화면 오른쪽에 정보 막대를 표시합니다. 정보 표시줄에는 선택한 소스에 대한 간단한 설명과 소스와 연결하거나 설명서를 보는 옵션이 제공됩니다. 새 인바운드 기본 연결을 만들려면 **Connect 소스를 선택합니다**.
+[ *[!UICONTROL 데이터베이스]* ] 범주 아래에서 **[!UICONTROL Microsoft SQL Server]** 를 선택하여 화면 오른쪽에 정보 막대를 표시합니다. 정보 표시줄에는 선택한 소스에 대한 간단한 설명과 소스와 연결하거나 설명서를 보는 옵션이 제공됩니다. 새 인바운드 기본 연결을 만들려면 **[!UICONTROL Connect 소스를 선택합니다]**.
 
 ![](../../../../images/tutorials/create/microsoft-sql-server/catalog.png)
 
-[ *Microsoft SQL Server에* 연결] 페이지가 나타납니다. 이 페이지에서 새 자격 증명이나 기존 자격 증명을 사용할 수 있습니다.
+[ *[!UICONTROL Microsoft SQL Server에]* 연결] 페이지가 나타납니다. 이 페이지에서 새 자격 증명이나 기존 자격 증명을 사용할 수 있습니다.
 
 ### 새 계정
 
-새 자격 증명을 사용 중인 경우 **새 계정을 선택합니다**. 표시되는 입력 양식에서 이름, 선택적 설명 및 SQL Server 자격 증명을 사용하여 기본 연결을 제공합니다. 완료되면 **Connect를** 선택한 다음 새 기본 연결이 설정될 때까지 잠시 기다려 주십시오.
+새 자격 증명을 사용 중인 경우 **[!UICONTROL 새 계정을 선택합니다]**. 표시되는 입력 양식에서 이름, 선택적 설명 및 SQL Server 자격 증명을 사용하여 기본 연결을 제공합니다. 완료되면 **[!UICONTROL Connect를]** 선택한 다음 새 기본 연결이 설정될 때까지 잠시 기다려 주십시오.
 
 ![](../../../../images/tutorials/create/microsoft-sql-server/new.png)
 
 ### 기존 계정
 
-기존 계정을 연결하려면 연결할 SQL Server 계정을 선택한 다음 다음을 선택하여 **계속** 진행하십시오.
+기존 계정을 연결하려면 연결할 SQL Server 계정을 선택한 다음 다음을 선택하여 **[!UICONTROL 계속]** 진행하십시오.
 
 ![](../../../../images/tutorials/create/microsoft-sql-server/existing.png)
 
