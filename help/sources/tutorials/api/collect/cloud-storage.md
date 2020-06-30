@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 소스 커넥터 및 API를 통해 클라우드 스토리지 데이터 수집
 topic: overview
 translation-type: tm+mt
-source-git-commit: 2a8e8f2deffca06782f0ad9b8154ee763c05f06d
+source-git-commit: 6c6bbfc39b5b17c45d5db53bbec5342430a0941a
 workflow-type: tm+mt
-source-wordcount: '1689'
+source-wordcount: '1628'
 ht-degree: 1%
 
 ---
@@ -14,38 +14,38 @@ ht-degree: 1%
 
 # 소스 커넥터 및 API를 통해 클라우드 스토리지 데이터 수집
 
-Flow Service는 Adobe Experience Platform에서 다양한 소스의 고객 데이터를 수집하고 중앙에서 관리하는 데 사용됩니다. 이 서비스는 지원되는 모든 소스가 연결되어 있는 사용자 인터페이스와 RESTful API를 제공합니다.
+[!DNL Flow Service] 는 Adobe Experience Platform 내의 다양한 소스에서 수집된 고객 데이터를 수집하고 중앙 집중화하는 데 사용됩니다. 이 서비스는 지원되는 모든 소스가 연결되어 있는 사용자 인터페이스와 RESTful API를 제공합니다.
 
-이 자습서에서는 타사 클라우드 저장소에서 데이터를 검색하고 소스 커넥터 및 API를 통해 플랫폼으로 가져오는 단계를 다룹니다.
+이 자습서에서는 타사 클라우드 저장소에서 데이터를 검색하고 소스 커넥터 및 API를 [!DNL Platform] 통해 데이터를 가져오는 단계를 다룹니다.
 
 ## 시작하기
 
-이 자습서에서는 파일의 경로 및 구조를 포함하여 플랫폼에 가져오려는 파일에 대한 정보와 유효한 연결을 통해 타사 클라우드 스토리지에 액세스해야 합니다. 이 정보가 없는 경우 이 튜토리얼을 시작하기 전에 Flow Service API를 사용하여 타사 클라우드 스토리지 [를 탐색하는 방법을](../explore/cloud-storage.md) 참조하십시오.
+이 자습서에서는 파일의 경로 및 구조를 [!DNL Platform]포함하여 가져오려는 파일에 대한 정보와 유효한 연결을 통해 타사 클라우드 스토리지에 액세스해야 합니다. 이 정보가 없는 경우 이 튜토리얼을 시작하기 전에 Flow Service API를 사용하여 타사 클라우드 스토리지 [를 탐색하는 방법을](../explore/cloud-storage.md) 참조하십시오.
 
-또한 이 튜토리얼을 사용하려면 Adobe Experience Platform의 다음 구성 요소에 대해 제대로 이해해야 합니다.
+또한 이 자습서에서는 다음과 같은 Adobe Experience Platform 구성 요소에 대해 작업해야 합니다.
 
-- [XDM(Experience Data Model) 시스템](../../../../xdm/home.md): 고객 경험 데이터를 구성하는 표준 프레임워크
+- [XDM(Experience Data Model) 시스템](../../../../xdm/home.md): Experience Platform이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
    - [스키마 컴포지션의 기본 사항](../../../../xdm/schema/composition.md): 스키마 컴포지션의 주요 원칙 및 모범 사례 등 XDM 스키마의 기본 구성 요소에 대해 알아봅니다.
    - [스키마 레지스트리 개발자 가이드](../../../../xdm/api/getting-started.md): 스키마 레지스트리 API에 대한 호출을 성공적으로 수행하기 위해 알아야 하는 중요한 정보를 포함합니다. 여기에는 사용자 `{TENANT_ID}`, &quot;컨테이너&quot;의 개념 및 요청 시 필요한 헤더가 포함됩니다(수락 헤더와 가능한 값에 특별히 주의).
-- [카탈로그 서비스](../../../../catalog/home.md): Catalog는 Experience Platform 내의 데이터 위치 및 계열에 대한 기록 시스템입니다.
-- [일괄 처리](../../../../ingestion/batch-ingestion/overview.md): 일괄 처리 통합 API를 사용하면 데이터를 일괄 처리 파일로 경험 플랫폼에 인제스트할 수 있습니다.
-- [샌드박스](../../../../sandboxes/home.md): 경험 플랫폼은 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되도록 단일 플랫폼 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
+- [카탈로그 서비스](../../../../catalog/home.md): 카탈로그는 내부 데이터 위치 및 계열에 대한 기록 시스템이다 [!DNL Experience Platform].
+- [일괄 처리](../../../../ingestion/batch-ingestion/overview.md): 일괄 처리 통합 API를 사용하면 데이터를 일괄 처리 파일 [!DNL Experience Platform] 로 인제스트할 수 있습니다.
+- [샌드박스](../../../../sandboxes/home.md): [!DNL Experience Platform] 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되도록 단일 [!DNL Platform] 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
 
-다음 섹션에서는 Flow Service API를 사용하여 클라우드 스토리지에 성공적으로 연결하려면 알아야 할 추가 정보를 제공합니다.
+다음 섹션에서는 [!DNL Flow Service] API를 사용하여 클라우드 스토리지에 성공적으로 연결하려면 알아야 할 추가 정보를 제공합니다.
 
 ### 샘플 API 호출 읽기
 
-이 자습서에서는 요청의 서식을 지정하는 방법을 보여주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 올바른 형식의 요청 페이로드가 포함됩니다. API 응답으로 반환된 샘플 JSON도 제공됩니다. 샘플 API 호출에 대한 설명서에 사용된 규칙에 대한 자세한 내용은 경험 플랫폼 문제 해결 안내서에서 예제 API 호출 [](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) 읽기를 참조하십시오.
+이 자습서에서는 요청의 서식을 지정하는 방법을 보여주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 올바른 형식의 요청 페이로드가 포함됩니다. API 응답으로 반환된 샘플 JSON도 제공됩니다. 샘플 API 호출 설명서에 사용된 규칙에 대한 자세한 내용은 문제 해결 안내서의 예제 API 호출 [을 읽는](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) 방법에 대한 섹션을 [!DNL Experience Platform] 참조하십시오.
 
 ### 필수 헤더에 대한 값 수집
 
-플랫폼 API를 호출하려면 먼저 [인증 자습서를 완료해야 합니다](../../../../tutorials/authentication.md). 인증 자습서를 완료하면 아래와 같이 모든 경험 플랫폼 API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
+API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 합니다](../../../../tutorials/authentication.md). 인증 자습서를 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
 
 - 인증: 무기명 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Flow Service에 속하는 리소스를 비롯하여 경험 플랫폼의 모든 리소스는 특정 가상 샌드박스와 분리됩니다. 플랫폼 API에 대한 모든 요청에는 작업이 수행할 샌드박스의 이름을 지정하는 헤더가 필요합니다.
+에 속하는 리소스를 [!DNL Experience Platform]포함한 모든 리소스 [!DNL Flow Service]는 특정 가상 샌드박스와 분리됩니다. API에 대한 모든 [!DNL Platform] 요청에는 작업이 수행할 샌드박스의 이름을 지정하는 헤더가 필요합니다.
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -55,7 +55,7 @@ Flow Service에 속하는 리소스를 비롯하여 경험 플랫폼의 모든 �
 
 ## 임시 XDM 클래스 및 스키마 만들기
 
-소스 커넥터를 통해 외부 데이터를 플랫폼으로 가져오려면 원시 소스 데이터에 대해 임시 XDM 클래스 및 스키마를 만들어야 합니다.
+소스 커넥터를 [!DNL Platform] 통해 외부 데이터를 가져오려면 원시 소스 데이터에 대해 임시 XDM 클래스 및 스키마를 만들어야 합니다.
 
 애드혹 클래스 및 스키마를 만들려면 [애드혹 스키마 자습서에 설명된 단계를 따릅니다](../../../../xdm/tutorials/ad-hoc.md). 애드혹 클래스를 만들 때 소스 데이터에 있는 모든 필드는 요청 본문 내에 설명되어야 합니다.
 
@@ -63,7 +63,7 @@ Flow Service에 속하는 리소스를 비롯하여 경험 플랫폼의 모든 �
 
 ## 소스 연결 만들기 {#source}
 
-임시 XDM 스키마를 만든 경우 이제 Flow Service API에 대한 POST 요청을 사용하여 소스 연결을 만들 수 있습니다. 소스 연결은 연결 ID, 소스 데이터 파일 및 소스 데이터를 설명하는 스키마에 대한 참조로 구성됩니다.
+임시 XDM 스키마를 만든 경우 이제 API에 대한 POST 요청을 사용하여 소스 연결을 만들 수 [!DNL Flow Service] 있습니다. 소스 연결은 연결 ID, 소스 데이터 파일 및 소스 데이터를 설명하는 스키마에 대한 참조로 구성됩니다.
 
 소스 연결을 만들려면 데이터 형식 특성에 대한 열거형 값도 정의해야 합니다.
 
@@ -135,11 +135,11 @@ curl -X POST \
 
 ## 대상 XDM 스키마 만들기 {#target}
 
-이전 단계에서는 소스 데이터를 구조화하기 위해 임시 XDM 스키마를 만들었습니다. 소스 데이터를 플랫폼에서 사용하려면 필요에 따라 소스 데이터를 구조화하기 위해 대상 스키마를 만들어야 합니다. 그런 다음 대상 스키마를 사용하여 소스 데이터가 포함된 플랫폼 데이터 세트를 만듭니다.
+이전 단계에서는 소스 데이터를 구조화하기 위해 임시 XDM 스키마를 만들었습니다. 소스 데이터를 사용하려면 필요에 따라 소스 데이터 [!DNL Platform]를 구조화하기 위해 대상 스키마를 만들어야 합니다. 그런 다음 대상 스키마를 사용하여 소스 데이터가 포함된 [!DNL Platform] 데이터 세트를 만듭니다.
 
 대상 XDM 스키마는 스키마 레지스트리 API에 대한 POST 요청을 수행하여 [만들 수 있습니다](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
 
-경험 플랫폼에서 사용자 인터페이스를 사용하려는 경우 스키마 편집기 자습서 [](../../../../xdm/tutorials/create-schema-ui.md) 는 스키마 편집기에서 유사한 작업을 수행하기 위한 단계별 지침을 제공합니다.
+사용자 인터페이스를 에서 사용하려는 경우 스키마 편집기 자습서 [!DNL Experience Platform]는 스키마 편집기에서 유사한 작업 [](../../../../xdm/tutorials/create-schema-ui.md) 을 수행하기 위한 단계별 지침을 제공합니다.
 
 **API 형식**
 
@@ -298,7 +298,7 @@ curl -X POST \
 
 대상 연결은 인제스트된 데이터가 들어오는 대상에 대한 연결을 나타냅니다. 대상 연결을 만들려면 데이터 호수와 관련된 고정 연결 사양 ID를 제공해야 합니다. 이 연결 사양 ID: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
-이제 대상 스키마의 고유한 식별자를 데이터 세트에 사용하고 데이터 호수에 대한 연결 사양 ID를 가집니다. 이러한 식별자를 사용하여 Flow Service API를 사용하여 대상 연결을 만들어 인바운드 소스 데이터를 포함할 데이터 세트를 지정할 수 있습니다.
+이제 대상 스키마의 고유한 식별자를 데이터 세트에 사용하고 데이터 호수에 대한 연결 사양 ID를 가집니다. 이러한 식별자를 사용하여 [!DNL Flow Service] API를 사용하여 대상 연결을 만들어 인바운드 소스 데이터를 포함할 데이터 세트를 지정할 수 있습니다.
 
 **API 형식**
 
@@ -435,7 +435,7 @@ curl -X POST \
 
 ## 데이터 흐름 사양 검색 {#specs}
 
-데이터 프롤은 소스에서 데이터를 수집하고 플랫폼으로 가져와야 합니다. 데이터 흐름을 만들려면 먼저 클라우드 스토리지 데이터 수집을 담당하는 데이터 흐름 사양을 얻어야 합니다.
+데이터 프롤은 소스에서 데이터를 수집하고 이를 데이터 센터로 가져와야 합니다 [!DNL Platform]. 데이터 흐름을 만들려면 먼저 클라우드 스토리지 데이터 수집을 담당하는 데이터 흐름 사양을 얻어야 합니다.
 
 **API 형식**
 
@@ -455,7 +455,7 @@ curl -X GET \
 
 **응답**
 
-성공적인 응답으로 클라우드 스토리지의 데이터를 Platform으로 가져오는 작업을 담당하는 데이터 흐름 사양의 세부 정보를 반환합니다. 응답에는 고유한 흐름 사양 ID가 포함됩니다. 이 ID는 새 데이터 흐름을 만들려면 다음 단계에서 필요합니다.
+성공적인 응답으로 클라우드 스토리지의 데이터를 데이터 흐름 사양의 세부 정보를 반환합니다 [!DNL Platform]. 응답에는 고유한 흐름 사양 ID가 포함됩니다. 이 ID는 새 데이터 흐름을 만들려면 다음 단계에서 필요합니다.
 
 ```json
 {
@@ -587,7 +587,7 @@ curl -X GET \
 클라우드 스토리지 데이터를 수집하는 마지막 단계는 데이터 흐름을 만드는 것입니다. 현재 다음과 같은 필수 값이 준비되었습니다.
 
 - [원본 연결 ID](#source)
-- [대상 연결 ID](#target)
+- [Target 연결 ID](#target)
 - [매핑 ID](#mapping)
 - [데이터 흐름 사양 ID](#specs)
 
@@ -663,7 +663,7 @@ curl -X POST \
 
 ## 다음 단계
 
-이 튜토리얼을 따라 소스 커넥터를 만들어 일정에 따라 클라우드 스토리지의 데이터를 수집합니다. 이제 실시간 고객 프로필 및 데이터 과학 작업 공간과 같은 다운스트림 플랫폼 서비스에서 들어오는 데이터를 사용할 수 있습니다. 자세한 내용은 다음 문서를 참조하십시오.
+이 튜토리얼을 따라 소스 커넥터를 만들어 일정에 따라 클라우드 스토리지의 데이터를 수집합니다. 이제 및 같은 다운스트림 [!DNL Platform] 서비스에서 들어오는 데이터를 사용할 수 [!DNL Real-time Customer Profile] 있습니다 [!DNL Data Science Workspace]. 자세한 내용은 다음 문서를 참조하십시오.
 
 - [실시간 고객 프로필 개요](../../../../profile/home.md)
 - [데이터 과학 작업 공간 개요](../../../../data-science-workspace/home.md)
@@ -676,12 +676,12 @@ curl -X POST \
 
 | 커넥터 이름 | 연결 사양 |
 | -------------- | --------------- |
-| Amazon S3(S3) | `ecadc60c-7455-4d87-84dc-2a0e293d997b` |
-| Amazon Kinesis(Kinesis) | `86043421-563b-46ec-8e6c-e23184711bf6` |
-| Azure Blob(Blob) | `4c10e202-c428-4796-9208-5f1f5732b1cf` |
-| Azure Data Lake Storage Gen2(ADLS Gen2) | `0ed90a81-07f4-4586-8190-b40eccef1c5a` |
-| Azure 이벤트 허브(이벤트 허브) | `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
-| Azure 파일 저장소 | `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8` |
-| Google 클라우드 스토리지 | `32e8f412-cdf7-464c-9885-78184cb113fd` |
+| [!DNL Amazon S3] (S3) | `ecadc60c-7455-4d87-84dc-2a0e293d997b` |
+| [!DNL Amazon Kinesis] (Kinesis) | `86043421-563b-46ec-8e6c-e23184711bf6` |
+| [!DNL Azure Blob] (물방울) | `4c10e202-c428-4796-9208-5f1f5732b1cf` |
+| [!DNL Azure Data Lake Storage Gen2] (ADLS Gen2) | `0ed90a81-07f4-4586-8190-b40eccef1c5a` |
+| [!DNL Azure Event Hubs] (이벤트 허브) | `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
+| [!DNL Azure File Storage] | `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8` |
+| [!DNL Google Cloud Storage] | `32e8f412-cdf7-464c-9885-78184cb113fd` |
 | HDFS | `54e221aa-d342-4707-bcff-7a4bceef0001` |
 | SFTP | `bf367b0d-3d9b-4060-b67b-0d3d9bd06094` |
