@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 기계 학습 모델 연습 만들기 및 게시
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
 workflow-type: tm+mt
-source-wordcount: '1582'
+source-wordcount: '1542'
 ht-degree: 0%
 
 ---
@@ -18,9 +18,9 @@ ht-degree: 0%
 
 온라인 소매 웹 사이트를 소유하고 있다고 가정해 보십시오. 고객이 소매 웹 사이트에서 쇼핑할 때 개인화된 제품 권장 사항을 제시하여 비즈니스에 제공하는 다양한 기타 제품을 표시하고 싶을 것입니다. 웹 사이트 존재의 기간 동안 고객 데이터를 지속적으로 수집하여 이 데이터를 통해 맞춤형 제품 추천을 생성하고자 합니다.
 
-[!DNL Adobe Experience Platform] 데이터 과학 작업 공간은 미리 작성된 [제품 추천 레시피를 사용하여 목표를 달성할 수 있는 방법을 제공합니다](../pre-built-recipes/product-recommendations.md). 이 튜토리얼을 따라 소매 데이터에 액세스하고, 이해하고, 기계 학습 모델을 만들고, 최적화하고, 데이터 과학 작업 공간에서 통찰력을 생성하는 방법을 확인하십시오.
+[!DNL Adobe Experience Platform] [!DNL Data Science Workspace] 사전 작성된 [제품 추천 레시피를 사용하여 목표를 달성할 수 있는 방법을 제공합니다](../pre-built-recipes/product-recommendations.md). 이 튜토리얼에 따라 소매 데이터에 액세스하고 이를 이해하며 기계 학습 모델을 생성 및 최적화하고 인사이트를 생성하는 방법을 확인하십시오 [!DNL Data Science Workspace].
 
-이 자습서는 데이터 과학 작업 영역의 작업 과정을 반영하고, 머신 러닝 모델을 만들기 위한 다음 단계를 다룹니다.
+이 자습서는 기계 학습 모델 [!DNL Data Science Workspace]을 만들기 위한 다음 단계에 대해 설명합니다.
 
 1. [데이터 준비](#prepare-your-data)
 2. [모델 작성](#author-your-model)
@@ -31,7 +31,7 @@ ht-degree: 0%
 
 이 튜토리얼을 시작하기 전에 다음 전제 조건이 필요합니다.
 
-* 액세스 권한 [!DNL Adobe Experience Platform]. Experience Platform에서 IMS 조직에 액세스할 수 없는 경우 시스템 관리자에게 문의하십시오.
+* 액세스 권한 [!DNL Adobe Experience Platform]. 에서 IMS 조직에 액세스할 수 없는 경우 시스템 관리자 [!DNL Experience Platform]에게 연락하여 진행하십시오.
 
 * 활성 에셋. 다음 항목을 제공하려면 계정 담당자에게 문의하십시오.
    * 추천 레서피
@@ -42,21 +42,21 @@ ht-degree: 0%
    * 골든 데이터 세트 postValues
    * 골든 데이터 집합 스키마
 
-* Adobe 공개 Git 저장소에서 <a href="https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources/Notebooks-Thurs" target="_blank"></a>필요한 세 개의 Jupiter 노트북 파일을 다운로드하면 이 파일을 사용하여 데이터 과학 작업 공간에서 JupiterLab 워크플로우를 보여줍니다.
+* Adobe [!DNL Jupyter Notebook] 공용 <a href="https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources/Notebooks-Thurs" target="_blank">저장소에서 [!DNL Git] 필요한 세 개</a>파일을 다운로드하면 이 파일을 사용하여 작업 과정을 [!DNL JupyterLab] 보여 줍니다 [!DNL Data Science Workspace].
 
 * 이 튜토리얼에서 사용되는 다음 주요 개념에 대한 작업 이해:
-   * [경험 데이터 모델](../../xdm/home.md): Adobe가 고객 경험 관리를 위해 프로필 및 ExperienceEvent와 같은 표준 스키마를 정의하는 데 주도적인 노력을 기울입니다.
+   * [!DNL Experience Data Model](../../xdm/home.md): Adobe가 고객 경험 관리를 위해 ExperienceEvent와 같은 표준 스키마 [!DNL Profile] 를 정의하는 표준화 노력을 기울입니다.
    * 데이터 집합: 실제 데이터를 위한 저장 및 관리 구성 XDM 스키마의 실제 인스턴스화된 [인스턴스입니다](../../xdm/schema/field-dictionary.md).
    * 배치: 데이터 세트는 배치로 구성됩니다. 일괄 처리란 일정 기간 동안 수집된 데이터 집합이며 하나의 단위로 함께 처리됩니다.
-   * JupiterLab: [JupiterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) 은 Project Jupiter를 위한 오픈 소스 웹 기반 인터페이스로, Experience Platform과 긴밀하게 통합되어 있습니다.
+   * [!DNL JupyterLab]: [!DNL JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) 는 프로젝트를 위한 오픈 소스 웹 기반 인터페이스 [!DNL Jupyter] 로 긴밀하게 통합되어 [!DNL Experience Platform]있습니다.
 
 ## 데이터 준비 {#prepare-your-data}
 
-고객에게 개인화된 제품을 추천할 수 있는 기계 학습 모델을 만들려면 웹 사이트에서 이전에 구입한 고객을 분석해야 합니다. 이 섹션에서는 이 데이터를 어떻게 플랫폼에서 인제스트하는지 [!DNL Adobe Analytics]및 이 데이터를 어떻게 시스템 학습 모델에서 사용할 기능 데이터 세트로 변환하는지 설명합니다.
+고객에게 개인화된 제품을 추천할 수 있는 기계 학습 모델을 만들려면 웹 사이트에서 이전에 구입한 고객을 분석해야 합니다. 이 섹션에서는 이 데이터가 어떻게 수집되는지 [!DNL Platform] 와 이 데이터가 기계 학습 모델에 의해 사용되는 기능 데이터 세트로 어떻게 변환되는지 [!DNL Adobe Analytics]살펴봅니다.
 
 ### 데이터 탐색 및 스키마 이해
 
-1. Adobe [Experience Platform에](https://platform.adobe.com/) 로그인한 다음 **[!UICONTROL 데이터 세트를 클릭하여]** 기존 데이터 세트를 모두 나열하고 탐색할 데이터 세트를 선택합니다. 이 경우, Analytics 데이터 세트 **골든 데이터 세트 postValues가 표시됩니다**.
+1. Adobe Experience Platform에 [로그인한 다음](https://platform.adobe.com/) 데이터 **** 세트를 클릭하여 기존 데이터 세트를 모두 나열하고 탐색할 데이터 세트를 선택합니다. 이 경우 데이터 세트 [!DNL Analytics]**골든 데이터 세트 postValues가 표시됩니다**.
    ![](../images/models-recipes/model-walkthrough/datasets_110.png)
 2. 오른쪽 위 **[!UICONTROL 의 데이터 세트]** 미리 보기를 선택하여 샘플 레코드를 검사한 다음 닫기를 **[!UICONTROL 클릭합니다]**.
    ![](../images/models-recipes/model-walkthrough/golden_data_set_110.png)
@@ -67,13 +67,13 @@ ht-degree: 0%
 
 | 데이터 집합 이름 | 스키마 | 설명 |
 | ----- | ----- | ----- |
-| 골든 데이터 세트 postValues | 골든 데이터 집합 스키마 | 웹 사이트의 분석 소스 데이터 |
-| 추천 입력 데이터 집합 | 추천 입력 스키마 | Analytics 데이터는 기능 파이프라인을 사용하여 교육 데이터 세트로 변환됩니다. 이 데이터는 제품 권장 사항 기계 학습 모델을 교육하는 데 사용됩니다. `itemid` 해당 고객이 구매한 제품에 `userid` 해당합니다. |
+| 골든 데이터 세트 postValues | 골든 데이터 집합 스키마 | [!DNL Analytics] 웹 사이트의 소스 데이터 |
+| 추천 입력 데이터 집합 | 추천 입력 스키마 | 이 [!DNL Analytics] 데이터는 기능 파이프라인을 사용하여 교육 데이터 세트로 변환됩니다. 이 데이터는 제품 권장 사항 기계 학습 모델을 교육하는 데 사용됩니다. `itemid` 해당 고객이 구매한 제품에 `userid` 해당합니다. |
 | 추천 출력 데이터 집합 | Recommendations 출력 스키마 | 점수 지정 결과가 저장되는 데이터 세트에 각 고객에 대해 권장되는 제품 목록이 포함됩니다. |
 
 ## 모델 작성 {#author-your-model}
 
-데이터 과학 작업 공간 라이프사이클의 두 번째 구성 요소에는 레서피 및 모델 작성에 포함됩니다. 제품 추천 레시피는 과거 구매 데이터와 머신 러닝을 활용하여 제품 추천을 규모에 맞게 생성하도록 설계되었습니다.
+라이프사이클의 두 번째 구성 요소에는 [!DNL Data Science Workspace] 레서피 및 모델 작성에 포함됩니다. 제품 추천 레시피는 과거 구매 데이터와 머신 러닝을 활용하여 제품 추천을 규모에 맞게 생성하도록 설계되었습니다.
 
 레서피는 특정 문제를 해결하기 위해 고안된 기계 학습 알고리즘과 로직을 포함하고 있어 모델의 기본입니다. 더욱 중요한 것은 레서피 솔루션을 통해 조직 전체에서 머신 러닝을 민주화할 수 있으므로 다른 사용자가 코드를 작성하지 않고도 서로 다른 사용 사례에 맞는 모델을 이용할 수 있습니다.
 
@@ -162,4 +162,4 @@ ht-degree: 0%
 
 제품 추천을 성공적으로 생성했습니다.
 
-이 자습서에서는 기계 학습을 통해 처리되지 않은 원시 데이터를 유용한 정보로 변환하는 방법을 시연하면서 데이터 과학 작업 공간의 워크플로우를 소개합니다. 데이터 과학 작업 공간 사용에 대한 자세한 내용은 소매 판매 스키마 및 데이터 세트 [를 만드는 방법에 대한 다음 가이드를 계속 참조하십시오](./create-retails-sales-dataset.md).
+이 자습서에서는 기계 학습을 통해 처리되지 않은 원시 데이터를 유용한 정보로 변환하는 방법을 [!DNL Data Science Workspace]시연하는 작업 과정을 소개합니다. 사용 방법에 대한 자세한 내용 [!DNL Data Science Workspace]은 소매 판매 스키마 및 데이터 세트 [를 만드는 방법에 대한 다음 가이드를 계속 참조하십시오](./create-retails-sales-dataset.md).
