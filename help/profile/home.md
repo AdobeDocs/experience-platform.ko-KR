@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: 실시간 고객 프로필 개요
 topic: guide
 translation-type: tm+mt
-source-git-commit: e34b0b92a8fdf0986b10753d6c983b66dde42503
+source-git-commit: 4d853dfee931789ca1badd410ce0b4b73c8c2803
 workflow-type: tm+mt
-source-wordcount: '1796'
+source-wordcount: '1795'
 ht-degree: 1%
 
 ---
@@ -54,7 +54,7 @@ Adobe Experience Platform 세그멘테이션 서비스는 개별 고객을 위�
 
 여러 소스에서 데이터를 취합하여 각 개별 고객의 전체 상황을 파악하기 위해 취합하는 경우 병합 정책은 Platform이 데이터의 우선 순위를 매기는 방식과 데이터를 결합해 통합 뷰를 생성하는 데 사용하는 규칙입니다. RESTful API 또는 사용자 인터페이스를 사용하여 새 병합 정책을 만들고 기존 정책을 관리하고 조직에 대한 기본 병합 정책을 설정할 수 있습니다. 실시간 고객 프로필 API를 사용한 병합 정책 작업에 대한 자세한 내용은 [병합 정책 끝점 안내서를 참조하십시오](api/merge-policies.md). Experience Platform UI를 사용하여 병합 정책을 사용하려면 [병합 정책 사용 안내서를 참조하십시오](ui/merge-policies.md).
 
-## (알파) 계산된 속성 구성
+### (알파) 계산된 속성 구성
 
 >[!IMPORTANT]
 >이 문서에 요약된 계산된 속성 기능은 alpha입니다. 설명서 및 기능은 변경될 수 있습니다.
@@ -80,7 +80,7 @@ Adobe Experience Platform 세그멘테이션 서비스는 개별 고객을 위�
 >[!N참고]
 >Analytics Cloud, Marketing Cloud, Advertising Cloud을 비롯한 Adobe 솔루션을 통해 수집된 데이터는 Experience Platform으로 플로우되어 프로필에 수집됩니다.
 
-### 프로필 스트리밍 통합 지표
+### 프로필 수집 지표
 
 통찰력 통찰력을 사용하면 Adobe Experience Platform에서 주요 지표를 표시할 수 있습니다. 다양한 Platform 기능에 대한 Platform 사용량 통계 및 성과 지표 외에도, 들어오는 요청률, 성공적인 통합률, 인제스트된 기록 크기 등에 대한 통찰력을 얻을 수 있도록 해주는 특정 프로필 관련 지표가 있습니다. 자세한 내용은 관찰성 통찰력 개요 [를](../observability/home.md)읽고, 전체 프로필 지표 목록을 보려면 [사용 가능한 지표에 대한 설명서를 참조하십시오](../observability/metrics.md).
 
