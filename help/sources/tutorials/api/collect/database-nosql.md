@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 소스 커넥터 및 API를 통해 타사 데이터베이스의 데이터 수집
 topic: overview
 translation-type: tm+mt
-source-git-commit: 84ea3e45a3db749359f3ce4a0ea25429eee8bb66
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1522'
 ht-degree: 1%
@@ -323,7 +323,9 @@ curl -X POST \
 | `params.dataSetId` | 대상 데이터 집합의 ID입니다. |
 | `connectionSpec.id` | 타사 데이터베이스의 연결 사양 ID. |
 
->[!NOTE] 대상 연결을 만들 때는 타사 소스 커넥터의 기본 연결과 `id` 반대로 기본 연결에 데이터 집합 기본 연결 값을 사용해야 합니다.
+>[!NOTE]
+>
+>대상 연결을 만들 때는 타사 소스 커넥터의 기본 연결과 `id` 반대로 기본 연결에 데이터 집합 기본 연결 값을 사용해야 합니다.
 
 **응답**
 
