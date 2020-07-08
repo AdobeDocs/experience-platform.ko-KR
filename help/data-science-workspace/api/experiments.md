@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 실험
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 76f68fea1bea970bab4c25061527b7ebae33faf3
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '744'
 ht-degree: 4%
@@ -20,7 +20,9 @@ ht-degree: 4%
 
 요청 페이로드에서 이름과 유효한 MLInestment ID를 제공하는 동안 POST 요청을 수행하여 실험을 만들 수 있습니다.
 
->[!NOTE] UI의 모델 교육과 달리, 명시적 API 호출을 통해 실험을 만들면 교육 실행을 자동으로 만들고 실행하지 않습니다.
+>[!NOTE]
+>
+>UI의 모델 교육과 달리, 명시적 API 호출을 통해 실험을 만들면 교육 실행을 자동으로 만들고 실행하지 않습니다.
 
 **API 형식**
 
@@ -242,7 +244,9 @@ curl -X GET \
 
 단일 GET 요청을 수행하고 유효한 실험 ID를 제공하여 특정 실험에 속하는 교육 또는 점수 실행 목록을 검색할 수 있습니다. 결과를 필터링하는 데 도움이 되도록 요청 경로에서 쿼리 매개 변수를 지정할 수 있습니다. 사용 가능한 쿼리 매개 변수의 전체 목록은 자산 검색을 위한 [쿼리 매개 변수의 부록 섹션을 참조하십시오](./appendix.md#query).
 
->[!NOTE] 여러 쿼리 매개 변수를 결합할 때는 앰퍼샌드(&amp;)로 구분해야 합니다.
+>[!NOTE]
+>
+>여러 쿼리 매개 변수를 결합할 때는 앰퍼샌드(&amp;)로 구분해야 합니다.
 
 **API 형식**
 
@@ -301,7 +305,9 @@ curl -X GET \
 
 요청 경로에 대상 실험 ID가 포함된 PUT 요청을 통해 속성을 덮어쓰고 업데이트된 속성이 포함된 JSON 페이로드를 제공함으로써 기존 실험을 업데이트할 수 있습니다.
 
->[!TIP] 이 PUT 요청의 성공을 보장하기 위해, 먼저 GET 요청을 수행하여 ID로 실험을 [검색하는 것이 좋습니다](#retrieve-specific). 그런 다음 반환된 JSON 개체를 수정 및 업데이트하고 수정된 JSON 개체 전체를 PUT 요청의 페이로드로 적용합니다.
+>[!TIP]
+>
+>이 PUT 요청의 성공을 보장하기 위해, 먼저 GET 요청을 수행하여 ID로 실험을 [검색하는 것이 좋습니다](#retrieve-specific). 그런 다음 반환된 JSON 개체를 수정 및 업데이트하고 수정된 JSON 개체 전체를 PUT 요청의 페이로드로 적용합니다.
 
 다음 샘플 API 호출은 처음 이러한 속성을 갖는 동안 실험 이름을 업데이트합니다.
 
