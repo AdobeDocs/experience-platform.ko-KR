@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 노트북으로 데이터 분석
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1702'
 ht-degree: 0%
@@ -50,7 +50,9 @@ UI에서 [!DNL Adobe Experience Platform] 상단 메뉴의 데이터 과학 탭�
 
 ### 데이터 액세스
 
->[!NOTE] 이 `data_access_sdk_python` 는 더 이상 권장되지 않습니다. 코드를 [변환하려면 데이터 액세스 SDK를 Platform SDK로](../authoring/platform-sdk.md) 변환 자습서를 참조하십시오. 이 자습서에서는 아래 단계와 동일한 단계가 적용됩니다.
+>[!NOTE]
+>
+>이 `data_access_sdk_python` 는 더 이상 권장되지 않습니다. 코드를 [변환하려면 데이터 액세스 SDK를 Platform SDK로](../authoring/platform-sdk.md) 변환 자습서를 참조하십시오. 이 자습서에서는 아래 단계와 동일한 단계가 적용됩니다.
 
 외부에서 데이터 [!DNL Adobe Experience Platform] 를 내부적으로 액세스하고, 라이브러리를 사용하여 데이터 집합 및 XDM 스키마와 같은 내부 데이터에 액세스할 수 있습니다. `data_access_sdk_python` 외부 데이터를 위해, 우리는 판다 [!DNL Python] 도서관을 사용할 것이다.
 
@@ -86,7 +88,9 @@ Jupiter 노트북에서는 왼쪽의 **데이터** 탭에서 데이터에 액세
 
 이제 데이터 세트를 마우스 오른쪽 버튼으로 클릭하고 드롭다운에서 &quot;노트북 내 데이터 탐색&quot; 옵션을 선택합니다. `Retail-Training-<your-alias>` 전자 필기장에 실행 가능한 코드 항목이 나타납니다.
 
->[!TIP] 코드를 변환하려면 [!DNL Platform SDK](../authoring/platform-sdk.md) 가이드를 참조하십시오.
+>[!TIP]
+>
+>코드를 변환하려면 [!DNL Platform SDK](../authoring/platform-sdk.md) 가이드를 참조하십시오.
 
 ```PYTHON
 from data_access_sdk_python.reader import DataSetReader
@@ -162,7 +166,7 @@ df.describe()
 
 [판다들은](https://pandas.pydata.org/) 주로 통합된 색인 작성 방식으로 데이터를 조작할 수 있는 DataFrame 객체에 사용됩니다. 그러나 판다들은 또한 마트플로립을 기반으로 하는 내장된 플롯 기능도 포함한다.
 
-[seabn](https://seaborn.pydata.org/) is a package build on top of matplotlib. 기본 그래프를 보다 시각적으로 매력적으로 만들고 복잡한 그래프를 간단하게 만드는 것을 목표로 삼았습니다.
+[seabn](https://seaborn.pydata.org/) is a package build on top of matplotlib. 기본 그래프를 보다 시각적으로 매력적으로 만들고 복잡한 그래프 생성을 간소화하는 것이 주요 목표입니다.
 
 [gplot](https://ggplot2.tidyverse.org/) is a package also built on top of matplotlib. 그러나 주요 차이점은 공구는 R용 ggplot2 포트라는 것입니다. 탐색과 유사하게, 목표는 매트플로립 시 개선입니다. R용 ggplot2에 익숙한 사용자는 이 라이브러리를 고려해야 합니다.
 
