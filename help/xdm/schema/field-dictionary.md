@@ -4,7 +4,7 @@ solution: Experience Platform
 title: XDM(Experience Data Model) 필드 사전
 topic: overview
 translation-type: tm+mt
-source-git-commit: b3fa5a17c3a5c2406d368d165da63f2f8c01154d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '25199'
 ht-degree: 3%
@@ -23,7 +23,9 @@ XDM(경험 데이터 모델)은 Adobe Experience Platform 스키마를 작성할
 
 스키마 편집기 자습서에 표시된 대로 스키마 편집기의 검색 기능을 사용하여 이러한 리소스에 대한 세부 정보를 볼 [수 있습니다](../tutorials/create-schema-ui.md).
 
->[!NOTE] 필드가 &quot;**사용되지**&#x200B;않음&quot;으로 표시된 경우, 새 구현에서 더 이상 사용되지 않습니다. 이 필드는 이전 버전과의 호환성을 위해 계속 사용할 수 있지만 향후 릴리스에서는 더 이상 지원되지 않습니다.
+>[!NOTE]
+>
+>필드가 &quot;**사용되지**&#x200B;않음&quot;으로 표시된 경우, 새 구현에서 더 이상 사용되지 않습니다. 이 필드는 이전 버전과의 호환성을 위해 계속 사용할 수 있지만 향후 릴리스에서는 더 이상 지원되지 않습니다.
 
 | 필드 이름 | Title | 설명 | 유형 | 형식 | XDM 유형 | 포함된 제품 |
 |----------|----|------|--------|-----|-----------|--------------|
@@ -97,7 +99,7 @@ XDM(경험 데이터 모델)은 Adobe Experience Platform 스키마를 작성할
 | xdm:bitrateAverage | 평균 비트율 | 재생 세션 중에 발생한 재생 기간과 관련된 모든 비트 전송률 값의 가중 평균입니다. | 개체 |  | 개체 | https://ns.adobe.com/experience/adcloud-experienceevent, https://ns.adobe.com/experience/analytics-experienceevent, https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/target-experienceevent, https://ns.adobe.com/xdm/context/experienceevent-media, https://ns.adobe.com/xdm/context/media-timed-asset-view-details |
 | xdm:bitrateChanges | 비트율 변경 | 재생 세션 중에 발생한 비트 전송률 변경 이벤트 수입니다. | 개체 |  | 개체 | https://ns.adobe.com/experience/adcloud-experienceevent, https://ns.adobe.com/experience/analytics-experienceevent, https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/target-experienceevent, https://ns.adobe.com/xdm/context/experienceevent-media, https://ns.adobe.com/xdm/context/media-timed-asset-view-details |
 | xdm:바운스 | 바운스 수 | 수신 시스템을 일시적으로 배달할 수 없는 상태로 반환되는 비동기 메시지입니다. | 개체 |  | 개체 | https://ns.adobe.com/experience/adcloud-experienceevent, https://ns.adobe.com/experience/analytics-experienceevent, https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/campaign/experienceevent-all, https://ns.adobe.com/experience/campaign/mutationevent, https://ns.adobe.com/experience/target-experienceevent, https://ns.adobe.com/xdm/context/experienceevent-directmarketing |
-| xdm:브랜드 | 브랜드 | 마스터/변형 제품의 브랜드. | string |  | string | https://ns.adobe.com/xdm/context/product |
+| xdm:브랜드 | 브랜드 | Brand of the 기본/Variant products. | string |  | string | https://ns.adobe.com/xdm/context/product |
 | xdm:broadcastChannel | 배포 채널 | 컨텐츠가 재생된 배포 채널. | string |  | string | https://ns.adobe.com/experience/adcloud-experienceevent, https://ns.adobe.com/experience/analytics-experienceevent, https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/target-experienceevent, https://ns.adobe.com/xdm/context/experienceevent-media, https://ns.adobe.com/xdm/context/media-timed-asset-view-details |
 | xdm:broadcastContentType | 브로드캐스트 컨텐츠 유형 | 스트림 배달 유형입니다. | string |  | string | https://ns.adobe.com/experience/adcloud-experienceevent, https://ns.adobe.com/experience/analytics-experienceevent, https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/target-experienceevent, https://ns.adobe.com/xdm/context/experienceevent-media, https://ns.adobe.com/xdm/context/media-timed-asset-view-details |
 | xdm:broadcastNetwork | 방송 네트워크 | 프로그래머 네트워크 이름입니다. | string |  | string | https://ns.adobe.com/experience/adcloud-experienceevent, https://ns.adobe.com/experience/analytics-experienceevent, https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/target-experienceevent, https://ns.adobe.com/xdm/context/experienceevent-media, https://ns.adobe.com/xdm/context/media-timed-asset-view-details |
@@ -269,10 +271,10 @@ XDM(경험 데이터 모델)은 Adobe Experience Platform 스키마를 작성할
 | xdm:manufacturerName | 제조업체 이름 | 제품 제조업체 | string |  | string | https://ns.adobe.com/xdm/context/product |
 | xdm:마케팅 | 마케팅 | 터치포인트에서 활성 상태인 마케팅 활동과 관련된 정보. | 개체 |  | 개체 | https://ns.adobe.com/experience/adcloud-experienceevent, https://ns.adobe.com/experience/analytics-experienceevent, https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/target-experienceevent, https://ns.adobe.com/xdm/context/experienceevent-marketing |
 | xdm:marketSegment | 시장 부문 | 조직에서 참여하는 지정된 시장 부문 이는 자유 형식 필드이며 쿼리에 구조화된 값을 사용하거나 속성을 사용하는 것이 `xdm:identifier` 좋습니다. | string |  | string | https://ns.adobe.com/xdm/common/organization |
-| xdm:masterProductDescription | 마스터 제품 설명 | 제품에 대한 설명입니다. | string |  | string | https://ns.adobe.com/xdm/context/product |
-| xdm:masterProductID | 마스터 제품 식별자 | 상거래 백엔드 시스템에 있는 제품의 내부 고유 ID. | string | uri | string | https://ns.adobe.com/xdm/context/product |
-| xdm:masterProductName | 마스터 제품 이름 | 제품의 현지화된 이름입니다. | string |  | string | https://ns.adobe.com/xdm/context/product |
-| xdm:masterProductSKU | 마스터 제품 SKU | 공급업체 또는 제조업체에서 업데이트(Update)하기 위해 할당한 마스터 제품의 고유 SKU(Stock Keeping Unit). | string |  | string | https://ns.adobe.com/xdm/context/product |
+| xdm:masterProductDescription | 제품 기본 설명 | 제품에 대한 설명입니다. | string |  | string | https://ns.adobe.com/xdm/context/product |
+| xdm:masterProductID | 제품 기본 식별자 | 상거래 백엔드 시스템에 있는 제품의 내부 고유 ID. | string | uri | string | https://ns.adobe.com/xdm/context/product |
+| xdm:masterProductName | 제품 기본 이름 | 제품의 현지화된 이름입니다. | string |  | string | https://ns.adobe.com/xdm/context/product |
+| xdm:masterProductSKU | 기본 제품 SKU | 공급업체 또는 제조업체에서 업데이트(Update)하기 위해 할당한 마스터 제품의 고유 SKU(Stock Keeping Unit). | string |  | string | https://ns.adobe.com/xdm/context/product |
 | xdm:measuredAdNotVisible | 측정된 광고 표시 안 함 | 노출 시 보기 가능 라이브러리에 의해 측정된 것처럼 보이지 않는 광고 표시기. | 개체 |  | 개체 | https://ns.adobe.com/experience/adcloud-experienceevent, https://ns.adobe.com/experience/analytics-experienceevent, https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/target-experienceevent, https://ns.adobe.com/xdm/context/advertising, https://ns.adobe.com/xdm/context/experienceevent-advertising |
 | xdm:measuredMuted | 측정된 음소거 | 노출 시 보기 가능 라이브러리에 의해 측정된 음소거 광고의 표시기. | 개체 |  | 개체 | https://ns.adobe.com/experience/adcloud-experienceevent, https://ns.adobe.com/experience/analytics-experienceevent, https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/target-experienceevent, https://ns.adobe.com/xdm/context/advertising, https://ns.adobe.com/xdm/context/experienceevent-advertising |
 | xdm:measuredWindowInactive | 측정된 창 비활성 | 노출 시 보기 가능 라이브러리에 의해 측정된 비활성 창에 표시되는 광고의 표시기. | 개체 |  | 개체 | https://ns.adobe.com/experience/adcloud-experienceevent, https://ns.adobe.com/experience/analytics-experienceevent, https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/target-experienceevent, https://ns.adobe.com/xdm/context/advertising, https://ns.adobe.com/xdm/context/experienceevent-advertising |
