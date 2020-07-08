@@ -1,10 +1,10 @@
 ---
 title: 제품
 seo-title: Adobe Experience Platform 웹 SDK를 사용한 제품 지원
-description: Experience Platform Web SDK가 있는 제품 또는 장바구니를 사용하는 경우 데이터를 추가하는 방법 학습
-seo-description: Experience Platform Web SDK가 있는 제품 또는 장바구니를 사용하는 경우 데이터를 추가하는 방법 학습
+description: Experience Platform 웹 SDK가 있는 제품 또는 장바구니를 가지고 있는 경우 데이터를 추가하는 방법 학습
+seo-description: Experience Platform 웹 SDK가 있는 제품 또는 장바구니를 가지고 있는 경우 데이터를 추가하는 방법 학습
 translation-type: tm+mt
-source-git-commit: 4bff4b20ccc1913151aa1783d5123ffbb141a7d0
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1314'
 ht-degree: 5%
@@ -19,6 +19,8 @@ ht-degree: 5%
 이 문서에서는 ExperienceEvent [Commerce Details 믹싱을](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/experienceevent-commerce.schema.md) 사용합니다. 그 `commerce` 혼합물은 두 부분으로 나뉘어져 있다: 개체 및 배열 `commerce` 을 `productListItems` 참조하십시오. 이 `commerce` 개체를 사용하면 배열에서 어떤 작업이 발생하는지 알 수 `productListItems` 있습니다.
 
 >[!Tip]
+>
+>
 >Adobe Analytics에 익숙한 경우 변수 `commerce` 와 가장 밀접한 관계가 `events` 있습니다. 변수 `productListItems` 와 더 밀접한 관계가 `products` 있습니다.
 
 ## 제품과 관련된 작업
@@ -26,6 +28,8 @@ ht-degree: 5%
 아래는 개체에서 사용할 수 `measures` 있는 `commerce` 목록입니다.
 
 >[!Tip]
+>
+>
 >측정값에는 두 개의 필드가 있습니다. `id` 및 `value`. 대부분의 경우 필드만 사용합니다(예: `value` `'value':1`). 이 `id` 필드에서는 측정값이 전송된 시간을 추적하는 데 사용할 수 있는 고유한 식별자를 설정할 수 있습니다. XDM(Measure) 설명서를 [참조하십시오](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/measure.schema.md).
 
 | **측정** | **권장 사항** | **설명** |
@@ -116,7 +120,7 @@ alloy("sendEvent",{
 | [currencyCode](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmcurrencycode) | 선택 사항입니다 | 제품의 [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 통화입니다. 이 기능은 통화 코드가 다른 제품이 적용되는 경우에만 유용합니다. 예를 들어 장바구니에 구매하거나 추가하는 경우 |
 | [priceTotal](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmpricetotal) | 매우 권장 | 해당되는 경우에만 설정해야 합니다. 예를 들어, 제품의 다른 변형이 가격만 다를 수 `productView` 있으므로 설정할 수 없을 수 `productListAdds`있습니다. |
 | [제품](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmproduct) | 매우 권장 | 제품의 XDM ID. |
-| [productAddMethod](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmproductaddmethod) | 매우 권장 | 방문자가 목록에 제품 항목을 추가하는 데 사용한 방법입니다. 측정값을 사용하여 `productListAdds` 설정하며, 제품이 목록에 추가될 때만 사용해야 합니다. 예 `add to cart button`는, `quick add`및 `upsell`입니다. |
+| [productAddMethod](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmproductaddmethod) | 매우 권장 | 방문자가 목록에 제품 항목을 추가하는 데 사용한 방법입니다. 측정값을 사용하여 `productListAdds` 설정하며, 제품이 목록에 추가될 때만 사용해야 합니다. Examples include `add to cart button`, `quick add`, and `upsell`. |
 | [productName](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmname) | 매우 권장 | 제품의 표시 이름 또는 읽을 수 있는 이름으로 설정됩니다. |
 | [수량](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmquantity) | 매우 권장 | 고객이 제품이 필요하다고 표시한 판매량 설정 `productListAdds`, `productListRemoves`, `purchases`및 `saveForLaters`등을 해야 합니다. |
 | [SKU](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md) | 매우 권장 | 저장 장치. 제품의 고유 식별자입니다. |
