@@ -1,12 +1,15 @@
 ---
 title: Adobe Experience Platform 릴리스 정보
-description: Experience Platform 릴리스 노트(2020년 3월 11일)
+description: Experience Platform 릴리스 노트
 doc-type: release notes
 last-update: March 10, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: e5fa12b92f7006f2c5c428b25f81dade57733498
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '922'
+ht-degree: 5%
 
 ---
 
@@ -18,102 +21,104 @@ source-git-commit: e5fa12b92f7006f2c5c428b25f81dade57733498
 Adobe Experience Platform의 기존 기능 업데이트:
 
 * [데이터 거버넌스](#governance)
-* [데이터 통합](#ingestion)
+* [데이터 수집](#ingestion)
 * [대상](#destinations)
 * [ID 서비스](#identity)
 * [소스](#sources)
 
 ## 데이터 거버넌스 {#governance}
 
-Adobe Experience Platform을 통해 기업은 여러 엔터프라이즈 시스템의 데이터를 통합하여 마케터가 고객을 식별하고 이해하고 고객의 참여를 유도할 수 있습니다. 경험 플랫폼은 데이터 사용 레이블 지정 및 실행(DULE)을 비롯한 엔드 투 엔드 데이터 거버넌스 인프라를 포함하여 플랫폼 내에서 그리고 시스템 간에 데이터를 공유할 때 데이터를 적절하게 사용합니다.
+기업은 Experience Platform을 통해 여러 엔터프라이즈 시스템의 데이터를 취합하여 마케터가 고객을 식별하고 이해하고 고객의 참여를 유도할 수 있습니다. Experience Platform에는 데이터 사용 표시 및 실행(DULE)을 비롯한 엔드 투 엔드 데이터 관리 인프라가 포함되어 있어 Platform 내에서 데이터를 적절하게 사용하고 시스템 간에 공유할 수 있습니다.
 
-Adobe Experience Platform 데이터 거버넌스는 고객 데이터를 관리하고 데이터 사용에 적용되는 규정, 제한 및 정책을 준수하는 데 사용되는 일련의 전략과 기술입니다. Adobe Experience Platform은 카탈로그 작성, 데이터 계보, 데이터 사용 레이블 지정, 데이터 액세스 정책, 마케팅 활동을 위한 데이터 액세스 제어 등 다양한 수준에서 핵심적인 역할을 합니다.
+Adobe Experience Platform 데이터 거버넌스는 고객 데이터를 관리하고 데이터 사용에 적용되는 규정, 제한 및 정책을 준수하는 데 사용되는 일련의 전략과 기술입니다. 카탈로그 작성, 데이터 계보, 데이터 사용 표시, 데이터 액세스 정책, 마케팅 작업을 위한 데이터 액세스 제어 등 다양한 수준에서 Experience Platform 내에서 핵심 역할을 합니다.
 
 **새로운 기능**
 
->[!NOTE] 다음 새로운 기능 중 일부는 현재 베타 버전으로 일부 사용자는 사용할 수 없습니다. 베타 기능은 변경될 수 있습니다.
+>[!NOTE]
+>
+>다음의 일부 새로운 기능은 현재 베타 버전이며 일부 사용자는 사용할 수 없습니다. 베타 기능은 변경될 수 있습니다.
 
 | 기능 | 설명 |
 | ------- | ----------- |
-| 실시간 고객 데이터 플랫폼을 위한 데이터 사용 정책 자동화 | 데이터 사용 정책은 이제 대상에 데이터를 활성화하는 워크플로우에서 적용됩니다. 데이터 거버넌스는 기존 활성화에 영향을 주는 변경 사항(예: 데이터 세트 레이블 변경, 병합 정책, 세그먼트 정의 등)을 수행할 때도 임베드되어 적용됩니다. |
-| 실행을 위한 데이터 계보 | 실시간 CDP에서 데이터 사용 정책을 위반하면 UI에 데이터 계보 정보가 포함된 알림 메시지가 표시되므로 정책을 위반한 이유와 위반 해결을 위해 할 수 있는 작업을 이해할 수 있습니다. |
+| 실시간 고객 데이터 Platform을 위한 데이터 사용 정책 자동 적용 | 이제 데이터 사용 정책은 대상으로 데이터를 활성화하는 워크플로우에서 적용됩니다. 데이터 거버넌스는 기존 활성화에 영향을 주는 변경 사항(데이터 세트 레이블 변경, 병합 정책, 세그먼트 정의 등)을 만들 때도 포함되고 적용됩니다. |
+| 실행을 위한 데이터 계보 | 실시간 CDP에서 데이터 사용 정책을 위반하면 UI에 데이터 계보 정보가 포함된 알림이 표시되어 정책 위반 이유와 위반 해결을 위한 조치를 이해할 수 있습니다. |
 
 
 **알려진 문제**
 
 * 없음
 
-데이터 거버넌스에 대한 자세한 내용은 데이터 거버넌스 [개요를](../../data-governance/home.md)참조하십시오.
+데이터 거버넌스에 대한 자세한 내용은 [데이터 거버넌스 개요를 참조하십시오](../../data-governance/home.md).
 
-## 데이터 통합 {#ingestion}
+## 데이터 수집 {#ingestion}
 
-Adobe Experience Platform은 모든 유형의 데이터와 지연 시간을 인제스트할 수 있는 다양한 기능을 제공합니다. Adobe Experience Platform 데이터 인제스트는 배치 API, 스트리밍 API, 기본 Adobe 커넥터, 데이터 통합 파트너 또는 Adobe Experience Platform UI를 비롯한 데이터 인제스트를 위한 다양한 대체 요소를 제공합니다.
+Adobe Experience Platform은 데이터의 모든 유형과 지연을 인제스트하는 풍부한 기능을 제공합니다. Adobe Experience Platform 데이터 통합은 일괄 처리 API, 스트리밍 API, 기본 Adobe 커넥터, 데이터 통합 파트너 또는 Adobe Experience Platform UI를 비롯한 데이터 인제스트를 위한 다양한 대체 요소를 제공합니다.
 
 **새로운 기능**
 
 | 기능 | 설명 |
 |------- | -----------|
-| 부분 일괄 처리 | 부분 일괄 처리란 오류가 포함된 데이터를 특정 임계값까지 인제스트하는 기능입니다. 이 기능을 사용하면 모든 정확한 데이터를 Adobe Experience Platform으로 성공적으로 인제스트할 수 있고 모든 잘못된 데이터를 별도로 일괄 처리할 수 있습니다. 실패한 배치에는 유효성 검사에 합격하지 않은 이유를 설명하는 세부 사항이 추가됩니다. 부분 일괄 처리에 대한 자세한 내용은 [부분 일괄 처리 통합 문서를](../../ingestion/batch-ingestion/partial.md)참조하십시오. |
+| 부분 일괄 처리 | 부분 일괄 처리란 오류가 포함된 데이터를 특정 임계값까지 인제스트하는 기능입니다. 이 기능을 사용하면 모든 정확한 데이터를 Adobe Experience Platform으로 인제스트할 수 있고 모든 잘못된 데이터를 별도로 일괄 처리할 수 있습니다. 실패한 배치에 유효성 검사에 합격하지 않은 이유를 설명하는 세부 사항이 추가됩니다. 부분 일괄 처리 통합에 대한 자세한 내용은 [부분 일괄 처리 통합 문서에서 확인할 수 있습니다](../../ingestion/batch-ingestion/partial.md). |
 
 **알려진 문제**
 
 * 없음
 
-데이터를 플랫폼으로 인제스트하는 방법에 대한 자세한 내용은 데이터 통합 [설명서를](../../ingestion/home.md)참조하십시오.
+데이터를 Platform으로 인제스트하는 방법에 대한 자세한 내용은 [데이터 수집 설명서를 참조하십시오](../../ingestion/home.md).
 
 
 ## 대상 {#destinations}
 
-Adobe [실시간 고객 데이터 플랫폼에서](../../rtcdp/overview.md)대상은 대상 플랫폼과 사전 구축된 통합으로 이러한 파트너에 대한 데이터를 원활하게 활성화할 수 있습니다.
+실시간 [고객 데이터 Platform](../../rtcdp/overview.md)에서 대상은 대상 플랫폼과 사전 구축된 통합으로 이러한 파트너에게 데이터를 원활하게 제공할 수 있습니다.
 
 **새 대상**
 
-Adobe Experience Platform 데이터를 활성화할 수 있는 새로운 대상을 사용할 수 있습니다. 자세한 내용은 아래를 참조하십시오.
+Adobe Experience Platform 데이터를 활성화할 수 있는 새 대상을 사용할 수 있습니다. 자세한 내용은 아래를 참조하십시오.
 
 | 대상 | 설명 |
 |--- | ---|
-| 클라우드 스토리지 대상 | Adobe Real-time CDP를 사용하면 세그먼트를 데이터 파일로 Amazon S3 또는 SFTP 클라우드 스토리지 위치에 전달할 수 있습니다. 이렇게 하면 CSV 또는 탭으로 구분된 파일을 통해 대상과 프로필 속성을 내부 시스템으로 보낼 수 있습니다. |
-| 광고 대상 | Google 대상 카드가 현재 Adobe 실시간 CDP에서 지원되는 세 가지 다른 Google 플랫폼에 대해 세 개의 대상 카드로 분할됩니다.Google 광고, Google 광고 관리자, Google 디스플레이 및 비디오 360. |
+| 클라우드 스토리지 대상 | Adobe 실시간 CDP는 이제 세그먼트를 데이터 파일로 Amazon S3 또는 SFTP 클라우드 스토리지 위치에 전달할 수 있습니다. 이렇게 하면 CSV 또는 탭으로 구분된 파일을 통해 대상과 프로필 속성을 내부 시스템으로 보낼 수 있습니다. |
+| 광고 대상 | Google 대상 카드가 현재 Adobe 실시간 CDP에서 지원되는 세 가지 다른 Google 플랫폼에 대해 세 개의 대상 카드로 분할됩니다. Google Ads, Google Ad Manager, Google Display &amp; Video 360. |
 
 자세한 내용은 [대상 개요를 참조하십시오](../../rtcdp/destinations/destinations-overview.md)
 
 ## ID 서비스 {#identity}
 
-고객의 기대에 부응하는 디지털 경험을 전달하려면 고객을 완벽하게 이해해야 합니다. 고객 데이터가 서로 다른 시스템에서 단편화되어 있는 경우 이러한 문제로 인해 각 개별 고객은 여러 개의 &quot;ID&quot;가 있는 것처럼 보입니다.
+고객의 기대에 부응하는 디지털 경험을 전달하려면 고객을 완벽하게 이해해야 합니다. 고객 데이터가 서로 다른 시스템에서 분열되어 각각의 개별 고객이 여러 개의 &quot;ID&quot;를 갖는 것처럼 보일 경우 이러한 문제는 더욱 복잡해집니다.
 
-Adobe Experience Platform Identity Service를 사용하면 다양한 디바이스와 시스템에 ID를 통합하여 고객 및 고객의 행동을 보다 정확하게 파악할 수 있으므로 효과적이고 개인화된 경험을 실시간으로 제공할 수 있습니다.
+Adobe Experience Platform ID 서비스를 사용하면 다양한 디바이스와 시스템에 ID를 연결함으로써 고객 행동과 고객의 행동을 보다 정확하게 파악할 수 있으므로 효과적이고 개인화된 경험을 실시간으로 전달할 수 있습니다.
 
 **새로운 기능**
 
 | 기능 | 설명 |
 | ------- | ----------- |
-| 향상된 개인 그래프 | Private Graph 기능이 향상되어 주별 일괄 처리에서 매일 새로 고쳐진 그래프로 그래프 생성 지연을 줄여 Identity Service 고객이 보다 최신 ID 그래프와 링크에 액세스할 수 있습니다. |
+| 향상된 개인 그래프 | 비공개 그래프 기능은 주간 일괄 처리에서 매일 새로 고쳐진 그래프로 그래프 생성 지연을 줄이기 위해 향상되었으며, Identity Service 고객은 보다 최신 ID 그래프와 링크에 액세스할 수 있습니다. |
 
 **알려진 문제**
 
 * 없음
 
-ID 서비스에 대한 자세한 내용은 ID 서비스 [개요를](../../identity-service/home.md)참조하십시오.
+ID 서비스에 대한 자세한 내용은 ID [서비스 개요를 참조하십시오](../../identity-service/home.md).
 
 ## 소스 {#sources}
 
-Adobe Experience Platform을 사용하면 외부 소스에서 데이터를 인제스트할 수 있을 뿐만 아니라 플랫폼 서비스를 사용하여 해당 데이터를 구조화, 레이블 지정 및 향상시킬 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 타사 소프트웨어 및 CRM 시스템과 같은 다양한 소스의 데이터를 인제스트할 수 있습니다.
+Adobe Experience Platform은 외부 소스에서 데이터를 인제스트할 수 있으며 Platform 서비스를 사용하여 해당 데이터를 구조화, 레이블 지정 및 개선할 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 타사 소프트웨어 및 CRM 시스템과 같은 다양한 소스의 데이터를 인제스트할 수 있습니다.
 
-Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 쉽게 설정할 수 있는 인터랙티브한 UI와 RESTful API를 제공합니다. 이러한 소스 연결을 통해 외부 스토리지 시스템 및 CRM 서비스에 인증 및 연결할 수 있고 통합 실행 시간을 설정할 수 있으며 데이터 통합 처리량을 관리할 수 있습니다.
+Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 쉽게 설정할 수 있는 RESTful API와 대화형 UI를 제공합니다. 이러한 소스 연결을 통해 외부 스토리지 시스템 및 CRM 서비스에 인증 및 연결할 수 있고, 통합 실행에 대한 시간을 설정하고, 데이터 통합 처리량을 관리할 수 있습니다.
 
 **새로운 기능**
 
 | 기능 | 설명 |
 | ------- | ----------- |
-| Adobe Audience Manager 커넥터의 사용되지 않는 신호 | Audience Manager의 신호 수준 데이터는 더 이상 전송되지 않습니다. 트레이트 및 세그먼트에 대한 세그먼트 멤버십은 계속 포함됩니다. 이 변경의 결과로 인바운드 데이터 집합이 더 이상 생성되지 않습니다. |
-| 데이터 세트 이름 변경 | Audience Manager 커넥터로 생성된 데이터 세트에 업데이트된 이름과 설명이 있습니다. |
-| Audience Manager에서 프로필 전환 활성화 | 프로파일 전환을 활성화하거나 비활성화하여 데이터 세트를 실시간 고객 프로파일로 승격할 수 있습니다. 기본적으로 토글이 활성화됩니다. |
+| Adobe Audience Manager 커넥터에 대해 사용되지 않는 신호 | Audience Manager의 신호 수준 데이터는 더 이상 전송되지 않습니다. 트레이트 및 세그먼트에 대한 세그먼트 멤버십은 계속 포함됩니다. 이 변경 결과로 인바운드 데이터 집합이 더 이상 생성되지 않습니다. |
+| 데이터 세트 이름 변경 | Audience Manger 커넥터로 생성된 데이터 세트에 업데이트된 이름과 설명이 있습니다. |
+| Audience Manager에서 프로필 전환 활성화 | 데이터 세트를 실시간 고객 프로필로 홍보하기 위해 프로필 전환을 활성화하거나 비활성화할 수 있습니다. 기본적으로 토글이 활성화됩니다. |
 | 클라우드 스토리지 시스템에 대한 UI 지원 | UI에서 Azure Data Lake Storage Gen2의 새 원본 커넥터입니다. |
-| CRM 시스템에 대한 UI 지원 | UI에서 HubSpot, Salesforce Service Cloud 및 ServiceNow용 새로운 소스 커넥터 |
-| 데이터베이스 시스템에 대한 UI 지원 | AWS Redshift, Google BigQuery, MariaDB, Microsoft SQL Server 및 UI의 MySQL용 새 소스 커넥터 |
+| CRM 시스템에 대한 UI 지원 | UI에서 HubSpot, Salesforce Service Cloud 및 ServiceNow의 새로운 소스 커넥터 |
+| 데이터베이스 시스템에 대한 UI 지원 | UI의 새로운 AWS Redshift, Google BigQuery, MariaDB, Microsoft SQL Server 및 MySQL용 소스 커넥터 |
 
 **알려진 문제**
 
 * 없음
 
-소스에 대한 자세한 내용은 [소스 개요를](../../sources/home.md)참조하십시오.
+소스에 대한 자세한 내용은 [소스 개요를 참조하십시오](../../sources/home.md).
