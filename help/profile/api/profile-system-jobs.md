@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
 solution: Adobe Experience Platform
-title: 실시간 고객 프로필 API 개발자 가이드
+title: 프로필 시스템 작업 - 실시간 고객 프로필 API
 topic: guide
 translation-type: tm+mt
-source-git-commit: d464a6b4abd843f5f8545bc3aa8000f379a86c6d
+source-git-commit: d1656635b6d082ce99f1df4e175d8dd69a63a43a
 workflow-type: tm+mt
-source-wordcount: '1501'
+source-wordcount: '1503'
 ht-degree: 2%
 
 ---
 
 
-# 프로필 시스템 작업(요청 삭제)
+# 프로필 시스템 작업 끝점(요청 삭제)
 
 Adobe Experience Platform을 사용하면 여러 소스에서 데이터를 인제스트하고 개별 고객을 위한 강력한 프로파일을 구축할 수 있습니다. Platform으로 인제스트된 데이터는 실시간 고객 프로필 데이터 저장소뿐만 아니라 데이터 레이크에 저장됩니다. 더 이상 필요하지 않거나 오류가 추가된 데이터를 제거하기 위해 프로필 저장소에서 데이터 세트 또는 일괄 처리를 삭제해야 하는 경우가 있습니다. 이를 위해서는 실시간 고객 프로필 API를 사용하여 &quot;삭제 요청&quot;이라고도 하는 프로필 시스템 작업을 만들어야 하며, 이 작업은 필요한 경우 수정, 모니터링 또는 제거할 수도 있습니다.
 
