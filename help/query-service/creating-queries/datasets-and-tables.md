@@ -1,18 +1,23 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: 데이터 세트와 테이블 및 스키마 비교
+title: 데이터 세트와 테이블 및 스키마
 topic: queries
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '183'
+ht-degree: 1%
 
 ---
 
 
-# 데이터 세트와 테이블 및 스키마 비교
+# 데이터 세트와 테이블 및 스키마
 
-Adobe Experience Platform UI에서 사용할 수 [있는](https://platform.adobe.com/datasets)데이터 집합 목록을 검토하여 데이터 집합 이름을 확인합니다.
->[!NOTE] 일부 데이터 집합 이름에는 공백이 있으며 SQL 안전하지 않을 수 있습니다.
+데이터 세트 이름을 준수하기 위해 [Adobe Experience Platform UI에서](https://platform.adobe.com/datasets)사용할 수 있는 데이터 집합 목록을 검토하십시오.
+>[!NOTE]
+>
+>일부 데이터 집합 이름에는 공백이 있고 그렇지 않으면 SQL이 안전하지 않을 수 있습니다.
 
 ![](../images/queries/datasets-and-tables/dataset-names.png)
 
@@ -21,11 +26,11 @@ Adobe Experience Platform UI에서 사용할 수 [있는](https://platform.adobe
 
 ![](../images/queries/datasets-and-tables/schema-information.png)
 
-PSQL 명령줄을 열고 다음에서 연결 세부 정보를 사용합니다.https://platform.adobe.com/query/configuration [](https://platform.adobe.com/query/configuration).
+PSQL 명령줄을 열고 다음에서 연결 세부 정보를 사용합니다. [https://platform.adobe.com/query/configuration](https://platform.adobe.com/query/configuration).
 
 ![](../images/clients/psql/connect-bi.png)
 
-SQL이 있는 플랫폼에서 사용 가능한 테이블을 보려면 `\d` 또는 를 사용할 수 `SHOW TABLES;`있습니다.
+SQL을 사용하여 Platform에서 사용 가능한 테이블을 보려면 `\d` 또는 를 사용할 수 `SHOW TABLES;`있습니다.
 
 
 `\d` 표준 PostgreSQL 보기를 표시합니다.
@@ -39,7 +44,7 @@ SQL이 있는 플랫폼에서 사용 가능한 테이블을 보려면 `\d` 또�
 (2 rows)
 ```
 
-`SHOW TABLES;` 는 보다 자세한 보기를 제공하고 표를 표시하는 사용자 지정 명령이며 플랫폼 UI에 있는 데이터 세트 이름을 나타냅니다.
+`SHOW TABLES;` 는 보다 자세한 보기를 제공하고 표를 표시하는 사용자 지정 명령이며 Platform UI에 있는 데이터 세트 이름입니다.
 
 ```
        name      |        dataSetId         |     dataSet    | description | resolved 
@@ -49,9 +54,11 @@ SQL이 있는 플랫폼에서 사용 가능한 테이블을 보려면 `\d` 또�
 (2 rows)
 ```
 
-테이블의 루트 스키마를 보려면 `\d table_name` 명령을 사용합니다.
+테이블의 루트 스키마를 보려면 명령을 `\d table_name` 사용합니다.
 
->[!NOTE] 표시된 스키마는 대부분 복잡한 루트 필드를 데이터 집합 스키마 UI에서 개체 유형이라고 합니다.
+>[!NOTE]
+>
+>표시된 스키마는 대부분 복잡한 루트 필드를 데이터 세트 스키마 UI에서 개체 유형으로 나타냅니다.
 
 `\d luma_midvalues`
 
@@ -76,7 +83,7 @@ SQL이 있는 플랫폼에서 사용 가능한 테이블을 보려면 `\d` 또�
  search            | search                      |           |          | 
 ```
 
-스키마로 더 자세히 이동하려면 밑줄(`_`)을 사용하여 설명하려는 테이블의 열을 선언합니다. 예, `\d table_name_column`
+스키마로 더 이동하려면 밑줄(`_`)을 사용하여 설명하려는 테이블의 열을 선언합니다. 예, `\d table_name_column`
 
 `\d luma_midvalues_web`
 
