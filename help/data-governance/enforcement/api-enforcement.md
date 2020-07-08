@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 정책 서비스 API를 사용하여 데이터 사용 정책 적용
 topic: enforcement
 translation-type: tm+mt
-source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '875'
 ht-degree: 2%
@@ -16,7 +16,9 @@ ht-degree: 2%
 
 데이터에 대한 데이터 사용 레이블을 만들고 이러한 레이블에 대한 마케팅 작업에 대한 사용 정책을 만들었다면 DULE Policy Service API를 사용하여 데이터 세트에 대해 수행된 마케팅 작업 또는 임의 레이블 그룹이 정책 위반인지 여부를 평가할 수 [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) 있습니다. 그런 다음 API 응답을 기반으로 정책 위반을 처리하도록 자체 내부 프로토콜을 설정할 수 있습니다.
 
->[!NOTE] 기본적으로 상태가 설정된 정책만 평가에 참여할 `ENABLED` 수 있습니다. 정책이 평가에 참여할 수 있도록 `DRAFT` 하려면 요청 경로 `includeDraft=true` 에 쿼리 매개 변수를 포함해야 합니다.
+>[!NOTE]
+>
+>기본적으로 상태가 설정된 정책만 평가에 참여할 `ENABLED` 수 있습니다. 정책이 평가에 참여할 수 있도록 `DRAFT` 하려면 요청 경로 `includeDraft=true` 에 쿼리 매개 변수를 포함해야 합니다.
 
 이 문서에서는 API를 사용하여 다양한 시나리오에서 정책 위반을 확인하는 방법에 대한 단계를 제공합니다. [!DNL Policy Service]
 
@@ -51,7 +53,9 @@ GET /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints?duleLabels={LAB
 
 다음 요청은 레이블 및 `exportToThirdParty` 에 대해 마케팅 작업을 `C1` 테스트합니다 `C3`. 이 자습서에서 이전에 작성한 데이터 사용 정책은 레이블을 해당 정책 표현식에 있는 조건 중 하나로 `C1` `deny` 정의하므로 마케팅 작업에서 정책 위반을 트리거해야 합니다.
 
->[!NOTE] 데이터 사용 레이블은 대/소문자를 구분합니다. 정책 위반은 정책 표현식에 정의된 레이블이 정확히 일치하는 경우에만 발생합니다. 이 예에서 레이블은 `C1` 위반을 트리거하지만 레이블은 그렇지 `c1` 않습니다.
+>[!NOTE]
+>
+>데이터 사용 레이블은 대/소문자를 구분합니다. 정책 위반은 정책 표현식에 정의된 레이블이 정확히 일치하는 경우에만 발생합니다. 이 예에서 레이블은 `C1` 위반을 트리거하지만 레이블은 그렇지 `c1` 않습니다.
 
 ```shell
 curl -X GET \
