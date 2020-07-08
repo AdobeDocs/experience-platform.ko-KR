@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
 solution: Adobe Experience Platform
-title: 실시간 고객 프로필 API 개발자 가이드
+title: 정책 병합 - 실시간 고객 프로필 API
 topic: guide
 translation-type: tm+mt
-source-git-commit: d464a6b4abd843f5f8545bc3aa8000f379a86c6d
+source-git-commit: d1656635b6d082ce99f1df4e175d8dd69a63a43a
 workflow-type: tm+mt
-source-wordcount: '2052'
+source-wordcount: '2053'
 ht-degree: 1%
 
 ---
 
 
-# 정책 병합
+# 정책 병합 끝점
 
 Adobe Experience Platform을 사용하면 여러 소스에서 데이터를 취합하여 각 개별 고객에 대한 전체 상황을 파악할 수 있습니다. 이 데이터를 취합할 때 병합 정책은 Platform에서 데이터의 우선 순위를 결정하는 방법과 데이터를 결합하여 통합 뷰를 생성하는 데 사용하는 규칙입니다. RESTful API 또는 사용자 인터페이스를 사용하여 새 병합 정책을 만들고 기존 정책을 관리하고 조직에 대한 기본 병합 정책을 설정할 수 있습니다. 이 안내서에서는 API를 사용하여 병합 정책을 사용하는 단계를 보여 줍니다. UI를 사용하여 병합 정책을 사용하려면 [병합 정책 사용 안내서를 참조하십시오](../ui/merge-policies.md).
 
@@ -651,7 +651,7 @@ curl -X PUT \
 | `name` | 목록 보기에서 병합 정책을 식별할 수 있는 친숙한 이름입니다. |
 | `identityGraph` | 병합할 관련 ID를 가져올 ID 그래프입니다. |
 | `attributeMerge` | 데이터 충돌 시 프로필 속성 값의 우선 순위를 지정하는 방식입니다. |
-| `schema` | 병합 정책과 연결된 XDM 스키마 클래스입니다. |
+| `schema` | 병합 정책에 연결된 XDM 스키마 클래스입니다. |
 | `default` | 이 병합 정책이 스키마의 기본값인지 여부를 지정합니다. |
 
 자세한 내용은 병합 정책 [구성](#components-of-merge-policies) 요소를 참조하십시오.
