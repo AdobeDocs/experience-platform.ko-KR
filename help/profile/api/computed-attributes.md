@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
 solution: Adobe Experience Platform
-title: 실시간 고객 프로필 API 개발자 가이드
+title: 계산된 속성 - 실시간 고객 프로필 API
 topic: guide
 translation-type: tm+mt
-source-git-commit: d464a6b4abd843f5f8545bc3aa8000f379a86c6d
+source-git-commit: d1656635b6d082ce99f1df4e175d8dd69a63a43a
 workflow-type: tm+mt
 source-wordcount: '2431'
 ht-degree: 1%
@@ -15,7 +15,7 @@ ht-degree: 1%
 # (알파) 계산된 특성 끝점
 
 >[!IMPORTANT]
->The computed attribute functionality outlined in this document is currently in alpha and is not available to all users. 설명서 및 기능은 변경될 수 있습니다.
+>이 문서에 요약된 계산된 속성 기능은 현재 알파에 포함되어 있으며 모든 사용자가 사용할 수 없습니다. 설명서 및 기능은 변경될 수 있습니다.
 
 계산된 속성을 사용하면 다른 값, 계산 및 표현식을 기반으로 필드의 값을 자동으로 계산할 수 있습니다. 계산된 속성은 프로필 수준에서 작동합니다. 즉, 모든 레코드와 이벤트에 대한 값을 합산할 수 있습니다.
 
@@ -33,15 +33,15 @@ Adobe Experience Platform을 사용하면 실시간 고객 프로파일을 생�
 
 프로필에서 수집된 일부 정보는 데이터 필드를 직접 읽을 때 쉽게 이해할 수 있는 반면(예: &quot;이름&quot;) 다른 데이터는 정보를 생성하기 위해 여러 계산을 수행하거나 다른 필드 및 값에 의존해야 합니다(예: &quot;라이프타임 구매 합계&quot;). 이 데이터를 한 눈에 쉽게 파악할 수 있도록 Platform을 사용하면 이러한 참조 및 계산을 자동으로 수행하는 **계산된 속성을** 만들어 적절한 필드에 값을 반환할 수 있습니다.
 
-Computed attributes include creating an expression, or &quot;rule&quot;, that operates on incoming data and stores the resulting value in a profile attribute or event. 표현식을 여러 가지 방법으로 정의할 수 있으므로 규칙이 들어오는 이벤트, 들어오는 이벤트 및 프로필 데이터 또는 들어오는 이벤트, 프로필 데이터 및 내역 이벤트만을 평가하도록 지정할 수 있습니다.
+계산된 속성에는 들어오는 데이터에 대해 작동하고 결과 값을 프로필 속성이나 이벤트에 저장하는 표현식 또는 &quot;규칙&quot;을 만드는 것이 포함됩니다. 표현식을 여러 가지 방법으로 정의할 수 있으므로 규칙이 들어오는 이벤트, 들어오는 이벤트 및 프로필 데이터 또는 들어오는 이벤트, 프로필 데이터 및 내역 이벤트만을 평가하도록 지정할 수 있습니다.
 
 ### 사용 사례
 
-Use cases for computed attributes can range from simple calculations to very complex references. 다음은 계산된 속성에 대한 몇 가지 사용 사례입니다.
+계산된 속성에 대한 사용 사례는 간단한 계산에서 매우 복잡한 참조까지 범위를 지정할 수 있습니다. 다음은 계산된 속성에 대한 몇 가지 사용 사례입니다.
 
-1. **Percentages:** A simple computed attribute could include taking two numeric fields on a record and dividing them to create a percentage. For example, you could take the total number of emails sent to an individual and divide it by the number of emails the individual opens. Looking at the resulting computed attribute field would quickly show the percentage of total emails opened by the individual.
-1. **애플리케이션 사용:** 다른 예로는 사용자가 애플리케이션을 연 횟수를 집계하는 기능이 있습니다. By tracking the total number of application opens, based on individual open events, you could deliver special offers or messages to users on their 100th open, encouraging deeper engagement with your brand.
-1. **Lifetime values:** Gathering running totals, such as a lifetime purchase value for a customer, can be very difficult. This requires updating the historic total each time a new purchase event occurs. 계산된 속성을 사용하면 고객과 관련된 각 성공적인 구매 이벤트에 따라 자동으로 업데이트되는 단일 필드에서 라이프타임 값을 유지하여 보다 쉽게 이 작업을 수행할 수 있습니다.
+1. **백분율:** 단순 계산된 속성에는 레코드에 두 개의 숫자 필드를 가져와 백분율을 만드는 것을 포함할 수 있습니다. 예를 들어 개인에게 보낸 이메일의 총 수를 개별 사용자가 여는 이메일 수로 나눌 수 있습니다. 결과 계산된 속성 필드를 보면 개인이 연 총 이메일의 비율이 빠르게 표시됩니다.
+1. **애플리케이션 사용:** 다른 예로는 사용자가 애플리케이션을 연 횟수를 집계하는 기능이 있습니다. 개별 열린 이벤트에 따라 총 애플리케이션 열기 횟수를 추적하여 10일 열림 시 사용자에게 특별한 제안이나 메시지를 전달함으로써 브랜드에 대한 참여도를 높일 수 있습니다.
+1. **라이프타임 값:** 고객의 라이프타임 구매 값과 같은 실행 총계를 수집하는 것은 매우 어려울 수 있습니다. 이를 위해서는 새 구매 이벤트가 발생할 때마다 내역 합계를 업데이트해야 합니다. 계산된 속성을 사용하면 고객과 관련된 각 성공적인 구매 이벤트에 따라 자동으로 업데이트되는 단일 필드에서 라이프타임 값을 유지하여 보다 쉽게 이 작업을 수행할 수 있습니다.
 
 ## 계산된 속성 구성
 
@@ -50,11 +50,11 @@ Use cases for computed attributes can range from simple calculations to very com
 >[!NOTE]
 >계산된 속성은 Adobe에서 정의한 믹스의 필드에 추가할 수 없습니다. 필드는 `tenant` 네임스페이스 내에 있어야 합니다. 즉, 스키마를 정의하고 추가하는 필드여야 합니다.
 
-계산된 속성 필드를 성공적으로 정의하려면 스키마를 프로필에 대해 활성화해야 하며 스키마를 기반으로 하는 클래스에 대한 조합 스키마의 일부로 나타나야 합니다. 프로필 사용 가능한 스키마 및 조합에 대한 자세한 내용은 프로필 스키마 [활성화 및 조합 스키마 보기에 대한 스키마 부여에 대한 스키마 레지스트리 개발자 가이드 섹션](../../xdm/api/getting-started.md)을 참조하십시오. It is also recommended to review the [section on unions](../../xdm/schema/composition.md) in the schema composition basics documentation.
+계산된 속성 필드를 성공적으로 정의하려면 스키마를 프로필에 대해 활성화해야 하며 스키마를 기반으로 하는 클래스에 대한 조합 스키마의 일부로 나타나야 합니다. 프로필 사용 가능한 스키마 및 조합에 대한 자세한 내용은 프로필 스키마 [활성화 및 조합 스키마 보기에 대한 스키마 부여에 대한 스키마 레지스트리 개발자 가이드 섹션](../../xdm/api/getting-started.md)을 참조하십시오. 또한 스키마 구성 기본 문서에서 [조합의](../../xdm/schema/composition.md) 섹션을 검토하는 것이 좋습니다.
 
 이 자습서의 워크플로우는 프로필 사용 스키마를 사용하며, 계산된 속성 필드가 포함된 새 혼합을 정의하고 올바른 네임스페이스인지 확인하는 단계를 따릅니다. 프로필 사용 스키마 내의 올바른 네임스페이스에 있는 필드가 이미 있는 경우 계산된 속성을 [만드는 단계를 직접 진행할 수 있습니다](#create-a-computed-attribute).
 
-### View a schema
+### 스키마 보기
 
 다음 단계는 Adobe Experience Platform 사용자 인터페이스를 사용하여 스키마를 찾고, 혼합을 추가하고, 필드를 정의하는 단계입니다. 스키마 레지스트리 API를 사용하려면 [스키마 레지스트리 개발자 안내서를](../../xdm/api/getting-started.md) 참조하여 믹스를 만들고, 스키마에 혼합을 추가하고, 실시간 고객 프로필과 함께 사용할 스키마를 활성화하는 방법에 대한 단계를 확인하십시오.
 
@@ -483,6 +483,8 @@ curl -X PATCH \
 API를 사용하여 계산된 속성을 삭제할 수도 있습니다. 이것은 종단점에 DELETE 요청을 하고 요청 경로에서 삭제하려는 계산된 속성의 ID를 포함하여 수행됩니다. `/config/computedAttributes`
 
 >[!N참고]
+>
+>
 >계산된 특성을 둘 이상의 스키마에서 사용 중일 수 있으며 DELETE 작업을 취소할 수 없으므로 삭제할 때는 주의하십시오.
 
 **API 형식**
