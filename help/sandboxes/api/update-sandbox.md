@@ -4,16 +4,21 @@ solution: Experience Platform
 title: 샌드박스 업데이트
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 974e93b1c24493734848151b9be00758f6a84578
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '87'
+ht-degree: 4%
 
 ---
 
 
 # 샌드박스 업데이트
 
-요청 경로에 샌드박스의 샌드박스를 포함하는 PATCH 요청과 요청 페이로드에서 업데이트할 속성을 만들어 샌드박스에서 하나 이상의 필드를 업데이트할 `name` 수 있습니다.
+요청 경로에 샌드박스의 샌드박스를 포함하는 PATCH 요청과 요청 페이로드에서 업데이트할 속성 `name` 을 만들어 샌드박스에서 하나 이상의 필드를 업데이트할 수 있습니다.
 
->[!NOTE] 현재 샌드박스의 `title` 속성만 업데이트할 수 있습니다.
+>[!NOTE]
+>
+>현재 샌드박스의 `title` 속성만 업데이트할 수 있습니다.
 
 **API 형식**
 
