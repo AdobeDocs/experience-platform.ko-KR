@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 데이터 과학 작업 공간 개요
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '2569'
 ht-degree: 0%
@@ -123,7 +123,9 @@ Data Science Workspace는 실험 프로세스에 엄청난 유연성을 제공�
 
 액세스 제어 [!DNL Experience Platform] 는 [Adobe Admin Console을 통해 관리됩니다](https://adminconsole.adobe.com). 이 기능은 Admin Console의 제품 프로필을 활용하므로 사용자에게 사용 권한 및 샌드박스를 연결합니다. 자세한 내용은 [액세스 제어 개요를](../access-control/home.md) 참조하십시오.
 
->[!IMPORTANT] 사용하려면 [!DNL Data Science Workspace]&quot;데이터 과학 작업 공간 관리&quot;  권한이 활성화되어 있어야 합니다.
+>[!IMPORTANT]
+>
+>사용하려면 [!DNL Data Science Workspace]&quot;데이터 과학 작업 공간 관리&quot;  권한이 활성화되어 있어야 합니다.
 
 다음 표에서는 이 권한을 활성화하거나 비활성화하는 효과에 대해 설명합니다.
 
