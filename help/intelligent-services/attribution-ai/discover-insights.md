@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 기여도 AI에서 인사이트 검색
 topic: Attribution AI insights
 translation-type: tm+mt
-source-git-commit: 0ea96de956adb5a6c5286433a547772118c43aee
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1164'
 ht-degree: 1%
@@ -30,7 +30,9 @@ UI [!DNL Adobe Experience Platform] 에서 왼쪽 탐색 **영역에서 서비�
 
 속성 AI 서비스 페이지가 나타납니다. 이 페이지에는 속성 AI의 서비스 인스턴스가 나열되며 인스턴스 이름, 전환 이벤트, 인스턴스 실행 횟수, 마지막 업데이트 상태 등 이러한 인스턴스에 대한 정보가 표시됩니다. 시작하려면 서비스 인스턴스 이름을 클릭합니다.
 
->[!NOTE] 성공적인 점수 실행을 완료한 서비스 인스턴스만 선택할 수 있습니다.
+>[!NOTE]
+>
+>성공적인 점수 실행을 완료한 서비스 인스턴스만 선택할 수 있습니다.
 
 ![인스턴스 만들기](./images/insights/select-service-instance.png)
 
@@ -72,7 +74,9 @@ UI [!DNL Adobe Experience Platform] 에서 왼쪽 탐색 **영역에서 서비�
 
 기여도 분석 AI 인사이트를 통해 데이터를 필터링하고 선택한 필터를 기반으로 UI 시각적 효과를 자동으로 업데이트할 수 있습니다.
 
->[!NOTE] 기본적으로 모든 필터는 &quot;증분 및 영향 *의 기여도 전환&quot;으로 설정된 기여도 모델* 필터를 제외한 &quot;모두&quot;로 설정됩니다.
+>[!NOTE]
+>
+>기본적으로 모든 필터는 &quot;증분 및 영향 *의 기여도 전환&quot;으로 설정된 기여도 모델* 필터를 제외한 &quot;모두&quot;로 설정됩니다.
 
 ### 전환 이벤트
 
@@ -98,11 +102,15 @@ UI [!DNL Adobe Experience Platform] 에서 왼쪽 탐색 **영역에서 서비�
 
 지역 *위치* 필터는 지역 기반 모델을 기반으로 국가 코드를 채웁니다. 데이터에 따라 이 필터가 없거나 없을 수 있습니다.
 
->[!NOTE] 국가 번호는 2자입니다. 전체 목록은 [ISO 3166-1 alpha-2에서 확인할 수 있습니다](https://datahub.io/core/country-list).
+>[!NOTE]
+>
+>국가 번호는 2자입니다. 전체 목록은 [ISO 3166-1 alpha-2에서 확인할 수 있습니다](https://datahub.io/core/country-list).
 
 ### 지역
 
->[!NOTE] 이 필터는 서비스 인스턴스를 만들 때 기여도 AI 사용자 인터페이스 안내서에서 선택적 단계 [지역 기반 모델링을](./user-guide.md#region-based-modeling-optional) 수행한 경우에만 제공됩니다.
+>[!NOTE]
+>
+>이 필터는 서비스 인스턴스를 만들 때 기여도 AI 사용자 인터페이스 안내서에서 선택적 단계 [지역 기반 모델링을](./user-guide.md#region-based-modeling-optional) 수행한 경우에만 제공됩니다.
 
 이 필터를 사용하면 인스턴스 생성 프로세스에서 설정한 모든 영역을 선택할 수 있습니다.
 
