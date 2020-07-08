@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 인증 및 액세스 Experience Platform API
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 280456e68f54f49ce4a0134e226af89ad1f849a4
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '877'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -69,7 +69,9 @@ Admin Console 관리자는 사용자로 제품에 사용자를 추가해야 합�
 
 ## Adobe 개발자 콘솔에서 액세스 자격 증명 생성
 
->[!NOTE] 이제 [Privacy Service 개발자 가이드에서](../privacy-service/api/getting-started.md)이 문서를 팔로우하는 경우 해당 가이드로 돌아가 Privacy Service에 고유한 액세스 자격 증명을 생성할 수 있습니다.
+>[!NOTE]
+>
+>이제 [Privacy Service 개발자 가이드에서](../privacy-service/api/getting-started.md)이 문서를 팔로우하는 경우 해당 가이드로 돌아가 Privacy Service에 고유한 액세스 자격 증명을 생성할 수 있습니다.
 
 Adobe 개발자 콘솔을 사용하여 다음 세 가지 액세스 자격 증명을 생성해야 합니다.
 
