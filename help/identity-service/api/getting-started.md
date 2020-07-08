@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 시작하기
 topic: API guide
 translation-type: tm+mt
-source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '714'
 ht-degree: 1%
@@ -42,7 +42,9 @@ API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] 의 샌드박스에 대한 자세한 내용 [!DNL Platform]은 [샌드박스 개요 설명서를 참조하십시오](../../sandboxes/home.md).
+>[!NOTE]
+>
+>의 샌드박스에 대한 자세한 내용 [!DNL Platform]은 [샌드박스 개요 설명서를 참조하십시오](../../sandboxes/home.md).
 
 페이로드(POST, PUT, PATCH)가 포함된 모든 요청에는 추가 헤더가 필요합니다.
 
@@ -61,7 +63,9 @@ API는 [!DNL Identity Service] 요청 경로의 일부로서 항목을 포함시
 | [!DNL Identity Service] API | https://</span>platform-va7.adobe.</span>io/data/core/identity/{ENDPOINT} | https://</span>platform-nld2.adobe.</span>io/data/core/identity/{ENDPOINT} |
 | [!DNL Identity Namespace] API | https://</span>platform-va7.adobe.</span>io/data/core/idnamespace/{ENDPOINT} | https://</span>platform-nld2.adobe.</span>io/data/core/idnamespace{ENDPOINT} |
 
->[!NOTE] 지역을 지정하지 않은 요청은 잘못된 영역에 대한 호출 라우팅을 초래하거나 예기치 않게 호출이 실패할 수 있습니다.
+>[!NOTE]
+>
+>지역을 지정하지 않은 요청은 잘못된 영역에 대한 호출 라우팅을 초래하거나 예기치 않게 호출이 실패할 수 있습니다.
 
 IMS 조직 프로필 내에서 지역을 찾을 수 없는 경우 시스템 관리자에게 지원을 문의하십시오.
 
@@ -77,7 +81,9 @@ ID가 유지되면 기본 ID 또는 XID라는 ID를 생성하여 해당 ID에 �
 
 이 문서의 예제는 [!DNL Identity Service] API의 전체 기능을 포함하지 않습니다. 전체 API는 [Swagger API 참조를 참조하십시오](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml).
 
->[!NOTE] 요청에서 기본 XID를 사용하는 경우 반환되는 모든 ID는 기본 XID 양식으로 표시됩니다. ID/네임스페이스 양식을 사용하는 것이 좋습니다. 자세한 내용은 ID용 XID [가져오기에 대한 섹션을 참조하십시오](./create-custom-namespace.md).
+>[!NOTE]
+>
+>요청에서 기본 XID를 사용하는 경우 반환되는 모든 ID는 기본 XID 양식으로 표시됩니다. ID/네임스페이스 양식을 사용하는 것이 좋습니다. 자세한 내용은 ID용 XID [가져오기에 대한 섹션을 참조하십시오](./create-custom-namespace.md).
 
 ## 다음 단계
 
