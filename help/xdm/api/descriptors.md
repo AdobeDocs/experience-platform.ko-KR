@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 설명자
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: c3d23ce0081932e61f50d426ac6d98ab7f4dfa3b
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1499'
 ht-degree: 1%
@@ -22,7 +22,9 @@ ht-degree: 1%
 
 이 문서에서는 설명자에 대한 예제 API 호출, 사용 가능한 설명자의 전체 목록 및 각 유형을 정의하는 데 필요한 필드를 제공합니다.
 
->[!NOTE] 설명자는 고유한 수락 헤더가 필요하며 `xed` , 그렇지 않으면 스키마 레지스트리 `xdm`의 다른 위치에서 사용되는 헤더 허용과 매우 비슷합니다. 아래 샘플 호출에는 적절한 수락 머리글이 포함되었지만 정확한 헤더가 사용되고 있는지 확인하기 위해 특별히 주의하십시오.
+>[!NOTE]
+>
+>설명자는 고유한 수락 헤더가 필요하며 `xed` , 그렇지 않으면 스키마 레지스트리 `xdm`의 다른 위치에서 사용되는 헤더 허용과 매우 비슷합니다. 아래 샘플 호출에는 적절한 수락 머리글이 포함되었지만 정확한 헤더가 사용되고 있는지 확인하기 위해 특별히 주의하십시오.
 
 ## 목록 설명자
 
@@ -141,7 +143,7 @@ POST /tenant/descriptors
 
 **요청**
 
-다음 요청은 샘플 스키마의 &quot;이메일 주소&quot; 필드에 ID 설명자를 정의합니다. 그러면 경험 플랫폼이 이메일 주소를 식별자로 사용하여 개인 정보를 연결하는 데 도움이 됩니다.
+다음 요청은 샘플 스키마의 &quot;이메일 주소&quot; 필드에 ID 설명자를 정의합니다. Experience Platform은 이 이메일 주소를 식별자로 사용하여 개인에 대한 정보를 결합하도록 합니다.
 
 ```SHELL
 curl -X POST \
@@ -236,7 +238,7 @@ curl -X PUT \
 
 ## 설명자 삭제
 
-스키마 레지스트리에서 정의한 설명자를 제거해야 하는 경우가 있습니다. 이 작업은 제거할 설명자의 DELETE 요청 `@id` 을 수행하여 수행됩니다.
+스키마 레지스트리에서 정의한 설명자를 제거해야 하는 경우가 있습니다. 이 작업은 제거할 설명자의 `@id` 를 참조하는 DELETE 요청을 수행하여 수행됩니다.
 
 **API 형식**
 
@@ -277,7 +279,7 @@ curl -X DELETE \
 
 #### ID 설명자
 
-ID 설명자는 &quot;sourceSchema&quot;의 &quot;sourceProperty&quot;가 [Adobe Experience Platform Identity Service에 설명된 ID 필드임을 알립니다](../../identity-service/home.md).
+ID 설명자는 &quot;sourceSchema&quot;의 &quot;sourceProperty&quot;가 [Adobe Experience Platform ID 서비스에 설명된 ID 필드임을 나타냅니다](../../identity-service/home.md).
 
 ```json
 {
@@ -334,7 +336,7 @@ ID 설명자는 &quot;sourceSchema&quot;의 &quot;sourceProperty&quot;가 [Adobe
 | `xdm:sourceProperty` | ID가 될 특정 속성의 경로입니다. 경로는 &quot;/&quot;로 시작하고 하나로 끝나지 않아야 합니다. 경로에 &quot;속성&quot;을 포함하지 마십시오(예: &quot;/properties/personalEmail/properties/address&quot; 대신 &quot;/personalEmail/address&quot;를 사용). |
 | `xdm:title` | 제목 사례에 작성된 이 필드에 표시할 새 제목입니다. |
 | `xdm:description` | 선택적인 설명은 제목과 함께 추가할 수 있습니다. |
-| `meta:enum` | 로 표시된 필드가 문자열 필드 `xdm:sourceProperty` 인 경우, 경험 플랫폼 UI에 있는 필드에 대해 제안된 값의 목록을 `meta:enum` 결정합니다. 열거형을 선언하거나 XDM 필드에 대한 데이터 유효성 검사를 제공하지 `meta:enum` 않는다는 점에 유의하십시오.<br><br>Adobe에서 정의한 핵심 XDM 필드에만 사용해야 합니다. 소스 속성이 조직에서 정의한 사용자 지정 필드인 경우 대신 `meta:enum` PATCH 요청을 통해 직접 필드 [속성을 편집해야 합니다](./update-resource.md). |
+| `meta:enum` | 로 표시된 필드 `xdm:sourceProperty` 가 문자열 필드인 경우 Experience Platform UI에서 필드에 대해 제안된 값 목록을 `meta:enum` 결정합니다. 열거형을 선언하거나 XDM 필드에 대한 데이터 유효성 검사를 제공하지 `meta:enum` 않는다는 점에 유의하십시오.<br><br>Adobe에서 정의한 핵심 XDM 필드에만 사용해야 합니다. 소스 속성이 조직에서 정의한 사용자 지정 필드인 경우 대신 `meta:enum` PATCH 요청을 통해 직접 필드 [속성을 편집해야 합니다](./update-resource.md). |
 
 #### 관계 설명자
 
