@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 마케팅 작업
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '536'
 ht-degree: 1%
@@ -154,7 +154,9 @@ PUT /marketingActions/custom/{marketingActionName}
 
 다음과 같은 요청에서 요청 페이로드의 `name` 는 API 호출의 `{marketingActionName}` 와 동일합니다. 읽기 `id` 전용 및 시스템에서 생성된 정책의 정책과 달리 마케팅 작업을 만들려면 마케팅 작업의 _의도된_ 이름을 제공해야 합니다.
 
->[!NOTE] 호출에서 `{marketingActionName}` 를 공급하지 않으면 끝점에 직접 PUT을 수행할 수 없으므로 405 오류(메서드 허용되지 않음)가 `/marketingActions/custom` 발생합니다. 또한 페이로드 `name` 의 내용이 경로의 항목과 일치하지 `{marketingActionName}` 않으면 400 오류(잘못된 요청)가 표시됩니다.
+>[!NOTE]
+>
+>호출에서 `{marketingActionName}` 를 공급하지 않으면 끝점에 직접 PUT을 수행할 수 없으므로 405 오류(메서드 허용되지 않음)가 `/marketingActions/custom` 발생합니다. 또한 페이로드 `name` 의 내용이 경로의 항목과 일치하지 `{marketingActionName}` 않으면 400 오류(잘못된 요청)가 표시됩니다.
 
 ```SHELL
 curl -X PUT \
@@ -197,7 +199,9 @@ curl -X PUT \
 
 제거하려는 마케팅 작업의 일부로 DELETE 요청을 보내 마케팅 작업 `{marketingActionName}` 을 삭제할 수 있습니다.
 
->[!NOTE] 기존 정책에서 참조하는 마케팅 작업은 삭제할 수 없습니다. 그렇게 하려고 하면 삭제하려는 마케팅 작업에 대한 참조를 포함하는 정책(또는 정책)의 `id` (또는 여러 ID)이 포함된 오류 메시지와 함께 400 오류(잘못된 요청)가 발생합니다.
+>[!NOTE]
+>
+>기존 정책에서 참조하는 마케팅 작업은 삭제할 수 없습니다. 그렇게 하려고 하면 삭제하려는 마케팅 작업에 대한 참조를 포함하는 정책(또는 정책)의 `id` (또는 여러 ID)이 포함된 오류 메시지와 함께 400 오류(잘못된 요청)가 발생합니다.
 
 **API 형식**
 
