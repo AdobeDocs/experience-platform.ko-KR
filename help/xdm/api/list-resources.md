@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 리소스 목록
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b4d8a6f8006d55c7aac19d705c6880fec915c147
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '519'
 ht-degree: 2%
@@ -16,7 +16,9 @@ ht-degree: 2%
 
 단일 GET 요청을 수행하여 컨테이너 내에 특정 유형(클래스, 믹싱, 스키마, 데이터 유형 또는 설명자)의 모든 스키마 레지스트리 리소스 목록을 볼 수 있습니다.
 
->[!NOTE] 리소스를 나열할 때 스키마 레지스트리는 결과 세트를 300개 항목으로 제한합니다. 이 제한을 넘는 리소스를 반환하려면 [페이징 매개 변수를 사용해야 합니다](#paging). 쿼리 매개 변수를 사용하여 결과를 [필터링하고 반환된](#filtering) 리소스 수를 줄이는 것도 좋습니다.
+>[!NOTE]
+>
+>리소스를 나열할 때 스키마 레지스트리는 결과 세트를 300개 항목으로 제한합니다. 이 제한을 넘는 리소스를 반환하려면 [페이징 매개 변수를 사용해야 합니다](#paging). 쿼리 매개 변수를 사용하여 결과를 [필터링하고 반환된](#filtering) 리소스 수를 줄이는 것도 좋습니다.
 
 **API 형식**
 
@@ -78,7 +80,9 @@ curl -X GET \
 
 스키마 레지스트리는 리소스를 나열할 때 쿼리 매개 변수를 페이지에 사용하고 결과를 필터링하는 것을 지원합니다.
 
->[!NOTE] 여러 쿼리 매개 변수를 결합할 때는 앰퍼샌드(앰퍼샌드)로 구분해야`&`합니다.
+>[!NOTE]
+>
+>여러 쿼리 매개 변수를 결합할 때는 앰퍼샌드(앰퍼샌드)로 구분해야`&`합니다.
 
 ### 페이징 {#paging}
 
@@ -105,4 +109,6 @@ curl -X GET \
 | `~` | 속성이 제공된 정규 표현식과 일치하는지 여부를 기준으로 필터링합니다. | `property=title~test$` |
 | (없음) | 속성 이름만 지정하면 속성이 있는 항목만 반환됩니다. | `property=title` |
 
->[!TIP] 매개 변수를 사용하여 호환 클래스에 따라 믹스를 필터링할 수 `property` 있습니다. 예를 들어 XDM 개별 프로필 클래스와 호환되는 혼합만 `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` 반환합니다.
+>[!TIP]
+>
+>매개 변수를 사용하여 호환 클래스에 따라 믹스를 필터링할 수 `property` 있습니다. 예를 들어 XDM 개별 프로필 클래스와 호환되는 혼합만 `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` 반환합니다.
