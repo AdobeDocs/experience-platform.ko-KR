@@ -1,19 +1,24 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: 개체 찾기
+title: 개체 검색
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 4dcd174eda98fee1e8cf668819809bd061c6e8bb
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '134'
+ht-degree: 2%
 
 ---
 
 
-# 개체 찾기
+# 개체 검색
 
 특정 카탈로그 개체의 고유 식별자를 알고 있는 경우 GET 요청을 수행하여 해당 개체의 세부 정보를 볼 수 있습니다.
 
->[!NOTE] 특정 개체를 볼 때는 여전히 속성으로 [필터링하고 관심 있는 속성만 반환하는 것이](filter-data.md) 좋습니다.
+>[!NOTE]
+>
+>특정 개체를 볼 때는 여전히 속성별로 [필터링하고](filter-data.md) 관심 있는 속성만 반환하는 것이 좋습니다.
 
 **API 형식**
 
@@ -29,7 +34,7 @@ GET /{OBJECT_TYPE}/{OBJECT_ID}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 
 **요청**
 
-다음 요청은 ID로 데이터 세트를 검색하고 `name`데이터 세트, `description``state`속성 `tags`및 `files` 속성을 반환합니다.
+다음 요청은 ID로 데이터 세트를 검색하고, 데이터 세트 `name`, `description``state`, `tags`속성 `files` 을반환합니다.
 
 ```shell
 curl -X GET \
@@ -42,7 +47,7 @@ curl -X GET \
 
 **응답**
 
-성공적인 응답은 본문에 요청된 데이터만 있는 지정된 데이터 세트를 `properties` 반환합니다.
+성공적인 응답으로 지정한 데이터 세트에 본문 `properties` 의 요청만 있는 데이터를 반환합니다.
 
 ```json
 {
@@ -60,4 +65,6 @@ curl -X GET \
 }
 ```
 
->[!NOTE] 값이 접두사로 추가된 속성은 관련 개체를 `@` 나타냅니다. 이러한 개체의 세부 사항을 보는 방법에 대한 단계는 관련 개체를 [](appendix.md#view-interrelated-objects) 보는 방법에 대한 부록 섹션을 참조하십시오.
+>[!NOTE]
+>
+>값이 접두사로 붙어 있는 속성은 관련 개체를 `@` 나타냅니다. 이러한 개체의 세부 사항을 보는 방법에 대한 자세한 내용은 관련 개체 [](appendix.md#view-interrelated-objects) 보기 부록 섹션을 참조하십시오.
