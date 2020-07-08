@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 모델 최적화
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1219'
 ht-degree: 0%
@@ -62,7 +62,9 @@ training.evaluate=true
 evaluation.metrics.com=com.adobe.platform.ml.impl.Constants.DEFAULT
 ```
 
->[!NOTE] 지표가 정의되지 않은 경우 기본 지표가 활성화됩니다.
+>[!NOTE]
+>
+>지표가 정의되지 않은 경우 기본 지표가 활성화됩니다.
 
 값을 변경하여 특정 지표를 활성화할 수 있습니다 `evaluation.metrics.com`. 다음 예에서 F-점수 지표가 활성화됩니다.
 
@@ -83,7 +85,9 @@ evaluation.metrics=com.adobe.platform.ml.impl.Constants.FSCORE
 
 사용자 지정 평가기는 `MLEvaluator.scala` 파일 `Evaluator.scala` 의 인터페이스를 확장하여 제공할 수 있습니다. 예제 [Evaluator.](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/scala/com/adobe/platform/ml/Evaluator.scala) 파일에서 사용자 지정 `split()` 및 `evaluate()` 함수를 정의합니다. Adobe의 `split()` 기능은 8:2의 비율로 데이터를 임의로 분할하고 Adobe의 `evaluate()` 기능은 3개의 지표를 정의하고 반환합니다. MAPE, MAE 및 RMSE.
 
->[!IMPORTANT] 클래스에 대해, 새 `MLMetric` 를 만들 때 `"measures"` 는 데 사용하지 마십시오. `valueType` `MLMetric` 다른 경우 지표가 사용자 지정 평가 지표 테이블에 채워지지 않습니다.
+>[!IMPORTANT]
+>
+>클래스에 대해, 새 `MLMetric` 를 만들 때 `"measures"` 는 데 사용하지 마십시오. `valueType` `MLMetric` 다른 경우 지표가 사용자 지정 평가 지표 테이블에 채워지지 않습니다.
 >  
 > 다음을 수행합니다. `metrics.add(new MLMetric("MAPE", mape, "double"))`\
 > 그렇지 않음: `metrics.add(new MLMetric("MAPE", mape, "measures"))`
