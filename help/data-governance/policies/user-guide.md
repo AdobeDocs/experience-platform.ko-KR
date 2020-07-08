@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 데이터 사용 정책 사용 안내서
 topic: policies
 translation-type: tm+mt
-source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '727'
 ht-degree: 0%
@@ -16,7 +16,9 @@ ht-degree: 0%
 
 Adobe Experience Platform 데이터 거버넌스는 데이터 사용 정책을 만들고 관리할 수 있는 사용자 인터페이스를 제공합니다. 이 문서에서는 _사용자 인터페이스의 정책 작업 공간에서 수행할 수 있는 작업에_ 대한 개요를 제공합니다 [!DNL Experience Platform] .
 
->[!IMPORTANT] 모든 데이터 사용 정책(Adobe에서 제공하는 핵심 정책 포함)은 기본적으로 비활성화됩니다. 개별 정책이 적용을 위해 고려되려면 해당 정책을 수동으로 활성화해야 합니다. UI에서 [이 작업을 수행하는 방법에 대한 단계는 정책](#enable) 활성화에 대한 섹션을 참조하십시오.
+>[!IMPORTANT]
+>
+>모든 데이터 사용 정책(Adobe에서 제공하는 핵심 정책 포함)은 기본적으로 비활성화됩니다. 개별 정책이 적용을 위해 고려되려면 해당 정책을 수동으로 활성화해야 합니다. UI에서 [이 작업을 수행하는 방법에 대한 단계는 정책](#enable) 활성화에 대한 섹션을 참조하십시오.
 
 ## 전제 조건
 
@@ -51,7 +53,9 @@ UI [!DNL Experience Platform] 에서 정책 **** 을 클릭하여 *[!UICONTROL �
 
 마케팅 *[!UICONTROL 작업]* 선택 단계가 나타납니다. 제공된 목록에서 적절한 마케팅 작업을 선택한 다음 **[!UICONTROL 다음을]** 클릭하여 계속합니다.
 
->[!NOTE] 여러 마케팅 작업을 선택할 때 정책은 이를 &quot;OR&quot; 규칙으로 해석합니다. 즉, 선택한 마케팅 작업 중 _하나라도_ 수행된 경우 정책이 적용됩니다.
+>[!NOTE]
+>
+>여러 마케팅 작업을 선택할 때 정책은 이를 &quot;OR&quot; 규칙으로 해석합니다. 즉, 선택한 마케팅 작업 중 _하나라도_ 수행된 경우 정책이 적용됩니다.
 
 ![](../images/policies/add-marketing-actions.png)
 
@@ -93,7 +97,9 @@ UI [!DNL Experience Platform] 에서 정책 **** 을 클릭하여 *[!UICONTROL �
 
 ## 마케팅 작업 편집 또는 삭제 {#edit-delete-marketing-action}
 
->[!NOTE] 조직에서 정의한 사용자 지정 마케팅 작업만 편집할 수 있습니다. Adobe에서 정의한 마케팅 작업은 변경하거나 삭제할 수 없습니다.
+>[!NOTE]
+>
+>조직에서 정의한 사용자 지정 마케팅 작업만 편집할 수 있습니다. Adobe에서 정의한 마케팅 작업은 변경하거나 삭제할 수 없습니다.
 
 정책 **[!UICONTROL 작업]** 공간에서 **[!UICONTROL 마케팅 작업]** 탭을 선택하여 Adobe와 사용자 조직에서 정의한 사용 가능한 마케팅 작업 목록을 봅니다. 목록에서 사용자 지정 마케팅 작업을 선택한 다음 오른쪽 섹션에 있는 제공된 필드를 사용하여 마케팅 활동의 세부 사항을 편집합니다.
 
@@ -101,7 +107,9 @@ UI [!DNL Experience Platform] 에서 정책 **** 을 클릭하여 *[!UICONTROL �
 
 기존 사용 정책에서 마케팅 작업을 사용하지 않는 경우 마케팅 작업 **[!UICONTROL 삭제를 클릭하여 삭제할 수 있습니다]**.
 
->[!NOTE] 기존 정책에 사용되는 마케팅 작업을 삭제하려고 하면 삭제 시도가 실패했음을 나타내는 오류 메시지가 표시됩니다.
+>[!NOTE]
+>
+>기존 정책에 사용되는 마케팅 작업을 삭제하려고 하면 삭제 시도가 실패했음을 나타내는 오류 메시지가 표시됩니다.
 
 ![](../images/policies/delete-marketing-action.png)
 
