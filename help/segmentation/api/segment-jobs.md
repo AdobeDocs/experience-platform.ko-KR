@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 세그먼트 작업
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b0554d931718bb6a8dd7d4f971daf3652a19a2a8
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '657'
 ht-degree: 3%
@@ -22,7 +22,7 @@ ht-degree: 3%
 
 이 안내서에서 사용되는 API 끝점은 세그멘테이션 API의 일부입니다. 계속하기 전에 세그멘테이션 개발자 [안내서를 검토하십시오](./getting-started.md).
 
-특히 세그멘테이션 개발자 안내서의 [시작 섹션에는 관련 항목에 대한 링크, 문서에서 샘플 API 호출 읽기 안내서, 모든 경험 플랫폼 API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요한 정보가 포함되어 있습니다](./getting-started.md#getting-started) .
+특히 세그멘테이션 개발자 안내서의 [시작 섹션에는 관련 항목에 대한 링크, 문서에서 샘플 API 호출 읽기 안내서, Experience Platform API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요한 정보가 포함되어 있습니다](./getting-started.md#getting-started) .
 
 ## 세그먼트 작업 목록 검색
 
@@ -63,7 +63,9 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 
 성공적인 응답은 지정된 IMS 조직에 대한 세그먼트 작업 목록이 있는 HTTP 상태 200을 JSON으로 반환합니다. 다음 응답은 IMS 조직에 대해 성공한 모든 세그먼트 작업 목록을 반환합니다.
 
->[!NOTE] 다음 응답은 공간에 대해 잘렸고 첫 번째 반환된 작업만 표시됩니다.
+>[!NOTE]
+>
+>다음 응답은 공간에 대해 잘렸고 첫 번째 반환된 작업만 표시됩니다.
 
 ```json
 {
@@ -361,7 +363,9 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
 
 성공적인 응답은 요청된 세그먼트 작업이 있는 HTTP 상태 207을 반환합니다.
 
->[!NOTE] 다음 응답이 공간에 대해 잘려서 각 세그먼트 작업의 일부 세부 정보만 표시합니다. 전체 응답에는 요청된 세그먼트 작업에 대한 전체 세부 정보가 표시됩니다.
+>[!NOTE]
+>
+>다음 응답이 공간에 대해 잘려서 각 세그먼트 작업의 일부 세부 정보만 표시합니다. 전체 응답에는 요청된 세그먼트 작업에 대한 전체 세부 정보가 표시됩니다.
 
 ```json
 {
@@ -424,7 +428,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
 
 ## 특정 세그먼트 작업 취소 또는 삭제
 
-종단점에 DELETE 요청을 하고 요청 경로에 세그먼트 작업 `/segment/jobs` `id` 의 값을 제공하여 지정된 세그먼트 작업 삭제를 요청할 수 있습니다.
+종단점에 DELETE 요청을 하고 요청 경로에 세그먼트 작업의 `/segment/jobs` `id` 값을 제공하여 지정된 세그먼트 작업 삭제를 요청할 수 있습니다.
 
 **API 형식**
 
