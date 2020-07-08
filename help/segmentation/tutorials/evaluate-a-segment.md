@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 세그먼트 평가
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 822f43b139b68b96b02f9a5fe0549736b2524ab7
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '2841'
 ht-degree: 1%
@@ -37,7 +37,9 @@ Experience Platform의 모든 리소스는 특정 가상 샌드박스와 분리�
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Platform의 샌드박스에 대한 자세한 내용은 [샌드박스 개요 설명서를 참조하십시오](../../sandboxes/home.md).
+>[!NOTE]
+>
+>Platform의 샌드박스에 대한 자세한 내용은 [샌드박스 개요 설명서를 참조하십시오](../../sandboxes/home.md).
 
 모든 POST, PUT 및 PATCH 요청에는 추가 헤더가 필요합니다.
 
@@ -55,7 +57,9 @@ Experience Platform의 모든 리소스는 특정 가상 샌드박스와 분리�
 
 예약된 평가를 통해 IMS 조직은 자동으로 내보내기 작업을 실행하는 반복 일정을 생성할 수 있습니다.
 
->[!NOTE] XDM 개별 프로필에 대해 최대 5개의 병합 정책을 포함하는 샌드박스에 대해 예약된 평가를 활성화할 수 있습니다. 조직에서 단일 샌드박스 환경 내에서 XDM 개별 프로필에 대한 병합 정책이 5개 이상 있는 경우 예약된 평가를 사용할 수 없습니다.
+>[!NOTE]
+>
+>XDM 개별 프로필에 대해 최대 5개의 병합 정책을 포함하는 샌드박스에 대해 예약된 평가를 활성화할 수 있습니다. 조직에서 단일 샌드박스 환경 내에서 XDM 개별 프로필에 대한 병합 정책이 5개 이상 있는 경우 예약된 평가를 사용할 수 없습니다.
 
 ### 일정 만들기
 
@@ -415,7 +419,7 @@ curl -X GET \
 
 세그먼트 작업이 성공적으로 실행되면 세그먼트 내에 포함된 각 프로필에 대해 `segmentMembership` 맵이 업데이트됩니다. `segmentMembership` 또한 Platform으로 인제스트된 사전 평가 대상 세그먼트를 저장하여 Adobe Audience Manager과 같은 다른 솔루션과 통합할 수 있습니다.
 
-다음 예에서는 각 개별 프로필 레코드에 대한 `segmentMembership` 속성이 어떻게 나타나는지 보여줍니다.
+The following example shows what the `segmentMembership` attribute looks like for each individual profile record:
 
 ```json
 {
@@ -443,7 +447,7 @@ curl -X GET \
 | 속성 | 설명 |
 | -------- | ----------- |
 | `lastQualificationTime` | 세그먼트 구성원 자격 어설션이 만들어지고 프로필이 세그먼트를 입력하거나 종료한 타임스탬프. |
-| `status` | 현재 요청의 일부로서 세그먼트 기여도 상태입니다. 다음과 같은 알려진 값 중 하나와 같아야 합니다. <ul><li>`existing`: 엔티티가 세그먼트에 계속 있습니다.</li><li>`realized`: 엔티티가 세그먼트를 입력하고 있습니다.</li><li>`exited`: 엔티티가 세그먼트를 종료합니다.</li></ul> |
+| `status` | The status of segment participation as part of the current request. Must be equal to one of the following known values: <ul><li>`existing`: Entity continues to be in the segment.</li><li>`realized`: 엔티티가 세그먼트를 입력하고 있습니다.</li><li>`exited`: 엔티티가 세그먼트를 종료합니다.</li></ul> |
 
 ## 세그먼트 결과 액세스
 
@@ -601,28 +605,28 @@ curl -X POST \
 | `mergePolicy.version` | 사용할 병합 정책의 특정 버전입니다. 이 값을 생략하면 기본적으로 최신 버전이 사용됩니다. |
 | `filter` | *(선택 사항)* 내보내기 전에 세그먼트에 적용할 다음 필터 중 하나 이상을 지정합니다. |
 | `filter.segments` | *(선택 사항)* 내보낼 세그먼트를 지정합니다. 이 값을 생략하면 모든 프로필의 모든 데이터가 내보내집니다. 다음 필드를 포함하는 세그먼트 개체의 배열을 수락합니다. |
-| `filter.segments.segmentId` | **(사용하는 경우`segments`필수)** 내보낼 프로필에 대한 세그먼트 ID입니다. |
-| `filter.segments.segmentNs` | *(선택 사항)* 주어진 세그먼트 네임스페이스입니다 `segmentID`. |
+| `filter.segments.segmentId` | **(Required if using`segments`)** Segment ID for profiles to be exported. |
+| `filter.segments.segmentNs` | *(Optional)* Segment namespace for the given `segmentID`. |
 | `filter.segments.status` | *(선택 사항)* 상태 필터를 제공하는 문자열 `segmentID`배열입니다. 기본적으로 현재 시간 `status` 에 세그먼트에 속하는 모든 프로파일을 나타내는 값이 `["realized", "existing"]` 있습니다. 가능한 값은 다음과 같습니다. `"realized"`, `"existing"`and `"exited"`. |
 | `filter.segmentQualificationTime` | *(선택 사항)* 세그먼트 자격 시간을 기반으로 필터링합니다. 시작 시간 및/또는 종료 시간을 제공할 수 있습니다. |
 | `filter.segmentQualificationTime.startTime` | *(선택 사항)* 주어진 상태에 대한 세그먼트 ID에 대한 세그먼트 자격 시작 시간입니다. 제공되지 않으면 세그먼트 ID 자격에 대한 시작 시간에 필터가 없습니다. 타임스탬프는 [RFC 3339](https://tools.ietf.org/html/rfc3339) 형식으로 제공해야 합니다. |
 | `filter.segmentQualificationTime.endTime` | *(선택 사항)* 주어진 상태에 대한 세그먼트 ID에 대한 세그먼트 자격 종료 시간입니다. 제공되지 않으면 세그먼트 ID 자격에 대한 종료 시간에 필터가 없습니다. 타임스탬프는 [RFC 3339](https://tools.ietf.org/html/rfc3339) 형식으로 제공해야 합니다. |
 | `filter.fromIngestTimestamp` | *(선택 사항)* 내보낸 프로필이 이 타임스탬프 후에 업데이트된 프로필만 포함하도록 제한됩니다. 타임스탬프는 [RFC 3339](https://tools.ietf.org/html/rfc3339) 형식으로 제공해야 합니다. |
-| `filter.fromIngestTimestamp` for **profiles**, if provided | 병합된 업데이트된 타임스탬프가 지정된 타임스탬프보다 큰 병합된 프로필을 모두 포함합니다. 피연산자를 `greater_than` 지원합니다. |
+| `filter.fromIngestTimestamp` for **profiles**, if provided | Includes all the merged profiles where merged updated timestamp is greater than the given timestamp. 피연산자를 `greater_than` 지원합니다. |
 | `filter.fromTimestamp` events | 이 타임스탬프 이후에 수집되는 모든 이벤트는 결과 프로필 결과에 따라 내보내집니다. 이벤트 시간 자체가 아니라 이벤트에 대한 수집 시간입니다. |
 | `filter.emptyProfiles` | *(선택 사항)* 부울 값. 프로필에는 프로필 레코드, ExperienceEvent 레코드 또는 둘 다를 포함할 수 있습니다. 프로필 레코드가 없고 ExperienceEvent 레코드만 있는 프로필을 &quot;emptyProfiles&quot;라고 합니다. &quot;emptyProfiles&quot;를 비롯한 프로필 스토어의 모든 프로필을 내보내려면 값 `emptyProfiles` 을 설정합니다 `true`. 이 `emptyProfiles` 를 로 설정하면 `false`스토어에 프로필 레코드가 있는 프로파일만 내보내집니다. 기본적으로 속성이 `emptyProfiles` 포함되지 않은 경우 프로필 레코드가 포함된 프로파일만 내보내집니다. |
 | `additionalFields.eventList` | *(선택 사항)* 다음 설정 중 하나 이상을 제공하여 하위 또는 연관된 개체에 대해 내보낸 시계열 이벤트 필드를 제어합니다. |
 | `additionalFields.eventList.fields` | 내보낼 필드를 제어합니다. |
 | `additionalFields.eventList.filter` | 관련 개체에서 포함된 결과를 제한하는 기준을 지정합니다. 내보내기에 필요한 최소 값(일반적으로 날짜)이 필요합니다. |
 | `additionalFields.eventList.filter.fromIngestTimestamp` | 제공된 타임스탬프 이후에 인제스트된 시간 시리즈 이벤트를 필터링합니다. 이벤트 시간 자체가 아니라 이벤트에 대한 수집 시간입니다. |
-| `destination` | **(필수)** 내보낸 데이터의 대상 정보 |
-| `destination.datasetId` | **(필수)** 데이터를 내보낼 데이터 세트의 ID입니다. |
-| `destination.segmentPerBatch` | *(선택 사항)* 제공되지 않을 경우 기본적으로 제공되는 부울 값 `false`. 값이 모든 세그먼트 ID를 단일 배치 ID로 `false` 내보냅니다. 하나의 세그먼트 ID를 하나의 배치 ID로 `true` 내보내는 값. 값을 설정할 경우 일괄 내보내기 성능에 영향을 줄 `true` 수 있습니다. |
+| `destination` | **(Required)** Destination information for the exported data |
+| `destination.datasetId` | **(Required)** The ID of the dataset where data is to be exported. |
+| `destination.segmentPerBatch` | *(Optional)* A Boolean value that, if not provided, defaults to `false`. 값이 모든 세그먼트 ID를 단일 배치 ID로 `false` 내보냅니다. A value of `true` exports one segment ID into one batch ID. 값을 설정할 경우 일괄 내보내기 성능에 영향을 줄 `true` 수 있습니다. |
 | `schema.name` | **(필수)** 데이터를 내보낼 데이터 세트와 연관된 스키마의 이름입니다. |
 
 **응답**
 
-성공적인 응답은 세그먼트 작업의 마지막 완료된 실행에 대해 자격이 있는 프로필로 채워진 데이터 세트를 반환합니다. 이전에 데이터 세트에 존재했지만 마지막으로 완료된 세그먼트 작업 실행 중 세그먼트에 적합하지 않은 모든 프로필이 제거되었습니다.
+성공적인 응답은 세그먼트 작업의 마지막 완료된 실행에 대해 자격이 있는 프로필로 채워진 데이터 세트를 반환합니다. Any profiles that may have previously existed in the dataset but did not qualify for the segment during the last completed run of the segment job, have been removed.
 
 ```json
 {
@@ -682,7 +686,7 @@ curl -X POST \
 }
 ```
 
-요청에 포함되지 `destination.segmentPerBatch` 않았거나(없는 경우, 기본값 `false`) 값이 로 설정되어 `false`있는 경우, 위의 응답에 있는 `destination` 개체에 `batches` 배열이 없고, 아래에 표시된 것처럼 대신 하나 `batchId`만 포함할 수 있습니다. 이 단일 배치에는 모든 세그먼트 ID가 포함되는 반면 위의 응답에는 배치 ID당 단일 세그먼트 ID가 표시됩니다.
+If `destination.segmentPerBatch` had not been included in the request (if not present, it defaults to `false`) or the value had been set to `false`, the `destination` object in the response above would not have a `batches` array and instead would include only one `batchId`, as shown below. That single batch would include all segment IDs, whereas the response above shows a single segment ID per batch ID.
 
 ```json
   "destination": {
