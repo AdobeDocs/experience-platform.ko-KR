@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 고객 AI에서 점수 다운로드
 topic: Downloading scores
 translation-type: tm+mt
-source-git-commit: 7c892d92a50312fb4b733431737b796651689804
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '933'
+ht-degree: 2%
 
 ---
 
@@ -26,7 +29,7 @@ source-git-commit: 7c892d92a50312fb4b733431737b796651689804
 
 ## Find your dataset ID {#dataset-id}
 
-고객 AI 인사이트의 서비스 인스턴스 내에서 오른쪽 상단 탐색에서 *추가 작업* 드롭다운을 클릭한 다음 선택합니다 **[!UICONTROL Access scores]**.
+고객 AI 인사이트의 서비스 인스턴스 내에서 오른쪽 상단 탐색에서 *추가 작업* 드롭다운을 클릭한 다음 **[!UICONTROL 액세스 점수를 선택합니다]**.
 
 ![추가 작업](../images/insights/more-actions.png)
 
@@ -240,7 +243,9 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/035e2520
 
 파일 데이터를 다운로드하려면 파일을 `"href"` 검색하는 이전 단계에서 복사한 [값에 GET 요청을](#retrieving-your-files)하십시오.
 
->[!NOTE] 이 요청을 명령줄에서 직접 수행하는 경우 요청 헤더 뒤에 출력을 추가하라는 메시지가 표시될 수 있습니다. 다음 요청 예는 를 사용합니다 `--output {FILENAME.FILETYPE}`.
+>[!NOTE]
+>
+>이 요청을 명령줄에서 직접 수행하는 경우 요청 헤더 뒤에 출력을 추가하라는 메시지가 표시될 수 있습니다. 다음 요청 예는 를 사용합니다 `--output {FILENAME.FILETYPE}`.
 
 **API 형식**
 
@@ -264,7 +269,9 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/035e2520
   -O 'filename.parquet'
 ```
 
->[!TIP] GET 요청을 하기 전에 파일을 저장할 디렉터리 또는 폴더에 있는지 확인합니다.
+>[!TIP]
+>
+>GET 요청을 하기 전에 파일을 저장할 디렉터리 또는 폴더에 있는지 확인합니다.
 
 **응답**
 
@@ -276,7 +283,9 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/035e2520
 
 점수 데이터를 다운로드하는 또 다른 방법은 대상을 데이터 세트로 내보내는 것입니다. 세그멘테이션 작업이 성공적으로 완료된 후( `status` 속성 값이 &quot;성공&quot;됨) 대상을 액세스 및 작동 가능한 데이터 세트로 내보낼 수 있습니다. 세그멘테이션에 대한 자세한 내용은 [세그멘테이션 개요를 참조하십시오](../../../segmentation/home.md).
 
->[!IMPORTANT] 이 내보내기 방법을 활용하려면 데이터 세트에 대해 실시간 고객 프로필을 활성화해야 합니다.
+>[!IMPORTANT]
+>
+>이 내보내기 방법을 활용하려면 데이터 세트에 대해 실시간 고객 프로필을 활성화해야 합니다.
 
 세그먼트 평가 안내서의 세그먼트 [내보내기](../../../segmentation/tutorials/evaluate-a-segment.md) 섹션에서는 대상 데이터 세트를 내보내는 데 필요한 단계를 다룹니다. 안내서는 다음과 같은 예를 보여 줍니다.
 
