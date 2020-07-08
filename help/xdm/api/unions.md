@@ -1,45 +1,50 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: 조합
+title: 노조
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 7f61cee8fb5160d0f393f8392b4ce2462d602981
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '806'
+ht-degree: 1%
 
 ---
 
 
-# 조합
+# 노조
 
-조합(또는 공용 뷰)은 동일한 클래스(XDM ExperienceEvent 또는 XDM 개별 프로필)를 공유하고 실시간 고객 프로필에 대해 활성화된 모든 스키마의 필드를 집계하는 시스템 생성, 읽기 전용 [스키마입니다](../../profile/home.md).
+조합(또는 조합 뷰)은 동일한 클래스(XDM ExperienceEvent 또는 XDM 개별 프로필)를 공유하고 [실시간 고객 프로필에 대해 활성화된 모든 스키마의 필드를 집계하는 시스템 생성, 읽기 전용 스키마입니다](../../profile/home.md).
 
-이 문서에서는 다양한 작업에 대한 샘플 호출을 비롯하여 스키마 레지스트리 API에서 조합 작업에 필요한 기본 개념을 다룹니다. XDM의 조합에 대한 일반적인 자세한 내용은 스키마 구성의 [기본 사항에](../schema/composition.md#union)있는 조합에 대한 섹션을 참조하십시오.
+이 문서에서는 스키마 레지스트리 API에서 조합과 함께 작업하는 데 필요한 개념과 다양한 작업에 대한 샘플 호출을 다룹니다. XDM의 조합에 대한 일반적인 자세한 내용은 스키마 구성 [의 기본 사항에 있는 조합의 섹션을 참조하십시오](../schema/composition.md#union).
 
-## 유니온 믹스
+## 유니온 믹싱
 
-스키마 레지스트리에는 조합 스키마 내에 다음 세 가지 혼합이 자동으로 포함됩니다. `identityMap`및 `timeSeriesEvents`를 `segmentMembership`참조하십시오.
+스키마 레지스트리에는 조합 스키마 내에 다음 세 가지 혼합이 자동으로 포함됩니다. `identityMap`, `timeSeriesEvents`and `segmentMembership`.
 
 ### ID 맵
 
-조합 스키마는 `identityMap` 조합의 관련 레코드 스키마 내에서 알려진 ID를 나타냅니다. ID 맵은 네임스페이스로 키잉된 다른 배열로 ID를 구분합니다. 나열된 각 ID는 고유한 `id` 값을 포함하는 객체입니다.
+조합 스키마 `identityMap` 는 조합의 관련 레코드 스키마 내에서 알려진 ID를 나타냅니다. ID 맵은 네임스페이스로 키잉된 다른 배열로 ID를 구분합니다. 나열된 각 ID는 고유한 `id` 값을 포함하는 개체입니다.
 
 See the [Identity Service documentation](../../identity-service/home.md) for more information.
 
 ### 시계열 이벤트
 
-이 `timeSeriesEvents` 배열은 결합과 연관된 레코드 스키마와 관련된 시계열 이벤트 목록입니다. 프로필 데이터를 데이터 세트로 내보낼 때 이 배열은 각 레코드에 대해 포함됩니다. 이 기능은 레코드 특성 외에 프로필의 전체 동작 내역이 필요한 기계 학습과 같은 다양한 사용 사례에 유용합니다.
+이 `timeSeriesEvents` 배열은 조합과 연관된 레코드 스키마와 관련된 시계열 이벤트 목록입니다. 프로필 데이터를 데이터 세트로 내보낼 때 이 배열은 각 레코드에 포함됩니다. 이 기능은 모델에 레코드 특성 외에 프로파일의 전체 동작 내역이 필요한 기계 학습과 같은 다양한 사용 사례에 유용합니다.
 
 ### 세그먼트 멤버십 맵
 
-맵은 `segmentMembership` 세그먼트 평가 결과를 저장합니다. 세그먼트 작업이 세그멘테이션 API를 사용하여 성공적으로 [실행되면](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)맵이 업데이트됩니다. `segmentMembership` 또한 Adobe Audience Manager와 같은 다른 솔루션과의 통합을 위해 인제스트된 사전 평가 대상 세그먼트를 플랫폼에 저장합니다.
+맵에는 `segmentMembership` 세그먼트 평가의 결과가 저장됩니다. 세그먼트 작업이 세그멘테이션 [API를 사용하여 성공적으로](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)실행되면 지도가 업데이트됩니다. `segmentMembership` 또한 Platform으로 인제스트된 사전 평가 대상 세그먼트를 저장하여 Adobe Audience Manager과 같은 다른 솔루션과 통합할 수 있습니다.
 
-자세한 내용은 API를 사용하여 세그먼트를 [만드는](../../segmentation/tutorials/create-a-segment.md) 방법에 대한 자습서를 참조하십시오.
+자세한 내용은 API를 사용하여 세그먼트 [를](../../segmentation/tutorials/create-a-segment.md) 만드는 방법에 대한 자습서를 참조하십시오.
 
-## 조합 멤버십에 대한 스키마 활성화
+## 조합 멤버십에 대한 스키마 사용
 
 병합된 조합 보기에 스키마를 포함하려면 &quot;union&quot; 태그를 스키마의 `meta:immutableTags` 속성에 추가해야 합니다. 이 작업은 PATCH 요청을 통해 스키마를 업데이트하고 값이 &quot;union&quot;인 `meta:immutableTags` 배열을 추가합니다.
 
->[!NOTE] 변경할 수 없는 태그는 설정하되 제거되지 않는 태그입니다.
+>[!NOTE]
+>
+>변경할 수 없는 태그는 설정하려 하지만 제거되지 않는 태그입니다.
 
 **API 형식**
 
@@ -49,7 +54,7 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{SCHEMA_ID}` | 프로필에서 사용할 수 있도록 `$id` 활성화할 URL 인코딩 URI 또는 `meta:altId` 스키마의 URL 인코딩 URI입니다. |
+| `{SCHEMA_ID}` | 프로파일에서 사용할 수 있도록 설정할 스키마 `$id` `meta:altId` 또는 URL로 인코딩된 URI입니다. |
 
 **요청**
 
@@ -112,7 +117,7 @@ curl -X PATCH \
 
 ## 목록 조합
 
-스키마에서 &quot;union&quot; 태그를 설정하면 스키마 레지스트리가 스키마를 기반으로 하는 클래스에 대한 결합을 자동으로 생성하고 유지 관리합니다. 조합의 `$id` 은 클래스의 표준과 비슷하며, 단 두 개의 밑줄이 추가되고 &quot;union&quot;( `$id``"__union"`)이라는 단어가 추가되는 유일한 차이입니다.
+스키마에서 &quot;union&quot; 태그를 설정하면 스키마 레지스트리가 스키마를 기반으로 하는 클래스에 대한 결합을 자동으로 생성하고 유지 관리합니다. 조합 `$id` 의 경우 클래스 `$id` 의 표준과 비슷하며 두 개의 밑줄이 추가되는 유일한 차이점과 &quot;union&quot;이라는 단어(`"__union"`)가 추가됩니다.
 
 사용 가능한 조합 목록을 보려면 종단점에 대한 GET 요청을 수행할 수 `/unions` 있습니다.
 
@@ -136,7 +141,7 @@ curl -X GET \
 
 **응답**
 
-성공적인 응답은 HTTP 상태 200(OK 파섹) 및 응답 본문에 `results` 배열을 반환합니다. 조합이 정의된 경우 `title`, `$id`, `meta:altId``version` ,및 각 조합에 대해 배열 내의 개체로 제공됩니다. 조합이 정의되지 않은 경우 HTTP 상태 200(OK)이 여전히 반환되지만 `results` 배열은 비어 있게 됩니다.
+성공적인 응답은 HTTP 상태 200(OK) 및 응답 본문에 `results` 배열을 반환합니다. 결합이 정의된 경우 `title`, `$id`및 `meta:altId`각 조합의 조합과 `version` 는 배열 내의 개체로 제공됩니다. 정의된 조합이 없는 경우 HTTP 상태 200(OK)은 여전히 반환되지만 `results` 배열은 비어 있게 됩니다.
 
 ```JSON
 {
@@ -161,7 +166,9 @@ curl -X GET \
 
 Accept 헤더에 따라 `$id` 및 조합의 일부 또는 전체 세부 사항을 포함하는 GET 요청을 수행하여 특정 결합을 볼 수 있습니다.
 
->[!NOTE] 조합 조회는 `/unions` 및 `/schemas` 끝점을 사용하여 프로필 내보내기에서 데이터 세트로 사용할 수 있도록 합니다.
+>[!NOTE]
+>
+>조합 조회는 `/unions` 및 `/schemas` 끝점을 사용하여 프로필 내보내기에서 데이터 세트로 사용할 수 있도록 합니다.
 
 **API 형식**
 
@@ -172,7 +179,7 @@ GET /tenant/schemas/{UNION_ID}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{UNION_ID}` | 조회할 `$id` 조합의 URL 인코딩 URI. 공용 스키마의 URI는 &quot;__union&quot;과 함께 추가됩니다. |
+| `{UNION_ID}` | 조회하려는 조합의 URL 인코딩 `$id` URI입니다. 결합 스키마에 대한 URI는 &quot;__union&quot;이 추가됩니다. |
 
 **요청**
 
@@ -186,20 +193,20 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xed+json; version=1'
 ```
 
-조합 조회 요청은 승인 헤더에 포함되어야 `version` 합니다.
+조합 조회 요청은 수락 헤더에 `version` 포함되어야 합니다.
 
-공용 스키마 조회에 대해 다음 승인 헤더를 사용할 수 있습니다.
+다음 승인 헤더를 조합 스키마 조회에 사용할 수 있습니다.
 
 | 수락 | 설명 |
 | -------|------------ |
-| application/vnd.adobe.xed+json;version={MAJOR_VERSION} | Raw with `$ref` and `allOf`. 제목 및 설명이 포함되어 있습니다. |
-| application/vnd.adobe.xed-full+json;version={MAJOR_VERSION} | `$ref` 속성을 확인하고 `allOf` 해결했습니다. 제목 및 설명이 포함되어 있습니다. |
+| application/vnd.adobe.xed+json; version={MAJOR_VERSION} | Raw with `$ref` and `allOf`. 제목 및 설명을 포함합니다. |
+| application/vnd.adobe.xed-full+json; version={MAJOR_VERSION} | `$ref` 속성 및 `allOf` 해결되었습니다. 제목 및 설명을 포함합니다. |
 
 **응답**
 
-성공적인 응답은 요청 경로에서 제공된 클래스를 구현하는 모든 스키마의 결합 보기를 `$id` 반환합니다.
+성공적인 응답은 요청 경로에 제공된 클래스를 구현하는 모든 스키마의 조합 뷰 `$id` 를 반환합니다.
 
-응답 형식은 요청에서 전송된 수락 헤더에 따라 달라집니다. 다른 승인 헤더로 여러 가지 테스트를 통해 응답을 비교하고 사용 사례에 가장 적합한 헤더를 결정할 수 있습니다.
+응답 형식은 요청에서 전송된 수락 헤더에 따라 다릅니다. 다양한 수락 헤더를 실험하여 응답을 비교하고 사용 사례에 가장 적합한 헤더를 확인합니다.
 
 ```JSON
 {
@@ -242,9 +249,9 @@ curl -X GET \
 
 ## 공용 구조체의 스키마 목록
 
-특정 조합의 일부인 스키마를 확인하려면 쿼리 매개 변수를 사용하여 테넌트 컨테이너 내의 스키마를 필터링할 수 있습니다.
+특정 조합의 일부인 스키마를 확인하려면 쿼리 매개 변수를 사용하여 GET 요청을 수행하여 테넌트 컨테이너 내의 스키마를 필터링할 수 있습니다.
 
-쿼리 매개 `property` 변수를 사용하여 `meta:immutableTags` 필드를 포함하는 반환 스키마만, 액세스하려는 조합이 있는 클래스와 `meta:class` 동일한 반환 스키마에 대한 응답을 구성할 수 있습니다.
+쿼리 매개 변수 `property` 를 사용하면 `meta:immutableTags` 필드가 포함된 스키마 및 액세스하 `meta:class` 는 조합이 있는 클래스와 동일한 스키마에 대한 응답만 구성할 수 있습니다.
 
 **API 형식**
 
@@ -254,7 +261,7 @@ GET /tenant/schemas?property=meta:immutableTags==union&property=meta:class=={CLA
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{CLASS_ID}` | 액세스하려는 `$id` 조합의 클래스 |
+| `{CLASS_ID}` | 액세스하려는 조합의 클래스 `$id` 의 클래스입니다. |
 
 **요청**
 
@@ -272,7 +279,7 @@ curl -X GET \
 
 **응답**
 
-성공적인 응답은 두 요구 사항을 모두 충족하는 스키마만 포함하는 필터링된 스키마 목록을 반환합니다. 여러 쿼리 매개 변수를 사용하는 경우 AND 관계가 가정됩니다. 응답 형식은 요청에서 전송된 수락 헤더에 따라 달라집니다.
+성공적인 응답은 두 요구 사항을 모두 충족하는 스키마만 포함하는 필터링된 스키마 목록을 반환합니다. 여러 쿼리 매개 변수를 사용하는 경우 AND 관계가 가정됩니다. 응답 형식은 요청에서 전송된 수락 헤더에 따라 다릅니다.
 
 ```JSON
 {
