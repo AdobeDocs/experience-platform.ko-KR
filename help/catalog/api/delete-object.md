@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 개체 삭제
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 327be13cbaaa40e4d0409cbb49a051b7067759bf
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '178'
 ht-degree: 2%
@@ -16,7 +16,9 @@ ht-degree: 2%
 
 DELETE 요청 경로에 카탈로그 ID를 제공하여 카탈로그 개체를 삭제할 수 있습니다.
 
->[!WARNING] 실행 취소할 수 없으며 Experience Platform의 다른 곳에서 변경 사항이 발생할 수 있으므로 개체를 삭제할 때 각별히 주의하십시오.
+>[!WARNING]
+>
+>실행 취소할 수 없으며 Experience Platform의 다른 곳에서 변경 사항이 발생할 수 있으므로 개체를 삭제할 때 각별히 주의하십시오.
 
 **API 형식**
 
@@ -56,4 +58,6 @@ curl -X DELETE \
 ]
 ```
 
->[!NOTE] 요청에 제공된 ID와 일치하는 카탈로그 개체가 없는 경우 여전히 HTTP 상태 코드 200을 받을 수 있지만 응답 배열은 비어 있게 됩니다.
+>[!NOTE]
+>
+>요청에 제공된 ID와 일치하는 카탈로그 개체가 없는 경우 여전히 HTTP 상태 코드 200을 받을 수 있지만 응답 배열은 비어 있게 됩니다.
