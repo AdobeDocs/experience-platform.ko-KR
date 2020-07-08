@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 소스 파일을 레서피로 패키지
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
+source-git-commit: 45461e3420f3b7e227f80fe775d80b8442a1069c
 workflow-type: tm+mt
-source-wordcount: '1077'
+source-wordcount: '1097'
 ht-degree: 0%
 
 ---
@@ -169,7 +169,7 @@ Navigate to the directory `experience-platform-dsw-reference/recipes/pyspark/ret
 git clone https://github.com/adobe/experience-platform-dsw-reference.git
 ```
 
-그런 다음 스크립트와 스크립트를 `experience-platform-dsw-reference/recipes/scala/retail` 찾을 수 있는 디렉토리로 `login.sh` 이동합니다 `build.sh`. 이러한 스크립트는 Docker에 로그인하고 Docker 이미지를 만드는 데 사용됩니다. Docker 자격 [증명을](#docker-based-model-authoring) 준비했다면 터미널에 다음 명령을 입력합니다.
+그런 다음 스크립트와 스크립트를 `experience-platform-dsw-reference/recipes/scala` 찾을 수 있는 디렉토리로 `login.sh` 이동합니다 `build.sh`. 이러한 스크립트는 Docker에 로그인하고 Docker 이미지를 만드는 데 사용됩니다. Docker 자격 [증명을](#docker-based-model-authoring) 준비했다면 터미널에 다음 명령을 입력합니다.
 
 ```BASH
 # for logging in to Docker
@@ -178,6 +178,9 @@ git clone https://github.com/adobe/experience-platform-dsw-reference.git
 # for building Docker image
 ./build.sh
 ```
+
+>[!TIP]
+>스크립트를 사용하여 Docker에 로그인하려고 할 때 권한 오류가 발생하는 경우 `login.sh` 명령을 사용해 보십시오 `bash login.sh`.
 
 로그인 스크립트를 실행할 때 Docker 호스트, 사용자 이름 및 암호를 제공해야 합니다. 빌드할 때 빌드에 대한 Docker 호스트 및 버전 태그를 제공해야 합니다.
 
