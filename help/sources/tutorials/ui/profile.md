@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 인바운드 소스 데이터를 활성화하여 고객 프로필 채우기
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '481'
 ht-degree: 0%
@@ -61,7 +61,9 @@ ht-degree: 0%
 
 이제 스키마와 데이터 세트에 대한 데이터 [!DNL Profile]가 모두 활성화되면 해당 데이터 세트에 수집되는 데이터도 고객 프로필을 채웁니다.
 
->[!NOTE] 최근에 활성화된 데이터 세트 내의 기존 데이터는 [!DNL Profile]
+>[!NOTE]
+>
+>최근에 활성화된 데이터 세트 내의 기존 데이터는 [!DNL Profile]
 
 ## 다음 단계
 
