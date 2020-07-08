@@ -1,10 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Adobe 정의 함수
+title: Adobe에서 정의한 함수
 topic: queries
 translation-type: tm+mt
-source-git-commit: 41fdee979db32b97a5935a02e9ffcde3308b6d54
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '248'
+ht-degree: 6%
 
 ---
 
@@ -13,14 +16,14 @@ source-git-commit: 41fdee979db32b97a5935a02e9ffcde3308b6d54
 
 Adobe의 주요 차별화 요소 중 하나는 경험 데이터와 고객이 해당 데이터를 사용하여 수행해야 하는 작업을 파악하는 것입니다. 이러한 이해를 통해 보다 손쉽게 작업을 수행할 수 있는 헬퍼 기능을 구축할 수 있습니다.
 
-이 문서에서는 세 가지 주요 Analytics 활동을 지원하기 위해 Adobe에서 정의한 함수(ADF)를 다룹니다.
-- [세션화](#sessionization)
+이 문서에서는 세 가지 주요 Analytics 활동을 지원하는 Adobe에서 정의한 기능(ADF)에 대해 다룹니다.
+- [세션](#sessionization)
 - [속성](#attribution)
 - [경로 지정](#pathing)
 
-## 세션화
+## 세션
 
-이 `SESS_TIMEOUT()` 보고서는 Adobe Analytics에서 찾은 방문 그룹을 재현합니다. 시간 기반 그룹화는 비슷하지만 사용자 정의 가능한 매개 변수를 사용하여 수행합니다.
+Adobe Analytics에서 찾은 방문 그룹을 `SESS_TIMEOUT()` 재현합니다. 시간 기반 그룹화가 비슷하지만 사용자 정의 가능한 매개 변수를 사용하여 수행됩니다.
 
 **구문:**
 
@@ -28,7 +31,7 @@ Adobe의 주요 차별화 요소 중 하나는 경험 데이터와 고객이 해
 
 **반환:**
 
-필드를 사용한 구조 `(timestamp_diff, num, is_new, depth)`
+필드가 있는 구조 `(timestamp_diff, num, is_new, depth)`
 
 ### 행 수준 `SESS_TIMEOUT()` 및 출력 살펴보기
 
@@ -88,11 +91,13 @@ LIMIT 31;
 
 Adobe Analytics에서 속성 설정은 eVar와 같은 변수를 사용하여 구성되며 데이터가 인제스트될 때 생성됩니다.
 
-쿼리 서비스에 있는 기여도 ADF를 사용하면 이러한 할당이 쿼리 시간에 정의 및 생성되도록 할 수 있습니다.
+쿼리 서비스에 있는 속성 ADF를 사용하면 이러한 할당을 쿼리 시간에 정의하고 생성할 수 있습니다.
 
-이 예에서는 마지막 터치 기여도에 중점을 두지만 Adobe는 첫 번째 터치 기여도를 제공합니다.
+이 예에서는 마지막 터치 기여도에 중점을 두지만 Adobe에서는 첫 번째 터치 기여도를 제공합니다.
 
->[!NOTE] 시간 초과 및 이벤트 기반 만료가 있는 기타 옵션은 쿼리 서비스의 향후 버전에서 사용할 수 있습니다.
+>[!NOTE]
+>
+>시간 초과와 이벤트 기반 만료가 있는 기타 옵션은 향후 버전의 쿼리 서비스에서 사용할 수 있습니다.
 
 **구문:**
 
@@ -102,7 +107,7 @@ Adobe Analytics에서 속성 설정은 eVar와 같은 변수를 사용하여 구
 
 필드가 있는 구조 `(value)`
 
-### 행 수준 기여도 분석
+### 행 수준의 기여도 분석
 
 ```sql
 SELECT
@@ -147,7 +152,7 @@ LIMIT 25;
 
 ## 경로 지정
 
-경로 지정은 고객이 사이트를 탐색하는 방법을 이해하는 데 도움이 됩니다. ADF `NEXT()` 와 ADF `PREVIOUS()` 는 이를 가능하게 합니다.
+경로 지정은 고객이 사이트를 탐색하는 방법을 이해하는 데 도움이 됩니다. ADF와 `NEXT()` `PREVIOUS()` ADF는 이를 가능하게 합니다.
 
 **구문:**
 
