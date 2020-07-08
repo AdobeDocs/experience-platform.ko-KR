@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform ID 서비스
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1530'
 ht-degree: 0%
@@ -76,7 +76,7 @@ ID 그래프는 서로 다른 ID 네임스페이스 간의 관계를 보여주�
 
 [!DNL Identity Service] 조직만이 볼 수 있고 데이터를 기반으로 하여 개인 그래프라고 하는 ID 그래프를 관리합니다. [!DNL Identity Service] 인제스트된 데이터 레코드에 둘 이상의 ID가 포함되어 있는 경우 개인 그래프를 늘려 검색된 ID 간의 관계를 추가합니다.
 
-ID 데이터를 제공하고 레이블을 지정할 때 고려해야 할 잠재적 유형의 예로, &quot;직장 전화&quot;와 같은 전화 번호를 사용하면 ID 그래프에 의도한 것보다 더 많은 관계를 만들 수 있습니다. 많은 직원들이 동일한 번호로 직장에서 사용하고 있으며, &quot;가정&quot; 및 &quot;모바일&quot;은 관계를 최대한 정확하게 유지하기 위해 더 나은 서비스를 제공한다는 사실을 알게 될 것입니다.
+ID 데이터를 제공하고 레이블을 지정할 때 고려해야 할 잠재적 유형의 예로, &quot;직장 전화&quot;와 같은 전화 번호를 사용하면 ID 그래프에 의도한 것보다 더 많은 관계를 만들 수 있습니다. 많은 직원들이 동일한 번호로 직장에서 사용하고 있으며, 그 &quot;가정&quot; 및 &quot;모바일&quot;은 관계를 최대한 정확하게 유지하기 위해 더 나은 서비스를 제공한다는 사실을 알게 될 것입니다.
 
 ## ID 데이터 제공 [!DNL Identity Service]
 
@@ -94,7 +94,9 @@ ID 데이터를 제공하고 레이블을 지정할 때 고려해야 할 잠재�
 
 다양한 표준 네임스페이스를 [!DNL Experience Platform] 제공하지만 ID를 제대로 분류하려면 추가 네임스페이스를 만들어야 할 수 있습니다. 자세한 내용은 ID 네임스페이스 개요에서 조직의 [](./namespaces.md) 네임스페이스 보기 및 만들기에 대한 섹션을 참조하십시오.
 
->[!NOTE] ID 네임스페이스는 ID의 한정자입니다. 따라서 네임스페이스를 만들면 이를 삭제할 수 없습니다.
+>[!NOTE]
+>
+>ID 네임스페이스는 ID의 한정자입니다. 따라서 네임스페이스를 만들면 이를 삭제할 수 없습니다.
 
 ### ID 데이터 포함 [!DNL Experience Data Model] (XDM)
 
@@ -109,7 +111,9 @@ XDM( [!DNL Platform] Customization Framework)은 고객 데이터 [!DNL Experien
 ID 필드는 ID가 공통 PII 데이터를 공유하는 경우 ID의 연결을 허용합니다.
 예를 들어, 전화 번호 필드에 ID 필드로 레이블을 지정하면 동일한 전화 번호를 사용하는 것으로 확인된 다른 개인과의 관계를 자동으로 그래프로 표시합니다. [!DNL Identity Service]
 
->[!NOTE] 결과 ID의 네임스페이스는 필드 레이블이 지정된 시간에 제공됩니다.
+>[!NOTE]
+>
+>결과 ID의 네임스페이스는 필드 레이블이 지정된 시간에 제공됩니다.
 
 ### 데이터 세트 구성 [!DNL Identity Service]
 
