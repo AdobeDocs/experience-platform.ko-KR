@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Platform SDK 안내서
 topic: SDK authoring
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '447'
 ht-degree: 1%
@@ -78,7 +78,9 @@ client_context <- psdk$client_context$ClientContext(api_key={API_KEY},
 - [열별 데이터 필터링](#filter-by-selected-columns)
 - [정렬된 결과 가져오기](#get-sorted-results)
 
->[!NOTE] IMS Org는 IMS 내에서 설정됩니다 `client_context`.
+>[!NOTE]
+>
+>IMS Org는 IMS 내에서 설정됩니다 `client_context`.
 
 ### Python
 
@@ -192,7 +194,9 @@ df <- dataset_reader$sort(c(('column-a', 'asc'), ('column-b', 'desc')))$read()
 
 ## 데이터 기본 쓰기 {#basic-writing-of-data}
 
->[!NOTE] IMS Org는 IMS 내에서 설정됩니다 `client_context`.
+>[!NOTE]
+>
+>IMS Org는 IMS 내에서 설정됩니다 `client_context`.
 
 Python 및 R로 데이터를 작성하려면 아래 예제 중 하나를 사용하십시오.
 
