@@ -4,7 +4,7 @@ solution: Experience Platform
 title: API를 사용하여 스트리밍 연결 만들기
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 0eecd802fc8d0ace3a445f3f188a7f095b97d0c8
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '659'
 ht-degree: 2%
@@ -18,9 +18,9 @@ ht-degree: 2%
 
 ## 시작하기
 
-Adobe Experience Platform로의 데이터 스트리밍을 시작하려면 스트리밍 연결 등록이 필요합니다. 스트리밍 연결을 등록할 때 스트리밍 데이터 소스와 같은 몇 가지 주요 세부 사항을 제공해야 합니다.
+Adobe Experience Platform으로 데이터 스트리밍을 시작하려면 스트리밍 연결 등록이 필요합니다. 스트리밍 연결을 등록할 때 스트리밍 데이터 소스와 같은 몇 가지 주요 세부 사항을 제공해야 합니다.
 
-스트리밍 연결을 등록한 후 데이터 프로듀서로서 데이터를 플랫폼으로 스트리밍하는 데 사용할 수 있는 고유한 URL을 갖게 됩니다.
+스트리밍 연결을 등록한 후 데이터 프로듀서로서 데이터를 Platform으로 스트리밍하는 데 사용할 수 있는 고유한 URL을 갖게 됩니다.
 
 또한 이 자습서에서는 다양한 Adobe Experience Platform 서비스에 대한 작업 지식이 필요합니다. 이 자습서를 시작하기 전에 다음 서비스에 대한 설명서를 검토하십시오.
 
@@ -31,21 +31,23 @@ Adobe Experience Platform로의 데이터 스트리밍을 시작하려면 스트
 
 ### 샘플 API 호출 읽기
 
-이 안내서에서는 요청의 서식을 지정하는 방법을 보여주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 올바른 형식의 요청 페이로드가 포함됩니다. API 응답으로 반환된 샘플 JSON도 제공됩니다. 샘플 API 호출에 대한 설명서에 사용된 규칙에 대한 자세한 내용은 경험 플랫폼 문제 해결 안내서에서 예제 API 호출 [](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 읽기를 참조하십시오.
+이 안내서에서는 요청의 서식을 지정하는 방법을 보여주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 올바른 형식의 요청 페이로드가 포함됩니다. API 응답으로 반환된 샘플 JSON도 제공됩니다. 샘플 API 호출 설명서에 사용된 규칙에 대한 자세한 내용은 Experience Platform 문제 해결 안내서의 예제 API 호출 [](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 읽기 방법에 대한 섹션을 참조하십시오.
 
 ### 필수 헤더에 대한 값 수집
 
-플랫폼 API를 호출하려면 먼저 [인증 자습서를 완료해야 합니다](../../tutorials/authentication.md). 인증 자습서를 완료하면 아래와 같이 모든 경험 플랫폼 API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
+Platform API를 호출하려면 먼저 [인증 자습서를 완료해야 합니다](../../tutorials/authentication.md). 인증 자습서를 완료하면 아래와 같이 모든 Experience Platform API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
 
 - 인증: 무기명 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-경험 플랫폼의 모든 리소스는 특정 가상 샌드박스와 분리됩니다. 플랫폼 API에 대한 모든 요청에는 작업이 수행할 샌드박스의 이름을 지정하는 헤더가 필요합니다.
+Experience Platform의 모든 리소스는 특정 가상 샌드박스와 분리됩니다. Platform API에 대한 모든 요청에는 작업이 수행할 샌드박스의 이름을 지정하는 헤더가 필요합니다.
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] 플랫폼의 샌드박스에 대한 자세한 내용은 [샌드박스 개요 설명서를 참조하십시오](../../sandboxes/home.md).
+>[!NOTE]
+>
+>Platform의 샌드박스에 대한 자세한 내용은 [샌드박스 개요 설명서를 참조하십시오](../../sandboxes/home.md).
 
 페이로드(POST, PUT, PATCH)가 포함된 모든 요청에는 추가 헤더가 필요합니다.
 
@@ -63,7 +65,9 @@ POST /flowservice/connections
 
 **요청**
 
->[!NOTE] 스트리밍 통합 `providerId` 을 위한 스트리밍 연결을 만드는 API에 대해 지정하는 API와 같이 나열된 값과 이 값이 예와 같이 사용되어야 `connectionSpec`**** 합니다.
+>[!NOTE]
+>
+>스트리밍 통합 `providerId` 을 위한 스트리밍 연결을 만드는 API에 대해 지정하는 API와 같이 나열된 값과 이 값이 예와 같이 사용되어야 `connectionSpec`**** 합니다.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
@@ -172,7 +176,7 @@ curl -X GET https://platform.adobe.io/data/foundation/flowservice/connections/{C
 
 ## 다음 단계
 
-스트리밍 연결을 만들었으므로 시간 시리즈나 데이터 기록을 스트리밍할 수 있으므로 플랫폼 내에서 데이터를 인제스트할 수 있습니다. Time Series 데이터를 Platform으로 스트리밍하는 방법을 살펴보려면 [스트리밍 시간 시리즈 데이터 자습서로 이동합니다](./streaming-time-series-data.md). Platform(플래시 플랫폼)으로 레코드 데이터를 스트리밍하는 방법을 알아보려면 [스트리밍 레코드 데이터 자습서로 이동합니다](./streaming-record-data.md).
+스트리밍 연결을 만들었으므로 데이터 스트리밍이나 시계열 중 하나를 스트리밍할 수 있으므로 Platform 내에서 데이터를 인제스트할 수 있습니다. 시계열 데이터를 Platform으로 스트리밍하는 방법을 알려면 [스트리밍 시계열 데이터 자습서로 이동합니다](./streaming-time-series-data.md). 기록 데이터를 Platform으로 스트리밍하는 방법을 알아보려면 [스트리밍 레코드 데이터 자습서로 이동합니다](./streaming-record-data.md).
 
 ## 부록
 
