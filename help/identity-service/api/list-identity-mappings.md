@@ -4,18 +4,21 @@ solution: Experience Platform
 title: 목록 ID 매핑
 topic: API guide
 translation-type: tm+mt
-source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '248'
+ht-degree: 2%
 
 ---
 
 
 # 목록 ID 매핑
 
-매핑은 지정된 네임스페이스에 대한 클러스터의 모든 ID의 컬렉션입니다.
+매핑은 지정된 네임스페이스에 대한 클러스터 내 모든 ID의 컬렉션입니다.
 
 ## 단일 ID에 대한 ID 매핑 받기
 
-ID가 제공되면 요청에서 ID로 표시되는 것과 동일한 네임스페이스에서 모든 관련 ID를 검색합니다.
+ID가 주어지면 요청의 ID로 표시되는 동일한 네임스페이스에서 모든 관련 ID를 검색합니다.
 
 **API 형식**
 
@@ -25,7 +28,7 @@ GET https://platform-{REGION}.adobe.io/data/core/identity/mapping
 
 **요청**
 
-옵션 1:ID를 네임스페이스(ID`nsId`별) 및 ID 값(`id`)으로 제공합니다.
+옵션 1: ID를 네임스페이스(ID별`nsId`)와 ID 값(`id`)으로 제공합니다.
 
 ```shell
 curl -X GET \
@@ -36,7 +39,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-옵션 2:ID를 네임스페이스(`ns`이름별)와 ID 값(`id`)으로 제공합니다.
+옵션 2: ID를 네임스페이스(이름별`ns`)와 ID 값(`id`)으로 제공합니다.
 
 ```shell
 curl -X GET \
@@ -47,7 +50,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-옵션 3:ID를 XID(`xid`)로 제공합니다. ID의 XID를 얻는 방법에 대한 자세한 내용은 ID에 대한 XID [가져오기를 다루는 이 문서의 섹션을 참조하십시오](./list-native-id.md).
+옵션 3: ID를 XID(`xid`)로 제공합니다. ID의 XID를 얻는 방법에 대한 자세한 내용은 ID용 XID [를 가져오는 내용을 포함하는 이 문서의 섹션을 참조하십시오](./list-native-id.md).
 
 ```shell
 curl -X GET \
@@ -60,9 +63,11 @@ curl -X GET \
 
 ### 여러 ID에 대한 ID 매핑 가져오기
 
-이 `POST` 메서드를 위에 설명된 `GET` 방법과 동일한 일괄 처리로 사용하여 여러 ID에 대한 매핑을 검색합니다.
+이 `POST` 메서드를 위에 설명된 `GET` 방법과 동등한 일괄 처리로 사용하여 여러 ID에 대한 매핑을 검색합니다.
 
->[!NOTE] 요청은 최대 1,000개의 ID를 초과하지 않아야 합니다. ID가 1000개를 초과하는 요청은 400개의 상태 코드를 생성합니다.
+>[!NOTE]
+>
+>요청은 최대 1000개의 ID를 초과하지 않아야 합니다. ID가 1000개를 초과하는 요청은 400개의 상태 코드를 생성합니다.
 
 **API 형식**
 
@@ -72,7 +77,7 @@ POST https://platform.adobe.io/data/core/identity/mappings
 
 **요청 본문**
 
-옵션 1:매핑을 검색할 XID 목록을 제공합니다.
+옵션 1: 매핑을 검색할 XID 목록을 제공합니다.
 
 ```shell
 {
@@ -81,7 +86,7 @@ POST https://platform.adobe.io/data/core/identity/mappings
 }
 ```
 
-옵션 2:ID 목록을 복합 ID로 제공합니다. 여기서 각 ID 값과 네임스페이스의 이름은 네임스페이스 ID로 지정됩니다. 이 예에서는 &quot;비공개 그래프&quot;의 기본값을 덮어쓰는 동안 이 메서드를 사용하는 `graph-type` 방법을 보여 줍니다.
+옵션 2: ID 목록을 복합 ID로 제공합니다. 여기서 각 ID 값과 네임스페이스의 이름은 네임스페이스 ID로 지정됩니다. 이 예에서는 &quot;비공개 그래프&quot;의 기본값을 덮어쓰는 동안 이 방법 `graph-type` 을 사용하는 방법을 보여 줍니다.
 
 ```shell
 {
@@ -140,7 +145,7 @@ curl -X POST \
       }' | json_pp
 ```
 
-제공된 입력과 함께 관련 ID를 찾을 수 없는 경우 `HTTP 204` 응답 코드가 아무런 컨텐트도 없는 상태로 반환됩니다.
+제공된 입력과 함께 관련 ID를 찾을 수 없으면 `HTTP 204` 컨텐츠가 없는 응답 코드가 반환됩니다.
 
 **응답**
 
@@ -178,9 +183,9 @@ curl -X POST \
 }
 ```
 
-- `lastAssociationTime`:이 ID와 마지막으로 연결된 타임스탬프
-- `regions`:ID가 표시된 `regionId` 위치와 `lastAssociationTime` 위치를 제공합니다.
+- `lastAssociationTime`: 입력 ID가 이 ID와 마지막으로 연결된 타임스탬프
+- `regions`: ID가 `regionId` 표시된 위치 및 `lastAssociationTime` 를 제공합니다.
 
 ## 다음 단계
 
-다음 자습서로 진행하여 사용 가능한 네임스페이스를 [나열합니다](./list-namespaces.md).
+다음 자습서로 진행하여 사용 가능한 네임스페이스가 [나열됩니다](./list-namespaces.md).
