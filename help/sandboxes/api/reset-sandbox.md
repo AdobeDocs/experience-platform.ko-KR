@@ -4,14 +4,17 @@ solution: Experience Platform
 title: 샌드박스 재설정
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 974e93b1c24493734848151b9be00758f6a84578
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '122'
+ht-degree: 4%
 
 ---
 
 
 # 샌드박스 재설정
 
-개발 샌드박스에는 샌드박스에서 기본이 아닌 모든 리소스를 삭제하는 &quot;공장 재설정&quot; 기능이 있습니다. 요청 경로에 샌드박스를 포함하는 PUT 요청을 만들어 샌드박스를 재설정할 `name` 수 있습니다.
+개발 샌드박스에는 샌드박스에서 기본이 아닌 모든 리소스를 삭제하는 &quot;공장 재설정&quot; 기능이 있습니다. 요청 경로에 샌드박스를 포함하는 PUT 요청을 만들어 샌드박스를 재설정할 수 `name` 있습니다.
 
 **API 형식**
 
@@ -46,7 +49,7 @@ curl -X PUT \
 
 **응답**
 
-성공적인 응답은 업데이트된 샌드박스의 세부 사항을 반환하고 &quot;재설정&quot; `state` 임을 표시합니다.
+성공적인 응답은 업데이트된 샌드박스의 세부 사항을 반환하며, 이 세부 사항은 &quot;재설정&quot; `state` 임을 나타냅니다.
 
 ```json
 {
@@ -59,4 +62,6 @@ curl -X PUT \
 }
 ```
 
->[!NOTE] 샌드박스가 재설정되면 시스템에서 프로비저닝하는 데 약 15분이 소요됩니다. 프로비저닝되면 샌드박스의 상태가 &quot;활성&quot; 또는 &quot;실패&quot; `state` 가 됩니다.
+>[!NOTE]
+>
+>샌드박스가 재설정되면 시스템에서 프로비저닝하는 데 약 15분이 소요됩니다. 프로비저닝되면 샌드박스의 상태가 &quot;활성&quot; 또는 &quot;실패&quot; `state` 가 됩니다.
