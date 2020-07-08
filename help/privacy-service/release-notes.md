@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Privacy Service 릴리스 노트
 topic: release notes
 translation-type: tm+mt
-source-git-commit: 580cce74ab7da9547417a9e74e88b5ddab52171f
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '546'
 ht-degree: 5%
@@ -16,7 +16,9 @@ ht-degree: 5%
 
 이 문서에서는 Adobe Experience Platform Privacy Service의 새로운 기능, 개선 사항 및 중요한 버그 수정 사항에 대한 정보를 제공합니다.
 
->[!NOTE] 다른 Experience Platform 서비스에 대한 최신 릴리스 노트는 [여기에서 확인할 수 있습니다](../release-notes/latest/latest.md).
+>[!NOTE]
+>
+>다른 Experience Platform 서비스에 대한 최신 릴리스 노트는 [여기에서 확인할 수 있습니다](../release-notes/latest/latest.md).
 
 ## 2020년 4월 8일
 
