@@ -4,16 +4,21 @@ solution: Experience Platform
 title: 데이터 세트 만들기
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 6d24637dc6cc282f98288b6416e4a3b7cebe42ea
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '203'
+ht-degree: 1%
 
 ---
 
 
 # 데이터 세트 만들기
 
-카탈로그 API를 사용하여 데이터 세트를 만들려면 데이터 세트를 기반으로 하는 XDM(Experience Data Model) 스키마의 `$id` 값을 알아야 합니다. 스키마 ID가 있으면 카탈로그 API의 끝점에 대한 POST 요청을 수행하여 데이터 세트를 만들 수 `/datasets` 있습니다.
+카탈로그 API를 사용하여 데이터 세트를 만들려면 데이터 세트를 기반으로 할 경험 데이터 모델(XDM) 스키마의 `$id` 값을 알고 있어야 합니다. 스키마 ID가 있으면 카탈로그 API의 종단점에 대한 POST 요청을 만들어 데이터 세트를 만들 수 `/datasets` 있습니다.
 
->[!NOTE] 이 문서에서는 카탈로그에서 데이터 세트 개체를 만드는 방법만 다룹니다. 데이터 세트를 만들고 채우고 모니터링하는 방법에 대한 전체 단계는 다음 [자습서를](../datasets/create.md)참조하십시오.
+>[!NOTE]
+>
+>이 문서에서는 카탈로그에서 데이터 세트 개체를 만드는 방법만 다룹니다. 데이터 세트를 생성, 채우기 및 모니터링하는 방법에 대한 자세한 내용은 다음 [자습서를 참조하십시오](../datasets/create.md).
 
 **API 형식**
 
@@ -23,7 +28,7 @@ POST /dataSets
 
 **요청**
 
-다음 요청은 이전에 정의된 스키마를 참조하는 데이터 집합을 만듭니다.
+다음 요청은 이전에 정의된 스키마를 참조하는 데이터 세트를 만듭니다.
 
 ```SHELL
 curl -X POST \
@@ -50,13 +55,15 @@ curl -X POST \
 | 속성 | 설명 |
 | --- | --- |
 | `name` | 만들 데이터 집합의 이름입니다. |
-| `schemaRef.id` | 데이터 세트에 기준이 되는 XDM 스키마의 URI `$id` 값. |
+| `schemaRef.id` | 데이터 세트에 기준이 되는 XDM 스키마의 URI `$id` 값입니다. |
 
->[!NOTE] 이 예에서는 [속성에 대해](https://parquet.apache.org/documentation/latest/) 쪽모이 세공 `containerFormat` 파일 형식을 사용합니다. JSON 파일 형식을 사용하는 예는 [일괄 처리 통합 개발자 안내서에서](../../ingestion/batch-ingestion/api-overview.md)찾을 수 있습니다.
+>[!NOTE]
+>
+>이 예에서는 속성에 [쪽모이](https://parquet.apache.org/documentation/latest/) 세공 파일 형식을 `containerFormat` 사용합니다. JSON 파일 형식을 사용하는 예는 [일괄 처리 통합 개발자 안내서에서 확인할 수 있습니다](../../ingestion/batch-ingestion/api-overview.md).
 
 **응답**
 
-성공적인 응답은 HTTP Status 201(Created)과 새로 만든 데이터 집합의 ID를 포함하는 배열로 구성된 응답 개체를 반환합니다. `"@/datasets/{DATASET_ID}"` 데이터 집합 ID는 API 호출에서 데이터 집합을 참조하는 데 사용되는 읽기 전용, 시스템 생성 문자열입니다.
+성공적인 응답은 HTTP Status 201(Created)과 새로 만든 데이터 집합의 ID가 포함된 배열로 구성된 응답 개체를 반환합니다 `"@/datasets/{DATASET_ID}"`. 데이터 세트 ID는 API 호출에서 데이터 세트를 참조하는 데 사용되는 읽기 전용 시스템 생성 문자열입니다.
 
 ```JSON
 [
