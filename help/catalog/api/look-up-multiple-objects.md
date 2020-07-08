@@ -1,19 +1,24 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: 여러 개체 찾기
+title: 여러 개체 검색
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: f3e9da9ab3d02006c07c59b17751c971a95d49bc
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '183'
+ht-degree: 1%
 
 ---
 
 
-# 여러 개체 찾기
+# 여러 개체 검색
 
-개체당 하나의 요청을 하는 대신 여러 특정 개체를 보려는 경우 카탈로그는 동일한 유형의 여러 개체를 요청하는 간단한 단축키를 제공합니다. 단일 GET 요청을 사용하여 쉼표로 구분된 ID 목록을 포함하여 여러 특정 개체를 반환할 수 있습니다.
+개체당 한 번의 요청을 하는 대신 몇 개의 특정 개체를 보려는 경우 카탈로그는 동일한 유형의 여러 개체를 요청하는 간단한 단축키를 제공합니다. 단일 GET 요청을 사용하여 쉼표로 구분된 ID 목록을 포함하여 여러 특정 개체를 반환할 수 있습니다.
 
->[!NOTE] 특정 카탈로그 개체를 요청하는 경우에도 필요한 속성만 반환하도록 매개 변수를 `properties` 쿼리하는 것이 좋습니다.
+>[!NOTE]
+>
+>특정 카탈로그 개체를 요청하는 경우에도 필요한 속성만 반환하도록 매개 변수를 `properties` 쿼리하는 것이 좋습니다.
 
 **API 형식**
 
@@ -22,11 +27,12 @@ GET /{OBJECT_TYPE}/{ID_1},{ID_2},{ID_3},{ID_4}
 GET /{OBJECT_TYPE}/{ID_1},{ID_2},{ID_3},{ID_4}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 ```
 
-| `{OBJECT_TYPE}` | 검색할 카탈로그 개체의 유형입니다. 유효한 개체는 다음과 같습니다. <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> || `{ID}` | 검색할 특정 개체 중 하나에 대한 식별자입니다. |
+| `{OBJECT_TYPE}` | 검색할 카탈로그 개체의 유형입니다. 유효한 개체는 다음과 같습니다. <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{ID}` | 검색할 특정 개체 중 하나에 대한 식별자입니다. |
 
 **요청**
 
-다음 요청에는 데이터 세트 ID의 쉼표로 구분된 목록과 각 데이터 세트에 대해 반환되는 속성 목록이 포함됩니다.
+다음 요청에는 데이터 세트 ID의 쉼표로 구분된 목록과 각 데이터 세트에 대해 반환되는 속성의 쉼표로 구분된 목록이 포함됩니다.
 
 ```shell
 curl -X GET \
@@ -39,9 +45,11 @@ curl -X GET \
 
 **응답**
 
-성공적인 응답은 요청된 속성(`name`, `description`및 `files`)만 포함하는 지정된 데이터 집합 목록을 반환합니다.
+성공적인 응답은 지정된 데이터 집합 목록을 반환하며 각 데이터 집합에 대해 요청된 속성(`name`, `description`및 `files`)만 포함합니다.
 
->[!NOTE] 반환된 개체에 쿼리에 의해 표시된 요청된 속성 중 하나 이상이 포함되어 있지 않으면 아래의 &quot;샘플 데이터 집합 3&quot; 및 &quot;샘플 데이터 집합 4&quot;에 표시된 대로 응답에서 포함하는 요청된 속성만 반환됩니다. `properties`
+>[!NOTE]
+>
+>반환된 개체에 쿼리로 지정된 요청된 속성 중 하나 이상이 포함되어 있지 않으면 &quot;샘플 데이터 집합 3&quot; 및 &quot;샘플 데이터 집합 4&quot;에 표시된 것처럼 응답에서 포함하는 요청된 속성만 반환됩니다. `properties`
 
 ```json
 {
