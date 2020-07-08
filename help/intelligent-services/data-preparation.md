@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 지능형 서비스에서 사용할 데이터 준비
 topic: Intelligent Services
 translation-type: tm+mt
-source-git-commit: 9905f0248fe88bac5194560318cf8eced32ba93c
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1878'
 ht-degree: 0%
@@ -82,7 +82,9 @@ CEE 믹스에는 유용한 인사이트를 도출하기 위해 활용해야 하�
 
 #### xdm:채널 {#channel}
 
->[!NOTE] 이 필드는 속성 AI를 사용하는 경우에만 필수입니다.
+>[!NOTE]
+>
+>이 필드는 속성 AI를 사용하는 경우에만 필수입니다.
 
 이 필드는 ExperienceEvent와 관련된 마케팅 채널을 나타냅니다. 이 필드에는 채널 유형, 미디어 유형 및 위치 유형에 대한 정보가 포함되어 있습니다.
 
@@ -245,7 +247,9 @@ CEE 믹스에는 유용한 인사이트를 도출하기 위해 활용해야 하�
 
 ### Adobe Experience Platform 사용
 
->[!NOTE] 아래 단계는 Experience Platform에 가입해야 합니다. Platform에 대한 액세스 권한이 없는 경우 [다음 단계](#next-steps) 섹션으로 건너뛸 수 있습니다.
+>[!NOTE]
+>
+>아래 단계는 Experience Platform에 가입해야 합니다. Platform에 대한 액세스 권한이 없는 경우 [다음 단계](#next-steps) 섹션으로 건너뛸 수 있습니다.
 
 이 섹션에서는 자세한 단계를 위한 자습서에 대한 링크를 비롯하여 Intelligent Services에서 사용할 수 있도록 데이터를 Experience Platform으로 매핑 및 인제스트하는 워크플로우에 대해 간략하게 설명합니다.
 
@@ -256,7 +260,9 @@ CEE 믹스에는 유용한 인사이트를 도출하기 위해 활용해야 하�
 * [UI에서 스키마 만들기](../xdm/tutorials/create-schema-ui.md)
 * [API에서 스키마 만들기](../xdm/tutorials/create-schema-api.md)
 
->[!IMPORTANT] 위의 자습서는 스키마를 만들기 위한 일반 작업 과정을 따릅니다. 스키마의 클래스를 선택할 때는 **XDM ExperienceEvent 클래스를 사용해야 합니다**. 이 클래스가 선택되면 CEE 믹싱을 스키마에 추가할 수 있습니다.
+>[!IMPORTANT]
+>
+>위의 자습서는 스키마를 만들기 위한 일반 작업 과정을 따릅니다. 스키마의 클래스를 선택할 때는 **XDM ExperienceEvent 클래스를 사용해야 합니다**. 이 클래스가 선택되면 CEE 믹싱을 스키마에 추가할 수 있습니다.
 
 스키마에 CEE 믹스를 추가한 후 데이터 내의 추가 필드에 대해 필요에 따라 다른 믹스를 추가할 수 있습니다.
 
@@ -271,7 +277,9 @@ CEE 믹스에는 유용한 인사이트를 도출하기 위해 활용해야 하�
 
 #### 데이터 세트에 기본 ID 네임스페이스 태그 추가
 
->[!NOTE] 지능형 서비스의 향후 릴리스는 [Adobe Experience Platform ID 서비스](../identity-service/home.md) 를 고객 식별 기능에 통합하게 됩니다. 따라서 아래 설명된 단계는 변경될 수 있습니다.
+>[!NOTE]
+>
+>지능형 서비스의 향후 릴리스는 [Adobe Experience Platform ID 서비스](../identity-service/home.md) 를 고객 식별 기능에 통합하게 됩니다. 따라서 아래 설명된 단계는 변경될 수 있습니다.
 
 다른 외부 소스 [!DNL Adobe Audience Manager], [!DNL Adobe Analytics]또는 다른 외부 소스에서 데이터를 가져오는 경우 `primaryIdentityNameSpace` 태그를 데이터 세트에 추가해야 합니다. 이 작업은 카탈로그 서비스 API에 PATCH 요청을 수행하여 수행할 수 있습니다.
 
@@ -329,7 +337,9 @@ curl -X PATCH \
       }'
 ```
 
->[!NOTE] Platform에서 ID 네임스페이스를 사용한 작업에 대한 자세한 내용은 [ID 네임스페이스 개요를 참조하십시오](../identity-service/namespaces.md).
+>[!NOTE]
+>
+>Platform에서 ID 네임스페이스를 사용한 작업에 대한 자세한 내용은 [ID 네임스페이스 개요를 참조하십시오](../identity-service/namespaces.md).
 
 **응답**
 
