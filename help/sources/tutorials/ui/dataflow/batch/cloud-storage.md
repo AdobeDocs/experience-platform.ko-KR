@@ -4,7 +4,7 @@ solution: Experience Platform
 title: UI에서 클라우드 스토리지 배치 커넥터에 대한 데이터 흐름 구성
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1184'
 ht-degree: 0%
@@ -48,7 +48,9 @@ ht-degree: 0%
 
 미리 보기 창이 열리면 **[!UICONTROL 다음을]** 클릭하여 선택한 폴더 내의 모든 파일을 업로드할 수 있습니다. 특정 파일에 업로드하려면 다음을 클릭하기 전에 목록에서 해당 파일을 **[!UICONTROL 선택합니다]**.
 
->[!NOTE] 지원되는 파일 형식에는 CSV, JSON 및 Partiented가 있습니다. JSON 및 Partiented 파일은 XDM과 호환되어야 합니다.
+>[!NOTE]
+>
+>지원되는 파일 형식에는 CSV, JSON 및 Partiented가 있습니다. JSON 및 Partiented 파일은 XDM과 호환되어야 합니다.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data-next.png)
 
