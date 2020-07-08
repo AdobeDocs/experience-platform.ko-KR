@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: 실시간 고객 프로필 개요
 topic: guide
 translation-type: tm+mt
-source-git-commit: 4d853dfee931789ca1badd410ce0b4b73c8c2803
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1795'
 ht-degree: 1%
@@ -129,6 +129,8 @@ Experience Platform에는 프로필을 효과적으로 사용하기 위해 따�
 --->
 
 >[!NOTE]
+>
+>
 >개인이 아닌 엔터티는 프로필의 일부가 **아닌** 모든 XDM 클래스를 참조합니다.
 
 ## 다음 단계 및 추가 리소스
