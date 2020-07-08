@@ -4,7 +4,10 @@ solution: Experience Platform
 title: 기여도 AI에서 점수 액세스
 topic: Accessing scores
 translation-type: tm+mt
-source-git-commit: 01a500959802aa8c02bdaa8f024a9849ec23be51
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '983'
+ht-degree: 2%
 
 ---
 
@@ -21,7 +24,7 @@ source-git-commit: 01a500959802aa8c02bdaa8f024a9849ec23be51
 
 ## Find your dataset ID {#dataset-id}
 
-기여도 AI 인사이트의 서비스 인스턴스 내에서 오른쪽 상단 탐색에서 *추가 작업* 드롭다운 을 클릭한 다음 선택합니다 **[!UICONTROL Access scores]**.
+기여도 AI 인사이트의 서비스 인스턴스 내에서 오른쪽 상단 탐색에서 *추가 작업* 드롭다운 을 클릭한 다음 **[!UICONTROL 액세스 점수를 선택합니다]**.
 
 ![추가 작업](./images/download-scores/more-actions.png)
 
@@ -220,7 +223,9 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/files/01E5QSWCAASF
 
 파일 데이터를 다운로드하려면 파일을 `"href"` 검색하는 이전 단계에서 복사한 [값에 GET 요청을](#retrieving-your-files)하십시오.
 
->[!NOTE] 이 요청을 명령줄에서 직접 수행하는 경우 요청 헤더 뒤에 출력을 추가하라는 메시지가 표시될 수 있습니다. 다음 요청 예는 를 사용합니다 `--output {FILENAME.FILETYPE}`.
+>[!NOTE]
+>
+>이 요청을 명령줄에서 직접 수행하는 경우 요청 헤더 뒤에 출력을 추가하라는 메시지가 표시될 수 있습니다. 다음 요청 예는 를 사용합니다 `--output {FILENAME.FILETYPE}`.
 
 **API 형식**
 
@@ -244,7 +249,9 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/01E5QSWC
   -O 'file.parquet'
 ```
 
->[!TIP] GET 요청을 하기 전에 파일을 저장할 디렉터리 또는 폴더에 있는지 확인합니다.
+>[!TIP]
+>
+>GET 요청을 하기 전에 파일을 저장할 디렉터리 또는 폴더에 있는지 확인합니다.
 
 **응답**
 
@@ -258,7 +265,9 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/01E5QSWC
 
 ## Snowflake를 사용하여 점수 액세스
 
->[!IMPORTANT] SnowFlake를 사용한 점수 액세스에 대한 자세한 내용은 attributionai-support@adobe.com으로 문의하십시오.
+>[!IMPORTANT]
+>
+>SnowFlake를 사용한 점수 액세스에 대한 자세한 내용은 attributionai-support@adobe.com으로 문의하십시오.
 
 Snowflake를 통해 집계된 기여도 AI 점수에 액세스할 수 있습니다. 현재, Snowflake에 대한 귀하의 reader 계정에 자격 증명을 설정하고 받기 위해 attributionai-support@adobe.com에서 Adobe 지원을 이메일로 보내야 합니다.
 
@@ -268,7 +277,9 @@ Adobe 지원 팀에서 요청을 처리하면 Snowflake에 대한 리더 계정 
 - 사용자 이름
 - 암호
 
->[!NOTE] reader 계정은 JDBC 커넥터를 지원하는 SQL 클라이언트, 워크시트 및 BI 솔루션을 사용하여 데이터를 쿼리하는 데 사용됩니다.
+>[!NOTE]
+>
+>reader 계정은 JDBC 커넥터를 지원하는 SQL 클라이언트, 워크시트 및 BI 솔루션을 사용하여 데이터를 쿼리하는 데 사용됩니다.
 
 자격 증명과 URL이 있으면 터치포인트 날짜 또는 전환 날짜별로 집계된 모델 테이블을 쿼리할 수 있습니다.
 
