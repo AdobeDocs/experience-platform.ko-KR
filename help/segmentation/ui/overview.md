@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 세그먼트 빌더 UI 안내서
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: b5a425714b6d69ca241c8ad81eff779b993633a5
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '2683'
 ht-degree: 0%
@@ -69,7 +69,9 @@ ht-degree: 0%
 
 Lucene의 검색 구문을 사용하는 검색 막대에 구성 요소의 이름을 입력하여 [모든 유형의 구성 요소를 검색할 수 있습니다](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). 전체 단어가 입력되면 검색 결과가 채워지기 시작합니다. 예를 들어 XDM 필드를 기반으로 규칙을 만들려면 검색 필드 `ExperienceEvent.commerce.productViews`에 &quot;제품 보기&quot;를 입력하십시오. 단어 &quot;product&quot;를 입력하면 검색 결과가 표시됩니다. 각 결과에는 해당 개체가 속하는 개체 계층 구조가 포함됩니다.
 
->[!NOTE] 조직에서 정의한 사용자 정의 스키마 필드는 표시되는 데 최대 24시간이 걸릴 수 있으며 빌드 규칙에 사용할 수 있습니다.
+>[!NOTE]
+>
+>조직에서 정의한 사용자 정의 스키마 필드는 표시되는 데 최대 24시간이 걸릴 수 있으며 빌드 규칙에 사용할 수 있습니다.
 
 그런 다음 세그먼트 정의 [!DNL ExperienceEvents] 에 [!UICONTROL 이벤트 유형을] 손쉽게 드래그 앤 드롭할 수 있습니다.
 
@@ -105,7 +107,9 @@ Lucene의 [!UICONTROL 검색 구문을 활용하는] 검색 막대를 사용하�
 
 세그먼트 빌더를 사용하여 [!DNL Platform] 만든 [!UICONTROL 대상의 경우]대상을 해당 대상의 세그먼트 정의에 사용된 규칙 세트로 전환할 수 있는 옵션이 제공됩니다. 이 변환은 규칙 로직의 복사본을 만들며, 그런 다음 원래 세그먼트 정의에 영향을 주지 않고 수정할 수 있습니다. 세그먼트 정의를 규칙 논리로 변환하기 전에 최근에 변경한 내용을 저장했는지 확인하십시오.
 
->[!NOTE] 외부 소스에서 대상을 추가하는 경우 대상 멤버십만 참조됩니다. 대상을 규칙으로 변환할 수 없으므로 원래 대상을 만드는 데 사용되는 규칙은 새 세그먼트 정의에서 수정할 수 없습니다.
+>[!NOTE]
+>
+>외부 소스에서 대상을 추가하는 경우 대상 멤버십만 참조됩니다. 대상을 규칙으로 변환할 수 없으므로 원래 대상을 만드는 데 사용되는 규칙은 새 세그먼트 정의에서 수정할 수 없습니다.
 
 ![](../images/segment-builder/add-audience-to-segment.png)
 
@@ -137,7 +141,9 @@ Lucene의 [!UICONTROL 검색 구문을 활용하는] 검색 막대를 사용하�
 
 컨테이너 **[!UICONTROL 감싸기]** 해제(Unwrap)를 클릭하면 하위 컨테이너가 제거되고 기준이 인라인으로 표시됩니다.
 
->[!NOTE] 컨테이너 래핑 해제 시 로직이 원하는 세그먼트 정의를 계속 충족하는지 주의하십시오.
+>[!NOTE]
+>
+>컨테이너 래핑 해제 시 로직이 원하는 세그먼트 정의를 계속 충족하는지 주의하십시오.
 
 ![](../images/segment-builder/unwrapped-container-inline.png)
 
@@ -161,7 +167,9 @@ Lucene의 [!UICONTROL 검색 구문을 활용하는] 검색 막대를 사용하�
 
 ![](../images/segment-builder/segment-properties.png)
 
->[!NOTE] 대상 추정은 해당 일의 샘플 데이터의 샘플 크기를 사용하여 생성됩니다. 프로필 스토어에 1백만 개 미만의 개체가 있는 경우 전체 데이터 세트가 사용됩니다. 100만개에서 2000만개가 사용됩니다. 2천만 개 이상의 개체에 대해 전체 개체의 5%가 사용됩니다. 세그먼트 예측 생성에 대한 자세한 내용은 세그먼트 작성 자습서의 [예측 생성 섹션](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) 에서 확인할 수 있습니다.
+>[!NOTE]
+>
+>대상 추정은 해당 일의 샘플 데이터의 샘플 크기를 사용하여 생성됩니다. 프로필 스토어에 1백만 개 미만의 개체가 있는 경우 전체 데이터 세트가 사용됩니다. 100만개에서 2000만개가 사용됩니다. 2천만 개 이상의 개체에 대해 전체 개체의 5%가 사용됩니다. 세그먼트 예측 생성에 대한 자세한 내용은 세그먼트 작성 자습서의 [예측 생성 섹션](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) 에서 확인할 수 있습니다.
 
 ## 예약된 세그먼테이션 사용 {#enable-scheduled-segmentation}
 
@@ -171,7 +179,9 @@ on-demand 평가에는 API를 사용하여 평가를 수행하고 필요에 따�
 
 예약된 평가에 대한 세그먼트 정의 활성화는 UI 또는 API를 사용하여 수행할 수 있습니다. UI에서 세그먼트 내 *[!UICONTROL 의]* **[!UICONTROL 찾아보기]** 탭으로 ****&#x200B;돌아가서 모든 세그먼트평가를전환합니다. 이렇게 하면 조직에서 설정한 일정에 따라 모든 세그먼트가 평가됩니다.
 
->[!NOTE] 최대 5개의 병합 정책을 포함하는 샌드박스에 대해 예약된 평가를 활성화할 수 있습니다 [!DNL XDM Individual Profile]. 조직에서 단일 샌드박스 환경 [!DNL XDM Individual Profile] 에 대해 5개 이상의 병합 정책을 보유하고 있는 경우 예약된 평가를 사용할 수 없습니다.
+>[!NOTE]
+>
+>최대 5개의 병합 정책을 포함하는 샌드박스에 대해 예약된 평가를 활성화할 수 있습니다 [!DNL XDM Individual Profile]. 조직에서 단일 샌드박스 환경 [!DNL XDM Individual Profile] 에 대해 5개 이상의 병합 정책을 보유하고 있는 경우 예약된 평가를 사용할 수 없습니다.
 
 일정은 현재 API를 사용해서만 만들 수 있습니다. API를 사용하여 예약을 생성, 편집 및 작업하는 방법에 대한 자세한 내용은 튜토리얼을 따라 세그먼트 결과를 평가하고 액세스할 수 있으며, 특히 API를 사용한 [예약된 평가에 대한 섹션을 참조하십시오](../tutorials/evaluate-a-segment.md#scheduled-evaluation).
 
@@ -179,7 +189,9 @@ on-demand 평가에는 API를 사용하여 평가를 수행하고 필요에 따�
 
 ## 스트리밍 세분화 {#streaming-segmentation}
 
->[!NOTE] 스트리밍 세그멘테이션이 작동하려면 고객은 조직의 예약된 세그멘테이션을 활성화해야 합니다. 예약된 세그먼테이션 활성화에 대한 자세한 내용은 이 사용자 안내서 [의 이전 섹션을 참조하십시오](#enable-scheduled-segmentation).
+>[!NOTE]
+>
+>스트리밍 세그멘테이션이 작동하려면 고객은 조직의 예약된 세그멘테이션을 활성화해야 합니다. 예약된 세그먼테이션 활성화에 대한 자세한 내용은 이 사용자 안내서 [의 이전 섹션을 참조하십시오](#enable-scheduled-segmentation).
 
 쿼리는 다음 기준을 충족하는 경우 스트리밍 세그멘테이션으로 자동으로 평가됩니다.
 
@@ -223,7 +235,9 @@ on-demand 평가에는 API를 사용하여 평가를 수행하고 필요에 따�
 
 ## 일정 정책 위반
 
->[!NOTE] DULE 정책 위반은 대상에 지정된 세그먼트를 만드는 경우에만 적용됩니다.
+>[!NOTE]
+>
+>DULE 정책 위반은 대상에 지정된 세그먼트를 만드는 경우에만 적용됩니다.
 
 세그먼트 작성을 완료하면 세그먼트 내에 정책 위반이 없도록 세그먼트 [!DNL Data Governance] 를 분석하게 됩니다. DULE 및 정책 위반에 대한 자세한 내용은 [데이터 사용 레이블 개요를 참조하십시오](../../data-governance/labels/overview.md).
 
