@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 실시간 머신 러닝 노트북 사용자 가이드
 topic: Training and scoring a ML model
 translation-type: tm+mt
-source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1637'
 ht-degree: 0%
@@ -274,6 +274,8 @@ print("Model ID : ", model_id)
 이 섹션에서는 DSL을 만드는 방법에 대해 간략하게 설명합니다. ONNX 노드와 함께 데이터의 사전 처리가 포함된 노드를 작성하려고 합니다. 다음으로, 노드와 가장자리를 사용하여 DSL 그래프가 만들어집니다. Edges는 Tuple 기반 형식(node_1, node_2)을 사용하여 노드를 연결합니다. 그래프에는 사이클이 없어야 합니다.
 
 >[!IMPORTANT]
+>
+>
 >ONNX 노드 사용은 필수입니다. ONNX 노드가 없으면 애플리케이션이 실패합니다.
 
 ### 노드 작성
