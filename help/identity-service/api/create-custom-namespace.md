@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 사용자 정의 네임스페이스 만들기
 topic: API guide
 translation-type: tm+mt
-source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '75'
 ht-degree: 5%
@@ -18,7 +18,9 @@ API를 사용하여 [!DNL Identity Namespace] 조직에서만 사용할 수 있�
 
 사용자 정의 네임스페이스 만들기에 대한 권장 사항 [은 Identity Service FAQ 설명서를 참조하십시오](../troubleshooting-guide.md).
 
->[!NOTE] 네임스페이스는 ID의 한정자입니다. 따라서 네임스페이스를 만들면 삭제할 수 없습니다.
+>[!NOTE]
+>
+>네임스페이스는 ID의 한정자입니다. 따라서 네임스페이스를 만들면 삭제할 수 없습니다.
 
 **API 형식**
 
