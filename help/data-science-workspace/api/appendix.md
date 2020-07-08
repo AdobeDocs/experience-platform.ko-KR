@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 부록
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '298'
 ht-degree: 4%
@@ -27,7 +27,9 @@ API는 자산 검색과 관련된 쿼리 매개 변수를 지원합니다. [!DNL
 | `orderby` | 우선 순위 순서로 정렬하는 데 사용할 속성을 나타냅니다. 속성 이름 앞에 대시(**-**)를 포함하여 내림차순으로 정렬하면 결과가 오름차순으로 정렬됩니다. | `orderby=created` |
 | `property` | 반환하기 위해 개체가 충족해야 하는 비교 표현식을 나타냅니다. | `property=deleted==false` |
 
->[!NOTE] 여러 쿼리 매개 변수를 결합할 때는 앰퍼샌드(**&amp;**)로 구분해야 합니다.
+>[!NOTE]
+>
+>여러 쿼리 매개 변수를 결합할 때는 앰퍼샌드(**&amp;**)로 구분해야 합니다.
 
 ## Python CPU 및 GPU 구성 {#cpu-gpu-config}
 
@@ -66,7 +68,9 @@ Python Engine은 교육 또는 채점 목적으로 CPU 또는 GPU 중 하나를 
 ]
 ```
 
->[!NOTE] 의 값 `cpus` 및 `gpus` 은 CPU 또는 GPU 수를 의미하지 않고 실제 시스템의 수를 의미하지 않습니다. 이러한 값은 권한을 가지며 `"1"` 그렇지 않으면 예외를 throw합니다.
+>[!NOTE]
+>
+>의 값 `cpus` 및 `gpus` 은 CPU 또는 GPU 수를 의미하지 않고 실제 시스템의 수를 의미하지 않습니다. 이러한 값은 권한을 가지며 `"1"` 그렇지 않으면 예외를 throw합니다.
 
 ## PySpark 및 Spark 리소스 구성 {#resource-config}
 
