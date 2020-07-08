@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform 데이터 거버넌스
 topic: overview
 translation-type: tm+mt
-source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1448'
 ht-degree: 0%
@@ -64,7 +64,9 @@ DULE 프레임워크에는 데이터를 세 가지 방법으로 분류하는 데
 * **ID &quot;I&quot; 데이터 레이블:** 특정 개인을 식별하거나 연락할 수 있는 데이터에 레이블을 지정하고 분류합니다.
 * **민감한 &quot;S&quot; 데이터 레이블:** 지리적 데이터와 같은 민감한 데이터와 관련된 데이터에 레이블을 지정하고 분류할 수 있습니다.
 
->[!NOTE] 사용 가능한 레이블의 전체 목록과 각 레이블 유형에 대한 정의는 [지원되는 데이터 사용 레이블에](labels/reference.md) 대한 안내서를 참조하십시오.
+>[!NOTE]
+>
+>사용 가능한 레이블의 전체 목록과 각 레이블 유형에 대한 정의는 [지원되는 데이터 사용 레이블에](labels/reference.md) 대한 안내서를 참조하십시오.
 
 레이블은 언제든지 적용할 수 있으므로 데이터 관리 방식을 유연하게 선택할 수 있습니다. 데이터를 인제스트되는 즉시 [!DNL Experience Platform]또는 데이터가 사용 가능하게 되는 즉시 레이블 지정을 권장합니다 [!DNL Platform].
 
@@ -78,7 +80,9 @@ DULE 프레임워크에는 데이터를 세 가지 방법으로 분류하는 데
 
 데이터 사용 레이블이 적용되면 데이터 관리자는 DULE 정책 서비스 API 또는 [!DNL Experience Platform] 사용자 인터페이스를 사용하여 정책을 만들 수 있습니다.
 
->[!IMPORTANT] 모든 데이터 사용 정책(Adobe에서 제공하는 핵심 정책 포함)은 기본적으로 비활성화됩니다. 개별 정책이 적용을 위해 고려되려면 해당 정책을 수동으로 활성화해야 합니다.
+>[!IMPORTANT]
+>
+>모든 데이터 사용 정책(Adobe에서 제공하는 핵심 정책 포함)은 기본적으로 비활성화됩니다. 개별 정책이 적용을 위해 고려되려면 해당 정책을 수동으로 활성화해야 합니다.
 
 데이터 사용 정책 및 마케팅 작업에 대한 자세한 내용은 [정책 개요를 참조하십시오](./policies/overview.md).
 
