@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 데이터 과학 작업 공간 문제 해결 가이드
 topic: Troubleshooting
 translation-type: tm+mt
-source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '665'
 ht-degree: 0%
@@ -18,7 +18,9 @@ ht-degree: 0%
 
 ## [!DNL JupyterLab] 환경이 [!DNL Google Chrome]
 
->[!IMPORTANT] 이 문제는 해결되었지만 Google Chrome 80.x 브라우저에 여전히 존재할 수 있습니다. 크롬 브라우저가 최신 버전인지 확인하십시오.
+>[!IMPORTANT]
+>
+>이 문제는 해결되었지만 Google Chrome 80.x 브라우저에 여전히 존재할 수 있습니다. 크롬 브라우저가 최신 버전인지 확인하십시오.
 
 브라우저 [!DNL Google Chrome] 버전 80.x에서는 기본적으로 모든 타사 쿠키가 차단됩니다. 이 정책은 Adobe Experience Platform 내에서 로드되지 [!DNL JupyterLab] 않을 수 있습니다.
 
@@ -38,7 +40,9 @@ ht-degree: 0%
 
 ![chrome](./images/faq/toggle-off.png)
 
->[!NOTE] 또는 타사 쿠키를 비활성화하고 [* 추가할 수도 있습니다.]ds.adobe.net을 허용 목록에 추가합니다.
+>[!NOTE]
+>
+>또는 타사 쿠키를 비활성화하고 [* 추가할 수도 있습니다.]ds.adobe.net을 허용 목록에 연결합니다.
 
 주소 표시줄의 &quot;chrome://flags/&quot;으로 이동합니다. 오른쪽의 드롭다운 메뉴를 사용하여 *&quot;기본 쿠키로* SameSite&quot;라는 플래그를 검색하고 비활성화합니다.
 
