@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 작업
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: a3178ab54a7ab5eacd6c5f605b8bd894779f9e85
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1669'
 ht-degree: 2%
@@ -20,14 +20,18 @@ ht-degree: 2%
 
 새 작업 요청을 만들기 전에 먼저 액세스, 삭제 또는 판매를 거부할 데이터의 데이터 주체에 대한 식별 정보를 수집해야 합니다. 필요한 데이터가 있으면 루트 끝점에 대한 POST 요청의 페이로드에서 제공해야 합니다.
 
->[!NOTE] 호환되는 Adobe Experience Cloud 애플리케이션은 데이터 주체 식별에 서로 다른 값을 사용합니다. 응용 프로그램에 필요한 식별자에 대한 자세한 내용은 [개인 정보 서비스 및 Experience Cloud 응용](../experience-cloud-apps.md) 프로그램 가이드를 참조하십시오.
+>[!NOTE]
+>
+>호환되는 Adobe Experience Cloud 애플리케이션은 데이터 주체 식별에 서로 다른 값을 사용합니다. 응용 프로그램에 필요한 식별자에 대한 자세한 내용은 [Privacy Service 및 Experience Cloud 응용](../experience-cloud-apps.md) 프로그램에 대한 가이드를 참조하십시오.
 
-개인정보 보호 서비스 API는 개인 데이터에 대한 두 가지 작업 요청을 지원합니다.
+Privacy Service API는 개인 데이터에 대한 두 가지 작업 요청을 지원합니다.
 
 * [액세스 및/또는 삭제](#access-delete): 개인 데이터에 액세스(읽기) 또는 삭제합니다.
 * [판매](#opt-out)거부: 개인 데이터를 판매하지 않도록 표시합니다.
 
->[!IMPORTANT] 액세스 및 삭제 요청은 단일 API 호출로 결합할 수 있지만 옵트아웃 요청은 별도로 이루어져야 합니다.
+>[!IMPORTANT]
+>
+>액세스 및 삭제 요청은 단일 API 호출로 결합할 수 있지만 옵트아웃 요청은 별도로 이루어져야 합니다.
 
 ### 액세스/삭제 작업 만들기 {#access-delete}
 
@@ -105,9 +109,9 @@ curl -X POST \
 | `companyContexts` **(필수 여부)** | 조직에 대한 인증 정보가 포함된 배열입니다. 나열된 각 식별자에는 다음 속성이 포함됩니다. <ul><li>`namespace`: 식별자의 네임스페이스입니다.</li><li>`value`: 식별자의 값입니다.</li></ul>IMS 조직의 고유 ID를 포함하는 식별자 중 **은** 식별자 `imsOrgId` 로 사용해야 `namespace``value` 합니다. <br/><br/>추가 식별자는 조직에 속하는 Adobe 애플리케이션과의 통합을 식별하는 제품별 회사 한정자( `Campaign`예:)일 수 있습니다. 잠재적 값에는 계정 이름, 클라이언트 코드, 테넌트 ID 또는 기타 응용 프로그램 식별자가 포함됩니다. |
 | `users` **(필수 여부)** | 액세스하거나 삭제하려는 정보가 있는 사용자 중 적어도 한 명의 컬렉션이 포함된 배열입니다. 단일 요청에서 최대 1,000개의 사용자 ID를 제공할 수 있습니다. 각 사용자 객체에는 다음 정보가 포함됩니다. <ul><li>`key`: 응답 데이터에서 개별 작업 ID의 자격을 규정하는 데 사용되는 사용자의 식별자입니다. 이 값에 대해 고유하고 쉽게 식별할 수 있는 문자열을 선택하여 나중에 쉽게 참조하거나 조회할 수 있도록 하는 것이 좋습니다.</li><li>`action`: 사용자의 데이터에 적용할 원하는 작업을 나열하는 배열입니다. 수행하려는 작업에 따라 이 배열에 포함 `access`또는 둘 다 `delete`포함되어야 합니다.</li><li>`userIDs`: 사용자의 ID 컬렉션입니다. 단일 사용자가 가질 수 있는 ID 수는 9개로 제한됩니다. 각 ID는 `namespace`a, a `value`및 네임스페이스 한정자(`type`)로 구성됩니다. 이러한 필수 속성에 대한 자세한 내용은 [부록을](appendix.md) 참조하십시오.</li></ul> 자세한 내용 `users` 및 `userIDs`은 [문제 해결 가이드를 참조하십시오](../troubleshooting-guide.md#user-ids). |
 | `include` **(필수 여부)** | 처리에 포함할 Adobe 제품 배열. 이 값이 없거나 비어 있으면 요청이 거부됩니다. 조직에 통합된 제품만 포함합니다. 자세한 내용은 부록에 있는 [승인된 제품 값](appendix.md) 섹션을 참조하십시오. |
-| `expandIDs` | 로 설정되면 애플리케이션에서 ID `true`를 처리하기 위한 최적화를 나타내는 선택적 속성(현재 Analytics에서만 지원됨). If omitted, this value defaults to `false`. |
+| `expandIDs` | 로 설정되면 응용 프로그램 `true`에서 ID 처리를 위한 최적화를 나타내는 선택적 속성(현재 Analytics에서만 지원). If omitted, this value defaults to `false`. |
 | `priority` | 요청 처리 우선 순위를 설정하는 Adobe Analytics에서 사용하는 선택적 속성입니다. 허용된 값은 `normal` 및 `low`입니다. 이 `priority` 를 생략하면 기본 동작이 사용됩니다 `normal`. |
-| `analyticsDeleteMethod` | Adobe Analytics가 개인 데이터를 처리하는 방법을 지정하는 선택적 속성입니다. 이 속성에 대해 가능한 두 개의 값이 허용됩니다. <ul><li>`anonymize`: 지정된 사용자 ID 컬렉션에서 참조되는 모든 데이터는 익명으로 처리됩니다. 이 `analyticsDeleteMethod` 를 생략하면 기본 동작입니다.</li><li>`purge`: 모든 데이터가 완전히 제거됩니다.</li></ul> |
+| `analyticsDeleteMethod` | Adobe Analytics이 개인 데이터를 처리하는 방법을 지정하는 선택적 속성입니다. 이 속성에 대해 가능한 두 개의 값이 허용됩니다. <ul><li>`anonymize`: 지정된 사용자 ID 컬렉션에서 참조되는 모든 데이터는 익명으로 처리됩니다. 이 `analyticsDeleteMethod` 를 생략하면 기본 동작입니다.</li><li>`purge`: 모든 데이터가 완전히 제거됩니다.</li></ul> |
 | `regulation` **(필수 여부)** | 요청에 대한 규정. 다음 세 값 중 하나여야 합니다. <ul><li>gdpr</li><li>ccpa</li><li>pdpa_tha</li></ul> |
 
 **응답**
@@ -238,9 +242,9 @@ curl -X POST \
 | `companyContexts` **(필수 여부)** | 조직에 대한 인증 정보가 포함된 배열입니다. 나열된 각 식별자에는 다음 속성이 포함됩니다. <ul><li>`namespace`: 식별자의 네임스페이스입니다.</li><li>`value`: 식별자의 값입니다.</li></ul>IMS 조직의 고유 ID를 포함하는 식별자 중 **은** 식별자 `imsOrgId` 로 사용해야 `namespace``value` 합니다. <br/><br/>추가 식별자는 조직에 속하는 Adobe 애플리케이션과의 통합을 식별하는 제품별 회사 한정자( `Campaign`예:)일 수 있습니다. 잠재적 값에는 계정 이름, 클라이언트 코드, 테넌트 ID 또는 기타 응용 프로그램 식별자가 포함됩니다. |
 | `users` **(필수 여부)** | 액세스하거나 삭제하려는 정보가 있는 사용자 중 적어도 한 명의 컬렉션이 포함된 배열입니다. 단일 요청에서 최대 1,000개의 사용자 ID를 제공할 수 있습니다. 각 사용자 객체에는 다음 정보가 포함됩니다. <ul><li>`key`: 응답 데이터에서 개별 작업 ID의 자격을 규정하는 데 사용되는 사용자의 식별자입니다. 이 값에 대해 고유하고 쉽게 식별할 수 있는 문자열을 선택하여 나중에 쉽게 참조하거나 조회할 수 있도록 하는 것이 좋습니다.</li><li>`action`: 데이터에 적용할 원하는 작업을 나열하는 배열입니다. 판매 거부 요청의 경우 배열에는 값만 포함되어야 합니다 `opt-out-of-sale`.</li><li>`userIDs`: 사용자의 ID 컬렉션입니다. 단일 사용자가 가질 수 있는 ID 수는 9개로 제한됩니다. 각 ID는 `namespace`a, a `value`및 네임스페이스 한정자(`type`)로 구성됩니다. 이러한 필수 속성에 대한 자세한 내용은 [부록을](appendix.md) 참조하십시오.</li></ul> 자세한 내용 `users` 및 `userIDs`은 [문제 해결 가이드를 참조하십시오](../troubleshooting-guide.md#user-ids). |
 | `include` **(필수 여부)** | 처리에 포함할 Adobe 제품 배열. 이 값이 없거나 비어 있으면 요청이 거부됩니다. 조직에 통합된 제품만 포함합니다. 자세한 내용은 부록에 있는 [승인된 제품 값](appendix.md) 섹션을 참조하십시오. |
-| `expandIDs` | 로 설정되면 애플리케이션에서 ID `true`를 처리하기 위한 최적화를 나타내는 선택적 속성(현재 Analytics에서만 지원됨). If omitted, this value defaults to `false`. |
+| `expandIDs` | 로 설정되면 응용 프로그램 `true`에서 ID 처리를 위한 최적화를 나타내는 선택적 속성(현재 Analytics에서만 지원). If omitted, this value defaults to `false`. |
 | `priority` | 요청 처리 우선 순위를 설정하는 Adobe Analytics에서 사용하는 선택적 속성입니다. 허용된 값은 `normal` 및 `low`입니다. 이 `priority` 를 생략하면 기본 동작이 사용됩니다 `normal`. |
-| `analyticsDeleteMethod` | Adobe Analytics가 개인 데이터를 처리하는 방법을 지정하는 선택적 속성입니다. 이 속성에 대해 가능한 두 개의 값이 허용됩니다. <ul><li>`anonymize`: 지정된 사용자 ID 컬렉션에서 참조되는 모든 데이터는 익명으로 처리됩니다. 이 `analyticsDeleteMethod` 를 생략하면 기본 동작입니다.</li><li>`purge`: 모든 데이터가 완전히 제거됩니다.</li></ul> |
+| `analyticsDeleteMethod` | Adobe Analytics이 개인 데이터를 처리하는 방법을 지정하는 선택적 속성입니다. 이 속성에 대해 가능한 두 개의 값이 허용됩니다. <ul><li>`anonymize`: 지정된 사용자 ID 컬렉션에서 참조되는 모든 데이터는 익명으로 처리됩니다. 이 `analyticsDeleteMethod` 를 생략하면 기본 동작입니다.</li><li>`purge`: 모든 데이터가 완전히 제거됩니다.</li></ul> |
 | `regulation` **(필수 여부)** | 요청에 대한 규정. 다음 세 값 중 하나여야 합니다. <ul><li>gdpr</li><li>ccpa</li><li>pdpa_tha</li></ul> |
 
 **응답**
@@ -288,7 +292,9 @@ curl -X POST \
 
 이전 단계에서 반환된 `jobId` 값 중 하나를 사용하여 현재 처리 상태와 같은 해당 작업에 대한 정보를 검색할 수 있습니다.
 
->[!IMPORTANT] 이전에 만든 작업에 대한 데이터는 작업 완료 날짜로부터 30일 이내에서만 검색할 수 있습니다.
+>[!IMPORTANT]
+>
+>이전에 만든 작업에 대한 데이터는 작업 완료 날짜로부터 30일 이내에서만 검색할 수 있습니다.
 
 **API 형식**
 
@@ -383,7 +389,9 @@ curl -X GET \
 | 3 | 제출됨 | 작업이 적용 가능한 모든 애플리케이션에 제출됩니다. |
 | 4 | 오류 | 작업을 처리하지 못했습니다. 개별 작업 세부 정보를 검색하여 더 구체적인 정보를 얻을 수 있습니다. |
 
->[!NOTE] 제출된 작업이 여전히 처리 중인 종속 하위 작업이 있는 경우 처리 상태로 유지될 수 있습니다.
+>[!NOTE]
+>
+>제출된 작업이 여전히 처리 중인 종속 하위 작업이 있는 경우 처리 상태로 유지될 수 있습니다.
 
 ## 모든 작업 나열
 
@@ -428,4 +436,4 @@ curl -X GET \
 
 ## 다음 단계
 
-귀하는 이제 개인정보 보호 서비스 API를 사용하여 개인정보 보호 작업을 만들고 모니터링하는 방법을 알고 있습니다. 사용자 인터페이스를 사용하여 동일한 작업을 수행하는 방법에 대한 자세한 내용은 [개인정보 보호 서비스 UI 개요를 참조하십시오](../ui/overview.md).
+이제 Privacy Service API를 사용하여 개인 정보 작업을 만들고 모니터링하는 방법을 알 수 있습니다. 사용자 인터페이스를 사용하여 동일한 작업을 수행하는 방법에 대한 자세한 내용은 [Privacy Service UI 개요를 참조하십시오](../ui/overview.md).
