@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 모델
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 33f8c424c208bb61319b49e7ecb30e3144ef108a
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '821'
 ht-degree: 4%
@@ -220,7 +220,9 @@ curl -X POST \
 
 요청 경로에 대상 모델의 ID가 포함된 PUT 요청을 통해 속성을 덮어쓰고 업데이트된 속성이 포함된 JSON 페이로드를 제공하여 기존 모델을 업데이트할 수 있습니다.
 
->[!TIP] 이 PUT 요청의 성공을 보장하기 위해 먼저 ID로 모델을 검색하기 위한 GET 요청을 수행하는 것이 좋습니다. 그런 다음 반환된 JSON 개체를 수정 및 업데이트하고 수정된 JSON 개체 전체를 PUT 요청의 페이로드로 적용합니다.
+>[!TIP]
+>
+>이 PUT 요청의 성공을 보장하기 위해 먼저 ID로 모델을 검색하기 위한 GET 요청을 수행하는 것이 좋습니다. 그런 다음 반환된 JSON 개체를 수정 및 업데이트하고 수정된 JSON 개체 전체를 PUT 요청의 페이로드로 적용합니다.
 
 **API 형식**
 
