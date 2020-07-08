@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 모델을 서비스로 게시(API)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1478'
 ht-degree: 1%
@@ -338,7 +338,9 @@ curl -X GET 'https://platform.adobe.io/data/sensei/mlServices/{SERVICE_ID}'
 }
 ```
 
->[!NOTE] 다른 ML 서비스를 검색하면 키-값 쌍보다 많거나 적은 수의 응답이 반환될 수 있습니다. 위의 응답은 예약된 트레이닝과 점수 지정 실험 실행 [](#ml-service-with-scheduled-experiments-for-training-and-scoring)기능이 있는 ML 서비스의 표현입니다.
+>[!NOTE]
+>
+>다른 ML 서비스를 검색하면 키-값 쌍보다 많거나 적은 수의 응답이 반환될 수 있습니다. 위 응답은 예약된 트레이닝과 점수 지정 실험 실행 [](#ml-service-with-scheduled-experiments-for-training-and-scoring)기능이 있는 ML 서비스의 표현입니다.
 
 
 ## 트레이닝 또는 점수 지정 예약
@@ -388,7 +390,9 @@ curl -X PUT 'https://platform.adobe.io/data/sensei/mlServices/{SERVICE_ID}'
       }'
 ```
 
->[!WARNING] 기존의 예약된 교육 및 점수 지정 작업 `startTime` 을 수정하지 마십시오. 수정할 `startTime` 경우 동일한 모델을 게시하고 교육 및 점수 지정 작업의 일정을 조정하십시오.
+>[!WARNING]
+>
+>기존의 예약된 교육 및 점수 지정 작업 `startTime` 을 수정하지 마십시오. 수정할 `startTime` 경우 동일한 모델을 게시하고 교육 및 점수 지정 작업의 일정을 조정하십시오.
 
 **응답**
 
