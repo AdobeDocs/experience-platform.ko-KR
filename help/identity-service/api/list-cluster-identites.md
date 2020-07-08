@@ -4,20 +4,23 @@ solution: Experience Platform
 title: 클러스터 ID 목록
 topic: API guide
 translation-type: tm+mt
-source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '312'
+ht-degree: 1%
 
 ---
 
 
-# 클러스터의 모든 ID 나열
+# 클러스터의 모든 ID 목록
 
-네임스페이스와 상관없이 ID 그래프에 관련된 ID는 해당 ID 그래프에서 동일한 &quot;클러스터&quot;의 일부로 간주됩니다. 아래 옵션은 모든 클러스터 멤버에 액세스할 수 있는 수단을 제공합니다.
+네임스페이스와 관계없이 ID 그래프에 관련된 ID는 해당 ID 그래프에서 동일한 &quot;클러스터&quot;의 일부로 간주됩니다. 아래 옵션은 모든 클러스터 구성원에 액세스할 수 있는 수단을 제공합니다.
 
-## 단일 ID에 연결된 ID 가져오기
+## 단일 ID에 연결된 ID 받기
 
-단일 ID에 대한 모든 클러스터 멤버를 검색합니다.
+단일 ID에 대해 모든 클러스터 멤버를 검색합니다.
 
-선택적 `graph-type` 매개 변수를 사용하여 클러스터를 가져올 ID 그래프를 표시할 수 있습니다. 옵션은 다음과 같습니다.
+선택적 매개 변수를 사용하여 클러스터를 가져오는 ID 그래프를 표시할 수 있습니다. `graph-type` 옵션은 다음과 같습니다.
 
 - 없음 - ID 스티칭을 수행하지 않습니다.
 - 비공개 그래프 - 개인 ID 그래프를 기반으로 ID 스티칭을 수행합니다. 제공되지 `graph-type` 않는 경우 기본값이 됩니다.
@@ -30,7 +33,7 @@ GET https://platform-{REGION}.adobe.io/data/core/identity/cluster/members?{PARAM
 
 **요청**
 
-옵션 1:ID를 네임스페이스(ID`nsId`별) 및 ID 값(`id`)으로 제공합니다.
+옵션 1: ID를 네임스페이스(ID별`nsId`)와 ID 값(`id`)으로 제공합니다.
 
 ```shell
 curl -X GET \
@@ -41,7 +44,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-옵션 2:ID를 네임스페이스(`ns`이름별)와 ID 값(`id`)으로 제공합니다.
+옵션 2: ID를 네임스페이스(이름별`ns`)와 ID 값(`id`)으로 제공합니다.
 
 ```shell
 curl -X GET \
@@ -52,7 +55,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-옵션 3:ID를 XID(`xid`)로 제공합니다. ID의 XID를 얻는 방법에 대한 자세한 내용은 ID에 대한 XID [가져오기를 다루는 이 문서의 섹션을 참조하십시오](./list-native-id.md).
+옵션 3: ID를 XID(`xid`)로 제공합니다. ID의 XID를 얻는 방법에 대한 자세한 내용은 ID용 XID [를 가져오는 내용을 포함하는 이 문서의 섹션을 참조하십시오](./list-native-id.md).
 
 ```shell
 curl -X GET \
@@ -63,11 +66,13 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-## 여러 ID에 대한 ID 연결
+## 여러 ID에 대해 연결된 ID 받기
 
-위에 설명된 `POST` 방법과 동일한 일괄 `GET` 처리로 사용하여 여러 ID 클러스터의 ID를 반환합니다.
+여러 ID 클러스터 `POST` 에서 ID를 반환하려면 위에 설명된 `GET` 방법과 동등한 일괄 처리 방법으로 사용하십시오.
 
->[!NOTE] 요청은 최대 1,000개의 ID를 초과하지 않아야 합니다. ID가 1000개를 초과하는 요청은 400개의 상태 코드를 생성합니다.
+>[!NOTE]
+>
+>요청은 최대 1000개의 ID를 초과하지 않아야 합니다. ID가 1000개를 초과하는 요청은 400개의 상태 코드를 생성합니다.
 
 **API 형식**
 
@@ -81,7 +86,7 @@ POST https://platform-{REGION}.adobe.io/data/core/identity/clusters/members
 
 **Stub 요청**
 
-헤더를 `x-uis-cst-ctx: stub` 사용하면 스텝 응답이 반환됩니다. 서비스가 완료되는 동안 조기 통합 개발을 용이하게 하는 임시 솔루션입니다. 더 이상 필요하지 않은 경우 더 이상 사용되지 않습니다.
+헤더 `x-uis-cst-ctx: stub` 를 사용하면 스크롤 응답이 반환됩니다. 서비스가 완료되는 동안 이 솔루션은 조기 통합 개발을 용이하게 하는 임시 솔루션입니다. 더 이상 필요하지 않은 경우 더 이상 사용되지 않습니다.
 
 ```shell
 curl -X POST \
@@ -97,7 +102,7 @@ curl -X POST \
 }'
 ```
 
-**XID를 사용하여 전화 걸기**
+**XID를 사용하여 호출**
 
 ```shell
 curl -X POST \
@@ -231,8 +236,10 @@ curl -X POST \
 }
 ```
 
->[!NOTE] 요청의 XID가 동일한 클러스터에 속해 있는지 또는 하나 이상의 XID가 연결되어 있는지 여부에 관계없이 응답에는 항상 요청에 제공된 각 XID에 대한 항목이 하나씩 있습니다.
+>[!NOTE]
+>
+>요청의 XID가 동일한 클러스터에 속해 있는지 또는 하나 이상의 XID가 연결되어 있는지 여부에 관계없이 응답에는 항상 요청에 제공된 각 XID에 대해 하나의 항목이 포함됩니다.
 
 ## 다음 단계
 
-다음 자습서로 진행하여 ID의 클러스터 내역을 [나열합니다.](./list-cluster-history.md)
+다음 자습서로 진행하여 ID의 클러스터 내역을 [나열합니다](./list-cluster-history.md)
