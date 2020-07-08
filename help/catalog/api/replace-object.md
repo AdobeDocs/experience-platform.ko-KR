@@ -4,16 +4,21 @@ solution: Experience Platform
 title: 개체 바꾸기
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: a753c6460bfe89e2b78fb3e087e9ba7397206dec
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '141'
+ht-degree: 2%
 
 ---
 
 
 # 개체 바꾸기
 
-전체 리소스가 요청 페이로드로 대체되는 PUT 요청을 사용하여 카탈로그 개체의 내용을 덮어쓸 수 있습니다.
+PUT 요청을 사용하여 카탈로그 개체의 콘텐츠를 덮어쓸 수 있습니다. PUT 요청은 전체 리소스를 요청 페이로드로 대체합니다.
 
->[!NOTE] 카탈로그 개체 내의 일부 특정 필드만 업데이트할 필요가 있는 경우 PATCH 요청을 사용하는 것이 더 효율적일 수 있습니다.
+>[!NOTE]
+>
+>카탈로그 개체 내의 일부 특정 필드만 업데이트해야 하는 경우 PATCH 요청을 사용하는 것이 더 효율적일 수 있습니다.
 
 **API 형식**
 
@@ -28,7 +33,7 @@ PUT /{OBJECT_TYPE}/{OBJECT_ID}
 
 **요청**
 
-다음 요청은 데이터 집합을 페이로드에서 제공된 값으로 덮어씁니다.
+다음 요청은 데이터 세트에 페이로드에서 제공된 값을 덮어씁니다.
 
 ```shell
 curl -X PUT \
@@ -53,7 +58,7 @@ curl -X PUT \
 
 **응답**
 
-성공적인 응답은 덮어쓴 객체의 ID가 포함된 배열을 반환합니다. 이 ID 파섹 이제 이 개체에 대한 GET 요청을 수행하면 해당 세부 사항이 이전 PUT 요청의 페이로드에서 제공된 세부 항목으로 대체되었음을 표시합니다.
+성공적인 응답은 덮어쓴 객체의 ID가 포함된 배열을 반환합니다. 이 ID는 PUT 요청에 전송된 ID와 일치해야 합니다. 이제 이 개체에 대한 GET 요청을 수행하면 해당 세부 사항이 이전 PUT 요청의 페이로드에서 제공된 세부 항목으로 대체되었다는 결과가 표시됩니다.
 
 ```json
 [
