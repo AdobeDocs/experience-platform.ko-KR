@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 데이터 사용 정책 만들기
 topic: policies
 translation-type: tm+mt
-source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1194'
 ht-degree: 2%
@@ -217,7 +217,9 @@ curl -X PUT \
 }
 ```
 
->[!NOTE] OR 및 AND 연산자만 지원됩니다.
+>[!NOTE]
+>
+>OR 및 AND 연산자만 지원됩니다.
 
 정책 표현식을 구성한 후에는 종단점에 대한 POST 요청을 수행하여 새 DULE 정책을 만들 수 `/policies/custom` 있습니다.
 
@@ -322,7 +324,9 @@ curl -X POST \
 
 ## DULE 정책 사용
 
->[!NOTE] DULE 정책을 `DRAFT` 상태로 유지하려면 이 단계는 선택 사항이지만, 평가에 참여하려면 기본적으로 정책에 해당 상태가 설정되어 있어야 `ENABLED` 합니다. 정책에 대한 예외를 만드는 방법에 대한 자세한 내용은 [일정 정책](../enforcement/api-enforcement.md) 적용에 대한 자습서를 `DRAFT` 참조하십시오.
+>[!NOTE]
+>
+>DULE 정책을 `DRAFT` 상태로 유지하려면 이 단계는 선택 사항이지만, 평가에 참여하려면 기본적으로 정책에 해당 상태가 설정되어 있어야 `ENABLED` 합니다. 정책에 대한 예외를 만드는 방법에 대한 자세한 내용은 [일정 정책](../enforcement/api-enforcement.md) 적용에 대한 자습서를 `DRAFT` 참조하십시오.
 
 기본적으로 속성이 설정된 DULE 정책 `status` 은 평가에 참여하지 `DRAFT` 않습니다. 종단점에 PATCH 요청을 만들고 요청 경로 끝에 정책에 대한 고유 식별자를 제공하여 정책을 평가하도록 할 수 있습니다. `/policies/custom/`
 
@@ -365,7 +369,7 @@ curl -X PATCH \
 
 **응답**
 
-성공적인 응답은 HTTP 상태 200(OK) 및 업데이트된 정책의 세부 정보를 `status` 이제 로 설정합니다 `ENABLED`.
+성공적인 응답은 HTTP 상태 200(OK)과 업데이트된 정책의 세부 정보를 `status` 이제 로 설정합니다 `ENABLED`.
 
 ```json
 {
