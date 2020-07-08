@@ -4,16 +4,21 @@ solution: Experience Platform
 title: 샌드박스 삭제
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 974e93b1c24493734848151b9be00758f6a84578
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '84'
+ht-degree: 4%
 
 ---
 
 
 # 샌드박스 삭제
 
-요청 경로에 샌드박스를 포함하는 DELETE 요청을 만들어 샌드박스를 삭제할 `name` 수 있습니다.
+요청 경로에 샌드박스의 DELETE 요청을 수행하여 샌드박스를 삭제할 수 `name` 있습니다.
 
->[!NOTE] 이 API 호출을 수행하면 샌드박스의 `status` 속성이 &quot;삭제됨&quot;으로 업데이트되고 비활성화됩니다. GET 요청은 삭제된 후에도 여전히 샌드박스의 세부 정보를 검색할 수 있습니다.
+>[!NOTE]
+>
+>이 API 호출을 수행하면 샌드박스의 `status` 속성이 &quot;삭제됨&quot;으로 업데이트되고 비활성화됩니다. GET 요청은 삭제된 후에도 샌드박스의 세부 사항을 검색할 수 있습니다.
 
 **API 형식**
 
@@ -23,7 +28,7 @@ DELETE /sandboxes/{SANDBOX_NAME}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{SANDBOX_NAME}` | 삭제할 샌드박스의 `name` 이름입니다. |
+| `{SANDBOX_NAME}` | 삭제할 샌드박스 `name` 의 이름입니다. |
 
 **요청**
 
@@ -40,7 +45,7 @@ curl -X DELETE \
 
 **응답**
 
-성공적인 응답은 샌드박스의 업데이트된 세부 정보를 반환하고 `state` &quot;삭제됨&quot;을 표시합니다.
+성공적인 응답은 샌드박스의 업데이트된 세부 정보를 반환하며, 이 세부 사항은 &quot;삭제&quot; `state` 되었음을 나타냅니다.
 
 ```json
 {
