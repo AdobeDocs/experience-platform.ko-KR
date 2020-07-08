@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 고객 AI를 통한 인사이트 검색
 topic: Discovering insights
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1059'
 ht-degree: 0%
@@ -30,7 +30,9 @@ UI [!DNL Adobe Experience Platform] 에서 왼쪽 탐색 **[!UICONTROL 영역에
 
 고객 AI 서비스 페이지가 나타납니다. 이 페이지에는 고객 AI의 서비스 인스턴스가 나열되며 인스턴스 이름, 성향 유형, 인스턴스 실행 빈도, 마지막 업데이트 상태 등 고객 AI에 대한 정보가 표시됩니다.
 
->[!NOTE] 성공적인 점수 실행을 완료한 서비스 인스턴스에만 통찰력이 있습니다.
+>[!NOTE]
+>
+>성공적인 점수 실행을 완료한 서비스 인스턴스에만 통찰력이 있습니다.
 
 ![인스턴스 만들기](../images/insights/dashboard.png)
 
@@ -51,7 +53,9 @@ UI [!DNL Adobe Experience Platform] 에서 왼쪽 탐색 **[!UICONTROL 영역에
 
 ![오른쪽 레일](../images/insights/success-run.png)
 
->[!NOTE] 점수 실행이 실패하는 경우 오류 메시지가 표시됩니다. 오류 메시지가 오른쪽 레일의 *마지막 실행 세부* 사항 아래에 나열되며, 이 세부 사항은 실패한 실행에만 표시됩니다.
+>[!NOTE]
+>
+>점수 실행이 실패하는 경우 오류 메시지가 표시됩니다. 오류 메시지가 오른쪽 레일의 *마지막 실행 세부* 사항 아래에 나열되며, 이 세부 사항은 실패한 실행에만 표시됩니다.
 
 ![실패한 실행 메시지](../images/insights/failed-run.png)
 
@@ -85,7 +89,9 @@ UI [!DNL Adobe Experience Platform] 에서 왼쪽 탐색 **[!UICONTROL 영역에
 
 점수 요약은 채점된 총 프로필 수를 표시하고 이것을 높은 성향, 중간 성향 및 낮은 경향을 포함하는 버킷으로 분류합니다. 성향 버킷은 점수 범위를 기반으로 결정되며, 낮음은 24보다 작으며, 중간값은 25~74이고, 높음은 74를 넘습니다. 각 버킷에는 범례에 해당하는 색상이 있습니다.
 
->[!NOTE] 전환 성향 점수인 경우 높은 점수가 녹색으로 표시되고 낮은 점수가 빨간색으로 표시됩니다. 이탈률 이탈을 예측할 경우 이를 뒤집으면 높은 점수가 빨간색으로 표시되고 낮은 점수가 녹색으로 표시됩니다. 중간 버킷은 선택한 성향 유형에 관계없이 노란색으로 유지됩니다.
+>[!NOTE]
+>
+>전환 성향 점수인 경우 높은 점수가 녹색으로 표시되고 낮은 점수가 빨간색으로 표시됩니다. 이탈률 이탈을 예측할 경우 이를 뒤집으면 높은 점수가 빨간색으로 표시되고 낮은 점수가 녹색으로 표시됩니다. 중간 버킷은 선택한 성향 유형에 관계없이 노란색으로 유지됩니다.
 
 ![점수 요약](../images/insights/scoring-summary.png)
 
@@ -118,7 +124,7 @@ UI [!DNL Adobe Experience Platform] 에서 왼쪽 탐색 **[!UICONTROL 영역에
 
 ![세그먼트 채우기](../images/insights/segment-saving.png)
 
-플랫폼 UI에서 새 세그먼트를 보려면 왼쪽 탐색 **[!UICONTROL 에서]** 세그먼트를 클릭합니다. 검색 *페이지가* 나타나고 사용 가능한 모든 세그먼트가 표시됩니다.
+Platform UI에서 새 세그먼트를 보려면 왼쪽 탐색 **[!UICONTROL 에서]** 세그먼트를 클릭합니다. 검색 *페이지가* 나타나고 사용 가능한 모든 세그먼트가 표시됩니다.
 
 ![모든 세그먼트](../images/insights/Segments-dashboard.png)
 
