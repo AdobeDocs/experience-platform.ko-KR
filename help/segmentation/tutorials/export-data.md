@@ -4,7 +4,7 @@ solution: Experience Platform
 title: API를 사용하여 데이터 내보내기
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: d0b9223aebca0dc510a7457e5a5c65ac4a567933
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1953'
 ht-degree: 1%
@@ -24,22 +24,24 @@ ht-degree: 1%
 
 - [실시간 고객 프로필](../../profile/home.md): 여러 소스에서 수집한 데이터를 기반으로 통합된 고객 프로필을 실시간으로 제공합니다.
 - [Adobe Experience Platform 세그멘테이션 서비스](../home.md): 실시간 고객 프로필 데이터를 통해 고객 세그먼트를 만들 수 있습니다.
-- [XDM(Experience Data Model)](../../xdm/home.md): Platform(플랫폼)이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
-- [샌드박스](../../sandboxes/home.md): 경험 플랫폼은 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되도록 단일 플랫폼 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
+- [XDM(Experience Data Model)](../../xdm/home.md): Platform이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
+- [샌드박스](../../sandboxes/home.md): Experience Platform은 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되도록 단일 Platform 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
 
 ### 필요한 헤더
 
-또한 이 자습서에서는 플랫폼 API를 성공적으로 호출하려면 [인증 자습서를](../../tutorials/authentication.md) 완료해야 합니다. 인증 자습서를 완료하면 아래와 같이 모든 경험 플랫폼 API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
+또한 이 자습서에서는 Platform API를 성공적으로 호출하려면 [인증 자습서를](../../tutorials/authentication.md) 완료해야 합니다. 인증 자습서를 완료하면 아래와 같이 모든 Experience Platform API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
 
 - 인증: 무기명 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-경험 플랫폼의 모든 리소스는 특정 가상 샌드박스와 분리됩니다. 플랫폼 API에 대한 요청에는 작업이 수행할 샌드박스의 이름을 지정하는 헤더가 필요합니다.
+Experience Platform의 모든 리소스는 특정 가상 샌드박스와 분리됩니다. Platform API에 대한 요청에는 작업이 수행할 샌드박스의 이름을 지정하는 헤더가 필요합니다.
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] 플랫폼의 샌드박스에 대한 자세한 내용은 [샌드박스 개요 설명서를 참조하십시오](../../sandboxes/home.md).
+>[!NOTE]
+>
+>Platform의 샌드박스에 대한 자세한 내용은 [샌드박스 개요 설명서를 참조하십시오](../../sandboxes/home.md).
 
 모든 POST, PUT 및 PATCH 요청에는 추가 헤더가 필요합니다.
 
@@ -47,7 +49,7 @@ ht-degree: 1%
 
 ## 내보내기 작업 만들기
 
-프로필 데이터를 내보내려면 먼저 데이터를 내보낼 데이터 세트를 만든 다음 새 내보내기 작업을 시작해야 합니다. 이러한 두 단계 모두 [카탈로그 서비스 API]를 사용하는 경험과 실시간 고객 프로필 API를 사용하는 고객 API를 사용하는 고객 API를 사용하여 수행할 수 있습니다. 각 단계를 완료하기 위한 자세한 지침은 다음 섹션에 요약되어 있습니다.
+프로필 데이터를 내보내려면 먼저 데이터를 내보낼 데이터 세트를 만든 다음 새 내보내기 작업을 시작해야 합니다. 이러한 두 단계 모두 Experience Platform API를 사용하여 수행할 수 있으며, 이전 단계는 카탈로그 서비스 API를 사용하고 다른 단계는 실시간 고객 프로필 API를 사용합니다. 각 단계를 완료하기 위한 자세한 지침은 다음 섹션에 요약되어 있습니다.
 
 - [대상 데이터 세트](#create-a-target-dataset) 만들기 - 내보낸 데이터를 저장할 데이터 세트를 만듭니다.
 - [새 내보내기 작업](#initiate-export-job) 시작 - 데이터 세트를 XDM 개별 프로필 데이터로 채웁니다.
@@ -197,7 +199,9 @@ curl -X POST \
 | `schema.name` | **(필수)** 데이터를 내보낼 데이터 세트와 연관된 스키마의 이름입니다. |
 | `evaluationInfo.segmentation` | *(선택 사항)* 제공되지 않을 경우 기본값이 되는 부울 값입니다 `false`. 값 `true` 은 내보내기 작업에서 세그먼테이션을 수행해야 함을 나타냅니다. |
 
->[!NOTE] 관련 ExperienceEvent 데이터를 포함하지 않고 프로필 데이터만 내보내려면 요청에서 &quot;additionalFields&quot; 개체를 제거합니다.
+>[!NOTE]
+>
+>관련 ExperienceEvent 데이터를 포함하지 않고 프로필 데이터만 내보내려면 요청에서 &quot;additionalFields&quot; 개체를 제거합니다.
 
 **응답**
 
@@ -529,7 +533,7 @@ curl -X GET \
 
 ## 내보내기 작업 취소
 
-Experience Platform을 사용하면 기존 내보내기 작업을 취소할 수 있습니다. 이 작업은 내보내기 작업이 완료되지 않았거나 처리 단계에 갇혀 있는지 등 여러 가지 이유로 유용할 수 있습니다. 내보내기 작업을 취소하려면 종단점에 대한 DELETE 요청을 `/export/jobs` 수행하고 취소할 내보내기 작업 `id` 을 요청 경로로 포함시킬 수 있습니다.
+Experience Platform을 사용하면 기존 내보내기 작업을 취소할 수 있습니다. 이 작업은 내보내기 작업이 완료되지 않았거나 처리 단계에 갇혀 있는 경우를 포함하여 여러 가지 이유로 유용할 수 있습니다. 내보내기 작업을 취소하려면 종단점에 대한 DELETE 요청을 수행하고 `/export/jobs` 취소할 내보내기 작업 `id` 을 요청 경로로 포함시킬 수 있습니다.
 
 **API 형식**
 
@@ -562,6 +566,6 @@ curl -X POST \
 
 데이터 액세스 API를 사용하여 배치 파일에 액세스하고 다운로드하는 방법에 대한 단계별 지침을 보려면 [데이터 액세스 자습서를 따르십시오](../../data-access/tutorials/dataset-data.md).
 
-또한 Adobe Experience Platform 쿼리 서비스를 사용하여 실시간 고객 프로필 데이터를 성공적으로 내보낼 수 있습니다. UI 또는 RESTful API를 사용하는 쿼리 서비스를 사용하면 데이터 레이크 내의 데이터에 대한 쿼리를 작성하고 유효성을 확인하고 실행할 수 있습니다.
+Adobe Experience Platform 쿼리 서비스를 사용하여 실시간 고객 프로필 데이터를 성공적으로 내보낼 수도 있습니다. UI 또는 RESTful API를 사용하는 쿼리 서비스를 사용하면 데이터 레이크 내의 데이터에 대한 쿼리를 작성하고 유효성을 확인하고 실행할 수 있습니다.
 
 대상 데이터를 쿼리하는 방법에 대한 자세한 내용은 [쿼리 서비스 설명서를 참조하십시오](../../query-service/home.md).
