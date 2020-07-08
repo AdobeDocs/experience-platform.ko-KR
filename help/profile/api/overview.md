@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: 실시간 고객 프로필 API 개발자 가이드
 topic: guide
 translation-type: tm+mt
-source-git-commit: fd6516d1c1d3792b41de65d0f44d78af1124ccc7
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '666'
 ht-degree: 0%
@@ -23,6 +23,8 @@ ht-degree: 0%
 ## (알파) 계산된 속성
 
 >[!IMPORTANT]
+>
+>
 >계산된 속성 기능은 알파에 있으며 모든 사용자가 사용할 수 없습니다. 설명서 및 기능은 변경될 수 있습니다.
 
 계산된 속성을 사용하면 다른 값, 계산 및 표현식을 기반으로 필드의 값을 자동으로 계산할 수 있습니다. 계산된 속성은 프로필 수준에서 작동합니다. 즉, 모든 레코드와 이벤트에 대한 값을 합산할 수 있습니다. 계산된 각 속성에는 들어오는 데이터를 평가하고 결과 값을 프로필 속성이나 이벤트에 저장하는 표현식 또는 &quot;규칙&quot;이 포함됩니다. 이러한 계산을 사용하면 정보가 필요할 때마다 복잡한 계산을 수동으로 수행하지 않고도 라이프타임 구매 값, 구매 시간 또는 애플리케이션 열기 횟수와 같은 문제와 관련된 질문에 쉽게 응답할 수 있습니다. 끝점을 사용하여 계산된 속성을 만들고, 보고, 편집하고, 삭제할 수 `config/computedAttributes` 있습니다. 이 종단점을 사용하는 방법을 알아보려면 [계산된 특성 끝점 안내서를 참조하십시오](computed-attributes.md).
