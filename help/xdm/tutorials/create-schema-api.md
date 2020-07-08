@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 스키마 레지스트리 API를 사용하여 스키마 만들기
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: b3fa5a17c3a5c2406d368d165da63f2f8c01154d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '2418'
 ht-degree: 1%
@@ -256,7 +256,9 @@ curl -X PATCH \
 
 이제 다른 혼합을 사용하여 단계를 반복하여 다른 표준 혼합을 추가할 수 있습니다.
 
->[!TIP] 각 영역에 익숙해지도록 모든 가능한 믹스를 검토하는 것은 가치가 있다. 각 &quot;global&quot; 및 &quot;tenant&quot; 컨테이너에 대한 요청을 수행하여 특정 클래스에 사용할 수 있는 모든 믹스를 나열하고 &quot;meta:intendToExtend&quot; 필드가 사용 중인 클래스와 일치하는 믹스만 반환할 수 있습니다(GET). 이 경우 XDM 개인 프로필 클래스이므로 XDM 개별 프로필이 `$id` 사용됩니다.
+>[!TIP]
+>
+>각 영역에 익숙해지도록 모든 가능한 믹스를 검토하는 것은 가치가 있다. 각 &quot;global&quot; 및 &quot;tenant&quot; 컨테이너에 대한 요청을 수행하여 특정 클래스에 사용할 수 있는 모든 믹스를 나열하고 &quot;meta:intendToExtend&quot; 필드가 사용 중인 클래스와 일치하는 믹스만 반환할 수 있습니다(GET). 이 경우 XDM 개인 프로필 클래스이므로 XDM 개별 프로필이 `$id` 사용됩니다.
 
 ```http
 GET /global/mixins?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
@@ -991,7 +993,9 @@ curl -X POST \
       }'
 ```
 
->[!NOTE] 사용 가능한 &quot;xdm:namespace&quot; 값을 나열하거나 [Identity Service API를 사용하여 새 값을 만들 수 있습니다](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml). 사용되는 &quot;xdm:namespace&quot;에 따라 &quot;xdm:code&quot; 또는 &quot;xdm:id&quot;에 대한 값이 &quot;xdm:code&quot;일 수 있습니다.
+>[!NOTE]
+>
+>사용 가능한 &quot;xdm:namespace&quot; 값을 나열하거나 [Identity Service API를 사용하여 새 값을 만들 수 있습니다](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml). 사용되는 &quot;xdm:namespace&quot;에 따라 &quot;xdm:code&quot; 또는 &quot;xdm:id&quot;에 대한 값이 &quot;xdm:code&quot;일 수 있습니다.
 
 **응답**
 
