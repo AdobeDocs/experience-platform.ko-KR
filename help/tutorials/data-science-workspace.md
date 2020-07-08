@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 데이터 과학 작업 공간 자습서
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1252'
 ht-degree: 0%
@@ -60,6 +60,8 @@ Docker 이미지를 사용하면 애플리케이션을 필요한 모든 요소�
 ## 레서피 가져오기
 
 >[!NOTE]
+>
+>
 >이 자습서에서는 Docker 소스 파일 URL을 필요로 합니다. Docker 소스 파일 URL이 없는 경우 [패키지 소스 파일을 레서피 자습서로](../data-science-workspace/models-recipes/package-source-files-recipe.md) 방문합니다.
 
 가져오기 레서피 자습서에서는 패키지된 레서피를 구성하고 가져오는 방법에 대한 통찰력을 제공합니다. 이 튜토리얼이 끝나면 Adobe Experience Platform 데이터 과학 작업 공간에서 모델을 생성, 교육 및 평가할 수 있습니다.
