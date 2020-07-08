@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 의사 결정 서비스
 topic: overview
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1592'
 ht-degree: 0%
@@ -56,7 +56,7 @@ ht-degree: 0%
 
 ![의사 결정 최적화](./images/decisioning-optimization.png)
 
-## 작업 [!DNL Decisioning Service]
+## Working with [!DNL Decisioning Service]
 
 다른 서비스와 [!DNL Decisioning Service]마찬가지로 API 퍼스트 [!DNL Platform] 철학을 채택합니다. 즉, API는 관리 기능을 포함한 모든 기능이 API를 통해 사용할 수 있는 기본 인터페이스입니다. 또한 다른 [!DNL Platform] 서비스, Adobe 솔루션 및 타사 통합에서는 동일한 API를 사용합니다.
 
@@ -68,7 +68,9 @@ ht-degree: 0%
 
 개체 사용 [!DNL Decisioning Service] 은 선택 사항이며 개체를 만들고 관리하는 데 필요한 일반적인 단계 외에 몇 단계만 [!DNL Profile] 있으면 됩니다.
 
->[!NOTE] 이를 최대한 활용하기 위해 [!DNL Real-time Customer Profile]프로필 스토어와 [!DNL Decisioning Service] 직접 통합되어 있습니다. API 호출은 지정된 프로필에 대한 ID 중 하나만 표시해야 합니다.
+>[!NOTE]
+>
+>이를 최대한 활용하기 위해 [!DNL Real-time Customer Profile]프로필 스토어와 [!DNL Decisioning Service] 직접 통합되어 있습니다. API 호출은 지정된 프로필에 대한 ID 중 하나만 표시해야 합니다.
 
 일반적인 단계 시퀀스는 프로파일 작성부터 시작됩니다.
 
