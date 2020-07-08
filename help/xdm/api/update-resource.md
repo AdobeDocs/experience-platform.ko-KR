@@ -4,22 +4,27 @@ solution: Experience Platform
 title: 리소스 업데이트
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 0d3bee939226d9ef4ac1672b71e0d240f32c5dcf
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '379'
+ht-degree: 2%
 
 ---
 
 
 # 리소스 업데이트
 
-PATCH 요청을 사용하여 테넌트 컨테이너의 리소스를 수정하거나 업데이트할 수 있습니다. 스키마 레지스트리는 추가, 제거 및 바꾸기를 비롯한 모든 표준 JSON 패치 작업을 지원합니다.
+PATCH 요청을 사용하여 테넌트 컨테이너의 리소스를 수정하거나 업데이트할 수 있습니다. 스키마 레지스트리는 추가, 제거 및 대체를 비롯한 모든 표준 JSON 패치 작업을 지원합니다.
 
-사용 가능한 작업을 포함한 JSON 패치에 대한 자세한 내용은 공식 JSON [패치 설명서를](http://jsonpatch.com/)참조하십시오.
+사용 가능한 작업을 포함한 JSON 패치에 대한 자세한 내용은 공식 [JSON 패치 설명서를 참조하십시오](http://jsonpatch.com/).
 
->[!NOTE] 개별 필드를 업데이트하는 대신 전체 리소스를 새 값으로 대체하려면 PUT 작업을 [사용하여 리소스를](replace-resource.md)바꾸는 방법을 참조하십시오.
+>[!NOTE]
+>
+>개별 필드를 업데이트하지 않고 전체 리소스를 새 값으로 대체하려면 PUT 작업을 사용하여 리소스 [교체 시 문서를 참조하십시오](replace-resource.md).
 
 ## 스키마에 믹스 추가
 
-가장 일반적인 PATCH 작업 중 하나는 아래 예제와 같이 이전에 정의한 혼합을 XDM 스키마에 추가하는 것입니다.
+가장 일반적인 PATCH 작업 중 하나는 아래 예제와 같이 이전에 정의된 혼합을 XDM 스키마에 추가하는 것입니다.
 
 **API 형식**
 
@@ -29,14 +34,14 @@ PATCH /tenant/{RESOURCE_TYPE}/{RESOURCE_ID}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{RESOURCE_TYPE}` | 스키마 라이브러리에서 업데이트할 리소스 유형입니다. 유효한 유형은 `datatypes`, `mixins`, `schemas`및 `classes`입니다. |
-| `{RESOURCE_ID}` | URL로 인코딩된 `$id` URI 또는 `meta:altId` 리소스의 URL입니다. |
+| `{RESOURCE_TYPE}` | 스키마 라이브러리에서 업데이트할 리소스 유형입니다. 유효한 유형은 `datatypes`, `mixins``schemas`, `classes`및 입니다. |
+| `{RESOURCE_ID}` | URL로 인코딩된 `$id` URI 또는 리소스 `meta:altId` 의 URL입니다. |
 
 **요청**
 
-PATCH 작업을 사용하여 스키마를 업데이트하여 이전에 만든 믹스에 정의된 필드를 포함할 수 있습니다. 이렇게 하려면 URL 인코딩 URI `meta:altId` 또는 URL을 사용하여 스키마에 대한 패치 요청을 수행해야 `$id` 합니다.
+PATCH 작업을 사용하여 스키마를 업데이트하여 이전에 만든 믹싱에 정의된 필드를 포함할 수 있습니다. 이렇게 하려면 URL 인코딩 URI를 사용하여 스키마에 대한 PATCH 요청 `meta:altId` 을 수행해야 `$id` 합니다.
 
-요청 본문에는 수행하려는 작업(`op`)과 작업을 수행하려는 위치, (`path`) 작업을 수행하려는 위치 및 작업에 포함할 정보(`value`)가 포함됩니다. 이 예에서는 대상 스키마에 대한 mixin의 `$id` 값이 `meta:extends` 및 `allOf` 필드 모두에 추가됩니다.
+요청 본문에는 수행하려는 작업(`op`)과 작업을 수행하려는 곳(`path`)과 작업에 포함할 정보(`value`)가 포함되어 있습니다. 이 예에서, mixin의 `$id` 값이 대상 스키마의 `meta:extends` 필드와 필드 모두에 `allOf` 추가됩니다.
 
 ```SHELL
 curl -X PATCH\
@@ -54,7 +59,7 @@ curl -X PATCH\
 
 **응답**
 
-이 응답에는 두 작업이 성공적으로 수행되었음을 보여줍니다. 혼합이 배열에 `$id` 추가되었으며, `meta:extends` 이제 혼합에 대한 참조(`$ref`)가 배열에 표시됩니다 `$id` `allOf` .
+이 응답에는 두 작업이 성공적으로 수행되었음을 보여줍니다. 혼합이 배열 `$id` 에 추가되고 혼합에 대한 참조( `meta:extends` )가`$ref`이제 배열에 `$id` `allOf` 표시됩니다.
 
 ```JSON
 {
@@ -93,9 +98,9 @@ curl -X PATCH\
 }
 ```
 
-## 리소스의 개별 필드 업데이트
+## 리소스에 대한 개별 필드 업데이트
 
-스키마 레지스트리 리소스 내에서 개별 필드를 여러 번 변경하는 PATCH 요청을 전송할 수도 있습니다.
+스키마 레지스트리 리소스 내의 개별 필드에 여러 개의 변경 사항을 적용하는 PATCH 요청을 전송할 수도 있습니다.
 
 **API 형식**
 
@@ -105,12 +110,12 @@ PATCH /tenant/{RESOURCE_TYPE}/{RESOURCE_ID}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{RESOURCE_TYPE}` | 스키마 라이브러리에서 업데이트할 리소스 유형입니다. 유효한 유형은 `datatypes`, `mixins`, `schemas`및 `classes`입니다. |
-| `{RESOURCE_ID}` | URL로 인코딩된 `$id` URI 또는 `meta:altId` 리소스의 URL입니다. |
+| `{RESOURCE_TYPE}` | 스키마 라이브러리에서 업데이트할 리소스 유형입니다. 유효한 유형은 `datatypes`, `mixins``schemas`, `classes`및 입니다. |
+| `{RESOURCE_ID}` | URL로 인코딩된 `$id` URI 또는 리소스 `meta:altId` 의 URL입니다. |
 
 **요청**
 
-요청 본문에는 믹스를 업데이트하는 데 필요한 작업(`op`), 위치(`path`) 및 정보(`value`)가 포함되어 있습니다. 이 요청은 속성 세부 사항 혼합을 업데이트하여 &quot;propertyCity&quot; 필드를 제거하고 주소 정보가 포함된 표준 데이터 형식을 참조하는 새 &quot;propertyAddress&quot; 필드를 추가합니다. 또한 이메일 정보가 포함된 표준 데이터 유형을 참조하는 새로운 &quot;emailAddress&quot; 필드를 추가합니다.
+요청 본문에는 믹스를 업데이트하는 데 필요한 작업(`op`), 위치(`path`) 및 정보(`value`)가 포함되어 있습니다. 이 요청은 속성 세부 사항 혼합을 업데이트하여 &quot;propertyCity&quot; 필드를 제거하고 주소 정보가 포함된 표준 데이터 형식을 참조하는 새 &quot;propertyAddress&quot; 필드를 추가합니다. 또한 이메일 정보와 함께 표준 데이터 유형을 참조하는 새로운 &quot;emailAddress&quot; 필드를 추가합니다.
 
 ```SHELL
 curl -X PATCH \
