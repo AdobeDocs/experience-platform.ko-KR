@@ -4,7 +4,7 @@ seo-title: Experience Platform 웹 SDK용 Edge 구성
 description: 'Experience Platform 에지 네트워크를 구성하는 방법을 알아봅니다. '
 seo-description: 'Experience Platform 에지 네트워크를 구성하는 방법을 알아봅니다. '
 translation-type: tm+mt
-source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '882'
 ht-degree: 2%
@@ -24,7 +24,9 @@ Edge 구성 ID는 Adobe에서 Edge 구성 도구 [!DNL Launch] 를 사용하여 
 
 >[!NOTE]
 >
->고객이 태그 관리자로 사용하는지에 관계없이 허용 목록의 고객이 Edge 구성 도구 [!DNL Launch] 를 사용할 수 있습니다. 또한 사용자는 [!DNL Launch] 자세한 내용은 [설명서의 사용자](https://docs.adobe.com/content/help/ko-KR/launch/using/reference/admin/user-permissions.html) 권한 [!DNL Launch] 문서를 참조하십시오.
+>
+>
+>허용 목록 고객은 태그 관리자로 사용하는지에 관계없이 Edge 구성 도구 [!DNL Launch] 를 사용할 수 있습니다. 또한 사용자는 [!DNL Launch] 자세한 내용은 [설명서의 사용자](https://docs.adobe.com/content/help/ko-KR/launch/using/reference/admin/user-permissions.html) 권한 [!DNL Launch] 문서를 참조하십시오.
 
 화면의 오른쪽 상단 영역에서 UICONTROL **[새 에지 구성을]** 클릭하여 Edge 구성을 만들 수 있습니다. 이름과 설명을 입력하면 각 환경에 대한 기본 설정을 묻는 메시지가 표시됩니다.
 
@@ -77,6 +79,8 @@ Adobe Target을 구성하려면 클라이언트 코드를 제공해야 합니다
 ![Adobe Target 설정 블록](../../assets/edge_configuration_target.png)
 
 >[!NOTE]
+>
+>
 >
 >클라이언트 코드와 연관된 조직은 구성 ID가 생성된 조직과 일치해야 합니다.
 
