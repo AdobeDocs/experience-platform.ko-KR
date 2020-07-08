@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform ID 서비스
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '721'
 ht-degree: 1%
@@ -72,7 +72,9 @@ UI를 사용하여 사용자 정의 네임스페이스를 만들려면 ID 네임
 
 표준 네임스페이스와 유사하게 *[!UICONTROL 검색]* 탭에서 사용자 지정 네임스페이스를 클릭하여 세부 사항을 볼 수 있지만, 사용자 지정 네임스페이스를 사용하면 세부 사항 영역에서 표시 이름 및 설명을 편집할 수도 있습니다.
 
->[!NOTE] 네임스페이스가 만들어지면 이를 삭제할 수 없으며 API의 &quot;ID 기호&quot;(또는 &quot;코드&quot;) 및 &quot;유형&quot;을 변경할 수 없습니다.
+>[!NOTE]
+>
+>네임스페이스가 만들어지면 이를 삭제할 수 없으며 API의 &quot;ID 기호&quot;(또는 &quot;코드&quot;) 및 &quot;유형&quot;을 변경할 수 없습니다.
 
 ## ID 데이터의 네임스페이스
 
