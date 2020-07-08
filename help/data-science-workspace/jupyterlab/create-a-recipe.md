@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Jupiter 노트북을 사용하여 레시피 만들기
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '2292'
 ht-degree: 0%
@@ -30,6 +30,8 @@ ht-degree: 0%
 Recipe [!UICONTROL Builder] 전자 필기장을 사용하면 노트북 내에서 트레이닝과 점수 지정을 실행할 수 있습니다. 이렇게 하면 교육 실행 및 점수 지정 데이터 간 `train()` 의 해당 방법과 `score()` 방법을 변경할 수 있습니다. 트레이닝 및 점수 출력 결과에 만족하면 Recipe Builder 노트북에 내장된 레서피 기능을 사용하여 전자 필기장을 [!DNL Data Science Workspace] 사용하는 레시피를 만들 수 있습니다.
 
 >[!NOTE]
+>
+>
 >Recipe Builder 전자 필기장은 모든 파일 포맷을 사용하여 작업할 수 있지만 현재 레서피 만들기 기능은 지원만 합니다 [!DNL Python].
 
 ![](../images/jupyterlab/create-recipe/recipe-builder.png)
@@ -46,7 +48,9 @@ Recipe [!UICONTROL Builder] 전자 필기장을 사용하면 노트북 내에서
 
 셀에 필요한 변경 작업을 시작하고 완료되면 셀을 실행하기만 하면 됩니다. 이 `%%writefile filename.py` 명령은 셀의 내용을 에 씁니다 `filename.py`. 변경 사항이 있는 각 파일에 대해 셀을 수동으로 실행해야 합니다.
 
->[!NOTE] 해당되는 경우 셀을 수동으로 실행해야 합니다.
+>[!NOTE]
+>
+>해당되는 경우 셀을 수동으로 실행해야 합니다.
 
 ## Recipe Builder 노트북 시작하기
 
@@ -73,6 +77,8 @@ data_access_sdk_python
 ```
 
 >[!NOTE]
+>
+>
 >추가한 라이브러리 또는 특정 버전은 위의 라이브러리와 호환되지 않을 수 있습니다.
 
 ### 구성 파일 {#configuration-files}
@@ -115,6 +121,8 @@ data_access_sdk_python
 - [외부 소스](#external-sources)
 
 >[!NOTE]
+>
+>
 >레서피 빌더 노트북에서 데이터는 `platform_sdk` 데이터 로더를 통해 로드됩니다.
 
 ### [!DNL Platform] SDK {#platform-sdk}
@@ -144,6 +152,8 @@ df = pd.read_json(data)
 ### 데이터 액세스 SDK에서(더 이상 사용되지 않음)
 
 >[!CAUTION]
+>
+>
 > `data_access_sdk_python` 는 더 이상 권장되지 않습니다. 데이터 로더 사용에 대한 [가이드는 데이터 액세스 코드를 Platform SDK로](../authoring/platform-sdk.md) 변환을 `platform_sdk` 참조하십시오.
 
 사용자는 데이터 액세스 SDK를 사용하여 데이터를 로드할 수 있습니다. 다음 줄을 포함하여 페이지 맨 위에 라이브러리를 가져올 수 있습니다.
@@ -162,6 +172,8 @@ df = prodreader.load(data_set_id=configProperties['trainingDataSetId'],
 ```
 
 >[!NOTE]
+>
+>
 >구성 [파일 섹션에](#configuration-files)[!DNL Experience Platform]설명된 대로, 다음 구성 매개 변수는
 > - `ML_FRAMEWORK_IMS_USER_CLIENT_ID`
 > - `ML_FRAMEWORK_IMS_TOKEN`
@@ -291,7 +303,9 @@ df.dropna(0, inplace=True)
 
 교육 목적은 교육 데이터 세트에 있는 기능과 레이블을 사용하여 모델을 만드는 것입니다.
 
->[!NOTE]\
+>[!NOTE]
+>
+> 
 >_기능은 기계 학습 모델에서 사용되는 입력 변수를 참조하여 레이블을_ 예측합니다 __.
 
 이 `train()` 기능은 훈련 모델을 포함하고 훈련된 모델을 반납해야 한다. 다양한 모델의 몇 가지 예는 [scickit-learn 사용 안내서 설명서에서 확인할 수 있습니다](https://scikit-learn.org/stable/user_guide.html).
