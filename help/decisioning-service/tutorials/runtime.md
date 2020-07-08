@@ -4,7 +4,7 @@ solution: Experience Platform
 title: API를 사용하여 의사 결정 서비스 런타임 사용
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1985'
 ht-degree: 0%
@@ -43,7 +43,9 @@ API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] 의 샌드박스에 대한 자세한 내용 [!DNL Platform]은 [샌드박스 개요 설명서를 참조하십시오](../../tutorials/authentication.md).
+>[!NOTE]
+>
+>의 샌드박스에 대한 자세한 내용 [!DNL Platform]은 [샌드박스 개요 설명서를 참조하십시오](../../tutorials/authentication.md).
 
 페이로드(POST, PUT, PATCH)가 포함된 모든 요청에는 추가 헤더가 필요합니다.
 
@@ -53,7 +55,9 @@ API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 
 
 - x-request-id: `{UUID}`
 
->[!NOTE] `UUID` 은 UUID 형식의 문자열로서, 전역적으로 고유하며, 다른 API 호출에서 다시 사용할 수 없습니다.
+>[!NOTE]
+>
+>`UUID` 은 UUID 형식의 문자열로서, 전역적으로 고유하며, 다른 API 호출에서 다시 사용할 수 없습니다.
 
 [!DNL Decisioning Service] 는 서로 관련된 여러 비즈니스 객체에 의해 제어됩니다. 모든 비즈니스 개체는 XDM 코어 개체 저장소 [!DNL Platform’s] 의 비즈니스 개체 저장소에 저장됩니다. 이 저장소의 주요 기능은 API가 비즈니스 객체 유형과 수직이라는 것입니다. API 끝점의 리소스 유형을 나타내는 POST, GET, PUT, PATCH 또는 DELETE API를 사용하는 대신 6개의 일반 끝점만 있지만 모호성이 필요할 때 개체의 유형을 나타내는 매개 변수를 수락하거나 반환합니다. 스키마가 저장소에 등록되어 있어야 하지만, 저장소가 개방형 객체 유형 세트에 사용할 수 있습니다.
 
