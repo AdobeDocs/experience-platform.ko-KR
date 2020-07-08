@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 패키지된 레서피 가져오기(UI)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1760'
 ht-degree: 0%
@@ -26,7 +26,7 @@ ht-degree: 0%
 
 패키지 레서피 가져오기 워크플로우는 다음 단계로 구성됩니다.
 - [레서피 구성](#configure)
-- [Import Docker based recipe - Python](#python)
+- [Docker 기반 레시피 가져오기 - Python](#python)
 - [Docker 기반 레서피 가져오기 - R](#r)
 - [Docker 기반의 레서피 가져오기 - PySpark](#pyspark)
 - [Docker 기반 레서피 가져오기 - Scala](#scala)
@@ -35,7 +35,9 @@ ht-degree: 0%
 
 모든 레서피 인스턴스 [!DNL Data Science Workspace] 는 특정 사용 사례에 맞게 레서피 인스턴스를 맞춤화하는 구성 세트와 함께 제공됩니다. 구성 파일은 이 레서피 인스턴스를 사용하여 생성된 모델의 기본 교육 및 점수 동작을 정의합니다.
 
->[!NOTE] 구성 파일은 레시피 및 대/소문자를 구분합니다.
+>[!NOTE]
+>
+>구성 파일은 레시피 및 대/소문자를 구분합니다.
 
 다음은 소매 영업 레서피에 대한 기본 트레이닝 및 점수 지정 행동을 보여주는 샘플 구성 파일입니다.
 
