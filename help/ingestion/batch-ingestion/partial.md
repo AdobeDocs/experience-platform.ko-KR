@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform 부분 배치 처리 개요
 topic: overview
 translation-type: tm+mt
-source-git-commit: 83bb1ade8dbd9b1a166eb627d5d5d5eda987fa19
+source-git-commit: 0be45675e4a2e3308cb77a8bbe3189f09c2b6fd8
 workflow-type: tm+mt
 source-wordcount: '1243'
 ht-degree: 1%
@@ -42,7 +42,7 @@ API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-의 모든 리소스 [!DNL Experience Platform] 는 특정 가상 샌드박스와 분리됩니다. Platform API에 대한 모든 요청에는 작업이 수행할 샌드박스의 이름을 지정하는 헤더가 필요합니다.
+All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. Platform API에 대한 모든 요청에는 작업이 수행할 샌드박스의 이름을 지정하는 헤더가 필요합니다.
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -50,15 +50,15 @@ API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 
 >
 >의 샌드박스에 대한 자세한 내용 [!DNL Platform]은 [샌드박스 개요 설명서를 참조하십시오](../../sandboxes/home.md).
 
-## API에서 부분 일괄 처리를 활성화합니다. {#enable-api}
+## Enable a batch for partial batch ingestion in the API {#enable-api}
 
 >[!NOTE]
 >
->이 섹션에서는 API를 사용하여 부분 일괄 처리를 활성화하는 방법에 대해 설명합니다. UI 사용에 대한 지침은 UI [단계에서 부분 일괄 처리를 위한 일괄 처리](#enable-ui) 활성화를 참조하십시오.
+>This section describes enabling a batch for partial batch ingestion using the API. UI 사용에 대한 지침은 UI [단계에서 부분 일괄 처리를 위한 일괄 처리](#enable-ui) 활성화를 참조하십시오.
 
 부분 처리가 활성화된 새 배치를 만들 수 있습니다.
 
-새 배치를 만들려면 일괄 처리 통합 개발자 안내서의 [단계를 따릅니다](./api-overview.md). 배치 *생성* 단계에 도달하면 요청 본문 내에 다음 필드를 추가합니다.
+To create a new batch, follow the steps in the [batch ingestion developer guide](./api-overview.md). 배치 *생성* 단계에 도달하면 요청 본문 내에 다음 필드를 추가합니다.
 
 ```json
 {
@@ -103,7 +103,7 @@ UI를 통해 부분 섭취에 대한 배치를 활성화하려면 소스 연결�
 
 ![](../images/batch-ingestion/partial-ingestion/monitor-dataset.png)
 
-부분 [!UICONTROL *[!UICONTROL 통합]*] 토글을 사용하면 부분 일괄 처리를 사용하거나 사용하지 않을 수 있습니다.
+부분 *[!UICONTROL 통합]* 토글을 사용하면 부분 일괄 처리를 사용하거나 사용하지 않을 수 있습니다.
 
 오류 *[!UICONTROL 진단]* 토글은 부분 통합 토글이 꺼진 경우에만 *[!UICONTROL 나타납니다]* . 이 기능을 사용하면 인제스트된 배치에 대한 자세한 오류 메시지 [!DNL Platform] 를 생성할 수 있습니다. 부분 *[!UICONTROL 통합]* 전환이 켜지면 향상된 오류 진단이 자동으로 적용됩니다.
 
