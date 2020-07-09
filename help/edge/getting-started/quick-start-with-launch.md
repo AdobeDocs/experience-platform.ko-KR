@@ -4,10 +4,10 @@ seo-title: Adobe Experience Platform 웹 SDK 빠른 시작(시작)
 description: Experience Platform 웹 SDK 익스텐션을 사용하여 데이터를 수집하는 빠른 시작 가이드
 seo-description: Experience Platform 웹 SDK 익스텐션을 사용하여 데이터를 수집하는 빠른 시작 가이드
 translation-type: tm+mt
-source-git-commit: 3f52def8318f57cfc6534e15415d172e768a8614
+source-git-commit: 9b8bddf39301cdc39bfa5370ef98d99434fc64f8
 workflow-type: tm+mt
-source-wordcount: '531'
-ht-degree: 5%
+source-wordcount: '553'
+ht-degree: 4%
 
 ---
 
@@ -25,7 +25,7 @@ Adobe Launch에서 [Edge 구성 도구를 사용하여 구성 ID를](../fundamen
 
 >[!NOTE]
 >
->해당 기능에 대한 허용 목록에 조직이 있어야 합니다. 허용 목록에 추가하려면 CSM에 문의하십시오.
+>이 기능을 사용하려면 조직에서 허용 목록에 있어야 합니다. 허용 목록에 추가하려면 CSM에 문의하십시오.
 
 ## 스키마 준비
 
@@ -33,6 +33,10 @@ Experience Platform 에지 네트워크는 데이터를 XDM으로 가져옵니�
 
 - [스키마 만들기](../../xdm/tutorials/create-schema-ui.md)
 - 만든 스키마에 Adobe Experience Platform 웹 SDK 믹신 추가
+
+다음 비디오는 웹 SDK 데이터에 대한 스키마, 데이터 세트 및 스트리밍 소스 커넥터를 만드는 데 도움이 되도록 만들어졌습니다.
+
+>[!VIDEO](https://video.tv.adobe.com/v/35395?quality=12&learn=on)
 
 ## Adobe Launch에서 SDK 설치
 
