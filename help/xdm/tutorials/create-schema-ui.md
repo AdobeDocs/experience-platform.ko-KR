@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 스키마 편집기를 사용하여 스키마 만들기
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d55dc9776968099901325c58506c5e322449368e
 workflow-type: tm+mt
-source-wordcount: '3409'
+source-wordcount: '3462'
 ht-degree: 0%
 
 ---
@@ -289,13 +289,25 @@ More information about relationships and other schema metadata can be found in t
 >
 >실시간 고객 프로파일에 대한 스키마가 활성화되고 저장되면 비활성화할 수 없습니다.
 
-## 다음 단계
+## 다음 단계 및 추가 리소스
 
 이제 &quot;충성도 멤버&quot; 스키마 작성을 마쳤으므로 편집기의 *구조* 섹션에서 전체 스키마를 볼 수 있습니다. 저장 **을** 클릭하면 스키마가 스키마 라이브러리에 저장되고 스키마 레지스트리에서 액세스할 수 있습니다.
 
 이제 새 스키마를 사용하여 데이터를 Platform으로 인제스트할 수 있습니다. 스키마를 사용하여 데이터를 인제스트하면 추가 변경만 가능합니다. 스키마 버전 관리에 대한 자세한 내용은 [스키마](../schema/composition.md) 구성의 기본 사항을 참조하십시오.
 
 스키마 레지스트리 API를 사용하여 &quot;충성도 멤버&quot; 스키마를 보고 관리할 수도 있습니다. API로 작업을 시작하려면 먼저 스키마 레지스트리 API [개발자 안내서를 읽어 봅니다](../api/getting-started.md).
+
+>[!WARNING]
+>
+>다음 비디오에 표시된 [!DNL Platform] UI가 오래되었습니다. 최신 UI 스크린샷 및 기능은 위의 설명서를 참조하십시오.
+
+다음 비디오에서는 [!DNL Platform] UI에서 간단한 스키마를 만드는 방법을 보여 줍니다.
+
+>[!VIDEO](https://video.tv.adobe.com/v/27012?quality=12&learn=on)
+
+다음 비디오에서는 혼합기 및 수업 사용에 대한 이해를 높이기 위해 제작되었습니다.
+
+>[!VIDEO](https://video.tv.adobe.com/v/27013?quality=12&learn=on)
 
 ## 부록
 
