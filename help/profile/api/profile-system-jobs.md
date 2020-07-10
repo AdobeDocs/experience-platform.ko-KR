@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: 프로필 시스템 작업 - 실시간 고객 프로필 API
 topic: guide
 translation-type: tm+mt
-source-git-commit: d1656635b6d082ce99f1df4e175d8dd69a63a43a
+source-git-commit: c0b059d6654a98b74be5bc6a55f360c4dc2f216b
 workflow-type: tm+mt
-source-wordcount: '1503'
+source-wordcount: '1466'
 ht-degree: 2%
 
 ---
@@ -38,10 +38,10 @@ GET /system/jobs?{QUERY_PARAMETERS}
 
 | 매개 변수 | 설명 |
 |---|---|
-| `start` | 요청의 만들기 시간에 따라 반환된 결과 페이지를 오프셋합니다. 예: `start=4` |
-| `limit` | 반환된 결과 수를 제한합니다. 예: `limit=10` |
-| `page` | 요청의 만들기 시간에 따라 특정 결과 페이지를 반환합니다. 예: `page=2` |
-| `sort` | 결과를 오름차순(`asc`) 또는 내림차순(`desc`)으로 특정 필드별로 정렬합니다. 여러 결과 페이지를 반환할 때는 정렬 매개 변수가 작동하지 않습니다. 예: `sort=batchId:asc` |
+| `start` | 요청의 만들기 시간에 따라 반환된 결과 페이지를 오프셋합니다. 예: *`start=4`* |
+| `limit` | 반환된 결과 수를 제한합니다. 예: *`limit=10`* |
+| `page` | 요청의 만들기 시간에 따라 특정 결과 페이지를 반환합니다. 예: ***`page=2`*** |
+| `sort` | 결과를 오름차순(*`asc`*) 또는 내림차순(**`desc`**)으로 특정 필드별로 정렬합니다. 여러 결과 페이지를 반환할 때는 정렬 매개 변수가 작동하지 않습니다. 예: `sort=batchId:asc` |
 
 **요청**
 
@@ -91,11 +91,11 @@ curl -X POST \
 
 | 속성 | 설명 |
 |---|---|
-| _page.count | 총 요청 수입니다. 공간이 잘렸습니다. |
-| _page.next | 결과의 추가 페이지가 있는 경우 [조회 요청에서](#view-a-specific-delete-request) ID 값을 제공된 &quot;다음&quot; 값으로 대체하여 결과의 다음 페이지를 봅니다. |
-| jobType | 만드는 작업 유형입니다. 이 경우 항상 &quot;DELETE&quot;을 반환합니다. |
-| status | 삭제 요청의 상태입니다. 가능한 값은 &quot;NEW&quot;, &quot;PROCESSING&quot;, &quot;COMPLETED&quot;, &quot;ERROR&quot;입니다. |
-| 지표 | 처리된 레코드 수(&quot;recordsProcessed&quot;) 및 요청이 처리된 시간(초) 또는 요청이 완료하는 데 걸린 시간을 포함하는 개체(&quot;timeTakenInSec&quot;). |
+| `_page.count` | 총 요청 수입니다. 공간이 잘렸습니다. |
+| `_page.next` | 결과의 추가 페이지가 있는 경우 [조회 요청의 ID 값을 제공된 값으로](#view-a-specific-delete-request) 대체하여 결과의 다음 페이지를 `"next"` 봅니다. |
+| `jobType` | 만드는 작업 유형입니다. 이 경우 항상 반환됩니다 `"DELETE"`. |
+| `status` | 삭제 요청의 상태입니다. 가능한 값은 `"NEW"`, `"PROCESSING"`, `"COMPLETED"`, `"ERROR"`입니다. |
+| `metrics` | 처리된 레코드 수(`"recordsProcessed"`)와 요청이 처리된 시간(초) 또는 요청이 완료하는 데 걸린 시간을 포함하는 개체입니다(`"timeTakenInSec"`). |
 
 ## 삭제 요청 만들기 {#create-a-delete-request}
 
@@ -131,11 +131,11 @@ curl -X POST \
 
 | 속성 | 설명 |
 |---|---|
-| dataSetId | **(필수)** 삭제할 데이터 집합의 ID입니다. |
+| `dataSetId` | **(필수)** 삭제할 데이터 집합의 ID입니다. |
 
 **응답**
 
-성공적인 응답은 요청에 대한 고유한 시스템 생성 읽기 전용 ID를 비롯하여 새로 만든 삭제 요청의 세부 사항을 반환합니다. 요청을 조회하고 상태를 확인하는 데 사용할 수 있습니다. 작성 시 요청 `status` 은 처리를 시작할 `"NEW"` 때까지입니다. 응답 `dataSetId` 의 값은 요청에서 전송된 `dataSetId` 응답과 일치해야 합니다.
+성공적인 응답은 요청에 대한 고유한 시스템 생성 읽기 전용 ID를 비롯하여 새로 만든 삭제 요청의 세부 사항을 반환합니다. 요청을 조회하고 상태를 확인하는 데 사용할 수 있습니다. 작성 시 요청 **`status`** 은 처리를 시작할 *`"NEW"`* 때까지입니다. 응답 **`dataSetId`** 의 값은 요청에서 전송된 ***`dataSetId`*** 응답과 일치해야 합니다.
 
 ```json
 {
@@ -151,15 +151,15 @@ curl -X POST \
 
 | 속성 | 설명 |
 |---|---|
-| ID | 삭제 요청의 고유한 시스템 생성 읽기 전용 ID. |
-| dataSetId | POST 요청에 지정된 데이터 세트의 ID입니다. |
+| `id` | 삭제 요청의 고유한 시스템 생성 읽기 전용 ID. |
+| `dataSetId` | POST 요청에 지정된 데이터 세트의 ID입니다. |
 
 ### 일괄 삭제
 
 배치를 삭제하려면 배치 ID를 POST 요청 본문에 포함해야 합니다. 레코드 스키마를 기준으로 데이터 세트에 대한 배치를 삭제할 수 없습니다. 시간 시리즈 스키마를 기반으로 데이터 세트에 대한 배치만 삭제할 수 있습니다.
 
 >[!NOTE]
-> 레코드 스키마를 기준으로 데이터 세트에 대한 배치를 삭제할 수 없는 이유는 레코드 유형 데이터 세트 배치가 이전 레코드를 덮어쓰기 때문에 &quot;실행 취소&quot; 또는 삭제할 수 없기 때문입니다. 레코드 스키마를 기반으로 데이터 집합에 대해 잘못된 일괄 처리가 미치는 영향을 제거하는 유일한 방법은 잘못된 레코드를 덮어쓰려면 올바른 데이터로 일괄 처리를 다시 가져오는 것입니다.
+> 레코드 스키마를 기준으로 데이터 세트에 대한 배치를 삭제할 수 없는 이유는 레코드 유형 데이터 세트 배치가 이전 레코드를 덮어쓰기 때문에 &quot;실행 취소&quot; 또는 삭제할 수 없기 때문입니다. 기록 스키마를 기반으로 데이터 세트에 대해 잘못된 일괄 처리가 미치는 영향을 제거하는 유일한 방법은 부정확한 레코드를 덮어쓰도록 올바른 데이터로 일괄 처리를 다시 인제스트하는 것입니다.
 
 기록 및 시간 시리즈 동작에 대한 자세한 내용은 XDM 시스템 개요에서 XDM 데이터 동작 [](../../xdm/home.md#data-behaviors) 섹션을 참조하십시오.
 
@@ -186,11 +186,11 @@ curl -X POST \
 
 | 속성 | 설명 |
 |---|---|
-| batchId | **(필수)** 삭제할 배치의 ID입니다. |
+| `batchId` | **(필수)** 삭제할 배치의 ID입니다. |
 
 **응답**
 
-성공적인 응답은 요청에 대한 고유한 시스템 생성 읽기 전용 ID를 비롯하여 새로 만든 삭제 요청의 세부 사항을 반환합니다. 요청을 조회하고 상태를 확인하는 데 사용할 수 있습니다. 작성 시 요청에 대한 &quot;상태&quot;는 처리가 시작될 때까지 &quot;NEW&quot;입니다. 응답의 &quot;batchId&quot;는 요청에서 전송된 &quot;batchId&quot;와 일치해야 합니다.
+성공적인 응답은 요청에 대한 고유한 시스템 생성 읽기 전용 ID를 비롯하여 새로 만든 삭제 요청의 세부 사항을 반환합니다. 요청을 조회하고 상태를 확인하는 데 사용할 수 있습니다. 작성 시 요청 `"status"` 은 처리를 시작할 `"NEW"` 때까지입니다. 응답 `"batchId"` 의 값은 요청에서 전송된 `"batchId"` 응답과 일치해야 합니다.
 
 ```json
 {
@@ -206,8 +206,8 @@ curl -X POST \
 
 | 속성 | 설명 |
 |---|---|
-| ID | 삭제 요청의 고유한 시스템 생성 읽기 전용 ID. |
-| batchId | POST 요청에 지정된 배치의 ID입니다. |
+| `id` | 삭제 요청의 고유한 시스템 생성 읽기 전용 ID. |
+| `batchId` | POST 요청에 지정된 배치의 ID입니다. |
 
 레코드 데이터 집합 일괄 처리에 대한 삭제 요청을 시작하려고 하면 다음과 유사한 400 수준 오류가 발생합니다.
 
@@ -237,7 +237,7 @@ GET /system/jobs/{DELETE_REQUEST_ID}
 
 | 매개 변수 | 설명 |
 |---|---|
-| {DELETE_REQUEST_ID} | **(필수)** 보려는 삭제 요청의 ID입니다. |
+| `{DELETE_REQUEST_ID}` | **(필수)** 보려는 삭제 요청의 ID입니다. |
 
 **요청**
 
@@ -269,11 +269,11 @@ curl -X POST \
 
 | 속성 | 설명 |
 |---|---|
-| jobType | 만들어지는 작업의 유형입니다. 이 경우 항상 &quot;DELETE&quot;을 반환합니다. |
-| status | 삭제 요청의 상태입니다. 가능한 값: &quot;NEW&quot;, &quot;PROCESSING&quot;, &quot;COMPLETED&quot;, &quot;ERROR&quot;. |
-| 지표 | 처리된 레코드 수(&quot;recordsProcessed&quot;) 및 요청이 처리된 시간(초) 또는 요청이 완료되는 데 걸린 시간을 포함하는 배열(&quot;timeTakenInSec&quot;). |
+| `jobType` | 만들어지는 작업의 유형입니다. 이 경우 항상 반환됩니다 `"DELETE"`. |
+| `status` | 삭제 요청의 상태입니다. Possible values: `"NEW"`, `"PROCESSING"`, `"COMPLETED"`, `"ERROR"`. |
+| `metrics` | 처리된 레코드 수(`"recordsProcessed"`)와 요청이 처리된 시간(초) 또는 요청이 완료되는 데 걸린 시간을 포함하는 배열입니다(`"timeTakenInSec"`). |
 
-삭제 요청 상태가 &quot;완료&quot;되면 데이터 액세스 API를 사용하여 삭제된 데이터에 액세스하려고 시도하여 데이터가 삭제되었음을 확인할 수 있습니다. 데이터 액세스 API를 사용하여 데이터 세트와 배치에 액세스하는 방법에 대한 지침은 [데이터 액세스 설명서를 참조하십시오](../../data-access/home.md).
+삭제 요청 상태가 되면 데이터 액세스 API를 사용하여 삭제된 데이터에 액세스하려고 하면 데이터가 삭제되었음을 확인할 `"COMPLETED"` 수 있습니다. 데이터 액세스 API를 사용하여 데이터 세트와 배치에 액세스하는 방법에 대한 지침은 [데이터 액세스 설명서를 참조하십시오](../../data-access/home.md).
 
 ## 삭제 요청 제거
 
