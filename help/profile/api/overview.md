@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: 실시간 고객 프로필 API 개발자 가이드
 topic: guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: c0b059d6654a98b74be5bc6a55f360c4dc2f216b
 workflow-type: tm+mt
-source-wordcount: '666'
+source-wordcount: '668'
 ht-degree: 0%
 
 ---
@@ -33,9 +33,9 @@ ht-degree: 0%
 
 Adobe Experience Platform을 사용하면 전략적으로 위치한 &quot;edges&quot;라는 서버에서 데이터에 쉽게 액세스할 수 있도록 함으로써 고객 경험을 실시간으로 개인화할 수 있습니다. 실시간 고객 프로필 API는 &quot;예측&quot;이라는 구성 요소를 통해 가장자리를 사용하여 작업하는 끝점을 제공합니다. 프로젝션 지정 영역에는 프로젝션 경로를 정의하는 프로젝션 목적뿐만 아니라 각 가장자리에 투영해야 하는 데이터를 결정하기 위한 프로젝션 구성이 포함됩니다. 가장자리 투영 작업에 대한 자세한 내용은 [투영 구성 및 대상 엔드포인트 가이드를 참조하십시오](edge-projections.md).
 
-## 엔티티
+## 엔티티(프로파일 액세스) {#entities}
 
-Adobe Experience Platform을 통해 RESTful API 또는 사용자 인터페이스를 사용하여 실시간 고객 프로필 데이터에 액세스할 수 있습니다. API를 사용하여 &quot;프로필&quot;으로 더 일반적으로 알려진 엔터티에 액세스하는 방법을 알아보려면 [개체 끝점 안내서에 설명된 단계를 따르십시오](entities.md). Platform UI를 사용하여 프로필에 액세스하려면 프로필 사용 [안내서를 참조하십시오](../ui/user-guide.md).
+Adobe Experience Platform을 통해 RESTful API 또는 사용자 인터페이스를 사용하여 실시간 고객 프로필 데이터에 액세스할 수 있습니다. API를 사용하여 &quot;프로필&quot;으로 더 일반적으로 알려진 엔터티에 액세스하는 방법을 알아보려면 [엔티티 끝점 안내서에 설명된 단계를 따르십시오](entities.md). Platform UI를 사용하여 프로필에 액세스하려면 프로필 사용 [안내서를 참조하십시오](../ui/user-guide.md).
 
 ## 정책 병합
 
