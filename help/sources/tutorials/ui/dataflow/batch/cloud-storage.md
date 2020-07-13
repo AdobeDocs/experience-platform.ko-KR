@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI에서 클라우드 스토리지 배치 커넥터에 대한 데이터 흐름 구성
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3f1c3c77a0755a3e305da0fb8a234be0f0ee1863
 workflow-type: tm+mt
-source-wordcount: '1184'
+source-wordcount: '1223'
 ht-degree: 0%
 
 ---
@@ -129,10 +129,16 @@ ht-degree: 0%
 
 ## 다음 단계
 
-이 튜토리얼을 따라 외부 클라우드 스토리지에서 데이터를 가져오는 데이터 흐름을 성공적으로 생성했으며 데이터 세트 모니터링에 대한 통찰력을 얻을 수 있었습니다. 이제 및 같은 다운스트림 [!DNL Platform] 서비스에서 들어오는 데이터를 사용할 수 [!DNL Real-time Customer Profile] 있습니다 [!DNL Data Science Workspace]. 자세한 내용은 다음 문서를 참조하십시오.
+이 튜토리얼을 따라 외부 클라우드 스토리지에서 데이터를 가져오는 데이터 흐름을 성공적으로 생성했으며 데이터 세트 모니터링에 대한 통찰력을 얻을 수 있었습니다. 데이터 흐름 만들기에 대한 자세한 내용을 살펴보려면 아래 비디오를 시청하여 학습 효과를 높일 수 있습니다. 또한 이제 들어오는 데이터를 [!DNL Platform] 및 [!DNL Real-time Customer Profile] [!DNL Data Science Workspace]과 같은 다운스트림 서비스에서 사용할 수 있습니다. 자세한 내용은 다음 문서를 참조하십시오.
 
 * [실시간 고객 프로필 개요](../../../../../profile/home.md)
 * [데이터 과학 작업 공간 개요](../../../../../data-science-workspace/home.md)
+
+>[!WARNING]
+>
+> 다음 비디오에 표시된 [!DNL Platform] UI가 오래되었습니다. 최신 UI 스크린샷 및 기능은 위의 설명서를 참조하십시오.
+
+>[!VIDEO](https://video.tv.adobe.com/v/29695?quality=12&learn=on)
 
 ## 부록
 
