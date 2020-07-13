@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 작업
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: df36d88de8ac117206d8d744cfcdd7804fcec61e
 workflow-type: tm+mt
-source-wordcount: '1669'
+source-wordcount: '1807'
 ht-degree: 2%
 
 ---
@@ -14,15 +14,56 @@ ht-degree: 2%
 
 # 개인 정보 작업
 
-다음 섹션에서는 Privacy Service API의 끝점을 사용하여 수행할 수 있는 `/jobs` 호출을 안내합니다. 각 호출에는 일반 API 형식, 필요한 헤더를 표시하는 샘플 요청 및 샘플 응답이 포함됩니다.
+이 문서에서는 API 호출을 사용하여 개인 정보 작업을 작업하는 방법에 대해 설명합니다. 특히 Privacy Service API에서 `/job` 종점의 사용을 다룹니다. 이 안내서를 읽기 전에 [시작 섹션](./getting-started.md#getting-started) 에서 API를 성공적으로 호출하기 위해 필요한 필수 헤더 및 예제 API 호출 읽기 방법 등 알아야 하는 중요한 정보를 참조하십시오.
+
+## 모든 작업 나열 {#list}
+
+종단점에 GET 요청을 함으로써 조직 내에서 사용 가능한 모든 개인 정보 작업 목록을 볼 수 `/jobs` 있습니다.
+
+**API 형식**
+
+이 요청 형식은 끝점에 `regulation` 쿼리 매개 변수를 사용하므로 `/jobs` 아래와 같이 물음표(`?`)로 시작합니다. 응답에 페이지가 지정되어 다른 쿼리 매개 변수(및)를 사용하여 응답을 필터링할 수`page` 있습니다 `size`. 앰퍼샌드(앰퍼샌드)를 사용하여 여러 매개 변수를 분리할 수`&`있습니다.
+
+```http
+GET /jobs?regulation={REGULATION}
+GET /jobs?regulation={REGULATION}&page={PAGE}
+GET /jobs?regulation={REGULATION}&size={SIZE}
+GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
+```
+
+| 매개 변수 | 설명 |
+| --- | --- |
+| `{REGULATION}` | 쿼리할 규칙 유형입니다. 허용된 값은 `gdpr`, `ccpa`및 `pdpa_tha`입니다. |
+| `{PAGE}` | 0 기반 번호 지정을 사용하여 표시할 데이터 페이지입니다. 기본값은 `0`입니다. |
+| `{SIZE}` | 각 페이지에 표시할 결과 수입니다. 기본값은 `1` 이며 최대값은 입니다 `100`. 최대값을 초과하면 API가 400코드 오류를 반환합니다. |
+
+**요청**
+
+다음 요청은 페이지 크기가 50인 세 번째 페이지에서 시작하여 IMS 조직 내의 모든 작업에 대한 페이지 지정 목록을 검색합니다.
+
+```shell
+curl -X GET \
+  https://platform.adobe.io/data/core/privacy/jobs?regulation=gdpr&page=2&size=50 \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}'
+```
+
+**응답**
+
+성공적인 응답은 작업 목록을 반환하고 각 작업에는 작업 목록과 같은 세부 정보가 포함됩니다 `jobId`. 이 예에서 응답에는 결과의 세 번째 페이지에서 시작하는 50개 작업 목록이 포함됩니다.
+
+### 후속 페이지 액세스
+
+페이지의 지정 응답으로 다음 결과 집합을 가져오려면 동일한 종단점에 대해 다른 API 호출을 만들고 쿼리 매개 변수를 1로 증가시켜야 `page` 합니다.
 
 ## 개인 정보 작업 만들기 {#create-job}
 
-새 작업 요청을 만들기 전에 먼저 액세스, 삭제 또는 판매를 거부할 데이터의 데이터 주체에 대한 식별 정보를 수집해야 합니다. 필요한 데이터가 있으면 루트 끝점에 대한 POST 요청의 페이로드에서 제공해야 합니다.
+새 작업 요청을 만들기 전에 먼저 액세스, 삭제 또는 판매를 거부할 데이터의 데이터 주체에 대한 식별 정보를 수집해야 합니다. 필요한 데이터가 있으면 POST 요청의 페이로드에서 끝점에 제공해야 `/jobs` 합니다.
 
 >[!NOTE]
 >
->호환되는 Adobe Experience Cloud 애플리케이션은 데이터 주체 식별에 서로 다른 값을 사용합니다. 응용 프로그램에 필요한 식별자에 대한 자세한 내용은 [Privacy Service 및 Experience Cloud 응용](../experience-cloud-apps.md) 프로그램에 대한 가이드를 참조하십시오.
+>호환되는 Adobe Experience Cloud 애플리케이션은 데이터 주체 식별에 서로 다른 값을 사용합니다. 응용 프로그램에 필요한 식별자에 대한 자세한 내용은 [Privacy Service 및 Experience Cloud 응용](../experience-cloud-apps.md) 프로그램에 대한 가이드를 참조하십시오. Privacy Service으로 전송할 ID를 결정하는 방법에 대한 일반적인 지침은 개인 정보 보호 요청의 [ID 데이터에 대한 문서를 참조하십시오](../identity-data.md).
 
 Privacy Service API는 개인 데이터에 대한 두 가지 작업 요청을 지원합니다.
 
@@ -290,7 +331,7 @@ curl -X POST \
 
 ## 작업 상태 확인 {#check-status}
 
-이전 단계에서 반환된 `jobId` 값 중 하나를 사용하여 현재 처리 상태와 같은 해당 작업에 대한 정보를 검색할 수 있습니다.
+GET 요청의 경로에 해당 작업을 포함하여 특정 작업(예: 현재 처리 상태)에 대한 정보 `jobId` 를 `/jobs` 끝점에 가져올 수 있습니다.
 
 >[!IMPORTANT]
 >
@@ -304,7 +345,7 @@ GET /jobs/{JOB_ID}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{JOB_ID}` | 조회하려는 작업의 ID이며 `jobId` 이전 단계 [](#create-job)의 응답으로 반환됩니다. |
+| `{JOB_ID}` | 조회하려는 작업의 ID입니다. 이 ID는 작업 `jobId` 을 만들고 모든 작업을 [나열하기 위해 성공적인 API 응답에서](#create-job) 반환됩니다 [](#list). |
 
 **요청**
 
@@ -324,12 +365,12 @@ curl -X GET \
 
 ```json
 {
-    "jobId": "527ef92d-6cd9-45cc-9bf1-477cfa1e2ca2",
+    "jobId": "6fc09b53-c24f-4a6c-9ca2-c6076b0842b6",
     "requestId": "15700479082313109RX-899",
     "userKey": "David Smith",
     "action": "access",
-    "status": "error",
-    "submittedBy": "02b38adf-6573-401e-b4cc-6b08dbc0e61c@techacct.adobe.com",
+    "status": "complete",
+    "submittedBy": "{ACCOUNT_ID}",
     "createdDate": "10/02/2019 08:25 PM GMT",
     "lastModifiedDate": "10/02/2019 08:25 PM GMT",
     "userIds": [
@@ -354,8 +395,21 @@ curl -X GET \
             "retryCount": 0,
             "processedDate": "10/02/2019 08:25 PM GMT",
             "productStatusResponse": {
-                "status": "submitted",
-                "message": "processing"
+                "status": "complete",
+                "message": "Success",
+                "responseMsgCode": "PRVCY-6000-200",
+                "responseMsgDetail": "Finished successfully."
+            }
+        },
+        {
+            "product": "Profile",
+            "retryCount": 0,
+            "processedDate": "10/02/2019 08:25 PM GMT",
+            "productStatusResponse": {
+                "status": "complete",
+                "message": "Success",
+                "responseMsgCode": "PRVCY-6000-200",
+                "responseMsgDetail": "Success dataSetIds = [5dbb87aad37beb18a96feb61], Failed dataSetIds = []"
             }
         },
         {
@@ -363,8 +417,14 @@ curl -X GET \
             "retryCount": 0,
             "processedDate": "10/02/2019 08:25 PM GMT",
             "productStatusResponse": {
-                "status": "submitted",
-                "message": "processing"
+                "status": "complete",
+                "message": "Success",
+                "responseMsgCode": "PRVCY-6054-200",
+                "responseMsgDetail": "PARTIALLY COMPLETED- Data not found for some requests, check results for more info.",
+                "results": {
+                  "processed": ["1123A4D5690B32A"],
+                  "ignored": ["dsmith@acme.com"]
+                }
             }
         }
     ],
@@ -375,64 +435,28 @@ curl -X GET \
 
 | 속성 | 설명 |
 | --- | --- |
-| `productStatusResponse` | 작업의 현재 상태입니다. 가능한 각 상태에 대한 세부 사항은 아래 표에 나와 있습니다. |
+| `productStatusResponse` | 배열 내의 각 객체에는 `productResponses` 특정 애플리케이션과 관련된 작업의 현재 상태에 대한 정보가 [!DNL Experience Cloud] 포함됩니다. |
+| `productStatusResponse.status` | 작업의 현재 상태 범주입니다. 사용 가능한 상태 카테고리 [](#status-categories) 및 해당 의미에 대한 목록은 아래 표를 참조하십시오. |
+| `productStatusResponse.message` | 작업의 특정 상태(상태 카테고리에 해당). |
+| `productStatusResponse.responseMsgCode` | Privacy Service에서 받은 제품 응답 메시지의 표준 코드입니다. 메시지의 세부 사항은 아래에 제공됩니다 `responseMsgDetail`. |
+| `productStatusResponse.responseMsgDetail` | 작업 상태에 대한 자세한 설명 비슷한 상태에 대한 메시지는 제품에 따라 다를 수 있습니다. |
+| `productStatusResponse.results` | 특정 상태에 대해 일부 제품은 포함되지 않은 추가 정보를 제공하는 `results` 객체를 반환할 수 있습니다 `responseMsgDetail`. |
 | `downloadURL` | 작업 상태가 `complete`ZIP 파일로 작업 결과를 다운로드하는 URL을 제공합니다. 이 파일은 작업이 완료된 후 60일 동안 다운로드할 수 있습니다. |
 
-### 작업 상태 응답
+### 작업 상태 범주 {#status-categories}
 
-다음 표에는 가능한 다양한 작업 상태와 해당 의미가 나열됩니다.
+다음 표에는 가능한 다양한 작업 상태 카테고리와 해당 의미가 나열됩니다.
 
-| 상태 코드 | 상태 메시지 | 의미 |
-| ----------- | -------------- | -------- |
-| 1 | 전체 | 작업이 완료되고 (필요한 경우) 파일이 모든 응용 프로그램에서 업로드됩니다. |
-| 2 | 처리 중 | 응용 프로그램이 작업을 승인했으며 현재 처리 중입니다. |
-| 3 | 제출됨 | 작업이 적용 가능한 모든 애플리케이션에 제출됩니다. |
-| 4 | 오류 | 작업을 처리하지 못했습니다. 개별 작업 세부 정보를 검색하여 더 구체적인 정보를 얻을 수 있습니다. |
+| 상태 범주 | 의미 |
+| -------------- | -------- |
+| 전체 | 작업이 완료되고 (필요한 경우) 파일이 모든 응용 프로그램에서 업로드됩니다. |
+| 처리 중 | 응용 프로그램이 작업을 승인했으며 현재 처리 중입니다. |
+| 제출됨 | 작업이 적용 가능한 모든 애플리케이션에 제출됩니다. |
+| 오류 | 작업을 처리하지 못했습니다. 개별 작업 세부 정보를 검색하여 더 구체적인 정보를 얻을 수 있습니다. |
 
 >[!NOTE]
 >
 >제출된 작업이 여전히 처리 중인 종속 하위 작업이 있는 경우 처리 상태로 유지될 수 있습니다.
-
-## 모든 작업 나열
-
-루트(`/`) 끝점에 GET 요청을 만들어 조직 내에서 사용 가능한 모든 작업 요청 목록을 볼 수 있습니다.
-
-**API 형식**
-
-이 요청 형식은 루트( `regulation` ) 종단점에`/`쿼리 매개 변수를 사용하므로, 아래와 같이 물음표(`?`)로 시작합니다. 응답에 페이지가 지정되어 다른 쿼리 매개 변수(및)를 사용하여 응답을 필터링할 수`page` 있습니다 `size`. 앰퍼샌드(앰퍼샌드)를 사용하여 여러 매개 변수를 분리할 수`&`있습니다.
-
-```http
-GET /jobs?regulation={REGULATION}
-GET /jobs?regulation={REGULATION}&page={PAGE}
-GET /jobs?regulation={REGULATION}&size={SIZE}
-GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
-```
-
-| 매개 변수 | 설명 |
-| --- | --- |
-| `{REGULATION}` | 쿼리할 규칙 유형입니다. 허용된 값은 `gdpr`, `ccpa`및 `pdpa_tha`입니다. |
-| `{PAGE}` | 0 기반 번호 지정을 사용하여 표시할 데이터 페이지입니다. 기본값은 `0`입니다. |
-| `{SIZE}` | 각 페이지에 표시할 결과 수입니다. 기본값은 `1` 이며 최대값은 입니다 `100`. 최대값을 초과하면 API가 400코드 오류를 반환합니다. |
-
-**요청**
-
-다음 요청은 페이지 크기가 50인 세 번째 페이지에서 시작하여 IMS 조직 내의 모든 작업에 대한 페이지 지정 목록을 검색합니다.
-
-```shell
-curl -X GET \
-  https://platform.adobe.io/data/core/privacy/jobs?regulation=gdpr&page=2&size=50 \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
-```
-
-**응답**
-
-성공적인 응답은 작업 목록을 반환하고 각 작업에는 작업 목록과 같은 세부 정보가 포함됩니다 `jobId`. 이 예에서 응답에는 결과의 세 번째 페이지에서 시작하는 50개 작업 목록이 포함됩니다.
-
-### 후속 페이지 액세스
-
-페이지의 지정 응답으로 다음 결과 집합을 가져오려면 동일한 종단점에 대해 다른 API 호출을 만들고 쿼리 매개 변수를 1로 증가시켜야 `page` 합니다.
 
 ## 다음 단계
 
