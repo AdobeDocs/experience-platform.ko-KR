@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI에서 Azure Blob 또는 Amazon S3 소스 커넥터 만들기
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: 3f1c3c77a0755a3e305da0fb8a234be0f0ee1863
 workflow-type: tm+mt
-source-wordcount: '628'
+source-wordcount: '631'
 ht-degree: 1%
 
 ---
@@ -80,6 +80,6 @@ Azure Blob 저장소 *[!UICONTROL 에 연결]* 페이지가 나타납니다. 이
 
 ![기존](../../../../images/tutorials/create/blob/existing.png)
 
-## 다음 단계
+## 다음 단계 및 추가 리소스
 
 이 튜토리얼을 따라 사용자 [!DNL Blob] 또는 S3 계정에 대한 연결을 설정했습니다. 이제 다음 튜토리얼로 계속 진행하여 데이터 흐름을 [구성하여 클라우드 스토리지의 데이터를 Platform으로 가져올 수 있습니다](../../dataflow/batch/cloud-storage.md).
