@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe에서 정의한 함수
 topic: queries
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: cc101b1a439408861961c6fcd0899ca7c48bfa04
 workflow-type: tm+mt
-source-wordcount: '248'
+source-wordcount: '292'
 ht-degree: 6%
 
 ---
@@ -240,4 +240,10 @@ LIMIT 10;
 ```
 
 ![이미지](../images/queries/adobe-functions/create-breakdown-report.png)
+
+## Journey Orchestration용
+
+다음 비디오에서는 Adobe Experience Platform 인터페이스 및 PSQL 클라이언트에서 쿼리를 실행하는 방법을 보여 줍니다. 또한 이 비디오에서는 XDM 개체의 개별 속성과 관련된 예를 사용하고, Adobe에서 정의한 함수를 사용하고, CREATE TABLE AS SELECT(CTAS SELECT)를 사용합니다.
+
+>[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
 
