@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform 쿼리 서비스 쿼리 편집기 안내서
 topic: query editor
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: cc101b1a439408861961c6fcd0899ca7c48bfa04
 workflow-type: tm+mt
-source-wordcount: '1060'
+source-wordcount: '1106'
 ht-degree: 1%
 
 ---
@@ -115,6 +115,12 @@ Experience Platform UI의 왼쪽 탐색 메뉴에서 **쿼리를** 클릭하여 
 쿼리가 완료되면 [ *콘솔] 탭 옆의 [결과* ] 탭에 결과가 *표시됩니다* . 이 보기는 최대 100개의 행을 표시하는 쿼리의 테이블 형식 출력을 보여줍니다. 이 보기에서는 쿼리가 예상 출력을 생성하는지 확인할 수 있습니다. 쿼리를 사용하여 데이터 세트를 생성하려면 반환된 행의 제한을 제거하고 쿼리를 실행하여 출력 `CREATE TABLE tablename AS SELECT` 으로 데이터 세트를 생성합니다. 쿼리 [편집기에서 데이터 세트를 생성하는 방법에 대한 자세한 내용은 데이터 집합 생성 자습서를][query-service-create-datasets] 참조하십시오.
 
 ![이미지](../images/queries/query-editor-overview/query-results.png)
+
+## 쿼리 서비스 자습서 비디오를 사용하여 쿼리 실행
+
+다음 비디오에서는 Adobe Experience Platform 인터페이스 및 PSQL 클라이언트에서 쿼리를 실행하는 방법을 보여 줍니다. 또한 XDM 개체에서 개별 속성을 사용하는 경우, Adobe에서 정의한 함수를 사용하고, CREATE TABLE AS SELECT(CTAS SELECT) 사용이 입증됩니다.
+
+>[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
 
 ## 다음 단계
 
