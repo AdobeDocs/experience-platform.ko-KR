@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 소스 커넥터 및 API를 통해 타사 데이터베이스의 데이터 수집
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: a5b5e1f9a1465a3ec252bac9ba376abc8f2781b1
 workflow-type: tm+mt
-source-wordcount: '1522'
+source-wordcount: '1652'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # 소스 커넥터 및 API를 통해 타사 데이터베이스의 데이터 수집
 
-[!DNL Flow Service] 는 Adobe Experience Platform 내의 다양한 소스에서 수집된 고객 데이터를 수집하고 중앙 집중화하는 데 사용됩니다. 이 서비스는 지원되는 모든 소스가 연결되어 있는 사용자 인터페이스와 RESTful API를 제공합니다.
+[!DNL Flow Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) 는 Adobe Experience Platform 내의 다양한 소스에서 수집된 고객 데이터를 수집하고 중앙 집중화하는 데 사용됩니다. 이 서비스는 지원되는 모든 소스가 연결되어 있는 사용자 인터페이스와 RESTful API를 제공합니다.
 
 이 자습서에서는 타사 데이터베이스에서 데이터를 검색하고 소스 커넥터 및 API를 통해 데이터를 인제스트하는 절차 [!DNL Platform] 에 대해 설명합니다.
 
@@ -31,7 +31,7 @@ ht-degree: 1%
 * [일괄 처리](../../../../ingestion/batch-ingestion/overview.md): 일괄 처리 통합 API를 사용하면 데이터를 일괄 처리 파일 [!DNL Experience Platform] 로 인제스트할 수 있습니다.
 * [샌드박스](../../../../sandboxes/home.md): [!DNL Experience Platform] 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되도록 단일 [!DNL Platform] 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
 
-다음 섹션에서는 Flow Service API를 사용하여 데이터베이스 또는 NoSQL 시스템에 성공적으로 연결하기 위해 알아야 하는 추가 정보를 제공합니다.
+다음 섹션에서는 [!DNL Flow Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API를 사용하여 타사 데이터베이스에 성공적으로 연결하려면 알아야 할 추가 정보를 제공합니다.
 
 ### 샘플 API 호출 읽기
 
@@ -63,7 +63,19 @@ API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 
 
 ## 소스 연결 만들기 {#source}
 
-임시 XDM 스키마를 만든 경우 이제 API에 대한 POST 요청을 사용하여 소스 연결을 만들 수 [!DNL Flow Service] 있습니다. 소스 연결은 기본 연결, 소스 데이터 파일 및 소스 데이터를 설명하는 스키마에 대한 참조로 구성됩니다.
+임시 XDM 스키마를 만든 경우 이제 API에 대한 POST 요청을 사용하여 소스 연결을 만들 수 [!DNL Flow Service] 있습니다. 소스 연결은 연결 ID, 소스 데이터 파일 및 소스 데이터를 설명하는 스키마에 대한 참조로 구성됩니다.
+
+소스 연결을 만들려면 데이터 형식 특성에 대한 열거형 값도 정의해야 합니다.
+
+파일 기반 커넥터에 대해 다음 열거형 값을 **사용하십시오**.
+
+| Data.format | 열거값 |
+| ----------- | ---------- |
+| 구분된 파일 | `delimited` |
+| JSON 파일 | `json` |
+| 쪽모이 세공 파일 | `parquet` |
+
+모든 **테이블 기반 커넥터의** 경우 열거형 값을 사용합니다. `tabular`.
 
 **API 형식**
 
@@ -82,32 +94,32 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Source Connection for database or NoSQL",
-        "baseConnectionId": "54c22133-3a01-4d3b-8221-333a01bd3b03",
-        "description": "Source Connection for database or NoSQL to ingest test1.Mytable",
+        "name": "Database Source Connector",
+        "baseConnectionId": "d5cbb5bc-44cc-41a2-8bb5-bc44ccf1a2fb",
+        "description": "A test source connector for a third-party database",
         "data": {
-            "format": "parquet_xdm",
+            "format": "tabular",
             "schema": {
-                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/c8c2b32d6f6a53d5ffc7212c37b3a9369282404a7bd551e8",
+                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/21b30fa2c00a2a8d7c3010272dffa16d3cc9eec504aa6c7",
                 "version": "application/vnd.adobe.xed-full-notext+json; version=1"
             }
         },
         "params": {
-            "path": "test1.Mytable"
+            "path": "ADMIN.E2E"
         },
         "connectionSpec": {
-            "id": "3c9b37f8-13a6-43d8-bad3-b863b941fedd",
+            "id": "d6b52d86-f0f8-475f-89d4-ce54c8527328",
             "version": "1.0"
         }
-}'
+    }'
 ```
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `baseConnectionId` | 데이터베이스 연결의 ID입니다. |
+| `baseConnectionId` | 타사 데이터베이스 소스의 연결 ID입니다. |
 | `data.schema.id` | 임시 XDM 스키마 `$id` 의 설명입니다. |
 | `params.path` | 소스 파일의 경로입니다. |
-| `connectionSpec.id` | 데이터베이스 또는 NoSQL 시스템의 연결 사양 ID. |
+| `connectionSpec.id` | 타사 데이터베이스 소스의 연결 사양 ID입니다. 데이터베이스 [사양](#appendix) ID 목록은 부록을 참조하십시오. |
 
 **응답**
 
@@ -115,8 +127,8 @@ curl -X POST \
 
 ```json
 {
-    "id": "beefc650-f2dc-45e2-afc6-50f2dcc5e2b8",
-    "etag": "\"1600f153-0000-0200-0000-5e4710880000\""
+    "id": "2f7356d9-a866-47ea-b356-d9a86687ea7a",
+    "etag": "\"c8006055-0000-0200-0000-5ecd79520000\""
 }
 ```
 
@@ -146,8 +158,8 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "type": "object",
-        "title": "Target schema for database or NoSQL",
-        "description": "Target schema for database or NoSQL",
+        "title": "Database Source Connector Target Schema",
+        "description": "Target schema for a third-party database",
         "allOf": [
             {
                 "$ref": "https://ns.adobe.com/xdm/context/profile"
@@ -159,6 +171,10 @@ curl -X POST \
                 "$ref": "https://ns.adobe.com/xdm/context/profile-personal-details"
             }
         ],
+        "meta:containerId": "tenant",
+        "meta:resourceType": "schemas",
+        "meta:xdmType": "object",
+        "meta:class": "https://ns.adobe.com/xdm/context/profile"
     }'
 ```
 
@@ -168,13 +184,13 @@ curl -X POST \
 
 ```json
 {
-    "$id": "https://ns.adobe.com/{TENANT}/schemas/a9d63c5e3fab2687e064577959d0b91e274823f91f2f578e",
-    "meta:altId": "_{TENANT}.schemas.a9d63c5e3fab2687e064577959d0b91e274823f91f2f578e",
+    "$id": "https://ns.adobe.com/{TENANT_ID}/schemas/c44dd18673370dbf16243ba6e6fd9ae62c7916ec10477727",
+    "meta:altId": "_{TENANT_ID}.schemas.c44dd18673370dbf16243ba6e6fd9ae62c7916ec10477727",
     "meta:resourceType": "schemas",
     "version": "1.0",
-    "title": "Target schema for database or NoSQL",
+    "title": "Target schema for an Oracle connector 5/26/20",
     "type": "object",
-    "description": "Target schema for database or NoSQL",
+    "description": "Target schema for Database",
     "allOf": [
         {
             "$ref": "https://ns.adobe.com/xdm/context/profile",
@@ -205,22 +221,22 @@ curl -X POST \
         "https://ns.adobe.com/xdm/context/profile-personal-details",
         "https://ns.adobe.com/xdm/common/auditable",
         "https://ns.adobe.com/xdm/data/record",
-        "https://ns.adobe.com/xdm/context/profile",
-        "https://ns.adobe.com/xdm/common/extensible"
+        "https://ns.adobe.com/xdm/context/profile"
     ],
     "meta:xdmType": "object",
     "meta:registryMetadata": {
-        "repo:createdDate": 1581716110281,
-        "repo:lastModifiedDate": 1581716110281,
+        "repo:createdDate": 1590523478581,
+        "repo:lastModifiedDate": 1590523478581,
         "xdm:createdClientId": "{CREATED_CLIENT_ID}",
         "xdm:lastModifiedClientId": "{LAST_MODIFIED_CLIENT_ID}",
         "xdm:createdUserId": "{CREATED_USER_ID}",
         "xdm:lastModifiedUserId": "{LAST_MODIFIED_USER_ID}",
-        "eTag": "6360f2175b40462ff25ec8735dc93a7e3af6a8faadd80a1cc500a59721e1a424"
+        "eTag": "34fdf36fc3029999a07270c4e7719d8a627f7e93e2fbc13888b3c11fb08983c0",
+        "meta:globalLibVersion": "1.10.2.1"
     },
     "meta:class": "https://ns.adobe.com/xdm/context/profile",
     "meta:containerId": "tenant",
-    "meta:tenantNamespace": "{TENANT_ID}"
+    "meta:tenantNamespace": "_{TENANT_ID}"
 }
 ```
 
@@ -245,9 +261,9 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Target Dataset for database or NoSQL",
+        "name": "Target dataset for a third-party database source connector",
         "schemaRef": {
-            "id": "https://ns.adobe.com/{TENANT_ID}/schemas/a9d63c5e3fab2687e064577959d0b91e274823f91f2f578e",
+            "id": "https://ns.adobe.com/{TENANT_ID}/schemas/c44dd18673370dbf16243ba6e6fd9ae62c7916ec10477727",
             "contentType": "application/vnd.adobe.xed-full-notext+json; version=1"
         }
     }'
@@ -263,21 +279,13 @@ curl -X POST \
 
 ```json
 [
-    "@/dataSets/5e47161fa49bb818ad7f47bd"
+    "@/dataSets/5ecd766e4bab17191b78e892"
 ]
 ```
 
-## 데이터 집합 기본 연결 만들기
-
-외부 데이터를 인제스트하려면 데이터 세트 [!DNL Platform]기본 [!DNL Experience Platform] 연결을 먼저 가져와야 합니다.
-
-데이터 집합 기본 연결을 만들려면 데이터 집합 [기본 연결 자습서에 설명된 단계를 따릅니다](../create-dataset-base-connection.md).
-
-데이터 세트 기본 연결을 만들 때까지 개발자 안내서에 설명된 단계를 계속 수행합니다. 고유 식별자(`$id`)를 입수하고 저장하고 다음 단계에서 기본 연결 ID로 사용하여 대상 연결을 만듭니다.
-
 ## 대상 연결 만들기
 
-이제 데이터 집합 기본 연결, 대상 스키마 및 대상 데이터 집합에 대한 고유한 식별자가 있습니다. 이러한 식별자를 사용하여 [!DNL Flow Service] API를 사용하여 대상 연결을 만들어 인바운드 소스 데이터를 포함할 데이터 세트를 지정할 수 있습니다.
+이제 데이터 집합 기본 연결, 대상 스키마 및 대상 데이터 집합에 대한 고유한 식별자가 있습니다. 이러한 식별자를 사용하여 [!DNL Flow Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API를 사용하여 대상 연결을 만들어 인바운드 소스 데이터를 포함할 데이터 세트를 지정할 수 있습니다.
 
 **API 형식**
 
@@ -296,21 +304,19 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "baseConnectionId": "d6c3988d-14ef-4000-8398-8d14ef000021",
-        "name": "Target Connection for database or NoSQL",
-        "description": "Target Connection for database or NoSQL",
+        "name": "Target Connection for a third-party database source connector",
+        "description": "Target Connection for a third-party database source connector",
         "data": {
-            "format": "parquet_xdm",
             "schema": {
-                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/a9d63c5e3fab2687e064577959d0b91e274823f91f2f578e",
+                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/c44dd18673370dbf16243ba6e6fd9ae62c7916ec10477727",
                 "version": "application/vnd.adobe.xed-full+json;version=1.0"
             }
         },
         "params": {
-            "dataSetId": "5e47161fa49bb818ad7f47bd"
+            "dataSetId": "5ecd766e4bab17191b78e892"
         },
-        "connectionSpec": {
-            "id": "3c9b37f8-13a6-43d8-bad3-b863b941fedd",
+            "connectionSpec": {
+            "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
             "version": "1.0"
         }
     }'
@@ -318,14 +324,9 @@ curl -X POST \
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `baseConnectionId` | 데이터 집합 기본 연결의 ID입니다. |
 | `data.schema.id` | 대상 XDM 스키마 `$id` 의 이름입니다. |
-| `params.dataSetId` | 대상 데이터 집합의 ID입니다. |
-| `connectionSpec.id` | 타사 데이터베이스의 연결 사양 ID. |
-
->[!NOTE]
->
->대상 연결을 만들 때는 타사 소스 커넥터의 기본 연결과 `id` 반대로 기본 연결에 데이터 집합 기본 연결 값을 사용해야 합니다.
+| `params.dataSetId` | 이전 단계에서 수집된 대상 데이터 세트의 ID입니다. |
+| `connectionSpec.id` | 데이터 호수에 대한 고정 연결 사양 ID입니다. 이 연결 사양 ID: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 **응답**
 
@@ -333,8 +334,8 @@ curl -X POST \
 
 ```json
 {
-    "id": "4f3845b6-87d9-4702-b845-b687d9270297",
-    "etag": "\"2a007aa8-0000-0200-0000-5e597aaf0000\""
+    "id": "e66fdb22-06df-48ac-afdb-2206dff8ac10",
+    "etag": "\"7e03773a-0000-0200-0000-5ecd768d0000\""
 }
 ```
 
@@ -360,29 +361,29 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "version": 0,
-        "xdmSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/a9d63c5e3fab2687e064577959d0b91e274823f91f2f578e",
+        "xdmSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/c44dd18673370dbf16243ba6e6fd9ae62c7916ec10477727",
         "xdmVersion": "1.0",
         "id": null,
         "mappings": [
             {
-                "destinationXdmPath": "person.name",
-                "sourceAttribute": "Name",
+                "destinationXdmPath": "person.name.fullName",
+                "sourceAttribute": "NAME",
                 "identity": false,
                 "identityGroup": null,
                 "namespaceCode": null,
                 "version": 0
             },
             {
-                "destinationXdmPath": "mobilePhone.number",
-                "sourceAttribute": "Phone",
+                "destinationXdmPath": "_repo.createDate",
+                "sourceAttribute": "DOB",
                 "identity": false,
                 "identityGroup": null,
                 "namespaceCode": null,
                 "version": 0
             },
             {
-                "destinationXdmPath": "personalEmail.address",
-                "sourceAttribute": "email",
+                "destinationXdmPath": "_id",
+                "sourceAttribute": "ID",
                 "identity": false,
                 "identityGroup": null,
                 "namespaceCode": null,
@@ -402,75 +403,18 @@ curl -X POST \
 
 ```json
 {
-    "id": "ab91c736-1f3d-4b09-8424-311d3d3e3cea",
-    "version": 1,
-    "createdDate": 1568047685000,
-    "modifiedDate": 1568047703000,
-    "inputSchemaRef": {
-        "id": null,
-        "contentType": null
-    },
-    "outputSchemaRef": {
-        "id": "https://ns.adobe.com/{TENANT_ID}/schemas/efea012ad5deefcdf51afd23ceb3583f",
-        "contentType": "1.0"
-    },
-    "mappings": [
-        {
-            "id": "7bbea5c0f0ef498aa20aa2e2e5c22290",
-            "version": 0,
-            "createdDate": 1568047685000,
-            "modifiedDate": 1568047685000,
-            "sourceType": "text/x.schema-path",
-            "source": "Id",
-            "destination": "_id",
-            "identity": false,
-            "primaryIdentity": false,
-            "matchScore": 0.0,
-            "sourceAttribute": "Id",
-            "destinationXdmPath": "_id"
-        },
-        {
-            "id": "def7fd7db2244f618d072e8315f59c05",
-            "version": 0,
-            "createdDate": 1568047685000,
-            "modifiedDate": 1568047685000,
-            "sourceType": "text/x.schema-path",
-            "source": "FirstName",
-            "destination": "person.name.firstName",
-            "identity": false,
-            "primaryIdentity": false,
-            "matchScore": 0.0,
-            "sourceAttribute": "FirstName",
-            "destinationXdmPath": "person.name.firstName"
-        },
-        {
-            "id": "e974986b28c74ed8837570f421d0b2f4",
-            "version": 0,
-            "createdDate": 1568047685000,
-            "modifiedDate": 1568047685000,
-            "sourceType": "text/x.schema-path",
-            "source": "LastName",
-            "destination": "person.name.lastName",
-            "identity": false,
-            "primaryIdentity": false,
-            "matchScore": 0.0,
-            "sourceAttribute": "LastName",
-            "destinationXdmPath": "person.name.lastName"
-        }
-    ],
-    "status": "PUBLISHED",
-    "xdmVersion": "1.0",
-    "schemaRef": {
-        "id": "https://ns.adobe.com/{TENANT_ID}/schemas/2574494fdb01fa14c25b52d717ccb828",
-        "contentType": "1.0"
-    },
-    "xdmSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/2574494fdb01fa14c25b52d717ccb828"
+    "id": "d9d94124417d4df48ea3d00e28eb4327",
+    "version": 0,
+    "createdDate": 1590523552440,
+    "modifiedDate": 1590523552440,
+    "createdBy": "{CREATED_BY}",
+    "modifiedBy": "{MODIFIED_BY}"
 }
 ```
 
 ## 데이터 흐름 사양 검색 {#specs}
 
-데이터 프롤은 소스에서 데이터를 수집하여 데이터 센터로 가져옵니다 [!DNL Platform]. 데이터 흐름을 만들려면 먼저 API에 대한 GET 요청을 수행하여 데이터 흐름 사양을 [!DNL Flow Service] 얻어야 합니다. 데이터 흐름 사양은 외부 데이터베이스 또는 NoSQL 시스템에서 데이터를 수집하는 책임을 집니다.
+데이터 프롤은 소스에서 데이터를 수집하여 데이터 센터로 가져옵니다 [!DNL Platform]. 데이터 흐름을 만들려면 먼저 API에 대한 GET 요청을 수행하여 데이터 흐름 사양을 [!DNL Flow Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) 얻어야 합니다. 데이터 흐름 사양은 외부 데이터베이스 또는 NoSQL 시스템에서 데이터를 수집하는 책임을 집니다.
 
 **API 형식**
 
@@ -623,6 +567,8 @@ curl -X GET \
 
 데이터 프롤은 소스에서 데이터를 예약하고 수집합니다. 페이로드 내에 이전에 언급된 값을 제공하는 동안 POST 요청을 수행하여 데이터 흐름을 만들 수 있습니다.
 
+질문을 예약하려면 먼저 시작 시간 값을 epoch time(초)으로 설정해야 합니다. 그런 다음 빈도 값을 5개 옵션 중 하나로 설정해야 합니다. `once`, `minute`, `hour`, `day`또는 `week`를 선택합니다. 간격 값은 연속된 두 시퀀스 사이의 기간을 지정하고 일회성 인제스트를 만들 때는 간격을 설정할 필요가 없습니다. 다른 모든 주파수의 경우 간격 값이 같거나 크게 설정되어야 합니다 `15`.
+
 **API 형식**
 
 ```http
@@ -639,31 +585,38 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Dataflow between database or NoSQL Platform",
-        "description": "Inbound data to Platform",
+        "name": "Dataflow for a third-party database and Platform,
+        "description": "collecting ADMIN.E2E",
         "flowSpec": {
             "id": "14518937-270c-4525-bdec-c2ba7cce3860",
             "version": "1.0"
         },
         "sourceConnectionIds": [
-            "beefc650-f2dc-45e2-afc6-50f2dcc5e2b8"
+            "89cf81c9-47b4-463a-8f81-c947b4863afb"
         ],
         "targetConnectionIds": [
-            "4f3845b6-87d9-4702-b845-b687d9270297"
+            "e66fdb22-06df-48ac-afdb-2206dff8ac10"
         ],
         "transformations": [
             {
+                "name": "Copy",
+                "params": {
+                    "deltaColumn": "date-time"
+                }
+            },
+            {
                 "name": "Mapping",
                 "params": {
-                    "mappingId": "ab91c736-1f3d-4b09-8424-311d3d3e3cea",
+                    "mappingId": "d9d94124417d4df48ea3d00e28eb4327",
                     "mappingVersion": "0"
                 }
             }
         ],
         "scheduleParams": {
-            "startTime": "1567411548",
+            "startTime": "1590523836",
             "frequency":"minute",
-            "interval":"30"
+            "interval":"15",
+            "backfill": "true"
         }
     }'
 ```
@@ -673,7 +626,11 @@ curl -X POST \
 | `flowSpec.id` | 데이터베이스와 연결된 데이터 흐름 사양 ID. |
 | `sourceConnectionIds` | 데이터베이스와 연결된 소스 연결 ID. |
 | `targetConnectionIds` | 데이터베이스와 연결된 대상 연결 ID. |
+| `transformations.params.deltaColum` | 새 데이터와 기존 데이터를 구분하는 데 사용되는 지정된 열 선택한 열의 타임스탬프를 기반으로 증분 데이터를 인제스트합니다. |
 | `transformations.params.mappingId` | 데이터베이스와 연결된 매핑 ID. |
+| `scheduleParams.startTime` | 데이터 흐름 시작 시간(초)입니다. |
+| `scheduleParams.frequency` | 선택 가능한 주파수 값은 다음과 같습니다. `once`, `minute`, `hour`, `day`또는 `week`를 선택합니다. |
+| `scheduleParams.interval` | 간격은 두 개의 연속 흐름 실행 사이의 기간을 지정합니다. 간격 값은 0이 아닌 정수여야 합니다. 주기를 다음으로 설정하고 다른 주파수 값에 대해 이보다 `once` 크거나 같아야 하는 경우 간격이 `15` 필요하지 않습니다. |
 
 **응답**
 
@@ -681,7 +638,8 @@ curl -X POST \
 
 ```json
 {
-    "id": "8256cfb4-17e6-432c-a469-6aedafb16cd5"
+    "id": "e0bd8463-0913-4ca1-bd84-6309134ca1f6",
+    "etag": "\"04004fe9-0000-0200-0000-5ebc4c8b0000\""
 }
 ```
 
