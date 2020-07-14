@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 샌드박스 사용 안내서
 topic: user guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d02f12202e51b00453f719604052a54f6fcfe4ab
 workflow-type: tm+mt
-source-wordcount: '514'
+source-wordcount: '527'
 ht-degree: 0%
 
 ---
@@ -37,6 +37,10 @@ Experience Platform UI에서 왼쪽 탐색 **에서 샌드박스** 를 클릭하
 ![](../images/ui/sandbox-switched.png)
 
 ## 새 샌드박스 만들기
+
+다음 비디오를 사용하여 사용 방법에 대한 간단한 개요 [!DNL Sandboxes] 를 살펴보십시오 [!DNL Experience Platform].
+
+>[!VIDEO](https://video.tv.adobe.com/v/29838/?quality=12&learn=on)
 
 UI에서 새 샌드박스를 만들려면 왼쪽 탐색 **에서 샌드박스** 를 클릭한 다음 샌드박스 **만들기를 클릭합니다**.
 
