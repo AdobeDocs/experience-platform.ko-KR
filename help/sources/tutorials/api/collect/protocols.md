@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 소스 커넥터 및 API를 통해 프로토콜 데이터 수집
 topic: overview
 translation-type: tm+mt
-source-git-commit: 84ea3e45a3db749359f3ce4a0ea25429eee8bb66
+source-git-commit: d5a21462b9f0362414dfe4f73a6c4e4a2c92af61
 workflow-type: tm+mt
-source-wordcount: '1415'
+source-wordcount: '1605'
 ht-degree: 1%
 
 ---
@@ -63,6 +63,18 @@ API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 
 
 임시 XDM 스키마를 만든 경우 이제 API에 대한 POST 요청을 사용하여 소스 연결을 만들 수 [!DNL Flow Service] 있습니다. 소스 연결은 연결 ID, 소스 데이터 파일 및 소스 데이터를 설명하는 스키마에 대한 참조로 구성됩니다.
 
+소스 연결을 만들려면 데이터 형식 특성에 대한 열거형 값도 정의해야 합니다.
+
+파일 기반 커넥터에 대해 다음 열거형 값을 **사용하십시오**.
+
+| Data.format | 열거값 |
+| ----------- | ---------- |
+| 구분된 파일 | `delimited` |
+| JSON 파일 | `json` |
+| 쪽모이 세공 파일 | `parquet` |
+
+모든 **테이블 기반 커넥터의** 경우 열거형 값을 사용합니다. `tabular`.
+
 **API 형식**
 
 ```http
@@ -84,7 +96,7 @@ curl -X POST \
         "baseConnectionId": "a5c6b647-e784-4b58-86b6-47e784ab580b",
         "description": "Protocols source connection to ingest Orders",
         "data": {
-            "format": "parquet_xdm",
+            "format": "tabular",
             "schema": {
                 "id": "https://ns.adobe.com/{TENANT_ID}/schemas/9e800522521c1ed7d05d3782897f6bd78ee8c2302169bc19",
                 "version": "application/vnd.adobe.xed-full-notext+json; version=1"
@@ -275,17 +287,11 @@ curl -X POST \
 ]
 ```
 
-## 데이터 집합 기본 연결 만들기
-
-외부 데이터를 인제스트하려면 데이터 세트 [!DNL Platform]기본 [!DNL Experience Platform] 연결을 먼저 가져와야 합니다.
-
-데이터 집합 기본 연결을 만들려면 데이터 집합 [기본 연결 자습서에 설명된 단계를 따릅니다](../create-dataset-base-connection.md).
-
-데이터 세트 기본 연결을 만들 때까지 개발자 안내서에 설명된 단계를 계속 수행합니다. 고유 식별자(`$id`)를 입수하고 저장하고 다음 단계에서 연결 ID로 사용하여 대상 연결을 만듭니다.
-
 ## 대상 연결 만들기
 
-이제 데이터 세트 기본 연결에 대한 고유한 식별자, 대상 스키마 및 대상 데이터 세트를 사용할 수 있습니다. 이제 [!DNL Flow Service] API를 사용하여 대상 연결을 만들어 인바운드 소스 데이터를 포함할 데이터 세트를 지정할 수 있습니다.
+대상 연결은 인제스트된 데이터가 들어오는 대상에 대한 연결을 나타냅니다. 대상 연결을 만들려면 데이터 호수와 관련된 고정 연결 사양 ID를 제공해야 합니다. 이 연결 사양 ID: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+
+이제 대상 스키마의 고유한 식별자를 데이터 세트에 사용하고 데이터 호수에 대한 연결 사양 ID를 가집니다. 이러한 식별자를 사용하여 [!DNL Flow Service] API를 사용하여 대상 연결을 만들어 인바운드 소스 데이터를 포함할 데이터 세트를 지정할 수 있습니다.
 
 **API 형식**
 
@@ -304,7 +310,6 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "baseConnectionId": "a5c6b647-e784-4b58-86b6-47e784ab580b",
         "name": "Target Connection for protocols",
         "description": "Target Connection for protocols",
         "data": {
@@ -325,10 +330,9 @@ curl -X POST \
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `baseConnectionId` | 데이터 집합 기본 연결의 ID입니다. |
 | `data.schema.id` | 대상 XDM 스키마 `$id` 의 이름입니다. |
 | `params.dataSetId` | 대상 데이터 집합의 ID입니다. |
-| `connectionSpec.id` | 프로토콜 응용 프로그램의 연결 사양 ID. |
+| `connectionSpec.id` | 데이터 호수에 대한 연결 사양 ID가 수정되었습니다. 이 ID: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 **응답**
 
@@ -441,7 +445,6 @@ curl -X GET \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
-
 
 **응답**
 
@@ -578,6 +581,9 @@ curl -X GET \
 
 데이터 프롤은 소스에서 데이터를 예약하고 수집합니다. 페이로드 내에 이전에 언급된 값을 제공하는 동안 POST 요청을 수행하여 데이터 흐름을 만들 수 있습니다.
 
+질문을 예약하려면 먼저 시작 시간 값을 epoch time(초)으로 설정해야 합니다. 그런 다음 빈도 값을 5개 옵션 중 하나로 설정해야 합니다. `once`, `minute`, `hour`, `day`또는 `week`를 선택합니다. 간격 값은 연속된 두 시퀀스 사이의 기간을 지정하고 일회성 인제스트를 만들 때는 간격을 설정할 필요가 없습니다. 다른 모든 주파수의 경우 간격 값이 같거나 크게 설정되어야 합니다 `15`.
+
+
 **API 형식**
 
 ```http
@@ -633,13 +639,25 @@ curl -X POST \
     }'
 ```
 
+| 속성 | 설명 |
+| -------- | ----------- |
+| `flowSpec.id` | 타사 프로토콜 원본과 연결된 데이터 흐름 사양 ID입니다. |
+| `sourceConnectionIds` | 타사 프로토콜 원본과 연결된 소스 연결 ID입니다. |
+| `targetConnectionIds` | 타사 프로토콜 원본과 연결된 대상 연결 ID입니다. |
+| `transformations.params.deltaColum` | 새 데이터와 기존 데이터를 구분하는 데 사용되는 지정된 열 선택한 열의 타임스탬프를 기반으로 증분 데이터를 인제스트합니다. |
+| `transformations.params.mappingId` | 타사 프로토콜 원본과 연결된 매핑 ID입니다. |
+| `scheduleParams.startTime` | 데이터 흐름 시작 시간(초)입니다. |
+| `scheduleParams.frequency` | 선택 가능한 주파수 값은 다음과 같습니다. `once`, `minute`, `hour`, `day`또는 `week`를 선택합니다. |
+| `scheduleParams.interval` | 간격은 두 개의 연속 흐름 실행 사이의 기간을 지정합니다. 간격 값은 0이 아닌 정수여야 합니다. 주기를 다음으로 설정하고 다른 주파수 값에 대해 이보다 `once` 크거나 같아야 하는 경우 간격이 `15` 필요하지 않습니다. |
+
 **응답**
 
 성공적인 응답은 새로 만든 데이터 흐름 `id` 의 ID를 반환합니다.
 
 ```json
 {
-    "id": "8256cfb4-17e6-432c-a469-6aedafb16cd5"
+    "id": "8256cfb4-17e6-432c-a469-6aedafb16cd5",
+    "etag": "\"04004fe9-0000-0200-0000-5ebc4c8b0000\""
 }
 ```
 
