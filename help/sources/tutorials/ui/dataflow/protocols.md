@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI에서 프로토콜 커넥터에 대한 데이터 흐름 구성
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: 168ac3a3ab9f475cb26dc8138cbc90a3e35c836d
 workflow-type: tm+mt
-source-wordcount: '1073'
+source-wordcount: '1071'
 ht-degree: 1%
 
 ---
@@ -85,19 +85,19 @@ ht-degree: 1%
 | 시작 시간 | 첫 번째 수집이 발생할 UTC 타임스탬프. |
 | 채우기 | 처음에 수집되는 데이터를 결정하는 부울 값입니다. 채우기 *[!UICONTROL 가]* 활성화되어 있으면, 지정된 경로에 있는 모든 현재 파일이 첫 번째 예약된 수집 중에 수집됩니다. 채우기 *[!UICONTROL 를]* 비활성화하면 인제스트 첫 번째 실행과 *[!UICONTROL 시작 시간]* 사이에 로드되는 파일만 인제스트됩니다. 시작 *[!UICONTROL 시간]* 전에 로드된 파일은 인제스트되지 않습니다. |
 
-데이터 세트 흐름은 예약된 기반으로 데이터를 자동으로 인제스트하도록 설계되었습니다. 이 워크플로우를 통해 한 번만 인제스트하려는 경우 **[!UICONTROL 빈도를]** &quot;일&quot;에 구성하고 10000 **[!UICONTROL 이상]**&#x200B;등과 같은 간격에 대해 매우 큰 수를 적용하여 인제스트할 수 있습니다.
+데이터 프롤링은 일정에 따라 데이터를 자동으로 인제스트하도록 디자인되었습니다. 이 워크플로우를 통해 한 번만 인제스트하려는 경우 **[!UICONTROL 빈도를]** &quot;일&quot;에 구성하고 10000 **[!UICONTROL 이상]**&#x200B;등과 같은 간격에 대해 매우 큰 수를 적용하여 인제스트할 수 있습니다.
 
 예약에 대한 값을 제공하고 **[!UICONTROL 다음을 클릭합니다]**.
 
 ![예약](../../../images/tutorials/dataflow/protocols/scheduling.png)
 
-## 데이터 세트 흐름 이름 지정
+## 데이터 흐름 이름 지정
 
 데이터 세트 *[!UICONTROL 흐름 세부]* 단계가 나타나며, 여기에서 데이터 세트 흐름에 대한 이름과 선택적 설명을 제공해야 합니다. 완료되면 **[!UICONTROL 다음]**&#x200B;을 클릭합니다.
 
 ![dataset-flow-details](../../../images/tutorials/dataflow/protocols/dataset-flow-details.png)
 
-## 데이터 세트 흐름 검토
+## 데이터 흐름 검토
 
 [ *[!UICONTROL 검토]* ] 단계가 표시되어 새 데이터 흐름을 만들기 전에 검토할 수 있습니다. 세부 사항은 다음 카테고리 내에서 그룹화됩니다.
 
@@ -109,9 +109,9 @@ ht-degree: 1%
 
 ![검토](../../../images/tutorials/dataflow/protocols/review.png)
 
-## 데이터 세트 흐름 모니터링
+## 데이터 흐름 모니터링 및 삭제
 
-데이터 세트 흐름이 만들어지면 데이터 세트를 통해 수집되는 데이터를 모니터링할 수 있습니다. 데이터 세트 흐름을 모니터링하는 방법에 대한 자세한 내용은 [계정 및 데이터 세트 흐름에 대한 자습서를 참조하십시오](../monitor.md).
+데이터 흐름을 만든 후에는 데이터 흐름을 통해 데이터 수집 중인 데이터를 모니터링할 수 있습니다. 데이터 흐름 모니터링 및 삭제 방법에 대한 자세한 내용은 데이터 흐름 [모니터링 및 삭제에 대한 자습서를 참조하십시오](../monitor.md).
 
 ## 다음 단계
 
