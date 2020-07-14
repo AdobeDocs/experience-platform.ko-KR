@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI에서 데이터베이스 커넥터에 대한 데이터 흐름 구성
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: 168ac3a3ab9f475cb26dc8138cbc90a3e35c836d
 workflow-type: tm+mt
-source-wordcount: '1043'
+source-wordcount: '1048'
 ht-degree: 0%
 
 ---
@@ -108,9 +108,9 @@ ht-degree: 0%
 
 ![](../../../images/tutorials/dataflow/databases/review.png)
 
-## 데이터 흐름 모니터링
+## 데이터 흐름 모니터링 및 삭제
 
-데이터 흐름을 만든 후에는 데이터 흐름을 통해 데이터 수집 중인 데이터를 모니터링할 수 있습니다. 데이터 흐름을 모니터링하는 방법에 대한 자세한 내용은 [계정 및 데이터 흐름 관련 자습서를 참조하십시오](../monitor.md).
+데이터 흐름을 만든 후에는 데이터 흐름을 통해 데이터 수집 중인 데이터를 모니터링할 수 있습니다. 데이터 흐름 모니터링 및 삭제 방법에 대한 자세한 내용은 데이터 흐름 [모니터링 및 삭제에 대한 자습서를 참조하십시오](../monitor.md).
 
 ## 다음 단계
 
