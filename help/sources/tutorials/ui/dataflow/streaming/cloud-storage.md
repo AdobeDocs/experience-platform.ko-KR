@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI에서 클라우드 스토리지 스트리밍 커넥터에 대한 데이터 흐름 구성
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: 168ac3a3ab9f475cb26dc8138cbc90a3e35c836d
 workflow-type: tm+mt
-source-wordcount: '673'
+source-wordcount: '676'
 ht-degree: 0%
 
 ---
@@ -74,9 +74,9 @@ ht-degree: 0%
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/streaming/review.png)
 
-## 데이터 흐름 모니터링
+## 데이터 흐름 모니터링 및 삭제
 
-클라우드 스토리지 데이터 프롤이 생성되면 이를 통해 인제스트되는 데이터를 모니터링할 수 있습니다. 데이터 집합 모니터링에 대한 자세한 내용은 데이터 흐름 [모니터링에 대한 자습서를 참조하십시오](../../../../../ingestion/quality/monitor-data-flows.md).
+클라우드 스토리지 데이터 프롤이 생성되면 이를 통해 인제스트되는 데이터를 모니터링할 수 있습니다. 데이터 흐름 모니터링 및 삭제에 대한 자세한 내용은 데이터 흐름 [모니터링에 대한 자습서를 참조하십시오](../../../../../ingestion/quality/monitor-data-flows.md).
 
 ## 다음 단계
 
