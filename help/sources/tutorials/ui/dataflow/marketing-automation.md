@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI에서 마케팅 자동화 커넥터에 대한 데이터 흐름 구성
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: 168ac3a3ab9f475cb26dc8138cbc90a3e35c836d
 workflow-type: tm+mt
-source-wordcount: '1111'
+source-wordcount: '1022'
 ht-degree: 0%
 
 ---
@@ -103,23 +103,9 @@ ht-degree: 0%
 
 ![검토](../../../images/tutorials/dataflow/marketing-automation/review.png)
 
-## 데이터 흐름 모니터링
+## 데이터 흐름 모니터링 및 삭제
 
-데이터 흐름을 만든 후에는 데이터 흐름을 통해 데이터 수집 중인 데이터를 모니터링할 수 있습니다. 아래 절차에 따라 데이터 프롤의 데이터 세트 모니터에 액세스합니다.
-
-소스 *[!UICONTROL 작업]* 공간 내에서 *[!UICONTROL 마케팅 자동화]* 카테고리 아래에서 보려는 마케팅 자동화 소스를 선택합니다. [ *[!UICONTROL Connect 소스]* ]를 선택하여 인증 인터페이스를 시작합니다. 기존 데이터 흐름을 보려면 *[!UICONTROL 기존 계정]* 을 선택하고 액세스할 계정을 선택합니다.
-
-![monitor](../../../images/tutorials/dataflow/marketing-automation/monitor.png)
-
-소스 *[!UICONTROL 활동]* 화면이 나타납니다. 여기에서 모니터링할 데이터 세트 이름을 클릭합니다.
-
-![select-dataflow-dataset](../../../images/tutorials/dataflow/marketing-automation/select-dataflow-dataset.png)
-
-데이터 *[!UICONTROL 집합 활동]* 화면이 나타납니다. 이 페이지는 그래프 형식으로 소비되는 메시지 비율을 표시합니다.
-
-![dataset-activity](../../../images/tutorials/dataflow/marketing-automation/dataset-activity.png)
-
-데이터 집합 모니터링 및 섭취에 대한 자세한 내용은 데이터 흐름 [모니터링에 대한 자습서를 참조하십시오](../../../../ingestion/quality/monitor-data-flows.md).
+데이터 흐름을 만든 후에는 데이터 흐름을 통해 데이터 수집 중인 데이터를 모니터링할 수 있습니다. 데이터 흐름 모니터링 및 삭제 방법에 대한 자세한 내용은 데이터 흐름 [모니터링 및 삭제에 대한 자습서를 참조하십시오](../monitor.md).
 
 ## 다음 단계
 
