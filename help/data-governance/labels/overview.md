@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 데이터 사용 레이블 개요
 topic: labels
 translation-type: tm+mt
-source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
+source-git-commit: f4b3148db3b4a17d071c1c8ad2aff8dd64ddd0b7
 workflow-type: tm+mt
-source-wordcount: '351'
+source-wordcount: '494'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,9 @@ ht-degree: 0%
 
 데이터 집합 수준에서 적용되는 데이터 사용 레이블은 데이터 집합 내의 모든 필드에 전파됩니다. 또한 데이터 세트에 전달하지 않고 개별 필드(열 헤더)에 직접 레이블을 적용할 수 있습니다.
 
-사용 가능한 데이터 사용 레이블 및 데이터 [!DNL Experience Platform] 가 나타내는 사용 정책에 대한 자세한 내용은 [지원되는 데이터 사용 레이블에 대한 가이드를 참조하십시오](reference.md).
+[!DNL Platform] 데이터 거버넌스에 적용되는 다양한 일반적인 제한 사항을 포괄하는 &quot;핵심&quot; 데이터 사용 레이블을 즉시 사용할 수 있습니다. 이러한 레이블 및 해당 레이블이 나타내는 사용 정책에 대한 자세한 내용은 [핵심 데이터 사용 레이블에 대한 안내서를 참조하십시오](reference.md).
+
+Adobe에서 제공하는 레이블 외에도 사용자 지정 레이블을 정의할 수도 있습니다. UI에서 이 작업을 수행하는 방법에 대한 자세한 내용은 [데이터 사용 레이블 사용 안내서를 참조하십시오](./user-guide.md). API 호출을 사용하여 이 작업을 수행하는 방법에 대한 단계는 [데이터 사용 레이블 API 안내서를 참조하십시오](./api.md).
 
 ## 대상 세그먼트에 대한 레이블 상속
 
@@ -34,14 +36,13 @@ Adobe Experience Platform [세그멘테이션 서비스를 통해](../../segment
 
 실시간 CDP에서 자동 실행이 작동하는 방법에 대한 자세한 내용은 [Adobe 실시간 CDP 데이터 거버넌스 개요를 참조하십시오](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance).
 
-<!-- (Add after DEC mapping reference is added to AAM docs to link out to)
-### Inheritance from Adobe Audience Manager Data Export Controls
+### Adobe Audience Manager 데이터 내보내기 컨트롤의 상속
 
-Experience Platform has the ability to share segments with Adobe Audience Manager. Any Data Export Controls that have been applied to Audience Manager segments are translated to equivalent labels and marketing actions recognized by Experience Platform Data Governance.
+Experience Platform은 Adobe Audience Manager과 세그먼트를 공유할 수 있습니다. Audience Manager 세그먼트에 적용된 데이터 내보내기 컨트롤은 Experience Platform 데이터 거버넌스에서 인식하는 동일한 레이블 및 마케팅 작업으로 변환됩니다.
 
-For a reference on how specific Data Export Controls map to data usage labels in Platform, please refer to the [Audience Manager documentation](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/data-export-controls.html).
--->
+특정 데이터 내보내기 컨트롤이 Platform의 데이터 사용 레이블에 매핑되는 방법에 대한 자세한 내용은 [Audience Manager 설명서를 참조하십시오](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep).
+
 
 ## 다음 단계
 
-데이터 사용 레이블이 도입되었으므로 [사용 안내서를](user-guide.md) 참조하여 UI에서 레이블을 관리하는 방법을 계속 살펴볼 수 [!DNL Experience Platform] 있습니다. API를 사용하여 레이블을 관리하는 방법에 대한 단계는 [카탈로그 서비스 개발자 안내서의 해당 섹션을 참조하십시오](../../catalog/api/labels.md).
+데이터 사용 레이블이 도입되었으므로 [사용 안내서를](user-guide.md) 참조하여 UI에서 레이블을 관리하는 방법을 계속 살펴볼 수 [!DNL Experience Platform] 있습니다. API를 사용하여 레이블을 관리하는 방법에 대한 단계는 [사용 레이블 API 안내서를 참조하십시오](./api.md).
