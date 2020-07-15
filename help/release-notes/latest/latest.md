@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: July 15, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: 1e420d26f89150999f356f9cf5af94d434076c2b
+source-git-commit: 2bbd62fc53d304ff05250688733f1b18dfd18007
 workflow-type: tm+mt
-source-wordcount: '331'
-ht-degree: 7%
+source-wordcount: '328'
+ht-degree: 6%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 7%
 Adobe Experience Platform의 기존 기능 업데이트:
 
 <!-- - [Data Governance](#governance) -->
-- [실시간 고객 프로필](#profile)
+<!-- - [Real-time Customer Profile](#profile) -->
 - [세그멘테이션 서비스](#segmentation)
 - [소스](#sources)
 
