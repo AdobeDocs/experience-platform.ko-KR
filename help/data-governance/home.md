@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform 데이터 거버넌스
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 7f6612f7dd649d68aa7ebe5b971b72d7b433b1e3
 workflow-type: tm+mt
-source-wordcount: '1448'
+source-wordcount: '1434'
 ht-degree: 0%
 
 ---
@@ -92,7 +92,6 @@ DULE 프레임워크에는 데이터를 세 가지 방법으로 분류하는 데
 
 이후 릴리스에서는 다음과 같은 기능이 제공됩니다.
 
-* 사용자 지정 데이터 사용 레이블: 조직의 요구 사항에 따라 새로운 레이블과 정의를 만들 수 있습니다.
 * 정책 실행: 정책 프레임워크를 사용하여 다양한 데이터 액세스 패턴에 대한 정책을 조언하고 적용합니다.
 * 감사: 데이터 액세스 활동을 모니터링하고 준수 문제를 식별하고 보고합니다.
 
