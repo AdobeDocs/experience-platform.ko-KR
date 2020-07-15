@@ -3,18 +3,19 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform 릴리스 정보
 translation-type: tm+mt
-source-git-commit: b6cfdf56c20065bdc3e8a9fedf6007ddd74eaeaa
+source-git-commit: c59acbe9acce65ab81a53cfe8f8f3373cf9ae388
 workflow-type: tm+mt
-source-wordcount: '23'
-ht-degree: 95%
+source-wordcount: '24'
+ht-degree: 100%
 
 ---
 
 
 # Adobe Experience Platform 릴리스 노트 {#release-notes}
 
-* [2020년 6월](latest/latest.md)
-* [2020년 5월](2020/may-2020.md)
+* [2020년 7월](latest/latest.md)
+* [2020년 6월](2020/june-2020.md)
+* [2020년 6월](2020/may-2020.md)
 * [2020년 4월](2020/april-2020.md)
 * [2020년 3월](2020/march-2020.md)
 * [2020년 2월](2020/february-2020.md)
