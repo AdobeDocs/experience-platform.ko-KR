@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 데이터 사용 레이블 사용 안내서
 topic: labels
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: b36f67fd7d597d5d6a8cd514d95908ae26189c83
 workflow-type: tm+mt
-source-wordcount: '975'
+source-wordcount: '1112'
 ht-degree: 0%
 
 ---
@@ -99,6 +99,30 @@ ht-degree: 0%
 ![여러 필드를 선택하여 필드 수준 레이블을 동시에 적용할 수 있습니다.](../images/labels/fields_select_multiple.png)
 
 상속은 최상위 수준 아래쪽에서만(데이터 세트→필드) 이동되므로 필드 수준에서 적용된 레이블이 다른 필드나 데이터 세트에 전파되지 않습니다.
+
+## 사용자 지정 레이블 관리
+
+UI의 [정책] 작업 공간 내에서 사용자 지정 *[!UICONTROL 사용]* 레이블을 직접 만들 수 [!DNL Experience Platform] 있습니다. 왼쪽 탐색 **[!UICONTROL 에서 정책]** 을 클릭한 다음 **[!UICONTROL 레이블을]** 클릭하여 기존 레이블 목록을 봅니다. 여기에서 레이블 **[!UICONTROL 만들기를 클릭합니다]**.
+
+![](../images/labels/create-label-btn.png)
+
+레이블 *[!UICONTROL 만들기]* 대화 상자가 나타납니다. 여기에서 새 레이블에 대한 다음 정보를 제공합니다.
+
+* **[!UICONTROL 식별자]**: 레이블의 고유 식별자입니다. 이 값은 조회 목적으로 사용되므로 짧고 간결해야 합니다.
+* **[!UICONTROL 이름]**: 레이블의 친숙한 표시 이름입니다.
+* **[!UICONTROL 설명]**: (선택 사항) 추가적인 컨텍스트를 제공하는 레이블에 대한 설명입니다.
+
+완료되면 **[!UICONTROL 만들기를 클릭합니다]**.
+
+![](../images/labels/create-label.png)
+
+대화 상자가 닫히고 새로 만든 사용자 지정 레이블이 레이블 탭 아래의 목록에 *[!UICONTROL 나타납니다]* .
+
+![](../images/labels/label-created.png)
+
+이제 데이터 세트 및 필드에 대한 사용 레이블을 *[!UICONTROL 편집할]* 때 또는 데이터 사용 정책을 만들 때 사용자 지정 레이블 아래에서 레이블을 선택할 수 있습니다.
+
+<img src="../images/labels/add-custom-label.png" width="600" /><br>
 
 ## 다음 단계
 
