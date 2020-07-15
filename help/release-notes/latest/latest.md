@@ -1,67 +1,82 @@
 ---
 title: Adobe Experience Platform 릴리스 정보
-description: Adobe Experience Platform의 최신 릴리스 노트
+description: Experience Platform에 대한 최신 릴리스 노트
 doc-type: release notes
-last-update: June 10, 2020
-author: crhoades, ens28527
+last-update: July 15, 2020
+author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: 1dad479708291e911719c3f3dd5edd2e9b497973
+source-git-commit: 1e420d26f89150999f356f9cf5af94d434076c2b
 workflow-type: tm+mt
-source-wordcount: '431'
-ht-degree: 5%
+source-wordcount: '331'
+ht-degree: 7%
 
 ---
 
 
 # Adobe Experience Platform 릴리스 노트
 
-**릴리스 날짜: 2020년 6월 10일**
+**릴리스 날짜: 2020년 7월 15일**
 
 Adobe Experience Platform의 기존 기능 업데이트:
 
-- [데이터 과학 작업 공간](#dsw)
-- [세그먼테이션](#segmentation)
+<!-- - [Data Governance](#governance) -->
+- [실시간 고객 프로필](#profile)
+- [세그멘테이션 서비스](#segmentation)
 - [소스](#sources)
 
-## 데이터 과학 작업 공간 {#dsw}
+<!-- ## [!DNL Data Governance] {#governance}
 
-Data Science Workspace는 머신 러닝과 인공 지능을 사용하여 데이터를 통해 인사이트를 도출합니다. Adobe Experience Platform에 통합된 데이터 과학 작업 공간을 사용하면 Adobe 솔루션 전체에서 콘텐츠와 데이터 자산을 사용하여 예측할 수 있습니다.
+Adobe Experience Platform Data Governance is a series of strategies and technologies used to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data usage. It plays a key role within [!DNL Experience Platform] at various levels, including cataloging, data lineage, data usage labeling, data access policies, and access control on data for marketing actions.
 
-Data Science Workspace는 실시간 머신 러닝을 통해 향상된 경험과 예측을 가능하게 하는 새로운 방식을 모색하고 있습니다. 실시간 기계 학습은 API 종단점을 통해 실시간 점수 지정/활성화를 위해 맞춤형 또는 가져온 사전 교육 시스템 학습 모델을 업계 표준 상호 운용 가능한 모델 포맷으로 작성, 테스트 및 배포할 수 있는 기능을 제공합니다.
+**New features**
 
-실시간 기계 학습은 알파 버전이며 현재 개발 중입니다.
+| Feature    | Description  |
+| -----------| ---------- |
+| Automatic policy enforcement in [!DNL Real-time Customer Data Platform] | Data usage policies are now automatically enforced in [!DNL Real-time CDP] when violating actions occur, including activating segments to destinations. When a policy violation is triggered, users get real-time visibility into usage restrictions within the activation workflow, indicating what data they cannot use and why.<br><br>See the section on [enforcing data usage compliance](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance) within the overview on [!DNL Data Governance] in [!DNL Real-time CDP] for more information. |
+| Adobe Audience Manager integration | Any segments that are shared with [!DNL Audience Manager] from [!DNL Platform] inherit any applied data usage labels as [!DNL Data Export Controls], and vice versa. See the [!DNL Audience Manager] documentation for specific [mappings between usage labels and Data Export Controls](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep). |
+| Custom data usage labels | You can now create custom data usage labels using the Policy Service API or in the UI. See the [labels overview](../../data-governance/labels/overview.md) for more information. |
 
-| 기능 | 설명 |
-|--- | ---|
-| JupiterLab Launcher 실시간 ML 스타터 | JupiterLab Launcher에는 실시간 머신 러닝(Alpha)을 위한 Python 노트북 시작 도구가 포함되어 있습니다. |
+See the [Data Governance overview](../../data-governance/home.md) for more information on the service.
 
-실시간 기계 학습 알파에 대한 자세한 내용은 [실시간 기계 학습 개요를 참조하십시오](../../data-science-workspace/real-time-machine-learning/home.md).
+## [!DNL Real-time Customer Profile] {#profile}
 
-## 세그먼테이션 {#segmentation}
+Adobe Experience Platform enables you to drive coordinated, consistent, and relevant experiences for your customers no matter where or when they interact with your brand. With [!DNL Real-time Customer Profile], you can see a holistic view of each individual customer that combines data from multiple channels, including online, offline, CRM, and third party data. [!DNL Profile] allows you to consolidate your disparate customer data into a unified view offering an actionable, timestamped account of every customer interaction.
 
-Adobe Experience Platform 세그멘테이션 서비스는 세그먼트를 작성하고 실시간 고객 프로필 데이터를 통해 대상을 생성할 수 있도록 해주는 유저 인터페이스와 RESTful API를 제공합니다. 이러한 세그먼트는 중앙에서 구성 및 관리되므로, 모든 Adobe 애플리케이션에서 쉽게 액세스할 수 있습니다.
+**New features**
 
-세분화 서비스는 고객 기반 내에서 마케팅 가능한 사람들을 구분하는 기준을 설명함으로써 특정 프로필 하위 집합을 정의합니다. 세그먼트는 브랜드와의 고객 상호 작용을 나타내는 레코드 데이터(인구 통계 정보 등) 또는 시간 시리즈 이벤트를 기반으로 할 수 있습니다.
+| Feature | Description |
+| ------- | ----------- |
+| Data usage policy enforcement | In [!DNL Real-time Customer Data Platform], data usage policy violations are automatically surfaced when a violating action in the [!UICONTROL Profile] workspace is attempted. See the [release notes for Data Governance](#governance) for more information on automatic policy enforcement. | 
+
+-->
+
+## [!DNL Segmentation Service] {#segmentation}
+
+Adobe Experience Platform 세그멘테이션 서비스는 세그먼트를 작성하고 데이터로부터 대상을 생성할 수 있는 사용자 인터페이스와 RESTful API를 [!DNL Real-time Customer Profile] 제공합니다. 이러한 세그먼트는 중앙에서 구성 및 관리되므로 모든 Adobe 애플리케이션에서 쉽게 액세스할 수 [!DNL Platform]있습니다.
+
+[!DNL Segmentation Service] 고객 기반 내에서 마케팅 가능한 사람들을 구분하는 기준을 설명하여 특정 프로필 하위 집합을 정의합니다. 세그먼트는 브랜드와의 고객 상호 작용을 나타내는 레코드 데이터(인구 통계 정보 등) 또는 시간 시리즈 이벤트를 기반으로 할 수 있습니다.
 
 **새로운 기능**
 
 | 기능 | 설명 |
 | ------- | ----------- |
-| 날짜 필드 | 날짜 기능에 대한 &quot;만료 날짜&quot; 기능이 추가되어 사용자가 연도 없이 날짜를 평가할 수 있습니다. |
+| 스트리밍 세분화 | 이제 스트리밍 세그먼테이션은 데이터가 유입될 때 사용자 [!DNL Platform]의 세그먼트를 분류할 수 있으므로 세그먼트 자격 조건 시간을 크게 줄일 수 있습니다. 또한 스트리밍 세그먼테이션을 사용하면 세그멘테이션 작업을 수동으로 실행할 필요가 없습니다. |
 
-세그멘테이션에 대한 자세한 내용은 세그멘테이션 [개요를 참조하십시오.](../../segmentation/home.md)
+<!-- | Data usage policy enforcement | In [!DNL Real-time Customer Data Platform], data usage policy violations are automatically surfaced when a violating action in the [!UICONTROL Segments] workspace is attempted. See the [release notes for Data Governance](#governance) for more information on automatic policy enforcement. | -->
+
+자세한 내용 [!DNL Segmentation Service]은 세그멘테이션 [개요를 참조하십시오.](../../segmentation/home.md)
 
 ## 소스 {#sources}
 
-Adobe Experience Platform을 사용하면 외부 소스에서 데이터를 인제스트할 수 있으며, 플랫폼 서비스를 사용하여 해당 데이터를 구조화, 레이블 지정 및 개선할 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 타사 소프트웨어 및 CRM 시스템과 같은 다양한 소스의 데이터를 인제스트할 수 있습니다.
+Adobe Experience Platform은 외부 소스에서 데이터를 인제스트할 수 있으며, [!DNL Platform] 서비스를 사용하여 해당 데이터를 구조화, 레이블 지정 및 개선할 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 타사 소프트웨어 및 CRM 시스템과 같은 다양한 소스의 데이터를 인제스트할 수 있습니다.
 
-경험 플랫폼은 다양한 데이터 제공업체의 소스 연결을 쉽게 설정할 수 있는 RESTful API와 대화형 UI를 제공합니다. 이러한 소스 연결을 통해 외부 스토리지 시스템 및 CRM 서비스에 인증 및 연결할 수 있고, 통합 실행에 대한 시간을 설정하고, 데이터 통합 처리량을 관리할 수 있습니다.
+Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 쉽게 설정할 수 있는 RESTful API와 대화형 UI를 제공합니다. 이러한 소스 연결을 통해 외부 스토리지 시스템 및 CRM 서비스에 인증 및 연결할 수 있고, 통합 실행에 대한 시간을 설정하고, 데이터 통합 처리량을 관리할 수 있습니다.
 
 **새로운 기능**
 
 | 기능 | 설명 |
 | ------- | ----------- |
-| 클라우드 스토리지 시스템에 대한 추가 API 및 UI 지원 | Apache HDFS용 새 소스 커넥터 |
-| 데이터베이스에 대한 추가 API 및 UI 지원 | Couchbase용 새 소스 커넥터 |
+| 데이터 흐름 삭제를 위한 API 및 UI 지원 | 이제 API를 통해 또는 UI를 사용하여 오류가 있거나 불필요한 데이터 흐름을 삭제할 수 있습니다. |
+| 일회성 인제스트를 위한 API 및 UI 지원 | 이제 시작 날짜만 제공되고 나중에 인제스트를 예약하지 않는 데이터 흐름 관련 일회성 인제스트를 API를 통해 또는 UI를 사용하여 실행할 수 있습니다. |
 
 소스에 대한 자세한 내용은 [소스 개요를 참조하십시오](../../sources/home.md).
