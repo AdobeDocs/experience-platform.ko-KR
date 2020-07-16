@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 임시 스키마 만들기
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '742'
+source-wordcount: '724'
 ht-degree: 2%
 
 ---
@@ -14,18 +14,18 @@ ht-degree: 2%
 
 # 임시 스키마 만들기
 
-특정 상황에서 단일 데이터 집합에서만 사용하도록 지정된 필드가 있는 XDM(경험 데이터 모델) 스키마를 만들어야 할 수 있습니다. 이를 &quot;임시&quot; 스키마라고 합니다. 애드혹 스키마는 CSV 파일 인제스트 및 특정 종류의 소스 연결 만들기를 포함하여 Experience Platform에 대한 다양한 데이터 처리 워크플로우에서 사용됩니다.
+특정 상황에서 단일 데이터 세트에 의해서만 사용하도록 지정된 필드가 있는 [!DNL Experience Data Model] (XDM) 스키마를 만들어야 할 수 있습니다. 이를 &quot;임시&quot; 스키마라고 합니다. 애드혹 스키마는 CSV 파일 인제스트 및 특정 종류의 소스 연결 만들기를 [!DNL Experience Platform]포함하여 다양한 데이터 처리 워크플로우에서 사용됩니다.
 
-이 문서에서는 스키마 레지스트리 API를 사용하여 임시 스키마를 만드는 일반적인 [단계를 제공합니다](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). 이 도구는 작업 과정의 일부로 임시 스키마를 만들어야 하는 다른 Experience Platform 자습서와 함께 사용됩니다. 이러한 각 문서는 특정 사용 사례에 대해 임시 스키마를 제대로 구성하는 방법에 대한 자세한 정보를 제공합니다.
+이 문서에서는 스키마 레지스트리 API를 사용하여 임시 스키마를 만드는 일반적인 [단계를 제공합니다](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). 이 도구는 작업 과정의 일부로 임시 스키마를 만들어야 하는 다른 [!DNL Experience Platform] 자습서와 함께 사용됩니다. 이러한 각 문서는 특정 사용 사례에 대해 임시 스키마를 제대로 구성하는 방법에 대한 자세한 정보를 제공합니다.
 
 ## 시작하기
 
-이 자습서에서는 XDM(Experience Data Model) 시스템에 대해 제대로 이해해야 합니다. 이 자습서를 시작하기 전에 다음 XDM 설명서를 검토하십시오.
+이 자습서에서는 [!DNL Experience Data Model] (XDM) 시스템에 대해 작업해야 합니다. 이 자습서를 시작하기 전에 다음 XDM 설명서를 검토하십시오.
 
-- [XDM 시스템 개요](../home.md): XDM 및 Experience Platform 구현에 대한 개요
+- [XDM 시스템 개요](../home.md): XDM 및 XDM 구현에 대한 개요 [!DNL Experience Platform].
 - [스키마 컴포지션의 기본 사항](../schema/composition.md): XDM 스키마의 기본 구성 요소에 대한 개요입니다.
 
-이 자습서를 시작하기 전에 [개발자 가이드에서](../api/getting-started.md) 스키마 레지스트리 API를 성공적으로 호출하기 위해 알아야 할 중요한 정보를 검토하십시오. 여기에는 사용자 `{TENANT_ID}`, &quot;컨테이너&quot;의 개념 및 요청 시 필요한 헤더가 포함됩니다(수락 헤더와 가능한 값에 특별히 주의).
+이 자습서를 시작하기 전에 [개발자 가이드에서](../api/getting-started.md) API를 성공적으로 호출하기 위해 알아야 할 중요한 정보가 있는지 [!DNL Schema Registry] 확인하십시오. 여기에는 사용자 `{TENANT_ID}`, &quot;컨테이너&quot;의 개념 및 요청 시 필요한 헤더가 포함됩니다(수락 헤더와 가능한 값에 특별히 주의).
 
 ## 애드혹 클래스 만들기
 
@@ -239,7 +239,7 @@ GET /tenant/schemas/{SCHEMA_ID}
 
 **요청**
 
-다음 요청에서는 스키마의 확장된 양식을 반환하는 수락 헤더 `application/vnd.adobe.xed-full+json; version=1`를 사용합니다. 스키마 레지스트리에서 특정 리소스를 검색할 때 요청의 수락 헤더에 해당 리소스의 주요 버전이 포함되어야 합니다.
+다음 요청에서는 스키마의 확장된 양식을 반환하는 수락 헤더 `application/vnd.adobe.xed-full+json; version=1`를 사용합니다. 요청에서 특정 리소스를 검색할 때 요청 [!DNL Schema Registry]의 수락 헤더에 해당 리소스의 주요 버전이 포함되어야 합니다.
 
 ```shell
 curl -X GET \
@@ -305,4 +305,4 @@ curl -X GET \
 
 이 튜토리얼을 따라 새 임시 스키마를 만들었습니다. 이 문서를 다른 자습서의 일부로 가져온 경우, 이제 임시 스키마 `$id` 를 사용하여 지정된 대로 워크플로우를 완료할 수 있습니다.
 
-스키마 레지스트리 API 작업에 대한 자세한 내용은 [개발자 안내서를 참조하십시오](../api/getting-started.md).
+API 작업에 대한 자세한 내용은 [!DNL Schema Registry] 개발자 [안내서를 참조하십시오](../api/getting-started.md).
