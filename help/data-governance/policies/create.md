@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 데이터 사용 정책 만들기
 topic: policies
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
 workflow-type: tm+mt
-source-wordcount: '1194'
+source-wordcount: '1186'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # API에서 데이터 사용 정책 만들기
 
-데이터 사용 표시 및 실행(DULE)은 Adobe Experience Platform 데이터 거버넌스의 핵심 메커니즘입니다. DULE [Policy Service API를](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) 사용하면 DULE 정책을 만들고 관리하여 특정 DULE 레이블이 포함된 데이터에 대해 수행할 수 있는 마케팅 작업을 결정할 수 있습니다.
+데이터 사용 표시 및 실행(DULE)은 Adobe Experience Platform의 핵심 메커니즘입니다 [!DNL Data Governance]. DULE [Policy Service API를](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) 사용하면 DULE 정책을 만들고 관리하여 특정 DULE 레이블이 포함된 데이터에 대해 수행할 수 있는 마케팅 작업을 결정할 수 있습니다.
 
 이 문서에서는 [!DNL Policy Service] API를 사용하여 DULE 정책을 만들기 위한 단계별 자습서를 제공합니다. API에서 제공되는 다양한 작업에 대한 보다 포괄적인 지침은 [정책 서비스 개발자 안내서를 참조하십시오](../api/getting-started.md).
 
@@ -22,9 +22,9 @@ ht-degree: 2%
 
 이 자습서에서는 DULE 정책 만들기 및 평가와 관련된 다음 주요 개념을 제대로 이해해야 합니다.
 
-* [데이터 거버넌스](../home.md): 데이터 사용 규정 준수를 [!DNL Platform] 적용하는 프레임워크입니다.
+* [!DNL Data Governance](../home.md): 데이터 사용 규정 준수를 [!DNL Platform] 적용하는 프레임워크입니다.
 * [데이터 사용 레이블](../labels/overview.md): 데이터 사용 레이블은 XDM 데이터 필드에 적용되어 데이터 액세스 방법에 대한 제한을 지정합니다.
-* [XDM(Experience Data Model)](../../xdm/home.md): 고객 경험 데이터를 [!DNL Platform] 구성하는 표준화된 프레임워크
+* [!DNL Experience Data Model (XDM)](../../xdm/home.md): 고객 경험 데이터를 [!DNL Platform] 구성하는 표준화된 프레임워크
 * [샌드박스](../../sandboxes/home.md): [!DNL Experience Platform] 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되도록 단일 [!DNL Platform] 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
 
 이 자습서를 시작하기 전에 필수 헤더 및 예제 API 호출 읽기 방법 등 DULE [API를 성공적으로 호출하기 위해 알아야 하는 중요한 정보는](../api/getting-started.md) 개발자 안내서를 [!DNL Policy Service] 참조하십시오.
