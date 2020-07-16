@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 클래스 만들기
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '485'
+source-wordcount: '477'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 스키마의 기본 빌딩 블록은 클래스입니다. 이 클래스에는 스키마의 핵심 데이터를 캡처하기 위해 정의해야 하는 최소 필드 집합이 포함되어 있습니다. 예를 들어, 여러분이 자동차와 트럭용 스키마를 설계하고 있다면, 그들은 모든 자동차의 기본적인 공통 속성을 설명한 Vehicle이라는 클래스를 사용할 것입니다.
 
-Adobe 및 기타 Experience Platform 파트너가 제공하는 표준 클래스는 여러 가지지만 고유한 클래스를 정의하여 스키마 레지스트리에 저장할 수도 있습니다. 그런 다음 만든 클래스를 구현하는 스키마를 구성하고 새로 정의된 클래스와 호환되는 혼합을 정의할 수 있습니다.
+Adobe와 기타 파트너가 제공하는 여러 가지 표준 클래스가 있지만, 사용자는 자신의 클래스를 정의한 후 이 클래스를 Adobe에 저장할 수도 있습니다 [!DNL Experience Platform] [!DNL Schema Registry]. 그런 다음 만든 클래스를 구현하는 스키마를 구성하고 새로 정의된 클래스와 호환되는 혼합을 정의할 수 있습니다.
 
 >[!NOTE]
 >
@@ -83,12 +83,12 @@ curl -X POST \
 
 | 속성 | 설명 |
 | --- | --- |
-| `_{TENANT_ID}` | 조직의 `TENANT_ID` 네임스페이스입니다. 조직에서 만든 모든 리소스에 이 속성이 포함되어야 스키마 레지스트리의 다른 리소스와 충돌을 방지할 수 있습니다. |
+| `_{TENANT_ID}` | 조직의 `TENANT_ID` 네임스페이스입니다. 조직에서 만든 모든 리소스에 이 속성이 포함되어야 다른 리소스와 충돌을 방지할 수 있습니다 [!DNL Schema Registry]. |
 | `allOf` | 새 클래스에서 속성을 상속할 리소스 목록입니다. 배열 내의 `$ref` 개체 중 하나는 클래스의 동작을 정의합니다. 이 예에서 클래스는 &quot;record&quot; 동작을 상속합니다. |
 
 **응답**
 
-성공적인 응답은 HTTP 상태 201(만들음)과 새로 만든 클래스, `$id`및 `meta:altId`등의 세부 정보가 포함된 페이로드를 반환합니다 `version`. 이 세 개의 값은 읽기 전용이며 스키마 레지스트리에서 지정합니다.
+성공적인 응답은 HTTP 상태 201(만들음)과 새로 만든 클래스, `$id`및 `meta:altId`등의 세부 정보가 포함된 페이로드를 반환합니다 `version`. 이 세 개의 값은 읽기 전용이며 [!DNL Schema Registry]
 
 ```JSON
 {
