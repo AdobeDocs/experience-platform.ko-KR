@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 데이터 사용 레이블 개요
 topic: labels
 translation-type: tm+mt
-source-git-commit: f4b3148db3b4a17d071c1c8ad2aff8dd64ddd0b7
+source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
 workflow-type: tm+mt
-source-wordcount: '494'
+source-wordcount: '485'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # 데이터 사용 레이블 개요
 
-데이터 사용 표시 및 실행(DULE)은 Adobe Experience Platform 데이터 거버넌스의 핵심 메커니즘입니다. DULE 기능을 사용하면 데이터 세트 및 필드에 데이터 사용 레이블을 적용하여 관련 데이터 사용 정책에 따라 각 데이터를 분류할 수 있습니다.
+데이터 사용 표시 및 실행(DULE)은 Adobe Experience Platform의 핵심 메커니즘입니다 [!DNL Data Governance]. DULE 기능을 사용하면 데이터 세트 및 필드에 데이터 사용 레이블을 적용하여 관련 데이터 사용 정책에 따라 각 데이터를 분류할 수 있습니다.
 
 이 문서에서는 데이터 사용 레이블(DULE 레이블이라고도 함)에 대한 개요를 제공합니다 [!DNL Experience Platform]. 이 안내서를 읽기 전에 [데이터 거버넌스 개요를](../home.md) 참조하여 DULE 프레임워크에 대한 보다 강력한 소개를 확인하십시오.
 
@@ -38,9 +38,9 @@ Adobe Experience Platform [세그멘테이션 서비스를 통해](../../segment
 
 ### Adobe Audience Manager 데이터 내보내기 컨트롤의 상속
 
-Experience Platform은 Adobe Audience Manager과 세그먼트를 공유할 수 있습니다. Audience Manager 세그먼트에 적용된 데이터 내보내기 컨트롤은 Experience Platform 데이터 거버넌스에서 인식하는 동일한 레이블 및 마케팅 작업으로 변환됩니다.
+[!DNL Experience Platform] 세그먼트를 Adobe Audience Manager과 공유할 수 있습니다. Audience Manager 세그먼트에 적용된 데이터 내보내기 컨트롤은 상응하는 레이블 및 마케팅 작업으로 [!DNL Experience Platform] [!DNL Data Governance]변환됩니다.
 
-특정 데이터 내보내기 컨트롤이 Platform의 데이터 사용 레이블에 매핑되는 방법에 대한 자세한 내용은 [Audience Manager 설명서를 참조하십시오](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep).
+특정 데이터 내보내기 컨트롤이 데이터 사용 레이블에 매핑되는 방법에 대한 참조 [!DNL Platform]는 [Audience Manager 설명서를 참조하십시오](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep).
 
 
 ## 다음 단계
