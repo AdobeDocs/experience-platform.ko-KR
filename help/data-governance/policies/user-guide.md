@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 데이터 사용 정책 사용 안내서
 topic: policies
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
 workflow-type: tm+mt
-source-wordcount: '727'
+source-wordcount: '725'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # 데이터 사용 정책 사용 안내서
 
-Adobe Experience Platform 데이터 거버넌스는 데이터 사용 정책을 만들고 관리할 수 있는 사용자 인터페이스를 제공합니다. 이 문서에서는 _사용자 인터페이스의 정책 작업 공간에서 수행할 수 있는 작업에_ 대한 개요를 제공합니다 [!DNL Experience Platform] .
+Adobe Experience Platform [!DNL Data Governance] 는 데이터 사용 정책을 만들고 관리할 수 있는 사용자 인터페이스를 제공합니다. 이 문서에서는 _사용자 인터페이스의 정책 작업 공간에서 수행할 수 있는 작업에_ 대한 개요를 제공합니다 [!DNL Experience Platform] .
 
 >[!IMPORTANT]
 >
