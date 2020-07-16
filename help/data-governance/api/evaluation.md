@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 정책
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
+source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
 workflow-type: tm+mt
-source-wordcount: '940'
+source-wordcount: '938'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # 정책 평가
 
-마케팅 작업이 만들어지고 정책이 정의된 후에는 정책 서비스 API를 사용하여 특정 작업으로 인해 정책이 위반되는지 평가할 수 있습니다. 반환된 제약 조건은 데이터 사용 레이블이 들어 있는 지정된 데이터에 대한 마케팅 작업을 시도하여 위반될 일련의 정책을 가져옵니다.
+마케팅 작업이 만들어지고 정책이 정의된 후에는 [!DNL Policy Service] API를 사용하여 특정 작업으로 정책이 위반되는지 평가할 수 있습니다. 반환된 제약 조건은 데이터 사용 레이블이 들어 있는 지정된 데이터에 대한 마케팅 작업을 시도하여 위반될 일련의 정책을 가져옵니다.
 
 기본적으로 상태가 &quot;ENABLED&quot;로 설정된 **정책만 평가에**&#x200B;참여하지만 쿼리 매개 변수를 사용하여 &quot;DRAFT&quot; 정책 `?includeDraft=true` 을 평가에 포함시킬 수 있습니다.
 
@@ -52,7 +52,7 @@ curl -X GET \
 
 **응답**
 
-응답 개체에는 요청에 전송된 레이블과 일치해야 하는 `duleLabels` 배열이 포함됩니다. 데이터 사용 레이블에 대해 지정된 마케팅 작업을 수행하면 해당 배열에 영향을 받는 정책(또는 정책)의 세부 정보가 포함됩니다. `violatedPolicies` 위반되는 정책이 없으면 `violatedPolicies` 배열은 비어 있는(`[]`) 것처럼 표시됩니다.
+응답 개체에는 요청에 전송된 레이블과 일치해야 하는 `duleLabels` 배열이 포함됩니다. 데이터 사용 레이블에 대해 지정된 마케팅 작업을 수행하면 해당 배열에 영향을 받는 정책(또는 정책)의 세부 정보가 포함됩니다. `violatedPolicies` 위반된 정책이 없으면 `violatedPolicies` 배열은 비어 있는(`[]`) 것처럼 표시됩니다.
 
 ```JSON
 {
