@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 노조
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '806'
+source-wordcount: '788'
 ht-degree: 1%
 
 ---
@@ -14,13 +14,13 @@ ht-degree: 1%
 
 # 노조
 
-조합(또는 조합 뷰)은 동일한 클래스(XDM ExperienceEvent 또는 XDM 개별 프로필)를 공유하고 [실시간 고객 프로필에 대해 활성화된 모든 스키마의 필드를 집계하는 시스템 생성, 읽기 전용 스키마입니다](../../profile/home.md).
+조합(또는 조합 뷰)은 동일한 클래스(또는)를 공유하고 사용할 수 있는 모든 스키마의 필드를 집계하는 시스템 생성,[!DNL XDM ExperienceEvent] 읽기 전용 스키마입니다 [!DNL XDM Individual Profile][!DNL Real-time Customer Profile](../../profile/home.md).
 
 이 문서에서는 스키마 레지스트리 API에서 조합과 함께 작업하는 데 필요한 개념과 다양한 작업에 대한 샘플 호출을 다룹니다. XDM의 조합에 대한 일반적인 자세한 내용은 스키마 구성 [의 기본 사항에 있는 조합의 섹션을 참조하십시오](../schema/composition.md#union).
 
 ## 유니온 믹싱
 
-스키마 레지스트리에는 조합 스키마 내에 다음 세 가지 혼합이 자동으로 포함됩니다. `identityMap`, `timeSeriesEvents`and `segmentMembership`.
+유니온 스키마 내에 자동으로 세 개의 혼합이 [!DNL Schema Registry] 포함됩니다. `identityMap`, `timeSeriesEvents`and `segmentMembership`.
 
 ### ID 맵
 
@@ -30,7 +30,7 @@ See the [Identity Service documentation](../../identity-service/home.md) for mor
 
 ### 시계열 이벤트
 
-이 `timeSeriesEvents` 배열은 조합과 연관된 레코드 스키마와 관련된 시계열 이벤트 목록입니다. 프로필 데이터를 데이터 세트로 내보낼 때 이 배열은 각 레코드에 포함됩니다. 이 기능은 모델에 레코드 특성 외에 프로파일의 전체 동작 내역이 필요한 기계 학습과 같은 다양한 사용 사례에 유용합니다.
+이 `timeSeriesEvents` 배열은 조합과 연관된 레코드 스키마와 관련된 시계열 이벤트 목록입니다. 데이터를 [!DNL Profile] 데이터 세트로 내보낼 때 이 배열은 각 레코드에 대해 포함됩니다. 이 기능은 모델에 레코드 특성 외에 프로파일의 전체 동작 내역이 필요한 기계 학습과 같은 다양한 사용 사례에 유용합니다.
 
 ### 세그먼트 멤버십 맵
 
@@ -54,7 +54,7 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{SCHEMA_ID}` | 프로파일에서 사용할 수 있도록 설정할 스키마 `$id` `meta:altId` 또는 URL로 인코딩된 URI입니다. |
+| `{SCHEMA_ID}` | 사용할 수 있도록 설정하려는 URL 인코딩 `$id` URI 또는 스키마 `meta:altId` 의 [!DNL Profile]URL |
 
 **요청**
 
@@ -117,7 +117,7 @@ curl -X PATCH \
 
 ## 목록 조합
 
-스키마에서 &quot;union&quot; 태그를 설정하면 스키마 레지스트리가 스키마를 기반으로 하는 클래스에 대한 결합을 자동으로 생성하고 유지 관리합니다. 조합 `$id` 의 경우 클래스 `$id` 의 표준과 비슷하며 두 개의 밑줄이 추가되는 유일한 차이점과 &quot;union&quot;이라는 단어(`"__union"`)가 추가됩니다.
+스키마에서 &quot;union&quot; 태그를 설정하면 스키마가 기반이 되는 클래스에 대한 유니폼이 [!DNL Schema Registry] 자동으로 만들어지고 유지 관리됩니다. 조합 `$id` 의 경우 클래스 `$id` 의 표준과 비슷하며 두 개의 밑줄이 추가되는 유일한 차이점과 &quot;union&quot;이라는 단어(`"__union"`)가 추가됩니다.
 
 사용 가능한 조합 목록을 보려면 종단점에 대한 GET 요청을 수행할 수 `/unions` 있습니다.
 
@@ -168,7 +168,7 @@ Accept 헤더에 따라 `$id` 및 조합의 일부 또는 전체 세부 사항�
 
 >[!NOTE]
 >
->조합 조회는 `/unions` 및 `/schemas` 끝점을 사용하여 프로필 내보내기에서 데이터 세트로 사용할 수 있도록 합니다.
+>조합 조회는 `/unions` 및 `/schemas` 종단점을 사용하여 데이터 세트로 [!DNL Profile] 내보내기 시 사용할 수 있습니다.
 
 **API 형식**
 
@@ -265,7 +265,7 @@ GET /tenant/schemas?property=meta:immutableTags==union&property=meta:class=={CLA
 
 **요청**
 
-다음 요청은 XDM 개별 프로필 클래스 조합의 일부인 모든 스키마를 조회합니다.
+다음 요청은 [!DNL XDM Individual Profile] 클래스 조합의 일부인 모든 스키마를 조회합니다.
 
 ```SHELL
 curl -X GET \
