@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: July 15, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: e864073c27ba20ce32c962c469aed52608f199ac
+source-git-commit: 9fbd30adcb29c8925f02745be924477eb4e3fe2a
 workflow-type: tm+mt
-source-wordcount: '686'
+source-wordcount: '681'
 ht-degree: 4%
 
 ---
@@ -26,7 +26,7 @@ Adobe Experience Platform의 기존 기능 업데이트:
 
 ## [!DNL Data Governance] {#governance}
 
-Adobe Experience Platform 데이터 거버넌스는 고객 데이터를 관리하고 데이터 사용에 적용되는 규정, 제한 사항 및 정책을 준수하는 데 사용되는 일련의 전략과 기술입니다. 카탈로그 작성, 데이터 계보, 데이터 사용 표시, 데이터 액세스 정책, 마케팅 작업을 위한 데이터 액세스 제어 등 다양한 [!DNL Experience Platform] 수준에서 핵심적인 역할을 합니다.
+Adobe Experience Platform 데이터 거버넌스는 고객 데이터를 관리하고 데이터 사용에 적용되는 규정, 제한 및 정책을 준수하는 데 사용되는 일련의 전략과 기술입니다. 카탈로그 작성, 데이터 계보, 데이터 사용 표시, 데이터 액세스 정책, 마케팅 작업을 위한 데이터 액세스 제어 등 다양한 [!DNL Experience Platform] 수준에서 핵심적인 역할을 합니다.
 
 **새로운 기능**
 
@@ -73,7 +73,7 @@ Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 
 
 | 기능 | 설명 |
 | ------- | ----------- |
-| 데이터 흐름 삭제를 위한 API 및 UI 지원 | 이제 API를 통해 또는 UI를 사용하여 오류가 있거나 불필요한 데이터 흐름을 삭제할 수 있습니다. |
+| 데이터 흐름 삭제를 위한 UI 지원 | 이제 UI를 통해 오류 발생 또는 불필요하게 된 데이터 흐름을 삭제할 수 있습니다. |
 | 일회성 인제스트를 위한 API 및 UI 지원 | 이제 시작 날짜만 제공되고 나중에 인제스트를 예약하지 않는 데이터 흐름 관련 일회성 인제스트를 API를 통해 또는 UI를 사용하여 실행할 수 있습니다. |
 
 소스에 대한 자세한 내용은 [소스 개요를 참조하십시오](../../sources/home.md).
