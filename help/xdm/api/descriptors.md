@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 설명자
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '1499'
+source-wordcount: '1477'
 ht-degree: 1%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->설명자는 고유한 수락 헤더가 필요하며 `xed` , 그렇지 않으면 스키마 레지스트리 `xdm`의 다른 위치에서 사용되는 헤더 허용과 매우 비슷합니다. 아래 샘플 호출에는 적절한 수락 머리글이 포함되었지만 정확한 헤더가 사용되고 있는지 확인하기 위해 특별히 주의하십시오.
+>설명자는 헤더가 서로 다른 `xed` 로 대체되어야 하지만, 그렇지 않은 경우 헤더가 Accept `xdm`의 다른 곳에 사용되는 헤더와 매우 유사하게 보입니다 [!DNL Schema Registry]. 아래 샘플 호출에는 적절한 수락 머리글이 포함되었지만 정확한 헤더가 사용되고 있는지 확인하기 위해 특별히 주의하십시오.
 
 ## 목록 설명자
 
@@ -48,7 +48,7 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xdm-link+json'
 ```
 
-응답 형식은 요청에서 전송된 수락 헤더에 따라 다릅니다. 끝점이 `/descriptors` 스키마 레지스트리 API의 다른 모든 끝점과 다른 수락 헤더를 사용합니다.
+응답 형식은 요청에서 전송된 수락 헤더에 따라 다릅니다. 끝점이 `/descriptors` API의 다른 모든 끝점과 다른 수락 헤더를 [!DNL Schema Registry] 사용합니다.
 
 설명자 승인 헤더 `xed` 를 다음으로 대체하고 설명자 고유의 `xdm``link` 옵션을 제공합니다.
 
@@ -133,7 +133,7 @@ curl -X GET \
 
 ## 설명자 만들기
 
-스키마 레지스트리를 사용하면 여러 가지 다른 설명자 유형을 정의할 수 있습니다. 각 설명자 유형에는 POST 요청에서 전송할 고유한 특정 필드가 필요합니다. 설명자 [정의](#defining-descriptors)설명자의 부록 섹션에서 설명자의 전체 목록과 이를 정의하는 데 필요한 필드를 사용할 수 있습니다.
+를 [!DNL Schema Registry] 사용하면 여러 가지 다른 설명자 유형을 정의할 수 있습니다. 각 설명자 유형에는 POST 요청에서 전송할 고유한 특정 필드가 필요합니다. 설명자 [정의](#defining-descriptors)설명자의 부록 섹션에서 설명자의 전체 목록과 이를 정의하는 데 필요한 필드를 사용할 수 있습니다.
 
 **API 형식**
 
@@ -143,7 +143,7 @@ POST /tenant/descriptors
 
 **요청**
 
-다음 요청은 샘플 스키마의 &quot;이메일 주소&quot; 필드에 ID 설명자를 정의합니다. Experience Platform은 이 이메일 주소를 식별자로 사용하여 개인에 대한 정보를 결합하도록 합니다.
+다음 요청은 샘플 스키마의 &quot;이메일 주소&quot; 필드에 ID 설명자를 정의합니다. 이 [!DNL Experience Platform] 는 이메일 주소를 식별자로 사용하여 개인에 대한 정보를 연결하는 데 도움이 됩니다.
 
 ```SHELL
 curl -X POST \
@@ -167,7 +167,7 @@ curl -X POST \
 
 **응답**
 
-성공적인 응답은 HTTP 상태 201(작성됨)과 새로 만든 설명자를 비롯하여 세부 정보를 반환합니다 `@id`. 스키마 레지스트리에서 할당한 읽기 전용 필드 `@id` 로, API의 설명자를 참조하는 데 사용됩니다.
+성공적인 응답은 HTTP 상태 201(작성됨)과 새로 만든 설명자를 비롯하여 세부 정보를 반환합니다 `@id`. API `@id` 의 설명자 참조용으로 사용되는 읽기 전용 [!DNL Schema Registry] 필드입니다.
 
 ```JSON
 {
@@ -238,7 +238,7 @@ curl -X PUT \
 
 ## 설명자 삭제
 
-스키마 레지스트리에서 정의한 설명자를 제거해야 하는 경우가 있습니다. 이 작업은 제거할 설명자의 `@id` 를 참조하는 DELETE 요청을 수행하여 수행됩니다.
+경우에 따라 에서 정의한 설명자를 제거해야 할 수도 있습니다 [!DNL Schema Registry]. 이 작업은 제거할 설명자의 `@id` 를 참조하는 DELETE 요청을 수행하여 수행됩니다.
 
 **API 형식**
 
@@ -267,11 +267,11 @@ curl -X DELETE \
 
 성공적인 응답은 HTTP 상태 204(콘텐츠 없음) 및 빈 본문을 반환합니다.
 
-설명자가 삭제되었는지 확인하려면 설명자에 대해 조회 요청을 수행할 수 있습니다 `@id`. 설명자가 스키마 레지스트리에서 제거되었기 때문에 응답이 HTTP 상태 404(찾을 수 없음)를 반환합니다.
+설명자가 삭제되었는지 확인하려면 설명자에 대해 조회 요청을 수행할 수 있습니다 `@id`. 설명자가 HTTP 상태 404(찾을 수 없음)를 반환하므로 이 응답은 HTTP 상태를 반환합니다 [!DNL Schema Registry].
 
 ## 부록
 
-다음 섹션에서는 스키마 레지스트리 API의 설명자 작업에 대한 추가 정보를 제공합니다.
+다음 섹션에서는 API의 설명자 작업에 대한 추가 정보를 [!DNL Schema Registry] 제공합니다.
 
 ### 설명자 정의
 
@@ -279,7 +279,7 @@ curl -X DELETE \
 
 #### ID 설명자
 
-ID 설명자는 &quot;sourceSchema&quot;의 &quot;sourceProperty&quot;가 [Adobe Experience Platform ID 서비스에 설명된 ID 필드임을 나타냅니다](../../identity-service/home.md).
+ID 설명자는 &quot;sourceSchema[!UICONTROL &quot;의 &quot;]sourceProperty[!UICONTROL &quot;가]Adobe Experience Platform ID 서비스에서 [!DNL Identity] 설명한 [필드임을 나타냅니다](../../identity-service/home.md).
 
 ```json
 {
@@ -300,7 +300,7 @@ ID 설명자는 &quot;sourceSchema&quot;의 &quot;sourceProperty&quot;가 [Adobe
 | `xdm:sourceSchema` | 설명자가 정의된 스키마의 `$id` URI입니다. |
 | `xdm:sourceVersion` | 소스 스키마의 주 버전입니다. |
 | `xdm:sourceProperty` | ID가 될 특정 속성의 경로입니다. 경로는 &quot;/&quot;로 시작하고 하나로 끝나지 않아야 합니다. 경로에 &quot;속성&quot;을 포함하지 마십시오(예: &quot;/properties/personalEmail/properties/address&quot; 대신 &quot;/personalEmail/address&quot;를 사용). |
-| `xdm:namespace` | ID 네임스페이스의 `id` 또는 `code` 값입니다. ID 서비스 API를 사용하여 네임스페이스 목록을 [찾을 수 있습니다](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml). |
+| `xdm:namespace` | ID 네임스페이스의 `id` 또는 `code` 값입니다. 네임스페이스 목록은 를 사용하여 찾을 수 있습니다 [!DNL Identity Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml). |
 | `xdm:property` | 또는 `xdm:id` 중 하나 `xdm:code`는, 사용한 것에 따라 `xdm:namespace` 달라집니다. |
 | `xdm:isPrimary` | 선택적 부울 값입니다. true이면 필드를 기본 ID로 나타냅니다. 스키마에는 하나의 기본 ID만 포함될 수 있습니다. |
 
@@ -336,7 +336,7 @@ ID 설명자는 &quot;sourceSchema&quot;의 &quot;sourceProperty&quot;가 [Adobe
 | `xdm:sourceProperty` | ID가 될 특정 속성의 경로입니다. 경로는 &quot;/&quot;로 시작하고 하나로 끝나지 않아야 합니다. 경로에 &quot;속성&quot;을 포함하지 마십시오(예: &quot;/properties/personalEmail/properties/address&quot; 대신 &quot;/personalEmail/address&quot;를 사용). |
 | `xdm:title` | 제목 사례에 작성된 이 필드에 표시할 새 제목입니다. |
 | `xdm:description` | 선택적인 설명은 제목과 함께 추가할 수 있습니다. |
-| `meta:enum` | 로 표시된 필드 `xdm:sourceProperty` 가 문자열 필드인 경우 Experience Platform UI에서 필드에 대해 제안된 값 목록을 `meta:enum` 결정합니다. 열거형을 선언하거나 XDM 필드에 대한 데이터 유효성 검사를 제공하지 `meta:enum` 않는다는 점에 유의하십시오.<br><br>Adobe에서 정의한 핵심 XDM 필드에만 사용해야 합니다. 소스 속성이 조직에서 정의한 사용자 지정 필드인 경우 대신 `meta:enum` PATCH 요청을 통해 직접 필드 [속성을 편집해야 합니다](./update-resource.md). |
+| `meta:enum` | 로 표시된 필드 `xdm:sourceProperty` 가 문자열 필드인 경우 UI의 필드에 대해 제안된 값 목록 `meta:enum` 을 결정합니다 [!DNL Experience Platform] . 열거형을 선언하거나 XDM 필드에 대한 데이터 유효성 검사를 제공하지 `meta:enum` 않는다는 점에 유의하십시오.<br><br>Adobe에서 정의한 핵심 XDM 필드에만 사용해야 합니다. 소스 속성이 조직에서 정의한 사용자 지정 필드인 경우 대신 `meta:enum` PATCH 요청을 통해 직접 필드 [속성을 편집해야 합니다](./update-resource.md). |
 
 #### 관계 설명자
 
