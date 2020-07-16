@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 'API를 사용하여 데이터 사용 레이블 관리 '
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b51a13e2eab967099c84d1cca2233e2ace554e01
+source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
 workflow-type: tm+mt
-source-wordcount: '995'
+source-wordcount: '967'
 ht-degree: 3%
 
 ---
@@ -14,17 +14,17 @@ ht-degree: 3%
 
 # API를 사용하여 데이터 사용 레이블 관리
 
-이 문서에서는 정책 서비스 API 및 데이터 집합 서비스 API를 사용하여 데이터 사용 레이블을 관리하는 방법에 대해 설명합니다.
+이 문서에서는 [!DNL Policy Service] API 및 [!DNL Dataset Service] API를 사용하여 데이터 사용 레이블을 관리하는 방법에 대해 설명합니다.
 
-Policy [Service API는](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) 조직의 데이터 사용 레이블을 만들고 관리할 수 있는 여러 끝점을 제공합니다.
+이 [!DNL Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) 는 조직의 데이터 사용 레이블을 만들고 관리할 수 있는 여러 끝점을 제공합니다.
 
-데이터 집합 서비스 API를 사용하여 데이터 집합에 대한 사용 레이블을 적용하고 편집할 수 있습니다. Adobe Experience Platform 데이터 카탈로그 기능의 일부이지만 데이터 세트 메타데이터를 관리하는 카탈로그 서비스 API와는 별개입니다.
+API를 [!DNL Dataset Service] 사용하면 데이터 세트에 대한 사용 레이블을 적용하고 편집할 수 있습니다. Adobe Experience Platform 데이터 카탈로그 기능의 일부이지만 데이터 세트 메타데이터를 관리하는 [!DNL Catalog Service] API와는 별개입니다.
 
 ## 시작하기
 
 이 안내서를 읽기 전에 카탈로그 개발자 안내서의 [시작 섹션에](../../catalog/api/getting-started.md) 설명된 단계에 따라 API를 호출하는 데 필요한 자격 증명을 [!DNL Platform] 수집합니다.
 
-이 문서에 나와 있는 데이터 집합 서비스 끝점을 호출하려면 특정 데이터 집합에 대한 고유한 `id` 값이 있어야 합니다. 이 값이 없는 경우 카탈로그 개체 [를 나열하는](../../catalog/api/list-objects.md) 가이드에서 기존 데이터 집합의 ID를 찾습니다.
+이 문서에 나와 있는 끝점에 대한 [!DNL Dataset Service] 호출을 하려면 특정 데이터 세트에 대한 고유한 `id` 값이 있어야 합니다. 이 값이 없는 경우 카탈로그 개체 [를 나열하는](../../catalog/api/list-objects.md) 가이드에서 기존 데이터 집합의 ID를 찾습니다.
 
 ## 모든 레이블 나열 {#list-labels}
 
@@ -110,7 +110,7 @@ curl -X GET \
 
 ## 레이블 찾기 {#look-up-label}
 
-정책 서비스 API에 대한 GET 요청 경로에 해당 레이블의 `name` 속성을 포함하여 특정 레이블을 조회할 수 있습니다.
+API에 대한 GET 요청 경로에 해당 레이블의 `name` 속성을 포함하여 특정 레이블을 조회할 수 [!DNL Policy Service] 있습니다.
 
 **API 형식**
 
@@ -164,7 +164,7 @@ curl -X GET \
 
 ## 사용자 지정 레이블 만들기 또는 업데이트 {#create-update-label}
 
-사용자 지정 레이블을 만들거나 업데이트하려면 Policy Service API에 PUT 요청을 해야 합니다.
+사용자 지정 레이블을 만들거나 업데이트하려면 API에 PUT 요청을 [!DNL Policy Service] 해야 합니다.
 
 **API 형식**
 
@@ -230,7 +230,7 @@ curl -X PUT \
 
 ## 데이터 세트에 대한 레이블 검색 {#look-up-dataset-labels}
 
-데이터 세트 서비스 API에 GET 요청을 함으로써 기존 데이터 세트에 적용된 데이터 사용 레이블을 조회할 수 있습니다.
+API에 GET 요청을 함으로써 기존 데이터 세트에 적용된 데이터 사용 레이블을 조회할 수 [!DNL Dataset Service] 있습니다.
 
 **API 형식**
 
@@ -283,7 +283,7 @@ curl -X GET \
 
 ## 데이터 세트에 레이블 적용 {#apply-dataset-labels}
 
-데이터 세트 서비스 API에 POST 또는 PUT 요청의 페이로드에서 데이터를 제공하여 데이터 세트에 대한 레이블 세트를 만들 수 있습니다. 이러한 방법 중 하나를 사용하면 기존 레이블을 덮어쓰고 페이로드에서 제공되는 레이블로 바꿉니다.
+POST 또는 PUT 요청의 페이로드에서 API에 제공하여 데이터 세트에 대한 레이블 세트를 만들 수 [!DNL Dataset Service] 있습니다. 이러한 방법 중 하나를 사용하면 기존 레이블을 덮어쓰고 페이로드에서 제공되는 레이블로 바꿉니다.
 
 **API 형식**
 
@@ -326,7 +326,7 @@ curl -X POST \
 | 속성 | 설명 |
 | --- | --- |
 | `labels` | 데이터 세트에 추가할 데이터 사용 레이블 목록입니다. |
-| `optionalLabels` | 레이블을 추가할 데이터 세트 내의 개별 필드 목록입니다. 이 배열의 각 항목에는 다음 속성이 있어야 합니다. <br/><br/>`option`: 필드의 XDM(경험 데이터 모델) 특성을 포함하는 객체입니다. 다음 세 가지 속성이 필요합니다.<ul><li>id</code>: 필드와 연결된 스키마의 URI $id</code> 값입니다.</li><li>contentType</code>: 스키마의 컨텐츠 유형 및 버전 번호입니다. XDM 조회 요청에 대해 유효한 <a href="../../xdm/api/look-up-resource.md">수락 헤더</a> 중 하나의 형태를 가져야 합니다.</li><li>schemaPath</code>: 데이터 집합 스키마 내의 필드 경로입니다.</li></ul>`labels`: 필드에 추가할 데이터 사용 레이블 목록입니다. |
+| `optionalLabels` | 레이블을 추가할 데이터 세트 내의 개별 필드 목록입니다. 이 배열의 각 항목에는 다음 속성이 있어야 합니다. <br/><br/>`option`: 필드의 [!DNL Experience Data Model] (XDM) 속성을 포함하는 개체 다음 세 가지 속성이 필요합니다.<ul><li>id</code>: 필드와 연결된 스키마의 URI $id</code> 값입니다.</li><li>contentType</code>: 스키마의 컨텐츠 유형 및 버전 번호입니다. XDM 조회 요청에 대해 유효한 <a href="../../xdm/api/look-up-resource.md">수락 헤더</a> 중 하나의 형태를 가져야 합니다.</li><li>schemaPath</code>: 데이터 집합 스키마 내의 필드 경로입니다.</li></ul>`labels`: 필드에 추가할 데이터 사용 레이블 목록입니다. |
 
 **응답**
 
@@ -350,7 +350,7 @@ curl -X POST \
 
 ## 데이터 세트에서 레이블 제거 {#remove-dataset-labels}
 
-데이터 세트 서비스 API에 DELETE 요청을 하여 데이터 세트에 적용된 레이블을 제거할 수 있습니다.
+API에 DELETE 요청을 만들어 데이터 세트에 적용된 레이블을 제거할 수 [!DNL Dataset Service] 있습니다.
 
 **API 형식**
 
@@ -381,7 +381,7 @@ curl -X DELETE \
 
 이 문서를 읽고 API를 사용하여 데이터 사용 레이블을 관리하는 방법을 알아보았습니다.
 
-데이터 세트 및 필드 수준에서 데이터 사용 레이블을 추가한 후에는 데이터를 Experience Platform으로 인제스트하기 시작할 수 있습니다. 자세한 내용은 [데이터 수집 설명서를 참조하십시오](../../ingestion/home.md).
+데이터 세트 및 필드 수준에서 데이터 사용 레이블을 추가하면 데이터 인제스트를 시작할 수 있습니다 [!DNL Experience Platform]. 자세한 내용은 [데이터 수집 설명서를 참조하십시오](../../ingestion/home.md).
 
 적용된 레이블을 기반으로 데이터 사용 정책을 정의할 수도 있습니다. 자세한 내용은 [데이터 사용 정책 개요를 참조하십시오](../policies/overview.md).
 
