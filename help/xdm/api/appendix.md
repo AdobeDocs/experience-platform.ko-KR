@@ -4,23 +4,23 @@ solution: Experience Platform
 title: 스키마 레지스트리 개발자 부록
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '1296'
-ht-degree: 3%
+source-wordcount: '1265'
+ht-degree: 4%
 
 ---
 
 
 # 부록
 
-이 문서에서는 스키마 레지스트리 API 작업과 관련된 보충 정보를 제공합니다.
+이 문서에서는 [!DNL Schema Registry] API 작업과 관련된 추가 정보를 제공합니다.
 
 ## 호환성 모드
 
-XDM(Experience Data Model)은 Adobe가 디지털 경험의 상호 운용성, 풍부한 표현 능력 및 성능을 향상시키기 위해 공개적으로 문서화된 사양입니다. Adobe는 GitHub의 [오픈 소스 프로젝트에서 소스 코드와 공식 XDM 정의를 유지 관리합니다](https://github.com/adobe/xdm/). 이러한 정의는 XDM 스키마를 정의하는 문법으로 JSON-LD(JavaScript Object Notation for Linked Data) 및 JSON 스키마를 사용하여 XDM 표준 표기법으로 작성됩니다.
+[!DNL Experience Data Model] (XDM)은 디지털 경험의 상호 운용성, 풍부한 표현 능력 및 성능을 개선하기 위해 Adobe가 기반으로 공개적으로 문서화된 사양입니다. Adobe는 GitHub의 [오픈 소스 프로젝트에서 소스 코드와 공식 XDM 정의를 유지 관리합니다](https://github.com/adobe/xdm/). 이러한 정의는 XDM 스키마를 정의하는 문법으로 JSON-LD(JavaScript Object Notation for Linked Data) 및 JSON 스키마를 사용하여 XDM 표준 표기법으로 작성됩니다.
 
-공용 저장소에서 공식 XDM 정의를 보면 표준 XDM이 Adobe Experience Platform에 표시되는 것과 다르다는 것을 확인할 수 있습니다. Experience Platform에서 표시되는 내용을 호환성 모드라고 하며 표준 XDM과 Platform 내에서 사용하는 방법 간의 간단한 매핑을 제공합니다.
+공용 저장소에서 공식 XDM 정의를 보면 표준 XDM이 Adobe Experience Platform에 표시되는 것과 다르다는 것을 확인할 수 있습니다. 호환성 모드 [!DNL Experience Platform] 에서 볼 수 있는 것은 표준 XDM과 표준 XDM을 사용하는 방법 간의 간단한 매핑을 제공하는 [!DNL Platform]것입니다.
 
 ### 호환성 모드 작동 방식
 
@@ -51,15 +51,15 @@ XDM(Experience Data Model)은 Adobe가 디지털 경험의 상호 운용성, 풍
 
 Adobe Experience Platform은 각기 기술적 어려움과 제한 사항을 가진 다양한 솔루션 및 서비스를 사용하도록 설계되었습니다(예: 특정 기술이 특수 문자를 처리하는 방법). 이러한 제한 사항을 극복하기 위해 호환성 모드가 개발되었습니다.
 
-카탈로그, Data Lake 및 실시간 고객 프로필을 비롯한 대부분의 Experience Platform 서비스는 표준 XDM 대신 호환성 모드를 사용합니다. 스키마 레지스트리 API는 호환성 모드도 사용하고 이 문서의 예는 모두 호환성 모드를 사용하여 표시됩니다.
+표준 XDM [!DNL Experience Platform] 을 [!DNL Catalog]대신하여, [!DNL Data Lake]및 [!DNL Real-time Customer Profile] [!DNL Compatibility Mode] 사용하는 대부분의 서비스 API는 [!DNL Schema Registry] 또한 사용하고 이 문서의 [!DNL Compatibility Mode]예는 모두 를 사용하여 표시됩니다 [!DNL Compatibility Mode].
 
-표준 XDM과 표준 XDM이 Experience Platform에서 작동하는 방식 간에 매핑을 수행하는 것이 유용하지만 Platform 서비스 사용에 영향을 주지 않습니다.
+표준 XDM과 표준 XDM의 운영 방식 사이에서 매핑이 이루어지는 것은 [!DNL Experience Platform]유용하지만 [!DNL Platform] 서비스 사용에 영향을 미치지 않습니다.
 
-오픈 소스 프로젝트를 사용할 수 있지만 스키마 레지스트리를 통해 리소스와 상호 작용하는 경우 이 문서의 API 예는 알고 따라야 하는 최상의 방법을 제공합니다.
+오픈 소스 프로젝트를 사용할 수 있지만, 를 통해 리소스와 상호 작용하는 경우 이 문서의 API 예는 알고 따라야 하는 우수 사례를 [!DNL Schema Registry]제공합니다.
 
 ## API에서 XDM 필드 유형 정의 {#field-types}
 
-XDM 스키마는 JSON 스키마 표준 및 기본 필드 유형을 사용하여 정의되며, Experience Platform에 의해 수행되는 필드 이름에 대한 추가 제한 사항이 있습니다. XDM을 사용하면 형식 및 선택적 제약 조건을 사용하여 추가 필드 유형을 정의할 수 있습니다. XDM 필드 유형은 필드 수준 속성으로 노출됩니다 `meta:xdmType`.
+XDM 스키마는 JSON 스키마 표준 및 기본 필드 유형을 사용하여 정의되며, 필드 이름에 대한 추가 제한 사항은 에서 [!DNL Experience Platform]적용됩니다. XDM을 사용하면 형식 및 선택적 제약 조건을 사용하여 추가 필드 유형을 정의할 수 있습니다. XDM 필드 유형은 필드 수준 속성으로 노출됩니다 `meta:xdmType`.
 
 >[!NOTE]
 >
@@ -221,7 +221,7 @@ XDM 스키마는 JSON 스키마 표준 및 기본 필드 유형을 사용하여 
   <tr>
     <td>지도</td>
     <td>type:<br/><br/><strong>objectNote:</strong><br/>'map' 데이터 유형의 사용은 업계 및 공급업체 스키마 사용을 위해 예약되어 테넌트 정의 필드에 사용할 수 없습니다. 데이터가 일부 값에 매핑되는 키로 표현되거나, 정적 스키마에 키를 합리적으로 포함할 수 없고 데이터 값으로 처리되어야 하는 경우 표준 스키마에 사용됩니다.</td>
-    <td>'map'은 속성을 정의하지 않아야 합니다. 'map'에 포함된 값의 유형을 설명하는 단일 "additionalProperties" 스키마를 정의해야 합니다. XDM의 'map'은 단일 데이터 유형만 포함할 수 있습니다. 값은 배열 또는 개체를 포함한 유효한 XDM 스키마 정의이거나 다른 스키마에 대한 참조일 수 있습니다($ref 사용).<br/><br/>'string' 유형의 값이 있는 맵 필드:
+    <td>'map'은 속성을 정의하지 않아야 합니다. 'map'에 포함된 값 유형을 설명하려면 단일 "[!UICONTROL additionalProperties]" 스키마를 정의해야 합니다. XDM의 'map'은 단일 데이터 유형만 포함할 수 있습니다. 값은 배열 또는 개체를 포함한 유효한 XDM 스키마 정의이거나 다른 스키마에 대한 참조일 수 있습니다($ref 사용).<br/><br/>'string' 유형의 값이 있는 맵 필드:
       <pre class="JSON language-JSON hljs">
         "sampleField": { "type": "object", "additionalProperties":{ "type": "string" } }
       </pre>
@@ -243,7 +243,7 @@ XDM 스키마는 JSON 스키마 표준 및 기본 필드 유형을 사용하여 
 
 아래 표에서는 &quot;meta:xdmType&quot;과 다른 직렬화 형식 간의 매핑을 설명합니다.
 
-| XDM 유형<br>(meta:xdmType) | JSON<br>(JSON 스키마) | 쪽모이<br>세공(문자/주석) | Spark SQL | Java | Scala | .NET | CosmosDB | MongoDB | 공기 스파이크 | 프로토타입 2 |
+| XDM 유형<br>(meta:xdmType) | JSON<br>(JSON 스키마) | 쪽모이<br>세공(문자/주석) | [!DNL Spark] SQL | Java | Scala | .NET | CosmosDB | MongoDB | 공기 스파이크 | 프로토타입 2 |
 |---|---|---|---|---|---|---|---|---|---|---|
 | string | type:string | BYTE_ARRAY/UTF8 | StringType | java.lang.String | 문자열 | System.String | 문자열 | string | 문자열 | string |
 | number | type:number | DOUBLE | DoubleType | java.lang.Double | 이중 | System.Double | 숫자 | 이중 | 이중 | 이중 |
