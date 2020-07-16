@@ -4,9 +4,9 @@ solution: Experience Platform
 title: DULE 정책 서비스 API 개발자 가이드
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
 workflow-type: tm+mt
-source-wordcount: '678'
+source-wordcount: '655'
 ht-degree: 0%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 0%
 
 # DULE [!DNL Policy Service] API 개발자 가이드
 
-데이터 사용 표시 및 실행(DULE)은 Adobe Experience Platform 데이터 거버넌스의 핵심 메커니즘입니다. DULE 정책 서비스는 데이터 사용 정책을 만들고 관리하여 특정 데이터 사용 레이블이 지정된 데이터에 대해 취할 수 있는 마케팅 작업을 결정할 수 있도록 해주는 RESTful API를 제공합니다.
+데이터 사용 표시 및 실행(DULE)은 Adobe Experience Platform의 핵심 메커니즘입니다 [!DNL Data Governance]. DULE는 데이터 사용 정책을 만들고 관리하여 특정 데이터 사용 레이블이 지정된 데이터에 대해 수행할 수 있는 마케팅 작업을 결정할 수 있도록 해주는 RESTful API를 [!DNL Policy Service] 제공합니다.
 
-이 문서에서는 정책 서비스 API에서 사용할 수 있는 주요 작업을 수행하기 위한 지침을 제공합니다. 아직 그렇게 하지 않은 경우, 먼저 [데이터 거버넌스 개요를](../home.md) 검토하여 DULE 프레임워크에 익숙해지도록 하십시오. DULE 정책을 만들고 적용하기 위한 단계별 지침을 보려면 [DULE 정책 자습서를 참조하십시오](../policies/create.md).
+이 문서에서는 [!DNL Policy Service] API에서 사용할 수 있는 주요 작업을 수행하기 위한 지침을 제공합니다. 아직 그렇게 하지 않은 경우, 먼저 [데이터 거버넌스 개요를](../home.md) 검토하여 DULE 프레임워크에 익숙해지도록 하십시오. DULE 정책을 만들고 적용하기 위한 단계별 지침을 보려면 [DULE 정책 자습서를 참조하십시오](../policies/create.md).
 
-이 문서에서는 Policy Service API를 호출하기 전에 알아야 할 핵심 개념을 소개합니다.
+이 문서에서는 [!DNL Policy Service] API를 호출하기 전에 알아야 할 핵심 개념을 소개합니다.
 
 ## DULE 시작하기 [!DNL Policy Service]
 
@@ -28,11 +28,11 @@ ht-degree: 0%
 
 이 가이드는 다음과 같은 Adobe Experience Platform 구성 요소에 대해 작업해야 합니다.
 
-* [데이터 거버넌스](../home.md): 데이터 사용 규정 준수를 [!DNL Experience Platform] 적용하는 프레임워크입니다.
-   * [DULE 레이블](../labels/overview.md): 데이터 사용 레이블은 XDM(Experience Data Model) 데이터 필드에 적용되어 데이터 액세스 방법에 대한 제한을 지정합니다.
-* [XDM(Experience Data Model) 시스템](../../xdm/home.md): 고객 경험 데이터를 [!DNL Experience Platform] 구성하는 표준화된 프레임워크
-* [실시간 고객 프로필](../../profile/home.md): 여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
-* [샌드박스](../../sandboxes/home.md): [!DNL Experience Platform] 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되도록 단일 Platform 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
+* [!DNL Data Governance](../home.md): 데이터 사용 규정 준수를 [!DNL Experience Platform] 적용하는 프레임워크입니다.
+   * [DULE 레이블](../labels/overview.md): 데이터 사용 레이블은 [!DNL Experience Data Model] (XDM) 데이터 필드에 적용되어 데이터 액세스 방법에 대한 제한을 지정합니다.
+* [!DNL Experience Data Model (XDM) System](../../xdm/home.md): 고객 경험 데이터를 [!DNL Experience Platform] 구성하는 표준화된 프레임워크
+* [!DNL Real-time Customer Profile](../../profile/home.md): 여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
+* [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되도록 단일 [!DNL Platform] 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
 
 ## 샘플 API 호출 읽기
 
