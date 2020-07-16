@@ -4,39 +4,39 @@ solution: Experience Platform
 title: 스키마 레지스트리 API를 사용하여 두 스키마 간의 관계 정의
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '1504'
+source-wordcount: '1467'
 ht-degree: 1%
 
 ---
 
 
-# 스키마 레지스트리 API를 사용하여 두 스키마 간의 관계 정의
+# API를 사용하여 두 스키마 간의 관계 [!DNL Schema Registry] 정의
 
 
-다양한 채널에서 고객과의 관계와 브랜드와의 상호 작용을 파악할 수 있는 기능은 Adobe Experience Platform의 중요한 부분입니다. XDM(경험 데이터 모델) 스키마 구조 내에서 이러한 관계를 정의하면 고객 데이터에 대한 복잡한 통찰력을 얻을 수 있습니다.
+다양한 채널에서 고객과의 관계와 브랜드와의 상호 작용을 파악할 수 있는 기능은 Adobe Experience Platform의 중요한 부분입니다. XDM(Structure Relationship) 스키마 구조 내에서 이러한 관계를 정의하면 [!DNL Experience Data Model] 고객 데이터에 대한 복잡한 통찰력을 얻을 수 있습니다.
 
-이 문서에서는 [스키마 레지스트리 API를 사용하여 조직에서 정의한 두 스키마 간의 1:1 관계를 정의하는 자습서를 제공합니다](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
+이 문서에서는 조직에서 이 문서를 사용하여 정의한 두 스키마 간의 1:1 관계를 정의하는 자습서를 제공합니다 [!DNL Schema Registry API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
 
 ## 시작하기
 
-이 자습서에서는 XDM(Experience Data Model) 및 XDM 시스템에 대한 작업 이해를 필요로 합니다. 이 자습서를 시작하기 전에 다음 설명서를 검토하십시오.
+이 자습서에서는 [!DNL Experience Data Model] (XDM) 및 을(를) 제대로 파악해야 [!DNL XDM System]합니다. 이 자습서를 시작하기 전에 다음 설명서를 검토하십시오.
 
 * [Experience Platform의 XDM 시스템](../home.md): XDM 및 Experience Platform 구현에 대한 개요입니다.
    * [스키마 컴포지션의 기본 사항](../schema/composition.md): XDM 스키마의 기본 요소 소개
-* [실시간 고객 프로필](../../profile/home.md): 여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
-* [샌드박스](../../sandboxes/home.md): Experience Platform은 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되도록 단일 Platform 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
+* [!DNL Real-time Customer Profile](../../profile/home.md): 여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
+* [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되도록 단일 [!DNL Platform] 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
 
-이 자습서를 시작하기 전에 [개발자 가이드에서](../api/getting-started.md) 스키마 레지스트리 API를 성공적으로 호출하기 위해 알아야 할 중요한 정보를 검토하십시오. 여기에는 사용자 `{TENANT_ID}`, &quot;컨테이너&quot;의 개념 및 요청 시 필요한 헤더가 포함됩니다(수락 헤더와 가능한 값에 특별히 주의).
+이 자습서를 시작하기 전에 [개발자 가이드에서](../api/getting-started.md) API를 성공적으로 호출하기 위해 알아야 할 중요한 정보가 있는지 [!DNL Schema Registry] 확인하십시오. 여기에는 사용자 `{TENANT_ID}`, &quot;컨테이너&quot;의 개념 및 요청 시 필요한 헤더가 포함됩니다(수락 헤더와 가능한 값에 특별히 주의).
 
 ## 소스 및 대상 스키마 정의 {#define-schemas}
 
 관계에 정의될 두 개의 스키마를 이미 생성한 것으로 예상됩니다. 이 자습서는 조직의 현재 로열티 프로그램(&quot;로열티 멤버&quot; 스키마에 정의됨)의 멤버와 자주 사용하는 호텔(&quot;호텔&quot; 스키마에 정의됨) 간의 관계를 만듭니다.
 
-스키마 관계는 **대상 스키마** 내의 다른 필드를 참조하는 필드가 있는 **소스 스키마에 의해 표현됩니다**. 다음 단계에서 &quot;Loyalty Members&quot;는 소스 스키마로, 반면 &quot;Hotels&quot;는 대상 스키마로 작동합니다.
+스키마 관계는 **[!UICONTROL 대상 스키마]** 내의 다른 필드를 참조하는 필드가 있는 **[!UICONTROL 소스 스키마에 의해 표현됩니다]**. 다음 단계에서 &quot;[!UICONTROL 충성도 구성원]&quot;은 소스 스키마가 되고 &quot;[!UICONTROL 호텔]&quot;은 대상 스키마로사용됩니다.
 
-두 스키마 간의 관계를 정의하려면 먼저 두 스키마 모두에 대한 `$id` 값을 얻어야 합니다. 스키마의 표시 이름(`title`)을 알고 있는 경우 스키마 레지스트리 API에서 종단점에 GET 요청을 함으로써 해당 `$id` 값을 `/tenant/schemas` 찾을 수 있습니다.
+두 스키마 간의 관계를 정의하려면 먼저 두 스키마 모두에 대한 `$id` 값을 얻어야 합니다. 스키마의 표시 이름(`title`)을 알고 있는 경우 `$id` API의 `/tenant/schemas` [!DNL Schema Registry] 종단점에 GET 요청을 함으로써 해당 값을 찾을 수 있습니다.
 
 **API 형식**
 
@@ -104,11 +104,11 @@ curl -X GET \
 
 ## 두 스키마에 대한 참조 필드 정의
 
-스키마 레지스트리 내에서 관계 설명자는 SQL 테이블의 외래 키와 비슷하게 작동합니다. 소스 스키마의 필드는 대상 스키마의 필드에 대한 참조 역할을 합니다. 관계를 정의할 때 각 스키마에는 다른 스키마에 대한 참조로 사용할 전용 필드가 있어야 합니다.
+Within [!DNL Schema Registry]the relationship descriptors work similar to foreign keys in SQL tables: 소스 스키마의 필드는 대상 스키마의 필드에 대한 참조 역할을 합니다. 관계를 정의할 때 각 스키마에는 다른 스키마에 대한 참조로 사용할 전용 필드가 있어야 합니다.
 
 >[!IMPORTANT]
 >
->실시간 고객 프로파일에서 사용할 수 있도록 스키마를 사용하도록 [설정하려면 대상 스키마의 참조](../../profile/home.md)필드가 **기본 ID여야 합니다**. 자세한 내용은 이 튜토리얼의 후반부에서 설명합니다.
+>스키마를 사용하도록 설정하려면 대상 스키마의 참조 필드 [!DNL Real-time Customer Profile](../../profile/home.md)가 **[!UICONTROL 기본 ID여야 합니다]**. 자세한 내용은 이 튜토리얼의 후반부에서 설명합니다.
 
 스키마에 이 용도로 사용할 필드가 없으면 새 필드와 혼합을 만들어 스키마에 추가해야 할 수 있습니다. 이 새 필드에는 &quot;string&quot; `type` 의 값이 있어야 합니다.
 
@@ -332,9 +332,9 @@ curl -X PATCH \
 
 >[!NOTE]
 >
->이 단계는 [실시간 고객 프로파일에서 사용할 수 있도록 설정되는 스키마에만 필요합니다](../../profile/home.md). 스키마에 스키마 참여를 원하지 않거나 스키마에 이미 기본 ID가 정의되어 있는 경우 대상 스키마에 대한 참조 ID 설명자 [](#create-descriptor) 생성 다음 단계로 건너뛸 수 있습니다.
+>이 단계는 에서 사용할 수 있게 될 스키마에만 필요합니다 [!DNL Real-time Customer Profile](../../profile/home.md). 스키마에 스키마 참여를 원하지 않거나 스키마에 이미 기본 ID가 정의되어 있는 경우 대상 스키마에 대한 참조 ID 설명자 [](#create-descriptor) 생성 다음 단계로 건너뛸 수 있습니다.
 
-실시간 고객 프로필에서 스키마를 사용하도록 설정하려면 기본 ID가 정의되어 있어야 합니다. 또한 관계의 대상 스키마는 기본 ID를 참조 필드로 사용해야 합니다.
+스키마를 사용하도록 설정하려면 기본 ID가 정의되어 있어야 [!DNL Real-time Customer Profile]합니다. 또한 관계의 대상 스키마는 기본 ID를 참조 필드로 사용해야 합니다.
 
 이 자습서의 목적을 위해 소스 스키마에는 이미 기본 ID가 정의되어 있지만 대상 스키마는 정의되어 있지 않습니다. ID 설명자를 만들어 스키마 필드를 기본 ID 필드로 표시할 수 있습니다. 이것은 종단점에 POST 요청을 함으로써 `/tenant/descriptors` 수행됩니다.
 
@@ -513,4 +513,4 @@ curl -X POST \
 
 ## 다음 단계
 
-이 튜토리얼을 따라 두 스키마 간의 1:1 관계를 성공적으로 만들었습니다. 스키마 레지스트리 API를 사용한 설명자 작업에 대한 자세한 내용은 스키마 레지스트리 [개발자 안내서를 참조하십시오](../api/getting-started.md). UI에서 스키마 관계를 정의하는 방법에 대한 단계는 스키마 편집기를 사용하여 스키마 관계를 [정의하는 자습서를 참조하십시오](relationship-ui.md).
+이 튜토리얼을 따라 두 스키마 간의 1:1 관계를 성공적으로 만들었습니다. API를 사용한 설명자 작업에 대한 자세한 내용은 [!DNL Schema Registry] 스키마 레지스트리 개발자 안내서를 참조하십시오 [](../api/getting-started.md). UI에서 스키마 관계를 정의하는 방법에 대한 단계는 스키마 편집기를 사용하여 스키마 관계를 [정의하는 자습서를 참조하십시오](relationship-ui.md).
