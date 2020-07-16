@@ -4,15 +4,15 @@ solution: Experience Platform
 title: 이메일 마케팅 대상 만들기
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: ed9d6eadeb00db51278ea700f7698a1b5590632f
+source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
 workflow-type: tm+mt
-source-wordcount: '1670'
+source-wordcount: '1611'
 ht-degree: 1%
 
 ---
 
 
-# 이메일 마케팅 대상을 만들고 Adobe의 실시간 고객 데이터 Platform에서 데이터 활성화
+# 이메일 마케팅 대상을 만들고 Adobe의 [!DNL Real-time Customer Data Platform]
 
 이 자습서에서는 API 호출을 사용하여 Adobe Experience Platform 데이터에 연결하고, [이메일 마케팅 대상을](../../rtcdp/destinations/email-marketing-destinations.md)만들고, 새로 만든 대상에 데이터 흐름을 만들고, 데이터를 새로 만든 대상에 활성화하는 방법을 설명합니다.
 
@@ -26,9 +26,9 @@ Adobe의 실시간 CDP에서 사용자 인터페이스를 사용하여 대상을
 
 이 가이드는 다음과 같은 Adobe Experience Platform 구성 요소에 대해 작업해야 합니다.
 
-* [XDM(Experience Data Model) 시스템](../../xdm/home.md): Experience Platform이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
-* [카탈로그 서비스](../../catalog/home.md): 카탈로그는 Experience Platform 내 데이터 위치 및 계열에 대한 기록 시스템이다.
-* [샌드박스](../../sandboxes/home.md): Experience Platform은 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되도록 단일 Platform 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
+* [!DNL Experience Data Model (XDM) System](../../xdm/home.md): 고객 경험 데이터를 [!DNL Experience Platform] 구성하는 표준화된 프레임워크
+* [!DNL Catalog Service](../../catalog/home.md): [!DNL Catalog] 는 데이터 위치 및 계열에 대한 기록 시스템입니다 [!DNL Experience Platform].
+* [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되도록 단일 [!DNL Platform] 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
 
 다음 섹션에서는 Adobe 실시간 CDP의 이메일 마케팅 대상으로 데이터를 활성화하기 위해 알아야 할 추가 정보를 제공합니다.
 
@@ -36,27 +36,27 @@ Adobe의 실시간 CDP에서 사용자 인터페이스를 사용하여 대상을
 
 이 자습서의 단계를 완료하려면 연결 및 활성화 중인 대상 유형에 따라 다음 자격 증명이 준비되어야 합니다.
 
-* 이메일 마케팅 플랫폼에 대한 Amazon S3 연결의 경우: `accessId`, `secretKey`
+* 이메일 마케팅 플랫폼에 [!DNL Amazon] 대한 S3 연결: `accessId`, `secretKey`
 * 이메일 마케팅 플랫폼에 대한 SFTP 연결의 경우: `domain`, `port`, `username``password` 또는 `ssh key` (FTP 위치에 대한 연결 방법에 따라 다름)
 
 ### 샘플 API 호출 읽기
 
-이 자습서에서는 요청의 서식을 지정하는 방법을 보여주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 올바른 형식의 요청 페이로드가 포함됩니다. API 응답으로 반환된 샘플 JSON도 제공됩니다. 샘플 API 호출 설명서에 사용된 규칙에 대한 자세한 내용은 Experience Platform 문제 해결 안내서의 예제 API 호출 [](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 읽기 방법에 대한 섹션을 참조하십시오.
+이 자습서에서는 요청의 서식을 지정하는 방법을 보여주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 올바른 형식의 요청 페이로드가 포함됩니다. API 응답으로 반환된 샘플 JSON도 제공됩니다. 샘플 API 호출 설명서에 사용된 규칙에 대한 자세한 내용은 문제 해결 안내서의 예제 API 호출 [을 읽는](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 방법에 대한 섹션을 [!DNL Experience Platform] 참조하십시오.
 
 ### 필수 및 선택적 헤더에 대한 값 수집
 
-Platform API를 호출하려면 먼저 [인증 자습서를 완료해야 합니다](../authentication.md). 인증 자습서를 완료하면 아래와 같이 모든 Experience Platform API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
+API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 합니다](../authentication.md). 인증 자습서를 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
 
 * 인증: 무기명 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Experience Platform의 리소스는 특정 가상 샌드박스로 분리할 수 있습니다. Platform API에 대한 요청에서 작업을 수행할 샌드박스의 이름과 ID를 지정할 수 있습니다. 선택적 매개 변수입니다.
+의 리소스는 특정 가상 샌드박스로 분리할 [!DNL Experience Platform] 수 있습니다. API에 대한 요청에서 [!DNL Platform] 작업이 수행될 샌드박스의 이름과 ID를 지정할 수 있습니다. 선택적 매개 변수입니다.
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!N참고]
->Experience Platform의 샌드박스에 대한 자세한 내용은 [샌드박스 개요 설명서를 참조하십시오](../../sandboxes/home.md).
+>의 샌드박스에 대한 자세한 내용 [!DNL Experience Platform]은 [샌드박스 개요 설명서를 참조하십시오](../../sandboxes/home.md).
 
 페이로드(POST, PUT, PATCH)가 포함된 모든 요청에는 추가 미디어 유형 헤더가 필요합니다.
 
@@ -134,17 +134,17 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 }
 ```
 
-## Experience Platform 데이터에 연결 {#connect-to-your-experience-platform-data}
+## 데이터에 [!DNL Experience Platform] 연결 {#connect-to-your-experience-platform-data}
 
 ![대상 단계 개요 단계 2](../images/destinations/flow-api-destinations-step2.png)
 
-다음으로 프로필 데이터를 내보내고 원하는 대상에서 활성화할 수 있도록 Experience Platform 데이터에 연결해야 합니다. 이것은 아래에 설명된 두 가지 하위 단계로 구성됩니다.
+다음으로 프로필 데이터를 내보내고 원하는 대상에서 활성화할 수 있도록 [!DNL Experience Platform] 데이터에 연결해야 합니다. 이것은 아래에 설명된 두 가지 하위 단계로 구성됩니다.
 
-1. 먼저 기본 연결을 설정하여 Experience Platform에서 데이터에 대한 액세스를 인증하는 호출을 수행해야 합니다.
-2. 그런 다음 기본 연결 ID를 사용하여 소스 연결을 만들고 Experience Platform 데이터에 대한 연결을 설정하는 다른 호출을 만듭니다.
+1. 먼저 기본 연결을 설정하여 데이터에 대한 액세스 권한을 인증하기 위한 [!DNL Experience Platform]호출을 수행해야 합니다.
+2. 그런 다음 기본 연결 ID를 사용하여 소스 연결을 만들고 [!DNL Experience Platform] 데이터에 대한 연결을 설정하는 다른 호출을 만듭니다.
 
 
-### Experience Platform에서 데이터에 대한 액세스 권한 부여
+### 데이터 액세스 권한 부여 [!DNL Experience Platform]
 
 **API 형식**
 
@@ -208,7 +208,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }
 ```
 
-### Experience Platform 데이터에 연결
+### 데이터에 [!DNL Experience Platform] 연결
 
 **API 형식**
 
@@ -270,11 +270,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```
 
 * `{BASE_CONNECTION_ID}`: 이전 단계에서 얻은 ID를 사용합니다.
-* `{CONNECTION_SPEC_ID}`: 통합 프로필 서비스에 연결 사양 ID를 사용하십시오 - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
+* `{CONNECTION_SPEC_ID}`: 연결 사양 ID를 [!DNL Unified Profile Service] -에 사용합니다 `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
 
 **응답**
 
-성공적인 응답은 새로 만든 통합 프로필 서비스에 대한 소스 연결에 대한 고유 식별자(`id`)를 반환합니다. Experience Platform 데이터에 성공적으로 연결되었음을 확인합니다. 이 값은 이후 단계에서 필요에 따라 저장합니다.
+성공적인 응답은 새로 만든 소스 연결에 대한 고유 식별자(`id`)를 반환합니다 [!DNL Unified Profile Service]. 데이터에 성공적으로 연결되었음을 [!DNL Experience Platform] 확인합니다. 이 값은 이후 단계에서 필요에 따라 저장합니다.
 
 ```json
 {
@@ -359,8 +359,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 * `{CONNECTION_SPEC_ID}`: 사용 가능한 대상 목록을 [가져옵니다. 단계에서 얻은 연결 사양 ID를 사용하십시오](#get-the-list-of-available-destinations).
 * `{S3 or SFTP}`: 이 대상에 대해 원하는 연결 유형을 입력합니다. 대상 카탈로그에서 [원하는 대상으로 스크롤하여 S3 및/또는 SFTP 연결 유형이 지원되는지 확인합니다](../../rtcdp/destinations/destinations-catalog.md).
-* `{ACCESS_ID}`: Amazon S3 저장소 위치에 대한 액세스 ID입니다.
-* `{SECRET_KEY}`: Amazon S3 저장소 위치에 대한 비밀 키.
+* `{ACCESS_ID}`: S3 저장소 위치에 대한 액세스 [!DNL Amazon] ID입니다.
+* `{SECRET_KEY}`: S3 저장 위치에 대한 [!DNL Amazon] 비밀 키
 
 **응답**
 
@@ -448,8 +448,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 * `{BASE_CONNECTION_ID}`: 위 단계에서 얻은 기본 연결 ID를 사용하십시오.
 * `{CONNECTION_SPEC_ID}`: 사용 가능한 대상 목록을 [가져옵니다. 단계에서 얻은 연결 사양을 사용하십시오](#get-the-list-of-available-destinations).
-* `{BUCKETNAME}`: 실시간 CDP가 데이터 내보내기를 저장하는 Amazon S3 버킷입니다.
-* `{FILEPATH}`: 실시간 CDP가 데이터 내보내기를 저장하는 Amazon S3 버킷 디렉토리의 경로입니다.
+* `{BUCKETNAME}`: 실시간 CDP가 데이터 내보내기를 저장하는 [!DNL Amazon] S3 버킷입니다.
+* `{FILEPATH}`: 실시간 CDP가 데이터 내보내기를 저장하는 [!DNL Amazon] S3 버킷 디렉토리의 경로입니다.
 
 **응답**
 
@@ -465,7 +465,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 ![대상 단계 개요 단계 4](../images/destinations/flow-api-destinations-step4.png)
 
-이전 단계에서 얻은 ID를 사용하여 이제 Experience Platform 데이터와 데이터를 활성화할 대상 사이에 데이터 흐름을 만들 수 있습니다. 이 단계를 Experience Platform과 원하는 대상 간에 나중에 데이터가 플로우되는 파이프라인을 구성하는 것으로 생각해 보십시오.
+이전 단계에서 얻은 ID를 사용하여 이제 데이터를 활성화할 데이터와 대상 사이에 데이터 흐름을 만들 수 있습니다. [!DNL Experience Platform] 이 단계는 나중에 데이터가 원하는 대상과 사이에 흐르도록 파이프라인을 구성하는 것으로 [!DNL Experience Platform] 간주합니다.
 
 데이터 흐름을 만들려면, 아래와 같이 POST 요청을 수행하고 페이로드 내에 아래 언급된 값을 제공합니다.
 
