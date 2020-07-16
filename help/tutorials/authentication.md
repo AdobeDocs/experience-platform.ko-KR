@@ -4,17 +4,17 @@ solution: Experience Platform
 title: 인증 및 액세스 Experience Platform API
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
 workflow-type: tm+mt
-source-wordcount: '877'
+source-wordcount: '850'
 ht-degree: 3%
 
 ---
 
 
-# Experience Platform API 인증 및 액세스
+# API 인증 및 [!DNL Experience Platform] 액세스
 
-이 문서에서는 Experience Platform API를 호출하기 위해 Adobe Experience Platform 개발자 계정에 액세스할 수 있는 단계별 자습서를 제공합니다.
+이 문서에서는 API를 호출하기 위해 Adobe Experience Platform 개발자 계정에 액세스할 수 있는 단계별 자습서를 [!DNL Experience Platform] 제공합니다.
 
 ## 인증을 통해 API 호출
 
@@ -25,7 +25,7 @@ ht-degree: 3%
 
 ## 전제 조건
 
-Experience Platform API를 성공적으로 호출하려면 다음이 필요합니다.
+API를 성공적으로 호출하려면 [!DNL Experience Platform] 다음이 필요합니다.
 
 * Adobe Experience Platform 액세스 권한이 있는 IMS 조직
 * 등록된 Adobe ID 계정
@@ -38,16 +38,16 @@ Experience Platform API를 성공적으로 호출하려면 다음이 필요합�
 Adobe ID이 없는 경우 다음 단계를 사용하여을 만들 수 있습니다.
 
 1. Adobe [Developer Console로 이동](https://console.adobe.io)
-2. 새 계정 **만들기를 클릭합니다.**
+2. 새 계정 **[!UICONTROL 만들기를 클릭합니다.]**
 3. 등록 프로세스 완료
 
-## 조직의 Experience Platform 개발자 및 사용자 되기
+## 조직의 개발자 및 사용자 [!DNL Experience Platform] 가 되기
 
 Adobe I/O에 대한 통합을 만들기 전에 계정에 IMS 조직의 제품에 대한 개발자 권한이 있어야 합니다. Admin Console의 개발자 계정에 대한 자세한 내용은 개발자 관리를 위한 [지원 문서](https://helpx.adobe.com/kr/enterprise/using/manage-developers.html) 에서 확인할 수 있습니다.
 
 **개발자 이용**
 
-조직의 Admin Console 관리자에게 연락하여 [Admin Console을 사용하여 조직의 제품 중 하나에 대한 개발자로 추가합니다](https://adminconsole.adobe.com/).
+조직의 [!DNL Admin Console] 관리자에게 연락하여 사용자를 조직에서 사용하는 제품 중 하나의 개발자로 추가합니다 [!DNL Admin Console](https://adminconsole.adobe.com/).
 
 ![](images/authentication/assign-developer.png)
 
@@ -59,7 +59,7 @@ Adobe I/O에 대한 통합을 만들기 전에 계정에 IMS 조직의 제품에
 
 **사용자 액세스 권한 얻기**
 
-Admin Console 관리자는 사용자로 제품에 사용자를 추가해야 합니다.
+관리자는 [!DNL Admin Console] 사용자로 제품에 사용자를 추가해야 합니다.
 
 ![](images/authentication/assign-users.png)
 
@@ -71,7 +71,7 @@ Admin Console 관리자는 사용자로 제품에 사용자를 추가해야 합�
 
 >[!NOTE]
 >
->이제 [Privacy Service 개발자 가이드에서](../privacy-service/api/getting-started.md)이 문서를 팔로우하는 경우 해당 가이드로 돌아가 Privacy Service에 고유한 액세스 자격 증명을 생성할 수 있습니다.
+>이제 [Privacy Service 개발자 가이드에서](../privacy-service/api/getting-started.md)이 문서를 팔로우하는 경우 해당 가이드로 돌아가 고유한 액세스 자격 증명을 생성할 수 [!DNL Privacy Service]있습니다.
 
 Adobe 개발자 콘솔을 사용하여 다음 세 가지 액세스 자격 증명을 생성해야 합니다.
 
@@ -79,7 +79,7 @@ Adobe 개발자 콘솔을 사용하여 다음 세 가지 액세스 자격 증명
 * `{API_KEY}`
 * `{ACCESS_TOKEN}`
 
-사용자 `{IMS_ORG}` `{API_KEY}` 는 한 번만 생성되어야 하며 향후 Platform API 호출에서 다시 사용할 수 있습니다. 그러나, 사용자 `{ACCESS_TOKEN}` 는 임시 작업이므로 24시간마다 다시 생성되어야 합니다.
+사용자 `{IMS_ORG}` 와 `{API_KEY}` 는 한 번만 생성되어야 하며 향후 [!DNL Platform] API 호출에서 다시 사용할 수 있습니다. 그러나, 사용자 `{ACCESS_TOKEN}` 는 임시 작업이므로 24시간마다 다시 생성되어야 합니다.
 
 이러한 단계는 아래에 자세히 설명되어 있습니다.
 
@@ -95,9 +95,9 @@ API _추가_ 화면이 나타납니다. Adobe Experience Platform에 대한 제�
 
 ![](images/authentication/add-platform-api.png)
 
-Experience Platform을 프로젝트에 추가할 API로 선택한 경우 서비스 계정(JWT)을 사용하여 프로젝트에 API를 [추가하는 방법에 대한 튜토리얼에 설명된 단계를 따라(&quot;API 구성&quot; 단계에서 시작)](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/services-add-api-jwt.md) 프로세스를 완료합니다.
+프로젝트에 추가할 API로 선택한 경우, 서비스 계정(JWT) [!DNL Experience Platform] (&quot;API 구성&quot; 단계에서 시작)을 사용하여 프로젝트에 API를 [](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/services-add-api-jwt.md) 추가하는 튜토리얼에 설명된 단계에 따라 프로세스를 완료합니다.
 
-API가 프로젝트에 추가되면 _프로젝트 개요_ 페이지에는 Experience Platform API에 대한 모든 호출에 필요한 다음 자격 증명이 표시됩니다.
+API가 프로젝트에 추가되면 _프로젝트 개요_ 페이지에는 모든 API 호출에 필요한 다음 자격 증명이 [!DNL Experience Platform] 표시됩니다.
 
 * `{API_KEY}` (클라이언트 ID)
 * `{IMS_ORG}` (조직 ID)
@@ -106,13 +106,13 @@ API가 프로젝트에 추가되면 _프로젝트 개요_ 페이지에는 Experi
 
 ### 각 세션에 대한 인증
 
-수집해야 하는 최종 자격 증명이 귀하의 것입니다 `{ACCESS_TOKEN}`. 및 `{API_KEY}` 의 값과 `{IMS_ORG}`달리 Platform API를 계속 사용하려면 24시간마다 새로운 토큰을 생성해야 합니다.
+수집해야 하는 최종 자격 증명이 귀하의 것입니다 `{ACCESS_TOKEN}`. 및 `{API_KEY}` 의 값과 `{IMS_ORG}`달리, API를 계속 사용하려면 24시간마다 새로운 토큰을 생성해야 [!DNL Platform] 합니다.
 
 새 `{ACCESS_TOKEN}`를 생성하려면 개발자 콘솔 자격 증명 안내서에서 JWT 토큰을 [생성하는](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/credentials.md) 단계를 따르십시오.
 
 ## 액세스 자격 증명 테스트
 
-세 개의 필수 자격 증명을 모두 수집했으면 다음 API 호출을 시도할 수 있습니다. 이 호출은 스키마 레지스트리의 컨테이너 내에 모든 XDM(경험 데이터 모델) 클래스를 `global` 나열합니다.
+세 개의 필수 자격 증명을 모두 수집했으면 다음 API 호출을 시도할 수 있습니다. 이 호출은 스키마 레지스트리 컨테이너 내의 모든 [!DNL Experience Data Model] (XDM) 클래스를 `global` 나열합니다.
 
 **API 형식**
 
@@ -159,6 +159,6 @@ curl -X GET https://platform.adobe.io/data/foundation/schemaregistry/global/clas
 
 ## 다음 단계
 
-이 문서를 읽으면 Platform API에 대한 액세스 자격 증명을 수집하여 테스트했습니다. 이제 문서 전체에서 제공되는 예제 API 호출을 [따를 수 있습니다](../landing/documentation/overview.md).
+이 문서를 읽으면 API에 대한 액세스 자격 증명을 수집하여 성공적으로 테스트했습니다 [!DNL Platform] . 이제 문서 전체에서 제공되는 예제 API 호출을 [따를 수 있습니다](../landing/documentation/overview.md).
 
-이 튜토리얼에서 수집한 인증 값 외에도 많은 Platform API가 헤더로 제공되어야 `{SANDBOX_NAME}` 합니다. 자세한 내용은 [샌드박스 개요를](../sandboxes/home.md) 참조하십시오.
+이 튜토리얼에서 수집한 인증 값 외에 많은 [!DNL Platform] API도 헤더로 유효한 API를 제공해야 `{SANDBOX_NAME}` 합니다. 자세한 내용은 [샌드박스 개요를](../sandboxes/home.md) 참조하십시오.
