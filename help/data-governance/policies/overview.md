@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 데이터 사용 정책 개요
 topic: policies
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
 workflow-type: tm+mt
-source-wordcount: '979'
+source-wordcount: '964'
 ht-degree: 0%
 
 ---
@@ -35,9 +35,9 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->실시간 고객 데이터 Platform을 사용하는 경우 대상에 마케팅 활용 사례를 설정하여 정책 적용을 자동화할 수 있습니다. 자세한 내용은 실시간 CDP의 [데이터 거버넌스](../../rtcdp/privacy/data-governance-overview.md) 문서를 참조하십시오.
+>사용 중인 경우 대상에 마케팅 사용 사례 [!DNL Real-time Customer Data Platform]를 설정하여 정책 실행을 자동화할 수 있습니다. 자세한 내용은 실시간 CDP의 [데이터 거버넌스](../../rtcdp/privacy/data-governance-overview.md) 문서를 참조하십시오.
 
-사용 가능한 Adobe에서 정의한 마케팅 작업 [의 목록은 이 문서의 부록을 참조하십시오](#core-actions). DULE Policy Service API 또는 Experience Platform 사용자 인터페이스를 사용하여 고유한 사용자 지정 마케팅 작업을 정의할 수도 있습니다. 마케팅 작업 및 정책 작업에 대한 자세한 내용은 다음 섹션에서 제공됩니다.
+사용 가능한 Adobe에서 정의한 마케팅 작업 [의 목록은 이 문서의 부록을 참조하십시오](#core-actions). DULE [!DNL Policy Service] API 또는 [!DNL Experience Platform ]사용자 인터페이스를 사용하여 고유한 사용자 지정 마케팅 작업을 정의할 수도 있습니다. 마케팅 작업 및 정책 작업에 대한 자세한 내용은 다음 섹션에서 제공됩니다.
 
 <!-- (Add after AAM DEC mapping doc is published)
 ### Inheritance from Adobe Audience Manager Data Export Controls
@@ -49,15 +49,15 @@ For a reference on how specific Data Export Controls map to marketing actions in
 
 ## 데이터 사용 정책 관리 {#manage}
 
-데이터 사용 레이블이 적용되면 데이터 관리자는 DULE Policy Service API 또는 Experience Platform UI를 사용하여 데이터 사용 레이블이 포함된 데이터에 대해 수행되는 마케팅 작업과 관련된 정책을 관리하고 평가할 수 있습니다. 정책을 만들고 업데이트하며, 정책의 상태를 결정하고, 마케팅 작업을 통해 특정 작업이 데이터 사용 정책을 위반하는지 평가할 수 있습니다.
+데이터 사용 레이블이 적용되면 데이터 관리자는 DULE [!DNL Policy Service] API 또는 [!DNL Experience Platform] UI를 사용하여 데이터 사용 레이블이 포함된 데이터에 대해 수행되는 마케팅 작업과 관련된 정책을 관리하고 평가할 수 있습니다. 정책을 만들고 업데이트하며, 정책의 상태를 결정하고, 마케팅 작업을 통해 특정 작업이 데이터 사용 정책을 위반하는지 평가할 수 있습니다.
 
 >[!IMPORTANT]
 >
 >모든 데이터 사용 정책(Adobe에서 제공하는 핵심 정책 포함)은 기본적으로 비활성화됩니다. 개별 정책이 적용을 위해 고려되도록 하려면 API 또는 UI를 통해 해당 정책을 수동으로 활성화해야 합니다.
 
-API에서 마케팅 작업 및 데이터 사용 정책을 사용하는 방법에 대한 단계별 지침은 데이터 사용 정책 [만들기 및 평가에 대한 자습서를 참조하십시오](create.md). 정책 서비스 API에서 제공하는 주요 작업에 대한 자세한 내용은 [정책 서비스 개발자 안내서를 참조하십시오](../api/getting-started.md).
+API에서 마케팅 작업 및 데이터 사용 정책을 사용하는 방법에 대한 단계별 지침은 데이터 사용 정책 [만들기 및 평가에 대한 자습서를 참조하십시오](create.md). API에서 제공하는 주요 작업에 대한 자세한 내용은 [!DNL Policy Service] 정책 서비스 개발자 안내서를 참조하십시오 [](../api/getting-started.md).
 
-Platform UI에서 마케팅 작업 및 정책을 사용하는 방법에 대한 자세한 내용은 [데이터 사용 정책 사용 사용자 안내서를 참조하십시오](./user-guide.md).
+UI에서 마케팅 작업 및 정책을 사용하는 방법에 대한 자세한 내용은 [!DNL Platform] 데이터 사용 정책 사용 사용자 안내서를 참조하십시오 [](./user-guide.md).
 
 ## 다음 단계
 
