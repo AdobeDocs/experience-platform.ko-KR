@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe 개인정보 보호 JavaScript 라이브러리 개요
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
 workflow-type: tm+mt
-source-wordcount: '972'
+source-wordcount: '921'
 ht-degree: 5%
 
 ---
@@ -14,23 +14,23 @@ ht-degree: 5%
 
 # Adobe 개인정보 보호 JavaScript 라이브러리 개요
 
-데이터 처리자로서 Adobe는 회사의 허가와 지침에 따라 개인 데이터를 처리합니다. 귀하는 데이터 제어자로서 Adobe가 귀하를 대신하여 처리하고 저장하는 개인 데이터를 결정합니다. Adobe Experience Cloud 솔루션을 통해 전송하는 정보에 따라, Adobe는 개인 정보 보호 규정(GDPR) 및 캘리포니아 소비자 개인 정보 보호법(CPA)과 같은 개인 정보 보호 규정에 적용되는 개인 정보를 저장할 수 있습니다. Experience Cloud 솔루션이 개인 데이터를 수집하는 방법에 대한 자세한 내용은 [Adobe Experience Cloud](https://www.adobe.com/privacy/marketing-cloud.html) 의 개인 정보에 관한 문서를 참조하십시오.
+데이터 처리자로서 Adobe는 회사의 허가와 지침에 따라 개인 데이터를 처리합니다. 귀하는 데이터 제어자로서 Adobe가 귀하를 대신하여 처리하고 저장하는 개인 데이터를 결정합니다. Adobe Experience Cloud 솔루션을 통해 전송하는 정보에 따라, Adobe는 [!DNL General Data Protection Regulation] (GDPR) 및 [!DNL California Consumer Privacy Act] (CPA)와 같은 개인 정보 보호 규정에 적용되는 개인 정보를 저장할 수 있습니다. Experience Cloud 솔루션이 개인 데이터를 수집하는 방법에 대한 자세한 내용은 [Adobe Experience Cloud](https://www.adobe.com/privacy/marketing-cloud.html) 의 개인 정보에 관한 문서를 참조하십시오.
 
-데이터 관리자는 **Adobe Privacy JavaScript 라이브러리를** 사용하여 특정 도메인에 대한 Experience Cloud 솔루션에서 생성된 모든 데이터 주체 ID의 검색을 자동화할 수 있습니다. 그런 다음 [Adobe Experience Platform Privacy Service](home.md)에서 제공하는 API를 사용하여 이러한 ID를 사용하여 해당 데이터 대상에 속하는 개인 데이터에 대한 액세스 및 삭제 요청을 만들 수 있습니다.
+데이터 관리자는 **Adobe Privacy JavaScript 라이브러리를** 사용하여 특정 도메인에 대한 [!DNL Experience Cloud] 솔루션에서 생성된 모든 데이터 주체 ID의 검색을 자동화할 수 있습니다. 그런 다음 [Adobe Experience Platform Privacy Service](home.md)에서 제공하는 API를 사용하여 이러한 ID를 사용하여 해당 데이터 대상에 속하는 개인 데이터에 대한 액세스 및 삭제 요청을 만들 수 있습니다.
 
 >[!NOTE]
 >
->개인 정보 JS 라이브러리는 일반적으로 개인 정보 관련 페이지에만 설치되어야 하며, 웹 사이트 또는 도메인의 모든 페이지에 설치할 필요는 없습니다.
+>일반적으로 이 소프트웨어는 개인 정보 관련 페이지에만 설치되어야 하며 웹 사이트 또는 도메인의 모든 페이지에 설치되어야 하는 것은 아닙니다. [!DNL Privacy JS Library]
 
 ## 함수
 
-개인 정보 JS 라이브러리는 Privacy Service에서 ID를 관리하는 여러 기능을 제공합니다. 이러한 기능은 특정 방문자를 위해 브라우저에 저장된 ID를 관리하는 데에만 사용할 수 있습니다. Experience Cloud 중앙 서비스에 정보를 직접 제출하는 데 사용할 수 없습니다.
+ID [!DNL Privacy JS Library] 를 관리하는 데 몇 가지 기능을 제공합니다 [!DNL Privacy Service]. 이러한 기능은 특정 방문자를 위해 브라우저에 저장된 ID를 관리하는 데에만 사용할 수 있습니다. 정보를 [!DNL Experience Cloud Central Service] 직접 제출하는데 사용할 수 없습니다.
 
 다음 표에서는 라이브러리에서 제공하는 다양한 기능에 대해 간략히 설명합니다.
 
 | 함수 | 설명 |
 | --- | --- |
-| `retrieveIdentities` | Privacy Service에서 검색한 일치하는 ID(`validIds`)와 찾을 수 없는 ID 배열(`failedIds`)을 반환합니다. |
+| `retrieveIdentities` | 에서 검색된 일치하는 ID(`validIds`)와 [!DNL Privacy Service]발견되지 않은 ID 배열(`failedIds`)을 반환합니다. |
 | `removeIdentities` | 브라우저에서 일치하는 각 ID를 제거합니다. 이 ID가 삭제되었는지 여부를 나타내는`validIds``isDeleteClientSide` 부울을 포함하는 각 ID와 일치하는 ID(Matching ID)의 배열을 반환합니다. |
 | `retrieveThenRemoveIdentities` | 일치하는 ID(`validIds`)의 배열을 검색한 다음 브라우저에서 해당 ID를 제거합니다. 이 기능은 유사한 기능이지만, 삭제하기 전에 사용 중인 Adobe 솔루션에 액세스 요청이 필요한 경우(예: 삭제 요청에 제공하기 전에 고유 식별자를 검색해야 하는 경우) 가장 많이 사용됩니다. `removeIdentities` |
 
@@ -43,15 +43,15 @@ ht-degree: 5%
 
 ## 설치
 
-개인 정보 JS 라이브러리를 사용하려면 다음 방법 중 하나를 사용하여 컴퓨터에 설치해야 합니다.
+이 소프트웨어를 사용하려면 다음 방법 [!DNL Privacy JS Library]중 하나를 사용하여 컴퓨터에 설치해야 합니다.
 
 * 다음 명령을 실행하여 npm을 사용하여 설치합니다. `npm install @adobe/adobe-privacy`
 * 이름 아래에 있는 Adobe Launch Extension 사용 `AdobePrivacy`
 * https://github.com/Adobe-Marketing-Cloud/adobe-privacy에서 [다운로드](https://github.com/Adobe-Marketing-Cloud/adobe-privacy)
 
-## 개인 정보 JS 라이브러리 인스턴스화
+## 인스턴스화 [!DNL Privacy JS Library]
 
-개인 정보 JS 라이브러리를 활용하는 모든 앱은 특정 Adobe 솔루션으로 구성해야 하는 새 `AdobePrivacy` 개체를 인스턴스화해야 합니다. 예를 들어 Adobe Analytics에 대한 인스턴스화는 다음과 비슷합니다.
+Adobe를 사용하는 모든 앱은 특정 Adobe 솔루션으로 구성해야 하는 새 [!DNL Privacy JS Library] `AdobePrivacy` 개체를 인스턴스화해야 합니다. 예를 들어 Adobe Analytics에 대한 인스턴스화는 다음과 비슷합니다.
 
 ```js
 var adobePrivacy = new AdobePrivacy({
@@ -67,11 +67,11 @@ var adobePrivacy = new AdobePrivacy({
 
 ## 코드 샘플
 
-다음 코드 샘플에서는 Launch 또는 DTM을 사용하지 않는 경우 몇 가지 일반적인 시나리오에 개인 정보 JS 라이브러리를 사용하는 방법을 보여줍니다.
+다음 코드 샘플에서는 DTM을 사용하지 않는 경우 여러 가지 일반적인 시나리오에 대해 [!DNL Privacy JS Library] 를 사용하는 방법을 [!DNL Launch] 보여 줍니다.
 
 ### ID 검색
 
-이 예에서는 Experience Cloud에서 ID 목록을 검색하는 방법을 보여 줍니다.
+이 예에서는 ID 목록을 검색하는 방법을 보여 줍니다 [!DNL Experience Cloud].
 
 #### JavaScript
 
@@ -93,7 +93,7 @@ adobePrivacy.retrieveIdentities().then(handleRetrievedIDs);
 | 변수 | 설명 |
 | --- | --- |
 | `validIds` | 검색된 모든 ID가 포함된 JSON 개체입니다. |
-| `failedIDs` | Privacy Service에서 검색되지 않았거나 찾을 수 없는 모든 ID가 포함된 JSON 개체입니다. |
+| `failedIDs` | 검색되지 않았거나 찾을 수 없는 모든 ID가 포함된 JSON 개체 [!DNL Privacy Service]를 찾을 수 없습니다. |
 
 #### 결과
 
@@ -142,7 +142,7 @@ adobePrivacy.removeIdentities().then(handleRemovedIDs)…
 | 변수 | 설명 |
 | --- | --- |
 | `validIds` | 검색된 모든 ID가 포함된 JSON 개체입니다. |
-| `failedIDs` | Privacy Service에서 검색되지 않았거나 찾을 수 없는 모든 ID가 포함된 JSON 개체입니다. |
+| `failedIDs` | 검색되지 않았거나 찾을 수 없는 모든 ID가 포함된 JSON 개체 [!DNL Privacy Service]를 찾을 수 없습니다. |
 
 #### 결과
 
@@ -171,11 +171,11 @@ adobePrivacy.removeIdentities().then(handleRemovedIDs)…
 
 ## 다음 단계
 
-이 문서를 읽음으로써 개인 정보 JS 라이브러리의 핵심 기능을 도입했습니다. 라이브러리를 사용하여 ID 목록을 검색한 후 해당 ID를 사용하여 데이터 액세스를 만들고 Privacy Service API에 대한 요청을 삭제할 수 있습니다. 자세한 내용은 [Privacy Service 개발자 안내서를](api/getting-started.md) 참조하십시오.
+이 문서를 읽음으로써, 당신은 이 회사의 핵심 기능에 익숙해졌다 [!DNL Privacy JS Library]. 라이브러리를 사용하여 ID 목록을 검색한 후 이러한 ID를 사용하여 데이터 액세스를 만들고 [!DNL Privacy Service] API에 대한 요청을 삭제할 수 있습니다. 자세한 내용은 [Privacy Service 개발자 안내서를](api/getting-started.md) 참조하십시오.
 
 ## 부록
 
-이 섹션에는 개인 정보 JS 라이브러리 사용에 대한 보충 정보가 포함되어 있습니다.
+이 섹션에는 해당 항목을 사용하기 위한 보충 정보가 포함되어 있습니다 [!DNL Privacy JS Library].
 
 ### Adobe 솔루션 구성 매개 변수
 
