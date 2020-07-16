@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 동의
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
 workflow-type: tm+mt
-source-wordcount: '226'
+source-wordcount: '220'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # 동의
 
-개인 데이터를 수집하기 전에 명시적인 고객 동의를 요구하는 규정도 있었다. Privacy Service API의 `/consent` 종단점을 통해 고객 동의 요청을 처리하고 이를 개인 정보 보호 워크플로우에 통합할 수 있습니다.
+개인 데이터를 수집하기 전에 명시적인 고객 동의를 요구하는 규정도 있었다. API의 `/consent` 종단점을 통해 고객 동의 요청을 처리하고 이를 개인 정보 보호 워크플로우에 통합할 수 있습니다 [!DNL Privacy Service] .
 
 이 안내서를 사용하기 전에 아래의 예제 API 호출에 제시된 필수 인증 헤더에 대한 [정보는 시작하기](./getting-started.md) 섹션을 참조하십시오.
 
@@ -68,8 +68,8 @@ curl -X POST \
 
 >[!NOTE]
 >
->Privacy Service으로 전송할 고객 ID 값을 결정하는 방법에 대한 자세한 내용은 ID 데이터 [제공 안내서를 참조하십시오](../identity-data.md).
+>전송할 고객 ID 값을 결정하는 방법에 대한 자세한 내용 [!DNL Privacy Service]은 ID 데이터 [제공 가이드를 참조하십시오](../identity-data.md).
 
 **응답**
 
-성공적인 응답은 페이로드가 없는 HTTP 상태 202(허용됨)를 반환하여 Privacy Service에서 요청을 수락했으며 처리 중임을 나타냅니다.
+성공적인 응답은 페이로드가 없는 HTTP 상태 202(허용됨)를 반환하여 요청이 수락되었으며 처리 중임을 [!DNL Privacy Service] 나타냅니다.
