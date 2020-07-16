@@ -5,45 +5,45 @@ title: Privacy Service 개발자 가이드
 description: RESTful API를 사용하여 Adobe Experience Cloud 애플리케이션 전반에서 데이터 주체의 개인 데이터를 관리합니다
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b45fdfff70ce4ba857f23e7116812a07825871bc
+source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
 workflow-type: tm+mt
-source-wordcount: '793'
+source-wordcount: '759'
 ht-degree: 1%
 
 ---
 
 
-# Privacy Service 개발자 가이드
+# [!DNL Privacy Service] 개발자 가이드
 
-Adobe Experience Platform Privacy Service은 Adobe Experience Cloud 응용 프로그램에서 데이터 주체(고객)의 개인 데이터를 관리(액세스 및 삭제)할 수 있도록 해주는 RESTful API 및 사용자 인터페이스를 제공합니다. 또한 Privacy Service은 Experience Cloud 응용 프로그램과 관련된 작업의 상태 및 결과에 액세스할 수 있는 중앙 감사 및 로깅 메커니즘을 제공합니다.
+Adobe Experience Platform [!DNL Privacy Service] 는 Adobe Experience Cloud 응용 프로그램에서 데이터 주체(고객)의 개인 데이터를 관리(액세스 및 삭제)할 수 있도록 해주는 RESTful API 및 사용자 인터페이스를 제공합니다. [!DNL Privacy Service] 또한 [!DNL Experience Cloud] 응용 프로그램과 관련된 작업의 상태 및 결과에 액세스할 수 있는 중앙 감사 및 로깅 메커니즘을 제공합니다.
 
-이 안내서에서는 Privacy Service API를 사용하는 방법에 대해 설명합니다. UI 사용 방법에 대한 자세한 내용은 [Privacy Service UI 개요를 참조하십시오](../ui/overview.md). Privacy Service API에서 사용 가능한 모든 끝점의 전체 목록을 보려면 [API 참조를 참조하십시오](https://www.adobe.io/apis/experiencecloud/gdpr/api-reference.html).
+이 안내서에서는 [!DNL Privacy Service] API를 사용하는 방법을 다룹니다. UI 사용 방법에 대한 자세한 내용은 [Privacy Service UI 개요를 참조하십시오](../ui/overview.md). API에서 사용 가능한 모든 끝점의 전체 목록을 보려면 [!DNL Privacy Service] API 참조를 참조하십시오 [](https://www.adobe.io/apis/experiencecloud/gdpr/api-reference.html).
 
 ## 시작하기 {#getting-started}
 
-이 안내서에서는 다음 Experience Platform 기능을 이해하는 작업이 필요합니다.
+이 안내서에서는 다음 기능을 이해하는 [!DNL Experience Platform] 작업이 필요합니다.
 
-* [Privacy Service](../home.md): Adobe Experience Cloud 응용 프로그램에서 데이터 주체(고객)의 액세스 및 삭제 요청을 관리하고 삭제할 수 있도록 해주는 RESTful API 및 사용자 인터페이스를 제공합니다.
+* [!DNL Privacy Service](../home.md): Adobe Experience Cloud 응용 프로그램에서 데이터 주체(고객)의 액세스 및 삭제 요청을 관리하고 삭제할 수 있도록 해주는 RESTful API 및 사용자 인터페이스를 제공합니다.
 
 다음 섹션에서는 Privacy Service API를 성공적으로 호출하기 위해 알아야 할 추가 정보를 제공합니다.
 
 ### 샘플 API 호출 읽기
 
-이 자습서에서는 요청의 서식을 지정하는 방법을 보여주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 올바른 형식의 요청 페이로드가 포함됩니다. API 응답으로 반환된 샘플 JSON도 제공됩니다. 샘플 API 호출 설명서에 사용된 규칙에 대한 자세한 내용은 Experience Platform 문제 해결 안내서의 예제 API 호출 [](../../landing/troubleshooting.md) 읽기 방법에 대한 섹션을 참조하십시오.
+이 자습서에서는 요청의 서식을 지정하는 방법을 보여주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 올바른 형식의 요청 페이로드가 포함됩니다. API 응답으로 반환된 샘플 JSON도 제공됩니다. 샘플 API 호출 설명서에 사용된 규칙에 대한 자세한 내용은 문제 해결 안내서의 예제 API 호출 [을 읽는](../../landing/troubleshooting.md) 방법에 대한 섹션을 [!DNL Experience Platform] 참조하십시오.
 
 ## 필수 헤더에 대한 값 수집
 
-Privacy Service API를 호출하려면 먼저 필요한 헤더에 사용할 액세스 자격 증명을 수집해야 합니다.
+API를 [!DNL Privacy Service] 호출하려면 먼저 필요한 헤더에 사용할 액세스 자격 증명을 수집해야 합니다.
 
 * 인증: 무기명 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-여기에는 Adobe Admin Console에서 Experience Platform에 대한 개발자 권한을 얻은 다음 Adobe 개발자 콘솔에서 자격 증명을 생성하는 작업이 포함됩니다.
+여기에는 Adobe Admin Console [!DNL Experience Platform] 에서 개발자 권한을 얻은 다음 Adobe 개발자 콘솔에서 자격 증명을 생성하는 작업이 포함됩니다.
 
-### 개발자가 Experience Platform에 액세스
+### 개발자에게 [!DNL Experience Platform]
 
-개발자가 Platform에 액세스하려면 [Experience Platform 인증 자습서의 시작 단계를 따르십시오](../../tutorials/authentication.md). &quot;Adobe 개발자 콘솔에서 액세스 자격 증명 생성&quot; 단계에 도달하면 이 자습서로 돌아가 Privacy Service에 대한 자격 증명을 생성합니다.
+개발자에게 액세스 권한을 부여하려면 [!DNL Platform]Experience Platform 인증 자습서의 시작 단계를 [따릅니다](../../tutorials/authentication.md). &quot;Adobe 개발자 콘솔에서 액세스 자격 증명 생성&quot; 단계에 도달하면 이 자습서로 돌아가 특정 자격 증명을 생성합니다 [!DNL Privacy Service].
 
 ### 액세스 자격 증명 생성
 
@@ -77,7 +77,7 @@ API _[!UICONTROL 구성]_화면이 나타납니다. 키 쌍**[!UICONTROL &#x200B
 
 ![](../images/api/getting-started/key-pair-generated.png)
 
-API가 프로젝트에 추가되면 프로젝트 페이지가 _Privacy Service API 개요_ 페이지에 다시 나타납니다. 여기에서 아래로 스크롤하여 Privacy Service API에 대한 모든 호출에 필요한 다음 액세스 자격 증명을 제공하는 _[!UICONTROL 서비스 계정(JWT)]_섹션으로 이동합니다.
+API가 프로젝트에 추가되면 프로젝트 페이지가 _Privacy Service API 개요_ 페이지에 다시 나타납니다. 여기에서 아래로 스크롤하여 _[!UICONTROL 서비스 계정(JWT)]_섹션으로 이동합니다. 이 섹션은[!DNL Privacy Service]API를 호출하는 모든 호출에 필요한 다음 액세스 인증서를 제공합니다.
 
 * **[!UICONTROL 클라이언트 ID]**: 클라이언트 ID는 x-api-key 헤더 `{API_KEY}` 에서 제공해야 하는 데 필요합니다.
 * **[!UICONTROL 조직 ID]**: 조직 ID는 x-gw-ims-org-id 헤더에서 사용해야 하는 `{IMS_ORG}` 값입니다.
@@ -86,7 +86,7 @@ API가 프로젝트에 추가되면 프로젝트 페이지가 _Privacy Service A
 
 #### 각 세션에 대한 인증
 
-수집해야 하는 최종 필수 자격 증명은 인증 헤더에서 사용되는 `{ACCESS_TOKEN}`자격 증명입니다. 및 `{API_KEY}` 의 값과 `{IMS_ORG}`달리 Platform API를 계속 사용하려면 24시간마다 새로운 토큰을 생성해야 합니다.
+수집해야 하는 최종 필수 자격 증명은 인증 헤더에서 사용되는 `{ACCESS_TOKEN}`자격 증명입니다. 및 `{API_KEY}` 의 값과 `{IMS_ORG}`달리, API를 계속 사용하려면 24시간마다 새로운 토큰을 생성해야 [!DNL Platform] 합니다.
 
 새 `{ACCESS_TOKEN}`를 생성하려면 이전에 다운로드한 개인 키를 열고 액세스 토큰 _[!UICONTROL 생성 옆에 있는 텍스트 상자에 해당]_내용을 붙여넣은 후 토큰**[!UICONTROL &#x200B;생성을&#x200B;]**클릭합니다.
 
@@ -98,4 +98,4 @@ API가 프로젝트에 추가되면 프로젝트 페이지가 _Privacy Service A
 
 ## 다음 단계
 
-이제 사용할 헤더를 이해하므로 Privacy Service API에 대한 호출을 시작할 준비가 되었습니다. 개인정보 보호 작업에 대한 문서는 [Privacy Service](privacy-jobs.md) API를 사용하여 수행할 수 있는 다양한 API 호출을 안내합니다. 각 예제 호출에는 일반 API 형식, 필요한 헤더를 표시하는 샘플 요청 및 샘플 응답이 포함됩니다.
+이제 사용할 헤더를 이해하므로 [!DNL Privacy Service] API에 대한 호출을 시작할 준비가 되었습니다. 개인 정보 [작업](privacy-jobs.md) 문서는 API를 사용하여 수행할 수 있는 다양한 API 호출을 [!DNL Privacy Service] 안내합니다. 각 예제 호출에는 일반 API 형식, 필요한 헤더를 표시하는 샘플 요청 및 샘플 응답이 포함됩니다.
