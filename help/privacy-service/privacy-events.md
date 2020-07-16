@@ -4,28 +4,28 @@ solution: Experience Platform
 title: 개인 정보 보호 이벤트 구독
 topic: privacy events
 translation-type: tm+mt
-source-git-commit: ab29c7771122267634dea24582b07f605abd7ed8
+source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
 workflow-type: tm+mt
-source-wordcount: '861'
+source-wordcount: '843'
 ht-degree: 1%
 
 ---
 
 
-# 개인 정보 보호 이벤트 구독
+# 구독 대상 [!DNL Privacy Events]
 
-개인정보 보호 이벤트는 Adobe Experience Platform Privacy Service에서 제공하는 메시지입니다. Adobe I/O Events가 구성된 웹 후크에 저장되어 효율적인 작업 요청 자동화를 촉진합니다. 작업이 완료되었는지 또는 워크플로우 내의 특정 이정표에 도달했는지 확인하기 위해 개인 정보 서비스 API를 폴링할 필요가 없어집니다.
+[!DNL Privacy Events] 은 효율적인 작업 요청 자동화를 위해 구성된 웹후크에 전송된 Adobe I/O 이벤트를 활용하는 Adobe Experience Platform [!DNL Privacy Service]에서 제공하는 메시지입니다. 작업이 완료되었는지 또는 워크플로우 내의 특정 이정표에 도달했는지 확인하기 위해 [!DNL Privacy Service] API를 폴링할 필요가 없어집니다.
 
 개인 정보 작업 요청 라이프사이클과 관련된 4가지 유형의 알림이 현재 있습니다.
 
 | 유형 | 설명 |
 --- | ---
-| 작업 완료 | 모든 Experience Cloud 솔루션이 다시 보고되었으며 작업의 전체 또는 글로벌 상태가 완료로 표시되었습니다. |
+| 작업 완료 | 모든 [!DNL Experience Cloud] 솔루션이 다시 보고되었으며 작업의 전체 또는 글로벌 상태가 완료로 표시되었습니다. |
 | 작업 오류 | 요청을 처리하는 동안 하나 이상의 솔루션에 오류가 보고되었습니다. |
 | 제품 완료 | 이 작업과 관련된 솔루션 중 하나가 작업을 완료했습니다. |
 | 제품 오류 | 요청을 처리하는 동안 솔루션 중 하나가 오류를 보고했습니다. |
 
-이 문서에서는 Adobe I/O 내 개인정보 보호 서비스 알림에 대한 통합을 설정하는 절차를 제공합니다. 개인정보 보호 서비스 및 해당 기능에 대한 자세한 개요는 [개인정보 보호 서비스 개요를 참조하십시오](home.md).
+이 문서에서는 Adobe I/O 내 알림에 대한 통합을 설정하는 단계를 [!DNL Privacy Service] 제공합니다. 고급 기능 [!DNL Privacy Service] 및 기능에 대한 개요는 [Privacy Service 개요를 참조하십시오](home.md).
 
 ## 시작하기
 
@@ -74,7 +74,7 @@ app.listen(app.get('port'), function() {
 
 ## Adobe 개발자 콘솔에서 새 프로젝트 만들기
 
-Adobe [Developer Console에서](https://www.adobe.com/go/devs_console_ui) Adobe ID로 로그인합니다. 그런 다음 Adobe 개발자 콘솔 문서에서 빈 프로젝트 [를 만드는 방법에 대한 자습서에 나와](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) 있는 단계를 따릅니다.
+Adobe [Developer Console에서](https://www.adobe.com/go/devs_console_ui) Adobe ID으로 로그인합니다. 그런 다음 Adobe 개발자 콘솔 문서에서 빈 프로젝트 [를 만드는 방법에 대한 자습서에 나와](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) 있는 단계를 따릅니다.
 
 ## 프로젝트에 개인 정보 이벤트 추가
 
@@ -82,7 +82,7 @@ Adobe [Developer Console에서](https://www.adobe.com/go/devs_console_ui) Adobe 
 
 ![](./images/privacy-events/add-event-button.png)
 
-이벤트 _추가_ 대화 상자가 나타납니다. 사용 가능한 이벤트 유형 목록을 **[!UICONTROL 필터링하려면 Experience Cloud]** 를 선택한 다음 **[!UICONTROL 다음]** 을 클릭하기 전에 **[!UICONTROL 개인 정보 서비스 이벤트]**&#x200B;를선택합니다.
+이벤트 _추가_ 대화 상자가 나타납니다. 사용 가능한 이벤트 유형 목록을 필터링하려면 **[!UICONTROL Experience Cloud]** 를 선택한 다음 **[!UICONTROL Privacy Service 이벤트를]** 선택한 후 **[!UICONTROL 다음을]**&#x200B;클릭합니다.
 
 ![](./images/privacy-events/add-privacy-events.png)
 
@@ -110,11 +110,11 @@ Adobe [Developer Console에서](https://www.adobe.com/go/devs_console_ui) Adobe 
 
 ![](./images/privacy-events/webhook-details.png)
 
-왼쪽 탐색 창의 _[!UICONTROL 이벤트]_아래에 개인정보 보호 이벤트가 나타나면서 프로젝트의 세부 사항 페이지가 다시 나타납니다.
+왼쪽 탐색 창의 이벤트 [!DNL Privacy Events] 아래에 표시되는 프로젝트의 세부 사항 _[!UICONTROL 페이지가]_다시 나타납니다.
 
 ## 이벤트 데이터 보기
 
-프로젝트에 개인정보 보호 이벤트를 등록했고 개인 정보 작업이 처리되면 해당 등록에 대해 수신된 알림을 볼 수 있습니다. 개발자 콘솔의 **[!UICONTROL 프로젝트]** 탭에서 목록에서 프로젝트를 선택하여 _제품 개요_ 페이지를 엽니다. 여기서 왼쪽 탐색 **[!UICONTROL 에서 [개인 정보]** 이벤트]를 선택합니다.
+프로젝트에 등록했고 개인 정보 작업 [!DNL Privacy Events] 이 처리되면 해당 등록에 대해 수신된 알림을 볼 수 있습니다. 개발자 콘솔의 **[!UICONTROL 프로젝트]** 탭에서 목록에서 프로젝트를 선택하여 _제품 개요_ 페이지를 엽니다. 여기서 왼쪽 탐색 **[!UICONTROL 에서 [개인 정보]** 이벤트]를 선택합니다.
 
 ![](./images/privacy-events/events-left-nav.png)
 
