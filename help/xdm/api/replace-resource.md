@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 리소스 바꾸기
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '207'
+source-wordcount: '203'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # 리소스 바꾸기
 
-스키마 레지스트리를 사용하면 PUT 작업을 통해 전체 리소스를 바꿀 수 있습니다. 이 작업은 기본적으로 리소스를 다시 쓰기 때문에 요청 본문에는 POST 요청을 사용하여 새 리소스를 만들 때 필요한 모든 필드가 포함되어야 합니다.
+PUT 작업을 통해 전체 리소스를 바꿀 [!DNL Schema Registry] 수 있습니다. 이 작업은 기본적으로 리소스를 다시 쓰기 때문에 요청 본문에는 POST 요청을 사용하여 새 리소스를 만들 때 필요한 모든 필드가 포함되어야 합니다.
 
 이 방법은 리소스의 많은 정보를 한 번에 업데이트하려는 경우 특히 유용합니다.
 
@@ -32,7 +32,7 @@ PUT /tenant/{RESOURCE_TYPE}/{RESOURCE_ID}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{RESOURCE_TYPE}` | 스키마 라이브러리에서 업데이트할 리소스 유형입니다. 유효한 유형은 `datatypes`, `mixins``schemas`, `classes`및 입니다. |
+| `{RESOURCE_TYPE}` | 에서 업데이트할 리소스 [!DNL Schema Library]유형입니다. 유효한 유형은 `datatypes`, `mixins``schemas`, `classes`및 입니다. |
 | `{RESOURCE_ID}` | URL로 인코딩된 `$id` URI 또는 리소스 `meta:altId` 의 URL입니다. |
 
 **요청**
