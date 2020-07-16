@@ -4,9 +4,9 @@ seo-title: Experience Platform 웹 SDK용 Edge 구성
 description: 'Experience Platform 에지 네트워크를 구성하는 방법을 알아봅니다. '
 seo-description: 'Experience Platform 에지 네트워크를 구성하는 방법을 알아봅니다. '
 translation-type: tm+mt
-source-git-commit: 013e6abb0922e39bd6b9da6a66bba9a1bcefdd25
+source-git-commit: 2d47a00c91000c68c7331f88015264259a4e6323
 workflow-type: tm+mt
-source-wordcount: '881'
+source-wordcount: '880'
 ht-degree: 2%
 
 ---
@@ -92,7 +92,7 @@ Adobe Target을 구성하려면 클라이언트 코드를 제공해야 합니다
 
 Target을 사용하면 속성을 통해 권한을 제어할 수 있습니다. 자세한 내용은 Target 설명서의 [엔터프라이즈 권한](https://docs.adobe.com/content/help/en/target/using/administer/manage-users/enterprise/properties-overview.html) 섹션에서 확인할 수 있습니다.
 
-속성 토큰은 [!UICONTROL Adobe Target] > [!UICONTROL 설정] > [UICONTROL 속성에서 찾을 수 있습니다.]
+속성 토큰은 [!UICONTROL Adobe Target] > [!UICONTROL 설정] > [!UICONTROL 속성에서 찾을 수 있습니다.]
 
 ##### [!UICONTROL Target 환경 ID]
 
