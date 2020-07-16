@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 리소스 업데이트
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '379'
+source-wordcount: '373'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # 리소스 업데이트
 
-PATCH 요청을 사용하여 테넌트 컨테이너의 리소스를 수정하거나 업데이트할 수 있습니다. 스키마 레지스트리는 추가, 제거 및 대체를 비롯한 모든 표준 JSON 패치 작업을 지원합니다.
+PATCH 요청을 사용하여 테넌트 컨테이너의 리소스를 수정하거나 업데이트할 수 있습니다. 이 [!DNL Schema Registry] 는 추가, 제거 및 바꾸기를 포함한 모든 표준 JSON 패치 작업을 지원합니다.
 
 사용 가능한 작업을 포함한 JSON 패치에 대한 자세한 내용은 공식 [JSON 패치 설명서를 참조하십시오](http://jsonpatch.com/).
 
@@ -34,7 +34,7 @@ PATCH /tenant/{RESOURCE_TYPE}/{RESOURCE_ID}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{RESOURCE_TYPE}` | 스키마 라이브러리에서 업데이트할 리소스 유형입니다. 유효한 유형은 `datatypes`, `mixins``schemas`, `classes`및 입니다. |
+| `{RESOURCE_TYPE}` | 에서 업데이트할 리소스 [!DNL Schema Library]유형입니다. 유효한 유형은 `datatypes`, `mixins``schemas`, `classes`및 입니다. |
 | `{RESOURCE_ID}` | URL로 인코딩된 `$id` URI 또는 리소스 `meta:altId` 의 URL입니다. |
 
 **요청**
@@ -110,7 +110,7 @@ PATCH /tenant/{RESOURCE_TYPE}/{RESOURCE_ID}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{RESOURCE_TYPE}` | 스키마 라이브러리에서 업데이트할 리소스 유형입니다. 유효한 유형은 `datatypes`, `mixins``schemas`, `classes`및 입니다. |
+| `{RESOURCE_TYPE}` | 에서 업데이트할 리소스 [!DNL Schema Library]유형입니다. 유효한 유형은 `datatypes`, `mixins``schemas`, `classes`및 입니다. |
 | `{RESOURCE_ID}` | URL로 인코딩된 `$id` URI 또는 리소스 `meta:altId` 의 URL입니다. |
 
 **요청**
