@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 마케팅 작업
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
 workflow-type: tm+mt
-source-wordcount: '536'
+source-wordcount: '534'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # 마케팅 작업
 
-Adobe Experience Platform 데이터 거버넌스 컨텍스트에서 마케팅 작업은 [!DNL Experience Platform] 데이터 소비자가 취하는 동작으로, 데이터 사용 정책 위반을 확인해야 합니다.
+Adobe Experience Platform의 컨텍스트에서 마케팅 활동 [!DNL Data Governance]은 [!DNL Experience Platform] 데이터 소비자가 취하는 조치로서 데이터 사용 정책 위반을 확인해야 합니다.
 
 API에서 마케팅 작업을 사용하려면 끝점을 사용해야 `/marketingActions` 합니다.
 
