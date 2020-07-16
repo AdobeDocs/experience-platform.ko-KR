@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 데이터 사용 레이블 사용 안내서
 topic: labels
 translation-type: tm+mt
-source-git-commit: b36f67fd7d597d5d6a8cd514d95908ae26189c83
+source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
 workflow-type: tm+mt
-source-wordcount: '1112'
+source-wordcount: '1109'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->이 예에서 데이터 세트는 미리 구성된 XDM(Experience Data Model) 스키마를 사용하여 만들어집니다. XDM 스키마에 대한 자세한 내용은 [XDM 시스템 개요](../../xdm/home.md) 및 스키마 [작성에 대한 기본 사항을 참조하십시오](../../xdm/schema/composition.md).
+>이 예에서는 XDM(사전 구성된) 스키마를 사용하여 데이터 세트 [!DNL Experience Data Model] 를 만듭니다. XDM 스키마에 대한 자세한 내용은 [XDM 시스템 개요](../../xdm/home.md) 및 스키마 [작성에 대한 기본 사항을 참조하십시오](../../xdm/schema/composition.md).
 
 새 데이터 세트를 만들려면 데이터 집합 **[!UICONTROL 작업 영역의 오른쪽 위 모서리에 있는]** 데이터 집합 _[!UICONTROL 만들기를]_클릭합니다.
 
