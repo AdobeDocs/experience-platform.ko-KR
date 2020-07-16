@@ -4,42 +4,42 @@ solution: Experience Platform
 title: 스키마 레지스트리 API를 사용하여 스키마 만들기
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '2418'
+source-wordcount: '2322'
 ht-degree: 1%
 
 ---
 
 
-# 스키마 레지스트리 API를 사용하여 스키마 만들기
+# API를 사용하여 스키마 [!DNL Schema Registry] 만들기
 
-스키마 레지스트리는 Adobe Experience Platform 내의 스키마 라이브러리에 액세스하는 데 사용됩니다. 스키마 라이브러리에는 Adobe, Experience Platform 파트너 및 응용 프로그램을 사용하는 공급업체가 제공하는 리소스가 포함되어 있습니다. 레지스트리는 사용 가능한 모든 라이브러리 리소스에 액세스할 수 있는 사용자 인터페이스 및 RESTful API를 제공합니다.
+Adobe Experience Platform [!DNL Schema Registry] 에서 [!DNL Schema Library] 파일에 액세스하는 데 사용됩니다. 이 [!DNL Schema Library] 에는 애플리케이션을 사용하는 Adobe, 파트너 [!DNL Experience Platform] 및 공급업체가 제공하는 리소스가 포함되어 있습니다. 레지스트리는 사용 가능한 모든 라이브러리 리소스에 액세스할 수 있는 사용자 인터페이스 및 RESTful API를 제공합니다.
 
-이 자습서에서는 스키마 레지스트리 API를 사용하여 표준 클래스를 사용하여 스키마를 구성하는 단계를 안내합니다. Experience Platform에서 사용자 인터페이스를 사용하려는 경우 스키마 편집기 자습서 [](create-schema-ui.md) 는 스키마 편집기에서 유사한 작업을 수행하기 위한 단계별 지침을 제공합니다.
+이 자습서에서는 [!DNL Schema Registry] API를 사용하여 표준 클래스를 사용하여 스키마를 구성하는 단계를 안내합니다. 사용자 인터페이스를 에서 사용하려는 경우 스키마 편집기 자습서 [!DNL Experience Platform]는 스키마 편집기에서 유사한 작업 [](create-schema-ui.md) 을 수행하기 위한 단계별 지침을 제공합니다.
 
 ## 시작하기
 
 이 가이드는 다음과 같은 Adobe Experience Platform 구성 요소에 대해 작업해야 합니다.
 
-* [XDM(Experience Data Model) 시스템](../home.md): Experience Platform이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
+* [!DNL Experience Data Model (XDM) System](../home.md): 고객 경험 데이터를 [!DNL Experience Platform] 구성하는 표준화된 프레임워크
    * [스키마 컴포지션의 기본 사항](../schema/composition.md): 스키마 컴포지션의 주요 원칙 및 모범 사례 등 XDM 스키마의 기본 구성 요소에 대해 알아봅니다.
-* [실시간 고객 프로필](../../profile/home.md): 여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
-* [샌드박스](../../sandboxes/home.md): Experience Platform은 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되도록 단일 Platform 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
+* [!DNL Real-time Customer Profile](../../profile/home.md): 여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
+* [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되도록 단일 [!DNL Platform] 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
 
-이 자습서를 시작하기 전에 [개발자 가이드에서](../api/getting-started.md) 스키마 레지스트리 API를 성공적으로 호출하기 위해 알아야 할 중요한 정보를 검토하십시오. 여기에는 사용자 `{TENANT_ID}`, &quot;컨테이너&quot;의 개념 및 요청 시 필요한 헤더가 포함됩니다(수락 헤더와 가능한 값에 특별히 주의).
+이 자습서를 시작하기 전에 [개발자 가이드에서](../api/getting-started.md) API를 성공적으로 호출하기 위해 알아야 할 중요한 정보가 있는지 [!DNL Schema Registry] 확인하십시오. 여기에는 사용자 `{TENANT_ID}`, &quot;컨테이너&quot;의 개념 및 요청 시 필요한 헤더가 포함됩니다(수락 헤더와 가능한 값에 특별히 주의).
 
 이 자습서에서는 소매 충성도 프로그램의 구성원과 관련된 데이터를 설명하는 충성도 멤버 스키마를 구성하는 단계를 안내합니다. 시작하기 전에 부록에서 [전체 충성도 멤버 스키마를](#complete-schema) 미리 볼 수 있습니다.
 
 ## 표준 클래스로 스키마 작성
 
-스키마는 Experience Platform에 인제스트하려는 데이터의 청사진이라고 생각할 수 있습니다. 각 스키마는 클래스와 0개 이상의 혼합으로 구성됩니다. 즉, 스키마를 정의하기 위해 혼합을 추가할 필요는 없지만 대부분의 경우 혼합을 하나 이상 사용합니다.
+스키마는 인제스트할 데이터의 청사진이라고 생각할 수 있습니다 [!DNL Experience Platform]. 각 스키마는 클래스와 0개 이상의 혼합으로 구성됩니다. 즉, 스키마를 정의하기 위해 혼합을 추가할 필요는 없지만 대부분의 경우 혼합을 하나 이상 사용합니다.
 
 ### 클래스 지정
 
 스키마 구성 프로세스는 클래스를 선택하여 시작합니다. 이 클래스는 데이터(레코드 및 시간 시리즈)의 주요 행동 측면과 인제스트할 데이터를 설명하는 데 필요한 최소 필드를 정의합니다.
 
-이 자습서에서 만드는 스키마는 XDM 개별 프로필 클래스를 사용합니다. XDM 개별 프로필은 Adobe에서 기록 동작을 정의하기 위해 제공하는 표준 클래스입니다. 비헤이비어에 대한 자세한 내용은 스키마 [컴포지션의 기본 사항을 참조하십시오](../schema/composition.md).
+이 자습서에서 만드는 스키마는 클래스를 [!DNL XDM Individual Profile] 사용합니다. [!DNL XDM Individual Profile] 는 Adobe가 기록 동작을 정의하기 위해 제공하는 표준 클래스입니다. 비헤이비어에 대한 자세한 내용은 스키마 [컴포지션의 기본 사항을 참조하십시오](../schema/composition.md).
 
 클래스를 할당하기 위해 테넌트 컨테이너에 새 스키마를 만들기(POST)하기 위해 API 호출이 수행됩니다. 이 호출에는 스키마가 구현할 클래스가 포함됩니다. 각 스키마는 하나의 클래스만 구현할 수 있습니다.
 
@@ -51,7 +51,7 @@ POST /tenant/schemas
 
 **요청**
 
-요청에는 클래스의 속성을 참조하는 `allOf` 속성 `$id` 이 포함되어야 합니다. 이 속성은 스키마가 구현할 &quot;기본 클래스&quot;를 정의합니다. 이 예에서 기본 클래스는 XDM 개별 프로필 클래스입니다. XDM 개인 프로필 클래스 `$id` 의 값은 아래 배열에서 `$ref` 필드 값으로 `allOf` 사용됩니다.
+요청에는 클래스의 속성을 참조하는 `allOf` 속성 `$id` 이 포함되어야 합니다. 이 속성은 스키마가 구현할 &quot;기본 클래스&quot;를 정의합니다. 이 예에서 기본 클래스는 [!DNL XDM Individual Profile] 클래스입니다. 클래스 `$id` 의 [!DNL XDM Individual Profile] 값은 아래 배열에서 `$ref` 필드 값으로 `allOf` 사용됩니다.
 
 ```SHELL
 curl -X POST \
@@ -75,7 +75,7 @@ curl -X POST \
 
 **응답**
 
-요청이 성공하면 HTTP 응답 상태 201(Created)이 응답 본문과 함께 반환되며 여기에는 `$id`, `meta:altIt`및 `version`등 새로 생성된 스키마의 세부 정보가 포함됩니다. 이러한 값은 읽기 전용이며 스키마 레지스트리에서 할당합니다.
+요청이 성공하면 HTTP 응답 상태 201(Created)이 응답 본문과 함께 반환되며 여기에는 `$id`, `meta:altIt`및 `version`등 새로 생성된 스키마의 세부 정보가 포함됩니다. 이러한 값은 읽기 전용이며, [!DNL Schema Registry]
 
 ```JSON
 {
@@ -258,7 +258,7 @@ curl -X PATCH \
 
 >[!TIP]
 >
->각 영역에 익숙해지도록 모든 가능한 믹스를 검토하는 것은 가치가 있다. 각 &quot;global&quot; 및 &quot;tenant&quot; 컨테이너에 대한 요청을 수행하여 특정 클래스에 사용할 수 있는 모든 믹스를 나열하고 &quot;meta:intendToExtend&quot; 필드가 사용 중인 클래스와 일치하는 믹스만 반환할 수 있습니다(GET). 이 경우 XDM 개인 프로필 클래스이므로 XDM 개별 프로필이 `$id` 사용됩니다.
+>각 영역에 익숙해지도록 모든 가능한 믹스를 검토하는 것은 가치가 있다. 각 &quot;global&quot; 및 &quot;tenant&quot; 컨테이너에 대한 요청을 수행하여 특정 클래스에 사용할 수 있는 모든 믹스를 나열하고 &quot;meta:intendToExtend&quot; 필드가 사용 중인 클래스와 일치하는 믹스만 반환할 수 있습니다(GET). 이 경우 [!DNL XDM Individual Profile] 클래스이므로 이 [!DNL XDM Individual Profile] `$id` 가 사용됩니다.
 
 ```http
 GET /global/mixins?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
@@ -342,7 +342,7 @@ curl -X PATCH \
 
 충성도 구성원 스키마는 충성도 프로그램에 고유한 정보를 캡처해야 합니다. 이 정보는 표준 혼합에 포함되지 않습니다.
 
-테넌트 컨테이너 내에 고유한 혼합을 정의할 수 있도록 하여 스키마 레지스트리 계정에서 이에 대한 계정을 만듭니다. 이러한 혼합은 조직에 고유하며 IMS Org 외부에 있는 사용자가 보거나 편집할 수 없습니다.
+테넌트 컨테이너 내에 자신의 믹스를 정의할 수 있도록 허용하여 이에 대한 계정입니다. [!DNL Schema Registry] 이러한 혼합은 조직에 고유하며 IMS Org 외부에 있는 사용자가 보거나 편집할 수 없습니다.
 
 새 혼합을 만들기(POST) 위해 요청에는 믹싱이 포함될 속성과 함께 믹싱과 호환되는 기본 클래스 `meta:intendedToExtend` `$id` 의 필드가 포함되어 있어야 합니다.
 
@@ -417,7 +417,7 @@ curl -X POST\
 
 **응답**
 
-요청이 성공하면 HTTP 응답 상태 201(Created)이 반환되고 새로 만든 믹스에 대한 세부 사항(예: `$id`, `meta:altIt`및 `version`포함)이 포함된 응답 본문이 반환됩니다. 이러한 값은 읽기 전용이며 스키마 레지스트리에서 할당합니다.
+요청이 성공하면 HTTP 응답 상태 201(Created)이 반환되고 새로 만든 믹스에 대한 세부 사항(예: `$id`, `meta:altIt`및 `version`포함)이 포함된 응답 본문이 반환됩니다. 이러한 값은 읽기 전용이며, [!DNL Schema Registry]
 
 ```JSON
 {
@@ -754,7 +754,7 @@ curl -X POST \
 
 **응답**
 
-요청이 성공하면 HTTP 응답 상태 201(작성됨)이 반환되고 새로 만든 데이터 형식(예: `$id`, `meta:altIt`및 `version`포함)의 세부 정보가 포함된 응답 본문이 반환됩니다. 이러한 값은 읽기 전용이며 스키마 레지스트리에서 할당합니다.
+요청이 성공하면 HTTP 응답 상태 201(작성됨)이 반환되고 새로 만든 데이터 형식(예: `$id`, `meta:altIt`및 `version`포함)의 세부 정보가 포함된 응답 본문이 반환됩니다. 이러한 값은 읽기 전용이며, [!DNL Schema Registry]
 
 ```JSON
 {
@@ -954,9 +954,9 @@ curl -X PATCH \
 
 ### ID 설명자 정의
 
-스키마는 데이터를 Experience Platform으로 인제스트하는 데 사용됩니다. 이 데이터는 궁극적으로 여러 서비스에서 사용되어 하나의 통합된 개별 뷰를 생성합니다. 이 프로세스를 돕기 위해 키 필드를 &quot;ID&quot;로 표시하고 데이터 수집 시 해당 필드의 데이터가 해당 개인의 &quot;ID 그래프&quot;에 삽입됩니다. 그러면 [실시간 고객 프로필](../../profile/home.md) 및 기타 Experience Platform 서비스에서 그래프 데이터에 액세스하여 각 개별 고객에 대한 연결된 보기를 제공할 수 있습니다.
+스키마는 데이터를 인제스트하는 데 사용됩니다 [!DNL Experience Platform]. 이 데이터는 궁극적으로 여러 서비스에서 사용되어 하나의 통합된 개별 뷰를 생성합니다. 이 프로세스를 돕기 위해 키 필드를 &quot;ID&quot;로 표시하고 데이터 수집 시 해당 필드의 데이터가 해당 개인의 &quot;ID 그래프&quot;에 삽입됩니다. 그러면 그래프 데이터에 [!DNL Real-time Customer Profile](../../profile/home.md) 액세스하고 다른 [!DNL Experience Platform] 서비스를 통해 각 개별 고객에 대한 연결된 보기를 제공할 수 있습니다.
 
-일반적으로 &quot;ID&quot;로 표시된 필드는 다음과 같습니다. 이메일 주소, 전화 번호, [Experience Cloud ID(ECID)](https://docs.adobe.com/content/help/ko-KR/id-service/using/home.html), CRM ID 또는 기타 고유한 ID 필드
+일반적으로 &quot;ID&quot;로 표시된 필드는 다음과 같습니다. 이메일 주소, 전화 번호, [!DNL Experience Cloud ID (ECID)](https://docs.adobe.com/content/help/ko-KR/id-service/using/home.html)CRM ID 또는 기타 고유 ID 필드
 
 ID 필드도 양호할 수 있으므로 조직 고유의 식별자를 고려해야 합니다.
 
@@ -972,7 +972,7 @@ POST /tenant/descriptors
 
 **요청**
 
-다음 요청은 &quot;loyaltyId&quot; 필드에 ID 설명자를 정의합니다. 이는 Experience Platform이 개인 정보를 연결하는 데 도움이 되도록 고유한 로열티 프로그램 멤버 식별자(이 경우 멤버의 이메일 주소)를 사용하라는 지시입니다.
+다음 요청은 &quot;loyaltyId&quot; 필드에 ID 설명자를 정의합니다. 이는 개인 [!DNL Experience Platform] 에 대한 정보를 연결하는 데 도움이 되도록 고유한 로열티 프로그램 멤버 식별자(이 경우 멤버의 이메일 주소)를 사용하라는 의미입니다.
 
 ```SHELL
 curl -X POST \
@@ -995,11 +995,11 @@ curl -X POST \
 
 >[!NOTE]
 >
->사용 가능한 &quot;xdm:namespace&quot; 값을 나열하거나 [Identity Service API를 사용하여 새 값을 만들 수 있습니다](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml). 사용되는 &quot;xdm:namespace&quot;에 따라 &quot;xdm:code&quot; 또는 &quot;xdm:id&quot;에 대한 값이 &quot;xdm:code&quot;일 수 있습니다.
+>사용 가능한 &quot;xdm:namespace&quot; 값을 나열하거나, 를 사용하여 새 값을 만들 수 있습니다 [!DNL Identity Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml). 사용되는 &quot;xdm:namespace&quot;에 따라 &quot;xdm:code&quot; 또는 &quot;xdm:id&quot;에 대한 값이 &quot;xdm:code&quot;일 수 있습니다.
 
 **응답**
 
-성공적인 응답은 HTTP 상태 201(Created)을 반환하고 새로 만든 설명자를 비롯하여 세부 사항을 포함하는 응답 본문을 반환합니다 `@id`. 스키마 레지스트리에서 `@id` 할당한 읽기 전용 필드이며 API의 설명자를 참조하는 데 사용됩니다.
+성공적인 응답은 HTTP 상태 201(Created)을 반환하고 새로 만든 설명자를 비롯하여 세부 사항을 포함하는 응답 본문을 반환합니다 `@id`. API `@id` 의 설명자 참조용으로 사용되는 읽기 전용 [!DNL Schema Registry] 필드입니다.
 
 ```JSON
 {
@@ -1015,11 +1015,11 @@ curl -X POST \
 }
 ```
 
-## 실시간 고객 프로필에서 사용할 스키마 활성화
+## 스키마를 [!DNL Real-time Customer Profile]
 
-속성에 &quot;union&quot; 태그를 추가하면 실시간 고객 프로필에서 사용할 충성도 멤버 스키마를 활성화할 수 `meta:immutableTags` 있습니다.
+속성에 &quot;union&quot; 태그를 추가하면 `meta:immutableTags` 충성도 멤버 스키마를 사용할 수 있습니다 [!DNL Real-time Customer Profile].
 
-조합 보기 작업에 대한 자세한 내용은 스키마 레지스트리 개발자 안내서의 [조합](../api/unions.md) 섹션을 참조하십시오.
+조합 보기 작업에 대한 자세한 내용은 개발자 가이드의 [조합](../api/unions.md) 관련 섹션을 [!DNL Schema Registry] 참조하십시오.
 
 ### &quot;union&quot; 태그 추가
 
@@ -1103,9 +1103,9 @@ curl -X PATCH \
 
 ### 공용 구조체의 스키마 목록
 
-이제 스키마를 XDM 개인 프로필 결합에 추가했습니다. 동일한 조합의 일부인 모든 스키마 목록을 보려면 쿼리 매개 변수를 사용하여 GET 요청을 수행하여 응답을 필터링할 수 있습니다.
+이제 스키마에 스키마를 [!DNL XDM Individual Profile] 추가했습니다. 동일한 조합의 일부인 모든 스키마 목록을 보려면 쿼리 매개 변수를 사용하여 GET 요청을 수행하여 응답을 필터링할 수 있습니다.
 
-쿼리 매개 변수 `property` 를 사용하여 XDM 개별 프로필 클래스 `meta:immutableTags` 와 `meta:class` 동일한 `$id` 필드가 포함된 스키마만 반환되도록 지정할 수 있습니다.
+쿼리 매개 변수 `property` 를 사용하여 클래스 `meta:immutableTags` 와 `meta:class` 같은 필드가 포함된 스키마만 반환되도록 지정할 수 `$id` [!DNL XDM Individual Profile] 있습니다.
 
 **API 형식**
 
@@ -1115,7 +1115,7 @@ GET /tenant/schemas?property=meta:immutableTags==union&property=meta:class=={CLA
 
 **요청**
 
-아래의 예제 요청은 XDM 개별 프로필 조합의 일부인 모든 스키마를 반환합니다.
+아래 예제 요청은 [!DNL XDM Individual Profile] 조합의 일부인 모든 스키마를 반환합니다.
 
 ```SHELL
 curl -X GET \
@@ -1183,7 +1183,7 @@ curl -X GET \
 
 이 자습서 전체에서 소매 충성도 프로그램의 구성원을 설명하기 위해 스키마가 구성됩니다.
 
-스키마는 XDM 개별 프로필 클래스를 구현하고 여러 혼합을 결합합니다. 튜토리얼 중에 정의된 &quot;충성도 세부 사항&quot; 믹스뿐만 아니라 표준 &quot;개인 세부 사항&quot; 및 &quot;개인 세부 사항&quot; 조합을 사용하여 충성도 구성원에 대한 정보를 제공합니다.
+스키마는 클래스를 구현하고 여러 혼합을 [!DNL XDM Individual Profile] 결합합니다. 튜토리얼 중에 정의된 &quot;충성도 세부 사항&quot; 믹스뿐만 아니라 표준 &quot;개인 세부 사항&quot; 및 &quot;개인 세부 사항&quot; 조합을 사용하여 충성도 구성원에 대한 정보를 제공합니다.
 
 다음은 완료된 충성도 멤버 스키마를 JSON 형식으로 보여 줍니다.
 
