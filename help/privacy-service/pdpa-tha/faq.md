@@ -4,9 +4,9 @@ solution: Experience Platform
 title: PDPA(태국) FAQ
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: ccfc90fe6de80ab050c3b937be7626be4e90db1c
+source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
 workflow-type: tm+mt
-source-wordcount: '449'
+source-wordcount: '445'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # PDPA(태국) FAQ
 
-이 문서에서는 태국 개인정보 보호법(PDPA)과 Adobe Experience Cloud의 구현과 관련하여 자주 묻는 질문에 대한 답변을 제공합니다.
+이 문서에서는 태국(PDPA) 및 Adobe Experience Cloud [!DNL Personal Data Protection Act] 의 구현과 관련하여 자주 묻는 질문에 대한 답변을 제공합니다.
 
 이 문서에서 사용되는 다양한 PDPA 관련 용어의 정의는 [PDPA(태국) 용어](./terminology.md) 문서에서 찾을 수 있습니다.
 
