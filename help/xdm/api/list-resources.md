@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 리소스 목록
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '519'
+source-wordcount: '508'
 ht-degree: 2%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 2%
 
 # 리소스 목록
 
-단일 GET 요청을 수행하여 컨테이너 내에 특정 유형(클래스, 믹싱, 스키마, 데이터 유형 또는 설명자)의 모든 스키마 레지스트리 리소스 목록을 볼 수 있습니다.
+단일 GET 요청을 수행하여 컨테이너 내의 특정 유형(클래스, 믹싱, 스키마, 데이터 유형 또는 설명자)의 모든 [!DNL Schema Registry] 리소스 목록을 볼 수 있습니다.
 
 >[!NOTE]
 >
->리소스를 나열할 때 스키마 레지스트리는 결과 세트를 300개 항목으로 제한합니다. 이 제한을 넘는 리소스를 반환하려면 [페이징 매개 변수를 사용해야 합니다](#paging). 쿼리 매개 변수를 사용하여 결과를 [필터링하고 반환된](#filtering) 리소스 수를 줄이는 것도 좋습니다.
+>리소스를 나열할 때 결과가 300개 [!DNL Schema Registry] 항목으로 제한됩니다. 이 제한을 넘는 리소스를 반환하려면 [페이징 매개 변수를 사용해야 합니다](#paging). 쿼리 매개 변수를 사용하여 결과를 [필터링하고 반환된](#filtering) 리소스 수를 줄이는 것도 좋습니다.
 
 **API 형식**
 
@@ -30,7 +30,7 @@ GET /{CONTAINER_ID}/{RESOURCE_TYPE}?{QUERY_PARAMS}
 | 매개 변수 | 설명 |
 | --- | --- |
 | `{CONTAINER_ID}` | 리소스가 있는 컨테이너(&quot;전역&quot; 또는 &quot;테넌트&quot;). |
-| `{RESOURCE_TYPE}` | 스키마 라이브러리에서 검색할 리소스 유형입니다. 유효한 유형은 `classes`, `mixins``schemas`, `datatypes`및 `descriptors`입니다. |
+| `{RESOURCE_TYPE}` | 에서 검색할 리소스 [!DNL Schema Library]유형입니다. 유효한 유형은 `classes`, `mixins``schemas`, `datatypes`및 `descriptors`입니다. |
 | `{QUERY_PARAMS`} | 결과를 필터링하는 선택적 쿼리 매개 변수입니다. 자세한 내용은 [쿼리 매개 변수](#query) 섹션을 참조하십시오. |
 
 **요청**
@@ -78,7 +78,7 @@ curl -X GET \
 
 ## 쿼리 매개 변수 사용 {#query}
 
-스키마 레지스트리는 리소스를 나열할 때 쿼리 매개 변수를 페이지에 사용하고 결과를 필터링하는 것을 지원합니다.
+이 [!DNL Schema Registry] 는 리소스를 나열할 때 페이지 및 필터 결과에 쿼리 매개 변수를 사용할 수 있도록 지원합니다.
 
 >[!NOTE]
 >
@@ -111,4 +111,4 @@ curl -X GET \
 
 >[!TIP]
 >
->매개 변수를 사용하여 호환 클래스에 따라 믹스를 필터링할 수 `property` 있습니다. 예를 들어 XDM 개별 프로필 클래스와 호환되는 혼합만 `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` 반환합니다.
+>매개 변수를 사용하여 호환 클래스에 따라 믹스를 필터링할 수 `property` 있습니다. 예를 들어, 클래스 `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` 와 호환되는 혼합만 [!DNL XDM Individual Profile] 반환합니다.
