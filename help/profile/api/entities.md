@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: 엔티티 - 실시간 고객 프로필 API
 topic: guide
 translation-type: tm+mt
-source-git-commit: d1656635b6d082ce99f1df4e175d8dd69a63a43a
+source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
 workflow-type: tm+mt
-source-wordcount: '1689'
+source-wordcount: '1671'
 ht-degree: 1%
 
 ---
@@ -14,15 +14,15 @@ ht-degree: 1%
 
 # 엔터티 끝점(프로필 액세스)
 
-Adobe Experience Platform을 사용하면 RESTful API 또는 사용자 인터페이스를 사용하여 실시간 고객 프로필 데이터에 액세스할 수 있습니다. 이 안내서에서는 API를 사용하여 일반적으로 &quot;프로필&quot;이라고 하는 엔터티에 액세스하는 방법을 설명합니다. Platform UI를 사용하여 프로파일에 액세스하는 방법에 대한 자세한 내용은 [프로필 사용 안내서를 참조하십시오](../ui/user-guide.md).
+Adobe Experience Platform을 사용하면 RESTful API 또는 사용자 인터페이스를 사용하여 [!DNL Real-time Customer Profile] 데이터에 액세스할 수 있습니다. 이 안내서에서는 API를 사용하여 일반적으로 &quot;프로필&quot;이라고 하는 엔터티에 액세스하는 방법을 설명합니다. UI를 사용하여 프로파일에 액세스하는 방법에 대한 자세한 내용은 [!DNL Platform] 프로필 사용 안내서를 참조하십시오 [](../ui/user-guide.md).
 
 ## 시작하기
 
-이 안내서에서 사용되는 API 끝점은 [실시간 고객 프로필 API의 일부입니다](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). 계속하기 전에 [시작하기 가이드](getting-started.md) (관련 문서 링크, 이 문서에서 샘플 API 호출 읽기 안내서)와 Experience Platform API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요 정보를 검토하십시오.
+이 안내서에서 사용되는 API 끝점은 이 끝점의 일부입니다 [!DNL Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). 계속하기 전에 [시작하기 가이드](getting-started.md) 에서 관련 문서 링크, 이 문서에서 샘플 API 호출 읽기 안내서, 모든 API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요 정보를 검토하십시오 [!DNL Experience Platform] .
 
 ## ID로 프로필 데이터 액세스
 
-끝점에 GET 요청을 만들고 일련의 쿼리 매개 변수로 엔터티의 ID를 제공하여 프로필 엔터티에 액세스할 수 있습니다. `/access/entities` 이 ID는 ID 값(`entityId`)과 ID 네임스페이스(`entityIdNS`)로 구성됩니다.
+끝점에 GET 요청을 만들고 일련의 쿼리 매개 변수로 엔티티의 ID를 제공하여 엔터티에 액세스할 수 [!DNL Profile] `/access/entities` 있습니다. 이 ID는 ID 값(`entityId`)과 ID 네임스페이스(`entityIdNS`)로 구성됩니다.
 
 요청 경로에 제공된 쿼리 매개 변수는 액세스할 데이터를 지정합니다. 앰퍼샌드(&amp;)로 구분된 여러 매개 변수를 포함할 수 있습니다. 부칙의 [쿼리 매개 변수](#query-parameters) 섹션에 유효한 매개 변수의 전체 목록이 제공됩니다.
 
@@ -774,7 +774,7 @@ curl -X POST \
 
 ## 여러 스키마 엔티티에서 시간 시리즈 이벤트에 액세스
 
-관계 설명자를 통해 연결된 여러 개체에 액세스할 수 있습니다. 다음 예제 API 호출에서는 두 스키마 사이에 관계가 이미 정의되어 있다고 가정합니다. 관계 설명자에 대한 자세한 내용은 스키마 레지스트리 API 개발자 가이드 [끝점 안내서를 참조하십시오](../../xdm/api/descriptors.md).
+관계 설명자를 통해 연결된 여러 개체에 액세스할 수 있습니다. 다음 예제 API 호출에서는 두 스키마 사이에 관계가 이미 정의되어 있다고 가정합니다. 관계 설명자에 대한 자세한 내용은 [!DNL Schema Registry] API 개발자 가이드 [설명자 끝점 안내서를 참조하십시오](../../xdm/api/descriptors.md).
 
 액세스할 데이터를 지정하기 위해 요청 경로에 쿼리 매개 변수를 포함할 수 있습니다. 앰퍼샌드(&amp;)로 구분된 여러 매개 변수를 포함할 수 있습니다. 부칙의 [쿼리 매개 변수](#query-parameters) 섹션에 유효한 매개 변수의 전체 목록이 제공됩니다.
 
@@ -884,11 +884,11 @@ curl -X GET \
 
 ## 다음 단계
 
-이 안내서를 따르면 실시간 고객 프로필 데이터 필드, 프로필 및 시계열 데이터에 성공적으로 액세스했습니다. Platform에 저장된 다른 데이터 리소스에 액세스하는 방법을 알아보려면 [데이터 액세스 개요를 참조하십시오](../../data-access/home.md).
+이 안내서를 따르면 데이터 필드, 프로필 및 시계열 데이터에 성공적으로 액세스했습니다. [!DNL Real-time Customer Profile] 에 저장된 다른 데이터 리소스에 액세스하는 방법 [!DNL Platform]을 알아보려면 [데이터 액세스 개요를 참조하십시오](../../data-access/home.md).
 
 ## 부록 {#appendix}
 
-다음 섹션에서는 API를 사용한 프로필 데이터 액세스에 대한 보충 정보를 제공합니다.
+다음 섹션에서는 API를 사용한 데이터 액세스에 대한 보충 정보를 제공합니다. [!DNL Profile]
 
 ### 쿼리 매개 변수 {#query-parameters}
 
