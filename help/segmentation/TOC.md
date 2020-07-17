@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform 세그멘테이션 서비스 도움말
 translation-type: tm+mt
-source-git-commit: 58781fb5622564b29cf250459a9149cf25672bfa
+source-git-commit: a1f80b86a1e761c15d567821b13c7533b7fcf622
 workflow-type: tm+mt
-source-wordcount: '102'
+source-wordcount: '103'
 ht-degree: 7%
 
 ---
@@ -14,6 +14,7 @@ ht-degree: 7%
 # Adobe Experience Platform 세그멘테이션 서비스 도움말 {#segmentation}
 
 - [개요](home.md)
+- [세그멘테이션 데이터 유형](data-types.md)
 - 세그멘테이션 API {#api}
    - [시작하기](api/getting-started.md)
    - [세그먼트 정의](api/segment-definitions.md)
@@ -40,8 +41,7 @@ ht-degree: 7%
 - 자습서 {#tutorials}
    - [세그먼트 만들기](tutorials/create-a-segment.md)
    - [세그먼트 평가](tutorials/evaluate-a-segment.md)
-   - [데이터 내보내기](tutorials/export-data.md)
    - [데이터를 내보낼 데이터 세트 만들기](tutorials/create-dataset-export-segment.md)
    - [세그먼트에 대한 데이터 사용 규정 준수](tutorials/governance.md)
 - [API 참조](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)
-- [플랫폼 릴리스 정보](https://www.adobe.com/go/platform-release-notes-en)
+- [Platform 릴리스 노트](https://www.adobe.com/go/platform-release-notes-en)
