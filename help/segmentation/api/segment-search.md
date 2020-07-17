@@ -1,30 +1,28 @@
 ---
 keywords: Experience Platform;segmentation;segmentation service;troubleshooting;API;seg;
 solution: Adobe Experience Platform
-title: 세그멘테이션 API 개발자 가이드
+title: 세그먼트 검색 끝점 가이드
 topic: guide
 translation-type: tm+mt
-source-git-commit: f489e9f9dfc9c7e94f76a6825e7ca24c41ee8a66
+source-git-commit: 41a5d816f9dc6e7c26141ff5e9173b1b5631d75e
 workflow-type: tm+mt
-source-wordcount: '1172'
+source-wordcount: '1141'
 ht-degree: 2%
 
 ---
 
 
-# 세그먼트 검색
+# 세그먼트 검색 끝점 안내서
 
-세그먼트 검색은 다양한 데이터 소스에 포함된 구성 가능한 필드를 검색하고 인덱싱하여 거의 실시간으로 반환하는 데 사용됩니다.
+세그먼트 검색은 다양한 데이터 소스에 포함된 필드를 검색하고 거의 실시간으로 반환하는 데 사용됩니다.
 
 이 안내서에서는 세그먼트 검색을 더 잘 이해할 수 있도록 정보를 제공하며 API를 사용하여 기본 작업을 수행하기 위한 샘플 API 호출을 포함합니다.
 
 ## 시작하기
 
-이 안내서에서 사용되는 API 끝점은 세그멘테이션 API의 일부입니다. 계속하기 전에 세그멘테이션 개발자 [안내서를 검토하십시오](getting-started.md).
+이 안내서에 사용되는 끝점은 [!DNL Adobe Experience Platform Segmentation Service] API의 일부입니다. 계속하기 전에 [시작 안내서](./getting-started.md) 에서 필수 머리글 및 예제 API 호출 읽기 방법을 포함하여 API를 성공적으로 호출하기 위해 알아야 하는 중요한 정보를 검토하십시오.
 
-특히 세그멘테이션 개발자 안내서의 [시작 섹션에는 관련 항목에 대한 링크, 이 문서에서 샘플 API 호출 읽기 안내서, Experience Platform API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요 정보가 포함되어 있습니다](getting-started.md) .
-
-시작하기 섹션에 요약된 필수 헤더 외에, 세그먼트 검색 API에 대한 모든 요청에는 다음과 같은 추가 헤더가 필요합니다.
+시작하기 섹션에 요약된 필수 헤더 외에 세그먼트 검색 종단점에 대한 모든 요청에는 다음과 같은 추가 헤더가 필요합니다.
 
 - x-ups-search-version: &quot;1.0&quot;
 
@@ -223,11 +221,11 @@ curl -X GET \
 
 ## 다음 단계
 
-이제 이 안내서를 읽고 세그먼트 검색 방법을 더 잘 이해할 수 있습니다. 세그멘테이션에 대한 자세한 내용은 세그멘테이션 [개요를 참조하십시오](../home.md).
+이제 이 안내서를 읽고 세그먼트 검색 방법을 더 잘 이해할 수 있습니다.
 
 ## 부록 {#appendix}
 
-다음 섹션에서는 검색어 작동 방식에 대한 추가 정보를 제공합니다. 검색 쿼리는 다음과 같은 방법으로 작성됩니다. `s={FieldName}:{SearchExpression}`. 예를 들어 AAM 또는 플랫폼이라는 세그먼트를 검색하려면 다음 검색 쿼리를 사용합니다. `s=segmentName:AAM%20OR%20Platform`.
+다음 섹션에서는 검색어 작동 방식에 대한 추가 정보를 제공합니다. 검색 쿼리는 다음과 같은 방법으로 작성됩니다. `s={FieldName}:{SearchExpression}`. 예를 들어 AAM 또는 Platform라는 세그먼트를 검색하려면 다음 검색 쿼리를 사용합니다. `s=segmentName:AAM%20OR%20Platform`.
 
 > !![NOTE] 최상의 방법을 위해 검색 표현식은 위에 표시된 예와 같이 HTML로 인코딩되어야 합니다.
 
