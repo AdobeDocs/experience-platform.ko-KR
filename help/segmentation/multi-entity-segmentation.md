@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 다중 엔티티 세그먼테이션
 topic: overview
 translation-type: tm+mt
-source-git-commit: 7110be2654e55ea411580f8c9e2e92bb52badab5
+source-git-commit: f44e42a4faa3b10f147dbaf929048054ce0bec42
 workflow-type: tm+mt
-source-wordcount: '406'
+source-wordcount: '396'
 ht-degree: 0%
 
 ---
@@ -36,12 +36,12 @@ XDM(Experience Data Model) 스키마 구조와의 관계를 정의하는 것은 
 
 ## XDM 관계를 사용하는 세그먼트를 만드는 방법
 
-XDM 관계를 정의한 후에는 실시간 고객 프로필 API를 사용하여 세그먼트를 작성할 수 있습니다.
+XDM 관계를 정의한 후에는 세그멘테이션 서비스 API를 사용하여 세그먼트를 작성할 수 있습니다.
 
-이 프로세스는 실시간 고객 프로필 API 또는 세그먼트 빌더를 사용하여 수행할 수 있습니다. API를 사용하여 세그먼트를 만드는 방법에 대한 자세한 설명은 실시간 고객 프로필 API [를 사용하여 세그먼트를 만드는 방법에 대한 자습서를 참조하십시오](./tutorials/create-a-segment.md). 세그먼트 빌더를 사용하여 세그먼트를 만드는 방법에 대한 자세한 설명은 세그먼트 빌더 사용자 가이드 [를 참조하십시오](./ui/overview.md).
+이 프로세스는 세그멘테이션 API 또는 세그먼트 빌더 사용자 인터페이스를 사용하여 수행할 수 있습니다. API를 사용하여 세그먼트를 만드는 방법에 대한 자세한 설명은 세그멘테이션 API [를 사용하여 세그먼트를 만드는 방법에 대한 자습서를 참조하십시오](./tutorials/create-a-segment.md). 세그먼트 빌더를 사용하여 세그먼트를 만드는 방법에 대한 자세한 설명은 세그먼트 빌더 사용자 가이드 [를 참조하십시오](./ui/overview.md).
 
 ## 다중 엔티티 세그먼트에 대한 세그먼트를 평가하고 액세스하는 방법
 
-세그먼트를 만든 후 실시간 고객 프로필 API를 사용하여 세그먼트 결과를 평가하고 액세스할 수 있습니다. 다중 엔티티 세그먼트 평가는 일반 세그먼트 평가와 매우 유사합니다.
+세그먼트를 만든 후 [!DNL Segmentation Service] API를 사용하여 세그먼트 결과를 평가하고 액세스할 수 있습니다. 다중 엔티티 세그먼트 평가는 일반 세그먼트 평가와 매우 유사합니다.
 
-이 프로세스는 실시간 고객 프로필 API를 통해서만 수행할 수 있습니다. API를 사용하여 세그먼트를 평가하고 액세스하는 방법에 대한 자세한 설명은 세그먼트 [를 평가하고 액세스하는 방법에 대한 자습서를 참조하십시오](./tutorials/evaluate-a-segment.md).
+이 프로세스는 [!DNL Segmentation Service] API를 사용해서만 수행할 수 있습니다. API를 사용하여 세그먼트를 평가하고 액세스하는 방법에 대한 자세한 설명은 세그먼트 [평가 및 액세스에 대한 자습서를 참조하십시오](./tutorials/evaluate-a-segment.md).
