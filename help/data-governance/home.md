@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform 데이터 거버넌스
 topic: overview
 translation-type: tm+mt
-source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
+source-git-commit: 53225525feb1878aae58939338c1a94f98ec1607
 workflow-type: tm+mt
-source-wordcount: '1406'
+source-wordcount: '1342'
 ht-degree: 0%
 
 ---
@@ -44,7 +44,7 @@ Adobe Experience Platform [!DNL Data Governance] 를 사용하면 고객 데이�
 
 ## DULE 프레임워크
 
-DULE(Data Usage Lawring and Enforcement)는 핵심 프레임워크입니다 [!DNL Experience Platform] [!DNL Data Governance]. DULE는 데이터를 분류하고 데이터 사용 정책을 만드는 과정을 간소화하고 능률화합니다. 데이터 레이블을 적용하고 데이터 사용 정책을 적용하면 마케팅 작업을 평가하여 데이터를 올바르게 사용할 수 있습니다.
+DULE(Data Usage Lawring and Enforcement)는 핵심 프레임워크입니다 [!DNL Experience Platform] [!DNL Data Governance]. DULE는 데이터를 분류하고 데이터 사용 정책을 만드는 과정을 간소화하고 능률화합니다. 데이터 레이블이 적용되고 데이터 사용 정책이 적용되면 마케팅 작업을 평가하여 데이터를 올바르게 사용할 수 있습니다.
 
 DULE 프레임워크에는 세 가지 주요 요소가 있습니다. 레이블, 정책 및 적용.
 
@@ -85,15 +85,6 @@ DULE 프레임워크에는 데이터를 세 가지 방법으로 분류하는 데
 >모든 데이터 사용 정책(Adobe에서 제공하는 핵심 정책 포함)은 기본적으로 비활성화됩니다. 개별 정책이 적용을 위해 고려되려면 해당 정책을 수동으로 활성화해야 합니다.
 
 데이터 사용 정책 및 마케팅 작업에 대한 자세한 내용은 [정책 개요를 참조하십시오](./policies/overview.md).
-
-## 향후 릴리스
-
-[!DNL Data Governance] 현재 두 수준(데이터 세트 및 필드)의 DULE 레이블을 지원합니다. [!DNL Data Governance] 또한 DULE [!DNL Policy Service] API를 통해 데이터 사용 정책 및 마케팅 작업의 작성 및 관리를 지원합니다.
-
-이후 릴리스에서는 다음과 같은 기능이 제공됩니다.
-
-* 정책 실행: 정책 프레임워크를 사용하여 다양한 데이터 액세스 패턴에 대한 정책을 조언하고 적용합니다.
-* 감사: 데이터 액세스 활동을 모니터링하고 준수 문제를 식별하고 보고합니다.
 
 ## 다음 단계
 
