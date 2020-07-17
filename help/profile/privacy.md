@@ -4,52 +4,52 @@ solution: Experience Platform
 title: 실시간 고객 프로필의 개인 정보 요청 처리
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
 workflow-type: tm+mt
-source-wordcount: '660'
+source-wordcount: '593'
 ht-degree: 0%
 
 ---
 
 
-# 실시간 고객 프로필의 개인 정보 요청 처리
+# 개인 정보 요청 처리 [!DNL Real-time Customer Profile]
 
-Adobe Experience Platform Privacy Service은 GDPR(General Data Protection Regulation) 및 CCPA(California Consumer Privacy Act)와 같은 개인 정보 보호 규정에 따라 고객의 개인 정보에 액세스하거나, 판매를 거부하거나, 삭제하도록 요구합니다.
+Adobe Experience Platform은 개인 정보를 액세스하거나, 판매를 거부하거나, 삭제하도록 고객의 요청을 GDPR(General Data Protection Regulation) 및 [!DNL Privacy Service] [!DNL California Consumer Privacy Act] (CPPA)와 같은 개인 정보 보호 규정에 따라 처리합니다.
 
-이 문서에서는 실시간 고객 프로파일에 대한 개인정보 보호 요청 처리와 관련된 중요한 개념을 다룹니다.
+이 문서에서는 개인정보 보호 요청 처리와 관련된 필수 개념을 다룹니다 [!DNL Real-time Customer Profile].
 
 ## 시작하기
 
-이 안내서를 읽기 전에 다음 Experience Platform 서비스에 대해 잘 알고 있는 것이 좋습니다.
+이 안내서를 읽기 전에 다음 [!DNL Experience Platform] 서비스에 대해 잘 알고 있는 것이 좋습니다.
 
-* [Privacy Service](home.md): Adobe Experience Cloud 애플리케이션에서 개인 데이터를 액세스, 판매 거부 또는 삭제하기 위한 고객 요청을 관리합니다.
-* [ID 서비스](../identity-service/home.md): 다양한 디바이스와 시스템에 ID를 연결하여 고객 경험 데이터의 세분화로 인한 기본적인 문제를 해결합니다.
-* [실시간 고객 프로필](../profile/home.md): 여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
+* [!DNL Privacy Service](home.md): Adobe Experience Cloud 애플리케이션에서 개인 데이터를 액세스, 판매 거부 또는 삭제하기 위한 고객 요청을 관리합니다.
+* [!DNL Identity Service](../identity-service/home.md): 다양한 디바이스와 시스템에 ID를 연결하여 고객 경험 데이터의 세분화로 인한 기본적인 문제를 해결합니다.
+* [!DNL Real-time Customer Profile](../profile/home.md): 여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
 
 ## ID 네임스페이스 이해 {#namespaces}
 
-Adobe Experience Platform ID 서비스는 시스템 및 디바이스에서 고객 ID 데이터를 연결해줍니다. Identity Service는 **ID 네임스페이스를** 사용하여 ID 값에 대한 컨텍스트를 ID 시스템에 연결함으로써 제공합니다. 네임스페이스는 이메일 주소(&quot;이메일&quot;)와 같은 일반 개념을 나타내거나 Adobe Advertising Cloud ID(&quot;AdCloud&quot;) 또는 Adobe Target ID(&quot;TNTID&quot;)와 같은 특정 응용 프로그램과 ID를 연결할 수 있습니다.
+Adobe Experience Platform [!DNL Identity Service] 는 시스템 및 디바이스에서 고객 ID 데이터를 연결해줍니다. [!DNL Identity Service] id 네임스페이스를 **** 사용하여 ID 값을 원본 시스템과 연결함으로써 ID 값에 컨텍스트를 제공합니다. 네임스페이스는 이메일 주소(&quot;이메일&quot;)와 같은 일반 개념을 나타내거나 Adobe Advertising Cloud ID(&quot;AdCloud&quot;) 또는 Adobe Target ID(&quot;TNTID&quot;)와 같은 특정 응용 프로그램과 ID를 연결할 수 있습니다.
 
 ID 서비스는 전역적으로 정의된(표준) 및 사용자 정의(사용자 정의) ID 네임스페이스의 저장소를 유지 관리합니다. 표준 네임스페이스는 모든 조직(예: &quot;이메일&quot; 및 &quot;ECID&quot;)에서 사용할 수 있지만 조직에서 특정 요구에 맞는 사용자 정의 네임스페이스를 만들 수도 있습니다.
 
-Experience Platform의 ID 네임스페이스에 대한 자세한 내용은 [ID 네임스페이스 개요를 참조하십시오](../identity-service/namespaces.md).
+의 ID 네임스페이스에 대한 자세한 내용 [!DNL Experience Platform]은 [ID 네임스페이스 개요를 참조하십시오](../identity-service/namespaces.md).
 
 ## 요청 제출 {#submit}
 
 >[!NOTE]
 >
->이 섹션에서는 프로필 데이터 저장소에 대한 개인 정보 요청을 만드는 방법에 대해 설명합니다. 요청 페이로드에서 제출된 사용자 ID 데이터의 형식을 적절하게 지정하는 방법을 비롯하여 개인 정보 작업을 제출하는 방법에 대한 전체 단계를 보려면 [Privacy Service API](../privacy-service/api/getting-started.md) 또는 [Privacy Service UI](../privacy-service/ui/overview.md) 설명서를 검토해야 합니다.
+>이 섹션에서는 데이터 저장소에 대한 개인 정보 요청을 만드는 방법을 [!DNL Profile] 설명합니다. 요청 페이로드에서 제출된 사용자 ID 데이터의 형식을 적절하게 지정하는 방법을 비롯하여 개인 정보 작업을 제출하는 방법에 대한 전체 단계를 보려면 [Privacy Service API](../privacy-service/api/getting-started.md) 또는 [Privacy Service UI](../privacy-service/ui/overview.md) 설명서를 검토해야 합니다.
 
-다음 섹션에서는 Privacy Service API 또는 UI를 사용하여 실시간 고객 프로필 및 Data Lake에 대한 개인 정보 요청을 만드는 방법에 대해 설명합니다.
+다음 섹션에서는 API 또는 UI를 사용하여 개인 정보 [!DNL Real-time Customer Profile] 를 [!DNL Data Lake] 요청하는 방법에 대해 [!DNL Privacy Service] 설명합니다.
 
 ### API 사용
 
-API에서 작업 요청 `userIDs` 을 만들 때 제공된 모든 작업 `namespace` 은 적용되는 데이터 저장소에 `type` 따라 특정 항목을 사용해야 합니다. 프로필 스토어의 ID는 해당 값에 &quot;standard&quot; 또는 &quot;custom&quot; 중 하나를 사용하고 해당 값에 대해 Identity Service가 인식하는 유효한 `type` ID 네임스페이스를 [사용해야](#namespaces) `namespace` 합니다.
+API에서 작업 요청 `userIDs` 을 만들 때 제공된 모든 작업 `namespace` 은 적용되는 데이터 저장소에 `type` 따라 특정 항목을 사용해야 합니다. 스토어의 [!DNL Profile] ID는 해당 `type` 값에 &quot;standard&quot; 또는 &quot;custom&quot; 중 하나를 사용하고 값 [에 대해 인식되는 유효한](#namespaces) ID 네임스페이스를 [!DNL Identity Service] 사용해야 `namespace` 합니다.
 
 
-또한 요청 페이로드 `include` 배열에 요청이 수행되는 다른 데이터 저장소에 대한 제품 값이 포함되어야 합니다. Data Lake에 요청을 할 때 배열에 &quot;ProfileService&quot; 값이 포함되어야 합니다.
+또한 요청 페이로드 `include` 배열에 요청이 수행되는 다른 데이터 저장소에 대한 제품 값이 포함되어야 합니다. 에 대한 요청을 할 때 배열 [!DNL Data Lake]에 &quot;ProfileService&quot; 값이 포함되어야 합니다.
 
-다음 요청은 표준 &quot;이메일&quot; ID 네임스페이스를 사용하여 실시간 고객 프로필 모두에 대한 새 개인 정보 작업을 만듭니다. 배열에 있는 프로필에 대한 제품 값도 `include` 포함합니다.
+다음 요청은 표준 &quot;이메일&quot; ID 네임스페이스를 사용하여 두 [!DNL Real-time Customer Profile]가지 모두에 대한 새 개인 정보 작업을 만듭니다. 스토리지 시스템 [!DNL Profile] 에 대한 제품 값도 `include` 포함합니다.
 
 ```shell
 curl -X POST \
@@ -93,18 +93,18 @@ curl -X POST \
 
 ### UI 사용
 
-UI에서 작업 요청을 만들 때는 **제품** 에서 **AEP 데이터 레이크** 및/또는 _프로필_ 을 선택하여 데이터 레이크 또는 실시간 고객 프로필에 저장된 데이터의 작업을 각각 처리해야 합니다.
+UI에서 작업 요청을 만들 때는 **[!UICONTROL 제품]** 아래의 **[!UICONTROL AEP 데이터 레이크]** 및/또는 _[!UICONTROL 프로필]_[!DNL Data Lake]을 선택하여[!DNL Real-time Customer Profile]데이터에 저장된 작업을각각 처리하거나 지연에 있는 AEP 데이터및 프로필을선택하십시오.
 
 <img src="images/privacy/product-value.png" width="450"><br>
 
 ## 요청 처리 삭제
 
-Experience Platform이 Privacy Service에서 삭제 요청을 받으면 Platform은 요청이 수신되고 영향을 받는 데이터가 삭제하도록 표시되었다는 확인을 Privacy Service에 보냅니다. 그러면 7일 이내에 Data Lake 또는 Profile 스토어에서 레코드가 제거됩니다. 이 7일 기간 동안 데이터는 소프트 삭제되므로 Platform 서비스에서 액세스할 수 없습니다.
+에서 [!DNL Experience Platform] 삭제 요청을 [!DNL Privacy Service]받으면 [!DNL Platform] 요청이 수신되고 영향을 받는 데이터가 삭제하도록 [!DNL Privacy Service] 표시되었다는 확인을 보냅니다. 그런 다음 7일 이내에 [!DNL Data Lake] 또는 [!DNL Profile] 스토어에서 레코드가 제거됩니다. 이 7일 기간 동안 데이터는 소프트 삭제되므로 어떤 [!DNL Platform] 서비스에서도 액세스할 수 없습니다.
 
-향후 릴리스에서 Platform은 데이터가 물리적으로 삭제된 후 Privacy Service에 확인을 보냅니다.
+향후 릴리스에서는 데이터가 물리적으로 삭제된 후 확인 [!DNL Platform] [!DNL Privacy Service] 을 보냅니다.
 
 ## 다음 단계
 
-이 문서를 읽음으로써 Experience Platform에서 개인 정보 요청 처리와 관련된 중요한 개념을 도입했습니다. ID 데이터를 관리하고 개인 정보 보호 작업을 만드는 방법에 대한 이해를 돕기 위해 이 안내서 전체에서 제공된 설명서를 계속 읽는 것이 좋습니다.
+이 문서를 읽음으로써, 귀하는 [!DNL Experience Platform] ID 데이터를 관리하고 개인 정보 보호 작업을 만드는 방법에 대한 이해를 돕기 위해 이 안내서 전체에서 제공된 설명서를 계속 읽는 것이 좋습니다.
 
-프로필에서 사용하지 않는 Platform 리소스에 대한 개인 정보 요청 처리에 대한 자세한 내용은 데이터 레이크에서 [개인 정보 요청 처리에 관한 문서를 참조하십시오](../catalog/privacy.md).
+사용되지 않는 리소스에 대한 개인 정보 요청 처리 [!DNL Platform] 에 대한 자세한 내용은 [!DNL Profile]데이터 레이크에서 개인 정보 [보호 요청 처리에 관한 문서를 참조하십시오](../catalog/privacy.md).
