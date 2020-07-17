@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform 개요
 topic: getting started
 translation-type: tm+mt
-source-git-commit: b73bd7e163c2861c751b1b505894923f70c99755
+source-git-commit: 6c90e68bde1fb8474ba23127ecf7b6fd617c7765
 workflow-type: tm+mt
-source-wordcount: '755'
+source-wordcount: '747'
 ht-degree: 2%
 
 ---
@@ -22,7 +22,7 @@ Adobe Experience Platform은 고객 경험을 향상시키는 완벽한 솔루�
 
 개방형 API를 기반으로 개발자에게 시스템의 전체 기능을 [!DNL Experience Platform] 제공하여 익숙한 툴을 사용하여 기업 솔루션을 손쉽게 통합할 수 있도록 지원합니다. [!DNL Experience Platform] 또한 파트너가 필요에 따라 자체 제품과 기술을 구축하여 통합할 수 있도록 지원합니다. 이러한 기능과 유연성은 시장 [!DNL Experience Platform] 에서 독보적인 존재입니다. 파트너, 고객 및 개발자 커뮤니티에서는 경험 비즈니스를 주도하는 혁신적인 솔루션을 구축할 수 있는 기반을 제공합니다. 고객의 전체 상황 및 개별 고객의 취향에 따라 완벽하게 개인화된 경험을 지속적으로 개선하여 고객의 기대치를 높입니다.
 
-다음 비디오에서는 고객의 관점에서 볼 때 Adobe Experience Platform으로 구축된 가상 경험에 대해 간략하게 설명합니다. 풍부하고 연관성 [!DNL Experience Platform] 있는 실시간 경험을 만드는 방법을 살펴보십시오.
+다음 비디오에서는 먼저 고객의 관점에서, 그리고 뒤에서 기술적인 측면에서 풍부하고 연관성 있는 실시간 경험을 만드는 방법을 간략하게 설명합니다. [!DNL Experience Platform]
 
 **고객 관점:**
 
