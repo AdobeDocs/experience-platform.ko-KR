@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: 에지 예상 - 실시간 고객 프로필 API
 topic: guide
 translation-type: tm+mt
-source-git-commit: d1656635b6d082ce99f1df4e175d8dd69a63a43a
+source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
 workflow-type: tm+mt
-source-wordcount: '1919'
+source-wordcount: '1900'
 ht-degree: 2%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 2%
 
 # 가장자리 투영 구성 및 대상 끝점
 
-여러 채널에서 실시간으로 고객의 기대에 부응하는 개인화된 경험을 제공하기 위해서는 변경 사항이 발생하면 즉시 정확한 데이터를 제공하고 지속적으로 업데이트해야 합니다. Adobe Experience Platform을 사용하면 가장자리라고 하는 요소를 사용하여 데이터에 대한 실시간 액세스를 가능하게 합니다. Edge는 데이터를 저장하고 애플리케이션에서 쉽게 액세스할 수 있도록 하는 지리적으로 배치된 서버입니다. 예를 들어 Adobe Target 및 Adobe Campaign과 같은 Adobe 애플리케이션은 실시간으로 개인화된 고객 경험을 제공하기 위해 가장자리를 사용합니다. 데이터는 투영에 의해 모서리로 라우팅되고, 투영 대상은 데이터가 전송될 가장자리를 정의하며, 가장자리에서 사용할 특정 정보를 정의하는 투영 구성이 있습니다. 이 안내서에서는 대상 및 구성을 포함하여 에지 예상 작업에 실시간 고객 프로필 API를 사용하는 방법에 대한 자세한 지침을 제공합니다.
+여러 채널에서 실시간으로 고객의 기대에 부응하는 개인화된 경험을 제공하기 위해서는 변경 사항이 발생하면 즉시 정확한 데이터를 제공하고 지속적으로 업데이트해야 합니다. Adobe Experience Platform을 사용하면 가장자리라고 하는 요소를 사용하여 데이터에 대한 실시간 액세스를 가능하게 합니다. Edge는 데이터를 저장하고 애플리케이션에서 쉽게 액세스할 수 있도록 하는 지리적으로 배치된 서버입니다. 예를 들어 Adobe Target 및 Adobe Campaign과 같은 Adobe 애플리케이션은 실시간으로 개인화된 고객 경험을 제공하기 위해 가장자리를 사용합니다. 데이터는 투영에 의해 모서리로 라우팅되고, 투영 대상은 데이터가 전송될 가장자리를 정의하며, 가장자리에서 사용할 특정 정보를 정의하는 투영 구성이 있습니다. 이 안내서에서는 대상 및 구성을 포함하여 Edge 예상 작업에 [!DNL Real-time Customer Profile] API를 사용하는 방법에 대한 자세한 지침을 제공합니다.
 
 ## 시작하기
 
-이 안내서에서 사용되는 API 끝점은 [실시간 고객 프로필 API의 일부입니다](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). 계속하기 전에 [시작하기 가이드](getting-started.md) (관련 문서 링크, 이 문서에서 샘플 API 호출 읽기 안내서)와 Experience Platform API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요 정보를 검토하십시오.
+이 안내서에서 사용되는 API 끝점은 이 끝점의 일부입니다 [!DNL Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). 계속하기 전에 [시작하기 가이드](getting-started.md) 에서 관련 문서 링크, 이 문서에서 샘플 API 호출 읽기 안내서, 모든 API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요 정보를 검토하십시오 [!DNL Experience Platform] .
 
 >[!NOTE]
 >페이로드(POST, PUT, PATCH)가 포함된 요청에는 `Content-Type` 헤더가 필요합니다. 이 문서 `Content-Type` 에 둘 이상이 사용됩니다. 각 요청에 대해 정확성을 유지하려면 샘플 호출의 헤더에 특히 주의하십시오 `Content-Type` .
@@ -325,7 +325,7 @@ curl -X DELETE \
 
 ## 투영 구성
 
-프로젝션 구성은 각 모서리에서 사용할 수 있는 데이터에 대한 정보를 제공합니다. 프로젝션은 전체 XDM(Experience Data Model) 스키마를 가장자리에 투영하는 대신 스키마에서 특정 데이터 또는 필드만 제공합니다. 조직은 각 XDM 스키마에 대해 두 개 이상의 프로젝션 구성을 정의할 수 있습니다.
+프로젝션 구성은 각 모서리에서 사용할 수 있는 데이터에 대한 정보를 제공합니다. 전체(XDM) 스키마를 가장자리에 투영하는 [!DNL Experience Data Model] 대신 프로젝션은 스키마에서 특정 데이터 또는 필드만 제공합니다. 조직은 각 XDM 스키마에 대해 두 개 이상의 프로젝션 구성을 정의할 수 있습니다.
 
 ### 모든 투영 구성 나열
 
@@ -349,7 +349,7 @@ GET /config/projections?schemaName={SCHEMA_NAME}&name={PROJECTION_NAME}
 
 **요청**
 
-다음 요청은 경험 데이터 모델 스키마 클래스 XDM 개별 프로파일과 연관된 모든 프로젝션 구성을 나열합니다. XDM 및 Platform 내의 역할에 대한 자세한 내용은 [XDM 시스템 개요를 읽어 보시기 바랍니다](../../xdm/home.md).
+다음 요청에는 스키마 클래스와 연관된 모든 프로젝션 구성이 [!DNL Experience Data Model] 나열됩니다 [!DNL XDM Individual Profile]. XDM 및 그 내부 역할에 대한 자세한 내용 [!DNL Platform]은 [XDM 시스템 개요를 읽어 보십시오](../../xdm/home.md).
 
 ```shell
 curl -X GET \
