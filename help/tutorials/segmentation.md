@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 세그멘테이션 자습서
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
+source-git-commit: ae244711ed89f4c7d6f87fd38bf7f8324e9b64be
 workflow-type: tm+mt
-source-wordcount: '538'
+source-wordcount: '540'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Adobe Experience Platform [!DNL Segmentation Service] 는 세그먼트를 작성
 
 ## 세그먼트 데이터 내보내기
 
-데이터를 포함하는 세그먼트를 내보내려면 먼저 데이터를 내보낼 [!DNL Profile] 데이터 세트를 [](../segmentation/tutorials/create-dataset-export-segment.md)만든 다음 새 내보내기 작업을 시작해야 합니다. 내보내기 작업을 생성하는 단계는 [내보내기 API 자습서에서 확인할 수 있습니다](../segmentation/tutorials/export-data.md).
+데이터를 포함하는 세그먼트를 내보내려면 먼저 데이터를 내보낼 [!DNL Profile] 데이터 세트를 [](../segmentation/tutorials/create-dataset-export-segment.md)만든 다음 새 내보내기 작업을 시작해야 합니다. 내보내기 작업을 생성하는 단계는 세그먼트 [평가 자습서에서 확인할 수 있습니다](../segmentation/tutorials/evaluate-a-segment.md).
 
 ## 병합 정책 구성
 
