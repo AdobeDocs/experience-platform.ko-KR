@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Adobe Experience Platform API 기본 사항
 topic: getting started
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
 workflow-type: tm+mt
-source-wordcount: '425'
-ht-degree: 0%
+source-wordcount: '423'
+ht-degree: 2%
 
 ---
 
@@ -83,7 +83,7 @@ JSON 포인터는 JSON 문서 내의 특정 값을 식별하기 위한 표준화
 >[!N참고]
 >
 >
->XDM 설명자의 `xdm:sourceProperty` 및 `xdm:destinationProperty` 속성 [!DNL Experience Data Model] 을 처리할 때 모든 `properties` 키는 JSON 포인터 문자열에서 **제외되어야** 합니다. 자세한 내용은 설명자에 대한 스키마 레지스트리 API 개발자 가이드 [하위](../xdm/api/descriptors.md) 안내서를 참조하십시오.
+>XDM 설명자의 `xdm:sourceProperty` 및 `xdm:destinationProperty` 속성 [!DNL Experience Data Model] 을 처리할 때 모든 `properties` 키는 JSON 포인터 문자열에서 **제외되어야** 합니다. 자세한 내용은 설명자에 대한 [!DNL Schema Registry] API 개발자 [가이드](../xdm/api/descriptors.md) 하위 가이드를 참조하십시오.
 
 ## JSON 패치
 
