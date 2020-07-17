@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform 제품 설명서
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 2e5668a8b1d5fb831188fbd4e453b9f4aa7474df
+source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
 workflow-type: tm+mt
-source-wordcount: '6594'
+source-wordcount: '6593'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 **액세스 제어:** {#access-control} Adobe Admin Console의 제품 프로필을 통해 액세스 권한 및 샌드박스 환경을 가진 사용자를 위한 액세스 제어 기능 [!DNL Experience Platform]
 
-**액세스 키 ID:** 액세스 키 ID는 Amazon S3 비밀 액세스 키와 연결된 고유한 식별자입니다. 액세스 키 ID와 비밀 액세스 키는 함께 사용하여 AWS 요청을 서명합니다.
+**액세스 키 ID:** 액세스 키 ID는 [!DNL Amazon] S3 비밀 액세스 키와 연결된 고유한 식별자입니다. 액세스 키 ID와 비밀 액세스 키는 함께 사용하여 AWS 요청을 서명합니다.
 
 **작업:** in [!DNL Experience Platform Launch]an action is a specific type of rule component that defining what should hate after an event 발생 및 조건이 평가되고 전달된 후에 발생할 일을 정의합니다.
 
@@ -158,7 +158,7 @@ ht-degree: 0%
 
 **데이터 세트 레이블:** 데이터 세트에 데이터 사용 레이블을 추가할 수 있습니다. 해당 데이터 집합 내의 모든 필드는 데이터 집합의 레이블을 상속합니다.
 
-**데이터 과학 작업 공간:** [!DNL Data Science Workspace] within [!DNL Experience Platform] 을 사용하면 고객은 Adobe 애플리케이션과 [!DNL Experience Platform] Adobe 애플리케이션 간의 데이터를 활용하여 머신 러닝 모델을 작성하여 지능적인 인사이트와 예측을 도출하여 매력적인 최종 사용자 디지털 경험을 제작할 수 있습니다.
+**데이터 과학 작업 공간:** [!DNL Data Science Workspace] within [!DNL Experience Platform] 을 사용하면 고객은 Adobe 애플리케이션과 [!DNL Experience Platform] Adobe 애플리케이션 간의 데이터를 활용하여 머신 러닝 모델을 작성하여 지능적인 인사이트와 예측을 도출하여 매력적인 최종 사용자 디지털 경험을 만들 수 있습니다.
 
 **데이터 소스:** 데이터 소스는 사용자가 지정한 데이터 원본 데이터 소스의 예로는 모바일 앱, 프로필 및/또는 경험 이벤트, 웹 사이트 프로필 이벤트 또는 CRM이 있습니다.
 
@@ -224,7 +224,7 @@ ht-degree: 0%
 
 **실험:** 실험은 라이브 프로덕션 데이터의 샘플 부분을 사용하여 인스턴스를 교육하여 훈련 모델을 만드는 프로세스입니다.
 
-**실험:** 실험이란 라이브 프로덕션 데이터의 작은 부분에 트레이닝된 모델을 적용하여 성능을 확인하는 프로세스입니다. 이는 홀드아웃 테스트 데이터 세트에 대해 테스트되는 교육된 모델과 다릅니다. 이는 실제 샘플 모델링 프로젝트를 의미하는 일부 ML 프레임워크의 실험 개념과는 다릅니다.
+**실험:** 실험이란 라이브 프로덕션 데이터의 작은 부분에 트레이닝된 모델을 적용하여 성능을 확인하는 프로세스입니다. 이는 홀드아웃 테스트 데이터 세트에 대해 테스트되는 교육된 모델과 다릅니다. 이는 실제 샘플 모델링 프로젝트를 의미하는 일부 ML 프레임워크의 실험 개념과 다릅니다.
 
 **ExperienceEvent:** ExperienceEvent는 관련 대상의 시점 및 ID를 비롯하여 관찰을 캡처하는 표준 스키마입니다. [!DNL Experience Platform] 경험 이벤트는 집계 또는 해석 없이 발생한 사항을 나타내는 발생한 일의 사실 레코드입니다.
 
@@ -468,7 +468,7 @@ ht-degree: 0%
 
 **세그먼트 유형:** 두 가지 유형의 세그먼트가 있습니다. 하나는 [!DNL Experience Platform] 데이터 변경 사항에 따라 동적으로 업데이트되는 세그먼트이고 다른 하나는 세그먼트 규칙과 일치하는 모든 프로필을 캡처하는 대상 스냅샷이고, 다른 하나는 변경되지 않는 세그먼트입니다.
 
-**세분화:** 세분화는 대규모 고객, 잠재 고객 또는 소비자를 유사한 속성을 공유하고 마케팅 전략과 유사한 방식으로 대응하게 되는 작은 그룹으로 나누는 프로세스입니다.
+**세분화:** 세분화는 대규모 고객, 잠재 고객 또는 소비자를 유사한 속성을 공유하고 마케팅 전략과 유사하게 반응하는 작은 그룹으로 나누는 프로세스입니다.
 
 **Sensei ML 프레임워크:** Sensei ML Framework는 Adobe의 통합 머신 러닝 프레임워크로, 데이터 과학자들이 머신 러닝 기반의 인텔리전스 서비스를 신속하고 확장 가능하며 재사용 가능한 방식으로 개발할 수 있도록 [!DNL Experience Platform] 하는 데 필요한 데이터를 활용합니다.
 
