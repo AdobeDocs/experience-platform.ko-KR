@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: 프로필 시스템 작업 - 실시간 고객 프로필 API
 topic: guide
 translation-type: tm+mt
-source-git-commit: c0b059d6654a98b74be5bc6a55f360c4dc2f216b
+source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
 workflow-type: tm+mt
-source-wordcount: '1466'
+source-wordcount: '1420'
 ht-degree: 2%
 
 ---
@@ -14,14 +14,14 @@ ht-degree: 2%
 
 # 프로필 시스템 작업 끝점(요청 삭제)
 
-Adobe Experience Platform을 사용하면 여러 소스에서 데이터를 인제스트하고 개별 고객을 위한 강력한 프로파일을 구축할 수 있습니다. Platform으로 인제스트된 데이터는 실시간 고객 프로필 데이터 저장소뿐만 아니라 데이터 레이크에 저장됩니다. 더 이상 필요하지 않거나 오류가 추가된 데이터를 제거하기 위해 프로필 저장소에서 데이터 세트 또는 일괄 처리를 삭제해야 하는 경우가 있습니다. 이를 위해서는 실시간 고객 프로필 API를 사용하여 &quot;삭제 요청&quot;이라고도 하는 프로필 시스템 작업을 만들어야 하며, 이 작업은 필요한 경우 수정, 모니터링 또는 제거할 수도 있습니다.
+Adobe Experience Platform을 사용하면 여러 소스에서 데이터를 인제스트하고 개별 고객을 위한 강력한 프로파일을 구축할 수 있습니다. 인제스트된 데이터 [!DNL Platform] 는 데이터 저장소와 [!DNL Data Lake] 함께 [!DNL Real-time Customer Profile] 저장됩니다. 더 이상 필요하지 않거나 오류가 추가된 데이터를 제거하기 위해 프로필 저장소에서 데이터 세트 또는 일괄 처리를 삭제해야 하는 경우가 있습니다. 이를 위해서는 [!DNL Real-time Customer Profile] API를 사용하여 [!DNL Profile] 시스템 작업(&quot;[!DNL delete request]&quot;)을 만들어야 하며, 이 작업은 필요한 경우 수정, 모니터링 또는 제거할 수도 있습니다.
 
 >[!NOTE]
->데이터 레이크에서 데이터 세트 또는 배치를 삭제하려는 경우 [카탈로그 서비스 개요를](../../catalog/home.md) 방문하여 지침을 확인하십시오.
+>데이터세트 또는 배치를 폴더에서 삭제하려고 [!DNL Data Lake]하는 경우 [카탈로그 서비스 개요를](../../catalog/home.md) 참조하십시오.
 
 ## 시작하기
 
-이 안내서에서 사용되는 API 끝점은 [실시간 고객 프로필 API의 일부입니다](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). 계속하기 전에 [시작하기 가이드](getting-started.md) (관련 문서 링크, 이 문서에서 샘플 API 호출 읽기 안내서)와 Experience Platform API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요 정보를 검토하십시오.
+이 안내서에서 사용되는 API 끝점은 이 끝점의 일부입니다 [!DNL Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). 계속하기 전에 [시작하기 가이드](getting-started.md) 에서 관련 문서 링크, 이 문서에서 샘플 API 호출 읽기 안내서, 모든 API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요 정보를 검토하십시오 [!DNL Experience Platform] .
 
 ## 삭제 요청 보기
 
@@ -103,10 +103,10 @@ curl -X POST \
 
 ### 데이터 집합 삭제
 
-데이터 세트를 삭제하려면 데이터 세트 ID를 POST 요청 본문에 포함해야 합니다. 이 작업을 수행하면 지정된 데이터 세트에 대한 모든 데이터가 삭제됩니다. Experience Platform을 사용하면 레코드 및 시간 시리즈 스키마 모두를 기반으로 데이터 세트를 삭제할 수 있습니다.
+데이터 세트를 삭제하려면 데이터 세트 ID를 POST 요청 본문에 포함해야 합니다. 이 작업을 수행하면 지정된 데이터 세트에 대한 모든 데이터가 삭제됩니다. [!DNL Experience Platform] 레코드 및 시간 시리즈 스키마 모두를 기반으로 데이터 세트를 삭제할 수 있습니다.
 
 >[!CAUTION]
-> Experience Platform UI를 사용하여 프로필 사용 데이터 세트를 삭제하려고 하면 데이터 세트에 인제스트를 사용할 수 없지만 API를 사용하여 삭제 요청이 생성될 때까지 삭제되지 않습니다. 자세한 내용은 이 문서의 [부록을](#appendix) 참조하십시오.
+> UI를 사용하여 [!DNL Profile]활성화된 데이터 세트를 삭제하려고 하면 데이터 세트 [!DNL Experience Platform] 가 인제스트를 위해 비활성화되지만 API를 사용하여 삭제 요청이 생성될 때까지 삭제되지 않습니다. 자세한 내용은 이 문서의 [부록을](#appendix) 참조하십시오.
 
 **API 형식**
 
@@ -161,7 +161,7 @@ curl -X POST \
 >[!NOTE]
 > 레코드 스키마를 기준으로 데이터 세트에 대한 배치를 삭제할 수 없는 이유는 레코드 유형 데이터 세트 배치가 이전 레코드를 덮어쓰기 때문에 &quot;실행 취소&quot; 또는 삭제할 수 없기 때문입니다. 기록 스키마를 기반으로 데이터 세트에 대해 잘못된 일괄 처리가 미치는 영향을 제거하는 유일한 방법은 부정확한 레코드를 덮어쓰도록 올바른 데이터로 일괄 처리를 다시 인제스트하는 것입니다.
 
-기록 및 시간 시리즈 동작에 대한 자세한 내용은 XDM 시스템 개요에서 XDM 데이터 동작 [](../../xdm/home.md#data-behaviors) 섹션을 참조하십시오.
+기록 및 시간 시리즈 동작에 대한 자세한 내용은 [개요에서 XDM 데이터 비헤이비어에](../../xdm/home.md#data-behaviors) 대한 섹션을 검토하십시오 [!DNL XDM System] .
 
 **API 형식**
 
@@ -277,7 +277,7 @@ curl -X POST \
 
 ## 삭제 요청 제거
 
-Experience Platform을 사용하면 이전 요청을 삭제할 수 있습니다. 삭제 작업이 완료되지 않았거나 처리 단계에 갇혀 있는 경우를 포함하여 여러 가지 이유로 유용할 수 있습니다. 삭제 요청을 제거하기 위해 종단점에 대한 DELETE 요청을 수행하고 요청 경로에 제거하려는 삭제 요청의 ID를 포함할 수 있습니다. `/system/jobs`
+[!DNL Experience Platform] 이전 요청을 삭제할 수 있습니다. 삭제 작업이 완료되지 않았거나 처리 단계에 갇혀 있는 경우를 비롯하여 여러 가지 이유로 유용할 수 있습니다. 삭제 요청을 제거하기 위해 종단점에 대한 DELETE 요청을 수행하고 요청 경로에 제거하려는 삭제 요청의 ID를 포함할 수 있습니다. `/system/jobs`
 
 **API 형식**
 
@@ -306,19 +306,19 @@ curl -X POST \
 
 ## 다음 단계
 
-이제 Experience Platform 내의 프로필 스토어에서 데이터 집합 및 배치를 삭제하는 데 관련된 단계를 알고 있으므로 잘못 추가된 데이터 또는 조직에서 더 이상 필요하지 않은 데이터를 안전하게 삭제할 수 있습니다. 삭제 요청은 취소할 수 없으므로 지금 필요하지 않으며 나중에 필요하지 않을 것으로 확신하는 데이터만 삭제해야 합니다.
+데이터 세트 및 배치를 내부에서 삭제하는 것과 관련된 단계를 알고 있으므로 잘못 추가된 데이터 [!DNL Profile Store] [!DNL Experience Platform]를 안전하게 삭제하거나 조직에서 더 이상 필요하지 않습니다. 삭제 요청은 취소할 수 없으므로 지금 필요하지 않으며 나중에 필요하지 않을 것으로 확신하는 데이터만 삭제해야 합니다.
 
 ## 부록 {#appendix}
 
-다음 정보는 프로필 스토어에서 데이터 세트를 삭제하는 행위에 보충 사항입니다.
+다음 정보는 데이터세트를 데이터에서 삭제하는 행위에 대한 보충 정보입니다 [!DNL Profile Store].
 
-### Experience Platform UI를 사용하여 데이터 세트 삭제
+### UI를 사용하여 데이터 세트 [!DNL Experience Platform] 삭제
 
-Experience Platform 사용자 인터페이스를 사용하여 프로필에 대해 활성화된 데이터 세트를 삭제하면 &quot;경험 데이터 레이크에서 이 데이터 세트를 삭제하시겠습니까? &#39;프로필 시스템 작업&#39; API를 사용하여 프로필 서비스에서 이 데이터 집합을 삭제합니다.&quot;
+사용자 [!DNL Experience Platform] 인터페이스를 사용하여 활성화된 데이터 세트를 삭제할 때 &quot;이 데이터 세트 [!DNL Profile][!DNL Experience Data Lake]를 &#39;p[!DNL rofile systems jobs]&#39; API를 사용하여 이 데이터 세트를 [!DNL Profile Service]폴더에서 삭제합니다.&quot;
 
-UI에서 **삭제를** 클릭하면 데이터 세트에 대한 인제기가 비활성화되지만 백엔드의 데이터 세트는 자동으로 삭제되지 않습니다. 데이터 세트를 영구적으로 삭제하려면 삭제 요청을 [만들기 위해 이 안내서의 단계를 사용하여 삭제 요청을 수동으로 만들어야 합니다](#create-a-delete-request).
+UI에서 **[!UICONTROL 삭제를]** 클릭하면 데이터 세트에 대한 인제기가 비활성화되지만 백엔드의 데이터 세트는 자동으로 삭제되지 않습니다. 데이터 세트를 영구적으로 삭제하려면 삭제 요청을 [만들기 위해 이 안내서의 단계를 사용하여 삭제 요청을 수동으로 만들어야 합니다](#create-a-delete-request).
 
-다음 이미지는 UI를 사용하여 프로필 사용 데이터 세트를 삭제하려고 할 때의 경고를 보여줍니다.
+다음 이미지는 UI를 사용하여 활성화된 데이터 세트를 삭제하려고 할 때 [!DNL Profile]경고를 보여줍니다.
 
 ![](../images/delete-profile-dataset.png)
 
