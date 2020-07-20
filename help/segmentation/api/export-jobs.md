@@ -1,20 +1,24 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: 내보내기 작업 끝점 안내서
+title: 내보내기 작업 끝점
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 3e39333207ef6c94b6d792be33a4605f185ff5ab
+source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
 workflow-type: tm+mt
-source-wordcount: '1469'
+source-wordcount: '1497'
 ht-degree: 2%
 
 ---
 
 
-# 내보내기 작업 끝점 안내서
+# 내보내기 작업 끝점
 
 내보내기 작업은 대상 세그먼트 멤버를 데이터 세트로 유지하는 데 사용되는 비동기 프로세스입니다. 프로그래밍 방식으로 내보내기 작업을 검색, 생성 및 취소할 수 있는 Adobe Experience Platform 세그멘테이션 API의 `/export/jobs` 끝점을 사용할 수 있습니다.
+
+>[!NOTE]
+>
+>이 안내서에서는 내보내기 작업의 사용에 대해 설명합니다 [!DNL Segmentation API]. 데이터에 대한 내보내기 작업을 관리하는 방법에 대한 자세한 내용은 프로필 API의 [!DNL Real-time Customer Profile] [내보내기 작업 안내서를 참조하십시오](../../profile/api/export-jobs.md)
 
 ## 시작하기
 
