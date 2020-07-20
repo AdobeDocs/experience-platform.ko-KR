@@ -355,17 +355,22 @@ curl -X GET {ENDPOINT_PATH}/{CONTAINER_ID}/instances?schema="{SCHEMA_ID}" \
 목록 필터링 결과는 페이징 메커니즘과 관계없이 가능합니다. 필터는 목록 순서에서 인스턴스를 건너뛰거나 지정된 조건을 충족하는 인스턴스만 포함하도록 명시적으로 요청하는 것뿐입니다. 클라이언트는 속성 식을 필터로 사용하거나 인스턴스의 기본 키 값으로 사용할 URI 목록을 지정할 수 있습니다.
 
 - **`property`**: 속성 이름 경로 뒤에 비교 연산자 뒤에 값이 들어 있습니다. <br/>
-반환된 인스턴스 목록에는 표현식이 true로 평가되는 인스턴스가 포함됩니다. 예를 들어 인스턴스에 페이로드 속성 `status` 이 있고 가능한 값이 `draft``approved`라고 가정하고 쿼리 매개 변수 `archived` 는 상태가 승인된 인스턴스만 `deleted` `property=_instance.status==approved` 반환합니다. <br/>
+반환된 인스턴스 목록에는 표현식이 true로 평가되는 인스턴스가 포함됩니다. 예를 들어 인스턴스에 페이로드 속성이 있다고 가정할 경우 
+`status` 그리고 가능한 값은 `draft``approved`, `archived` 쿼리 매개 변수 `deleted` 가 상태가 승인된 인스턴스만 `property=_instance.status==approved` 반환합니다. <br/>
+<br/>
+지정된 값과 비교할 속성은 경로로 식별됩니다. 개별 경로 구성 요소는 다음과 같이 '.'로 구분됩니다. '_instance.xdm:prop1.xdm:prop1_1.xdm:prop1_1_1'<br/>
 
+문자열, 숫자 또는 날짜/시간 값이 있는 속성의 경우 허용되는 연산자는 다음과 같습니다. `==`, `!=`, `<`, `<=``>` , `>=`및 또한 문자열 값이 있는 속성의 경우 연산자를 사용할 `~` 수 있습니다. 연산자는 `~` 정규 표현식에 따라 지정된 속성과 일치합니다. 속성의 문자열 값은 필터링된 결과에 포함할 엔터티의 **전체** 표현식과 일치해야 합니다. 예를 들어 속성 값 내의 `cars` 아무 곳에서나 문자열을 찾으려면 정규 표현식이 필요합니다 `.*cars.*`. 행간 또는 후행 `.*`이 없으면 시작 또는 끝 속성 값이 있는 엔티티만 `cars`일치합니다. 연산자의 `~` 경우 문자 비교가 대/소문자를 구분하지 않습니다. 다른 모든 연산자의 경우 대/소문자를 구분합니다.<br/><br/>
+인스턴스 페이로드 속성만 필터 표현식에 사용할 수 있습니다. 봉투 속성은 같은 방식으로 비교됩니다(예: `property=repo:lastModifiedDate>=2019-02-23T16:30:00.000Z`. <br/>
+<br/>
+쿼리 매개 변수를 `property` 반복하여 여러 필터 조건이 적용되도록 할 수 있습니다. 예를 들어 특정 날짜 이후 특정 날짜 이전에 마지막으로 수정된 모든 인스턴스를 반환합니다. 이러한 식의 값은 URL로 인코딩되어야 합니다. 표현식이 제공되지 않고 속성 이름이 단순히 나열되는 경우 해당 이름의 속성이 있는 항목이 됩니다.<br/>
+<br/>
 
+- **`id`**: 때때로 목록의 URI를 기준으로 필터링해야 합니다. 쿼리 매개 변수 `property` 를 사용하여 하나의 인스턴스를 필터링할 수 있지만 둘 이상의 인스턴스를 얻으려면 URI 목록을 요청에 지정할 수 있습니다. 매개 변수 `id` 가 반복되고 각 항목은 하나의 URI 값을 지정합니다. URI 값 `id={URI_1}&id={URI_2},…` 은 URL로 인코딩되어야 합니다.
 
-**`id`**: 때때로 목록의 URI를 기준으로 필터링해야 합니다. 쿼리 매개 변수 `property` 를 사용하여 하나의 인스턴스를 필터링할 수 있지만 둘 이상의 인스턴스를 얻으려면 URI 목록을 요청에 지정할 수 있습니다. 매개 변수 `id` 가 반복되고 각 항목은 하나의 URI 값을 지정합니다. URI 값 `id={URI_1}&id={URI_2},…` 은 URL로 인코딩되어야 합니다.`!=``<``~``~`****`cars``.*cars.*``.*``cars``~`<br/><br/>`property=repo:lastModifiedDate>=2019-02-23T16:30:00.000Z`<br/><br/>`property`<br/><br/>
-
-- 페이징된 결과는 특수 MIME 유형으로 반환됩니다 `application/vnd.adobe.platform.xcore.hal+json; schema="https://ns.adobe.com/experience/xcore/hal/results"`.`property``id``id={URI_1}&id={URI_2},…`
+페이징된 결과는 특수 MIME 유형으로 반환됩니다 `application/vnd.adobe.platform.xcore.hal+json; schema="https://ns.adobe.com/experience/xcore/hal/results"`.
 
 **요청**
-
-**응답**
 
 ```shell
 curl -X GET {ENDPOINT_PATH}/{CONTAINER_ID}/instances?schema="{SCHEMA_ID}"&orderby${ORDER_BY_PROPERTY_PATH}&property={TIMESTAMP_PROPERTY_PATH}>=2019-02-19T03:19:03.627Z&property${TIMESTAMP_PROPERTY_PATH}<=2019-06-19T03:19:03.627Z \ 
@@ -376,7 +381,7 @@ curl -X GET {ENDPOINT_PATH}/{CONTAINER_ID}/instances?schema="{SCHEMA_ID}"&orderb
   -H 'x-request-id: {NEW_UUID}'  
 ```
 
-**응답에는 이 페이지의 결과 수와 방금 반환된 페이지로 시작하는 필터링된 목록의 총 항목 수를 나타내는 두 속성 옆에 있는 JSON 속성 결과 내의 결과 항목 목록이 포함됩니다.**
+**응답**
 
 ```json
 { 
@@ -438,13 +443,13 @@ curl -X GET {ENDPOINT_PATH}/{CONTAINER_ID}/instances?schema="{SCHEMA_ID}"&orderb
 } 
 ```
 
-전체 텍스트 검색 및 구조화된 쿼리
+응답에는 이 페이지의 결과 수와 방금 반환된 페이지로 시작하는 필터링된 목록의 총 항목 수를 나타내는 두 속성 옆에 있는 JSON 속성 결과 내의 결과 항목 목록이 포함됩니다.
 
-### 클라이언트가 문자열 속성에 포함된 용어별로 보다 복잡한 필터 조건 및 검색 인스턴스를 제공하려는 경우 리포지토리는 보다 강력한 검색 API를 제공합니다.
+### 전체 텍스트 검색 및 구조화된 쿼리
+
+클라이언트가 문자열 속성에 포함된 용어별로 보다 복잡한 필터 조건 및 검색 인스턴스를 제공하려는 경우 리포지토리는 보다 강력한 검색 API를 제공합니다.
 
 **요청**
-
-**이 API를 통해 클라이언트는 페이징 및 목록 API의 필터링 매개 변수 외에도 전체 텍스트 및 부울 쿼리 매개 변수를 추가할 수 있습니다.**
 
 ```shell
 curl -X GET {ENDPOINT_PATH}/{CONTAINER_ID}/queries/core/search?schema="{SCHEMA_ID}"&… \ 
@@ -457,21 +462,21 @@ curl -X GET {ENDPOINT_PATH}/{CONTAINER_ID}/queries/core/search?schema="{SCHEMA_I
 
 <!-- TODO: needs example response -->
 
+이 API를 통해 클라이언트는 페이징 및 목록 API의 필터링 매개 변수 외에도 전체 텍스트 및 부울 쿼리 매개 변수를 추가할 수 있습니다.
+
 전체 텍스트 검색은 다음 매개 변수로 제어됩니다.
 
-**`q`**: 인스턴스의 문자열 속성과 일치하기 전에 표준화된 공백으로 구분되는 용어 목록을 포함합니다. 용어 및 해당 용어 역시 표준화되므로 문자열 속성을 분석합니다. 검색 쿼리는 매개 변수에 지정된 용어 중 하나 이상을 일치시킵니다 `q` . 문자 +, -, =, &amp;&amp;, ||, >, &lt;,!, (,), {, }, [,]^, &quot;, ~, *, ?, :, /는 쿼리 문자열 내에서 단어 경계를 결정하는 특별한 의미를 가지며, 문자와 일치해야 하는 토큰에 표시될 때 백슬래시로 이스케이프해야 합니다. 쿼리 문자열은 정확한 문자열 일치에 대해 큰 따옴표로 둘러싸서 특수 문자를 escape할 수 있습니다.
-
-- **`field`**: 검색어를 속성의 하위 집합과 일치해야 하는 경우 필드 매개 변수는 해당 속성의 경로를 나타낼 수 있습니다. 매개 변수를 반복하여 일치해야 하는 속성을 두 개 이상 나타낼 수 있습니다.`q`[]
+- **`q`**: 인스턴스의 문자열 속성과 일치하기 전에 표준화된 공백으로 구분되는 용어 목록을 포함합니다. 용어 및 해당 용어 역시 표준화되므로 문자열 속성을 분석합니다. 검색 쿼리는 매개 변수에 지정된 용어 중 하나 이상을 일치시킵니다 `q` . 문자 +, -, =, &amp;&amp;, ||, >, &lt;,!, (,), {, }, [,]^, &quot;, ~, *, ?, :, /는 쿼리 문자열 내에서 단어 경계를 결정하는 특별한 의미를 가지며, 문자와 일치해야 하는 토큰에 표시될 때 백슬래시로 이스케이프해야 합니다. 쿼리 문자열은 정확한 문자열 일치에 대해 큰 따옴표로 둘러싸서 특수 문자를 escape할 수 있습니다.
+- **`field`**: 검색어를 속성의 하위 집합과 일치해야 하는 경우 필드 매개 변수는 해당 속성의 경로를 나타낼 수 있습니다. 매개 변수를 반복하여 일치해야 하는 속성을 두 개 이상 나타낼 수 있습니다.
 - **`qop`**: 검색의 일치 동작을 수정하는 데 사용되는 컨트롤 매개 변수를 포함합니다. 매개 변수가 로 설정된 경우 모든 검색 용어가 일치해야 하고 매개 변수가 없거나 해당 값이 로 설정된 경우 또는 임의의 용어가 일치하는 항목으로 계산될 수 있습니다.
-- **`qop`**인스턴스 업데이트 및 패치
 
-### 인스턴스를 업데이트하려면 클라이언트가 한 번에 전체 속성 목록을 덮어쓰거나 JSON PATCH 요청을 사용하여 목록을 비롯한 개별 속성 값을 조작할 수 있습니다.
+### 인스턴스 업데이트 및 패치
+
+인스턴스를 업데이트하려면 클라이언트가 한 번에 전체 속성 목록을 덮어쓰거나 JSON PATCH 요청을 사용하여 목록을 비롯한 개별 속성 값을 조작할 수 있습니다.
 
 두 경우 모두 요청의 URL이 실제 인스턴스에 대한 경로를 지정하며 두 경우 모두 [만들기 작업에서 반환되는 것과 같은 JSON 수신 페이로드가 응답됩니다](#create-instances). 클라이언트는 가급적이면 이 개체에 대한 이전 API 호출에서 받은 헤더 또는 HAL 링크를 이 API에 대한 전체 URL 경로로 사용해야 합니다. `Location` 그럴 수 없는 경우 클라이언트는 URL을 `containerId` 및 URL에서 구성할 수 `instanceId`있습니다.
 
-**요청** (PUT)`Location``containerId``instanceId`
-
-**요청** (패치)
+**요청** (PUT)
 
 ```shell
 curl -X PUT {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \ 
@@ -491,7 +496,7 @@ curl -X PUT {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \
 }'  
 ```
 
-**PATCH 요청은 지침을 적용한 다음 결과 엔티티를 스키마와 PUT 요청과 동일한 엔티티 및 참조 무결성 규칙에 대해 검증합니다.**
+**요청** (패치)
 
 ```shell
 curl -X PATCH {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \ 
@@ -508,24 +513,24 @@ curl -X PATCH {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \
 ]'
 ```
 
+PATCH 요청은 지침을 적용한 다음 결과 엔티티를 스키마와 PUT 요청과 동일한 엔티티 및 참조 무결성 규칙에 대해 검증합니다.
+
 **속성 값 편집 제어**
 
-**다음 주석을 사용하여 작성 및/또는 업데이트 시 속성이 설정되지 않도록 할 수 있습니다.**
+다음 주석을 사용하여 작성 및/또는 업데이트 시 속성이 설정되지 않도록 할 수 있습니다.
 
-**`"meta:usereditable"`**: 부울 - 사용자 또는 기술 계정 액세스 토큰을 사용하여 호출자를 식별하는 사용자 에이전트로부터 요청이 생성되면, 주석으로 주석을 단 속성이 페이로드에 `"meta:usereditable": false` 있으면 안 됩니다. 이러한 경우 현재 설정된 값과 다른 값이 없어야 합니다. 값이 다를 경우 업데이트 또는 패치 요청이 거부되고 상태가 422 처리 불가 엔티티입니다.
-
+- **`"meta:usereditable"`**: 부울 - 사용자 또는 기술 계정 액세스 토큰을 사용하여 호출자를 식별하는 사용자 에이전트로부터 요청이 생성되면, 주석으로 주석을 단 속성이 페이로드에 `"meta:usereditable": false` 있으면 안 됩니다. 이러한 경우 현재 설정된 값과 다른 값이 없어야 합니다. 값이 다를 경우 업데이트 또는 패치 요청이 거부되고 상태가 422 처리 불가 엔티티입니다.
 - **`"meta:immutable"`**: 부울 - 주석을 단 속성은 설정한 후에는 변경할 `"meta:immutable": true` 수 없습니다. 이는 최종 사용자, 기술 계정 통합 또는 특수 서비스에서 요청이 발생하는 경우에 적용됩니다.
-- **동시 업데이트 테스트**`"meta:immutable": true`
+
+**동시 업데이트 테스트**
 
 여러 클라이언트가 동시에 인스턴스를 업데이트하려고 시도하는 조건이 있습니다. 리포지토리는 중앙 트랜잭션 관리 없이 컴퓨팅 노드 클러스터에서 작동합니다. 한 클라이언트가 다른 클라이언트에서 동시에 작성된 인스턴스를 쓰는 것을 방지하기 위해 클라이언트는 조건부 업데이트 또는 패치 요청을 사용할 수 있습니다. 헤더에 `etag` 문자열을 지정하면 첫 번째 요청만 성공하고 같은 값을 사용하는 다른 클라이언트의 후속 요청만 실패하는지 `If-Match` `etag` 확인합니다. 인스턴스가 수정될 때마다 값이 `etag` 변경됩니다. 클라이언트는 인스턴스를 검색하여 최신 `etag` 값을 얻은 다음 업데이트를 시도하는 많은 클라이언트 중 하나의 클라이언트만 해당 값으로 성공할 수 있습니다. 다른 클라이언트는 409 충돌 메시지와 함께 거부됩니다.
 
-인스턴스 삭제`etag``If-Match``etag``etag``etag`
+### 인스턴스 삭제
 
-### DELETE 호출으로 인스턴스를 삭제할 수 있습니다. 클라이언트는 가급적이면 이를 위한 이전 API 호출에서 받은 헤더 또는 HAL 링크를 전체 URL 경로로 사용해야 합니다. `Location` 그럴 수 없는 경우 클라이언트는 URL을 The `containerId` and the physical에서 구성할 수 `instanceId`있습니다.
+DELETE 호출으로 인스턴스를 삭제할 수 있습니다. 클라이언트는 가급적이면 이를 위한 이전 API 호출에서 받은 헤더 또는 HAL 링크를 전체 URL 경로로 사용해야 합니다. `Location` 그럴 수 없는 경우 클라이언트는 URL을 The `containerId` and the physical에서 구성할 수 `instanceId`있습니다.
 
-**요청**`instanceId`
-
-**응답**
+**요청**
 
 ```shell
 curl -X DELETE {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \ 
@@ -536,7 +541,7 @@ curl -X DELETE {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \
   -H 'x-request-id: {NEW_UUID}'  
 ```
 
-삭제 요청을 받으면 리포지토리는 모든 스키마의 다른 인스턴스를 확인하지만 삭제할 인스턴스를 참조합니다. 고가용성 시스템에서 참조 무결성을 즉시 확인할 수 없습니다. 외래 키 관계가 정의된 경우 비동기적으로 검사가 수행됩니다. 이로 인해 삭제 요청 결과에 대해 약간 지연된 응답이 발생합니다. 이러한 검사가 수행되면 즉시 응답에는 상태 202 Accepted와 헤더에서 삭제 작업의 결과를 확인하는 링크가 `Location` 포함됩니다. 그러면 클라이언트는 해당 링크를 통해 결과를 확인해야 합니다.**
+**응답**
 
 ```json
 { 
@@ -552,15 +557,15 @@ curl -X DELETE {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \
 } 
 ```
 
+삭제 요청을 받으면 리포지토리는 모든 스키마의 다른 인스턴스를 확인하지만 삭제할 인스턴스를 참조합니다. 고가용성 시스템에서 참조 무결성을 즉시 확인할 수 없습니다. 외래 키 관계가 정의된 경우 비동기적으로 검사가 수행됩니다. 이로 인해 삭제 요청 결과에 대해 약간 지연된 응답이 발생합니다. 이러한 검사가 수행되면 즉시 응답에는 상태 202 Accepted와 헤더에서 삭제 작업의 결과를 확인하는 링크가 `Location` 포함됩니다. 그러면 클라이언트는 해당 링크를 통해 결과를 확인해야 합니다.
+
 삭제되는 인스턴스를 참조하는 인스턴스가 발견되면 삭제 작업이 거부됩니다. 다른 외래 키 참조가 검색되지 않으면 삭제가 완료됩니다. 결과가 아직 결정되지 않은 경우 응답에 동일한 헤더가 있는 다른 202 수락 응답에 의해 확인되었음을 나타내며 클라이언트에게 계속 확인을 요청하게 됩니다. `Location` 결과가 확인되면 응답에 200개의 확인 상태와 응답의 페이로드에는 원래 삭제 요청의 결과가 포함된다는 메시지가 표시됩니다. 200 확인 응답은 결과가 알려져 있으며 응답 본문에 삭제 요청의 확인 또는 거부가 포함됩니다.
 
-오퍼 및 해당 하위 구성 요소 만들기`Location`
+## 오퍼 및 해당 하위 구성 요소 만들기
 
-## 이전 섹션에 설명된 API는 모든 유형의 비즈니스 객체에 일관되게 적용됩니다. 오퍼와 활동을 만드는 것은 JSON 스키마를 스키마를 따르는 요청의 JSON 페이로드와 `content-type` 같은 헤더일 것이라는 것과 그 사이의 유일한 차이입니다. 따라서 다음 섹션에서는 이러한 스키마와 이 스키마 간의 관계에만 초점을 맞출 필요가 있습니다.
+이전 섹션에 설명된 API는 모든 유형의 비즈니스 객체에 일관되게 적용됩니다. 오퍼와 활동을 만드는 것은 JSON 스키마를 스키마를 따르는 요청의 JSON 페이로드와 `content-type` 같은 헤더일 것이라는 것과 그 사이의 유일한 차이입니다. 따라서 다음 섹션에서는 이러한 스키마와 이 스키마 간의 관계에만 초점을 맞출 필요가 있습니다.
 
 API를 컨텐츠 유형과 함께 사용할 때 인스턴스 `application/vnd.adobe.platform.xcore.hal+json; schema="{SCHEMA_ID}"`의 자체 속성이 속성이 있는 속성 옆에 `_instance` 포함됩니다 `_links` . 모든 인스턴스가 표시되는 일반 형식이 됩니다.
-
-[!NOTE]`_instance``_links`
 
 ```json
 { 
@@ -574,16 +579,16 @@ API를 컨텐츠 유형과 함께 사용할 때 인스턴스 `application/vnd.ad
 }
 ```
 
->[!NOTE]간결한 이유로, 모든 JSON 조각에서 인스턴스 속성만 설명되며 엔벌로프 속성 및 _links 섹션이 필요한 경우에만 표시됩니다.
+>[!NOTE]
 >
->일반 오퍼 속성
+>간결한 이유로, 모든 JSON 조각에서 인스턴스 속성만 설명되며 엔벌로프 속성 및 _links 섹션이 필요한 경우에만 표시됩니다.
 
-### 오퍼는 의사 결정 옵션 유형이며 오퍼의 JSON 스키마는 각 옵션 인스턴스가 가질 표준 옵션 속성을 상속합니다.
+### 일반 오퍼 속성
 
-**`@id`** - 기본 키이고 다른 개체의 옵션을 참조하는 데 사용되는 각 옵션에 대한 고유 식별자입니다. 이 속성은 인스턴스가 생성될 때 지정되며, 변경할 수 없으며 편집할 수 없습니다.
+오퍼는 의사 결정 옵션 유형이며 오퍼의 JSON 스키마는 각 옵션 인스턴스가 가질 표준 옵션 속성을 상속합니다.
 
+- **`@id`** - 기본 키이고 다른 개체의 옵션을 참조하는 데 사용되는 각 옵션에 대한 고유 식별자입니다. 이 속성은 인스턴스가 생성될 때 지정되며, 변경할 수 없으며 편집할 수 없습니다.
 - **`xdm:name`** - 모든 옵션에는 검색 및 표시 용도로 사용되는 이름이 있습니다. 이름을 변경할 수 없으며 인스턴스를 고유하게 식별하는 데 사용할 수 없습니다. 이름은 자유롭게 선택할 수 있지만 오퍼 인스턴스 전체에서 고유해야 합니다.
-- 전체 cURL [구문에 대한 인스턴스](#updating-and-patching-instances) 업데이트 및 패치 적용을 참조하십시오. 이 `schemaId` 매개 변수는 `https://ns.adobe.com/experience/offer-management/personalized-offer` 또는 오퍼가 폴백 오퍼인 `https://ns.adobe.com/experience/offer-management/fallback-offer` 경우여야 합니다.
 
 ```json
 { 
@@ -595,19 +600,19 @@ API를 컨텐츠 유형과 함께 사용할 때 인스턴스 `application/vnd.ad
 }
 ```
 
-각 오퍼 인스턴스에는 해당 인스턴스에만 특화된 선택적 속성 세트가 있을 수 있습니다. 오퍼마다 해당 속성에 대해 다른 키가 있을 수 있지만 값은 문자열이어야 합니다. 이러한 속성은 의사 결정 및 세그멘테이션 규칙에 사용할 수 있습니다. 또한 메시지를 사용자 정의할 수 있도록 정해진 환경을 구성할 수도 있습니다.[](#updating-and-patching-instances)`schemaId``https://ns.adobe.com/experience/offer-management/personalized-offer``https://ns.adobe.com/experience/offer-management/fallback-offer`
+전체 cURL [구문에 대한 인스턴스](#updating-and-patching-instances) 업데이트 및 패치 적용을 참조하십시오. 이 `schemaId` 매개 변수는 `https://ns.adobe.com/experience/offer-management/personalized-offer` 또는 오퍼가 폴백 오퍼인 `https://ns.adobe.com/experience/offer-management/fallback-offer` 경우여야 합니다.
 
-오퍼 라이프사이클
+각 오퍼 인스턴스에는 해당 인스턴스에만 특화된 선택적 속성 세트가 있을 수 있습니다. 오퍼마다 해당 속성에 대해 다른 키가 있을 수 있지만 값은 문자열이어야 합니다. 이러한 속성은 의사 결정 및 세그멘테이션 규칙에 사용할 수 있습니다. 또한 메시지를 사용자 정의할 수 있도록 정해진 환경을 구성할 수도 있습니다.
 
-### 모든 옵션이 따를 간단한 상태 전환 흐름이 있습니다. 초안 상태에서 시작하여 준비가 되면 상태가 승인됨으로 설정됩니다. 종료 날짜가 지나면 보관된 상태로 이동할 수 있습니다. 그 상태에서, 그들은 다시 드래프팅 상태로 옮겨서 삭제하거나 재사용할 수 있습니다.
+### 오퍼 라이프사이클
+
+모든 옵션이 따를 간단한 상태 전환 흐름이 있습니다. 초안 상태에서 시작하여 준비가 되면 상태가 승인됨으로 설정됩니다. 종료 날짜가 지나면 보관된 상태로 이동할 수 있습니다. 그 상태에서, 그들은 다시 드래프팅 상태로 옮겨서 삭제하거나 재사용할 수 있습니다.
 
 ![](../images/entities/offer-lifecycle.png)
 
-**`xdm:status`** - 이 속성은 인스턴스의 라이프사이클 관리에 사용됩니다. 이 값은 오퍼가 아직 건설 중인지(값 = 초안), 런타임에서 일반적으로 고려할 수 있는지(값 = 승인됨) 또는 더 이상 사용하지 않아야 하는지(값 = 아카이브)를 나타내는 데 사용되는 워크플로우 상태를 나타냅니다.
+- **`xdm:status`** - 이 속성은 인스턴스의 라이프사이클 관리에 사용됩니다. 이 값은 오퍼가 아직 건설 중인지(값 = 초안), 런타임에서 일반적으로 고려할 수 있는지(값 = 승인됨) 또는 더 이상 사용하지 않아야 하는지(값 = 아카이브)를 나타내는 데 사용되는 워크플로우 상태를 나타냅니다.
 
-- 인스턴스에 대한 간단한 PATCH 작업은 일반적으로 속성을 조작하는 데 `xdm:status` 사용됩니다.
-
-전체 cURL [구문에 대한 인스턴스](#updating-and-patching-instances) 업데이트 및 패치 적용을 참조하십시오. 이 `schemaId` 매개 변수는 `https://ns.adobe.com/experience/offer-management/personalized-offer` 또는 오퍼가 폴백 오퍼인 `https://ns.adobe.com/experience/offer-management/fallback-offer` 경우여야 합니다.
+인스턴스에 대한 간단한 PATCH 작업은 일반적으로 속성을 조작하는 데 `xdm:status` 사용됩니다.
 
 ```json
 [
@@ -619,14 +624,14 @@ API를 컨텐츠 유형과 함께 사용할 때 인스턴스 `application/vnd.ad
 ]
 ```
 
-진술 및 배치[](#updating-and-patching-instances)`schemaId``https://ns.adobe.com/experience/offer-management/personalized-offer``https://ns.adobe.com/experience/offer-management/fallback-offer`
+전체 cURL [구문에 대한 인스턴스](#updating-and-patching-instances) 업데이트 및 패치 적용을 참조하십시오. 이 `schemaId` 매개 변수는 `https://ns.adobe.com/experience/offer-management/personalized-offer` 또는 오퍼가 폴백 오퍼인 `https://ns.adobe.com/experience/offer-management/fallback-offer` 경우여야 합니다.
 
-### 오퍼는 컨텐츠 표현을 포함하는 결정 옵션입니다. 결정을 하면 옵션이 선택되고 해당 식별자는 제공되어야 하는 배치에 대한 컨텐츠 또는 컨텐츠 참조를 가져오는 데 사용됩니다. 오퍼에는 둘 이상의 표현이 있을 수 있지만 각 오퍼에는 다른 배치 참조가 있어야 합니다. 이렇게 하면 지정된 배치를 통해 표현이 모호하게 결정될 수 있습니다.
+### 진술 및 배치
+
+오퍼는 컨텐츠 표현을 포함하는 결정 옵션입니다. 결정을 하면 옵션이 선택되고 해당 식별자는 제공되어야 하는 배치에 대한 컨텐츠 또는 컨텐츠 참조를 가져오는 데 사용됩니다. 오퍼에는 둘 이상의 표현이 있을 수 있지만 각 오퍼에는 다른 배치 참조가 있어야 합니다. 이렇게 하면 지정된 배치를 통해 표현이 모호하게 결정될 수 있습니다.
 의사 결정 작업 동안 배치는 활동 개체와 함께 결정됩니다. 참조로 배치되는 표현이 없는 오퍼는 선택 항목 목록에서 자동으로 제거됩니다.
 
 오퍼에 표현을 추가하려면 배치 인스턴스가 존재해야 합니다. 이러한 인스턴스는 스키마 식별자를 만듭니다`https://ns.adobe.com/experience/offer-management/offer-placement`.
-
-전체 cURL [구문에 대한 인스턴스](#updating-and-patching-instances) 업데이트 및 패치 적용을 참조하십시오. 이 `schemaId` 매개 변수는 `https://ns.adobe.com/experience/offer-management/personalized-offer` 또는 오퍼가 폴백 오퍼인 `https://ns.adobe.com/experience/offer-management/fallback-offer` 경우여야 합니다.
 
 ```json
 {
@@ -641,47 +646,47 @@ API를 컨텐츠 유형과 함께 사용할 때 인스턴스 `application/vnd.ad
 } 
 ```
 
-배치 **인스턴스는** 다음 속성을 가질 수 있습니다.`schemaId``https://ns.adobe.com/experience/offer-management/personalized-offer``https://ns.adobe.com/experience/offer-management/fallback-offer`
+전체 cURL [구문에 대한 인스턴스](#updating-and-patching-instances) 업데이트 및 패치 적용을 참조하십시오. 이 `schemaId` 매개 변수는 `https://ns.adobe.com/experience/offer-management/personalized-offer` 또는 오퍼가 폴백 오퍼인 `https://ns.adobe.com/experience/offer-management/fallback-offer` 경우여야 합니다.
 
-**`xdm:name`** - 인간 상호 작용 및 사용자 인터페이스에서 배치를 참조하는 할당된 이름을 포함합니다.**
+배치 **인스턴스는** 다음 속성을 가질 수 있습니다.
 
+- **`xdm:name`** - 인간 상호 작용 및 사용자 인터페이스에서 배치를 참조하는 할당된 이름을 포함합니다.
 - **`xdm:description`** - 이 배치의 컨텐츠가 전체 메시지 전달에 사용되는 방법에 대해 사람이 읽을 수 있는 의도를 전달하는 데 사용됩니다. 전달 채널에서 새 배치를 정의할 때 이 속성에 추가 정보를 추가하여 컨텐츠 작성자가 그에 따라 컨텐츠를 만들거나 선택할 수 있습니다. 이러한 지침은 공식적으로 해석되거나 시행되지 않습니다. 이 재산은 단지 의도를 알 수 있는 장소일 뿐이다.
 - **`xdm:channel`** - 채널의 URI입니다. 채널은 동적 컨텐츠가 전달될 위치를 나타냅니다. 채널 제약 조건은 오퍼를 사용할 위치뿐만 아니라 경험에 사용되는 컨텐츠 편집기 또는 유효성 검사기를 결정하는 데에도 사용됩니다.
 - **`xdm:componentType`** - 이 배치에서 설명하는 위치에 표시할 수 있는 컨텐츠의 모델 식별자(예: URI)입니다. 구성 요소 유형은 다음과 같습니다. 이미지 링크, html 또는 일반 텍스트. 각 구성 요소 유형은 컨텐츠 항목에 있을 수 있는 특정 속성 집합(모델)을 의미할 수 있습니다. 구성 요소 유형 목록을 확장할 수 있습니다. 사전 정의된 구성 요소 유형 값은 다음과 같습니다.
-- `https://ns.adobe.com/experience/offer-management/content-component-imagelink`
+   - `https://ns.adobe.com/experience/offer-management/content-component-imagelink`
    - `https://ns.adobe.com/experience/offer-management/content-component-text`
    - `https://ns.adobe.com/experience/offer-management/content-component-html`
-   - **`xdm:contentTypes`**, 이 배치에 필요한 구성 요소의 미디어 유형에 대한 제약 사항입니다. 다른 이미지 포맷과 같은 하나의 구성 요소 유형에 두 개 이상의 미디어 유형이 있을 수 있습니다.
-- **오퍼의 표시** 항목에는 배열 속성에 개체 구조가 있습니다 `xdm:representations`. 각 항목에는 다음 속성이 있을 수 있습니다.
+- **`xdm:contentTypes`**, 이 배치에 필요한 구성 요소의 미디어 유형에 대한 제약 사항입니다. 다른 이미지 포맷과 같은 하나의 구성 요소 유형에 두 개 이상의 미디어 유형이 있을 수 있습니다.
 
-**`xdm:placement`** - 이 속성에는 배치 인스턴스에 대한 참조가 포함되어 있습니다. 오퍼에 표현을 추가할 때 값이 확인됩니다. 해당 URI가 있는 배치 인스턴스가 존재해야 하며 삭제로 표시되어서는 안 됩니다. 또한, 오퍼 인스턴스에 배치 참조에 대해 동일한 값이 있는 두 개의 표현이 없도록 확인이 수행됩니다.**`xdm:representations`
+**오퍼의 표시** 항목에는 배열 속성에 개체 구조가 있습니다 `xdm:representations`. 각 항목에는 다음 속성이 있을 수 있습니다.
 
+- **`xdm:placement`** - 이 속성에는 배치 인스턴스에 대한 참조가 포함되어 있습니다. 오퍼에 표현을 추가할 때 값이 확인됩니다. 해당 URI가 있는 배치 인스턴스가 존재해야 하며 삭제로 표시되어서는 안 됩니다. 또한, 오퍼 인스턴스에 배치 참조에 대해 동일한 값이 있는 두 개의 표현이 없도록 확인이 수행됩니다.
 - **`xdm:components`** - 컨텐츠 구성 요소는 특정 오퍼 표현과 연관된 조각입니다. 이러한 조각은 나중에 최종 사용자 경험을 구성하는 데 사용됩니다. 의사 결정 서비스 자체만으로는 전체 최종 사용자 경험이 작성되지는 않습니다. 다음 속성은 모든 구성 요소 모델의 일부입니다.
-- **`@type`** - 이 속성은 구성 요소 유형을 식별합니다. 이 개념의 다른 이름은 컨텐츠 조각 모델입니다. 구성 요소 `@type` 의 URI는 최종 사용자 경험을 취합하는 응용 프로그램 또는 서비스에 의해 정의된 모델의 URI입니다.
-   - **`repo:id`** - 이 속성에는 자산이 저장된 저장소의 구성 요소의 기본 리소스에 대한 전역적 고유하고 변경할 수 없는 식별자가 포함됩니다.`@type`
+   - **`@type`** - 이 속성은 구성 요소 유형을 식별합니다. 이 개념의 다른 이름은 컨텐츠 조각 모델입니다. 구성 요소 `@type` 의 URI는 최종 사용자 경험을 취합하는 응용 프로그램 또는 서비스에 의해 정의된 모델의 URI입니다.
+   - **`repo:id`** - 이 속성에는 자산이 저장된 저장소의 구성 요소의 기본 리소스에 대한 전역적 고유하고 변경할 수 없는 식별자가 포함됩니다.
    - **`repo:name`** - 이 속성에는 저장소의 자산에 대해 사람이 읽을 수 있는 이름이 포함되어 있습니다. 이 이름은 사용자가 정의하며 고유하도록 보장되지 않습니다.
    - **`repo:resolveURL`** - 이 속성에는 컨텐츠 저장소에서 자산을 읽을 수 있는 고유한 리소스 로케이터가 포함되어 있습니다. 이렇게 하면 클라이언트가 어떤 API를 호출할지 이해하지 않아도 자산을 쉽게 얻을 수 있습니다. URL은 자산의 기본 리소스의 바이트를 반환합니다.
    - **`dc:format`** - 이 속성은 Dublin Core Metadata Initiative에서 제공됩니다. 리소스를 표시하거나 운영하는 데 필요한 소프트웨어, 하드웨어 또는 기타 장비를 결정하는 데 형식을 사용할 수 있습니다. 제어된 단어(예: 컴퓨터 미디어 형식을 정의하는 인터넷 미디어 유형 목록)에서 값을 선택하는 것이 좋습니다.
    - **`dc:language`** - 이 속성에는 리소스의 언어 또는 언어가 포함됩니다. 언어는 IETF RFC 3066에 정의된 언어 코드에 지정됩니다.
-   - 속성에 미리 정의된 구성 요소 유형은 세 가지가 `@type` 있습니다.
 
-https<span></span>://ns.adobe.com/experience/offer-management/content-component-imagelink
+속성에 미리 정의된 구성 요소 유형은 세 가지가 `@type` 있습니다.
 
+- https<span></span>://ns.adobe.com/experience/offer-management/content-component-imagelink
 - https<span></span>://ns.adobe.com/experience/offer-management/content-component-text
 - https<span></span>://ns.adobe.com/experience/offer-management/content-component-html
-- 속성 값에 따라 추가 `@type` 속성이 `xdm:components` 포함됩니다.
 
-**`xdm:linkURL`** - 구성 요소가 이미지 링크일 때 표시됩니다. 이 속성에는 이미지와 연관된 링크가 포함되며 최종 사용자가 오퍼 컨텐츠와 상호 작용할 때 해당 링크가 `user-agent` 탐색됩니다.`xdm:components`
+속성 값에 따라 추가 `@type` 속성이 `xdm:components` 포함됩니다.
 
-- **`xdm:copyline`** - 구성 요소가 텍스트일 때 사용됩니다. 텍스트 자산을 참조하는 것 외에도, 긴 양식 텍스트 오퍼에 서식을 지정할 수 있는 경우 짧은 텍스트 문자열을 xdm:copyline 속성에 직접 저장할 수 있습니다.`user-agent`
-- **`xdm:copyline`**클라이언트가 컨텍스트 처리 지침을 설정하고 평가하는 데 추가 속성을 사용할 수 있습니다. 예를 들어 오퍼 UI 라이브러리 클라이언트는 표시 작업을 보다 쉽게 처리할 수 있도록 다음과 같은 선택적 속성을 추가합니다.
+- **`xdm:linkURL`** - 구성 요소가 이미지 링크일 때 표시됩니다. 이 속성에는 이미지와 연관된 링크가 포함되며 최종 사용자가 오퍼 컨텐츠와 상호 작용할 때 해당 링크가 `user-agent` 탐색됩니다.
+- **`xdm:copyline`** - 구성 요소가 텍스트일 때 사용됩니다. 텍스트 자산을 참조하는 것 외에도, 긴 양식 텍스트 오퍼에 서식을 지정할 수 있는 경우 짧은 텍스트 문자열을 xdm:copyline 속성에 직접 저장할 수 있습니다.
 
-배열의 각 항목 내에 `xdm:components` 오퍼 라이브러리 UI 클라이언트가 다음 속성을 추가합니다. 이러한 속성은 UI에 미치는 영향을 이해하지 않은 상태에서 삭제하거나 조작할 수 없습니다.
+클라이언트가 컨텍스트 처리 지침을 설정하고 평가하는 데 추가 속성을 사용할 수 있습니다. 예를 들어 오퍼 UI 라이브러리 클라이언트는 표시 작업을 보다 쉽게 처리할 수 있도록 다음과 같은 선택적 속성을 추가합니다.
 
-- **`offerui:previewThumbnail`** - 오퍼 라이브러리 UI에서 자산 렌더링을 표시하는 데 사용하는 선택 속성입니다. 이 변환은 자산 자체와 다릅니다. 예를 들어 컨텐츠는 HTML일 수 있고 변환은 비트맵 이미지이며 이와 비슷한 형태만 표시됩니다. 이(낮은 품질) 변환은 오퍼의 표시 블록 내에 표시됩니다.
-   - **`offerui:previewThumbnail`**오퍼 인스턴스의 PATCH 작업 예는 표현을 조작하는 방법을 보여줍니다.
+- 배열의 각 항목 내에 `xdm:components` 오퍼 라이브러리 UI 클라이언트가 다음 속성을 추가합니다. 이러한 속성은 UI에 미치는 영향을 이해하지 않은 상태에서 삭제하거나 조작할 수 없습니다.
+   - **`offerui:previewThumbnail`** - 오퍼 라이브러리 UI에서 자산 렌더링을 표시하는 데 사용하는 선택 속성입니다. 이 변환은 자산 자체와 다릅니다. 예를 들어 컨텐츠는 HTML일 수 있고 변환은 비트맵 이미지이며 이와 비슷한 형태만 표시됩니다. 이(낮은 품질) 변환은 오퍼의 표시 블록 내에 표시됩니다.
 
-전체 cURL [구문에 대한 인스턴스](#updating-and-patching-instances) 업데이트 및 패치 적용을 참조하십시오. 이 `schemaId` 매개 변수는 `https://ns.adobe.com/experience/offer-management/personalized-offer` 또는 오퍼가 폴백 오퍼인 `https://ns.adobe.com/experience/offer-management/fallback-offer` 경우여야 합니다.
+오퍼 인스턴스의 PATCH 작업 예는 표현을 조작하는 방법을 보여줍니다.
 
 ```json
 [
@@ -702,22 +707,22 @@ https<span></span>://ns.adobe.com/experience/offer-management/content-component-
 ]' 
 ```
 
+전체 cURL [구문에 대한 인스턴스](#updating-and-patching-instances) 업데이트 및 패치 적용을 참조하십시오. 이 `schemaId` 매개 변수는 `https://ns.adobe.com/experience/offer-management/personalized-offer` 또는 오퍼가 폴백 오퍼인 `https://ns.adobe.com/experience/offer-management/fallback-offer` 경우여야 합니다.
+
 속성이 `xdm:representations` 아직 없으면 PATCH 작업이 실패할 수 있습니다. 이 경우 위의 추가 작업 앞에 배열을 만드는 다른 추가 작업 또는 단일 추가 작업 `xdm:representations` 이 배열을 직접 설정할 수 있습니다.
-설명된 스키마 및 속성은 모든 오퍼 유형, 개인화 제안 및 폴백 오퍼에 사용됩니다. 개인화 오퍼의 측면을 설명하는 제한 및 결정 규칙에 대한 다음 두 가지 섹션.`schemaId``https://ns.adobe.com/experience/offer-management/personalized-offer``https://ns.adobe.com/experience/offer-management/fallback-offer`
+설명된 스키마 및 속성은 모든 오퍼 유형, 개인화 제안 및 폴백 오퍼에 사용됩니다. 개인화 오퍼의 측면을 설명하는 제한 및 결정 규칙에 대한 다음 두 가지 섹션.
 
-오퍼 제한 설정`xdm:representations``xdm:representations`
+## 오퍼 제한 설정
 
-## 일정 제한
+### 일정 제한
 
-### 일반적으로 의사 결정 옵션은 달력 제한 역할을 하는 시작 및 종료 날짜와 시간을 지정할 수 있습니다. 속성은 다음 속성에 포함됩니다 `xdm:selectionConstraint`.
+일반적으로 의사 결정 옵션은 달력 제한 역할을 하는 시작 및 종료 날짜와 시간을 지정할 수 있습니다. 속성은 다음 속성에 포함됩니다 `xdm:selectionConstraint`.
 
-**`xdm:startDate`** - 이 속성은 시작 날짜와 시간을 나타냅니다. 값은 RFC 3339 규칙에 따라 형식이 지정된 문자열(예: 다음 타임스탬프)입니다. &quot;2019-06-13T11:21:23.356Z&quot;
+- **`xdm:startDate`** - 이 속성은 시작 날짜와 시간을 나타냅니다. 값은 RFC 3339 규칙에 따라 형식이 지정된 문자열(예: 다음 타임스탬프)입니다. &quot;2019-06-13T11:21:23.356Z&quot;
 시작 날짜 및 시간에 도달하지 않은 의사 결정 옵션은 아직 의사 결정 시 적격한 것으로 간주되지 않습니다.
-
 - **`xdm:endDate`** - 이 속성은 종료 날짜와 시간을 나타냅니다. 값은 RFC 3339 규칙에 따라 형식이 지정된 문자열(예: 다음 타임스탬프)입니다. &quot;2019-07-13T11:00:00.000Z&quot;종료 날짜 및 시간이 지난 의사 결정 옵션이 더 이상 의사 결정 과정에서 적용되지 않습니다.
-- **`xdm:endDate`**달력 제약 변경은 다음 PATCH 호출을 사용하여 수행할 수 있습니다.
 
-전체 cURL [구문에 대한 인스턴스](#updating-and-patching-instances) 업데이트 및 패치 적용을 참조하십시오. 매개 `schemaId` 변수는 반드시 사용해야 합니다 `https://ns.adobe.com/experience/offer-management/personalized-offer`. 대체 오퍼에 제한 사항이 없습니다.
+달력 제약 변경은 다음 PATCH 호출을 사용하여 수행할 수 있습니다.
 
 ```json
 [
@@ -732,16 +737,16 @@ https<span></span>://ns.adobe.com/experience/offer-management/content-component-
 ]' 
 ```
 
-제한 매핑[](#updating-and-patching-instances)`schemaId``https://ns.adobe.com/experience/offer-management/personalized-offer`
-
-### 매핑 제약조건은 캡핑에 대한 매개 변수를 정의하는 결정 옵션의 구성 요소입니다. 캡처한 작업은 개별 프로필뿐만 아니라 모든 프로필에 대해 옵션을 몇 번 제의할 수 있는지를 제한하는 프로세스입니다. 속성에는 1보다 크거나 같아야 하는 정수 값이 있습니다. 속성은 속성 내에 중첩됩니다 `xdm:cappingConstraint`.
-
-**`xdm:globalCap`** - 글로벌 상한선은 오퍼를 전체적으로 제안 할 수 있는 횟수에 대한 제한입니다.
-
-- **`xdm:profileCap`** - 프로필 끝은 특정 프로필에 오퍼를 제안 받을 수 있는 횟수에 대한 제한을 의미합니다.
-- **`xdm:profileCap`**개인화 오퍼에 대한 매핑 제약 조건 설정 또는 변경은 다음 PATCH 호출을 사용하여 수행할 수 있습니다.
-
 전체 cURL [구문에 대한 인스턴스](#updating-and-patching-instances) 업데이트 및 패치 적용을 참조하십시오. 매개 `schemaId` 변수는 반드시 사용해야 합니다 `https://ns.adobe.com/experience/offer-management/personalized-offer`. 대체 오퍼에 제한 사항이 없습니다.
+
+### 제한 매핑
+
+매핑 제약조건은 캡핑에 대한 매개 변수를 정의하는 결정 옵션의 구성 요소입니다. 캡처한 작업은 개별 프로필뿐만 아니라 모든 프로필에 대해 옵션을 몇 번 제의할 수 있는지를 제한하는 프로세스입니다. 속성에는 1보다 크거나 같아야 하는 정수 값이 있습니다. 속성은 속성 내에 중첩됩니다 `xdm:cappingConstraint`.
+
+- **`xdm:globalCap`** - 글로벌 상한선은 오퍼를 전체적으로 제안 할 수 있는 횟수에 대한 제한입니다.
+- **`xdm:profileCap`** - 프로필 끝은 특정 프로필에 오퍼를 제안 받을 수 있는 횟수에 대한 제한을 의미합니다.
+
+개인화 오퍼에 대한 매핑 제약 조건 설정 또는 변경은 다음 PATCH 호출을 사용하여 수행할 수 있습니다.
 
 ```json
 [
@@ -756,19 +761,19 @@ https<span></span>://ns.adobe.com/experience/offer-management/content-component-
 ]' 
 ```
 
-매핑 값을 제거하려면 작업 &quot;add&quot;가 작업 &quot;remove&quot;로 대체됩니다. 매핑 값은 개별적으로 존재하며 개별적으로 설정하거나 제거할 수도 있습니다.[](#updating-and-patching-instances)`schemaId``https://ns.adobe.com/experience/offer-management/personalized-offer`
+전체 cURL [구문에 대한 인스턴스](#updating-and-patching-instances) 업데이트 및 패치 적용을 참조하십시오. 매개 `schemaId` 변수는 반드시 사용해야 합니다 `https://ns.adobe.com/experience/offer-management/personalized-offer`. 대체 오퍼에 제한 사항이 없습니다.
 
-자격 조건
+매핑 값을 제거하려면 작업 &quot;add&quot;가 작업 &quot;remove&quot;로 대체됩니다. 매핑 값은 개별적으로 존재하며 개별적으로 설정하거나 제거할 수도 있습니다.
 
-### 의사 결정 프로세스에서 조건부로 오퍼를 선택할 수 있습니다. 개인화 오퍼에 자격 규칙에 대한 참조가 있으면, 해당 프로필에 대해 간주되는 오퍼 개체에 대해 규칙의 조건이 true로 평가되어야 합니다. 자격 조건 규칙은 의사 결정 옵션에 관계없이 생성 및 관리되며 여러 개인화 오퍼에서 동일한 규칙을 참조할 수 있습니다.
+### 자격 조건
+
+의사 결정 프로세스에서 조건부로 오퍼를 선택할 수 있습니다. 개인화 오퍼에 자격 규칙에 대한 참조가 있으면, 해당 프로필에 대해 간주되는 오퍼 개체에 대해 규칙의 조건이 true로 평가되어야 합니다. 자격 조건 규칙은 의사 결정 옵션에 관계없이 생성 및 관리되며 여러 개인화 오퍼에서 동일한 규칙을 참조할 수 있습니다.
 
 규칙에 대한 참조가 속성에 포함됩니다 `xdm:selectionConstraint`.
 
-**`xdm:eligibilityRule`** - 이 속성은 자격 조건 규칙에 대한 참조를 보유합니다. 값은 스키마 인스턴스https://ns.adobe.com/experience/offer-management/eligibility-rule `@id` 의 값입니다.
+- **`xdm:eligibilityRule`** - 이 속성은 자격 조건 규칙에 대한 참조를 보유합니다. 값은 스키마 인스턴스https://ns.adobe.com/experience/offer-management/eligibility-rule `@id` 의 값입니다.
 
-- **`xdm:eligibilityRule`**PATCH 작업으로도 규칙을 추가 및 삭제할 수 있습니다.`@id`
-
-전체 cURL [구문에 대한 인스턴스](#updating-and-patching-instances) 업데이트 및 패치 적용을 참조하십시오. 매개 `schemaId` 변수는 반드시 사용해야 합니다 `https://ns.adobe.com/experience/offer-management/personalized-offer`. 대체 오퍼에 제한 사항이 없습니다.
+PATCH 작업으로도 규칙을 추가 및 삭제할 수 있습니다.
 
 ```
 [
@@ -780,18 +785,18 @@ https<span></span>://ns.adobe.com/experience/offer-management/content-component-
 ]'
 ```
 
-자격 조건 규칙은 달력 제한 `xdm:selectionConstraint` 과 함께 속성에 포함됩니다. 패치 작업에서 전체 `SelectionConstraint` 속성 제거를 시도해서는 안 됩니다.`schemaId``https://ns.adobe.com/experience/offer-management/personalized-offer`
+전체 cURL [구문에 대한 인스턴스](#updating-and-patching-instances) 업데이트 및 패치 적용을 참조하십시오. 매개 `schemaId` 변수는 반드시 사용해야 합니다 `https://ns.adobe.com/experience/offer-management/personalized-offer`. 대체 오퍼에 제한 사항이 없습니다.
 
-오퍼 우선 순위 설정`xdm:selectionConstraint``SelectionConstraint`
+자격 조건 규칙은 달력 제한 `xdm:selectionConstraint` 과 함께 속성에 포함됩니다. 패치 작업에서 전체 `SelectionConstraint` 속성 제거를 시도해서는 안 됩니다.
 
-## 해당 프로필에 가장 적합한 옵션을 결정하기 위해 적격한 결정 옵션 등급이 지정됩니다. 등급을 지원하고 다른 메커니즘으로 등급을 결정할 수 없는 경우 기본값을 제공하기 위해 각 개인화 오퍼에 대해 기본 우선 순위를 설정할 수 있습니다.
+## 오퍼 우선 순위 설정
+
+해당 프로필에 가장 적합한 옵션을 결정하기 위해 적격한 결정 옵션 등급이 지정됩니다. 등급을 지원하고 다른 메커니즘으로 등급을 결정할 수 없는 경우 기본값을 제공하기 위해 각 개인화 오퍼에 대해 기본 우선 순위를 설정할 수 있습니다.
 기본 우선 순위는 속성에 포함됩니다 `xdm:rank`.
 
-**`xdm:priority`** - 이 속성은 알려진 프로필 특정 등급 순서가 없는 경우 한 오퍼가 다른 오퍼에서 선택되는 기본 순서를 나타냅니다. 우선 순위 값을 비교한 후 두 개 이상의 개인화 오퍼가 여전히 연결되어 있는 경우, 임의로 오퍼를 선택하고 제안 제안에서 사용합니다. 이 속성의 값은 0보다 크거나 같은 정수여야 합니다.
+- **`xdm:priority`** - 이 속성은 알려진 프로필 특정 등급 순서가 없는 경우 한 오퍼가 다른 오퍼에서 선택되는 기본 순서를 나타냅니다. 우선 순위 값을 비교한 후 두 개 이상의 개인화 오퍼가 여전히 연결되어 있는 경우, 임의로 오퍼를 선택하고 제안 제안에서 사용합니다. 이 속성의 값은 0보다 크거나 같은 정수여야 합니다.
 
-- **`xdm:priority`**기본 우선 순위 조정은 다음 PATCH 호출을 사용하여 수행할 수 있습니다.
-
-전체 cURL [구문에 대한 인스턴스](#updating-and-patching-instances) 업데이트 및 패치 적용을 참조하십시오. 매개 `schemaId` 변수는 반드시 사용해야 합니다 `https://ns.adobe.com/experience/offer-management/personalized-offer`. 폴백 오퍼에는 등급 속성이 없습니다.
+기본 우선 순위 조정은 다음 PATCH 호출을 사용하여 수행할 수 있습니다.
 
 ```shell
 curl -X PATCH {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \
@@ -810,15 +815,15 @@ curl -X PATCH {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \
 ]'
 ```
 
-의사 결정 규칙 관리[](#updating-and-patching-instances)`schemaId``https://ns.adobe.com/experience/offer-management/personalized-offer`
+전체 cURL [구문에 대한 인스턴스](#updating-and-patching-instances) 업데이트 및 패치 적용을 참조하십시오. 매개 `schemaId` 변수는 반드시 사용해야 합니다 `https://ns.adobe.com/experience/offer-management/personalized-offer`. 폴백 오퍼에는 등급 속성이 없습니다.
 
-## 자격 조건 규칙에는 주어진 결정 옵션이 해당 프로필에 적합한지를 결정하기 위해 평가되는 조건이 있습니다. 하나 이상의 결정 옵션에 규칙을 첨부하면 이 옵션에 대해 규칙이 이 사용자에게 고려될 옵션에 대해 true로 평가해야 한다는 의미입니다. 규칙에는 프로필 속성에 대한 테스트가 포함될 수 있고, 이 프로필에 대한 경험 이벤트와 관련된 표현식을 평가할 수 있으며, 결정 요청에 전달된 컨텍스트 데이터를 포함할 수 있습니다. 예를 들어 다음과 같은 조건을 설명할 수 있습니다.
+## 의사 결정 규칙 관리
 
-그는 &quot;지난 6개월간 항공기 운항이 현 비행기의 조종번호인 3차례 비행을 했다&quot;고 말했다.
+자격 조건 규칙에는 주어진 결정 옵션이 해당 프로필에 적합한지를 결정하기 위해 평가되는 조건이 있습니다. 하나 이상의 결정 옵션에 규칙을 첨부하면 이 옵션에 대해 규칙이 이 사용자에게 고려될 옵션에 대해 true로 평가해야 한다는 의미입니다. 규칙에는 프로필 속성에 대한 테스트가 포함될 수 있고, 이 프로필에 대한 경험 이벤트와 관련된 표현식을 평가할 수 있으며, 결정 요청에 전달된 컨텍스트 데이터를 포함할 수 있습니다. 예를 들어 다음과 같은 조건을 설명할 수 있습니다.
 
-> 인스턴스는 스키마 식별자https://ns.adobe.com/experience/offer-management/eligibility-rule을 사용하여 만들어집니다. 만들기 또는 업데이트 호출에 대한 `_instance` 속성은 다음과 같습니다.
+> 그는 &quot;지난 6개월간 항공기 운항이 현 비행기의 조종번호인 3차례 비행을 했다&quot;고 말했다.
 
-전체 cURL [구문에 대한 인스턴스](#updating-and-patching-instances) 업데이트 및 패치 적용을 참조하십시오. 매개 `schemaId` 변수는 반드시 사용해야 합니다 `https://ns.adobe.com/experience/offer-management/eligibility-rule`.
+인스턴스는 스키마 식별자https://ns.adobe.com/experience/offer-management/eligibility-rule을 사용하여 만들어집니다. 만들기 또는 업데이트 호출에 대한 `_instance` 속성은 다음과 같습니다.
 
 ```json
 {
@@ -837,28 +842,28 @@ curl -X PATCH {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \
 }
 ```
 
-규칙 조건 속성의 값에 PQL 식이 포함되어 있습니다. 컨텍스트 데이터는 특수 경로 식 @{schemaID}을 통해 참조됩니다.[](#updating-and-patching-instances)`schemaId``https://ns.adobe.com/experience/offer-management/eligibility-rule`
+전체 cURL [구문에 대한 인스턴스](#updating-and-patching-instances) 업데이트 및 패치 적용을 참조하십시오. 매개 `schemaId` 변수는 반드시 사용해야 합니다 `https://ns.adobe.com/experience/offer-management/eligibility-rule`.
+
+규칙 조건 속성의 값에 PQL 식이 포함되어 있습니다. 컨텍스트 데이터는 특수 경로 식 @{schemaID}을 통해 참조됩니다.
 
 규칙은 자동으로 세그먼트에 정렬되며, 규칙 [!DNL Experience Platform] 은 프로필 속성을 테스트하여 세그먼트의 의도를 재사용하는 경우가 `segmentMembership` 많습니다. 이 `segmentMembership` 속성에는 이미 평가된 세그먼트 조건의 결과가 포함되어 있습니다. 이를 통해 조직은 도메인 특정 대상을 한 번 정의하고 이름을 지정하고 조건을 한 번 평가할 수 있습니다.
 
-오퍼 컬렉션 관리[!DNL Experience Platform]`segmentMembership``segmentMembership`
+## 오퍼 컬렉션 관리
 
-## 태그 및 태그 지정 오퍼 만들기
+### 태그 및 태그 지정 오퍼 만들기
 
-### 각 컬렉션에서 적용할 필터 조건을 정의하는 컬렉션에서 오퍼를 구성할 수 있습니다. 현재 컬렉션의 필터 식에는 다음 두 가지 양식 중 하나를 사용할 수 있습니다.
+각 컬렉션에서 적용할 필터 조건을 정의하는 컬렉션에서 오퍼를 구성할 수 있습니다. 현재 컬렉션의 필터 식에는 다음 두 가지 양식 중 하나를 사용할 수 있습니다.
 
-오퍼의 `@id` 매개 변수는 컬렉션에 있을 오퍼의 식별자 목록에 있는 매개 변수와 일치해야 합니다. 이 필터는 단순히 컬렉션의 오퍼의 URI를 열거한 것입니다.
+1. 오퍼의 `@id` 매개 변수는 컬렉션에 있을 오퍼의 식별자 목록에 있는 매개 변수와 일치해야 합니다. 이 필터는 단순히 컬렉션의 오퍼의 URI를 열거한 것입니다.
+2. 오퍼에는 태그 참조 목록이 있고 컬렉션의 필터는 태그 목록으로 구성됩니다. 오퍼는 다음과 같은 경우에 컬렉션에 있습니다.\
+   a. 오퍼의 태그 중 하나와 일치하는 필터 태그\
+   b. 모든 필터의 태그가 오퍼의 태그 중 하나와 일치합니다.
 
-1. 오퍼에는 태그 참조 목록이 있고 컬렉션의 필터는 태그 목록으로 구성됩니다. 오퍼는 다음과 같은 경우에 컬렉션에 있습니다.`@id`
-2. a. 오퍼의 태그 중 하나와 일치하는 필터 태그\
-   b. 모든 필터의 태그가 오퍼의 태그 중 하나와 일치합니다.\
-   태그는 인스턴스를 연결할 수 있는 간단한 인스턴스입니다. 이러한 인스턴스는 이름을 사용하여 스스로 표시합니다. 사용자 인터페이스에서 보다 쉽게 표시하려면 인스턴스 간에 이름이 고유해야 합니다.
+태그는 인스턴스를 연결할 수 있는 간단한 인스턴스입니다. 이러한 인스턴스는 이름을 사용하여 스스로 표시합니다. 사용자 인터페이스에서 보다 쉽게 표시하려면 인스턴스 간에 이름이 고유해야 합니다.
 
 태그 개체는 결정 옵션(오퍼) 간의 분류를 설정하는 데 사용됩니다. 태그는 많은 오퍼로 연결할 수 있으며 오퍼에는 많은 태그 참조가 있을 수 있습니다. 제공 카테고리는 지정된 태그 인스턴스 세트와 관련된 모든 오퍼를 참조하여 설정됩니다.
 
 태그 인스턴스는 스키마 식별자https://ns.adobe.com/experience/offer-management/tag을 사용하여 만들어집니다. 만들기 또는 업데이트 호출에 대한 `_instance` 속성은 다음과 같습니다.
-
-전체 cURL [구문에 대한 인스턴스](#updating-and-patching-instances) 업데이트 및 패치 적용을 참조하십시오. 매개 `schemaId` 변수는 반드시 사용해야 합니다 `https://ns.adobe.com/experience/offer-management/tag`.
 
 ```json
 {
@@ -866,10 +871,10 @@ curl -X PATCH {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \
 } 
 ```
 
-다음과 같은 태그 참조 목록을 사용하여 오퍼 인스턴스를 만들 수 있습니다.[](#updating-and-patching-instances)`schemaId``https://ns.adobe.com/experience/offer-management/tag`
+전체 cURL [구문에 대한 인스턴스](#updating-and-patching-instances) 업데이트 및 패치 적용을 참조하십시오. 매개 `schemaId` 변수는 반드시 사용해야 합니다 `https://ns.adobe.com/experience/offer-management/tag`.
 
 
-또는 오퍼를 패치하여 태그 목록을 변경할 수 있습니다.
+다음과 같은 태그 참조 목록을 사용하여 오퍼 인스턴스를 만들 수 있습니다.
 
 ```json
 {
@@ -881,7 +886,7 @@ curl -X PATCH {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \
 }
 ```
 
-두 경우 모두 전체 cURL [구문에 대한 인스턴스](#updating-and-patching-instances) 업데이트 및 패치를 참조하십시오. 매개 `schemaId` 변수는 반드시 사용해야 합니다 `https://ns.adobe.com/experience/offer-management/personalized-offer`.
+또는 오퍼를 패치하여 태그 목록을 변경할 수 있습니다.
 
 ```json
 [
@@ -893,13 +898,13 @@ curl -X PATCH {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \
 ]' 
 ```
 
-추가 작업이 성공하려면 `xdm:tags` 속성이 이미 있어야 합니다. 인스턴스에 태그가 없습니다. PATCH 작업에서는 먼저 배열 속성을 추가한 다음 해당 배열에 태그 참조를 추가할 수 있습니다.](#updating-and-patching-instances)`schemaId``https://ns.adobe.com/experience/offer-management/personalized-offer`
+두 경우 모두 전체 cURL [구문에 대한 인스턴스](#updating-and-patching-instances) 업데이트 및 패치를 참조하십시오. 매개 `schemaId` 변수는 반드시 사용해야 합니다 `https://ns.adobe.com/experience/offer-management/personalized-offer`.
 
-오퍼 컬렉션에 대한 필터 정의`xdm:tags`
+추가 작업이 성공하려면 `xdm:tags` 속성이 이미 있어야 합니다. 인스턴스에 태그가 없습니다. PATCH 작업에서는 먼저 배열 속성을 추가한 다음 해당 배열에 태그 참조를 추가할 수 있습니다.
 
-### 필터 인스턴스는 스키마 식별자https://ns.adobe.com/experience/offer-management/offer-filter을 사용하여 만들어집니다. 만들기 또는 업데이트 호출에 대한 `_instance` 속성은 다음과 같습니다.
+### 오퍼 컬렉션에 대한 필터 정의
 
-전체 cURL [구문에 대한 인스턴스](#updating-and-patching-instances) 업데이트 및 패치 적용을 참조하십시오. 매개 `schemaId` 변수는 반드시 사용해야 합니다 `https://ns.adobe.com/experience/offer-management/offer-filter`.
+필터 인스턴스는 스키마 식별자https://ns.adobe.com/experience/offer-management/offer-filter을 사용하여 만들어집니다. 만들기 또는 업데이트 호출에 대한 `_instance` 속성은 다음과 같습니다.
 
 ```json
 {
@@ -912,15 +917,15 @@ curl -X PATCH {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \
 }
 ```
 
-**`xdm:filterType`** - 이 속성은 필터를 태그를 사용하여 설정할지 또는 ID로 오퍼를 직접 참조하는지를 나타냅니다. 필터를 사용하여 태그를 사용하도록 설정하면 필터 유형이 모든 태그가 특정 오퍼의 태그와 일치해야 하는지 또는 주어진 태그 중 하나라도 필터의 자격을 갖추기에 충분한지를 추가로 나타낼 수 있습니다. 이 열거형 속성의 유효한 값은 다음과 같습니다.](#updating-and-patching-instances)`schemaId``https://ns.adobe.com/experience/offer-management/offer-filter`
+전체 cURL [구문에 대한 인스턴스](#updating-and-patching-instances) 업데이트 및 패치 적용을 참조하십시오. 매개 `schemaId` 변수는 반드시 사용해야 합니다 `https://ns.adobe.com/experience/offer-management/offer-filter`.
 
-- `offers`
+- **`xdm:filterType`** - 이 속성은 필터를 태그를 사용하여 설정할지 또는 ID로 오퍼를 직접 참조하는지를 나타냅니다. 필터를 사용하여 태그를 사용하도록 설정하면 필터 유형이 모든 태그가 특정 오퍼의 태그와 일치해야 하는지 또는 주어진 태그 중 하나라도 필터의 자격을 갖추기에 충분한지를 추가로 나타낼 수 있습니다. 이 열거형 속성의 유효한 값은 다음과 같습니다.
+   - `offers`
    - `anyTags`
    - `allTags`
-   - **`ids`** - 속성에는 의 값에 따라 인스턴스 또는 태그 인스턴스를 제공하는 참조 URI 배열이 포함됩니다 `xdm:filterType`. .
-- 다음 호출에서는 오퍼가 직접 참조되는 경우 만들기 또는 업데이트 호출에 대한 `_instance` 속성이 어떻게 표시되는지 보여 줍니다.`xdm:filterType`
+- **`ids`** - 속성에는 의 값에 따라 인스턴스 또는 태그 인스턴스를 제공하는 참조 URI 배열이 포함됩니다 `xdm:filterType`. .
 
-활동 관리`_instance`
+다음 호출에서는 오퍼가 직접 참조되는 경우 만들기 또는 업데이트 호출에 대한 `_instance` 속성이 어떻게 표시되는지 보여 줍니다.
 
 ```json
 {
@@ -940,11 +945,11 @@ curl -X PATCH {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \
 } 
 ```
 
-## 오퍼 활동은 의사 결정 프로세스를 제어하는 데 사용됩니다. 주제/카테고리별로 오퍼를 좁히기 위해 전체 인벤토리에 적용된 오퍼 필터를 지정하고, 예약 공간에 맞는 오퍼로 재고를 좁히고 결합된 제약 조건이 모든 사용 가능한 개인화 옵션(오퍼)의 자격을 박탈할 경우 폴백 옵션을 지정합니다.
+## 활동 관리
+
+오퍼 활동은 의사 결정 프로세스를 제어하는 데 사용됩니다. 주제/카테고리별로 오퍼를 좁히기 위해 전체 인벤토리에 적용된 오퍼 필터를 지정하고, 예약 공간에 맞는 오퍼로 재고를 좁히고 결합된 제약 조건이 모든 사용 가능한 개인화 옵션(오퍼)의 자격을 박탈할 경우 폴백 옵션을 지정합니다.
 
 활동 인스턴스는 스키마 식별자를 사용하여 만들어집니다`https://ns.adobe.com/experience/offer-management/offer-activity`. 만들기 또는 업데이트 호출에 대한 `_instance` 속성은 다음과 같습니다.
-
-전체 cURL [구문에 대한 인스턴스](#updating-and-patching-instances) 업데이트 및 패치 적용을 참조하십시오. 매개 `schemaId` 변수는 반드시 사용해야 합니다 `https://ns.adobe.com/experience/offer-management/offer-activity`.
 
 ```json
 {
@@ -958,17 +963,17 @@ curl -X PATCH {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \
 }
 ```
 
-**`xdm:name`** - 이 필수 속성에는 활동 이름이 포함되어 있습니다. 이 이름은 다양한 사용자 인터페이스에 표시됩니다.](#updating-and-patching-instances)`schemaId``https://ns.adobe.com/experience/offer-management/offer-activity`
+전체 cURL [구문에 대한 인스턴스](#updating-and-patching-instances) 업데이트 및 패치 적용을 참조하십시오. 매개 `schemaId` 변수는 반드시 사용해야 합니다 `https://ns.adobe.com/experience/offer-management/offer-activity`.
 
+- **`xdm:name`** - 이 필수 속성에는 활동 이름이 포함되어 있습니다. 이 이름은 다양한 사용자 인터페이스에 표시됩니다.
 - **`xdm:status`** - 이 속성은 인스턴스의 라이프사이클 관리에 사용됩니다. 이 값은 활동이 아직 건설 중인지(값 = 초안), 런타임에서 일반적으로 고려할 수 있는지(값 = 라이브) 또는 더 이상 사용하지 말아야 하는지(값 = 아카이브) 나타내는 워크플로우 상태를 나타냅니다.
 - **`xdm:placement`** - 의사 결정이 이 활동의 컨텍스트를 결정할 때 재고에 적용되는 오퍼 배치에 대한 참조를 포함하는 필수 속성입니다. 값은 사용되는 오퍼 위치의`@id`URI입니다.
 - **`xdm:filter`** - 이 활동의 컨텍스트에서 결정을 내릴 때 인벤토리에 적용되는 오퍼 필터에 대한 참조를 포함하는 필수 속성입니다. 값은 사용되는 오퍼 필터의 URI(`@id`)입니다.
 - **`xdm:fallback`** - 대체 오퍼에 대한 참조를 포함하는 필수 속성입니다. 이 활동에 대한 의사 결정이 개인화 오퍼의 자격이 되지 않을 때 대체 오퍼가 사용됩니다. 값은 폴백 오퍼 인스턴스의`@id`URI입니다.
-- **`xdm:fallback`**대체 오퍼 관리`@id`
 
-### 활동 인스턴스를 만들려면 먼저 활동의 배치를 허용하는 대체 오퍼가 있어야 합니다. 대체 오퍼 인스턴스는 스키마 식별자를 사용하여 만들어집니다`https://ns.adobe.com/experience/offer-management/fallback-offer`. 만들기 또는 업데이트 호출에 대한 `_instance` 속성에는 개인화 오퍼가 가지는 것과 동일한 일반 속성이 있지만 다른 제약 조건은 사용할 수 없습니다.
+### 대체 오퍼 관리
 
-전체 cURL [구문에 대한 인스턴스](#updating-and-patching-instances) 업데이트 및 패치 적용을 참조하십시오. 매개 `schemaId` 변수는 반드시 사용해야 합니다 `https://ns.adobe.com/experience/offer-management/fallback-offer`.
+활동 인스턴스를 만들려면 먼저 활동의 배치를 허용하는 대체 오퍼가 있어야 합니다. 대체 오퍼 인스턴스는 스키마 식별자를 사용하여 만들어집니다`https://ns.adobe.com/experience/offer-management/fallback-offer`. 만들기 또는 업데이트 호출에 대한 `_instance` 속성에는 개인화 오퍼가 가지는 것과 동일한 일반 속성이 있지만 다른 제약 조건은 사용할 수 없습니다.
 
 ```json
 {
@@ -989,5 +994,5 @@ curl -X PATCH {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \
 }  
 ```
 
-See [Updating and patching instances](#updating-and-patching-instances) for the full cURL syntax. The `schemaId` parameter must be `https://ns.adobe.com/experience/offer-management/fallback-offer`.
+전체 cURL [구문에 대한 인스턴스](#updating-and-patching-instances) 업데이트 및 패치 적용을 참조하십시오. 매개 `schemaId` 변수는 반드시 사용해야 합니다 `https://ns.adobe.com/experience/offer-management/fallback-offer`.
 
