@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform FAQ 및 문제 해결 안내서
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 635f8cf8173cc7db2032f2181848b0ce1e9095cc
+source-git-commit: 9eeddfaf3e704d66b81f983afcdf5ef3c45c6075
 workflow-type: tm+mt
 source-wordcount: '1962'
 ht-degree: 3%
@@ -118,7 +118,7 @@ API의 많은 패치 작업 [!DNL Platform] 은 업데이트할 JSON 속성을 �
 
 ## Postman을 사용하여 API를 호출할 수 [!DNL Platform] 있습니까? {#how-do-i-use-postman-to-make-calls-to-platform-apis}
 
-[Postman](https://www.getpostman.com/) 은 RESTful API에 대한 호출을 시각화하는 데 유용한 도구입니다. 이 [중간 게시물은](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) 사용자가 Postman을 설정하여 자동으로 인증을 수행하고 이를 사용하여 API를 사용하는 방법에 대해 [!DNL Experience Platform] 설명합니다.
+[Postman](https://www.postman.com/) 은 RESTful API에 대한 호출을 시각화하는 데 유용한 도구입니다. 이 [중간 게시물은](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) 사용자가 Postman을 설정하여 자동으로 인증을 수행하고 이를 사용하여 API를 사용하는 방법에 대해 [!DNL Experience Platform] 설명합니다.
 
 ## 시스템 요구 사항은 무엇입니까 [!DNL Platform]? {#what-are-the-system-requirements-for-platform}
 
