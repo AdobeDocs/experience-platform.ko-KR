@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;segmentation;segmentation service;troubleshooting;API;seg;
 solution: Adobe Experience Platform
-title: 세그먼트 검색 끝점 가이드
+title: 세그먼트 검색 끝점
 topic: guide
 translation-type: tm+mt
-source-git-commit: 41a5d816f9dc6e7c26141ff5e9173b1b5631d75e
+source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
 workflow-type: tm+mt
-source-wordcount: '1141'
+source-wordcount: '1139'
 ht-degree: 2%
 
 ---
 
 
-# 세그먼트 검색 끝점 안내서
+# 세그먼트 검색 끝점
 
 세그먼트 검색은 다양한 데이터 소스에 포함된 필드를 검색하고 거의 실시간으로 반환하는 데 사용됩니다.
 
