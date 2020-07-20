@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: 끝점 안내서 미리 보기 및 예측
+title: 끝점 미리 보기 및 예측
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 41a5d816f9dc6e7c26141ff5e9173b1b5631d75e
+source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
 workflow-type: tm+mt
-source-wordcount: '752'
+source-wordcount: '750'
 ht-degree: 2%
 
 ---
 
 
-# 끝점 안내서 미리 보기 및 예측
+# 끝점 미리 보기 및 예측
 
 세그먼트 정의를 개발하면 내 [!DNL Adobe Experience Platform] 에서 예측 및 미리 보기 도구를 사용하여 예상 대상을 분리하는 데 도움이 되는 요약 수준 정보를 볼 수 있습니다. **미리** 보기에서는 세그먼트 정의에 대해 페이지에 지정된 프로필 목록을 제공하므로 결과를 예상과 비교할 수 있습니다. **예상 대상 크기, 신뢰 구간 및 오류 표준 편차와 같은 세그먼트 정의에 대한 통계 정보를 제공합니다** .
 
