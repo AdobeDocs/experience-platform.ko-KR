@@ -1,27 +1,27 @@
 ---
 product: adobe experience platform
 audience: user
-user-guide-title: 실시간 고객 데이터 플랫폼 도움말
+user-guide-title: 실시간 고객 데이터 Platform 도움말
 translation-type: tm+mt
-source-git-commit: fc8bdc6a46e0b64f29d89a36b0810f7312200616
+source-git-commit: b0068c0ef0897d5d4ec578f0c97b20aef3b2931c
 workflow-type: tm+mt
-source-wordcount: '439'
-ht-degree: 10%
+source-wordcount: '440'
+ht-degree: 11%
 
 ---
 
 
 # Real-time Customer Data Platform Help {#rtcdp}
 
-* [제품 개요](overview.md)
-* Real-time Customer Data Platform {#intro}
+* [실시간 CDP 개요](overview.md)
+* 시작하기 {#intro}
    * [시작하기](get-started.md)
    * [지표 개요](home-page-dashboards.md)
 * 관리 {#admin}
    * [관리 개요](administration/admin-overview.md)
-* 데이터 집합 {#datasets}
-   * [데이터 집합](datasets/dataset.md)
-   * [플랫폼의 데이터 품질](datasets/data-quality.md)
+* 데이터 세트 {#datasets}
+   * [데이터 세트](datasets/dataset.md)
+   * [Platform의 데이터 품질](datasets/data-quality.md)
 * 대상 {#destinations}
    * [대상 개요](destinations/destinations-overview.md)
    * [대상 유형 및 카테고리](/help/rtcdp/destinations/destination-types.md)
@@ -30,12 +30,12 @@ ht-degree: 10%
       * [대상 세부 정보 페이지](destinations/destination-details-page.md)
    * 대상 카탈로그 {#destinations-cat}
       * [대상 카탈로그 개요](destinations/destinations-catalog.md)
-      * Adobe 대상{#adobe-destinations}
+      * Adobe destinations{#adobe-destinations}
          * [Adobe 대상 개요](destinations/adobe-destinations.md)
          * [Adobe Campaign](destinations/adobe-campaign-destination.md)
       * 광고 대상{#advertising-destinations}
          * [광고 대상 개요](destinations/advertising-destinations.md)
-         * [Adobe Advertising Cloud 익스텐션](/help/rtcdp/destinations/adobe-advertising-cloud-extension.md)
+         * [Adobe Advertising Cloud 확장](/help/rtcdp/destinations/adobe-advertising-cloud-extension.md)
          * [Awin 광고 전환 태그 확장](/help/rtcdp/destinations/awin-conversiontag-extension.md)
          * [Awin 광고 마스터태그 확장](/help/rtcdp/destinations/awin-mastertag-extension.md)
          * [Beemray 확장](/help/rtcdp/destinations/beemray-extension.md)
@@ -52,8 +52,8 @@ ht-degree: 10%
          * [LinkedIn Insight 태그 확장](/help/rtcdp/destinations/linkedin-extension.md)
          * [Pinterest 전환 추적 확장](destinations/pinterest-extension.md)
          * [Twitter 범용 웹 사이트 태그 확장](destinations/twitter-uwt-extension.md)
-      * 분석 대상 {#analytics-destinations}
-         * [분석 대상 개요](destinations/analytics-destinations.md)
+      * Analytics 목적지 {#analytics-destinations}
+         * [Analytics 대상 개요](destinations/analytics-destinations.md)
          * [웹 사이트 추적 확장 기능](/help/rtcdp/destinations/adform-extension.md)
          * [Adobe Analytics 확장](/help/rtcdp/destinations/adobe-analytics-extension.md)
          * [Adobe Media Analytics for Audio 및 Video 확장](/help/rtcdp/destinations/adobe-video-analytics-extension.md)
@@ -64,7 +64,7 @@ ht-degree: 10%
          * [Dialogtech 확장](/help/rtcdp/destinations/dialogtech-extension.md)
          * [Google 글로벌 사이트 태그 분석 확장](/help/rtcdp/destinations/gtag-analytics-extension.md)
          * [Google Universal Analytics 확장](/help/rtcdp/destinations/google-universal-analytics-extension.md)
-         * [JW 플레이어 분석(베타) 확장](/help/rtcdp/destinations/jw-player-analytics-extension.md)
+         * [JW 플레이어 Analytics(베타) 확장](/help/rtcdp/destinations/jw-player-analytics-extension.md)
          * [Nielsen BSDK 익스텐션](destinations/nielsen-bsdk-extension.md)
          * [Nielsen IMA 처리기 확장](destinations/nielsen-ima-extension.md)
          * [Nielsen VideoJS 플레이어 처리기 확장](destinations/nielsen-videojs-extension.md)
@@ -80,13 +80,13 @@ ht-degree: 10%
          * [Amazon S3 대상](destinations/amazon-s3-destination.md)
          * [Azure 이벤트 허브 대상](/help/rtcdp/destinations/azure-event-hubs-destination.md)
          * [SFTP 대상](destinations/sftp-destination.md)
-      * 데이터 관리 플랫폼 대상 {#dmp-destinations}
-         * [데이터 관리 플랫폼 대상 개요](destinations/dmp-destinations.md)
-         * [Audience Manager DIL 익스텐션](/help/rtcdp/destinations/aam-dil-extension.md)
+      * 데이터 관리 Platform 대상 {#dmp-destinations}
+         * [데이터 관리 Platform 대상 개요](destinations/dmp-destinations.md)
+         * [Audience Manager DIL 확장](/help/rtcdp/destinations/aam-dil-extension.md)
       * 이메일 마케팅 대상{#email-destinations}
          * [이메일 마케팅 대상 개요](destinations/email-marketing-destinations.md)
          * [Adobe Campaign](destinations/adobe-campaign-destination.md)
-         * [모바일 분석 확장](/help/rtcdp/destinations/bizible-extension.md)
+         * [비모바일 Analytics 확장](/help/rtcdp/destinations/bizible-extension.md)
          * [마케팅 확장](destinations/marketo-extension.md)
          * [Marketo Munchkin 확장 프로그램](destinations/marketo-munchkin-extension.md)
          * [Oracle Furnar](destinations/oracle-eloqua-destination.md)
@@ -94,7 +94,7 @@ ht-degree: 10%
          * [페블포스트 연장](destinations/pebblepost-extension.md)
          * [Salesforce Marketing Cloud](destinations/salesforce-marketing-cloud-destination.md)
       * Experience Platform Launch extensions{#launch-extensions}
-         * [경험 플랫폼 론치 확장 개요](/help/rtcdp/destinations/experience-platform-launch-extensions.md)
+         * [Experience Platform Launch 확장 개요](/help/rtcdp/destinations/experience-platform-launch-extensions.md)
       * 개인화 대상 {#personalization-destinations}
          * [개인화 대상 개요](/help/rtcdp/destinations/personalization-destinations.md)
          * [Adobe Target 확장](/help/rtcdp/destinations/adobe-target-extension.md)
@@ -131,16 +131,16 @@ ht-degree: 10%
 * 개인 정보 및 데이터 거버넌스 {#privacy}
    * [개인 정보 보호 개요](privacy/privacy-overview.md)
    * [데이터 거버넌스 개요](privacy/data-governance-overview.md)
-* 실시간 고객 프로필 {#profile}
+* 프로파일 {#profile}
    * [프로필 개요](profile/profile-overview.md)
    * [ID 및 ID 네임스페이스](profile/identities-overview.md)
    * [정책 병합](profile/merge-policies.md)
    * [프로필 뷰어](profile/profile-viewer.md)
-* 세그먼테이션 {#segmentation}
+* 세그먼트 {#segmentation}
    * [세그멘테이션 개요](segmentation/segmentation-overview.md)
    * [세그먼트 빌더 가이드](segmentation/segment-builder-guide.md)
 * 소스 {#sources}
    * [소스 개요](sources/sources-overview.md)
    * [Adobe Launch를 사용하여 웹 사이트 태그 구현](sources/launch.md)
-* [릴리스 노트](https://www.adobe.com/go/platform-release-notes-en)
-* [용어 설명](https://www.adobe.com/go/platform-glossary-en)
+* [Experience Platform 릴리스 노트](https://www.adobe.com/go/platform-release-notes-en)
+* [Experience Platform 용어집](https://www.adobe.com/go/platform-glossary-en)
