@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform 세그멘테이션 서비스 도움말
 translation-type: tm+mt
-source-git-commit: 82067c3bfa6d80cd5f5dcc6644cdbcacbae85053
+source-git-commit: c5880153f4ba9a6518423985e42fb1b3b71cd862
 workflow-type: tm+mt
-source-wordcount: '111'
+source-wordcount: '112'
 ht-degree: 8%
 
 ---
@@ -20,6 +20,7 @@ ht-degree: 8%
    - [시작하기](api/getting-started.md)
    - [내보내기 작업](api/export-jobs.md)
    - [미리 보기 및 예측](api/previews-and-estimates.md)
+   - [일정](api/schedules.md)
    - [세그먼트 정의](api/segment-definitions.md)
    - [세그먼트 작업](api/segment-jobs.md)
    - [세그먼트 검색](api/segment-search.md)
