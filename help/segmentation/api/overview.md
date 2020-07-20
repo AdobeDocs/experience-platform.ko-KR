@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Adobe Experience Platform 세그멘테이션 서비스 개발자 가이드
 topic: guide
 translation-type: tm+mt
-source-git-commit: 41a5d816f9dc6e7c26141ff5e9173b1b5631d75e
+source-git-commit: aff81a4f3243ef77cbdfc776220a5de46e360084
 workflow-type: tm+mt
 source-wordcount: '469'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 [!DNL Adobe Experience Platform Segmentation Service] 세그먼트를 만들고 데이터에서 대상 [!DNL Adobe Experience Platform] 을 생성할 수 [!DNL Real-time Customer Profile] 있습니다.
 
-API는 세그먼트 작업을 프로그래밍 방식으로 관리할 수 있도록 해주는 여러 끝점을 제공합니다 [!DNL Segmentation Service] [!DNL Experience Platform]. 이 개요 문서에서는 이러한 각 끝점에 대한 높은 수준의 소개를 제공하며 관련 끝점 안내서에 대한 링크를 통해 자세히 알아보십시오. 개별 종단점 안내선을 읽기 전에 필요한 헤더, 샘플 API 호출 읽기 등에 대한 [자세한 내용은 시작 안내서](getting-started.md) 를 참조하십시오.
+API는 세그먼트 작업을 프로그래밍 방식으로 관리할 수 있도록 해주는 여러 끝점을 제공합니다 [!DNL Segmentation Service] [!DNL Experience Platform]. 이 개요 문서에서는 이러한 각 끝점에 대한 높은 수준의 소개를 제공하며 관련 끝점 안내서에 대한 링크를 통해 자세히 알아보십시오. 개별 종단점 안내선을 읽기 전에 필요한 헤더, 샘플 API 호출 읽기 등에 대한 [자세한 내용은 시작 안내서](./getting-started.md) 를 참조하십시오.
 
 사용 가능한 모든 끝점 및 CRUD 작업을 보려면 [세그멘테이션 서비스 API 참조를 참조하십시오](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml).
 
