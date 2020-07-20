@@ -4,9 +4,9 @@ seo-title: 'Adobe Experience Platform 웹 SDK 빠른 시작 '
 description: Experience Platform 웹 SDK를 사용하여 데이터를 수집하는 빠른 시작 가이드
 seo-description: Experience Platform 웹 SDK를 사용하여 데이터를 수집하는 빠른 시작 가이드
 translation-type: tm+mt
-source-git-commit: 9b8bddf39301cdc39bfa5370ef98d99434fc64f8
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '537'
+source-wordcount: '515'
 ht-degree: 5%
 
 ---
@@ -14,15 +14,15 @@ ht-degree: 5%
 
 # 시작
 
-이 가이드는 Adobe Experience Platform 웹 SDK를 설정하는 다양한 방법을 안내합니다. 이 기능을 사용하려면 허용 목록에 있어야 합니다. 대기 목록에 오르려면 CSM에 문의하십시오.
+이 가이드는 Adobe Experience Platform을 설정하는 다양한 방법을 안내합니다 [!DNL Web SDK]. 이 기능을 사용하려면 허용 목록에 있어야 합니다. 대기 목록에 오르려면 CSM에 문의하십시오.
 
-- 자사 도메인(CNAME)이 [활성화되어 있어야](https://docs.adobe.com/content/help/ko-KR/core-services/interface/ec-cookies/cookies-first-party.html) 합니다. 이미 Analytics용 CNAME이 있는 경우 이 CNAME을 사용해야 합니다. CNAME이 없는 개발 환경에서 테스트가 작동하지만 프로덕션으로 이동하려면 먼저 테스트가 필요합니다
-- 데이터 Platform Adobe Experience Platform을 받을 수 있습니다.  Platform을 구매하지 않은 경우, Adobe는 추가 비용 없이 SDK와 함께 제한된 방식으로 사용할 수 있도록 Experience Platform 데이터 서비스 재단을 귀하에게 제공할 것입니다.
+- 자사 도메인(CNAME)이 [활성화되어 있어야](https://docs.adobe.com/content/help/ko-KR/core-services/interface/ec-cookies/cookies-first-party.html) 합니다. 이미 CNAME을 가지고 있는 경우 [!DNL Analytics]이 CNAME을 사용해야 합니다. CNAME이 없는 개발 환경에서 테스트가 작동하지만 프로덕션으로 이동하려면 먼저 테스트가 필요합니다
+- Adobe Experience Platform을 받을 수 있습니다 [!DNL Data Platform].  Platform을 구매하지 않은 경우, Adobe는 추가 비용 없이 SDK와 함께 제한된 방식 [!DNL Experience Platform Data Services Foundation] 으로 사용할 수 있도록 귀하에게 제공할 것입니다.
 - 최신 버전의 방문자 ID 서비스 사용
 
 ## 구성 ID 만들기
 
-태그 관리 기능을 사용하지 않더라도 Adobe Launch의 [가장자리 구성 도구를](../fundamentals/edge-configuration.md) 사용하여 구성 ID를 만들 수 있습니다. 이를 통해 Edge Network에서 데이터를 다양한 솔루션으로 보낼 수 있습니다. 각 옵션을 찾는 방법에 대한 자세한 내용은 [에지 구성 도구](../fundamentals/edge-configuration.md) 페이지를 참조하십시오.
+태그 관리 기능을 사용하지 않더라도 Adobe Launch의 [가장자리 구성 도구를](../fundamentals/edge-configuration.md) 사용하여 구성 ID를 만들 수 있습니다. 이렇게 하면 사용자가 데이터를 다양한 솔루션 [!DNL Edge Network] 으로 보낼 수 있습니다. 각 옵션을 찾는 방법에 대한 자세한 내용은 [에지 구성 도구](../fundamentals/edge-configuration.md) 페이지를 참조하십시오.
 
 >[!NOTE]
 >
@@ -30,12 +30,12 @@ ht-degree: 5%
 
 ## 스키마 준비
 
-Experience Platform 에지 네트워크는 데이터를 XDM으로 가져옵니다. XDM은 스키마를 정의할 수 있는 데이터 형식입니다. 스키마는 Edge Network에서 데이터 형식을 예상하는 방법을 정의합니다. 데이터를 전송하려면 스키마를 정의해야 합니다.
+XDM으로 데이터를 [!DNL Experience Platform Edge Network] 가져옵니다. XDM은 스키마를 정의할 수 있는 데이터 형식입니다. 스키마는 데이터 형식을 [!DNL Edge Network] 예상하는 방법을 정의합니다. 데이터를 전송하려면 스키마를 정의해야 합니다.
 
 - [스키마 만들기](../../xdm/tutorials/create-schema-ui.md)
-- 만든 스키마에 Adobe Experience Platform 웹 SDK 믹신 추가
+- 만든 스키마에 Adobe Experience Platform [!DNL Web SDK] 혼합 추가
 
-다음 비디오는 웹 SDK 데이터에 대한 스키마, 데이터 세트 및 스트리밍 소스 커넥터를 만드는 데 도움이 되도록 만들어졌습니다.
+다음 비디오는 데이터에 대한 스키마, 데이터 집합 및 스트리밍 소스 커넥터를 만드는 데 도움이 되도록 [!DNL Web SDK] 만들어졌습니다.
 
 >[!VIDEO](https://video.tv.adobe.com/v/35395?quality=12&learn=on)
 
