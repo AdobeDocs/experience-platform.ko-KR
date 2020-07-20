@@ -4,15 +4,15 @@ solution: Experience Platform
 title: 일정
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 842f31aac2bdbf7e9f79e4ae7d4c36be1dc92392
+source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
 workflow-type: tm+mt
-source-wordcount: '1172'
+source-wordcount: '1171'
 ht-degree: 3%
 
 ---
 
 
-# 끝점 가이드 예약
+# 일정 끝점
 
 일정은 하루에 한 번 일괄 처리 세그먼테이션 작업을 자동으로 실행하는 데 사용할 수 있는 도구입니다. 종단점을 사용하여 예약 목록을 검색하고, 새 일정을 만들거나, 특정 일정에 대한 세부 정보를 검색하고, 특정 일정을 업데이트하거나, 특정 일정을 삭제할 수 있습니다. `/config/schedules`
 
