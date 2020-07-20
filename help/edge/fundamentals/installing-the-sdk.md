@@ -4,9 +4,9 @@ seo-title: SDK 설치 Adobe Experience Platform 웹 SDK
 description: Experience Platform 웹 SDK 설치 방법 살펴보기
 seo-description: Experience Platform 웹 SDK 설치 방법 살펴보기
 translation-type: tm+mt
-source-git-commit: 90afc28d41878cbed90fc05176276a30d8aebe09
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '580'
+source-wordcount: '570'
 ht-degree: 1%
 
 ---
@@ -14,14 +14,14 @@ ht-degree: 1%
 
 # SDK 설치 {#installing-the-sdk}
 
-Adobe Experience Platform 웹 SDK는 CDN(Content Delivery Network)에서 사용할 수 있습니다. 이 파일을 참조하거나 다운로드하여 자체 인프라에서 호스팅할 수 있습니다. 축소 및 축소 버전이 아닌 버전으로 사용할 수 있습니다. 분류되지 않은 버전은 디버깅에 유용합니다.
+Adobe Experience Platform [!DNL Web SDK] 는 CDN(Content Delivery Network)에서 사용할 수 있습니다. 이 파일을 참조하거나 다운로드하여 자체 인프라에서 호스팅할 수 있습니다. 축소 및 축소 버전이 아닌 버전으로 사용할 수 있습니다. 분류되지 않은 버전은 디버깅에 유용합니다.
 
 * 축소 버전: [https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js)
 * 분류되지 않은 버전: [https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js)
 
 ## 코드 추가 {#adding-the-code}
 
-Adobe Experience Platform 웹 SDK를 구현하는 첫 번째 단계는 다음 &quot;기본 코드&quot;를 복사하여 HTML의 `<head>` 태그에 최대한 붙여넣는 것입니다.
+Adobe Experience Platform을 구현하는 첫 번째 단계 [!DNL Web SDK] 는 HTML의 `<head>` 태그에 가능한 한 높은 곳에 다음 &quot;기본 코드&quot;를 복사하고 붙여넣는 것입니다.
 
 ```markup
 <script>
@@ -54,11 +54,11 @@ Adobe Experience Platform 웹 SDK를 구현하는 첫 번째 단계는 다음 &q
 
 ## Internet Explorer 지원 {#support-internet-explore}
 
-이 SDK는 비동기 작업의 완료를 통신하는 방법인 약속 기능을 사용합니다. SDK에서 [사용하는 Promise](https://developer.mozilla.org/ko-KR/docs/Web/JavaScript/Reference/Global_Objects/Promise) 구현은 기본적으로 Internet Explorer를 제외한 모든 대상 브라우저에서 지원됩니다. Internet Explorer에서 SDK를 사용하려면 `window.Promise` 다각형 [이 있어야 합니다](https://remysharp.com/2010/10/08/what-is-a-polyfill).
+이 SDK는 비동기 작업의 완료를 통신하는 방법인 약속 기능을 사용합니다. SDK에서 [사용하는 Promise](https://developer.mozilla.org/ko-KR/docs/Web/JavaScript/Reference/Global_Objects/Promise) 구현은 기본적으로 모든 대상 브라우저에서 지원됩니다 [!DNL Internet Explorer]. 에서 SDK를 사용하려면 [!DNL Internet Explorer]폴리칠이 `window.Promise` 필요합니다 [](https://remysharp.com/2010/10/08/what-is-a-polyfill).
 
 폴리칠이 이미 있는지 확인하려면 다음을 `window.Promise` 수행하십시오.
 
-1. Internet Explorer에서 웹 사이트를 엽니다.
+1. 웹 사이트를 엽니다 [!DNL Internet Explorer].
 1. 브라우저의 디버깅 콘솔을 엽니다.
 1. 콘솔 `window.Promise` 에 입력한 다음 Enter 키를 누릅니다.
 
