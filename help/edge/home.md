@@ -4,9 +4,9 @@ seo-title: Adobe Experience Platform 웹 SDK 도움말
 description: Adobe Experience Platform 웹 SDK의 정의와 사용 방법을 알아봅니다.
 seo-description: Adobe Experience Cloud 고객은 Experience Cloud의 다양한 서비스와 상호 작용할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 9b8bddf39301cdc39bfa5370ef98d99434fc64f8
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '453'
+source-wordcount: '429'
 ht-degree: 0%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 0%
 
 # Adobe Experience Platform 웹 SDK 소개
 
-Adobe Experience Platform 웹 SDK는 Adobe Experience Cloud 고객이 Adobe Experience Platform Edge Network를 통해 Experience Cloud의 다양한 서비스와 상호 작용할 수 있도록 하는 클라이언트측 JavaScript 라이브러리입니다.
+Adobe Experience Platform 웹 SDK는 Adobe Experience Cloud 고객이 Adobe를 통해 다양한 서비스와 상호 작용할 수 있도록 하는 클라이언트측 JavaScript 라이브러리입니다 [!DNL Experience Cloud] [!DNL Experience Platform Edge Network]
 
-다음 비디오에서는 Adobe Experience Platform 웹 SDK 및 Edge 네트워크에 대한 개요를 제공합니다.
+다음 비디오에서는 Adobe Experience Platform [!DNL Web SDK] 와에 대한 개요를 제공합니다 [!DNL Edge Network].
 
 >[!VIDEO](https://video.tv.adobe.com/v/34141?quality=12&learn=on)
 
@@ -29,11 +29,11 @@ Adobe Experience Platform 웹 SDK는 다음 SDK를 대체합니다.
 * AT.js
 * DIL.js
 
-기존 라이브러리 주위에 있는 래퍼만이 아닙니다. 완전히 다시 쓴 거야 이 솔루션의 목적은 올바른 순서로 태그를 실행해야 하는 문제, 라이브러리 버전 관리 문제와 불일치, 향상된 종속성 관리 등을 해소하는 것입니다. Experience Cloud을 구현하는 새로운 방법이며 [오픈 소스입니다](https://github.com/adobe/alloy).
+기존 라이브러리 주위에 있는 래퍼만이 아닙니다. 완전히 다시 쓴 거야 이 솔루션의 목적은 올바른 순서로 태그를 실행해야 하는 문제, 라이브러리 버전 관리 문제와 불일치, 향상된 종속성 관리 등을 해소하는 것입니다. 이를 구현하는 새로운 방식이며 [!DNL Experience Cloud] 오픈 소스로 [제공됩니다](https://github.com/adobe/alloy).
 
-새로운 라이브러리 외에도 Adobe 솔루션에 대한 HTTP 요청을 간소화하는 새로운 종점이 있습니다. 이전에 Visitor.js는 방문자 ID 서비스에 차단 호출을 전송한 다음 AT.js가 Adobe Target에 대한 호출을 전송하고, DIL.js는 Adobe Audience Manager에 대한 호출을 전송했으며, 마지막으로 AppMeasurement.js는 Adobe Analytics에 대한 호출을 전송했습니다. 이 새 라이브러리와 종단점은 ID를 검색하고, [!DNL Target] 경험을 가져오고, 데이터를 Audience Manager으로 보내고, 데이터를 한 번의 호출로 Adobe Experience Platform에 전달할 수 있습니다.
+새로운 라이브러리 외에도 Adobe 솔루션에 대한 HTTP 요청을 간소화하는 새로운 종점이 있습니다. 이전에 Visitor.js는 방문자 ID 서비스에 차단 호출을 전송한 다음 AT.js가 Adobe Target에 대한 호출을 전송하고, DIL.js는 Adobe Audience Manager에 대한 호출을 전송했으며, 마지막으로 AppMeasurement.js는 Adobe Analytics에 대한 호출을 전송했습니다. 이 새 라이브러리와 종단점은 ID를 검색하고, [!DNL Target] [!DNL Audience Manager]경험을 가져오고, 데이터를 보내고, 데이터를 한 번의 호출로 Adobe Experience Platform에 전달할 수 있습니다.
 
-다음 비디오에서는 Adobe Experience Platform 웹 SDK 및 Edge Network의 활용 방법을 보여 줍니다. 이 비디오 예에서는 Experience Platform, Analytics, Audience Manager 및 Target에 데이터를 보내는 단일 Adobe 호출을 사용합니다.
+다음 비디오에서는 Adobe Experience Platform [!DNL Web SDK] 와 [!DNL Edge Network] 활용 방법을 보여 줍니다. 이 비디오 예제에서는 Adobe에 대한 단일 호출을 사용하여 데이터 [!DNL Experience Platform], [!DNL Analytics][!DNL Audience Manager]및 [!DNL Target]데이터를 보냅니다.
 
 >[!VIDEO](https://video.tv.adobe.com/v/34148?quality=12&learn=on)
 
