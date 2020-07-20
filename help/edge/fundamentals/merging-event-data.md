@@ -4,9 +4,9 @@ seo-title: Adobe Experience Platform 웹 SDK 이벤트 데이터 병합
 description: Experience Platform 웹 SDK 이벤트 데이터를 병합하는 방법 살펴보기
 seo-description: Experience Platform 웹 SDK 이벤트 데이터를 병합하는 방법 살펴보기
 translation-type: tm+mt
-source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '411'
+source-wordcount: '408'
 ht-degree: 0%
 
 ---
@@ -58,7 +58,7 @@ alloy("sendEvent", {
 });
 ```
 
-이 예제에서 두 이벤트 명령 모두에 동일한 `eventMergeID` 값을 전달함으로써 두 번째 이벤트 명령의 데이터는 첫 번째 이벤트 명령에서 이전에 전송된 데이터로 증가됩니다. 각 이벤트 명령에 대한 레코드가 경험 데이터 Platform에 생성되지만 보고 도중 레코드는 를 사용하여 함께 결합되고 단일 이벤트로 `eventMergeID` 표시됩니다.
+이 예제에서 두 이벤트 명령 모두에 동일한 `eventMergeID` 값을 전달함으로써 두 번째 이벤트 명령의 데이터는 첫 번째 이벤트 명령에서 이전에 전송된 데이터로 증가됩니다. 각 이벤트 명령에 대한 레코드가 에 생성되지만 보고 [!DNL Experience Data Platform]중에는 레코드를 사용하여 `eventMergeID` 결합되고 단일 이벤트로 나타납니다.
 
 특정 이벤트에 대한 데이터를 타사 제공자에게 보내는 경우 해당 데이터에도 동일한 데이터를 포함할 수 `eventMergeID` 있습니다. 나중에 타사 데이터를 Adobe Experience Platform으로 가져오기로 선택하면 웹 페이지에서 발생한 개별 이벤트의 결과로 수집된 모든 데이터를 병합하는 데 사용됩니다. `eventMergeID`
 
