@@ -4,25 +4,28 @@ solution: Experience Platform
 title: 샘플 쿼리
 topic: queries
 translation-type: tm+mt
-source-git-commit: 33282b1c8ab1129344bd4d7054e86fed75e7b899
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+workflow-type: tm+mt
+source-wordcount: '227'
+ht-degree: 2%
 
 ---
 
 
 # Adobe Target 데이터에 대한 샘플 쿼리
 
-Adobe Target의 데이터는 Experience Event XDM 스키마로 변환되고 데이터 세트로 Experience Platform로 인제스트됩니다. 이 데이터를 사용하는 쿼리 서비스에 대해 많은 사용 사례가 있으며 다음 샘플 쿼리는 Adobe Target 데이터 세트와 함께 작동해야 합니다.
+Adobe Target의 데이터는 Experience Event XDM 스키마로 변환되고 데이터 세트로 수집됩니다 [!DNL Experience Platform] . 이 데이터에 대한 사용 사례가 많이 있으며 다음 샘플 쿼리는 Adobe Target 데이터 세트 [!DNL Query Service] 와 함께 작동해야 합니다.
 
 >[!NOTE]
->다음 예에서는 평가하려는 데이터 세트, 변수 또는 기간을 기반으로 쿼리에 대해 예상되는 매개 변수를 채우려면 SQL을 편집해야 합니다. SQL에 있는 모든 위치에 매개 변수를 `{ }` 제공합니다.
+>다음 예에서, 평가하려는 데이터 세트, 변수 또는 기간을 기반으로 쿼리의 예상 매개 변수를 채우려면 SQL을 편집해야 합니다. SQL에 있는 모든 위치 `{ }` 에 매개 변수를 제공합니다.
 
-## 플랫폼의 Target 데이터 소스에 대한 표준 데이터 세트 이름:
+## Target 데이터 소스의 표준 데이터 집합 이름 [!DNL Platform]:
 
 Adobe Target 경험 이벤트(친숙한 이름) <br>`adobe_target_experience_events` (쿼리에 사용할 이름)
 
 ## 고급 부분 XDM 필드 매핑
 
-의 `[ ]` 사용은
+The use of `[ ]` nects an array
 
 | 이름 | XDM 필드 | 참고 |
 | ---- | --------- | ----- |
@@ -34,7 +37,7 @@ Adobe Target 경험 이벤트(친숙한 이름) <br>`adobe_target_experience_eve
 | 단계 ID | `_experience.target.activities[].activityEvents[]._experience.target.activity.activityevent.context.stepID` | 캠페인에 대한 사용자 지정 단계 ID |
 | 가격 합계 | `commerce.order.priceTotal` |  |
 
-## 지정된 날의 시간별 활동 수
+## 지정된 날짜에 대한 시간별 활동 수
 
 ```sql
 SELECT
@@ -58,7 +61,7 @@ ORDER BY Hour DESC, Instances DESC
 LIMIT 24
 ```
 
-## 지정된 날의 특정 활동에 대한 시간별 세부 사항
+## 지정된 날의 특정 활동에 대한 시간별 세부 정보
 
 ```sql
 SELECT
@@ -77,7 +80,7 @@ ORDER BY Hour DESC
 LIMIT 24
 ```
 
-## 지정된 날의 특정 활동에 대한 경험 ID
+## 지정된 날짜에 특정 활동에 대한 경험 ID
 
 ```sql
 SELECT
@@ -110,7 +113,7 @@ ORDER BY Day DESC, Instances DESC
 LIMIT 20
 ```
 
-## 지정된 날의 활동 ID당 인스턴스별로 이벤트 범위(방문자, 방문, 노출) 목록 반환
+## 특정 날짜에 대해 활동 ID당 인스턴스별로 이벤트 범위(방문자, 방문, 노출 횟수) 목록 반환
 
 ```sql
 SELECT
@@ -142,7 +145,7 @@ ORDER BY Day DESC, Instances DESC
 LIMIT 30
 ```
 
-## 지정된 날짜에 대한 방문자 수, 방문 횟수, 활동당 노출 횟수
+## 지정된 날짜에 대한 방문자, 방문, 활동당 노출 횟수
 
 ```sql
 SELECT
@@ -168,7 +171,7 @@ ORDER BY Hour DESC, Visitors DESC
 LIMIT 30
 ```
 
-## 지정된 날짜에 대한 재방문자, 방문, 경험 ID, 세그먼트 ID 및 EventScope에 대한 노출 횟수
+## 주어진 날짜에 대한 재방문자, 방문, 경험 ID, 세그먼트 ID 및 EventScope에 대한 노출 횟수
 
 ```sql
 SELECT
