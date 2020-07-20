@@ -4,9 +4,9 @@ seo-title: Adobe Experience Platform 웹 SDK 구성
 description: Experience Platform 웹 SDK를 구성하는 방법 살펴보기
 seo-description: Experience Platform 웹 SDK를 구성하는 방법 살펴보기
 translation-type: tm+mt
-source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '743'
+source-wordcount: '737'
 ht-degree: 11%
 
 ---
@@ -74,7 +74,7 @@ Adobe 서비스와 상호 작용하는 데 사용되는 도메인. Adobe Edge �
 | -------- | ------------ | ----------------- |
 | 문자열 | 예 | none |
 
-할당된 Experience Cloud 조직 ID입니다.  페이지 내에서 여러 인스턴스를 구성할 때는 각 인스턴스에 대해 다른 인스턴스 `orgId` 를 구성해야 합니다.
+Your assigned [!DNL Experience Cloud] organization ID.  페이지 내에서 여러 인스턴스를 구성할 때는 각 인스턴스에 대해 다른 인스턴스 `orgId` 를 구성해야 합니다.
 
 ## 데이터 수집
 
@@ -134,7 +134,7 @@ Adobe 서비스와 상호 작용하는 데 사용되는 도메인. Adobe Edge �
 | -------- | ------------ | ----------------- |
 | 부울 | 아니요 | `true` |
 
-세그먼트 자격 조건에 따라 쿠키 설정을 허용하는 Audience Manager [!UICONTROL 쿠키 대상을]활성화합니다.
+세그먼트 자격 [!DNL Audience Manager] 에 따라 쿠키 설정을 허용하는 쿠키 대상을 활성화합니다.
 
 ### `urlDestinationsEnabled`
 
@@ -142,7 +142,7 @@ Adobe 서비스와 상호 작용하는 데 사용되는 도메인. Adobe Edge �
 | -------- | ------------ | ----------------- |
 | 부울 | 아니요 | `true` |
 
-세그먼트 자격 조건에 따라 URL을 실행할 수 있는 Audience Manager [!UICONTROL URL 대상을]활성화합니다.
+세그먼트 자격 [!DNL Audience Manager] 에 따라 URL을 실행할 수 있는 URL 대상을 활성화합니다.
 
 ## ID 옵션
 
