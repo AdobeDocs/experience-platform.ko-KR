@@ -3,10 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform 세그멘테이션 서비스 도움말
 translation-type: tm+mt
-source-git-commit: a1f80b86a1e761c15d567821b13c7533b7fcf622
+source-git-commit: 82067c3bfa6d80cd5f5dcc6644cdbcacbae85053
 workflow-type: tm+mt
-source-wordcount: '103'
-ht-degree: 7%
+source-wordcount: '111'
+ht-degree: 8%
 
 ---
 
@@ -15,8 +15,11 @@ ht-degree: 7%
 
 - [개요](home.md)
 - [세그멘테이션 데이터 유형](data-types.md)
-- 세그멘테이션 API {#api}
+- 세그멘테이션 API 개발자 가이드{#api}
+   - [개요](api/overview.md)
    - [시작하기](api/getting-started.md)
+   - [내보내기 작업](api/export-jobs.md)
+   - [미리 보기 및 예측](api/previews-and-estimates.md)
    - [세그먼트 정의](api/segment-definitions.md)
    - [세그먼트 작업](api/segment-jobs.md)
    - [세그먼트 검색](api/segment-search.md)
