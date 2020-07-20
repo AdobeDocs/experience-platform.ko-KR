@@ -1,12 +1,12 @@
 ---
 title: 지원 동의
-seo-title: Adobe Experience Platform 웹 SDK 동의 기본 설정 지원
-description: Experience Platform 웹 SDK를 사용하여 동의 기본 설정을 지원하는 방법 살펴보기
-seo-description: Experience Platform 웹 SDK를 사용하여 동의 기본 설정을 지원하는 방법 살펴보기
+seo-title: Adobe Experience Platform 웹 SDK 동의 지원 기본 설정
+description: Experience Platform 웹 SDK를 사용하여 동의 환경 설정을 지원하는 방법 살펴보기
+seo-description: Experience Platform 웹 SDK를 사용하여 동의 환경 설정을 지원하는 방법 살펴보기
 translation-type: tm+mt
-source-git-commit: c86ae6d887f52d8bb4b78dadc06060791c7a02c0
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '518'
+source-wordcount: '516'
 ht-degree: 0%
 
 ---
@@ -79,7 +79,7 @@ alloy("setConsent", {
 
 >[!NOTE]
 >
->현재 SDK는 `general` 목적만 지원합니다. Adobe는 서로 다른 Adobe 기능 및 제품 오퍼에 해당하는 보다 강력한 목적 또는 카테고리를 구축할 계획이지만, 현재 구현은 옵트인에 대한 전체 또는 무제한으로 접근할 수 있습니다.  이는 Adobe Experience Platform 웹 SDK에만 적용되며 다른 Adobe JavaScript 라이브러리는 해당되지 않습니다.
+>현재 SDK는 `general` 목적만 지원합니다. Adobe는 서로 다른 Adobe 기능 및 제품 오퍼에 해당하는 보다 강력한 목적 또는 카테고리를 구축할 계획이지만, 현재 구현은 옵트인에 대한 전체 또는 무제한으로 접근할 수 있습니다.  이는 Adobe Experience Platform에만 적용되며 다른 Adobe JavaScript 라이브러리는 [!DNL Web SDK] 해당되지 않습니다.
 
 ## 지속적인 동의 환경 설정
 
