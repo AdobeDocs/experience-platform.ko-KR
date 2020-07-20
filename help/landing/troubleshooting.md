@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Adobe Experience Platform FAQ 및 문제 해결 안내서
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 2e5668a8b1d5fb831188fbd4e453b9f4aa7474df
+source-git-commit: 635f8cf8173cc7db2032f2181848b0ce1e9095cc
 workflow-type: tm+mt
-source-wordcount: '1959'
-ht-degree: 2%
+source-wordcount: '1962'
+ht-degree: 3%
 
 ---
 
@@ -248,6 +248,6 @@ UI 또는 API 사용 여부에 따라 다음 시스템 요구 사항이 적용�
 | XDM(Experience Data Model) | [스키마 레지스트리 API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) | [XDM 시스템 FAQ 및 문제 해결 가이드](../xdm/troubleshooting-guide.md) |
 | ID 서비스 | [ID 서비스 API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml) | [ID 서비스 문제 해결 가이드](../identity-service/troubleshooting-guide.md) |
 | 쿼리 서비스 | [쿼리 서비스 API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/qs-api.yaml) | [쿼리 서비스 문제 해결 가이드](../query-service/troubleshooting-guide.md) |
-| 실시간 고객 프로필 | [실시간 고객 프로필 API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml) |  |
+| 실시간 고객 프로필 | [실시간 고객 프로필 API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml) | [프로필 문제 해결 가이드](../profile/troubleshooting.md) |
 | 샌드박스 | [샌드박스 API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) | [샌드박스 문제 해결 가이드](../sandboxes/troubleshooting-guide.md) |
 | 세그먼테이션 | [세그멘테이션 API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml) |
