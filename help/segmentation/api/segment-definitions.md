@@ -4,15 +4,15 @@ solution: Experience Platform
 title: 세그먼트 정의
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 41a5d816f9dc6e7c26141ff5e9173b1b5631d75e
+source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
 workflow-type: tm+mt
-source-wordcount: '1042'
+source-wordcount: '1041'
 ht-degree: 4%
 
 ---
 
 
-# 세그먼트 정의 끝점 안내서
+# 세그먼트 정의 끝점
 
 Adobe Experience Platform을 사용하면 프로필 그룹에서 특정 속성이나 행동 그룹을 정의하는 세그먼트를 만들 수 있습니다. 세그먼트 정의는 PQL으로 작성된 쿼리를 캡슐화하는 [!DNL Profile Query Language] 개체입니다. 이 개체를 PQL 술어라고도 합니다. PQL은 사용자가 제공하는 레코드 또는 시계열 데이터와 관련된 조건에 따라 세그먼트의 규칙을 정의합니다 [!DNL Real-time Customer Profile]. PQL 쿼리 [작성에 대한 자세한 내용은 PQL](../pql/overview.md) 가이드를 참조하십시오.
 
