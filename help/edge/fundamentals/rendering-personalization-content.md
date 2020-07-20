@@ -4,9 +4,9 @@ seo-title: Adobe Experience Platform 웹 SDK 맞춤형 컨텐츠 렌더링
 description: Experience Platform 웹 SDK를 사용하여 개인화된 컨텐츠를 렌더링하는 방법 학습
 seo-description: Experience Platform 웹 SDK를 사용하여 개인화된 컨텐츠를 렌더링하는 방법 학습
 translation-type: tm+mt
-source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '232'
+source-wordcount: '229'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # 개인화 옵션 개요
 
-Adobe Experience Platform 웹 SDK는 Adobe Target을 비롯한 Adobe에서 개인화 솔루션 쿼리를 지원합니다. 개인화 모드에는 자동으로 렌더링될 수 있는 컨텐츠 및 개발자가 렌더링해야 하는 컨텐츠 검색 또한 SDK는 깜박임을 [관리하는 기능도 제공합니다](../../edge/solution-specific/target/flicker-management.md).
+Adobe Experience Platform은 Adobe Target을 포함하여 Adobe에서 개인화 솔루션을 쿼리하는 것을 [!DNL Web SDK] 지원합니다. 개인화 모드에는 자동으로 렌더링될 수 있는 컨텐츠 및 개발자가 렌더링해야 하는 컨텐츠 검색 또한 SDK는 깜박임을 [관리하는 기능도 제공합니다](../../edge/solution-specific/target/flicker-management.md).
 
 ## 컨텐츠 자동 렌더링
 
@@ -92,7 +92,7 @@ alloy("sendEvent",{
 
 >[!TIP]
 >
-> Target 범위를 사용하는 경우 서버에서 mBox가 됩니다. 이러한 범위는 개별적으로 하지 않고 한 번에 모든 요청만 가능합니다. 글로벌 mbox는 항상 전송됩니다.
+> 범위를 사용하는 경우 서버에서 mBox가 [!DNL Target] 됩니다. 이러한 범위는 개별적으로 사용하지 않고 한 번에 모든 요청입니다. 글로벌 mbox는 항상 전송됩니다.
 
 ### 자동 컨텐츠 검색
 
