@@ -4,9 +4,9 @@ seo-title: Adobe Experience Platform 웹 SDK 이벤트 추적
 description: Experience Platform 웹 SDK 이벤트를 추적하는 방법 학습
 seo-description: Experience Platform 웹 SDK 이벤트를 추적하는 방법 학습
 translation-type: tm+mt
-source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '638'
+source-wordcount: '632'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # 이벤트 추적
 
-이벤트 데이터를 Adobe Experience Cloud로 전송하려면 `sendEvent` 명령을 사용합니다. 이 명령은 Experience Cloud으로 데이터를 보내고 개인화된 컨텐츠, ID 및 대상 대상을 검색하는 기본 방법입니다. `sendEvent`
+이벤트 데이터를 Adobe Experience Cloud로 전송하려면 `sendEvent` 명령을 사용합니다. 이 `sendEvent` 명령은 데이터를 사용자에게 보내고 개인화된 컨텐츠, ID [!DNL Experience Cloud]및 대상 대상을 검색하는 기본 방법입니다.
 
 Adobe Experience Cloud로 전송된 데이터는 두 가지 카테고리로 분류됩니다.
 
@@ -82,7 +82,7 @@ alloy("sendEvent", {
 
 ## sendBeacon API 사용
 
-웹 페이지 사용자가 다른 곳으로 이동하기 전에 이벤트 데이터를 전송하기가 어려울 수 있습니다. 요청이 너무 길면 브라우저가 요청을 취소할 수 있습니다. 일부 브라우저는 이 시간 동안 데이터를 보다 쉽게 수집할 수 있도록 `sendBeacon` 하는 웹 표준 API를 구현했습니다. 사용 `sendBeacon`시 브라우저는 글로벌 브라우징 컨텍스트에서 웹 요청을 수행합니다. 즉, 브라우저가 백그라운드에서 비콘 요청을 수행하고 페이지 탐색을 유지하지 않습니다. Adobe Experience Platform 웹 SDK에서 사용할 수 있도록 하려면 이벤트 명령 `sendBeacon`에 옵션 `"documentUnloading": true` 을 추가합니다.  다음은 한 예입니다.
+웹 페이지 사용자가 다른 곳으로 이동하기 전에 이벤트 데이터를 전송하기가 어려울 수 있습니다. 요청이 너무 길면 브라우저가 요청을 취소할 수 있습니다. 일부 브라우저는 이 시간 동안 데이터를 보다 쉽게 수집할 수 있도록 `sendBeacon` 하는 웹 표준 API를 구현했습니다. 사용 `sendBeacon`시 브라우저는 글로벌 브라우징 컨텍스트에서 웹 요청을 수행합니다. 즉, 브라우저가 백그라운드에서 비콘 요청을 수행하고 페이지 탐색을 유지하지 않습니다. Adobe Experience Platform [!DNL Web SDK] 에 사용할 `sendBeacon`수 있도록 하려면 이벤트 명령 `"documentUnloading": true` 에 옵션을 추가합니다.  다음은 한 예입니다.
 
 ```javascript
 alloy("sendEvent", {
@@ -100,7 +100,7 @@ alloy("sendEvent", {
 });
 ```
 
-브라우저는 한 번에 전송할 수 있는 데이터 양을 제한했습니다 `sendBeacon` . 많은 브라우저에서 제한은 64K입니다. 페이로드가 너무 커서 브라우저가 이벤트를 거부하는 경우, Adobe Experience Platform 웹 SDK는 일반적인 전송 방식(예: 가져오기)을 다시 사용합니다.
+브라우저는 한 번에 전송할 수 있는 데이터 양을 제한했습니다 `sendBeacon` . 많은 브라우저에서 제한은 64K입니다. 페이로드가 너무 커서 브라우저가 이벤트를 거부하는 경우 Adobe Experience Platform은 일반적인 전송 방식(예: 가져오기)을 사용하여 [!DNL Web SDK] 돌아갑니다.
 
 ## 이벤트의 응답 처리
 
