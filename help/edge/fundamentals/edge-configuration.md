@@ -4,9 +4,9 @@ seo-title: Experience Platform 웹 SDK용 Edge 구성
 description: 'Experience Platform 에지 네트워크를 구성하는 방법을 알아봅니다. '
 seo-description: 'Experience Platform 에지 네트워크를 구성하는 방법을 알아봅니다. '
 translation-type: tm+mt
-source-git-commit: 2d47a00c91000c68c7331f88015264259a4e6323
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '880'
+source-wordcount: '870'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # 에지 구성
 
-Adobe Experience Platform 웹 SDK에 대한 구성은 두 곳으로 분할됩니다. SDK의 [구성 명령은](configuring-the-sdk.md) 클라이언트와 마찬가지로 클라이언트에서 처리해야 하는 작업을 제어합니다 `edgeDomain`. Edge Configuration handles all other configuration for the SDK. Adobe Experience Platform 에지 네트워크에 요청이 전송되면 이 `edgeConfigId` 는 서버측 구성을 참조하는 데 사용됩니다. 따라서 웹 사이트에서 코드를 변경하지 않고도 구성을 업데이트할 수 있습니다.
+Adobe Experience Platform 구성이 두 곳 [!DNL Web SDK] 으로 분할되어 있다. SDK의 [구성 명령은](configuring-the-sdk.md) 클라이언트와 마찬가지로 클라이언트에서 처리해야 하는 작업을 제어합니다 `edgeDomain`. Edge Configuration handles all other configuration for the SDK. 요청이 Adobe Experience Platform으로 전송되면 [!DNL Edge Network]이 서버측 구성을 참조하는 데 `edgeConfigId` 사용됩니다. 따라서 웹 사이트에서 코드를 변경하지 않고도 구성을 업데이트할 수 있습니다.
 
 ## 에지 구성 ID 만들기
 
@@ -90,7 +90,7 @@ Adobe Target을 구성하려면 클라이언트 코드를 제공해야 합니다
 
 ##### [!UICONTROL 속성 토큰]
 
-Target을 사용하면 속성을 통해 권한을 제어할 수 있습니다. 자세한 내용은 Target 설명서의 [엔터프라이즈 권한](https://docs.adobe.com/content/help/en/target/using/administer/manage-users/enterprise/properties-overview.html) 섹션에서 확인할 수 있습니다.
+[!DNL Target] 속성을 사용하여 권한을 제어할 수 있습니다. 자세한 내용은 설명서의 [엔터프라이즈 권한](https://docs.adobe.com/content/help/en/target/using/administer/manage-users/enterprise/properties-overview.html) 섹션에서 [!DNL Target] 확인할 수 있습니다.
 
 속성 토큰은 [!UICONTROL Adobe Target] > [!UICONTROL 설정] > [!UICONTROL 속성에서 찾을 수 있습니다.]
 
@@ -108,11 +108,11 @@ Adobe Audience Manager으로 데이터를 전송하는 데 필요한 모든 것�
 
 ##### [!UICONTROL 쿠키 대상 사용]
 
-SDK가 Audience Manager의 [쿠키 대상을 통해 세그먼트 정보를 공유할](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/destinations/custom-destinations/create-cookie-destination.html) 수 있습니다.
+SDK에서 쿠키 대상을 통해 세그먼트 정보를 공유할 [수](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/destinations/custom-destinations/create-cookie-destination.html) 있습니다 [!DNL Audience Manager].
 
 ##### [!UICONTROL URL 대상 사용]
 
-SDK에서 [URL 대상을 통해 세그먼트 정보를 공유할 수 있습니다](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/destinations/custom-destinations/create-url-destination.html). Audience Manager에서 구성됩니다.
+SDK에서 [URL 대상을 통해 세그먼트 정보를 공유할 수 있습니다](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/destinations/custom-destinations/create-url-destination.html). 이러한 구성 요소는 에 구성되어 [!DNL Audience Manager]있습니다.
 
 #### Adobe Analytics
 
