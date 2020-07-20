@@ -4,9 +4,9 @@ seo-title: Adobe Experience Platform 웹 SDK Experience Cloud ID 검색
 description: Adobe Experience Cloud ID를 가져오는 방법을 알아봅니다.
 seo-description: Adobe Experience Cloud ID를 가져오는 방법을 알아봅니다.
 translation-type: tm+mt
-source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '412'
+source-wordcount: '408'
 ht-degree: 9%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 9%
 
 # ID - Experience Cloud ID 검색
 
-Adobe Experience Platform 웹 SDK는 [Adobe Identity Service를 활용합니다](../../identity-service/ecid.md). 이렇게 하면 각 장치에 페이지 간의 활동을 함께 연결할 수 있도록 장치에서 지속되는 고유한 식별자가 있습니다.
+Adobe Experience Platform은 [!DNL Web SDK] Adobe Identity Service를 [활용합니다](../../identity-service/ecid.md). 이렇게 하면 각 장치에 페이지 간의 활동을 함께 연결할 수 있도록 장치에서 지속되는 고유한 식별자가 있습니다.
 
 ## 자사 ID
 
@@ -30,7 +30,7 @@ ID를 타사 도메인(demdex.net)과 동기화하여 사이트 간 추적을 �
 
 >[!NOTE]
 >
->이 메서드는 일반적으로 Experience Cloud ID를 읽어야 하는 사용자 지정 솔루션에서 사용됩니다. 표준 구현에서는 사용되지 않습니다.
+>이 메서드는 일반적으로 [!DNL Experience Cloud] ID를 읽어야 하는 사용자 지정 솔루션에서 사용됩니다. 표준 구현에서는 사용되지 않습니다.
 
 ```javascript
 alloy("getIdentity")
