@@ -4,15 +4,15 @@ solution: Experience Platform
 title: 세그먼트 작업
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 2327ce9a87647fb2416093d4a27eb7d4dc4aa4d7
+source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
 workflow-type: tm+mt
-source-wordcount: '994'
+source-wordcount: '993'
 ht-degree: 3%
 
 ---
 
 
-# 세그먼트 작업 끝점 안내서
+# 세그먼트 작업 끝점
 
 세그먼트 작업은 새 대상 세그먼트를 만드는 비동기 프로세스입니다. 프로필 조각에 겹치는 속성을 병합하는 방법을 제어하는 [병합 정책과](./segment-definitions.md)세그먼트 정의를 [참조합니다](../../profile/api/merge-policies.md) [!DNL Real-time Customer Profile] . 세그먼트 작업이 성공적으로 완료되면 처리 중에 발생한 오류와 대상의 최종 크기 등 세그먼트에 대한 다양한 정보를 수집할 수 있습니다.
 
