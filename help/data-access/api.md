@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 데이터 액세스 개발자 가이드
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: f7714b8bebe37b29290794a48314962e42b24058
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '486'
+source-wordcount: '485'
 ht-degree: 5%
 
 ---
@@ -94,7 +94,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/
 }
 ```
 
-이 배열은 지정된 일괄 처리 내의 모든 파일 목록을 포함합니다. `"data"` 반환된 각 파일의 고유한 ID(`{FILE_ID}`)는 `"dataSetFileId"` 필드 내에 들어 있습니다. 그런 다음 이 고유 ID를 사용하여 파일에 액세스하거나 다운로드할 수 있습니다.
+이 배열은 `"data"` 지정된 일괄 처리 내의 모든 파일 목록을 포함합니다. 반환된 각 파일의 고유한 ID(`{FILE_ID}`)는 `"dataSetFileId"` 필드 내에 들어 있습니다. 그런 다음 이 고유 ID를 사용하여 파일에 액세스하거나 다운로드할 수 있습니다.
 
 | 속성 | 설명 |
 | -------- | ----------- |
@@ -242,4 +242,4 @@ Contents of the file
 
 ## 데이터 수집 이벤트 가입
 
-Platform은 [Adobe 개발자 콘솔을 통해 특정 고부가가치 이벤트를 구독할 수 있도록 합니다](https://www.adobe.com/go/devs_console_ui). 예를 들어 데이터 수집 이벤트에 가입하여 예상되는 지연 및 실패에 대한 알림을 받을 수 있습니다. 자세한 내용은 데이터 수집 알림 [가입에](../ingestion/quality/subscribe-events.md) 대한 자습서를 참조하십시오.
+[!DNL Platform] 은 [Adobe 개발자 콘솔을 통해 특정 고부가가치 이벤트를 구독할 수 있도록 합니다](https://www.adobe.com/go/devs_console_ui). 예를 들어 데이터 수집 이벤트에 가입하여 예상되는 지연 및 실패에 대한 알림을 받을 수 있습니다. 자세한 내용은 데이터 수집 알림 [가입에](../ingestion/quality/subscribe-events.md) 대한 자습서를 참조하십시오.
