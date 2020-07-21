@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 여러 개체 검색
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '183'
+source-wordcount: '176'
 ht-degree: 1%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 1%
 
 # 여러 개체 검색
 
-개체당 한 번의 요청을 하는 대신 몇 개의 특정 개체를 보려는 경우 카탈로그는 동일한 유형의 여러 개체를 요청하는 간단한 단축키를 제공합니다. 단일 GET 요청을 사용하여 쉼표로 구분된 ID 목록을 포함하여 여러 특정 개체를 반환할 수 있습니다.
+개체당 한 번의 요청을 하는 대신 여러 특정 개체를 보려면 동일한 유형의 여러 개체를 요청하는 간단한 단축키를 [!DNL Catalog] 제공합니다. 단일 GET 요청을 사용하여 쉼표로 구분된 ID 목록을 포함하여 여러 특정 개체를 반환할 수 있습니다.
 
 >[!NOTE]
 >
->특정 카탈로그 개체를 요청하는 경우에도 필요한 속성만 반환하도록 매개 변수를 `properties` 쿼리하는 것이 좋습니다.
+>특정 [!DNL Catalog] 개체를 요청할 경우에도 필요한 속성만 반환하도록 매개 변수를 `properties` 쿼리하는 것이 좋습니다.
 
 **API 형식**
 
@@ -27,7 +27,7 @@ GET /{OBJECT_TYPE}/{ID_1},{ID_2},{ID_3},{ID_4}
 GET /{OBJECT_TYPE}/{ID_1},{ID_2},{ID_3},{ID_4}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 ```
 
-| `{OBJECT_TYPE}` | 검색할 카탈로그 개체의 유형입니다. 유효한 개체는 다음과 같습니다. <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 검색할 [!DNL Catalog] 개체의 유형입니다. 유효한 개체는 다음과 같습니다. <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{ID}` | 검색할 특정 개체 중 하나에 대한 식별자입니다. |
 
 **요청**
@@ -49,7 +49,7 @@ curl -X GET \
 
 >[!NOTE]
 >
->반환된 개체에 쿼리로 지정된 요청된 속성 중 하나 이상이 포함되어 있지 않으면 &quot;샘플 데이터 집합 3&quot; 및 &quot;샘플 데이터 집합 4&quot;에 표시된 것처럼 응답에서 포함하는 요청된 속성만 반환됩니다. `properties`
+>반환된 개체에 쿼리에 의해 지정된 하나 이상의 요청된 속성이 `properties` 포함되어 있지 않으면 ***`Sample Dataset 3`*** 및 ***`Sample Dataset 4`*** 아래에 표시된 것처럼 응답에 포함된 요청된 속성만 반환됩니다.
 
 ```json
 {
