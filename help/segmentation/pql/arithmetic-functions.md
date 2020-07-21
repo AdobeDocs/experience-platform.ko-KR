@@ -4,18 +4,21 @@ solution: Experience Platform
 title: 산술 함수
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 92f92f480f29f7d6440f4e90af3225f9a1fcc3d0
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+workflow-type: tm+mt
+source-wordcount: '230'
+ht-degree: 5%
 
 ---
 
 
 # 산술 함수
 
-산술 함수는 PQL(프로필 쿼리 언어)의 값에 대한 기본 계산을 수행하는 데 사용됩니다. 다른 PQL 기능에 대한 자세한 내용은 프로필 쿼리 언어 [개요를](./overview.md)참조하십시오.
+산술 함수는 (PQL)의 값에 대한 기본 계산을 수행하는 데 [!DNL Profile Query Language] 사용됩니다. 다른 PQL 기능에 대한 자세한 내용은 [프로필 쿼리 언어 개요를 참조하십시오](./overview.md).
 
 ## 이벤트가 복제되지 않도록 하면서 현재 이벤트 변수에
 
-(additional) `+` 함수는 두 인수 표현식의 합을 찾는 데 사용됩니다.
+(adding) `+` 함수는 두 인수 표현식의 합을 찾는 데 사용됩니다.
 
 **형식**
 
@@ -25,7 +28,7 @@ source-git-commit: 92f92f480f29f7d6440f4e90af3225f9a1fcc3d0
 
 **예**
 
-다음 PQL 쿼리는 서로 다른 두 제품의 가격을 합산합니다.
+다음 PQL 쿼리는 두 개의 서로 다른 제품의 가격을 합산합니다.
 
 ```sql
 product1.price + product2.price
@@ -33,7 +36,7 @@ product1.price + product2.price
 
 ## 곱하기
 
-두 인수 `*` 표현식의 제품을 찾는 데 (곱하기) 함수가 사용됩니다.
+(곱하기) `*` 함수는 두 인수 표현식의 제품을 찾는 데 사용됩니다.
 
 **형식**
 
@@ -43,7 +46,7 @@ product1.price + product2.price
 
 **예**
 
-다음 PQL 쿼리는 재고의 제품 및 제품의 가격을 검색하여 제품의 총 가치를 찾습니다.
+다음 PQL 질의는 재고 제품 및 제품 가격을 검색하여 제품의 총값을 찾습니다.
 
 ```sql
 product.inventory * product.price
@@ -69,7 +72,7 @@ product1.price - product2.price
 
 ## 나누기
 
-(division) `/` 함수는 두 인수 표현식의 인용 부호를 찾는 데 사용됩니다.
+(division) `/` 함수는 두 인수 표현식의 인용 값을 찾는 데 사용됩니다.
 
 **형식**
 
@@ -79,15 +82,15 @@ product1.price - product2.price
 
 **예**
 
-다음 PQL 쿼리는 총 판매된 제품과 총 획득 금액 간의 견적을 검색하여 품목당 평균 비용을 확인합니다.
+다음 PQL 질의는 총 판매된 제품과 총 획득 금액 간의 견적을 검색하여 품목당 평균 비용을 확인합니다.
 
 ```sql
 totalProduct.price / totalProduct.sold
 ```
 
-## 나머진
+## 나머지
 
-두 인수 표현식을 나눈 후 나머지를 찾는 데 `%` (모듈로/나머진) 함수가 사용됩니다.
+두 인수 `%` 표현식을 나눈 후 나머지 함수를 찾는 데 (모듈과 나머지) 함수를 사용합니다.
 
 **형식**
 
@@ -97,7 +100,7 @@ totalProduct.price / totalProduct.sold
 
 **예**
 
-다음 PQL 쿼리는 개인의 연령이 5세로 구분되어 있는지 확인합니다.
+다음 PQL 쿼리는 개인의 나이가 5명으로 구분되어 있는지 확인합니다.
 
 ```sql
 person.age % 5 = 0
@@ -105,4 +108,4 @@ person.age % 5 = 0
 
 ## 다음 단계
 
-이제 산술 함수에 대해 학습했으므로 PQL 쿼리 내에서 사용할 수 있습니다. 다른 PQL 기능에 대한 자세한 내용은 프로필 쿼리 [언어 개요를](./overview.md)참조하십시오.
+이제 산술 함수에 대해 학습했으므로 PQL 쿼리 내에서 사용할 수 있습니다. 다른 PQL 기능에 대한 자세한 내용은 [프로필 쿼리 언어 개요를 참조하십시오](./overview.md).
