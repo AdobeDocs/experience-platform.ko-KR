@@ -4,27 +4,27 @@ solution: Experience Platform
 title: 쿼리 작성
 topic: queries
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '667'
+source-wordcount: '643'
 ht-degree: 1%
 
 ---
 
 
-# 쿼리 서비스에서 쿼리 실행에 대한 일반 지침
+# 쿼리 실행에 대한 일반 지침 [!DNL Query Service]
 
-이 문서에서는 Adobe Experience Platform 쿼리 서비스에서 쿼리를 작성할 때 알아야 할 중요한 세부 사항을 자세히 설명합니다.
+이 문서에서는 Adobe Experience Platform에서 쿼리를 작성할 때 알아야 할 중요한 세부 사항을 자세히 설명합니다 [!DNL Query Service].
 
-쿼리 서비스에 사용되는 SQL 구문에 대한 자세한 내용은 [SQL 구문 설명서를 참조하십시오](../sql/syntax.md).
+에서 사용되는 SQL 구문에 대한 자세한 내용 [!DNL Query Service]은 [SQL 구문 설명서를 참조하십시오](../sql/syntax.md).
 
 ## 쿼리 실행 모델
 
-Adobe Experience Platform 쿼리 서비스에는 쿼리 실행 모델이 두 개 있습니다. 인터랙티브한 요소와 비인터랙티브한 요소가 포함되어 있습니다. 대화형 실행은 비즈니스 인텔리전스 도구에서 쿼리 개발 및 보고서 생성에 사용되는 반면, 비대화형 실행은 데이터 처리 워크플로의 일부로서 더 큰 작업과 운영 질의에 사용됩니다.
+Adobe Experience Platform [!DNL Query Service] 에는 쿼리 실행 모델이 두 개 있습니다. 인터랙티브한 요소와 비인터랙티브한 요소가 포함되어 있습니다. 대화형 실행은 비즈니스 인텔리전스 도구에서 쿼리 개발 및 보고서 생성에 사용되는 반면, 비대화형 실행은 데이터 처리 워크플로의 일부로서 더 큰 작업과 운영 질의에 사용됩니다.
 
 ### 인터랙티브한 쿼리 실행
 
-쿼리는 쿼리 서비스 UI 또는 연결된 클라이언트를 [통해 제출함으로써 대화식으로 실행할 수 있습니다](../clients/overview.md). 연결된 클라이언트를 통해 쿼리 서비스를 실행할 때 제출된 쿼리가 반환되거나 시간 초과될 때까지 클라이언트와 쿼리 서비스 간에 활성 세션이 실행됩니다.
+쿼리는 [!DNL Query Service] UI를 통해 제출하거나 연결된 클라이언트를 [통해 대화식으로 실행할 수 있습니다](../clients/overview.md). 연결된 클라이언트 [!DNL Query Service] 를 통해 실행할 때, 제출된 쿼리가 반환되거나 시간 초과될 [!DNL Query Service] 때까지 클라이언트와 활성 세션이 실행됩니다.
 
 대화형 쿼리 실행에는 다음과 같은 제한 사항이 있습니다.
 
@@ -38,11 +38,11 @@ Adobe Experience Platform 쿼리 서비스에는 쿼리 실행 모델이 두 개
 >
 >최대 행 제한을 무시하려면 쿼리 `LIMIT 0` 에 포함하십시오. 쿼리 시간 초과(10분)는 여전히 적용됩니다.
 
-기본적으로 대화형 쿼리의 결과는 클라이언트에 반환되고 지속되지 **않습니다** . 결과를 Experience Platform의 데이터 집합으로 유지하려면 쿼리에 `CREATE TABLE AS SELECT` 구문을 사용해야 합니다.
+기본적으로 대화형 쿼리의 결과는 클라이언트에 반환되고 지속되지 **않습니다** . 결과를 데이터 집합으로 유지하려면 쿼리 [!DNL Experience Platform]에서 `CREATE TABLE AS SELECT` 구문을 사용해야 합니다.
 
 ### 비대화형 쿼리 실행
 
-쿼리 서비스 API를 통해 제출된 쿼리는 대화식으로 실행되지 않습니다. 비대화형 실행은 쿼리 서비스가 API 호출을 수신하고 수신되는 순서대로 쿼리를 실행함을 의미합니다. 비대화형 쿼리는 항상 Experience Platform에 새 데이터 세트를 생성하여 결과를 받거나 기존 데이터 세트에 새 행을 삽입하게 됩니다.
+API를 통해 제출된 [!DNL Query Service] 쿼리는 대화식으로 실행되지 않습니다. 비대화형 실행은 API 호출을 [!DNL Query Service] 받고 수신되는 순서대로 쿼리를 실행하는 것을 의미합니다. 비대화형 쿼리는 항상 결과를 받기 위해 새 데이터 세트 [!DNL Experience Platform] 를 만들거나 기존 데이터 세트에 새 행을 삽입하게 됩니다.
 
 ## 개체 내의 특정 필드 액세스
 
@@ -189,4 +189,4 @@ LIMIT 10
 
 ## 다음 단계
 
-이 문서를 읽음으로써 쿼리 서비스를 사용하여 쿼리를 작성할 때 몇 가지 중요한 고려 사항을 알게 되었습니다. SQL 구문을 사용하여 쿼리를 작성하는 방법에 대한 자세한 내용은 [SQL 구문 설명서를 참조하십시오](../sql/syntax.md).
+이 문서를 읽음으로써 쿼리를 작성할 때 몇 가지 중요한 고려 사항을 알게 되었습니다 [!DNL Query Service]. SQL 구문을 사용하여 쿼리를 작성하는 방법에 대한 자세한 내용은 [SQL 구문 설명서를 참조하십시오](../sql/syntax.md).
