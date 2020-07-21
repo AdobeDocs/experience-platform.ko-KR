@@ -4,27 +4,27 @@ solution: Experience Platform
 title: 안전한 Spark Data Access SDK
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: f7714b8bebe37b29290794a48314962e42b24058
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '523'
+source-wordcount: '516'
 ht-degree: 1%
 
 ---
 
 
-# 안전한 Spark Data Access SDK
+# 보안 [!DNL Spark Data Access] SDK
 
-Secure Spark [!DNL Data Access] SDK는 Adobe Experience Platform에서 데이터 세트를 읽고 쓸 수 있는 소프트웨어 개발 키트입니다.
+보안 [!DNL Spark][!DNL Data Access] SDK는 Adobe Experience Platform에서 데이터 세트를 읽고 쓸 수 있는 소프트웨어 개발 키트입니다.
 
 ## 시작하기
 
-Secure Spark [SDK를 호출하기 위해 값을 이용할 수 있도록 하려면](../../tutorials/authentication.md) 인증 [!DNL Data Access] 자습서를 완료해야 합니다.
+보안 [SDK를 호출하기 위해 값에 액세스하려면](../../tutorials/authentication.md) 인증 [!DNL Spark] 자습서를 [!DNL Data Access] 완료해야 합니다.
 
 - `{ACCESS_TOKEN}`
 - `{API_KEY}`
 - `{IMS_ORG}`
 
-의 모든 리소스 [!DNL Experience Platform] 는 특정 가상 샌드박스와 분리됩니다. Spark SDK를 사용하려면 작업을 수행할 샌드박스의 이름과 ID가 필요합니다.
+의 모든 리소스 [!DNL Experience Platform] 는 특정 가상 샌드박스와 분리됩니다. SDK를 [!DNL Spark] 사용하려면 작업이 수행할 샌드박스의 이름과 ID가 필요합니다.
 
 - `{SANDBOX_NAME}`
 - `{SANDBOX_ID}`
@@ -83,7 +83,7 @@ spark.sql.extensions = com.adobe.platform.query.QSSparkSessionExtensions
 
 SDK는 다음 두 가지 읽기 모드를 지원합니다. [!DNL Spark] 인터랙티브한 컨텐츠와 일괄 처리
 
-대화형 모드는 JDBC(Java Database Connectivity)에 대한 연결을 생성하고 자동으로 JDBC [!DNL Query Service] 로 변환되는 일반 JDBC `ResultSet` 를 통해 결과를 가져옵니다 `DataFrame`. 이 모드는 내장된 Spark 메서드와 유사하게 작동합니다 `spark.read.jdbc()`. 이 모드는 작은 데이터 집합에만 사용되며 인증에 사용자 토큰만 필요합니다.
+대화형 모드는 JDBC(Java Database Connectivity)에 대한 연결을 생성하고 자동으로 JDBC [!DNL Query Service] 로 변환되는 일반 JDBC `ResultSet` 를 통해 결과를 가져옵니다 `DataFrame`. 이 모드는 내장 [!DNL Spark] 메서드와 유사하게 작동합니다 `spark.read.jdbc()`. 이 모드는 작은 데이터 집합에만 사용되며 인증에 사용자 토큰만 필요합니다.
 
 일괄 처리 모드는 [!DNL Query Service]의 COPY 명령을 사용하여 공유 위치에서 쪽모이 세공 나무 결과 세트를 생성합니다. 이러한 Partiented 파일은 추가로 처리할 수 있습니다. 이 모드에서는 `acp.foundation.catalog.credentials` 범위를 가진 사용자 토큰과 서비스 토큰이 모두 필요합니다.
 
