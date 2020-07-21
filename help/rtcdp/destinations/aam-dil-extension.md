@@ -1,10 +1,13 @@
 ---
 title: Audience Manager DIL 확장
 seo-title: Audience Manager DIL 확장
-description: Audience Manager DIL 익스텐션은 Adobe 실시간 고객 데이터 플랫폼의 DMP(Data Management Platform) 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
-seo-description: Audience Manager DIL 익스텐션은 Adobe 실시간 고객 데이터 플랫폼의 DMP(Data Management Platform) 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
+description: Audience Manager DIL 익스텐션은 Adobe 실시간 고객 데이터 Platform의 DMP(데이터 관리 Platform) 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
+seo-description: Audience Manager DIL 익스텐션은 Adobe 실시간 고객 데이터 Platform의 DMP(데이터 관리 Platform) 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
+source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+workflow-type: tm+mt
+source-wordcount: '609'
+ht-degree: 7%
 
 ---
 
@@ -13,50 +16,50 @@ source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
 
 ## 개요 {#overview}
 
-Adobe Audience Manager 데이터 통합 라이브러리 확장(클라이언트측 구현)입니다. 참고:이 확장은 Adobe Analytics 데이터의 서버측 전달(SSF)에 사용되지 않습니다. SSF의 경우 Adobe Analytics 확장을 사용하십시오. 중요:버전 8.0부터 DIL은 Experience Cloud ID Service 버전 3.3 이상에 대한 강한 종속성을 갖습니다. 전체 Audience Manager 데이터 통합 기능을 위해 Experience Cloud ID Service와 DIL을 모두 구현하십시오.
+Adobe Audience Manager 데이터 통합 라이브러리 확장(클라이언트측 구현)입니다. 참고: 이 확장 기능은 Adobe Analytics 데이터의 SSF(서버측 전달)에 사용되지 않습니다. SSF의 경우 Adobe Analytics 익스텐션을 사용하십시오. 중요: 버전 8.0부터 시작하여 DIL은 ID 서비스, 버전 3.3 이상에 대한 [!DNL Experience Cloud] 강한 종속성을 갖습니다. 전체 데이터 통합 기능을 구현하려면 [!DNL Experience Cloud] ID 서비스와 DIL을 모두 [!DNL Audience Manager] 구현하십시오.
 
-Audience Manager DIL은 Adobe 실시간 고객 데이터 플랫폼의 데이터 관리 플랫폼(DMP) 익스텐션입니다. 확장 기능에 대한 자세한 내용은 Experience Platform [시작 설명서의 Audience Manager 확장 페이지를](https://docs.adobe.com/content/help/en/launch/using/extensions-ref/adobe-extension/adobe-audience-manager-extension.html) 참조하십시오.
+[!DNL Audience Manager] DIL은 Adobe 실시간 고객 데이터 Platform의 DMP(데이터 관리 Platform) 익스텐션입니다. 확장 기능에 대한 자세한 내용은 Experience Platform Launch 설명서의 [Audience Manager 확장 페이지](https://docs.adobe.com/content/help/ko-KR/launch/using/extensions-ref/adobe-extension/adobe-audience-manager-extension.html) 를 참조하십시오.
 
-이 대상은 경험 플랫폼 론치 확장자입니다. Launch 익스텐션이 Adobe Real-time CDP에서 작동하는 방법에 대한 자세한 내용은 Experience Platform [Launch 익스텐션 개요를](/help/rtcdp/destinations/experience-platform-launch-extensions.md)참조하십시오.
+이 대상은 [!DNL Experience Platform Launch] 확장자입니다. Launch 익스텐션이 Adobe 실시간 CDP에서 작동하는 방법에 대한 자세한 내용은 [Experience Platform Launch 확장 개요를 참조하십시오](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
 ![Audience Manager DIL 확장](/help/rtcdp/destinations/assets/aam-dil-extension.png)
 
 ## 전제 조건 {#prerequisites}
 
-이 익스텐션은 Adobe Real-time CDP를 구매한 모든 고객의 대상 카탈로그에서 제공됩니다.
+이 익스텐션은 Adobe의 실시간 CDP를 구매한 모든 고객을 위한 [!DNL Destinations] 카탈로그에서 제공됩니다.
 
-이 확장을 사용하려면 Experience Platform Launch에 액세스해야 합니다. Adobe Experience Platform Launch는 Adobe Experience Cloud 고객에게 부가 가치 기능으로 제공됩니다. 조직 관리자에게 문의하여 Launch에 액세스할 수 있도록 **[!UICONTROL manage_properties]** 권한을 부여받고 익스텐션을 설치하도록 요청하십시오.
+이 확장 기능을 사용하려면 액세스 권한이 필요합니다 [!DNL Experience Platform Launch]. [!DNL Experience Platform Launch] Adobe Experience Cloud 고객에게 제공되는 부가 가치 기능 Extension을 설치할 수 [!DNL Launch] 있도록 조직 관리자에게 **[!UICONTROL manage_properties]** 권한을 부여하도록 요청하십시오.
 
 ## 확장 설치 {#install-extension}
 
-Audience Manager DIL 확장을 설치하려면:
+DIL [!DNL Audience Manager] 익스텐션을 설치하려면
 
-1. Adobe [실시간 CDP 인터페이스에서](http://platform.adobe.com/)해당 사이트로 이동합니다 **[!UICONTROL Destinations > Catalog]**.
+1. Adobe [Real-time CDP 인터페이스에서](http://platform.adobe.com/)대상 > **[!UICONTROL 카탈로그로 이동합니다]**.
 2. 카탈로그에서 익스텐션을 선택하거나 검색 막대를 사용합니다.
-3. 대상을 클릭하여 강조 표시한 다음 오른쪽 레일에서 **[!UICONTROL Install Extension]** 선택합니다. 컨트롤이 **[!UICONTROL Install Extension]** 회색으로 표시되면 권한이 없는 **[!UICONTROL manage_properties]** 것입니다. 전제 조건을 [참조하십시오](#prerequisites).
-4. 창에서 **[!UICONTROL Select available Launch property]** 확장을 설치할 Launch 속성을 선택합니다. Launch에서 새 속성을 만들 수도 있습니다. 속성은 규칙, 데이터 요소, 구성된 확장, 환경 및 라이브러리의 컬렉션입니다. 시작 설명서의 속성 [페이지 섹션에서](https://docs.adobe.com/content/help/en/launch/using/reference/admin/companies-and-properties.html#properties-page) 속성에 대해 알아봅니다.
-5. 워크플로우는 설치를 완료하기 위해 [시작]으로 이동합니다.
+3. 대상을 클릭하여 강조 표시한 다음 오른쪽 레일에서 **[!UICONTROL 확장]** 설치 를 선택합니다. 확장 **[!UICONTROL 설치]** 컨트롤이 회색으로 표시되면 **[!UICONTROL manage_properties]** 권한이 없습니다. 전제 조건 [을 참조하십시오](#prerequisites).
+4. 사용 **[!UICONTROL 가능한 론치 속성]** 선택 창에서 확장자를 설치할 [!DNL Launch] 속성을 선택합니다. Launch에서 새 속성을 만들 수도 있습니다. 속성은 규칙, 데이터 요소, 구성된 확장, 환경 및 라이브러리의 컬렉션입니다. 설명서의 [속성 페이지 섹션](https://docs.adobe.com/content/help/en/launch/using/reference/admin/companies-and-properties.html#properties-page) 에서 속성에 대해 [!DNL Launch] 알아보십시오.
+5. 워크플로우에서 설치를 완료하는 데 [!DNL Launch] 가 사용됩니다.
 
-확장 구성 옵션에 대한 자세한 내용은 Experience [Launch 설명서의 Audience Manager 확장 페이지를](https://docs.adobe.com/content/help/en/launch/using/extensions-ref/adobe-extension/adobe-audience-manager-extension.html) 참조하십시오.
+확장 구성 옵션에 대한 자세한 내용은 설명서의 [Audience Manager 확장 페이지](https://docs.adobe.com/content/help/ko-KR/launch/using/extensions-ref/adobe-extension/adobe-audience-manager-extension.html) 를 [!DNL Experience Launch] 참조하십시오.
 
-Experience Platform Launch 인터페이스에서 직접 익스텐션을 설치할 [수도](https://launch.adobe.com/)있습니다. 론치 [설명서에서 새 확장](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html#add-a-new-extension) 추가를 참조하십시오.
+또한 [Experience Platform Launch 인터페이스에서 직접 익스텐션을 설치할 수 있습니다](https://launch.adobe.com/). 설명서에서 [새 확장](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html#add-a-new-extension) 추가를 [!DNL Launch] 참조하십시오.
 
 
-## 익스텐션을 사용하는 방법 {#how-to-use}
+## 익스텐션 사용 방법 {#how-to-use}
 
-확장을 설치한 후에는 Launch에서 직접 확장 프로그램의 규칙을 설정할 수 있습니다.
+익스텐션을 설치한 후 에서 바로 규칙을 설정할 수 있습니다 [!DNL Launch].
 
-Launch에서는 특정 상황에서만 이벤트 데이터를 확장 대상에 보내도록 설치된 확장 기능에 대한 규칙을 설정할 수 있습니다. 확장 규칙 설정에 대한 자세한 내용은 규칙 [설명서를](https://docs.adobe.com/help/ko-KR/launch/using/reference/manage-resources/rules.html)참조하십시오.
+에서 [!DNL Launch]이벤트 데이터를 특정 상황에서만 확장 대상에 보내도록 설치된 확장 기능에 대한 규칙을 설정할 수 있습니다. 확장 규칙 설정에 대한 자세한 내용은 [규칙 설명서를 참조하십시오](https://docs.adobe.com/help/ko-KR/launch/using/reference/manage-resources/rules.html).
 
-## 확장 구성, 업그레이드 및 삭제 {#configure-upgrade-delete}
+## 확장 기능 구성, 업그레이드 및 삭제 {#configure-upgrade-delete}
 
-Launch 인터페이스에서 확장을 구성, 업그레이드 및 삭제할 수 있습니다.
+인터페이스에서 익스텐션을 구성, 업그레이드 및 삭제할 수 [!DNL Launch] 있습니다.
 
 >[!TIP]
 >
->확장이 이미 속성 중 하나에 설치되어 있는 경우 Adobe Real-time CDP UI가 확장자에 **[!UICONTROL Install]** 대해 계속 표시됩니다. 설치 익스텐션에 설명된 대로 설치 [워크플로우를](#install-extension) 시작하고 Launch에 도달하여 확장 프로그램을 구성하거나 삭제합니다.
+>익스텐션이 속성 중 하나에 이미 설치되어 있는 경우 Adobe 실시간 CDP UI에 **[!UICONTROL Install for the extension]** 이 여전히 표시됩니다. 확장 기능을 가져오고 구성하거나 삭제하려면 [설치 확장](#install-extension) 프로그램 [!DNL Launch] 에 설명된 대로 설치 워크플로우를 시작합니다.
 
-익스텐션을 업그레이드하려면 Launch [설명서의 익스텐션 업그레이드를](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/extension-upgrade.html) 참조하십시오.
+익스텐션을 업그레이드하려면 설명서의 [익스텐션 업그레이드](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/extension-upgrade.html) 를 [!DNL Launch] 참조하십시오.
 
 
 
