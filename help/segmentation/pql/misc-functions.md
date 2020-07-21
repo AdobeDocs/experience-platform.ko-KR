@@ -4,18 +4,21 @@ solution: Experience Platform
 title: 기타 함수
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d7ec6240864916d3b54db8bd641f4917a38f9480
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+workflow-type: tm+mt
+source-wordcount: '105'
+ht-degree: 3%
 
 ---
 
 
 # 기타 함수
 
-다음 함수는 PQL(프로필 쿼리 언어)에 대한 기타 함수입니다. 다른 PQL 기능에 대한 자세한 내용은 프로필 쿼리 언어 [개요를](./overview.md)참조하십시오.
+다음 함수는 (PQL)에 대한 기타 [!DNL Profile Query Language] 함수입니다. 다른 PQL 기능에 대한 자세한 내용은 [프로필 쿼리 언어 개요를 참조하십시오](./overview.md).
 
 ## Let
 
-이 `let` 함수를 사용하면 나중에 쿼리에서 사용할 변수로 표현식을 저장할 수 있습니다.
+이 `let` 함수를 사용하면 나중에 쿼리에 사용할 수 있도록 식을 변수로 저장할 수 있습니다.
 
 **형식**
 
@@ -33,4 +36,4 @@ let S = (sum X.commerce.order.priceTotal over X from xEvent where X.commerce.ord
 
 ## 다음 단계
 
-이제 기타 기능에 대해 알았으므로 PQL 쿼리 내에서 사용할 수 있습니다. 다른 PQL 기능에 대한 자세한 내용은 프로필 쿼리 [언어 개요를](./overview.md)참조하십시오.
+이제 기타 기능에 대해 배웠으므로 PQL 쿼리 내에서 사용할 수 있습니다. 다른 PQL 기능에 대한 자세한 내용은 [프로필 쿼리 언어 개요를 참조하십시오](./overview.md).
