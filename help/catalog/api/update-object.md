@@ -4,17 +4,17 @@ solution: Experience Platform
 title: 개체 업데이트
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '316'
-ht-degree: 2%
+source-wordcount: '313'
+ht-degree: 3%
 
 ---
 
 
 # 개체 업데이트
 
-PATCH 요청 경로에 카탈로그 ID를 포함하여 카탈로그 객체의 일부를 업데이트할 수 있습니다. 이 문서에서는 카탈로그 객체에서 PATCH 작업을 수행하는 두 가지 방법에 대해 설명합니다.
+PATCH 요청 경로에 개체 ID를 포함하여 [!DNL Catalog] 객체의 일부를 업데이트할 수 있습니다. 이 문서에서는 카탈로그 객체에서 PATCH 작업을 수행하는 두 가지 방법에 대해 설명합니다.
 
 * 필드 사용
 * JSON 패치 표기법 사용
@@ -35,7 +35,7 @@ PATCH /{OBJECT_TYPE}/{OBJECT_ID}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 업데이트할 카탈로그 개체의 유형입니다. 유효한 개체는 다음과 같습니다. <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 업데이트할 [!DNL Catalog] 개체의 유형입니다. 유효한 개체는 다음과 같습니다. <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | 업데이트할 특정 개체의 식별자입니다. |
 
 **요청**
@@ -84,7 +84,7 @@ PATCH /{OBJECT_TYPE}/{OBJECT_ID}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 업데이트할 카탈로그 개체의 유형입니다. 유효한 개체는 다음과 같습니다. <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 업데이트할 [!DNL Catalog] 개체의 유형입니다. 유효한 개체는 다음과 같습니다. <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | 업데이트할 특정 개체의 식별자입니다. |
 
 **요청**
