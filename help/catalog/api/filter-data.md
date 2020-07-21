@@ -4,23 +4,23 @@ solution: Experience Platform
 title: 쿼리 매개 변수를 사용하여 카탈로그 데이터 필터링
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '2060'
+source-wordcount: '2033'
 ht-degree: 1%
 
 ---
 
 
-# 쿼리 매개 변수를 사용하여 카탈로그 데이터 필터링
+# 쿼리 매개 변수를 사용하여 [!DNL Catalog] 데이터 필터링
 
-카탈로그 서비스 API를 사용하면 요청 쿼리 매개 변수의 사용을 통해 응답 데이터를 필터링할 수 있습니다. 카탈로그의 우수 사례는 모든 API 호출에서 필터를 사용하여 API에 대한 로드를 줄이고 전반적인 성능을 개선하는 것입니다.
+API를 [!DNL Catalog Service] 사용하면 요청 쿼리 매개 변수를 사용하여 응답 데이터를 필터링할 수 있습니다. 모범 사례 [!DNL Catalog] 는 API에 대한 로드를 줄이고 전반적인 성능을 개선하는 데 도움이 되기 때문에 모든 API 호출에서 필터를 사용하는 것입니다.
 
-이 문서에서는 API에서 카탈로그 개체를 필터링하는 가장 일반적인 방법에 대해 간략하게 설명합니다. 카탈로그 API와 상호 작용하는 방법에 대한 자세한 내용은 [카탈로그 개발자 안내서를](getting-started.md) 읽는 동안 이 문서를 참조하는 것이 좋습니다. 카탈로그 서비스에 대한 자세한 내용은 [카탈로그 개요를 참조하십시오](../home.md).
+이 문서에서는 API에서 개체를 필터링하는 가장 일반적인 방법에 대해 간략하게 설명합니다. [!DNL Catalog] API와 상호 작용하는 방법에 대한 자세한 내용은 [카탈로그 개발자 안내서를](getting-started.md) 읽는 동안 이 문서를 참조할 것을 [!DNL Catalog] 권장합니다. 에 대한 자세한 [!DNL Catalog Service]내용은 [카탈로그 개요를 참조하십시오](../home.md).
 
 ## 반환된 개체 제한
 
-쿼리 매개 `limit` 변수는 응답으로 반환되는 개체 수를 제한합니다. 카탈로그 응답은 구성된 제한에 따라 자동으로 미터됩니다.
+쿼리 매개 `limit` 변수는 응답으로 반환되는 개체 수를 제한합니다. [!DNL Catalog] 구성된 제한에 따라 응답이 자동으로 측정됩니다.
 
 * 매개 변수를 지정하지 않으면 응답 페이로드당 최대 개체 수는 20개입니다. `limit`
 * 데이터 집합 쿼리의 경우 쿼리 매개 변수 `observableSchema` 를 사용하여 `properties` 요청한 경우 반환되는 데이터 집합의 최대 수는 20개입니다.
@@ -36,7 +36,7 @@ GET /{OBJECT_TYPE}?limit={LIMIT}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 검색할 카탈로그 개체의 유형입니다. 유효한 개체는 다음과 같습니다. <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 검색할 [!DNL Catalog] 개체의 유형입니다. 유효한 개체는 다음과 같습니다. <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{LIMIT}` | 반환할 개체 수를 나타내는 1부터 100까지의 정수입니다. |
 
 **요청**
@@ -104,9 +104,9 @@ GET /{OBJECT_TYPE}/{OBJECT_ID}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 검색할 카탈로그 개체의 유형입니다. 유효한 개체는 다음과 같습니다. <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 검색할 [!DNL Catalog] 개체의 유형입니다. 유효한 개체는 다음과 같습니다. <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{PROPERTY}` | 응답 본문에 포함할 속성의 이름입니다. |
-| `{OBJECT_ID}` | 검색할 특정 카탈로그 개체의 고유 식별자입니다. |
+| `{OBJECT_ID}` | 검색할 특정 [!DNL Catalog] 개체의 고유 식별자입니다. |
 
 **요청**
 
@@ -123,7 +123,7 @@ curl -X GET \
 
 **응답**
 
-성공적인 응답은 요청된 속성만 표시된 카탈로그 개체 목록을 반환합니다.
+성공적인 응답은 요청된 속성만 표시된 [!DNL Catalog] 개체 목록을 반환합니다.
 
 ```json
 {
@@ -205,9 +205,9 @@ curl -X GET \
 * 현재 태그를 지원하는 유일한 Catalog 개체는 데이터 세트, 배치 및 연결입니다.
 * 태그 이름은 IMS 조직에 고유합니다.
 * Adobe 프로세스는 특정 동작에 태그를 활용할 수 있습니다. 이러한 태그의 이름에는 &quot;adobe&quot;가 표준 접두사로 사용됩니다. 따라서 태그 이름을 선언할 때는 이 규칙을 사용하지 않아야 합니다.
-* 다음 태그 이름은 Experience Platform에서 사용하도록 예약되어 있으므로 조직의 태그 이름으로 선언할 수 없습니다.
-   * `unifiedProfile`: 이 태그 이름은 [실시간 고객 프로파일에서 수집하도록 예약되어 있습니다](../../profile/home.md).
-   * `unifiedIdentity`: 이 태그 이름은 [ID 서비스에서 인제스트할 데이터 세트로 예약됩니다](../../identity-service/home.md).
+* 다음 태그 이름은 여러 조직에서 사용할 수 있도록 예약되어 [!DNL Experience Platform]있으므로 조직의 태그 이름으로 선언할 수 없습니다.
+   * `unifiedProfile`: 이 태그 이름은 데이터 세트에서 수집하도록 예약되어 있습니다 [!DNL Real-time Customer Profile](../../profile/home.md).
+   * `unifiedIdentity`: 이 태그 이름은 데이터 세트에서 수집하도록 예약되어 있습니다 [!DNL Identity Service](../../identity-service/home.md).
 
 다음은 속성이 포함된 데이터 집합의 `tags` 예입니다. 해당 속성 내의 태그는 키-값 쌍의 형태를 취하며 각 태그 값은 단일 문자열을 포함하는 배열로 표시됩니다.
 
@@ -261,7 +261,7 @@ GET /{OBJECT_TYPE}?tags={TAG_NAME}:*
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 검색할 카탈로그 개체의 유형입니다. 유효한 개체는 다음과 같습니다. <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li></ul> |
+| `{OBJECT_TYPE}` | 검색할 [!DNL Catalog] 개체의 유형입니다. 유효한 개체는 다음과 같습니다. <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li></ul> |
 | `{TAG_NAME}` | 필터링할 태그의 이름입니다. |
 | `{TAG_VALUE}` | 필터링할 태그의 값입니다. 와일드카드 문자(`*`)를 지원합니다. |
 
@@ -332,7 +332,7 @@ curl -X GET \
 
 ## 날짜 범위별로 필터링
 
-카탈로그 API의 일부 끝점에는 대부분의 경우 날짜 범위 쿼리를 허용하는 쿼리 매개 변수가 있습니다.
+API의 일부 끝점에는 [!DNL Catalog] 날짜 경우에 가장 자주, 범위 쿼리를 허용하는 쿼리 매개 변수가 있습니다.
 
 **API 형식**
 
@@ -359,7 +359,7 @@ curl -X GET \
 
 **응답**
 
-성공적인 응답에는 지정된 날짜 범위 내에 속하는 카탈로그 개체 목록이 포함됩니다. 한계도 지정하지 않으면 응답에 최대 20개의 개체가 포함됩니다.
+성공적인 응답에는 지정된 날짜 범위 내에 속하는 [!DNL Catalog] 개체 목록이 포함됩니다. 한계도 지정하지 않으면 응답에 최대 20개의 개체가 포함됩니다.
 
 ```json
 {
@@ -427,7 +427,7 @@ curl -X GET \
 
 **응답**
 
-성공적인 응답에는 매개 변수에 따라 정렬되는 카탈로그 개체 목록이 `orderBy` 포함됩니다. 한계도 지정하지 않으면 응답에 최대 20개의 개체가 포함됩니다.
+성공적인 응답에는 매개 변수에 따라 정렬되는 [!DNL Catalog] 개체 목록이 `orderBy` 포함됩니다. 한계도 지정하지 않으면 응답에 최대 20개의 개체가 포함됩니다.
 
 ```json
 {
@@ -472,7 +472,7 @@ curl -X GET \
 
 ## 속성별 필터링
 
-카탈로그는 다음 섹션에 자세히 설명된 속성별로 필터링하는 두 가지 방법을 제공합니다.
+[!DNL Catalog] 에서는 다음 섹션에 자세히 설명된 속성별로 필터링하는 두 가지 방법을 제공합니다.
 
 * [간단한 필터 사용](#using-simple-filters): 특정 속성이 특정 값과 일치하는지 여부를 기준으로 필터링합니다.
 * [속성 매개 변수 사용](#using-the-property-parameter): 조건부 표현식을 사용하여 속성이 있는지 여부 또는 속성의 값이 다른 지정된 값 또는 정규 표현식과 일치하는지, 근사값 또는 비교되는지 여부를 필터링합니다.
@@ -496,7 +496,7 @@ GET /{OBJECT_TYPE}?{PROPERTY_NAME}=!{VALUE_1},{VALUE_2},{VALUE_3}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 검색할 카탈로그 개체의 유형입니다. 유효한 개체는 다음과 같습니다. <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 검색할 [!DNL Catalog] 개체의 유형입니다. 유효한 개체는 다음과 같습니다. <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{PROPERTY_NAME}` | 값을 필터링할 속성의 이름입니다. |
 | `{VALUE}` | 포함할(또는 쿼리에 따라 제외) 결과를 결정하는 속성 값. |
 
@@ -572,7 +572,7 @@ GET /{OBJECT_TYPE}?property={CONDITION}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 검색할 카탈로그 개체의 유형입니다. 유효한 개체는 다음과 같습니다. <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 검색할 [!DNL Catalog] 개체의 유형입니다. 유효한 개체는 다음과 같습니다. <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{CONDITION}` | 쿼리할 속성과 그 값이 평가되는 방법을 나타내는 조건부 표현식. 예제는 아래에 나와 있습니다. |
 
 매개 변수의 값은 여러 가지 종류의 조건부 표현식을 지원합니다 `property` . 다음 표에서는 지원되는 표현식에 대한 기본 구문에 대해 설명합니다.
