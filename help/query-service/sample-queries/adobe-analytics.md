@@ -4,22 +4,25 @@ solution: Experience Platform
 title: 샘플 쿼리
 topic: queries
 translation-type: tm+mt
-source-git-commit: 75c446aed75100bd2b5b4a3d365c090cb01dcc69
+source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+workflow-type: tm+mt
+source-wordcount: '862'
+ht-degree: 1%
 
 ---
 
 
 # Adobe Analytics 데이터에 대한 샘플 쿼리
 
-선택한 Adobe Analytics 보고서 세트의 데이터는 XDM ExperienceEvents로 변환되고 데이터 세트로 Adobe Experience Platform로 인제스트됩니다. 이 문서에서는 Adobe Experience Platform 쿼리 서비스가 이 데이터를 사용하고 포함된 샘플 쿼리가 Adobe Analytics 데이터 세트와 함께 작동해야 하는 여러 가지 사용 사례를 간략하게 설명합니다. XDM [ExperienceEvents 매핑에 대한 자세한 내용은 Analytics 필드 매핑 설명서를](../../sources/connectors/adobe-applications/mapping/analytics.md) 참조하십시오.
+선택한 Adobe Analytics 보고서 세트의 데이터가 XDM으로 변환되고 데이터 세트 [!DNL ExperienceEvents] 로 Adobe Experience Platform으로 수집됩니다. 이 문서에서는 Adobe Experience Platform이 이 데이터를 [!DNL Query Service] 사용하고 포함된 샘플 쿼리는 Adobe Analytics 데이터 세트와 함께 사용해야 하는 다양한 사용 사례를 소개합니다. XDM으로의 매핑에 대한 자세한 내용은 [Analytics 필드 매핑 설명서를](../../sources/connectors/adobe-applications/mapping/analytics.md) 참조하십시오 [!DNL ExperienceEvents].
 
 ## 시작하기
 
-이 문서의 SQL 예제를 보려면 SQL을 편집하고 평가할 데이터 세트, eVar, 이벤트 또는 시간대를 기반으로 쿼리의 예상 매개 변수를 작성해야 합니다. 다음에 나오는 SQL `{ }` 예에서 볼 때마다 매개 변수를 제공합니다.
+이 문서의 SQL 예제를 보려면 SQL을 편집하고 평가할 데이터 세트, eVar, 이벤트 또는 시간대를 기반으로 쿼리의 예상 매개 변수를 작성해야 합니다. 다음에 나오는 SQL 예에서 볼 수 있는 곳 `{ }` 에 매개 변수를 제공합니다.
 
 ## 일반적으로 사용되는 SQL 예제
 
-### 지정된 날짜에 대한 시간별 방문자 수
+### Hourly visitor count for a given day
 
 ```sql
 SELECT Substring(from_utc_timestamp(timestamp, 'America/New_York'), 1, 10) AS Day,
@@ -33,7 +36,7 @@ GROUP BY Day, Hour
 ORDER BY Hour;
 ```
 
-### 지정된 날에 본 페이지 Top 10
+### 지정된 날짜에 본 페이지 수 상위 10개
 
 ```sql
 SELECT web.webpagedetails.name AS Page_Name, 
@@ -75,7 +78,7 @@ ORDER BY Count DESC
 LIMIT  10;
 ```
 
-### 본 상위 10개 제품
+### 가장 많이 본 10개 제품
 
 ```sql
 SELECT Product_SKU,
@@ -92,7 +95,7 @@ ORDER BY Total_Product_Views DESC
 LIMIT  10;
 ```
 
-### 총 주문 매출 상위 10개
+### 총 10개 주문 매출
 
 ```sql
 SELECT Purchase_ID, 
@@ -126,9 +129,9 @@ ORDER BY Hour;
 
 ## 머천다이징 변수(제품 구문)
 
-Adobe Analytics에서 &quot;머천다이징 변수&quot;라는 특별히 구성된 변수를 통해 사용자 지정 제품 수준 데이터를 수집할 수 있습니다. eVar 또는 사용자 지정 이벤트를 기반으로 합니다. 이러한 변수와 표준 사용 기능의 차이는 히트에 대해 단일 값만 표시하지 않고 히트에서 찾은 각 제품에 대해 별도의 값을 나타낸다는 것입니다. 이러한 변수를 제품 구문 머천다이징 변수라고 합니다. 이를 통해 제품 &quot;할인 금액&quot;과 같은 정보 또는 고객의 검색 결과에 있는 제품의 &quot;위치&quot;에 대한 정보를 수집할 수 있습니다.
+Adobe Analytics에서 &quot;머천다이징 변수&quot;라는 특별히 구성된 변수를 통해 사용자 지정 제품 수준 데이터를 수집할 수 있습니다. eVar 또는 사용자 지정 이벤트를 기반으로 합니다. 이러한 변수와 표준 사용 기능의 차이는 히트에 대해 단일 값만 포함하는 것이 아니라 히트에서 찾은 각 제품에 대해 별도의 값을 나타낸다는 것입니다. 이러한 변수를 제품 구문 머천다이징 변수라고 합니다. 이를 통해 제품 당 &quot;할인 금액&quot; 등의 정보나 고객의 검색 결과에서 제품의 &quot;위치&quot;에 대한 정보를 수집할 수 있습니다.
 
-다음은 Analytics 데이터 세트에 있는 머천다이징 변수에 액세스할 수 있는 XDM 필드입니다.
+다음은 데이터 세트에 있는 머천다이징 변수에 액세스할 수 있는 XDM [!DNL Analytics] 필드입니다.
 
 ### eVar
 
@@ -136,7 +139,7 @@ Adobe Analytics에서 &quot;머천다이징 변수&quot;라는 특별히 구성�
 productListItems[#]._experience.analytics.customDimensions.evars.evar#
 ```
 
-여기서 `[#]` 는 배열 색인이며 `evar#` 특정 eVar 변수입니다.
+여기서 `[#]` 는 배열 색인이며 특정 eVar `evar#` 변수입니다.
 
 ### 사용자 지정 이벤트
 
@@ -148,7 +151,7 @@ productListItems[#]._experience.analytics.event1to100.event#.value
 
 ### 샘플 쿼리
 
-다음은 머천다이징 eVar와 이벤트를 반환하는 샘플 쿼리로서, 에 있는 첫 번째 제품에 대한 이벤트를 `productListItems`보여줍니다.
+다음은 의 첫 번째 제품에 대한 머천다이징 eVar 및 이벤트를 반환하는 샘플 쿼리입니다 `productListItems`.
 
 ```sql
 SELECT
@@ -162,7 +165,7 @@ WHERE _ACP_YEAR=2019 AND _ACP_MONTH=7 AND _ACP_DAY=23
 LIMIT 10
 ```
 
-다음 쿼리는 &#39;폭발적&#39;으로 `productListItems` 되어 제품당 각 머천다이징 eVar 및 이벤트를 반환합니다. 이 `_id` 필드는 원래 히트에 대한 관계를 표시하는 데 포함됩니다. 이 `_id` 값은 ExperienceEvent 데이터 세트의 고유한 기본 키입니다.
+다음 쿼리는 &#39;폭발적&#39;으로 `productListItems` 각 머천다이징 eVar 및 제품당 이벤트를 반환합니다. 원래 히트에 대한 관계를 표시하기 위해 `_id` 필드가 포함됩니다. 이 `_id` 값은 데이터 세트에 있는 고유한 기본 [!DNL ExperienceEvent] 키입니다.
 
 ```sql
 SELECT
@@ -184,7 +187,7 @@ LIMIT 20
 
 ### 샘플 쿼리를 구현할 때의 일반적인 오류
 
-현재 데이터 세트에 없는 필드를 검색할 때 &quot;해당 구조체 필드 없음&quot; 오류가 발생했습니다. 오류 메시지에서 반환된 이유를 평가하여 사용 가능한 필드를 확인한 다음 쿼리를 업데이트하고 다시 실행하십시오.
+현재 데이터 세트에 없는 필드를 검색하려고 할 때 &quot;해당 구조체 필드 없음&quot; 오류가 발생했습니다. 오류 메시지에서 반환된 이유를 평가하여 사용 가능한 필드를 찾은 다음 쿼리를 업데이트하고 다시 실행하십시오.
 
 ```
 ERROR: ErrorCode: 08P01 sessionId: XXXX queryId: XXXX Unknown error encountered. Reason: [No such struct field evar1 in eVar10, eVar13, eVar62, eVar88, eVar2;]
@@ -192,28 +195,28 @@ ERROR: ErrorCode: 08P01 sessionId: XXXX queryId: XXXX Unknown error encountered.
 
 ## 머천다이징 변수(전환 구문)
 
-Adobe Analytics에 있는 다른 유형의 머천다이징 변수는 전환 구문입니다. 제품 구문의 경우 값은 제품과 동시에 수집되지만 데이터가 동일한 페이지에 있어야 합니다. 제품과 관련된 전환 또는 관심 이벤트가 발생하기 전에 페이지에서 데이터가 발생하는 시나리오가 있습니다. 예를 들어 제품 검색 방법 보고 사용 사례를 고려합니다.
+Adobe Analytics에 있는 다른 유형의 머천다이징 변수는 전환 구문입니다. 제품 구문을 사용하면 값이 제품과 동시에 수집되지만 데이터가 동일한 페이지에 있어야 합니다. 제품과 관련된 전환 또는 관심 이벤트 이전에 페이지에서 데이터가 발생하는 시나리오가 있습니다. 예를 들어 제품 검색 방법 보고 사용 사례를 고려합니다.
 
-1. 전환 구문이 활성화된 머천다이징 eVar6를 &quot;internal search:winter hat&quot;으로 설정하는 &quot;winter hat&quot;에 대한 사용자 내부 검색을 수행합니다.
+1. 전환 구문을 활성화한 머천다이징 eVar6를 &quot;내부 검색:겨울 모자&quot;로 설정하는 &quot;겨울 모자&quot;에 대한 내부 검색을 수행합니다
 2. 사용자는 &quot;와플 비니&quot;를 클릭하고 제품 세부 정보 페이지에 랜딩합니다.\
-   a.여기에 착륙하면 &quot;와플 비니&quot; 가 12달러 99센트에 대한 `Product View` 행사가 열린다.\
-   b.결합 이벤트로 `Product View` 구성되었으므로 이제 제품 &quot;와플 beanie&quot;가 &quot;internal search:winter hat&quot;의 eVar6 값으로 바인딩됩니다. &quot;와플 beanie&quot; 제품이 수집되면 (1) 만료 설정에 도달하거나 (2) 새 eVar6 값이 설정되고 해당 제품에 결합 이벤트가 다시 발생할 때까지 &quot;internal search:winter hat&quot;과 연결됩니다.
+   a. 여기에 착륙하면 &quot;와플 비니&quot; 가 12달러 99센트에 대한 행사가 취소된다. `Product View`\
+   b. 결합 이벤트로 구성되기 때문 `Product View` 에 제품 &quot;fw플 beanie&quot;는 이제 &quot;internal search:winter hat&quot;의 eVar6 값에 바인딩됩니다. &quot;와플 비니&quot; 제품이 수집될 때마다 만료 설정에 도달하거나 (2) 새 eVar6 값이 설정되고 해당 제품에 결합 이벤트가 다시 발생할 때까지 &quot;internal search:winter hat&quot;과 연결됩니다.
 3. 사용자가 장바구니에 제품을 추가하여 `Cart Add` 이벤트를 실행합니다.
-4. 사용자는 전환 구문이 활성화된 머천다이징 eVar6를 &quot;internal search:summer shirt&quot;로 설정하는 &quot;여름 셔츠&quot;에 대해 다른 내부 검색을 수행합니다.
-5. 사용자는 &quot;스포티셔츠&quot;를 클릭하고 제품 세부 정보 페이지에 랜딩합니다.\
-   a.&#39;스포티셔츠 19달러 99센트에&#39;이란 `Product View` 행사가 열렸다.\
-   b.이 `Product View` 이벤트는 여전히 본사의 결합 이벤트로, 이제 제품 &quot;스포츠 티셔츠&quot;가 &quot;internal search:summer shirt&quot;의 eVar6 값으로 바인딩되며 이전 제품 &quot;와플 beanie&quot;는 여전히 &quot;internal search:wffle beanie&quot;의 eVar6 값으로 바인딩됩니다.
-6. 사용자가 장바구니에 제품을 추가하여 `Cart Add` 이벤트를 실행합니다.
+4. 사용자는 전환 구문을 활성화한 머천다이징 eVar6를 &quot;내부 검색:여름 셔츠&quot;로 설정하는 &quot;여름 셔츠&quot;에 대한 다른 내부 검색을 수행합니다
+5. 사용자가 &quot;스포티 티셔츠&quot;를 클릭하고 제품 세부 정보 페이지에 놓습니다.\
+   a. 랜딩은 &quot;19달러 99센트의 스포츠 티셔츠&quot;를 위한 `Product View` 이벤트를 개최한다.\
+   b. 이 `Product View` 이벤트는 여전히 본사의 결합 이벤트로, 이제 &quot;sporty t-shirt&quot; 제품이 &quot;internal search:summer shirt&quot;의 eVar6 값에 바인딩되고 이전 제품 &quot;buiny&quot;가 여전히 &quot;internal search:waffle beanie&quot;의 eVar6 값에 바인딩됩니다.
+6. The user adds the product to their cart, firing the `Cart Add` event.
 7. 사용자가 두 제품을 모두 체크 아웃합니다.
 
-보고 시 주문, 매출, 제품 보기 및 장바구니 추가는 eVar6에 대해 보고할 수 있으며 바운드 제품의 활동에 따라 조정됩니다.
+보고 시 주문, 매출, 제품 보기 및 장바구니 추가는 eVar6에 대해 보고할 수 있으며 바인딩된 제품의 활동에 맞게 됩니다.
 
 | eVar6(제품 검색 방법) | 수익 | 주문 | 제품 보기 | 장바구니 추가 |
 |---|---|---|---|---|
 | 내부 검색:여름 셔츠 | 19.99 | 1 | 1 | 1 |
 | 내부 검색:겨울 모자 | 12.99 | 1 | 1 | 1 |
 
-다음은 Analytics 데이터 세트에 전환 구문을 생성하는 XDM 필드입니다.
+데이터 세트에 전환 구문을 생성하는 XDM 필드는 다음과 [!DNL Analytics] 같습니다.
 
 ### eVar
 
@@ -221,7 +224,7 @@ Adobe Analytics에 있는 다른 유형의 머천다이징 변수는 전환 구�
 _experience.analytics.customDimensions.evars.evar#
 ```
 
-여기서 `evar#` 특정 eVar 변수는
+여기서 `evar#` 는 특정 eVar 변수입니다.
 
 ### 제품
 
@@ -229,11 +232,11 @@ _experience.analytics.customDimensions.evars.evar#
 productListItems[#].sku
 ```
 
-여기서 `[#]` 배열 색인은
+여기서 `[#]` 는 배열 색인입니다.
 
 ### 샘플 쿼리
 
-다음은 제품 보기 이벤트의 특정 제품 및 이벤트 쌍에 값을 바인딩하는 샘플 쿼리입니다.
+다음은 값을 특정 제품 및 이벤트 쌍(이 경우 제품 보기 이벤트)에 바인딩하는 샘플 쿼리입니다.
 
 ```sql
 SELECT
@@ -252,7 +255,7 @@ WHERE commerce.productViews.value = 1 OR commerce.purchases.value = 1 OR _experi
 LIMIT 100
 ```
 
-다음은 해당 제품의 후속 발생 시 바인딩된 값을 유지하는 샘플 쿼리입니다. 가장 낮은 하위 쿼리는 선언된 바인딩 이벤트의 제품과 값 관계를 설정합니다. 다음 하위 쿼리는 해당 제품과 상호 작용한 이후에 해당 바운드 값의 속성을 수행합니다. 최상위 수준 선택 항목은 결과를 집계하여 보고를 생성합니다.
+각 제품의 후속 발생 시 바인딩된 값을 유지하는 샘플 쿼리입니다. 가장 낮은 하위 쿼리는 선언된 결합 이벤트의 제품과 값 관계를 설정합니다. 다음 하위 쿼리는 해당 제품과 상호 작용한 이후에 해당 바인딩된 값의 속성을 수행합니다. 최상위 수준 선택 항목은 결과를 집계하여 보고를 생성합니다.
 
 ```sql
 SELECT
