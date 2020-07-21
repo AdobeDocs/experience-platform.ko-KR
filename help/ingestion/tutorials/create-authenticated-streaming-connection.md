@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 인증된 스트리밍 연결 만들기
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '649'
+source-wordcount: '624'
 ht-degree: 2%
 
 ---
@@ -14,40 +14,40 @@ ht-degree: 2%
 
 # 인증된 스트리밍 연결 만들기
 
-인증된 데이터 수집을 사용하면 실시간 고객 프로필 및 ID와 같은 Adobe Experience Platform 서비스를 통해 신뢰할 수 있는 출처의 레코드와 신뢰할 수 없는 출처의 레코드를 구별할 수 있습니다. PII(개인 식별 정보)를 전송하려는 클라이언트는 POST 요청의 일부로 액세스 토큰을 전송함으로써 이를 수행할 수 있습니다.
+인증된 데이터 수집을 사용하면 [!DNL Real-time Customer Profile] 및 [!DNL Identity]과 같은 Adobe Experience Platform 서비스를 통해 신뢰할 수 있는 소스에서 나오는 레코드와 신뢰할 수 없는 소스 간에 구별할 수 있습니다. PII(개인 식별 정보)를 전송하려는 클라이언트는 POST 요청의 일부로 액세스 토큰을 전송함으로써 이를 수행할 수 있습니다.
 
 ## 시작하기
 
 Adobe Experience Platform으로 데이터 스트리밍을 시작하려면 스트리밍 연결 등록이 필요합니다. 스트리밍 연결을 등록할 때 스트리밍 데이터 소스와 같은 몇 가지 주요 세부 사항을 제공해야 합니다.
 
-스트리밍 연결을 등록한 후 데이터 프로듀서로서 데이터를 Platform으로 스트리밍하는 데 사용할 수 있는 고유한 URL을 갖게 됩니다.
+스트리밍 연결을 등록한 후 데이터 프로듀서로서 데이터를 스트리밍하는 데 사용할 수 있는 고유한 URL을 갖게 됩니다 [!DNL Platform].
 
 또한 이 자습서에서는 다양한 Adobe Experience Platform 서비스에 대한 작업 지식이 필요합니다. 이 자습서를 시작하기 전에 다음 서비스에 대한 설명서를 검토하십시오.
 
-- [XDM(Experience Data Model)](../../xdm/home.md): Platform이 경험 데이터를 구성하는 표준화된 프레임워크입니다.
-- [실시간 고객 프로필](../../profile/home.md): 여러 소스에서 집계된 데이터를 기반으로 통합된 소비자 프로필을 실시간으로 제공합니다.
+- [!DNL Experience Data Model (XDM)](../../xdm/home.md): 경험 데이터를 [!DNL Platform] 구성하는 표준화된 프레임워크
+- [!DNL Real-time Customer Profile](../../profile/home.md): 여러 소스에서 집계된 데이터를 기반으로 통합된 소비자 프로필을 실시간으로 제공합니다.
 
 다음 섹션에서는 스트리밍 통합 API를 성공적으로 호출하기 위해 알아야 할 추가 정보를 제공합니다.
 
 ### 샘플 API 호출 읽기
 
-이 안내서에서는 요청의 서식을 지정하는 방법을 보여주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 올바른 형식의 요청 페이로드가 포함됩니다. API 응답으로 반환된 샘플 JSON도 제공됩니다. 샘플 API 호출 설명서에 사용된 규칙에 대한 자세한 내용은 Experience Platform 문제 해결 안내서의 예제 API 호출 [](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 읽기 방법에 대한 섹션을 참조하십시오.
+이 안내서에서는 요청의 서식을 지정하는 방법을 보여주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 올바른 형식의 요청 페이로드가 포함됩니다. API 응답으로 반환된 샘플 JSON도 제공됩니다. 샘플 API 호출 설명서에 사용된 규칙에 대한 자세한 내용은 문제 해결 안내서의 예제 API 호출 [을 읽는](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 방법에 대한 섹션을 [!DNL Experience Platform] 참조하십시오.
 
 ### 필수 헤더에 대한 값 수집
 
-Platform API를 호출하려면 먼저 [인증 자습서를 완료해야 합니다](../../tutorials/authentication.md). 인증 자습서를 완료하면 아래와 같이 모든 Experience Platform API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
+API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 합니다](../../tutorials/authentication.md). 인증 자습서를 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
 
 - 인증: 무기명 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Experience Platform의 모든 리소스는 특정 가상 샌드박스와 분리됩니다. Platform API에 대한 모든 요청에는 작업이 수행할 샌드박스의 이름을 지정하는 헤더가 필요합니다.
+의 모든 리소스 [!DNL Experience Platform] 는 특정 가상 샌드박스와 분리됩니다. API에 대한 모든 [!DNL Platform] 요청에는 작업이 수행할 샌드박스의 이름을 지정하는 헤더가 필요합니다.
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Platform의 샌드박스에 대한 자세한 내용은 [샌드박스 개요 설명서를 참조하십시오](../../sandboxes/home.md).
+>의 샌드박스에 대한 자세한 내용 [!DNL Platform]은 [샌드박스 개요 설명서를 참조하십시오](../../sandboxes/home.md).
 
 페이로드(POST, PUT, PATCH)가 포함된 모든 요청에는 추가 헤더가 필요합니다.
 
@@ -177,7 +177,7 @@ curl -X GET https://platform.adobe.io/data/foundation/flowservice/connections/{C
 
 ## 다음 단계
 
-인증된 스트리밍 연결을 만들었으므로 타임 시리즈나 데이터 기록 중 하나를 스트리밍하여 Platform 내에서 데이터를 인제스트할 수 있습니다. 시계열 데이터를 Platform으로 스트리밍하는 방법을 알려면 [스트리밍 시계열 데이터 자습서로 이동합니다](./streaming-time-series-data.md). 기록 데이터를 Platform으로 스트리밍하는 방법을 알아보려면 [스트리밍 레코드 데이터 자습서로 이동합니다](./streaming-record-data.md).
+인증된 스트리밍 연결을 만들었으므로 시간 시리즈나 데이터 기록 중 하나를 스트림하거나 데이터 내에서 데이터를 인제스트할 수 있습니다 [!DNL Platform]. 시계열 데이터를 스트리밍하는 방법 [!DNL Platform]을 알려면 [스트리밍 시계열 데이터 자습서로 이동합니다](./streaming-time-series-data.md). 기록 데이터를 스트리밍하는 방법을 [!DNL Platform]알아보려면 [스트리밍 레코드 데이터 자습서로 이동합니다](./streaming-record-data.md).
 
 ## 부록
 
