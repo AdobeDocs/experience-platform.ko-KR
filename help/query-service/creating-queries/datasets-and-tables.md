@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 데이터 세트와 테이블 및 스키마
 topic: queries
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '183'
+source-wordcount: '181'
 ht-degree: 1%
 
 ---
@@ -30,7 +30,7 @@ PSQL 명령줄을 열고 다음에서 연결 세부 정보를 사용합니다. [
 
 ![](../images/clients/psql/connect-bi.png)
 
-SQL을 사용하여 Platform에서 사용 가능한 테이블을 보려면 `\d` 또는 를 사용할 수 `SHOW TABLES;`있습니다.
+SQL에서 사용 가능한 테이블 [!DNL Platform] 을 보려면 `\d` 또는 를 사용할 수 `SHOW TABLES;`있습니다.
 
 
 `\d` 표준 PostgreSQL 보기를 표시합니다.
@@ -44,7 +44,7 @@ SQL을 사용하여 Platform에서 사용 가능한 테이블을 보려면 `\d` 
 (2 rows)
 ```
 
-`SHOW TABLES;` 는 보다 자세한 보기를 제공하고 표를 표시하는 사용자 지정 명령이며 Platform UI에 있는 데이터 세트 이름입니다.
+`SHOW TABLES;` 은 보다 자세한 보기를 제공하고 UI에 있는 데이터 세트 이름과 표를 나타내는 사용자 지정 [!DNL Platform] 명령입니다.
 
 ```
        name      |        dataSetId         |     dataSet    | description | resolved 
