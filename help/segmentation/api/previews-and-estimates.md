@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 끝점 미리 보기 및 예측
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
+source-git-commit: 995fadef9abacf22d0561e0590dfbe172adf0a43
 workflow-type: tm+mt
-source-wordcount: '750'
+source-wordcount: '742'
 ht-degree: 2%
 
 ---
@@ -71,7 +71,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 | -------- | ----------- |
 | `predicateExpression` | 데이터를 쿼리할 PQL 식입니다. |
 | `predicateType` | 아래의 쿼리 식에 대한 설명 유형입니다 `predicateExpression`. 현재 이 속성에 대해 허용된 유일한 값은 입니다 `pql/text`. |
-| `predicateModel` | 프로필 데이터를 기반으로 하는 XDM(경험 데이터 모델) 스키마의 이름입니다. |
+| `predicateModel` | 프로필 데이터를 기반으로 하는 [!DNL Experience Data Model] (XDM) 스키마의 이름입니다. |
 
 **응답**
 
@@ -167,7 +167,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/preview/MDphcHAtMzJiZTAzMjgt
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `results` | 관련 ID와 함께 엔티티 ID 목록입니다. 제공된 링크를 사용하여 프로필 액세스 API를 사용하여 지정된 개체를 [조회할 수 있습니다](../../profile/api/entities.md). |
+| `results` | 관련 ID와 함께 엔티티 ID 목록입니다. 제공된 링크를 사용하여 지정된 엔티티를 검색할 수 있습니다 [!DNL Profile Access API](../../profile/api/entities.md). |
 
 ## 특정 예상 작업의 결과 검색 {#get-estimate}
 
@@ -226,4 +226,4 @@ curl -X GET https://platform.adobe.io/data/core/ups/estimate/MDoyOjRhNDVlODUzLWF
 
 ## 다음 단계
 
-이 가이드를 읽고 나면 미리 보기 및 예상 작업 방법을 더 잘 이해할 수 있습니다. 다른 세그멘테이션 서비스 API 끝점에 대한 자세한 내용은 [세그멘테이션 서비스 개발자 가이드 개요를 참조하십시오](./overview.md).
+이 가이드를 읽고 나면 미리 보기 및 예상 작업 방법을 더 잘 이해할 수 있습니다. 다른 [!DNL Segmentation Service] API 끝점에 대한 자세한 내용은 [세그멘테이션 서비스 개발자 가이드 개요를 참조하십시오](./overview.md).
