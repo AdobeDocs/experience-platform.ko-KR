@@ -4,17 +4,17 @@ solution: Experience Platform
 title: 데이터 중복 제거
 topic: queries
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '414'
+source-wordcount: '405'
 ht-degree: 1%
 
 ---
 
 
-# 쿼리 서비스의 데이터 중복 제거
+# 데이터 중복 제거 [!DNL Query Service]
 
-Adobe Experience Platform 쿼리 서비스는 계산에 있는 전체 행을 제거하거나 특정 필드 집합을 무시해야 할 경우 데이터 중복 제거를 지원합니다. 행에 있는 데이터의 일부만 복제되기 때문입니다. 중복 제거에 대한 일반적인 패턴은 ID나 ID 쌍에 대한 창 간 `ROW_NUMBER()` `timestamp` 함수를 주문 시간(XDM(경험 데이터 모델) 필드 사용)에 걸쳐 사용하여 중복된 데이터가 검색된 횟수를 나타내는 새 필드를 반환하는 것입니다. 이 값 `1`이 원래 인스턴스를 참조하고, 대부분의 경우 사용할 인스턴스로, 다른 모든 인스턴스를 무시합니다. 이러한 작업은 대부분 하위 선택 영역에서 수행되며, 집계 수와 같이 더 높은 수준의 데이터 중복 제거 작업을 수행합니다. `SELECT`
+Adobe Experience Platform은 데이터 중복 제거 기능을 [!DNL Query Service] 지원합니다. 단, 데이터 중 일부만 중복되기 때문에 계산에서 전체 행을 제거하거나 특정 필드 집합을 무시할 수 있습니다. 중복 제거에 대한 일반적인 패턴은 ID 또는 ID 쌍에 대한 창 간 `ROW_NUMBER()` 함수를 주문된 시간(XDM [!DNL Experience Data Model] `timestamp` 필드)에 걸쳐 사용하여 중복이 감지된 횟수를 나타내는 새 필드를 반환하는 것입니다. 이 값 `1`이 원래 인스턴스를 참조하고, 대부분의 경우 사용할 인스턴스로, 다른 모든 인스턴스를 무시합니다. 이러한 작업은 대부분 하위 선택 영역에서 수행되며, 집계 수와 같이 더 높은 수준의 데이터 중복 제거 작업을 수행합니다. `SELECT`
 
 ## 사용 사례
 
@@ -31,7 +31,7 @@ ExperienceEvents가 중복되는 경우 전체 행을 무시할 수 있습니다
 
 >[!CAUTION]
 >
->Adobe Analytics 데이터 커넥터에서 생성된 데이터 세트를 포함하여 Experience Platform에 있는 많은 데이터 세트는 이미 ExperienceEvent 수준 중복 제거가 적용되었습니다. 따라서 이러한 수준의 데이터 중복 제거 기능을 다시 적용하는 것은 불필요한 작업이므로 질의 속도가 느려질 수 있습니다. DataSets의 소스를 파악하고 ExperienceEvent 수준의 데이터 중복 제거가 이미 적용되었는지 파악하는 것이 중요합니다. 스트리밍되는 모든 DataSets(예: Adobe Target의 데이터 세트)의 경우 해당 데이터 소스는 &#39;최소 한 번&#39; 의미 체계를 가지므로 ExperienceEvent 수준 데이터 중복 제거를 적용해야 합니다.
+>Adobe Analytics 데이터 커넥터에서 생성된 데이터 세트를 [!DNL Experience Platform]포함하여 많은 데이터 세트는 이미 ExperienceEvent 수준 데이터 중복 제거가 적용되었습니다. 따라서 이러한 수준의 데이터 중복 제거 기능을 다시 적용하는 것은 불필요한 작업이므로 질의 속도가 느려질 수 있습니다. DataSets의 소스를 파악하고 ExperienceEvent 수준의 데이터 중복 제거가 이미 적용되었는지 파악하는 것이 중요합니다. 스트리밍되는 모든 DataSets(예: Adobe Target의 데이터 세트)의 경우 해당 데이터 소스는 &#39;최소 한 번&#39; 의미 체계를 가지므로 ExperienceEvent 수준 데이터 중복 제거를 적용해야 합니다.
 
 **범위:** 글로벌
 
