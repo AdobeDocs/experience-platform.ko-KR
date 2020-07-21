@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 쿼리 서비스 개발자 가이드
 topic: queries
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '647'
+source-wordcount: '645'
 ht-degree: 2%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 ## 샘플 API 호출
 
-다음 섹션에서는 쿼리 서비스 API의 끝점을 사용하여 수행할 수 있는 `/queries` 호출을 자세히 설명합니다. 각 호출에는 일반 API 형식, 필요한 헤더를 표시하는 샘플 요청 및 샘플 응답이 포함됩니다.
+다음 섹션에서는 API의 끝점을 사용하여 수행할 수 있는 `/queries` 호출을 [!DNL Query Service] 안내합니다. 각 호출에는 일반 API 형식, 필요한 헤더를 표시하는 샘플 요청 및 샘플 응답이 포함됩니다.
 
 ### 쿼리 목록 검색
 
