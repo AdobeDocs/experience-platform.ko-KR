@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 세그먼트 빌더 UI 안내서
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: f44e42a4faa3b10f147dbaf929048054ce0bec42
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '2750'
+source-wordcount: '2745'
 ht-degree: 0%
 
 ---
@@ -20,9 +20,9 @@ ht-degree: 0%
 
 세그먼트 정의를 사용하려면 세그먼테이션과 관련된 다양한 [!DNL Experience Platform] 서비스를 이해해야 합니다. 이 사용자 안내서를 읽기 전에 다음 서비스에 대한 설명서를 검토하십시오.
 
-- [!DNL Segmentation Service](../home.md): 세그멘테이션 서비스를 사용하면 개인(예: 고객, 잠재 고객, 사용자 또는 조직)과 관련된 저장된 데이터를 유사한 트레이트를 공유하고 마케팅 전략에 유사하게 반응하는 작은 그룹으로 나눌 수 있습니다. [!DNL Experience Platform]
+- [!DNL Segmentation Service](../home.md): [!DNL Segmentation Service] 고객, 잠재 고객, 사용자 또는 조직과 같은 개인 [!DNL Experience Platform] 과 관련된 저장된 데이터를 유사한 특성을 공유하고 마케팅 전략에 유사하게 반응하는 작은 그룹으로 나눌 수 있습니다.
 - [!DNL Real-time Customer Profile](../../profile/home.md): 여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
-- [!DNL Identity Service](../../identity-service/home.md): 수집되는 여러 데이터 소스의 ID를 Platform으로 결합함으로써 [!DNL Real-time Customer Profile] 활성화합니다.
+- [!DNL Identity Service](../../identity-service/home.md): 인제스트되는 여러 데이터 소스의 ID를 결합함으로써 사용할 수 [!DNL Real-time Customer Profile] [!DNL Platform]있습니다.
 - [!DNL Experience Data Model (XDM)](../../xdm/home.md): 고객 경험 데이터를 [!DNL Platform] 구성하는 표준화된 프레임워크
 
 또한 이 문서를 통해 사용되는 두 개의 주요 용어를 알고 이 용어 간의 차이점을 이해하는 것이 중요합니다.
@@ -63,7 +63,7 @@ ht-degree: 0%
 
 ### 이벤트
 
-[ **[!UICONTROL 이벤트]** ] 탭에서는 XDM ExperienceEvent 데이터 요소를 사용하여 발생한 이벤트 또는 작업을 기반으로 대상을 만들 수 있습니다. 또한 이벤트 탭에서 이벤트 유형을 **[!UICONTROL 찾을]** 수 있습니다. 이 탭은 세그먼트를 보다 신속하게 만들 수 있도록 일반적으로 사용되는 이벤트의 컬렉션입니다.
+[ **[!UICONTROL 이벤트]** ] 탭에서는 [!DNL XDM ExperienceEvent] 데이터 요소를 사용하여 발생한 이벤트 또는 작업을 기반으로 대상을 만들 수 있습니다. 또한 이벤트 탭에서 이벤트 유형을 **[!UICONTROL 찾을]** 수 있습니다. 이 탭은 세그먼트를 보다 신속하게 만들 수 있도록 일반적으로 사용되는 이벤트의 컬렉션입니다.
 
 요소를 검색할 수 있을 뿐만 아니라 이벤트 유형을 검색할 수도 [!DNL ExperienceEvent] 있습니다. 이벤트 유형에서는 올바른 이벤트를 찾는 [!DNL ExperienceEvents][!DNL XDM ExperienceEvent] 클래스를 검색하지 않고도 동일한 코딩 로직을 사용합니다. 예를 들어, 검색 막대를 사용하여 &quot;장바구니&quot;를 검색하면 세그먼트 정의를 작성할 때[!UICONTROL 매우 일반적으로 사용되는 두]가지 장바구니 작업인 &quot;AddCart[!UICONTROL &quot; 및 &quot;]RemoveCart&quot;가 반환됩니다.
 
