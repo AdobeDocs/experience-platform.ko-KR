@@ -4,21 +4,21 @@ solution: Experience Platform
 title: 데이터 세트 만들기
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '203'
-ht-degree: 1%
+source-wordcount: '197'
+ht-degree: 2%
 
 ---
 
 
 # 데이터 세트 만들기
 
-카탈로그 API를 사용하여 데이터 세트를 만들려면 데이터 세트를 기반으로 할 경험 데이터 모델(XDM) 스키마의 `$id` 값을 알고 있어야 합니다. 스키마 ID가 있으면 카탈로그 API의 종단점에 대한 POST 요청을 만들어 데이터 세트를 만들 수 `/datasets` 있습니다.
+API를 사용하여 데이터 세트를 만들려면 데이터 [!DNL Catalog] 를 기반으로 하는 XDM(스키마) `$id` [!DNL Experience Data Model] 값을 알고 있어야 합니다. 스키마 ID가 있으면 API의 종단점에 대한 POST 요청을 만들어 데이터 세트 `/datasets` 를 만들 수 [!DNL Catalog] 있습니다.
 
 >[!NOTE]
 >
->이 문서에서는 카탈로그에서 데이터 세트 개체를 만드는 방법만 다룹니다. 데이터 세트를 생성, 채우기 및 모니터링하는 방법에 대한 자세한 내용은 다음 [자습서를 참조하십시오](../datasets/create.md).
+>이 문서에서는 데이터 세트 개체를 만드는 방법만 다룹니다 [!DNL Catalog]. 데이터 세트를 생성, 채우기 및 모니터링하는 방법에 대한 자세한 내용은 다음 [자습서를 참조하십시오](../datasets/create.md).
 
 **API 형식**
 
