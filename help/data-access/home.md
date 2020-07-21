@@ -4,31 +4,31 @@ solution: Experience Platform
 title: 데이터 액세스 개요
 topic: overview
 translation-type: tm+mt
-source-git-commit: 49aa2e2664fe658d89b6279d1f869eb30c48ccad
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '197'
-ht-degree: 3%
+source-wordcount: '188'
+ht-degree: 5%
 
 ---
 
 
-# 데이터 액세스 개요
+# [!DNL Data Access]개요
 
-[!DNL Data Access] Adobe Experience Platform을 지원하므로 사용자는 Experience Platform 내에서 인제스트된 데이터 집합의 검색 기능과 액세스 가능성에 초점을 둔 툴을 사용할 수 있습니다.
+[!DNL Data Access] 는 데이터 세트 내 인제스트된 데이터 세트의 검색 가능성 및 액세스 가능성에 초점을 둔 도구를 사용자에게 제공하여 Adobe Experience Platform을 [!DNL Experience Platform]지원합니다.
 
 ![Experience Platform의 데이터 액세스](images/Data_Access_Experience_Platform.png)
 
-## 데이터 액세스 API
+## [!DNL Data Access] API
 
 API를 사용하여 연결하는 방법에 대한 자세한 내용 [!DNL Data Access] 은 [!DNL Platform] 데이터 액세스 개발자 안내서를 참조하십시오 [](api.md).
 
-## Python SDK
+## [!DNL Python] SDK
 
 SDK를 사용하여 데이터 세트를 읽고 쓸 수 [!DNL Python] 있습니다. SDK에 대한 자세한 내용은 Python [!DNL Python] SDK 자습서를 참조하십시오 [](./tutorials/python-sdk.md).
 
-[!DNL Data Science Workspace] 전자 필기장 및 레시피 내에서 Python SDK를 사용합니다. 자세한 내용 [!DNL Data Science Workspace]은 먼저 [데이터 과학 작업 공간 개요를 읽어 보십시오](../data-science-workspace/home.md).
+[!DNL Data Science Workspace] 전자 필기장 및 레서피 내에서 [!DNL Python] SDK를 사용합니다. 자세한 내용 [!DNL Data Science Workspace]은 먼저 [데이터 과학 작업 공간 개요를 읽어 보십시오](../data-science-workspace/home.md).
 
-## Spark SDK
+## [!DNL Spark] SDK
 
 SDK를 사용하여 데이터 세트를 읽고 쓸 수 [!DNL Spark] 있습니다. SDK에 대한 자세한 내용은 [!DNL Spark] Spark SDK 튜토리얼을 참조하십시오 [](./tutorials/spark-sdk.md).
 
