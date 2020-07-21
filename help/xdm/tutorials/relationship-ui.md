@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 스키마 편집기를 사용하여 두 스키마 간의 관계 정의
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: 1445646be8fa3416a34408205eadca0a792290c6
 workflow-type: tm+mt
 source-wordcount: '811'
 ht-degree: 0%
@@ -62,7 +62,7 @@ ht-degree: 0%
 
 <img src="../images/tutorials/relationship/loyalty-create-new-mixin.png" width="750"><br>
 
-Mixins 섹션에 &quot;[!UICONTROL Loyalty Relationship]&quot;이 나타나면서 캔버스가 다시 _나타납니다_ . 혼합 이름을 클릭한 다음 루트 수준 &quot; **[!UICONTROL 충성도 구성원]** &quot; 필드 옆에 있는 필드[!UICONTROL 추가를]클릭합니다.
+Mixins 섹션에 &quot;[!UICONTROL Favorite Hotel]&quot;이 나타나면서 캔버스가 다시 _나타납니다_ . 혼합 이름을 클릭한 다음 루트 수준 &quot; **[!UICONTROL 충성도 구성원]** &quot; 필드 옆에 있는 필드[!UICONTROL 추가를]클릭합니다.
 
 ![](../images/tutorials/relationship/loyalty-add-field.png)
 
@@ -74,7 +74,7 @@ Mixins 섹션에 &quot;[!UICONTROL Loyalty Relationship]&quot;이 나타나면�
 
 ![](../images/tutorials/relationship/relationship-field-apply.png)
 
-업데이트된 &quot;[!UICONTROL loyaltyRelationship]&quot; 필드가 캔버스에 표시됩니다. 저장 **[!UICONTROL 을]** 클릭하여 스키마에 대한 변경 사항을 완료합니다.
+업데이트된 &quot;[!UICONTROL favoriteHotel]&quot; 필드가 캔버스에 표시됩니다. 저장 **[!UICONTROL 을]** 클릭하여 스키마에 대한 변경 사항을 완료합니다.
 
 ![](../images/tutorials/relationship/relationship-field-save.png)
 
