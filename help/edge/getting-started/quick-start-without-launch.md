@@ -4,9 +4,9 @@ seo-title: 'Adobe Experience Platform 웹 SDK 빠른 시작 '
 description: Experience Platform 웹 SDK를 사용하여 데이터를 수집하는 빠른 시작 가이드
 seo-description: Experience Platform 웹 SDK를 사용하여 데이터를 수집하는 빠른 시작 가이드
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: 8574a2d54c00f1bd3c41780fb12ff739a7d98fc3
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '517'
 ht-degree: 5%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 5%
 
 # 시작
 
-이 가이드는 Adobe Experience Platform을 설정하는 다양한 방법을 안내합니다 [!DNL Web SDK]. 이 기능을 사용하려면 허용 목록에 있어야 합니다. 대기 목록에 오르려면 CSM에 문의하십시오.
+이 가이드는 Adobe Experience Platform 웹 SDK를 설정하는 다양한 방법을 안내합니다. 이 기능을 사용하려면 허용 목록에 포함되어야 합니다. 대기 목록에 오르려면 CSM에 문의하십시오.
 
-- 자사 도메인(CNAME)이 [활성화되어 있어야](https://docs.adobe.com/content/help/ko-KR/core-services/interface/ec-cookies/cookies-first-party.html) 합니다. 이미 CNAME을 가지고 있는 경우 [!DNL Analytics]이 CNAME을 사용해야 합니다. CNAME이 없는 개발 환경에서 테스트가 작동하지만 프로덕션으로 이동하려면 먼저 테스트가 필요합니다
-- Adobe Experience Platform을 받을 수 있습니다 [!DNL Data Platform].  Platform을 구매하지 않은 경우, Adobe는 추가 비용 없이 SDK와 함께 제한된 방식 [!DNL Experience Platform Data Services Foundation] 으로 사용할 수 있도록 귀하에게 제공할 것입니다.
-- 최신 버전의 방문자 ID 서비스 사용
+- 자사 도메인(CNAME)이 [활성화되어 있어야](https://docs.adobe.com/content/help/ko-KR/core-services/interface/ec-cookies/cookies-first-party.html) 합니다. 이미 Analytics용 CNAME이 있는 경우 이 CNAME을 사용해야 합니다. 개발 테스트에서는 CNAME이 없어도 되지만 프로덕션으로 이동하려면 먼저 테스트가 필요합니다.
+- Adobe Experience Platform을 받을 수 있습니다.  Platform을 구매하지 않은 경우, Adobe는 추가 비용 없이 SDK와 함께 제한된 방식으로 사용할 수 있도록 Experience Platform 데이터 서비스 재단을 귀하에게 제공할 것입니다.
+- 최신 버전의 방문자 ID 서비스를 사용하십시오.
 
 ## 구성 ID 만들기
 
