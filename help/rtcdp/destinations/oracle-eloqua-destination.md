@@ -1,48 +1,52 @@
 ---
 title: Oracle Furnar 대상
 seo-title: Oracle Furnar 대상
-description: Oracle Fura는 B2B 마케터 및 조직이 마케팅 캠페인과 영업 리드 생성을 관리하는 데 도움이 되는 Oracle의 마케팅 자동화를 위한 SaaS(서비스) 플랫폼입니다.
-seo-description: Oracle Fura는 B2B 마케터 및 조직이 마케팅 캠페인과 영업 리드 생성을 관리하는 데 도움이 되는 Oracle의 마케팅 자동화를 위한 SaaS(서비스) 플랫폼입니다.
+description: Oracle Fura는 B2B 마케터 및 조직이 마케팅 캠페인 및 영업 리드 생성을 관리하는 데 도움이 되는 Oracle이 제공하는 마케팅 자동화를 위한 SaaS(서비스) 플랫폼입니다.
+seo-description: Oracle Fura는 B2B 마케터 및 조직이 마케팅 캠페인 및 영업 리드 생성을 관리하는 데 도움이 되는 Oracle이 제공하는 마케팅 자동화를 위한 SaaS(서비스) 플랫폼입니다.
 translation-type: tm+mt
-source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
+source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+workflow-type: tm+mt
+source-wordcount: '462'
+ht-degree: 0%
 
 ---
 
 
-# Oracle Furnar
+# [!DNL Oracle Eloqua]
 
 ## 개요
 
-[Fura는](https://www.oracle.com/marketingcloud/products/marketing-automation/) B2B 마케터 및 조직이 마케팅 캠페인과 영업 리드 생성을 관리하는 데 도움이 되도록 Oracle에서 제공하는 마케팅 자동화를 위한 서비스(SaaS) 플랫폼으로서 소프트웨어입니다.
+[Fura](https://www.oracle.com/marketingcloud/products/marketing-automation/) 는 B2B 마케터 및 조직이 마케팅 캠페인 및 영업 리드 생성을 관리하는 데 도움이 [!DNL Oracle] 되는 마케팅 자동화를 위한 서비스(SaaS) 플랫폼으로서 사용되는 소프트웨어입니다.
 
-세그먼트 데이터를 Oracle Quala로 전송하려면 먼저 Adobe 실시간 고객 데이터 플랫폼에서 대상을 [](#connect-destination) 연결한 다음 저장 위치에서 Oracle Fura로 데이터 가져오기를 [](#import-data-into-eloqua) 설정해야 합니다.
+세그먼트 데이터 [!DNL Oracle Eloqua]를 전송하려면 먼저 Adobe 실시간 고객 데이터 Platform에서 대상을 [](#connect-destination) 연결한 [다음 스토리지 위치에서 다음](#import-data-into-eloqua) 위치로 데이터 가져오기를 [!DNL Oracle Eloqua]설정해야 합니다.
 
 ## 대상에 연결 {#connect-destination}
 
-1. 에서 Oracle **[!UICONTROL Connections > Destinations]** Furnar를 선택한 다음 **[!UICONTROL Connect destination]**&#x200B;선택합니다.
+1. [ **[!UICONTROL 연결] > [대상]**]에서 [!DNL Oracle Eloqua]선택한 다음 **[!UICONTROL Connect 대상을 선택합니다]**.
 
    ![Furnar에 연결](/help/rtcdp/destinations/assets/connect-oracle-eloqua.png)
 
-2. 이전에 클라우드 스토리지 대상에 대한 연결을 설정한 **[!UICONTROL Authentication]** 경우 기존 연결 중 하나를 선택하고 **[!UICONTROL Existing Account]** 선택합니다. 또는 새 연결을 **[!UICONTROL New Account]** 설정하도록 선택할 수 있습니다. 계정 인증 자격 증명을 입력하고 **[!UICONTROL Connect to destination]**&#x200B;선택합니다. Oracle Furnar의 경우 **[!UICONTROL SFTP with Password]** 와 중 하나를 선택할 수 **[!UICONTROL SFTP with SSH Key]**&#x200B;있습니다. 연결 유형에 따라 아래 정보를 입력하고 **[!UICONTROL Connect to destination]**&#x200B;선택합니다.
+2. 이전에 클라우드 스토리지 대상에 대한 연결을 **[!UICONTROL 설정한 경우 인증]** 단계에서 **[!UICONTROL 기존 계정을]** 선택하고 기존 연결 중 하나를 선택합니다. 또는 새 계정 **[!UICONTROL 을]** 선택하여 새 연결을 설정할 수 있습니다. 계정 인증 자격 증명을 입력하고 대상에 **[!UICONTROL 연결을 선택합니다]**. 예를 [!DNL Oracle Eloqua]들어 암호를 사용하는 **[!UICONTROL SFTP와 SSH 키를 사용하는]** SFTP 중에서 선택할 수 있습니다 ****. 연결 유형에 따라 아래 정보를 입력하고 대상에 **[!UICONTROL 연결을 선택합니다]**.
 
-   연결의 경우 도메인, 포트, 사용자 이름 및 암호를 제공해야 **[!UICONTROL SFTP with Password]** 합니다.
-연결의 경우 도메인, 포트, 사용자 이름 및 SSH 키를 제공해야 **[!UICONTROL SFTP with SSH Key]** 합니다.
+   암호 **[!UICONTROL 가]** 연결된 SFTP의 경우 도메인, 포트, 사용자 이름 및 암호를 제공해야 합니다.
+SSH 키 **** 연결이 있는 SFTP의 경우 도메인, 포트, 사용자 이름 및 SSH 키를 제공해야 합니다.
 
    ![Furnar 마법사 설정](/help/rtcdp/destinations/assets/eloqua-authentication.png)
 
-3. 단계에서 **[!UICONTROL Setup]** 아래 표시된 대로 대상에 대한 관련 정보를 입력합니다.
-   * **[!UICONTROL Name]**:대상의 관련 이름을 선택합니다.
-   * **[!UICONTROL Description]**:대상에 대한 설명을 입력합니다.
-   * **[!UICONTROL Folder Path]**:실시간 CDP를 통해 내보내기 데이터를 CSV 또는 탭으로 구분된 파일로 저장할 스토리지 위치에 경로를 제공합니다.
-   * **[!UICONTROL File Format]**:CSV ******또는** TAB_SEPARATED. 저장소 위치로 내보낼 파일 형식을 선택합니다.
-   ![Fura 기본 정보](/help/rtcdp/destinations/assets/eloqua-basic-information.png)
+3. 설정 **** 단계에서 아래와 같이 대상에 대한 관련 정보를 입력합니다.
+   * **[!UICONTROL 이름]**: 대상의 관련 이름을 선택합니다.
+   * **[!UICONTROL 설명]**: 대상에 대한 설명을 입력합니다.
+   * **[!UICONTROL 폴더 경로]**: 실시간 CDP가 내보내기 데이터를 CSV 또는 탭으로 구분된 파일로 저장하는 스토리지 위치에 경로를 제공합니다.
+   * **[!UICONTROL 파일 형식]**: **CSV** 또는 **TAB_DIPORTED**. 저장소 위치로 내보낼 파일 형식을 선택합니다.
 
-4. 위의 필드를 채운 **[!UICONTROL Create destination]** 후 을 클릭합니다. 이제 대상이 생성되어 세그먼트를 [대상에](/help/rtcdp/destinations/activate-destinations.md) 활성화할 수 있습니다.
+   ![웅변가 기본 정보](/help/rtcdp/destinations/assets/eloqua-basic-information.png)
+
+4. 위 필드 **[!UICONTROL 를 채운 후 대상]** 만들기를 클릭합니다. 이제 대상이 만들어지고 대상에 대한 세그먼트를 [활성화할](/help/rtcdp/destinations/activate-destinations.md) 수 있습니다.
 
 ## 대상 속성
 
-세그먼트를 [Oracle Fura 대상에](/help/rtcdp/destinations/activate-destinations.md) 활성화할 때 [조합 스키마에서](../../profile/home.md#profile-fragments-and-union-schemas)고유 식별자를 선택하는 것이 좋습니다. 대상으로 내보낼 고유 식별자 및 기타 XDM 필드를 선택합니다. 자세한 내용은 이메일 마케팅 [대상의 내보낸 파일에서](/help/rtcdp/destinations/email-marketing-destinations.md#destination-attributes) 대상 특성으로 사용할 스키마 필드 선택을 참조하십시오.
+세그먼트를 대상에 [활성화할](/help/rtcdp/destinations/activate-destinations.md) 때 [!DNL Oracle Eloqua] 조합 스키마에서 고유 식별자를 선택하는 것이 [좋습니다](../../profile/home.md#profile-fragments-and-union-schemas). 대상으로 내보낼 고유 식별자 및 기타 XDM 필드를 선택합니다. 자세한 내용은 이메일 [마케팅 대상의 내보낸 파일에서](/help/rtcdp/destinations/email-marketing-destinations.md#destination-attributes) 대상 속성으로 사용할 스키마 필드 선택을 참조하십시오.
 
-## Oracle Fura로 데이터 가져오기 설정 {#import-data-into-eloqua}
+## 데이터 가져오기 설정 [!DNL Oracle Eloqua] {#import-data-into-eloqua}
 
-Amazon S3 또는 SFTP 스토리지에 실시간 CDP를 연결한 후 스토리지 위치에서 Oracle Quala로 데이터 가져오기를 설정해야 합니다. 이 작업을 수행하는 방법에 대한 자세한 내용은 Oracle [Fura Help Center에서 연락처 또는 계정](https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCAA/Help/DataImportExport/Tasks/ImportingContactsOrAccounts.htm) 가져오기를 참조하십시오.
+실시간 CDP를 Amazon S3 또는 SFTP 스토리지에 연결한 후 스토리지 위치에서 (으)로 데이터 가져오기를 설정해야 합니다 [!DNL Oracle Eloqua]. 이 작업을 수행하는 방법에 대한 자세한 내용은 의 [연락처 또는 계정](https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCAA/Help/DataImportExport/Tasks/ImportingContactsOrAccounts.htm) 가져오기를 참조하십시오 [!DNL Oracle Eloqua Help Center].
