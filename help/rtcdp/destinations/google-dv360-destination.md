@@ -4,25 +4,25 @@ seo-title: Google 디스플레이 및 비디오 360 대상
 description: 디스플레이 및 비디오 360(이전 DoubleClick 입찰 관리자)은 디스플레이, 비디오 및 모바일 재고 소스에서 타깃팅된 디지털 캠페인 및 대상 재타깃팅을 실행하는 데 사용되는 도구입니다.
 seo-description: '디스플레이 및 비디오 360(이전 DoubleClick 입찰 관리자)은 디스플레이, 비디오 및 모바일 재고 소스에서 타깃팅된 디지털 캠페인 및 대상 재타깃팅을 실행하는 데 사용되는 도구입니다. '
 translation-type: tm+mt
-source-git-commit: 3c598454a868139b7604c5c7ca2b98fa0f1bb961
+source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
 workflow-type: tm+mt
-source-wordcount: '668'
+source-wordcount: '633'
 ht-degree: 0%
 
 ---
 
 
-# Google 디스플레이 및 비디오 360 대상
+# [!DNL Google Display & Video 360] 대상
 
 ## 개요
 
-디스플레이 및 비디오 360(이전 DoubleClick 입찰 관리자)은 디스플레이, 비디오 및 모바일 인벤토리 소스에서 타겟팅된 디지털 캠페인 및 리타겟팅을 실행하는 데 사용되는 도구입니다.
+[!DNL Display & Video 360], 이전에 [!DNL DoubleClick Bid Manager]는 디스플레이, 비디오 및 모바일 인벤토리 소스에서 리타겟팅된 디지털 캠페인 및 대상 캠페인을 실행하는 데 사용되는 도구입니다.
 
 ## 대상 사양
 
-Google Display &amp; Video 360 목적지에만 해당되는 다음 세부 사항을 참고하십시오.
+대상에 대한 다음 세부 사항을 [!DNL Google Display & Video 360] 참고하십시오.
 
-* Google Display &amp; Video 360 대상으로 다음 [ID를](../../identity-service/namespaces.md) 전송할 수 있습니다. **Google 쿠키 ID, IDFA, GAID, Roku ID, Microsoft ID, Amazon Fire TV ID**.
+* 다음 ID를 [대상으로](../../identity-service/namespaces.md) 보낼 수 [!DNL Google Display & Video 360] 있습니다. **Google 쿠키 ID, IDFA, GAID, Roku ID, Microsoft ID, Amazon Fire TV ID**.
 * 활성화된 대상은 Google 플랫폼에서 프로그래밍 방식으로 생성됩니다.
 * Adobe 실시간 CDP에는 현재 성공적인 활성화를 검증하는 측정 지표가 포함되어 있지 않습니다. 통합을 확인하고 대상 타깃팅 크기를 이해하려면 Google의 대상 수를 참조하십시오.
 
@@ -36,9 +36,9 @@ Google Display &amp; Video 360 목적지에만 해당되는 다음 세부 사항
 
 >[!NOTE]
 >
->Adobe 실시간 CDP에서 첫 번째 Google Display &amp; Video 360 대상을 설정하기 전에 허용 목록이 필수입니다. 대상을 만들기 전에 아래에 설명된 목록 허용 프로세스가 Google에서 완료되었는지 확인하십시오.
+>Adobe 실시간 CDP에서 첫 번째 [!DNL Google Display & Video 360] 대상을 설정하기 전에 허용 목록은 필수입니다. 대상을 만들기 전에 아래에 설명된 허용 목록 프로세스가 Google에서 완료되었는지 확인하십시오.
 
-Adobe 실시간 CDP에서 Google Display &amp; Video 360 대상을 만들기 전에 Google에 연락하여 Adobe가 허용된 데이터 제공업체 목록에 포함되도록 요청해야 하며, 계정이 허용 목록에 추가되도록 해야 합니다. Google에 연락하여 다음 정보를 제공합니다.
+Adobe Real-time CDP에서 [!DNL Google Display & Video 360] 대상을 생성하기 전에 Google에 연락하여 Adobe가 허용되는 데이터 제공업체 목록에 포함되도록 하고 귀하의 계정이 허용 목록에 추가되도록 해야 합니다. Google에 연락하여 다음 정보를 제공합니다.
 
 * **계정 ID** : Google의 Adobe 계정 ID입니다. 이 ID를 얻으려면 Adobe 고객 지원 센터 또는 Adobe 담당자에게 문의하십시오.
 * **고객 ID** : Google의 Adobe 고객 계정 ID입니다. 이 ID를 얻으려면 Adobe 고객 지원 센터 또는 Adobe 담당자에게 문의하십시오.
@@ -46,7 +46,7 @@ Adobe 실시간 CDP에서 Google Display &amp; Video 360 대상을 만들기 전
 
 ## 대상 만들기
 
-1. [ **[!UICONTROL 연결] > [대상]**]에서 Google 표시 및 비디오 360을 선택하고 [대상 **[!UICONTROL 만들기]를 선택합니다]**.
+1. [ **[!UICONTROL 연결] > [대상]**]에서 [!DNL Google Display & Video 360]를 선택하고 [대상 **[!UICONTROL 만들기]를 선택합니다]**.
    ![Connect Google 표시 및 비디오 360 대상](/help/rtcdp/destinations/assets/google-dv360-destination.png)
 
 2. 대상 **만들기 작업** 과정의 설정 [!UICONTROL 단계에서 대상에 대한] 기본 정보및 이 대상에 적용할 마케팅 사용 사례를 입력합니다. <br>
@@ -62,8 +62,8 @@ Adobe 실시간 CDP에서 Google Display &amp; Video 360 대상을 만들기 전
 
 >[!NOTE]
 >
->Google 디스플레이 및 비디오 360 대상을 설정할 때는 Google 계정 관리자 또는 Adobe 담당자에게 문의하여 보유하고 있는 계정 유형을 파악하십시오.
+>대상을 설정할 때 [!DNL Google Display & Video 360] 귀하 [!DNL Google Account Manager] 또는 Adobe 담당자와 협력하여 보유하고 있는 계정 유형을 파악하십시오.
 
-## Google 디스플레이 및 비디오에 세그먼트 활성화 360
+## 세그먼트 활성화 [!DNL Google Display & Video 360]
 
-Google 디스플레이 및 비디오 360에 세그먼트를 활성화하는 방법에 대한 지침은 대상에 [데이터 활성화를 참조하십시오](/help/rtcdp/destinations/activate-destinations.md).
+세그먼트를 활성화할 방법에 대한 지침은 대상 [!DNL Google Display & Video 360]에 데이터 [활성화를 참조하십시오](/help/rtcdp/destinations/activate-destinations.md).
