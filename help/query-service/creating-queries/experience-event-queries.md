@@ -4,20 +4,23 @@ solution: Experience Platform
 title: ExperienceEvent 쿼리
 topic: queries
 translation-type: tm+mt
-source-git-commit: 45da024d45b5eebdfc393ee14890e24aed6021ce
+source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+workflow-type: tm+mt
+source-wordcount: '275'
+ht-degree: 0%
 
 ---
 
 
-# ExperienceEvent 쿼리
+# [!DNL ExperienceEvent] queries
 
-Adobe Experience Platform 쿼리 서비스는 표준 SQL 쿼리 외에도 ExperienceEvents를 사용한 쿼리 작성을 지원합니다. ExperienceEvent는 사용자가 웹 사이트 또는 서비스와 상호 작용할 때 시스템의 비집계 스냅샷을 나타내는 XDM(Experience Data Model) 클래스로, 시간 도메인 분석에 사용할 수 있습니다. XDM 및 경험 이벤트에 대한 자세한 내용은 XDM 시스템 개요를 참조하십시오. 쿼리 서비스와 ExperienceEvents를 결합하면 사용자 간의 행동 트렌드를 효과적으로 추적할 수 있습니다. 다음 문서에서는 ExperienceEvents와 관련된 쿼리의 예를 제공합니다.
+Adobe Experience Platform은 표준 SQL 쿼리 외에도 [!DNL Query Service] [!DNL ExperienceEvents] XDM [!DNL ExperienceEvent] 은 사용자가 웹 사이트 또는 서비스와 상호 작용할 때 시스템의 비집계적 스냅샷을 나타내므로 시간 도메인 분석에 사용할 수 있습니다 [!DNL Experience Data Model] . XDM에 대한 자세한 내용 [!DNL Experience Events] 은 [!DNL XDM System] 개요에서 찾을 수 있습니다. 사용자 [!DNL Query Service] 와 결합하면 사용자 [!DNL ExperienceEvents]의 행동 트렌드를 효과적으로 추적할 수 있습니다. 다음 문서에서는 관련 쿼리의 예를 제공합니다 [!DNL ExperienceEvents].
 
-## 특정 날짜 범위에서 일별 이벤트의 트렌드 보고서 만들기
+## 특정 날짜 범위에 대한 일별 이벤트의 트렌드 보고서 만들기
 
-다음 예제에서는 지정된 날짜 범위 동안 날짜별로 그룹화된 이벤트의 트렌드 보고서를 만듭니다. 특히, A, B 및 C로 다양한 분석 값을 합산한 다음 파카를 본 횟수를 합산합니다.
+다음 예에서는 날짜별로 그룹화된 지정된 날짜 범위에서 이벤트의 트렌드 보고서를 만듭니다. 특히 A, B 및 C와 같은 다양한 분석 값을 합산한 다음 파카를 본 횟수를 합산합니다.
 
-경험 이벤트 데이터 세트에 있는 타임스탬프 열이 UTC에 있습니다. 다음 예제에서는 `from_utc_timestamp()` 함수를 사용하여 타임스탬프를 UTC에서 EDT로 변환합니다. 그런 다음 이 `date_format()` 함수를 사용하여 나머지 타임스탬프에서 날짜를 분리합니다.
+데이터 세트에서 [!DNL Experience Event] 발견된 타임스탬프 열은 UTC입니다. 다음 예제에서는 `from_utc_timestamp()` 함수를 사용하여 타임스탬프를 UTC에서 EDT로 변환합니다. 그런 다음 함수를 사용하여 나머지 타임스탬프에서 날짜를 격리합니다. `date_format()`
 
 ```sql
 SELECT 
@@ -77,7 +80,7 @@ ORDER BY Day ASC, pageViews DESC;
 
 ## 페이지 보기 횟수로 구성된 방문자 목록 검색
 
-다음 예에서는 가장 많은 페이지를 본 사용자의 ID를 나열하는 보고서를 만듭니다.
+다음 예에서는 가장 많은 페이지를 열람한 사용자의 ID를 나열하는 보고서를 만듭니다.
 
 ```sql
 SELECT 
@@ -105,9 +108,9 @@ LIMIT 10;
 (10 rows)
 ```
 
-## 방문자의 세션 다시 재생
+## 방문자 세션 재생
 
-다음 예제에서는 지정된 사용자가 본 마지막 100개 페이지를 나열합니다.
+다음 예제는 지정된 사용자가 본 마지막 100개의 페이지입니다.
 
 
 ```sql
@@ -153,7 +156,7 @@ LIMIT 100;
 
 ## 방문자의 롤업 보고서 보기
 
-다음 예는 지정된 사용자에 대한 다양한 분석 값의 집계 보고서를 보여줍니다.
+다음 예제는 지정된 사용자에 대한 다양한 분석 값의 집계 보고서를 보여줍니다.
 
 ```sql
 SELECT 
@@ -182,5 +185,5 @@ ORDER BY pageViews DESC;
 
 ## 다음 단계
 
-ADF(Adobe Defined Functions)를 사용한 샘플 쿼리에 대한 자세한 내용은 Adobe Defined Functions 안내서를 참조하십시오. 쿼리 실행에 대한 일반적인 지침은 쿼리 서비스의 쿼리 실행에 대한 [안내서를 참조하십시오](./writing-queries.md).
+ADF(Adobe Defined Functions)를 사용한 샘플 쿼리에 대한 자세한 내용은 Adobe Defined Functions 안내서를 참조하십시오. 쿼리 실행에 대한 일반적인 지침은 쿼리 서비스의 쿼리 실행에 대한 [가이드를 참조하십시오](./writing-queries.md).
 
