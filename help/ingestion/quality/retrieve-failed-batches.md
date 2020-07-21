@@ -4,46 +4,46 @@ solution: Experience Platform
 title: 실패한 배치 검색
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '623'
-ht-degree: 1%
+source-wordcount: '598'
+ht-degree: 2%
 
 ---
 
 
 # API를 사용하여 실패한 배치 검색
 
-Adobe Experience Platform은 데이터를 업로드하고 인제스트하는 두 가지 방법을 제공합니다. 여러 파일 형식(예: CSV)을 사용하여 데이터를 삽입할 수 있는 일괄 처리 섭취 또는 스트리밍 끝점을 사용하여 실시간으로 Platform에 데이터를 삽입할 수 있는 스트리밍 섭취 중 하나를 사용할 수 있습니다.
+Adobe Experience Platform은 데이터를 업로드하고 인제스트하는 두 가지 방법을 제공합니다. 다양한 파일 형식(예: CSV)을 사용하여 데이터를 삽입할 수 있는 일괄 처리 섭취 또는 스트리밍 끝점을 실시간으로 [!DNL Platform] 사용하여 데이터를 삽입할 수 있는 스트리밍 섭취 중 하나를 사용할 수 있습니다.
 
-이 자습서에서는 데이터 통합 API를 사용하여 실패한 배치에 대한 정보를 검색하는 단계를 설명합니다.
+이 자습서에서는 [!DNL Data Ingestion] API를 사용하여 실패한 배치에 대한 정보를 검색하는 단계를 설명합니다.
 
 ## 시작하기
 
 이 가이드는 다음과 같은 Adobe Experience Platform 구성 요소에 대해 작업해야 합니다.
 
-- [XDM(Experience Data Model) 시스템](../../xdm/home.md): Experience Platform이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
-- [데이터 수집](../home.md): 데이터를 Experience Platform으로 보낼 수 있는 메서드입니다.
+- [!DNL Experience Data Model (XDM) System](../../xdm/home.md): 고객 경험 데이터를 [!DNL Experience Platform] 구성하는 표준화된 프레임워크
+- [!DNL Data Ingestion](../home.md): 데이터를 보낼 수 있는 메서드입니다 [!DNL Experience Platform].
 
 ### 샘플 API 호출 읽기
 
-이 자습서에서는 요청의 서식을 지정하는 방법을 보여주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 올바른 형식의 요청 페이로드가 포함됩니다. API 응답으로 반환된 샘플 JSON도 제공됩니다. 샘플 API 호출 설명서에 사용된 규칙에 대한 자세한 내용은 Experience Platform 문제 해결 안내서의 예제 API 호출 [](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 읽기 방법에 대한 섹션을 참조하십시오.
+이 자습서에서는 요청의 서식을 지정하는 방법을 보여주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 올바른 형식의 요청 페이로드가 포함됩니다. API 응답으로 반환된 샘플 JSON도 제공됩니다. 샘플 API 호출 설명서에 사용된 규칙에 대한 자세한 내용은 문제 해결 안내서의 예제 API 호출 [을 읽는](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 방법에 대한 섹션을 [!DNL Experience Platform] 참조하십시오.
 
 ### 필수 헤더에 대한 값 수집
 
-Platform API를 호출하려면 먼저 [인증 자습서를 완료해야 합니다](../../tutorials/authentication.md). 인증 자습서를 완료하면 아래와 같이 모든 Experience Platform API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
+API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 합니다](../../tutorials/authentication.md). 인증 자습서를 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
 
 - 인증: 무기명 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-스키마 레지스트리에 속하는 리소스를 비롯하여 Experience Platform의 모든 리소스는 특정 가상 샌드박스와 분리됩니다. Platform API에 대한 모든 요청에는 작업이 수행할 샌드박스의 이름을 지정하는 헤더가 필요합니다.
+에 속하는 리소스를 [!DNL Experience Platform]포함한 모든 리소스 [!DNL Schema Registry]는 특정 가상 샌드박스와 분리됩니다. API에 대한 모든 [!DNL Platform] 요청에는 작업이 수행할 샌드박스의 이름을 지정하는 헤더가 필요합니다.
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Platform의 샌드박스에 대한 자세한 내용은 [샌드박스 개요 설명서를 참조하십시오](../../sandboxes/home.md).
+>의 샌드박스에 대한 자세한 내용 [!DNL Platform]은 [샌드박스 개요 설명서를 참조하십시오](../../sandboxes/home.md).
 
 페이로드(POST, PUT, PATCH)가 포함된 모든 요청에는 추가 헤더가 필요합니다.
 
