@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 세그먼트 평가
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: c0eacfba2feea66803e63ed55ad9d0a97e9ae47c
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '1543'
+source-wordcount: '1519'
 ht-degree: 0%
 
 ---
@@ -59,7 +59,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->XDM 개별 프로필에 대해 최대 5개의 병합 정책을 포함하는 샌드박스에 대해 예약된 평가를 활성화할 수 있습니다. 조직에서 단일 샌드박스 환경 내에서 XDM 개별 프로필에 대한 병합 정책이 5개 이상 있는 경우 예약된 평가를 사용할 수 없습니다.
+>최대 5개의 병합 정책을 포함하는 샌드박스에 대해 예약된 평가를 활성화할 수 있습니다 [!DNL XDM Individual Profile]. 조직에서 단일 샌드박스 환경 [!DNL XDM Individual Profile] 에 대해 5개 이상의 병합 정책을 보유하고 있는 경우 예약된 평가를 사용할 수 없습니다.
 
 ### 일정 만들기
 
@@ -157,11 +157,11 @@ API의 끝점에 대한 POST 요청을 만들어 새 세그먼트 작업 `/segme
 
 대상을 내보낼 때 먼저 대상 데이터 세트를 만들어야 합니다. 내보내기가 성공하도록 데이터 세트를 올바르게 구성해야 합니다.
 
-중요한 고려 사항 중 하나는 데이터 세트가 기반으로 하는 스키마입니다(아래`schemaRef.id` API 샘플 요청). 세그먼트를 내보내려면 데이터 세트는 XDM 개별 프로필 조합 스키마(`https://ns.adobe.com/xdm/context/profile__union`)를 기반으로 해야 합니다. 결합 스키마는 동일한 클래스를 공유하는 스키마의 필드를 집계하는 시스템 생성 읽기 전용 스키마입니다. 이 경우 XDM 개인 프로필 클래스입니다. 결합 보기 스키마에 대한 자세한 내용은 스키마 레지스트리 개발자 안내서의 [실시간 고객 프로필 섹션을 참조하십시오](../../xdm/api/getting-started.md).
+중요한 고려 사항 중 하나는 데이터 세트가 기반으로 하는 스키마입니다(아래`schemaRef.id` API 샘플 요청). 세그먼트를 내보내려면 데이터 세트에 [!DNL XDM Individual Profile Union Schema] (`https://ns.adobe.com/xdm/context/profile__union`)가 있어야 합니다. 결합 스키마는 동일한 클래스를 공유하는 스키마의 필드를 집계하는 시스템 생성 읽기 전용 스키마입니다. 이 경우 XDM 개인 프로필 클래스입니다. 결합 보기 스키마에 대한 자세한 내용은 스키마 레지스트리 개발자 안내서의 [실시간 고객 프로필 섹션을 참조하십시오](../../xdm/api/getting-started.md).
 
 다음 두 가지 방법으로 필요한 데이터 세트를 만들 수 있습니다.
 
-- **API 사용:** 이 튜토리얼의 다음 단계는 카탈로그 API를 사용하여 XDM 개별 프로필 조합 스키마를 참조하는 데이터 세트를 만드는 방법에 대해 간략하게 설명합니다.
+- **API 사용:** 이 튜토리얼의 다음 단계는 API를 사용하여 해당 데이터 세트를 참조하는 [!DNL XDM Individual Profile Union Schema] 데이터 세트를 만드는 방법에 대해 [!DNL Catalog] 설명합니다.
 - **UI 사용:** 사용자 [!DNL Adobe Experience Platform] 인터페이스를 사용하여 조합 스키마를 참조하는 데이터 세트를 만들려면 [UI 튜토리얼의](../ui/overview.md) 단계를 수행한 다음 이 튜토리얼로 돌아가 대상 프로필 [생성 단계를 계속 진행합니다](#generate-xdm-profiles-for-audience-members).
 
 이미 호환되는 데이터 세트가 있고 ID를 알고 있는 경우 대상 프로필을 [생성하는 단계로 직접 이동할 수 있습니다](#generate-xdm-profiles-for-audience-members).
@@ -228,10 +228,10 @@ curl -X POST \
 
 ## 다음 단계
 
-내보내기가 성공적으로 완료되면 데이터 레이크에서 데이터를 사용할 수 있습니다 [!DNL Experience Platform]. 그런 다음 [데이터 액세스 API를](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) 사용하여 내보내기와 `batchId` 연결된 데이터를 사용하여 데이터에 액세스할 수 있습니다. 세그먼트 크기에 따라 데이터가 청크 단위일 수 있으며 일괄 처리는 여러 파일로 구성될 수 있습니다.
+내보내기가 성공적으로 완료되면 in 내에서 데이터를 사용할 수 [!DNL Data Lake] 있습니다 [!DNL Experience Platform]. 그런 다음 내보내기와 연결된 데이터 [!DNL Data Access API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) 를 사용하여 데이터에 `batchId` 액세스할 수 있습니다. 세그먼트 크기에 따라 데이터가 청크 단위일 수 있으며 일괄 처리는 여러 파일로 구성될 수 있습니다.
 
 API를 사용하여 일괄 파일에 액세스하고 다운로드하는 방법에 대한 단계별 지침을 보려면 [!DNL Data Access] 데이터 액세스 자습서를 따르십시오 [](../../data-access/tutorials/dataset-data.md).
 
-를 사용하여 성공적으로 내보낸 세그먼트 데이터에 액세스할 수도 있습니다 [!DNL Adobe Experience Platform Query Service]. UI 또는 RESTful API를 사용하여 데이터 레이크 내의 데이터에 대한 쿼리를 작성하고 유효성을 확인하고 실행할 [!DNL Query Service] 수 있습니다.
+를 사용하여 성공적으로 내보낸 세그먼트 데이터에 액세스할 수도 있습니다 [!DNL Adobe Experience Platform Query Service]. UI 또는 RESTful API를 사용하여 데이터 [!DNL Query Service] 에 대한 쿼리를 작성하고 유효성을 확인하고 실행할 수 [!DNL Data Lake]있습니다.
 
 대상 데이터를 쿼리하는 방법에 대한 자세한 내용은 설명서를 참조하십시오 [!DNL Query Service](../../query-service/home.md).
