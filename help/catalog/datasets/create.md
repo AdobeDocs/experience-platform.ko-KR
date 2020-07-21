@@ -4,9 +4,9 @@ solution: Experience Platform
 title: API를 사용하여 데이터 세트 만들기
 topic: datasets
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
 workflow-type: tm+mt
-source-wordcount: '1263'
+source-wordcount: '1234'
 ht-degree: 1%
 
 ---
@@ -20,31 +20,31 @@ ht-degree: 1%
 
 이 가이드는 다음과 같은 Adobe Experience Platform 구성 요소에 대해 작업해야 합니다.
 
-* [일괄 처리](../../ingestion/batch-ingestion/overview.md): Experience Platform을 사용하면 데이터를 일괄 처리 파일로 인제스트할 수 있습니다.
-* [XDM(Experience Data Model) 시스템](../../xdm/home.md): Experience Platform이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
-* [샌드박스](../../sandboxes/home.md): Experience Platform은 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되도록 단일 Platform 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
+* [일괄 처리](../../ingestion/batch-ingestion/overview.md): [!DNL Experience Platform] 데이터를 일괄 처리 파일로 인제스트할 수 있습니다.
+* [!DNL Experience Data Model (XDM) System](../../xdm/home.md): 고객 경험 데이터를 [!DNL Experience Platform] 구성하는 표준화된 프레임워크
+* [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되도록 단일 [!DNL Platform] 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
 
-다음 섹션에서는 Platform API를 성공적으로 호출하기 위해 알아야 할 추가 정보를 제공합니다.
+다음 섹션에서는 API를 성공적으로 호출하기 위해 알아야 할 추가 정보를 [!DNL Platform] 제공합니다.
 
 ### 샘플 API 호출 읽기
 
-이 자습서에서는 요청의 서식을 지정하는 방법을 보여주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 올바른 형식의 요청 페이로드가 포함됩니다. API 응답으로 반환된 샘플 JSON도 제공됩니다. 샘플 API 호출 설명서에 사용된 규칙에 대한 자세한 내용은 Experience Platform 문제 해결 안내서의 예제 API 호출 [](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 읽기 방법에 대한 섹션을 참조하십시오.
+이 자습서에서는 요청의 서식을 지정하는 방법을 보여주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 올바른 형식의 요청 페이로드가 포함됩니다. API 응답으로 반환된 샘플 JSON도 제공됩니다. 샘플 API 호출 설명서에 사용된 규칙에 대한 자세한 내용은 문제 해결 안내서의 예제 API 호출 [을 읽는](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 방법에 대한 섹션을 [!DNL Experience Platform] 참조하십시오.
 
 ### 필수 헤더에 대한 값 수집
 
-Platform API를 호출하려면 먼저 [인증 자습서를 완료해야 합니다](../../tutorials/authentication.md). 인증 자습서를 완료하면 아래와 같이 모든 Experience Platform API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
+API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 합니다](../../tutorials/authentication.md). 인증 자습서를 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
 
 * 인증: 무기명 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Experience Platform의 모든 리소스는 특정 가상 샌드박스와 분리됩니다. Platform API에 대한 모든 요청에는 작업이 수행할 샌드박스의 이름을 지정하는 헤더가 필요합니다.
+의 모든 리소스 [!DNL Experience Platform] 는 특정 가상 샌드박스와 분리됩니다. API에 대한 모든 [!DNL Platform] 요청에는 작업이 수행할 샌드박스의 이름을 지정하는 헤더가 필요합니다.
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Platform의 샌드박스에 대한 자세한 내용은 [샌드박스 개요 설명서를 참조하십시오](../../sandboxes/home.md).
+>의 샌드박스에 대한 자세한 내용 [!DNL Platform]은 [샌드박스 개요 설명서를 참조하십시오](../../sandboxes/home.md).
 
 페이로드(POST, PUT, PATCH)가 포함된 모든 요청에는 추가 헤더가 필요합니다.
 
@@ -60,9 +60,9 @@ Experience Platform의 모든 리소스는 특정 가상 샌드박스와 분리�
 
 이 자습서는 [스키마 레지스트리 API 자습서](../../xdm/tutorials/create-schema-api.md) 종료 지점에서 시작하여 해당 자습서 동안 생성된 충성도 멤버 스키마를 사용합니다.
 
-스키마 레지스트리 자습서를 완료하지 않은 경우 여기에서 시작하여 필요한 스키마를 구성한 경우에만 이 데이터 집합 자습서를 계속 진행하십시오.
+튜토리얼을 완료하지 않은 경우 여기에서 시작하여 필요한 스키마를 만든 경우에만 이 데이터 세트 자습서로 계속하십시오. [!DNL Schema Registry]
 
-다음 호출을 사용하여 스키마 레지스트리 API 자습서 중에 만든 충성도 멤버 스키마를 볼 수 있습니다.
+다음 호출을 사용하여 [!DNL Schema Registry] API 자습서 중 만든 충성도 멤버 스키마를 볼 수 있습니다.
 
 **API 형식**
 
@@ -329,7 +329,7 @@ curl -X PUT 'https://platform.adobe.io/data/foundation/import/batches/5d01230fc7
 
 ## 신호 배치 완료
 
-모든 데이터 파일을 일괄 처리에 업로드한 후 일괄 처리를 완료하도록 신호를 보낼 수 있습니다. 신호 완료 시 서비스는 업로드된 파일에 대한 카탈로그 `DataSetFile` 항목을 만들고 이전에 생성된 일괄 처리에 연결합니다. 카탈로그 일괄 처리가 성공적으로 표시되어 현재 사용 가능한 데이터에서 작동할 수 있는 모든 다운스트림 흐름을 트리거합니다.
+모든 데이터 파일을 일괄 처리에 업로드한 후 일괄 처리를 완료하도록 신호를 보낼 수 있습니다. 신호 완료 시 서비스가 업로드된 파일에 대한 [!DNL Catalog] `DataSetFile` 항목을 만들고 이전에 생성된 일괄 처리에 연결합니다. 일괄 처리 [!DNL Catalog] 가 성공적으로 표시되어 현재 사용 가능한 데이터에서 작동할 수 있는 모든 다운스트림 흐름을 트리거합니다.
 
 **API 형식**
 
