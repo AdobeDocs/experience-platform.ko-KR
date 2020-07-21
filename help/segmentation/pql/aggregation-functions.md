@@ -4,14 +4,17 @@ solution: Experience Platform
 title: 집계 함수
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 902ba5efbb5f18a2de826fffd023195d804309cc
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+workflow-type: tm+mt
+source-wordcount: '208'
+ht-degree: 6%
 
 ---
 
 
 # 집계 함수
 
-집계 함수는 PQL(Profile Query Language) 배열 내에서 여러 값을 그룹화하여 단일 요약 값을 구성하는 데 사용됩니다. 다른 PQL 기능에 대한 자세한 내용은 프로필 쿼리 언어 [개요를](./overview.md)참조하십시오.
+집계 함수는 PQL(Againing Array) [!DNL Profile Query Language] 배열에서 여러 값을 함께 그룹화하여 단일 요약 값을 구성하는 데 사용됩니다. 다른 PQL 기능에 대한 자세한 내용은 [프로필 쿼리 언어 개요를 참조하십시오](./overview.md).
 
 ## 카운트
 
@@ -25,7 +28,7 @@ source-git-commit: 902ba5efbb5f18a2de826fffd023195d804309cc
 
 **예**
 
-다음 PQL 쿼리는 배열에서 주문 수를 반환합니다.
+다음 PQL 쿼리는 배열의 주문 수를 반환합니다.
 
 ```sql
 orders.count()
@@ -105,4 +108,4 @@ orders.max(order.price)
 
 ## 다음 단계
 
-이제 집계 함수에 대해 학습했으므로 PQL 쿼리 내에서 사용할 수 있습니다. 다른 PQL 기능에 대한 자세한 내용은 프로필 쿼리 [언어 개요를](./overview.md)참조하십시오.
+이제 집계 기능에 대해 배웠으므로 PQL 쿼리 내에서 사용할 수 있습니다. 다른 PQL 기능에 대한 자세한 내용은 [프로필 쿼리 언어 개요를 참조하십시오](./overview.md).
