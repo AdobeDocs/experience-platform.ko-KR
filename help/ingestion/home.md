@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform 데이터 통합 개요
 topic: overview
 translation-type: tm+mt
-source-git-commit: 3f1c3c77a0755a3e305da0fb8a234be0f0ee1863
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '420'
+source-wordcount: '417'
 ht-degree: 10%
 
 ---
@@ -36,7 +36,7 @@ Adobe Experience Platform은 마케터가 고객의 행동을 더 잘 이해할 
 
 [!DNL Experience Platform] 다양한 데이터 공급자에 대한 소스 연결을 설정할 수 있습니다. 이러한 연결을 통해 외부 데이터 소스에 인증하고, 통합 실행에 대한 시간을 설정하고, 처리 처리량을 관리할 수 있습니다.
 
-소스 연결은 다른 Adobe 응용 프로그램(Adobe Analytics 및 Adobe Audience Manager 등), 타사 클라우드 스토리지 소스(예: [!DNL Azure Blob]S3, FTP 서버 및 SFTP 서버) [!DNL Amazon] 및 타사 CRM 시스템(예: Microsoft Dynamics 및 Salesforce)의 데이터를 수집하도록 구성할 수 있습니다.
+소스 연결은 다른 Adobe 응용 프로그램(예: Adobe Analytics 및 Adobe Audience Manager), 타사 클라우드 스토리지 소스( [!DNL Azure Blob]예: [!DNL Amazon] S3, FTP 서버 및 SFTP 서버) 및 타사 CRM 시스템(예: [!DNL Microsoft Dynamics] 및 [!DNL Salesforce])의 데이터를 수집하도록 구성할 수 있습니다.
 
 자세한 내용은 [소스 개요를](../sources/home.md) 참조하십시오.
 
