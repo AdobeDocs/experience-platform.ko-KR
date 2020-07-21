@@ -4,9 +4,9 @@ seo-title: 클라우드 스토리지 대상 워크플로우
 description: 클라우드 스토리지 위치에 연결하는 지침
 seo-description: 클라우드 스토리지 위치에 연결하는 지침
 translation-type: tm+mt
-source-git-commit: 3c598454a868139b7604c5c7ca2b98fa0f1bb961
+source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
 workflow-type: tm+mt
-source-wordcount: '503'
+source-wordcount: '493'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
    ![클라우드 스토리지 대상에 연결](/help/rtcdp/destinations/assets/connect-cloud-destination.png)
 
-2. 이전에 클라우드 스토리지 대상에 대한 연결을 **[!UICONTROL 설정한 경우 인증]** 단계에서 기존 계정 **[!UICONTROL 을]** 선택하고 기존 연결을 선택합니다. 또는 새 계정 **[!UICONTROL 을]** 선택하여 클라우드 스토리지 대상에 새 연결을 설정할 수 있습니다. 계정 인증 자격 증명을 입력하고 대상에 **[!UICONTROL 연결을 선택합니다]**. <br> Amazon [S3](/help/rtcdp/destinations/amazon-s3-destination.md) 대상, [Amazon Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md) 대상, [Azure 이벤트 허브](/help/rtcdp/destinations/azure-event-hubs-destination.md) 대상 및 SFTP 대상 [](/help/rtcdp/destinations/sftp-destination.md) **** 에서 Facebook 인증 단계에서 자격 증명 입력에 대한 자세한 내용을 보려면 Amazon S3 대상을 참조하십시오.
+2. 이전에 클라우드 스토리지 대상에 대한 연결을 **[!UICONTROL 설정한 경우 인증]** 단계에서 기존 계정 **[!UICONTROL 을]** 선택하고 기존 연결을 선택합니다. 또는 새 계정 **[!UICONTROL 을]** 선택하여 클라우드 스토리지 대상에 새 연결을 설정할 수 있습니다. 계정 인증 자격 증명을 입력하고 대상에 **[!UICONTROL 연결을 선택합니다]**. <br> AuthenticationStep에서 입력한 자격 증명에 대한 자세한 내용은 [Amazon S3](/help/rtcdp/destinations/amazon-s3-destination.md)[!DNL Amazon Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md) 대상, 대상, 대상 및 [!DNL Azure Event Hubs](/help/rtcdp/destinations/azure-event-hubs-destination.md) SFTP [대상을](/help/rtcdp/destinations/sftp-destination.md) **** 참조하십시오.
 
    >[!NOTE]
    >
@@ -40,11 +40,11 @@ Amazon S3 대상의 경우, 파일이 배달될 클라우드 스토리지 대상
 
    ![SFTP 클라우드 저장소 대상에 연결 - 인증 단계](/help/rtcdp/destinations/assets/sftp-destinations-setup-step.png)
 
-   Amazon Kinesis 대상의 경우 [!DNL Amazon Kinesis] 계정에서 기존 데이터 스트림의 이름을 제공합니다. Adobe 실시간 CDP는 데이터를 이 스트림으로 내보냅니다. 위 필드 **[!UICONTROL 를]** 채운 후 대상 만들기를 선택합니다.
+   대상의 경우 [!DNL Amazon Kinesis] 계정에 있는 기존 데이터 스트림의 이름을 [!DNL Amazon Kinesis] 입력합니다. Adobe 실시간 CDP는 데이터를 이 스트림으로 내보냅니다. 위 필드 **[!UICONTROL 를]** 채운 후 대상 만들기를 선택합니다.
 
    ![Kinesis 클라우드 스토리지 대상에 연결 - 인증 단계](/help/rtcdp/destinations/assets/kinesis-destinations-setup-step.png)
 
-   Azure 이벤트 허브 대상의 경우 계정에 있는 기존 데이터 스트림의 이름을 [!DNL Amazon Kinesis] 제공하십시오. Adobe 실시간 CDP는 데이터를 이 스트림으로 내보냅니다. 위 필드 **[!UICONTROL 를]** 채운 후 대상 만들기를 선택합니다.
+   대상의 경우 [!DNL Azure Event Hubs] 계정에 있는 기존 데이터 스트림의 이름을 [!DNL Amazon Kinesis] 입력합니다. Adobe 실시간 CDP는 데이터를 이 스트림으로 내보냅니다. 위 필드 **[!UICONTROL 를]** 채운 후 대상 만들기를 선택합니다.
 
    ![Kinesis 클라우드 스토리지 대상에 연결 - 인증 단계](/help/rtcdp/destinations/assets/eventhubs-destinations-setup-step.png)
 
