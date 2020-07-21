@@ -1,21 +1,24 @@
 ---
 title: 대상 유형 및 카테고리
 seo-title: 대상 유형 및 카테고리
-description: 'Adobe 실시간 고객 데이터 플랫폼에서 프로필/세그먼트 내보내기 대상은 이벤트 데이터를 캡처하고, 다른 데이터 소스와 결합하고, 세그멘테이션을 적용하며, 세그먼트와 적격한 프로필을 대상에 내보냅니다. 익스텐션을 실행하면 원시 이벤트 데이터가 여러 유형의 대상으로 전달됩니다. '
-seo-description: Adobe 실시간 고객 데이터 플랫폼에서 프로필/세그먼트 내보내기 대상은 이벤트 데이터를 캡처하고, 다른 데이터 소스와 결합하고, 세그멘테이션을 적용하며, 세그먼트와 적격한 프로필을 대상에 내보냅니다. 익스텐션을 실행하면 원시 이벤트 데이터가 여러 유형의 대상으로 전달됩니다.
+description: 'Adobe 실시간 고객 데이터 Platform에서 프로필/세그먼트 내보내기 대상은 이벤트 데이터를 캡처하고, 다른 데이터 소스와 결합하고, 세그멘테이션을 적용하고, 세그먼트 및 자격이 있는 프로필을 대상에 내보냅니다. 익스텐션을 실행하면 원시 이벤트 데이터를 여러 유형의 대상으로 전달할 수 있습니다. '
+seo-description: Adobe 실시간 고객 데이터 Platform에서 프로필/세그먼트 내보내기 대상은 이벤트 데이터를 캡처하고, 다른 데이터 소스와 결합하고, 세그멘테이션을 적용하고, 세그먼트 및 자격이 있는 프로필을 대상에 내보냅니다. 익스텐션을 실행하면 원시 이벤트 데이터를 여러 유형의 대상으로 전달할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 617cf1934402b9001647d7704fb24d6256069ff3
+source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+workflow-type: tm+mt
+source-wordcount: '580'
+ht-degree: 0%
 
 ---
 
 
 # 대상 유형 및 카테고리
 
-Adobe 실시간 고객 데이터 플랫폼 대상의 다양한 유형과 카테고리를 이해하려면 이 페이지를 참조하십시오.
+Adobe 실시간 고객 데이터 Platform 대상의 다양한 유형과 카테고리를 이해하려면 이 페이지를 참조하십시오.
 
 ## 대상 유형
 
-Adobe는 실시간 고객 데이터 플랫폼에서 연결과 확장이라는 두 가지 대상 유형을 구별합니다. 연결 대상 유형에는 프로필 내보내기 대상 및 세그먼트 내보내기 대상의 두 가지가 있습니다.
+Adobe 실시간 고객 데이터 Platform에서는 연결과 확장 등 두 가지 대상 유형을 구별합니다. 두 가지 연결 대상, 프로필 내보내기 대상 및 세그먼트 내보내기 대상이 있습니다.
 
 ![대상 유형](/help/rtcdp/destinations/assets/types-of-destinations.png)
 
@@ -23,17 +26,17 @@ Adobe는 실시간 고객 데이터 플랫폼에서 연결과 확장이라는 �
 
 ### 연결
 
-**프로파일 내보내기** 및 **세그먼트 내보내기** Adobe 실시간 고객 데이터 플랫폼의 대상: 이벤트 데이터를 캡처하고, 다른 데이터 소스와 결합하여 [실시간 고객 프로파일을](/help/profile/home.md)만들고, 세그먼테이션을 적용하며, 세그먼트와 자격이 있는 프로파일을 대상에 내보낼 수 있습니다.
+**[!UICONTROL Adobe 실시간 고객 데이터 Platform의 프로필 내보내기]** 및 **[!UICONTROL 세그먼트 내보내기]** 대상은 이벤트 데이터를 캡처하고, 다른 데이터 소스와 결합하여 [실시간 고객 프로필을](/help/profile/home.md)만들고, 세그멘테이션을 적용하며, 세그먼트와 자격이 있는 프로파일을 대상에 내보낼 수 있습니다.
 
 <br> 
 
 #### 프로필 내보내기 대상
 
-프로필 내보내기 대상은 프로필 및/또는 속성이 포함된 파일을 생성합니다. 이러한 대상은 종종 이메일 주소와 함께 원시 데이터를 사용합니다. Amazon [S3 클라우드 스토리지 대상은](/help/rtcdp/destinations/amazon-s3-destination.md) 프로필 내보내기가 포함된 파일을 저장할 수 있는 대상의 예입니다.
+프로필 내보내기 대상은 프로필 및/또는 속성이 포함된 파일을 생성합니다. 이러한 대상은 종종 이메일 주소와 함께 원시 데이터를 기본 키로 사용합니다. Amazon [S3 클라우드 스토리지 대상은](/help/rtcdp/destinations/amazon-s3-destination.md) 프로필 내보내기가 포함된 파일을 저장할 수 있는 대상의 예입니다.
 
 #### 세그먼트 내보내기 대상
 
-세그먼트 내보내기 대상은 대상 플랫폼에 자격이 있는 프로필과 세그먼트를 보냅니다. 이러한 대상은 세그먼트 ID 또는 사용자 ID를 사용합니다. Google Display &amp; Video [360](/help/rtcdp/destinations/google-dv360-destination.md) 또는 Google [Ads와 같은](/help/rtcdp/destinations/google-ads-destination.md) 광고 대상은 이러한 유형의 대상입니다.
+세그먼트 내보내기 대상은 대상 플랫폼에 자격을 부여받은 프로필 및 세그먼트를 보냅니다. 이러한 대상은 세그먼트 ID 또는 사용자 ID를 사용합니다. 이러한 유형의 목적지 [!DNL Google Display & Video 360](/help/rtcdp/destinations/google-dv360-destination.md) 또는 [!DNL Google Ads](/help/rtcdp/destinations/google-ads-destination.md) 와 같은 광고 목적지
 
 #### 프로필 내보내기 및 세그먼트 내보내기 대상 - 비디오 개요
 
@@ -45,23 +48,23 @@ Adobe는 실시간 고객 데이터 플랫폼에서 연결과 확장이라는 �
 
 ### 확장
 
-Adobe Real-time CDP는 Adobe Experience Platform Launch의 강력하고 유연한 기능을 활용하여 Launch 익스텐션을 Adobe 실시간 CDP 인터페이스에 포함시킵니다.
+Adobe 실시간 CDP는 Experience Platform Launch의 기능과 유연성을 활용하여 Adobe 실시간 CDP 인터페이스에 Launch 익스텐션을 포함합니다.
 
 >[!TIP]
 >
->사용 사례, 인터페이스에서 이를 찾는 방법 등 Experience Platform Launch 익스텐션에 대한 자세한 내용은 Launch [익스텐션 개요를](/help/rtcdp/destinations/experience-platform-launch-extensions.md)참조하십시오.
+>사용 사례 및 인터페이스에서 Experience Platform Launch 익스텐션을 찾는 방법 등 익스텐션에 대한 자세한 내용은 [론치 익스텐션 개요를 참조하십시오](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
-익스텐션을 실행하면 원시 이벤트 데이터가 여러 유형의 대상으로 전달됩니다. 확장을 대상의 **이벤트 전달** 유형으로 간주합니다. 이는 원시 이벤트 데이터만 전달하는 대상 플랫폼과의 단순한 통합 유형입니다. 이러한 예는 Gainsight [개인화 확장](/help/rtcdp/destinations/gainsight-extension.md) 또는 [고객 확장의](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md)Confirmation Voice입니다.
+익스텐션을 실행하면 원시 이벤트 데이터를 여러 유형의 대상으로 전달할 수 있습니다. 익스텐션을 대상의 **이벤트 전달** 유형으로 간주합니다. 이는 원시 이벤트 데이터만 전달하는 대상 플랫폼과의 단순한 통합 유형입니다. 이러한 예는 [Gainsight 개인화 확장](/help/rtcdp/destinations/gainsight-extension.md) 또는 [고객 확장의 확인 음보입니다](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md).
 
-![다른 대상과 비교하여 경험 플랫폼 실행 확장](/help/rtcdp/destinations/assets/launch-and-other-destinations.png)
+![다른 대상과 Experience Platform Launch 확장](/help/rtcdp/destinations/assets/launch-and-other-destinations.png)
 
 <br> 
 
-### 연결 및 확장 기능 사용 시기
+### 연결 및 확장 사용 시기
 
 마케터는 연결과 확장 기능을 결합하여 사용 사례를 해결할 수 있습니다.
 
-전체 중앙 관리 고객 프로파일 또는 고객 세그먼트를 활성화하여 사용해야 하는 경우 연결이 유용합니다. 예를 들어, 업로드된 CRM 데이터와 함께 분석 시스템의 행동 데이터를 결합하는 경우 연결을 사용하여 해당 사용자에게 개인화된 메시지를 전달하기 전에 해당 세그먼트에 대한 사용자를 검증합니다.
+고객 연결은 정품 인증을 위해 중앙 관리 방식의 전체 고객 프로필 또는 고객 세그먼트를 활용해야 할 때 유용합니다. 예를 들어, 업로드된 CRM 데이터와 분석 시스템의 행동 데이터를 결합하는 경우 연결을 사용하여 해당 사용자에게 개인화된 메시지를 전달하기 전에 지정된 세그먼트에 대한 사용자의 자격을 얻게 됩니다.
 
 익스텐션은 이벤트 데이터를 사용하여 작업을 트리거하거나 외부 환경에서 세그멘테이션을 수행하는 경우에 유용합니다. 예를 들어, 지정된 사용자에 대해 다른 데이터 소스에 연결하지 않고 외부 시스템으로 행동 데이터를 전달해야 하는 경우
 
@@ -69,7 +72,7 @@ Adobe Real-time CDP는 Adobe Experience Platform Launch의 강력하고 유연�
 
 ## 대상 카테고리
 
-대상 카탈로그의 [연결 및](https://platform.adobe.com/destination/catalog) 관계는&#x200B;**목표 카테고리(**&#x200B;대상 스토리지 **,**&#x200B;설문 조사 **플랫폼,******&#x200B;설문 조사 플랫폼, 이메일 마케팅, 확장 등)별로 그룹화되며, 이러한 데이터가 얻는 데 도움이 되는 마케팅 사용 사례에 따라 달라집니다. 각 카테고리 및 각 카테고리에 포함된 대상에 대한 자세한 내용은 대상 [카탈로그 설명서를](/help/rtcdp/destinations/destinations-catalog.md)참조하십시오.
+대상 카탈로그의 [연결 및 확장](https://platform.adobe.com/destination/catalog) 기능은&#x200B;**수행하는 마케팅 사용 사례에 따라 대상 범주(**&#x200B;광고 **, 스토리지**, 설문 조사 플랫폼 **,,**&#x200B;이메일 마케팅, 기타)별로 그룹화됩니다 ****. 각 카테고리와 각 카테고리에 포함된 대상에 대한 자세한 내용은 [대상 카탈로그 설명서를 참조하십시오](/help/rtcdp/destinations/destinations-catalog.md).
 
 ![대상 카테고리](/help/rtcdp/destinations/assets/destination-categories-menu.png)
 
