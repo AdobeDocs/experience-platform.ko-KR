@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 배열, 목록 및 집합 함수
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '740'
+source-wordcount: '737'
 ht-degree: 5%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 5%
 
 # 배열, 목록 및 집합 함수
 
-PQL(프로필 쿼리 언어)은 배열, 목록 및 문자와의 상호 작용을 쉽게 하는 기능을 제공합니다. 다른 PQL 기능에 대한 자세한 내용은 [프로필 쿼리 언어 개요를 참조하십시오](./overview.md).
+[!DNL Profile Query Language] (PQL)은 배열, 목록 및 문자와의 상호 작용을 용이하게 하는 기능을 제공합니다. 다른 PQL 기능에 대한 자세한 내용은 [프로필 쿼리 언어 개요를 참조하십시오](./overview.md).
 
 ## 인
 
