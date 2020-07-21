@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 스트리밍 통합 유효성 검사
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '842'
+source-wordcount: '815'
 ht-degree: 3%
 
 ---
@@ -20,28 +20,28 @@ ht-degree: 3%
 
 이 가이드는 다음과 같은 Adobe Experience Platform 구성 요소에 대해 작업해야 합니다.
 
-- [XDM(Experience Data Model) 시스템](../../xdm/home.md): Experience Platform이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
-- [스트리밍 통합](../streaming-ingestion/overview.md): 데이터를 Experience Platform으로 보낼 수 있는 방법 중 하나입니다.
+- [!DNL Experience Data Model (XDM) System](../../xdm/home.md): 고객 경험 데이터를 [!DNL Experience Platform] 구성하는 표준화된 프레임워크
+- [!DNL Streaming Ingestion](../streaming-ingestion/overview.md): 데이터를 보낼 수 있는 방법 중 하나입니다 [!DNL Experience Platform].
 
 ### 샘플 API 호출 읽기
 
-이 자습서에서는 요청의 서식을 지정하는 방법을 보여주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 올바른 형식의 요청 페이로드가 포함됩니다. API 응답으로 반환된 샘플 JSON도 제공됩니다. 샘플 API 호출 설명서에 사용된 규칙에 대한 자세한 내용은 Experience Platform 문제 해결 안내서의 예제 API 호출 [](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 읽기 방법에 대한 섹션을 참조하십시오.
+이 자습서에서는 요청의 서식을 지정하는 방법을 보여주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 올바른 형식의 요청 페이로드가 포함됩니다. API 응답으로 반환된 샘플 JSON도 제공됩니다. 샘플 API 호출 설명서에 사용된 규칙에 대한 자세한 내용은 문제 해결 안내서의 예제 API 호출 [을 읽는](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 방법에 대한 섹션을 [!DNL Experience Platform] 참조하십시오.
 
 ### 필수 헤더에 대한 값 수집
 
-Platform API를 호출하려면 먼저 [인증 자습서를 완료해야 합니다](../../tutorials/authentication.md). 인증 자습서를 완료하면 아래와 같이 모든 Experience Platform API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
+API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 합니다](../../tutorials/authentication.md). 인증 자습서를 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
 
 - 인증: 무기명 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-스키마 레지스트리에 속하는 리소스를 비롯하여 Experience Platform의 모든 리소스는 특정 가상 샌드박스와 분리됩니다. Platform API에 대한 모든 요청에는 작업이 수행할 샌드박스의 이름을 지정하는 헤더가 필요합니다.
+에 속하는 리소스를 [!DNL Experience Platform]포함한 모든 리소스 [!DNL Schema Registry]는 특정 가상 샌드박스와 분리됩니다. API에 대한 모든 [!DNL Platform] 요청에는 작업이 수행할 샌드박스의 이름을 지정하는 헤더가 필요합니다.
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Platform의 샌드박스에 대한 자세한 내용은 [샌드박스 개요 설명서를 참조하십시오](../../sandboxes/home.md).
+>의 샌드박스에 대한 자세한 내용 [!DNL Platform]은 [샌드박스 개요 설명서를 참조하십시오](../../sandboxes/home.md).
 
 페이로드(POST, PUT, PATCH)가 포함된 모든 요청에는 추가 헤더가 필요합니다.
 
@@ -49,7 +49,7 @@ Platform API를 호출하려면 먼저 [인증 자습서를 완료해야 합니�
 
 ### 유효성 검사 적용 범위
 
-Streaming Validation Service에서는 다음 영역의 유효성 검사를 다룹니다.
+[!DNL Streaming Validation Service] 는 다음 영역의 유효성 검사를 포함합니다.
 - 범위
 - 현재 상태
 - 열거형
@@ -140,7 +140,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
 
 ## 비동기 유효성 검사
 
-비동기 유효성 검사는 즉각적인 피드백을 제공하지 않는 유효성 검사 방법입니다. 대신 데이터 손실을 방지하기 위해 데이터가 데이터 레이크에서 실패한 묶음으로 전송됩니다. 나중에 이 실패한 데이터를 검색하여 더 자세히 분석할 수 있습니다. 이 방법은 제조업에 사용해야 한다. 별도로 요청되지 않는 한 스트리밍 통합 기능은 비동기 유효성 검사 모드에서 작동합니다.
+비동기 유효성 검사는 즉각적인 피드백을 제공하지 않는 유효성 검사 방법입니다. 대신 데이터 손실을 방지하기 위해 데이터가 실패한 배치 [!DNL Data Lake] 로 전송됩니다. 나중에 이 실패한 데이터를 검색하여 더 자세히 분석할 수 있습니다. 이 방법은 제조업에 사용해야 한다. 별도로 요청되지 않는 한 스트리밍 통합 기능은 비동기 유효성 검사 모드에서 작동합니다.
 
 **API 형식**
 
