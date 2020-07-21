@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 쿼리 서비스 개발자 가이드
 topic: query templates
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '643'
+source-wordcount: '639'
 ht-degree: 3%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 3%
 
 ## 샘플 API 호출
 
-이제 사용할 헤더를 이해하므로 쿼리 서비스 API에 대한 호출을 시작할 수 있습니다. 다음 섹션에서는 Query Service API를 사용하여 수행할 수 있는 다양한 API 호출을 설명합니다. 각 호출에는 일반 API 형식, 필요한 헤더를 표시하는 샘플 요청 및 샘플 응답이 포함됩니다.
+이제 사용할 헤더를 이해하므로 [!DNL Query Service] API에 대한 호출을 시작할 준비가 되었습니다. 다음 섹션에서는 [!DNL Query Service] API를 사용하여 수행할 수 있는 다양한 API 호출을 설명합니다. 각 호출에는 일반 API 형식, 필요한 헤더를 표시하는 샘플 요청 및 샘플 응답이 포함됩니다.
 
 ### 쿼리 템플릿 목록 검색
 
