@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 고객 세그먼트에 대한 데이터 사용 규정 준수
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: cb6a2f91eb6c18835bd9542e5b66af4682227491
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '1325'
+source-wordcount: '1323'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 1%
 이 자습서에서는 다음의 구성 요소에 대해 작업해야 [!DNL Adobe Experience Platform]합니다.
 
 - [!DNL Real-time Customer Profile](../../profile/home.md): [!DNL Real-time Customer Profile] 은 범용 조회 엔티티 저장소이며, XDM( [!DNL Experience Data Model] Lookup Entity) 데이터를 관리하는 데 사용됩니다 [!DNL Platform]. 프로필은 다양한 엔터프라이즈 데이터 에셋에 있는 데이터를 병합하고 통합 프레젠테이션에서 해당 데이터에 액세스할 수 있도록 합니다.
-   - [정책 병합](../../profile/api/merge-policies.md): 특정 조건 [!DNL Real-time Customer Profile] 에서 통합 보기로 병합할 수 있는 데이터를 결정하는 데 사용되는 규칙입니다. 병합 정책은 데이터 거버넌스를 위해 구성할 수 있습니다.
+   - [정책 병합](../../profile/api/merge-policies.md): 특정 조건 [!DNL Real-time Customer Profile] 에서 통합 보기로 병합할 수 있는 데이터를 결정하는 데 사용되는 규칙입니다. 병합 정책은 [!DNL Data Governance] 목적에 따라 구성할 수 있습니다.
 - [!DNL Segmentation](../home.md): 프로필 스토어에 포함된 대규모 개인 그룹을 비슷한 특성을 공유하고 마케팅 전략과 유사하게 반응하는 작은 그룹으로 나누는 방법 [!DNL Real-time Customer Profile] .
 - [!DNL Data Governance](../../data-governance/home.md): [!DNL Data Governance] 다음 구성 요소를 사용하여 데이터 사용 레이블 지정 및 실행(DULE)을 위한 인프라를 제공합니다.
    - [데이터 사용 레이블](../../data-governance/labels/user-guide.md): 각 데이터를 처리하는 민감도 수준에서 데이터 세트와 필드를 설명하는 데 사용되는 레이블입니다.
