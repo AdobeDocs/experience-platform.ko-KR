@@ -4,15 +4,15 @@ seo-title: Amazon Kinesis 대상
 description: Adobe Experience Platform에서 데이터를 스트리밍하기 위해 Amazon Kinesis 스토리지에 대한 실시간 아웃바운드 연결을 만듭니다.
 seo-description: Adobe Experience Platform에서 데이터를 스트리밍하기 위해 Amazon Kinesis 스토리지에 대한 실시간 아웃바운드 연결을 만듭니다.
 translation-type: tm+mt
-source-git-commit: e93bfc028d5e23c3add55677c4003ca549a902c6
+source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
 workflow-type: tm+mt
-source-wordcount: '458'
+source-wordcount: '442'
 ht-degree: 2%
 
 ---
 
 
-# (베타) Amazon Kinesis 대상
+# (베타) [!DNL Amazon Kinesis] 대상
 
 
 >[!IMPORTANT]
@@ -21,7 +21,7 @@ ht-degree: 2%
 
 ## 개요 {#overview}
 
-Amazon Web Services의 [!DNL Kinesis Data Streams] 서비스를 사용하면 대용량 데이터 레코드를 실시간으로 수집 및 처리할 수 있습니다.
+이 서비스를 통해 [!DNL Kinesis Data Streams] 대규모 데이터 레코드를 실시간으로 수집 및 처리할 수 [!DNL Amazon Web Services] 있습니다.
 
 Adobe Experience Platform에서 데이터를 스트리밍하기 위해 [!DNL Amazon Kinesis] 스토리지에 대한 실시간 아웃바운드 연결을 생성할 수 있습니다.
 
@@ -34,9 +34,9 @@ Adobe Experience Platform에서 데이터를 스트리밍하기 위해 [!DNL Ama
 
 ## 사용 사례 {#use-cases}
 
-Amazon Kinesis와 같은 스트리밍 대상을 사용하면 고부가가치 세그멘테이션 이벤트 및 관련 프로필 속성을 원하는 시스템에 손쉽게 제공할 수 있습니다.
+이와 같은 스트리밍 대상을 사용하면 고부가가치 세그멘테이션 이벤트 및 관련 프로필 속성을 원하는 시스템에 손쉽게 제공할 수 [!DNL Amazon Kinesis]있습니다.
 
-예를 들어 잠재 고객이 &quot;전환율이 높은&quot; 세그먼트에 자격을 주는 백서를 다운로드했습니다. 잠재 고객이 Amazon Kinesis 대상에 속하는 세그먼트를 매핑하면 Amazon Kinesis에서 이 이벤트를 받게 됩니다. 기업 IT 시스템에서 가장 잘 작동하는 것처럼 현장 중심의 비즈니스 로직을 도입하여 설명할 수 있습니다.
+예를 들어 잠재 고객이 &quot;전환율이 높은&quot; 세그먼트에 자격을 주는 백서를 다운로드했습니다. 잠재 고객이 대상에 속하는 세그먼트를 매핑하면 이 이벤트를 [!DNL Amazon Kinesis] 수신하게 됩니다 [!DNL Amazon Kinesis]. 기업 IT 시스템에서 가장 잘 작동하는 것처럼 현장 중심의 비즈니스 로직을 도입하여 설명할 수 있습니다.
 
 ## 연결 대상 {#connect-destination}
 
@@ -46,7 +46,7 @@ Amazon Kinesis와 같은 스트리밍 대상을 사용하면 고부가가치 세
 
 ### 인증 단계에서 {#authentication-step}
 
-* **Amazon Web Services 액세스 키 및 비밀 키**: 액세스 키 [!DNL Amazon Web Services]를 생성하여 Adobe에서 실시간 CDP에 계정에 대한 액세스 권한을 [!DNL Amazon Kinesis] 부여합니다. 자세한 내용은 [Amazon 웹 서비스 설명서를 참조하십시오](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
+* **[!DNL Amazon Web Services]액세스 키 및 암호 키&#x200B;**: 액세스 키[!DNL Amazon Web Services]를 생성하여 Adobe에서 실시간 CDP에 계정에 대한 액세스 권한을[!DNL Amazon Kinesis]부여합니다. 자세한 내용은[Amazon 웹 서비스 설명서를 참조하십시오](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 * **지역**: 데이터를 스트리밍할 [!DNL Amazon Web Services] 지역을 지정합니다.
 
 ![계정 단계의 입력 필드](/help/rtcdp/destinations/assets/aws-kinesis-account-step.png)
@@ -73,7 +73,7 @@ Amazon Kinesis와 같은 스트리밍 대상을 사용하면 고부가가치 세
 
 ## 내보낸 데이터 {#exported-data}
 
-내보낸 Experience Platform 데이터는 JSON 형식 [!DNL Amazon Kinesis] 으로 배치됩니다. 예를 들어, 아래 이벤트에는 특정 세그먼트에 자격을 부여하여 다른 세그먼트를 종료한 대상자의 이메일 주소 프로필 속성이 포함되어 있습니다. 이 잠재 고객의 ID는 ECID와 이메일입니다.
+내보낸 [!DNL Experience Platform] 데이터는 JSON 형식 [!DNL Amazon Kinesis] 으로 배치됩니다. 예를 들어, 아래 이벤트에는 특정 세그먼트에 자격을 부여하여 다른 세그먼트를 종료한 대상자의 이메일 주소 프로필 속성이 포함되어 있습니다. 이 잠재 고객의 ID는 ECID와 이메일입니다.
 
 ```
 {
