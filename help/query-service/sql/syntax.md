@@ -4,9 +4,9 @@ solution: Experience Platform
 title: SQL 구문
 topic: syntax
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '1957'
+source-wordcount: '1940'
 ht-degree: 1%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 1%
 
 # SQL 구문
 
-쿼리 서비스는 문 및 기타 제한된 명령에 표준 ANSI SQL을 사용하는 기능을 `SELECT` 제공합니다. 이 문서에서는 쿼리 서비스에서 지원하는 SQL 구문을 보여 줍니다.
+[!DNL Query Service] 은 문 및 기타 제한된 명령에 표준 ANSI SQL을 사용하는 기능을 `SELECT` 제공합니다. 이 문서에는 에서 지원하는 SQL 구문이 나와 [!DNL Query Service]있습니다.
 
 ## SELECT 쿼리 정의
 
-다음 구문은 쿼리 서비스에서 지원하는 `SELECT` 쿼리를 정의합니다.
+다음 구문은 에서 지원하는 `SELECT` 쿼리를 정의합니다 [!DNL Query Service].
 
 ```
 [ WITH with_query [, ...] ]
@@ -111,7 +111,7 @@ SELECT statement 2
 
 ## 선택한 대로 표 만들기
 
-다음 구문은 쿼리 서비스에서 지원하는 `CREATE TABLE AS SELECT` (CTAS) 쿼리를 정의합니다.
+다음 구문은 에서 지원하는 `CREATE TABLE AS SELECT` (CTAS) 쿼리를 정의합니다 [!DNL Query Service].
 
 ```
 CREATE TABLE table_name [ WITH (schema='target_schema_title') ] AS (select_query)
@@ -136,7 +136,7 @@ CREATE TABLE Chairs WITH (schema='target schema title') AS (SELECT color, count(
 
 ## 삽입
 
-다음 구문은 쿼리 서비스에서 지원하는 `INSERT INTO` 쿼리를 정의합니다.
+다음 구문은 에서 지원하는 `INSERT INTO` 쿼리를 정의합니다 [!DNL Query Service].
 
 ```
 INSERT INTO table_name select_query
@@ -170,7 +170,7 @@ DROP [TEMP] TABLE [IF EXISTS] [db_name.]table_name
 
 ## 보기 만들기
 
-다음 구문은 쿼리 서비스에서 지원하는 `CREATE VIEW` 쿼리를 정의합니다.
+다음 구문은 에서 지원하는 `CREATE VIEW` 쿼리를 정의합니다 [!DNL Query Service].
 
 ```
 CREATE [ OR REPLACE ] VIEW view_name AS select_query
@@ -187,7 +187,7 @@ CREATE OR REPLACE VIEW V1 AS SELECT model, version FROM Inventory
 
 ### 드롭 뷰
 
-다음 구문은 쿼리 서비스에서 지원하는 `DROP VIEW` 쿼리를 정의합니다.
+다음 구문은 에서 지원하는 `DROP VIEW` 쿼리를 정의합니다 [!DNL Query Service].
 
 ```
 DROP VIEW [IF EXISTS] view_name
@@ -202,7 +202,7 @@ DROP VIEW v1
 DROP VIEW IF EXISTS v1
 ```
 
-## Spark SQL 명령
+## [!DNL Spark] SQL 명령
 
 ### SET
 
@@ -242,7 +242,7 @@ CLOSE { name }
 
 ### 커밋
 
-커밋 트랜잭션 문에 대한 응답으로 쿼리 서비스에서는 아무 작업도 수행되지 않습니다.
+커밋 트랜잭션 문에 대한 응답으로 수행되는 작업 [!DNL Query Service] 은 없습니다.
 
 ```
 COMMIT [ WORK | TRANSACTION ]
