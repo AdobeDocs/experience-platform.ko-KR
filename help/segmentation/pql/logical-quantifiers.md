@@ -4,14 +4,17 @@ solution: Experience Platform
 title: 논리적 수량자
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 92f92f480f29f7d6440f4e90af3225f9a1fcc3d0
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+workflow-type: tm+mt
+source-wordcount: '188'
+ht-degree: 5%
 
 ---
 
 
-# 논리적 한정자 함수
+# 논리적 수량 함수
 
-논리 정량자는 PQL(프로필 쿼리 언어)에서 배열로 조건을 확인하는 데 사용할 수 있습니다. 다른 PQL 기능에 대한 자세한 내용은 프로필 쿼리 언어 [개요를](./overview.md)참조하십시오.
+논리 정량자는 (PQL)에서 배열이 있는 조건을 [!DNL Profile Query Language] 확인하는 데 사용할 수 있습니다. 다른 PQL 기능에 대한 자세한 내용은 [프로필 쿼리 언어 개요를 참조하십시오](./overview.md).
 
 ## 존재함
 
@@ -27,12 +30,12 @@ exists {VARIABLE} from {EXPRESSION} : {CONDITION}
 | 인수 | 설명 |
 | ---------- | ----------- |
 | `{VARIABLE}` | 변수의 이름입니다. |
-| `{EXPRESSION}` | 확인할 배열입니다. |
-| `{CONDITION}` | 반환된 배열의 값을 필터링하는 선택적 표현식입니다. |
+| `{EXPRESSION}` | 검사 중인 배열입니다. |
+| `{CONDITION}` | 반환된 배열의 값을 필터링하는 선택적 표현식. |
 
 **예**
 
-다음 PQL 쿼리는 가격이 $50보다 크거나 SKU가 &quot;PS&quot;인 모든 이벤트를 가져옵니다.
+다음 PQL 쿼리는 가격이 50달러 이상이거나 SKU가 &quot;PS&quot;인 모든 이벤트를 가져옵니다.
 
 ```sql
 exists E from xEvent where (E.commerce.item.price > 50), I from E.productListItems where I.SKU = "PS"
@@ -52,8 +55,8 @@ forall {VARIABLE} from {EXPRESSION} : {CONDITION}
 | 인수 | 설명 |
 | ---------- | ----------- |
 | `{VARIABLE}` | 변수의 이름입니다. |
-| `{EXPRESSION}` | 확인할 배열입니다. |
-| `{CONDITION}` | 반환된 배열의 값을 필터링하는 선택적 표현식입니다. |
+| `{EXPRESSION}` | 검사 중인 배열입니다. |
+| `{CONDITION}` | 반환된 배열의 값을 필터링하는 선택적 표현식. |
 
 **예**
 
@@ -65,4 +68,4 @@ forall E from xEvent where (E.commerce.item.price > 50), I from E.productListIte
 
 ## 다음 단계
 
-이제 논리 정량자에 대해 학습했으므로 PQL 쿼리 내에서 사용할 수 있습니다. 다른 PQL 기능에 대한 자세한 내용은 프로필 쿼리 [언어 개요를](./overview.md)참조하십시오.
+이제 논리 정량자에 대해 학습했으므로 PQL 쿼리 내에서 사용할 수 있습니다. 다른 PQL 기능에 대한 자세한 내용은 [프로필 쿼리 언어 개요를 참조하십시오](./overview.md).
