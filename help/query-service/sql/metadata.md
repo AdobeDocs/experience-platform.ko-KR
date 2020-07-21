@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 메타데이터 명령
 topic: metadata
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '299'
+source-wordcount: '297'
 ht-degree: 0%
 
 ---
@@ -43,5 +43,5 @@ ht-degree: 0%
 
 로 시작하는 모든 명령을 결합할 `\d` 수 있습니다. 예를 들어 모든 테이블, 시퀀스 및 스키마 목록 `\dtsn` 을 표시하는 문제를 해결할 수 있습니다. `\d` 기본적으로 표시되는 모든 테이블, 뷰, 구체화된 뷰 및 시퀀스를 보여줍니다.
 
-위에 나열된 명령에 대한 자세한 내용은 [postgresql.org의 설명서를 참조하십시오](https://www.postgresql.org/docs/10/app-psql.html). 그러나 PostgreSQL 설명서에 표시된 일부 옵션은 Experience Platform에서 지원되지 않습니다.
+위에 나열된 명령에 대한 자세한 내용은 [postgresql.org의 설명서를 참조하십시오](https://www.postgresql.org/docs/10/app-psql.html). 그러나 PostgreSQL 설명서에 표시된 일부 옵션은 지원되지 않습니다 [!DNL Experience Platform].
 
