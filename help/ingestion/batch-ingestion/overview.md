@@ -4,17 +4,17 @@ solution: Experience Platform
 title: Adobe Experience Platform 일괄 처리 처리 개요
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '1170'
+source-wordcount: '1144'
 ht-degree: 2%
 
 ---
 
 
-# 일괄 처리 처리 개요
+# [!DNL Batch Ingestion]개요
 
-일괄 처리 통합 API를 사용하면 데이터를 Adobe Experience Platform에 일괄 파일로 통합할 수 있습니다. 인제스트되는 데이터는 CRM 시스템의 플랫 파일(예: 쪽모이 세공 파일)의 프로필 데이터이거나 XDM(Experience Data Model) 레지스트리에서 알려진 스키마를 준수하는 데이터일 수 있습니다.
+API를 사용하면 데이터를 Adobe Experience Platform에 일괄 파일로 인제스트할 수 있습니다. [!DNL Batch Ingestion] 인제스트되는 데이터는 CRM 시스템의 플랫 파일(예: 쪽모이 세공 파일)의 프로필 데이터이거나 [!DNL Experience Data Model] (XDM) 레지스트리에서 알려진 스키마를 준수하는 데이터일 수 있습니다.
 
 데이터 [통합 API 참조에서는](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) 이러한 API 호출에 대한 추가 정보를 제공합니다.
 
@@ -24,17 +24,17 @@ ht-degree: 2%
 
 ## API 사용
 
-데이터 통합 API를 사용하면 데이터를 세 가지 기본 단계에 따라 Experience Platform에 배치(단일 단위로 인제스트할 하나 이상의 파일로 구성된 데이터 단위)로 인제스트할 수 있습니다.
+API를 사용하면 데이터를 일괄로 인제스트할 수 있습니다(단일 단위로 인제스트할 하나 이상의 파일로 구성된 데이터 단위). [!DNL Data Ingestion] [!DNL Experience Platform]
 
 1. 새 배치를 만듭니다.
 2. 데이터의 XDM 스키마와 일치하는 지정된 데이터 세트에 파일을 업로드합니다.
 3. 배치의 끝을 신호합니다.
 
 
-### 데이터 수집 전제 조건
+### [!DNL Data Ingestion] 사전 요구 사항
 
 - 업로드할 데이터는 쪽모이 세공기나 JSON 형식이어야 합니다.
-- 카탈로그 서비스에서 만든 [데이터 집합입니다](../../catalog/home.md).
+- 에서 만든 데이터 집합입니다 [!DNL Catalog services](../../catalog/home.md).
 - 쪽모이 세공 파일 내용이 업로드되는 데이터 집합의 스키마 하위 집합과 일치해야 합니다.
 - 인증 후 고유한 액세스 토큰을 보유합니다.
 
@@ -47,23 +47,23 @@ ht-degree: 2%
 
 ### 샘플 API 호출 읽기
 
-이 안내서에서는 요청의 서식을 지정하는 방법을 보여주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 올바른 형식의 요청 페이로드가 포함됩니다. API 응답으로 반환된 샘플 JSON도 제공됩니다. 샘플 API 호출 설명서에 사용된 규칙에 대한 자세한 내용은 Experience Platform 문제 해결 안내서의 예제 API 호출 [](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 읽기 방법에 대한 섹션을 참조하십시오.
+이 안내서에서는 요청의 서식을 지정하는 방법을 보여주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 올바른 형식의 요청 페이로드가 포함됩니다. API 응답으로 반환된 샘플 JSON도 제공됩니다. 샘플 API 호출 설명서에 사용된 규칙에 대한 자세한 내용은 문제 해결 안내서의 예제 API 호출 [을 읽는](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 방법에 대한 섹션을 [!DNL Experience Platform] 참조하십시오.
 
 ### 필수 헤더에 대한 값 수집
 
-Platform API를 호출하려면 먼저 [인증 자습서를 완료해야 합니다](../../tutorials/authentication.md). 인증 자습서를 완료하면 아래와 같이 모든 Experience Platform API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
+API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 합니다](../../tutorials/authentication.md). 인증 자습서를 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
 
 - 인증: 무기명 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Experience Platform의 모든 리소스는 특정 가상 샌드박스와 분리됩니다. Platform API에 대한 모든 요청에는 작업이 수행할 샌드박스의 이름을 지정하는 헤더가 필요합니다.
+의 모든 리소스 [!DNL Experience Platform] 는 특정 가상 샌드박스와 분리됩니다. API에 대한 모든 [!DNL Platform] 요청에는 작업이 수행할 샌드박스의 이름을 지정하는 헤더가 필요합니다.
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Platform의 샌드박스에 대한 자세한 내용은 [샌드박스 개요 설명서를 참조하십시오](../../sandboxes/home.md).
+>의 샌드박스에 대한 자세한 내용 [!DNL Platform]은 [샌드박스 개요 설명서를 참조하십시오](../../sandboxes/home.md).
 
 페이로드(POST, PUT, PATCH)가 포함된 모든 요청에는 추가 헤더가 필요합니다.
 
@@ -237,7 +237,7 @@ curl -X PATCH "https://platform.adobe.io/data/foundation/import/batches/{BATCH_I
 
 ## 신호 배치 완료
 
-모든 파일이 배치에 업로드된 후 배치를 완료하도록 신호를 보낼 수 있습니다. 이렇게 하면 완료된 파일에 대해 카탈로그 **DataSetFile** 항목이 만들어지고 위에서 생성된 일괄 처리와 연결됩니다. 그런 다음 [카탈로그 배치]가 [성공]으로 표시되어 사용 가능한 데이터를 인제스트하는 다운스트림 흐름을 트리거합니다.
+모든 파일이 배치에 업로드된 후 배치를 완료하도록 신호를 보낼 수 있습니다. 이렇게 하면 완료된 파일에 [!DNL Catalog] 대해 **DataSetFile** 항목이 만들어지고 위에서 생성된 일괄 처리와 연결됩니다. 그런 다음 일괄 처리 [!DNL Catalog] 가 성공으로 표시되어 사용 가능한 데이터를 인제스트하는 다운스트림 흐름을 트리거합니다.
 
 **요청**
 
