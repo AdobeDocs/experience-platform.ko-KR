@@ -4,27 +4,30 @@ solution: Experience Platform
 title: 샘플 ETL 변형
 topic: overview
 translation-type: tm+mt
-source-git-commit: 4817162fe2b7cbf4ae4c1ed325db2af31da5b5d3
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+workflow-type: tm+mt
+source-wordcount: '466'
+ht-degree: 1%
 
 ---
 
 
 # 샘플 ETL 변형
 
-이 문서에서는 ETL(Extract, Transform, Load) 개발자가 경험할 수 있는 다음 예제 변형을 보여 줍니다.
+이 문서에서는 ETL(Extract, Transform, Load) 개발자가 경험할 수 있는 다음과 같은 변형에 대해 설명합니다.
 
-## 기본 CSV를 계층 구조로 변환
+## 계층 구조에 대한 플랫 CSV
 
 ### 샘플 파일
 
-샘플 CSV 및 JSON 파일은 Adobe에서 유지 관리하는 공개 ETL 참조 GitHub 보고서에서 사용할 수 있습니다.
+샘플 CSV 및 JSON 파일은 Adobe에서 유지 관리하는 공개 ETL 참조 [!DNL GitHub] 보고서에서 사용할 수 있습니다.
 
 - [CRM_profiles.csv](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.csv)
 - [CRM_profiles.json](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.json)
 
 ### CSV 예
 
-다음 CRM 데이터를 `CRM_profiles.csv`다음과 같이 내보냈습니다.
+다음 CRM 데이터를 다음과 같이 내보냅니다 `CRM_profiles.csv`.
 
 ```shell
 TITLE   F_NAME  L_NAME  GENDER  DOB EMAIL   CRMID   ECID    LOYALTYID   ECID2   PHONE   STREET  CITY    STATE   COUNTRY ZIP LAT LONG
@@ -40,35 +43,35 @@ Dr  Cammi   Haslen  F   1973-12-17  chaslenqv@ehow.com  56059cd5-5006-ce5f-2f5f-
 ### 매핑
 
 CRM 데이터에 대한 매핑 요구 사항은 다음 표에 요약되어 있으며 다음 변형을 포함합니다.
-- 속성에 대한 ID 열 `identityMap`
+- 속성을 위한 ID `identityMap` 열
 - 생년월일(DOB) - 년 및 월
-- Strings to Double 또는 Short Integers.
+- Strings to Double 또는 Short 정수.
 
 | CSV 열 | XDM 경로 | 데이터 서식 |
 | ---------- | -------- | --------------- |
-| 제목 | person.name.courteageTitle | 문자열로 복사 |
+| 제목 | person.name.courtesyTitle | 문자열로 복사 |
 | F_NAME | person.name.firstName | 문자열로 복사 |
 | L_NAME | person.name.lastName | 문자열로 복사 |
-| 성별 | person.gender | 성별을 해당 person.gender 열거형 값으로 변환 |
-| DOB | person.birthDayAndMonth:&quot;MM-DD&quot;<br/>person.birth날짜:&quot;YYYY-MM-DD&quot;<br/>person.birthYear:YYYY | birthDayAndMonth를 stringTransform<br/>birthDate로<br/>stringTransform birth birthYear를 short int로 변환 |
+| 성별 | person.gender | 성별을 해당 person.gender enum 값으로 변환 |
+| DOB | person.birthDayAndMonth: &quot;MM-DD&quot;<br/>person.birthDate: &quot;YYYY-MM-DD&quot;<br/>person.birthYear: YYYY | birthDayAndMonth를 stringTransform<br/>birthDate로<br/>stringTransform birth를 short int로 변환합니다. |
 | 이메일 | personalEmail.address | 문자열로 복사 |
 | CRMID | identityMap.CRMID[{&quot;id&quot;:x, primary:false}] | identityMap에서 CRMID 배열로 문자열로 복사하고 Primary를 false로 설정합니다. |
-| ECID | identityMap.ECID[{&quot;id&quot;:x, 기본:false}] | identityMap의 ECID 배열에서 첫 번째 항목에 문자열로 복사하고 기본 설정을 false로 설정합니다. |
+| ECID | identityMap.ECID[{&quot;id&quot;:x, primary: false}] | identityMap에서 ECID 배열의 첫 번째 항목에 문자열로 복사하고 기본 값을 false로 설정합니다. |
 | LOYALTYID | identityMap.LOYALTYID[{&quot;id&quot;:x, primary:true}] | identityMap에서 LOYALTYID 배열로 문자열로 복사하고 Primary를 true로 설정합니다. |
-| ECID2 | identityMap.ECID[{&quot;id&quot;:x, primary:false}] | identityMap의 ECID 배열에서 두 번째 항목에 문자열로 복사하고 기본 항목을 false로 설정합니다. |
+| ECID2 | identityMap.ECID[{&quot;id&quot;:x, primary:false}] | identityMap에서 ECID 배열의 두 번째 항목에 문자열로 복사하고 기본을 false로 설정합니다. |
 | 전화 | homePhone.number | 문자열로 복사 |
 | STREET | homeAddress.street1 | 문자열로 복사 |
-| CITY | homeAddress.city | 문자열로 복사 |
+| 시 | homeAddress.city | 문자열로 복사 |
 | 주 | homeAddress.stateProvince | 문자열로 복사 |
 | 국가 | homeAddress.country | 문자열로 복사 |
 | ZIP | homeAddress.postalCode | 문자열로 복사 |
-| LAT | homeAddress.latitude | 두 배로 변환 |
-| LONG | homeAddress.위도 | 두 배로 변환 |
+| LAT | homeAddress.latitude | 더블로 변환 |
+| LONG | homeAddress.longitude | 더블로 변환 |
 
 
 ### 출력 XDM
 
-다음 예는 다음과 같이 XDM으로 변환된 CSV의 처음 두 행을 보여줍니다. `CRM_profiles.json`:
+다음 샘플에서는 XDM으로 변환된 CSV의 처음 두 행을 보여 줍니다. `CRM_profiles.json`:
 
 ```json
 {
@@ -170,11 +173,11 @@ CRM 데이터에 대한 매핑 요구 사항은 다음 표에 요약되어 있�
 
 ## 데이터 프레임을 XDM 스키마로
 
-데이터 프레임 계층(예: 쪽모이 세공 파일)은 업로드되는 XDM 스키마와 일치해야 합니다.
+데이터 프레임(예: 쪽모이 세공 파일)의 계층 구조는 업로드되는 XDM 스키마의 계층 구조와 일치해야 합니다.
 
 ### 데이터 프레임 예
 
-다음 예제 데이터 프레임 구조는 XDM 개별 프로필 클래스를 구현하는 스키마에 매핑되었으며 해당 유형의 스키마와 연결된 가장 일반적인 필드를 포함합니다.
+다음 예제 데이터 프레임 구조가 클래스를 구현하는 스키마에 매핑되었으며 해당 유형의 스키마와 연관된 가장 일반적인 필드를 [!DNL XDM Individual Profile] 포함합니다.
 
 ```python
 [
@@ -247,7 +250,7 @@ CRM 데이터에 대한 매핑 요구 사항은 다음 표에 요약되어 있�
 ]
 ```
 
-Adobe Experience Platform에서 사용하기 위해 데이터 프레임을 구성할 때 필드가 제대로 매핑되려면 해당 계층 구조가 기존 XDM 스키마와 정확히 일치하는지 확인해야 합니다.
+Adobe Experience Platform에서 사용할 데이터 프레임을 구성할 때 필드가 제대로 매핑되려면 해당 계층 구조가 기존 XDM 스키마와 정확히 일치하는지 확인해야 합니다.
 
 ## ID 맵에 대한 ID
 
