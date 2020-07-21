@@ -4,15 +4,15 @@ solution: Adobe Experience Platform
 title: Adobe Experience Platform 세그멘테이션 서비스 개발자 가이드
 topic: guide
 translation-type: tm+mt
-source-git-commit: aff81a4f3243ef77cbdfc776220a5de46e360084
+source-git-commit: 995fadef9abacf22d0561e0590dfbe172adf0a43
 workflow-type: tm+mt
-source-wordcount: '469'
+source-wordcount: '467'
 ht-degree: 0%
 
 ---
 
 
-# Adobe Experience Platform 세그멘테이션 서비스 API 개발자 가이드
+# Adobe Experience Platform [!DNL Segmentation Service] API 개발자 가이드
 
 [!DNL Adobe Experience Platform Segmentation Service] 세그먼트를 만들고 데이터에서 대상 [!DNL Adobe Experience Platform] 을 생성할 수 [!DNL Real-time Customer Profile] 있습니다.
 
