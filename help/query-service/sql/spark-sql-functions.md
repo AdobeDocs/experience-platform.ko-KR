@@ -4,17 +4,17 @@ solution: Experience Platform
 title: Spark SQL 함수
 topic: spark sql functions
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '4903'
+source-wordcount: '4900'
 ht-degree: 5%
 
 ---
 
 
-# Spark SQL 함수
+# [!DNL Spark] SQL 함수
 
-Spark SQL helpers는 내장된 Spark SQL 기능을 제공하여 SQL 기능을 확장합니다.
+SQL [!DNL Spark] 도움말은 SQL 기능을 확장하는 내장 [!DNL Spark] SQL 기능을 제공합니다.
 
 참조: [Spark SQL 함수 설명서](https://spark.apache.org/docs/2.4.0/api/sql/index.html)
 
@@ -158,7 +158,7 @@ Spark SQL helpers는 내장된 Spark SQL 기능을 제공하여 SQL 기능을 �
 
 #### atan2
 
-`atan2(exprY, exprX)`: 평면의 양수 x축과 좌표(`exprX`,)에 의해 주어진 점 사이의 라디안 단위 각도 `exprY`를 계산대로 반환합니다 `java.lang.Math.atan2`.
+`atan2(exprY, exprX)`: 평면의 양수 x축과 좌표(`exprX`,)에 의해 주어진 점 사이의 라디안 단위 각도를 마치 계산된 것처럼 `exprY`반환합니다 `java.lang.Math.atan2`.
 
 인수:
 
@@ -2756,7 +2756,7 @@ Spark SQL helpers는 내장된 Spark SQL 기능을 제공하여 SQL 기능을 �
 인수:
 - `str`: 문자열 표현식
 - `search`: 문자열 식입니다. 에서 `search` 를 찾을 수 없으면 `str`변경되지 `str` 않고 반환됩니다.
-- `replace`: 문자열 식입니다. 이 `replace` 지정되지 않았거나 빈 문자열인 경우, 제거되는 문자열이 아무것도 교체되지 않습니다 `str`.
+- `replace`: 문자열 식입니다. 이 지정되지 `replace` 않았거나 빈 문자열인 경우, 제거되는 문자열이 아무것도 교체되지 않습니다 `str`.
 
 예:
 
