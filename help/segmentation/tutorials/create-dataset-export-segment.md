@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 대상 세그먼트를 내보내기 위한 데이터 세트 만들기
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: cb6a2f91eb6c18835bd9542e5b66af4682227491
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '751'
+source-wordcount: '733'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 ## 시작하기
 
-세그먼트를 내보내려면 데이터 세트는 XDM 개별 프로필 조합 스키마를 기반으로 해야 합니다. 결합 스키마는 동일한 클래스를 공유하는 모든 스키마의 필드를 집계하는 시스템 생성 읽기 전용 스키마입니다. 이 경우 XDM 개인 프로필 클래스입니다. 결합 보기 스키마에 대한 자세한 내용은 스키마 레지스트리 개발자 안내서의 [실시간 고객 프로필 섹션을 참조하십시오](../../xdm/schema/composition.md#union).
+세그먼트를 내보내려면 데이터 집합이 [!DNL XDM Individual Profile Union Schema] 결합 스키마는 동일한 클래스를 공유하는 모든 스키마의 필드를 집계하는 시스템 생성 읽기 전용 스키마입니다. 이 경우 [!DNL XDM Individual Profile] 클래스입니다. 결합 보기 스키마에 대한 자세한 내용은 스키마 레지스트리 개발자 안내서의 [실시간 고객 프로필 섹션을 참조하십시오](../../xdm/schema/composition.md#union).
 
 UI에서 결합 스키마를 보려면 왼쪽 탐색 **[!UICONTROL 에서 프로필]** 을 클릭한 다음 **[!UICONTROL 아래 표시된 것처럼]** 조합 스키마탭을 클릭합니다.
 
@@ -53,7 +53,7 @@ UI 내의 데이터 집합 작업 영역을 사용하면 [!DNL Experience Platfo
 
 ## XDM 개별 프로필 결합 스키마 선택
 
-데이터 세트에 사용할 XDM 개별 프로필 조합 스키마를 선택하려면 [스키마[!UICONTROL 선택] 화면에서 &quot;]XDM 개인 프로필[!UICONTROL &quot; 형식의 &quot;]XDM 개인 프로필 *[!UICONTROL &quot; 스키마를]* 찾습니다.
+데이터 세트 [!DNL XDM Individual Profile Union Schema] 에서 사용할 스키마를 선택하려면 [스키마 선택] 화면에서 &quot;[!UICONTROL XDM]개별 프로필&quot; 형식의 &quot; *[!UICONTROL XDM]* &quot; 스키마를찾습니다.
 
 XDM 개인 프로필 옆에 있는 라디오 단추를 **[!UICONTROL 선택한]**&#x200B;다음 **** 오른쪽 위 모서리에서 다음을클릭합니다.
 
@@ -84,6 +84,6 @@ XDM 개인 프로필 옆에 있는 라디오 단추를 **[!UICONTROL 선택한]*
 
 ## 다음 단계
 
-이제 XDM 개별 프로필 조합 스키마를 기반으로 데이터 세트를 만들었으므로 데이터 세트 ID를 사용하여 **[!UICONTROL 세그먼트 결과]** [에 대한 평가 및 액세스](./evaluate-a-segment.md) 자습서를 계속 진행할 수있습니다.
+데이터 세트를 만든 후 데이터 세트 ID [!DNL XDM Individual Profile Union Schema]를 사용하여 **[!UICONTROL 세그먼트 결과]** 자습서를 [평가하고 액세스할 수](./evaluate-a-segment.md) 있습니다.
 
 현재 세그먼트 결과 평가 자습서로 돌아가서 세그먼트 워크플로우 내보내기의 대상 구성원 [단계](./evaluate-a-segment.md#generate-profiles) 에 대한 프로필 생성을 확인하십시오.
