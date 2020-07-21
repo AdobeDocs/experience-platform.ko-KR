@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 개체 바꾸기
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '141'
+source-wordcount: '138'
 ht-degree: 2%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 2%
 
 # 개체 바꾸기
 
-PUT 요청을 사용하여 카탈로그 개체의 콘텐츠를 덮어쓸 수 있습니다. PUT 요청은 전체 리소스를 요청 페이로드로 대체합니다.
+PUT 요청을 사용하여 [!DNL Catalog] 개체의 내용을 덮어쓸 수 있습니다. PUT 요청에서는 전체 리소스가 요청 페이로드로 대체됩니다.
 
 >[!NOTE]
 >
->카탈로그 개체 내의 일부 특정 필드만 업데이트해야 하는 경우 PATCH 요청을 사용하는 것이 더 효율적일 수 있습니다.
+>개체 내의 몇 개의 특정 필드만 업데이트해야 하는 경우 [!DNL Catalog] PATCH 요청을 사용하는 것이 더 효율적일 수 있습니다.
 
 **API 형식**
 
@@ -28,7 +28,7 @@ PUT /{OBJECT_TYPE}/{OBJECT_ID}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 대체할 카탈로그 개체의 유형입니다. 유효한 개체는 다음과 같습니다. <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 바꿀 [!DNL Catalog] 개체의 유형입니다. 유효한 개체는 다음과 같습니다. <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | 업데이트할 특정 개체의 식별자입니다. |
 
 **요청**
