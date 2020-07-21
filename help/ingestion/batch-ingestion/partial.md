@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform 부분 배치 처리 개요
 topic: overview
 translation-type: tm+mt
-source-git-commit: 0be45675e4a2e3308cb77a8bbe3189f09c2b6fd8
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '1243'
+source-wordcount: '1237'
 ht-degree: 1%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 1%
 이 자습서에서는 부분 일괄 처리에 관련된 다양한 Adobe Experience Platform 서비스에 대한 작업 지식이 필요합니다. 이 자습서를 시작하기 전에 다음 서비스에 대한 설명서를 검토하십시오.
 
 - [일괄 처리](./overview.md): CSV 및 [!DNL Platform] Portable과 같은 데이터 파일의 데이터를 인제하고 저장하는 방법입니다.
-- [XDM(Experience Data Model)](../../xdm/home.md): Platform이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
+- [!DNL Experience Data Model (XDM)](../../xdm/home.md): 고객 경험 데이터를 [!DNL Platform] 구성하는 표준화된 프레임워크
 
 다음 섹션에서는 API를 성공적으로 호출하기 위해 알아야 할 추가 정보를 [!DNL Platform] 제공합니다.
 
@@ -42,7 +42,7 @@ API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. Platform API에 대한 모든 요청에는 작업이 수행할 샌드박스의 이름을 지정하는 헤더가 필요합니다.
+의 모든 리소스 [!DNL Experience Platform] 는 특정 가상 샌드박스와 분리됩니다. API에 대한 모든 [!DNL Platform] 요청에는 작업이 수행할 샌드박스의 이름을 지정하는 헤더가 필요합니다.
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -50,15 +50,15 @@ All resources in [!DNL Experience Platform] are isolated to specific virtual san
 >
 >의 샌드박스에 대한 자세한 내용 [!DNL Platform]은 [샌드박스 개요 설명서를 참조하십시오](../../sandboxes/home.md).
 
-## Enable a batch for partial batch ingestion in the API {#enable-api}
+## API에서 부분 일괄 처리를 활성화합니다. {#enable-api}
 
 >[!NOTE]
 >
->This section describes enabling a batch for partial batch ingestion using the API. UI 사용에 대한 지침은 UI [단계에서 부분 일괄 처리를 위한 일괄 처리](#enable-ui) 활성화를 참조하십시오.
+>이 섹션에서는 API를 사용하여 부분 일괄 처리를 활성화하는 방법에 대해 설명합니다. UI 사용에 대한 지침은 UI [단계에서 부분 일괄 처리를 위한 일괄 처리](#enable-ui) 활성화를 참조하십시오.
 
 부분 처리가 활성화된 새 배치를 만들 수 있습니다.
 
-To create a new batch, follow the steps in the [batch ingestion developer guide](./api-overview.md). 배치 *생성* 단계에 도달하면 요청 본문 내에 다음 필드를 추가합니다.
+새 배치를 만들려면 일괄 처리 통합 개발자 안내서의 [단계를 따릅니다](./api-overview.md). 배치 *생성* 단계에 도달하면 요청 본문 내에 다음 필드를 추가합니다.
 
 ```json
 {
@@ -115,7 +115,7 @@ UI를 통해 부분 섭취에 대한 배치를 활성화하려면 소스 연결�
 
 ### &quot;XDM 스키마에[!UICONTROL CSV 매핑&quot; 흐름을]사용하십시오 {#map-flow}
 
-&quot;[!UICONTROL CSV를 XDM 스키마에]매핑&quot; 흐름을 사용하려면 CSV 파일 [매핑 자습서에 나열된 단계를 따르십시오](../tutorials/map-a-csv-file.md). 데이터 *추가* 단계에 도달하면 *[!UICONTROL 부분 섭취]* 및 *[!UICONTROL 오류 진단]* 필드를참고하십시오.
+&quot;[!UICONTROL CSV를 XDM 스키마에]매핑&quot; 흐름을 사용하려면 CSV 파일 [매핑 자습서에 나열된 단계를 따르십시오](../tutorials/map-a-csv-file.md). 데이터 *[!UICONTROL 추가]* 단계에 도달하면 *[!UICONTROL 부분 섭취]* 및 *[!UICONTROL 오류 진단]* 필드를참고하십시오.
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow.png)
 
