@@ -4,21 +4,21 @@ solution: Experience Platform
 title: Secure Python Data Access SDK
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 49aa2e2664fe658d89b6279d1f869eb30c48ccad
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '483'
+source-wordcount: '478'
 ht-degree: 1%
 
 ---
 
 
-# Secure Python [!DNL Data Access] SDK
+# 보안 [!DNL Python] [!DNL Data Access] SDK
 
-Secure Python [!DNL Data Access] SDK는 Adobe Experience Platform에서 데이터 세트를 읽고 쓸 수 있는 소프트웨어 개발 키트입니다.
+보안 [!DNL Python][!DNL Data Access] SDK는 Adobe Experience Platform에서 데이터 세트를 읽고 쓸 수 있는 소프트웨어 개발 키트입니다.
 
 ## 시작하기
 
-Secure Python [SDK를 호출하기 위해 값에 액세스하려면](../../tutorials/authentication.md) 인증 [!DNL Data Access] 자습서를 완료해야 합니다.
+보안 [SDK를 호출하기 위해 값에 액세스하려면](../../tutorials/authentication.md) 인증 [!DNL Python] 자습서를 [!DNL Data Access] 완료해야 합니다.
 
 - `{ACCESS_TOKEN}`
 - `{API_KEY}`
@@ -63,7 +63,7 @@ Secure Python [SDK를 호출하기 위해 값에 액세스하려면](../../tutor
 python3 setup.py bdist_wheel --universal
 ```
 
-프로젝트 디렉토리에서 Python 3 환경에 휠을 로드합니다.
+프로젝트 디렉토리에서 [!DNL Python] 3 환경에 휠을 로드합니다.
 
 ```python
 pip3 install ./dist/<name_of_wheel_file>.whl
@@ -148,7 +148,7 @@ df = dataset_reader.where(experience_ds['timestamp'].gt(87879779797).And(experie
 
 ### ORDER BY 절
 
-ORDER BY 절을 사용하면 수신한 결과를 특정 순서(오름차순 또는 내림차순)의 지정된 열로 정렬할 수 있습니다. Python SDK에서 이 작업은 `sort()` 함수를 사용하여 수행됩니다.
+ORDER BY 절을 사용하면 수신한 결과를 특정 순서(오름차순 또는 내림차순)의 지정된 열로 정렬할 수 있습니다. SDK에서 [!DNL Python] 이 작업은 `sort()` 함수를 사용하여 수행됩니다.
 
 함수 사용 예는 아래에 `sort()` 나와 있습니다.
 
