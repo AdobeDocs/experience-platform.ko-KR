@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform 일괄 처리 통합 개발자 가이드
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '2577'
+source-wordcount: '2552'
 ht-degree: 6%
 
 ---
@@ -27,28 +27,28 @@ ht-degree: 6%
 이 가이드는 다음과 같은 Adobe Experience Platform 구성 요소에 대해 작업해야 합니다.
 
 - [일괄 처리](./overview.md): 데이터를 Adobe Experience Platform에 일괄 파일로 인제스트할 수 있습니다.
-- [XDM(Experience Data Model) 시스템](../../xdm/home.md): Experience Platform이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
-- [샌드박스](../../sandboxes/home.md): Experience Platform은 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되도록 단일 Platform 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
+- [!DNL Experience Data Model (XDM) System](../../xdm/home.md): 고객 경험 데이터를 [!DNL Experience Platform] 구성하는 표준화된 프레임워크
+- [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되도록 단일 [!DNL Platform] 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
 
 ### 샘플 API 호출 읽기
 
-이 안내서에서는 요청의 서식을 지정하는 방법을 보여주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 올바른 형식의 요청 페이로드가 포함됩니다. API 응답으로 반환된 샘플 JSON도 제공됩니다. 샘플 API 호출 설명서에 사용된 규칙에 대한 자세한 내용은 Experience Platform 문제 해결 안내서의 예제 API 호출 [](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 읽기 방법에 대한 섹션을 참조하십시오.
+이 안내서에서는 요청의 서식을 지정하는 방법을 보여주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 올바른 형식의 요청 페이로드가 포함됩니다. API 응답으로 반환된 샘플 JSON도 제공됩니다. 샘플 API 호출 설명서에 사용된 규칙에 대한 자세한 내용은 문제 해결 안내서의 예제 API 호출 [을 읽는](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 방법에 대한 섹션을 [!DNL Experience Platform] 참조하십시오.
 
 ### 필수 헤더에 대한 값 수집
 
-Platform API를 호출하려면 먼저 [인증 자습서를 완료해야 합니다](../../tutorials/authentication.md). 인증 자습서를 완료하면 아래와 같이 모든 Experience Platform API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
+API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 합니다](../../tutorials/authentication.md). 인증 자습서를 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
 
 - 인증: 무기명 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Experience Platform의 모든 리소스는 특정 가상 샌드박스와 분리됩니다. Platform API에 대한 모든 요청에는 작업이 수행할 샌드박스의 이름을 지정하는 헤더가 필요합니다.
+의 모든 리소스 [!DNL Experience Platform] 는 특정 가상 샌드박스와 분리됩니다. API에 대한 모든 [!DNL Platform] 요청에는 작업이 수행할 샌드박스의 이름을 지정하는 헤더가 필요합니다.
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Platform의 샌드박스에 대한 자세한 내용은 [샌드박스 개요 설명서를 참조하십시오](../../sandboxes/home.md).
+>의 샌드박스에 대한 자세한 내용 [!DNL Platform]은 [샌드박스 개요 설명서를 참조하십시오](../../sandboxes/home.md).
 
 페이로드(POST, PUT, PATCH)가 포함된 요청에는 추가 헤더가 필요할 수 `Content-Type` 있습니다. 각 호출과 관련된 허용된 값은 호출 매개 변수에 제공됩니다. 이 안내서에서는 다음 컨텐츠 유형을 사용합니다.
 
@@ -57,7 +57,7 @@ Experience Platform의 모든 리소스는 특정 가상 샌드박스와 분리�
 
 ## 유형
 
-데이터를 인제스트할 때는 XDM(Experience Data Model) 스키마가 작동하는 방식을 이해하는 것이 중요합니다. XDM 필드 유형이 다른 포맷으로 매핑되는 방법에 대한 자세한 내용은 스키마 [레지스트리 개발자 안내서를 참조하십시오](../../xdm/api/getting-started.md).
+데이터를 인제스트할 때는 XDM(Schemas Operating Data) [!DNL Experience Data Model] 개표의 작동 방식을 이해해야 합니다. XDM 필드 유형이 다른 포맷으로 매핑되는 방법에 대한 자세한 내용은 스키마 [레지스트리 개발자 안내서를 참조하십시오](../../xdm/api/getting-started.md).
 
 데이터 인제스트 시 몇 가지 유연성이 있습니다. 유형이 대상 스키마의 유형과 일치하지 않으면 데이터는 표현된 대상 유형으로 변환됩니다. 그럴 수 없는 경우, 배치는 A로 실패합니다 `TypeCompatibilityException`.
 
@@ -1003,7 +1003,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ### 일괄 처리를 위한 데이터 변환
 
-데이터 파일을 Experience Platform으로 인제스트하려면 파일의 계층 구조가 업로드되는 데이터 세트와 관련된 [경험 데이터 모델(XDM)](../../xdm/home.md) 스키마를 준수해야 합니다.
+데이터 파일을 인제스트하려면 파일의 계층 구조 [!DNL Experience Platform]가 업로드되는 데이터 세트에 연결된 [경험 데이터 모델(XDM)](../../xdm/home.md) 스키마를 준수해야 합니다.
 
 XDM 스키마를 따르도록 CSV 파일을 매핑하는 방법에 대한 자세한 내용은 [샘플 변형](../../etl/transformations.md) 문서 및 올바른 형식의 JSON 데이터 파일의 예를 참조하십시오. 문서에 제공된 샘플 파일은 다음과 같습니다.
 
