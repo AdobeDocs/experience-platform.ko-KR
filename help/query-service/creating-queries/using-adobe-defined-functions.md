@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe에서 정의한 함수
 topic: queries
 translation-type: tm+mt
-source-git-commit: cc101b1a439408861961c6fcd0899ca7c48bfa04
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '292'
+source-wordcount: '287'
 ht-degree: 6%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 6%
 
 Adobe의 주요 차별화 요소 중 하나는 경험 데이터와 고객이 해당 데이터를 사용하여 수행해야 하는 작업을 파악하는 것입니다. 이러한 이해를 통해 보다 손쉽게 작업을 수행할 수 있는 헬퍼 기능을 구축할 수 있습니다.
 
-이 문서에서는 세 가지 주요 Analytics 활동을 지원하는 Adobe에서 정의한 기능(ADF)에 대해 다룹니다.
+이 문서에서는 다음 세 가지 주요 활동을 지원하는 Adobe에서 정의한 함수(ADF)에 대해 [!DNL Analytics] 설명합니다.
 - [세션](#sessionization)
 - [속성](#attribution)
 - [경로 지정](#pathing)
@@ -91,13 +91,13 @@ LIMIT 31;
 
 Adobe Analytics에서 속성 설정은 eVar와 같은 변수를 사용하여 구성되며 데이터가 인제스트될 때 생성됩니다.
 
-쿼리 서비스에 있는 속성 ADF를 사용하면 이러한 할당을 쿼리 시간에 정의하고 생성할 수 있습니다.
+에 있는 기여도 ADF를 [!DNL Query Service] 사용하면 이러한 할당을 쿼리 시간에 정의하고 생성할 수 있습니다.
 
 이 예에서는 마지막 터치 기여도에 중점을 두지만 Adobe에서는 첫 번째 터치 기여도를 제공합니다.
 
 >[!NOTE]
 >
->시간 초과와 이벤트 기반 만료가 있는 기타 옵션은 향후 버전의 쿼리 서비스에서 사용할 수 있습니다.
+>시간 초과 및 이벤트 기반 만료가 있는 기타 옵션은 향후 버전의 버전에서 사용할 수 있습니다 [!DNL Query Service].
 
 **구문:**
 
