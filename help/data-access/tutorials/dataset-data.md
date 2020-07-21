@@ -4,17 +4,17 @@ solution: Experience Platform
 title: 데이터 액세스 개요
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '1367'
-ht-degree: 2%
+source-wordcount: '1332'
+ht-degree: 3%
 
 ---
 
 
-# 데이터 액세스 API를 사용하여 데이터 집합 데이터 쿼리
+# API를 사용하여 데이터 집합 [!DNL Data Access] 쿼리
 
-이 문서에서는 Adobe Experience Platform의 데이터 액세스 API를 사용하여 데이터 세트 내에 저장된 데이터를 찾고, 액세스하고, 다운로드하는 방법을 다루는 단계별 자습서를 제공합니다. 페이징이나 부분 다운로드와 같은 데이터 액세스 API의 고유한 기능 중 일부를 소개합니다.
+이 문서에서는 Adobe Experience Platform의 API를 사용하여 데이터 세트 내에 저장된 데이터를 찾고, 액세스하고, 다운로드하는 방법을 다루는 단계별 자습서를 [!DNL Data Access] 제공합니다. 페이징이나 부분 다운로드 등 API의 일부 고유한 기능에도 소개됩니다. [!DNL Data Access]
 
 ## 시작하기
 
@@ -24,23 +24,23 @@ ht-degree: 2%
 
 ### 샘플 API 호출 읽기
 
-이 자습서에서는 요청의 서식을 지정하는 방법을 보여주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 올바른 형식의 요청 페이로드가 포함됩니다. API 응답으로 반환된 샘플 JSON도 제공됩니다. 샘플 API 호출 설명서에 사용된 규칙에 대한 자세한 내용은 Experience Platform 문제 해결 안내서의 예제 API 호출 [](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 읽기 방법에 대한 섹션을 참조하십시오.
+이 자습서에서는 요청의 서식을 지정하는 방법을 보여주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 올바른 형식의 요청 페이로드가 포함됩니다. API 응답으로 반환된 샘플 JSON도 제공됩니다. 샘플 API 호출 설명서에 사용된 규칙에 대한 자세한 내용은 문제 해결 안내서의 예제 API 호출 [을 읽는](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 방법에 대한 섹션을 [!DNL Experience Platform] 참조하십시오.
 
 ### 필수 헤더에 대한 값 수집
 
-Platform API를 호출하려면 먼저 [인증 자습서를 완료해야 합니다](../../tutorials/authentication.md). 인증 자습서를 완료하면 아래와 같이 모든 Experience Platform API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
+API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 합니다](../../tutorials/authentication.md). 인증 자습서를 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
 
 - 인증: 무기명 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Experience Platform의 모든 리소스는 특정 가상 샌드박스와 분리됩니다. Platform API에 대한 모든 요청에는 작업이 수행할 샌드박스의 이름을 지정하는 헤더가 필요합니다.
+의 모든 리소스 [!DNL Experience Platform] 는 특정 가상 샌드박스와 분리됩니다. API에 대한 모든 [!DNL Platform] 요청에는 작업이 수행할 샌드박스의 이름을 지정하는 헤더가 필요합니다.
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Platform의 샌드박스에 대한 자세한 내용은 [샌드박스 개요 설명서를 참조하십시오](../../sandboxes/home.md).
+>의 샌드박스에 대한 자세한 내용 [!DNL Platform]은 [샌드박스 개요 설명서를 참조하십시오](../../sandboxes/home.md).
 
 페이로드(POST, PUT, PATCH)가 포함된 모든 요청에는 추가 헤더가 필요합니다.
 
@@ -48,23 +48,23 @@ Experience Platform의 모든 리소스는 특정 가상 샌드박스와 분리�
 
 ## 시퀀스 다이어그램
 
-이 자습서는 아래 시퀀스 다이어그램에 나와 있는 단계에 따라 데이터 액세스 API의 핵심 기능을 강조 표시합니다.</br>
+이 자습서는 아래 시퀀스 다이어그램에 나와 있는 단계에 따라 [!DNL Data Access] API의 핵심 기능을 강조 표시합니다.</br>
 ![](../images/sequence_diagram.png)
 
-카탈로그 API를 사용하면 배치 및 파일에 대한 정보를 검색할 수 있습니다. 데이터 액세스 API를 사용하면 파일 크기에 따라 HTTP를 통해 이러한 파일을 전체 또는 부분 다운로드로 액세스하고 다운로드할 수 있습니다.
+API를 [!DNL Catalog] 사용하면 배치 및 파일에 대한 정보를 검색할 수 있습니다. API를 통해 파일 크기에 따라 HTTP를 통해 이러한 파일을 전체 또는 부분 다운로드로 액세스하고 다운로드할 수 있습니다. [!DNL Data Access]
 
 ## 데이터 찾기
 
-데이터 액세스 API를 사용하기 전에 액세스하려는 데이터의 위치를 식별해야 합니다. 카탈로그 API에는 조직의 메타데이터를 찾아보고 액세스하려는 일괄 처리 또는 파일의 ID를 검색하는 데 사용할 수 있는 두 개의 끝점이 있습니다.
+API를 사용하기 전에 [!DNL Data Access] 액세스하려는 데이터의 위치를 식별해야 합니다. API에는 조직의 메타데이터를 검색하고 액세스하려는 일괄 처리 또는 파일의 ID를 검색하는 데 사용할 수 있는 두 개의 끝점이 있습니다. [!DNL Catalog]
 
 - `GET /batches`: 조직 아래의 배치 목록을 반환합니다.
 - `GET /dataSetFiles`: 조직의 파일 목록을 반환합니다.
 
-카탈로그 API에 있는 끝점의 전체 목록은 [API 참조를 참조하십시오](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml).
+API의 포괄적인 엔드포인트 목록은 [!DNL Catalog] API 참조를 참조하십시오 [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml).
 
 ## IMS 조직 아래에서 배치 목록 검색
 
-카탈로그 API를 사용하여 조직 아래에 배치의 목록을 반환할 수 있습니다.
+API를 [!DNL Catalog] 사용하여 조직에서 배치 목록을 반환할 수 있습니다.
 
 **API 형식**
 
@@ -195,7 +195,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?createdAf
 
 ## 특정 배치에 속하는 모든 파일 목록 검색
 
-액세스하려는 일괄 처리 ID가 있으므로 데이터 액세스 API를 사용하여 해당 일괄 처리에 속하는 파일 목록을 가져올 수 있습니다.
+액세스하려는 일괄 처리 ID가 있으므로 [!DNL Data Access] API를 사용하여 해당 일괄 처리에 속하는 파일 목록을 가져올 수 있습니다.
 
 **API 형식**
 
@@ -252,7 +252,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/5c6f332168
 
 ## 파일 ID를 사용하여 파일에 액세스
 
-고유한 파일 ID가 있는 경우 데이터 액세스 API를 사용하여 파일 이름, 크기(바이트), 다운로드 링크 등 파일에 대한 특정 세부 정보에 액세스할 수 있습니다.
+고유한 파일 ID가 있는 경우 [!DNL Data Access] API를 사용하여 파일 이름, 크기(바이트), 다운로드 링크 등 파일의 특정 세부 정보에 액세스할 수 있습니다.
 
 **API 형식**
 
@@ -385,7 +385,7 @@ curl -I 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb2-44
 
 ## 파일 내용 액세스
 
-데이터 액세스 API를 사용하여 파일의 내용에 액세스할 수도 있습니다.
+또한 [!DNL Data Access] API를 사용하여 파일의 내용에 액세스할 수도 있습니다.
 
 **API 형식**
 
@@ -414,7 +414,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb
 
 ## 파일의 일부 내용 다운로드
 
-데이터 액세스 API를 사용하면 파일을 청크 단위로 다운로드할 수 있습니다. 파일에서 특정 바이트 범위를 다운로드하도록 `GET /files/{FILE_ID}` 요청하는 동안 범위 헤더를 지정할 수 있습니다. 범위를 지정하지 않으면 기본적으로 API가 전체 파일을 다운로드합니다.
+API를 통해 파일을 청크 단위로 다운로드할 수 있습니다. [!DNL Data Access] 파일에서 특정 바이트 범위를 다운로드하도록 `GET /files/{FILE_ID}` 요청하는 동안 범위 헤더를 지정할 수 있습니다. 범위를 지정하지 않으면 기본적으로 API가 전체 파일을 다운로드합니다.
 
 이전 섹션의 [](#retrieve-the-metadata-of-a-file) HEAD 예제에서는 특정 파일의 크기를 바이트 단위로 보여 줍니다.
 
@@ -454,7 +454,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb
 
 ## API 응답 페이지 매김 구성
 
-데이터 액세스 API 내의 응답에 페이지가 지정됩니다. 기본적으로 페이지당 최대 항목 수는 100개입니다. 페이징 매개 변수를 사용하여 기본 동작을 수정할 수 있습니다.
+API 내의 응답에 [!DNL Data Access] 페이지가 매겨집니다. 기본적으로 페이지당 최대 항목 수는 100개입니다. 페이징 매개 변수를 사용하여 기본 동작을 수정할 수 있습니다.
 
 - `limit`: &quot;limit&quot; 매개 변수를 사용하여 요구 사항에 따라 페이지당 항목 수를 지정할 수 있습니다.
 - `start`: 오프셋을 &quot;시작&quot; 쿼리 매개 변수로 설정할 수 있습니다.
