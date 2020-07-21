@@ -4,14 +4,17 @@ solution: Experience Platform
 title: PSQL과 연결
 topic: connect
 translation-type: tm+mt
-source-git-commit: f5bc9beb59e83b0411d98d901d5055122a124d07
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+workflow-type: tm+mt
+source-wordcount: '170'
+ht-degree: 1%
 
 ---
 
 
 # PSQL과 연결
 
-PSQL 파섹 다음 지침에 따라 설치할 수 있습니다.
+PSQL은 컴퓨터에 설치할 때 나타나는 명령줄 인터페이스 [!DNL Postgres] 입니다. 다음 지침에 따라 설치할 수 있습니다.
 
 ## Mac에 게시물 설치
 
@@ -29,21 +32,21 @@ brew install postgres
 which psql
 ```
 
-이러한 명령을 실행한 후 다음을 볼 수 있습니다.
+이러한 명령을 실행한 후 다음을 확인해야 합니다.
 
 ```shell
 /usr/local/bin/psql
 ```
 
-## PC에 게시물 설치
+## PC [!DNL Postgres] 에 설치
 
-이 [위치에서](https://www.postgresql.org/download/windows/)게시물을 다운로드하고 설치합니다.
+이 [!DNL Postgres] 위치 [에서 다운로드하여 설치합니다](https://www.postgresql.org/download/windows/).
 
 경로 변수 편집:
 
 ![이미지](../images/clients/psql/path.png)
 
-&quot;Postgres&quot;가 포함된 두 줄을 추가합니다.
+&quot;[!DNL Postgres].&quot;가 포함된 두 줄을 추가합니다.
 
 업데이트를 저장한 다음 명령 프롬프트를 열고 다음을 입력합니다.
 
@@ -57,17 +60,17 @@ psql -V
 psql (PostgreSQL) 9.5.14
 ```
 
-## Connect PSQL 및 쿼리 서비스
+## Connect PSQL 및 [!DNL Query Service]
 
-&quot;Connect BI 도구&quot; 페이지에서 플랫폼 UI로 돌아갑니다.
+[ [!DNL Platform] Connect BI 도구] 페이지의 *[!UICONTROL UI로]* 돌아갑니다.
 
-&quot;PSQL 명령&quot;에 대한 **복사를** 클릭합니다.
+[PSQL **[!UICONTROL 명령 복사]** ]를 *[!UICONTROL 클릭합니다]*.
 
 ![이미지](../images/clients/psql/connect-bi.png)
 
->[!IMPORTANT]:PC를 사용하는 경우 텍스트 편집기를 사용하여 명령 문자열에서 줄 바꿈을 제거한 다음 문자열을 복사합니다.
+>[!IMPORTANT]: PC를 사용하는 경우 텍스트 편집기를 사용하여 명령 문자열에서 줄 바꿈을 제거한 다음 문자열을 복사합니다.
 
-명령 문자열을 터미널 또는 명령 창에 붙여 넣고 Enter 키를 누릅니다.
+명령 문자열을 터미널 또는 명령 창에 붙여넣고 Enter 키를 누릅니다.
 
 다음과 같은 결과가 표시됩니다.
 
