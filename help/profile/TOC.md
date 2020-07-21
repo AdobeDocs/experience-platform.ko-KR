@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: 실시간 고객 프로필 도움말
 translation-type: tm+mt
-source-git-commit: 57ef7df4b9323b58a90660d515ade61a3974779f
+source-git-commit: d80d49df9c5ac197bdc7f851bbfff18d9b3019d4
 workflow-type: tm+mt
 source-wordcount: '78'
 ht-degree: 24%
@@ -31,6 +31,6 @@ ht-degree: 24%
    * [데이터 세트 구성(&amp;) [!DNL Profile]  [!DNL Identity]](tutorials/dataset-configuration.md)
    * [기타 튜토리얼](https://docs.adobe.com/content/help/ko-KR/experience-platform/tutorials/home.html)
 * [개인 정보 요청 처리](privacy.md)
-* [문제 해결 가이드](troubleshooting.md)
+* [[!DNL Profile] 문제 해결 안내서](troubleshooting.md)
 * [API 참조](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)
 * [[!DNL Platform] 릴리스 노트](https://www.adobe.com/go/platform-release-notes-en)
