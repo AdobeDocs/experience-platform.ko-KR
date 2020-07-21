@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 옵트아웃 준수
 topic: overview
 translation-type: tm+mt
-source-git-commit: f156679601c2ed0bb933a66a56661c29c1b9c778
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '954'
+source-wordcount: '945'
 ht-degree: 0%
 
 ---
@@ -68,13 +68,13 @@ CPA 옵트아웃 요청을 승인하려면 조합 스키마의 일부인 스키�
 
 믹싱의 전체 구조를 보려면 [!DNL Profile Privacy] XDM 공개 GitHub 저장소 [](https://github.com/adobe/xdm/blob/master/schemas/context/profile-privacy.schema.json) 를 참조하거나 Platform UI를 사용하여 혼합을 미리 보십시오.
 
-### 프로필 환경 설정 세부 사항
+### [!DNL Profile Preferences Details]
 
-[프로필 환경 설정 세부 사항] 믹스인에서는 이메일 포맷, 기본 언어 및 표준 시간대 등 고객 프로파일에 대한 기본 설정을 나타내는 여러 필드를 제공합니다. 이 믹스에 포함된 필드 중 하나인 OptInOut(`optInOut`)을 사용하면 개별 채널에 대해 옵트아웃 값을 설정할 수 있습니다.
+이 [!DNL Profile Preferences Details] 믹스인에서는 이메일 포맷, 기본 언어, 표준 시간대 등 고객 프로파일에 대한 기본 설정을 나타내는 여러 필드를 제공합니다. 이 믹스에 포함된 필드 중 하나인 OptInOut(`optInOut`)을 사용하면 개별 채널에 대해 옵트아웃 값을 설정할 수 있습니다.
 
 ![](images/opt-outs/profile-preferences-details.png)
 
-[프로필 환경 설정 세부 사항] 믹스에는 옵트아웃과 관련된 다음 필드가 포함되어 있습니다.
+믹스인에는 옵트아웃과 관련된 다음 필드가 포함되어 있습니다. [!DNL Profile Preferences Details]
 
 - 옵트인아웃(`optInOut`): 각 키가 통신 채널에 대해 유효하고 알려진 URI를 나타내고 각 채널에 대해 옵트아웃의 활성 상태를 나타내는 개체입니다. 각 채널에는 다음 네 가지 값 중 하나를 가질 수 있습니다.
    - 제공되지 않음(`not_provided`): 이 채널에 대해 옵트아웃 요청이 제공되지 않았습니다.
@@ -129,6 +129,6 @@ In some instances, such as building a segment of people who have opted out, it m
 
 ## 다음 단계
 
-API 및 사용자 인터페이스를 통해 세그먼트 정의 및 대상을 사용한 작업을 포함하여 세그멘테이션에 대한 자세한 내용은 세그멘테이션 [개요를 읽으십시오](./home.md).
+API와 사용자 인터페이스를 통해 세그먼트 정의 및 대상을 사용한 작업을 비롯한 세그멘테이션에 대한 자세한 내용은 세그멘테이션 [개요를 읽으십시오](./home.md).
 
 법률 및 조직의 개인 정보 보호 규정 준수를 자동화하는 방법 [!DNL Platform]을 비롯하여 내부 데이터 개인 정보 [!DNL Privacy Service] [!DNL Privacy Service](../privacy-service/home.md)에 대한 자세한 내용은
