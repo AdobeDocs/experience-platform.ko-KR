@@ -4,9 +4,9 @@ seo-title: 소셜 네트워크 대상 워크플로우
 description: 소셜 네트워크 및 계정에 연결하는 지침
 seo-description: 소셜 네트워크 및 계정에 연결하는 지침
 translation-type: tm+mt
-source-git-commit: 3c598454a868139b7604c5c7ca2b98fa0f1bb961
+source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
 workflow-type: tm+mt
-source-wordcount: '473'
+source-wordcount: '464'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 ## 소셜 네트워크 대상을 만드는 워크플로
 
-이 자습서는 Facebook을 예로 사용하지만 제품에 한 번 더 추가되면 Adobe 실시간 고객 데이터 Platform의 워크플로우는 모든 소셜 네트워크 대상에 대해 동일합니다.
+이 자습서는 예를 [!DNL Facebook] 들어 사용하지만 제품에 한 번 더 추가되면 Adobe 실시간 고객 데이터 Platform의 워크플로우는 모든 소셜 네트워크 대상에 대해 동일합니다.
 
 1. 대상 **[!UICONTROL > 카탈로그에서]****[!UICONTROL 소셜]** 카테고리로 스크롤합니다. 원하는 소셜 네트워크 대상을 선택한 다음 **[!UICONTROL 연결 대상을 선택합니다]**.
 
@@ -39,7 +39,7 @@ ht-degree: 0%
    >[!IMPORTANT]
    >
    > * 소셜 네트워크 *대상에 대해 기본적으로 단일 ID 개인화* 마케팅 사용 사례가 선택되므로 제거할 수 없습니다.
-   > * Facebook 대상. **[!UICONTROL 계정 ID는]** Facebook 광고 계정 ID입니다. Facebook 광고 관리자에서 이 ID를 찾을 수 있습니다. 아래 표시된 대로 ID에 접두사를 `act_` 붙입니다.
+   > * 대상 [!DNL Facebook] 을 참조하십시오. **[!UICONTROL 계정 ID가]** 귀하의 [!DNL Facebook Ad Account ID]것입니다. 이 ID는 [!DNL Facebook Ads Manager] 아래 표시된 대로 ID에 접두사를 `act_` 붙입니다.
 
 
    ![소셜 네트워크 대상에 연결 - 설정 단계](/help/rtcdp/destinations/assets/social-networks-setup-step.png)
