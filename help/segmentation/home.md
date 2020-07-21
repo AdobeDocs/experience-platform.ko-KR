@@ -4,17 +4,17 @@ solution: Experience Platform
 title: Adobe Experience Platform 세그멘테이션 서비스
 topic: overview
 translation-type: tm+mt
-source-git-commit: f44e42a4faa3b10f147dbaf929048054ce0bec42
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '1986'
+source-wordcount: '1971'
 ht-degree: 0%
 
 ---
 
 
-# Adobe Experience Platform 세그멘테이션 서비스 개요
+# Adobe Experience Platform [!DNL Segmentation Service] overview
 
-Adobe Experience Platform 세그멘테이션 서비스는 세그먼트를 작성하고 데이터로부터 대상을 생성할 수 있는 사용자 인터페이스와 RESTful API를 [!DNL Real-time Customer Profile] 제공합니다. 이러한 세그먼트는 Platform에 중앙에서 구성 및 관리되며, 모든 Adobe 솔루션에서 즉시 액세스할 수 있습니다.
+Adobe Experience Platform [!DNL Segmentation Service] 는 세그먼트를 작성하고 데이터에서 대상을 생성할 수 있는 사용자 인터페이스와 RESTful API를 [!DNL Real-time Customer Profile] 제공합니다. 이러한 세그먼트는 중앙 집중식으로 구성 및 관리되며, 모든 Adobe 솔루션에서 즉시 액세스할 수 [!DNL Platform]있습니다.
 
 이 문서에서는 Adobe Experience Platform에서 수행하는 역할 [!DNL Segmentation Service] 에 대한 개요를 제공합니다.
 
@@ -128,7 +128,7 @@ API 또는 API를 통해 세그먼트를 구성하려면 세그먼트 이름 [!D
 
 ## 다중 엔티티 세그먼테이션 {#multi-entity}
 
-고급 다중 엔티티 세그먼테이션 기능을 사용하면 여러 XDM 클래스를 사용하여 세그먼트를 만들어 개인 스키마에 확장을 추가할 수 있습니다. 따라서 세그멘테이션 서비스는 세그먼트 정의 중에 프로필 데이터 저장소에 대한 기본인 것처럼 추가 필드에 액세스할 수 있습니다.
+고급 다중 엔티티 세그먼테이션 기능을 사용하면 여러 XDM 클래스를 사용하여 세그먼트를 만들어 개인 스키마에 확장을 추가할 수 있습니다. 그 결과, 프로필 데이터 저장소가 기본인 것처럼 세그먼트 정의 중에 추가 필드에 액세스할 [!DNL Segmentation Service] 수 있습니다.
 
 다중 엔티티 세그먼테이션은 비즈니스 요구 사항과 관련된 데이터를 기반으로 고객을 식별하는 데 필요한 유연성을 제공합니다. 이 프로세스는 데이터베이스 쿼리에 대한 전문 지식 없이도 빠르고 쉽게 수행할 수 있습니다. 이를 통해 데이터 스트림을 값비싼 변경 작업을 하지 않아도 되고 백엔드 데이터 병합을 기다릴 필요 없이 주요 데이터를 세그먼트에 추가할 수 있습니다.
 
@@ -140,7 +140,7 @@ API 또는 API를 통해 세그먼트를 구성하려면 세그먼트 이름 [!D
 
 이러한 고급 세분화 기능의 가치를 설명하려면 마케터와 공동으로 작업하는 데이터 아키텍트를 고려해 보십시오.
 
-이 예에서는 데이터 아키텍트가 키를 사용하여 개별(XDM 개인 프로필 및 XDM ExperienceEvent를 기본 클래스로 포함하는 스키마로 구성됨)의 데이터를 다른 클래스에 결합하고 있습니다. 한 번 가입하면 데이터 아키텍처나 마케터는 세그먼트 정의 동안 이러한 새 필드를 기본 클래스 스키마에 대한 기본 필드인 것처럼 사용할 수 있습니다.
+이 예제에서 데이터 아키텍트는 키를 사용하여 개별(기본 클래스로 구성되고 [!DNL XDM Individual Profile] 있는 스키마로 구성됨)에 대한 데이터 [!DNL XDM ExperienceEvent] 를 다른 클래스에 결합하고 있습니다. 한 번 가입하면 데이터 아키텍처나 마케터는 세그먼트 정의 동안 이러한 새 필드를 기본 클래스 스키마에 대한 기본 필드인 것처럼 사용할 수 있습니다.
 
 **문제**
 
@@ -154,7 +154,7 @@ API 또는 API를 통해 세그먼트를 구성하려면 세그먼트 이름 [!D
 >
 >이 예에서는 데이터 아키텍트가 이미 ID 네임스페이스를 설정했다고 가정합니다.
 
-데이터 설계자는 API를 사용하여 ExperienceEvent 스키마의 키를 &quot;products&quot; 클래스와 연결합니다. 이렇게 하면 데이터 설계자가 ExperienceEvent 스키마가 기본인 것처럼 &quot;products&quot; 클래스의 추가 필드를 사용할 수 있습니다. 구성 작업의 마지막 단계로서 데이터 아키텍처는 적절한 데이터를 가져와야 합니다 [!DNL Real-time Customer Profile]. 이 작업은 &quot;제품&quot; 데이터 세트를 사용하여 수행할 수 있습니다 [!DNL Profile]. 구성 작업이 완료되면 데이터 아키텍처나 마케터가 타겟 세그먼트를 [!DNL Segment Builder]
+데이터 설계자는 API를 사용하여 스키마의 키를 &quot;products&quot; 클래스와 [!DNL ExperienceEvent] 연결합니다. 이렇게 하면 데이터 설계자가 스키마를 기본처럼 &quot;products&quot; 클래스의 추가 필드를 사용할 수 [!DNL ExperienceEvent] 있습니다. 구성 작업의 마지막 단계로서 데이터 아키텍처는 적절한 데이터를 가져와야 합니다 [!DNL Real-time Customer Profile]. 이 작업은 &quot;제품&quot; 데이터 세트를 사용하여 수행할 수 있습니다 [!DNL Profile]. 구성 작업이 완료되면 데이터 아키텍처나 마케터가 타겟 세그먼트를 [!DNL Segment Builder]
 
 XDM 클래스 간의 관계를 정의하는 방법을 알아보려면 [스키마 구성 개요를](../xdm/schema/composition.md#union) 참조하십시오.
 
@@ -225,6 +225,6 @@ Adding this specific data to the segment itself allows execution engines to pers
 - [!DNL Segmentation] 은 프로필 저장소에서 프로필 하위 집합을 정의하는 프로세스로서, 원하는 마케팅 가능 그룹의 동작 또는 특성을 규명할 수 있습니다. [!DNL Segmentation Service] 이 프로세스를 가능하게 합니다.
 - 세그먼트를 계획할 때는 다른 세그먼트에서 세그먼트를 참조하고 결합할 수 있음을 염두에 두십시오.
 - 프로필 데이터, 관련 시계열 데이터 또는 둘 다를 기반으로 하는 규칙에서 세그먼트를 작성할 수 있습니다.
-- 세그먼트는 on-demand 또는 지속적으로 평가할 수 있습니다. On-Demand로 평가하면 모든 프로필 데이터가 세그먼트 정의를 한 번에 통과됩니다. 지속적으로 평가되면 데이터가 Platform에 진입하면 세그먼트 정의를 통해 스트리밍됩니다.
+- 세그먼트는 on-demand 또는 지속적으로 평가할 수 있습니다. On-Demand로 평가하면 모든 프로필 데이터가 세그먼트 정의를 한 번에 통과됩니다. 지속적으로 평가되면 데이터가 입력될 때 세그먼트 정의를 통해 스트리밍됩니다 [!DNL Platform].
 
 UI에서 세그먼트를 정의하는 방법을 알려면 세그먼트 빌더 [안내서를 참조하십시오](./ui/overview.md). API를 사용하여 세그먼트 정의를 작성하는 방법에 대한 자세한 내용은 API를 사용하여 세그먼트 [만들기에 대한 자습서를 참조하십시오](./tutorials/create-a-segment.md).
