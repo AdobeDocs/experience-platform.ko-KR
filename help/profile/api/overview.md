@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: 실시간 고객 프로필 API 개발자 가이드
 topic: guide
 translation-type: tm+mt
-source-git-commit: 57ef7df4b9323b58a90660d515ade61a3974779f
+source-git-commit: d80d49df9c5ac197bdc7f851bbfff18d9b3019d4
 workflow-type: tm+mt
-source-wordcount: '690'
+source-wordcount: '704'
 ht-degree: 0%
 
 ---
@@ -19,6 +19,8 @@ ht-degree: 0%
 API에는 아래에 나와 있는 여러 끝점이 포함되어 있습니다. [!DNL Real-time Customer Profile] 자세한 내용은 개별 종단점 안내서를 참조하고 필요한 헤더, 샘플 API 호출 읽기 등에 대한 [자세한 내용은 시작 안내서](getting-started.md) 를 참조하십시오.
 
 사용 가능한 모든 끝점 및 CRUD 작업을 보려면 [실시간 고객 프로필 API 참조 스웨거를 참조하십시오](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml).
+
+UI에서 [!DNL Real-time Customer Profile] 데이터 작업에 대한 [!DNL Experience Platform] 지침은 [프로필 사용 안내서를 참조하십시오](../ui/user-guide.md).
 
 ## (알파) 계산된 속성 {#computed-attributes}
 
@@ -52,4 +54,4 @@ UI를 사용하여 정책 병합 작업에 대한 지침은 정책 [!DNL Platfor
 
 ## 다음 단계 {#next-steps}
 
-API를 사용하여 호출을 시작하려면 [!DNL Real-time Customer Profile] 시작 안내서 [를 읽은 다음 끝점 안내서 중 하나를 선택하여 특정](getting-started.md) [!DNL Profile]관련 끝점의 사용 방법을 학습합니다. UI를 사용한 [!DNL Profile] 데이터 작업에 대한 자세한 내용은 [!DNL Platform] 실시간 고객 프로필 사용 설명서를 참조하십시오 [](../ui/user-guide.md).
+API를 사용하여 호출을 시작하려면 [!DNL Real-time Customer Profile] 시작 안내서 [를 읽은 다음 끝점 안내서 중 하나를 선택하여 특정](getting-started.md) [!DNL Profile]관련 끝점의 사용 방법을 학습합니다. UI를 [!DNL Profile] 사용하여 데이터 [!DNL Experience Platform] 작업을 하려면 [실시간 고객 프로필 사용 안내서를 참조하십시오](../ui/user-guide.md).
