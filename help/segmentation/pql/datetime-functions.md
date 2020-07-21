@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 날짜 및 시간 함수
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '471'
+source-wordcount: '468'
 ht-degree: 4%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 4%
 
 # 날짜 및 시간 함수
 
-날짜 및 시간 함수는 PQL(프로필 쿼리 언어) 내의 값에 대한 날짜 및 시간 작업을 수행하는 데 사용됩니다. 다른 PQL 기능에 대한 자세한 내용은 [프로필 쿼리 언어 개요를 참조하십시오](./overview.md).
+날짜 및 시간 함수는 [!DNL Profile Query Language] (PQL) 내의 값에 대해 날짜 및 시간 작업을 수행하는 데 사용됩니다. 다른 PQL 기능에 대한 자세한 내용은 [프로필 쿼리 언어 개요를 참조하십시오](./overview.md).
 
 ## 현재 달
 
