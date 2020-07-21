@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 효과적인 정책 보기
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '273'
+source-wordcount: '265'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # 효과적인 정책 보기
 
-현재 사용자에 대한 유효한 정책을 보려면 액세스 제어 API에서 종단점에 대한 POST 요청을 `/acl/effective-policies` 수행하십시오. 검색할 권한 및 리소스 유형은 배열 형태로 요청 페이로드에서 제공해야 합니다. 이것은 아래의 예제 API 호출에서 입증되었습니다.
+현재 사용자에 대한 유효한 정책을 보려면 API의 종단점에 대한 POST `/acl/effective-policies` 요청을 [!DNL Access Control] 수행하십시오. 검색할 권한 및 리소스 유형은 배열 형태로 요청 페이로드에서 제공해야 합니다. 이것은 아래의 예제 API 호출에서 입증되었습니다.
 
 **API 형식**
 
@@ -24,7 +24,7 @@ POST /acl/effective-policies
 
 **요청**
 
-다음 요청은 현재 사용자에 대한 &quot;데이터 집합 관리&quot; 권한에 대한 정보와 &quot;스키마&quot; 리소스 유형에 대한 액세스를 검색합니다.
+다음 요청은 데이터 집합[!UICONTROL 관리 권한에 대한 정보를 검색하고 현재 사용자에 대한 &quot;]스키마[!UICONTROL &quot; 리소스 유형에 대한 액세스를]가져옵니다.
 
 ```shell
 curl -X POST \
@@ -65,11 +65,11 @@ curl -X POST \
 
 ## 다음 단계
 
-이 문서에서는 액세스 제어 API를 호출하여 리소스 유형에 대한 활성 권한 및 관련 정책에 대한 정보를 반환하는 방법을 다룹니다. Experience Platform의 액세스 제어에 대한 자세한 내용은 [액세스 제어 개요를 참조하십시오](../home.md).
+이 문서에서는 리소스 유형에 대한 활성 권한 및 관련 정책에 대한 정보를 반환하기 위해 [!DNL Access Control] API를 호출하는 방법에 대해 다룹니다. 액세스 제어에 대한 자세한 내용 [!DNL Experience Platform]은 [액세스 제어 개요를 참조하십시오](../home.md).
 
 ## 부록
 
-이 섹션에서는 액세스 제어 API 사용에 대한 보충 정보를 제공합니다.
+이 섹션에서는 [!DNL Access Control] API 사용에 대한 보충 정보를 제공합니다.
 
 ### 허용된 권한 및 리소스 유형
 
