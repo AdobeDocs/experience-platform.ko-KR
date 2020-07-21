@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 스트리밍 레코드 데이터
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 6a371aab5435bac97f714e5cf96a93adf4aa0303
+source-git-commit: 80392190c7fcae9b6e73cc1e507559f834853390
 workflow-type: tm+mt
-source-wordcount: '1107'
+source-wordcount: '1059'
 ht-degree: 2%
 
 ---
@@ -14,15 +14,15 @@ ht-degree: 2%
 
 # Adobe Experience Platform으로 레코드 데이터 스트리밍
 
-이 자습서는 Adobe Experience Platform 데이터 통합 서비스 API의 일부인 스트리밍 통합 API를 사용하는 데 도움이 됩니다.
+이 자습서는 Adobe Experience Platform API의 일부인 스트리밍 통합 API를 사용하는 데 도움이 [!DNL Data Ingestion Service] 됩니다.
 
 ## 시작하기
 
 이 자습서에서는 다양한 Adobe Experience Platform 서비스에 대한 작업 지식이 필요합니다. 이 자습서를 시작하기 전에 다음 서비스에 대한 설명서를 검토하십시오.
 
-- [XDM(Experience Data Model)](../../xdm/home.md): Platform이 경험 데이터를 구성하는 표준화된 프레임워크입니다.
-- [실시간 고객 프로필](../../profile/home.md): 여러 소스에서 집계된 데이터를 기반으로 통합된 소비자 프로필을 실시간으로 제공합니다.
-- [스키마 레지스트리 개발자 가이드](../../xdm/api/getting-started.md): 스키마 레지스트리 API의 사용 가능한 각 끝점과 이러한 끝점에 대한 호출 방법을 다루는 포괄적인 안내서입니다. 여기에는 이 자습서 전체의 호출에 표시되는 사용자 `{TENANT_ID}`를 아는 것과 수렴을 위한 데이터 세트를 만드는 데 사용되는 스키마를 만드는 방법을 아는 것이 포함됩니다.
+- [!DNL Experience Data Model (XDM)](../../xdm/home.md): 경험 데이터를 [!DNL Platform] 구성하는 표준화된 프레임워크
+- [!DNL Real-time Customer Profile](../../profile/home.md): 여러 소스에서 집계된 데이터를 기반으로 통합된 소비자 프로필을 실시간으로 제공합니다.
+- [스키마 레지스트리 개발자 가이드](../../xdm/api/getting-started.md): API의 사용 가능한 각 끝점과 이러한 끝점에 대한 [!DNL Schema Registry] 호출 방법을 다루는 포괄적인 안내서입니다. 여기에는 이 자습서 전체의 호출에 표시되는 사용자 `{TENANT_ID}`를 아는 것과 수렴을 위한 데이터 세트를 만드는 데 사용되는 스키마를 만드는 방법을 아는 것이 포함됩니다.
 
 또한 이 자습서에서는 스트리밍 연결을 이미 만들어야 합니다. 스트리밍 연결 만들기에 대한 자세한 내용은 스트리밍 연결 [만들기 자습서를 참조하십시오](./create-streaming-connection.md).
 
@@ -30,31 +30,31 @@ ht-degree: 2%
 
 ### 샘플 API 호출 읽기
 
-이 안내서에서는 요청의 서식을 지정하는 방법을 보여주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 올바른 형식의 요청 페이로드가 포함됩니다. API 응답으로 반환된 샘플 JSON도 제공됩니다. 샘플 API 호출 설명서에 사용된 규칙에 대한 자세한 내용은 Experience Platform 문제 해결 안내서의 예제 API 호출 [](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 읽기 방법에 대한 섹션을 참조하십시오.
+이 안내서에서는 요청의 서식을 지정하는 방법을 보여주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 올바른 형식의 요청 페이로드가 포함됩니다. API 응답으로 반환된 샘플 JSON도 제공됩니다. 샘플 API 호출 설명서에 사용된 규칙에 대한 자세한 내용은 문제 해결 안내서의 예제 API 호출 [을 읽는](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 방법에 대한 섹션을 [!DNL Experience Platform] 참조하십시오.
 
 ### 필수 헤더에 대한 값 수집
 
-Platform API를 호출하려면 먼저 [인증 자습서를 완료해야 합니다](../../tutorials/authentication.md). 인증 자습서를 완료하면 아래와 같이 모든 Experience Platform API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
+API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 합니다](../../tutorials/authentication.md). 인증 자습서를 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
 
 - 인증: 무기명 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Experience Platform의 모든 리소스는 특정 가상 샌드박스와 분리됩니다. Platform API에 대한 모든 요청에는 작업이 수행할 샌드박스의 이름을 지정하는 헤더가 필요합니다.
+의 모든 리소스 [!DNL Experience Platform] 는 특정 가상 샌드박스와 분리됩니다. API에 대한 모든 [!DNL Platform] 요청에는 작업이 수행할 샌드박스의 이름을 지정하는 헤더가 필요합니다.
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Platform의 샌드박스에 대한 자세한 내용은 [샌드박스 개요 설명서를 참조하십시오](../../sandboxes/home.md).
+>의 샌드박스에 대한 자세한 내용 [!DNL Platform]은 [샌드박스 개요 설명서를 참조하십시오](../../sandboxes/home.md).
 
 페이로드(POST, PUT, PATCH)가 포함된 모든 요청에는 추가 헤더가 필요합니다.
 
 - 컨텐츠 유형: application/json
 
-## XDM 개별 프로필 클래스를 기반으로 스키마 작성
+## 클래스 기반 스키마 [!DNL XDM Individual Profile] 작성
 
-데이터 세트를 만들려면 먼저 XDM 개별 프로필 클래스를 구현하는 새 스키마를 만들어야 합니다. 스키마 생성 방법에 대한 자세한 내용은 스키마 [레지스트리 API 개발자 안내서를 참조하십시오](../../xdm/api/getting-started.md).
+데이터 세트를 만들려면 먼저 클래스를 구현하는 새 스키마를 만들어야 [!DNL XDM Individual Profile] 합니다. 스키마 생성 방법에 대한 자세한 내용은 스키마 [레지스트리 API 개발자 안내서를 참조하십시오](../../xdm/api/getting-started.md).
 
 **API 형식**
 
@@ -96,7 +96,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/sch
 | -------- | ----------- |
 | `title` | 스키마에 사용할 이름입니다. 이 이름은 고유해야 합니다. |
 | `description` | 만들고 있는 스키마에 대한 의미 있는 설명입니다. |
-| `meta:immutableTags` | 이 예에서, `union` 태그는 데이터를 [실시간 고객 프로파일에 유지하는 데 사용됩니다](../../profile/home.md). |
+| `meta:immutableTags` | 이 예에서, 태그는 데이터를 유지하는 데 사용됩니다 `union` [!DNL Real-time Customer Profile](../../profile/home.md). |
 
 **응답**
 
@@ -161,7 +161,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/sch
 
 1. 회사 이메일 주소는 필수 필드가 됩니다. 즉, 이 필드 없이 보낸 메시지는 유효성 검사에 실패하며 인제스트되지 않습니다.
 
-2. 실시간 고객 프로필은 회사 이메일 주소를 식별자로 사용하여 해당 개인에 대한 더 많은 정보를 연결하는 데 도움이 됩니다.
+2. [!DNL Real-time Customer Profile] 는 회사 이메일 주소를 식별자로 사용하여 해당 개인에 대한 더 많은 정보를 연결하는 데 도움이 됩니다.
 
 ### 요청
 
@@ -221,7 +221,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/des
 
 >[!NOTE]
 >
->이 데이터 세트는 **실시간 고객 프로필** 및 **ID 서비스에 대해 활성화됩니다**.
+>이 데이터 집합은 **[!DNL Real-time Customer Profile]** 및 **[!DNL Identity Service]**&#x200B;에 대해 활성화됩니다.
 
 **API 형식**
 
@@ -264,7 +264,7 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
 
 ## 스트리밍 연결에 레코드 데이터 인제스트
 
-데이터 세트 및 스트리밍 연결을 통해 XDM 형식의 JSON 레코드를 인제스트하여 기록 데이터를 Platform에 인제스트할 수 있습니다.
+데이터 세트 및 스트리밍 연결을 통해 XDM 형식의 JSON 레코드를 인제스트하여 기록 데이터를 인제스트할 수 있습니다 [!DNL Platform].
 
 **API 형식**
 
@@ -326,7 +326,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
 
 **응답**
 
-성공적인 응답은 새로 스트리밍된 프로필에 대한 세부 사항과 함께 HTTP 상태 200을 반환합니다.
+성공적인 응답으로 새로 스트리밍된 컨텐츠에 대한 세부 정보가 포함된 HTTP 상태 200이 반환됩니다 [!DNL Profile].
 
 ```json
 {
@@ -348,11 +348,11 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
 
 ## 새로 인제스트한 레코드 데이터 검색
 
-이전에 인제스트한 레코드의 유효성을 확인하려면 프로필 액세스 API를 [사용하여](../../profile/api/entities.md) 레코드 데이터를 검색할 수 있습니다.
+이전에 인제스트한 레코드의 유효성을 확인하려면 를 사용하여 레코드 데이터 [!DNL Profile Access API](../../profile/api/entities.md) 를 검색할 수 있습니다.
 
 >[!NOTE]
 >
->병합 정책 ID가 정의되지 않고 스키마를 사용하는 경우</span>name 또는 relatedSchema</span>.name `_xdm.context.profile`은 프로필 액세스가 **모든** 관련 ID를 가져옵니다.
+>병합 정책 ID가 정의되지 않고 스키마를 사용하는 경우</span>name 또는 relatedSchema</span>.name `_xdm.context.profile`은 [!DNL Profile Access] 모든 **관련 ID를** 가져옵니다.
 
 **API 형식**
 
@@ -431,7 +431,7 @@ curl -X GET 'https://platform.adobe.io/data/core/ups/access/entities?schema.name
 
 ## 다음 단계
 
-이제 이 문서를 읽고 스트리밍 연결을 사용하여 레코드 데이터를 Platform으로 인제스트하는 방법을 알 수 있습니다. 다른 값으로 더 많은 호출을 만들고 업데이트된 값을 검색할 수 있습니다. 또한 Platform UI를 통해 인제스트된 데이터 모니터링을 시작할 수 있습니다. 자세한 내용은 [모니터링 데이터 수집](../quality/monitor-data-flows.md) 안내서를 참조하십시오.
+이제 이 문서를 읽고 스트리밍 연결을 사용하여 레코드 데이터를 인제스트하는 방법을 [!DNL Platform] 알 수 있습니다. 다른 값으로 더 많은 호출을 만들고 업데이트된 값을 검색할 수 있습니다. 또한 [!DNL Platform] UI를 통해 인제스트된 데이터 모니터링을 시작할 수 있습니다. 자세한 내용은 [모니터링 데이터 수집](../quality/monitor-data-flows.md) 안내서를 참조하십시오.
 
 일반적인 스트리밍 통합 방법에 대한 자세한 내용은 [스트리밍 통합 개요를 참조하십시오](../streaming-ingestion/overview.md).
 
