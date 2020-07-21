@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 목록 개체
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '204'
-ht-degree: 1%
+source-wordcount: '197'
+ht-degree: 2%
 
 ---
 
@@ -25,7 +25,7 @@ GET /{OBJECT_TYPE}?{FILTER}={VALUE}&{FILTER_2}={VALUE}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 나열할 카탈로그 개체의 유형입니다. 유효한 개체는 다음과 같습니다. <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 나열할 [!DNL Catalog] 개체의 유형입니다. 유효한 개체는 다음과 같습니다. <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{FILTER}` | 응답으로 반환된 결과를 필터링하는 데 사용되는 쿼리 매개 변수입니다. 여러 매개 변수는 앰퍼샌드(앰퍼샌드)로`&`구분됩니다. 자세한 내용은 카탈로그 데이터 [필터링에](filter-data.md) 대한 가이드를 참조하십시오. |
 
 **요청**
@@ -43,11 +43,11 @@ curl -X GET \
 
 **응답**
 
-성공적인 응답은 요청에 제공된 쿼리 매개 변수를 기준으로 필터링된 키-값 쌍 형식의 카탈로그 개체 목록을 반환합니다. 각 키-값 쌍에 대해 키는 해당 카탈로그 개체에 대한 고유 식별자를 나타내며, 이를 다른 호출에서 사용하여 해당 특정 개체를 [자세히](look-up-object.md) 볼 수 있습니다.
+성공적인 응답은 요청에 제공된 쿼리 매개 변수를 기준으로 필터링된 키-값 쌍 형식의 [!DNL Catalog] 개체 목록을 반환합니다. 각 키-값 쌍에 대해 키는 해당 개체에 대한 고유 식별자를 나타내며, 이 식별자는 다른 호출에서 해당 특정 개체를 [!DNL Catalog] 보고 자세한 내용을 [](look-up-object.md) 위해 사용할 수 있습니다.
 
 >[!NOTE]
 >
->반환된 개체에 쿼리로 지정된 하나 이상의 요청된 속성이 `properties` 포함되어 있지 않으면 &quot;샘플 데이터 집합 3&quot; 및 &quot;샘플 데이터 집합 4&quot;에 표시된 것처럼 응답에서 포함하는 요청된 속성만 반환됩니다.
+>반환된 개체에 쿼리에 의해 지정된 하나 이상의 요청된 속성이 `properties` 포함되어 있지 않으면 응답에 포함된 요청된 속성만 ***`Sample Dataset 3`*** 반환됩니다(아래 및 ***`Sample Dataset 4`*** 참조).
 
 ```json
 {
