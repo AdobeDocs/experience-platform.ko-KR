@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 스키마 편집기를 사용하여 스키마 만들기
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: 661789fa15ea11b0e42060b1b90d74785c04fa1f
 workflow-type: tm+mt
 source-wordcount: '3376'
 ht-degree: 0%
@@ -273,7 +273,7 @@ More information about relationships and other schema metadata can be found in t
 
 스키마는 함께 사용할 수 있도록 [!DNL Real-time Customer Profile]하려면 기본 ID가 정의되어 있어야 합니다. 주 ID를 먼저 정의하지 않고 스키마를 활성화하려고 하면 &quot;기본 ID 누락&quot; 오류 메시지가 표시됩니다.
 
-![](../images/tutorials/create-schema/missing_primary_identity.png)
+<img src="../images/tutorials/create-schema/missing_primary_identity.png" width="600" /><br>
 
 편집기에서 사용할 &quot;충성도 멤버&quot; 스키마를 활성화하려면 먼저 편집기의 구조 [!DNL Profile]섹션에서 &quot;충성도 *멤버&quot;를* 클릭합니다.
 
