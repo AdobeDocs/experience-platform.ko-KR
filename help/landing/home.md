@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Adobe Experience Platform 개요
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 6c90e68bde1fb8474ba23127ecf7b6fd617c7765
+source-git-commit: efde1b9bf65bde1a55084774c845b8d5585272d4
 workflow-type: tm+mt
-source-wordcount: '747'
-ht-degree: 2%
+source-wordcount: '844'
+ht-degree: 3%
 
 ---
 
@@ -31,6 +31,43 @@ Adobe Experience Platform은 고객 경험을 향상시키는 완벽한 솔루�
 **비하인드 스토리:**
 
 >[!VIDEO](https://video.tv.adobe.com/v/28144?quality=12&learn=on)
+
+## 브라우저 지원
+
+Adobe Experience Platform 웹 사이트와 Adobe Admin Console과 같은 관련 웹 사이트는 모두 최신 버전의 Google Chrome, Safari, Firefox 및 Microsoft Edge에서 최적으로 작동하도록 설계되었습니다. 이전 버전의 브라우저에서는 특정 기능을 사용하는 데 문제가 있을 수 있습니다.
+
+<table>
+<tr>
+  <th>운영 체제</th>
+  <th>지원되는 브라우저</th>
+  <th></th>
+  <th></th>
+</tr>
+<tr>
+  <td>Mac OS X</td>
+  <td>최신 버전의 Google Chrome</td>
+  <td>최신 버전의 Safari</td>
+  <td>최신 버전의 Firefox</td>
+</tr>
+<tr>
+  <td>Windows 10</td>
+  <td>최신 버전의 Google Chrome</td>
+  <td>최신 버전의 Microsoft Edge</td>
+  <td>최신 버전의 Firefox</td>
+</tr>
+<tr>
+  <td>Windows 7</td>
+  <td>최신 버전의 Google Chrome</td>
+  <td> </td>
+  <td>최신 버전의 Firefox</td>
+</tr>
+</table>
+
+지원되지 않음:
+
+* Internet Explorer 10
+* Windows 8
+* Opera
 
 ## 언어 지원
 
