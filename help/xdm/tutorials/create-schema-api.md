@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 스키마 레지스트리 API를 사용하여 스키마 만들기
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: b021b6813af18e29f544dc55541f23dd7dd57d47
 workflow-type: tm+mt
 source-wordcount: '2322'
 ht-degree: 1%
@@ -342,7 +342,7 @@ curl -X PATCH \
 
 충성도 구성원 스키마는 충성도 프로그램에 고유한 정보를 캡처해야 합니다. 이 정보는 표준 혼합에 포함되지 않습니다.
 
-테넌트 컨테이너 내에 자신의 믹스를 정의할 수 있도록 허용하여 이에 대한 계정입니다. [!DNL Schema Registry] 이러한 혼합은 조직에 고유하며 IMS Org 외부에 있는 사용자가 보거나 편집할 수 없습니다.
+테넌트 컨테이너 내에 자신의 믹스를 정의할 수 있도록 허용하여 이에 대한 [!DNL Schema Registry] 계정입니다. 이러한 혼합은 조직에 고유하며 IMS Org 외부에 있는 사용자가 보거나 편집할 수 없습니다.
 
 새 혼합을 만들기(POST) 위해 요청에는 믹싱이 포함될 속성과 함께 믹싱과 호환되는 기본 클래스 `meta:intendedToExtend` `$id` 의 필드가 포함되어 있어야 합니다.
 
@@ -1015,7 +1015,7 @@ curl -X POST \
 }
 ```
 
-## 스키마를 [!DNL Real-time Customer Profile]
+## 스키마를 [!DNL Real-time Customer Profile] {#profile}
 
 속성에 &quot;union&quot; 태그를 추가하면 `meta:immutableTags` 충성도 멤버 스키마를 사용할 수 있습니다 [!DNL Real-time Customer Profile].
 
