@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 설명자
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: b021b6813af18e29f544dc55541f23dd7dd57d47
 workflow-type: tm+mt
 source-wordcount: '1477'
 ht-degree: 1%
@@ -369,7 +369,7 @@ ID 설명자는 &quot;sourceSchema[!UICONTROL &quot;의 &quot;]sourceProperty[!U
 
 #### 참조 ID 설명자
 
-참조 ID 설명자는 스키마 필드에 참조 컨텍스트를 제공하여 대상 스키마의 기본 ID 필드에 연결할 수 있습니다. 참조 설명자를 필드에 적용하려면 먼저 필드에 ID 설명자로 레이블이 지정되어 있어야 합니다.
+참조 ID 설명자는 스키마 필드의 기본 ID에 대한 참조 컨텍스트를 제공하여 다른 스키마의 필드에서 참조할 수 있습니다. 참조 설명자를 필드에 적용하려면 먼저 필드에 ID 설명자로 레이블이 지정되어 있어야 합니다.
 
 ```json
 {
