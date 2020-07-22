@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform 세그멘테이션 서비스
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: 96b6f820e5d372446c4927e7719aedadb2b11bc9
 workflow-type: tm+mt
-source-wordcount: '1971'
+source-wordcount: '1974'
 ht-degree: 0%
 
 ---
@@ -215,8 +215,10 @@ Adding this specific data to the segment itself allows execution engines to pers
 - 개체
 - 맵
 - 이벤트
+- 외부 대상
+- 세그먼트
 
-지원되는 이러한 데이터 유형에 대한 자세한 내용은 [지원 데이터 유형 문서에서 확인할 수 있습니다](./data-types.md).
+이러한 지원되는 데이터 유형에 대한 자세한 내용은 [지원되는 데이터 유형 문서에서 확인할 수 있습니다](./data-types.md).
 
 ## 다음 단계
 
