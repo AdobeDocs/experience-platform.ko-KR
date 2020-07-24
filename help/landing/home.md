@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform 개요
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 0c4395556a546915df4718a0e812b38b15e04735
+source-git-commit: f86625f2cf9a08b2395f190a50d7fb40c71bc49b
 workflow-type: tm+mt
 source-wordcount: '812'
 ht-degree: 4%
@@ -40,7 +40,7 @@ Adobe Experience Platform은 **최신 버전의** Google Chrome, Safari, Firefox
 |---|---|---|---|
 | Mac OS X | Google Chrome | Safari | Firefox |
 | Windows 10 | Google Chrome | Microsoft Edge | Firefox |
-| Windows 7 | Google Chrome |  | Firefox&lt; |
+| Windows 7 | Google Chrome |  | Firefox |
 
 이러한 브라우저는 지원되지 않습니다.
 
