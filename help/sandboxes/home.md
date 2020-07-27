@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 샌드박스 개요
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: c52d8cdbc5a4ee6fab8c2b1b284efea5f735d424
 workflow-type: tm+mt
-source-wordcount: '680'
+source-wordcount: '677'
 ht-degree: 0%
 
 ---
@@ -46,11 +46,11 @@ In order to address this need, Experience Platform provides **sandboxes** which 
 
 ## Experience Platform UI의 샌드박스
 
-사용자는 [Experience Platform 사용자 인터페이스에서](https://platform.adobe.com)화면의 왼쪽 상단에 있는 **샌드박스 전환기** 컨트롤을 사용하여 액세스할 수 있는 샌드박스 간을 전환할 수 있습니다.  또한 샌드박스 관리 권한이 있는 사용자는 왼쪽 탐색 **의 샌드박스** 탭에 액세스할 수 있으며 여기에서 조직의 샌드박스를 보고 관리할 수 있습니다. UI에서 샌드박스를 사용하여 작업하는 방법에 대한 자세한 내용은 [샌드박스 사용 안내서를 참조하십시오](ui/overview.md).
+사용자는 [Experience Platform 사용자 인터페이스에서](https://platform.adobe.com)화면의 왼쪽 상단에 있는 **샌드박스 전환기** 컨트롤을 사용하여 액세스할 수 있는 샌드박스 간을 전환할 수 있습니다.  또한 샌드박스 관리 권한이 있는 사용자는 왼쪽 탐색 **[!UICONTROL 의 샌드박스]** 탭에 액세스할 수 있으며 여기에서 조직의 샌드박스를 보고 관리할 수 있습니다. UI에서 샌드박스를 사용하여 작업하는 방법에 대한 자세한 내용은 [샌드박스 사용 안내서를 참조하십시오](ui/overview.md).
 
 ## Experience Platform API의 샌드박스
 
-Experience Platform API를 호출할 때는 헤더 아래에 샌드박스 이름을 제공해야 합니다 `x-sandbox-name`. 예를 들어 프로덕션 샌드박스 내의 모든 데이터 세트를 보기 위해 [카탈로그 서비스 API를](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) 호출할 때 샌드박스의 이름(&quot;prod&quot;)은 API 요청에서 헤더로 제공됩니다.
+Experience Platform API를 호출할 때는 헤더 아래에 샌드박스 이름을 제공해야 합니다 `x-sandbox-name`. 예를 들어 프로덕션 샌드박스 내의 모든 데이터 세트를 보기 [!DNL Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) 위해 을 호출할 때 샌드박스의 이름(&quot;prod&quot;)은 API 요청에서 헤더로 제공됩니다.
 
 ```shell
 curl -X GET \
