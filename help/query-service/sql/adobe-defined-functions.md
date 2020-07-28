@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Adobe에서 정의한 함수
+title: Adobe 정의 함수
 topic: functions
 translation-type: tm+mt
 source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
@@ -12,9 +12,9 @@ ht-degree: 3%
 ---
 
 
-# Adobe에서 정의한 함수
+# Adobe 정의 함수
 
-ADF(Adobe Defined Functions)는 데이터에 대한 일반적인 비즈니스 관련 작업을 수행하는 데 도움이 [!DNL Query Service] 되는 미리 만들어진 [!DNL ExperienceEvent] 함수입니다. 여기에는 Adobe Analytics에 있는 것과 같은 세션 및 기여도 분석 기능이 포함됩니다. Adobe Analytics 및 이 페이지에 정의된 ADF의 이면에 대한 자세한 내용은 [Adobe Analytics 설명서를](https://docs.adobe.com/content/help/ko-KR/analytics/landing/home.html) 참조하십시오. 이 문서는 에서 사용할 수 있는 Adobe에서 정의한 기능에 대한 정보를 제공합니다 [!DNL Query Service].
+ADF(Adobe 정의 함수)는 데이터에 대한 일반적인 비즈니스 관련 작업을 수행하는 데 도움이 [!DNL Query Service] 되는 미리 만들어진 [!DNL ExperienceEvent] 함수입니다. 여기에는 Adobe Analytics에 있는 것과 같은 세션 및 어트리뷰션을 위한 기능이 포함됩니다. Adobe Analytics에 대한 자세한 내용 및 이 페이지에 정의된 ADF의 이면에 있는 개념에 대한 자세한 내용은 [Adobe Analytics 설명서를](https://docs.adobe.com/content/help/ko-KR/analytics/landing/home.html) 참조하십시오. 이 문서에서는 에서 사용할 수 있는 Adobe으로 정의된 기능에 대한 정보를 제공합니다 [!DNL Query Service].
 
 ## 창 함수
 
@@ -38,7 +38,7 @@ SQL 도움말의 [!DNL Spark] 대부분은 창의 각 행을 업데이트하는 
 
 웹 사이트, 모바일 애플리케이션, 인터랙티브한 음성 응답 시스템 또는 기타 고객 인터랙션 채널에서 생성된 [!DNL ExperienceEvent] 데이터를 사용하여 작업하는 경우 관련 활동 기간을 기준으로 이벤트를 그룹화할 수 있는 경우에 유용합니다. 일반적으로 제품 연구, 결제, 계좌 잔액 확인, 신청서 작성 등과 같은 활동을 유도하는 특정 의도가 있습니다. 이 그룹화는 이벤트를 연결하여 고객 경험에 대한 더 많은 컨텍스트를 파악하는 데 도움이 됩니다.
 
-Adobe Analytics의 세션 지정에 대한 자세한 내용은 [컨텍스트 인식 세션에 대한 설명서를 참조하십시오](https://docs.adobe.com/content/help/en/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html).
+Adobe Analytics의 세션 화에 대한 자세한 내용은 [컨텍스트 인식 세션에 대한 설명서를 참조하십시오](https://docs.adobe.com/content/help/en/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html).
 
 ### 사양
 
@@ -94,7 +94,7 @@ LIMIT 10
 
 고객 행동을 성공에 연결하는 것은 고객 경험에 영향을 미치는 요인을 이해하는 데 중요한 역할을 합니다. 다음 ADF는 다른 만료 설정으로 첫 번째 및 마지막 속성을 지원합니다.
 
-Adobe Analytics의 속성에 대한 자세한 내용은 분석 안내서의 [속성](https://docs.adobe.com/content/help/ko-KR/analytics/analyze/analysis-workspace/models.html) IQ 개요를 [!DNL Analytics] 참조하십시오.
+Adobe Analytics의 속성에 대한 자세한 내용은 분석 안내서의 [Attribution IQ](https://docs.adobe.com/content/help/ko-KR/analytics/analyze/analysis-workspace/models.html) 개요를 [!DNL Analytics] 참조하십시오.
 
 ### 첫 번째 터치 속성
 
@@ -318,7 +318,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 ### 만료 조건이 있는 마지막 터치 속성
 
-조건 후 또는 그 이전에 만료되는 대상 데이터 세트에 있는 단일 채널에 대한 마지막 터치 속성 값 및 세부 사항을 [!DNL ExperienceEvent] 반환합니다. 쿼리는 선택한 채널에 대해 반환되는 각 행에 대한 마지막 터치 값, 타임스탬프 및 속성이 있는 `struct` 개체를 반환합니다. 이 쿼리는 선택 조건에 따라 결정된 데이터 세트의 일부 내에서 일련의 고객 동작에서 마지막 상호 작용을 보려는 경우에 유용합니다. [!DNL ExperienceEvent] 아래 예에서, 구매는 (`commerce.purchases.value IS NOT NULL`) 결과에 표시된 4일 각각에 대해 기록되며(7월 15일, 21일, 23일 및 29일) 각 날의 마지막 추적 코드는 고객 조치에 대한 100%(`1.0`)의 책임을 부담합니다.
+조건 후 또는 그 이전에 만료되는 대상 데이터 세트에 있는 단일 채널에 대한 마지막 터치 속성 값 및 세부 사항을 [!DNL ExperienceEvent] 반환합니다. 쿼리는 선택한 채널에 대해 반환되는 각 행에 대한 마지막 터치 값, 타임스탬프 및 속성이 있는 `struct` 개체를 반환합니다. 이 쿼리는 선택 조건에 따라 결정된 데이터 세트의 일부 내에서 일련의 고객 작업에서 마지막 상호 작용을 [!DNL ExperienceEvent] 보려는 경우에 유용합니다. 아래 예에서, 구매는 (`commerce.purchases.value IS NOT NULL`) 결과에 표시된 4일 각각에 대해 기록되며(7월 15일, 21일, 23일 및 29일) 각 날의 마지막 추적 코드는 고객 조치에 대한 100%(`1.0`)의 책임을 부담합니다.
 
 #### 사양
 
