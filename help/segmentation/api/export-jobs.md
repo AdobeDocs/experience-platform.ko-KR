@@ -26,7 +26,7 @@ ht-degree: 2%
 
 ## 내보내기 작업 목록 검색 {#retrieve-list}
 
-종단점에 GET 요청을 만들어 IMS 조직에 대한 모든 내보내기 작업 목록을 검색할 수 `/export/jobs` 있습니다.
+종단점에 대한 GET 요청을 수행하여 IMS 조직에 대한 모든 내보내기 작업 목록을 검색할 수 `/export/jobs` 있습니다.
 
 **API 형식**
 
@@ -379,7 +379,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
 
 ## 특정 내보내기 작업 검색 {#get}
 
-끝점에 GET 요청을 만들고 요청 경로에서 검색할 내보내기 작업의 ID를 제공하여 특정 내보내기 작업에 대한 자세한 정보를 검색할 수 있습니다. `/export/jobs`
+종단점에 GET 요청을 만들고 요청 경로에서 검색할 내보내기 작업의 ID를 제공하여 특정 내보내기 작업에 대한 자세한 정보를 검색할 수 있습니다. `/export/jobs`
 
 **API 형식**
 
