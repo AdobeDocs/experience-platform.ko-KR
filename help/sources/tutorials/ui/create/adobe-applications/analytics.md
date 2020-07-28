@@ -24,19 +24,19 @@ ht-degree: 1%
 * [실시간 고객 프로필](../../../../../profile/home.md): 여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
 * [샌드박스](../../../../../sandboxes/home.md): Experience Platform은 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되도록 단일 Platform 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
 
-## Adobe Analytics으로 소스 연결 만들기
+## Adobe Analytics과 소스 연결 만들기
 
 Adobe Experience Platform에 <a href="https://platform.adobe.com" target="_blank">로그인한</a> 다음 왼쪽 탐색 **[!UICONTROL 모음에서]** 소스를 선택하여 소스 작업 영역에 액세스합니다. [ *카탈로그* ] 화면에는 인바운드 연결을 만들 수 있는 사용 가능한 소스가 표시되고 각 소스에는 연관된 기존 계정 및 데이터 세트 흐름 수가 표시됩니다.
 
 화면의 왼쪽에 있는 카탈로그에서 해당 범주를 선택할 수 있습니다. 또는 검색 옵션을 사용하여 작업할 특정 소스를 찾을 수 있습니다.
 
-*Adobe 애플리케이션* 카테고리 아래에서 **[!UICONTROL Adobe Analytics]** 을 선택하여 화면 오른쪽에 정보 막대를 표시합니다. 정보 표시줄에는 선택한 소스에 대한 간단한 설명과 소스와 연결하거나 설명서를 보는 옵션이 제공됩니다. 기존 계정을 보려면 계정 **[!UICONTROL 을 선택합니다]**.
+Adobe 애플리케이션 *카테고리 아래에서* Adobe Analytics **** 을 선택하여 화면 오른쪽에 정보 막대를 표시합니다. 정보 표시줄에는 선택한 소스에 대한 간단한 설명과 소스와 연결하거나 설명서를 보는 옵션이 제공됩니다. 기존 계정을 보려면 계정 **[!UICONTROL 을 선택합니다]**.
 
 ![](../../../../images/tutorials/create/analytics/catalog.png)
 
 ### 데이터 선택
 
-Adobe *Analytics* 단계가 나타납니다. Analytics에 대해 이전에 설정한 데이터 집합 흐름이 이 화면에 나열됩니다. 데이터 선택을 클릭하여 새 데이터 세트 흐름 **[!UICONTROL 을 만들 수 있습니다]**.
+Adobe Analytics *단계가* 나타납니다. Analytics에 대해 이전에 설정한 데이터 집합 흐름이 이 화면에 나열됩니다. 데이터 선택을 클릭하여 새 데이터 세트 흐름 **[!UICONTROL 을 만들 수 있습니다]**.
 
 >[!NOTE]
 >
@@ -104,7 +104,7 @@ Analytics에서 오는 데이터에 레이블을 지정하는 방법에 대한 �
 * [데이터 과학 작업 공간 개요](../../../../../data-science-workspace/home.md)
 * [쿼리 서비스 개요](../../../../../query-service/home.md)
 
-다음 비디오는 Adobe Analytics 소스 커넥터를 사용하는 데이터 인제스트 이해를 지원하기 위한 것입니다.
+다음 비디오는 Adobe Analytics 소스 커넥터를 사용하는 인제스트 데이터에 대한 이해를 지원하기 위한 것입니다.
 
 >[!WARNING]
 >
