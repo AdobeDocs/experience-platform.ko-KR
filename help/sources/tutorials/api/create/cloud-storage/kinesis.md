@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Flow Service API를 사용하여 Amazon Kinesis 커넥터 생성
+title: Flow Service API를 사용하여 Amazon Kinesis 커넥터 만들기
 topic: overview
 translation-type: tm+mt
 source-git-commit: 11431ffcfc2204931fe3e863bfadc7878a40b49c
@@ -59,7 +59,7 @@ API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
-페이로드(POST, PUT, PATCH)가 포함된 모든 요청에는 추가 미디어 유형 헤더가 필요합니다.
+페이로드(POST, PUT, PATCH)이 포함된 모든 요청에는 추가 미디어 유형 헤더가 필요합니다.
 
 * 컨텐츠 유형: `application/json`
 
