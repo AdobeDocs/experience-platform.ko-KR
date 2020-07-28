@@ -22,7 +22,7 @@ ht-degree: 3%
 
 ## 예약 목록 검색 {#retrieve-list}
 
-종단점에 GET 요청을 만들어 IMS 조직에 대한 모든 일정 목록을 검색할 수 `/config/schedules` 있습니다.
+종단점에 GET 요청을 하여 IMS 조직에 대한 모든 일정 목록을 검색할 수 `/config/schedules` 있습니다.
 
 **API 형식**
 
@@ -103,7 +103,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/config/schedules?limit=10 \
 
 ## Create a new schedule {#create}
 
-종단점에 대한 POST 요청을 만들어 새 일정을 만들 수 `/config/schedules` 있습니다.
+종단점에 POST 요청을 만들어 새 일정을 만들 수 `/config/schedules` 있습니다.
 
 **API 형식**
 
@@ -234,9 +234,9 @@ curl -X GET https://platform.adobe.io/data/core/ups/config/schedules/4e538382-db
 
 ## 특정 일정에 대한 업데이트 정보 {#update}
 
-종단점에 PATCH 요청을 만들고 `/config/schedules` 요청 경로에서 업데이트하려는 예약의 ID를 제공하여 특정 일정을 업데이트할 수 있습니다.
+종단점에 PATCH 요청을 만들고 `/config/schedules` 요청 경로에서 업데이트하려는 일정의 ID를 제공하여 특정 일정을 업데이트할 수 있습니다.
 
-PATCH 요청을 통해 개별 일정에 대한 [상태](#update-state) 또는 [cron 일정을](#update-schedule) 업데이트할 수 있습니다.
+PATCH 요청을 통해 개별 일정에 대한 [상태](#update-state) 또는 [크론 일정](#update-schedule) 중 하나를 업데이트할 수 있습니다.
 
 ### 업데이트 일정 상태 {#update-state}
 
