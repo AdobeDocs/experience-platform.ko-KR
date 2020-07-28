@@ -78,7 +78,7 @@ Adobe Experience Platform [!DNL Segmentation Service] 는 개별 고객의 경�
 [!DNL Platform] 실시간 스트리밍 수집 및 일괄 처리를 지원하여 기록 및 시간 시리즈 데이터 [!DNL Profile]를 전송하도록 구성할 수 있습니다. 자세한 내용은 실시간 고객 프로필에 데이터를 [추가하는 방법에 대한 개요를 설명하는 자습서를 참조하십시오](tutorials/add-profile-data.md).
 
 >[!N참고]
->Adobe 솔루션을 통해 수집된 데이터(예: [!DNL Analytics Cloud], [!DNL Marketing Cloud]및 [!DNL Advertising Cloud]포함)는 [!DNL Experience Platform] 유입되어 [!DNL Profile]수집됩니다.
+>Adobe 솔루션을 통해 수집된 데이터(예: [!DNL Analytics Cloud], [!DNL Marketing Cloud]및 [!DNL Advertising Cloud]포함) [!DNL Experience Platform] 는 유입되어 수집됩니다 [!DNL Profile].
 
 ### [!DNL Profile] 지표 수집
 
