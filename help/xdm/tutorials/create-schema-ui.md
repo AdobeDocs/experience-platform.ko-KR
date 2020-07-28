@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Create a schema using the [!DNL Schema Editor]
 
-이 [!DNL Schema Registry] 는 Adobe Experience Platform의 모든 리소스를 보고 관리할 수 있는 사용자 인터페이스와 RESTful API를 제공합니다 [!DNL Schema Library]. 이 [!DNL Schema Library] 에는 Adobe, Experience Platform 파트너, 애플리케이션을 사용하는 공급업체 등이 제공하는 리소스 및 사용자가 정의하고 저장하는 리소스가 포함되어 [!DNL Schema Registry]있습니다.
+이 [!DNL Schema Registry] 는 Adobe Experience Platform의 모든 리소스를 보고 관리할 수 있는 사용자 인터페이스와 RESTful API를 제공합니다 [!DNL Schema Library]. 이 [!DNL Schema Library] 에는 사용자가 정의한 리소스는 물론, 사용자가 애플리케이션을 사용하는 Adobe, Experience Platform 파트너 및 공급업체가 제공하는 리소스가 포함되어 [!DNL Schema Registry]있습니다.
 
 이 자습서에서는 내에서 스키마 편집기를 사용하여 스키마를 만드는 단계를 설명합니다 [!DNL Experience Platform]. 스키마 레지스트리 API를 사용하여 스키마를 작성하려는 경우 API를 사용하여 스키마를 [만드는 자습서를 시도하기 전에 스키마 레지스트리 개발자 가이드](../api/getting-started.md) 를 읽어 보십시오 [](create-schema-api.md).
 
@@ -70,7 +70,7 @@ ht-degree: 0%
 
 ![](../images/tutorials/create-schema/assign_class_button.png)
 
-[클래스 *[!UICONTROL 할당]* ] 대화 상자가 나타납니다. 이 창에는 조직에서 정의한 모든 클래스(소유자가 &quot;고객&quot;임)와 Adobe에서 정의한 표준 클래스 등 사용 가능한 모든 클래스 목록이 표시됩니다.
+[클래스 *[!UICONTROL 할당]* ] 대화 상자가 나타납니다. 이 창에는 조직에서 정의한 모든 클래스(소유자가 &quot;고객&quot;임)와 Adobe으로 정의된 표준 클래스를 포함하여 사용 가능한 모든 클래스의 목록이 표시됩니다.
 
 클래스 이름을 클릭하여 클래스에 대한 설명을 표시합니다. 클래스 구조 미리 **[!UICONTROL 보기를 선택하여]** 클래스와 연관된 필드 및 메타데이터를 볼 수도 있습니다.
 
