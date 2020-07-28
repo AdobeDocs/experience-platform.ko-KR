@@ -24,11 +24,11 @@ ht-degree: 0%
 
 * 다음 ID를 [대상으로](../../identity-service/namespaces.md) 보낼 수 [!DNL Google Ad Manager] 있습니다. **Google 쿠키 ID, IDFA, GAID, Roku ID, Microsoft ID, Amazon Fire TV ID**.
 * 활성화된 대상은 [!DNL Google] 플랫폼에서 프로그래밍 방식으로 생성됩니다.
-* Adobe 실시간 CDP에는 현재 성공적인 활성화를 검증하는 측정 지표가 포함되어 있지 않습니다. 통합을 확인하고 대상 타깃팅 크기를 이해하려면 Google의 대상 수를 참조하십시오.
+* Adobe 실시간 CDP에는 현재 성공적인 활성화를 확인하는 측정 지표가 포함되어 있지 않습니다. 통합을 확인하고 대상 타깃팅 크기를 이해하려면 Google의 대상 수를 참조하십시오.
 
 >[!IMPORTANT]
 >
->Experience Cloud ID 서비스 [!DNL Google Ad Manager] 에서 이전에 [ID 동기화 기능을](https://docs.adobe.com/content/help/en/id-service/using/id-service-api/methods/idsync.html) 활성화하지 않은 상태로 첫 번째 대상을 만들려는 경우(Audience Manager 또는 기타 응용 프로그램 포함) Adobe 컨설팅 또는 고객 지원 센터에 연락하여 ID 동기화를 활성화하십시오. 이전에 Audience Manager에서 [!DNL Google] 통합을 설정한 경우 설정한 ID 시크는 Adobe Real-time CDP로 이월됩니다.
+>Experience Cloud ID 서비스 [!DNL Google Ad Manager] 에서 이전에 [ID 동기화 기능을](https://docs.adobe.com/content/help/en/id-service/using/id-service-api/methods/idsync.html) 활성화하지 않은 상태로 첫 번째 대상을 만들려는 경우(Audience Manager 또는 다른 응용 프로그램 포함) Adobe 컨설팅 또는 고객 지원 센터에 연락하여 ID 동기화를 활성화하십시오. 이전에 Audience Manager에서 [!DNL Google] 통합을 설정한 경우 설정한 ID 동기화가 Adobe 실시간 CDP로 전달됩니다.
 
 ## 전제 조건
 
@@ -38,10 +38,10 @@ ht-degree: 0%
 >
 >Adobe 실시간 CDP에서 첫 번째 [!DNL Google Ad Manager] 대상을 설정하기 전에 허용 목록은 필수입니다. 대상을 만들기 전에 아래에 설명된 허용 목록 프로세스가 완료되었는지 [!DNL Google] 확인하십시오.
 
-Adobe Real-time CDP에서 [!DNL Google Ad Manager] 대상을 생성하기 전에 Adobe [!DNL Google] 가 허용된 데이터 제공업체 목록에 추가되도록 문의하고 귀하의 계정을 허용 목록에 추가하도록 요청해야 합니다. 연락처 [!DNL Google] 와 다음 정보를 제공합니다.
+Adobe 실시간 CDP에서 [!DNL Google Ad Manager] 대상을 생성하기 전에 Adobe [!DNL Google] 가 허용된 데이터 공급자 목록에 포함될 수 있도록 문의하고 계정이 허용 목록에 추가되도록 연락해야 합니다. 연락처 [!DNL Google] 와 다음 정보를 제공합니다.
 
-* **계정 ID** : 이 ID는 Adobe 계정 ID입니다 [!DNL Google]. 이 ID를 얻으려면 Adobe 고객 지원 센터 또는 Adobe 담당자에게 문의하십시오.
-* **고객 ID** : 이 ID는 Adobe의 고객 계정 ID입니다 [!DNL Google]. 이 ID를 얻으려면 Adobe 고객 지원 센터 또는 Adobe 담당자에게 문의하십시오.
+* **계정 ID** : Adobe 계정 ID입니다 [!DNL Google]. 이 ID를 얻으려면 Adobe 고객 지원 센터 또는 Adobe 담당자에게 문의하십시오.
+* **고객 ID** : Adobe 고객 계정 ID입니다 [!DNL Google]. 이 ID를 얻으려면 Adobe 고객 지원 센터 또는 Adobe 담당자에게 문의하십시오.
 * **네트워크 ID** : 이 계정은 [!DNL Google Ad Manager]
 * **대상 링크 ID** : 이 계정은 [!DNL Google Ad Manager]
 * 계정 유형. **Google** 또는 **AdX 구매자별 DFP**.
@@ -64,7 +64,7 @@ Adobe Real-time CDP에서 [!DNL Google Ad Manager] 대상을 생성하기 전에
 
 >[!NOTE]
 >
-> 대상을 설정할 때 [!DNL Google Ad Manager] 귀하 [!DNL Google Account Manager] 또는 Adobe 담당자와 협력하여 보유하고 있는 계정 유형을 파악하십시오.
+> 대상을 설정할 때 [!DNL Google Ad Manager] 귀하의 [!DNL Google Account Manager] 또는 Adobe 담당자에게 연락하여 보유하고 있는 계정 유형을 파악하십시오.
 
 ## 세그먼트 활성화 [!DNL Google Ad Manager]
 
