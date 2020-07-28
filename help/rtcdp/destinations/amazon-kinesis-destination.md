@@ -1,8 +1,8 @@
 ---
 title: Amazon Kinesis 대상
 seo-title: Amazon Kinesis 대상
-description: Adobe Experience Platform에서 데이터를 스트리밍하기 위해 Amazon Kinesis 스토리지에 대한 실시간 아웃바운드 연결을 만듭니다.
-seo-description: Adobe Experience Platform에서 데이터를 스트리밍하기 위해 Amazon Kinesis 스토리지에 대한 실시간 아웃바운드 연결을 만듭니다.
+description: Amazon Kinesis 스토리지에 대한 실시간 아웃바운드 연결을 만들어 Adobe Experience Platform의 데이터를 스트리밍합니다.
+seo-description: Amazon Kinesis 스토리지에 대한 실시간 아웃바운드 연결을 만들어 Adobe Experience Platform의 데이터를 스트리밍합니다.
 translation-type: tm+mt
 source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
 workflow-type: tm+mt
@@ -17,7 +17,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->Adobe Real-time CDP의 [!DNL Amazon Kinesis] 대상은 현재 베타 버전입니다. 설명서 및 기능은 변경될 수 있습니다.
+>Adobe 실시간 CDP의 [!DNL Amazon Kinesis] 대상은 현재 베타 버전입니다. 설명서 및 기능은 변경될 수 있습니다.
 
 ## 개요 {#overview}
 
@@ -29,7 +29,7 @@ Adobe Experience Platform에서 데이터를 스트리밍하기 위해 [!DNL Ama
 * API 호출 [!DNL Amazon Kinesis] 을 사용하여 연결하려면 [스트리밍 대상 API 자습서를 참조하십시오](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md).
 * Adobe 실시간 CDP 사용자 인터페이스를 [!DNL Amazon Kinesis] 사용하여 연결하려면 아래 섹션을 참조하십시오.
 
-![UI의 Amazon Kinesis](/help/rtcdp/destinations/assets/aws-kinesis-destination.png)
+![Amazon Kinesis(UI)](/help/rtcdp/destinations/assets/aws-kinesis-destination.png)
 
 
 ## 사용 사례 {#use-cases}
@@ -46,7 +46,7 @@ Adobe Experience Platform에서 데이터를 스트리밍하기 위해 [!DNL Ama
 
 ### 인증 단계에서 {#authentication-step}
 
-* **[!DNL Amazon Web Services]액세스 키 및 암호 키&#x200B;**: 액세스 키[!DNL Amazon Web Services]를 생성하여 Adobe에서 실시간 CDP에 계정에 대한 액세스 권한을[!DNL Amazon Kinesis]부여합니다. 자세한 내용은[Amazon 웹 서비스 설명서를 참조하십시오](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
+* **[!DNL Amazon Web Services]액세스 키 및 암호 키&#x200B;**: 에서 액세스 키[!DNL Amazon Web Services]를 생성하여 Adobe에 대한 실시간 CDP 액세스 권한을에[!DNL Amazon Kinesis]부여합니다. 자세한 내용은[Amazon 웹 서비스 문서를 참조하십시오](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 * **지역**: 데이터를 스트리밍할 [!DNL Amazon Web Services] 지역을 지정합니다.
 
 ![계정 단계의 입력 필드](/help/rtcdp/destinations/assets/aws-kinesis-account-step.png)
