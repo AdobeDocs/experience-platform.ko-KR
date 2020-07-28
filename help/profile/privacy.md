@@ -28,7 +28,7 @@ Adobe Experience Platform은 개인 정보를 액세스하거나, 판매를 거�
 
 ## ID 네임스페이스 이해 {#namespaces}
 
-Adobe Experience Platform [!DNL Identity Service] 는 시스템 및 디바이스에서 고객 ID 데이터를 연결해줍니다. [!DNL Identity Service] id 네임스페이스를 **** 사용하여 ID 값을 원본 시스템과 연결함으로써 ID 값에 컨텍스트를 제공합니다. 네임스페이스는 이메일 주소(&quot;이메일&quot;)와 같은 일반 개념을 나타내거나 Adobe Advertising Cloud ID(&quot;AdCloud&quot;) 또는 Adobe Target ID(&quot;TNTID&quot;)와 같은 특정 응용 프로그램과 ID를 연결할 수 있습니다.
+Adobe Experience Platform [!DNL Identity Service] 는 시스템 및 디바이스에서 고객 ID 데이터를 연결해줍니다. [!DNL Identity Service] id 네임스페이스를 **** 사용하여 ID 값을 원본 시스템과 연결함으로써 ID 값에 컨텍스트를 제공합니다. 네임스페이스는 이메일 주소(&quot;이메일&quot;)와 같은 일반 개념을 나타내거나 ID를 Adobe Advertising Cloud ID(&quot;AdCloud&quot;) 또는 Adobe Target ID(&quot;TNTID&quot;)와 같은 특정 응용 프로그램과 연결할 수 있습니다.
 
 ID 서비스는 전역적으로 정의된(표준) 및 사용자 정의(사용자 정의) ID 네임스페이스의 저장소를 유지 관리합니다. 표준 네임스페이스는 모든 조직(예: &quot;이메일&quot; 및 &quot;ECID&quot;)에서 사용할 수 있지만 조직에서 특정 요구에 맞는 사용자 정의 네임스페이스를 만들 수도 있습니다.
 
