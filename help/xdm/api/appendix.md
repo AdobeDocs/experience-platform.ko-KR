@@ -18,7 +18,7 @@ ht-degree: 4%
 
 ## 호환성 모드
 
-[!DNL Experience Data Model] (XDM)은 디지털 경험의 상호 운용성, 풍부한 표현 능력 및 성능을 개선하기 위해 Adobe가 기반으로 공개적으로 문서화된 사양입니다. Adobe는 GitHub의 [오픈 소스 프로젝트에서 소스 코드와 공식 XDM 정의를 유지 관리합니다](https://github.com/adobe/xdm/). 이러한 정의는 XDM 스키마를 정의하는 문법으로 JSON-LD(JavaScript Object Notation for Linked Data) 및 JSON 스키마를 사용하여 XDM 표준 표기법으로 작성됩니다.
+[!DNL Experience Data Model] (XDM)은 디지털 경험의 상호 운용성, 풍부한 표현 능력 및 성능을 개선하기 위해 Adobe을 기반으로 공개적으로 문서화된 사양입니다. Adobe은 GitHub의 [오픈 소스 프로젝트에서 소스 코드와 공식 XDM 정의를 유지 관리합니다](https://github.com/adobe/xdm/). 이러한 정의는 XDM 스키마를 정의하는 문법으로 JSON-LD(JavaScript Object Notation for Linked Data) 및 JSON 스키마를 사용하여 XDM 표준 표기법으로 작성됩니다.
 
 공용 저장소에서 공식 XDM 정의를 보면 표준 XDM이 Adobe Experience Platform에 표시되는 것과 다르다는 것을 확인할 수 있습니다. 호환성 모드 [!DNL Experience Platform] 에서 볼 수 있는 것은 표준 XDM과 표준 XDM을 사용하는 방법 간의 간단한 매핑을 제공하는 [!DNL Platform]것입니다.
 
