@@ -77,7 +77,7 @@ UI [!DNL Experience Platform] 에서 정책 **** 을 클릭하여 *[!UICONTROL �
 
 ## 마케팅 작업 보기 {#view-marketing-actions}
 
-정책 **[!UICONTROL 작업]** 공간에서 **[!UICONTROL 마케팅 작업]** 탭을 선택하여 Adobe와 사용자 조직에서 정의한 사용 가능한 마케팅 작업 목록을 봅니다.
+정책 **[!UICONTROL 작업]** 공간에서 **[!UICONTROL 마케팅 작업]** 탭을 선택하여 Adobe과 자체 조직에서 정의한 사용 가능한 마케팅 작업 목록을 봅니다.
 
 ![](../images/policies/marketing-actions.png)
 
@@ -101,7 +101,7 @@ UI [!DNL Experience Platform] 에서 정책 **** 을 클릭하여 *[!UICONTROL �
 >
 >조직에서 정의한 사용자 지정 마케팅 작업만 편집할 수 있습니다. Adobe에서 정의한 마케팅 작업은 변경하거나 삭제할 수 없습니다.
 
-정책 **[!UICONTROL 작업]** 공간에서 **[!UICONTROL 마케팅 작업]** 탭을 선택하여 Adobe와 사용자 조직에서 정의한 사용 가능한 마케팅 작업 목록을 봅니다. 목록에서 사용자 지정 마케팅 작업을 선택한 다음 오른쪽 섹션에 있는 제공된 필드를 사용하여 마케팅 활동의 세부 사항을 편집합니다.
+정책 **[!UICONTROL 작업]** 공간에서 **[!UICONTROL 마케팅 작업]** 탭을 선택하여 Adobe과 자체 조직에서 정의한 사용 가능한 마케팅 작업 목록을 봅니다. 목록에서 사용자 지정 마케팅 작업을 선택한 다음 오른쪽 섹션에 있는 제공된 필드를 사용하여 마케팅 활동의 세부 사항을 편집합니다.
 
 ![](../images/policies/edit-marketing-action.png)
 
