@@ -1,8 +1,8 @@
 ---
 title: 클라우드 스토리지 대상
 seo-title: 클라우드 스토리지 대상
-description: Adobe 실시간 CDP는 세그먼트를 데이터 파일로 Amazon S3, AWS Kinesis, Azure 이벤트 허브 또는 SFTP 클라우드 스토리지 위치에 전달할 수 있습니다.
-seo-description: Adobe 실시간 CDP는 세그먼트를 데이터 파일로 Amazon S3, AWS Kinesis, Azure 이벤트 허브 또는 SFTP 클라우드 스토리지 위치에 전달할 수 있습니다.
+description: Adobe 실시간 CDP는 세그먼트를 Amazon S3, AWS Kinesis, Azure 이벤트 허브 또는 SFTP 클라우드 스토리지 위치에 데이터 파일로 전달할 수 있습니다.
+seo-description: Adobe 실시간 CDP는 세그먼트를 Amazon S3, AWS Kinesis, Azure 이벤트 허브 또는 SFTP 클라우드 스토리지 위치에 데이터 파일로 전달할 수 있습니다.
 translation-type: tm+mt
 source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
 workflow-type: tm+mt
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 Adobe 실시간 CDP를 사용하면 세그먼트를 데이터 파일로 클라우드 스토리지 위치에 전달할 수 있습니다. 이렇게 하면 CSV 또는 탭으로 구분된 파일 및 SFTP를 통해 사용자 및 해당 프로필 속성을 내부 시스템으로 보낼 수 [!DNL Amazon S3] 있습니다. [!DNL AWS Kinesis] 및 [!DNL Azure Event Hubs] 대상의 경우 데이터는 JSON 포맷으로 Experience Platform에서 스트리밍됩니다.
 
-![Adobe Cloud 스토리지 대상](/help/rtcdp/destinations/assets/cloud-storage-destinations.png)
+![Adobe 클라우드 스토리지 대상](/help/rtcdp/destinations/assets/cloud-storage-destinations.png)
 
 클라우드 스토리지 대상에 연결하는 방법에 대한 자세한 내용은 클라우드 스토리지 [대상을 만드는 워크플로우를 참조하십시오](/help/rtcdp/destinations/cloud-storage-destinations-workflow.md).
 
