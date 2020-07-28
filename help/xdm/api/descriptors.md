@@ -133,7 +133,7 @@ curl -X GET \
 
 ## 설명자 만들기
 
-를 [!DNL Schema Registry] 사용하면 여러 가지 다른 설명자 유형을 정의할 수 있습니다. 각 설명자 유형에는 POST 요청에서 전송할 고유한 특정 필드가 필요합니다. 설명자 [정의](#defining-descriptors)설명자의 부록 섹션에서 설명자의 전체 목록과 이를 정의하는 데 필요한 필드를 사용할 수 있습니다.
+를 [!DNL Schema Registry] 사용하면 여러 가지 다른 설명자 유형을 정의할 수 있습니다. 각 설명자 유형에는 POST 요청에서 고유의 특정 필드를 보내야 합니다. 설명자 [정의](#defining-descriptors)설명자의 부록 섹션에서 설명자의 전체 목록과 이를 정의하는 데 필요한 필드를 사용할 수 있습니다.
 
 **API 형식**
 
@@ -199,7 +199,7 @@ PUT /tenant/descriptors/{DESCRIPTOR_ID}
 
 **요청**
 
-이 요청은 _설명자를 다시 작성하므로 요청 본문에는 해당 유형의 설명자를 정의하는 데 필요한 모든 필드가 포함되어야 합니다_ . 즉, 설명자를 업데이트할 요청 페이로드(PUT)는 동일한 유형의 설명자를 만들기 위한 페이로드(POST)와 동일합니다.
+이 요청은 _설명자를 다시 작성하므로 요청 본문에는 해당 유형의 설명자를 정의하는 데 필요한 모든 필드가 포함되어야 합니다_ . 즉, 설명자를 업데이트하기 위한 요청 페이로드(PUT)은 동일한 유형의 설명자를 만들기 위한 페이로드(POST)과 동일합니다.
 
 이 예에서 ID 설명자가 다른 `xdm:sourceProperty` (&quot;휴대폰&quot;)을 참조하고 이 설명자를 &quot;전화&quot; `xdm:namespace` 로 변경하도록 업데이트됩니다.
 
@@ -234,7 +234,7 @@ curl -X PUT \
 }
 ```
 
-설명자를 보기 위해 조회(GET) 요청을 수행하면 이제 필드가 PUT 요청에 전송된 변경 사항을 반영하도록 업데이트되었음을 알 수 있습니다.
+설명자를 보기 위해 조회(GET) 요청을 수행하면 필드가 PUT 요청에 전송된 변경 사항을 반영하도록 업데이트되었음을 알 수 있습니다.
 
 ## 설명자 삭제
 
@@ -336,7 +336,7 @@ ID 설명자는 &quot;sourceSchema[!UICONTROL &quot;의 &quot;]sourceProperty[!U
 | `xdm:sourceProperty` | ID가 될 특정 속성의 경로입니다. 경로는 &quot;/&quot;로 시작하고 하나로 끝나지 않아야 합니다. 경로에 &quot;속성&quot;을 포함하지 마십시오(예: &quot;/properties/personalEmail/properties/address&quot; 대신 &quot;/personalEmail/address&quot;를 사용). |
 | `xdm:title` | 제목 사례에 작성된 이 필드에 표시할 새 제목입니다. |
 | `xdm:description` | 선택적인 설명은 제목과 함께 추가할 수 있습니다. |
-| `meta:enum` | 로 표시된 필드 `xdm:sourceProperty` 가 문자열 필드인 경우 UI의 필드에 대해 제안된 값 목록 `meta:enum` 을 결정합니다 [!DNL Experience Platform] . 열거형을 선언하거나 XDM 필드에 대한 데이터 유효성 검사를 제공하지 `meta:enum` 않는다는 점에 유의하십시오.<br><br>Adobe에서 정의한 핵심 XDM 필드에만 사용해야 합니다. 소스 속성이 조직에서 정의한 사용자 지정 필드인 경우 대신 `meta:enum` PATCH 요청을 통해 직접 필드 [속성을 편집해야 합니다](./update-resource.md). |
+| `meta:enum` | 로 표시된 필드 `xdm:sourceProperty` 가 문자열 필드인 경우 UI의 필드에 대해 제안된 값 목록 `meta:enum` 을 결정합니다 [!DNL Experience Platform] . 열거형을 선언하거나 XDM 필드에 대한 데이터 유효성 검사를 제공하지 `meta:enum` 않는다는 점에 유의하십시오.<br><br>Adobe에 의해 정의된 핵심 XDM 필드에만 사용해야 합니다. 소스 속성이 조직에서 정의한 사용자 지정 필드인 경우 대신 `meta:enum` PATCH 요청을 통해 직접 필드 [속성을 편집해야 합니다](./update-resource.md). |
 
 #### 관계 설명자
 
