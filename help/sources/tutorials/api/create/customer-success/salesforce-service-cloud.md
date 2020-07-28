@@ -58,7 +58,7 @@ API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
-페이로드(POST, PUT, PATCH)가 포함된 모든 요청에는 추가 미디어 유형 헤더가 필요합니다.
+페이로드(POST, PUT, PATCH)이 포함된 모든 요청에는 추가 미디어 유형 헤더가 필요합니다.
 
 * 컨텐츠 유형: `application/json`
 
@@ -68,7 +68,7 @@ SSC 연결을 만들려면 SSC 연결 사양 세트가 안에 있어야 합니�
 
 **API 형식**
 
-사용 가능한 각 소스에는 인증 요구 사항과 같은 커넥터 속성을 설명하는 고유한 연결 사양이 있습니다. GET 요청을 `/connectionSpecs` 끝점으로 보내면 사용 가능한 모든 소스에 대한 연결 사양이 반환됩니다. SSC에 대한 정보 `property=name=="salesforce-service-cloud"` 를 얻기 위해 쿼리를 포함할 수도 있습니다.
+사용 가능한 각 소스에는 인증 요구 사항과 같은 커넥터 속성을 설명하는 고유한 연결 사양이 있습니다. GET 요청을 `/connectionSpecs` 종단점으로 보내면 사용 가능한 모든 소스에 대한 연결 사양이 반환됩니다. SSC에 대한 정보 `property=name=="salesforce-service-cloud"` 를 얻기 위해 쿼리를 포함할 수도 있습니다.
 
 ```http
 GET /connectionSpecs
