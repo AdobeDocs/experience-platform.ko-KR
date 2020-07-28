@@ -15,7 +15,7 @@ ht-degree: 3%
 # API를 사용하여 HP [!DNL Vertica] 커넥터 [!DNL Flow Service] 만들기
 
 >[!NOTE]
->HP 커넥터 [!DNL Vertica] 가 베타에 있습니다. 베타 [레이블이 지정된 커넥터 사용에 대한 자세한 내용은 소스 개요를](../../../../home.md#terms-and-conditions) 참조하십시오.
+>HP 커넥터 [!DNL Vertica] 가 베타 버전입니다. 베타 [레이블이 지정된 커넥터 사용에 대한 자세한 내용은 소스 개요를](../../../../home.md#terms-and-conditions) 참조하십시오.
 
 [!DNL Flow Service] 는 Adobe Experience Platform 내의 다양한 소스에서 수집된 고객 데이터를 수집하고 중앙 집중화하는 데 사용됩니다. 이 서비스는 지원되는 모든 소스가 연결되어 있는 사용자 인터페이스와 RESTful API를 제공합니다.
 
@@ -57,7 +57,7 @@ API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
-페이로드(POST, PUT, PATCH)가 포함된 모든 요청에는 추가 미디어 유형 헤더가 필요합니다.
+페이로드(POST, PUT, PATCH)이 포함된 모든 요청에는 추가 미디어 유형 헤더가 필요합니다.
 
 - 컨텐츠 유형: `application/json`
 
@@ -73,7 +73,7 @@ POST /connections
 
 **요청**
 
-HP [!DNL Vertica] 연결을 만들려면 POST 요청의 일부로 고유한 연결 사양 ID를 제공해야 합니다. HP의 연결 사양 ID [!DNL Vertica] 가 `a8b6a1a4-5735-42b4-952c-85dce0ac38b5`입니다.
+HP [!DNL Vertica] 연결을 만들려면 고유한 연결 사양 ID를 POST 요청의 일부로 제공해야 합니다. HP의 연결 사양 ID [!DNL Vertica] 가 `a8b6a1a4-5735-42b4-952c-85dce0ac38b5`입니다.
 
 ```shell
 curl -X POST \
