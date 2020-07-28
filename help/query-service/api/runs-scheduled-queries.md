@@ -20,7 +20,7 @@ ht-degree: 2%
 
 ### 지정된 예약된 쿼리에 대한 모든 실행 목록 검색
 
-현재 실행 중인지 또는 이미 완료되었는지에 관계없이 특정 예약된 쿼리에 대한 모든 실행 목록을 검색할 수 있습니다. 이것은 `/schedules/{SCHEDULE_ID}/runs` 끝점에 GET 요청을 함으로써 수행됩니다. 여기서 `{SCHEDULE_ID}` 는 검색하려는 예약된 쿼리의 `id` 값입니다.
+현재 실행 중인지 또는 이미 완료되었는지에 관계없이 특정 예약된 쿼리에 대한 모든 실행 목록을 검색할 수 있습니다. 이것은 `/schedules/{SCHEDULE_ID}/runs` 끝점에 GET 요청을 함으로써 수행됩니다. 여기서 `{SCHEDULE_ID}` 는 검색하려는 실행 `id` 의 예약된 쿼리의 값입니다.
 
 **API 형식**
 
@@ -153,7 +153,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/schedules/e95186d65a
 
 ### 특정 예약된 쿼리에 대해 실행을 즉시 트리거합니다.
 
-POST 요청을 끝점에 만들어 지정된 예약된 쿼리에 대한 실행을 즉시 트리거할 수 있습니다. 여기서 `/schedules/{SCHEDULE_ID}/runs` 는 실행을 트리거하려는 예약된 쿼리의 `{SCHEDULE_ID}` `id` 값입니다.
+종단점에 POST 요청을 만들어 지정된 예약된 쿼리에 대한 실행을 즉시 트리거할 수 있습니다. 여기서 `/schedules/{SCHEDULE_ID}/runs` 는 실행을 트리거하려는 예약된 쿼리 `{SCHEDULE_ID}` `id` 의 값입니다.
 
 **API 형식**
 
@@ -184,7 +184,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/schedules/e95186d65
 
 ### 특정 예약된 쿼리에 대한 실행 세부 정보 검색
 
-종단점에 GET 요청을 만들고 예약된 쿼리의 ID와 요청 경로에서 실행을 모두 제공하여 특정 예약된 쿼리에 대한 실행에 대한 세부 정보를 검색할 수 있습니다. `/schedules/{SCHEDULE_ID}/runs/{RUN_ID}`
+종단점에 GET 요청을 하고 예약된 쿼리의 ID와 요청 경로에서 실행을 모두 제공하여 특정 예약된 쿼리에 대한 실행에 대한 세부 정보를 검색할 수 있습니다. `/schedules/{SCHEDULE_ID}/runs/{RUN_ID}`
 
 **API 형식**
 
@@ -194,7 +194,7 @@ GET /schedules/{SCHEDULE_ID}/runs/{RUN_ID}
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | 세부 사항을 검색하려는 실행이 예약된 쿼리의 `id` 값. |
+| `{SCHEDULE_ID}` | 세부 사항을 검색하려는 실행이 예약된 쿼리의 `id` 값입니다. |
 | `{RUN_ID}` | 검색할 실행 `id` 의 값입니다. |
 
 **요청**
@@ -245,7 +245,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/schedules/e95186d65a
 
 ### 특정 예약된 쿼리에 대한 실행을 즉시 중지합니다.
 
-종단점에 대한 PATCH 요청을 만들고 예약된 쿼리의 ID와 요청 경로에 있는 실행을 모두 제공하여 특정 예약된 쿼리에 대한 실행을 즉시 중지할 수 있습니다. `/schedules/{SCHEDULE_ID}/runs/{RUN_ID}`
+종단점에 PATCH 요청을 만들고 예약된 쿼리의 ID와 요청 경로에서 실행을 모두 제공하여 특정 예약된 쿼리에 대한 실행을 즉시 중지할 수 있습니다. `/schedules/{SCHEDULE_ID}/runs/{RUN_ID}`
 
 **API 형식**
 
@@ -255,7 +255,7 @@ PATCH /schedules/{SCHEDULE_ID}/runs/{RUN_ID}
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | 세부 사항을 검색하려는 실행이 예약된 쿼리의 `id` 값. |
+| `{SCHEDULE_ID}` | 세부 사항을 검색하려는 실행이 예약된 쿼리의 `id` 값입니다. |
 | `{RUN_ID}` | 검색할 실행 `id` 의 값입니다. |
 
 **요청**
