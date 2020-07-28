@@ -14,7 +14,7 @@ ht-degree: 3%
 
 # 액세스 제어 작업 영역 찾아보기
 
-Adobe Admin Console을 통해 액세스 제어 [!DNL Experience Platform] 를 구성하려면 구독이 있는 IMS 조직의 관리자여야 합니다 [!DNL Experience Platform]. Adobe는 IMS Orgs에 대한 유연한 관리자 계층을 지원하지만, 액세스 제어를 구성하려면 **[!UICONTROL 시스템 관리자]**, **[!UICONTROL 제품 관리자]**&#x200B;또는 **[!UICONTROL 제품 프로필 관리자]** 권한이 있어야합니다. 자세한 내용은 관리 역할에 대한 Adobe [도움말](https://helpx.adobe.com/enterprise/using/admin-roles.html) 센터 문서를 참조하십시오.
+Adobe Admin Console을 통해 액세스 제어 [!DNL Experience Platform] 를 구성하려면 구독이 있는 IMS 조직의 관리자여야 합니다 [!DNL Experience Platform]. Adobe은 IMS Orgs에 대한 유연한 관리자 계층을 지원하지만 액세스 제어를 구성하려면 **[!UICONTROL 시스템 관리자]**, **[!UICONTROL 제품 관리자]**&#x200B;또는 **[!UICONTROL 제품 프로필 관리자]** 권한이 있어야합니다. 자세한 내용은 [관리자 역할에](https://helpx.adobe.com/enterprise/using/admin-roles.html) 대한 Adobe Help Center 문서를 참조하십시오.
 
 관리자 권한이 없는 경우 시스템 관리자에게 문의하여 액세스 권한을 얻으십시오.
 
