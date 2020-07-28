@@ -47,7 +47,7 @@ Adobe Experience Platform의 새로운 기능:
 
 ## [!DNL Experience Data Model] (XDM) 시스템 {#xdm}
 
-표준화와 상호 운용성은 그 이면의 핵심 개념입니다 [!DNL Experience Platform]. [!DNL Experience Data Model] (XDM)은 Adobe를 기반으로 고객 경험 데이터를 표준화하고 고객 경험 관리를 위한 스키마를 정의하는 것입니다.
+표준화와 상호 운용성은 그 이면의 핵심 개념입니다 [!DNL Experience Platform]. [!DNL Experience Data Model] (XDM)은 Adobe을 기반으로 고객 경험 데이터를 표준화하고 고객 경험 관리를 위한 스키마를 정의하는 것입니다.
 
 XDM은 디지털 경험의 강력함을 향상시키도록 고안된 공개적으로 문서화된 사양입니다. Adobe Experience Platform에서 서비스와 통신하는 모든 애플리케이션에 대한 공통 구조와 정의를 제공합니다. 모든 고객 경험 데이터는 XDM 표준을 준수하여 보다 빠르고 통합된 방식으로 인사이트를 제공하는 공통 표현에 통합할 수 있습니다. 고객 행동을 통해 유용한 인사이트를 얻고 세그먼트를 통해 고객 고객을 정의하며 개인화를 위해 고객 속성을 사용할 수 있습니다.
 
@@ -90,16 +90,16 @@ DULE 프레임워크는 [!DNL Experience Platform] 사용자 인터페이스 및
 
 ## 대상 {#destinations}
 
-실시간 [고객 데이터 Platform](../../rtcdp/overview.md)에서 대상은 대상 플랫폼과 사전 구축된 통합으로 이러한 파트너에게 데이터를 원활하게 제공할 수 있습니다.
+Adobe 실시간 고객 데이터 Platform에서 [](../../rtcdp/overview.md)대상은 대상 플랫폼과 사전 구축된 통합으로 이러한 파트너에 대한 데이터를 원활하게 활성화합니다.
 
 **새 대상**
 
-Adobe Real-time CDP는 50개 이상의 확장 기능에 대한 데이터 활성화를 지원하여 분석, 개인화 및 기타 사용 사례를 가능하게 합니다. [!DNL Experience Cloud Launch] 자세한 내용은 아래를 참조하십시오.
+Adobe 실시간 CDP는 50개 이상의 확장을 대상으로 데이터 활성화를 지원하므로 분석, 개인화 및 기타 사용 사례를 활용할 수 있습니다 [!DNL Experience Cloud Launch] . 자세한 내용은 아래를 참조하십시오.
 
 | 설명서 | 설명 |
 |--- | ---|
 | [대상 유형 및 카테고리](/help/rtcdp/destinations/destination-types.md) | 이 문서에서는 Adobe 실시간 CDP 인터페이스의 연결과 익스텐션의 차이점과 이러한 각 대상을 사용할 시기를 권장합니다. |
-| [Experience Platform Launch 확장](/help/rtcdp/destinations/experience-platform-launch-extensions.md) | 이 페이지에서는 익스텐션의 [!DNL Launch] 정의와 사용 사례를 나열하고 Adobe 실시간 CDP의 각 익스텐션 [!DNL Launch] 에 대한 설명서 링크를 설명합니다. |
+| [Experience Platform Launch 확장](/help/rtcdp/destinations/experience-platform-launch-extensions.md) | 이 페이지에서는 어떤 확장 기능을 [!DNL Launch] 사용하는지, 사용 사례를 나열하고, Adobe 실시간 CDP의 각 익스텐션 [!DNL Launch] 에 대한 설명서 링크를 설명합니다. |
 
 자세한 내용은 대상 [개요를 참조하십시오](/help/rtcdp/destinations/destinations-overview.md).
 
