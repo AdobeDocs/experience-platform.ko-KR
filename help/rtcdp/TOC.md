@@ -35,7 +35,7 @@ ht-degree: 11%
          * [Adobe Campaign](destinations/adobe-campaign-destination.md)
       * 광고 대상{#advertising-destinations}
          * [광고 대상 개요](destinations/advertising-destinations.md)
-         * [Adobe Advertising Cloud 확장](/help/rtcdp/destinations/adobe-advertising-cloud-extension.md)
+         * [Adobe Advertising Cloud 익스텐션](/help/rtcdp/destinations/adobe-advertising-cloud-extension.md)
          * [Awin 광고 전환 태그 확장](/help/rtcdp/destinations/awin-conversiontag-extension.md)
          * [Awin 광고 마스터태그 확장](/help/rtcdp/destinations/awin-mastertag-extension.md)
          * [Beemray 확장](/help/rtcdp/destinations/beemray-extension.md)
@@ -108,7 +108,7 @@ ht-degree: 11%
       * 소셜 네트워크 대상{#social-destinations}
          * [소셜 네트워크 대상 개요](/help/rtcdp/destinations/social-network-destinations.md)
          * [소셜 네트워크 대상 인증 흐름](/help/rtcdp/destinations/social-network-destinations-workflow.md)
-         * [Adobe Livefyre 익스텐션](/help/rtcdp/destinations/adobe-livefyre-extension.md)
+         * [Adobe Livefyre 확장](/help/rtcdp/destinations/adobe-livefyre-extension.md)
          * [Facebook 대상](/help/rtcdp/destinations/facebook-destination.md)
       * 설문 조사 대상 {#survey-destinations}
          * [설문 조사 대상 개요](/help/rtcdp/destinations/survey-destinations.md)
@@ -131,7 +131,7 @@ ht-degree: 11%
 * 개인 정보 및 데이터 거버넌스 {#privacy}
    * [개인 정보 보호 개요](privacy/privacy-overview.md)
    * [데이터 거버넌스 개요](privacy/data-governance-overview.md)
-* 프로파일 {#profile}
+* 프로필 {#profile}
    * [프로필 개요](profile/profile-overview.md)
    * [ID 및 ID 네임스페이스](profile/identities-overview.md)
    * [정책 병합](profile/merge-policies.md)
@@ -141,6 +141,6 @@ ht-degree: 11%
    * [세그먼트 빌더 가이드](segmentation/segment-builder-guide.md)
 * 소스 {#sources}
    * [소스 개요](sources/sources-overview.md)
-   * [Adobe Launch를 사용하여 웹 사이트 태그 구현](sources/launch.md)
+   * [Adobe 시작을 사용하여 웹 사이트 태그 구현](sources/launch.md)
 * [Experience Platform 릴리스 노트](https://www.adobe.com/go/platform-release-notes-en)
 * [Experience Platform 용어집](https://www.adobe.com/go/platform-glossary-en)
