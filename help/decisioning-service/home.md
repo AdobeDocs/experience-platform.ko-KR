@@ -58,7 +58,7 @@ ht-degree: 0%
 
 ## Working with [!DNL Decisioning Service]
 
-다른 서비스와 [!DNL Decisioning Service]마찬가지로 API 퍼스트 [!DNL Platform] 철학을 채택합니다. 즉, API는 관리 기능을 포함한 모든 기능이 API를 통해 사용할 수 있는 기본 인터페이스입니다. 또한 다른 [!DNL Platform] 서비스, Adobe 솔루션 및 타사 통합에서는 동일한 API를 사용합니다.
+다른 서비스와 [!DNL Decisioning Service]마찬가지로 API 퍼스트 [!DNL Platform] 철학을 채택합니다. 즉, API는 관리 기능을 포함한 모든 기능이 API를 통해 사용할 수 있는 기본 인터페이스입니다. 또한 다른 [!DNL Platform] 서비스, Adobe 솔루션 및 타사 통합에서 동일한 API를 사용한다는 의미입니다.
 
 간단한 HTTP REST API를 통해 [!DNL Decisioning Service] 동기 요청 응답 상호 작용 모드에서 사용할 수 있습니다. API 호출은 현재 단일 프로필에 가장 적합한 옵션을 반환합니다. &quot;현재 최선의 옵션&quot; 선택 사항은 지정된 활동이 고려 중인 모든 옵션에 적용된 규칙 및 제한 사항을 기반으로 변경됩니다. REST API를 사용하면 한 번에 여러 활동을 위한 최상의 다음 옵션을 얻을 수 있습니다. 이를 통해 여러 채널에서 옵션을 중재할 수 있습니다. 여러 활동에 대한 응답을 함께 얻으면 추가 규칙이 적용될 수 있습니다.
 
