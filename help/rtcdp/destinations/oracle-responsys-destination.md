@@ -18,7 +18,7 @@ ht-degree: 0%
 
 [Respondsys](https://www.oracle.com/marketingcloud/products/cross-channel-orchestration/) 는 이메일, 모바일, 디스플레이 및 소셜 간의 인터랙션을 개인화하도록 [!DNL Oracle] 하는 크로스채널 마케팅 캠페인을 위한 기업 이메일 마케팅 툴입니다.
 
-세그먼트 데이터를 대상 [!DNL Oracle Responsys]으로 전송하려면 먼저 Adobe 실시간 고객 데이터 Platform에서 대상에 [](#connect-destination) 연결한 [다음 저장 위치에서 다음](#import-data-into-responsys) 으로 데이터 가져오기를 [!DNL Oracle Responsys]설정해야 합니다.
+세그먼트 데이터를 대상 [!DNL Oracle Responsys]으로 전송하려면 먼저 Adobe 실시간 고객 데이터 Platform의 대상에 [](#connect-destination) 연결한 다음 스토리지 위치에서 [데이터 가져오기](#import-data-into-responsys) 를 스토리지 위치로 [!DNL Oracle Responsys]설정해야 합니다.
 
 ## 연결 대상 {#connect-destination}
 
