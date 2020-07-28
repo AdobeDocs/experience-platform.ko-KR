@@ -20,7 +20,7 @@ Adobe Experience Platform을 사용하면 ADC(Analytics 데이터 커넥터)를 
 
 ## 직접 매핑 필드
 
-일부 필드는 Adobe Analytics에서 XDM(Experience Data Model)으로 직접 매핑됩니다.
+일부 필드는 Adobe Analytics에서 경험 데이터 모델(XDM)으로 직접 매핑됩니다.
 
 다음 표에는 Analytics 필드(*Analytics 필드*) 이름, 해당 XDM 필드(*XDM 필드*) 및 해당 유형(*XDM 유형*)을 보여주는 열과 필드(설명&#x200B;*Description)에 대한 설명 등이*&#x200B;포함되어 있습니다.
 
@@ -30,7 +30,7 @@ Adobe Experience Platform을 사용하면 ADC(Analytics 데이터 커넥터)를 
 
 | Analytics 필드 | XDM 필드 | XDM 유형 | 설명 |
 | --------------- | --------- | -------- | ---------- |
-| m_evar1 - m_evar250 | _experience.analytics.customDimensions.eVar1 - _experience.analytics.customDimensions.eVar.eVar250 | string | 사용자 지정 변수 - 1-250 범위일 수 있습니다. 각 조직은 이러한 사용자 지정 eVar를 다르게 사용하게 됩니다. |
+| m_evar1 - m_evar250 | _experience.analytics.customDimensions.eVars.eVar1 - _experience.analytics.customDimensions.eVars.eVar250 | string | 사용자 지정 변수 - 1-250 범위일 수 있습니다. 각 조직은 이러한 사용자 지정 eVar를 다르게 사용하게 됩니다. |
 | m_prop1 - m_prop75 | _experience.analytics.customDimensions.prop1 - _experience.analytics.customDimensions.prop75 | string | 사용자 지정 트래픽 변수 - 1-75 범위입니다. |
 | m_browser | _experience.analytics.environment.browserID | 정수 | 브라우저의 번호 ID. |
 | m_browser_height | environment.browserDetails.viewportHeight | 정수 | 브라우저의 높이(픽셀 단위) |
@@ -135,7 +135,7 @@ Adobe Experience Platform을 사용하면 ADC(Analytics 데이터 커넥터)를 
 
 ## 생성된 매핑 필드
 
-XDM에서 생성되려면 ADC에서 나오는 일부 필드를 변형해야 하며, Adobe Analytics에서 직접 복사할 수 없는 논리를 필요로 합니다.
+XDM에서 생성하려면 ADC에서 나오는 일부 필드를 변형해야 하며, XDM에서 직접 사본이 아닌 로직을 필요로 합니다.
 
 다음 표에는 Analytics 필드(*Analytics 필드*) 이름, 해당 XDM 필드(*XDM 필드*) 및 해당 유형(*XDM 유형*)을 보여주는 열과 필드(설명&#x200B;*Description)에 대한 설명 등이*&#x200B;포함되어 있습니다.
 
@@ -193,9 +193,9 @@ XDM에서 생성되려면 ADC에서 나오는 일부 필드를 변형해야 하�
 
 ## 고급 매핑 필드
 
-일부 필드(&quot;postvalues&quot;라고 함)는 Adobe Analytics 필드에서 XDM(Experience Data Model)으로 성공적으로 매핑하기 전에 더 많은 고급 변형이 필요합니다. 이러한 고급 변형을 수행하려면 Adobe Experience Platform 쿼리 서비스와 사전 구축된 함수(Adobe에서 정의한 함수)를 사용하여 세션, 기여도 및 데이터 중복 제거를 수행해야 합니다.
+일부 필드(&quot;postvalues&quot;라고 함)는 Adobe Analytics 필드에서 XDM(Experience Data Model)으로 성공적으로 매핑하기 전에 더 많은 고급 변형이 필요합니다. 이러한 고급 변형을 수행하려면 Adobe Experience Platform 쿼리 서비스와 사전 구축된 함수(Adobe 정의 함수)를 사용하여 세션, 어트리뷰션 및 데이터 중복 제거를 수행해야 합니다.
 
-쿼리 서비스를 사용하여 이러한 변형을 수행하는 방법에 대한 자세한 내용은 [Adobe에서 정의한 함수](../../../../query-service/sql/adobe-defined-functions.md) 설명서를 참조하십시오.
+쿼리 서비스를 사용하여 이러한 변형 수행에 대한 자세한 내용은 [Adobe에서 정의한 함수](../../../../query-service/sql/adobe-defined-functions.md) 설명서를 참조하십시오.
 
 다음 표에는 Analytics 필드(*Analytics 필드*) 이름, 해당 XDM 필드(*XDM 필드*) 및 해당 유형(*XDM 유형*)을 보여주는 열과 필드(설명&#x200B;*Description)에 대한 설명 등이*&#x200B;포함되어 있습니다.
 
@@ -205,7 +205,7 @@ XDM에서 생성되려면 ADC에서 나오는 일부 필드를 변형해야 하�
 
 | Analytics 필드 | XDM 필드 | XDM 유형 | 설명 |
 | --------------- | --------- | -------- | ---------- |
-| post_evar1 - post_evar250 | _experience.analytics.customDimensions.eVar1 - _experience.analytics.customDimensions.eVar.eVar250 | string | 사용자 지정 변수 - 1-250 범위일 수 있습니다. 각 조직은 이러한 사용자 지정 eVar를 다르게 사용하게 됩니다. |
+| post_evar1 - post_evar250 | _experience.analytics.customDimensions.eVars.eVar1 - _experience.analytics.customDimensions.eVars.eVar250 | string | 사용자 지정 변수 - 1-250 범위일 수 있습니다. 각 조직은 이러한 사용자 지정 eVar를 다르게 사용하게 됩니다. |
 | post_prop1 - post_prop75 | _experience.analytics.customDimensions.prop1 - _experience.analytics.customDimensions.prop75 | string | 사용자 지정 트래픽 변수 - 1-75 범위입니다. |
 | post_browser_height | environment.browserDetails.viewportHeight | 정수 | 브라우저의 높이(픽셀 단위) |
 | post_browser_width | environment.browserDetails.viewportWidth | 정수 | 브라우저의 너비(픽셀 단위)입니다. |
