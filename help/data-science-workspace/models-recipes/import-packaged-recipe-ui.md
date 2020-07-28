@@ -26,7 +26,7 @@ ht-degree: 0%
 
 패키지 레서피 가져오기 워크플로우는 다음 단계로 구성됩니다.
 - [레서피 구성](#configure)
-- [Docker 기반 레시피 가져오기 - Python](#python)
+- [Import Docker based recipe - Python](#python)
 - [Docker 기반 레서피 가져오기 - R](#r)
 - [Docker 기반의 레서피 가져오기 - PySpark](#pyspark)
 - [Docker 기반 레서피 가져오기 - Scala](#scala)
