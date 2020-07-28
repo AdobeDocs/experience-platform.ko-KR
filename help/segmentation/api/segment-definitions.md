@@ -24,7 +24,7 @@ Adobe Experience Platform을 사용하면 프로필 그룹에서 특정 속성�
 
 ## 세그먼트 정의 목록 검색 {#list}
 
-종단점에 대한 GET 요청을 만들어 IMS 조직에 대한 모든 세그먼트 정의 목록을 검색할 수 `/segment/definitions` 있습니다.
+종단점에 GET 요청을 하여 IMS 조직에 대한 모든 세그먼트 정의 목록을 검색할 수 `/segment/definitions` 있습니다.
 
 **API 형식**
 
@@ -153,7 +153,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions?limit=2 
 
 ## 새 세그먼트 정의 만들기 {#create}
 
-종단점에 대한 POST 요청을 만들어 새 세그먼트 정의를 만들 수 `/segment/definitions` 있습니다.
+종단점에 POST 요청을 만들어 새 세그먼트 정의를 만들 수 `/segment/definitions` 있습니다.
 
 **API 형식**
 
@@ -332,7 +332,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions/4afe34ae
 
 ## 세그먼트 정의 일괄 검색 {#bulk-get}
 
-종단점에 POST 요청을 수행하고 요청 본문에 세그먼트 정의의 `/segment/definitions/bulk-get` `id` 값을 제공하여 지정된 여러 세그먼트 정의에 대한 자세한 정보를 검색할 수 있습니다.
+종단점에 POST 요청을 만들고 요청 본문에 세그먼트 정의의 `/segment/definitions/bulk-get` `id` 값을 제공하여 지정한 여러 세그먼트 정의에 대한 자세한 정보를 검색할 수 있습니다.
 
 **API 형식**
 
