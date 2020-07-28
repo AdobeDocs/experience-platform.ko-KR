@@ -16,15 +16,15 @@ ht-degree: 3%
 
 Adobe Experience Platform을 사용하면 ADC(Analytics 데이터 커넥터)를 통해 Adobe Analytics 데이터를 인제스트할 수 있습니다. ADC는 Adobe Analytics에서 수집한 데이터를 실시간으로 Platform으로 스트리밍하여 Platform에 의한 소비를 위해 SCDS 형식의 Analytics 데이터를 XDM(Experience Data Model) 필드로 변환합니다.
 
-이 문서에서는 Adobe Analytics의 개요를 제공하며 Analytics 데이터의 사용 사례를 설명합니다.
+이 문서에서는 Adobe Analytics의 개요를 제공하며 Analytics 데이터의 사용 사례에 대해 설명합니다.
 
 ## Adobe Analytics 및 Analytics 데이터
 
-Adobe Analytics은 고객에 대한 자세한 정보와 고객이 웹 자산과 상호 작용하는 방법, 디지털 마케팅 비용이 효과적인 위치를 확인하고 향상 영역을 식별할 수 있는 강력한 엔진입니다. Adobe Analytics은 연간 수 조 개의 웹 트랜잭션을 처리하고 ADC를 통해 이러한 풍부한 행동 데이터를 손쉽게 활용하고 몇 분 만에 실시간 고객 프로파일을 강화할 수 있습니다.
+Adobe Analytics은 고객에 대한 자세한 정보, 웹 자산과의 상호 작용 방식, 디지털 마케팅 지출의 효과적인 위치 확인, 그리고 개선점의 영역 식별에 도움이 되는 강력한 엔진입니다. Adobe Analytics은 연간 수 조 개의 웹 트랜잭션을 처리하고 ADC를 통해 이러한 풍부한 행동 데이터를 손쉽게 활용하고 몇 분 만에 실시간 고객 프로파일을 강화할 수 있습니다.
 
 ![](./images/analytics-data-experience-platform.png)
 
-높은 수준의 Adobe Analytics은 전 세계의 다양한 디지털 채널 및 데이터 센터에서 데이터를 수집합니다. 데이터가 수집되면 들어오는 데이터를 형성하기 위해 방문자 식별, 세분화 및 변형 아키텍처(VISTA) 규칙 및 처리 규칙이 적용됩니다. Raw 데이터가 이러한 경량 처리를 거친 후 실시간 고객 프로필에서 사용할 준비가 된 것으로 간주됩니다. 앞서 언급한 것과 유사한 프로세스에서, 처리된 동일한 데이터는 마이크로 배칭되고 데이터 과학 작업 공간, 쿼리 서비스 및 기타 데이터 검색 응용 프로그램에서 사용하기 위해 Platform 데이터 세트에 수집됩니다.
+Adobe Analytics은 높은 수준에서 전 세계의 다양한 디지털 채널과 데이터 센터에서 데이터를 수집합니다. 데이터가 수집되면 들어오는 데이터를 형성하기 위해 방문자 식별, 세분화 및 변형 아키텍처(VISTA) 규칙 및 처리 규칙이 적용됩니다. Raw 데이터가 이러한 경량 처리를 거친 후 실시간 고객 프로필에서 사용할 준비가 된 것으로 간주됩니다. 앞서 언급한 것과 유사한 프로세스에서, 처리된 동일한 데이터는 마이크로 배칭되고 데이터 과학 작업 공간, 쿼리 서비스 및 기타 데이터 검색 응용 프로그램에서 사용하기 위해 Platform 데이터 세트에 수집됩니다.
 
 처리 [규칙에 대한 자세한 내용은 처리 규칙 개요를](https://docs.adobe.com/content/help/ko-KR/analytics/admin/admin-tools/processing-rules/processing-rules.html) 참조하십시오.
 
@@ -36,7 +36,7 @@ XDM 표준을 준수하면 데이터를 일관되게 통합할 수 있으므로 
 
 XDM에 대한 자세한 내용은 [XDM 시스템 개요를 참조하십시오](../../../xdm/home.md).
 
-## Adobe Analytics에서 XDM으로 필드를 매핑하려면 어떻게 해야 합니까?
+## Adobe Analytics에서 XDM으로 필드를 어떻게 매핑합니까?
 
 Platform 사용자 인터페이스를 사용하여 Analytics 데이터를 Experience Platform으로 가져오기 위해 소스 연결이 설정되면 데이터 필드가 자동으로 매핑되고 몇 분 내에 실시간 고객 프로파일에 수집됩니다. Platform UI를 사용하여 Adobe Analytics와의 소스 연결을 만드는 방법에 대한 지침은 [Analytics 데이터 커넥터 자습서를 참조하십시오](../../tutorials/ui/create/adobe-applications/analytics.md).
 
