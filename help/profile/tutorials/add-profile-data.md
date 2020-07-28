@@ -20,7 +20,7 @@ ht-degree: 0%
 
 사용 [!DNL Experience Platform] 을 위해 수집되는 데이터는 에 활성화된 [!DNL Real-time Customer Profile] (XDM) 스키마를 [!DNL Experience Data Model] 준수해야 합니다 [!DNL Profile]. 프로필에 대해 스키마를 활성화하려면 [!DNL XDM Individual Profile] 또는 [!DNL XDM ExperienceEvent] 클래스를 구현해야 합니다.
 
-API 또는 사용자 인터페이스 [!DNL Real-time Customer Profile] 를 사용하는 데 사용할 수 있는 스키마를 활성화할 수 [!DNL Schema Registry] [!DNL Schema Editor] 있습니다. 시작하려면 API를 사용하여 스키마 [를](../../xdm/tutorials/create-schema-api.md) 만들거나 스키마 편집기 UI를 사용하여 스키마 [를 만드는 자습서에 따르십시오](../../xdm/tutorials/create-schema-ui.md).
+API 또는 [!DNL Real-time Customer Profile] 사용자 인터페이스 [!DNL Schema Registry] 를 사용하는 데 사용할 수 있는 스키마를 활성화할 수 있습니다 [!DNL Schema Editor] . 시작하려면 API를 사용하여 스키마 [를](../../xdm/tutorials/create-schema-api.md) 만들거나 스키마 편집기 UI를 사용하여 스키마 [를 만드는 자습서에 따르십시오](../../xdm/tutorials/create-schema-ui.md).
 
 ## 일괄 처리를 사용하여 데이터 추가
 
