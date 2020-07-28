@@ -62,7 +62,7 @@ Adobe Experience Platform에 [로그인한](https://platform.adobe.com) 다음 �
 
 화면의 왼쪽에 있는 카탈로그에서 해당 범주를 선택할 수 있습니다. 또는 검색 옵션을 사용하여 작업할 특정 소스를 찾을 수 있습니다.
 
-[ *[!UICONTROL Azure Blob 저장소]* ] 범주 아래에서 **[!UICONTROL Amazon S3를]** 선택하거나 **[!UICONTROL Amazon S3를]** 클릭하여 + 아이콘(+)을 **** [!DNL Blob] 클릭하여 새 Azure 또는 S3 커넥터를 만듭니다.
+[ *[!UICONTROL Azure Blob 데이터베이스]* ] 범주 아래에서 **[!UICONTROL Azure Blob 저장소]** 또는 **[!UICONTROL Amazon의]** S3 **을 클릭하여 + 아이콘(+)** [!DNL Blob] 을 클릭하여 새 Azure 또는 S3 커넥터를 만듭니다.
 
 ![카탈로그](../../../../images/tutorials/create/blob/catalog.png)
 
