@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # 액세스 제어 사용 안내서
 
-Adobe Experience Platform의 액세스 제어를 통해 [!DNL Platform] Adobe Admin Console을 사용하여 다양한 [기능에 대한 역할 및 권한을 관리할 수 있습니다](https://adminconsole.adobe.com). 이 문서는 액세스 제어를 관리하기 위해 탐색하는 방법 [!DNL Admin Console] 에 대한 안내서의 역할을 합니다 [!DNL Platform]. 액세스 제어에 대한 개요 [!DNL Experience Platform]는 [액세스 제어 개요를 참조하십시오](./../home.md).
+Adobe Experience Platform의 액세스 제어를 사용하면 [!DNL Platform] Adobe Admin Console [](https://adminconsole.adobe.com)를 사용하여 다양한 기능에 대한 역할 및 권한을 관리할 수 있습니다. 이 문서는 액세스 제어를 관리하기 위해 탐색하는 방법 [!DNL Admin Console] 에 대한 안내서의 역할을 합니다 [!DNL Platform]. 액세스 제어에 대한 개요 [!DNL Experience Platform]는 [액세스 제어 개요를 참조하십시오](./../home.md).
 
 다음 작업에 대해 다룹니다.
 
