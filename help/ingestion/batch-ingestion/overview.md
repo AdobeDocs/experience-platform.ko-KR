@@ -65,7 +65,7 @@ API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 
 >
 >의 샌드박스에 대한 자세한 내용 [!DNL Platform]은 [샌드박스 개요 설명서를 참조하십시오](../../sandboxes/home.md).
 
-페이로드(POST, PUT, PATCH)가 포함된 모든 요청에는 추가 헤더가 필요합니다.
+페이로드(POST, PUT, PATCH)이 포함된 모든 요청에는 추가 헤더가 필요합니다.
 
 - 컨텐츠 유형: application/json
 
@@ -200,7 +200,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 
 ### 대용량 파일 업로드 - 후속 부품 업로드
 
-파일이 생성된 후 파일의 각 섹션에 대해 하나의 PATCH 요청을 반복해서 수행하여 이후의 모든 청크를 업로드할 수 있습니다.
+파일을 만든 후 파일의 각 섹션에 대해 PATCH을 반복해서 요청하여 이후의 모든 청크를 업로드할 수 있습니다.
 
 ```http
 PATCH /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
