@@ -47,7 +47,7 @@ API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 
 >
 >의 샌드박스에 대한 자세한 내용 [!DNL Platform]은 [샌드박스 개요 설명서를 참조하십시오](../../tutorials/authentication.md).
 
-페이로드(POST, PUT, PATCH)가 포함된 모든 요청에는 추가 헤더가 필요합니다.
+페이로드(POST, PUT, PATCH)이 포함된 모든 요청에는 추가 헤더가 필요합니다.
 
 - 컨텐츠 유형: application/json
 
@@ -59,7 +59,7 @@ API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 
 >
 >`UUID` 은 UUID 형식의 문자열로서, 전역적으로 고유하며, 다른 API 호출에서 다시 사용할 수 없습니다.
 
-[!DNL Decisioning Service] 는 서로 관련된 여러 비즈니스 객체에 의해 제어됩니다. 모든 비즈니스 개체는 XDM 코어 개체 저장소 [!DNL Platform’s] 의 비즈니스 개체 저장소에 저장됩니다. 이 저장소의 주요 기능은 API가 비즈니스 객체 유형과 수직이라는 것입니다. API 끝점의 리소스 유형을 나타내는 POST, GET, PUT, PATCH 또는 DELETE API를 사용하는 대신 6개의 일반 끝점만 있지만 모호성이 필요할 때 개체의 유형을 나타내는 매개 변수를 수락하거나 반환합니다. 스키마가 저장소에 등록되어 있어야 하지만, 저장소가 개방형 객체 유형 세트에 사용할 수 있습니다.
+[!DNL Decisioning Service] 는 서로 관련된 여러 비즈니스 객체에 의해 제어됩니다. 모든 비즈니스 개체는 XDM 코어 개체 저장소 [!DNL Platform’s] 의 비즈니스 개체 저장소에 저장됩니다. 이 저장소의 주요 기능은 API가 비즈니스 객체 유형과 수직이라는 것입니다. API 끝점의 리소스 유형을 나타내는 POST, GET, PUT, PATCH 또는 DELETE API를 사용하는 대신 6개의 일반 끝점만 있지만 이러한 모호성이 필요할 때 개체의 유형을 나타내는 매개 변수를 수락하거나 반환합니다. 스키마가 저장소에 등록되어 있어야 하지만, 저장소가 개방형 객체 유형 세트에 사용할 수 있습니다.
 
 모든 XDM 코어 개체 저장소 API에 대한 끝점 경로는 다음으로 시작합니다 `https://platform.adobe.io/data/core/ode/`.
 
@@ -181,7 +181,7 @@ REST API는 조직에서 사용자를 위해 설정한 규칙, 모델 및 제약
 
 두 개의 다른 활동들이 그들의 &quot;최고&quot;와 같은 선택을 할 수 있다. 작성된 경험을 반복하지 않도록 하려면 기본적으로 동일한 요청에서 참조되는 활동 간 [!DNL Decisioning Service] 중재를 수행합니다. 중재는 각 활동에 대해 최상위 N 옵션이 고려되지만 해당 활동에 대해 두 번 이상 제안을 할 수 없음을 의미합니다. 두 개의 활동이 가장 순위가 같은 옵션인 경우, 그 중 하나는 두 번째 최상의 선택이나 세 번째 최상의 선택 등을 사용하도록 선택됩니다. 이러한 중복 제거 규칙은 어떤 활동에서도 대체 옵션을 사용해야 한다는 사실을 방지하려고 합니다.
 
-의사 결정 요청에는 POST 요청 본문에 대한 인수가 포함되어 있습니다. 본문은 JSON 헤더 값으로 `Content-Type` 지정됩니다. `application/vnd.adobe.xdm+json; schema="{REQUEST_SCHEMA_AND_VERSION}"`
+의사 결정 요청에는 POST 요청의 본문에 대한 인수가 포함되어 있습니다. 본문은 JSON 헤더 값으로 `Content-Type` 지정됩니다. `application/vnd.adobe.xdm+json; schema="{REQUEST_SCHEMA_AND_VERSION}"`
 
 현재 지원되는 요청 스키마 및 버전입니다 `https://ns.adobe.com/experience/offer-management/decision-request;version=0.9`. 나중에 추가 요청 스키마 또는 버전이 제공됩니다.
 
