@@ -1,8 +1,8 @@
 ---
 title: 광고 대상
 seo-title: 광고 대상
-description: '실시간 고객 데이터 Platform을 타사 광고 플랫폼(예: DSP, 광고 네트워크, SSP)에 연결하고 익명의 사용자를 이러한 플랫폼에 공유할 수 있습니다.'
-seo-description: '실시간 고객 데이터 Platform을 타사 광고 플랫폼(예: DSP, 광고 네트워크, SSP)에 연결하고 익명의 사용자를 이러한 플랫폼에 공유할 수 있습니다.'
+description: '실시간 고객 데이터 Platform을 타사 광고 플랫폼(예: DSP, 광고 네트워크, SSP)에 연결하고 익명의 사용자를 이러한 플랫폼에 공유합니다.'
+seo-description: '실시간 고객 데이터 Platform을 타사 광고 플랫폼(예: DSP, 광고 네트워크, SSP)에 연결하고 익명의 사용자를 이러한 플랫폼에 공유합니다.'
 translation-type: tm+mt
 source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
 workflow-type: tm+mt
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # 광고 대상 {#advertising-destinations}
 
-타사 광고 플랫폼(예: DSP, 광고 네트워크, SSP) [!DNL Real-time Customer Data Platform] 에 연결하여 익명의 사용자를 이러한 플랫폼에 공유할 수 있습니다.
+타사 광고 플랫폼 [!DNL Real-time Customer Data Platform] (예: DSP, 광고 네트워크, SSP)에 연결하여 익명의 사용자를 이러한 플랫폼에 공유할 수 있습니다.
 
 광고 대상에 연결할 때 대상은 대상 플랫폼에서 알고 있는 ID에 매핑되는 대상 플랫폼에 ID로 전송됩니다.
 
