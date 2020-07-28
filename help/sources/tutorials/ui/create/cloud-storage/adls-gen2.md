@@ -44,7 +44,7 @@ ADLS Gen2 소스 커넥터를 인증하려면 다음 연결 속성에 값을 제
 
 필요한 자격 증명을 수집했으면 아래 절차에 따라 새 인바운드 기본 연결을 만들어 ADLS Gen2 계정을 연결할 수 있습니다 [!DNL Platform].
 
-Adobe에 <a href="https://platform.adobe.com" target="_blank">로그인한 [!DNL Experience Platform]</a> 다음 왼쪽 탐색 **[!UICONTROL 막대에서]** Sources를 선택하여 *[!UICONTROL Sources 작업 영역에]* 액세스합니다. [ *[!UICONTROL 카탈로그]* ] 탭에는 인바운드 기본 연결을 만드는 데 사용할 수 있는 다양한 소스가 표시됩니다. 각 소스에는 연결된 기존 기본 연결의 수가 표시됩니다.
+Adobe에 <a href="https://platform.adobe.com" target="_blank">로그인한 [!DNL Experience Platform]</a> 다음 왼쪽 탐색 **[!UICONTROL 모음에서]** 소스 *[!UICONTROL 를 선택하여]* 소스 작업 영역에액세스합니다. [ *[!UICONTROL 카탈로그]* ] 탭에는 인바운드 기본 연결을 만드는 데 사용할 수 있는 다양한 소스가 표시됩니다. 각 소스에는 연결된 기존 기본 연결의 수가 표시됩니다.
 
 [ *[!UICONTROL 클라우드 스토리지]* ] 범주 아래에서 **[!UICONTROL Azure Data Lake Gen2를]** 선택하여 화면 오른쪽에 정보 막대를 표시합니다. 정보 표시줄에는 선택한 소스에 대한 간단한 설명과 소스 보기 문서와 연결하는 옵션이 제공됩니다. 새 인바운드 기본 연결을 만들려면 **[!UICONTROL Connect 소스를 클릭합니다]**.
 
