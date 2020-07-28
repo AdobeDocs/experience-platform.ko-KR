@@ -37,7 +37,7 @@ ht-degree: 0%
 >
 >사용 중인 경우 대상에 마케팅 사용 사례 [!DNL Real-time Customer Data Platform]를 설정하여 정책 실행을 자동화할 수 있습니다. 자세한 내용은 실시간 CDP의 [데이터 거버넌스](../../rtcdp/privacy/data-governance-overview.md) 문서를 참조하십시오.
 
-사용 가능한 Adobe에서 정의한 마케팅 작업 [의 목록은 이 문서의 부록을 참조하십시오](#core-actions). DULE [!DNL Policy Service] API 또는 [!DNL Experience Platform ]사용자 인터페이스를 사용하여 고유한 사용자 지정 마케팅 작업을 정의할 수도 있습니다. 마케팅 작업 및 정책 작업에 대한 자세한 내용은 다음 섹션에서 제공됩니다.
+사용 가능한 Adobe에서 [정의한 마케팅 작업의 목록은 이 문서의 부록을 참조하십시오](#core-actions). DULE [!DNL Policy Service] API 또는 [!DNL Experience Platform ]사용자 인터페이스를 사용하여 고유한 사용자 지정 마케팅 작업을 정의할 수도 있습니다. 마케팅 작업 및 정책 작업에 대한 자세한 내용은 다음 섹션에서 제공됩니다.
 
 <!-- (Add after AAM DEC mapping doc is published)
 ### Inheritance from Adobe Audience Manager Data Export Controls
@@ -67,9 +67,9 @@ UI에서 마케팅 작업 및 정책을 사용하는 방법에 대한 자세한 
 
 다음 섹션에서는 데이터 사용 정책에 대한 추가 정보를 제공합니다.
 
-### Adobe에서 정의한 마케팅 활동 {#core-actions}
+### Adobe 정의된 마케팅 작업 {#core-actions}
 
-아래 표에서는 Adobe에서 제공하는 핵심 마케팅 활동에 대해 설명합니다.
+아래 표에서는 Adobe에서 제공하는 핵심 마케팅 작업에 대해 설명합니다.
 
 >[!NOTE]
 >
