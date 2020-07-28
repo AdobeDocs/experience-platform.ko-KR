@@ -46,11 +46,11 @@ API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-페이로드(POST, PUT, PATCH)가 포함된 모든 요청에는 추가 헤더가 필요합니다.
+페이로드(POST, PUT, PATCH)이 포함된 모든 요청에는 추가 헤더가 필요합니다.
 
 - 컨텐츠 유형: application/json
 
-의 모든 리소스 [!DNL Experience Platform] 는 특정 가상 샌드박스와 분리됩니다. API에 대한 모든 [!DNL Platform] 요청에는 작업이 수행할 샌드박스의 이름을 지정하는 헤더가 필요합니다. 의 샌드박스에 대한 자세한 내용 [!DNL Platform]은 [샌드박스 개요 설명서를 참조하십시오](../../sandboxes/home.md).
+의 모든 리소스 [!DNL Experience Platform] 는 특정 가상 샌드박스와 분리됩니다. API에 [!DNL Platform] 대한 모든 요청에는 작업이 수행할 샌드박스의 이름을 지정하는 헤더가 필요합니다. 의 샌드박스에 대한 자세한 내용 [!DNL Platform]은 [샌드박스 개요 설명서를 참조하십시오](../../sandboxes/home.md).
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -199,7 +199,7 @@ curl -X GET \
 
 ### 데이터 세트 활성화 {#enable-the-dataset}
 
-기존 데이터 세트에 대해 [!DNL Profile] 또는 [!DNL Identity Service]가 활성화되지 않은 경우 데이터 세트 ID를 사용하여 패치 요청을 수행하여 활성화할 수 있습니다.
+기존 데이터 세트에 대해 [!DNL Profile] 또는 [!DNL Identity Service]가 활성화되지 않은 경우 데이터 세트 ID를 사용하여 PATCH 요청을 수행하여 활성화할 수 있습니다.
 
 **API 형식**
 
@@ -231,7 +231,7 @@ curl -X PATCH \
 
 요청 본문에는 두 개의 하위 속성이 포함된 `tags` 속성이 포함됩니다. `"unifiedProfile"` 및 `"unifiedIdentity"`. 이러한 하위 속성의 값은 문자열을 포함하는 배열입니다 `"enabled:true"`.
 
-**응답** PATCH 요청이 성공하면 HTTP 상태 200(OK) 및 업데이트된 데이터 세트의 ID가 포함된 배열이 반환됩니다. 이 ID는 PATCH 요청에서 전송된 ID와 일치해야 합니다. 이제 `"unifiedProfile"` 및 `"unifiedIdentity"` 태그가 추가되었으며 데이터 세트를 프로필 및 ID 서비스에서 사용할 수 있게 되었습니다.
+**응답**&#x200B;이 성공적인 PATCH 요청은 HTTP 상태 200(OK)과 업데이트된 데이터 세트의 ID를 포함하는 배열을 반환합니다. 이 ID는 PATCH 요청에 전송된 ID와 일치해야 합니다. 이제 `"unifiedProfile"` 및 `"unifiedIdentity"` 태그가 추가되었으며 데이터 세트를 프로필 및 ID 서비스에서 사용할 수 있게 되었습니다.
 
 ```json
 [
