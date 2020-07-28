@@ -18,7 +18,7 @@ ht-degree: 3%
 
 ## 인증을 통해 API 호출
 
-응용 프로그램 및 사용자의 보안을 유지하려면 Adobe I/O API에 대한 모든 요청은 OAuth 및 JWT(JSON Web Tokens) 등의 표준을 사용하여 인증 및 인증되어야 합니다. 그러면 JWT가 클라이언트별 정보와 함께 사용되어 개인 액세스 토큰을 생성합니다.
+애플리케이션과 사용자의 보안을 유지하려면 OAuth 및 JWT(JSON 웹 토큰) 등의 표준을 사용하여 Adobe I/O API에 대한 모든 요청을 인증하고 인증해야 합니다. 그러면 JWT가 클라이언트별 정보와 함께 사용되어 개인 액세스 토큰을 생성합니다.
 
 이 자습서에서는 다음 순서도에 설명된 액세스 토큰을 만드는 과정을 통해 인증 단계를 설명합니다.
 ![](images/authentication/authentication-flowchart.png)
@@ -37,7 +37,7 @@ API를 성공적으로 호출하려면 [!DNL Experience Platform] 다음이 필�
 
 Adobe ID이 없는 경우 다음 단계를 사용하여을 만들 수 있습니다.
 
-1. Adobe [Developer Console로 이동](https://console.adobe.io)
+1. Adobe 개발자 [콘솔로 이동](https://console.adobe.io)
 2. 새 계정 **[!UICONTROL 만들기를 클릭합니다.]**
 3. 등록 프로세스 완료
 
@@ -55,7 +55,7 @@ Adobe I/O에 대한 통합을 만들기 전에 계정에 IMS 조직의 제품에
 
 ![](images/authentication/add-developer.png)
 
-개발자로 지정되면 [Adobe I/O에 대한 통합을 만들 수 있는 액세스 권한이 부여됩니다](https://www.adobe.com/go/devs_console_ui). 이러한 통합은 외부 앱 및 서비스에서 Adobe API로의 파이프라인입니다.
+개발자로 지정되면 [Adobe I/O에 대한 통합을 만들 수 있는 액세스 권한이 부여됩니다](https://www.adobe.com/go/devs_console_ui). 이러한 통합은 외부 앱 및 서비스에서 Adobe API로 연결되는 파이프라인입니다.
 
 **사용자 액세스 권한 얻기**
 
@@ -85,7 +85,7 @@ Adobe 개발자 콘솔을 사용하여 다음 세 가지 액세스 자격 증명
 
 ### 일회성 설정
 
-Adobe [Developer Console에서](https://www.adobe.com/go/devs_console_ui) Adobe ID으로 로그인합니다. 그런 다음 Adobe 개발자 콘솔 문서에서 빈 프로젝트 [를 만드는 방법에 대한 자습서에 나와](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) 있는 단계를 따릅니다.
+Adobe 개발자 [콘솔로](https://www.adobe.com/go/devs_console_ui) 이동하여 Adobe ID으로 로그인합니다. 그런 다음 Adobe 개발자 콘솔 설명서에서 빈 프로젝트 [를 만드는](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) 자습서에 나와 있는 단계를 따릅니다.
 
 새 프로젝트를 만들었으면 프로젝트 개요 **[!UICONTROL 화면에서 API]** _추가_ 를클릭합니다.
 
