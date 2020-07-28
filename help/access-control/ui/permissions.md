@@ -42,7 +42,7 @@ ht-degree: 2%
 
 ![permissions-finish](../images/permissions-finish.png)
 
-제품 *[!UICONTROL 프로필에 대한 권한]* 탭이 다시 나타나고 선택한 권한이 이제 활성화되었음을 표시합니다.
+제품 *[!UICONTROL 프로필의 권한]* 탭이 다시 나타나고 선택한 권한이 이제 활성화되었음을 표시합니다.
 
 ![추가 권한](../images/added-permissions.png)
 
