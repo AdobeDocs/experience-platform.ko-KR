@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # 효과적인 정책 보기
 
-현재 사용자에 대한 유효한 정책을 보려면 API의 종단점에 대한 POST `/acl/effective-policies` 요청을 [!DNL Access Control] 수행하십시오. 검색할 권한 및 리소스 유형은 배열 형태로 요청 페이로드에서 제공해야 합니다. 이것은 아래의 예제 API 호출에서 입증되었습니다.
+현재 사용자에 대한 유효한 정책을 보려면 API의 종단점에 대해 POST `/acl/effective-policies` 요청을 [!DNL Access Control] 하십시오. 검색할 권한 및 리소스 유형은 배열 형태로 요청 페이로드에서 제공해야 합니다. 이것은 아래의 예제 API 호출에서 입증되었습니다.
 
 **API 형식**
 
@@ -73,7 +73,7 @@ curl -X POST \
 
 ### 허용된 권한 및 리소스 유형
 
-다음은 종단점에 대한 POST 요청 페이로드에서 포함할 수 있는 권한 및 리소스 유형 `/acl/active-permissions` 목록입니다.
+다음은 종단점에 대한 POST 요청의 페이로드에서 포함할 수 있는 권한 및 리소스 유형 `/acl/active-permissions` 목록입니다.
 
 **권한**
 
