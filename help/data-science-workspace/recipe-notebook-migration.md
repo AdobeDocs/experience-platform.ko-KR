@@ -88,7 +88,7 @@ var df = sparkSession.read.format("com.adobe.platform.query")
 
 #### 데이터 세트에 쓰기
 
-이 섹션에서는 Adobe에서 제공하는 [ScoringDataSaver.scala 예제를 사용하여 데이터 세트를](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/scala/com/adobe/platform/ml/ScoringDataSaver.scala) 작성하는 데 필요한 변경 사항에 대해 간략하게 설명합니다.
+이 섹션에서는 Adobe에서 제공하는 [ScoringDataSaver.scala 예제를 사용하여 데이터 세트를](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/scala/com/adobe/platform/ml/ScoringDataSaver.scala) 작성하는 데 필요한 변경 사항에 대해 설명합니다.
 
 **데이터 세트를 작성하는 오래된 방법**
 
@@ -452,7 +452,7 @@ PySpark 3(Spark 2.4)을 사용하면 로딩 시 `sc = spark.sparkContext` 정의
 
 **PySpark 2.4에서[!DNL Experience Cloud Platform]데이터 로드**
 
-PySpark 3([!DNL Spark] 2.4)을 사용하면 `org_id` 더 이상 `dataset_id` 정의할 필요가 없습니다. 또한 데이터 세트 `df = spark.read.format` 를 손쉽게 읽고 쓸 수 [`%dataset`](#magic) 있는 맞춤형 마법으로 대체되었습니다.
+PySpark 3([!DNL Spark] 2.4)을 사용하면 `org_id` 더 이상 `dataset_id` 정의할 필요가 없습니다. 또한 데이터 세트 `df = spark.read.format` 를 읽고 쓰는 것을 [`%dataset`](#magic) 쉽게 만드는 맞춤형 마법으로 대체되었습니다.
 
 ![로드 2](./images/migration/pyspark-migration/2.4-load-alt.png)
 
