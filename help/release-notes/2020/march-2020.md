@@ -52,7 +52,7 @@ Adobe Experience Platform [!DNL Data Governance] 는 고객 데이터를 관리�
 
 ## 데이터 수집 {#ingestion}
 
-Adobe Experience Platform은 데이터의 모든 유형과 지연을 인제스트하는 풍부한 기능을 제공합니다. Adobe Experience Platform [!DNL Data Ingestion] 는 배치 API, 스트리밍 API, 기본 Adobe 커넥터, 데이터 통합 파트너 또는 Adobe Experience Platform UI를 비롯한 데이터 인제스트를 위한 다양한 대체 요소를 제공합니다.
+Adobe Experience Platform은 데이터의 모든 유형과 지연을 인제스트하는 풍부한 기능을 제공합니다. Adobe Experience Platform [!DNL Data Ingestion] 는 배치 API, 스트리밍 API, 기본 Adobe 커넥터, 데이터 통합 파트너 또는 Adobe Experience Platform UI를 비롯한 데이터 인제스트를 위한 여러 대체 요소를 제공합니다.
 
 **새로운 기능**
 
@@ -69,7 +69,7 @@ Adobe Experience Platform은 데이터의 모든 유형과 지연을 인제스�
 
 ## 대상 {#destinations}
 
-실시간 [고객 데이터 Platform](../../rtcdp/overview.md)에서 대상은 대상 플랫폼과 사전 구축된 통합으로 이러한 파트너에게 데이터를 원활하게 제공할 수 있습니다.
+Adobe 실시간 고객 데이터 Platform에서 [](../../rtcdp/overview.md)대상은 대상 플랫폼과 사전 구축된 통합으로 이러한 파트너에 대한 데이터를 원활하게 활성화합니다.
 
 **새 대상**
 
@@ -78,7 +78,7 @@ Adobe Experience Platform 데이터를 활성화할 수 있는 새 대상을 사
 | 대상 | 설명 |
 |--- | ---|
 | 클라우드 스토리지 대상 | Adobe 실시간 CDP를 사용하면 세그먼트를 데이터 파일로 사용자 [!DNL Amazon S3] 또는 SFTP 클라우드 스토리지 위치에 전달할 수 있습니다. 이렇게 하면 CSV 또는 탭으로 구분된 파일을 통해 대상과 프로필 속성을 내부 시스템으로 보낼 수 있습니다. |
-| 광고 대상 | 이제 [!DNL Google] 대상 카드가 세 개의 대상 카드로 분할되어 현재 Adobe 실시간 CDP에서 지원되는 세 가지 다른 [!DNL Google] 플랫폼에 대해 제공됩니다. [!DNL Google Ads], [!DNL Google Ad Manager]Display &amp; [!DNL Google] Video 360. |
+| 광고 대상 | 이제 [!DNL Google] 대상 카드가 세 개의 대상 카드로 분할되어 현재 Adobe 실시간 CDP에서 지원되는 세 개의 다른 [!DNL Google] 플랫폼에 대해 제공됩니다. [!DNL Google Ads], [!DNL Google Ad Manager]Display &amp; [!DNL Google] Video 360. |
 
 자세한 내용은 [대상 개요를 참조하십시오](../../rtcdp/destinations/destinations-overview.md)
 
