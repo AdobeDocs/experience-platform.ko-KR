@@ -225,7 +225,7 @@ curl -X GET \
 
 ## 부록 {#appendix}
 
-다음 섹션에서는 검색어 작동 방식에 대한 추가 정보를 제공합니다. 검색 쿼리는 다음과 같은 방법으로 작성됩니다. `s={FieldName}:{SearchExpression}`. 예를 들어 AAM이라는 세그먼트를 검색하거나 검색하려면 다음 검색 쿼리 [!DNL Platform]를 사용합니다. `s=segmentName:AAM%20OR%20Platform`.
+다음 섹션에서는 검색어 작동 방식에 대한 추가 정보를 제공합니다. 검색 쿼리는 다음과 같은 방법으로 작성됩니다. `s={FieldName}:{SearchExpression}`. 예를 들어 AAM 또는 라는 세그먼트를 검색하려면 다음 검색 쿼리 [!DNL Platform]를 사용합니다. `s=segmentName:AAM%20OR%20Platform`.
 
 > !![NOTE] 최상의 방법을 위해 검색 표현식은 위에 표시된 예와 같이 HTML로 인코딩되어야 합니다.
 
