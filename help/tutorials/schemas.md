@@ -14,11 +14,11 @@ ht-degree: 0%
 
 # XDM( [!DNL Experience Data Model] 스키마) 스키마 및 관계 설명자 사용
 
-표준화와 상호 운용성은 Adobe Experience Platform의 주요 개념입니다. [!DNL Experience Data Model] (XDM)은 Adobe를 기반으로 고객 경험 데이터를 표준화하고 고객 경험 관리를 위한 스키마를 정의하는 것입니다. 스키마는 데이터 [!DNL Experience Platform]를 설명하는 표준 방식이므로, 스키마를 따르는 모든 데이터를 조직 간의 충돌 없이 다시 사용할 수 있으며 여러 조직 간에 공유할 수도 있습니다. XDM 스키마에 대한 자세한 내용은 [XDM 시스템 개요를 읽어 보십시오](../xdm/home.md).
+표준화와 상호 운용성은 Adobe Experience Platform의 주요 개념입니다. [!DNL Experience Data Model] (XDM)은 Adobe을 기반으로 고객 경험 데이터를 표준화하고 고객 경험 관리를 위한 스키마를 정의하는 것입니다. 스키마는 데이터 [!DNL Experience Platform]를 설명하는 표준 방식이므로, 스키마를 따르는 모든 데이터를 조직 간의 충돌 없이 다시 사용할 수 있으며 여러 조직 간에 공유할 수도 있습니다. XDM 스키마에 대한 자세한 내용은 [XDM 시스템 개요를 읽어 보십시오](../xdm/home.md).
 
 ## 스키마 레지스트리를 사용하여 스키마 만들기
 
-스키마 레지스트리는 Adobe Experience Platform 스키마 라이브러리의 모든 리소스를 보고 관리할 수 있는 사용자 인터페이스 및 RESTful API를 제공합니다. 스키마 라이브러리에는 Adobe, 파트너, 응용 프로그램을 사용하는 공급업체 및 사용자가 정의 및 스키마 레지스트리에 저장하는 리소스뿐만 아니라, 사용자 [!DNL Experience Platform] 가 사용할 수 있도록 만들어진 리소스가 포함되어 있습니다. 조직의 스키마를 만드는 방법에 대해 알아보려면 스키마 레지스트리 API를 사용하여 스키마 [를](../xdm/tutorials/create-schema-api.md) 만들거나 스키마 편집기 사용자 인터페이스를 사용하여 스키마 [를 만드는 자습서를 따르십시오](../xdm/tutorials/create-schema-ui.md).
+스키마 레지스트리는 Adobe Experience Platform 스키마 라이브러리의 모든 리소스를 보고 관리할 수 있는 사용자 인터페이스 및 RESTful API를 제공합니다. 스키마 라이브러리에는 Adobe, 파트너, 응용 프로그램을 사용하는 공급업체 및 사용자가 정의 및 스키마 레지스트리에 저장하는 리소스뿐만 아니라, 사용자가 사용 가능한 리소스 [!DNL Experience Platform] 가 포함되어 있습니다. 조직의 스키마를 만드는 방법에 대해 알아보려면 스키마 레지스트리 API를 사용하여 스키마 [를](../xdm/tutorials/create-schema-api.md) 만들거나 스키마 편집기 사용자 인터페이스를 사용하여 스키마 [를 만드는 자습서를 따르십시오](../xdm/tutorials/create-schema-ui.md).
 
 ## 두 스키마 간의 관계 정의
 
