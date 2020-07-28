@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Privacy Service 개발자 가이드
-description: RESTful API를 사용하여 Adobe Experience Cloud 애플리케이션 전반에서 데이터 주체의 개인 데이터를 관리합니다
+description: RESTful API를 사용하여 Adobe Experience Cloud 애플리케이션에서 데이터 주체의 개인 데이터를 관리합니다
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
@@ -15,7 +15,7 @@ ht-degree: 1%
 
 # [!DNL Privacy Service] 개발자 가이드
 
-Adobe Experience Platform [!DNL Privacy Service] 는 Adobe Experience Cloud 응용 프로그램에서 데이터 주체(고객)의 개인 데이터를 관리(액세스 및 삭제)할 수 있도록 해주는 RESTful API 및 사용자 인터페이스를 제공합니다. [!DNL Privacy Service] 또한 [!DNL Experience Cloud] 응용 프로그램과 관련된 작업의 상태 및 결과에 액세스할 수 있는 중앙 감사 및 로깅 메커니즘을 제공합니다.
+Adobe Experience Platform [!DNL Privacy Service] 는 Adobe Experience Cloud 애플리케이션에서 데이터 주체(고객)의 개인 데이터를 관리(액세스 및 삭제)할 수 있도록 해주는 RESTful API 및 사용자 인터페이스를 제공합니다. [!DNL Privacy Service] 또한 [!DNL Experience Cloud] 응용 프로그램과 관련된 작업의 상태 및 결과에 액세스할 수 있는 중앙 감사 및 로깅 메커니즘을 제공합니다.
 
 이 안내서에서는 [!DNL Privacy Service] API를 사용하는 방법을 다룹니다. UI 사용 방법에 대한 자세한 내용은 [Privacy Service UI 개요를 참조하십시오](../ui/overview.md). API에서 사용 가능한 모든 끝점의 전체 목록을 보려면 [!DNL Privacy Service] API 참조를 참조하십시오 [](https://www.adobe.io/apis/experiencecloud/gdpr/api-reference.html).
 
@@ -23,7 +23,7 @@ Adobe Experience Platform [!DNL Privacy Service] 는 Adobe Experience Cloud 응�
 
 이 안내서에서는 다음 기능을 이해하는 [!DNL Experience Platform] 작업이 필요합니다.
 
-* [!DNL Privacy Service](../home.md): Adobe Experience Cloud 응용 프로그램에서 데이터 주체(고객)의 액세스 및 삭제 요청을 관리하고 삭제할 수 있도록 해주는 RESTful API 및 사용자 인터페이스를 제공합니다.
+* [!DNL Privacy Service](../home.md): Adobe Experience Cloud 애플리케이션에서 데이터 주체(고객)의 액세스 및 삭제 요청을 관리하고 삭제할 수 있도록 해주는 RESTful API 및 사용자 인터페이스를 제공합니다.
 
 다음 섹션에서는 Privacy Service API를 성공적으로 호출하기 위해 알아야 할 추가 정보를 제공합니다.
 
@@ -59,7 +59,7 @@ Adobe 개발자 콘솔을 사용하여 다음 세 가지 액세스 자격 증명
 
 #### 일회성 설정
 
-Adobe [Developer Console에서](https://www.adobe.com/go/devs_console_ui) Adobe ID으로 로그인합니다. 그런 다음 Adobe 개발자 콘솔 문서에서 빈 프로젝트 [를 만드는 방법에 대한 자습서에 나와](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) 있는 단계를 따릅니다.
+Adobe 개발자 [콘솔로](https://www.adobe.com/go/devs_console_ui) 이동하여 Adobe ID으로 로그인합니다. 그런 다음 Adobe 개발자 콘솔 설명서에서 빈 프로젝트 [를 만드는](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) 자습서에 나와 있는 단계를 따릅니다.
 
 새 프로젝트를 만들었으면 프로젝트 개요 **[!UICONTROL 화면에서 API]** _[!UICONTROL 추가]_를클릭합니다.
 
