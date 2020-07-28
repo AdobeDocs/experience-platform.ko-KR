@@ -16,9 +16,9 @@ ht-degree: 1%
 
 ## 개요
 
-Adobe Campaign은 온라인과 오프라인의 모든 채널에서 캠페인을 개인화하고 전달할 수 있는 솔루션 집합입니다. 자세한 [내용은 Adobe Campaign 클래식](https://docs.adobe.com/content/help/en/campaign-classic/using/getting-started/starting-with-adobe-campaign/about-adobe-campaign-classic.html) 정보를 참조하십시오.
+Adobe Campaign은 온라인과 오프라인의 모든 채널에서 캠페인을 개인화하고 전달할 수 있는 솔루션 집합입니다. 자세한 [내용은 Adobe Campaign Classic](https://docs.adobe.com/content/help/en/campaign-classic/using/getting-started/starting-with-adobe-campaign/about-adobe-campaign-classic.html) 정보를 참조하십시오.
 
-세그먼트 데이터를 Adobe Campaign으로 전송하려면 먼저 Adobe 실시간 고객 데이터 Platform에서 대상 [을](#connect-destination) 연결한 [다음 스토리지 위치에서 Adobe Campaign으로 데이터 가져오기를](#import-data-into-campaign) 설정해야합니다.
+세그먼트 데이터를 Adobe Campaign으로 전송하려면 먼저 Adobe 실시간 고객 데이터 Platform에서 대상을 [](#connect-destination) 연결한 다음 스토리지 위치에서 Adobe Campaign으로 데이터 가져오기를 [](#import-data-into-campaign) 설정해야 합니다.
 
 ## 연결 대상 {#connect-destination}
 
@@ -26,11 +26,11 @@ Adobe Campaign은 온라인과 오프라인의 모든 채널에서 캠페인을 
 
    ![adobe campaign에 연결](/help/rtcdp/destinations/assets/connect-adobe-campaign.png)
 
-1. Connect 대상 작업 과정에서 저장소 위치에 대한 **[!UICONTROL 연결 유형을]** 선택합니다. Adobe Campaign의 경우 **[!UICONTROL Amazon S3]**, 암호가 **[!UICONTROL 있는 SFTP]** 및 SSH 키가 있는 **[!UICONTROL SFTP]**&#x200B;중에서 선택할 수있습니다. 연결 유형에 따라 아래 정보를 입력한 다음 **[!UICONTROL Connect를 선택합니다]**.
+1. Connect 대상 작업 과정에서 저장소 위치에 대한 **[!UICONTROL 연결 유형을]** 선택합니다. Adobe Campaign의 경우, **[!UICONTROL Amazon S3]**, **[!UICONTROL 비밀번호가 있는 SFTP 및 SSH 키가 있는]** SFTP **[!UICONTROL 중에서 선택할 수]**&#x200B;있습니다. 연결 유형에 따라 아래 정보를 입력한 다음 **[!UICONTROL Connect를 선택합니다]**.
 
    ![캠페인 설정 마법사](/help/rtcdp/destinations/assets/adobe-campaign-wizard.png)
 
-   Amazon **[!UICONTROL S3]** 연결의 경우 액세스 키 ID 및 비밀 액세스 키를 제공해야 합니다.
+   **[!UICONTROL Amazon S3]** 연결의 경우 액세스 키 ID와 비밀 액세스 키를 제공해야 합니다.
 암호 **[!UICONTROL 가]** 연결된 SFTP의 경우 도메인, 포트, 사용자 이름 및 암호를 제공해야 합니다.
 SSH 키 **** 연결이 있는 SFTP의 경우 도메인, 포트, 사용자 이름 및 SSH 키를 제공해야 합니다.
 
