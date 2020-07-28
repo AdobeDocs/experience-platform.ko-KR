@@ -1,13 +1,13 @@
 ---
 title: 자동으로 수집된 정보
 seo-title: Adobe Experience Platform 웹 SDK에서 자동으로 수집한 정보
-description: Adobe Experience Cloud SDK가 자동으로 수집하는 각 정보에 대한 설명
-seo-description: Adobe Experience Cloud SDK가 자동으로 수집하는 각 정보에 대한 설명
+description: Adobe Experience Cloud SDK가 자동으로 수집하는 각 정보의 설명
+seo-description: Adobe Experience Cloud SDK가 자동으로 수집하는 각 정보의 설명
 translation-type: tm+mt
 source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
 workflow-type: tm+mt
 source-wordcount: '382'
-ht-degree: 5%
+ht-degree: 8%
 
 ---
 
