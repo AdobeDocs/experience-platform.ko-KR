@@ -185,5 +185,5 @@ ORDER BY pageViews DESC;
 
 ## 다음 단계
 
-ADF(Adobe Defined Functions)를 사용한 샘플 쿼리에 대한 자세한 내용은 Adobe Defined Functions 안내서를 참조하십시오. 쿼리 실행에 대한 일반적인 지침은 쿼리 서비스의 쿼리 실행에 대한 [가이드를 참조하십시오](./writing-queries.md).
+ADF(Adobe Defined Functions)를 사용하는 샘플 쿼리에 대한 자세한 내용은 Adobe 정의된 함수 안내서를 참조하십시오. 쿼리 실행에 대한 일반적인 지침은 쿼리 서비스의 쿼리 실행에 대한 [가이드를 참조하십시오](./writing-queries.md).
 
