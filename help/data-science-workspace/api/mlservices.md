@@ -215,7 +215,7 @@ curl -X GET \
 
 >[!TIP]
 >
->이 PUT 요청의 성공을 보장하기 위해, 먼저 ID로 MLService를 [검색하기 위한 GET 요청을 수행하는 것이 좋습니다](#retrieve-a-specific-mlservice). 그런 다음 반환된 JSON 개체를 수정 및 업데이트하고 수정된 JSON 개체 전체를 PUT 요청의 페이로드로 적용합니다.
+>이 PUT 요청의 성공을 보장하기 위해 먼저 ID로 MLService를 [검색하기 위한 GET 요청을 수행하는 것이 좋습니다](#retrieve-a-specific-mlservice). 그런 다음 반환된 JSON 개체를 수정 및 업데이트하고 수정된 JSON 개체 전체를 PUT 요청에 대한 페이로드로 적용합니다.
 
 **API 형식**
 
