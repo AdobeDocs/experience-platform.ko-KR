@@ -28,7 +28,7 @@ API를 [!DNL Dataset Service] 사용하면 데이터 세트에 대한 사용 레
 
 ## 모든 레이블 나열 {#list-labels}
 
-API를 사용하여 [!DNL Policy Service] 모든 `core` 또는 `custom` 레이블을 나열할 수 있습니다. 단, 각 API에 GET 요청을 `/labels/core` 각각 `/labels/custom`또는GET으로 요청합니다.
+API를 [!DNL Policy Service] 사용하면 모든 `core` 또는 `custom` 레이블을 나열할 수 있습니다. 이때 `/labels/core` 또는 각 레이블에 GET을 요청할 수 `/labels/custom`있습니다.
 
 **API 형식**
 
@@ -164,7 +164,7 @@ curl -X GET \
 
 ## 사용자 지정 레이블 만들기 또는 업데이트 {#create-update-label}
 
-사용자 지정 레이블을 만들거나 업데이트하려면 API에 PUT 요청을 [!DNL Policy Service] 해야 합니다.
+사용자 지정 레이블을 만들거나 업데이트하려면 [!DNL Policy Service] API에 PUT 요청을 해야 합니다.
 
 **API 형식**
 
@@ -230,7 +230,7 @@ curl -X PUT \
 
 ## 데이터 세트에 대한 레이블 검색 {#look-up-dataset-labels}
 
-API에 GET 요청을 함으로써 기존 데이터 세트에 적용된 데이터 사용 레이블을 조회할 수 [!DNL Dataset Service] 있습니다.
+API에 GET 요청을 수행하여 기존 데이터 세트에 적용된 데이터 사용 레이블을 조회할 수 [!DNL Dataset Service] 있습니다.
 
 **API 형식**
 
@@ -283,7 +283,7 @@ curl -X GET \
 
 ## 데이터 세트에 레이블 적용 {#apply-dataset-labels}
 
-POST 또는 PUT 요청의 페이로드에서 API에 제공하여 데이터 세트에 대한 레이블 세트를 만들 수 [!DNL Dataset Service] 있습니다. 이러한 방법 중 하나를 사용하면 기존 레이블을 덮어쓰고 페이로드에서 제공되는 레이블로 바꿉니다.
+POST 또는 PUT 요청의 페이로드에서 [!DNL Dataset Service] API에 제공하여 데이터 세트에 대한 레이블 세트를 만들 수 있습니다. 이러한 방법 중 하나를 사용하면 기존 레이블을 덮어쓰고 페이로드에서 제공되는 레이블로 바꿉니다.
 
 **API 형식**
 
@@ -298,7 +298,7 @@ PUT /datasets/{DATASET_ID}/labels
 
 **요청**
 
-다음 POST 요청에서는 데이터 세트 내의 특정 필드뿐만 아니라 데이터 세트에 일련의 레이블을 추가합니다. 페이로드에서 제공되는 필드는 PUT 요청에 필요한 필드와 동일합니다.
+다음 POST 요청은 데이터 세트 내의 특정 필드뿐만 아니라 데이터 세트에 일련의 레이블을 추가합니다. 페이로드에서 제공되는 필드는 PUT 요청에 필요한 필드와 동일합니다.
 
 ```shell
 curl -X POST \
