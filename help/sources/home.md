@@ -24,7 +24,7 @@ Adobe Experience Platform을 사용하면 [!DNL Platform] 서비스를 사용하
 
 소스 [!DNL Experience Platform] 는 다음 카테고리로 그룹화됩니다.
 
-### Adobe 애플리케이션
+### Adobe 응용 프로그램
 
 [!DNL Experience Platform] Adobe Analytics, Adobe Audience Manager 및 기타 Adobe 애플리케이션에서 데이터를 수집할 수 [!DNL Experience Platform Launch]있습니다. 자세한 내용은 다음 관련 문서를 참조하십시오.
 
@@ -62,7 +62,7 @@ CRM 시스템은 고객과의 관계를 구축하는 데 도움이 되는 데이
 
 ### 고객 성공 사례
 
-[!DNL Experience Platform] 타사 고객 성공 애플리케이션에서 데이터 인제스트를 지원합니다. 자세한 내용은 다음 관련 문서를 참조하십시오.
+[!DNL Experience Platform] 타사 고객 성공 애플리케이션에서 데이터 인제스트 지원을 제공합니다. 자세한 내용은 다음 관련 문서를 참조하십시오.
 
 - [!DNL Salesforce Service Cloud](connectors/customer-success/salesforce-service-cloud.md) 커넥터
 - [!DNL ServiceNow](connectors/customer-success/servicenow.md) 커넥터
@@ -125,8 +125,8 @@ Admin Console을 통해 부여된 사용 가능한 권한(이러한 네 가지 �
 
 베타(&quot;베타&quot;)로 레이블이 지정된 소스를 사용함으로써, 귀하는 베타가 어떠한 형태의 보증도 없이 &quot;있는 그대로&quot; 제공된다는 ***점을 동의합니다***.
 
-Adobe는 베타를 유지, 수정, 업데이트, 변경, 수정, 또는 기타 지원을 할 의무가 없습니다. 귀하는 이러한 베타 및/또는 관련 자료의 올바른 기능이나 성능에 어떠한 방법으로든 의존하지 않도록 주의하십시오. 베타는 Adobe의 기밀 정보로 간주됩니다.
+Adobe은 베타를 유지, 수정, 업데이트, 변경, 수정, 또는 기타 지원을 할 의무가 없습니다. 귀하는 이러한 베타 및/또는 관련 자료의 올바른 기능이나 성능에 어떠한 방법으로든 의존하지 않도록 주의하십시오. 베타는 Adobe의 기밀 정보로 간주됩니다.
 
-귀하가 Adobe에 제공한 모든 &quot;피드백&quot;(베타 버전 사용 시 발생하는 문제나 결함을 포함하며 이에 국한되지 않음), Adobe에 제공된 모든 &quot;피드백&quot;(베타 버전 사용 시 발생하는 문제, 제안, 개선 사항 및 권장 사항)은 Adobe에 할당되며 이러한 피드백에 대한 모든 권한, 권한 및 관심을 포함합니다.
+귀하가 Adobe에 제공한 모든 &quot;피드백&quot;(베타 버전 사용 시 발생하는 문제나 결함을 포함하며 이에 국한되지 않는 베타 관련 정보, 제안, 개선 사항 및 권장 사항)은 이러한 피드백에 대한 모든 권한, 권한 및 관심을 포함하여 Adobe에 할당됩니다.
 
 진행 중인 피드백을 제출하거나 지원 티켓을 만들어 제안을 공유하거나 버그를 보고하려면 기능을 개선하십시오.
