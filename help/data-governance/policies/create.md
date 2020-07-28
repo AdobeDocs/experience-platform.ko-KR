@@ -40,7 +40,7 @@ DULE 정책을 만드는 첫 번째 단계는 정책이 평가할 마케팅 작�
 
 ### 기존 마케팅 작업 조회 {#look-up}
 
-끝점 중 하나에 GET 요청을 함으로써 DULE 정책에 의해 평가될 기존 마케팅 작업을 조회할 수 `/marketingActions` 있습니다.
+끝점 중 하나에 GET 요청을 만들어 DULE 정책에 의해 평가될 기존 마케팅 작업을 `/marketingActions` 조회할 수 있습니다.
 
 **API 형식**
 
@@ -125,7 +125,7 @@ curl -X GET \
 
 ### 새 마케팅 작업 만들기 {#create-new}
 
-끝점에 PUT 요청을 만들고 `/marketingActions/custom/` 요청 경로 끝에 마케팅 작업의 이름을 제공하여 새 마케팅 작업을 만들 수 있습니다.
+종단점에 PUT 요청을 만들고 요청 경로 끝에 마케팅 `/marketingActions/custom/` 작업의 이름을 제공하여 새 마케팅 작업을 만들 수 있습니다.
 
 **API 형식**
 
@@ -221,7 +221,7 @@ curl -X PUT \
 >
 >OR 및 AND 연산자만 지원됩니다.
 
-정책 표현식을 구성한 후에는 종단점에 대한 POST 요청을 수행하여 새 DULE 정책을 만들 수 `/policies/custom` 있습니다.
+정책 표현식을 구성한 후에는 끝점에 POST 요청을 만들어 새 DULE 정책을 만들 수 `/policies/custom` 있습니다.
 
 **API 형식**
 
@@ -342,7 +342,7 @@ PATCH /policies/custom/{POLICY_ID}
 
 **요청**
 
-다음 요청은 DULE 정책의 `status` 속성에 대한 PATCH 작업을 수행하여 해당 값을 에서 `DRAFT` 로 변경합니다 `ENABLED`.
+다음 요청은 DULE 정책의 `status` 속성에 대한 PATCH 작업을 수행하여 해당 값을 에서 (으)로 변경합니다 `DRAFT` `ENABLED`.
 
 ```shell
 curl -X PATCH \
@@ -363,7 +363,7 @@ curl -X PATCH \
 
 | 속성 | 설명 |
 | --- | --- |
-| `op` | 수행할 PATCH 작업 유형입니다. 이 요청은 &quot;바꾸기&quot; 작업을 수행합니다. |
+| `op` | 수행할 PATCH 작업의 유형입니다. 이 요청은 &quot;바꾸기&quot; 작업을 수행합니다. |
 | `path` | 업데이트할 필드의 경로입니다. 정책을 활성화할 때는 값을 &quot;/status&quot;로 설정해야 합니다. |
 | `value` | 에 지정된 속성에 할당할 새 값 `path`. 이 요청은 정책의 `status` 속성을 &quot;ENABLED&quot;로 설정합니다. |
 
