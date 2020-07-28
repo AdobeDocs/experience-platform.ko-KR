@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Power BI와 연결
+title: Power BI과 연결
 topic: connect
 translation-type: tm+mt
 source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
@@ -24,7 +24,7 @@ PC 사용자는 https://powerbi.microsoft.com/en-us/desktop/ [!DNL Power BI] 에
 
 - v4.0.10을 선택합니다(최신 버전이 있으면 오류가 발생함).
 
-- 사용자 정의 설치 화면의 &quot;Npgsql GAC 설치&quot;에서 로컬 하드 드라이브에 설치됨 **[!UICONTROL 을 선택합니다]**. GAC를 설치하지 않으면 나중에 Power BI가 실패합니다.
+- 사용자 정의 설치 화면의 &quot;Npgsql GAC 설치&quot;에서 로컬 하드 드라이브에 설치됨 **[!UICONTROL 을 선택합니다]**. GAC를 설치하지 않으면 나중에 Power BI이 실패합니다.
 
 - Windows를 다시 시작합니다.
 
