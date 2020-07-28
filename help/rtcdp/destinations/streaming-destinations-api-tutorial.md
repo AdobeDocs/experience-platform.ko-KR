@@ -16,9 +16,9 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->Adobe Real-time CDP의 [!DNL Amazon Kinesis] 대상 및 [!DNL Azure Event Hubs] 대상은 현재 베타 버전입니다. 설명서 및 기능은 변경될 수 있습니다.
+>Adobe 실시간 CDP의 [!DNL Amazon Kinesis] 및 [!DNL Azure Event Hubs] 대상 제품은 현재 베타 버전입니다. 설명서 및 기능은 변경될 수 있습니다.
 
-이 자습서에서는 API 호출을 사용하여 Adobe Experience Platform 데이터에 연결하고, 스트리밍 클라우드 스토리지 대상([Amazon Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md) 또는 [Azure 이벤트 허브](/help/rtcdp/destinations/azure-event-hubs-destination.md))에 연결을 만들고, 데이터 흐름을 새로 만든 대상에 만들고, 데이터를 새로 만든 대상에 활성화하는 방법을 설명합니다.
+이 자습서에서는 API 호출을 사용하여 Adobe Experience Platform 데이터에 연결하고, 스트리밍 클라우드 저장소 대상([Amazon Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md) 또는 [Azure 이벤트 허브](/help/rtcdp/destinations/azure-event-hubs-destination.md))에 연결을 만들고, 데이터 흐름을 새로 만든 대상에 만들고, 데이터를 새로 만든 대상에 활성화하는 방법을 보여 줍니다.
 
 이 자습서는 모든 예에서 [!DNL Amazon Kinesis] 대상을 사용하지만 단계는 동일합니다 [!DNL Azure Event Hubs].
 
@@ -34,7 +34,7 @@ Adobe의 실시간 CDP에서 사용자 인터페이스를 사용하여 대상에
 * [!DNL Catalog Service](../../catalog/home.md): [!DNL Catalog] 은 Experience Platform 내의 데이터 위치 및 계열에 대한 기록 시스템입니다.
 * [샌드박스](../../sandboxes/home.md): Experience Platform은 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되도록 단일 Platform 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
 
-다음 섹션에서는 Adobe Real-time CDP에서 스트리밍 대상으로 데이터를 활성화하기 위해 알아야 할 추가 정보를 제공합니다.
+다음 섹션에서는 Adobe 실시간 CDP에서 스트리밍 대상으로 데이터를 활성화하기 위해 알아야 할 추가 정보를 제공합니다.
 
 ### 필요한 자격 증명 수집
 
@@ -62,7 +62,7 @@ Experience Platform의 리소스는 특정 가상 샌드박스로 분리할 수 
 >[!N참고]
 >Experience Platform의 샌드박스에 대한 자세한 내용은 [샌드박스 개요 설명서를 참조하십시오](../../sandboxes/home.md).
 
-페이로드(POST, PUT, PATCH)가 포함된 모든 요청에는 추가 미디어 유형 헤더가 필요합니다.
+페이로드(POST, PUT, PATCH)이 포함된 모든 요청에는 추가 미디어 유형 헤더가 필요합니다.
 
 * 컨텐츠 유형: `application/json`
 
@@ -74,7 +74,7 @@ Experience Platform의 리소스는 특정 가상 샌드박스로 분리할 수 
 
 ![대상 단계 개요 단계 1](/help/rtcdp/destinations/assets/step1-create-streaming-destination-api.png)
 
-첫 번째 단계에서는 데이터를 활성화할 스트리밍 대상을 결정해야 합니다. 먼저 세그먼트를 연결하고 활성화할 수 있는 사용 가능한 대상 목록을 요청하는 호출을 수행하십시오. 사용 가능한 대상 목록을 `connectionSpecs` 반환하려면 끝점에 다음 GET 요청을 수행하십시오.
+첫 번째 단계에서는 데이터를 활성화할 스트리밍 대상을 결정해야 합니다. 먼저 세그먼트를 연결하고 활성화할 수 있는 사용 가능한 대상 목록을 요청하는 호출을 수행하십시오. 사용 가능한 대상 목록을 `connectionSpecs` 반환하려면 종단점에 다음 GET 요청을 수행하십시오.
 
 **API 형식**
 
@@ -261,12 +261,12 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 * `{CONNECTION_SPEC_ID}`: 사용 가능한 대상 목록을 [가져옵니다. 단계에서 얻은 연결 사양 ID를 사용하십시오](#get-the-list-of-available-destinations).
 * `{AUTHENTICATION_CREDENTIALS}`: 스트리밍 대상 이름(예: `Amazon Kinesis authentication credentials` 또는 `Azure Event Hubs authentication credentials`.
-* `{ACCESS_ID}`: *연결용[!DNL Amazon Kinesis].* Amazon Kinesis 스토리지 위치에 대한 액세스 ID.
-* `{SECRET_KEY}`: *연결용[!DNL Amazon Kinesis].* Amazon Kinesis 스토리지 위치에 대한 비밀 키
-* `{REGION}`: *연결용[!DNL Amazon Kinesis].* Adobe Real-time CDP가 데이터를 스트리밍하는 계정 내 영역 [!DNL Amazon Kinesis]
+* `{ACCESS_ID}`: *연결용[!DNL Amazon Kinesis].* Amazon Kinesis 저장소 위치에 대한 액세스 ID입니다.
+* `{SECRET_KEY}`: *연결용[!DNL Amazon Kinesis].* Amazon Kinesis 저장 위치에 대한 비밀 키
+* `{REGION}`: *연결용[!DNL Amazon Kinesis].* Adobe 실시간 CDP가 데이터를 스트리밍하는 계정의 영역입니다. [!DNL Amazon Kinesis]
 * `{SAS_KEY_NAME}`: *연결용[!DNL Azure Event Hubs].* SAS 키 이름을 입력합니다. [!DNL Azure Event Hubs] Microsoft 문서에서 SAS 키 [로 인증하는 방법에 대해 알아보십시오](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
 * `{SAS_KEY}`: *연결용[!DNL Azure Event Hubs].* SAS 키를 입력합니다. [!DNL Azure Event Hubs] Microsoft 문서에서 SAS 키 [로 인증하는 방법에 대해 알아보십시오](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
-* `{EVENT_HUB_NAMESPACE}`: *연결용[!DNL Azure Event Hubs].* Adobe Real-time CDP가 데이터를 스트리밍하는 [!DNL Azure Event Hubs] 네임스페이스를 채웁니다. 자세한 내용은 설명서의 이벤트 허브 [네임스페이스](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) 만들기를 [!DNL Microsoft] 참조하십시오.
+* `{EVENT_HUB_NAMESPACE}`: *연결용[!DNL Azure Event Hubs].* Adobe 실시간 CDP가 데이터를 스트리밍하는 [!DNL Azure Event Hubs] 네임스페이스를 채웁니다. 자세한 내용은 설명서의 이벤트 허브 [네임스페이스](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) 만들기를 [!DNL Microsoft] 참조하십시오.
 
 **응답**
 
@@ -318,7 +318,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 * `{BASE_CONNECTION_ID}`: 위 단계에서 얻은 기본 연결 ID를 사용하십시오.
 * `{CONNECTION_SPEC_ID}`: 사용 가능한 대상 목록을 [가져옵니다. 단계에서 얻은 연결 사양을 사용하십시오](#get-the-list-of-available-destinations).
 * `{NAME_OF_DATA_STREAM}`: *연결용[!DNL Amazon Kinesis].* 계정에 있는 기존 데이터 스트림의 이름을 [!DNL Amazon Kinesis] 입력합니다. Adobe 실시간 CDP는 데이터를 이 스트림으로 내보냅니다.
-* `{REGION}`: *연결용[!DNL Amazon Kinesis].* Adobe 실시간 CDP가 데이터를 스트리밍하는 Amazon Kinesis 계정의 영역입니다.
+* `{REGION}`: *연결용[!DNL Amazon Kinesis].* Adobe 실시간 CDP가 데이터를 스트리밍하는 Amazon Kinesis 계정의 영역
 * `{EVENT_HUB_NAME}`: *연결용[!DNL Azure Event Hubs].* Adobe 실시간 CDP가 데이터를 스트리밍하는 [!DNL Azure Event Hub] 이름을 입력합니다. 자세한 내용은 설명서에서 [이벤트 허브](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) 만들기를 [!DNL Microsoft] 참조하십시오.
 
 **응답**
@@ -337,9 +337,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 이전 단계에서 얻은 ID를 사용하여 이제 Experience Platform 데이터와 데이터를 활성화할 대상 사이에 데이터 흐름을 만들 수 있습니다. 이 단계를 Experience Platform과 원하는 대상 간에 나중에 데이터가 플로우되는 파이프라인을 구성하는 것으로 생각해 보십시오.
 
-데이터 흐름을 만들려면, 아래와 같이 POST 요청을 수행하고 페이로드 내에 아래 언급된 값을 제공합니다.
+데이터 흐름을 만들려면 아래에 표시된 대로 POST 요청을 수행하고 페이로드 내에 아래 언급된 값을 제공합니다.
 
-다음 POST 요청을 수행하여 데이터 흐름을 만듭니다.
+데이터 흐름을 만들려면 다음 POST 요청을 수행하십시오.
 
 **API 형식**
 
@@ -396,7 +396,7 @@ curl -X POST \
 
 모든 연결과 데이터 흐름을 만들었으므로 이제 스트리밍 플랫폼에 프로필 데이터를 활성화할 수 있습니다. 이 단계에서는 대상으로 보내는 세그먼트 및 프로필 속성을 선택하고 데이터를 예약하고 대상에 보낼 수 있습니다.
 
-세그먼트를 새 대상에 활성화하려면 아래 예와 유사한 JSON 패치 작업을 수행해야 합니다. 한 번의 호출에서 여러 세그먼트 및 프로필 속성을 활성화할 수 있습니다. JSON 패치에 대한 자세한 내용은 [RFC 사양을 참조하십시오](https://tools.ietf.org/html/rfc6902).
+세그먼트를 새 대상에 활성화하려면 아래 예와 유사한 JSON PATCH 작업을 수행해야 합니다. 한 번의 호출에서 여러 세그먼트 및 프로필 속성을 활성화할 수 있습니다. JSON PATCH에 대한 자세한 내용은 [RFC 사양을 참조하십시오](https://tools.ietf.org/html/rfc6902).
 
 **API 형식**
 
