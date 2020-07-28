@@ -44,7 +44,7 @@ Adobe Experience Platform [!DNL Data Governance] 를 사용하면 고객 데이�
 
 ## DULE 프레임워크
 
-DULE(Data Usage Lawring and Enforcement)는 핵심 프레임워크입니다 [!DNL Experience Platform] [!DNL Data Governance]. DULE는 데이터를 분류하고 데이터 사용 정책을 만드는 과정을 간소화하고 능률화합니다. 데이터 레이블이 적용되고 데이터 사용 정책이 적용되면 마케팅 작업을 평가하여 데이터를 올바르게 사용할 수 있습니다.
+DULE(Data Usage Lawring and Enforcement)는 핵심 프레임워크입니다 [!DNL Experience Platform] [!DNL Data Governance]. DULE는 데이터를 분류하고 데이터 사용 정책을 만드는 과정을 간소화하고 능률화합니다. 데이터 레이블을 적용하고 데이터 사용 정책을 적용하면 마케팅 작업을 평가하여 데이터를 올바르게 사용할 수 있습니다.
 
 DULE 프레임워크에는 세 가지 주요 요소가 있습니다. 레이블, 정책 및 적용.
 
