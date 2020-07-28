@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # [!DNL Real-time Customer Data Platform] 지표 개요
 
-측정 지표 대시보드가 포함된 Adobe 실시간 고객 데이터 Platform(실시간 CDP) 홈 페이지는 실시간 CDP에 로그인할 때 나타납니다.
+측정 단위 대시보드가 포함된 실시간 고객 데이터 Platform(실시간 CDP) Adobe 홈 페이지는 실시간 CDP에 로그인할 때 나타납니다.
 
 홈 페이지는 지표 카드가 표시되는 곳 중 하나입니다. 실시간 CDP는 고객 경험 전반에서 측정 카드를 제공합니다. 이러한 지표는 시스템의 데이터, 프로필 및 세그먼트 대상에 대해 알려줍니다.
 
@@ -47,7 +47,7 @@ Some information is shown in different ways on both the leaderboard and metric c
 
 데이터 세트에 대한 자세한 내용은 [데이터 집합 개요를 참조하십시오](../catalog/datasets/overview.md).
 
-### 프로파일
+### 프로필
 
 프로필 **** 수는 프로필에 있는 총 사람 수를 보여줍니다 [!DNL Real-time Customer Profile]. 프로필 조각은 포함되지 않습니다. 전체 주소 지정 가능 고객입니다.
 
