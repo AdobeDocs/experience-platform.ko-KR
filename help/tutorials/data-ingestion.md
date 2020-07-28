@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # 데이터 인제스트 [!DNL Experience Platform]
 
-Adobe Experience Platform은 마케터가 고객의 행동을 더 잘 이해할 수 있도록 여러 소스에서 가져온 데이터를 취합합니다. Adobe [!DNL Experience Platform Data Ingestion] 는 다운스트림으로 사용하기 위해 Data Lake 내에서 데이터가 유지되는 방법과 이러한 소스의 데이터를 [!DNL Platform] 수집하는 여러 방법을 나타냅니다 [!DNL Platform services]. [!DNL Data Ingestion] 소스 커넥터를 사용한 일괄 처리, 스트리밍 통합 및 섭취 등이 포함되어 있습니다. 자세한 내용은 [데이터 수집 개요를](../ingestion/home.md) 참조하거나 [소스 문서로 직접 진행하십시오](../sources/home.md).
+Adobe Experience Platform은 마케터가 고객의 행동을 더 잘 이해할 수 있도록 여러 소스에서 가져온 데이터를 취합합니다. Adobe [!DNL Experience Platform Data Ingestion] 는 이러한 소스의 데이터를 [!DNL Platform] 인제스트하는 여러 방법과 다운스트림으로 사용하기 위해 데이터 레이크 내에 데이터가 유지되는 방법을 나타냅니다 [!DNL Platform services]. [!DNL Data Ingestion] 소스 커넥터를 사용한 일괄 처리, 스트리밍 통합 및 섭취 등이 포함되어 있습니다. 자세한 내용은 [데이터 수집 개요를](../ingestion/home.md) 참조하거나 [소스 문서로 직접 진행하십시오](../sources/home.md).
 
 ## UI 및 API에서 소스 커넥터 만들기
 
