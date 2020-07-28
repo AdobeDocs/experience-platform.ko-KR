@@ -52,7 +52,7 @@ API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 
 >
 >의 샌드박스에 대한 자세한 내용 [!DNL Platform]은 [샌드박스 개요 설명서를 참조하십시오](../../sandboxes/home.md).
 
-페이로드(POST, PUT, PATCH)가 포함된 모든 요청에는 추가 헤더가 필요합니다.
+페이로드(POST, PUT, PATCH)이 포함된 모든 요청에는 추가 헤더가 필요합니다.
 
 - 컨텐츠 유형: application/json
 
@@ -92,7 +92,7 @@ API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 
 
 ## 스트리밍 세그멘테이션에 대해 활성화된 모든 세그먼트 검색
 
-IMS 조직 내에서 세그먼테이션을 스트리밍하도록 활성화된 모든 세그먼트 목록을 `/segment/definitions` 끝점에 GET 요청을 함으로써 검색할 수 있습니다.
+IMS 조직 내에서 세그먼테이션을 스트리밍하도록 활성화된 모든 세그먼트 목록을 검색하여 종단점에 GET 요청을 `/segment/definitions` 할 수 있습니다.
 
 **API 형식**
 
@@ -364,7 +364,7 @@ curl -X POST \
 
 ### 일정 활성화
 
-기본적으로 POST(Create) 요청 본문에 `state` 속성이 설정되어 있지 않으면 생성 시 일정 `active` 이 비활성화됩니다. 종단점에 PATCH 요청을 만들고 경로 `state` `active``/config/schedules` 에 예약의 ID를 포함하여 일정(설정)을 활성화할 수 있습니다.
+기본적으로, 속성이 만들기(POST) 요청 본문에 로 설정되어 있지 않은 이상 `state` 만들어진 경우 일정 `active` 은 비활성화됩니다. 종단점에 PATCH 요청을 만들고 경로에 있는 일정 `state` 의 ID를 포함하여 일정(설정 `active``/config/schedules` )을 활성화할 수 있습니다.
 
 **API 형식**
 
