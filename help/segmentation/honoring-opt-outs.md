@@ -129,6 +129,6 @@ In some instances, such as building a segment of people who have opted out, it m
 
 ## 다음 단계
 
-API와 사용자 인터페이스를 통해 세그먼트 정의 및 대상을 사용한 작업을 비롯한 세그멘테이션에 대한 자세한 내용은 세그멘테이션 [개요를 읽으십시오](./home.md).
+API 및 사용자 인터페이스를 통해 세그먼트 정의 및 대상을 사용한 작업을 포함하여 세그멘테이션에 대한 자세한 내용은 세그멘테이션 [개요를 읽으십시오](./home.md).
 
 법률 및 조직의 개인 정보 보호 규정 준수를 자동화하는 방법 [!DNL Platform]을 비롯하여 내부 데이터 개인 정보 [!DNL Privacy Service] [!DNL Privacy Service](../privacy-service/home.md)에 대한 자세한 내용은
