@@ -36,7 +36,7 @@ Adobe Experience Platform을 사용하면 전략적으로 위치한 &quot;edges&
 
 ## 엔티티([!DNL Profile] 액세스) {#entities}
 
-Adobe Experience Platform을 통해 RESTful API 또는 사용자 인터페이스를 사용하여 [!DNL Real-time Customer Profile] 데이터에 액세스할 수 있습니다. API를 사용하여 &quot;프로필&quot;으로 더 일반적으로 알려진 엔터티에 액세스하는 방법을 알아보려면 [개체 끝점 안내서에 설명된 단계를 따르십시오](entities.md). UI를 사용하여 프로필에 액세스하려면 [!DNL Platform] 프로필 사용 [안내서를 참조하십시오](../ui/user-guide.md).
+Adobe Experience Platform을 통해 RESTful API 또는 사용자 인터페이스를 사용하여 [!DNL Real-time Customer Profile] 데이터에 액세스할 수 있습니다. API를 사용하여 &quot;프로필&quot;으로 더 일반적으로 알려진 엔터티에 액세스하는 방법을 알아보려면 [엔티티 끝점 안내서에 설명된 단계를 따르십시오](entities.md). UI를 사용하여 프로필에 액세스하려면 [!DNL Platform] 프로필 사용 [안내서를 참조하십시오](../ui/user-guide.md).
 
 ## 내보내기 작업([!DNL Profile] 내보내기) {#profile-export}
 
