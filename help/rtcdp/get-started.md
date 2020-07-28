@@ -14,9 +14,9 @@ ht-degree: 0%
 
 # Adobe 실시간 고객 데이터 Platform 시작하기
 
-이 시작 가이드는 Adobe 실시간 고객 데이터 Platform(실시간 CDP)의 샘플 구현을 안내합니다. 자체 구현을 설정할 때 예로 사용할 수 있습니다. 이 안내서에는 특정 예가 나와 있지만, 이 가이드는 설정을 만드는 동안 사용할 수 있는 추가 정보에 링크됩니다.
+이 시작 가이드는 실시간 고객 데이터 Platform(실시간 CDP)의 샘플 구현을 안내합니다. 자체 구현을 설정할 때 예로 사용할 수 있습니다. 이 안내서에는 특정 예가 나와 있지만, 이 가이드는 설정을 만드는 동안 사용할 수 있는 추가 정보에 링크됩니다.
 
-이 예에서는 Adobe Experience Platform 기반의 Adobe 실시간 고객 데이터 Platform을 통해 다음과 같은 이점을 제공합니다.
+이 예에서는 Adobe Experience Platform을 기반으로 하는 실시간 고객 데이터 Platform의 강력한 기능을 보여줍니다.
 
 * 여러 소스에서 데이터 수집
 * 여러 문서를 하나의 [!DNL real-time customer profile]
@@ -110,7 +110,7 @@ Luma는 방문자의 행동을 Adobe Experience Platform의 사용자 프로필�
 
 새라는 Adobe Experience Platform에서 그녀를 토대로 동적으로 전달되는 개인화된 홈 페이지 경험 [!DNL Real-time Customer Profile] 을 받습니다.
 
-과거 구매와 의류 및 장비 런칭에 대한 친밀성을 감안한 Adobe Target의 Adobe Sensei 기반의 개인화 덕분에 관련 콘텐츠를 볼 수 있습니다. 루마 또한 남성들의 카탈로그 내용을 최근 자신의 검색어를 바탕으로 남성들의 달리기 기어로 재단했다.
+Julia는 과거 구매와 의류 및 장비 실행 관련성을 고려한 Adobe Target의 Adobe Sensei에서 개인화된 경험을 통해 관련 콘텐츠를 확인합니다. 루마 또한 남성들의 카탈로그 내용을 최근 자신의 검색어를 바탕으로 남성들의 달리기 기어로 재단했다.
 
 또한 Sarah는 가장 최근에 본 항목을 기반으로 새로운 추천 트레이뿐만 아니라 주요 제품을 제공합니다.
 
@@ -120,7 +120,7 @@ Luma는 방문자의 행동을 Adobe Experience Platform의 사용자 프로필�
 
 사라가 정신을 잃고 사이트를 떠나 그녀의 세션을 끝냅니다. 루마는 Adobe Experience Platform에서 데이터를 사용하여 사이트를 다시 방문할 수 있습니다.
 
-Adobe Experience Platform 기반의 Adobe 실시간 고객 데이터 Platform은 고객 경험 관리를 위해 구축되었습니다. 조직에서는 다음을 수행할 수 있습니다.
+Adobe Experience Platform 기반의 실시간 고객 데이터 Platform은 고객 경험 관리를 위해 구축되었습니다. 조직에서는 다음을 수행할 수 있습니다.
 
 * 데이터 통합 및 활성화 간소화
 * 알려진 데이터 및 알 수 없는 데이터 사용 관리
@@ -135,7 +135,7 @@ Luma 팀은 모든 행동 및 고객 데이터를 한 곳에서 제공합니다.
 다음 소스에서 데이터를 인제스트할 수 있습니다.
 
 * 기존 Adobe Experience Cloud 솔루션 데이터
-* Luma의 로열티 프로그램, 콜센터 및 판매 시점(POS: Point Of Sale) 시스템 데이터와 같은 Adobe가 아닌 소스
+* Luma의 충성도 프로그램, 콜 센터 및 판매 시점 시스템 데이터와 같은 Adobe이 아닌 소스
 * Luma 데이터 소스의 실시간 스트리밍 데이터
 * Adobe 솔루션의 실시간 데이터(새 태그 필요 없음)
 
@@ -236,8 +236,8 @@ Loyalty member
 
 대상에 **[!UICONTROL 보내기를 클릭합니다]**.
 
-Luma는 Adobe 실시간 CDP에서 고객 세그먼트에 대한 완벽한 개인화 작업을 수행할 수 있습니다.\
-Luma가 Adobe 솔루션과 비 Adobe 솔루션 모두에 이 대상을 보낼 수 있는 모든 대상을 확인할 수 있습니다.
+Adobe 실시간 CDP에서 Luma는 고객 세그먼트에 맞게 원활하게 작업하여 개인화할 수 있습니다.\
+여기에는 Luma가 이 대상을 Adobe 및 비Adobe 솔루션 모두에 보낼 수 있는 모든 대상이 표시됩니다.
 
 ![image](assets/luma-dest.png)
 
