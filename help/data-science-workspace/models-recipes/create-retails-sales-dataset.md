@@ -26,7 +26,7 @@ ht-degree: 0%
    - x-gw-ims-org-id: `{IMS_ORG}`
    - 클라이언트 암호: `{CLIENT_SECRET}`
    - 클라이언트 인증서: `{PRIVATE_KEY}`
-- 소매 영업 [레서피에 대한 샘플 데이터 및 소스 파일](../pre-built-recipes/retail-sales.md). Adobe 공개 Git 리포지토리에서 이 및 기타 [!DNL Data Science Workspace] 자습서에 필요한 에셋을 [다운로드합니다](https://github.com/adobe/experience-platform-dsw-reference/).
+- 소매 영업 [레서피에 대한 샘플 데이터 및 소스 파일](../pre-built-recipes/retail-sales.md). Adobe 공개 Git 리포지토리에서 이 및 기타 [!DNL Data Science Workspace] 튜토리얼에 필요한 에셋을 [다운로드합니다](https://github.com/adobe/experience-platform-dsw-reference/).
 - [Python >= 2.7](https://www.python.org/downloads/) 및 다음 [!DNL Python] 패키지:
    - [pip](https://pypi.org/project/pip/)
    - [PyYAML](https://pyyaml.org/)
