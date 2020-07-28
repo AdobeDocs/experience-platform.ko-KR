@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Adobe 개인정보 보호 JavaScript 라이브러리 개요
+title: Adobe 개인 정보 보호 JavaScript 라이브러리 개요
 topic: overview
 translation-type: tm+mt
 source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
@@ -12,11 +12,11 @@ ht-degree: 5%
 ---
 
 
-# Adobe 개인정보 보호 JavaScript 라이브러리 개요
+# Adobe 개인 정보 보호 JavaScript 라이브러리 개요
 
-데이터 처리자로서 Adobe는 회사의 허가와 지침에 따라 개인 데이터를 처리합니다. 귀하는 데이터 제어자로서 Adobe가 귀하를 대신하여 처리하고 저장하는 개인 데이터를 결정합니다. Adobe Experience Cloud 솔루션을 통해 전송하는 정보에 따라, Adobe는 [!DNL General Data Protection Regulation] (GDPR) 및 [!DNL California Consumer Privacy Act] (CPA)와 같은 개인 정보 보호 규정에 적용되는 개인 정보를 저장할 수 있습니다. Experience Cloud 솔루션이 개인 데이터를 수집하는 방법에 대한 자세한 내용은 [Adobe Experience Cloud](https://www.adobe.com/privacy/marketing-cloud.html) 의 개인 정보에 관한 문서를 참조하십시오.
+데이터 프로세서로서 Adobe은 회사의 허가와 지침에 따라 개인 데이터를 처리합니다. 귀하는 데이터 제어자로서 Adobe가 귀하를 대신하여 처리하고 저장하는 개인 데이터를 결정합니다. Adobe은 Adobe Experience Cloud 솔루션을 통해 전송하는 정보에 따라 [!DNL General Data Protection Regulation] (GDPR) 및 [!DNL California Consumer Privacy Act] (CCPA)와 같은 개인 정보 보호 규정에 적용되는 개인 정보를 저장할 수 있습니다. Experience Cloud 솔루션이 개인 데이터를 수집하는 방법에 대한 자세한 내용은 Adobe Experience Cloud의 [개인 정보](https://www.adobe.com/privacy/marketing-cloud.html) 보호 문서를 참조하십시오.
 
-데이터 관리자는 **Adobe Privacy JavaScript 라이브러리를** 사용하여 특정 도메인에 대한 [!DNL Experience Cloud] 솔루션에서 생성된 모든 데이터 주체 ID의 검색을 자동화할 수 있습니다. 그런 다음 [Adobe Experience Platform Privacy Service](home.md)에서 제공하는 API를 사용하여 이러한 ID를 사용하여 해당 데이터 대상에 속하는 개인 데이터에 대한 액세스 및 삭제 요청을 만들 수 있습니다.
+데이터 관리자는 **Adobe 개인 정보 보호 JavaScript 라이브러리를** 사용하여 특정 도메인에 대한 [!DNL Experience Cloud] 솔루션에서 생성된 모든 데이터 주체 ID의 검색을 자동화할 수 있습니다. 그런 다음 [Adobe Experience Platform Privacy Service](home.md)에서 제공하는 API를 사용하여 이러한 ID를 사용하여 해당 데이터 대상에 속하는 개인 데이터에 대한 액세스 및 삭제 요청을 만들 수 있습니다.
 
 >[!NOTE]
 >
@@ -36,7 +36,7 @@ ID [!DNL Privacy JS Library] 를 관리하는 데 몇 가지 기능을 제공합
 
 >[!NOTE]
 >
->`removeIdentities` 브라우저에서 해당 ID를 지원하는 특정 Adobe 솔루션만 `retrieveThenRemoveIdentities` 제거합니다. 예를 들어, Adobe Audience Manager은 타사 쿠키에 저장된 demdex ID를 삭제하지 않고 Adobe Target은 해당 ID를 저장하는 모든 쿠키를 삭제합니다.
+>`removeIdentities` 브라우저에서 ID만 `retrieveThenRemoveIdentities` 제거할 수 있습니다. 예를 들어, Adobe Audience Manager은 타사 쿠키에 저장된 demdex ID를 삭제하지 않고 Adobe Target은 해당 ID를 저장하는 모든 쿠키를 삭제합니다.
 
 세 가지 기능이 모두 비동기 프로세스를 나타내므로 검색된 모든 ID는 콜백이나 약속을 사용하여 처리해야 합니다.
 
@@ -46,12 +46,12 @@ ID [!DNL Privacy JS Library] 를 관리하는 데 몇 가지 기능을 제공합
 이 소프트웨어를 사용하려면 다음 방법 [!DNL Privacy JS Library]중 하나를 사용하여 컴퓨터에 설치해야 합니다.
 
 * 다음 명령을 실행하여 npm을 사용하여 설치합니다. `npm install @adobe/adobe-privacy`
-* 이름 아래에 있는 Adobe Launch Extension 사용 `AdobePrivacy`
+* 이름 아래에 있는 Adobe 실행 확장 사용 `AdobePrivacy`
 * https://github.com/Adobe-Marketing-Cloud/adobe-privacy에서 [다운로드](https://github.com/Adobe-Marketing-Cloud/adobe-privacy)
 
 ## 인스턴스화 [!DNL Privacy JS Library]
 
-Adobe를 사용하는 모든 앱은 특정 Adobe 솔루션으로 구성해야 하는 새 [!DNL Privacy JS Library] `AdobePrivacy` 개체를 인스턴스화해야 합니다. 예를 들어 Adobe Analytics에 대한 인스턴스화는 다음과 비슷합니다.
+이 변수를 사용하는 모든 앱은 [!DNL Privacy JS Library] 특정 Adobe 솔루션으로 구성해야 하는 새 `AdobePrivacy` 개체를 인스턴스화해야 합니다. 예를 들어 Adobe Analytics 인스턴스화는 다음과 비슷합니다.
 
 ```js
 var adobePrivacy = new AdobePrivacy({
