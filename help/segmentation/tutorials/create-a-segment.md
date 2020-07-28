@@ -14,16 +14,16 @@ ht-degree: 0%
 
 # 세그먼트 만들기
 
-This document provides a tutorial for developing, testing, previewing, and saving a segment definition using the [DNL Adobe Experience Platform Segmentation Service API](../api/getting-started.md).
+이 문서에서는 [DNL Adobe Experience Platform 세그멘테이션 서비스 API를 사용하여 세그먼트 정의를 개발, 테스트, 미리 보기 및 저장하기 위한 자습서를 제공합니다](../api/getting-started.md).
 
-For information on how to build segments using the user interface, please see the [Segment Builder guide](../ui/overview.md).
+사용자 인터페이스를 사용하여 세그먼트를 만드는 방법에 대한 자세한 내용은 [세그먼트 빌더 안내서를 참조하십시오](../ui/overview.md).
 
 ## 시작하기
 
-This tutorial requires a working understanding of the various [!DNL Adobe Experience Platform] services involved in creating audience segments. 이 자습서를 시작하기 전에 다음 서비스에 대한 설명서를 검토하십시오.
+이 자습서에서는 대상 세그먼트 만들기와 관련된 다양한 [!DNL Adobe Experience Platform] 서비스에 대해 작업해야 합니다. 이 자습서를 시작하기 전에 다음 서비스에 대한 설명서를 검토하십시오.
 
 - [!DNL Real-time Customer Profile](../../profile/home.md): 여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
-- [!DNL Adobe Experience Platform Segmentation Service](../home.md): Allows you to build audience segments from Real-time Customer Profile data.
+- [!DNL Adobe Experience Platform Segmentation Service](../home.md): 실시간 고객 프로필 데이터를 통해 고객 세그먼트를 만들 수 있습니다.
 - [!DNL Experience Data Model (XDM)](../../xdm/home.md): 고객 경험 데이터를 [!DNL Platform] 구성하는 표준화된 프레임워크
 
 다음 섹션에서는 API를 성공적으로 호출하기 위해 알아야 할 추가 정보를 [!DNL Platform] 제공합니다.
@@ -48,7 +48,7 @@ API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 
 >
 >의 샌드박스에 대한 자세한 내용 [!DNL Platform]은 [샌드박스 개요 설명서를 참조하십시오](../../sandboxes/home.md).
 
-페이로드(POST, PUT, PATCH)가 포함된 모든 요청에는 추가 헤더가 필요합니다.
+페이로드(POST, PUT, PATCH)이 포함된 모든 요청에는 추가 헤더가 필요합니다.
 
 - 컨텐츠 유형: application/json
 
@@ -87,7 +87,7 @@ API의 종단점에 대한 POST 요청을 만들어 새 세그먼트 정의를 �
 
 ### 미리 보기 작업 만들기
 
-종단점에 대한 POST 요청을 만들어 새 미리 보기 작업을 만들 수 `/preview` 있습니다.
+종단점에 POST 요청을 만들어 새 미리 보기 작업을 만들 수 `/preview` 있습니다.
 
 미리 보기 작업 만들기에 대한 자세한 지침은 미리 [보기 및 예상 끝점 안내서에서 확인할 수 있습니다](../api/previews-and-estimates.md#create-preview).
 
