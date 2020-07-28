@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Adobe에서 정의한 함수
+title: Adobe 정의 함수
 topic: queries
 translation-type: tm+mt
 source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
@@ -12,18 +12,18 @@ ht-degree: 6%
 ---
 
 
-# Adobe에서 정의한 함수 사용
+# Adobe 정의 함수 사용
 
 Adobe의 주요 차별화 요소 중 하나는 경험 데이터와 고객이 해당 데이터를 사용하여 수행해야 하는 작업을 파악하는 것입니다. 이러한 이해를 통해 보다 손쉽게 작업을 수행할 수 있는 헬퍼 기능을 구축할 수 있습니다.
 
-이 문서에서는 다음 세 가지 주요 활동을 지원하는 Adobe에서 정의한 함수(ADF)에 대해 [!DNL Analytics] 설명합니다.
+이 문서에서는 세 가지 주요 활동을 지원하는 ADF(Adobe 정의 함수)에 대해 [!DNL Analytics] 설명합니다.
 - [세션](#sessionization)
 - [속성](#attribution)
 - [경로 지정](#pathing)
 
 ## 세션
 
-Adobe Analytics에서 찾은 방문 그룹을 `SESS_TIMEOUT()` 재현합니다. 시간 기반 그룹화가 비슷하지만 사용자 정의 가능한 매개 변수를 사용하여 수행됩니다.
+이 보고서는 Adobe Analytics과 함께 찾은 방문 그룹을 `SESS_TIMEOUT()` 생성합니다. 시간 기반 그룹화가 비슷하지만 사용자 정의 가능한 매개 변수를 사용하여 수행됩니다.
 
 **구문:**
 
@@ -89,11 +89,11 @@ LIMIT 31;
 
 기여도 분석은 매출, 주문 또는 등록과 같은 지표나 전환을 마케팅 활동에 할당하는 방법입니다.
 
-Adobe Analytics에서 속성 설정은 eVar와 같은 변수를 사용하여 구성되며 데이터가 인제스트될 때 생성됩니다.
+Adobe Analytics에서 속성 설정은 eVar와 같은 변수를 사용하여 구성되며 데이터를 인제스트할 때 생성됩니다.
 
 에 있는 기여도 ADF를 [!DNL Query Service] 사용하면 이러한 할당을 쿼리 시간에 정의하고 생성할 수 있습니다.
 
-이 예에서는 마지막 터치 기여도에 중점을 두지만 Adobe에서는 첫 번째 터치 기여도를 제공합니다.
+이 예에서는 마지막 터치 기여도에 중점을 두지만 Adobe은 첫 번째 터치 속성을 제공합니다.
 
 >[!NOTE]
 >
@@ -243,7 +243,7 @@ LIMIT 10;
 
 ## Journey Orchestration용
 
-다음 비디오에서는 Adobe Experience Platform 인터페이스 및 PSQL 클라이언트에서 쿼리를 실행하는 방법을 보여 줍니다. 또한 이 비디오에서는 XDM 개체의 개별 속성과 관련된 예를 사용하고, Adobe에서 정의한 함수를 사용하고, CREATE TABLE AS SELECT(CTAS SELECT)를 사용합니다.
+다음 비디오에서는 Adobe Experience Platform 인터페이스 및 PSQL 클라이언트에서 쿼리를 실행하는 방법을 보여 줍니다. 또한 이 비디오에서는 XDM 개체의 개별 속성과 관련된 예를 사용하여 Adobe에서 정의된 함수를 사용하고 CREATE TABLE AS SELECT(CTA)를 사용합니다.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
 
