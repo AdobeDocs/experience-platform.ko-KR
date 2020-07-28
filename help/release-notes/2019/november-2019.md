@@ -34,13 +34,13 @@ Adobe Experience Platform에 내장된 Adobe 실시간 고객 데이터 Platform
 
 [!DNL Real-time Customer Data Platform] 엄격한 데이터 거버넌스 정책을 적용하면서 프로파일을 구축하고 고객을 정의할 수 있을 뿐만 아니라 풍부한 통찰력을 도출해낼 수 있도록 데이터 거버넌스, ID 관리, 고급 세분화 및 데이터 과학을 위한 툴이 포함되어 있습니다.
 
-Adobe는 Adobe Experience Cloud와의 기본 통합은 물론 광범위한 파트너 에코시스템과 연계하여 이러한 고객을 원활하게 활성화할 수 있으며 온사이트 또는 인앱 개인화에서 이메일, 유료 미디어, 콜센터, 연결된 디바이스 등 모든 채널에서 탁월한 고객 경험을 전달할 수 있습니다.
+Adobe은 Adobe Experience Cloud와의 기본 통합은 물론 광범위한 파트너 에코시스템에 연결되므로 이러한 고객을 원활하게 활성화할 수 있고 온사이트 또는 인앱 개인화에서 이메일, 유료 미디어, 콜센터, 연결된 디바이스 등 모든 채널에서 탁월한 고객 경험을 전달할 수 있습니다.
 
 실시간 CDP를 통해 가능한 작업
 
 * 전사적으로 고객 데이터를 스트리밍하여 고객의 전체 상황을 파악할 수 있습니다.
 * 알려진 식별자와 알 수 없는 식별자에 대한 신뢰할 수 있는 거버넌스 및 개인 정보 제어 기능을 사용하여 프로파일을 책임감 있게 관리할 수 있습니다.
-* Adobe Sensei 기반의 AI 및 머신 러닝을 통해 실행 가능한 인사이트를 생성하고 마케터를 위한 기반을 마련할 수 있습니다.
+* 마케터를 위해 마련된 Adobe Sensei 기반의 AI 및 머신 러닝을 통해 실행 가능한 인사이트를 생성하고 고객의 규모를 확장할 수 있습니다.
 * 모든 채널과 대상을 통해 개인화된 경험을 실시간으로 제공할 수 있습니다.
 
 자세한 내용은 [Adobe 실시간 고객 데이터 Platform 설명서를 참조하십시오](../../rtcdp/overview.md).
@@ -49,13 +49,13 @@ Adobe는 Adobe Experience Cloud와의 기본 통합은 물론 광범위한 파�
 
 | 기능 | 설명 |
 |---|---|
-| 대상 | Adobe가 지원하는 대상 플랫폼과의 사전 구축된 통합으로, 이러한 파트너 [!DNL Real-time Customer Data Platform] 에게 데이터를 원활하게 제공할 수 있습니다. See [Destinations](#destinations) below for more information. |
-| 홈 페이지 지표 대시보드 | Adobe 실시간 고객 데이터 Platform(실시간 CDP) 홈 페이지에는 프로필 및 세그먼트에 대한 정보를 보여주는 지표 대시보드가 포함되어 있습니다. 홈 페이지에는 학습 자료에 대한 링크도 포함되어 있습니다. 아래의 [실시간 고객 데이터 Platform 지표에](#real-time-customer-data-platform-metrics) 대한 섹션을 참조하십시오. |
+| 대상 | Adobe이 지원하는 대상 플랫폼과의 사전 구축된 통합 기능을 통해 해당 파트너 [!DNL Real-time Customer Data Platform] 에게 데이터를 원활하게 제공할 수 있습니다. See [Destinations](#destinations) below for more information. |
+| 홈 페이지 지표 대시보드 | 실시간 CDP(Adobe 실시간 고객 데이터 Platform) 홈 페이지에는 프로필 및 세그먼트에 대한 정보를 보여주는 지표 대시보드가 포함되어 있습니다. 홈 페이지에는 학습 자료에 대한 링크도 포함되어 있습니다. 아래의 [실시간 고객 데이터 Platform 지표에](#real-time-customer-data-platform-metrics) 대한 섹션을 참조하십시오. |
 | 소스 | Adobe 솔루션, 클라우드 기반 스토리지, 타사 소프트웨어 및 CRM과 같은 다양한 소스의 데이터를 인제스트할 수 있습니다. 자세한 내용은 아래 [소스](#sources) 섹션을 참조하십시오. |
 
 **[!DNL Real-time Customer Data Platform]지표&#x200B;**
 
-측정 지표 대시보드가 포함된 Adobe 실시간 고객 데이터 Platform(실시간 CDP) 홈 페이지는 실시간 CDP에 로그인할 때 나타납니다.
+측정 단위 대시보드가 포함된 실시간 고객 데이터 Platform(실시간 CDP) Adobe 홈 페이지는 실시간 CDP에 로그인할 때 나타납니다.
 
 홈 페이지는 지표 카드가 표시되는 곳 중 하나입니다. 실시간 CDP는 고객 경험 전반에서 측정 카드를 제공합니다. 이러한 지표는 시스템의 데이터, 프로필 및 세그먼트 대상에 대해 알려줍니다.
 
@@ -65,11 +65,11 @@ Adobe는 Adobe Experience Cloud와의 기본 통합은 물론 광범위한 파�
 
 ## [!DNL Destinations] {#destinations}
 
-[!DNL Destinations] Adobe의 실시간 고객 데이터 Platform이 지원하는 대상 플랫폼과의 사전 구축된 통합으로, 이러한 파트너에게 데이터를 원활하게 제공할 수 있습니다. 자세한 내용은 [대상 개요](../../rtcdp/destinations/destinations-overview.md) 문서를 참조하십시오.
+[!DNL Destinations] Adobe의 실시간 고객 데이터 Platform에서 지원하는 대상 플랫폼과의 사전 구축된 통합으로, 이러한 파트너에게 데이터를 원활하게 제공할 수 있습니다. 자세한 내용은 [대상 개요](../../rtcdp/destinations/destinations-overview.md) 문서를 참조하십시오.
 
 **사용 가능한 대상**
 
-11월 릴리스에서는 Adobe의 실시간 고객 데이터 Platform이 다음과 같은 대상을 지원합니다.
+11월 릴리스에서는 Adobe의 실시간 고객 데이터 Platform이 다음 대상을 지원합니다.
 
 * 광고: [!DNL Google]
 * 이메일 마케팅: Adobe Campaign, [!DNL Salesforce Marketing Cloud], [!DNL Responsys], [!DNL Oracle Furnar
@@ -105,7 +105,7 @@ Adobe Experience Platform은 외부 소스에서 데이터를 인제스트할 �
 
 ## [!DNL Data Science Workspace] {#dsw}
 
-Adobe Experience Platform [!DNL Data Science Workspace] 를 사용하면 머신 러닝 모델을 구축 및 운영하여 Adobe 애플리케이션 및 타사 시스템에서 데이터 및 컨텐츠에 대한 인사이트를 원활하게 생성할 수 있습니다. [!DNL Data Science Workspace] XDM 데이터 [!DNL Platform] 의 탐색 및 준비 등 종합적인 데이터 과학 라이프사이클과 긴밀하게 통합되어 있으며, CDM 데이터 개발 및 운영 체제에 따라 CMS(Machine Learning Insights)를 통해 자동으로 풍부한 기능을 제공합니다 [!DNL Real-time Customer Profile] .
+Adobe Experience Platform [!DNL Data Science Workspace] 를 사용하면 머신 러닝 모델을 구축 및 운영하여 Adobe 애플리케이션과 타사 시스템에서 데이터 및 컨텐츠에 대한 인사이트를 원활하게 생성할 수 있습니다. [!DNL Data Science Workspace] XDM 데이터 [!DNL Platform] 의 탐색 및 준비 등 종합적인 데이터 과학 라이프사이클과 긴밀하게 통합되어 있으며, CDM 데이터 개발 및 운영 체제에 따라 CMS(Machine Learning Insights)를 통해 자동으로 풍부한 기능을 제공합니다 [!DNL Real-time Customer Profile] .
 
 **새로운 기능**
 
@@ -118,7 +118,7 @@ Adobe Experience Platform [!DNL Data Science Workspace] 를 사용하면 머신 
 
 ## [!DNL Experience Data Model] (XDM) 시스템 {#xdm}
 
-표준화와 상호 운용성은 그 이면의 핵심 개념입니다 [!DNL Experience Platform]. [!DNL Experience Data Model] (XDM)은 Adobe를 기반으로 고객 경험 데이터를 표준화하고 고객 경험 관리를 위한 스키마를 정의하는 것입니다.
+표준화와 상호 운용성은 그 이면의 핵심 개념입니다 [!DNL Experience Platform]. [!DNL Experience Data Model] (XDM)은 Adobe을 기반으로 고객 경험 데이터를 표준화하고 고객 경험 관리를 위한 스키마를 정의하는 것입니다.
 
 XDM은 디지털 경험의 강력함을 향상시키도록 고안된 공개적으로 문서화된 사양입니다. Adobe Experience Platform에서 서비스와 통신하는 모든 애플리케이션에 대한 공통 구조와 정의를 제공합니다. 모든 고객 경험 데이터는 XDM 표준을 준수하여 보다 빠르고 통합된 방식으로 인사이트를 제공하는 공통 표현에 통합할 수 있습니다. 고객 행동을 통해 유용한 인사이트를 얻고 세그먼트를 통해 고객 고객을 정의하며 개인화를 위해 고객 속성을 사용할 수 있습니다.
 
@@ -127,7 +127,7 @@ XDM은 디지털 경험의 강력함을 향상시키도록 고안된 공개적�
 | 기능 | 설명 |
 | ---------- | ------------ |
 | 알림 스키마 | 데이터 수집 프로세스 중에 전송된 알림 데이터를 나타내는 새 스키마입니다. |
-| Adobe AdCloud DSP 스키마 | Adobe Advertising Cloud DSP(Demand-Side Platform) 메타데이터를 나타내기 위해 5개의 새 스키마가 추가되었습니다. 배치, 캠페인, 패키지, 광고주, 계정. |
+| Adobe AdCloud DSP 스키마 | 5개의 새 스키마가 Adobe Advertising Cloud 광고 구매 플랫폼(DSP) 메타데이터를 나타내는 데 추가되었습니다. 배치, 캠페인, 패키지, 광고주, 계정. |
 | ExperienceEvent 구현 세부 정보 혼합 | 이벤트를 수집하는 데 사용되는 소프트웨어에 대한 정보를 저장할 표준 필드를 추가하는 새로운 ExperienceEvent 믹스입니다. |
 | [!DNL Profile Privacy] 믹싱 | 일반적인 아웃아웃 및 영업/공유 옵트아웃 신호를 수락하는 필드를 추가하는 새로운 프로필 믹스입니다 [!DNL Real-time Customer Profile]. |
 | 형식 제한 `xdm:alternateDisplayInfo` | 유효성 검사를 통과하려면 &quot;제목&quot; 및 &quot;설명&quot; 필드가 모두 문자열이어야 `xdm:alternateDisplayInfo` 합니다. |
@@ -174,7 +174,7 @@ Adobe Experience Platform [!DNL Segmentation Service] 는 세그먼트를 작성
 | 블록 작성 시 세그먼트 | 세그먼트 빌더 UI를 사용하여 세그먼트를 만들 때 이제 사용자는 추가 세그먼트를 위한 기본 요소로 이전에 정의한 세그먼트를 사용할 수 있습니다. <ul><li>현재 대상 멤버십 참조: 사용자가 대상을 드나들 때 업데이트됨</li><li>논리 복사: 선택한 세그먼트 정의를 새 세그먼트에서 복제합니다.</li></ul> |
 | ID 네임스페이스별 세그먼트 구성원 보기 | 이제 세그먼트 멤버십을 ID 네임스페이스(이메일, ECID 및 총 수)로 볼 수 있습니다. |
 | RBAC 지원 | 이제 세그먼트 빌더가 기본 역할 기반 액세스 제어 및 권한을 지원합니다. |
-| Adobe 솔루션 간 외부 고객 공유 [!DNL Platform] 에 대한 향상된 지원 | 이제 사용자는 대상자 수가 크거나[!DNL Experience Platform]미알려진 시나리오에서 외부(비-대상) 대상 메타데이터를 가져올 수 있습니다. 이 릴리스에는 솔루션 커넥터를 프로비저닝한 고객의 메타데이터에 대한 액세스 권한이 포함됩니다. [!DNL Audience Manager] 세그먼트 빌더 내에서 이 대상 메타데이터를 사용하여 새 세그먼트를 만들 수 [!DNL Experience Platform] 있습니다. <br/><br/> 또한, 에서 만든 세그먼트 [!DNL Experience Platform] 는 이제 통합 Adobe 솔루션에서 사용할 수 있습니다(예: [!DNL Audience Manager], [!DNL Target]및 [!DNL Ad Cloud]포함). |
+| Adobe 솔루션 간 외부 고객 공유 [!DNL Platform] 지원 강화 | 이제 사용자는 대상자 수가 크거나[!DNL Experience Platform]미알려진 시나리오에서 외부(비-대상) 대상 메타데이터를 가져올 수 있습니다. 이 릴리스에는 솔루션 커넥터를 프로비저닝한 고객의 메타데이터에 대한 액세스 권한이 포함됩니다. [!DNL Audience Manager] 세그먼트 빌더 내에서 이 대상 메타데이터를 사용하여 새 세그먼트를 만들 수 [!DNL Experience Platform] 있습니다. <br/><br/> 또한 에서 생성된 세그먼트 [!DNL Experience Platform] 는 이제 통합 Adobe 솔루션 [!DNL Audience Manager], [!DNL Target]및 [!DNL Ad Cloud]에서 사용할 수 있습니다. |
 
 **버그 수정**
 
