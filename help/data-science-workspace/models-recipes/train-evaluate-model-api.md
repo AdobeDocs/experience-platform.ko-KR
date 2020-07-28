@@ -19,7 +19,7 @@ ht-degree: 1%
 
 ## 전제 조건
 
-API를 [사용하여](./import-packaged-recipe-api.md) API를 사용하여 패키징된 레서피 가져오기를 수행하여 API를 사용하여 모델을 트레이닝하고 평가하는 데 필요합니다.
+API를 [사용하여](./import-packaged-recipe-api.md) API를 사용하여 패키지된 레서피 가져오기를 수행하여 API를 사용하여 모델을 트레이닝하고 평가하는 데 필요합니다.
 
 API [호출](../../tutorials/authentication.md) 작업을 시작하려면 이 자습서를 따르십시오.
 
