@@ -177,7 +177,7 @@ API를 사용하여 [!DNL Real-time Customer Profile] 종단점을 통해 `/conf
 
 ### ID로 단일 병합 정책 액세스
 
-끝점에 GET 요청을 만들고 요청 경로에 GET 요청을 포함하여 ID로 단일 병합 정책 `/config/mergePolicies` `mergePolicyId` 에 액세스할 수 있습니다.
+종단점에 GET 요청을 수행하고 요청 경로에 해당 정책을 포함하여 ID로 단일 병합 정책 `/config/mergePolicies` `mergePolicyId` 에 액세스할 수 있습니다.
 
 **API 형식**
 
@@ -324,7 +324,7 @@ curl -X POST \
 
 ### 기준별로 여러 병합 정책 목록 지정
 
-IMS 내에 여러 병합 정책을 나열할 수 있습니다. 조직에 GET 요청을 보내고 선택적 쿼리 매개 변수를 사용하여 응답을 필터링, 순서 지정 및 게시하면 됩니다. `/config/mergePolicies` 여러 매개 변수를 앰퍼샌드(&amp;)로 구분하여 포함할 수 있습니다. 매개 변수가 없는 이 끝점을 호출하면 조직에서 사용할 수 있는 모든 병합 정책을 검색합니다.
+IMS 내에 여러 병합 정책을 나열할 수 있습니다. 조직에 GET 요청을 보내고 선택적 쿼리 매개 변수를 사용하여 응답을 필터링, 순서 및 페이지로 설정합니다. `/config/mergePolicies` 여러 매개 변수를 앰퍼샌드(&amp;)로 구분하여 포함할 수 있습니다. 매개 변수가 없는 이 끝점을 호출하면 조직에서 사용할 수 있는 모든 병합 정책을 검색합니다.
 
 **API 형식**
 
@@ -435,7 +435,7 @@ curl -X GET \
 
 ## 병합 정책 만들기
 
-종단점에 대한 POST 요청을 만들어 조직에 대한 새 병합 정책을 만들 수 `/config/mergePolicies` 있습니다.
+종단점에 POST 요청을 만들어 조직에 대한 새 병합 정책을 만들 수 `/config/mergePolicies` 있습니다.
 
 **API 형식**
 
@@ -477,7 +477,7 @@ curl -X POST \
 | `name` | 목록 보기에서 병합 정책을 식별할 수 있는 친숙한 이름입니다. |
 | `identityGraph.type` | 병합할 관련 ID를 가져올 ID 그래프 유형입니다. 가능한 값: &quot;none&quot; 또는 &quot;pdg&quot;(비공개 그래프) |
 | `attributeMerge` | 데이터 충돌 시 프로필 속성 값의 우선 순위를 지정하는 방식입니다. |
-| `schema` | 병합 정책과 연결된 XDM 스키마 클래스입니다. |
+| `schema` | 병합 정책에 연결된 XDM 스키마 클래스입니다. |
 | `default` | 이 병합 정책이 스키마의 기본값인지 여부를 지정합니다. |
 
 자세한 내용은 병합 정책 [구성](#components-of-merge-policies) 요소를 참조하십시오.
@@ -524,7 +524,7 @@ curl -X POST \
 
 ### 개별 병합 정책 필드 편집
 
-종단점에 대한 PATCH 요청을 만들어 병합 정책에 대한 개별 필드를 편집할 수 `/config/mergePolicies/{mergePolicyId}` 있습니다.
+종단점에 PATCH 요청을 만들어 병합 정책에 대한 개별 필드를 편집할 수 `/config/mergePolicies/{mergePolicyId}` 있습니다.
 
 **API 형식**
 
@@ -651,7 +651,7 @@ curl -X PUT \
 | `name` | 목록 보기에서 병합 정책을 식별할 수 있는 친숙한 이름입니다. |
 | `identityGraph` | 병합할 관련 ID를 가져올 ID 그래프입니다. |
 | `attributeMerge` | 데이터 충돌 시 프로필 속성 값의 우선 순위를 지정하는 방식입니다. |
-| `schema` | 병합 정책과 연결된 XDM 스키마 클래스입니다. |
+| `schema` | 병합 정책에 연결된 XDM 스키마 클래스입니다. |
 | `default` | 이 병합 정책이 스키마의 기본값인지 여부를 지정합니다. |
 
 자세한 내용은 병합 정책 [구성](#components-of-merge-policies) 요소를 참조하십시오.
@@ -720,7 +720,7 @@ curl -X DELETE \
 
 **응답**
 
-삭제 요청이 성공하면 HTTP 상태 200(OK) 및 빈 응답 본문을 반환합니다. 삭제를 성공적으로 확인하려면 GET 요청을 수행하여 병합 정책을 ID로 볼 수 있습니다. 병합 정책을 삭제하면 HTTP 상태 404(찾을 수 없음) 오류가 표시됩니다.
+삭제 요청이 성공하면 HTTP 상태 200(OK) 및 빈 응답 본문을 반환합니다. 삭제에 성공했는지 확인하려면 GET 요청을 수행하여 병합 정책을 ID로 볼 수 있습니다. 병합 정책을 삭제하면 HTTP 상태 404(찾을 수 없음) 오류가 표시됩니다.
 
 ## 다음 단계
 
