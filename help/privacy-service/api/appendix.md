@@ -36,7 +36,7 @@ ht-degree: 10%
 >
 >각 ID 유형에는 `namespaceId` 정수 값이 있으며, ID의 속성을 &quot;namespaceId&quot;로 설정할 때 `namespace` 문자열 대신 사용할 수 있습니다 `type` . 자세한 내용은 [네임스페이스 한정자](#namespace-qualifiers) 섹션을 참조하십시오.
 
-API의 종단점에 대한 GET 요청을 만들어 조직에서 사용 중인 ID 네임스페이스 목록을 검색할 수 `idnamespace/identities` [!DNL Identity Service] 있습니다. 자세한 내용은 [ID 서비스 개발자 가이드를](../../identity-service/api/getting-started.md) 참조하십시오.
+API의 종단점에 GET 요청을 함으로써 조직에서 사용 중인 ID 네임스페이스 목록을 검색할 수 `idnamespace/identities` [!DNL Identity Service] 있습니다. 자세한 내용은 [ID 서비스 개발자 가이드를](../../identity-service/api/getting-started.md) 참조하십시오.
 
 ## 네임스페이스 한정자
 
@@ -54,7 +54,7 @@ API에서 값 `namespace` 을 지정할 때 해당 매개 변수 [!DNL Privacy S
 
 ## 승인된 제품 값
 
-다음 표에서는 작업 생성 요청의 속성에 Adobe 제품을 지정하는 데 `include` 허용된 값에 대해 설명합니다.
+다음 표에서는 작업 생성 요청의 속성에 Adobe 제품을 지정하기 위해 허용된 값을 `include` 개략적으로 설명합니다.
 
 | 제품 | 속성에 사용할 `include` 값 |
 --- | ---
