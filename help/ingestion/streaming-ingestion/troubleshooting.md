@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Streaming ingestion troubleshooting
+title: 스트리밍 통합 문제 해결
 topic: troubleshooting
 translation-type: tm+mt
 source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
@@ -12,7 +12,7 @@ ht-degree: 0%
 ---
 
 
-# Streaming ingestion troubleshooting guide
+# 스트리밍 통합 문제 해결 가이드
 
 이 문서에서는 Adobe Experience Platform에서 데이터 스트리밍과 관련하여 자주 묻는 질문에 대한 답변을 제공합니다. 모든 API에서 발생한 서비스 등 다른 [!DNL Platform] 서비스와 관련된 질문 및 문제 해결 [!DNL Platform] 은 [Experience Platform 문제 해결 가이드를 참조하십시오](../../landing/troubleshooting.md).
 
