@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Azure 데이터 탐색기 커넥터
+title: Azure Data Explorer 커넥터
 topic: overview
 translation-type: tm+mt
 source-git-commit: 3b5e76afea5689dbd59f64f6192e6ef2a6acb7d3
@@ -57,11 +57,11 @@ Adobe Experience Platform은 MySQL 및 같은 데이터베이스 제공자에 �
 
 ## API [!DNL Azure Data Explorer] 를 [!DNL Platform] 사용하는 데 연결
 
-- [흐름 서비스 API를 사용하여 Azure 데이터 탐색기 커넥터 만들기](../../tutorials/api/create/databases/data-explorer.md)
+- [흐름 서비스 API를 사용하여 Azure Data Explorer 커넥터 만들기](../../tutorials/api/create/databases/data-explorer.md)
 - [Flow Service API를 사용하여 데이터베이스 시스템 살펴보기](../../tutorials/api/explore/database-nosql.md)
 - [Flow Service API를 사용하여 데이터베이스에서 데이터 수집](../../tutorials/api/collect/database-nosql.md)
 
 ## UI [!DNL Azure Data Explorer] 를 [!DNL Platform] 사용하는 데 연결
 
-- [UI에서 Azure 데이터 탐색기 소스 커넥터 만들기](../../tutorials/ui/create/databases/data-explorer.md)
+- [UI에서 Azure Data Explorer 원본 커넥터 만들기](../../tutorials/ui/create/databases/data-explorer.md)
 - [UI에서 데이터베이스 커넥터에 대한 데이터 흐름 구성](../../tutorials/ui/dataflow/databases.md)
