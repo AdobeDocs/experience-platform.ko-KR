@@ -39,7 +39,7 @@ ht-degree: 5%
 | [!DNL Privacy Service] 재브랜딩 | 이전에 &quot;GDPR 서비스&quot;라고 명명한 이 서비스는 GDPR뿐만 아니라 다른 규정 [!DNL Privacy Service] 을 지원하도록 재설계되었습니다. |
 | 새 API 끝점 | API의 기본 경로 [!DNL Privacy Service] 가 에서 `/data/privacy/gdpr` 로 업데이트되었습니다. `/data/core/privacy/jobs` |
 | 새 필수 `regulation` 속성 | API에서 새 작업을 만들 때 [!DNL Privacy Service] 작업 `regulation` 을 추적할 규칙을 나타내기 위해 요청 페이로드에서 속성을 제공해야 합니다. 허용된 값은 `gdpr` 및 `ccpa`입니다. 자세한 내용은 개발자 안내서의 [개인 정보 작업](api/privacy-jobs.md) 관련 문서를 [!DNL Privacy Service] 참조하십시오. |
-| Adobe Primetime 인증 지원 | [!DNL Privacy Service] 이제 Adobe Primetime 인증에서 제품 가치 `primetimeAuthentication` 로 액세스/삭제 요청을 수락합니다. See the [Primetime Authentication documentation](http://tve.helpdocsonline.com/how-to-make-a-privacy-request) for more information. |
+| Adobe Primetime 인증 지원 | [!DNL Privacy Service] 이제 제품 값으로 사용하여 Adobe Primetime 인증의 액세스/삭제 요청 `primetimeAuthentication` 을 수락합니다. See the [Primetime Authentication documentation](http://tve.helpdocsonline.com/how-to-make-a-privacy-request) for more information. |
 
 ### 개선 사항
 
@@ -55,7 +55,7 @@ ht-degree: 5%
 | --- | --- |
 | 지표 요청 대시보드 | UI의 새로운 지표 대시보드는 [!DNL Privacy Service] 제출되고, 오류되고, 완료된 GDPR 요청에 대한 가시성을 제공합니다. |
 | 요청 빌더 | GDPR 요청을 제출하는 기술 및 비기술 사용자가 모두 있는 서비스 조직에 대해 &quot;요청 만들기&quot; 기능이 UI에 추가되었습니다. JSON 파일 제출 기능은 [!DNL Privacy Service] UI에서 계속 사용하길 원하는 조직의 경우 계속 사용할 수 있습니다. |
-| GDPR 작업 이벤트 알림 | GDPR 작업 상태에 대한 이벤트 알림은 많은 워크플로우에서 중요한 요소입니다. 이전에는 개별 이메일 공지를 사용하여 알림을 제공했지만 GDPR 이벤트 알림은 Adobe I/O 이벤트를 활용하는 메시지로서, Adobe I/O 이벤트는 구성된 웹 후크 지원 작업 요청 자동화로 전송됩니다. [!DNL Privacy Service] UI 사용자는 Adobe I/O GDPR 이벤트를 구독하여 제품 또는 GDPR 작업이 완료되면 업데이트를 받을 수 있습니다. |
+| GDPR 작업 이벤트 알림 | GDPR 작업 상태에 대한 이벤트 알림은 많은 워크플로우에서 중요한 요소입니다. 이전에 개별 이메일 알림을 사용하여 알림을 제공했지만, GDPR 이벤트 알림은 Adobe I/O 이벤트를 활용하는 메시지로서, 이는 구성된 웹후크 지원 작업 요청 자동화로 전송됩니다. [!DNL Privacy Service] UI 사용자는 Adobe I/O GDPR 이벤트를 구독하여 제품 또는 GDPR 작업이 완료되면 업데이트를 받을 수 있습니다. |
 
 ## 2019년 4월 18일
 
@@ -87,7 +87,7 @@ ht-degree: 5%
 
 ### 개선 사항
 
-* 모든 POST 제출 시 `include` 필드를 적용합니다.
+* 모든 POST 제출에서 `include` 필드를 적용합니다.
 * JSON을 업로드할 때 필드를 `include` 적용합니다.
 
 ### 버그 수정
