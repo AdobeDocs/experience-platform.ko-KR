@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # GDPR FAQ
 
-이 문서에서는 GDPR(Adobe Experience Cloud) [!DNL General Data Protection Regulation] 의 구현과 관련하여 자주 묻는 질문에 대한 답변을 제공합니다.
+이 문서에서는 Adobe Experience Cloud의 GDPR(Frequently Asked [!DNL General Data Protection Regulation] Questions)과 그 구현에 대한 답변을 제공합니다.
 
 이 문서에서 사용되는 다양한 GDPR 관련 용어의 정의는 [GDPR 용어](terminology.md) 기술문서에서 확인할 수 있습니다.
 
