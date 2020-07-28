@@ -22,7 +22,7 @@ Adobe Experience Platform을 사용하면 RESTful API 또는 사용자 인터페
 
 ## ID로 프로필 데이터 액세스
 
-끝점에 GET 요청을 만들고 일련의 쿼리 매개 변수로 엔티티의 ID를 제공하여 엔터티에 액세스할 수 [!DNL Profile] `/access/entities` 있습니다. 이 ID는 ID 값(`entityId`)과 ID 네임스페이스(`entityIdNS`)로 구성됩니다.
+종단점에 GET 요청을 하고 일련의 쿼리 매개 변수로 엔티티의 ID를 제공하여 엔터티에 액세스할 수 [!DNL Profile] `/access/entities` 있습니다. 이 ID는 ID 값(`entityId`)과 ID 네임스페이스(`entityIdNS`)로 구성됩니다.
 
 요청 경로에 제공된 쿼리 매개 변수는 액세스할 데이터를 지정합니다. 앰퍼샌드(&amp;)로 구분된 여러 매개 변수를 포함할 수 있습니다. 부칙의 [쿼리 매개 변수](#query-parameters) 섹션에 유효한 매개 변수의 전체 목록이 제공됩니다.
 
@@ -119,7 +119,7 @@ curl -X GET \
 
 ## ID 목록별 프로필 데이터 액세스
 
-끝점에 POST 요청을 만들고 페이로드에서 ID를 제공하여 ID로 여러 프로필 엔터티에 액세스할 수 `/access/entities` 있습니다. 이러한 ID는 ID 값(`entityId`)과 ID 네임스페이스(`entityIdNS`)로 구성됩니다.
+종단점에 POST 요청을 만들고 페이로드의 ID를 제공하여 ID로 여러 프로필 엔터티에 액세스할 수 `/access/entities` 있습니다. 이러한 ID는 ID 값(`entityId`)과 ID 네임스페이스(`entityIdNS`)로 구성됩니다.
 
 **API 형식**
 
@@ -332,7 +332,7 @@ curl -X POST \
 
 ## ID로 프로필에 대한 시간 시리즈 이벤트에 액세스
 
-종단점에 대한 GET 요청을 수행하여 연결된 프로필 엔티티의 ID로 시간 시리즈 이벤트에 액세스할 수 `/access/entities` 있습니다. 이 ID는 ID 값(`entityId`)과 ID 네임스페이스(`entityIdNS`)로 구성됩니다.
+종단점에 GET 요청을 하여 연결된 프로필 엔터티의 ID로 시간 시리즈 이벤트에 액세스할 수 `/access/entities` 있습니다. 이 ID는 ID 값(`entityId`)과 ID 네임스페이스(`entityIdNS`)로 구성됩니다.
 
 요청 경로에 제공된 쿼리 매개 변수는 액세스할 데이터를 지정합니다. 앰퍼샌드(&amp;)로 구분된 여러 매개 변수를 포함할 수 있습니다. 부칙의 [쿼리 매개 변수](#query-parameters) 섹션에 유효한 매개 변수의 전체 목록이 제공됩니다.
 
@@ -411,7 +411,7 @@ curl -X GET \
 
 ### 다음 결과 페이지에 액세스
 
-시계열 이벤트를 검색할 때 결과는 페이지로 지정됩니다. 이후 결과 페이지가 있는 경우 속성에 ID가 `_page.next` 포함됩니다. 또한 이 `_links.next.href` 속성은 다음 페이지를 검색할 수 있는 요청 URI를 제공합니다. 결과를 검색하려면 끝점을 다른 GET 요청을 `/access/entities` 하되 제공된 URI의 값 `/entities` 으로 바꾸어야 합니다.
+시계열 이벤트를 검색할 때 결과는 페이지로 지정됩니다. 이후 결과 페이지가 있는 경우 속성에 ID가 `_page.next` 포함됩니다. 또한 이 `_links.next.href` 속성은 다음 페이지를 검색할 수 있는 요청 URI를 제공합니다. 결과를 검색하려면 끝점에 대해 다른 GET 요청을 `/access/entities` 하지만 제공된 URI의 값 `/entities` 으로 바꾸어야 합니다.
 
 >[!NOTE]
 >요청 경로에서 실수로 반복되지 않도록 `/entities/` 하십시오. 딱 한 번만 나타나야 하는데 `/access/entities?start=...`
@@ -492,7 +492,7 @@ curl -X GET \
 
 ## ID별로 여러 프로필에 대한 시계열 이벤트에 액세스
 
-종단점에 POST 요청을 수행하고 페이로드에서 프로필 ID를 제공하여 여러 관련 프로필에서 시간 시리즈 이벤트에 액세스할 수 `/access/entities` 있습니다. 이러한 ID는 각각 ID 값(`entityId`)과 ID 네임스페이스(`entityIdNS`)로 구성됩니다.
+종단점에 POST 요청을 만들고 페이로드에서 프로필 ID를 제공하여 여러 연결된 프로필에서 시간 시리즈 이벤트에 액세스할 수 `/access/entities` 있습니다. 이러한 ID는 각각 ID 값(`entityId`)과 ID 네임스페이스(`entityIdNS`)로 구성됩니다.
 
 **API 형식**
 
@@ -892,7 +892,7 @@ curl -X GET \
 
 ### 쿼리 매개 변수 {#query-parameters}
 
-끝점에 대한 GET 요청 경로에 다음 매개 변수가 `/access/entities` 사용됩니다. 액세스하려는 프로필 엔티티를 식별하고 응답에서 반환된 데이터를 필터링합니다. 필수 매개 변수에는 레이블이 지정되고 나머지는 선택 사항입니다.
+다음 매개 변수는 종단점에 대한 GET 요청 경로에 `/access/entities` 사용됩니다. 액세스하려는 프로필 엔티티를 식별하고 응답에서 반환된 데이터를 필터링합니다. 필수 매개 변수에는 레이블이 지정되고 나머지는 선택 사항입니다.
 
 | 매개 변수 | 설명 | 예 |
 |---|---|---|
