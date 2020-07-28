@@ -26,7 +26,7 @@ alloy("commandName", options);
 
 ## 약속에 대한 메모
 
-[약속](https://developer.mozilla.org/ko-KR/docs/Web/JavaScript/Reference/Global_Objects/Promise) 사항은 SDK가 웹 페이지의 코드와 통신하는 방법에 대한 기본 사항입니다. 약속은 일반적인 프로그래밍 구조로, 이 SDK 또는 JavaScript에만 국한되지 않습니다. 약속은 약속이 생성될 때 알려지지 않은 값에 대한 대리자 역할을 합니다. 값이 알려지면 약속과 값이 함께 &quot;해결됨&quot;됩니다. 처리기 함수를 약속과 연결할 수 있으므로 약속이 해결되거나 약속을 확인하는 과정에서 오류가 발생하면 알림을 받을 수 있습니다. 약속에 대한 자세한 내용은 [이 자습서](https://javascript.info/promise-basics) 또는 웹에 있는 다른 리소스를 참조하십시오.
+[약속](https://developer.mozilla.org/ko-KR/docs/Web/JavaScript/Reference/Global_Objects/Promise) 사항은 SDK가 웹 페이지의 코드와 통신하는 방법에 대한 기본 사항입니다. 약속은 일반적인 프로그래밍 구조로, 이 SDK 또는 JavaScript에만 국한되지 않습니다. 약속은 약속이 생성될 때 알려지지 않은 값에 대한 대리자 역할을 합니다. 값이 알려지면 약속의 값이 &quot;해결됨&quot;입니다. 처리기 함수를 약속과 연결할 수 있으므로 약속이 해결되거나 약속을 확인하는 과정에서 오류가 발생하면 알림을 받을 수 있습니다. 약속에 대한 자세한 내용은 [이 자습서](https://javascript.info/promise-basics) 또는 웹에 있는 다른 리소스를 참조하십시오.
 
 ## 성공 또는 실패 처리
 
