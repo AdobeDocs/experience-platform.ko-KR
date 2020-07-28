@@ -14,14 +14,14 @@ ht-degree: 5%
 
 # 제품
 
-사이트에 제품이 있는 경우, Adobe에서 가장 많은 기능을 사용하도록 전송하려는 기본 집합입니다. 비록 이것이 제안이지만, 그것은 처음부터 매우 강력한 데이터 세트를 제공합니다.
+사이트에 제품이 있는 경우 Adobe에서 가장 많은 기능을 사용하도록 설정하기 위해 전송할 수 있는 기본 집합입니다. 비록 이것이 제안이지만, 그것은 처음부터 매우 강력한 데이터 세트를 제공합니다.
 
 이 문서에서는 ExperienceEvent [Commerce Details 믹싱을](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/experienceevent-commerce.schema.md) 사용합니다. 그 `commerce` 혼합물은 두 부분으로 나뉘어져 있다: 개체 및 배열 `commerce` 을 `productListItems` 참조하십시오. 이 `commerce` 개체를 사용하면 배열에서 어떤 작업이 발생하는지 알 수 `productListItems` 있습니다.
 
 >[!Tip]
 >
 >
->Adobe Analytics에 익숙한 경우 변수 `commerce` 와 가장 밀접한 관계가 `events` 있습니다. 변수 `productListItems` 와 더 밀접한 관계가 `products` 있습니다.
+>Adobe Analytics에 익숙하다면 변수 `commerce` 와 가장 밀접한 관계가 `events` 있습니다. 변수 `productListItems` 와 더 밀접한 관계가 `products` 있습니다.
 
 ## 제품과 관련된 작업
 
