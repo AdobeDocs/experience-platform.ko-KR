@@ -18,7 +18,7 @@ ht-degree: 0%
 
 [Fura](https://www.oracle.com/marketingcloud/products/marketing-automation/) 는 B2B 마케터 및 조직이 마케팅 캠페인 및 영업 리드 생성을 관리하는 데 도움이 [!DNL Oracle] 되는 마케팅 자동화를 위한 서비스(SaaS) 플랫폼으로서 사용되는 소프트웨어입니다.
 
-세그먼트 데이터 [!DNL Oracle Eloqua]를 전송하려면 먼저 Adobe 실시간 고객 데이터 Platform에서 대상을 [](#connect-destination) 연결한 [다음 스토리지 위치에서 다음](#import-data-into-eloqua) 위치로 데이터 가져오기를 [!DNL Oracle Eloqua]설정해야 합니다.
+세그먼트 데이터 [!DNL Oracle Eloqua]를 전송하려면 먼저 Adobe 실시간 고객 데이터 Platform에서 대상을 [](#connect-destination) 연결한 [다음 스토리지 위치에서 (으)로 데이터 가져오기](#import-data-into-eloqua) 를 [!DNL Oracle Eloqua]설정해야 합니다.
 
 ## 대상에 연결 {#connect-destination}
 
