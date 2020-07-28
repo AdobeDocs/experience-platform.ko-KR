@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Adobe Experience Platform [!DNL Segmentation Service] overview
 
-Adobe Experience Platform [!DNL Segmentation Service] 는 세그먼트를 작성하고 데이터에서 대상을 생성할 수 있는 사용자 인터페이스와 RESTful API를 [!DNL Real-time Customer Profile] 제공합니다. 이러한 세그먼트는 중앙 집중식으로 구성 및 관리되며, 모든 Adobe 솔루션에서 즉시 액세스할 수 [!DNL Platform]있습니다.
+Adobe Experience Platform [!DNL Segmentation Service] 는 세그먼트를 작성하고 데이터에서 대상을 생성할 수 있는 사용자 인터페이스와 RESTful API를 [!DNL Real-time Customer Profile] 제공합니다. 이러한 세그먼트는 중앙에서 구성 및 관리되며, 모든 Adobe 솔루션 [!DNL Platform]에서 쉽게 액세스할 수 있습니다.
 
 이 문서에서는 Adobe Experience Platform에서 수행하는 역할 [!DNL Segmentation Service] 에 대한 개요를 제공합니다.
 
