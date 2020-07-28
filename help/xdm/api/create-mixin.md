@@ -16,7 +16,7 @@ ht-degree: 0%
 
 혼합은 &quot;주소&quot; 또는 &quot;프로필 환경 설정&quot;과 같은 특정 개념을 설명하는 데 사용되는 필드 집합입니다. 다양한 표준 혼합을 사용할 수 있으며, 조직 고유의 정보를 캡처하고자 할 때 직접 정의할 수 있습니다. 각 믹스인에는 믹싱과 호환되는 클래스를 나열하는 필드가 포함되어 있습니다. `meta:intendedToExtend`
 
-각 영역에 포함된 필드에 익숙해지도록 사용 가능한 모든 혼합을 검토하는 것이 도움이 될 수 있습니다. 각 &quot;global&quot; 및 &quot;tenant&quot; 컨테이너에 대한 요청을 수행하여 특정 클래스와 호환되는 모든 믹스를 나열하고 &quot;meta:intendToExtend&quot; 필드가 사용 중인 클래스와 일치하는 믹스만 반환할 수 있습니다(GET). 아래 예제는 [!DNL XDM Individual Profile] 클래스와 함께 사용할 수 있는 모든 혼합을 반환합니다.
+각 영역에 포함된 필드에 익숙해지도록 사용 가능한 모든 혼합을 검토하는 것이 도움이 될 수 있습니다. 각 &quot;global&quot; 및 &quot;tenant&quot; 컨테이너에 대한 요청을 수행하여 특정 클래스와 호환되는 모든 믹스를 목록(GET)으로 표시할 수 있으며, &quot;meta:intendedToExtend&quot; 필드가 사용 중인 클래스와 일치하는 믹스만 반환합니다. 아래 예제는 [!DNL XDM Individual Profile] 클래스와 함께 사용할 수 있는 모든 혼합을 반환합니다.
 
 ```http
 GET /global/mixins?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
