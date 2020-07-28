@@ -61,7 +61,7 @@ alloy
 
 ## 양식 기반 컴포저 사용
 
-양식 기반 경험 작성기는 JSON, HTML, 이미지 등과 같은 다양한 응답 유형을 가진 A/B 테스트, 자동화된 개인화 [!DNL Experience Targeting]및 추천 활동을 구성하는 데 유용한 비시각적 인터페이스입니다. Adobe Target에서 반환된 응답 유형 또는 결정에 따라 핵심 비즈니스 로직을 실행할 수 있습니다. 양식 기반 컴포저 활동에 대한 결정을 검색하려면 결정을 검색할 모든 &#39;decisionScopes&#39;가 있는 이벤트를 보냅니다.
+양식 기반 경험 작성기는 JSON, HTML, 이미지 등과 같은 다양한 응답 유형을 갖는 A/B 테스트, [!DNL Experience Targeting]Automated Personalization 및 Recommendations 활동을 구성하는 데 유용한 비시각적 인터페이스입니다. Adobe Target에서 반환된 응답 유형 또는 결정에 따라 핵심 비즈니스 로직을 실행할 수 있습니다. 양식 기반 컴포저 활동에 대한 결정을 검색하려면 결정을 검색할 모든 &#39;decisionScopes&#39;가 있는 이벤트를 보냅니다.
 
 ```javascript
 alloy
