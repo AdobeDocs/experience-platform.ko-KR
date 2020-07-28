@@ -38,7 +38,7 @@ ht-degree: 0%
 
 ### 스키마 기반의 [!DNL Experience Platform]
 
-표준화는 이면의 핵심 개념이다 [!DNL Experience Platform]. Adobe를 기반으로 하는 XDM은 고객 경험 데이터를 표준화하고 고객 경험 관리를 위한 표준 스키마를 정의하는 것입니다.
+표준화는 이면의 핵심 개념이다 [!DNL Experience Platform]. Adobe을 기반으로 하는 XDM은 고객 경험 데이터를 표준화하고 고객 경험 관리를 위한 표준 스키마를 정의하는 것입니다.
 
 The infrastructure which [!DNL Experience Platform] is built, knowing [!DNL XDM System], professiones the schema-based workflows and includes the [!DNL Schema Registry], schema [!DNL Schema Editor]metadata and service containing patterns. See the [XDM System overview](../home.md) for more information.
 
@@ -99,7 +99,7 @@ The infrastructure which [!DNL Experience Platform] is built, knowing [!DNL XDM 
 
 스키마 구성은 클래스를 할당하는 것으로 시작됩니다. 클래스는 스키마에 포함할 데이터의 동작 측면(레코드 또는 시간 시리즈)을 정의합니다. 이 외에도 클래스는 해당 클래스를 기반으로 하는 모든 스키마에는 호환이 가능한 여러 데이터 세트를 병합할 수 있는 방법이 포함되어 있어야 하는 가장 작은 수의 공통 속성을 설명합니다.
 
-또한 클래스는 스키마에서 사용할 수 있는 믹스를 결정합니다. 이 내용은 다음에 나오는 [믹신](#mixin) 섹션에서 더 자세히 설명합니다.
+또한 클래스는 스키마에 사용할 수 있는 믹스인을 결정합니다. 이 내용은 다음에 나오는 [믹신](#mixin) 섹션에서 더 자세히 설명합니다.
 
 &quot;산업&quot; 클래스라고 하는 모든 통합 [!DNL Experience Platform]과 함께 제공되는 표준 클래스가 있습니다. 업계 클래스는 다양한 사용 사례에 적용되는 일반적으로 승인된 업계 표준입니다. 업계 클래스의 예로는 Adobe에서 제공하는 [!DNL XDM Individual Profile] 및 [!DNL XDM ExperienceEvent] 클래스가 있습니다.
 
@@ -107,7 +107,7 @@ The infrastructure which [!DNL Experience Platform] is built, knowing [!DNL XDM 
 
 또한 &quot;고객&quot; 클래스라고 하는 각 조직의 특정 사용 사례를 설명하는 데 사용되는 [!DNL Platform]클래스도 있습니다. 고객 클래스는 고유한 사용 사례를 설명하는 데 사용할 수 있는 업계 또는 공급업체 클래스가 없을 때 조직에 의해 정의됩니다.
 
-예를 들어 충성도 프로그램의 구성원을 나타내는 스키마는 개인에 대한 레코드 데이터를 설명하므로 Adobe에서 정의한 표준 산업 클래스인 [!DNL XDM Individual Profile] 클래스를 기반으로 할 수 있습니다.
+예를 들어 충성도 프로그램의 구성원을 나타내는 스키마는 개인에 대한 레코드 데이터를 설명하므로 Adobe에 의해 정의된 표준 산업 클래스인 [!DNL XDM Individual Profile] 클래스를 기반으로 할 수 있습니다.
 
 ### 믹신 {#mixin}
 
@@ -182,7 +182,7 @@ XDM은 기본 필드 및 고유한 데이터 유형을 정의하는 기능 외�
 
 ![](../images/schema-composition/composition.png)
 
-### 결합 {#union}
+### 합집합 {#union}
 
 특정 사용 사례에 대한 스키마를 구성할 수 [!DNL Experience Platform] 있지만 특정 클래스 유형에 대한 스키마의 &quot;union&quot;을 볼 수도 있습니다. 이전 다이어그램은 XDM ExperienceEvent 클래스를 기반으로 두 개의 스키마와 [!DNL XDM Individual Profile] 클래스를 기반으로 한 두 개의 스키마를 보여줍니다. 아래에 표시된 유니온은 동일한 클래스(및[!DNL XDM ExperienceEvent] 각각)를 공유하는 모든 스키마의 필드 [!DNL XDM Individual Profile]를 집계합니다.
 
@@ -200,7 +200,7 @@ XDM은 기본 필드 및 고유한 데이터 유형을 정의하는 기능 외�
 
 스키마 컴포지션의 기본 사항을 이해하면 스키마를 사용하여 스키마 작성을 시작할 수 있습니다 [!DNL Schema Registry].
 
-이 [!DNL Schema Registry] 는 Adobe Experience Platform [!DNL Schema Library] 내에서 액세스할 때 사용되며 사용 가능한 모든 라이브러리 리소스에 액세스할 수 있는 사용자 인터페이스와 RESTful API를 제공합니다. 이 [!DNL Schema Library] 에는 Adobe에서 정의한 산업 리소스, 파트너가 정의한 공급업체 리소스, [!DNL Experience Platform] 조직의 구성원이 구성한 클래스, 믹싱, 데이터 유형 및 스키마가 포함되어 있습니다.
+이 [!DNL Schema Registry] 는 Adobe Experience Platform [!DNL Schema Library] 내에서 액세스할 때 사용되며 사용 가능한 모든 라이브러리 리소스에 액세스할 수 있는 사용자 인터페이스와 RESTful API를 제공합니다. 이 [!DNL Schema Library] 에는 Adobe으로 정의된 산업 리소스, 파트너가 정의한 공급업체 리소스, [!DNL Experience Platform] 조직의 구성원이 구성한 클래스, 믹싱, 데이터 유형 및 스키마가 포함되어 있습니다.
 
 UI를 사용하여 스키마 작성을 시작하려면, [스키마 편집기 자습서와](../tutorials/create-schema-ui.md) 함께 이 문서 전체에서 언급된 &quot;충성도 멤버&quot; 스키마를 빌드하십시오.
 
