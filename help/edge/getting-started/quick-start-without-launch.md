@@ -17,12 +17,12 @@ ht-degree: 5%
 이 가이드는 Adobe Experience Platform 웹 SDK를 설정하는 다양한 방법을 안내합니다. 이 기능을 사용하려면 허용 목록에 포함되어야 합니다. 대기 목록에 오르려면 CSM에 문의하십시오.
 
 - 자사 도메인(CNAME)이 [활성화되어 있어야](https://docs.adobe.com/content/help/ko-KR/core-services/interface/ec-cookies/cookies-first-party.html) 합니다. 이미 Analytics용 CNAME이 있는 경우 이 CNAME을 사용해야 합니다. 개발 테스트에서는 CNAME이 없어도 되지만 프로덕션으로 이동하려면 먼저 테스트가 필요합니다.
-- Adobe Experience Platform을 받을 수 있습니다.  Platform을 구매하지 않은 경우, Adobe는 추가 비용 없이 SDK와 함께 제한된 방식으로 사용할 수 있도록 Experience Platform 데이터 서비스 재단을 귀하에게 제공할 것입니다.
+- Adobe Experience Platform을 받을 수 있습니다.  Platform을 구매하지 않은 경우 Adobe은 추가 비용 없이 SDK와 함께 제한된 방식으로 사용할 수 있도록 Experience Platform Data Services Foundation을 제공합니다.
 - 최신 버전의 방문자 ID 서비스를 사용하십시오.
 
 ## 구성 ID 만들기
 
-태그 관리 기능을 사용하지 않더라도 Adobe Launch의 [가장자리 구성 도구를](../fundamentals/edge-configuration.md) 사용하여 구성 ID를 만들 수 있습니다. 이렇게 하면 사용자가 데이터를 다양한 솔루션 [!DNL Edge Network] 으로 보낼 수 있습니다. 각 옵션을 찾는 방법에 대한 자세한 내용은 [에지 구성 도구](../fundamentals/edge-configuration.md) 페이지를 참조하십시오.
+태그 관리 기능을 사용하지 않더라도 Adobe 론치의 [가장자리 구성 도구를](../fundamentals/edge-configuration.md) 사용하여 구성 ID를 만들 수 있습니다. 이렇게 하면 사용자가 데이터를 다양한 솔루션 [!DNL Edge Network] 으로 보낼 수 있습니다. 각 옵션을 찾는 방법에 대한 자세한 내용은 [에지 구성 도구](../fundamentals/edge-configuration.md) 페이지를 참조하십시오.
 
 >[!NOTE]
 >
