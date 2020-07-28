@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # 세그멘테이션 자습서
 
-Adobe Experience Platform [!DNL Segmentation Service] 는 세그먼트를 작성하고 데이터에서 대상을 생성할 수 있는 사용자 인터페이스와 RESTful API를 [!DNL Real-time Customer Profile] 제공합니다. 이러한 세그먼트는 중앙 집중식으로 구성 및 관리되며, 모든 Adobe 솔루션에서 즉시 액세스할 수 [!DNL Platform]있습니다. 세그멘테이션에 대한 자세한 내용은 세그멘테이션 [서비스 개요를 읽어 보십시오](../segmentation/home.md).
+Adobe Experience Platform [!DNL Segmentation Service] 는 세그먼트를 작성하고 데이터에서 대상을 생성할 수 있는 사용자 인터페이스와 RESTful API를 [!DNL Real-time Customer Profile] 제공합니다. 이러한 세그먼트는 중앙에서 구성 및 관리되며, 모든 Adobe 솔루션 [!DNL Platform]에서 쉽게 액세스할 수 있습니다. 세그멘테이션에 대한 자세한 내용은 세그멘테이션 [서비스 개요를 읽어 보십시오](../segmentation/home.md).
 
 ## 세그먼트 정의 만들기
 
