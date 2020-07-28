@@ -52,7 +52,7 @@ ID 데이터는 개인을 식별하는 데 사용할 수 있는 모든 데이터
 
 ID 필드는 각 개인에 고유한 값에 대해 예약해야 합니다. 예를 들어 고객 충성도 프로그램의 데이터 세트를 고려합니다. &quot;충성도 수준&quot; 필드(금, 은, 브론즈)는 유용한 ID 필드가 아니지만, 충성도 ID(고유한 값)는 유용하지 않습니다.
 
-ZIP 코드 및 IP 주소와 같은 필드는 둘 이상의 개인 사용자에게 적용할 수 있으므로 개인의 ID로 레이블을 지정할 수 없습니다. 이러한 유형의 필드는 가족 수준의 마케팅 전략에 대한 ID로 표시되어야 합니다.
+둘 이상의 개별 사람에게 적용할 수 있으므로 ZIP 코드 및 IP 주소와 같은 필드는 개인의 ID로 레이블을 지정할 수 없습니다. 이러한 유형의 필드는 가족 수준의 마케팅 전략에 대한 ID로 표시되어야 합니다.
 
 ## 내 ID 필드가 내 예상과 연결되지 않는 이유는 무엇입니까?
 
@@ -91,11 +91,11 @@ Experience Platform 내의 모든 조직에서 사용할 수 있도록 다음과
 
 ## 조직에서 사용할 수 있는 ID 네임스페이스 목록은 어디에서 찾을 수 있습니까?
 
-ID [서비스 API를](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)사용하면 `/idnamespace/identities` 종단점에 대한 GET 요청을 만들어 조직에 대해 사용 가능한 모든 ID 네임스페이스를 나열할 수 있습니다. 자세한 내용은 Identity Service API [개요에서 사용 가능한 네임스페이스](./api/list-namespaces.md) 목록에 대한 섹션을 참조하십시오.
+ID [서비스 API를](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)사용하면 `/idnamespace/identities` 종단점에 GET 요청을 하여 조직에 대해 사용 가능한 모든 ID 네임스페이스를 나열할 수 있습니다. 자세한 내용은 Identity Service API [개요에서 사용 가능한 네임스페이스](./api/list-namespaces.md) 목록에 대한 섹션을 참조하십시오.
 
 ## 조직의 사용자 지정 네임스페이스를 만들려면 어떻게 해야 합니까?
 
-ID [서비스 API를](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)사용하여 `/idnamespace/identities` 종단점에 대한 POST 요청을 만들어 조직에 대한 사용자 지정 ID 네임스페이스를 만들 수 있습니다. 자세한 내용은 ID 서비스 API 개요에서 사용자 정의 네임스페이스 [](./api/create-custom-namespace.md) 만들기에 대한 섹션을 참조하십시오.
+ID [서비스 API를](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)사용하면 `/idnamespace/identities` 종단점에 POST 요청을 하여 조직에 대한 사용자 지정 ID 네임스페이스를 만들 수 있습니다. 자세한 내용은 ID 서비스 API 개요에서 사용자 정의 네임스페이스 [](./api/create-custom-namespace.md) 만들기에 대한 섹션을 참조하십시오.
 
 ## 복합 ID와 XID란 무엇입니까?
 
