@@ -57,7 +57,7 @@ API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
-페이로드(POST, PUT, PATCH)가 포함된 모든 요청에는 추가 미디어 유형 헤더가 필요합니다.
+페이로드(POST, PUT, PATCH)이 포함된 모든 요청에는 추가 미디어 유형 헤더가 필요합니다.
 
 * 컨텐츠 유형: `application/json`
 
@@ -73,7 +73,7 @@ POST /connections
 
 **요청**
 
-SQL Server 연결을 만들려면 POST 요청의 일부로 고유한 연결 사양 ID를 제공해야 합니다. SQL Server의 연결 사양 ID입니다 `1f372ff9-38a4-4492-96f5-b9a4e4bd00ec`.
+SQL Server 연결을 만들려면 고유한 연결 사양 ID를 POST 요청의 일부로 제공해야 합니다. SQL Server의 연결 사양 ID입니다 `1f372ff9-38a4-4492-96f5-b9a4e4bd00ec`.
 
 ```shell
 curl -X POST \
