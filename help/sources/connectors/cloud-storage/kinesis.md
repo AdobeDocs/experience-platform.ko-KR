@@ -57,7 +57,7 @@ Adobe Experience Platform은 AWS, [!DNL Google Cloud Platform]및 AWS와 같은 
 
 ## API [!DNL Amazon Kinesis] 를 [!DNL Platform] 사용하는 데 연결
 
-- [Flow Service API를 사용하여 Amazon Kinesis 커넥터 생성](../../tutorials/api/create/cloud-storage/kinesis.md)
+- [Flow Service API를 사용하여 Amazon Kinesis 커넥터 만들기](../../tutorials/api/create/cloud-storage/kinesis.md)
 - [Flow Service API를 사용하여 클라우드 스토리지 시스템 살펴보기](../../tutorials/api/explore/cloud-storage.md)
 - [Flow Service API를 사용하여 클라우드 스토리지 데이터 수집](../../tutorials/api/collect/cloud-storage.md)
 
