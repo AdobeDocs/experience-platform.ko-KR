@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: 흐름 서비스 API를 사용하여 Azure 데이터 탐색기 커넥터 만들기
+title: 흐름 서비스 API를 사용하여 Azure Data Explorer 커넥터 만들기
 topic: overview
 translation-type: tm+mt
 source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 [!DNL Flow Service] 는 Adobe Experience Platform 내의 다양한 소스에서 수집된 고객 데이터를 수집하고 중앙 집중화하는 데 사용됩니다. 이 서비스는 지원되는 모든 소스가 연결되어 있는 사용자 인터페이스와 RESTful API를 제공합니다.
 
-이 자습서에서는 [!DNL Flow Service] API를 사용하여 연결 단계 [!DNL Azure Data Explorer] (이하 &quot;데이터 탐색기&quot;라 한다)를 단계별로 안내합니다 [!DNL Experience Platform].
+이 자습서에서는 [!DNL Flow Service] API를 사용하여 연결 단계 [!DNL Azure Data Explorer] (이하 &quot;Data Explorer&quot;라 한다)를 단계별로 안내합니다 [!DNL Experience Platform].
 
 ## 시작하기
 
@@ -43,7 +43,7 @@ ht-degree: 1%
 | `servicePrincipalKey` | 데이터베이스에 연결하는 데 사용되는 고유한 서비스 주 [!DNL Data Explorer] 키입니다. |
 | `connectionSpec.id` | 연결을 만드는 데 필요한 고유 식별자입니다. 에 대한 연결 사양 ID [!DNL Data Explorer] 는 `0479cc14-7651-4354-b233-7480606c2ac3`입니다. |
 
-시작하는 방법에 대한 자세한 내용은 [이 데이터 탐색기 문서를 참조하십시오](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/management/access-control/how-to-authenticate-with-aad).
+시작하는 방법에 대한 자세한 내용은 [이 Data Explorer 문서를 참조하십시오](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/management/access-control/how-to-authenticate-with-aad).
 
 ### 샘플 API 호출 읽기
 
@@ -61,7 +61,7 @@ API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
-페이로드(POST, PUT, PATCH)가 포함된 모든 요청에는 추가 미디어 유형 헤더가 필요합니다.
+페이로드(POST, PUT, PATCH)이 포함된 모든 요청에는 추가 미디어 유형 헤더가 필요합니다.
 
 * 컨텐츠 유형: `application/json`
 
