@@ -24,7 +24,7 @@ ht-degree: 3%
 
 ## 세그먼트 작업 목록 검색 {#retrieve-list}
 
-IMS 조직에 대한 모든 세그먼트 작업 목록을 `/segment/jobs` 끝점에 GET 요청을 수행하여 검색할 수 있습니다.
+종단점에 GET 요청을 하여 IMS 조직에 대한 모든 세그먼트 작업 목록을 검색할 수 `/segment/jobs` 있습니다.
 
 **API 형식**
 
@@ -164,7 +164,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 
 ## 새 세그먼트 작업 만들기 {#create}
 
-종단점에 대한 POST 요청을 만들고 새 대상을 만들 세그먼트 정의의 ID를 본문에 포함하여 새 세그먼트 작업을 만들 수 있습니다. `/segment/jobs`
+종단점에 POST 요청을 만들고 본문에 새 대상을 만들 세그먼트 정의의 ID를 포함하여 새 세그먼트 작업을 만들 수 있습니다. `/segment/jobs`
 
 **API 형식**
 
@@ -258,7 +258,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 
 ## 특정 세그먼트 작업 검색 {#get}
 
-종단점에 GET 요청을 하고 요청 경로에서 검색할 세그먼트 작업의 ID를 제공하여 특정 세그먼트 작업에 대한 자세한 정보를 검색할 수 있습니다. `/segment/jobs`
+종단점에 GET 요청을 수행하고 요청 경로에서 검색할 세그먼트 작업의 ID를 제공하여 특정 세그먼트 작업에 대한 자세한 정보를 검색할 수 있습니다. `/segment/jobs`
 
 **API 형식**
 
@@ -355,7 +355,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-4
 
 ## 세그먼트 일괄 검색 작업 {#bulk-get}
 
-종단점에 POST 요청을 수행하고 요청 본문에 세그먼트 작업의 `/segment/jobs/bulk-get` `id` 값을 제공하여 여러 세그먼트 작업에 대한 자세한 정보를 검색할 수 있습니다.
+종단점에 POST 요청을 만들고 요청 본문에 세그먼트 작업의 `/segment/jobs/bulk-get` `id` 값을 제공하여 여러 세그먼트 작업에 대한 자세한 정보를 검색할 수 있습니다.
 
 **API 형식**
 
