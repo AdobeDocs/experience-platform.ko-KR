@@ -66,7 +66,7 @@ Consider the following example `users` array:
 
 ## 실수로 전송된 데이터 [!DNL Privacy Service] 를 정리할 수 있습니까 [!DNL Platform]?
 
-Adobe는 실수로 제품에 제출된 데이터 [!DNL Privacy Service] 를 제거하는 데 사용하는 것을 지원하지 않습니다. [!DNL Privacy Service] 는 데이터 주체(또는 소비자) 액세스 또는 삭제 요청에 대한 귀하의 의무를 준수하도록 설계되었습니다. 이러한 요청은 시간에 따라 처리되며 해당 개인정보 보호법과 관련하여 완료됩니다. 데이터 주체/소비자 액세스 또는 삭제 요청이 아닌 요청을 제출하면 모든 [!DNL Privacy Service] 고객과 적절한 법정 일정 [!DNL Privacy Service] 을 지원할 수 있는 기능이 영향을 받습니다.
+Adobe은 실수로 제품에 제출된 데이터 [!DNL Privacy Service] 를 제거하는 데 사용하는 것을 지원하지 않습니다. [!DNL Privacy Service] 는 데이터 주체(또는 소비자) 액세스 또는 삭제 요청에 대한 귀하의 의무를 준수하도록 설계되었습니다. 이러한 요청은 시간에 따라 처리되며 해당 개인정보 보호법과 관련하여 완료됩니다. 데이터 주체/소비자 액세스 또는 삭제 요청이 아닌 요청을 제출하면 모든 [!DNL Privacy Service] 고객과 적절한 법정 일정 [!DNL Privacy Service] 을 지원할 수 있는 기능이 영향을 받습니다.
 
 PII 또는 데이터 문제를 제거하기 위한 노력을 조정하고 제공하려면 계정 관리자(CDM)에 문의하십시오.
 
