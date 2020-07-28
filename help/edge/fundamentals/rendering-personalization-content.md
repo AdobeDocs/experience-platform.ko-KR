@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # 개인화 옵션 개요
 
-Adobe Experience Platform은 Adobe Target을 포함하여 Adobe에서 개인화 솔루션을 쿼리하는 것을 [!DNL Web SDK] 지원합니다. 개인화 모드에는 자동으로 렌더링될 수 있는 컨텐츠 및 개발자가 렌더링해야 하는 컨텐츠 검색 또한 SDK는 깜박임을 [관리하는 기능도 제공합니다](../../edge/solution-specific/target/flicker-management.md).
+Adobe Experience Platform은 Adobe Target을 포함하여 Adobe의 개인화 솔루션 쿼리를 [!DNL Web SDK] 지원합니다. 개인화 모드에는 자동으로 렌더링될 수 있는 컨텐츠 및 개발자가 렌더링해야 하는 컨텐츠 검색 또한 SDK는 깜박임을 [관리하는 기능도 제공합니다](../../edge/solution-specific/target/flicker-management.md).
 
 ## 컨텐츠 자동 렌더링
 
