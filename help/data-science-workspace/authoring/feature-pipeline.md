@@ -398,36 +398,36 @@ https://www.getpostman.com/collections/c5fc0d1d5805a5ddd41a
 
 ### 피쳐 파이프라인 엔진 생성 {#create-engine-api}
 
-Docker 이미지 위치가 지정되면 POST를 수행하여 [API를 사용하여 피쳐 파이프라인 엔진을](../api/engines.md#feature-pipeline-docker) 만들 수 [!DNL Sensei Machine Learning] `/engines`있습니다. 피쳐 파이프라인 엔진을 성공적으로 생성하면 엔진 고유 식별자(`id`)가 제공됩니다. 계속하기 전에 이 값을 저장해야 합니다.
+Docker 이미지 위치가 지정되면 POST을 수행하여 [API를 사용하여 피쳐 파이프라인 엔진을](../api/engines.md#feature-pipeline-docker) 만들 수 [!DNL Sensei Machine Learning] `/engines`있습니다. 피쳐 파이프라인 엔진을 성공적으로 생성하면 엔진 고유 식별자(`id`)가 제공됩니다. 계속하기 전에 이 값을 저장해야 합니다.
 
 ### MLInestment 만들기 {#create-mlinstance}
 
-새로 만든 사용자 `engineID`를 사용하여 [종단점에 POST 요청을 만들어 MLIstice](../api/mlinstances.md#create-an-mlinstance) 를 만들어야 합니다 `/mlInstance` . 성공적인 응답은 다음 API 호출에서 사용되는 고유 식별자(`id`)를 포함하여 새로 만든 MLIninstance의 세부 정보가 포함된 페이로드를 반환합니다.
+새로 만든 사용자 `engineID`를 사용하여 [종단점에 POST을 요청하여 MLIstice](../api/mlinstances.md#create-an-mlinstance) 를 `/mlInstance` 만들어야 합니다. 성공적인 응답은 다음 API 호출에서 사용되는 고유 식별자(`id`)를 포함하여 새로 만든 MLIninstance의 세부 정보가 포함된 페이로드를 반환합니다.
 
 ### 실험 만들기 {#create-experiment}
 
-그런 다음 실험을 [만들어야 합니다](../api/experiments.md#create-an-experiment). 실험을 만들려면 MLIerence 고유 식별자(`id`)를 가지고 종단점에 POST 요청을 해야 `/experiment` 합니다. 성공적인 응답은 다음 API 호출에서 사용되는 고유 식별자(`id`)를 포함하여 새로 만든 Experiment의 세부 정보가 포함된 페이로드를 반환합니다.
+그런 다음 실험을 [만들어야 합니다](../api/experiments.md#create-an-experiment). 실험을 만들려면 MLIerase 고유 식별자(`id`)를 가지고 종단점에 POST 요청을 해야 `/experiment` 합니다. 성공적인 응답은 다음 API 호출에서 사용되는 고유 식별자(`id`)를 포함하여 새로 만든 Experiment의 세부 정보가 포함된 페이로드를 반환합니다.
 
 ### 실험 실행 피쳐 파이프라인 작업 지정 {#specify-feature-pipeline-task}
 
-실험을 만든 후 실험 모드를 다음으로 변경해야 합니다 `featurePipeline`. 모드를 변경하려면 피쳐 파이프라인 실험 실행을 지정하기 위해 본문과 함께 추가 POST [`experiments/{EXPERIMENT_ID}/runs`](../api/experiments.md#experiment-training-scoring) 를 `EXPERIMENT_ID` 만들고 본문 `{ "mode":"featurePipeline"}` 에서 피쳐 파이프라인 실행을 지정합니다.
+실험을 만든 후 실험 모드를 다음으로 변경해야 합니다 `featurePipeline`. 모드를 변경하려면, 사용자 [`experiments/{EXPERIMENT_ID}/runs`](../api/experiments.md#experiment-training-scoring) 와 본문 `EXPERIMENT_ID` 에서 전송할 추가 POST을 만들어 피쳐 파이프라인 실험 실행 `{ "mode":"featurePipeline"}` 을 지정합니다.
 
-완료되면 실험 상태를 `/experiments/{EXPERIMENT_ID}` 검색하기 위해 GET 요청 [](../api/experiments.md#retrieve-specific) 을 수행하고 실험 상태가 완료될 때까지 기다립니다.
+완료되면 실험 상태 `/experiments/{EXPERIMENT_ID}` 를 [](../api/experiments.md#retrieve-specific) 검색하기 위해 GET을 요청하고 실험 상태가 완료될 때까지 기다립니다.
 
 ### 실험 실행 교육 작업 지정 {#training}
 
-그런 다음 교육 실행 작업을 [지정해야 합니다](../api/experiments.md#experiment-training-scoring). 교육 매개 변수를 포함하는 일련의 작업 `experiments/{EXPERIMENT_ID}/runs` 을 보낼 수 있도록 POST를 만들고 본문에 `train` 교육 모드를 설정할 수 있도록 합니다. 성공적인 응답은 요청된 실험들의 세부 정보가 포함된 페이로드를 반환합니다.
+그런 다음 교육 실행 작업을 [지정해야 합니다](../api/experiments.md#experiment-training-scoring). 교육 매개 변수를 포함하는 일련의 작업 `experiments/{EXPERIMENT_ID}/runs` 을 보낼 수 있도록 POST을 만들고 본문에 `train` 교육 매개 변수를 설정할 수 있습니다. 성공적인 응답은 요청된 실험들의 세부 정보가 포함된 페이로드를 반환합니다.
 
-완료되면 실험 상태를 `/experiments/{EXPERIMENT_ID}` 검색하기 위해 GET 요청 [](../api/experiments.md#retrieve-specific) 을 수행하고 실험 상태가 완료될 때까지 기다립니다.
+완료되면 실험 상태 `/experiments/{EXPERIMENT_ID}` 를 [](../api/experiments.md#retrieve-specific) 검색하기 위해 GET을 요청하고 실험 상태가 완료될 때까지 기다립니다.
 
 ### 실험 실행 점수 지정 작업 {#scoring}
 
 >[!NOTE]
 > 이 단계를 완료하려면 Experiment와 연결된 하나 이상의 성공적인 교육 실행이 있어야 합니다.
 
-성공적인 교육 실행 후 점수 지정 실행 [작업을 지정해야 합니다](../api/experiments.md#experiment-training-scoring). POST를 만들고 본문에 속성 `experiments/{EXPERIMENT_ID}/runs` 을 &quot;score&quot;로 `mode` 설정합니다. 그러면 점수 지정 실험 실행이 시작됩니다.
+성공적인 교육 실행 후 점수 지정 실행 [작업을 지정해야 합니다](../api/experiments.md#experiment-training-scoring). POST을 만들고 본문 `experiments/{EXPERIMENT_ID}/runs` 에서 속성을 &quot;score&quot;로 `mode` 설정합니다. 그러면 점수 지정 실험 실행이 시작됩니다.
 
-완료되면 실험 상태를 `/experiments/{EXPERIMENT_ID}` 검색하기 위해 GET 요청 [](../api/experiments.md#retrieve-specific) 을 수행하고 실험 상태가 완료될 때까지 기다립니다.
+완료되면 실험 상태 `/experiments/{EXPERIMENT_ID}` 를 [](../api/experiments.md#retrieve-specific) 검색하기 위해 GET을 요청하고 실험 상태가 완료될 때까지 기다립니다.
 
 점수 지정이 완료되면 기능 파이프라인이 작동되어야 합니다.
 
