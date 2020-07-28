@@ -43,7 +43,7 @@ API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
-페이로드(POST, PUT, PATCH)가 포함된 모든 요청에는 추가 미디어 유형 헤더가 필요합니다.
+페이로드(POST, PUT, PATCH)이 포함된 모든 요청에는 추가 미디어 유형 헤더가 필요합니다.
 
 - 컨텐츠 유형: `application/json`
 
@@ -265,7 +265,7 @@ curl -X POST \
 
 ## 대상 데이터 세트 만들기
 
-페이로드 내의 대상 스키마의 ID를 제공하여 [카탈로그 서비스 API에](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)대한 POST 요청을 수행하여 대상 데이터 집합을 만들 수 있습니다.
+페이로드 내의 대상 스키마의 ID를 제공하여 [카탈로그 서비스 API에](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)POST 요청을 수행하여 대상 데이터 집합을 만들 수 있습니다.
 
 **API 형식**
 
@@ -374,7 +374,7 @@ curl -X POST \
 - [원본 연결 ID](#source)
 - [Target 연결 ID](#target)
 
-데이터 프롤은 소스에서 데이터를 예약하고 수집합니다. 페이로드 내에 이전에 언급된 값을 제공하는 동안 POST 요청을 수행하여 데이터 흐름을 만들 수 있습니다.
+데이터 프롤은 소스에서 데이터를 예약하고 수집합니다. 페이로드 내에 이전에 언급한 값을 제공하는 동안 POST 요청을 수행하여 데이터 흐름을 만들 수 있습니다.
 
 **API 형식**
 
