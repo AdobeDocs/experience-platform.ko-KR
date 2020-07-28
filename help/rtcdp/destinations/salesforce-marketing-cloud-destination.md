@@ -1,8 +1,8 @@
 ---
 title: Salesforce Marketing Cloud
 seo-title: Salesforce Marketing Cloud
-description: Salesforce Marketing Cloud는 방문자와 고객이 자신의 경험을 개인화할 수 있도록 여정을 구축하고 사용자 정의할 수 있도록 이전에 ExactTarget으로 알려진 디지털 마케팅 패키지입니다.
-seo-description: Salesforce Marketing Cloud는 방문자와 고객이 자신의 경험을 개인화할 수 있도록 여정을 구축하고 사용자 정의할 수 있도록 이전에 ExactTarget으로 알려진 디지털 마케팅 패키지입니다.
+description: Salesforce Marketing Cloud은 방문자와 고객이 자신의 경험을 개인화할 수 있도록 여정 경로를 구축하고 사용자 정의할 수 있도록 이전에 ExactTarget으로 알려진 디지털 마케팅 패키지입니다.
+seo-description: Salesforce Marketing Cloud은 방문자와 고객이 자신의 경험을 개인화할 수 있도록 여정 경로를 구축하고 사용자 정의할 수 있도록 이전에 ExactTarget으로 알려진 디지털 마케팅 패키지입니다.
 translation-type: tm+mt
 source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
 workflow-type: tm+mt
@@ -49,4 +49,4 @@ SSH 키 **** 연결이 있는 SFTP의 경우 도메인, 포트, 사용자 이름
 
 ## 데이터 가져오기 설정 [!DNL Salesforce Marketing Cloud] {#import-data-into-salesforce}
 
-실시간 CDP를 Amazon S3 또는 SFTP 스토리지에 연결한 후 스토리지 위치에서 (으)로 데이터 가져오기를 설정해야 합니다 [!DNL Salesforce Marketing Cloud]. 이를 수행하는 방법을 알아보려면 [의 파일에서 Marketing](https://help.salesforce.com/articleView?id=mc_es_import_subscribers_from_file.htm&amp;type=5) Cloud로 구독자 가져오기를 참조하십시오 [!DNL Salesforce Help Center].
+실시간 CDP를 Amazon S3 또는 SFTP 스토리지에 연결한 후 스토리지 위치에서 (으)로 데이터 가져오기를 설정해야 합니다 [!DNL Salesforce Marketing Cloud]. 이 작업을 수행하는 방법에 대한 자세한 내용은 [의 파일에서 Marketing Cloud으로 구독자](https://help.salesforce.com/articleView?id=mc_es_import_subscribers_from_file.htm&amp;type=5) 가져오기를 참조하십시오 [!DNL Salesforce Help Center].
