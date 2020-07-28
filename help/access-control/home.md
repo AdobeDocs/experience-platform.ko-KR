@@ -14,11 +14,11 @@ ht-degree: 3%
 
 # 액세스 제어 개요
 
-에 대한 액세스 제어 [!DNL Experience Platform] 는 [Adobe Admin Console을 통해 제공됩니다](https://adminconsole.adobe.com). 이 기능은 사용 권한 및 샌드박스 [!DNL Admin Console]와 사용자를 연결하는 제품 프로필을 활용합니다.
+액세스 제어 [!DNL Experience Platform] 는 [Adobe Admin Console을 통해 제공됩니다](https://adminconsole.adobe.com). 이 기능은 사용 권한 및 샌드박스 [!DNL Admin Console]와 사용자를 연결하는 제품 프로필을 활용합니다.
 
 ## 액세스 제어 계층 구조 및 워크플로우
 
-에 대한 액세스 제어를 구성하려면 [!DNL Experience Platform]제품 통합이 있는 조직에 대한 관리자 권한이 있어야 [!DNL Experience Platform] 합니다. 권한을 부여하거나 해지하는 최소 역할은 **[!UICONTROL 제품 프로필 관리자입니다]**. 권한을 관리할 수 있는 다른 관리자 역할은 **[!UICONTROL 제품 관리자]** (제품 내의 모든 프로필을 관리할 수 있음)와 **[!UICONTROL 시스템 관리자]** (제한 없음)입니다. 자세한 내용은 관리 역할에 대한 Adobe [도움말](https://helpx.adobe.com/enterprise/using/admin-roles.html) 센터 문서를 참조하십시오.
+에 대한 액세스 제어를 구성하려면 [!DNL Experience Platform]제품 통합이 있는 조직에 대한 관리자 권한이 있어야 [!DNL Experience Platform] 합니다. 권한을 부여하거나 해지하는 최소 역할은 **[!UICONTROL 제품 프로필 관리자입니다]**. 권한을 관리할 수 있는 다른 관리자 역할은 **[!UICONTROL 제품 관리자]** (제품 내의 모든 프로필을 관리할 수 있음)와 **[!UICONTROL 시스템 관리자]** (제한 없음)입니다. 자세한 내용은 [관리자 역할에](https://helpx.adobe.com/enterprise/using/admin-roles.html) 대한 Adobe Help Center 문서를 참조하십시오.
 
 >[!NOTE]
 >
@@ -27,7 +27,7 @@ ht-degree: 3%
 액세스 권한을 획득하고 할당하는 고급 작업 과정은 다음과 같이 요약할 수 있습니다.
 
 - Adobe Experience Platform에 가입하면 등록 양식에 지정된 관리자에게 이메일이 전송됩니다.
-- 관리자는 [Adobe Admin Console에](#adobe-admin-console) 로그인하여 개요 페이지의 제품 목록에서 **Adobe Experience Platform** 를 선택합니다.
+- 관리자는 [Adobe Admin Console](#adobe-admin-console) 에 로그인하여 개요 페이지의 제품 목록에서 **Adobe Experience Platform** 를 선택합니다.
 - 관리자는 기본 [제품 프로필을](#product-profiles) 보거나 필요에 따라 새 고객 제품 프로필을 만들 수 있습니다.
 - 관리자는 기존 제품 프로필에 대한 권한 및 사용자를 편집할 수 있습니다.
 - 제품 프로필을 만들거나 편집할 때 관리자는 **[!UICONTROL 사용자]** 탭을 사용하여 프로필에 사용자를 추가하고 권한 탭에 액세스하여 이러한 사용자(&quot;[!UICONTROL 데이터 세트]읽기[!UICONTROL &quot; 또는 &quot;스키마]관리 **[!UICONTROL &quot;와 같은)에게]** 권한탭에 액세스하여 권한을 부여합니다. 마찬가지로 관리자는 동일한 권한 탭을 사용하여 샌드박스에 대한 액세스 권한을 할당할 수 있습니다.
@@ -39,11 +39,11 @@ API에 대한 모든 [!DNL Experience Platform] 호출은 권한에 대해 유�
 
 ## Adobe Admin Console
 
-Adobe Admin Console은 조직의 Adobe 제품 권한 및 이용 권한을 중앙에서 관리할 수 있는 도구입니다. 콘솔을 통해 &quot;데이터 세트 [!DNL Platform] 관리&quot;, &quot;데이터 세트[!UICONTROL 보기&quot;, &quot;]프로필[!UICONTROL 관리&quot;와 같은 다양한 기능에 대한 액세스 권한을 사용자 그룹에 부여할 수]있습니다.
+Adobe Admin Console은 Adobe 제품 이용 권한 및 조직의 이용 권한을 중앙에서 관리할 수 있습니다. 콘솔을 통해 &quot;데이터 세트 [!DNL Platform] 관리&quot;, &quot;데이터 세트[!UICONTROL 보기&quot;, &quot;]프로필[!UICONTROL 관리&quot;와 같은 다양한 기능에 대한 액세스 권한을 사용자 그룹에 부여할 수]있습니다.
 
 ### 제품 프로필
 
-에서 [!DNL Admin Console]권한은 **[!UICONTROL 제품 프로필]**&#x200B;사용을 통해 사용자에게 할당됩니다. 제품 프로필을 사용하면 한 명 또는 여러 사용자에게 권한을 부여할 수 있으며 제품 프로필을 통해 사용자에게 할당된 샌드박스 범위에 대한 액세스 권한을 포함할 수 있습니다. 사용자를 조직에 속한 하나 이상의 제품 프로필에 할당할 수 있습니다.
+에서 [!DNL Admin Console]권한은 **[!UICONTROL 제품 프로필]**&#x200B;사용을 통해 사용자에게 할당됩니다. 제품 프로필을 사용하면 한 명 또는 여러 사용자에게 권한을 부여하고 제품 프로필을 통해 사용자에게 할당된 샌드박스 범위에 대한 액세스 권한을 포함할 수 있습니다. 사용자를 조직에 속한 하나 이상의 제품 프로필에 할당할 수 있습니다.
 
 ### 기본 제품 프로필
 
