@@ -47,7 +47,7 @@ API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
-페이로드(POST, PUT, PATCH)가 포함된 모든 요청에는 추가 미디어 유형 헤더가 필요합니다.
+페이로드(POST, PUT, PATCH)이 포함된 모든 요청에는 추가 미디어 유형 헤더가 필요합니다.
 
 * 컨텐츠 유형: `application/json`
 
@@ -113,7 +113,7 @@ curl -X GET \
 ]
 ```
 
-## 테이블 구조 검사
+## Inspect 테이블 구조
 
 결제 시스템에서 테이블 구조를 검사하려면 테이블의 경로를 쿼리 매개 변수로 지정하는 동안 GET 요청을 수행합니다.
 
