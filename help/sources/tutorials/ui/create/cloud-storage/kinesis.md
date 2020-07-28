@@ -48,11 +48,11 @@ Adobe Experience Platform의 소스 커넥터는 외부에서 가져온 데이�
 
 Adobe Experience Platform에 [로그인한](https://platform.adobe.com) 다음 왼쪽 탐색 **[!UICONTROL 모음에서]** 소스 *를 선택하여* 소스 작업 영역에액세스합니다. [ *카탈로그* ] 탭에는 연결할 수 있는 다양한 소스가 표시됩니다 [!DNL Platform]. 각 소스에는 연관된 기존 계정 수가 표시됩니다.
 
-*[!UICONTROL 클라우드 스토리지]* 카테고리 아래에서 **[!UICONTROL Amazon Kinesis를]** 선택하고 + 아이콘(+) **을 클릭하여 새** [!DNL Kinesis] 커넥터를 만듭니다.
+*[!UICONTROL 클라우드 스토리지]* 카테고리 아래에서 **[!UICONTROL Amazon Kinesis]** 을 선택하고 + 아이콘(+) **을 클릭하여 새** [!DNL Kinesis] 커넥터를 만듭니다.
 
 ![](../../../../images/tutorials/create/kinesis/catalog.png)
 
-Amazon *[!UICONTROL Kinesis에]* 연결 대화 상자가 나타납니다. 이 페이지에서 새 자격 증명이나 기존 자격 증명을 사용할 수 있습니다.
+Amazon Kinesis *[!UICONTROL 에 연결]* 대화 상자가 나타납니다. 이 페이지에서 새 자격 증명이나 기존 자격 증명을 사용할 수 있습니다.
 
 ### 새 계정
 
