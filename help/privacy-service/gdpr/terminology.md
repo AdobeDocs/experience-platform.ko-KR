@@ -74,7 +74,7 @@ __약정 그룹:__ 지배적인 사업과 그 통제된 목표들.
 
 ## I
 
-__Identity Management 서비스(IMS):__ Adobe ID 사용자 인증 및 Adobe 리소스에 대한 인증을 위한 Adobe의 Federated ID 및 OAuth 2.0 구현 해당 사용자가 Adobe 서비스에 로그인하고 액세스할 수 있도록 하려면 IMS와 Adobe 애플리케이션 또는 서비스를 통합해야 합니다. Users can log in directly with Renga (the Adobe identity services provider), or log in through a trusted third party authentication domain (such as [!DNL Google], [!DNL Facebook], or a corporate/organization LDAP).
+__Identity Management 서비스(IMS):__ Adobe ID 사용자 인증 및 Adobe 리소스에 대한 인증을 위한 Federated ID 및 OAuth 2.0의 Adobe 구현 해당 사용자가 Adobe 서비스에 로그인하고 액세스할 수 있도록 하려면 IMS와 Adobe 애플리케이션 또는 서비스를 통합해야 합니다. Users can log in directly with Renga (the Adobe identity services provider), or log in through a trusted third party authentication domain (such as [!DNL Google], [!DNL Facebook], or a corporate/organization LDAP).
 
 __IMS 조직 ID:__ 사용자 로그인이 필요하지 않은 서비스 간 인증을 위한 Adobe 인증 토큰을 참조합니다. IMS 클라이언트에 발급되고 연관된 사용자가 없습니다. IMS 클라이언트는 서비스 간 백 채널 요청을 승인하기 위해 서비스 토큰이 필요합니다. (&quot;시스템 토큰&quot;이라는 용어는 종종 서비스 토큰을 의미하는 데 사용됩니다.)
 
