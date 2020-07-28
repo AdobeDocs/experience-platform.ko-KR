@@ -4,6 +4,9 @@ audience: user
 user-guide-title: Adobe Experience Platform 쿼리 서비스 도움말
 translation-type: tm+mt
 source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
+workflow-type: tm+mt
+source-wordcount: '134'
+ht-degree: 5%
 
 ---
 
@@ -24,8 +27,8 @@ source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
    - [쿼리 편집기 사용 안내서](ui/user-guide.md)
 - 쿼리 만들기 {#creating-queries}
    - [Adobe 정의 함수](creating-queries/using-adobe-defined-functions.md)
-   - [쿼리 개요 만들기](creating-queries/creating-queries.md)
-   - [데이터 세트와 테이블 및 스키마 비교](creating-queries/datasets-and-tables.md)
+   - [쿼리 만들기 개요](creating-queries/creating-queries.md)
+   - [데이터 세트와 테이블 및 스키마](creating-queries/datasets-and-tables.md)
    - [쿼리 실행에 대한 일반 지침](creating-queries/writing-queries.md)
    - [ExperienceEvent 쿼리](creating-queries/experience-event-queries.md)
    - [데이터 집합 참여](creating-queries/joining-datasets.md)
@@ -44,13 +47,13 @@ source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
    - [Adobe Target](sample-queries/adobe-target.md)
 - 클라이언트를 쿼리 서비스에 연결 {#clients}
    - [클라이언트 연결 개요](clients/overview.md)
-   - [Aqua Data Studio](clients/aqua-data-studio.md)
+   - [아쿠아 데이터 스튜디오](clients/aqua-data-studio.md)
    - [보기](clients/looker.md)
-   - [Postico(Mac)](clients/postico.md)
+   - [포스티코(Mac)](clients/postico.md)
    - [Power BI(PC)](clients/power-bi.md)
    - [PSQL](clients/psql.md)
-   - [RsStudio](clients/rstudio.md)
+   - [RStudio](clients/rstudio.md)
    - [타블로](clients/tableau.md)
 - [문제 해결 가이드](troubleshooting-guide.md)
 - [API 참조](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/qs-api.yaml)
-- [플랫폼 릴리스 노트](https://www.adobe.com/go/platform-release-notes-en)
+- [Platform 릴리스 노트](https://www.adobe.com/go/platform-release-notes-en)
