@@ -6,7 +6,7 @@ topic: overview
 translation-type: tm+mt
 source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '1606'
 ht-degree: 0%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 0%
 
 # XDM 시스템 개요
 
-표준화와 상호 운용성은 Adobe Experience Platform의 주요 개념입니다. [!DNL Experience Data Model] (XDM)은 Adobe를 기반으로 고객 경험 데이터를 표준화하고 고객 경험 관리를 위한 스키마를 정의하는 것입니다.
+표준화와 상호 운용성은 Adobe Experience Platform의 주요 개념입니다. [!DNL Experience Data Model] (XDM)은 Adobe을 기반으로 고객 경험 데이터를 표준화하고 고객 경험 관리를 위한 스키마를 정의하는 것입니다.
 
 XDM은 디지털 경험의 강력함을 향상시키도록 고안된 공개적으로 문서화된 사양입니다. 서비스와 통신하는 데 사용할 응용 프로그램에 대한 일반적인 구조와 정의를 제공합니다 [!DNL Platform] . XDM 표준을 준수하여 모든 고객 경험 데이터를 보다 빠르고 통합된 방식으로 통찰력을 전달할 수 있는 일반적인 표현으로 통합할 수 있습니다. 고객 행동을 통해 유용한 인사이트를 얻고, 세그먼트를 통해 고객 고객을 정의하고, 개인화를 위해 고객 속성을 표현할 수 있습니다.
 
-XDM은 Adobe Experience Cloud 기반의 기본 프레임워크로, 정확한 타이밍에 적합한 [!DNL Experience Platform]고객에게 올바른 메시지를 전달할 수 있습니다. XDM 시스템 [!DNL Experience Platform] 이 구축된 방법론 **은**&#x200B;서비스 [!DNL Experience Data Model] 에서 사용할 수 있도록 스키마 [!DNL Platform] 운영을수행합니다.
+XDM은 Adobe Experience Cloud이 제공하는 기본 프레임워크로, 정확한 타이밍에 적합한 [!DNL Experience Platform]채널을 통해 올바른 고객에게 올바른 메시지를 전달할 수 있습니다. XDM 시스템 [!DNL Experience Platform] 이 구축된 방법론 **은**&#x200B;서비스 [!DNL Experience Data Model] 에서 사용할 수 있도록 스키마 [!DNL Platform] 운영을수행합니다.
 
 이 문서에서는 XDM 시스템의 역할에 대한 개요를 제공합니다 [!DNL Experience Platform].
 
@@ -32,7 +32,7 @@ XDM은 Adobe Experience Cloud 기반의 기본 프레임워크로, 정확한 타
 
 ### [!DNL Schema Registry] 및 [!DNL Schema Library]
 
-이 **[!DNL Schema Registry]** 는 Adobe Experience Platform에서 모든 스키마 관련 리소스를 보고 관리할 수 있는 사용자 인터페이스 및 RESTful API를 제공합니다 **[!DNL Schema Library]**. 여기에는 Adobe에서 제공하는 업계 표준 리소스뿐만 아니라 애플리케이션을 사용하는 파트너 및 공급업체의 [!DNL Schema Library] [!DNL Experience Platform] 리소스가 포함되어 있습니다. 스키마 레지스트리 UI 및 API를 사용하여 조직 고유의 새 스키마 및 리소스를 만들고 관리할 수도 있습니다.
+이 **[!DNL Schema Registry]** 는 Adobe Experience Platform에서 모든 스키마 관련 리소스를 보고 관리할 수 있는 사용자 인터페이스 및 RESTful API를 제공합니다 **[!DNL Schema Library]**. 여기에는 Adobe [!DNL Schema Library] [!DNL Experience Platform] 에서 제공하는 업계 표준 리소스뿐만 아니라 애플리케이션을 사용하는 파트너 및 공급업체의 리소스도 포함되어 있습니다. 스키마 레지스트리 UI 및 API를 사용하여 조직 고유의 새 스키마 및 리소스를 만들고 관리할 수도 있습니다.
 
 에서 제공되는 주요 작업에 대한 포괄적인 지침은 스키마 레지스트리 개발자 안내서 [!DNL Schema Registry]를 [참조하십시오](api/getting-started.md).
 
@@ -43,7 +43,7 @@ XDM은 Adobe Experience Cloud 기반의 기본 프레임워크로, 정확한 타
 * **데이터**&#x200B;기록: 제목 속성에 대한 정보를 제공합니다. 대상은 조직 또는 개인일 수 있습니다.
 * **시계열 데이터**: 작업을 직접 또는 간접적으로 레코드 제목에 의해 수행한 시점에 시스템의 스냅샷을 제공합니다.
 
-모든 XDM 스키마는 레코드 또는 시간 시리즈로 분류할 수 있는 데이터를 설명합니다. 스키마의 데이터 동작은 스키마의 **클래스에**&#x200B;의해 정의됩니다. 이 클래스는 스키마를 처음 만들 때 스키마에 할당됩니다. XDM 클래스는 특정 데이터 동작을 나타내려면 스키마가 포함해야 하는 속성의 가장 작은 수를 설명합니다.
+모든 XDM 스키마는 레코드 또는 시간 시리즈로 분류할 수 있는 데이터를 설명합니다. 스키마의 데이터 동작은 스키마의 **클래스에**&#x200B;의해 정의됩니다. 이 클래스는 스키마를 처음 만들 때 스키마에 할당됩니다. XDM 클래스는 특정 데이터 동작을 나타내려면 스키마에서 포함해야 하는 속성의 가장 작은 수를 설명합니다.
 
 클래스 내에서 고유한 클래스를 정의할 수 있지만, 기본 클래스 [!DNL Schema Registry]와 레코드 및 시간 시리즈 데이터 **[!DNL XDM Individual Profile]** **[!DNL XDM ExperienceEvent]** 에 각각 사용하는 것이 좋습니다. 이러한 클래스는 아래에 자세히 설명되어 있습니다.
 
@@ -97,7 +97,7 @@ Adobe Experience Platform [!DNL Query Service] 를 사용하면 표준 SQL을 �
 
 데이터 [!DNL XDM Individual Profile] 와 [!DNL XDM ExperienceEvent] 데이터가 수집 및 관리되므로 [!DNL Catalog]데이터 사용 [!DNL Real-time Customer Profile] 이 활성화된 데이터를 인제스트하기 시작합니다. 수집되는 인터랙션과 세부 사항이 많을수록 더욱 강력한 개별 프로필이 만들어집니다.
 
-[!DNL XDM Individual Profile] 데이터는 모든 채널 또는 Adobe 솔루션 통합 전반에서 동작을 알려주고 강화시켜줍니다. 그리고 행동 및 상호 작용 데이터의 풍부하고 앞선 데이터와 결합하여 이 데이터를 머신 러닝에 활용할 수 있습니다. 또한 [!DNL Real-time Customer Profile] API를 사용하여 타사 솔루션, CRM 및 독점 솔루션의 기능을 강화할 수 있습니다.
+[!DNL XDM Individual Profile] 데이터는 모든 채널 또는 Adobe 솔루션 통합 전반에서 동작을 알려주고 강화하며, 행동 및 상호 작용 데이터의 풍부한 내역을 연결하는 경우 이 데이터를 시스템 학습에 활용합니다. 또한 [!DNL Real-time Customer Profile] API를 사용하여 타사 솔루션, CRM 및 독점 솔루션의 기능을 강화할 수 있습니다.
 
 자세한 내용은 [실시간 고객 프로필 개요를](../profile/home.md) 참조하십시오.
 
