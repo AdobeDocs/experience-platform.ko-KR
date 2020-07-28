@@ -15,7 +15,7 @@ ht-degree: 3%
 
 * [지능형 서비스 개요](home.md)
 * [지능형 서비스에서 사용할 데이터 준비](data-preparation.md)
-* 기여도 AI {#attribution-ai}
+* Attribution AI {#attribution-ai}
    * [개요](attribution-ai/overview.md)
    * [Attribution AI 시작하기](attribution-ai/getting-started.md)
    * [사용자 인터페이스 가이드](attribution-ai/user-guide.md)
