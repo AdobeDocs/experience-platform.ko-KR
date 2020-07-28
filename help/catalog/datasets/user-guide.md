@@ -121,7 +121,7 @@ DULE(Data Usage Lawring and Enforcement)는 데이터 거버넌스의 핵심 메
 
 >[!NOTE]
 >
->Adobe 응용 프로그램 및 서비스(예: Adobe Analytics, Adobe Audience Manager 또는)에서 만들고 사용하는 데이터 세트는 삭제할 수 [!DNL Decisioning Service]없습니다.
+>Adobe 애플리케이션 및 서비스(예: Adobe Analytics, Adobe Audience Manager 또는)에서 만들고 사용하는 데이터 세트를 삭제할 [!DNL Decisioning Service]수 없습니다.
 
 ![](../images/datasets/user-guide/delete_dataset.png)
 
