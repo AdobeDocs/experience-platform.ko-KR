@@ -45,7 +45,7 @@ API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 
 >
 >의 샌드박스에 대한 자세한 내용 [!DNL Platform]은 [샌드박스 개요 설명서를 참조하십시오](../../sandboxes/home.md).
 
-페이로드(POST, PUT, PATCH)가 포함된 모든 요청에는 추가 헤더가 필요합니다.
+페이로드(POST, PUT, PATCH)이 포함된 모든 요청에는 추가 헤더가 필요합니다.
 
 - 컨텐츠 유형: `application/json`
 
