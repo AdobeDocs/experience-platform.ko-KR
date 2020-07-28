@@ -25,7 +25,7 @@ Adobe Experience Platform의 기존 기능 업데이트:
 
 ## [!DNL Data Ingestion] {#ingestion}
 
-Adobe Experience Platform은 데이터의 모든 유형과 지연을 인제스트하는 풍부한 기능을 제공합니다. Adobe Experience Platform [!DNL Data Ingestion] 는 배치 API, 스트리밍 API, 기본 Adobe 커넥터, 데이터 통합 파트너 또는 Adobe Experience Platform UI를 비롯한 데이터 인제스트를 위한 다양한 대체 요소를 제공합니다.
+Adobe Experience Platform은 데이터의 모든 유형과 지연을 인제스트하는 풍부한 기능을 제공합니다. Adobe Experience Platform [!DNL Data Ingestion] 는 배치 API, 스트리밍 API, 기본 Adobe 커넥터, 데이터 통합 파트너 또는 Adobe Experience Platform UI를 비롯한 데이터 인제스트를 위한 여러 대체 요소를 제공합니다.
 
 **새로운 기능**
 
@@ -37,7 +37,7 @@ Adobe Experience Platform은 데이터의 모든 유형과 지연을 인제스�
 
 ## [!DNL Data Science Workspace] {#dsw}
 
-Adobe Experience Platform [!DNL Data Science Workspace] 는 완전 관리되는 서비스로서, Machine Learning Models를 구축 및 운영함으로써 데이터 과학자들이 Adobe 솔루션 및 타사 시스템에서 얻은 데이터와 컨텐츠에서 얻은 인사이트를 원활하게 생성할 수 [!DNL Experience Platform] 있습니다. [!DNL Data Science Workspace] XDM 데이터 [!DNL Platform] 의 탐색 및 준비 등 종합적인 데이터 과학 라이프사이클과 긴밀하게 통합되어 있으며, CDM 데이터 개발 및 운영 체제에 따라 CMS(Machine Learning Insights)를 통해 자동으로 풍부한 기능을 제공합니다 [!DNL Real-time Customer Profile] .
+Adobe Experience Platform [!DNL Data Science Workspace] 는 완전 관리되는 서비스로서, 머신 러닝 모델을 구축 및 [!DNL Experience Platform] 운영함으로써 데이터 과학자들이 Adobe 솔루션 및 타사 시스템에서 데이터와 컨텐츠에 대한 인사이트를 원활하게 생성할 수 있습니다. [!DNL Data Science Workspace] XDM 데이터 [!DNL Platform] 의 탐색 및 준비 등 종합적인 데이터 과학 라이프사이클과 긴밀하게 통합되어 있으며, CDM 데이터 개발 및 운영 체제에 따라 CMS(Machine Learning Insights)를 통해 자동으로 풍부한 기능을 제공합니다 [!DNL Real-time Customer Profile] .
 
 **새로운 기능**
 
@@ -66,7 +66,7 @@ You can use [!DNL Query Service] to build data analysis ecosystems, creating a p
 | 기능 | 설명 |
 | -----------| ---------- |
 | 향상된 기능 [!DNL Query Editor] | 쿼리를 저장하고 나중에 작업할 수 있도록 해주는 저장 기능을 추가했습니다. 조직의 사용자가 저장한 쿼리를 표시하는 Adobe Experience Platform의 [!DNL Query Service] 사용자 인터페이스에 &quot;검색&quot; 탭을 추가했습니다. 보고 있는 쿼리에 대한 유용한 메타데이터를 표시하는 &quot;쿼리 세부 사항&quot; 패널을 구현했습니다. |
-| 새로운 속성 기능 | 만료 매개 변수를 사용하여 채널 속성을 쿼리하기 [!DNL Query Service] 위해 Adobe에서 정의한 함수입니다. |
+| 새로운 속성 기능 | 만료 매개 변수를 사용하여 채널 속성에 대한 쿼리 [!DNL Query Service] 에 Adobe이 정의된 함수입니다. |
 | SQL 구문 개선 사항 | iLike 구문을 지원합니다. |
 | 정의된 XDM 스키마를 사용하여 데이터 집합 생성 | 대상 스키마를 지정할 수 있는 CTAS(Create Table as Select) 쿼리에 새 절을 추가했습니다. |
 
