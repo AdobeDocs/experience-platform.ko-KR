@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Google 클라우드 스토리지 커넥터
 
-Adobe Experience Platform은 AWS와 같은 클라우드 제공업체를 위한 기본 연결 [!DNL Google Cloud Platform]을 제공하므로 이러한 시스템에서 데이터를 가져올 수 [!DNL Azure]있습니다.
+Adobe Experience Platform은 AWS, [!DNL Google Cloud Platform]및 [!DNL Azure]와 같은 클라우드 제공업체를 위한 기본 연결을 제공하므로 이러한 시스템에서 데이터를 가져올 수 있습니다.
 
 클라우드 스토리지 소스는 다운로드, 형식 지정 또는 업로드할 필요 [!DNL Platform] 없이 고유한 데이터를 가져올 수 있습니다. 인제스트된 데이터는 XDM JSON, XDM 쪽모이 세공식 또는 구분 기호로 형식을 지정할 수 있습니다. 프로세스의 모든 단계는 소스 워크플로우에 통합됩니다. [!DNL Platform] 배치에서 데이터를 가져올 수 [!DNL Google Cloud Storage] 있습니다.
 
