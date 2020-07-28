@@ -49,11 +49,11 @@ Adobe Experience Platform의 소스 커넥터는 외부에서 가져온 데이�
 
 Adobe Experience Platform에 <a href="https://platform.adobe.com" target="_blank">로그인한</a> 다음 왼쪽 탐색 **[!UICONTROL 모음에서]** 소스 *[!UICONTROL 를 선택하여]* 소스 작업 영역에액세스합니다. [ *[!UICONTROL 카탈로그]* ] 화면에는 인바운드 기본 연결을 만들 수 있는 다양한 소스가 표시되며, 각 소스에는 연관된 기존 기본 연결의 수가 표시됩니다.
 
-[ *[!UICONTROL 데이터베이스]* ] 카테고리 아래에서 **[!UICONTROL Amazon Redshift]** 를 선택하여 화면의 오른쪽에 정보 막대를 표시합니다. 정보 표시줄에는 선택한 소스에 대한 간단한 설명과 소스와 연결하거나 설명서를 보는 옵션이 제공됩니다. 새 인바운드 기본 연결을 만들려면 **[!UICONTROL Connect 소스를 선택합니다]**.
+[ *[!UICONTROL 데이터베이스]* ] 카테고리 아래에서 **[!UICONTROL Amazon]** Redshift를 선택하여 화면 오른쪽에 정보 막대를 표시합니다. 정보 표시줄에는 선택한 소스에 대한 간단한 설명과 소스와 연결하거나 설명서를 보는 옵션이 제공됩니다. 새 인바운드 기본 연결을 만들려면 **[!UICONTROL Connect 소스를 선택합니다]**.
 
 ![](../../../../images/tutorials/create/redshift/catalog.png)
 
-Amazon *[!UICONTROL Redshift에]* 연결 페이지가 나타납니다. 이 페이지에서 새 자격 증명이나 기존 자격 증명을 사용할 수 있습니다.
+[Amazon *[!UICONTROL Redshift에]* 연결] 페이지가 나타납니다. 이 페이지에서 새 자격 증명이나 기존 자격 증명을 사용할 수 있습니다.
 
 ### 새 계정
 
