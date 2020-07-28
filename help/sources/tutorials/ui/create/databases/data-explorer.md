@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: UI에서 Azure 데이터 탐색기 소스 커넥터 만들기
+title: UI에서 Azure Data Explorer 원본 커넥터 만들기
 topic: overview
 translation-type: tm+mt
 source-git-commit: 4f7d7e2bf255afe1588dbe7cfb2ec055f2dcbf75
@@ -39,10 +39,10 @@ Adobe Experience Platform의 소스 커넥터는 외부에서 가져온 데이�
 | `endpoint` | 서버의 [!DNL Data Explorer] 끝점입니다. |
 | `database` | 데이터베이스의 [!DNL Data Explorer] 이름입니다. |
 | `tenant` | 데이터베이스에 연결하는 데 사용되는 고유한 테넌트 ID입니다 [!DNL Data Explorer] . |
-| `servicePrincipalId` | 데이터 탐색기 데이터베이스에 연결하는 데 사용되는 고유 서비스 주체 ID. |
-| `servicePrincipalKey` | 데이터 탐색기 데이터베이스에 연결하는 데 사용되는 고유한 서비스 주체 키. |
+| `servicePrincipalId` | Data Explorer 데이터베이스에 연결하는 데 사용되는 고유 서비스 주체 ID. |
+| `servicePrincipalKey` | Data Explorer 데이터베이스에 연결하는 데 사용되는 고유한 서비스 주체 키. |
 
-시작하는 방법에 대한 자세한 내용은 [이 데이터 탐색기 문서를 참조하십시오](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/management/access-control/how-to-authenticate-with-aad).
+시작하는 방법에 대한 자세한 내용은 [이 Data Explorer 문서를 참조하십시오](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/management/access-control/how-to-authenticate-with-aad).
 
 ## 계정 [!DNL Azure Data Explorer] 연결
 
@@ -52,11 +52,11 @@ Adobe Experience Platform에 [로그인한](https://platform.adobe.com) 다음 �
 
 화면의 왼쪽에 있는 카탈로그에서 해당 범주를 선택할 수 있습니다. 또는 검색 옵션을 사용하여 작업할 특정 소스를 찾을 수 있습니다.
 
-[ *[!UICONTROL 데이터베이스]* ] 범주 아래에서 **[!UICONTROL Azure 데이터]** 탐색기 **를 선택하고 + 아이콘(+)** 을 클릭하여 새 데이터 탐색기 커넥터를 만듭니다.
+[ *[!UICONTROL 데이터베이스]* ] 범주 아래에서 **[!UICONTROL Azure Data Explorer]** 을 선택하고 + 아이콘(+) **을 클릭하여 새 Data Explorer 커넥터를 만듭니다** .
 
 ![카탈로그](../../../../images/tutorials/create/data-explorer/catalog.png)
 
-Azure *[!UICONTROL 데이터 탐색기에 연결]* 페이지가 나타납니다. 이 페이지에서 새 자격 증명이나 기존 자격 증명을 사용할 수 있습니다.
+Azure *[!UICONTROL 에 연결 Data Explorer]* 페이지가 나타납니다. 이 페이지에서 새 자격 증명이나 기존 자격 증명을 사용할 수 있습니다.
 
 ### 새 계정
 
