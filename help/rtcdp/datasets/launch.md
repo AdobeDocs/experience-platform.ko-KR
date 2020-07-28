@@ -1,8 +1,8 @@
 ---
-title: 자습서 Adobe Launch를 사용하여 웹 사이트 태그 구현
-seo-title: Adobe Launch를 사용하여 웹 사이트 태그 구현
-description: Adobe Launch를 사용하여 Adobe Experience Platform에서 웹 사이트 태그 구현
-seo-description: Adobe Launch를 사용하여 Adobe Experience Platform에서 웹 사이트 태그 구현
+title: 자습서 Adobe 시작을 사용하여 웹 사이트 태그 구현
+seo-title: Adobe 시작을 사용하여 웹 사이트 태그 구현
+description: Adobe 론치를 사용하여 Adobe Experience Platform에서 웹 사이트 태그 구현
+seo-description: Adobe 론치를 사용하여 Adobe Experience Platform에서 웹 사이트 태그 구현
 translation-type: tm+mt
 source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
 workflow-type: tm+mt
@@ -12,9 +12,9 @@ ht-degree: 8%
 ---
 
 
-# 자습서: Adobe Launch를 사용하여 웹 사이트 태그 구현
+# 자습서: Adobe 시작을 사용하여 웹 사이트 태그 구현
 
-이 자습서에서는 Adobe Launch를 사용하여 Adobe Experience Platform으로 데이터를 보내기 위해 웹 사이트 태그를 구현하는 방법을 설명합니다.
+이 자습서에서는 Adobe 시작을 사용하여 웹 사이트 태그를 구현하여 데이터를 Adobe Experience Platform으로 전송하는 방법을 설명합니다.
 
 ## 전제 조건
 
@@ -49,7 +49,7 @@ ht-degree: 8%
    지금 필요한 유일한 설정은 다음과 같습니다.
 
    * **구성 ID:** Adobe 담당자로부터 받은 구성 ID를 지정합니다.
-   * **Edge Domain:** Adobe 담당자로부터 받은 Edge 도메인을 지정합니다.
+   * **Edge Domain:** Adobe 담당자로부터 받은 에지 도메인을 지정합니다.
 
 1. 저장 **[!UICONTROL 을]** 클릭하고 다음 단계로 계속 진행합니다.
 
