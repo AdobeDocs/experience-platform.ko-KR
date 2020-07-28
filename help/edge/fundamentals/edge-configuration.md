@@ -18,7 +18,7 @@ Adobe Experience Platform 구성이 두 곳 [!DNL Web SDK] 으로 분할되어 �
 
 ## 에지 구성 ID 만들기
 
-Edge 구성 ID는 Adobe에서 Edge 구성 도구 [!DNL Launch] 를 사용하여 만들 수 있습니다. 이 도구를 사용하면 이러한 구성 내의 환경뿐만 아니라 Edge 구성을 모두 만들 수 있습니다.
+Edge 구성 ID는 Edge 구성 도구를 [!DNL Launch] 사용하여 Adobe에서 만들 수 있습니다. 이 도구를 사용하면 이러한 구성 내의 환경뿐만 아니라 Edge 구성을 모두 만들 수 있습니다.
 
 ![edge 구성 툴 탐색](../../assets/edge_configuration_nav.png)
 
@@ -98,13 +98,13 @@ Adobe Target을 구성하려면 클라이언트 코드를 제공해야 합니다
 
 [Adobe Target 환경을](https://docs.adobe.com/content/help/en/target/using/administer/hosts.html) 사용하면 모든 개발 단계를 통해 구현을 관리할 수 있습니다. 이 설정은 각 환경에서 사용할 환경을 지정합니다.
 
-Adobe에서는 이러한 설정을 각 `dev`, `stage`및 `prod` Edge 구성 환경에 대해 다르게 설정하여 간소화할 것을 권장합니다. 하지만 이미 [!UICONTROL Adobe Target 환경을] 정의한 경우 이러한 환경을 사용할 수 있습니다.
+Adobe에서는 작업을 단순하게 유지하기 위해 각 `dev`, `stage`및 `prod` edge 구성 환경에 대해 이 설정을 다르게 설정하는 것이 좋습니다. 하지만 이미 [!UICONTROL Adobe Target 환경을] 정의한 경우 이러한 환경을 사용할 수 있습니다.
 
 #### Adobe Audience Manager
 
 Adobe Audience Manager으로 데이터를 전송하는 데 필요한 모든 것은 이 섹션을 활성화하는 것입니다. 다른 설정은 선택 사항이지만 권장됩니다.
 
-![Adobe Audience Manage 설정 블록](../../assets/edge_configuration_aam.png)
+![Adobe 대상 관리 설정 블록](../../assets/edge_configuration_aam.png)
 
 ##### [!UICONTROL 쿠키 대상 사용]
 
