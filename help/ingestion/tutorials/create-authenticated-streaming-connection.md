@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # 인증된 스트리밍 연결 만들기
 
-인증된 데이터 수집을 사용하면 [!DNL Real-time Customer Profile] 및 [!DNL Identity]과 같은 Adobe Experience Platform 서비스를 통해 신뢰할 수 있는 소스에서 나오는 레코드와 신뢰할 수 없는 소스 간에 구별할 수 있습니다. PII(개인 식별 정보)를 전송하려는 클라이언트는 POST 요청의 일부로 액세스 토큰을 전송함으로써 이를 수행할 수 있습니다.
+인증된 데이터 수집을 사용하면 [!DNL Real-time Customer Profile] 및 [!DNL Identity]과 같은 Adobe Experience Platform 서비스를 통해 신뢰할 수 있는 소스에서 나오는 레코드와 신뢰할 수 없는 소스 간에 구별할 수 있습니다. PII(개인 식별 정보)를 보내려는 클라이언트는 POST 요청의 일부로 액세스 토큰을 전송함으로써 이를 수행할 수 있습니다.
 
 ## 시작하기
 
@@ -49,7 +49,7 @@ API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 
 >
 >의 샌드박스에 대한 자세한 내용 [!DNL Platform]은 [샌드박스 개요 설명서를 참조하십시오](../../sandboxes/home.md).
 
-페이로드(POST, PUT, PATCH)가 포함된 모든 요청에는 추가 헤더가 필요합니다.
+페이로드(POST, PUT, PATCH)이 포함된 모든 요청에는 추가 헤더가 필요합니다.
 
 - 컨텐츠 유형: application/json
 
