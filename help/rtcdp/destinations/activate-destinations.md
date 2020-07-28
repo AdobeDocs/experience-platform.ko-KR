@@ -1,8 +1,8 @@
 ---
 title: 대상에 프로필 및 세그먼트 활성화
 seo-title: 대상에 프로필 및 세그먼트 활성화
-description: 세그먼트를 대상에 매핑하여 Adobe 실시간 고객 데이터 Platform에 있는 데이터를 활성화합니다. 이를 수행하려면 아래 단계를 따르십시오.
-seo-description: 세그먼트를 대상에 매핑하여 Adobe 실시간 고객 데이터 Platform에 있는 데이터를 활성화합니다. 이를 수행하려면 아래 단계를 따르십시오.
+description: 세그먼트를 대상에 매핑하여 Adobe의 실시간 고객 데이터 Platform에 있는 데이터를 활성화합니다. 이를 수행하려면 아래 단계를 따르십시오.
+seo-description: 세그먼트를 대상에 매핑하여 Adobe의 실시간 고객 데이터 Platform에 있는 데이터를 활성화합니다. 이를 수행하려면 아래 단계를 따르십시오.
 translation-type: tm+mt
 source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
 workflow-type: tm+mt
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # 대상에 프로필 및 세그먼트 활성화
 
-세그먼트를 대상에 매핑하여 Adobe 실시간 고객 데이터 Platform에 있는 데이터를 활성화합니다. 이를 수행하려면 아래 단계를 따르십시오.
+세그먼트를 대상에 매핑하여 Adobe의 실시간 고객 데이터 Platform에 있는 데이터를 활성화합니다. 이를 수행하려면 아래 단계를 따르십시오.
 
 ## 전제 조건 {#prerequisites}
 
@@ -57,7 +57,7 @@ ht-degree: 0%
    ![충성도 ID(ID)](/help/rtcdp/destinations/assets/rewardsid-as-identity.gif)
 
 
-   Adobe Experience Platform `Email_LC_SHA256` 로 데이터 수집 시 [!DNL Facebook] 이메일 해싱 요구 사항에 따라 고객 이메일 주소를 해시 처리한 경우 [타겟 ID로 선택합니다](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements). <br> 사용 `Email` 중인 이메일 주소가 해시되지 않은 경우 타겟 ID로 선택합니다. Adobe Real-time CDP는 요구 사항을 준수하기 위해 이메일 주소를 [!DNL Facebook] 해시합니다.
+   Adobe Experience Platform `Email_LC_SHA256` 로 데이터 수집 시 [!DNL Facebook] 이메일 해싱 요구 사항에 따라 고객 이메일 주소를 해시 처리한 경우 [타겟 ID로 선택합니다](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements). <br> 사용 `Email` 중인 이메일 주소가 해시되지 않은 경우 타겟 ID로 선택합니다. Adobe 실시간 CDP는 요구 사항을 준수하도록 이메일 주소를 [!DNL Facebook] 해시합니다.
 
    ![필드 채우기 후 ID 매핑](/help/rtcdp/destinations/assets/identity-mapping.png)
 
@@ -94,7 +94,7 @@ ht-degree: 0%
 
 ### 이메일 마케팅 대상 및 클라우드 스토리지 대상
 
-이메일 마케팅 대상 및 클라우드 스토리지 대상의 경우 Adobe Real-time CDP는 사용자가 제공한 스토리지 위치에 탭으로 구분된 `.txt` 파일이나 `.csv` 파일을 생성합니다. 저장 위치에 매일 새 파일이 만들어집니다. The file format is:
+이메일 마케팅 대상 및 클라우드 스토리지 대상의 경우 Adobe 실시간 CDP는 사용자가 제공한 스토리지 위치에 탭으로 구분된 `.txt` 파일이나 `.csv` 파일을 생성합니다. 저장 위치에 매일 새 파일이 만들어집니다. The file format is:
 `<destination name>id<destination id><timestamp-yyyymmddhhmmss>`
 
 3일 연속으로 받은 파일은 다음과 같습니다.
@@ -117,7 +117,7 @@ Salesforce_id3544_20191122124530.csv
 
 >[!TIP]
 >
->Adobe Real-time CDP의 통합과 이전 고객 채우기 기능 [!DNL Facebook] 지원 세그먼트를 대상에 활성화하면 모든 내역 세그먼트 자격 [!DNL Facebook] 이 전송됩니다.
+>Adobe 실시간 CDP를 통합하고 이전 고객 채우기를 [!DNL Facebook] 지원합니다. 세그먼트를 대상에 활성화하면 모든 내역 세그먼트 자격 [!DNL Facebook] 이 전송됩니다.
 
 ## 활성화 비활성화 {#disable-activation}
 
