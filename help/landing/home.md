@@ -65,7 +65,7 @@ Adobe Experience Platform 사용자 인터페이스는 현재 다음 언어로 �
 
 >[!NOTE]
 >
-> 지역을 선택하면 Adobe.com의 언어와 내용이 결정됩니다.
+> 영역을 선택하면 Adobe.com의 언어와 콘텐트가 결정됩니다.
 
 1. 인터페이스 바닥글에 있는 현재 언어를 [!DNL Experience Platform] 클릭합니다.
 2. 프로필 설정에서 영역 **[!UICONTROL 변경을 클릭합니다]**.
@@ -83,7 +83,7 @@ Adobe Experience Platform 설명서는 여러 언어로 제공됩니다. 언어�
 
 >[!NOTE]
 >
->Adobe는 2020년 5월부터 모든 Experience Cloud 애플리케이션에서 경험을 통합하고 개선하기 위해 도메인 및 헤더 막대에 대한 업데이트를 출시하고 있습니다. 여기에는 새 도움말 메뉴가 포함됩니다. 새 도움말 메뉴에는 다음이 포함됩니다.
+>2020년 5월부터 Adobe은 모든 Experience Cloud 애플리케이션에서 경험을 통합하고 개선하기 위해 도메인과 헤더 막대에 대한 업데이트를 출시하고 있습니다. 여기에는 새 도움말 메뉴가 포함됩니다. 새 도움말 메뉴에는 다음이 포함됩니다.
 >
 >* 주요 아티클에 대한 링크
 >* 상황에 맞는 설명서 추천
@@ -118,7 +118,7 @@ Adobe Experience Platform 설명서는 여러 언어로 제공됩니다. 언어�
 
 * [**API 기본&#x200B;**](api-fundamentals.md)<br/>API 작업에 대한 기본 사항[!DNL Platform]을 알아봅니다.
 
-* [**API 참조&#x200B;**](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)<br/>헤더, 매개 변수, 샘플 요청 및 응답을 비롯한[!DNL Experience Platform]API를 검색합니다.*이러한 문서는 Adobe I/O에서 호스팅됩니다.*
+* [**API 참조&#x200B;**](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)<br/>헤더, 매개 변수, 샘플 요청 및 응답을 비롯한[!DNL Experience Platform]API를 검색합니다.*이러한 문서는 Adobe I/O에 호스팅됩니다.*
 
 ## Adobe Experience Platform 통합 비디오 리소스
 
@@ -126,7 +126,7 @@ Adobe Experience Platform 설명서는 여러 언어로 제공됩니다. 언어�
 
 >[!VIDEO](https://video.tv.adobe.com/v/32554?quality=12&learn=on)
 
-Adobe Experience Platform이 제공하는 주요 이점 중 하나는 다른 기존 Adobe 서비스와 통합하는 기능입니다. 다음 비디오에서는 Adobe Analytics, Adobe Target, Adobe Campaign, Adobe Experience Manager,, [!DNL Experience Platform] 및 [!DNL Experience Cloud] 같은 [!DNL Customer Attributes][!DNL Audience Library][!DNL Experience Platform Launch]애플리케이션 및 기능과 서비스가 통합되는 방법에 대해 간략하게 설명합니다.
+Adobe Experience Platform이 제공하는 주요 이점 중 하나는 다른 기존 Adobe 서비스와 통합할 수 있다는 것입니다. 다음 비디오에서는 서비스가 Adobe Analytics, Adobe Target, Adobe Campaign, Adobe Experience Manager,, [!DNL Experience Platform] 및 [!DNL Experience Cloud] 같은 [!DNL Customer Attributes]애플리케이션 및 기능과 어떻게 통합되는지 [!DNL Audience Library][!DNL Experience Platform Launch]간략하게 설명합니다.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32553?quality=12&learn=on)
 
