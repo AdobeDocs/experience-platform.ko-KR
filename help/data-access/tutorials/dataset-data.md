@@ -42,7 +42,7 @@ API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 
 >
 >의 샌드박스에 대한 자세한 내용 [!DNL Platform]은 [샌드박스 개요 설명서를 참조하십시오](../../sandboxes/home.md).
 
-페이로드(POST, PUT, PATCH)가 포함된 모든 요청에는 추가 헤더가 필요합니다.
+페이로드(POST, PUT, PATCH)이 포함된 모든 요청에는 추가 헤더가 필요합니다.
 
 - 컨텐츠 유형: application/json
 
@@ -416,7 +416,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb
 
 API를 통해 파일을 청크 단위로 다운로드할 수 있습니다. [!DNL Data Access] 파일에서 특정 바이트 범위를 다운로드하도록 `GET /files/{FILE_ID}` 요청하는 동안 범위 헤더를 지정할 수 있습니다. 범위를 지정하지 않으면 기본적으로 API가 전체 파일을 다운로드합니다.
 
-이전 섹션의 [](#retrieve-the-metadata-of-a-file) HEAD 예제에서는 특정 파일의 크기를 바이트 단위로 보여 줍니다.
+[이전 섹션의](#retrieve-the-metadata-of-a-file) HEAD 예제에서는 특정 파일의 크기를 바이트 단위로 보여 줍니다.
 
 **API 형식**
 
