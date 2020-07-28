@@ -20,7 +20,7 @@ API에서 마케팅 작업을 사용하려면 끝점을 사용해야 `/marketing
 
 ## 모든 마케팅 작업 나열
 
-모든 마케팅 작업 목록을 보려면 지정된 컨테이너에 대한 모든 정책을 반환하거나 GET 요청 `/marketingActions/core` 을 수행할 수 `/marketingActions/custom` 있습니다.
+모든 마케팅 작업 목록을 보려면 지정된 컨테이너에 대한 모든 정책을 반환하거나 GET `/marketingActions/core` 을 요청할 수 `/marketingActions/custom` 있습니다.
 
 **API 형식**
 
@@ -156,7 +156,7 @@ PUT /marketingActions/custom/{marketingActionName}
 
 >[!NOTE]
 >
->호출에서 `{marketingActionName}` 를 공급하지 않으면 끝점에 직접 PUT을 수행할 수 없으므로 405 오류(메서드 허용되지 않음)가 `/marketingActions/custom` 발생합니다. 또한 페이로드 `name` 의 내용이 경로의 항목과 일치하지 `{marketingActionName}` 않으면 400 오류(잘못된 요청)가 표시됩니다.
+>호출에서 해당 `{marketingActionName}` 를 제공하지 않으면 끝점에 직접 PUT을 수행할 수 없으므로 405 오류(메서드 허용되지 않음)가 `/marketingActions/custom` 발생합니다. 또한 페이로드 `name` 의 내용이 경로의 항목과 일치하지 `{marketingActionName}` 않으면 400 오류(잘못된 요청)가 표시됩니다.
 
 ```SHELL
 curl -X PUT \
