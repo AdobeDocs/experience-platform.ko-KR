@@ -17,7 +17,7 @@ ht-degree: 2%
 Adobe Experience Platform을 사용하면 여러 소스에서 데이터를 인제스트하고 개별 고객을 위한 강력한 프로파일을 구축할 수 있습니다. 인제스트된 데이터 [!DNL Platform] 는 데이터 저장소와 [!DNL Data Lake] 함께 [!DNL Real-time Customer Profile] 저장됩니다. 더 이상 필요하지 않거나 오류가 추가된 데이터를 제거하기 위해 프로필 저장소에서 데이터 세트 또는 일괄 처리를 삭제해야 하는 경우가 있습니다. 이를 위해서는 [!DNL Real-time Customer Profile] API를 사용하여 [!DNL Profile] 시스템 작업(&quot;[!DNL delete request]&quot;)을 만들어야 하며, 이 작업은 필요한 경우 수정, 모니터링 또는 제거할 수도 있습니다.
 
 >[!NOTE]
->데이터세트 또는 배치를 폴더에서 삭제하려고 [!DNL Data Lake]하는 경우 [카탈로그 서비스 개요를](../../catalog/home.md) 참조하십시오.
+>데이터세트 또는 배치를 폴더에서 삭제하려고 하는 경우 [!DNL Data Lake][카탈로그 서비스 개요를](../../catalog/home.md) 참조하십시오.
 
 ## 시작하기
 
@@ -99,7 +99,7 @@ curl -X POST \
 
 ## 삭제 요청 만들기 {#create-a-delete-request}
 
-새로운 삭제 요청 초기화는 종단점에 대한 POST 요청을 통해 수행됩니다. 여기서 삭제할 데이터 세트 또는 일괄 처리의 ID가 요청 본문에 제공됩니다. `/systems/jobs`
+새 삭제 요청 초기화는 종단점에 대한 POST 요청을 통해 수행되며, 여기서 삭제할 데이터 세트 또는 일괄 처리의 ID가 요청 본문에 제공됩니다. `/systems/jobs`
 
 ### 데이터 집합 삭제
 
@@ -152,7 +152,7 @@ curl -X POST \
 | 속성 | 설명 |
 |---|---|
 | `id` | 삭제 요청의 고유한 시스템 생성 읽기 전용 ID. |
-| `dataSetId` | POST 요청에 지정된 데이터 세트의 ID입니다. |
+| `dataSetId` | POST 요청에 지정된 데이터 집합의 ID입니다. |
 
 ### 일괄 삭제
 
@@ -207,7 +207,7 @@ curl -X POST \
 | 속성 | 설명 |
 |---|---|
 | `id` | 삭제 요청의 고유한 시스템 생성 읽기 전용 ID. |
-| `batchId` | POST 요청에 지정된 배치의 ID입니다. |
+| `batchId` | POST 요청에 지정된 일괄 처리의 ID입니다. |
 
 레코드 데이터 집합 일괄 처리에 대한 삭제 요청을 시작하려고 하면 다음과 유사한 400 수준 오류가 발생합니다.
 
