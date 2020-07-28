@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # PDPA(태국) FAQ
 
-이 문서에서는 태국(PDPA) 및 Adobe Experience Cloud [!DNL Personal Data Protection Act] 의 구현과 관련하여 자주 묻는 질문에 대한 답변을 제공합니다.
+이 문서에서는 태국(PDPA)의 [!DNL Personal Data Protection Act] 구현과 Adobe Experience Cloud에 대한 자주 묻는 질문에 대한 답변을 제공합니다.
 
 이 문서에서 사용되는 다양한 PDPA 관련 용어의 정의는 [PDPA(태국) 용어](./terminology.md) 문서에서 찾을 수 있습니다.
 
