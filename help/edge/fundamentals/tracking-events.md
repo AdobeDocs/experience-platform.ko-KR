@@ -1,6 +1,6 @@
 ---
 title: 이벤트 추적
-seo-title: Adobe Experience Platform 웹 SDK 이벤트 추적
+seo-title: Tracking Adobe Experience Platform Web SDK events
 description: Experience Platform 웹 SDK 이벤트를 추적하는 방법 학습
 seo-description: Experience Platform 웹 SDK 이벤트를 추적하는 방법 학습
 translation-type: tm+mt
@@ -14,9 +14,9 @@ ht-degree: 0%
 
 # 이벤트 추적
 
-이벤트 데이터를 Adobe Experience Cloud로 전송하려면 `sendEvent` 명령을 사용합니다. 이 `sendEvent` 명령은 데이터를 사용자에게 보내고 개인화된 컨텐츠, ID [!DNL Experience Cloud]및 대상 대상을 검색하는 기본 방법입니다.
+To send event data to the Adobe Experience Cloud, use the `sendEvent` command. 이 `sendEvent` 명령은 데이터를 사용자에게 보내고 개인화된 컨텐츠, ID [!DNL Experience Cloud]및 대상 대상을 검색하는 기본 방법입니다.
 
-Adobe Experience Cloud로 전송된 데이터는 두 가지 카테고리로 분류됩니다.
+Adobe Experience Cloud으로 전송된 데이터는 두 가지 카테고리로 분류됩니다.
 
 * XDM 데이터
 * XDM 데이터가 아닌 데이터(현재 지원되지 않음)
@@ -43,7 +43,7 @@ alloy("sendEvent", {
 ```
 
 >[!NOTE]
->XDM 필드의 각 이벤트에서 전송할 수 있는 데이터에는 32KB 제한이 있습니다.
+>There is a 32 KB limit on the data that can be sent in each event in the XDM field.
 
 ### XDM 이외의 데이터 전송
 
@@ -51,7 +51,7 @@ alloy("sendEvent", {
 
 ### 설정 `eventType`
 
-XDM 경험 이벤트에는 필드가 `eventType` 있습니다. 여기에는 레코드의 기본 이벤트 유형이 포함됩니다. 이 옵션은 옵션의 일부로 전달될 수 `xdm` 있습니다.
+In an XDM experience event, there is an `eventType` field. 여기에는 레코드의 기본 이벤트 유형이 포함됩니다. 이 옵션은 옵션의 일부로 전달될 수 `xdm` 있습니다.
 
 ```javascript
 alloy("sendEvent", {
