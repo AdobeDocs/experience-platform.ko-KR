@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;attribution ai;access scores;popular topics
 solution: Experience Platform
-title: 기여도 AI에서 점수 액세스
+title: Attribution AI에서 점수 액세스
 topic: Accessing scores
 translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
@@ -12,19 +12,19 @@ ht-degree: 2%
 ---
 
 
-# 기여도 AI에서 점수 다운로드
+# Attribution AI에서 스코어 다운로드
 
-이 문서는 기여도 AI에 대한 스코어를 다운로드하는 지침으로 제공됩니다.
+이 문서는 Attribution AI에 대한 스코어 다운로드에 대한 안내서의 역할을 합니다.
 
 ## 시작하기
 
-기여도 AI를 사용하면 점수를 쪽모이 세공 파일 형식으로 다운로드할 수 있습니다. 이 자습서에서는 시작하기 안내서에서 Attribution AI 점수 다운로드 섹션을 [읽고 완료해야](./getting-started.md) 합니다.
+Attribution AI을 사용하면 점수가 쪽모이 세공 파일 형식으로 다운로드됩니다. 이 자습서에서는 시작하기 안내서에서 다운로드 Attribution AI 점수 섹션을 [읽고 완료해야](./getting-started.md) 합니다.
 
-또한 기여도 AI에 대한 점수에 액세스하려면 성공적인 실행 상태의 서비스 인스턴스를 사용할 수 있어야 합니다. 새 서비스 인스턴스를 만들려면 Attribution [AI 사용 안내서를 참조하십시오](./user-guide.md). 최근에 서비스 인스턴스를 만들었는데 여전히 트레이닝과 점수 지정 중이라면 24시간 후에 실행을 완료하십시오.
+또한 Attribution AI에 대한 점수에 액세스하려면 성공적인 실행 상태의 서비스 인스턴스를 사용할 수 있어야 합니다. 새 서비스 인스턴스를 만들려면 [Attribution AI 사용 안내서를 참조하십시오](./user-guide.md). 최근에 서비스 인스턴스를 만들었는데 여전히 트레이닝과 점수 지정 중이라면 24시간 후에 실행을 완료하십시오.
 
 ## Find your dataset ID {#dataset-id}
 
-기여도 AI 인사이트의 서비스 인스턴스 내에서 오른쪽 상단 탐색에서 *추가 작업* 드롭다운 을 클릭한 다음 **[!UICONTROL 액세스 점수를 선택합니다]**.
+Attribution AI 인사이트의 서비스 인스턴스 내에서 오른쪽 상단 탐색에서 *추가 작업* 드롭다운을 클릭한 다음 **[!UICONTROL 액세스 점수를 선택합니다]**.
 
 ![추가 작업](./images/download-scores/more-actions.png)
 
@@ -166,7 +166,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/01E5QSWCAA
 
 ## 파일 검색 {#retrieving-your-files}
 
-이전 단계에서 `href` 얻은 값을 API 호출로 사용하여 파일 디렉토리를 검색하려면 새 GET 요청을 만듭니다.
+이전 단계에서 `href` 얻은 값을 API 호출로 사용하여 파일 디렉토리를 검색할 새 GET 요청을 만듭니다.
 
 **API 형식**
 
@@ -214,14 +214,14 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/files/01E5QSWCAASF
 
 | 매개 변수 | 설명 |
 | --------- | ----------- |
-| `_links.self.href` | 디렉토리에서 파일을 다운로드하는 데 사용되는 GET 요청 URL. |
+| `_links.self.href` | 디렉토리에서 파일을 다운로드하는 데 사용되는 GET 요청 URL입니다. |
 
 
 배열에 있는 모든 파일 객체 `href` 값을 `data` 복사한 다음 다음 다음 단계로 진행합니다.
 
 ## 파일 데이터 다운로드
 
-파일 데이터를 다운로드하려면 파일을 `"href"` 검색하는 이전 단계에서 복사한 [값에 GET 요청을](#retrieving-your-files)하십시오.
+파일 데이터를 다운로드하려면 파일 `"href"` 검색 [](#retrieving-your-files)이전 단계에서 복사한 값에 대해 GET 요청을 하십시오.
 
 >[!NOTE]
 >
@@ -261,19 +261,19 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/01E5QSWC
 
 ## 다음 단계
 
-이 문서에서는 기여도 AI 점수를 다운로드하는 데 필요한 단계에 대해 간략하게 설명합니다. 이제 제공되는 다른 [지능형 서비스](../home.md) 및 가이드를 계속 검색할 수 있습니다.
+이 문서에서는 Attribution AI 점수를 다운로드하는 데 필요한 단계를 간략하게 설명합니다. 이제 제공되는 다른 [지능형 서비스](../home.md) 및 가이드를 계속 검색할 수 있습니다.
 
-## Snowflake를 사용하여 점수 액세스
+## Snowflake을 사용하여 점수 액세스
 
 >[!IMPORTANT]
 >
->SnowFlake를 사용한 점수 액세스에 대한 자세한 내용은 attributionai-support@adobe.com으로 문의하십시오.
+>Snowflake을 사용한 점수 액세스에 대한 자세한 내용은 attributionai-support@adobe.com에 문의하십시오.
 
-Snowflake를 통해 집계된 기여도 AI 점수에 액세스할 수 있습니다. 현재, Snowflake에 대한 귀하의 reader 계정에 자격 증명을 설정하고 받기 위해 attributionai-support@adobe.com에서 Adobe 지원을 이메일로 보내야 합니다.
+Snowflake을 통해 집계된 Attribution AI 점수에 액세스할 수 있습니다. 현재 Snowflake에 대한 자격 증명을 설정하고 Reader 계정에 수신하려면 attributionai-support@adobe.com에서 Adobe 지원을 이메일로 보내야 합니다.
 
-Adobe 지원 팀에서 요청을 처리하면 Snowflake에 대한 리더 계정 URL과 아래 해당 자격 증명을 제공합니다.
+Adobe 지원이 요청을 처리하면 독자 계정의 Snowflake 및 아래 해당 자격 증명에 대한 URL을 제공합니다.
 
-- 눈꽃 URL
+- Snowflake URL
 - 사용자 이름
 - 암호
 
@@ -293,7 +293,7 @@ Adobe 지원 팀에서 요청을 처리하면 Snowflake에 대한 리더 계정 
 
 ![스키마 찾기](./images/download-scores/edited_snowflake_2.png)
 
-## PowerBI를 Snowflake에 연결(선택 사항)
+## Snowflake에 PowerBI 연결(선택 사항)
 
 Snowflake 자격 증명을 사용하여 PowerBI Desktop 및 Snowflake 데이터베이스 간의 연결을 설정할 수 있습니다.
 
@@ -301,4 +301,4 @@ Snowflake 자격 증명을 사용하여 PowerBI Desktop 및 Snowflake 데이터�
 
 ![POWERBI 예](./images/download-scores/powerbi-snowflake.png)
 
-연결이 설정된 후 Snowflake 데이터베이스를 선택한 다음 적절한 스키마를 선택합니다. 이제 모든 테이블을 로드할 수 있습니다.
+연결이 설정된 후 Snowflake 데이터베이스를 선택한 다음 해당 스키마를 선택합니다. 이제 모든 테이블을 로드할 수 있습니다.
