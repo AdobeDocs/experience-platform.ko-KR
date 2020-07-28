@@ -50,7 +50,7 @@ API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 
 >
 >의 샌드박스에 대한 자세한 내용 [!DNL Platform]은 [샌드박스 개요 설명서를 참조하십시오](../../sandboxes/home.md).
 
-페이로드(POST, PUT, PATCH)가 포함된 요청에는 추가 헤더가 필요할 수 `Content-Type` 있습니다. 각 호출과 관련된 허용된 값은 호출 매개 변수에 제공됩니다. 이 안내서에서는 다음 컨텐츠 유형을 사용합니다.
+페이로드(POST, PUT, PATCH)을 포함하는 요청에는 추가 헤더가 필요할 수 `Content-Type` 있습니다. 각 호출과 관련된 허용된 값은 호출 매개 변수에 제공됩니다. 이 안내서에서는 다음 컨텐츠 유형을 사용합니다.
 
 - 컨텐츠 유형: application/json
 - 컨텐츠 유형: application/octet-stream
