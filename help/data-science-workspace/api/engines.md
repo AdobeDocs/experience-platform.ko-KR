@@ -58,7 +58,7 @@ curl -X GET https://platform.adobe.io/data/sensei/engines/dockerRegistry \
 
 ## Docker URL을 사용하여 엔진 만들기 {#docker-image}
 
-여러 부분으로 구성된 양식에서 Docker 이미지를 참조하는 Docker URL 및 메타데이터를 제공하는 동안 POST 요청을 수행하여 엔진을 만들 수 있습니다.
+여러 부분으로 된 양식에서 Docker 이미지를 참조하는 Docker URL 및 메타데이터를 제공하는 동안 POST 요청을 수행하여 엔진을 만들 수 있습니다.
 
 **API 형식**
 
@@ -172,7 +172,7 @@ curl -X POST \
 
 ## Docker URL을 사용하여 피쳐 파이프라인 엔진 생성 {#feature-pipeline-docker}
 
-메타데이터와 Docker 이미지를 참조하는 Docker URL을 제공하는 동안 POST 요청을 수행하여 기능 파이프라인 엔진을 만들 수 있습니다.
+Docker 이미지를 참조하는 Docker URL과 메타데이터를 제공하는 동안 POST 요청을 수행하여 피쳐 파이프라인 엔진을 만들 수 있습니다.
 
 **API 형식**
 
@@ -383,11 +383,11 @@ curl -X GET \
 
 ## 엔진 업데이트
 
-요청 경로에 대상 엔진 ID가 포함된 PUT 요청을 통해 속성을 덮어쓰고 업데이트된 속성이 포함된 JSON 페이로드를 제공하여 기존 엔진을 수정 및 업데이트할 수 있습니다.
+요청 경로에서 대상 엔진 ID를 포함하는 PUT 요청을 통해 해당 속성을 덮어쓰고 업데이트된 속성이 포함된 JSON 페이로드를 제공함으로써 기존 엔진을 수정 및 업데이트할 수 있습니다.
 
 >[!NOTE]
 >
->이 PUT 요청의 성공을 보장하기 위해, 먼저 ID로 엔진을 [검색하기 위한 GET 요청을 수행하는 것이 좋습니다](#retrieve-specific). 그런 다음 반환된 JSON 개체를 수정 및 업데이트하고 수정된 JSON 개체 전체를 PUT 요청의 페이로드로 적용합니다.
+>이 PUT 요청의 성공을 보장하기 위해 먼저 ID로 엔진을 [검색하기 위한 GET 요청을 수행하는 것이 좋습니다](#retrieve-specific). 그런 다음 반환된 JSON 개체를 수정 및 업데이트하고 수정된 JSON 개체 전체를 PUT 요청에 대한 페이로드로 적용합니다.
 
 다음 샘플 API 호출은 처음에는 이러한 속성을 갖는 동안 엔진의 이름과 설명을 업데이트합니다.
 
