@@ -40,7 +40,7 @@ ht-degree: 2%
 
 ## Create a new preview {#create-preview}
 
-종단점에 대한 POST 요청을 만들어 새 미리 보기를 만들 수 `/preview` 있습니다.
+종단점에 POST 요청을 만들어 새 미리 보기를 만들 수 `/preview` 있습니다.
 
 >[!NOTE] 미리 보기 작업을 만들면 예상 작업이 자동으로 생성됩니다. 이 두 작업은 동일한 ID를 공유합니다.
 
@@ -89,7 +89,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `state` | 미리 보기 작업의 현재 상태입니다. 처음 만들 때 &quot;NEW&quot; 상태가 됩니다. 그 후 처리가 완료될 때까지 &quot;RUNNING&quot; 상태가 되며, 여기서 &quot;RESULT_READY&quot; 또는 &quot;FAILED&quot;가 됩니다. |
+| `state` | 미리 보기 작업의 현재 상태입니다. 처음 만들 때 &quot;NEW&quot; 상태가 됩니다. 그 후 처리가 완료될 때까지 &quot;RUNNING&quot; 상태가 되며 이 시점에서 &quot;RESULT_READY&quot; 또는 &quot;FAILED&quot;가 됩니다. |
 | `previewId` | 다음 섹션에 설명된 대로 예측 또는 미리 보기를 볼 때 조회 목적으로 사용되는 미리 보기 작업의 ID입니다. |
 
 ## 특정 미리 보기 결과 검색 {#get-preview}
@@ -171,7 +171,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/preview/MDphcHAtMzJiZTAzMjgt
 
 ## 특정 예상 작업의 결과 검색 {#get-estimate}
 
-미리 보기 작업을 만들었으면 GET 요청 경로 `previewId` `/estimate` 에서 종단점에 대한 통계 정보를 사용하여 예상 대상 크기, 신뢰 구간 및 오류 표준 편차 등 세그먼트 정의에 대한 통계 정보를 볼 수 있습니다.
+미리 보기 작업을 만든 후에는 종단점에 대한 GET 요청 경로 `previewId` `/estimate` 에서 해당 작업을 사용하여 예상 대상 크기, 신뢰 구간 및 오류 표준 편차 등 세그먼트 정의에 대한 통계 정보를 볼 수 있습니다.
 
 **API 형식**
 
