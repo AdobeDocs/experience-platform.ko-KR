@@ -28,14 +28,14 @@ Intelligent Services가 마케팅 이벤트 데이터에서 얻은 통찰력을 
 
 1. 전용 Azure Blob 저장소 컨테이너에 대한 액세스 자격 증명을 요청하려면 Adobe 컨설팅 서비스에 문의하십시오.
 1. 액세스 자격 증명을 사용하여 데이터를 Blob 컨테이너에 업로드합니다.
-1. Adobe Consulting Services를 사용하면 데이터를 [Consumer ExperienceEvent 스키마에](#cee-schema) 매핑하여 Intelligent Services로 인제스트할 수 있습니다.
+1. Adobe 컨설팅 서비스를 사용하면 데이터를 [소비자 경험 이벤트 스키마에](#cee-schema) 매핑하여 지능형 서비스로 인제스트됩니다.
 
 ### [!DNL Experience Platform] 데이터 준비
 
 데이터가 이미 저장된 경우 아래 단계 [!DNL Platform]를 따르십시오.
 
 1. Consumer ExperienceEvent 스키마의 구조를 [검토하고](#cee-schema) 데이터를 해당 필드에 매핑할 수 있는지 여부를 결정합니다.
-1. Adobe Consulting Services에 연락하여 데이터를 스키마에 매핑하고 이를 Intelligent Services에 인제스트하는 데 도움이 되도록 하거나 데이터를 직접 매핑하려면 이 안내서의 [](#mapping) 단계를 따르십시오.
+1. 데이터를 스키마에 매핑하고 Intelligent Services에 인제스트하는 데 도움이 되도록 Adobe 컨설팅 서비스에 연락하거나, 데이터를 직접 매핑하려면 이 안내서의 [](#mapping) 단계를 따르십시오.
 
 ## CEE 스키마 이해 {#cee-schema}
 
@@ -61,7 +61,7 @@ CEE 믹스에는 유용한 인사이트를 도출하기 위해 활용해야 하�
 
 * [기본 ID 필드](#identity)
 * [xdm:타임스탬프](#timestamp)
-* [xdm:channel](#channel) (기여도 AI에 대해서만 필수)
+* [xdm:channel](#channel) (Attribution AI에만 필수)
 
 #### 기본 ID {#identity}
 
@@ -84,7 +84,7 @@ CEE 믹스에는 유용한 인사이트를 도출하기 위해 활용해야 하�
 
 >[!NOTE]
 >
->이 필드는 속성 AI를 사용하는 경우에만 필수입니다.
+>이 필드는 Attribution AI을 사용할 때만 필수입니다.
 
 이 필드는 ExperienceEvent와 관련된 마케팅 채널을 나타냅니다. 이 필드에는 채널 유형, 미디어 유형 및 위치 유형에 대한 정보가 포함되어 있습니다.
 
@@ -241,7 +241,7 @@ CEE 믹스에는 유용한 인사이트를 도출하기 위해 활용해야 하�
 
 마케팅 이벤트 데이터를 CEE 스키마에 매핑할 수 있는지 여부를 확인한 후, 다음 단계는 지능형 서비스에 가져올 데이터를 결정하는 것입니다. Intelligent Services에서 사용되는 모든 내역 데이터는 최소 4개월 데이터 기간 내에 포함되고, 조회 기간으로 의도한 일수는 포함되어야 합니다.
 
-전송할 데이터 범위를 정한 후 Adobe 컨설팅 서비스에 문의하여 스키마에 데이터를 매핑하고 서비스에 인제스트합니다.
+전송할 데이터 범위를 결정한 후 Adobe 컨설팅 서비스에 문의하여 스키마를 매핑하고 서비스에 데이터를 인제스트합니다.
 
 구독을 보유하고 있고 직접 데이터를 매핑하고 인제스트하려면 아래 섹션에 설명된 단계를 따르십시오. [!DNL Adobe Experience Platform]
 
@@ -281,7 +281,7 @@ CEE 믹스에는 유용한 인사이트를 도출하기 위해 활용해야 하�
 >
 >지능형 서비스의 향후 릴리스는 [Adobe Experience Platform ID 서비스](../identity-service/home.md) 를 고객 식별 기능에 통합하게 됩니다. 따라서 아래 설명된 단계는 변경될 수 있습니다.
 
-다른 외부 소스 [!DNL Adobe Audience Manager], [!DNL Adobe Analytics]또는 다른 외부 소스에서 데이터를 가져오는 경우 `primaryIdentityNameSpace` 태그를 데이터 세트에 추가해야 합니다. 이 작업은 카탈로그 서비스 API에 PATCH 요청을 수행하여 수행할 수 있습니다.
+다른 외부 소스 [!DNL Adobe Audience Manager], [!DNL Adobe Analytics]또는 다른 외부 소스에서 데이터를 가져오는 경우 `primaryIdentityNameSpace` 태그를 데이터 세트에 추가해야 합니다. 이 작업은 카탈로그 서비스 API에 PATCH 요청을 함으로써 수행할 수 있습니다.
 
 로컬 CSV 파일의 데이터를 인제스트하는 경우 데이터 [매핑 및 인제스트 관련 다음 섹션으로 건너뛸 수 있습니다](#ingest).
 
@@ -343,7 +343,7 @@ curl -X PATCH \
 
 **응답**
 
-성공적인 응답은 업데이트된 데이터 세트의 ID가 포함된 배열을 반환합니다. 이 ID는 PATCH 요청에서 전송된 ID와 일치해야 합니다.
+성공적인 응답은 업데이트된 데이터 세트의 ID가 포함된 배열을 반환합니다. 이 ID는 PATCH 요청에 전송된 ID와 일치해야 합니다.
 
 ```json
 [
@@ -363,5 +363,5 @@ CEE 스키마 및 데이터 세트를 만든 후 데이터 테이블을 스키�
 
 데이터 세트에 고객 경험 데이터를 성공적으로 채우면 지능형 서비스를 사용하여 통찰력을 생성할 수 있습니다. 시작하려면 다음 문서를 참조하십시오.
 
-* [기여도 AI 개요](./attribution-ai/overview.md)
+* [Attribution AI 개요](./attribution-ai/overview.md)
 * [고객 AI 개요](./customer-ai/overview.md)
