@@ -37,7 +37,7 @@ ETL 통합 안내서에서는 데이터를 인제스트하고 고성능 보안 �
 
 ETL 커넥터 통합에 포함된 여러 Experience Platform 구성 요소가 있습니다. 다음 목록에는 몇 가지 주요 구성 요소 및 기능이 요약되어 있습니다.
 
-- **Adobe Identity Management 시스템(IMS)** - Adobe 서비스에 대한 인증을 위한 프레임워크를 제공합니다.
+- **IMS(Adobe Identity Management 시스템)** - Adobe 서비스에 대한 인증을 위한 프레임워크를 제공합니다.
 - **IMS 조직** - 제품 및 서비스를 소유 또는 라이센스하고 회원에게 액세스를 허용할 수 있는 기업 실체입니다.
 - **IMS 사용자** - IMS 조직의 구성원. 조직 대 사용자 관계는 여러 사람에게 적용됩니다.
 - **[!DNL Sandbox]** - 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 단일 [!DNL Platform] 인스턴스 가상 파티션
@@ -70,7 +70,7 @@ API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 
 >
 >의 샌드박스에 대한 자세한 내용 [!DNL Platform]은 [샌드박스 개요 설명서를 참조하십시오](../sandboxes/home.md).
 
-페이로드(POST, PUT, PATCH)가 포함된 모든 요청에는 추가 헤더가 필요합니다.
+페이로드(POST, PUT, PATCH)이 포함된 모든 요청에는 추가 헤더가 필요합니다.
 
 - 컨텐츠 유형: application/json
 
@@ -168,7 +168,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/dataSets?limit=3&
 
 XDM 스키마는 사용자가 작성될 수 있는 모든 필드 목록을 사용자에게 제공해야 할 때 사용하는 스키마입니다.
 
-이전 응답 개체(`https://ns.adobe.com/{TENANT_ID}/schemas/274f17bc5807ff307a046bab1489fb18`)의 첫 번째 &quot;schemaRef.id&quot; 값은 XDM 스키마를 가리키는 URI입니다 [!DNL Schema Registry]. API에 대한 조회(GET) 요청을 수행하여 스키마를 검색할 수 [!DNL Schema Registry] 있습니다.
+이전 응답 개체(`https://ns.adobe.com/{TENANT_ID}/schemas/274f17bc5807ff307a046bab1489fb18`)의 첫 번째 &quot;schemaRef.id&quot; 값은 XDM 스키마를 가리키는 URI입니다 [!DNL Schema Registry]. 스키마는 API에 조회(GET) 요청을 수행하여 검색할 수 [!DNL Schema Registry] 있습니다.
 
 >[!NOTE]
 >
@@ -217,7 +217,7 @@ curl -X GET \
 
 ### 데이터 집합 &quot;스키마&quot; 속성(더 이상 사용되지 않음 - EOL 2019-05-30)
 
-데이터 세트에는 이제 더 이상 사용되지 않으며 이전 버전과의 호환성을 위해 일시적으로 사용할 수 있는 &quot;스키마&quot; 속성이 포함될 수 있습니다. 예를 들어, &quot;schema&quot;가 `properties` 쿼리 매개 변수에서 &quot;schemaRef&quot;로 대체된 경우 이전에 수행한 것과 유사한 목록(GET) 요청이 다음을 반환할 수 있습니다.
+데이터 세트에는 이제 더 이상 사용되지 않으며 이전 버전과의 호환성을 위해 일시적으로 사용할 수 있는 &quot;스키마&quot; 속성이 포함될 수 있습니다. 예를 들어, 이전에 만든 것과 유사한 목록(GET) 요청인 경우, 여기서 &quot;schema&quot;가 `properties` 쿼리 매개 변수에서 &quot;schemaRef&quot;로 대체되면 다음을 반환할 수 있습니다.
 
 ```json
 {
@@ -552,7 +552,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/export/files/{FILE_ID}" \
 
 ### 파일 컨텐츠 액세스
 
-특정 파일의 컨텐츠에 액세스하는 데 사용할 [!DNL Data Access API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) 수 있습니다. 내용을 가져오기 위해 파일 ID를 사용하여 파일에 액세스할 때 반환되는 값 `_links.self.href` 을 사용하여 GET 요청이 수행됩니다.
+특정 파일의 컨텐츠에 액세스하는 데 사용할 [!DNL Data Access API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) 수 있습니다. 콘텐트를 가져오기 위해 파일 ID를 사용하여 파일에 액세스할 `_links.self.href` 때 반환된 값을 사용하여 GET 요청이 수행됩니다.
 
 **요청**
 
@@ -674,7 +674,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches?limit=1&s
 
 ### ID로 마지막 배치 상태 가져오기
 
-을 사용하여 GET 요청을 실행하여 개별 배치 상태를 [!DNL Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) 검색할 수 있습니다 `{BATCH_ID}`. 사용한 ID는 일괄 처리를 만들 때 반환된 ID와 동일합니다. `{BATCH_ID}`
+을 사용하여 GET 요청을 실행하여 개별 배치 상태를 검색할 수 [!DNL Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) 있습니다 `{BATCH_ID}`. 사용한 ID는 일괄 처리를 만들 때 반환된 ID와 동일합니다. `{BATCH_ID}`
 
 **요청**
 
