@@ -24,11 +24,11 @@ ht-degree: 0%
 
 * 다음 ID를 [대상으로](../../identity-service/namespaces.md) 보낼 수 [!DNL Google Display & Video 360] 있습니다. **Google 쿠키 ID, IDFA, GAID, Roku ID, Microsoft ID, Amazon Fire TV ID**.
 * 활성화된 대상은 Google 플랫폼에서 프로그래밍 방식으로 생성됩니다.
-* Adobe 실시간 CDP에는 현재 성공적인 활성화를 검증하는 측정 지표가 포함되어 있지 않습니다. 통합을 확인하고 대상 타깃팅 크기를 이해하려면 Google의 대상 수를 참조하십시오.
+* Adobe 실시간 CDP에는 현재 성공적인 활성화를 확인하는 측정 지표가 포함되어 있지 않습니다. 통합을 확인하고 대상 타깃팅 크기를 이해하려면 Google의 대상 수를 참조하십시오.
 
 >[!IMPORTANT]
 >
->Google Display &amp; Video 360을 사용하여 첫 번째 대상을 만들고 이전에 Experience Cloud ID 서비스에서 [ID 동기화 기능을](https://docs.adobe.com/content/help/en/id-service/using/id-service-api/methods/idsync.html) 활성화하지 않은 경우(Adobe Audience Manager 또는 기타 애플리케이션 포함) Adobe 컨설팅 또는 고객 지원 센터에 연락하여 ID 동기화를 활성화하십시오. 이전에 Audience Manager에서 Google 통합을 설정한 경우 설정한 ID 시크는 Adobe 실시간 CDP로 이월됩니다.
+>Google Display &amp; Video 360을 사용하여 첫 번째 대상을 만들고 이전에 Experience Cloud ID 서비스에서 [ID 동기화 기능을](https://docs.adobe.com/content/help/en/id-service/using/id-service-api/methods/idsync.html) 활성화하지 않은 경우(Adobe Audience Manager 또는 기타 애플리케이션 포함), Adobe 컨설팅 또는 고객 지원 센터에 연락하여 ID 동기화를 활성화하십시오. 이전에 Audience Manager에서 Google 통합을 설정한 경우 설정한 ID 동기화가 Adobe 실시간 CDP로 전달됩니다.
 
 ## 전제 조건
 
@@ -38,9 +38,9 @@ ht-degree: 0%
 >
 >Adobe 실시간 CDP에서 첫 번째 [!DNL Google Display & Video 360] 대상을 설정하기 전에 허용 목록은 필수입니다. 대상을 만들기 전에 아래에 설명된 허용 목록 프로세스가 Google에서 완료되었는지 확인하십시오.
 
-Adobe Real-time CDP에서 [!DNL Google Display & Video 360] 대상을 생성하기 전에 Google에 연락하여 Adobe가 허용되는 데이터 제공업체 목록에 포함되도록 하고 귀하의 계정이 허용 목록에 추가되도록 해야 합니다. Google에 연락하여 다음 정보를 제공합니다.
+Adobe 실시간 CDP에서 [!DNL Google Display & Video 360] 대상을 생성하기 전에 Google에 Adobe이 허용된 데이터 공급자 목록에 포함될 수 있도록 문의하고 사용자 계정이 허용 목록에 추가될 수 있도록 요청해야 합니다. Google에 연락하여 다음 정보를 제공합니다.
 
-* **계정 ID** : Google의 Adobe 계정 ID입니다. 이 ID를 얻으려면 Adobe 고객 지원 센터 또는 Adobe 담당자에게 문의하십시오.
+* **계정 ID** : 이것은 Google의 Adobe 계정 ID입니다. 이 ID를 얻으려면 Adobe 고객 지원 센터 또는 Adobe 담당자에게 문의하십시오.
 * **고객 ID** : Google의 Adobe 고객 계정 ID입니다. 이 ID를 얻으려면 Adobe 고객 지원 센터 또는 Adobe 담당자에게 문의하십시오.
 * **계정 유형**: 디스플레이 및 비디오 360 계정 **[!DNL Invite advertiser]** 에서 대상을 특정 브랜드에만 공유하거나 디스플레이 및 비디오 360 계정의 모든 브랜드에 대상을 공유할 수 있도록 **[!DNL Invite partner]** 하는 데 사용합니다.
 
@@ -62,7 +62,7 @@ Adobe Real-time CDP에서 [!DNL Google Display & Video 360] 대상을 생성하�
 
 >[!NOTE]
 >
->대상을 설정할 때 [!DNL Google Display & Video 360] 귀하 [!DNL Google Account Manager] 또는 Adobe 담당자와 협력하여 보유하고 있는 계정 유형을 파악하십시오.
+>대상을 설정할 때 [!DNL Google Display & Video 360] 귀하의 [!DNL Google Account Manager] 또는 Adobe 담당자에게 연락하여 보유하고 있는 계정 유형을 파악하십시오.
 
 ## 세그먼트 활성화 [!DNL Google Display & Video 360]
 
