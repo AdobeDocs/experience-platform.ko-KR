@@ -22,7 +22,7 @@ ht-degree: 0%
 
    ![소셜 네트워크 대상에 연결](/help/rtcdp/destinations/assets/facebook-catalog-view.png)
 
-2. 이전에 소셜 네트워크 대상에 대한 연결을 **설정한 경우 인증** 단계에서 기존 계정 **[!UICONTROL 을]** 선택하고 기존 연결을 선택합니다. 또는 새 계정 **[!UICONTROL 을]** 선택하여 소셜 네트워크 대상에 대한 새 연결을 설정할 수 있습니다. 대상에 **[!UICONTROL 연결을]** 선택하면 선택한 소셜 네트워크 대상으로 이동하여 로그인하고 Adobe Experience Cloud를 소셜 네트워크 광고 계정에 연결합니다.
+2. 이전에 소셜 네트워크 대상에 대한 연결을 **설정한 경우 인증** 단계에서 기존 계정 **[!UICONTROL 을]** 선택하고 기존 연결을 선택합니다. 또는 새 계정 **[!UICONTROL 을]** 선택하여 소셜 네트워크 대상에 대한 새 연결을 설정할 수 있습니다. 대상에 **[!UICONTROL 연결을]** 선택하면 선택한 소셜 네트워크 대상으로 로그인하여 소셜 네트워크 광고 계정에 Adobe Experience Cloud을 연결합니다.
 
    >[!NOTE]
    >
@@ -30,7 +30,7 @@ ht-degree: 0%
 
    ![소셜 네트워크 대상에 연결 - 인증 단계](/help/rtcdp/destinations/assets/facebook-pre-connect-view.png)
 
-3. 자격 증명이 확인되고 Adobe Experience Cloud가 소셜 네트워크에 연결되면 **[!UICONTROL 다음]** 을 선택하여 **[!UICONTROL 설정]** 단계로 진행할 수 있습니다.
+3. 자격 증명이 확인되고 Adobe Experience Cloud이 소셜 네트워크에 연결되면 **[!UICONTROL 다음]** 을 선택하여 **[!UICONTROL 설정]** 단계를 진행할 수 있습니다.
 
    ![자격 증명 확인됨](/help/rtcdp/destinations/assets/facebook-post-connection-view.png)
 
