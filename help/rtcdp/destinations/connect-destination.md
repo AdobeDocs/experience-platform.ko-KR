@@ -1,7 +1,7 @@
 ---
-title: Adobe 실시간 고객 데이터 Platform에서 대상에 연결
-seo-title: Adobe 실시간 고객 데이터 Platform에서 대상에 연결
-description: 이 자습서에서는 Adobe 실시간 고객 데이터 Platform에서 대상을 연결하는 단계를 나열합니다
+title: Adobe의 대상에 연결 실시간 고객 데이터 Platform
+seo-title: Adobe의 대상에 연결 실시간 고객 데이터 Platform
+description: 이 자습서에서는 Adobe의 대상을 실시간 고객 데이터 Platform에서 연결하는 단계를 나열합니다
 translation-type: tm+mt
 source-git-commit: b070a8a6eee1c1b95b20468c7067181ec62bdbd0
 workflow-type: tm+mt
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # 대상을 연결하는 방법
 
-Adobe 실시간 고객 데이터 Platform의 대상에 연결하려면 아래 절차를 따르십시오.
+아래 절차에 따라 Adobe 실시간 고객 데이터 Platform의 대상에 연결합니다.
 
 1. 왼쪽 **[!UICONTROL 탐색 막대에서]** 대상으로 이동합니다.
 2. [ [!UICONTROL 카탈로그](/help/rtcdp/destinations/destinations-workspace.md#catalog) ] 탭에서 연결할 대상을 선택합니다.
