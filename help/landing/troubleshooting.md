@@ -22,7 +22,7 @@ ht-degree: 3%
 
 ## API란 [!DNL Experience Platform] 무엇입니까? {#what-are-experience-platform-apis}
 
-[!DNL Experience Platform] 은 리소스에 액세스하기 위해 HTTP 요청을 사용하는 여러 개의 RESTful API를 [!DNL Platform] 제공합니다. 이러한 서비스 API는 각각 여러 끝점을 노출하며, 목록 작성(GET), 조회(GET), 편집(PUT 및/또는 PATCH), 리소스 삭제(DELETE)에 대한 작업을 수행할 수 있도록 해줍니다. 각 서비스에 사용할 수 있는 특정 엔드포인트 및 작업에 대한 자세한 내용은 [API 참조 설명서](https://www.adobe.io/apis/experienceplatform/home/api-reference.html) (Adobe I/O)를 참조하십시오.
+[!DNL Experience Platform] 은 리소스에 액세스하기 위해 HTTP 요청을 사용하는 여러 개의 RESTful API를 [!DNL Platform] 제공합니다. 이러한 서비스 API는 각각 여러 끝점을 노출하며, 목록(GET), 조회(GET), 편집(PUT 및/또는 PATCH), 삭제(DELETE) 등의 작업을 수행할 수 있도록 해줍니다. 각 서비스에 사용할 수 있는 특정 끝점과 작업에 대한 자세한 내용은 Adobe I/O에 대한 [API 참조 설명서를](https://www.adobe.io/apis/experienceplatform/home/api-reference.html) 참조하십시오.
 
 ## API 요청의 포맷은 어떻게 됩니까? {#how-do-i-format-an-api-request}
 
@@ -30,7 +30,7 @@ ht-degree: 3%
 
 ### 예제 API 호출 읽기
 
-이 설명서는 두 가지 방법으로 API 호출 예를 보여 줍니다. [!DNL Experience Platform] 먼저 호출은 해당 **API 형식**, 작업(GET, POST, PUT, PATCH, DELETE)과 사용되는 끝점(예: `/global/classes`)만 표시하는 템플릿 표현으로 제공됩니다. 일부 템플릿에는 다음과 같이 호출을 공식화하는 방법을 보여주는 데 도움이 되는 변수의 위치가 표시됩니다 `GET /{VARIABLE}/classes/{ANOTHER_VARIABLE}`.
+이 설명서는 두 가지 방법으로 API 호출 예를 보여 줍니다. [!DNL Experience Platform] 첫째, 호출은 해당 **API 형식**, 작업(GET, POST, PUT, PATCH, DELETE) 및 사용 중인 종단점만 표시하는 템플릿 표현(예: `/global/classes`) 일부 템플릿에는 다음과 같이 호출을 공식화하는 방법을 보여주는 데 도움이 되는 변수의 위치가 표시됩니다 `GET /{VARIABLE}/classes/{ANOTHER_VARIABLE}`.
 
 그러면 호출은 API와 성공적으로 상호 작용하기 위해 필요한 헤더와 전체 &quot;기본 경로&quot;를 포함하는 **요청**&#x200B;시 cURL 명령으로 표시됩니다. 기본 경로는 모든 끝점에 미리 펜드되어야 합니다. 예를 들어 앞서 언급한 종점이 `/global/classes` 됩니다 `https://platform.adobe.io/data/foundation/schemaregistry/global/classes`. 문서 전체에서 API 형식/요청 패턴을 볼 수 있으며 Platform API를 직접 호출할 때 요청 예제에 표시된 전체 경로를 사용할 수 있습니다.
 
@@ -88,11 +88,11 @@ Platform API의 필수 헤더 및 요청 본체를 비롯한 특정 끝점에 �
 
 ## IMS 조직이란 무엇입니까? {#what-is-my-ims-organization}
 
-IMS 조직은 고객의 Adobe 대표입니다. 모든 라이센스 Adobe 솔루션은 이 고객 조직과 통합됩니다. IMS 조직에서 권한을 부여받으면 개발자에게 액세스 권한 [!DNL Experience Platform]을 할당할 수 있습니다. IMS 조직 ID(`x-gw-ims-org-id`)는 API 호출이 실행되어야 하는 조직을 나타내며, 따라서 모든 API 요청의 헤더로 필요합니다. 이 ID는 [Adobe 개발자 콘솔을 통해 찾을 수 있습니다](https://www.adobe.com/go/devs_console_ui). 통합 **** 탭에서 **특정 통합에 대한** 개요 **섹션으로 이동하여 클라이언트 자격 증명 아래에서 ID를**&#x200B;찾습니다. 인증 방법에 대한 단계별 연습은 [!DNL Platform]인증 자습서 [](../tutorials/authentication.md)를 참조하십시오.
+IMS 조직은 고객의 Adobe입니다. 모든 라이센스 Adobe 솔루션은 이 고객 조직과 통합됩니다. IMS 조직에서 권한을 부여받으면 개발자에게 액세스 권한 [!DNL Experience Platform]을 할당할 수 있습니다. IMS 조직 ID(`x-gw-ims-org-id`)는 API 호출이 실행되어야 하는 조직을 나타내며, 따라서 모든 API 요청의 헤더로 필요합니다. 이 ID는 [Adobe 개발자 콘솔을 통해 찾을 수 있습니다](https://www.adobe.com/go/devs_console_ui). 통합 **** 탭에서 **특정 통합에 대한** 개요 **섹션으로 이동하여 클라이언트 자격 증명 아래에서 ID를**&#x200B;찾습니다. 인증 방법에 대한 단계별 연습은 [!DNL Platform]인증 자습서 [](../tutorials/authentication.md)를 참조하십시오.
 
 ## API 키는 어디에서 찾을 수 있습니까? {#where-can-i-find-my-api-key}
 
-API 키는 모든 API 요청의 헤더로 필요합니다. Adobe 개발자 콘솔을 통해 [찾을 수 있습니다](https://www.adobe.com/go/devs_console_ui). 콘솔 내의 **통합** 탭에서 특정 통합에 대한 **개요** 섹션으로 이동하여 클라이언트 자격 증명 **에 있는 키를**&#x200B;찾습니다. 인증 방법에 대한 단계별 연습은 [!DNL Platform]인증 자습서 [](../tutorials/authentication.md)를 참조하십시오.
+API 키는 모든 API 요청의 헤더로 필요합니다. Adobe 개발자 콘솔을 통해 찾을 수 [있습니다](https://www.adobe.com/go/devs_console_ui). 콘솔 내의 **통합** 탭에서 특정 통합에 대한 **개요** 섹션으로 이동하여 클라이언트 자격 증명 **에 있는 키를**&#x200B;찾습니다. 인증 방법에 대한 단계별 연습은 [!DNL Platform]인증 자습서 [](../tutorials/authentication.md)를 참조하십시오.
 
 ## 액세스 토큰을 어떻게 얻을 수 있습니까? {#how-do-i-get-an-access-token}
 
@@ -112,9 +112,9 @@ GET /batches?createdAfter=1559775880000&orderBy=desc:created
 
 특정 서비스 또는 종단점에 사용할 수 있는 쿼리 매개 변수에 대한 자세한 내용은 서비스 관련 설명서를 참조하십시오.
 
-## PATCH 요청에서 업데이트할 JSON 필드를 어떻게 나타냅니까? {#how-do-i-indicate-a-json-field-to-update-in-a-patch-request}
+## PATCH 요청에서 업데이트할 JSON 필드를 어떻게 표시합니까? {#how-do-i-indicate-a-json-field-to-update-in-a-patch-request}
 
-API의 많은 패치 작업 [!DNL Platform] 은 업데이트할 JSON 속성을 나타내기 위해 [JSON 포인터](https://tools.ietf.org/html/rfc6901) 문자열을 사용합니다. 이러한 내용은 일반적으로 [JSON 패치](https://tools.ietf.org/html/rfc6902) 형식을 사용하여 요청 페이로드에 포함됩니다. 이러한 기술에 필요한 구문에 대한 자세한 내용은 [API 기본 사항 가이드를](api-fundamentals.md) 참조하십시오.
+API의 많은 PATCH 작업 [!DNL Platform] 은 업데이트할 [JSON 속성을 나타내기 위해 JSON 포인터](https://tools.ietf.org/html/rfc6901) 문자열을 사용합니다. 이러한 내용은 일반적으로 [JSON 패치](https://tools.ietf.org/html/rfc6902) 형식을 사용하여 요청 페이로드에 포함됩니다. 이러한 기술에 필요한 구문에 대한 자세한 내용은 [API 기본 사항 가이드를](api-fundamentals.md) 참조하십시오.
 
 ## Postman을 사용하여 API를 호출할 수 [!DNL Platform] 있습니까? {#how-do-i-use-postman-to-make-calls-to-platform-apis}
 
@@ -217,7 +217,7 @@ UI 또는 API 사용 여부에 따라 다음 시스템 요구 사항이 적용�
 }
 ```
 
-이 오류 메시지는 사용자 또는 Adobe I/O 통합(헤더에서 [액세스 토큰으로](#how-do-i-get-an-access-token) 식별됨)이 `Authorization` 헤더에 제공된 IMS 조직에 대해 [!DNL Experience Platform] API를 호출할 권한이 없는 경우 `x-gw-ims-org-id` 표시됩니다. 헤더에서 IMS 조직에 대해 올바른 ID를 제공한 후 다시 시도하십시오. 조직 ID를 모르는 경우 [Adobe I/O 콘솔에서 찾을 수 있습니다](https://console.adobe.io). 통합 **** 탭에서 **개요** 섹션으로 이동하여 클라이언트 자격 증명 ****&#x200B;아래에서 ID를찾습니다.
+이 오류 메시지는 사용자 또는 Adobe I/O 통합(헤더에서 [액세스 토큰으로](#how-do-i-get-an-access-token) 식별됨)이 `Authorization` 헤더에 제공된 IMS 조직에 대한 [!DNL Experience Platform] API를 호출할 권한이 없는 경우 `x-gw-ims-org-id` 표시됩니다. 헤더에서 IMS 조직에 대해 올바른 ID를 제공한 후 다시 시도하십시오. 조직 ID를 모르는 경우 [Adobe I/O 콘솔에서 찾을 수 있습니다](https://console.adobe.io). 통합 **** 탭에서 **개요** 섹션으로 이동하여 클라이언트 자격 증명 ****&#x200B;아래에서 ID를찾습니다.
 
 ### 올바른 콘텐츠 형식이 지정되지 않았습니다.
 
