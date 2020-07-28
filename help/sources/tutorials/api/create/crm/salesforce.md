@@ -58,7 +58,7 @@ API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
-페이로드(POST, PUT, PATCH)가 포함된 모든 요청에는 추가 미디어 유형 헤더가 필요합니다.
+페이로드(POST, PUT, PATCH)이 포함된 모든 요청에는 추가 미디어 유형 헤더가 필요합니다.
 
 * 컨텐츠 유형: `application/json`
 
@@ -66,7 +66,7 @@ API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 
 
 계정 [!DNL Platform] 에 [!DNL Salesforce] 연결하려면 연결 사양이 있는지 확인해야 합니다 [!DNL Salesforce]. 연결 사양이 없으면 연결할 수 없습니다.
 
-사용 가능한 각 소스에는 인증 요구 사항과 같은 커넥터 속성을 설명하는 고유한 연결 사양이 있습니다. GET 요청을 수행하고 쿼리 매개 변수 [!DNL Salesforce] 를 사용하여 연결 사양을 조회할 수 있습니다.
+사용 가능한 각 소스에는 인증 요구 사항과 같은 커넥터 속성을 설명하는 고유한 연결 사양이 있습니다. GET 요청을 수행하고 쿼리 매개 변수를 사용하여 [!DNL Salesforce] 의 연결 사양을 조회할 수 있습니다.
 
 **API 형식**
 
