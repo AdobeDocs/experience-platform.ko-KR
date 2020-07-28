@@ -4,7 +4,7 @@ solution: Experience Platform
 title: UI에서 Azure HDInsights 소스 커넥터에서 Apache Spark 만들기
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: 4f7d7e2bf255afe1588dbe7cfb2ec055f2dcbf75
 workflow-type: tm+mt
 source-wordcount: '513'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # UI에서 [!DNL Apache Spark] 소스 [!DNL Azure HDInsights] 커넥터 만들기
 
-> [!NOTE]
+>[!NOTE]
 > 온 [!DNL Apache Spark] 커넥터 [!DNL Azure HDInsights] 가 베타에 있습니다. 베타 [레이블이 지정된 커넥터 사용에 대한 자세한 내용은 소스 개요를](../../../../home.md#terms-and-conditions) 참조하십시오.
 
 Adobe Experience Platform의 소스 커넥터는 외부에서 가져온 데이터를 예약된 기준으로 인제스트하는 기능을 제공합니다. 이 자습서에서는 [!DNL Apache Spark] 사용자 인터페이스를 사용하여 소스 커넥터 [!DNL Azure HDInsights] [!DNL Platform] 에 대한 단계를 제공합니다.
