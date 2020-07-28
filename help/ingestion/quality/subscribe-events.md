@@ -43,11 +43,11 @@ ht-degree: 2%
 
 ## 데이터 수집 상태 알림 구독
 
-Adobe [I/O 이벤트를](https://www.adobe.io/apis/experienceplatform/events.html)통해 웹 후크를 사용하여 여러 알림 유형을 구독할 수 있습니다. 아래 섹션에서는 Adobe 개발자 콘솔을 사용하여 데이터 통합 이벤트에 대한 [!DNL Platform] 알림 가입 절차에 대해 간략하게 설명합니다.
+Adobe [I/O 이벤트를](https://www.adobe.io/apis/experienceplatform/events.html)통해 웹 후크를 사용하여 여러 알림 유형에 가입할 수 있습니다. 아래 섹션에서는 Adobe 개발자 콘솔을 사용하여 데이터 통합 이벤트에 대한 [!DNL Platform] 알림 가입 절차에 대해 간략하게 설명합니다.
 
 ### Adobe 개발자 콘솔에서 새 프로젝트 만들기
 
-Adobe [Developer Console에서](https://www.adobe.com/go/devs_console_ui) Adobe ID으로 로그인합니다. 그런 다음 Adobe 개발자 콘솔 문서에서 빈 프로젝트 [를 만드는 방법에 대한 자습서에 나와](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) 있는 단계를 따릅니다.
+Adobe 개발자 [콘솔로](https://www.adobe.com/go/devs_console_ui) 이동하여 Adobe ID으로 로그인합니다. 그런 다음 Adobe 개발자 콘솔 설명서에서 빈 프로젝트 [를 만드는](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) 자습서에 나와 있는 단계를 따릅니다.
 
 ### 프로젝트에 [!DNL Experience Platform] 이벤트 추가
 
@@ -79,7 +79,7 @@ Adobe [Developer Console에서](https://www.adobe.com/go/devs_console_ui) Adobe 
 
 ![](../images/quality/subscribe-events/registration-details.png)
 
-동일한 화면에서 추가로, 이벤트를 수신하는 방법을 선택적으로 구성할 수 있습니다. **[!UICONTROL Webhook]** 를 사용하면 이벤트를 수신할 사용자 정의 웹 후크 주소를 제공할 수 있지만, **[!UICONTROL 런타임 작업을]** 사용하면 [Adobe I/O 런타임](https://www.adobe.io/apis/experienceplatform/runtime/docs.html)을 사용하여 동일한 작업을 수행할 수 있습니다.
+동일한 화면에서 추가로, 이벤트를 수신하는 방법을 선택적으로 구성할 수 있습니다. **[!UICONTROL Webhook]** 를 사용하면 이벤트를 수신할 사용자 정의 웹 후크 주소를 제공할 수 있지만 **[!UICONTROL 런타임 작업을]** 사용하면 [Adobe I/O Runtime](https://www.adobe.io/apis/experienceplatform/runtime/docs.html)를 사용하여 동일한 작업을 수행할 수 있습니다.
 
 이 자습서는 이 선택적 구성 단계를 건너뜁니다. 완료되면 구성된 이벤트 **[!UICONTROL 저장을 클릭하여 이벤트]** 등록을 완료합니다.
 
@@ -91,4 +91,4 @@ Adobe [Developer Console에서](https://www.adobe.com/go/devs_console_ui) Adobe 
 
 ## 다음 단계
 
-프로젝트에 [!DNL Platform] 알림을 등록하면 프로젝트 대시보드에서 수신된 이벤트를 볼 수 있습니다. 이벤트 추적 [에 대한 자세한 내용은 Adobe I/O 이벤트](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) 추적 안내서를 참조하십시오.
+프로젝트에 [!DNL Platform] 알림을 등록하면 프로젝트 대시보드에서 수신된 이벤트를 볼 수 있습니다. 이벤트를 추적하는 방법에 대한 자세한 내용은 [추적 Adobe I/O 이벤트](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) 안내서를 참조하십시오.
