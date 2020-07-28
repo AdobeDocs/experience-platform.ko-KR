@@ -26,13 +26,13 @@ API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-의 모든 리소스 [!DNL Experience Platform] 는 특정 가상 샌드박스와 분리됩니다. API에 [!DNL Platform] 대한 모든 요청에는 작업이 수행할 샌드박스의 이름을 지정하는 헤더가 필요합니다. 의 샌드박스에 대한 자세한 내용 [!DNL Platform]은 [샌드박스 개요 설명서를 참조하십시오](../sandboxes/home.md).
+의 모든 리소스 [!DNL Experience Platform] 는 특정 가상 샌드박스와 분리됩니다. API에 대한 모든 [!DNL Platform] 요청에는 작업이 수행할 샌드박스의 이름을 지정하는 헤더가 필요합니다. 의 샌드박스에 대한 자세한 내용 [!DNL Platform]은 [샌드박스 개요 설명서를 참조하십시오](../sandboxes/home.md).
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
 ## 관측 가능한 지표 검색
 
-Observability Insights API에서 종단점에 대한 GET 요청을 `/metrics` 작성하여 관측 가능한 지표를 검색할 수 있습니다.
+Observability Insights API에서 종단점에 대한 GET 요청을 수행하여 관측 가능한 지표를 검색할 수 `/metrics` 있습니다.
 
 **API 형식**
 
