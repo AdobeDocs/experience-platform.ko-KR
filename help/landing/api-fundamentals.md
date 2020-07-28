@@ -18,7 +18,7 @@ Adobe Experience Platform API는 JSON 기반 [!DNL Platform] 리소스를 효과
 
 ## JSON 포인터 {#json-pointer}
 
-JSON 포인터는 JSON 문서 내의 특정 값을 식별하기 위한 표준화된 문자열 구문([RFC 6901](https://tools.ietf.org/html/rfc6901))입니다. JSON 포인터는 `/` 문자로 구분된 토큰의 문자열로서, 개체 키 또는 배열 인덱스를 지정하고, 토큰은 문자열 또는 숫자일 수 있습니다. JSON 포인터 문자열은 이 문서의 후반부에서 설명한 바와 같이 API에 대한 많은 [!DNL Platform] PATCH 작업에 사용됩니다. JSON 포인터에 대한 자세한 내용은 [JSON 포인터 개요 설명서를 참조하십시오](https://rapidjson.org/md_doc_pointer.html).
+JSON 포인터는 JSON 문서 내의 특정 값을 식별하기 위한 표준화된 문자열 구문([RFC 6901](https://tools.ietf.org/html/rfc6901))입니다. JSON 포인터는 `/` 문자로 구분된 토큰의 문자열로서, 개체 키 또는 배열 인덱스를 지정하고, 토큰은 문자열 또는 숫자일 수 있습니다. JSON 포인터 문자열은 이 문서의 후반부에서 설명한 바와 같이 API에 대한 많은 PATCH 작업에 [!DNL Platform] 사용됩니다. JSON 포인터에 대한 자세한 내용은 [JSON 포인터 개요 설명서를 참조하십시오](https://rapidjson.org/md_doc_pointer.html).
 
 ### JSON 스키마 개체 예
 
@@ -87,7 +87,7 @@ JSON 포인터는 JSON 문서 내의 특정 값을 식별하기 위한 표준화
 
 ## JSON 패치
 
-요청 페이로드에 대해 JSON 패치 개체를 허용하는 [!DNL Platform] API에 대한 많은 패치 작업이 있습니다. JSON 패치는 JSON 문서의 변경 사항을 설명하는 표준 형식([RFC 6902](https://tools.ietf.org/html/rfc6902))입니다. 이를 통해 전체 문서를 요청 본문에 보내지 않고도 JSON에 대한 부분 업데이트를 정의할 수 있습니다.
+요청 페이로드에 대해 JSON 패치 개체를 허용하는 [!DNL Platform] API에 대한 많은 PATCH 작업이 있습니다. JSON 패치는 JSON 문서의 변경 사항을 설명하는 표준 형식([RFC 6902](https://tools.ietf.org/html/rfc6902))입니다. 이를 통해 전체 문서를 요청 본문에 보내지 않고도 JSON에 대한 부분 업데이트를 정의할 수 있습니다.
 
 ### 예제 JSON 패치 개체
 
@@ -98,7 +98,7 @@ JSON 포인터는 JSON 문서 내의 특정 값을 식별하기 위한 표준화
 }
 ```
 
-* `op`: 패치 작업의 유형입니다. JSON 패치는 여러 가지 작업 유형을 지원하지만 API의 일부 PATCH 작업은 모든 작업 유형과 호환되지 [!DNL Platform] 않습니다. 사용 가능한 작업 유형은 다음과 같습니다.
+* `op`: 패치 작업의 유형입니다. JSON 패치는 몇 가지 서로 다른 작업 유형을 지원하지만 API의 일부 PATCH 작업은 모든 작업 유형과 호환되지 [!DNL Platform] 않습니다. 사용 가능한 작업 유형은 다음과 같습니다.
    * `add`
    * `remove`
    * `replace`
