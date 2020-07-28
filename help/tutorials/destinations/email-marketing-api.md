@@ -12,7 +12,7 @@ ht-degree: 1%
 ---
 
 
-# 이메일 마케팅 대상을 만들고 Adobe의 [!DNL Real-time Customer Data Platform]
+# Adobe에서 이메일 마케팅 대상 만들기 및 데이터 활성화 [!DNL Real-time Customer Data Platform]
 
 이 자습서에서는 API 호출을 사용하여 Adobe Experience Platform 데이터에 연결하고, [이메일 마케팅 대상을](../../rtcdp/destinations/email-marketing-destinations.md)만들고, 새로 만든 대상에 데이터 흐름을 만들고, 데이터를 새로 만든 대상에 활성화하는 방법을 설명합니다.
 
@@ -30,7 +30,7 @@ Adobe의 실시간 CDP에서 사용자 인터페이스를 사용하여 대상을
 * [!DNL Catalog Service](../../catalog/home.md): [!DNL Catalog] 는 데이터 위치 및 계열에 대한 기록 시스템입니다 [!DNL Experience Platform].
 * [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되도록 단일 [!DNL Platform] 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
 
-다음 섹션에서는 Adobe 실시간 CDP의 이메일 마케팅 대상으로 데이터를 활성화하기 위해 알아야 할 추가 정보를 제공합니다.
+다음 섹션에서는 Adobe 실시간 CDP에서 이메일 마케팅 대상으로 데이터를 활성화하기 위해 알아야 할 추가 정보를 제공합니다.
 
 ### 필요한 자격 증명 수집
 
@@ -58,7 +58,7 @@ API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 
 >[!N참고]
 >의 샌드박스에 대한 자세한 내용 [!DNL Experience Platform]은 [샌드박스 개요 설명서를 참조하십시오](../../sandboxes/home.md).
 
-페이로드(POST, PUT, PATCH)가 포함된 모든 요청에는 추가 미디어 유형 헤더가 필요합니다.
+페이로드(POST, PUT, PATCH)이 포함된 모든 요청에는 추가 미디어 유형 헤더가 필요합니다.
 
 * 컨텐츠 유형: `application/json`
 
@@ -86,7 +86,7 @@ Before starting this tutorial, familiarize yourself with the following terms whi
 
 ![대상 단계 개요 단계 1](../images/destinations/flow-api-destinations-step1.png)
 
-첫 번째 단계에서는 데이터를 활성화할 이메일 마케팅 대상을 결정해야 합니다. 먼저 세그먼트를 연결하고 활성화할 수 있는 사용 가능한 대상 목록을 요청하는 호출을 수행하십시오. 사용 가능한 대상 목록을 `connectionSpecs` 반환하려면 끝점에 다음 GET 요청을 수행하십시오.
+첫 번째 단계에서는 데이터를 활성화할 이메일 마케팅 대상을 결정해야 합니다. 먼저 세그먼트를 연결하고 활성화할 수 있는 사용 가능한 대상 목록을 요청하는 호출을 수행하십시오. 사용 가능한 대상 목록을 `connectionSpecs` 반환하려면 종단점에 다음 GET 요청을 수행하십시오.
 
 **API 형식**
 
@@ -467,9 +467,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 이전 단계에서 얻은 ID를 사용하여 이제 데이터를 활성화할 데이터와 대상 사이에 데이터 흐름을 만들 수 있습니다. [!DNL Experience Platform] 이 단계는 나중에 데이터가 원하는 대상과 사이에 흐르도록 파이프라인을 구성하는 것으로 [!DNL Experience Platform] 간주합니다.
 
-데이터 흐름을 만들려면, 아래와 같이 POST 요청을 수행하고 페이로드 내에 아래 언급된 값을 제공합니다.
+데이터 흐름을 만들려면 아래에 표시된 대로 POST 요청을 수행하고 페이로드 내에 아래 언급된 값을 제공합니다.
 
-다음 POST 요청을 수행하여 데이터 흐름을 만듭니다.
+데이터 흐름을 만들려면 다음 POST 요청을 수행하십시오.
 
 **API 형식**
 
@@ -539,7 +539,7 @@ curl -X POST \
 
 모든 연결과 데이터 흐름을 만들었으므로 이제 프로필 데이터를 이메일 마케팅 플랫폼으로 활성화할 수 있습니다. 이 단계에서는 대상으로 보내는 세그먼트 및 프로필 속성을 선택하고 데이터를 예약하고 대상에 보낼 수 있습니다.
 
-세그먼트를 새 대상에 활성화하려면 아래 예와 유사한 JSON 패치 작업을 수행해야 합니다. 한 번의 호출에서 여러 세그먼트 및 프로필 속성을 활성화할 수 있습니다. JSON 패치에 대한 자세한 내용은 [RFC 사양을 참조하십시오](https://tools.ietf.org/html/rfc6902).
+세그먼트를 새 대상에 활성화하려면 아래 예와 유사한 JSON PATCH 작업을 수행해야 합니다. 한 번의 호출에서 여러 세그먼트 및 프로필 속성을 활성화할 수 있습니다. JSON PATCH에 대한 자세한 내용은 [RFC 사양을 참조하십시오](https://tools.ietf.org/html/rfc6902).
 
 **API 형식**
 
