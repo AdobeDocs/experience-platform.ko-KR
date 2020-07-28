@@ -48,7 +48,7 @@ API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 
 >
 >의 샌드박스에 대한 자세한 내용 [!DNL Platform]은 [샌드박스 개요 설명서를 참조하십시오](../../sandboxes/home.md).
 
-페이로드(POST, PUT, PATCH)가 포함된 모든 요청에는 추가 헤더가 필요합니다.
+페이로드(POST, PUT, PATCH)이 포함된 모든 요청에는 추가 헤더가 필요합니다.
 
 - 컨텐츠 유형: application/json
 
@@ -342,7 +342,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
 | 속성 | 설명 |
 | -------- | ----------- |
 | `{CONNECTION_ID}` | 이전에 만든 스트리밍 연결의 ID입니다. |
-| `xactionId` | 방금 보낸 레코드에 대해 서버측에서 생성된 고유한 식별자입니다. 이 ID는 Adobe가 다양한 시스템과 디버깅을 통해 이 기록의 라이프사이클을 추적하는 데 도움이 됩니다. |
+| `xactionId` | 방금 보낸 레코드에 대해 서버측에서 생성된 고유한 식별자입니다. 이 ID는 다양한 시스템과 디버깅을 통해 이 레코드의 라이프사이클을 Adobe으로 추적하는 데 도움이 됩니다. |
 | `receivedTimeMs` | 요청을 받은 시간을 표시하는 타임스탬프(밀리초 단위) |
 | `synchronousValidation.status` | 쿼리 매개 변수가 `synchronousValidation=true` 추가되었으므로 이 값이 나타납니다. 유효성 검사에 성공하면 상태가 됩니다 `pass`. |
 
