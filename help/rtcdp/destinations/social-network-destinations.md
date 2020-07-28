@@ -18,5 +18,5 @@ ht-degree: 0%
 
 Adobe 실시간 고객 데이터 Platform은 현재 다음과 같은 소셜 네트워크 대상을 지원합니다.
 
-* [Adobe Livefyre 익스텐션](/help/rtcdp/destinations/adobe-livefyre-extension.md)
+* [Adobe Livefyre 확장](/help/rtcdp/destinations/adobe-livefyre-extension.md)
 * [!DNL Facebook](/help/rtcdp/destinations/facebook-destination.md)
