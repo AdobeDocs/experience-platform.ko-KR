@@ -18,7 +18,7 @@ MLInstice는 기존 [엔진](./engines.md) 및 교육 매개 변수, 점수 매�
 
 ## MLInestment 만들기 {#create-an-mlinstance}
 
-유효한 엔진 ID(Engine Id)와 적절한 기본 구성 세트로 구성된 요청 페이로드를 제공하면서 POST 요청을 수행하여 MLIninstance를 만들 수`{ENGINE_ID}`있습니다.
+유효한 엔진 ID(Engine ID)와 적절한 기본 구성 세트로 구성된 요청 페이로드를 제공하면서 POST 요청을 수행하여 MLInence를 만들 수`{ENGINE_ID}`있습니다.
 
 엔진 ID가 PySpark 또는 Spark Engine을 참조하는 경우 코어 수 또는 메모리 양과 같은 컴퓨팅 리소스의 양을 구성할 수 있습니다. Python Engine이 참조되는 경우 트레이닝과 점수 지정을 위해 CPU나 GPU를 사용할 수 있습니다. 자세한 내용은 [PySpark 및 Spark 리소스 구성](./appendix.md#resource-config) 및 [Python CPU 및 GPU 구성에](./appendix.md#cpu-gpu-config) 대한 부록 섹션을 참조하십시오.
 
@@ -198,7 +198,7 @@ curl -X GET \
 
 ## 특정 MLInestment 검색 {#retrieve-specific}
 
-요청 경로에서 원하는 MLInposition의 ID를 포함하는 GET 요청을 수행하여 특정 MLInence의 세부 사항을 검색할 수 있습니다.
+요청 경로에 원하는 MLInence의 ID를 포함하는 GET 요청을 수행하여 특정 MLInence의 세부 사항을 검색할 수 있습니다.
 
 **API 형식**
 
@@ -271,11 +271,11 @@ curl -X GET \
 
 ## MLInestment 업데이트
 
-요청 경로에서 대상 MLInestions의 ID를 포함하는 PUT 요청을 통해 속성을 덮어쓰고 업데이트된 속성이 포함된 JSON 페이로드를 제공함으로써 기존 MLInestment를 업데이트할 수 있습니다.
+요청 경로에 대상 MLInestment의 ID가 포함된 PUT 요청을 통해 해당 속성을 덮어쓰고 업데이트된 속성이 포함된 JSON 페이로드를 제공하여 기존 MLInestment를 업데이트할 수 있습니다.
 
 >[!TIP]
 >
->이 PUT 요청의 성공을 보장하기 위해, 먼저 ID로 MLInposition을 [검색하기 위한 GET 요청을 수행하는 것이 좋습니다](#retrieve-specific). 그런 다음 반환된 JSON 개체를 수정 및 업데이트하고 수정된 JSON 개체 전체를 PUT 요청의 페이로드로 적용합니다.
+>이 PUT 요청의 성공을 보장하기 위해 먼저 ID로 MLInposition을 [검색하기 위한 GET 요청을 수행하는 것이 좋습니다](#retrieve-specific). 그런 다음 반환된 JSON 개체를 수정 및 업데이트하고 수정된 JSON 개체 전체를 PUT 요청에 대한 페이로드로 적용합니다.
 
 다음 샘플 API 호출은 처음에 이러한 속성을 갖는 동안 MLInestion의 교육 및 점수 매개 변수를 업데이트합니다.
 
