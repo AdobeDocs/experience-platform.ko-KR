@@ -1,8 +1,8 @@
 ---
 title: 실시간 고객 데이터 Platform에 대한 데이터 품질
-seo-title: Adobe 실시간 고객 데이터 Platform의 데이터 품질
+seo-title: Adobe의 데이터 품질 실시간 고객 데이터 Platform
 description: 실시간 고객 데이터 Platform에 대한 데이터 품질 문서
-seo-description: Adobe 실시간 고객 데이터 Platform에 대한 일괄 처리 및 데이터 수집으로 데이터 품질이 작동하는 방식을 설명하는 문서
+seo-description: Adobe 실시간 고객 데이터 Platform에서 일괄 처리 및 데이터 입입을 통해 데이터 품질이 작동하는 방식을 설명하는 문서
 translation-type: tm+mt
 source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
 workflow-type: tm+mt
