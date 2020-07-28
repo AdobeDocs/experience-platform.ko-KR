@@ -40,7 +40,7 @@ ht-degree: 1%
 
 >[!IMPORTANT] 관계를 설정하려면 두 스키마 모두 기본 ID를 정의했고 에 대해 활성화되어야 합니다 [!DNL Real-time Customer Profile]. 스키마 구성 방법에 대한 지침 [이 필요한 경우 스키마 생성 자습서에서 프로필에](./create-schema-api.md#profile) 사용할 스키마를 활성화하는 방법을 참조하십시오.
 
-두 스키마 간의 관계를 정의하려면 먼저 두 스키마 모두에 대한 `$id` 값을 얻어야 합니다. 스키마의 표시 이름(`title`)을 알고 있는 경우 `$id` API의 `/tenant/schemas` [!DNL Schema Registry] 종단점에 GET 요청을 함으로써 해당 값을 찾을 수 있습니다.
+두 스키마 간의 관계를 정의하려면 먼저 두 스키마 모두에 대한 `$id` 값을 얻어야 합니다. 스키마의 표시 이름(`title`)을 알고 있는 경우 `$id` API의 `/tenant/schemas` [!DNL Schema Registry] 종단점에 GET 요청을 하여 해당 값을 찾을 수 있습니다.
 
 **API 형식**
 
@@ -120,7 +120,7 @@ curl -X GET \
 
 ### 새로운 믹싱 만들기
 
-스키마에 새 필드를 추가하려면 먼저 혼합에서 정의해야 합니다. 종단점에 대한 POST 요청을 만들어 새 믹싱을 만들 수 `/tenant/mixins` 있습니다.
+스키마에 새 필드를 추가하려면 먼저 혼합에서 정의해야 합니다. 종단점에 대한 POST 요청을 만들어 새 혼합을 만들 수 `/tenant/mixins` 있습니다.
 
 **API 형식**
 
@@ -336,7 +336,7 @@ curl -X PATCH \
 
 스키마 필드가 관계의 다른 스키마에서 참조로 사용되는 경우 해당 스키마 필드에 참조 ID 설명자가 적용되어야 합니다. &quot; `favoriteHotel` &quot;의[!DNL Loyalty Members]필드가 &quot; `email` &quot;의[!DNL Hotels]필드를 참조하므로 참조 ID 설명자 `email` 가제공되어야 합니다.
 
-종단점에 대한 POST 요청을 만들어 대상 스키마에 대한 참조 설명자를 `/tenant/descriptors` 만듭니다.
+종단점에 POST 요청을 만들어 대상 스키마에 대한 참조 설명자를 `/tenant/descriptors` 만듭니다.
 
 **API 형식**
 
