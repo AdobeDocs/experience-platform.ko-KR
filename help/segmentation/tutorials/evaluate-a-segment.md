@@ -69,13 +69,13 @@ ht-degree: 0%
 
 ### 일정 활성화
 
-기본적으로 POST(Create) 요청 본문에 `state` 속성이 설정되어 있지 않으면 생성 시 일정 `active` 이 비활성화됩니다. 종단점에 PATCH 요청을 만들고 경로 `state` `active``/config/schedules` 에 예약의 ID를 포함하여 일정(설정)을 활성화할 수 있습니다.
+기본적으로, 속성이 만들기(POST) 요청 본문에 로 설정되어 있지 않은 이상 `state` 만들어진 경우 일정 `active` 은 비활성화됩니다. 종단점에 PATCH 요청을 만들고 경로에 있는 일정 `state` 의 ID를 포함하여 일정(설정 `active``/config/schedules` )을 활성화할 수 있습니다.
 
 이 끝점 사용에 대한 자세한 내용은 예약 끝점 [안내서에서 확인할 수 있습니다.](../api/schedules.md#update-state)
 
 ### 예약 시간 업데이트
 
-종단점에 대한 PATCH 요청을 만들고 경로에 있는 예약의 ID를 포함하여 예약 시간을 업데이트할 수 있습니다. `/config/schedules`
+종단점에 PATCH 요청을 만들고 경로에 있는 예약의 ID를 포함하여 예약 시간을 `/config/schedules` 업데이트할 수 있습니다.
 
 이 끝점 사용에 대한 자세한 내용은 예약 끝점 [안내서에서 확인할 수 있습니다.](../api/schedules.md#update-schedule)
 
@@ -87,14 +87,14 @@ ht-degree: 0%
 
 세그먼트 작업은 새 대상 세그먼트를 만드는 비동기 프로세스입니다. 프로필 조각에서 겹치는 속성을 병합하는 방법을 제어하는 모든 병합 정책뿐만 아니라 세그먼트 정의를 참조합니다 [!DNL Real-time Customer Profile] . 세그먼트 작업이 성공적으로 완료되면 처리 중에 발생한 오류와 대상의 최종 크기 등 세그먼트에 대한 다양한 정보를 수집할 수 있습니다.
 
-API의 끝점에 대한 POST 요청을 만들어 새 세그먼트 작업 `/segment/jobs` 을 만들 수 [!DNL Real-time Customer Profile] 있습니다.
+API의 종단점에 대한 POST 요청을 만들어 새 세그먼트 작업 `/segment/jobs` 을 만들 수 [!DNL Real-time Customer Profile] 있습니다.
 
 이 끝점 사용에 대한 자세한 내용은 [세그먼트 작업 끝점 안내서에서 확인할 수 있습니다](../api/segment-jobs.md#create)
 
 
 ### 세그먼트 작업 상태 보기
 
-특정 세그먼트 작업 `id` 에 대해 GET(조회 요청)을 사용하여 작업의 현재 상태를 볼 수 있습니다.
+특정 세그먼트 작업 `id` 에 대해 조회 요청(GET)을 수행하여 작업의 현재 상태를 볼 수 있습니다.
 
 이 끝점 사용에 대한 자세한 내용은 [세그먼트 작업 끝점 안내서에서 확인할 수 있습니다](../api/segment-jobs.md#get)
 
@@ -216,7 +216,7 @@ curl -X POST \
 
 ### 대상 구성원을 위한 프로필 생성 {#generate-profiles}
 
-조합 지속 데이터 집합이 있으면 내보내기 작업을 만들어 API의 `/export/jobs` 끝점에 POST 요청을 만들고 내보내려는 세그먼트에 대한 데이터 집합 ID 및 세그먼트 정보를 제공하여 대상 멤버를 데이터 세트에 유지할 수 [!DNL Real-time Customer Profile] 있습니다.
+조합 지속 데이터 집합이 있으면 내보내기 작업을 만들어 API의 `/export/jobs` 종단점에 POST 요청을 수행하고 내보내려는 세그먼트에 대한 데이터 집합 ID 및 세그먼트 정보를 제공하여 대상 멤버를 데이터 세트에 유지할 수 [!DNL Real-time Customer Profile] 있습니다.
 
 이 끝점 사용에 대한 자세한 내용은 [내보내기 작업 끝점 안내서를 참조하십시오](../api/export-jobs.md#create)
 
