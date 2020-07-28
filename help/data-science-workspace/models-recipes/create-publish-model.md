@@ -18,7 +18,7 @@ ht-degree: 0%
 
 온라인 소매 웹 사이트를 소유하고 있다고 가정해 보십시오. 고객이 소매 웹 사이트에서 쇼핑할 때 개인화된 제품 권장 사항을 제시하여 비즈니스에 제공하는 다양한 기타 제품을 표시하고 싶을 것입니다. 웹 사이트 존재의 기간 동안 고객 데이터를 지속적으로 수집하여 이 데이터를 통해 맞춤형 제품 추천을 생성하고자 합니다.
 
-[!DNL Adobe Experience Platform] [!DNL Data Science Workspace] 사전 작성된 [제품 추천 레시피를 사용하여 목표를 달성할 수 있는 방법을 제공합니다](../pre-built-recipes/product-recommendations.md). 이 튜토리얼에 따라 소매 데이터에 액세스하고 이를 이해하며 기계 학습 모델을 생성 및 최적화하고 인사이트를 생성하는 방법을 확인하십시오 [!DNL Data Science Workspace].
+[!DNL Adobe Experience Platform] [!DNL Data Science Workspace] 사전 제작된 [제품 Recommendations 레시피를 사용하여 목표를 달성할 수 있는 방법을 제공합니다](../pre-built-recipes/product-recommendations.md). 이 튜토리얼에 따라 소매 데이터에 액세스하고 이를 이해하며 기계 학습 모델을 생성 및 최적화하고 인사이트를 생성하는 방법을 확인하십시오 [!DNL Data Science Workspace].
 
 이 자습서는 기계 학습 모델 [!DNL Data Science Workspace]을 만들기 위한 다음 단계에 대해 설명합니다.
 
@@ -34,18 +34,18 @@ ht-degree: 0%
 * 액세스 권한 [!DNL Adobe Experience Platform]. 에서 IMS 조직에 액세스할 수 없는 경우 시스템 관리자 [!DNL Experience Platform]에게 연락하여 진행하십시오.
 
 * 활성 에셋. 다음 항목을 제공하려면 계정 담당자에게 문의하십시오.
-   * 추천 레서피
-   * 추천 입력 데이터 집합
-   * 추천 입력 스키마
-   * 추천 출력 데이터 집합
+   * Recommendations 레서피
+   * Recommendations 입력 데이터 세트
+   * Recommendations 입력 스키마
+   * Recommendations 출력 데이터 세트
    * Recommendations 출력 스키마
    * 골든 데이터 세트 postValues
    * 골든 데이터 집합 스키마
 
-* Adobe [!DNL Jupyter Notebook] 공용 <a href="https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources/Notebooks-Thurs" target="_blank">저장소에서 [!DNL Git] 필요한 세 개</a>파일을 다운로드하면 이 파일을 사용하여 작업 과정을 [!DNL JupyterLab] 보여 줍니다 [!DNL Data Science Workspace].
+* Adobe 공용 [!DNL Jupyter Notebook] 저장소에서 필요한 세 개의 파일 <a href="https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources/Notebooks-Thurs" target="_blank">을 다운로드하면 이 파일을 사용하여 작업 과정을 [!DNL Git] 보여 줍니다</a>[!DNL JupyterLab] [!DNL Data Science Workspace].
 
 * 이 튜토리얼에서 사용되는 다음 주요 개념에 대한 작업 이해:
-   * [!DNL Experience Data Model](../../xdm/home.md): Adobe가 고객 경험 관리를 위해 ExperienceEvent와 같은 표준 스키마 [!DNL Profile] 를 정의하는 표준화 노력을 기울입니다.
+   * [!DNL Experience Data Model](../../xdm/home.md): Adobe이 고객 경험 관리를 위한 표준 스키마(예: [!DNL Profile] 및 ExperienceEvent)를 정의하는 데 주도적인 표준화 활동입니다.
    * 데이터 집합: 실제 데이터를 위한 저장 및 관리 구성 XDM 스키마의 실제 인스턴스화된 [인스턴스입니다](../../xdm/schema/field-dictionary.md).
    * 배치: 데이터 세트는 배치로 구성됩니다. 일괄 처리란 일정 기간 동안 수집된 데이터 집합이며 하나의 단위로 함께 처리됩니다.
    * [!DNL JupyterLab]: [!DNL JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) 는 프로젝트를 위한 오픈 소스 웹 기반 인터페이스 [!DNL Jupyter] 로 긴밀하게 통합되어 [!DNL Experience Platform]있습니다.
@@ -68,25 +68,25 @@ ht-degree: 0%
 | 데이터 집합 이름 | 스키마 | 설명 |
 | ----- | ----- | ----- |
 | 골든 데이터 세트 postValues | 골든 데이터 집합 스키마 | [!DNL Analytics] 웹 사이트의 소스 데이터 |
-| 추천 입력 데이터 집합 | 추천 입력 스키마 | 이 [!DNL Analytics] 데이터는 기능 파이프라인을 사용하여 교육 데이터 세트로 변환됩니다. 이 데이터는 제품 권장 사항 기계 학습 모델을 교육하는 데 사용됩니다. `itemid` 해당 고객이 구매한 제품에 `userid` 해당합니다. |
-| 추천 출력 데이터 집합 | Recommendations 출력 스키마 | 점수 지정 결과가 저장되는 데이터 세트에 각 고객에 대해 권장되는 제품 목록이 포함됩니다. |
+| Recommendations 입력 데이터 세트 | Recommendations 입력 스키마 | 이 [!DNL Analytics] 데이터는 기능 파이프라인을 사용하여 교육 데이터 세트로 변환됩니다. 이 데이터는 제품 Recommendations 기계 학습 모델을 교육하는 데 사용됩니다. `itemid` 해당 고객이 구매한 제품에 `userid` 해당합니다. |
+| Recommendations 출력 데이터 세트 | Recommendations 출력 스키마 | 점수 지정 결과가 저장되는 데이터 세트에 각 고객에 대해 권장되는 제품 목록이 포함됩니다. |
 
 ## 모델 작성 {#author-your-model}
 
-라이프사이클의 두 번째 구성 요소에는 [!DNL Data Science Workspace] 레서피 및 모델 작성에 포함됩니다. 제품 추천 레시피는 과거 구매 데이터와 머신 러닝을 활용하여 제품 추천을 규모에 맞게 생성하도록 설계되었습니다.
+라이프사이클의 두 번째 구성 요소에는 [!DNL Data Science Workspace] 레서피 및 모델 작성에 포함됩니다. 제품 Recommendations 레시피는 과거 구매 데이터와 머신 러닝을 활용하여 제품 추천을 규모에 맞게 생성하도록 설계되었습니다.
 
 레서피는 특정 문제를 해결하기 위해 고안된 기계 학습 알고리즘과 로직을 포함하고 있어 모델의 기본입니다. 더욱 중요한 것은 레서피 솔루션을 통해 조직 전체에서 머신 러닝을 민주화할 수 있으므로 다른 사용자가 코드를 작성하지 않고도 서로 다른 사용 사례에 맞는 모델을 이용할 수 있습니다.
 
-### 제품 추천 레시피 살펴보기
+### 제품 Recommendations 레시피 살펴보기
 
 1. 에서 왼쪽 탐색 [!DNL Adobe Experience Platform]열 **[!UICONTROL 에서]** 모델 **[!UICONTROL 으로 이동한 다음]** 맨 위에 있는 레서피를 클릭하여 조직에서 사용할 수 있는 레서피 목록을 확인합니다.
    ![](../images/models-recipes/model-walkthrough/browse_recipes.png)
-2. 해당 이름을 클릭하여 제공된 **[!UICONTROL Recommendations]** 레서피를 찾아 엽니다.
+2. 제공된 **[!UICONTROL Recommendations 레서피]** 이름을 클릭하여 위치를 찾아 엽니다.
    ![](../images/models-recipes/model-walkthrough/recommendations_recipe_110.png)
-3. 오른쪽 레일에서 **[!UICONTROL 권장 사항 입력 스키마를]** 클릭하여 레서피를 강력하게 하는 스키마를 봅니다. 스키마 필드 **[!UICONTROL itemId]** 및 **[!UICONTROL userId]** 는 특정 시간(타임스탬프)에 해당 고객이 구매한 제품(**[!UICONTROL interactionType]**)에&#x200B;****&#x200B;해당합니다. 동일한 단계에 따라 **[!UICONTROL Recommendations 출력 스키마의 필드를 검토하십시오]**.
+3. 오른쪽 레일에서 **[!UICONTROL Recommendations 입력 스키마를]** 클릭하여 레서피를 강력하게 하는 스키마를 봅니다. 스키마 필드 **[!UICONTROL itemId]** 및 **[!UICONTROL userId]** 는 특정 시간(타임스탬프)에 해당 고객이 구매한 제품(**[!UICONTROL interactionType]**)에&#x200B;****&#x200B;해당합니다. 동일한 단계에 따라 **[!UICONTROL Recommendations 출력 스키마의 필드를 검토하십시오]**.
    ![](../images/models-recipes/model-walkthrough/preview_schemas.png)
 
-이제 제품 권장 사항 레서피에 필요한 입력 및 출력 스키마를 검토했습니다. 이제 다음 섹션으로 이동하여 제품 추천 모델을 만들고, 교육하고, 평가하는 방법을 확인할 수 있습니다.
+이제 제품 Recommendations 레서피에 필요한 입력 및 출력 스키마를 검토했습니다. 이제 다음 섹션으로 이동하여 제품 Recommendations 모델을 생성, 교육 및 평가하는 방법을 확인할 수 있습니다.
 
 ## 모델 트레이닝 및 평가 {#train-and-evaluate-your-model}
 
@@ -98,11 +98,11 @@ ht-degree: 0%
 
 1. 에서 왼쪽 탐색 [!DNL Adobe Experience Platform]열 **[!UICONTROL 에서]** 모델 **[!UICONTROL 으로 이동한 다음 페이지]** 맨 위에 있는 레서피를 클릭하여 조직에 대해 사용 가능한 모든 레서피 목록을 표시합니다.
    ![](../images/models-recipes/model-walkthrough/browse_recipes.png)
-2. 해당 이름을 클릭하고 레서피 **[!UICONTROL 의]** 개요 페이지를 입력하여 제공된 Recommendations 레서피를 찾아 엽니다. 중심(기존 모델이 없는 경우) **[!UICONTROL 이나 레서피]** 개요 페이지의 오른쪽 상단에서 모델 만들기를 클릭합니다.
+2. 해당 이름을 클릭하고 레서피 **[!UICONTROL 개요 페이지를 입력하여 제공된]** Recommendations 레서피를 찾아 엽니다. 중심(기존 모델이 없는 경우) **[!UICONTROL 이나 레서피]** 개요 페이지의 오른쪽 상단에서 모델 만들기를 클릭합니다.
    ![](../images/models-recipes/model-walkthrough/recommendations_recipe_110.png)
-3. 교육에 사용할 수 있는 입력 데이터 세트 목록이 표시되면 [ **[!UICONTROL 권장 사항 입력 데이터 세트]** ]를 선택하고 **[!UICONTROL 다음을 클릭합니다]**.
+3. 교육에 사용할 수 있는 입력 데이터 집합 목록이 표시되면 **[!UICONTROL Recommendations 입력 데이터]** 집합을 선택하고 **[!UICONTROL 다음을 클릭합니다]**.
    ![](../images/models-recipes/model-walkthrough/select_dataset.png)
-4. &quot;제품 권장 사항 모델&quot;과 같은 모델 이름을 제공합니다. 모델의 기본 교육 및 점수 지정 동작에 대한 설정이 포함된 모델에 대한 사용 가능한 구성이 나열됩니다. 이러한 구성은 조직에 따라 다르므로 변경할 필요가 없습니다. 구성을 검토하고 마침을 **[!UICONTROL 클릭합니다]**.
+4. &quot;제품 Recommendations 모델&quot;과 같이 모델의 이름을 입력합니다. 모델의 기본 교육 및 점수 지정 동작에 대한 설정이 포함된 모델에 대한 사용 가능한 구성이 나열됩니다. 이러한 구성은 조직에 따라 다르므로 변경할 필요가 없습니다. 구성을 검토하고 마침을 **[!UICONTROL 클릭합니다]**.
    ![](../images/models-recipes/model-walkthrough/configure_model.png)
 5. 이제 모델이 생성되고 모델의 *개요* 페이지가 새로 생성된 교육 실행 내에 나타납니다. 모델이 생성될 때 기본적으로 교육 실행이 생성됩니다.
    ![](../images/models-recipes/model-walkthrough/model_post_creation.png)
@@ -141,7 +141,7 @@ ht-degree: 0%
 
 1. 제품 권장 사항 모델 *개요* 페이지에서 가장 높은 회수 및 정밀도 값으로 성과가 좋은 교육 실행 이름을 클릭합니다.
 2. 교육 실행 세부 사항 페이지의 오른쪽 맨 위에서 **[!UICONTROL 점수를 클릭합니다]**.
-3. 모델을 **[!UICONTROL 만들고]** 해당 교육 실행을 실행할 때 사용한 데이터 세트와 동일한 점수 입력 데이터 세트로 권장 사항 입력 데이터 세트를 선택합니다. 그런 다음 **[!UICONTROL 다음을 클릭합니다]**.
+3. 모델을 만들고 해당 교육 실행을 실행할 때 사용한 데이터 세트와 동일한 점수 입력 데이터 **[!UICONTROL 세트로]** Recommendations 입력 데이터 세트를 선택합니다. 그런 다음 **[!UICONTROL 다음을 클릭합니다]**.
    ![](../images/models-recipes/model-walkthrough/scoring_input.png)
 4. 점수 **[!UICONTROL 출력 데이터]** 세트로 Recommendations 출력 데이터 세트를 선택합니다. 점수 지정 결과는 이 데이터 세트에 일괄 저장됩니다.
    ![](../images/models-recipes/model-walkthrough/scoring_output.png)
