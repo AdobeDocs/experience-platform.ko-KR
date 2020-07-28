@@ -6,7 +6,7 @@ translation-type: tm+mt
 source-git-commit: a2726bfc5ef7feac374e57af9c986a9c521efa48
 workflow-type: tm+mt
 source-wordcount: '306'
-ht-degree: 37%
+ht-degree: 40%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 37%
    * [데이터 수집](https://docs.adobe.com/content/help/en/experience-platform/ingestion/home.html)
    * [데이터 과학 작업 공간](https://docs.adobe.com/content/help/en/experience-platform/data-science-workspace/home.html)
    * [Debugger](https://docs.adobe.com/content/help/ko-KR/debugger/using/experience-cloud-debugger.html)
-   * [Debugger 2.0(베타)](https://docs.adobe.com/content/help/en/debugger/using-v2/experience-cloud-debugger.html)
+   * [Debugger 2.0(베타)](https://docs.adobe.com/content/help/ko-KR/debugger/using-v2/experience-cloud-debugger.html)
    * [의사 결정 서비스](https://docs.adobe.com/content/help/en/experience-platform/decisioning/home.html)
    * [대상](https://docs.adobe.com/content/help/en/experience-platform/rtcdp/destinations/destinations-overview.html)
    * [ETL(추출, 변형, 로드)](https://docs.adobe.com/content/help/en/experience-platform/etl/home.html)
