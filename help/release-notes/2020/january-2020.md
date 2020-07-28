@@ -26,7 +26,7 @@ Adobe Experience Platform의 기존 기능 업데이트:
 
 ## [!DNL Experience Data Model] (XDM) 시스템 {#xdm}
 
-표준화와 상호 운용성은 그 이면의 핵심 개념입니다 [!DNL Experience Platform]. [!DNL Experience Data Model] (XDM)은 Adobe를 기반으로 고객 경험 데이터를 표준화하고 고객 경험 관리를 위한 스키마를 정의하는 것입니다.
+표준화와 상호 운용성은 그 이면의 핵심 개념입니다 [!DNL Experience Platform]. [!DNL Experience Data Model] (XDM)은 Adobe을 기반으로 고객 경험 데이터를 표준화하고 고객 경험 관리를 위한 스키마를 정의하는 것입니다.
 
 XDM은 디지털 경험의 강력함을 향상시키도록 고안된 공개적으로 문서화된 사양입니다. Adobe Experience Platform에서 서비스와 통신하는 모든 애플리케이션에 대한 공통 구조와 정의를 제공합니다. 모든 고객 경험 데이터는 XDM 표준을 준수하여 보다 빠르고 통합된 방식으로 인사이트를 제공하는 공통 표현에 통합할 수 있습니다. 고객 행동을 통해 유용한 인사이트를 얻고 세그먼트를 통해 고객 고객을 정의하며 개인화를 위해 고객 속성을 사용할 수 있습니다.
 
@@ -54,7 +54,7 @@ API 및 사용자 인터페이스를 사용하여 XDM을 사용하는 방법에 
 | [!DNL Privacy Service] 재브랜딩 | 이전에 &quot;GDPR 서비스&quot;라고 명명한 이 서비스는 GDPR뿐만 아니라 다른 규정 [!DNL Privacy Service] 을 지원하도록 재설계되었습니다. |
 | 새 API 끝점 | API의 기본 경로 [!DNL Privacy Service] 가 에서 (으)로 `/data/privacy/gdpr` 업데이트되었습니다 `/data/core/privacy/jobs`. |
 | 새 필수 `regulation` 속성 | API에서 새 작업을 만들 때 [!DNL Privacy Service] 작업 `regulation` 을 추적할 규칙을 나타내기 위해 요청 페이로드에서 속성을 제공해야 합니다. 허용된 값은 `gdpr` 및 `ccpa`입니다. |
-| 지원 대상 [!DNL Adobe Primetime Authentication] | [!DNL Privacy Service] 이제 Adobe의 제품 값으로 [!DNL Primetime Authentication]사용하여 액세스/삭제 요청 `primetimeAuthentication` 을 수락합니다. |
+| 지원 대상 [!DNL Adobe Primetime Authentication] | [!DNL Privacy Service] 이제 Adobe의 액세스/삭제 요청 [!DNL Primetime Authentication]을 해당 제품 값 `primetimeAuthentication` 으로 사용할 수 있습니다. |
 | Privacy Service UI 개선 사항 | GDPR 및 CPA 규정에 대한 별도의 작업 추적 페이지를 참조하십시오. 새로운 _규정 유형_ 드롭다운을 사용하여 GDPR과 CCPA에 대한 추적 데이터 간을 전환할 수 있습니다. |
 
 **알려진 문제**
@@ -92,7 +92,7 @@ Adobe Experience Platform은 외부 소스에서 데이터를 인제스트할 �
 
 ## 대상 {#destinations}
 
-Adobe [Real-time CDP에서](../../rtcdp/overview.md)대상은 대상 플랫폼과 사전 구축된 통합으로, 해당 파트너에게 데이터를 원활하게 제공할 수 있습니다.
+Adobe [실시간 CDP에서](../../rtcdp/overview.md)대상은 대상 플랫폼과 사전 구축된 통합으로, 해당 파트너에게 데이터를 원활하게 제공할 수 있습니다.
 
 **새로운 기능**
 
