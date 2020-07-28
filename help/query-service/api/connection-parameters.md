@@ -20,7 +20,7 @@ ht-degree: 1%
 
 ### 대화형 서비스에 대한 연결 매개 변수 요청
 
-종단점에 대한 GET 요청을 만들어 [대화형 서비스](../creating-queries/writing-queries.md) 사용을 위한 연결 매개 변수를 검색할 수 `/connection_parameters` 있습니다. 연결 매개 변수를 사용하여 대화형 서비스를 통해 연결하는 클라이언트에 대한 자세한 내용은 [쿼리 서비스 클라이언트에 대한 설명서를 참조하십시오](../clients/overview.md).
+종단점에 GET 요청을 만들어 [대화형 서비스](../creating-queries/writing-queries.md) 사용을 위한 연결 매개 변수를 검색할 수 `/connection_parameters` 있습니다. 연결 매개 변수를 사용하여 대화형 서비스를 통해 연결하는 클라이언트에 대한 자세한 내용은 [쿼리 서비스 클라이언트에 대한 설명서를 참조하십시오](../clients/overview.md).
 
 **API 형식**
 
