@@ -20,7 +20,7 @@ ht-degree: 3%
 
 ### 예약된 쿼리 목록 검색
 
-종단점에 GET 요청을 만들어 IMS 조직에 대해 예약된 모든 쿼리 목록을 검색할 수 `/schedules` 있습니다.
+종단점에 대한 GET 요청을 수행하여 IMS 조직에 대해 예약된 모든 쿼리 목록을 검색할 수 `/schedules` 있습니다.
 
 **API 형식**
 
@@ -124,7 +124,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/schedules?limit=1
 
 ### 예약된 새 쿼리 만들기
 
-종단점에 대한 POST 요청을 만들어 새 예약된 쿼리를 만들 수 `/schedules` 있습니다.
+종단점에 POST 요청을 만들어 새 예약된 쿼리를 만들 수 `/schedules` 있습니다.
 
 **API 형식**
 
@@ -223,7 +223,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/schedules
 
 ### 지정된 예약된 쿼리의 요청 세부 사항
 
-종단점에 GET 요청을 만들고 요청 경로에 해당 ID를 제공하여 특정 예약된 쿼리에 대한 정보를 검색할 수 `/schedules` 있습니다.
+종단점에 GET 요청을 하고 요청 경로에 해당 ID를 제공하여 특정 예약된 쿼리에 대한 정보를 검색할 수 `/schedules` 있습니다.
 
 **API 형식**
 
@@ -306,9 +306,9 @@ curl -X GET https://platform.adobe.io/data/foundation/query/schedules/e95186d65a
 
 ### 지정된 예약된 쿼리의 세부 정보 업데이트
 
-종단점에 PATCH 요청을 수행하고 요청 경로에 해당 ID를 제공하여 지정된 예약된 쿼리의 세부 사항을 업데이트할 수 `/schedules` 있습니다.
+종단점에 PATCH 요청을 하고 요청 경로에 해당 ID를 제공하여 지정된 예약된 쿼리의 세부 사항을 업데이트할 수 `/schedules` 있습니다.
 
-PATCH 요청은 두 가지 다른 경로를 지원합니다. `/state` 및 `/schedule/schedule`.
+PATCH 요청은 두 개의 다른 경로를 지원합니다. `/state` 및 `/schedule/schedule`.
 
 ### 예약된 쿼리 상태 업데이트
 
