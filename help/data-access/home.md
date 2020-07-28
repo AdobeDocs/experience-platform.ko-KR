@@ -36,4 +36,4 @@ SDK를 사용하여 데이터 세트를 읽고 쓸 수 [!DNL Spark] 있습니다
 
 ## 데이터 수집 이벤트 가입
 
-[!DNL Platform] 은 [Adobe 개발자 콘솔을 통해 특정 고부가가치 이벤트를 구독할 수 있도록 합니다](https://www.adobe.com/go/devs_console_ui). 예를 들어 데이터 수집 이벤트에 가입하여 예상되는 지연 및 실패에 대한 알림을 받을 수 있습니다. 자세한 내용은 데이터 수집 알림 [가입에](../ingestion/quality/subscribe-events.md) 대한 자습서를 참조하십시오.
+[!DNL Platform] 은 [Adobe 개발자 콘솔을 통해 구독에 특정 고부가가치 이벤트를 사용할 수 있도록 합니다](https://www.adobe.com/go/devs_console_ui). 예를 들어 데이터 수집 이벤트에 가입하여 예상되는 지연 및 실패에 대한 알림을 받을 수 있습니다. 자세한 내용은 데이터 수집 알림 [가입에](../ingestion/quality/subscribe-events.md) 대한 자습서를 참조하십시오.
