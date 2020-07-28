@@ -168,7 +168,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/035e2520-5
 
 ## 파일 검색 {#retrieving-your-files}
 
-이전 단계에서 `href` 얻은 값을 API 호출로 사용하여 파일 디렉토리를 검색하려면 새 GET 요청을 만듭니다.
+이전 단계에서 `href` 얻은 값을 API 호출로 사용하여 파일 디렉토리를 검색할 새 GET 요청을 만듭니다.
 
 **API 형식**
 
@@ -234,14 +234,14 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/035e2520
 
 | 매개 변수 | 설명 |
 | --------- | ----------- |
-| `_links.self.href` | 디렉토리에서 파일을 다운로드하는 데 사용되는 GET 요청 URL. |
+| `_links.self.href` | 디렉토리에서 파일을 다운로드하는 데 사용되는 GET 요청 URL입니다. |
 
 
 배열에 있는 모든 파일 객체 `href` 값을 `data` 복사한 다음 다음 다음 단계로 진행합니다.
 
 ## 파일 데이터 다운로드
 
-파일 데이터를 다운로드하려면 파일을 `"href"` 검색하는 이전 단계에서 복사한 [값에 GET 요청을](#retrieving-your-files)하십시오.
+파일 데이터를 다운로드하려면 파일 `"href"` 검색 [](#retrieving-your-files)이전 단계에서 복사한 값에 대해 GET 요청을 하십시오.
 
 >[!NOTE]
 >
