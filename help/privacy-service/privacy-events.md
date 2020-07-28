@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # 구독 대상 [!DNL Privacy Events]
 
-[!DNL Privacy Events] 은 효율적인 작업 요청 자동화를 위해 구성된 웹후크에 전송된 Adobe I/O 이벤트를 활용하는 Adobe Experience Platform [!DNL Privacy Service]에서 제공하는 메시지입니다. 작업이 완료되었는지 또는 워크플로우 내의 특정 이정표에 도달했는지 확인하기 위해 [!DNL Privacy Service] API를 폴링할 필요가 없어집니다.
+[!DNL Privacy Events] 은 효율적인 작업 요청 자동화 [!DNL Privacy Service]를 위해 구성된 웹후크에 Adobe I/O 이벤트를 활용하는 Adobe Experience Platform에서 제공하는 메시지입니다. 작업이 완료되었는지 또는 워크플로우 내의 특정 이정표에 도달했는지 확인하기 위해 [!DNL Privacy Service] API를 폴링할 필요가 없어집니다.
 
 개인 정보 작업 요청 라이프사이클과 관련된 4가지 유형의 알림이 현재 있습니다.
 
@@ -25,7 +25,7 @@ ht-degree: 1%
 | 제품 완료 | 이 작업과 관련된 솔루션 중 하나가 작업을 완료했습니다. |
 | 제품 오류 | 요청을 처리하는 동안 솔루션 중 하나가 오류를 보고했습니다. |
 
-이 문서에서는 Adobe I/O 내 알림에 대한 통합을 설정하는 단계를 [!DNL Privacy Service] 제공합니다. 고급 기능 [!DNL Privacy Service] 및 기능에 대한 개요는 [Privacy Service 개요를 참조하십시오](home.md).
+이 문서에서는 Adobe I/O 내 알림에 대한 통합을 설정하는 단계를 제공합니다. [!DNL Privacy Service] 고급 기능 [!DNL Privacy Service] 및 기능에 대한 개요는 [Privacy Service 개요를 참조하십시오](home.md).
 
 ## 시작하기
 
@@ -74,7 +74,7 @@ app.listen(app.get('port'), function() {
 
 ## Adobe 개발자 콘솔에서 새 프로젝트 만들기
 
-Adobe [Developer Console에서](https://www.adobe.com/go/devs_console_ui) Adobe ID으로 로그인합니다. 그런 다음 Adobe 개발자 콘솔 문서에서 빈 프로젝트 [를 만드는 방법에 대한 자습서에 나와](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) 있는 단계를 따릅니다.
+Adobe 개발자 [콘솔로](https://www.adobe.com/go/devs_console_ui) 이동하여 Adobe ID으로 로그인합니다. 그런 다음 Adobe 개발자 콘솔 설명서에서 빈 프로젝트 [를 만드는](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) 자습서에 나와 있는 단계를 따릅니다.
 
 ## 프로젝트에 개인 정보 이벤트 추가
 
