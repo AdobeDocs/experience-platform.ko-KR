@@ -1,8 +1,8 @@
 ---
 title: 세그멘테이션 서비스 개요
-seo-title: Adobe 실시간 고객 데이터 Platform의 세분화 서비스
+seo-title: Adobe의 세분화 서비스 실시간 고객 데이터 Platform
 description: 세그멘테이션 서비스를 설명하는 개요입니다.
-seo-description: Adobe 실시간 고객 데이터 Platform의 세분화 서비스 및 세그먼트를 설명하는 개요입니다.
+seo-description: 실시간 고객 데이터 Platform에서 세그먼테이션 서비스 및 세그먼트를 설명하는 개요입니다.
 translation-type: tm+mt
 source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
 workflow-type: tm+mt
