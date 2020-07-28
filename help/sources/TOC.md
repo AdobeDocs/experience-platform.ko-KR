@@ -15,7 +15,7 @@ ht-degree: 0%
 
 - [소스 커넥터 개요](home.md)
 - 사용 가능한 소스 커넥터 {#connectors}
-   - Adobe 애플리케이션 {#adobe-applications}
+   - Adobe 응용 프로그램 {#adobe-applications}
       - [Analytics 데이터 커넥터](connectors/adobe-applications/analytics.md)
       - [Audience Manager 커넥터](connectors/adobe-applications/audience-manager.md)
       - [고객 속성 커넥터](connectors/adobe-applications/customer-attributes.md)
@@ -44,7 +44,7 @@ ht-degree: 0%
       - [Amazon Redshift 커넥터](connectors/databases/redshift.md)
       - [Azure HDInsights 커넥터의 Apache Hive](connectors/databases/hive.md)
       - [Azure HDInsights 커넥터의 Apache Spark](connectors/databases/spark.md)
-      - [Azure 데이터 탐색기 커넥터](connectors/databases/data-explorer.md)
+      - [Azure Data Explorer 커넥터](connectors/databases/data-explorer.md)
       - [Azure Synapse Analytics 커넥터](connectors/databases/synapse-analytics.md)
       - [Azure 테이블 저장소 커넥터](connectors/databases/ats.md)
       - [Couchbase 커넥터](connectors/databases/couchbase.md)
@@ -89,7 +89,7 @@ ht-degree: 0%
          - [Amazon Redshift 커넥터](tutorials/api/create/databases/redshift.md)
          - [Azure HDInsights 커넥터의 Apache Hive](tutorials/api/create/databases/hive.md)
          - [Azure HDInsights 커넥터의 Apache Spark](tutorials/api/create/databases/spark.md)
-         - [Azure 데이터 탐색기 커넥터](tutorials/api/create/databases/data-explorer.md)
+         - [Azure Data Explorer 커넥터](tutorials/api/create/databases/data-explorer.md)
          - [Azure Synapse Analytics 커넥터](tutorials/api/create/databases/synapse-analytics.md)
          - [Azure 테이블 저장소 커넥터](tutorials/api/create/databases/ats.md)
          - [Couchbase 커넥터](tutorials/api/create/databases/couchbase.md)
@@ -131,7 +131,7 @@ ht-degree: 0%
    - [Flow Service API를 사용하여 데이터 세트 기본 연결 만들기](tutorials/api/create-dataset-base-connection.md)
 - UI 자습서 {#ui-tutorials}
    - 소스 커넥터 만들기 {#create}
-      - Adobe 애플리케이션 {#adobe-applications}
+      - Adobe 응용 프로그램 {#adobe-applications}
          - [Adobe Analytics 커넥터](tutorials/ui/create/adobe-applications/analytics.md)
          - [Adobe Audience Manager 커넥터](tutorials/ui/create/adobe-applications/audience-manager.md)
          - [고객 속성 커넥터](tutorials/ui/create/adobe-applications/customer-attributes.md)
@@ -156,7 +156,7 @@ ht-degree: 0%
          - [Amazon Redshift 커넥터](tutorials/ui/create/databases/redshift.md)
          - [Azure HDInsights 커넥터의 Apache Hive](tutorials/ui/create/databases/hive.md)
          - [Azure HDInsights 커넥터의 Apache Spark](tutorials/ui/create/databases/spark.md)
-         - [Azure 데이터 탐색기 커넥터](tutorials/ui/create/databases/data-explorer.md)
+         - [Azure Data Explorer 커넥터](tutorials/ui/create/databases/data-explorer.md)
          - [Azure Synapse Analytics 커넥터](tutorials/ui/create/databases/synapse-analytics.md)
          - [Azure 테이블 저장소 커넥터](tutorials/ui/create/databases/ats.md)
          - [Couchbase 커넥터](tutorials/ui/create/databases/couchbase.md)
@@ -188,4 +188,4 @@ ht-degree: 0%
       - [프로토콜 커넥터에 대한 데이터 흐름 구성](tutorials/ui/dataflow/protocols.md)
    - [인바운드 데이터를 활성화하여 고객 프로필 채우기](tutorials/ui/profile.md)
    - [계정 및 데이터 세트 흐름 모니터링](tutorials/ui/monitor.md)
-- [플랫폼 릴리스 정보](https://www.adobe.com/go/platform-release-notes-en)
+- [Platform 릴리스 노트](https://www.adobe.com/go/platform-release-notes-en)
