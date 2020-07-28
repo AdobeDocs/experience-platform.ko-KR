@@ -132,7 +132,7 @@ curl -X GET \
 
 ## 데이터 세트를 사용하여 평가
 
-DULE 레이블을 수집할 수 있는 하나 이상의 데이터 세트에 대해 마케팅 작업을 테스트하여 DULE 정책을 평가할 수 있습니다. 이 작업은 아래 예와 같이 요청 본문 내에 데이터 세트 ID를 제공하고 POST 요청 `/marketingActions/core/{MARKETING_ACTION_NAME}/constraints` 을 수행하여 수행됩니다.
+DULE 레이블을 수집할 수 있는 하나 이상의 데이터 세트에 대해 마케팅 작업을 테스트하여 DULE 정책을 평가할 수 있습니다. 이 작업은 아래 예와 같이 요청 본문 내에 데이터 세트 ID에 POST `/marketingActions/core/{MARKETING_ACTION_NAME}/constraints` 를 요청하고 제공하여 수행됩니다.
 
 **API 형식**
 
