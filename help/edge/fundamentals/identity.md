@@ -1,8 +1,8 @@
 ---
 title: Experience Cloud ID 검색 중
 seo-title: Adobe Experience Platform 웹 SDK Experience Cloud ID 검색
-description: Adobe Experience Cloud ID를 가져오는 방법을 알아봅니다.
-seo-description: Adobe Experience Cloud ID를 가져오는 방법을 알아봅니다.
+description: Adobe Experience Cloud ID를 얻는 방법을 알아봅니다.
+seo-description: Adobe Experience Cloud ID를 얻는 방법을 알아봅니다.
 translation-type: tm+mt
 source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
@@ -14,11 +14,11 @@ ht-degree: 9%
 
 # ID - Experience Cloud ID 검색
 
-Adobe Experience Platform은 [!DNL Web SDK] Adobe Identity Service를 [활용합니다](../../identity-service/ecid.md). 이렇게 하면 각 장치에 페이지 간의 활동을 함께 연결할 수 있도록 장치에서 지속되는 고유한 식별자가 있습니다.
+Adobe Experience Platform [!DNL Web SDK] 는 [Adobe ID 서비스를 활용합니다](../../identity-service/ecid.md). 이렇게 하면 각 장치에 페이지 간의 활동을 함께 연결할 수 있도록 장치에서 지속되는 고유한 식별자가 있습니다.
 
 ## 자사 ID
 
-이 [!DNL Identity Service] 는 자사 도메인에 있는 쿠키의 ID를 저장합니다. 이 [!DNL Identity Service] 는 도메인에서 HTTP 헤더를 사용하여 쿠키를 설정하려고 시도합니다. 그렇지 않으면 Javascript를 통해 쿠키 설정으로 [!DNL Identity Service] 돌아갑니다. Adobe에서는 쿠키가 클라이언트측 ITP 제한 사항에 의해 제한되지 않도록 CNAME을 설정하는 것이 좋습니다.
+이 [!DNL Identity Service] 는 자사 도메인에 있는 쿠키의 ID를 저장합니다. 이 [!DNL Identity Service] 는 도메인에서 HTTP 헤더를 사용하여 쿠키를 설정하려고 시도합니다. 그렇지 않으면 Javascript를 통해 쿠키 설정으로 [!DNL Identity Service] 돌아갑니다. Adobe은 쿠키가 클라이언트측 ITP 제한에 의해 제한되지 않도록 CNAME을 설정하는 것이 좋습니다.
 
 ## 타사 ID
 
