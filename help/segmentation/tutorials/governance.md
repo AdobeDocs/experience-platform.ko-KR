@@ -51,7 +51,7 @@ API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 
 >
 >의 샌드박스에 대한 자세한 내용 [!DNL Platform]은 [샌드박스 개요 설명서를 참조하십시오](../../sandboxes/home.md).
 
-페이로드(POST, PUT, PATCH)가 포함된 모든 요청에는 추가 헤더가 필요합니다.
+페이로드(POST, PUT, PATCH)이 포함된 모든 요청에는 추가 헤더가 필요합니다.
 
 - 컨텐츠 유형: application/json
 
@@ -126,7 +126,7 @@ curl -X GET \
 
 ## 병합 정책에서 소스 데이터 집합 찾기 {#datasets}
 
-병합 정책에는 소스 데이터 집합에 대한 정보가 포함되며, 여기에는 데이터 사용 레이블이 포함됩니다. 병합 정책 ID를 API에 제공하여 병합 정책 세부 사항을 조회할 수 [!DNL Profile] 있습니다. 병합 정책에 대한 자세한 내용은 [병합 정책 끝점 안내서를 참조하십시오](../../profile/api/merge-policies.md).
+병합 정책에는 소스 데이터 집합에 대한 정보가 포함되며, 여기에는 데이터 사용 레이블이 포함됩니다. GET 요청에서 병합 정책 ID를 API에 제공하여 병합 정책의 세부 사항을 조회할 수 [!DNL Profile] 있습니다. 병합 정책에 대한 자세한 내용은 [병합 정책 끝점 안내서를 참조하십시오](../../profile/api/merge-policies.md).
 
 **API 형식**
 
@@ -200,7 +200,7 @@ POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | 데이터 세트를 평가하는 데이터 사용 정책과 연결된 마케팅 작업의 이름. 정책이 Adobe에 의해 정의되었는지 또는 조직에 의해 정의되었는지 여부에 따라, 각각 `/marketingActions/core` 또는 `/marketingActions/custom`사용해야 합니다. |
+| `{MARKETING_ACTION_NAME}` | 데이터 세트를 평가하는 데이터 사용 정책과 연결된 마케팅 작업의 이름. 정책이 Adobe에 의해 정의되었는지 또는 조직에 의해 정의되었는지 여부에 따라 각각 `/marketingActions/core` 또는 `/marketingActions/custom`를 사용해야 합니다. |
 
 **요청**
 
