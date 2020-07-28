@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # [!DNL Access control] 개발자 가이드
 
-[!DNL Access control] for [!DNL Experience Platform] is managed through [the Adobe Admin Console](https://adminconsole.adobe.com). 이 기능은 Admin Console의 제품 프로필을 활용하므로 사용자에게 사용 권한 및 샌드박스를 연결합니다. 자세한 내용은 [액세스 제어 개요를](../home.md) 참조하십시오.
+[!DNL Access control] 이 [!DNL Experience Platform] 는 [Adobe Admin Console](https://adminconsole.adobe.com)를 통해 관리된다. 이 기능은 Admin Console의 제품 프로필을 활용하므로 사용자에게 사용 권한 및 샌드박스를 연결합니다. 자세한 내용은 [액세스 제어 개요를](../home.md) 참조하십시오.
 
 이 개발자 안내서에서는 요청에 형식을 지정하는 방법에 대한 정보를 제공하고 다음 작업을 다룹니다. [!DNL Access Control API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/access-control.yaml)
 
@@ -45,7 +45,7 @@ API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 
 >
 >의 샌드박스에 대한 자세한 내용 [!DNL Platform]은 [샌드박스 개요 설명서를 참조하십시오](../../sandboxes/home.md).
 
-페이로드(POST, PUT, PATCH)가 포함된 모든 요청에는 추가 헤더가 필요합니다.
+페이로드(POST, PUT, PATCH)이 포함된 모든 요청에는 추가 헤더가 필요합니다.
 
 - 컨텐츠 유형: application/json
 
