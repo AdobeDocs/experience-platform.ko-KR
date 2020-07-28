@@ -4,11 +4,14 @@ audience: user
 user-guide-title: Adobe Experience Platform 도움말의 액세스 제어
 translation-type: tm+mt
 source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
+workflow-type: tm+mt
+source-wordcount: '82'
+ht-degree: 6%
 
 ---
 
 
-# 액세스 제어 {#access-control}
+# Access control {#access-control}
 
 * [액세스 제어 개요](home.md)
 * 액세스 제어 UI {#ui}
@@ -24,4 +27,4 @@ source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
    * [효과적인 정책 보기](api/effective-policies.md)
 * [문제 해결 가이드](troubleshooting-guide.md)
 * [API 참조](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/access-control.yaml)
-* [플랫폼 릴리스 노트](https://www.adobe.com/go/platform-release-notes-en)
+* [Platform 릴리스 노트](https://www.adobe.com/go/platform-release-notes-en)
