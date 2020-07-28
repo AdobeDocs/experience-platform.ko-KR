@@ -5,6 +5,9 @@ title: 지원되는 샌드박스 유형 목록
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: b4741cdfd065bbaed7f2feeafe8619191e4b8f6c
+workflow-type: tm+mt
+source-wordcount: '47'
+ht-degree: 4%
 
 ---
 
@@ -32,7 +35,7 @@ curl -X GET \
 
 **응답**
 
-성공적인 응답은 조직에 대해 지원되는 샌드박스 유형 목록을 반환합니다.
+성공적인 응답은 조직에서 지원되는 샌드박스 유형 목록을 반환합니다.
 
 ```json
 {
