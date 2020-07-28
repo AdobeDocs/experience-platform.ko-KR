@@ -232,7 +232,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/query-templates/0094
 
 ### 지정된 쿼리 템플릿 업데이트
 
-끝점에 PUT 요청을 만들고 요청 경로에서 쿼리 템플릿의 ID를 제공하여 특정 쿼리 템플릿을 업데이트할 수 있습니다. `/query-templates/{TEMPLATE_ID}`
+종단점에 PUT 요청을 만들고 요청 경로에서 쿼리 템플릿의 ID를 제공하여 특정 쿼리 템플릿을 업데이트할 수 있습니다. `/query-templates/{TEMPLATE_ID}`
 
 **API 형식**
 
@@ -248,7 +248,7 @@ PUT /query-templates/{TEMPLATE_ID}
 
 >[!NOTE]
 >
->PUT 요청을 사용하려면 sql 및 name 필드를 모두 채워야 하며 해당 쿼리 템플릿의 현재 컨텐츠를 **덮어씁니다** .
+>PUT 요청에서는 sql 및 이름 필드를 모두 채워야 하며 해당 쿼리 템플릿의 현재 컨텐츠를 **덮어씁니다** .
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094d000-9062-4e6a-8fdb-05606805f08f
