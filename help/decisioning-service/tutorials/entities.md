@@ -52,13 +52,13 @@ API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 
 >
 >의 샌드박스에 대한 자세한 내용 [!DNL Platform]은 [샌드박스 개요 설명서를 참조하십시오](../../sandboxes/home.md).
 
-페이로드(POST, PUT, PATCH)가 포함된 모든 요청에는 추가 헤더가 필요합니다.
+페이로드(POST, PUT, PATCH)이 포함된 모든 요청에는 추가 헤더가 필요합니다.
 
 - 컨텐츠 유형: application/json
 
 ## 저장소 API 규칙
 
-[!DNL Decisioning Service] 는 서로 관련된 여러 비즈니스 객체에 의해 제어됩니다. 모든 비즈니스 객체는 [!DNL Platform’s] 비즈니스 객체 저장소에 저장됩니다. 이 저장소의 주요 기능은 API가 비즈니스 객체 유형과 수직이라는 것입니다. API 끝점의 리소스 유형을 나타내는 POST, GET, PUT, PATCH 또는 DELETE API를 사용하는 대신 6개의 일반 끝점만 있지만 모호성이 필요할 때 개체의 유형을 나타내는 매개 변수를 수락하거나 반환합니다. 스키마가 저장소에 등록되어 있어야 하지만, 저장소가 개방형 객체 유형 세트에 사용할 수 있습니다.
+[!DNL Decisioning Service] 는 서로 관련된 여러 비즈니스 객체에 의해 제어됩니다. 모든 비즈니스 객체는 [!DNL Platform’s] 비즈니스 객체 저장소에 저장됩니다. 이 저장소의 주요 기능은 API가 비즈니스 객체 유형과 수직이라는 것입니다. API 끝점의 리소스 유형을 나타내는 POST, GET, PUT, PATCH 또는 DELETE API를 사용하는 대신 6개의 일반 끝점만 있지만 이러한 모호성이 필요할 때 개체의 유형을 나타내는 매개 변수를 수락하거나 반환합니다. 스키마가 저장소에 등록되어 있어야 하지만, 저장소가 개방형 객체 유형 세트에 사용할 수 있습니다.
 
 위에 나열된 머리글 외에, 저장소 개체를 만들고, 읽고, 업데이트하고, 삭제하고, 쿼리하는 API에는 다음 규칙이 있습니다.
 
@@ -69,7 +69,7 @@ API 페이로드 포맷은 `Accept` 또는 `Content-Type` 헤더와 협상됩니
 | 형식 변형 | 요청 또는 응답 엔터티에 대한 설명 |
 | --- | --- |
 | 매개 변수<br>뒤에 `schema={schemaId}` | 이 메시지에는 형식 매개 변수 스키마로 표시되는 JSON 스키마에서 설명하는 인스턴스가 포함되어 있습니다. 인스턴스는 JSON 속성으로 둘러싸여 있습니다 `_instance`. 응답 페이로드의 다른 최상위 속성은 모든 리소스에 사용할 수 있는 저장소 정보를 지정합니다.  HAL 형식을 준수하는 메시지에는 HAL 형식의 참조가 포함된 `_links` 속성이 있습니다. |
-| `patch.hal` | 이 메시지에는 패치할 인스턴스가 HAL을 준수한다는 가정하에 JSON 패치 페이로드가 포함되어 있습니다. 즉, 인스턴스의 자체 인스턴스 속성뿐만 아니라 인스턴스의 HAL 링크도 패치할 수 있습니다. 클라이언트에서 속성을 업데이트할 수 있는 제한 사항이 있습니다. |
+| `patch.hal` | 이 메시지에는 패치할 인스턴스가 HAL과 호환된다고 가정하고 JSON PATCH 페이로드가 포함됩니다. 즉, 인스턴스의 자체 인스턴스 속성뿐만 아니라 인스턴스의 HAL 링크도 패치할 수 있습니다. 클라이언트에서 속성을 업데이트할 수 있는 제한 사항이 있습니다. |
 | `home.hal` | 이 메시지에는 저장소의 홈 문서 리소스를 보여주는 JSON 형식 표현이 포함되어 있습니다. |
 | xdm.receipt | 메시지에는 만들기, 업데이트(전체 및 패치) 또는 삭제 작업에 대한 JSON 형식 응답이 포함되어 있습니다. 영수증에는 ETag 형식의 인스턴스 개정을 나타내는 제어 데이터가 포함됩니다. |
 
@@ -94,7 +94,7 @@ API 페이로드 포맷은 `Accept` 또는 `Content-Type` 헤더와 협상됩니
 
 ## 컨테이너 액세스 관리
 
-관리자는 비슷한 주체, 리소스 및 액세스 권한을 프로필에 그룹화할 수 있습니다. 이로 인해 관리 부담이 줄어들고 [Adobe의 Admin Console UI가 지원됩니다](https://adminconsole.adobe.com). 프로필을 만들고 사용자를 조직에 할당하려면 조직의 Adobe Experience Platform에 대한 제품 관리자여야 합니다.
+관리자는 비슷한 주체, 리소스 및 액세스 권한을 프로필에 그룹화할 수 있습니다. 이로 인해 관리 부담이 줄어들고 [Adobe Admin Console UI가 지원됩니다](https://adminconsole.adobe.com). 프로필을 만들고 사용자를 조직에 할당하려면 조직의 Adobe Experience Platform에 대한 제품 관리자여야 합니다.
 
 한 번에 특정 권한에 일치하는 제품 프로필을 만든 다음 해당 프로필에 사용자를 추가하는 것만으로 충분합니다. 프로필은 권한이 부여된 그룹 역할을 하며 해당 그룹의 모든 실제 사용자나 기술 사용자는 해당 권한을 상속받습니다.
 
@@ -472,7 +472,7 @@ curl -X GET {ENDPOINT_PATH}/{CONTAINER_ID}/queries/core/search?schema="{SCHEMA_I
 
 ### 인스턴스 업데이트 및 패치
 
-인스턴스를 업데이트하려면 클라이언트가 한 번에 전체 속성 목록을 덮어쓰거나 JSON PATCH 요청을 사용하여 목록을 비롯한 개별 속성 값을 조작할 수 있습니다.
+인스턴스를 업데이트하려면 클라이언트가 한 번에 전체 속성 목록을 덮어쓰거나 JSON PATCH 요청을 사용하여 목록을 포함한 개별 속성 값을 조작할 수 있습니다.
 
 두 경우 모두 요청의 URL이 실제 인스턴스에 대한 경로를 지정하며 두 경우 모두 [만들기 작업에서 반환되는 것과 같은 JSON 수신 페이로드가 응답됩니다](#create-instances). 클라이언트는 가급적이면 이 개체에 대한 이전 API 호출에서 받은 헤더 또는 HAL 링크를 이 API에 대한 전체 URL 경로로 사용해야 합니다. `Location` 그럴 수 없는 경우 클라이언트는 URL을 `containerId` 및 URL에서 구성할 수 `instanceId`있습니다.
 
@@ -496,7 +496,7 @@ curl -X PUT {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \
 }'  
 ```
 
-**요청** (패치)
+**요청** (PATCH)
 
 ```shell
 curl -X PATCH {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \ 
@@ -513,7 +513,7 @@ curl -X PATCH {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \
 ]'
 ```
 
-PATCH 요청은 지침을 적용한 다음 결과 엔티티를 스키마와 PUT 요청과 동일한 엔티티 및 참조 무결성 규칙에 대해 검증합니다.
+PATCH 요청은 지침을 적용한 다음 결과 엔터티를 스키마 및 PUT 요청과 동일한 엔티티 및 참조 무결성 규칙에 대해 검증합니다.
 
 **속성 값 편집 제어**
 
@@ -612,7 +612,7 @@ API를 컨텐츠 유형과 함께 사용할 때 인스턴스 `application/vnd.ad
 
 - **`xdm:status`** - 이 속성은 인스턴스의 라이프사이클 관리에 사용됩니다. 이 값은 오퍼가 아직 건설 중인지(값 = 초안), 런타임에서 일반적으로 고려할 수 있는지(값 = 승인됨) 또는 더 이상 사용하지 않아야 하는지(값 = 아카이브)를 나타내는 데 사용되는 워크플로우 상태를 나타냅니다.
 
-인스턴스에 대한 간단한 PATCH 작업은 일반적으로 속성을 조작하는 데 `xdm:status` 사용됩니다.
+인스턴스의 간단한 PATCH 작업은 일반적으로 속성을 조작하는 데 `xdm:status` 사용됩니다.
 
 ```json
 [
@@ -773,7 +773,7 @@ API를 컨텐츠 유형과 함께 사용할 때 인스턴스 `application/vnd.ad
 
 - **`xdm:eligibilityRule`** - 이 속성은 자격 조건 규칙에 대한 참조를 보유합니다. 값은 스키마 인스턴스https://ns.adobe.com/experience/offer-management/eligibility-rule `@id` 의 값입니다.
 
-PATCH 작업으로도 규칙을 추가 및 삭제할 수 있습니다.
+규칙 추가 및 삭제는 PATCH 작업도 수행할 수 있습니다.
 
 ```
 [
@@ -787,7 +787,7 @@ PATCH 작업으로도 규칙을 추가 및 삭제할 수 있습니다.
 
 전체 cURL [구문에 대한 인스턴스](#updating-and-patching-instances) 업데이트 및 패치 적용을 참조하십시오. 매개 `schemaId` 변수는 반드시 사용해야 합니다 `https://ns.adobe.com/experience/offer-management/personalized-offer`. 대체 오퍼에 제한 사항이 없습니다.
 
-자격 조건 규칙은 달력 제한 `xdm:selectionConstraint` 과 함께 속성에 포함됩니다. 패치 작업에서 전체 `SelectionConstraint` 속성 제거를 시도해서는 안 됩니다.
+자격 조건 규칙은 달력 제한 `xdm:selectionConstraint` 과 함께 속성에 포함됩니다. PATCH 작업에서 전체 `SelectionConstraint` 속성 제거를 시도해서는 안 됩니다.
 
 ## 오퍼 우선 순위 설정
 
@@ -900,7 +900,7 @@ curl -X PATCH {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \
 
 두 경우 모두 전체 cURL [구문에 대한 인스턴스](#updating-and-patching-instances) 업데이트 및 패치를 참조하십시오. 매개 `schemaId` 변수는 반드시 사용해야 합니다 `https://ns.adobe.com/experience/offer-management/personalized-offer`.
 
-추가 작업이 성공하려면 `xdm:tags` 속성이 이미 있어야 합니다. 인스턴스에 태그가 없습니다. PATCH 작업에서는 먼저 배열 속성을 추가한 다음 해당 배열에 태그 참조를 추가할 수 있습니다.
+추가 작업이 성공하려면 `xdm:tags` 속성이 이미 있어야 합니다. 인스턴스에 태그가 없습니다. PATCH 작업은 먼저 배열 속성을 추가한 다음 해당 배열에 태그 참조를 추가할 수 있습니다.
 
 ### 오퍼 컬렉션에 대한 필터 정의
 
