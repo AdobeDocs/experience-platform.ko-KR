@@ -20,7 +20,7 @@ ht-degree: 2%
 
 ### 쿼리 목록 검색
 
-종단점에 GET 요청을 만들어 IMS 조직에 대한 모든 쿼리 목록을 검색할 수 `/queries` 있습니다.
+종단점에 대한 GET 요청을 만들어 IMS 조직에 대한 모든 쿼리 목록을 검색할 수 `/queries` 있습니다.
 
 **API 형식**
 
@@ -119,7 +119,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/queries?limit=1 \
 
 ### 쿼리 만들기
 
-종단점에 대한 POST 요청을 만들어 새 쿼리를 만들 수 `/queries` 있습니다.
+종단점에 POST 요청을 만들어 새 쿼리를 만들 수 `/queries` 있습니다.
 
 **API 형식**
 
@@ -202,7 +202,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/queries \
 
 ### ID로 쿼리 검색
 
-종단점에 GET 요청을 만들고 요청 경로에 쿼리의 `/queries` `id` 값을 제공하여 특정 쿼리에 대한 자세한 정보를 검색할 수 있습니다.
+종단점에 GET 요청을 만들고 요청 경로에 쿼리 `/queries` `id` 값을 제공하여 특정 쿼리에 대한 자세한 정보를 검색할 수 있습니다.
 
 **API 형식**
 
@@ -273,7 +273,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/queries/4d64cd49-cf8
 
 ### 쿼리 취소
 
-종단점에 PATCH 요청을 만들고 요청 경로에 쿼리의 `/queries` `id` 값을 제공하여 지정된 쿼리를 삭제하도록 요청할 수 있습니다.
+종단점에 PATCH 요청을 만들고 요청 경로에 쿼리 `/queries` `id` 값을 제공하여 지정된 쿼리를 삭제하도록 요청할 수 있습니다.
 
 **API 형식**
 
