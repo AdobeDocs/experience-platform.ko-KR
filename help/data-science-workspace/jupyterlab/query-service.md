@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Jupiter 전자 필기장의 쿼리 서비스
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: 4f7d7e2bf255afe1588dbe7cfb2ec055f2dcbf75
 workflow-type: tm+mt
 source-wordcount: '764'
 ht-degree: 1%
@@ -38,13 +38,13 @@ ht-degree: 1%
 
    ![](../images/jupyterlab/query/jupyterlab_launcher.png)
 
-   > [!NOTE] 새 시작 관리자 탭이 자동으로 나타나지 않으면 **[!UICONTROL 파일]** 을 클릭하여 새 시작 관리자 탭을 연 다음 **[!UICONTROL 새 시작 관리자를 선택합니다]**.
+   >[!NOTE] 새 시작 관리자 탭이 자동으로 나타나지 않으면 **[!UICONTROL 파일]** 을 클릭하여 새 시작 관리자 탭을 연 다음 **[!UICONTROL 새 시작 관리자를 선택합니다]**.
 
 2. 론처 탭에서 Python 3 환경의 **[!UICONTROL 빈]** 아이콘을 클릭하여 빈 전자 필기장을 엽니다.
 
    ![](../images/jupyterlab/query/blank_notebook.png)
 
-   > [!NOTE] 현재 Python 3은 전자 필기장에서 쿼리 서비스에 대해 지원되는 유일한 환경입니다.
+   >[!NOTE] 현재 Python 3은 전자 필기장에서 쿼리 서비스에 대해 지원되는 유일한 환경입니다.
 
 3. 왼쪽 선택 레일에서 **[!UICONTROL 데이터]** 아이콘을 클릭하고 **[!UICONTROL 데이터 집합]** 디렉토리를 두 번 클릭하여 모든 데이터 세트를 나열합니다.
 
@@ -85,6 +85,7 @@ ht-degree: 1%
    - `target_year` : 대상 데이터가 있는 특정 연도입니다.
    - `target_month` : 대상이 있는 특정 월입니다.
    - `target_day` : 대상 데이터가 있는 특정 요일.
+
    >[!NOTE] 이러한 값은 언제든지 변경할 수 있습니다. 변경 사항을 적용할 변수 셀을 실행해야 합니다.
 
 ## 데이터 쿼리 {#query-your-data}
