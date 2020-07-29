@@ -4,7 +4,7 @@ seo-title: Adobe Experience Platform 웹 SDK 빠른 시작(시작)
 description: Experience Platform 웹 SDK 익스텐션을 사용하여 데이터를 수집하는 빠른 시작 가이드
 seo-description: Experience Platform 웹 SDK 익스텐션을 사용하여 데이터를 수집하는 빠른 시작 가이드
 translation-type: tm+mt
-source-git-commit: d958e323df2535c168edd3a35b878fcc4bb73370
+source-git-commit: bc18ca26da37ecfca2ade9403be22d7de222facb
 workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 5%
@@ -29,6 +29,9 @@ Experience Platform 에지 네트워크는 데이터를 XDM으로 가져옵니�
 3. 만든 스키마에서 데이터 집합을 만듭니다.
 
 다음 비디오는 데이터에 대한 스키마, 데이터 집합 및 스트리밍 소스 커넥터를 만드는 데 도움이 되도록 [!DNL Web SDK] 만들어졌습니다.
+
+
+>[!VIDEO](https://video.tv.adobe.com/v/35395?quality=12&learn=on)
 
 Launch에 로그인하여 `AEP Web SDK` 익스텐션을 설치합니다. SDK를 설치하면 익스텐션을 구성하라는 메시지가 표시됩니다. 위에 요청한 구성 ID를 입력합니다. 익스텐션은 조직 ID에 자동으로 채워집니다.
 
