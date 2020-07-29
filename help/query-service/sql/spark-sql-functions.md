@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Spark SQL 함수
 topic: spark sql functions
 translation-type: tm+mt
-source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+source-git-commit: a98e31f57c6ff4fc49d8d8f64441a6e1e18d89da
 workflow-type: tm+mt
 source-wordcount: '4900'
 ht-degree: 5%
@@ -158,7 +158,7 @@ SQL [!DNL Spark] 도움말은 SQL 기능을 확장하는 내장 [!DNL Spark] SQL
 
 #### atan2
 
-`atan2(exprY, exprX)`: 평면의 양수 x축과 좌표(`exprX`,)에 의해 주어진 점 사이의 라디안 단위 각도 `exprY`를 계산대로 반환합니다 `java.lang.Math.atan2`.
+`atan2(exprY, exprX)`: 평면의 양수 x축과 좌표(`exprX`,)에 의해 주어진 점 사이의 라디안 단위 각도를 마치 계산된 것처럼 `exprY`반환합니다 `java.lang.Math.atan2`.
 
 인수:
 
@@ -1669,7 +1669,7 @@ SQL [!DNL Spark] 도움말은 SQL 기능을 확장하는 내장 [!DNL Spark] SQL
  3
 ```
 
-#### flatten
+#### 분리
 
 `flatten(arrayOfArrays)`: 어레이 배열을 단일 어레이로 변환합니다.
 
