@@ -4,9 +4,9 @@ seo-title: 대상에 프로필 및 세그먼트 활성화
 description: 세그먼트를 대상에 매핑하여 Adobe의 실시간 고객 데이터 Platform에 있는 데이터를 활성화합니다. 이를 수행하려면 아래 단계를 따르십시오.
 seo-description: 세그먼트를 대상에 매핑하여 Adobe의 실시간 고객 데이터 Platform에 있는 데이터를 활성화합니다. 이를 수행하려면 아래 단계를 따르십시오.
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 098dd31be4d6ee6971cd87bcbfe0f686e34918e1
 workflow-type: tm+mt
-source-wordcount: '1013'
+source-wordcount: '1036'
 ht-degree: 0%
 
 ---
@@ -92,20 +92,20 @@ ht-degree: 0%
 
 ## 세그먼트 활성화 성공 여부 확인 {#verify-activation}
 
-### 이메일 마케팅 대상 및 클라우드 스토리지 대상
+### 이메일 마케팅 대상 및 클라우드 스토리지 대상 {#esp-and-cloud-storage}
 
 이메일 마케팅 대상 및 클라우드 스토리지 대상의 경우 Adobe 실시간 CDP는 사용자가 제공한 스토리지 위치에 탭으로 구분된 `.txt` 파일이나 `.csv` 파일을 생성합니다. 저장 위치에 매일 새 파일이 만들어집니다. The file format is:
-`<destination name>id<destination id><timestamp-yyyymmddhhmmss>`
+`<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv`
 
 3일 연속으로 받은 파일은 다음과 같습니다.
 
 ```
-Salesforce_id3544_20191120110000.csv
-Salesforce_id3544_20191121123000.csv
-Salesforce_id3544_20191122124530.csv
+Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv
+Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_20200409052200.csv
+Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_20200410061130.csv
 ```
 
-스토리지 위치에 이러한 파일이 있는지 확인한 후 정품 인증을 완료했습니다.
+스토리지 위치에 이러한 파일이 있는지 확인한 후 정품 인증을 완료했습니다. 내보낸 파일의 구조를 이해하려면 샘플 .csv 파일을 [다운로드할 수 있습니다](/help/rtcdp/destinations/assets/sample_export_file_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv). 이 샘플 파일에는 프로필 속성 `person.firstname`, `person.lastname`, `person.gender`및 `person.birthyear`파일이 포함되어 `personalEmail.address`있습니다.
 
 ### 광고 대상
 
