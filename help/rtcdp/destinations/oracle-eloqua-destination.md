@@ -4,9 +4,9 @@ seo-title: Oracle Furnar 대상
 description: Oracle Fura는 B2B 마케터 및 조직이 마케팅 캠페인 및 영업 리드 생성을 관리하는 데 도움이 되는 Oracle이 제공하는 마케팅 자동화를 위한 SaaS(서비스) 플랫폼입니다.
 seo-description: Oracle Fura는 B2B 마케터 및 조직이 마케팅 캠페인 및 영업 리드 생성을 관리하는 데 도움이 되는 Oracle이 제공하는 마케팅 자동화를 위한 SaaS(서비스) 플랫폼입니다.
 translation-type: tm+mt
-source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+source-git-commit: 098dd31be4d6ee6971cd87bcbfe0f686e34918e1
 workflow-type: tm+mt
-source-wordcount: '462'
+source-wordcount: '517'
 ht-degree: 0%
 
 ---
@@ -43,9 +43,33 @@ SSH 키 **** 연결이 있는 SFTP의 경우 도메인, 포트, 사용자 이름
 
 4. 위 필드 **[!UICONTROL 를 채운 후 대상]** 만들기를 클릭합니다. 이제 대상이 만들어지고 대상에 대한 세그먼트를 [활성화할](/help/rtcdp/destinations/activate-destinations.md) 수 있습니다.
 
-## 대상 속성
+## 세그먼트 활성화 {#activate-segments}
+
+세그먼트 [활성화 워크플로에 대한 자세한 내용은 대상에](/help/rtcdp/destinations/activate-destinations.md) 프로필 및 세그먼트 활성화를 참조하십시오.
+
+## 대상 속성 {#destination-attributes}
 
 세그먼트를 대상에 [활성화할](/help/rtcdp/destinations/activate-destinations.md) 때 [!DNL Oracle Eloqua] 조합 스키마에서 고유 식별자를 선택하는 것이 [좋습니다](../../profile/home.md#profile-fragments-and-union-schemas). 대상으로 내보낼 고유 식별자 및 기타 XDM 필드를 선택합니다. 자세한 내용은 이메일 [마케팅 대상의 내보낸 파일에서](/help/rtcdp/destinations/email-marketing-destinations.md#destination-attributes) 대상 속성으로 사용할 스키마 필드 선택을 참조하십시오.
+
+## 내보낸 데이터 {#exported-data}
+
+대상 [!DNL Oracle Eloqua] 의 경우 Adobe 실시간 CDP는 사용자가 제공한 스토리지 위치에 탭으로 구분된 `.txt` 파일 또는 `.csv` 파일을 생성합니다. 파일에 대한 자세한 내용은 세그먼트 활성화 자습서에서 [이메일 마케팅 대상 및 클라우드 스토리지 대상을](/help/rtcdp/destinations/activate-destinations.md#esp-and-cloud-storage) 참조하십시오.
+
+<!--
+
+Expect a new file to be created in your storage location every day. The file format is:
+
+`Oracle_Eloqua_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv`
+
+```
+Oracle_Eloqua_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv
+Oracle_Eloqua_segment12341e18-abcd-49c2-836d-123c88e76c39_20200409052200.csv
+Oracle_Eloqua_segment12341e18-abcd-49c2-836d-123c88e76c39_20200410061130.csv
+```
+
+The presence of these files in your storage location is confirmation of successful activation. To understand how the exported files are structured, you can [download a sample .csv file](/help/rtcdp/destinations/assets/sample_export_file_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv). This sample file includes the profile attributes `person.firstname`, `person.lastname`, `person.gender`, `person.birthyear`, and `personalEmail.address`.
+
+-->
 
 ## 데이터 가져오기 설정 [!DNL Oracle Eloqua] {#import-data-into-eloqua}
 
