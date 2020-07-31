@@ -4,9 +4,9 @@ seo-title: Google 디스플레이 및 비디오 360 대상
 description: 디스플레이 및 비디오 360(이전 DoubleClick 입찰 관리자)은 디스플레이, 비디오 및 모바일 재고 소스에서 타깃팅된 디지털 캠페인 및 대상 재타깃팅을 실행하는 데 사용되는 도구입니다.
 seo-description: '디스플레이 및 비디오 360(이전 DoubleClick 입찰 관리자)은 디스플레이, 비디오 및 모바일 재고 소스에서 타깃팅된 디지털 캠페인 및 대상 재타깃팅을 실행하는 데 사용되는 도구입니다. '
 translation-type: tm+mt
-source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+source-git-commit: 7f3df12da5e93c3d0cc53eed1aa603ddbafdb0b2
 workflow-type: tm+mt
-source-wordcount: '633'
+source-wordcount: '659'
 ht-degree: 0%
 
 ---
@@ -67,3 +67,7 @@ Adobe 실시간 CDP에서 [!DNL Google Display & Video 360] 대상을 생성하�
 ## 세그먼트 활성화 [!DNL Google Display & Video 360]
 
 세그먼트를 활성화할 방법에 대한 지침은 대상 [!DNL Google Display & Video 360]에 데이터 [활성화를 참조하십시오](/help/rtcdp/destinations/activate-destinations.md).
+
+## 내보낸 데이터
+
+데이터를 대상으로 성공적으로 내보냈는지 확인하려면 [!DNL Google Display & Video 360] [!DNL Google Display & Video 360] 계정을 확인하십시오. 정품 인증이 성공적으로 완료되면 사용자의 계정에 대상이 채워집니다.
