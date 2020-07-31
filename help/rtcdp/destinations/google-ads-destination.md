@@ -4,9 +4,9 @@ seo-title: Google 광고 대상
 description: 이전에 Google AdWords로 알려졌던 Google Ads는 기업에서 텍스트 기반 검색, 그래픽 디스플레이, YouTube 비디오 및 인앱 모바일 디스플레이에서 클릭당 광고를 지불하는 온라인 광고 서비스입니다.
 seo-description: 이전에 Google AdWords로 알려졌던 Google Ads는 기업에서 텍스트 기반 검색, 그래픽 디스플레이, YouTube 비디오 및 인앱 모바일 디스플레이에서 클릭당 광고를 지불하는 온라인 광고 서비스입니다.
 translation-type: tm+mt
-source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+source-git-commit: 7f3df12da5e93c3d0cc53eed1aa603ddbafdb0b2
 workflow-type: tm+mt
-source-wordcount: '572'
+source-wordcount: '598'
 ht-degree: 0%
 
 ---
@@ -67,3 +67,6 @@ Adobe 실시간 CDP에서 [!DNL Google Ads] 대상을 생성하기 전에 Adobe 
 
 세그먼트를 활성화할 방법에 대한 지침은 대상 [!DNL Google Ads]에 데이터 [활성화를 참조하십시오](/help/rtcdp/destinations/activate-destinations.md).
 
+## 내보낸 데이터
+
+데이터를 대상으로 성공적으로 내보냈는지 확인하려면 [!DNL Google Ads] [!DNL Google Ads] 계정을 확인하십시오. 정품 인증이 성공적으로 완료되면 사용자의 계정에 대상이 채워집니다.
