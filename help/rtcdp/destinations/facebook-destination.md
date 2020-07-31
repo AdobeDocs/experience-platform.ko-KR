@@ -4,9 +4,9 @@ seo-title: Facebook 대상
 description: 해시된 이메일을 기반으로 고객 타깃팅, 개인화 및 억제를 위해 Facebook 캠페인에 대한 프로필을 활성화합니다.
 seo-description: 해시된 이메일을 기반으로 고객 타깃팅, 개인화 및 억제를 위해 Facebook 캠페인에 대한 프로필을 활성화합니다.
 translation-type: tm+mt
-source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+source-git-commit: 7f3df12da5e93c3d0cc53eed1aa603ddbafdb0b2
 workflow-type: tm+mt
-source-wordcount: '652'
+source-wordcount: '722'
 ht-degree: 2%
 
 ---
@@ -93,3 +93,11 @@ Experience Platform에서 이메일 주소 인제스트에 대한 자세한 내�
 ## 세그먼트 활성화 [!DNL Facebook] {#activate-segments}
 
 세그먼트를 활성화할 방법에 대한 지침은 대상 [!DNL Facebook]에 데이터 [활성화를 참조하십시오](/help/rtcdp/destinations/activate-destinations.md).
+
+## 내보낸 데이터 {#exported-data}
+
+활성화 [!DNL Facebook]를 성공적으로 수행하면 사용자 [!DNL Facebook] 지정 대상이 [[!DNL Facebook 광고 관리자]에서 프로그램 방식으로 생성된다는 의미입니다](https://www.facebook.com/adsmanager/manage/). 사용자가 활성화된 세그먼트에 대해 자격이 부여되거나 자격이 부여되면 대상의 세그먼트 멤버십이 추가되고 제거됩니다.
+
+>[!TIP]
+>
+>Adobe 실시간 CDP를 통합하고 이전 고객 채우기를 [!DNL Facebook] 지원합니다. 세그먼트를 대상에 활성화하면 모든 내역 세그먼트 자격 [!DNL Facebook] 이 전송됩니다.
