@@ -4,9 +4,9 @@ seo-title: Google 광고 관리자 대상
 description: '이전에 발행자를 위한 DoubleClick 또는 DoubleClick AdX로 알려진 Google Ad Manager는 발행자가 비디오 및 모바일 앱을 통해 자사 웹 사이트에서 광고 표시를 관리할 수 있는 수단을 제공하는 Google의 광고 서비스 플랫폼입니다. '
 seo-description: '이전에 발행자를 위한 DoubleClick 또는 DoubleClick AdX로 알려진 Google Ad Manager는 발행자가 비디오 및 모바일 앱을 통해 자사 웹 사이트에서 광고 표시를 관리할 수 있는 수단을 제공하는 Google의 광고 서비스 플랫폼입니다. '
 translation-type: tm+mt
-source-git-commit: 4f7d7e2bf255afe1588dbe7cfb2ec055f2dcbf75
+source-git-commit: f23d7dae7883cc14dc8b54d8b1ba2d94f0786cbc
 workflow-type: tm+mt
-source-wordcount: '610'
+source-wordcount: '636'
 ht-degree: 0%
 
 ---
@@ -69,3 +69,7 @@ Adobe 실시간 CDP에서 [!DNL Google Ad Manager] 대상을 생성하기 전에
 ## 세그먼트 활성화 [!DNL Google Ad Manager]
 
 세그먼트를 활성화할 방법에 대한 지침은 대상 [!DNL Google Ad Manager]에 데이터 [활성화를 참조하십시오](/help/rtcdp/destinations/activate-destinations.md).
+
+## 내보낸 데이터
+
+데이터를 대상으로 성공적으로 내보냈는지 확인하려면 [!DNL Google Ad Manager] [!DNL Google Ad Manager] 계정을 확인하십시오. 정품 인증이 성공적으로 완료되면 사용자의 계정에 대상이 채워집니다.
