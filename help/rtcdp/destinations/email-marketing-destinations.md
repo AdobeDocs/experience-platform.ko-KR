@@ -4,7 +4,7 @@ seo-title: 이메일 마케팅 대상
 description: ESP(Email Service Providers)를 사용하면 이메일 캠페인 전송과 같은 이메일 마케팅 활동을 관리할 수 있습니다.
 seo-description: ESP(Email Service Providers)를 사용하면 이메일 캠페인 전송과 같은 이메일 마케팅 활동을 관리할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 3c598454a868139b7604c5c7ca2b98fa0f1bb961
+source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
 workflow-type: tm+mt
 source-wordcount: '731'
 ht-degree: 1%
@@ -24,7 +24,7 @@ ESP(Email Service Providers)를 사용하면 프로모션 이메일 캠페인 �
 
 ## 1단계 - 연결 대상 {#connect-destination}
 
-1. [ **[!UICONTROL 연결] > [대상]**]에서 연결할 이메일 마케팅 대상을 선택한 다음 **[!UICONTROL 연결 대상을 선택합니다]**.
+1. [ **[!UICONTROL 연결]** ] > **[!UICONTROL 대상]**]에서 연결할 이메일 마케팅 대상을 선택한 다음 **[!UICONTROL Connect 대상을 선택합니다]**.
 
    ![대상에 연결](/help/rtcdp/destinations/assets/connect-email-marketing.png)
 
@@ -59,7 +59,7 @@ ESP(Email Service Providers)를 사용하면 프로모션 이메일 캠페인 �
 
 | 고유 식별자 | 통합 스키마의 XDM 필드 |
 ---------|----------
-| 이메일 주소 | `personalEmail.address` |
+| Email Address | `personalEmail.address` |
 | 전화 | `mobilePhone.number` |
 | 충성도 프로그램 ID | `Customer-defined XDM field` |
 
