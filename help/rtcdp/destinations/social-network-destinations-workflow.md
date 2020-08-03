@@ -4,7 +4,7 @@ seo-title: 소셜 네트워크 대상 워크플로우
 description: 소셜 네트워크 및 계정에 연결하는 지침
 seo-description: 소셜 네트워크 및 계정에 연결하는 지침
 translation-type: tm+mt
-source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+source-git-commit: be4cf64c89a189a09a4a7774c8fadc76c6ee8458
 workflow-type: tm+mt
 source-wordcount: '464'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 이 자습서는 예를 [!DNL Facebook] 들어 사용하지만 제품에 한 번 더 추가되면 Adobe 실시간 고객 데이터 Platform의 워크플로우는 모든 소셜 네트워크 대상에 대해 동일합니다.
 
-1. 대상 **[!UICONTROL > 카탈로그에서]****[!UICONTROL 소셜]** 카테고리로 스크롤합니다. 원하는 소셜 네트워크 대상을 선택한 다음 **[!UICONTROL 연결 대상을 선택합니다]**.
+1. 대상 **** > **[!UICONTROL 카탈로그]**&#x200B;에서 **[!UICONTROL Social]** 카테고리로스크롤합니다. 원하는 소셜 네트워크 대상을 선택한 다음 **[!UICONTROL 연결 대상을 선택합니다]**.
 
    ![소셜 네트워크 대상에 연결](/help/rtcdp/destinations/assets/facebook-catalog-view.png)
 
