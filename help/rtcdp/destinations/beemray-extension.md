@@ -4,7 +4,7 @@ seo-title: Beemray 확장
 description: Beemray 확장은 Adobe 실시간 고객 데이터 Platform에서 개인화 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 seo-description: Beemray 확장은 Adobe 실시간 고객 데이터 Platform에서 개인화 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: be4cf64c89a189a09a4a7774c8fadc76c6ee8458
 workflow-type: tm+mt
 source-wordcount: '564'
 ht-degree: 4%
@@ -34,7 +34,7 @@ Beemray는 Adobe 실시간 고객 데이터 Platform의 개인화 확장입니�
 
 익스텐션을 설치하려면 [!DNL Beemray] 다음을 수행하십시오.
 
-1. Adobe [실시간 CDP 인터페이스에서](http://platform.adobe.com/)대상 > **[!UICONTROL 카탈로그로 이동합니다]**.
+1. Adobe [실시간 CDP 인터페이스에서](http://platform.adobe.com/)대상 **[!UICONTROL >]** 카탈로그 **[!UICONTROL 로]**&#x200B;이동합니다.
 2. 카탈로그에서 익스텐션을 선택하거나 검색 막대를 사용합니다.
 3. 대상을 클릭하여 강조 표시한 다음 오른쪽 레일에서 **[!UICONTROL 확장]** 설치 를 선택합니다. 확장 **[!UICONTROL 설치]** 컨트롤이 회색으로 표시되면 **[!UICONTROL manage_properties]** 권한이 없습니다. 전제 조건 [을 참조하십시오](#prerequisites).
 4. 사용 **[!UICONTROL 가능한 론치 속성]** 선택 창에서 확장자를 설치할 [!DNL Launch] 속성을 선택합니다. 에 새 속성을 만들 수도 있습니다 [!DNL Launch]. 속성은 규칙, 데이터 요소, 구성된 확장, 환경 및 라이브러리의 컬렉션입니다. 설명서의 [속성 페이지 섹션](https://docs.adobe.com/content/help/en/launch/using/reference/admin/companies-and-properties.html#properties-page) 에서 속성에 대해 [!DNL Launch] 알아보십시오.
