@@ -4,7 +4,7 @@ seo-title: Google 디스플레이 및 비디오 360 대상
 description: 디스플레이 및 비디오 360(이전 DoubleClick 입찰 관리자)은 디스플레이, 비디오 및 모바일 재고 소스에서 타깃팅된 디지털 캠페인 및 대상 재타깃팅을 실행하는 데 사용되는 도구입니다.
 seo-description: '디스플레이 및 비디오 360(이전 DoubleClick 입찰 관리자)은 디스플레이, 비디오 및 모바일 재고 소스에서 타깃팅된 디지털 캠페인 및 대상 재타깃팅을 실행하는 데 사용되는 도구입니다. '
 translation-type: tm+mt
-source-git-commit: 7f3df12da5e93c3d0cc53eed1aa603ddbafdb0b2
+source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
 workflow-type: tm+mt
 source-wordcount: '659'
 ht-degree: 0%
@@ -46,7 +46,7 @@ Adobe 실시간 CDP에서 [!DNL Google Display & Video 360] 대상을 생성하�
 
 ## 대상 만들기
 
-1. [ **[!UICONTROL 연결] > [대상]**]에서 [!DNL Google Display & Video 360]를 선택하고 [대상 **[!UICONTROL 만들기]를 선택합니다]**.
+1. 연결 **[!UICONTROL > 대상]****[!UICONTROL 에서]**[!DNL Google Display & Video 360]를 선택하고 대상 **[!UICONTROL 만들기를 선택합니다]**.
    ![Connect Google 표시 및 비디오 360 대상](/help/rtcdp/destinations/assets/google-dv360-destination.png)
 
 2. 대상 **만들기 작업** 과정의 설정 [!UICONTROL 단계에서 대상에 대한] 기본 정보및 이 대상에 적용할 마케팅 사용 사례를 입력합니다. <br>
