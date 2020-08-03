@@ -4,7 +4,7 @@ seo-title: Experience Platform Launch 확장
 description: Launch는 Adobe의 차세대 태그 관리 기능입니다. Launch는 관련 고객 환경을 향상하는 데 필요한 모든 분석, 마케팅 및 광고 태그를 배포하고 관리하는 간단한 방법을 고객에게 제공합니다.
 seo-description: Launch는 Adobe의 차세대 태그 관리 기능입니다. Launch는 관련 고객 환경을 향상하는 데 필요한 모든 분석, 마케팅 및 광고 태그를 배포하고 관리하는 간단한 방법을 고객에게 제공합니다.
 translation-type: tm+mt
-source-git-commit: 98c3356db178507e0a8d94b47030e9490e721e46
+source-git-commit: be4cf64c89a189a09a4a7774c8fadc76c6ee8458
 workflow-type: tm+mt
 source-wordcount: '622'
 ht-degree: 21%
@@ -22,7 +22,7 @@ Experience Platform Launch 기능에 대한 자세한 내용은 아래 리소스
 
 ## Adobe 실시간 CDP 인터페이스에서 Launch 익스텐션을 찾는 방법 {#how-to-find-extensions-in-interface}
 
-Adobe 실시간 CDP 인터페이스에서 Launch 익스텐션을 찾으려면 **[!UICONTROL 대상 > 카탈로그]** 로 이동하고 **[!UICONTROL 유형]** 필터에서 **[!UICONTROL 익스텐션]** 을선택합니다.
+Adobe 실시간 CDP 인터페이스에서 Launch 익스텐션을 찾으려면 **[!UICONTROL 대상]** > **[!UICONTROL 카탈로그]** 를 **[!UICONTROL 탐색하고 TypesFilter]** 에서 Extensions **[!UICONTROL 를]** 선택합니다.
 
 ![인터페이스의 확장 필터](/help/rtcdp/destinations/assets/extensions-filter.png)
 
