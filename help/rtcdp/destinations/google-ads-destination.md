@@ -4,7 +4,7 @@ seo-title: Google 광고 대상
 description: 이전에 Google AdWords로 알려졌던 Google Ads는 기업에서 텍스트 기반 검색, 그래픽 디스플레이, YouTube 비디오 및 인앱 모바일 디스플레이에서 클릭당 광고를 지불하는 온라인 광고 서비스입니다.
 seo-description: 이전에 Google AdWords로 알려졌던 Google Ads는 기업에서 텍스트 기반 검색, 그래픽 디스플레이, YouTube 비디오 및 인앱 모바일 디스플레이에서 클릭당 광고를 지불하는 온라인 광고 서비스입니다.
 translation-type: tm+mt
-source-git-commit: 7f3df12da5e93c3d0cc53eed1aa603ddbafdb0b2
+source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
 workflow-type: tm+mt
 source-wordcount: '598'
 ht-degree: 0%
@@ -51,7 +51,7 @@ Adobe 실시간 CDP에서 [!DNL Google Ads] 대상을 생성하기 전에 Adobe 
 
 ## 대상 만들기
 
-1. [ **[!UICONTROL 연결] > [대상]**]에서 [!DNL Google Ads]를 선택하고 [대상 **[!UICONTROL 만들기]를 선택합니다]**.
+1. 연결 **[!UICONTROL > 대상]****[!UICONTROL 에서]**[!DNL Google Ads]를 선택하고 대상 **[!UICONTROL 만들기를 선택합니다]**.
    ![Google 광고 대상 연결](/help/rtcdp/destinations/assets/google-2-destination.png)
 
 2. 대상 **만들기 작업** 과정의 설정 단계에서 대상에 대한 [!UICONTROL 기본 정보] 를 입력합니다. <br>
