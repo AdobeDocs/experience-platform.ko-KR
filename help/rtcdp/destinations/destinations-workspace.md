@@ -4,7 +4,7 @@ seo-title: 대상 작업 공간
 description: Adobe 실시간 고객 데이터 Platform의 왼쪽 탐색 막대에서 대상을 선택하여 대상 작업 영역에 액세스합니다.
 seo-description: Adobe 실시간 고객 데이터 Platform의 왼쪽 탐색 막대에서 대상을 선택하여 대상 작업 영역에 액세스합니다.
 translation-type: tm+mt
-source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
+source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
 workflow-type: tm+mt
 source-wordcount: '609'
 ht-degree: 3%
@@ -34,7 +34,7 @@ Adobe 실시간 고객 데이터 Platform의 왼쪽 탐색 막대에서 **[!UICO
 
 ## [!UICONTROL 찾아보기] {#browse}
 
-[ **[!UICONTROL 찾아보기]** ] 탭에는 연결을 설정한 대상이 표시됩니다. 토글을 **[!UICONTROL 활성화한]** 대상은 대상을 활성으로, 그 반대의 경우는 활성으로 설정합니다. 세그먼트 > 찾아보기를 선택하고 검사할 세그먼트를 선택하여 데이터 **[!UICONTROL 가]** 흐르는 대상을 볼 수도 있습니다. 검색 탭에서 각 대상에 대해 제공되는 모든 정보는 아래 표를 참조하십시오.
+[ **[!UICONTROL 찾아보기]** ] 탭에는 연결을 설정한 대상이 표시됩니다. 토글을 **[!UICONTROL 활성화한]** 대상은 대상을 활성으로, 그 반대의 경우는 활성으로 설정합니다. 세그먼트 > 찾아보기 **[!UICONTROL 를 선택하고 검사할 세그먼트를 선택하여 데이터]** 가 **[!UICONTROL 흐르는 대상을]** 볼 수도 있습니다. 검색 탭에서 각 대상에 대해 제공되는 모든 정보는 아래 표를 참조하십시오.
 
 ![검색 탭](/help/rtcdp/destinations/assets/browse-tab.png)
 
