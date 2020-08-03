@@ -4,9 +4,9 @@ seo-title: 대상에 프로필 및 세그먼트 활성화
 description: 세그먼트를 대상에 매핑하여 Adobe의 실시간 고객 데이터 Platform에 있는 데이터를 활성화합니다. 이를 수행하려면 아래 단계를 따르십시오.
 seo-description: 세그먼트를 대상에 매핑하여 Adobe의 실시간 고객 데이터 Platform에 있는 데이터를 활성화합니다. 이를 수행하려면 아래 단계를 따르십시오.
 translation-type: tm+mt
-source-git-commit: 098dd31be4d6ee6971cd87bcbfe0f686e34918e1
+source-git-commit: 08b6fd2d43e8ca9d0208ac1bfadc2db15e3f2e90
 workflow-type: tm+mt
-source-wordcount: '1036'
+source-wordcount: '1039'
 ht-degree: 0%
 
 ---
@@ -94,8 +94,8 @@ ht-degree: 0%
 
 ### 이메일 마케팅 대상 및 클라우드 스토리지 대상 {#esp-and-cloud-storage}
 
-이메일 마케팅 대상 및 클라우드 스토리지 대상의 경우 Adobe 실시간 CDP는 사용자가 제공한 스토리지 위치에 탭으로 구분된 `.txt` 파일이나 `.csv` 파일을 생성합니다. 저장 위치에 매일 새 파일이 만들어집니다. The file format is:
-`<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv`
+이메일 마케팅 대상 및 클라우드 스토리지 대상의 경우 Adobe 실시간 CDP는 사용자가 제공한 스토리지 위치에 탭으로 구분된 `.csv` 파일이나 `.txt` 파일을 생성합니다. 저장 위치에 매일 새 파일이 만들어집니다. The file format is:
+`<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv|txt`
 
 3일 연속으로 받은 파일은 다음과 같습니다.
 
@@ -109,11 +109,11 @@ Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_202004100
 
 ### 광고 대상
 
-데이터를 활성화할 각 광고 대상을 확인합니다. 정품 인증이 성공적으로 완료되면 광고 플랫폼에 대상이 채워집니다.
+데이터를 활성화할 각 광고 대상에서 계정을 확인하십시오. 정품 인증이 성공적으로 완료되면 광고 플랫폼에 대상이 채워집니다.
 
 ### 소셜 네트워크 대상
 
-활성화 [!DNL Facebook]를 성공적으로 수행하면 사용자 지정 [!DNL Facebook] 대상이 [Facebook 광고 관리자에서 프로그래밍 방식으로 만들어집니다](https://www.facebook.com/adsmanager/manage/). 사용자가 활성화된 세그먼트에 대해 자격이 부여되거나 자격이 부여되면 대상의 세그먼트 멤버십이 추가되고 제거됩니다.
+활성화 [!DNL Facebook]를 성공적으로 수행하면 사용자 지정 [!DNL Facebook] 대상이 [[!UICONTROL Facebook 광고 관리자에서 프로그래밍 방식으로 만들어집니다]](https://www.facebook.com/adsmanager/manage/). 사용자가 활성화된 세그먼트에 대해 자격이 부여되거나 자격이 부여되면 대상의 세그먼트 멤버십이 추가되고 제거됩니다.
 
 >[!TIP]
 >
