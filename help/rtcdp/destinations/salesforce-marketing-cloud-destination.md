@@ -4,7 +4,7 @@ seo-title: Salesforce Marketing Cloud
 description: Salesforce Marketing Cloud은 방문자와 고객이 자신의 경험을 개인화할 수 있도록 여정 경로를 구축하고 사용자 정의할 수 있도록 이전에 ExactTarget으로 알려진 디지털 마케팅 패키지입니다.
 seo-description: Salesforce Marketing Cloud은 방문자와 고객이 자신의 경험을 개인화할 수 있도록 여정 경로를 구축하고 사용자 정의할 수 있도록 이전에 ExactTarget으로 알려진 디지털 마케팅 패키지입니다.
 translation-type: tm+mt
-source-git-commit: 098dd31be4d6ee6971cd87bcbfe0f686e34918e1
+source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
 workflow-type: tm+mt
 source-wordcount: '503'
 ht-degree: 0%
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 ## 연결 대상 {#connect-destination}
 
-1. [ **[!UICONTROL 연결] > [대상]**]에서 [!DNL Salesforce Marketing Cloud]선택한 다음 **[!UICONTROL Connect 대상을 선택합니다]**.
+1. [ **[!UICONTROL 연결]** ] > [대상 ****]에서 [!DNL Salesforce Marketing Cloud]선택한 다음 **[!UICONTROL Connect 대상을 선택합니다]**.
 
    ![Salesforce에 연결](/help/rtcdp/destinations/assets/connect-salesforce.png)
 
