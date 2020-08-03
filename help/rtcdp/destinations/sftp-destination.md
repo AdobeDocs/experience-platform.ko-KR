@@ -4,9 +4,9 @@ seo-title: SFTP 대상
 description: SFTP 서버에 대한 라이브 아웃바운드 연결을 만들어 Experience Platform에서 구분된 데이터 파일을 정기적으로 내보냅니다.
 seo-description: SFTP 서버에 대한 라이브 아웃바운드 연결을 만들어 Experience Platform에서 구분된 데이터 파일을 정기적으로 내보냅니다.
 translation-type: tm+mt
-source-git-commit: 098dd31be4d6ee6971cd87bcbfe0f686e34918e1
+source-git-commit: 08b6fd2d43e8ca9d0208ac1bfadc2db15e3f2e90
 workflow-type: tm+mt
-source-wordcount: '170'
+source-wordcount: '171'
 ht-degree: 0%
 
 ---
@@ -32,4 +32,4 @@ SFTP 대상의 경우 **인증** 단계에서 대상 만들기 워크플로우�
 
 ## 내보낸 데이터 {#exported-data}
 
-대상 [!SFTP] 의 경우 Adobe 실시간 CDP는 사용자가 제공한 스토리지 위치에 탭으로 구분된 `.txt` 파일 또는 `.csv` 파일을 생성합니다. 파일에 대한 자세한 내용은 세그먼트 활성화 자습서에서 [이메일 마케팅 대상 및 클라우드 스토리지 대상을](/help/rtcdp/destinations/activate-destinations.md#esp-and-cloud-storage) 참조하십시오.
+SFTP 대상의 경우 Adobe 실시간 CDP는 사용자가 제공한 저장 위치에 탭으로 구분된 `.txt` 파일이나 `.csv` 파일을 만듭니다. 파일에 대한 자세한 내용은 세그먼트 활성화 자습서에서 [이메일 마케팅 대상 및 클라우드 스토리지 대상을](/help/rtcdp/destinations/activate-destinations.md#esp-and-cloud-storage) 참조하십시오.
