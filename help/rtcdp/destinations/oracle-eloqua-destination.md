@@ -4,7 +4,7 @@ seo-title: Oracle Furnar 대상
 description: Oracle Fura는 B2B 마케터 및 조직이 마케팅 캠페인 및 영업 리드 생성을 관리하는 데 도움이 되는 Oracle이 제공하는 마케팅 자동화를 위한 SaaS(서비스) 플랫폼입니다.
 seo-description: Oracle Fura는 B2B 마케터 및 조직이 마케팅 캠페인 및 영업 리드 생성을 관리하는 데 도움이 되는 Oracle이 제공하는 마케팅 자동화를 위한 SaaS(서비스) 플랫폼입니다.
 translation-type: tm+mt
-source-git-commit: 098dd31be4d6ee6971cd87bcbfe0f686e34918e1
+source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
 workflow-type: tm+mt
 source-wordcount: '517'
 ht-degree: 0%
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 ## 대상에 연결 {#connect-destination}
 
-1. [ **[!UICONTROL 연결] > [대상]**]에서 [!DNL Oracle Eloqua]선택한 다음 **[!UICONTROL Connect 대상을 선택합니다]**.
+1. [ **[!UICONTROL 연결]** ] > [대상 ****]에서 [!DNL Oracle Eloqua]선택한 다음 **[!UICONTROL Connect 대상을 선택합니다]**.
 
    ![Furnar에 연결](/help/rtcdp/destinations/assets/connect-oracle-eloqua.png)
 
