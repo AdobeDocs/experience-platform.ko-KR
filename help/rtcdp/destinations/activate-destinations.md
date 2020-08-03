@@ -4,7 +4,7 @@ seo-title: 대상에 프로필 및 세그먼트 활성화
 description: 세그먼트를 대상에 매핑하여 Adobe의 실시간 고객 데이터 Platform에 있는 데이터를 활성화합니다. 이를 수행하려면 아래 단계를 따르십시오.
 seo-description: 세그먼트를 대상에 매핑하여 Adobe의 실시간 고객 데이터 Platform에 있는 데이터를 활성화합니다. 이를 수행하려면 아래 단계를 따르십시오.
 translation-type: tm+mt
-source-git-commit: 08b6fd2d43e8ca9d0208ac1bfadc2db15e3f2e90
+source-git-commit: be4cf64c89a189a09a4a7774c8fadc76c6ee8458
 workflow-type: tm+mt
 source-wordcount: '1039'
 ht-degree: 0%
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 ## 데이터 활성화 {#activate-data}
 
-1. 대상 **[!UICONTROL > 찾아보기에서]**&#x200B;세그먼트를 활성화할 대상을 선택합니다.
+1. 대상 **** > **[!UICONTROL 찾아보기에서]**&#x200B;세그먼트를 활성화할 대상을 선택합니다.
 2. 대상의 이름을 클릭합니다. 활성화 흐름으로 이동합니다.
    ![activate-flow](/help/rtcdp/destinations/assets/activate-flow.png)대상에 대한 활성화 흐름이 이미 있는 경우 대상에 현재 전송되고 있는 세그먼트를 볼 수 있습니다. 오른쪽 레일에서 **[!UICONTROL 활성화]** 편집을 선택하고 아래 단계에 따라 정품 인증 세부 사항을 수정합니다.
 3. 활성화 **[!UICONTROL 를]**&#x200B;선택합니다.
