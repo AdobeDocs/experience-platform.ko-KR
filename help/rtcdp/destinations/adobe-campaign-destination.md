@@ -4,7 +4,7 @@ seo-title: Adobe Campaign
 description: Adobe Campaign은 온라인과 오프라인의 모든 채널에서 캠페인을 개인화하고 전달할 수 있는 솔루션 집합입니다.
 seo-description: Adobe Campaign은 온라인과 오프라인의 모든 채널에서 캠페인을 개인화하고 전달할 수 있는 솔루션 집합입니다.
 translation-type: tm+mt
-source-git-commit: 098dd31be4d6ee6971cd87bcbfe0f686e34918e1
+source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
 workflow-type: tm+mt
 source-wordcount: '517'
 ht-degree: 1%
@@ -22,7 +22,7 @@ Adobe Campaign은 온라인과 오프라인의 모든 채널에서 캠페인을 
 
 ## 연결 대상 {#connect-destination}
 
-1. [ **[!UICONTROL 연결] > [대상]**]에서 [Adobe Campaign]을 선택한 다음 [ **[!UICONTROL 연결 대상]을 선택합니다]**.
+1. [ **[!UICONTROL 연결]** ] > [대상 ****]에서 Adobe Campaign을 선택한 다음 **[!UICONTROL 연결 대상을 선택합니다]**.
 
    ![adobe campaign에 연결](/help/rtcdp/destinations/assets/connect-adobe-campaign.png)
 
