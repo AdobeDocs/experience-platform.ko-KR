@@ -4,7 +4,7 @@ seo-title: Oracle Responsys 대상
 description: Responsys는 Oracle이 이메일, 모바일, 디스플레이 및 소셜 간의 상호 작용을 개인화하기 위해 제공하는 크로스채널 마케팅 캠페인을 위한 기업 이메일 마케팅 툴입니다.
 seo-description: Responsys는 Oracle이 이메일, 모바일, 디스플레이 및 소셜 간의 상호 작용을 개인화하기 위해 제공하는 크로스채널 마케팅 캠페인을 위한 기업 이메일 마케팅 툴입니다.
 translation-type: tm+mt
-source-git-commit: 098dd31be4d6ee6971cd87bcbfe0f686e34918e1
+source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
 workflow-type: tm+mt
 source-wordcount: '487'
 ht-degree: 0%
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 ## 연결 대상 {#connect-destination}
 
-1. [ **[!UICONTROL 연결] > [대상]**]에서 [!DNL Oracle Responsys]선택한 다음 **[!UICONTROL Connect 대상을 선택합니다]**.
+1. [ **[!UICONTROL 연결]** ] > [대상 ****]에서 [!DNL Oracle Responsys]선택한 다음 **[!UICONTROL Connect 대상을 선택합니다]**.
 
    ![Responsys에 연결](/help/rtcdp/destinations/assets/connect-oracle-responsys.png)
 
