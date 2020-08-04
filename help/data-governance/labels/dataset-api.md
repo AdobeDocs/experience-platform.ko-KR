@@ -4,17 +4,17 @@ solution: Experience Platform
 title: 'API를 사용하여 데이터 세트에 대한 데이터 사용 레이블 관리 '
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 2f35765c0dfadbfb4782b6c3904e33ae7a330b2f
+source-git-commit: 3b6f46c5a81e1b6e8148bf4b78ae2560723f9d20
 workflow-type: tm+mt
-source-wordcount: '653'
-ht-degree: 3%
+source-wordcount: '912'
+ht-degree: 2%
 
 ---
 
 
 # API를 사용하여 데이터 세트에 대한 데이터 사용 레이블 관리
 
-데이터 세트에 대한 사용 레이블을 적용하고 편집할 수 [!DNL Dataset Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dataset-service.yaml) 있습니다. Adobe Experience Platform 데이터 카탈로그 기능의 일부이지만 데이터 세트 메타데이터를 관리하는 [!DNL Catalog Service] API와는 별개입니다.
+데이터 세트에 대한 사용 레이블을 적용하고 편집할 수 [!DNL Dataset Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dataset-service.yaml) 있습니다. 이것은 Adobe Experience Platform의 데이터 카탈로그 기능의 일부이지만 데이터 세트 메타데이터를 관리하는 [!DNL Catalog Service] API와는 별개입니다.
 
 이 문서에서는 데이터 세트 및 필드를 사용하여 레이블을 관리하는 방법을 설명합니다 [!DNL Dataset Service API]. API 호출을 사용하여 데이터 사용량 레이블을 직접 관리하는 방법에 대한 단계는 [레이블 끝점 안내서](../api/labels.md) 를 [!DNL Policy Service API]참조하십시오.
 
@@ -94,16 +94,21 @@ PUT /datasets/{DATASET_ID}/labels
 
 **요청**
 
-다음 POST 요청은 데이터 세트 내의 특정 필드뿐만 아니라 데이터 세트에 일련의 레이블을 추가합니다. 페이로드에서 제공되는 필드는 PUT 요청에 필요한 필드와 동일합니다.
+다음 PUT 요청은 데이터 세트에 대한 기존 레이블과 해당 데이터 세트 내의 특정 필드를 업데이트합니다. 페이로드에서 제공되는 필드는 POST 요청에 필요한 필드와 동일합니다.
+
+>[!IMPORTANT]
+>
+>종단점에 대한 PUT 요청을 만들 때 올바른 `If-Match` 헤더를 `/datasets/{DATASET_ID}/labels` 제공해야 합니다. 필요한 헤더 사용에 대한 자세한 내용은 [부록 섹션을](#if-match) 참조하십시오.
 
 ```shell
-curl -X POST \
+curl -X PUT \
   'https://platform.adobe.io/data/foundation/dataset/datasets/5abd49645591445e1ba04f87/labels' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
+  -H 'If-Match: 8f00d38e-0000-0200-0000-5ef4fc6d0000' \
   -d '{
         "labels": [ "C1", "C2", "C3", "I1", "I2" ],
         "optionalLabels": [
@@ -160,13 +165,20 @@ DELETE /datasets/{DATASET_ID}/labels
 
 **요청**
 
+다음 요청은 경로에 지정된 데이터 세트에 대한 레이블을 제거합니다.
+
+>[!IMPORTANT]
+>
+>종단점에 대한 DELETE 요청을 만들 때 올바른 `If-Match` 헤더를 `/datasets/{DATASET_ID}/labels` 제공해야 합니다. 필요한 헤더 사용에 대한 자세한 내용은 [부록 섹션을](#if-match) 참조하십시오.
+
 ```shell
 curl -X DELETE \
   'https://platform.adobe.io/data/foundation/dataset/datasets/5abd49645591445e1ba04f87/labels' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'If-Match: 8f00d38e-0000-0200-0000-5ef4fc6d0000'
 ```
 
 **응답**
@@ -182,3 +194,17 @@ curl -X DELETE \
 적용된 레이블을 기반으로 데이터 사용 정책을 정의할 수도 있습니다. 자세한 내용은 [데이터 사용 정책 개요를 참조하십시오](../policies/overview.md).
 
 데이터 집합 관리에 대한 자세한 내용 [!DNL Experience Platform]은 [데이터 집합 개요를 참조하십시오](../../catalog/datasets/overview.md).
+
+## 부록 {#appendix}
+
+다음 섹션에는 데이터 세트 서비스 API를 사용한 레이블 작업에 대한 추가 정보가 포함되어 있습니다.
+
+### [!DNL If-Match] header {#if-match}
+
+데이터 세트(PUT 및 DELETE)의 기존 레이블을 업데이트하는 API 호출을 수행할 때 데이터 세트 서비스에 있는 데이터 세트 레이블 엔티티의 현재 버전을 나타내는 헤더가 포함되어야 합니다. `If-Match` 데이터 충돌을 방지하기 위해 포함된 `If-Match` 문자열이 해당 데이터 세트에 대해 시스템에서 생성된 최신 버전 태그와 일치하는 경우에만 데이터 집합 엔터티가 업데이트됩니다.
+
+>[!NOTE]
+>
+>현재 해당 데이터 세트에 대한 레이블이 없는 경우, 새 레이블은 POST 요청을 통해서만 추가할 수 있으며, 이것은 `If-Match` 헤더가 필요하지 않습니다. 데이터 세트에 레이블을 추가하면 나중에 레이블을 업데이트하거나 제거하는 데 사용할 수 있는 `etag` 값이 할당됩니다.
+
+데이터 집합 레이블 엔터티의 최신 버전을 검색하려면 끝점에 [GET](#look-up) 요청을 `/datasets/{DATASET_ID}/labels` 하십시오. 현재 값은 헤더 아래의 응답으로 `etag` 반환됩니다. 기존 데이터 집합 레이블을 업데이트할 때, 이후 PUT 또는 DELETE 요청의 헤더에 해당 값을 사용하기 전에 데이터 세트에 대한 조회 요청을 먼저 수행하는 것이 좋습니다. `etag` `If-Match`
