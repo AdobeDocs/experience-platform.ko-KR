@@ -3,10 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform 데이터 거버넌스 도움말
 translation-type: tm+mt
-source-git-commit: e135bc33e6c3daa411e85cb37e407322fd0bca5b
+source-git-commit: 876ac35f6366411adda821805bf628470839f80e
 workflow-type: tm+mt
-source-wordcount: '103'
-ht-degree: 5%
+source-wordcount: '106'
+ht-degree: 6%
 
 ---
 
@@ -16,9 +16,9 @@ ht-degree: 5%
 * [데이터 거버넌스 개요](home.md)
 * 데이터 사용 레이블 {#labels}
    * [데이터 사용 레이블 개요](labels/overview.md)
+   * [핵심 데이터 사용 레이블](labels/reference.md)
    * [UI에서 데이터 사용 레이블 관리](labels/user-guide.md)
-   * [API에서 데이터 사용 레이블 관리](labels/api.md)
-   * [지원되는 데이터 사용 레이블](labels/reference.md)
+   * [API를 사용하여 데이터 세트 및 필드에 대한 레이블 관리](labels/dataset-api.md)
 * 데이터 사용 정책 {#policies}
    * [데이터 사용 정책 개요](policies/overview.md)
    * [데이터 사용 정책 사용 안내서](policies/user-guide.md)
@@ -26,8 +26,9 @@ ht-degree: 5%
 * 정책 실행 {#enforcement}
    * [정책 실행 개요](enforcement/overview.md)
    * [정책 서비스 API를 사용하여 데이터 사용 정책 적용](enforcement/api-enforcement.md)
-* DULE 정책 서비스 API {#api}
+* 정책 서비스 API 개발자 가이드 {#api}
    * [시작하기](api/getting-started.md)
+   * [레이블](api/labels.md)
    * [정책](api/policies.md)
    * [마케팅 작업](api/marketing-actions.md)
    * [평가](api/evaluation.md)
