@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 데이터 집합 개요
 topic: datasets
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 1bf6b0948c47c7941fb8f9cf2edfac4d665b8189
 workflow-type: tm+mt
-source-wordcount: '711'
+source-wordcount: '712'
 ht-degree: 2%
 
 ---
@@ -47,7 +47,7 @@ Adobe Experience Platform [!DNL Data Governance] 를 사용하면 데이터 사�
 서비스에 대한 자세한 내용은 [데이터 거버넌스](../../data-governance/home.md) 개요를 참조하십시오. 사용 레이블로 작업하는 방법에 대한 단계 [!DNL Platform]는 다음 가이드를 참조하십시오.
 
 * [UI에서 레이블 관리](../../data-governance/labels/user-guide.md)
-* [API에서 레이블 관리](../../data-governance/labels/api.md)
+* [API에서 데이터 세트 레이블 관리](../../data-governance/labels/dataset-api.md)
 
 ## 다운스트림 [!DNL Platform] 서비스의 데이터 세트
 
