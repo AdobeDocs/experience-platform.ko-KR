@@ -3,10 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: 지능형 서비스 도움말
 translation-type: tm+mt
-source-git-commit: a0b85809d0703c0366c73ed6d66319af0f62cb27
+source-git-commit: 24449d0138ab449dbc01aecbbe9f70e05c781c89
 workflow-type: tm+mt
-source-wordcount: '64'
-ht-degree: 3%
+source-wordcount: '67'
+ht-degree: 2%
 
 ---
 
@@ -18,6 +18,7 @@ ht-degree: 3%
 * Attribution AI {#attribution-ai}
    * [개요](attribution-ai/overview.md)
    * [Attribution AI 시작하기](attribution-ai/getting-started.md)
+   * [입력 및 출력](attribution-ai/input-output.md)
    * [사용자 인터페이스 가이드](attribution-ai/user-guide.md)
    * [인사이트 검색](attribution-ai/discover-insights.md)
    * [점수 액세스](attribution-ai/download-scores.md)
