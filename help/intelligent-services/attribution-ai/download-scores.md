@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Attribution AI에서 점수 액세스
 topic: Accessing scores
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 24449d0138ab449dbc01aecbbe9f70e05c781c89
 workflow-type: tm+mt
-source-wordcount: '983'
+source-wordcount: '1028'
 ht-degree: 2%
 
 ---
@@ -259,9 +259,11 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/01E5QSWC
 
 ![터미널](./images/download-scores/terminal-output.png)
 
+다운로드된 점들은 쪽모이 세공 마룻바닥으로 되어 있으며, 점수를 보려면 [!DNL Spark]셸 또는 쪽모이 세공 마룻바닥으로 되어 있어야 합니다. Raw 스코어를 보려면 [쪽모이 세공된 도구를 사용할 수 있습니다](https://github.com/apache/parquet-mr/tree/master/parquet-tools). 쪽모이 세공 툴로 데이터를 분석할 수 있습니다 [!DNL Spark].
+
 ## 다음 단계
 
-이 문서에서는 Attribution AI 점수를 다운로드하는 데 필요한 단계를 간략하게 설명합니다. 이제 제공되는 다른 [지능형 서비스](../home.md) 및 가이드를 계속 검색할 수 있습니다.
+이 문서에서는 Attribution AI 점수를 다운로드하는 데 필요한 단계를 간략하게 설명합니다. 점수 출력에 대한 자세한 내용은 속성 [AI 입력 및 출력](./input-output.md) 설명서를 참조하십시오.
 
 ## Snowflake을 사용하여 점수 액세스
 
