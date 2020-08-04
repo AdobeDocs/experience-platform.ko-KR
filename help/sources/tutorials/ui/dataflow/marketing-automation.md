@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI에서 마케팅 자동화 커넥터에 대한 데이터 흐름 구성
 topic: overview
 translation-type: tm+mt
-source-git-commit: 3a1ecca49809a6ebbc94bbbef93eef56c8faf118
+source-git-commit: 91714bea4e165d64bcc33e32e73d1d32a505ba00
 workflow-type: tm+mt
-source-wordcount: '1164'
+source-wordcount: '1244'
 ht-degree: 0%
 
 ---
@@ -58,11 +58,9 @@ ht-degree: 0%
 
 데이터를 새 데이터 세트에 인제스트하려면 **[!UICONTROL 새 데이터 세트]** 만들기를 선택하고 제공된 필드에 데이터 세트에 대한 이름과 설명을 입력합니다.
 
-이 프로세스 동안 부분 섭취 및 *[!UICONTROL 오류 진단을]* 활성화할 수도 *[!UICONTROL 있습니다]*. 부분 *[!UICONTROL 섭취]* 활성화는 사용자가 설정할 수 있는 특정 임계값까지 오류가 포함된 데이터를 인제스트하는 기능을 제공합니다. 오류 진단 활성화에서는 별도로 묶인 잘못된 데이터에 대한 세부 정보를 제공합니다. 자세한 내용은 [부분 일괄 처리 통합 개요를 참조하십시오](../../../../ingestion/batch-ingestion/partial.md).
+스키마 선택 검색 막대에서 스키마 이름을 입력하여 스키마 필드를 **[!UICONTROL 첨부할]** 수 있습니다. 드롭다운 아이콘을 선택하여 기존 스키마 목록을 볼 수도 있습니다. 또는 **[!UICONTROL 고급 검색을 선택하여]** 해당 세부 정보를 포함한 기존 스키마의 화면에 액세스할 수 있습니다.
 
-완료되면 스키마 아이콘을 클릭합니다.
-
-![use-new-dataset](../../../images/tutorials/dataflow/marketing-automation/use-new-dataset.png)
+![새로운 데이터 세트 만들기](../../../images/tutorials/dataflow/all-tabular/new-target-dataset.png)
 
 스키마 *[!UICONTROL 선택]* 대화 상자가 나타납니다. 새 데이터 세트에 적용할 스키마를 선택한 다음 완료를 **[!UICONTROL 클릭합니다]**.
 
@@ -72,7 +70,7 @@ ht-degree: 0%
 
 소스 데이터가 매핑되면 [다음]을 **[!UICONTROL 클릭합니다]**.
 
-![](../../../images/tutorials/dataflow/marketing-automation/mapping.png)
+![](../../../images/tutorials/dataflow/all-tabular/mapping-updated.png)
 
 ## 처리 실행 예약
 
@@ -80,10 +78,10 @@ ht-degree: 0%
 
 | 필드 | 설명 |
 | --- | --- |
-| 주파수 | 선택 가능한 주파수는 한 번, 분, 시간, 일 및 주입니다. |
+| 빈도 | 선택 가능한 주파수는 `Once`, `Minute``Hour`, `Day`및 `Week`있습니다. |
 | 간격 | 선택한 주파수의 간격을 설정하는 정수입니다. |
-| 시작 시간 | 첫 번째 인제스트 발생 시간을 나타내는 UTC 타임스탬프 |
-| 채우기 | 처음에 수집되는 데이터를 결정하는 부울 값입니다. 채우기 *가* 활성화되어 있으면, 지정된 경로에 있는 모든 현재 파일이 첫 번째 예약된 수집 중에 수집됩니다. 채우기 *를* 비활성화하면 인제스트 첫 번째 실행과 *시작 시간* 사이에 로드되는 파일만 인제스트됩니다. 시작 *시간* 전에 로드된 파일은 인제스트되지 않습니다. |
+| 시작 시간 | 첫 번째 인제스트 발생 시간을 나타내는 UTC 타임스탬프. |
+| 채우기 | 처음에 수집되는 데이터를 결정하는 부울 값입니다. 채우기 *[!UICONTROL 가]* 활성화되어 있으면, 지정된 경로에 있는 모든 현재 파일이 첫 번째 예약된 수집 중에 수집됩니다. 채우기 *를* 비활성화하면 인제스트 첫 번째 실행과 *[!UICONTROL 시작 시간]* 사이에 로드되는 파일만 인제스트됩니다. 시작 *[!UICONTROL 시간]* 전에 로드된 파일은 인제스트되지 않습니다. |
 | 델타 열 | 유형, 날짜 또는 시간의 소스 스키마 필드 필터링된 세트가 있는 옵션. 이 필드는 새 데이터와 기존 데이터를 구분하는 데 사용됩니다. 선택한 열의 타임스탬프를 기반으로 증분 데이터를 인제스트합니다. |
 
 데이터 프롤링은 일정에 따라 데이터를 자동으로 인제스트하도록 디자인되었습니다. 섭취 빈도를 선택하여 시작합니다. 그런 다음 간격을 설정하여 두 흐름 실행 사이의 기간을 지정합니다. 간격 값은 0이 아닌 정수여야 하며 15보다 크거나 같도록 설정해야 합니다.
@@ -100,9 +98,19 @@ ht-degree: 0%
 
 >[!TIP] **[!UICONTROL 일회성]** 섭취 **[!UICONTROL 중에는 간격]** 및 채우기 기능이 표시되지 않습니다.
 
+일정에 적절한 값을 제공한 후 다음을 **[!UICONTROL 선택합니다]**.
+
 ![](../../../images/tutorials/dataflow/databases/schedule-once.png)
 
-일정에 적절한 값을 제공한 후 다음을 **[!UICONTROL 선택합니다]**.
+## 데이터 흐름 세부 정보 제공
+
+데이터 *[!UICONTROL 흐름 세부]* 정보 단계가 나타나므로 새 데이터 흐름 이름에 대한 간단한 설명을 제공할 수 있습니다.
+
+이 프로세스 동안 부분 섭취 및 *[!UICONTROL 오류 진단을]* 활성화할 수도 *[!UICONTROL 있습니다]*. 부분 *[!UICONTROL 섭취]* 활성화는 특정 임계값까지 오류가 포함된 데이터를 인제스트하는 기능을 제공합니다. 부분 *[!UICONTROL 섭취]* 가 활성화되면 *[!UICONTROL 오류 임계값 %]* 전화를 드래그하여 일괄 처리 오류 임계값을 조정합니다. 또는 입력 상자를 선택하여 임계값을 수동으로 조정할 수 있습니다. 자세한 내용은 [부분 일괄 처리 통합 개요를 참조하십시오](../../../../ingestion/batch-ingestion/partial.md).
+
+데이터 흐름 값을 제공하고 [다음]을 **[!UICONTROL 선택합니다]**.
+
+![dataflow details](../../../images/tutorials/dataflow/all-tabular/dataflow-detail.png)
 
 ## 데이터 흐름 검토
 
