@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Attribution AI 사용 안내서
 topic: User guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 15f9f90e5a1439e071eeb46ad655eee10954c2ac
 workflow-type: tm+mt
-source-wordcount: '1430'
+source-wordcount: '1432'
 ht-degree: 0%
 
 ---
@@ -82,7 +82,7 @@ Attribution AI 서비스 페이지가 나타납니다. 이 페이지에는 Attri
 
 ![전환 추가](./images/user-guide/add_conversion.png)
 
-### 룩백 창 정의
+### 룩백 창 정의 {#lookback-window}
 
 전환 정의를 완료한 후에는 조회 창을 확인해야 합니다. 화살표 키를 사용하거나 기본값(56)을 클릭하여 터치포인트를 포함할 전환 이벤트까지 남은 일 수를 지정합니다. 터치포인트는 다음 단계에서 정의됩니다.
 
@@ -172,9 +172,9 @@ Attribution AI의 마지막 페이지는 *교육 및 점수 설정에* 사용되
 
 ![region](./images/user-guide/region-based.png)
 
-### 교육 창
+### 교육 창 {#training-window}
 
-가장 정확한 모델을 얻으려면 비즈니스를 나타내는 내역 데이터로 모델을 교육하는 것이 중요합니다. 기본적으로 이 모델은 2분기(6개월)의 데이터를 사용하여 교육됩니다. 드롭다운을 선택하여 기본값을 변경합니다. 1~4개 데이터(3-12개월)로 트레이닝을 선택할 수 있습니다.
+가장 정확한 모델을 얻으려면 비즈니스를 나타내는 내역 데이터로 모델을 교육하는 것이 중요합니다. 기본적으로 모델은 2분기(6개월) 전환 이벤트 데이터를 사용하여 교육됩니다. 드롭다운을 선택하여 기본값을 변경합니다. 1~4개 데이터(3-12개월)로 트레이닝을 선택할 수 있습니다.
 
 >[!NOTE]
 >
