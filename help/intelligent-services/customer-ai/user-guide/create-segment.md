@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 예측된 점수가 있는 고객 세그먼트 만들기
 topic: Create a segment
 translation-type: tm+mt
-source-git-commit: fba6ae701a38737812dccbf4f63e5a07f935ad8b
+source-git-commit: e351a2d489730c1f1bd5f87be8d85612090bc009
 workflow-type: tm+mt
 source-wordcount: '272'
 ht-degree: 0%
@@ -14,13 +14,13 @@ ht-degree: 0%
 
 # 예측된 점수가 있는 고객 세그먼트 만들기
 
-예측 실행이 완료되면 예측된 성향 점수가 프로파일에서 자동으로 사용됩니다. 고객 AI 점수로 프로파일을 강화하면 고객 세그먼트를 만들어 고객 성향 점수를 기준으로 고객을 찾을 수 있습니다. 이 섹션에서는 세그먼트 빌더를 사용하여 세그먼트를 만드는 단계를 제공합니다. 세그먼트 만들기에 대한 더 강력한 자습서는 세그먼트 빌더 [사용 안내서를 참조하십시오](../../../segmentation/ui/overview.md).
+예측 실행이 완료되면 예측된 성향 점수가 프로파일에서 자동으로 사용됩니다. 고객 AI 점수로 프로파일을 강화하면 고객 세그먼트를 만들어 고객 성향 점수를 기준으로 고객을 찾을 수 있습니다. 이 섹션에서는 세그먼트 빌더를 사용하여 세그먼트를 만드는 단계를 제공합니다. 세그먼트 만들기에 대한 더 강력한 자습서는 세그먼트 빌더 [사용 안내서를 참조하십시오](../../../segmentation/ui/segment-builder.md).
 
 >[!IMPORTANT]
 >
 >이 방법을 활용하려면 데이터 세트에 대해 실시간 고객 프로필을 활성화해야 합니다.
 
-Platform UI에서 왼쪽 탐색 **[!UICONTROL 에서]** 세그먼트를 클릭한 다음 세그먼트 **[!UICONTROL 만들기를 클릭합니다]**.
+플랫폼 UI에서 왼쪽 탐색 **[!UICONTROL 에서]** 세그먼트를 클릭한 다음 세그먼트 **[!UICONTROL 만들기를 클릭합니다]**.
 
 ![](../images/user-guide/segments.png)
 
