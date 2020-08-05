@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 스트리밍 세분화
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: e351a2d489730c1f1bd5f87be8d85612090bc009
 workflow-type: tm+mt
-source-wordcount: '1364'
+source-wordcount: '1365'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->다음 문서에서는 API를 사용하여 스트리밍 세그멘테이션을 사용하는 방법을 설명합니다. UI를 사용한 스트리밍 세그멘테이션 사용에 대한 자세한 내용은 [세그먼트 빌더 안내서를 참조하십시오](../ui/overview.md#streaming-segmentation).
+>다음 문서에서는 API를 사용하여 스트리밍 세그멘테이션을 사용하는 방법을 설명합니다. UI를 사용한 스트리밍 세그멘테이션 사용에 대한 자세한 내용은 [스트리밍 세그멘테이션 UI 안내서를 참조하십시오](../ui/streaming-segmentation.md).
 
 스트리밍 세그먼테이션을 통해 [!DNL Adobe Experience Platform] 고객은 데이터 풍부함에 주력하면서 거의 실시간으로 세분화할 수 있습니다. 이제 스트리밍 세분화를 통해 데이터가 유입되면 세그먼트 자격 조건 [!DNL Platform]이 높아져 세분화 작업을 예약하고 실행할 필요가 없습니다. 이 기능을 사용하면 이제 데이터가 전달될 때 대부분의 세그먼트 규칙을 평가할 수 [!DNL Platform]있으므로, 세그먼트 멤버십은 예약된 세그멘테이션 작업을 실행하지 않고 최신 상태로 유지됩니다.
 
@@ -403,4 +403,4 @@ curl -X POST \
 
 이제 스트리밍 세그먼테이션을 위해 새 세그먼트와 기존 세그먼트를 모두 활성화하고, 기준 요소를 개발하고 반복적인 평가를 수행하는 예약된 세그먼테이션을 활성화했으므로 조직의 세그먼트를 만들기 시작할 수 있습니다.
 
-유사한 작업을 수행하고 Adobe Experience Platform 사용자 인터페이스를 사용하여 세그먼트를 작업하는 방법에 대해 알아보려면 [세그먼트 빌더 사용자 안내서를 참조하십시오](../ui/overview.md).
+유사한 작업을 수행하고 Adobe Experience Platform 사용자 인터페이스를 사용하여 세그먼트를 작업하는 방법에 대해 알아보려면 [세그먼트 빌더 사용자 안내서를 참조하십시오](../ui/segment-builder.md).
