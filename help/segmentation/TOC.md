@@ -3,10 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform 세그멘테이션 서비스 도움말
 translation-type: tm+mt
-source-git-commit: c5880153f4ba9a6518423985e42fb1b3b71cd862
+source-git-commit: e351a2d489730c1f1bd5f87be8d85612090bc009
 workflow-type: tm+mt
-source-wordcount: '112'
-ht-degree: 8%
+source-wordcount: '116'
+ht-degree: 9%
 
 ---
 
@@ -27,6 +27,8 @@ ht-degree: 8%
    - [스트리밍 세분화](api/streaming-segmentation.md)
 - 세그멘테이션 UI {#ui}
    - [개요](ui/overview.md)
+   - [세그먼트 빌더](ui/segment-builder.md)
+   - [스트리밍 세분화](ui/streaming-segmentation.md)
 - [옵트아웃 준수](honoring-opt-outs.md)
 - [다중 엔티티 세그먼테이션](multi-entity-segmentation.md)
 - 프로필 쿼리 언어 {#pql}
@@ -48,4 +50,4 @@ ht-degree: 8%
    - [데이터를 내보낼 데이터 세트 만들기](tutorials/create-dataset-export-segment.md)
    - [세그먼트에 대한 데이터 사용 규정 준수](tutorials/governance.md)
 - [API 참조](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)
-- [Platform 릴리스 노트](https://www.adobe.com/go/platform-release-notes-en)
+- [플랫폼 릴리스 정보](https://www.adobe.com/go/platform-release-notes-en)
