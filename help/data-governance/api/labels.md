@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 레이블 끝점
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: ec743484028e537fa28706b0c8ec3a1f1f1d2ba3
+source-git-commit: 80526bc0fea9e1854174a2edf9389ff0c4e98f71
 workflow-type: tm+mt
 source-wordcount: '489'
 ht-degree: 3%
@@ -22,7 +22,7 @@ ht-degree: 3%
 
 ## 시작하기
 
-이 안내서에서 사용되는 API 끝점은 이 끝점의 일부입니다 [!DNL Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). 계속하기 전에 [시작하기 가이드](getting-started.md) 에서 관련 문서 링크, 이 문서에서 샘플 API 호출 읽기 안내서, 모든 API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요 정보를 검토하십시오 [!DNL Experience Platform] .
+이 안내서에서 사용되는 API 끝점은 이 끝점의 일부입니다 [!DNL Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml). 계속하기 전에 [시작하기 가이드](getting-started.md) 에서 관련 문서 링크, 이 문서에서 샘플 API 호출 읽기 안내서, 모든 API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요 정보를 검토하십시오 [!DNL Experience Platform] .
 
 ## 레이블 목록 검색 {#list}
 
