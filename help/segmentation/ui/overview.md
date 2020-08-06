@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 세그멘테이션 서비스 사용 안내서
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: ab43c677ab45c7aa047a50049c0dd8613b003403
+source-git-commit: e7266fba14b2dffe46ce77428ad6fe0dd92abdf5
 workflow-type: tm+mt
-source-wordcount: '1361'
+source-wordcount: '1365'
 ht-degree: 0%
 
 ---
@@ -47,7 +47,7 @@ IMS **[!UICONTROL 조직의]** 모든 세그먼트 정의 목록을 보려면 �
 
 ![](../images/ui/overview/segment-browse-segments.png)
 
-페이지 상단에는 모든 세그먼트를 **[!UICONTROL 추가하여 예약]** 및 세그먼트 **[!UICONTROL 만들기를 선택할 수 있는 옵션이]**&#x200B;있습니다.
+페이지 상단에는 모든 세그먼트를 일정에 추가하고 새 세그먼트를 만드는 옵션이 있습니다.
 
 예약을 **[!UICONTROL 위해 모든 세그먼트 추가를 전환하면]** 예약된 세그먼테이션이 활성화됩니다. 예약된 세그멘테이션에 대한 자세한 내용은 이 사용 안내서의 [예약된 세그멘테이션 섹션에서 확인할 수 있습니다](#scheduled-segmentation).
 
@@ -73,7 +73,7 @@ IMS **[!UICONTROL 조직의]** 모든 세그먼트 정의 목록을 보려면 �
 
 ### 세그먼트 요약
 
-세그먼트 *[!UICONTROL 요약]* 섹션에서는 ID, 이름, 설명 및 속성의 세부 사항과 같은 정보를 제공합니다.
+세그먼트 **[!UICONTROL 요약]** 섹션에서는 ID, 이름, 설명 및 속성의 세부 사항과 같은 정보를 제공합니다.
 
 또한 세그먼트를 편집할 수 있는 옵션이 제공됩니다. 세그먼트 **[!UICONTROL 편집을]** 선택하면 해당 페이지로 이동합니다 [!DNL Segment Builder]. 작업 공간 사용에 대한 자세한 내용은 [!DNL Segment Builder] 사용 [[!DNL Segment Builder] 안내서를 참조하십시오](./segment-builder.md).
 
