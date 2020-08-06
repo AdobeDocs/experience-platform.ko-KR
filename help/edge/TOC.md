@@ -3,10 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform 웹 SDK 도움말
 translation-type: tm+mt
-source-git-commit: 71193ad346c3976f80b14ee0d6e5b12055a17473
+source-git-commit: c12d854f272c6775ae940b7a4056d0f527c5dd01
 workflow-type: tm+mt
-source-wordcount: '94'
-ht-degree: 14%
+source-wordcount: '96'
+ht-degree: 16%
 
 ---
 
@@ -33,7 +33,7 @@ ht-degree: 14%
    * [제품](what-to-implement/commerce.md)
 * 솔루션별 고려 사항 {#solutions}
    * Analytics {#analytics}
-      * [Analytics 개요](solution-specific/analytics/analytics-overview.md)
+      * [분석 개요](solution-specific/analytics/analytics-overview.md)
       * [Analytics에서 수동으로 변수 매핑](solution-specific/analytics/manually-mapping-variables.md)
       * [자동으로 매핑된 변수](solution-specific/analytics/automatically-mapped-vars.md)
    * Audience Manager {#aam}
@@ -44,4 +44,5 @@ ht-degree: 14%
 * 참조 {#ref}
    * [자동으로 수집된 정보](reference/automatic-information.md)
    * [라이브러리 정보 검색](reference/retrieving-library-information.md)
-* [Platform 릴리스 노트](https://www.adobe.com/go/platform-release-notes-en)
+* [릴리스 노트](release-notes.md)
+* [플랫폼 릴리스 정보](https://www.adobe.com/go/platform-release-notes-en)
