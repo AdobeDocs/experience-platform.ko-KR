@@ -4,10 +4,10 @@ seo-title: Adobe Experience Platform 웹 SDK 구성
 description: Experience Platform 웹 SDK를 구성하는 방법 살펴보기
 seo-description: Experience Platform 웹 SDK를 구성하는 방법 살펴보기
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: abd72993577f298141ed0d25b6c4abc42050b68e
 workflow-type: tm+mt
-source-wordcount: '737'
-ht-degree: 11%
+source-wordcount: '749'
+ht-degree: 10%
 
 ---
 
@@ -146,21 +146,13 @@ Your assigned [!DNL Experience Cloud] organization ID.  페이지 내에서 여�
 
 ## ID 옵션
 
-### `idSyncContainerId`
+### `idMigrationEnabled`
 
 | **유형** | **필수 여부** | **기본값** |
 | -------- | ------------ | ----------------- |
-| 숫자 | 아니요 | none |
+| 부울 | 아니요 | true |
 
-실행된 ID를 지정하는 컨테이너 ID. 컨설턴트가 얻을 수 있는 음수가 아닌 정수입니다.
-
-### `idSyncEnabled`
-
-| **유형** | **필수 여부** | **기본값** |
-| -------- | ------------ | ----------------- |
-| 부울 | 아니요 | `true` |
-
-URL을 실행하여 Adobe 고유 사용자 ID를 타사 데이터 소스의 고유 사용자 ID와 동기화할 수 있는 ID 동기화 기능을 활성화합니다.
+true이면 SDK가 이전 AMCV 쿠키를 읽고 설정합니다. 이렇게 하면 사이트의 일부 부분이 여전히 Visitor.js를 사용하고 있을 수 있지만 AEP 웹 SDK를 사용하는 것으로 전환하는 데 도움이 됩니다. 또한 방문자 API가 페이지에 정의된 경우 SDK는 방문자 API에 대해 ECID를 쿼리합니다. 이를 통해 AEP 웹 SDK를 사용하여 이중 태그 페이지를 만들 수 있으며 동일한 ECID를 가질 수 있습니다.
 
 ### `thirdPartyCookiesEnabled`
 
