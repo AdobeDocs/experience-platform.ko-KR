@@ -1,12 +1,12 @@
 ---
 title: 자동으로 수집된 정보
-seo-title: Adobe Experience Platform 웹 SDK에서 자동으로 수집한 정보
+seo-title: Adobe Experience Platform 웹 SDK가 자동으로 수집하는 정보
 description: Adobe Experience Cloud SDK가 자동으로 수집하는 각 정보의 설명
 seo-description: Adobe Experience Cloud SDK가 자동으로 수집하는 각 정보의 설명
 translation-type: tm+mt
-source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+source-git-commit: ccd47e024f3ea53507454b7785528c031746d681
 workflow-type: tm+mt
-source-wordcount: '382'
+source-wordcount: '387'
 ht-degree: 8%
 
 ---
@@ -91,6 +91,13 @@ SDK(소프트웨어 개발 키트) 식별자입니다.  이 필드는 URI를 사
 | **페이로드의 경로:** | **예:** |
 | -------------------------------------------- | ------------ |
 | `events[].xdm.implementationDetails.version` | `0.11.0` |
+
+### 환경
+
+| **페이로드의 경로:** | **예:** |
+| ------------------------------------------------ | ------------ |
+| `events[].xdm.implementationDetails.environment` | `browser` |
+
 
 ## 배치 컨텍스트(`placeContext`)
 
