@@ -1,12 +1,12 @@
 ---
 title: 이벤트 추적
-seo-title: Tracking Adobe Experience Platform Web SDK events
+seo-title: Adobe Experience Platform 웹 SDK 이벤트 추적
 description: Experience Platform 웹 SDK 이벤트를 추적하는 방법 학습
 seo-description: Experience Platform 웹 SDK 이벤트를 추적하는 방법 학습
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: 8ac603f749928440438f2e0d1f3f1f1cc95b2916
 workflow-type: tm+mt
-source-wordcount: '632'
+source-wordcount: '688'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # 이벤트 추적
 
-To send event data to the Adobe Experience Cloud, use the `sendEvent` command. 이 `sendEvent` 명령은 데이터를 사용자에게 보내고 개인화된 컨텐츠, ID [!DNL Experience Cloud]및 대상 대상을 검색하는 기본 방법입니다.
+이벤트 데이터를 Adobe Experience Cloud으로 보내려면 `sendEvent` 명령을 사용합니다. 이 `sendEvent` 명령은 데이터를 사용자에게 보내고 개인화된 컨텐츠, ID [!DNL Experience Cloud]및 대상 대상을 검색하는 기본 방법입니다.
 
 Adobe Experience Cloud으로 전송된 데이터는 두 가지 카테고리로 분류됩니다.
 
@@ -23,7 +23,7 @@ Adobe Experience Cloud으로 전송된 데이터는 두 가지 카테고리로 �
 
 ## XDM 데이터 전송
 
-XDM 데이터는 컨텐츠 및 구조가 Adobe Experience Platform 내에 만든 스키마와 일치하는 객체입니다. [스키마를 만드는 방법에 대해 자세히 알아보십시오.](../../xdm/tutorials/create-schema-ui.md)
+XDM 데이터는 컨텐츠 및 구조가 Adobe Experience Platform 내에서 만든 스키마와 일치하는 객체입니다. [스키마를 만드는 방법에 대해 자세히 알아보십시오.](../../xdm/tutorials/create-schema-ui.md)
 
 분석, 개인화, 고객 또는 대상의 일부로 사용하려는 모든 XDM 데이터는 `xdm` 옵션을 사용하여 전송해야 합니다.
 
@@ -43,7 +43,7 @@ alloy("sendEvent", {
 ```
 
 >[!NOTE]
->There is a 32 KB limit on the data that can be sent in each event in the XDM field.
+>XDM 필드의 각 이벤트에서 전송할 수 있는 데이터에는 32KB 제한이 있습니다.
 
 ### XDM 이외의 데이터 전송
 
@@ -51,7 +51,7 @@ alloy("sendEvent", {
 
 ### 설정 `eventType`
 
-In an XDM experience event, there is an `eventType` field. 여기에는 레코드의 기본 이벤트 유형이 포함됩니다. 이 옵션은 옵션의 일부로 전달될 수 `xdm` 있습니다.
+XDM 경험 이벤트에는 필드가 `eventType` 있습니다. 여기에는 레코드의 기본 이벤트 유형이 포함됩니다. 이 옵션은 옵션의 일부로 전달될 수 `xdm` 있습니다.
 
 ```javascript
 alloy("sendEvent", {
@@ -80,6 +80,24 @@ alloy("sendEvent", {
 });
 ```
 
+### 데이터 세트 ID 재정의
+
+경우에 따라 구성 UI에 구성된 데이터 세트 이외의 데이터 세트에 이벤트를 보낼 수도 있습니다. 이 경우 명령에서 `datasetId` 옵션을 `sendEvent` 설정해야 합니다.
+
+```javascript
+var myXDMData = { ... };
+
+alloy("sendEvent", {
+  "xdm": myXDMData,
+  "type": "commerce.checkout",
+  "datasetId": "YOUR_DATASET_ID"
+});
+```
+
+### ID 정보 추가
+
+사용자 지정 ID 정보를 이벤트에 추가할 수도 있습니다. Experience Cloud [ID 검색을 참조하십시오.](./identity.md)
+
 ## sendBeacon API 사용
 
 웹 페이지 사용자가 다른 곳으로 이동하기 전에 이벤트 데이터를 전송하기가 어려울 수 있습니다. 요청이 너무 길면 브라우저가 요청을 취소할 수 있습니다. 일부 브라우저는 이 시간 동안 데이터를 보다 쉽게 수집할 수 있도록 `sendBeacon` 하는 웹 표준 API를 구현했습니다. 사용 `sendBeacon`시 브라우저는 글로벌 브라우징 컨텍스트에서 웹 요청을 수행합니다. 즉, 브라우저가 백그라운드에서 비콘 요청을 수행하고 페이지 탐색을 유지하지 않습니다. Adobe Experience Platform [!DNL Web SDK] 에 사용할 `sendBeacon`수 있도록 하려면 이벤트 명령 `"documentUnloading": true` 에 옵션을 추가합니다.  다음은 한 예입니다.
@@ -100,7 +118,7 @@ alloy("sendEvent", {
 });
 ```
 
-브라우저는 한 번에 전송할 수 있는 데이터 양을 제한했습니다 `sendBeacon` . 많은 브라우저에서 제한은 64K입니다. 페이로드가 너무 커서 브라우저가 이벤트를 거부하는 경우 Adobe Experience Platform은 일반적인 전송 방식(예: 가져오기)을 사용하여 [!DNL Web SDK] 돌아갑니다.
+브라우저는 한 번에 전송할 수 있는 데이터 양을 제한했습니다 `sendBeacon` . 많은 브라우저에서 제한은 64K입니다. 페이로드가 너무 커서 브라우저가 이벤트를 거부하는 경우, Adobe Experience Platform은 일반적인 전송 방식(예: 가져오기)을 다시 사용하여 [!DNL Web SDK] 넘어갑니다.
 
 ## 이벤트의 응답 처리
 
