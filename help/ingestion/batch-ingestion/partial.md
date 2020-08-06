@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform 부분 배치 처리 개요
 topic: overview
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: df6a6e20733953a0983bbfdf66ca2abc6f03e977
 workflow-type: tm+mt
-source-wordcount: '1237'
+source-wordcount: '1420'
 ht-degree: 1%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 1%
 이 자습서에서는 부분 일괄 처리에 관련된 다양한 Adobe Experience Platform 서비스에 대한 작업 지식이 필요합니다. 이 자습서를 시작하기 전에 다음 서비스에 대한 설명서를 검토하십시오.
 
 - [일괄 처리](./overview.md): CSV 및 [!DNL Platform] Portable과 같은 데이터 파일의 데이터를 인제하고 저장하는 방법입니다.
-- [!DNL Experience Data Model (XDM)](../../xdm/home.md): 고객 경험 데이터를 [!DNL Platform] 구성하는 표준화된 프레임워크
+- [[!DNL Experience Data Model] (XDM)](../../xdm/home.md): 고객 경험 데이터를 [!DNL Platform] 구성하는 표준화된 프레임워크
 
 다음 섹션에서는 API를 성공적으로 호출하기 위해 알아야 할 추가 정보를 [!DNL Platform] 제공합니다.
 
@@ -58,14 +58,12 @@ API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 
 
 부분 처리가 활성화된 새 배치를 만들 수 있습니다.
 
-새 배치를 만들려면 일괄 처리 통합 개발자 안내서의 [단계를 따릅니다](./api-overview.md). 배치 *생성* 단계에 도달하면 요청 본문 내에 다음 필드를 추가합니다.
+새 배치를 만들려면 일괄 처리 통합 개발자 안내서의 [단계를 따릅니다](./api-overview.md). 배치 **[!UICONTROL 생성]** 단계에 도달하면 요청 본문 내에 다음 필드를 추가합니다.
 
 ```json
 {
-    ...
     "enableErrorDiagnostics": true,
     "partialIngestionPercentage": 5
-    ...
 }
 ```
 
@@ -85,17 +83,17 @@ UI를 통해 부분 섭취에 대한 배치를 활성화하려면 소스 연결�
 
 ### 새 소스 연결 만들기 {#new-source}
 
-새 소스 연결을 만들려면 소스 [개요에 나열된 단계를 따릅니다](../../sources/home.md). 데이터 흐름 세부 *[!UICONTROL 정보]* 단계에 도달하면 *[!UICONTROL 부분 섭취]* 및 *[!UICONTROL 오류 진단]* 필드를참고합니다.
+새 소스 연결을 만들려면 소스 [개요에 나열된 단계를 따릅니다](../../sources/home.md). 데이터 흐름 세부 **[!UICONTROL 정보]** 단계에 도달하면 **[!UICONTROL 부분 섭취]** 및 **[!UICONTROL 오류 진단]** 필드를참고합니다.
 
 ![](../images/batch-ingestion/partial-ingestion/configure-batch.png)
 
-부분 *[!UICONTROL 통합]* 토글을 사용하면 부분 일괄 처리를 사용하거나 사용하지 않을 수 있습니다.
+부분 **[!UICONTROL 통합]** 토글을 사용하면 부분 일괄 처리를 사용하거나 사용하지 않을 수 있습니다.
 
-오류 *[!UICONTROL 진단]* 토글은 부분 통합 토글이 꺼진 경우에만 *[!UICONTROL 나타납니다]* . 이 기능을 사용하면 인제스트된 배치에 대한 자세한 오류 메시지 [!DNL Platform] 를 생성할 수 있습니다. 부분 *[!UICONTROL 통합]* 전환이 켜지면 향상된 오류 진단이 자동으로 적용됩니다.
+오류 **[!UICONTROL 진단]** 토글은 부분 통합 토글이 꺼진 경우에만 **[!UICONTROL 나타납니다]** . 이 기능을 사용하면 인제스트된 배치에 대한 자세한 오류 메시지 [!DNL Platform] 를 생성할 수 있습니다. 부분 *[!UICONTROL 통합]* 전환이 켜지면 향상된 오류 진단이 자동으로 적용됩니다.
 
 ![](../images/batch-ingestion/partial-ingestion/configure-batch-partial-ingestion-focus.png)
 
-오류 임계값 *[!UICONTROL 을 사용하면]* 전체 배치가 실패하기 전에 허용되는 오류 비율을 설정할 수 있습니다. 기본적으로 이 값은 5%로 설정됩니다.
+오류 임계값 **[!UICONTROL 을 사용하면]** 전체 배치가 실패하기 전에 허용되는 오류 비율을 설정할 수 있습니다. 기본적으로 이 값은 5%로 설정됩니다.
 
 ### 기존 데이터 세트 사용 {#existing-dataset}
 
@@ -103,29 +101,103 @@ UI를 통해 부분 섭취에 대한 배치를 활성화하려면 소스 연결�
 
 ![](../images/batch-ingestion/partial-ingestion/monitor-dataset.png)
 
-부분 *[!UICONTROL 통합]* 토글을 사용하면 부분 일괄 처리를 사용하거나 사용하지 않을 수 있습니다.
+부분 **[!UICONTROL 통합]** 토글을 사용하면 부분 일괄 처리를 사용하거나 사용하지 않을 수 있습니다.
 
-오류 *[!UICONTROL 진단]* 토글은 부분 통합 토글이 꺼진 경우에만 *[!UICONTROL 나타납니다]* . 이 기능을 사용하면 인제스트된 배치에 대한 자세한 오류 메시지 [!DNL Platform] 를 생성할 수 있습니다. 부분 *[!UICONTROL 통합]* 전환이 켜지면 향상된 오류 진단이 자동으로 적용됩니다.
+오류 **[!UICONTROL 진단]** 토글은 부분 통합 토글이 꺼진 경우에만 **[!UICONTROL 나타납니다]** . 이 기능을 사용하면 인제스트된 배치에 대한 자세한 오류 메시지 [!DNL Platform] 를 생성할 수 있습니다. 부분 **[!UICONTROL 통합]** 전환이 켜지면 향상된 오류 진단이 자동으로 적용됩니다.
 
 ![](../images/batch-ingestion/partial-ingestion/monitor-dataset-partial-ingestion-focus.png)
 
-오류 임계값 *[!UICONTROL 을 사용하면]* 전체 배치가 실패하기 전에 허용되는 오류 비율을 설정할 수 있습니다. 기본적으로 이 값은 5%로 설정됩니다.
+오류 임계값 **[!UICONTROL 을 사용하면]** 전체 배치가 실패하기 전에 허용되는 오류 비율을 설정할 수 있습니다. 기본적으로 이 값은 5%로 설정됩니다.
 
 이제 데이터 **추가** 단추를 사용하여 데이터를 업로드할 수 있으며 부분 섭싱을 사용하여 인제스트됩니다.
 
 ### &quot;XDM 스키마에[!UICONTROL CSV 매핑&quot; 흐름을]사용하십시오 {#map-flow}
 
-&quot;[!UICONTROL CSV를 XDM 스키마에]매핑&quot; 흐름을 사용하려면 CSV 파일 [매핑 자습서에 나열된 단계를 따르십시오](../tutorials/map-a-csv-file.md). 데이터 *[!UICONTROL 추가]* 단계에 도달하면 *[!UICONTROL 부분 섭취]* 및 *[!UICONTROL 오류 진단]* 필드를참고하십시오.
+&quot;[!UICONTROL CSV를 XDM 스키마에]매핑&quot; 흐름을 사용하려면 CSV 파일 [매핑 자습서에 나열된 단계를 따르십시오](../tutorials/map-a-csv-file.md). 데이터 **[!UICONTROL 추가]** 단계에 도달하면 **[!UICONTROL 부분 섭취]** 및 **[!UICONTROL 오류 진단]** 필드를참고하십시오.
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow.png)
 
-부분 *[!UICONTROL 통합]* 토글을 사용하면 부분 일괄 처리를 사용하거나 사용하지 않을 수 있습니다.
+부분 **[!UICONTROL 통합]** 토글을 사용하면 부분 일괄 처리를 사용하거나 사용하지 않을 수 있습니다.
 
-오류 *[!UICONTROL 진단]* 토글은 부분 통합 토글이 꺼진 경우에만 *[!UICONTROL 나타납니다]* . 이 기능을 사용하면 인제스트된 배치에 대한 자세한 오류 메시지 [!DNL Platform] 를 생성할 수 있습니다. 부분 *[!UICONTROL 통합]* 전환이 켜지면 향상된 오류 진단이 자동으로 적용됩니다.
+오류 **[!UICONTROL 진단]** 토글은 부분 통합 토글이 꺼진 경우에만 **[!UICONTROL 나타납니다]** . 이 기능을 사용하면 인제스트된 배치에 대한 자세한 오류 메시지 [!DNL Platform] 를 생성할 수 있습니다. 부분 **[!UICONTROL 통합]** 전환이 켜지면 향상된 오류 진단이 자동으로 적용됩니다.
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow-partial-ingestion-focus.png)
 
-오류 임계값 *[!UICONTROL 을 사용하면]* 전체 배치가 실패하기 전에 허용되는 오류 비율을 설정할 수 있습니다. 기본적으로 이 값은 5%로 설정됩니다.
+오류 임계값 **[!UICONTROL 을 사용하면]** 전체 배치가 실패하기 전에 허용되는 오류 비율을 설정할 수 있습니다. 기본적으로 이 값은 5%로 설정됩니다.
+
+## 파일 수준 메타데이터 다운로드 {#download-metadata}
+
+Adobe Experience Platform을 사용하면 입력 파일의 메타데이터를 다운로드할 수 있습니다. 메타데이터는 최대 30일 동안 [!DNL Platform] 유지됩니다.
+
+### 입력 파일 나열 {#list-files}
+
+다음 요청을 통해 완성된 배치로 제공된 모든 파일의 목록을 볼 수 있습니다.
+
+**요청**
+
+```shell
+curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/meta?path=input_files \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+**응답**
+
+성공적으로 응답하면 메타데이터가 저장된 위치를 설명하는 경로 개체가 포함된 JSON 개체가 있는 HTTP 상태 200이 반환됩니다.
+
+```json
+{
+    "_page": {
+        "count": 1,
+        "limit": 100
+    },
+    "data": [
+        {
+            "_links": {
+                "self": {
+                    "href": "https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/meta?path=input_files/fileMetaData1.json"
+                }
+            },
+            "length": "1337",
+            "name": "fileMetaData1.json"
+        },
+                {
+            "_links": {
+                "self": {
+                    "href": "https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/meta?path=input_files/fileMetaData2.json"
+                }
+            },
+            "length": "1042",
+            "name": "fileMetaData2.json"
+        }
+    ]
+}
+```
+
+### 입력 파일 메타데이터 검색 {#retrieve-metadata}
+
+서로 다른 모든 입력 파일 목록을 검색한 후에는 다음 끝점을 사용하여 개별 파일의 메타데이터를 검색할 수 있습니다.
+
+**요청**
+
+```shell
+curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/meta?path=input_files/fileMetaData1.json \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+**응답**
+
+성공적으로 응답하면 메타데이터가 저장된 위치를 설명하는 경로 개체가 포함된 JSON 개체가 있는 HTTP 상태 200이 반환됩니다.
+
+```json
+{"path": "F1.json"}
+{"path": "etc/F2.json"}
+```
 
 ## 부분 일괄 처리 처리 오류 검색 {#retrieve-errors}
 
@@ -155,7 +227,7 @@ curl -X GET https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID}
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**응답**
+**오류 없는 응답**
 
 성공적인 응답은 일괄 처리의 상태에 대한 자세한 정보가 있는 HTTP 상태 200을 반환합니다.
 
@@ -164,10 +236,8 @@ curl -X GET https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID}
     "af838510-2233-11ea-acf0-f3edfcded2d2": {
         "status": "success",
         "tags": {
-            ...
             "acp_enableErrorDiagnostics": true,
             "acp_partialIngestionPercent": 5
-            ...
         },
         "relatedObjects": [
             {
@@ -186,7 +256,8 @@ curl -X GET https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID}
             "inputByteSize": 568,
             "inputFileCount": 4,
             "inputRecordCount": 519,
-            "outputRecordCount": 497
+            "outputRecordCount": 497,
+            "failedRecordCount": 0
         },
         "completed": 1576741722026,
         "created": 1576741597205,
@@ -199,7 +270,86 @@ curl -X GET https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID}
 }
 ```
 
-일괄 처리에 오류가 있고 오류 진단을 사용할 수 있는 경우, 다운로드 가능한 오류 파일에 제공된 오류에 대한 자세한 정보가 포함된 상태가 &quot;성공&quot;이 됩니다.
+| 속성 | 설명 |
+| -------- | ----------- |
+| `metrics.failedRecordCount` | 구문 분석, 변환 또는 유효성 검사로 인해 처리할 수 없는 행 수입니다. 이 값은 에서 값을 빼서 파생될 수 `inputRecordCount` 있습니다 `outputRecordCount`. 이 값은 활성화되었는지에 관계없이 모든 배치에서 `errorDiagnostics` 생성됩니다. |
+
+**오류 발생 시 응답**
+
+일괄 처리에서 하나 이상의 오류가 발생하고 오류 진단을 사용할 수 있는 경우 상태 `success` 에 응답에 제공된 오류와 다운로드 가능한 오류 파일에 모두 대한 자세한 정보가 표시됩니다.
+
+```json
+{
+    "01E8043CY305K2MTV5ANH9G1GC": {
+        "status": "success",
+        "tags": {
+            "acp_enableErrorDiagnostics": true,
+            "acp_partialIngestionPercent": 5
+        },
+        "relatedObjects": [
+            {
+                "type": "dataSet",
+                "id": "5deac2648a19d218a888d2b1"
+            }
+        ],
+        "id": "01E8043CY305K2MTV5ANH9G1GC",
+        "externalId": "01E8043CY305K2MTV5ANH9G1GC",
+        "inputFormat": {
+            "format": "parquet"
+        },
+        "imsOrg": "{IMS_ORG}",
+        "started": 1576741718543,
+        "metrics": {
+            "inputByteSize": 568,
+            "inputFileCount": 4,
+            "inputRecordCount": 519,
+            "outputRecordCount": 514,
+            "failedRecordCount": 5
+        },
+        "completed": 1576741722026,
+        "created": 1576741597205,
+        "createdClient": "{API_KEY}",
+        "createdUser": "{USER_ID}",
+        "updatedUser": "{USER_ID}",
+        "updated": 1576741722644,
+        "version": "1.0.5",
+        "errors": [
+           {
+             "code": "INGEST-1212-400",
+             "description": "Encountered 5 errors in the data. Successfully ingested 514 rows. Please review the associated diagnostic files for more details."
+           },
+           {
+             "code": "INGEST-1401-400",
+             "description": "The row has corrupted data and cannot be read or parsed. Fix the corrupted data and try again.",
+             "recordCount": 2
+           },
+           {
+             "code": "INGEST-1555-400",
+             "description": "A required field is either missing or has a value of null. Add the required field to the input row and try again.",
+             "recordCount": 3
+           }
+        ]
+    }
+}
+```
+
+| 속성 | 설명 |
+| -------- | ----------- |
+| `metrics.failedRecordCount` | 구문 분석, 변환 또는 유효성 검사로 인해 처리할 수 없는 행 수입니다. 이 값은 에서 값을 빼서 파생될 수 `inputRecordCount` 있습니다 `outputRecordCount`. 이 값은 활성화되었는지에 관계없이 모든 배치에서 `errorDiagnostics` 생성됩니다. |
+| `errors.recordCount` | 지정된 오류 코드에 실패한 행 수입니다. 이 값은 활성화된 **경우에만** `errorDiagnostics` 생성됩니다. |
+
+>[!NOTE]
+>
+>오류 진단을 사용할 수 없는 경우 다음 오류 메시지가 대신 표시됩니다.
+> 
+```json
+> {
+>         "errors": [{
+>                 "code": "INGEST-1211-400",
+>                 "description": "Encountered errors while parsing, converting or otherwise validating the data. Please resend the data with error diagnostics enabled to collect additional information on failure types"
+>         }]
+> }
+> ```
 
 ## 다음 단계 {#next-steps}
 
@@ -207,12 +357,11 @@ curl -X GET https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID}
 
 ## 부분 일괄 처리 오류 유형 {#appendix}
 
-데이터를 인제스트할 때 부분 일괄 처리 처리에는 4개의 서로 다른 오류 유형이 있습니다.
+데이터를 인제스트할 때 부분 일괄 처리에는 세 가지 다른 오류 유형이 있습니다.
 
 - [읽을 수 없는 파일](#unreadable)
 - [스키마 또는 헤더가 잘못되었습니다.](#schemas-headers)
 - [구문 분석할 수 없는 행](#unparsable)
-- [잘못된 XDM 변환](#conversion)
 
 ### 읽을 수 없는 파일 {#unreadable}
 
@@ -229,7 +378,7 @@ curl -X GET https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID}
 **API 형식**
 
 ```http
-GET /export/batches/{BATCH_ID}/failed?path=parse_errors
+GET /export/batches/{BATCH_ID}/meta?path=row_errors
 ```
 
 | 매개 변수 | 설명 |
@@ -239,7 +388,7 @@ GET /export/batches/{BATCH_ID}/failed?path=parse_errors
 **요청**
 
 ```shell
-curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/failed?path=parse_errors \
+curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/meta?path=row_errors \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -252,68 +401,11 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/
 
 ```json
 {
-    "_corrupt_record":"{missingQuotes:"v1"}",
+    "_corrupt_record": "{missingQuotes:"v1"}",
     "_errors": [{
-         "code":"1401",
-         "message":"Row is corrupted and cannot be read, please fix and resend."
+         "code": "1401",
+         "message": "Row is corrupted and cannot be read, please fix and resend."
     }],
     "_filename": "a1.json"
-}
-```
-
-### 잘못된 XDM 변환 {#conversion}
-
-인제스트한 일괄 처리에 잘못된 XDM 전환이 있는 경우 다음 끝점을 사용하여 액세스할 수 있는 파일에 일괄 처리 오류가 저장됩니다.
-
-**API 형식**
-
-```http
-GET /export/batches/{BATCH_ID}/failed?path=conversion_errors
-```
-
-| 매개 변수 | 설명 |
-| --------- | ----------- |
-| `{BATCH_ID}` | 오류 정보를 검색하는 일괄 처리 `id` 값입니다. |
-
-**요청**
-
-```shell
-curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/failed?path=conversion_errors \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**응답**
-
-성공적인 응답은 XDM 변환 시 발생한 오류에 대한 세부 사항과 함께 HTTP 상태 200을 반환합니다.
-
-```json
-{
-    "col1":"v1",
-    "col2":"v2",
-    "col3":[{
-        "g1":"h1"
-    }],
-    "_errors":[{
-        "column":"col3",
-        "code":"123",
-        "message":"Cannot convert array element from Object to String"
-    }],
-    "_filename":"a1.json"
-},
-{
-    "col1":"v1",
-    "col2":"v2",
-    "col3":[{
-        "g1":"h1"
-    }],
-    "_errors":[{
-        "column":"col1",
-        "code":"100",
-        "message":"Cannot convert string to float"
-    }],
-    "_filename":"a2.json"
 }
 ```
