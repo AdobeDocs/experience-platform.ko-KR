@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 일정
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '1171'
 ht-degree: 3%
@@ -55,7 +55,9 @@ curl -X GET https://platform.adobe.io/data/core/ups/config/schedules?limit=10 \
 
 성공적인 응답은 지정된 IMS 조직에 대한 일정 목록이 있는 HTTP 상태 200을 JSON으로 반환합니다.
 
->[!NOTE] 다음 응답은 공간에 대해 잘렸고 반환된 첫 번째 예약만 표시합니다.
+>[!NOTE]
+>
+>다음 응답은 공간에 대해 잘렸고 반환된 첫 번째 예약만 표시합니다.
 
 ```json
 {
