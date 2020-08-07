@@ -4,7 +4,7 @@ solution: Experience Platform
 title: PSQL과 연결
 topic: connect
 translation-type: tm+mt
-source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+source-git-commit: 1214728063c5835510fda1a16bf1fdcca4abee48
 workflow-type: tm+mt
 source-wordcount: '170'
 ht-degree: 1%
@@ -68,7 +68,9 @@ psql (PostgreSQL) 9.5.14
 
 ![이미지](../images/clients/psql/connect-bi.png)
 
->[!IMPORTANT]: PC를 사용하는 경우 텍스트 편집기를 사용하여 명령 문자열에서 줄 바꿈을 제거한 다음 문자열을 복사합니다.
+>[!IMPORTANT]
+>
+>PC를 사용하는 경우 텍스트 편집기를 사용하여 명령 문자열에서 줄 바꿈을 제거한 다음 문자열을 복사합니다.
 
 명령 문자열을 터미널 또는 명령 창에 붙여넣고 Enter 키를 누릅니다.
 
