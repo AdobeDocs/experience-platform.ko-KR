@@ -1,10 +1,10 @@
 ---
 title: 대상에 프로필 및 세그먼트 활성화
 seo-title: 대상에 프로필 및 세그먼트 활성화
-description: 세그먼트를 대상에 매핑하여 Adobe의 실시간 고객 데이터 Platform에 있는 데이터를 활성화합니다. 이를 수행하려면 아래 단계를 따르십시오.
-seo-description: 세그먼트를 대상에 매핑하여 Adobe의 실시간 고객 데이터 Platform에 있는 데이터를 활성화합니다. 이를 수행하려면 아래 단계를 따르십시오.
+description: 세그먼트를 대상에 매핑하여 Adobe의 실시간 고객 데이터 플랫폼에 있는 데이터를 활성화합니다. 이를 수행하려면 아래 단계를 따르십시오.
+seo-description: 세그먼트를 대상에 매핑하여 Adobe의 실시간 고객 데이터 플랫폼에 있는 데이터를 활성화합니다. 이를 수행하려면 아래 단계를 따르십시오.
 translation-type: tm+mt
-source-git-commit: be4cf64c89a189a09a4a7774c8fadc76c6ee8458
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '1039'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # 대상에 프로필 및 세그먼트 활성화
 
-세그먼트를 대상에 매핑하여 Adobe의 실시간 고객 데이터 Platform에 있는 데이터를 활성화합니다. 이를 수행하려면 아래 단계를 따르십시오.
+세그먼트를 대상에 매핑하여 Adobe의 실시간 고객 데이터 플랫폼에 있는 데이터를 활성화합니다. 이를 수행하려면 아래 단계를 따르십시오.
 
 ## 전제 조건 {#prerequisites}
 
