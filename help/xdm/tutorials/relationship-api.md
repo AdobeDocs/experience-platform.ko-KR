@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 스키마 레지스트리 API를 사용하여 두 스키마 간의 관계 정의
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: 849142e44c56f2958e794ca6aefaccd5670c28ba
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '1274'
 ht-degree: 1%
@@ -38,7 +38,9 @@ ht-degree: 1%
 
 스키마 관계는 **대상 스키마** 내의 다른 필드를 참조하는 필드가 있는 **소스 스키마에 의해 표현됩니다**. 다음 단계에서 &quot;[!DNL Loyalty Members]&quot;는 소스 스키마가 되고 &quot;[!DNL Hotels]&quot;는 대상 스키마로 작동합니다.
 
->[!IMPORTANT] 관계를 설정하려면 두 스키마 모두 기본 ID를 정의했고 에 대해 활성화되어야 합니다 [!DNL Real-time Customer Profile]. 스키마 구성 방법에 대한 지침 [이 필요한 경우 스키마 생성 자습서에서 프로필에](./create-schema-api.md#profile) 사용할 스키마를 활성화하는 방법을 참조하십시오.
+>[!IMPORTANT]
+>
+>관계를 설정하려면 두 스키마 모두 기본 ID를 정의했고 에 대해 활성화되어야 합니다 [!DNL Real-time Customer Profile]. 스키마 구성 방법에 대한 지침 [이 필요한 경우 스키마 생성 자습서에서 프로필에](./create-schema-api.md#profile) 사용할 스키마를 활성화하는 방법을 참조하십시오.
 
 두 스키마 간의 관계를 정의하려면 먼저 두 스키마 모두에 대한 `$id` 값을 얻어야 합니다. 스키마의 표시 이름(`title`)을 알고 있는 경우 `$id` API의 `/tenant/schemas` [!DNL Schema Registry] 종단점에 GET 요청을 하여 해당 값을 찾을 수 있습니다.
 
@@ -116,7 +118,9 @@ curl -X GET \
 
 이 자습서에서는 대상 스키마 &quot;[!DNL Hotels]&quot;에 스키마의 기본 ID로 사용되는 `email` 필드가 포함되어 있으므로 해당 참조 필드로도 작동합니다. 그러나 소스 스키마 &quot;[!DNL Loyalty Members]&quot;에 참조로 사용할 전용 필드가 없으며 스키마에 새 필드를 추가하는 새 믹스인이 주어져야 합니다. `favoriteHotel`.
 
->[!NOTE] 소스 스키마에 참조 필드로 사용할 전용 필드가 이미 있는 경우 참조 설명자 [생성 단계로 건너뛸 수 있습니다](#reference-identity).
+>[!NOTE]
+>
+>소스 스키마에 참조 필드로 사용할 전용 필드가 이미 있는 경우 참조 설명자 [생성 단계로 건너뛸 수 있습니다](#reference-identity).
 
 ### 새로운 믹싱 만들기
 
