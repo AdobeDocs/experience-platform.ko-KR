@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Secure Python Data Access SDK
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '478'
 ht-degree: 1%
@@ -128,7 +128,9 @@ df = dataset_reader.select(['column-a']).distinct().read()
 
 SDK는 데이터 세트를 필터링하는 데 도움이 되는 특정 연산자를 지원합니다. [!DNL Python]
 
->[!NOTE] 필터링에 사용되는 함수는 대/소문자를 구분합니다.
+>[!NOTE]
+>
+>필터링에 사용되는 함수는 대/소문자를 구분합니다.
 
 ```python
 eq() = '='
