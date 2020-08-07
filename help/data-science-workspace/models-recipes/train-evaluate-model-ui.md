@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 모델 트레이닝 및 평가(UI)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+source-git-commit: 1214728063c5835510fda1a16bf1fdcca4abee48
 workflow-type: tm+mt
 source-wordcount: '975'
 ht-degree: 2%
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # 모델 트레이닝 및 평가(UI)
 
-Adobe Experience Platform 데이터 과학 작업 공간에서 기계 학습 모델은 모델의 의도에 적합한 기존 레서피를 결합함으로써 만들어집니다. 그런 다음 연관된 하이퍼매개 변수를 세밀하게 조정하여 모델의 운영 효율성과 효과를 최적화하기 위해 교육을 받고 평가합니다. 레서피는 재사용할 수 있습니다. 즉, 하나의 레서피를 사용하여 여러 모델을 생성하고 특정 목적에 맞게 변경할 수 있습니다.
+Adobe Experience Platform 데이터 과학 작업 공간에서, 기계 학습 모델은 모델의 의도에 적합한 기존 레서피 모델을 결합하여 만들어집니다. 그런 다음 연관된 하이퍼매개 변수를 세밀하게 조정하여 모델의 운영 효율성과 효과를 최적화하기 위해 교육을 받고 평가합니다. 레서피는 재사용할 수 있습니다. 즉, 하나의 레서피를 사용하여 여러 모델을 생성하고 특정 목적에 맞게 변경할 수 있습니다.
 
 이 자습서에서는 모델을 생성, 교육 및 평가하는 단계를 안내합니다.
 
@@ -36,7 +36,10 @@ Adobe Experience Platform 데이터 과학 작업 공간에서 기계 학습 모
    ![](../images/models-recipes/train-evaluate-ui/select_dataset.png)
 
 4. 모델 이름을 입력하고 기본 모델 구성을 검토하십시오. 기본 구성은 레서피 생성 중에 적용되었으며 값을 두 번 클릭하여 구성 값을 검토하고 수정했습니다. 새 구성 세트를 제공하려면 새 구성 **[!UICONTROL 업로드]** 를 클릭하고 모델 구성이 포함된 JSON 파일을 브라우저 창으로 드래그합니다. 마침 **[!UICONTROL 을]** 클릭하여 모델을 생성합니다.
-   >[!NOTE]구성은 의도한 배합식에 고유하며, 이것은 소매 영업 레서피에 대한 구성이 제품 Recommendations 레서피에 대해 작동하지 않음을 의미합니다. 소매 영업 [레서피 구성 목록은 참조](#reference) 섹션을 참조하십시오.
+
+   >[!NOTE]
+   >
+   >구성은 의도한 배합식에 고유하며, 이것은 소매 영업 레서피에 대한 구성이 제품 Recommendations 레서피에 대해 작동하지 않음을 의미합니다. 소매 영업 [레서피 구성 목록은 참조](#reference) 섹션을 참조하십시오.
 
    ![](../images/models-recipes/train-evaluate-ui/name_and_configure.png)
 
@@ -55,7 +58,10 @@ Adobe Experience Platform 데이터 과학 작업 공간에서 기계 학습 모
    ![](../images/models-recipes/train-evaluate-ui/training_configuration.png)
 
 5. 모델을 생성하는 동안 제공된 기본 구성이 표시되고 값을 두 번 클릭하여 변경하고 이에 따라 수정합니다. [ **[!UICONTROL 마침]** ]을 클릭하여 교육 실행을 만들고 실행합니다.
-   >[!NOTE]구성은 의도한 배합식에 고유하며, 이것은 소매 영업 레서피에 대한 구성이 제품 Recommendations 레서피에 대해 작동하지 않음을 의미합니다. 소매 영업 [레서피 구성 목록은 참조](#reference) 섹션을 참조하십시오.
+
+   >[!NOTE]
+   >
+   >구성은 의도한 배합식에 고유하며, 이것은 소매 영업 레서피에 대한 구성이 제품 Recommendations 레서피에 대해 작동하지 않음을 의미합니다. 소매 영업 [레서피 구성 목록은 참조](#reference) 섹션을 참조하십시오.
 
    ![](../images/models-recipes/train-evaluate-ui/training_configuration.png)
 
