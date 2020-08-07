@@ -4,7 +4,7 @@ solution: Experience Platform
 title: UI에서 프로토콜 커넥터에 대한 데이터 흐름 구성
 topic: overview
 translation-type: tm+mt
-source-git-commit: 91714bea4e165d64bcc33e32e73d1d32a505ba00
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '1225'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 ## 시작하기
 
-이 자습서에서는 다음과 같은 Adobe Experience Platform 구성 요소에 대해 작업해야 합니다.
+이 자습서에서는 다음 Adobe Experience Platform 구성 요소에 대해 작업해야 합니다.
 
 - [XDM(Experience Data Model) 시스템](../../../../xdm/home.md): 고객 경험 데이터를 [!DNL Experience Platform] 구성하는 표준화된 프레임워크
    - [스키마 컴포지션의 기본 사항](../../../../xdm/schema/composition.md): 스키마 컴포지션의 주요 원칙 및 모범 사례 등 XDM 스키마의 기본 구성 요소에 대해 알아봅니다.
@@ -40,7 +40,7 @@ ht-degree: 0%
 
 ## 데이터 필드를 XDM 스키마에 매핑
 
-소스 데이터를 *[!UICONTROL Platform]* 데이터 세트에 매핑하는 대화형 인터페이스를 제공하는 매핑  단계가 나타납니다.
+소스 데이터를 *[!UICONTROL 플랫폼]* 데이터 세트에 매핑하기 위한 대화형 인터페이스를 제공하는 매핑 단계가 [!UICONTROL 나타납니다] .
 
 수집할 인바운드 데이터의 데이터 세트를 선택합니다. 기존 데이터 세트를 사용하거나 새 데이터 세트를 만들 수 있습니다.
 
@@ -96,7 +96,9 @@ ht-degree: 0%
 
 1회 질문을 설정하려면 빈도 드롭다운 화살표를 선택하고 **[!UICONTROL 한 번]**&#x200B;선택합니다.
 
->[!TIP] **[!UICONTROL 일회성]** 섭취 **[!UICONTROL 중에는 간격]** 및 채우기 기능이 표시되지 않습니다.
+>[!TIP]
+>
+>**[!UICONTROL 일회성]** 섭취 **[!UICONTROL 중에는 간격]** 및 채우기 기능이 표시되지 않습니다.
 
 일정에 적절한 값을 제공한 후 다음을 **[!UICONTROL 선택합니다]**.
 
