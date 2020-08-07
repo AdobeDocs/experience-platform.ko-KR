@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 소매 판매 스키마 및 데이터 세트 만들기
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 4f7d7e2bf255afe1588dbe7cfb2ec055f2dcbf75
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '497'
 ht-degree: 0%
@@ -69,7 +69,7 @@ ht-degree: 0%
    - `ims_token` : 여기 `{ACCESS_TOKEN}` 가세요
    - `ingest_data` : 이 자습서의 목적을 위해 소매 판매 스키마 및 데이터 세트를 만들려면 이 값 `"True"` 을 로 설정합니다. 의 값은 스키마만 `"False"` 생성합니다.
    - `build_recipe_artifacts` : 이 자습서의 목적을 위해 스크립트에서 레서피 결함을 생성하지 못하도록 이 값 `"False"` 을 설정합니다.
-   - `kernel_type` : 레서피 객체의 실행 유형입니다. 이 값을 설정된 `Python` 대로 `build_recipe_artifacts` 두거나 `"False"`올바른 실행 유형을 지정합니다.
+   - `kernel_type` : 레서피 객체의 실행 유형입니다. 이 값을 `Python` as `build_recipe_artifacts` 로 설정한 `"False"`것처럼 두거나 올바른 실행 유형을 지정합니다.
 
 4. 섹션에서 소매 판매 샘플 데이터에 대해 다음 정보를 적절히 입력하고 편집한 후 파일을 저장하고 닫습니다. `Titles` 아래에 표시된 예:
 
@@ -98,7 +98,9 @@ ht-degree: 0%
    python bootstrap.py
    ```
 
-   >[!NOTE] 스크립트 작성은 몇 분 정도 걸릴 수 있습니다.
+   >[!NOTE]
+   >
+   >스크립트 작성은 몇 분 정도 걸릴 수 있습니다.
 
 ## 다음 단계
 
