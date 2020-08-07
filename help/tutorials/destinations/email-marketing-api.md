@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 이메일 마케팅 대상 만들기
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
+source-git-commit: accc94ae8f19ca3a1575b4408f85155a17741335
 workflow-type: tm+mt
-source-wordcount: '1611'
+source-wordcount: '1610'
 ht-degree: 1%
 
 ---
@@ -24,9 +24,9 @@ Adobe의 실시간 CDP에서 사용자 인터페이스를 사용하여 대상을
 
 ## 시작하기
 
-이 가이드는 다음과 같은 Adobe Experience Platform 구성 요소에 대해 작업해야 합니다.
+이 가이드는 Adobe Experience Platform의 다음 구성 요소에 대한 작업 이해를 필요로 합니다.
 
-* [!DNL Experience Data Model (XDM) System](../../xdm/home.md): 고객 경험 데이터를 [!DNL Experience Platform] 구성하는 표준화된 프레임워크
+* [!DNL Experience Data Model (XDM) System](../../xdm/home.md):고객 경험 데이터를 [!DNL Experience Platform] 구성하는 표준화된 프레임워크
 * [!DNL Catalog Service](../../catalog/home.md): [!DNL Catalog] 는 데이터 위치 및 계열에 대한 기록 시스템입니다 [!DNL Experience Platform].
 * [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되도록 단일 [!DNL Platform] 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
 
@@ -47,7 +47,7 @@ Adobe의 실시간 CDP에서 사용자 인터페이스를 사용하여 대상을
 
 API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 합니다](../authentication.md). 인증 자습서를 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
 
-* 인증: 무기명 `{ACCESS_TOKEN}`
+* 인증:무기명 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
@@ -55,7 +55,8 @@ API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
->[!N참고]
+>[!NOTE]
+>
 >의 샌드박스에 대한 자세한 내용 [!DNL Experience Platform]은 [샌드박스 개요 설명서를 참조하십시오](../../sandboxes/home.md).
 
 페이로드(POST, PUT, PATCH)이 포함된 모든 요청에는 추가 미디어 유형 헤더가 필요합니다.
@@ -196,7 +197,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```
 
 
-* `{CONNECTION_SPEC_ID}`: 통합 프로필 서비스에 연결 사양 ID를 사용하십시오 - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
+* `{CONNECTION_SPEC_ID}`:통합 프로필 서비스에 연결 사양 ID를 사용하십시오 - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
 
 **응답**
 
@@ -269,8 +270,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-* `{BASE_CONNECTION_ID}`: 이전 단계에서 얻은 ID를 사용합니다.
-* `{CONNECTION_SPEC_ID}`: 연결 사양 ID를 [!DNL Unified Profile Service] -에 사용합니다 `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
+* `{BASE_CONNECTION_ID}`:이전 단계에서 얻은 ID를 사용합니다.
+* `{CONNECTION_SPEC_ID}`:연결 사양 ID를 [!DNL Unified Profile Service] -에 사용합니다 `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
 
 **응답**
 
@@ -357,10 +358,10 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-* `{CONNECTION_SPEC_ID}`: 사용 가능한 대상 목록을 [가져옵니다. 단계에서 얻은 연결 사양 ID를 사용하십시오](#get-the-list-of-available-destinations).
-* `{S3 or SFTP}`: 이 대상에 대해 원하는 연결 유형을 입력합니다. 대상 카탈로그에서 [원하는 대상으로 스크롤하여 S3 및/또는 SFTP 연결 유형이 지원되는지 확인합니다](../../rtcdp/destinations/destinations-catalog.md).
-* `{ACCESS_ID}`: S3 저장소 위치에 대한 액세스 [!DNL Amazon] ID입니다.
-* `{SECRET_KEY}`: S3 저장 위치에 대한 [!DNL Amazon] 비밀 키
+* `{CONNECTION_SPEC_ID}`:사용 가능한 대상 목록을 [가져옵니다. 단계에서 얻은 연결 사양 ID를 사용하십시오](#get-the-list-of-available-destinations).
+* `{S3 or SFTP}`:이 대상에 대해 원하는 연결 유형을 입력합니다. 대상 카탈로그에서 [원하는 대상으로 스크롤하여 S3 및/또는 SFTP 연결 유형이 지원되는지 확인합니다](../../rtcdp/destinations/destinations-catalog.md).
+* `{ACCESS_ID}`:S3 저장소 위치에 대한 액세스 [!DNL Amazon] ID입니다.
+* `{SECRET_KEY}`:S3 저장 위치에 대한 [!DNL Amazon] 비밀 키
 
 **응답**
 
@@ -446,10 +447,10 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-* `{BASE_CONNECTION_ID}`: 위 단계에서 얻은 기본 연결 ID를 사용하십시오.
-* `{CONNECTION_SPEC_ID}`: 사용 가능한 대상 목록을 [가져옵니다. 단계에서 얻은 연결 사양을 사용하십시오](#get-the-list-of-available-destinations).
-* `{BUCKETNAME}`: 실시간 CDP가 데이터 내보내기를 저장하는 [!DNL Amazon] S3 버킷입니다.
-* `{FILEPATH}`: 실시간 CDP가 데이터 내보내기를 저장하는 [!DNL Amazon] S3 버킷 디렉토리의 경로입니다.
+* `{BASE_CONNECTION_ID}`:위 단계에서 얻은 기본 연결 ID를 사용하십시오.
+* `{CONNECTION_SPEC_ID}`:사용 가능한 대상 목록을 [가져옵니다. 단계에서 얻은 연결 사양을 사용하십시오](#get-the-list-of-available-destinations).
+* `{BUCKETNAME}`:실시간 CDP가 데이터 내보내기를 저장하는 [!DNL Amazon] S3 버킷입니다.
+* `{FILEPATH}`:실시간 CDP가 데이터 내보내기를 저장하는 [!DNL Amazon] S3 버킷 디렉토리의 경로입니다.
 
 **응답**
 
@@ -517,9 +518,9 @@ curl -X POST \
     }
 ```
 
-* `{FLOW_SPEC_ID}`: 연결할 이메일 마케팅 대상에 대한 흐름을 사용합니다. 흐름 사양을 가져오려면 종단점에 대해 GET 작업을 `flowspecs` 수행하십시오. Swagger 설명서를 참조하십시오. https://platform.adobe.io/data/foundation/flowservice/swagger#/Flow%20Specs%20API/getFlowSpecs. 응답에서 연결할 이메일 마케팅 대상의 해당 ID를 찾아 `upsTo` 복사합니다. 예를 들어 Adobe Campaign의 경우 매개 변수 `upsToCampaign` 를 찾아 `id` 복사합니다.
-* `{SOURCE_CONNECTION_ID}`: Experience Platform에 [연결 단계에서 얻은 소스 연결 ID를 사용합니다](#connect-to-your-experience-platform-data).
-* `{TARGET_CONNECTION_ID}`: 이메일 마케팅 대상에 [연결 단계에서 얻은 대상 연결 ID를 사용합니다](#connect-to-email-marketing-destination).
+* `{FLOW_SPEC_ID}`:연결할 이메일 마케팅 대상에 대한 흐름을 사용합니다. 흐름 사양을 가져오려면 종단점에 대해 GET 작업을 `flowspecs` 수행하십시오. Swagger 설명서를 참조하십시오.https://platform.adobe.io/data/foundation/flowservice/swagger#/Flow%20Specs%20API/getFlowSpecs. 응답에서 연결할 이메일 마케팅 대상의 해당 ID를 찾아 `upsTo` 복사합니다. 예를 들어 Adobe Campaign의 경우 매개 변수 `upsToCampaign` 를 찾아 `id` 복사합니다.
+* `{SOURCE_CONNECTION_ID}`:Experience Platform에 [연결 단계에서 얻은 소스 연결 ID를 사용합니다](#connect-to-your-experience-platform-data).
+* `{TARGET_CONNECTION_ID}`:이메일 마케팅 대상에 [연결 단계에서 얻은 대상 연결 ID를 사용합니다](#connect-to-email-marketing-destination).
 
 **응답**
 
@@ -596,9 +597,9 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 ]
 ```
 
-* `{DATAFLOW_ID}`: 이전 단계에서 얻은 데이터 흐름을 사용합니다.
-* `{ETAG}`: 이전 단계에서 얻은 태그를 사용합니다.
-* `{SEGMENT_ID}`: 이 대상으로 내보낼 세그먼트 ID를 제공합니다. 활성화할 세그먼트의 세그먼트 ID를 검색하려면 https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/으로 이동하여 작업을 `GET /segment/jobs` 찾습니다.
+* `{DATAFLOW_ID}`:이전 단계에서 얻은 데이터 흐름을 사용합니다.
+* `{ETAG}`:이전 단계에서 얻은 태그를 사용합니다.
+* `{SEGMENT_ID}`:이 대상으로 내보낼 세그먼트 ID를 제공합니다. 활성화할 세그먼트의 세그먼트 ID를 검색하려면 https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/으로 이동하여 작업을 `GET /segment/jobs` 찾습니다.
 * `{PROFILE_ATTRIBUTE}`: 예, `"person.lastName"`
 
 **응답**
@@ -631,8 +632,8 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 --header 'If-Match: "{ETAG}"' 
 ```
 
-* `{DATAFLOW_ID}`: 이전 단계의 데이터 흐름을 사용합니다.
-* `{ETAG}`: 이전 단계의 태그를 사용합니다.
+* `{DATAFLOW_ID}`:이전 단계의 데이터 흐름을 사용합니다.
+* `{ETAG}`:이전 단계의 태그를 사용합니다.
 
 **응답**
 
