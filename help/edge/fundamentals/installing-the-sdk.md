@@ -4,9 +4,9 @@ seo-title: SDK 설치 Adobe Experience Platform 웹 SDK
 description: Experience Platform 웹 SDK 설치 방법 살펴보기
 seo-description: Experience Platform 웹 SDK 설치 방법 살펴보기
 translation-type: tm+mt
-source-git-commit: c5afced244c661b0ec0bcf0109191a2dacf886aa
+source-git-commit: 12cbcc26956cba2e14d64734c9210fa79bcc70b9
 workflow-type: tm+mt
-source-wordcount: '583'
+source-wordcount: '623'
 ht-degree: 1%
 
 ---
@@ -14,14 +14,20 @@ ht-degree: 1%
 
 # SDK 설치 {#installing-the-sdk}
 
-Adobe Experience Platform [!DNL Web SDK] 는 CDN(Content Delivery Network)에서 사용할 수 있습니다. 이 파일을 참조하거나 다운로드하여 자체 인프라에서 호스팅할 수 있습니다. 축소 및 축소 버전이 아닌 버전으로 사용할 수 있습니다. 분류되지 않은 버전은 디버깅에 유용합니다.
+Launch를 통해 Adobe Experience Platform 웹 SDK를 사용하는 것이 [좋습니다](http://launch.adobe.com/). Extension 카탈로그 `AEP Web SDK` 에서 Extension을 검색하고 설치한 다음 Extension을 구성합니다.
 
-* 축소 버전: [https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js)
-* 분류되지 않은 버전: [https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js)
+AEP 웹 SDK는 CDN에서 사용할 수도 있습니다. 이 파일을 참조하거나 다운로드하여 자체 인프라에서 호스팅할 수 있습니다. 축소 및 축소 버전이 아닌 버전으로 사용할 수 있습니다. 분류되지 않은 버전은 디버깅에 유용합니다.
+
+URL 구조:https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.js OR 합금.js를 참조하십시오.
+
+예:
+
+* 축소: [https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js)
+* 축소 해제: [https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js)
 
 ## 코드 추가 {#adding-the-code}
 
-Adobe Experience Platform을 구현하는 첫 번째 단계 [!DNL Web SDK] 는 HTML의 `<head>` 태그에 가능한 한 높은 곳에 다음 &quot;기본 코드&quot;를 복사하고 붙여넣는 것입니다.
+Adobe Experience Platform 구현의 첫 번째 단계 [!DNL Web SDK] 는 HTML의 `<head>` 태그에 가능한 한 높은 곳에 다음 &quot;기본 코드&quot;를 복사하고 붙여넣는 것입니다.
 
 ```markup
 <script>
