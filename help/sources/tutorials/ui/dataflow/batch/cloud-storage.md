@@ -4,7 +4,7 @@ solution: Experience Platform
 title: UI에서 클라우드 스토리지 배치 커넥터에 대한 데이터 흐름 구성
 topic: overview
 translation-type: tm+mt
-source-git-commit: f532bd6393bfad84fa09c2fc753d1d5c5b39d013
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '1482'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 ## 시작하기
 
-이 자습서에서는 다음과 같은 Adobe Experience Platform 구성 요소에 대해 작업해야 합니다.
+이 자습서에서는 다음 Adobe Experience Platform 구성 요소에 대해 작업해야 합니다.
 
 * [XDM(Experience Data Model) 시스템](../../../../../xdm/home.md): 고객 경험 데이터를 [!DNL Experience Platform] 구성하는 표준화된 프레임워크
    * [스키마 컴포지션의 기본 사항](../../../../../xdm/schema/composition.md): 스키마 컴포지션의 주요 원칙 및 모범 사례 등 XDM 스키마의 기본 구성 요소에 대해 알아봅니다.
@@ -98,7 +98,7 @@ ht-degree: 0%
 
 | 필드 | 설명 |
 | --- | --- |
-| 주파수 | 선택 가능한 주파수는 `Once`, `Minute``Hour`, `Day`및 `Week`있습니다. |
+| 빈도 | 선택 가능한 주파수는 `Once`, `Minute``Hour`, `Day`및 `Week`있습니다. |
 | 간격 | 선택한 주파수의 간격을 설정하는 정수입니다. |
 | 시작 시간 | 첫 번째 인제스트 발생 시간을 나타내는 UTC 타임스탬프. |
 | 채우기 | 처음에 수집되는 데이터를 결정하는 부울 값입니다. 채우기 *[!UICONTROL 가]* 활성화되어 있으면, 지정된 경로에 있는 모든 현재 파일이 첫 번째 예약된 수집 중에 수집됩니다. 채우기 *를* 비활성화하면 인제스트 첫 번째 실행과 *[!UICONTROL 시작 시간]* 사이에 로드되는 파일만 인제스트됩니다. 시작 *[!UICONTROL 시간]* 전에 로드된 파일은 인제스트되지 않습니다. |
@@ -115,7 +115,9 @@ ht-degree: 0%
 
 1회 질문을 설정하려면 빈도 드롭다운 화살표를 선택하고 **[!UICONTROL 한 번]**&#x200B;선택합니다. 1회 주파수 섭취를 위해 데이터 흐름 세트를 계속 편집할 수 있으므로 시작 시간이 앞으로 남아 있을 수 있습니다. 시작 시간이 경과하면 1회 빈도 값을 더 이상 편집할 수 없습니다.
 
->[!TIP] **[!UICONTROL 일회성]** 섭취 **[!UICONTROL 중에는 간격]** 및 채우기 기능이 표시되지 않습니다.
+>[!TIP]
+>
+>**[!UICONTROL 일회성]** 섭취 **[!UICONTROL 중에는 간격]** 및 채우기 기능이 표시되지 않습니다.
 
 일정에 적절한 값을 제공한 후 다음을 **[!UICONTROL 선택합니다]**.
 
