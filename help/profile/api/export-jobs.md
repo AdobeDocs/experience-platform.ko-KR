@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: 내보내기 작업 - 실시간 고객 프로필 API
 topic: guide
 translation-type: tm+mt
-source-git-commit: 2c0466bf0534d09e3cad54caef213def122d948b
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '1494'
 ht-degree: 2%
@@ -146,7 +146,9 @@ curl -X POST \
 | `destination` | **(필수)** 내보낸 데이터의 대상 정보:<ul><li>`destination.datasetId`: **(필수)** 데이터를 내보낼 데이터 세트의 ID입니다.</li><li>`destination.segmentPerBatch`: *(선택 사항)* 제공되지 않을 경우 기본적으로 제공되는 부울 값 `false`. 값이 모든 세그먼트 ID를 단일 배치 ID로 `false` 내보냅니다. 하나의 세그먼트 ID를 하나의 배치 ID로 `true` 내보내는 값. 값을 설정할 경우 일괄 내보내기 성능에 영향을 줄 `true` 수 있습니다.</li></ul> |
 | `schema.name` | **(필수)** 데이터를 내보낼 데이터 세트와 연관된 스키마의 이름입니다. |
 
->[!NOTE] 프로필 데이터만 내보내고 관련 시계열 데이터를 포함하지 않으려면 요청에서 &quot;additionalFields&quot; 개체를 제거합니다.
+>[!NOTE]
+>
+>프로필 데이터만 내보내고 관련 시계열 데이터를 포함하지 않으려면 요청에서 &quot;additionalFields&quot; 개체를 제거합니다.
 
 **응답**
 
@@ -441,7 +443,7 @@ curl -X POST \
 
 데이터 액세스 API를 사용하여 배치 파일에 액세스하고 다운로드하는 방법에 대한 단계별 지침을 보려면 [데이터 액세스 자습서를 따르십시오](../../data-access/tutorials/dataset-data.md).
 
-Adobe Experience Platform 쿼리 서비스를 사용하여 실시간 고객 프로필 데이터를 성공적으로 내보낼 수도 있습니다. UI 또는 RESTful API를 사용하는 쿼리 서비스를 사용하면 데이터 레이크 내의 데이터에 대한 쿼리를 작성하고 유효성을 확인하고 실행할 수 있습니다.
+또한 Adobe Experience Platform 쿼리 서비스를 사용하여 실시간 고객 프로필 데이터를 성공적으로 내보낼 수 있습니다. UI 또는 RESTful API를 사용하는 쿼리 서비스를 사용하면 데이터 레이크 내의 데이터에 대한 쿼리를 작성하고 유효성을 확인하고 실행할 수 있습니다.
 
 대상 데이터를 쿼리하는 방법에 대한 자세한 내용은 [쿼리 서비스 설명서를 참조하십시오](../../query-service/home.md).
 
