@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 끝점 미리 보기 및 예측
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 995fadef9abacf22d0561e0590dfbe172adf0a43
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '742'
 ht-degree: 2%
@@ -36,13 +36,17 @@ ht-degree: 2%
 | 1~2000만 | 100만 |
 | 2,000만 이상 | 합계의 5% |
 
->[!NOTE] 추정은 일반적으로 10초에서 15초 정도 소요되며, 추정은 더 많은 기록을 읽으면서 세부적으로 시작합니다.
+>[!NOTE]
+>
+>추정은 일반적으로 10초에서 15초 정도 소요되며, 추정은 더 많은 기록을 읽으면서 세부적으로 시작합니다.
 
 ## Create a new preview {#create-preview}
 
 종단점에 POST 요청을 만들어 새 미리 보기를 만들 수 `/preview` 있습니다.
 
->[!NOTE] 미리 보기 작업을 만들면 예상 작업이 자동으로 생성됩니다. 이 두 작업은 동일한 ID를 공유합니다.
+>[!NOTE]
+>
+>미리 보기 작업을 만들면 예상 작업이 자동으로 생성됩니다. 이 두 작업은 동일한 ID를 공유합니다.
 
 **API 형식**
 
