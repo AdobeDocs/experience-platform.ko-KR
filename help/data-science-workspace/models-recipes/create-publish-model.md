@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 기계 학습 모델 연습 만들기 및 게시
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '1542'
 ht-degree: 0%
@@ -117,7 +117,9 @@ ht-degree: 0%
 
    하이퍼매개 변수는 알 수 없으므로, 교육이 실행되기 전에 할당해야 합니다. 하이퍼매개 변수를 조정하면 훈련된 모델의 정확도가 변경될 수 있습니다. 모델 최적화는 반복적인 프로세스이므로 만족스러운 평가가 이루어지기 전에 여러 개의 교육 실행이 필요할 수 있습니다.
 
-   >[!TIP] num_recommendations **[!UICONTROL 를]** 10으로 설정합니다.
+   >[!TIP]
+   >
+   >num_recommendations **[!UICONTROL 를]** 10으로 설정합니다.
 
    ![](../images/models-recipes/model-walkthrough/configure_hyperparameter.png)
 3. 새 교육 실행이 완료되면 모델 평가 차트에 추가 데이터 포인트가 나타납니다. 이 작업은 최대 몇 분 정도 걸릴 수 있습니다.
