@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 스트리밍 세분화
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: ab43c677ab45c7aa047a50049c0dd8613b003403
+source-git-commit: 2adadad855edd01436a6961cc9be3e58e6483732
 workflow-type: tm+mt
-source-wordcount: '656'
+source-wordcount: '668'
 ht-degree: 0%
 
 ---
@@ -32,6 +32,7 @@ ht-degree: 0%
 | ---------- | ------- | ------- |
 | 들어오는 히트 | 시간 제한 없이 들어오는 단일 이벤트를 참조하는 모든 세그먼트 정의 | ![](../images/ui/streaming-segmentation/incoming-hit.png) |
 | 상대 시간 창 내의 들어오는 히트 | 지난 7일 **이내에 들어오는 단일 이벤트를 참조하는 모든 세그먼트 정의**. | ![](../images/ui/streaming-segmentation/relative-hit-success.png) |
+| 프로필 전용 | 프로필 속성만 참조하는 모든 세그먼트 정의 |  |
 | 프로필을 참조하는 들어오는 히트 | 시간 제한 없이 단일 들어오는 이벤트를 참조하는 세그먼트 정의 및 하나 이상의 프로필 속성. | ![](../images/ui/streaming-segmentation/profile-hit.png) |
 | 상대 시간 창 내의 프로파일을 참조하는 들어오는 히트 | 지난 7일 **이내에 들어오는 단일 이벤트와 하나 이상의 프로필 속성을 참조하는 모든 세그먼트 정의**. | ![](../images/ui/streaming-segmentation/profile-relative-success.png) |
 | 프로파일을 참조하는 여러 이벤트 | 지난 24시간 **** 이내에 여러 이벤트를 참조하고 (선택 사항) 하나 이상의 프로필 속성을 포함하는 세그먼트 정의입니다. | ![](../images/ui/streaming-segmentation/event-history-success.png) |
