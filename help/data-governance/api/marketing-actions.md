@@ -4,23 +4,27 @@ solution: Experience Platform
 title: 마케팅 작업
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
+source-git-commit: cb3a17aa08c67c66101cbf3842bf306ebcca0305
 workflow-type: tm+mt
-source-wordcount: '534'
-ht-degree: 1%
+source-wordcount: '681'
+ht-degree: 2%
 
 ---
 
 
-# 마케팅 작업
+# 마케팅 작업 끝점
 
-Adobe Experience Platform의 컨텍스트에서 마케팅 활동 [!DNL Data Governance]은 [!DNL Experience Platform] 데이터 소비자가 취하는 조치로서 데이터 사용 정책 위반을 확인해야 합니다.
+Adobe Experience Platform의 컨텍스트에서 마케팅 활동 [!DNL Data Governance]은 데이터 [!DNL Experience Platform] 소비자가 취하는 조치로서 데이터 사용 정책 위반을 확인해야 합니다.
 
-API에서 마케팅 작업을 사용하려면 끝점을 사용해야 `/marketingActions` 합니다.
+Policy Service API의 끝점을 사용하여 조직에 대한 마케팅 `/marketingActions` 작업을 관리할 수 있습니다.
 
-## 모든 마케팅 작업 나열
+## 시작하기
 
-모든 마케팅 작업 목록을 보려면 지정된 컨테이너에 대한 모든 정책을 반환하거나 GET `/marketingActions/core` 을 요청할 수 `/marketingActions/custom` 있습니다.
+이 안내서에서 사용되는 API 끝점은 [[!DNL Policy Service] API의 일부입니다](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml). 계속하기 전에 [시작하기 가이드](./getting-started.md) 에서 관련 문서 링크, 이 문서에서 샘플 API 호출 읽기 안내서, 모든 API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요 정보를 검토하십시오 [!DNL Experience Platform] .
+
+## 마케팅 작업 목록 검색 {#list}
+
+각각 또는 로 GET 요청을 하여 핵심 또는 사용자 지정 마케팅 작업 목록 `/marketingActions/core` 을 검색할 수 `/marketingActions/custom`있습니다.
 
 **API 형식**
 
@@ -31,9 +35,9 @@ GET /marketingActions/custom
 
 **요청**
 
-다음 요청은 IMS 조직에서 정의한 모든 사용자 지정 마케팅 작업 목록을 반환합니다.
+다음 요청은 조직에서 유지 관리하는 사용자 지정 마케팅 작업 목록을 검색합니다.
 
-```SHELL
+```sh
 curl -X GET \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -44,12 +48,11 @@ curl -X GET \
 
 **응답**
 
-응답 개체는 컨테이너(`count`)의 총 마케팅 작업 수를 제공하며 이 배열은 마케팅 작업 `children` 및 `name` `href` 에 대한 정보를 포함하여 각 마케팅 작업에 대한 세부 사항을 포함합니다. 이 경로(`_links.self.href`)는 데이터 사용 정책을 `marketingActionsRefs` 만들 때 [배열을 완료하는 데 사용됩니다](policies.md#create-policy).
+성공적인 응답은 및 해당 작업을 포함하여 검색된 각 마케팅 작업에 대한 세부 사항 `name` 을 반환합니다 `href`. 이 `href` 값은 데이터 사용 정책을 [만들 때 마케팅 작업을 식별하는 데 사용됩니다](policies.md#create-policy).
 
-```JSON
+```json
 {
     "_page": {
-        "start": "sampleMarketingAction",
         "count": 2
     },
     "_links": {
@@ -95,20 +98,33 @@ curl -X GET \
 }
 ```
 
-## 특정 마케팅 작업 보기
+| 속성 | 설명 |
+| --- | --- |
+| `_page.count` | 반환된 총 마케팅 작업 수입니다. |
+| `children` | 검색된 마케팅 작업의 세부 사항이 포함된 개체 배열. |
+| `name` | 특정 마케팅 작업을 [조회할 때 고유한 식별자로 작동하는 마케팅 작업의 이름입니다](#lookup). |
+| `_links.self.href` | 데이터 사용 정책을 만들 때 배열을 완료하는 데 사용할 수 있는 마케팅 작업에 대한 URI `marketingActionsRefs` 참조입니다 [](policies.md#create-policy). |
 
-특정 마케팅 작업의 세부 사항을 보기 위해 조회(GET) 요청을 수행할 수도 있습니다. 마케팅 작업의 `name` 기능을 사용하여 수행됩니다. 이름을 알 수 없으면 이전에 표시된 목록(GET) 요청을 사용하여 찾을 수 있습니다.
+## 특정 마케팅 작업 보기 {#lookup}
+
+마케팅 활동의 속성을 GET 요청 경로에 포함시켜 특정 마케팅 작업의 세부 `name` 사항을 조회합니다.
 
 **API 형식**
 
 ```http
-GET /marketingActions/core/{marketingActionName}
-GET /marketingActions/custom/{marketingActionName}
+GET /marketingActions/core/{MARKETING_ACTION_NAME}
+GET /marketingActions/custom/{MARKETING_ACTION_NAME}
 ```
+
+| 매개 변수 | 설명 |
+| --- | --- |
+| `{MARKETING_ACTION_NAME}` | 조회할 마케팅 작업의 `name` 속성입니다. |
 
 **요청**
 
-```SHELL
+다음 요청은 이름이 지정된 사용자 지정 마케팅 작업을 검색합니다 `combineData`.
+
+```sh
 curl -X GET \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/combineData \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -119,7 +135,7 @@ curl -X GET \
 
 **응답**
 
-응답 객체에는 데이터 사용 정책(`_links.self.href`)을 정의할 때 마케팅 작업을 참조하는 데 필요한 경로(`marketingActionsRefs`)를 비롯하여 마케팅 작업에 대한 세부 사항이 포함됩니다.
+응답 객체에는 데이터 사용 정책`_links.self.href`( [)을 정의할 때 마케팅 작업을 참조하는 데 필요한 경로(](policies.md#create-policy) )를 비롯하여 마케팅 작업에`marketingActionsRefs`대한 세부 사항이 포함됩니다.
 
 ```JSON
 {
@@ -140,41 +156,46 @@ curl -X GET \
 }
 ```
 
-## 마케팅 작업 만들기 또는 업데이트
+## 사용자 지정 마케팅 작업 만들기 또는 업데이트 {#create-update}
 
-API를 [!DNL Policy Service] 사용하면 고유한 마케팅 작업을 정의하고 기존 작업을 업데이트할 수 있습니다. 만들기 및 업데이트는 모두 마케팅 작업의 이름에 PUT 작업을 사용하여 수행됩니다.
+PUT 요청 경로에 마케팅 활동의 기존 또는 의도한 이름을 포함하여 새 사용자 지정 마케팅 작업을 만들거나 기존 마케팅 작업을 업데이트할 수 있습니다.
 
 **API 형식**
 
 ```http
-PUT /marketingActions/custom/{marketingActionName}
+PUT /marketingActions/custom/{MARKETING_ACTION_NAME}
 ```
+
+| 매개 변수 | 설명 |
+| --- | --- |
+| `{MARKETING_ACTION_NAME}` | 만들거나 업데이트할 마케팅 작업의 이름입니다. 제공된 이름의 마케팅 작업이 이미 시스템에 있는 경우 해당 마케팅 작업이 업데이트됩니다. 존재하지 않는 경우 제공된 이름에 대해 새 마케팅 작업이 만들어집니다. |
 
 **요청**
 
-다음과 같은 요청에서 요청 페이로드의 `name` 는 API 호출의 `{marketingActionName}` 와 동일합니다. 읽기 `id` 전용 및 시스템에서 생성된 정책의 정책과 달리 마케팅 작업을 만들려면 마케팅 작업의 _의도된_ 이름을 제공해야 합니다.
+동일한 이름의 마케팅 작업이 아직 시스템에 존재하지 않는 경우 다음 요청은 이름이 지정된 새 마케팅 작업 `crossSiteTargeting`을 만듭니다. 마케팅 작업이 존재하는 경우 이 호출은 대신 페이로드에서 제공하는 속성을 기반으로 마케팅 작업을 업데이트합니다. `crossSiteTargeting`
 
->[!NOTE]
->
->호출에서 해당 `{marketingActionName}` 를 제공하지 않으면 끝점에 직접 PUT을 수행할 수 없으므로 405 오류(메서드 허용되지 않음)가 `/marketingActions/custom` 발생합니다. 또한 페이로드 `name` 의 내용이 경로의 항목과 일치하지 `{marketingActionName}` 않으면 400 오류(잘못된 요청)가 표시됩니다.
-
-```SHELL
+```sh
 curl -X PUT \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/crossSiteTargeting \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
   -d '{
         "name": "crossSiteTargeting",
         "description": "Perform targeting on information obtained across multiple web sites."
       }'
 ```
 
+| 속성 | 설명 |
+| --- | --- |
+| `name` | 만들거나 업데이트할 마케팅 작업의 이름입니다. <br><br>**중요&#x200B;**:이 속성은 경로`{MARKETING_ACTION_NAME}`의 속성과 일치해야 하며, 그렇지 않으면 HTTP 400(잘못된 요청) 오류가 발생합니다. 즉, 마케팅 활동이 만들어지면 해당 속성을 변경할 수`name`없습니다. |
+| `description` | 마케팅 작업에 대한 추가 컨텍스트를 제공하는 선택적 설명입니다. |
+
 **응답**
 
-성공적으로 만들어지면 HTTP 상태 201(만들어짐)이 수신되고 응답 본문에 새로 만든 마케팅 작업의 세부 정보가 포함됩니다. 응답 `name` 의 값은 요청에서 보낸 것과 일치해야 합니다.
+성공적인 응답은 마케팅 활동의 세부 사항을 반환합니다. 기존 마케팅 작업이 업데이트되면 응답에서 HTTP 상태 200(OK)을 반환합니다. 새 마케팅 작업이 만들어진 경우 응답은 HTTP 상태 201(생성됨)을 반환합니다.
 
 ```JSON
 {
@@ -195,23 +216,27 @@ curl -X PUT \
 }
 ```
 
-## 마케팅 작업 삭제
+## 사용자 지정 마케팅 작업 삭제 {#delete}
 
-제거하려는 마케팅 작업의 일부로 DELETE 요청을 보내 마케팅 작업 `{marketingActionName}` 을 삭제할 수 있습니다.
+DELETE 요청 경로에 해당 이름을 포함하여 사용자 지정 마케팅 작업을 삭제할 수 있습니다.
 
 >[!NOTE]
 >
->기존 정책에서 참조하는 마케팅 작업은 삭제할 수 없습니다. 그렇게 하려고 하면 삭제하려는 마케팅 작업에 대한 참조를 포함하는 정책(또는 정책)의 `id` (또는 여러 ID)이 포함된 오류 메시지와 함께 400 오류(잘못된 요청)가 발생합니다.
+>기존 정책에 의해 참조되는 마케팅 작업은 삭제할 수 없습니다. 이러한 마케팅 작업 중 하나를 삭제하려고 하면 마케팅 작업을 참조하는 모든 정책의 ID를 포함하는 메시지와 함께 HTTP 400(잘못된 요청) 오류가 발생합니다.
 
 **API 형식**
 
 ```http
-DELETE /marketingActions/custom/{marketingActionName}
+DELETE /marketingActions/custom/{MARKETING_ACTION_NAME}
 ```
+
+| 매개 변수 | 설명 |
+| --- | --- |
+| `{MARKETING_ACTION_NAME}` | 삭제할 마케팅 작업의 이름입니다. |
 
 **요청**
 
-```SHELL
+```sh
 curl -X DELETE \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/crossSiteTargeting \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -222,6 +247,6 @@ curl -X DELETE \
 
 **응답**
 
-마케팅 작업을 성공적으로 삭제하면 응답 본문이 HTTP 상태 200(확인)으로 비어 있게 됩니다.
+성공적인 응답은 빈 응답 본문을 포함하는 HTTP Status 200(OK)을 반환합니다.
 
-마케팅 작업을 조회(GET)하여 삭제를 확인할 수 있습니다. 마케팅 작업이 제거되었기 때문에 &quot;찾을 수 없음&quot; 오류 메시지와 함께 HTTP 상태 404(찾을 수 없음)를 받게 됩니다.
+마케팅 작업을 [조회하여 삭제를 확인할 수 있습니다](#look-up). 시스템에서 마케팅 작업을 제거한 경우 HTTP 404(찾을 수 없음) 오류가 표시됩니다.
