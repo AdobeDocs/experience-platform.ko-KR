@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 소스 파일을 레서피로 패키지
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 45461e3420f3b7e227f80fe775d80b8442a1069c
+source-git-commit: 41fe3e5b2a830c3182b46b3e0873b1672a1f1b03
 workflow-type: tm+mt
 source-wordcount: '1097'
 ht-degree: 0%
@@ -14,12 +14,12 @@ ht-degree: 0%
 
 # 소스 파일을 레서피로 패키지
 
-이 자습서에서는 제공된 소매 판매 샘플 소스 파일을 보관 파일로 패키지하는 방법에 대한 지침을 제공합니다. 이 지침은 레시피 가져오기 작업 과정을 UI나 API를 사용하여 Adobe Experience Platform에서 레서피 [!DNL Data Science Workspace] 를 만드는 데 사용할 수 있습니다.
+이 자습서에서는 제공된 소매 판매 샘플 소스 파일을 아카이브 파일로 패키지하는 방법에 대한 지침을 제공합니다. 이 지침은 레서피 가져오기 작업 과정을 UI나 API를 사용하여 Adobe Experience Platform에서 레서피 [!DNL Data Science Workspace] 를 만드는 데 사용할 수 있습니다.
 
 이해할 개념:
 
-- **레서피**: 레시피는 모델 사양에 대한 Adobe의 용어로, 특정 기계 학습, 인공 지능 알고리즘 또는 숙련된 모델을 만들고 실행하는 데 필요한 알고리즘, 처리 논리 및 구성 조합을 나타내는 최상위 컨테이너로, 특정 비즈니스 문제를 해결하는 데 도움이 됩니다.
-- **소스 파일**: 레서피 논리를 포함하는 프로젝트의 개별 파일
+- **레서피**:레시피는 모델 사양에 대한 Adobe의 용어로, 특정 기계 학습, 인공 지능 알고리즘 또는 숙련된 모델을 만들고 실행하는 데 필요한 알고리즘, 처리 논리 및 구성 조합을 나타내는 최상위 컨테이너로, 특정 비즈니스 문제를 해결하는 데 도움이 됩니다.
+- **소스 파일**:레서피 논리를 포함하는 프로젝트의 개별 파일
 
 ## 전제 조건
 
@@ -38,7 +38,7 @@ ht-degree: 0%
 
 레서피 만들기 작업 과정 중에 제공된 자격 증명을 사용하여 빌드된 Docker 이미지가 Azure 컨테이너 레지스트리로 푸시됩니다.
 
-Azure 컨테이너 레지스트리 자격 증명을 얻으려면 <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform에 로그인합니다</a>. 왼쪽 탐색 열에서 워크플로우로 **[!UICONTROL 이동합니다]**. 레서피 **[!UICONTROL 가져오기]** 후 론치를 **[!UICONTROL 선택합니다]**. 자세한 내용은 아래 스크린샷을 참조하십시오.
+Azure 컨테이너 레지스트리 자격 증명을 받으려면 [Adobe Experience Platform에 로그인합니다](https://platform.adobe.com). 왼쪽 탐색 열에서 워크플로우로 **[!UICONTROL 이동합니다]**. 레서피 **[!UICONTROL 가져오기]** 후 론치를 **[!UICONTROL 선택합니다]**. 자세한 내용은 아래 스크린샷을 참조하십시오.
 
 ![](../images/models-recipes/package-source-files/import.png)
 
