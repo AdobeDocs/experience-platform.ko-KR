@@ -3,10 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform 데이터 거버넌스 도움말
 translation-type: tm+mt
-source-git-commit: 876ac35f6366411adda821805bf628470839f80e
+source-git-commit: de79706be6303f82c6d0e68cdf2c9d389f23d9a8
 workflow-type: tm+mt
-source-wordcount: '106'
-ht-degree: 6%
+source-wordcount: '107'
+ht-degree: 7%
 
 ---
 
@@ -27,10 +27,11 @@ ht-degree: 6%
    * [정책 실행 개요](enforcement/overview.md)
    * [정책 서비스 API를 사용하여 데이터 사용 정책 적용](enforcement/api-enforcement.md)
 * 정책 서비스 API 개발자 가이드 {#api}
+   * [개요](api/overview.md)
    * [시작하기](api/getting-started.md)
    * [레이블](api/labels.md)
    * [정책](api/policies.md)
    * [마케팅 작업](api/marketing-actions.md)
    * [평가](api/evaluation.md)
 * [API 참조](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml)
-* [Platform 릴리스 노트](https://www.adobe.com/go/platform-release-notes-en)
+* [플랫폼 릴리스 정보](https://www.adobe.com/go/platform-release-notes-en)
