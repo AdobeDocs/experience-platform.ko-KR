@@ -4,44 +4,55 @@ solution: Experience Platform
 title: 정책
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
+source-git-commit: cb3a17aa08c67c66101cbf3842bf306ebcca0305
 workflow-type: tm+mt
-source-wordcount: '938'
-ht-degree: 0%
+source-wordcount: '1472'
+ht-degree: 1%
 
 ---
 
 
-# 정책 평가
+# 정책 평가 끝점
 
 마케팅 작업이 만들어지고 정책이 정의된 후에는 [!DNL Policy Service] API를 사용하여 특정 작업으로 정책이 위반되는지 평가할 수 있습니다. 반환된 제약 조건은 데이터 사용 레이블이 들어 있는 지정된 데이터에 대한 마케팅 작업을 시도하여 위반될 일련의 정책을 가져옵니다.
 
-기본적으로 상태가 &quot;ENABLED&quot;로 설정된 **정책만 평가에**&#x200B;참여하지만 쿼리 매개 변수를 사용하여 &quot;DRAFT&quot; 정책 `?includeDraft=true` 을 평가에 포함시킬 수 있습니다.
+기본적으로 상태가 평가에만 `ENABLED` 참여하도록 설정된 정책만 포함됩니다. 하지만 쿼리 매개 변수를 사용하여 평가 `?includeDraft=true` 에 정책을 포함할 수 `DRAFT` 있습니다.
 
 평가 요청은 다음 세 가지 방법 중 하나로 수행할 수 있습니다.
 
-1. 데이터 사용 레이블 및 마케팅 활동이 있는 경우, 조치가 정책을 위반합니까?
-1. 하나 이상의 데이터 세트와 마케팅 활동을 통해 조치가 정책을 위반합니까?
-1. 데이터 세트 하나에 하나 이상의 데이터 세트와 하나 이상의 필드 하위 세트가 있는 경우 작업이 정책을 위반합니까?
+1. 마케팅 작업과 데이터 사용 레이블 세트가 있는 경우, 조치가 정책을 위반합니까?
+1. 마케팅 작업과 하나 이상의 데이터 세트가 있는 경우, 이러한 조치가 정책을 위반합니까?
+1. 마케팅 작업, 하나 이상의 데이터 세트, 이러한 데이터 세트 각각에 있는 하나 이상의 필드 하위 세트가 있는 경우 작업이 정책을 위반합니까?
 
-## 데이터 사용 레이블 및 마케팅 작업을 사용하여 정책 평가
+## 시작하기
 
-데이터 사용 레이블이 있는지 기반으로 정책 위반을 평가하려면 요청 중 데이터에 있을 레이블 세트를 지정해야 합니다. 이 작업은 다음 예제와 같이 데이터 사용 레이블이 쉼표로 구분된 값 목록으로 제공되는 쿼리 매개 변수를 사용하여 수행됩니다.
+이 안내서에서 사용되는 API 끝점은 [[!DNL Policy Service] API의 일부입니다](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml). 계속하기 전에 [시작하기 가이드](./getting-started.md) 에서 관련 문서 링크, 이 문서에서 샘플 API 호출 읽기 안내서, 모든 API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요 정보를 검토하십시오 [!DNL Experience Platform] .
+
+## 데이터 사용 레이블을 사용하여 정책 위반 평가 {#labels}
+
+GET 요청에서 `duleLabels` 쿼리 매개 변수를 사용하여 특정 데이터 사용 레이블 세트가 있는 것을 기준으로 정책 위반을 평가할 수 있습니다.
 
 **API 형식**
 
 ```http
-GET /marketingActions/core/{marketingActionName}/constraints?duleLabels={value1},{value2}
-GET /marketingActions/custom/{marketingActionName}/constraints?duleLabels={value1},{value2}
+GET /marketingActions/core/{MARKETING_ACTION_NAME}/constraints?duleLabels={LABELS_LIST}
+GET /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints?duleLabels={LABELS_LIST}
 ```
+
+| 매개 변수 | 설명 |
+| --- | --- |
+| `{MARKETING_ACTION_NAME}` | 데이터 사용 레이블 세트에 대해 테스트할 마케팅 작업의 이름입니다. 마케팅 작업 종단점에 [GET 요청을 만들어 사용 가능한 마케팅 작업 목록을 검색할 수 있습니다](./marketing-actions.md#list). |
+| `{LABELS_LIST}` | 마케팅 작업을 테스트할 데이터 사용 레이블 이름의 쉼표로 구분된 목록입니다. 예: `duleLabels=C1,C2,C3`<br><br>레이블 이름은 대소문자를 구분합니다. 매개 변수에 대/소문자를 나열할 때 대/소문자를 올바르게 사용하고 있는지 `duleLabels` 확인합니다. |
 
 **요청**
 
-아래의 예제 요청은 레이블 C1 및 C3에 대해 마케팅 작업을 평가합니다. 데이터 사용 레이블을 사용하여 정책을 평가할 때는 다음 사항에 유의하십시오.
-* **데이터 사용 레이블은 대/소문자를 구분합니다.** 위에 표시된 요청은 위반된 정책을 반환하는 반면, 소문자 레이블을 사용하여 동일한 요청을 합니다(예: `"c1,c3"`, `"C1,c3"`, `"c1,C3"`)는 그렇지 않습니다.
-* **정책 표현식의`AND`및`OR`연산자에 대해 알고 있어야 합니다.** 이 예에서, 요청에 레이블(`C1` 또는 `C3`)이 단독으로 표시되었다면 마케팅 작업이 이 정책을 위반하지 않았을 것입니다. 위반된 정책을 반환하려면 두 레이블(`C1 AND C3`)이 필요합니다. 정책을 신중하게 평가하고 동일한 수준으로 정책 표현식을 정의하는지 확인합니다.
+아래의 예제 요청은 레이블 C1 및 C3에 대해 마케팅 작업을 평가합니다.
 
-```SHELL
+>[!IMPORTANT]
+>
+>정책 표현식의 `AND` 및 `OR` 연산자에 대해 알고 있어야 합니다. 아래 예에서, 요청에 레이블(`C1` 또는 `C3`)이 단독으로 표시되었다면 마케팅 작업이 이 정책을 위반하지 않았을 것입니다. 위반된 정책을 반환하려면 레이블(`C1` 및 `C3`)이 모두 필요합니다. 정책을 신중하게 평가하고 동일한 수준으로 정책 표현식을 정의하는지 확인합니다.
+
+```sh
 curl -X GET \
   'https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/sampleMarketingAction/constraints?duleLabels=C1,C3' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -52,7 +63,7 @@ curl -X GET \
 
 **응답**
 
-응답 개체에는 요청에 전송된 레이블과 일치해야 하는 `duleLabels` 배열이 포함됩니다. 데이터 사용 레이블에 대해 지정된 마케팅 작업을 수행하면 해당 배열에 영향을 받는 정책(또는 정책)의 세부 정보가 포함됩니다. `violatedPolicies` 위반된 정책이 없으면 `violatedPolicies` 배열은 비어 있는(`[]`) 것처럼 표시됩니다.
+성공적인 응답에는 제공된 레이블에 대해 마케팅 작업을 수행한 결과로 위반된 정책의 세부 정보가 포함된 `violatedPolicies` 배열이 포함됩니다. 정책을 위반하지 않으면 `violatedPolicies` 배열이 비어 있게 됩니다.
 
 ```JSON
 {
@@ -110,29 +121,33 @@ curl -X GET \
 }
 ```
 
-## 데이터 세트 및 마케팅 활동을 사용하여 정책 평가
+## 데이터 세트를 사용하여 정책 위반 평가 {#datasets}
 
-데이터 사용 레이블을 수집할 수 있는 하나 이상의 데이터 세트에 대한 ID를 지정하여 정책 위반을 평가할 수도 있습니다. 이 작업은 마케팅 작업에 대한 핵심 또는 사용자 지정 `/constraints` 끝점에 대한 POST 요청을 수행하고 아래 표시된 것처럼 요청 본문 내에 데이터 집합 ID를 지정하여 수행됩니다.
+데이터 사용 레이블을 수집할 수 있는 하나 이상의 데이터 세트 세트를 기반으로 정책 위반을 평가할 수 있습니다. 이는 특정 마케팅 작업에 대한 `/constraints` 종단점에 대한 POST 요청을 수행하고 요청 본문 내에 데이터 집합 ID 목록을 제공하여 수행됩니다.
 
 **API 형식**
 
 ```http
-POST /marketingActions/core/{marketingActionName}/constraints
-POST /marketingActions/custom/{marketingActionName}/constraints
+POST /marketingActions/core/{MARKETING_ACTION_NAME}/constraints
+POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 ```
+
+| 매개 변수 | 설명 |
+| --- | --- |
+| `{MARKETING_ACTION_NAME}` | 하나 이상의 데이터 세트에 대해 테스트할 마케팅 작업의 이름입니다. 마케팅 작업 종단점에 [GET 요청을 만들어 사용 가능한 마케팅 작업 목록을 검색할 수 있습니다](./marketing-actions.md#list). |
 
 **요청**
 
-요청 본문에는 각 데이터 집합 ID에 대한 개체가 포함된 배열이 포함됩니다. 요청 본문을 전송하므로 &quot;Content-Type: 다음 예와 같이 application/json&quot; 요청 헤더가 필요합니다.
+다음 요청은 세 개의 데이터 세트 세트에 대해 `crossSiteTargeting` 마케팅 작업을 수행하여 정책 위반을 평가합니다.
 
-```SHELL
+```sh
 curl -X POST \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/crossSiteTargeting/constraints \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
   -d '[
         {
             "entityType": "dataSet",
@@ -149,13 +164,14 @@ curl -X POST \
       ]'
 ```
 
+| 속성 | 설명 |
+| --- | --- |
+| `entityType` | 형제 속성에 ID가 표시된 엔티티 `entityId` 유형. 현재 허용된 유일한 값은 입니다 `dataSet`. |
+| `entityId` | 마케팅 작업을 테스트할 데이터 세트의 ID입니다. API의 종단점에 GET 요청을 함으로써 데이터 집합 및 해당 ID의 목록을 가져올 수 `/dataSets` [!DNL Catalog Service] 있습니다. 자세한 내용은 [ [!DNL Catalog] listinjects](../../catalog/api/list-objects.md) 가이드를 참조하십시오. |
+
 **응답**
 
-응답 개체에는 지정된 데이터 집합 내에 있는 모든 레이블의 통합 목록이 포함된 `duleLabels` 배열이 포함됩니다. 이 목록에는 데이터 세트 내의 모든 필드에 데이터 세트 및 필드 수준 레이블이 포함됩니다.
-
-또한 응답에는 각 데이터 세트에 대한 개체가 포함된 `discoveredLabels` 배열이 포함되어 있으며 데이터 세트 및 필드 수준 레이블로 `datasetLabels` 분류됩니다. 각 필드 수준 레이블에는 해당 레이블이 있는 특정 필드의 경로가 표시됩니다.
-
-지정된 마케팅 작업이 데이터 집합 내의 `duleLabels` 와 관련된 정책을 위반하는 경우, `violatedPolicies` 배열에 영향을 받는 정책(또는 정책)의 세부 정보가 포함됩니다. 위반되는 정책이 없으면 `violatedPolicies` 배열은 비어 있는(`[]`) 것처럼 표시됩니다.
+성공적인 응답에는 제공된 데이터 세트에 대해 마케팅 작업을 수행한 결과로 위반된 정책의 세부 정보가 포함된 `violatedPolicies` 배열이 포함됩니다. 정책을 위반하지 않으면 `violatedPolicies` 배열이 비어 있게 됩니다.
 
 ```JSON
 {
@@ -326,27 +342,36 @@ curl -X POST \
 }
 ```
 
-## 데이터 세트, 필드 및 마케팅 작업을 사용하여 정책 평가
+| 속성 | 설명 |
+| --- | --- |
+| `duleLabels` | 응답 개체에는 지정된 데이터 집합 내에 있는 모든 레이블의 통합 목록이 포함된 `duleLabels` 배열이 포함됩니다. 이 목록에는 데이터 세트 내의 모든 필드에 데이터 세트 및 필드 수준 레이블이 포함됩니다. |
+| `discoveredLabels` | 또한 응답에는 각 데이터 세트에 대한 개체가 포함된 `discoveredLabels` 배열이 포함되어 있으며 데이터 세트 및 필드 수준 레이블로 `datasetLabels` 분류됩니다. 각 필드 수준 레이블에는 해당 레이블이 있는 특정 필드의 경로가 표시됩니다. |
 
-하나 이상의 데이터 세트 ID를 제공하는 것 외에도 각 데이터 세트 내의 일부 필드도 지정하여 해당 필드의 데이터 사용 레이블만 평가되어야 함을 나타냅니다. 데이터 집합만 포함하는 POST 요청과 유사하게, 이 요청은 요청 본문에 각 데이터 세트에 대한 특정 필드를 추가합니다.
+## 특정 데이터 집합 필드를 사용하여 정책 위반 평가 {#fields}
+
+하나 이상의 데이터 집합 내에서 필드 하위 집합을 기준으로 정책 위반을 평가할 수 있으므로 해당 필드에 적용된 데이터 사용 레이블만 평가됩니다.
 
 데이터 집합 필드를 사용하여 정책을 평가할 때는 다음 사항에 유의하십시오.
 
-* **필드 이름은 대/소문자를 구분합니다.** 필드를 제공할 때는 데이터 세트에 나타나는 것과 동일한 방식으로 작성되어야 합니다(예: `firstName` vs `firstname`).
-* **데이터 집합 레이블 상속입니다.** 데이터 사용 레이블은 여러 수준에서 적용할 수 있으며 아래로 상속됩니다. 정책 평가가 생각했던 방식으로 반환되지 않는 경우 필드 수준에서 적용된 레이블 외에 데이터 세트에서 필드로 상속된 레이블을 확인해야 합니다.
+* **필드 이름은 대/소문자를 구분합니다**.필드를 제공할 때는 데이터 세트에 나타나는 것과 동일한 방식으로 작성되어야 합니다(예: `firstName` vs `firstname`).
+* **데이터 집합 레이블 상속**:데이터 세트의 개별 필드는 데이터 세트 수준에서 적용된 레이블을 상속합니다. 정책 평가가 예상대로 반환되지 않는 경우 필드 수준에서 적용된 레이블 외에 데이터 세트 수준에서 필드로 상속되었을 수 있는 레이블을 확인하십시오.
 
 **API 형식**
 
 ```http
-POST /marketingActions/core/{marketingActionName}/constraints
-POST /marketingActions/custom/{marketingActionName}/constraints
+POST /marketingActions/core/{MARKETING_ACTION_NAME}/constraints
+POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 ```
+
+| 매개 변수 | 설명 |
+| --- | --- |
+| `{MARKETING_ACTION_NAME}` | 데이터 집합 필드의 하위 집합에 대해 테스트할 마케팅 작업의 이름입니다. 마케팅 작업 종단점에 [GET 요청을 만들어 사용 가능한 마케팅 작업 목록을 검색할 수 있습니다](./marketing-actions.md#list). |
 
 **요청**
 
-요청 본문에는 각 데이터 집합 ID에 대한 개체가 포함된 배열과 평가에 사용해야 하는 해당 데이터 집합 내의 필드 하위 집합이 포함됩니다. 요청 본문을 전송하므로 &quot;Content-Type: 다음 예와 같이 application/json&quot; 요청 헤더가 필요합니다.
+다음 요청은 세 데이터 세트에 속하는 특정 필드 `crossSiteTargeting` 에 대한 마케팅 작업을 테스트합니다. 페이로드는 데이터 세트만 포함하는 [평가 요청과](#datasets)유사하며 각 데이터 세트에 대해 특정 필드를 추가하여 레이블을 수집합니다.
 
-```SHELL
+```sh
 curl -X POST \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/crossSiteTargeting/constraints \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -387,13 +412,17 @@ curl -X POST \
       ]'
 ```
 
+| 속성 | 설명 |
+| --- | --- |
+| `entityType` | 형제 속성에 ID가 표시된 엔티티 `entityId` 유형. 현재 허용된 유일한 값은 입니다 `dataSet`. |
+| `entityId` | 마케팅 작업에 대해 필드가 평가되는 데이터 세트의 ID입니다. API의 종단점에 GET 요청을 함으로써 데이터 집합 및 해당 ID의 목록을 가져올 수 `/dataSets` [!DNL Catalog Service] 있습니다. 자세한 내용은 [ [!DNL Catalog] listinjects](../../catalog/api/list-objects.md) 가이드를 참조하십시오. |
+| `entityMeta.fields` | JSON 포인터 문자열 형태로 제공되는 데이터 세트 스키마 내의 특정 필드에 대한 경로 배열. 이러한 문자열에 대해 허용되는 구문에 대한 자세한 내용은 API [fundamentals](../../landing/api-fundamentals.md#json-pointer) 안내서의 JSON 포인터에 대한 섹션을 참조하십시오. |
+
 **응답**
 
-응답 객체에는 지정된 필드에 있는 레이블의 통합 목록이 포함된 `duleLabels` 배열이 포함됩니다. 여기에는 데이터 세트 레이블도 포함되며, 이러한 레이블은 필드에 상속됩니다.
+성공적인 응답에는 제공된 데이터 세트 필드에 대한 마케팅 작업을 수행한 결과로 위반된 정책의 세부 정보가 포함된 `violatedPolicies` 배열이 포함됩니다. 정책을 위반하지 않으면 `violatedPolicies` 배열이 비어 있게 됩니다.
 
-제공된 필드의 데이터에 대해 지정된 마케팅 작업을 수행하여 정책을 위반하면 `violatedPolicies` 배열에 영향을 받는 정책(또는 정책)의 세부 사항이 포함됩니다. 위반되는 정책이 없으면 `violatedPolicies` 배열은 비어 있는(`[]`) 것처럼 표시됩니다.
-
-아래 응답에서 이제 요청 본문에 지정된 필드만 포함되므로 각 데이터 세트에 대한 목록과 `duleLabels` 같은 목록 `discoveredLabels` 이 짧다는 것을 확인할 수 있습니다. 이전에 위반된 정책인 &quot;광고 또는 컨텐츠 타깃팅&quot;에 두 `C4 AND C6` 레이블이 필요하므로 더 이상 위반이 발생하지 않으며 `violatedPolicies` 배열이 비어 있는 것으로 나타납니다.
+아래 예제 응답을 데이터 [세트만](#datasets)포함하는 응답과 비교하는 경우, 수집된 레이블 목록이 더 짧습니다. 요청 본문에 지정된 필드만 포함되므로 각 데이터 세트에 `discoveredLabels` 대한 작업도 줄어듭니다. 또한 이전에 위반된 정책은 두 `Targeting Ads or Content` 레이블을 모두 `C4 AND C6` 표시해야 하므로 더 이상 빈 `violatedPolicies` 배열에 표시된 대로 위반되지 않습니다.
 
 ```JSON
 {
@@ -491,6 +520,166 @@ curl -X POST \
     ],
     "violatedPolicies": []
 }
+```
+
+## 정책 일괄 평가 {#bulk}
+
+종단점은 단일 API 호출에서 여러 개의 평가 작업을 실행할 수 있도록 해줍니다. `/bulk-eval`
+
+**API 형식**
+
+```http
+POST /bulk-eval
+```
+
+**요청**
+
+벌크 평가 요청의 페이로드는 개체 배열이어야 합니다.수행할 각 평가 작업에 대해 하나씩 표시합니다. 데이터 세트와 필드를 기반으로 평가하는 작업의 경우 `entityList` 배열을 제공해야 합니다. 데이터 사용 레이블을 기준으로 평가하는 작업의 경우 `labels` 배열을 제공해야 합니다.
+
+>[!WARNING]
+>
+>나열된 평가 작업에 배열과 배열 `entityList` 이 모두 포함된 경우 오류가 `labels` 발생합니다. 데이터 세트와 레이블을 모두 기준으로 동일한 마케팅 작업을 평가하려면 해당 마케팅 작업에 별도의 평가 작업을 포함해야 합니다.
+
+```sh
+curl -X POST \
+  https://platform.adobe.io/data/foundation/dulepolicy/bulk-eval \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '[
+        {
+          "evalRef": "https://platform.adobe.io:443/data/foundation/dulepolicy/marketingActions/core/emailTargeting/constraints",
+          "includeDraft": false,
+          "labels": [
+            "C1",
+            "C2",
+            "C3"
+          ]
+        },
+        {
+          "evalRef": "https://platform.adobe.io:443/data/foundation/dulepolicy/marketingActions/core/emailTargeting/constraints",
+          "includeDraft": false,
+          "entityList": [
+            {
+              "entityType": "dataSet",
+              "entityId": "5b67f4dd9f6e710000ea9da4",
+              "entityMeta": {
+                "fields": [
+                  "address"
+                ]
+              }
+            }
+          ]
+        }
+      ]'
+```
+
+| 속성 | 설명 |
+| --- | --- |
+| `evalRef` | 정책 위반에 대한 레이블 또는 데이터 세트에 대해 테스트할 마케팅 작업의 URI입니다. |
+| `includeDraft` | 기본적으로 활성화된 정책만 평가에 참여합니다. 로 `includeDraft` 설정하면 `true`상태에 있는 정책 `DRAFT` 도 참여할 수 있습니다. |
+| `labels` | 마케팅 작업을 테스트할 데이터 사용 레이블 배열.<br><br>**중요&#x200B;**:이 속성을 사용할 때는 동일한 개체에`entityList`속성을 포함해서는 안 됩니다. 데이터 집합 및/또는 필드를 사용하여 동일한 마케팅 작업을 평가하려면,`entityList`배열이 포함된 요청 페이로드에 별도의 개체를 포함해야 합니다. |
+| `entityList` | 마케팅 작업을 테스트하기 위해 데이터 세트 및 해당 데이터 세트 내의 특정 필드(선택 사항) 배열.<br><br>**중요&#x200B;**:이 속성을 사용할 때는 동일한 개체에`labels`속성을 포함해서는 안 됩니다. 특정 데이터 사용 레이블을 사용하여 동일한 마케팅 작업을 평가하려면`labels`배열이 포함된 요청 페이로드에 별도의 개체를 포함해야 합니다. |
+| `entityType` | 마케팅 작업을 테스트할 엔티티 유형. 현재, 만 `dataSet` 지원됩니다. |
+| `entityId` | 마케팅 작업을 테스트할 데이터 세트의 ID입니다. |
+| `entityMeta.fields` | (선택 사항) 마케팅 작업을 테스트할 데이터 세트 내의 특정 필드 목록입니다. |
+
+**응답**
+
+성공적인 응답은 평가 결과의 배열을 반환합니다.요청에서 전송된 각 정책 평가 작업에 대해 하나씩.
+
+```json
+[
+  {
+    "status": 200,
+    "body": {
+      "timestamp": 1595866566165,
+      "clientId": "{CLIENT_ID}",
+      "userId": "{USER_ID}",
+      "imsOrg": "{IMS_ORG}",
+      "sandboxName": "prod",
+      "marketingActionRef": "https://platform.adobe.io:443/data/foundation/dulepolicy/marketingActions/core/emailTargeting",
+      "duleLabels": [
+        "C1",
+        "C2",
+        "C3"
+      ],
+      "violatedPolicies": []
+    }
+  },
+  {
+    "status": 200,
+    "body": {
+      "timestamp": 1595866566165,
+      "clientId": "{CLIENT_ID}",
+      "userId": "{USER_ID}",
+      "imsOrg": "{IMS_ORG}",
+      "sandboxName": "prod",
+      "marketingActionRef": "https://platform.adobe.io:443/data/foundation/dulepolicy/marketingActions/core/emailTargeting",
+      "duleLabels": [
+        "C1",
+        "C2"
+      ],
+      "discoveredLabels": [
+        {
+          "entityType": "dataset",
+          "entityId": "5b67f4dd9f6e710000ea9da4",
+          "dataSetLabels": {
+            "connection": {
+              "labels": [
+
+              ]
+            },
+            "dataset": {
+              "labels": [
+                "C1",
+                "C2"
+              ]
+            },
+            "fields": []
+          }
+        }
+      ],
+      "violatedPolicies": [
+        {
+          "name": "Email Policy",
+          "status": "DRAFT",
+          "marketingActionRefs": [
+            "https://platform.adobe.io:443/data/foundation/dulepolicy/marketingActions/core/emailTargeting"
+          ],
+          "description": "Conditions under which we won't send marketing-based email",
+          "deny": {
+            "label": "C1",
+            "operator": "AND",
+            "operands": [
+              {
+                "label": "C1"
+              },
+              {
+                "label": "C3"
+              }
+            ]
+          },
+          "id": "76131228-7654-11e8-adc0-fa7ae01bbebc",
+          "imsOrg": "{IMS_ORG}",
+          "created": 1529696681413,
+          "createdClient": "{CLIENT_ID}",
+          "createdUser": "{USER_ID}",
+          "updated": 1529697651972,
+          "updatedClient": "{CLIENT_ID}",
+          "updatedUser": "{USER_ID}",
+          "_links": {
+            "self": {
+              "href": "./76131228-7654-11e8-adc0-fa7ae01bbebc"
+            }
+          }
+        }
+      ]
+    }
+  }
+]
 ```
 
 ## 정책 평가 [!DNL Real-time Customer Profile]
