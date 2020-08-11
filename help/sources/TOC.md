@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform 소스 커넥터 도움말
 translation-type: tm+mt
-source-git-commit: 03fd716d6f743d839bc24ff99660efdf47b187a0
+source-git-commit: 23653949cd16e9d4ee8c3f345cbee74f147263cd
 workflow-type: tm+mt
-source-wordcount: '594'
+source-wordcount: '595'
 ht-degree: 0%
 
 ---
@@ -187,5 +187,6 @@ ht-degree: 0%
       - [결제 커넥터에 대한 데이터 흐름 구성](tutorials/ui/dataflow/payments.md)
       - [프로토콜 커넥터에 대한 데이터 흐름 구성](tutorials/ui/dataflow/protocols.md)
    - [인바운드 데이터를 활성화하여 고객 프로필 채우기](tutorials/ui/profile.md)
-   - [계정 및 데이터 세트 흐름 모니터링](tutorials/ui/monitor.md)
-- [Platform 릴리스 노트](https://www.adobe.com/go/platform-release-notes-en)
+   - [계정 및 데이터 흐름 모니터링](tutorials/ui/monitor.md)
+   - [데이터 흐름 삭제](tutorials/ui/delete.md)
+- [플랫폼 릴리스 정보](https://www.adobe.com/go/platform-release-notes-en)
