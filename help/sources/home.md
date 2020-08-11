@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform 소스 커넥터 개요
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+source-git-commit: 8e39cc206efa3fc314ae689845c88f0923ac1743
 workflow-type: tm+mt
-source-wordcount: '800'
+source-wordcount: '801'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # 소스 커넥터 개요
 
-Adobe Experience Platform을 사용하면 [!DNL Platform] 서비스를 사용하여 들어오는 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 외부 소스에서 데이터를 수집할 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 등 다양한 소스의 데이터를 인제스트할 수 있습니다.
+Adobe Experience Platform은 [!DNL Platform] 서비스를 사용하여 들어오는 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 외부 소스에서 데이터를 수집할 수 있도록 허용합니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 등 다양한 소스의 데이터를 인제스트할 수 있습니다.
 
 [!DNL Experience Platform] 은 다양한 데이터 제공자에 대한 소스 연결을 쉽게 설정할 수 있는 RESTful API와 대화형 UI를 제공합니다. 이러한 소스 연결을 통해 타사 시스템을 인증하고, 통합 실행에 대한 시간을 설정하고, 데이터 처리 처리량을 관리할 수 있습니다.
 
@@ -26,7 +26,7 @@ Adobe Experience Platform을 사용하면 [!DNL Platform] 서비스를 사용하
 
 ### Adobe 응용 프로그램
 
-[!DNL Experience Platform] Adobe Analytics, Adobe Audience Manager 및 기타 Adobe 애플리케이션에서 데이터를 수집할 수 [!DNL Experience Platform Launch]있습니다. 자세한 내용은 다음 관련 문서를 참조하십시오.
+[!DNL Experience Platform] adobe analytics, Adobe Audience Manager 및 기타 Adobe 애플리케이션에서 데이터를 수집할 수 있습니다 [!DNL Experience Platform Launch]. 자세한 내용은 다음 관련 문서를 참조하십시오.
 
 - [Adobe Audience Manager 커넥터 개요](connectors/adobe-applications/audience-manager.md)
 - [UI에서 Adobe Audience Manager 소스 커넥터 만들기](./tutorials/ui/create/adobe-applications/audience-manager.md)
@@ -45,8 +45,9 @@ Adobe Experience Platform을 사용하면 [!DNL Platform] 서비스를 사용하
 클라우드 스토리지 소스는 다운로드, 형식 지정 또는 업로드할 필요 [!DNL Platform] 없이 고유한 데이터를 가져올 수 있습니다. 인제스트된 데이터는 XDM JSON, XDM 쪽모이 세공식 또는 구분 기호로 형식을 지정할 수 있습니다. 프로세스의 모든 단계는 사용자 인터페이스를 사용하여 소스 워크플로우에 통합됩니다. 자세한 내용은 다음 관련 문서를 참조하십시오.
 
 - [!DNL Azure Data Lake Storage Gen2](connectors/cloud-storage/adls-gen2.md) 커넥터
-- [!DNL Azure Blob and Amazon S3](connectors/cloud-storage/blob-s3.md) 커넥터
+- [!DNL Azure Blob](connectors/cloud-storage/blob.md) 커넥터
 - [!DNL Amazon Kinesis](connectors/cloud-storage/kinesis.md) 커넥터
+- [!DNL Amazon S3](connectors/cloud-storage/s3.md) 커넥터
 - [!DNL Apache HDFS](connectors/cloud-storage/hdfs.md) 커넥터
 - [!DNL Azure Event Hubs](connectors/cloud-storage/eventhub.md) 커넥터
 - [!DNL Azure File Storage](connectors/cloud-storage/azure-file-storage.md) 커넥터
@@ -62,7 +63,7 @@ CRM 시스템은 고객과의 관계를 구축하는 데 도움이 되는 데이
 
 ### 고객 성공 사례
 
-[!DNL Experience Platform] 타사 고객 성공 애플리케이션에서 데이터 인제스트 지원을 제공합니다. 자세한 내용은 다음 관련 문서를 참조하십시오.
+[!DNL Experience Platform] 타사 고객 성공 애플리케이션에서 데이터 인제스트를 지원합니다. 자세한 내용은 다음 관련 문서를 참조하십시오.
 
 - [!DNL Salesforce Service Cloud](connectors/customer-success/salesforce-service-cloud.md) 커넥터
 - [!DNL ServiceNow](connectors/customer-success/servicenow.md) 커넥터
