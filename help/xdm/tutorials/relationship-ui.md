@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 스키마 편집기를 사용하여 두 스키마 간의 관계 정의
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: 6d291ac9a8c194dd63e411e4d064492c38412749
+source-git-commit: d847329f675c7ac34a4feabb9e57a9e97f7e3ed1
 workflow-type: tm+mt
-source-wordcount: '912'
+source-wordcount: '911'
 ht-degree: 0%
 
 ---
@@ -48,7 +48,7 @@ ht-degree: 0%
 
 ### 호텔 스키마
 
-대상 스키마 &quot;[!UICONTROL 호텔]&quot;은 사용자 정의 &quot;[!UICONTROL 호텔]&quot; 클래스를 기반으로 하며 호텔을 설명하는 필드를 포함합니다. &quot;[!UICONTROL email]&quot; 필드는 &quot;[!UICONTROL 이메일]&quot; 네임스페이스 아래의 스키마의 기본 ID로사용됩니다. &quot;[!UICONTROL 충성도 구성원]&quot;과 같이 이 스키마도 사용하도록 설정되었습니다 [!DNL Real-time Customer Profile].
+대상 스키마 &quot;[!UICONTROL 호텔]&quot;은 사용자 정의 &quot;[!UICONTROL 호텔]&quot; 클래스를 기반으로 하며 호텔을 설명하는 필드를 포함합니다. &quot;[!DNL hotelId]&quot; 필드는 사용자 지정 &quot;[!DNL hotelId]&quot; 네임스페이스 아래의 스키마의 기본 ID로 사용됩니다. &quot;[!UICONTROL 충성도 구성원]&quot;과 같이 이 스키마도 사용하도록 설정되었습니다 [!DNL Real-time Customer Profile].
 
 ![](../images/tutorials/relationship/hotels.png)
 
