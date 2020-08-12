@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: August 10, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 89531ad458bd41720090ef2c429376af4460d7c0
+source-git-commit: c64d4cc01b5125fad5f7c75914dfc1e4b20bc069
 workflow-type: tm+mt
-source-wordcount: '296'
+source-wordcount: '297'
 ht-degree: 7%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 7%
 
 **릴리스 날짜: 2020년 12월 8일**
 
-Experience Platform에 대한 최신 릴리스 노트
+Adobe Experience Platform의 기존 기능 업데이트:
 
 - [[!DNL 데이터 과학 작업 공간]](#dsw)
 - [[!DNL 소스]](#sources)
