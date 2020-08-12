@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: August 10, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: f881c1365684b1ca9e6bf9a8ce866d234dc54128
+source-git-commit: 89531ad458bd41720090ef2c429376af4460d7c0
 workflow-type: tm+mt
-source-wordcount: '302'
+source-wordcount: '297'
 ht-degree: 7%
 
 ---
@@ -15,37 +15,38 @@ ht-degree: 7%
 
 # Adobe Experience Platform 릴리스 노트
 
-**릴리스 날짜: 2020년 6월 10일**
+**릴리스 날짜: 2020년 12월 8일**
 
-Adobe Experience Platform의 새로운 기능:
+Adobe Experience Platform의 기존 기능 업데이트:
 
-- [!DNL Access control](#access-control)
-- [!DNL Sandboxes](#sandboxes)
+- [[!DNL 데이터 과학 작업 공간]](#dsw)
+- [[!DNL 소스]](#sources)
 
-## [!DNL Access control] {#access-control}
+## [!DNL Data Science Workspace] {#dsw}
 
-[!DNL Experience Platform] 는 [Adobe Admin Console](https://adminconsole.adobe.com) 제품 프로필을 활용하여 사용자와 사용 권한 및 샌드박스를 연결합니다. 권한은 데이터 모델링, 프로필 관리, 샌드박스 관리 등 다양한 Platform 기능에 대한 액세스를 제어합니다.
+[!DNL Data Science Workspace] 머신 러닝과 인공 지능(AI)을 사용하여 데이터에서 인사이트를 도출합니다. Adobe Experience Platform에 통합되어 Adobe 솔루션에서 콘텐츠와 데이터 자산을 사용하여 예측할 수 [!DNL Data Science Workspace] 있습니다.
 
-**주요 기능**
-
-| 기능 | 설명 |
-|--- | ---|
-| 권한 | 제품 프로필 내 탭 [!DNL Admin Console]에서 해당 프로필에 연결된 사용자가 사용할 수 있는 [!DNL Platform] [!DNL Platform] 기능을 사용자 지정할 수 있습니다. 사용 가능한 권한 카테고리는 다음과 같습니다. [!UICONTROL 데이터 모델링], [!UICONTROL 데이터 관리], [!UICONTROL 프로필 관리], [!UICONTROL 데이터 모니터링], 데이터 모니터링, Sandbox 관리, Identity Administration,Sandbox Administration 대상, Vernia,SourceAlysis . |
-| 샌드박스 액세스 | 제품 프로필 내 [!UICONTROL _권한&#x200B;_][!DNL Platform]탭에서 특정 샌드박스에 대한 액세스 권한을 부여할 수 있습니다. 자세한 내용은[아래의 샌드박스](#sandboxes)섹션을 참조하십시오. |
-
-자세한 내용은 [액세스 제어 개요를 참조하십시오](../../access-control/home.md).
-
-## [!DNL Sandboxes] {#sandboxes}
-
-[!DNL Experience Platform] 디지털 경험 애플리케이션을 전 세계적으로 강화하도록 설계되었습니다. 기업은 여러 디지털 경험 애플리케이션을 동시에 실행하면서 이러한 애플리케이션의 개발, 테스트 및 배포 요구 사항을 충족하고 운영 규정을 준수해야 합니다. 이러한 요구 사항을 해결하기 위해 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되도록 단일 [!DNL Experience Platform] [!DNL Platform] 인스턴스를 별도의 가상 환경으로 분할하는 샌드박스를 제공합니다.
-
-**주요 기능**
+**새로운 기능**
 
 | 기능 | 설명 |
-|--- | ---|
-| 프로덕션 샌드박스 | [!DNL Experience Platform] 은 삭제 또는 재설정할 수 없는 단일 프로덕션 샌드박스를 제공합니다. |
-| 비프로덕션 샌드박스 | 한 인스턴스에 여러 비프로덕션 샌드박스를 만들 수 있으므로 프로덕션 샌드박스에 영향을 주지 않고 기능을 테스트하고 실험을 실행하고 사용자 정의 구성을 만들 수 있습니다. [!DNL Platform] |
-| 샌드박스 전환기 | 사용자 [!DNL Experience Platform] 인터페이스에서 화면의 왼쪽 위 모서리에 있는 샌드박스 전환기를 사용하면 드롭다운 메뉴를 통해 사용 가능한 샌드박스 간을 전환할 수 있습니다. |
-| `x-sandbox-name` header | 이제 API에 대한 모든 [!DNL Experience Platform] 호출에는 새 `x-sandbox-name` 헤더가 포함되어야 하며, 이 값은 작업이 수행될 샌드박스의 `name` 속성을 참조합니다. |
+| ------- | ----------- |
+| VM의 [!DNL JupyterLab] | 장기 실행 [!DNL JupyterLab notebook] 가상 시스템의 안정성이 개선되었습니다. |
 
-자세한 내용은 [샌드박스 개요를 참조하십시오](../../sandboxes/home.md).
+자세한 내용 [!DNL JupyterLab]은 [[!DNL JupyterLab] 사용 안내서를 참조하십시오](../../data-science-workspace/jupyterlab/overview.md).
+
+## 소스 {#sources}
+
+Adobe Experience Platform은 외부 소스에서 데이터를 인제스트할 수 있으며, [!DNL Platform] 서비스를 사용하여 해당 데이터를 구조화, 레이블 지정 및 개선할 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 타사 소프트웨어 및 CRM 시스템과 같은 다양한 소스의 데이터를 인제스트할 수 있습니다.
+
+[!DNL Experience Platform] 은 다양한 데이터 공급자에 대한 소스 연결을 쉽게 설정할 수 있는 RESTful API와 대화형 UI를 제공합니다. 이러한 소스 연결을 통해 외부 스토리지 시스템 및 CRM 서비스에 인증 및 연결할 수 있고, 통합 실행에 대한 시간을 설정하고, 데이터 통합 처리량을 관리할 수 있습니다.
+
+**새로운 기능**
+
+| 기능 | 설명 |
+| ------- | ----------- |
+| 흐름 실행 모니터링 | 사용자는 모든 흐름 실행을 모니터링하고 완료 상태, 실행 기간, 처리된 파일 목록, 오류 및 지표를 포함하여 각 실행에 대한 세부 보기를 볼 수 있습니다. 자세한 내용은 데이터 흐름 [모니터링](../../sources/tutorials/ui/monitor.md) 문서를 참조하십시오. |
+| 계정 업데이트 | 사용자는 기존 계정의 자격 증명, 이름 및 설명을 업데이트하여 보다 의미 있는 정보를 제공하고 생성된 오류를 수정할 수 있습니다. |
+| 흐름 실행 알림 | 사용자는 이벤트에 구독하고 웹 후크를 등록하여 흐름 실행에 대한 상태, 지표 및 오류에 대한 실시간 알림을 받을 수 있습니다. |
+| 향상된 UI 카탈로그 | 선택한 개체의 기본 작업에 보다 쉽게 액세스할 수 있도록 소스 카탈로그 화면에 대한 업데이트 |
+
+소스에 대한 자세한 내용은 [소스 개요를 참조하십시오](../../sources/home.md).
