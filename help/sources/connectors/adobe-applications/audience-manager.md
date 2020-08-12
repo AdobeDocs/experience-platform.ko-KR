@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Audience Manager 커넥터
 topic: overview
 translation-type: tm+mt
-source-git-commit: fb4ffa2c95365905f5417586fa7ecf88523009a0
+source-git-commit: a1b09f3e88e489f1b0ec0c1fcb72a2a5a4356d87
 workflow-type: tm+mt
-source-wordcount: '742'
+source-wordcount: '643'
 ht-degree: 1%
 
 ---
@@ -14,19 +14,18 @@ ht-degree: 1%
 
 # Audience Manager 커넥터
 
-Adobe Audience Manager 데이터 커넥터는 Adobe Audience Manager에서 수집된 퍼스트 파티 데이터를 Adobe Experience Platform으로 스트리밍합니다. Audience Manager 커넥터는 세 가지 데이터 카테고리를 Platform으로 인제스트합니다.
+Adobe Audience Manager 데이터 커넥터는 Adobe Audience Manager에서 수집한 자사 데이터를 Adobe Experience Platform으로 스트리밍합니다. Audience Manager 커넥터는 세 가지 데이터 카테고리를 플랫폼으로 인제스트합니다.
 
-- **실시간 데이터:** Audience Manager 데이터 수집 서버에서 실시간으로 캡처된 데이터 이 데이터는 Audience Manager에서 규칙 기반 트레이트를 채우는 데 사용되며 짧은 지연 시간 내에 Platform에 나타납니다.
-- **온보드(인바운드) 데이터:** Audience Manager에서 호스팅하는 Amazon S3 위치에 사용자가 업로드한 파일입니다. Audience Manager은 이 데이터를 사용하여 인바운드 파일 방법을 사용하여 온보딩 트레이트를 채우고 약간의 지연이 발생합니다.
+- **실시간 데이터:** Audience Manager 데이터 수집 서버에서 실시간으로 캡처된 데이터 이 데이터는 Audience Manager에서 규칙 기반 트레이트를 채우는 데 사용되며 짧은 지연 시간 내에 플랫폼에서 나타납니다.
 - **프로필 데이터:** Audience Manager은 실시간 데이터와 온보드 데이터를 사용하여 고객 프로파일을 추출합니다. 이러한 프로필은 세그먼트 할당에서 ID 그래프와 트레이트를 채우는 데 사용됩니다.
 
-Audience Manager 커넥터는 이러한 데이터 범주를 XDM(Experience Data Model) 스키마에 매핑하고 Platform으로 보냅니다. 실시간 데이터와 온보드 데이터는 XDM ExperienceEvent 데이터로 전송되고 프로필 데이터는 XDM 개별 프로필로 전송됩니다.
+Audience Manager 커넥터는 이러한 데이터 카테고리를 XDM(Experience Data Model) 스키마에 매핑하여 플랫폼으로 보냅니다. 실시간 데이터는 XDM ExperienceEvent 데이터로 전송되고 프로필 데이터는 XDM 개별 프로필로 전송됩니다.
 
-Platform UI를 사용하여 Adobe Audience Manager과의 연결을 만드는 방법에 대한 지침은 [Audience Manager 커넥터 자습서를 참조하십시오](../../tutorials/ui/create/adobe-applications/audience-manager.md).
+플랫폼 UI를 사용하여 Adobe Audience Manager와의 연결을 만드는 방법에 대한 지침은 [Audience Manager 커넥터 자습서를 참조하십시오](../../tutorials/ui/create/adobe-applications/audience-manager.md).
 
 ## XDM(Experience Data Model) 소개
 
-XDM은 Platform이 고객 경험 데이터를 구성하는 표준화된 프레임워크를 제공하는 공개적으로 문서화된 사양입니다.
+XDM은 플랫폼이 고객 경험 데이터를 구성하는 표준화된 프레임워크를 제공하는 공개적으로 문서화된 사양입니다.
 
 XDM 표준을 준수하면 고객 경험 데이터를 일관되게 통합할 수 있으므로 데이터를 손쉽게 전달하고 정보를 수집할 수 있습니다.
 
@@ -34,7 +33,7 @@ XDM을 Experience Platform에서 사용하는 방법에 대한 자세한 내용�
 
 ## XDM 스키마 예
 
-다음은 Platform의 XDM ExperienceEvent 및 XDM 개별 프로필에 매핑된 Audience Manager 구조의 예입니다.
+다음은 플랫폼의 XDM ExperienceEvent 및 XDM 개별 프로필에 매핑된 Audience Manager 구조의 예입니다.
 
 ### ExperienceEvent - 실시간 데이터 및 온보드 데이터의 경우
 
@@ -44,11 +43,11 @@ XDM을 Experience Platform에서 사용하는 방법에 대한 자세한 내용�
 
 ![](images/aam-profile-xdm-for-profile-data.png)
 
-## 필드는 Adobe Audience Manager에서 XDM으로 어떻게 매핑됩니까?
+## Adobe Audience Manager에서 XDM으로 필드를 어떻게 매핑합니까?
 
 자세한 내용은 [Audience Manager 매핑 필드](./mapping/audience-manager.md) 설명서를 참조하십시오.
 
-## Platform에 대한 데이터 관리
+## 플랫폼의 데이터 관리
 
 ### 데이터 세트
 
@@ -64,17 +63,15 @@ Audience Manager 데이터 세트는 기본적으로 프로필에 대해 비활�
 | Audience Manager 장치 프로파일 데이터 | Audience Manager 커넥터 진단에 사용됩니다. |
 | 인증된 Audience Manager 프로필 | 이 데이터 세트에 인증된 Audience Manager 프로필이 포함되어 있습니다. |
 | Audience Manager 인증된 프로필 메타 데이터 | Audience Manager 커넥터 진단에 사용됩니다. |
-| Audience Manager 인바운드 {Datasource ID} **(더 이상 사용되지 않음)** | 이 데이터 집합은 인바운드 파일 방법을 통해 Audience Manager의 온보드 레코드를 나타냅니다. 이 데이터 흐름은 더 이상 사용되지 않으며 이후 릴리스에서는 제거됩니다. |
-| Audience Manager 인바운드 메타 데이터 **(더 이상 사용되지 않음)** | Audience Manager 커넥터 진단에 사용됩니다. 이 데이터 흐름은 더 이상 사용되지 않으며 이후 릴리스에서는 제거됩니다. |
 
 ### 연결
 
-Adobe Audience Manager은 카탈로그에 하나의 연결을 만듭니다. **Audience Manager 연결**. 카탈로그는 Adobe Experience Platform 내 데이터 위치 및 계열에 대한 레코드 시스템이다. 연결은 커넥터의 고객별 인스턴스인 카탈로그 오브젝트입니다. 카탈로그, 연결 및 커넥터에 대한 자세한 내용은 [카탈로그 서비스 개요를](../../../catalog/home.md) 참조하십시오.
+Adobe Audience Manager, 카탈로그에 단일 연결 생성: **Audience Manager 연결**. 카탈로그는 Adobe Experience Platform 내 데이터 위치와 혈통 등에 대한 기록 시스템이다. 연결은 커넥터의 고객별 인스턴스인 카탈로그 오브젝트입니다. 카탈로그, 연결 및 커넥터에 대한 자세한 내용은 [카탈로그 서비스 개요를](../../../catalog/home.md) 참조하십시오.
 
-## Platform의 Audience Manager 데이터에 대한 예상 지연은 무엇입니까?
+## 플랫폼의 Audience Manager 데이터에 대한 예상 지연은 무엇입니까?
 
 | Audience Manager 데이터 | 지연 | 참고 |
 | --- | --- | --- |
-| 실시간 데이터 | &lt; 35분. | 실시간 노드에서 캡처되는 시간부터 Platform 데이터 레이크에 나타나는 시간입니다. |
-| 인바운드 데이터 | &lt; 13시간 | S3 버킷에서 캡처되는 것에서 Platform Data Lake에 나타나는 데 이르기까지 |
-| 프로필 데이터 | &lt; 2일 | 실시간/인바운드 데이터에서 캡처되는 시간부터 사용자 프로필에 추가되고 마지막으로 Platform 데이터 레이크에 나타나는 시간입니다. |
+| 실시간 데이터 | &lt; 35분. | 실시간 노드에서 캡처되는 시간부터 플랫폼 데이터 레이크에 나타나는 시간입니다. |
+| 인바운드 데이터 | &lt; 13시간 | S3 버킷에서 캡처되는 것에서 플랫폼 데이터 레이크에 나타나는 데 이르기까지 |
+| 프로필 데이터 | &lt; 2일 | 실시간/인바운드 데이터에서 캡처되는 시간부터 사용자 프로필에 추가되고 플랫폼 데이터 레이크에 나타나는 시간 |
