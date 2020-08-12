@@ -5,9 +5,9 @@ title: Attribution AI 입력 및 출력
 topic: Input and Output data for Attribution AI
 description: 다음 문서에서는 Attribution AI에서 사용되는 다양한 입력 및 출력 개요를 설명합니다.
 translation-type: tm+mt
-source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
+source-git-commit: 2b51569a4c3dd9863edb6831bd182a7fa9d1d891
 workflow-type: tm+mt
-source-wordcount: '2174'
+source-wordcount: '2075'
 ht-degree: 3%
 
 ---
@@ -58,7 +58,7 @@ Attribution AI에 대해 [!DNL Consumer Experience Event] (CEE) 스키마의 모
 > - 최소 1000개의 전환이 필요합니다.
 
 
-Attribution AI은 모델 트레이닝에 대한 입력으로 내역 데이터를 필요로 합니다. 필요한 데이터 기간은 주로 두 가지 주요 요인에 의해 결정됩니다. 트레이닝 창 및 뒤로 보기 창 트레이닝 기간이 짧을수록 최근 트렌드에 더 민감하게 반응하는 반면 트레이닝 기간이 길수록 모델이 안정적이고 정확해집니다. 비즈니스 목표를 가장 잘 나타내는 내역 데이터로 목표를 모델링하는 것이 중요합니다.
+Attribution AI은 모델 트레이닝에 대한 입력으로 내역 데이터를 필요로 합니다. 필요한 데이터 기간은 주로 두 가지 주요 요인에 의해 결정됩니다.트레이닝 창 및 뒤로 보기 창 트레이닝 기간이 짧을수록 최근 트렌드에 더 민감하게 반응하는 반면 트레이닝 기간이 길수록 모델이 안정적이고 정확해집니다. 비즈니스 목표를 가장 잘 나타내는 내역 데이터로 목표를 모델링하는 것이 중요합니다.
 
 교육 [창 구성은](./user-guide.md#training-window) 발생 시간에 따라 모델 교육에 포함되도록 설정된 전환 이벤트를 필터링합니다. 현재 최소 교육 기간은 1/4입니다(90일). 조회 [창에서는](./user-guide.md#lookback-window) 전환 이벤트와 관련된 전환 이벤트 터치포인트 전 며칠을 포함해야 하는지 나타내는 시간대를 제공합니다. 이 두 개념은 함께 애플리케이션에 필요한 입력 데이터(일 단위 측정)의 양을 결정합니다.
 
@@ -69,7 +69,7 @@ Attribution AI은 모델 트레이닝에 대한 입력으로 내역 데이터를
 필요한 최소 데이터 길이 = 교육 창 + 조회 창
 
 >[!TIP]
-> 기본 구성이 있는 응용 프로그램에 필요한 데이터의 최소 길이는 다음과 같습니다. 2분기(180일) + 56일 = 236일
+> 기본 구성이 있는 응용 프로그램에 필요한 데이터의 최소 길이는 다음과 같습니다.2분기(180일) + 56일 = 236일
 
 예 :
 
@@ -81,18 +81,6 @@ Attribution AI은 다음을 출력합니다.
 
 - [세부적인 원시 점수](#raw-granular-scores)
 - [집계된 점수](#aggregated-attribution-scores)
-
-아래 예에서 샘플 CSV 출력이 일러스트레이션 용도로 사용되었습니다. 다음은 샘플 파일의 몇 가지 특성입니다.
-
-- 파일에 토큰화된 이벤트가 없습니다.
-- 파일에 전환 전용 이벤트가 없습니다(점수 0이 한계 점수인 점수 행은 포함하지 않음).
-- 데이터 특성:
-   - 368 총 샘플 행.
-   - 각 채널당 최소 8개의 전환이 있습니다.
-   - 전환 유형의 151 전환 `“Digital_Product_Purchase”`.
-   - 10개의 서로 다른 터치포인트, 이메일, SOCIAL_LINKEDIN, ADS_GOOGLE, SOCIAL_OTHER, ADS_OTHER, SOCIAL_TWITTER, LANDINGPAGE, SOCIAL_FB, ADS_BING, PRINT.
-   - 전환 및 터치포인트는 각각 8개월 및 9개월 이상입니다.
-   - 행은 `id`및 `conversion_timestamp` 으로 순서가 정해집니다 `touchpoint_timestamp`.
 
 **출력 스키마 예:**
 
@@ -135,7 +123,7 @@ Attribution AI은 모든 점수 열을 기준으로 점수를 슬라이스하여
 | skuId(문자열) | True | 공급업체에서 정의한 제품의 고유 식별자인 SKU(Stock Keeping Unit). <br> **예:** MJ-03-XS-Black |
 | timestamp(DateTime) | True | 전환의 타임스탬프. <br> **예:** 2020-06-09T00:01:51.000Z |
 | passThrough(객체) | True | 추가 점수 데이터 집합 사용자가 모델을 구성하는 동안 지정한 열입니다. |
-| commerce_order_purchaseCity(문자열) | True | 추가 점수 데이터 집합 열을 참조하십시오. <br> **예:** city : 산호세 |
+| commerce_order_purchaseCity(문자열) | True | 추가 점수 데이터 집합 열을 참조하십시오. <br> **예:** city :산호세 |
 | customerProfile(개체) | False | 모델을 작성하는 데 사용되는 사용자의 ID 세부 정보입니다. |
 | identity (객체) | False | 및 같은 모델을 빌드하는 데 사용된 사용자의 세부 사항을 `id` 포함합니다 `namespace`. |
 | id(문자열) | True | 쿠키 ID, AID 또는 MCID와 같은 사용자의 ID <br> **예:** 1734876272540865644688320891369597404 |
@@ -200,20 +188,20 @@ Attribution AI은 두 가지 다른 유형의 알고리즘 점수, 증분 및 �
 
 | 열 이름 | 제한 | Nullable | 설명 |
 | --- | --- | --- | --- |
-| customerevents_date (DateTime) | 사용자 정의 및 고정 형식 | False | 고객 이벤트 날짜(YYYY-MM-DD 형식) <br> **예**: 2016-05-02 |
-| mediatochpoints_date(DateTime) | 사용자 정의 및 고정 형식 | True | 미디어 터치포인트 날짜(YYYY-MM-DD 형식) <br> **예**: 2017-04-21 |
-| 세그먼트(문자열) | 계산됨 | False | 전환 세그먼트(예: 모델이 만들어지는 지리 특성). 세그먼트가 없는 경우 세그먼트는 conversion_scope와 동일합니다. <br> **예**: ORDER_AMER |
-| conversion_scope(문자열) | 사용자 정의 | False | 사용자가 구성한 전환의 이름입니다. <br> **예**: 주문 |
-| touchpoint_scope(문자열) | 사용자 정의 | True | 사용자가 구성한 터치포인트의 이름 <br> **예**: PAID_SEARCH_CLICK |
-| 제품(문자열) | 사용자 정의 | True | 제품의 XDM 식별자입니다. <br> **예**: CC |
-| product_type(문자열) | 사용자 정의 | True | 이 제품 보기에 대해 사용자에게 표시되는 제품의 표시 이름입니다. <br> **예**: gpus, 랩탑 |
-| geo(문자열) | 사용자 정의 | True | 전환이 전달된 지리적 위치(placeContext.geo.countryCode) <br> **예**: 미국 |
-| event_type(문자열) | 사용자 정의 | True | 이 시계열 레코드의 기본 이벤트 유형 <br> **예**: 유료 전환 |
-| media_type(문자열) | ENUM | False | 미디어 유형이 유료, 소유 또는 획득 중 어느 것인지 설명합니다. <br> **예**: 유료, 소유 |
-| channel(문자열) | ENUM | False | XDM에서 유사한 속성을 갖는 채널의 가편집 분류를 제공하는 데 사용되는 `channel._type` [!DNL Consumer Experience Event] 속성입니다. <br> **예**: 검색 |
-| 작업(문자열) | ENUM | False | 이 `mediaAction` 속성은 경험 이벤트 미디어 작업 유형을 제공하는 데 사용됩니다. <br> **예**: 클릭 |
-| campaign_group(문자열) | 사용자 정의 | True | 여러 캠페인이 &#39;50%_DISCOUNT&#39;와 같이 함께 그룹화되는 캠페인 그룹의 이름입니다. <br> **예**: 상업 |
-| campaign_name(문자열) | 사용자 정의 | True | &#39;50%_DISCOUNT_USA&#39; 또는 &#39;50%_DISCOUNT_ASIA&#39;와 같은 마케팅 캠페인을 식별하는 데 사용되는 캠페인 이름. <br> **예**: 추수감사절 세일 |
+| customerevents_date (DateTime) | 사용자 정의 및 고정 형식 | False | 고객 이벤트 날짜(YYYY-MM-DD 형식) <br> **예**:2016-05-02 |
+| mediatochpoints_date(DateTime) | 사용자 정의 및 고정 형식 | True | 미디어 터치포인트 날짜(YYYY-MM-DD 형식) <br> **예**:2017-04-21 |
+| 세그먼트(문자열) | 계산됨 | False | 전환 세그먼트(예: 모델이 만들어지는 지리 특성). 세그먼트가 없는 경우 세그먼트는 conversion_scope와 동일합니다. <br> **예**:ORDER_AMER |
+| conversion_scope(문자열) | 사용자 정의 | False | 사용자가 구성한 전환의 이름입니다. <br> **예**:주문 |
+| touchpoint_scope(문자열) | 사용자 정의 | True | 사용자가 구성한 터치포인트의 이름 <br> **예**:PAID_SEARCH_CLICK |
+| 제품(문자열) | 사용자 정의 | True | 제품의 XDM 식별자입니다. <br> **예**:CC |
+| product_type(문자열) | 사용자 정의 | True | 이 제품 보기에 대해 사용자에게 표시되는 제품의 표시 이름입니다. <br> **예**:gpus, 랩탑 |
+| geo(문자열) | 사용자 정의 | True | 전환이 전달된 지리적 위치(placeContext.geo.countryCode) <br> **예**:미국 |
+| event_type(문자열) | 사용자 정의 | True | 이 시계열 레코드의 기본 이벤트 유형 <br> **예**:유료 전환 |
+| media_type(문자열) | ENUM | False | 미디어 유형이 유료, 소유 또는 획득 중 어느 것인지 설명합니다. <br> **예**:유료, 소유 |
+| channel(문자열) | ENUM | False | XDM에서 유사한 속성을 갖는 채널의 가편집 분류를 제공하는 데 사용되는 `channel._type` [!DNL Consumer Experience Event] 속성입니다. <br> **예**:검색 |
+| 작업(문자열) | ENUM | False | 이 `mediaAction` 속성은 경험 이벤트 미디어 작업 유형을 제공하는 데 사용됩니다. <br> **예**:클릭 |
+| campaign_group(문자열) | 사용자 정의 | True | 여러 캠페인이 &#39;50%_DISCOUNT&#39;와 같이 함께 그룹화되는 캠페인 그룹의 이름입니다. <br> **예**:상업 |
+| campaign_name(문자열) | 사용자 정의 | True | &#39;50%_DISCOUNT_USA&#39; 또는 &#39;50%_DISCOUNT_ASIA&#39;와 같은 마케팅 캠페인을 식별하는 데 사용되는 캠페인 이름. <br> **예**:추수감사절 세일 |
 
 **원시 점수 참조(집계)**
 
