@@ -1,67 +1,38 @@
 ---
 title: Adobe Experience Platform 릴리스 정보
-description: Experience Platform에 대한 최신 릴리스 노트
+description: Experience Platform 릴리스 노트
 doc-type: release notes
-last-update: July 15, 2020
-author: crhoades, ens25212
+last-update: August 10, 2020
+author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: f881c1365684b1ca9e6bf9a8ce866d234dc54128
+source-git-commit: 89531ad458bd41720090ef2c429376af4460d7c0
 workflow-type: tm+mt
-source-wordcount: '679'
-ht-degree: 5%
+source-wordcount: '296'
+ht-degree: 7%
 
 ---
 
 
 # Adobe Experience Platform 릴리스 노트
 
-**릴리스 날짜: 2020년 7월 15일**
+**릴리스 날짜: 2020년 12월 8일**
 
-Adobe Experience Platform의 기존 기능 업데이트:
+Experience Platform에 대한 최신 릴리스 노트
 
-- [데이터 거버넌스](#governance)
-- [실시간 고객 프로필](#profile)
-- [세그멘테이션 서비스](#segmentation)
-- [소스](#sources)
+- [[!DNL 데이터 과학 작업 공간]](#dsw)
+- [[!DNL 소스]](#sources)
 
-## [!DNL Data Governance] {#governance}
+## [!DNL Data Science Workspace] {#dsw}
 
-Adobe Experience Platform 데이터 거버넌스는 고객 데이터를 관리하고 데이터 사용에 적용되는 규정, 제한 사항 및 정책을 준수하는 데 사용되는 일련의 전략과 기술입니다. 카탈로그 작성, 데이터 계보, 데이터 사용 표시, 데이터 액세스 정책, 마케팅 작업을 위한 데이터 액세스 제어 등 다양한 [!DNL Experience Platform] 수준에서 핵심적인 역할을 합니다.
-
-**새로운 기능**
-
-| 기능 | 설명 |
-| -----------| ---------- |
-| 자동 정책 실행 [!DNL Real-time Customer Data Platform] | 세그먼트에 대상을 활성화하는 등, 이제 데이터 사용 정책은 작업을 위반할 [!DNL Real-time CDP] 때 자동으로 적용됩니다. 정책 위반이 트리거되면 활성화 워크플로우 내에서 사용 제한 사항을 실시간으로 확인하여 사용할 수 없는 데이터와 그 이유를 알 수 있습니다.<br><br>자세한 내용은 의 개요 [에서 데이터 사용 규정](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance) 준수 [!DNL Data Governance] 를 적용하는 섹션 [!DNL Real-time CDP] 을 참조하십시오. |
-| Adobe Audience Manager 통합 | 에서 공유되는 모든 세그먼트는 적용된 데이터 사용 레이블 [!DNL Audience Manager] 을 [!DNL Platform] 상속하거나 그 반대로 [!DNL Data Export Controls]상속됩니다. 사용 레이블 [!DNL Audience Manager] 과 데이터 [내보내기 컨트롤 간의 특정 매핑에 대한 설명서는 참조하십시오](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep). |
-| 사용자 지정 데이터 사용 레이블 | 이제 정책 서비스 API 또는 UI를 사용하여 사용자 지정 데이터 사용 레이블을 만들 수 있습니다. 자세한 내용은 [레이블 개요를](../../data-governance/labels/overview.md) 참조하십시오. |
-
-서비스에 대한 자세한 내용은 [데이터 거버넌스](../../data-governance/home.md) 개요를 참조하십시오.
-
-## [!DNL Real-time Customer Profile] {#profile}
-
-Adobe Experience Platform을 사용하면 고객이 브랜드와 언제 어디에서나 고객의 기대에 부응하는 일관된 경험을 제공할 수 있습니다. 온라인, 오프라인, CRM, 서드파티 데이터 등 다양한 채널의 데이터를 결합하는 각 개별 고객의 전체 상황을 파악할 수 있습니다. [!DNL Real-time Customer Profile] [!DNL Profile] 서로 다른 고객 데이터를 하나의 통합 뷰로 통합하여 고객 상호 작용에 대해 실행 가능하고 타임스탬프가 지정된 계정을 제공할 수 있습니다.
+[!DNL Data Science Workspace] 머신 러닝과 인공 지능(AI)을 사용하여 데이터에서 인사이트를 도출합니다. Adobe Experience Platform에 통합되어 Adobe 솔루션에서 콘텐츠와 데이터 자산을 사용하여 예측할 수 [!DNL Data Science Workspace] 있습니다.
 
 **새로운 기능**
 
 | 기능 | 설명 |
 | ------- | ----------- |
-| 데이터 사용 정책 실행 | in [!DNL Real-time Customer Data Platform]in, data usage policy violations are automatically visited when a injection in the [!UICONTROL Profile workspace] is attempted. 자동 정책 [집행에 대한 자세한 내용은 데이터 거버넌스](#governance) 릴리스 노트를 참조하십시오. |
+| VM의 [!DNL JupyterLab] | 장기 실행 [!DNL JupyterLab notebook] 가상 시스템의 안정성이 개선되었습니다. |
 
-## [!DNL Segmentation Service] {#segmentation}
-
-Adobe Experience Platform 세그멘테이션 서비스는 세그먼트를 작성하고 데이터로부터 대상을 생성할 수 있는 사용자 인터페이스와 RESTful API를 [!DNL Real-time Customer Profile] 제공합니다. 이러한 세그먼트는 중앙에서 구성 및 관리되므로 모든 Adobe 애플리케이션에서 쉽게 액세스할 수 [!DNL Platform]있습니다.
-
-[!DNL Segmentation Service] 고객 기반 내에서 마케팅 가능한 사람들을 구분하는 기준을 설명하여 특정 프로필 하위 집합을 정의합니다. 세그먼트는 브랜드와의 고객 상호 작용을 나타내는 레코드 데이터(인구 통계 정보 등) 또는 시간 시리즈 이벤트를 기반으로 할 수 있습니다.
-
-**새로운 기능**
-
-| 기능 | 설명 |
-| ------- | ----------- |
-| 스트리밍 세분화 | 이제 스트리밍 세그먼테이션은 데이터가 유입될 때 사용자 [!DNL Platform]의 세그먼트를 분류할 수 있으므로 세그먼트 자격 조건 시간을 크게 줄일 수 있습니다. 또한 스트리밍 세그먼테이션을 사용하면 세그멘테이션 작업을 수동으로 실행할 필요가 없습니다. |
-| 데이터 사용 정책 실행 | 에서 [!DNL Real-time Customer Data Platform]데이터 사용 정책 위반은 세그먼트 작업 공간에서 위반 작업을 시도하면 [!UICONTROL 자동으로] 표시됩니다. 자동 정책 [집행에 대한 자세한 내용은 데이터 거버넌스](#governance) 릴리스 노트를 참조하십시오. |
-
-자세한 내용 [!DNL Segmentation Service]은 세그멘테이션 [개요를 참조하십시오.](../../segmentation/home.md)
+자세한 내용 [!DNL JupyterLab]은 [[!DNL JupyterLab] 사용 안내서를 참조하십시오](../../data-science-workspace/jupyterlab/overview.md).
 
 ## 소스 {#sources}
 
@@ -73,7 +44,9 @@ Adobe Experience Platform은 외부 소스에서 데이터를 인제스트할 �
 
 | 기능 | 설명 |
 | ------- | ----------- |
-| 데이터 흐름 삭제를 위한 UI 지원 | 이제 UI를 통해 오류 발생 또는 불필요하게 된 데이터 흐름을 삭제할 수 있습니다. |
-| 일회성 인제스트를 위한 API 및 UI 지원 | 이제 시작 날짜만 제공되고 나중에 인제스트를 예약하지 않는 데이터 흐름 관련 일회성 인제스트를 API를 통해 또는 UI를 사용하여 실행할 수 있습니다. |
+| 흐름 실행 모니터링 | 사용자는 모든 흐름 실행을 모니터링하고 완료 상태, 실행 기간, 처리된 파일 목록, 오류 및 지표를 포함하여 각 실행에 대한 세부 보기를 볼 수 있습니다. 자세한 내용은 데이터 흐름 [모니터링](../../sources/tutorials/ui/monitor.md) 문서를 참조하십시오. |
+| 계정 업데이트 | 사용자는 기존 계정의 자격 증명, 이름 및 설명을 업데이트하여 보다 의미 있는 정보를 제공하고 생성된 오류를 수정할 수 있습니다. |
+| 흐름 실행 알림 | 사용자는 이벤트에 구독하고 웹 후크를 등록하여 흐름 실행에 대한 상태, 지표 및 오류에 대한 실시간 알림을 받을 수 있습니다. |
+| 향상된 UI 카탈로그 | 선택한 개체의 기본 작업에 보다 쉽게 액세스할 수 있도록 소스 카탈로그 화면에 대한 업데이트 |
 
 소스에 대한 자세한 내용은 [소스 개요를 참조하십시오](../../sources/home.md).
