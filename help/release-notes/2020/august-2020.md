@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: August 10, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 89531ad458bd41720090ef2c429376af4460d7c0
+source-git-commit: dba7ae62b51b5cc4556f7f12d43b84e90f6c29dc
 workflow-type: tm+mt
-source-wordcount: '297'
-ht-degree: 7%
+source-wordcount: '480'
+ht-degree: 5%
 
 ---
 
@@ -20,6 +20,7 @@ ht-degree: 7%
 Adobe Experience Platform의 기존 기능 업데이트:
 
 - [[!DNL 데이터 과학 작업 공간]](#dsw)
+- [!DNL Destinations](#destinations)
 - [[!DNL 소스]](#sources)
 
 ## [!DNL Data Science Workspace] {#dsw}
@@ -33,6 +34,25 @@ Adobe Experience Platform의 기존 기능 업데이트:
 | VM의 [!DNL JupyterLab] | 장기 실행 [!DNL JupyterLab notebook] 가상 시스템의 안정성이 개선되었습니다. |
 
 자세한 내용 [!DNL JupyterLab]은 [[!DNL JupyterLab] 사용 안내서를 참조하십시오](../../data-science-workspace/jupyterlab/overview.md).
+
+## 대상 {#destinations}
+
+Adobe의 실시간 고객 데이터 플랫폼 [](../../rtcdp/overview.md)에서 대상은 대상 플랫폼과 사전 구축된 통합으로 이러한 파트너에게 데이터를 원활하게 제공할 수 있습니다.
+
+**새 대상**
+
+Adobe Experience Platform 데이터를 활성화할 수 있는 새로운 대상을 사용할 수 있습니다. 자세한 내용은 아래를 참조하십시오.
+
+| 대상 | 설명 |
+|--- | ---|
+| [!DNL Google Customer Match] | Google Customer Match를 사용하면 온라인 및 오프라인 데이터를 사용하여 다음과 같은 Google 소유 및 운영 자산에서 고객에게 도달하고 재참여할 수 있습니다. [!DNL Search], [!DNL Shopping], Gmail 및 YouTube. 대상 카탈로그의 [!DNL Google Customer Match] 페이지 [](/help/rtcdp/destinations/google-customer-match-destination.md) 를 방문하여 대상 및 Adobe 실시간 CDP에서 대상을 설정하는 방법에 대한 자세한 내용을 확인하십시오. |
+
+**새로운 기능**
+
+| 기능 | 설명 |
+|------- | -----------|
+| 사용자 정의 파일 이름 편집기 | 내보낸 파일의 이름을 편집할 수 있는 이메일 마케팅 대상 및 클라우드 스토리지 대상에 대한 데이터 활성화 워크플로우로 업데이트합니다. 자세한 내용은 정품 인증 워크플로우의 [ 구성 단계를](/help/rtcdp/destinations/activate-destinations.md#configure) 참조하십시오. |
+| 권장 속성 | 내보낸 파일에 추가할 수 있는 권장 특성을 표시하는 이메일 마케팅 대상 및 클라우드 스토리지 대상에 대한 데이터 활성화 워크플로우로 업데이트합니다. 자세한 내용은 정품 인증 워크플로우의 [속성 선택 단계를](/help/rtcdp/destinations/activate-destinations.md#select-attributes) 참조하십시오. |
 
 ## 소스 {#sources}
 
