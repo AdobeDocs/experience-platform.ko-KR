@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 소스 커넥터 및 API를 통해 결제 데이터 수집
 topic: overview
 translation-type: tm+mt
-source-git-commit: 84ea3e45a3db749359f3ce4a0ea25429eee8bb66
+source-git-commit: 773823333fe0553515ebf169b4fd956b8737a9c3
 workflow-type: tm+mt
-source-wordcount: '1614'
+source-wordcount: '1696'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # 소스 커넥터 및 API를 통해 결제 데이터 수집
 
-[!DNL Flow Service] 는 Adobe Experience Platform 내의 다양한 소스에서 수집된 고객 데이터를 수집하고 중앙 집중화하는 데 사용됩니다. 이 서비스는 지원되는 모든 소스가 연결되어 있는 사용자 인터페이스와 RESTful API를 제공합니다.
+[!DNL Flow Service] 는 Adobe Experience Platform 내의 다양한 소스에서 수집된 고객 데이터를 수집하고 중앙에서 관리하는 데 사용됩니다. 이 서비스는 지원되는 모든 소스가 연결되어 있는 사용자 인터페이스와 RESTful API를 제공합니다.
 
 이 자습서에서는 결제 애플리케이션에서 데이터를 검색하고 소스 커넥터 및 API를 통해 데이터를 인제스트하는 절차 [!DNL Platform] 에 대해 설명합니다.
 
@@ -24,11 +24,11 @@ ht-degree: 1%
 
 또한 이 자습서에서는 다음과 같은 Adobe Experience Platform 구성 요소에 대해 작업해야 합니다.
 
-* [XDM(Experience Data Model) 시스템](../../../../xdm/home.md): 고객 경험 데이터를 [!DNL Experience Platform] 구성하는 표준화된 프레임워크
-   * [스키마 컴포지션의 기본 사항](../../../../xdm/schema/composition.md): 스키마 컴포지션의 주요 원칙 및 모범 사례 등 XDM 스키마의 기본 구성 요소에 대해 알아봅니다.
-   * [스키마 레지스트리 개발자 가이드](../../../../xdm/api/getting-started.md): 스키마 레지스트리 API에 대한 호출을 성공적으로 수행하기 위해 알아야 하는 중요한 정보를 포함합니다. 여기에는 사용자 `{TENANT_ID}`, &quot;컨테이너&quot;의 개념 및 요청 시 필요한 헤더가 포함됩니다(수락 헤더와 가능한 값에 특별히 주의).
-* [카탈로그 서비스](../../../../catalog/home.md): 카탈로그는 내부 데이터 위치 및 계열에 대한 기록 시스템이다 [!DNL Experience Platform].
-* [일괄 처리](../../../../ingestion/batch-ingestion/overview.md): 일괄 처리 통합 API를 사용하면 데이터를 일괄 처리 파일 [!DNL Experience Platform] 로 인제스트할 수 있습니다.
+* [XDM(Experience Data Model) 시스템](../../../../xdm/home.md):고객 경험 데이터를 [!DNL Experience Platform] 구성하는 표준화된 프레임워크
+   * [스키마 컴포지션의 기본 사항](../../../../xdm/schema/composition.md):스키마 컴포지션의 주요 원칙 및 모범 사례 등 XDM 스키마의 기본 구성 요소에 대해 알아봅니다.
+   * [스키마 레지스트리 개발자 가이드](../../../../xdm/api/getting-started.md):스키마 레지스트리 API에 대한 호출을 성공적으로 수행하기 위해 알아야 하는 중요한 정보를 포함합니다. 여기에는 사용자 `{TENANT_ID}`, &quot;컨테이너&quot;의 개념 및 요청 시 필요한 헤더가 포함됩니다(수락 헤더와 가능한 값에 특별히 주의).
+* [카탈로그 서비스](../../../../catalog/home.md):카탈로그는 내부 데이터 위치 및 계열에 대한 기록 시스템이다 [!DNL Experience Platform].
+* [일괄 처리](../../../../ingestion/batch-ingestion/overview.md):일괄 처리 통합 API를 사용하면 데이터를 일괄 처리 파일 [!DNL Experience Platform] 로 인제스트할 수 있습니다.
 * [샌드박스](../../../../sandboxes/home.md): [!DNL Experience Platform] 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되도록 단일 [!DNL Platform] 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
 
 다음 섹션에서는 [!DNL Flow Service] API를 사용하여 결제 애플리케이션에 성공적으로 연결하기 위해 알아야 할 추가 정보를 제공합니다.
@@ -41,7 +41,7 @@ ht-degree: 1%
 
 API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 합니다](../../../../tutorials/authentication.md). 인증 자습서를 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
 
-* 인증: 무기명 `{ACCESS_TOKEN}`
+* 인증:무기명 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
@@ -132,7 +132,7 @@ curl -X POST \
 }
 ```
 
-## 대상 XDM 스키마 만들기 {#target}
+## 대상 XDM 스키마 만들기 {#target-schema}
 
 이전 단계에서는 소스 데이터를 구조화하기 위해 임시 XDM 스키마를 만들었습니다. 소스 데이터를 사용하려면 필요에 따라 소스 데이터 [!DNL Platform]를 구조화하기 위해 대상 스키마를 만들어야 합니다. 그런 다음 대상 스키마를 사용하여 소스 데이터가 포함된 [!DNL Platform] 데이터 세트를 만듭니다. 이 대상 XDM 스키마도 XDM [!DNL Individual Profile] 클래스를 확장합니다.
 
@@ -290,7 +290,7 @@ curl -X POST \
 ]
 ```
 
-## 대상 연결 만들기
+## 대상 연결 만들기 {#target-connection}
 
 대상 연결은 인제스트된 데이터가 들어오는 대상에 대한 연결을 나타냅니다. 대상 연결을 만들려면 데이터 호수와 관련된 고정 연결 사양 ID를 제공해야 합니다. 이 연결 사양 ID: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
@@ -642,13 +642,15 @@ curl -X POST \
 ```
 
 | 속성 | 설명 |
-| --- | --- |
-| `flowSpec.id` | 이전 단계에서 검색된 흐름 사양 ID. |
-| `sourceConnectionIds` | 이전 단계에서 검색된 소스 연결 ID입니다. |
-| `targetConnectionIds` | 이전 단계에서 검색된 대상 연결 ID입니다. |
-| `transformations.params.mappingId` | 이전 단계에서 검색된 매핑 ID. |
-| `scheduleParams.startTime` | 데이터 흐름 시작 시간(초)입니다. |
-| `scheduleParams.frequency` | 선택 가능한 주파수 값은 다음과 같습니다. `once`, `minute`, `hour`, `day`또는 `week`를 선택합니다. |
+| -------- | ----------- |
+| `flowSpec.id` | 이전 단계에서 검색된 [흐름 사양](#specs) ID. |
+| `sourceConnectionIds` | 이전 단계에서 검색된 [소스 연결](#source) ID입니다. |
+| `targetConnectionIds` | 이전 단계에서 검색된 [대상 연결](#target-connection) ID입니다. |
+| `transformations.params.mappingId` | 이전 단계에서 검색된 [매핑](#mapping) ID. |
+| `transformations.params.deltaColum` | 새 데이터와 기존 데이터를 구분하는 데 사용되는 지정된 열 선택한 열의 타임스탬프를 기반으로 증분 데이터를 인제스트합니다. |
+| `transformations.params.mappingId` | 데이터베이스와 연결된 매핑 ID. |
+| `scheduleParams.startTime` | epoch time의 데이터 흐름 시작 시간입니다. |
+| `scheduleParams.frequency` | 데이터 흐름 데이터가 수집되는 빈도 허용되는 값은 다음과 같습니다. `once`, `minute`, `hour`, `day`또는 `week`를 선택합니다. |
 | `scheduleParams.interval` | 간격은 두 개의 연속 흐름 실행 사이의 기간을 지정합니다. 간격 값은 0이 아닌 정수여야 합니다. 주기를 다음으로 설정하고 다른 주파수 값에 대해 이보다 `once` 크거나 같아야 하는 경우 간격이 `15` 필요하지 않습니다. |
 
 **응답**
@@ -661,6 +663,11 @@ curl -X POST \
     "etag": "\"04004fe9-0000-0200-0000-5ebc4c8b0000\""
 }
 ```
+
+## 데이터 흐름 모니터링
+
+데이터 흐름을 만든 후 데이터 흐름을 통해 인제스트되는 데이터를 모니터링하여 흐름 실행, 완료 상태 및 오류에 대한 정보를 확인할 수 있습니다. 데이터 흐름 모니터링 방법에 대한 자세한 내용은 API에서 데이터 흐름 [모니터링에 대한 자습서를 참조하십시오 ](../monitor.md)
+
 
 ## 다음 단계
 
