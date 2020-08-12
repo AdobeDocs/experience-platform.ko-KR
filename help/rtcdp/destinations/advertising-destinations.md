@@ -1,12 +1,12 @@
 ---
 title: 광고 대상
 seo-title: 광고 대상
-description: '실시간 고객 데이터 Platform을 타사 광고 플랫폼(예: DSP, 광고 네트워크, SSP)에 연결하고 익명의 사용자를 이러한 플랫폼에 공유합니다.'
-seo-description: '실시간 고객 데이터 Platform을 타사 광고 플랫폼(예: DSP, 광고 네트워크, SSP)에 연결하고 익명의 사용자를 이러한 플랫폼에 공유합니다.'
+description: '실시간 고객 데이터 플랫폼을 타사 광고 플랫폼(예: DSP, 광고 네트워크, SSP)에 연결하고 익명의 사용자를 이러한 플랫폼에 공유할 수 있습니다.'
+seo-description: '실시간 고객 데이터 플랫폼을 타사 광고 플랫폼(예: DSP, 광고 네트워크, SSP)에 연결하고 익명의 사용자를 이러한 플랫폼에 공유할 수 있습니다.'
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 875430cdbd80025fc3f0de2664f9b55db0debe53
 workflow-type: tm+mt
-source-wordcount: '180'
+source-wordcount: '183'
 ht-degree: 0%
 
 ---
@@ -33,6 +33,7 @@ ht-degree: 0%
 * [Google 광고](/help/rtcdp/destinations/google-ads-destination.md)
 * [Google 광고 확장](/help/rtcdp/destinations/google-ads-extension.md)
 * [Google 광고 관리자](/help/rtcdp/destinations/google-ad-manager-destination.md)
+* [Google 고객 일치](/help/rtcdp/destinations/google-customer-match-destination.md)
 * [Google 태그 확장](/help/rtcdp/destinations/gtag-advertising-extension.md)
 * [LinkedIn Insight 태그 확장](linkedin-extension.md)
 * [Pinterest 전환 추적 확장](pinterest-extension.md)
