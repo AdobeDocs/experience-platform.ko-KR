@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Audience Manager 매핑 필드
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: a1b09f3e88e489f1b0ec0c1fcb72a2a5a4356d87
 workflow-type: tm+mt
-source-wordcount: '148'
+source-wordcount: '127'
 ht-degree: 0%
 
 ---
@@ -14,13 +14,13 @@ ht-degree: 0%
 
 # Audience Manager 매핑 필드
 
-아래 표에는 Adobe Audience Manager 데이터의 필드(실시간, 온보드 및 프로필 데이터)와 해당 XDM 필드 간의 매핑이 포함되어 있습니다.
+아래 표에는 Adobe Audience Manager 데이터(실시간, 온보드 및 프로필 데이터)의 필드와 해당 XDM 필드 간의 매핑이 포함되어 있습니다.
 
 각 XDM 필드에 대한 자세한 내용은 [XDM 필드 사전을](../../../../xdm/schema/field-dictionary.md) 참조하십시오.
 
 ## 실시간 데이터
 
-유형: 실시간 데이터
+유형:실시간 데이터
 
 | 실시간 데이터 필드 | XDM 필드 |
 | --- | --- |
@@ -36,27 +36,10 @@ ht-degree: 0%
 | `location` | `ExperienceEvent.placeContext.geo` <ul><li>d_country:countryCode</li><li>d_state→stateProvince</li><li>d_city→구/시</li><li>d_postal-postalCode</li><li>위도(_lat)도</li><li>d_위도</li></ul> |
 | `request_user_agent` | `ExperienceEvent.environment.browserDetails` <ul><li>h_user-agent→userAgent</li><li>h_accept-language→acceptLanguage</li></ul> |
 | `client_ip` | `ExperienceEvent.environment` <ul><li>d_os_name;os 이름 </li><li>d_os_version→os_version</li></ul> |
-| `Signals` | ExperienceEvent.signals |
-
-## 인바운드 데이터 **(더 이상 사용되지 않음)**
-
-유형: ExperienceEvent
-
-| 인바운드 필드 | XDM 필드 |
-| --- | --- |
-| `uuid` | `ExperienceEvent.identityMap[<ID Type>]` |
-| `deviceIds` | `ExperienceEvent.identityMap["CORE"] And calculated ECIDs  ExperienceEvent.identityMap["ECID"]` |
-| `signals` | `ExperienceEvent.signals` |
-| `b_time` | `ExperienceEvent.timeStamp` |
-| `overwrite` | `overwriteTraits` |
-
->[!NOTE]
->
->인바운드 필드는 향후 릴리스에서 더 이상 사용되지 않습니다.
 
 ## 프로필 데이터
 
-유형: 프로필 XDM
+유형:프로필 XDM
 
 | 프로필 필드 | XDM 필드 |
 | --- | --- |
