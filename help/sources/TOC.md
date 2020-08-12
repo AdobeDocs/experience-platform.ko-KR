@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform 소스 커넥터 도움말
 translation-type: tm+mt
-source-git-commit: b019b6b8b69e0bfac6fc8840da350d92733dc97c
+source-git-commit: 2ee74c9ea0e4838eacfaba1b1e6b8aac7012f427
 workflow-type: tm+mt
-source-wordcount: '606'
+source-wordcount: '613'
 ht-degree: 0%
 
 ---
@@ -131,6 +131,7 @@ ht-degree: 0%
       - [프로토콜 데이터 수집](tutorials/api/collect/protocols.md)
    - [타사 클라우드 스토리지 시스템에서 쪽모이 세공 데이터를 인제스트](tutorials/api/cloud-storage-parquet.md)
    - [Flow Service API를 사용하여 데이터 세트 기본 연결 만들기](tutorials/api/create-dataset-base-connection.md)
+   - [Flow Service API를 사용하여 데이터 흐름 모니터링](tutorials/api/monitor.md)
 - UI 자습서 {#ui-tutorials}
    - 소스 커넥터 만들기 {#create}
       - Adobe 응용 프로그램 {#adobe-applications}
