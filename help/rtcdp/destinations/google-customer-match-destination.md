@@ -4,9 +4,9 @@ seo-title: Google 고객 일치 대상
 description: Google Customer Match를 사용하면 온라인 및 오프라인 데이터를 사용하여 검색, 쇼핑, Gmail, YouTube 등 Google의 소유물과 운영 자산에서 고객에게 도달하고 다시 참여할 수 있습니다.
 seo-description: Google Customer Match를 사용하면 온라인 및 오프라인 데이터를 사용하여 검색, 쇼핑, Gmail, YouTube 등 Google의 소유물과 운영 자산에서 고객에게 도달하고 다시 참여할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 31eb03c6625f820c9729caf5181c56e748e853a5
+source-git-commit: 6a57c0da3425b7b83050f1b734d4abe8a290c8bc
 workflow-type: tm+mt
-source-wordcount: '1482'
+source-wordcount: '1517'
 ht-degree: 0%
 
 ---
@@ -55,7 +55,7 @@ Adobe 실시간 CDP에서 [!DNL Google Customer Match] 대상을 설정하기 �
 >
 >Adobe 실시간 CDP에서 첫 번째 [!DNL Google Customer Match] 대상을 설정하기 전에 Google의 허용 목록에 추가해야 합니다. 대상을 만들기 전에 아래에 설명된 허용 목록 프로세스가 Google에서 완료되었는지 확인하십시오.
 
-Adobe 실시간 CDP에서 [!DNL Google Customer Match] 대상을 만들기 전에 Google에 문의하고 고객 일치 파트너 사용 [의 허용 목록 지침을 따라 Google 설명서에 데이터를](https://support.google.com/google-ads/answer/7361372?hl=en&amp;ref_topic=6296507) 업로드해야 합니다.
+Adobe 실시간 CDP에서 [!DNL Google Customer Match] 대상을 생성하기 전에 Google에 연락하여 고객 일치 파트너 사용 [의 허용 목록 지침을 따라 Google 문서에서 데이터를](https://support.google.com/google-ads/answer/7361372?hl=en&amp;ref_topic=6296507) 업로드해야 합니다.
 
 
 ### 이메일 해싱 요구 사항 {#hashing-requirements}
@@ -118,7 +118,9 @@ Experience Platform에서 이메일 주소 인제스트에 대한 자세한 내�
 
    >[!IMPORTANT]
    >
-   > 대상 [!DNL Google Customer Match] 을 참조하십시오. **[!UICONTROL 계정 ID는]** Google의 고객 클라이언트 ID입니다. ID의 형식은 xxx-xxx-xxxx입니다.
+   > * PII **[!UICONTROL 마케팅]** 사용 사례와 결합은 기본적으로 대상에 대해 선택되며 [!DNL Google Customer Match] 제거할 수 없습니다.
+   > * 대상 [!DNL Google Customer Match] 을 참조하십시오. **[!UICONTROL 계정 ID는]** Google의 고객 클라이언트 ID입니다. ID의 형식은 xxx-xxx-xxxx입니다.
+
 
    ![Connect Google 고객 일치 - 인증 단계](/help/rtcdp/destinations/assets/google-customer-match-authentication-step.png)
 
@@ -170,3 +172,7 @@ Insert in Step 6 when mobile device ID activation is available
 ## 세그먼트 활성화 성공 여부 확인 {#verify-activation}
 
 정품 인증 과정이 완료되면 **[!UICONTROL Google Ads]** 계정으로 전환합니다. 이제 활성화된 세그먼트가 고객 목록으로 Google 계정에 표시됩니다. 세그먼트 크기에 따라, 제공할 활성 사용자가 100명 이상인 경우 일부 대상이 채워지지 않습니다.
+
+## 추가 리소스 {#additional-resources}
+
+* [Google 고객 일치 통합 - 비디오 자습서](https://docs.adobe.com/content/help/en/platform-learn/tutorials/rtcdp/integrate-with-google-customer-match.html)
