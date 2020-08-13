@@ -3,10 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: 실시간 고객 프로필 도움말
 translation-type: tm+mt
-source-git-commit: d80d49df9c5ac197bdc7f851bbfff18d9b3019d4
+source-git-commit: 84789a8e6e8c1f0fc91d0b54ba29d449963c3117
 workflow-type: tm+mt
-source-wordcount: '78'
-ht-degree: 24%
+source-wordcount: '84'
+ht-degree: 22%
 
 ---
 
@@ -22,6 +22,7 @@ ht-degree: 24%
    * [엔터티([!DNL 프로필] 액세스)](api/entities.md)
    * [내보내기 작업([!DNL 프로필] 내보내기)](api/export-jobs.md)
    * [정책 병합](api/merge-policies.md)
+   * [샘플 상태 미리 보기([!DNL 프로필] 미리 보기)](api/preview-sample-status.md)
    * [[!DNL Profile] 시스템 작업(요청 삭제)](api/profile-system-jobs.md)
 * UI 가이드 {#ui}
    * [[!DNL Profile] 사용 안내서](ui/user-guide.md)
