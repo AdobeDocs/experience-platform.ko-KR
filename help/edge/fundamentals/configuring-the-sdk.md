@@ -4,7 +4,7 @@ seo-title: Adobe Experience Platform 웹 SDK 구성
 description: Experience Platform 웹 SDK를 구성하는 방법 살펴보기
 seo-description: Experience Platform 웹 SDK를 구성하는 방법 살펴보기
 translation-type: tm+mt
-source-git-commit: abd72993577f298141ed0d25b6c4abc42050b68e
+source-git-commit: b7b206573a130af70a82c73a3f9b0a0eb28a513a
 workflow-type: tm+mt
 source-wordcount: '749'
 ht-degree: 10%
@@ -78,7 +78,7 @@ Your assigned [!DNL Experience Cloud] organization ID.  페이지 내에서 여�
 
 ## 데이터 수집
 
-### `clickCollectionEnabled`
+### `clickCollectionEnabled` {#clickCollectionEnabled}
 
 | **유형** | **필수 여부** | **기본값** |
 | -------- | ------------ | ----------------- |
@@ -160,4 +160,4 @@ true이면 SDK가 이전 AMCV 쿠키를 읽고 설정합니다. 이렇게 하면
 | -------- | ------------ | ----------------- |
 | 부울 | 아니요 | true |
 
-타사 쿠키 Adobe 설정을 활성화합니다. SDK에는 방문자 ID를 타사 컨텍스트에서 유지하여 여러 사이트에서 동일한 방문자 ID를 사용할 수 있는 기능이 있습니다. 여러 사이트가 있거나 파트너와 데이터를 공유하려는 경우 유용합니다. 하지만 경우에 따라 개인 정보 보호 이유로 이러한 것이 권장되지 않습니다.
+타사 쿠키 Adobe 설정을 활성화합니다. SDK에는 방문자 ID를 타사 컨텍스트에서 유지하여 여러 사이트에서 동일한 방문자 ID를 사용할 수 있는 기능이 있습니다. 여러 사이트가 있거나 파트너와 데이터를 공유하려는 경우 유용합니다.하지만 경우에 따라 개인 정보 보호 이유로 이러한 것이 권장되지 않습니다.
