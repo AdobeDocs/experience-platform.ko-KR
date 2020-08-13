@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform 제품 설명서
 topic: getting started
 translation-type: tm+mt
-source-git-commit: b67513a83a46861872e92d9db57232554e7d831b
+source-git-commit: c91bcdff5b57ef69f79e211fbeb912e3d7fcdb39
 workflow-type: tm+mt
-source-wordcount: '7237'
+source-wordcount: '7245'
 ht-degree: 0%
 
 ---
@@ -100,7 +100,7 @@ ht-degree: 0%
 
 **매핑:** 에서 [!DNL Decisioning Service]캡션은 오퍼가 표시되는 횟수를 정의하는 의사 결정 규칙에 사용됩니다. 두 가지 유형의 대문자가 있으며, &quot;전역 상한&quot;이라고도 하는 결합 대상 대상자 간에 오퍼를 제안할 수 있는 횟수와 &quot;프로필 상한&quot;이라고도 하는 동일한 최종 사용자에게 오퍼를 몇 번 제안할 수 있는지 등입니다.
 
-**카탈로그:** 소스 및 대상 [!DNL Real-time Customer Data Platform]에서 카탈로그는 Adobe 응용 프로그램 및 타사 기술에 대한 사용 가능한 연결이 있는 갤러리입니다.
+**카탈로그:** 소스 및 대상 [!DNL Real-time Customer Data Platform]에서 카탈로그는 Adobe 응용 프로그램과 타사 기술에 사용할 수 있는 갤러리입니다.
 
 **클래스:** 클래스는 스키마를 만드는 데 사용되는 가장 작은 필드 집합을 정의하며 비즈니스 개체를 설명하는 기본 동작입니다.
 
@@ -210,7 +210,7 @@ ht-degree: 0%
 
 **델타 저장 전략:**`Delta save strategy` 은 연결을 통해 타사 데이터를 인제스트하는 옵션입니다. 이 옵션을 사용하면 소스 데이터의 새 행 또는 변경된 행을 인제스트하도록 지정할 수 있습니다 [!DNL Experience Platform]. 데이터 세트 끝에 새 행이 추가되고 변경된 행은 데이터 세트에서 업데이트됩니다 [!DNL Experience Platform].
 
-**대상:** 대상 [!DNL Real-time Customer Data Platform] 은 대상이 활성화되고 전달되는 Adobe 애플리케이션, 광고 서버 또는 광고 네트워크와 같은 모든 시스템의 일반적인 용어입니다.
+**대상:** 대상 [!DNL Real-time Customer Data Platform] 은 Adobe 애플리케이션, 광고 플랫폼, 클라우드 스토리지 서비스 또는 고객이 활성화되고 전달되는 마케팅 서비스와 같은 모든 종점에 대한 일반적인 용어입니다.
 
 **대상 범주:** 대상 카테고리는 유사한 특성을 가진 [!DNL Real-time Customer Data Platform] 대상의 그룹화합니다.
 
@@ -326,9 +326,9 @@ ht-degree: 0%
 
 ## J
 
-**[!DNL JupyterLab]:**프로젝트를 위한 오픈 소스 웹 기반 인터페이스[!DNL Jupyter]와 긴밀하게 통합되어[!DNL Experience Platform]있습니다.
+**[!DNL JupyterLab]:** 프로젝트를 위한 오픈 소스 웹 기반 인터페이스 [!DNL Jupyter] 와 긴밀하게 통합되어 [!DNL Experience Platform]있습니다.
 
-**[!DNL Jupyter Notebook]:**라이브 코드, 수식, 시각화 및 내레이션 텍스트가 포함된 문서를 만들고 공유할 수 있는 오픈 소스 웹 애플리케이션입니다.
+**[!DNL Jupyter Notebook]:** 라이브 코드, 수식, 시각화 및 내레이션 텍스트가 포함된 문서를 만들고 공유할 수 있는 오픈 소스 웹 애플리케이션입니다.
 
 ## K
 
@@ -366,7 +366,7 @@ ht-degree: 0%
 
 **비프로덕션 샌드박스:** 비프로덕션 샌드박스는 다른 샌드박스에서 데이터를 격리할 수 있는 데이터 가상화의 한 형태이며 일반적으로 개발 실험, 테스트 또는 시험버전에 사용됩니다. 비프로덕션 샌드박스를 재설정하고 삭제할 수 있습니다.
 
-**[!DNL Notebooks]:**[!DNL Notebooks]를 사용하여 작성하고 분석 설명, 결과&#x200B;*[!DNL Jupyter Notebook]*를 포함하고 있으며 데이터 분석을 수행하기 위해 실행할 수 있습니다.
+**[!DNL Notebooks]:**[!DNL Notebooks] 를 사용하여 작성하고 분석 설명, 결과 *[!DNL Jupyter Notebook]* 를 포함하고 있으며 데이터 분석을 수행하기 위해 실행할 수 있습니다.
 
 [맨 위로](#adobe-experience-platform-glossary)
 
@@ -418,7 +418,7 @@ ht-degree: 0%
 
 **프로필 내보내기:**[!DNL Profile] 내보내기는 두 가지 유형의 대상 중 하나입니다 [!DNL Real-time Customer Data Platform]. [!DNL Profile] export는 프로필 및 속성이 포함된 파일을 생성하고 이메일과 함께 원시 PII 데이터를 사용하며 마케팅 및 이메일 자동화 플랫폼과의 통합에 사용됩니다.
 
-**프로필 프로필 프로필 프로필 프로필 향기:** 프로필 조각은 특정 사용자에 대해 존재하는 ID 목록 중 하나의 ID에 대한 프로필 정보입니다.
+**프로필 조각:** 프로필 조각은 특정 사용자에 대해 존재하는 ID 목록 중 하나의 ID에 대한 프로필 정보입니다.
 
 **프로필 ID:** 프로필 ID는 ID 유형과 연관된 자동 생성된 식별자이며 프로파일을 나타냅니다.
 
@@ -490,7 +490,7 @@ ht-degree: 0%
 
 **세그먼트 평가 방법:** 세그먼트 예약된 평가를 사용하면 특정 시간에 내보내기 작업을 실행할 수 있는 반복 일정을 사용할 수 있지만 on-demand 평가는 세그먼트 작업을 생성하여 대상을 즉시 생성합니다.
 
-**세그먼트 내보내기:** 세그먼트 내보내기는 두 가지 대상 유형 중 하나로 자격 조건을 갖추고 대상에 매핑된 프로필을 보냅니다. 세그먼트 및 사용자 ID 및 익명의 데이터를 사용하며 일반적으로 소셜 네트워크 및 기타 디지털 미디어 대상 플랫폼과 통합됩니다.
+**세그먼트 내보내기:** 세그먼트 내보내기는 두 가지 대상 유형 중 하나입니다 [!DNL Real-time Customer Data Platform]. 세그먼트 내보내기를 사용하면 자격 조건을 갖추고 대상에 매핑된 프로필을 보낼 수 있습니다. 세그먼트 및 사용자 ID 및 익명의 데이터를 사용하며 일반적으로 소셜 네트워크 및 기타 디지털 미디어 대상 플랫폼과 통합됩니다.
 
 **세그먼트 ID:** 세그먼트 ID는 세그먼트와 연관된 자동 생성된 식별자입니다.
 
