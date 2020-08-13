@@ -4,7 +4,7 @@ seo-title: Adobe Experience Platform 웹 SDK 명령 실행
 description: Experience Platform 웹 SDK 명령을 실행하는 방법 살펴보기
 seo-description: Experience Platform 웹 SDK 명령을 실행하는 방법 살펴보기
 translation-type: tm+mt
-source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
+source-git-commit: bf4194e1449bddd662f2152f84dbbe90060b5d30
 workflow-type: tm+mt
 source-wordcount: '419'
 ht-degree: 2%
@@ -26,9 +26,9 @@ alloy("commandName", options);
 
 ## 약속에 대한 메모
 
-[약속](https://developer.mozilla.org/ko-KR/docs/Web/JavaScript/Reference/Global_Objects/Promise) 사항은 SDK가 웹 페이지의 코드와 통신하는 방법에 대한 기본 사항입니다. 약속은 일반적인 프로그래밍 구조로, 이 SDK 또는 JavaScript에만 국한되지 않습니다. 약속은 약속이 생성될 때 알려지지 않은 값에 대한 대리자 역할을 합니다. 값이 알려지면 약속의 값이 &quot;해결됨&quot;입니다. 처리기 함수를 약속과 연결할 수 있으므로 약속이 해결되거나 약속을 확인하는 과정에서 오류가 발생하면 알림을 받을 수 있습니다. 약속에 대한 자세한 내용은 [이 자습서](https://javascript.info/promise-basics) 또는 웹에 있는 다른 리소스를 참조하십시오.
+[약속](https://developer.mozilla.org/ko-KR/docs/Web/JavaScript/Reference/Global_Objects/Promise) 사항은 SDK가 웹 페이지의 코드와 통신하는 방법에 대한 기본 사항입니다. 약속은 일반적인 프로그래밍 구조로, 이 SDK 또는 JavaScript에만 국한되지 않습니다. 약속은 약속이 생성될 때 알려지지 않은 값에 대한 대리자 역할을 합니다. 값이 알려지면 약속과 값이 함께 &quot;해결됨&quot;됩니다. 처리기 함수를 약속과 연결할 수 있으므로 약속이 해결되거나 약속을 확인하는 과정에서 오류가 발생하면 알림을 받을 수 있습니다. 약속에 대한 자세한 내용은 [이 자습서](https://javascript.info/promise-basics) 또는 웹에 있는 다른 리소스를 참조하십시오.
 
-## 성공 또는 실패 처리
+## 성공 또는 실패 처리 {#handling-success-or-failure}
 
 명령이 실행될 때마다 약속이 반환됩니다. 약속은 명령의 최종 완료를 나타냅니다. 아래 예에서, `then` 및 `catch` 메서드를 사용하여 명령이 성공했는지 실패했는지 확인할 수 있습니다.
 
@@ -76,4 +76,4 @@ alloy("getLibraryInfo").then(function(result) {
 
 ### 동의
 
-사용자가 특정 목적을 위해 동의하지 않은 경우 약속은 여전히 해결됩니다. 그러나 응답 개체에는 사용자가 동의한 내용 컨텍스트에서만 제공할 수 있는 정보만 포함됩니다.
+사용자가 특정 목적을 위해 동의하지 않은 경우 약속은 여전히 해결됩니다.그러나 응답 개체에는 사용자가 동의한 내용 컨텍스트에서만 제공할 수 있는 정보만 포함됩니다.
