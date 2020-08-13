@@ -3,10 +3,10 @@ product: adobe experience platform
 audience: user
 user-guide-title: 실시간 고객 데이터 플랫폼 도움말
 translation-type: tm+mt
-source-git-commit: 836feb48c62e0e0ed11248846d63021125796b76
+source-git-commit: 759c96d091194d1d7d670d947169eceac7910730
 workflow-type: tm+mt
-source-wordcount: '443'
-ht-degree: 11%
+source-wordcount: '460'
+ht-degree: 10%
 
 ---
 
@@ -132,6 +132,9 @@ ht-degree: 11%
 * 개인 정보 및 데이터 거버넌스 {#privacy}
    * [개인 정보 보호 개요](privacy/privacy-overview.md)
    * [데이터 거버넌스 개요](privacy/data-governance-overview.md)
+   * IAB TCF 2.0 지원 {#iab}
+      * [실시간 CDP에서 IAB TCF 2.0 지원](./privacy/iab/overview.md)
+      * [IAB TCF 2.0 동의 데이터를 캡처하기 위한 데이터 집합 만들기](./privacy/iab/dataset-preparation.md)
 * 프로필 {#profile}
    * [프로필 개요](profile/profile-overview.md)
    * [ID 및 ID 네임스페이스](profile/identities-overview.md)
