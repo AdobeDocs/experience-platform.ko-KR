@@ -4,9 +4,9 @@ seo-title: 이메일 마케팅 대상
 description: ESP(Email Service Providers)를 사용하면 이메일 캠페인 전송과 같은 이메일 마케팅 활동을 관리할 수 있습니다.
 seo-description: ESP(Email Service Providers)를 사용하면 이메일 캠페인 전송과 같은 이메일 마케팅 활동을 관리할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
+source-git-commit: 6850a1ee5a578a3dccce9f9decd8f6a368705f4a
 workflow-type: tm+mt
-source-wordcount: '731'
+source-wordcount: '800'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # 이메일 마케팅 대상 {#email-marketing-destinations}
 
-ESP(Email Service Providers)를 사용하면 프로모션 이메일 캠페인 전송과 같은 이메일 마케팅 활동을 관리할 수 있습니다. Adobe 실시간 고객 데이터 Platform은 이메일 마케팅 대상으로 세그먼트를 활성화할 수 있도록 함으로써 ESP와 통합됩니다.
+ESP(Email Service Providers)를 사용하면 프로모션 이메일 캠페인 전송과 같은 이메일 마케팅 활동을 관리할 수 있습니다. Adobe 실시간 고객 데이터 플랫폼은 이메일 마케팅 대상으로 세그먼트를 활성화할 수 있으므로 ESP와 통합됩니다.
 
 캠페인을 위한 이메일 마케팅 대상으로 세그먼트를 전송하려면 Adobe 실시간 CDP가 먼저 대상에 연결되어야 합니다.
 
@@ -47,15 +47,21 @@ ESP(Email Service Providers)를 사용하면 프로모션 이메일 캠페인 �
 
 ![세그먼트 선택](/help/rtcdp/destinations/assets/email-select-segments.png)
 
-## 3단계 - 내보낸 파일에서 대상 특성으로 사용할 스키마 필드를 선택합니다. {#destination-attributes}
+## 3단계 - 파일 이름 구성
+
+파일 이름 편집 옵션에 대한 자세한 내용은 대상 활성화 자습서에서 [구성](/help/rtcdp/destinations/activate-destinations.md#configure) 단계를 참조하십시오.
+
+## 4단계 - 속성 선택 - 내보낸 파일에서 대상 속성으로 사용할 스키마 필드를 선택합니다. {#destination-attributes}
 
 이 단계에서는 이메일 마케팅 대상으로 내보낼 필드를 선택합니다.
 
-![대상 속성](/help/rtcdp/destinations/assets/destination-attributes.png)
+![대상 속성](/help/rtcdp/destinations/assets/recommended-attributes.png)
+
+이 단계에 대한 자세한 내용은 대상 활성화 자습서에서 [속성](/help/rtcdp/destinations/activate-destinations.md#select-attributes) 선택 단계를 참조하십시오.
 
 ### ID {#identity}
 
-조합 스키마에서 고유 식별자를 선택하는 것이 [좋습니다](../../profile/home.md#profile-fragments-and-union-schemas). 사용자 ID가 꺼져 있는 필드입니다. 일반적으로 이 필드는 이메일 주소이지만 충성도 프로그램 ID 또는 전화 번호일 수도 있습니다. 조합 스키마에서 가장 일반적인 고유 식별자 및 XDM 필드는 아래 표를 참조하십시오.
+조합 스키마에서 고유 식별자를 선택하는 것이 [좋습니다](../../profile/home.md#profile-fragments-and-union-schemas). 사용자 ID가 꺼져 있는 필드입니다. 일반적으로 이 필드는 이메일 주소이지만 충성도 프로그램 ID 또는 전화 번호일 수도 있습니다. 스키마에서 가장 일반적인 고유 식별자 및 XDM 필드는 아래 표를 참조하십시오.
 
 | 고유 식별자 | 통합 스키마의 XDM 필드 |
 ---------|----------
@@ -76,8 +82,9 @@ ESP(Email Service Providers)를 사용하면 프로모션 이메일 캠페인 �
 | 주소 상태 | `homeAddress.stateProvince` |
 | 주소 우편 번호 | `homeAddress.postalCode` |
 | 생일 | `person.birthDayAndMonth` |
+| 세그먼트 멤버십 | `segmentMembership.status` |
 
-## 3단계 - 스토리지 위치의 데이터를 대상으로 가져오기
+## 5단계 - 스토리지 위치의 데이터를 대상으로 가져오기
 
 저장소 위치에서 대상으로 데이터를 가져오는 방법에 대한 자세한 내용은 개별 이메일 마케팅 대상 문서를 참조하십시오.
 
@@ -89,3 +96,8 @@ ESP(Email Service Providers)를 사용하면 프로모션 이메일 캠페인 �
 ## 이메일 마케팅 대상에 세그먼트 활성화
 
 이메일 마케팅 대상으로 세그먼트를 활성화하는 방법에 대한 지침은 대상에 [데이터 활성화를 참조하십시오](/help/rtcdp/destinations/activate-destinations.md).
+
+## Journey Orchestration용
+
+* [대상에 데이터 활성화](/help/rtcdp/destinations/activate-destinations.md)
+* [이메일 마케팅 대상을 만들고 Flow Service API를 사용하여 데이터를 활성화합니다.](https://docs.adobe.com/content/help/en/experience-platform/tutorials/destinations/email-marketing-api.html)
