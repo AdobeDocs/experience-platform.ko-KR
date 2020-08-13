@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: 프로필 시스템 작업 - 실시간 고객 프로필 API
 topic: guide
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: 73f2c05a0e63f376f7a2f5644133e773980d0b26
 workflow-type: tm+mt
 source-wordcount: '1420'
 ht-degree: 2%
@@ -17,7 +17,7 @@ ht-degree: 2%
 Adobe Experience Platform을 사용하면 여러 소스에서 데이터를 인제스트하고 개별 고객을 위한 강력한 프로파일을 구축할 수 있습니다. 인제스트된 데이터 [!DNL Platform] 는 데이터 저장소와 [!DNL Data Lake] 함께 [!DNL Real-time Customer Profile] 저장됩니다. 더 이상 필요하지 않거나 오류가 추가된 데이터를 제거하기 위해 프로필 저장소에서 데이터 세트 또는 일괄 처리를 삭제해야 하는 경우가 있습니다. 이를 위해서는 [!DNL Real-time Customer Profile] API를 사용하여 [!DNL Profile] 시스템 작업(&quot;[!DNL delete request]&quot;)을 만들어야 하며, 이 작업은 필요한 경우 수정, 모니터링 또는 제거할 수도 있습니다.
 
 >[!NOTE]
->데이터세트 또는 배치를 폴더에서 삭제하려고 하는 경우 [!DNL Data Lake][카탈로그 서비스 개요를](../../catalog/home.md) 참조하십시오.
+>데이터세트 또는 배치를 폴더에서 삭제하려고 [!DNL Data Lake]하는 경우 [카탈로그 서비스 개요를](../../catalog/home.md) 참조하십시오.
 
 ## 시작하기
 
@@ -46,7 +46,7 @@ GET /system/jobs?{QUERY_PARAMETERS}
 **요청**
 
 ```shell
-curl -X POST \
+curl -X GET \
   https://platform.adobe.io/data/core/ups/system/jobs \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
