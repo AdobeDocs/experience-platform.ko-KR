@@ -5,7 +5,7 @@ solution: Experience Platform
 title: 계정 및 데이터 흐름 모니터링
 topic: overview
 translation-type: tm+mt
-source-git-commit: 8bdd0493444c2c3b0f56db1166a6fa5d616e41be
+source-git-commit: dcdb1eb1f89b7393b83941a18abb2be2afa3576f
 workflow-type: tm+mt
 source-wordcount: '893'
 ht-degree: 0%
@@ -100,7 +100,9 @@ Adobe Experience Platform의 소스 커넥터는 예약된 기준으로 외부 �
 
 이 섹션에는 오류가 포함된 열의 미리 보기도 포함됩니다.
 
-> [!IMPORTANT] 오류 진단 미리 보기 *[!UICONTROL 를]* 활성화하려면 데이터 흐름 *[!UICONTROL 을 구성할]* 때 *[!UICONTROL 부분 섭취]* 및오류 진단을활성화해야합니다. 이렇게 하면 시스템이 흐름 실행 중에 수집되는 모든 레코드를 검색할 수 있습니다.
+>[!IMPORTANT]
+>
+>오류 진단 미리 보기 *[!UICONTROL 를]* 활성화하려면 데이터 흐름 *[!UICONTROL 을 구성할]* 때 *[!UICONTROL 부분 섭취]* 및오류 진단을활성화해야합니다. 이렇게 하면 시스템이 흐름 실행 중에 수집되는 모든 레코드를 검색할 수 있습니다.
 
 ![미리 보기 오류 진단](../../images/tutorials/monitor/preview-error-diagnostics.png)
 
