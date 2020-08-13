@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Adobe Experience Platform ID 서비스 문제 해결 안내서
+title: Adobe Experience Platform ID 서비스 문제 해결 가이드
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 5d7e6387382e20b3e7f07070006b6d9d59ac47eb
 workflow-type: tm+mt
 source-wordcount: '2225'
 ht-degree: 1%
@@ -52,7 +52,7 @@ ID 데이터는 개인을 식별하는 데 사용할 수 있는 모든 데이터
 
 ID 필드는 각 개인에 고유한 값에 대해 예약해야 합니다. 예를 들어 고객 충성도 프로그램의 데이터 세트를 고려합니다. &quot;충성도 수준&quot; 필드(금, 은, 브론즈)는 유용한 ID 필드가 아니지만, 충성도 ID(고유한 값)는 유용하지 않습니다.
 
-둘 이상의 개별 사람에게 적용할 수 있으므로 ZIP 코드 및 IP 주소와 같은 필드는 개인의 ID로 레이블을 지정할 수 없습니다. 이러한 유형의 필드는 가족 수준의 마케팅 전략에 대한 ID로 표시되어야 합니다.
+ZIP 코드 및 IP 주소와 같은 필드는 둘 이상의 개인 사용자에게 적용할 수 있으므로 개인의 ID로 레이블을 지정할 수 없습니다. 이러한 유형의 필드는 가족 수준의 마케팅 전략에 대한 ID로 표시되어야 합니다.
 
 ## 내 ID 필드가 내 예상과 연결되지 않는 이유는 무엇입니까?
 
@@ -72,19 +72,19 @@ ID 필드는 만들 때 기존 ID 네임스페이스와 연결해야 합니다. 
 
 API를 사용하여 ID 설명자를 만들 때 네임스페이스를 정의하는 단계별 지침을 보려면 스키마 레지스트리 개발자 안내서에서 설명자 [를 만드는](../xdm/tutorials/create-schema-ui.md) 섹션을 참조하십시오. UI에서 스키마 필드를 ID로 표시하려면 스키마 편집기 자습서의 [단계를 따릅니다](../xdm/tutorials/create-schema-api.md).
 
-## Experience Platform에서 제공하는 표준 ID 네임스페이스는 무엇입니까?
+## Experience Platform에서 제공하는 표준 ID 네임스페이스는 무엇입니까? {#standard-namespaces}
 
 Experience Platform 내의 모든 조직에서 사용할 수 있도록 다음과 같은 표준 네임스페이스가 제공됩니다.
 
 | 표시 이름 | ID | 코드 | 설명 |
 | ------------ | --- | --- | ----------- |
-| CORE | 0 | CORE | 레거시 이름: &quot;Adobe AudienceManager&quot; |
-| ECID | 4 | ECID | 별칭: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot; |
+| CORE | 0 | CORE | 레거시 이름:&quot;Adobe AudienceManager&quot; |
+| ECID | 4 | ECID | 별칭:&quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot; |
 | 이메일 | 6 | 이메일 |  |
 | 이메일(SHA256, 소문자 구분) | 11 | 이메일 | 사전 해시된 이메일의 표준 네임스페이스입니다. 이 네임스페이스에 제공된 값은 SHA-256으로 해싱하기 전에 소문자로 변환됩니다. |
 | 전화 | 7 | 전화 |  |
 | Windows AID | 8 | WAID |  |
-| AdCloud | 411 | AdCloud | 별칭: Ad Cloud |
+| AdCloud | 411 | AdCloud | 별칭:Ad Cloud |
 | Adobe Target | 9 | TNTID | Target ID |
 | Google 광고 ID | 20914 | GAID | GAID |
 | Apple IDFA | 20915 | IDFA | 광고주의 ID |
@@ -107,7 +107,7 @@ ID 서비스는 값을 지속하기 전에 PII의 강력한 단방향 암호화 
 
 ## Platform으로 보내기 전에 모든 PII를 암호화해야 합니까?
 
-PII 데이터를 Platform으로 인제스트하기 전에 수동으로 암호화할 필요는 없습니다. Platform은 데이터 사용 레이블을 모든 해당 데이터 필드에 적용하여 수집 시 이러한 필드를 해시된 ID 값으로 자동 변환합니다. `I1`
+PII 데이터를 플랫폼에 인제스트하기 전에 수동으로 암호화할 필요는 없습니다. Platform(플랫폼)은 모든 해당 데이터 필드에 `I1` 데이터 사용 레이블을 적용하여 수집 시 이러한 필드를 해시된 ID 값으로 자동 변환합니다.
 
 데이터 사용 레이블을 적용하고 관리하는 방법에 대한 자세한 내용은 [데이터 사용 레이블 자습서를 참조하십시오](../data-governance/labels/user-guide.md).
 
