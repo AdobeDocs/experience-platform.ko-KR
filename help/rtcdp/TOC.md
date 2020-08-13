@@ -3,9 +3,9 @@ product: adobe experience platform
 audience: user
 user-guide-title: 실시간 고객 데이터 플랫폼 도움말
 translation-type: tm+mt
-source-git-commit: 759c96d091194d1d7d670d947169eceac7910730
+source-git-commit: 5802c05ce166f0b355b17a28655ff2f18f7cd0c4
 workflow-type: tm+mt
-source-wordcount: '460'
+source-wordcount: '469'
 ht-degree: 10%
 
 ---
@@ -128,13 +128,13 @@ ht-degree: 10%
       * [대상에 프로필 및 세그먼트 활성화](destinations/activate-destinations.md)
    * 대상 API 자습서 {#api-tutorials}
       * [스트리밍 대상(AWS Kinesis 및 Azure 이벤트 허브)에 연결하고 데이터 활성화](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
-      * [이메일 마케팅 대상에 연결 및 데이터 활성화](/help/tutorials/destinations/email-marketing-api.md)
+      * [이메일 마케팅 대상에 연결 및 데이터 활성화](https://docs.adobe.com/content/help/en/experience-platform/tutorials/destinations/email-marketing-api.html)
 * 개인 정보 및 데이터 거버넌스 {#privacy}
    * [개인 정보 보호 개요](privacy/privacy-overview.md)
    * [데이터 거버넌스 개요](privacy/data-governance-overview.md)
    * IAB TCF 2.0 지원 {#iab}
-      * [실시간 CDP에서 IAB TCF 2.0 지원](./privacy/iab/overview.md)
-      * [IAB TCF 2.0 동의 데이터를 캡처하기 위한 데이터 집합 만들기](./privacy/iab/dataset-preparation.md)
+      * [실시간 CDP에서 IAB TCF 2.0 지원](privacy/iab/overview.md)
+      * [IAB TCF 2.0 동의 데이터를 캡처하기 위한 데이터 집합 만들기](privacy/iab/dataset-preparation.md)
 * 프로필 {#profile}
    * [프로필 개요](profile/profile-overview.md)
    * [ID 및 ID 네임스페이스](profile/identities-overview.md)
