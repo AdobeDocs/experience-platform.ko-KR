@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 스키마 컴포지션의 기본 사항
 topic: overview
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: dae86df3ca4fcc9c5951068e905081df29e3b5f2
 workflow-type: tm+mt
-source-wordcount: '2628'
+source-wordcount: '2782'
 ht-degree: 0%
 
 ---
@@ -50,8 +50,8 @@ The infrastructure which [!DNL Experience Platform] is built, knowing [!DNL XDM 
 
 에서 사용하기 위한 데이터 [!DNL Experience Platform] 는
 
-* **데이터**&#x200B;기록: 제목 속성에 대한 정보를 제공합니다. 대상은 조직 또는 개인일 수 있습니다.
-* **시계열 데이터**: 작업을 직접 또는 간접적으로 레코드 제목에 의해 수행한 시점에 시스템의 스냅샷을 제공합니다.
+* **데이터**&#x200B;기록:제목 속성에 대한 정보를 제공합니다. 대상은 조직 또는 개인일 수 있습니다.
+* **시계열 데이터**:작업을 직접 또는 간접적으로 레코드 제목에 의해 수행한 시점에 시스템의 스냅샷을 제공합니다.
 
 모든 XDM 스키마는 레코드 또는 시간 시리즈로 분류할 수 있는 데이터를 설명합니다. 스키마의 데이터 동작은 스키마의 **클래스에**&#x200B;의해 정의됩니다. 이 클래스는 스키마를 처음 만들 때 스키마에 할당됩니다. XDM 클래스는 이 문서의 후반부에 자세히 설명되어 있습니다.
 
@@ -59,13 +59,52 @@ The infrastructure which [!DNL Experience Platform] is built, knowing [!DNL XDM 
 
 ### [!UICONTROL ID]
 
-스키마는 데이터를 인제스트하는 데 사용됩니다 [!DNL Experience Platform]. 이 데이터를 여러 서비스에서 사용하여 개별 엔티티의 단일 통합 뷰를 만들 수 있습니다. 따라서 스키마를 고려할 때 &quot;[!UICONTROL ID]&quot;와 데이터가 어디에서 오는지에 관계없이 대상을 식별하는 데 사용할 수 있는 필드를 찾는 것이 중요합니다.
+스키마는 데이터를 인제스트하는 데 사용됩니다 [!DNL Experience Platform]. 이 데이터를 여러 서비스에서 사용하여 개별 엔티티의 단일 통합 뷰를 만들 수 있습니다. 따라서 고객 ID에 대해 생각해 볼 스키마와 데이터가 어디에서 오는지에 관계없이 주체를 식별하는 데 사용할 수 있는 필드를 고려할 때 중요합니다.
 
-이 프로세스를 돕기 위해 키 필드를 &quot;[!UICONTROL ID&quot;로 표시할 수 있습니다]. 데이터 수집 시 해당 필드의 데이터는 해당 개인에 대한 &quot;[!UICONTROL ID 그래프]&quot;에 삽입됩니다. 그러면 그래프 데이터에 [!DNL Real-time Customer Profile](../../profile/home.md) 액세스하고 다른 [!DNL Experience Platform] 서비스를 통해 각 개별 고객에 대한 연결된 보기를 제공할 수 있습니다.
+이 프로세스를 돕기 위해 스키마 내의 키 필드를 ID로 표시할 수 있습니다. 데이터 수집 시 해당 필드의 데이터는 해당 개인에 대한 &quot;[!UICONTROL ID 그래프]&quot;에 삽입됩니다. 그러면 그래프 데이터에 [!DNL Real-time Customer Profile](../../profile/home.md) 액세스하고 다른 [!DNL Experience Platform] 서비스를 통해 각 개별 고객에 대한 연결된 보기를 제공할 수 있습니다.
 
-일반적으로 &quot;ID&quot;로 표시된 필드는[!UICONTROL 다음과]같습니다. 이메일 주소, 전화 번호, [!DNL Experience Cloud ID (ECID)](https://docs.adobe.com/content/help/ko-KR/id-service/using/home.html)CRM ID 또는 기타 고유 ID 필드 또한 &quot;[!UICONTROL Identity]&quot; 필드도 양호할 수 있으므로 조직 고유의 식별자를 고려해야 합니다.
+일반적으로 &quot;ID&quot;로 표시된 필드는[!UICONTROL 다음과]같습니다.이메일 주소, 전화 번호, [!DNL Experience Cloud ID (ECID)](https://docs.adobe.com/content/help/ko-KR/id-service/using/home.html)CRM ID 또는 기타 고유 ID 필드 또한 &quot;[!UICONTROL Identity]&quot; 필드도 양호할 수 있으므로 조직 고유의 식별자를 고려해야 합니다.
 
-가장 강력한 프로파일을 구축하기 위해 데이터를 취합하는 것을 돕기 위해 스키마 계획 단계 동안 고객 ID를 고려하는 것이 중요합니다. ID 정보 [를 통해 고객에게 디지털 경험을 전달하는 방법에 대한 자세한 내용은 ID 서비스 개요를](../../identity-service/home.md) 참조하십시오.
+가장 강력한 프로파일을 구축하기 위해 데이터를 취합하는 것을 돕기 위해 스키마 계획 단계 동안 고객 ID를 고려하는 것이 중요합니다. ID 정보를 통해 고객에게 디지털 경험을 전달하는 방법에 대한 자세한 내용은 [Adobe Experience Platform ID 서비스](../../identity-service/home.md) 개요를 참조하십시오.
+
+#### xdm:identityMap
+
+`xdm:identityMap` 은 연결된 네임스페이스와 함께 개인에 대한 다양한 ID 값을 설명하는 맵 유형 필드입니다. 이 필드는 스키마 자체의 구조 내에서 ID 값을 정의하는 대신 스키마에 대한 ID 정보를 제공하는 데 사용할 수 있습니다.
+
+간단한 ID 맵의 예는 다음과 같습니다.
+
+```json
+"identityMap": {
+  "email": [
+    {
+      "id": "jsmith@example.com",
+      "primary": false
+    }
+  ],
+  "ECID": [
+    {
+      "id": "87098882279810196101440938110216748923",
+      "primary": false
+    },
+    {
+      "id": "55019962992006103186215643814973128178",
+      "primary": false
+    }
+  ],
+  "loyaltyId": [
+    {
+      "id": "2e33192000007456-0365c00000000000",
+      "primary": true
+    }
+  ]
+}
+```
+
+위의 예에서 보듯이 개체의 각 키는 ID 네임스페이스를 `identityMap` 나타냅니다. 각 키의 값은 각 네임스페이스에 대한 ID 값(`id`)을 나타내는 개체 배열입니다. Adobe 응용 프로그램에서 인식하는 표준 ID 네임스페이스의 [!DNL Identity Service] 목록은 설명서를 [](../../identity-service/troubleshooting-guide.md#standard-namespaces) 참조하십시오.
+
+>[!NOTE]
+>
+>값이 기본 ID(ID)인지 여부에 대한 부울 값`primary`을 각 ID 값에 제공할 수도 있습니다. 기본 ID는 에서 사용할 스키마에 대해서만 설정해야 합니다 [!DNL Real-time Customer Profile]. 자세한 내용은 [조합 스키마](#union) 섹션을 참조하십시오.
 
 ### 스키마 진화 원리 {#evolution}
 
@@ -91,7 +130,7 @@ The infrastructure which [!DNL Experience Platform] is built, knowing [!DNL XDM 
 
 스키마는 다음 공식을 사용하여 구성됩니다.
 
-**클래스 + Mixin&amp;ast; = XDM 스키마**
+**클래스 + Mixin&amp;ast;= XDM 스키마**
 
 &amp;ast;스키마는 클래스와 _0 이상의_ 혼합으로 구성됩니다. 즉, 혼합을 사용하지 않고 데이터 집합 스키마를 구성할 수 있습니다.
 
@@ -99,7 +138,7 @@ The infrastructure which [!DNL Experience Platform] is built, knowing [!DNL XDM 
 
 스키마 구성은 클래스를 할당하는 것으로 시작됩니다. 클래스는 스키마에 포함할 데이터의 동작 측면(레코드 또는 시간 시리즈)을 정의합니다. 이 외에도 클래스는 해당 클래스를 기반으로 하는 모든 스키마에는 호환이 가능한 여러 데이터 세트를 병합할 수 있는 방법이 포함되어 있어야 하는 가장 작은 수의 공통 속성을 설명합니다.
 
-또한 클래스는 스키마에 사용할 수 있는 믹스인을 결정합니다. 이 내용은 다음에 나오는 [믹신](#mixin) 섹션에서 더 자세히 설명합니다.
+또한 클래스는 스키마에서 사용할 수 있는 믹스를 결정합니다. 이 내용은 다음에 나오는 [믹신](#mixin) 섹션에서 더 자세히 설명합니다.
 
 &quot;산업&quot; 클래스라고 하는 모든 통합 [!DNL Experience Platform]과 함께 제공되는 표준 클래스가 있습니다. 업계 클래스는 다양한 사용 사례에 적용되는 일반적으로 승인된 업계 표준입니다. 업계 클래스의 예로는 Adobe에서 제공하는 [!DNL XDM Individual Profile] 및 [!DNL XDM ExperienceEvent] 클래스가 있습니다.
 
@@ -115,7 +154,7 @@ The infrastructure which [!DNL Experience Platform] is built, knowing [!DNL XDM 
 
 믹스는 데이터(레코드 또는 시간 시리즈)의 동작을 기반으로 호환하는 클래스를 정의합니다. 즉, 모든 클래스에 모든 믹스인을 사용할 수 없습니다.
 
-혼합은 클래스와 동일한 범위와 정의를 가집니다. 개별 조직에서 사용하는 업계 믹싱, 벤더 믹싱 및 고객 혼합이 있습니다 [!DNL Platform]. [!DNL Experience Platform] 다양한 표준 업계 믹스가 포함되어 있으며 벤더가 사용자의 믹스를 정의할 수 있고 개별 사용자가 고유한 개념으로 믹스를 정의할 수 있습니다.
+혼합은 클래스와 동일한 범위와 정의를 가집니다.개별 조직에서 사용하는 업계 믹싱, 벤더 믹싱 및 고객 혼합이 있습니다 [!DNL Platform]. [!DNL Experience Platform] 다양한 표준 업계 믹스가 포함되어 있으며 벤더가 사용자의 믹스를 정의할 수 있고 개별 사용자가 고유한 개념으로 믹스를 정의할 수 있습니다.
 
 예를 들어, &quot;[!UICONTROL 로열티 멤버]&quot; 스키마에 대해 &quot;[!UICONTROL 이름]&quot; 및 &quot;[!UICONTROL 홈 주소]&quot;와 같은 세부 정보를 캡처하려면 이러한 일반적인 개념을 정의하는 표준믹스를 사용할 수 있습니다. 그러나 일반적이지 않은 사용 사례(예: &quot;[!UICONTROL 로열티 프로그램 수준]&quot;)에만 적용되는 개념에는 미리 정의된 믹스가 없는 경우가 많습니다. 이 경우 이 정보를 캡처하려면 자신의 믹스를 정의해야 합니다.
 
@@ -200,7 +239,7 @@ XDM은 기본 필드 및 고유한 데이터 유형을 정의하는 기능 외�
 
 스키마 컴포지션의 기본 사항을 이해하면 스키마를 사용하여 스키마 작성을 시작할 수 있습니다 [!DNL Schema Registry].
 
-이 [!DNL Schema Registry] 는 Adobe Experience Platform [!DNL Schema Library] 내에서 액세스할 때 사용되며 사용 가능한 모든 라이브러리 리소스에 액세스할 수 있는 사용자 인터페이스와 RESTful API를 제공합니다. 이 [!DNL Schema Library] 에는 Adobe으로 정의된 산업 리소스, 파트너가 정의한 공급업체 리소스, [!DNL Experience Platform] 조직의 구성원이 구성한 클래스, 믹싱, 데이터 유형 및 스키마가 포함되어 있습니다.
+이 [!DNL Schema Registry] 는 Adobe Experience Platform [!DNL Schema Library] 내의 라이브러리에 액세스하는 데 사용되며 사용 가능한 모든 라이브러리 리소스에 액세스할 수 있는 사용자 인터페이스와 RESTful API를 제공합니다. 이 [!DNL Schema Library] 에는 Adobe으로 정의된 산업 리소스, 파트너가 정의한 공급업체 리소스, [!DNL Experience Platform] 조직의 구성원이 구성한 클래스, 믹싱, 데이터 유형 및 스키마가 포함되어 있습니다.
 
 UI를 사용하여 스키마 작성을 시작하려면, [스키마 편집기 자습서와](../tutorials/create-schema-ui.md) 함께 이 문서 전체에서 언급된 &quot;충성도 멤버&quot; 스키마를 빌드하십시오.
 
