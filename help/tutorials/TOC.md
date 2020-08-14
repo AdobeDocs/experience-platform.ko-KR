@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform 튜토리얼
 translation-type: tm+mt
-source-git-commit: d833257b4dffbf2a02ab4a3fc7a6a9e7347e7df5
+source-git-commit: ac1186e0afc3d135e8d02b1e5ab0cd907c12dcf3
 workflow-type: tm+mt
 source-wordcount: '41'
 ht-degree: 12%
@@ -19,7 +19,7 @@ ht-degree: 12%
 * [데이터 거버넌스 및 개인 정보](data-governance-privacy.md)
 * [데이터 과학 작업 공간](data-science-workspace.md)
 * [의사 결정](decisioning.md)
-* [대상](destinations.md)
+* [대상](destinations-tutorials.md)
 * [플랫폼에 데이터 인제스트](data-ingestion.md)
 * [프로필 및 ID](configure-profile.md)
 * [스키마 및 관계 설명자](schemas.md)
