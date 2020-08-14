@@ -3,9 +3,9 @@ product: adobe experience platform
 audience: user
 user-guide-title: 실시간 고객 데이터 플랫폼 도움말
 translation-type: tm+mt
-source-git-commit: 5802c05ce166f0b355b17a28655ff2f18f7cd0c4
+source-git-commit: d833257b4dffbf2a02ab4a3fc7a6a9e7347e7df5
 workflow-type: tm+mt
-source-wordcount: '469'
+source-wordcount: '460'
 ht-degree: 10%
 
 ---
@@ -128,7 +128,7 @@ ht-degree: 10%
       * [대상에 프로필 및 세그먼트 활성화](destinations/activate-destinations.md)
    * 대상 API 자습서 {#api-tutorials}
       * [스트리밍 대상(AWS Kinesis 및 Azure 이벤트 허브)에 연결하고 데이터 활성화](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
-      * [이메일 마케팅 대상에 연결 및 데이터 활성화](https://docs.adobe.com/content/help/en/experience-platform/tutorials/destinations/email-marketing-api.html)
+      * [이메일 마케팅 대상에 연결 및 데이터 활성화](/help/rtcdp/destinations/email-marketing-api.md)
 * 개인 정보 및 데이터 거버넌스 {#privacy}
    * [개인 정보 보호 개요](privacy/privacy-overview.md)
    * [데이터 거버넌스 개요](privacy/data-governance-overview.md)
