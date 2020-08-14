@@ -3,10 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform 튜토리얼
 translation-type: tm+mt
-source-git-commit: ee08f43400fa72abce95ed52aff879f954f4b4d6
+source-git-commit: d833257b4dffbf2a02ab4a3fc7a6a9e7347e7df5
 workflow-type: tm+mt
-source-wordcount: '52'
-ht-degree: 9%
+source-wordcount: '41'
+ht-degree: 12%
 
 ---
 
@@ -15,14 +15,12 @@ ht-degree: 9%
 
 * [Tutorials 개요](home.md)
 * [Experience Platform API 인증](authentication.md)
-* [Platform 데이터 액세스](data-access.md)
+* [플랫폼 데이터 액세스](data-access.md)
 * [데이터 거버넌스 및 개인 정보](data-governance-privacy.md)
 * [데이터 과학 작업 공간](data-science-workspace.md)
 * [의사 결정](decisioning.md)
-* 대상 {#destinations}
-   * [대상 만들기 및 데이터 활성화(API)](destinations/api-tutorial.md)
-   * [이메일 마케팅 대상(API)](destinations/email-marketing-api.md)
-* [데이터를 Platform으로 인제스트](data-ingestion.md)
+* [대상](destinations.md)
+* [플랫폼에 데이터 인제스트](data-ingestion.md)
 * [프로필 및 ID](configure-profile.md)
 * [스키마 및 관계 설명자](schemas.md)
 * [세그먼트 및 대상](segmentation.md)
