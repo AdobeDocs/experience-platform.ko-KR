@@ -5,17 +5,17 @@ doc-type: release notes
 last-update: August 10, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 1d9c8cbf273e9aef13e34df91a98b6c08180c8ff
+source-git-commit: 8b540a108336ae4475f072b71a34e37cac064826
 workflow-type: tm+mt
-source-wordcount: '480'
-ht-degree: 5%
+source-wordcount: '452'
+ht-degree: 6%
 
 ---
 
 
 # Adobe Experience Platform 릴리스 노트
 
-**릴리스 날짜: 2020년 12월 8일**
+**릴리스 날짜: 2020년 8월 12일**
 
 Adobe Experience Platform의 기존 기능 업데이트:
 
@@ -65,7 +65,6 @@ Adobe Experience Platform은 외부 소스에서 데이터를 인제스트할 �
 | 기능 | 설명 |
 | ------- | ----------- |
 | 흐름 실행 모니터링 | 사용자는 모든 흐름 실행을 모니터링하고 완료 상태, 실행 기간, 처리된 파일 목록, 오류 및 지표를 포함하여 각 실행에 대한 세부 보기를 볼 수 있습니다. 자세한 내용은 데이터 흐름 [모니터링](../../sources/tutorials/ui/monitor.md) 문서를 참조하십시오. |
-| 계정 업데이트 | 사용자는 기존 계정의 자격 증명, 이름 및 설명을 업데이트하여 보다 의미 있는 정보를 제공하고 생성된 오류를 수정할 수 있습니다. |
 | 흐름 실행 알림 | 사용자는 이벤트에 구독하고 웹 후크를 등록하여 흐름 실행에 대한 상태, 지표 및 오류에 대한 실시간 알림을 받을 수 있습니다. |
 | 향상된 UI 카탈로그 | 선택한 개체의 기본 작업에 보다 쉽게 액세스할 수 있도록 소스 카탈로그 화면에 대한 업데이트 |
 
