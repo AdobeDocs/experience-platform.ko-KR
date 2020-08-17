@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;segmentation;segmentation service;troubleshooting;API;seg;
+keywords: Experience Platform;segmentation;segmentation service;troubleshooting;API;seg;segment;Segment
 solution: Adobe Experience Platform
 title: 세그먼트 검색 끝점
 topic: guide
+description: 세그먼트 검색은 다양한 데이터 소스에 포함된 필드를 검색하고 거의 실시간으로 반환하는 데 사용됩니다. 이 안내서에서는 세그먼트 검색을 더 잘 이해할 수 있도록 정보를 제공하며 API를 사용하여 기본 작업을 수행하기 위한 샘플 API 호출을 포함합니다.
 translation-type: tm+mt
-source-git-commit: 995fadef9abacf22d0561e0590dfbe172adf0a43
+source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
 workflow-type: tm+mt
-source-wordcount: '1138'
+source-wordcount: '1179'
 ht-degree: 2%
 
 ---
@@ -24,7 +25,7 @@ ht-degree: 2%
 
 시작하기 섹션에 요약된 필수 헤더 외에 세그먼트 검색 종단점에 대한 모든 요청에는 다음과 같은 추가 헤더가 필요합니다.
 
-- x-ups-search-version: &quot;1.0&quot;
+- x-ups-search-version:&quot;1.0&quot;
 
 ### 여러 네임스페이스 검색
 
@@ -254,7 +255,7 @@ curl -X GET \
 | foo AND bar | 부울 검색입니다. 검색 가능한 필드 중 하나에서 &quot;foo&quot;와 &quot;bar&quot;라는 **두** 단어를 모두 찾으면 결과가 반환됩니다. |
 | OR 막대 | 부울 검색입니다. 검색 가능한 필드에 &quot;foo&quot; **** 단어 또는 &quot;bar&quot;라는 단어가 있으면 결과가 반환됩니다. |
 | foo NOT bar | 부울 검색입니다. &quot;foo&quot;라는 단어를 찾았지만 검색 가능한 필드에 &quot;bar&quot;라는 단어를 찾을 수 없으면 결과가 반환됩니다. |
-| name: foo AND bar | 부울 검색입니다. &quot;name&quot; 필드에 &quot;foo&quot;와 &quot;bar&quot;라는 **두** 단어가 모두 있는 경우 결과가 반환됩니다. |
+| name:foo AND bar | 부울 검색입니다. &quot;name&quot; 필드에 &quot;foo&quot;와 &quot;bar&quot;라는 **두** 단어가 모두 있는 경우 결과가 반환됩니다. |
 | run* | 와일드카드 검색입니다. 별표(*)를 사용하면 0개 이상의 문자가 검색됩니다. 즉, 검색 가능한 필드의 내용에 &quot;run&quot;으로 시작하는 단어가 포함된 경우 결과가 반환됩니다. 예를 들어 단어 &quot;runs&quot;, &quot;running&quot;, &quot;runt&quot; 또는 &quot;runt&quot;가 나타나면 결과를 반환합니다. |
 | 캠? | 와일드카드 검색입니다. 물음표(?) 사용 검색 가능한 필드의 내용이 &quot;cam&quot;과 추가 문자로 시작하는 경우 결과가 반환됩니다. 예를 들어 &quot;camp&quot; 또는 &quot;camams&quot;라는 단어가 나타나면 결과를 반환하지만 &quot;camera&quot; 또는 &quot;campfire&quot;라는 단어가 나타나면 결과를 반환하지 않습니다. |
 | &quot;블루 우산&quot; | 구문 검색. 검색 가능한 필드 컨텐츠에 전체 구문 &quot;파란색 우산&quot;이 포함된 경우 결과가 반환됩니다. |
