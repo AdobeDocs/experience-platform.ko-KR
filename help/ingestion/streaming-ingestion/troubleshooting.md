@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;streaming
 solution: Experience Platform
 title: 스트리밍 통합 문제 해결
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
 source-wordcount: '993'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # 스트리밍 통합 문제 해결 가이드
 
-이 문서에서는 Adobe Experience Platform에서 데이터 스트리밍과 관련하여 자주 묻는 질문에 대한 답변을 제공합니다. 모든 API에서 발생한 서비스 등 다른 [!DNL Platform] 서비스와 관련된 질문 및 문제 해결 [!DNL Platform] 은 [Experience Platform 문제 해결 가이드를 참조하십시오](../../landing/troubleshooting.md).
+이 문서에서는 Adobe Experience Platform의 스트리밍 통합 관련 FAQ에 대한 답변을 제공합니다. 모든 API에서 발생한 서비스 등 다른 [!DNL Platform] 서비스와 관련된 질문 및 문제 해결 [!DNL Platform] 은 [Experience Platform 문제 해결 가이드를 참조하십시오](../../landing/troubleshooting.md).
 
 Adobe Experience Platform [!DNL Data Ingestion] 는 데이터를 인제스트하는 데 사용할 수 있는 RESTful API를 제공합니다 [!DNL Experience Platform]. 인제스트한 데이터는 개별 고객 프로필을 실시간으로 업데이트하는 데 사용되며, 이를 통해 다양한 채널에 개인화되고 연관성 있는 경험을 전달할 수 있습니다. 서비스에 대한 자세한 내용과 [다른 수집 방법은 데이터 통합 개요를](../home.md) 참조하십시오. 스트리밍 통합 API를 사용하는 방법에 대한 자세한 내용은 [스트리밍 통합 개요를 참조하십시오](../streaming-ingestion/overview.md).
 
@@ -26,9 +26,9 @@ Adobe Experience Platform [!DNL Data Ingestion] 는 데이터를 인제스트하
 
 [!DNL Data Ingestion] 는 [!DNL Experience Data Model] (XDM) 스키마를 활용하여 들어오는 데이터의 형식을 확인합니다. 사전 정의된 XDM 스키마의 구조에 맞지 않는 데이터를 전송하면 통합 작업이 실패합니다. XDM 및 XDM의 사용 방법에 대한 자세한 내용 [!DNL Experience Platform]은 [XDM 시스템 개요를 참조하십시오](../../xdm/home.md).
 
-스트리밍 통합 기능은 두 가지 인증 모드를 지원합니다. 동기 및 비동기. 각 유효성 검사 방법은 실패한 데이터를 다르게 처리합니다.
+스트리밍 통합 기능은 두 가지 인증 모드를 지원합니다.동기 및 비동기. 각 유효성 검사 방법은 실패한 데이터를 다르게 처리합니다.
 
-**개발 과정 중에 동기 유효성** 검사를 사용해야 합니다. 유효성 검사에 실패한 레코드가 삭제되고 실패한 이유에 대한 오류 메시지를 반환합니다(예: &quot;잘못된 XDM 메시지 형식&quot;).
+**개발 과정 중에 동기 유효성** 검사를 사용해야 합니다. 유효성 검사에 실패한 레코드가 삭제되고 실패한 이유에 대한 오류 메시지를 반환합니다(예:&quot;잘못된 XDM 메시지 형식&quot;).
 
 **비동기식 유효성** 검사는 제작 과정에서 사용해야 합니다. 유효성 검사를 통과하지 않는 잘못된 형식의 데이터는 [!DNL Data Lake] 실패한 배치 파일로 전송되며 나중에 검색하여 추가 분석을 수행할 수 있습니다.
 
@@ -72,7 +72,7 @@ Adobe Experience Platform [!DNL Data Ingestion] 는 데이터를 인제스트하
 
 성공적인 단일 메시지 API 요청은 상태 코드 200을 반환합니다. 성공적으로(또는 부분적으로 성공한) 일괄 처리된 메시지 API 요청은 상태 코드 207을 반환합니다.
 
-다음 JSON은 두 개의 메시지가 있는 API 요청에 대한 예제 응답 개체입니다. 한 명은 성공했고 한 명은 실패했다. 성공적으로 스트리밍한 메시지가 속성을 `xactionId` 반환합니다. 스트림하지 않는 메시지는 `statusCode` 속성 및 추가 정보가 있는 응답 `message` 을 반환합니다.
+다음 JSON은 두 개의 메시지가 있는 API 요청에 대한 예제 응답 개체입니다.한 명은 성공했고 한 명은 실패했다. 성공적으로 스트리밍한 메시지가 속성을 `xactionId` 반환합니다. 스트림하지 않는 메시지는 `statusCode` 속성 및 추가 정보가 있는 응답 `message` 을 반환합니다.
 
 ```JSON
 {
@@ -98,6 +98,6 @@ Adobe Experience Platform [!DNL Data Ingestion] 는 데이터를 인제스트하
 
 메시지를 [!DNL Real-time Customer Profile] 거부하면 잘못된 ID 정보 때문일 수 있습니다. 이는 ID에 대해 잘못된 값 또는 네임스페이스를 제공한 결과일 수 있습니다.
 
-ID 네임스페이스에는 두 가지 유형이 있습니다. 기본 및 사용자 지정. 사용자 정의 네임스페이스를 사용할 때는 네임스페이스가 안에 등록되어 있는지 확인하십시오 [!DNL Identity Service]. 기본 및 사용자 정의 네임스페이스 사용에 대한 자세한 내용은 [ID 네임스페이스 개요를](../../identity-service/namespaces.md) 참조하십시오.
+ID 네임스페이스에는 두 가지 유형이 있습니다.기본 및 사용자 지정. 사용자 정의 네임스페이스를 사용할 때는 네임스페이스가 안에 등록되어 있는지 확인하십시오 [!DNL Identity Service]. 기본 및 사용자 정의 네임스페이스 사용에 대한 자세한 내용은 [ID 네임스페이스 개요를](../../identity-service/namespaces.md) 참조하십시오.
 
 메시지를 수집하지 못한 이유에 대한 자세한 내용 [!DNL Experience Platform UI](https://platform.adobe.com) 을 보려면 아이콘을 사용하십시오. 왼쪽 탐색 **[!UICONTROL 에서 모니터링]** 을 클릭한 다음 _[!UICONTROL 전체]_스트리밍 탭을 확인하여 선택한 기간 동안 스트리밍된 메시지 배치를 볼 수 있습니다.
