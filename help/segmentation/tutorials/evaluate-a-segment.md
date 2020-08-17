@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;segment evaluation
 solution: Experience Platform
 title: 세그먼트 평가
 topic: tutorial
+description: 이 문서에서는 세그멘테이션 API를 사용하여 세그먼트를 평가하고 세그먼트 결과에 액세스하는 자습서를 제공합니다.
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
 workflow-type: tm+mt
-source-wordcount: '1519'
+source-wordcount: '1535'
 ht-degree: 0%
 
 ---
@@ -20,16 +21,16 @@ ht-degree: 0%
 
 이 자습서에서는 대상 세그먼트 만들기와 관련된 다양한 [!DNL Adobe Experience Platform] 서비스에 대해 작업해야 합니다. 이 자습서를 시작하기 전에 다음 서비스에 대한 설명서를 검토하십시오.
 
-- [!DNL Real-time Customer Profile](../../profile/home.md): 여러 소스에서 수집한 데이터를 기반으로 통합된 고객 프로필을 실시간으로 제공합니다.
-- [!DNL Adobe Experience Platform Segmentation Service](../home.md): 데이터를 통해 고객 세그먼트를 만들 수 [!DNL Real-time Customer Profile] 있습니다.
-- [!DNL Experience Data Model (XDM)](../../xdm/home.md): Platform이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
+- [!DNL Real-time Customer Profile](../../profile/home.md):여러 소스에서 수집한 데이터를 기반으로 통합된 고객 프로필을 실시간으로 제공합니다.
+- [!DNL Adobe Experience Platform Segmentation Service](../home.md):데이터를 통해 고객 세그먼트를 만들 수 [!DNL Real-time Customer Profile] 있습니다.
+- [!DNL Experience Data Model (XDM)](../../xdm/home.md):Platform(플랫폼)이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
 - [샌드박스](../../sandboxes/home.md): [!DNL Experience Platform] 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되도록 단일 [!DNL Platform] 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
 
 ### 필요한 헤더
 
 또한 이 자습서에서는 API를 성공적으로 호출하려면 [인증 자습서를](../../tutorials/authentication.md) 완료해야 [!DNL Platform] 합니다. 인증 자습서를 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
 
-- 인증: 무기명 `{ACCESS_TOKEN}`
+- 인증:무기명 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
@@ -43,7 +44,7 @@ ht-degree: 0%
 
 모든 POST, PUT 및 PATCH 요청에는 추가 헤더가 필요합니다.
 
-- 컨텐츠 유형: application/json
+- 컨텐츠 유형:application/json
 
 ## 세그먼트 평가
 
@@ -130,11 +131,11 @@ API의 종단점에 대한 POST 요청을 만들어 새 세그먼트 작업 `/se
 | 속성 | 설명 |
 | -------- | ----------- |
 | `lastQualificationTime` | 세그먼트 구성원 자격 어설션이 만들어지고 프로필이 세그먼트를 입력하거나 종료한 타임스탬프. |
-| `status` | 현재 요청의 일부로서 세그먼트 기여도 상태입니다. 다음과 같은 알려진 값 중 하나와 같아야 합니다. <ul><li>`existing`: 엔티티가 세그먼트에 계속 있습니다.</li><li>`realized`: 엔티티가 세그먼트를 입력하고 있습니다.</li><li>`exited`: 엔티티가 세그먼트를 종료합니다.</li></ul> |
+| `status` | 현재 요청의 일부로서 세그먼트 기여도 상태입니다. 다음과 같은 알려진 값 중 하나와 같아야 합니다. <ul><li>`existing`:엔티티가 세그먼트에 계속 있습니다.</li><li>`realized`:엔티티가 세그먼트를 입력하고 있습니다.</li><li>`exited`:엔티티가 세그먼트를 종료합니다.</li></ul> |
 
 ## 세그먼트 결과 액세스
 
-다음 두 가지 방법 중 하나로 세그먼트 작업 결과에 액세스할 수 있습니다. 개별 프로필에 액세스하거나 전체 대상을 데이터 세트에 내보낼 수 있습니다.
+다음 두 가지 방법 중 하나로 세그먼트 작업 결과에 액세스할 수 있습니다.개별 프로필에 액세스하거나 전체 대상을 데이터 세트에 내보낼 수 있습니다.
 
 다음 섹션에서는 이러한 옵션에 대해 자세히 설명합니다.
 
