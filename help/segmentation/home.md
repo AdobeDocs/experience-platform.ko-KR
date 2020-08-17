@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;segmentation;Segmentation;segment service;segment;Segment;Segments;segments
 solution: Experience Platform
 title: Adobe Experience Platform 세그멘테이션 서비스
 topic: overview
+description: 이 문서에서는 세그멘테이션 서비스와 Adobe Experience Platform에서 수행하는 역할에 대한 개요를 제공합니다.
 translation-type: tm+mt
-source-git-commit: 96b6f820e5d372446c4927e7719aedadb2b11bc9
+source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
 workflow-type: tm+mt
-source-wordcount: '1974'
+source-wordcount: '1991'
 ht-degree: 0%
 
 ---
@@ -16,15 +17,15 @@ ht-degree: 0%
 
 Adobe Experience Platform [!DNL Segmentation Service] 는 세그먼트를 작성하고 데이터에서 대상을 생성할 수 있는 사용자 인터페이스와 RESTful API를 [!DNL Real-time Customer Profile] 제공합니다. 이러한 세그먼트는 중앙에서 구성 및 관리되며, 모든 Adobe 솔루션 [!DNL Platform]에서 쉽게 액세스할 수 있습니다.
 
-이 문서에서는 Adobe Experience Platform에서 수행하는 역할 [!DNL Segmentation Service] 에 대한 개요를 제공합니다.
+이 문서는 Adobe Experience Platform에서 수행하는 역할 [!DNL Segmentation Service] 에 대한 개요를 제공합니다.
 
 ## Getting started with [!DNL Segmentation Service]
 
 이 문서 전체에서 사용되는 다음 주요 용어를 이해하는 것이 중요합니다.
 
-- **세분화**: 대규모 개인(예: 고객, 잠재 고객, 사용자 또는 조직)을 유사한 특성을 가진 소규모 그룹으로 분류하고 마케팅 전략에도 비슷하게 대응합니다.
-- **세그먼트 정의**: 대상 대상의 주요 특성 또는 동작을 설명하는 데 사용되는 규칙 세트입니다. 개념을 종합하면 세그먼트 정의에 요약된 규칙이 세그먼트에 대한 적격한 대상 구성원을 결정하는 데 사용됩니다.
-- **대상**: 세그먼트 정의 기준을 충족하는 결과 프로필 집합입니다.
+- **세분화**:대규모 개인(예: 고객, 잠재 고객, 사용자 또는 조직)을 유사한 특성을 가진 소규모 그룹으로 분류하고 마케팅 전략에도 비슷하게 대응합니다.
+- **세그먼트 정의**:대상 대상의 주요 특성 또는 동작을 설명하는 데 사용되는 규칙 세트입니다. 개념을 종합하면 세그먼트 정의에 요약된 규칙이 세그먼트에 대한 적격한 대상 구성원을 결정하는 데 사용됩니다.
+- **대상**:세그먼트 정의 기준을 충족하는 결과 프로필 집합입니다.
 
 ## 세그멘테이션의 작동 방식
 
@@ -112,7 +113,7 @@ API 또는 API를 통해 세그먼트를 구성하려면 세그먼트 이름 [!D
 
 모든 가능한 사용 사례를 명시적 및 반복적으로 캡처해야 하는 정적 세그먼테이션과 달리, 동적 세그멘테이션은 변수를 사용하여 규칙 논리를 만들고 관계를 동적으로 표현합니다.
 
-### 사용 사례: 집 밖에서 구매하는 고객 찾기
+### 사용 사례:집 밖에서 구매하는 고객 찾기
 
 이러한 고급 세분화 기능의 가치를 설명하려면 마케터와 공동으로 집 밖에서 구매한 고객을 식별하는 데이터 아키텍트를 고려해 보십시오.
 
@@ -136,7 +137,7 @@ API 또는 API를 통해 세그먼트를 구성하려면 세그먼트 이름 [!D
 
 >[!VIDEO](https://video.tv.adobe.com/v/28947?quality=12&learn=on)
 
-### 사용 사례: 가격 중심 프로모션
+### 사용 사례:가격 중심 프로모션
 
 이러한 고급 세분화 기능의 가치를 설명하려면 마케터와 공동으로 작업하는 데이터 아키텍트를 고려해 보십시오.
 
