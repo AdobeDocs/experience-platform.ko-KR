@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data type;data types;Data types;Data type
 solution: Experience Platform
 title: Adobe Experience Platform 세그멘테이션 서비스 데이터 유형
 topic: overview
+description: 모든 XDM 데이터 유형은 세그멘테이션 서비스 내에서 지원됩니다. 세그먼트 정의를 구성하는 규칙은 다음 데이터 유형에 따라 상황에 맞게 지정됩니다.
 translation-type: tm+mt
-source-git-commit: 96b6f820e5d372446c4927e7719aedadb2b11bc9
+source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
 workflow-type: tm+mt
-source-wordcount: '456'
+source-wordcount: '479'
 ht-degree: 3%
 
 ---
@@ -50,15 +51,15 @@ Adobe Experience Platform 스키마로서 [!DNL XDM ExperienceEvents] 인터랙�
 | &quot;시간 규칙 적용&quot; 전환 단추 | 날짜 데이터를 통합합니다. |
 | 같음, 같지 않음, 다음으로 시작, 다음으로 시작하지 않음, 다음으로 끝남, 포함하지 않음, 포함하지 않음, 존재하지 않음, 존재하지 않음 | 문자열 데이터를 통합합니다. |
 
-### 고객 공유
+### 대상 공유
 
 외부 대상을 새 세그먼트 정의의 구성 요소로 사용하여 새 세그먼트에 해당 속성 규칙을 추가할 수도 있습니다.
 
-현재 Adobe Audience Manager만 외부 대상으로서 지원되며 향후 추가 소스가 활성화됩니다. Platform에서 Adobe Audience Manager 대상을 사용하는 방법에 대한 자세한 내용은 Adobe Audience Manager 설명서 [의 대상 공유 안내서를 참조하십시오](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html).
+현재 외부 대상으로서 Adobe Audience Manager만 지원되며 향후 추가 소스가 활성화됩니다. 플랫폼과 함께 Adobe Audience Manager 대상을 사용하는 방법에 대한 자세한 내용은 Adobe Audience Manager 설명서 [의 대상 공유 가이드를 참조하십시오](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html).
 
 ### 세그먼트 공유
 
-Platform에서 만든 세그먼트는 다른 [Adobe Experience Cloud 코어 서비스 내에서 사용할 수 있습니다](https://docs.adobe.com/content/help/ko-KR/core-services/interface/experience-cloud.html). 이 기능을 사용하려면 솔루션 설계자 또는 컨설턴트에게 문의해야 합니다.
+플랫폼에서 만들어진 세그먼트는 다른 [Adobe Experience Cloud 코어 서비스 내에서 사용할 수 있습니다](https://docs.adobe.com/content/help/ko-KR/core-services/interface/experience-cloud.html). 이 기능을 사용하려면 솔루션 설계자 또는 컨설턴트에게 문의해야 합니다.
 
 ## 기타 데이터 유형
 
