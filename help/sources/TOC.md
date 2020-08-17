@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform 소스 커넥터 도움말
 translation-type: tm+mt
-source-git-commit: 2ee74c9ea0e4838eacfaba1b1e6b8aac7012f427
+source-git-commit: 18af4226c07cd7bc8a093aa4b1ce2b5f8f018cb6
 workflow-type: tm+mt
-source-wordcount: '613'
+source-wordcount: '616'
 ht-degree: 0%
 
 ---
@@ -194,4 +194,5 @@ ht-degree: 0%
    - [인바운드 데이터를 활성화하여 고객 프로필 채우기](tutorials/ui/profile.md)
    - [계정 및 데이터 흐름 모니터링](tutorials/ui/monitor.md)
    - [데이터 흐름 삭제](tutorials/ui/delete.md)
+- [흐름 실행 알림](notifications.md)
 - [플랫폼 릴리스 정보](https://www.adobe.com/go/platform-release-notes-en)
