@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: 정책 병합 사용자 안내서
 topic: guide
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: fa439ebb9d02d4a08c8ed92b18f2db819d089174
 workflow-type: tm+mt
-source-wordcount: '1104'
+source-wordcount: '1103'
 ht-degree: 0%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 0%
 
 # 정책 병합 사용자 안내서
 
-Adobe Experience Platform을 사용하면 여러 소스에서 데이터를 취합하여 각 개별 고객에 대한 전체 상황을 파악할 수 있습니다. 이 데이터를 취합할 때 병합 정책은 데이터의 우선 순위를 매기는 방법과 데이터를 결합하여 통합 뷰를 생성하는 데 [!DNL Platform] 사용하는 규칙입니다.
+Adobe Experience Platform을 사용하면 여러 소스에서 데이터를 취합하여 개별 고객의 전체 상황을 파악할 수 있습니다. 이 데이터를 취합할 때 병합 정책은 데이터의 우선 순위를 매기는 방법과 데이터를 결합하여 통합 뷰를 생성하는 데 [!DNL Platform] 사용하는 규칙입니다.
 
-RESTful API 또는 사용자 인터페이스를 사용하여 새 병합 정책을 만들고 기존 정책을 관리하고 조직에 대한 기본 병합 정책을 설정할 수 있습니다. 이 안내서에서는 Adobe Experience Platform 사용자 인터페이스를 사용하여 병합 정책을 사용하기 위한 단계별 지침을 제공합니다.
+RESTful API 또는 사용자 인터페이스를 사용하여 새 병합 정책을 만들고 기존 정책을 관리하고 조직에 대한 기본 병합 정책을 설정할 수 있습니다. 이 안내서에서는 Adobe Experience Platform 사용자 인터페이스를 사용한 병합 정책 작업에 대한 단계별 지침을 제공합니다.
 
 API를 사용하여 병합 정책을 사용하고 싶으면 [!DNL Real-time Customer Profile] 병합 정책 API 자습서에 설명된 지침을 따르십시오 [](../api/merge-policies.md).
 
@@ -24,9 +24,9 @@ API를 사용하여 병합 정책을 사용하고 싶으면 [!DNL Real-time Cust
 
 이 가이드는 병합 정책과 관련된 다양한 [!DNL Experience Platform] 서비스에 대해 작업해야 합니다. 이 자습서를 시작하기 전에 다음 서비스에 대한 설명서를 검토하십시오.
 
-* [!DNL Real-time Customer Profile](../home.md): 여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
-* [!DNL Identity Service](../../identity-service/home.md): 인제스트되는 여러 데이터 소스의 ID를 결합함으로써 사용할 수 [!DNL Real-time Customer Profile] [!DNL Platform]있습니다.
-* [!DNL Experience Data Model (XDM)](../../xdm/home.md): 고객 경험 데이터를 [!DNL Platform] 구성하는 표준화된 프레임워크
+* [!DNL Real-time Customer Profile](../home.md):여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
+* [!DNL Identity Service](../../identity-service/home.md):인제스트되는 여러 데이터 소스의 ID를 결합함으로써 사용할 수 [!DNL Real-time Customer Profile] [!DNL Platform]있습니다.
+* [!DNL Experience Data Model (XDM)](../../xdm/home.md):고객 경험 데이터를 [!DNL Platform] 구성하는 표준화된 프레임워크
 
 ## 병합 정책 보기
 
@@ -50,15 +50,15 @@ API를 사용하여 병합 정책을 사용하고 싶으면 [!DNL Real-time Cust
 
 ![](../images/merge-policies/create.png)
 
-* **[!UICONTROL 이름]**: 병합 정책의 이름은 설명적이지만 간결해야 합니다.
-* **[!UICONTROL 스키마]**: 병합 정책과 연결된 스키마입니다. 이 병합 정책을 만들 XDM 스키마를 지정합니다. 조직에서는 스키마당 여러 개의 병합 정책을 만들 수 있습니다.
-* **[!UICONTROL ID 연결]**: 이 필드는 고객의 관련 ID를 결정하는 방법을 정의합니다. 두 가지 가능한 값이 있습니다.
-   * **[!UICONTROL 없음]**: ID를 결합하지 않습니다.
-   * **[!UICONTROL 비공개 그래프]**: 개인 ID 그래프를 기반으로 ID 스티칭을 수행합니다.
-* **[!UICONTROL 속성 병합]**: 프로필 조각은 개별 고객에 대해 존재하는 ID 목록 중 하나의 ID에 대한 프로필 정보입니다. ID 그래프 유형이 사용한 경우 둘 이상의 ID가 있을 경우 프로필 속성 값과 우선 순위가 충돌할 가능성이 있습니다. 속성 병합 *을* 사용하면 병합 충돌이 발생하는 경우 우선 순위를 지정할 데이터 세트 프로필 값을 지정할 수 있습니다. 두 가지 가능한 값이 있습니다.
-   * **[!UICONTROL 순차 타임스탬프]**: 충돌이 발생하는 경우 가장 최근에 업데이트된 프로필에 우선 순위를 지정합니다.
-   * **[!UICONTROL 데이터 세트 우선 순위]** : 프로파일 단편이 있었던 데이터 세트에 따라 우선적으로 프로필 조각을 지정합니다. 이 옵션을 선택할 때는 관련 데이터 세트와 해당 우선 순위 순서를 선택해야 합니다. 자세한 내용은 아래 데이터 [세트 우선 순위](#dataset-precedence) 정보를 참조하십시오.
-* **[!UICONTROL 기본 병합 정책]**: 이 병합 정책이 조직의 기본값인지 여부를 선택할 수 있는 전환 단추입니다. 선택기가 전환되고 새 정책이 저장된 경우, 이전 기본 정책은 더 이상 기본값이 되지 않도록 자동으로 업데이트됩니다.
+* **[!UICONTROL 이름]**:병합 정책의 이름은 설명적이지만 간결해야 합니다.
+* **[!UICONTROL 스키마]**:병합 정책과 연결된 스키마입니다. 이 병합 정책을 만들 XDM 스키마를 지정합니다. 조직에서는 스키마당 여러 개의 병합 정책을 만들 수 있습니다.
+* **[!UICONTROL ID 연결]**:이 필드는 고객의 관련 ID를 결정하는 방법을 정의합니다. 두 가지 가능한 값이 있습니다.
+   * **[!UICONTROL 없음]**:ID를 결합하지 않습니다.
+   * **[!UICONTROL 비공개 그래프]**:개인 ID 그래프를 기반으로 ID 스티칭을 수행합니다.
+* **[!UICONTROL 속성 병합]**:프로필 조각은 개별 고객에 대해 존재하는 ID 목록 중 하나의 ID에 대한 프로필 정보입니다. ID 그래프 유형이 사용한 경우 둘 이상의 ID가 있을 경우 프로필 속성 값과 우선 순위가 충돌할 가능성이 있습니다. 속성 병합 *을* 사용하면 병합 충돌이 발생하는 경우 우선 순위를 지정할 데이터 세트 프로필 값을 지정할 수 있습니다. 두 가지 가능한 값이 있습니다.
+   * **[!UICONTROL 순차 타임스탬프]**:충돌이 발생하는 경우 가장 최근에 업데이트된 프로필에 우선 순위를 지정합니다.
+   * **[!UICONTROL 데이터 세트 우선 순위]** :프로파일 단편이 있었던 데이터 세트에 따라 우선적으로 프로필 조각을 지정합니다. 이 옵션을 선택할 때는 관련 데이터 세트와 해당 우선 순위 순서를 선택해야 합니다. 자세한 내용은 아래 데이터 [세트 우선 순위](#dataset-precedence) 정보를 참조하십시오.
+* **[!UICONTROL 기본 병합 정책]**:이 병합 정책이 조직의 기본값인지 여부를 선택할 수 있는 전환 단추입니다. 선택기가 전환되고 새 정책이 저장된 경우, 이전 기본 정책은 더 이상 기본값이 되지 않도록 자동으로 업데이트됩니다.
 
 ### 데이터 세트 우선 순위 {#dataset-precedence}
 
@@ -80,7 +80,8 @@ API를 사용하여 병합 정책을 사용하고 싶으면 [!DNL Real-time Cust
 
 [병합 정책 *[!UICONTROL 편집] 화면이 나타나면]* 스키마 *[!UICONTROL 이름]*&#x200B;을 변경할 수 있습니다. *[!UICONTROL 스키마]*&#x200B;이름 *[!UICONTROL , ID 스티칭하는 유형, Facebook 속성 병합 유형 및 FacebookType과 함께Facebook과 Facebook의 병합 유형]* ** ** 및 이 정책을 선택할지 또는 선택하지 않으면 조직의 기본 병합 정책이 될지 여부를 선택할 수 있습니다.
 
->[!N참고]
+>[!NOTE]
+>
 >편집 화면 상단에 표시되는 병합 정책 ID는 편집할 수 없습니다. 이 ID는 변경할 수 없는 읽기 전용 시스템 생성 ID입니다.
 
 ![](../images/merge-policies/edit-screen.png)
@@ -91,11 +92,11 @@ API를 사용하여 병합 정책을 사용하고 싶으면 [!DNL Real-time Cust
 
 ## 데이터 거버넌스 정책 위반
 
-병합 정책을 만들거나 업데이트할 때 병합 정책이 조직에서 정의한 데이터 사용 정책을 위반하는지 여부를 확인하는 검사가 수행됩니다. 데이터 사용 정책은 Adobe Experience Platform [!DNL Data Governance] 의 일부이며 특정 [!DNL Platform] 데이터에서 수행할 수 있거나 제한된 마케팅 작업의 종류를 설명하는 규칙입니다. 예를 들어 병합 정책을 사용하여 서드 파티 대상으로 활성화된 세그먼트를 만들고 조직에서 특정 데이터를 서드 파티로 내보낼 수 없도록 하는 데이터 사용 정책을 가지고 있는 경우 병합 정책을 저장하려고 하면 &quot;데이터 거버넌스 정책 위반이 감지됨&quot; 알림을 받게 됩니다.
+병합 정책을 만들거나 업데이트할 때 병합 정책이 조직에서 정의한 데이터 사용 정책을 위반하는지 여부를 확인하는 검사가 수행됩니다. 데이터 사용 정책은 Adobe Experience Platform [!DNL Data Governance] 의 일부이며 특정 [!DNL Platform] 데이터에 대해 수행할 수 있거나 제한된 마케팅 작업의 종류를 설명하는 규칙입니다. 예를 들어 병합 정책을 사용하여 서드 파티 대상으로 활성화된 세그먼트를 만들고 조직에서 특정 데이터를 서드 파티로 내보낼 수 없도록 하는 데이터 사용 정책을 가지고 있는 경우 병합 정책을 저장하려고 하면 &quot;데이터 거버넌스 정책 위반이 감지됨&quot; 알림을 받게 됩니다.
 
 이 알림에는 위반된 데이터 사용 정책 목록이 포함되어 있으며 목록에서 정책을 선택하여 위반 세부 사항을 볼 수 있습니다. 위반된 정책을 선택할 때 *데이터 연결* 탭은 위반의 *원인* 및 영향을 받는 *활동*&#x200B;을 제공하며, 각 탭에서는 데이터 사용 정책 위반 방법에 대한 자세한 내용을 제공합니다.
 
-Adobe Experience Platform 내에서 데이터 거버넌스가 수행되는 방법에 대한 자세한 내용은 [데이터 거버넌스 개요를 읽어 보십시오](../../data-governance/home.md).
+Adobe Experience Platform 내에서 데이터 거버넌스 수행 방법에 대한 자세한 내용은 [데이터 거버넌스 개요를 읽어 보시기 바랍니다](../../data-governance/home.md).
 
 ![](../images/merge-policies/policy-violation.png)
 
