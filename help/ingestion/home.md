@@ -1,20 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data ingestion;data location;Data Location;Data management;data management;Lineage;lineage;batch;Batch;ingested data
 solution: Experience Platform
 title: Adobe Experience Platform 데이터 통합 개요
 topic: overview
+description: 이 문서에서는 데이터를 플랫폼으로 인제스트하는 세 가지 주요 방법과 각 개요 문서에 대한 링크를 소개합니다.
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '417'
-ht-degree: 10%
+source-wordcount: '442'
+ht-degree: 9%
 
 ---
 
 
 # 데이터 통합 개요
 
-Adobe Experience Platform은 마케터가 고객의 행동을 더 잘 이해할 수 있도록 여러 소스에서 가져온 데이터를 취합합니다. Adobe Experience Platform 데이터 수집은 다운스트림 [!DNL Platform] [!DNL Platform] 서비스에서 사용하기 위해 Data Lake 내에서 데이터가 지속되는 방법과 이러한 소스의 데이터를 수집하는 여러 방법을 나타냅니다.
+Adobe Experience Platform은 마케터가 고객의 행동을 더 잘 이해할 수 있도록 여러 소스에서 수집한 데이터를 취합합니다. Adobe Experience Platform 데이터 통합은 다운스트림 [!DNL Platform] [!DNL Platform] 서비스에서 사용하기 위해 Data Lake 내에서 데이터가 지속되는 방법과 이러한 소스의 데이터를 수집하는 여러 방법을 나타냅니다.
 
 이 문서에서는 데이터를 수집하는 세 가지 주요 방법 [!DNL Platform]에 대해 자세히 알아보려면 해당 개요 설명서에 대한 링크를 제공합니다.
 
@@ -42,7 +43,7 @@ Adobe Experience Platform은 마케터가 고객의 행동을 더 잘 이해할 
 
 ## 다음 단계 및 추가 리소스
 
-이 문서는 여러 가지 측면을 간략하게 소개하 [!DNL Data Ingestion] 는 내용을 담고 [!DNL Experience Platform]있다. 다양한 기능, 사용 사례 및 모범 사례에 익숙해지려면 각 통합 방법에 대한 개요 설명서를 계속 읽어 보시기 바랍니다. 아래의 통합 개요 비디오를 시청하여 학습 내용을 제공할 수도 있습니다. 인제스트된 레코드의 메타데이터를 추적하는 방법에 대한 자세한 내용은 [!DNL Experience Platform] 카탈로그 서비스 개요를 참조하십시오 [](../catalog/home.md).
+이 문서는 여러 가지 측면을 간략하게 소개하 [!DNL Data Ingestion] 는 내용을 담고 [!DNL Experience Platform]있다. 다양한 기능, 사용 사례 및 모범 사례에 익숙해지려면 각 통합 방법에 대한 개요 설명서를 계속 읽어 보시기 바랍니다. 아래의 통합 개요 비디오를 통해 학습 내용을 보완할 수도 있습니다. 인제스트된 레코드의 메타데이터를 추적하는 방법에 대한 자세한 내용은 [!DNL Experience Platform] 카탈로그 서비스 개요를 참조하십시오 [](../catalog/home.md).
 
 >[!WARNING]
 >
