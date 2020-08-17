@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;namespace;Namespace;namespaces;Namespaces;identity namespace;Identity namespace;identity;Identity
 solution: Experience Platform
 title: 사용자 정의 네임스페이스 만들기
 topic: API guide
+description: ID 네임스페이스 API를 사용하여 조직에서만 사용할 수 있는 사용자 지정 ID 네임스페이스를 만들 수 있습니다.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3376d6cace9ab196f457e2bf7b84cde06693103c
 workflow-type: tm+mt
-source-wordcount: '75'
-ht-degree: 5%
+source-wordcount: '95'
+ht-degree: 4%
 
 ---
 
