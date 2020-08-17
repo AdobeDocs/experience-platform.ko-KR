@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;identity;Identity
 solution: Experience Platform
 title: 목록 ID 매핑
 topic: API guide
+description: 매핑은 지정된 네임스페이스에 대한 클러스터 내 모든 ID의 컬렉션입니다.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
 workflow-type: tm+mt
-source-wordcount: '248'
-ht-degree: 2%
+source-wordcount: '263'
+ht-degree: 1%
 
 ---
 
@@ -28,7 +29,7 @@ GET https://platform-{REGION}.adobe.io/data/core/identity/mapping
 
 **요청**
 
-옵션 1: ID를 네임스페이스(ID별`nsId`)와 ID 값(`id`)으로 제공합니다.
+옵션 1:ID를 네임스페이스(ID별`nsId`)와 ID 값(`id`)으로 제공합니다.
 
 ```shell
 curl -X GET \
@@ -39,7 +40,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-옵션 2: ID를 네임스페이스(이름별`ns`)와 ID 값(`id`)으로 제공합니다.
+옵션 2:ID를 네임스페이스(이름별`ns`)와 ID 값(`id`)으로 제공합니다.
 
 ```shell
 curl -X GET \
@@ -50,7 +51,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-옵션 3: ID를 XID(`xid`)로 제공합니다. ID의 XID를 얻는 방법에 대한 자세한 내용은 ID용 XID [를 가져오는 내용을 포함하는 이 문서의 섹션을 참조하십시오](./list-native-id.md).
+옵션 3:ID를 XID(`xid`)로 제공합니다. ID의 XID를 얻는 방법에 대한 자세한 내용은 ID용 XID [를 가져오는 내용을 포함하는 이 문서의 섹션을 참조하십시오](./list-native-id.md).
 
 ```shell
 curl -X GET \
@@ -77,7 +78,7 @@ POST https://platform.adobe.io/data/core/identity/mappings
 
 **요청 본문**
 
-옵션 1: 매핑을 검색할 XID 목록을 제공합니다.
+옵션 1:매핑을 검색할 XID 목록을 제공합니다.
 
 ```shell
 {
@@ -86,7 +87,7 @@ POST https://platform.adobe.io/data/core/identity/mappings
 }
 ```
 
-옵션 2: ID 목록을 복합 ID로 제공합니다. 여기서 각 ID 값과 네임스페이스의 이름은 네임스페이스 ID로 지정됩니다. 이 예에서는 &quot;비공개 그래프&quot;의 기본값을 덮어쓰는 동안 이 방법 `graph-type` 을 사용하는 방법을 보여 줍니다.
+옵션 2:ID 목록을 복합 ID로 제공합니다. 여기서 각 ID 값과 네임스페이스의 이름은 네임스페이스 ID로 지정됩니다. 이 예에서는 &quot;비공개 그래프&quot;의 기본값을 덮어쓰는 동안 이 방법 `graph-type` 을 사용하는 방법을 보여 줍니다.
 
 ```shell
 {
@@ -183,8 +184,8 @@ curl -X POST \
 }
 ```
 
-- `lastAssociationTime`: 입력 ID가 이 ID와 마지막으로 연결된 타임스탬프
-- `regions`: ID가 `regionId` 표시된 위치 및 `lastAssociationTime` 를 제공합니다.
+- `lastAssociationTime`:입력 ID가 이 ID와 마지막으로 연결된 타임스탬프
+- `regions`:ID가 `regionId` 표시된 위치 및 `lastAssociationTime` 를 제공합니다.
 
 ## 다음 단계
 
