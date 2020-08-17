@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;identity;Identity;XDM graphs;identity service;Identity service
 solution: Experience Platform
 title: Adobe Experience Platform ID 서비스
 topic: overview
+description: Adobe Experience Platform ID 서비스를 사용하면 다양한 디바이스와 시스템에 ID를 연결함으로써 고객 행동과 고객의 행동을 보다 정확하게 파악할 수 있으므로 효과적이고 개인화된 경험을 실시간으로 전달할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: d02f12202e51b00453f719604052a54f6fcfe4ab
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '1672'
+source-wordcount: '1707'
 ht-degree: 0%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 0%
 
 # [!DNL Identity Service]개요
 
-고객의 기대에 부응하는 디지털 경험을 전달하려면 고객을 완벽하게 이해해야 합니다. 고객 데이터가 서로 다른 시스템에서 분열되어 각각의 개별 고객이 여러 개의 &quot;ID&quot;를 갖는 것처럼 보일 경우 이러한 문제는 더욱 복잡해집니다. Adobe Experience Platform [!DNL Identity Service] 를 사용하면 다양한 디바이스와 시스템에 ID를 연결함으로써 효과적이고 개인화된 디지털 경험을 실시간으로 전달할 수 있으므로 고객 및 고객의 행동을 보다 정확하게 파악할 수 있습니다.
+고객의 기대에 부응하는 디지털 경험을 전달하려면 고객을 완벽하게 이해해야 합니다. 고객 데이터가 서로 다른 시스템에서 분열되어 각각의 개별 고객이 여러 개의 &quot;ID&quot;를 갖는 것처럼 보일 경우 이러한 문제는 더욱 복잡해집니다. Adobe Experience Platform [!DNL Identity Service] 는 다양한 디바이스와 시스템에 ID를 연결함으로써 효과적이고 개인화된 디지털 경험을 실시간으로 전달할 수 있도록 함으로써 고객 및 고객의 행동을 보다 정확하게 파악할 수 있도록 지원합니다.
 
 ## 이해 [!DNL Identity Service]
 
@@ -24,7 +25,7 @@ ht-degree: 0%
 
 Mary는 과거 몇 번의 주문을 완료한 e커머스 사이트에 계정을 가지고 있다. 그녀는 보통 개인 노트북을 이용해 쇼핑하고, 매번 로그인한다. 그러나 그는 샌들을 사기 위해 태블릿을 사용하지만 주문을 하지 않고 로그인하지 않는다.
 
-이때 Mary의 활동은 두 개의 개별 프로필로 나타납니다. 디바이스 ID로 확인되는 e커머스 로그인 및 태블릿 디바이스
+이때 Mary의 활동은 두 개의 개별 프로필로 나타납니다.디바이스 ID로 확인되는 e커머스 로그인 및 태블릿 디바이스
 
 Mary는 나중에 자신의 뉴스레터를 구독하는 동안 태블릿 세션을 다시 시작하고 이메일 주소를 제공합니다. 이렇게 하면 스트리밍 통합 기능이 새로운 ID를 프로필 내 레코드 데이터로 추가합니다. 그 결과, [!DNL Identity Service] 이제 Mary의 태블릿 장치 활동과 전자 상거래 계정 내역이 관련되어 있습니다.
 
@@ -42,7 +43,7 @@ ID는 엔티티, 일반적으로 개별 개인에 고유한 데이터입니다. 
 
 아래 이미지에서 보듯이, 알려진 ID와 익명 ID는 [ID 그래프의](#identity-graphs)중요한 구성 요소로서 이 문서의 후반부에서 설명합니다.
 
-![Platform에서 ID 연결](./images/identity-service-stitching.png)
+![플랫폼에서 ID 연결](./images/identity-service-stitching.png)
 
 구현의 예는 다음과 [!DNL Identity Service] 같습니다.
 
@@ -53,7 +54,7 @@ ID는 엔티티, 일반적으로 개별 개인에 고유한 데이터입니다. 
 
 ### ID 데이터
 
-어떤 사람에게 &quot;신분증이 무엇입니까?&quot;라고 물으면 더 이상의 문맥이 없다면, 그들이 유용한 답을 제공하는 것은 어려울 것이다. 동일한 논리로, 시스템 생성 ID인지 이메일 주소인지 ID 값을 나타내는 문자열 값은 문자열 값 컨텍스트를 제공하는 한정자와 함께 제공되는 경우에만 완료됩니다. id 네임스페이스입니다.
+어떤 사람에게 &quot;신분증이 무엇입니까?&quot;라고 물으면 더 이상의 문맥이 없다면, 그들이 유용한 답을 제공하는 것은 어려울 것이다. 동일한 논리로, 시스템 생성 ID인지 이메일 주소인지 ID 값을 나타내는 문자열 값은 문자열 값 컨텍스트를 제공하는 한정자와 함께 제공되는 경우에만 완료됩니다.id 네임스페이스입니다.
 
 ## ID 네임스페이스 및 ID 그래프
 
@@ -73,7 +74,7 @@ ID는 엔티티, 일반적으로 개별 개인에 고유한 데이터입니다. 
 
 웹, 모바일 애플리케이션, 콜센터 또는 스토어를 비롯한 다양한 채널에서 고객이 브랜드와 인터랙션하는 경우 채널 전반에서 고객의 활동을 관찰하고 추적할 수 없는 경우 고객을 파악하고 서비스를 제공하는 것이 어려울 수 있습니다.
 
-다양한 디바이스와 채널에서 고객을 이해하면 각 채널에서 고객을 인식하게 됩니다. Adobe Experience Platform은 ID 네임스페이스를 사용하여 이를 실현합니다.
+다양한 디바이스와 채널에서 고객을 이해하면 각 채널에서 고객을 인식하게 됩니다. Adobe Experience Platform은 ID 네임스페이스를 사용하여 이를 달성합니다.
 ID 네임스페이스는 데이터가 시작되는 컨텍스트를 제공하는 데 사용되는 장치 ID 또는 이메일 ID와 같은 식별자입니다. ID 네임스페이스는 개별 ID를 조회하거나 연결하는 데 사용되며 ID 값에 대한 컨텍스트를 제공하여 데이터 충돌을 방지합니다. 예를 들어, ID &quot;123456&quot;은 전자 상거래 시스템의 한 사람과 도움말 데스크 시스템의 다른 사람을 나타낼 수 있습니다. 자세한 내용은 [ID 네임스페이스 개요를 참조하십시오](./namespaces.md).
 
 ### ID 그래프
@@ -88,7 +89,7 @@ ID 데이터를 제공하고 레이블을 지정할 때 고려해야 할 잠재�
 
 ## ID 데이터 제공 [!DNL Identity Service]
 
-이 섹션에서는 Adobe Experience Platform에 제공된 데이터가 각 고객에 대한 ID 그래프 [!DNL Identity Service] 를 작성하기 전에 처리되는 방법에 대해 설명합니다.
+이 섹션에서는 각 고객에 대한 ID 그래프를 작성하기 위해 Adobe Experience Platform에 제공된 데이터 [!DNL Identity Service] 가 사용되기 전에 처리되는 방법에 대해 설명합니다.
 
 ### ID 필드 결정
 
