@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;schema;Schema;create schema;enum;XDM individual profile;primary identity;primary idenity;enum datatype;schema design
 solution: Experience Platform
 title: 스키마 편집기를 사용하여 스키마 만들기
 topic: tutorials
+description: 이 자습서에서는 Experience Platform 내의 스키마 편집기를 사용하여 스키마를 만드는 단계를 설명합니다.
 translation-type: tm+mt
-source-git-commit: 661789fa15ea11b0e42060b1b90d74785c04fa1f
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '3376'
+source-wordcount: '3392'
 ht-degree: 0%
 
 ---
@@ -24,9 +25,9 @@ ht-degree: 0%
 
 이 자습서에서는 스키마 편집기 사용과 관련된 Adobe Experience Platform의 다양한 측면을 파악해야 합니다. 이 자습서를 시작하기 전에 다음 개념을 살펴보십시오.
 
-* [!DNL Experience Data Model (XDM)](../home.md): Platform이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
-* [스키마 컴포지션의 기본 사항](../schema/composition.md): 클래스, 믹싱, 데이터 유형 및 필드를 비롯한 XDM 스키마 및 구성 요소에 대한 개요입니다.
-* [!DNL Real-time Customer Profile](../../profile/home.md): 여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
+* [!DNL Experience Data Model (XDM)](../home.md):Platform(플랫폼)이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
+* [스키마 컴포지션의 기본 사항](../schema/composition.md):클래스, 믹싱, 데이터 유형 및 필드를 비롯한 XDM 스키마 및 구성 요소에 대한 개요입니다.
+* [!DNL Real-time Customer Profile](../../profile/home.md):여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
 
 이 튜토리얼을 사용하려면 액세스 권한이 있어야 합니다 [!DNL Experience Platform]. 에서 IMS 조직에 액세스할 수 없는 경우 시스템 관리자 [!DNL Experience Platform]에게 연락하여 진행하십시오.
 
@@ -156,13 +157,13 @@ ht-degree: 0%
 
 &quot; **[!UICONTROL 충성도 멤버]** &quot; 옆에 있는 필드추가를 클릭하여 구조에 새 노드를 만듭니다. 이 노드(이 예에서 &quot;_tenantId&quot;라고 함)는 IMS 조직의 테넌트 ID 앞에 밑줄이 있는 것을 나타냅니다. 테넌트 ID가 존재하면 추가할 필드가 조직의 네임스페이스에 포함되어 있음을 나타냅니다.
 
-즉, 추가하려는 필드는 조직에 고유하며 IMS 조직에서만 액세스할 수 있는 특정 영역 [!DNL Schema Registry] 에 저장됩니다. 정의한 필드는 항상 네임스페이스에 추가되어야 다른 표준 클래스, 혼합, 데이터 형식 및 필드의 이름과 충돌하지 않습니다.
+즉, 추가하려는 필드는 조직에 고유하며 IMS 조직에서만 액세스할 수 있는 특정 영역 [!DNL Schema Registry] 에 저장됩니다.정의한 필드는 항상 네임스페이스에 추가되어야 다른 표준 클래스, 혼합, 데이터 형식 및 필드의 이름과 충돌하지 않습니다.
 
 해당 네임스페이스 노드 안은 &quot;[!UICONTROL 새 필드&quot;입니다]. 이것은 &quot;[!UICONTROL 충성도 세부 사항]&quot; 혼합의 시작이다.
 
 ![](../images/tutorials/create-schema/new_field_loyalty.png)
 
-편집기의 오른쪽에 *[!UICONTROL 필드 속성]* 을 사용하면 우선 충성도 관련 필드를[!UICONTROL 유지하는 데 사용할 &quot;개체]&quot; 유형이 있는 &quot;[!UICONTROL 충성도]&quot; 필드를 만들어 보십시오. 완료되면 적용을 **[!UICONTROL 클릭합니다]**.
+편집기의 오른쪽에 *[!UICONTROL 필드 속성]* 을 사용하면 우선 충성도 관련 필드를[!UICONTROL 유지하는 데 사용할 &quot;개체]&quot; 유형이 있는 &quot;[!UICONTROL 충성도]&quot; 필드를 만들어 보십시오. When finished, click **[!UICONTROL Apply]**.
 
 ![](../images/tutorials/create-schema/loyalty_object.png)
 
@@ -172,10 +173,10 @@ ht-degree: 0%
 
 각 필드에는 다음 정보가 필요합니다.
 
-* **[!UICONTROL 필드 이름]:**낙타라고 적힌 들판 이름. 예: 충성도 수준
-* **[!UICONTROL 표시 이름]:**제목 케이스에 기록된 필드의 이름입니다. 예: 충성도 수준
-* **[!UICONTROL 유형]:**필드의 데이터 유형입니다. 여기에는 기본 스칼라 형식과 에 정의된 모든 데이터 유형이 포함됩니다[!DNL Schema Registry]. 예: 문자열, 정수, 부울, 사람, 주소, 전화 번호 등
-* **[!UICONTROL 설명]:**문장의 경우 필드에 대한 선택적 설명을 포함해야 합니다. (최대 200자)
+* **[!UICONTROL 필드 이름]:** 낙타라고 적힌 들판 이름. 예:충성도 수준
+* **[!UICONTROL 표시 이름]:** 제목 케이스에 기록된 필드의 이름입니다. 예:충성도 수준
+* **[!UICONTROL 유형]:** 필드의 데이터 유형입니다. 여기에는 기본 스칼라 형식과 에 정의된 모든 데이터 유형이 포함됩니다 [!DNL Schema Registry]. 예:문자열, 정수, 부울, 사람, 주소, 전화 번호 등
+* **[!UICONTROL 설명]:** 문장의 경우 필드에 대한 선택적 설명을 포함해야 합니다. (최대 200자)
 
 충성도 개체의 첫 번째 필드는 &quot;[!UICONTROL loymentId&quot;라는 문자열이 됩니다]. 새 필드의 유형을 &quot;[!UICONTROL 문자열]&quot;으로 설정할 때, 기본 값 *[!UICONTROL , 기본 형식, CumulationsFormat, CumulationsMaximum Length를 포함하여]* 여러 옵션을 적용하기 위한 여러 가지 옵션 **[!UICONTROL 으로 채워진 필드 속성]******&#x200B;창이 됩니다 ****.
 
@@ -194,7 +195,7 @@ ht-degree: 0%
 
 충성도 개체에서 필드 **[!UICONTROL 추가를]** 클릭하고 필요한 정보를 입력하여 각 필드가 추가됩니다.
 
-완료되면 충성도 오브젝트에 다음과 같은 필드가 포함됩니다. 충성도 ID, 포인트 및 이후의 멤버.
+완료되면 충성도 오브젝트에 다음과 같은 필드가 포함됩니다.충성도 ID, 포인트 및 이후의 멤버.
 
 ![](../images/tutorials/create-schema/loyalty_object_fields.png)
 
@@ -214,10 +215,10 @@ ht-degree: 0%
 
 사용 가능한 추가 제한에 대한 자세한 내용:
 
-* **[!UICONTROL 필수]:**데이터 수집에 필드가 필수임을 나타냅니다. 이 필드를 포함하지 않는 이 스키마를 기반으로 데이터 세트에 업로드한 데이터는 수집 시 실패합니다.
-* **[!UICONTROL 어레이]:**필드에 데이터 유형이 지정된 값 배열을 포함함을 나타냅니다. 예를 들어 &quot;문자열&quot;의 데이터 유형을 선택하고 &quot;배열&quot; 확인란을 선택하면 필드에 문자열 배열이 포함됩니다.
-* **[!UICONTROL 열거형]:**이 필드에 가능한 값의 열거형 목록의 값 중 하나가 포함되어야 함을 나타냅니다.
-* **[!UICONTROL ID]:**이 필드가 ID 필드임을 나타냅니다. ID 필드에 대한 자세한 내용은 이 자습서[후반부에서 제공됩니다](#identity-field).
+* **[!UICONTROL 필수]:** 데이터 수집에 필드가 필수임을 나타냅니다. 이 필드를 포함하지 않는 이 스키마를 기반으로 데이터 세트에 업로드한 데이터는 수집 시 실패합니다.
+* **[!UICONTROL 어레이]:** 필드에 데이터 유형이 지정된 값 배열을 포함함을 나타냅니다. 예를 들어 &quot;문자열&quot;의 데이터 유형을 선택하고 &quot;배열&quot; 확인란을 선택하면 필드에 문자열 배열이 포함됩니다.
+* **[!UICONTROL 열거형]:** 이 필드에 가능한 값의 열거형 목록의 값 중 하나가 포함되어야 함을 나타냅니다.
+* **[!UICONTROL ID]:** 이 필드가 ID 필드임을 나타냅니다. ID 필드에 대한 자세한 내용은 이 자습서 [후반부에서 제공됩니다](#identity-field).
 
 ## 다중 필드 개체를 데이터 형식으로 변환 {#datatype}
 
@@ -317,7 +318,7 @@ More information about relationships and other schema metadata can be found in t
 
 [!DNL Experience Platform] 조직에 고유한 클래스를 기반으로 스키마를 정의할 수 있는 유연성을 제공합니다.
 
-스키마 편집기의 *[!UICONTROL 클래스]* 섹션 **[!UICONTROL 에서 할당을]** 클릭하여 *[!UICONTROL 클래스]* 할당 대화상자를 엽니다. 대화 상자에서 새 클래스 **[!UICONTROL 만들기를 선택합니다&#x200B;]**.
+스키마 편집기의 *[!UICONTROL 클래스]* 섹션 **[!UICONTROL 에서 할당을]** 클릭하여 *[!UICONTROL 클래스]* 할당 대화상자를 엽니다. 대화 상자에서 새 클래스 **[!UICONTROL 만들기를 선택합니다]**.
 
 그런 다음 새 클래스에 **[!UICONTROL 표시 이름]** (클래스에 대해 짧고 설명적이며 고유하며 사용자에게 친숙한 이름) **[!UICONTROL , 설명]**, 그리고 **[!UICONTROL 동작(&quot;RecordRecord]** &quot; 또는 &quot;TimeSeries&quot;라고[!UICONTROL 정의되는 데이터에 대해]Display Name[!UICONTROL (&quot;]RecordOr &quot;TimeSeries&quot;라고)을 지정할 수 있습니다.
 
