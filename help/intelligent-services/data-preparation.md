@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;Intelligent Services;popular topics
+keywords: Experience Platform;home;Intelligent Services;popular topics;intelligent service;Intelligent service
 solution: Experience Platform
 title: 지능형 서비스에서 사용할 데이터 준비
 topic: Intelligent Services
+description: 'Intelligent Services가 마케팅 이벤트 데이터에서 얻은 통찰력을 얻으려면 데이터가 세밀하게 농축되어 표준 구조로 유지되어야 합니다. 지능형 서비스는 이를 달성하기 위해 XDM(Experience Data Model) 스키마를 활용합니다. 특히, Intelligent Services에서 사용되는 모든 데이터 세트는 CEE(Consumer ExperienceEvent) XDM 스키마를 따라야 합니다. '
 translation-type: tm+mt
-source-git-commit: 88e4a183422dd1bc625fd842e24c2604fb249c91
+source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
 workflow-type: tm+mt
-source-wordcount: '1924'
+source-wordcount: '1980'
 ht-degree: 0%
 
 ---
