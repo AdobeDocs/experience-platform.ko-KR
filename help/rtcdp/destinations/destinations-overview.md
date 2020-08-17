@@ -1,10 +1,11 @@
 ---
+keywords: RTCDP;rtcdp
 title: 대상 개요
 seo-title: 대상 개요
-description: 대상은 대상 플랫폼과의 사전 구축된 통합으로 실시간 고객 데이터 Platform에서 데이터를 원활하게 활성화할 수 있습니다. Adobe의 대상을 실시간 고객 데이터 Platform에서 사용하여 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타깃팅된 광고 및 기타 많은 사용 사례에서 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
-seo-description: 대상은 대상 플랫폼과의 사전 구축된 통합으로 실시간 고객 데이터 Platform에서 데이터를 원활하게 활성화할 수 있습니다. Adobe의 대상을 실시간 고객 데이터 Platform에서 사용하여 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타깃팅된 광고 및 기타 많은 사용 사례에서 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
+description: 대상은 실시간 고객 데이터 플랫폼에서 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과의 사전 구축된 통합입니다. Adobe 실시간 고객 데이터 플랫폼의 대상을 사용하여 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타깃팅된 광고 및 기타 여러 가지 사용 사례에 대해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
+seo-description: 대상은 실시간 고객 데이터 플랫폼에서 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과의 사전 구축된 통합입니다. Adobe 실시간 고객 데이터 플랫폼의 대상을 사용하여 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타깃팅된 광고 및 기타 여러 가지 사용 사례에 대해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 7aa15772003cce1dfc7c3636048bce9a35bf8197
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
 source-wordcount: '526'
 ht-degree: 0%
@@ -16,7 +17,7 @@ ht-degree: 0%
 
 ![대상 개요 배너](/help/rtcdp/destinations/assets/destinations-overview-banner.png)
 
-**[!DNL Destinations]** 실시간 고객 데이터 Platform에서 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과의 사전 구축된 통합입니다. 대상을 사용하여 크로스채널 마케팅 캠페인, 이메일 캠페인, 타깃팅된 광고 및 기타 많은 사용 사례에 대해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
+**[!DNL Destinations]** 실시간 고객 데이터 플랫폼에서 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과의 사전 구축된 통합입니다. 대상을 사용하여 크로스채널 마케팅 캠페인, 이메일 캠페인, 타깃팅된 광고 및 기타 많은 사용 사례에 대해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 
 ## 대상 및 소스 {#destinations-and-sources}
 
@@ -44,7 +45,7 @@ ht-degree: 0%
 
 ## 대상 및 액세스 제어 {#access-controls}
 
-실시간 CDP의 대상 기능은 Adobe Experience Platform 액세스 제어 권한과 함께 작동합니다. 사용자의 권한 수준에 따라 대상을 보고, 관리하고, 활성화할 수 있습니다. 개별 권한에 대한 자세한 내용은 Adobe Experience Platform의 [액세스](../../access-control/home.md) 제어 및 페이지 아래쪽으로 스크롤을 참조하십시오.
+실시간 CDP의 대상 기능은 Adobe Experience Platform 액세스 제어 권한과 함께 작동합니다. 사용자의 권한 수준에 따라 대상을 보고, 관리하고, 활성화할 수 있습니다. 개별 권한에 대한 자세한 내용은 Adobe Experience Platform [의 액세스](../../access-control/home.md) 제어 기능을 참조하고 페이지 아래쪽으로 스크롤을 내려가세요.
 
 액세스 제어에 대한 자세한 내용은 [액세스 제어 사용 안내서를 참조하십시오](../../access-control/ui/overview.md).
 
