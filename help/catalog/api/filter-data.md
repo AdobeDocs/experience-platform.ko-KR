@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;filter;Filter;filter data;Filter data;date range
 solution: Experience Platform
 title: 쿼리 매개 변수를 사용하여 카탈로그 데이터 필터링
 topic: developer guide
+description: 카탈로그 서비스 API를 사용하면 요청 쿼리 매개 변수의 사용을 통해 응답 데이터를 필터링할 수 있습니다. 카탈로그의 우수 사례는 모든 API 호출에서 필터를 사용하여 API에 대한 로드를 줄이고 전반적인 성능을 개선하는 것입니다.
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '2033'
+source-wordcount: '2078'
 ht-degree: 1%
 
 ---
@@ -150,10 +151,10 @@ curl -X GET \
 
 위의 응답을 기준으로 다음을 유추할 수 있습니다.
 
-* 개체에 요청된 속성이 없는 경우 포함된 요청된 속성만 표시됩니다. (`Dataset1`)
-* 개체에 요청된 속성이 포함되어 있지 않으면 빈 개체로 표시됩니다. (`Dataset2`)
-* 데이터 세트에 속성이 포함되어 있지만 값이 없는 경우 요청된 속성을 빈 개체로 반환할 수 있습니다. (`Dataset3`)
-* 그렇지 않으면 데이터 세트에 요청된 모든 속성의 전체 값이 표시됩니다. (`Dataset4`)
+* 개체에 요청된 속성이 없는 경우 포함된 요청된 속성만 표시됩니다.(`Dataset1`)
+* 개체에 요청된 속성이 포함되어 있지 않으면 빈 개체로 표시됩니다.(`Dataset2`)
+* 데이터 세트에 속성이 포함되어 있지만 값이 없는 경우 요청된 속성을 빈 개체로 반환할 수 있습니다.(`Dataset3`)
+* 그렇지 않으면 데이터 세트에 요청된 모든 속성의 전체 값이 표시됩니다.(`Dataset4`)
 
 ## 응답 목록의 오프셋 시작 색인
 
@@ -206,8 +207,8 @@ curl -X GET \
 * 태그 이름은 IMS 조직에 고유합니다.
 * Adobe 프로세스는 특정 동작에 태그를 활용할 수 있습니다. 이러한 태그의 이름에는 &quot;adobe&quot;가 표준 접두사로 사용됩니다. 따라서 태그 이름을 선언할 때는 이 규칙을 사용하지 않아야 합니다.
 * 다음 태그 이름은 여러 조직에서 사용할 수 있도록 예약되어 [!DNL Experience Platform]있으므로 조직의 태그 이름으로 선언할 수 없습니다.
-   * `unifiedProfile`: 이 태그 이름은 데이터 세트에서 수집하도록 예약되어 있습니다 [!DNL Real-time Customer Profile](../../profile/home.md).
-   * `unifiedIdentity`: 이 태그 이름은 데이터 세트에서 수집하도록 예약되어 있습니다 [!DNL Identity Service](../../identity-service/home.md).
+   * `unifiedProfile`:이 태그 이름은 데이터 세트에서 수집하도록 예약되어 있습니다 [!DNL Real-time Customer Profile](../../profile/home.md).
+   * `unifiedIdentity`:이 태그 이름은 데이터 세트에서 수집하도록 예약되어 있습니다 [!DNL Identity Service](../../identity-service/home.md).
 
 다음은 속성이 포함된 데이터 집합의 `tags` 예입니다. 해당 속성 내의 태그는 키-값 쌍의 형태를 취하며 각 태그 값은 단일 문자열을 포함하는 배열로 표시됩니다.
 
@@ -396,7 +397,7 @@ curl -X GET \
 
 여러 정렬 속성을 쉼표로 구분된 목록으로 제공할 수 있습니다. 첫 번째 정렬 속성이 해당 속성에 대해 동일한 값이 들어 있는 여러 개의 개체를 만드는 경우 두 번째 정렬 속성을 사용하여 해당 일치하는 개체를 추가로 정렬합니다.
 
-예를 들어 다음 쿼리를 고려해 보십시오. `orderBy=name,desc:created`. 결과는 첫 번째 정렬 속성에 따라 오름차순으로 정렬됩니다 `name`. 여러 레코드가 동일한 `name` 속성을 공유하는 경우 일치하는 레코드가 두 번째 정렬 속성별로 정렬됩니다 `created`. 반환된 레코드가 동일하면 해당 `name`속성이 `created` 정렬에 영향을 주지 않습니다.
+For example, consider the following query: `orderBy=name,desc:created`. 결과는 첫 번째 정렬 속성에 따라 오름차순으로 정렬됩니다 `name`. 여러 레코드가 동일한 `name` 속성을 공유하는 경우 일치하는 레코드가 두 번째 정렬 속성별로 정렬됩니다 `created`. 반환된 레코드가 동일하면 해당 `name`속성이 `created` 정렬에 영향을 주지 않습니다.
 
 
 **API 형식**
@@ -474,8 +475,8 @@ curl -X GET \
 
 [!DNL Catalog] 에서는 다음 섹션에 자세히 설명된 속성별로 필터링하는 두 가지 방법을 제공합니다.
 
-* [간단한 필터 사용](#using-simple-filters): 특정 속성이 특정 값과 일치하는지 여부를 기준으로 필터링합니다.
-* [속성 매개 변수 사용](#using-the-property-parameter): 조건부 표현식을 사용하여 속성이 있는지 여부 또는 속성의 값이 다른 지정된 값 또는 정규 표현식과 일치하는지, 근사값 또는 비교되는지 여부를 필터링합니다.
+* [간단한 필터 사용](#using-simple-filters):특정 속성이 특정 값과 일치하는지 여부를 기준으로 필터링합니다.
+* [속성 매개 변수 사용](#using-the-property-parameter):조건부 표현식을 사용하여 속성이 있는지 여부 또는 속성의 값이 다른 지정된 값 또는 정규 표현식과 일치하는지, 근사값 또는 비교되는지 여부를 필터링합니다.
 
 ### 간단한 필터 사용 {#using-simple-filters}
 
