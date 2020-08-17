@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;catalog service;catalog;Catalog service;Catalog
 solution: Experience Platform
 title: 카탈로그 서비스 개발자 가이드
 topic: developer guide
+description: 이 개발자 안내서에서는 카탈로그 API 사용을 시작하는 데 도움이 되는 단계를 제공합니다. 그런 다음 가이드는 카탈로그를 사용하여 키 작업을 수행하기 위한 샘플 API 호출을 제공합니다.
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
 workflow-type: tm+mt
-source-wordcount: '558'
+source-wordcount: '584'
 ht-degree: 0%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 0%
 
 # [!DNL Catalog Service] 개발자 가이드
 
-[!DNL Catalog Service] 은 Adobe Experience Platform 내의 데이터 위치 및 계열에 대한 기록 시스템입니다. [!DNL Catalog] 데이터 자체에 액세스할 필요 없이 데이터 내에서 데이터에 대한 정보를 찾을 수 [!DNL Experience Platform]있는 메타데이터 저장소 또는 &quot;카탈로그&quot;로 작동합니다. 자세한 내용은 [카탈로그 개요를](../home.md) 참조하십시오.
+[!DNL Catalog Service] adobe experience platform의 데이터 위치와 혈통에 대한 기록 시스템이다. [!DNL Catalog] 데이터 자체에 액세스할 필요 없이 데이터 내에서 데이터에 대한 정보를 찾을 수 [!DNL Experience Platform]있는 메타데이터 저장소 또는 &quot;카탈로그&quot;로 작동합니다. 자세한 내용은 [카탈로그 개요를](../home.md) 참조하십시오.
 
 이 개발자 안내서에서는 [!DNL Catalog] API 사용을 시작하는 데 도움이 되는 단계를 제공합니다. 그런 다음 이 안내서에서는 를 사용하여 키 작업을 수행하기 위한 샘플 API 호출을 제공합니다 [!DNL Catalog].
 
@@ -22,9 +23,9 @@ ht-degree: 0%
 
 [!DNL Catalog] 여러 종류의 리소스 및 작업에 대한 메타데이터를 [!DNL Experience Platform]추적합니다. 이 개발자 가이드는 이러한 리소스를 만들고 관리하는 것과 관련된 다양한 [!DNL Experience Platform] 서비스에 대해 작업해야 합니다.
 
-* [!DNL Experience Data Model (XDM)](../../xdm/home.md): 고객 경험 데이터를 [!DNL Platform] 구성하는 표준화된 프레임워크
-* [일괄 처리](../../ingestion/batch-ingestion/overview.md): CSV 및 [!DNL Experience Platform] Portable과 같은 데이터 파일의 데이터를 인제스트 및 저장하는 방법입니다.
-* [스트리밍 통합](../../ingestion/streaming-ingestion/overview.md): 클라이언트 [!DNL Experience Platform] 및 서버측 디바이스에서 실시간으로 데이터를 인제스트 및 저장하는 방법
+* [!DNL Experience Data Model (XDM)](../../xdm/home.md):고객 경험 데이터를 [!DNL Platform] 구성하는 표준화된 프레임워크
+* [일괄 처리](../../ingestion/batch-ingestion/overview.md):CSV 및 [!DNL Experience Platform] Portable과 같은 데이터 파일의 데이터를 인제스트 및 저장하는 방법입니다.
+* [스트리밍 통합](../../ingestion/streaming-ingestion/overview.md):클라이언트 [!DNL Experience Platform] 및 서버측 디바이스에서 실시간으로 데이터를 인제스트 및 저장하는 방법
 
 다음 섹션에서는 [!DNL Catalog Service] API를 성공적으로 호출하기 위해 알아야 하거나 현 상태로 두어야 할 추가 정보를 제공합니다.
 
@@ -36,7 +37,7 @@ ht-degree: 0%
 
 API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 합니다](../../tutorials/authentication.md). 인증 자습서를 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
 
-* 인증: 무기명 `{ACCESS_TOKEN}`
+* 인증:무기명 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
@@ -50,7 +51,7 @@ API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 
 
 페이로드(POST, PUT, PATCH)이 포함된 모든 요청에는 추가 헤더가 필요합니다.
 
-* 컨텐츠 유형: application/json
+* 컨텐츠 유형:application/json
 
 ## API 호출에 대한 우수 [!DNL Catalog] 사례
 
