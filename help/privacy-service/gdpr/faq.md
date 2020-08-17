@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;GDPR;gdpr
 solution: Experience Platform
 title: GDPR FAQ
 topic: troubleshooting
+description: 이 문서에서는 GDPR(General Data Protection Regulation) 및 Adobe Experience Cloud의 구현과 관련하여 자주 묻는 질문에 대한 답변을 제공합니다.
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
 workflow-type: tm+mt
-source-wordcount: '642'
+source-wordcount: '664'
 ht-degree: 0%
 
 ---
