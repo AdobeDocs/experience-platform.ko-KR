@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;offer management;Offer Management;Journey;customer journey;journey;decision events;decision event;Decision events
 solution: Experience Platform
 title: 의사 결정 서비스
 topic: overview
+description: 의사 결정 서비스는 Adobe Experience Platform에서 실행되는 애플리케이션에서 개인화되고 최적화된 통합 경험을 제작할 수 있는 기능을 제공합니다. 의사 결정 서비스를 사용하여 사용 가능한 선택 항목 세트에서 최상의 옵션을 결정할 수 있습니다. 대체 요소라고도 하는 이러한 옵션은 오퍼, 제품 추천, 웹 경험을 위한 컨텐츠 구성 요소, 대화 스크립트 및 수행할 작업이 될 수 있습니다.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '1592'
+source-wordcount: '1648'
 ht-degree: 0%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 0%
 
 # 의사 결정 서비스 개요
 
-[!DNL Decisioning Service] 는 Adobe Experience Platform에서 실행되는 애플리케이션에서 개인화되고 최적화된 통합 경험을 제작할 수 있는 기능을 제공합니다. 를 [!DNL Decisioning Service]사용하면 사용 가능한 옵션 *세트에서 최상의* 옵션을결정할 수 있습니다. 대체 요소라고도 하는 이러한 옵션은 오퍼, 제품 추천, 웹 경험을 위한 컨텐츠 구성 요소, 대화 스크립트 및 수행할 작업이 될 수 있습니다. 현재 오퍼 의사 결정 *의* 사용 사례와 도메인이 지원되며, 여기에서 의사 결정 옵션이 오퍼로 모델링되며 더 많은 사용 사례가 지원됩니다.
+[!DNL Decisioning Service] adobe experience platform에서 실행되는 애플리케이션에서 개인화되고 최적화된 통합 경험을 제작할 수 있는 기능을 제공합니다. 를 [!DNL Decisioning Service]사용하면 사용 가능한 옵션 *세트에서 최상의* 옵션을결정할 수 있습니다. 대체 요소라고도 하는 이러한 옵션은 오퍼, 제품 추천, 웹 경험을 위한 컨텐츠 구성 요소, 대화 스크립트 및 수행할 작업이 될 수 있습니다. 현재 오퍼 의사 결정 *의* 사용 사례와 도메인이 지원되며, 여기에서 의사 결정 옵션이 오퍼로 모델링되며 더 많은 사용 사례가 지원됩니다.
 
 이를 통해 [!DNL Decisioning Service]고객은 비즈니스 로직을 재사용할 수 있을 뿐만 아니라 다양한 채널과 애플리케이션에서 다양한 옵션 카탈로그를 공유할 수 있습니다. 애플리케이션 내에서 의사 결정 옵션 및 선택 전략을 관리하는 대신, 이제 최종 사용자가 비즈니스 또는 조직과 상호 작용하는 시기와 방법 및 채널에 상관없이 이러한 의사 결정을 활용할 수 있습니다.
 
