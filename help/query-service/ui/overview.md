@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;Query service;query
 solution: Experience Platform
 title: Adobe Experience Platform 쿼리 서비스 UI 안내서
 topic: guide
+description: Adobe Experience Platform 쿼리 서비스는 쿼리를 작성 및 실행하고, 이전에 실행된 쿼리를 보고, IMS 조직 내에서 사용자가 저장한 쿼리에 액세스하는 데 사용할 수 있는 사용자 인터페이스를 제공합니다.
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
 workflow-type: tm+mt
-source-wordcount: '584'
+source-wordcount: '617'
 ht-degree: 2%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 2%
 
 # [!DNL Query Service] 가이드
 
-Adobe Experience Platform [!DNL Query Service] 는 IMS 조직 내에서 사용자가 저장하고 있는 쿼리를 작성 및 실행하고, 이전에 실행한 쿼리를 보고, 액세스하는 데 사용할 수 있는 사용자 인터페이스를 제공합니다. Adobe Experience Platform 내의 UI에 액세스하려면 [왼쪽 탐색][platform-ui]**[!UICONTROL 에서 [쿼리]** ]를 선택합니다.
+Adobe Experience Platform [!DNL Query Service] 는 IMS 조직 내에서 사용자가 저장하고 있는 쿼리를 작성 및 실행하고, 이전에 실행한 쿼리를 보고, 액세스하는 데 사용할 수 있는 사용자 인터페이스를 제공합니다. [Adobe Experience Platform][platform-ui]내의 UI에 액세스하려면 왼쪽 탐색 **[!UICONTROL 에서 [쿼리]** ]를 선택합니다.
 
 ## [!DNL Query Editor]
 
