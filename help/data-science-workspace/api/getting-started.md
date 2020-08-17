@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics
+keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;data science workspace;data science
 solution: Experience Platform
 title: Sensei 머신 러닝 API 개발자 가이드
 topic: Developer guide
+description: 이 개발자 안내서에서는 Sensei Machine Learning API를 사용하는 데 도움이 되는 단계를 제공하고 다양한 데이터 과학 작업 공간 리소스에서 CRUD 작업을 수행하는 API 호출을 시연합니다.
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
 workflow-type: tm+mt
-source-wordcount: '196'
+source-wordcount: '225'
 ht-degree: 2%
 
 ---
@@ -22,7 +23,7 @@ API는 [!DNL Sensei Machine Learning] 알고리즘 온보딩, 실험, 서비스 
 
 API를 호출하기 위해 다음 요청 헤더에 액세스할 수 있으려면 [인증](../../tutorials/authentication.md) 자습서를 [!DNL Adobe Experience Platform] 완료해야 합니다.
 
-* 인증: 무기명 `{ACCESS_TOKEN}`
+* 인증:무기명 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
@@ -34,7 +35,7 @@ API를 호출하기 위해 다음 요청 헤더에 액세스할 수 있으려면
 
 페이로드(POST, PUT, PATCH)이 포함된 모든 요청에는 추가 헤더가 필요합니다.
 
-* 컨텐츠 유형: application/json
+* 컨텐츠 유형:application/json
 
 ## 다음 단계
 
