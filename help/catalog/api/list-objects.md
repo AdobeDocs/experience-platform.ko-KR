@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;filter;Filter;filter data;Filter data
 solution: Experience Platform
 title: 목록 개체
 topic: developer guide
+description: 단일 API 호출을 통해 특정 유형의 모든 사용 가능한 개체 목록을 검색할 수 있습니다. 응답 크기를 제한하는 필터를 포함하는 것이 좋습니다.
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
 workflow-type: tm+mt
-source-wordcount: '197'
-ht-degree: 2%
+source-wordcount: '229'
+ht-degree: 1%
 
 ---
 
