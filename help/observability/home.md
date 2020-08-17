@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;date range
 solution: Experience Platform
 title: Adobe Experience Platform 통찰력 통찰력
 topic: overview
+description: Observability Insights는 Adobe Experience Platform에서 주요 관측 가능 지표를 노출할 수 있는 RESTful API입니다. 이러한 지표는 플랫폼 사용 통계, 플랫폼 서비스 상태 점검, 이전 동향 및 다양한 플랫폼 기능에 대한 성능 지표에 대한 통찰력을 제공합니다.
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: cc81d590f308c7e2677cec000c27e8aca42437f5
 workflow-type: tm+mt
-source-wordcount: '396'
+source-wordcount: '435'
 ht-degree: 2%
 
 ---
@@ -22,7 +23,7 @@ Observability Insights는 Adobe Experience Platform에서 주요 관측 가능 �
 
 API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 합니다](../tutorials/authentication.md). 인증 자습서를 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
 
-* 인증: 무기명 `{ACCESS_TOKEN}`
+* 인증:무기명 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
