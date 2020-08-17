@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;schema;Schema;create schema;schema api;enum;primary identity;primary idenity;enum datatype;schema design
 solution: Experience Platform
 title: 스키마 레지스트리 API를 사용하여 스키마 만들기
 topic: tutorials
+description: 이 자습서에서는 스키마 레지스트리 API를 사용하여 표준 클래스를 사용하여 스키마를 구성하는 단계를 안내합니다.
 translation-type: tm+mt
-source-git-commit: b021b6813af18e29f544dc55541f23dd7dd57d47
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '2322'
+source-wordcount: '2343'
 ht-degree: 1%
 
 ---
@@ -14,17 +15,17 @@ ht-degree: 1%
 
 # API를 사용하여 스키마 [!DNL Schema Registry] 만들기
 
-Adobe Experience Platform [!DNL Schema Registry] 에서 [!DNL Schema Library] 파일에 액세스하는 데 사용됩니다. 이 [!DNL Schema Library] 에는 애플리케이션을 사용하는 Adobe, 파트너 [!DNL Experience Platform] 및 공급업체가 제공하는 리소스가 포함되어 있습니다. 레지스트리는 사용 가능한 모든 라이브러리 리소스에 액세스할 수 있는 사용자 인터페이스 및 RESTful API를 제공합니다.
+이 [!DNL Schema Registry] 는 Adobe Experience Platform [!DNL Schema Library] 내에서 액세스할 때 사용됩니다. 이 [!DNL Schema Library] 에는 애플리케이션을 사용하는 Adobe, 파트너 [!DNL Experience Platform] 및 공급업체가 제공하는 리소스가 포함되어 있습니다. 레지스트리는 사용 가능한 모든 라이브러리 리소스에 액세스할 수 있는 사용자 인터페이스 및 RESTful API를 제공합니다.
 
 이 자습서에서는 [!DNL Schema Registry] API를 사용하여 표준 클래스를 사용하여 스키마를 구성하는 단계를 안내합니다. 사용자 인터페이스를 에서 사용하려는 경우 스키마 편집기 자습서 [!DNL Experience Platform]는 스키마 편집기에서 유사한 작업 [](create-schema-ui.md) 을 수행하기 위한 단계별 지침을 제공합니다.
 
 ## 시작하기
 
-이 가이드는 다음과 같은 Adobe Experience Platform 구성 요소에 대해 작업해야 합니다.
+이 가이드는 Adobe Experience Platform의 다음 구성 요소에 대한 작업 이해를 필요로 합니다.
 
-* [!DNL Experience Data Model (XDM) System](../home.md): 고객 경험 데이터를 [!DNL Experience Platform] 구성하는 표준화된 프레임워크
-   * [스키마 컴포지션의 기본 사항](../schema/composition.md): 스키마 컴포지션의 주요 원칙 및 모범 사례 등 XDM 스키마의 기본 구성 요소에 대해 알아봅니다.
-* [!DNL Real-time Customer Profile](../../profile/home.md): 여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
+* [!DNL Experience Data Model (XDM) System](../home.md):고객 경험 데이터를 [!DNL Experience Platform] 구성하는 표준화된 프레임워크
+   * [스키마 컴포지션의 기본 사항](../schema/composition.md):스키마 컴포지션의 주요 원칙 및 모범 사례 등 XDM 스키마의 기본 구성 요소에 대해 알아봅니다.
+* [!DNL Real-time Customer Profile](../../profile/home.md):여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
 * [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되도록 단일 [!DNL Platform] 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
 
 이 자습서를 시작하기 전에 [개발자 가이드에서](../api/getting-started.md) API를 성공적으로 호출하기 위해 알아야 할 중요한 정보가 있는지 [!DNL Schema Registry] 확인하십시오. 여기에는 사용자 `{TENANT_ID}`, &quot;컨테이너&quot;의 개념 및 요청 시 필요한 헤더가 포함됩니다(수락 헤더와 가능한 값에 특별히 주의).
@@ -292,7 +293,7 @@ curl -X PATCH \
 
 이 응답은 배열에 새로 추가된 혼합을 보여주며 특성 `meta:extends` 의 혼합을 `$ref` `allOf` 포함합니다.
 
-충성도 멤버 스키마는 이제 배열에 세 `$ref` 개의 값을 포함해야 `allOf` 합니다. &quot;profile&quot;, &quot;profile-person-details&quot; 및 &quot;profile-personal-details&quot;를 참조하십시오.
+충성도 멤버 스키마는 이제 배열에 세 `$ref` 개의 값을 포함해야 `allOf` 합니다.&quot;profile&quot;, &quot;profile-person-details&quot; 및 &quot;profile-personal-details&quot;를 참조하십시오.
 
 ```JSON
 {
@@ -356,7 +357,7 @@ POST /tenant/mixins
 
 **요청**
 
-이 요청은 네 개의 로열티 프로그램 관련 필드가 포함된 &quot;충성도&quot; 개체가 있는 새 혼합을 만듭니다. &quot;loyaltyId&quot;, &quot;loyaltyLevel&quot;, &quot;loyaltyPoints&quot; 및 &quot;memberSince&quot; 등이 있습니다.
+이 요청은 네 개의 로열티 프로그램 관련 필드가 포함된 &quot;충성도&quot; 개체가 있는 새 혼합을 만듭니다.&quot;loyaltyId&quot;, &quot;loyaltyLevel&quot;, &quot;loyaltyPoints&quot; 및 &quot;memberSince&quot; 등이 있습니다.
 
 ```SHELL
 curl -X POST\
@@ -908,7 +909,7 @@ curl -X PATCH \
 }
 ```
 
-스키마를 조회하기 위한 GET 요청을 수행하면 이제 다음과 같이 &quot;properties/_{TENANT_ID}&quot; 아래에 데이터 유형에 대한 참조가 표시됩니다.
+이제 스키마를 조회하기 위한 GET 요청을 수행하면 &quot;properties/_{TENANT_ID}&quot; 아래에 데이터 유형에 대한 참조가 다음과 같이 표시됩니다.
 
 ```JSON
 "_{TENANT_ID}": {
@@ -956,7 +957,7 @@ curl -X PATCH \
 
 스키마는 데이터를 인제스트하는 데 사용됩니다 [!DNL Experience Platform]. 이 데이터는 궁극적으로 여러 서비스에서 사용되어 하나의 통합된 개별 뷰를 생성합니다. 이 프로세스를 돕기 위해 키 필드를 &quot;ID&quot;로 표시하고 데이터 수집 시 해당 필드의 데이터가 해당 개인의 &quot;ID 그래프&quot;에 삽입됩니다. 그러면 그래프 데이터에 [!DNL Real-time Customer Profile](../../profile/home.md) 액세스하고 다른 [!DNL Experience Platform] 서비스를 통해 각 개별 고객에 대한 연결된 보기를 제공할 수 있습니다.
 
-일반적으로 &quot;ID&quot;로 표시된 필드는 다음과 같습니다. 이메일 주소, 전화 번호, [!DNL Experience Cloud ID (ECID)](https://docs.adobe.com/content/help/ko-KR/id-service/using/home.html)CRM ID 또는 기타 고유 ID 필드
+일반적으로 &quot;ID&quot;로 표시된 필드는 다음과 같습니다.이메일 주소, 전화 번호, [!DNL Experience Cloud ID (ECID)](https://docs.adobe.com/content/help/ko-KR/id-service/using/home.html)CRM ID 또는 기타 고유 ID 필드
 
 ID 필드도 양호할 수 있으므로 조직 고유의 식별자를 고려해야 합니다.
 
@@ -1169,7 +1170,7 @@ curl -X GET \
 
 ## 다음 단계
 
-이 튜토리얼을 따라 사용자가 정의한 표준 믹스와 믹스를 사용하여 스키마를 성공적으로 구성했습니다. 이제 이 스키마를 사용하여 데이터 세트를 만들고 레코드 데이터를 Adobe Experience Platform에 인제스트할 수 있습니다.
+이 튜토리얼을 따라 사용자가 정의한 표준 믹스와 믹스를 사용하여 스키마를 성공적으로 구성했습니다. 이제 이 스키마를 사용하여 데이터 세트를 만들고 레코드 데이터를 Adobe Experience Platform으로 인제스트할 수 있습니다.
 
 이 자습서 전체에서 생성된 전체 충성도 멤버 스키마는 다음의 부록에서 사용할 수 있습니다. 스키마를 살펴보면 믹싱이 전체 구조에 기여하는 방법과 데이터 수집에 사용할 수 있는 필드를 확인할 수 있습니다.
 
@@ -1183,7 +1184,7 @@ curl -X GET \
 
 이 자습서 전체에서 소매 충성도 프로그램의 구성원을 설명하기 위해 스키마가 구성됩니다.
 
-스키마는 클래스를 구현하고 여러 혼합을 [!DNL XDM Individual Profile] 결합합니다. 튜토리얼 중에 정의된 &quot;충성도 세부 사항&quot; 믹스뿐만 아니라 표준 &quot;개인 세부 사항&quot; 및 &quot;개인 세부 사항&quot; 조합을 사용하여 충성도 구성원에 대한 정보를 제공합니다.
+스키마는 클래스를 구현하고 여러 혼합을 [!DNL XDM Individual Profile] 결합합니다.튜토리얼 중에 정의된 &quot;충성도 세부 사항&quot; 믹스뿐만 아니라 표준 &quot;개인 세부 사항&quot; 및 &quot;개인 세부 사항&quot; 조합을 사용하여 충성도 구성원에 대한 정보를 제공합니다.
 
 다음은 완료된 충성도 멤버 스키마를 JSON 형식으로 보여 줍니다.
 
