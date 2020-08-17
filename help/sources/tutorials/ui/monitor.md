@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics; monitor accounts; monitor dataflows
+keywords: Experience Platform;home;popular topics;monitor accounts;monitor dataflows;data flows
 description: Adobe Experience Platform의 소스 커넥터는 예약된 기준으로 외부 소스 데이터를 인제스트하는 기능을 제공합니다. 이 자습서에서는 소스 작업 영역에서 기존 계정 및 데이터 흐름을 보는 단계를 제공합니다.
 solution: Experience Platform
 title: 계정 및 데이터 흐름 모니터링
 topic: overview
 translation-type: tm+mt
-source-git-commit: dcdb1eb1f89b7393b83941a18abb2be2afa3576f
+source-git-commit: 04efbf63741ef39bbf0b22795be74087f1f7c595
 workflow-type: tm+mt
 source-wordcount: '893'
 ht-degree: 0%
