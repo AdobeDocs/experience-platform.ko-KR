@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;monitoring;monitor;data flows
 solution: Experience Platform
 title: 데이터 수집 모니터링
 topic: overview
+description: 이 사용자 안내서에서는 Adobe Experience Platform 사용자 인터페이스 내에서 데이터를 모니터하는 방법에 대한 단계를 제공합니다. 이 가이드를 이용하려면 Adobe ID을 가지고 Adobe Experience Platform에 입장해야 합니다.
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '519'
+source-wordcount: '552'
 ht-degree: 0%
 
 ---
@@ -14,9 +15,9 @@ ht-degree: 0%
 
 # 데이터 수집 모니터링
 
-데이터 수집 기능을 사용하면 데이터를 Adobe Experience Platform에 인제스트할 수 있습니다. 다양한 파일 형식(예: CSV)을 사용하여 데이터를 삽입할 수 있는 일괄 처리 섭취 또는 스트리밍 끝점을 실시간으로 [!DNL Platform] 사용하도록 데이터를 인제스트할 수 있는 스트리밍 통합 중 하나를 사용할 수 있습니다.
+데이터 수집 기능을 사용하면 데이터를 Adobe Experience Platform에 수집할 수 있습니다. 다양한 파일 형식(예: CSV)을 사용하여 데이터를 삽입할 수 있는 일괄 처리 섭취 또는 스트리밍 끝점을 실시간으로 [!DNL Platform] 사용하도록 데이터를 인제스트할 수 있는 스트리밍 통합 중 하나를 사용할 수 있습니다.
 
-이 사용자 안내서에서는 Adobe Experience Platform 사용자 인터페이스 내에서 데이터를 모니터하는 방법에 대한 단계를 제공합니다. 이 안내서에서는 Adobe ID을 사용하고 Adobe Experience Platform에 액세스해야 합니다.
+이 사용자 안내서에서는 Adobe Experience Platform 사용자 인터페이스 내에서 데이터를 모니터하는 방법에 대한 단계를 제공합니다. 이 가이드를 이용하려면 Adobe ID을 가지고 Adobe Experience Platform에 입장해야 합니다.
 
 ## 스트리밍 엔드 투 엔드 데이터 통합 모니터링
 
