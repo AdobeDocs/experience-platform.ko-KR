@@ -1,10 +1,11 @@
 ---
+keywords: rtcdp profile;real-time customer profile
 title: 실시간 고객 프로필 개요
-seo-title: 실시간 고객 데이터 Platform의 실시간 고객 프로필
-description: 실시간 고객 데이터 Platform을 통해 실시간 고객 프로파일을 사용하여 고객의 관심사와 연관성 있는 경험을 일관되게 제작할 수 있는 방법을 간략하게 소개합니다.
-seo-description: 실시간 고객 데이터 Platform, 프로파일, 데이터, 경험, 채널
+seo-title: 실시간 고객 데이터 플랫폼의 실시간 고객 프로필
+description: 실시간 고객 데이터 플랫폼을 통해 실시간 고객 프로파일을 사용하여 고객의 연관성 있고 조율된 경험을 일관되게 제공할 수 있는 방법을 간략하게 소개합니다.
+seo-description: 실시간 고객 데이터 플랫폼, 프로파일, 데이터, 경험, 채널
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
 workflow-type: tm+mt
 source-wordcount: '394'
 ht-degree: 0%
@@ -18,7 +19,7 @@ ht-degree: 0%
 
 ## 프로필 [!DNL Real-time Customer Data Platform]
 
-[!DNL Real-time Customer Data Platform] 고객이 브랜드와 상호 작용하는 장소 또는 시기에 관계없이 고객의 기대에 부응하는 일관된 경험을 제공할 수 있습니다. 개인화된 경험을 전달하여 고객의 기대에 부응하는 최적화된 경험을 제공한다는 것은 결코 쉬운 일이 아니지만 Adobe Experience Platform의 일부로 고객의 기대에 부응하는 경험을 제공하는 [!DNL Real-time Customer Profile]데 도움이 됩니다. 실시간 CDP는 프로파일 생성 등 많은 [!DNL Experience Platform] [!DNL Experience Platform] 서비스와 기능을 기반으로 구축됩니다. 이러한 개별 고객의 통합 뷰를 통해 다양한 마케팅 채널 및 조직에서 고객 데이터를 저장하기 위해 현재 사용하고 있는 다양한 시스템의 데이터를 취합할 수 있습니다.
+[!DNL Real-time Customer Data Platform] 고객이 브랜드와 상호 작용하는 장소 또는 시기에 관계없이 고객의 기대에 부응하는 일관된 경험을 제공할 수 있습니다. 개인화된 경험을 전달하여 고객의 기대에 부응하는 적시에 제공할 수 있지만 Adobe Experience Platform의 일부로 고객의 기대에 부응하는 경험을 제공할 수 [!DNL Real-time Customer Profile]있습니다. 실시간 CDP는 프로파일 생성 등 많은 [!DNL Experience Platform] [!DNL Experience Platform] 서비스와 기능을 기반으로 구축됩니다. 이러한 개별 고객의 통합 뷰를 통해 다양한 마케팅 채널 및 조직에서 고객 데이터를 저장하기 위해 현재 사용하고 있는 다양한 시스템의 데이터를 취합할 수 있습니다.
 
 ## ID 및 ID 네임스페이스
 
