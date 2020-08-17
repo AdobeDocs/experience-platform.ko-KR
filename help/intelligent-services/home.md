@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;intelligent services;popular topics
+keywords: Experience Platform;home;intelligent services;popular topics;intelligent service;Intelligent service
 solution: Experience Platform
 title: 지능형 서비스 개요
 topic: Intelligent Services overview
+description: 마케팅 분석가 및 전문가는 지능형 서비스를 통해 고객 경험 사용 사례에서 인공 지능(AI)과 머신 러닝의 힘을 활용할 수 있습니다. 따라서 마케팅 분석가는 데이터 과학 전문 지식 없이도 비즈니스 수준 구성을 사용하여 기업의 요구 사항에 맞는 예측을 설정할 수 있습니다. 또한 마케팅 전문가는 Adobe Experience Cloud, Adobe Experience Platform 및 타사 애플리케이션에서 예측을 활성화할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
 workflow-type: tm+mt
-source-wordcount: '428'
+source-wordcount: '491'
 ht-degree: 0%
 
 ---
@@ -30,7 +31,7 @@ Adobe은 AI/ML에 대한 전문 지식을 심층적인 CXM 경험과 접목시�
 
 ### 예측 기반의 정확도 향상
 
-고급 알고리즘 AI/ML 모델의 채택을 통해 결과 정확도가 가장 높은 개발 예측 분할 및 도표를 가능하게 하기 위해 깊이와 세부기간을 사용하는 일반적인 데이터 세트에 AI/ML을 실행하는 기능 예측 가능한 고객 인사이트를 도출하는 데 필요한 정보와 이유를 제공하는 인텔리전스
+고급 알고리즘 AI/ML 모델의 채택을 통해 결과 정확도가 가장 높은 개발예측 분할 및 도표를 가능하게 하기 위해 깊이와 세부기간을 사용하는 일반적인 데이터 세트에 AI/ML을 실행하는 기능예측 가능한 고객 인사이트를 도출하는 데 필요한 정보와 이유를 제공하는 인텔리전스
 
 ### 신속한 인사이트 및 ROI
 
@@ -48,7 +49,7 @@ Adobe은 AI/ML에 대한 전문 지식을 심층적인 CXM 경험과 접목시�
 
 ### 예측
 
-모델들이 훈련과 점수를 마친 후, 점수는 Platform에 다시 쓰여진다.
+모델들이 트레이닝과 점수를 마친 후 점수가 플랫폼에 다시 기록됩니다.
 
 ### 조치 수행
 
