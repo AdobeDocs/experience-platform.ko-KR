@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data location;Data Location;Data management;data management;Lineage;lineage;data type;data types;Data types;Data type
 solution: Experience Platform
 title: 데이터 집합 개요
 topic: datasets
+description: 이 문서는 Experience Platform의 데이터 세트에 대한 개요 정보를 제공합니다.
 translation-type: tm+mt
-source-git-commit: 1bf6b0948c47c7941fb8f9cf2edfac4d665b8189
+source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
 workflow-type: tm+mt
-source-wordcount: '712'
+source-wordcount: '723'
 ht-degree: 2%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 2%
 
 # 데이터 집합 개요
 
-Adobe Experience Platform으로 성공적으로 인제스트된 모든 데이터는 데이터 세트 내에 [!DNL Data Lake] 유지됩니다. 데이터 집합은 스키마(열) 및 필드(행)를 포함하는 데이터 수집을 위한 저장소 및 관리 구성체입니다. 데이터 세트에는 저장된 데이터의 다양한 측면을 설명하는 메타데이터도 포함되어 있습니다.
+Adobe Experience Platform에 성공적으로 수집되는 모든 데이터는 데이터 세트 내에 [!DNL Data Lake] 유지됩니다. 데이터 집합은 스키마(열) 및 필드(행)를 포함하는 데이터 수집을 위한 저장소 및 관리 구성체입니다. 데이터 세트에는 저장된 데이터의 다양한 측면을 설명하는 메타데이터도 포함되어 있습니다.
 
 이 문서는 데이터 세트에 대한 개요 정보를 제공합니다 [!DNL Experience Platform].
 
@@ -55,13 +56,13 @@ Adobe Experience Platform [!DNL Data Governance] 를 사용하면 데이터 사�
 
 다음은 다양한 작업에 데이터 세트를 사용하는 다운스트림 서비스 목록입니다. 자세한 내용은 각 서비스의 설명서를 참조하십시오.
 
-* [!DNL Data Access API](../../data-access/home.md): 데이터 세트 내에 저장된 파일의 컨텐츠를 액세스하고 다운로드할 수 있습니다.
-* [Adobe Experience Platform ID 서비스](../../identity-service/home.md): 장치 및 시스템 간에 ID를 연결하고, XDM 스키마로 정의된 ID 필드를 기반으로 데이터 세트를 연결합니다.
-* [!DNL Real-time Customer Profile](../../profile/home.md): 데이터 세트 [!DNL Identity Service] 에서 실시간으로 세부 고객 프로파일을 생성합니다. [!DNL Real-time Customer Profile] 데이터 저장소에서 데이터를 [!DNL Data Lake] 가져와 별도의 데이터 저장소에 고객 프로파일을 유지합니다.
-* [Adobe Experience Platform 세그멘테이션 서비스](../../segmentation/home.md): 세그먼트를 만들고 [!DNL Real-time Customer Profile] 데이터에서 대상을 생성할 수 있습니다. 그런 다음 이러한 대상을 해당 데이터 세트 내에 있는 데이터 세트로 내보낼 수 있습니다 [!DNL Data Lake].
-* [Adobe Experience Platform 데이터 과학 작업 공간](../../data-science-workspace/home.md): 머신 러닝과 인공 지능을 사용하여 대용량 데이터 세트에서 인사이트를 도출합니다.
-* [Adobe Experience Platform 쿼리 서비스](../../query-service/home.md): 표준 SQL을 사용하여 데이터를 쿼리 [!DNL Experience Platform]로, 데이터 세트 내에 모든 데이터 세트를 [!DNL Data Lake] 연결하고 쿼리 결과를 보고, [!DNL Data Science Workspace]또는 [!DNL Real-time Customer Profile]보고서에 사용할 새로운 데이터 세트로 캡처할 수 있습니다.
-* [Adobe Experience Platform 의사 결정 서비스](../../decisioning-service/home.md): 사용 가능한 데이터 세트 [!DNL Real-time Customer Profile] 에서 가져오는 행동 데이터를 기반으로 한 옵션 세트에서 고객이 취할 가능성이 가장 높은 선택 사항을 [!DNL Profile] 결정합니다.
+* [!DNL Data Access API](../../data-access/home.md):데이터 세트 내에 저장된 파일의 컨텐츠를 액세스하고 다운로드할 수 있습니다.
+* [Adobe Experience Platform ID 서비스](../../identity-service/home.md):장치 및 시스템 간에 ID를 연결하고, XDM 스키마로 정의된 ID 필드를 기반으로 데이터 세트를 연결합니다.
+* [!DNL Real-time Customer Profile](../../profile/home.md):데이터 세트 [!DNL Identity Service] 에서 실시간으로 세부 고객 프로파일을 생성합니다. [!DNL Real-time Customer Profile] 데이터 저장소에서 데이터를 [!DNL Data Lake] 가져와 별도의 데이터 저장소에 고객 프로파일을 유지합니다.
+* [Adobe Experience Platform 세그멘테이션 서비스](../../segmentation/home.md):세그먼트를 만들고 [!DNL Real-time Customer Profile] 데이터에서 대상을 생성할 수 있습니다. 그런 다음 이러한 대상을 해당 데이터 세트 내에 있는 데이터 세트로 내보낼 수 있습니다 [!DNL Data Lake].
+* [Adobe Experience Platform 데이터 과학 작업 공간](../../data-science-workspace/home.md):머신 러닝과 인공 지능을 사용하여 대용량 데이터 세트에서 인사이트를 도출합니다.
+* [Adobe Experience Platform 쿼리 서비스](../../query-service/home.md):표준 SQL을 사용하여 데이터를 쿼리 [!DNL Experience Platform]로, 데이터 세트 내에 모든 데이터 세트를 [!DNL Data Lake] 연결하고 쿼리 결과를 보고, [!DNL Data Science Workspace]또는 [!DNL Real-time Customer Profile]보고서에 사용할 새로운 데이터 세트로 캡처할 수 있습니다.
+* [Adobe Experience Platform 의사 결정 서비스](../../decisioning-service/home.md):사용 가능한 데이터 세트 [!DNL Real-time Customer Profile] 에서 가져오는 행동 데이터를 기반으로 한 옵션 세트에서 고객이 취할 가능성이 가장 높은 선택 사항을 [!DNL Profile] 결정합니다.
 
 ## 다음 단계
 
