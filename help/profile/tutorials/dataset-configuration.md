@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
+keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;enable dataset
 solution: Adobe Experience Platform
 title: API를 사용하여 프로필 및 ID 서비스에 대한 데이터 집합 구성
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
 source-wordcount: '1020'
 ht-degree: 1%
@@ -25,14 +25,14 @@ ht-degree: 1%
 
 ## 시작하기
 
-이 자습서에서는 활성화된 데이터 세트를 관리하는 데 관련된 다양한 Adobe Experience Platform 서비스를 [!DNL Profile]제대로 이해해야 합니다. 이 자습서를 시작하기 전에 관련 [!DNL Platform] 서비스에 대한 설명서를 검토하십시오.
+이 자습서에서는 활성화된 데이터 세트를 관리하는 데 관련된 다양한 Adobe Experience Platform 서비스에 대해 [!DNL Profile]알아야 합니다. 이 자습서를 시작하기 전에 관련 [!DNL Platform] 서비스에 대한 설명서를 검토하십시오.
 
-- [!DNL Real-time Customer Profile](../home.md): 여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
-- [!DNL Identity Service](../../identity-service/home.md): 인제스트되는 여러 데이터 소스의 ID를 결합함으로써 사용할 수 [!DNL Real-time Customer Profile] [!DNL Platform]있습니다.
-- [!DNL Catalog Service](../../catalog/home.md): 데이터 세트를 만들고 데이터 세트를 [!DNL Real-time Customer Profile] 및 구성할 수 있는 RESTful API입니다 [!DNL Identity Service].
-- [!DNL Experience Data Model (XDM)](../../xdm/home.md): 고객 경험 데이터를 [!DNL Platform] 구성하는 표준화된 프레임워크
+- [!DNL Real-time Customer Profile](../home.md):여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
+- [!DNL Identity Service](../../identity-service/home.md):인제스트되는 여러 데이터 소스의 ID를 결합함으로써 사용할 수 [!DNL Real-time Customer Profile] [!DNL Platform]있습니다.
+- [!DNL Catalog Service](../../catalog/home.md):데이터 세트를 만들고 데이터 세트를 [!DNL Real-time Customer Profile] 및 구성할 수 있는 RESTful API입니다 [!DNL Identity Service].
+- [!DNL Experience Data Model (XDM)](../../xdm/home.md):고객 경험 데이터를 [!DNL Platform] 구성하는 표준화된 프레임워크
 
-다음 섹션에서는 Platform API를 성공적으로 호출하기 위해 알아야 할 추가 정보를 제공합니다.
+다음 섹션에서는 플랫폼 API를 성공적으로 호출하기 위해 알아야 할 추가 정보를 제공합니다.
 
 ### 샘플 API 호출 읽기
 
@@ -42,15 +42,15 @@ ht-degree: 1%
 
 API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 합니다](../../tutorials/authentication.md). 인증 자습서를 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
 
-- 인증: 무기명 `{ACCESS_TOKEN}`
+- 인증:무기명 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
 페이로드(POST, PUT, PATCH)이 포함된 모든 요청에는 추가 헤더가 필요합니다.
 
-- 컨텐츠 유형: application/json
+- 컨텐츠 유형:application/json
 
-의 모든 리소스 [!DNL Experience Platform] 는 특정 가상 샌드박스와 분리됩니다. API에 [!DNL Platform] 대한 모든 요청에는 작업이 수행할 샌드박스의 이름을 지정하는 헤더가 필요합니다. 의 샌드박스에 대한 자세한 내용 [!DNL Platform]은 [샌드박스 개요 설명서를 참조하십시오](../../sandboxes/home.md).
+의 모든 리소스 [!DNL Experience Platform] 는 특정 가상 샌드박스와 분리됩니다. API에 대한 모든 [!DNL Platform] 요청에는 작업이 수행할 샌드박스의 이름을 지정하는 헤더가 필요합니다. 의 샌드박스에 대한 자세한 내용 [!DNL Platform]은 [샌드박스 개요 설명서를 참조하십시오](../../sandboxes/home.md).
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
