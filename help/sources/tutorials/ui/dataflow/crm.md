@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;crm schema;crm;CRM;dataflow;Dataflow
 solution: Experience Platform
 title: UI에서 CRM 커넥터에 대한 데이터 흐름 구성
 topic: overview
+description: 데이터 흐름(Dataflow)은 소스에서 플랫폼 데이터 집합으로 데이터를 검색하고 인제스트하는 예약된 작업입니다. 이 자습서에서는 CRM 계정을 사용하여 새 데이터 흐름을 구성하는 절차를 제공합니다.
 translation-type: tm+mt
-source-git-commit: d80622aaa8408d640a1a80b6a37f4083344e7fa1
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '1325'
+source-wordcount: '1356'
 ht-degree: 0%
 
 ---
