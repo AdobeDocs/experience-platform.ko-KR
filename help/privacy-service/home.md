@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;GDPR;gdpr;ccpa:CCPA
 solution: Experience Platform
 title: Adobe Experience Platform Privacy Service
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: cc81d590f308c7e2677cec000c27e8aca42437f5
 workflow-type: tm+mt
 source-wordcount: '1498'
 ht-degree: 2%
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 더 나은 고객 경험을 제공하기 위해서는 고객의 개인 데이터를 수집 및 저장해야 합니다. 이 데이터를 사용하는 경우 고객의 개인 정보를 이해하고 존중해야 합니다. 새로운 법률 및 조직 규정은 사용자가 요청 시 데이터 저장소에서 개인 데이터를 액세스하거나 삭제할 수 있는 권한을 제공합니다.
 
-Adobe Experience Platform [!DNL Privacy Service] 는 비즈니스가 고객의 개인 데이터를 관리하는 데 요구되는 기본적인 변화에 대응하여 개발되었습니다. 데이터 개인 정보 보호 규정 준수를 자동화하는 [!DNL Privacy Service] 것이 가장 큰 목표이며, 이를 위반하면 엄청난 벌금이 부과되고 비즈니스 데이터 운영을 방해할 수 있습니다.
+Adobe Experience Platform [!DNL Privacy Service] 는 기업이 고객의 개인 정보를 관리하는 데 필요한 기본적인 변화에 대응하여 개발되었습니다. 데이터 개인 정보 보호 규정 준수를 자동화하는 [!DNL Privacy Service] 것이 가장 큰 목표이며, 이를 위반하면 엄청난 벌금이 부과되고 비즈니스 데이터 운영을 방해할 수 있습니다.
 
 [!DNL Privacy Service] 고객 데이터 요청을 관리하는 데 도움이 되는 RESTful API 및 사용자 인터페이스를 제공합니다. 이 [!DNL Privacy Service]를 통해 Adobe Experience Cloud 애플리케이션에서 개인 고객 데이터를 액세스하고 삭제하라는 요청을 제출할 수 있으므로 법률 및 조직의 개인 정보 보호 규정을 자동으로 준수할 수 있습니다.
 
@@ -61,7 +61,7 @@ Adobe Experience Platform [!DNL Privacy Service] 는 비즈니스가 고객의 �
 
 고객의 개인 정보 보호 요청을 [!DNL Privacy Service] 처리하려면 해당 고객에 대해 하나 이상의 고유한 ID 값을 요청 자체에서 제공해야 합니다. 고유 ID 값은 개인 및 데이터 저장소 내에 저장된 개인 데이터를 식별하는 데 사용할 수 있는 모든 [!DNL Experience Cloud] 정보입니다. [!DNL Privacy Service] 이 ID 정보를 사용하여 요청의 특성에 따라 고객의 개인 데이터를 찾아 처리합니다(액세스, 삭제 또는 수신 거부).
 
-CRM 시스템이 사용하는 [!DNL Experience Cloud] 응용 프로그램에 따라 각 고객에 제공해야 하는 ID 값의 유형과 수는 달라집니다. 일부 응용 프로그램은 자체 내부 고객 ID 값(예: Adobe Target ID)을 사용하는 반면, 다른 솔루션은 모든 [!DNL Experience Cloud Identity Service] [!DNL Experience Cloud] 응용 프로그램에서 고객 활동을 추적하는 Adobe(ECID)의 전역 식별자를 사용합니다. 또한 이메일 주소 또는 전화 번호와 같은 일반 개인 정보도 유효한 ID 데이터 역할을 할 수 있습니다.
+CRM 시스템이 사용하는 [!DNL Experience Cloud] 응용 프로그램에 따라 각 고객에 제공해야 하는 ID 값의 유형과 수는 달라집니다. 일부 응용 프로그램은 자체 내부 고객 ID 값(예: Adobe Target ID)을 사용하는 반면, 다른 솔루션은 모든 [!DNL Experience Cloud Identity Service] [!DNL Experience Cloud] 응용 프로그램에서 고객 활동을 추적하는 Adobe(ECID)의 글로벌 식별자를 사용합니다. 또한 이메일 주소 또는 전화 번호와 같은 일반 개인 정보도 유효한 ID 데이터 역할을 할 수 있습니다.
 
 개인 정보 요청의 [ID 데이터에 대한](./identity-data.md) 문서는 허용되는 ID 정보의 유형에 대한 자세한 정보를 제공합니다 [!DNL Privacy Service]. 또한 이 문서에서는 Adobe 기술을 활용하여 고객이 웹 사이트와 상호 작용할 때 고객의 적절한 ID 정보를 효과적으로 검색하고 해당 데이터를 API 요청 [!DNL Privacy Service] 으로 전송하는 방법에 대한 지침을 제공합니다.
 
