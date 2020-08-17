@@ -4,7 +4,7 @@ seo-title: Adobe Experience Platform 웹 SDK를 사용하여 Adobe Analytics에 
 description: Experience Platform 웹 SDK를 사용하여 링크 데이터를 Adobe Analytics으로 보내는 방법 살펴보기
 seo-description: Experience Platform 웹 SDK를 사용하여 링크 데이터를 Adobe Analytics으로 보내는 방법 살펴보기
 translation-type: tm+mt
-source-git-commit: ab73e4d793cf39c29ddca385487bf027002db883
+source-git-commit: b50082405cd0392ff827a83ad82091fbcd370b21
 workflow-type: tm+mt
 source-wordcount: '236'
 ht-degree: 0%
@@ -33,7 +33,7 @@ alloy("sendEvent", {
 });
 ```
 
-이 변수가 설정되어 있지 않더라도 분석은 페이지 보기를 기술적으로 기록하는 반면, 데이터에서 명시적인 페이지 보기를 기록하고 향후 구현을 가능하게 하려면 이 변수를 설정하는 것이 좋습니다.
+이 변수가 설정되어 있지 않더라도 분석은 기술적으로 페이지 보기를 기록하지만, 데이터에서 명시적인 페이지 보기를 기록하고 향후 구현을 가능하게 하려면 이 변수를 설정하는 것이 좋습니다.
 
 ## 추적 링크
 
