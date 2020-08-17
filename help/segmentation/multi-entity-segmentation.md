@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;segmentation;Segmentation;segment service;segments;Segments
 solution: Experience Platform
 title: 다중 엔티티 세그먼테이션
 topic: overview
+description: 다중 엔티티 세그먼테이션은 제품, 스토어 또는 기타 비프로필 클래스에 따라 추가 데이터로 프로필 데이터를 확장하는 기능입니다. 연결되면 추가 클래스의 데이터를 프로필 스키마가 기본인 것처럼 사용할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
 workflow-type: tm+mt
-source-wordcount: '372'
+source-wordcount: '409'
 ht-degree: 0%
 
 ---
@@ -24,9 +25,9 @@ ht-degree: 0%
 
 이 자습서에서는 세그멘테이션 사용과 관련된 다양한 Adobe Experience Platform 서비스에 대해 작업해야 합니다. 이 자습서를 시작하기 전에 다음 서비스에 대한 설명서를 검토하십시오.
 
-- [!DNL Real-time Customer Profile](../profile/home.md): 여러 소스에서 집계된 데이터를 기반으로 한 통합 소비자 프로필을 실시간으로 제공합니다.
-- [Adobe Experience Platform 세그멘테이션 서비스](./home.md): 실시간 고객 프로필에서 세그먼트를 만들 수 있습니다.
-- [!DNL Experience Data Model (XDM)](../xdm/home.md): 고객 경험 데이터를 [!DNL Platform] 구성하는 표준화된 프레임워크
+- [!DNL Real-time Customer Profile](../profile/home.md):여러 소스에서 집계된 데이터를 기반으로 한 통합 소비자 프로필을 실시간으로 제공합니다.
+- [Adobe Experience Platform 세그멘테이션 서비스](./home.md):실시간 고객 프로필에서 세그먼트를 만들 수 있습니다.
+- [!DNL Experience Data Model (XDM)](../xdm/home.md):고객 경험 데이터를 [!DNL Platform] 구성하는 표준화된 프레임워크
 
 ## XDM 관계를 정의하는 방법
 
