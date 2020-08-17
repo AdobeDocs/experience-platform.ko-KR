@@ -1,10 +1,11 @@
 ---
-title: Adobe 실시간 고객 데이터 Platform 시작하기
-seo-title: Adobe 실시간 고객 데이터 Platform 시작하기
-description: Adobe 실시간 고객 데이터 Platform을 위한 샘플 시나리오
-seo-description: Adobe 실시간 고객 데이터 Platform을 위한 샘플 시나리오
+keywords: RTCDP;rtcdp
+title: Adobe 실시간 고객 데이터 플랫폼 시작하기
+seo-title: Adobe 실시간 고객 데이터 플랫폼 시작하기
+description: Adobe 실시간 고객 데이터 플랫폼을 위한 샘플 시나리오
+seo-description: Adobe 실시간 고객 데이터 플랫폼을 위한 샘플 시나리오
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
 source-wordcount: '2326'
 ht-degree: 0%
@@ -12,11 +13,11 @@ ht-degree: 0%
 ---
 
 
-# Adobe 실시간 고객 데이터 Platform 시작하기
+# Adobe 실시간 고객 데이터 플랫폼 시작하기
 
-이 시작 가이드는 실시간 고객 데이터 Platform(실시간 CDP)의 샘플 구현을 안내합니다. 자체 구현을 설정할 때 예로 사용할 수 있습니다. 이 안내서에는 특정 예가 나와 있지만, 이 가이드는 설정을 만드는 동안 사용할 수 있는 추가 정보에 링크됩니다.
+이 시작 가이드는 Adobe 실시간 고객 데이터 플랫폼(실시간 CDP)의 샘플 구현을 안내합니다. 자체 구현을 설정할 때 예로 사용할 수 있습니다. 이 안내서에는 특정 예가 나와 있지만, 이 가이드는 설정을 만드는 동안 사용할 수 있는 추가 정보에 링크됩니다.
 
-이 예에서는 Adobe Experience Platform을 기반으로 하는 실시간 고객 데이터 Platform의 강력한 기능을 보여줍니다.
+이 예에서는 Adobe Experience Platform에서 제공하는 실시간 고객 데이터 플랫폼 Adobe의 강력한 기능을 보여줍니다.
 
 * 여러 소스에서 데이터 수집
 * 여러 문서를 하나의 [!DNL real-time customer profile]
@@ -108,9 +109,9 @@ Luma는 방문자의 행동을 Adobe Experience Platform의 사용자 프로필�
 
 ![image](assets/luma-personal.png)
 
-새라는 Adobe Experience Platform에서 그녀를 토대로 동적으로 전달되는 개인화된 홈 페이지 경험 [!DNL Real-time Customer Profile] 을 받습니다.
+새라는 Adobe Experience Platform에 있는 그녀를 토대로 동적으로 전달되는 개인화된 홈 페이지 경험 [!DNL Real-time Customer Profile] 을 받습니다.
 
-Julia는 과거 구매와 의류 및 장비 실행 관련성을 고려한 Adobe Target의 Adobe Sensei에서 개인화된 경험을 통해 관련 콘텐츠를 확인합니다. 루마 또한 남성들의 카탈로그 내용을 최근 자신의 검색어를 바탕으로 남성들의 달리기 기어로 재단했다.
+Julia는 과거 구매와 의류 및 장비 런칭 성향을 감안한 Adobe Target의 Adobe Sensei 기반의 개인화 덕분에 관련 컨텐츠를 볼 수 있습니다. 루마 또한 남성들의 카탈로그 내용을 최근 자신의 검색어를 바탕으로 남성들의 달리기 기어로 재단했다.
 
 또한 Sarah는 가장 최근에 본 항목을 기반으로 새로운 추천 트레이뿐만 아니라 주요 제품을 제공합니다.
 
@@ -118,9 +119,9 @@ Julia는 과거 구매와 의류 및 장비 실행 관련성을 고려한 Adobe 
 
 ### 고객 확보
 
-사라가 정신을 잃고 사이트를 떠나 그녀의 세션을 끝냅니다. 루마는 Adobe Experience Platform에서 데이터를 사용하여 사이트를 다시 방문할 수 있습니다.
+사라가 정신을 잃고 사이트를 떠나 그녀의 세션을 끝냅니다. 루마는 Adobe Experience Platform에 있는 자신의 데이터를 이용하여 사이트를 다시 방문할 수 있습니다.
 
-Adobe Experience Platform 기반의 실시간 고객 데이터 Platform은 고객 경험 관리를 위해 구축되었습니다. 조직에서는 다음을 수행할 수 있습니다.
+고객 경험 관리를 위해 Adobe Experience Platform에서 제공하는 Adobe 실시간 고객 데이터 플랫폼 조직에서는 다음을 수행할 수 있습니다.
 
 * 데이터 통합 및 활성화 간소화
 * 알려진 데이터 및 알 수 없는 데이터 사용 관리
@@ -201,7 +202,7 @@ Luma가 Sarah에 대한 모든 프로필 정보를 표시합니다. 여기에는
 
 ## 세그먼트
 
-강력한 Adobe Experience Platform 세분화 기능을 사용하면 마케터는 에서 캡처한 데이터를 기반으로 속성, 이벤트 및 기존 세그먼트를 결합할 수 있습니다 [!DNL Real-time Customer Profile].
+강력한 Adobe Experience Platform 세그멘테이션 기능을 사용하면 마케터는 에서 캡처한 데이터를 기반으로 속성, 이벤트 및 기존 세그먼트를 결합할 수 있습니다 [!DNL Real-time Customer Profile].
 
 <!-- ![image](assets/luma-segments.png) -->
 
@@ -285,7 +286,7 @@ Luma는 이러한 제어 기능을 사용하여 규정을 준수하고 시장에
 
 나중에 이메일을 열면 리타겟팅된 이메일이 표시됩니다. 그녀는 이메일로 루마 링크를 클릭한다.
 
-이 링크를 통해 사라는 모바일 루마 홈페이지로 이동하는데, 그곳에서 그녀는 Adobe Target이 제공하는 고도로 개인화된 경험을 보게 된다.
+이 링크에서 사라를 모바일 루마 홈페이지로 데려간다. 루마 홈페이지는 Adobe Target에서 제공하는 고도로 개인화된 경험을 보고 있다.
 
 * 그녀는 청동 회원으로 환영받는다.
 * 그녀는 &quot;선물&quot; 메시지를 본다.
@@ -298,7 +299,7 @@ Luma는 이러한 제어 기능을 사용하여 규정을 준수하고 시장에
 
 ## 프로필 분석
 
-Luma 마케터는 Adobe Experience Platform을 사용하여 실시간 CDP Dashboard에서 선물 보호자 세그먼트를 확인합니다. 그들은 시간이 지남에 따라 이 계획의 결과를 보고 그것이 증가하고 있다는 것을 봅니다. 고객은 제안에 반응하고 더 많은 비용을 지출하고 있습니다.
+Luma 마케터는 Adobe Experience Platform을 사용하여 실시간 CDP 대시보드에서 기여 세그먼트를 확인합니다. 그들은 시간이 지남에 따라 이 계획의 결과를 보고 그것이 증가하고 있다는 것을 봅니다. 고객은 제안에 반응하고 더 많은 비용을 지출하고 있습니다.
 
 이러한 통찰력을 통해 마케터는 이러한 데이터를 CDP에서 사용할 수 있고 Sarah와 같은 고객을 세그먼트에 연결함으로써 이러한 신호에 대한 조치를 취할 수 있습니다.
 
