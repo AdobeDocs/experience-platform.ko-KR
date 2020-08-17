@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;streaming
 solution: Experience Platform
 title: 스트리밍 통합 유효성 검사
 topic: overview
+description: 스트리밍 통합 기능을 사용하면 스트리밍 끝점을 실시간으로 사용하여 데이터를 Adobe Experience Platform에 업로드할 수 있습니다. 스트리밍 통합 API는 동기식 및 비동기식 두 가지 인증 모드를 지원합니다.
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '815'
+source-wordcount: '843'
 ht-degree: 3%
 
 ---
@@ -14,14 +15,14 @@ ht-degree: 3%
 
 # 스트리밍 통합 유효성 검사
 
-스트리밍 통합 기능을 사용하면 스트리밍 끝점을 실시간으로 사용하여 Adobe Experience Platform에 데이터를 업로드할 수 있습니다. 스트리밍 통합 API는 동기식 및 비동기식 두 가지 인증 모드를 지원합니다.
+스트리밍 통합 기능을 사용하면 스트리밍 끝점을 실시간으로 사용하여 데이터를 Adobe Experience Platform에 업로드할 수 있습니다. 스트리밍 통합 API는 동기식 및 비동기식 두 가지 인증 모드를 지원합니다.
 
 ## 시작하기
 
-이 가이드는 다음과 같은 Adobe Experience Platform 구성 요소에 대해 작업해야 합니다.
+이 가이드는 Adobe Experience Platform의 다음 구성 요소에 대한 작업 이해를 필요로 합니다.
 
-- [!DNL Experience Data Model (XDM) System](../../xdm/home.md): 고객 경험 데이터를 [!DNL Experience Platform] 구성하는 표준화된 프레임워크
-- [!DNL Streaming Ingestion](../streaming-ingestion/overview.md): 데이터를 보낼 수 있는 방법 중 하나입니다 [!DNL Experience Platform].
+- [!DNL Experience Data Model (XDM) System](../../xdm/home.md):고객 경험 데이터를 [!DNL Experience Platform] 구성하는 표준화된 프레임워크
+- [!DNL Streaming Ingestion](../streaming-ingestion/overview.md):데이터를 보낼 수 있는 방법 중 하나입니다 [!DNL Experience Platform].
 
 ### 샘플 API 호출 읽기
 
@@ -31,7 +32,7 @@ ht-degree: 3%
 
 API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 합니다](../../tutorials/authentication.md). 인증 자습서를 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
 
-- 인증: 무기명 `{ACCESS_TOKEN}`
+- 인증:무기명 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
