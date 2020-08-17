@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;ECID;ecid
 solution: Experience Platform
 title: Adobe Experience Platform ECID
 topic: overview
+description: ECID(Experience Cloud 식별자)는 ID 관리에 대한 액세스를 제공하는 클라이언트 측 모듈로, 세 가지 기본 기능을 제공합니다.
 translation-type: tm+mt
-source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+source-git-commit: 4c3a947051c11860ab4f0f53b48d8f4bda8dc195
 workflow-type: tm+mt
-source-wordcount: '162'
-ht-degree: 9%
+source-wordcount: '181'
+ht-degree: 8%
 
 ---
 
@@ -20,7 +21,7 @@ ht-degree: 9%
 - 파트너와 동기화 제공
 - 오프라인 또는 다른 ID와 그래프에 연결하는 피드 경로 연결
 
-온라인 사용자를 식별하려면 Adobe Experience Platform의 모든 솔루션에서 방문자를 식별하는 범용 및 영구 ID를 제공하는 ECID를 사용하여 사이트 또는 모바일 앱을 구현해야 합니다.
+온라인 사용자를 식별하려면 사이트 또는 모바일 앱을 ECID로 구현해야 합니다. ECID는 Adobe Experience Platform의 모든 솔루션에서 방문자를 식별하는 범용 및 영구 ID를 제공합니다.
 
 웹 사이트 구현을 사용하는 경우 [여기에서 리소스를 살펴보십시오](https://docs.adobe.com/content/help/ko-KR/id-service/using/home.html).
 
