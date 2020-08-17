@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;source connectors;source connector;sources;data sources;data source;data source connection
 solution: Experience Platform
 title: Adobe Experience Platform 소스 커넥터 개요
 topic: overview
+description: Adobe Experience Platform은 플랫폼 서비스를 사용하여 들어오는 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 외부 소스에서 데이터를 수집할 수 있도록 허용합니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 등 다양한 소스의 데이터를 인제스트할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 8e39cc206efa3fc314ae689845c88f0923ac1743
+source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
 workflow-type: tm+mt
-source-wordcount: '801'
+source-wordcount: '847'
 ht-degree: 0%
 
 ---
