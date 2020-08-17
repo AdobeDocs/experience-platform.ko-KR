@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Sandbox;sandbox
 solution: Experience Platform
 title: 샌드박스 만들기
 topic: developer guide
+description: '''/sandbox'' 끝점에 POST 요청을 만들어 새 샌드박스를 만들 수 있습니다.'
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
 workflow-type: tm+mt
-source-wordcount: '136'
+source-wordcount: '151'
 ht-degree: 2%
 
 ---
@@ -44,7 +45,7 @@ curl -X POST \
 | 속성 | 설명 |
 | --- | --- |
 | `name` | 이후 요청에서 샌드박스에 액세스하는 데 사용할 식별자입니다. 이 값은 고유해야 하며 가능한 설명적인 방법으로 만드는 것이 좋습니다. 공백이나 대문자를 포함할 수 없습니다. |
-| `title` | Platform 사용자 인터페이스에서 표시 용도로 사용되는 읽을 수 있는 이름입니다. |
+| `title` | 플랫폼 사용자 인터페이스에 표시용으로 사용되는 읽을 수 있는 이름입니다. |
 | `type` | 만들 샌드박스 유형입니다. 현재 조직은 &quot;개발&quot; 유형의 샌드박스만 만들 수 있습니다. |
 
 **응답**
