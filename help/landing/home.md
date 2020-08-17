@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;CJA;journey analytics;customer journey analytics;campaign orchestration;orchestration;customer journey;journey
 solution: Experience Platform
 title: Adobe Experience Platform 개요
 topic: getting started
+description: Adobe Experience Platform은 고객 경험을 향상시키는 완벽한 솔루션을 구축하고 관리하기 위해 시장에서 가장 강력하고 유연하며 개방적인 시스템입니다. Experience Platform을 통해 기업은 모든 시스템의 고객 데이터와 콘텐츠를 통합 관리하고 표준화하고 데이터 과학 및 머신 러닝을 적용하여 개인화된 풍부한 경험의 디자인과 전달을 대폭 향상시킬 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 99bee24a8b1a0a212424ca63464f7733adba2ba2
+source-git-commit: 4c3a947051c11860ab4f0f53b48d8f4bda8dc195
 workflow-type: tm+mt
-source-wordcount: '815'
+source-wordcount: '872'
 ht-degree: 3%
 
 ---
@@ -20,7 +21,7 @@ ht-degree: 3%
 
 Adobe Experience Platform은 고객 경험을 향상시키는 완벽한 솔루션을 구축하고 관리하기 위해 시장에서 가장 강력하고 유연하며 개방적인 시스템입니다. [!DNL Experience Platform] 기업은 모든 시스템의 고객 데이터와 콘텐츠를 통합 관리하고 표준화할 수 있으며 데이터 과학 및 머신 러닝을 적용하여 개인화된 풍부한 경험의 디자인과 전달을 대폭 향상시킬 수 있습니다.
 
-개방형 API를 기반으로 개발자에게 시스템의 전체 기능을 [!DNL Experience Platform] 제공하여 익숙한 툴을 사용하여 기업 솔루션을 손쉽게 통합할 수 있도록 지원합니다. [!DNL Experience Platform] 또한 파트너가 필요에 따라 자체 제품과 기술을 구축하여 통합할 수 있도록 지원합니다. 이러한 기능과 유연성은 시장 [!DNL Experience Platform] 에서 독보적인 존재입니다. 파트너, 고객 및 개발자 커뮤니티에서는 경험 비즈니스를 주도하는 혁신적인 솔루션을 구축할 수 있는 기반을 제공합니다. 고객의 전체 상황 및 개별 고객의 취향에 따라 완벽하게 개인화된 경험을 지속적으로 개선하여 고객의 기대치를 높입니다.
+개방형 API를 기반으로 개발자에게 시스템의 전체 기능을 [!DNL Experience Platform] 제공하여 익숙한 툴을 사용하여 기업 솔루션을 손쉽게 통합할 수 있도록 지원합니다. [!DNL Experience Platform] 또한 파트너가 필요에 따라 자체 제품과 기술을 구축하여 통합할 수 있도록 지원합니다. 이러한 기능과 유연성은 시장 [!DNL Experience Platform] 에서 독보적인 존재입니다. 파트너, 고객 및 개발자 커뮤니티에서는 경험 비즈니스를 주도하는 혁신적인 솔루션을 구축할 수 있는 기반을 제공합니다.고객의 전체 상황 및 개별 고객의 취향에 따라 완벽하게 개인화된 경험을 지속적으로 개선하여 고객의 기대치를 높입니다.
 
 다음 비디오에서는 먼저 고객의 관점에서, 그리고 뒤에서 기술적인 측면에서 풍부하고 연관성 있는 실시간 경험을 만드는 방법을 간략하게 설명합니다. [!DNL Experience Platform]
 
@@ -110,15 +111,15 @@ Adobe Experience Platform 설명서는 여러 언어로 제공됩니다. 언어�
 
 ## 참조 문서 및 리소스
 
-* [**릴리스 노트&#x200B;**](../release-notes/latest/latest.md)<br/>최신 릴리스[!DNL Experience Platform]에 대한 정보를 확인하고 이전 릴리스를 검토할 수 있습니다.
+* [**릴리스 노트**](../release-notes/latest/latest.md)<br/>&#x200B;최신 릴리스 [!DNL Experience Platform] 에 대한 정보를 확인하고 이전 릴리스를 검토할 수 있습니다.
 
-* [**용어집&#x200B;**](glossary.md)<br/>Adobe Experience Platform 용어 검토
+* [**용어집**](glossary.md)<br/> Adobe Experience Platform 용어 검토
 
-* [**문제 해결 가이드&#x200B;**](troubleshooting.md)<br/>일반적인 오류에 대한 해결 방법과 FAQ에 대한 답변을 찾을 수 있습니다.
+* [**문제 해결 가이드**](troubleshooting.md)<br/>&#x200B;일반적인 오류에 대한 해결 방법과 FAQ에 대한 답변을 찾을 수 있습니다.
 
-* [**API 기본&#x200B;**](api-fundamentals.md)<br/>API 작업에 대한 기본 사항[!DNL Platform]을 알아봅니다.
+* [**API 기본**](api-fundamentals.md)<br/> API 작업에 대한 기본 사항 [!DNL Platform] 을 알아봅니다.
 
-* [**API 참조&#x200B;**](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)<br/>헤더, 매개 변수, 샘플 요청 및 응답을 비롯한[!DNL Experience Platform]API를 검색합니다.*이러한 문서는 Adobe I/O에 호스팅됩니다.*
+* [**API 참조**](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)<br/>헤더, 매개 변수, 샘플 요청 및 응답을 비롯한 [!DNL Experience Platform] API를 검색합니다. *이러한 문서는 Adobe I/O에 호스팅됩니다.*
 
 ## Adobe Experience Platform 통합 비디오 리소스
 
@@ -126,11 +127,11 @@ Adobe Experience Platform 설명서는 여러 언어로 제공됩니다. 언어�
 
 >[!VIDEO](https://video.tv.adobe.com/v/32554?quality=12&learn=on)
 
-Adobe Experience Platform이 제공하는 주요 이점 중 하나는 다른 기존 Adobe 서비스와 통합할 수 있다는 것입니다. 다음 비디오에서는 서비스가 Adobe Analytics, Adobe Target, Adobe Campaign, Adobe Experience Manager,, [!DNL Experience Platform] 및 [!DNL Experience Cloud] 같은 [!DNL Customer Attributes]애플리케이션 및 기능과 어떻게 통합되는지 [!DNL Audience Library][!DNL Experience Platform Launch]간략하게 설명합니다.
+Adobe Experience Platform이 제공하는 주요 혜택 중 하나는 다른 기존 Adobe 서비스와 통합되는 능력이다. 다음 비디오에서는 Adobe Analytics, Adobe Target, Adobe Campaign, Adobe Experience Manager, [!DNL Experience Platform] 및 [!DNL Experience Cloud] 같은 [!DNL Customer Attributes]애플리케이션 및 기능과 서비스가 통합되는 방법에 대해 간략하게 설명합니다 [!DNL Audience Library][!DNL Experience Platform Launch].
 
 >[!VIDEO](https://video.tv.adobe.com/v/32553?quality=12&learn=on)
 
-Adobe Experience Platform을 지원하는 아키텍처에 대한 자세한 내용은 다음 비디오를 참조하십시오.
+Adobe Experience Platform의 기능에 대한 자세한 내용은 다음 비디오를 참조하십시오.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32456?quality=12&learn=on)
 
