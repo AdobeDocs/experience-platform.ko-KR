@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;GDPR;gdpr
 solution: Experience Platform
 title: GDPR 용어
 topic: troubleshooting
+description: 다음은 개인 정보 보호 규정(GDPR)과 관련된 주요 용어의 정의 목록입니다.
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
 workflow-type: tm+mt
-source-wordcount: '1066'
+source-wordcount: '1084'
 ht-degree: 5%
 
 ---
@@ -74,7 +75,7 @@ __약정 그룹:__ 지배적인 사업과 그 통제된 목표들.
 
 ## I
 
-__Identity Management 서비스(IMS):__ Adobe ID 사용자 인증 및 Adobe 리소스에 대한 인증을 위한 Federated ID 및 OAuth 2.0의 Adobe 구현 해당 사용자가 Adobe 서비스에 로그인하고 액세스할 수 있도록 하려면 IMS와 Adobe 애플리케이션 또는 서비스를 통합해야 합니다. Users can log in directly with Renga (the Adobe identity services provider), or log in through a trusted third party authentication domain (such as [!DNL Google], [!DNL Facebook], or a corporate/organization LDAP).
+__Identity Management 서비스(IMS):__ Adobe ID 사용자 인증 및 Adobe 리소스 인증을 위한 Federated ID 및 OAuth 2.0의 Adobe 구현 해당 사용자가 Adobe 서비스에 로그인하고 액세스할 수 있도록 하려면 IMS와 Adobe 애플리케이션 또는 서비스를 통합해야 합니다. Users can log in directly with Renga (the Adobe identity services provider), or log in through a trusted third party authentication domain (such as [!DNL Google], [!DNL Facebook], or a corporate/organization LDAP).
 
 __IMS 조직 ID:__ 사용자 로그인이 필요하지 않은 서비스 간 인증을 위한 Adobe 인증 토큰을 참조합니다. IMS 클라이언트에 발급되고 연관된 사용자가 없습니다. IMS 클라이언트는 서비스 간 백 채널 요청을 승인하기 위해 서비스 토큰이 필요합니다. (&quot;시스템 토큰&quot;이라는 용어는 종종 서비스 토큰을 의미하는 데 사용됩니다.)
 
@@ -86,7 +87,7 @@ __IMS 조직 ID:__ 사용자 로그인이 필요하지 않은 서비스 간 인�
 
 ## M
 
-__기본 설정:__ 데이터 처리를 둘러싼 주요 결정이 이루어진 연합 내의 장소 를 참조하십시오.
+__기본 설정:__ 데이터 처리를 둘러싼 주요 결정이 이루어진 연합 내의 장소를 참조하십시오.
 
 ## N
 
@@ -100,7 +101,7 @@ __개인 데이터 침해:__ 우발적 또는 불법적인 접근, 파괴, 오�
 
 __개인 정보 보호:__ 시스템 설계가 시작된 시점으로부터 데이터 보호를 추가하는 것이 아니라 포함시키는 것을 요구하는 원칙.
 
-__개인 정보 영향 평가__: 처리된 개인 데이터 및 데이터를 보호하기 위한 정책을 분석하여 개체의 개인 정보 보호 위험을 식별 및 줄이는 데 사용되는 도구입니다.
+__개인 정보 영향 평가__:처리된 개인 데이터 및 데이터를 보호하기 위한 정책을 분석하여 개체의 개인 정보 보호 위험을 식별 및 줄이는 데 사용되는 도구입니다.
 
 __처리:__ 수집, 사용, 기록 등 자동화된 방법을 통해 개인 데이터에 대해 수행되는 모든 작업
 
