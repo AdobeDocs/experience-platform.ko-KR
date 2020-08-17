@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;identity namespace;Identity namespace
 solution: Experience Platform
 title: Adobe Experience Platform ID 서비스 문제 해결 가이드
 topic: troubleshooting
+description: 이 문서에서는 Adobe Experience Platform ID 서비스에 대한 FAQ와 일반적인 오류에 대한 문제 해결 가이드를 제공합니다.
 translation-type: tm+mt
-source-git-commit: 5d7e6387382e20b3e7f07070006b6d9d59ac47eb
+source-git-commit: 04efbf63741ef39bbf0b22795be74087f1f7c595
 workflow-type: tm+mt
-source-wordcount: '2225'
+source-wordcount: '2248'
 ht-degree: 1%
 
 ---
