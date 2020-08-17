@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform API 기본 사항
 topic: getting started
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: fa439ebb9d02d4a08c8ed92b18f2db819d089174
 workflow-type: tm+mt
-source-wordcount: '423'
+source-wordcount: '422'
 ht-degree: 2%
 
 ---
@@ -80,8 +80,7 @@ JSON 포인터는 JSON 문서 내의 특정 값을 식별하기 위한 표준화
 | `"/definitions/loyalty/properties/_{TENANT_ID}/properties/loyaltyLevel/enum"` | `["platinum", "gold", "silver", "bronze"]` |
 | `"/definitions/loyalty/properties/_{TENANT_ID}/properties/loyaltyLevel/enum/0"` | `"platinum"` |
 
->[!N참고]
->
+>[!NOTE]
 >
 >XDM 설명자의 `xdm:sourceProperty` 및 `xdm:destinationProperty` 속성 [!DNL Experience Data Model] 을 처리할 때 모든 `properties` 키는 JSON 포인터 문자열에서 **제외되어야** 합니다. 자세한 내용은 설명자에 대한 [!DNL Schema Registry] API 개발자 [가이드](../xdm/api/descriptors.md) 하위 가이드를 참조하십시오.
 
@@ -98,14 +97,14 @@ JSON 포인터는 JSON 문서 내의 특정 값을 식별하기 위한 표준화
 }
 ```
 
-* `op`: 패치 작업의 유형입니다. JSON 패치는 몇 가지 서로 다른 작업 유형을 지원하지만 API의 일부 PATCH 작업은 모든 작업 유형과 호환되지 [!DNL Platform] 않습니다. 사용 가능한 작업 유형은 다음과 같습니다.
+* `op`:패치 작업의 유형입니다. JSON 패치는 몇 가지 서로 다른 작업 유형을 지원하지만 API의 일부 PATCH 작업은 모든 작업 유형과 호환되지 [!DNL Platform] 않습니다. 사용 가능한 작업 유형은 다음과 같습니다.
    * `add`
    * `remove`
    * `replace`
    * `copy`
    * `move`
    * `test`
-* `path`: 업데이트할 JSON 구조의 일부를 [JSON 포인터 표기법으로](#json-pointer) 식별합니다.
+* `path`:업데이트할 JSON 구조의 일부를 [JSON 포인터 표기법으로](#json-pointer) 식별합니다.
 
 에 표시된 작업 유형에 따라 JSON 패치 객체 `op`에 추가 속성이 필요할 수 있습니다. 다양한 JSON 패치 작업 및 필요한 구문에 대한 자세한 내용은 [JSON 패치 설명서를 참조하십시오](http://jsonpatch.com/).
 
@@ -115,4 +114,4 @@ JSON 스키마는 JSON 데이터의 구조를 설명하고 확인하는 데 사�
 
 ## 다음 단계
 
-이 문서에서는 JSON 기반 리소스 관리와 관련된 기술 및 구문을 소개합니다 [!DNL Experience Platform]. 우수 사례 및 FAQ를 비롯하여 [!DNL Platform] API 작업에 대한 자세한 내용은 [Platform 문제 해결 가이드를 참조하십시오](troubleshooting.md).
+이 문서에서는 JSON 기반 리소스 관리와 관련된 기술 및 구문을 소개합니다 [!DNL Experience Platform]. 우수 사례, FAQ 등 [!DNL Platform] API 작업에 대한 자세한 내용은 [플랫폼 문제 해결 가이드를 참조하십시오](troubleshooting.md).
