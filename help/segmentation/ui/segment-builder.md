@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;segment;Segment;segment builder;Segment builder
 solution: Experience Platform
 title: 세그멘테이션 서비스 세그먼트 빌더 사용 안내서
 topic: ui guide
+description: '세그먼트 빌더는 프로필 데이터 요소와 상호 작용할 수 있는 풍부한 작업 공간을 제공합니다. 작업 영역에서는 데이터 속성을 나타내는 데 사용되는 드래그 앤 드롭 타일과 같이 규칙을 작성하고 편집하기 위한 직관적인 컨트롤을 제공합니다. '
 translation-type: tm+mt
-source-git-commit: ab43c677ab45c7aa047a50049c0dd8613b003403
+source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
 workflow-type: tm+mt
-source-wordcount: '1689'
+source-wordcount: '1723'
 ht-degree: 0%
 
 ---
@@ -68,7 +69,7 @@ Lucene의 [!UICONTROL 검색 구문을 활용하는] 검색 막대를 사용하�
 
 세그먼트 정의는 대상 대상의 주요 특성이나 행동을 설명하는 데 사용되는 규칙 모음입니다. 이러한 규칙은 의 가운데에 있는 규칙 빌더 캔버스를 사용하여 만듭니다 [!DNL Segment Builder].
 
-세그먼트 정의에 새 규칙을 추가하려면 필드 탭에서 **[!UICONTROL 타일을]** 드래그하여 규칙 빌더 캔버스에 놓습니다. 그런 다음 추가되는 데이터의 유형에 따라 컨텍스트별 옵션이 제공됩니다. 사용 가능한 데이터 유형은 다음과 같습니다. 문자열, 날짜, [!DNL ExperienceEvents]이벤트 유형 [!UICONTROL 및]대상자 [!UICONTROL 등을]참조하십시오.
+세그먼트 정의에 새 규칙을 추가하려면 필드 탭에서 **[!UICONTROL 타일을]** 드래그하여 규칙 빌더 캔버스에 놓습니다. 그런 다음 추가되는 데이터의 유형에 따라 컨텍스트별 옵션이 제공됩니다. 사용 가능한 데이터 유형은 다음과 같습니다.문자열, 날짜, [!DNL ExperienceEvents]이벤트 유형 [!UICONTROL 및]대상자 [!UICONTROL 등을]참조하십시오.
 
 ![](../images/ui/segment-builder/rule-builder-canvas.png)
 
@@ -140,7 +141,7 @@ Lucene의 [!UICONTROL 검색 구문을 활용하는] 검색 막대를 사용하�
 
 >[!NOTE]
 >
->대상 추정은 해당 일의 샘플 데이터의 샘플 크기를 사용하여 생성됩니다. 프로필 스토어에 1백만 개 미만의 개체가 있는 경우 전체 데이터 세트가 사용됩니다. 100만개에서 2000만개가 사용됩니다. 2천만 개 이상의 개체에 대해 전체 개체의 5%가 사용됩니다. 세그먼트 예측 생성에 대한 자세한 내용은 세그먼트 작성 자습서의 [예측 생성 섹션](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) 에서 확인할 수 있습니다.
+>대상 추정은 해당 일의 샘플 데이터의 샘플 크기를 사용하여 생성됩니다. 프로필 스토어에 1백만 개 미만의 개체가 있는 경우 전체 데이터 세트가 사용됩니다.100만개에서 2000만개가 사용됩니다.2천만 개 이상의 개체에 대해 전체 개체의 5%가 사용됩니다. 세그먼트 예측 생성에 대한 자세한 내용은 세그먼트 작성 자습서의 [예측 생성 섹션](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) 에서 확인할 수 있습니다.
 
 ## 다음 단계 및 추가 리소스 {#next-steps}
 
