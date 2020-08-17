@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: 실시간 고객 프로필 개요
 topic: guide
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: fa439ebb9d02d4a08c8ed92b18f2db819d089174
 workflow-type: tm+mt
-source-wordcount: '1666'
+source-wordcount: '1665'
 ht-degree: 1%
 
 ---
@@ -22,7 +22,7 @@ Adobe Experience Platform을 사용하면 고객이 브랜드와 언제 어디�
 
 ### [!DNL Profile] 데이터 저장소
 
-데이터 수집 [!DNL Real-time Customer Profile] 을 처리하고 ID 매핑을 통해 관련 데이터 [!DNL Identity Service] 를 병합하기 위해 Adobe Experience Platform을 사용하지만 스토어의 자체 데이터를 [!DNL Profile] 유지합니다. 즉, 스토어 [!DNL Profile] 는 [!DNL Catalog] 데이터([!DNL Data Lake]) 및 [!DNL Identity Service] 데이터(ID 그래프)와 별개입니다.
+데이터 수집 [!DNL Real-time Customer Profile] 을 처리하고 ID 매핑을 통해 관련 데이터 [!DNL Identity Service] 를 병합하는 Adobe Experience Platform을 사용하지만 스토어의 자체 데이터를 [!DNL Profile] 유지합니다. 즉, 스토어 [!DNL Profile] 는 [!DNL Catalog] 데이터([!DNL Data Lake]) 및 [!DNL Identity Service] 데이터(ID 그래프)와 별개입니다.
 
 ### [!DNL Profile] 및 [!DNL Platform] 서비스
 
@@ -32,7 +32,7 @@ Adobe Experience Platform을 사용하면 고객이 브랜드와 언제 어디�
 
 ### 프로필 및 데이터 기록
 
-프로필은 제목, 조직 또는 개인을 레코드 데이터라고 하는 표현입니다. 예를 들어 제품 프로필에는 SKU와 설명이 포함될 수 있지만 개인 프로필에는 이름, 성 및 이메일 주소와 같은 정보가 포함되어 있습니다. 를 [!DNL Experience Platform]사용하면 프로파일을 사용자 정의하여 비즈니스와 관련된 데이터 유형을 사용할 수 있습니다. 표준 [!DNL Experience Data Model] (XDM) [!DNL Individual Profile] 클래스는 고객 레코드 데이터를 설명할 때 스키마를 작성하고 Platform 서비스 간의 여러 상호 작용에 데이터 통합 요소를 제공하는 기본 클래스입니다. 스키마 작업에 대한 자세한 내용 [!DNL Experience Platform]은 [XDM 시스템 개요를 읽어 보십시오](../xdm/home.md).
+프로필은 제목, 조직 또는 개인을 레코드 데이터라고 하는 표현입니다. 예를 들어 제품 프로필에는 SKU와 설명이 포함될 수 있지만 개인 프로필에는 이름, 성 및 이메일 주소와 같은 정보가 포함되어 있습니다. 를 [!DNL Experience Platform]사용하면 프로파일을 사용자 정의하여 비즈니스와 관련된 데이터 유형을 사용할 수 있습니다. 표준 [!DNL Experience Data Model] (XDM) [!DNL Individual Profile] 클래스는 고객 레코드 데이터를 설명할 때 스키마를 작성하고 플랫폼 서비스 간의 다양한 상호 작용에 데이터 통합 요소를 제공하는 기본 클래스입니다. 스키마 작업에 대한 자세한 내용 [!DNL Experience Platform]은 [XDM 시스템 개요를 읽어 보십시오](../xdm/home.md).
 
 ### 시계열 이벤트
 
@@ -44,7 +44,7 @@ Adobe Experience Platform을 사용하면 고객이 브랜드와 언제 어디�
 
 ### 세그먼테이션
 
-Adobe Experience Platform [!DNL Segmentation Service] 는 개별 고객의 경험을 향상시키는 데 필요한 고객을 생성합니다. 대상 세그먼트가 만들어지면 해당 세그먼트의 ID가 모든 적격한 프로필에 대한 세그먼트 구성원 자격 목록에 추가됩니다. 세그먼트 규칙은 RESTful API 및 세그먼트 빌더 사용자 인터페이스를 사용하여 [!DNL Real-time Customer Profile] 데이터에 작성하고 적용됩니다. 세그멘테이션에 대한 자세한 내용은 세그멘테이션 [서비스 개요를 읽어 보십시오](../segmentation/home.md).
+Adobe Experience Platform [!DNL Segmentation Service] 는 개별 고객의 경험을 향상시키는 데 필요한 고객을 제작합니다. 대상 세그먼트가 만들어지면 해당 세그먼트의 ID가 모든 적격한 프로필에 대한 세그먼트 구성원 자격 목록에 추가됩니다. 세그먼트 규칙은 RESTful API 및 세그먼트 빌더 사용자 인터페이스를 사용하여 [!DNL Real-time Customer Profile] 데이터에 작성하고 적용됩니다. 세그멘테이션에 대한 자세한 내용은 세그멘테이션 [서비스 개요를 읽어 보십시오](../segmentation/home.md).
 
 ### 프로필 조각 및 결합 스키마 {#profile-fragments-and-union-schemas}
 
@@ -71,18 +71,19 @@ Adobe Experience Platform [!DNL Segmentation Service] 는 개별 고객의 경�
 
 ### 가장자리 투영 구성 및 대상
 
-여러 채널에서 실시간으로 고객의 기대에 부응하는 개인화된 경험을 제공하기 위해서는 변경 사항이 발생하면 즉시 정확한 데이터를 제공하고 지속적으로 업데이트해야 합니다. Adobe Experience Platform을 사용하면 가장자리라고 하는 요소를 사용하여 데이터에 대한 실시간 액세스를 가능하게 합니다. Edge는 데이터를 저장하고 애플리케이션에서 쉽게 액세스할 수 있도록 하는 지리적으로 배치된 서버입니다. 예를 들어 Adobe Target 및 Adobe Campaign과 같은 Adobe 애플리케이션은 실시간으로 개인화된 고객 경험을 제공하기 위해 가장자리를 사용합니다. 데이터는 투영에 의해 모서리로 라우팅되고, 투영 대상은 데이터가 전송될 가장자리를 정의하며, 가장자리에서 사용할 특정 정보를 정의하는 투영 구성이 있습니다. 자세한 내용을 살펴보고 [!DNL Real-time Customer Profile] API를 사용하여 투영 작업을 시작하려면 [가장자리 투영 끝점 안내서를 참조하십시오](api/edge-projections.md).
+여러 채널에서 실시간으로 고객의 기대에 부응하는 개인화된 경험을 제공하기 위해서는 변경 사항이 발생하면 즉시 정확한 데이터를 제공하고 지속적으로 업데이트해야 합니다. Adobe Experience Platform은 가장자리라고 하는 요소를 사용하여 데이터에 대한 실시간 액세스를 가능하게 합니다. Edge는 데이터를 저장하고 애플리케이션에서 쉽게 액세스할 수 있도록 하는 지리적으로 배치된 서버입니다. 예를 들어, Adobe Target 및 Adobe Campaign과 같은 Adobe 애플리케이션은 실시간으로 개인화된 고객 경험을 제공하기 위해 가장자리를 사용합니다. 데이터는 투영에 의해 모서리로 라우팅되고, 투영 대상은 데이터가 전송될 가장자리를 정의하며, 가장자리에서 사용할 특정 정보를 정의하는 투영 구성이 있습니다. 자세한 내용을 살펴보고 [!DNL Real-time Customer Profile] API를 사용하여 투영 작업을 시작하려면 [가장자리 투영 끝점 안내서를 참조하십시오](api/edge-projections.md).
 
 ## 데이터 추가 [!DNL Real-time Customer Profile]
 
 [!DNL Platform] 실시간 스트리밍 수집 및 일괄 처리를 지원하여 기록 및 시간 시리즈 데이터 [!DNL Profile]를 전송하도록 구성할 수 있습니다. 자세한 내용은 실시간 고객 프로필에 데이터를 [추가하는 방법에 대한 개요를 설명하는 자습서를 참조하십시오](tutorials/add-profile-data.md).
 
->[!N참고]
+>[!NOTE]
+>
 >Adobe 솔루션을 통해 수집된 데이터(예: [!DNL Analytics Cloud], [!DNL Marketing Cloud]및 [!DNL Advertising Cloud]포함) [!DNL Experience Platform] 는 유입되어 수집됩니다 [!DNL Profile].
 
 ### [!DNL Profile] 지표 수집
 
-통찰력 통찰력을 사용하면 Adobe Experience Platform에서 주요 지표를 표시할 수 있습니다. 다양한 기능에 대한 [!DNL Platform] 사용량 통계 및 성과 지표 외에도, [!DNL Platform] 들어오는 요청률, 성공률, 인제스트된 레코드 크기 등을 파악할 수 있는 특정 [!DNL Profile]관련 지표가 있습니다. 자세한 내용은 관찰성 통찰력 개요 [를](../observability/home.md)읽고 전체 지표 목록을 보려면 [!DNL Profile] 사용 가능한 지표에 대한 설명서를 참조하십시오 [](../observability/metrics.md).
+통찰력 통찰력을 통해 Adobe Experience Platform의 주요 지표를 표시할 수 있습니다. 다양한 기능에 대한 [!DNL Platform] 사용량 통계 및 성과 지표 외에도, [!DNL Platform] 들어오는 요청률, 성공률, 인제스트된 레코드 크기 등을 파악할 수 있는 특정 [!DNL Profile]관련 지표가 있습니다. 자세한 내용은 관찰성 통찰력 개요 [를](../observability/home.md)읽고 전체 지표 목록을 보려면 [!DNL Profile] 사용 가능한 지표에 대한 설명서를 참조하십시오 [](../observability/metrics.md).
 
 ## [!DNL Data governance] 및 [!DNL Privacy]
 
