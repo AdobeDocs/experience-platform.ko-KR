@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;popular topics
+keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;popular topics;jupyterlab
 solution: Experience Platform
 title: JupiterLab 사용 안내서
 topic: Overview
+description: JupiterLab은 Project Jupiter를 위한 웹 기반의 유저 인터페이스로 Adobe Experience Platform과 긴밀하게 통합되어 있습니다. 데이터 과학자들이 Jupiter 노트북, 코드 및 데이터를 사용하여 작업할 수 있는 인터랙티브한 개발 환경을 제공합니다.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
 workflow-type: tm+mt
-source-wordcount: '3647'
+source-wordcount: '3684'
 ht-degree: 11%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 11%
 
 # [!DNL JupyterLab] 사용 안내서
 
-[!DNL JupyterLab] 는 <a href="https://jupyter.org/" target="_blank">프로젝트 주퍼를 위한 웹 기반의 유저</a> [!DNL Adobe Experience Platform]인터페이스로, 데이터 과학자들이 Jupiter 노트북, 코드 및 데이터를 사용하여 작업할 수 있는 인터랙티브한 개발 환경을 제공합니다.
+[!DNL JupyterLab] 는 [프로젝트 주피터를 위한 웹 기반의 유저](https://jupyter.org/) 인터페이스로 Adobe Experience Platform과 긴밀하게 통합되어 있습니다. 데이터 과학자들이 Jupiter 노트북, 코드 및 데이터를 사용하여 작업할 수 있는 인터랙티브한 개발 환경을 제공합니다.
 
 이 문서에서는 일반적인 작업 [!DNL JupyterLab] 을 수행하기 위한 지침뿐만 아니라 기능과 기능에 대한 개요를 제공합니다.
 
@@ -22,14 +23,14 @@ ht-degree: 11%
 
 Experience Platform의 JupiterLab과의 통합은 아키텍처 변경 사항, 디자인 고려 사항, 맞춤형 노트북 익스텐션, 사전 설치된 라이브러리 및 Adobe 테마 인터페이스와 함께 제공됩니다.
 
-다음 목록은 Platform에서 JupiterLab에만 고유한 일부 기능에 대해 간략하게 설명합니다.
+다음 목록은 Platform의 JupiterLab에만 고유한 일부 기능에 대해 간략하게 설명합니다.
 
 | 기능 | 설명 |
 | --- | --- |
 | **커널** | 커널 기능을 사용하면 노트북 및 기타 [!DNL JupyterLab] 프런트 엔드가 다른 프로그래밍 언어로 코드를 실행하고 검사할 수 있습니다. [!DNL Experience Platform] 는 R, PySpark 및 InDesign Server의 개발 지원을 위한 추가 커널을 [!DNL Python]제공합니다 [!DNL Spark]. 자세한 내용은 [커널](#kernels) 섹션을 참조하십시오. |
 | **데이터 액세스** | 읽기 및 쓰기 기능에 대한 완벽한 지원을 통해 기존 데이터 세트 [!DNL JupyterLab] 에 직접 액세스할 수 있습니다. |
-| **[!DNL Platform]서비스 통합&#x200B;** | 통합 기능을 사용하면 내부에서 바로 다른 [!DNL Platform] 서비스를 이용할 수 있습니다 [!DNL JupyterLab]. 지원되는 통합에 대한 전체 목록은 다른 Platform 서비스와 [통합 섹션에 나와 있습니다](#service-integration). |
-| **인증** | JupiterLab <a href="https://jupyter-notebook.readthedocs.io/en/latest/security.html" target="_blank">의 내장된 보안 모델</a>외에도 Platform 서비스 간 커뮤니케이션을 비롯한 애플리케이션과 Experience Platform 간의 모든 상호 작용은 <a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System] (IMS)를 통해 암호화되어 인증됩니다</a>. |
+| **[!DNL Platform]서비스 통합** | 통합 기능을 사용하면 내부에서 바로 다른 [!DNL Platform] 서비스를 이용할 수 있습니다 [!DNL JupyterLab]. 지원되는 통합에 대한 전체 목록은 다른 플랫폼 서비스와의 [통합 섹션에 나와 있습니다](#service-integration). |
+| **인증** | JupiterLab <a href="https://jupyter-notebook.readthedocs.io/en/latest/security.html" target="_blank">의 내장된 보안 모델</a>외에도 플랫폼 서비스 간 커뮤니케이션을 비롯한 애플리케이션과 Experience Platform 간의 모든 상호 작용은 <a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System] (IMS)를 통해 암호화되어 인증됩니다</a>. |
 | **개발 라이브러리** | 에서 [!DNL Experience Platform]는 PySpark용 사전 설치된 라이브러리 [!DNL JupyterLab] [!DNL Python]를 제공합니다. 지원되는 라이브러리의 전체 [목록은 부록을](#supported-libraries) 참조하십시오. |
 | **라이브러리 컨트롤러** | 사전 설치된 라이브러리가 사용자의 요구 사항에 맞지 않을 경우 Python 및 R용으로 추가 라이브러리를 설치할 수 있으며, 격리된 컨테이너에 임시로 저장하여 데이터의 무결성을 유지하고 데이터를 안전하게 유지할 수 [!DNL Platform] 있습니다. 자세한 내용은 [커널](#kernels) 섹션을 참조하십시오. |
 
@@ -41,10 +42,10 @@ Experience Platform의 JupiterLab과의 통합은 아키텍처 변경 사항, �
 
 표준화와 상호 운용성은 그 이면의 핵심 개념입니다 [!DNL Experience Platform]. 내장된 IDE로 [!DNL JupyterLab] 를 통합하면 다른 [!DNL Platform] 서비스와 인터랙션할 수 있으므로 모든 가능성을 활용할 [!DNL Platform] [!DNL Platform] 수 있습니다. 다음 [!DNL Platform] 서비스를 사용할 수 있습니다 [!DNL JupyterLab].
 
-* **[!DNL Catalog Service]:**읽기 및 쓰기 기능을 사용하여 데이터 세트에 액세스하고 탐색할 수 있습니다.
-* **[!DNL Query Service]:**SQL을 사용하여 데이터 세트에 액세스하고 탐색할 수 있으므로 대량의 데이터를 처리할 때 낮은 데이터 액세스 오버헤드를 제공할 수 있습니다.
-* **[!DNL Sensei ML Framework]:**한 번의 클릭으로 레서피 제작뿐만 아니라 데이터 트레이닝 및 점수 측정 기능을 사용하여 개발 모델을 모델링할 수 있습니다.
-* **[!DNL Experience Data Model (XDM)]:**표준화와 상호 운용성은 Adobe Experience Platform의 주요 개념입니다.[Adobe 기반의 XDM(Experience Data Model)](https://www.adobe.com/go/xdm-home-en)은 고객 경험 데이터를 표준화하고 고객 경험 관리를 위한 스키마를 정의하는 것입니다.
+* **[!DNL Catalog Service]:** 읽기 및 쓰기 기능을 사용하여 데이터 세트에 액세스하고 탐색할 수 있습니다.
+* **[!DNL Query Service]:** SQL을 사용하여 데이터 세트에 액세스하고 탐색할 수 있으므로 대량의 데이터를 처리할 때 낮은 데이터 액세스 오버헤드를 제공할 수 있습니다.
+* **[!DNL Sensei ML Framework]:** 한 번의 클릭으로 레서피 제작뿐만 아니라 데이터 트레이닝 및 점수 측정 기능을 사용하여 개발 모델을 모델링할 수 있습니다.
+* **[!DNL Experience Data Model (XDM)]:** 표준화 및 상호 운용성은 Adobe Experience Platform의 핵심 개념입니다. [Adobe 기반의 XDM(Experience Data Model)](https://www.adobe.com/go/xdm-home-en)은 고객 경험 데이터를 표준화하고 고객 경험 관리를 위한 스키마를 정의하는 것입니다.
 
 >[!NOTE]
 >
@@ -64,7 +65,7 @@ Experience Platform의 JupiterLab과의 통합은 아키텍처 변경 사항, �
 
 ### 액세스 [!DNL JupyterLab] {#access-jupyterlab}
 
-Adobe Experience Platform [의](https://platform.adobe.com)왼쪽 탐색 **열에서 전자 필기장** 을 선택합니다. 완전히 초기화하는 데 약간의 시간이 [!DNL JupyterLab] 소요됩니다.
+[Adobe Experience Platform](https://platform.adobe.com)의 왼쪽 탐색 **열에서 전자 필기장** 을 선택합니다. 완전히 초기화하는 데 약간의 시간이 [!DNL JupyterLab] 소요됩니다.
 
 ![](../images/jupyterlab/user-guide/access_jupyterlab.png)
 
@@ -136,7 +137,7 @@ Adobe Experience Platform [의](https://platform.adobe.com)왼쪽 탐색 **열�
 
 ### 커널 세션 {#kernel-sessions}
 
-활성 전자 필기장이나 활동의 각 활동은 커널 세션을 [!DNL JupyterLab] 사용합니다. 왼쪽 사이드바에서 **실행 단말기 및 커널** 탭을 확장하여 모든 활성 세션을 찾을 수 있습니다. 노트북 인터페이스의 맨 위 오른쪽에 있는 커널의 유형과 상태를 관찰하여 확인할 수 있습니다. 아래 다이어그램에서 전자 필기장의 관련 커널은 **[!DNL Python]3이며&#x200B;**현재 상태는 오른쪽에 회색 원으로 표시됩니다. 빈 원은 유휴 커널을 의미하고 단색 원은 사용 중인 커널을 의미합니다.
+활성 전자 필기장이나 활동의 각 활동은 커널 세션을 [!DNL JupyterLab] 사용합니다. 왼쪽 사이드바에서 **실행 단말기 및 커널** 탭을 확장하여 모든 활성 세션을 찾을 수 있습니다. 노트북 인터페이스의 맨 위 오른쪽에 있는 커널의 유형과 상태를 관찰하여 확인할 수 있습니다. 아래 다이어그램에서 전자 필기장의 관련 커널은 **[!DNL Python]3이며** 현재 상태는 오른쪽에 회색 원으로 표시됩니다. 빈 원은 유휴 커널을 의미하고 단색 원은 사용 중인 커널을 의미합니다.
 
 ![](../images/jupyterlab/user-guide/kernel_and_state_1.png)
 
@@ -354,7 +355,7 @@ df <- dataset_reader$read()
 df
 ```
 
-* `{DATASET_ID}`: 액세스할 데이터 집합의 고유 ID
+* `{DATASET_ID}`:액세스할 데이터 집합의 고유 ID
 
 #### 페이지 매김이 있는 데이터 세트 [!DNL Python]에서 읽기
 
@@ -384,7 +385,7 @@ dataset_reader <- DatasetReader(client_context, "{DATASET_ID}")
 df <- dataset_reader$limit(100L)$offset(10L)$read() 
 ```
 
-* `{DATASET_ID}`: 액세스할 데이터 집합의 고유 ID
+* `{DATASET_ID}`:액세스할 데이터 집합의 고유 ID
 
 ### PySpark/[!DNL Spark]/Scala의 데이터 세트에서 읽기
 
@@ -438,12 +439,12 @@ dataFrame.show()
 
 노트북( [!DNL Data Science Workspace] [!DNL Python][!DNL Python] 3커널)에서 데이터 세트를 읽거나 쓰는 사용자 정의 매직 명령입니다.
 
-* **{action}**: 데이터 세트에 대해 수행할 작업 유형입니다. 두 가지 작업을 &quot;읽기&quot; 또는 &quot;쓰기&quot;로 사용할 수 있습니다.
-* **—datasetId {id}**: 데이터를 읽거나 쓸 수 있도록 데이터 집합의 ID를 제공하는 데 사용됩니다. 이것은 필수 인수입니다.
-* **—dataFrame {df}**: 판다들의 데이터 프레임 이것은 필수 인수입니다.
+* **{action}**:데이터 세트에 대해 수행할 작업 유형입니다. 두 가지 작업을 &quot;읽기&quot; 또는 &quot;쓰기&quot;로 사용할 수 있습니다.
+* **—datasetId {id}**:데이터를 읽거나 쓸 수 있도록 데이터 집합의 ID를 제공하는 데 사용됩니다. 이것은 필수 인수입니다.
+* **—dataFrame {df}**:판다들의 데이터 프레임 이것은 필수 인수입니다.
    * 작업이 &quot;읽기&quot;인 경우 {df}는 데이터 집합 읽기 작업의 결과를 사용할 수 있는 변수입니다.
    * 작업이 &quot;write&quot;이면 이 데이터 프레임 {df}이(가) 데이터 세트에 기록됩니다.
-* **—mode(선택 사항)**: 허용되는 매개 변수는 &quot;batch&quot; 및 &quot;interactive&quot;입니다. 기본적으로 모드는 &quot;interactive&quot;로 설정됩니다. 대량의 데이터를 읽을 때는 &quot;일괄 처리&quot; 모드를 사용하는 것이 좋습니다.
+* **—mode(선택 사항)**:허용되는 매개 변수는 &quot;batch&quot; 및 &quot;interactive&quot;입니다. 기본적으로 모드는 &quot;interactive&quot;로 설정됩니다. 대량의 데이터를 읽을 때는 &quot;일괄 처리&quot; 모드를 사용하는 것이 좋습니다.
 
 **예**
 
@@ -452,7 +453,7 @@ dataFrame.show()
 
 ### 데이터 쿼리 [!DNL Query Service] 는 [!DNL Python]
 
-[!DNL JupyterLab] on [!DNL Platform] allows you to use SQL in a [!DNL Python] notebook to access data through <a href="https://www.adobe.com/go/query-service-home-en" target="_blank">Adobe Experience Platform 쿼리 service</a>. 데이터 세트를 통해 액세스하는 [!DNL Query Service] 것은 실행 시간이 매우 짧기 때문에 대규모 데이터 세트를 처리하는 데 유용합니다. 데이터를 쿼리하는 데 처리 시간 제한 [!DNL Query Service] 이 10분입니다.
+[!DNL JupyterLab] 을 [!DNL Platform] 사용하면 전자 필기장의 SQL을 사용하여 [!DNL Python] Adobe Experience Platform 쿼리 서비스를 통해 데이터에 액세스할 수 있습니다 <a href="https://www.adobe.com/go/query-service-home-en" target="_blank"></a>. 데이터 세트를 통해 액세스하는 [!DNL Query Service] 것은 실행 시간이 매우 짧기 때문에 대규모 데이터 세트를 처리하는 데 유용합니다. 데이터를 쿼리하는 데 처리 시간 제한 [!DNL Query Service] 이 10분입니다.
 
 를 사용하기 전에 [!DNL Query Service] SQL 구문 [!DNL JupyterLab]에 대한 작업 지식이 <a href="https://www.adobe.com/go/query-service-sql-syntax-en" target="_blank">[!DNL Query Service] 있는지 확인하십시오</a>.
 
@@ -499,8 +500,8 @@ FROM {table_name}
 * `ge()`: 크거나 같음
 * `lt()`: 보다 작음
 * `le()`: 작거나 같음
-* `And()`: 논리 AND 연산자
-* `Or()`: 논리 OR 연산자
+* `And()`:논리 AND 연산자
+* `Or()`:논리 OR 연산자
 
 다음 셀에서는 2019년 1월 1일부터 2019년 12월 31일 종료 사이에만 존재하는 데이터로 ExperienceEvent 데이터 세트를 필터링합니다.
 
