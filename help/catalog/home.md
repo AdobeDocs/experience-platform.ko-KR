@@ -1,20 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;catalog service;catalog;Catalog service;data location;Data Location;Data management;data management;Lineage;lineage;Catalog;enable dataset
 solution: Experience Platform
 title: 카탈로그 서비스 개요
 topic: overview
+description: 카탈로그 서비스는 Adobe Experience Platform 내 데이터 위치와 혈통에 대한 기록 시스템이다. Experience Platform에 인제스트된 모든 데이터는 파일과 디렉터리로 Data Lake에 저장되지만, 카탈로그는 조회 및 모니터링을 위해 이러한 파일 및 디렉토리의 메타데이터와 설명을 저장합니다.
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '732'
-ht-degree: 6%
+source-wordcount: '783'
+ht-degree: 5%
 
 ---
 
 
 # [!DNL Catalog Service]개요
 
-[!DNL Catalog Service] 은 Adobe Experience Platform 내의 데이터 위치 및 계열에 대한 기록 시스템입니다. 인제스트된 모든 데이터 [!DNL Experience Platform] 는 파일 및 디렉토리 [!DNL Data Lake] 로 저장되지만, 조회 및 모니터링을 위해 해당 파일 및 디렉토리의 메타데이터와 설명을 [!DNL Catalog] 보관합니다.
+[!DNL Catalog Service] adobe experience platform의 데이터 위치와 혈통에 대한 기록 시스템이다. 인제스트된 모든 데이터 [!DNL Experience Platform] 는 파일 및 디렉토리 [!DNL Data Lake] 로 저장되지만, 조회 및 모니터링을 위해 해당 파일 및 디렉토리의 메타데이터와 설명을 [!DNL Catalog] 보관합니다.
 
 간단히 말해, 메타데이터 스토어 또는 &quot; [!DNL Catalog] 카탈로그[!UICONTROL &quot;로][!DNL Experience Platform]사용 중인 데이터에 대한 정보를 찾을 수 있습니다. 다음 질문 [!DNL Catalog] 에 응답하는 데 사용할 수 있습니다.
 
