@@ -1,12 +1,12 @@
 ---
 title: KickFire 확장
 seo-title: KickFire 확장
-description: KickFire 익스텐션은 Adobe 실시간 고객 데이터 Platform의 개인화 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
-seo-description: KickFire 익스텐션은 Adobe 실시간 고객 데이터 Platform의 개인화 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
+description: KickFire 익스텐션은 Adobe 실시간 고객 데이터 플랫폼의 개인화 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
+seo-description: KickFire 익스텐션은 Adobe 실시간 고객 데이터 플랫폼의 개인화 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: be4cf64c89a189a09a4a7774c8fadc76c6ee8458
+source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
 workflow-type: tm+mt
-source-wordcount: '533'
+source-wordcount: '531'
 ht-degree: 5%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 5%
 
 [!DNL KickFire's] IP 주소 인텔리전스 및 B2B 우선 순위 데이터를 사용하면 회사의 IP 주소를 기반으로 IP 주소를 회사에 변환하고 익명 웹 방문자를 식별하며 기술 스택에 계정 데이터를 통합할 수 있습니다.
 
-[!DNL KickFire] Adobe 실시간 고객 데이터 Platform의 개인화 확장입니다. 확장 기능에 대한 자세한 내용은 [Kickfire 웹 사이트를 참조하십시오](https://www.kickfire.com/).
+[!DNL KickFire] adobe 실시간 고객 데이터 플랫폼의 개인화 확장입니다. 확장 기능에 대한 자세한 내용은 [Kickfire 웹 사이트를 참조하십시오](https://www.kickfire.com/).
 
 이 대상은 Experience Platform Launch 확장자입니다. Adobe 실시간 CDP에서 Launch 익스텐션이 작동하는 방법에 대한 자세한 내용은 [Experience Platform Launch 확장 개요를 참조하십시오](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
@@ -36,7 +36,7 @@ ht-degree: 5%
 
 1. Adobe [실시간 CDP 인터페이스에서](http://platform.adobe.com/)대상 **[!UICONTROL >]** 카탈로그 **[!UICONTROL 로]**&#x200B;이동합니다.
 2. 카탈로그에서 익스텐션을 선택하거나 검색 막대를 사용합니다.
-3. 대상을 클릭하여 강조 표시한 다음 오른쪽 레일에서 **[!UICONTROL 확장]** 설치 를 선택합니다. 확장 **[!UICONTROL 설치]** 컨트롤이 회색으로 표시되면 **[!UICONTROL manage_properties]** 권한이 없습니다. 전제 조건 [을 참조하십시오](#prerequisites).
+3. 대상을 클릭하여 강조 표시한 다음 오른쪽 레일에서 **[!UICONTROL 구성을]** 선택합니다. 구성 **[!UICONTROL 컨트롤이]** 회색으로 표시되면 **[!UICONTROL manage_properties]** 권한이 없습니다. 전제 조건 [을 참조하십시오](#prerequisites).
 4. 사용 **[!UICONTROL 가능한 론치 속성]** 선택 창에서 확장을 설치할 론치 속성을 선택합니다. Launch에서 새 속성을 만들 수도 있습니다. 속성은 규칙, 데이터 요소, 구성된 확장, 환경 및 라이브러리의 컬렉션입니다. Launch 설명서의 [속성 페이지](https://docs.adobe.com/content/help/en/launch/using/reference/admin/companies-and-properties.html#properties-page) 섹션에서 속성에 대해 알아봅니다.
 5. Launch로 이동하여 설치를 완료합니다.
 
