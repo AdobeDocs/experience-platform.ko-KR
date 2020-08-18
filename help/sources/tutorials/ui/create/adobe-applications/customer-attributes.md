@@ -4,10 +4,10 @@ solution: Experience Platform
 title: UI에서 고객 속성 소스 커넥터 만들기
 topic: overview
 translation-type: tm+mt
-source-git-commit: 41fe3e5b2a830c3182b46b3e0873b1672a1f1b03
+source-git-commit: 999ff0e9525d7d9f67298862c68bb59ddc35e558
 workflow-type: tm+mt
-source-wordcount: '364'
-ht-degree: 7%
+source-wordcount: '352'
+ht-degree: 8%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 7%
 
 ![](../../../../images/tutorials/create/customer-attributes/source_activity.png)
 
-사용 가능한 고객 속성 프로필 데이터 집합 목록에서 플랫폼으로 가져올 데이터 세트를 선택하고 **다음을 클릭합니다**.
+사용 가능한 고객 속성 프로필 데이터 세트 목록에서 가져올 데이터 세트를 선택하고 [!DNL Platform] 다음을 **클릭합니다**.
 
 >[!NOTE]
 >
@@ -51,7 +51,7 @@ ht-degree: 7%
 
 ## 다음 단계
 
-연결이 만들어지면 들어오는 데이터를 포함하도록 대상 스키마와 데이터 세트가 자동으로 생성됩니다. 초기 질문이 완료되면 고객 속성 프로필 데이터를 실시간 고객 프로필 및 세그멘테이션 서비스와 같은 다운스트림 플랫폼 서비스에서 사용할 수 있습니다. 자세한 내용은 다음 문서를 참조하십시오.
+연결이 만들어지면 들어오는 데이터를 포함하도록 대상 스키마와 데이터 세트가 자동으로 생성됩니다. 초기 수렴이 완료되면, 고객 속성 프로필 데이터를 다운스트림 [!DNL Platform] 서비스(예: [!DNL Real-time Customer Profile] 및 [!DNL Segmentation Service])에서 사용할 수 있습니다. 자세한 내용은 다음 문서를 참조하십시오.
 
-* [실시간 고객 프로필 개요](../../../../../profile/home.md)
-* [세그멘테이션 서비스 개요](../../../../../segmentation/home.md)
+* [[!DNL Real-time Customer Profile] 개요](../../../../../profile/home.md)
+* [[!DNL Segmentation Service] 개요](../../../../../segmentation/home.md)
