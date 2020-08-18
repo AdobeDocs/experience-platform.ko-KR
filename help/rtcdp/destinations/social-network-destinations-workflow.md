@@ -4,9 +4,9 @@ seo-title: 소셜 네트워크 대상 워크플로우
 description: 소셜 네트워크 및 계정에 연결하는 지침
 seo-description: 소셜 네트워크 및 계정에 연결하는 지침
 translation-type: tm+mt
-source-git-commit: be4cf64c89a189a09a4a7774c8fadc76c6ee8458
+source-git-commit: 9306266edc0a4afdcf378e94b46b239187b18644
 workflow-type: tm+mt
-source-wordcount: '464'
+source-wordcount: '501'
 ht-degree: 0%
 
 ---
@@ -16,11 +16,15 @@ ht-degree: 0%
 
 ## 소셜 네트워크 대상을 만드는 워크플로
 
-이 자습서는 예를 [!DNL Facebook] 들어 사용하지만 제품에 한 번 더 추가되면 Adobe 실시간 고객 데이터 Platform의 워크플로우는 모든 소셜 네트워크 대상에 대해 동일합니다.
+이 자습서는 예를 [!DNL Facebook] 들어 사용하지만 제품에 한 번 더 추가되면 Adobe 실시간 고객 데이터 플랫폼의 워크플로우는 모든 소셜 네트워크 대상에 대해 동일합니다.
 
-1. 대상 **** > **[!UICONTROL 카탈로그]**&#x200B;에서 **[!UICONTROL Social]** 카테고리로스크롤합니다. 원하는 소셜 네트워크 대상을 선택한 다음 **[!UICONTROL 연결 대상을 선택합니다]**.
+1. 대상 **** > **[!UICONTROL 카탈로그]**&#x200B;에서 **[!UICONTROL Social]** 카테고리로스크롤합니다. 원하는 소셜 네트워크 대상을 선택한 다음 구성을 **[!UICONTROL 선택합니다]**.
 
    ![소셜 네트워크 대상에 연결](/help/rtcdp/destinations/assets/facebook-catalog-view.png)
+
+   >[!NOTE]
+   >
+   >이 대상과의 연결이 이미 있는 경우 대상 카드에 **[!UICONTROL 활성화]** 단추가 표시됩니다. 활성화 및 구성 **[!UICONTROL 의 차이에 대한 자세한]****[!UICONTROL 내용은 대상 작업 공간 설명서의]**&#x200B;카탈로그 [섹션을](/help/rtcdp/destinations/destinations-workspace.md#catalog) 참조하십시오.
 
 2. 이전에 소셜 네트워크 대상에 대한 연결을 **설정한 경우 인증** 단계에서 기존 계정 **[!UICONTROL 을]** 선택하고 기존 연결을 선택합니다. 또는 새 계정 **[!UICONTROL 을]** 선택하여 소셜 네트워크 대상에 대한 새 연결을 설정할 수 있습니다. 대상에 **[!UICONTROL 연결을]** 선택하면 선택한 소셜 네트워크 대상으로 로그인하여 소셜 네트워크 광고 계정에 Adobe Experience Cloud을 연결합니다.
 
