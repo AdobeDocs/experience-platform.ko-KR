@@ -1,13 +1,13 @@
 ---
 title: Google 광고 확장
 seo-title: Google 광고 확장
-description: Google 광고 확장 프로그램은 Adobe 실시간 고객 데이터 Platform의 광고 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
-seo-description: Google 광고 확장 프로그램은 Adobe 실시간 고객 데이터 Platform의 광고 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
+description: Google 광고 확장 프로그램은 Adobe 실시간 고객 데이터 플랫폼의 광고 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
+seo-description: Google 광고 확장 프로그램은 Adobe 실시간 고객 데이터 플랫폼의 광고 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: be4cf64c89a189a09a4a7774c8fadc76c6ee8458
+source-git-commit: 33eba9e3f2e993c6958480b091ff004dc057f438
 workflow-type: tm+mt
-source-wordcount: '562'
-ht-degree: 4%
+source-wordcount: '560'
+ht-degree: 5%
 
 ---
 
@@ -18,11 +18,11 @@ ht-degree: 4%
 
 이 익스텐션은 사용자가 [!DNL Google Ads] 또한 gtag.js 익스텐션을 설치하고 라이브러리에 추가해야 [!DNL Google Ads] 합니다.
 
-[!DNL Google Ads] 는 Adobe 실시간 고객 데이터 Platform의 광고 확장입니다. 확장 기능에 대한 자세한 내용은 [Adobe Exchange의 확장 페이지를 참조하십시오](https://www.adobeexchange.com/experiencecloud.details.101383.google-ads.html).
+[!DNL Google Ads] 는 Adobe 실시간 고객 데이터 플랫폼의 광고 확장입니다. 확장 기능에 대한 자세한 내용은 [Adobe Exchange의 확장 페이지를 참조하십시오](https://www.adobeexchange.com/experiencecloud.details.101383.google-ads.html).
 
 이 대상은 Experience Platform Launch 확장자입니다. Adobe 실시간 CDP에서 Launch 익스텐션이 작동하는 방법에 대한 자세한 내용은 [Experience Platform Launch 확장 개요를 참조하십시오](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
-![Google 광고 확장](/help/rtcdp/destinations/assets/google-extension-2.png)
+![Google 광고 확장](/help/rtcdp/destinations/assets/google-ads-extension.png)
 
 ## 전제 조건 {#prerequisites}
 
@@ -36,7 +36,7 @@ ht-degree: 4%
 
 1. Adobe [실시간 CDP 인터페이스에서](http://platform.adobe.com/)대상 **[!UICONTROL >]** 카탈로그 **[!UICONTROL 로]**&#x200B;이동합니다.
 2. 카탈로그에서 익스텐션을 선택하거나 검색 막대를 사용합니다.
-3. 대상을 클릭하여 강조 표시한 다음 오른쪽 레일에서 **[!UICONTROL 확장]** 설치 를 선택합니다. 확장 **[!UICONTROL 설치]** 컨트롤이 회색으로 표시되면 **[!UICONTROL manage_properties]** 권한이 없습니다. 전제 조건 [을 참조하십시오](#prerequisites).
+3. 대상을 클릭하여 강조 표시한 다음 오른쪽 레일에서 **[!UICONTROL 구성을]** 선택합니다. 구성 **[!UICONTROL 컨트롤이]** 회색으로 표시되면 **[!UICONTROL manage_properties]** 권한이 없습니다. 전제 조건 [을 참조하십시오](#prerequisites).
 4. 사용 **[!UICONTROL 가능한 론치 속성]** 선택 창에서 확장을 설치할 론치 속성을 선택합니다. Launch에서 새 속성을 만들 수도 있습니다. 속성은 규칙, 데이터 요소, 구성된 확장, 환경 및 라이브러리의 컬렉션입니다. Launch 설명서의 [속성 페이지](https://docs.adobe.com/content/help/en/launch/using/reference/admin/companies-and-properties.html#properties-page) 섹션에서 속성에 대해 알아봅니다.
 5. Launch로 이동하여 설치를 완료합니다.
 
