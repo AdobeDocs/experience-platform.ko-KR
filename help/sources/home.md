@@ -5,9 +5,9 @@ title: Adobe Experience Platform 소스 커넥터 개요
 topic: overview
 description: Adobe Experience Platform은 플랫폼 서비스를 사용하여 들어오는 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 외부 소스에서 데이터를 수집할 수 있도록 허용합니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 등 다양한 소스의 데이터를 인제스트할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
+source-git-commit: c15f582eeaa895f03441b2f488686a9a48942f3d
 workflow-type: tm+mt
-source-wordcount: '847'
+source-wordcount: '846'
 ht-degree: 0%
 
 ---
@@ -84,7 +84,6 @@ CRM 시스템은 고객과의 관계를 구축하는 데 도움이 되는 데이
 - [!DNL GreenPlum](connectors/databases/greenplum.md) 커넥터
 - [!DNL HP Vertica](connectors/databases/hp-vertica.md) 커넥터
 - [!DNL IBM DB2](connectors/databases/ibm-db2.md) 커넥터
-- [!DNL MariaDB](connectors/databases/mariadb.md) 커넥터
 - [!DNL Microsoft SQL Server](connectors/databases/sql-server.md) 커넥터
 - [!DNL MySQL](connectors/databases/mysql.md) 커넥터
 - [!DNL Oracle](connectors/databases/oracle.md) 커넥터
