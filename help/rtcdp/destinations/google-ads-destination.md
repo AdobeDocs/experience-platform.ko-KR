@@ -4,9 +4,9 @@ seo-title: Google 광고 대상
 description: 이전에 Google AdWords로 알려졌던 Google Ads는 기업에서 텍스트 기반 검색, 그래픽 디스플레이, YouTube 비디오 및 인앱 모바일 디스플레이에서 클릭당 광고를 지불하는 온라인 광고 서비스입니다.
 seo-description: 이전에 Google AdWords로 알려졌던 Google Ads는 기업에서 텍스트 기반 검색, 그래픽 디스플레이, YouTube 비디오 및 인앱 모바일 디스플레이에서 클릭당 광고를 지불하는 온라인 광고 서비스입니다.
 translation-type: tm+mt
-source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
+source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
 workflow-type: tm+mt
-source-wordcount: '598'
+source-wordcount: '635'
 ht-degree: 0%
 
 ---
@@ -44,24 +44,28 @@ ht-degree: 0%
 
 Adobe 실시간 CDP에서 [!DNL Google Ads] 대상을 생성하기 전에 Adobe [!DNL Google] 가 허용된 데이터 공급자 목록에 포함될 수 있도록 문의하고 계정이 허용 목록에 추가되도록 연락해야 합니다. 연락처 [!DNL Google] 와 다음 정보를 제공합니다.
 
-* **계정 ID** : Adobe 계정 ID입니다 [!DNL Google]. 이 ID를 얻으려면 Adobe 고객 지원 센터 또는 Adobe 담당자에게 문의하십시오.
-* **고객 ID** : Adobe 고객 계정 ID입니다 [!DNL Google]. 이 ID를 얻으려면 Adobe 고객 지원 센터 또는 Adobe 담당자에게 문의하십시오.
+* **계정 ID** :adobe 계정 ID입니다 [!DNL Google]. 이 ID를 얻으려면 Adobe 고객 지원 센터 또는 Adobe 담당자에게 문의하십시오.
+* **고객 ID** :adobe 고객 계정 ID입니다 [!DNL Google]. 이 ID를 얻으려면 Adobe 고객 지원 센터 또는 Adobe 담당자에게 문의하십시오.
 * 계정 유형: **AdWords**
-* **Google AdWords ID** : 여기 ID가 있습니다 [!DNL Google]. ID 형식은 일반적으로 123-456-7890입니다.
+* **Google AdWords ID** :여기 ID가 있습니다 [!DNL Google]. ID 형식은 일반적으로 123-456-7890입니다.
 
-## 대상 만들기
+## 대상 구성
 
-1. 연결 **[!UICONTROL > 대상]****[!UICONTROL 에서]**[!DNL Google Ads]를 선택하고 대상 **[!UICONTROL 만들기를 선택합니다]**.
+1. [ **[!UICONTROL 연결]** ] > **[!UICONTROL 대상]**&#x200B;에서 [!DNL Google Ads]를 선택하고 구성을 **[!UICONTROL 선택합니다]**.
    ![Google 광고 대상 연결](/help/rtcdp/destinations/assets/google-2-destination.png)
+
+   >[!NOTE]
+   >
+   >이 대상과의 연결이 이미 있는 경우 대상 카드에 **[!UICONTROL 활성화]** 단추가 표시됩니다. 활성화 및 구성 **[!UICONTROL 의 차이에 대한 자세한]****[!UICONTROL 내용은 대상 작업 공간 설명서의]**&#x200B;카탈로그 [섹션을](/help/rtcdp/destinations/destinations-workspace.md#catalog) 참조하십시오.
 
 2. 대상 **만들기 작업** 과정의 설정 단계에서 대상에 대한 [!UICONTROL 기본 정보] 를 입력합니다. <br>
 
    ![기본 정보 Google 광고](/help/rtcdp/destinations/assets/google-2-destination-setup-step.png)
-* **[!UICONTROL 이름]**: 이 대상에 대한 기본 이름을 입력합니다.
-* **[!UICONTROL 설명]**: 선택 사항. 예를 들어 이 대상을 사용하는 캠페인을 언급할 수 있습니다.
-* **[!UICONTROL 계정 유형]**: AdWords만 사용할 수 있습니다.
-* **[!UICONTROL 계정 ID]**: 계정 ID를 입력합니다 [!DNL Google Ads]. ID 형식은 일반적으로 123-456-7890입니다.
-* **[!UICONTROL 마케팅 활용 사례]**: 마케팅 사용 사례에서는 데이터를 대상으로 내보내려는 의도를 나타냅니다. Adobe에서 정의한 마케팅 사용 사례에서 선택하거나 고유한 마케팅 사용 사례를 만들 수 있습니다. 마케팅 활용 사례에 대한 자세한 내용은 실시간 CDP의 [데이터 거버넌스](/help/rtcdp/privacy/data-governance-overview.md#destinations) 페이지를 참조하십시오. 개별 Adobe에서 정의한 마케팅 사용 사례에 대한 자세한 내용은 [데이터 사용 정책 개요를 참조하십시오](/help/data-governance/policies/overview.md#core-actions).
+* **[!UICONTROL 이름]**:이 대상에 대한 기본 이름을 입력합니다.
+* **[!UICONTROL 설명]**:선택 사항. 예를 들어 이 대상을 사용하는 캠페인을 언급할 수 있습니다.
+* **[!UICONTROL 계정 유형]**:AdWords만 사용할 수 있습니다.
+* **[!UICONTROL 계정 ID]**:계정 ID를 입력합니다 [!DNL Google Ads]. ID 형식은 일반적으로 123-456-7890입니다.
+* **[!UICONTROL 마케팅 활용 사례]**:마케팅 사용 사례에서는 데이터를 대상으로 내보내려는 의도를 나타냅니다. Adobe에서 정의한 마케팅 사용 사례에서 선택하거나 고유한 마케팅 사용 사례를 만들 수 있습니다. 마케팅 활용 사례에 대한 자세한 내용은 실시간 CDP의 [데이터 거버넌스](/help/rtcdp/privacy/data-governance-overview.md#destinations) 페이지를 참조하십시오. 개별 Adobe에서 정의한 마케팅 사용 사례에 대한 자세한 내용은 [데이터 사용 정책 개요를 참조하십시오](/help/data-governance/policies/overview.md#core-actions).
 
 ## 세그먼트 활성화 [!DNL Google Ads]
 
