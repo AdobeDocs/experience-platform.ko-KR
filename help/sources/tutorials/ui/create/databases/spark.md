@@ -4,10 +4,10 @@ solution: Experience Platform
 title: UI에서 Azure HDInsights 소스 커넥터에서 Apache Spark 만들기
 topic: overview
 translation-type: tm+mt
-source-git-commit: 598b29f681ac930a4e1781f7f298608c8344d807
+source-git-commit: ec2d0a33e0ae92a3153b7bdcad29734e487a0439
 workflow-type: tm+mt
-source-wordcount: '513'
-ht-degree: 0%
+source-wordcount: '469'
+ht-degree: 1%
 
 ---
 
@@ -15,6 +15,7 @@ ht-degree: 0%
 # UI에서 [!DNL Apache Spark] 소스 [!DNL Azure HDInsights] 커넥터 만들기
 
 >[!NOTE]
+>
 > 온 [!DNL Apache Spark] 커넥터 [!DNL Azure HDInsights] 가 베타에 있습니다. 베타 [레이블이 지정된 커넥터 사용에 대한 자세한 내용은 소스 개요를](../../../../home.md#terms-and-conditions) 참조하십시오.
 
 Adobe Experience Platform의 소스 커넥터는 예약된 기준으로 외부 소스 데이터를 인제스트하는 기능을 제공합니다. 이 자습서에서는 [!DNL Apache Spark] 사용자 인터페이스를 사용하여 소스 커넥터 [!DNL Azure HDInsights] [!DNL Platform] 에 대한 단계를 제공합니다.
@@ -44,21 +45,21 @@ Adobe Experience Platform의 소스 커넥터는 예약된 기준으로 외부 �
 
 ## 계정 [!DNL Spark] 연결
 
-필요한 자격 증명을 수집했으면 아래 절차에 따라 연결할 새 [!DNL Spark] 계정을 만들 수 있습니다 [!DNL Platform].
+필요한 자격 증명을 수집했으면 아래 절차에 따라 [!DNL Spark] 계정을 연결하여 연결할 수 있습니다 [!DNL Platform].
 
-[Adobe Experience Platform](https://platform.adobe.com) 에 로그인한 다음 **** 왼쪽 탐색 막대에서 소스를 선택하여 *[!UICONTROL 소스 작업 영역에]* 액세스합니다. [ *[!UICONTROL 카탈로그]* ] 화면에는 인바운드 계정을 만들 수 있는 다양한 소스가 표시되며, 각 소스에는 기존 계정 및 데이터 세트 흐름 수가 표시됩니다.
+[Adobe Experience Platform](https://platform.adobe.com) 에 로그인한 다음 **** 왼쪽 탐색 막대에서 소스를 선택하여 **[!UICONTROL 소스 작업 영역에]** 액세스합니다. [ **[!UICONTROL 카탈로그]** ] 화면에는 계정을 만들 수 있는 다양한 소스가 표시됩니다.
 
 화면의 왼쪽에 있는 카탈로그에서 해당 범주를 선택할 수 있습니다. 또는 검색 옵션을 사용하여 작업할 특정 소스를 찾을 수 있습니다.
 
-[ *[!UICONTROL 데이터베이스]* ] 범주 아래에서 **[!UICONTROL Spark]** 를 선택하여 화면 오른쪽에 정보 막대를 표시합니다. 정보 표시줄에는 선택한 소스에 대한 간단한 설명과 소스와 연결하거나 설명서를 보는 옵션이 제공됩니다. 새 인바운드 연결을 만들려면 데이터 **[!UICONTROL 추가를 선택합니다]**.
+데이터베이스 **[!UICONTROL 카테고리]** 아래에서 Spark를 **[!UICONTROL 선택합니다]**. 이 커넥터를 처음 사용하는 경우 구성을 **[!UICONTROL 선택합니다]**. 그렇지 않으면 데이터 **[!UICONTROL 추가]** 를 선택하여 새 [!DNL Spark] 커넥터를 만듭니다.
 
 ![카탈로그](../../../../images/tutorials/create/spark/catalog.png)
 
-Spark *[!UICONTROL 에 연결]* 페이지가 나타납니다. 이 페이지에서 새 자격 증명이나 기존 자격 증명을 사용할 수 있습니다.
+Spark **[!UICONTROL 에 연결]** 페이지가 나타납니다. 이 페이지에서 새 자격 증명이나 기존 자격 증명을 사용할 수 있습니다.
 
 ### 새 계정
 
-새 자격 증명을 사용 중인 경우 **[!UICONTROL 새 계정을 선택합니다]**. 표시되는 입력 양식에서 이름, 선택적 설명 및 자격 증명과 함께 연결을 [!DNL Spark] 제공합니다. 완료되면 **[!UICONTROL Connect를]** 선택한 다음 새 계정이 설정되기까지 약간의 시간이 소요됩니다.
+새 자격 증명을 사용 중인 경우 **[!UICONTROL 새 계정을 선택합니다]**. 표시되는 입력 양식에서 이름, 선택적 설명 및 자격 증명을 [!DNL Spark] 제공합니다. 완료되면 **[!UICONTROL Connect를]** 선택한 다음 새 연결이 설정될 때까지 잠시 기다립니다.
 
 ![new](../../../../images/tutorials/create/spark/new.png)
 
@@ -70,4 +71,4 @@ Spark *[!UICONTROL 에 연결]* 페이지가 나타납니다. 이 페이지에�
 
 ## 다음 단계
 
-이 튜토리얼을 따라 계정에 대한 연결을 설정해 [!DNL Spark] 드렸습니다. 이제 다음 튜토리얼로 계속 진행하여 데이터 흐름을 [구성하여 Platform으로 데이터를 가져올 수 있습니다](../../dataflow/databases.md).
+이 튜토리얼을 따라 계정에 대한 연결을 설정해 [!DNL Spark] 드렸습니다. 이제 다음 튜토리얼로 계속 이동하여 데이터를 [데이터 흐름을 구성하여 데이터를 가져올 수 있습니다 [!DNL Platform]](../../dataflow/databases.md).
