@@ -1,12 +1,12 @@
 ---
-title: JW 플레이어 Analytics(베타) 확장
-seo-title: JW 플레이어 Analytics(베타) 확장
-description: JW 플레이어 Analytics(베타) 익스텐션은 Adobe 실시간 고객 데이터 Platform의 분석 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
-seo-description: JW 플레이어 Analytics(베타) 익스텐션은 Adobe 실시간 고객 데이터 Platform의 분석 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
+title: JW 플레이어 분석(베타) 확장
+seo-title: JW 플레이어 분석(베타) 확장
+description: JW 플레이어 분석(베타) 익스텐션은 Adobe 실시간 고객 데이터 플랫폼의 분석 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
+seo-description: JW 플레이어 분석(베타) 익스텐션은 Adobe 실시간 고객 데이터 플랫폼의 분석 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: be4cf64c89a189a09a4a7774c8fadc76c6ee8458
+source-git-commit: 33eba9e3f2e993c6958480b091ff004dc057f438
 workflow-type: tm+mt
-source-wordcount: '570'
+source-wordcount: '571'
 ht-degree: 4%
 
 ---
@@ -16,12 +16,13 @@ ht-degree: 4%
 
 ## 개요 {#overview}
 
-이 익스텐션은 이벤트를 Adobe 비디오 Analytics에 연결하는 [!DNL JW Player] 어댑터를 [!DNL JW Player] 설치합니다. 강력한 Adobe 비디오 Analytics을 활용하여 고객의 비디오 시청 습관에 대한 자세한 통찰력을 얻을 수 있습니다.
+이 익스텐션은 이벤트를 Adobe 비디오 분석에 연결하는 [!DNL JW Player] 어댑터를 [!DNL JW Player] 설치합니다. 강력한 Adobe 비디오 분석 기능을 활용하여 고객의 동영상 시청률을 명확하게 파악할 수 있습니다.
 
-[!DNL JW Player Analytics] (베타)는 Adobe 실시간 고객 데이터 Platform의 분석 확장입니다. 확장 기능에 대한 자세한 내용은 [Adobe Exchange의 확장 페이지를 참조하십시오](https://exchange.adobe.com/experiencecloud.details.101523.jw-player-analytics-launch-extension.html).
+[!DNL JW Player Analytics] (베타)는 Adobe 실시간 고객 데이터 플랫폼의 분석 확장입니다. 확장 기능에 대한 자세한 내용은 [Adobe Exchange의 확장 페이지를 참조하십시오](https://exchange.adobe.com/experiencecloud.details.101523.jw-player-analytics-launch-extension.html).
 
 이 대상은 Experience Platform Launch 확장자입니다. Adobe 실시간 CDP에서 Launch 익스텐션이 작동하는 방법에 대한 자세한 내용은 [Experience Platform Launch 확장 개요를 참조하십시오](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
+![JW 분석 확장](assets/jw-analytics-extension.png)
 
 ## 전제 조건 {#prerequisites}
 
@@ -35,11 +36,11 @@ ht-degree: 4%
 
 1. Adobe [실시간 CDP 인터페이스에서](http://platform.adobe.com/)대상 **[!UICONTROL >]** 카탈로그 **[!UICONTROL 로]**&#x200B;이동합니다.
 2. 카탈로그에서 익스텐션을 선택하거나 검색 막대를 사용합니다.
-3. 대상을 클릭하여 강조 표시한 다음 오른쪽 레일에서 **[!UICONTROL 확장]** 설치 를 선택합니다. 확장 **[!UICONTROL 설치]** 컨트롤이 회색으로 표시되면 **[!UICONTROL manage_properties]** 권한이 없습니다. 전제 조건 [을 참조하십시오](#prerequisites).
+3. 대상을 클릭하여 강조 표시한 다음 오른쪽 레일에서 **[!UICONTROL 구성을]** 선택합니다. 구성 **[!UICONTROL 컨트롤이]** 회색으로 표시되면 **[!UICONTROL manage_properties]** 권한이 없습니다. 전제 조건 [을 참조하십시오](#prerequisites).
 4. 사용 **[!UICONTROL 가능한 론치 속성]** 선택 창에서 확장을 설치할 론치 속성을 선택합니다. Launch에서 새 속성을 만들 수도 있습니다. 속성은 규칙, 데이터 요소, 구성된 확장, 환경 및 라이브러리의 컬렉션입니다. Launch 설명서의 [속성 페이지](https://docs.adobe.com/content/help/en/launch/using/reference/admin/companies-and-properties.html#properties-page) 섹션에서 속성에 대해 알아봅니다.
 5. Launch로 이동하여 설치를 완료합니다.
 
-확장 구성 옵션에 대한 자세한 내용은 Adobe Exchange의 [JW 플레이어 Analytics(베타) 확장 페이지를](https://exchange.adobe.com/experiencecloud.details.101523.jw-player-analytics-launch-extension.html) 참조하십시오.
+확장 구성 옵션에 대한 자세한 내용은 Adobe Exchange의 [JW 플레이어 분석(베타) 확장 페이지를](https://exchange.adobe.com/experiencecloud.details.101523.jw-player-analytics-launch-extension.html) 참조하십시오.
 
 또한 [Experience Platform Launch 인터페이스에서 직접 익스텐션을 설치할 수 있습니다](https://launch.adobe.com/). 론치 [설명서에서 새 확장](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html#add-a-new-extension) 추가를 참조하십시오.
 
