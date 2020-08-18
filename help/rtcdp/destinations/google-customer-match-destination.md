@@ -4,9 +4,9 @@ seo-title: Google 고객 일치 대상
 description: Google Customer Match를 사용하면 온라인 및 오프라인 데이터를 사용하여 검색, 쇼핑, Gmail, YouTube 등 Google의 소유물과 운영 자산에서 고객에게 도달하고 다시 참여할 수 있습니다.
 seo-description: Google Customer Match를 사용하면 온라인 및 오프라인 데이터를 사용하여 검색, 쇼핑, Gmail, YouTube 등 Google의 소유물과 운영 자산에서 고객에게 도달하고 다시 참여할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 6a57c0da3425b7b83050f1b734d4abe8a290c8bc
+source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
 workflow-type: tm+mt
-source-wordcount: '1517'
+source-wordcount: '1555'
 ht-degree: 0%
 
 ---
@@ -91,7 +91,7 @@ Experience Platform에서 이메일 주소 인제스트에 대한 자세한 내�
 
 >[!IMPORTANT]
 >
->이메일 주소를 해시하지 않기로 선택하면 세그먼트를 활성화할 때 Adobe 실시간 CDP가 자동으로 수행됩니다 [!DNL Google Customer Match]. [활성화 워크플로우](/help/rtcdp/destinations/google-customer-match-destination.md#activate-segments) (5단계 참조)에서 `Email` 일반 텍스트 이메일 주소 *및 해시된 이메일 주소* 에 대해 아래에 표시된 옵션 `Email_LC_SHA256` 을 **&#x200B;선택합니다.
+>이메일 주소를 해시하지 않기로 선택하면 세그먼트를 활성화할 때 Adobe 실시간 CDP가 자동으로 수행됩니다 [!DNL Google Customer Match]. [활성화 워크플로우](/help/rtcdp/destinations/google-customer-match-destination.md#activate-segments) (5단계 참조)에서 `Email` 일반 텍스트 이메일 주소 *및 해시된 이메일 주소* 에 대해 아래 `Email_LC_SHA256` 와 같은 옵션을 **&#x200B;선택합니다.
 
 
 ![활성화 시 해싱](/help/rtcdp/destinations/assets/identity-mapping.png)
@@ -101,6 +101,10 @@ Experience Platform에서 이메일 주소 인제스트에 대한 자세한 내�
 1. 대상 **** > **[!UICONTROL 카탈로그]**&#x200B;에서 **[!UICONTROL 광고]** 카테고리로스크롤합니다. 을 [!DNL Google Customer Match]선택하고 구성을 **[!UICONTROL 선택합니다]**.
 
    ![Google 고객 일치 대상에 연결](/help/rtcdp/destinations/assets/connect-google-customer-match.png)
+
+   >[!NOTE]
+   >
+   >이 대상과의 연결이 이미 있는 경우 대상 카드에 **[!UICONTROL 활성화]** 단추가 표시됩니다. 활성화 및 구성 **[!UICONTROL 의 차이에 대한 자세한]****[!UICONTROL 내용은 대상 작업 공간 설명서의]**&#x200B;카탈로그 [섹션을](/help/rtcdp/destinations/destinations-workspace.md#catalog) 참조하십시오.
 
 2. 이전에 대상에 대한 연결을 **설정한** 경우 [!DNL Google Customer Match] 계정 **[!UICONTROL 을 선택하고 기존 연결을]** 선택합니다. 또는 새 계정 **[!UICONTROL 을]** 선택하여 새 연결을 설정할 수 [!DNL Google Customer Match]있습니다. [ **[!UICONTROL 대상에]** 연결]을 선택하여 로그인하고 Adobe Experience Cloud을 계정에 [!DNL Google Ad] 연결합니다.
 
