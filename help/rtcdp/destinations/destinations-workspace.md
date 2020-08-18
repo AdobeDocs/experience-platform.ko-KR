@@ -5,7 +5,7 @@ seo-title: 대상 작업 공간
 description: Adobe 실시간 고객 데이터 플랫폼에서 왼쪽 탐색 막대에서 대상을 선택하여 대상 작업 영역에 액세스합니다.
 seo-description: Adobe 실시간 고객 데이터 플랫폼에서 왼쪽 탐색 막대에서 대상을 선택하여 대상 작업 영역에 액세스합니다.
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: ac9c629e8c83d3e056ba94b30d978edbda274923
 workflow-type: tm+mt
 source-wordcount: '807'
 ht-degree: 2%
@@ -41,7 +41,7 @@ Adobe 실시간 CDP 사용자 인터페이스는 대상 카탈로그 페이지�
 | [!UICONTROL 메시지에 대한] | 대상에 대한 연결을 만들 수 있습니다. |
 | [!UICONTROL 활성화] | 대상에 대한 연결을 설정했으면 세그먼트를 활성화할 수 있습니다. |
 | [!UICONTROL 계정 보기] | 대상에 대해 연결한 계정을 봅니다. |
-| [!UICONTROL 데이터 흐름 보기] | 대상에 대해 존재하는 데이터 활성화 흐름 보기 |
+| [!UICONTROL 데이터 흐름 보기] | 대상에 대해 존재하는 데이터 활성화 흐름을 봅니다. |
 | [!UICONTROL 설명서 보기] | 특정 대상에 대한 문서 페이지에 대한 링크를 열고 자세한 내용을 확인하고 설정을 지원합니다. |
 
 ![대상 카드의 컨트롤](/help/rtcdp/destinations/assets/destination-card-options.png)
