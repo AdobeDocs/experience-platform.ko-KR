@@ -4,9 +4,9 @@ seo-title: 이메일 마케팅 대상
 description: ESP(Email Service Providers)를 사용하면 이메일 캠페인 전송과 같은 이메일 마케팅 활동을 관리할 수 있습니다.
 seo-description: ESP(Email Service Providers)를 사용하면 이메일 캠페인 전송과 같은 이메일 마케팅 활동을 관리할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 6850a1ee5a578a3dccce9f9decd8f6a368705f4a
+source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
 workflow-type: tm+mt
-source-wordcount: '800'
+source-wordcount: '799'
 ht-degree: 1%
 
 ---
@@ -22,9 +22,9 @@ ESP(Email Service Providers)를 사용하면 프로모션 이메일 캠페인 �
 
 아래 섹션에 설명된 연결 대상 플로우에서 Amazon S3 또는 SFTP에 연결합니다. 실시간 CDP는 세그먼트를 `.csv` 또는 `.txt` 파일로 내보내 원하는 위치에 전달합니다. 실시간 CDP에서 활성화된 스토리지 위치에서 이메일 마케팅 플랫폼에서 데이터를 가져올 수 있도록 예약합니다. 데이터를 가져오는 프로세스는 각 파트너마다 다릅니다. 자세한 내용은 개별 대상 아티클을 참조하십시오.
 
-## 1단계 - 연결 대상 {#connect-destination}
+## 1단계 - 대상 구성 {#connect-destination}
 
-1. [ **[!UICONTROL 연결]** ] > **[!UICONTROL 대상]**]에서 연결할 이메일 마케팅 대상을 선택한 다음 **[!UICONTROL Connect 대상을 선택합니다]**.
+1. 연결 **** > **[!UICONTROL 대상]**&#x200B;에서 연결할 이메일 마케팅 대상을 선택한 다음 구성을 **[!UICONTROL 선택합니다]**.
 
    ![대상에 연결](/help/rtcdp/destinations/assets/connect-email-marketing.png)
 
