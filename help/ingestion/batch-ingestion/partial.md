@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform 부분 배치 처리 개요
 topic: overview
 translation-type: tm+mt
-source-git-commit: df6a6e20733953a0983bbfdf66ca2abc6f03e977
+source-git-commit: ac75b1858b6a731915bbc698107f0be6043267d8
 workflow-type: tm+mt
-source-wordcount: '1420'
+source-wordcount: '1446'
 ht-degree: 1%
 
 ---
@@ -25,8 +25,8 @@ ht-degree: 1%
 
 이 자습서에서는 부분 일괄 처리에 관련된 다양한 Adobe Experience Platform 서비스에 대한 작업 지식이 필요합니다. 이 자습서를 시작하기 전에 다음 서비스에 대한 설명서를 검토하십시오.
 
-- [일괄 처리](./overview.md): CSV 및 [!DNL Platform] Portable과 같은 데이터 파일의 데이터를 인제하고 저장하는 방법입니다.
-- [[!DNL Experience Data Model] (XDM)](../../xdm/home.md): 고객 경험 데이터를 [!DNL Platform] 구성하는 표준화된 프레임워크
+- [일괄 처리](./overview.md):CSV 및 [!DNL Platform] Portable과 같은 데이터 파일의 데이터를 인제하고 저장하는 방법입니다.
+- [[!DNL Experience Data Model] (XDM)](../../xdm/home.md):고객 경험 데이터를 [!DNL Platform] 구성하는 표준화된 프레임워크
 
 다음 섹션에서는 API를 성공적으로 호출하기 위해 알아야 할 추가 정보를 [!DNL Platform] 제공합니다.
 
@@ -38,7 +38,7 @@ ht-degree: 1%
 
 API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 합니다](../../tutorials/authentication.md). 인증 자습서를 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
 
-- 인증: 무기명 `{ACCESS_TOKEN}`
+- 인증:무기명 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
@@ -373,7 +373,7 @@ curl -X GET https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID}
 
 ### 구문 분석할 수 없는 행 {#unparsable}
 
-인제스트한 일괄 처리 행에 구문 분석할 수 없는 행이 있는 경우, 일괄 처리 오류는 아래에 설명된 끝점을 사용하여 액세스할 수 있는 파일에 저장됩니다.
+인제스트한 일괄 처리에서 구문 분석할 수 없는 행이 있는 경우 다음 끝점을 사용하여 오류가 포함된 파일 목록을 볼 수 있습니다.
 
 **API 형식**
 
@@ -397,15 +397,48 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/
 
 **응답**
 
-성공적인 응답은 구문 분석할 수 없는 행에 대한 세부 사항과 함께 HTTP 상태 200을 반환합니다.
+성공적인 응답은 오류가 있는 파일 목록과 함께 HTTP 상태 200을 반환합니다.
 
 ```json
 {
-    "_corrupt_record": "{missingQuotes:"v1"}",
+    "data": [
+        {
+            "name": "conversion_errors_0.json",
+            "length": "1162",
+            "_links": {
+                "self": {
+                    "href": "https://platform.adobe.io:443/data/foundation/export/batches/01EFZ7W203PEKSAMVJC3X99VHQ/meta?path=row_errors%2Fconversion_errors_0.json"
+                }
+            }
+        },
+        {
+            "name": "parsing_errors_0.json",
+            "length": "153",
+            "_links": {
+                "self": {
+                    "href": "https://platform.adobe.io:443/data/foundation/export/batches/01EFZ7W203PEKSAMVJC3X99VHQ/meta?path=row_errors%2Fparsing_errors_0.json"
+                }
+            }
+        }
+    ],
+    "_page": {
+        "limit": 100,
+        "count": 2
+    }
+}
+```
+
+그런 다음 [메타데이터 검색 끝점을 사용하여 오류에 대한 자세한 정보를 검색할 수 있습니다](#retrieve-metadata).
+
+오류 파일을 검색하는 샘플 응답은 아래에 나와 있습니다.
+
+```json
+{
+    "_corrupt_record": "{missingQuotes: "v1"}",
     "_errors": [{
-         "code": "1401",
-         "message": "Row is corrupted and cannot be read, please fix and resend."
+        "code": "1401",
+        "message": "Row is corrupted and cannot be read, please fix and resend."
     }],
-    "_filename": "a1.json"
+    "_filename": "parsing_errors_0.json"
 }
 ```
