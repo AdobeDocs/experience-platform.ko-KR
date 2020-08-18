@@ -5,9 +5,9 @@ title: UI에서 CRM 커넥터에 대한 데이터 흐름 구성
 topic: overview
 description: 데이터 흐름(Dataflow)은 소스에서 플랫폼 데이터 집합으로 데이터를 검색하고 인제스트하는 예약된 작업입니다. 이 자습서에서는 CRM 계정을 사용하여 새 데이터 흐름을 구성하는 절차를 제공합니다.
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: c15f582eeaa895f03441b2f488686a9a48942f3d
 workflow-type: tm+mt
-source-wordcount: '1356'
+source-wordcount: '1353'
 ht-degree: 0%
 
 ---
@@ -21,10 +21,10 @@ ht-degree: 0%
 
 이 자습서에서는 다음 Adobe Experience Platform 구성 요소에 대해 작업해야 합니다.
 
-* [XDM(Experience Data Model) 시스템](../../../../xdm/home.md):고객 경험 데이터를 [!DNL Experience Platform] 구성하는 표준화된 프레임워크
+* [[!DNL Experience Data Model] (XDM) 시스템](../../../../xdm/home.md):고객 경험 데이터를 [!DNL Experience Platform] 구성하는 표준화된 프레임워크
    * [스키마 컴포지션의 기본 사항](../../../../xdm/schema/composition.md):스키마 컴포지션의 주요 원칙 및 모범 사례 등 XDM 스키마의 기본 구성 요소에 대해 알아봅니다.
    * [스키마 편집기 자습서](../../../../xdm/tutorials/create-schema-ui.md):스키마 편집기 UI를 사용하여 사용자 정의 스키마를 생성하는 방법을 알아봅니다.
-* [실시간 고객 프로필](../../../../profile/home.md):여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
+* [[!DNL 실시간 고객 프로필]](../../../../profile/home.md):여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
 
 또한 이 자습서에서는 CRM 계정을 이미 만들어야 합니다. UI에서 다른 CRM 커넥터를 만들기 위한 자습서 목록은 [소스 커넥터 개요에 있습니다](../../../home.md).
 
@@ -156,7 +156,7 @@ CRM 계정을 만든 후 *데이터* 선택 단계가 나타나며, 파일 계�
 
 데이터 흐름 생성은 즉시 활성화되고 주어진 일정에 따라 데이터를 인제스트합니다. 아래 지침에 따라 언제든지 활성 데이터 흐름을 비활성화할 수 있습니다.
 
-인증 *[!UICONTROL 화면]* 내에서 비활성화할 데이터 프롤과 연결된 기본 연결의 이름을 선택합니다.
+인증 *[!UICONTROL 화면]* 내에서 비활성화할 데이터 프롤과 연결된 연결 이름을 선택합니다.
 
 ![](../../../images/tutorials/dataflow/crm/monitor.png)
 
