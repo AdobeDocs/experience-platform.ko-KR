@@ -1,10 +1,11 @@
 ---
+keywords: foresee;foresee extension;foresee destination
 title: Foresee 확장
 seo-title: Foresee 확장
 description: Foresee 익스텐션은 Adobe 실시간 고객 데이터 플랫폼의 설문 조사 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 seo-description: null
 translation-type: tm+mt
-source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
+source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
 workflow-type: tm+mt
 source-wordcount: '502'
 ht-degree: 7%
