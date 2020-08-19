@@ -1,10 +1,11 @@
 ---
+keywords: advertising destinations;destinations;rtcdp destinations
 title: 광고 대상
 seo-title: 광고 대상
 description: '실시간 고객 데이터 플랫폼을 타사 광고 플랫폼(예: DSP, 광고 네트워크, SSP)에 연결하고 익명의 사용자를 이러한 플랫폼에 공유할 수 있습니다.'
 seo-description: '실시간 고객 데이터 플랫폼을 타사 광고 플랫폼(예: DSP, 광고 네트워크, SSP)에 연결하고 익명의 사용자를 이러한 플랫폼에 공유할 수 있습니다.'
 translation-type: tm+mt
-source-git-commit: 875430cdbd80025fc3f0de2664f9b55db0debe53
+source-git-commit: 54df4778a025811504801306120bda78e04281c1
 workflow-type: tm+mt
 source-wordcount: '183'
 ht-degree: 0%
