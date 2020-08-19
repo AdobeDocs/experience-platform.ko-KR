@@ -1,12 +1,13 @@
 ---
+keywords: rtcdp administration overview;administration overview
 title: 관리 개요
 seo-title: 실시간 CDP 관리 개요
-description: description
+description: '이 문서에서는 Adobe Experience Platform 기반의 실시간 고객 데이터 플랫폼의 관리 기능에 대한 개요를 제공합니다. '
 seo-description: seo description
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
-source-wordcount: '259'
+source-wordcount: '277'
 ht-degree: 0%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 0%
 
 # 실시간 CDP 관리 개요
 
-이 문서에서는 Adobe Experience Platform 기반의 관리 기능 [!DNL Real-time Customer Data Platform]에 대한 개요를 제공합니다.
+이 문서에서는 Adobe Experience Platform의 관리 기능에 대한 개요 [!DNL Real-time Customer Data Platform]를 제공합니다.
 
 [!DNL Experience Platform] 관리자가 사용자에 대한 역할 기반 액세스 제어를 관리하고 애플리케이션 개발을 위한 가상 샌드박스를 관리할 수 있습니다.
 
@@ -33,6 +34,6 @@ ht-degree: 0%
 
 Adobe Experience Platform(및 익스텐션별 실시간 CDP)는 글로벌 차원의 디지털 경험 애플리케이션을 보완하기 위해 구축되었습니다. 기업은 여러 디지털 경험 애플리케이션을 동시에 실행하면서 이러한 애플리케이션의 개발, 테스트 및 배포 요구 사항을 충족하고 운영 규정을 준수해야 합니다.
 
-이러한 요구 사항을 해결하기 위해 Adobe Experience Platform은 &quot;샌드박스&quot;를 제공하여 단일 인스턴스를 디지털 경험 애플리케이션을 개발하고 진화하는 데 사용할 수 있는 별도의 가상 환경으로 분할할 수 있도록 합니다. [!DNL Platform]
+이러한 요구 사항을 해결하기 위해 Adobe Experience Platform은 &quot;샌드박스&quot;를 제공하여 단일 [!DNL Platform] 인스턴스를 디지털 경험 애플리케이션을 개발하고 진화하는 데 사용할 수 있는 별도의 가상 환경으로 분할할 수 있습니다.
 
 샌드박스에 대한 자세한 내용은 설명서의 [샌드박스 개요를](../../sandboxes/home.md) 참조하십시오 [!DNL Experience Platform] .
