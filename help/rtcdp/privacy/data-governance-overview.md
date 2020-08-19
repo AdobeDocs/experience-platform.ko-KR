@@ -1,10 +1,11 @@
 ---
+keywords: data governance rtcdp;rtcdp data governance;real time customer data profile data governance
 title: 데이터 거버넌스 개요
-seo-title: 실시간 고객 데이터 Platform의 데이터 거버넌스
+seo-title: 실시간 고객 데이터 플랫폼의 데이터 거버넌스
 description: '데이터 거버넌스를 사용하면 고객 데이터를 관리하고 데이터 사용에 적용되는 규정, 제한 사항 및 정책을 준수할 수 있습니다. '
 seo-description: '데이터 거버넌스를 사용하면 고객 데이터를 관리하고 데이터 사용에 적용되는 규정, 제한 사항 및 정책을 준수할 수 있습니다. '
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '1022'
 ht-degree: 0%
@@ -18,7 +19,7 @@ ht-degree: 0%
 
 Adobe Experience Platform [!DNL Data Governance] 를 사용하면 고객 데이터를 관리하고 데이터 사용에 적용되는 규정, 제한 사항 및 정책을 준수할 수 있습니다. 실시간 CDP에서 중요한 역할을 하는 Adobe Marketing Cloud를 사용하면 사용 정책을 정의하고, 해당 정책에 따라 데이터를 분류하고, 특정 마케팅 활동을 수행할 때 정책 위반을 확인할 수 있습니다.
 
-실시간 CDP는 Adobe Experience Platform 위에 구축되어 있으므로 대부분의 [!DNL Data Governance] 기능은 [!DNL Experience Platform] 문서에서 다룹니다. 이 문서는 실시간 CDP에서 사용할 수 있는 [데이터 거버넌스 개요를](../../data-governance/home.md) 보완하기 위한 [!DNL Experience Platform]것으로, 거버넌스 기능에 대한 개요를 설명합니다. 다음 주제를 다룹니다.
+실시간 CDP는 Adobe Experience Platform에 구축되어 있으므로 대부분의 [!DNL Data Governance] 기능이 문서에 [!DNL Experience Platform] 포함되어 있습니다. 이 문서는 실시간 CDP에서 사용할 수 있는 [데이터 거버넌스 개요를](../../data-governance/home.md) 보완하기 위한 [!DNL Experience Platform]것으로, 거버넌스 기능에 대한 개요를 설명합니다. 다음 주제를 다룹니다.
 
 * [데이터에 사용 레이블 적용](#labels)
 * [데이터 사용 정책 관리](#policies)
@@ -28,7 +29,7 @@ Adobe Experience Platform [!DNL Data Governance] 를 사용하면 고객 데이�
 
 [!DNL Data Governance] 데이터 세트 또는 데이터 세트 필드 수준에서 데이터에 사용 레이블을 적용할 수 있습니다. 데이터 사용 레이블을 사용하면 해당 데이터에 적용되는 사용 정책에 따라 데이터를 분류할 수 있습니다.
 
-데이터 사용 레이블 작업에 대한 자세한 내용은 Adobe Experience Platform에 대한 [데이터 사용 레이블 사용 안내서를](../../data-governance/labels/overview.md) 참조하십시오.
+데이터 사용 레이블 작업에 대한 자세한 내용은 Adobe Experience Platform의 [데이터 사용 레이블 사용 안내서를](../../data-governance/labels/overview.md) 참조하십시오.
 
 ## 대상에 대한 마케팅 사용 사례 구성 {#destinations}
 
