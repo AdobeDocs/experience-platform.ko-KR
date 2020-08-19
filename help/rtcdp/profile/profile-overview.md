@@ -1,11 +1,11 @@
 ---
-keywords: rtcdp profile;real-time customer profile
+keywords: rtcdp profile;profiles rtcdp;rtcdp identities;rtcdp merge policies;real-time customer profile
 title: 실시간 고객 프로필 개요
 seo-title: 실시간 고객 데이터 플랫폼의 실시간 고객 프로필
 description: 실시간 고객 데이터 플랫폼을 통해 실시간 고객 프로파일을 사용하여 고객의 연관성 있고 조율된 경험을 일관되게 제공할 수 있는 방법을 간략하게 소개합니다.
 seo-description: 실시간 고객 데이터 플랫폼, 프로파일, 데이터, 경험, 채널
 translation-type: tm+mt
-source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
+source-git-commit: 54df4778a025811504801306120bda78e04281c1
 workflow-type: tm+mt
 source-wordcount: '394'
 ht-degree: 0%
