@@ -1,10 +1,11 @@
 ---
+keywords: email;Email;e-mail;email destinations;salesforce;salesforce destination
 title: Salesforce Marketing Cloud
 seo-title: Salesforce Marketing Cloud
 description: Salesforce Marketing Cloud은 방문자와 고객이 자신의 경험을 개인화할 수 있도록 여정 경로를 구축하고 사용자 정의할 수 있도록 이전에 ExactTarget으로 알려진 디지털 마케팅 패키지입니다.
 seo-description: Salesforce Marketing Cloud은 방문자와 고객이 자신의 경험을 개인화할 수 있도록 여정 경로를 구축하고 사용자 정의할 수 있도록 이전에 ExactTarget으로 알려진 디지털 마케팅 패키지입니다.
 translation-type: tm+mt
-source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '503'
 ht-degree: 0%
@@ -34,9 +35,9 @@ SSH 키 **** 연결이 있는 SFTP의 경우 도메인, 포트, 사용자 이름
    ![Salesforce 정보 입력](/help/rtcdp/destinations/assets/salesforce-authenticate.png)
 
 3. 설정 **** 단계에서 아래와 같이 대상에 대한 관련 정보를 입력합니다.
-   * **[!UICONTROL 이름]**: 대상의 관련 이름을 선택합니다.
-   * **[!UICONTROL 설명]**: 대상에 대한 설명을 입력합니다.
-   * **[!UICONTROL 폴더 경로]**: 실시간 CDP가 내보내기 데이터를 CSV 또는 탭으로 구분된 파일로 저장하는 스토리지 위치에 경로를 제공합니다.
+   * **[!UICONTROL 이름]**:대상의 관련 이름을 선택합니다.
+   * **[!UICONTROL 설명]**:대상에 대한 설명을 입력합니다.
+   * **[!UICONTROL 폴더 경로]**:실시간 CDP가 내보내기 데이터를 CSV 또는 탭으로 구분된 파일로 저장하는 스토리지 위치에 경로를 제공합니다.
    * **[!UICONTROL 파일 형식]**: **[!UICONTROL CSV]** 또는 **[!UICONTROL TAB_DIPORTED]**. 저장소 위치로 내보낼 파일 형식을 선택합니다.
 
    ![Salesforce 기본 정보](/help/rtcdp/destinations/assets/salesforce-basic-information.png)
