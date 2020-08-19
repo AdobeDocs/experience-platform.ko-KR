@@ -4,7 +4,7 @@ seo-title: SDK 설치 Adobe Experience Platform 웹 SDK
 description: Experience Platform 웹 SDK 설치 방법 살펴보기
 seo-description: Experience Platform 웹 SDK 설치 방법 살펴보기
 translation-type: tm+mt
-source-git-commit: 12cbcc26956cba2e14d64734c9210fa79bcc70b9
+source-git-commit: 075d71353877045e12985b3914aaeeb478ed46d6
 workflow-type: tm+mt
 source-wordcount: '623'
 ht-degree: 1%
@@ -54,6 +54,7 @@ Adobe Experience Platform 구현의 첫 번째 단계 [!DNL Web SDK] 는 HTML의
 이 예에서 전역 함수의 이름이 대신 `mycustomname`로 변경되었습니다 `alloy`.
 
 >[!IMPORTANT]
+>
 >잠재적인 문제를 방지하려면 숫자가 아니고 이미 찾은 속성의 이름과 충돌하지 않는 하나 이상의 문자가 포함된 이름을 사용하십시오 `window`.
 
 이 기본 코드는 전역 함수를 만드는 것 외에도 서버에서 호스팅되는 외부 파일 \(`alloy.js`\) 내에 포함된 추가 코드도 로드합니다. 기본적으로 이 코드는 웹 페이지의 성능을 가능한 한 빨리 유지하도록 비동기식으로 로드됩니다. 권장 구현입니다.
@@ -84,7 +85,7 @@ Adobe Experience Platform 구현의 첫 번째 단계 [!DNL Web SDK] 는 HTML의
 
 ## JavaScript 파일을 동기식으로 로드 {#loading-javascript-synchronously}
 
-코드 추가 섹션에 설명된 [대로](#adding-the-code), 웹 사이트의 HTML에 복사하여 붙여넣은 기본 코드는 추가 코드를 포함하는 외부 파일을 로드합니다. 이 추가 코드에는 SDK의 핵심 기능이 포함되어 있습니다. 이 파일이 로드되는 동안 실행하려는 모든 명령이 큐에 올라가 파일이 로드된 후 처리됩니다. 가장 성능이 뛰어난 설치 방법입니다.
+코드 추가 섹션에 설명된 [대로](#adding-the-code), 웹 사이트의 HTML에 복사하여 붙여넣은 기본 코드는 추가 코드를 포함하는 외부 파일을 로드합니다. 이 추가 코드에는 SDK의 핵심 기능이 포함되어 있습니다. 이 파일을 로드하는 동안 실행하려는 명령은 큐에 올라가 파일을 로드한 후 처리됩니다. 가장 성능이 뛰어난 설치 방법입니다.
 
 그러나 특정 상황에서 파일을 동기식으로 로드할 수도 있습니다(이러한 상황에 대한 자세한 내용은 나중에 문서로 기록됨\). 이렇게 하면 외부 파일이 로드되어 실행될 때까지 브라우저에서 나머지 HTML 문서를 구문 분석하여 렌더링되는 것을 차단합니다. 사용자에게 주요 컨텐츠를 표시하기 전에 이러한 추가 지연은 일반적으로 권장되지 않지만 상황에 따라 적절한 지연이 가능합니다.
 
