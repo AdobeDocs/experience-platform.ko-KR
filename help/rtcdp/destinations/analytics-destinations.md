@@ -1,10 +1,11 @@
 ---
-title: Analytics 대상
-seo-title: Analytics 대상
+keywords: analytics destinations;analytics destination
+title: 분석 대상
+seo-title: 분석 대상
 description: Analytics 대상은 방문자가 사이트의 컨텐츠와 상호 작용하는 방식을 추적하고 데이터를 수집하여 대상자의 행동을 파악합니다. 이러한 플랫폼은 고부가가치 방문자의 참여 및 전환에 대한 고유한 통찰력을 제공합니다.
 seo-description: Analytics 대상은 방문자가 사이트의 컨텐츠와 상호 작용하는 방식을 추적하고 데이터를 수집하여 대상자의 행동을 파악합니다. 이러한 플랫폼은 고부가가치 방문자의 참여 및 전환에 대한 고유한 통찰력을 제공합니다.
 translation-type: tm+mt
-source-git-commit: e3b7dd4788042deaeba68bfdbe08e8448b46c270
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '202'
 ht-degree: 5%
@@ -12,11 +13,11 @@ ht-degree: 5%
 ---
 
 
-# Analytics 목적지 {#analytics-destinations}
+# 분석 대상 {#analytics-destinations}
 
 Analytics 대상은 방문자가 사이트의 컨텐츠와 상호 작용하는 방식을 추적하고 데이터를 수집하여 대상자의 행동을 파악합니다. 이러한 플랫폼은 고부가가치 방문자의 참여 및 전환에 대한 고유한 통찰력을 제공합니다.
 
-현재 Adobe 실시간 고객 데이터 Platform은 아래 나열된 분석 대상을 지원합니다. 이러한 대상에 연결하는 방법에 대한 자세한 내용은 개별 링크를 참조하십시오.
+현재 Adobe 실시간 고객 데이터 플랫폼은 아래 나열된 분석 대상을 지원합니다. 이러한 대상에 연결하는 방법에 대한 자세한 내용은 개별 링크를 참조하십시오.
 
 * [웹 사이트 추적 확장 기능](/help/rtcdp/destinations/adform-extension.md)
 * [Adobe Analytics 확장](/help/rtcdp/destinations/adobe-analytics-extension.md)
@@ -28,7 +29,7 @@ Analytics 대상은 방문자가 사이트의 컨텐츠와 상호 작용하는 �
 * [Dialogtech 확장](/help/rtcdp/destinations/dialogtech-extension.md)
 * [Google 글로벌 사이트 태그 분석 확장](/help/rtcdp/destinations/gtag-analytics-extension.md)
 * [Google Universal Analytics 확장](/help/rtcdp/destinations/google-universal-analytics-extension.md)
-* [JW 플레이어 Analytics(베타) 확장](/help/rtcdp/destinations/jw-player-analytics-extension.md)
+* [JW 플레이어 분석(베타) 확장](/help/rtcdp/destinations/jw-player-analytics-extension.md)
 * [Nielsen BSDK 익스텐션](nielsen-bsdk-extension.md)
 * [Nielsen IMA 처리기 확장](nielsen-ima-extension.md)
 * [Nielsen VideoJS 플레이어 처리기 확장](nielsen-videojs-extension.md)
