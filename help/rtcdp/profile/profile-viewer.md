@@ -1,12 +1,13 @@
 ---
-title: 프로필 뷰어
-seo-title: 실시간 고객 데이터 Platform에 대한 실시간 고객 프로필 데이터 보기
-description: 실시간 고객 데이터 Platform에 대한 실시간 고객 프로필 데이터 보기
-seo-description: 실시간 고객 데이터 Platform에 대한 실시간 고객 프로필 데이터 보기
+keywords: view profiles rtcdp;rtcdp profile view;rtcdp profiles
+title: 실시간 CDP에서 프로파일 보기
+seo-title: 실시간 고객 데이터 플랫폼에서 실시간 고객 프로필 데이터 보기
+description: 실시간 고객 데이터 플랫폼에서 실시간 고객 프로필 데이터 보기
+seo-description: 실시간 고객 데이터 플랫폼에서 실시간 고객 프로필 데이터 보기
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
-source-wordcount: '168'
+source-wordcount: '171'
 ht-degree: 0%
 
 ---
@@ -18,4 +19,4 @@ ht-degree: 0%
 
 사용자 인터페이스 내에서 이러한 읽기 전용 프로필을 보고 환경 설정, 지난 이벤트 및 상호 작용, 개인이 속한 세그먼트 등 개별 고객에 대한 중요한 정보를 볼 수 있습니다.
 
-Adobe Experience Platform [!DNL Real-time Customer Data Platform] 를 기반으로 구축된 실시간 CDP는 프로파일 보기 기능을 일부 사용할 수 있습니다 [!DNL Experience Platform]. 사용자 인터페이스 내에서 고객 프로파일을 보는 방법에 대한 자세한 설명은 [!DNL Platform] 실시간 고객 프로필 사용 안내서를 참조하십시오 [](../../profile/ui/user-guide.md).
+Adobe Experience Platform [!DNL Real-time Customer Data Platform] 에 구축되어 있으므로 실시간 CDP는 일부 프로파일 보기 기능을 사용할 수 있습니다 [!DNL Experience Platform]. 사용자 인터페이스 내에서 고객 프로파일을 보는 방법에 대한 자세한 설명은 [!DNL Platform] 실시간 고객 프로필 사용 안내서를 참조하십시오 [](../../profile/ui/user-guide.md).
