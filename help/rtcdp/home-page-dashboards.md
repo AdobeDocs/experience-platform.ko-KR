@@ -1,10 +1,11 @@
 ---
-title: 실시간 고객 데이터 Platform 홈 페이지 및 대시보드
-seo-title: 실시간 고객 데이터 Platform 홈 페이지 및 대시보드
+keywords: metrics overview; rtcdp metrics overview
+title: 실시간 고객 데이터 플랫폼 홈 페이지 및 대시보드
+seo-title: 실시간 고객 데이터 플랫폼 홈 페이지 및 대시보드
 description: 대시보드, 홈 페이지 및 Adobe Experience Platform의 첫 사용자 경험
 seo-description: 대시보드, 홈 페이지 및 Adobe Experience Platform의 첫 사용자 경험
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '634'
 ht-degree: 1%
@@ -14,7 +15,7 @@ ht-degree: 1%
 
 # [!DNL Real-time Customer Data Platform] 지표 개요
 
-측정 단위 대시보드가 포함된 실시간 고객 데이터 Platform(실시간 CDP) Adobe 홈 페이지는 실시간 CDP에 로그인할 때 나타납니다.
+측정 지표 대시보드가 포함된 Adobe 실시간 고객 데이터 플랫폼(실시간 CDP) 홈 페이지는 실시간 CDP에 로그인할 때 나타납니다.
 
 홈 페이지는 지표 카드가 표시되는 곳 중 하나입니다. 실시간 CDP는 고객 경험 전반에서 측정 카드를 제공합니다. 이러한 지표는 시스템의 데이터, 프로필 및 세그먼트 대상에 대해 알려줍니다.
 
@@ -39,7 +40,7 @@ Some information is shown in different ways on both the leaderboard and metric c
 
    ![image](assets/home-recent.jpg)
 
-프로필 및 세그먼트 등의 추가 지표는 실시간 고객 데이터 Platform의 다른 부분에서 사용할 수 있습니다.
+프로필 및 세그먼트 등의 추가 지표는 실시간 고객 데이터 플랫폼의 다른 부분에서 사용할 수 있습니다.
 
 ### 데이터 세트
 
