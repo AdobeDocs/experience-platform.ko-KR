@@ -2,12 +2,11 @@
 keywords: segmentation; segmentation rtcdp;real time customer data platform segmentation
 title: 세그멘테이션 서비스 개요
 seo-title: Adobe 실시간 고객 데이터 플랫폼의 세분화 서비스
-description: 세그멘테이션 서비스를 설명하는 개요입니다.
-seo-description: Adobe 실시간 고객 데이터 플랫폼의 세분화 서비스 및 세그먼트를 설명하는 개요입니다.
+description: 실시간 CDP는 Adobe Experience Platform에 구축되어 Experience Platform 서비스 및 기능을 많이 활용합니다. 세그멘테이션 서비스를 사용하면 유사한 트레이트를 사용하여 고객을 더 작은 그룹으로 나누어 맞춤형 마케팅을 제공할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
+source-git-commit: 54df4778a025811504801306120bda78e04281c1
 workflow-type: tm+mt
-source-wordcount: '254'
+source-wordcount: '275'
 ht-degree: 1%
 
 ---
