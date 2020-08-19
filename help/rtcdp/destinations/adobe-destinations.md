@@ -1,10 +1,11 @@
 ---
+keywords: destinations;experience cloud solutions
 title: Adobe 대상
 seo-title: Adobe 대상
 description: 광고 타깃팅, 개인화, 마케팅 자동화 등을 위해 Adobe의 데이터를 실시간 CDP와 다른 Adobe Experience Cloud 솔루션에 연결하여 고객 경험 관리
 seo-description: 광고 타깃팅, 개인화, 마케팅 자동화 등을 위해 Adobe의 데이터를 실시간 CDP와 다른 Adobe Experience Cloud 솔루션에 연결하여 고객 경험 관리
 translation-type: tm+mt
-source-git-commit: e3b7dd4788042deaeba68bfdbe08e8448b46c270
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '129'
 ht-degree: 21%
