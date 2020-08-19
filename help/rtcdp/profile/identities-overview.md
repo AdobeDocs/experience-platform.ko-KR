@@ -1,13 +1,12 @@
 ---
-title: ID 및 ID 네임스페이스
-seo-title: Adobe Experience Platform ID 서비스
-description: description
-seo-description: seo description
+keywords: identities rtcdp;rtcdp identities;real-time cdp identities
+title: 실시간 CDP의 ID
+description: Adobe Experience Platform ID 서비스를 사용하면 다양한 디바이스와 시스템에서 ID를 결합함으로써 고객과 고객의 행동을 보다 정확하게 파악할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
-source-wordcount: '406'
-ht-degree: 1%
+source-wordcount: '424'
+ht-degree: 0%
 
 ---
 
