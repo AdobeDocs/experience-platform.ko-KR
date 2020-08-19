@@ -1,10 +1,11 @@
 ---
+keywords: Marketo Munchkin;marketo munchkin;Marketo Munchkin extension;marketo munchkin extension;marketo;Marketo
 title: Marketo Munchkin 확장 프로그램
 seo-title: Marketo Munchkin 확장 프로그램
 description: Marketing Munchkin 익스텐션은 Adobe 실시간 고객 데이터 플랫폼의 개인화를 위한 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 seo-description: Marketing Munchkin 익스텐션은 Adobe 실시간 고객 데이터 플랫폼의 개인화를 위한 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
+source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
 workflow-type: tm+mt
 source-wordcount: '572'
 ht-degree: 9%
