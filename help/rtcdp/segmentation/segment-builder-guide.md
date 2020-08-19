@@ -1,12 +1,13 @@
 ---
-title: 세그먼트 빌더 가이드
+keywords: rtcdp segments;segment builder rtcdp;rtcdp segment
+title: 실시간 고객 데이터 플랫폼을 위한 세그먼트 빌더 가이드
 seo-title: 실시간 고객 데이터 플랫폼에서 세그멘테이션 서비스 세그먼트 빌더 사용
 description: 세그먼트 빌더를 사용하는 방법을 설명하는 가이드입니다.
 seo-description: 실시간 고객 데이터 플랫폼에서 세그멘테이션 서비스 세그먼트 빌더를 사용하는 방법에 대해 설명하는 사용 가이드입니다.
 translation-type: tm+mt
-source-git-commit: e351a2d489730c1f1bd5f87be8d85612090bc009
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
-source-wordcount: '100'
+source-wordcount: '105'
 ht-degree: 0%
 
 ---
