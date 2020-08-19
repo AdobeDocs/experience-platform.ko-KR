@@ -1,10 +1,11 @@
 ---
+keywords: Azure event hub destination;azure event hub;azure eventhub
 title: (베타) Azure 이벤트 허브 대상
 seo-title: (베타) Azure 이벤트 허브 대상
 description: Azure 이벤트 허브 저장소에 대한 실시간 아웃바운드 연결을 만들어 Experience Platform의 데이터를 스트리밍합니다.
 seo-description: Azure 이벤트 허브 저장소에 대한 실시간 아웃바운드 연결을 만들어 Experience Platform의 데이터를 스트리밍합니다.
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '467'
 ht-degree: 2%
@@ -22,7 +23,7 @@ ht-degree: 2%
 
 [!DNL Azure Event Hubs] 빅데이터 스트리밍 플랫폼 및 이벤트 통합 서비스입니다. 초당 수백만 개의 이벤트를 수신하고 처리할 수 있습니다. 이벤트 허브로 전송된 데이터는 모든 실시간 분석 공급자 또는 배치/저장 어댑터를 사용하여 변형하고 저장할 수 있습니다.
 
-Adobe Experience Platform에서 데이터를 스트리밍하기 위해 [!DNL Azure Event Hubs] 스토리지에 대한 실시간 아웃바운드 연결을 생성할 수 있습니다.
+스토리지에 대한 실시간 아웃바운드 연결을 만들어 Adobe Experience Platform의 데이터를 스트림할 수 있습니다. [!DNL Azure Event Hubs]
 
 * 자세한 내용 [!DNL Azure Event Hubs]은 [Microsoft 설명서를 참조하십시오](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-about).
 * API 호출 [!DNL Azure Event Hubs] 을 사용하여 연결하려면 [스트리밍 대상 API 자습서를 참조하십시오](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md).
@@ -44,16 +45,16 @@ Adobe Experience Platform에서 데이터를 스트리밍하기 위해 [!DNL Azu
 
 ### 인증 단계에서 {#authentication-step}
 
-* **[!UICONTROL SAS 키 이름]** 및 **[!UICONTROL SAS 키]**: SAS 키 이름과 키를 입력합니다. [!DNL Azure Event Hubs] Microsoft 문서에서 SAS 키 [로 인증하는 방법에 대해 알아보십시오](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
-* **[!UICONTROL 네임스페이스]**: 네임스페이스를 [!DNL Azure Event Hubs] 입력합니다. Microsoft 문서 [!DNL Azure Event Hubs] 의 네임스페이스에 대해 [알아보십시오](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace).
+* **[!UICONTROL SAS 키 이름]** 및 **[!UICONTROL SAS 키]**:SAS 키 이름과 키를 입력합니다. [!DNL Azure Event Hubs] Microsoft 문서에서 SAS 키 [로 인증하는 방법에 대해 알아보십시오](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
+* **[!UICONTROL 네임스페이스]**:네임스페이스를 [!DNL Azure Event Hubs] 입력합니다. Microsoft 문서 [!DNL Azure Event Hubs] 의 네임스페이스에 대해 [알아보십시오](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace).
 
 ![인증 단계에 필요한 입력](/help/rtcdp/destinations/assets/event-hubs-authentication.png)
 
 ### 설정 단계에서 {#setup-step}
 
-* **[!UICONTROL 이름]**: 연결할 이름을 입력합니다 [!DNL Azure Event Hubs].
-* **[!UICONTROL 설명]**: 연결에 대한 설명을 제공합니다.  예: &quot;Premium Tier customers&quot;, &quot;Haps interest to kitteuring.&quot;
-* **[!UICONTROL eventHubName]**: 대상에 스트림의 이름을 [!DNL Azure Event Hubs] 입력합니다.
+* **[!UICONTROL 이름]**:연결할 이름을 입력합니다 [!DNL Azure Event Hubs].
+* **[!UICONTROL 설명]**:연결에 대한 설명을 제공합니다.  예:&quot;Premium Tier customers&quot;, &quot;Haps interest to kitteuring.&quot;
+* **[!UICONTROL eventHubName]**:대상에 스트림의 이름을 [!DNL Azure Event Hubs] 입력합니다.
 
 ![설정 단계에 필요한 데이터](/help/rtcdp/destinations/assets/event-hubs-setup-step.png)
 
