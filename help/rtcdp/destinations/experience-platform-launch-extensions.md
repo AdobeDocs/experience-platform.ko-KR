@@ -1,10 +1,11 @@
 ---
+keywords: launch extensions;launch extension;launch destinations
 title: Experience Platform Launch 확장
 seo-title: Experience Platform Launch 확장
 description: Launch는 Adobe의 차세대 태그 관리 기능입니다. Launch는 관련 고객 환경을 향상하는 데 필요한 모든 분석, 마케팅 및 광고 태그를 배포하고 관리하는 간단한 방법을 고객에게 제공합니다.
 seo-description: Launch는 Adobe의 차세대 태그 관리 기능입니다. Launch는 관련 고객 환경을 향상하는 데 필요한 모든 분석, 마케팅 및 광고 태그를 배포하고 관리하는 간단한 방법을 고객에게 제공합니다.
 translation-type: tm+mt
-source-git-commit: be4cf64c89a189a09a4a7774c8fadc76c6ee8458
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '622'
 ht-degree: 21%
@@ -30,7 +31,7 @@ Adobe 실시간 CDP 인터페이스에서 Launch 익스텐션을 찾으려면 **
 
 익스텐션을 실행하면 원시 이벤트 데이터를 여러 유형의 대상으로 전달할 수 있습니다. 익스텐션을 대상의 **이벤트 전달** 유형으로 간주합니다. 이는 원시 이벤트 데이터만 전달하는 대상 플랫폼과의 단순한 통합 유형입니다. 이러한 예는 [Gainsight 개인화 확장](/help/rtcdp/destinations/gainsight-extension.md) 또는 [고객 확장의 확인 음보입니다](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md).
 
-**Adobe의 프로필/세그먼트 내보내기** 대상 실시간 고객 데이터 Platform은 이벤트 데이터를 캡처하고, 다른 데이터 소스와 결합하고, 세그멘테이션을 적용하고, 세그먼트 및 자격이 있는 프로필을 대상에 내보냅니다. 이러한 예로는 [Amazon S3 클라우드 스토리지 대상](/help/rtcdp/destinations/amazon-s3-destination.md) 또는 [Google 디스플레이 및 비디오 360 광고 대상이 있습니다](/help/rtcdp/destinations/google-dv360-destination.md).
+**Adobe의 프로필/세그먼트 내보내기** 대상은 실시간 고객 데이터 플랫폼을 통해 이벤트 데이터를 캡처하고, 다른 데이터 소스와 결합하고, 세그멘테이션을 적용하고, 세그먼트 및 자격이 있는 프로필을 대상에 내보냅니다. 이러한 예로는 [Amazon S3 클라우드 스토리지 대상](/help/rtcdp/destinations/amazon-s3-destination.md) 또는 [Google 디스플레이 및 비디오 360 광고 대상이 있습니다](/help/rtcdp/destinations/google-dv360-destination.md).
 
 ![다른 대상과 Experience Platform Launch 확장](/help/rtcdp/destinations/assets/launch-and-other-destinations.png)
 
@@ -59,7 +60,7 @@ Launch extensions를 사용하면 다양한 고객 사례를 충족할 수 있�
 
 * [광고](/help/rtcdp/destinations/advertising-destinations.md)
 * [Analytics](/help/rtcdp/destinations/analytics-destinations.md)
-* [데이터 관리 Platform](/help/rtcdp/destinations/dmp-destinations.md)
+* [데이터 관리 플랫폼](/help/rtcdp/destinations/dmp-destinations.md)
 * [이메일 마케팅 대상](/help/rtcdp/destinations/email-marketing-destinations.md)
 * [개인화](/help/rtcdp/destinations/personalization-destinations.md)
 * [설문 조사](/help/rtcdp/destinations/survey-destinations.md)
