@@ -4,7 +4,7 @@ seo-title: Experience Platform 웹 SDK용 Edge 구성
 description: 'Experience Platform 에지 네트워크를 구성하는 방법을 알아봅니다. '
 seo-description: 'Experience Platform 에지 네트워크를 구성하는 방법을 알아봅니다. '
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: 075d71353877045e12985b3914aaeeb478ed46d6
 workflow-type: tm+mt
 source-wordcount: '870'
 ht-degree: 2%
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # 에지 구성
 
-Adobe Experience Platform 구성이 두 곳 [!DNL Web SDK] 으로 분할되어 있다. SDK의 [구성 명령은](configuring-the-sdk.md) 클라이언트와 마찬가지로 클라이언트에서 처리해야 하는 작업을 제어합니다 `edgeDomain`. Edge Configuration handles all other configuration for the SDK. 요청이 Adobe Experience Platform으로 전송되면 [!DNL Edge Network]이 서버측 구성을 참조하는 데 `edgeConfigId` 사용됩니다. 따라서 웹 사이트에서 코드를 변경하지 않고도 구성을 업데이트할 수 있습니다.
+Adobe Experience Platform의 구성은 두 곳 [!DNL Web SDK] 으로 나누어져 있다. SDK의 [구성 명령은](configuring-the-sdk.md) 클라이언트와 마찬가지로 클라이언트에서 처리해야 하는 작업을 제어합니다 `edgeDomain`. Edge Configuration handles all other configuration for the SDK. 요청이 Adobe Experience Platform으로 전송되면 [!DNL Edge Network]이 서버측 구성을 참조하는 데 `edgeConfigId` 사용됩니다. 따라서 웹 사이트에서 코드를 변경하지 않고도 구성을 업데이트할 수 있습니다.
 
 ## 에지 구성 ID 만들기
 
@@ -23,8 +23,6 @@ Edge 구성 ID는 Edge 구성 도구를 [!DNL Launch] 사용하여 Adobe에서 �
 ![edge 구성 툴 탐색](../../assets/edge_configuration_nav.png)
 
 >[!NOTE]
->
->
 >
 >허용 목록 고객은 태그 관리자로 사용하는지에 관계없이 Edge 구성 도구 [!DNL Launch] 를 사용할 수 있습니다. 또한 사용자는 [!DNL Launch] 자세한 내용은 [설명서의 사용자](https://docs.adobe.com/content/help/ko-KR/launch/using/reference/admin/user-permissions.html) 권한 [!DNL Launch] 문서를 참조하십시오.
 
@@ -66,7 +64,7 @@ ID 동기화를 컨테이너로 그룹화하여 서로 다른 시간에 다른 I
 
 ##### [!UICONTROL 스트리밍 입구]
 
-스트리밍 유입은 Adobe Experience Platform의 HTTP 소스입니다. 이러한 템플릿은 Adobe Experience Platform의 [!UICONTROL 소스] 탭 아래에서 HTTP API로 만들어집니다.
+스트리밍 유입은 Adobe Experience Platform의 HTTP 소스입니다. 이러한 템플릿은 Adobe Experience Platform의 [!UICONTROL 소스] 탭 아래에 HTTP API로 만들어집니다.
 
 ##### [!UICONTROL 이벤트 데이터 집합]
 
@@ -80,13 +78,11 @@ Adobe Target을 구성하려면 클라이언트 코드를 제공해야 합니다
 
 >[!NOTE]
 >
->
->
 >클라이언트 코드와 연관된 조직은 구성 ID가 생성된 조직과 일치해야 합니다.
 
 ##### [!UICONTROL 클라이언트 코드]
 
-타겟 계정의 고유 ID. 이를 찾으려면 [ [!UICONTROL Adobe Target] 설정  > [구현]]  > [설정 [!UICONTROL 편집] > [다음]   [!UICONTROL 에 설정 편집]을 검색하여 AdobeDownloadButton for theJs.js또는 mbox.js를 검색하여 찾을 수 있습니다.]
+타겟 계정의 고유 ID. 이를 찾으려면 [!UICONTROL Adobe Target] > [!UICONTROL 설정][!UICONTROL > 구현] > 설정 편집 [!UICONTROL 다음]  [!UICONTROL 에서 설정 편집To theDownloadButton forJs또는 mbox.js로 이동합니다.]
 
 ##### [!UICONTROL 속성 토큰]
 
@@ -96,13 +92,13 @@ Adobe Target을 구성하려면 클라이언트 코드를 제공해야 합니다
 
 ##### [!UICONTROL Target 환경 ID]
 
-[Adobe Target 환경을](https://docs.adobe.com/content/help/en/target/using/administer/hosts.html) 사용하면 모든 개발 단계를 통해 구현을 관리할 수 있습니다. 이 설정은 각 환경에서 사용할 환경을 지정합니다.
+[Adobe Target의 환경을](https://docs.adobe.com/content/help/en/target/using/administer/hosts.html) 사용하면 모든 개발 단계를 통해 구현을 관리할 수 있습니다. 이 설정은 각 환경에서 사용할 환경을 지정합니다.
 
-Adobe에서는 작업을 단순하게 유지하기 위해 각 `dev`, `stage`및 `prod` edge 구성 환경에 대해 이 설정을 다르게 설정하는 것이 좋습니다. 하지만 이미 [!UICONTROL Adobe Target 환경을] 정의한 경우 이러한 환경을 사용할 수 있습니다.
+Adobe에서는 작업을 단순하게 유지하기 위해 각 `dev`, `stage`및 `prod` edge 구성 환경에 대해 이 설정을 다르게 설정하는 것이 좋습니다. 하지만 이미 [!UICONTROL Adobe Target 환경이] 정의된 경우 이러한 환경을 사용할 수 있습니다.
 
 #### Adobe Audience Manager
 
-Adobe Audience Manager으로 데이터를 전송하는 데 필요한 모든 것은 이 섹션을 활성화하는 것입니다. 다른 설정은 선택 사항이지만 권장됩니다.
+Adobe Audience Manager으로 데이터를 보내는 데 필요한 모든 것은 이 섹션을 활성화하는 것입니다. 다른 설정은 선택 사항이지만 권장됩니다.
 
 ![Adobe 대상 관리 설정 블록](../../assets/edge_configuration_aam.png)
 
@@ -116,7 +112,7 @@ SDK에서 [URL 대상을 통해 세그먼트 정보를 공유할 수 있습니�
 
 #### Adobe Analytics
 
-데이터를 Adobe Analytics으로 전송할지 여부를 제어합니다. 자세한 내용은 [Analytics 개요를 참조하십시오](../solution-specific/analytics/analytics-overview.md).
+데이터를 Adobe Analytics으로 전송할지 여부를 제어합니다. 자세한 내용은 [분석 개요에 나와 있습니다](../solution-specific/analytics/analytics-overview.md).
 
 ![Adobe Analytics 설정 블록](../../assets/edge_configuration_aa.png)
 
