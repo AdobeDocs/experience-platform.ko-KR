@@ -1,10 +1,11 @@
 ---
+keywords: personalization;Personalization
 title: 개인화 대상
 seo-title: 개인화 대상
 description: 개인화 플랫폼은 개별 행동을 통해 데이터 및 통찰력을 수집합니다. 이러한 플랫폼은 마케터가 익명의 데이터를 탐색하거나, 이전 활동을 기반으로 잠재 고객에게 제안이나 광고를 제공하거나 유사한 습관을 가진 고객 세그먼트의 일부로서 제공할 수 있도록 지원합니다.
 seo-description: 개인화 플랫폼은 개별 행동을 통해 데이터 및 통찰력을 수집합니다. 이러한 플랫폼은 마케터가 익명의 데이터를 탐색하거나, 이전 활동을 기반으로 잠재 고객에게 제안이나 광고를 제공하거나 유사한 습관을 가진 고객 세그먼트의 일부로서 제공할 수 있도록 지원합니다.
 translation-type: tm+mt
-source-git-commit: e3b7dd4788042deaeba68bfdbe08e8448b46c270
+source-git-commit: cbd748c1881c61f5e636567d94b68f2cf7302fa5
 workflow-type: tm+mt
 source-wordcount: '170'
 ht-degree: 7%
