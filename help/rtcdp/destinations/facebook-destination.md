@@ -1,10 +1,11 @@
 ---
+keywords: facebook extensions;facebook extension;facebook destinations;facebook
 title: Facebook 대상
 seo-title: Facebook 대상
 description: 해시된 이메일을 기반으로 고객 타깃팅, 개인화 및 억제를 위해 Facebook 캠페인에 대한 프로필을 활성화합니다.
 seo-description: 해시된 이메일을 기반으로 고객 타깃팅, 개인화 및 억제를 위해 Facebook 캠페인에 대한 프로필을 활성화합니다.
 translation-type: tm+mt
-source-git-commit: 7f3df12da5e93c3d0cc53eed1aa603ddbafdb0b2
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '722'
 ht-degree: 2%
@@ -22,7 +23,7 @@ ht-degree: 2%
 
 ## 사용 사례
 
-대상을 사용하는 방법과 시기를 더 잘 이해할 수 있도록, Adobe 실시간 고객 데이터 Platform 고객이 이 기능을 사용하여 해결할 수 있는 두 가지 샘플 사용 사례를 소개합니다. [!DNL Facebook]
+대상을 사용하는 방법과 시기를 보다 잘 이해할 수 있도록 Adobe의 실시간 고객 데이터 플랫폼 고객이 이 기능을 사용하여 해결할 수 있는 두 가지 샘플 사용 사례를 소개합니다. [!DNL Facebook]
 
 
 ### 사용 사례 #1
@@ -70,7 +71,7 @@ Experience Platform에서 이메일 주소 인제스트에 대한 자세한 내�
 
 직접 이메일 주소를 해시하도록 선택한 경우 다음 요구 사항을 준수해야 합니다.
 
-* 이메일 문자열에서 모든 선행 및 후행 공백을 트리밍합니다. 예: `johndoe@example.com`, not `<space>johndoe@example.com<space>`
+* 이메일 문자열에서 모든 선행 및 후행 공백을 트리밍합니다.예: `johndoe@example.com`, not `<space>johndoe@example.com<space>`
 * 이메일 문자열을 해싱할 때는 소문자 문자열을 해시해야 합니다.
    * 예: `example@email.com`, not `EXAMPLE@EMAIL.COM`
 * 해시된 문자열이 모두 소문자인지 확인하십시오.
