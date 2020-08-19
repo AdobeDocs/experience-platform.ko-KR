@@ -5,7 +5,7 @@ title: 다중 엔티티 세그먼테이션
 topic: overview
 description: 다중 엔티티 세그먼테이션은 제품, 스토어 또는 기타 비프로필 클래스에 따라 추가 데이터로 프로필 데이터를 확장하는 기능입니다. 연결되면 추가 클래스의 데이터를 프로필 스키마가 기본인 것처럼 사용할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
+source-git-commit: cb5df9b44486bda84f08805f1077d6097e3666e2
 workflow-type: tm+mt
 source-wordcount: '409'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 다중 엔티티 세그먼테이션은 제품, 스토어 또는 기타 비프로필 클래스에 따라 추가 데이터로 [!DNL Profile] 데이터를 확장하는 기능입니다. 연결되면 추가 클래스의 데이터를 스키마 원본처럼 사용할 수 [!DNL Profile] 있게 됩니다.
 
-다중 엔티티 세그먼테이션에 대한 자세한 내용을 보려면 설명서를 계속 읽고 아래 비디오를 시청하거나 세그멘테이션 개요를 [살펴보면서 학습 내용을 보완하십시오](./home.md).]
+다중 엔티티 세그먼테이션에 대한 자세한 내용을 보려면 설명서를 계속 읽고 아래 비디오를 보거나 세그멘테이션 개요를 [살펴보면서 학습 내용을 보완하십시오](./home.md).
 
 >[!VIDEO](https://video.tv.adobe.com/v/28947?quality=12&learn=on)
 
