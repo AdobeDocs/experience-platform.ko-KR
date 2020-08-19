@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 데이터 액세스 개요
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: cb5df9b44486bda84f08805f1077d6097e3666e2
 workflow-type: tm+mt
 source-wordcount: '1332'
 ht-degree: 3%
@@ -14,13 +14,13 @@ ht-degree: 3%
 
 # API를 사용하여 데이터 집합 [!DNL Data Access] 쿼리
 
-이 문서에서는 Adobe Experience Platform의 API를 사용하여 데이터 세트 내에 저장된 데이터를 찾고, 액세스하고, 다운로드하는 방법을 다루는 단계별 자습서를 [!DNL Data Access] 제공합니다. 페이징이나 부분 다운로드 등 API의 일부 고유한 기능에도 소개됩니다. [!DNL Data Access]
+이 문서에서는 Adobe Experience Platform의 [!DNL Data Access] API를 사용하여 데이터 세트 내에 저장된 데이터를 찾고, 액세스하고, 다운로드하는 방법을 다루는 단계별 자습서를 제공합니다. 페이징이나 부분 다운로드 등 API의 일부 고유한 기능에도 소개됩니다. [!DNL Data Access]
 
 ## 시작하기
 
 데이터 세트를 만들고 채우는 방법에 대한 이해를 돕는 이 자습서입니다. 자세한 내용은 [데이터 세트 작성 자습서를](../../catalog/datasets/create.md) 참조하십시오.
 
-다음 섹션에서는 Platform API를 성공적으로 호출하기 위해 알아야 할 추가 정보를 제공합니다.
+다음 섹션에서는 플랫폼 API를 성공적으로 호출하기 위해 알아야 할 추가 정보를 제공합니다.
 
 ### 샘플 API 호출 읽기
 
@@ -30,7 +30,7 @@ ht-degree: 3%
 
 API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 합니다](../../tutorials/authentication.md). 인증 자습서를 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
 
-- 인증: 무기명 `{ACCESS_TOKEN}`
+- 인증:무기명 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
@@ -44,7 +44,7 @@ API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 
 
 페이로드(POST, PUT, PATCH)이 포함된 모든 요청에는 추가 헤더가 필요합니다.
 
-- 컨텐츠 유형: application/json
+- 컨텐츠 유형:application/json
 
 ## 시퀀스 다이어그램
 
@@ -57,8 +57,8 @@ API를 [!DNL Catalog] 사용하면 배치 및 파일에 대한 정보를 검색�
 
 API를 사용하기 전에 [!DNL Data Access] 액세스하려는 데이터의 위치를 식별해야 합니다. API에는 조직의 메타데이터를 검색하고 액세스하려는 일괄 처리 또는 파일의 ID를 검색하는 데 사용할 수 있는 두 개의 끝점이 있습니다. [!DNL Catalog]
 
-- `GET /batches`: 조직 아래의 배치 목록을 반환합니다.
-- `GET /dataSetFiles`: 조직의 파일 목록을 반환합니다.
+- `GET /batches`:조직 아래의 배치 목록을 반환합니다.
+- `GET /dataSetFiles`:조직의 파일 목록을 반환합니다.
 
 API의 포괄적인 엔드포인트 목록은 [!DNL Catalog] API 참조를 참조하십시오 [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml).
 
@@ -276,7 +276,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb
 
 파일 ID가 개별 파일을 가리키는지 또는 디렉토리를 가리키는지에 따라, 반환된 데이터 배열에 해당 디렉토리에 속하는 파일 목록이나 단일 항목이 포함될 수 있습니다. 각 파일 요소에는 파일 이름, 크기(바이트), 파일 다운로드 링크 등의 세부 사항이 포함됩니다.
 
-**사례 1: 파일 ID가 단일 파일을 가리킵니다.**
+**사례 1:파일 ID가 단일 파일을 가리킵니다.**
 
 **응답**
 
@@ -305,7 +305,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb
 | `{FILE_NAME}.parquet` | 파일의 이름입니다. |
 | `_links.self.href` | 파일을 다운로드할 URL입니다. |
 
-**사례 2: 파일 ID가 디렉토리를 가리킵니다.**
+**사례 2:파일 ID가 디렉토리를 가리킵니다.**
 
 **응답**
 
@@ -365,7 +365,7 @@ HEAD /files/{FILE_ID}?path={FILE_NAME}
 | 속성 | 설명 |
 | -------- | ----------- |
 | `{FILE_ID}` | 파일의 식별자입니다. |
-| `{FILE_NAME`} | 파일 이름(예: profiles.partiquoted) |
+| `{FILE_NAME}` | 파일 이름(예: profiles.partiquoted) |
 
 **요청**
 
@@ -380,8 +380,8 @@ curl -I 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb2-44
 **응답**
 
 응답 헤더에는 다음과 같이 쿼리된 파일의 메타데이터가 포함됩니다.
-- `Content-Length`: 페이로드 크기(바이트)를 나타냅니다.
-- `Content-Type`: 파일 유형을 나타냅니다.
+- `Content-Length`:페이로드 크기(바이트)를 나타냅니다.
+- `Content-Type`:파일 유형을 나타냅니다.
 
 ## 파일 내용 액세스
 
@@ -396,7 +396,7 @@ GET /files/{FILE_ID}?path={FILE_NAME}
 | 속성 | 설명 |
 | -------- | ----------- |
 | `{FILE_ID}` | 파일의 식별자입니다. |
-| `{FILE_NAME`} | 파일 이름(예: profiles.partional). |
+| `{FILE_NAME}` | 파일 이름(예: profiles.partional). |
 
 **요청**
 
@@ -448,17 +448,17 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb
 
 응답 본문에는 HTTP 상태 206(부분 컨텐츠)과 함께 파일의 처음 100바이트(요청의 &quot;범위&quot; 헤더에 의해 지정됨)가 포함됩니다. 응답에는 다음 헤더도 포함됩니다.
 
-- 컨텐츠 길이: 100(반환된 바이트 수)
-- 컨텐츠 유형: 응용 프로그램/쪽모이 세공됨(쪽모이 세공된 파일이 요청되었으므로 응답 컨텐츠 유형은 쪽모이 세공된 경우)
-- 컨텐츠 범위: 바이트 0-99/249058(요청된 범위(0-99)가 총 바이트 수(249058) 중)
+- 컨텐츠 길이:100(반환된 바이트 수)
+- 컨텐츠 유형:응용 프로그램/쪽모이 세공됨(쪽모이 세공된 파일이 요청되었으므로 응답 컨텐츠 유형은 쪽모이 세공된 경우)
+- 컨텐츠 범위:바이트 0-99/249058(요청된 범위(0-99)가 총 바이트 수(249058) 중)
 
 ## API 응답 페이지 매김 구성
 
 API 내의 응답에 [!DNL Data Access] 페이지가 매겨집니다. 기본적으로 페이지당 최대 항목 수는 100개입니다. 페이징 매개 변수를 사용하여 기본 동작을 수정할 수 있습니다.
 
-- `limit`: &quot;limit&quot; 매개 변수를 사용하여 요구 사항에 따라 페이지당 항목 수를 지정할 수 있습니다.
-- `start`: 오프셋을 &quot;시작&quot; 쿼리 매개 변수로 설정할 수 있습니다.
-- `&`: 앰퍼샌드를 사용하여 단일 호출에서 여러 매개 변수를 결합할 수 있습니다.
+- `limit`:&quot;limit&quot; 매개 변수를 사용하여 요구 사항에 따라 페이지당 항목 수를 지정할 수 있습니다.
+- `start`:오프셋을 &quot;시작&quot; 쿼리 매개 변수로 설정할 수 있습니다.
+- `&`:앰퍼샌드를 사용하여 단일 호출에서 여러 매개 변수를 결합할 수 있습니다.
 
 **API 형식**
 
