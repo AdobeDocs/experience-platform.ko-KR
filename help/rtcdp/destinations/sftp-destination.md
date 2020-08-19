@@ -1,10 +1,11 @@
 ---
+keywords: SFTP;sftp
 title: SFTP 대상
 seo-title: SFTP 대상
 description: SFTP 서버에 대한 라이브 아웃바운드 연결을 만들어 Experience Platform에서 구분된 데이터 파일을 정기적으로 내보냅니다.
 seo-description: SFTP 서버에 대한 라이브 아웃바운드 연결을 만들어 Experience Platform에서 구분된 데이터 파일을 정기적으로 내보냅니다.
 translation-type: tm+mt
-source-git-commit: 08b6fd2d43e8ca9d0208ac1bfadc2db15e3f2e90
+source-git-commit: cbd748c1881c61f5e636567d94b68f2cf7302fa5
 workflow-type: tm+mt
 source-wordcount: '171'
 ht-degree: 0%
@@ -26,9 +27,9 @@ SFTP를 비롯한 클라우드 스토리지 대상에 연결하는 방법 [](/he
 
 SFTP 대상의 경우 **인증** 단계에서 대상 만들기 워크플로우에 다음 정보를 입력합니다.
 
-* **호스트**: SFTP 저장소 위치의 주소
-* **사용자 이름**: SFTP 저장소 위치에 로그인하는 사용자 이름
-* **암호**: SFTP 저장소 위치에 로그인하는 암호
+* **호스트**:SFTP 저장소 위치의 주소
+* **사용자 이름**:SFTP 저장소 위치에 로그인하는 사용자 이름
+* **암호**:SFTP 저장소 위치에 로그인하는 암호
 
 ## 내보낸 데이터 {#exported-data}
 
