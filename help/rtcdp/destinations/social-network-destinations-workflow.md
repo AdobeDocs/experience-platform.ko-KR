@@ -1,10 +1,11 @@
 ---
+keywords: Facebook;facebook;Social network;Social Network;social network authentication;Social network authentication
 title: 소셜 네트워크 대상 워크플로우
 seo-title: 소셜 네트워크 대상 워크플로우
 description: 소셜 네트워크 및 계정에 연결하는 지침
 seo-description: 소셜 네트워크 및 계정에 연결하는 지침
 translation-type: tm+mt
-source-git-commit: 9306266edc0a4afdcf378e94b46b239187b18644
+source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
 workflow-type: tm+mt
 source-wordcount: '501'
 ht-degree: 0%
