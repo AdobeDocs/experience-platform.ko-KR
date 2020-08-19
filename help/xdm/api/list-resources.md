@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 리소스 목록
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: cb5df9b44486bda84f08805f1077d6097e3666e2
 workflow-type: tm+mt
 source-wordcount: '508'
 ht-degree: 2%
@@ -31,7 +31,7 @@ GET /{CONTAINER_ID}/{RESOURCE_TYPE}?{QUERY_PARAMS}
 | --- | --- |
 | `{CONTAINER_ID}` | 리소스가 있는 컨테이너(&quot;전역&quot; 또는 &quot;테넌트&quot;). |
 | `{RESOURCE_TYPE}` | 에서 검색할 리소스 [!DNL Schema Library]유형입니다. 유효한 유형은 `classes`, `mixins``schemas`, `datatypes`및 `descriptors`입니다. |
-| `{QUERY_PARAMS`} | 결과를 필터링하는 선택적 쿼리 매개 변수입니다. 자세한 내용은 [쿼리 매개 변수](#query) 섹션을 참조하십시오. |
+| `{QUERY_PARAMS}` | 결과를 필터링하는 선택적 쿼리 매개 변수입니다. 자세한 내용은 [쿼리 매개 변수](#query) 섹션을 참조하십시오. |
 
 **요청**
 
@@ -49,8 +49,8 @@ curl -X GET \
 
 | 헤더 수락 | 설명 |
 | ------- | ------------ |
-| application/vnd.adobe.xed-id+json | 각 리소스에 대한 간단한 요약을 반환합니다. 리소스를 나열하는 데 권장되는 헤더입니다. (제한: 300) |
-| application/vnd.adobe.xed+json | 원본 및 포함된 각 리소스에 대한 전체 JSON 스키마 `$ref` 를 `allOf` 반환합니다. (제한: 300) |
+| application/vnd.adobe.xed-id+json | 각 리소스에 대한 간단한 요약을 반환합니다. 리소스를 나열하는 데 권장되는 헤더입니다. (제한:300) |
+| application/vnd.adobe.xed+json | 원본 및 포함된 각 리소스에 대한 전체 JSON 스키마 `$ref` 를 `allOf` 반환합니다. (제한:300) |
 | application/vnd.adobe.xdm-v2+json | 끝점을 사용할 때 `/descriptors` 페이징 기능을 활용하려면 이 승인 헤더를 사용해야 합니다. |
 
 **응답**
