@@ -1,10 +1,11 @@
 ---
+keywords: email;Email;e-mail;email destinations;oracle eloqua;oracle
 title: Oracle Furnar 대상
 seo-title: Oracle Furnar 대상
 description: Oracle Fura는 B2B 마케터 및 조직이 마케팅 캠페인 및 영업 리드 생성을 관리하는 데 도움이 되는 Oracle이 제공하는 마케팅 자동화를 위한 SaaS(서비스) 플랫폼입니다.
 seo-description: Oracle Fura는 B2B 마케터 및 조직이 마케팅 캠페인 및 영업 리드 생성을 관리하는 데 도움이 되는 Oracle이 제공하는 마케팅 자동화를 위한 SaaS(서비스) 플랫폼입니다.
 translation-type: tm+mt
-source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '517'
 ht-degree: 0%
@@ -18,7 +19,7 @@ ht-degree: 0%
 
 [Fura](https://www.oracle.com/marketingcloud/products/marketing-automation/) 는 B2B 마케터 및 조직이 마케팅 캠페인 및 영업 리드 생성을 관리하는 데 도움이 [!DNL Oracle] 되는 마케팅 자동화를 위한 서비스(SaaS) 플랫폼으로서 사용되는 소프트웨어입니다.
 
-세그먼트 데이터 [!DNL Oracle Eloqua]를 전송하려면 먼저 Adobe 실시간 고객 데이터 Platform에서 대상을 [](#connect-destination) 연결한 [다음 스토리지 위치에서 (으)로 데이터 가져오기](#import-data-into-eloqua) 를 [!DNL Oracle Eloqua]설정해야 합니다.
+세그먼트 데이터 [!DNL Oracle Eloqua]를 전송하려면 먼저 Adobe의 실시간 고객 데이터 [플랫폼에서 대상을](#connect-destination) [연결한 다음 스토리지 위치에서 (으)로 데이터 가져오기](#import-data-into-eloqua) 를 [!DNL Oracle Eloqua]설정해야 합니다.
 
 ## 대상에 연결 {#connect-destination}
 
@@ -34,9 +35,9 @@ SSH 키 **** 연결이 있는 SFTP의 경우 도메인, 포트, 사용자 이름
    ![Furnar 마법사 설정](/help/rtcdp/destinations/assets/eloqua-authentication.png)
 
 3. 설정 **** 단계에서 아래와 같이 대상에 대한 관련 정보를 입력합니다.
-   * **[!UICONTROL 이름]**: 대상의 관련 이름을 선택합니다.
-   * **[!UICONTROL 설명]**: 대상에 대한 설명을 입력합니다.
-   * **[!UICONTROL 폴더 경로]**: 실시간 CDP가 내보내기 데이터를 CSV 또는 탭으로 구분된 파일로 저장하는 스토리지 위치에 경로를 제공합니다.
+   * **[!UICONTROL 이름]**:대상의 관련 이름을 선택합니다.
+   * **[!UICONTROL 설명]**:대상에 대한 설명을 입력합니다.
+   * **[!UICONTROL 폴더 경로]**:실시간 CDP가 내보내기 데이터를 CSV 또는 탭으로 구분된 파일로 저장하는 스토리지 위치에 경로를 제공합니다.
    * **[!UICONTROL 파일 형식]**: **CSV** 또는 **TAB_DIPORTED**. 저장소 위치로 내보낼 파일 형식을 선택합니다.
 
    ![웅변가 기본 정보](/help/rtcdp/destinations/assets/eloqua-basic-information.png)
