@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 액세스 제어 개요
 topic: overview
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: e66fd20eb7a153e556a3716bb255af084e52292e
 workflow-type: tm+mt
-source-wordcount: '1097'
+source-wordcount: '1103'
 ht-degree: 3%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 3%
 
 액세스 권한을 획득하고 할당하는 고급 작업 과정은 다음과 같이 요약할 수 있습니다.
 
-- Adobe Experience Platform에 가입하면 등록 양식에 지정된 관리자에게 이메일이 전송됩니다.
+- Adobe Experience Platform 또는 Experience Platform을 사용하는 응용 프로그램/응용 프로그램 서비스에 라이선스를 부여하면 라이선스 동안 지정된 관리자에게 이메일이 전송됩니다.
 - 관리자는 [Adobe Admin Console](#adobe-admin-console) 에 로그인하여 개요 페이지의 제품 목록에서 **Adobe Experience Platform** 를 선택합니다.
 - 관리자는 기본 [제품 프로필을](#product-profiles) 보거나 필요에 따라 새 고객 제품 프로필을 만들 수 있습니다.
 - 관리자는 기존 제품 프로필에 대한 권한 및 사용자를 편집할 수 있습니다.
@@ -43,7 +43,7 @@ Adobe Admin Console은 Adobe 제품 이용 권한 및 조직의 이용 권한을
 
 ### 제품 프로필
 
-에서 [!DNL Admin Console]권한은 **[!UICONTROL 제품 프로필]**&#x200B;사용을 통해 사용자에게 할당됩니다. 제품 프로필을 사용하면 한 명 또는 여러 사용자에게 권한을 부여하고 제품 프로필을 통해 사용자에게 할당된 샌드박스 범위에 대한 액세스 권한을 포함할 수 있습니다. 사용자를 조직에 속한 하나 이상의 제품 프로필에 할당할 수 있습니다.
+에서 [!DNL Admin Console]권한은 **[!UICONTROL 제품 프로필]**&#x200B;사용을 통해 사용자에게 할당됩니다. 제품 프로필을 사용하면 한 명 또는 여러 사용자에게 권한을 부여할 수 있으며 제품 프로필을 통해 사용자에게 할당된 샌드박스 범위에 대한 액세스 권한을 포함할 수 있습니다. 사용자를 조직에 속한 하나 이상의 제품 프로필에 할당할 수 있습니다.
 
 ### 기본 제품 프로필
 
