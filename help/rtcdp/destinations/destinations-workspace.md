@@ -2,12 +2,12 @@
 keywords: RTCDP;rtcdp
 title: 대상 작업 공간
 seo-title: 대상 작업 공간
-description: Adobe 실시간 고객 데이터 플랫폼에서 왼쪽 탐색 막대에서 대상을 선택하여 대상 작업 영역에 액세스합니다.
+description: 대상 작업 공간은 아래의 섹션에 설명된 네 개의 섹션인 카탈로그, 찾아보기, 계정 및 시스템 보기로 구성됩니다.
 seo-description: Adobe 실시간 고객 데이터 플랫폼에서 왼쪽 탐색 막대에서 대상을 선택하여 대상 작업 영역에 액세스합니다.
 translation-type: tm+mt
-source-git-commit: ac9c629e8c83d3e056ba94b30d978edbda274923
+source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
 workflow-type: tm+mt
-source-wordcount: '807'
+source-wordcount: '809'
 ht-degree: 2%
 
 ---
