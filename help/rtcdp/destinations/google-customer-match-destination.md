@@ -1,10 +1,11 @@
 ---
+keywords: google customer match;Google customer match;Google Customer Match
 title: Google 고객 일치 대상
 seo-title: Google 고객 일치 대상
 description: Google Customer Match를 사용하면 온라인 및 오프라인 데이터를 사용하여 검색, 쇼핑, Gmail, YouTube 등 Google의 소유물과 운영 자산에서 고객에게 도달하고 다시 참여할 수 있습니다.
 seo-description: Google Customer Match를 사용하면 온라인 및 오프라인 데이터를 사용하여 검색, 쇼핑, Gmail, YouTube 등 Google의 소유물과 운영 자산에서 고객에게 도달하고 다시 참여할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
+source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
 workflow-type: tm+mt
 source-wordcount: '1555'
 ht-degree: 0%
@@ -91,7 +92,7 @@ Experience Platform에서 이메일 주소 인제스트에 대한 자세한 내�
 
 >[!IMPORTANT]
 >
->이메일 주소를 해시하지 않기로 선택하면 세그먼트를 활성화할 때 Adobe 실시간 CDP가 자동으로 수행됩니다 [!DNL Google Customer Match]. [활성화 워크플로우](/help/rtcdp/destinations/google-customer-match-destination.md#activate-segments) (5단계 참조)에서 `Email` 일반 텍스트 이메일 주소 *및 해시된 이메일 주소* 에 대해 아래 `Email_LC_SHA256` 와 같은 옵션을 **&#x200B;선택합니다.
+>이메일 주소를 해시하지 않기로 선택하면 세그먼트를 활성화할 때 Adobe 실시간 CDP가 자동으로 수행됩니다 [!DNL Google Customer Match]. [활성화 워크플로우](/help/rtcdp/destinations/google-customer-match-destination.md#activate-segments) (5단계 참조)에서 `Email` 일반 텍스트 이메일 주소 *및 해시된 이메일 주소* 에 대해 아래에 표시된 옵션 `Email_LC_SHA256` 을 **&#x200B;선택합니다.
 
 
 ![활성화 시 해싱](/help/rtcdp/destinations/assets/identity-mapping.png)
