@@ -1,10 +1,11 @@
 ---
+keywords: Audience Manager DIL extension;destination audience manager;dil extension
 title: Audience Manager DIL 확장
 seo-title: Audience Manager DIL 확장
 description: Audience Manager DIL 익스텐션은 Adobe 실시간 고객 데이터 플랫폼의 DMP(데이터 관리 플랫폼)입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 seo-description: Audience Manager DIL 익스텐션은 Adobe 실시간 고객 데이터 플랫폼의 DMP(데이터 관리 플랫폼)입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
+source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
 workflow-type: tm+mt
 source-wordcount: '607'
 ht-degree: 7%
