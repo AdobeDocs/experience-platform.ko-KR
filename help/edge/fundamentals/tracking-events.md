@@ -4,7 +4,7 @@ seo-title: Adobe Experience Platform 웹 SDK 이벤트 추적
 description: Experience Platform 웹 SDK 이벤트를 추적하는 방법 학습
 seo-description: Experience Platform 웹 SDK 이벤트를 추적하는 방법 학습
 translation-type: tm+mt
-source-git-commit: 8ac603f749928440438f2e0d1f3f1f1cc95b2916
+source-git-commit: 075d71353877045e12985b3914aaeeb478ed46d6
 workflow-type: tm+mt
 source-wordcount: '688'
 ht-degree: 0%
@@ -43,6 +43,7 @@ alloy("sendEvent", {
 ```
 
 >[!NOTE]
+>
 >XDM 필드의 각 이벤트에서 전송할 수 있는 데이터에는 32KB 제한이 있습니다.
 
 ### XDM 이외의 데이터 전송
@@ -170,7 +171,7 @@ alloy("configure", {
 2. 자동으로 수집된 값.  자세한 내용은 [자동 정보를 참조하십시오](../reference/automatic-information.md).
 3. 콜백에서 수행된 `onBeforeEventSend` 변경 사항.
 
-콜백에서 `onBeforeEventSend` 예외가 발생해도 이벤트가 계속 전송됩니다. 하지만 콜백 내에서 수행된 변경 사항은 최종 이벤트에 적용되지 않습니다.
+콜백에서 `onBeforeEventSend` 예외가 발생해도 이벤트가 계속 전송됩니다.하지만 콜백 내에서 수행된 변경 사항은 최종 이벤트에 적용되지 않습니다.
 
 ## 실행 가능한 잠재적 오류
 
