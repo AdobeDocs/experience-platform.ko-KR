@@ -1,10 +1,11 @@
 ---
+keywords: Amazon Kinesis;kinesis destination;kinesis
 title: Amazon Kinesis 대상
 seo-title: Amazon Kinesis 대상
 description: Amazon Kinesis 스토리지에 대한 실시간 아웃바운드 연결을 만들어 Adobe Experience Platform의 데이터를 스트리밍합니다.
 seo-description: Amazon Kinesis 스토리지에 대한 실시간 아웃바운드 연결을 만들어 Adobe Experience Platform의 데이터를 스트리밍합니다.
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '442'
 ht-degree: 2%
@@ -23,7 +24,7 @@ ht-degree: 2%
 
 이 서비스를 통해 [!DNL Kinesis Data Streams] 대규모 데이터 레코드를 실시간으로 수집 및 처리할 수 [!DNL Amazon Web Services] 있습니다.
 
-Adobe Experience Platform에서 데이터를 스트리밍하기 위해 [!DNL Amazon Kinesis] 스토리지에 대한 실시간 아웃바운드 연결을 생성할 수 있습니다.
+스토리지에 대한 실시간 아웃바운드 연결을 만들어 Adobe Experience Platform의 데이터를 스트림할 수 있습니다. [!DNL Amazon Kinesis]
 
 * 자세한 내용 [!DNL Amazon Kinesis]은 [Amazon 설명서를 참조하십시오](https://docs.aws.amazon.com/streams/latest/dev/introduction.html).
 * API 호출 [!DNL Amazon Kinesis] 을 사용하여 연결하려면 [스트리밍 대상 API 자습서를 참조하십시오](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md).
@@ -46,16 +47,16 @@ Adobe Experience Platform에서 데이터를 스트리밍하기 위해 [!DNL Ama
 
 ### 인증 단계에서 {#authentication-step}
 
-* **[!DNL Amazon Web Services]액세스 키 및 암호 키&#x200B;**: 에서 액세스 키[!DNL Amazon Web Services]를 생성하여 Adobe에 대한 실시간 CDP 액세스 권한을에[!DNL Amazon Kinesis]부여합니다. 자세한 내용은[Amazon 웹 서비스 문서를 참조하십시오](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
-* **지역**: 데이터를 스트리밍할 [!DNL Amazon Web Services] 지역을 지정합니다.
+* **[!DNL Amazon Web Services]액세스 키 및 암호 키**:에서 액세스 키 [!DNL Amazon Web Services]를 생성하여 Adobe에 대한 실시간 CDP 액세스 권한을에 [!DNL Amazon Kinesis] 부여합니다. 자세한 내용은 [Amazon 웹 서비스 문서를 참조하십시오](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
+* **지역**:데이터를 스트리밍할 [!DNL Amazon Web Services] 지역을 지정합니다.
 
 ![계정 단계의 입력 필드](/help/rtcdp/destinations/assets/aws-kinesis-account-step.png)
 
 ### 설정 단계에서 {#setup-step}
 
-* **이름**: 연결 대상 이름 입력 [!DNL Amazon Kinesis]
-* **설명**: 연결에 대한 설명을 제공합니다 [!DNL Amazon Kinesis].
-* **스트림**: 계정에 있는 기존 데이터 스트림의 이름을 [!DNL Amazon Kinesis] 제공합니다. Adobe 실시간 CDP는 데이터를 이 스트림으로 내보냅니다.
+* **이름**:연결 대상 이름 입력 [!DNL Amazon Kinesis]
+* **설명**:연결에 대한 설명을 제공합니다 [!DNL Amazon Kinesis].
+* **스트림**:계정에 있는 기존 데이터 스트림의 이름을 [!DNL Amazon Kinesis] 제공합니다. Adobe 실시간 CDP는 데이터를 이 스트림으로 내보냅니다.
 
 ![인증 단계의 입력 필드](/help/rtcdp/destinations/assets/aws-kinesis-setup-step.png)
 
