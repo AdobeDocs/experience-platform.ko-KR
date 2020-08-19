@@ -1,10 +1,11 @@
 ---
+keywords: website tags;web tags;launch tutorial
 title: 자습서 Adobe 시작을 사용하여 웹 사이트 태그 구현
 seo-title: Adobe 시작을 사용하여 웹 사이트 태그 구현
 description: Adobe 론치를 사용하여 Adobe Experience Platform에서 웹 사이트 태그 구현
 seo-description: Adobe 론치를 사용하여 Adobe Experience Platform에서 웹 사이트 태그 구현
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '475'
 ht-degree: 8%
@@ -12,7 +13,7 @@ ht-degree: 8%
 ---
 
 
-# 자습서: Adobe 시작을 사용하여 웹 사이트 태그 구현
+# 자습서:Adobe 시작을 사용하여 웹 사이트 태그 구현
 
 이 자습서에서는 Adobe 시작을 사용하여 웹 사이트 태그를 구현하여 데이터를 Adobe Experience Platform으로 전송하는 방법을 설명합니다.
 
@@ -26,7 +27,7 @@ ht-degree: 8%
 
 이 자습서에는 다음 단계가 포함되어 있습니다.
 
-1. Adobe Experience Platform 확장을 [!DNL Web SDK] 설치합니다.
+1. Adobe Experience Platform [!DNL Web SDK] 익스텐션을 설치합니다.
 1. 전송할 데이터를 [!DNL Launch] 알려주는 규칙을 만듭니다.
 1. 라이브러리의 확장명과 규칙을 번들로 묶습니다.
 
@@ -55,7 +56,7 @@ ht-degree: 8%
 
 ## 전송할 데이터를 알려주는 규칙 [!DNL Launch] 만들기
 
-그런 다음 Adobe Experience Platform으로 전송할 데이터와 전송하려는 시기를 알려주는 규칙을 만듭니다. [!DNL Launch]
+그런 다음 Adobe Experience Platform으로 보낼 데이터와 보낼 시기를 알려주는 규칙을 만듭니다. [!DNL Launch]
 
 1. [ **[!UICONTROL 규칙]** ] 탭에서 [!DNL Launch] 라이브러리가 로드될 때 웹 사이트의 새로운 각 페이지에서 트리거되는 이벤트를 구성합니다.
 
@@ -79,7 +80,7 @@ ht-degree: 8%
 
 ![image](assets/launch-add-changes-to-library.png)
 
-테스트를 완료한 후 워크플로우를 통해 라이브러리를 홍보하여 프로덕션 사이트에 배포할 수 있습니다. 이제 데이터는 각 개인 사용자에서 Adobe Experience Platform으로 전송됩니다.
+테스트를 완료한 후 워크플로우를 통해 라이브러리를 홍보하여 프로덕션 사이트에 배포할 수 있습니다. 이제 개별 사용자마다 데이터가 Adobe Experience Platform으로 전송됩니다.
 
 ![image](assets/launch-promote-library.png)
 
