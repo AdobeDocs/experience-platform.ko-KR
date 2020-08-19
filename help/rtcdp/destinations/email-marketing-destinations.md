@@ -1,10 +1,11 @@
 ---
+keywords: email;Email;e-mail;email destinations
 title: 이메일 마케팅 대상
 seo-title: 이메일 마케팅 대상
 description: ESP(Email Service Providers)를 사용하면 이메일 캠페인 전송과 같은 이메일 마케팅 활동을 관리할 수 있습니다.
 seo-description: ESP(Email Service Providers)를 사용하면 이메일 캠페인 전송과 같은 이메일 마케팅 활동을 관리할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
+source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
 workflow-type: tm+mt
 source-wordcount: '799'
 ht-degree: 1%
