@@ -1,10 +1,11 @@
 ---
-title: 실시간 고객 데이터 Platform에 대한 데이터 품질
-seo-title: Adobe의 데이터 품질 실시간 고객 데이터 Platform
-description: 실시간 고객 데이터 Platform에 대한 데이터 품질 문서
-seo-description: Adobe 실시간 고객 데이터 Platform에서 일괄 처리 및 데이터 입입을 통해 데이터 품질이 작동하는 방식을 설명하는 문서
+keywords: data quality;rtcdp data quality
+title: 실시간 고객 데이터 플랫폼의 데이터 품질
+seo-title: Adobe의 데이터 품질 실시간 고객 데이터 플랫폼
+description: 실시간 고객 데이터 플랫폼의 데이터 품질 문서
+seo-description: Adobe의 실시간 고객 데이터 플랫폼에서 일괄 처리 및 데이터 수집으로 데이터 품질이 작동하는 방식을 설명하는 문서
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '137'
 ht-degree: 0%
