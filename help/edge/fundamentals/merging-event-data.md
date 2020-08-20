@@ -3,8 +3,9 @@ title: 이벤트 데이터 병합
 seo-title: Adobe Experience Platform 웹 SDK 이벤트 데이터 병합
 description: Experience Platform 웹 SDK 이벤트 데이터를 병합하는 방법 살펴보기
 seo-description: Experience Platform 웹 SDK 이벤트 데이터를 병합하는 방법 살펴보기
+keywords: merge;event data;eventMergeId;createEventMergeId;sendEvent;mergeId;merge id;eventMergeIdPromise; Merge Id Promise;
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
 source-wordcount: '408'
 ht-degree: 0%
