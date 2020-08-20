@@ -3,10 +3,11 @@ title: 제품
 seo-title: Adobe Experience Platform 웹 SDK를 사용한 제품 지원
 description: Experience Platform 웹 SDK가 있는 제품 또는 장바구니를 가지고 있는 경우 데이터를 추가하는 방법 학습
 seo-description: Experience Platform 웹 SDK가 있는 제품 또는 장바구니를 가지고 있는 경우 데이터를 추가하는 방법 학습
+keywords: products;commerce;measures;measure;order;cartAbandons;checkouts;productListAdds;productListOpens;productListRemovals;productListReopens;productListViews;productViews;purchases;saveForLaters;currencyCode;payments;paymentAmount;paymentType;transactionID;priceTotal;purchaseID;purchaseOrderNumber;
 translation-type: tm+mt
-source-git-commit: 075d71353877045e12985b3914aaeeb478ed46d6
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
-source-wordcount: '1314'
+source-wordcount: '1312'
 ht-degree: 6%
 
 ---
@@ -18,8 +19,7 @@ ht-degree: 6%
 
 이 문서에서는 ExperienceEvent [Commerce Details 믹싱을](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/experienceevent-commerce.schema.md) 사용합니다. 그 `commerce` 혼합물은 두 부분으로 나뉘어져 있다:개체 및 배열 `commerce` 을 `productListItems` 참조하십시오. 이 `commerce` 개체를 사용하면 배열에서 어떤 작업이 발생하는지 알 수 `productListItems` 있습니다.
 
->[!Tip]
->
+>[!TIP]
 >
 >Adobe Analytics에 익숙하다면 변수 `commerce` 와 가장 밀접한 관계가 `events` 있습니다. 변수 `productListItems` 와 더 밀접한 관계가 `products` 있습니다.
 
@@ -27,7 +27,7 @@ ht-degree: 6%
 
 아래는 개체에서 사용할 수 `measures` 있는 `commerce` 목록입니다.
 
->[!Tip]
+>[!TIP]
 >
 >측정값에는 두 개의 필드가 있습니다. `id` 및 `value`. 대부분의 경우 필드만 사용합니다(예: `value` `'value':1`). 이 `id` 필드에서는 측정값이 전송된 시간을 추적하는 데 사용할 수 있는 고유한 식별자를 설정할 수 있습니다. XDM(Measure) 설명서를 [참조하십시오](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/measure.schema.md).
 
