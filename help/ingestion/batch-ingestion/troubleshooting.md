@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform 일괄 처리 문제 해결 가이드
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 9766cadee83e81bacc2abe6b13342ac95aae19a9
 workflow-type: tm+mt
-source-wordcount: '1335'
+source-wordcount: '1389'
 ht-degree: 1%
 
 ---
@@ -56,6 +56,18 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
                 "format": "json"
            }
     }'
+```
+
+### 업로드된 데이터가 왜 데이터 세트에 나타나지 않습니까?
+
+데이터가 데이터 세트에 표시되려면 일괄 처리를 완료로 표시해야 합니다. 인제스트할 모든 파일은 일괄 처리를 완료로 표시하려면 먼저 업로드해야 합니다. 배치를 완료로 표시하는 예는 아래에 나와 있습니다.
+
+```shell
+curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=COMPLETE" \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-api-key : {API_KEY}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 ### 다중 라인 JSON은 어떻게 수집됩니까?
