@@ -3,8 +3,9 @@ title: 명령 실행
 seo-title: Adobe Experience Platform 웹 SDK 명령 실행
 description: Experience Platform 웹 SDK 명령을 실행하는 방법 살펴보기
 seo-description: Experience Platform 웹 SDK 명령을 실행하는 방법 살펴보기
+keywords: Executing commands;commandName;Promises;getLibraryInfo;response objects;consent;
 translation-type: tm+mt
-source-git-commit: bf4194e1449bddd662f2152f84dbbe90060b5d30
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
 source-wordcount: '419'
 ht-degree: 2%
