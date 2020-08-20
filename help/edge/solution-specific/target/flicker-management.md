@@ -3,8 +3,9 @@ title: 개인화된 경험을 위한 깜박임 관리
 seo-title: 깜박임을 관리하는 Adobe Experience Platform 웹 SDK
 description: 사용자 경험의 깜박임을 관리하는 방법 살펴보기
 seo-description: Experience Platform 웹 SDK 속성을 사용하여 깜박임을 관리하는 방법 살펴보기
+keywords: target;flicker;prehidingStyle;asynchronously;asynchronous;
 translation-type: tm+mt
-source-git-commit: 4bea14d18ce119bdec0d428f885d240f92244cfc
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
 source-wordcount: '491'
 ht-degree: 0%
