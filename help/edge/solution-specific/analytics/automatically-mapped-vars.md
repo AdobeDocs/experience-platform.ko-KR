@@ -1,10 +1,11 @@
 ---
 title: Analytics에 자동으로 매핑되는 변수
 seo-title: Adobe Experience Platform 웹 SDK를 사용하여 Analytics에 자동으로 매핑되는 변수
-description: Experience Platform 웹 SDK를 사용하여 Analytics에 자동으로 매핑되는 변수 알아보기
-seo-description: Experience Platform 웹 SDK를 사용하여 Analytics에 자동으로 매핑되는 변수 알아보기
+description: Experience Platform 웹 SDK를 사용하여 Analytics에서 자동으로 매핑되는 변수 알아보기
+seo-description: Experience Platform 웹 SDK를 사용하여 Analytics에서 자동으로 매핑되는 변수 알아보기
+keywords: adobe analytics;variables;analytics;automatic map;automatically mapped;
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
 source-wordcount: '543'
 ht-degree: 2%
@@ -14,7 +15,7 @@ ht-degree: 2%
 
 # 변수가 [!DNL Analytics]
 
-다음은 Adobe Experience Platform이 자동으로 매핑되는 변수 [!DNL Edge Network] 목록입니다 [!DNL Analytics].
+아래는 Adobe Experience Platform이 자동으로 매핑되는 변수 [!DNL Edge Network] 목록입니다 [!DNL Analytics].
 
 | XDM 필드 경로 | [!DNL Analytics Query String] / HTTP 헤더 | 설명 |
 | ---------- | ------------------------- | -------- |
