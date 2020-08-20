@@ -3,8 +3,9 @@ title: 라이브러리 정보 검색 중
 seo-title: Adobe Experience Platform 웹 SDK를 사용하여 라이브러리 정보 검색
 description: 웹 사이트에 로드된 라이브러리에 대한 정보를 검색하는 방법을 알아봅니다.
 seo-description: Adobe Experience Cloud SDK가 자동으로 수집하여 웹 사이트에 로드된 라이브러리에 대한 정보를 검색하는 방법을 알아봅니다
+keywords: library; library information;getLibraryInfo;libraryInfo;
 translation-type: tm+mt
-source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
 source-wordcount: '104'
 ht-degree: 0%
