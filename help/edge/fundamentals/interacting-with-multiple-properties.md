@@ -3,8 +3,9 @@ title: 여러 속성을 사용한 인터랙션
 seo-title: Adobe Experience Platform 웹 SDK 여러 속성을 사용한 인터랙션
 description: 여러 Experience Platform 웹 SDK 속성과 상호 작용하는 방법 학습
 seo-description: 여러 Experience Platform 웹 SDK 속성과 상호 작용하는 방법 학습
+keywords: multiple properties;configure;sendEvent;edgeConfigId;orgId;
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
 source-wordcount: '252'
 ht-degree: 0%
@@ -66,4 +67,4 @@ mycustomname2("sendEvent", {
 
 ## 제한
 
-쿠키와 충돌하지 않도록 하기 위해 페이지 [!DNL Web SDK] 에 있는 Adobe Experience Platform 인스턴스 하나만 특정 `edgeConfigId`을 가질 수 있습니다.  마찬가지로 Adobe Experience Platform의 인스턴스는 하나만 특정 [!DNL Web SDK] 을 가질 수 있습니다 `orgId`.
+쿠키와 충돌하지 않도록 하기 위해 한 페이지 [!DNL Web SDK] 에 있는 한 개의 Adobe Experience Platform 인스턴스에만 특정 항목이 있을 수 있습니다 `edgeConfigId`.  유사하게, Adobe Experience Platform의 한 인스턴스만이 특정 [!DNL Web SDK] 을 가질 수 있습니다 `orgId`.
