@@ -3,8 +3,9 @@ title: Analytics에서 수동으로 변수 매핑
 seo-title: 웹 SDK를 사용하여 Analytics에서 수동으로 변수 매핑
 description: 처리 규칙을 사용하여 변수를 Analytics에 수동으로 매핑하는 방법
 seo-description: 웹 SDK에서 처리 규칙을 사용하여 변수를 Analytics에 수동으로 매핑
+keywords: adobe analytics;analytics;variables;mapping variables;map variables;contextData;context Data;Processing rules;rules;xdm;schema;
 translation-type: tm+mt
-source-git-commit: 075d71353877045e12985b3914aaeeb478ed46d6
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
 source-wordcount: '371'
 ht-degree: 43%
