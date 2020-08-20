@@ -3,8 +3,9 @@ title: 에지 구성
 seo-title: Experience Platform 웹 SDK용 Edge 구성
 description: 'Experience Platform 에지 네트워크를 구성하는 방법을 알아봅니다. '
 seo-description: 'Experience Platform 에지 네트워크를 구성하는 방법을 알아봅니다. '
+keywords: configuration;edge;edge configuration id;Environment Settings;edgeConfigId;identity;id sync enabled;ID Sync Container ID;Sandbox;Streaming Inlet;Event Dataset;target;client code;Property Token;Target Environment ID;Cookie Destinations;url Destinations;Analytics Settings Blockreport suite id;
 translation-type: tm+mt
-source-git-commit: 075d71353877045e12985b3914aaeeb478ed46d6
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
 source-wordcount: '870'
 ht-degree: 2%
@@ -94,7 +95,7 @@ Adobe Target을 구성하려면 클라이언트 코드를 제공해야 합니다
 
 [Adobe Target의 환경을](https://docs.adobe.com/content/help/en/target/using/administer/hosts.html) 사용하면 모든 개발 단계를 통해 구현을 관리할 수 있습니다. 이 설정은 각 환경에서 사용할 환경을 지정합니다.
 
-Adobe에서는 작업을 단순하게 유지하기 위해 각 `dev`, `stage`및 `prod` edge 구성 환경에 대해 이 설정을 다르게 설정하는 것이 좋습니다. 하지만 이미 [!UICONTROL Adobe Target 환경이] 정의된 경우 이러한 환경을 사용할 수 있습니다.
+Adobe은 작업을 단순하게 유지하기 위해 각 `dev`, `stage`및 `prod` edge 구성 환경에 대해 이 설정을 다르게 설정하는 것이 좋습니다. 하지만 이미 [!UICONTROL Adobe Target 환경이] 정의된 경우 이러한 환경을 사용할 수 있습니다.
 
 #### Adobe Audience Manager
 
