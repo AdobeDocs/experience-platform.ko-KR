@@ -5,7 +5,7 @@ title: 스키마 컴포지션의 기본 사항
 topic: overview
 description: 이 문서에서는 XDM(Experience Data Model) 스키마 및 Adobe Experience Platform에서 사용할 스키마를 작성하기 위한 기본 블록, 원칙 및 모범 사례에 대해 소개합니다.
 translation-type: tm+mt
-source-git-commit: 04efbf63741ef39bbf0b22795be74087f1f7c595
+source-git-commit: 23a69653ee773562cb0261b8e0bb67411eb4856e
 workflow-type: tm+mt
 source-wordcount: '2811'
 ht-degree: 0%
@@ -68,7 +68,7 @@ The infrastructure which [!DNL Experience Platform] is built, knowing [!DNL XDM 
 
 가장 강력한 프로파일을 구축하기 위해 데이터를 취합하는 것을 돕기 위해 스키마 계획 단계 동안 고객 ID를 고려하는 것이 중요합니다. ID 정보를 통해 고객에게 디지털 경험을 전달하는 방법에 대한 자세한 내용은 [Adobe Experience Platform ID 서비스](../../identity-service/home.md) 개요를 참조하십시오.
 
-#### xdm:identityMap
+#### xdm:identityMap {#identityMap}
 
 `xdm:identityMap` 은 연결된 네임스페이스와 함께 개인에 대한 다양한 ID 값을 설명하는 맵 유형 필드입니다. 이 필드는 스키마 자체의 구조 내에서 ID 값을 정의하는 대신 스키마에 대한 ID 정보를 제공하는 데 사용할 수 있습니다.
 
@@ -139,7 +139,7 @@ The infrastructure which [!DNL Experience Platform] is built, knowing [!DNL XDM 
 
 스키마 구성은 클래스를 할당하는 것으로 시작됩니다. 클래스는 스키마에 포함할 데이터의 동작 측면(레코드 또는 시간 시리즈)을 정의합니다. 이 외에도 클래스는 해당 클래스를 기반으로 하는 모든 스키마에는 호환이 가능한 여러 데이터 세트를 병합할 수 있는 방법이 포함되어 있어야 하는 가장 작은 수의 공통 속성을 설명합니다.
 
-또한 클래스는 스키마에서 사용할 수 있는 믹스를 결정합니다. 이 내용은 다음에 나오는 [믹신](#mixin) 섹션에서 더 자세히 설명합니다.
+또한 클래스는 스키마에 사용할 수 있는 믹스인을 결정합니다. 이 내용은 다음에 나오는 [믹신](#mixin) 섹션에서 더 자세히 설명합니다.
 
 &quot;산업&quot; 클래스라고 하는 모든 통합 [!DNL Experience Platform]과 함께 제공되는 표준 클래스가 있습니다. 업계 클래스는 다양한 사용 사례에 적용되는 일반적으로 승인된 업계 표준입니다. 업계 클래스의 예로는 Adobe에서 제공하는 [!DNL XDM Individual Profile] 및 [!DNL XDM ExperienceEvent] 클래스가 있습니다.
 
