@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Adobe Experience Platform 일괄 처리 통합 개발자 가이드
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 3eaef72de2999fc088b92562c08a896d1cb08e55
 workflow-type: tm+mt
-source-wordcount: '2552'
-ht-degree: 6%
+source-wordcount: '2670'
+ht-degree: 5%
 
 ---
 
@@ -24,11 +24,11 @@ ht-degree: 6%
 
 다음 섹션에서는 배치 처리 API를 성공적으로 호출하기 위해 알아야 하거나 현재 가지고 있는 추가 정보를 제공합니다.
 
-이 가이드는 다음과 같은 Adobe Experience Platform 구성 요소에 대해 작업해야 합니다.
+이 가이드는 Adobe Experience Platform의 다음 구성 요소에 대한 작업 이해를 필요로 합니다.
 
-- [일괄 처리](./overview.md): 데이터를 Adobe Experience Platform에 일괄 파일로 인제스트할 수 있습니다.
-- [!DNL Experience Data Model (XDM) System](../../xdm/home.md): 고객 경험 데이터를 [!DNL Experience Platform] 구성하는 표준화된 프레임워크
-- [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되도록 단일 [!DNL Platform] 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
+- [일괄 처리](./overview.md):데이터를 Adobe Experience Platform에 일괄 파일로 인제스트할 수 있습니다.
+- [[!DNL Experience Data Model] (XDM) 시스템](../../xdm/home.md):고객 경험 데이터를 [!DNL Experience Platform] 구성하는 표준화된 프레임워크
+- [[!DNL 샌드박스]](../../sandboxes/home.md): [!DNL Experience Platform] 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되도록 단일 [!DNL Platform] 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
 
 ### 샘플 API 호출 읽기
 
@@ -38,22 +38,19 @@ ht-degree: 6%
 
 API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 합니다](../../tutorials/authentication.md). 인증 자습서를 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
 
-- 인증: 무기명 `{ACCESS_TOKEN}`
-- x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
+- `Authorization: Bearer {ACCESS_TOKEN}`
+- `x-api-key: {API_KEY}`
+- `x-gw-ims-org-id: {IMS_ORG}`
 
 의 모든 리소스 [!DNL Experience Platform] 는 특정 가상 샌드박스와 분리됩니다. API에 대한 모든 [!DNL Platform] 요청에는 작업이 수행할 샌드박스의 이름을 지정하는 헤더가 필요합니다.
 
-- x-sandbox-name: `{SANDBOX_NAME}`
+- `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
 >의 샌드박스에 대한 자세한 내용 [!DNL Platform]은 [샌드박스 개요 설명서를 참조하십시오](../../sandboxes/home.md).
 
-페이로드(POST, PUT, PATCH)을 포함하는 요청에는 추가 헤더가 필요할 수 `Content-Type` 있습니다. 각 호출과 관련된 허용된 값은 호출 매개 변수에 제공됩니다. 이 안내서에서는 다음 컨텐츠 유형을 사용합니다.
-
-- 컨텐츠 유형: application/json
-- 컨텐츠 유형: application/octet-stream
+페이로드(POST, PUT, PATCH)을 포함하는 요청에는 추가 헤더가 필요할 수 `Content-Type` 있습니다. 각 호출과 관련된 허용된 값은 호출 매개 변수에 제공됩니다.
 
 ## 유형
 
@@ -85,10 +82,10 @@ API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 
 ## 섭취 제한
 
 일괄 데이터 수집에는 몇 가지 제한 사항이 있습니다.
-- 일괄 처리당 최대 파일 수: 1500년
-- 최대 배치 크기: 100GB
-- 행당 최대 속성 또는 필드 수: 1000
-- 사용자당 분당 최대 배치 수: 138년
+- 일괄 처리당 최대 파일 수:1500년
+- 최대 배치 크기:100GB
+- 행당 최대 속성 또는 필드 수:1000
+- 사용자당 분당 최대 배치 수:138년
 
 ## JSON 파일 인제스트
 
@@ -176,7 +173,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | 업로드할 배치의 ID입니다. |
 | `{DATASET_ID}` | 일괄 처리 참조 데이터 세트의 ID입니다. |
-| `{FILE_NAME}` | 업로드할 파일의 이름입니다. |
+| `{FILE_NAME}` | 업로드할 파일의 이름입니다. 이 파일 경로는 파일이 Adobe 쪽에 저장될 위치입니다. |
 
 **요청**
 
@@ -196,7 +193,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | 매개 변수 | 설명 |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | 업로드하려는 파일의 전체 경로 및 이름입니다. |
+| `{FILE_PATH_AND_NAME}` | 업로드하려는 파일의 전체 경로 및 이름입니다. 이 파일 경로는 로컬 파일 경로(예: )입니다 `Users/sample-user/Downloads/sample.json`. |
 
 **응답**
 
@@ -311,7 +308,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | 업로드할 배치의 ID입니다. |
 | `{DATASET_ID}` | 일괄 처리 참조 데이터 세트의 ID입니다. |
-| `{FILE_NAME}` | 업로드할 파일의 이름입니다. |
+| `{FILE_NAME}` | 업로드할 파일의 이름입니다. 이 파일 경로는 파일이 Adobe 쪽에 저장될 위치입니다. |
 
 **요청**
 
@@ -331,7 +328,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | 매개 변수 | 설명 |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | 업로드하려는 파일의 전체 경로 및 이름입니다. |
+| `{FILE_PATH_AND_NAME}` | 업로드하려는 파일의 전체 경로 및 이름입니다. 이 파일 경로는 로컬 파일 경로(예: )입니다 `Users/sample-user/Downloads/sample.json`. |
 
 **응답**
 
@@ -484,7 +481,7 @@ PATCH /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | 업로드할 배치의 ID입니다. |
 | `{DATASET_ID}` | 일괄 처리 참조 데이터 세트의 ID입니다. |
-| `{FILE_NAME}` | 업로드할 파일의 이름입니다. |
+| `{FILE_NAME}` | 업로드할 파일의 이름입니다. 이 파일 경로는 파일이 Adobe 쪽에 저장될 위치입니다. |
 
 **요청**
 
@@ -506,7 +503,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 | 매개 변수 | 설명 |
 | --------- | ----------- |
 | `{CONTENT_RANGE}` | 정수에서 요청된 범위의 시작 및 끝. |
-| `{FILE_PATH_AND_NAME}` | 업로드하려는 파일의 전체 경로 및 이름입니다. |
+| `{FILE_PATH_AND_NAME}` | 업로드하려는 파일의 전체 경로 및 이름입니다. 이 파일 경로는 로컬 파일 경로(예: )입니다 `Users/sample-user/Downloads/sample.json`. |
 
 
 **응답**
@@ -734,7 +731,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | 업로드할 배치의 ID입니다. |
 | `{DATASET_ID}` | 일괄 처리 참조 데이터 세트의 ID입니다. |
-| `{FILE_NAME}` | 업로드할 파일의 이름입니다. |
+| `{FILE_NAME}` | 업로드할 파일의 이름입니다. 이 파일 경로는 파일이 Adobe 쪽에 저장될 위치입니다. |
 
 **요청**
 
@@ -754,7 +751,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | 매개 변수 | 설명 |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | 업로드하려는 파일의 전체 경로 및 이름입니다. |
+| `{FILE_PATH_AND_NAME}` | 업로드하려는 파일의 전체 경로 및 이름입니다. 이 파일 경로는 로컬 파일 경로(예: )입니다 `Users/sample-user/Downloads/sample.json`. |
 
 
 **응답**
@@ -941,7 +938,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | 업로드할 배치의 ID입니다. |
 | `{DATASET_ID}` | 일괄 처리 참조 데이터 세트의 ID입니다. |
-| `{FILE_NAME}` | 업로드할 파일의 이름입니다. |
+| `{FILE_NAME}` | 업로드할 파일의 이름입니다. 이 파일 경로는 파일이 Adobe 쪽에 저장될 위치입니다. |
 
 **요청**
 
@@ -961,7 +958,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | 매개 변수 | 설명 |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | 업로드하려는 파일의 전체 경로 및 이름입니다. |
+| `{FILE_PATH_AND_NAME}` | 업로드하려는 파일의 전체 경로 및 이름입니다. 이 파일 경로는 로컬 파일 경로(예: )입니다 `Users/sample-user/Downloads/sample.json`. |
 
 **응답**
 
