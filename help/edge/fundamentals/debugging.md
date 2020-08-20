@@ -3,8 +3,9 @@ title: 디버깅
 seo-title: Adobe Experience Platform 웹 SDK 디버깅
 description: Experience Platform 웹 SDK 디버깅 전환 방법 살펴보기
 seo-description: Experience Platform 웹 SDK 디버깅 전환 방법 살펴보기
+keywords: debugging web sdk;debugging;configure;configure command;debug command;edgeConfigId;setDebug;debugEnabled;debug;
 translation-type: tm+mt
-source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
 source-wordcount: '324'
 ht-degree: 1%
