@@ -3,8 +3,9 @@ title: 지원 동의
 seo-title: Adobe Experience Platform 웹 SDK 동의 지원 기본 설정
 description: Experience Platform 웹 SDK를 사용하여 동의 환경 설정을 지원하는 방법 살펴보기
 seo-description: Experience Platform 웹 SDK를 사용하여 동의 환경 설정을 지원하는 방법 살펴보기
+keywords: consent;defaultConsent;default consent;setConsent;Profile Privacy Mixin;Experience Event Privacy Mixin;Privacy Mixin;
 translation-type: tm+mt
-source-git-commit: 0869c6c54e8936a1ac1225cf6510f7139dce1936
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
 source-wordcount: '756'
 ht-degree: 0%
@@ -12,20 +13,20 @@ ht-degree: 0%
 ---
 
 
-# Supporting Consent
+# 지원 동의
 
-사용자의 개인 정보를 존중하기 위해 SDK가 특정 목적을 위해 사용자별 데이터를 사용하도록 허용하기 전에 사용자의 동의를 요청할 수 있습니다. Currently, the SDK only allows users to opt in or out of all purposes, but in the future Adobe hopes to provide more granular control over specific purposes.
+사용자의 개인 정보를 존중하기 위해 SDK가 특정 목적을 위해 사용자별 데이터를 사용하도록 허용하기 전에 사용자의 동의를 요청할 수 있습니다. 현재, SDK는 사용자가 모든 목적을 선택하거나 거부할 수 있도록 허용하지만, 향후 Adobe은 특정 목적을 보다 세부적으로 제어하기를 희망하고 있습니다.
 
-If the user opts in to all purposes, the SDK is allowed to perform the following tasks:
+사용자가 모든 목적으로 액세스하는 경우 SDK는 다음 작업을 수행할 수 있습니다.
 
 * Adobe 서버에서 데이터를 전송합니다.
 * 쿠키 또는 웹 저장소 항목을 읽고 씁니다(사용자의 옵트인 환경 설정을 유지하는 경우는 제외).
 
 사용자가 모든 목적을 벗어나는 경우 SDK는 이러한 작업을 수행하지 않습니다.
 
-## Configuring Consent
+## 동의 구성
 
-By default the user is opted in to all purposes. 사용자가 로그인할 때까지 SDK가 위의 작업을 수행하지 않도록 하려면 다음과 같이 SDK 구성 `"defaultConsent": { "general": "pending" }` 동안 전달합니다.
+기본적으로 사용자는 모든 목적으로 선택되어 있습니다. 사용자가 로그인할 때까지 SDK가 위의 작업을 수행하지 않도록 하려면 다음과 같이 SDK 구성 `"defaultConsent": { "general": "pending" }` 동안 전달합니다.
 
 ```javascript
 alloy("configure", {
@@ -121,7 +122,7 @@ alloy("setConsent", {
 
 ## 동의 기본 설정 지속성
 
-명령을 사용하여 SDK에 대한 사용자 환경 설정을 통신하면 SDK는 사용자 환경 설정을 쿠키로 유지합니다. `setConsent` The next time the user loads your website in the browser, the SDK will retrieve and use these persisted preferences to determine whether or not events can be sent to Adobe. 사용자 환경 설정에서 변경 사항을 알리는 것 외에는 `setConsent` 명령을 다시 실행할 필요가 없습니다. 이 작업은 언제든지 수행할 수 있습니다.
+명령을 사용하여 SDK에 대한 사용자 환경 설정을 통신하면 SDK는 사용자 환경 설정을 쿠키로 유지합니다. `setConsent` 다음에 사용자가 브라우저에서 웹 사이트를 로드할 때 SDK는 이러한 지속적인 환경 설정을 검색하고 사용하여 이벤트를 Adobe으로 보낼 수 있는지 여부를 결정합니다. 사용자 환경 설정에서 변경 사항을 알리는 것 외에는 `setConsent` 명령을 다시 실행할 필요가 없습니다. 이 작업은 언제든지 수행할 수 있습니다.
 
 ## 동의를 설정하는 동안 ID 동기화
 
