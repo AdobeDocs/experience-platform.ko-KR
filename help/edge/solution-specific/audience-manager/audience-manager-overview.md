@@ -3,8 +3,9 @@ title: Adobe Audience Manager으로 데이터 보내기
 seo-title: Adobe Experience Platform 웹 SDK를 사용하여 Adobe Audience Manager으로 데이터 보내기
 description: Experience Platform 웹 SDK를 사용하여 데이터를 Adobe Audience Manager으로 전송하는 방법 살펴보기
 seo-description: Experience Platform 웹 SDK를 사용하여 데이터를 Adobe Audience Manager으로 전송하는 방법 살펴보기
+keywords: audience manager;aam;identities;sync identities;namespace;
 translation-type: tm+mt
-source-git-commit: b87b1f8a979e028c5ebf57cecf0213a075df90a6
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
 source-wordcount: '256'
 ht-degree: 0%
