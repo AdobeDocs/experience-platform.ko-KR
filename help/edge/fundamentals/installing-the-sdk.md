@@ -3,8 +3,9 @@ title: Adobe Experience Platform 웹 SDK 설치
 seo-title: SDK 설치 Adobe Experience Platform 웹 SDK
 description: Experience Platform 웹 SDK 설치 방법 살펴보기
 seo-description: Experience Platform 웹 SDK 설치 방법 살펴보기
+keywords: web sdk installation;installing web sdk;internet explorer;promise;
 translation-type: tm+mt
-source-git-commit: 075d71353877045e12985b3914aaeeb478ed46d6
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
 source-wordcount: '623'
 ht-degree: 1%
@@ -85,7 +86,7 @@ Adobe Experience Platform 구현의 첫 번째 단계 [!DNL Web SDK] 는 HTML의
 
 ## JavaScript 파일을 동기식으로 로드 {#loading-javascript-synchronously}
 
-코드 추가 섹션에 설명된 [대로](#adding-the-code), 웹 사이트의 HTML에 복사하여 붙여넣은 기본 코드는 추가 코드를 포함하는 외부 파일을 로드합니다. 이 추가 코드에는 SDK의 핵심 기능이 포함되어 있습니다. 이 파일을 로드하는 동안 실행하려는 명령은 큐에 올라가 파일을 로드한 후 처리됩니다. 가장 성능이 뛰어난 설치 방법입니다.
+코드 추가 섹션에 설명된 [대로](#adding-the-code), 웹 사이트의 HTML에 복사하여 붙여넣은 기본 코드는 추가 코드를 포함하는 외부 파일을 로드합니다. 이 추가 코드에는 SDK의 핵심 기능이 포함되어 있습니다. 이 파일이 로드되는 동안 실행하려는 모든 명령이 큐에 올라가 파일이 로드된 후 처리됩니다. 가장 성능이 뛰어난 설치 방법입니다.
 
 그러나 특정 상황에서 파일을 동기식으로 로드할 수도 있습니다(이러한 상황에 대한 자세한 내용은 나중에 문서로 기록됨\). 이렇게 하면 외부 파일이 로드되어 실행될 때까지 브라우저에서 나머지 HTML 문서를 구문 분석하여 렌더링되는 것을 차단합니다. 사용자에게 주요 컨텐츠를 표시하기 전에 이러한 추가 지연은 일반적으로 권장되지 않지만 상황에 따라 적절한 지연이 가능합니다.
 
