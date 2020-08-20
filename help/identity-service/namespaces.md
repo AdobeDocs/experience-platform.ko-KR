@@ -5,7 +5,7 @@ title: Adobe Experience Platform ID 서비스
 topic: overview
 description: 'ID 네임스페이스는 ID 서비스의 구성 요소이며 ID가 연관되는 컨텍스트의 지표 역할을 합니다. 예를 들어 "name<span>@email.com"의 값을 이메일 주소로 구분하거나 "443522"의 값을 숫자 CRM ID로 구별합니다. '
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 235f611115b89a87c924a00409a6acae4f5ac97d
 workflow-type: tm+mt
 source-wordcount: '761'
 ht-degree: 4%
@@ -49,7 +49,7 @@ ID 네임스페이스를 사용하여 작업하려면 관련 다양한 Adobe Exp
 | 일반 사용자 | 네임스페이스가 필요하지만 사람 클러스터와 연결되지 않은 식별자를 저장하는 데 사용됩니다. 그런 다음 이러한 식별자는 ID 그래프에서 필터링됩니다. 가능한 사용 사례에는 제품, 조직, 스토어 등과 관련된 데이터가 포함됩니다. (예: 제품 SKU) |
 | 전화 | 이 유형의 ID에는 PII가 포함됩니다. 섬세하게 가치 [!DNL Identity Service] 를 담글 수 있는 지표다. |
 
-### 표준 네임스페이스
+### 표준 네임스페이스 {#standard}
 
 Adobe Experience Platform은 모든 조직에서 사용할 수 있는 몇 가지 ID 네임스페이스를 제공합니다. 이러한 네임스페이스는 표준 네임스페이스라고 하며 [!DNL Identity Service] API나 [!DNL Platform] UI를 통해 볼 수 있습니다.
 
