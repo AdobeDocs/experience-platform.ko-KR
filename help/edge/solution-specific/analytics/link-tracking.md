@@ -3,8 +3,9 @@ title: Adobe Analytics의 페이지 및 링크 추적
 seo-title: Adobe Experience Platform 웹 SDK를 사용하여 Adobe Analytics에 대한 링크 추적
 description: Experience Platform 웹 SDK를 사용하여 링크 데이터를 Adobe Analytics으로 보내는 방법 살펴보기
 seo-description: Experience Platform 웹 SDK를 사용하여 링크 데이터를 Adobe Analytics으로 보내는 방법 살펴보기
+keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;web Interaction;page views;link tracking;links;track links;clickCollection;click collection;
 translation-type: tm+mt
-source-git-commit: b50082405cd0392ff827a83ad82091fbcd370b21
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
 source-wordcount: '236'
 ht-degree: 0%
