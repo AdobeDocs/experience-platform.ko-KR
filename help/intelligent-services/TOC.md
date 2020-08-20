@@ -3,10 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: 지능형 서비스 도움말
 translation-type: tm+mt
-source-git-commit: 24449d0138ab449dbc01aecbbe9f70e05c781c89
+source-git-commit: e69f4e8ddc0fe5f7be2b2b2bd89c09efdfca8e75
 workflow-type: tm+mt
-source-wordcount: '67'
-ht-degree: 2%
+source-wordcount: '88'
+ht-degree: 5%
 
 ---
 
@@ -22,6 +22,14 @@ ht-degree: 2%
    * [사용자 인터페이스 가이드](attribution-ai/user-guide.md)
    * [인사이트 검색](attribution-ai/discover-insights.md)
    * [점수 액세스](attribution-ai/download-scores.md)
+* Content and Commerce AI(베타) {#content-commerce-ai}
+   * [개요](content-commerce-ai/overview.md)
+   * [시작하기](content-commerce-ai/getting-started.md)
+   * Content and Commerce AI API{#api}
+      * [색상 추출](content-commerce-ai/api/color-extraction.md)
+      * [키워드 추출](content-commerce-ai/api/keyword-extraction.md)
+      * [텍스트 분류](content-commerce-ai/api/text-classification.md)
+      * [시각적 유사성](content-commerce-ai/api/visual-similarity.md)
 * 고객 AI {#customer-ai}
    * [개요](customer-ai/overview.md)
    * [고객 AI 시작하기](customer-ai/getting-started.md)
@@ -31,4 +39,4 @@ ht-degree: 2%
       * [인사이트 검색](customer-ai/user-guide/discover-insights.md)
       * [고객 AI 점수를 사용하여 세그먼트 만들기](customer-ai/user-guide/create-segment.md)
       * [스코어 다운로드](customer-ai/user-guide/download-scores.md)
-* [Platform 릴리스 노트](https://www.adobe.com/go/platform-release-notes-en)
+* [플랫폼 릴리스 정보](https://www.adobe.com/go/platform-release-notes-en)
