@@ -3,8 +3,9 @@ title: 맞춤형 컨텐츠 렌더링
 seo-title: Adobe Experience Platform 웹 SDK 맞춤형 컨텐츠 렌더링
 description: Experience Platform 웹 SDK를 사용하여 개인화된 컨텐츠를 렌더링하는 방법 학습
 seo-description: Experience Platform 웹 SDK를 사용하여 개인화된 컨텐츠를 렌더링하는 방법 학습
+keywords: personalization;renderDecisions;sendEvent;decisionScopes;result.decisions;
 translation-type: tm+mt
-source-git-commit: c342e8d7698c1d213658f3f1dae751edbde04b83
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
 source-wordcount: '237'
 ht-degree: 0%
