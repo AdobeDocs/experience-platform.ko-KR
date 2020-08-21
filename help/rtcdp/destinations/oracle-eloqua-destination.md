@@ -5,7 +5,7 @@ seo-title: Oracle Furnar 대상
 description: Oracle Fura는 B2B 마케터 및 조직이 마케팅 캠페인 및 영업 리드 생성을 관리하는 데 도움이 되는 Oracle이 제공하는 마케팅 자동화를 위한 SaaS(서비스) 플랫폼입니다.
 seo-description: Oracle Fura는 B2B 마케터 및 조직이 마케팅 캠페인 및 영업 리드 생성을 관리하는 데 도움이 되는 Oracle이 제공하는 마케팅 자동화를 위한 SaaS(서비스) 플랫폼입니다.
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 31b74067903cf7a2ecc4b8f81c11585b672a75ad
 workflow-type: tm+mt
 source-wordcount: '517'
 ht-degree: 0%
