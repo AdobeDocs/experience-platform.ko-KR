@@ -5,9 +5,9 @@ title: 스트리밍 세분화
 topic: ui guide
 description: Adobe Experience Platform의 스트리밍 세분화를 통해 거의 실시간으로 데이터를 세분화할 수 있습니다. 이제 스트리밍 세분화를 통해 데이터가 플랫폼에 유입되면 세그먼트 자격이 부여되므로 세분화 작업을 예약하고 실행할 필요가 없습니다. 이 기능을 사용하면 이제 데이터가 플랫폼으로 전달되면 대부분의 세그먼트 규칙을 평가할 수 있습니다. 즉, 세그먼트 멤버십은 예약된 세그멘테이션 작업을 실행하지 않고 최신 상태로 유지됩니다.
 translation-type: tm+mt
-source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
+source-git-commit: d0323fd2e769f97fa738ea55e7aba1d7ae821051
 workflow-type: tm+mt
-source-wordcount: '737'
+source-wordcount: '767'
 ht-degree: 0%
 
 ---
@@ -60,7 +60,9 @@ ht-degree: 0%
 
 ![](../images/ui/streaming-segmentation/monitoring-streaming-segment.png)
 
-특히 **[!UICONTROL 전체 적격 대상자 크기에]** 대한 세부 사항이 표시됩니다. 작업이 지난 24시간 이내에 실행된 경우 추가된 대상자에 대한 라인 차트 외에 **[!UICONTROL 작업의 전체 적격 대상]** 크기가 표시됩니다. 그렇지 않으면 **[!UICONTROL 시각화 트렌드 라인 외에 총 예상 대상]** 크기가 표시됩니다.
+특히 **[!UICONTROL 전체 적격 대상자 크기에]** 대한 세부 사항이 표시됩니다. 자격이 **[!UICONTROL 있는 총 대상 크기는]** 마지막으로 완료된 세그먼트 작업 실행의 전체 적격 대상 수를 보여줍니다. 지난 24시간 이내에 세그먼트 작업이 완료되지 않은 경우 대신 예상에서 대상 수를 가져옵니다.
+
+아래에는 지난 24시간 동안 자격이 있고 결격 처리된 세그먼트의 수가 표시되는 선 그래프가 표시됩니다. 드롭다운을 조정하여 지난 24시간, 지난 주 또는 지난 30일을 표시할 수 있습니다.
 
 ![](../images/ui/streaming-segmentation/monitoring-streaming-segment-graph.png)
 
