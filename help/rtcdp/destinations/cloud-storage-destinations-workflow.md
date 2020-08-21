@@ -19,7 +19,7 @@ ht-degree: 0%
 
 이 페이지에서는 Adobe 실시간 고객 데이터 플랫폼의 클라우드 스토리지 위치에 연결하는 방법을 설명합니다.
 
-1. [ **[!UICONTROL 연결]** ] > **[!UICONTROL 대상]**]에서 원하는 클라우드 스토리지 대상을 선택한 다음 구성을 **[!UICONTROL 선택합니다]**.
+1. [ **[!UICONTROL 연결]** ] > [ **[!UICONTROL 대상]** ]에서 원하는 클라우드 스토리지 대상을 선택한 다음 구성을 **[!UICONTROL 선택합니다]**.
 
    ![클라우드 스토리지 대상에 연결](/help/rtcdp/destinations/assets/connect-cloud-destination.png)
 
