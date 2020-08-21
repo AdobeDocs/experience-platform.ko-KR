@@ -23,7 +23,7 @@ Adobe Campaign은 온라인과 오프라인의 모든 채널에서 캠페인을 
 
 ## 연결 대상 {#connect-destination}
 
-1. [ **[!UICONTROL 연결]** ] > [대상 **[!UICONTROL 에서]** Adobe Campaign을 선택한 다음 **[!UICONTROL 연결 대상을 선택합니다]**.
+1. [ **[!UICONTROL 연결]** ] > [대상 **[!UICONTROL 에서]** ] Adobe Campaign을 선택한 다음 **[!UICONTROL 연결 대상을 선택합니다]**.
 
    ![adobe campaign에 연결](/help/rtcdp/destinations/assets/connect-adobe-campaign.png)
 
