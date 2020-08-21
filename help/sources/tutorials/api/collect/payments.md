@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 소스 커넥터 및 API를 통해 결제 데이터 수집
 topic: overview
 translation-type: tm+mt
-source-git-commit: 773823333fe0553515ebf169b4fd956b8737a9c3
+source-git-commit: c26b2b4256d8d1d23a285efbacd8b6c9e255cd18
 workflow-type: tm+mt
-source-wordcount: '1696'
-ht-degree: 1%
+source-wordcount: '1702'
+ht-degree: 2%
 
 ---
 
@@ -136,7 +136,7 @@ curl -X POST \
 
 이전 단계에서는 소스 데이터를 구조화하기 위해 임시 XDM 스키마를 만들었습니다. 소스 데이터를 사용하려면 필요에 따라 소스 데이터 [!DNL Platform]를 구조화하기 위해 대상 스키마를 만들어야 합니다. 그런 다음 대상 스키마를 사용하여 소스 데이터가 포함된 [!DNL Platform] 데이터 세트를 만듭니다. 이 대상 XDM 스키마도 XDM [!DNL Individual Profile] 클래스를 확장합니다.
 
-대상 XDM 스키마는 스키마 레지스트리 API에 대한 POST 요청을 수행하여 [만들 수 있습니다](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). 사용자 인터페이스를 에서 사용하려는 경우 스키마 편집기 자습서 [!DNL Experience Platform]는 스키마 편집기에서 유사한 작업 [](https://docs.adobe.com/content/help/en/experience-platform/xdm/tutorials/create-schema-ui.html) 을 수행하기 위한 단계별 지침을 제공합니다.
+대상 XDM 스키마는 스키마 레지스트리 API에 대한 POST 요청을 수행하여 [만들 수 있습니다](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). 사용자 인터페이스를 에서 사용하려는 경우 스키마 편집기 자습서 [!DNL Experience Platform]는 스키마 편집기에서 유사한 작업 [](https://docs.adobe.com/content/help/ko-KR/experience-platform/xdm/tutorials/create-schema-ui.html) 을 수행하기 위한 단계별 지침을 제공합니다.
 
 **API 형식**
 
@@ -647,7 +647,7 @@ curl -X POST \
 | `sourceConnectionIds` | 이전 단계에서 검색된 [소스 연결](#source) ID입니다. |
 | `targetConnectionIds` | 이전 단계에서 검색된 [대상 연결](#target-connection) ID입니다. |
 | `transformations.params.mappingId` | 이전 단계에서 검색된 [매핑](#mapping) ID. |
-| `transformations.params.deltaColum` | 새 데이터와 기존 데이터를 구분하는 데 사용되는 지정된 열 선택한 열의 타임스탬프를 기반으로 증분 데이터를 인제스트합니다. |
+| `transformations.params.deltaColum` | 새 데이터와 기존 데이터를 구분하는 데 사용되는 지정된 열 선택한 열의 타임스탬프를 기반으로 증분 데이터를 인제스트합니다. 의 지원되는 날짜 형식 `deltaColumn` 은 입니다 `yyyy-MM-dd HH:mm:ss`. |
 | `transformations.params.mappingId` | 데이터베이스와 연결된 매핑 ID. |
 | `scheduleParams.startTime` | epoch time의 데이터 흐름 시작 시간입니다. |
 | `scheduleParams.frequency` | 데이터 흐름 데이터가 수집되는 빈도 허용되는 값은 다음과 같습니다. `once`, `minute`, `hour`, `day`또는 `week`를 선택합니다. |
