@@ -3,11 +3,11 @@ keywords: facebook pixel extensions;facebook pixel extension;facebook pixel dest
 title: Facebook 픽셀 확장
 seo-title: Facebook 픽셀 확장
 description: Facebook 픽셀 확장 기능은 Adobe 실시간 고객 데이터 플랫폼의 광고 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
-seo-description: null
+seo-description: Facebook 픽셀 확장 기능은 Adobe 실시간 고객 데이터 플랫폼의 광고 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
+source-git-commit: 164c51e543d5eba11e4756723f3fecd84ec48f59
 workflow-type: tm+mt
-source-wordcount: '502'
+source-wordcount: '530'
 ht-degree: 5%
 
 ---
