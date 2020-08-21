@@ -5,9 +5,9 @@ title: 색상 추출
 topic: Developer guide
 description: 키워드 추출 서비스는 텍스트 문서에서 문서의 제목을 가장 잘 설명하는 키워드 또는 키구문을 자동으로 추출합니다. 키워드를 추출하기 위해 NER(명명된 엔티티 인식) 및 비감독 키워드 추출 알고리즘의 조합이 사용됩니다.
 translation-type: tm+mt
-source-git-commit: e69f4e8ddc0fe5f7be2b2b2bd89c09efdfca8e75
+source-git-commit: 4f7b5ca50171f4948726c44dbf31025011adf35f
 workflow-type: tm+mt
-source-wordcount: '718'
+source-wordcount: '742'
 ht-degree: 3%
 
 ---
@@ -84,7 +84,7 @@ POST /services/v1/predict
 
 >[!CAUTION]
 >
->`analyzer_id` 사용할 항목 [!DNL Sensei Content Framework] 을 결정합니다. 요청하기 `analyzer_id` 전에 적절한 것이 있는지 확인하십시오.
+>`analyzer_id` 사용할 항목 [!DNL Sensei Content Framework] 을 결정합니다. 요청하기 `analyzer_id` 전에 적절한 것이 있는지 확인하십시오. 키워드 추출 서비스의 경우 `analyzer_id` ID는 다음과 같습니다. `Feature:cintel-ner:Service-1a35aefb0f0f4dc0a3b5262370ebc709`
 
 ```SHELL
 curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
@@ -119,7 +119,7 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
 
 | 속성 | 설명 | 필수입니다 |
 | --- | --- | --- |
-| `analyzer_id` | 요청이 배포된 [!DNL Sensei] 서비스 ID. 이 ID는 어떤 것이 사용되는지 [!DNL Sensei Content Frameworks] 를 결정합니다. | 예 |
+| `analyzer_id` | 요청이 배포된 [!DNL Sensei] 서비스 ID. 이 ID는 어떤 것이 사용되는지 [!DNL Sensei Content Frameworks] 를 결정합니다. 사용자 지정 서비스의 경우 콘텐츠 및 커머스 AI 팀에 문의하여 사용자 지정 ID를 설정하십시오. | 예 |
 | `application-id` | 만든 응용 프로그램의 ID입니다. | 예 |
 | `data` | 문서를 나타내는 배열에 각 개체가 있는 JSON 개체가 포함된 배열입니다. 이 배열의 일부로 전달되는 모든 매개 변수는 배열 외부에 지정된 전역 매개 변수를 `data` 무시합니다. 이 표에 나와 있는 나머지 속성은 내에서 재정의할 수 있습니다 `data`. | 예 |
 | `language` | 입력 텍스트 언어 기본값은 `en`입니다. | 아니요 |
