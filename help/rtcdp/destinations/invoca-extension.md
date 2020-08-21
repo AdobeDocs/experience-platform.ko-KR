@@ -3,12 +3,12 @@ keywords: Invoca;invoca
 title: 태그 확장
 seo-title: 태그 확장
 description: 인보카 태그 익스텐션은 Adobe 실시간 고객 데이터 플랫폼의 고객 대상 음성입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
-seo-description: null
+seo-description: 인보카 태그 익스텐션은 Adobe 실시간 고객 데이터 플랫폼의 고객 대상 음성입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
+source-git-commit: 164c51e543d5eba11e4756723f3fecd84ec48f59
 workflow-type: tm+mt
-source-wordcount: '538'
-ht-degree: 5%
+source-wordcount: '569'
+ht-degree: 4%
 
 ---
 
