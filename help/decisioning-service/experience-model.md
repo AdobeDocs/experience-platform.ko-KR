@@ -44,7 +44,7 @@ ht-degree: 0%
 
 ## 의사 결정 전략 - 알고리즘
 
-선택할 수 있는 일련의 *결정 전략* 과 함께, 각 **`N`** 결정 전략은 *- 또는 기능인데,<sub>{d11</sub>1<sub>12가, 2가, 2가</sub>가<sub>가</sub>, 2가* 가 *<sub></sub><sub></sub><sub></sub>* , ....을 입력한 후DN가N가가NRRRRR를RRRRRRRR을RRSRR를AlteraltRRRSSR를를R를RRR를를를S으로R를를R를AlteralteralternectorAlternectorAlternecfS예상 유틸리티에 따라 목록의 첫 번째 결정 옵션이 최적 옵션으로 간주되면 결과 목록의 두 번째 옵션이 두 번째 최상의 옵션으로 간주됩니다. 일반적으로, 결정 알고리즘이 적격하지 않은 옵션을 제거하므로 결과 등급 목록보다 더 높은 카디널리티를 가지며, 알고리즘은 상위 옵션만 반환하도록 구성되며, 옵션이 충분한 후 중지될 수 있습니다. **`K`** 
+선택할 수 있는 일련의 *결정 전략* 과 함께, 각 **`N`** 결정 전략은 *- 또는 기능인데,<sub>d11</sub>1<sub>12가, 2가, 2가</sub>가<sub>가</sub>, 2가* 가 *<sub></sub><sub></sub><sub></sub>* , ....을 입력한 후DN가N가가NRRRRR를RRRRRRRR을RRSRR를AlteraltRRRSSR를를R를RRR를를를S으로R를를R를AlteralteralternectorAlternectorAlternecfS예상 유틸리티에 따라 목록의 첫 번째 결정 옵션이 최적 옵션으로 간주되면 결과 목록의 두 번째 옵션이 두 번째 최상의 옵션으로 간주됩니다. 일반적으로, 결정 알고리즘이 적격하지 않은 옵션을 제거하므로 결과 등급 목록보다 더 높은 카디널리티를 가지며, 알고리즘은 상위 옵션만 반환하도록 구성되며, 옵션이 충분한 후 중지될 수 있습니다. **`K`** 
 일반 의사 결정 프레임워크는 다음 다이어그램에 나와 있습니다.
 
 ![그림 1](./images/decisioning-optimization.png)
