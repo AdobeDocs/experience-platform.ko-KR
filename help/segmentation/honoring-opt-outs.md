@@ -5,7 +5,7 @@ title: 옵트아웃 준수
 topic: overview
 description: 'Experience Platform을 통해 고객은 실시간 고객 프로필 내에서 데이터의 사용 및 저장과 관련된 옵트아웃 요청을 보낼 수 있습니다.] 이러한 수신 거부 요청은 캘리포니아 주민들에게 개인 데이터를 액세스 및 삭제할 권리와 개인 데이터의 판매 또는 공개(및 대상)를 알 수 있는 권한을 제공하는 캘리포니아 소비자 개인 정보 보호법(CPA)의 일부입니다. '
 translation-type: tm+mt
-source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
+source-git-commit: 0fc356b67af4d34e35cd9329385ec284d9336953
 workflow-type: tm+mt
 source-wordcount: '1006'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 [!DNL Experience Platform] 고객은 자신의 데이터 내 사용 및 저장과 관련된 옵트아웃 요청을 보낼 수 있습니다 [!DNL Real-time Customer Profile]. 이러한 옵트아웃 요청은 캘리포니아 거주자들에게 개인 데이터를 액세스 및 삭제하고 개인 데이터를 판매 또는 공개(및 누구에게)할 수 있는 권리를 제공하는 [!DNL California Consumer Privacy Act] (CPA)의 일부입니다.
 
-고객이 옵트아웃을 선택한 경우 조직은 마케팅 활동에 대한 고객을 생성할 때 이러한 옵트아웃을 존중하는 것이 중요합니다. 이 문서에서는 옵트아웃 요청을 준수하기 위한 중요한 세부 사항에 대해 설명합니다.
+고객이 옵트아웃을 선택한 경우 조직은 마케팅 활동에 대한 고객을 생성할 때 이러한 옵트아웃을 존중하는 것이 중요합니다. 이 문서에서는 옵트아웃 요청 수집에 관한 중요한 세부 사항을 설명합니다.
 
 ## 시작하기
 
@@ -45,7 +45,7 @@ CPA 옵트아웃 요청을 승인하려면 조합 스키마의 일부인 스키�
 
 각 혼합의 구조와 스키마에 기여하는 필드에 대한 설명은 다음 섹션에 자세히 나와 있습니다.
 
-### [!DNL Profile Privacy]
+### [!DNL Profile Privacy] {#profile-privacy}
 
 이 [!DNL Profile Privacy] 믹스인을 통해 고객의 두 가지 CPA 옵트아웃 요청을 캡처할 수 있습니다.
 
@@ -69,7 +69,7 @@ CPA 옵트아웃 요청을 승인하려면 조합 스키마의 일부인 스키�
 
 혼합의 전체 구조를 보려면 [!DNL Profile Privacy] XDM 공개 GitHub 저장소 [](https://github.com/adobe/xdm/blob/master/schemas/context/profile-privacy.schema.json) 를 참조하거나 플랫폼 UI를 사용하여 믹스를 미리 보십시오.
 
-### [!DNL Profile Preferences Details]
+### [!DNL Profile Preferences Details] {#profile-preferences-details}
 
 이 [!DNL Profile Preferences Details] 믹스인에서는 이메일 포맷, 기본 언어, 표준 시간대 등 고객 프로파일에 대한 기본 설정을 나타내는 여러 필드를 제공합니다. 이 믹스에 포함된 필드 중 하나인 OptInOut(`optInOut`)을 사용하면 개별 채널에 대해 옵트아웃 값을 설정할 수 있습니다.
 
@@ -130,6 +130,6 @@ In some instances, such as building a segment of people who have opted out, it m
 
 ## 다음 단계
 
-API 및 사용자 인터페이스를 통해 세그먼트 정의 및 대상을 사용한 작업을 포함하여 세그멘테이션에 대한 자세한 내용은 세그멘테이션 [개요를 읽으십시오](./home.md).
+API와 사용자 인터페이스를 통해 세그먼트 정의 및 대상을 사용한 작업을 비롯한 세그멘테이션에 대한 자세한 내용은 세그멘테이션 [개요를 읽으십시오](./home.md).
 
 법률 및 조직의 개인 정보 보호 규정 준수를 자동화하는 방법 [!DNL Platform]을 비롯하여 내부 데이터 개인 정보 [!DNL Privacy Service] [!DNL Privacy Service](../privacy-service/home.md)에 대한 자세한 내용은
