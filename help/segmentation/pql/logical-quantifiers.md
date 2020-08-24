@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 논리적 수량자
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: 84a5b992639c1cabfdeaec5262964c9873826592
 workflow-type: tm+mt
-source-wordcount: '188'
+source-wordcount: '185'
 ht-degree: 5%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 5%
 
 # 논리적 수량 함수
 
-논리 정량자는 (PQL)에서 배열이 있는 조건을 [!DNL Profile Query Language] 확인하는 데 사용할 수 있습니다. 다른 PQL 기능에 대한 자세한 내용은 [프로필 쿼리 언어 개요를 참조하십시오](./overview.md).
+논리 정량자는 (PQL)에서 배열이 있는 조건을 [!DNL Profile Query Language] 확인하는 데 사용할 수 있습니다. 다른 PQL 기능에 대한 자세한 내용은 [[!DNL Profile Query Language] 개요를 참조하십시오](./overview.md).
 
 ## 존재함
 
