@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 산술 함수
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: 84a5b992639c1cabfdeaec5262964c9873826592
 workflow-type: tm+mt
-source-wordcount: '230'
+source-wordcount: '227'
 ht-degree: 5%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 5%
 
 # 산술 함수
 
-산술 함수는 (PQL)의 값에 대한 기본 계산을 수행하는 데 [!DNL Profile Query Language] 사용됩니다. 다른 PQL 기능에 대한 자세한 내용은 [프로필 쿼리 언어 개요를 참조하십시오](./overview.md).
+산술 함수는 (PQL)의 값에 대한 기본 계산을 수행하는 데 [!DNL Profile Query Language] 사용됩니다. 다른 PQL 기능에 대한 자세한 내용은 [[!DNL Profile Query Language] 개요를 참조하십시오](./overview.md).
 
 ## 이벤트가 복제되지 않도록 하면서 현재 이벤트 변수에
 
