@@ -5,9 +5,9 @@ title: PQL(프로필 쿼리 언어) 개요
 topic: developer guide
 description: 이 안내서에서는 서식 지침을 다루는 PQL에 대한 일반적인 개요와 PQL 표현식 예를 제공합니다.
 translation-type: tm+mt
-source-git-commit: 691af873e0753217b9e7566042c508d9d9b8d8d5
+source-git-commit: 5a10a31f4be5173af8b459b9ab8a53096348be1d
 workflow-type: tm+mt
-source-wordcount: '686'
+source-wordcount: '705'
 ht-degree: 2%
 
 ---
@@ -81,6 +81,7 @@ PQL은 다음과 같은 문자 유형을 지원합니다.
 | 배열, 목록 및 설정 | 배열, 목록 및 세트와 상호 작용하는 데 사용됩니다. 이러한 기능에 대한 자세한 내용은 [배열, 목록 및 집합 함수 문서에서 확인할 수 있습니다](./array-functions.md). |
 | 맵 | 맵과 상호 작용하는 데 사용됩니다. 이러한 기능에 대한 자세한 내용은 [지도 함수 문서에서 확인할 수 있습니다](./map-functions.md). |
 | 문자열 | 문자열과 상호 작용하는 데 사용됩니다. 이러한 함수에 대한 자세한 내용은 [문자열 함수 문서에서 확인할 수 있습니다](./string-functions.md). |
+| 개체 | 개체와 상호 작용하는 데 사용됩니다. 이러한 함수에 대한 자세한 내용은 [개체 함수 문서에서 확인할 수 있습니다](./object-functions.md). |
 | 산술 | PQL 요소에서 기본 산술을 수행하는 데 사용됩니다. 이러한 함수에 대한 자세한 내용은 [산술 함수 문서에서 확인할 수 있습니다](./arithmetic-functions.md) |
 | 집계 | 배열의 결과를 하나의 결과로 결합하는 데 사용됩니다. 집계 기능에 대한 자세한 내용은 [집계 함수 문서에서 확인할 수 있습니다](./aggregation-functions.md). |
 | 날짜 및 시간 | date, time 및 datetime 개체와 함께 사용됩니다. 이러한 기능에 대한 자세한 내용은 [날짜/시간 함수 문서에서 확인할 수 있습니다](./datetime-functions.md). |
