@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 배열, 목록 및 집합 함수
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: 0fc356b67af4d34e35cd9329385ec284d9336953
 workflow-type: tm+mt
-source-wordcount: '737'
+source-wordcount: '734'
 ht-degree: 5%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 5%
 
 # 배열, 목록 및 집합 함수
 
-[!DNL Profile Query Language] (PQL)은 배열, 목록 및 문자와의 상호 작용을 용이하게 하는 기능을 제공합니다. 다른 PQL 기능에 대한 자세한 내용은 [프로필 쿼리 언어 개요를 참조하십시오](./overview.md).
+[!DNL Profile Query Language] (PQL)은 배열, 목록 및 문자와의 상호 작용을 용이하게 하는 기능을 제공합니다. 다른 PQL 기능에 대한 자세한 내용은 [[!DNL Profile Query Language] 개요를 참조하십시오](./overview.md).
 
 ## 인
 
@@ -228,7 +228,7 @@ array.map(expression)
 numbers.map(square)
 ```
 
-## 스토리지 `n` 의 첫 번째
+## 스토리지 `n` 의 첫 번째 {#first-n}
 
 이 `topN` 함수는 지정된 숫자 표현식에 따라 오름차순으로 정렬할 때 배열의 첫 번째 `N` 항목을 반환하는 데 사용됩니다.
 
@@ -288,7 +288,7 @@ orders.bottomN(price, 5)
 
 **예**
 
-다음 PQL 쿼리는 가장 높은 가격을 가진 상위 5개 주문 중 첫 번째 주문을 반환합니다. 함수에 대한 자세한 내용은 `topN` array 섹션의 [첫 `n` 번째](#first-n-in-array) 섹션에서 찾을 수 있습니다.
+다음 PQL 쿼리는 가장 높은 가격을 가진 상위 5개 주문 중 첫 번째 주문을 반환합니다. 함수에 대한 자세한 내용은 `topN` array 섹션의 [첫 `n` 번째](#first-n) 섹션에서 찾을 수 있습니다.
 
 ```sql
 orders.topN(price, 5).head()
