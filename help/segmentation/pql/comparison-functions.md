@@ -4,17 +4,17 @@ solution: Experience Platform
 title: 비교 함수
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 92f92f480f29f7d6440f4e90af3225f9a1fcc3d0
+source-git-commit: 84a5b992639c1cabfdeaec5262964c9873826592
 workflow-type: tm+mt
-source-wordcount: '295'
-ht-degree: 5%
+source-wordcount: '292'
+ht-degree: 10%
 
 ---
 
 
 # 비교 함수
 
-비교 함수는 서로 다른 표현식과 값을 비교하고, `true` 반환하거나 그에 따라 `false` 사용됩니다. 다른 PQL 기능에 대한 자세한 내용은 [프로필 쿼리 언어 개요를 참조하십시오](./overview.md).
+비교 함수는 서로 다른 표현식과 값을 비교하고, `true` 반환하거나 그에 따라 `false` 사용됩니다. 다른 PQL 기능에 대한 자세한 내용은 [[!DNL Profile Query Language] 개요를 참조하십시오](./overview.md).
 
 ## 다음과 같음
 
