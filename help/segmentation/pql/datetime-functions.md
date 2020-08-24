@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 날짜 및 시간 함수
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: 84a5b992639c1cabfdeaec5262964c9873826592
 workflow-type: tm+mt
-source-wordcount: '468'
+source-wordcount: '465'
 ht-degree: 4%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 4%
 
 # 날짜 및 시간 함수
 
-날짜 및 시간 함수는 [!DNL Profile Query Language] (PQL) 내의 값에 대해 날짜 및 시간 작업을 수행하는 데 사용됩니다. 다른 PQL 기능에 대한 자세한 내용은 [프로필 쿼리 언어 개요를 참조하십시오](./overview.md).
+날짜 및 시간 함수는 [!DNL Profile Query Language] (PQL) 내의 값에 대해 날짜 및 시간 작업을 수행하는 데 사용됩니다. 다른 PQL 기능에 대한 자세한 내용은 [[!DNL Profile Query Language] 개요를 참조하십시오](./overview.md).
 
 ## 현재 달
 
@@ -143,7 +143,7 @@ product.sale.getDayOfMonth() <= 15
 | --------- | ----------- |
 | `{COMPARISON}` | 비교 연산자입니다. 다음 연산자가 될 수 있습니다. `>`, `>=`, `<`, `<=`, `=``!=`,. 비교 기능에 대한 자세한 내용은 [비교 함수 문서에 나와 있습니다](./comparison-functions.md). |
 | `{INTEGER}` | 음수가 아닌 정수 |
-| `{TIME_UNIT}` | 시간 단위 다음 단어 중 하나일 수 있습니다. `millisecond(s)`, `second(s)`, `minute(s)`, `hour(s)``day(s)`, `week(s)`, `month(s)`, `year(s)`, `decade(s)`,, `century`, `centuries``millennium``millennia`,,,. |
+| `{TIME_UNIT}` | 시간 단위 다음 단어 중 하나일 수 있습니다. `millisecond(s)`, `second(s)`, `minute(s)`, `hour(s)``day(s)`, `week(s)`, `month(s)``year(s)`, `decade(s)`, `century``centuries``millennium``millennia`,... |
 | `{DIRECTION}` | 날짜를 비교할 시기를 설명하는 사전 위치입니다. 다음 단어 중 하나일 수 있습니다. `before`, `after`, `from`. |
 | `{TIME}` | 타임스탬프 리터럴(`today`, `now`, `yesterday``tomorrow`, `this`), 상대 시간 단위(시간 단위 하나 `last`, `next` 또는 그 뒤에는 시간 단위) 또는 타임스탬프 속성이 될 수 있습니다. |
 
