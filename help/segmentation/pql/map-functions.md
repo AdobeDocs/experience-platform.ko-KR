@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 매핑 함수
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: 84a5b992639c1cabfdeaec5262964c9873826592
 workflow-type: tm+mt
-source-wordcount: '146'
+source-wordcount: '143'
 ht-degree: 6%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 6%
 
 # 매핑 함수
 
-[!DNL Profile Query Language] (PQL)은 맵과의 상호 작용을 용이하게 하는 기능을 제공합니다. 다른 PQL 기능에 대한 자세한 내용은 [프로필 쿼리 언어 개요를 참조하십시오](./overview.md).
+[!DNL Profile Query Language] (PQL)은 맵과의 상호 작용을 용이하게 하는 기능을 제공합니다. 다른 PQL 기능에 대한 자세한 내용은 [[!DNL Profile Query Language] 개요를 참조하십시오](./overview.md).
 
 ## 가져오기
 
