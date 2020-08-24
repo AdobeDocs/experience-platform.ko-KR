@@ -5,9 +5,9 @@ solution: Experience Platform
 title: 계정 및 데이터 흐름 모니터링
 topic: overview
 translation-type: tm+mt
-source-git-commit: c15f582eeaa895f03441b2f488686a9a48942f3d
+source-git-commit: a93b3a1980ca0f1d3a32257a923eb7ffc8896fd5
 workflow-type: tm+mt
-source-wordcount: '891'
+source-wordcount: '890'
 ht-degree: 0%
 
 ---
@@ -106,7 +106,7 @@ Adobe Experience Platform의 소스 커넥터는 예약된 기준으로 외부 �
 
 ![미리 보기 오류 진단](../../images/tutorials/monitor/preview-error-diagnostics.png)
 
-오류를 미리 본 후 **[!UICONTROL UICONTROL 데이터 흐름 실행 개요]** 패널 내에서 [ **[다운로드]를 선택하여 전체 오류 진단에 액세스하고 파일 매니페스트를 다운로드할 수 있습니다]** . 자세한 내용은 [오류 진단](../../../ingestion/batch-ingestion/partial.md#retrieve-errors) 및 메타데이터 [다운로드에 대한](../../../ingestion/batch-ingestion/partial.md#download-metadata) 문서를 참조하십시오.
+오류를 미리 본 후 **[!UICONTROL 데이터 흐름 실행 개요]** 패널 내에서 [다운로드 **** ]를 선택하여 전체 오류 진단에 액세스하고 파일 매니페스트를 다운로드할 수 있습니다. 자세한 내용은 [오류 진단](../../../ingestion/batch-ingestion/partial.md#retrieve-errors) 및 메타데이터 [다운로드에 대한](../../../ingestion/batch-ingestion/partial.md#download-metadata) 문서를 참조하십시오.
 
 ![미리 보기 오류 진단](../../images/tutorials/monitor/download.png)
 
