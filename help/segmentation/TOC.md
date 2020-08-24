@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform 세그멘테이션 서비스 도움말
 translation-type: tm+mt
-source-git-commit: e351a2d489730c1f1bd5f87be8d85612090bc009
+source-git-commit: 5a10a31f4be5173af8b459b9ab8a53096348be1d
 workflow-type: tm+mt
-source-wordcount: '116'
+source-wordcount: '118'
 ht-degree: 9%
 
 ---
@@ -38,6 +38,7 @@ ht-degree: 9%
    - [배열, 목록 및 집합 함수](pql/array-functions.md)
    - [매핑 함수](pql/map-functions.md)
    - [문자열 함수](pql/string-functions.md)
+   - [개체 함수](pql/object-functions.md)
    - [산술 함수](pql/arithmetic-functions.md)
    - [집계 함수](pql/aggregation-functions.md)
    - [날짜 및 시간 함수](pql/datetime-functions.md)
