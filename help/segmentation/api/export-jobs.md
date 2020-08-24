@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 내보내기 작업 끝점
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
+source-git-commit: 6ddb420ad3c4df3096dac456c58afc7a4916ce51
 workflow-type: tm+mt
-source-wordcount: '1497'
+source-wordcount: '1521'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # 내보내기 작업 끝점
 
-내보내기 작업은 대상 세그먼트 멤버를 데이터 세트로 유지하는 데 사용되는 비동기 프로세스입니다. 프로그래밍 방식으로 내보내기 작업을 검색, 생성 및 취소할 수 있는 Adobe Experience Platform 세그멘테이션 API의 `/export/jobs` 끝점을 사용할 수 있습니다.
+내보내기 작업은 대상 세그먼트 멤버를 데이터 세트로 유지하는 데 사용되는 비동기 프로세스입니다. Adobe Experience Platform 세그멘테이션 API의 `/export/jobs` 끝점을 사용할 수 있습니다. 이를 통해 프로그래밍 방식으로 내보내기 작업을 검색, 생성 및 취소할 수 있습니다.
 
 >[!NOTE]
 >
@@ -198,10 +198,10 @@ curl -X GET https://platform.adobe.io/data/core/ups/export/jobs?limit=2 \
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `destination` | 내보낸 데이터의 대상 정보:<ul><li>`datasetId`: 데이터를 내보낸 데이터 세트의 ID입니다.</li><li>`segmentPerBatch`: 세그먼트 ID가 통합되는지 여부를 표시하는 부울 값입니다. 값이 &quot;false&quot;이면 모든 세그먼트 ID를 단일 배치 ID로 내보내집니다. 값이 &quot;true&quot;이면 하나의 세그먼트 ID를 하나의 배치 ID로 내보내집니다. **참고:** 값을 true로 설정하면 일괄 내보내기 성능에 영향을 줄 수 있습니다.</li></ul> |
+| `destination` | 내보낸 데이터의 대상 정보:<ul><li>`datasetId`:데이터를 내보낸 데이터 세트의 ID입니다.</li><li>`segmentPerBatch`:세그먼트 ID가 통합되는지 여부를 표시하는 부울 값입니다. 값이 &quot;false&quot;이면 모든 세그먼트 ID를 단일 배치 ID로 내보내집니다. 값이 &quot;true&quot;이면 하나의 세그먼트 ID를 하나의 배치 ID로 내보내집니다. **참고:** 값을 true로 설정하면 일괄 내보내기 성능에 영향을 줄 수 있습니다.</li></ul> |
 | `fields` | 내보낸 필드 목록입니다. |
 | `schema.name` | 데이터를 내보낼 데이터 세트와 연결된 스키마의 이름입니다. |
-| `filter.segments` | 내보낸 세그먼트 다음 필드가 포함됩니다.<ul><li>`segmentId`: 프로파일을 내보낼 세그먼트 ID.</li><li>`segmentNs`: 지정된 세그먼트 네임스페이스입니다 `segmentID`.</li><li>`status`: 에 대한 상태 필터를 제공하는 문자열 `segmentID`배열입니다. 기본적으로 현재 시간 `status` 에 세그먼트에 속하는 모든 프로파일을 나타내는 값이 `["realized", "existing"]` 있습니다. 가능한 값은 다음과 같습니다. &quot;실현&quot;, &quot;기존&quot; 및 &quot;종료&quot;</li></ul> |
+| `filter.segments` | 내보낸 세그먼트 다음 필드가 포함됩니다.<ul><li>`segmentId`:프로파일을 내보낼 세그먼트 ID.</li><li>`segmentNs`:지정된 세그먼트 네임스페이스입니다 `segmentID`.</li><li>`status`:에 대한 상태 필터를 제공하는 문자열 `segmentID`배열입니다. 기본적으로 현재 시간 `status` 에 세그먼트에 속하는 모든 프로파일을 나타내는 값이 `["realized", "existing"]` 있습니다. 가능한 값은 다음과 같습니다.&quot;실현&quot;, &quot;기존&quot; 및 &quot;종료&quot;</li></ul> |
 | `mergePolicy` | 내보낸 데이터에 대한 정책 정보를 병합합니다. |
 | `metrics.totalTime` | 내보내기 작업이 실행되는 데 걸린 총 시간을 나타내는 필드입니다. |
 | `metrics.profileExportTime` | 프로필을 내보내는 데 걸린 시간을 나타내는 필드입니다. |
@@ -268,6 +268,9 @@ curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
     },
     "schema":{
         "name": "_xdm.context.profile"
+    },
+    "evaluationInfo": {
+        "segmentation": true
     }
 }'
 ```
@@ -277,15 +280,16 @@ curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
 | `fields` | 내보낸 필드 목록입니다. 비워 두면 모든 필드가 내보내집니다. |
 | `mergePolicy` | 내보낸 데이터를 제어하는 병합 정책을 지정합니다. 내보낼 세그먼트가 여러 개인 경우 이 매개 변수를 포함하십시오. 제공되지 않으면 내보내기는 지정된 세그먼트와 동일한 병합 정책을 사용합니다. |
 | `filter` | 아래 나열된 하위 속성에 따라 ID, 검증 시간 또는 인제스트 시간으로 내보내기 작업에 포함할 세그먼트를 지정하는 개체 비워 두면 모든 데이터가 내보내집니다. |
-| `filter.segments` | 내보낼 세그먼트를 지정합니다. 이 값을 생략하면 모든 프로필의 모든 데이터가 내보내집니다. 다음 필드를 포함하는 세그먼트 개체의 배열을 수락합니다.<ul><li>`segmentId`: **(사용하는 경우`segments`필수)** 내보낼 프로필에 대한 세그먼트 ID입니다.</li><li>`segmentNs` *(선택 사항)* 주어진 세그먼트 네임스페이스입니다 `segmentID`.</li><li>`status` *(선택 사항)* 상태 필터를 제공하는 문자열 `segmentID`배열입니다. 기본적으로 현재 시간 `status` 에 세그먼트에 속하는 모든 프로파일을 나타내는 값이 `["realized", "existing"]` 있습니다. 가능한 값은 다음과 같습니다. `"realized"`, `"existing"`and `"exited"`.</li></ul> |
+| `filter.segments` | 내보낼 세그먼트를 지정합니다. 이 값을 생략하면 모든 프로필의 모든 데이터가 내보내집니다. 다음 필드를 포함하는 세그먼트 개체의 배열을 수락합니다.<ul><li>`segmentId`: **(사용하는 경우`segments`필수)** 내보낼 프로필에 대한 세그먼트 ID입니다.</li><li>`segmentNs` *(선택 사항)* 주어진 세그먼트 네임스페이스입니다 `segmentID`.</li><li>`status` *(선택 사항)* 상태 필터를 제공하는 문자열 `segmentID`배열입니다. 기본적으로 현재 시간 `status` 에 세그먼트에 속하는 모든 프로파일을 나타내는 값이 `["realized", "existing"]` 있습니다. Possible values include: `"realized"`, `"existing"`, and `"exited"`.</li></ul> |
 | `filter.segmentQualificationTime` | 세그먼트 자격 시간을 기준으로 필터링합니다. 시작 시간 및/또는 종료 시간을 제공할 수 있습니다. |
 | `filter.segmentQualificationTime.startTime` | 주어진 상태에 대한 세그먼트 ID에 대한 세그먼트 자격 시작 시간입니다. 제공되지 않으면 세그먼트 ID 자격에 대한 시작 시간에 필터가 없습니다. 타임스탬프는 [RFC 3339](https://tools.ietf.org/html/rfc3339) 형식으로 제공해야 합니다. |
 | `filter.segmentQualificationTime.endTime` | 주어진 상태에 대한 세그먼트 ID에 대한 세그먼트 자격 종료 시간입니다. 제공되지 않으면 세그먼트 ID 자격에 대한 종료 시간에 필터가 없습니다. 타임스탬프는 [RFC 3339](https://tools.ietf.org/html/rfc3339) 형식으로 제공해야 합니다. |
-| `filter.fromIngestTimestamp ` | 내보낸 프로필에 이 타임스탬프 이후에 업데이트된 프로필만 포함하도록 제한합니다. 타임스탬프는 [RFC 3339](https://tools.ietf.org/html/rfc3339) 형식으로 제공해야 합니다. <ul><li>`fromIngestTimestamp` for **profiles**, if provided: 병합된 업데이트된 타임스탬프가 지정된 타임스탬프보다 큰 병합된 프로필을 모두 포함합니다. 피연산자를 `greater_than` 지원합니다.</li><li>`fromIngestTimestamp` for **events**: 이 타임스탬프 이후에 수집되는 모든 이벤트는 결과 프로필 결과에 따라 내보내집니다. 이벤트 시간 자체가 아니라 이벤트에 대한 수집 시간입니다.</li> |
+| `filter.fromIngestTimestamp ` | 내보낸 프로필에 이 타임스탬프 이후에 업데이트된 프로필만 포함하도록 제한합니다. 타임스탬프는 [RFC 3339](https://tools.ietf.org/html/rfc3339) 형식으로 제공해야 합니다. <ul><li>`fromIngestTimestamp` for **profiles**, if provided:병합된 업데이트된 타임스탬프가 지정된 타임스탬프보다 큰 병합된 프로필을 모두 포함합니다. 피연산자를 `greater_than` 지원합니다.</li><li>`fromIngestTimestamp` for **events**:이 타임스탬프 이후에 수집되는 모든 이벤트는 결과 프로필 결과에 따라 내보내집니다. 이벤트 시간 자체가 아니라 이벤트에 대한 수집 시간입니다.</li> |
 | `filter.emptyProfiles` | 빈 프로필에 대해 필터링할지 여부를 나타내는 부울 값입니다. 프로필에는 프로필 레코드, ExperienceEvent 레코드 또는 둘 다를 포함할 수 있습니다. 프로필 레코드가 없고 ExperienceEvent 레코드만 있는 프로필을 &quot;emptyProfiles&quot;라고 합니다. &quot;emptyProfiles&quot;를 비롯한 프로필 스토어의 모든 프로필을 내보내려면 값 `emptyProfiles` 을 설정합니다 `true`. 이 `emptyProfiles` `false`로 설정된 경우 스토어에 프로필 레코드가 있는 프로파일만 내보내집니다. 기본적으로 속성이 포함되지 않은 경우 `emptyProfiles` 프로필 레코드가 포함된 프로파일만 내보내집니다. |
-| `additionalFields.eventList` | 다음 설정 중 하나 이상을 제공하여 하위 또는 연관된 개체에 대해 내보낸 시계열 이벤트 필드를 제어합니다.<ul><li>`fields`: 내보낼 필드를 제어합니다.</li><li>`filter`: 관련 개체에서 포함된 결과를 제한하는 기준을 지정합니다. 내보내기에 필요한 최소 값(일반적으로 날짜)이 필요합니다.</li><li>`filter.fromIngestTimestamp`: 시간 시리즈 이벤트를 제공된 타임스탬프 이후에 인제스트된 이벤트로 필터링합니다. 이벤트 시간 자체가 아니라 이벤트에 대한 수집 시간입니다.</li><li>`filter.toIngestTimestamp`: 제공된 타임스탬프 전에 인제스트된 타임스탬프로 필터링합니다. 이벤트 시간 자체가 아니라 이벤트에 대한 수집 시간입니다.</li></ul> |
+| `additionalFields.eventList` | 다음 설정 중 하나 이상을 제공하여 하위 또는 연관된 개체에 대해 내보낸 시계열 이벤트 필드를 제어합니다.<ul><li>`fields`:내보낼 필드를 제어합니다.</li><li>`filter`:관련 개체에서 포함된 결과를 제한하는 기준을 지정합니다. 내보내기에 필요한 최소 값(일반적으로 날짜)이 필요합니다.</li><li>`filter.fromIngestTimestamp`:시간 시리즈 이벤트를 제공된 타임스탬프 이후에 인제스트된 이벤트로 필터링합니다. 이벤트 시간 자체가 아니라 이벤트에 대한 수집 시간입니다.</li><li>`filter.toIngestTimestamp`:제공된 타임스탬프 전에 인제스트된 타임스탬프로 필터링합니다. 이벤트 시간 자체가 아니라 이벤트에 대한 수집 시간입니다.</li></ul> |
 | `destination` | **(필수)** 내보낸 데이터에 대한 정보:<ul><li>`datasetId`: **(필수)** 데이터를 내보낼 데이터 세트의 ID입니다.</li><li>`segmentPerBatch`: *(선택 사항)* 제공되지 않을 경우 기본적으로 &quot;false&quot;로 설정되는 부울 값입니다. &quot;false&quot;라는 값은 모든 세그먼트 ID를 단일 배치 ID로 내보냅니다. &quot;true&quot;이면 하나의 세그먼트 ID를 하나의 배치 ID로 내보냅니다. 값을 &quot;true&quot;로 설정하면 일괄 내보내기 성능에 영향을 줄 수 있습니다.</li></ul> |
 | `schema.name` | **(필수)** 데이터를 내보낼 데이터 세트와 연관된 스키마의 이름입니다. |
+| `evaluationInfo.segmentation` | *(선택 사항)* 제공되지 않을 경우 기본값이 되는 부울 값입니다 `false`. 값 `true` 은 내보내기 작업에서 세그먼테이션을 수행해야 함을 나타냅니다. |
 
 **응답**
 
@@ -464,10 +468,10 @@ curl -X GET https://platform.adobe.io/data/core/ups/export/jobs/11037 \
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `destination` | 내보낸 데이터의 대상 정보:<ul><li>`datasetId`: 데이터를 내보낸 데이터 세트의 ID입니다.</li><li>`segmentPerBatch`: 세그먼트 ID가 통합되는지 여부를 표시하는 부울 값입니다. 값 `false` 은 모든 세그먼트 ID가 단일 배치 ID에 있음을 의미합니다. 값 `true` 은 하나의 세그먼트 ID를 하나의 배치 ID로 내보내는 것을 의미합니다.</li></ul> |
+| `destination` | 내보낸 데이터의 대상 정보:<ul><li>`datasetId`:데이터를 내보낸 데이터 세트의 ID입니다.</li><li>`segmentPerBatch`:세그먼트 ID가 통합되는지 여부를 표시하는 부울 값입니다. 값 `false` 은 모든 세그먼트 ID가 단일 배치 ID에 있음을 의미합니다. 값 `true` 은 하나의 세그먼트 ID를 하나의 배치 ID로 내보내는 것을 의미합니다.</li></ul> |
 | `fields` | 내보낸 필드 목록입니다. |
 | `schema.name` | 데이터를 내보낼 데이터 세트와 연결된 스키마의 이름입니다. |
-| `filter.segments` | 내보낸 세그먼트 다음 필드가 포함됩니다.<ul><li>`segmentId`: 내보낼 프로필의 세그먼트 ID.</li><li>`segmentNs`: 지정된 세그먼트 네임스페이스입니다 `segmentID`.</li><li>`status`: 에 대한 상태 필터를 제공하는 문자열 `segmentID`배열입니다. 기본적으로 현재 시간 `status` 에 세그먼트에 속하는 모든 프로파일을 나타내는 값이 `["realized", "existing"]` 있습니다. 가능한 값은 다음과 같습니다. &quot;실현&quot;, &quot;기존&quot; 및 &quot;종료&quot;</li></ul> |
+| `filter.segments` | 내보낸 세그먼트 다음 필드가 포함됩니다.<ul><li>`segmentId`:내보낼 프로필의 세그먼트 ID.</li><li>`segmentNs`:지정된 세그먼트 네임스페이스입니다 `segmentID`.</li><li>`status`:에 대한 상태 필터를 제공하는 문자열 `segmentID`배열입니다. 기본적으로 현재 시간 `status` 에 세그먼트에 속하는 모든 프로파일을 나타내는 값이 `["realized", "existing"]` 있습니다. 가능한 값은 다음과 같습니다.&quot;실현&quot;, &quot;기존&quot; 및 &quot;종료&quot;</li></ul> |
 | `mergePolicy` | 내보낸 데이터에 대한 정책 정보를 병합합니다. |
 | `metrics.totalTime` | 내보내기 작업이 실행되는 데 걸린 총 시간을 나타내는 필드입니다. |
 | `metrics.profileExportTime` | 프로필을 내보내는 데 걸린 시간을 나타내는 필드입니다. |
