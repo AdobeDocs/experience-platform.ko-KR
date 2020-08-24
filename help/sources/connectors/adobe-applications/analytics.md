@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Analytics 데이터 커넥터
 topic: overview
 translation-type: tm+mt
-source-git-commit: 662ca170b7416dfb55cfb6b8cbaef640c1f83d31
+source-git-commit: a93b3a1980ca0f1d3a32257a923eb7ffc8896fd5
 workflow-type: tm+mt
 source-wordcount: '471'
 ht-degree: 3%
@@ -51,7 +51,9 @@ XDM에 대한 자세한 내용은 [XDM 시스템 개요를 참조하십시오](.
 | Data Lake의 새로운 데이터 | &lt; 45분 |
 | 데이터 채우기(데이터 13개월 또는 100억 이벤트 중 더 낮음) | &lt; 4주 |
 
->[!NOTE] 지연은 고객 구성, 데이터 볼륨 및 소비자 애플리케이션에 따라 달라집니다. 예를 들어 Analytics 구현이 파이프라인에 대한 지연 `A4T` 으로 구성된 경우 5-10분으로 증가합니다.
+>[!NOTE]
+>
+>지연은 고객 구성, 데이터 볼륨 및 소비자 애플리케이션에 따라 달라집니다. 예를 들어 Analytics 구현이 파이프라인에 대한 지연 `A4T` 으로 구성된 경우 5-10분으로 증가합니다.
 
 ## Analytics 데이터의 기본 식별자
 
