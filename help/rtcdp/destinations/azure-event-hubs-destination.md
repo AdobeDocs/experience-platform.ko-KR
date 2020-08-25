@@ -5,7 +5,7 @@ seo-title: (베타) Azure 이벤트 허브 대상
 description: Azure 이벤트 허브 저장소에 대한 실시간 아웃바운드 연결을 만들어 Experience Platform의 데이터를 스트리밍합니다.
 seo-description: Azure 이벤트 허브 저장소에 대한 실시간 아웃바운드 연결을 만들어 Experience Platform의 데이터를 스트리밍합니다.
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '467'
 ht-degree: 2%
@@ -67,7 +67,7 @@ ht-degree: 2%
 
 내보낸 [!DNL Experience Platform] 데이터는 JSON 형식 [!DNL Azure Event Hubs] 으로 배치됩니다. 예를 들어, 아래 이벤트에는 특정 세그먼트에 자격을 부여하여 다른 세그먼트를 종료한 대상자의 이메일 주소 프로필 속성이 포함되어 있습니다. 이 잠재 고객의 ID는 ECID와 이메일입니다.
 
-```
+```json
 {
   "person": {
     "email": "yourstruly@adobe.con"
