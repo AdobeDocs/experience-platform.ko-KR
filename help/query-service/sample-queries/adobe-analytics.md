@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 샘플 쿼리
 topic: queries
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '862'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Adobe Analytics 데이터에 대한 샘플 쿼리
 
-선택한 Adobe Analytics 보고서 세트의 데이터가 XDM으로 변환되고 데이터 세트 [!DNL ExperienceEvents] 로 Adobe Experience Platform으로 수집됩니다. 이 문서에서는 Adobe Experience Platform이 이 데이터를 [!DNL Query Service] 사용하고 포함된 샘플 쿼리는 Adobe Analytics 데이터 세트와 함께 사용해야 하는 여러 가지 사용 사례를 간략하게 설명합니다. XDM으로의 매핑에 대한 자세한 내용은 [Analytics 필드 매핑 설명서를](../../sources/connectors/adobe-applications/mapping/analytics.md) 참조하십시오 [!DNL ExperienceEvents].
+선택한 Adobe Analytics 보고서 세트의 데이터가 XDM으로 변환되고 데이터 세트 [!DNL ExperienceEvents] 로 Adobe Experience Platform으로 수집됩니다. 이 문서에서는 Adobe Experience Platform이 이 데이터를 [!DNL Query Service] 사용하고 포함된 샘플 쿼리는 Adobe Analytics 데이터 세트와 함께 사용해야 하는 다양한 활용 사례를 소개합니다. XDM으로의 매핑에 대한 자세한 내용은 [분석 필드 매핑 설명서를](../../sources/connectors/adobe-applications/mapping/analytics.md) 참조하십시오 [!DNL ExperienceEvents].
 
 ## 시작하기
 
@@ -135,7 +135,7 @@ Adobe Analytics에서는 &quot;머천다이징 변수&quot;라는 특별히 구�
 
 ### eVar
 
-```
+```console
 productListItems[#]._experience.analytics.customDimensions.evars.evar#
 ```
 
@@ -143,7 +143,7 @@ productListItems[#]._experience.analytics.customDimensions.evars.evar#
 
 ### 사용자 지정 이벤트
 
-```
+```console
 productListItems[#]._experience.analytics.event1to100.event#.value
 ```
 
@@ -189,7 +189,7 @@ LIMIT 20
 
 현재 데이터 세트에 없는 필드를 검색하려고 할 때 &quot;해당 구조체 필드 없음&quot; 오류가 발생했습니다. 오류 메시지에서 반환된 이유를 평가하여 사용 가능한 필드를 찾은 다음 쿼리를 업데이트하고 다시 실행하십시오.
 
-```
+```console
 ERROR: ErrorCode: 08P01 sessionId: XXXX queryId: XXXX Unknown error encountered. Reason: [No such struct field evar1 in eVar10, eVar13, eVar62, eVar88, eVar2;]
 ```
 
@@ -199,13 +199,13 @@ Adobe Analytics에 있는 다른 유형의 머천다이징 변수는 전환 구�
 
 1. 전환 구문 활성화 머천다이징 eVar6을 &quot;internal search:winter hat&quot;로 설정하는 &quot;겨울 모자&quot;에 대한 사용자 내부 검색을 수행합니다.
 2. 사용자는 &quot;와플 비니&quot;를 클릭하고 제품 세부 정보 페이지에 랜딩합니다.\
-   a. 여기에 착륙하면 &quot;와플 비니&quot; 가 12달러 99센트에 대한 행사가 취소된다. `Product View`\
-   b. 바인딩 이벤트로 구성되었기 `Product View` 에 이제 &quot;fum플 beanie&quot; 제품이 &quot;internal search:winter hat&quot;의 eVar6 값으로 바인딩됩니다. &quot;와플 비니&quot; 제품이 수집될 때마다 만료 설정에 도달하거나 (2) 새 eVar6 값이 설정되고 해당 제품에 결합 이벤트가 다시 발생할 때까지 &quot;internal search:winter hat&quot;과 연결됩니다.
+   a.여기에 착륙하면 &quot;와플 비니&quot; 가 12달러 99센트에 대한 행사가 취소된다. `Product View`\
+   b.바인딩 이벤트로 구성되었기 `Product View` 에 이제 &quot;fum플 beanie&quot; 제품이 &quot;internal search:winter hat&quot;의 eVar6 값으로 바인딩됩니다. &quot;와플 비니&quot; 제품이 수집될 때마다 만료 설정에 도달하거나 (2) 새 eVar6 값이 설정되고 해당 제품에 결합 이벤트가 다시 발생할 때까지 &quot;internal search:winter hat&quot;과 연결됩니다.
 3. 사용자가 장바구니에 제품을 추가하여 `Cart Add` 이벤트를 실행합니다.
 4. 사용자는 전환 구문을 활성화한 머천다이징 eVar6을 &quot;내부 검색:여름 셔츠&quot;로 설정하는 &quot;여름 셔츠&quot;에 대한 다른 내부 검색을 수행합니다
 5. 사용자가 &quot;스포티 티셔츠&quot;를 클릭하고 제품 세부 정보 페이지에 놓습니다.\
-   a. 랜딩은 &quot;19달러 99센트의 스포츠 티셔츠&quot;를 위한 `Product View` 이벤트를 개최한다.\
-   b. 이 `Product View` 이벤트는 여전히 본사의 구속력 있는 이벤트로, 이제 &quot;sporty t-shirt&quot; 제품은 &quot;internal search:summer shirt&quot;의 eVar6 값에 묶여 있고 이전 제품 &quot;fumf beanie&quot;는 여전히 &quot;internal search:waffle beanie&quot;의 eVar6 값에 묶여 있습니다.
+   a.랜딩은 &quot;19달러 99센트의 스포츠 티셔츠&quot;를 위한 `Product View` 이벤트를 개최한다.\
+   b.이 `Product View` 이벤트는 여전히 본사의 구속력 있는 이벤트로, 이제 &quot;sporty t-shirt&quot; 제품은 &quot;internal search:summer shirt&quot;의 eVar6 값에 묶여 있고 이전 제품 &quot;fumf beanie&quot;는 여전히 &quot;internal search:waffle beanie&quot;의 eVar6 값에 묶여 있습니다.
 6. 사용자가 장바구니에 제품을 추가하여 `Cart Add` 이벤트를 실행합니다.
 7. 사용자가 두 제품을 모두 체크 아웃합니다.
 
@@ -220,7 +220,7 @@ Adobe Analytics에 있는 다른 유형의 머천다이징 변수는 전환 구�
 
 ### eVar
 
-```
+```console
 _experience.analytics.customDimensions.evars.evar#
 ```
 
@@ -228,7 +228,7 @@ _experience.analytics.customDimensions.evars.evar#
 
 ### 제품
 
-```
+```console
 productListItems[#].sku
 ```
 
@@ -255,7 +255,7 @@ WHERE commerce.productViews.value = 1 OR commerce.purchases.value = 1 OR _experi
 LIMIT 100
 ```
 
-각 제품의 후속 발생 시 바인딩된 값을 유지하는 샘플 쿼리입니다. 가장 낮은 하위 쿼리는 선언된 결합 이벤트의 제품과 값 관계를 설정합니다. 다음 하위 쿼리는 해당 제품과 상호 작용한 이후에 해당 바인딩된 값의 속성을 수행합니다. 최상위 수준 선택 항목은 결과를 집계하여 보고를 생성합니다.
+각 제품의 후속 발생 시 바인딩된 값을 유지하는 샘플 쿼리입니다. 가장 낮은 하위 쿼리는 선언된 결합 이벤트의 제품과 값 관계를 설정합니다. 다음 하위 쿼리는 해당 제품과 상호 작용한 이후에 해당 바인딩된 값의 속성을 수행합니다. 그리고 최상위 수준 선택 항목은 결과를 집계하여 보고를 생성합니다.
 
 ```sql
 SELECT
