@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 스트리밍 대상에 연결 및 데이터 활성화
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: dce9a7040ad25d5bb08de95fce7655f1fec7c226
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '1809'
 ht-degree: 2%
@@ -85,7 +85,7 @@ GET /connectionSpecs
 
 **요청**
 
-```
+```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs' \
 --header 'accept: application/json' \
 --header 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -135,7 +135,7 @@ POST /connections
 
 **요청**
 
-```
+```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
@@ -175,7 +175,7 @@ POST /sourceConnections
 
 **요청**
 
-```
+```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
@@ -230,7 +230,7 @@ POST /connections
 
 **요청**
 
-```
+```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
@@ -289,7 +289,7 @@ POST /targetConnections
 
 **요청**
 
-```
+```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
@@ -407,7 +407,7 @@ PATCH /flows
 
 **요청**
 
-```
+```shell
 curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
@@ -491,7 +491,7 @@ GET /flows
 
 **요청**
 
-```
+```shell
 curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
@@ -508,7 +508,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 반환된 응답에는 이전 단계에서 제출한 세그먼트 및 프로필 속성이 `transformations` 매개 변수에 포함되어야 합니다. 응답의 샘플 `transformations` 매개 변수는 다음과 같습니다.
 
-```
+```json
 "transformations": [
     {
         "name": "GeneralTransform",
@@ -554,7 +554,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 >
 > 새 대상에 대한 데이터 [활성화](#activate-data)단계의 프로필 속성 및 세그먼트 외에 내보낸 데이터 [!DNL AWS Kinesis] 가 포함되고 ID 맵에 대한 정보도 [!DNL Azure Event Hubs] 포함됩니다. 내보낸 프로필의 ID를 나타냅니다(예: [ECID](https://docs.adobe.com/content/help/ko-KR/id-service/using/intro/id-request.html), 모바일 ID, Google ID, 이메일 주소 등). 아래 예를 참조하십시오.
 
-```
+```json
 {
   "person": {
     "email": "yourstruly@adobe.con"
