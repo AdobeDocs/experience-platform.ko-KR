@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe 정의 함수
 topic: queries
 translation-type: tm+mt
-source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '287'
 ht-degree: 6%
@@ -156,7 +156,7 @@ LIMIT 25;
 
 **구문:**
 
-```
+```sql
 NEXT(key, [shift, [ignoreNulls]]) OVER ([partition] [order] [frame])
 PREVIOUS(key, [shift, [ignoreNulls]]) OVER ([partition] [order] [frame])
 ```
@@ -243,7 +243,7 @@ LIMIT 10;
 
 ## Journey Orchestration용
 
-다음 비디오에서는 Adobe Experience Platform 인터페이스 및 PSQL 클라이언트에서 쿼리를 실행하는 방법을 보여 줍니다. 또한 이 비디오에서는 XDM 개체의 개별 속성과 관련된 예를 사용하여 Adobe에서 정의된 함수를 사용하고 CREATE TABLE AS SELECT(CTA)를 사용합니다.
+다음 비디오에서는 Adobe Experience Platform 인터페이스와 PSQL 클라이언트에서 쿼리를 실행하는 방법을 보여 줍니다. 또한 이 비디오에서는 XDM 개체의 개별 속성과 관련된 예를 사용하여 Adobe에서 정의된 함수를 사용하고 CREATE TABLE AS SELECT(CTA)를 사용합니다.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
 
