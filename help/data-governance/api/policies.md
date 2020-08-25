@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 정책
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 7bc7050d64727f09d3a13d803d532a9a3ba5d1a7
+source-git-commit: 12c53122d84e145a699a2a86631dc37ee0073578
 workflow-type: tm+mt
 source-wordcount: '1756'
 ht-degree: 2%
@@ -35,7 +35,7 @@ GET /policies/custom
 
 다음 요청은 조직에서 정의한 사용자 지정 정책 목록을 검색합니다.
 
-```sh
+```shell
 curl -X GET \
   https://platform.adobe.io/data/foundation/dulepolicy/policies/custom \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -163,7 +163,7 @@ GET /policies/custom/{POLICY_ID}
 
 **요청**
 
-```sh
+```shell
 curl -X GET \
   https://platform.adobe.io/data/foundation/dulepolicy/policies/custom/5c6dacdf685a4913dc48937c \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -266,7 +266,7 @@ API에서 [!DNL Policy Service] 정책은 다음과 같이 정의됩니다.
 
 | 속성 | 설명 |
 | --- | --- |
-| `operator` | 동위 배열에 제공된 레이블 간의 조건부 관계를 `operands` 나타냅니다. 허용된 값은 다음과 같습니다. <ul><li>`OR`:배열에 레이블이 있으면 이 표현식은 true로 `operands` 확인됩니다.</li><li>`AND`:이 표현식은 배열에 있는 모든 레이블이 있는 경우에만 true `operands` 로 확인됩니다.</li></ul> |
+| `operator` | 동위 배열에 제공된 레이블 간의 조건부 관계를 `operands` 나타냅니다. 허용된 값은 다음과 같습니다. <ul><li>`OR`:배열에 레이블이 있는 경우 표현식이 true로 `operands` 확인됩니다.</li><li>`AND`:이 표현식은 배열에 있는 모든 레이블이 있는 경우에만 true `operands` 로 확인됩니다.</li></ul> |
 | `operands` | 단일 레이블 또는 추가 쌍과 속성을 나타내는 각 개체가 있는 개체 `operator` 의 `operands` 배열입니다. 배열에 레이블 및/또는 작업이 있는 경우 해당 동기 `operands` `operator` 속성 값을 기준으로 true 또는 false로 확인됩니다. |
 | `label` | 정책에 적용되는 단일 데이터 사용 레이블의 이름입니다. |
 
@@ -282,7 +282,7 @@ POST /policies/custom
 
 다음 요청은 마케팅 작업이 레이블을 포함하는 데이터 `exportToThirdParty` 에 대해 수행되지 않도록 제한하는 새 정책을 만듭니다 `C1 OR (C3 AND C7)`.
 
-```sh
+```shell
 curl -X POST \
   https://platform.adobe.io/data/foundation/dulepolicy/policies/custom \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -396,7 +396,7 @@ PUT /policies/custom/{POLICY_ID}
 
 다음 요청은 새 정책 식을 포함하도록 기존 정책을 업데이트합니다. 이 요청은 기본적으로 정책을 다시 쓰기 때문에 일부 값이 업데이트되지 않더라도 모든 필드를 페이로드에 포함해야 합니다.
 
-```sh
+```shell
 curl -X PUT \
   https://platform.adobe.io/data/foundation/dulepolicy/policies/custom/5c6dacdf685a4913dc48937c \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -590,7 +590,7 @@ DELETE /policies/custom/{POLICY_ID}
 
 **요청**
 
-```sh
+```shell
 curl -X DELETE \
   https://platform.adobe.io/data/foundation/dulepolicy/policies/custom/5c6ddb56eb60ca13dbf8b9a8 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -617,7 +617,7 @@ GET /enabledCorePolicies
 
 **요청**
 
-```sh
+```shell
 curl -X GET \
   https://platform.adobe.io/data/foundation/dulepolicy/enabledCorePolicies \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -663,7 +663,7 @@ curl -X GET \
 
 >[!NOTE]
 >
->이 종단점은 핵심 정책만 활성화하거나 비활성화할 수 있습니다. 사용자 지정 정책을 활성화하거나 비활성화하려면 정책의 일부를 [업데이트하는 섹션을 참조하십시오](#patch).
+>이 끝점에서는 핵심 정책만 활성화하거나 비활성화할 수 있습니다. 사용자 지정 정책을 활성화하거나 비활성화하려면 정책의 일부를 [업데이트하는 섹션을 참조하십시오](#patch).
 
 **API 형식**
 
@@ -675,7 +675,7 @@ PUT /enabledCorePolicies
 
 다음 요청은 페이로드에 제공된 ID를 기반으로 활성화된 핵심 정책 목록을 업데이트합니다.
 
-```sh
+```shell
 curl -X GET \
   https://platform.adobe.io/data/foundation/dulepolicy/enabledCorePolicies \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
