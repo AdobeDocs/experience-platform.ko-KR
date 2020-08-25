@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 모델 최적화
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '1219'
 ht-degree: 0%
@@ -83,7 +83,7 @@ evaluation.metrics=com.adobe.platform.ml.impl.Constants.FSCORE
 
 #### Scala용 사용자 정의 평가 지표
 
-사용자 지정 평가기는 `MLEvaluator.scala` 파일 `Evaluator.scala` 의 인터페이스를 확장하여 제공할 수 있습니다. 예제 [Evaluator.](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/scala/com/adobe/platform/ml/Evaluator.scala) 파일에서 사용자 지정 `split()` 및 `evaluate()` 함수를 정의합니다. Adobe의 `split()` 기능은 8:2의 비율로 데이터를 임의로 분할하고 Adobe의 `evaluate()` 기능은 3개의 지표를 정의하고 반환합니다. MAPE, MAE 및 RMSE.
+사용자 지정 평가기는 `MLEvaluator.scala` 파일 `Evaluator.scala` 의 인터페이스를 확장하여 제공할 수 있습니다. 예제 [Evaluator.](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/scala/com/adobe/platform/ml/Evaluator.scala) 파일에서 사용자 지정 `split()` 및 `evaluate()` 함수를 정의합니다. Adobe의 `split()` 기능은 8:2의 비율로 데이터를 임의로 분할하고 Adobe의 `evaluate()` 기능은 3개의 지표를 정의하고 반환합니다.MAPE, MAE 및 RMSE.
 
 >[!IMPORTANT]
 >
@@ -95,7 +95,7 @@ evaluation.metrics=com.adobe.platform.ml.impl.Constants.FSCORE
 
 레서피에 정의되면 다음 단계는 레서피에서 이를 활성화하는 것입니다. 이 작업은 프로젝트의 폴더에 있는 [application.properties](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/resources/application.properties) 파일에서 `resources` 수행됩니다. 여기에서 `evaluation.class` `Evaluator` 는 `Evaluator.scala`
 
-```properties
+```scala
 evaluation.class=com.adobe.platform.ml.Evaluator
 ```
 
