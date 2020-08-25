@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 마케팅 작업
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: cb3a17aa08c67c66101cbf3842bf306ebcca0305
+source-git-commit: 12c53122d84e145a699a2a86631dc37ee0073578
 workflow-type: tm+mt
 source-wordcount: '681'
 ht-degree: 2%
@@ -37,7 +37,7 @@ GET /marketingActions/custom
 
 다음 요청은 조직에서 유지 관리하는 사용자 지정 마케팅 작업 목록을 검색합니다.
 
-```sh
+```shell
 curl -X GET \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -124,7 +124,7 @@ GET /marketingActions/custom/{MARKETING_ACTION_NAME}
 
 다음 요청은 이름이 지정된 사용자 지정 마케팅 작업을 검색합니다 `combineData`.
 
-```sh
+```shell
 curl -X GET \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/combineData \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -174,7 +174,7 @@ PUT /marketingActions/custom/{MARKETING_ACTION_NAME}
 
 동일한 이름의 마케팅 작업이 아직 시스템에 존재하지 않는 경우 다음 요청은 이름이 지정된 새 마케팅 작업 `crossSiteTargeting`을 만듭니다. 마케팅 작업이 존재하는 경우 이 호출은 대신 페이로드에서 제공하는 속성을 기반으로 마케팅 작업을 업데이트합니다. `crossSiteTargeting`
 
-```sh
+```shell
 curl -X PUT \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/crossSiteTargeting \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -190,7 +190,7 @@ curl -X PUT \
 
 | 속성 | 설명 |
 | --- | --- |
-| `name` | 만들거나 업데이트할 마케팅 작업의 이름입니다. <br><br>**중요&#x200B;**:이 속성은 경로`{MARKETING_ACTION_NAME}`의 속성과 일치해야 하며, 그렇지 않으면 HTTP 400(잘못된 요청) 오류가 발생합니다. 즉, 마케팅 활동이 만들어지면 해당 속성을 변경할 수`name`없습니다. |
+| `name` | 만들거나 업데이트할 마케팅 작업의 이름입니다. <br><br>**중요**:이 속성은 경로 `{MARKETING_ACTION_NAME}` 의 속성과 일치해야 하며, 그렇지 않으면 HTTP 400(잘못된 요청) 오류가 발생합니다. 즉, 마케팅 활동이 만들어지면 해당 속성을 변경할 수 `name` 없습니다. |
 | `description` | 마케팅 작업에 대한 추가 컨텍스트를 제공하는 선택적 설명입니다. |
 
 **응답**
@@ -236,7 +236,7 @@ DELETE /marketingActions/custom/{MARKETING_ACTION_NAME}
 
 **요청**
 
-```sh
+```shell
 curl -X DELETE \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/crossSiteTargeting \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
