@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 이메일 마케팅 대상 만들기
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: fa439ebb9d02d4a08c8ed92b18f2db819d089174
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '1610'
 ht-degree: 1%
@@ -112,7 +112,7 @@ curl -X GET \
 
 -->
 
-```
+```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs' \
 --header 'accept: application/json' \
 --header 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -179,7 +179,7 @@ curl -X POST \
 
 -->
 
-```
+```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
@@ -247,7 +247,7 @@ curl -X POST \
 
 -->
 
-```
+```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
@@ -334,7 +334,7 @@ curl -X POST \
 
 -->
 
-```
+```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
@@ -417,7 +417,7 @@ curl -X POST \
 
 -->
 
-```
+```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
@@ -518,7 +518,7 @@ curl -X POST \
     }
 ```
 
-* `{FLOW_SPEC_ID}`:연결할 이메일 마케팅 대상에 대한 흐름을 사용합니다. 흐름 사양을 가져오려면 종단점에 대해 GET 작업을 `flowspecs` 수행하십시오. Swagger 설명서를 참조하십시오.https://platform.adobe.io/data/foundation/flowservice/swagger#/Flow%20Specs%20API/getFlowSpecs. 응답에서 연결할 이메일 마케팅 대상의 해당 ID를 찾아 `upsTo` 복사합니다. 예를 들어 Adobe Campaign의 경우 매개 변수 `upsToCampaign` 를 찾아 `id` 복사합니다.
+* `{FLOW_SPEC_ID}`:연결할 이메일 마케팅 대상의 흐름을 사용합니다. 흐름 사양을 가져오려면 종단점에 대해 GET 작업을 `flowspecs` 수행하십시오. Swagger 설명서를 참조하십시오.https://platform.adobe.io/data/foundation/flowservice/swagger#/Flow%20Specs%20API/getFlowSpecs. 응답에서 연결할 이메일 마케팅 대상의 해당 ID를 찾아 `upsTo` 복사합니다. 예를 들어 Adobe Campaign의 경우 매개 변수 `upsToCampaign` 를 찾아 `id` 복사합니다.
 * `{SOURCE_CONNECTION_ID}`:Experience Platform에 [연결 단계에서 얻은 소스 연결 ID를 사용합니다](#connect-to-your-experience-platform-data).
 * `{TARGET_CONNECTION_ID}`:이메일 마케팅 대상에 [연결 단계에서 얻은 대상 연결 ID를 사용합니다](#connect-to-email-marketing-destination).
 
@@ -550,7 +550,7 @@ PATCH /flows
 
 **요청**
 
-```
+```shell
 curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
@@ -622,7 +622,7 @@ GET /flows
 
 **요청**
 
-```
+```shell
 curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
@@ -639,7 +639,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 반환된 응답에는 이전 단계에서 제출한 세그먼트 및 프로필 속성이 `transformations` 매개 변수에 포함되어야 합니다. 응답의 샘플 `transformations` 매개 변수는 다음과 같습니다.
 
-```
+```json
 "transformations": [
     {
         "name": "GeneralTransform",
@@ -666,7 +666,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 ## 다음 단계
 
-이 튜토리얼을 통해 실시간 CDP를 기본 이메일 마케팅 대상 중 하나에 연결시키고 데이터 프롤을 각 대상에 설정합니다. 이제 이메일 캠페인, 타깃팅된 광고 및 기타 많은 사용 사례에 대해 대상을 통해 나가는 데이터를 사용할 수 있습니다. 자세한 내용은 다음 페이지를 참조하십시오.
+이 튜토리얼을 통해 실시간 CDP를 기본 이메일 마케팅 대상 중 하나에 연결시키고 데이터 프롤을 각 대상에 설정합니다. 이제 이메일 캠페인, 타깃팅된 광고 및 기타 많은 사용 사례에 대해 보내는 데이터를 대상에서 사용할 수 있습니다. 자세한 내용은 다음 페이지를 참조하십시오.
 
 * [대상 개요](../../rtcdp/destinations/destinations-overview.md)
 * [대상 카탈로그 개요](../../rtcdp/destinations/destinations-catalog.md)
