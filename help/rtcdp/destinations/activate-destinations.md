@@ -5,7 +5,7 @@ seo-title: 대상에 프로필 및 세그먼트 활성화
 description: 세그먼트를 대상에 매핑하여 Adobe의 실시간 고객 데이터 플랫폼에 있는 데이터를 활성화합니다. 이를 수행하려면 아래 단계를 따르십시오.
 seo-description: 세그먼트를 대상에 매핑하여 Adobe의 실시간 고객 데이터 플랫폼에 있는 데이터를 활성화합니다. 이를 수행하려면 아래 단계를 따르십시오.
 translation-type: tm+mt
-source-git-commit: 54df4778a025811504801306120bda78e04281c1
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '1552'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 ## 데이터 활성화 {#activate-data}
 
-활성화 워크플로우의 단계는 대상 유형에 따라 약간 다릅니다. 모든 대상 유형에 대한 전체 워크플로우는 아래에 요약되어 있습니다.
+활성화 워크플로우의 단계는 대상 유형 간에 약간 다릅니다. 모든 대상 유형에 대한 전체 워크플로우는 아래에 요약되어 있습니다.
 
 ### 데이터를 활성화할 대상 선택 {#select-destination}
 
@@ -142,7 +142,7 @@ Adobe Experience Platform `Email_LC_SHA256` 로 데이터 수집 시 [!DNL Faceb
 > Adobe 실시간 CDP는 스키마에서 공통으로 사용되는 네 가지 속성을 사용하여 선택 사항을 미리 정의합니다. `person.name.firstName`,, `person.name.lastName`, `personalEmail.address`, `segmentMembership.status`.
 
 파일 내보내기 옵션은 선택 여부에 따라 다음과 같이 `segmentMembership.status` 달라집니다.
-* 이 `segmentMembership.status` 필드를 선택하면 내보낸 파일에는 초기 전체 스냅샷의 **활성** 구성원과 이후 증분 내보내기의 활성 **및** 만료된 **구성원이 포함됩니다** .
+* 이 `segmentMembership.status` 필드를 선택하면 내보낸 파일에는 초기 전체 스냅샷에 **활성** 구성원이 포함되고 이후 증분 내보내기에 **활성** 및 **만료된** 구성원이 포함됩니다.
 * 이 `segmentMembership.status` 필드를 선택하지 않으면 내보낸 파일은 초기 전체 스냅샷의 **활성** 구성원만 포함되며 이후의 증분 내보내기에서는 활성구성원만 포함됩니다.
 
 ![권장 속성](/help/rtcdp/destinations/assets/recommended-attributes.png)
@@ -201,7 +201,7 @@ Adobe Experience Platform `Email_LC_SHA256` 로 데이터 수집 시 [!DNL Faceb
 
 기본 파일 포맷을 사용하면 3일 연속으로 받은 파일은 다음과 같습니다.
 
-```
+```console
 Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv
 Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_20200409052200.csv
 Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_20200410061130.csv
