@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 데이터 액세스 개발자 가이드
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '485'
 ht-degree: 5%
@@ -94,7 +94,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/
 }
 ```
 
-이 배열은 `"data"` 지정된 일괄 처리 내의 모든 파일 목록을 포함합니다. 반환된 각 파일의 고유한 ID(`{FILE_ID}`)는 `"dataSetFileId"` 필드 내에 들어 있습니다. 그런 다음 이 고유 ID를 사용하여 파일에 액세스하거나 다운로드할 수 있습니다.
+이 배열은 지정된 일괄 처리 내의 모든 파일 목록을 포함합니다. `"data"` 반환된 각 파일의 고유한 ID(`{FILE_ID}`)는 `"dataSetFileId"` 필드 내에 들어 있습니다. 그런 다음 이 고유 ID를 사용하여 파일에 액세스하거나 다운로드할 수 있습니다.
 
 | 속성 | 설명 |
 | -------- | ----------- |
@@ -232,9 +232,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID}?pat
 
 **응답**
 
-```
-Contents of the file
-```
+`Contents of the file`
 
 ## 추가 코드 샘플
 
