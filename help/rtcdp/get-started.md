@@ -5,7 +5,7 @@ seo-title: Adobe 실시간 고객 데이터 플랫폼 시작하기
 description: Adobe 실시간 고객 데이터 플랫폼을 위한 샘플 시나리오
 seo-description: Adobe 실시간 고객 데이터 플랫폼을 위한 샘플 시나리오
 translation-type: tm+mt
-source-git-commit: 54df4778a025811504801306120bda78e04281c1
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '2326'
 ht-degree: 0%
@@ -144,7 +144,7 @@ Luma 팀은 모든 행동 및 고객 데이터를 한 곳에서 제공합니다.
 
 ## 데이터 소스 구성
 
-새로운 데이터 소스 [!DNL Real-time Customer Data Platform] 를 플랫폼으로 가져올 수 있습니다. 실시간 CDP에는 몇 번의 클릭만으로 프로필에 추가할 수 있는 데이터 소스 카탈로그가 포함되어 있습니다.
+새로운 데이터 소스 [!DNL Real-time Customer Data Platform] 를 플랫폼으로 가져올 수 있습니다. 실시간 CDP에는 몇 번의 클릭만으로 프로파일에 추가할 수 있는 데이터 소스 카탈로그가 포함되어 있습니다.
 
 ![image](assets/luma-source-cat.png)
 
@@ -216,7 +216,7 @@ Luma가 Sarah에 대한 모든 프로필 정보를 표시합니다. 여기에는
 
 선물을 구입하는 진행 중인 것으로 보이는 장바구니 포기를 나타내는 세그먼트를 수정 또는 만듭니다.
 
-```
+```sql
 Profile: Category != Preferred Category 
 AND 
 Product Size != Preferred Size 
@@ -291,7 +291,7 @@ Luma는 이러한 제어 기능을 사용하여 규정을 준수하고 시장에
 * 그녀는 청동 회원으로 환영받는다.
 * 그녀는 &quot;선물&quot; 메시지를 본다.
 * 브론즈 멤버십의 일부이기도 한 그녀는 또한 &quot;무료 선물 포장&quot; 메시지를 본다.
-* 그녀는 여전히 러닝에 대한 그녀의 관심에 따라 주인공 이미지를 표적으로 삼고 있다.
+* 그녀는 여전히 러닝에 대한 그녀의 관심에 근거하여 주인공 이미지를 표적으로 삼고 있다.
 
 그녀는 스웨터를 사주고, 선물용 포장을 하며, 상품권을 쓴다. 이 행사를 기억하고 2012년 이 시간에 선물을 받기 위해 상기시키는 선택도 있다. 그녀는 그렇다고 말하며, 다음 해에 또 다른 선물을 사도록 상기시키기 위해 이메일 캠페인에 들어갈 예정입니다.
 
