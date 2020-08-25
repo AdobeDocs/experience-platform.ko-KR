@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform 부분 배치 처리 개요
 topic: overview
 translation-type: tm+mt
-source-git-commit: ac75b1858b6a731915bbc698107f0be6043267d8
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '1446'
 ht-degree: 1%
@@ -229,7 +229,7 @@ curl -X GET https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID}
 
 **오류 없는 응답**
 
-성공적인 응답은 일괄 처리의 상태에 대한 자세한 정보가 있는 HTTP 상태 200을 반환합니다.
+성공적인 응답은 일괄 처리 상태에 대한 자세한 정보와 함께 HTTP 상태 200을 반환합니다.
 
 ```json
 {
@@ -341,6 +341,7 @@ curl -X GET https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID}
 >[!NOTE]
 >
 >오류 진단을 사용할 수 없는 경우 다음 오류 메시지가 대신 표시됩니다.
+>
 > 
 ```json
 > {
@@ -365,11 +366,11 @@ curl -X GET https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID}
 
 ### 읽을 수 없는 파일 {#unreadable}
 
-인제스트한 묶음에 읽을 수 없는 파일이 있는 경우 일괄 처리 자체에 배치 오류가 첨부됩니다. 실패한 일괄 처리 [검색 방법에 대한 자세한 내용은 실패한 배치 검색 안내서를 참조하십시오](../quality/retrieve-failed-batches.md).
+인제스트한 묶음에 읽을 수 없는 파일이 있는 경우 일괄 처리 자체에 배치 오류가 첨부됩니다. 실패한 배치 검색 [안내서에서는 실패한 배치 검색에 대한 자세한 정보를 확인할 수 있습니다](../quality/retrieve-failed-batches.md).
 
 ### 스키마 또는 헤더가 잘못되었습니다. {#schemas-headers}
 
-인제스트한 일괄 처리에 잘못된 스키마나 잘못된 머리글이 있는 경우 일괄 처리 자체에 배치의 오류가 첨부됩니다. 실패한 일괄 처리 [검색 방법에 대한 자세한 내용은 실패한 배치 검색 안내서를 참조하십시오](../quality/retrieve-failed-batches.md).
+인제스트한 일괄 처리에 잘못된 스키마나 잘못된 머리글이 있는 경우 일괄 처리 자체에 배치의 오류가 첨부됩니다. 실패한 배치 검색 [안내서에서는 실패한 배치 검색에 대한 자세한 정보를 확인할 수 있습니다](../quality/retrieve-failed-batches.md).
 
 ### 구문 분석할 수 없는 행 {#unparsable}
 
