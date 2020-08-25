@@ -4,7 +4,7 @@ solution: Experience Platform
 title: SQL 구문
 topic: syntax
 translation-type: tm+mt
-source-git-commit: a10508770a862621403bad94c14db4529051020c
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '1973'
 ht-degree: 1%
@@ -20,7 +20,7 @@ ht-degree: 1%
 
 다음 구문은 에서 지원하는 `SELECT` 쿼리를 정의합니다 [!DNL Query Service].
 
-```
+```sql
 [ WITH with_query [, ...] ]
 SELECT [ ALL | DISTINCT [( expression [, ...] ) ] ]
     [ * | expression [ [ AS ] output_name ] [, ...] ]
@@ -37,7 +37,7 @@ SELECT [ ALL | DISTINCT [( expression [, ...] ) ] ]
 
 where can be one: `from_item`
 
-```
+```sql
 table_name [ * ] [ [ AS ] alias [ ( column_alias [, ...] ) ] ]
     [ LATERAL ] ( select ) [ AS ] alias [ ( column_alias [, ...] ) ]
     with_query_name [ [ AS ] alias [ ( column_alias [, ...] ) ] ]
@@ -46,7 +46,7 @@ table_name [ * ] [ [ AS ] alias [ ( column_alias [, ...] ) ] ]
 
 다음 중 하나를 수행할 수 있습니다. `grouping_element`
 
-```
+```sql
 ( )
     expression
     ( expression [, ...] )
@@ -57,7 +57,7 @@ table_name [ * ] [ [ AS ] alias [ ( column_alias [, ...] ) ] ]
 
 과 같은 `with_query` 결과가 표시됩니다.
 
-```
+```sql
  with_query_name [ ( column_name [, ...] ) ] AS ( select | values )
  
 TABLE [ ONLY ] table_name [ * ]
@@ -67,7 +67,7 @@ TABLE [ ONLY ] table_name [ * ]
 
 SELECT 쿼리의 WHERE 절에 대/소문자를 구분하지 않고 일치시키기 위해 LIKE 대신 키 단어 ILIKE를 사용할 수 있습니다.
 
-```
+```sql
     [ WHERE condition { LIKE | ILIKE | NOT LIKE | NOT ILIKE } pattern ]
 ```
 
@@ -80,7 +80,7 @@ LIKE 및 ILIKE 절의 논리는 다음과 같습니다.
 
 #### 예
 
-```
+```sql
 SELECT * FROM Customers
 WHERE CustomerName ILIKE 'a%';
 ```
@@ -91,7 +91,7 @@ WHERE CustomerName ILIKE 'a%';
 
 조인을 사용하는 `SELECT` 쿼리에는 다음 구문이 있습니다.
 
-```
+```sql
 SELECT statement
 FROM statement
 [JOIN | INNER JOIN | LEFT JOIN | LEFT OUTER JOIN | RIGHT JOIN | RIGHT OUTER JOIN | FULL JOIN | FULL OUTER JOIN]
@@ -103,7 +103,7 @@ ON join condition
 
 두 개 이상의 테이블 `UNION`, `INTERSECT`및 `EXCEPT` 테이블에서 좋아요 행을 결합하거나 제외할 수 있습니다.
 
-```
+```sql
 SELECT statement 1
 [UNION | UNION ALL | UNION DISTINCT | INTERSECT | EXCEPT | MINUS]
 SELECT statement 2
@@ -113,7 +113,7 @@ SELECT statement 2
 
 다음 구문은 에서 지원하는 `CREATE TABLE AS SELECT` (CTAS) 쿼리를 정의합니다 [!DNL Query Service].
 
-```
+```sql
 CREATE TABLE table_name [ WITH (schema='target_schema_title') ] AS (select_query)
 ```
 
@@ -124,7 +124,7 @@ and `select_query` `SELECT` is a statement, the syntax of is defined above in th
 
 ### 예
 
-```
+```sql
 CREATE TABLE Chairs AS (SELECT color, count(*) AS no_of_chairs FROM Inventory i WHERE i.type=="chair" GROUP BY i.color)
 CREATE TABLE Chairs WITH (schema='target schema title') AS (SELECT color, count(*) AS no_of_chairs FROM Inventory i WHERE i.type=="chair" GROUP BY i.color)
 ```
@@ -138,7 +138,7 @@ CREATE TABLE Chairs WITH (schema='target schema title') AS (SELECT color, count(
 
 다음 구문은 에서 지원하는 `INSERT INTO` 쿼리를 정의합니다 [!DNL Query Service].
 
-```
+```sql
 INSERT INTO table_name select_query
 ```
 
@@ -146,7 +146,7 @@ INSERT INTO table_name select_query
 
 ### 예
 
-```
+```sql
 INSERT INTO Customers SELECT SupplierName, City, Country FROM OnlineCustomers;
 ```
 
@@ -159,7 +159,7 @@ INSERT INTO Customers SELECT SupplierName, City, Country FROM OnlineCustomers;
 
 EXTERNAL 테이블이 아닌 경우 테이블을 삭제하고 파일 시스템에서 테이블과 연관된 디렉토리를 삭제합니다. 삭제할 테이블이 없으면 예외가 발생합니다.
 
-```
+```sql
 DROP [TEMP] TABLE [IF EXISTS] [db_name.]table_name
 ```
 
@@ -172,7 +172,7 @@ DROP [TEMP] TABLE [IF EXISTS] [db_name.]table_name
 
 다음 구문은 에서 지원하는 `CREATE VIEW` 쿼리를 정의합니다 [!DNL Query Service].
 
-```
+```sql
 CREATE [ OR REPLACE ] VIEW view_name AS select_query
 ```
 
@@ -180,7 +180,7 @@ CREATE [ OR REPLACE ] VIEW view_name AS select_query
 
 예:
 
-```
+```sql
 CREATE VIEW V1 AS SELECT color, type FROM Inventory
 CREATE OR REPLACE VIEW V1 AS SELECT model, version FROM Inventory
 ```
@@ -189,7 +189,7 @@ CREATE OR REPLACE VIEW V1 AS SELECT model, version FROM Inventory
 
 다음 구문은 에서 지원하는 `DROP VIEW` 쿼리를 정의합니다 [!DNL Query Service].
 
-```
+```sql
 DROP VIEW [IF EXISTS] view_name
 ```
 
@@ -197,7 +197,7 @@ DROP VIEW [IF EXISTS] view_name
 
 예:
 
-```
+```sql
 DROP VIEW v1
 DROP VIEW IF EXISTS v1
 ```
@@ -208,7 +208,7 @@ DROP VIEW IF EXISTS v1
 
 속성을 설정하거나, 기존 속성의 값을 반환하거나 모든 기존 속성을 나열합니다. 기존 속성 키에 대한 값이 제공되면 이전 값이 재정의됩니다.
 
-```
+```sql
 SET property_key [ To | =] property_value
 ```
 
@@ -220,7 +220,7 @@ SET property_key [ To | =] property_value
 
 이 명령을 구문 분석하여 완료된 명령을 클라이언트로 다시 보냅니다. 이것은 `START TRANSACTION` 명령과 동일합니다.
 
-```
+```sql
 BEGIN [ TRANSACTION ]
 ```
 
@@ -232,7 +232,7 @@ BEGIN [ TRANSACTION ]
 
 `CLOSE` 열린 커서와 연관된 리소스를 비웁니다. 커서를 닫으면 후속 작업이 허용되지 않습니다. 커서가 더 이상 필요하지 않을 때는 닫혀야 한다.
 
-```
+```sql
 CLOSE { name }
 ```
 
@@ -244,7 +244,7 @@ CLOSE { name }
 
 커밋 트랜잭션 문에 대한 응답으로 수행되는 작업 [!DNL Query Service] 은 없습니다.
 
-```
+```sql
 COMMIT [ WORK | TRANSACTION ]
 ```
 
@@ -257,7 +257,7 @@ COMMIT [ WORK | TRANSACTION ]
 
 이전에 준비된 SQL 문 `DEALLOCATE` 을 할당 취소하는 데 사용합니다. 준비된 문을 명시적으로 할당 해제하지 않으면 세션이 종료될 때 지정 취소됩니다.
 
-```
+```sql
 DEALLOCATE [ PREPARE ] { name | ALL }
 ```
 
@@ -271,7 +271,7 @@ DEALLOCATE [ PREPARE ] { name | ALL }
 
 `DECLARE` 사용자는 더 큰 쿼리에서 한 번에 적은 수의 행을 검색하는 데 사용할 수 있는 커서를 만들 수 있습니다. 커서를 만든 후에는 행을 사용하여 가져옵니다 `FETCH`.
 
-```
+```sql
 DECLARE name CURSOR [ WITH  HOLD ] FOR query
 ```
 
@@ -287,7 +287,7 @@ DECLARE name CURSOR [ WITH  HOLD ] FOR query
 
 문을 `PREPARE` 만든 문이 일부 매개 변수를 지정한 경우 호환되는 매개 변수 집합을 `EXECUTE` 문으로 전달해야 하며 그렇지 않으면 오류가 발생합니다. 준비된 문(함수와 달리)은 매개 변수의 유형이나 수를 기준으로 오버로드되지 않습니다. 준비된 문의 이름은 데이터베이스 세션 내에서 고유해야 합니다.
 
-```
+```sql
 EXECUTE name [ ( parameter [, ...] ) ]
 ```
 
@@ -304,7 +304,7 @@ EXECUTE name [ ( parameter [, ...] ) ]
 
 이 `ANALYZE` 옵션을 사용하면 계획된 뿐 아니라 명령문이 실행됩니다. 그런 다음 각 계획 노드 내에 소요된 총 경과 시간(밀리초)과 반환된 총 행 수를 비롯하여 실제 실행 시간 통계가 디스플레이에 추가됩니다. 이는 계획가의 평가가 사실과 유사한지를 보는 데 유용합니다.
 
-```
+```sql
 EXPLAIN [ ( option [, ...] ) ] statement
 EXPLAIN [ ANALYZE ] statement
 
@@ -328,7 +328,7 @@ where option can be one of:
 
 단일 열 및 1000개의 행이 있는 테이블에 간단한 `integer` 쿼리에 대한 계획을 표시하려면:
 
-```
+```sql
 EXPLAIN SELECT * FROM foo;
 
                        QUERY PLAN
@@ -343,7 +343,7 @@ EXPLAIN SELECT * FROM foo;
 
 커서에는 연결된 위치가 있으며 이 위치는 에 의해 사용됩니다 `FETCH`. 커서 위치는 쿼리 결과의 첫 번째 행, 결과의 특정 행 또는 결과의 마지막 행 뒤에 올 수 있습니다. 만들어진 커서는 첫 번째 행 앞에 배치됩니다. 일부 행을 가져온 후 커서는 가장 최근에 검색된 행에 배치됩니다. 사용 가능한 행 끝에서 `FETCH` 실행하면 커서가 마지막 행 뒤에 남아 있습니다. 그러한 행이 없으면 빈 결과가 반환되고 첫 번째 행 앞 또는 마지막 행 뒤에 커서가 적절하게 배치됩니다.
 
-```
+```sql
 FETCH num_of_rows [ IN | FROM ] cursor_name
 ```
 
@@ -362,7 +362,7 @@ FETCH num_of_rows [ IN | FROM ] cursor_name
 
 준비된 문은 단일 세션을 사용하여 많은 유사 문을 실행하는 경우 잠재적으로 가장 큰 성능 이점을 제공합니다. 성능 차이는 쿼리가 많은 테이블의 조인을 포함하거나 여러 규칙의 적용을 필요로 하는 경우 등 명령문이 계획 또는 재작성하기가 복잡한 경우 특히 중요합니다. 이 문이 상대적으로 계획 및 재작성은 간단하지만 실행하기에 상대적으로 비싼 경우 준비된 문에 대한 성능 이점은 잘 보이지 않습니다.
 
-```
+```sql
 PREPARE name [ ( data_type [, ...] ) ] AS SELECT
 ```
 
@@ -376,7 +376,7 @@ PREPARE name [ ( data_type [, ...] ) ] AS SELECT
 
 `ROLLBACK` 현재 트랜잭션을 롤백하고 트랜잭션에서 수행한 모든 업데이트를 삭제합니다.
 
-```
+```sql
 ROLLBACK [ WORK ]
 ```
 
@@ -388,7 +388,7 @@ ROLLBACK [ WORK ]
 
 `SELECT INTO` 새 테이블을 만들고 쿼리를 통해 계산된 데이터로 채웁니다. 데이터는 일반 데이터이므로 클라이언트로 반환되지 않습니다 `SELECT`. 새 표의 열에는 해당 열의 출력 열과 연결된 이름 및 데이터 유형이 있습니다 `SELECT`.
 
-```
+```sql
 [ WITH [ RECURSIVE ] with_query [, ...] ]
 SELECT [ ALL | DISTINCT [ ON ( expression [, ...] ) ] ]
     * | expression [ [ AS ] output_name ] [, ...]
@@ -416,7 +416,7 @@ SELECT [ ALL | DISTINCT [ ON ( expression [, ...] ) ] ]
 
 표에서 최근 항목만 `films_recent` 으로 구성된 새 표를 만듭니다 `films`.
 
-```
+```sql
 SELECT * INTO films_recent FROM films WHERE date_prod >= '2002-01-01';
 ```
 
@@ -424,7 +424,7 @@ SELECT * INTO films_recent FROM films WHERE date_prod >= '2002-01-01';
 
 `SHOW` 런타임 매개 변수의 현재 설정을 표시합니다. 이러한 변수는 `SET` 명령문을 사용하여, postgresql.conf 구성 파일을 편집하거나, `PGOPTIONS` 환경 변수를 통해(libpq 또는 libpq 기반 응용 프로그램을 사용하는 경우) 또는 postgres 서버를 시작할 때 명령줄 플래그를 통해 설정할 수 있습니다.
 
-```
+```sql
 SHOW name
 ```
 
@@ -442,7 +442,7 @@ SHOW name
 
 매개 변수의 현재 설정 표시 `DateStyle`
 
-```
+```sql
 SHOW DateStyle;
  DateStyle
 -----------
@@ -454,7 +454,7 @@ SHOW DateStyle;
 
 이 명령은 구문 분석하여 완료된 명령을 다시 클라이언트로 전송합니다. 이것은 `BEGIN` 명령과 동일합니다.
 
-```
+```sql
 START TRANSACTION [ transaction_mode [, ...] ]
 
 where transaction_mode is one of:
@@ -467,7 +467,7 @@ where transaction_mode is one of:
 
 이 명령은 SELECT 쿼리의 출력을 지정된 위치에 덤프합니다. 이 명령이 성공하려면 사용자가 이 위치에 액세스할 수 있어야 합니다.
 
-```
+```sql
 COPY  query
     TO '%scratch_space%/folder_location'
     [  WITH FORMAT 'format_name']
