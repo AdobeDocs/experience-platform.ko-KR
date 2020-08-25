@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 데이터 세트와 테이블 및 스키마
 topic: queries
 translation-type: tm+mt
-source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '181'
 ht-degree: 1%
@@ -35,7 +35,7 @@ SQL에서 사용 가능한 테이블 [!DNL Platform] 을 보려면 `\d` 또는 �
 
 `\d` 표준 PostgreSQL 보기를 표시합니다.
 
-```
+```sql
              List of relations
  Schema |       Name      | Type  |  Owner   
 --------+-----------------+-------+----------
@@ -46,7 +46,7 @@ SQL에서 사용 가능한 테이블 [!DNL Platform] 을 보려면 `\d` 또는 �
 
 `SHOW TABLES;` 은 보다 자세한 보기를 제공하고 UI에 있는 데이터 세트 이름과 표를 나타내는 사용자 지정 [!DNL Platform] 명령입니다.
 
-```
+```sql
        name      |        dataSetId         |     dataSet    | description | resolved 
 -----------------+--------------------------+----------------+-------------+----------
  luma_midvalues  | 5bac030c29bb8d12fa992e58 | Luma midValues |             | false
@@ -62,7 +62,7 @@ SQL에서 사용 가능한 테이블 [!DNL Platform] 을 보려면 `\d` 또는 �
 
 `\d luma_midvalues`
 
-```
+```sql
                          Table "public.luma_midvalues"
       Column       |             Type            | Collation | Nullable | Default 
 -------------------+-----------------------------+-----------+----------+---------
@@ -87,7 +87,7 @@ SQL에서 사용 가능한 테이블 [!DNL Platform] 을 보려면 `\d` 또는 �
 
 `\d luma_midvalues_web`
 
-```
+```sql
                  Composite type "public.luma_midvalues_web"
      Column     |               Type                | Collation | Nullable | Default 
 ----------------+-----------------------------------+-----------+----------+---------
