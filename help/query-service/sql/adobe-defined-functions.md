@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe 정의 함수
 topic: functions
 translation-type: tm+mt
-source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '2156'
 ht-degree: 3%
@@ -20,7 +20,7 @@ ADF(Adobe 정의 함수)는 데이터에 대한 일반적인 비즈니스 관련
 
 비즈니스 로직의 대부분은 고객의 접점을 수집하고 시간별로 주문해야 합니다. 이 지원은 창 함수 형태로 [!DNL Spark] SQL에서 제공합니다. 창 함수는 표준 SQL의 일부이며 다른 많은 SQL 엔진에서 지원됩니다.
 
-창 함수는 집계를 업데이트하고 순서가 지정된 하위 집합의 각 행에 대해 단일 항목을 반환합니다. 가장 기본적인 집계 기능은 입니다 `SUM()`. `SUM()` 행을 가져와서 하나의 합계를 제공합니다. 대신 창 `SUM()` 에 적용하여 창 함수로 전환하면 각 행에 대한 누적 합계를 받게 됩니다.
+창 함수는 집계를 업데이트하고 순서가 지정된 하위 집합의 각 행에 대해 단일 항목을 반환합니다. 가장 기본적인 집계 기능은 입니다 `SUM()`. `SUM()` 행을 가져와서 하나의 합계를 제공합니다. 대신 창 `SUM()` 에 적용하여 창 함수로 전환하면 각 행에 대해 누적 합계를 받게 됩니다.
 
 SQL 도움말의 [!DNL Spark] 대부분은 창의 각 행을 업데이트하는 창 함수이며 해당 행의 상태가 추가되었습니다.
 
@@ -30,7 +30,7 @@ SQL 도움말의 [!DNL Spark] 대부분은 창의 각 행을 업데이트하는 
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| [파티션] | 열 또는 사용 가능한 필드를 기반으로 하는 행의 하위 그룹입니다. 예, `PARTITION BY endUserIds._experience.mcid.id` |
+| [파티션] | 열 또는 사용 가능한 필드를 기반으로 하는 행의 하위 그룹. 예, `PARTITION BY endUserIds._experience.mcid.id` |
 | [주문] | 하위 집합 또는 행의 순서를 지정하는 데 사용되는 열 또는 사용 가능한 필드. 예, `ORDER BY timestamp` |
 | [프레임] | 파티션의 행 하위 그룹입니다. 예, `ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW` |
 
@@ -74,7 +74,7 @@ LIMIT 10
 
 #### 결과
 
-```
+```console
                 id                |       timestamp       |      session       
 ----------------------------------+-----------------------+--------------------
  100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:55:53.0 | (0,1,true,1)
@@ -136,7 +136,7 @@ LIMIT 10
 
 #### 결과
 
-```
+```console
                 id                 |       timestamp       | trackingCode |                   first_touch                    
 -----------------------------------+-----------------------+--------------+--------------------------------------------------
  5D9D1DFBCEEBADF6-4097750903CE64DB | 2018-12-18 07:06:12.0 | em:946426    | (Paid First,em:946426,2018-12-18 07:06:12.0,1.0)
@@ -191,7 +191,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 #### 결과
 
-```
+```console
                 id                 |       timestamp       | trackingcode |                   last_touch                   
 -----------------------------------+-----------------------+--------------+-------------------------------------------------
  5D9D1DFBCEEBADF6-4097750903CE64DB | 2017-12-18 07:06:12.0 | em:946426    | (Paid Last,em:946426,2017-12-18 07:06:12.0,1.0)
@@ -247,7 +247,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 #### 결과
 
-```
+```console
                 id                 |       timestamp       | trackingCode |                   first_touch                    
 -----------------------------------+-----------------------+--------------+--------------------------------------------------
  7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:04:10.0 | em:1024841   | (Paid First,em:1024841,2019-07-15 06:04:10.0,1.0)
@@ -300,7 +300,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 #### 결과
 
-```
+```console
                 id                 |       timestamp       | trackingCode |                   first_touch                    
 -----------------------------------+-----------------------+--------------+--------------------------------------------------
  7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:04:10.0 | em:1024841   | (Paid First,em:1024841,2019-07-15 06:04:10.0,1.0)
@@ -354,7 +354,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 #### 결과
 
-```
+```console
                 id                 |       timestamp       | trackingcode |                   last_touch                   
 -----------------------------------+-----------------------+--------------+-------------------------------------------------
  7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:04:10.0 | em:1024841   | (Paid Last,em:550984,2019-07-15 06:08:30.0,1.0)
@@ -407,7 +407,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 #### 결과
 
-```
+```console
                 id                 |       timestamp       | trackingcode |                   last_touch                   
 -----------------------------------+-----------------------+--------------+-------------------------------------------------
  7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:04:10.0 | em:1024841   | (Paid Last,em:483339,2019-07-21 18:56:56.0,1.0)
@@ -461,7 +461,7 @@ ORDER BY endUserIds._experience.mcid.id, _experience.analytics.session.num, time
 
 #### 결과
 
-```
+```console
                 id                 |       timestamp       |                 name                |                    previous_page                    
 -----------------------------------+-----------------------+-------------------------------------+-----------------------------------------------------
  457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 17:15:28.0 |                                     | 
@@ -512,7 +512,7 @@ LIMIT 10
 
 #### 결과
 
-```
+```console
                 id                 |       timestamp       |                name                 |             previous_page             
 -----------------------------------+-----------------------+-------------------------------------+---------------------------------------
  457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 17:15:28.0 |                                     | (Home)
@@ -544,9 +544,9 @@ LIMIT 10
 | --- | --- |
 | `timestamp` | 모든 이벤트에 채워진 데이터 세트에 있는 타임스탬프 필드 |
 | `eventDefintion` | 이전 이벤트의 자격을 규정하는 식입니다. |
-| `timeUnit` | 출력 단위: 일, 시간, 분 및 초 기본값은 초입니다. |
+| `timeUnit` | 출력 단위:일, 시간, 분 및 초 기본값은 초입니다. |
 
-출력: 이전 일치 이벤트가 확인된 이후 시간을 나타내는 숫자를 반환하거나 일치하는 이벤트를 찾을 수 없는 경우 null로 남아 있습니다.
+출력:이전 일치 이벤트가 확인된 이후 시간을 나타내는 숫자를 반환하거나 일치하는 이벤트를 찾을 수 없으면 null로 남아 있습니다.
 
 #### 예제 쿼리
 
@@ -574,7 +574,7 @@ LIMIT 10
 
 #### 결과
 
-```
+```console
              page_name             | average_minutes_since_registration 
 -----------------------------------+------------------------------------
                                    |                                   
@@ -602,13 +602,13 @@ LIMIT 10
 | --- | --- |
 | `timestamp` | 모든 이벤트에 채워진 데이터 세트에 있는 타임스탬프 필드 |
 | `eventDefintion` | 다음 이벤트의 자격을 규정하는 식입니다. |
-| `timeUnit` | 출력 단위: 일, 시간, 분 및 초 기본값은 초입니다. |
+| `timeUnit` | 출력 단위:일, 시간, 분 및 초 기본값은 초입니다. |
 
-출력: 다음 일치 이벤트 뒤의 시간 단위를 나타내는 음수를 반환하거나 일치하는 이벤트를 찾을 수 없으면 null로 남습니다.
+출력:다음 일치 이벤트 뒤의 시간 단위를 나타내는 음수를 반환하거나 일치하는 이벤트를 찾을 수 없으면 null로 남습니다.
 
 #### 예제 쿼리
 
-```
+```sql
 SELECT 
   page_name,
   SUM (time_between_next_match) / COUNT(page_name) as average_minutes_until_order_confirmation
@@ -632,7 +632,7 @@ LIMIT 10
 
 #### 결과
 
-```
+```console
              page_name             | average_minutes_until_order_confirmation 
 -----------------------------------+------------------------------------------
  Shopping Cart|Order Confirmation  |                                      0.0
