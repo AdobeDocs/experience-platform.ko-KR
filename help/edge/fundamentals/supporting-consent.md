@@ -5,7 +5,7 @@ description: Experience Platform 웹 SDK를 사용하여 동의 환경 설정을
 seo-description: Experience Platform 웹 SDK를 사용하여 동의 환경 설정을 지원하는 방법 살펴보기
 keywords: consent;defaultConsent;default consent;setConsent;Profile Privacy Mixin;Experience Event Privacy Mixin;Privacy Mixin;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: fe53ecbf6adff4f1e09979cd170a88ac0bd3cb75
 workflow-type: tm+mt
 source-wordcount: '756'
 ht-degree: 0%
@@ -26,13 +26,13 @@ ht-degree: 0%
 
 ## 동의 구성
 
-기본적으로 사용자는 모든 목적으로 선택되어 있습니다. 사용자가 로그인할 때까지 SDK가 위의 작업을 수행하지 않도록 하려면 다음과 같이 SDK 구성 `"defaultConsent": { "general": "pending" }` 동안 전달합니다.
+기본적으로 사용자는 모든 목적으로 선택되어 있습니다. 사용자가 로그인할 때까지 SDK가 위의 작업을 수행하지 않도록 하려면 다음과 같이 SDK 구성 `"defaultConsent": "pending"` 동안 전달합니다.
 
 ```javascript
 alloy("configure", {
   "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
   "imsOrgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
-  "defaultConsent": { "general": "pending" }
+  "defaultConsent": "pending"
 });
 ```
 
@@ -42,7 +42,7 @@ alloy("configure", {
 
 ## Adobe 표준을 통해 동의 기본 사항 전달
 
-사용자가 옵션을 선택한 경우 다음 `setConsent` `general` `in` 과 같이 옵션을 설정하여 명령을 실행합니다.
+사용자가 옵션을 선택한 경우 다음과 같이 `setConsent` 옵션 `general` `in` 을 설정하여 명령을 실행합니다.
 
 ```javascript
 alloy("setConsent", {
