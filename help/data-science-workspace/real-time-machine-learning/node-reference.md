@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 실시간 기계 학습 노드 참조 안내서
 topic: Nodes reference
 translation-type: tm+mt
-source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '594'
 ht-degree: 1%
@@ -15,6 +15,7 @@ ht-degree: 1%
 # 실시간 기계 학습 노드 참조 안내서(알파)
 
 >[!IMPORTANT]
+>
 >모든 사용자는 아직 실시간 머신 러닝을 사용할 수 없습니다. 이 기능은 알파에 있으며 여전히 테스트되고 있습니다. 이 문서는 변경될 수 있습니다.
 
 노드는 그래프가 형성되는 기본 단위입니다. 각 노드는 특정 작업을 수행하고 ML 파이프라인을 나타내는 그래프를 형성하는 링크를 사용하여 서로 연결할 수 있습니다. 노드에서 수행하는 작업은 데이터 또는 스키마 변환 또는 기계 학습 유추와 같은 입력 데이터에 대한 작업을 나타냅니다. 노드는 변형되거나 유추된 값을 다음 노드로 출력합니다.
@@ -72,6 +73,7 @@ model_id = msg_model.model['model_id']
 ONNXNode는 모델 ID를 가져와 사전 교육된 ONNX 모델을 가져와서 들어오는 데이터에 대해 점수를 매기는 내부 Adobe 노드입니다.
 
 >[!TIP]
+>
 >데이터를 ONNX 모델로 전송하여 점수를 매길 것과 동일한 순서로 열을 지정합니다.
 
 ```python
