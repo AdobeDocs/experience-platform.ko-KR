@@ -4,15 +4,15 @@ seo-title: Adobe Experience Platform 웹 SDK FAQ
 description: Adobe Experience Platform 웹 SDK에 대한 FAQ
 seo-description: Adobe Experience Platform 웹 SDK에 대한 FAQ
 translation-type: tm+mt
-source-git-commit: 8cd9c52acd981c92d3959e12d91ebb65b2c3cec8
+source-git-commit: f51513e66945c41d06f12f4ac8f05ddad0d32898
 workflow-type: tm+mt
-source-wordcount: '1684'
+source-wordcount: '1679'
 ht-degree: 2%
 
 ---
 
 
-# Adobe Experience Platform 웹 SDK FAQ
+# Experience Cloud 핵심 서비스에 대한
 
 이 FAQ에는 Adobe 웹 SDK/
 
