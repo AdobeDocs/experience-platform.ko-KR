@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 모델 최적화
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
-source-wordcount: '1219'
+source-wordcount: '1221'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Model Insights Framework는 실험을 기반으로 최적의 기계 학습 모�
 
 현재 Model Insights Framework는 다음 런타임을 지원합니다.
 - [Scala](#scala)
-- [!DNL Python/Tensorflow](#pythontensorflow)
+- [Python/Tensorflow](#pythontensorflow)
 - [R](#r)
 
 레서피 샘플 코드는 아래의 [experience-platform-dsw-reference](https://github.com/adobe/experience-platform-dsw-reference) 저장소에서 찾을 수 있습니다 `recipes`. 이 저장소의 특정 파일은 이 자습서 전체에서 참조됩니다.
