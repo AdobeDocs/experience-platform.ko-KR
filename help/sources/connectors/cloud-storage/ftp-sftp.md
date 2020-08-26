@@ -4,7 +4,7 @@ solution: Experience Platform
 title: FTP 및 SFTP 커넥터
 topic: overview
 translation-type: tm+mt
-source-git-commit: 340f5d0611e9e9eb4676018ee10c8a8aa08dbb2d
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '241'
 ht-degree: 0%
@@ -15,6 +15,7 @@ ht-degree: 0%
 # (베타) FTP 및 SFTP 커넥터
 
 >[!NOTE]
+>
 >FTP 및 SFTP 커넥터가 베타에 있습니다. 베타 [레이블이 지정된 커넥터 사용에 대한 자세한 내용은 소스 개요를](../../home.md#terms-and-conditions) 참조하십시오.
 
 Adobe Experience Platform은 AWS, [!DNL Google Cloud Platform]및 [!DNL Azure]와 같은 클라우드 제공업체를 위한 기본 연결을 제공하므로 이러한 시스템에서 데이터를 가져올 수 있습니다.
