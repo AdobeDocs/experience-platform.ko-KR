@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Git을 사용하여 JupiterLab에서 공동 작업
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '248'
 ht-degree: 1%
@@ -19,6 +19,7 @@ ht-degree: 1%
 ## 전제 조건
 
 >[!NOTE]
+>
 > 사용하려는 Git 서버는 인터넷을 통해 액세스할 수 있어야 합니다.
 
 이 [!DNL Data Science Workspace JupyterLab] 환경은 호스팅 환경이므로 기업 방화벽 내에 배포되지 않으므로 사용자가 연결한 Git 서버는 공용 인터넷에서 액세스할 수 있어야 합니다. 이는 [GitHub의 공용 또는 비공개](https://github.com/) 저장소이거나 직접 호스팅하기로 결정한 다른 [!DNL Git] 서버 인스턴스일 수 있습니다.
@@ -36,6 +37,7 @@ ht-degree: 1%
 ![cd 작업 공간](../images/jupyterlab/tutorials/find-workspace.png)
 
 >[!TIP]
+>
 > 사용 가능한 git 명령 목록을 보려면 명령을 실행합니다. `git -help` Adobe Target을 사용할 수 있습니다.
 
 그런 다음 명령을 사용하여 사용할 저장소를 `git clone` 복제합니다. 프로젝트가 아니라 `https://` URL을 사용하여 복제됩니다 `ssh://`.
@@ -47,6 +49,7 @@ ht-degree: 1%
 ![복제](../images/jupyterlab/tutorials/git-collaboration.png)
 
 >[!NOTE]
+>
 > 쓰기 작업을 수행하려면(예:)`git push` 새 세션마다 다음 구성 명령을 실행해야 합니다. 또한 모든 푸시 명령은 사용자 이름과 암호를 입력하라는 메시지를 표시합니다.
 >
 >`git config --global user.email "you@example.com"`
