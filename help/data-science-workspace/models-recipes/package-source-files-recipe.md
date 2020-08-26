@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 소스 파일을 레서피로 패키지
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 41fe3e5b2a830c3182b46b3e0873b1672a1f1b03
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1097'
 ht-degree: 0%
@@ -46,12 +46,14 @@ Azure 컨테이너 레지스트리 자격 증명을 받으려면 [Adobe Experien
 
 ![](../images/models-recipes/package-source-files/configure.png)
 
-적절한 *런타임을*&#x200B;선택한 다음 **[!UICONTROL 유형에]** 대한 *분류를*&#x200B;선택합니다. Azure 컨테이너 레지스트리 자격 증명이 완료되면 생성됩니다.
+적절한 *런타임*&#x200B;을 선택한 다음 **[!UICONTROL 유형에]** 대한 *분류를*&#x200B;선택합니다. Azure 컨테이너 레지스트리 자격 증명이 완료되면 생성됩니다.
 
 >[!NOTE]
->*유형은&#x200B;*레서피가 설계된 기계 학습 문제의 클래스로, 교육 실행 평가를 위한 교육 후에 사용됩니다.
+>
+>*유형은* 레서피가 설계된 기계 학습 문제의 클래스로, 교육 실행 평가를 위한 교육 후에 사용됩니다.
 
 >[!TIP]
+>
 >- 레시피 [!DNL Python] 의 경우 Python **[!UICONTROL 런타임을]** 선택합니다.
 >- R 레서피의 경우 **[!UICONTROL R 런타임을]** 선택합니다.
 >- PySpark 레서피의 경우 **[!UICONTROL PySpark 런타임을]** 선택합니다. 객체 유형이 자동으로 채워집니다.
@@ -63,6 +65,7 @@ Azure 컨테이너 레지스트리 자격 증명을 받으려면 [Adobe Experien
 Docker 호스트, *사용자 이름*&#x200B;및 *암호*&#x200B;값을 *확인합니다*. 이러한 이미지는 아래 나와 있는 워크플로우에서 [!DNL Docker] 이미지를 만들고 푸시하는 데 사용됩니다.
 
 >[!NOTE]
+>
 >소스 URL은 아래 설명된 단계를 완료한 후 제공됩니다. 구성 파일은 [다음 단계에 있는 다음 자습서에서 설명합니다](#next-steps).
 
 ### 소스 파일 패키지
@@ -134,7 +137,7 @@ git clone https://github.com/adobe/experience-platform-dsw-reference.git
 
 ### PySpark Docker 이미지 제작 {#pyspark-docker}
 
-다음 명령을 사용하여 [!DNL GitHub] 리포지토리를 로컬 시스템에 복제하여 시작합니다.
+다음 명령을 사용하여 로컬 시스템에 [!DNL GitHub] 저장소를 복제하여 시작합니다.
 
 ```shell
 git clone https://github.com/adobe/experience-platform-dsw-reference.git
@@ -180,6 +183,7 @@ git clone https://github.com/adobe/experience-platform-dsw-reference.git
 ```
 
 >[!TIP]
+>
 >스크립트를 사용하여 Docker에 로그인하려고 할 때 권한 오류가 발생하는 경우 `login.sh` 명령을 사용해 보십시오 `bash login.sh`.
 
 로그인 스크립트를 실행할 때 Docker 호스트, 사용자 이름 및 암호를 제공해야 합니다. 빌드할 때 빌드에 대한 Docker 호스트 및 버전 태그를 제공해야 합니다.
