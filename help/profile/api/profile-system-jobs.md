@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: 프로필 시스템 작업 - 실시간 고객 프로필 API
 topic: guide
 translation-type: tm+mt
-source-git-commit: 73f2c05a0e63f376f7a2f5644133e773980d0b26
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1420'
 ht-degree: 2%
@@ -17,7 +17,8 @@ ht-degree: 2%
 Adobe Experience Platform을 사용하면 여러 소스에서 데이터를 인제스트하고 개별 고객을 위한 강력한 프로파일을 구축할 수 있습니다. 인제스트된 데이터 [!DNL Platform] 는 데이터 저장소와 [!DNL Data Lake] 함께 [!DNL Real-time Customer Profile] 저장됩니다. 더 이상 필요하지 않거나 오류가 추가된 데이터를 제거하기 위해 프로필 저장소에서 데이터 세트 또는 일괄 처리를 삭제해야 하는 경우가 있습니다. 이를 위해서는 [!DNL Real-time Customer Profile] API를 사용하여 [!DNL Profile] 시스템 작업(&quot;[!DNL delete request]&quot;)을 만들어야 하며, 이 작업은 필요한 경우 수정, 모니터링 또는 제거할 수도 있습니다.
 
 >[!NOTE]
->데이터세트 또는 배치를 폴더에서 삭제하려고 [!DNL Data Lake]하는 경우 [카탈로그 서비스 개요를](../../catalog/home.md) 참조하십시오.
+>
+>데이터세트 또는 배치를 폴더에서 삭제하려고 하는 경우 [!DNL Data Lake][카탈로그 서비스 개요를](../../catalog/home.md) 참조하십시오.
 
 ## 시작하기
 
@@ -106,6 +107,7 @@ curl -X GET \
 데이터 세트를 삭제하려면 데이터 세트 ID를 POST 요청 본문에 포함해야 합니다. 이 작업을 수행하면 지정된 데이터 세트에 대한 모든 데이터가 삭제됩니다. [!DNL Experience Platform] 레코드 및 시간 시리즈 스키마 모두를 기반으로 데이터 세트를 삭제할 수 있습니다.
 
 >[!CAUTION]
+>
 > UI를 사용하여 [!DNL Profile]활성화된 데이터 세트를 삭제하려고 하면 데이터 세트 [!DNL Experience Platform] 가 인제스트를 위해 비활성화되지만 API를 사용하여 삭제 요청이 생성될 때까지 삭제되지 않습니다. 자세한 내용은 이 문서의 [부록을](#appendix) 참조하십시오.
 
 **API 형식**
@@ -159,6 +161,7 @@ curl -X POST \
 배치를 삭제하려면 배치 ID를 POST 요청 본문에 포함해야 합니다. 레코드 스키마를 기준으로 데이터 세트에 대한 배치를 삭제할 수 없습니다. 시간 시리즈 스키마를 기반으로 데이터 세트에 대한 배치만 삭제할 수 있습니다.
 
 >[!NOTE]
+>
 > 레코드 스키마를 기준으로 데이터 세트에 대한 배치를 삭제할 수 없는 이유는 레코드 유형 데이터 세트 배치가 이전 레코드를 덮어쓰기 때문에 &quot;실행 취소&quot; 또는 삭제할 수 없기 때문입니다. 기록 스키마를 기반으로 데이터 세트에 대해 잘못된 일괄 처리가 미치는 영향을 제거하는 유일한 방법은 부정확한 레코드를 덮어쓰도록 올바른 데이터로 일괄 처리를 다시 인제스트하는 것입니다.
 
 기록 및 시간 시리즈 동작에 대한 자세한 내용은 [개요에서 XDM 데이터 비헤이비어에](../../xdm/home.md#data-behaviors) 대한 섹션을 검토하십시오 [!DNL XDM System] .
@@ -273,7 +276,7 @@ curl -X POST \
 | `status` | 삭제 요청의 상태입니다. Possible values: `"NEW"`, `"PROCESSING"`, `"COMPLETED"`, `"ERROR"`. |
 | `metrics` | 처리된 레코드 수(`"recordsProcessed"`)와 요청이 처리된 시간(초) 또는 요청이 완료되는 데 걸린 시간을 포함하는 배열입니다(`"timeTakenInSec"`). |
 
-삭제 요청 상태가 되면 데이터 액세스 API를 사용하여 삭제된 데이터에 액세스하려고 하면 데이터가 삭제되었음을 확인할 `"COMPLETED"` 수 있습니다. 데이터 액세스 API를 사용하여 데이터 세트와 배치에 액세스하는 방법에 대한 지침은 [데이터 액세스 설명서를 참조하십시오](../../data-access/home.md).
+삭제 요청 상태가 되면 데이터 액세스 API를 사용하여 삭제된 데이터에 액세스하려고 시도하여 데이터가 삭제되었음을 확인할 `"COMPLETED"` 수 있습니다. 데이터 액세스 API를 사용하여 데이터 세트와 배치에 액세스하는 방법에 대한 지침은 [데이터 액세스 설명서를 참조하십시오](../../data-access/home.md).
 
 ## 삭제 요청 제거
 
