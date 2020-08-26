@@ -4,7 +4,7 @@ solution: Adobe Experience Platform Data Science Workspace
 title: 피쳐 파이프라인 만들기
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1367'
 ht-degree: 0%
@@ -15,6 +15,7 @@ ht-degree: 0%
 # 피쳐 파이프라인 만들기
 
 >[!IMPORTANT]
+>
 > 기능 파이프라인은 현재 API를 통해서만 사용할 수 있습니다.
 
 Adobe Experience Platform을 사용하면 Sensei Machine Learning Framework Runtime(이하 &quot;Runtime&quot;이라 한다)을 통해 기능 엔지니어링을 규모에 맞게 수행하는 사용자 정의 기능 파이프라인을 만들고 만들 수 있습니다.
@@ -24,7 +25,7 @@ Adobe Experience Platform을 사용하면 Sensei Machine Learning Framework Runt
 피쳐 파이프라인이 실행될 때 다음 워크플로우가 수행됩니다.
 
 1. 레시피는 데이터 세트를 파이프라인으로 로드합니다.
-2. 기능 변환은 데이터 세트에 수행되어 Adobe Experience Platform에 다시 기록됩니다.
+2. 데이터 세트에서 기능을 변환하여 Adobe Experience Platform에 다시 기록합니다.
 3. 변형된 데이터가 교육을 위해 로드됩니다.
 4. 피쳐 파이프라인은 그라디언트 증폭 회귀(Gradient Bosting Regression) 또는 선택한 모델로 스테이지를 정의합니다.
 5. 파이프라인은 교육 데이터에 맞는 데 사용되며, 훈련된 모델이 생성됩니다.
@@ -390,6 +391,7 @@ scoring.dataSaver: MyDatasetSaver
 이제 피쳐 파이프라인을 작성했으므로 API의 피쳐 파이프라인 끝점에 대한 호출을 하려면 Docker 이미지를 만들어야 [!DNL Sensei Machine Learning] 합니다. 피쳐 파이프라인 끝점에 대한 호출을 하려면 Docker 이미지 URL이 필요합니다.
 
 >[!TIP]
+>
 >Docker URL이 없는 경우 [패키지 소스 파일을 레시피](../models-recipes/package-source-files-recipe.md) 자습서로 이동하여 Docker 호스트 URL을 만드는 단계별 연습을 참조하십시오.
 
 선택적으로 다음 Postman 컬렉션을 사용하여 기능 파이프라인 API 작업 과정을 완료할 수도 있습니다.
@@ -423,6 +425,7 @@ Docker 이미지 위치가 지정되면 POST을 수행하여 [API를 사용하�
 ### 실험 실행 점수 지정 작업 {#scoring}
 
 >[!NOTE]
+>
 > 이 단계를 완료하려면 Experiment와 연결된 하나 이상의 성공적인 교육 실행이 있어야 합니다.
 
 성공적인 교육 실행 후 점수 지정 실행 [작업을 지정해야 합니다](../api/experiments.md#experiment-training-scoring). POST을 만들고 본문 `experiments/{EXPERIMENT_ID}/runs` 에서 속성을 &quot;score&quot;로 `mode` 설정합니다. 그러면 점수 지정 실험 실행이 시작됩니다.
