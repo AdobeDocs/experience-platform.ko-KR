@@ -4,7 +4,7 @@ solution: Experience Platform
 title: PostgreSQL 커넥터
 topic: overview
 translation-type: tm+mt
-source-git-commit: 3b5e76afea5689dbd59f64f6192e6ef2a6acb7d3
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '214'
 ht-degree: 0%
@@ -15,11 +15,12 @@ ht-degree: 0%
 # (베타) [!DNL PostgreSQL] 커넥터
 
 >[!NOTE]
+>
 >커넥터의 [!DNL PostgreSQL] 베타입니다. 베타 [레이블이 지정된 커넥터 사용에 대한 자세한 내용은 소스 개요를](../../home.md#terms-and-conditions) 참조하십시오.
 
-Adobe Experience Platform을 사용하면 Platform 서비스를 사용하여 들어오는 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 외부 소스에서 데이터를 수집할 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 등 다양한 소스의 데이터를 인제스트할 수 있습니다.
+Adobe Experience Platform은 플랫폼 서비스를 사용하여 들어오는 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 외부 소스에서 데이터를 수집할 수 있도록 허용합니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 등 다양한 소스의 데이터를 인제스트할 수 있습니다.
 
-[!DNL Experience Platform] 타사 데이터베이스의 데이터 인제스트 지원을 제공합니다. [!DNL Platform] 관계형, NoSQL 또는 data warehouse과 같은 다양한 유형의 데이터베이스에 연결할 수 있습니다. 데이터베이스 공급자에 대한 지원에는 다음이 포함됩니다 [!DNL PostgreSQL].
+[!DNL Experience Platform] 타사 데이터베이스의 데이터 인제스트 지원을 제공합니다. [!DNL Platform] 관계형, NoSQL 또는 데이터 웨어하우스와 같은 다양한 유형의 데이터베이스에 연결할 수 있습니다. 데이터베이스 공급자에 대한 지원에는 다음이 포함됩니다 [!DNL PostgreSQL].
 
 ## IP 주소 허용 목록
 
