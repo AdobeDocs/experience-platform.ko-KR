@@ -5,7 +5,7 @@ solution: Experience Platform
 title: 흐름 실행 알림
 topic: overview
 translation-type: tm+mt
-source-git-commit: b5b785d8415c15e3acb9e1155811a66c51477717
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '871'
 ht-degree: 1%
@@ -44,6 +44,7 @@ Adobe I/O 이벤트를 사용하면 이벤트를 구독하고 웹 후크를 사�
 고유한 웹 후크 URL을 얻으면 [Adobe I/O 이벤트로](https://www.adobe.io/apis/experienceplatform/events.html) 이동하여 [데이터 수집 알림](../ingestion/quality/subscribe-events.md) 문서에 설명된 단계에 따라 이벤트 구독을 시작합니다.
 
 >[!IMPORTANT]
+>
 >구독 프로세스 동안 이벤트 제공자로 [!DNL Platform] 알림을 선택하고 다음 이벤트 구독을 선택하십시오.
 >
 >* **[!UICONTROL Experience Platform 소스의 흐름 실행 성공]**
@@ -60,6 +61,7 @@ Adobe I/O 이벤트를 사용하면 이벤트를 구독하고 웹 후크를 사�
 알림은 처리 작업 실행 수, 파일 크기 및 오류와 같은 정보를 반환합니다. 또한 알림은 흐름 실행과 관련된 페이로드를 JSON 형식으로 반환합니다. 응답 페이로드를 `sources_flow_run_success` 또는 `sources_flow_run_failure`로 분류할 수 있습니다.
 
 >[!IMPORTANT]
+>
 >흐름 생성 프로세스 중에 부분 처리가 활성화되면, 성공 및 실패한 입고를 모두 포함하는 흐름은 흐름 생성 프로세스 동안 오류 임계값 백분율 설정 아래에 있는 `sources_flow_run_success` 경우에만 표시됩니다. 성공적인 흐름 실행에 오류가 있는 경우 이러한 오류는 여전히 반환 페이로드의 일부로 포함됩니다.
 
 ### 성공
@@ -322,6 +324,7 @@ Adobe I/O 이벤트를 사용하면 이벤트를 구독하고 웹 후크를 사�
 | `fileInfo` | 성공적으로 인제스트된 파일과 실패한 파일의 개요를 표시하는 URL입니다. |
 
 >[!NOTE]
+>
 >오류 메시지에 대한 자세한 내용은 [부록을](#errors) 참조하십시오.
 
 ## 다음 단계
