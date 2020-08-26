@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: 엔티티 - 실시간 고객 프로필 API
 topic: guide
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1671'
 ht-degree: 1%
@@ -115,6 +115,7 @@ curl -X GET \
 ```
 
 >[!NOTE]
+>
 >관련 그래프가 50개 이상의 ID를 연결하는 경우 이 서비스는 HTTP 상태 422와 &quot;관련 ID가 너무 많습니다&quot;라는 메시지를 반환합니다. 이 오류가 표시되면 검색 범위를 좁히기 위해 쿼리 매개 변수를 더 추가하는 것이 좋습니다.
 
 ## ID 목록별 프로필 데이터 액세스
@@ -187,9 +188,9 @@ curl -X POST \
 | `identities.entityIdNS.code` | 액세스하려는 엔티티 ID의 네임스페이스입니다. |
 | `timeFilter.startTime` | 포함된 시간 범위 필터의 시작 시간입니다. 밀리 초 단위여야 합니다. 기본값이 지정되지 않은 경우 사용 가능한 시간의 시작입니다. |
 | `timeFilter.endTime` | 시간 범위 필터의 종료 시간. 제외됨. 밀리 초 단위여야 합니다. 기본값이 지정되지 않은 경우 사용 가능한 시간의 끝입니다. |
-| `limit` | 반환할 레코드 수입니다. 반환된 경험 이벤트 수에만 적용됩니다. 기본값: 1,000명. |
+| `limit` | 반환할 레코드 수입니다. 반환된 경험 이벤트 수에만 적용됩니다. 기본값:1,000명. |
 | `orderby` | 기본값이 있는 것처럼 작성된 타임스탬프별 검색된 경험 이벤트 `(+/-)timestamp` 정렬 `+timestamp`순서 |
-| `withCA` | 조회를 위해 계산된 속성을 활성화하는 기능 플래그. 기본값: false. |
+| `withCA` | 조회를 위해 계산된 속성을 활성화하는 기능 플래그. 기본값:false. |
 
 **응답**&#x200B;성공적인 응답은 요청 본문에 지정된 개체의 요청된 필드를 반환합니다.
 
@@ -360,6 +361,7 @@ curl -X GET \
 성공적인 응답은 요청 쿼리 매개 변수에 지정된 시간 시리즈 이벤트 및 관련 필드의 페이지 지정 목록을 반환합니다.
 
 >[!NOTE]
+>
 >요청이 하나의 한도를 지정했으므로`limit=1`, 아래 응답의 `count` 는 1이며 하나의 엔티티만 반환됩니다.
 
 ```json
@@ -414,6 +416,7 @@ curl -X GET \
 시계열 이벤트를 검색할 때 결과는 페이지로 지정됩니다. 이후 결과 페이지가 있는 경우 속성에 ID가 `_page.next` 포함됩니다. 또한 이 `_links.next.href` 속성은 다음 페이지를 검색할 수 있는 요청 URI를 제공합니다. 결과를 검색하려면 끝점에 대해 다른 GET 요청을 `/access/entities` 하지만 제공된 URI의 값 `/entities` 으로 바꾸어야 합니다.
 
 >[!NOTE]
+>
 >요청 경로에서 실수로 반복되지 않도록 `/entities/` 하십시오. 딱 한 번만 나타나야 하는데 `/access/entities?start=...`
 
 **API 형식**
@@ -545,14 +548,14 @@ curl -X POST \
 |---|---|
 | `schema.name` | **(필수)** 검색할 엔티티의 XDM 스키마 |
 | `relatedSchema.name` | 이 값 `schema.name` 이 `_xdm.context.experienceevent` 이면 시간 시리즈 이벤트가 관련된 프로필 엔터티의 스키마를 지정해야 합니다. |
-| `identities` | **(필수)** 연결된 시계열 이벤트를 검색할 프로필 목록입니다. 배열의 각 항목은 다음 두 가지 방법 중 하나로 설정됩니다. 1) XID를 제공하는 ID 값 및 네임스페이스로 구성된 정규화된 ID 사용 또는 2) |
-| `fields` | 지정된 필드 세트로 반환된 데이터를 격리합니다. 검색된 데이터에 포함할 스키마 필드를 필터링하려면 이 옵션을 사용합니다. 예: personalEmail,person.name,person.gender |
+| `identities` | **(필수)** 연결된 시계열 이벤트를 검색할 프로필 목록입니다. 배열의 각 항목은 다음 두 가지 방법 중 하나로 설정됩니다.1) XID를 제공하는 ID 값 및 네임스페이스로 구성된 정규화된 ID 사용 또는 2) |
+| `fields` | 지정된 필드 세트로 반환된 데이터를 격리합니다. 검색된 데이터에 포함할 스키마 필드를 필터링하려면 이 옵션을 사용합니다. 예:personalEmail,person.name,person.gender |
 | `mergePolicyId` | 반환된 데이터를 제어하는 병합 정책을 식별합니다. 서비스 호출에 지정되지 않은 경우 해당 스키마에 대한 조직의 기본값이 사용됩니다. 기본 병합 정책이 구성되지 않은 경우, 기본값은 프로필 병합 및 ID 연결 없음을 나타냅니다. |
 | `orderby` | 기본값이 있는 것처럼 작성된 타임스탬프별 검색된 경험 이벤트 `(+/-)timestamp` 정렬 `+timestamp`순서 |
 | `timeFilter.startTime` | 시계열 개체를 필터링할 시작 시간(밀리초)을 지정합니다. |
 | `timeFilter.endTime` | 시계열 개체를 필터링할 종료 시간(밀리초)을 지정합니다. |
-| `limit` | 반환할 최대 개체 수를 지정하는 숫자 값. 기본값: 1000년 |
-| `withCA` | 조회를 위해 계산된 속성을 활성화하는 기능 플래그. 기본값: false |
+| `limit` | 반환할 최대 개체 수를 지정하는 숫자 값. 기본값:1000년 |
+| `withCA` | 조회를 위해 계산된 속성을 활성화하는 기능 플래그. 기본값:false |
 
 **응답**
 
@@ -907,5 +910,5 @@ curl -X GET \
 | `orderBy` | 기본값이 있는 것처럼 작성된 타임스탬프별 검색된 경험 이벤트 `(+/-)timestamp` 정렬 `+timestamp`순서 | `orderby=-timestamp` |
 | `startTime` | 시계열 개체를 필터링할 시작 시간(밀리초)을 지정합니다. | `startTime=1539838505` |
 | `endTime` | 시계열 개체를 필터링할 종료 시간(밀리초)을 지정합니다. | `endTime=1539838510` |
-| `limit` | 반환할 최대 개체 수를 지정하는 숫자 값. 기본값: 1000년 | `limit=100` |
-| `withCA` | 조회를 위해 계산된 속성을 활성화하는 기능 플래그. 기본값: false | `withCA=true` |
+| `limit` | 반환할 최대 개체 수를 지정하는 숫자 값. 기본값:1000년 | `limit=100` |
+| `withCA` | 조회를 위해 계산된 속성을 활성화하는 기능 플래그. 기본값:false | `withCA=true` |
