@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Spark SQL 함수
 topic: spark sql functions
 translation-type: tm+mt
-source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '4991'
 ht-degree: 5%
@@ -1745,6 +1745,7 @@ SQL [!DNL Spark] 도움말은 SQL 기능을 확장하는 내장 [!DNL Spark] SQL
 ```
 
 이후:1.5.0
+
 >[!NOTE]
 >
 >어레이에 대한 rse 로직은 2.4.0부터 사용할 수 있습니다.
@@ -1763,6 +1764,7 @@ SQL [!DNL Spark] 도움말은 SQL 기능을 확장하는 내장 [!DNL Spark] SQL
 ```
 
 이후:2.4.0
+
 >[!NOTE]
 >
 >함수는 결정적이지 않습니다.
