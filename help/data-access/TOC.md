@@ -2,8 +2,9 @@
 product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform 데이터 액세스
+user-guide-description: Data Access supports Adobe Experience Platform by providing user tools focused on the discoverability and accessibility of ingested datasets within Experience Platform.
 translation-type: tm+mt
-source-git-commit: 5f3afdbb52f5c99257c35e675c782e7477618ce6
+source-git-commit: bd3c31e7d39f7f66d755356a3dbb754e97c196fb
 workflow-type: tm+mt
 source-wordcount: '31'
 ht-degree: 3%
@@ -19,4 +20,4 @@ ht-degree: 3%
    - [데이터 세트 데이터 액세스](tutorials/dataset-data.md)
    - [Python SDK](tutorials/python-sdk.md)
    - [Spark SDK](tutorials/spark-sdk.md)
-- [Platform 릴리스 노트](https://www.adobe.com/go/platform-release-notes-en)
+- [플랫폼 릴리스 정보](https://www.adobe.com/go/platform-release-notes-en)
