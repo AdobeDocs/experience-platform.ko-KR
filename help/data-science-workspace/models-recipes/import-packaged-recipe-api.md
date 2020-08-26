@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 패키지된 레서피(API) 가져오기
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '955'
 ht-degree: 2%
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 이 자습서는 사용자 인터페이스 [!DNL Sensei Machine Learning API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) 에서 [레서피](../api/engines.md)(Recipe)라고도 하는 엔진을 만드는 데 사용됩니다.
 
-시작하기 전에 Adobe Experience Platform은 API와 UI 내의 유사한 요소를 참조하는 서로 다른 용어를 [!DNL Data Science Workspace] 사용한다는 점에 유의해야 합니다. API 용어는 이 자습서 전체에서 사용되며 다음 표에서는 상관 관계 용어의 개요를 설명합니다.
+시작하기 전에, Adobe Experience Platform은 API와 UI 내의 유사한 요소를 참조하기 위해 서로 다른 용어를 [!DNL Data Science Workspace] 사용합니다. API 용어는 이 자습서 전체에서 사용되며 다음 표에서는 상관 관계 용어의 개요를 설명합니다.
 
 | UI 용어 | API 용어 |
 | ---- | ---- |
@@ -33,13 +33,13 @@ ht-degree: 2%
 
 이 자습서에서는 문서 URL 형식의 패키지된 레서피 파일이 필요합니다. Package 소스 [파일을 Recipe](./package-source-files-recipe.md) 튜토리얼에 따라 패키지된 Recipe 파일을 만들거나 직접 제공합니다.
 
-- `{DOCKER_URL}`: 지능형 서비스의 Docker 이미지에 대한 URL 주소입니다.
+- `{DOCKER_URL}`:지능형 서비스의 Docker 이미지에 대한 URL 주소입니다.
 
-이 자습서에서는 API를 성공적으로 호출하려면 Adobe Experience Platform [에 대한 인증 자습서를](../../tutorials/authentication.md) 완료해야 [!DNL Platform] 합니다. 인증 자습서를 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
+이 자습서에서는 API를 성공적으로 호출하려면 Adobe Experience Platform에 [대한 인증 자습서](../../tutorials/authentication.md) 를 완료해야 [!DNL Platform] 합니다. 인증 자습서를 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
 
-- `{ACCESS_TOKEN}`: 인증 후 제공된 특정 베어러 토큰 값.
-- `{IMS_ORG}`: 고유한 Adobe Experience Platform 통합에서 IMS 조직 자격 증명을 찾았습니다.
-- `{API_KEY}`: 고유한 Adobe Experience Platform 통합에 있는 특정 API 키 값입니다.
+- `{ACCESS_TOKEN}`:인증 후 제공된 특정 베어러 토큰 값.
+- `{IMS_ORG}`:고유한 Adobe Experience Platform 통합에 있는 IMS 조직 자격 증명을 찾을 수 있습니다.
+- `{API_KEY}`:고유한 Adobe Experience Platform 통합에 있는 특정 API 키 값입니다.
 
 ## 엔진 만들기
 
@@ -50,6 +50,7 @@ ht-degree: 2%
 Docker 컨테이너에 저장된 패키징 레서피 파일이 있는 엔진을 만들려면 패키지된 레서피 파일에 Docker URL을 제공해야 합니다.
 
 >[!CAUTION]
+>
 > 아래 요청을 사용 [!DNL Python] 또는 R하는 경우 PySpark 또는 Scala를 사용하는 경우 Python/R 예제 아래에 있는 PySpark/Scala 요청 예제를 사용하십시오.
 
 **API 형식**
