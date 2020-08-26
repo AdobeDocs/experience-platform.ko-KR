@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 실시간 머신 러닝 노트북 사용자 가이드
 topic: Training and scoring a ML model
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1637'
 ht-degree: 0%
@@ -15,6 +15,7 @@ ht-degree: 0%
 # 실시간 기계 학습 노트북 사용자 가이드(알파)
 
 >[!IMPORTANT]
+>
 >모든 사용자는 아직 실시간 머신 러닝을 사용할 수 없습니다. 이 기능은 알파에 있으며 여전히 테스트되고 있습니다. 이 문서는 변경될 수 있습니다.
 
 다음 안내서에서는 실시간 기계 학습 응용 프로그램을 만드는 데 필요한 단계를 간략하게 설명합니다. 이 안내서는 Adobe에서 제공하는 **[!UICONTROL 실시간 ML]** Python 노트북 템플릿을 사용하여 모델 교육, DSL 생성, Edge에 DSL 게시, 요청 점수 지정 등의 작업을 다룹니다. 실시간 머신 러닝 모델을 구현하면서 데이터세트의 요구 사항에 맞게 템플릿을 수정해야 합니다.
@@ -34,6 +35,7 @@ Adobe Experience Platform UI의 **[!UICONTROL 데이터 과학]** 내에서 *노
 먼저 모델에 필요한 모든 패키지를 가져옵니다. 노드 작성에 사용할 모든 패키지를 가져왔는지 확인하십시오.
 
 >[!NOTE]
+>
 >가져오기의 목록은 만들려는 모델에 따라 다를 수 있습니다. 시간이 지남에 따라 새 노드가 추가되면 이 목록이 변경됩니다. 사용 가능한 노드의 전체 목록은 [노드 참조 안내서](./node-reference.md) 를 참조하십시오.
 
 ```python
@@ -80,6 +82,7 @@ pprint(nf.discover_nodes())
 먼저 교육 데이터를 로드합니다.
 
 >[!NOTE]
+>
 >실시간 **ML** 템플릿에서 [자동차 보험 CSV 데이터](https://github.com/adobe/experience-platform-dsw-reference/tree/master/datasets/insurance) 세트를 [!DNL Github]가져올 수있습니다.
 
 ![데이터 로드](../images/rtml/load_training.png)
@@ -116,6 +119,7 @@ config_properties = {
 실시간 *[!UICONTROL ML]* 템플릿 *데이터 변환* 셀을 수정하여 데이터 세트에 사용해야 합니다. 일반적으로 열 이름 변경, 데이터 롤업 및 데이터 준비/기능 엔지니어링이 포함됩니다.
 
 >[!NOTE]
+>
 >다음 예는 가독성(readability) 사용 용도로 요약되어 있습니다 `[ ... ]`. 전체 코드 셀의 *실시간 ML* 템플릿 데이터 변형 섹션을 보고 확장하십시오.
 
 ```python
@@ -240,6 +244,7 @@ model.generate_onnx_resources()
 ```
 
 >[!NOTE]
+>
 >모델 이름을 변경하려면 `model_path` 문자열 값(`model.onnx`)을 변경합니다.
 
 ```python
@@ -247,6 +252,7 @@ model_path = "model.onnx"
 ```
 
 >[!NOTE]
+>
 >다음 셀은 편집 또는 삭제할 수 없으며 실시간 기계 학습 응용 프로그램이 작동하기 위해 필요합니다.
 
 ```python
@@ -275,12 +281,12 @@ print("Model ID : ", model_id)
 
 >[!IMPORTANT]
 >
->
 >ONNX 노드 사용은 필수입니다. ONNX 노드가 없으면 애플리케이션이 실패합니다.
 
 ### 노드 작성
 
 >[!NOTE]
+>
 > 사용되는 데이터 유형에 따라 여러 개의 노드가 있을 수 있습니다. 다음 예제에서는 *실시간 ML* 템플릿의 단일 노드만 간략하게 설명합니다. 전체 코드 셀의 *실시간 ML* 템플릿 *노드 작성* 섹션을참조하십시오.
 
 아래의 Fanda 노드는 매개 변수 `"import": "map"` 에서 메서드 이름을 문자열로 가져온 다음 매개 변수를 지도 함수로 입력하는 데 사용합니다. 아래 예제는 다음을 사용하여 수행합니다 `{'arg': {'dataLayerNull': 'notgiven', 'no': 'no', 'yes': 'yes', 'notgiven': 'notgiven'}}`. 맵을 제자리에 두고 나면, 또는 `inplace` 으로 설정할 수 `True` 있습니다 `False`. 변형 `inplace` 을 즉석 `True` 으로 적용할지 여부 `False` 를 기준으로 설정할 수 있습니다. 기본적으로 새 열 `"inplace": False` 이 만들어집니다. 새 열 이름을 제공하기 위한 지원이 이후 릴리스에서 추가되도록 설정되어 있습니다. 마지막 줄은 단일 열 이름 또는 열 목록일 `cols` 수 있습니다. 변형을 적용할 열을 지정합니다. 이 예에서 `leasing` 는 지정됩니다. 사용 가능한 노드 및 사용 방법에 대한 자세한 내용은 [노드 참조 안내서를 참조하십시오](./node-reference.md).
@@ -326,6 +332,7 @@ nodes = [json_df_node,
 그런 다음 모서리와 노드를 연결합니다. 각각의 튜플은 하나의 [!DNL Edge] 연결입니다.
 
 >[!TIP]
+>
 > 노드는 서로 선형으로 종속되므로(각 노드는 이전 노드의 출력에 따라 다름) 간단한 Python 목록 이해 기능을 사용하여 링크를 만들 수 있습니다. 노드가 여러 입력에 의존하는 경우 직접 연결을 추가하십시오.
 
 ```python
@@ -346,11 +353,13 @@ pprint(json.loads(dsl))
 ## Edge(허브)에 게시
 
 >[!NOTE]
+>
 >실시간 머신 러닝은 Adobe Experience Platform 허브에 임시로 배포되고 관리됩니다. 자세한 내용은 [실시간 기계 학습 아키텍처의 개요 섹션을 참조하십시오](./home.md#architecture).
 
 이제 DSL 그래프를 만들었으므로 그래프를 에 배포할 수 있습니다 [!DNL Edge].
 
 >[!IMPORTANT]
+>
 >게시하지 [!DNL Edge] 마십시오. 이렇게 하면 노드가 오버로드될 수 [!DNL Edge] 있습니다. 동일한 모델을 여러 번 게시하는 것은 권장되지 않습니다.
 
 ```python
@@ -365,6 +374,7 @@ print(f'Service ID: {service_id}')
 DSL을 업데이트할 필요가 없으면 [점수](#scoring)지정을 건너뛸 수 있습니다.
 
 >[!NOTE]
+>
 >다음 셀은 Edge에 게시된 기존 DSL을 업데이트하려는 경우에만 필요합니다.
 
 모델이 계속 발전할 것 같습니다. 완전히 새로운 서비스를 만드는 대신 새 모델로 기존 서비스를 업데이트할 수 있습니다. 업데이트할 노드를 정의하고, 새 ID를 지정한 다음, 새 DSL을 에 다시 업로드할 수 있습니다 [!DNL Edge].
@@ -402,6 +412,7 @@ print(f'Updated dsl: {updated_dsl}')
 에 게시하면 [!DNL Edge]클라이언트의 POST 요청에 의해 점수가 매겨집니다. 일반적으로 ML 점수가 필요한 클라이언트 애플리케이션에서 이 작업을 수행할 수 있습니다. 포스트맨에서도 가능합니다. 실시간 *[!UICONTROL ML]* 템플릿은 EdgeUtils를 사용하여 이 프로세스를 보여줍니다.
 
 >[!NOTE]
+>
 >점수 지정이 시작되기 전에 처리 시간이 좀 필요합니다.
 
 ```python
@@ -448,6 +459,7 @@ print(services)
 ## 배포된 앱 또는 서비스 ID를 [!DNL Edge]
 
 >[!CAUTION]
+>
 >이 셀은 배포된 Edge 응용 프로그램을 삭제하는 데 사용됩니다. 배포된 응용 프로그램을 삭제할 필요가 없으면 다음 셀을 사용하지 [!DNL Edge] 마십시오.
 
 ```python
