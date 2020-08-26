@@ -5,9 +5,9 @@ seo-title: Adobe Campaign
 description: Adobe Campaign은 온라인과 오프라인의 모든 채널에서 캠페인을 개인화하고 전달할 수 있는 솔루션 집합입니다.
 seo-description: Adobe Campaign은 온라인과 오프라인의 모든 채널에서 캠페인을 개인화하고 전달할 수 있는 솔루션 집합입니다.
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: e5a3539c8be8b7424f4965c7ab43d4260e39b380
 workflow-type: tm+mt
-source-wordcount: '517'
+source-wordcount: '580'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ Adobe Campaign은 온라인과 오프라인의 모든 채널에서 캠페인을 
 
 ## 연결 대상 {#connect-destination}
 
-1. [ **[!UICONTROL 연결]** ] > [대상 **[!UICONTROL 에서]** ] Adobe Campaign을 선택한 다음 **[!UICONTROL 연결 대상을 선택합니다]**.
+1. [ **[!UICONTROL 연결]** ] > [대상 **[!UICONTROL 에서]** Adobe Campaign을 선택한 다음 **[!UICONTROL 연결 대상을 선택합니다]**.
 
    ![adobe campaign에 연결](/help/rtcdp/destinations/assets/connect-adobe-campaign.png)
 
@@ -78,4 +78,11 @@ The presence of these files in your storage location is confirmation of successf
 
 ## Adobe Campaign으로 데이터 가져오기 설정 {#import-data-into-campaign}
 
-실시간 CDP를 사용자 [!DNL Amazon S3] 또는 SFTP 스토리지에 연결한 후 스토리지 위치에서 Adobe Campaign으로 데이터 가져오기를 설정해야 합니다. 이를 수행하는 방법에 대한 자세한 내용은 Adobe Campaign 도움말 [문서에서 데이터](https://docs.adobe.com/content/help/en/campaign-classic/using/automating-with-workflows/general-operation/importing-data.html) 가져오기를 참조하십시오.
+>[!IMPORTANT]
+>
+>* 이 통합을 수행하는 동안 Adobe Campaign 계약에 따라 SFTP 저장소 제한, 데이터베이스 저장소 제한 및 활성 프로필 제한에 주의하십시오.
+>* 워크플로우를 사용하여 Adobe Campaign에서 내보낸 세그먼트를 예약, 가져오기 및 매핑해야 [!DNL Campaign] 합니다. Adobe Campaign [문서에서 반복 가져오기](https://docs.adobe.com/content/help/en/campaign-classic/using/automating-with-workflows/general-operation/importing-data.html#setting-up-a-recurring-import) 설정을 참조하십시오.
+
+
+
+실시간 CDP를 사용자 [!DNL Amazon S3] 또는 SFTP 스토리지에 연결한 후 스토리지 위치에서 Adobe Campaign으로 데이터 가져오기를 설정해야 합니다. 이 작업을 수행하는 방법에 대한 자세한 내용은 Adobe Campaign 설명서의 [데이터](https://docs.adobe.com/content/help/en/campaign-classic/using/automating-with-workflows/general-operation/importing-data.html) 가져오기를 참조하십시오.
