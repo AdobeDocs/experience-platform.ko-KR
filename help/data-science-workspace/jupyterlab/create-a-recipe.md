@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Jupiter 노트북을 사용하여 레시피 만들기
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '2292'
 ht-degree: 0%
@@ -30,7 +30,6 @@ ht-degree: 0%
 Recipe [!UICONTROL Builder] 전자 필기장을 사용하면 노트북 내에서 트레이닝과 점수 지정을 실행할 수 있습니다. 이렇게 하면 교육 실행 및 점수 지정 데이터 간 `train()` 의 해당 방법과 `score()` 방법을 변경할 수 있습니다. 트레이닝 및 점수 출력 결과에 만족하면 Recipe Builder 노트북에 내장된 레서피 기능을 사용하여 전자 필기장을 [!DNL Data Science Workspace] 사용하는 레시피를 만들 수 있습니다.
 
 >[!NOTE]
->
 >
 >Recipe Builder 전자 필기장은 모든 파일 포맷을 사용하여 작업할 수 있지만 현재 레서피 만들기 기능은 지원만 합니다 [!DNL Python].
 
@@ -78,7 +77,6 @@ data_access_sdk_python
 
 >[!NOTE]
 >
->
 >추가한 라이브러리 또는 특정 버전은 위의 라이브러리와 호환되지 않을 수 있습니다.
 
 ### 구성 파일 {#configuration-files}
@@ -96,7 +94,7 @@ data_access_sdk_python
 
 ![](../images/jupyterlab/create-recipe/datasets.png)
 
-스키마 및 데이터 집합 탭 아래의 [Adobe Experience Platform에서](https://platform.adobe.com/) 동일한 **[정보](https://platform.adobe.com/schema)**를**[찾을](https://platform.adobe.com/dataset/overview)** 수있습니다.
+스키마 및 데이터 세트 탭 아래의 [Adobe Experience Platform](https://platform.adobe.com/) 에서 **[동일한 정보를](https://platform.adobe.com/schema)** 찾을 **[수](https://platform.adobe.com/dataset/overview)** 있습니다.
 
 기본적으로 다음 구성 매개 변수는 데이터에 액세스할 때 설정됩니다.
 
@@ -122,12 +120,11 @@ data_access_sdk_python
 
 >[!NOTE]
 >
->
 >레서피 빌더 노트북에서 데이터는 `platform_sdk` 데이터 로더를 통해 로드됩니다.
 
 ### [!DNL Platform] SDK {#platform-sdk}
 
-데이터 로더 사용에 대한 자세한 자습서는 `platform_sdk` Platform SDK 안내서를 참조하십시오 [](../authoring/platform-sdk.md). 이 자습서에서는 인증 빌드, 데이터 기본 읽기 및 데이터 기본 쓰기에 대한 정보를 제공합니다.
+데이터 로더 사용에 대한 자세한 자습서는 `platform_sdk` 플랫폼 SDK 가이드를 참조하십시오 [](../authoring/platform-sdk.md). 이 자습서에서는 인증 빌드, 데이터 기본 읽기 및 데이터 기본 쓰기에 대한 정보를 제공합니다.
 
 ### 외부 소스 {#external-sources}
 
@@ -153,8 +150,7 @@ df = pd.read_json(data)
 
 >[!CAUTION]
 >
->
-> `data_access_sdk_python` 는 더 이상 권장되지 않습니다. 데이터 로더 사용에 대한 [가이드는 데이터 액세스 코드를 Platform SDK로](../authoring/platform-sdk.md) 변환을 `platform_sdk` 참조하십시오.
+> `data_access_sdk_python` 는 더 이상 권장되지 않습니다. 데이터 로더 사용에 대한 [가이드는 데이터 액세스 코드를 플랫폼 SDK로](../authoring/platform-sdk.md) 변환을 `platform_sdk` 참조하십시오.
 
 사용자는 데이터 액세스 SDK를 사용하여 데이터를 로드할 수 있습니다. 다음 줄을 포함하여 페이지 맨 위에 라이브러리를 가져올 수 있습니다.
 
@@ -172,7 +168,6 @@ df = prodreader.load(data_set_id=configProperties['trainingDataSetId'],
 ```
 
 >[!NOTE]
->
 >
 >구성 [파일 섹션에](#configuration-files)[!DNL Experience Platform]설명된 대로, 다음 구성 매개 변수는
 > - `ML_FRAMEWORK_IMS_USER_CLIENT_ID`
@@ -304,7 +299,6 @@ df.dropna(0, inplace=True)
 교육 목적은 교육 데이터 세트에 있는 기능과 레이블을 사용하여 모델을 만드는 것입니다.
 
 >[!NOTE]
->
 > 
 >_기능은 기계 학습 모델에서 사용되는 입력 변수를 참조하여 레이블을_ 예측합니다 __.
 
@@ -376,7 +370,7 @@ def score(configProperties, data, model):
 
 교육 데이터 준비 단계를 수행하려면 교육 및 테스트에 사용할 데이터 세트를 분할해야 합니다. 이 `val` 데이터는 훈련 후에 모델을 평가하는 데 암시적으로 사용됩니다. 이 프로세스는 채점과는 별개입니다.
 
-이 섹션에는 데이터를 먼저 노트북에 로드한 다음 데이터 세트에 있는 관련 없는 열을 제거하여 데이터를 정리하는 기능이 표시됩니다. `split()` 여기서 데이터의 기존 원시 기능에서 추가 관련 기능을 만드는 과정인 기능 엔지니어링을 수행할 수 있습니다. 이 프로세스의 예는 아래에 설명과 함께 확인할 수 있습니다.
+이 섹션에는 데이터를 먼저 노트북에 로드한 다음 데이터 세트에 있는 관련 없는 열을 제거하여 데이터를 정리하는 기능이 표시됩니다. `split()` 여기서 기존 Raw 기능에서 추가 관련 기능을 만드는 과정인 기능 엔지니어링을 수행할 수 있습니다. 이 프로세스의 예는 아래에 설명과 함께 확인할 수 있습니다.
 
 이 `split()` 함수는 아래에 나와 있습니다. 인수에 제공된 데이터 프레임은 반환되는 변수 `train` 및 변수로 `val` 분할됩니다.
 
@@ -424,7 +418,7 @@ def evaluate(self, data=[], model={}, configProperties={}):
 
 이 `datasaver.py` 파일에는 점수 지정 시 예측을 저장하는 `save()` 함수가 들어 있습니다. 이 `save()` 함수를 사용하면 예측 및 [!DNL Experience Platform Catalog] API를 사용할 수 있으며, 데이터를 `scoringResultsDataSetId` 파일에 지정한 데이터 `scoring.conf` 에 작성할 수 있습니다.
 
-소매 판매 샘플 레서피에 사용된 예는 여기에 나와 있습니다. 라이브러리를 사용하여 Platform에 데이터를 `DataSetWriter` 기록합니다.
+소매 판매 샘플 레서피에 사용된 예는 여기에 나와 있습니다. 라이브러리를 사용하여 플랫폼에 데이터를 `DataSetWriter` 작성할 수 있습니다.
 
 ```PYTHON
 from data_access_sdk_python.writer import DataSetWriter
@@ -457,7 +451,7 @@ def save(configProperties, prediction):
 
 전자 필기장을 변경하고 레서피 교육을 수행하려는 경우 막대 맨 위에 있는 관련 단추를 클릭하여 셀에서 교육 실행을 만들 수 있습니다. 이 단추를 클릭하면 교육 스크립트의 명령 및 출력 로그가 `evaluator.py` 셀 아래에 있는 전자 필기장에 나타납니다. Conda는 먼저 모든 종속성을 설치한 다음, 교육을 시작합니다.
 
-점수를 매기려면 최소 한 번은 교육을 실행해야 합니다. [점수 **[!UICONTROL 실행]** ] 단추를 클릭하면 교육 중에 생성된 교육 모델에 점수가 지정됩니다. 점수 지정 스크립트가 아래에 나타납니다 `datasaver.py`.
+점수를 매기려면 최소 한 번은 교육을 실행해야 합니다. [점수 **[!UICONTROL 실행]** ] 단추를 클릭하면 교육 중에 생성된 교육된 모델에 대해 점수가 매겨집니다. 점수 지정 스크립트가 아래에 나타납니다 `datasaver.py`.
 
 디버깅을 위해 숨겨진 출력을 보려면 출력 셀 끝 `debug` 에 추가하고 다시 실행하십시오.
 
@@ -471,7 +465,7 @@ def save(configProperties, prediction):
 
 ![](../images/jupyterlab/create-recipe/enter_recipe_name.png)
 
-확인 **[!UICONTROL 을]** 누르면 [Adobe Experience Platform](https://platform.adobe.com/)에서 새로운 레시피로 이동할 수 있습니다. 레서피 **[!UICONTROL 보기]** 단추를 클릭하여 **[!UICONTROL ML 모델 아래의]** 레서피 **[!UICONTROL 탭으로이동할 수있습니다]**
+확인 **[!UICONTROL 을]** 누르면 [Adobe Experience Platform](https://platform.adobe.com/)의 새로운 조리법을 찾을 수 있다. 레서피 **[!UICONTROL 보기]** 버튼을 클릭하여 **[!UICONTROL ML 모델 아래의]** 레서피 **[!UICONTROL 탭으로이동할 수있습니다]**
 
 ![](../images/jupyterlab/create-recipe/recipe_creation_started.png)
 
