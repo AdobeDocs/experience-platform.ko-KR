@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 실시간 머신 러닝 개요
 topic: Overview
 translation-type: tm+mt
-source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '504'
 ht-degree: 1%
@@ -15,6 +15,7 @@ ht-degree: 1%
 # 실시간 기계 학습 개요(알파)
 
 >[!IMPORTANT]
+>
 >모든 사용자는 아직 실시간 머신 러닝을 사용할 수 없습니다. 이 기능은 알파에 있으며 여전히 테스트되고 있습니다. 이 문서는 변경될 수 있습니다.
 
 실시간 머신 러닝은 최종 사용자에게 디지털 경험 컨텐츠의 연관성을 크게 향상시킬 수 있습니다. 이 방법은 InDesign에서 실시간 검토 및 지속적인 학습을 활용함으로써 가능합니다 [!DNL Experience Edge].
@@ -58,6 +59,7 @@ Adobe Experience Platform의 XDM(Data Is Enforced and [!DNL Experience Data Mode
 실시간 머신 러닝은 현재 알파에 포함되어 있습니다. 아래 설명된 기능은 더 많은 기능과 노드가 사용 가능하므로 변경될 수 있습니다.
 
 >[!NOTE]
+>
 > 알파 제한:
 > - 현재 ONNX 기반 모델만 지원됩니다.
 > - 노드에 사용된 함수를 직렬화할 수 없습니다. 예를 들어 팬더 노드에서 사용되는 람다 함수입니다.
@@ -70,7 +72,7 @@ Adobe Experience Platform의 XDM(Data Is Enforced and [!DNL Experience Data Mode
 
 |  | 알파(5월) |
 | --- | --- |
-| **기능** | - RTML 노트북 템플릿 사용, 사용자 정의 머신 러닝 모델 작성, 테스트 및 배포 <br> - 미리 교육된 머신 러닝 모델 가져오기 지원 <br> - 실시간 머신 러닝 SDK <br> - 작성 노드의 시작 집합. <br> - Adobe Experience Platform 허브에 배포되었습니다. |
+| **기능** | - RTML 노트북 템플릿 사용, 사용자 정의 머신 러닝 모델 작성, 테스트 및 배포 <br> - 미리 교육된 머신 러닝 모델 가져오기 지원 <br> - 실시간 머신 러닝 SDK <br> - 작성 노드의 시작 집합. <br> - Adobe Experience Platform 허브에 배포 |
 | **사용 가능** | 북미 |
 | **작성 노드** | - 판다 <br> - ScitkitLearn <br> - ONNXN 코드 <br> - 분할 <br> - ModelUpload <br> - OneHotEncoder |
 | **점수 지정 실행 시간** | ONNX |
