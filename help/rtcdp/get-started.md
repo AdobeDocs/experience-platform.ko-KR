@@ -5,7 +5,7 @@ seo-title: Adobe 실시간 고객 데이터 플랫폼 시작하기
 description: Adobe 실시간 고객 데이터 플랫폼을 위한 샘플 시나리오
 seo-description: Adobe 실시간 고객 데이터 플랫폼을 위한 샘플 시나리오
 translation-type: tm+mt
-source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '2326'
 ht-degree: 0%
@@ -258,6 +258,7 @@ Adobe 실시간 CDP에서 Luma는 고객 세그먼트에 맞게 원활하게 작
 특정 시간에 시작하거나 끝나도록 세그먼트를 예약할 수도 있습니다. 세그먼트가 게시되고 예약된 날짜에 구성된 플랫폼에서 자동으로 업데이트됩니다.
 
 >[!NOTE]
+>
 >날짜 필드를 클릭하면 90일 동안 자동으로 예약됩니다(선택적).
 
 저장 **[!UICONTROL 을]** 클릭하여 다음 페이지로 이동합니다.
