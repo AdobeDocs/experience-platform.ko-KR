@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Flow Service API를 사용하여 Couchbase 커넥터 만들기
 topic: overview
 translation-type: tm+mt
-source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '516'
 ht-degree: 2%
@@ -15,6 +15,7 @@ ht-degree: 2%
 # API를 [!DNL Couchbase] 사용하여 커넥터 [!DNL Flow Service] 만들기
 
 >[!NOTE]
+>
 >커넥터의 [!DNL Couchbase] 베타입니다. 베타 [레이블이 지정된 커넥터 사용에 대한 자세한 내용은 소스 개요를](../../../../home.md#terms-and-conditions) 참조하십시오.
 
 [!DNL Flow Service] 다양한 소스에서 수집된 고객 데이터를 수집하고 중앙 집중화하여 Adobe Experience Platform으로 가져오는 데 사용됩니다. 이 서비스는 지원되는 모든 소스가 연결되어 있는 사용자 인터페이스와 RESTful API를 제공합니다.
@@ -23,7 +24,7 @@ ht-degree: 2%
 
 ## 시작하기
 
-이 가이드는 다음과 같은 Adobe Experience Platform 구성 요소에 대해 작업해야 합니다.
+이 가이드는 Adobe Experience Platform의 다음 구성 요소에 대한 작업 이해를 필요로 합니다.
 
 * [소스](../../../../home.md): [!DNL Experience Platform] 서비스를 사용하여 들어오는 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 다양한 소스에서 데이터를 수집할 수 [!DNL Platform] 있습니다.
 * [샌드박스](../../../../../sandboxes/home.md): [!DNL Experience Platform] 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되도록 단일 [!DNL Platform] 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
@@ -45,7 +46,7 @@ ht-degree: 2%
 
 API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 합니다](../../../../../tutorials/authentication.md). 인증 자습서를 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
 
-* 인증: 무기명 `{ACCESS_TOKEN}`
+* 인증:무기명 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
@@ -98,7 +99,7 @@ curl -X POST \
 | 속성 | 설명 |
 | --------- | ----------- |
 | `auth.params.connectionString` | 계정에 연결하는 데 사용되는 연결 [!DNL Couchbase] 문자열입니다. 연결 문자열 패턴은 다음과 같습니다. `Server={SERVER}; Port={PORT};AuthMech=1;CredString=[{\"user\": \"{USER}\", \"pass\":\"{PASS}\"}];`. |
-| `connectionSpec.id` | 연결 사양 ID: [!DNL Couchbase] `1fe283f6-9bec-11ea-bb37-0242ac130002`. |
+| `connectionSpec.id` | 연결 사양 ID: [!DNL Couchbase]`1fe283f6-9bec-11ea-bb37-0242ac130002`. |
 
 **응답**
 
