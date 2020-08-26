@@ -2,8 +2,9 @@
 product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform 데이터 과학 작업 공간 도움말
+user-guide-description: Adobe Experience Platform Data Science Workspace uses machine learning and artificial intelligence to unleash insights from your data. Integrated into Adobe Experience Platform, Data Science Workspace helps you make predictions using your content and data assets across Adobe applications.
 translation-type: tm+mt
-source-git-commit: 8a613237d3d835039185954e580d3c86a5e465ae
+source-git-commit: bd3c31e7d39f7f66d755356a3dbb754e97c196fb
 workflow-type: tm+mt
 source-wordcount: '215'
 ht-degree: 3%
@@ -42,7 +43,7 @@ ht-degree: 3%
 * 모델 작성 {#authoring}
    * [모델 작성 SDK](authoring/sdk.md)
    * [피쳐 파이프라인 만들기](authoring/feature-pipeline.md)
-   * [Platform SDK 안내서(Python)](authoring/platform-sdk.md)
+   * [플랫폼 SDK 안내서(Python)](authoring/platform-sdk.md)
 * 모델 및 레서피 자습서 {#models-recipes}
    * [기계 학습 모델 연습 만들기 및 게시](models-recipes/create-publish-model.md)
    * [소매 판매 스키마 및 데이터 세트 만들기](models-recipes/create-retails-sales-dataset.md)
@@ -62,4 +63,4 @@ ht-degree: 3%
 * [레서피 및 노트북 마이그레이션 가이드](recipe-notebook-migration.md)
 * [문제 해결 가이드](troubleshooting-guide.md)
 * [API 참조](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)
-* [Platform 릴리스 노트](https://www.adobe.com/go/platform-release-notes-en)
+* [플랫폼 릴리스 정보](https://www.adobe.com/go/platform-release-notes-en)
