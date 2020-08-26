@@ -5,7 +5,7 @@ title: 색상 추출
 topic: Developer guide
 description: 이미지 제공 시 색상 추출 서비스는 픽셀 색상의 막대 그래프를 계산하고 기본 색상을 기준으로 버킷으로 정렬할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 4f7b5ca50171f4948726c44dbf31025011adf35f
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '689'
 ht-degree: 2%
@@ -19,7 +19,7 @@ ht-degree: 2%
 >
 >[!DNL Content and Commerce AI] 가 베타 버전입니다. 설명서는 변경될 수 있습니다.
 
-이미지 제공 시 색상 추출 서비스는 픽셀 색상의 히스토그램을 계산한 다음 주 색상을 버킷으로 정렬할 수 있습니다. 이미지 픽셀의 색상은 색상 스펙트럼을 나타내는 40개의 우수한 색상으로 버킷팅됩니다. 그런 다음 색상 값의 히스토그램은 이러한 40가지 색상 중에서 계산됩니다. 서비스에는 다음과 같은 두 가지 변형이 있습니다.
+이미지 제공 시 색상 추출 서비스는 픽셀 색상의 막대 그래프를 계산하고 기본 색상을 기준으로 버킷으로 정렬할 수 있습니다. 이미지 픽셀의 색상은 색상 스펙트럼을 나타내는 40개의 우수한 색상으로 버킷팅됩니다. 그런 다음 색상 값의 히스토그램은 이러한 40가지 색상 중에서 계산됩니다. 서비스에는 다음과 같은 두 가지 변형이 있습니다.
 
 **색상 추출(전체 이미지)**
 
@@ -47,7 +47,8 @@ POST /services/v1/predict
 
 >[!CAUTION]
 >
->`analyzer_id` 사용할 항목 [!DNL Sensei Content Framework] 을 결정합니다. 요청하기 `analyzer_id` 전에 적절한 것이 있는지 확인하십시오. 색상 추출 서비스의 경우 `analyzer_id` ID는 다음과 같습니다. `Feature:image-color-histogram:Service-6fe52999293e483b8e4ae9a95f1b81a7`
+>`analyzer_id` 사용할 항목 [!DNL Sensei Content Framework] 을 결정합니다. 요청하기 `analyzer_id` 전에 적절한 것이 있는지 확인하십시오. 색상 추출 서비스의 경우 `analyzer_id` ID는 다음과 같습니다.
+>`Feature:image-color-histogram:Service-6fe52999293e483b8e4ae9a95f1b81a7`
 
 ```SHELL
 curl -i -X POST https://sensei.adobe.io/services/v1/predict \
