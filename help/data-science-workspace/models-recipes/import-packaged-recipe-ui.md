@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 패키지된 레서피 가져오기(UI)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1760'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # 패키지된 레서피 가져오기(UI)
 
-이 자습서에서는 제공된 소매 판매 예제를 사용하여 패키지된 레서피를 구성하고 가져오는 방법에 대한 통찰력을 제공합니다. 이 튜토리얼이 끝나면 Adobe Experience Platform에서 모델을 만들고, 훈련하고, 평가할 준비가 됩니다 [!DNL Data Science Workspace].
+이 자습서에서는 제공된 소매 판매 예제를 사용하여 패키지된 레서피를 구성하고 가져오는 방법에 대한 통찰력을 제공합니다. 이 튜토리얼이 끝나면 Adobe Experience Platform에서 모델을 만들고, 교육하고, 평가할 준비가 됩니다 [!DNL Data Science Workspace].
 
 ## 전제 조건
 
@@ -26,7 +26,7 @@ ht-degree: 0%
 
 패키지 레서피 가져오기 워크플로우는 다음 단계로 구성됩니다.
 - [레서피 구성](#configure)
-- [Import Docker based recipe - Python](#python)
+- [Docker 기반 레시피 가져오기 - Python](#python)
 - [Docker 기반 레서피 가져오기 - R](#r)
 - [Docker 기반의 레서피 가져오기 - PySpark](#pyspark)
 - [Docker 기반 레서피 가져오기 - Scala](#scala)
@@ -131,12 +131,14 @@ ht-degree: 0%
 ![워크플로우 구성](../images/models-recipes/import-package-ui/configure-workflow.png)
 
 >[!NOTE]
+>
 > Recipe [자습서로](./package-source-files-recipe.md) 패키지 소스 파일의 경우 Python 소스 파일을 사용하여 소매 판매 레서피 작성 종료 시 Docker URL이 제공되었습니다.
 
 소스 *선택* 페이지에 있으면 소스 URL [!DNL Python] 필드에 소스 파일을 사용하여 작성한 패키지된 레서피에 해당하는 Docker URL을 **[!UICONTROL 붙여넣습니다]** . 그런 다음 드래그 앤 드롭하여 제공된 구성 파일을 가져오거나 파일 시스템 **브라우저를 사용합니다**. 제공된 구성 파일은 에서 찾을 수 있습니다 `experience-platform-dsw-reference/recipes/python/retail/retail.config.json`. Runtime **[!UICONTROL 드롭다운에서 Python]**** 을 **[!UICONTROL 선택하고]** TypeBlackdown *에서 Classification을* 선택합니다. 모든 것이 채워지면 오른쪽 위 **[!UICONTROL 의]** [다음]을 클릭하여 스키마 *관리로 이동합니다*.
 
 >[!NOTE]
-> *유형은&#x200B;*분류&#x200B;**[!UICONTROL 및 회귀]**를&#x200B;**[!UICONTROL 지원합니다]**. 모델이 이러한 유형 중 하나에 해당되지 않는 경우 사용자 지정&#x200B;**[!UICONTROL 을 선택합니다]**.
+>
+> *유형은* 분류 **[!UICONTROL 및 회귀]** 를 **[!UICONTROL 지원합니다]**. 모델이 이러한 유형 중 하나에 해당되지 않는 경우 사용자 지정 **[!UICONTROL 을 선택합니다]**.
 
 ![](../images/models-recipes/import-package-ui/recipe_source_python.png)
 
@@ -163,12 +165,14 @@ ht-degree: 0%
 ![워크플로우 구성](../images/models-recipes/import-package-ui/configure-workflow.png)
 
 >[!NOTE]
+>
 > Recipe [자습서에 소스 파일을](./package-source-files-recipe.md) 패키지하면 R 소스 파일을 사용하여 소매 판매 레서피 작성 끝에 Docker URL이 제공됩니다.
 
-소스 *선택* 페이지에 있으면 소스 URL **[!UICONTROL 필드에 R 소스 파일을 사용하여 작성한 패키지된 레시피에 해당하는 Docker URL을 붙여]** 넣습니다. 그런 다음 드래그 앤 드롭하여 제공된 구성 파일을 가져오거나 파일 시스템 **브라우저를 사용합니다**. 제공된 구성 파일은 에서 찾을 수 있습니다 `experience-platform-dsw-reference/recipes/R/Retail\ -\ GradientBoosting/retail.config.json`. 런타임 **[!UICONTROL 드롭다운에서]** *R* 을 **[!UICONTROL 선택하고]** Type드롭다운 *에서 분류를* 선택합니다. 모든 것이 채워지면 오른쪽 위 **[!UICONTROL 의]** [다음]을 클릭하여 스키마 *관리로 이동합니다*.
+소스 *선택* 페이지에 있으면 소스 URL **[!UICONTROL 필드에 R 소스 파일을 사용하여 작성한 패키지된 레시피에 해당하는 Docker URL을 붙여]** 넣습니다. 그런 다음 드래그 앤 드롭하여 제공된 구성 파일을 가져오거나 파일 시스템 **브라우저를 사용합니다**. 제공된 구성 파일은 에서 찾을 수 있습니다 `experience-platform-dsw-reference/recipes/R/Retail\ -\ GradientBoosting/retail.config.json`. 런타임 **[!UICONTROL 드롭다운에서]** *R* 을 **[!UICONTROL 선택하고]** Type드롭다운 *에서 분류* 를선택합니다. 모든 것이 채워지면 오른쪽 위 **[!UICONTROL 의]** [다음]을 클릭하여 스키마 *관리로 이동합니다*.
 
 >[!NOTE]
-> *유형은&#x200B;*분류&#x200B;**[!UICONTROL 및 회귀]**를&#x200B;**[!UICONTROL 지원합니다]**. 모델이 이러한 유형 중 하나에 해당되지 않는 경우 사용자 지정&#x200B;**[!UICONTROL 을 선택합니다]**.
+>
+> *유형은* 분류 **[!UICONTROL 및 회귀]** 를 **[!UICONTROL 지원합니다]**. 모델이 이러한 유형 중 하나에 해당되지 않는 경우 사용자 지정 **[!UICONTROL 을 선택합니다]**.
 
 ![](../images/models-recipes/import-package-ui/recipe_source_R.png)
 
@@ -195,12 +199,14 @@ ht-degree: 0%
 ![워크플로우 구성](../images/models-recipes/import-package-ui/configure-workflow.png)
 
 >[!NOTE]
+>
 > Package 소스 파일을 Recipe [](./package-source-files-recipe.md) 튜토리얼로 가져올 때 PySpark 소스 파일을 사용하여 소매 판매 레서피 작성 종료 시 Docker URL이 제공되었습니다.
 
 소스 *선택* 페이지에 있으면 **[!UICONTROL 소스 URL]** 필드에 PySpark 소스 파일을 사용하여 작성한 패키지된 레시피에 해당하는 Docker URL을 붙여 넣습니다. 그런 다음 드래그 앤 드롭하여 제공된 구성 파일을 가져오거나 파일 시스템 **브라우저를 사용합니다**. 제공된 구성 파일은 에서 찾을 수 있습니다 `experience-platform-dsw-reference/recipes/pyspark/retail/pipeline.json`. Runtime **[!UICONTROL 드롭다운에서 PySpark]** 를 ** 선택합니다. PySpark 런타임을 선택하면 기본 아티팩트는 Docker에 자동으로 **[!UICONTROL 채워집니다]**. 그런 다음 **[!UICONTROL 유형]** 드롭다운에서 *분류를* 선택합니다. 모든 것이 채워지면 오른쪽 위 **[!UICONTROL 의]** [다음]을 클릭하여 스키마 *관리로 이동합니다*.
 
 >[!NOTE]
-> *유형은&#x200B;*분류&#x200B;**[!UICONTROL 및 회귀]**를&#x200B;**[!UICONTROL 지원합니다]**. 모델이 이러한 유형 중 하나에 해당되지 않는 경우 사용자 지정&#x200B;**[!UICONTROL 을 선택합니다]**.
+>
+> *유형은* 분류 **[!UICONTROL 및 회귀]** 를 **[!UICONTROL 지원합니다]**. 모델이 이러한 유형 중 하나에 해당되지 않는 경우 사용자 지정 **[!UICONTROL 을 선택합니다]**.
 
 ![](../images/models-recipes/import-package-ui/pyspark-databricks.png)
 
@@ -227,12 +233,14 @@ ht-degree: 0%
 ![워크플로우 구성](../images/models-recipes/import-package-ui/configure-workflow.png)
 
 >[!NOTE]
+>
 > 소스 파일을 [레서피](./package-source-files-recipe.md) 자습서로 패키징하는 경우 Scala(소스 파일)를 사용하여 소매 영업 레서피를 빌드하는 끝 시점에 Docker URL이[!DNL Spark]제공되었습니다.
 
 소스 *선택* 페이지에 있으면 소스 URL *필드에 Scala 소스 파일을 사용하여 작성한 패키지된 레시피에 해당하는 Docker URL을 붙여* 넣습니다. 그런 다음 드래그 앤 드롭하여 제공된 구성 파일을 가져오거나 파일 시스템 **브라우저를 사용합니다**. 제공된 구성 파일은 에서 찾을 수 있습니다 `experience-platform-dsw-reference/recipes/scala/retail/pipelineservice.json`. 런타임 **[!UICONTROL 드롭다운에서]** Spark *를* 선택합니다. 런타임을 [!DNL Spark] 선택하면 기본 아티팩트는 Docker에 자동으로 **[!UICONTROL 채워집니다]**. 그런 다음 유형 **[!UICONTROL 드롭다운에서]** 회귀 *를* 선택합니다. 모든 것이 채워지면 오른쪽 위 **[!UICONTROL 의]** [다음]을 클릭하여 스키마 *관리로 이동합니다*.
 
 >[!NOTE]
-> *유형은&#x200B;*분류&#x200B;**[!UICONTROL 및 회귀]**를&#x200B;**[!UICONTROL 지원합니다]**. 모델이 이러한 유형 중 하나에 해당되지 않는 경우 사용자 지정&#x200B;**[!UICONTROL 을 선택합니다]**.
+>
+> *유형은* 분류 **[!UICONTROL 및 회귀]** 를 **[!UICONTROL 지원합니다]**. 모델이 이러한 유형 중 하나에 해당되지 않는 경우 사용자 지정 **[!UICONTROL 을 선택합니다]**.
 
 ![](../images/models-recipes/import-package-ui/scala-databricks.png)
 
