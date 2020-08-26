@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform 부분 배치 처리 개요
 topic: overview
 translation-type: tm+mt
-source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1446'
 ht-degree: 1%
@@ -341,7 +341,6 @@ curl -X GET https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID}
 >[!NOTE]
 >
 >오류 진단을 사용할 수 없는 경우 다음 오류 메시지가 대신 표시됩니다.
->
 > 
 ```json
 > {
