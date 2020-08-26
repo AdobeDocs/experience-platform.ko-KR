@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 엔진
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1118'
 ht-degree: 3%
@@ -44,7 +44,6 @@ curl -X GET https://platform.adobe.io/data/sensei/engines/dockerRegistry \
 성공적인 응답은 Docker URL(`host`), 사용자 이름(`username`) 및 암호(`password`)를 포함하여 Docker 레지스트리의 세부 정보가 포함된 페이로드를 반환합니다.
 
 >[!NOTE]
->
 >
 >Docker 암호는 업데이트될 때마다 `{ACCESS_TOKEN}` 변경됩니다.
 
