@@ -5,9 +5,9 @@ seo-title: Amazon S3 대상
 description: Amazon 웹 서비스(AWS) S3 스토리지에 대한 실시간 아웃바운드 연결을 만들어 Adobe Experience Platform에서 탭으로 구분된 또는 CSV 데이터 파일을 사용자 자신의 S3 버킷으로 주기적으로 내보냅니다.
 seo-description: Amazon 웹 서비스(AWS) S3 스토리지에 대한 실시간 아웃바운드 연결을 만들어 Adobe Experience Platform에서 탭으로 구분된 또는 CSV 데이터 파일을 사용자 자신의 S3 버킷으로 주기적으로 내보냅니다.
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 4c45da353b1deeb66b0dedb37450158f4bdc2a7c
 workflow-type: tm+mt
-source-wordcount: '202'
+source-wordcount: '213'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ AWS) [!DNL Amazon Web Services] S3 스토리지에 대한 실시간 아웃바운
 
 대상에 대해 [!DNL Amazon S3] 대상 만들기 워크플로우에서 다음 정보를 입력합니다.
 
-* **[!DNL Amazon S3]액세스 키 및[!DNL Amazon S3]비밀 키**:에서 액세스 키 [!DNL Amazon S3]를 생성하여 Adobe에 대한 실시간 CDP 액세스 권한을에 [!DNL Amazon S3] 부여합니다.
+* **[!DNL Amazon S3]액세스 키 및[!DNL Amazon S3]비밀 키**:이 [!DNL Amazon S3]에서 `access key - secret access key` 쌍을 생성하여 계정에 대한 Adobe 실시간 CDP 액세스 권한을 [!DNL Amazon S3] 부여합니다. 자세한 내용은 [Amazon 웹 서비스 문서를 참조하십시오](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 
 >[!IMPORTANT]
 >
