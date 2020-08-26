@@ -5,9 +5,9 @@ seo-title: Amazon Kinesis 대상
 description: Amazon Kinesis 스토리지에 대한 실시간 아웃바운드 연결을 만들어 Adobe Experience Platform의 데이터를 스트리밍합니다.
 seo-description: Amazon Kinesis 스토리지에 대한 실시간 아웃바운드 연결을 만들어 Adobe Experience Platform의 데이터를 스트리밍합니다.
 translation-type: tm+mt
-source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
+source-git-commit: 4c45da353b1deeb66b0dedb37450158f4bdc2a7c
 workflow-type: tm+mt
-source-wordcount: '442'
+source-wordcount: '437'
 ht-degree: 2%
 
 ---
@@ -47,7 +47,7 @@ ht-degree: 2%
 
 ### 인증 단계에서 {#authentication-step}
 
-* **[!DNL Amazon Web Services]액세스 키 및 암호 키**:액세스 키 [!DNL Amazon Web Services]를 생성하여 Adobe에 실시간 CDP 액세스 권한을 [!DNL Amazon Kinesis] 부여합니다. 자세한 내용은 [Amazon 웹 서비스 문서를 참조하십시오](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
+* **[!DNL Amazon Web Services]액세스 키 및 암호 키**:이 [!DNL Amazon Web Services]에서 `access key - secret access key` 쌍을 생성하여 계정에 대한 Adobe 실시간 CDP 액세스 권한을 [!DNL Amazon Kinesis] 부여합니다. 자세한 내용은 [Amazon 웹 서비스 문서를 참조하십시오](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 * **지역**:데이터를 스트리밍할 [!DNL Amazon Web Services] 지역을 지정합니다.
 
 ![계정 단계의 입력 필드](/help/rtcdp/destinations/assets/aws-kinesis-account-step.png)
