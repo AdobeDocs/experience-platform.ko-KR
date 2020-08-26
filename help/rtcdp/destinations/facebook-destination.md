@@ -5,7 +5,7 @@ seo-title: Facebook 대상
 description: 해시된 이메일을 기반으로 고객 타깃팅, 개인화 및 억제를 위해 Facebook 캠페인에 대한 프로필을 활성화합니다.
 seo-description: 해시된 이메일을 기반으로 고객 타깃팅, 개인화 및 억제를 위해 Facebook 캠페인에 대한 프로필을 활성화합니다.
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '722'
 ht-degree: 2%
@@ -60,6 +60,7 @@ ht-degree: 2%
 1. 사용자 [!DNL Facebook] 계정에는 사용할 광고 계정에 대해 **[!DNL Manage campaigns]** 사용 권한이 활성화되어 있어야 합니다.
 2. Add the **Adobe Experience Cloud** business account as an advertising partner in your [!DNL Facebook Ad Account].  `business ID=206617933627973`. 자세한 내용은 [Facebook 설명서의 비즈니스](https://www.facebook.com/business/help/1717412048538897) 관리자에 파트너 추가를 참조하십시오.
    >[!IMPORTANT]
+   >
    > When configuring the permissions for Adobe Experience Cloud, you must enable the **Manage campaigns** permission. 이 단계는 [!DNL Adobe Real-time CDP] 통합에 필요합니다.
 3. 서비스 약관을 읽고 [!DNL Facebook Custom Audiences] 서명합니다. 이렇게 하려면 `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]`로 이동하십시오. 여기서 `accountID`는 [!DNL Facebook Ad Account ID]입니다.
 
@@ -93,7 +94,7 @@ Experience Platform에서 이메일 주소 인제스트에 대한 자세한 내�
 
 ## 세그먼트 활성화 [!DNL Facebook] {#activate-segments}
 
-세그먼트를 활성화할 방법에 대한 지침은 대상 [!DNL Facebook]에 데이터 [활성화를 참조하십시오](/help/rtcdp/destinations/activate-destinations.md).
+세그먼트를 활성화할 방법에 대한 지침 [!DNL Facebook]은 대상에 [데이터 활성화를 참조하십시오](/help/rtcdp/destinations/activate-destinations.md).
 
 ## 내보낸 데이터 {#exported-data}
 
