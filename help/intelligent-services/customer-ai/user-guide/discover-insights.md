@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 고객 AI를 통한 인사이트 검색
 topic: Discovering insights
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1059'
 ht-degree: 0%
@@ -79,9 +79,9 @@ UI [!DNL Adobe Experience Platform] 에서 왼쪽 탐색 **[!UICONTROL 영역에
 
 추가 **[!UICONTROL 작업]** 단추는 **[!UICONTROL 편집]**&#x200B;옆에 있는 오른쪽 위 탐색에 있습니다. 추가 작업 **[!UICONTROL 을]** 클릭하면 다음 작업 중 하나를 선택할 수 있는 드롭다운이 열립니다.
 
-- **[!UICONTROL 삭제]**: 인스턴스를 삭제합니다.
-- **[!UICONTROL 액세스 점수]**: 액세스 점수 *를* 클릭하면 고객 AI [자습서의](./download-scores.md) 다운로드 점수에 대한 링크를 제공하는 대화 상자가 열리고 API 호출을 수행하는 데 필요한 데이터 세트 ID도 대화 상자에 제공됩니다.
-- **[!UICONTROL 실행 내역 보기]**: 서비스 인스턴스와 연관된 모든 점수 실행 목록이 포함된 대화 상자가 나타납니다.
+- **[!UICONTROL 삭제]**:인스턴스를 삭제합니다.
+- **[!UICONTROL 액세스 점수]**:액세스 점수 *를* 클릭하면 고객 AI [자습서의](./download-scores.md) 다운로드 점수에 대한 링크를 제공하는 대화 상자가 열리고 API 호출을 수행하는 데 필요한 데이터 세트 ID도 대화 상자에 제공됩니다.
+- **[!UICONTROL 실행 내역 보기]**:서비스 인스턴스와 연관된 모든 점수 실행 목록이 포함된 대화 상자가 나타납니다.
 
 ![추가 작업](../images/insights/more-actions.png)
 
@@ -112,6 +112,7 @@ UI [!DNL Adobe Experience Platform] 에서 왼쪽 탐색 **[!UICONTROL 영역에
 [ **[!UICONTROL 낮음], [중간] 및 [높음] 성향]** 버킷의 [세그먼트 만들기] 단추를 클릭하면 세그먼트 빌더로 리디렉션됩니다.
 
 >[!NOTE]
+>
 >세그먼트 **[!UICONTROL 만들기]** 단추는 데이터 세트에 대해 실시간 고객 프로필을 활성화한 경우에만 사용할 수 있습니다. 실시간 고객 프로필을 활성화하는 방법에 대한 자세한 내용은 [실시간 고객 프로필 개요를 참조하십시오](../../../rtcdp/overview.md).
 
 ![세그먼트 만들기를 클릭합니다.](../images/insights/influential-factors-create-segment.png)
@@ -124,7 +125,7 @@ UI [!DNL Adobe Experience Platform] 에서 왼쪽 탐색 **[!UICONTROL 영역에
 
 ![세그먼트 채우기](../images/insights/segment-saving.png)
 
-Platform UI에서 새 세그먼트를 보려면 왼쪽 탐색 **[!UICONTROL 에서]** 세그먼트를 클릭합니다. 검색 *페이지가* 나타나고 사용 가능한 모든 세그먼트가 표시됩니다.
+플랫폼 UI에서 새 세그먼트를 보려면 왼쪽 탐색 **[!UICONTROL 에서]** 세그먼트를 클릭합니다. 검색 *페이지가* 나타나고 사용 가능한 모든 세그먼트가 표시됩니다.
 
 ![모든 세그먼트](../images/insights/Segments-dashboard.png)
 
