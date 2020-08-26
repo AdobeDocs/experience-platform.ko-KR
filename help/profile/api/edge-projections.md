@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: 에지 예상 - 실시간 고객 프로필 API
 topic: guide
 translation-type: tm+mt
-source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1900'
 ht-degree: 2%
@@ -21,6 +21,7 @@ ht-degree: 2%
 이 안내서에서 사용되는 API 끝점은 이 끝점의 일부입니다 [!DNL Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). 계속하기 전에 [시작하기 가이드](getting-started.md) 에서 관련 문서 링크, 이 문서에서 샘플 API 호출 읽기 안내서, 모든 API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요 정보를 검토하십시오 [!DNL Experience Platform] .
 
 >[!NOTE]
+>
 >페이로드(POST, PUT, PATCH)이 포함된 요청에는 `Content-Type` 헤더가 필요합니다. 이 문서 `Content-Type` 에 둘 이상이 사용됩니다. 각 요청에 대해 정확성을 유지하려면 샘플 호출의 헤더에 특히 주의하십시오 `Content-Type` .
 
 ## 투영 대상
@@ -53,6 +54,7 @@ curl -X GET \
 응답에는 배열 내에 개별 개체로 표시된 각 대상에 대한 세부 정보가 포함된 `projectionDestinations` 배열이 포함됩니다. 투시가 구성되지 않은 경우 배열은 `projectionDestinations` 비어 있게 반환됩니다.
 
 >[!NOTE]
+>
 >이 응답은 공간에 대해 단축되었으며 두 개의 목적지만 표시합니다.
 
 ```json
@@ -122,6 +124,7 @@ POST /config/destinations
 다음 요청은 새 에지 대상을 만듭니다.
 
 >[!NOTE]
+>
 >대상을 만들기 위한 POST 요청에는 아래와 같이 특정 `Content-Type` 헤더가 필요합니다. 잘못된 헤더를 사용하면 HTTP 상태 415(지원되지 않는 미디어 유형) 오류가 발생합니다. `Content-Type`
 
 ```shell
@@ -227,6 +230,7 @@ curl -X GET \
 종단점에 PUT 요청을 만들고 요청 경로에서 업데이트할 대상의 ID를 포함하여 기존 대상을 업데이트할 수 있습니다. `/config/destinations` 이 작업은 기본적으로 대상을 _다시 작성하고_ 있으므로 새 대상을 만들 때 제공된 것처럼 요청의 본문에 동일한 속성을 제공해야 합니다.
 
 >[!CAUTION]
+>
 >업데이트 요청에 대한 API 응답은 즉시 적용되지만 예측 변경 사항은 비동기적으로 적용됩니다. 즉, 대상의 정의에 대한 업데이트를 수행한 시점과 대상을 적용한 시점은 서로 다릅니다.
 
 **API 형식**
@@ -244,6 +248,7 @@ PUT /config/destinations/{DESTINATION_ID}
 다음 요청은 기존 대상을 업데이트하여 두 번째 위치(`dataCenters`)를 포함하도록 합니다.
 
 >[!IMPORTANT]
+>
 >PUT 요청에는 아래와 같이 특정 `Content-Type` 헤더가 필요합니다. 잘못된 헤더를 사용하면 HTTP 상태 415(지원되지 않는 미디어 유형) 오류가 발생합니다. `Content-Type`
 
 ```shell
@@ -295,6 +300,7 @@ curl -X PUT \
 조직에서 더 이상 프로젝션 대상이 필요하지 않은 경우 종단점에 DELETE 요청을 수행하고 요청 경로에서 삭제하려는 대상의 ID를 포함하여 삭제할 수 있습니다. `/config/destinations`
 
 >[!CAUTION]
+>
 >삭제 요청에 대한 API 응답은 즉시 발생하지만 가장자리에 있는 데이터의 실제 변경 사항은 비동기적으로 발생합니다. 즉, 프로파일 데이터가 투영 대상에 지정된 모든 모서리 `dataCenters` 에서 제거되지만 완료하는 데 시간이 걸립니다.
 
 **API 형식**
@@ -345,6 +351,7 @@ GET /config/projections?schemaName={SCHEMA_NAME}&name={PROJECTION_NAME}
 | `{PROJECTION_NAME}` | 액세스하려는 프로젝션 구성의 이름입니다. |
 
 >[!NOTE]
+>
 >`schemaName` 는 projection 구성 이름이 스키마 클래스 컨텍스트에서만 고유하므로 매개 변수를 사용할 때 `name` 필요합니다.
 
 **요청**
@@ -429,6 +436,7 @@ POST /config/projections?schemaName={SCHEMA_NAME}
 **요청**
 
 >[!NOTE]
+>
 >구성을 만들기 위한 POST 요청에는 아래와 같이 특정 `Content-Type` 헤더가 필요합니다. 잘못된 헤더를 사용하면 HTTP 상태 415(지원되지 않는 미디어 유형) 오류가 발생합니다. `Content-Type`
 
 ```shell
@@ -506,6 +514,7 @@ curl -X POST \
    * 위의 예는 다음과 같습니다 `addresses.type,addresses.city.country`.
 
 >[!NOTE]
+>
 >하위 필드를 참조하기 위해 점 표기법과 괄호 표기법 모두 지원됩니다. 그러나 보다 간결하고 필드 계층 구조를 더 잘 보여 주기 때문에 도트 표기법을 사용하는 것이 좋습니다.
 
 * 선택기의 각 필드는 응답의 루트를 기준으로 지정됩니다.
@@ -610,6 +619,7 @@ curl -X POST \
 ```
 
 >[!NOTE]
+>
 >중첩 필드가 반환될 때마다 프로젝트에는 바깥쪽 상위 개체가 포함됩니다. 상위 필드는 명시적으로 선택하지 않으면 다른 하위 필드를 포함하지 않습니다.
 
 **주소(type,city)**
