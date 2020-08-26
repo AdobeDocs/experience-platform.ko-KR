@@ -5,7 +5,7 @@ title: 색상 추출
 topic: Developer guide
 description: 키워드 추출 서비스는 텍스트 문서에서 문서의 제목을 가장 잘 설명하는 키워드 또는 키구문을 자동으로 추출합니다. 키워드를 추출하기 위해 NER(명명된 엔티티 인식) 및 비감독 키워드 추출 알고리즘의 조합이 사용됩니다.
 translation-type: tm+mt
-source-git-commit: 4f7b5ca50171f4948726c44dbf31025011adf35f
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '742'
 ht-degree: 3%
@@ -84,7 +84,8 @@ POST /services/v1/predict
 
 >[!CAUTION]
 >
->`analyzer_id` 사용할 항목 [!DNL Sensei Content Framework] 을 결정합니다. 요청하기 `analyzer_id` 전에 적절한 것이 있는지 확인하십시오. 키워드 추출 서비스의 경우 `analyzer_id` ID는 다음과 같습니다. `Feature:cintel-ner:Service-1a35aefb0f0f4dc0a3b5262370ebc709`
+>`analyzer_id` 사용할 항목 [!DNL Sensei Content Framework] 을 결정합니다. 요청하기 `analyzer_id` 전에 적절한 것이 있는지 확인하십시오. 키워드 추출 서비스의 경우 `analyzer_id` ID는 다음과 같습니다.
+>`Feature:cintel-ner:Service-1a35aefb0f0f4dc0a3b5262370ebc709`
 
 ```SHELL
 curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
@@ -129,7 +130,7 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
 | `top-N` | 반환할 결과 수(음수일 수 없음) 값을 사용하여 모든 결과 `0` 를 반환합니다. 이와 함께 사용할 경우 반환되는 결과 `threshold`의 수가 두 제한 중 더 적습니다. 이 속성의 기본값은 입니다 `0`. | 아니요 |
 | `custom` | 전달할 사용자 지정 매개 변수입니다. 이 속성을 사용하려면 유효한 JSON 개체가 있어야 합니다. 사용자 지정 매개 변수에 대한 자세한 내용은 [부록을](#appendix) 참조하십시오. | 아니요 |
 | `content-id` | 응답에서 반환된 데이터 요소의 고유 ID. 이 값이 전달되지 않으면 자동 생성된 ID가 할당됩니다. | 아니요 |
-| `content` | 키워드 추출 서비스에서 사용되는 컨텐츠. 컨텐츠는 원시 텍스트(&#39;인라인&#39; 컨텐츠 유형)일 수 있습니다. <br> 컨텐츠가 S3(&#39;s3-bucket&#39; content-type)에 있는 파일인 경우 서명된 url을 전달합니다. 컨텐츠가 요청 본문에 포함된 경우 데이터 요소 목록에는 하나의 객체만 있어야 합니다. 두 개 이상의 개체가 전달되면 첫 번째 개체만 처리됩니다. | 예 |
+| `content` | 키워드 추출 서비스에서 사용하는 컨텐츠입니다. 컨텐츠는 원시 텍스트(&#39;인라인&#39; 컨텐츠 유형)일 수 있습니다. <br> 컨텐츠가 S3(&#39;s3-bucket&#39; content-type)에 있는 파일인 경우 서명된 url을 전달합니다. 컨텐츠가 요청 본문에 포함된 경우 데이터 요소 목록에는 하나의 객체만 있어야 합니다. 두 개 이상의 개체가 전달되면 첫 번째 개체만 처리됩니다. | 예 |
 
 **응답**
 
