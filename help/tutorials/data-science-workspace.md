@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 데이터 과학 작업 공간 자습서
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1171'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # [!DNL Data Science Workspace] 자습서
 
-Adobe Experience Platform [!DNL Data Science Workspace] 는 머신 러닝과 인공 지능을 사용하여 데이터를 통해 인사이트를 도출합니다. Adobe Experience Platform에 통합되어 Adobe 솔루션 간에 컨텐츠 및 데이터 자산을 사용하여 예측할 수 [!DNL Data Science Workspace] 있습니다. 모든 기술 수준에 속한 데이터 과학자는 복잡한 AI 기술을 통해 얻을 수 있는 모든 이점을 비롯하여 머신 러닝 레서치의 신속한 개발, 트레이닝 및 조정을 지원하는 세련되고 사용이 간편한 툴을 갖추고 있습니다.
+Adobe Experience Platform [!DNL Data Science Workspace] 는 머신 러닝과 인공 지능을 사용하여 데이터를 통해 인사이트를 도출합니다. Adobe Experience Platform에 통합되어 Adobe 솔루션에서 콘텐츠와 데이터 자산을 사용하여 예측할 수 [!DNL Data Science Workspace] 있습니다. 모든 기술 수준에 속한 데이터 과학자는 복잡한 AI 기술을 통해 얻을 수 있는 모든 이점을 비롯하여 머신 러닝 레서치의 신속한 개발, 트레이닝 및 조정을 지원하는 세련되고 사용이 간편한 툴을 갖추고 있습니다.
 
 자세한 내용은 [데이터 과학 작업 공간 개요를 읽어 보십시오](../data-science-workspace/home.md).
 
@@ -34,7 +34,7 @@ Sensei Machine Learning API를 사용하여 CRUD 작업을 수행하는 데 필�
 
 ## How to use [!DNL JupyterLab] Notebooks
 
-[!DNL JupyterLab] 는 Adobe Experience Platform에 긴밀하게 통합되어 있고 웹 기반의 유저 인터페이스 [!DNL Project Jupyter] 로 구성되어 있습니다. 데이터 과학자들이 데이터, 코드 및 데이터를 사용하여 작업할 수 있는 인터랙티브한 개발 환경 [!DNL Jupyter notebooks]을 제공합니다. 이 문서에서는 일반적인 작업 [!DNL JupyterLab] 을 수행하기 위한 지침뿐만 아니라 기능과 기능에 대한 개요를 제공합니다.
+[!DNL JupyterLab] 는 Adobe Experience Platform과 긴밀하게 통합되어 [!DNL Project Jupyter] 있고 웹 기반의 유저 인터페이스입니다. 데이터 과학자들이 데이터, 코드 및 데이터를 사용하여 작업할 수 있는 인터랙티브한 개발 환경 [!DNL Jupyter notebooks]을 제공합니다. 이 문서에서는 일반적인 작업 [!DNL JupyterLab] 을 수행하기 위한 지침뿐만 아니라 기능과 기능에 대한 개요를 제공합니다.
 
 **이 가이드는 다음과 같은 도움을 줍니다.**
 - 인터페이스에 액세스하고 이해할 수 [!DNL JupyterLab] 있습니다.
@@ -61,7 +61,6 @@ Sensei Machine Learning API를 사용하여 CRUD 작업을 수행하는 데 필�
 
 >[!NOTE]
 >
->
 >이 자습서에서는 [!DNL Docker] 소스 파일 URL을 필요로 합니다. 소스 파일 URL이 없는 경우 [패키지 소스 파일을 레서피 자습서로](../data-science-workspace/models-recipes/package-source-files-recipe.md) 방문합니다 [!DNL Docker] .
 
 가져오기 레서피 자습서에서는 패키지된 레서피를 구성하고 가져오는 방법에 대한 통찰력을 제공합니다. 이 튜토리얼이 끝나면 Adobe Experience Platform에서 모델을 생성, 교육 및 평가할 수 있습니다 [!DNL Data Science Workspace].
@@ -85,7 +84,7 @@ Adobe Experience Platform [!DNL Data Science Workspace]에서 기계 학습 모�
 
 ## 모델 인사이트 프레임워크를 사용하여 모델 최적화
 
-Model Insights Framework는 실험을 기반으로 최적의 기계 학습 모델을 위한 신속하고 정확한 선택 [!DNL Data Science Workspace] 을 할 수 있는 Adobe Experience Platform의 도구를 데이터 과학자에게 제공합니다. 이 프레임워크는 머신 러닝 워크플로우의 속도와 효율성을 향상시키고 데이터 과학자의 사용 용이성을 향상시킵니다. 이 작업은 모델 조정을 지원하기 위해 각 기계 학습 알고리즘 유형에 대한 기본 템플릿을 제공하여 수행됩니다. 최종 결과를 통해 데이터 과학자와 시민 데이터 과학자는 최종 고객을 위한 보다 효과적인 모델 최적화 결정을 내릴 수 있습니다.
+Model Insights Framework는 데이터 과학자에게 실험을 기반으로 최적의 기계 학습 모델을 위한 신속하고 정확한 선택 [!DNL Data Science Workspace] 을 해주는 Adobe Experience Platform의 도구를 제공합니다. 이 프레임워크는 머신 러닝 워크플로우의 속도와 효율성을 향상시키고 데이터 과학자의 사용 용이성을 향상시킵니다. 이 작업은 모델 조정을 지원하기 위해 각 기계 학습 알고리즘 유형에 대한 기본 템플릿을 제공하여 수행됩니다. 최종 결과를 통해 데이터 과학자와 시민 데이터 과학자는 최종 고객을 위한 보다 효과적인 모델 최적화 결정을 내릴 수 있습니다.
 
 **이 튜토리얼을 통해 다음과 같은 작업을 수행할 수 있습니다.**
 - 레서피 코드를 구성합니다.
@@ -96,7 +95,7 @@ Model Insights Framework는 실험을 기반으로 최적의 기계 학습 모�
 
 ## 모델 점수 지정
 
-입력 데이터를 기존 트레이닝된 모델에 제공함으로써 Adobe Experience Platform에서 점수를 획득할 [!DNL Data Science Workspace] 수 있습니다. 그러면 점수 지정 결과가 저장되고 지정된 출력 데이터 세트에 새로운 일괄 처리로 표시됩니다.
+Adobe Experience Platform에서 채점하는 것은 입력 데이터를 기존 트레이닝된 모델에 제공함으로써 달성될 [!DNL Data Science Workspace] 수 있습니다. 그러면 점수 결과가 저장되고 지정된 출력 데이터 세트에 새로운 일괄 처리로 표시됩니다.
 
 **이 튜토리얼을 통해 다음과 같은 작업을 수행할 수 있습니다.**
 - 새로운 점수 실행을 만듭니다.
@@ -116,7 +115,7 @@ Adobe Experience Platform [!DNL Data Science Workspace] 를 사용하면 모델�
 
 ## 모델의 교육 및 점수 예약
 
-Adobe Experience Platform [!DNL Data Science Workspace] 를 사용하면 기계 학습 서비스에서 예약된 점수 지정 및 교육 실행을 설정할 수 있습니다. 트레이닝 및 점수 지정 프로세스를 자동화하면 데이터 내의 패턴을 유지하여 시간의 경과에 따라 서비스의 효율성을 유지 관리하고 개선하는 데 도움이 됩니다.
+Adobe Experience Platform [!DNL Data Science Workspace] 는 기계 학습 서비스에서 예약된 점수 지정 및 교육 실행을 설정할 수 있도록 해줍니다. 트레이닝 및 점수 지정 프로세스를 자동화하면 데이터 내의 패턴을 유지하여 시간의 경과에 따라 서비스의 효율성을 유지 관리하고 개선하는 데 도움이 됩니다.
 
 **이 튜토리얼을 통해 다음과 같은 작업을 수행할 수 있습니다.**
 - 예약된 점수 구성
@@ -127,9 +126,10 @@ Adobe Experience Platform [!DNL Data Science Workspace] 를 사용하면 기계 
 ## 피쳐 파이프라인 만들기
 
 >[!NOTE]
+>
 >현재 기능 파이프라인은 API를 통해서만 사용할 수 있습니다.
 
-Adobe Experience Platform을 사용하면 사용자 정의 피쳐 파이프라인을 구축하여 사용자 정의 피쳐 파이프라인을 만들어 확장할 수 있습니다 [!DNL Sensei Machine Learning Framework Runtime].
+Adobe Experience Platform을 사용하면 사용자 정의 기능 파이프라인을 구축하여 사용자 요구에 맞게 확장할 수 있습니다 [!DNL Sensei Machine Learning Framework Runtime].
 
 **이 가이드는 다음과 같은 도움을 줍니다.**
 - 기능 파이프라인 클래스 구현
