@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Attribution AI에서 점수 액세스
 topic: Accessing scores
 translation-type: tm+mt
-source-git-commit: 24449d0138ab449dbc01aecbbe9f70e05c781c89
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1028'
 ht-degree: 2%
@@ -58,9 +58,10 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?&dataSet=
 
 **응답**
 
-성공적인 응답은 배치 ID 개체가 포함된 페이로드를 반환합니다. 이 예에서 반환되는 개체의 키 값은 배치 ID입니다 `01E5QSWCAASFQ054FNBKYV6TIQ`. 다음 API 호출에 사용할 배치 ID를 복사합니다.
+성공적인 응답은 배치 ID 개체를 포함하는 페이로드를 반환합니다. 이 예에서 반환되는 개체의 키 값은 배치 ID입니다 `01E5QSWCAASFQ054FNBKYV6TIQ`. 다음 API 호출에 사용할 배치 ID를 복사합니다.
 
 >[!NOTE]
+>
 > 다음 응답에는 가독성을 위해 `tags` 개체가 변형되어 있었습니다.
 
 ```json
@@ -235,7 +236,7 @@ GET files/{DATASETFILE_ID}?path={FILE_NAME}
 
 | 매개 변수 | 설명 |
 | --------- | ----------- |
-| `{DATASETFILE_ID}` | dataSetFile ID가 `href` 이전 단계의 [값으로](#retrieve-the-next-api-call-with-your-batch-id)반환됩니다. |
+| `{DATASETFILE_ID}` | dataSetFile ID는 `href` 이전 단계의 [값으로](#retrieve-the-next-api-call-with-your-batch-id)반환됩니다. |
 | `{FILE_NAME}` | 파일의 이름입니다. |
 
 **요청**
