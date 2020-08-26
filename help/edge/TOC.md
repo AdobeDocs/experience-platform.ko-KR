@@ -3,10 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform 웹 SDK 도움말
 translation-type: tm+mt
-source-git-commit: 1fc0fbd2c278c5bec4bce6186ea870c9c1203c79
+source-git-commit: f51513e66945c41d06f12f4ac8f05ddad0d32898
 workflow-type: tm+mt
 source-wordcount: '104'
-ht-degree: 15%
+ht-degree: 18%
 
 ---
 
@@ -47,4 +47,4 @@ ht-degree: 15%
    * [라이브러리 정보 검색](reference/retrieving-library-information.md)
 * [릴리스 노트](release-notes.md)
 * [플랫폼 릴리스 정보](https://www.adobe.com/go/platform-release-notes-en)
-* [웹 SDK FAQ](getting-started/web-sdk-faq.md)
+* [FAQ](getting-started/web-sdk-faq.md)
