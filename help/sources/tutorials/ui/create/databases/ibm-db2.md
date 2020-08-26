@@ -4,7 +4,7 @@ solution: Experience Platform
 title: UI에서 IBM DB2 소스 커넥터 만들기
 topic: overview
 translation-type: tm+mt
-source-git-commit: ec2d0a33e0ae92a3153b7bdcad29734e487a0439
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '515'
 ht-degree: 0%
@@ -16,6 +16,7 @@ ht-degree: 0%
 # UI에서 IBM DB2 소스 커넥터 만들기
 
 >[!NOTE]
+>
 > IBM DB2 커넥터가 베타에 있습니다. 베타 [레이블이 지정된 커넥터 사용에 대한 자세한 내용은 소스 개요를](../../../../home.md#terms-and-conditions) 참조하십시오.
 
 Adobe Experience Platform의 소스 커넥터는 예약된 기준으로 외부 소스 데이터를 인제스트하는 기능을 제공합니다. 이 자습서에서는 [!DNL Platform] 사용자 인터페이스를 사용하여 IBM DB2(이하 &quot;DB2&quot;) 소스 커넥터를 만드는 단계를 제공합니다.
