@@ -2,8 +2,9 @@
 product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform 의사 결정 서비스
+user-guide-description: Decisioning Service provides the capability to create personalized, optimized, and orchestrated experiences in applications running on Adobe Experience Platform. Using Decisioning Service, you can determine the best option from a set of available choices. These options, also called alternatives, can be offers, product recommendations, content components for a web experience, conversation scripts, and actions to take.
 translation-type: tm+mt
-source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
+source-git-commit: bd3c31e7d39f7f66d755356a3dbb754e97c196fb
 workflow-type: tm+mt
 source-wordcount: '53'
 ht-degree: 5%
@@ -20,4 +21,4 @@ ht-degree: 5%
    - [API를 사용하여 의사 결정 서비스 런타임 사용](tutorials/runtime.md)
    - [API를 사용하여 의사 결정 서비스 엔티티 관리](tutorials/entities.md)
 - [API 참조](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/decisioning-ode.yaml)
-- [Platform 릴리스 노트](https://www.adobe.com/go/platform-release-notes-en)
+- [플랫폼 릴리스 정보](https://www.adobe.com/go/platform-release-notes-en)
