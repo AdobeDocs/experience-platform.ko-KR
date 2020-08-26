@@ -4,7 +4,7 @@ solution: Experience Platform
 title: UI에서 Azure 이벤트 허브 원본 커넥터 만들기
 topic: overview
 translation-type: tm+mt
-source-git-commit: dd036cf4df5d772206d2b73292c60f2d866ba0de
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '472'
 ht-degree: 1%
@@ -15,6 +15,7 @@ ht-degree: 1%
 # UI에서 [!DNL Azure Event Hubs] 소스 커넥터 만들기
 
 >[!NOTE]
+>
 > 커넥터의 [!DNL Azure Event Hubs] 베타입니다. 베타 [레이블이 지정된 커넥터 사용에 대한 자세한 내용은 소스 개요를](../../../../home.md#terms-and-conditions) 참조하십시오.
 
 Adobe Experience Platform의 소스 커넥터는 예약된 기준으로 외부 소스 데이터를 인제스트하는 기능을 제공합니다. 이 자습서에서는 [!DNL Azure Event Hubs] 사용자 인터페이스를 사용하여 소스 커넥터(이하 &quot;[!DNL Event Hubs][!DNL Platform] &quot;라 한다)를 인증하는 단계를 제공합니다.
