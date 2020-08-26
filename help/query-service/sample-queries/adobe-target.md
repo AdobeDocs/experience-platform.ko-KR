@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 샘플 쿼리
 topic: queries
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '227'
 ht-degree: 2%
@@ -14,9 +14,10 @@ ht-degree: 2%
 
 # Adobe Target 데이터에 대한 샘플 쿼리
 
-Adobe Target의 데이터는 Experience Event XDM 스키마로 변환되고 데이터 세트로 수집됩니다 [!DNL Experience Platform] . 이 데이터에 대한 사용 사례가 많이 있으며 다음 샘플 쿼리는 Adobe Target 데이터 세트 [!DNL Query Service] 와 함께 작동해야 합니다.
+Adobe Target의 데이터는 Experience Event XDM 스키마로 변환되고 데이터 세트로 수집됩니다 [!DNL Experience Platform] . 이 데이터에 대한 사용 사례가 많이 있으며 다음 샘플 쿼리는 Adobe Target 데이터 집합 [!DNL Query Service] 과 함께 작동해야 합니다.
 
 >[!NOTE]
+>
 >다음 예에서, 평가하려는 데이터 세트, 변수 또는 기간을 기반으로 쿼리의 예상 매개 변수를 채우려면 SQL을 편집해야 합니다. SQL에 있는 모든 위치 `{ }` 에 매개 변수를 제공합니다.
 
 ## Target 데이터 소스의 표준 데이터 집합 이름 [!DNL Platform]:
