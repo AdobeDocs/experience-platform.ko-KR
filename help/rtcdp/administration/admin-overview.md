@@ -5,7 +5,7 @@ seo-title: 실시간 CDP 관리 개요
 description: '이 문서에서는 Adobe Experience Platform 기반의 실시간 고객 데이터 플랫폼의 관리 기능에 대한 개요를 제공합니다. '
 seo-description: seo description
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '277'
 ht-degree: 0%
@@ -28,6 +28,7 @@ ht-degree: 0%
 액세스 제어에 대한 자세한 내용은 설명서의 [액세스 제어 개요를](../../access-control/home.md) 참조하십시오 [!DNL Experience Platform] .
 
 >[!IMPORTANT]
+>
 >UI에서 가시성을 활성화하는 등 실시간 CDP 기능에 대한 액세스 권한을 부여하는 자세한 가이드는 제품 프로필에 대한 세부 정보 및 추가 서비스 관리를 위한 [액세스 제어 사용 안내서에](../../access-control/ui/overview.md)설명된 단계를 따르십시오.
 
 ## 샌드박스
