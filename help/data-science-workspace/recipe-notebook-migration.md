@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 레서피 및 노트북 마이그레이션 가이드
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '3311'
 ht-degree: 0%
@@ -769,11 +769,7 @@ Scala ([!DNL Spark] 2.4) 전자 필기장에는 첫 번째 코드 셀에서 강�
 >[!TIP]
 >
 >Scala에서는 값 `sys.env()` 을 선언하고 반환하는 데 사용할 수 있습니다 `option`. 이렇게 하면 변수가 한 번만 사용된다는 사실을 알고 있으면 변수를 정의할 필요가 없습니다. 다음 예제에서는 위 예제 `val userToken` 를 가져와서 내에 있는 줄을 선언합니다 `option`.
->
-> 
-```scala
-> .option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN"))
-> ```
+> `.option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN"))`
 
 ## 데이터 세트에 쓰기
 
