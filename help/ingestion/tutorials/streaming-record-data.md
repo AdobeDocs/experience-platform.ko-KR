@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 스트리밍 레코드 데이터
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 80392190c7fcae9b6e73cc1e507559f834853390
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
-source-wordcount: '1059'
+source-wordcount: '1055'
 ht-degree: 2%
 
 ---
@@ -14,15 +14,15 @@ ht-degree: 2%
 
 # Adobe Experience Platform으로 레코드 데이터 스트리밍
 
-이 자습서는 Adobe Experience Platform API의 일부인 스트리밍 통합 API를 사용하는 데 도움이 [!DNL Data Ingestion Service] 됩니다.
+이 자습서는 Adobe Experience Platform [!DNL Data Ingestion Service] API의 일부인 스트리밍 통합 API를 사용하는 데 도움이 됩니다.
 
 ## 시작하기
 
 이 자습서에서는 다양한 Adobe Experience Platform 서비스에 대한 작업 지식이 필요합니다. 이 자습서를 시작하기 전에 다음 서비스에 대한 설명서를 검토하십시오.
 
-- [!DNL Experience Data Model (XDM)](../../xdm/home.md): 경험 데이터를 [!DNL Platform] 구성하는 표준화된 프레임워크
-- [!DNL Real-time Customer Profile](../../profile/home.md): 여러 소스에서 집계된 데이터를 기반으로 통합된 소비자 프로필을 실시간으로 제공합니다.
-- [스키마 레지스트리 개발자 가이드](../../xdm/api/getting-started.md): API의 사용 가능한 각 끝점과 이러한 끝점에 대한 [!DNL Schema Registry] 호출 방법을 다루는 포괄적인 안내서입니다. 여기에는 이 자습서 전체의 호출에 표시되는 사용자 `{TENANT_ID}`를 아는 것과 수렴을 위한 데이터 세트를 만드는 데 사용되는 스키마를 만드는 방법을 아는 것이 포함됩니다.
+- [!DNL Experience Data Model (XDM)](../../xdm/home.md):경험 데이터를 [!DNL Platform] 구성하는 표준화된 프레임워크
+- [!DNL Real-time Customer Profile](../../profile/home.md):여러 소스에서 집계된 데이터를 기반으로 통합된 소비자 프로필을 실시간으로 제공합니다.
+- [스키마 레지스트리 개발자 가이드](../../xdm/api/getting-started.md):API의 사용 가능한 각 끝점과 이러한 끝점에 대한 [!DNL Schema Registry] 호출 방법을 다루는 포괄적인 안내서입니다. 여기에는 이 자습서 전체의 호출에 표시되는 사용자 `{TENANT_ID}`를 알고, 통합 데이터 세트를 만드는 데 사용되는 스키마를 만드는 방법을 아는 것이 포함됩니다.
 
 또한 이 자습서에서는 스트리밍 연결을 이미 만들어야 합니다. 스트리밍 연결 만들기에 대한 자세한 내용은 스트리밍 연결 [만들기 자습서를 참조하십시오](./create-streaming-connection.md).
 
@@ -36,7 +36,7 @@ ht-degree: 2%
 
 API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 합니다](../../tutorials/authentication.md). 인증 자습서를 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
 
-- 인증: 무기명 `{ACCESS_TOKEN}`
+- 인증:무기명 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
@@ -50,7 +50,7 @@ API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 
 
 페이로드(POST, PUT, PATCH)이 포함된 모든 요청에는 추가 헤더가 필요합니다.
 
-- 컨텐츠 유형: application/json
+- 컨텐츠 유형:application/json
 
 ## 클래스 기반 스키마 [!DNL XDM Individual Profile] 작성
 
@@ -352,7 +352,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
 
 >[!NOTE]
 >
->병합 정책 ID가 정의되지 않고 스키마를 사용하는 경우</span>name 또는 relatedSchema</span>.name `_xdm.context.profile`은 [!DNL Profile Access] 모든 **관련 ID를** 가져옵니다.
+>병합 정책 ID가 정의되지 않고 `schema.name` 또는 `relatedSchema.name` 인 경우 `_xdm.context.profile`모든 [!DNL Profile Access] 관련 ID를 **** 가져옵니다.
 
 **API 형식**
 
