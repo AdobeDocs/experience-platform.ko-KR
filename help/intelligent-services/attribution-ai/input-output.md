@@ -5,7 +5,7 @@ title: Attribution AI 입력 및 출력
 topic: Input and Output data for Attribution AI
 description: 다음 문서에서는 Attribution AI에서 사용되는 다양한 입력 및 출력 개요를 설명합니다.
 translation-type: tm+mt
-source-git-commit: 2b51569a4c3dd9863edb6831bd182a7fa9d1d891
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '2075'
 ht-degree: 3%
@@ -69,6 +69,7 @@ Attribution AI은 모델 트레이닝에 대한 입력으로 내역 데이터를
 필요한 최소 데이터 길이 = 교육 창 + 조회 창
 
 >[!TIP]
+>
 > 기본 구성이 있는 응용 프로그램에 필요한 데이터의 최소 길이는 다음과 같습니다.2분기(180일) + 56일 = 236일
 
 예 :
@@ -150,7 +151,7 @@ UI에서 원시 점수의 경로를 볼 수 있습니다. 먼저 플랫폼 UI에
 
 Attribution AI은 두 가지 속성 점수, 알고리즘 및 규칙 기반 점수를 지원합니다.
 
-Attribution AI은 두 가지 다른 유형의 알고리즘 점수, 증분 및 영향을 생성합니다. 영향을 받은 점수는 각 마케팅 접점이 담당하는 전환의 일부입니다. 점수는 마케팅 접점에 의해 직접적으로 발생하는 한계적 영향의 양입니다. 증분 점수와 영향을 받는 점수 간의 주요 차이점은 증분 점수가 기준선 효과를 고려한다는 것입니다. 전환은 단순히 이전 마케팅 접점에서만 발생한다고 간주하지 않습니다.
+Attribution AI은 두 가지 다른 유형의 알고리즘 점수, 증분 및 영향을 생성합니다. 영향을 받는 점수는 각 마케팅 접점이 담당하는 전환의 일부입니다. 점수는 마케팅 접점에 의해 직접적으로 발생하는 한계적 영향의 양입니다. 증분 점수와 영향을 받는 점수 간의 주요 차이점은 증분 점수가 기준선 효과를 고려한다는 것입니다. 전환은 단순히 이전 마케팅 접점에서만 발생한다고 간주하지 않습니다.
 
 다음은 Adobe Experience Platform UI에서 나오는 Attribution AI 스키마 출력 예입니다.
 
