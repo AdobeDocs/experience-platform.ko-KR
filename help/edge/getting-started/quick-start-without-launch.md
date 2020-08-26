@@ -5,7 +5,7 @@ description: Experience Platform 웹 SDK를 사용하여 데이터를 수집하�
 seo-description: Experience Platform 웹 SDK를 사용하여 데이터를 수집하는 빠른 시작 가이드
 keywords: 1st-party domain;CNAME;schema;create schema;configuration id;configuration tool;data element;create data element;XDM Object;sendEvent;send Event;install sdk;install web sdk;configure;configure web sdk;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: 7aa0e654300f10db774794d66ece9d0d040cb2ba
 workflow-type: tm+mt
 source-wordcount: '517'
 ht-degree: 5%
@@ -51,7 +51,7 @@ SDK를 설치하려면 HTML의 `<head>` 태그에 가능한 한 높은 곳에 �
   function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
   (window,["alloy"]);
 </script>
-<script src="https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js" async></script>
+<script src="https://cdn1.adoberesources.net/alloy/2.1.0/alloy.min.js" async></script>
 ```
 
 다른 옵션에 대한 자세한 내용은 SDK [설치를 참조하십시오](../fundamentals/installing-the-sdk.md).
