@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 실시간 머신 러닝 시작하기
 topic: Getting started
 translation-type: tm+mt
-source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '405'
 ht-degree: 0%
@@ -15,9 +15,10 @@ ht-degree: 0%
 # 실시간 기계 학습(알파) 시작하기
 
 >[!IMPORTANT]
+>
 >모든 사용자는 아직 실시간 머신 러닝을 사용할 수 없습니다. 이 기능은 알파에 있으며 여전히 테스트되고 있습니다. 이 문서는 변경될 수 있습니다.
 
-실시간 머신 러닝을 활용하려면 Adobe Experience Platform과 함께 제공된 조직에 액세스해야 합니다 [!DNL Data Science Workspace]. 또한 트레이닝 및 점수 매기용으로 전체 데이터 세트를 사용해야 합니다.
+실시간 머신 러닝을 활용하려면, Adobe Experience Platform 및 으로 제공되는 조직에 액세스해야 합니다 [!DNL Data Science Workspace]. 또한 트레이닝 및 점수 매기용으로 전체 데이터 세트를 사용해야 합니다.
 
 실시간 머신 러닝 가이드는 Python 3, Jupiter 노트북 [](../jupyterlab/overview.md), 데이터 과학 및 머신 러닝에 대한 실무 이해를 필요로 합니다.
 
@@ -30,9 +31,10 @@ ht-degree: 0%
 
 ## Adobe Experience Platform의 데이터 집합
 
-실시간 머신 러닝을 사용하려면 데이터 세트에 액세스할 수 있어야 합니다. 외부 데이터 세트를 사용하여 [!DNL JupyterLab] 환경에 업로드하거나, 아직 데이터 세트를 만들지 않은 경우 Platform 내에 새 데이터 세트를 만들 수 있습니다.
+실시간 머신 러닝을 사용하려면 데이터 세트에 액세스할 수 있어야 합니다. 외부 데이터 세트를 사용하여 사용자 [!DNL JupyterLab] 환경에 업로드하거나, 아직 설정하지 않은 경우 플랫폼 내에서 새로운 데이터 세트를 만들 수 있습니다.
 
 >[!NOTE]
+>
 >이미 사용할 데이터 세트를 가지고 있는 경우 [다음 단계로 건너뛸 수 있습니다](#next-steps).
 
 ### 외부 데이터 집합 사용
