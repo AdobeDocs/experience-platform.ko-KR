@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform 쿼리 서비스
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '148'
 ht-degree: 0%
@@ -15,7 +15,8 @@ ht-degree: 0%
 # Adobe Experience Platform 자습서 개요
 
 >[!NOTE]
->Adobe Experience Platform 자습서가 최근에 이동되었습니다. 자습서를 찾으려면 왼쪽 탐색 영역에서 올바른 [!DNL Platform] 영역을 선택합니다. 기존 책갈피를 업데이트하는 데 잠시 시간을 내어 주십시오.
+>
+>Adobe Experience Platform 튜토리얼이 최근 바뀌었습니다. 자습서를 찾으려면 왼쪽 탐색 영역에서 올바른 [!DNL Platform] 영역을 선택합니다. 기존 책갈피를 업데이트하는 데 잠시 시간을 내어 주십시오.
 
 Adobe Experience Platform은 고객 경험 관리 플랫폼 최초로 설계된 솔루션입니다. 실시간 고객 프로파일, 지속적인 인텔리전스, 확장 가능한 개방형 아키텍처를 통해 규모에 맞게 개인화된 경험을 제공할 수 있습니다. 데이터를 수집하기 위한 준비, 고급 기계 학습 알고리즘에 이르기까지 모든 작업을 위한 단계별 튜토리얼을 통해 [!DNL Platform] 빠르고 손쉽게 시작할 수 있습니다.
 
