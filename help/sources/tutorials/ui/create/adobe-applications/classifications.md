@@ -5,7 +5,7 @@ solution: Experience Platform
 title: UI에서 Adobe Analytics 분류 데이터 커넥터 만들기
 topic: overview
 translation-type: tm+mt
-source-git-commit: e0d842b3c5d3b628e117c14d47d6c114b36484dd
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '624'
 ht-degree: 2%
@@ -35,7 +35,7 @@ Adobe 애플리케이션 **[!UICONTROL 카테고리 아래에서]** Adobe Analyt
 
 ![](../../../../images/tutorials/create/classifications/catalog.png)
 
-Analytics **[!UICONTROL 소스 데이터]** 추가 단계가 나타납니다. 상단 **[!UICONTROL 헤더에서]** 데이터 세트 목록을 보려면 해당 Dimension ID [!DNL Classifications] , **[!UICONTROL 보고서 세트 이름]**, **[!UICONTROL 및]** Facebook Suite ID ****&#x200B;보고서 등 데이터 세트 목록을 선택합니다.
+Analytics **[!UICONTROL 소스 데이터]** 추가 단계가 나타납니다. 상단 **[!UICONTROL 헤더에서]** 데이터 세트 목록을 보려면 해당 Dimension ID [!DNL Classifications] , **[!UICONTROL 보고서 세트 이름]**, **[!UICONTROL 및]** Facebook Suite ID ****&#x200B;보고서 등 데이터 세트 목록을 선택하십시오.
 
 각 페이지에는 선택할 수 있는 데이터 [!DNL Classifications] 세트가 최대 10개까지 표시됩니다. 페이지 **[!UICONTROL 하단의]** [다음]을 선택하여 더 많은 옵션을 찾아봅니다. 오른쪽의 패널에는 선택한 총 [!DNL Classifications] 데이터 세트 수와 해당 이름이 표시됩니다. 또한 이 패널에서는 실수로 선택한 [!DNL Classifications] 데이터 세트를 제거하거나 하나의 작업으로 모든 선택 항목을 지울 수 있습니다.
 
@@ -72,6 +72,7 @@ Analytics **[!UICONTROL 소스 데이터]** 추가 단계가 나타납니다. �
 데이터 **[!UICONTROL 집합 활동]** 페이지에는 일괄 처리 상태, 데이터 집합 ID 및 스키마에 대한 세부 사항을 비롯하여 선택한 대상 데이터 집합에 대한 정보가 표시됩니다.
 
 >[!IMPORTANT]
+>
 >다른 소스 커넥터에 대해 데이터 세트를 삭제할 수 있지만 현재 Analytics 분류 데이터 커넥터에 대해서는 지원되지 않습니다. 실수로 데이터 세트를 삭제하는 경우 Adobe 고객 지원 센터에 문의하십시오.
 
 ![](../../../../images/tutorials/create/classifications/dataset.png)
