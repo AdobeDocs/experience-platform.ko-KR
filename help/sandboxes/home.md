@@ -5,9 +5,9 @@ title: 샌드박스 개요
 topic: overview
 description: 샌드박스는 단일 Experience Platform 인스턴스 내의 가상 파티션으로, 디지털 경험 애플리케이션의 개발 프로세스와 매끄럽게 통합됩니다.
 translation-type: tm+mt
-source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '702'
+source-wordcount: '706'
 ht-degree: 0%
 
 ---
@@ -51,7 +51,7 @@ In order to address this need, Experience Platform provides **sandboxes** which 
 
 ## Experience Platform API의 샌드박스
 
-Experience Platform API를 호출할 때는 헤더 아래에 샌드박스 이름을 제공해야 합니다 `x-sandbox-name`. 예를 들어 프로덕션 샌드박스 내의 모든 데이터 세트를 보기 [!DNL Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) 위해 을 호출할 때 샌드박스의 이름(&quot;prod&quot;)은 API 요청에서 헤더로 제공됩니다.
+Experience Platform API를 호출할 때는 헤더 아래에 샌드박스 이름을 제공해야 합니다 `x-sandbox-name`. 예를 들어 프로덕션 샌드박스 내의 모든 데이터 세트를 보기 위해 [[!DNL Catalog Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) 를 호출할 때 API 요청에서 샌드박스의 이름(&quot;prod&quot;)이 헤더로 제공됩니다.
 
 ```shell
 curl -X GET \
