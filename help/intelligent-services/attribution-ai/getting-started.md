@@ -3,10 +3,11 @@ keywords: Experience Platform;getting started;attribution ai;popular topics
 solution: Experience Platform
 title: Attribution AI 시작하기
 topic: Getting started
+description: 다음 가이드는 Attribution AI 사용과 관련된 다양한 Adobe Experience Platform 서비스에 대해 이해해야 합니다. 자습서를 시작하기 전에 다음 문서를 검토하십시오.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
 workflow-type: tm+mt
-source-wordcount: '499'
+source-wordcount: '526'
 ht-degree: 0%
 
 ---
@@ -16,9 +17,9 @@ ht-degree: 0%
 
 다음 가이드는 Attribution AI 사용과 관련된 다양한 [!DNL Adobe Experience Platform] 서비스를 이해해야 합니다. 자습서를 시작하기 전에 다음 문서를 검토하십시오.
 
-- [XDM(Experience Data Model) 시스템 개요](../../xdm/home.md): XDM은 Experience Platform [!DNL Adobe Experience Cloud]를 기반으로 올바른 고객에게 정확한 타이밍에 적합한 채널을 통해 올바른 메시지를 전달할 수 있는 기본 프레임워크입니다. Platform이 구축되는 방법론인 XDM System은 Experience Platform 서비스에서 사용하기 위해 경험 데이터 모델 스키마를 운영합니다.
-- [스키마 컴포지션의 기본 사항](../../xdm/schema/composition.md): 이 문서에서는 XDM(Experience Data Model) 스키마 및 사용할 스키마 작성에 대한 기본 블록, 원칙 및 모범 사례에 대해 소개합니다 [!DNL Adobe Experience Platform].
-- [스키마 빌드](../../xdm/tutorials/create-schema-ui.md): 이 자습서에서는 Experience Platform 내의 스키마 편집기를 사용하여 스키마를 만드는 단계를 설명합니다.
+- [XDM(Experience Data Model) 시스템 개요](../../xdm/home.md):XDM은 Experience Platform [!DNL Adobe Experience Cloud]를 기반으로 올바른 고객에게 정확한 타이밍에 적합한 채널을 통해 올바른 메시지를 전달할 수 있는 기본 프레임워크입니다. XDM System은 Experience Platform이 구축되는 방법론을 통해 플랫폼 서비스에서 사용하기 위해 경험 데이터 모델 스키마를 운영합니다.
+- [스키마 컴포지션의 기본 사항](../../xdm/schema/composition.md):이 문서에서는 XDM(Experience Data Model) 스키마 및 사용할 스키마 작성에 대한 기본 블록, 원칙 및 모범 사례에 대해 소개합니다 [!DNL Adobe Experience Platform].
+- [스키마 빌드](../../xdm/tutorials/create-schema-ui.md):이 자습서에서는 Experience Platform 내의 스키마 편집기를 사용하여 스키마를 만드는 단계를 설명합니다.
 
 Attribution AI은 XDM( [Experience Data Model](../../xdm/home.md) )의 혼합인 CEE(Consumer Experience Events) 스키마를 따라야 합니다. 이 데이터를 구현하거나 변경하려면 attributionai-support@adobe.com의 Adobe 지원에 문의하십시오. 미디어 지출 데이터가 있는 경우 매출 및 ROI와 같은 추가 분석을 수행할 수 있습니다. 고객 프로파일 데이터를 사용할 수 있는 경우 크레딧을 고객 프로파일 레벨에 더 적용할 수 있습니다.
 
@@ -34,19 +35,19 @@ Attribution AI은 XDM( [Experience Data Model](../../xdm/home.md) )의 혼합인
 >
 >Raw 점수를 다운로드할 필요가 없는 경우 이 단계를 건너뛰고 [다음 단계를 진행할 수 있습니다](#next-steps).
 
-Attribution AI 스코어 다운로드는 API 호출 조합을 통해 수행됩니다. Platform API를 호출하려면 먼저 [인증 자습서를 완료해야 합니다](../../tutorials/authentication.md). 인증 자습서를 완료하면 아래와 같이 모든 Experience Platform API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
+Attribution AI 스코어 다운로드는 API 호출 조합을 통해 수행됩니다. 플랫폼 API를 호출하려면 먼저 [인증 자습서를 완료해야 합니다](../../tutorials/authentication.md). 인증 자습서를 완료하면 아래와 같이 모든 Experience Platform API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
 
-- 인증: 무기명 `{ACCESS_TOKEN}`
+- 인증:무기명 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Experience Platform의 모든 리소스는 특정 가상 샌드박스와 분리됩니다. Platform API에 대한 모든 요청에는 작업이 수행할 샌드박스의 이름을 지정하는 헤더가 필요합니다.
+Experience Platform의 모든 리소스는 특정 가상 샌드박스와 분리됩니다. 플랫폼 API에 대한 모든 요청에는 작업이 수행할 샌드박스의 이름을 지정하는 헤더가 필요합니다.
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Platform의 샌드박스에 대한 자세한 내용은 [샌드박스 개요 설명서를 참조하십시오](../../sandboxes/home.md).
+>플랫폼의 샌드박스에 대한 자세한 내용은 [샌드박스 개요 설명서를 참조하십시오](../../sandboxes/home.md).
 
 ### 샘플 API 호출 읽기
 
