@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: January 15, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: f881c1365684b1ca9e6bf9a8ce866d234dc54128
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '881'
-ht-degree: 6%
+source-wordcount: '894'
+ht-degree: 5%
 
 ---
 
@@ -19,16 +19,16 @@ ht-degree: 6%
 
 Adobe Experience Platform의 기존 기능 업데이트:
 
-* [!DNL Experience Data Model (XDM) System](#xdm)
-* [!DNL Privacy Service](#privacy)
-* [!DNL Sources](#sources)
-* [!DNL Destinations](#destinations)
+* [[!DNL 경험 데이터 모델(XDM) 시스템]](#xdm)
+* [[!DNL Privacy Service]](#privacy)
+* [[!DNL 소스]](#sources)
+* [[!DNL 대상]](#destinations)
 
 ## [!DNL Experience Data Model] (XDM) 시스템 {#xdm}
 
 표준화와 상호 운용성은 그 이면의 핵심 개념입니다 [!DNL Experience Platform]. [!DNL Experience Data Model] (XDM)은 Adobe을 기반으로 고객 경험 데이터를 표준화하고 고객 경험 관리를 위한 스키마를 정의하는 것입니다.
 
-XDM은 디지털 경험의 강력함을 향상시키도록 고안된 공개적으로 문서화된 사양입니다. Adobe Experience Platform에서 서비스와 통신하는 모든 애플리케이션에 대한 공통 구조와 정의를 제공합니다. 모든 고객 경험 데이터는 XDM 표준을 준수하여 보다 빠르고 통합된 방식으로 인사이트를 제공하는 공통 표현에 통합할 수 있습니다. 고객 행동을 통해 유용한 인사이트를 얻고 세그먼트를 통해 고객 고객을 정의하며 개인화를 위해 고객 속성을 사용할 수 있습니다.
+XDM은 디지털 경험의 강력함을 향상시키도록 고안된 공개적으로 문서화된 사양입니다. 이 소프트웨어는 Adobe Experience Platform의 서비스와 통신하기 위해 모든 애플리케이션에 대한 공통 구조와 정의를 제공합니다. 모든 고객 경험 데이터는 XDM 표준을 준수하여 보다 빠르고 통합된 방식으로 인사이트를 제공하는 공통 표현에 통합할 수 있습니다. 고객 행동을 통해 유용한 인사이트를 얻고 세그먼트를 통해 고객 고객을 정의하며 개인화를 위해 고객 속성을 사용할 수 있습니다.
 
 **새로운 기능**
 
@@ -75,7 +75,7 @@ Adobe Experience Platform은 외부 소스에서 데이터를 인제스트할 �
 |--- | ---|
 | 고객 속성 데이터 지원 | 고객 속성 데이터를 인제스트하는 스트리밍 커넥터를 만들기 위한 UI 및 API 지원 |
 | 클라우드 스토리지 추가 파일 포맷 지원 | 클라우드 스토리지에서 파일 수집은 이제 XDM을 준수하는 쪽모이 세공 마루 및 JSON 파일 포맷을 지원합니다. |
-| 액세스 제어 권한 지원 | Adobe Experience Platform의 액세스 제어 프레임워크는 데이터 수집에서 소스에 대한 액세스 권한을 부여하는 데 필요한 권한을 제공합니다. 사용자는 사용 권한 수준에 따라 소스를 보거나 소스를 관리하거나 액세스 권한을 모두 거부할 수 있습니다. |
+| 액세스 제어 권한 지원 | Adobe Experience Platform의 액세스 제어 프레임워크는 데이터 수집에서 소스에 대한 액세스를 부여하는 데 필요한 권한을 제공합니다. 사용자는 사용 권한 수준에 따라 소스를 보거나 소스를 관리하거나 액세스 권한을 모두 거부할 수 있습니다. |
 
 **액세스 제어 권한**
 
@@ -105,7 +105,7 @@ Adobe [실시간 CDP에서](../../rtcdp/overview.md)대상은 대상 플랫폼�
 | 카테고리 | 사용 권한 | 설명 |
 |--- | --- | ---|
 | 대상 | 대상 관리 | 대상을 읽고, 만들고, 편집하고, 비활성화하는 액세스 권한 |
-| 대상 | 대상 보기 | [카탈로그] 탭 및 [찾아보기] [!UICONTROL _탭&#x200B;_]의 인증된 대상 및 사용 가능한 대상에 대한 읽기 전용_&#x200B;액세스&#x200B;_. |
+| 대상 | 대상 보기 | [카탈로그] 탭 및 [찾아보기] [!UICONTROL _탭_] 의 인증된 대상 및 사용 가능한 대상에 대한 읽기 전용 _액세스_ . |
 | 대상 | 대상 활성화 | 대상에 데이터 활성화 이 권한을 사용하려면 제품 프로필에 &quot;대상 관리&quot; 또는 &quot;대상 보기&quot;를 추가해야 합니다. |
 
 **알려진 문제**
