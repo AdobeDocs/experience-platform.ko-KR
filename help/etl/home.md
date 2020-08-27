@@ -4,9 +4,9 @@ solution: Experience Platform
 title: ETL 통합 만들기
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 8b1b61b6446b28f92d6cf221003674fa09716c53
 workflow-type: tm+mt
-source-wordcount: '4158'
+source-wordcount: '4153'
 ht-degree: 0%
 
 ---
@@ -522,7 +522,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches?dataSet=D
 
 ### 일괄 파일 가져오기
 
-찾고 있는 일괄 처리에 대한 ID가 있으면`{BATCH_ID}`[!DNL 데이터 액세스 API]를 통해 특정 일괄 처리에 속하는 파일 목록을 검색할 수 있습니다 [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml).  자세한 내용은 [데이터 액세스 자습서를 참조하십시오](../data-access/tutorials/dataset-data.md).
+찾고 있는 일괄 처리에 대한 ID가 있으면`{BATCH_ID}`[!DNL 데이터 액세스 API]를 통해 특정 일괄 처리에 속하는 파일 목록을 검색할 수 있습니다 [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml).  자세한 내용은 [[!DNL Data Access] 튜토리얼을 참조하십시오](../data-access/tutorials/dataset-data.md).
 
 **요청**
 
@@ -548,7 +548,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/export/files/{FILE_ID}" \
   -H "x-api-key : {API_KEY}"
 ```
 
-응답에서 단일 파일 또는 디렉토리를 가리킬 수 있습니다. 각 항목에 대한 세부 사항은 [데이터 액세스 자습서에서 확인할 수 있습니다](../data-access/tutorials/dataset-data.md).
+응답에서 단일 파일 또는 디렉토리를 가리킬 수 있습니다. 각 항목에 대한 세부 사항은 [[!DNL Data Access] 자습서에서 확인할 수 있습니다](../data-access/tutorials/dataset-data.md).
 
 ### 파일 컨텐츠 액세스
 
@@ -568,7 +568,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/export/files/{DATASET_FIL
 
 ### 스키마 준수 레코드 유효성 확인
 
-데이터를 작성할 때 사용자는 XDM 스키마에 정의된 유효성 검사 규칙에 따라 데이터의 유효성을 확인할 수 있습니다. 스키마 유효성 검사에 대한 자세한 내용은 GitHub의 [ETL 에코시스템 통합 참조 코드에서 확인할 수 있습니다](https://github.com/adobe/experience-platform-etl-reference/blob/fd08dd9f74ae45b849d5482f645f859f330c1951/README.md#validation).
+데이터를 작성할 때 사용자는 XDM 스키마에 정의된 유효성 검사 규칙에 따라 데이터의 유효성을 확인할 수 있습니다. 스키마 유효성 검사에 대한 자세한 내용은 의 [ETL 에코시스템 통합 참조 코드에 [!DNL GitHub]](https://github.com/adobe/experience-platform-etl-reference/blob/fd08dd9f74ae45b849d5482f645f859f330c1951/README.md#validation)있습니다.
 
 [!DNL GitHub]에 있는 참조 구현을 사용 중인 경우 시스템 속성을 사용하여 이 구현에서 스키마 유효성 검사를 활성화할 수 있습니다 [](https://github.com/adobe/experience-platform-etl-reference/blob/fd08dd9f74ae45b849d5482f645f859f330c1951/README.md)`-DenableSchemaValidation=true`.
 
