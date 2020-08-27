@@ -3,10 +3,11 @@ keywords: Experience Platform;developer guide;Data Science Workspace;popular top
 solution: Experience Platform
 title: 실시간 머신 러닝 시작하기
 topic: Getting started
+description: 다음 문서에서는 Adobe Experience Platform에서 실시간 머신 러닝 모델을 제작하는 데 필요한 단계에 대해 간략하게 설명합니다.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
 workflow-type: tm+mt
-source-wordcount: '405'
+source-wordcount: '425'
 ht-degree: 0%
 
 ---
