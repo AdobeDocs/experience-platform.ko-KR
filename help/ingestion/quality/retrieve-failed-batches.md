@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 실패한 배치 검색
 topic: overview
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '598'
-ht-degree: 2%
+source-wordcount: '607'
+ht-degree: 1%
 
 ---
 
@@ -20,10 +20,10 @@ Adobe Experience Platform은 데이터를 업로드하고 인제스트하는 두
 
 ## 시작하기
 
-이 가이드는 다음과 같은 Adobe Experience Platform 구성 요소에 대해 작업해야 합니다.
+이 가이드는 Adobe Experience Platform의 다음 구성 요소에 대한 작업 이해를 필요로 합니다.
 
-- [!DNL Experience Data Model (XDM) System](../../xdm/home.md): 고객 경험 데이터를 [!DNL Experience Platform] 구성하는 표준화된 프레임워크
-- [!DNL Data Ingestion](../home.md): 데이터를 보낼 수 있는 메서드입니다 [!DNL Experience Platform].
+- [[!DNL 경험 데이터 모델(XDM) 시스템]](../../xdm/home.md):고객 경험 데이터를 [!DNL Experience Platform] 구성하는 표준화된 프레임워크
+- [[!DNL 데이터 통합]](../home.md):데이터를 보낼 수 있는 메서드입니다 [!DNL Experience Platform].
 
 ### 샘플 API 호출 읽기
 
@@ -33,7 +33,7 @@ Adobe Experience Platform은 데이터를 업로드하고 인제스트하는 두
 
 API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 합니다](../../tutorials/authentication.md). 인증 자습서를 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
 
-- 인증: 무기명 `{ACCESS_TOKEN}`
+- 인증:무기명 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
