@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;dataset api;manage data usage;data usage api
 solution: Experience Platform
 title: 'API를 사용하여 데이터 세트에 대한 데이터 사용 레이블 관리 '
 topic: developer guide
+description: 데이터 집합 서비스 API를 사용하여 데이터 집합에 대한 사용 레이블을 적용하고 편집할 수 있습니다. 이것은 Adobe Experience Platform의 데이터 카탈로그 기능의 일부이지만 데이터 세트 메타데이터를 관리하는 카탈로그 서비스 API와는 별개입니다.
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: f4a4e65a087313dc4e2414f999e021e3f6e17137
 workflow-type: tm+mt
-source-wordcount: '916'
+source-wordcount: '952'
 ht-degree: 2%
 
 ---
