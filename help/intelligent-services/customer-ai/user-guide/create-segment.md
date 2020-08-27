@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;insights; customer ai;popular topics
+keywords: Experience Platform;insights;customer ai;popular topics
 solution: Experience Platform
 title: 예측된 점수가 있는 고객 세그먼트 만들기
 topic: Create a segment
+description: 예측 실행이 완료되면 예측된 성향 점수가 프로파일에서 자동으로 사용됩니다. 고객 AI 점수로 프로파일을 강화하면 고객 세그먼트를 만들어 고객 성향 점수를 기준으로 고객을 찾을 수 있습니다. 이 섹션에서는 세그먼트 빌더를 사용하여 세그먼트를 만드는 단계를 제공합니다.
 translation-type: tm+mt
-source-git-commit: e351a2d489730c1f1bd5f87be8d85612090bc009
+source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
 workflow-type: tm+mt
-source-wordcount: '272'
+source-wordcount: '317'
 ht-degree: 0%
 
 ---
@@ -24,7 +25,7 @@ ht-degree: 0%
 
 ![](../images/user-guide/segments.png)
 
-세그먼트 *빌더가* 나타납니다. 왼쪽 *필드* 열과 *속성* 탭 아래에서 **[!UICONTROL XDM 개별]** 프로필이라는 폴더를클릭한 다음 조직의 네임스페이스가 있는 폴더를 클릭합니다. Customer **[!UICONTROL AI라는]** 폴더에는 예측 실행 결과가 포함되며 점수가 속한 인스턴스 이름을 기준으로 이름이 지정됩니다. 인스턴스 폴더를 클릭하여 원하는 인스턴스의 결과에 액세스합니다.
+세그먼트 *빌더가* 나타납니다. 왼쪽 *필드* 열과 *속성* 탭 아래에서 **[!UICONTROL XDM 개인]** 프로필이라는 폴더를클릭한 다음 조직의 네임스페이스가 있는 폴더를 클릭합니다. Customer **[!UICONTROL AI라는]** 폴더에는 예측 실행 결과가 포함되며 점수가 속한 인스턴스 이름을 기준으로 이름이 지정됩니다. 인스턴스 폴더를 클릭하여 원하는 인스턴스의 결과에 액세스합니다.
 
 ![](../images/user-guide/results.png)
 
