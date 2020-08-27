@@ -3,11 +3,11 @@ keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;popula
 solution: Experience Platform
 title: JupiterLab 사용 안내서
 topic: Overview
-description: JupiterLab은 Project Jupiter를 위한 웹 기반의 유저 인터페이스로 Adobe Experience Platform과 긴밀하게 통합되어 있습니다. 데이터 과학자들이 Jupiter 노트북, 코드 및 데이터를 사용하여 작업할 수 있는 인터랙티브한 개발 환경을 제공합니다.
+description: JupiterLab은 Project Jupiter를 위한 웹 기반의 유저 인터페이스로 Adobe Experience Platform과 긴밀하게 통합되어 있습니다. 데이터 과학자들이 Jupiter 노트북, 코드 및 데이터를 사용하여 작업할 수 있는 인터랙티브한 개발 환경을 제공합니다. 이 문서에서는 JupiterLab 및 그 기능에 대한 개요와 일반적인 작업 수행 지침을 제공합니다.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
 workflow-type: tm+mt
-source-wordcount: '3684'
+source-wordcount: '3702'
 ht-degree: 11%
 
 ---
@@ -629,7 +629,7 @@ timedf.show()
 | jq | 1.6 |
 | 커라스 | 2.2.4 |
 | nltk | 3.2.5 |
-| 판다 | 0.22.0 |
+| sql | 0.22.0 |
 | pandasql | 0.7.3 |
 | 베개 | 6.0.0 |
 | scitkit 이미지 | 0.15.0 |
@@ -703,11 +703,11 @@ timedf.show()
 | 점선 | 0.3.3 |
 | 글꼴 아나콘드 | 1.0 |
 | psycopg2 | 2.8.3 |
-| 판다 | 1.3.7 |
+| 코 | 1.3.7 |
 | autovizwidget | 0.12.9 |
 | 알트에어 | 3.1.0 |
 | bega_datasets | 0.7.0 |
-| 모의 | 1.0.1 |
+| 종소 | 1.0.1 |
 | sql_magic | 0.0.4 |
 | iso3166 | 1.0 |
 | nbimporter | 0.3.1 |
