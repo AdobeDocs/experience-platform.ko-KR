@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 정책 서비스 API를 사용하여 데이터 사용 정책 적용
 topic: enforcement
 translation-type: tm+mt
-source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '869'
+source-wordcount: '874'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # API를 사용하여 데이터 사용 정책 [!DNL Policy Service] 적용
 
-데이터에 대한 데이터 사용 레이블을 만들고 해당 레이블에 대한 마케팅 작업에 대한 사용 정책을 만들었으면 데이터 세트 또는 임의 레이블 그룹에 대해 수행된 마케팅 작업이 정책 위반인지 여부를 평가하는 데 이 [!DNL DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) 를 사용할 수 있습니다. 그런 다음 API 응답을 기반으로 정책 위반을 처리하도록 자체 내부 프로토콜을 설정할 수 있습니다.
+데이터에 대한 데이터 사용 레이블을 만들고 해당 레이블에 대한 마케팅 작업에 대한 사용 정책을 만들었으면 [[!DNL DULE 정책 서비스 API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) 를 사용하여 데이터 세트 또는 임의 레이블 그룹에서 수행된 마케팅 작업이 정책 위반인지 여부를 평가할 수 있습니다. 그런 다음 API 응답을 기반으로 정책 위반을 처리하도록 자체 내부 프로토콜을 설정할 수 있습니다.
 
 >[!NOTE]
 >
@@ -26,9 +26,9 @@ ht-degree: 2%
 
 이 자습서를 사용하려면 DULE 정책 시행과 관련된 다음 주요 개념을 제대로 이해해야 합니다.
 
-* [데이터 거버넌스](../home.md): 데이터 사용 규정 준수를 [!DNL Platform] 적용하는 프레임워크입니다.
-   * [데이터 사용 레이블](../labels/overview.md): 데이터 사용 레이블은 데이터 집합(및/또는 해당 데이터 집합 내의 개별 필드)에 적용되며 데이터 사용 방법에 대한 제한을 지정합니다.
-   * [데이터 사용 정책](../policies/overview.md): 데이터 사용 정책은 특정 DULE 레이블 세트에 대해 허용되거나 제한된 마케팅 작업의 종류를 설명하는 규칙입니다.
+* [데이터 거버넌스](../home.md):데이터 사용 규정 준수를 [!DNL Platform] 적용하는 프레임워크입니다.
+   * [데이터 사용 레이블](../labels/overview.md):데이터 사용 레이블은 데이터 집합(및/또는 해당 데이터 집합 내의 개별 필드)에 적용되며 데이터 사용 방법에 대한 제한을 지정합니다.
+   * [데이터 사용 정책](../policies/overview.md):데이터 사용 정책은 특정 DULE 레이블 세트에 대해 허용되거나 제한된 마케팅 작업의 종류를 설명하는 규칙입니다.
 * [샌드박스](../../sandboxes/home.md): [!DNL Experience Platform] 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되도록 단일 [!DNL Platform] 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
 
 이 자습서를 시작하기 전에 필수 헤더 및 예제 API 호출 읽기 방법 등 DULE [API를 성공적으로 호출하기 위해 알아야 하는 중요한 정보는](../api/getting-started.md) 개발자 안내서를 [!DNL Policy Service] 참조하십시오.
