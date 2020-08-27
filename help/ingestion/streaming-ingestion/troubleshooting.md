@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 스트리밍 통합 문제 해결
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '993'
+source-wordcount: '997'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ Adobe Experience Platform [!DNL Data Ingestion] 는 데이터를 인제스트하
 
 동기 및 비동기 유효성 검사에 대한 자세한 내용은 [스트리밍 유효성 검사 개요를 참조하십시오](../quality/streaming-validation.md). 유효성 검사에 실패한 배치를 보는 방법에 대한 자세한 내용은 실패한 배치 [검색 지침을 참조하십시오](../quality/retrieve-failed-batches.md).
 
-### 요청 페이로드를 전송하기 전에 유효성을 확인할 수 있습니까 [!DNL Platform]?
+### 요청 페이로드를 보내기 전에 유효성을 확인할 수 있습니까 [!DNL Platform]?
 
 요청 페이로드는 전송 후에만 평가할 수 [!DNL Platform]있습니다. 동기 유효성 검사를 수행할 때 유효한 페이로드는 잘못된 페이로드를 수행하는 동안 채워진 JSON 개체를 반환합니다. 비동기 유효성 검사 동안 서비스는 잘못된 형식의 데이터를 감지하여 나중에 분석을 위해 검색할 수 있는 [!DNL Data Lake] 위치로 보냅니다. 자세한 내용은 [스트리밍 유효성 검사 개요를](../quality/streaming-validation.md) 참조하십시오.
 
@@ -100,4 +100,4 @@ Adobe Experience Platform [!DNL Data Ingestion] 는 데이터를 인제스트하
 
 ID 네임스페이스에는 두 가지 유형이 있습니다.기본 및 사용자 지정. 사용자 정의 네임스페이스를 사용할 때는 네임스페이스가 안에 등록되어 있는지 확인하십시오 [!DNL Identity Service]. 기본 및 사용자 정의 네임스페이스 사용에 대한 자세한 내용은 [ID 네임스페이스 개요를](../../identity-service/namespaces.md) 참조하십시오.
 
-메시지를 수집하지 못한 이유에 대한 자세한 내용 [!DNL Experience Platform UI](https://platform.adobe.com) 을 보려면 아이콘을 사용하십시오. 왼쪽 탐색 **[!UICONTROL 에서 모니터링]** 을 클릭한 다음 _[!UICONTROL 전체]_스트리밍 탭을 확인하여 선택한 기간 동안 스트리밍된 메시지 배치를 볼 수 있습니다.
+메시지 수집에 실패한 이유에 대한 자세한 내용을 보려면 [[!DNL Experience Platform UI]를](https://platform.adobe.com) 사용할 수 있습니다. 왼쪽 탐색 **[!UICONTROL 에서 모니터링]** 을 클릭한 다음 _[!UICONTROL 전체]_ 스트리밍 탭을 확인하여 선택한 기간 동안 스트리밍된 메시지 배치를 볼 수 있습니다.
