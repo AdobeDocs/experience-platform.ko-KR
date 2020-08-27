@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: 프로필 시스템 작업 - 실시간 고객 프로필 API
 topic: guide
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1420'
+source-wordcount: '1425'
 ht-degree: 2%
 
 ---
@@ -22,7 +22,7 @@ Adobe Experience Platform을 사용하면 여러 소스에서 데이터를 인�
 
 ## 시작하기
 
-이 안내서에서 사용되는 API 끝점은 이 끝점의 일부입니다 [!DNL Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). 계속하기 전에 [시작하기 가이드](getting-started.md) 에서 관련 문서 링크, 이 문서에서 샘플 API 호출 읽기 안내서, 모든 API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요 정보를 검토하십시오 [!DNL Experience Platform] .
+이 안내서에 사용되는 API 끝점은 [[!DNL 실시간 고객 프로필 API]의 일부입니다](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). 계속하기 전에 [시작하기 가이드](getting-started.md) 에서 관련 문서 링크, 이 문서에서 샘플 API 호출 읽기 안내서, 모든 API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요 정보를 검토하십시오 [!DNL Experience Platform] .
 
 ## 삭제 요청 보기
 
