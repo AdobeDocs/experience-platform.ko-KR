@@ -5,9 +5,9 @@ seo-title: 실시간 고객 데이터 프로필의 개인 정보
 description: 실시간 고객 데이터 프로필을 사용하면 개인 정보 보호 규정을 준수하는 데이터 운영을 간소화할 수 있습니다.
 seo-description: 실시간 고객 데이터 프로필을 사용하면 개인 정보 보호 규정을 준수하는 데이터 운영을 간소화할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '304'
+source-wordcount: '312'
 ht-degree: 0%
 
 ---
@@ -25,8 +25,8 @@ Adobe Experience Platform [!DNL Privacy Service] 를 사용하면 데이터 작�
 
 고객 데이터에 액세스하고 삭제할 수 있는 개별 GDPR 및 CPA 데이터 주체의 요청을 제출하는 방법에는 두 가지가 있습니다.
 
-* 시각적 작업 공간 [!DNL Privacy Service UI](https://gdprui.cloud.adobe.io/) 내에서 액세스 및 삭제 요청을 만들고 모니터링합니다. 단계별 지침은 [Privacy Service UI 자습서를](../../privacy-service/ui/overview.md) 참조하십시오.
-* RESTful API 호출 [!DNL Privacy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml) 을 사용하여 액세스 및 삭제 요청을 관리합니다. 단계별 지침은 [Privacy Service API 자습서를](../../privacy-service/api/getting-started.md) 참조하십시오.
+* 시각적 작업 공간 내에서 [[!DNL Privacy Service UI]](https://gdprui.cloud.adobe.io/) 액세스 및 삭제 요청을 만들고 모니터링합니다. 단계별 지침은 [Privacy Service UI 자습서를](../../privacy-service/ui/overview.md) 참조하십시오.
+* RESTful API 호출 [을 사용하여 액세스 및 삭제 요청을](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml) 관리하려면 [!DNL Privacy Service API]를 사용하십시오. 단계별 지침은 [Privacy Service API 자습서를](../../privacy-service/api/getting-started.md) 참조하십시오.
 
 <!-- (Capability will not be available for November GA) 
 ## Opt-out capabilities
