@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;access control;adobe admin console
 solution: Experience Platform
-title: 액세스 제어 개요
 topic: overview
+title: 액세스 제어 개요
+description: Adobe Experience Platform에 대한 액세스 제어는 Adobe Admin Console을 통해 제공됩니다. 이 기능은 Admin Console의 제품 프로필을 활용하므로 사용자에게 사용 권한 및 샌드박스를 연결합니다.
 translation-type: tm+mt
-source-git-commit: e66fd20eb7a153e556a3716bb255af084e52292e
+source-git-commit: cddc559dfb65ada888bb367d6265863091a9b2a1
 workflow-type: tm+mt
-source-wordcount: '1103'
+source-wordcount: '1131'
 ht-degree: 3%
 
 ---
@@ -98,7 +99,7 @@ Adobe Admin Console은 Adobe 제품 이용 권한 및 조직의 이용 권한을
 | [!DNL Destinations] | [!UICONTROL 대상 활성화] | 활성화된 대상에 데이터를 활성화하는 기능 이 권한을 사용하려면 대상을 활성화할 사용자에게 &quot;대상 보기&quot; 또는 &quot; [!UICONTROL 대상] 관리&quot;가 부여되어야 합니다.* |
 | [!DNL Data Ingestion] | [!UICONTROL 소스 관리] | 소스를 읽고, 만들고, 편집하고, 비활성화할 수 있습니다. |
 | [!DNL Data Ingestion] | [!UICONTROL 소스 보기] | [카탈로그] 탭의 사용 가능한 소스 및 [ *[!UICONTROL 찾아보기]* ] *[!UICONTROL 탭의 인증된 소스에 대한 읽기 전용]* 액세스. |
-| [!DNL Data Science Workspace] | [!UICONTROL 데이터 과학 작업 공간 관리] | 액세스 권한을 사용하여 내용을 읽고, 만들고, 편집하고, 삭제할 수 있습니다 [!DNL Data Science Workspace]. |
+| [!DNL Data Science Workspace] | [!UICONTROL 데이터 과학 작업 공간 관리] | 액세스 권한을 사용하여 내용을 읽고, 만들고, 편집하고, 삭제할 수 [!DNL Data Science Workspace]있습니다. |
 
 _(*) 이 권한을 사용하려면[!DNL Real-time Customer Data Platform]실시간 CDP에 대한 자세한 내용은[실시간 CDP 개요를 읽어 보시기 바랍니다](https://docs.adobe.com/content/help/en/experience-platform/rtcdp/overview.html)._
 
