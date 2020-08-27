@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Access control;Adobe admin console
 solution: Experience Platform
 title: 액세스 제어 사용 안내서
 topic: user guide
+description: Adobe Experience Platform의 액세스 제어를 통해 Adobe Admin Console을 사용하여 다양한 플랫폼 기능에 대한 역할 및 권한을 관리할 수 있습니다. 이 문서는 플랫폼의 액세스 제어를 관리하기 위해 Admin Console을 탐색하는 방법에 대한 지침으로 사용됩니다.
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
 workflow-type: tm+mt
-source-wordcount: '142'
+source-wordcount: '184'
 ht-degree: 1%
 
 ---
