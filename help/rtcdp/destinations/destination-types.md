@@ -5,9 +5,9 @@ seo-title: 대상 유형 및 카테고리
 description: 'Adobe의 실시간 고객 데이터 플랫폼에서 프로필/세그먼트 내보내기 대상은 이벤트 데이터를 캡처하고, 다른 데이터 소스와 결합하고, 세그멘테이션을 적용하고, 세그먼트 및 자격이 있는 프로필을 대상에 내보냅니다. 익스텐션을 실행하면 원시 이벤트 데이터를 여러 유형의 대상으로 전달할 수 있습니다. '
 seo-description: Adobe의 실시간 고객 데이터 플랫폼에서 프로필/세그먼트 내보내기 대상은 이벤트 데이터를 캡처하고, 다른 데이터 소스와 결합하고, 세그멘테이션을 적용하고, 세그먼트 및 자격이 있는 프로필을 대상에 내보냅니다. 익스텐션을 실행하면 원시 이벤트 데이터를 여러 유형의 대상으로 전달할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '580'
+source-wordcount: '587'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ Adobe의 실시간 고객 데이터 플랫폼에서는 연결과 익스텐션 �
 
 #### 세그먼트 내보내기 대상
 
-세그먼트 내보내기 대상은 대상 플랫폼에 자격을 부여받은 프로필 및 세그먼트를 보냅니다. 이러한 대상은 세그먼트 ID 또는 사용자 ID를 사용합니다. 이러한 유형의 목적지 [!DNL Google Display & Video 360](/help/rtcdp/destinations/google-dv360-destination.md) 또는 [!DNL Google Ads](/help/rtcdp/destinations/google-ads-destination.md) 와 같은 광고 목적지
+세그먼트 내보내기 대상은 대상 플랫폼에 자격을 부여받은 프로필 및 세그먼트를 보냅니다. 이러한 대상은 세그먼트 ID 또는 사용자 ID를 사용합니다. 이러한 유형의 대상은 [[!DNL Google Display &amp; Video 360]](/help/rtcdp/destinations/google-dv360-destination.md) 또는 [[!DNL Google Ads]와 같은](/help/rtcdp/destinations/google-ads-destination.md) 광고 대상입니다.
 
 #### 프로필 내보내기 및 세그먼트 내보내기 대상 - 비디오 개요
 
