@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;product profile;manage permissions
 solution: Experience Platform
 title: 제품 프로필에 대한 권한 관리
 topic: user guide
+description: Adobe Experience Platform의 액세스 제어를 통해 Adobe Admin Console을 사용하여 다양한 플랫폼 기능에 대한 역할 및 권한을 관리할 수 있습니다. 이 문서는 플랫폼의 제품 프로필에 대한 권한을 관리하는 방법에 대한 가이드로 사용됩니다.
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
 workflow-type: tm+mt
-source-wordcount: '279'
-ht-degree: 2%
+source-wordcount: '319'
+ht-degree: 1%
 
 ---
 
@@ -28,7 +29,7 @@ ht-degree: 2%
 
 ![change-permissions-category](../images/change-permissions-category.png)
 
-권한을 추가하려면 권한 이름 옆에 있는 **더하기(+)** 아이콘을 클릭합니다. 또는 모두 **[!UICONTROL 추가를 클릭하여]** 현재 카테고리 아래의 모든 권한을 프로필에 추가할 수 있습니다. 추가된 권한은 포함된 권한 항목 *[!UICONTROL 에 나타납니다]*.
+권한을 추가하려면 권한 이름 옆에 있는 **더하기(+)** 아이콘을 클릭합니다. 또는 모두 **[!UICONTROL 추가를 클릭하여]** 현재 카테고리 아래의 모든 권한을 프로필에 추가할 수 있습니다. 추가된 권한이 포함된 권한 항목 *[!UICONTROL 에 나타납니다]*.
 
 ![추가 권한](../images/add-permissions.png)
 
