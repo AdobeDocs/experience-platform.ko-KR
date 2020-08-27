@@ -3,10 +3,11 @@ keywords: Experience Platform;download scores;customer ai;popular topics
 solution: Experience Platform
 title: 고객 AI에서 점수 다운로드
 topic: Downloading scores
+description: 고객 AI를 사용하면 점수를 쪽모이 세공 파일 형식으로 다운로드할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
 workflow-type: tm+mt
-source-wordcount: '933'
+source-wordcount: '945'
 ht-degree: 2%
 
 ---
@@ -39,7 +40,7 @@ ht-degree: 2%
 
 ## 배치 ID 검색 {#retrieve-your-batch-id}
 
-이전 단계의 데이터 세트 ID를 사용하여 일괄 처리 ID를 검색하려면 카탈로그 API를 호출해야 합니다. 조직에 속하는 배치 목록 대신 최근 성공적인 배치를 반환하기 위해 이 API 호출에 추가 쿼리 매개 변수가 사용됩니다. 추가 배치를 반환하려면 한도 쿼리 매개 변수의 숫자를 반환하려는 금액으로 증가시킵니다. 사용 가능한 쿼리 매개 변수 유형에 대한 자세한 내용은 쿼리 매개 변수를 사용하여 카탈로그 데이터 [필터링 가이드를 참조하십시오](../../../catalog/api/filter-data.md).
+이전 단계의 데이터 세트 ID를 사용하여 일괄 처리 ID를 검색하려면 카탈로그 API를 호출해야 합니다. 조직에 속하는 배치 목록 대신 최근 성공적인 배치를 반환하기 위해 이 API 호출에 추가 쿼리 매개 변수가 사용됩니다. 추가 배치를 반환하려면 한도 쿼리 매개 변수의 숫자를 반환하려는 금액으로 늘리십시오. 사용 가능한 쿼리 매개 변수 유형에 대한 자세한 내용은 쿼리 매개 변수를 사용하여 카탈로그 데이터 [필터링 가이드를 참조하십시오](../../../catalog/api/filter-data.md).
 
 **API 형식**
 
@@ -63,7 +64,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?dataSet=5
 
 **응답**
 
-성공적인 응답은 배치 ID 개체가 포함된 페이로드를 반환합니다. 이 예에서 반환되는 개체의 키 값은 배치 ID입니다 `01E5QSWCAASFQ054FNBKYV6TIQ`. 다음 API 호출에 사용할 배치 ID를 복사합니다.
+성공적인 응답은 배치 ID 개체를 포함하는 페이로드를 반환합니다. 이 예에서 반환되는 개체의 키 값은 배치 ID입니다 `01E5QSWCAASFQ054FNBKYV6TIQ`. 다음 API 호출에 사용할 배치 ID를 복사합니다.
 
 ```json
 {
@@ -255,7 +256,7 @@ GET files/{DATASETFILE_ID}?path={FILE_NAME}
 
 | 매개 변수 | 설명 |
 | --------- | ----------- |
-| `{DATASETFILE_ID}` | dataSetFile ID가 `href` 이전 단계의 [값으로](#retrieve-the-next-api-call-with-your-batch-id)반환됩니다. |
+| `{DATASETFILE_ID}` | dataSetFile ID는 `href` 이전 단계의 [값으로](#retrieve-the-next-api-call-with-your-batch-id)반환됩니다. |
 | `{FILE_NAME}` | 파일의 이름입니다. |
 
 **요청**
