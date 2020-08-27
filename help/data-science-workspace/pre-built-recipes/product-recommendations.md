@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;product recommendation recipe;Data Science Workspace;popular topics
+keywords: Experience Platform;product recommendation recipe;Data Science Workspace;popular topics;recipes;pre build recipe
 solution: Experience Platform
 title: 제품 추천 레시피
 topic: overview
+description: 제품 Recommendations 레서피를 사용하면 고객의 요구 사항과 관심사에 맞는 맞춤형 제품 추천을 제공할 수 있습니다. 정확한 예측 모델을 통해 고객의 구매 내역을 통해 고객이 관심을 가질 수 있는 제품에 대한 통찰력을 얻을 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
 workflow-type: tm+mt
-source-wordcount: '421'
-ht-degree: 3%
+source-wordcount: '463'
+ht-degree: 2%
 
 ---
 
@@ -28,7 +29,7 @@ ht-degree: 3%
 
 Adobe Experience Platform Lab 자습서를 따라 시작할 수 있습니다(아래 Lab 링크 참조). 이 자습서에서는 레서피 워크플로우에 대한 [노트북에 따라 레서피](../jupyterlab/create-a-recipe.md) 워크플로우를 수행하고 레서피 레시피를 구현하여 Jupiter 노트북에서 제품 Recommendations 레서피 [!DNL Experience Platform] 를 만드는 방법을 설명합니다 [!DNL Data Science Workspace].
 
-* [랩: 데이터 과학 작업 공간에서 미래 예측](https://expleague.azureedge.net/labs/L777/index.html)
+* [랩:데이터 과학 작업 공간에서 미래 예측](https://expleague.azureedge.net/labs/L777/index.html)
 * [랩 리소스](https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources)
 
 ## 데이터 스키마
