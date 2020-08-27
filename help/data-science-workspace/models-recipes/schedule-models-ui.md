@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;schedule a model;Data Science Workspace;popular topics
+keywords: Experience Platform;schedule a model;Data Science Workspace;popular topics;schedule scoring;schedule training
 solution: Experience Platform
 title: 모델 예약(UI)
 topic: Tutorial
+description: Adobe Experience Platform 데이터 과학 작업 공간을 사용하면 기계 학습 서비스에서 예약된 점수 지정 및 교육 실행을 설정할 수 있습니다. 트레이닝 및 점수 지정 프로세스를 자동화하면 데이터 내의 패턴을 유지하여 시간의 경과에 따라 서비스의 효율성을 유지 관리하고 개선하는 데 도움이 됩니다.
 translation-type: tm+mt
-source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
+source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
 workflow-type: tm+mt
-source-wordcount: '488'
+source-wordcount: '533'
 ht-degree: 0%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 0%
 
 # 모델 예약(UI)
 
-Adobe Experience Platform [!DNL Data Science Workspace] 를 사용하면 기계 학습 서비스에서 예약된 점수 및 교육 실행을 설정할 수 있습니다. 트레이닝 및 점수 지정 프로세스를 자동화하면 데이터 내의 패턴을 유지하여 시간의 경과에 따라 서비스의 효율성을 유지 관리하고 개선하는 데 도움이 됩니다.
+Adobe Experience Platform [!DNL Data Science Workspace] 는 기계 학습 서비스에서 예약된 점수 지정 및 교육 실행을 설정할 수 있도록 해줍니다. 트레이닝 및 점수 지정 프로세스를 자동화하면 데이터 내의 패턴을 유지하여 시간의 경과에 따라 서비스의 효율성을 유지 관리하고 개선하는 데 도움이 됩니다.
 
 이 자습서는 서비스 갤러리를 통해 기존 서비스에 대한 교육 및 점수 지정 일정을 구성하는 단계를 *[!UICONTROL 단계별로 안내합니다]*. 다음과 같은 주 섹션으로 구분됩니다.
 
