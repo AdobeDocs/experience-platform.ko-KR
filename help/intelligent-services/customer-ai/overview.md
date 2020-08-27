@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;overview;customer ai;popular topics
+keywords: Experience Platform;overview;customer ai;popular topics;customer ai overview
 solution: Experience Platform
 title: 고객 AI 개요
 topic: Customer AI overview
+description: 고객 AI는 규모에 따라 개별 프로파일에 대한 이탈 및 전환과 같은 사용자 지정 성향 점수를 생성하는 데 사용됩니다. 머신 러닝 문제를 해결하거나 알고리즘 선택, 트레이닝 또는 배포하지 않아도 됩니다.
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
 workflow-type: tm+mt
-source-wordcount: '487'
+source-wordcount: '526'
 ht-degree: 0%
 
 ---
@@ -31,7 +32,7 @@ ht-degree: 0%
 - 고객 성향 점수에 영향을 미치는 요소를 활용하여 고객 프로파일을 향상시킬 수 있습니다.
 - 영향력 있는 요인 및 성향 점수를 기반으로 고객 세그먼트를 만들 수 있습니다.
 
-고객은 다음을 수행할 수 없습니다.
+고객은 다음 용도로 빌드되지 않습니다.
 
 - 고객 AI를 사용하여 동적 가격 또는 고객이 구매하려는 가격 포인트를 예측할 수 없습니다.
 - 고객 AI는 제안을 제공하면 고객이 품목을 더 구매할 가능성이 있는지 여부를 결정할 수 없습니다. 성향 점수를 기반으로 할인 혜택을 전송하기로 결정할 수 있지만 이러한 고객을 전환하기 위한 최상의 방법은 아닙니다.
