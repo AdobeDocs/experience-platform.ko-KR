@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;retail sales recipe;Data Science Workspace;popular topics
+keywords: Experience Platform;retail sales recipe;Data Science Workspace;popular topics;recipes;pre build recipe
 solution: Experience Platform
 title: 소매 영업 방법
 topic: overview
+description: 소매 판매 레시피를 사용하면 특정 기간 동안 초기 설정된 모든 스토어에 대한 판매 예측을 예측할 수 있습니다. 정확한 예측 모델을 통해 소매업체는 수요와 가격 정책 간의 관계를 파악할 수 있을 뿐만 아니라 최적화된 가격 결정을 내림으로써 매출과 매출을 극대화할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
+source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
 workflow-type: tm+mt
-source-wordcount: '523'
+source-wordcount: '571'
 ht-degree: 2%
 
 ---
@@ -41,7 +42,7 @@ ht-degree: 2%
 
 | 필드 이름 | 유형 |
 --- | ---
-| date | 문자열 |
+| 날짜 | 문자열 |
 | 스토어 | 정수 |
 | storeType | 문자열 |
 | weeklySales | 숫자 |
@@ -58,7 +59,7 @@ ht-degree: 2%
 
 먼저 DSWRetailSales *스키마의 교육* 데이터 세트가 로드됩니다. 여기서 모델은 [그라디언트 증폭 회귀 알고리즘을 사용하여 교육됩니다](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html). 그래디언트 향상을 통해 약한 학습자(최소 확률보다 약간 더 나은 수강생)가 이전 학습자의 약점을 향상시키는 데 초점을 맞춘 일련의 학습자를 형성할 수 있다는 개념을 사용합니다. 또한 강력한 예측 모델을 만드는 데 사용할 수 있습니다.
 
-이 프로세스에는 다음과 같은 세 가지 요소가 포함됩니다. 손실 함수, 약한 학습자 및 추가 모델
+이 프로세스에는 다음과 같은 세 가지 요소가 포함됩니다.손실 함수, 약한 학습자 및 추가 모델
 
 손실 기능은 예상 결과를 예측할 수 있다는 점에서 예측 모델이 얼마나 잘 하는지를 측정합니다. - 이 레시피에서는 최소 제곱의 회귀 사용이 사용됩니다.
 
