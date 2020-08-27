@@ -5,9 +5,9 @@ title: Adobe Experience Platform 소스 커넥터 개요
 topic: overview
 description: Adobe Experience Platform은 플랫폼 서비스를 사용하여 들어오는 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 외부 소스에서 데이터를 수집할 수 있도록 허용합니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 등 다양한 소스의 데이터를 인제스트할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: c8e53a25c5b22e8d840658fe26ff47875947a6d0
 workflow-type: tm+mt
-source-wordcount: '970'
+source-wordcount: '866'
 ht-degree: 0%
 
 ---
@@ -47,68 +47,68 @@ Adobe Experience Platform은 [!DNL Platform] 서비스를 사용하여 들어오
 
 클라우드 스토리지 소스는 다운로드, 형식 지정 또는 업로드할 필요 [!DNL Platform] 없이 고유한 데이터를 가져올 수 있습니다. 인제스트된 데이터는 XDM JSON, XDM 쪽모이 세공식 또는 구분 기호로 형식을 지정할 수 있습니다. 프로세스의 모든 단계는 사용자 인터페이스를 사용하여 소스 워크플로우에 통합됩니다. 자세한 내용은 다음 관련 문서를 참조하십시오.
 
-- [[!DNL Azure Data Lake Storage Gen2]](connectors/cloud-storage/adls-gen2.md) 커넥터
-- [[!DNL Azure Blob]](connectors/cloud-storage/blob.md) 커넥터
-- [[!DNL Amazon Kinesis]](connectors/cloud-storage/kinesis.md) 커넥터
-- [[!DNL Amazon S3]](connectors/cloud-storage/s3.md) 커넥터
-- [[!DNL Apache HDFS]](connectors/cloud-storage/hdfs.md) 커넥터
-- [[!DNL Azure 이벤트 허브]](connectors/cloud-storage/eventhub.md) 커넥터
-- [[!DNL Azure 파일 저장소]](connectors/cloud-storage/azure-file-storage.md) 커넥터
-- [[!DNL FTP 및 SFTP]](connectors/cloud-storage/ftp-sftp.md) 커넥터
-- [[!DNL Google 클라우드 스토리지]](connectors/cloud-storage/google-cloud-storage.md) 커넥터
+- [[!DNL Azure Data Lake Storage Gen2] 커넥터](connectors/cloud-storage/adls-gen2.md)
+- [[!DNL Azure Blob] 커넥터](connectors/cloud-storage/blob.md)
+- [[!DNL Amazon Kinesis] 커넥터](connectors/cloud-storage/kinesis.md)
+- [[!DNL Amazon S3] 커넥터](connectors/cloud-storage/s3.md)
+- [[!DNL Apache HDFS] 커넥터](connectors/cloud-storage/hdfs.md)
+- [[!DNL Azure Event Hubs] 커넥터](connectors/cloud-storage/eventhub.md)
+- [[!DNL Azure File Storage] 커넥터](connectors/cloud-storage/azure-file-storage.md)
+- [[!DNL FTP and SFTP] 커넥터](connectors/cloud-storage/ftp-sftp.md)
+- [[!DNL Google Cloud Storage] 커넥터](connectors/cloud-storage/google-cloud-storage.md)
 
 ### 고객 관계 관리(CRM)
 
 CRM 시스템은 고객과의 관계를 구축하는 데 도움이 되는 데이터를 제공하므로 충성도를 생성하고 고객 유지율을 높일 수 있습니다. [!DNL Experience Platform] 및 [!DNL Microsoft Dynamics 365] 에서 CRM 데이터 인제스트 지원을 [!DNL Salesforce]제공합니다. 자세한 내용은 다음 관련 문서를 참조하십시오.
 
-- [[!DNL Microsoft Dynamics]](connectors/crm/ms-dynamics.md) 커넥터
-- [[!DNL Salesforce]](connectors/crm/salesforce.md) 커넥터
+- [[!DNL Microsoft Dynamics] 커넥터](connectors/crm/ms-dynamics.md)
+- [[!DNL Salesforce] 커넥터](connectors/crm/salesforce.md)
 
 ### 고객 성공 사례
 
 [!DNL Experience Platform] 타사 고객 성공 애플리케이션에서 데이터 인제스트 지원을 제공합니다. 자세한 내용은 다음 관련 문서를 참조하십시오.
 
-- [[!DNL Salesforce Service Cloud]](connectors/customer-success/salesforce-service-cloud.md) 커넥터
-- [[!DNL ServiceNow]](connectors/customer-success/servicenow.md) 커넥터
+- [[!DNL Salesforce Service Cloud] 커넥터](connectors/customer-success/salesforce-service-cloud.md)
+- [[!DNL ServiceNow] 커넥터](connectors/customer-success/servicenow.md)
 
 ### 데이터베이스
 
 [!DNL Experience Platform] 타사 데이터베이스의 데이터 인제스트 지원을 제공합니다. 특정 소스 커넥터에 대한 자세한 내용은 다음 관련 문서를 참조하십시오.
 
-- [[!DNL Amazon Redshift]](connectors/databases/redshift.md) 커넥터
-- [[!DNL Apache Hive on Azure HDInsights]](connectors/databases/hive.md) 커넥터
-- [[!DNL Apache Spark on Azure HDInsights]](connectors/databases/spark.md) 커넥터
-- [[!DNL Azure Data Explorer]](connectors/databases/data-explorer.md) 커넥터
-- [[!DNL Azure Synapse Analytics]](connectors/databases/synapse-analytics.md) 커넥터
-- [[!DNL Azure 테이블 저장소]](connectors/databases/ats.md) 커넥터
-- [[!DNL Couchbase]](connectors/databases/couchbase.md) 커넥터
-- [[!DNL Google BigQuery]](connectors/databases/bigquery.md) 커넥터
-- [[!DNL GreenPlum]](connectors/databases/greenplum.md) 커넥터
-- [[!DNL HP Vertica]](connectors/databases/hp-vertica.md) 커넥터
-- [[!DNL IBM DB2]](connectors/databases/ibm-db2.md) 커넥터
-- [[!DNL Microsoft SQL Server]](connectors/databases/sql-server.md) 커넥터
-- [[!DNL MySQL]](connectors/databases/mysql.md) 커넥터
-- [[!DNL Oracle]](connectors/databases/oracle.md) 커넥터
-- [[!DNL Phoenix]](connectors/databases/phoenix.md) 커넥터
-- [[!DNL PostgreSQL]](connectors/databases/postgres.md) 커넥터
+- [[!DNL Amazon Redshift] 커넥터](connectors/databases/redshift.md)
+- [[!DNL Apache Hive on Azure HDInsights] 커넥터](connectors/databases/hive.md)
+- [[!DNL Apache Spark on Azure HDInsights] 커넥터](connectors/databases/spark.md)
+- [[!DNL Azure Data Explorer] 커넥터](connectors/databases/data-explorer.md)
+- [[!DNL Azure Synapse Analytics] 커넥터](connectors/databases/synapse-analytics.md)
+- [[!DNL Azure Table Storage] 커넥터](connectors/databases/ats.md)
+- [[!DNL Couchbase] 커넥터](connectors/databases/couchbase.md)
+- [[!DNL Google BigQuery] 커넥터](connectors/databases/bigquery.md)
+- [[!DNL GreenPlum] 커넥터](connectors/databases/greenplum.md)
+- [[!DNL HP Vertica] 커넥터](connectors/databases/hp-vertica.md)
+- [[!DNL IBM DB2] 커넥터](connectors/databases/ibm-db2.md)
+- [[!DNL Microsoft SQL Server] 커넥터](connectors/databases/sql-server.md)
+- [[!DNL MySQL] 커넥터](connectors/databases/mysql.md)
+- [[!DNL Oracle] 커넥터](connectors/databases/oracle.md)
+- [[!DNL Phoenix] 커넥터](connectors/databases/phoenix.md)
+- [[!DNL PostgreSQL] 커넥터](connectors/databases/postgres.md)
 
 ### 마케팅 자동화
 
 [!DNL Experience Platform] 타사 마케팅 자동화 시스템에서 데이터 인제스트를 지원합니다. 특정 소스 커넥터에 대한 자세한 내용은 다음 관련 문서를 참조하십시오.
 
-- [[!DNL HubSpot]](connectors/marketing-automation/hubspot.md) 커넥터
+- [[!DNL HubSpot] 커넥터](connectors/marketing-automation/hubspot.md)
 
 ### 결제
 
 [!DNL Experience Platform] 타사 결제 시스템에서 데이터 인제스트 지원을 제공합니다. 특정 소스 커넥터에 대한 자세한 내용은 다음 관련 문서를 참조하십시오.
 
-- [[!DNL PayPal]](connectors/payments/paypal.md) 커넥터
+- [[!DNL PayPal] 커넥터](connectors/payments/paypal.md)
 
 ### 프로토콜
 
 [!DNL Experience Platform] 타사 프로토콜 시스템에서 데이터 인제스트 지원을 제공합니다. 특정 소스 커넥터에 대한 자세한 내용은 다음 관련 문서를 참조하십시오.
 
-- [[!DNL 범용 OData]](connectors/protocols/odata.md) 커넥터
+- [[!DNL Generic OData] 커넥터](connectors/protocols/odata.md)
 
 ## 데이터 수집의 소스에 대한 액세스 제어
 
