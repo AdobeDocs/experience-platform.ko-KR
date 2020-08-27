@@ -3,10 +3,11 @@ keywords: Experience Platform;developer guide;Data Science Workspace;popular top
 solution: Experience Platform
 title: 실시간 기계 학습 노드 참조 안내서
 topic: Nodes reference
+description: 노드는 그래프가 형성되는 기본 단위입니다. 각 노드는 특정 작업을 수행하고 ML 파이프라인을 나타내는 그래프를 형성하는 링크를 사용하여 서로 연결할 수 있습니다. 노드에서 수행하는 작업은 데이터 또는 스키마 변환 또는 기계 학습 유추와 같은 입력 데이터에 대한 작업을 나타냅니다. 노드는 변형되거나 유추된 값을 다음 노드로 출력합니다.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
 workflow-type: tm+mt
-source-wordcount: '594'
+source-wordcount: '666'
 ht-degree: 1%
 
 ---
