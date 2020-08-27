@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;access control permissions;access control resource types;access control api
 solution: Experience Platform
 title: 권한 및 리소스 유형의 목록 이름
 topic: developer guide
+description: Adobe Experience Platform의 액세스 제어를 통해 Adobe Admin Console을 사용하여 다양한 플랫폼 기능에 대한 역할 및 권한을 관리할 수 있습니다. /acl/reference 끝점에 GET 요청을 하여 모든 권한 및 리소스 유형의 이름을 나열할 수 있습니다. 그런 다음 API 호출에서 이러한 이름을 사용하여 현재 사용자에 대한 효과적인 정책을 볼 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
 workflow-type: tm+mt
-source-wordcount: '123'
+source-wordcount: '184'
 ht-degree: 1%
 
 ---
