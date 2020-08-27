@@ -3,11 +3,11 @@ keywords: Experience Platform;home;popular topics;catalog service;catalog;Catalo
 solution: Experience Platform
 title: 카탈로그 서비스 개요
 topic: overview
-description: 카탈로그 서비스는 Adobe Experience Platform 내 데이터 위치와 혈통에 대한 기록 시스템이다. Experience Platform에 인제스트된 모든 데이터는 파일과 디렉터리로 Data Lake에 저장되지만, 카탈로그는 조회 및 모니터링을 위해 이러한 파일 및 디렉토리의 메타데이터와 설명을 저장합니다.
+description: 카탈로그서비스란 Adobe Experience Platform의 데이터 위치와 혈통에 대한 기록 시스템이다. Experience Platform에 인제스트된 모든 데이터는 파일과 디렉터리로 Data Lake에 저장되지만, 카탈로그는 조회 및 모니터링을 위해 이러한 파일 및 디렉토리의 메타데이터와 설명을 저장합니다.
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 71678b10c9e137016ea404305b272508b9c8cabe
 workflow-type: tm+mt
-source-wordcount: '783'
+source-wordcount: '782'
 ht-degree: 5%
 
 ---
@@ -64,4 +64,4 @@ XDM 시스템에 대한 자세한 내용은 [XDM 시스템 개요를 참조하�
 
 ## 다음 단계
 
-본 문서는 더 큰 범위 내에서 [!DNL Catalog Service] 작동하는 방식과 기능에 대한 소개를 제공합니다 [!DNL Experience Platform]. 해당 API의 다른 끝점과 상호 작용하는 단계는 [카탈로그 개발자 안내서를](api/getting-started.md) 참조하십시오 [!DNL Catalog] . 또한 API 응답으로 반환되는 데이터를 제한하는 모범 사례를 따르려면 카탈로그 데이터 [](api/filter-data.md) 필터링 지침을 참조하는 것이 좋습니다.
+본 문서는 더 큰 범위 내에서 [!DNL Catalog Service] 작동하는 방식과 기능에 대한 소개를 제공합니다 [!DNL Experience Platform]. 해당 API의 다른 끝점과 상호 작용하는 단계는 [[!DNL Catalog] 개발자 안내서를](api/getting-started.md) 참조하십시오 [!DNL Catalog] . 또한 API 응답으로 반환되는 데이터를 제한하는 모범 사례를 따르려면 카탈로그 데이터 [](api/filter-data.md) 필터링 지침을 참조하는 것이 좋습니다.
