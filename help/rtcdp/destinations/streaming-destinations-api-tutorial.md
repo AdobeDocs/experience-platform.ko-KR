@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 스트리밍 대상에 연결 및 데이터 활성화
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1809'
+source-wordcount: '1818'
 ht-degree: 2%
 
 ---
@@ -30,8 +30,8 @@ Adobe의 실시간 CDP에서 사용자 인터페이스를 사용하여 대상에
 
 이 가이드는 Adobe Experience Platform의 다음 구성 요소에 대한 작업 이해를 필요로 합니다.
 
-* [!DNL Experience Data Model (XDM) System](../../xdm/home.md):Experience Platform이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
-* [!DNL Catalog Service](../../catalog/home.md): [!DNL Catalog] 은 Experience Platform 내의 데이터 위치 및 계열에 대한 기록 시스템입니다.
+* [[!DNL 경험 데이터 모델(XDM) 시스템]](../../xdm/home.md):Experience Platform이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
+* [[!DNL 카탈로그 서비스]](../../catalog/home.md): [!DNL Catalog] 은 Experience Platform 내의 데이터 위치 및 계열에 대한 기록 시스템입니다.
 * [샌드박스](../../sandboxes/home.md):Experience Platform은 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되도록 단일 플랫폼 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
 
 다음 섹션에서는 Adobe 실시간 CDP에서 스트리밍 대상으로 데이터를 활성화하기 위해 알아야 할 추가 정보를 제공합니다.
