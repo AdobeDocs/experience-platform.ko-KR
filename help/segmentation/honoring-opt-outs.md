@@ -5,9 +5,9 @@ title: 옵트아웃 준수
 topic: overview
 description: 'Experience Platform을 통해 고객은 실시간 고객 프로필 내에서 데이터의 사용 및 저장과 관련된 옵트아웃 요청을 보낼 수 있습니다.] 이러한 수신 거부 요청은 캘리포니아 주민들에게 개인 데이터를 액세스 및 삭제할 권리와 개인 데이터의 판매 또는 공개(및 대상)를 알 수 있는 권한을 제공하는 캘리포니아 소비자 개인 정보 보호법(CPA)의 일부입니다. '
 translation-type: tm+mt
-source-git-commit: 0fc356b67af4d34e35cd9329385ec284d9336953
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1006'
+source-wordcount: '1030'
 ht-degree: 0%
 
 ---
@@ -23,10 +23,10 @@ ht-degree: 0%
 
 옵트아웃 요청을 준수하려면 관련된 다양한 [!DNL Adobe Experience Platform] 서비스를 이해해야 합니다. 옵트아웃 요청을 사용하기 전에 다음 서비스에 대한 설명서를 검토하십시오.
 
-- [!DNL Real-time Customer Profile](../profile/home.md):여러 소스에서 수집한 데이터를 기반으로 통합된 고객 프로필을 실시간으로 제공합니다.
-- [!DNL Adobe Experience Platform Segmentation Service](./home.md):데이터를 통해 고객 세그먼트를 만들 수 [!DNL Real-time Customer Profile] 있습니다.
-- [!DNL Experience Data Model (XDM)](../xdm/home.md):Platform(플랫폼)이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
-- [!DNL Adobe Experience Platform Privacy Service](../privacy-service/home.md):조직이 내부 고객 데이터와 관련된 데이터 개인 정보 보호 규정 준수를 자동화하도록 도와줍니다 [!DNL Platform].
+- [[!DNL 실시간 고객 프로필]](../profile/home.md):여러 소스에서 수집한 데이터를 기반으로 통합된 고객 프로필을 실시간으로 제공합니다.
+- [[!DNL Adobe Experience Platform 세그멘테이션 서비스]](./home.md):데이터를 통해 고객 세그먼트를 만들 수 [!DNL Real-time Customer Profile] 있습니다.
+- [[!DNL 경험 데이터 모델(XDM)]](../xdm/home.md):Platform(플랫폼)이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
+- [[!DNL Adobe Experience Platform Privacy Service]](../privacy-service/home.md):조직이 내부 고객 데이터와 관련된 데이터 개인 정보 보호 규정 준수를 자동화하도록 도와줍니다 [!DNL Platform].
 
 ## 옵트아웃 믹싱
 
@@ -132,4 +132,4 @@ In some instances, such as building a segment of people who have opted out, it m
 
 API와 사용자 인터페이스를 통해 세그먼트 정의 및 대상을 사용한 작업을 비롯한 세그멘테이션에 대한 자세한 내용은 세그멘테이션 [개요를 읽으십시오](./home.md).
 
-법률 및 조직의 개인 정보 보호 규정 준수를 자동화하는 방법 [!DNL Platform]을 비롯하여 내부 데이터 개인 정보 [!DNL Privacy Service] [!DNL Privacy Service](../privacy-service/home.md)에 대한 자세한 내용은
+법률 및 조직 개인 정보 보호 규정 [!DNL Platform]을 자동으로 준수하는 방법을 [!DNL Privacy Service] 비롯하여 내부 데이터 개인 정보에 대한 자세한 내용은 [[!DNL Privacy Service]의 설명서를 참조하십시오](../privacy-service/home.md).
