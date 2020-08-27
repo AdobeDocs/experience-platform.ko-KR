@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 데이터 사용 정책 만들기
 topic: policies
 translation-type: tm+mt
-source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1186'
+source-wordcount: '1194'
 ht-degree: 2%
 
 ---
@@ -22,9 +22,9 @@ ht-degree: 2%
 
 이 자습서에서는 DULE 정책 만들기 및 평가와 관련된 다음 주요 개념을 제대로 이해해야 합니다.
 
-* [!DNL Data Governance](../home.md): 데이터 사용 규정 준수를 [!DNL Platform] 적용하는 프레임워크입니다.
-* [데이터 사용 레이블](../labels/overview.md): 데이터 사용 레이블은 XDM 데이터 필드에 적용되어 데이터 액세스 방법에 대한 제한을 지정합니다.
-* [!DNL Experience Data Model (XDM)](../../xdm/home.md): 고객 경험 데이터를 [!DNL Platform] 구성하는 표준화된 프레임워크
+* [[!DNL 데이터 거버넌스]](../home.md):데이터 사용 규정 준수를 [!DNL Platform] 적용하는 프레임워크입니다.
+* [데이터 사용 레이블](../labels/overview.md):데이터 사용 레이블은 XDM 데이터 필드에 적용되어 데이터 액세스 방법에 대한 제한을 지정합니다.
+* [[!DNL 경험 데이터 모델(XDM)]](../../xdm/home.md):고객 경험 데이터를 [!DNL Platform] 구성하는 표준화된 프레임워크
 * [샌드박스](../../sandboxes/home.md): [!DNL Experience Platform] 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되도록 단일 [!DNL Platform] 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
 
 이 자습서를 시작하기 전에 필수 헤더 및 예제 API 호출 읽기 방법 등 DULE [API를 성공적으로 호출하기 위해 알아야 하는 중요한 정보는](../api/getting-started.md) 개발자 안내서를 [!DNL Policy Service] 참조하십시오.
@@ -123,7 +123,7 @@ curl -X GET \
 
 사용할 마케팅 작업을 찾으면 해당 `href` 속성의 값을 기록합니다. 이 값은 DULE 정책을 [만드는 다음 단계 동안 사용됩니다](#create-policy).
 
-### 새 마케팅 작업 만들기 {#create-new}
+### Create a new marketing action {#create-new}
 
 종단점에 PUT 요청을 만들고 요청 경로 끝에 마케팅 `/marketingActions/custom/` 작업의 이름을 제공하여 새 마케팅 작업을 만들 수 있습니다.
 
@@ -193,7 +193,7 @@ curl -X PUT \
 
 새 정책을 만들려면 마케팅 작업을 금지하는 DULE 레이블 표현식과 함께 마케팅 작업의 URI ID를 제공해야 합니다.
 
-이 식을 **정책 표현식이라고** 하며 (A) DULE 레이블 또는 (B) 연산자와 피연산자를 포함하지만 둘 다 포함하는 개체입니다. 또한 각 피연산자는 정책 표현식 개체이기도 합니다. 예를 들어 레이블이 있는 경우 데이터를 제3자로 내보내는 것에 관한 정책을 사용할 수 `C1 OR (C3 AND C7)` 없습니다. 이 식은 다음과 같이 지정됩니다.
+이 식을 **정책 표현식이라고** 하며 (A) DULE 레이블 또는 (B) 연산자와 피연산자를 포함하지만 둘 다 포함하는 개체입니다. 또한 각 피연산자는 정책 표현식 개체이기도 합니다. 예를 들어 레이블이 있는 경우 데이터 제3자로 내보내기에 관한 정책을 사용할 수 `C1 OR (C3 AND C7)` 없습니다. 이 식은 다음과 같이 지정됩니다.
 
 ```json
 "deny": {
@@ -369,7 +369,7 @@ curl -X PATCH \
 
 **응답**
 
-성공적인 응답은 HTTP 상태 200(OK)과 업데이트된 정책의 세부 정보를 `status` 이제 로 설정합니다 `ENABLED`.
+성공적인 응답은 HTTP 상태 200(OK) 및 업데이트된 정책의 세부 정보를 `status` 이제 로 설정합니다 `ENABLED`.
 
 ```json
 {
