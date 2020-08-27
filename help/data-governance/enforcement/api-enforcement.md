@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Policy enforcement;Automatic enforcement;API-based enforcement;data governance
 solution: Experience Platform
 title: 정책 서비스 API를 사용하여 데이터 사용 정책 적용
 topic: enforcement
+description: 데이터에 대한 데이터 사용 레이블을 만들고 해당 레이블에 대한 마케팅 작업에 대한 사용 정책을 만들었다면 DULE Policy Service API를 사용하여 데이터 세트 또는 임의 레이블 그룹에 대해 수행된 마케팅 작업이 정책 위반인지 여부를 평가할 수 있습니다. 그런 다음 API 응답을 기반으로 정책 위반을 처리하도록 자체 내부 프로토콜을 설정할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
 workflow-type: tm+mt
-source-wordcount: '874'
-ht-degree: 2%
+source-wordcount: '941'
+ht-degree: 1%
 
 ---
 
