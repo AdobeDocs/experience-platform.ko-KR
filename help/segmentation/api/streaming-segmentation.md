@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 스트리밍 세분화
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 2adadad855edd01436a6961cc9be3e58e6483732
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1377'
+source-wordcount: '1388'
 ht-degree: 1%
 
 ---
@@ -26,9 +26,9 @@ ht-degree: 1%
 
 이 개발자 가이드는 스트리밍 세그멘테이션과 관련된 다양한 [!DNL Adobe Experience Platform] 서비스에 대해 작업해야 합니다. 이 자습서를 시작하기 전에 다음 서비스에 대한 설명서를 검토하십시오.
 
-- [!DNL Real-time Customer Profile](../../profile/home.md):여러 소스에서 집계된 데이터를 기반으로 한 통합 소비자 프로필을 실시간으로 제공합니다.
-- [!DNL Segmentation](../home.md):데이터에서 세그먼트 및 대상을 만들 수 있는 기능을 [!DNL Real-time Customer Profile] 제공합니다.
-- [!DNL Experience Data Model (XDM)](../../xdm/home.md):고객 경험 데이터를 [!DNL Platform] 구성하는 표준화된 프레임워크
+- [[!DNL 실시간 고객 프로필]](../../profile/home.md):여러 소스에서 집계된 데이터를 기반으로 한 통합 소비자 프로필을 실시간으로 제공합니다.
+- [[!DNL 세그멘테이션]](../home.md):데이터에서 세그먼트 및 대상을 만들 수 있는 기능을 [!DNL Real-time Customer Profile] 제공합니다.
+- [[!DNL 경험 데이터 모델(XDM)]](../../xdm/home.md):고객 경험 데이터를 [!DNL Platform] 구성하는 표준화된 프레임워크
 
 다음 섹션에서는 API를 성공적으로 호출하기 위해 알아야 할 추가 정보를 [!DNL Platform] 제공합니다.
 
