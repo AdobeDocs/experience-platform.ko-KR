@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 인증 및 액세스 Experience Platform API
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '850'
+source-wordcount: '853'
 ht-degree: 3%
 
 ---
@@ -35,7 +35,7 @@ API를 성공적으로 호출하려면 [!DNL Experience Platform] 다음이 필�
 
 ### Adobe ID 만들기
 
-Adobe ID이 없는 경우 다음 단계를 사용하여을 만들 수 있습니다.
+Adobe ID이 없는 경우 다음 단계를 사용하여를 만들 수 있습니다.
 
 1. Adobe 개발자 [콘솔로 이동](https://console.adobe.io)
 2. 새 계정 **[!UICONTROL 만들기를 클릭합니다.]**
@@ -47,7 +47,7 @@ Adobe I/O에 대한 통합을 만들기 전에 계정에 IMS 조직의 제품에
 
 **개발자 이용**
 
-조직의 [!DNL Admin Console] 관리자에게 연락하여 사용자를 조직에서 사용하는 제품 중 하나의 개발자로 추가합니다 [!DNL Admin Console](https://adminconsole.adobe.com/).
+조직 [!DNL Admin Console] 의 관리자에게 문의하여 [[!DNL Admin Console]을 사용하여 조직의 제품 중 하나에 대한 개발자로 사용자를 추가하십시오](https://adminconsole.adobe.com/).
 
 ![](images/authentication/assign-developer.png)
 
@@ -85,13 +85,13 @@ Adobe 개발자 콘솔을 사용하여 다음 세 가지 액세스 자격 증명
 
 ### 일회성 설정
 
-Adobe 개발자 [콘솔로](https://www.adobe.com/go/devs_console_ui) 이동하여 Adobe ID으로 로그인합니다. 그런 다음 Adobe 개발자 콘솔 설명서에서 빈 프로젝트 [를 만드는](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) 자습서에 나와 있는 단계를 따릅니다.
+Adobe 개발자 [콘솔로](https://www.adobe.com/go/devs_console_ui) 이동하여 Adobe ID에 로그인합니다. 그런 다음 Adobe 개발자 콘솔 설명서에서 빈 프로젝트 [를 만드는](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) 자습서에 나와 있는 단계를 따릅니다.
 
 새 프로젝트를 만들었으면 프로젝트 개요 **[!UICONTROL 화면에서 API]** _추가_ 를클릭합니다.
 
 ![](images/authentication/add-api-button.png)
 
-API _추가_ 화면이 나타납니다. Adobe Experience Platform에 대한 제품 아이콘을 클릭한 다음 **[!UICONTROL Experience Platform API를]** 선택한 다음 다음을 **[!UICONTROL 클릭합니다]**.
+API _추가_ 화면이 나타납니다. Adobe Experience Platform의 제품 아이콘을 클릭한 다음 **[!UICONTROL Experience Platform API]** 를 선택한 다음 다음을 **[!UICONTROL 클릭합니다]**.
 
 ![](images/authentication/add-platform-api.png)
 
@@ -155,7 +155,7 @@ curl -X GET https://platform.adobe.io/data/foundation/schemaregistry/global/clas
 
 ## JWT 인증 및 API 호출에 Postman 사용
 
-[Postman](https://www.getpostman.com/) 은 RESTful API를 사용하여 작업하는 데 널리 사용되는 도구입니다. 이 [중간 게시물에서는](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) JWT 인증을 자동으로 수행하고 이를 사용하여 Adobe Experience Platform API를 사용하는 방법을 설명합니다.
+[Postman](https://www.getpostman.com/) 은 RESTful API를 사용하여 작업하는 데 널리 사용되는 도구입니다. 이 [중간 게시물은](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) JWT 인증을 자동으로 수행하고 이를 사용하여 Adobe Experience Platform API를 사용하는 방법에 대해 설명합니다.
 
 ## 다음 단계
 
