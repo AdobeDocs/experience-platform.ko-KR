@@ -3,10 +3,11 @@ keywords: Experience Platform;developer guide;Data Science Workspace;popular top
 solution: Experience Platform
 title: 실시간 머신 러닝 개요
 topic: Overview
+description: 실시간 머신 러닝은 최종 사용자에게 디지털 경험 컨텐츠의 연관성을 크게 향상시킬 수 있습니다. 이는 Adobe Experience Edge에서 실시간 검토 및 지속적인 학습을 활용함으로써 가능합니다.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
 workflow-type: tm+mt
-source-wordcount: '504'
+source-wordcount: '535'
 ht-degree: 1%
 
 ---
