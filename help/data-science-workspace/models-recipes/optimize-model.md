@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;optimize;model;Data Science Workspace;popular topics
+keywords: Experience Platform;optimize;model;Data Science Workspace;popular topics;model insights
 solution: Experience Platform
 title: 모델 최적화
 topic: Tutorial
+description: Model Insights Framework는 데이터 과학자에게 실험을 기반으로 최적의 기계 학습 모델을 위한 신속하고 정확한 선택을 할 수 있는 데이터 과학 작업 공간의 툴을 제공합니다.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
 workflow-type: tm+mt
-source-wordcount: '1221'
+source-wordcount: '1249'
 ht-degree: 0%
 
 ---
