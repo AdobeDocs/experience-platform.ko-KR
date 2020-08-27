@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics
+keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;engines;sensei machine learning api
 solution: Experience Platform
 title: 엔진
 topic: Developer guide
+description: 엔진은 데이터 과학 작업 영역의 머신 러닝 모델을 위한 기초 역할을 합니다. 특정 문제를 해결하는 기계 학습 알고리즘, 기능 엔지니어링 수행 기능 파이프라인 또는 둘 다 포함되어 있습니다.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
 workflow-type: tm+mt
-source-wordcount: '1118'
+source-wordcount: '1147'
 ht-degree: 3%
 
 ---
