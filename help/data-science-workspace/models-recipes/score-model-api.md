@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;Score a model;Data Science Workspace;popular topics
+keywords: Experience Platform;Score a model;Data Science Workspace;popular topics;sensei machine learning api
 solution: Experience Platform
 title: 모델 점수 지정(API)
 topic: Tutorial
+description: 이 자습서에서는 Sensei Machine Learning API를 활용하여 실험 및 실험 실행을 만드는 방법을 보여 줍니다.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
 workflow-type: tm+mt
-source-wordcount: '508'
+source-wordcount: '529'
 ht-degree: 1%
 
 ---
@@ -34,10 +35,10 @@ curl -X POST \
   -d '{JSON_PAYLOAD}'
 ```
 
-`{IMS_ORG}`: 고유한 Adobe Experience Platform 통합에서 IMS 조직 자격 증명을 찾았습니다.\
-`{ACCESS_TOKEN}`: 인증 후 제공된 특정 베어러 토큰 값.\
-`{API_KEY}`: 고유한 Adobe Experience Platform 통합에 있는 특정 API 키 값입니다.\
-`{JSON_PAYLOAD}`: 전송 대상 Run 개체를 실험해 보십시오. 튜토리얼에서 사용하는 예는 다음과 같습니다.
+`{IMS_ORG}`:고유한 Adobe Experience Platform 통합에 있는 IMS 조직 자격 증명을 찾을 수 있습니다.\
+`{ACCESS_TOKEN}`:인증 후 제공된 특정 베어러 토큰 값.\
+`{API_KEY}`:고유한 Adobe Experience Platform 통합에 있는 특정 API 키 값입니다.\
+`{JSON_PAYLOAD}`:전송 대상 Run 개체를 실험해 보십시오. 튜토리얼에서 사용하는 예는 다음과 같습니다.
 
 ```JSON
 {
@@ -67,8 +68,8 @@ curl -X POST \
 }
 ```
 
-`{INSTANCE_ID}`: MLInestment를 나타내는 ID입니다.\
-`{MODEL_ID}`: 교육된 모델을 나타내는 ID입니다.
+`{INSTANCE_ID}`:MLInestment를 나타내는 ID입니다.\
+`{MODEL_ID}`:교육된 모델을 나타내는 ID입니다.
 
 다음은 예약된 실험을 만든 후의 응답입니다.
 
@@ -102,8 +103,8 @@ curl -X POST \
 }
 ```
 
-`{EXPERIMENT_ID}`: 실험을 나타내는 ID입니다.\
-`{INSTANCE_ID}`: MLInestment를 나타내는 ID입니다.
+`{EXPERIMENT_ID}`:실험을 나타내는 ID입니다.\
+`{INSTANCE_ID}`:MLInestment를 나타내는 ID입니다.
 
 
 ### 채점용 실험 실행 만들기
@@ -122,11 +123,11 @@ curl -X POST \
   -d '{JSON_PAYLOAD}'
 ```
 
-`{IMS_ORG}`: 고유한 Adobe Experience Platform 통합에서 IMS 조직 자격 증명을 찾았습니다.\
-`{ACCESS_TOKEN}`: 인증 후 제공된 특정 베어러 토큰 값.\
-`{API_KEY}`: 고유한 Adobe Experience Platform 통합에 있는 특정 API 키 값입니다.\
-`{EXPERIMENT_ID}`: 타깃팅할 실험에 해당하는 ID. 실험 생성 시 응답에서 찾을 수 있습니다.\
-`{JSON_PAYLOAD}`: 게시할 데이터입니다. 튜토리얼에서 사용하는 예는 다음과 같습니다.
+`{IMS_ORG}`:고유한 Adobe Experience Platform 통합에 있는 IMS 조직 자격 증명을 찾을 수 있습니다.\
+`{ACCESS_TOKEN}`:인증 후 제공된 특정 베어러 토큰 값.\
+`{API_KEY}`:고유한 Adobe Experience Platform 통합에 있는 특정 API 키 값입니다.\
+`{EXPERIMENT_ID}`:타깃팅할 실험에 해당하는 ID. 실험 생성 시 응답에서 찾을 수 있습니다.\
+`{JSON_PAYLOAD}`:게시할 데이터입니다. 튜토리얼에서 사용하는 예는 다음과 같습니다.
 
 ```JSON
 {
@@ -145,7 +146,7 @@ curl -X POST \
 }
 ```
 
-`{MODEL_ID}`: 모델에 해당하는 ID.
+`{MODEL_ID}`:모델에 해당하는 ID.
 
 실험 실행 생성의 응답은 다음과 같습니다.
 
@@ -168,8 +169,8 @@ curl -X POST \
 }
 ```
 
-`{EXPERIMENT_ID}`:  실행(Run)이 속한 실험에 해당하는 ID입니다.\
-`{EXPERIMENT_RUN_ID}`: 방금 만든 실험 실행에 해당하는 ID입니다.
+`{EXPERIMENT_ID}`: 실행(Run)이 속한 실험에 해당하는 ID입니다.\
+`{EXPERIMENT_RUN_ID}`:방금 만든 실험 실행에 해당하는 ID입니다.
 
 
 ### 예약된 실험 실행에 대한 실험 실행 상태 검색
@@ -185,9 +186,9 @@ curl -X GET \
   -H 'x-gw-ims-org-id: {IMS_ORG}'
 ```
 
-`{EXPERIMENT_ID}`:  실행(Run)이 속한 실험에 해당하는 ID입니다.\
-`{ACCESS_TOKEN}`: 인증 후 제공된 특정 베어러 토큰 값.\
-`{IMS_ORG}`: 고유한 Adobe Experience Platform 통합에서 IMS 조직 자격 증명을 찾았습니다.
+`{EXPERIMENT_ID}`: 실행(Run)이 속한 실험에 해당하는 ID입니다.\
+`{ACCESS_TOKEN}`:인증 후 제공된 특정 베어러 토큰 값.\
+`{IMS_ORG}`:고유한 Adobe Experience Platform 통합에 있는 IMS 조직 자격 증명을 찾을 수 있습니다.
 
 특정 실험에 대해 여러 개의 실험 실행이 있으므로, 반환된 응답에는 Run ID가 배열에 포함됩니다.
 
@@ -212,8 +213,8 @@ curl -X GET \
 }
 ```
 
-`{EXPERIMENT_RUN_ID}`: 실험 실행에 해당하는 ID입니다.\
-`{EXPERIMENT_ID}`:  실행(Run)이 속한 실험에 해당하는 ID입니다.
+`{EXPERIMENT_RUN_ID}`:실험 실행에 해당하는 ID입니다.\
+`{EXPERIMENT_ID}`: 실행(Run)이 속한 실험에 해당하는 ID입니다.
 
 ### 예약된 실험 중지 및 삭제
 
@@ -228,9 +229,9 @@ curl -X DELETE \
   -H 'x-gw-ims-org-id: {IMS_ORG}'
 ```
 
-`{EXPERIMENT_ID}`:  실험에 해당하는 ID.\
-`{ACCESS_TOKEN}`: 인증 후 제공된 특정 베어러 토큰 값.\
-`{IMS_ORG}`: 고유한 Adobe Experience Platform 통합에서 IMS 조직 자격 증명을 찾았습니다.
+`{EXPERIMENT_ID}`: 실험에 해당하는 ID.\
+`{ACCESS_TOKEN}`:인증 후 제공된 특정 베어러 토큰 값.\
+`{IMS_ORG}`:고유한 Adobe Experience Platform 통합에 있는 IMS 조직 자격 증명을 찾을 수 있습니다.
 
 >[!NOTE]
 >
