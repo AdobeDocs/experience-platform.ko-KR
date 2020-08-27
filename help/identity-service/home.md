@@ -5,7 +5,7 @@ title: Adobe Experience Platform ID 서비스
 topic: overview
 description: Adobe Experience Platform ID 서비스를 사용하면 다양한 디바이스와 시스템에 ID를 연결함으로써 고객 행동과 고객의 행동을 보다 정확하게 파악할 수 있으므로 효과적이고 개인화된 경험을 실시간으로 전달할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 8b1b61b6446b28f92d6cf221003674fa09716c53
 workflow-type: tm+mt
 source-wordcount: '1711'
 ht-degree: 0%
