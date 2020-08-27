@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 스트리밍 시계열 데이터
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1126'
+source-wordcount: '1143'
 ht-degree: 2%
 
 ---
@@ -20,8 +20,8 @@ ht-degree: 2%
 
 이 자습서에서는 다양한 Adobe Experience Platform 서비스에 대한 작업 지식이 필요합니다. 이 자습서를 시작하기 전에 다음 서비스에 대한 설명서를 검토하십시오.
 
-- [!DNL Experience Data Model (XDM)](../../xdm/home.md):경험 데이터를 [!DNL Platform] 구성하는 표준화된 프레임워크
-- [!DNL Real-time Customer Profile](../../profile/home.md):여러 소스에서 집계된 데이터를 기반으로 통합된 소비자 프로필을 실시간으로 제공합니다.
+- [[!DNL 경험 데이터 모델(XDM)]](../../xdm/home.md):경험 데이터를 [!DNL Platform] 구성하는 표준화된 프레임워크
+- [[!DNL 실시간 고객 프로필]](../../profile/home.md):여러 소스에서 집계된 데이터를 기반으로 통합된 소비자 프로필을 실시간으로 제공합니다.
 - [스키마 레지스트리 개발자 가이드](../../xdm/api/getting-started.md):API의 사용 가능한 각 끝점과 이러한 끝점에 대한 [!DNL Schema Registry] 호출 방법을 다루는 포괄적인 안내서입니다. 여기에는 이 자습서 전체의 호출에 표시되는 사용자 `{TENANT_ID}`를 알고, 통합 데이터 세트를 만드는 데 사용되는 스키마를 만드는 방법을 아는 것이 포함됩니다.
 
 또한 이 자습서에서는 스트리밍 연결을 이미 만들어야 합니다. 스트리밍 연결 만들기에 대한 자세한 내용은 스트리밍 연결 [만들기 자습서를 참조하십시오](./create-streaming-connection.md).
@@ -99,7 +99,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/sch
 | -------- | ----------- |
 | `title` | 스키마에 사용할 이름입니다. 이 이름은 고유해야 합니다. |
 | `description` | 만들고 있는 스키마에 대한 의미 있는 설명입니다. |
-| `meta:immutableTags` | 이 예에서, 태그는 데이터를 유지하는 데 사용됩니다 `union` [!DNL Real-time Customer Profile](../../profile/home.md). |
+| `meta:immutableTags` | 이 예에서, `union` 태그는 데이터를 [[!DNL 실시간 고객 프로필]으로 유지하는 데 사용됩니다](../../profile/home.md). |
 
 **응답**
 
@@ -401,7 +401,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
 
 ## 새로 인제스트한 시계열 데이터 검색
 
-이전에 인제스트한 레코드의 유효성을 확인하려면 를 사용하여 시간 시리즈 데이터 [!DNL Profile Access API](../../profile/api/entities.md) 를 검색할 수 있습니다. 종단점에 대한 GET 요청을 사용하고 선택적 쿼리 매개 변수를 사용하여 `/access/entities` 수행할 수 있습니다. 여러 매개 변수를 앰퍼샌드(&amp;)로 구분하여 사용할 수 있습니다.&quot;
+이전에 인제스트한 레코드의 유효성을 검사하려면 [[!DNL 프로필 액세스 API]를 사용하여](../../profile/api/entities.md) 시간 시리즈 데이터를 검색할 수 있습니다. 종단점에 대한 GET 요청을 사용하고 선택적 쿼리 매개 변수를 사용하여 `/access/entities` 수행할 수 있습니다. 여러 매개 변수를 앰퍼샌드(&amp;)로 구분하여 사용할 수 있습니다.&quot;
 
 >[!NOTE]
 >
