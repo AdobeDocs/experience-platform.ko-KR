@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics
+keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;insights;sensei machine learning api
 solution: Experience Platform
 title: 인사이트
 topic: Developer guide
+description: 인사이트에는 관련 평가 지표를 표시하여 데이터 과학자가 최적의 ML 모델을 평가하고 선택할 수 있도록 하는 지표가 포함되어 있습니다.
 translation-type: tm+mt
-source-git-commit: 7bd6807e620febe134f8c75e67c0f723850e49c1
+source-git-commit: 194a29124949571638315efe00ff0b04bff19303
 workflow-type: tm+mt
-source-wordcount: '474'
+source-wordcount: '497'
 ht-degree: 3%
 
 ---
@@ -39,7 +40,7 @@ curl -X GET \
 
 **응답**
 
-성공적인 응답은 인사이트 목록을 포함하는 페이로드를 반환하고 각 인사이트에 고유 식별자( `id` )가 있습니다. 또한 인사이트 이벤트 및 지표 데이터 다음의 특정 인사이트와 연관된 고유 식별자를 `context` 포함하는 고유 식별자를 받게 됩니다.
+성공적인 응답은 인사이트 목록을 포함하는 페이로드를 반환하고 각 인사이트에 고유 식별자( `id` )가 있습니다. 또한 인사이트 이벤트 및 지표 데이터 다음의 특정 인사이트와 연관된 고유 식별자를 포함한 고유 식별자를 받게 됩니다 `context` .
 
 ```json
 {
