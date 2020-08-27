@@ -3,10 +3,11 @@ keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;popula
 solution: Experience Platform
 title: Git을 사용하여 JupiterLab에서 공동 작업
 topic: Tutorial
+description: Git은 소프트웨어 개발 중에 소스 코드의 변경 사항을 추적할 수 있는 분산 버전 제어 시스템입니다. Git은 데이터 과학 작업 공간 JupiterLab 환경 내에 사전 설치되어 있습니다.
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
 workflow-type: tm+mt
-source-wordcount: '255'
+source-wordcount: '280'
 ht-degree: 1%
 
 ---
