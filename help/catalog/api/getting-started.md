@@ -5,9 +5,9 @@ title: 카탈로그 서비스 개발자 가이드
 topic: developer guide
 description: 이 개발자 안내서에서는 카탈로그 API 사용을 시작하는 데 도움이 되는 단계를 제공합니다. 그런 다음 가이드는 카탈로그를 사용하여 키 작업을 수행하기 위한 샘플 API 호출을 제공합니다.
 translation-type: tm+mt
-source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '584'
+source-wordcount: '589'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 [!DNL Catalog] 여러 종류의 리소스 및 작업에 대한 메타데이터를 [!DNL Experience Platform]추적합니다. 이 개발자 가이드는 이러한 리소스를 만들고 관리하는 것과 관련된 다양한 [!DNL Experience Platform] 서비스에 대해 작업해야 합니다.
 
-* [!DNL Experience Data Model (XDM)](../../xdm/home.md):고객 경험 데이터를 [!DNL Platform] 구성하는 표준화된 프레임워크
+* [[!DNL 경험 데이터 모델(XDM)]](../../xdm/home.md):고객 경험 데이터를 [!DNL Platform] 구성하는 표준화된 프레임워크
 * [일괄 처리](../../ingestion/batch-ingestion/overview.md):CSV 및 [!DNL Experience Platform] Portable과 같은 데이터 파일의 데이터를 인제스트 및 저장하는 방법입니다.
 * [스트리밍 통합](../../ingestion/streaming-ingestion/overview.md):클라이언트 [!DNL Experience Platform] 및 서버측 디바이스에서 실시간으로 데이터를 인제스트 및 저장하는 방법
 
@@ -57,7 +57,7 @@ API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 
 
 API에 대한 GET 요청을 수행할 때 [!DNL Catalog] 필요한 개체 및 속성만 반환하기 위해 요청에 쿼리 매개 변수를 포함하는 것이 좋습니다. 필터링되지 않은 요청은 응답 페이로드가 지난 3GB에 도달하여 전반적인 성능이 저하될 수 있습니다.
 
-요청 경로에 해당 ID를 포함하거나 응답 필터와 같은 쿼리 매개 변수 `properties` 를 사용하여 특정 개체를 볼 `limit` 수 있습니다. 필터는 쿼리 매개 변수로 전달된 필터가 우선하므로 헤더와 쿼리 매개 변수로 전달될 수 있습니다. 자세한 내용은 카탈로그 데이터 [필터링에](filter-data.md) 관한 문서를 참조하십시오.
+요청 경로에 해당 ID를 포함하거나 응답 필터와 같은 쿼리 매개 변수 `properties` 를 사용하여 특정 개체를 볼 수 `limit` 있습니다. 필터는 쿼리 매개 변수로 전달된 필터가 우선하므로 헤더와 쿼리 매개 변수로 전달될 수 있습니다. 자세한 내용은 카탈로그 데이터 [필터링에](filter-data.md) 관한 문서를 참조하십시오.
 
 일부 쿼리는 API에 많은 부하를 줄 수 있으므로 우수 사례를 더 지원하기 위해 [!DNL Catalog] 쿼리에 글로벌 제한이 구현되었습니다.
 
