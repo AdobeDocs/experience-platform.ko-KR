@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;create batch;catalog service;api
 solution: Experience Platform
 title: 데이터 세트 만들기
 topic: developer guide
+description: 데이터 세트에 데이터를 인제스트하려면 데이터 세트에 묶음이 있어야 합니다. 기존 데이터 세트의 id 값을 사용하여 카탈로그 API의 /batches 종단점에 POST 요청을 수행하여 배치를 만들 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
 workflow-type: tm+mt
-source-wordcount: '86'
-ht-degree: 4%
+source-wordcount: '128'
+ht-degree: 3%
 
 ---
 
@@ -43,7 +44,7 @@ curl -X POST 'https://platform.adobe.io/data/foundation/import/batches' \
 
 **응답**
 
-성공적인 응답은 HTTP Status 201(Created)과 시스템에서 생성된 문자열, 읽기 전용 등 새로 만든 일괄 처리에 대한 세부 정보가 포함된 응답 개체 `id`를 반환합니다.
+성공적인 응답은 HTTP Status 201(Created)과 시스템에서 생성된 문자열, 읽기 전용 등 새로 만든 일괄 처리 `id`의 세부 사항이 포함된 응답 개체를 반환합니다.
 
 ```JSON
 {
