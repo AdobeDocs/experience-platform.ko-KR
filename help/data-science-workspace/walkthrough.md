@@ -3,10 +3,11 @@ keywords: Experience Platform;walkthrough;Data Science Workspace;popular topics
 solution: Experience Platform
 title: 데이터 과학 작업 공간 연습
 topic: Walkthrough
+description: 이 문서에서는 Adobe Experience Platform 데이터 과학 작업 공간에 대한 연습을 제공합니다. 특히 데이터 전문가가 머신 러닝을 통해 문제를 해결하기 위해 진행하는 일반적인 워크플로우입니다.
 translation-type: tm+mt
-source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+source-git-commit: 194a29124949571638315efe00ff0b04bff19303
 workflow-type: tm+mt
-source-wordcount: '1638'
+source-wordcount: '1667'
 ht-degree: 0%
 
 ---
@@ -29,7 +30,7 @@ ht-degree: 0%
 
 데이터 과학자는 소매업체가 액세스할 수 있는 방대한 데이터를 활용하여 향후 동향을 예측하고 가격 결정을 최적화하는 것이 그 해답입니다. 과거 판매 데이터를 사용하여 머신 러닝 모델을 교육하고 이 모델을 사용하여 향후 판매 동향을 예측할 수 있습니다. 이를 통해 소매업체는 가격을 변경할 때 유용한 인사이트를 얻을 수 있습니다.
 
-이 개요에서는 데이터 과학자가 데이터 세트를 선택하고 주간 판매를 예측할 수 있는 모델을 만드는 단계를 살펴봅니다. Adobe Experience Platform의 샘플 소매 판매 노트의 다음 섹션에 대해 살펴봅니다 [!DNL Data Science Workspace].
+이 개요에서는 데이터 과학자가 데이터 세트를 선택하고 주간 판매를 예측할 수 있는 모델을 만드는 단계를 살펴봅니다. Adobe Experience Platform의 샘플 소매 판매 노트에 있는 다음 섹션을 살펴봅니다 [!DNL Data Science Workspace].
 
 - [설정](#setup)
 - [데이터 탐색](#exploring-data)
@@ -40,7 +41,7 @@ ht-degree: 0%
 
 먼저, &quot;소매 판매&quot; 샘플 노트북을 열기 위한 [!DNL JupyterLab] 노트북을 만들고 싶습니다. 노트북에서 데이터 과학자가 수행한 단계를 따라 일반적인 워크플로우를 이해할 수 있습니다.
 
-Adobe Experience Platform UI에서 상단 메뉴의 데이터 과학 탭을 클릭하여 해당 페이지로 이동합니다 [!DNL Data Science Workspace]. 이 페이지에서 실행 관리자를 열 [!DNL JupyterLab] 탭을 [!DNL JupyterLab] 클릭합니다. 이와 유사한 페이지가 표시됩니다.
+Adobe Experience Platform UI의 상단 메뉴에서 데이터 과학 탭을 클릭하여 페이지로 이동합니다 [!DNL Data Science Workspace]. 이 페이지에서 실행 관리자를 열 [!DNL JupyterLab] 탭을 [!DNL JupyterLab] 클릭합니다. 이와 유사한 페이지가 표시됩니다.
 
 ![](./images/walkthrough/jupyterlab_launcher.png)
 
