@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 스키마 레지스트리 API 개발자 가이드
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: f7fe8f9ac8d6f0e2eaec53d96f2ced0904061c89
 workflow-type: tm+mt
-source-wordcount: '1207'
+source-wordcount: '1237'
 ht-degree: 0%
 
 ---
@@ -167,9 +167,21 @@ API를 [!DNL Schema Registry] `CONTAINER_ID`호출하려면 API 호출을 수행
 
 전역 컨테이너에는 모든 표준 Adobe 및 [!DNL Experience Platform] 파트너가 제공하는 클래스, 믹싱, 데이터 유형 및 스키마가 들어 있습니다. 글로벌 컨테이너에 대해서만 목록 및 조회(GET) 요청만 수행할 수 있습니다.
 
+전역 컨테이너를 사용하는 호출의 예는 다음과 같습니다.
+
+```http
+GET /global/classes
+```
+
 ### 테넌트 컨테이너
 
 고유한 요소와 혼동하지 않도록 테넌트 컨테이너는 IMS 조직에 의해 정의된 모든 클래스, 믹싱, 데이터 유형, 스키마 및 설명자를 보유합니다 `TENANT_ID`. 이는 다른 IMS 조직에서 볼 수 없거나 관리할 수 없음을 의미합니다. 테넌트 컨테이너에 만드는 리소스에 대해 모든 CRUD 작업(GET, POST, PUT, PATCH, DELETE)을 수행할 수 있습니다.
+
+테넌트 컨테이너를 사용하는 호출의 예는 다음과 같습니다.
+
+```http
+POST /tenant/mixins
+```
 
 테넌트 컨테이너에서 클래스, 혼합, 스키마 또는 데이터 유형을 만들 때 해당 클래스 [!DNL Schema Registry] 가 파일에 저장되고 사용자 `$id` 가 포함된 URI가 할당됩니다 `TENANT_ID`. 이 `$id` 는 API 전체에서 특정 리소스를 참조하는 데 사용됩니다. 값의 예는 다음 섹션에 제공됩니다. `$id`
 
