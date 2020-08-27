@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 설명자
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b021b6813af18e29f544dc55541f23dd7dd57d47
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1477'
+source-wordcount: '1481'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # 설명자
 
-스키마는 데이터 엔티티의 정적 보기를 정의하지만 이러한 스키마(예: 데이터 집합)를 기반으로 한 데이터가 서로 관련될 수 있는 방법에 대한 구체적인 세부 정보를 제공하지 않습니다. Adobe Experience Platform을 사용하면 설명자를 사용하여 스키마에 대한 이러한 관계 및 기타 해석 메타데이터를 설명할 수 있습니다.
+스키마는 데이터 엔티티의 정적 보기를 정의하지만 이러한 스키마(예: 데이터 집합)를 기반으로 한 데이터가 서로 관련될 수 있는 방법에 대한 구체적인 세부 정보를 제공하지 않습니다. Adobe Experience Platform에서는 설명자를 사용하여 스키마에 대한 이러한 관계 및 기타 해석 메타데이터를 설명할 수 있습니다.
 
 스키마 설명자는 테넌트 수준 메타데이터로서, 이는 IMS에 고유함을 의미합니다. 조직 및 모든 설명자 작업은 테넌트 컨테이너에서 수행됩니다.
 
@@ -300,7 +300,7 @@ ID 설명자는 &quot;sourceSchema[!UICONTROL &quot;의 &quot;]sourceProperty[!U
 | `xdm:sourceSchema` | 설명자가 정의된 스키마의 `$id` URI입니다. |
 | `xdm:sourceVersion` | 소스 스키마의 주 버전입니다. |
 | `xdm:sourceProperty` | ID가 될 특정 속성의 경로입니다. 경로는 &quot;/&quot;로 시작하고 하나로 끝나지 않아야 합니다. 경로에 &quot;속성&quot;을 포함하지 마십시오(예: &quot;/properties/personalEmail/properties/address&quot; 대신 &quot;/personalEmail/address&quot;를 사용). |
-| `xdm:namespace` | ID 네임스페이스의 `id` 또는 `code` 값입니다. 네임스페이스 목록은 를 사용하여 찾을 수 있습니다 [!DNL Identity Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml). |
+| `xdm:namespace` | ID 네임스페이스의 `id` 또는 `code` 값입니다. [!DNL ID 서비스 API]를 사용하여 네임스페이스 목록을 찾을 수 [있습니다](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml). |
 | `xdm:property` | 또는 `xdm:id` 중 하나 `xdm:code`는, 사용한 것에 따라 `xdm:namespace` 달라집니다. |
 | `xdm:isPrimary` | 선택적 부울 값입니다. true이면 필드를 기본 ID로 나타냅니다. 스키마에는 하나의 기본 ID만 포함될 수 있습니다. |
 
