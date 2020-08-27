@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;product purchase recipe;Data Science Workspace;popular topics
+keywords: Experience Platform;product purchase recipe;Data Science Workspace;popular topics;recipes;pre build recipe
 solution: Experience Platform
 title: 제품 구매 방법
 topic: overview
+description: '제품 구매 예측 레서피를 사용하면 특정 유형의 고객 구매 이벤트(예: 제품 구매)의 가능성을 예측할 수 있습니다.'
 translation-type: tm+mt
-source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
+source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
 workflow-type: tm+mt
-source-wordcount: '358'
+source-wordcount: '382'
 ht-degree: 6%
 
 ---
