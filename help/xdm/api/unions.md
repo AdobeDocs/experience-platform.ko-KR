@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 노조
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '788'
+source-wordcount: '792'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # 노조
 
-조합(또는 조합 뷰)은 동일한 클래스(또는)를 공유하고 사용할 수 있는 모든 스키마의 필드를 집계하는 시스템 생성,[!DNL XDM ExperienceEvent] 읽기 전용 스키마입니다 [!DNL XDM Individual Profile][!DNL Real-time Customer Profile](../../profile/home.md).
+조합(또는 조합 뷰)은 동일한 클래스(또는)를 공유하고[!DNL XDM ExperienceEvent] [!DNL 실시간 고객 프로필]에 대해 활성화된 모든 스키마의 필드를 집계하는 시스템 생성, 읽기 전용 스키마입니다 [!DNL XDM Individual Profile][](../../profile/home.md).
 
 이 문서에서는 스키마 레지스트리 API에서 조합과 함께 작업하는 데 필요한 개념과 다양한 작업에 대한 샘플 호출을 다룹니다. XDM의 조합에 대한 일반적인 자세한 내용은 스키마 구성 [의 기본 사항에 있는 조합의 섹션을 참조하십시오](../schema/composition.md#union).
 
@@ -199,8 +199,8 @@ curl -X GET \
 
 | 수락 | 설명 |
 | -------|------------ |
-| application/vnd.adobe.xed+json; version={MAJOR_VERSION} | Raw with `$ref` and `allOf`. 제목 및 설명을 포함합니다. |
-| application/vnd.adobe.xed-full+json; version={MAJOR_VERSION} | `$ref` 속성 및 `allOf` 해결되었습니다. 제목 및 설명을 포함합니다. |
+| application/vnd.adobe.xed+json;version={MAJOR_VERSION} | Raw with `$ref` and `allOf`. 제목 및 설명을 포함합니다. |
+| application/vnd.adobe.xed-full+json;version={MAJOR_VERSION} | `$ref` 속성 및 `allOf` 해결되었습니다. 제목 및 설명을 포함합니다. |
 
 **응답**
 
