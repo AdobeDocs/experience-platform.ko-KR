@@ -5,9 +5,9 @@ title: Adobe Experience Platform ID 서비스
 topic: overview
 description: 'ID 네임스페이스는 ID 서비스의 구성 요소이며 ID가 연관되는 컨텍스트의 지표 역할을 합니다. 예를 들어 "name<span>@email.com"의 값을 이메일 주소로 구분하거나 "443522"의 값을 숫자 CRM ID로 구별합니다. '
 translation-type: tm+mt
-source-git-commit: 235f611115b89a87c924a00409a6acae4f5ac97d
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '761'
+source-wordcount: '774'
 ht-degree: 4%
 
 ---
@@ -15,15 +15,15 @@ ht-degree: 4%
 
 # ID 네임스페이스 개요
 
-Identity namespaces are a component of [!DNL Identity Service](./home.md) that serve as indicators of the context to which an identity relates. 예를 들어 &quot;name<span>@email.com&quot;의 값을 이메일 주소로 구분하거나 &quot;443522&quot;의 값을 숫자 CRM ID로 구별합니다.
+Identity namespaces are a component of [[!DNL Identity Service]](./home.md) that serve as indicators of the context to which an identity relates. 예를 들어 &quot;name<span>@email.com&quot;의 값을 이메일 주소로 구분하거나 &quot;443522&quot;의 값을 숫자 CRM ID로 구별합니다.
 
 ## 시작하기
 
 ID 네임스페이스를 사용하여 작업하려면 관련 다양한 Adobe Experience Platform 서비스에 대한 이해가 필요합니다. 네임스페이스로 작업하기 전에 다음 서비스에 대한 설명서를 검토하십시오.
 
-- [!DNL Real-time Customer Profile](../profile/home.md):여러 소스에서 수집한 데이터를 기반으로 통합된 고객 프로필을 실시간으로 제공합니다.
-- [!DNL Identity Service](./home.md):다양한 디바이스와 시스템에 ID를 연결하여 개별 고객 및 고객의 행동을 명확하게 파악할 수 있습니다.
-- [!DNL Privacy Service](../privacy-service/home.md):ID 네임스페이스는 네임스페이스와 관련하여 GDPR 요청을 수행할 수 있는 GDPR(General Data Protection Regulation)을 준수하는 데 사용됩니다.
+- [[!DNL 실시간 고객 프로필]](../profile/home.md):여러 소스에서 수집한 데이터를 기반으로 통합된 고객 프로필을 실시간으로 제공합니다.
+- [[!DNL Identity Service]](./home.md):다양한 디바이스와 시스템에 ID를 연결하여 개별 고객 및 고객의 행동을 명확하게 파악할 수 있습니다.
+- [[!DNL Privacy Service]](../privacy-service/home.md):ID 네임스페이스는 네임스페이스와 관련하여 GDPR 요청을 수행할 수 있는 GDPR(General Data Protection Regulation)을 준수하는 데 사용됩니다.
 
 ## ID 네임스페이스 이해
 
