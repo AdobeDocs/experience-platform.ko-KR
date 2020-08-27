@@ -3,10 +3,11 @@ keywords: Experience Platform;user guide;attribution ai;popular topics
 solution: Experience Platform
 title: Attribution AI 사용 안내서
 topic: User guide
+description: 이 문서는 Intelligent Services 사용자 인터페이스에서 Attribution AI과 상호 작용하기 위한 가이드 역할을 합니다.
 translation-type: tm+mt
-source-git-commit: 15f9f90e5a1439e071eeb46ad655eee10954c2ac
+source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
 workflow-type: tm+mt
-source-wordcount: '1432'
+source-wordcount: '1449'
 ht-degree: 0%
 
 ---
@@ -188,7 +189,7 @@ Attribution AI의 마지막 페이지는 *교육 및 점수 설정에* 사용되
 
 ## 다음 단계
 
-이 튜토리얼을 따라 Attribution AI에서 서비스 인스턴스를 만들었습니다. 인스턴스 점수가 완료되면(최대 24시간 허용) Attribution AI 통찰력을 [발견할 수 있습니다](./discover-insights.md). 또한 점수 결과를 다운로드하려면 원시 점수 [다운로드 설명서를](./download-scores.md) 참조하십시오.
+이 튜토리얼을 따라 Attribution AI에서 서비스 인스턴스를 만들었습니다. 인스턴스 점수가 끝나면(최대 24시간 허용) Attribution AI 통찰력을 [발견할 수 있습니다](./discover-insights.md). 또한 점수 결과를 다운로드하려면 원시 점수 [다운로드 설명서를](./download-scores.md) 참조하십시오.
 
 ## Journey Orchestration용
 
