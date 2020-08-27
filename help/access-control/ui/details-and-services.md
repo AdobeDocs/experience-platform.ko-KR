@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;product profile
 solution: Experience Platform
 title: 제품 프로필에 대한 세부 정보 및 추가 서비스 관리
 topic: user guide
+description: 이 문서에서는 Adobe Admin Console의 제품 프로필에 대한 세부 사항 및 추가 서비스를 관리하는 데 필요한 단계를 다룹니다. 프로필 설정 메뉴에서 프로필의 세부 사항을 구성하고 추가 서비스에 액세스할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
 workflow-type: tm+mt
-source-wordcount: '167'
-ht-degree: 2%
+source-wordcount: '206'
+ht-degree: 1%
 
 ---
 
