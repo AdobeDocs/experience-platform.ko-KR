@@ -5,9 +5,9 @@ title: 쿼리 매개 변수를 사용하여 카탈로그 데이터 필터링
 topic: developer guide
 description: 카탈로그 서비스 API를 사용하면 요청 쿼리 매개 변수의 사용을 통해 응답 데이터를 필터링할 수 있습니다. 카탈로그의 우수 사례는 모든 API 호출에서 필터를 사용하여 API에 대한 로드를 줄이고 전반적인 성능을 개선하는 것입니다.
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 71678b10c9e137016ea404305b272508b9c8cabe
 workflow-type: tm+mt
-source-wordcount: '2085'
+source-wordcount: '2084'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 API를 [!DNL Catalog Service] 사용하면 요청 쿼리 매개 변수를 사용하여 응답 데이터를 필터링할 수 있습니다. 모범 사례 [!DNL Catalog] 는 API에 대한 로드를 줄이고 전반적인 성능을 개선하는 데 도움이 되기 때문에 모든 API 호출에서 필터를 사용하는 것입니다.
 
-이 문서에서는 API에서 개체를 필터링하는 가장 일반적인 방법에 대해 간략하게 설명합니다. [!DNL Catalog] API와 상호 작용하는 방법에 대한 자세한 내용은 [카탈로그 개발자 안내서를](getting-started.md) 읽는 동안 이 문서를 참조할 것을 [!DNL Catalog] 권장합니다. 에 대한 자세한 [!DNL Catalog Service]내용은 [카탈로그 개요를 참조하십시오](../home.md).
+이 문서에서는 API에서 개체를 필터링하는 가장 일반적인 방법에 대해 간략하게 설명합니다. [!DNL Catalog] API와 상호 작용하는 방법에 대한 자세한 내용은 [카탈로그 개발자 안내서를](getting-started.md) 읽는 동안 이 문서를 참조할 것을 [!DNL Catalog] 권장합니다. 에 대한 자세한 [!DNL Catalog Service]내용은 [[!DNL Catalog] 개요를 참조하십시오](../home.md).
 
 ## 반환된 개체 제한
 
