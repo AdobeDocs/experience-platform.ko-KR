@@ -1,13 +1,14 @@
 ---
 keywords: Experience Platform;developer guide;SDK;Data Access SDK;Data Science Workspace;popular topics
 solution: Experience Platform
-title: Platform SDK 안내서
+title: 플랫폼 SDK 안내서
 topic: SDK authoring
+description: 이 자습서에서는 data_access_sdk_python을 Python 및 R에서 새로운 Python platform_sdk로 변환하는 방법에 대한 정보를 제공합니다.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
 workflow-type: tm+mt
-source-wordcount: '447'
-ht-degree: 1%
+source-wordcount: '470'
+ht-degree: 5%
 
 ---
 
@@ -151,10 +152,10 @@ df2
 | 작업 | 함수 |
 | --------- | -------- |
 | 다음과 같음 (`=`) | `eq()` |
-| Greater than (`>`) | `gt()` |
-| Greater than or equal to (`>=`) | `ge()` |
-| Less than (`<`) | `lt()` |
-| Less than or equal to (`<=`) | `le()` |
+| 보다 큼 (`>`) | `gt()` |
+| 크거나 같음 (`>=`) | `ge()` |
+| 보다 작음 (`<`) | `lt()` |
+| 작거나 같음 (`<=`) | `le()` |
 | And (`&`) | `And()` |
 | 또는 (`|`) | `Or()` |
 
