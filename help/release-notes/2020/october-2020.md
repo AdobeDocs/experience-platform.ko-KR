@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: October, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: e9d7a045a88e0126549adcfa6136684e7b933b71
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '302'
+source-wordcount: '307'
 ht-degree: 6%
 
 ---
@@ -19,8 +19,8 @@ ht-degree: 6%
 
 Adobe Experience Platform의 새로운 기능:
 
-- [!DNL Access control](#access-control)
-- [!DNL Sandboxes](#sandboxes)
+- [[!DNL 액세스 제어]](#access-control)
+- [[!DNL 샌드박스]](#sandboxes)
 
 ## [!DNL Access control] {#access-control}
 
@@ -30,8 +30,8 @@ Adobe Experience Platform의 새로운 기능:
 
 | 기능 | 설명 |
 |--- | ---|
-| 권한 | 제품 프로필 내 탭 [!DNL Admin Console]에서 해당 프로필에 연결된 사용자가 사용할 수 있는 [!DNL Platform] [!DNL Platform] 기능을 사용자 지정할 수 있습니다. 사용 가능한 권한 카테고리는 다음과 같습니다. [!UICONTROL 데이터 모델링], [!UICONTROL 데이터 관리], [!UICONTROL 프로필 관리], [!UICONTROL 데이터 모니터링], 데이터 모니터링, Sandbox 관리, Identity Administration,Sandbox Administration 대상, Vernia,SourceAlysis . |
-| 샌드박스 액세스 | 제품 프로필 내 [!UICONTROL _권한&#x200B;_][!DNL Platform]탭에서 특정 샌드박스에 대한 액세스 권한을 부여할 수 있습니다. 자세한 내용은[아래의 샌드박스](#sandboxes)섹션을 참조하십시오. |
+| 권한 | 제품 프로필 내 탭 [!DNL Admin Console]에서 해당 프로필에 연결된 사용자가 사용할 수 있는 [!DNL Platform] [!DNL Platform] 기능을 사용자 지정할 수 있습니다. 사용 가능한 권한 카테고리는 다음과 같습니다. [!UICONTROL 데이터 모델링], [!UICONTROL 데이터 관리], [!UICONTROL 프로필 관리], [!UICONTROL 데이터 모니터링], 데이터 모니터링, Sandbox 관리, Identity Administration,Sandbox Administration 대상,Safety, Saffrs입니다. |
+| 샌드박스 액세스 | 제품 프로필 내 [!UICONTROL _권한_] [!DNL Platform] 탭에서 특정 샌드박스에 대한 액세스 권한을 부여할 수 있습니다. 자세한 내용은 [아래의 샌드박스](#sandboxes) 섹션을 참조하십시오. |
 
 자세한 내용은 [액세스 제어 개요를 참조하십시오](../../access-control/home.md).
 
