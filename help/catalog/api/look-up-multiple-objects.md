@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;catalog;multiple object lookup;api
 solution: Experience Platform
 title: 여러 개체 검색
 topic: developer guide
+description: 개체당 한 번의 요청을 하는 대신 몇 개의 특정 개체를 보려는 경우 카탈로그는 동일한 유형의 여러 개체를 요청하는 간단한 단축키를 제공합니다. 하나의 GET 요청을 사용하여 쉼표로 구분된 ID 목록을 포함하여 여러 특정 개체를 반환할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: dd1f508b93e8eac14e3c41fac9d8f49769d08f46
 workflow-type: tm+mt
-source-wordcount: '176'
-ht-degree: 1%
+source-wordcount: '223'
+ht-degree: 0%
 
 ---
 
