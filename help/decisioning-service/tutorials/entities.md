@@ -4,9 +4,9 @@ solution: Experience Platform
 title: API를 사용하여 의사 결정 서비스 엔티티 관리
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '7207'
+source-wordcount: '7220'
 ht-degree: 0%
 
 ---
@@ -26,9 +26,9 @@ ht-degree: 0%
 
 이 자습서에서는 서비스 및 API 규칙을 [!DNL Experience Platform] 제대로 이해해야 합니다. 저장소 [!DNL Platform] 는 비즈니스 개체 및 다양한 유형의 메타데이터를 저장하기 위해 다른 여러 [!DNL Platform] 서비스에서 사용하는 서비스입니다. 이러한 객체를 관리하고 쿼리하여 여러 런타임 서비스에서 사용할 수 있도록 안전하고 유연하게 해줍니다. 그 [!DNL Decisioning Service] 는 그것들 중 하나입니다. 이 자습서를 시작하기 전에 다음 사항을 확인하십시오.
 
-- [!DNL Experience Data Model (XDM)](../../xdm/home.md):Platform(플랫폼)이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
-- [!DNL Decisioning Service](./../home.md):특히, 경험 의사 결정(일반) 및 오퍼 의사 결정(오퍼 결정)에 사용되는 개념과 구성 요소에 대해 설명합니다. 고객 경험 중 가장 적합한 옵션을 선택하는 데 사용되는 전략을 보여 줍니다.
-- [!DNL Profile Query Language (PQL)](../../segmentation/pql/overview.md):PQL은 XDM 인스턴스 위에 표현식을 작성할 수 있는 강력한 언어입니다. PQL은 의사 결정 규칙을 정의하는 데 사용됩니다.
+- [[!DNL 경험 데이터 모델(XDM)]](../../xdm/home.md):Platform(플랫폼)이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
+- [[!DNL 의사 결정 서비스]](./../home.md):특히, 경험 의사 결정(일반) 및 오퍼 의사 결정(오퍼 결정)에 사용되는 개념과 구성 요소에 대해 설명합니다. 고객 경험 중 가장 적합한 옵션을 선택하는 데 사용되는 전략을 보여 줍니다.
+- [[!DNL 프로필 쿼리 언어(PQL)]](../../segmentation/pql/overview.md):PQL은 XDM 인스턴스 위에 표현식을 작성할 수 있는 강력한 언어입니다. PQL은 의사 결정 규칙을 정의하는 데 사용됩니다.
 
 다음 섹션에서는 API를 성공적으로 호출하기 위해 알아야 할 추가 정보를 [!DNL Platform] 제공합니다.
 
