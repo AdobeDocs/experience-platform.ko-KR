@@ -3,11 +3,11 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 solution: Adobe Experience Platform
 title: 실시간 고객 프로필 사용 안내서
 topic: guide
-description: 실시간 고객 프로파일은 온라인, 오프라인, CRM 및 서드파티 데이터를 비롯한 여러 채널의 데이터를 취합하여 각 개별 고객에 대한 전체적인 관점을 생성합니다. 이 문서는 Adobe Experience Platform 사용자 인터페이스에서 실시간 고객 프로필과 상호 작용하기 위한 가이드 역할을 합니다.
+description: 실시간 고객 프로파일은 온라인, 오프라인, CRM 및 서드파티 데이터를 비롯한 다양한 채널의 데이터를 취합하여 각 개별 고객에 대한 전체적인 관점을 생성합니다. 이 문서는 Adobe Experience Platform 사용자 인터페이스에서 실시간 고객 프로필과 상호 작용하기 위한 가이드 역할을 합니다.
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1191'
+source-wordcount: '1207'
 ht-degree: 0%
 
 ---
@@ -23,13 +23,13 @@ ht-degree: 0%
 
 이 사용자 가이드는 관리와 관련된 다양한 [!DNL Experience Platform] 서비스를 이해해야 합니다 [!DNL Real-time Customer Profiles]. 이 사용자 안내서를 읽기 전에 다음 서비스에 대한 설명서를 검토하십시오.
 
-* [!DNL Real-time Customer Profile](../home.md):여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
-* [!DNL Identity Service](../../identity-service/home.md):데이터 소스 [!DNL Real-time Customer Profile] 를 인제스트할 때 서로 다른 데이터 소스의 ID를 결합함으로써 사용할 수 있습니다 [!DNL Platform].
-* [!DNL Experience Data Model (XDM)](../../xdm/home.md):고객 경험 데이터를 [!DNL Platform] 구성하는 표준화된 프레임워크
+* [[!DNL 실시간 고객 프로필]](../home.md):여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
+* [[!DNL Identity Service]](../../identity-service/home.md):데이터 소스 [!DNL Real-time Customer Profile] 를 인제스트할 때 서로 다른 데이터 소스의 ID를 결합함으로써 사용할 수 있습니다 [!DNL Platform].
+* [[!DNL 경험 데이터 모델(XDM)]](../../xdm/home.md):고객 경험 데이터를 [!DNL Platform] 구성하는 표준화된 프레임워크
 
 ## 개요
 
-의 왼쪽 탐색 [!DNL Experience Platform UI](http://platform.adobe.com)에서 **[!UICONTROL 프로필]** 을 클릭하여 _[!UICONTROL 개요]_탭을 엽니다. 이 탭에는 프로필 작업을 이해하고 시작하는 데 도움이 되는 설명서 및 비디오에 대한 링크가 제공됩니다.
+[!DNL Experience Platform UI] [에서](http://platform.adobe.com)왼쪽 탐색 **** 에서 프로필 _[!UICONTROL 을 클릭하여]_ 개요탭을 엽니다. 이 탭에는 프로필 작업을 이해하고 시작하는 데 도움이 되는 설명서 및 비디오에 대한 링크가 제공됩니다.
 
 ![](../images/user-guide/profiles-overview.png)
 
@@ -91,7 +91,7 @@ ID **[!UICONTROL 네임스페이스를]**&#x200B;선택한 후 *[!UICONTROL ID]*
 
 ### 프로필 세부 사항 {#profile-detail}
 
-프로필 **[!UICONTROL ID를]**&#x200B;선택하면 _[!UICONTROL 세부 사항]_탭이열립니다. 이 페이지에는 기본 속성, 연결된 ID 및 사용 가능한 연락처 채널을 포함하여 선택한 프로필에 대한 정보가 표시됩니다. 표시되는 프로필 정보는 여러 프로필 조각에서 병합되어 개별 고객의 단일 보기를 형성했습니다.
+프로필 **[!UICONTROL ID를]**&#x200B;선택하면 _[!UICONTROL 세부 사항]_ 탭이열립니다. 이 페이지에는 기본 속성, 연결된 ID 및 사용 가능한 연락처 채널을 포함하여 선택한 프로필에 대한 정보가 표시됩니다. 표시되는 프로필 정보는 여러 프로필 조각에서 병합되어 개별 고객의 단일 보기를 형성했습니다.
 
 ![](../images/user-guide/profiles-profile-detail.png)
 
