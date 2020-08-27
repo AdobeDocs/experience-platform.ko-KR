@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: August 10, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 8b540a108336ae4475f072b71a34e37cac064826
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '452'
+source-wordcount: '454'
 ht-degree: 6%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 6%
 Adobe Experience Platform의 기존 기능 업데이트:
 
 - [[!DNL 데이터 과학 작업 공간]](#dsw)
-- [!DNL Destinations](#destinations)
+- [[!DNL 대상]](#destinations)
 - [[!DNL 소스]](#sources)
 
 ## [!DNL Data Science Workspace] {#dsw}
