@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 노트북으로 데이터 분석
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1702'
+source-wordcount: '1710'
 ht-degree: 0%
 
 ---
@@ -18,9 +18,9 @@ ht-degree: 0%
 
 다음 개념이 도입되었습니다.
 
-- **[!DNL JupyterLab]:**[!DNL JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906)Project Jupiter의 차세대 웹 기반 인터페이스로 긴밀하게 통합되어[!DNL Adobe Experience Platform]있습니다.
+- **[!DNL JupyterLab]:**[[!DNL JupiterLab]](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) 은 Project Jupiter의 차세대 웹 기반 인터페이스로, 와 긴밀하게 통합되어 [!DNL Adobe Experience Platform]있습니다.
 - **배치:** 데이터 세트는 배치로 구성됩니다. 일괄 처리란 일정 기간 동안 수집된 데이터 집합이며 하나의 단위로 함께 처리됩니다. 데이터를 데이터 세트에 추가할 때 새 일괄 처리가 만들어집니다.
-- **데이터 액세스 SDK(더 이상 사용되지 않음):** 이제 데이터 액세스 SDK는 더 이상 사용되지 않습니다. 가이드 [!DNL Platform SDK](../authoring/platform-sdk.md) 사용
+- **데이터 액세스 SDK(더 이상 사용되지 않음):** 이제 데이터 액세스 SDK는 더 이상 사용되지 않습니다. [!DNL [Platform SDK]](../authoring/platform-sdk.md) 가이드를 사용하십시오.
 
 ## 데이터 과학 작업 공간에서 노트북 살펴보기
 
@@ -52,7 +52,7 @@ UI에서 [!DNL Adobe Experience Platform] 상단 메뉴의 데이터 과학 탭�
 
 >[!NOTE]
 >
->이 `data_access_sdk_python` 는 더 이상 권장되지 않습니다. 코드를 [변환하려면 데이터 액세스 SDK를 Platform SDK로](../authoring/platform-sdk.md) 변환 자습서를 참조하십시오. 이 자습서에서는 아래 단계와 동일한 단계가 적용됩니다.
+>이 `data_access_sdk_python` 는 더 이상 권장되지 않습니다. 코드를 [변환하려면 데이터 액세스 SDK를 플랫폼 SDK로](../authoring/platform-sdk.md) 변환 자습서를 참조하십시오. 이 자습서에서는 아래 단계와 동일한 단계가 적용됩니다.
 
 외부에서 데이터 [!DNL Adobe Experience Platform] 를 내부적으로 액세스하고, 라이브러리를 사용하여 데이터 집합 및 XDM 스키마와 같은 내부 데이터에 액세스할 수 있습니다. `data_access_sdk_python` 외부 데이터를 위해, 우리는 판다 [!DNL Python] 도서관을 사용할 것이다.
 
@@ -90,7 +90,7 @@ Jupiter 노트북에서는 왼쪽의 **데이터** 탭에서 데이터에 액세
 
 >[!TIP]
 >
->코드를 변환하려면 [!DNL Platform SDK](../authoring/platform-sdk.md) 가이드를 참조하십시오.
+>코드를 변환하려면 [[!DNL Platform SDK]](../authoring/platform-sdk.md) 가이드를 참조하십시오.
 
 ```PYTHON
 from data_access_sdk_python.reader import DataSetReader
