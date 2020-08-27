@@ -3,10 +3,11 @@ keywords: Experience Platform;developer guide;Data Science Workspace;popular top
 solution: Experience Platform
 title: 실시간 머신 러닝 노트북 사용자 가이드
 topic: Training and scoring a ML model
+description: 다음 가이드는 Adobe Experience Platform JupiterLab에서 실시간 머신 러닝 애플리케이션을 구축하는 데 필요한 단계에 대해 간략하게 설명합니다.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
 workflow-type: tm+mt
-source-wordcount: '1637'
+source-wordcount: '1656'
 ht-degree: 0%
 
 ---
