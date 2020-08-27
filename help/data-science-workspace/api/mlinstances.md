@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics
+keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;mlinstances;sensei machine learning api
 solution: Experience Platform
 title: MLInasses
 topic: Developer guide
+description: MLInstice는 교육 매개 변수, 점수 매개 변수 또는 하드웨어 리소스 구성을 정의하는 적절한 구성 세트와 기존 엔진의 결합입니다.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 194a29124949571638315efe00ff0b04bff19303
 workflow-type: tm+mt
-source-wordcount: '575'
+source-wordcount: '601'
 ht-degree: 4%
 
 ---
