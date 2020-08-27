@@ -5,7 +5,7 @@ title: 기계 학습 모델 연습 만들기 및 게시
 topic: Tutorial
 description: Adobe Experience Platform 데이터 과학 작업 공간은 미리 만들어진 제품 Recommendations 레서피를 사용하여 목표를 달성할 수 있는 방법을 제공합니다. 이 튜토리얼을 따라 소매 데이터에 액세스하고, 이해하고, 기계 학습 모델을 만들고, 최적화하고, 데이터 과학 작업 공간에서 통찰력을 생성하는 방법을 확인하십시오.
 translation-type: tm+mt
-source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
+source-git-commit: 78f080fd7598799825c59a4fdfdcaf7d294560a3
 workflow-type: tm+mt
 source-wordcount: '1595'
 ht-degree: 0%
@@ -43,7 +43,7 @@ ht-degree: 0%
    * 골든 데이터 세트 postValues
    * 골든 데이터 집합 스키마
 
-* Adobe 공용 [!DNL Jupyter Notebook] 저장소에서 필요한 세 개의 파일 <a href="https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources/Notebooks-Thurs" target="_blank">을 다운로드하면 이 파일을 사용하여 작업 과정을 [!DNL Git] 보여 줍니다</a>[!DNL JupyterLab] [!DNL Data Science Workspace].
+* Adobe [!DNL Jupyter Notebook] 공용 저장소에서 [필요한 세 개의 파일 [!DNL Git] 을 다운로드하면](https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources/Notebooks-Thurs)이 파일을 사용하여 작업 과정을 [!DNL JupyterLab] 보여줍니다 [!DNL Data Science Workspace].
 
 * 이 튜토리얼에서 사용되는 다음 주요 개념에 대한 작업 이해:
    * [[!DNL 경험 데이터 모델]](../../xdm/home.md):Adobe이 고객 경험 관리를 위한 표준 스키마(예: [!DNL Profile] 및 ExperienceEvent)를 정의하는 데 주도적인 표준화 활동입니다.
