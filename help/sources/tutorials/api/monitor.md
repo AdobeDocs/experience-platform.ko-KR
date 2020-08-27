@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 흐름 및 실행 모니터링
 topic: overview
 translation-type: tm+mt
-source-git-commit: 9bdc45f6e51f1a140da503ac36355619300cedd2
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '593'
+source-wordcount: '597'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ Adobe Experience Platform은 [!DNL Platform] 서비스를 사용하여 들어오
 
 [!DNL Flow Service] 는 Adobe Experience Platform 내의 다양한 소스에서 수집된 고객 데이터를 수집하고 중앙에서 관리하는 데 사용됩니다. 이 서비스는 지원되는 모든 소스가 연결되어 있는 사용자 인터페이스와 RESTful API를 제공합니다.
 
-이 자습서에서는 를 사용하여 흐름 실행 데이터, 오류 및 지표를 모니터링하기 위한 단계를 설명합니다 [!DNL Flow Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+이 자습서에서는 [[!DNL Flow Service API]를 사용하여 흐름 실행 데이터, 오류 및 지표를 모니터링하기 위한 단계를 다룹니다](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## 시작하기
 
