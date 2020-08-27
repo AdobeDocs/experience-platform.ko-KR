@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;Data Science Workspace;popular topics
+keywords: Experience Platform;Data Science Workspace;popular topics;Recipe migration guides;Notebook migration guide
 solution: Experience Platform
 title: 레서피 및 노트북 마이그레이션 가이드
 topic: Tutorial
+description: 다음 안내서에서는 데이터 과학 작업 공간에서 기존 레서피 및 노트북을 마이그레이션하는 데 필요한 단계 및 정보에 대해 간략하게 설명합니다.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
 workflow-type: tm+mt
-source-wordcount: '3311'
+source-wordcount: '3330'
 ht-degree: 0%
 
 ---
