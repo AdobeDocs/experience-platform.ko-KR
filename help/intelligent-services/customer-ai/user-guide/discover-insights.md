@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;insights; customer ai;popular topics
+keywords: Experience Platform;insights;customer ai;popular topics
 solution: Experience Platform
 title: 고객 AI를 통한 인사이트 검색
 topic: Discovering insights
+description: 고객 AI는 인텔리전트 서비스의 일부로 마케터에게 Adobe Sensei을 활용하여 향후 고객의 행동을 예측할 수 있는 기능을 제공합니다. 고객 AI는 규모에 따라 개별 프로파일에 대한 이탈 및 전환과 같은 사용자 지정 성향 점수를 생성하는 데 사용됩니다. 이 작업은 알고리즘, 트레이닝 또는 배포를 선택하여 비즈니스 요구 사항을 머신 러닝 문제로 전환할 필요 없이 이루어집니다.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
 workflow-type: tm+mt
-source-wordcount: '1059'
+source-wordcount: '1125'
 ht-degree: 0%
 
 ---
