@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 정책 서비스 API 개발자 가이드
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: cb3a17aa08c67c66101cbf3842bf306ebcca0305
+source-git-commit: 71678b10c9e137016ea404305b272508b9c8cabe
 workflow-type: tm+mt
-source-wordcount: '474'
+source-wordcount: '472'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ Adobe Experience Platform [!DNL Data Governance] 를 사용하면 고객 데이�
 
 API는 [!DNL Policy Service] 정책 위반에 대한 마케팅 작업을 평가할 뿐만 아니라 데이터 사용 레이블 및 정책을 프로그래밍 방식으로 관리할 수 있는 여러 끝점을 제공합니다. 이러한 끝점은 아래에 요약되어 있습니다. 자세한 내용은 개별 종단점 안내서를 참조하고 필요한 헤더, 샘플 API 호출 읽기 등에 대한 [자세한 내용은 시작 안내서](./getting-started.md) 를 참조하십시오.
 
-사용 가능한 모든 끝점 및 CRUD 작업을 보려면 [Policy Service API API 스웨거를 참조하십시오](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml).
+사용 가능한 모든 끝점 및 CRUD 작업을 보려면 [[!DNL Policy Service] API 스웨거를 방문하십시오](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml).
 
 ## 레이블
 
