@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Policy enforcement;Automatic enforcement;API-based enforcement;data governance
 solution: Experience Platform
 title: 정책
 topic: developer guide
+description: 마케팅 작업이 만들어지고 정책이 정의된 후에는 정책 서비스 API를 사용하여 특정 작업으로 인해 정책이 위반되는지 평가할 수 있습니다. 반환된 제약 조건은 데이터 사용 레이블이 들어 있는 지정된 데이터에 대한 마케팅 작업을 시도하여 위반될 일련의 정책을 가져옵니다.
 translation-type: tm+mt
-source-git-commit: 12c53122d84e145a699a2a86631dc37ee0073578
+source-git-commit: cddc559dfb65ada888bb367d6265863091a9b2a1
 workflow-type: tm+mt
-source-wordcount: '1472'
+source-wordcount: '1528'
 ht-degree: 1%
 
 ---
