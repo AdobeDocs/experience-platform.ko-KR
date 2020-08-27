@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 액세스 제어 개발자 가이드
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: d059f48a2a3ba6398418fd3d5b0b3fd837ff69a2
 workflow-type: tm+mt
-source-wordcount: '329'
+source-wordcount: '333'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 [!DNL Access control] 이 [!DNL Experience Platform] 는 [Adobe Admin Console](https://adminconsole.adobe.com)를 통해 관리된다. 이 기능은 Admin Console의 제품 프로필을 활용하므로 사용자에게 사용 권한 및 샌드박스를 연결합니다. 자세한 내용은 [액세스 제어 개요를](../home.md) 참조하십시오.
 
-이 개발자 안내서에서는 요청에 형식을 지정하는 방법에 대한 정보를 제공하고 다음 작업을 다룹니다. [!DNL Access Control API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/access-control.yaml)
+이 개발자 안내서에서는 [[!DNL 액세스 제어 API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/access-control.yaml)요청에 형식을 지정하는 방법에 대한 정보를 제공하고 다음 작업을 다룹니다.
 
 - [권한 및 리소스 유형의 목록 이름](./permissions-and-resource-types.md)
 - [현재 사용자에 대한 효과적인 정책 보기](./effective-policies.md)
@@ -33,7 +33,7 @@ ht-degree: 1%
 
 API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 합니다](../../tutorials/authentication.md). 인증 자습서를 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
 
-- 인증: 무기명 `{ACCESS_TOKEN}`
+- 인증:무기명 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
@@ -47,7 +47,7 @@ API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 
 
 페이로드(POST, PUT, PATCH)이 포함된 모든 요청에는 추가 헤더가 필요합니다.
 
-- 컨텐츠 유형: application/json
+- 컨텐츠 유형:application/json
 
 ## 다음 단계
 
