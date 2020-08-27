@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 기계 학습 모델 연습 만들기 및 게시
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1542'
+source-wordcount: '1548'
 ht-degree: 0%
 
 ---
@@ -45,10 +45,10 @@ ht-degree: 0%
 * Adobe 공용 [!DNL Jupyter Notebook] 저장소에서 필요한 세 개의 파일 <a href="https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources/Notebooks-Thurs" target="_blank">을 다운로드하면 이 파일을 사용하여 작업 과정을 [!DNL Git] 보여 줍니다</a>[!DNL JupyterLab] [!DNL Data Science Workspace].
 
 * 이 튜토리얼에서 사용되는 다음 주요 개념에 대한 작업 이해:
-   * [!DNL Experience Data Model](../../xdm/home.md): Adobe이 고객 경험 관리를 위한 표준 스키마(예: [!DNL Profile] 및 ExperienceEvent)를 정의하는 데 주도적인 표준화 활동입니다.
-   * 데이터 집합: 실제 데이터를 위한 저장 및 관리 구성 XDM 스키마의 실제 인스턴스화된 [인스턴스입니다](../../xdm/schema/field-dictionary.md).
-   * 배치: 데이터 세트는 배치로 구성됩니다. 일괄 처리란 일정 기간 동안 수집된 데이터 집합이며 하나의 단위로 함께 처리됩니다.
-   * [!DNL JupyterLab]: [!DNL JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) 는 프로젝트를 위한 오픈 소스 웹 기반 인터페이스 [!DNL Jupyter] 로 긴밀하게 통합되어 [!DNL Experience Platform]있습니다.
+   * [[!DNL 경험 데이터 모델]](../../xdm/home.md):Adobe이 고객 경험 관리를 위한 표준 스키마(예: [!DNL Profile] 및 ExperienceEvent)를 정의하는 데 주도적인 표준화 활동입니다.
+   * 데이터 집합:실제 데이터를 위한 저장 및 관리 구성 XDM 스키마의 실제 인스턴스화된 [인스턴스입니다](../../xdm/schema/field-dictionary.md).
+   * 배치:데이터 세트는 배치로 구성됩니다. 일괄 처리란 일정 기간 동안 수집된 데이터 집합이며 하나의 단위로 함께 처리됩니다.
+   * [!DNL JupyterLab]: [[!DNL JupiterLab]](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) 은 프로젝트를 위한 오픈 소스 웹 기반 인터페이스 [!DNL Jupyter] 로 긴밀하게 통합되어 [!DNL Experience Platform]있습니다.
 
 ## 데이터 준비 {#prepare-your-data}
 
@@ -65,7 +65,7 @@ ht-degree: 0%
 
 다른 데이터 세트는 미리 보기 목적으로 배치로 미리 채워집니다. 위 단계를 반복하여 이러한 데이터 세트를 볼 수 있습니다.
 
-| 데이터 집합 이름 | 스키마 | 설명 |
+| 데이터 세트 이름 | 스키마 | 설명 |
 | ----- | ----- | ----- |
 | 골든 데이터 세트 postValues | 골든 데이터 집합 스키마 | [!DNL Analytics] 웹 사이트의 소스 데이터 |
 | Recommendations 입력 데이터 세트 | Recommendations 입력 스키마 | 이 [!DNL Analytics] 데이터는 기능 파이프라인을 사용하여 교육 데이터 세트로 변환됩니다. 이 데이터는 제품 Recommendations 기계 학습 모델을 교육하는 데 사용됩니다. `itemid` 해당 고객이 구매한 제품에 `userid` 해당합니다. |
@@ -81,7 +81,7 @@ ht-degree: 0%
 
 1. 에서 왼쪽 탐색 [!DNL Adobe Experience Platform]열 **[!UICONTROL 에서]** 모델 **[!UICONTROL 으로 이동한 다음]** 맨 위에 있는 레서피를 클릭하여 조직에서 사용할 수 있는 레서피 목록을 확인합니다.
    ![](../images/models-recipes/model-walkthrough/browse_recipes.png)
-2. 제공된 **[!UICONTROL Recommendations 레서피]** 이름을 클릭하여 위치를 찾아 엽니다.
+2. 제공된 **[!UICONTROL Recommendations 레시피]** 이름을 클릭하여 해당 레서피를 찾아 엽니다.
    ![](../images/models-recipes/model-walkthrough/recommendations_recipe_110.png)
 3. 오른쪽 레일에서 **[!UICONTROL Recommendations 입력 스키마를]** 클릭하여 레서피를 강력하게 하는 스키마를 봅니다. 스키마 필드 **[!UICONTROL itemId]** 및 **[!UICONTROL userId]** 는 특정 시간(타임스탬프)에 해당 고객이 구매한 제품(**[!UICONTROL interactionType]**)에&#x200B;****&#x200B;해당합니다. 동일한 단계에 따라 **[!UICONTROL Recommendations 출력 스키마의 필드를 검토하십시오]**.
    ![](../images/models-recipes/model-walkthrough/preview_schemas.png)
