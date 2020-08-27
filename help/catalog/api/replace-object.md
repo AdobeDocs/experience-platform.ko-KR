@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;catalog;api;replace an object
 solution: Experience Platform
 title: 개체 바꾸기
 topic: developer guide
+description: PUT 요청을 사용하여 카탈로그 개체의 콘텐츠를 덮어쓸 수 있습니다. 요청에서는 전체 리소스가 요청 페이로드로 대체됩니다.
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: dd1f508b93e8eac14e3c41fac9d8f49769d08f46
 workflow-type: tm+mt
-source-wordcount: '138'
+source-wordcount: '161'
 ht-degree: 2%
 
 ---
@@ -58,7 +59,7 @@ curl -X PUT \
 
 **응답**
 
-성공적인 응답은 덮어쓴 객체의 ID가 포함된 배열을 반환합니다. 이 ID는 PUT 요청에 전송된 ID와 일치해야 합니다. 이제 이 개체에 대한 GET 요청을 수행하면 해당 세부 사항이 이전 PUT 요청의 페이로드에서 제공된 세부 항목으로 대체되었다는 결과가 표시됩니다.
+성공적인 응답은 덮어쓴 객체의 ID가 포함된 배열을 반환합니다. 이 ID는 PUT 요청에 전송된 ID와 일치해야 합니다. 이제 이 개체에 대한 GET 요청을 수행하면 해당 세부 사항이 이전 PUT 요청의 페이로드에서 제공된 세부 항목으로 대체되었음을 알 수 있습니다.
 
 ```json
 [
