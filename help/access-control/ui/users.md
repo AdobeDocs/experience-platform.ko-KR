@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;product profile
 solution: Experience Platform
 title: 제품 프로필의 사용자 관리
 topic: user guide
+description: 이 문서에서는 Adobe Experience Platform의 UI에서 제품 프로필에 대한 사용자를 관리하는 방법을 설명합니다.
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
 workflow-type: tm+mt
-source-wordcount: '180'
+source-wordcount: '199'
 ht-degree: 1%
 
 ---
