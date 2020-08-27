@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 끝점 미리 보기 및 예측
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '742'
+source-wordcount: '746'
 ht-degree: 2%
 
 ---
@@ -93,7 +93,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `state` | 미리 보기 작업의 현재 상태입니다. 처음 만들 때 &quot;NEW&quot; 상태가 됩니다. 그 후 처리가 완료될 때까지 &quot;RUNNING&quot; 상태가 되며 이 시점에서 &quot;RESULT_READY&quot; 또는 &quot;FAILED&quot;가 됩니다. |
+| `state` | 미리 보기 작업의 현재 상태입니다. 처음 만들 때 &quot;NEW&quot; 상태가 됩니다. 그 후 처리가 완료될 때까지 &quot;RUNNING&quot; 상태가 되며, 여기서 &quot;RESULT_READY&quot; 또는 &quot;FAILED&quot;가 됩니다. |
 | `previewId` | 다음 섹션에 설명된 대로 예측 또는 미리 보기를 볼 때 조회 목적으로 사용되는 미리 보기 작업의 ID입니다. |
 
 ## 특정 미리 보기 결과 검색 {#get-preview}
@@ -171,7 +171,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/preview/MDphcHAtMzJiZTAzMjgt
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `results` | 관련 ID와 함께 엔티티 ID 목록입니다. 제공된 링크를 사용하여 지정된 엔티티를 검색할 수 있습니다 [!DNL Profile Access API](../../profile/api/entities.md). |
+| `results` | 관련 ID와 함께 엔티티 ID 목록입니다. 제공된 링크를 사용하여 [[!DNL 프로필 액세스 API]를 사용하여 지정된 엔터티를 조회할 수 있습니다](../../profile/api/entities.md). |
 
 ## 특정 예상 작업의 결과 검색 {#get-estimate}
 
