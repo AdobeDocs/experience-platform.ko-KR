@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Data Lake의 개인 정보 요청 처리
 topic: overview
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1189'
+source-wordcount: '1204'
 ht-degree: 0%
 
 ---
@@ -22,10 +22,10 @@ Adobe Experience Platform은 법적 및 조직의 개인 정보 보호 규정에
 
 이 안내서를 읽기 전에 다음 [!DNL Experience Platform] 서비스에 대해 잘 알고 있는 것이 좋습니다.
 
-* [!DNL Privacy Service](../privacy-service/home.md):Adobe Experience Cloud 애플리케이션에서 개인 데이터를 액세스, 판매 거부 또는 삭제하기 위한 고객 요청을 관리합니다.
-* [!DNL Catalog Service](home.md):데이터 위치 및 내부 계열에 대한 기록 [!DNL Experience Platform]시스템 데이터 세트 메타데이터를 업데이트하는 데 사용할 수 있는 API를 제공합니다.
-* [!DNL Experience Data Model (XDM) System](../xdm/home.md):고객 경험 데이터를 [!DNL Experience Platform] 구성하는 표준화된 프레임워크
-* [!DNL Identity Service](../identity-service/home.md):다양한 디바이스와 시스템에 ID를 연결하여 고객 경험 데이터의 세분화로 인한 기본적인 문제를 해결합니다.
+* [[!DNL Privacy Service]](../privacy-service/home.md):Adobe Experience Cloud 애플리케이션에서 개인 데이터를 액세스, 판매 거부 또는 삭제하기 위한 고객 요청을 관리합니다.
+* [[!DNL 카탈로그 서비스]](home.md):데이터 위치 및 내부 계열에 대한 기록 [!DNL Experience Platform]시스템 데이터 세트 메타데이터를 업데이트하는 데 사용할 수 있는 API를 제공합니다.
+* [[!DNL 경험 데이터 모델(XDM) 시스템]](../xdm/home.md):고객 경험 데이터를 [!DNL Experience Platform] 구성하는 표준화된 프레임워크
+* [[!DNL Identity Service]](../identity-service/home.md):다양한 디바이스와 시스템에 ID를 연결하여 고객 경험 데이터의 세분화로 인한 기본적인 문제를 해결합니다.
 
 ## ID 네임스페이스 이해 {#namespaces}
 
