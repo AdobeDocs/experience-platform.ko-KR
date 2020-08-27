@@ -3,10 +3,11 @@ keywords: Experience Platform;user guide;customer ai;popular topics;configure in
 solution: Experience Platform
 title: 고객 AI 인스턴스 구성
 topic: Instance creation
+description: Intelligent Services는 고객 AI를 다른 사용 사례용으로 구성할 수 있는 사용이 간편한 Adobe Sensei 서비스로 제공합니다. 다음 섹션에서는 고객 AI 인스턴스를 구성하는 절차를 제공합니다.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
 workflow-type: tm+mt
-source-wordcount: '715'
+source-wordcount: '746'
 ht-degree: 0%
 
 ---
@@ -20,7 +21,7 @@ Intelligent Services는 고객 AI를 다른 사용 사례용으로 구성할 수
 
 ## 인스턴스 설정 {#set-up-your-instance}
 
-Platform UI에서 왼쪽 탐색 **[!UICONTROL 에서 서비스]** 를 클릭합니다. 서비스 **** 브라우저가 나타나고 사용자가 언제든지 사용 가능한 모든 서비스가 표시됩니다. 고객 AI의 컨테이너에서 열기를 **[!UICONTROL 클릭합니다]**.
+플랫폼 UI에서 왼쪽 탐색 **[!UICONTROL 에서 서비스]** 를 클릭합니다. 서비스 **** 브라우저가 나타나고 사용자가 언제든지 사용 가능한 모든 서비스가 표시됩니다. 고객 AI의 컨테이너에서 열기를 **[!UICONTROL 클릭합니다]**.
 
 ![](../images/user-guide/navigate-to-service.png)
 
