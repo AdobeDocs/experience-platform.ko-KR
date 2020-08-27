@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data governance;data usage label api;policy service api;data usage labels overview
 solution: Experience Platform
 title: 데이터 사용 레이블 개요
 topic: labels
+description: 데이터 사용 표시 및 실행(DULE)은 Adobe Experience Platform 데이터 거버넌스의 핵심 메커니즘입니다. DULE 기능을 사용하면 데이터 세트 및 필드에 데이터 사용 레이블을 적용하여 관련 데이터 사용 정책에 따라 각 데이터를 분류할 수 있습니다. 이 문서에서는 Experience Platform의 데이터 사용 레이블(DULE 레이블이라고도 함)에 대한 개요를 제공합니다.
 translation-type: tm+mt
-source-git-commit: 5e65c843c3c612b657ebe915c53f14f0b8d7f541
+source-git-commit: cddc559dfb65ada888bb367d6265863091a9b2a1
 workflow-type: tm+mt
-source-wordcount: '578'
+source-wordcount: '632'
 ht-degree: 0%
 
 ---
@@ -30,15 +31,15 @@ Adobe에서 제공하는 레이블 외에도 조직의 사용자 지정 레이�
 
 ## 대상 세그먼트에 대한 레이블 상속
 
-Adobe Experience Platform [세그멘테이션 서비스를 통해](../../segmentation/home.md) 만들어진 모든 대상 세그먼트는 해당 데이터 세트에 대한 사용 레이블을 상속합니다. 이를 통해 [!DNL Experience Platform] (예: [!DNL Real-time Customer Data Platform]) 위에 구축된 애플리케이션에서 세그먼트를 대상에 활성화할 때 데이터 사용 정책 적용을 자동으로 수행할 수 있습니다.
+Adobe Experience Platform [세그멘테이션 서비스에서](../../segmentation/home.md) 만든 모든 대상 세그먼트는 해당 데이터 세트에 대한 사용 레이블을 상속합니다. 이를 통해 [!DNL Experience Platform] (예: [!DNL Real-time Customer Data Platform]) 위에 구축된 애플리케이션에서 세그먼트를 대상에 활성화할 때 데이터 사용 정책 적용을 자동으로 수행할 수 있습니다.
 
 데이터 세트 수준 레이블을 상속하는 것 외에도 세그먼트는 기본적으로 연결된 데이터 세트에서 모든 필드 수준 레이블을 상속받습니다. 기반 애플리케이션에서 세그먼트를 사용하는 방법에 따라, 사용할 필드를 잠재적으로 지정하여 세그먼트가 제외된 필드에서 레이블을 상속할 수 없게 할 수 있습니다. [!DNL Platform]
 
 실시간 CDP에서 자동 실행이 작동하는 방법에 대한 자세한 내용은 실시간 CDP의 [데이터 거버넌스 개요를 참조하십시오](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance).
 
-### Adobe Audience Manager 데이터 내보내기 컨트롤의 상속
+### Adobe Audience Manager 데이터 내보내기 제어 상속
 
-[!DNL Experience Platform] 세그먼트를 Adobe Audience Manager과 공유할 수 있습니다. Audience Manager 세그먼트에 적용된 데이터 내보내기 컨트롤은 상응하는 레이블 및 마케팅 작업으로 [!DNL Experience Platform] [!DNL Data Governance]변환됩니다.
+[!DNL Experience Platform] 는 Adobe Audience Manager과 세그먼트를 공유할 수 있습니다. Audience Manager 세그먼트에 적용된 데이터 내보내기 컨트롤은 상응하는 레이블 및 마케팅 작업으로 [!DNL Experience Platform] [!DNL Data Governance]변환됩니다.
 
 특정 데이터 내보내기 컨트롤이 데이터 사용 레이블에 매핑되는 방법에 대한 참조 [!DNL Platform]는 [Audience Manager 설명서를 참조하십시오](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep).
 
