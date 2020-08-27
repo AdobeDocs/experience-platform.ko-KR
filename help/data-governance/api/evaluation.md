@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 정책
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: cb3a17aa08c67c66101cbf3842bf306ebcca0305
+source-git-commit: 12c53122d84e145a699a2a86631dc37ee0073578
 workflow-type: tm+mt
 source-wordcount: '1472'
 ht-degree: 1%
@@ -52,7 +52,7 @@ GET /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints?duleLabels={LAB
 >
 >정책 표현식의 `AND` 및 `OR` 연산자에 대해 알고 있어야 합니다. 아래 예에서, 요청에 레이블(`C1` 또는 `C3`)이 단독으로 표시되었다면 마케팅 작업이 이 정책을 위반하지 않았을 것입니다. 위반된 정책을 반환하려면 레이블(`C1` 및 `C3`)이 모두 필요합니다. 정책을 신중하게 평가하고 동일한 수준으로 정책 표현식을 정의하는지 확인합니다.
 
-```sh
+```shell
 curl -X GET \
   'https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/sampleMarketingAction/constraints?duleLabels=C1,C3' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -140,7 +140,7 @@ POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 
 다음 요청은 세 개의 데이터 세트 세트에 대해 `crossSiteTargeting` 마케팅 작업을 수행하여 정책 위반을 평가합니다.
 
-```sh
+```shell
 curl -X POST \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/crossSiteTargeting/constraints \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -369,9 +369,9 @@ POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 
 **요청**
 
-다음 요청은 세 데이터 세트에 속하는 특정 필드 `crossSiteTargeting` 에 대한 마케팅 작업을 테스트합니다. 페이로드는 데이터 세트만 포함하는 [평가 요청과](#datasets)유사하며 각 데이터 세트에 대해 특정 필드를 추가하여 레이블을 수집합니다.
+다음 요청은 세 데이터 세트에 속하는 특정 필드 `crossSiteTargeting` 에 대한 마케팅 작업을 테스트합니다. 페이로드는 데이터 세트만 포함하는 [평가 요청과](#datasets)비슷하며 각 데이터 세트에 대해 특정 필드를 추가하여 레이블을 수집합니다.
 
-```sh
+```shell
 curl -X POST \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/crossSiteTargeting/constraints \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -540,7 +540,7 @@ POST /bulk-eval
 >
 >나열된 평가 작업에 배열과 배열 `entityList` 이 모두 포함된 경우 오류가 `labels` 발생합니다. 데이터 세트와 레이블을 모두 기준으로 동일한 마케팅 작업을 평가하려면 해당 마케팅 작업에 별도의 평가 작업을 포함해야 합니다.
 
-```sh
+```shell
 curl -X POST \
   https://platform.adobe.io/data/foundation/dulepolicy/bulk-eval \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -580,8 +580,8 @@ curl -X POST \
 | --- | --- |
 | `evalRef` | 정책 위반에 대한 레이블 또는 데이터 세트에 대해 테스트할 마케팅 작업의 URI입니다. |
 | `includeDraft` | 기본적으로 활성화된 정책만 평가에 참여합니다. 로 `includeDraft` 설정하면 `true`상태에 있는 정책 `DRAFT` 도 참여할 수 있습니다. |
-| `labels` | 마케팅 작업을 테스트할 데이터 사용 레이블 배열.<br><br>**중요&#x200B;**:이 속성을 사용할 때는 동일한 개체에`entityList`속성을 포함해서는 안 됩니다. 데이터 집합 및/또는 필드를 사용하여 동일한 마케팅 작업을 평가하려면,`entityList`배열이 포함된 요청 페이로드에 별도의 개체를 포함해야 합니다. |
-| `entityList` | 마케팅 작업을 테스트하기 위해 데이터 세트 및 해당 데이터 세트 내의 특정 필드(선택 사항) 배열.<br><br>**중요&#x200B;**:이 속성을 사용할 때는 동일한 개체에`labels`속성을 포함해서는 안 됩니다. 특정 데이터 사용 레이블을 사용하여 동일한 마케팅 작업을 평가하려면`labels`배열이 포함된 요청 페이로드에 별도의 개체를 포함해야 합니다. |
+| `labels` | 마케팅 작업을 테스트할 데이터 사용 레이블 배열.<br><br>**중요**:이 속성을 사용할 때는 동일한 개체에 `entityList` 속성을 포함해서는 안 됩니다. 데이터 집합 및/또는 필드를 사용하여 동일한 마케팅 작업을 평가하려면, `entityList` 배열이 포함된 요청 페이로드에 별도의 개체를 포함해야 합니다. |
+| `entityList` | 마케팅 작업을 테스트하기 위해 데이터 세트 및 해당 데이터 세트 내의 특정 필드(선택 사항) 배열.<br><br>**중요**:이 속성을 사용할 때는 동일한 개체에 `labels` 속성을 포함해서는 안 됩니다. 특정 데이터 사용 레이블을 사용하여 동일한 마케팅 작업을 평가하려면 `labels` 배열이 포함된 요청 페이로드에 별도의 개체를 포함해야 합니다. |
 | `entityType` | 마케팅 작업을 테스트할 엔티티 유형. 현재, 만 `dataSet` 지원됩니다. |
 | `entityId` | 마케팅 작업을 테스트할 데이터 세트의 ID입니다. |
 | `entityMeta.fields` | (선택 사항) 마케팅 작업을 테스트할 데이터 세트 내의 특정 필드 목록입니다. |
