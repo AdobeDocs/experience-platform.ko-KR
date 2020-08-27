@@ -4,24 +4,24 @@ solution: Experience Platform
 title: ETL 통합 만들기
 topic: overview
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '4102'
+source-wordcount: '4158'
 ht-degree: 0%
 
 ---
 
 
-# Adobe Experience Platform을 위한 ETL 통합 개발
+# Adobe Experience Platform용 ETL 통합 개발
 
 ETL 통합 안내서에서는 데이터를 인제스트하고 고성능 보안 커넥터를 만드는 일반적인 단계를 간략하게 설명합니다 [!DNL Experience Platform] [!DNL Platform].
 
 
-- [!DNL Catalog](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)
-- [!DNL Data Access](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml)
-- [!DNL Data Ingestion](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)
+- [[!DNL 카탈로그]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)
+- [[!DNL 데이터 액세스]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml)
+- [[!DNL 데이터 처리]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)
 - [인증 및 인증 API](../tutorials/authentication.md)
-- [!DNL Schema Registry](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)
+- [[!DNL 스키마 레지스트리]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)
 
 또한 이 안내서에는 ETL 커넥터를 디자인할 때 사용할 샘플 API 호출 및 각 서비스에 대한 개요를 제공하는 설명서로 연결되는 링크가 포함되어 있습니다. 또한 API를 보다 자세히 사용할 수 있습니다. [!DNL Experience Platform]
 
@@ -37,7 +37,7 @@ ETL 통합 안내서에서는 데이터를 인제스트하고 고성능 보안 �
 
 ETL 커넥터 통합에 포함된 여러 Experience Platform 구성 요소가 있습니다. 다음 목록에는 몇 가지 주요 구성 요소 및 기능이 요약되어 있습니다.
 
-- **IMS(Adobe Identity Management 시스템)** - Adobe 서비스에 대한 인증을 위한 프레임워크를 제공합니다.
+- **Adobe Identity Management 시스템(IMS)** - Adobe 서비스에 대한 인증을 위한 프레임워크를 제공합니다.
 - **IMS 조직** - 제품 및 서비스를 소유 또는 라이센스하고 회원에게 액세스를 허용할 수 있는 기업 실체입니다.
 - **IMS 사용자** - IMS 조직의 구성원. 조직 대 사용자 관계는 여러 사람에게 적용됩니다.
 - **[!DNL Sandbox]** - 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 단일 [!DNL Platform] 인스턴스 가상 파티션
@@ -58,7 +58,7 @@ ETL 커넥터 통합에 포함된 여러 Experience Platform 구성 요소가 �
 
 API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 합니다](../tutorials/authentication.md). 인증 자습서를 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
 
-- 인증: 무기명 `{ACCESS_TOKEN}`
+- 인증:무기명 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
@@ -72,7 +72,7 @@ API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 
 
 페이로드(POST, PUT, PATCH)이 포함된 모든 요청에는 추가 헤더가 필요합니다.
 
-- 컨텐츠 유형: application/json
+- 컨텐츠 유형:application/json
 
 ## 일반 사용자 흐름
 
@@ -90,7 +90,7 @@ ETL 도구에서 사용자는 자격 증명을 사용하여 적절한 연결을 
 
 ### 데이터 집합 목록 보기
 
-데이터 소스를 사용하여 매핑하면 해당 데이터를 사용하여 사용 가능한 모든 데이터 집합 목록을 가져올 수 있습니다 [!DNL Catalog API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml).
+매핑에 데이터 소스를 사용하면 [[!DNL 카탈로그 API]를 사용하여 사용 가능한 모든 데이터 집합 목록을 가져올 수 있습니다](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml).
 
 사용 가능한 모든 데이터 집합(예: `GET /dataSets`). 응답 크기를 제한하는 쿼리 매개 변수를 포함하는 것이 좋습니다.
 
@@ -127,7 +127,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/dataSets?limit=3&
   -H "x-sandbox-name: {SANDBOX_NAME}"
 ```
 
-을(를) 호출하는 방법에 대한 자세한 예는 [카탈로그 서비스 개요를](../catalog/home.md) 참조하십시오 [!DNL Catalog API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml).
+[!DNL [카탈로그 API]를 호출하는 방법에 대한 자세한 예는](../catalog/home.md) 카탈로그 서비스 개요를 [참조하십시오](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml).
 
 **응답**
 
@@ -217,7 +217,7 @@ curl -X GET \
 
 ### 데이터 집합 &quot;스키마&quot; 속성(더 이상 사용되지 않음 - EOL 2019-05-30)
 
-데이터 세트에는 이제 더 이상 사용되지 않으며 이전 버전과의 호환성을 위해 일시적으로 사용할 수 있는 &quot;스키마&quot; 속성이 포함될 수 있습니다. 예를 들어, 이전에 만든 것과 유사한 목록(GET) 요청인 경우, 여기서 &quot;schema&quot;가 `properties` 쿼리 매개 변수에서 &quot;schemaRef&quot;로 대체되면 다음을 반환할 수 있습니다.
+데이터 세트에는 이제 더 이상 사용되지 않으며 이전 버전과의 호환성을 위해 일시적으로 사용할 수 있는 &quot;스키마&quot; 속성이 포함될 수 있습니다. 예를 들어, 이전에 만든 것과 유사한 목록(GET) 요청에서 `properties` 쿼리 매개 변수의 &quot;schemaRef&quot;로 &quot;schemaRef&quot;로 대체된 경우 다음을 반환할 수 있습니다.
 
 ```json
 {
@@ -229,7 +229,7 @@ curl -X GET \
 }
 ```
 
-데이터 집합의 &quot;스키마&quot; 속성이 채워지는 경우 스키마가 더 이상 사용되지 않는 스키마이고, 지원되는 경우 ETL 커넥터는 끝점이 있는 &quot;스키마&quot; 속성 값(기존 스키마를 검색할 수 없는 종점 `/xdms` `/xdms` [!DNL Catalog API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml))을 사용해야 합니다.
+데이터 집합의 &quot;스키마&quot; 속성이 채워지는 경우 스키마가 더 이상 사용되지 않는 스키마이며, 지원되는 경우 ETL 커넥터는 끝점이 있는 &quot;스키마&quot; 속성 값( `/xdms` [!DNL Catalog API] `/xdms` [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml))을 사용하여 기존 스키마를 검색해야 합니다.
 
 **API 형식**
 
@@ -430,7 +430,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/export/files/ea40946ac031
 
 ### 파일 데이터 미리 보기
 
-&quot;href&quot; 속성을 사용하여 [!DNL Data Access API](../data-access/home.md)
+&quot;href&quot; 속성을 사용하여 [[!DNL 데이터 액세스 API]를 통해 미리 보기 데이터를 가져올 수 있습니다](../data-access/home.md).
 
 **API 형식**
 
@@ -497,7 +497,7 @@ in의 자료는 쪽모이 세공 마루 파일 형태로 작성해야 [!DNL Expe
 
 ## 실행 단계
 
-실행이 시작되면 커넥터(소스 구성 요소에 정의됨)가 [!DNL Experience Platform] [!DNL Data Access API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) 변환 프로세스는 특정 시간 범위의 데이터를 읽습니다. 내부적으로 소스 데이터 세트를 쿼리합니다. 쿼리하는 동안 매개 변수가 있는 시작 날짜(시간 시리즈 데이터 또는 증분 데이터를 위해 롤링)와 이러한 배치에 대한 데이터 집합 파일을 나열하고 해당 데이터 집합 파일에 대한 데이터 요청을 시작합니다.
+실행이 시작되면 커넥터(소스 구성 요소에 정의됨)가 [!DNL Experience Platform] [!DNL 데이터 액세스 API]를 [사용하여 데이터를 읽습니다](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml). 변환 프로세스는 특정 시간 범위의 데이터를 읽습니다. 내부적으로 소스 데이터 세트를 쿼리합니다. 쿼리하는 동안 매개 변수가 있는 시작 날짜(시간 시리즈 데이터 또는 증분 데이터를 위해 롤링)와 이러한 배치에 대한 데이터 집합 파일을 나열하고 해당 데이터 집합 파일에 대한 데이터 요청을 시작합니다.
 
 ### 변형 예
 
@@ -505,7 +505,7 @@ in의 자료는 쪽모이 세공 마루 파일 형태로 작성해야 [!DNL Expe
 
 ### 데이터 읽기 [!DNL Experience Platform]
 
-이 [!DNL Catalog API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)를 사용하여 지정된 시작 시간과 종료 시간 사이에 모든 배치를 가져와서 배치가 생성된 순서대로 정렬할 수 있습니다.
+[!DNL 카탈로그 API] [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)를 사용하여 지정된 시작 시간과 종료 시간 사이에 모든 배치를 가져와서 배치가 생성된 순서에 따라 정렬할 수 있습니다.
 
 **요청**
 
@@ -522,7 +522,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches?dataSet=D
 
 ### 일괄 파일 가져오기
 
-찾고 있는 배치에 대한 ID가 있으면 (`{BATCH_ID}`) 을 통해 특정 배치에 속하는 파일 목록을 검색할 수 [!DNL Data Access API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml)있습니다.  자세한 내용은 [데이터 액세스 자습서를 참조하십시오](../data-access/tutorials/dataset-data.md).
+찾고 있는 일괄 처리에 대한 ID가 있으면`{BATCH_ID}`[!DNL 데이터 액세스 API]를 통해 특정 일괄 처리에 속하는 파일 목록을 검색할 수 있습니다 [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml).  자세한 내용은 [데이터 액세스 자습서를 참조하십시오](../data-access/tutorials/dataset-data.md).
 
 **요청**
 
@@ -536,7 +536,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}
 
 ### 파일 ID를 사용하여 파일에 액세스
 
-파일의 고유 ID(`{FILE_ID`)를 사용하여 파일 이름, 크기(바이트), 파일 다운로드 링크 등 파일의 특정 세부 정보에 액세스할 [!DNL Data Access API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) 수 있습니다.
+파일의 고유 ID(`{FILE_ID`)를 사용하여 파일 이름, 바이트 크기, 다운로드 링크 등 [[!DNL 데이터 액세스 API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) 파일을 사용하여 파일의 특정 세부 정보에 액세스할 수 있습니다.
 
 **요청**
 
@@ -552,7 +552,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/export/files/{FILE_ID}" \
 
 ### 파일 컨텐츠 액세스
 
-특정 파일의 컨텐츠에 액세스하는 데 사용할 [!DNL Data Access API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) 수 있습니다. 콘텐트를 가져오기 위해 파일 ID를 사용하여 파일에 액세스할 `_links.self.href` 때 반환된 값을 사용하여 GET 요청이 수행됩니다.
+[!DNL 데이터 액세스 API] [를](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) 사용하여 특정 파일의 내용에 액세스할 수 있습니다. 콘텐트를 가져오기 위해 파일 ID를 사용하여 파일에 액세스할 `_links.self.href` 때 반환된 값을 사용하여 GET 요청이 수행됩니다.
 
 **요청**
 
@@ -568,15 +568,15 @@ curl -X GET "https://platform.adobe.io/data/foundation/export/files/{DATASET_FIL
 
 ### 스키마 준수 레코드 유효성 확인
 
-데이터를 작성할 때 사용자는 XDM 스키마에 정의된 유효성 검사 규칙에 따라 데이터의 유효성을 검사하도록 선택할 수 있습니다. 스키마 유효성 검사에 대한 자세한 내용은 GitHub의 [ETL 에코시스템 통합 참조 코드에서 확인할 수 있습니다](https://github.com/adobe/experience-platform-etl-reference/blob/fd08dd9f74ae45b849d5482f645f859f330c1951/README.md#validation).
+데이터를 작성할 때 사용자는 XDM 스키마에 정의된 유효성 검사 규칙에 따라 데이터의 유효성을 확인할 수 있습니다. 스키마 유효성 검사에 대한 자세한 내용은 GitHub의 [ETL 에코시스템 통합 참조 코드에서 확인할 수 있습니다](https://github.com/adobe/experience-platform-etl-reference/blob/fd08dd9f74ae45b849d5482f645f859f330c1951/README.md#validation).
 
-에 있는 참조 구현을 사용 중인 경우 시스템 속성을 사용하여 이 구현 [!DNL GitHub](https://github.com/adobe/experience-platform-etl-reference/blob/fd08dd9f74ae45b849d5482f645f859f330c1951/README.md)에서 스키마 유효성 검사를 활성화할 수 있습니다 `-DenableSchemaValidation=true`.
+[!DNL GitHub]에 있는 참조 구현을 사용 중인 경우 시스템 속성을 사용하여 이 구현에서 스키마 유효성 검사를 활성화할 수 있습니다 [](https://github.com/adobe/experience-platform-etl-reference/blob/fd08dd9f74ae45b849d5482f645f859f330c1951/README.md)`-DenableSchemaValidation=true`.
 
 논리 XDM 유형에 대해 문자열 및 문자열 `minLength` 과 같은 속성 `maxlength` , 정수 `minimum` 등에 대해 유효성 검사 `maximum` 를 수행할 수 있습니다. 스키마 [레지스트리 API 개발자 안내서에는](../xdm/api/getting-started.md) XDM 유형 및 유효성 검사에 사용할 수 있는 속성에 대한 개요를 설명하는 표가 포함되어 있습니다.
 
 >[!NOTE]
 >
->다양한 `integer` 유형에 대해 제공되는 최소 및 최대 값은 유형이 지원할 수 있는 MIN 및 MAX 값이지만 이러한 값은 선택한 최소 및 최대 수에 더 제한될 수 있습니다.
+>다양한 `integer` 유형에 대해 제공되는 최소 및 최대 값은 해당 유형이 지원할 수 있는 MIN 및 MAX 값이지만 이러한 값은 선택한 최소 및 최대 수에 더 제한될 수 있습니다.
 
 ### 일괄 처리 만들기
 
@@ -600,7 +600,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 
 ### 데이터 세트에 쓰기
 
-새 일괄 처리를 성공적으로 만든 후 파일을 특정 데이터 세트에 업로드할 수 있습니다. 여러 파일을 홍보할 때까지 일괄 게시할 수 있습니다. 작은 파일 업로드 API를 사용하여 _파일을 업로드할 수 있습니다_. 그러나 파일이 너무 크고 게이트웨이 제한이 초과된 경우 _대용량 파일 업로드 API를 사용할 수 있습니다_. 대용량 파일 업로드와 작은 파일 업로드를 모두 사용하는 방법에 대한 자세한 내용은 일괄 처리 [처리 통합 개요를 참조하십시오](../ingestion/batch-ingestion/overview.md).
+새 일괄 처리를 성공적으로 만든 후 파일을 특정 데이터 세트에 업로드할 수 있습니다. 여러 파일을 홍보할 때까지 일괄 게시할 수 있습니다. 작은 파일 업로드 API를 사용하여 _파일을 업로드할 수 있습니다_.그러나 파일이 너무 크고 게이트웨이 제한이 초과된 경우 _대용량 파일 업로드 API를 사용할 수 있습니다_. 대용량 파일 업로드와 작은 파일 업로드를 모두 사용하는 방법에 대한 자세한 내용은 일괄 처리 [처리 통합 개요를 참조하십시오](../ingestion/batch-ingestion/overview.md).
 
 **요청**
 
@@ -620,7 +620,7 @@ curl -X PUT "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 모든 파일이 배치에 업로드된 후 배치를 완료하도록 신호를 보낼 수 있습니다. 이렇게 하면 완료된 파일에 대해 [!DNL Catalog] &quot;DataSetFile&quot; 항목이 만들어지고 생성 배치와 연결됩니다. 그런 다음 일괄 처리 [!DNL Catalog] 가 성공으로 표시되어 사용 가능한 데이터를 인제스트하는 다운스트림 흐름을 트리거합니다.
 
-데이터는 먼저 Adobe Experience Platform의 스테이징 위치에 도착한 다음 카탈로그 작성 및 확인 후 최종 위치로 이동됩니다. 모든 데이터가 영구 위치로 이동되면 일괄 처리는 성공한 것으로 표시됩니다.
+데이터는 먼저 Adobe Experience Platform의 스테이징 위치에 도착한 다음 카탈로그와 유효성 검사를 통해 최종 위치로 이동됩니다. 모든 데이터가 영구 위치로 이동되면 일괄 처리는 성공한 것으로 표시됩니다.
 
 **요청**
 
@@ -640,7 +640,7 @@ ETL 도구는 데이터를 읽을 때 소스 데이터 집합의 타임스탬프
 
 ### 마지막 배치 상태 가져오기
 
-ETL 도구에서 새 작업을 실행하기 전에 마지막 배치가 성공적으로 완료되었는지 확인해야 합니다. 이 [!DNL Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) 는 관련 배치의 세부 사항을 제공하는 배치별 옵션을 제공합니다.
+ETL 도구에서 새 작업을 실행하기 전에 마지막 배치가 성공적으로 완료되었는지 확인해야 합니다. [!DNL [카탈로그 서비스 API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) 는 관련 일괄 처리에 대한 세부 정보를 제공하는 일괄 처리 전용 옵션을 제공합니다.
 
 **요청**
 
@@ -674,7 +674,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches?limit=1&s
 
 ### ID로 마지막 배치 상태 가져오기
 
-을 사용하여 GET 요청을 실행하여 개별 배치 상태를 검색할 수 [!DNL Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) 있습니다 `{BATCH_ID}`. 사용한 ID는 일괄 처리를 만들 때 반환된 ID와 동일합니다. `{BATCH_ID}`
+개별 배치 상태는 를 사용하여 GET 요청을 실행하여 [[!DNL 카탈로그 서비스 API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) 를 통해 검색할 수 `{BATCH_ID}`있습니다. 사용한 ID는 일괄 처리를 만들 때 반환된 ID와 동일합니다. `{BATCH_ID}`
 
 **요청**
 
@@ -759,13 +759,13 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID
 
 클라이언트가 지난 &#39;n&#39;일 동안 처리되는 ETL 데이터가 예상대로 발생하지 않았거나 소스 데이터 자체가 정확하지 않았을 수 있음을 발견한 경우 일괄 재생 및 데이터 재처리가 필요할 수 있습니다.
 
-이를 위해 클라이언트의 데이터 관리자는 UI를 사용하여 손상된 데이터가 포함된 배치를 제거합니다. [!DNL Platform] 그런 다음 ETL을 다시 실행해야 하므로 올바른 데이터로 다시 채울 수 있습니다. 소스 자체에 손상된 데이터가 있는 경우 데이터 엔지니어/관리자는 소스 배치를 수정하고 데이터를 다시 인제스트해야 합니다(Adobe Experience Platform 또는 ETL 커넥터를 통해).
+이를 위해 클라이언트의 데이터 관리자는 UI를 사용하여 손상된 데이터가 포함된 배치를 제거합니다. [!DNL Platform] 그런 다음 ETL을 다시 실행해야 하므로 올바른 데이터로 다시 채울 수 있습니다. 소스 자체에 손상된 데이터가 있는 경우 데이터 엔지니어/관리자는 소스 배치를 수정하고 데이터를 다시 수집해야 합니다(Adobe Experience Platform 또는 ETL 커넥터를 통해).
 
 생성되는 데이터의 유형에 따라, 데이터 엔지니어는 하나의 일괄 처리 또는 특정 데이터 세트에서 모든 배치를 제거하는 것이 좋습니다. 지침에 따라 데이터가 제거/ [!DNL Experience Platform] 보관됩니다.
 
 데이터를 삭제하는 ETL 기능이 중요할 가능성이 높습니다.
 
-제거가 완료되면 클라이언트 관리자는 배치가 삭제되는 시점부터 핵심 서비스에 대한 처리를 다시 시작하도록 Adobe Experience Platform을 다시 구성해야 합니다.
+제거가 완료되면 클라이언트 관리자는 일괄 처리가 삭제되는 시점부터 핵심 서비스에 대한 처리를 다시 시작하도록 Adobe Experience Platform을 다시 구성해야 합니다.
 
 ## 동시 배치 처리
 
@@ -789,5 +789,5 @@ Adobe Experience Platform은 현재 지연된 데이터를 식별하지 않으�
 | ---- | ------ | ----------- |
 | 2019-01-19 | 데이터 세트에서 &quot;필드&quot; 속성을 제거했습니다. | 이전에 데이터 집합에는 스키마의 복사본을 포함하는 &quot;필드&quot; 속성이 포함되었습니다. 이 기능은 더 이상 사용할 수 없습니다. &quot;fields&quot; 속성이 있으면 무시해야 하며 대신 &quot;observedSchema&quot; 또는 &quot;schemaRef&quot;가 사용됩니다. |
 | 2019-03-15 | 데이터 세트에 &quot;schemaRef&quot; 속성이 추가되었습니다. | 데이터 집합의 &quot;schemaRef&quot; 속성에는 데이터 집합이 기반으로 하는 XDM 스키마를 참조하는 URI가 포함되어 있으며 데이터 집합에서 사용할 수 있는 모든 잠재적인 필드를 나타냅니다. |
-| 2019-03-15 | 모든 최종 사용자 식별자는 &quot;identityMap&quot; 속성에 매핑됩니다. | &quot;identityMap&quot;은 CRM ID, ECID 또는 로열티 프로그램 ID와 같은 주체의 모든 고유 식별자를 캡슐화합니다. 이 맵은 각 최종 사용자에 대해 단일 ID 그래프를 형성하면서 대상의 모든 알려진 및 익명 ID를 해결하는 데 사용됩니다 [!DNL Identity Service](../identity-service/home.md) . |
+| 2019-03-15 | 모든 최종 사용자 식별자는 &quot;identityMap&quot; 속성에 매핑됩니다. | &quot;identityMap&quot;은 CRM ID, ECID 또는 로열티 프로그램 ID와 같은 주체의 모든 고유 식별자를 캡슐화합니다. 이 맵은 [[!DNL Identity Service]](../identity-service/home.md) 사용자가 제목에 대해 알려진 모든 ID와 익명 ID를 확인하여 각 최종 사용자에 대해 단일 ID 그래프를 만드는 데 사용됩니다. |
 | 2019-05-30 | 데이터 세트에서 EOL 및 &quot;스키마&quot; 속성 제거 | 데이터 집합 &quot;스키마&quot; 속성은 API에서 더 이상 사용되지 않는 끝점을 사용하여 스키마에 대한 참조 링크를 `/xdms` [!DNL Catalog] 제공했습니다. 새 [!DNL Schema Registry] API에서 참조되는 스키마의 &quot;id&quot;, &quot;version&quot; 및 &quot;contentType&quot;을 제공하는 &quot;schemaRef&quot;로 대체되었습니다. |
