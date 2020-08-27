@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;train and evaluate;Data Science Workspace;popular topics
+keywords: Experience Platform;train and evaluate;Data Science Workspace;popular topics;create a model;create a training run
 solution: Experience Platform
 title: 모델 트레이닝 및 평가(UI)
 topic: Tutorial
+description: Adobe Experience Platform 데이터 과학 작업 공간에서, 기계 학습 모델은 모델의 의도에 적합한 기존 레서피 모델을 결합하여 만들어집니다. 그런 다음 연관된 하이퍼매개 변수를 세밀하게 조정하여 모델의 운영 효율성과 효과를 최적화하기 위해 교육을 받고 평가합니다. 레서피는 재사용할 수 있습니다. 즉, 하나의 레서피를 사용하여 여러 모델을 생성하고 특정 목적에 맞게 변경할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 1214728063c5835510fda1a16bf1fdcca4abee48
+source-git-commit: cddc559dfb65ada888bb367d6265863091a9b2a1
 workflow-type: tm+mt
-source-wordcount: '975'
-ht-degree: 2%
+source-wordcount: '1038'
+ht-degree: 1%
 
 ---
 
@@ -98,7 +99,7 @@ Adobe Experience Platform 데이터 과학 작업 공간에서, 기계 학습 �
 --- | --- | ---
 | learning_rate | 학습 비율은 learning_rate로 각 트리의 기여도를 축소합니다. learning_rate와 n_estimator 사이에 상쇄 효과가 있습니다. | 0.1 | [2 - 10] / 견적 담당자 수 |
 | n_견적 | 수행할 부흥 단계 수입니다. 그라데이션 강화는 지나치게 맞춤화하기에 상당히 강력하기 때문에 보통 많은 수가 더 나은 성능을 얻을 수 있습니다. | 100 | 100 - 1000 |
-| max_depth | 개별 회귀 견적 도구의 최대 깊이입니다. 최대 깊이는 트리의 노드 수를 제한합니다. 최상의 성능을 위해 이 매개 변수를 조정하십시오. 가장 좋은 값은 입력 변수의 상호 작용에 따라 달라집니다. | 3 | 4 - 10 |
+| max_depth | 개별 회귀 견적 도구의 최대 깊이입니다. 최대 깊이는 트리의 노드 수를 제한합니다. 최상의 성능을 위해 이 매개 변수를 조정하십시오.가장 좋은 값은 입력 변수의 상호 작용에 따라 달라집니다. | 3 | 4 - 10 |
 
 추가 매개 변수는 모델의 기술 속성을 결정합니다.
 
