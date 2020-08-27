@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;score a model;Data Science Workspace;popular topics
+keywords: Experience Platform;score a model;Data Science Workspace;popular topics;ui;scoring run;scoring results
 solution: Experience Platform
 title: 모델 점수 지정(UI)
 topic: Tutorial
+description: 'Adobe Experience Platform 데이터 과학 작업 공간에서 채점하는 방법은 입력 데이터를 기존 트레이닝된 모델에 제공함으로써 달성됩니다. 그러면 점수 결과가 저장되고 지정된 출력 데이터 세트에 새로운 일괄 처리로 표시됩니다. '
 translation-type: tm+mt
-source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
 workflow-type: tm+mt
-source-wordcount: '573'
+source-wordcount: '609'
 ht-degree: 0%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 0%
 
 # 모델 점수 지정(UI)
 
-입력 데이터를 기존 트레이닝된 모델에 제공함으로써 Adobe Experience Platform에서 점수를 획득할 [!DNL Data Science Workspace] 수 있습니다. 그러면 점수 지정 결과가 저장되고 지정된 출력 데이터 세트에 새로운 일괄 처리로 표시됩니다.
+Adobe Experience Platform에서 채점하는 것은 입력 데이터를 기존 트레이닝된 모델에 제공함으로써 달성될 [!DNL Data Science Workspace] 수 있습니다. 그러면 점수 결과가 저장되고 지정된 출력 데이터 세트에 새로운 일괄 처리로 표시됩니다.
 
 이 자습서는 사용자 인터페이스에서 모델을 점화하는 데 필요한 단계를 [!DNL Data Science Workspace] 보여 줍니다.
 
@@ -44,7 +45,7 @@ ht-degree: 0%
    ![](../images/models-recipes/score/configuration.png)
 점수 지정 구성을 검토 및 확인하고 **[!UICONTROL 마침을]** 클릭하여 점수 실행을 만들고 실행합니다. 점수 지정 실행 ** 탭으로 이동되고 새 점수 실행 상태가 표시됩니다.
    ![](../images/models-recipes/score/scoring_runs_tab.png)
-점수 실행 시 다음 네 가지 상태 중 하나가 표시됩니다. 보류 중, 완료, 실패 또는 실행 중 중, 자동으로 업데이트됩니다. 상태가 &quot;완료&quot; 또는 &quot;실패&quot;인 경우 다음 단계로 진행합니다.
+점수 실행 시 다음 네 가지 상태 중 하나가 표시됩니다.보류 중, 완료, 실패 또는 실행 중 중, 자동으로 업데이트됩니다. 상태가 &quot;완료&quot; 또는 &quot;실패&quot;인 경우 다음 단계로 진행합니다.
 
 ## 점수 지정 결과 보기
 
