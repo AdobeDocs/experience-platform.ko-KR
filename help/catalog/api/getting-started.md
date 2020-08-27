@@ -5,9 +5,9 @@ title: 카탈로그 서비스 개발자 가이드
 topic: developer guide
 description: 이 개발자 안내서에서는 카탈로그 API 사용을 시작하는 데 도움이 되는 단계를 제공합니다. 그런 다음 가이드는 카탈로그를 사용하여 키 작업을 수행하기 위한 샘플 API 호출을 제공합니다.
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: c8e53a25c5b22e8d840658fe26ff47875947a6d0
 workflow-type: tm+mt
-source-wordcount: '589'
+source-wordcount: '588'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # [!DNL Catalog Service] 개발자 가이드
 
-[!DNL Catalog Service] adobe experience platform의 데이터 위치와 혈통에 대한 기록 시스템이다. [!DNL Catalog] 데이터 자체에 액세스할 필요 없이 데이터 내에서 데이터에 대한 정보를 찾을 수 [!DNL Experience Platform]있는 메타데이터 저장소 또는 &quot;카탈로그&quot;로 작동합니다. 자세한 내용은 [카탈로그 개요를](../home.md) 참조하십시오.
+[!DNL Catalog Service] adobe experience platform의 데이터 위치와 혈통에 대한 기록 시스템이다. [!DNL Catalog] 데이터 자체에 액세스할 필요 없이 데이터 내에서 데이터에 대한 정보를 찾을 수 [!DNL Experience Platform]있는 메타데이터 저장소 또는 &quot;카탈로그&quot;로 작동합니다. 자세한 내용은 [[!DNL Catalog] 개요를](../home.md) 참조하십시오.
 
 이 개발자 안내서에서는 [!DNL Catalog] API 사용을 시작하는 데 도움이 되는 단계를 제공합니다. 그런 다음 이 안내서에서는 를 사용하여 키 작업을 수행하기 위한 샘플 API 호출을 제공합니다 [!DNL Catalog].
 
