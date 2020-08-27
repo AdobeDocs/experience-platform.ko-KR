@@ -5,9 +5,9 @@ title: 스트리밍 통합 유효성 검사
 topic: overview
 description: 스트리밍 통합 기능을 사용하면 스트리밍 끝점을 실시간으로 사용하여 데이터를 Adobe Experience Platform에 업로드할 수 있습니다. 스트리밍 통합 API는 동기식 및 비동기식 두 가지 인증 모드를 지원합니다.
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '843'
+source-wordcount: '852'
 ht-degree: 3%
 
 ---
@@ -21,8 +21,8 @@ ht-degree: 3%
 
 이 가이드는 Adobe Experience Platform의 다음 구성 요소에 대한 작업 이해를 필요로 합니다.
 
-- [!DNL Experience Data Model (XDM) System](../../xdm/home.md):고객 경험 데이터를 [!DNL Experience Platform] 구성하는 표준화된 프레임워크
-- [!DNL Streaming Ingestion](../streaming-ingestion/overview.md):데이터를 보낼 수 있는 방법 중 하나입니다 [!DNL Experience Platform].
+- [[!DNL 경험 데이터 모델(XDM) 시스템]](../../xdm/home.md):고객 경험 데이터를 [!DNL Experience Platform] 구성하는 표준화된 프레임워크
+- [[!DNL 스트리밍 통합]](../streaming-ingestion/overview.md):데이터를 보낼 수 있는 방법 중 하나입니다 [!DNL Experience Platform].
 
 ### 샘플 API 호출 읽기
 
@@ -141,7 +141,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
 
 ## 비동기 유효성 검사
 
-비동기 유효성 검사는 즉각적인 피드백을 제공하지 않는 유효성 검사 방법입니다. 대신 데이터 손실을 방지하기 위해 데이터가 실패한 배치 [!DNL Data Lake] 로 전송됩니다. 나중에 이 실패한 데이터를 검색하여 더 자세히 분석할 수 있습니다. 이 방법은 제조업에 사용해야 한다. 별도로 요청되지 않는 한 스트리밍 통합 기능은 비동기 유효성 검사 모드에서 작동합니다.
+비동기 유효성 검사는 즉각적인 피드백을 제공하지 않는 유효성 검사 방법입니다. 대신 데이터 손실을 방지하기 위해 데이터가 실패한 일괄 처리 [!DNL Data Lake] 로 전송됩니다. 나중에 이 실패한 데이터를 검색하여 다시 볼 수 있습니다. 이 방법은 제조업에 사용해야 한다. 별도로 요청되지 않는 한 스트리밍 통합 기능은 비동기 유효성 검사 모드에서 작동합니다.
 
 **API 형식**
 
