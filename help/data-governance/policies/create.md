@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data governance;data usage policy
 solution: Experience Platform
 title: 데이터 사용 정책 만들기
 topic: policies
+description: 데이터 사용 표시 및 실행(DULE)은 Adobe Experience Platform 데이터 거버넌스의 핵심 메커니즘입니다. DULE 정책 서비스 API를 사용하면 일정 정책을 만들고 관리하여 특정 DULE 레이블이 포함된 데이터에 대해 취할 수 있는 마케팅 작업을 결정할 수 있습니다. 이 문서에서는 정책 서비스 API를 사용하여 DULE 정책을 만들기 위한 단계별 자습서를 제공합니다.
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
 workflow-type: tm+mt
-source-wordcount: '1194'
+source-wordcount: '1254'
 ht-degree: 2%
 
 ---
