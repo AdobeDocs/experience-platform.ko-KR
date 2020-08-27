@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 고객 세그먼트에 대한 데이터 사용 규정 준수
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1323'
+source-wordcount: '1335'
 ht-degree: 1%
 
 ---
@@ -20,13 +20,13 @@ ht-degree: 1%
 
 이 자습서에서는 다음의 구성 요소에 대해 작업해야 [!DNL Adobe Experience Platform]합니다.
 
-- [!DNL Real-time Customer Profile](../../profile/home.md): [!DNL Real-time Customer Profile] 은 범용 조회 엔티티 저장소이며, XDM( [!DNL Experience Data Model] Lookup Entity) 데이터를 관리하는 데 사용됩니다 [!DNL Platform]. 프로필은 다양한 엔터프라이즈 데이터 에셋에 있는 데이터를 병합하고 통합 프레젠테이션에서 해당 데이터에 액세스할 수 있도록 합니다.
-   - [정책 병합](../../profile/api/merge-policies.md): 특정 조건 [!DNL Real-time Customer Profile] 에서 통합 보기로 병합할 수 있는 데이터를 결정하는 데 사용되는 규칙입니다. 병합 정책은 [!DNL Data Governance] 목적에 따라 구성할 수 있습니다.
-- [!DNL Segmentation](../home.md): 프로필 스토어에 포함된 대규모 개인 그룹을 비슷한 특성을 공유하고 마케팅 전략과 유사하게 반응하는 작은 그룹으로 나누는 방법 [!DNL Real-time Customer Profile] .
-- [!DNL Data Governance](../../data-governance/home.md): [!DNL Data Governance] 다음 구성 요소를 사용하여 데이터 사용 레이블 지정 및 실행(DULE)을 위한 인프라를 제공합니다.
-   - [데이터 사용 레이블](../../data-governance/labels/user-guide.md): 각 데이터를 처리하는 민감도 수준에서 데이터 세트와 필드를 설명하는 데 사용되는 레이블입니다.
-   - [데이터 사용 정책](../../data-governance/policies/overview.md): 특정 데이터 사용 레이블로 분류된 데이터에 허용되는 마케팅 작업을 나타내는 구성
-   - [정책 실행](../../data-governance/enforcement/overview.md): 데이터 사용 정책을 적용하고 정책 위반을 구성하는 데이터 작업을 방지할 수 있습니다.
+- [[!DNL 실시간 고객 프로필]](../../profile/home.md): [!DNL Real-time Customer Profile] 은 범용 조회 엔티티 저장소이며, XDM( [!DNL Experience Data Model] Lookup Entity) 데이터를 관리하는 데 사용됩니다 [!DNL Platform]. 프로필은 다양한 엔터프라이즈 데이터 에셋에 있는 데이터를 병합하고 통합 프레젠테이션에서 해당 데이터에 액세스할 수 있도록 합니다.
+   - [정책 병합](../../profile/api/merge-policies.md):특정 조건 [!DNL Real-time Customer Profile] 에서 통합 보기로 병합할 수 있는 데이터를 결정하는 데 사용되는 규칙입니다. 병합 정책은 [!DNL Data Governance] 목적에 따라 구성할 수 있습니다.
+- [[!DNL 세그멘테이션]](../home.md):프로필 스토어에 포함된 대규모 개인 그룹을 비슷한 특성을 공유하고 마케팅 전략과 유사하게 반응하는 작은 그룹으로 나누는 방법 [!DNL Real-time Customer Profile] .
+- [[!DNL 데이터 거버넌스]](../../data-governance/home.md): [!DNL Data Governance] 다음 구성 요소를 사용하여 데이터 사용 레이블 지정 및 실행(DULE)을 위한 인프라를 제공합니다.
+   - [데이터 사용 레이블](../../data-governance/labels/user-guide.md):각 데이터를 처리하는 민감도 수준에서 데이터 세트와 필드를 설명하는 데 사용되는 레이블입니다.
+   - [데이터 사용 정책](../../data-governance/policies/overview.md):특정 데이터 사용 레이블로 분류된 데이터에 허용되는 마케팅 작업을 나타내는 구성
+   - [정책 실행](../../data-governance/enforcement/overview.md):데이터 사용 정책을 적용하고 정책 위반을 구성하는 데이터 작업을 방지할 수 있습니다.
 - [샌드박스](../../sandboxes/home.md): [!DNL Experience Platform] 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되도록 단일 [!DNL Platform] 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
 
 다음 섹션에서는 API를 성공적으로 호출하기 위해 알아야 할 추가 정보를 [!DNL Platform] 제공합니다.
@@ -39,7 +39,7 @@ ht-degree: 1%
 
 API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 합니다](../../tutorials/authentication.md). 인증 자습서를 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
 
-- 인증: 무기명 `{ACCESS_TOKEN}`
+- 인증:무기명 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
@@ -53,7 +53,7 @@ API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 
 
 페이로드(POST, PUT, PATCH)이 포함된 모든 요청에는 추가 헤더가 필요합니다.
 
-- 컨텐츠 유형: application/json
+- 컨텐츠 유형:application/json
 
 ## 세그먼트 정의에 대한 병합 정책 검색 {#merge-policy}
 
@@ -383,4 +383,4 @@ API를 사용하여 세그먼트를 데이터 세트에 내보낼 때 내보내�
 
 ## 다음 단계
 
-이 튜토리얼을 따라 대상 세그먼트와 연관된 데이터 사용 레이블을 조회하고 특정 마케팅 작업에 대한 정책 위반을 테스트했습니다. 에 대한 자세한 내용 [!DNL Data Governance] 은 [!DNL Experience Platform]개요를 읽어 [!DNL Data Governance](../../data-governance/home.md)보십시오.
+이 튜토리얼을 따라 대상 세그먼트와 연관된 데이터 사용 레이블을 조회하고 특정 마케팅 작업에 대한 정책 위반을 테스트했습니다. 에 대한 자세한 내용 [!DNL Data Governance] 은 [!DNL Experience Platform][!DNL 데이터 거버넌스] [에 대한 개요를 읽어 보십시오](../../data-governance/home.md).
