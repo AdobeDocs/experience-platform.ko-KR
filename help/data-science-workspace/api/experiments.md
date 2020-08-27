@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics
+keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;experiments;sensei machine learning api
 solution: Experience Platform
 title: 실험
 topic: Developer guide
+description: 모델 개발 및 트레이닝은 실험 수준에서 이루어집니다. 실험 단계는 MLInestment, 트레이닝 실행 및 점수 지정으로 구성됩니다.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 194a29124949571638315efe00ff0b04bff19303
 workflow-type: tm+mt
-source-wordcount: '744'
+source-wordcount: '765'
 ht-degree: 4%
 
 ---
@@ -100,7 +101,7 @@ curl -X POST \
 
 | 속성 | 설명 |
 | --- | --- |
-| `{TASK}` | 실행 작업을 지정합니다. 이 값을 교육 `train` , 점수 지정 `score` 또는 기능 파이프라인 `featurePipeline` 에 대해 설정합니다. |
+| `{TASK}` | 실행 작업을 지정합니다. 이 값을 교육 `train` , 점수 `score` 지정 또는 기능 파이프라인 `featurePipeline` 에 대해 설정합니다. |
 
 **응답**
 
