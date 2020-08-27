@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: November 18, 2019
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: cb5df9b44486bda84f08805f1077d6097e3666e2
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1882'
+source-wordcount: '1908'
 ht-degree: 2%
 
 ---
@@ -18,15 +18,15 @@ ht-degree: 2%
 **릴리스 날짜: 2019년 11월 18일**
 
 Adobe Experience Platform의 새로운 기능:
-* [!DNL Real-time Customer Data Platform](#rtcdp)
-* [!DNL Destinations](#destinations)
-* [!DNL Sources](#sources)
+* [[!DNL 실시간 고객 데이터 플랫폼]](#rtcdp)
+* [[!DNL 대상]](#destinations)
+* [[!DNL 소스]](#sources)
 
 기존 기능 업데이트:
-* [!DNL Data Science Workspace](#dsw)
-* [!DNL Experience Data Model (XDM) System](#xdm)
-* [!DNL Real-time Customer Profile](#profile)
-* [!DNL Segmentation Service](#segmentation)
+* [[!DNL 데이터 과학 작업 공간]](#dsw)
+* [[!DNL 경험 데이터 모델(XDM) 시스템]](#xdm)
+* [[!DNL 실시간 고객 프로필]](#profile)
+* [[!DNL 세그멘테이션 서비스]](#segmentation)
 
 ## [!DNL Real-time Customer Data Platform] {#rtcdp}
 
@@ -65,7 +65,7 @@ Adobe은 Adobe Experience Cloud와의 기본 통합은 물론 광범위한 파�
 
 ## [!DNL Destinations] {#destinations}
 
-[!DNL Destinations] adobe의 실시간 고객 데이터 플랫폼에서 지원하는 대상 플랫폼과의 사전 구축된 통합으로, 해당 파트너에게 데이터를 원활하게 제공할 수 있습니다. 자세한 내용은 [대상 개요](../../rtcdp/destinations/destinations-overview.md) 문서를 참조하십시오.
+[!DNL Destinations] adobe의 실시간 고객 데이터 플랫폼에서 지원하는 대상 플랫폼과의 사전 구축된 통합으로, 이러한 파트너에게 데이터를 원활하게 제공할 수 있습니다. 자세한 내용은 [대상 개요](../../rtcdp/destinations/destinations-overview.md) 문서를 참조하십시오.
 
 **사용 가능한 대상**
 
