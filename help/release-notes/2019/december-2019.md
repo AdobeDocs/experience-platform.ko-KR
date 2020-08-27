@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: December 12, 2019
 author: ens71067
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '668'
+source-wordcount: '682'
 ht-degree: 5%
 
 ---
@@ -15,18 +15,18 @@ ht-degree: 5%
 
 # Adobe Experience Platform 릴리스 노트
 
-**릴리스 날짜: 2019년 12월 11일**
+**릴리스 날짜:2019년 12월 11일**
 
 Adobe Experience Platform의 기존 기능 업데이트:
 
-* [!DNL Segmentation Service](#segmentation)
-* [!DNL Decisioning Service](#decisioning)
-* [!DNL Sources](#sources)
-* [!DNL Experience Data Model (XDM) System](#xdm)
+* [[!DNL 세그멘테이션 서비스]](#segmentation)
+* [[!DNL 의사 결정 서비스]](#decisioning)
+* [[!DNL 소스]](#sources)
+* [[!DNL 경험 데이터 모델(XDM) 시스템]](#xdm)
 
 ## [!DNL Segmentation Service] {#segmentation}
 
-Adobe Experience Platform 세그멘테이션 서비스는 세그먼트를 작성하고 데이터로부터 대상을 생성할 수 있는 사용자 인터페이스와 RESTful API를 [!DNL Real-time Customer Profile] 제공합니다. 이러한 세그먼트는 중앙에서 구성 및 관리되므로 모든 Adobe 애플리케이션에서 쉽게 액세스할 수 [!DNL Platform]있습니다.
+Adobe Experience Platform 세그멘테이션 서비스는 세그먼트를 작성하고 [!DNL Real-time Customer Profile] 데이터에서 대상을 생성할 수 있는 사용자 인터페이스와 RESTful API를 제공합니다. 이러한 세그먼트는 중앙에서 구성 및 관리되므로 모든 Adobe 애플리케이션에서 쉽게 액세스할 수 [!DNL Platform]있습니다.
 
 [!DNL Segmentation Service] 고객 기반 내에서 마케팅 가능한 사람들을 구분하는 기준을 설명하여 특정 프로필 하위 집합을 정의합니다. 세그먼트는 브랜드와의 고객 상호 작용을 나타내는 레코드 데이터(인구 통계 정보 등) 또는 시간 시리즈 이벤트를 기반으로 할 수 있습니다.
 
@@ -34,8 +34,8 @@ Adobe Experience Platform 세그멘테이션 서비스는 세그먼트를 작성
 
 | 기능 | 설명 |
 |--- | ---|
-| 병합된 대상 탭( [!DNL Segment Builder] | 의 [!UICONTROL _세그먼트&#x200B;_]및[!UICONTROL _대상_] 탭 [!DNL Segment Builder] 이 단일 대상 [!UICONTROL _탭&#x200B;_]으로결합되었습니다. 이 탭에서는 기존 대상을 찾아 검색할 수 있습니다. 이렇게 하면 규칙 빌더 캔버스로 드래그하여 놓아 새 세그먼트 정의를 만들 수 있습니다. 대상을 참조하면 다음 규칙 논리 세트 중 하나를 새 세그먼트 정의에 추가할 수 있습니다. 대상 멤버십을 규칙으로, 참조된 대상을 정의하는 전체 규칙 논리 세트입니다. |
-| 병합 정책 선택기의 새 위치 | 병합 정책 선택기의 위치가 [!DNL Segment Builder] 변경되었습니다. 세그먼트 정의에 대한 병합 정책을 선택하려면 [!UICONTROL _필드&#x200B;_]탭에서 톱니바퀴 아이콘을 클릭한 다음 정책_[!UICONTROL &#x200B;병합]_ 드롭다운 메뉴를 사용하여 사용할 병합 정책을 선택합니다. |
+| 병합된 대상 탭( [!DNL Segment Builder] | 의 [!UICONTROL _세그먼트_] 및 [!UICONTROL _대상_] 탭 [!DNL Segment Builder] 이 단일 대상 [!UICONTROL _탭_] 으로결합되었습니다. 이 탭에서는 기존 대상을 찾아 검색할 수 있습니다. 이렇게 하면 규칙 빌더 캔버스로 드래그하여 놓아 새 세그먼트 정의를 만들 수 있습니다. 대상을 참조하면 다음 규칙 논리 세트 중 하나를 새 세그먼트 정의에 추가할 수 있습니다.대상 멤버십을 규칙으로, 참조된 대상을 정의하는 전체 규칙 논리 세트입니다. |
+| 병합 정책 선택기의 새 위치 | 병합 정책 선택기의 위치가 [!DNL Segment Builder] 변경되었습니다. 세그먼트 정의에 대한 병합 정책을 선택하려면 [!UICONTROL _필드_] 탭에서 톱니바퀴 아이콘을 클릭한 다음 정책 _[!UICONTROL 병합]_ 드롭다운 메뉴를 사용하여 사용할 병합 정책을 선택합니다. |
 
 **알려진 문제**
 
@@ -82,7 +82,7 @@ Adobe Experience Platform은 외부 소스에서 데이터를 인제스트할 �
 
 표준화와 상호 운용성은 그 이면의 핵심 개념입니다 [!DNL Experience Platform]. [!DNL Experience Data Model] (XDM)은 Adobe을 기반으로 고객 경험 데이터를 표준화하고 고객 경험 관리를 위한 스키마를 정의하는 것입니다.
 
-XDM은 디지털 경험의 강력함을 향상시키도록 고안된 공개적으로 문서화된 사양입니다. Adobe Experience Platform에서 서비스와 통신하는 모든 애플리케이션에 대한 공통 구조와 정의를 제공합니다. 모든 고객 경험 데이터는 XDM 표준을 준수하여 보다 빠르고 통합된 방식으로 인사이트를 제공하는 공통 표현에 통합할 수 있습니다. 고객 행동을 통해 유용한 인사이트를 얻고 세그먼트를 통해 고객 고객을 정의하며 개인화를 위해 고객 속성을 사용할 수 있습니다.
+XDM은 디지털 경험의 강력함을 향상시키도록 고안된 공개적으로 문서화된 사양입니다. 이 소프트웨어는 Adobe Experience Platform의 서비스와 통신하기 위해 모든 애플리케이션에 대한 공통 구조와 정의를 제공합니다. 모든 고객 경험 데이터는 XDM 표준을 준수하여 보다 빠르고 통합된 방식으로 인사이트를 제공하는 공통 표현에 통합할 수 있습니다. 고객 행동을 통해 유용한 인사이트를 얻고 세그먼트를 통해 고객 고객을 정의하며 개인화를 위해 고객 속성을 사용할 수 있습니다.
 
 **새로운 기능**
 
