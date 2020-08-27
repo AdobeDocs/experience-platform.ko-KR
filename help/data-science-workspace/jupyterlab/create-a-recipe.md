@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Jupiter 노트북을 사용하여 레시피 만들기
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '2292'
+source-wordcount: '2295'
 ht-degree: 0%
 
 ---
@@ -115,7 +115,7 @@ data_access_sdk_python
 
 이 단계에서는 [판다 데이터 프레임을 사용합니다](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html). SDK( [!DNL Adobe Experience Platform] SDK)를 [!DNL Platform] 사용하여 파일`platform_sdk`에서 또는 판다의 `read_csv()` 기능이나 기능을 사용하는 외부 소스에서 데이터를 로드할 수 `read_json()` 있습니다.
 
-- [!DNL Platform SDK](#platform-sdk)
+- [[!DNL 플랫폼 SDK]](#platform-sdk)
 - [외부 소스](#external-sources)
 
 >[!NOTE]
