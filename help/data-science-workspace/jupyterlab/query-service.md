@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;popular topics
+keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;popular topics;query service
 solution: Experience Platform
 title: Jupiter 전자 필기장의 쿼리 서비스
 topic: Tutorial
+description: Adobe Experience Platform을 사용하면 쿼리 서비스를 JupiterLab에 표준 기능으로 통합하여 데이터 과학 작업 공간에서 SQL(구조화된 쿼리 언어)을 사용할 수 있습니다. 이 자습서에서는 Adobe Analytics 데이터를 탐색, 변환 및 분석하는 일반적인 사용 사례를 위한 샘플 SQL 쿼리를 보여줍니다.
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
 workflow-type: tm+mt
-source-wordcount: '783'
+source-wordcount: '826'
 ht-degree: 1%
 
 ---
