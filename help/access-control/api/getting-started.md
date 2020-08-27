@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;access control;api;getting started
 solution: Experience Platform
 title: 액세스 제어 개발자 가이드
 topic: developer guide
+description: Adobe Experience Platform의 액세스 제어를 통해 Adobe Admin Console을 사용하여 다양한 플랫폼 기능에 대한 역할 및 권한을 관리할 수 있습니다. 다음 섹션에서는 스키마 레지스트리 API를 성공적으로 호출하기 위해 알아야 할 추가 정보를 제공합니다.
 translation-type: tm+mt
-source-git-commit: d059f48a2a3ba6398418fd3d5b0b3fd837ff69a2
+source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
 workflow-type: tm+mt
-source-wordcount: '333'
+source-wordcount: '379'
 ht-degree: 1%
 
 ---
