@@ -5,9 +5,9 @@ title: API를 사용하여 의사 결정 서비스 런타임 사용
 topic: tutorial
 description: '이 문서에서는 Adobe Experience Platform API를 사용하여 의사 결정 서비스의 런타임 서비스를 사용하기 위한 자습서를 제공합니다. '
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '2004'
+source-wordcount: '2017'
 ht-degree: 0%
 
 ---
@@ -21,9 +21,9 @@ ht-degree: 0%
 
 이 자습서에서는 의사 결정 및 고객 경험 동안 제공할 다음 최상의 제안을 결정하는 데 관련된 [!DNL Experience Platform] 서비스에 대해 작업해야 합니다. 이 자습서를 시작하기 전에 다음 사항을 확인하십시오.
 
-- [!DNL Decisioning Service](./../home.md):고객 경험 동안 가장 적합한 오퍼를 선택할 수 있도록 오퍼를 추가 및 제거하고 알고리즘을 만드는 프레임워크를 제공합니다.
-- [!DNL Experience Data Model (XDM)](../../xdm/home.md):Platform(플랫폼)이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
-- [!DNL Profile Query Language (PQL)](../../segmentation/pql/overview.md):PQL은 규칙과 필터를 정의하는 데 사용됩니다.
+- [[!DNL 의사 결정 서비스]](./../home.md):고객 경험 동안 가장 적합한 오퍼를 선택할 수 있도록 오퍼를 추가 및 제거하고 알고리즘을 만드는 프레임워크를 제공합니다.
+- [[!DNL 경험 데이터 모델(XDM)]](../../xdm/home.md):Platform(플랫폼)이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
+- [[!DNL 프로필 쿼리 언어(PQL)]](../../segmentation/pql/overview.md):PQL은 규칙과 필터를 정의하는 데 사용됩니다.
 - [API를 사용하여 의사 결정 개체 및 규칙 관리](./entities.md):의사 결정 서비스 런타임을 사용하기 전에 관련 엔티티를 설정해야 합니다.
 
 다음 섹션에서는 API를 성공적으로 호출하기 위해 알아야 할 추가 정보를 [!DNL Platform] 제공합니다.
@@ -226,7 +226,7 @@ curl -X POST {DECISION_SERVICE_ENDPOINT_PATH}/{CONTAINER_ID}/decisions \
 ```
 
 - **`xdm:dryRun`** - 이 선택 속성의 값이 true로 설정되면 결정 요청은 제한 조건에 따르지만 실제로 카운터에 표시되지 않습니다. 발신자가 프로파일로 제안을 제출하지 않을 것으로 예상됩니다. 이 [!DNL Decisioning Service] 는 제안을 공식 XDM 결정 이벤트로 기록하지 않으며, 보고 데이터 세트에 나타나지 않습니다. 이 속성의 기본값은 false이며, 속성을 생략하면 테스트 실행으로 간주되지 않으므로 최종 사용자에게 표시됩니다.
-- **`xdm:validateContextData`** - 이 선택 속성은 컨텍스트 데이터의 유효성 검사를 켜거나 끕니다. 유효성 검사가 설정된 경우 제공된 각 컨텍스트 데이터 항목에 대해 XDM 레지스트리에서 스키마( `@type` 필드를 기반으로 함)를 가져오게 되고 해당 `xdm:data` 개체가 이에 대해 유효성이 검사됩니다.
+- **`xdm:validateContextData`** - 이 선택 속성은 컨텍스트 데이터의 유효성 검사를 켜거나 끕니다. 유효성 검사가 켜진 경우 제공된 각 컨텍스트 데이터 항목에 대해 XDM 레지스트리에서 스키마( `@type` 필드를 기반으로 함)를 가져오게 되고 해당 `xdm:data` 객체에 대해 유효성이 검사됩니다.
 
 이 스키마당 요청에는 오퍼 활동을 참조하는 URI 배열, 프로필 ID 및 컨텍스트 데이터 항목의 배열이 포함됩니다.
 
