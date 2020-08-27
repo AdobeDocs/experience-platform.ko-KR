@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;ETL;etl;etl workflow;ETL workflow
 solution: Experience Platform
 title: ETL 워크플로우
 topic: overview
+description: 다양한 ETL(Extract, Transform 및 Load) 툴은 포맷에 따라 다를 수 있지만, 가장 유사한 기능을 통해 여러 데이터 소스를 결합할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: f4a4e65a087313dc4e2414f999e021e3f6e17137
 workflow-type: tm+mt
-source-wordcount: '177'
+source-wordcount: '202'
 ht-degree: 0%
 
 ---
