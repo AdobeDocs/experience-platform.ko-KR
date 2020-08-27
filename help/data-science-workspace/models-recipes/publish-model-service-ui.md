@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;publish a model;Data Science Workspace;popular topics
+keywords: Experience Platform;publish a model;Data Science Workspace;popular topics;score a service
 solution: Experience Platform
 title: 모델을 서비스로 게시(UI)
 topic: Tutorial
+description: Adobe Experience Platform 데이터 과학 작업 공간을 사용하면 교육되고 평가된 모델을 서비스로 게시하여 IMS 조직 내의 사용자가 자신의 모델을 만들지 않고도 데이터를 평가할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
+source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
 workflow-type: tm+mt
-source-wordcount: '418'
+source-wordcount: '453'
 ht-degree: 0%
 
 ---
@@ -20,7 +21,7 @@ Adobe Experience Platform 데이터 과학 작업 공간을 사용하면 교육�
 
 이 자습서를 완료하려면 액세스 권한이 있어야 합니다 [!DNL Experience Platform]. 에서 IMS 조직에 액세스할 수 없는 경우 시스템 관리자 [!DNL Experience Platform]에게 연락하여 진행하십시오.
 
-이 자습서에서는 성공적인 트레이닝 실행을 가진 기존 모델이 필요합니다. 게시 가능한 모델이 없는 경우 계속하기 전에 UI [에서 모델을 교육하고 평가하십시오](./train-evaluate-model-ui.md) .
+이 자습서에서는 성공적인 트레이닝 실행을 가진 기존 모델이 필요합니다. 게시 가능한 모델이 없는 경우 계속하기 전에 UI [튜토리얼에서](./train-evaluate-model-ui.md) 트레이닝을 수행하고 모델을 평가하십시오.
 
 Sensei Machine Learning API를 사용하여 모델을 게시하려면 [API 자습서를 참조하십시오](./publish-model-service-api.md).
 
