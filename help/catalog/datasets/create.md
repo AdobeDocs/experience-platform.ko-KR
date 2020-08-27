@@ -5,9 +5,9 @@ title: API를 사용하여 데이터 세트 만들기
 topic: datasets
 description: 이 문서에서는 Adobe Experience Platform API를 사용하여 데이터 세트를 만들고 파일을 사용하여 데이터 세트에 채우는 일반적인 단계를 제공합니다.
 translation-type: tm+mt
-source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1251'
+source-wordcount: '1259'
 ht-degree: 1%
 
 ---
@@ -22,8 +22,8 @@ ht-degree: 1%
 이 가이드는 Adobe Experience Platform의 다음 구성 요소에 대한 작업 이해를 필요로 합니다.
 
 * [일괄 처리](../../ingestion/batch-ingestion/overview.md): [!DNL Experience Platform] 데이터를 일괄 처리 파일로 인제스트할 수 있습니다.
-* [!DNL Experience Data Model (XDM) System](../../xdm/home.md):고객 경험 데이터를 [!DNL Experience Platform] 구성하는 표준화된 프레임워크
-* [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되도록 단일 [!DNL Platform] 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
+* [[!DNL 경험 데이터 모델(XDM) 시스템]](../../xdm/home.md):고객 경험 데이터를 [!DNL Experience Platform] 구성하는 표준화된 프레임워크
+* [[!DNL 샌드박스]](../../sandboxes/home.md): [!DNL Experience Platform] 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되도록 단일 [!DNL Platform] 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
 
 다음 섹션에서는 API를 성공적으로 호출하기 위해 알아야 할 추가 정보를 [!DNL Platform] 제공합니다.
 
@@ -55,7 +55,7 @@ API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 
 
 데이터 세트를 만들려면 스키마를 먼저 정의해야 합니다. 스키마는 데이터를 나타내는 데 도움이 되는 규칙 세트입니다. 스키마는 데이터 구조를 설명하는 것 외에도 시스템 간에 이동할 때 적용할 수 있고 데이터를 검증하는 데 사용할 수 있는 제한과 기대를 제공합니다.
 
-이러한 표준 정의를 통해 원본 데이터에 관계없이 일관되게 데이터를 해석할 수 있고 애플리케이션 간에 번역에 대한 필요성을 제거할 수 있습니다. 스키마 구성에 대한 자세한 내용은 스키마 구성 [기본 사항에 대한 안내서를 참조하십시오](../../xdm/schema/composition.md)
+이러한 표준 정의를 사용하면 출처에 관계없이 데이터를 일관되게 해석할 수 있고 애플리케이션 간에 번역이 필요하지 않습니다. 스키마 구성에 대한 자세한 내용은 스키마 구성 [기본 사항에 대한 안내서를 참조하십시오](../../xdm/schema/composition.md)
 
 ## 데이터 집합 스키마 검색
 
@@ -256,7 +256,7 @@ curl -X POST 'https://platform.adobe.io/data/foundation/import/batches' \
 
 **응답**
 
-성공적인 응답은 HTTP Status 201(Created)과 시스템에서 생성된 문자열, 읽기 전용 등 새로 만든 일괄 처리에 대한 세부 정보가 포함된 응답 개체 `id`를 반환합니다.
+성공적인 응답은 HTTP Status 201(Created)과 시스템에서 생성된 문자열, 읽기 전용 등 새로 만든 일괄 처리 `id`의 세부 사항이 포함된 응답 개체를 반환합니다.
 
 ```JSON
 {
