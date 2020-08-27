@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;insights;attribution ai;popular topics
+keywords: Experience Platform;insights;attribution ai;popular topics;attribution ai insights
 solution: Experience Platform
 title: Attribution AI에서 인사이트 검색
 topic: Attribution AI insights
+description: 이 문서는 Adobe Intelligent Services 사용자 인터페이스에서 서비스 인스턴스 인사이트를 상호 작용하는 데 도움이 되는 가이드입니다.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
 workflow-type: tm+mt
-source-wordcount: '1164'
+source-wordcount: '1183'
 ht-degree: 1%
 
 ---
@@ -63,10 +64,10 @@ Attribution AI 서비스 페이지가 나타납니다. 이 페이지에는 Attri
 
 추가 *작업* 단추는 *편집*&#x200B;옆에 있는 오른쪽 위 탐색에 있습니다. 추가 작업 **을** 클릭하면 다음 작업 중 하나를 선택할 수 있는 드롭다운이 열립니다.
 
-- **삭제**: 인스턴스를 삭제합니다.
-- **요약 데이터 다운로드**: 요약 데이터가 포함된 CSV 파일을 다운로드합니다.
-- **액세스 점수**: [ *액세스 점수* ]를 클릭하면 Attribution AI 자습서의 [액세스 스코어로 리디렉션됩니다](./download-scores.md).
-- **실행 내역 보기**: 서비스 인스턴스와 연관된 모든 점수 실행 목록이 포함된 팝업이 나타납니다.
+- **삭제**:인스턴스를 삭제합니다.
+- **요약 데이터 다운로드**:요약 데이터가 포함된 CSV 파일을 다운로드합니다.
+- **액세스 점수**:[ *액세스 점수* ]를 클릭하면 Attribution AI 자습서의 [액세스 스코어로 리디렉션됩니다](./download-scores.md).
+- **실행 내역 보기**:서비스 인스턴스와 연관된 모든 점수 실행 목록이 포함된 팝업이 나타납니다.
 
 ![추가 작업](./images/insights/more-actions.png)
 
@@ -86,9 +87,9 @@ Attribution AI에서 새 인스턴스를 만들 때 필수 필드 중 하나는 
 
 ![전환 이벤트](./images/insights/conversion-event.png)
 
-### 기여도 분석 모델
+### 속성 모델
 
-기여도 모델 *을* 클릭하면 다양한 속성 모델을 모두 사용할 수 있는 드롭다운이 열립니다. 여러 모델을 선택하여 결과를 비교할 수 있습니다. 서로 다른 속성 모델과 작동 방법에 대한 자세한 내용은 각 모델에 대한 정보가 포함된 표를 [Attribution AI](./overview.md) 개요를 참조하십시오.
+기여도 모델 *을* 클릭하면 다양한 속성 모델을 모두 사용할 수 있는 드롭다운이 열립니다. 여러 모델을 선택하여 결과를 비교할 수 있습니다. 서로 다른 기여도 모델과 작동 방법에 대한 자세한 내용은 각 모델에 대한 정보가 포함된 표가 포함된 [Attribution AI](./overview.md) 개요를 참조하십시오.
 
 ![어트리뷰션 모델](./images/insights/attribution-model.png)
 
