@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data access;data access api;query data access
 solution: Experience Platform
 title: 데이터 액세스 개요
 topic: tutorial
+description: 이 문서에서는 Adobe Experience Platform의 데이터 액세스 API를 사용하여 데이터 세트 내에 저장된 데이터를 찾고, 액세스하고, 다운로드하는 방법을 다루는 단계별 자습서를 제공합니다. 페이징이나 부분 다운로드와 같은 데이터 액세스 API의 고유한 기능 중 일부를 소개합니다.
 translation-type: tm+mt
-source-git-commit: cb5df9b44486bda84f08805f1077d6097e3666e2
+source-git-commit: cddc559dfb65ada888bb367d6265863091a9b2a1
 workflow-type: tm+mt
-source-wordcount: '1332'
-ht-degree: 3%
+source-wordcount: '1384'
+ht-degree: 2%
 
 ---
 
@@ -18,7 +19,7 @@ ht-degree: 3%
 
 ## 시작하기
 
-데이터 세트를 만들고 채우는 방법에 대한 이해를 돕는 이 자습서입니다. 자세한 내용은 [데이터 세트 작성 자습서를](../../catalog/datasets/create.md) 참조하십시오.
+이 자습서에서는 데이터 세트를 만들고 채우는 방법에 대해 자세히 알아야 합니다. 자세한 내용은 [데이터 세트 작성 자습서를](../../catalog/datasets/create.md) 참조하십시오.
 
 다음 섹션에서는 플랫폼 API를 성공적으로 호출하기 위해 알아야 할 추가 정보를 제공합니다.
 
