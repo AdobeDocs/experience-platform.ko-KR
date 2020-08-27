@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics
+keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;mlservices;sensei machine learning api
 solution: Experience Platform
 title: 서비스
 topic: Developer guide
+description: MLService는 이전에 개발된 모델에 액세스하고 재사용할 수 있는 기능을 조직에 제공하는 게시된 트레이닝 모델입니다. MLSservices의 주요 기능은 트레이닝 및 점수에 대한 일정을 자동화하는 기능입니다. 예약된 교육 실행은 모델의 효율성과 정확성을 유지하는 데 도움이 되지만, 예약된 점수 실행을 통해 새로운 인사이트가 일관되게 생성됩니다.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 194a29124949571638315efe00ff0b04bff19303
 workflow-type: tm+mt
-source-wordcount: '811'
+source-wordcount: '872'
 ht-degree: 2%
 
 ---
@@ -65,7 +66,7 @@ curl -X POST \
 | `mlInstanceId` | 유효한 MLInestment ID입니다. |
 | `trainingDataSetId` | 제공된 교육 데이터 집합 ID가 MLInice의 기본 데이터 집합 ID를 덮어씁니다. MLService를 만드는 데 사용되는 MLInice가 교육 데이터 세트를 정의하지 않으면 적절한 교육 데이터 집합 ID를 제공해야 합니다. |
 | `trainingExperimentId` | 원할 경우 제공할 수 있는 실험 ID. 이 값이 제공되지 않으면 MLService를 만들면 MLInestion의 기본 구성을 사용하여 새 시험도 만듭니다. |
-| `trainingExperimentRunId` | 선택적으로 제공할 수 있는 교육 실행 ID입니다. 이 값이 제공되지 않으면 MLService를 만들면 MLInestion의 기본 교육 매개 변수를 사용하여 교육 실행도 만들고 실행합니다. |
+| `trainingExperimentRunId` | 선택적으로 제공할 수 있는 교육 실행 ID입니다. 이 값이 제공되지 않으면 MLService를 만들면 MLInestions의 기본 교육 매개 변수를 사용하여 교육 실행도 만들고 실행합니다. |
 | `trainingSchedule` | 자동화된 트레이닝 일정이 실행됩니다. 이 속성이 정의된 경우 MLService는 예약된 대로 교육 실행을 자동으로 수행합니다. |
 | `trainingSchedule.startTime` | 예약된 교육 실행이 시작되는 타임스탬프 |
 | `trainingSchedule.endTime` | 예약된 교육이 종료될 타임스탬프. |
@@ -175,7 +176,7 @@ curl -X GET \
 GET /mlServices/{MLSERVICE_ID}
 ```
 
-* `{MLSERVICE_ID}`: 유효한 MLService ID.
+* `{MLSERVICE_ID}`:유효한 MLService ID.
 
 **요청**
 
@@ -223,7 +224,7 @@ curl -X GET \
 PUT /mlServices/{MLSERVICE_ID}
 ```
 
-* `{MLSERVICE_ID}`: 유효한 MLService ID.
+* `{MLSERVICE_ID}`:유효한 MLService ID.
 
 **요청**
 
