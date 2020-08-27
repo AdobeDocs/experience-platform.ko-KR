@@ -5,9 +5,9 @@ title: 스키마 컴포지션의 기본 사항
 topic: overview
 description: 이 문서에서는 XDM(Experience Data Model) 스키마 및 Adobe Experience Platform에서 사용할 스키마를 작성하기 위한 기본 블록, 원칙 및 모범 사례에 대해 소개합니다.
 translation-type: tm+mt
-source-git-commit: 23a69653ee773562cb0261b8e0bb67411eb4856e
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '2811'
+source-wordcount: '2839'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 스키마는 데이터의 구조와 형식을 나타내고 유효성을 검사하는 규칙 세트입니다. 높은 수준의 스키마는 실제 개체(예: 사람)에 대한 추상적인 정의를 제공하고, 해당 개체의 각 인스턴스(예: 이름, 성, 생일 등)에 어떤 데이터가 포함되어야 하는지 개요를 제공합니다.
 
-스키마는 데이터 구조를 설명하는 것 외에도, 제한과 기대를 데이터에 적용하므로 시스템 간에 이동할 때 데이터의 유효성을 검사할 수 있습니다. 이러한 표준 정의를 통해 원본 데이터에 관계없이 일관되게 데이터를 해석할 수 있고 애플리케이션 간에 번역에 대한 필요성을 제거할 수 있습니다.
+스키마는 데이터 구조를 설명하는 것 외에도, 제한과 기대를 데이터에 적용하므로 시스템 간에 이동할 때 데이터의 유효성을 검사할 수 있습니다. 이러한 표준 정의를 사용하면 출처에 관계없이 데이터를 일관되게 해석할 수 있고 애플리케이션 간에 번역이 필요하지 않습니다.
 
 [!DNL Experience Platform] 스키마 사용을 통해 이 의미 체계 정규화를 유지합니다. 스키마는 데이터 [!DNL Experience Platform]를 설명하는 표준 방식이므로, 스키마를 따르는 모든 데이터를 조직 간의 충돌 없이 다시 사용할 수 있으며 여러 조직 간에 공유할 수도 있습니다.
 
@@ -33,7 +33,7 @@ ht-degree: 0%
 
 ### 스키마 및 빅데이터
 
-최신 디지털 시스템은 트랜잭션 데이터, 웹 로그, 사물의 인터넷, 디스플레이 등 다양한 행동 신호를 생성합니다. 이러한 빅데이터는 탁월한 경험을 최적화할 수 있는 기회를 제공하지만 데이터의 규모와 다양성으로 인해 사용하기가 어렵습니다. 데이터의 가치를 높이려면, 데이터의 구조, 형식 및 정의를 표준화하여 일관되고 효율적으로 처리할 수 있어야 합니다.
+최신 디지털 시스템은 트랜잭션 데이터, 웹 로그, 사물의 인터넷, 디스플레이 등 다양한 행동 신호를 생성합니다. 이러한 빅데이터는 탁월한 경험을 최적화할 수 있는 기회를 제공하지만 데이터의 규모와 다양성으로 인해 사용하기가 어렵습니다. 데이터의 가치를 높이려면 데이터의 구조, 형식 및 정의를 표준화해야 일관되고 효율적으로 처리할 수 있습니다.
 
 스키마는 여러 소스에서 데이터를 통합하고, 공통 구조 및 정의를 통해 표준화하며, 솔루션 간에 공유함으로써 이 문제를 해결합니다. 이를 통해 후속 프로세스 및 서비스는 데이터에 대해 질문되는 모든 유형의 질문에 응답하여 데이터 모델링에 대한 기존의 접근 방식에서 벗어나 데이터를 미리 파악하고 이러한 기대에 부합하도록 데이터를 모델링할 수 있습니다.
 
@@ -62,9 +62,9 @@ The infrastructure which [!DNL Experience Platform] is built, knowing [!DNL XDM 
 
 스키마는 데이터를 인제스트하는 데 사용됩니다 [!DNL Experience Platform]. 이 데이터를 여러 서비스에서 사용하여 개별 엔티티의 단일 통합 뷰를 만들 수 있습니다. 따라서 고객 ID에 대해 생각해 볼 스키마와 데이터가 어디에서 오는지에 관계없이 주체를 식별하는 데 사용할 수 있는 필드를 고려할 때 중요합니다.
 
-이 프로세스를 돕기 위해 스키마 내의 키 필드를 ID로 표시할 수 있습니다. 데이터 수집 시 해당 필드의 데이터는 해당 개인에 대한 &quot;[!UICONTROL ID 그래프]&quot;에 삽입됩니다. 그러면 그래프 데이터에 [!DNL Real-time Customer Profile](../../profile/home.md) 액세스하고 다른 [!DNL Experience Platform] 서비스를 통해 각 개별 고객에 대한 연결된 보기를 제공할 수 있습니다.
+이 프로세스를 돕기 위해 스키마 내의 키 필드를 ID로 표시할 수 있습니다. 데이터 수집 시 해당 필드의 데이터는 해당 개인에 대한 &quot;[!UICONTROL ID 그래프]&quot;에 삽입됩니다. 그런 다음 그래프 데이터에 [[!DNL 실시간 고객 프로필]](../../profile/home.md) 및 기타 [!DNL Experience Platform] 서비스에서 액세스하여 각 개별 고객에 대한 연결된 보기를 제공할 수 있습니다.
 
-일반적으로 &quot;ID&quot;로 표시된 필드는[!UICONTROL 다음과]같습니다.이메일 주소, 전화 번호, [!DNL Experience Cloud ID (ECID)](https://docs.adobe.com/content/help/ko-KR/id-service/using/home.html)CRM ID 또는 기타 고유 ID 필드 또한 &quot;[!UICONTROL Identity]&quot; 필드도 양호할 수 있으므로 조직 고유의 식별자를 고려해야 합니다.
+일반적으로 &quot;ID&quot;로 표시된 필드는[!UICONTROL 다음과]같습니다.이메일 주소, 전화 번호, [[!DNL Experience Cloud ID(ECID)]](https://docs.adobe.com/content/help/ko-KR/id-service/using/home.html), CRM ID 또는 기타 고유한 ID 필드 또한 &quot;[!UICONTROL Identity]&quot; 필드도 양호할 수 있으므로 조직 고유의 식별자를 고려해야 합니다.
 
 가장 강력한 프로파일을 구축하기 위해 데이터를 취합하는 것을 돕기 위해 스키마 계획 단계 동안 고객 ID를 고려하는 것이 중요합니다. ID 정보를 통해 고객에게 디지털 경험을 전달하는 방법에 대한 자세한 내용은 [Adobe Experience Platform ID 서비스](../../identity-service/home.md) 개요를 참조하십시오.
 
@@ -123,7 +123,7 @@ The infrastructure which [!DNL Experience Platform] is built, knowing [!DNL XDM 
 
 ### 스키마 및 데이터 수집
 
-데이터를 인제스트하려면 먼저 데이터 세트 [!DNL Experience Platform]를 만들어야 합니다. 데이터 집합은 데이터 변환 및 추적을 위한 기본 [!DNL Catalog Service](../../catalog/home.md)요소이며, 일반적으로 인제스트된 데이터가 들어 있는 테이블 또는 파일을 나타냅니다. 모든 데이터 집합은 기존 XDM 스키마를 기반으로 하며, 이는 인제스트된 데이터가 포함되어야 하는 내용과 데이터 구성 방식에 대한 제약 조건을 제공합니다. 자세한 내용은 [Adobe Experience Platform 데이터 수집](../../ingestion/home.md) 개요를 참조하십시오.
+데이터를 인제스트하려면 먼저 데이터 세트 [!DNL Experience Platform]를 만들어야 합니다. 데이터 세트는 [[!DNL Catalog Service]에 대한 데이터 변환 및 추적을 위한 기본](../../catalog/home.md)블록이며, 일반적으로 인제스트된 데이터를 포함하는 테이블 또는 파일을 나타냅니다. 모든 데이터 집합은 기존 XDM 스키마를 기반으로 하며, 이는 인제스트된 데이터가 포함되어야 하는 내용과 데이터 구성 방식에 대한 제약 조건을 제공합니다. 자세한 내용은 [Adobe Experience Platform 데이터 수집](../../ingestion/home.md) 개요를 참조하십시오.
 
 ## 스키마 구성 블록
 
@@ -139,7 +139,7 @@ The infrastructure which [!DNL Experience Platform] is built, knowing [!DNL XDM 
 
 스키마 구성은 클래스를 할당하는 것으로 시작됩니다. 클래스는 스키마에 포함할 데이터의 동작 측면(레코드 또는 시간 시리즈)을 정의합니다. 이 외에도 클래스는 해당 클래스를 기반으로 하는 모든 스키마에는 호환이 가능한 여러 데이터 세트를 병합할 수 있는 방법이 포함되어 있어야 하는 가장 작은 수의 공통 속성을 설명합니다.
 
-또한 클래스는 스키마에 사용할 수 있는 믹스인을 결정합니다. 이 내용은 다음에 나오는 [믹신](#mixin) 섹션에서 더 자세히 설명합니다.
+또한 클래스는 스키마에서 사용할 수 있는 믹스를 결정합니다. 이 내용은 다음에 나오는 [믹신](#mixin) 섹션에서 더 자세히 설명합니다.
 
 &quot;산업&quot; 클래스라고 하는 모든 통합 [!DNL Experience Platform]과 함께 제공되는 표준 클래스가 있습니다. 업계 클래스는 다양한 사용 사례에 적용되는 일반적으로 승인된 업계 표준입니다. 업계 클래스의 예로는 Adobe에서 제공하는 [!DNL XDM Individual Profile] 및 [!DNL XDM ExperienceEvent] 클래스가 있습니다.
 
@@ -194,11 +194,11 @@ The infrastructure which [!DNL Experience Platform] is built, knowing [!DNL XDM 
 
 다운스트림 서비스 및 애플리케이션에서 사용되는 일부 데이터 작업은 특정 필드 유형에 대해 제한을 적용합니다. 해당되는 서비스에는 다음이 포함되지만 이에 국한되지 않습니다.
 
-* [!DNL Real-time Customer Profile](../../profile/home.md)
-* [!DNL Identity Service](../../identity-service/home.md)
-* [!DNL Segmentation](../../segmentation/home.md)
-* [!DNL Query Service](../../query-service/home.md)
-* [!DNL Data Science Workspace](../../data-science-workspace/home.md)
+* [[!DNL 실시간 고객 프로필]](../../profile/home.md)
+* [[!DNL ID 서비스]](../../identity-service/home.md)
+* [[!DNL 세그멘테이션]](../../segmentation/home.md)
+* [[!DNL 쿼리 서비스]](../../query-service/home.md)
+* [[!DNL 데이터 과학 작업 공간]](../../data-science-workspace/home.md)
 
 다운스트림 서비스에서 사용할 스키마를 만들기 전에 해당 서비스에 대한 적절한 설명서를 검토하여 스키마가 의도한 데이터 작업에 대한 필드 요구 사항과 제한 사항을 보다 잘 파악하십시오.
 
