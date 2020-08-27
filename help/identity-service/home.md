@@ -5,9 +5,9 @@ title: Adobe Experience Platform ID 서비스
 topic: overview
 description: Adobe Experience Platform ID 서비스를 사용하면 다양한 디바이스와 시스템에 ID를 연결함으로써 고객 행동과 고객의 행동을 보다 정확하게 파악할 수 있으므로 효과적이고 개인화된 경험을 실시간으로 전달할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1707'
+source-wordcount: '1711'
 ht-degree: 0%
 
 ---
@@ -17,9 +17,9 @@ ht-degree: 0%
 
 고객의 기대에 부응하는 디지털 경험을 전달하려면 고객을 완벽하게 이해해야 합니다. 고객 데이터가 서로 다른 시스템에서 분열되어 각각의 개별 고객이 여러 개의 &quot;ID&quot;를 갖는 것처럼 보일 경우 이러한 문제는 더욱 복잡해집니다. Adobe Experience Platform [!DNL Identity Service] 는 다양한 디바이스와 시스템에 ID를 연결함으로써 효과적이고 개인화된 디지털 경험을 실시간으로 전달할 수 있도록 함으로써 고객 및 고객의 행동을 보다 정확하게 파악할 수 있도록 지원합니다.
 
-## 이해 [!DNL Identity Service]
+## [!DNL Identity Service] 이해 
 
-고객은 매일 기업과 교류하고 브랜드와의 지속적인 관계를 형성합니다. 일반적인 고객은 e커머스, 충성도, 헬프데스크 시스템 등 조직의 데이터 인프라 내에 있는 다양한 시스템에서 활성 상태일 수 있습니다. 동일한 고객은 모든 디바이스에서 익명으로 참여할 수 있습니다. [!DNL Identity Service] 서로 다른 시스템에서 격리될 수 있는 관련 데이터를 집계하여 고객의 전체 상황을 파악할 수 있습니다.
+고객은 매일 기업과 교류하고 브랜드와의 지속적인 관계를 형성합니다. 일반적인 고객은 e커머스, 충성도, 헬프데스크 시스템 등 조직의 데이터 인프라 내에 있는 다양한 시스템에서 활성 상태일 수 있습니다. 이러한 고객은 모든 디바이스에서 익명으로 참여할 수 있습니다. [!DNL Identity Service] 서로 다른 시스템에서 격리될 수 있는 관련 데이터를 집계하여 고객의 전체 상황을 파악할 수 있습니다.
 
 브랜드와의 소비자 관계에 대한 일상적인 예를 살펴보십시오.
 
@@ -85,7 +85,7 @@ ID 그래프는 서로 다른 ID 네임스페이스 간의 관계를 보여주�
 
 [!DNL Identity Service] 조직만이 볼 수 있고 데이터를 기반으로 하여 개인 그래프라고 하는 ID 그래프를 관리합니다. [!DNL Identity Service] 인제스트된 데이터 레코드에 둘 이상의 ID가 포함되어 있는 경우 개인 그래프를 늘려 검색된 ID 간의 관계를 추가합니다.
 
-ID 데이터를 제공하고 레이블을 지정할 때 고려해야 할 잠재적 유형의 예로, &quot;직장 전화&quot;와 같은 전화 번호를 사용하면 ID 그래프에 의도한 것보다 더 많은 관계를 만들 수 있습니다. 많은 직원들이 동일한 번호로 직장에서 사용하고 있으며, &quot;가정&quot; 및 &quot;모바일&quot;은 관계를 최대한 정확하게 유지하기 위해 더 나은 서비스를 제공한다는 사실을 알게 될 것입니다.
+ID 데이터를 제공하고 레이블을 지정할 때 고려해야 할 잠재적 유형의 예로, &quot;직장 전화&quot;와 같은 전화 번호를 사용하면 ID 그래프에 의도한 것보다 더 많은 관계를 만들 수 있습니다. 많은 직원들이 동일한 번호로 직장에서 사용하고 있으며, 그 &quot;가정&quot; 및 &quot;모바일&quot;은 관계를 최대한 정확하게 유지하기 위해 더 나은 서비스를 제공한다는 사실을 알게 될 것입니다.
 
 ## ID 데이터 제공 [!DNL Identity Service]
 
@@ -146,4 +146,4 @@ Adobe Experience Platform은 개인 정보를 고려하여 구축되었으며 �
 
 ## 다음 단계
 
-이제 핵심 개념 [!DNL Identity Service] 과 그 역할 [!DNL Experience Platform]을 이해했으므로 ID 그래프를 사용하여 작업하는 방법을 배울 수 있습니다 [!DNL Identity Service API](./api/getting-started.md).
+이제 [!DNL Identity Service] 의 주요 개념 및 해당 역할 [!DNL Experience Platform]을 이해했으므로 [[!DNL Identity Service API]를 사용하여 ID 그래프를 사용하는 방법을 배울 수 있습니다](./api/getting-started.md).
