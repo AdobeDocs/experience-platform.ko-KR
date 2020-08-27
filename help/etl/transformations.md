@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;etl;ETL;etl transformations;ETL transformations
 solution: Experience Platform
 title: 샘플 ETL 변형
 topic: overview
+description: 이 문서에서는 ETL(Extract, Transform, Load) 개발자가 경험할 수 있는 다음과 같은 변형에 대해 설명합니다.
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: f4a4e65a087313dc4e2414f999e021e3f6e17137
 workflow-type: tm+mt
-source-wordcount: '466'
+source-wordcount: '482'
 ht-degree: 1%
 
 ---
@@ -53,10 +54,10 @@ CRM 데이터에 대한 매핑 요구 사항은 다음 표에 요약되어 있�
 | F_NAME | person.name.firstName | 문자열로 복사 |
 | L_NAME | person.name.lastName | 문자열로 복사 |
 | 성별 | person.gender | 성별을 해당 person.gender enum 값으로 변환 |
-| DOB | person.birthDayAndMonth: &quot;MM-DD&quot;<br/>person.birthDate: &quot;YYYY-MM-DD&quot;<br/>person.birthYear: YYYY | birthDayAndMonth를 stringTransform<br/>birthDate로<br/>stringTransform birth를 short int로 변환합니다. |
+| DOB | person.birthDayAndMonth:&quot;MM-DD&quot;<br/>person.birthDate:&quot;YYYY-MM-DD&quot;<br/>person.birthYear:YYYY | birthDayAndMonth를 stringTransform<br/>birthDate로<br/>stringTransform birth를 short int로 변환합니다. |
 | 이메일 | personalEmail.address | 문자열로 복사 |
 | CRMID | identityMap.CRMID[{&quot;id&quot;:x, primary:false}] | identityMap에서 CRMID 배열로 문자열로 복사하고 Primary를 false로 설정합니다. |
-| ECID | identityMap.ECID[{&quot;id&quot;:x, primary: false}] | identityMap에서 ECID 배열의 첫 번째 항목에 문자열로 복사하고 기본 값을 false로 설정합니다. |
+| ECID | identityMap.ECID[{&quot;id&quot;:x, primary:false}] | identityMap에서 ECID 배열의 첫 번째 항목에 문자열로 복사하고 기본 값을 false로 설정합니다. |
 | LOYALTYID | identityMap.LOYALTYID[{&quot;id&quot;:x, primary:true}] | identityMap에서 LOYALTYID 배열로 문자열로 복사하고 Primary를 true로 설정합니다. |
 | ECID2 | identityMap.ECID[{&quot;id&quot;:x, primary:false}] | identityMap에서 ECID 배열의 두 번째 항목에 문자열로 복사하고 기본을 false로 설정합니다. |
 | 전화 | homePhone.number | 문자열로 복사 |
