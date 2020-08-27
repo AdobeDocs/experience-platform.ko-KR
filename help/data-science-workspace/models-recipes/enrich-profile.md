@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 머신 러닝 인사이트를 통해 실시간 고객 프로파일 강화
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1179'
+source-wordcount: '1191'
 ht-degree: 0%
 
 ---
@@ -26,14 +26,14 @@ ht-degree: 0%
 
 이 자습서에서는 데이터 인제스트 및 세그먼트 만들기와 관련된 다양한 측면 [!DNL Adobe Experience Platform] 에 대해 [!DNL Profile] 잘 알아야 합니다. 이 자습서를 시작하기 전에 다음 서비스에 대한 설명서를 검토하십시오.
 
-* [!DNL Real-time Customer Profile](../../rtcdp/overview.md): 여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
-* [!DNL Identity Service](../../identity-service/home.md): 수집되는 여러 데이터 소스의 ID를 Platform으로 결합함으로써 [!DNL Real-time Customer Profile] 활성화합니다.
-* [!DNL Experience Data Model (XDM)](../../xdm/home.md): Platform이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
+* [[!DNL 실시간 고객 프로필]](../../rtcdp/overview.md):여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
+* [[!DNL Identity Service]](../../identity-service/home.md):인제스트되고 있는 여러 데이터 소스의 ID를 플랫폼에 연결하여 사용할 수 있습니다. [!DNL Real-time Customer Profile]
+* [[!DNL 경험 데이터 모델(XDM)]](../../xdm/home.md):Platform(플랫폼)이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
 
 위에 언급된 문서 외에도 스키마 및 스키마 편집기에 대한 다음 안내서도 검토하는 것이 좋습니다.
 
-* [스키마 컴포지션의 기본 사항](../../xdm/schema/composition.md): XDM 스키마, 구성 블록, 원칙 및 사용할 스키마 작성에 대한 우수 사례를 설명합니다 [!DNL Experience Platform].
-* [스키마 편집기 자습서](../../xdm/tutorials/create-schema-ui.md): 내에서 스키마 편집기를 사용하여 스키마를 생성하는 자세한 지침을 제공합니다 [!DNL Experience Platform].
+* [스키마 컴포지션의 기본 사항](../../xdm/schema/composition.md):XDM 스키마, 구성 블록, 원칙 및 사용할 스키마 작성에 대한 우수 사례를 설명합니다 [!DNL Experience Platform].
+* [스키마 편집기 자습서](../../xdm/tutorials/create-schema-ui.md):내에서 스키마 편집기를 사용하여 스키마를 생성하는 자세한 지침을 제공합니다 [!DNL Experience Platform].
 
 ## 출력 스키마 및 데이터 집합 만들기 {#create-an-output-schema-and-dataset}
 
@@ -105,10 +105,10 @@ ht-degree: 0%
 
 활성화된 데이터세트에 대한 인사이트를 생성하고 인제스트한 경우 세그먼트 빌더를 사용하여 관련 요소의 하위 세트를 식별하여 해당 데이터를 관리할 수 있습니다. [!DNL Profile] 아래 절차에 따라 고유한 세그먼트를 만듭니다.
 
-1. Adobe Experience Platform에서 세그먼트 탭 **** 다음에 **[!UICONTROL 세그먼트]** 만들기를 클릭하여 세그먼트 빌더에 액세스합니다.
+1. Adobe Experience Platform에서 **[!UICONTROL 세그먼트]** 탭 뒤에 **[!UICONTROL 세그먼트]** 만들기를 클릭하여 세그먼트 빌더에 액세스합니다.
    ![](../images/models-recipes/enrich-rtcdp/segments_overview.png)
 
-2. 세그먼트 빌더 내에서 왼쪽 레일은 세그먼트의 핵심 구성 요소에 액세스할 수 있도록 해줍니다. 속성, 이벤트 및 기존 세그먼트 각 빌딩 블록은 해당 탭에 표시됩니다. 사용 가능한 스키마가 확장되는 클래스를 [!DNL Profile]선택한 다음, 세그먼트의 구성 요소를 찾아 찾습니다.
+2. 세그먼트 빌더 내에서 왼쪽 레일은 세그먼트의 핵심 구성 요소에 액세스할 수 있도록 해줍니다.속성, 이벤트 및 기존 세그먼트 각 빌딩 블록은 해당 탭에 표시됩니다. 사용 가능한 스키마가 확장되는 클래스를 [!DNL Profile]선택한 다음, 세그먼트의 구성 요소를 찾아 찾습니다.
    ![](../images/models-recipes/enrich-rtcdp/segment_builder.png)
 
 3. 비교 문을 제공하여 빌드 블록을 규칙 빌더 캔버스로 드래그하여 놓고 완료합니다.
