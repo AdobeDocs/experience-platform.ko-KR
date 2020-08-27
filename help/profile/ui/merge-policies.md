@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: 정책 병합 사용자 안내서
 topic: guide
 translation-type: tm+mt
-source-git-commit: 98be95e0a6e0661dcddf2db1cf6993b643d4df2b
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1421'
+source-wordcount: '1433'
 ht-degree: 0%
 
 ---
@@ -24,9 +24,9 @@ API를 사용하여 병합 정책을 사용하고 싶으면 [!DNL Real-time Cust
 
 이 가이드는 병합 정책과 관련된 다양한 [!DNL Experience Platform] 서비스에 대해 작업해야 합니다. 이 자습서를 시작하기 전에 다음 서비스에 대한 설명서를 검토하십시오.
 
-* [!DNL Real-time Customer Profile](../home.md):여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
-* [!DNL Identity Service](../../identity-service/home.md):인제스트되는 여러 데이터 소스의 ID를 결합함으로써 사용할 수 [!DNL Real-time Customer Profile] [!DNL Platform]있습니다.
-* [!DNL Experience Data Model (XDM)](../../xdm/home.md):고객 경험 데이터를 [!DNL Platform] 구성하는 표준화된 프레임워크
+* [[!DNL 실시간 고객 프로필]](../home.md):여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
+* [[!DNL Identity Service]](../../identity-service/home.md):인제스트되는 여러 데이터 소스의 ID를 결합함으로써 사용할 수 [!DNL Real-time Customer Profile] [!DNL Platform]있습니다.
+* [[!DNL 경험 데이터 모델(XDM)]](../../xdm/home.md):고객 경험 데이터를 [!DNL Platform] 구성하는 표준화된 프레임워크
 
 ## 병합 정책 보기
 
@@ -57,7 +57,7 @@ API를 사용하여 병합 정책을 사용하고 싶으면 [!DNL Real-time Cust
    * **[!UICONTROL 비공개 그래프]**:개인 ID 그래프를 기반으로 ID 스티칭을 수행합니다.
 * **[!UICONTROL 속성 병합]**:프로필 조각은 개별 고객에 대해 존재하는 ID 목록 중 하나의 ID에 대한 프로필 정보입니다. ID 그래프 유형이 사용한 경우 둘 이상의 ID가 있을 경우 충돌하는 프로필 속성과 우선 순위를 지정해야 합니다. 속성 병합 [!UICONTROL 을] 사용하면 키 값(레코드 데이터) 형식 데이터 집합 간에 병합 충돌이 발생하는 경우 우선 순위를 지정할 데이터 집합 프로필 값을 지정할 수 있습니다. 두 가지 가능한 값이 있습니다.
    * **[!UICONTROL 순차 타임스탬프]**:충돌이 발생하는 경우 가장 최근에 업데이트된 프로필에 우선 순위를 지정합니다. [!UICONTROL 순서가 지정된] 타임스탬프는 동일한 데이터 세트(다중 ID) 또는 데이터 집합 간에 데이터를 병합할 때 시스템 타임스탬프보다 우선순위가 높은 사용자 지정 타임스탬프를 지원합니다. 자세한 내용은 다음에 나오는 [타임스탬프 순서](#timestamp-ordered) 섹션을 참조하십시오.
-   * **[!UICONTROL 데이터 세트 우선 순위]** :프로파일 단편이 있었던 데이터 세트에 따라 우선적으로 프로필 조각을 지정합니다. 이 옵션을 선택할 때는 관련 데이터 세트와 해당 우선 순위 순서를 선택해야 합니다. 자세한 내용은 아래 데이터 [세트 우선 순위](#dataset-precedence) 정보를 참조하십시오.
+   * **[!UICONTROL 데이터 세트 우선 순위]** :프로필 조각을 원래 있던 데이터 세트에 따라 우선 순위를 지정합니다. 이 옵션을 선택할 때는 관련 데이터 세트와 해당 우선 순위 순서를 선택해야 합니다. 자세한 내용은 아래 데이터 [세트 우선 순위](#dataset-precedence) 정보를 참조하십시오.
 * **[!UICONTROL 기본 병합 정책]**:이 병합 정책이 조직의 기본값인지 여부를 선택할 수 있는 전환 단추입니다. 선택기가 전환되고 새 정책이 저장된 경우, 이전 기본 정책은 더 이상 기본값이 되지 않도록 자동으로 업데이트됩니다.
 
 ### 타임스탬프 순서 지정 {#timestamp-ordered}
