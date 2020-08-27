@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 패키지된 레서피(API) 가져오기
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '955'
+source-wordcount: '960'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # 패키지된 레서피(API) 가져오기
 
-이 자습서는 사용자 인터페이스 [!DNL Sensei Machine Learning API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) 에서 [레서피](../api/engines.md)(Recipe)라고도 하는 엔진을 만드는 데 사용됩니다.
+이 자습서는 [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) 를 사용하여 [엔진](../api/engines.md)(사용자 인터페이스의 레서피)을 만듭니다.
 
 시작하기 전에, Adobe Experience Platform은 API와 UI 내의 유사한 요소를 참조하기 위해 서로 다른 용어를 [!DNL Data Science Workspace] 사용합니다. API 용어는 이 자습서 전체에서 사용되며 다음 표에서는 상관 관계 용어의 개요를 설명합니다.
 
