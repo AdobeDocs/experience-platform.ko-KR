@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;retail sales recipe;Data Science Workspace;popular topics
+keywords: Experience Platform;retail sales recipe;Data Science Workspace;popular topics;recipes
 solution: Experience Platform
 title: 소매 판매 스키마 및 데이터 세트 만들기
 topic: Tutorial
+description: 이 자습서에서는 다른 모든 Adobe Experience Platform 데이터 과학 작업 공간 자습서에 필요한 사전 요구 사항 및 자산을 제공합니다. 완료되면 소매 영업 스키마 및 데이터 세트를 Experience Platform에 있는 사용자 및 IMS 조직의 구성원에게 사용할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
 workflow-type: tm+mt
-source-wordcount: '502'
+source-wordcount: '544'
 ht-degree: 0%
 
 ---
