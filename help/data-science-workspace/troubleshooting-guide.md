@@ -3,10 +3,11 @@ keywords: Experience Platform;troubleshooting;Data Science Workspace;popular top
 solution: Experience Platform
 title: 데이터 과학 작업 공간 문제 해결 가이드
 topic: Troubleshooting
+description: 이 문서에서는 Adobe Experience Platform 데이터 과학 작업 공간에 대해 자주 묻는 질문에 대한 답변을 제공합니다.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 194a29124949571638315efe00ff0b04bff19303
 workflow-type: tm+mt
-source-wordcount: '665'
+source-wordcount: '680'
 ht-degree: 0%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 0%
 
 # [!DNL Data Science Workspace] 문제 해결 안내서
 
-이 문서에서는 Adobe Experience Platform에 대해 자주 묻는 질문에 대한 답변을 제공합니다 [!DNL Data Science Workspace]. 일반적으로 API에 대한 질문 및 문제 해결 [!DNL Platform] 은 [Adobe Experience Platform API 문제 해결 가이드를 참조하십시오](../landing/troubleshooting.md).
+이 문서는 Adobe Experience Platform에 대한 FAQ에 대한 답변을 제공합니다 [!DNL Data Science Workspace]. 일반적으로 API에 대한 질문 및 문제 해결 [!DNL Platform] 은 [Adobe Experience Platform API 문제 해결 가이드를 참조하십시오](../landing/troubleshooting.md).
 
 ## [!DNL JupyterLab] 환경이 [!DNL Google Chrome]
 
@@ -22,7 +23,7 @@ ht-degree: 0%
 >
 >이 문제는 해결되었지만 Google Chrome 80.x 브라우저에 여전히 존재할 수 있습니다. 크롬 브라우저가 최신 버전인지 확인하십시오.
 
-브라우저 [!DNL Google Chrome] 버전 80.x에서는 기본적으로 모든 타사 쿠키가 차단됩니다. 이 정책은 Adobe Experience Platform 내에서 로드되지 [!DNL JupyterLab] 않을 수 있습니다.
+브라우저 [!DNL Google Chrome] 버전 80.x에서는 기본적으로 모든 타사 쿠키가 차단됩니다. 이 정책은 Adobe Experience Platform 내 [!DNL JupyterLab] 에서 로드되지 않을 수 있다.
 
 이 문제를 해결하려면 다음 단계를 수행하십시오.
 
@@ -68,7 +69,7 @@ Safari 환경 설정 창에서 **고급을 선택합니다**. 그런 다음 메�
 
 ## 파일을 업로드하거나 삭제할 때 &#39;403 금지&#39; 메시지가 표시되는 이유는 무엇입니까 [!DNL JupyterLab]?
 
-브라우저가 [!DNL Ghostery] 또는 [!DNL AdBlock] Plus와 같은 광고 차단 소프트웨어로 활성화되면 각 광고 차단 소프트웨어에 &quot;\*.adobe.net&quot; 도메인이 허용되어야 정상적으로 작동됩니다 [!DNL JupyterLab] . 이것은 [!DNL JupyterLab] 가상 컴퓨터가 도메인과 다른 도메인에서 실행되기 [!DNL Experience Platform] 때문입니다.
+브라우저가 [!DNL Ghostery] 또는 [!DNL AdBlock] Plus와 같은 광고 차단 소프트웨어로 활성화되면 각 광고 차단 소프트웨어에서 &quot;\*.adobe.net&quot; 도메인이 정상적으로 작동되도록 허용되어야 [!DNL JupyterLab] 합니다. 이것은 [!DNL JupyterLab] 가상 컴퓨터가 도메인과 다른 도메인에서 실행되기 [!DNL Experience Platform] 때문입니다.
 
 ## 내 [!DNL Jupyter Notebook] 모습 중 일부가 스크램블되거나 코드로 렌더링되지 않는 이유는 무엇입니까?
 
