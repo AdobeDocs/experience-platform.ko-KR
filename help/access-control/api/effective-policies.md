@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;effective policies;access control api
 solution: Experience Platform
 title: 효과적인 정책 보기
 topic: developer guide
+description: Adobe Experience Platform의 액세스 제어를 통해 Adobe Admin Console을 사용하여 다양한 플랫폼 기능에 대한 역할 및 권한을 관리할 수 있습니다. 이 문서는 Adobe Experience Platform용 액세스 제어 API를 사용하여 효과적인 정책을 보는 방법에 대한 지침으로 제공됩니다.
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
 workflow-type: tm+mt
-source-wordcount: '265'
+source-wordcount: '309'
 ht-degree: 1%
 
 ---
