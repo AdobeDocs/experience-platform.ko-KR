@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data access;spark sdk;data access api
 solution: Experience Platform
 title: 안전한 Spark Data Access SDK
 topic: tutorial
+description: Secure Spark Data Access SDK는 Adobe Experience Platform에서 데이터 세트를 읽고 쓸 수 있는 소프트웨어 개발 키트입니다.
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 2fdab7d984a7368df77110f8ba0e0ba687e96d7e
 workflow-type: tm+mt
-source-wordcount: '516'
+source-wordcount: '538'
 ht-degree: 1%
 
 ---
@@ -49,7 +50,7 @@ SDK에서는 [!DNL Spark] 환경 변수 또는 데이터 소스 옵션에 자격
 | `ENVIRONMENT_NAME` | 연결하려는 환경입니다. &quot;dev&quot;, &quot;stage&quot; 또는 &quot;prod&quot; 중 하나일 수 있습니다. |
 | `SANDBOX_NAME` | 연결할 샌드박스의 이름입니다. |
 
-또는 아래 예에서 보듯이 위 환경 변수 `ENVIRONMENT_NAME`를 아래 `QSOption`에서 설정할 수 있습니다.
+또는 아래 예에서 보듯이 위 `ENVIRONMENT_NAME`의 환경 변수 중 하나 `QSOption`를 아래 예에서 설정할 수 있습니다.
 
 ```scala
 val df = spark.read
