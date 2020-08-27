@@ -5,7 +5,7 @@ title: 노트북으로 데이터 분석
 topic: Tutorial
 description: 이 자습서에서는 데이터 과학 작업 공간에 내장된 Jupiter 노트북을 사용하여 데이터에 액세스하고, 탐색하고, 시각화하는 방법에 중점을 둡니다.
 translation-type: tm+mt
-source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
+source-git-commit: 33b14fed0d52792de0486897c11dd86c1ea2dd45
 workflow-type: tm+mt
 source-wordcount: '1731'
 ht-degree: 0%
@@ -91,7 +91,7 @@ Jupiter 노트북에서는 왼쪽의 **데이터** 탭에서 데이터에 액세
 
 >[!TIP]
 >
->코드를 변환하려면 [[!DNL Platform SDK]](../authoring/platform-sdk.md) 가이드를 참조하십시오.
+>코드를 변환하려면 [[!DNL Platform SDK]](../authoring/platform-sdk.md) 안내서를 참조하십시오.
 
 ```PYTHON
 from data_access_sdk_python.reader import DataSetReader
