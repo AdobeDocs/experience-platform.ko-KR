@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Git을 사용하여 JupiterLab에서 공동 작업
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '248'
+source-wordcount: '255'
 ht-degree: 1%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 1%
 
 ## 환경 [!DNL Git] 에 [!DNL Data Science Workspace JupyterLab Notebooks] 연결
 
-먼저 환경 [!DNL Adobe Experience Platform] 을 시작하고 [!DNL JupyterLabs Notebooks](https://platform.adobe.com/notebooks/jupyterLab) 탐색합니다.
+먼저 [!DNL Adobe Experience Platform] [!DNL JupiterLabs [](https://platform.adobe.com/notebooks/jupyterLab) 노트북] 환경을 시작하고 탐색합니다.
 
 내에서 파일 [!DNL JupyterLab]을 **[!UICONTROL 선택한]** 다음 새로 만들기 위로 **[!UICONTROL 마우스를 가져갑니다]**. 표시되는 드롭다운에서 터미널 **[!UICONTROL 을 선택합니다]**.
 
@@ -58,4 +58,4 @@ ht-degree: 1%
 
 ## 다음 단계
 
-저장소 복제를 완료하면 로컬 시스템에서와 마찬가지로 Git을 사용하여 노트북에서 다른 사람과 공동 작업을 할 수 있습니다. 사용 가능한 작업에 대한 자세한 내용 [!DNL JupyterLab]은 를 참조하십시오 [!DNL JupyterLab user guide](./overview.md).
+저장소 복제를 완료하면 로컬 시스템에서와 마찬가지로 Git을 사용하여 노트북에서 다른 사람과 공동 작업을 할 수 있습니다. 내에서 수행할 수 있는 작업에 대한 자세한 내용 [!DNL JupyterLab]은 [[!DNL JupiterLab 사용자 안내서]를 참조하십시오](./overview.md).
