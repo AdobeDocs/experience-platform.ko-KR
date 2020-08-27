@@ -4,9 +4,9 @@ solution: Experience Platform
 title: XDM 스키마에 CSV 파일 매핑
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 7876e6d52815968802bd73bb5e340c99ea3387a8
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1354'
+source-wordcount: '1371'
 ht-degree: 2%
 
 ---
@@ -22,16 +22,16 @@ CSV 데이터를 인제스트하려면 데이터 [!DNL Adobe Experience Platform
 
 이 자습서에서는 다음의 구성 요소에 대해 작업해야 [!DNL Platform]합니다.
 
-- [!DNL Experience Data Model (XDM System)](../../xdm/home.md): 고객 경험 데이터를 [!DNL Platform] 구성하는 표준화된 프레임워크
-- [!DNL Batch ingestion](../batch-ingestion/overview.md): 사용자가 제공한 데이터 파일에서 데이터를 [!DNL Platform] 인제스트하는 방법입니다.
+- [[!DNL 경험 데이터 모델(XDM 시스템)]](../../xdm/home.md):고객 경험 데이터를 [!DNL Platform] 구성하는 표준화된 프레임워크
+- [[!DNL 일괄 처리]](../batch-ingestion/overview.md):사용자가 제공한 데이터 파일에서 데이터를 [!DNL Platform] 인제스트하는 방법입니다.
 
 또한 이 자습서에서는 CSV 데이터를 인제스트하기 위한 데이터 세트를 이미 만들어야 합니다. UI에서 데이터 세트를 만드는 단계는 [데이터 인제스트 자습서를 참조하십시오](./ingest-batch-data.md).
 
 ## 대상 선택
 
-로그인한 [!DNL Adobe Experience Platform](https://platform.adobe.com) 다음 왼쪽 **[!UICONTROL 탐색 막대에서]** 워크플로우 *[!UICONTROL 를 선택하여 워크플로우 작업 영역에]* 액세스합니다.
+[!DNL Adobe Experience Platform]에 [로그인한 다음](https://platform.adobe.com) 왼쪽 탐색 막대에서 **[!UICONTROL 워크플로우]** 를 선택하여 *[!UICONTROL 워크플로우 작업 영역에]* 액세스합니다.
 
-워크플로우 **[!UICONTROL 화면에서]** **[!UICONTROL 데이터 수집]** 섹션 **[!UICONTROL 에서 CSV를 XDM에]** 매핑하기 **[!UICONTROL 를 선택한 다음 LaunchDm을]**&#x200B;선택합니다.
+워크플로우 **[!UICONTROL 화면에서]** **[!UICONTROL 데이터 수집]** 섹션 **[!UICONTROL 에서 CSV를 XDM에]** 매핑합니다 **[!UICONTROL 를 선택한 다음 LaunchDm을]**&#x200B;선택합니다.
 
 ![](../images/tutorials/map-a-csv-file/workflows.png)
 
@@ -117,7 +117,7 @@ CSV 파일을 매핑하고 만들면 CSV 파일을 통해 수집되는 데이터
 
 ## 다음 단계
 
-이 자습서를 따라 플랫 CSV 파일을 XDM 스키마에 매핑하고 인제스트했습니다 [!DNL Platform]. 이제 이 데이터를 같은 다운스트림 [!DNL Platform] 서비스에서 사용할 수 있습니다 [!DNL Real-time Customer Profile]. 자세한 내용은 개요 [!DNL Real-time Customer Profile](../../profile/home.md) 를 참조하십시오.
+이 자습서를 따라 플랫 CSV 파일을 XDM 스키마에 매핑하고 인제스트했습니다 [!DNL Platform]. 이제 이 데이터를 같은 다운스트림 [!DNL Platform] 서비스에서 사용할 수 있습니다 [!DNL Real-time Customer Profile]. 자세한 내용은 [[!DNL 실시간 고객 프로필]](../../profile/home.md) 개요를 참조하십시오.
 
 ## 부록
 
@@ -156,9 +156,9 @@ CSV 파일을 매핑하고 만들면 CSV 파일을 통해 수집되는 데이터
 | timestamp | 현재 Unix 시간을 검색합니다. | timestamp() | 1571850624571 |
 | format | 지정한 형식에 따라 입력 날짜를 지정합니다. | format({DATE}, &quot;yyyy-MM-dd HH:mm:ss&quot;) | &quot;2019-10-23 11:24:35&quot; |
 | 형식 | 지정된 형식에 따라 타임스탬프를 날짜 문자열로 변환합니다. | dformat(1571829875, &quot;dd-MMM-yyyy hh:mm&quot;) | &quot;2019년 10월 23일 11시 24분&quot; |
-| date | 날짜 문자열을 ZunkedDateTime 개체(ISO 8601 형식)로 변환합니다. | date(&quot;2019년 10월 23일 11시 24분&quot;) | &quot;2019-10-23T11:24:00+00:00&quot; |
-| date_part | 날짜의 부분을 검색합니다. 다음 구성 요소 값이 지원됩니다. <br><br>&quot;year&quot;<br>&quot;<br>&quot;yyyy&quot;<br><br>&quot;yyyy<br>&quot;<br>&quot;yyy&quot;q<br><br>&quot;yyy&quot;q<br>&quot;<br>&quot;cq&quot;<br><br>&quot;cq&quot;<br>&quot;cumuld&quot;alk&quot;<br>&quot;ejy&quot;y&quot;y&quot;day&quot;y&quot;y&quot;y&quot;y&quot;day&quot;<br><br>&quot;<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&quot;DD0000000000000000000000000000000000000000000000000000000000000000000000000000000004&quot;4&quot;&quot;HH12&quot;CUTS&quot;MINUTE&quot;MINUTES&quot;MYMI&quot;EMOTH&quot;N&quot;SECOND&quot;&quot;SECOND&quot;&quot;&quot;SIGHTERS&quot;S&quot;&quot;S&quot;S&quot;MILLECONDS&quot;MS. | date_part(date(&quot;2019-10-17 11:55:12&quot;), &quot;MM&quot;) | 10 |
-| set_date_part | 지정된 날짜의 구성 요소를 대체합니다. 다음 구성 요소가 허용됩니다. <br><br>&quot;year&quot;<br>&quot;<br>yyyy&quot;<br><br>&quot;yyy<br>&quot;<br>&quot;yyy<br><br>&quot;<br>s&quot;<br>&quot;m&quot;<br><br><br>&quot;<br><br>&quot;dd&quot;<br>&quot;<br>&quot;<br><br>&quot;chour&quot;hh&quot;cultly&quot;<br><br>&quot;cmi&quot;n&quot;&quot;n&quot;second&quot;&quot;&quot;s&quot;&quot;s&quot; | set_date_part(&quot;m&quot;, 4, date(&quot;2016-11-09T11:44:44.797&quot;) | &quot;2016-04-09T11:44:44.797&quot; |
+| 날짜 | 날짜 문자열을 ZunkedDateTime 개체(ISO 8601 형식)로 변환합니다. | date(&quot;2019년 10월 23일 11시 24분&quot;) | &quot;2019-10-23T11:24:00+00:00&quot; |
+| date_part | 날짜의 부분을 검색합니다. 다음 구성 요소 값이 지원됩니다. <br><br>&quot;year&quot;<br>&quot;<br>&quot;yyyy&quot;<br><br>&quot;yyyy<br>&quot;<br>&quot;yyy&quot;q<br><br>&quot;yyy&quot;q<br>&quot;<br>&quot;cq&quot;<br><br>&quot;cq&quot;<br>&quot;cumuld&quot;alk&quot;<br>&quot;ejy&quot;y&quot;y&quot;day&quot;y&quot;y&quot;y&quot;y&quot;day&quot;<br><br>&quot;<br>&quot;<br>y&quot;ev&quot;y&quot;eyyy&quot;<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>00000000000000000000000000000000000000000000000000000000000000000000000000000 4&quot;4&quot;&quot;hh12&quot;cuts&quot;minute&quot;minutes&quot;mymi&quot;emoth&quot;n&quot;second&quot;&quot;second&quot;&quot;&quot;sighters&quot;s&quot;&quot;s&quot;s&quot;milleconds&quot;ms. | date_part(date(&quot;2019-10-17 11:55:12&quot;), &quot;MM&quot;) | 10 |
+| set_date_part | 지정된 날짜의 구성 요소를 대체합니다. 다음 구성 요소가 허용됩니다. <br><br>&quot;year&quot;<br>&quot;<br>yyyy&quot;<br><br>&quot;yyy<br>&quot;<br>&quot;yyy<br><br>&quot;<br>s&quot;<br>&quot;m&quot;<br><br><br>&quot;<br><br>&quot;dd&quot;<br>&quot;<br>&quot;<br><br>&quot;chour&quot;hh&quot;cultly&quot;<br><br>&quot;cmi&quot;n&quot;&quot;n&quot;second&quot;&quot;&quot;&quot;&quot;s&quot; | set_date_part(&quot;m&quot;, 4, date(&quot;2016-11-09T11:44:44.797&quot;) | &quot;2016-04-09T11:44:44.797&quot; |
 | make_date_time /<br>make_timestamp | 부품으로부터 날짜를 만듭니다. | make_date_time(2019, 10, 17, 11, 55, 12, 999, &quot;America/Los_Angeles&quot;) | `2019-10-17T11:55:12.0&#x200B;00000999-07:00[America/Los_Angeles]` |
 | current_timestamp | 현재 타임스탬프를 반환합니다. | current_timestamp() | 1571850624571 |
 | current_date | 시간 구성 요소가 없는 현재 날짜를 반환합니다. | current_date() | &quot;2019년 11월 18일&quot; |
