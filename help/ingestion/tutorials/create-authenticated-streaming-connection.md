@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 인증된 스트리밍 연결 만들기
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '624'
+source-wordcount: '633'
 ht-degree: 2%
 
 ---
@@ -14,18 +14,18 @@ ht-degree: 2%
 
 # 인증된 스트리밍 연결 만들기
 
-인증된 데이터 수집을 사용하면 [!DNL Real-time Customer Profile] 및 [!DNL Identity]과 같은 Adobe Experience Platform 서비스를 통해 신뢰할 수 있는 소스에서 나오는 레코드와 신뢰할 수 없는 소스 간에 구별할 수 있습니다. PII(개인 식별 정보)를 보내려는 클라이언트는 POST 요청의 일부로 액세스 토큰을 전송함으로써 이를 수행할 수 있습니다.
+인증된 데이터 수집을 사용하면 [!DNL Real-time Customer Profile] 및 [!DNL Identity]과 같은 Adobe Experience Platform 서비스가 신뢰할 수 있는 소스에서 나오는 레코드와 신뢰할 수 없는 소스 간에 구별할 수 있습니다. PII(개인 식별 정보)를 보내려는 클라이언트는 POST 요청의 일부로 액세스 토큰을 전송함으로써 이를 수행할 수 있습니다.
 
 ## 시작하기
 
-Adobe Experience Platform으로 데이터 스트리밍을 시작하려면 스트리밍 연결 등록이 필요합니다. 스트리밍 연결을 등록할 때 스트리밍 데이터 소스와 같은 몇 가지 주요 세부 사항을 제공해야 합니다.
+Adobe Experience Platform로의 데이터 스트리밍을 시작하려면 스트리밍 연결 등록이 필요합니다. 스트리밍 연결을 등록할 때 스트리밍 데이터 소스와 같은 몇 가지 주요 세부 사항을 제공해야 합니다.
 
 스트리밍 연결을 등록한 후 데이터 프로듀서로서 데이터를 스트리밍하는 데 사용할 수 있는 고유한 URL을 갖게 됩니다 [!DNL Platform].
 
 또한 이 자습서에서는 다양한 Adobe Experience Platform 서비스에 대한 작업 지식이 필요합니다. 이 자습서를 시작하기 전에 다음 서비스에 대한 설명서를 검토하십시오.
 
-- [!DNL Experience Data Model (XDM)](../../xdm/home.md): 경험 데이터를 [!DNL Platform] 구성하는 표준화된 프레임워크
-- [!DNL Real-time Customer Profile](../../profile/home.md): 여러 소스에서 집계된 데이터를 기반으로 통합된 소비자 프로필을 실시간으로 제공합니다.
+- [[!DNL 경험 데이터 모델(XDM)]](../../xdm/home.md):경험 데이터를 [!DNL Platform] 구성하는 표준화된 프레임워크
+- [[!DNL 실시간 고객 프로필]](../../profile/home.md):여러 소스에서 집계된 데이터를 기반으로 통합된 소비자 프로필을 실시간으로 제공합니다.
 
 다음 섹션에서는 스트리밍 통합 API를 성공적으로 호출하기 위해 알아야 할 추가 정보를 제공합니다.
 
@@ -37,7 +37,7 @@ Adobe Experience Platform으로 데이터 스트리밍을 시작하려면 스트
 
 API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 합니다](../../tutorials/authentication.md). 인증 자습서를 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
 
-- 인증: 무기명 `{ACCESS_TOKEN}`
+- 인증:무기명 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
@@ -51,7 +51,7 @@ API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 
 
 페이로드(POST, PUT, PATCH)이 포함된 모든 요청에는 추가 헤더가 필요합니다.
 
-- 컨텐츠 유형: application/json
+- 컨텐츠 유형:application/json
 
 ## 연결 만들기
 
