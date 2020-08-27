@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;attribution ai;overview;popular topics
+keywords: Experience Platform;attribution ai overview;popular topics;attribution ai;Attribution ai
 solution: Experience Platform
 title: Attribution AI 개요
 topic: Attribution AI
+description: Attribution AI은 크레딧을 전환 이벤트로 연결되는 터치포인트에 적용하는 데 사용됩니다. 이를 통해 마케터는 고객 여정 전반에서 각 개별 마케팅 접점의 마케팅 효과를 수량화할 수 있습니다. 터치포인트의 예로는 디스플레이 광고 노출, 이메일 전송, 이메일 열기, 유료 검색 클릭 수가 있습니다.
 translation-type: tm+mt
-source-git-commit: 7fc121d310509739c7ee81f7d6657ea8f3963b69
+source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
 workflow-type: tm+mt
-source-wordcount: '407'
+source-wordcount: '455'
 ht-degree: 0%
 
 ---
@@ -34,11 +35,11 @@ Attribution AI은 두 가지 점수, 알고리즘 및 규칙 기반 카테고리
 
 다음 예제 사용 사례를 지원하는 데 Attribution AI을 사용할 수 있습니다.
 
-- **경영진 보고**: 경영진은 마케팅의 진정한 점진적 효과를 채널, 지역, SKU 등으로 이해할 수 있습니다.
-- **예산 할당**: 마케팅 채널 전반에서 예산 할당 의사 결정을 알려줍니다.
-- **캠페인 최적화**: 각 채널 내에서 SKU 또는 지표에 대해 효과적인 캠페인, 크리에이티브 및 키워드를 파악합니다. 이를 통해 각 채널을 확인하여 마케팅 팀이 전략을 최적화할 수 있습니다.
-- **전체 단계 속성**: 고객 여정 전반에서 마케팅의 효과를 파악할 수 있습니다. 예를 들어 무료 계정 등록은 유료 전환 이상입니다.
-- **파트너 평가**: 기여도 결과를 기반으로 기관 및 파트너의 효과를 평가합니다.
+- **경영진 보고**:경영진은 마케팅의 진정한 점진적 효과를 채널, 지역, SKU 등으로 이해할 수 있습니다.
+- **예산 할당**:마케팅 채널 전반에서 예산 할당 의사 결정을 알려줍니다.
+- **캠페인 최적화**:각 채널 내에서 SKU 또는 지표에 대해 효과적인 캠페인, 크리에이티브 및 키워드를 파악합니다. 이를 통해 각 채널을 확인하여 마케팅 팀이 전략을 최적화할 수 있습니다.
+- **전체 단계 속성**:고객 여정 전반에서 마케팅의 효과를 파악할 수 있습니다. 예를 들어 무료 계정 등록은 유료 전환 이상입니다.
+- **파트너 평가**:기여도 결과를 기반으로 기관 및 파트너의 효과를 평가합니다.
 
 ### 추가 기능
 
