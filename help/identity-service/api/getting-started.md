@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 시작하기
 topic: API guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '714'
+source-wordcount: '726'
 ht-degree: 1%
 
 ---
@@ -14,15 +14,15 @@ ht-degree: 1%
 
 # [!DNL Identity Service] API 개발자 가이드
 
-Adobe Experience Platform [!DNL Identity Service] 는 Adobe Experience Platform 내의 ID 그래프라고 하는 것을 통해 고객을 거의 실시간으로 식별하면서 디바이스 간, 크로스채널을 관리합니다.
+Adobe Experience Platform [!DNL Identity Service] 는 Adobe Experience Platform 내에서 고객을 거의 실시간으로 식별하는 크로스 디바이스, 크로스채널을 관리합니다.
 
 ## 시작하기
 
-이 가이드는 다음과 같은 Adobe Experience Platform 구성 요소에 대해 작업해야 합니다.
+이 가이드는 Adobe Experience Platform의 다음 구성 요소에 대한 작업 이해를 필요로 합니다.
 
-- [!DNL Identity Service](../home.md): 고객 프로필 데이터 세분화로 인한 기본적인 문제를 해결합니다. 이는 고객이 브랜드와 상호 작용하는 장치 및 시스템 간의 ID를 결합함으로써 이루어집니다.
-- [!DNL Real-time Customer Profile](../../profile/home.md): 여러 소스에서 집계된 데이터를 기반으로 통합된 소비자 프로필을 실시간으로 제공합니다.
-- [!DNL Experience Data Model (XDM)](../../xdm/home.md): 고객 경험 데이터를 [!DNL Platform] 구성하는 표준화된 프레임워크
+- [[!DNL Identity Service]](../home.md):고객 프로필 데이터 세분화로 인한 기본적인 문제를 해결합니다. 이는 고객이 브랜드와 상호 작용하는 장치 및 시스템 간의 ID를 결합함으로써 이루어집니다.
+- [[!DNL 실시간 고객 프로필]](../../profile/home.md):여러 소스에서 집계된 데이터를 기반으로 통합된 소비자 프로필을 실시간으로 제공합니다.
+- [[!DNL 경험 데이터 모델(XDM)]](../../xdm/home.md):고객 경험 데이터를 [!DNL Platform] 구성하는 표준화된 프레임워크
 
 다음 섹션에서는 [!DNL Identity Service] API를 성공적으로 호출하기 위해 알아야 하거나 현 상태로 두어야 할 추가 정보를 제공합니다.
 
@@ -34,7 +34,7 @@ Adobe Experience Platform [!DNL Identity Service] 는 Adobe Experience Platform 
 
 API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 합니다](../../tutorials/authentication.md). 인증 자습서를 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
 
-- 인증: 무기명 `{ACCESS_TOKEN}`
+- 인증:무기명 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
@@ -48,17 +48,17 @@ API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 
 
 페이로드(POST, PUT, PATCH)이 포함된 모든 요청에는 추가 헤더가 필요합니다.
 
-- 컨텐츠 유형: application/json
+- 컨텐츠 유형:application/json
 
 ### 지역 기반 라우팅
 
 API는 [!DNL Identity Service] 요청 경로의 일부로서 항목을 포함시켜야 하는 지역 특정 끝점 `{REGION}` 을 사용합니다. IMS 조직 제공 중 IMS 조직 프로필 내에서 영역이 결정 및 저장됩니다. 각 끝점이 있는 올바른 영역을 사용하면 [!DNL Identity Service] API를 사용하여 수행한 모든 요청이 해당 지역으로 라우팅됩니다.
 
-현재 API에서 지원하는 두 개의 영역이 [!DNL Identity Service] 있습니다. VA7과 NLD2.
+현재 API에서 지원하는 두 개의 영역이 [!DNL Identity Service] 있습니다.VA7과 NLD2.
 
 아래 표는 영역을 사용하는 방법의 예를 보여줍니다.
 
-| 서비스 | 지역: VA7 | 지역: NLD2 |
+| 서비스 | 지역:VA7 | 지역:NLD2 |
 | ------ | -------- |--------- |
 | [!DNL Identity Service] API | https://</span>platform-va7.adobe.</span>io/data/core/identity/{ENDPOINT} | https://</span>platform-nld2.adobe.</span>io/data/core/identity/{ENDPOINT} |
 | [!DNL Identity Namespace] API | https://</span>platform-va7.adobe.</span>io/data/core/idnamespace/{ENDPOINT} | https://</span>platform-nld2.adobe.</span>io/data/core/idnamespace{ENDPOINT} |
@@ -71,7 +71,7 @@ IMS 조직 프로필 내에서 지역을 찾을 수 없는 경우 시스템 관�
 
 ## API [!DNL Identity Service] 사용
 
-이러한 서비스에 사용되는 ID 매개 변수는 두 가지 방법 중 하나로 나타낼 수 있습니다. 합성 또는 XID.
+이러한 서비스에 사용되는 ID 매개 변수는 두 가지 방법 중 하나로 나타낼 수 있습니다.합성 또는 XID.
 
 복합 ID는 ID 값과 네임스페이스를 모두 포함하는 구문입니다. 복합 ID를 사용하는 경우 이름(`namespace.code`) 또는 ID(`namespace.id`)로 네임스페이스를 제공할 수 있습니다.
 
@@ -83,7 +83,7 @@ ID가 유지되면 기본 ID 또는 XID라는 ID를 생성하여 해당 ID에 �
 
 >[!NOTE]
 >
->요청에서 기본 XID를 사용하는 경우 반환되는 모든 ID는 기본 XID 양식으로 표시됩니다. ID/네임스페이스 양식을 사용하는 것이 좋습니다. 자세한 내용은 ID용 XID [가져오기에 대한 섹션을 참조하십시오](./create-custom-namespace.md).
+>요청에서 기본 XID를 사용하는 경우 반환되는 모든 ID는 기본 XID 양식으로 설정됩니다. ID/네임스페이스 양식을 사용하는 것이 좋습니다. 자세한 내용은 ID용 XID [가져오기에 대한 섹션을 참조하십시오](./create-custom-namespace.md).
 
 ## 다음 단계
 
