@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Jupiter 전자 필기장의 쿼리 서비스
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '764'
+source-wordcount: '783'
 ht-degree: 1%
 
 ---
@@ -27,14 +27,14 @@ ht-degree: 1%
 - 데이터 [!DNL Adobe Analytics] 집합
 
 - 이 튜토리얼에서 사용되는 다음 주요 개념에 대한 작업 이해:
-   - [!DNL Experience Data Model (XDM) and XDM System](../../xdm/home.md)
-   - [!DNL Query Service](../../query-service/home.md)
-   - [!DNL Query Service SQL Syntax](../../query-service/sql/overview.md)
+   - [[!DNL 경험 데이터 모델(XDM) 및 XDM 시스템]](../../xdm/home.md)
+   - [[!DNL 쿼리 서비스]](../../query-service/home.md)
+   - [[!DNL 쿼리 서비스 SQL 구문]](../../query-service/sql/overview.md)
    - [Adobe Analytics]
 
 ## 액세스 [!DNL JupyterLab] 및 [!DNL Query Service] {#access-jupyterlab-and-query-service}
 
-1. 에서 왼쪽 탐색 [!DNL Experience Platform](https://platform.adobe.com)열 **** 에서 전자 필기장으로 이동합니다. JupiterLab이 로드될 때까지 잠시 기다려 주십시오.
+1. [!DNL [Experience Platform]에서](https://platform.adobe.com)왼쪽 탐색 열에서 **[!UICONTROL 전자 필기장]** 으로 이동합니다. JupiterLab이 로드될 때까지 잠시 기다려 주십시오.
 
    ![](../images/jupyterlab/query/jupyterlab_launcher.png)
 
@@ -85,10 +85,10 @@ ht-degree: 1%
    target_day = "01"
    ```
 
-   - `target_table` : 데이터 세트 [!DNL Adobe Analytics] 이름입니다.
-   - `target_year` : 대상 데이터가 있는 특정 연도입니다.
-   - `target_month` : 대상이 있는 특정 월입니다.
-   - `target_day` : 대상 데이터가 있는 특정 요일.
+   - `target_table` :데이터 세트 [!DNL Adobe Analytics] 이름입니다.
+   - `target_year` :대상 데이터가 있는 특정 연도입니다.
+   - `target_month` :대상이 있는 특정 월입니다.
+   - `target_day` :대상 데이터가 있는 특정 요일.
 
    >[!NOTE]
    >
@@ -126,7 +126,7 @@ ORDER  BY Hour;
 
 위 쿼리에서 절의 대상 `_acp_year` 은 `WHERE` 의 값으로 설정됩니다 `target_year`. 중괄호(중괄호)로 묶어서 SQL 쿼리에 변수를`{}`포함합니다.
 
-쿼리의 첫 번째 줄에는 선택 변수가 포함됩니다 `hourly_visitor`. 쿼리 결과는 이 변수에 판다들의 데이터 프레임으로 저장됩니다. 결과를 데이터 프레임에 저장하면 원하는 [!DNL Python] 패키지를 사용하여 나중에 쿼리 결과를 시각화할 수 있습니다. 새 셀에서 다음 [!DNL Python] 코드를 실행하여 막대 그래프를 생성합니다.
+쿼리의 첫 번째 줄에는 선택 변수가 포함됩니다 `hourly_visitor`. 쿼리 결과는 이 변수에 Paranda 데이터 프레임으로 저장됩니다. 결과를 데이터 프레임에 저장하면 원하는 [!DNL Python] 패키지를 사용하여 나중에 쿼리 결과를 시각화할 수 있습니다. 새 셀에서 다음 [!DNL Python] 코드를 실행하여 막대 그래프를 생성합니다.
 
 ```python
 trace = go.Bar(
