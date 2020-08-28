@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform에 데이터 수집
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
 workflow-type: tm+mt
 source-wordcount: '1278'
 ht-degree: 0%
@@ -148,6 +148,6 @@ ID 사용 및 작업에 대한 자세한 내용 [!DNL Real-time Customer Profile
 
 >[!WARNING]
 >
-> 다음 비디오에 표시된 [!DNL Platform] UI가 오래되었습니다. 최신 UI 스크린샷 및 기능은 위의 설명서를 참조하십시오.
+>다음 비디오에 표시된 [!DNL Platform] UI가 오래되었습니다. 최신 UI 스크린샷 및 기능은 위의 설명서를 참조하십시오.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27269?quality=12&learn=on)
