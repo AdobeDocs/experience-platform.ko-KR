@@ -5,7 +5,7 @@ title: Adobe Experience Platform ID 서비스
 topic: overview
 description: Adobe Experience Platform ID 서비스를 사용하면 다양한 디바이스와 시스템에 ID를 연결함으로써 고객 행동과 고객의 행동을 보다 정확하게 파악할 수 있으므로 효과적이고 개인화된 경험을 실시간으로 전달할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 8b1b61b6446b28f92d6cf221003674fa09716c53
+source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
 workflow-type: tm+mt
 source-wordcount: '1711'
 ht-degree: 0%
@@ -136,7 +136,7 @@ ID 필드는 ID가 공통 PII 데이터를 공유하는 경우 ID의 연결을 �
 
 >[!WARNING]
 >
-> 다음 비디오에 표시된 [!DNL Platform] UI가 오래되었습니다. 최신 UI 스크린샷 및 기능은 설명서를 참조하십시오.
+>다음 비디오에 표시된 [!DNL Platform] UI가 오래되었습니다. 최신 UI 스크린샷 및 기능은 설명서를 참조하십시오.
 
 >[!VIDEO](https://video.tv.adobe.com/v/28167?quality=12&learn=on)
 
