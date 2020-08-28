@@ -5,7 +5,7 @@ title: 고객 AI를 통한 인사이트 검색
 topic: Discovering insights
 description: 고객 AI는 인텔리전트 서비스의 일부로 마케터에게 Adobe Sensei을 활용하여 향후 고객의 행동을 예측할 수 있는 기능을 제공합니다. 고객 AI는 규모에 따라 개별 프로파일에 대한 이탈 및 전환과 같은 사용자 지정 성향 점수를 생성하는 데 사용됩니다. 이 작업은 알고리즘, 트레이닝 또는 배포를 선택하여 비즈니스 요구 사항을 머신 러닝 문제로 전환할 필요 없이 이루어집니다.
 translation-type: tm+mt
-source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
+source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
 workflow-type: tm+mt
 source-wordcount: '1125'
 ht-degree: 0%
@@ -122,7 +122,9 @@ UI [!DNL Adobe Experience Platform] 에서 왼쪽 탐색 **[!UICONTROL 영역에
 
 세그먼트 빌더는 세그먼트를 정의하는 데 사용됩니다. 인사이트 **[!UICONTROL 페이지에서]** 세그먼트 만들기를 선택하면 고객 AI가 선택한 버킷 정보를 세그먼트에 자동으로 추가합니다. 세그먼트 만들기를 완료하려면 세그먼트 빌더 사용자 인터페이스의 오른쪽 레일에 있는 *이름* 및 *설명* 컨테이너를간단히 채우십시오. 세그먼트에 이름과 설명을 지정한 후 오른쪽 **[!UICONTROL 상단에서 저장을]** 클릭합니다.
 
->!![NOTE] 성향 점수는 개별 프로필에 작성되므로 다른 프로필 속성과 마찬가지로 세그먼트 빌더에서 사용할 수 있습니다. 세그먼트 빌더로 이동하여 새 세그먼트를 만들면 사용자의 네임스페이스 Customer AI에서 모든 다양한 성향 점수를 볼 수 있습니다.
+>[!NOTE]
+>
+>성향 점수는 개별 프로필에 작성되므로 다른 프로필 속성과 마찬가지로 세그먼트 빌더에서 사용할 수 있습니다. 세그먼트 빌더로 이동하여 새 세그먼트를 만들면 사용자의 네임스페이스 Customer AI에서 모든 다양한 성향 점수를 볼 수 있습니다.
 
 ![세그먼트 채우기](../images/insights/segment-saving.png)
 
