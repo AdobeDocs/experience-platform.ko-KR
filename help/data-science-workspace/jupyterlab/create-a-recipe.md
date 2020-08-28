@@ -5,7 +5,7 @@ title: Jupiter 노트북을 사용하여 레시피 만들기
 topic: Tutorial
 description: 이 튜토리얼은 두 개의 기본 섹션을 살펴봅니다. 먼저 JupiterLab 노트북 내에서 템플릿을 사용하여 기계 학습 모델을 만듭니다. 그런 다음 JupiterLab 내에서 레서피 워크플로우에 맞게 노트북을 실행함으로써 데이터 과학 작업 공간 내에 레서피 작업을 만들 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
+source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
 workflow-type: tm+mt
 source-wordcount: '2336'
 ht-degree: 0%
@@ -475,6 +475,7 @@ def save(configProperties, prediction):
 ![](../images/jupyterlab/create-recipe/recipe_details.png)
 
 >[!CAUTION]
+>
 > - 파일 셀을 삭제하지 않음
 > - 파일 셀 위쪽에 있는 `%%writefile` 줄을 편집하지 마십시오
 > - 여러 전자 필기장에서 동시에 레시피를 만들지 마십시오
