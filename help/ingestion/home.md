@@ -5,7 +5,7 @@ title: Adobe Experience Platform 데이터 통합 개요
 topic: overview
 description: 이 문서에서는 데이터를 플랫폼으로 인제스트하는 세 가지 주요 방법과 각 개요 문서에 대한 링크를 소개합니다.
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
 workflow-type: tm+mt
 source-wordcount: '442'
 ht-degree: 9%
@@ -29,7 +29,7 @@ Adobe Experience Platform은 마케터가 고객의 행동을 더 잘 이해할 
 
 ## 스트리밍 통합
 
-스트리밍 통합 기능을 사용하면 클라이언트 및 서버측 디바이스에서 실시간으로 데이터를 전송할 수 [!DNL Experience Platform] 있습니다. [!DNL Platform] 는 데이터 inlet을 사용하여 들어오는 경험 데이터를 스트리밍할 수 있도록 지원합니다. 이 데이터는 데이터 레이크 내의 스트리밍 지원 데이터 세트에 유지됩니다. 데이터 Inlet을 구성하여 수집한 데이터를 자동으로 인증하고 신뢰할 수 있는 소스에서 데이터가 나오게 할 수 있습니다.
+스트리밍 통합 기능을 사용하면 클라이언트 및 서버측 디바이스에서 실시간으로 데이터를 전송할 수 [!DNL Experience Platform] 있습니다. [!DNL Platform] 는 데이터 inlet을 사용하여 들어오는 경험 데이터를 스트리밍할 수 있도록 지원합니다. 이 데이터는 데이터 레이크 내의 스트리밍 지원 데이터 세트에 유지됩니다. 데이터 Inlet을 구성하여 수집한 데이터를 자동으로 인증할 수 있으므로 데이터가 신뢰할 수 있는 소스에서 나오고 있습니다.
 
 자세한 내용은 [스트리밍 통합 개요를](./streaming-ingestion/overview.md) 참조하십시오.
 
@@ -47,6 +47,6 @@ Adobe Experience Platform은 마케터가 고객의 행동을 더 잘 이해할 
 
 >[!WARNING]
 >
-> 다음 비디오에서 사용되는 &quot;통합 프로필&quot;이 최신 상태가 아닙니다. 용어 [!DNL "Profile"] 또는 [!DNL "Real-time Customer Profile"] 는 설명서에서 사용되는 올바른 [!DNL Experience Platform] 용어입니다. 최신 기능은 설명서를 참조하십시오.
+>다음 비디오에서 사용되는 &quot;통합 프로필&quot;이 최신 상태가 아닙니다. 용어 [!DNL "Profile"] 또는 [!DNL "Real-time Customer Profile"] 는 설명서에서 사용되는 올바른 [!DNL Experience Platform] 용어입니다. 최신 기능은 설명서를 참조하십시오.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27106?quality=12&learn=on)
