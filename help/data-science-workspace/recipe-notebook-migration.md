@@ -5,7 +5,7 @@ title: 레서피 및 노트북 마이그레이션 가이드
 topic: Tutorial
 description: 다음 안내서에서는 데이터 과학 작업 공간에서 기존 레서피 및 노트북을 마이그레이션하는 데 필요한 단계 및 정보에 대해 간략하게 설명합니다.
 translation-type: tm+mt
-source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
+source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
 workflow-type: tm+mt
 source-wordcount: '3330'
 ht-degree: 0%
@@ -16,6 +16,7 @@ ht-degree: 0%
 # 레서피 및 노트북 마이그레이션 가이드
 
 >[!NOTE]
+>
 >노트북과 [!DNL Python]/R을 사용하는 레시피는 영향을 받지 않습니다. 마이그레이션은 PySpark/[!DNL Spark] (2.3) 레시피 및 노트북에만 적용됩니다.
 
 다음 안내서에서는 기존 레서피 및 전자 필기장을 마이그레이션하는 데 필요한 단계 및 정보에 대해 간략하게 설명합니다.
@@ -85,6 +86,7 @@ var df = sparkSession.read.format("com.adobe.platform.query")
 ```
 
 >[!TIP]
+>
 > 쿼리가 10분 이상 실행되는 경우 대화형 모드가 시간 초과됩니다. 데이터 크기가 몇 GB 이상인 경우 &quot;일괄 처리&quot; 모드로 전환하는 것이 좋습니다. 배치 모드는 시작하는 데 시간이 오래 걸리지만 더 큰 데이터 세트를 처리할 수 있습니다.
 
 #### 데이터 세트에 쓰기
@@ -138,6 +140,7 @@ Scala 레시피는 다음 디렉토리에 있습니다 `experience-platform-dsw-
 문서 기반 워크플로우를 사용하려면 레서피 폴더에 새 파일이 필요합니다. 의 레서피 폴더에서 Dockerfile을 복사하여 붙여넣습니다 `experience-platform-dsw-reference/recipes/scala/Dockerfile`. 선택적으로 아래 코드를 복사하여 새 파일에 붙여넣을 수도 있습니다 `Dockerfile`.
 
 >[!IMPORTANT]
+>
 > 아래에 표시된 예제 jar 파일은 레시피 jar 파일 이름으로 `ml-retail-sample-spark-*-jar-with-dependencies.jar` 교체되어야 합니다.
 
 ```scala
@@ -222,6 +225,7 @@ pd = sparkSession.read.format("com.adobe.platform.query")
 ```
 
 >[!TIP]
+>
 > 쿼리가 10분 이상 실행되는 경우 대화형 모드가 시간 초과됩니다. 데이터 크기가 몇 GB 이상인 경우 &quot;일괄 처리&quot; 모드로 전환하는 것이 좋습니다. 배치 모드는 시작하는 데 시간이 오래 걸리지만 더 큰 데이터 세트를 처리할 수 있습니다.
 
 #### 데이터 세트에 쓰기
@@ -275,6 +279,7 @@ PySpark 레시피는 다음 디렉토리에 있습니다 `experience-platform-ds
 문서 기반 워크플로우를 사용하려면 레서피 폴더에 새 파일이 필요합니다. 의 레서피 폴더에서 Dockerfile을 복사하여 붙여넣습니다 `experience-platform-dsw-reference/recipes/pyspark/Dockerfile`. 또한 아래 코드를 복사하여 붙여 넣고 새 파일을 만들 수도 있습니다 `Dockerfile`.
 
 >[!IMPORTANT]
+>
 > 아래 표시된 예제 egg 파일은 조리법의 egg 파일 이름으로 대체되어야 `pysparkretailapp-*.egg` 합니다.
 
 ```scala
