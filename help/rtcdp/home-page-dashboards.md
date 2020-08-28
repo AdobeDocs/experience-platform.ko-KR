@@ -5,7 +5,7 @@ seo-title: 실시간 고객 데이터 플랫폼 홈 페이지 및 대시보드
 description: 대시보드, 홈 페이지 및 Adobe Experience Platform의 첫 사용자 경험
 seo-description: 대시보드, 홈 페이지 및 Adobe Experience Platform의 첫 사용자 경험
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 98d3792f50f2ab95b86d162c51af9445f06343b5
 workflow-type: tm+mt
 source-wordcount: '634'
 ht-degree: 1%
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 홈 페이지는 지표 카드가 표시되는 곳 중 하나입니다. 실시간 CDP는 고객 경험 전반에서 측정 카드를 제공합니다. 이러한 지표는 시스템의 데이터, 프로필 및 세그먼트 대상에 대해 알려줍니다.
 
-![image](assets/home2.jpg)
+![image](assets/home.png)
 
 실시간 CDP에 로그인할 때 시스템에 데이터가 없으면 홈 페이지의 대시보드가 나타나지 않습니다. 이 경우 홈 페이지에서 처음 사용자 경험을 위한 학습 자료를 제공합니다. 데이터가 수집되면 즉, <!--sources-->데이터 세트, 프로필, 세그먼트 및 대상이 만들어지고 데이터가 시스템에 유입되므로 대시보드는 자동으로 업데이트되어 해당 데이터에 대한 정보를 표시합니다<!-- in metric cards-->.
 
@@ -31,14 +31,14 @@ ht-degree: 1%
 
 * **리더보드는** 대시보드 맨 위에 있습니다. 리드 보드는 시스템의 데이터 집합, 프로필, 세그먼트 및 대상 수를 보여줍니다.
 
-   ![image](assets/home-leaderboard2.jpg)
+   ![image](assets/leaderboard.png)
 
 <!-- * **Metric cards** display beneath the leaderboard. Metric cards show additional information, such as percentages or trends. Metric cards appear as data is collected.
     ![image](assets/home-metrics.jpg)
 Some information is shown in different ways on both the leaderboard and metric cards. -->
 * **최근 항목에는** 시스템에 추가된 최근 데이터 세트, 소스, 세그먼트 및 대상 5개가 나열됩니다.
 
-   ![image](assets/home-recent.jpg)
+   ![image](assets/recent.png)
 
 프로필 및 세그먼트 등의 추가 지표는 실시간 고객 데이터 플랫폼의 다른 부분에서 사용할 수 있습니다.
 
@@ -56,7 +56,7 @@ Some information is shown in different ways on both the leaderboard and metric c
 
 프로파일 수는 24시간마다 한 번씩 업데이트됩니다.
 
-프로파일에 대한 자세한 내용은 실시간 CDP [에서 고객의 전체 상황을 참조하십시오](profile/profile-overview.md).
+프로파일에 대한 자세한 내용은 실시간 [CDP에서 고객의 전체 상황을 참조하십시오](profile/profile-overview.md).
 
 ### 세그먼트
 
@@ -132,6 +132,6 @@ The number of failed profile records is updated hourly. -->
 
 최근 **[!UICONTROL 대상]** 지표 카드는 조직 내에서 만들어진 가장 최근 5개의 대상을 보여줍니다. 이 목록은 새 대상을 만들 때 업데이트됩니다.
 
-대상을 클릭하여 해당 항목에 대한 세부 사항을 보거나, **[!UICONTROL 모두]** 보기를 클릭하여 추가 대상에 대한 정보를 봅니다.
+대상을 클릭하여 해당 항목에 대한 세부 사항을 보거나, **[!UICONTROL 추가 대상에 대한 정보를 보려면 모두]** 보기를 클릭합니다.
 
 대상에 대한 자세한 내용은 대상 [개요를 참조하십시오](destinations/destinations-overview.md).
