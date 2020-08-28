@@ -5,9 +5,9 @@ seo-title: 대상 개요
 description: 대상은 실시간 고객 데이터 플랫폼에서 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과의 사전 구축된 통합입니다. Adobe 실시간 고객 데이터 플랫폼의 대상을 사용하여 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타깃팅된 광고 및 기타 여러 가지 사용 사례에 대해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 seo-description: 대상은 실시간 고객 데이터 플랫폼에서 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과의 사전 구축된 통합입니다. Adobe 실시간 고객 데이터 플랫폼의 대상을 사용하여 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타깃팅된 광고 및 기타 여러 가지 사용 사례에 대해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 54df4778a025811504801306120bda78e04281c1
+source-git-commit: 22bca041673cec5eee54ed4234aba19eca470441
 workflow-type: tm+mt
-source-wordcount: '526'
+source-wordcount: '528'
 ht-degree: 0%
 
 ---
@@ -54,7 +54,7 @@ ht-degree: 0%
 데이터 거버넌스는 다음을 통해 실시간 CDP 대상에 적용됩니다.
 
 * *대상 만들기 워크플로우에서 선택할 수 있는 마케팅 사용 사례* ;
-* *특정 사용 레이블이 들어 있는 데이터를 특정 마케팅 사용 사례가 있는 대상으로 활성화하지 않는 데이터 사용 정책* ..
+* *특정 사용 레이블이 들어 있는 데이터를 특정 마케팅 사용 사례가 있는 대상으로 활성화하지 않는 데이터 사용 정책* .
 
 [!DNL Data Governance] 마케팅 사용 사례 [및 데이터 정책 위반](/help/rtcdp/privacy/data-governance-overview.md#destinations) 해결에 대한 자세한 내용은 실시간 CDP 설명서를 참조하십시오 [](/help/rtcdp/privacy/data-governance-overview.md#enforcement).
 
@@ -67,4 +67,4 @@ ht-degree: 0%
 * [이메일 마케팅 대상](/help/rtcdp/destinations/email-marketing-destinations.md)
 * [소셜 네트워크 대상](/help/rtcdp/destinations/social-network-destinations-workflow.md)
 
-세그먼트 활성화 워크플로우의 데이터 정책 위반에 대한 자세한 내용은 프로필과 세그먼트를 대상으로 [활성화에서 7단계를 참조하십시오](/help/rtcdp/destinations/activate-destinations.md).
+세그먼트 활성화 워크플로우의 데이터 정책 위반에 대한 자세한 내용은 프로필과 세그먼트를 대상으로 [활성화의 검토 단계를 참조하십시오](/help/rtcdp/destinations/activate-destinations.md#review).
