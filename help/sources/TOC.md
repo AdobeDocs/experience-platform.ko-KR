@@ -4,7 +4,7 @@ audience: user
 user-guide-title: Adobe Experience Platform 소스 커넥터 도움말
 user-guide-description: Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 translation-type: tm+mt
-source-git-commit: bd3c31e7d39f7f66d755356a3dbb754e97c196fb
+source-git-commit: e628621903dbc0ec7381dfeae99902f503b34869
 workflow-type: tm+mt
 source-wordcount: '619'
 ht-degree: 0%
@@ -184,7 +184,7 @@ ht-degree: 0%
    - 데이터 흐름 구성 {#dataflow}
       - [광고 커넥터에 대한 데이터 흐름 구성](tutorials/ui/dataflow/advertising.md)
       - [일괄 처리 클라우드 스토리지 커넥터에 대한 데이터 흐름 구성](tutorials/ui/dataflow/batch/cloud-storage.md)
-      - [스트리밍 클라우드 스토리지 커넥터에 대한 데이터 흐름 구성](tutorials/ui/dataflow/streaming/cloud-storage.md)
+      - [스트리밍 클라우드 스토리지 커넥터에 대한 데이터 흐름 구성](tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
       - [데이터베이스 커넥터에 대한 데이터 흐름 구성](tutorials/ui/dataflow/databases.md)
       - [CRM 커넥터에 대한 데이터 흐름 구성](tutorials/ui/dataflow/crm.md)
       - [고객 성공 커넥터에 대한 데이터 흐름 구성](tutorials/ui/dataflow/customer-success.md)
