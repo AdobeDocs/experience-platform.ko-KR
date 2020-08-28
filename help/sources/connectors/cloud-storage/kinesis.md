@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Amazon Kinesis 커넥터
 topic: overview
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: e628621903dbc0ec7381dfeae99902f503b34869
 workflow-type: tm+mt
 source-wordcount: '214'
 ht-degree: 0%
@@ -65,4 +65,4 @@ Adobe Experience Platform은 AWS, [!DNL Google Cloud Platform]및 AWS와 같은 
 ## UI [!DNL Amazon Kinesis] 를 [!DNL Platform] 사용하는 데 연결
 
 - [UI에서 Amazon Kinesis 소스 커넥터 만들기](../../tutorials/ui/create/cloud-storage/kinesis.md)
-- [UI에서 클라우드 스토리지 커넥터에 대한 데이터 흐름 구성](../../tutorials/ui/dataflow/streaming/cloud-storage.md)
+- [UI에서 클라우드 스토리지 커넥터에 대한 데이터 흐름 구성](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
