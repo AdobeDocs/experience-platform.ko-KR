@@ -5,7 +5,7 @@ seo-title: 대상에 프로필 및 세그먼트 활성화
 description: 세그먼트를 대상에 매핑하여 Adobe의 실시간 고객 데이터 플랫폼에 있는 데이터를 활성화합니다. 이를 수행하려면 아래 단계를 따르십시오.
 seo-description: 세그먼트를 대상에 매핑하여 Adobe의 실시간 고객 데이터 플랫폼에 있는 데이터를 활성화합니다. 이를 수행하려면 아래 단계를 따르십시오.
 translation-type: tm+mt
-source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
+source-git-commit: 22bca041673cec5eee54ed4234aba19eca470441
 workflow-type: tm+mt
 source-wordcount: '1552'
 ht-degree: 0%
@@ -51,9 +51,9 @@ ht-degree: 0%
 
 ### **[!UICONTROL ID 매핑]** 단계 {#identity-mapping}
 
-![ID 매핑 단계](/help/rtcdp/destinations/assets/identity-mapping-icon.png)
-
 적용 대상:소셜 대상 및 Google 고객 일치 광고 대상
+
+![ID 매핑 단계](/help/rtcdp/destinations/assets/identity-mapping-icon.png)
 
 *소셜 대상의*&#x200B;경우 **[!UICONTROL ID 매핑]** 단계에서 소스 속성을 선택하여 대상의 타겟 ID로 매핑할 수 있습니다. 이 단계는 스키마에서 사용 중인 기본 ID에 따라 선택 사항이거나 필수 사항입니다. <br> 
 
