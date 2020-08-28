@@ -5,7 +5,7 @@ title: 엔진
 topic: Developer guide
 description: 엔진은 데이터 과학 작업 영역의 머신 러닝 모델을 위한 기초 역할을 합니다. 특정 문제를 해결하는 기계 학습 알고리즘, 기능 엔지니어링 수행 기능 파이프라인 또는 둘 다 포함되어 있습니다.
 translation-type: tm+mt
-source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
+source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
 workflow-type: tm+mt
 source-wordcount: '1147'
 ht-degree: 3%
@@ -20,6 +20,7 @@ ht-degree: 3%
 ## Docker 레지스트리 검색
 
 >[!TIP]
+>
 >Docker URL이 없는 경우 [패키지 소스 파일을 레시피](../models-recipes/package-source-files-recipe.md) 자습서로 이동하여 Docker 호스트 URL을 만드는 단계별 연습을 참조하십시오.
 
 Docker 호스트 URL, 사용자 이름 및 암호를 포함하여 패키지된 레서피 파일을 업로드하려면 Docker 레지스트리 자격 증명이 필요합니다. 다음 GET 요청을 수행하여 이 정보를 조회할 수 있습니다.
