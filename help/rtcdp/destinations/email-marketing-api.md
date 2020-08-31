@@ -4,15 +4,15 @@ solution: Experience Platform
 title: 이메일 마케팅 대상 만들기
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 3cfbee08c1948b2e073547f9bbf0c8526cbfd4bc
 workflow-type: tm+mt
-source-wordcount: '1621'
+source-wordcount: '1624'
 ht-degree: 1%
 
 ---
 
 
-# Adobe에서 이메일 마케팅 대상 만들기 및 데이터 활성화 [!DNL Real-time Customer Data Platform]
+# Adobe에서 API 호출을 사용하여 이메일 마케팅 대상을 만들고 데이터를 활성화합니다. [!DNL Real-time Customer Data Platform]
 
 이 자습서에서는 API 호출을 사용하여 Adobe Experience Platform 데이터에 연결하고, [이메일 마케팅 대상을](../../rtcdp/destinations/email-marketing-destinations.md)만들고, 새로 만든 대상에 데이터 흐름을 만들고, 데이터를 새로 만든 대상에 활성화하는 방법을 설명합니다.
 
