@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Privacy Service 사용 안내서
 topic: UI guide
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: c8446f6040ac9ef1f4196d9057b531011e243258
 workflow-type: tm+mt
 source-wordcount: '1056'
 ht-degree: 0%
@@ -121,7 +121,7 @@ UI는 새 작업 요청을 만드는 두 가지 방법을 제공합니다. [!DNL
 
 <img src="../images/user-guide/custom-namespace.png" width="500" /><br/>
 
-완료되면 **[!UICONTROL 만들기를 클릭합니다]**.
+When finished, click **[!UICONTROL Create]**.
 
 <img src="../images/user-guide/request-builder-create.png" width="500" /><br/>
 
@@ -147,7 +147,7 @@ JSON *[!UICONTROL 파일]* 드래그 앤 드롭을 위한 창을 제공하는 JS
 
 컴퓨터에서 JSON 파일을 찾아 대화 상자 창으로 드래그합니다. 업로드에 성공하면 파일 이름이 대화 상자에 나타납니다. JSON 파일을 대화 상자로 드래그하여 놓아 필요에 따라 계속 추가할 수 있습니다.
 
-완료되면 **[!UICONTROL 만들기를 클릭합니다]**. 대화 상자가 사라지고 새 작업(또는 작업)이 현재 처리 상태와 함께 _작업 요청_ 위젯에 나열됩니다.
+When finished, click **[!UICONTROL Create]**. 대화 상자가 사라지고 새 작업(또는 작업)이 현재 처리 상태와 함께 _작업 요청_ 위젯에 나열됩니다.
 
 ### 다음 단계
 
