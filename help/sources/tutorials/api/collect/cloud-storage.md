@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics; flow service; cloud storage
 solution: Experience Platform
 title: 소스 커넥터 및 API를 통해 클라우드 스토리지 데이터 수집
 topic: overview
+description: 이 자습서에서는 소스 커넥터 및 Flow Service API를 통해 서드파티 클라우드 저장소에서 데이터를 검색하고 이를 플랫폼으로 인제하는 절차를 다룹니다.
 translation-type: tm+mt
-source-git-commit: 773823333fe0553515ebf169b4fd956b8737a9c3
+source-git-commit: 6578fd607d6f897a403d0af65c81dafe3dc12578
 workflow-type: tm+mt
-source-wordcount: '1680'
+source-wordcount: '1583'
 ht-degree: 1%
 
 ---
@@ -16,21 +17,20 @@ ht-degree: 1%
 
 [!DNL Flow Service] 는 Adobe Experience Platform 내의 다양한 소스에서 수집된 고객 데이터를 수집하고 중앙에서 관리하는 데 사용됩니다. 이 서비스는 지원되는 모든 소스가 연결되어 있는 사용자 인터페이스와 RESTful API를 제공합니다.
 
-이 자습서에서는 타사 클라우드 저장소에서 데이터를 검색하고 소스 커넥터 및 API를 [!DNL Platform] 통해 데이터를 가져오는 단계를 다룹니다.
+이 자습서에서는 타사 클라우드 저장소에서 데이터를 검색하고 소스 커넥터 및 [[!DNL Flow Service] API를 통해 플랫폼으로 가져오는 단계를 다룹니다](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## 시작하기
 
-이 자습서에서는 파일의 경로 및 구조를 [!DNL Platform]포함하여 가져오려는 파일에 대한 정보와 유효한 연결을 통해 타사 클라우드 스토리지에 액세스해야 합니다. 이 정보가 없는 경우 이 튜토리얼을 시작하기 전에 Flow Service API를 사용하여 타사 클라우드 스토리지 [를 탐색하는 방법을](../explore/cloud-storage.md) 참조하십시오.
+이 자습서에서는 파일의 경로 및 구조를 포함하여 DNL 플랫폼으로 가져올 파일과 관련된 정보와 유효한 연결을 통해 타사 클라우드 스토리지에 액세스해야 합니다. 이 정보가 없는 경우 이 튜토리얼을 시작하기 전에 API를 사용하여 타사 클라우드 스토리지 [를 탐색하는 방법 [!DNL Flow Service] 을](../explore/cloud-storage.md) 참조하십시오.
 
 또한 이 자습서에서는 다음과 같은 Adobe Experience Platform 구성 요소에 대해 작업해야 합니다.
 
-- [XDM(Experience Data Model) 시스템](../../../../xdm/home.md):Experience Platform이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
+- [[!DNL 경험 데이터 모델(XDM) 시스템]](../../../../xdm/home.md):Experience Platform이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
    - [스키마 컴포지션의 기본 사항](../../../../xdm/schema/composition.md):스키마 컴포지션의 주요 원칙 및 모범 사례 등 XDM 스키마의 기본 구성 요소에 대해 알아봅니다.
    - [스키마 레지스트리 개발자 가이드](../../../../xdm/api/getting-started.md):스키마 레지스트리 API에 대한 호출을 성공적으로 수행하기 위해 알아야 하는 중요한 정보를 포함합니다. 여기에는 사용자 `{TENANT_ID}`, &quot;컨테이너&quot;의 개념 및 요청 시 필요한 헤더가 포함됩니다(수락 헤더와 가능한 값에 특별히 주의).
-- [카탈로그 서비스](../../../../catalog/home.md):카탈로그는 내부 데이터 위치 및 계열에 대한 기록 시스템이다 [!DNL Experience Platform].
-- [일괄 처리](../../../../ingestion/batch-ingestion/overview.md):일괄 처리 통합 API를 사용하면 데이터를 일괄 처리 파일 [!DNL Experience Platform] 로 인제스트할 수 있습니다.
+- [[!DNL 카탈로그 서비스]](../../../../catalog/home.md):카탈로그는 내부 데이터 위치 및 계열에 대한 기록 시스템이다 [!DNL Experience Platform].
+- [[!DNL 일괄 처리]](../../../../ingestion/batch-ingestion/overview.md):일괄 처리 통합 API를 사용하면 데이터를 일괄 처리 파일 [!DNL Experience Platform] 로 인제스트할 수 있습니다.
 - [샌드박스](../../../../sandboxes/home.md): [!DNL Experience Platform] 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되도록 단일 [!DNL Platform] 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
-
 다음 섹션에서는 [!DNL Flow Service] API를 사용하여 클라우드 스토리지에 성공적으로 연결하려면 알아야 할 추가 정보를 제공합니다.
 
 ### 샘플 API 호출 읽기
@@ -41,29 +41,21 @@ ht-degree: 1%
 
 API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 합니다](../../../../tutorials/authentication.md). 인증 자습서를 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
 
-- 인증:무기명 `{ACCESS_TOKEN}`
-- x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
+- `Authorization: Bearer {ACCESS_TOKEN}`
+- `x-api-key: {API_KEY}`
+- `x-gw-ims-org-id: {IMS_ORG}`
 
 에 속하는 리소스를 [!DNL Experience Platform]포함한 모든 리소스 [!DNL Flow Service]는 특정 가상 샌드박스와 분리됩니다. API에 대한 모든 [!DNL Platform] 요청에는 작업이 수행할 샌드박스의 이름을 지정하는 헤더가 필요합니다.
 
-- x-sandbox-name: `{SANDBOX_NAME}`
+- `x-sandbox-name: {SANDBOX_NAME}`
 
 페이로드(POST, PUT, PATCH)이 포함된 모든 요청에는 추가 미디어 유형 헤더가 필요합니다.
 
-- 컨텐츠 유형: `application/json`
-
-## 임시 XDM 클래스 및 스키마 만들기
-
-소스 커넥터를 [!DNL Platform] 통해 외부 데이터를 가져오려면 원시 소스 데이터에 대해 임시 XDM 클래스 및 스키마를 만들어야 합니다.
-
-애드혹 클래스 및 스키마를 만들려면 [애드혹 스키마 자습서에 설명된 단계를 따릅니다](../../../../xdm/tutorials/ad-hoc.md). 애드혹 클래스를 만들 때 소스 데이터에 있는 모든 필드는 요청 본문 내에 설명되어야 합니다.
-
-임시 스키마를 만들 때까지 개발자 안내서에 설명된 단계를 계속 수행합니다. 이 자습서의 다음 단계로 진행하려면 임시 스키마의 고유한 식별자(`$id`)가 필요합니다.
+- `Content-Type: application/json`
 
 ## 소스 연결 만들기 {#source}
 
-임시 XDM 스키마를 만든 경우 이제 API에 대한 POST 요청을 사용하여 소스 연결을 만들 수 [!DNL Flow Service] 있습니다. 소스 연결은 연결 ID, 소스 데이터 파일 및 소스 데이터를 설명하는 스키마에 대한 참조로 구성됩니다.
+API에 POST 요청을 만들어 소스 연결을 만들 수 [!DNL Flow Service] 있습니다. 소스 연결은 연결 ID, 소스 데이터 파일에 대한 경로 및 연결 사양 ID로 구성됩니다.
 
 소스 연결을 만들려면 데이터 형식 특성에 대한 열거형 값도 정의해야 합니다.
 
@@ -94,22 +86,18 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Test source connection for a Cloud Storage connector",
-        "baseConnectionId": "ac33bd66-1565-4915-b3bd-6615657915c4",
-        "description": "Test source connection for a Cloud Storage connector",
+        "name": "Cloud storage source connector",
+        "baseConnectionId": "9e2541a0-b143-4d23-a541-a0b143dd2301",
+        "description": "Cloud storage source connector",
         "data": {
-            "format": "delimited",
-            "schema": {
-                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/22a4ab59462a64de551d42dd10ec1f19d8d7246e3f90072a",
-                "version": "application/vnd.adobe.xed-full-notext+json; version=1"
-            }
+            "format": "delimited"
         },
         "params": {
-            "path": "/backfil/data8.csv",
+            "path": "/demo/data7.csv",
             "recursive": "true"
         },
-        "connectionSpec": {
-            "id": "be5ec48c-5b78-49d5-b8fa-7c89ec4569b8",
+            "connectionSpec": {
+            "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
             "version": "1.0"
         }
     }'
@@ -118,7 +106,6 @@ curl -X POST \
 | 속성 | 설명 |
 | --- | --- |
 | `baseConnectionId` | 액세스하는 타사 클라우드 스토리지 시스템의 고유 연결 ID. |
-| `data.schema.id` | 임시 XDM 스키마의 ID입니다. |
 | `params.path` | 액세스하는 소스 파일의 경로입니다. |
 | `connectionSpec.id` | 특정 타사 클라우드 스토리지 시스템과 연결된 연결 사양 ID. 연결 사양 ID의 목록은 [부록을](#appendix) 참조하십시오. |
 
@@ -128,14 +115,14 @@ curl -X POST \
 
 ```json
 {
-    "id": "8bae595c-8548-4716-ae59-5c85480716e9",
-    "etag": "\"4a00038b-0000-0200-0000-5ebc47fd0000\""
+    "id": "26b53912-1005-49f0-b539-12100559f0e2",
+    "etag": "\"11004d97-0000-0200-0000-5f3c3b140000\""
 }
 ```
 
 ## 대상 XDM 스키마 만들기 {#target-schema}
 
-이전 단계에서는 소스 데이터를 구조화하기 위해 임시 XDM 스키마를 만들었습니다. 소스 데이터를 사용하려면 필요에 따라 소스 데이터 [!DNL Platform]를 구조화하기 위해 대상 스키마를 만들어야 합니다. 그런 다음 대상 스키마를 사용하여 소스 데이터가 포함된 [!DNL Platform] 데이터 세트를 만듭니다.
+소스 데이터를 사용하려면 필요에 따라 소스 데이터 [!DNL Platform]를 구조화하기 위해 대상 스키마를 만들어야 합니다. 그런 다음 대상 스키마를 사용하여 소스 데이터가 포함된 [!DNL Platform] 데이터 세트를 만듭니다.
 
 대상 XDM 스키마는 스키마 레지스트리 API에 대한 POST 요청을 수행하여 [만들 수 있습니다](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
 
@@ -190,13 +177,13 @@ curl -X POST \
 
 ```json
 {
-    "$id": "https://ns.adobe.com/{TENANT_ID}/schemas/e28dd48fab732263816f8b80ae4fdf49ca7ad229ca62e5d6",
-    "meta:altId": "_{TENANT_ID}.schemas.e28dd48fab732263816f8b80ae4fdf49ca7ad229ca62e5d6",
+    "$id": "https://ns.adobe.com/{TENANT_ID}/schemas/995dabbea86d58e346ff91bd8aa741a9f36f29b1019138d4",
+    "meta:altId": "_{TENANT_ID}.schemas.995dabbea86d58e346ff91bd8aa741a9f36f29b1019138d4",
     "meta:resourceType": "schemas",
     "version": "1.0",
-    "title": "Target schema for a Cloud Storage connector",
+    "title": "Target schema cloud storage",
     "type": "object",
-    "description": "Target schema for Cloud Storage",
+    "description": "Target schema for cloud storage",
     "allOf": [
         {
             "$ref": "https://ns.adobe.com/xdm/context/profile",
@@ -205,11 +192,6 @@ curl -X POST \
         },
         {
             "$ref": "https://ns.adobe.com/xdm/context/profile-person-details",
-            "type": "object",
-            "meta:xdmType": "object"
-        },
-        {
-            "$ref": "https://ns.adobe.com/xdm/context/profile-personal-details",
             "type": "object",
             "meta:xdmType": "object"
         },
@@ -236,18 +218,18 @@ curl -X POST \
     ],
     "meta:xdmType": "object",
     "meta:registryMetadata": {
-        "repo:createdDate": 1589398474190,
-        "repo:lastModifiedDate": 1589398474190,
+        "repo:createdDate": 1597783248870,
+        "repo:lastModifiedDate": 1597783248870,
         "xdm:createdClientId": "{CREATED_CLIENT_ID}",
         "xdm:lastModifiedClientId": "{LAST_MODIFIED_CLIENT_ID}",
         "xdm:createdUserId": "{CREATED_USER_ID}",
         "xdm:lastModifiedUserId": "{LAST_MODIFIED_USER_ID}",
-        "eTag": "f07723475e933dc30ed411d97986a36f13aa20c820463dd8cf7b74e63f4e7801",
-        "meta:globalLibVersion": "1.10.1.1"
+        "eTag": "596661ec6c7a9c6ae530676e98290a4a58ca29540ed92489cf4478b2bf013a65",
+        "meta:globalLibVersion": "1.13.3"
     },
     "meta:class": "https://ns.adobe.com/xdm/context/profile",
     "meta:containerId": "tenant",
-    "meta:tenantNamespace": "_{TENANT_ID}"
+    "meta:tenantNamespace": "{TENANT_ID}"
 }
 ```
 
@@ -272,9 +254,9 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Target dataset for a Cloud Storage connector",
+        "name": "Target dataset for cloud storage",
         "schemaRef": {
-            "id": "https://ns.adobe.com/{TENANT}/schemas/e28dd48fab732263816f8b80ae4fdf49ca7ad229ca62e5d6",
+            "id": "https://ns.adobe.com/{TENANT_ID}/schemas/995dabbea86d58e346ff91bd8aa741a9f36f29b1019138d4",
             "contentType": "application/vnd.adobe.xed-full-notext+json; version=1"
         }
     }'
@@ -290,7 +272,7 @@ curl -X POST \
 
 ```json
 [
-    "@/dataSets/5ebc4be8590b1b191a8dc4ca"
+    "@/dataSets/5f3c3cedb2805c194ff0b69a"
 ]
 ```
 
@@ -321,12 +303,12 @@ curl -X POST \
         "description": "Target Connection for a Cloud Storage connector",
         "data": {
             "schema": {
-                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/e28dd48fab732263816f8b80ae4fdf49ca7ad229ca62e5d6",
+                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/995dabbea86d58e346ff91bd8aa741a9f36f29b1019138d4",
                 "version": "application/vnd.adobe.xed-full+json;version=1.0"
             }
         },
         "params": {
-            "dataSetId": "5ebc4be8590b1b191a8dc4ca"
+            "dataSetId": "5f3c3cedb2805c194ff0b69a"
         },
             "connectionSpec": {
             "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
@@ -347,8 +329,8 @@ curl -X POST \
 
 ```json
 {
-    "id": "1f5af99c-f1ef-4076-9af9-9cf1ef507678",
-    "etag": "\"530013e2-0000-0200-0000-5ebc4c110000\""
+    "id": "dbc5c132-bc2a-4625-85c1-32bc2a262558",
+    "etag": "\"8e000533-0000-0200-0000-5f3c40fd0000\""
 }
 ```
 
@@ -374,13 +356,21 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "version": 0,
-        "xdmSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/e28dd48fab732263816f8b80ae4fdf49ca7ad229ca62e5d6",
+        "xdmSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/995dabbea86d58e346ff91bd8aa741a9f36f29b1019138d4",
         "xdmVersion": "1.0",
         "id": null,
         "mappings": [
             {
+                "destinationXdmPath": "_id",
+                "sourceAttribute": "Id",
+                "identity": false,
+                "identityGroup": null,
+                "namespaceCode": null,
+                "version": 0
+            },
+            {
                 "destinationXdmPath": "person.name.firstName",
-                "sourceAttribute": "first_name",
+                "sourceAttribute": "FirstName",
                 "identity": false,
                 "identityGroup": null,
                 "namespaceCode": null,
@@ -388,23 +378,7 @@ curl -X POST \
             },
             {
                 "destinationXdmPath": "person.name.lastName",
-                "sourceAttribute": "last_name",
-                "identity": false,
-                "identityGroup": null,
-                "namespaceCode": null,
-                "version": 0
-            },
-            {
-                "destinationXdmPath": "_id",
-                "sourceAttribute": "id",
-                "identity": false,
-                "identityGroup": null,
-                "namespaceCode": null,
-                "version": 0
-            },
-            {
-                "destinationXdmPath": "personalEmail.address",
-                "sourceAttribute": "email",
+                "sourceAttribute": "LastName",
                 "identity": false,
                 "identityGroup": null,
                 "namespaceCode": null,
@@ -424,10 +398,10 @@ curl -X POST \
 
 ```json
 {
-    "id": "febec6a6785e45ea9ed594422cc483d7",
+    "id": "bf5286a9c1ad4266baca76ba3adc9366",
     "version": 0,
-    "createdDate": 1589398562232,
-    "modifiedDate": 1589398562232,
+    "createdDate": 1597784069368,
+    "modifiedDate": 1597784069368,
     "createdBy": "28AF22BA5DE6B0B40A494036@AdobeID",
     "modifiedBy": "28AF22BA5DE6B0B40A494036@AdobeID"
 }
@@ -611,29 +585,29 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Cloud Storage flow to AEP",
-        "description": "Cloud Storage flow to AEP",
+        "name": "Cloud Storage flow to Platform",
+        "description": "Cloud Storage flow to Platform",
         "flowSpec": {
             "id": "9753525b-82c7-4dce-8a9b-5ccfce2b9876",
             "version": "1.0"
         },
         "sourceConnectionIds": [
-            "8bae595c-8548-4716-ae59-5c85480716e9"
+            "26b53912-1005-49f0-b539-12100559f0e2"
         ],
         "targetConnectionIds": [
-            "1f5af99c-f1ef-4076-9af9-9cf1ef507678"
+            "f7eb08fa-5f04-4e45-ab08-fa5f046e45ee"
         ],
         "transformations": [
             {
                 "name": "Mapping",
                 "params": {
-                    "mappingId": "febec6a6785e45ea9ed594422cc483d7",
+                    "mappingId": "bf5286a9c1ad4266baca76ba3adc9366",
                     "mappingVersion": "0"
                 }
             }
         ],
         "scheduleParams": {
-            "startTime": "1589398646",
+            "startTime": "1597784298",
             "frequency":"minute",
             "interval":"30"
         }
@@ -656,14 +630,14 @@ curl -X POST \
 
 ```json
 {
-    "id": "e0bd8463-0913-4ca1-bd84-6309134ca1f6",
-    "etag": "\"04004fe9-0000-0200-0000-5ebc4c8b0000\""
+    "id": "dbc5c132-bc2a-4625-85c1-32bc2a262558",
+    "etag": "\"8e000533-0000-0200-0000-5f3c40fd0000\""
 }
 ```
 
 ## 데이터 흐름 모니터링
 
-데이터 흐름을 만든 후 데이터 흐름을 통해 인제스트되는 데이터를 모니터링하여 흐름 실행, 완료 상태 및 오류에 대한 정보를 확인할 수 있습니다. 데이터 흐름 모니터링 방법에 대한 자세한 내용은 API에서 데이터 흐름 [모니터링에 대한 자습서를 참조하십시오 ](../monitor.md)
+데이터 흐름을 만든 후 데이터 흐름을 통해 인제스트되는 데이터를 모니터링하여 흐름 실행, 완료 상태 및 오류에 대한 정보를 확인할 수 있습니다. 데이터 흐름 모니터링 방법에 대한 자세한 내용은 API에서 데이터 흐름 [모니터링에 대한 자습서를 참조하십시오](../monitor.md)
 
 ## 다음 단계
 
