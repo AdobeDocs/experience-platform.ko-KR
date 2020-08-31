@@ -5,10 +5,10 @@ topic: overview
 title: 액세스 제어 개요
 description: Adobe Experience Platform에 대한 액세스 제어는 Adobe Admin Console을 통해 제공됩니다. 이 기능은 Admin Console의 제품 프로필을 활용하므로 사용자에게 사용 권한 및 샌드박스를 연결합니다.
 translation-type: tm+mt
-source-git-commit: cddc559dfb65ada888bb367d6265863091a9b2a1
+source-git-commit: e22b0f64fd6153f76cff862a6e973a235257430e
 workflow-type: tm+mt
-source-wordcount: '1131'
-ht-degree: 3%
+source-wordcount: '1162'
+ht-degree: 2%
 
 ---
 
@@ -57,7 +57,7 @@ Adobe Admin Console은 Adobe 제품 이용 권한 및 조직의 이용 권한을
 
 ## 샌드박스 및 권한
 
-[!DNL Experience Platform] 는 하나의 프로덕션 샌드박스에 대한 액세스를 제공하며 비프로덕션 샌드박스를 만들 수 **있도록 해줍니다**. 비프로덕션 샌드박스는 다른 샌드박스에서 데이터를 격리할 수 있는 데이터 가상화의 한 형태이며 일반적으로 개발 실험, 테스트 또는 시험버전에 사용됩니다. 제품 프로필의 **[!UICONTROL 권한]** 을 통해 프로필 사용자는 액세스 권한이 부여된 샌드박스 환경 내의 [!DNL Platform] 기능에 액세스할 수 있습니다.
+비프로덕션 샌드박스는 다른 샌드박스에서 데이터를 격리할 수 있는 데이터 가상화의 한 형태이며 일반적으로 개발 실험, 테스트 또는 시험버전에 사용됩니다. 제품 프로필의 **[!UICONTROL 권한]** 을 통해 프로필 사용자는 액세스 권한이 부여된 샌드박스 환경 내의 [!DNL Platform] 기능에 액세스할 수 있습니다. 기본 Experience Platform 라이선스는 5개의 샌드박스(1개의 프로덕션과 4개의 비프로덕션)를 제공합니다. 비프로덕션 샌드박스 10개 팩을 총 75개의 샌드박스에 추가할 수 있습니다. 자세한 내용은 IMS 조직 관리자 또는 Adobe 영업 담당자에게 문의하십시오.
 
 샌드박스에 대한 자세한 내용 [!DNL Experience Platform]은 [샌드박스 개요를 참조하십시오](../sandboxes/home.md).
 
