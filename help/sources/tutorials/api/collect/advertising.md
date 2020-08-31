@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics; flow service; advertising; google adwords
 solution: Experience Platform
 title: 소스 커넥터 및 API를 통해 광고 데이터 수집
 topic: overview
+description: 이 자습서에서는 소스 커넥터 및 Flow Service API를 통해 타사 광고 응용 프로그램에서 데이터를 검색하고 이를 플랫폼으로 인제하는 절차를 다룹니다.
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 6578fd607d6f897a403d0af65c81dafe3dc12578
 workflow-type: tm+mt
-source-wordcount: '1644'
+source-wordcount: '1561'
 ht-degree: 1%
 
 ---
@@ -16,7 +17,7 @@ ht-degree: 1%
 
 [!DNL Flow Service] 는 Adobe Experience Platform 내의 다양한 소스에서 수집된 고객 데이터를 수집하고 중앙에서 관리하는 데 사용됩니다. 이 서비스는 지원되는 모든 소스가 연결되어 있는 사용자 인터페이스와 RESTful API를 제공합니다.
 
-이 자습서에서는 타사 광고 응용 프로그램에서 데이터를 검색하고 소스 커넥터 및 API를 통해 데이터 [!DNL Platform] 를 가져오는 단계를 다룹니다.
+이 자습서에서는 타사 광고 응용 프로그램에서 데이터를 검색하고 소스 커넥터 및 [!DNL Platform] [!DNL Flow Service] [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API를 통해 데이터를 인제하는 단계를 다룹니다.
 
 ## 시작하기
 
@@ -41,29 +42,21 @@ ht-degree: 1%
 
 API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 합니다](../../../../tutorials/authentication.md). 인증 자습서를 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
 
-* 인증:무기명 `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* `Authorization: Bearer {ACCESS_TOKEN}`
+* `x-api-key: {API_KEY}`
+* `x-gw-ims-org-id: {IMS_ORG}`
 
 에 속하는 리소스를 [!DNL Experience Platform]포함한 모든 리소스 [!DNL Flow Service]는 특정 가상 샌드박스와 분리됩니다. API에 대한 모든 [!DNL Platform] 요청에는 작업이 수행할 샌드박스의 이름을 지정하는 헤더가 필요합니다.
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+* `x-sandbox-name: {SANDBOX_NAME}`
 
 페이로드(POST, PUT, PATCH)이 포함된 모든 요청에는 추가 미디어 유형 헤더가 필요합니다.
 
-* 컨텐츠 유형: `application/json`
-
-## 임시 XDM 클래스 및 스키마 만들기
-
-소스 커넥터를 [!DNL Platform] 통해 외부 데이터를 가져오려면 원시 소스 데이터에 대해 임시 XDM 클래스 및 스키마를 만들어야 합니다.
-
-애드혹 클래스 및 스키마를 만들려면 [애드혹 스키마 자습서에 설명된 단계를 따릅니다](../../../../xdm/tutorials/ad-hoc.md). 애드혹 클래스를 만들 때 소스 데이터에 있는 모든 필드는 요청 본문 내에 설명되어야 합니다.
-
-임시 스키마를 만들 때까지 개발자 안내서에 설명된 단계를 계속 수행합니다. 이 자습서의 다음 단계로 진행하려면 임시 스키마의 고유한 식별자(`$id`)가 필요합니다.
+* `Content-Type: application/json`
 
 ## 소스 연결 만들기 {#source}
 
-임시 XDM 스키마를 만든 경우 이제 API에 대한 POST 요청을 사용하여 소스 연결을 만들 수 [!DNL Flow Service] 있습니다. 소스 연결은 기본 연결, 소스 데이터 파일 및 소스 데이터를 설명하는 스키마에 대한 참조로 구성됩니다.
+API에 POST 요청을 만들어 소스 연결을 만들 수 [!DNL Flow Service] 있습니다. 소스 연결은 연결 ID, 소스 데이터 파일에 대한 경로 및 연결 사양 ID로 구성됩니다.
 
 소스 연결을 만들려면 데이터 형식 특성에 대한 열거형 값도 정의해야 합니다.
 
@@ -99,10 +92,6 @@ curl -X POST \
         "description": "Advertising source connection",
         "data": {
             "format": "tabular",
-            "schema": {
-                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/9056f97e74edfa68ccd811380ed6c108028dcb344168746d",
-                "version": "application/vnd.adobe.xed-full-notext+json; version=1"
-            }
         },
         "params": {
             "path": "v201809.AD_PERFORMANCE_REPORT"
@@ -117,7 +106,6 @@ curl -X POST \
 | 속성 | 설명 |
 | -------- | ----------- |
 | `baseConnectionId` | 액세스하는 타사 광고 응용 프로그램의 고유 연결 ID. |
-| `data.schema.id` | 임시 XDM 스키마 `$id` 의 설명입니다. |
 | `params.path` | 소스 파일의 경로입니다. |
 | `connectionSpec.id` | 특정 타사 광고 응용 프로그램과 연결된 연결 사양 ID입니다. |
 
