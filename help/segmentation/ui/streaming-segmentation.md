@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;segment evaluation
+keywords: Experience Platform;home;popular topics;streaming segmentation;Segmentation;Segmentation Service;segmentation service;ui guide;
 solution: Experience Platform
 title: 스트리밍 세분화
 topic: ui guide
 description: Adobe Experience Platform의 스트리밍 세분화를 통해 거의 실시간으로 데이터를 세분화할 수 있습니다. 이제 스트리밍 세분화를 통해 데이터가 플랫폼에 유입되면 세그먼트 자격이 부여되므로 세분화 작업을 예약하고 실행할 필요가 없습니다. 이 기능을 사용하면 이제 데이터가 플랫폼으로 전달되면 대부분의 세그먼트 규칙을 평가할 수 있습니다. 즉, 세그먼트 멤버십은 예약된 세그멘테이션 작업을 실행하지 않고 최신 상태로 유지됩니다.
 translation-type: tm+mt
-source-git-commit: d35d598b2ae8b46f53a20d41770b21ceeeafcce8
+source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
 workflow-type: tm+mt
 source-wordcount: '805'
 ht-degree: 0%
