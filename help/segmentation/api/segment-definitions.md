@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;segment definition;segment definitions;api;API;
 solution: Experience Platform
 title: 세그먼트 정의
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
+source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
 workflow-type: tm+mt
 source-wordcount: '1041'
 ht-degree: 4%
@@ -193,7 +193,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 | `schema` | **필수 여부.** 세그먼트의 엔터티와 연결된 스키마입니다. 필드 `id` 또는 `name` 필드로 구성됩니다. |
 | `expression` | **필수 여부.** 세그먼트 정의에 대한 필드 정보를 포함하는 엔터티입니다. |
 | `expression.type` | 표현식 유형을 지정합니다. 현재 &quot;PQL&quot;만 지원됩니다. |
-| `expression.format` | 값의 표현식 구조를 나타냅니다. 현재 다음 형식이 지원됩니다. <ul><li>`pql/text`: 게시된 PQL 문법에 따라 세그먼트 정의에 대한 텍스트 표현입니다.  예, `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
+| `expression.format` | 값의 표현식 구조를 나타냅니다. 현재 다음 형식이 지원됩니다. <ul><li>`pql/text`:게시된 PQL 문법에 따라 세그먼트 정의에 대한 텍스트 표현입니다.  예, `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
 | `expression.value` | 에 표시된 형식을 준수하는 표현식입니다 `expression.format`. |
 | `description` | 사람이 읽을 수 있는 정의에 대한 설명입니다. |
 
@@ -325,7 +325,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions/4afe34ae
 | `schema` | 세그먼트의 엔터티와 연결된 스키마입니다. 필드 `id` 또는 `name` 필드로 구성됩니다. |
 | `expression` | 세그먼트 정의에 대한 필드 정보를 포함하는 엔터티입니다. |
 | `expression.type` | 표현식 유형을 지정합니다. 현재 &quot;PQL&quot;만 지원됩니다. |
-| `expression.format` | 값의 표현식 구조를 나타냅니다. 현재 다음 형식이 지원됩니다. <ul><li>`pql/text`: 게시된 PQL 문법에 따라 세그먼트 정의에 대한 텍스트 표현입니다.  예, `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
+| `expression.format` | 값의 표현식 구조를 나타냅니다. 현재 다음 형식이 지원됩니다. <ul><li>`pql/text`:게시된 PQL 문법에 따라 세그먼트 정의에 대한 텍스트 표현입니다.  예, `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
 | `expression.value` | 에 표시된 형식을 준수하는 표현식입니다 `expression.format`. |
 | `description` | 그 정의에 대한 사람이 읽을 수 있는 설명입니다. |
 | `evaluationInfo` | 세그먼트 정의를 받을 평가, 일괄 처리, 연속(스트리밍 라고도 함) 또는 동기 유형을 알려주는 시스템 생성 개체 |
@@ -458,7 +458,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions/bulk-ge
 | `schema` | 세그먼트의 엔터티와 연결된 스키마입니다. 필드 `id` 또는 `name` 필드로 구성됩니다. |
 | `expression` | 세그먼트 정의에 대한 필드 정보를 포함하는 엔터티입니다. |
 | `expression.type` | 표현식 유형을 지정합니다. 현재 &quot;PQL&quot;만 지원됩니다. |
-| `expression.format` | 값의 표현식 구조를 나타냅니다. 현재 다음 형식이 지원됩니다. <ul><li>`pql/text`: 게시된 PQL 문법에 따라 세그먼트 정의에 대한 텍스트 표현입니다.  예, `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
+| `expression.format` | 값의 표현식 구조를 나타냅니다. 현재 다음 형식이 지원됩니다. <ul><li>`pql/text`:게시된 PQL 문법에 따라 세그먼트 정의에 대한 텍스트 표현입니다.  예, `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
 | `expression.value` | 에 표시된 형식을 준수하는 표현식입니다 `expression.format`. |
 | `description` | 그 정의에 대한 사람이 읽을 수 있는 설명입니다. |
 | `evaluationInfo` | 세그먼트 정의를 받을 평가, 일괄 처리, 연속(스트리밍 라고도 함) 또는 동기 유형을 알려주는 시스템 생성 개체 |
