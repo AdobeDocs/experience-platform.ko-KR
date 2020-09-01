@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;monitoring;monitor;data flows
+keywords: Experience Platform;home;popular topics;monitoring;monitor;data flows;monitor ingestion;data ingestion;Data ingestion;view records;view batches;
 solution: Experience Platform
 title: 데이터 수집 모니터링
 topic: overview
 description: 이 사용자 안내서에서는 Adobe Experience Platform 사용자 인터페이스 내에서 데이터를 모니터하는 방법에 대한 단계를 제공합니다. 이 가이드를 이용하려면 Adobe ID을 가지고 Adobe Experience Platform에 입장해야 합니다.
 translation-type: tm+mt
-source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
+source-git-commit: d2f098cb9e4aaf5beaad02173a22a25a87a43756
 workflow-type: tm+mt
 source-wordcount: '560'
 ht-degree: 0%
