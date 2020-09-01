@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;schema;Schema;schemas;Schemas;create
 solution: Experience Platform
 title: 스키마 만들기
+description: '스키마는 Experience Platform에 인제스트하려는 데이터의 청사진이라고 생각할 수 있습니다. 각 스키마는 클래스와 0개 이상의 혼합으로 구성됩니다. 즉, 스키마를 정의하기 위해 혼합을 추가할 필요는 없지만 대부분의 경우 최소 하나의 혼합이 사용됩니다. '
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
 workflow-type: tm+mt
-source-wordcount: '235'
+source-wordcount: '294'
 ht-degree: 1%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 1%
 
 # 스키마 만들기
 
-스키마는 인제스트할 데이터의 청사진이라고 생각할 수 있습니다 [!DNL Experience Platform]. 각 스키마는 클래스와 0개 이상의 혼합으로 구성됩니다. 즉, 스키마를 정의하기 위해 혼합을 추가할 필요는 없지만 대부분의 경우 혼합이 최소 1개 사용됩니다.
+스키마는 인제스트할 데이터의 청사진이라고 생각할 수 있습니다 [!DNL Experience Platform]. 각 스키마는 클래스와 0개 이상의 혼합으로 구성됩니다. 즉, 스키마를 정의하기 위해 혼합을 추가할 필요는 없지만 대부분의 경우 최소 하나의 혼합이 사용됩니다.
 
 스키마 구성 프로세스는 클래스를 할당하는 방식으로 시작됩니다. 이 클래스는 데이터(레코드 또는 시간 시리즈)의 주요 행동 측면과 인제스트할 데이터를 설명하는 데 필요한 최소 필드를 정의합니다.
 
