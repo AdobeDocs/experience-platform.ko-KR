@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;ad-hoc;ad hoc;adhoc;Ad-hoc;Ad hoc;Adhoc;tutorial;Tutorial;create;Create;schema;Schema
 solution: Experience Platform
 title: 임시 스키마 만들기
+description: 특정 상황에서 단일 데이터 세트에 의해서만 사용하도록 지정된 필드가 있는 XDM(경험 데이터 모델) 스키마를 만들어야 할 수 있습니다. 이를 "임시" 스키마라고 합니다. 애드혹 스키마는 CSV 파일 인제스트 및 특정 종류의 소스 연결 만들기를 포함하여 Experience Platform에 대한 다양한 데이터 처리 워크플로우에서 사용됩니다.
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
 workflow-type: tm+mt
-source-wordcount: '724'
+source-wordcount: '782'
 ht-degree: 2%
 
 ---
@@ -22,8 +23,8 @@ ht-degree: 2%
 
 이 자습서에서는 [!DNL Experience Data Model] (XDM) 시스템에 대해 작업해야 합니다. 이 자습서를 시작하기 전에 다음 XDM 설명서를 검토하십시오.
 
-- [XDM 시스템 개요](../home.md): XDM 및 XDM 구현에 대한 개요 [!DNL Experience Platform].
-- [스키마 컴포지션의 기본 사항](../schema/composition.md): XDM 스키마의 기본 구성 요소에 대한 개요입니다.
+- [XDM 시스템 개요](../home.md):XDM 및 XDM 구현에 대한 개요 [!DNL Experience Platform].
+- [스키마 컴포지션의 기본 사항](../schema/composition.md):XDM 스키마의 기본 구성 요소에 대한 개요입니다.
 
 이 자습서를 시작하기 전에 [개발자 가이드에서](../api/getting-started.md) API를 성공적으로 호출하기 위해 알아야 할 중요한 정보가 있는지 [!DNL Schema Registry] 확인하십시오. 여기에는 사용자 `{TENANT_ID}`, &quot;컨테이너&quot;의 개념 및 요청 시 필요한 헤더가 포함됩니다(수락 헤더와 가능한 값에 특별히 주의).
 
