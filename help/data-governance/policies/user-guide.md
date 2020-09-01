@@ -5,9 +5,9 @@ title: 데이터 사용 정책 사용 안내서
 topic: policies
 description: Adobe Experience Platform 데이터 거버넌스는 데이터 사용 정책을 만들고 관리할 수 있는 사용자 인터페이스를 제공합니다. 이 문서에서는 Experience Platform 사용자 인터페이스의 정책 작업 영역에서 수행할 수 있는 작업에 대한 개요를 제공합니다.
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '768'
+source-wordcount: '765'
 ht-degree: 0%
 
 ---
@@ -116,7 +116,7 @@ UI [!DNL Experience Platform] 에서 정책 **** 을 클릭하여 **[!UICONTROL 
 
 ## 다음 단계
 
-이 문서에서는 [!DNL Experience Platform] UI에서 데이터 사용 정책을 관리하는 방법에 대한 개요를 제공합니다. DULE 정책 API를 사용하여 정책을 관리하는 방법에 대한 자세한 내용은 [개발자 안내서를 참조하십시오](../api/getting-started.md). 데이터 사용 정책을 적용하는 방법에 대한 자세한 내용은 [정책 실행 개요를 참조하십시오](../enforcement/overview.md).
+이 문서에서는 [!DNL Experience Platform] UI에서 데이터 사용 정책을 관리하는 방법에 대한 개요를 제공합니다. 를 사용하여 정책을 관리하는 방법에 대한 단계 [!DNL Policy Service API]는 [개발자 안내서를 참조하십시오](../api/getting-started.md). 데이터 사용 정책을 적용하는 방법에 대한 자세한 내용은 [정책 실행 개요를 참조하십시오](../enforcement/overview.md).
 
 다음 비디오에서는 [!DNL Experience Platform] UI에서 사용 정책을 사용하는 방법에 대한 데모를 제공합니다.
 
