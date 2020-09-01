@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;data type;data types;Data types;Data type
+keywords: Experience Platform;home;popular topics;data type;data types;Data types;Data type;Segmentation data types;Segmentation;segmentation;Segmentation Service;Segmentation service data types;
 solution: Experience Platform
 title: Adobe Experience Platform 세그멘테이션 서비스 데이터 유형
 topic: overview
 description: 모든 XDM 데이터 유형은 세그멘테이션 서비스 내에서 지원됩니다. 세그먼트 정의를 구성하는 규칙은 다음 데이터 유형에 따라 상황에 맞게 지정됩니다.
 translation-type: tm+mt
-source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
+source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
 workflow-type: tm+mt
 source-wordcount: '479'
 ht-degree: 3%
