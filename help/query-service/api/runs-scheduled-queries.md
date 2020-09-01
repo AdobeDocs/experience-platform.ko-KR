@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;run scheduled queries;run scheduled query;Query service;scheduled queries;scheduled query;
 solution: Experience Platform
 title: 쿼리 서비스 개발자 가이드
 topic: runs for scheduled queries
 translation-type: tm+mt
-source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
 workflow-type: tm+mt
 source-wordcount: '655'
 ht-degree: 2%
@@ -151,9 +151,9 @@ curl -X GET https://platform.adobe.io/data/foundation/query/schedules/e95186d65a
 >
 >의 값을 사용하여 지정된 예약 쿼리 `_links.cancel` 에 대한 실행을 [중지할 수 있습니다](#immediately-stop-a-run-for-a-specific-scheduled-query).
 
-### 특정 예약된 쿼리에 대해 실행을 즉시 트리거합니다.
+### 특정 예약된 쿼리에 대한 실행을 즉시 트리거합니다.
 
-종단점에 POST 요청을 만들어 지정된 예약된 쿼리에 대한 실행을 즉시 트리거할 수 있습니다. 여기서 `/schedules/{SCHEDULE_ID}/runs` 는 실행을 트리거하려는 예약된 쿼리 `{SCHEDULE_ID}` `id` 의 값입니다.
+종단점에 POST 요청을 만들어 지정된 예약된 쿼리에 대한 실행을 즉시 트리거할 수 있습니다. 여기서 `/schedules/{SCHEDULE_ID}/runs` 는 실행을 트리거하려는 예약된 쿼리의 `{SCHEDULE_ID}` `id` 값입니다.
 
 **API 형식**
 
@@ -194,7 +194,7 @@ GET /schedules/{SCHEDULE_ID}/runs/{RUN_ID}
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | 세부 사항을 검색하려는 실행이 예약된 쿼리의 `id` 값입니다. |
+| `{SCHEDULE_ID}` | 세부 사항을 검색하려는 실행이 예약된 쿼리의 `id` 값. |
 | `{RUN_ID}` | 검색할 실행 `id` 의 값입니다. |
 
 **요청**
@@ -255,7 +255,7 @@ PATCH /schedules/{SCHEDULE_ID}/runs/{RUN_ID}
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | 세부 사항을 검색하려는 실행이 예약된 쿼리의 `id` 값입니다. |
+| `{SCHEDULE_ID}` | 세부 사항을 검색하려는 실행이 예약된 쿼리의 `id` 값. |
 | `{RUN_ID}` | 검색할 실행 `id` 의 값입니다. |
 
 **요청**
