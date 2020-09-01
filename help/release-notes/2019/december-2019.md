@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: December 12, 2019
 author: ens71067
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: f8d13b305a61f8606c4fa1ceee6d4518b5d83fda
 workflow-type: tm+mt
 source-wordcount: '682'
 ht-degree: 5%
@@ -35,11 +35,11 @@ Adobe Experience Platform 세그멘테이션 서비스는 세그먼트를 작성
 | 기능 | 설명 |
 |--- | ---|
 | 병합된 대상 탭( [!DNL Segment Builder] | 의 [!UICONTROL _세그먼트_] 및 [!UICONTROL _대상_] 탭 [!DNL Segment Builder] 이 단일 대상 [!UICONTROL _탭_] 으로결합되었습니다. 이 탭에서는 기존 대상을 찾아 검색할 수 있습니다. 이렇게 하면 규칙 빌더 캔버스로 드래그하여 놓아 새 세그먼트 정의를 만들 수 있습니다. 대상을 참조하면 다음 규칙 논리 세트 중 하나를 새 세그먼트 정의에 추가할 수 있습니다.대상 멤버십을 규칙으로, 참조된 대상을 정의하는 전체 규칙 논리 세트입니다. |
-| 병합 정책 선택기의 새 위치 | 병합 정책 선택기의 위치가 [!DNL Segment Builder] 변경되었습니다. 세그먼트 정의에 대한 병합 정책을 선택하려면 [!UICONTROL _필드_] 탭에서 톱니바퀴 아이콘을 클릭한 다음 정책 _[!UICONTROL 병합]_ 드롭다운 메뉴를 사용하여 사용할 병합 정책을 선택합니다. |
+| 병합 정책 선택기의 새 위치 | 병합 정책 선택기의 위치가 [!DNL Segment Builder] 변경되었습니다. 세그먼트 정의에 대한 병합 정책을 선택하려면 **[!UICONTROL 필드]** 탭에서 톱니바퀴 아이콘을 클릭한 다음 정책 **[!UICONTROL 병합]** 드롭다운 메뉴를 사용하여 사용할 병합 정책을 선택합니다. |
 
 **알려진 문제**
 
-* 없음
+* None
 
 자세한 내용은 세그멘테이션 [서비스 개요를 참조하십시오](../../segmentation/home.md).
 
@@ -55,7 +55,7 @@ Adobe Experience Platform [!DNL Decisioning Service] 는 특정 개인에 대해
 
 **알려진 문제**
 
-* 없음.
+* None.
 
 서비스에 대한 [자세한 내용은 의사 결정 서비스 개요를](../../decisioning-service/home.md) 참조하십시오.
 
@@ -74,7 +74,7 @@ Adobe Experience Platform은 외부 소스에서 데이터를 인제스트할 �
 
 **알려진 문제**
 
-* 없음.
+* None.
 
 소스에 대한 자세한 내용은 [소스 개요를 참조하십시오](../../sources/home.md).
 
@@ -97,6 +97,6 @@ XDM은 디지털 경험의 강력함을 향상시키도록 고안된 공개적�
 
 **알려진 문제**
 
-* 없음
+* None
 
 API 및 사용자 인터페이스를 사용하여 XDM을 사용하는 방법에 대한 자세한 내용은 [!DNL Schema Registry] XDM 시스템 설명서를 참조하십시오 [!DNL Schema Editor] [](../../xdm/home.md).
