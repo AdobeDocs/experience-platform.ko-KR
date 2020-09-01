@@ -5,7 +5,7 @@ title: Adobe Experience Platform 소스 커넥터 개요
 topic: overview
 description: Adobe Experience Platform은 플랫폼 서비스를 사용하여 들어오는 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 외부 소스에서 데이터를 수집할 수 있도록 허용합니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 등 다양한 소스의 데이터를 인제스트할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: c8e53a25c5b22e8d840658fe26ff47875947a6d0
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '866'
 ht-degree: 0%
@@ -112,14 +112,14 @@ CRM 시스템은 고객과의 관계를 구축하는 데 도움이 되는 데이
 
 ## 데이터 수집의 소스에 대한 액세스 제어
 
-데이터 수집의 소스에 대한 권한은 Adobe Admin Console 내에서 관리할 수 있습니다. 특정 제품 프로필의 *[!UICONTROL 권한]* 탭을 통해 권한을 액세스할 수 있습니다. [ **[!UICONTROL 권한]** 편집] 패널에서 *[!UICONTROL 데이터 수집]* 메뉴 항목을 통해 소스와 관련된 권한에 액세스할 수 있습니다. 소스 **[!UICONTROL 보기]** 권한은 *[!UICONTROL 카탈로그]* 탭 및 검색 *[!UICONTROL 탭의 인증된 소스]* 에 대한 읽기 전용 액세스 권한을 허용하지만, 소스 관리 권한은 소스를 만들고, 편집하고, 비활성화하는 데 대한 전체 액세스 권한을 **** 부여합니다.
+데이터 수집의 소스에 대한 권한은 Adobe Admin Console 내에서 관리할 수 있습니다. 특정 제품 프로필의 **[!UICONTROL 권한]** 탭을 통해 권한을 액세스할 수 있습니다. [ **[!UICONTROL 권한]** 편집] 패널에서 **[!UICONTROL 데이터 수집]** 메뉴 항목을 통해 소스와 관련된 권한에 액세스할 수 있습니다. 소스 **[!UICONTROL 보기]** 권한은 **[!UICONTROL 카탈로그]** 탭 및 검색 **[!UICONTROL 탭의 인증된 소스]** 에 대한 읽기 전용 액세스 권한을 허용하지만, 소스 관리 권한은 소스를 만들고, 편집하고, 비활성화하는 데 대한 전체 액세스 권한을 **** 부여합니다.
 
 다음 표에서는 이러한 권한의 다양한 조합을 기반으로 UI가 어떻게 동작하는지를 설명합니다.
 
 | 권한 수준 | 설명 |
 | ---- | ----|
 | **[!UICONTROL 소스]** 보기 켜기 | [ *카탈로그* ] 탭에서 각 소스 유형의 소스는 물론 [검색 *], [계정*] 및 [ *DataFlow*] 탭에서도 읽기 전용 액세스 권한을 ** 부여합니다. |
-| **[!UICONTROL 소스]** 관리 켜기 | 소스 **[!UICONTROL 보기에 포함된 기능 외에,]**&#x200B;카탈로그 *[!UICONTROL 의]* Connect 소스 *[!UICONTROL 옵션]* 에 대한 액세스 권한을 *[!UICONTROL 허용하며, Browse에서 Select Data]* 및 Select ** DataOption에 대한 액세스 권한을 부여합니다. **[!UICONTROL 또한 소스]** 관리를 사용하면 DataFlow를 활성화하거나 비활성화하고 *[!UICONTROL 해당 일정을]* 편집할 수 있습니다. |
+| **[!UICONTROL 소스]** 관리 켜기 | 소스 **[!UICONTROL 보기에 포함된 기능 외에,]**&#x200B;카탈로그 **[!UICONTROL 의]** Connect 소스 **[!UICONTROL 옵션]** 에 대한 액세스 권한을 **[!UICONTROL 허용하며, Browse에서 Select Data]** 및 Select **** DataOption에 대한 액세스 권한을 부여합니다. **[!UICONTROL 또한 소스]** 관리를 사용하면 DataFlow를 활성화하거나 비활성화하고 **[!UICONTROL 해당 일정을]** 편집할 수 있습니다. |
 | **[!UICONTROL 소스 보기]** 해제 및 **[!UICONTROL 소스]** 관리 해제 | 소스에 대한 모든 액세스 권한을 취소합니다. |
 
 Admin Console을 통해 부여된 사용 가능한 권한(이러한 네 가지 소스 포함)에 대한 자세한 내용은 [액세스 제어 개요를 참조하십시오](../access-control/home.md).
