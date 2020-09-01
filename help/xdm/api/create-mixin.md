@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;mixin;Mixin;mixins;Mixins;create
 solution: Experience Platform
 title: 혼합 만들기
 topic: developer guide
+description: 혼합은 "주소" 또는 "프로필 환경 설정"과 같은 특정 개념을 설명하는 데 사용되는 필드 집합입니다. 다양한 표준 혼합을 사용할 수 있으며, 조직 고유의 정보를 캡처하고자 할 때 직접 정의할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
 workflow-type: tm+mt
-source-wordcount: '303'
+source-wordcount: '345'
 ht-degree: 0%
 
 ---
@@ -102,7 +103,7 @@ curl -X POST \
 
 **응답**
 
-성공적인 응답은 HTTP 상태 201(만들음)과 새로 만든 믹싱에 대한 세부 사항을 포함하는 페이로드를 반환합니다(예: `$id`, `meta:altId`및 `version`). 이러한 값은 읽기 전용이며, [!DNL Schema Registry]
+성공적인 응답은 HTTP 상태 201(만들음)과 새로 만든 믹싱에 대한 세부 사항을 포함하는 페이로드를 `$id`반환합니다. 여기에는, `meta:altId`및 `version`. 이러한 값은 읽기 전용이며, [!DNL Schema Registry]
 
 ```JSON
 {
