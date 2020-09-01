@@ -3,11 +3,11 @@ keywords: Experience Platform;home;popular topics;data governance;data usage lab
 solution: Experience Platform
 title: 데이터 사용 레이블 사용 안내서
 topic: labels
-description: 이 사용자 안내서에서는 Adobe Experience Platform 사용자 인터페이스 내에서 데이터 사용 레이블(DULE 레이블이라고도 함)을 사용하는 단계를 설명합니다.
+description: 이 사용자 안내서에서는 Adobe Experience Platform 사용자 인터페이스 내에서 데이터 사용 레이블을 사용하는 단계를 설명합니다.
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '1132'
+source-wordcount: '1119'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # 데이터 사용 레이블 사용 안내서
 
-이 사용자 안내서에서는 [!DNL Experience Platform] 사용자 인터페이스 내에서 데이터 사용 레이블(DULE 레이블이라고도 함)을 사용하는 단계를 설명합니다. 이 가이드를 사용하기 전에 [데이터 거버넌스 개요를](../home.md) 참조하십시오.
+이 사용자 안내서에서는 [!DNL Experience Platform] 사용자 인터페이스 내에서 데이터 사용 레이블 작업을 위한 단계를 설명합니다. 가이드를 사용하기 전에 [[!DNL Data Governance] 개요를](../home.md) 참조하여 [!DNL Data Governance] 프레임워크에 대한 보다 강력한 소개를 확인하십시오.
 
 ## 데이터 세트 수준에서 데이터 사용 레이블 관리
 
