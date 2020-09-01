@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 스트리밍 통합 문제 해결
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: c8e53a25c5b22e8d840658fe26ff47875947a6d0
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '997'
 ht-degree: 0%
@@ -58,7 +58,7 @@ Adobe Experience Platform [!DNL Data Ingestion] 는 데이터를 인제스트하
 
 전송 대상 [!DNL Platform] (성공 또는 기타)으로 전송된 모든 데이터는 데이터 세트에 지속되기 전에 일괄 파일로 저장됩니다. 배치의 처리 상태가 보낸 데이터 세트 내에 나타납니다.
 
-데이터 세트 작업을 [Experience Platform 사용자 인터페이스를 사용하여 검사하여 데이터를 성공적으로 인제스트했는지 확인할 수 있습니다](https://platform.adobe.com). 왼쪽 탐색 **[!UICONTROL 에서 데이터]** 세트를 클릭하여 데이터 집합 목록을 표시합니다. 표시된 목록에서 스트리밍하고 있는 데이터 세트를 선택하여 데이터 세트 *[!UICONTROL 활동]* 페이지를 열고 선택한 기간 동안 전송된 모든 배치를 표시합니다. 데이터 스트림 모니터링 [!DNL Experience Platform] 에 사용하는 방법에 대한 자세한 내용은 스트리밍 데이터 흐름 [모니터링에 대한 가이드를 참조하십시오](../quality/monitor-data-flows.md).
+데이터 세트 작업을 [Experience Platform 사용자 인터페이스를 사용하여 검사하여 데이터를 성공적으로 인제스트했는지 확인할 수 있습니다](https://platform.adobe.com). 왼쪽 탐색 **[!UICONTROL 에서 데이터]** 세트를 클릭하여 데이터 집합 목록을 표시합니다. 표시된 목록에서 스트리밍하고 있는 데이터 세트를 선택하여 데이터 세트 **[!UICONTROL 활동]** 페이지를 열고 선택한 기간 동안 전송된 모든 배치를 표시합니다. 데이터 스트림 모니터링 [!DNL Experience Platform] 에 사용하는 방법에 대한 자세한 내용은 스트리밍 데이터 흐름 [모니터링에 대한 가이드를 참조하십시오](../quality/monitor-data-flows.md).
 
 데이터를 인제스트하지 못하고 데이터를 복구하려는 경우 해당 ID를 로 전송하여 실패한 배치를 검색할 수 [!DNL Platform][!DNL Data Access API]있습니다. 자세한 내용은 실패한 [배치](../quality/retrieve-failed-batches.md) 검색에 대한 가이드를 참조하십시오.
 
@@ -100,4 +100,4 @@ Adobe Experience Platform [!DNL Data Ingestion] 는 데이터를 인제스트하
 
 ID 네임스페이스에는 두 가지 유형이 있습니다.기본 및 사용자 지정. 사용자 정의 네임스페이스를 사용할 때는 네임스페이스가 안에 등록되어 있는지 확인하십시오 [!DNL Identity Service]. 기본 및 사용자 정의 네임스페이스 사용에 대한 자세한 내용은 [ID 네임스페이스 개요를](../../identity-service/namespaces.md) 참조하십시오.
 
-메시지 수집에 실패한 이유에 대한 자세한 내용을 보려면 [[!DNL Experience Platform UI]를](https://platform.adobe.com) 사용할 수 있습니다. 왼쪽 탐색 **[!UICONTROL 에서 모니터링]** 을 클릭한 다음 _[!UICONTROL 전체]_ 스트리밍 탭을 확인하여 선택한 기간 동안 스트리밍된 메시지 배치를 볼 수 있습니다.
+메시지 수집에 실패한 이유에 대한 자세한 내용을 보려면 [[!DNL Experience Platform UI]를](https://platform.adobe.com) 사용할 수 있습니다. 왼쪽 탐색 **[!UICONTROL 에서 모니터링]** 을 클릭한 다음 **[!UICONTROL 전체]** 스트리밍 탭을 확인하여 선택한 기간 동안 스트리밍된 메시지 배치를 볼 수 있습니다.
