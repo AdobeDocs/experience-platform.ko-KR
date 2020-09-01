@@ -6,9 +6,9 @@ last-update: March 10, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '861'
+source-wordcount: '854'
 ht-degree: 5%
 
 ---
@@ -28,7 +28,7 @@ Adobe Experience Platform의 기존 기능 업데이트:
 
 ## [!DNL Data Governance] {#governance}
 
-[!DNL Experience Platform] 기업은 여러 엔터프라이즈 시스템의 데이터를 통합하여 마케터가 고객을 식별하고 이해하고 고객의 참여를 유도할 수 있습니다. [!DNL Experience Platform] 데이터 사용 표시 및 실행(DULE)을 비롯한 엔드 투 엔드 데이터 관리 인프라를 포함하여 시스템 내 [!DNL Platform] 와 시스템 간에 데이터를 적절하게 사용할 수 있습니다.
+[!DNL Experience Platform] 기업은 여러 엔터프라이즈 시스템의 데이터를 통합하여 마케터가 고객을 식별하고 이해하고 고객의 참여를 유도할 수 있습니다. [!DNL Experience Platform] 시스템 간에 데이터를 공유할 때 적절한 데이터 사용 [!DNL Platform] 을 보장하는 엔드 투 엔드 데이터 관리 인프라를 포함합니다.
 
 Adobe Experience Platform [!DNL Data Governance] 는 고객 데이터를 관리하고 데이터 사용에 적용되는 규정, 제한 사항 및 정책을 준수하는 데 사용되는 일련의 전략과 기술입니다. 카탈로그 작성, 데이터 계보, 데이터 사용 표시, 데이터 액세스 정책, 마케팅 작업을 위한 데이터 액세스 제어 등 다양한 [!DNL Experience Platform] 수준에서 핵심적인 역할을 합니다.
 
@@ -46,7 +46,7 @@ Adobe Experience Platform [!DNL Data Governance] 는 고객 데이터를 관리�
 
 **알려진 문제**
 
-* 없음
+* None
 
 자세한 내용 [!DNL Data Governance]은 [데이터 거버넌스 개요를 참조하십시오](../../data-governance/home.md).
 
@@ -62,7 +62,7 @@ Adobe Experience Platform은 모든 유형의 데이터와 지연 시간을 인�
 
 **알려진 문제**
 
-* 없음
+* None
 
 데이터를 플랫폼으로 인제스트하는 방법에 대한 자세한 내용은 [데이터 수집 설명서를 참조하십시오](../../ingestion/home.md).
 
@@ -96,7 +96,7 @@ Adobe Experience Platform [!DNL Identity Service] 는 다양한 디바이스와 
 
 **알려진 문제**
 
-* 없음
+* None
 
 자세한 내용 [!DNL Identity Service]은 ID 서비스 [개요를 참조하십시오](../../identity-service/home.md).
 
@@ -119,6 +119,6 @@ Adobe Experience Platform은 외부 소스에서 데이터를 인제스트할 �
 
 **알려진 문제**
 
-* 없음
+* None
 
 소스에 대한 자세한 내용은 [소스 개요를 참조하십시오](../../sources/home.md).
