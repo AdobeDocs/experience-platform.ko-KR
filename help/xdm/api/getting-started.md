@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;
 solution: Experience Platform
 title: 스키마 레지스트리 API 개발자 가이드
+description: 스키마 레지스트리는 Adobe Experience Platform 내의 스키마 라이브러리에 액세스하는 데 사용되며, 사용 가능한 모든 라이브러리 리소스에 액세스할 수 있는 사용자 인터페이스 및 RESTful API를 제공합니다. 스키마 레지스트리 API를 사용하여 기본 CRUD 작업을 수행하여 Adobe Experience Platform 내에서 사용 가능한 모든 스키마 및 관련 리소스를 보고 관리할 수 있습니다.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: f7fe8f9ac8d6f0e2eaec53d96f2ced0904061c89
+source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
 workflow-type: tm+mt
-source-wordcount: '1237'
+source-wordcount: '1295'
 ht-degree: 0%
 
 ---
