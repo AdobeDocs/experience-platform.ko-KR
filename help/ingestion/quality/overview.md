@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Data quality;quality;Quality;Supported validation;Validation;supported validation;
 solution: Experience Platform
 title: 데이터 수집 품질
 topic: overview
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: c04fb056d4564e53f192e0734a700a13820f5ba7
 workflow-type: tm+mt
 source-wordcount: '282'
 ht-degree: 6%
@@ -14,7 +14,7 @@ ht-degree: 6%
 
 # Adobe Experience Platform의 데이터 품질
 
-Adobe Experience Platform은 일괄 처리 또는 스트리밍 습제를 통해 업로드된 모든 데이터의 완벽성, 정확성 및 일관성에 대해 잘 정의된 보안을 제공합니다. 다음 문서에서는 일괄 처리 및 스트리밍 인제스트를 위한 지원되는 검사 및 유효성 검사 동작에 대한 요약을 제공합니다 [!DNL Experience Platform].
+Adobe Experience Platform은 일괄 처리 또는 스트리밍 통합(ingestion)을 통해 업로드된 모든 데이터의 완벽성, 정확성 및 일관성에 대해 잘 정의된 보안을 제공합니다. 다음 문서에서는 일괄 처리 및 스트리밍 인제스트를 위한 지원되는 검사 및 유효성 검사 동작에 대한 요약을 제공합니다 [!DNL Experience Platform].
 
 ## 지원되는 검사
 
@@ -37,7 +37,7 @@ Adobe Experience Platform은 일괄 처리 또는 스트리밍 습제를 통해 
 
 | 유효성 검사 영역 | 설명 |
 | --------------- | ----------- |
-| 스키마 | 스키마가 비어 있지 **않고** 다음과 같이 조합 스키마에 대한 참조를 포함하는지 확인합니다. `"meta:immutableTags": ["union"]` |
+| 스키마 | 스키마가 비어 있지 **않고** 다음과 같이 결합 스키마에 대한 참조를 포함하는지 확인합니다. `"meta:immutableTags": ["union"]` |
 | `identityField` | 모든 유효한 ID 설명자가 정의되어 있는지 확인합니다. |
 | `createdUser` | 배치를 인제스트한 사용자가 배치를 인제스트할 수 있는지 확인합니다. |
 
@@ -47,7 +47,7 @@ Adobe Experience Platform은 일괄 처리 또는 스트리밍 습제를 통해 
 
 | 유효성 검사 영역 | 설명 |
 | --------------- | ----------- |
-| 스키마 | 스키마가 비어 있지 **않고** 다음과 같이 조합 스키마에 대한 참조를 포함하는지 확인합니다. `"meta:immutableTags": ["union"]` |
+| 스키마 | 스키마가 비어 있지 **않고** 다음과 같이 결합 스키마에 대한 참조를 포함하는지 확인합니다. `"meta:immutableTags": ["union"]` |
 | `identityField` | 모든 유효한 ID 설명자가 정의되어 있는지 확인합니다. |
 | JSON | JSON이 유효한지 확인합니다. |
 | IMS 조직 | 나열된 IMS 조직이 유효한 조직인지 확인합니다. |
