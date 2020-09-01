@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;update;Update;patch;PATCH
 solution: Experience Platform
 title: 리소스 업데이트
+description: 'PATCH 요청을 사용하여 테넌트 컨테이너의 리소스를 수정하거나 업데이트할 수 있습니다. 스키마 레지스트리는 추가, 제거 및 대체를 비롯한 모든 표준 JSON 패치 작업을 지원합니다. '
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
 workflow-type: tm+mt
-source-wordcount: '373'
-ht-degree: 2%
+source-wordcount: '401'
+ht-degree: 1%
 
 ---
 
