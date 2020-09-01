@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;data ingestion;ingested data;streaming
+keywords: Experience Platform;home;popular topics;data ingestion;ingested data;streaming;overview;streaming ingestion;latency;streaming latency;
 solution: Experience Platform
 title: Adobe Experience Platform 스트리밍 통합 개요
 topic: overview
 description: Adobe Experience Platform에 대한 스트리밍 수집은 사용자에게 클라이언트 및 서버측 디바이스에서 실시간으로 Experience Platform으로 데이터를 전송하는 방법을 제공합니다.
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: c04fb056d4564e53f192e0734a700a13820f5ba7
 workflow-type: tm+mt
 source-wordcount: '272'
 ht-degree: 3%
