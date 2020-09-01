@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Azure HDInsights;Apache Spark
 solution: Experience Platform
 title: UI에서 Azure HDInsights 소스 커넥터에서 Apache Spark 만들기
 topic: overview
+description: 이 자습서에서는 플랫폼 사용자 인터페이스를 사용하여 Azure HDInsights 소스 커넥터에서 Apache Spark를 만드는 단계를 제공합니다.
 translation-type: tm+mt
-source-git-commit: ec2d0a33e0ae92a3153b7bdcad29734e487a0439
+source-git-commit: f82dfee2c75a0b8b2ec1615266780b309152ead4
 workflow-type: tm+mt
-source-wordcount: '469'
+source-wordcount: '488'
 ht-degree: 1%
 
 ---
