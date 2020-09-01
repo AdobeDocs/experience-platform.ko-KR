@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;cloud storage connector;cloud storage
 solution: Experience Platform
 title: UI에서 클라우드 스토리지 스트리밍 커넥터에 대한 데이터 흐름 구성
 topic: overview
+description: 데이터 흐름(Dataflow)은 소스에서 플랫폼 데이터 집합으로 데이터를 검색하고 인제스트하는 예약된 작업입니다. 이 자습서에서는 클라우드 스토리지 기반 커넥터를 사용하여 새 데이터 흐름을 구성하는 절차를 제공합니다.
 translation-type: tm+mt
-source-git-commit: e628621903dbc0ec7381dfeae99902f503b34869
+source-git-commit: c1b493de7374cbd1c916d90f9382574f831e11e3
 workflow-type: tm+mt
-source-wordcount: '667'
+source-wordcount: '700'
 ht-degree: 0%
 
 ---
