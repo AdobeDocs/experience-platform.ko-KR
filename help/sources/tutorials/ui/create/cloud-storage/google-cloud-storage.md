@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Google Cloud Storage;google cloud storage;GCS;gcs
 solution: Experience Platform
-title: UI에서 Google 클라우드 스토리지 소스 커넥터 만들기
+title: Google 클라우드 스토리지 소스 커넥터(UI)
 topic: overview
+description: 이 자습서에서는 플랫폼 사용자 인터페이스를 사용하여 Google 클라우드 스토리지(이하 "GCS") 소스 커넥터를 만드는 단계를 제공합니다.
 translation-type: tm+mt
-source-git-commit: ec2d0a33e0ae92a3153b7bdcad29734e487a0439
+source-git-commit: 0da686743e8bc57d310f7eff6f1bf812a8f31238
 workflow-type: tm+mt
-source-wordcount: '537'
+source-wordcount: '555'
 ht-degree: 1%
 
 ---
