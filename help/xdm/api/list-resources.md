@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;list;List;get;GET
 solution: Experience Platform
 title: 리소스 목록
+description: 단일 GET 요청을 수행하여 컨테이너 내에 특정 유형(클래스, 믹싱, 스키마, 데이터 유형 또는 설명자)의 모든 스키마 레지스트리 리소스 목록을 볼 수 있습니다.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: cb5df9b44486bda84f08805f1077d6097e3666e2
+source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
 workflow-type: tm+mt
-source-wordcount: '508'
+source-wordcount: '538'
 ht-degree: 2%
 
 ---
@@ -107,7 +108,7 @@ curl -X GET \
 | `<=` | 속성이 제공된 값보다 작거나 같은지 여부를 기준으로 필터링합니다. | `property=version<=5` |
 | `>=` | 속성이 제공된 값보다 크거나 같은지 여부를 필터링합니다. | `property=version>=5` |
 | `~` | 속성이 제공된 정규 표현식과 일치하는지 여부를 기준으로 필터링합니다. | `property=title~test$` |
-| (없음) | 속성 이름만 지정하면 속성이 있는 항목만 반환됩니다. | `property=title` |
+| (None) | 속성 이름만 지정하면 속성이 있는 항목만 반환됩니다. | `property=title` |
 
 >[!TIP]
 >
