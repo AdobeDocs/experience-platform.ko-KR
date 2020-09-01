@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;Query service;scheduled queries;scheduled query;
 solution: Experience Platform
 title: 쿼리 서비스 개발자 가이드
 topic: scheduled queries
 translation-type: tm+mt
-source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
 workflow-type: tm+mt
 source-wordcount: '943'
 ht-degree: 3%
@@ -308,7 +308,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/schedules/e95186d65a
 
 종단점에 PATCH 요청을 하고 요청 경로에 해당 ID를 제공하여 지정된 예약된 쿼리의 세부 사항을 업데이트할 수 `/schedules` 있습니다.
 
-PATCH 요청은 두 개의 다른 경로를 지원합니다. `/state` 및 `/schedule/schedule`.
+PATCH 요청은 두 가지 다른 경로를 지원합니다. `/state` 및 `/schedule/schedule`.
 
 ### 예약된 쿼리 상태 업데이트
 
