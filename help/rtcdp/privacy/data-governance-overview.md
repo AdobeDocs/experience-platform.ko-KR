@@ -5,9 +5,9 @@ seo-title: 실시간 고객 데이터 플랫폼의 데이터 거버넌스
 description: '데이터 거버넌스를 사용하면 고객 데이터를 관리하고 데이터 사용에 적용되는 규정, 제한 사항 및 정책을 준수할 수 있습니다. '
 seo-description: '데이터 거버넌스를 사용하면 고객 데이터를 관리하고 데이터 사용에 적용되는 규정, 제한 사항 및 정책을 준수할 수 있습니다. '
 translation-type: tm+mt
-source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '1022'
+source-wordcount: '1021'
 ht-degree: 0%
 
 ---
@@ -58,7 +58,7 @@ Adobe Experience Platform은 일반적인 고객 경험 사용 사례를 위한 
 
 ![](assets/enforcement-flow.png)
 
-세그먼트가 처음 활성화되면 DULE은 [!DNL Policy Service] 다음 요소를 기준으로 정책 위반을 확인합니다.
+세그먼트가 처음 활성화되면 다음 요소를 기준으로 정책 위반을 [!DNL Policy Service] 확인합니다.
 
 * 활성화할 세그먼트 내의 필드 및 데이터 세트에 적용되는 데이터 사용 레이블입니다.
 * 대상의 마케팅 목적입니다.
