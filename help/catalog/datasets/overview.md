@@ -5,9 +5,9 @@ title: 데이터 집합 개요
 topic: datasets
 description: 이 문서는 Experience Platform의 데이터 세트에 대한 개요 정보를 제공합니다.
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '731'
+source-wordcount: '722'
 ht-degree: 2%
 
 ---
@@ -41,7 +41,7 @@ Adobe Experience Platform 데이터 수집은 다양한 소스의 데이터를 [
 
 ## 데이터 세트에 사용 레이블 적용
 
-Adobe Experience Platform [!DNL Data Governance] 를 사용하면 데이터 사용에 적용되는 규정, 제한 사항 및 정책을 준수하기 위해 고객 데이터를 관리할 수 있습니다. 데이터 사용 레이블 지정 및 실행(DULE)을 핵심 프레임워크로 사용하면 사용 레이블을 적용하여 해당 데이터에 적용되는 사용 정책에 따라 데이터를 분류할 수 [!DNL Data Governance] 있습니다.
+Adobe Experience Platform [!DNL Data Governance] 를 사용하면 데이터 사용에 적용되는 규정, 제한 사항 및 정책을 준수하기 위해 고객 데이터를 관리할 수 있습니다. 이 [!DNL Data Governance] 프레임워크를 사용하면 사용 레이블을 적용하여 해당 데이터에 적용되는 사용 정책에 따라 데이터를 분류할 수 있습니다.
 
 데이터 사용 레이블은 전체 데이터 세트 또는 개별 데이터 세트 필드에 적용할 수 있습니다. 데이터 집합 수준에서 추가된 레이블은 해당 데이터 집합 내의 모든 필드에 의해 상속됩니다.
 
