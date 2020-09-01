@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;find sandbox;look up a sandbox
 solution: Experience Platform
 title: 샌드박스 검색
 topic: developer guide
+description: 요청 경로에서 샌드박스의 이름 속성을 포함하는 GET 요청을 수행하여 개별 샌드박스를 찾을 수 있습니다.
 translation-type: tm+mt
-source-git-commit: ef423a8c1b412315d03cddf7d8c351a232eb509b
+source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
 workflow-type: tm+mt
-source-wordcount: '204'
+source-wordcount: '226'
 ht-degree: 2%
 
 ---
@@ -63,7 +64,7 @@ curl -X GET \
 | --- | --- |
 | `name` | 샌드박스의 이름입니다. API 호출에서 조회 목적으로 사용됩니다. |
 | `title` | 샌드박스의 표시 이름입니다. |
-| `state` | 샌드박스의 현재 처리 상태입니다. 샌드박스의 상태는 다음 중 하나일 수 있습니다. <ul><li>**만들기**: 샌드박스는 생성되었지만 시스템에서 여전히 공급되고 있습니다.</li><li>**활성**: 샌드박스는 만들어지고 활성화됩니다.</li><li>**실패**: 오류로 인해 시스템에서 샌드박스를 프로비저닝할 수 없으며 비활성화되었습니다.</li><li>**삭제됨**: 샌드박스가 수동으로 비활성화되었습니다.</li></ul> |
+| `state` | 샌드박스의 현재 처리 상태입니다. 샌드박스의 상태는 다음 중 하나일 수 있습니다. <ul><li>**만들기**:샌드박스는 생성되었지만 시스템에서 여전히 공급되고 있습니다.</li><li>**활성**:샌드박스는 만들어지고 활성화됩니다.</li><li>**실패**:오류로 인해 시스템에서 샌드박스를 프로비저닝할 수 없으며 비활성화되었습니다.</li><li>**삭제됨**:샌드박스가 수동으로 비활성화되었습니다.</li></ul> |
 | `type` | 샌드박스 유형, &quot;개발&quot; 또는 &quot;프로덕션&quot;입니다. |
 | `isDefault` | 이 샌드박스가 조직의 기본 샌드박스인지 여부를 나타내는 부울 속성입니다. 일반적으로 프로덕션 샌드박스입니다. |
 | `eTag` | 샌드박스의 특정 버전에 대한 식별자입니다. 버전 제어 및 캐싱 효율성에 사용되, 샌드박스를 변경할 때마다 이 값이 업데이트됩니다. |
