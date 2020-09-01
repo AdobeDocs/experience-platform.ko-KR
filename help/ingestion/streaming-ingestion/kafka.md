@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;kafka;kafka connector;Kafka;
 solution: Experience Platform
 title: Kafka 커넥터
 topic: overview
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: c04fb056d4564e53f192e0734a700a13820f5ba7
 workflow-type: tm+mt
 source-wordcount: '146'
 ht-degree: 0%
@@ -12,7 +12,7 @@ ht-degree: 0%
 ---
 
 
-# [!DNL Kafka] Adobe Experience Platform용 커넥터
+# [!DNL Kafka] adobe experience platform
 
 Adobe Experience Platform의 스트림 커넥터는 기반 [!DNL Apache Kafka Connect]입니다. 이 라이브러리를 사용하여 데이터 센터의 [!DNL Kafka] 주제 [!DNL Experience Platform] 에서 실시간으로 JSON 이벤트를 스트리밍할 수 있습니다.
 
