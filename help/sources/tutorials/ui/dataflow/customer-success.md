@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;configure dataflow;customer success connector
 solution: Experience Platform
 title: UI에서 고객 성공 커넥터에 대한 데이터 흐름 구성
 topic: overview
+description: 데이터 흐름(Dataflow)은 소스에서 데이터 세트로 데이터를 검색하고 인제스트하는 예약된 [!DNL Platform] 작업입니다. 이 자습서에서는 고객 성공 계정을 사용하여 새 데이터 흐름을 구성하는 절차를 제공합니다.
 translation-type: tm+mt
-source-git-commit: 6bd5dc5a68fb2814ab99d43b34f90aa7e50aa463
+source-git-commit: 14044f9af50cd4c922294cd60f7b6549828e8aca
 workflow-type: tm+mt
-source-wordcount: '1290'
+source-wordcount: '1321'
 ht-degree: 0%
 
 ---
@@ -25,7 +26,7 @@ ht-degree: 0%
    - [스키마 편집기 자습서](../../../../xdm/tutorials/create-schema-ui.md):스키마 편집기 UI를 사용하여 사용자 정의 스키마를 생성하는 방법을 알아봅니다.
 - [[!DNL 실시간 고객 프로필]](../../../../profile/home.md):여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
 
-또한 이 자습서에서는 고객 성공 계정을 이미 만들어야 합니다. UI에서 다른 고객 성공 커넥터를 만들기 위한 자습서 목록은 [소스 커넥터 개요에 있습니다](../../../home.md).
+또한 이 자습서에서는 고객 성공 계정을 만들어야 합니다. UI에서 다른 고객 성공 커넥터를 만들기 위한 자습서 목록은 [소스 커넥터 개요에 있습니다](../../../home.md).
 
 ## 데이터 선택
 
@@ -106,7 +107,7 @@ ht-degree: 0%
 
 ## 데이터 흐름 세부 정보 제공
 
-데이터 **[!UICONTROL 흐름 세부]** 정보 단계가 나타나므로 새 데이터 흐름 이름에 대한 간단한 설명을 제공할 수 있습니다.
+데이터 **[!UICONTROL 흐름 세부]** 정보 단계가 나타나므로 새 데이터 흐름 이름에 대해 간단한 설명을 제공할 수 있습니다.
 
 이 프로세스 동안 부분 섭취 및 **[!UICONTROL 오류 진단을]** 활성화할 수도 **[!UICONTROL 있습니다]**. 부분 **[!UICONTROL 섭취]** 활성화는 특정 임계값까지 오류가 포함된 데이터를 인제스트하는 기능을 제공합니다. 부분 **[!UICONTROL 섭취]** 가 활성화되면 **[!UICONTROL 오류 임계값 %]** 전화를 드래그하여 일괄 처리 오류 임계값을 조정합니다. 또는 입력 상자를 선택하여 임계값을 수동으로 조정할 수 있습니다. 자세한 내용은 [부분 일괄 처리 통합 개요를 참조하십시오](../../../../ingestion/batch-ingestion/partial.md).
 
