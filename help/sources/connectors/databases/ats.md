@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Azure Table Storage;azure table storage;ATS;ats
 solution: Experience Platform
 title: Azure 테이블 저장소 커넥터
 topic: overview
+description: 아래 설명서에서는 API 또는 사용자 인터페이스를 사용하여 Azure 테이블 저장소를 플랫폼에 연결하는 방법에 대한 정보를 제공합니다.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
 workflow-type: tm+mt
-source-wordcount: '219'
+source-wordcount: '239'
 ht-degree: 0%
 
 ---
