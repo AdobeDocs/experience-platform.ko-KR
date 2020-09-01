@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;API error codes;API error code;error code API;error codes API;API request error;API troubleshooting;API error
 solution: Experience Platform
 title: Adobe Experience Platform FAQ 및 문제 해결 안내서
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: 3798e687da07dee7336121c203948158523de5bd
 workflow-type: tm+mt
-source-wordcount: '1951'
+source-wordcount: '1965'
 ht-degree: 3%
 
 ---
@@ -248,5 +248,7 @@ UI 또는 API 사용 여부에 따라 다음 시스템 요구 사항이 적용�
 | Adobe Experience Platform 세분화 | [[!DNL 세그멘테이션 API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml) |
 | [!DNL Catalog Service] | [[!DNL 카탈로그 서비스 API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) |  |
 | [!DNL Experience Data Model] (XDM) | [[!DNL 스키마 레지스트리 API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) | [[!DNL XDM System] FAQ 및 문제 해결 가이드](../xdm/troubleshooting-guide.md) |
+| [!DNL Flow Service] ([!DNL Sources] 및 [!DNL Destinations]) | [[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) |  |
 | [!DNL Real-time Customer Profile] | [[!DNL 실시간 고객 프로필 API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml) | [[!DNL Profile] 문제 해결 안내서](../profile/troubleshooting.md) |
 | 샌드박스 | [샌드박스 API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) | [샌드박스 문제 해결 가이드](../sandboxes/troubleshooting-guide.md) |
+
