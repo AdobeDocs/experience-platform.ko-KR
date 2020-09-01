@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 실시간 고객 데이터 플랫폼의 IAB TCF 2.0 지원
 topic: privacy events
 translation-type: tm+mt
-source-git-commit: e7cbbd2e376ab109367d1d16cb9e033202866a6f
+source-git-commit: f8d13b305a61f8606c4fa1ceee6d4518b5d83fda
 workflow-type: tm+mt
 source-wordcount: '1352'
 ht-degree: 0%
@@ -71,7 +71,7 @@ TCF 2.0 지원에 필요한 고객 동의 필드를 제공하는 두 개의 XDM 
 
 ## 고객 동의 스키마 만들기 {#create-schemas}
 
-플랫폼 UI에서 왼쪽 탐색 **[!UICONTROL 에서]** 스키마를 클릭하여 스키마 작업 *[!UICONTROL 공간을]엽니다&#x200B;*. 여기에서 아래 섹션에 있는 단계에 따라 필요한 각 스키마를 만듭니다.
+플랫폼 UI에서 왼쪽 탐색 **[!UICONTROL 에서]** 스키마를 클릭하여 스키마 작업 *[!UICONTROL 공간을]엽니다*. 여기에서 아래 섹션에 있는 단계에 따라 필요한 각 스키마를 만듭니다.
 
 >[!NOTE]
 >
@@ -79,11 +79,11 @@ TCF 2.0 지원에 필요한 고객 동의 필드를 제공하는 두 개의 XDM 
 
 ### 레코드 기반 동의 스키마 만들기 {#profile-schema}
 
-스키마 작업 영역의 **[!UICONTROL 찾아보기]** 탭 ****[!DNL XDM Individual Profile]에서&#x200B;**클래스를 기반으로 새 스키마를 생성합니다. 스키마 편집기 내에서 스키마를 연 후에는 캔버스 왼쪽의&#x200B;**[!UICONTROL 믹싱]**섹션 아래에 있는&#x200B;*[!UICONTROL 추가]*를 클릭합니다.
+스키마 작업 영역의 **[!UICONTROL 찾아보기]** 탭 ******[!DNL XDM Individual Profile]에서**&#x200B;클래스를 기반으로 새 스키마를 생성합니다. 스키마 편집기 내에서 스키마를 연 후에는 캔버스 왼쪽의 **[!UICONTROL 믹싱]** 섹션 아래에 있는 **[!UICONTROL 추가]** 를 클릭합니다.
 
 ![](../assets/iab/add-mixin-profile.png)
 
-[ *[!UICONTROL 혼합 추가]* ] 대화 상자가 나타납니다. 여기에서 목록에서 **[!UICONTROL 프로필 개인]** 정보를 선택합니다. 검색 막대를 사용하여 검색 결과의 범위를 좁혀 혼합을 더 쉽게 찾을 수 있습니다. 혼합을 선택하고 나면 [믹신 **[!UICONTROL 추가]를 클릭합니다]**.
+[ **[!UICONTROL 혼합 추가]** ] 대화 상자가 나타납니다. 여기에서 목록에서 **[!UICONTROL 프로필 개인]** 정보를 선택합니다. 검색 막대를 사용하여 검색 결과의 범위를 좁혀 혼합을 더 쉽게 찾을 수 있습니다. 혼합을 선택하고 나면 [믹신 **[!UICONTROL 추가]를 클릭합니다]**.
 
 ![](../assets/iab/add-profile-privacy.png)
 
@@ -104,7 +104,7 @@ TCF 2.0 지원에 필요한 고객 동의 필드를 제공하는 두 개의 XDM 
 
 #### 스키마를 [!DNL Real-time Customer Profile]
 
-수신한 동의 데이터를 특정 고객 프로필 [!DNL Real-time CDP] 에 연결하려면 동의 스키마를 사용할 수 있어야 합니다 [!DNL Real-time Customer Profile].
+수신한 동의 데이터 [!DNL Real-time CDP] 를 특정 고객 프로파일에 연결하려면 동의 스키마를 사용할 수 있어야 합니다 [!DNL Real-time Customer Profile].
 
 >[!NOTE]
 >
@@ -112,7 +112,7 @@ TCF 2.0 지원에 필요한 고객 동의 필드를 제공하는 두 개의 XDM 
 >
 >스키마에 대한 기본 ID 필드를 설정하는 방법은 [스키마 생성 자습서에서 확인할 수 있습니다](../../../xdm/tutorials/create-schema-ui.md#identity-field).
 
-스키마를 활성화하려면 왼쪽 레일에 있는 스키마 이름 [!DNL Profile]을 클릭하여 오른쪽 레일에서 *[!UICONTROL 스키마 속성]* 대화 상자를 엽니다. 여기서 [프로필 **[!UICONTROL 전환]]** 단추를 클릭합니다.
+스키마를 활성화하려면 왼쪽 레일에 있는 스키마 이름 [!DNL Profile]을 클릭하여 오른쪽 레일에서 **[!UICONTROL 스키마 속성]** 대화 상자를 엽니다. 여기서 **[!UICONTROL 프로필]** 전환 단추를 클릭합니다.
 
 ![](../assets/iab/profile-enable-profile.png)
 
@@ -126,11 +126,11 @@ TCF 2.0 지원에 필요한 고객 동의 필드를 제공하는 두 개의 XDM 
 
 ### 시간 시리즈 기반 동의 스키마 만들기 {#event-schema}
 
-스키마 작업 영역의 **[!UICONTROL 찾아보기]** 탭 ****[!DNL XDM ExperienceEvent]에서&#x200B;**클래스를 기반으로 새 스키마를 생성합니다. 스키마 편집기 내에서 스키마를 연 후에는 캔버스 왼쪽의&#x200B;**[!UICONTROL 믹싱]**섹션 아래에 있는&#x200B;*[!UICONTROL 추가]*를 클릭합니다.
+스키마 작업 영역의 **[!UICONTROL 찾아보기]** 탭 ******[!DNL XDM ExperienceEvent]에서**&#x200B;클래스를 기반으로 새 스키마를 생성합니다. 스키마 편집기 내에서 스키마를 연 후에는 캔버스 왼쪽의 **[!UICONTROL 믹싱]** 섹션 아래에 있는 **[!UICONTROL 추가]** 를 클릭합니다.
 
 ![](../assets/iab/add-mixin-event.png)
 
-[ *[!UICONTROL 혼합 추가]* ] 대화 상자가 나타납니다. 여기에서 목록에서 **[!UICONTROL 경험 이벤트 개인 정보]** 조합을 선택합니다. 검색 막대를 사용하여 검색 결과의 범위를 좁혀 혼합을 더 쉽게 찾을 수 있습니다. 혼합을 선택하고 나면 [믹신 **[!UICONTROL 추가]를 클릭합니다]**.
+[ **[!UICONTROL 혼합 추가]** ] 대화 상자가 나타납니다. 여기에서 목록에서 **[!UICONTROL 경험 이벤트 개인 정보]** 조합을 선택합니다. 검색 막대를 사용하여 검색 결과의 범위를 좁혀 혼합을 더 쉽게 찾을 수 있습니다. 혼합을 선택하고 나면 [믹신 **[!UICONTROL 추가]를 클릭합니다]**.
 
 ![](../assets/iab/add-event-privacy.png)
 
@@ -161,11 +161,11 @@ TCF 2.0 지원에 필요한 고객 동의 필드를 제공하는 두 개의 XDM 
 
 ![](../assets/iab/dataset-create-from-schema.png)
 
-스키마 _[!UICONTROL 선택 단계부터 시작되는 스키마에서]_데이터 세트_[!UICONTROL &#x200B;만들기 워크플로우가]_ 나타납니다. 제공된 목록에서 이전에 만든 동의 스키마 중 하나를 찾습니다. 선택적으로 검색을 사용하여 검색 결과를 좁히고 스키마를 더 쉽게 찾을 수 있습니다. 스키마 옆에 있는 라디오 단추를 클릭하여 선택한 다음 **[!UICONTROL 다음을]** 클릭하여 계속합니다.
+스키마 **[!UICONTROL 선택 단계부터 시작되는 스키마에서]** 데이터 세트 **[!UICONTROL 만들기 워크플로우가]** 나타납니다. 제공된 목록에서 이전에 만든 동의 스키마 중 하나를 찾습니다. 선택적으로 검색을 사용하여 검색 결과를 좁히고 스키마를 더 쉽게 찾을 수 있습니다. 스키마 옆에 있는 라디오 단추를 클릭하여 선택한 다음 **[!UICONTROL 다음을]** 클릭하여 계속합니다.
 
 ![](../assets/iab/dataset-select-schema.png)
 
-데이터 세트 _[!UICONTROL 구성]_단계가 나타납니다. 마침을 클릭하기 전에 데이터 세트에 대한 고유하고 쉽게 식별할 수 있는 이름 및 설명을**[!UICONTROL &#x200B;제공합니다&#x200B;]**.
+데이터 세트 **[!UICONTROL 구성]** 단계가 나타납니다. 마침을 클릭하기 전에 데이터 세트에 대한 고유하고 쉽게 식별할 수 있는 이름 및 설명을 **[!UICONTROL 제공합니다]**.
 
 ![](../assets/iab/dataset-configure.png)
 
