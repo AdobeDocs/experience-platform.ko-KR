@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;Query service;data deduplication;deduplication;
 solution: Experience Platform
 title: 데이터 중복 제거
 topic: queries
 translation-type: tm+mt
-source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
 workflow-type: tm+mt
 source-wordcount: '405'
 ht-degree: 1%
@@ -31,7 +31,7 @@ ExperienceEvents가 중복되는 경우 전체 행을 무시할 수 있습니다
 
 >[!CAUTION]
 >
->Adobe Analytics 데이터 커넥터에서 생성된 데이터 세트를 [!DNL Experience Platform]포함하여 많은 DataSets가 이미 ExperienceEvent 수준 중복 제거가 적용되었습니다. 따라서 이러한 수준의 데이터 중복 제거 기능을 다시 적용하는 것은 불필요한 작업이므로 질의 속도가 느려질 수 있습니다. DataSets의 소스를 파악하고 ExperienceEvent 수준의 데이터 중복 제거가 이미 적용되었는지 파악하는 것이 중요합니다. 스트리밍되는 모든 DataSets(예: Adobe Target의 데이터 세트)의 경우 해당 데이터 소스는 &#39;최소 한 번&#39; 의미 체계를 가지므로 ExperienceEvent 수준 데이터 중복 제거를 적용해야 합니다.
+>Adobe Analytics 데이터 커넥터에서 생성된 데이터 세트를 [!DNL Experience Platform]포함하여 많은 DataSets가 이미 ExperienceEvent 수준 중복 제거가 적용되었습니다. 따라서 이러한 수준의 데이터 중복 제거 기능을 다시 적용하는 것은 불필요한 작업이므로 질의 속도가 느려질 수 있습니다. DataSets의 소스를 파악하고 ExperienceEvent 수준의 데이터 중복 제거가 이미 적용되었는지 파악하는 것이 중요합니다. 스트리밍되는 모든 DataSets(예: Adobe Target의 데이터 세트)의 경우, 해당 데이터 소스는 &#39;최소 한 번&#39; 의미 체계를 가지므로 ExperienceEvent 수준의 데이터 중복 제거를 적용해야 합니다.
 
 **범위:** 글로벌
 
