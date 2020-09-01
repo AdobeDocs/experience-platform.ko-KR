@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;protocol connector
 solution: Experience Platform
 title: UI에서 프로토콜 커넥터에 대한 데이터 흐름 구성
 topic: overview
+description: 데이터 흐름(Dataflow)은 소스에서 Adobe Experience Platform 데이터 집합으로 데이터를 검색하고 인제스트하는 예약된 작업입니다. 이 자습서에서는 프로토콜 계정을 사용하여 새 데이터 흐름을 구성하는 절차를 제공합니다.
 translation-type: tm+mt
-source-git-commit: 6bd5dc5a68fb2814ab99d43b34f90aa7e50aa463
+source-git-commit: 14044f9af50cd4c922294cd60f7b6549828e8aca
 workflow-type: tm+mt
-source-wordcount: '1265'
+source-wordcount: '1298'
 ht-degree: 0%
 
 ---
