@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Azure Table Storage;azure table storage;ats;ATS
 solution: Experience Platform
 title: UI에서 Azure 테이블 저장소 원본 커넥터 만들기
 topic: overview
+description: 이 자습서에서는 플랫폼 사용자 인터페이스를 사용하여 Azure 테이블 저장소(이하 "ATS"라 한다) 소스 커넥터를 만드는 단계를 제공합니다.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: f82dfee2c75a0b8b2ec1615266780b309152ead4
 workflow-type: tm+mt
-source-wordcount: '472'
+source-wordcount: '494'
 ht-degree: 1%
 
 ---
