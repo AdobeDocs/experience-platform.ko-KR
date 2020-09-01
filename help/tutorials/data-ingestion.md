@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: 데이터 통합 자습서
 topic: tutorial
+description: 데이터 수집에는 일괄 처리, 스트리밍 통합 및 소스 커넥터를 사용한 습득 등이 포함됩니다.
 translation-type: tm+mt
-source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
+source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
 workflow-type: tm+mt
-source-wordcount: '480'
+source-wordcount: '492'
 ht-degree: 0%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 0%
 
 # 데이터 인제스트 [!DNL Experience Platform]
 
-Adobe Experience Platform은 마케터가 고객의 행동을 더 잘 이해할 수 있도록 여러 소스에서 가져온 데이터를 취합합니다. Adobe [!DNL Experience Platform Data Ingestion] 는 이러한 소스의 데이터를 [!DNL Platform] 인제스트하는 여러 방법과 다운스트림으로 사용하기 위해 데이터 레이크 내에 데이터가 유지되는 방법을 나타냅니다 [!DNL Platform services]. [!DNL Data Ingestion] 소스 커넥터를 사용한 일괄 처리, 스트리밍 통합 및 섭취 등이 포함되어 있습니다. 자세한 내용은 [데이터 수집 개요를](../ingestion/home.md) 참조하거나 [소스 문서로 직접 진행하십시오](../sources/home.md).
+Adobe Experience Platform은 마케터가 고객의 행동을 더 잘 이해할 수 있도록 여러 소스에서 수집한 데이터를 취합합니다. Adobe [!DNL Experience Platform Data Ingestion] 는 이러한 소스의 데이터를 [!DNL Platform] 인제스트하는 여러 방법과 다운스트림으로 사용하기 위해 데이터 레이크 내에 데이터가 유지되는 방법을 나타냅니다 [!DNL Platform services]. [!DNL Data Ingestion] 소스 커넥터를 사용한 일괄 처리, 스트리밍 통합 및 섭취 등이 포함되어 있습니다. 자세한 내용은 [데이터 수집 개요를](../ingestion/home.md) 참조하거나 [소스 문서로 직접 진행하십시오](../sources/home.md).
 
 ## UI 및 API에서 소스 커넥터 만들기
 
@@ -22,7 +23,7 @@ Adobe Experience Platform은 마케터가 고객의 행동을 더 잘 이해할 
 
 ## 일괄 처리 데이터 인제스트
 
-Adobe Experience Platform을 사용하면 데이터를 일괄 처리 파일 [!DNL Platform] 로 손쉽게 가져올 수 있습니다. 인제스트할 데이터의 예로는 CRM 시스템의 플랫 파일의 프로필 데이터(예: 쪽모이 세공 파일)나 스키마 레지스트리에서 알려진 [!DNL Experience Data Model] (XDM) 스키마를 준수하는 데이터가 포함될 수 있습니다. 시작하려면 Platform에 데이터 [수집 자습서를 참조하십시오](../ingestion/tutorials/ingest-batch-data.md).
+Adobe Experience Platform을 사용하면 데이터를 일괄 처리 파일 [!DNL Platform] 로 손쉽게 가져올 수 있습니다. 인제스트할 데이터의 예로는 CRM 시스템의 플랫 파일의 프로필 데이터(예: 쪽모이 세공 파일)나 스키마 레지스트리에서 알려진 [!DNL Experience Data Model] (XDM) 스키마를 준수하는 데이터가 포함될 수 있습니다. 시작하려면 Platform(플랫폼)에 [데이터 수집 자습서를 참조하십시오](../ingestion/tutorials/ingest-batch-data.md).
 
 ## XDM 스키마에 CSV 파일 매핑
 
@@ -38,11 +39,11 @@ CSV 데이터를 Adobe Experience Platform으로 인제스트하려면 데이터
 
 ## 스트림 레코드 및 시간 시리즈 데이터
 
-데이터 세트 및 스트리밍 연결을 적절히 사용하여 레코드 또는 시간 시리즈 데이터를 스트리밍할 수 있습니다 [!DNL Platform]. 레코드 데이터 스트리밍을 시작하려면 Platform 자습서에 [스트림 레코드 데이터를 따릅니다](../ingestion/tutorials/streaming-record-data.md). 스트리밍 시간 시리즈 데이터를 시작하려면 [스트림 시간 시리즈 데이터를 Platform에 따르십시오](../ingestion/tutorials/streaming-time-series-data.md).
+데이터 세트 및 스트리밍 연결을 적절히 사용하여 레코드 또는 시간 시리즈 데이터를 스트리밍할 수 있습니다 [!DNL Platform]. 레코드 데이터 스트리밍을 시작하려면 플랫폼 자습서에 [스트림 레코드 데이터를 따릅니다](../ingestion/tutorials/streaming-record-data.md). 스트리밍 시간 시리즈 데이터를 시작하려면 [스트림 시간 시리즈 데이터를 Platform에 따르십시오](../ingestion/tutorials/streaming-time-series-data.md).
 
 ## 하나의 HTTP 요청으로 여러 메시지 스트리밍
 
-데이터를 Adobe Experience Platform으로 스트리밍할 때 많은 HTTP 호출을 하는 것은 비용이 많이 들 수 있습니다. 예를 들어 1KB 페이로드로 200개의 HTTP 요청을 만드는 대신 200KB의 단일 페이로드를 사용하여 각각 1KB의 200개의 메시지를 포함하는 1개의 HTTP 요청을 만드는 것이 훨씬 효율적입니다. 올바르게 사용할 경우 단일 요청 내에서 여러 메시지를 그룹화하는 것은 전송되는 데이터를 최적화하는 좋은 방법입니다 [!DNL Experience Platform]. 스트리밍 통합 기능을 사용하여 단일 HTTP 요청 [!DNL Experience Platform] 내에서 여러 메시지를 보내는 방법을 알아보려면 [여러 메시지 전송 튜토리얼을 따르십시오](../ingestion/tutorials/streaming-multiple-messages.md).
+데이터를 Adobe Experience Platform으로 스트리밍할 때 많은 HTTP 호출을 하는 것은 비용이 들 수 있습니다. 예를 들어 1KB 페이로드로 200개의 HTTP 요청을 만드는 대신 200KB의 단일 페이로드를 사용하여 각각 1KB의 200개의 메시지를 포함하는 1개의 HTTP 요청을 만드는 것이 훨씬 효율적입니다. 올바르게 사용할 경우 단일 요청 내에서 여러 메시지를 그룹화하는 것은 전송되는 데이터를 최적화하는 좋은 방법입니다 [!DNL Experience Platform]. 스트리밍 통합 기능을 사용하여 단일 HTTP 요청 [!DNL Experience Platform] 내에서 여러 메시지를 보내는 방법을 알아보려면 [여러 메시지 전송 튜토리얼을 따르십시오](../ingestion/tutorials/streaming-multiple-messages.md).
 
 
 
