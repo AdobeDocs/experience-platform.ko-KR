@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;PostgreSQL;postgresql;PSQL;psql
 solution: Experience Platform
 title: Flow Service API를 사용하여 PostgreSQL 커넥터 만들기
 topic: overview
+description: 이 자습서에서는 Flow Service API를 사용하여 Experience Platform을 PostgreSQL(이하 "PSQL"이라 한다)에 연결하는 단계를 안내합니다.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 5959d4344ec1c16542de045899ce74beb39a7bc4
 workflow-type: tm+mt
-source-wordcount: '553'
+source-wordcount: '577'
 ht-degree: 2%
 
 ---
