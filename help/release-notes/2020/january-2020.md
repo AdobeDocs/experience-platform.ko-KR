@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: January 15, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '894'
 ht-degree: 5%
@@ -39,7 +39,7 @@ XDM은 디지털 경험의 강력함을 향상시키도록 고안된 공개적�
 
 **알려진 문제**
 
-* 없음
+* None
 
 API 및 사용자 인터페이스를 사용하여 XDM을 사용하는 방법에 대한 자세한 내용은 [!DNL Schema Registry] XDM 시스템 설명서를 참조하십시오 [!DNL Schema Editor] [](../../xdm/home.md).
 
@@ -59,7 +59,7 @@ API 및 사용자 인터페이스를 사용하여 XDM을 사용하는 방법에 
 
 **알려진 문제**
 
-* 없음
+* None
 
 자세한 내용 [!DNL Privacy Service]은 먼저 [Privacy Service 개요를 읽어 보십시오](../../privacy-service/home.md).
 
@@ -82,11 +82,11 @@ Adobe Experience Platform은 외부 소스에서 데이터를 인제스트할 �
 | 카테고리 | 사용 권한 | 설명 |
 |--- | --- | ---|
 | 데이터 수집 | 소스 관리 | 소스를 읽고, 만들고, 편집하고, 비활성화할 수 있습니다. |
-| 데이터 수집 | 소스 보기 | [카탈로그] 탭의 사용 가능한 소스 및 [ *[!UICONTROL 찾아보기]* ] *[!UICONTROL 탭의 인증된 소스에 대한 읽기 전용]* 액세스. |
+| 데이터 수집 | 소스 보기 | [카탈로그] 탭의 사용 가능한 소스 및 [ **[!UICONTROL 찾아보기]** ] **[!UICONTROL 탭의 인증된 소스에 대한 읽기 전용]** 액세스. |
 
 **알려진 문제**
 
-* 없음
+* None
 
 소스에 대한 자세한 내용은 [소스 개요를 참조하십시오.](../../sources/home.md)
 
@@ -110,6 +110,6 @@ Adobe [실시간 CDP에서](../../rtcdp/overview.md)대상은 대상 플랫폼�
 
 **알려진 문제**
 
-* 없음
+* None
 
 자세한 내용은 [대상 개요를](../../rtcdp/destinations/destinations-overview.md) 참조하십시오.
