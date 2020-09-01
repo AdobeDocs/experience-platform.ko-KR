@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;lookup;Lookup;get;GET
 solution: Experience Platform
 title: 리소스 찾기
+description: 요청 경로에서 리소스의 $id(URL 인코딩 URI)를 포함하는 GET 요청을 수행하여 스키마 레지스트리 API에서 특정 리소스를 찾을 수 있습니다.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
 workflow-type: tm+mt
-source-wordcount: '174'
+source-wordcount: '203'
 ht-degree: 2%
 
 ---
@@ -48,7 +49,7 @@ curl -X GET \
 | `application/vnd.adobe.xed-full+json; version={MAJOR_VERSION}` | `$ref` 그리고 `allOf` 해결되었습니다. 제목 및 설명이 있습니다. |
 | `application/vnd.adobe.xed-notext+json; version={MAJOR_VERSION}` | 제목 또는 설명 `$ref` `allOf`이 없는 Raw |
 | `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref` 제목 또는 설명이 없는 문제를 `allOf` 해결했습니다. |
-| `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` 설명자가 포함되어 있는 문제를 `allOf` 해결했습니다. |
+| `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` 설명자가 포함된 `allOf` 문제를 해결했습니다. |
 
 >[!NOTE]
 >
