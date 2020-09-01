@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;delete sandbox
 solution: Experience Platform
 title: 샌드박스 삭제
 topic: developer guide
+description: 요청 경로에 샌드박스의 이름을 포함하는 DELETE 요청을 수행하여 샌드박스를 삭제할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
 workflow-type: tm+mt
-source-wordcount: '84'
-ht-degree: 4%
+source-wordcount: '103'
+ht-degree: 3%
 
 ---
 
@@ -18,7 +19,7 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->이 API 호출을 수행하면 샌드박스의 `status` 속성이 &quot;삭제됨&quot;으로 업데이트되고 비활성화됩니다. GET 요청은 삭제된 후에도 여전히 샌드박스의 세부 사항을 검색할 수 있습니다.
+>이 API 호출을 수행하면 샌드박스의 `status` 속성이 &quot;삭제됨&quot;으로 업데이트되고 비활성화됩니다. GET 요청은 삭제된 후에도 샌드박스의 세부 사항을 검색할 수 있습니다.
 
 **API 형식**
 
