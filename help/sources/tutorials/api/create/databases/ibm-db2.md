@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;IBM DB2;IBM;ibm db2;db2;DB2
 solution: Experience Platform
 title: Flow Service API를 사용하여 IBM DB2 커넥터 생성
 topic: overview
+description: 이 자습서는 Flow Service API를 사용하여 IBM DB2(이하 "DB2"라 한다)를 Experience Platform에 연결하는 단계를 단계별로 안내합니다.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
 workflow-type: tm+mt
-source-wordcount: '571'
+source-wordcount: '596'
 ht-degree: 2%
 
 ---
