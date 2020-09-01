@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics; analytics; classifications
+keywords: Experience Platform;home;popular topics; analytics;classifications
 description: 이 자습서에서는 분류 데이터를 Adobe Experience Platform으로 가져오기 위해 UI에서 Adobe Analytics 분류 데이터 커넥터를 만드는 단계를 제공합니다.
 solution: Experience Platform
 title: UI에서 Adobe Analytics 분류 데이터 커넥터 만들기
 topic: overview
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 0da686743e8bc57d310f7eff6f1bf812a8f31238
 workflow-type: tm+mt
 source-wordcount: '624'
 ht-degree: 2%
