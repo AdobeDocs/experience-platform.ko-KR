@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: XDM 스키마 및 설명자
 topic: tutorial
+description: 표준화 및 상호 운용성은 Adobe Experience Platform의 핵심 개념입니다. Adobe을 기반으로 하는 XDM(Experience Data Model)은 고객 경험 데이터를 표준화하고 고객 경험 관리를 위한 스키마를 정의하는 것입니다. 스키마는 Experience Platform에서 데이터를 설명하는 표준 방식으로서, 스키마를 따르는 모든 데이터를 조직 간의 충돌 없이 다시 사용할 수 있으며 여러 조직 간에 공유할 수도 있습니다.
 translation-type: tm+mt
-source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
+source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
 workflow-type: tm+mt
-source-wordcount: '407'
+source-wordcount: '473'
 ht-degree: 0%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 0%
 
 # XDM( [!DNL Experience Data Model] 스키마) 스키마 및 관계 설명자 사용
 
-표준화와 상호 운용성은 Adobe Experience Platform의 주요 개념입니다. [!DNL Experience Data Model] (XDM)은 Adobe을 기반으로 고객 경험 데이터를 표준화하고 고객 경험 관리를 위한 스키마를 정의하는 것입니다. 스키마는 데이터 [!DNL Experience Platform]를 설명하는 표준 방식이므로, 스키마를 따르는 모든 데이터를 조직 간의 충돌 없이 다시 사용할 수 있으며 여러 조직 간에 공유할 수도 있습니다. XDM 스키마에 대한 자세한 내용은 [XDM 시스템 개요를 읽어 보십시오](../xdm/home.md).
+표준화 및 상호 운용성은 Adobe Experience Platform의 핵심 개념입니다. [!DNL Experience Data Model] (XDM)은 Adobe을 기반으로 고객 경험 데이터를 표준화하고 고객 경험 관리를 위한 스키마를 정의하는 것입니다. 스키마는 데이터 [!DNL Experience Platform]를 설명하는 표준 방식이므로, 스키마를 따르는 모든 데이터를 조직 간의 충돌 없이 다시 사용할 수 있으며 여러 조직 간에 공유할 수도 있습니다. XDM 스키마에 대한 자세한 내용은 [XDM 시스템 개요를 읽어 보십시오](../xdm/home.md).
 
 ## 스키마 레지스트리를 사용하여 스키마 만들기
 
