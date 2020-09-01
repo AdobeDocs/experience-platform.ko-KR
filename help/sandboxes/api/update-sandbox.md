@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;update sandbox
 solution: Experience Platform
 title: 샌드박스 업데이트
 topic: developer guide
+description: 요청 경로에 샌드박스의 이름과 요청 페이로드에서 업데이트할 속성이 포함된 PATCH 요청을 수행하여 샌드박스에서 하나 이상의 필드를 업데이트할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
 workflow-type: tm+mt
-source-wordcount: '87'
-ht-degree: 4%
+source-wordcount: '120'
+ht-degree: 3%
 
 ---
 
