@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 세그멘테이션 서비스 사용 안내서
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '1365'
+source-wordcount: '1359'
 ht-degree: 0%
 
 ---
@@ -155,13 +155,13 @@ on-demand 평가에는 API를 사용하여 평가를 수행하고 필요에 따�
 >
 >스트리밍 세그멘테이션이 작동하려면 조직의 예약된 세그멘테이션을 활성화해야 합니다. 예약된 세그멘테이션 활성화에 대한 자세한 내용은 이 사용자 안내서 [의 스트리밍 세그멘테이션 섹션을 참조하십시오](#scheduled-segmentation).
 
-## 일정 정책 위반
+## 정책 위반
 
 >[!NOTE]
 >
->DULE 정책 위반은 대상에 지정된 세그먼트를 만드는 경우에만 적용됩니다.
+>대상에 지정된 세그먼트를 만드는 경우에만 정책 위반이 적용됩니다.
 
-세그먼트 작성을 완료하면 세그먼트 내에 정책 위반이 없도록 세그먼트 [!DNL Data Governance] 를 분석하게 됩니다. DULE 및 정책 위반에 대한 자세한 내용은 [데이터 사용 레이블 개요를 참조하십시오](../../data-governance/labels/overview.md).
+세그먼트 작성을 완료하면 세그먼트 내에 정책 위반이 없도록 Adobe Experience Platform 데이터 거버넌스에 의해 세그먼트가 분석됩니다. 자세한 내용은 [[!DNL Data Governance] 개요를](../../data-governance/home.md) 참조하십시오.
 
 ![](../images/ui/overview/segment-dule-policy-violations.png)
 
