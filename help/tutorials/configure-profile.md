@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Real-time Customer Profile;Identity Service;
 solution: Experience Platform
 title: 실시간 고객 프로필 자습서
 topic: tutorial
+description: 이 문서에서는 관련 단계에 대해 설명하고 각 개별 워크플로우를 완료하기 위한 자습서에 대한 링크를 제공합니다.
 translation-type: tm+mt
-source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
+source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
 workflow-type: tm+mt
-source-wordcount: '450'
+source-wordcount: '466'
 ht-degree: 0%
 
 ---
@@ -18,7 +19,7 @@ ht-degree: 0%
 
 ## 및 [!DNL Profile] 에 대한 스키마 활성화 [!DNL Identity]
 
-데이터를 Adobe Experience Platform으로 인제스트하여 데이터 생성 시 사용하려면 인제스트할 데이터의 구조를 제공하고 해당 스키마를 [!DNL Real-time Customer Profiles]및 Adobe Experience Platform에서 사용하도록 설정해야 합니다 [!DNL Profile] [!DNL Identity Service]. 스키마 레지스트리 API를 사용하여 스키마 [!DNL Profile] 를 [!DNL Identity Service]생성하거나 스키마 빌더 UI를 사용하여 스키마 [를](../xdm/tutorials/create-schema-api.md) 만드는 방법에 대한 단계별 지침을 참조하십시오 [](../xdm/tutorials/create-schema-ui.md).
+데이터를 Adobe Experience Platform으로 인제스트하여 데이터 생성 시 사용하려면 인제스트할 데이터 구조를 제공하고 이 스키마를 [!DNL Real-time Customer Profiles]및 Adobe Experience Platform에서 사용하도록 설정해야 합니다 [!DNL Profile] [!DNL Identity Service]. 스키마 레지스트리 API를 사용하여 스키마 [!DNL Profile] 를 [!DNL Identity Service]생성하거나 스키마 빌더 UI를 사용하여 스키마 [를](../xdm/tutorials/create-schema-api.md) 만드는 방법에 대한 단계별 지침을 참조하십시오 [](../xdm/tutorials/create-schema-ui.md).
 
 ## 데이터 세트 구성 [!DNL Profile] 및 [!DNL Identity]
 
@@ -26,7 +27,7 @@ ht-degree: 0%
 
 ## 병합 정책 구성
 
-Adobe Experience Platform을 사용하면 여러 소스에서 데이터를 취합하여 각 개별 고객에 대한 전체 상황을 파악할 수 있습니다. 이 데이터를 취합할 때 병합 정책은 데이터의 우선 순위를 매기는 방법과 데이터를 결합하여 통합 뷰를 생성하는 데 [!DNL Platform] 사용하는 규칙입니다. RESTful API 또는 사용자 인터페이스를 사용하여 새 병합 정책을 만들고 기존 정책을 관리하고 조직에 대한 기본 병합 정책을 설정할 수 있습니다. UI에서 병합 정책을 [!DNL Platform] 사용하려면 [병합 정책 사용 안내서를 참조하십시오](../profile/ui/merge-policies.md). 실시간 고객 프로필 API를 사용하여 병합 정책을 사용하려면 [병합 정책 개발자 안내서를 참조하십시오](../profile/api/merge-policies.md).
+Adobe Experience Platform을 사용하면 여러 소스에서 데이터를 취합하여 개별 고객의 전체 상황을 파악할 수 있습니다. 이 데이터를 취합할 때 병합 정책은 데이터의 우선 순위를 매기는 방법과 데이터를 결합하여 통합 뷰를 생성하는 데 [!DNL Platform] 사용하는 규칙입니다. RESTful API 또는 사용자 인터페이스를 사용하여 새 병합 정책을 만들고 기존 정책을 관리하고 조직에 대한 기본 병합 정책을 설정할 수 있습니다. UI에서 병합 정책을 [!DNL Platform] 사용하려면 [병합 정책 사용 안내서를 참조하십시오](../profile/ui/merge-policies.md). 실시간 고객 프로필 API를 사용하여 병합 정책을 사용하려면 [병합 정책 개발자 안내서를 참조하십시오](../profile/api/merge-policies.md).
 
 ## 에지 예측 구성
 
