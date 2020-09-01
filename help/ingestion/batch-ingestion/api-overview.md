@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;batch ingestion;Batch ingestion;ingestion;developer guide;api guide;upload;ingest parquet;ingest json;
 solution: Experience Platform
 title: Adobe Experience Platform 일괄 처리 통합 개발자 가이드
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 3eaef72de2999fc088b92562c08a896d1cb08e55
+source-git-commit: c04fb056d4564e53f192e0734a700a13820f5ba7
 workflow-type: tm+mt
 source-wordcount: '2670'
 ht-degree: 5%
@@ -1002,7 +1002,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 데이터 파일을 인제스트하려면 파일의 계층 구조 [!DNL Experience Platform]가 업로드되는 데이터 세트에 연결된 [경험 데이터 모델(XDM)](../../xdm/home.md) 스키마를 준수해야 합니다.
 
-XDM 스키마를 따르도록 CSV 파일을 매핑하는 방법에 대한 자세한 내용은 [샘플 변형](../../etl/transformations.md) 문서 및 올바른 형식의 JSON 데이터 파일의 예를 참조하십시오. 문서에 제공된 샘플 파일은 다음과 같습니다.
+XDM 스키마를 따르도록 CSV 파일을 매핑하는 방법에 대한 자세한 내용은 [샘플 변형](../../etl/transformations.md) 문서 및 올바른 형식의 JSON 데이터 파일의 예를 참조하십시오. 문서에 제공된 샘플 파일은 다음 사이트에서 찾을 수 있습니다.
 
 - [CRM_profiles.csv](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.csv)
 - [CRM_profiles.json](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.json)
