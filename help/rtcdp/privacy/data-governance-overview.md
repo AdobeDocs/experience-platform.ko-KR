@@ -5,7 +5,7 @@ seo-title: 실시간 고객 데이터 플랫폼의 데이터 거버넌스
 description: '데이터 거버넌스를 사용하면 고객 데이터를 관리하고 데이터 사용에 적용되는 규정, 제한 사항 및 정책을 준수할 수 있습니다. '
 seo-description: '데이터 거버넌스를 사용하면 고객 데이터를 관리하고 데이터 사용에 적용되는 규정, 제한 사항 및 정책을 준수할 수 있습니다. '
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '1022'
 ht-degree: 0%
@@ -76,7 +76,7 @@ Adobe Experience Platform은 일반적인 고객 경험 사용 사례를 위한 
 
 ![](assets/violation-popover.png)
 
-포퍼의 *[!UICONTROL 세부]* 사항 탭은 위반을 트리거한 작업을 나타내며 위반이 발생한 이유를 나타내며 문제를 잠재적으로 해결하는 방법에 대한 제안을 제공합니다.
+포퍼의 **[!UICONTROL 세부]** 사항 탭은 위반을 트리거한 작업을 나타내며 위반이 발생한 이유를 나타내며 문제를 잠재적으로 해결하는 방법에 대한 제안을 제공합니다.
 
 데이터 **[!UICONTROL 계보]** 를 클릭하여 데이터 레이블이 위반을 트리거한 대상, 세그먼트, 병합 정책 또는 데이터 세트를 추적합니다.
 
