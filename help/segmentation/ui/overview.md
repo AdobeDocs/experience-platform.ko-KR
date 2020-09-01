@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Segmentation Service;segmentation;segmentation service;user guide;ui guide;segmentation ui guide;segment builder;Segment builder;
 solution: Experience Platform
 title: 세그멘테이션 서비스 사용 안내서
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: e7266fba14b2dffe46ce77428ad6fe0dd92abdf5
+source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
 workflow-type: tm+mt
 source-wordcount: '1365'
 ht-degree: 0%
@@ -21,13 +21,13 @@ ht-degree: 0%
 세그먼트 정의를 사용하려면 세그먼테이션과 관련된 다양한 [!DNL Experience Platform] 서비스를 이해해야 합니다. 이 사용자 안내서를 읽기 전에 다음 서비스에 대한 설명서를 검토하십시오.
 
 - [[!DNL 세그멘테이션 서비스]](../home.md): [!DNL Segmentation Service] 고객, 잠재 고객, 사용자 또는 조직과 같은 개인 [!DNL Experience Platform] 과 관련된 데이터를 작은 그룹으로 나눌 수 있습니다.
-- [[!DNL 실시간 고객 프로필]](../../profile/home.md): 여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
-- [[!DNL Adobe Experience Platform ID 서비스]](../../identity-service/home.md): 수집되는 다양한 데이터 소스에서 ID를 연결하여 고객 프로파일을 만들 수 [!DNL Platform]있습니다.
-- [[!DNL 경험 데이터 모델(XDM)]](../../xdm/home.md): 고객 경험 데이터를 [!DNL Platform] 구성하는 표준화된 프레임워크
+- [[!DNL 실시간 고객 프로필]](../../profile/home.md):여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
+- [[!DNL Adobe Experience Platform ID 서비스]](../../identity-service/home.md):수집되는 다양한 데이터 소스에서 ID를 연결하여 고객 프로파일을 만들 수 [!DNL Platform]있습니다.
+- [[!DNL 경험 데이터 모델(XDM)]](../../xdm/home.md):고객 경험 데이터를 [!DNL Platform] 구성하는 표준화된 프레임워크
 
 또한 이 문서를 통해 사용되는 두 개의 주요 용어를 알고 이 용어 간의 차이점을 이해하는 것이 중요합니다.
-- **세그먼트 정의**: 대상 대상의 주요 특성 또는 행동을 설명하는 데 사용되는 규칙 세트입니다.
-- **대상**: 세그먼트 정의 기준을 충족하는 결과 프로필 집합입니다.
+- **세그먼트 정의**:대상 대상의 주요 특성 또는 행동을 설명하는 데 사용되는 규칙 세트입니다.
+- **대상**:세그먼트 정의 기준을 충족하는 결과 프로필 집합입니다.
 
 ## 개요
 
@@ -81,7 +81,7 @@ IMS **[!UICONTROL 조직의]** 모든 세그먼트 정의 목록을 보려면 �
 
 세그먼트 **[!UICONTROL 의 총 대상]** 섹션에는 세그먼트에 자격을 갖춘 총 프로필 수가 표시됩니다.
 
-추정은 해당 일의 샘플 데이터의 샘플 크기를 사용하여 생성됩니다. 프로필 스토어에 1백만 개 미만의 개체가 있는 경우 전체 데이터 세트가 사용됩니다. 100만개에서 2000만개가 사용됩니다. 2천만 개 이상의 개체에 대해 전체 개체의 5%가 사용됩니다. 세그먼트 예측 생성에 대한 자세한 내용은 세그먼트 작성 자습서의 [예측 생성 섹션](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) 에서 확인할 수 있습니다.
+추정은 해당 일의 샘플 데이터의 샘플 크기를 사용하여 생성됩니다. 프로필 스토어에 1백만 개 미만의 개체가 있는 경우 전체 데이터 세트가 사용됩니다.100만개에서 2000만개가 사용됩니다.2천만 개 이상의 개체에 대해 전체 개체의 5%가 사용됩니다. 세그먼트 예측 생성에 대한 자세한 내용은 세그먼트 작성 자습서의 [예측 생성 섹션](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) 에서 확인할 수 있습니다.
 
 ### 활성화된 대상
 
