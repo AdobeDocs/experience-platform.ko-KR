@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Privacy Service 사용 안내서
 topic: UI guide
 translation-type: tm+mt
-source-git-commit: c8446f6040ac9ef1f4196d9057b531011e243258
+source-git-commit: 397f08efa276f7885e099a0a8d9dc6d23fe0e8cc
 workflow-type: tm+mt
 source-wordcount: '1056'
 ht-degree: 0%
@@ -70,7 +70,7 @@ UI에 대한 대시보드에서는 개인 정보 작업의 상태를 볼 수 있
 
 ![작업 요청 검색 옵션](../images/user-guide/job-search.png)
 
-특정 작업 요청의 세부 정보를 보려면 목록에서 요청의 작업 ID를 클릭하여 *[!UICONTROL 작업 세부 정보]* 페이지를 엽니다.
+특정 작업 요청의 세부 정보를 보려면 목록에서 요청의 작업 ID를 클릭하여 **[!UICONTROL 작업 세부 정보]** 페이지를 엽니다.
 
 ![GDPR UI 작업 세부 정보](../images/user-guide/job-details.png)
 
@@ -101,7 +101,7 @@ UI는 새 작업 요청을 만드는 두 가지 방법을 제공합니다. [!DNL
 
 ![요청 만들기를 클릭합니다](../images/user-guide/create-request.png)
 
-현재 *[!UICONTROL 선택된 규칙 유형에 대한 개인 정보 작업 요청을 제출하는 데 사용할 수 있는 옵션이 표시된 요청]* 만들기 대화 상자가 열립니다.
+현재 **[!UICONTROL 선택된 규칙 유형에 대한 개인 정보 작업 요청을 제출하는 데 사용할 수 있는 옵션이 표시된 요청]** 만들기 대화 상자가 열립니다.
 
 <img src="../images/user-guide/request-builder.png" width="500" /><br/>
 
@@ -109,7 +109,7 @@ UI는 새 작업 요청을 만드는 두 가지 방법을 제공합니다. [!DNL
 
 <img src="../images/user-guide/type-and-products.png" width="500" /><br/>
 
-네임스페이스 유형 *[!UICONTROL 에서]*&#x200B;보낼 고객 ID에 적합한 네임스페이스 유형을 [!DNL Privacy Service]선택합니다.
+네임스페이스 유형 **[!UICONTROL 에서]**&#x200B;보낼 고객 ID에 적합한 네임스페이스 유형을 [!DNL Privacy Service]선택합니다.
 
 <img src="../images/user-guide/namespace-type.png" width="500" /><br/>
 
@@ -135,7 +135,7 @@ When finished, click **[!UICONTROL Create]**.
 
 ![요청 생성 옵션](../images/user-guide/create-options.png)
 
-JSON *[!UICONTROL 파일]* 드래그 앤 드롭을 위한 창을 제공하는 JSON 업로드 대화 상자가 나타납니다.
+JSON **[!UICONTROL 파일]** 드래그 앤 드롭을 위한 창을 제공하는 JSON 업로드 대화 상자가 나타납니다.
 
 <img src="../images/user-guide/upload-json.png" width="500" /><br/>
 
