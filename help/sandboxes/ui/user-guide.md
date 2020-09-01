@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 샌드박스 사용 안내서
 topic: user guide
 translation-type: tm+mt
-source-git-commit: c8446f6040ac9ef1f4196d9057b531011e243258
+source-git-commit: 397f08efa276f7885e099a0a8d9dc6d23fe0e8cc
 workflow-type: tm+mt
 source-wordcount: '530'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 ## 샌드박스 보기
 
-Experience Platform UI에서 왼쪽 탐색 **[!UICONTROL 에서 샌드박스]** 를 클릭하여 _[!UICONTROL 샌드박스]_ 대시보드를 엽니다. 대시보드에는 샌드박스 유형(프로덕션 또는 개발) 및 상태(활성, 생성, 삭제 또는 실패)를 비롯하여 조직에 사용할 수 있는 모든 샌드박스가 나열됩니다.
+Experience Platform UI에서 왼쪽 탐색 **[!UICONTROL 에서 샌드박스]** 를 클릭하여 **[!UICONTROL 샌드박스]** 대시보드를 엽니다. 대시보드에는 샌드박스 유형(프로덕션 또는 개발) 및 상태(활성, 생성, 삭제 또는 실패)를 비롯하여 조직에 사용할 수 있는 모든 샌드박스가 나열됩니다.
 
 ![](../images/ui/sandboxes-tab.png)
 
@@ -46,7 +46,7 @@ UI에서 새 샌드박스를 만들려면 왼쪽 탐색 **[!UICONTROL 에서 샌
 
 ![](../images/ui/create-sandbox-button.png)
 
-샌드박스 _[!UICONTROL 만들기]_ 대화 상자가 나타나고 샌드박스의 표시 제목과 이름을 제공하라는 메시지가 표시됩니다. 표시 제목 **** 은 사람이 읽을 수 있도록 하기 위한 것으로 쉽게 식별할 수 있도록 설명적이어야 합니다. 샌드박스 **[!UICONTROL 이름]** 은 API 호출에서 사용할 수 있는 소문자 식별자이며, 따라서 고유하고 간결해야 합니다.
+샌드박스 **[!UICONTROL 만들기]** 대화 상자가 나타나고 샌드박스의 표시 제목과 이름을 제공하라는 메시지가 표시됩니다. 표시 제목 **** 은 사람이 읽을 수 있도록 하기 위한 것으로 쉽게 식별할 수 있도록 설명적이어야 합니다. 샌드박스 **[!UICONTROL 이름]** 은 API 호출에서 사용할 수 있는 소문자 식별자이며, 따라서 고유하고 간결해야 합니다.
 
 When finished, click **[!UICONTROL Create]**.
 
@@ -56,7 +56,7 @@ When finished, click **[!UICONTROL Create]**.
 >
 >비프로덕션 샌드박스 유형만 만들기로 제한되어 있으므로 **[!UICONTROL 유형]** 옵션은 &quot;비프로덕션&quot;에서 잠겨 조작될 수 없습니다.
 
-샌드박스 만들기를 완료하면 페이지를 새로 고치면 새 샌드박스가 샌드박스 _[!UICONTROL 대시보드에 &quot;생성]_ &quot;[!UICONTROL 으로]나타납니다. 새 샌드박스는 시스템에서 프로비저닝하는 데 약 15분이 소요되며 이후 샌드박스의 상태가 &quot;[!UICONTROL 활성]&quot;으로 변경됩니다.
+샌드박스 만들기를 완료하면 페이지를 새로 고치면 새 샌드박스가 샌드박스 **[!UICONTROL 대시보드에 &quot;생성]** &quot;[!UICONTROL 으로]나타납니다. 새 샌드박스는 시스템에서 프로비저닝하는 데 약 15분이 소요되며 이후 샌드박스의 상태가 &quot;[!UICONTROL 활성]&quot;으로 변경됩니다.
 
 ![](../images/ui/sandbox-created.png)
 
@@ -96,7 +96,7 @@ UI에서 샌드박스를 삭제하려면 왼쪽 탐색 도구에서 **[!UICONTRO
 
 <img src="../images/ui/delete-are-you-sure.png" width="350"><br>
 
-확인 메시지가 나타나고 샌드박스 작업 영역에서 샌드박스가 __ 제거됩니다.
+확인 메시지가 나타나고 샌드박스 작업 영역에서 샌드박스가 **** 제거됩니다.
 
 ## 다음 단계
 
