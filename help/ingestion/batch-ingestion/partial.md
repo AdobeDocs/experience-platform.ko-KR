@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform 부분 배치 처리 개요
 topic: overview
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '1446'
 ht-degree: 1%
@@ -89,7 +89,7 @@ UI를 통해 부분 섭취에 대한 배치를 활성화하려면 소스 연결�
 
 부분 **[!UICONTROL 통합]** 토글을 사용하면 부분 일괄 처리를 사용하거나 사용하지 않을 수 있습니다.
 
-오류 **[!UICONTROL 진단]** 토글은 부분 통합 토글이 꺼진 경우에만 **[!UICONTROL 나타납니다]** . 이 기능을 사용하면 인제스트된 배치에 대한 자세한 오류 메시지 [!DNL Platform] 를 생성할 수 있습니다. 부분 *[!UICONTROL 통합]* 전환이 켜지면 향상된 오류 진단이 자동으로 적용됩니다.
+오류 **[!UICONTROL 진단]** 토글은 부분 통합 토글이 꺼진 경우에만 **[!UICONTROL 나타납니다]** . 이 기능을 사용하면 인제스트된 배치에 대한 자세한 오류 메시지 [!DNL Platform] 를 생성할 수 있습니다. 부분 **[!UICONTROL 통합]** 전환이 켜지면 향상된 오류 진단이 자동으로 적용됩니다.
 
 ![](../images/batch-ingestion/partial-ingestion/configure-batch-partial-ingestion-focus.png)
 
