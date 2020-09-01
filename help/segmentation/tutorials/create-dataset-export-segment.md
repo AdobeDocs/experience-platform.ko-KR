@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 대상 세그먼트를 내보내기 위한 데이터 세트 만들기
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '733'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -33,7 +33,7 @@ UI에서 결합 스키마를 보려면 왼쪽 탐색 **[!UICONTROL 에서 프로
 
 UI 내의 데이터 집합 작업 영역을 사용하면 [!DNL Experience Platform] IMS 조직에서 만든 모든 데이터 세트를 보고 관리할 수 있을 뿐만 아니라 새 데이터 세트를 만들 수 있습니다.
 
-데이터 집합 작업 영역을 보려면 왼쪽 탐색 **[!UICONTROL 에서 데이터]** 집합을 클릭한 다음 *[!UICONTROL 찾아보기]* 탭을 클릭합니다. 데이터 집합 작업 영역에는 *[!UICONTROL 이름]*, 만들어진 ** 날짜 **(날짜 및 시간), *[!UICONTROL 소스]*, 소스 *[!UICONTROL 를 만들고]*&#x200B;는 스키마, **&#x200B;및Batch LastStatus를 포함하는 데이터 집합 목록이 들어 있으며, Facebook의 마지막 데이터세트 업데이트 날짜 및 시간이 마지막 데이터 집합인 NameUpdate인 날짜 및 시간인 Facebook이 들어 있습니다. 각 열의 너비에 따라 왼쪽이나 오른쪽으로 스크롤하여 모든 열을 볼 수 있습니다.
+데이터 집합 작업 영역을 보려면 왼쪽 탐색 **[!UICONTROL 에서 데이터]** 집합을 클릭한 다음 **[!UICONTROL 찾아보기]** 탭을 클릭합니다. 데이터 집합 작업 영역에는 **[!UICONTROL 이름]**, 만들어진 **** 날짜 ****(날짜 및 시간), **[!UICONTROL 소스]**, 소스 **[!UICONTROL 를 만들고]**&#x200B;는 스키마, ****&#x200B;및Batch LastStatus를 포함하는 데이터 집합 목록이 들어 있으며, Facebook의 마지막 데이터세트 업데이트 날짜 및 시간이 마지막 데이터 집합인 NameUpdate인 날짜 및 시간인 Facebook이 들어 있습니다. 각 열의 너비에 따라 왼쪽이나 오른쪽으로 스크롤하여 모든 열을 볼 수 있습니다.
 
 >[!NOTE]
 >
@@ -47,13 +47,13 @@ UI 내의 데이터 집합 작업 영역을 사용하면 [!DNL Experience Platfo
 
 ![데이터 세트 만들기를 클릭합니다.](../images/tutorials/segment-export-dataset/dataset-click-create.png)
 
-데이터 집합 *[!UICONTROL 만들기]* 화면에서 **[!UICONTROL 스키마에서 데이터 집합]** 만들기를 클릭하여 계속합니다.
+데이터 집합 **[!UICONTROL 만들기]** 화면에서 **[!UICONTROL 스키마에서 데이터 집합]** 만들기를 클릭하여 계속합니다.
 
 ![데이터 소스 선택](../images/tutorials/segment-export-dataset/create-dataset.png)
 
 ## XDM 개별 프로필 결합 스키마 선택
 
-데이터 세트 [!DNL XDM Individual Profile Union Schema] 에서 사용할 스키마를 선택하려면 [스키마 선택] 화면에서 &quot;[!UICONTROL XDM]개별 프로필&quot; 형식의 &quot; *[!UICONTROL XDM]* &quot; 스키마를찾습니다.
+데이터 세트 [!DNL XDM Individual Profile Union Schema] 에서 사용할 스키마를 선택하려면 [스키마 선택] 화면에서 &quot;[!UICONTROL XDM]개별 프로필&quot; 형식의 &quot; **[!UICONTROL XDM]** &quot; 스키마를찾습니다.
 
 XDM 개인 프로필 옆에 있는 라디오 단추를 **[!UICONTROL 선택한]**&#x200B;다음 **** 오른쪽 위 모서리에서 다음을클릭합니다.
 
@@ -61,7 +61,7 @@ XDM 개인 프로필 옆에 있는 라디오 단추를 **[!UICONTROL 선택한]*
 
 ## 데이터 세트 구성
 
-데이터 세트 **[!UICONTROL 구성]** 화면에서 데이터 세트에 *[!UICONTROL 이름을]* 지정해야 *[!UICONTROL 하고 데이터 세트에 대한]* 설명도제공할 수 있습니다.
+데이터 세트 **[!UICONTROL 구성]** 화면에서 데이터 세트에 **[!UICONTROL 이름을]** 지정해야 **[!UICONTROL 하고 데이터 세트에 대한]** 설명도제공할 수 있습니다.
 
 **데이터 세트 이름에 대한 참고 사항:**
 - 데이터 세트 이름은 나중에 라이브러리에서 쉽게 찾을 수 있도록 짧고 설명이어야 합니다.
@@ -74,9 +74,9 @@ XDM 개인 프로필 옆에 있는 라디오 단추를 **[!UICONTROL 선택한]*
 
 ## 데이터 집합 활동
 
-이제 빈 데이터 세트가 생성되어 데이터 세트 작업 영역의 *[!UICONTROL 데이터 세트 활동]* 탭으로 [!UICONTROL 돌아옵니다] . &quot;배치가 추가되지 않았습니다.&quot;라는 알림과 함께 작업 공간의 왼쪽 위 모서리에 데이터 세트 이름이 표시됩니다. 이 데이터 세트에 아직 배치를 추가하지 않았기 때문에 예상됩니다.
+이제 빈 데이터 세트가 생성되어 데이터 세트 작업 영역의 **[!UICONTROL 데이터 세트 활동]** 탭으로 [!UICONTROL 돌아옵니다] . &quot;배치가 추가되지 않았습니다.&quot;라는 알림과 함께 작업 공간의 왼쪽 위 모서리에 데이터 세트 이름이 표시됩니다. 이 데이터 세트에 아직 배치를 추가하지 않았기 때문에 예상됩니다.
 
-데이터 집합 작업 영역의 오른쪽에는 새로운 데이터 집합 ID **[!UICONTROL ,]** 데이터 집합 ID *[!UICONTROL 이름,]*&#x200B;설명 *[!UICONTROL ,, Cedset]* Name, Cedet *[!UICONTROL Name, TainName, TainTableTemanTmediaStreamingSchemaStreamingSource와 같은]* Info ********&#x200B;탭 정보가 들어 있습니다. 또한 [!UICONTROL 정보] 탭에는 데이터 세트 *[!UICONTROL 가 생성된]* 시기 및 해당 *[!UICONTROL 마지막 수정]* 날짜에 대한 정보가 포함되어있습니다.
+데이터 집합 작업 영역의 오른쪽에는 새로운 데이터 집합 ID **[!UICONTROL ,]** 데이터 집합 ID **[!UICONTROL 이름,]**&#x200B;설명 **[!UICONTROL ,, Cedset]** Name, Cedet **[!UICONTROL Name, TainName, TainTableTemanTmediaStreamingSchemaStreamingSource와 같은]** Info ****************&#x200B;탭 정보가 들어 있습니다. 또한 [!UICONTROL 정보] 탭에는 데이터 세트 **[!UICONTROL 가 생성된]** 시기 및 해당 **[!UICONTROL 마지막 수정]** 날짜에 대한 정보가 포함되어있습니다.
 
 대상 세그먼트 내보내기 작업 과정을 완료하려면 이 값이 **[!UICONTROL 필요하므로 데이터 세트 ID에]**&#x200B;유의하십시오.
 
