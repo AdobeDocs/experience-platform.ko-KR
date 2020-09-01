@@ -5,7 +5,7 @@ title: 데이터 사용 정책 사용 안내서
 topic: policies
 description: Adobe Experience Platform 데이터 거버넌스는 데이터 사용 정책을 만들고 관리할 수 있는 사용자 인터페이스를 제공합니다. 이 문서에서는 Experience Platform 사용자 인터페이스의 정책 작업 영역에서 수행할 수 있는 작업에 대한 개요를 제공합니다.
 translation-type: tm+mt
-source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '768'
 ht-degree: 0%
@@ -30,7 +30,7 @@ Adobe Experience Platform [!DNL Data Governance] 는 데이터 사용 정책을 
 
 ## 데이터 사용 정책 보기 {#view-policies}
 
-UI [!DNL Experience Platform] 에서 정책 **** 을 클릭하여 *[!UICONTROL 정책 작업 영역을]* 엽니다. 검색 **** 탭에서 관련 레이블, 마케팅 작업 및 상태를 비롯한 사용 가능한 정책 목록을 볼 수 있습니다.
+UI [!DNL Experience Platform] 에서 정책 **** 을 클릭하여 **[!UICONTROL 정책 작업 영역을]** 엽니다. 검색 **** 탭에서 관련 레이블, 마케팅 작업 및 상태를 비롯한 사용 가능한 정책 목록을 볼 수 있습니다.
 
 ![](../images/policies/browse-policies.png)
 
@@ -40,11 +40,11 @@ UI [!DNL Experience Platform] 에서 정책 **** 을 클릭하여 *[!UICONTROL �
 
 ## 사용자 지정 데이터 사용 정책 만들기 {#create-policy}
 
-새 사용자 지정 데이터 사용 정책을 만들려면 **[!UICONTROL 정책]** 작업 영역의 **[!UICONTROL 찾아보기]** 탭 오른쪽 상단에서 정책 *[!UICONTROL 만들기를]* 클릭합니다.
+새 사용자 지정 데이터 사용 정책을 만들려면 **[!UICONTROL 정책]** 작업 영역의 **[!UICONTROL 찾아보기]** 탭 오른쪽 상단에서 정책 **[!UICONTROL 만들기를]** 클릭합니다.
 
 ![](../images/policies/create-policy-button.png)
 
-정책 *[!UICONTROL 만들기]* 워크플로우가 나타납니다. 먼저 새 정책에 대한 이름과 설명을 입력합니다.
+정책 **[!UICONTROL 만들기]** 워크플로우가 나타납니다. 먼저 새 정책에 대한 이름과 설명을 입력합니다.
 
 ![](../images/policies/create-policy-description.png)
 
@@ -52,7 +52,7 @@ UI [!DNL Experience Platform] 에서 정책 **** 을 클릭하여 *[!UICONTROL �
 
 ![](../images/policies/add-labels.png)
 
-마케팅 *[!UICONTROL 작업]* 선택 단계가 나타납니다. 제공된 목록에서 적절한 마케팅 작업을 선택한 다음 **[!UICONTROL 다음을]** 클릭하여 계속합니다.
+마케팅 **[!UICONTROL 작업]** 선택 단계가 나타납니다. 제공된 목록에서 적절한 마케팅 작업을 선택한 다음 **[!UICONTROL 다음을]** 클릭하여 계속합니다.
 
 >[!NOTE]
 >
@@ -60,11 +60,11 @@ UI [!DNL Experience Platform] 에서 정책 **** 을 클릭하여 *[!UICONTROL �
 
 ![](../images/policies/add-marketing-actions.png)
 
-검토 ** 단계가 표시되어 새 정책을 만들기 전에 세부 사항을 검토할 수 있습니다. 만족하면 **[!UICONTROL 마침을]** 클릭하여 정책을 만듭니다.
+검토 **** 단계가 표시되어 새 정책을 만들기 전에 세부 사항을 검토할 수 있습니다. 만족하면 **[!UICONTROL 마침을]** 클릭하여 정책을 만듭니다.
 
 ![](../images/policies/policy-review.png)
 
-이제 *[!UICONTROL 검색]* 탭이 다시 나타나며 새로 만든 정책이 &quot;초안&quot; 상태로 나열됩니다. 정책을 활성화하려면 다음 섹션을 참조하십시오.
+이제 **[!UICONTROL 검색]** 탭이 다시 나타나며 새로 만든 정책이 &quot;초안&quot; 상태로 나열됩니다. 정책을 활성화하려면 다음 섹션을 참조하십시오.
 
 ![](../images/policies/created-policy.png)
 
@@ -72,7 +72,7 @@ UI [!DNL Experience Platform] 에서 정책 **** 을 클릭하여 *[!UICONTROL �
 
 모든 데이터 사용 정책(Adobe에서 제공하는 핵심 정책 포함)은 기본적으로 비활성화됩니다. 개별 정책이 적용을 위해 고려되도록 하려면 API 또는 UI를 통해 해당 정책을 수동으로 활성화해야 합니다.
 
-정책 작업 영역의 *[!UICONTROL 찾아보기]* 탭에서 정책을 *[!UICONTROL 활성화하거나 비활성화할]* 수 있습니다. 목록에서 사용자 지정 정책을 선택하여 오른쪽에 세부 사항을 표시합니다. 상태 *[!UICONTROL 에서]*&#x200B;전환 단추를 선택하여 정책을 활성화하거나 비활성화합니다.
+정책 작업 영역의 **[!UICONTROL 찾아보기]** 탭에서 정책을 **[!UICONTROL 활성화하거나 비활성화할]** 수 있습니다. 목록에서 사용자 지정 정책을 선택하여 오른쪽에 세부 사항을 표시합니다. 상태 **[!UICONTROL 에서]**&#x200B;전환 단추를 선택하여 정책을 활성화하거나 비활성화합니다.
 
 ![](../images/policies/enable-policy.png)
 
@@ -84,15 +84,15 @@ UI [!DNL Experience Platform] 에서 정책 **** 을 클릭하여 *[!UICONTROL �
 
 ## 마케팅 작업 만들기 {#create-marketing-action}
 
-새 사용자 지정 마케팅 작업을 만들려면 **[!UICONTROL 정책 작업]** 작업 **[!UICONTROL 영역의]** 마케팅 작업 *[!UICONTROL 탭 오른쪽 상단에서 마케팅 작업]* 만들기를클릭합니다.
+새 사용자 지정 마케팅 작업을 만들려면 **[!UICONTROL 정책 작업]** 작업 **[!UICONTROL 영역의]** 마케팅 작업 **[!UICONTROL 탭 오른쪽 상단에서 마케팅 작업]** 만들기를클릭합니다.
 
 ![](../images/policies/create-marketing-action.png)
 
-마케팅 *[!UICONTROL 작업]* 만들기 대화 상자가 나타납니다. 마케팅 작업의 이름과 설명을 입력한 다음 만들기를 **[!UICONTROL 클릭합니다]**.
+마케팅 **[!UICONTROL 작업]** 만들기 대화 상자가 나타납니다. 마케팅 작업의 이름과 설명을 입력한 다음 만들기를 **[!UICONTROL 클릭합니다]**.
 
 ![](../images/policies/create-marketing-action-details.png)
 
-새로 만든 작업이 *[!UICONTROL 마케팅 작업]* 탭에 나타납니다. 이제 새 데이터 사용 정책을 [만들 때 마케팅 작업을 사용할 수 있습니다](#create-policy).
+새로 만든 작업이 **[!UICONTROL 마케팅 작업]** 탭에 나타납니다. 이제 새 데이터 사용 정책을 [만들 때 마케팅 작업을 사용할 수 있습니다](#create-policy).
 
 ![](../images/policies/created-marketing-action.png)
 
