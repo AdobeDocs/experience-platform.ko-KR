@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;schema;Schema;schemas;Schemas;relationship;Relationship;relationship descriptor;Relationship descriptor;reference identity;Reference identity;
 solution: Experience Platform
 title: 스키마 레지스트리 API를 사용하여 두 스키마 간의 관계 정의
+description: 이 문서에서는 스키마 레지스트리 API를 사용하여 조직에서 정의한 두 스키마 간의 1:1 관계를 정의하는 자습서를 제공합니다.
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
 workflow-type: tm+mt
-source-wordcount: '1282'
+source-wordcount: '1304'
 ht-degree: 1%
 
 ---
 
 
 # API를 사용하여 두 스키마 간의 관계 [!DNL Schema Registry] 정의
-
 
 다양한 채널에서 고객과의 관계와 브랜드와의 상호 작용을 파악할 수 있는 기능은 Adobe Experience Platform의 중요한 부분입니다. XDM(Structure Relationship) 스키마 구조 내에서 이러한 관계를 정의하면 [!DNL Experience Data Model] 고객 데이터에 대한 복잡한 통찰력을 얻을 수 있습니다.
 
