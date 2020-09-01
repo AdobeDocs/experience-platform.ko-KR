@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Google 클라우드 스토리지 커넥터
 topic: overview
 translation-type: tm+mt
-source-git-commit: 340f5d0611e9e9eb4676018ee10c8a8aa08dbb2d
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '370'
 ht-degree: 0%
@@ -60,7 +60,7 @@ Adobe Experience Platform은 AWS, [!DNL Google Cloud Platform]및 [!DNL Azure]�
 
 ![](../../images/tutorials/create/google-cloud-storage/project-access.png)
 
-상호 **[!UICONTROL 운용성]** 페이지에는 인증, 액세스 키 및 사용자 계정과 연결된 기본 프로젝트에 대한 정보가 들어 있습니다. 상호 운용 가능한 액세스를 위한 기본 프로젝트를 아직 설정하지 않은 경우 *[!UICONTROL 기본 프로젝트 내에서 상호 운용 가능한 액세스]* 섹션을 설정할 수 있습니다. 기본 프로젝트가 이미 설정된 경우 이 섹션에는 프로젝트가 기본값으로 설정되었다는 확인이 표시됩니다.
+상호 **[!UICONTROL 운용성]** 페이지에는 인증, 액세스 키 및 사용자 계정과 연결된 기본 프로젝트에 대한 정보가 들어 있습니다. 상호 운용 가능한 액세스를 위한 기본 프로젝트를 아직 설정하지 않은 경우 **[!UICONTROL 기본 프로젝트 내에서 상호 운용 가능한 액세스]** 섹션을 설정할 수 있습니다. 기본 프로젝트가 이미 설정된 경우 이 섹션에는 프로젝트가 기본값으로 설정되었다는 확인이 표시됩니다.
 
 사용자 계정에 대한 새 액세스 키 ID와 비밀 액세스 키를 생성하려면 키 **[!UICONTROL 만들기를 선택합니다]**.
 
