@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Query service;query service;RStudio;rstudio;connect to query service;
 solution: Experience Platform
 title: RStudio와 연결
 topic: connect
 translation-type: tm+mt
-source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
 workflow-type: tm+mt
 source-wordcount: '209'
 ht-degree: 2%
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # 연결 대상 [!DNL RStudio]
 
-이 문서에서는 R Studio와 Adobe Experience Platform을 연결하는 단계를 안내합니다 [!DNL Query Service].
+이 문서는 R Studio와 Adobe Experience Platform을 연결하는 단계를 안내합니다 [!DNL Query Service].
 
 설치 후 [!DNL RStudio]나타나는 *콘솔* 화면에서 사용할 R 스크립트를 먼저 준비해야 [!DNL PostgreSQL]합니다.
 
@@ -45,7 +45,7 @@ con <- dbConnect(drv,
 
 >[!NOTE]
 >
->데이터베이스 이름, 호스트, 포트 및 로그인 자격 증명을 찾는 방법에 대한 자세한 내용은 Platform의 [자격 증명 페이지를 참조하십시오](https://platform.adobe.com/query/configuration). 자격 증명을 찾으려면 로그인하고 쿼리 [!DNL Platform]를 **[!UICONTROL 클릭한 다음 자격 증명]**&#x200B;을 **[!UICONTROL 클릭합니다]**.
+>데이터베이스 이름, 호스트, 포트 및 로그인 자격 증명을 찾는 방법에 대한 자세한 내용은 플랫폼의 [자격 증명 페이지를 참조하십시오](https://platform.adobe.com/query/configuration). 자격 증명을 찾으려면 로그인하고 쿼리 [!DNL Platform]를 **[!UICONTROL 클릭한 다음 자격 증명]**&#x200B;을 **[!UICONTROL 클릭합니다]**.
 
 ## 다음 단계
 
