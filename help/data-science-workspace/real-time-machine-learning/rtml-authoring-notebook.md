@@ -5,7 +5,7 @@ title: 실시간 머신 러닝 노트북 사용자 가이드
 topic: Training and scoring a ML model
 description: 다음 가이드는 Adobe Experience Platform JupiterLab에서 실시간 머신 러닝 애플리케이션을 구축하는 데 필요한 단계에 대해 간략하게 설명합니다.
 translation-type: tm+mt
-source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '1656'
 ht-degree: 0%
@@ -86,13 +86,13 @@ pprint(nf.discover_nodes())
 >
 >실시간 **ML** 템플릿에서 [자동차 보험 CSV 데이터](https://github.com/adobe/experience-platform-dsw-reference/tree/master/datasets/insurance) 세트를 [!DNL Github]가져올 수있습니다.
 
-![데이터 로드](../images/rtml/load_training.png)
+![교육 데이터 로드](../images/rtml/load_training.png)
 
 Adobe Experience Platform 내에서 데이터 세트를 사용하려면 아래 셀의 주석을 해제합니다. 다음으로 적절한 값 `DATASET_ID` 으로 교체해야 합니다.
 
 ![rtml 데이터 집합](../images/rtml/rtml-dataset.png)
 
-노트북의 데이터 세트에 액세스하려면 의 왼쪽 탐색 [!DNL JupyterLab] 에서 **데이터** 탭을 선택합니다 [!DNL JupyterLab]. 데이터 *[!UICONTROL 집합]* 및 *[!UICONTROL 스키마]* 디렉토리가나타납니다. 데이터 집합 **[!UICONTROL 을]** 선택하고 마우스 오른쪽 단추를 클릭한 다음 사용할 데이터 **[!UICONTROL 의 드롭다운 메뉴에서]** 데이터 탐색 옵션을 선택합니다. 실행 가능한 코드 항목이 노트북 하단에 나타납니다. 이 셀에는 네 `dataset_id`가 있다.
+노트북의 데이터 세트에 액세스하려면 의 왼쪽 탐색 [!DNL JupyterLab] 에서 **데이터** 탭을 선택합니다 [!DNL JupyterLab]. 데이터 **[!UICONTROL 집합]** 및 **[!UICONTROL 스키마]** 디렉토리가나타납니다. 데이터 집합 **[!UICONTROL 을]** 선택하고 마우스 오른쪽 단추를 클릭한 다음 사용할 데이터 **[!UICONTROL 의 드롭다운 메뉴에서]** 데이터 탐색 옵션을 선택합니다. 실행 가능한 코드 항목이 노트북 하단에 나타납니다. 이 셀에는 네 `dataset_id`가 있다.
 
 ![데이터 액세스](../images/rtml/access-dataset.png)
 
@@ -113,11 +113,11 @@ config_properties = {
 
 ### 모델 준비
 
-실시간 *[!UICONTROL ML]* 템플릿을 사용하면 ML 모델을 분석, 사전 처리, 트레이닝 및 평가해야 합니다. 데이터 변형을 적용하고 교육 파이프라인을 구축하는 방식으로 이루어집니다.
+실시간 **[!UICONTROL ML]** 템플릿을 사용하면 ML 모델을 분석, 사전 처리, 트레이닝 및 평가해야 합니다. 데이터 변형을 적용하고 교육 파이프라인을 구축하는 방식으로 이루어집니다.
 
 **데이터 변형**
 
-실시간 *[!UICONTROL ML]* 템플릿 *데이터 변환* 셀을 수정하여 데이터 세트에 사용해야 합니다. 일반적으로 열 이름 변경, 데이터 롤업 및 데이터 준비/기능 엔지니어링이 포함됩니다.
+실시간 **[!UICONTROL ML]** 템플릿 *데이터 변환* 셀을 수정하여 데이터 세트에 사용해야 합니다. 일반적으로 열 이름 변경, 데이터 롤업 및 데이터 준비/기능 엔지니어링이 포함됩니다.
 
 >[!NOTE]
 >
@@ -410,7 +410,7 @@ print(f'Updated dsl: {updated_dsl}')
 
 ## 점수 지정 {#scoring}
 
-에 게시하면 [!DNL Edge]클라이언트의 POST 요청에 의해 점수가 매겨집니다. 일반적으로 ML 점수가 필요한 클라이언트 애플리케이션에서 이 작업을 수행할 수 있습니다. 포스트맨에서도 가능합니다. 실시간 *[!UICONTROL ML]* 템플릿은 EdgeUtils를 사용하여 이 프로세스를 보여줍니다.
+에 게시하면 [!DNL Edge]클라이언트의 POST 요청에 의해 점수가 매겨집니다. 일반적으로 ML 점수가 필요한 클라이언트 애플리케이션에서 이 작업을 수행할 수 있습니다. 포스트맨에서도 가능합니다. 실시간 **[!UICONTROL ML]** 템플릿은 EdgeUtils를 사용하여 이 프로세스를 보여줍니다.
 
 >[!NOTE]
 >
