@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Kinesis;kinesis;Amazon Kinesis;amazon kinesis
 solution: Experience Platform
 title: Flow Service API를 사용하여 Amazon Kinesis 커넥터 만들기
 topic: overview
+description: 이 자습서에서는 Flow Service API를 사용하여 Experience Platform을 Amazon Kinesis 계정에 연결하는 단계를 안내합니다.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
 workflow-type: tm+mt
-source-wordcount: '518'
+source-wordcount: '540'
 ht-degree: 2%
 
 ---
