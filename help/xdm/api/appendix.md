@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;compatibility;Compatibility;compatibility mode;Compatibility mode;field type;field types;
 solution: Experience Platform
 title: 스키마 레지스트리 개발자 부록
+description: 이 문서에서는 스키마 레지스트리 API 작업과 관련된 보충 정보를 제공합니다.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: cb5df9b44486bda84f08805f1077d6097e3666e2
+source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
 workflow-type: tm+mt
-source-wordcount: '1265'
+source-wordcount: '1278'
 ht-degree: 4%
 
 ---
