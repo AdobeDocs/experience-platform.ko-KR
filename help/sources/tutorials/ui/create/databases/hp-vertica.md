@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;HP Vertica
 solution: Experience Platform
 title: UI에 HP Vertica 소스 커넥터 만들기
 topic: overview
+description: 이 자습서에서는 플랫폼 사용자 인터페이스를 사용하여 HP Vertica 소스 커넥터를 만드는 단계를 제공합니다.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '494'
 ht-degree: 1%
 
 ---
