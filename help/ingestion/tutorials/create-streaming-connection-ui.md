@@ -4,7 +4,7 @@ solution: Experience Platform
 title: UI를 사용하여 스트리밍 연결 만들기
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: f8d13b305a61f8606c4fa1ceee6d4518b5d83fda
 workflow-type: tm+mt
 source-wordcount: '498'
 ht-degree: 0%
@@ -26,30 +26,30 @@ ht-degree: 0%
 
 ## 스트리밍 연결 만들기
 
-UI에 로그인한 후 [!DNL Experience Platform] 소스 **[!UICONTROL 를 클릭하여]** 카탈로그 *[!UICONTROL 탭을 엽니다]* . 이 페이지에는 사용 가능한 소스 유형이 개별 카드로 표시됩니다. 이 카드에는 스트리밍 연결에서 데이터 세트로 생성된 데이터 흐름 수가 표시되는 버블이 들어 있습니다.
+UI에 로그인한 후 [!DNL Experience Platform] 소스 **[!UICONTROL 를 클릭하여]** 카탈로그 **[!UICONTROL 탭을 엽니다]** . 이 페이지에는 사용 가능한 소스 유형이 개별 카드로 표시됩니다. 이 카드에는 스트리밍 연결에서 데이터 세트로 생성된 데이터 흐름 수가 표시되는 버블이 들어 있습니다.
 
 ![](../images/streaming-ingestion/ui/click-sources.png)
 
-[ *[!UICONTROL 소스]* ] 페이지에서 **[!UICONTROL HTTP API]**&#x200B;를 클릭한 다음 **[!UICONTROL Connect 소스를 클릭합니다]**.
+[ **[!UICONTROL 소스]** ] 페이지에서 **[!UICONTROL HTTP API]**&#x200B;를 클릭한 다음 **[!UICONTROL Connect 소스를 클릭합니다]**.
 
 ![](../images/streaming-ingestion/ui/click-connect-source.png)
 
-HTTP *[!UICONTROL 에 연결]* 화면이 나타납니다. 서비스 세부 *[!UICONTROL 정보]*&#x200B;아래에서 **** 새로운 스트리밍 연결에 대한 **[!UICONTROL 이름]** 및설명을모두제공합니다.
+HTTP **[!UICONTROL 에 연결]** 화면이 나타납니다. 서비스 세부 **[!UICONTROL 정보]**&#x200B;아래에서 **** 새로운 스트리밍 연결에 대한 **[!UICONTROL 이름]** 및설명을모두제공합니다.
 
-계정 *[!UICONTROL 인증]*&#x200B;아래에서 스트리밍 연결에 대해 다음 구성 속성을 선택합니다.
+계정 **[!UICONTROL 인증]**&#x200B;아래에서 스트리밍 연결에 대해 다음 구성 속성을 선택합니다.
 
-- **[!UICONTROL 인증]:**스트리밍 연결에 인증이 필요한지 여부입니다. 인증은 신뢰할 수 있는 소스에서 데이터를 수집합니다. PII(개인 식별 정보)를 처리하는 경우 이 기능이 켜지는 것이 좋습니다.
-- **[!UICONTROL XDM 스키마 호환성]:**이 스트리밍 연결이 XDM 스키마와 호환되는 이벤트를 전송할지 여부. 기본적으로 이 속성은**켜집니다&#x200B;**.
+- **[!UICONTROL 인증]:** 스트리밍 연결에 인증이 필요한지 여부입니다. 인증은 신뢰할 수 있는 소스에서 데이터를 수집합니다. PII(개인 식별 정보)를 처리하는 경우 이 기능이 켜지는 것이 좋습니다.
+- **[!UICONTROL XDM 스키마 호환성]:** 이 스트리밍 연결이 XDM 스키마와 호환되는 이벤트를 전송할지 여부. 기본적으로 이 속성은 **켜집니다**.
 
-구성 속성 선택이 끝나면 **[!UICONTROL Connect를 클릭합니다]**. 이제 스트리밍 HTTP 연결이 만들어지고 이제 소스 작업 영역의 *[!UICONTROL 찾아보기]* 탭 아래에서 *[!UICONTROL 볼 수]* 있습니다.
+구성 속성 선택이 끝나면 **[!UICONTROL Connect를 클릭합니다]**. 이제 스트리밍 HTTP 연결이 만들어지고 이제 소스 작업 영역의 **[!UICONTROL 찾아보기]** 탭 아래에서 **[!UICONTROL 볼 수]** 있습니다.
 
 ![](../images/streaming-ingestion/ui/http-sources-details.png)
 
-[ *[!UICONTROL 찾아보기]* ] 탭에서 새로 만든 스트리밍 HTTP 연결을 클릭하고 해당 연결의 세부 사항을 볼 수 있습니다.
+[ **[!UICONTROL 찾아보기]** ] 탭에서 새로 만든 스트리밍 HTTP 연결을 클릭하고 해당 연결의 세부 사항을 볼 수 있습니다.
 
 ![](../images/streaming-ingestion/ui/browse-sources.png)
 
-연결 이름의 하이퍼링크를 클릭하면 연결된 데이터 세트를 구성하여 표시할 데이터 *[!UICONTROL 를 선택할 수 있습니다]*.
+연결 이름의 하이퍼링크를 클릭하면 연결된 데이터 세트를 구성하여 표시할 데이터 **[!UICONTROL 를 선택할 수 있습니다]**.
 
 ![](../images/streaming-ingestion/ui/select-data.png)
 
