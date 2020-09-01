@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Analytics source connector;Analytics connector;Analytics source;analytics
 solution: Experience Platform
 title: UI에서 Adobe Analytics 소스 커넥터 만들기
 topic: overview
+description: 이 자습서에서는 소비자 데이터를 Adobe Experience Platform으로 가져오기 위해 UI에서 Adobe Analytics 소스 커넥터를 만드는 단계를 제공합니다.
 translation-type: tm+mt
-source-git-commit: 0479f5097b530dd97e28474d8e5eb832e5e44e5a
+source-git-commit: 0da686743e8bc57d310f7eff6f1bf812a8f31238
 workflow-type: tm+mt
-source-wordcount: '768'
+source-wordcount: '790'
 ht-degree: 1%
 
 ---
@@ -89,7 +90,7 @@ Adobe Analytics **[!UICONTROL 단계가]** 나타납니다. 이전에 설정한 
 
 ![](../../../../images/tutorials/create/analytics/data-gov.png)
 
-관리 *레이블* 편집 패널이 나타납니다. 이 화면에서는 데이터 세트 흐름의 계약, ID 및 중요한 레이블에 액세스하고 편집할 수 있습니다.
+관리 *레이블 편집* 패널이 나타납니다. 이 화면에서는 데이터 세트 흐름의 계약, ID 및 중요한 레이블에 액세스하고 편집할 수 있습니다.
 
 Analytics에서 오는 데이터에 레이블을 지정하는 방법에 대한 자세한 내용은 [데이터 사용 레이블 안내서를 참조하십시오](../../../../../data-governance/labels/user-guide.md).
 
