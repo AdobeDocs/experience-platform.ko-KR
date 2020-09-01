@@ -5,7 +5,7 @@ title: Attribution AI 입력 및 출력
 topic: Input and Output data for Attribution AI
 description: 다음 문서에서는 Attribution AI에서 사용되는 다양한 입력 및 출력 개요를 설명합니다.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '2075'
 ht-degree: 3%
@@ -136,11 +136,11 @@ Attribution AI은 모든 점수 열을 기준으로 점수를 슬라이스하여
 
 ### 원시 점수 경로 보기(UI) {#raw-score-path}
 
-UI에서 원시 점수의 경로를 볼 수 있습니다. 먼저 플랫폼 UI에서 **[!UICONTROL 스키마를]** 선택한 다음 검색 *[!UICONTROL 탭 내에서 속성 AI 점수 스키마를 검색하고 선택합니다]* .
+UI에서 원시 점수의 경로를 볼 수 있습니다. 먼저 플랫폼 UI에서 **[!UICONTROL 스키마를]** 선택한 다음 검색 **[!UICONTROL 탭 내에서 속성 AI 점수 스키마를 검색하고 선택합니다]** .
 
 ![스키마 선택](./images/input-output/schemas_browse.png)
 
-그런 다음 UI의 *[!UICONTROL 구조]* 창 내에서 필드를 선택하면 *[!UICONTROL 필드 속성]* 탭이열립니다. 필드 *[!UICONTROL 속성]* 내 *[!UICONTROL 는 원시 점수에 매핑되는]* 경로필드입니다.
+그런 다음 UI의 **[!UICONTROL 구조]** 창 내에서 필드를 선택하면 **[!UICONTROL 필드 속성]** 탭이열립니다. 필드 **[!UICONTROL 속성]** 내 **[!UICONTROL 는 원시 점수에 매핑되는]** 경로필드입니다.
 
 ![스키마 선택](./images/input-output/field_properties.png)
 
