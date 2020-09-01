@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 고객 세그먼트에 대한 데이터 사용 규정 준수
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '1335'
+source-wordcount: '1333'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 1%
 - [[!DNL 실시간 고객 프로필]](../../profile/home.md): [!DNL Real-time Customer Profile] 은 범용 조회 엔티티 저장소이며, XDM( [!DNL Experience Data Model] Lookup Entity) 데이터를 관리하는 데 사용됩니다 [!DNL Platform]. 프로필은 다양한 엔터프라이즈 데이터 에셋에 있는 데이터를 병합하고 통합 프레젠테이션에서 해당 데이터에 액세스할 수 있도록 합니다.
    - [정책 병합](../../profile/api/merge-policies.md):특정 조건 [!DNL Real-time Customer Profile] 에서 통합 보기로 병합할 수 있는 데이터를 결정하는 데 사용되는 규칙입니다. 병합 정책은 [!DNL Data Governance] 목적에 따라 구성할 수 있습니다.
 - [[!DNL 세그멘테이션]](../home.md):프로필 스토어에 포함된 대규모 개인 그룹을 비슷한 특성을 공유하고 마케팅 전략과 유사하게 반응하는 작은 그룹으로 나누는 방법 [!DNL Real-time Customer Profile] .
-- [[!DNL 데이터 거버넌스]](../../data-governance/home.md): [!DNL Data Governance] 다음 구성 요소를 사용하여 데이터 사용 레이블 지정 및 실행(DULE)을 위한 인프라를 제공합니다.
+- [[!DNL 데이터 거버넌스]](../../data-governance/home.md): [!DNL Data Governance] 에서는 다음 구성 요소를 사용하여 데이터 사용 레이블 지정 및 적용을 위한 인프라를 제공합니다.
    - [데이터 사용 레이블](../../data-governance/labels/user-guide.md):각 데이터를 처리하는 민감도 수준에서 데이터 세트와 필드를 설명하는 데 사용되는 레이블입니다.
    - [데이터 사용 정책](../../data-governance/policies/overview.md):특정 데이터 사용 레이블로 분류된 데이터에 허용되는 마케팅 작업을 나타내는 구성
    - [정책 실행](../../data-governance/enforcement/overview.md):데이터 사용 정책을 적용하고 정책 위반을 구성하는 데이터 작업을 방지할 수 있습니다.
@@ -187,7 +187,7 @@ curl -X GET \
 >
 > 이 단계에서는 특정 레이블을 포함하는 데이터에 대해 특정 마케팅 작업을 수행할 수 없도록 하는 활성 데이터 사용 정책이 하나 이상 있다고 가정합니다. 평가 중인 데이터 세트에 대해 적용 가능한 사용 정책이 없는 경우 [정책 작성 자습서에](../../data-governance/policies/create.md) 따라 하나를 만든 후 이 단계를 계속 진행하십시오.
 
-병합 정책의 소스 데이터 집합의 ID를 얻은 후에는 [DULE Policy Service API를](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) 사용하여 데이터 사용 정책 위반을 확인하기 위해 특정 마케팅 작업에 대해 이러한 데이터 세트를 평가할 수 있습니다.
+병합 정책의 소스 데이터 집합의 ID를 얻은 후에는 [정책 서비스 API를](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) 사용하여 데이터 사용 정책 위반을 확인하기 위해 특정 마케팅 작업에 대해 이러한 데이터 집합을 평가할 수 있습니다.
 
 데이터 세트를 평가하려면 아래 예와 같이 요청 본문 내에 데이터 세트 ID를 제공하면서 POST 요청 경로에 마케팅 작업의 이름을 제공해야 합니다.
 
