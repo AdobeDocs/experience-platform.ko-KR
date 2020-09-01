@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Query service;query service;Looker;looker;connect to query service;
 solution: Experience Platform
 title: 룩과 연결
 topic: connect
 translation-type: tm+mt
-source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
 workflow-type: tm+mt
 source-wordcount: '202'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # 연결 대상 [!DNL Looker]
 
-Adobe Experience Platform [!DNL Looker] 에 [!DNL Query Service] 연결하려면 아래 단계를 따르십시오.
+Adobe Experience Platform [!DNL Looker] 에서 [!DNL Query Service] 연결하려면 아래 단계를 따르십시오.
 
 로그인한 후 관리 [!DNL Looker]를 **[!UICONTROL 클릭한]**&#x200B;다음 **[!UICONTROL 연결을 클릭합니다]**.
 
@@ -36,7 +36,7 @@ Adobe Experience Platform [!DNL Looker] 에 [!DNL Query Service] 연결하려면
 
 >[!NOTE]
 >
->호스트 및 포트, 데이터베이스 이름 및 로그인 자격 증명을 찾는 방법에 대한 자세한 내용은 Platform의 [자격 증명 페이지를 참조하십시오](https://platform.adobe.com/query/configuration). 자격 증명을 찾으려면 로그인하고 쿼리 [!DNL Platform]를 **[!UICONTROL 클릭한 다음 자격 증명]**&#x200B;을 **[!UICONTROL 클릭합니다]**.
+>호스트 및 포트, 데이터베이스 이름 및 로그인 자격 증명을 찾는 방법에 대한 자세한 내용은 플랫폼의 [자격 증명 페이지를 참조하십시오](https://platform.adobe.com/query/configuration). 자격 증명을 찾으려면 로그인하고 쿼리 [!DNL Platform]를 **[!UICONTROL 클릭한 다음 자격 증명]**&#x200B;을 **[!UICONTROL 클릭합니다]**.
 
 연결 세부 사항을 입력한 후 [ **[!UICONTROL 이 설정]** 테스트]를 클릭하여 자격 증명이 제대로 작동하는지 확인합니다. 이러한 경우 연결할 수 있다는 메시지가 아래에 표시됩니다. 연결이 성공적으로 완료되면 연결 **[!UICONTROL 추가를]** 클릭하여 연결을 만듭니다.
 
