@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;cloud storage;Cloud storage
 solution: Experience Platform
 title: Flow Service API를 사용하여 클라우드 스토리지 시스템 살펴보기
 topic: overview
+description: 이 자습서에서는 Flow Service API를 사용하여 타사 클라우드 스토리지 시스템을 탐색합니다.
 translation-type: tm+mt
-source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
+source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
 workflow-type: tm+mt
-source-wordcount: '682'
+source-wordcount: '697'
 ht-degree: 2%
 
 ---
@@ -14,13 +15,13 @@ ht-degree: 2%
 
 # API를 사용하여 클라우드 스토리지 시스템 [!DNL Flow Service] 살펴보기
 
-[!DNL Flow Service] 는 Adobe Experience Platform 내의 다양한 소스에서 수집된 고객 데이터를 수집하고 중앙 집중화하는 데 사용됩니다. 이 서비스는 지원되는 모든 소스가 연결되어 있는 사용자 인터페이스와 RESTful API를 제공합니다.
+[!DNL Flow Service] 는 Adobe Experience Platform 내의 다양한 소스에서 수집된 고객 데이터를 수집하고 중앙에서 관리하는 데 사용됩니다. 이 서비스는 지원되는 모든 소스가 연결되어 있는 사용자 인터페이스와 RESTful API를 제공합니다.
 
 이 자습서에서는 [!DNL Flow Service] API를 사용하여 타사 클라우드 스토리지 시스템을 탐색합니다.
 
 ## 시작하기
 
-이 가이드는 다음과 같은 Adobe Experience Platform 구성 요소에 대해 작업해야 합니다.
+이 가이드는 Adobe Experience Platform의 다음 구성 요소에 대한 작업 이해를 필요로 합니다.
 
 * [소스](../../../home.md): [!DNL Experience Platform] 서비스를 사용하여 들어오는 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 다양한 소스에서 데이터를 수집할 수 [!DNL Platform] 있습니다.
 * [샌드박스](../../../../sandboxes/home.md): [!DNL Experience Platform] 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되도록 단일 [!DNL Platform] 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
@@ -45,7 +46,7 @@ API를 사용하여 타사 클라우드 스토리지를 탐색하려면 [!DNL Pl
 
 API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 합니다](../../../../tutorials/authentication.md). 인증 자습서를 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
 
-* 인증: 무기명 `{ACCESS_TOKEN}`
+* 인증:무기명 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
@@ -63,7 +64,7 @@ API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 
 
 | 매개 변수 | 설명 |
 | --------- | ----------- |
-| `objectType` | 탐색하려는 개체의 유형입니다. 다음 중 하나로 이 값을 설정합니다. <ul><li>`folder`: 특정 디렉토리 살펴보기</li><li>`root`: 루트 디렉토리를 살펴보십시오.</li></ul> |
+| `objectType` | 탐색하려는 개체의 유형입니다. 다음 중 하나로 이 값을 설정합니다. <ul><li>`folder`:특정 디렉토리 살펴보기</li><li>`root`:루트 디렉토리를 살펴보십시오.</li></ul> |
 | `object` | 이 매개 변수는 특정 디렉토리를 볼 때만 필요합니다. 이 값은 탐색할 디렉토리의 경로를 나타냅니다. |
 
 다음 호출을 사용하여 가져올 파일의 경로를 찾습니다 [!DNL Platform].
@@ -124,7 +125,7 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}
 | --- | --- |
 | `{BASE_CONNECTION_ID}` | 클라우드 스토리지 기반 연결의 ID입니다. |
 | `{FILE_PATH}` | 파일의 경로입니다. |
-| `{FILE_TYPE}` | 파일의 유형입니다. 지원되는 파일 유형은 다음과 같습니다.<ul><li>구분 기호</code>: 구분 기호로 구분된 값. DSV 파일은 쉼표로 구분되어야 합니다.</li><li>JSON</code>: JavaScript 개체 표기법. JSON 파일은 XDM과 호환되어야 합니다.</li><li>쪽모이 세공</code>: 아파치 쪽모이 세공. Parentheet 파일은 XDM과 호환되어야 합니다.</li></ul> |
+| `{FILE_TYPE}` | 파일의 유형입니다. 지원되는 파일 유형은 다음과 같습니다.<ul><li>구분 기호</code>:구분 기호로 구분된 값. DSV 파일은 쉼표로 구분되어야 합니다.</li><li>JSON</code>:JavaScript 개체 표기법. JSON 파일은 XDM과 호환되어야 합니다.</li><li>쪽모이 세공</code>:아파치 쪽모이 세공. Parentheet 파일은 XDM과 호환되어야 합니다.</li></ul> |
 
 **요청**
 
@@ -168,4 +169,4 @@ curl -X GET \
 
 ## 다음 단계
 
-이 튜토리얼을 통해 클라우드 스토리지 시스템을 살펴보고 가져올 파일의 경로를 발견했으며 해당 구조를 [!DNL Platform]살펴보았습니다. 다음 튜토리얼에서 이 정보를 사용하여 클라우드 저장소에서 데이터를 [수집하여 Platform으로 가져올 수 있습니다](../collect/cloud-storage.md).
+이 튜토리얼을 통해 클라우드 스토리지 시스템을 살펴보고 가져올 파일의 경로를 발견했으며 해당 구조를 [!DNL Platform]살펴보았습니다. 다음 튜토리얼에서 이 정보를 사용하여 클라우드 스토리지의 데이터를 [수집하여 Platform으로 가져올 수 있습니다](../collect/cloud-storage.md).
