@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;marketing automation connector
 solution: Experience Platform
 title: UI에서 마케팅 자동화 커넥터에 대한 데이터 흐름 구성
 topic: overview
+description: 데이터 흐름(Dataflow)은 소스에서 데이터 세트로 데이터를 검색하고 인제스트하는 예약된 [!DNL Platform] 작업입니다. 이 자습서에서는 마케팅 자동화 계정을 사용하여 새 데이터 흐름을 구성하는 절차를 제공합니다.
 translation-type: tm+mt
-source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
+source-git-commit: fb60e11b9502c31e654d3fbe5dc240ace9429332
 workflow-type: tm+mt
-source-wordcount: '1284'
+source-wordcount: '1315'
 ht-degree: 0%
 
 ---
