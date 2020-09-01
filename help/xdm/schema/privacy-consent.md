@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
+keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;consent;Consent;preferences;Preferences;privacyOptOuts;marketingPreferences;optOutType;basisOfProcessing;
 solution: Adobe Experience Platform
 title: 개인 정보 혼합 개요
+description: 개인 정보/마케팅 기본 설정(동의) 혼합은 CMP와 고객의 다른 소스에서 생성된 사용자 권한 및 기본 설정의 수집을 지원하기 위한 XDM(Experience Data Model) 혼합입니다. 이 문서에서는 믹싱에서 제공하는 다양한 필드의 구조와 용도에 대해 설명합니다.
 topic: guide
 translation-type: tm+mt
-source-git-commit: 02014c503dc9d4597e1129cafe3ba86f4abe37e9
+source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
 workflow-type: tm+mt
-source-wordcount: '1778'
+source-wordcount: '1827'
 ht-degree: 1%
 
 ---
@@ -238,7 +239,7 @@ ht-degree: 1%
 
 스키마에 혼합을 추가하는 방법에 대한 단계는 UI [에서](http://www.adobe.com/go/xdm-schema-editor-tutorial-en) 스키마를 만드는 방법에 대한 자습서를 참조하십시오. 이[!DNL  Privacy Consent] 혼합은 클래스 또는 [!DNL XDM Individual Profile] 를 기준으로 스키마와 호환됩니다 [!DNL XDM ExperienceEvent].
 
-혼합이 포함된 스키마를 만든 후에는 데이터 세트 사용자 안내서 [!DNL Privacy Consent] 에서 데이터 [세트](../../catalog/datasets/user-guide.md#create) 를 만드는 단계에 따라 데이터 세트 사용자 안내서의 데이터 세트생성 섹션을 참조하십시오.
+혼합이 포함된 스키마를 만든 후 데이터 세트 사용자 안내서 [!DNL Privacy Consent] 에서 데이터 [세트](../../catalog/datasets/user-guide.md#create) 를 만드는 단계에 따라 데이터 세트 사용자 안내서의 데이터 세트생성 섹션을 참조하십시오.
 
 >[!IMPORTANT]
 >
@@ -254,11 +255,11 @@ ht-degree: 1%
 
 | 값 | 설명 |
 | --- | --- |
-| `general_opt_out` | 데이터는 어떤 목적으로도 사용할 수 없습니다. 일반적으로 처리 기준이 &quot;동의&quot;가 아닌 경우를 제외하고 데이터 수집을 차단합니다.<br><br>이 옵트아웃 유형을 사용하는 경우 허용된 값 `in` 이 다음 컨텍스트 의미를 `out` 얻습니다.<ul><li>`in`: 사용자 **는 데이터를 일반 처리에 사용하는 것에 대한 동의를** 제공했습니다.</li><li>`out`: 사용자 **는 일반 처리에 사용되는 데이터에 동의하지** 않습니다.</li></ul>자세한 내용은 xdm:optOutValue의 [허용된 값에 대한](#choice-optOutValue-values) 표를 참조하십시오. |
+| `general_opt_out` | 데이터는 어떤 목적으로도 사용할 수 없습니다. 일반적으로 처리 기준이 &quot;동의&quot;가 아닌 경우를 제외하고 데이터 수집을 차단합니다.<br><br>이 옵트아웃 유형을 사용하는 경우 허용된 값 `in` 이 다음 컨텍스트 의미를 `out` 얻습니다.<ul><li>`in`:사용자 **는 데이터를 일반 처리에 사용하는 것에 대한 동의를** 제공했습니다.</li><li>`out`:사용자 **는 일반 처리에 사용되는 데이터에 동의하지** 않습니다.</li></ul>자세한 내용은 xdm:optOutValue의 [허용된 값에 대한](#choice-optOutValue-values) 표를 참조하십시오. |
 | `anonymous_analysis` | 특정 페이지를 본 횟수와 같은 사용자 ID 유형이 필요하지 않은 일반 웹 지표에는 데이터를 사용할 수 없습니다. |
 | `device_linking` | 방문자가 사용하는 한 장치의 데이터는 동일한 방문자가 사용하는 다른 장치의 데이터와 결합할 수 없습니다. 장치는 일반적인 사용자 이름 또는 이메일 주소와 같은 기술을 사용하여 연결되며, Adobe 장치 협력 또는 개인 장치 그래프를 통하기도 합니다. |
 | `pseudonymous_analysis` | 이 데이터는 사용자가 웹 사이트를 통해 선택하는 경로(폴아웃 보고서 등)를 식별하고 세션을 설정하고 속성을 부여하기 위해 익명의 ID가 필요한 Adobe Analytics이 제공하는 웹 지표에 사용할 수 없습니다. |
-| `sales_sharing_opt_out` | 데이터를 판매 목적으로 사용하거나 제3자와 공유할 수 없습니다.<br><br>이 옵트아웃 유형을 사용하는 경우 허용된 값 `in` 이 다음 컨텍스트 의미를 `out` 얻습니다.<ul><li>`in`: 사용자 **는 데이터를 판매와 공유 목적으로 사용하기 위해 동의했습니다** .</li><li>`out`: 사용자는 판매 및 공유 목적으로 사용되는 데이터에 **동의하지** 않습니다.</li></ul>자세한 내용은 xdm:optOutValue의 [허용된 값에 대한](#choice-optOutValue-values) 표를 참조하십시오. |
+| `sales_sharing_opt_out` | 데이터를 판매 목적으로 사용하거나 제3자와 공유할 수 없습니다.<br><br>이 옵트아웃 유형을 사용하는 경우 허용된 값 `in` 이 다음 컨텍스트 의미를 `out` 얻습니다.<ul><li>`in`:사용자 **는 데이터를 판매와 공유 목적으로 사용하기 위해 동의했습니다** .</li><li>`out`:사용자는 판매 및 공유 목적으로 사용되는 데이터에 **동의하지** 않습니다.</li></ul>자세한 내용은 xdm:optOutValue의 [허용된 값에 대한](#choice-optOutValue-values) 표를 참조하십시오. |
 
 ### xdm:basisOfProcessing에 허용된 값 {#basisOfProcessing-values}
 
@@ -266,7 +267,7 @@ ht-degree: 1%
 
 | 값 | 설명 |
 | --- | --- |
-| `consent` **(기본값)** | 개인이 명시적 권한을 제공했다면 지정된 용도에 대한 데이터 수집이 허용됩니다. 다른 값이 제공되지 `xdm:basisOfProcessing` 않는 경우 이 값이 기본값입니다. <br><br>**중요&#x200B;**: 에 대한 값`xdm:choice`과`xdm:optOutValue`는 를 로 설정한 경우에만`xdm:basisOfProcessing`적용됩니다`consent`. 이 표에 나와 있는 다른 값 중 하나를`xdm:basisOfProcessing`대신 사용하는 경우 개인의 동의 선택은 무시됩니다. |
+| `consent` **(기본값)** | 개인이 명시적 권한을 제공했다면 지정된 용도에 대한 데이터 수집이 허용됩니다. 다른 값이 제공되지 `xdm:basisOfProcessing` 않는 경우 이 값이 기본값입니다. <br><br>**중요**:에 대한 값 `xdm:choice` 과 `xdm:optOutValue` 는 를 로 설정한 경우에만 `xdm:basisOfProcessing` 적용됩니다 `consent`. 이 표에 나와 있는 다른 값 중 하나를 `xdm:basisOfProcessing` 대신 사용하는 경우 개인의 동의 선택은 무시됩니다. |
 | `compliance` | 기업의 법적 책임을 충족하기 위해서는 특정 목적을 위한 데이터를 수집해야 합니다. |
 | `contract` | 특정 목적을 위한 데이터 수집은 개인 사용자와 계약 의무를 충족해야 합니다. |
 | `legitimate_interest` | 특정 목적을 위해 이러한 데이터를 수집 및 처리하는 합법적인 비즈니스 이익은 개인에게 미칠 수 있는 잠재적인 해악을 능가합니다. |
