@@ -5,7 +5,7 @@ title: 지능형 서비스에서 사용할 데이터 준비
 topic: Intelligent Services
 description: 'Intelligent Services가 마케팅 이벤트 데이터에서 얻은 통찰력을 얻으려면 데이터가 세밀하게 농축되어 표준 구조로 유지되어야 합니다. 지능형 서비스는 이를 달성하기 위해 XDM(Experience Data Model) 스키마를 활용합니다. 특히, Intelligent Services에서 사용되는 모든 데이터 세트는 CEE(Consumer ExperienceEvent) XDM 스키마를 따라야 합니다. '
 translation-type: tm+mt
-source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '1980'
 ht-degree: 0%
@@ -75,7 +75,7 @@ CEE 믹스에는 유용한 인사이트를 생성하기 위해 활용해야 하�
 * &quot;mcid&quot;(Adobe Audience Manager ID용)
 * &quot;aid&quot;(Adobe Analytics ID용)
 
-기본 ID로 사용해야 하는 필드를 잘 모르는 경우 Adobe 컨설팅 서비스에 문의하여 최상의 솔루션을 결정하십시오.
+기본 ID로 사용해야 하는 필드를 잘 모르는 경우 Adobe 컨설팅 서비스에 문의하여 최상의 솔루션을 확인하십시오.
 
 #### xdm:타임스탬프 {#timestamp}
 
@@ -272,7 +272,7 @@ CEE 믹스에는 유용한 인사이트를 생성하기 위해 활용해야 하�
 * [UI에서 데이터 세트](../catalog/datasets/user-guide.md#create) 만들기(기존 스키마 사용 워크플로우에 따라)
 * [API에서 데이터 세트 만들기](../catalog/datasets/create.md)
 
-데이터 세트를 만든 후 데이터 세트 작업 공간 내의 플랫폼 UI에서 *[!UICONTROL 찾을 수]* 있습니다.
+데이터 세트를 만든 후 데이터 세트 작업 공간 내의 플랫폼 UI에서 **[!UICONTROL 찾을 수]** 있습니다.
 
 ![](images/data-preparation/dataset-location.png)
 
