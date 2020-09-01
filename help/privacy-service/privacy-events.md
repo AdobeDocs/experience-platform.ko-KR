@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 개인 정보 보호 이벤트 구독
 topic: privacy events
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '843'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # 구독 대상 [!DNL Privacy Events]
 
-[!DNL Privacy Events] 은 효율적인 작업 요청 자동화 [!DNL Privacy Service]를 위해 구성된 웹후크에 Adobe I/O 이벤트를 활용하는 Adobe Experience Platform에서 제공하는 메시지입니다. 작업이 완료되었는지 또는 워크플로우 내의 특정 이정표에 도달했는지 확인하기 위해 [!DNL Privacy Service] API를 폴링할 필요가 없어집니다.
+[!DNL Privacy Events] 은 효율적인 작업 요청 자동화를 촉진하기 위해 구성된 웹후크에 Adobe I/O 이벤트를 활용하는 Adobe Experience Platform [!DNL Privacy Service]가 제공하는 메시지입니다. 작업이 완료되었는지 또는 워크플로우 내의 특정 이정표에 도달했는지 확인하기 위해 [!DNL Privacy Service] API를 폴링할 필요가 없어집니다.
 
 개인 정보 작업 요청 라이프사이클과 관련된 4가지 유형의 알림이 현재 있습니다.
 
@@ -74,7 +74,7 @@ app.listen(app.get('port'), function() {
 
 ## Adobe 개발자 콘솔에서 새 프로젝트 만들기
 
-Adobe 개발자 [콘솔로](https://www.adobe.com/go/devs_console_ui) 이동하여 Adobe ID으로 로그인합니다. 그런 다음 Adobe 개발자 콘솔 설명서에서 빈 프로젝트 [를 만드는](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) 자습서에 나와 있는 단계를 따릅니다.
+Adobe 개발자 [콘솔로](https://www.adobe.com/go/devs_console_ui) 이동하여 Adobe ID에 로그인합니다. 그런 다음 Adobe 개발자 콘솔 설명서에서 빈 프로젝트 [를 만드는](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) 자습서에 나와 있는 단계를 따릅니다.
 
 ## 프로젝트에 개인 정보 이벤트 추가
 
@@ -86,7 +86,7 @@ Adobe 개발자 [콘솔로](https://www.adobe.com/go/devs_console_ui) 이동하�
 
 ![](./images/privacy-events/add-privacy-events.png)
 
-[ _이벤트 등록_ 구성] 대화 상자가 나타납니다. 해당 확인란을 선택하여 받을 이벤트를 선택합니다. 선택한 이벤트는 왼쪽 열의 _[!UICONTROL 구독된 이벤트]_아래에 나타납니다. 완료되면 [다음]을**[!UICONTROL &#x200B;클릭합니다&#x200B;]**.
+[ _이벤트 등록_ 구성] 대화 상자가 나타납니다. 해당 확인란을 선택하여 받을 이벤트를 선택합니다. 선택한 이벤트는 왼쪽 열의 **[!UICONTROL 구독된 이벤트]** 아래에 나타납니다. When finished, click **[!UICONTROL Next]**.
 
 ![](./images/privacy-events/choose-subscriptions.png)
 
@@ -106,11 +106,11 @@ Adobe 개발자 [콘솔로](https://www.adobe.com/go/devs_console_ui) 이동하�
 
 ![](./images/privacy-events/event-details.png)
 
-동일한 화면에서 추가로, 이벤트를 수신하는 방법을 구성하는 두 가지 옵션이 제공됩니다. 웹 후크 **[!UICONTROL 를]** 선택하고 Webhook URL에서 이전에 만든 웹 후크의 `Forwarding` URL을 _[!UICONTROL 제공합니다]_. 다음으로, [구성된 이벤트**[!UICONTROL &#x200B;저장]을 클릭하여 이벤트 등록을 완료하기 전에 원하는 배달 스타일(단일 또는 배치)을&#x200B;]**선택합니다.
+동일한 화면에서 추가로, 이벤트를 수신하는 방법을 구성하는 두 가지 옵션이 제공됩니다. 웹 후크 **[!UICONTROL 를]** 선택하고 Webhook URL에서 이전에 만든 웹 후크의 `Forwarding` URL을 **[!UICONTROL 제공합니다]**. 다음으로, [구성된 이벤트 **[!UICONTROL 저장]을 클릭하여 이벤트 등록을 완료하기 전에 원하는 배달 스타일(단일 또는 배치)을]** 선택합니다.
 
 ![](./images/privacy-events/webhook-details.png)
 
-왼쪽 탐색 창의 이벤트 [!DNL Privacy Events] 아래에 표시되는 프로젝트의 세부 사항 _[!UICONTROL 페이지가]_다시 나타납니다.
+왼쪽 탐색 창의 이벤트 [!DNL Privacy Events] 아래에 표시되는 프로젝트의 세부 사항 **[!UICONTROL 페이지가]** 다시 나타납니다.
 
 ## 이벤트 데이터 보기
 
@@ -126,7 +126,7 @@ Adobe 개발자 [콘솔로](https://www.adobe.com/go/devs_console_ui) 이동하�
 
 ![](images/privacy-events/debug-tracing.png)
 
-페이로드 _[!UICONTROL 섹션]_은 위의 예에서 강조표시된 대로 선택한 이벤트에 대한 세부 사항(이벤트 유형`com.adobe.platform.gdpr.productcomplete`)을 제공합니다.
+페이로드 **[!UICONTROL 섹션]** 은 위의 예에서 강조표시된 대로 선택한 이벤트에 대한 세부 사항(이벤트 유형`com.adobe.platform.gdpr.productcomplete`)을 제공합니다.
 
 ## 다음 단계
 
