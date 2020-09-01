@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Amazon Redshift;amazon redshift;Redshift;redshift
 solution: Experience Platform
 title: UI에서 Amazon Redshift 소스 커넥터 만들기
 topic: overview
+description: 이 자습서에서는 플랫폼 사용자 인터페이스를 사용하여 Amazon Redshift(이하 "Redshift") 소스 커넥터를 만드는 단계를 제공합니다.
 translation-type: tm+mt
-source-git-commit: dd036cf4df5d772206d2b73292c60f2d866ba0de
+source-git-commit: f82dfee2c75a0b8b2ec1615266780b309152ead4
 workflow-type: tm+mt
-source-wordcount: '457'
+source-wordcount: '478'
 ht-degree: 1%
 
 ---
