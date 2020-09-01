@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 실시간 고객 프로필의 개인 정보 요청 처리
 topic: overview
 translation-type: tm+mt
-source-git-commit: c8446f6040ac9ef1f4196d9057b531011e243258
+source-git-commit: 397f08efa276f7885e099a0a8d9dc6d23fe0e8cc
 workflow-type: tm+mt
 source-wordcount: '603'
 ht-degree: 0%
@@ -93,7 +93,7 @@ curl -X POST \
 
 ### UI 사용
 
-UI에서 작업 요청을 만들 때는 **[!UICONTROL 제품]** 아래의 **[!UICONTROL AEP 데이터 레이크]** 및/또는 _[!UICONTROL 프로필]_[!DNL Data Lake] 을 선택하여 [!DNL Real-time Customer Profile]데이터에 저장된 작업을각각 처리하거나 지연에 있는 AEP 데이터및 프로필을선택하십시오.
+UI에서 작업 요청을 만들 때는 **[!UICONTROL 제품]** 아래의 **[!UICONTROL AEP 데이터 레이크]** 및/또는 **[!UICONTROL 프로필]**[!DNL Data Lake] 을 선택하여 [!DNL Real-time Customer Profile]데이터에 저장된 작업을각각 처리하거나 지연에 있는 AEP 데이터및 프로필을선택하십시오.
 
 <img src="images/privacy/product-value.png" width="450"><br>
 
