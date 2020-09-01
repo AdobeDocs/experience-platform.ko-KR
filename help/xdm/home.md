@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;XDM;XDM system;XDM individual profile;XDM ExperienceEvent;XDM Experience Event;experienceEvent;experience event;Mixins;mixins;mixin;Mixin;Experience event;XDM Experience Event;XDM ExperienceEvent;experienceEvent;experienceevent;XDM Experienceevenet
+keywords: Experience Platform;home;popular topics;XDM;XDM system;XDM individual profile;XDM ExperienceEvent;XDM Experience Event;experienceEvent;experience event;Mixins;mixins;mixin;Mixin;Experience event;XDM Experience Event;XDM ExperienceEvent;experienceEvent;experienceevent;XDM Experienceevenet;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;schema library;Schema Library;schema;record data;time series;time-series
 solution: Experience Platform
 title: XDM(Experience Data Model) 시스템
 topic: overview
 description: '표준화 및 상호 운용성은 Adobe Experience Platform의 핵심 개념입니다. Adobe을 기반으로 하는 XDM(Experience Data Model)은 고객 경험 데이터를 표준화하고 고객 경험 관리를 위한 스키마를 정의하는 것입니다. '
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: ed1f2fdac0f9c977d11c867327c084353c1bcd0f
 workflow-type: tm+mt
 source-wordcount: '1638'
 ht-degree: 1%
@@ -98,13 +98,13 @@ Adobe Experience Platform [!DNL Query Service] 를 사용하면 표준 SQL을 �
 
 데이터 [!DNL XDM Individual Profile] 와 [!DNL XDM ExperienceEvent] 데이터가 수집 및 관리되므로 [!DNL Catalog]데이터 사용 [!DNL Real-time Customer Profile] 이 활성화된 데이터를 인제스트하기 시작합니다. 수집되는 인터랙션과 세부 사항이 많을수록 더욱 강력한 개별 프로필이 만들어집니다.
 
-[!DNL XDM Individual Profile] 데이터는 모든 채널 또는 Adobe 솔루션 통합 전반에서 동작을 알려주고 강화하며, 행동 및 인터랙션 데이터의 풍부하고 앞선 데이터와 결합하여 이 데이터를 머신 러닝에 활용할 수 있도록 도와줍니다. 또한 [!DNL Real-time Customer Profile] API를 사용하여 타사 솔루션, CRM 및 독점 솔루션의 기능을 강화할 수 있습니다.
+[!DNL XDM Individual Profile] 데이터는 모든 채널 또는 Adobe 솔루션 통합 전반에서 동작을 알려주고 강화하며, 행동 및 상호 작용 데이터의 풍부한 내역을 연결하는 경우 이 데이터를 시스템 학습에 활용합니다. 또한 [!DNL Real-time Customer Profile] API를 사용하여 타사 솔루션, CRM 및 독점 솔루션의 기능을 강화할 수 있습니다.
 
 자세한 내용은 [실시간 고객 프로필 개요를](../profile/home.md) 참조하십시오.
 
 ### [!DNL Data Science Workspace]
 
-Adobe Experience Platform [!DNL Data Science Workspace] 는 기계 학습과 인공 지능을 사용하여 안에 저장된 데이터를 통해 통찰력을 얻고 [!DNL Experience Platform]있습니다. [!DNL Data Science Workspace] 데이터 과학자는 XDM 개인 사용자 [!DNL Profile] 와 고객 및 고객 활동에 대한 [!DNL XDM ExperienceEvent] 데이터를 기반으로 레시피를 제작하여 개개인에게 인식되고 사용할 가능성이 높은 고객 성향 및 제안 등 예측 가능성을 제공할 수 있습니다.
+Adobe Experience Platform [!DNL Data Science Workspace] 는 기계 학습과 인공 지능을 사용하여 안에 저장된 데이터를 통해 통찰력을 얻고 [!DNL Experience Platform]있습니다. [!DNL Data Science Workspace] 데이터 과학자는 XDM 개인 사용자 [!DNL Profile] 와 고객 및 고객 활동에 대한 [!DNL XDM ExperienceEvent] 데이터를 기반으로 레시피를 제작하여 개인이 평가하고 사용할 가능성이 높은 고객 성향 및 제안 등을 손쉽게 예측할 수 있도록 합니다.
 
 데이터 [!DNL Data Science Workspace]과학자는 머신 러닝 기반의 지능형 서비스 API를 쉽게 만들 수 있습니다. 이러한 서비스는 Adobe Target, Adobe Analytics Cloud 등 다른 Adobe 솔루션과 연동되므로 개인화된 디지털 경험을 자동화할 수 있습니다.
 
