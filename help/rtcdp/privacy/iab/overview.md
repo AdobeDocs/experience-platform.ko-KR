@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 실시간 고객 데이터 플랫폼의 IAB TCF 2.0 지원
 topic: privacy events
 translation-type: tm+mt
-source-git-commit: 06eda1502d34da1caeebbe9b753dd437bbd9d6ab
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '2388'
 ht-degree: 1%
@@ -20,7 +20,7 @@ IAB( [!DNL Transparency & Consent Framework] TCF) [!DNL Interactive Advertising 
 >
 >TCF 2.0에 대한 자세한 내용은 지원 자료와 기술 사양 등 [IAB 유럽 웹](https://iabeurope.eu/tcf-2-0/)사이트에서 확인할 수 있습니다.
 
-[!DNL Real-time Customer Data Platform (Real-time CDP)] 은 ID [565](https://iabeurope.eu/vendor-list-tcf-v2-0/)아래에 등록된 IAB TCF 2.0 공급업체 목록 ****&#x200B;중 일부입니다. TCF 2.0 요구 사항을 준수하여 고객 동의 데이터를 수집하고 저장된 고객 프로파일에 통합할 수 [!DNL Real-time CDP] 있습니다. 그런 다음 사용 사례에 따라 프로파일을 내보낸 대상 세그먼트에 포함할지 여부를 이 동의 데이터를 포함할 수 있습니다.
+[!DNL Real-time Customer Data Platform (Real-time CDP)] 은 ID [565](https://iabeurope.eu/vendor-list-tcf-v2-0/)아래에 등록된 IAB TCF 2.0 공급업체 목록 ****&#x200B;중 일부입니다. TCF 2.0 요구 사항을 준수하여 고객 동의 데이터를 수집하고 저장된 고객 프로파일에 통합할 수 [!DNL Real-time CDP] 있습니다. 그런 다음 이 동의 데이터를 사용 사례에 따라 내보낸 대상 세그먼트에 프로필이 포함되는지 여부를 고려시킬 수 있습니다.
 
 >[!IMPORTANT]
 >
@@ -60,7 +60,7 @@ IAB( [!DNL Transparency & Consent Framework] TCF) [!DNL Interactive Advertising 
 1. 를 사용하여 [!DNL Experience Platform Web SDK]생성된 동의 데이터(CMP에서 반환)가 Adobe Experience Platform으로 전송됩니다.
 1. 수집된 동의 데이터는 스키마에 IAB 동의 필드가 포함된 [!DNL Profile]사용 가능한 데이터 세트에 수집됩니다.
 
-CMP 동의-변경 갈등에 의해 트리거되는 SDK 명령 외에도 동의 데이터는 고객이 생성한 XDM 데이터 [!DNL Experience Platform] 를 통해 전달되어 데이터 [!DNL Profile]지원 데이터 세트에 직접 업로드됩니다.
+CMP 동의-변경 갈등에 의해 트리거되는 SDK 명령 외에도 동의 데이터는 고객 생성 XDM 데이터 [!DNL Experience Platform] 를 통해 전달되므로 데이터 [!DNL Profile]가 활성화된 데이터 세트에 직접 업로드됩니다.
 
 Adobe Audience Manager [!DNL Platform] 가 공유한 모든 세그먼트(소스 커넥터 또는 기타 다른 방법을 통해)는 동의 데이터도 포함할 수 있습니다. 단, 해당 필드가 을 통해 해당 세그먼트에 적용되었다면 이 데이터도 포함할 수 [!DNL Audience Manager] [!DNL Experience Cloud Identity Service]있습니다. 동의서 데이터 수집에 대한 자세한 내용 [!DNL Audience Manager]은 IAB TCF용 [Adobe Audience Manager 플러그인에 있는 문서를 참조하십시오](https://docs.adobe.com/help/ko-KR/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html).
 
@@ -121,7 +121,7 @@ TCF 사양에서 동의 문자열은 정책과 공급업체에서 정의한 특�
 
 SDK에서 데이터를 전송하려면 [!DNL Experience Platform], 먼저 에 대한 새 Edge 구성 [!DNL Platform] 을 만들어야 합니다 [!DNL Adobe Experience Platform Launch]. 새 구성을 만드는 방법에 대한 특정 단계는 [SDK 설명서에서 제공됩니다](../../../edge/fundamentals/edge-configuration.md).
 
-구성에 고유한 이름을 제공한 후 *[!UICONTROL Adobe Experience Platform]*&#x200B;옆에 있는 전환 단추를 선택합니다. 다음 값을 사용하여 양식의 나머지 부분을 완료합니다.
+구성에 고유한 이름을 제공한 후 **[!UICONTROL Adobe Experience Platform]**&#x200B;옆에 있는 전환 단추를 선택합니다. 다음 값을 사용하여 양식의 나머지 부분을 완료합니다.
 
 | Edge 구성 필드 | 값 |
 | --- | --- |
@@ -197,7 +197,7 @@ OneTrust.OnConsentChanged(function () {
 >
 >이 메서드를 사용하려면 이 메서드를 사용 가능한 스키마 [!DNL Experience Event Privacy mixin] 에 [!DNL Profile]추가해야 [!DNL XDM ExperienceEvent] 합니다. 이 구성 방법에 대한 단계는 데이터 집합 준비 안내서의 ExperienceEvent 스키마 [](./dataset-preparation.md#event-schema) 업데이트에 대한 섹션을 참조하십시오.
 
-이 `sendEvent` 명령은 웹 사이트에서 적절한 이벤트 리스너에 있는 콜백으로 사용해야 합니다. 명령에는 두 개의 인수가 필요합니다.(1) 명령 유형(이 경우 &quot;sendEvent&quot;)을 나타내는 문자열 및 (2) 필수 동의 필드를 JSON으로 제공하는 `xdm` 개체가 포함된 페이로드:
+이 `sendEvent` 명령은 웹 사이트에서 적절한 이벤트 리스너에 있는 콜백으로 사용해야 합니다. 명령은 다음 두 개의 인수를 예상합니다.(1) 명령 유형(이 경우 &quot;sendEvent&quot;)을 나타내는 문자열 및 (2) 필수 동의 필드를 JSON으로 제공하는 `xdm` 개체가 포함된 페이로드:
 
 ```js
 alloy("sendEvent", {
