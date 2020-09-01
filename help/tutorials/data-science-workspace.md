@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;dsw;DSW
 solution: Experience Platform
 title: 데이터 과학 작업 공간 자습서
 topic: tutorial
+description: Adobe Experience Platform 데이터 과학 작업 공간은 머신 러닝과 인공 지능을 사용하여 데이터를 통해 인사이트를 생성합니다. Adobe Experience Platform에 통합된 데이터 과학 작업 공간은 Adobe 솔루션에서 컨텐츠와 데이터 자산을 사용하여 예측할 수 있도록 도와줍니다.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
 workflow-type: tm+mt
-source-wordcount: '1171'
+source-wordcount: '1210'
 ht-degree: 0%
 
 ---
