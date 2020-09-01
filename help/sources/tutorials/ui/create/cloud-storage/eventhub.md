@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Azure Event Hubs;Event Hubs;azure event hubs
 solution: Experience Platform
 title: UI에서 Azure 이벤트 허브 원본 커넥터 만들기
 topic: overview
+description: 이 자습서에서는 플랫폼 사용자 인터페이스를 사용하여 Azure 이벤트 허브(이하 "이벤트 허브") 소스 커넥터를 인증하는 단계를 제공합니다.
 translation-type: tm+mt
-source-git-commit: a664a0420189d6a2dda9f33b3aa58cb4883e252f
+source-git-commit: 0da686743e8bc57d310f7eff6f1bf812a8f31238
 workflow-type: tm+mt
-source-wordcount: '472'
+source-wordcount: '495'
 ht-degree: 1%
 
 ---
