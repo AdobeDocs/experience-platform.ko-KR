@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;ui;UI;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema editor;Schema Editor;schema;Schema;schemas;Schemas;create;relationship;Relationship;reference;Reference;
 solution: Experience Platform
 title: 스키마 편집기를 사용하여 두 스키마 간의 관계 정의
+description: 이 문서에서는 Experience Platform 사용자 인터페이스의 스키마 편집기를 사용하여 두 스키마 간의 관계를 정의하는 자습서를 제공합니다.
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: d847329f675c7ac34a4feabb9e57a9e97f7e3ed1
+source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
 workflow-type: tm+mt
-source-wordcount: '911'
+source-wordcount: '933'
 ht-degree: 0%
 
 ---
@@ -42,7 +43,7 @@ ht-degree: 0%
 
 ### [!UICONTROL 충성도 구성원] 스키마
 
-소스 스키마 &quot;[!UICONTROL 충성도]멤버 [!DNL Individual Profile] &quot;는 XDM [클래스를 기반으로 하며, UI에서 스키마를](create-schema-ui.md)만들기 위해 자습서에서 생성된 스키마입니다. 여기에는 몇 개의 로열티별 필드가 포함된 &quot;\_tenantId&quot; 네임스페이스 아래에 &quot;[!UICONTROL 충성도]&quot; 개체가 포함됩니다. 이러한 필드 중 하나인 &quot;loyaltyId&quot;는 &quot;[!UICONTROL Email]&quot; 네임스페이스 아래의 스키마의 기본 ID로 사용됩니다. 스키마 _[!UICONTROL 속성]_아래에서 보듯이 이 스키마는 에서 사용할 수 있게[!DNL Real-time Customer Profile]설정되었습니다.
+소스 스키마 &quot;[!UICONTROL 충성도]멤버 [!DNL Individual Profile] &quot;는 XDM [클래스를 기반으로 하며, UI에서 스키마를](create-schema-ui.md)만들기 위해 자습서에서 생성된 스키마입니다. 여기에는 몇 개의 로열티별 필드가 포함된 &quot;\_tenantId&quot; 네임스페이스 아래에 &quot;[!UICONTROL 충성도]&quot; 개체가 포함됩니다. 이러한 필드 중 하나인 &quot;loyaltyId&quot;는 &quot;[!UICONTROL Email]&quot; 네임스페이스 아래의 스키마의 기본 ID로 사용됩니다. 스키마 _[!UICONTROL 속성]_&#x200B;아래에서 보듯이 이 스키마는 에서 사용할 수 있게 [!DNL Real-time Customer Profile]설정되었습니다.
 
 ![](../images/tutorials/relationship/loyalty-members.png)
 
@@ -60,19 +61,19 @@ ht-degree: 0%
 
 두 스키마 간의 관계를 정의하려면 소스 스키마에 대상 스키마에 대한 참조로 사용할 전용 필드가 있어야 합니다. 새 혼합을 만들어 이 필드를 소스 스키마에 추가할 수 있습니다.
 
-먼저 믹싱 **[!UICONTROL 섹션에서]** 추가를 _[!UICONTROL 클릭합니다]_.
+먼저 믹싱 **[!UICONTROL 섹션에서]** 추가를 _[!UICONTROL 클릭합니다]_ .
 
 ![](../images/tutorials/relationship/loyalty-add-mixin.png)
 
-[ _[!UICONTROL 혼합 추가]_] 대화 상자가 나타납니다. 여기에서 [새**[!UICONTROL &#x200B;믹서 만들기]를 클릭합니다&#x200B;]**. 나타나는 텍스트 필드에 새 혼합에 대한 표시 이름과 설명을 입력합니다. 완료되면**[!UICONTROL &#x200B;믹신&#x200B;]**추가를 클릭합니다.
+[ _[!UICONTROL 혼합 추가]_ ] 대화 상자가 나타납니다. 여기에서 [새 **[!UICONTROL 믹서 만들기]를 클릭합니다]**. 나타나는 텍스트 필드에 새 혼합에 대한 표시 이름과 설명을 입력합니다. 완료되면 **[!UICONTROL 믹신]** 추가를 클릭합니다.
 
 <img src="../images/tutorials/relationship/loyalty-create-new-mixin.png" width="750"><br>
 
-Mixins 섹션에 &quot;[!UICONTROL Loyalty Relationship]&quot;이 나타나면서 캔버스가 다시 _[!UICONTROL 나타납니다]_. 혼합 이름을 클릭한 다음 루트 수준 &quot;**[!UICONTROL &#x200B;충성도 구성원&#x200B;]**&quot; 필드 옆에 있는 필드[!UICONTROL 추가를]클릭합니다.
+Mixins 섹션에 &quot;[!UICONTROL Loyalty Relationship]&quot;이 나타나면서 캔버스가 다시 _[!UICONTROL 나타납니다]_ . 혼합 이름을 클릭한 다음 루트 수준 &quot; **[!UICONTROL 충성도 구성원]** &quot; 필드 옆에 있는 필드[!UICONTROL 추가를]클릭합니다.
 
 ![](../images/tutorials/relationship/loyalty-add-field.png)
 
-&quot;\_tenantId&quot; 네임스페이스 아래에 새 필드가 캔버스에 나타납니다. 필드 _[!UICONTROL 속성]_아래에서 필드에 대한 필드 이름과 표시 이름을 입력하고 해당 유형을 &quot;[!UICONTROL 문자열]&quot;로 설정합니다.
+&quot;\_tenantId&quot; 네임스페이스 아래에 새 필드가 캔버스에 나타납니다. 필드 _[!UICONTROL 속성]_&#x200B;아래에서 필드에 대한 필드 이름과 표시 이름을 입력하고 해당 유형을 &quot;[!UICONTROL 문자열]&quot;로 설정합니다.
 
 ![](../images/tutorials/relationship/relationship-field-details.png)
 
@@ -88,7 +89,7 @@ When finished, click **[!UICONTROL Apply]**.
 
 소스 스키마에 전용 참조 필드가 정의되어 있으면 관계 필드로 지정할 수 있습니다.
 
-캔버스에서 참조 필드를 선택한 다음 관계 _[!UICONTROL 확인란]_이 표시될 때까지 필드 속성**[!UICONTROL &#x200B;아래에서&#x200B;]**스크롤합니다. 관계 필드를 구성하는 데 필요한 매개 변수를 표시하려면 이 확인란을 선택합니다.
+캔버스에서 참조 필드를 선택한 다음 관계 _[!UICONTROL 확인란]_ 이 표시될 때까지 필드 속성 **[!UICONTROL 아래에서]** 스크롤합니다. 관계 필드를 구성하는 데 필요한 매개 변수를 표시하려면 이 확인란을 선택합니다.
 
 ![](../images/tutorials/relationship/relationship-checkbox.png)
 
