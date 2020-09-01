@@ -4,7 +4,7 @@ solution: Experience Platform
 title: UI에서 마케팅 자동화 커넥터에 대한 데이터 흐름 구성
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6bd5dc5a68fb2814ab99d43b34f90aa7e50aa463
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '1284'
 ht-degree: 0%
@@ -106,9 +106,9 @@ ht-degree: 0%
 
 ## 데이터 흐름 세부 정보 제공
 
-데이터 **[!UICONTROL 흐름 세부]** 정보 단계가 나타나므로 새 데이터 흐름 이름에 대한 간단한 설명을 제공할 수 있습니다.
+데이터 **[!UICONTROL 흐름 세부]** 정보 단계가 나타나므로 새 데이터 흐름 이름에 대해 간단한 설명을 제공할 수 있습니다.
 
-이 프로세스 동안 부분 섭취 및 **[!UICONTROL 오류 진단을]** 활성화할 수도 **[!UICONTROL 있습니다]**. 부분 **[!UICONTROL 섭취]** 활성화는 특정 임계값까지 오류가 포함된 데이터를 인제스트하는 기능을 제공합니다. 부분 **[!UICONTROL 섭취]** 가 활성화되면 *[!UICONTROL 오류 임계값 %]* 전화를 드래그하여 일괄 처리 오류 임계값을 조정합니다. 또는 입력 상자를 선택하여 임계값을 수동으로 조정할 수 있습니다. 자세한 내용은 [부분 일괄 처리 통합 개요를 참조하십시오](../../../../ingestion/batch-ingestion/partial.md).
+이 프로세스 동안 부분 섭취 및 **[!UICONTROL 오류 진단을]** 활성화할 수도 **[!UICONTROL 있습니다]**. 부분 **[!UICONTROL 섭취]** 활성화는 특정 임계값까지 오류가 포함된 데이터를 인제스트하는 기능을 제공합니다. 부분 **[!UICONTROL 섭취]** 가 활성화되면 **[!UICONTROL 오류 임계값 %]** 전화를 드래그하여 일괄 처리 오류 임계값을 조정합니다. 또는 입력 상자를 선택하여 임계값을 수동으로 조정할 수 있습니다. 자세한 내용은 [부분 일괄 처리 통합 개요를 참조하십시오](../../../../ingestion/batch-ingestion/partial.md).
 
 데이터 흐름 값을 제공하고 [다음]을 **[!UICONTROL 선택합니다]**.
 
