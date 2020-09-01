@@ -5,7 +5,7 @@ title: PSQL과 연결
 topic: connect
 description: 'PSQL은 컴퓨터에 Postres를 설치할 때 나타나는 명령줄 인터페이스입니다. 다음 지침에 따라 설치할 수 있습니다. '
 translation-type: tm+mt
-source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '192'
 ht-degree: 1%
@@ -63,9 +63,9 @@ psql (PostgreSQL) 9.5.14
 
 ## Connect PSQL 및 [!DNL Query Service]
 
-[ [!DNL Platform] Connect BI 도구] 페이지의 *[!UICONTROL UI로]* 돌아갑니다.
+[ [!DNL Platform] Connect BI 도구] 페이지의 **[!UICONTROL UI로]** 돌아갑니다.
 
-[PSQL **[!UICONTROL 명령 복사]** ]를 *[!UICONTROL 클릭합니다]*.
+[PSQL **[!UICONTROL 명령 복사]** ]를 **[!UICONTROL 클릭합니다]**.
 
 ![이미지](../images/clients/psql/connect-bi.png)
 
