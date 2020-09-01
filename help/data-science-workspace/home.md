@@ -5,7 +5,7 @@ title: 데이터 과학 작업 공간 개요
 topic: overview
 description: 이 안내서에서는 데이터 과학 작업 공간과 관련된 주요 개념을 간략하게 설명합니다.
 translation-type: tm+mt
-source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
+source-git-commit: f8d13b305a61f8606c4fa1ceee6d4518b5d83fda
 workflow-type: tm+mt
 source-wordcount: '2584'
 ht-degree: 0%
@@ -19,7 +19,7 @@ Adobe Experience Platform [!DNL Data Science Workspace] 는 머신 러닝과 인
 
 모든 기술 수준에 속한 데이터 과학자는 복잡한 AI 기술을 통해 얻을 수 있는 모든 이점을 비롯하여 신속한 머신 러닝 레시피 개발, 트레이닝 및 조정을 지원하는 세련되고 사용하기 쉬운 툴을 찾을 수 있습니다.
 
-데이터 [!DNL Data Science Workspace]과학자들은 머신 러닝을 기반으로 지능적인 서비스 API를 손쉽게 제작할 수 있습니다. 이러한 서비스는 Adobe Target, Adobe Analytics Cloud 등 다른 Adobe 서비스와 연동되므로 웹, 데스크탑 및 모바일 앱에서 개인화된 타깃팅된 디지털 경험을 자동화할 수 있습니다.
+데이터 [!DNL Data Science Workspace]과학자는 머신 러닝을 기반으로 지능적인 서비스 API를 손쉽게 제작할 수 있습니다. 이러한 서비스는 Adobe Target, Adobe Analytics Cloud 등 다른 Adobe 서비스와 연동되므로 웹, 데스크탑 및 모바일 앱에서 개인화된 타깃팅된 디지털 경험을 자동화할 수 있습니다.
 
 이 안내서에서는 관련 주요 개념에 대한 개요를 제공합니다 [!DNL Data Science Workspace].
 
@@ -62,7 +62,7 @@ Adobe Experience Platform [!DNL Data Science Workspace]를 사용하면 경험 �
 
 ![](./images/home/recipe_hiearchy_ui.png)
 
-## 이해 [!DNL Data Science Workspace]
+## [!DNL Data Science Workspace] 이해 
 
 데이터 [!DNL Data Science Workspace]과학자는 이를 통해 대규모 데이터 세트에서 인사이트를 찾는 번거로운 프로세스를 간소화할 수 있습니다. 일반적인 머신 러닝 프레임워크 및 런타임을 기반으로 구축된 [!DNL Data Science Workspace] 고급 워크플로우 관리, 모델 관리 및 확장성을 제공합니다. 지능형 서비스는 기계 학습 레서피 재사용을 지원하여 Adobe 제품 및 솔루션을 사용하여 만든 다양한 응용 프로그램을 작동시킵니다.
 
@@ -132,7 +132,7 @@ Data Science Workspace는 실험 프로세스에 엄청난 유연성을 제공�
 
 | 사용 권한 | 활성화됨 | 비활성화됨 |
 |---|---|---|
-| [!DNL Manage Data Science Workspace] | 의 모든 서비스에 대한 액세스를 제공합니다 [!DNL Data Science Workspace]. | 모든 서비스에 대한 API 및 UI 액세스가 [!DNL Data Science Workspace] 비활성화됩니다. 비활성화된 상태에서 모델 및 [!DNL Data Science Workspace] 서비스 ** 페이지로 *[!UICONTROL 라우팅할 수]* 없습니다. |
+| [!DNL Manage Data Science Workspace] | 의 모든 서비스에 대한 액세스를 제공합니다 [!DNL Data Science Workspace]. | 모든 서비스에 대한 API 및 UI 액세스가 [!DNL Data Science Workspace] 비활성화됩니다. 비활성화된 상태에서 모델 및 [!DNL Data Science Workspace] 서비스 **** 페이지로 **[!UICONTROL 라우팅할 수]** 없습니다. |
 
 ### 철저한 보안
 
