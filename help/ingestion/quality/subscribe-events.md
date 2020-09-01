@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 데이터 수집 이벤트 가입
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5a10a31f4be5173af8b459b9ab8a53096348be1d
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '831'
 ht-degree: 2%
@@ -55,7 +55,7 @@ Adobe 개발자 [콘솔로](https://www.adobe.com/go/devs_console_ui) 이동하�
 
 ![](../images/quality/subscribe-events/add-event-button.png)
 
-이벤트 _[!UICONTROL 추가]_ 대화 상자가 나타납니다. 사용 가능한 옵션 목록을 필터링하려면 **[!UICONTROL Experience Platform]** 를 클릭한 다음 **[!UICONTROL 다음]** 을 클릭하여 **[!UICONTROL 플랫폼 알림을]**&#x200B;클릭합니다.
+이벤트 **[!UICONTROL 추가]** 대화 상자가 나타납니다. 사용 가능한 옵션 목록을 필터링하려면 **[!UICONTROL Experience Platform]** 를 클릭한 다음 **[!UICONTROL 다음]** 을 클릭하여 **[!UICONTROL 플랫폼 알림을]**&#x200B;클릭합니다.
 
 ![](../images/quality/subscribe-events/select-platform-events.png)
 
