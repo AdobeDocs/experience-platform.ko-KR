@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform FAQ 및 문제 해결 안내서
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 9eeddfaf3e704d66b81f983afcdf5ef3c45c6075
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '1962'
+source-wordcount: '1951'
 ht-degree: 3%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 3%
 
 이 설명서는 두 가지 방법으로 API 호출 예를 보여 줍니다. [!DNL Experience Platform] 첫째, 호출은 해당 **API 형식**, 작업(GET, POST, PUT, PATCH, DELETE) 및 사용 중인 종단점만 표시하는 템플릿 표현(예: `/global/classes`) 일부 템플릿에는 다음과 같이 호출을 공식화하는 방법을 보여주는 데 도움이 되는 변수의 위치가 표시됩니다 `GET /{VARIABLE}/classes/{ANOTHER_VARIABLE}`.
 
-그러면 호출은 API와 성공적으로 상호 작용하기 위해 필요한 헤더와 전체 &quot;기본 경로&quot;를 포함하는 **요청**&#x200B;시 cURL 명령으로 표시됩니다. 기본 경로는 모든 끝점에 미리 펜드되어야 합니다. 예를 들어 앞서 언급한 종점이 `/global/classes` 됩니다 `https://platform.adobe.io/data/foundation/schemaregistry/global/classes`. 문서 전체에서 API 형식/요청 패턴을 볼 수 있으며 Platform API를 직접 호출할 때 요청 예제에 표시된 전체 경로를 사용할 수 있습니다.
+그러면 호출은 API와 성공적으로 상호 작용하기 위해 필요한 헤더와 전체 &quot;기본 경로&quot;를 포함하는 **요청**&#x200B;시 cURL 명령으로 표시됩니다. 기본 경로는 모든 끝점에 미리 펜드되어야 합니다. 예를 들어 앞서 언급한 종점이 `/global/classes` 됩니다 `https://platform.adobe.io/data/foundation/schemaregistry/global/classes`. 설명서 전체에서 API 형식/요청 패턴을 볼 수 있으며 플랫폼 API를 직접 호출할 때 요청 예제에 표시된 전체 경로를 사용할 수 있습니다.
 
 ### API 요청 예
 
@@ -84,11 +84,11 @@ curl -X GET \
 }
 ```
 
-Platform API의 필수 헤더 및 요청 본체를 비롯한 특정 끝점에 대한 자세한 내용은 [API 참조 설명서를 참조하십시오](https://www.adobe.io/apis/experienceplatform/home/api-reference.html).
+플랫폼 API의 필수 헤더 및 요청 본문을 포함하여 특정 끝점에 대한 자세한 내용은 [API 참조 설명서를 참조하십시오](https://www.adobe.io/apis/experienceplatform/home/api-reference.html).
 
 ## IMS 조직이란 무엇입니까? {#what-is-my-ims-organization}
 
-IMS 조직은 고객의 Adobe입니다. 모든 라이센스 Adobe 솔루션은 이 고객 조직과 통합됩니다. IMS 조직에서 권한을 부여받으면 개발자에게 액세스 권한 [!DNL Experience Platform]을 할당할 수 있습니다. IMS 조직 ID(`x-gw-ims-org-id`)는 API 호출이 실행되어야 하는 조직을 나타내며, 따라서 모든 API 요청의 헤더로 필요합니다. 이 ID는 [Adobe 개발자 콘솔을 통해 찾을 수 있습니다](https://www.adobe.com/go/devs_console_ui). 통합 **** 탭에서 **특정 통합에 대한** 개요 **섹션으로 이동하여 클라이언트 자격 증명 아래에서 ID를**&#x200B;찾습니다. 인증 방법에 대한 단계별 연습은 [!DNL Platform]인증 자습서 [](../tutorials/authentication.md)를 참조하십시오.
+IMS 조직은 고객의 Adobe입니다. 모든 라이센스 Adobe 솔루션은 이 고객 조직과 통합됩니다. IMS 조직에서 권한을 부여받으면 개발자에게 액세스 권한 [!DNL Experience Platform]을 할당할 수 있습니다. IMS 조직 ID(`x-gw-ims-org-id`)는 API 호출이 실행되어야 하는 조직을 나타내며, 따라서 모든 API 요청의 헤더로 필요합니다. 이 ID는 [Adobe 개발자 콘솔을 통해 찾을 수 있습니다](https://www.adobe.com/go/devs_console_ui).통합 **** 탭에서 **특정 통합에 대한** 개요 **섹션으로 이동하여 클라이언트 자격 증명 아래에서 ID를**&#x200B;찾습니다. 인증 방법에 대한 단계별 연습은 [!DNL Platform]인증 자습서 [](../tutorials/authentication.md)를 참조하십시오.
 
 ## API 키는 어디에서 찾을 수 있습니까? {#where-can-i-find-my-api-key}
 
@@ -194,7 +194,7 @@ UI 또는 API 사용 여부에 따라 다음 시스템 요구 사항이 적용�
 }
 ```
 
-이 오류 메시지는 제공된 API 키 헤더(`x-api-key`)의 값이 잘못된 경우에 표시됩니다. 다시 시도하기 전에 키를 올바르게 입력했는지 확인하십시오. API 키를 모르는 경우 [Adobe I/O 콘솔에서 찾을 수 있습니다](https://console.adobe.io). 통합 **** 탭에서 **개요** 섹션으로 이동하여 **클라이언트 자격 증명**&#x200B;아래에서 API 키를찾습니다.
+이 오류 메시지는 제공된 API 키 헤더(`x-api-key`)의 값이 잘못된 경우에 표시됩니다. 다시 시도하기 전에 키를 올바르게 입력했는지 확인하십시오. API 키를 모르는 경우 [Adobe I/O 콘솔에서 찾을 수 있습니다](https://console.adobe.io).통합 **** 탭에서 **개요** 섹션으로 이동하여 **클라이언트 자격 증명**&#x200B;아래에서 API 키를찾습니다.
 
 
 ### 헤더 누락
@@ -217,7 +217,7 @@ UI 또는 API 사용 여부에 따라 다음 시스템 요구 사항이 적용�
 }
 ```
 
-이 오류 메시지는 사용자 또는 Adobe I/O 통합(헤더에서 [액세스 토큰으로](#how-do-i-get-an-access-token) 식별됨)이 `Authorization` 헤더에 제공된 IMS 조직에 대한 [!DNL Experience Platform] API를 호출할 권한이 없는 경우 `x-gw-ims-org-id` 표시됩니다. 헤더에서 IMS 조직에 대해 올바른 ID를 제공한 후 다시 시도하십시오. 조직 ID를 모르는 경우 [Adobe I/O 콘솔에서 찾을 수 있습니다](https://console.adobe.io). 통합 **** 탭에서 **개요** 섹션으로 이동하여 클라이언트 자격 증명 ****&#x200B;아래에서 ID를찾습니다.
+이 오류 메시지는 사용자 또는 Adobe I/O 통합(헤더에서 [액세스 토큰으로](#how-do-i-get-an-access-token) 식별됨)이 `Authorization` 헤더에 제공된 IMS 조직에 대한 [!DNL Experience Platform] API를 호출할 권한이 없는 경우 `x-gw-ims-org-id` 표시됩니다. 헤더에서 IMS 조직에 대해 올바른 ID를 제공한 후 다시 시도하십시오. 조직 ID를 모르는 경우 [Adobe I/O 콘솔에서 찾을 수 있습니다](https://console.adobe.io).통합 **** 탭에서 **개요** 섹션으로 이동하여 클라이언트 자격 증명 ****&#x200B;아래에서 ID를찾습니다.
 
 ### 올바른 콘텐츠 형식이 지정되지 않았습니다.
 
@@ -238,16 +238,15 @@ UI 또는 API 사용 여부에 따라 다음 시스템 요구 사항이 적용�
 다음은 API에 대한 문제 해결 가이드 및 API 참조 설명서 [!DNL Experience Platform] 목록입니다. 각 문제 해결 가이드는 개별 [!DNL Platform] 서비스와 관련된 문제에 대한 질문과 해결 방법을 제공합니다. API 참조 문서는 각 서비스에 대해 사용 가능한 모든 끝점에 대한 포괄적인 안내서를 제공하고 사용자가 받을 수 있는 샘플 요청 본문, 응답 및 오류 코드를 보여줍니다.
 
 | 서비스 | API 참조 | 문제 해결 |
---- | --- | ---
+| --- | --- | --- |
 | 액세스 제어 | [액세스 제어 API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/access-control.yaml) | [액세스 제어 문제 해결 가이드](../access-control/troubleshooting-guide.md) |
-| 카탈로그 | [카탈로그 서비스 API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) |  |
-| 데이터 통합(일괄 처리) | [데이터 통합 API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) | [일괄 처리 문제 해결 가이드](../ingestion/batch-ingestion/troubleshooting.md) |
-| 데이터 통합(스트리밍) | [데이터 통합 API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) | [스트리밍 통합 문제 해결 가이드](../ingestion/streaming-ingestion/troubleshooting.md) |
-| 데이터 과학 작업 공간 | [Sensei Machine Learning API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) | [데이터 과학 작업 공간 문제 해결 가이드](../data-science-workspace/troubleshooting-guide.md) |
-| 데이터 사용 표시 및 실행(DULE) | [DULE 정책 서비스 API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) |  |
-| XDM(Experience Data Model) | [스키마 레지스트리 API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) | [XDM 시스템 FAQ 및 문제 해결 가이드](../xdm/troubleshooting-guide.md) |
-| ID 서비스 | [ID 서비스 API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml) | [ID 서비스 문제 해결 가이드](../identity-service/troubleshooting-guide.md) |
-| 쿼리 서비스 | [쿼리 서비스 API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/qs-api.yaml) | [쿼리 서비스 문제 해결 가이드](../query-service/troubleshooting-guide.md) |
-| 실시간 고객 프로필 | [실시간 고객 프로필 API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml) | [프로필 문제 해결 가이드](../profile/troubleshooting.md) |
+| Adobe Experience Platform 데이터 수집 | [[!DNL 데이터 통합 API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) | [일괄 처리 문제 해결](../ingestion/batch-ingestion/troubleshooting.md)<br><br>[안내스트리밍 통합 문제 해결 가이드](../ingestion/streaming-ingestion/troubleshooting.md) |
+| Adobe Experience Platform 데이터 과학 작업 공간 | [[!DNL Sensei 기계 학습 API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) | [[!DNL Data Science Workspace] 문제 해결 안내서](../data-science-workspace/troubleshooting-guide.md) |
+| Adobe Experience Platform 데이터 거버넌스 | [[!DNL 정책 서비스 API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) |  |
+| Adobe Experience Platform ID 서비스 | [[!DNL ID 서비스 API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml) | [[!DNL Identity Service] 문제 해결 안내서](../identity-service/troubleshooting-guide.md) |
+| Adobe Experience Platform 쿼리 서비스 | [[!DNL 쿼리 서비스 API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/qs-api.yaml) | [[!DNL Query Service] 문제 해결 안내서](../query-service/troubleshooting-guide.md) |
+| Adobe Experience Platform 세분화 | [[!DNL 세그멘테이션 API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml) |
+| [!DNL Catalog Service] | [[!DNL 카탈로그 서비스 API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) |  |
+| [!DNL Experience Data Model] (XDM) | [[!DNL 스키마 레지스트리 API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) | [[!DNL XDM System] FAQ 및 문제 해결 가이드](../xdm/troubleshooting-guide.md) |
+| [!DNL Real-time Customer Profile] | [[!DNL 실시간 고객 프로필 API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml) | [[!DNL Profile] 문제 해결 안내서](../profile/troubleshooting.md) |
 | 샌드박스 | [샌드박스 API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) | [샌드박스 문제 해결 가이드](../sandboxes/troubleshooting-guide.md) |
-| 세그먼테이션 | [세그멘테이션 API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml) |
