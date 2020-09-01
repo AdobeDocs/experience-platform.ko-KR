@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;opt-out
+keywords: Experience Platform;home;popular topics;opt-out;Segmentation;Segmentation service;segmentation service;honor opt-outs;opt-outs;opt out;opt outs;
 solution: Experience Platform
 title: 옵트아웃 준수
 topic: overview
 description: 'Experience Platform을 통해 고객은 실시간 고객 프로필 내에서 데이터의 사용 및 저장과 관련된 옵트아웃 요청을 보낼 수 있습니다.] 이러한 수신 거부 요청은 캘리포니아 주민들에게 개인 데이터를 액세스 및 삭제할 권리와 개인 데이터의 판매 또는 공개(및 대상)를 알 수 있는 권한을 제공하는 캘리포니아 소비자 개인 정보 보호법(CPA)의 일부입니다. '
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
 workflow-type: tm+mt
 source-wordcount: '1030'
 ht-degree: 0%
