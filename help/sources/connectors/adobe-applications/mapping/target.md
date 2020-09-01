@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;target mapping;Target mapping
 solution: Experience Platform
 title: 대상 매핑 필드
 topic: overview
+description: 다음 표에서는 경험 이벤트 스키마(*XDM ExperienceEvent 필드*)의 필드와 해당 Target 필드를 매핑해야 하는 필드(Target 요청 필드)에 대해 간략히 설명합니다. 일부 매핑에 대한 추가 메모도 제공됩니다.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
 workflow-type: tm+mt
-source-wordcount: '427'
+source-wordcount: '462'
 ht-degree: 0%
 
 ---
@@ -28,7 +29,7 @@ Adobe Experience Platform을 사용하면 Target 소스 커넥터를 통해 Adob
 | **`dataSource`** |  | 모든 클라이언트에 대해 &quot;1&quot;로 구성되었습니다. |
 | `dataSource._id` | 요청과 함께 전달할 수 없는 시스템 생성 값. | 이 데이터 소스의 고유 ID. 이 값은 데이터 소스를 만든 개인 또는 시스템에서 제공합니다. |
 | `dataSource.code` | 요청과 함께 전달할 수 없는 시스템 생성 값. | 전체 @id로 바로 가기 코드 또는 @id 중 하나 이상을 사용할 수 있습니다. 경우에 따라 이 코드를 데이터 소스 통합 코드라고 합니다. |
-| `dataSource.tags` | 요청과 함께 전달할 수 없는 시스템 생성 값. | 태그는 주어진 데이터 소스에서 표현되는 별칭이 이러한 별칭을 사용하는 응용 프로그램에서 해석되는 방식을 나타내는 데 사용됩니다.<br><br>예<br><ul><li>`isAVID`: Analytics 방문자 ID를 나타내는 데이터 소스입니다.</li><li>`isCRSKey`: CRS에서 키로 사용해야 하는 별칭을 나타내는 데이터 소스입니다.</li></ul>태그는 데이터 소스가 생성될 때 설정되지만 지정된 데이터 소스를 참조할 때 파이프라인 메시지에도 포함됩니다. |
+| `dataSource.tags` | 요청과 함께 전달할 수 없는 시스템 생성 값. | 태그는 주어진 데이터 소스에서 표현되는 별칭이 이러한 별칭을 사용하는 응용 프로그램에서 해석되는 방식을 나타내는 데 사용됩니다.<br><br>예<br><ul><li>`isAVID`:Analytics 방문자 ID를 나타내는 데이터 소스입니다.</li><li>`isCRSKey`:CRS에서 키로 사용해야 하는 별칭을 나타내는 데이터 소스입니다.</li></ul>태그는 데이터 소스가 생성될 때 설정되지만 지정된 데이터 소스를 참조할 때 파이프라인 메시지에도 포함됩니다. |
 | **`timestamp`** | 이벤트 타임스탬프 |
 | **`channel`** | `context.channel` | 보기 배달에서만 작동합니다. 옵션은 &quot;웹&quot; 및 &quot;모바일&quot;이며 &quot;웹&quot;은 기본값입니다. |
 | **`endUserIds`** |
@@ -52,7 +53,7 @@ Adobe Experience Platform을 사용하면 Target 소스 커넥터를 통해 Adob
 | `experience.target.mboxVersion` | `mboxRequest.mboxVersion` |
 | `experience.target.sessionId` | `mboxRequest.sessionId` |
 | `experience.target.environmentID` | 개발, qa 또는 prod와 같은 고객 정의 환경에 대한 Target 내부 매핑. |
-| `experience.target.supplementalDataID` | Analytics 이벤트와 Target 이벤트를 연결하는 데 사용되는 식별자 |
+| `experience.target.supplementalDataID` | Analytics 이벤트를 사용하여 Target 이벤트를 연결하는 데 사용되는 식별자 |
 | `experience.target.pageDetails.pageId` | `mboxRequest.pageId` |
 | `experience.target.pageDetails.pageScore` | `mboxRequest.mboxPageValue` |
 | `experience.target.activities` | 방문자가 자격이 있는 활동의 목록(배열) |
