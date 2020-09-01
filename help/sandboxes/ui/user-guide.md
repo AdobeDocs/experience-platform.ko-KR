@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;sandbox user guide;sandbox guide
 solution: Experience Platform
 title: 샌드박스 사용 안내서
 topic: user guide
+description: 이 문서에서는 Adobe Experience Platform 사용자 인터페이스의 샌드박스와 관련된 다양한 작업을 수행하는 방법에 대해 설명합니다.
 translation-type: tm+mt
-source-git-commit: 397f08efa276f7885e099a0a8d9dc6d23fe0e8cc
+source-git-commit: fb60e11b9502c31e654d3fbe5dc240ace9429332
 workflow-type: tm+mt
-source-wordcount: '530'
+source-wordcount: '550'
 ht-degree: 0%
 
 ---
