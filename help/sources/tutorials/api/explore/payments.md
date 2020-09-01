@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;payment
 solution: Experience Platform
 title: Flow Service API를 사용한 결제 시스템 살펴보기
 topic: overview
+description: 이 자습서에서는 Flow Service API를 사용하여 결제 애플리케이션을 살펴봅니다.
 translation-type: tm+mt
-source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
+source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
 workflow-type: tm+mt
-source-wordcount: '576'
+source-wordcount: '587'
 ht-degree: 1%
 
 ---
@@ -14,13 +15,13 @@ ht-degree: 1%
 
 # API를 사용한 결제 시스템 [!DNL Flow Service] 살펴보기
 
-[!DNL Flow Service] 는 Adobe Experience Platform 내의 다양한 소스에서 수집된 고객 데이터를 수집하고 중앙 집중화하는 데 사용됩니다. 이 서비스는 지원되는 모든 소스가 연결되어 있는 사용자 인터페이스와 RESTful API를 제공합니다.
+[!DNL Flow Service] 는 Adobe Experience Platform 내의 다양한 소스에서 수집된 고객 데이터를 수집하고 중앙에서 관리하는 데 사용됩니다. 이 서비스는 지원되는 모든 소스가 연결되어 있는 사용자 인터페이스와 RESTful API를 제공합니다.
 
 이 자습서에서는 API를 사용하여 지불 애플리케이션을 [!DNL Flow Service] 살펴봅니다.
 
 ## 시작하기
 
-이 가이드는 다음과 같은 Adobe Experience Platform 구성 요소에 대해 작업해야 합니다.
+이 가이드는 Adobe Experience Platform의 다음 구성 요소에 대한 작업 이해를 필요로 합니다.
 
 * [소스](../../../home.md): [!DNL Experience Platform] 서비스를 사용하여 들어오는 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 다양한 소스에서 데이터를 수집할 수 [!DNL Platform] 있습니다.
 * [샌드박스](../../../../sandboxes/home.md): [!DNL Experience Platform] 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되도록 단일 [!DNL Platform] 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
@@ -29,7 +30,7 @@ ht-degree: 1%
 
 ### 필요한 자격 증명 수집
 
-이 자습서에서는 데이터를 인제스트할 타사 결제 응용 프로그램과 유효한 연결이 필요합니다. 유효한 연결에는 응용 프로그램의 연결 사양 ID와 연결 ID가 포함됩니다. 결제 연결 만들기 및 이러한 값 검색에 대한 자세한 내용은 결제 소스를 Platform에 [연결 자습서에서 확인할 수](../../api/create/payments/paypal.md) 있습니다.
+이 자습서에서는 데이터를 인제스트할 타사 결제 응용 프로그램과 유효한 연결이 필요합니다. 유효한 연결에는 응용 프로그램의 연결 사양 ID와 연결 ID가 포함됩니다. 결제 연결 만들기 및 이러한 값 검색에 대한 자세한 내용은 결제 소스를 플랫폼에 [연결 자습서에서 확인할 수](../../api/create/payments/paypal.md) 있습니다.
 
 ### 샘플 API 호출 읽기
 
@@ -39,7 +40,7 @@ ht-degree: 1%
 
 API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 합니다](../../../../tutorials/authentication.md). 인증 자습서를 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
 
-* 인증: 무기명 `{ACCESS_TOKEN}`
+* 인증:무기명 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
@@ -181,4 +182,4 @@ curl -X GET \
 
 ## 다음 단계
 
-이 튜토리얼을 따라 결제 시스템을 살펴보고, 인제스트할 테이블의 경로를 찾은 [!DNL Platform]후, 해당 구조에 대한 정보를 얻습니다. 다음 자습서에서 이 정보를 사용하여 결제 시스템에서 데이터를 [수집하고 Platform으로 가져올 수 있습니다](../collect/payments.md).
+이 튜토리얼을 따라 결제 시스템을 살펴보고, 인제스트할 테이블의 경로를 찾은 [!DNL Platform]후, 해당 구조에 대한 정보를 얻습니다. 다음 튜토리얼에서 이 정보를 사용하여 결제 시스템에서 [데이터를 수집하고 플랫폼으로 가져올 수 있습니다](../collect/payments.md).
