@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics; flow service; marketing automation; hubspot
+keywords: Experience Platform;home;popular topics;marketing automation system;Collect marketing automation data
 solution: Experience Platform
 title: 소스 커넥터 및 API를 통해 마케팅 자동화 데이터 수집
 topic: overview
-description: 이 자습서에서는 타사 마케팅 자동화 시스템에서 데이터를 검색하고 소스 커넥터 및 Flow Service API를 통해 플랫폼으로 데이터를 인제하는 절차를 다룹니다.
+description: 이 자습서에서는 마케팅 자동화 시스템에서 데이터를 검색하고 소스 커넥터 및 API를 통해 플랫폼으로 가져오는 절차를 다룹니다.
 translation-type: tm+mt
-source-git-commit: 6578fd607d6f897a403d0af65c81dafe3dc12578
+source-git-commit: 6f4714561c2946a084eed4e89d3148df5b8044f5
 workflow-type: tm+mt
-source-wordcount: '1587'
+source-wordcount: '1584'
 ht-degree: 1%
 
 ---
