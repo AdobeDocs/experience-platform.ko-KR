@@ -5,7 +5,7 @@ title: Data Lake의 개인 정보 요청 처리
 topic: overview
 description: Adobe Experience Platform Privacy Service은 법적 및 조직의 개인 정보 보호 규정에 따라 고객의 개인 데이터 액세스, 판매 거부 또는 삭제를 처리합니다. 이 문서에서는 Data Lake에 저장된 고객 데이터의 개인 정보 요청 처리와 관련된 필수 개념을 다룹니다.
 translation-type: tm+mt
-source-git-commit: c8446f6040ac9ef1f4196d9057b531011e243258
+source-git-commit: 397f08efa276f7885e099a0a8d9dc6d23fe0e8cc
 workflow-type: tm+mt
 source-wordcount: '1249'
 ht-degree: 0%
@@ -57,7 +57,7 @@ Adobe Experience Platform [!DNL Identity Service] 는 시스템과 디바이스�
 
 ### UI 사용 {#identity-ui}
 
-사용자 [!DNL Experience Platform ]인터페이스에서 스키마 _[!UICONTROL 작업]_ 공간에서 기존 XDM 스키마를 편집할 수 있습니다. 스키마에 ID 설명자를 추가하려면 목록에서 스키마를 선택하고 자습서에서 스키마 필드를 ID 필드로 [설정하는 단계를](../xdm/tutorials/create-schema-ui.md#identity-field) 따릅니다 [!DNL Schema Editor] .
+사용자 [!DNL Experience Platform ]인터페이스에서 스키마 **[!UICONTROL 작업]** 공간에서 기존 XDM 스키마를 편집할 수 있습니다. 스키마에 ID 설명자를 추가하려면 목록에서 스키마를 선택하고 자습서에서 스키마 필드를 ID 필드로 [설정하는 단계를](../xdm/tutorials/create-schema-ui.md#identity-field) 따릅니다 [!DNL Schema Editor] .
 
 스키마 내의 적절한 필드를 ID 필드로 설정하면 개인 정보 요청 [제출 시 다음 섹션으로 진행할 수 있습니다](#submit).
 
@@ -139,7 +139,7 @@ curl -X POST \
 
 ### UI 사용
 
-UI에서 작업 요청을 만들 때는 **[!UICONTROL 제품]** 아래의 **[!UICONTROL AEP 데이터 레이크]** 및/또는 _[!UICONTROL 프로필]_[!DNL Data Lake] 을 선택하여 [!DNL Real-time Customer Profile]데이터에 저장된 작업을각각 처리하거나 지연에 있는 AEP 데이터및 프로필을선택하십시오.
+UI에서 작업 요청을 만들 때는 **[!UICONTROL 제품]** 아래의 **[!UICONTROL AEP 데이터 레이크]** 및/또는 **[!UICONTROL 프로필]**[!DNL Data Lake] 을 선택하여 [!DNL Real-time Customer Profile]데이터에 저장된 작업을각각 처리하거나 지연에 있는 AEP 데이터및 프로필을선택하십시오.
 
 <img src="images/privacy/product-value.png" width="450"><br>
 
