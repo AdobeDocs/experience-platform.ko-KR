@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;list identities;list cluster
 solution: Experience Platform
 title: 클러스터 ID 목록
 topic: API guide
+description: 네임스페이스와 관계없이 ID 그래프에 관련된 ID는 해당 ID 그래프에서 동일한 "클러스터"의 일부로 간주됩니다. 아래 옵션은 모든 클러스터 구성원에 액세스할 수 있는 수단을 제공합니다.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
 workflow-type: tm+mt
-source-wordcount: '312'
+source-wordcount: '347'
 ht-degree: 1%
 
 ---
@@ -33,7 +34,7 @@ GET https://platform-{REGION}.adobe.io/data/core/identity/cluster/members?{PARAM
 
 **요청**
 
-옵션 1: ID를 네임스페이스(ID별`nsId`)와 ID 값(`id`)으로 제공합니다.
+옵션 1:ID를 네임스페이스(ID별`nsId`)와 ID 값(`id`)으로 제공합니다.
 
 ```shell
 curl -X GET \
@@ -44,7 +45,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-옵션 2: ID를 네임스페이스(이름별`ns`)와 ID 값(`id`)으로 제공합니다.
+옵션 2:ID를 네임스페이스(이름별`ns`)와 ID 값(`id`)으로 제공합니다.
 
 ```shell
 curl -X GET \
@@ -55,7 +56,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-옵션 3: ID를 XID(`xid`)로 제공합니다. ID의 XID를 얻는 방법에 대한 자세한 내용은 ID용 XID [를 가져오는 내용을 포함하는 이 문서의 섹션을 참조하십시오](./list-native-id.md).
+옵션 3:ID를 XID(`xid`)로 제공합니다. ID의 XID를 얻는 방법에 대한 자세한 내용은 ID용 XID [를 가져오는 내용을 포함하는 이 문서의 섹션을 참조하십시오](./list-native-id.md).
 
 ```shell
 curl -X GET \
@@ -242,4 +243,4 @@ curl -X POST \
 
 ## 다음 단계
 
-다음 자습서로 진행하여 ID의 클러스터 내역을 [나열합니다](./list-cluster-history.md)
+다음 자습서로 진행하여 ID의 클러스터 내역을 [나열합니다.](./list-cluster-history.md)
