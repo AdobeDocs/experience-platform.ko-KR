@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform 제품 설명서
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 18ea9482b9c6691c6326d91b2d0d3da9a8dc7195
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '7187'
+source-wordcount: '7145'
 ht-degree: 0%
 
 ---
@@ -217,8 +217,6 @@ ht-degree: 0%
 **직접 호출 규칙:** 에서 페이지 [!DNL Experience Platform Launch]에서 직접 호출될 때 실행되는 [!UICONTROL 직접 호출] [!UICONTROL 규칙] 을 설정할 수 있습니다. 페이지 로드 또는 사이트의 작업이 매우 간단하거나, 고유하며, 매번(X로 설정하고 매번 트리거) 특정 지침 세트 [!DNL eVar4] 를 실행할 수 있는 경우, [!DNL event2] 직접 호출 [!UICONTROL 규칙을 사용할 수 있습니다]. [!DNL Launch] 직접 호출 [!UICONTROL 규칙 만들기에 관한 설명서를] 참조하십시오 .
 
 **표시 이름:** 표시 이름은 UI에 표시되는 필드의 사용자에게 친숙한 이름입니다.
-
-**일정:** DULE는 데이터 사용 *레이블 지정 및 실행의 약어입니다*. DULE는 데이터 거버넌스의 핵심 부분이며, 조직 내 거버넌스 요구 사항에 맞게 데이터 사용 레이블 지정 및 데이터 액세스 정책을 적용할 수 있는 주요 기능 모음입니다.
 
 [맨 위로](#adobe-experience-platform-glossary)
 
