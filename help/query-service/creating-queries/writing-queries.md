@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;Query service;writing queries;writing query;
 solution: Experience Platform
 title: 쿼리 작성
 topic: queries
 translation-type: tm+mt
-source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
 workflow-type: tm+mt
 source-wordcount: '643'
 ht-degree: 1%
@@ -20,7 +20,7 @@ ht-degree: 1%
 
 ## 쿼리 실행 모델
 
-Adobe Experience Platform [!DNL Query Service] 에는 쿼리 실행 모델이 두 개 있습니다. 인터랙티브한 요소와 비인터랙티브한 요소가 포함되어 있습니다. 대화형 실행은 비즈니스 인텔리전스 도구에서 쿼리 개발 및 보고서 생성에 사용되는 반면, 비대화형 실행은 데이터 처리 워크플로의 일부로서 더 큰 작업과 운영 질의에 사용됩니다.
+Adobe Experience Platform [!DNL Query Service] 에는 쿼리 실행 모델이 두 개 있습니다.인터랙티브한 요소와 비인터랙티브한 요소가 포함되어 있습니다. 대화형 실행은 비즈니스 인텔리전스 도구에서 쿼리 개발 및 보고서 생성에 사용되는 반면, 비대화형 실행은 데이터 처리 워크플로의 일부로서 더 큰 작업과 운영 질의에 사용됩니다.
 
 ### 인터랙티브한 쿼리 실행
 
