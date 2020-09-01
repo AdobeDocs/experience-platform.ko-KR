@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;PSQL;psql
+keywords: Experience Platform;home;popular topics;PSQL;psqlconnect to query service;Query service;query service;
 solution: Experience Platform
 title: PSQL과 연결
 topic: connect
 description: 'PSQL은 컴퓨터에 Postres를 설치할 때 나타나는 명령줄 인터페이스입니다. 다음 지침에 따라 설치할 수 있습니다. '
 translation-type: tm+mt
-source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
+source-git-commit: d2f098cb9e4aaf5beaad02173a22a25a87a43756
 workflow-type: tm+mt
 source-wordcount: '192'
 ht-degree: 1%
