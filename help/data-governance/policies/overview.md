@@ -5,9 +5,9 @@ title: 데이터 사용 정책 개요
 topic: policies
 description: 데이터 사용 레이블이 데이터 규정 준수를 효과적으로 지원하려면 데이터 사용 정책을 구현해야 합니다. 데이터 사용 정책은 Experience Platform 내에서 데이터에 대해 수행하도록 허용되거나 제한된 마케팅 작업의 종류를 설명하는 규칙입니다.
 translation-type: tm+mt
-source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '1007'
+source-wordcount: '1003'
 ht-degree: 0%
 
 ---
@@ -32,13 +32,13 @@ ht-degree: 0%
 >
 >마케팅 활동 자체만으로는 데이터 사용을 제한하지 않습니다. 이러한 작업이 정책 위반에 대해 평가되기 위해서는 활성화된 데이터 사용 정책에 포함되어야 합니다.
 
-조직의 서비스에서 데이터 사용이 발생하는 경우 정책 위반을 식별할 수 있도록 관련 마케팅 조치를 표시해야 합니다. 그런 다음 DULE [Policy Service API를](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) 사용하여 통합에서 정책 위반을 확인할 수 있습니다.
+조직의 서비스에서 데이터 사용이 발생하는 경우 정책 위반을 식별할 수 있도록 관련 마케팅 조치를 표시해야 합니다. 그런 다음 [정책 서비스 API를](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) 사용하여 통합에서 정책 위반을 확인할 수 있습니다.
 
 >[!NOTE]
 >
 >사용 중인 경우 대상에 마케팅 사용 사례 [!DNL Real-time Customer Data Platform]를 설정하여 정책 실행을 자동화할 수 있습니다. 자세한 내용은 실시간 CDP의 [데이터 거버넌스](../../rtcdp/privacy/data-governance-overview.md) 문서를 참조하십시오.
 
-사용 가능한 Adobe에서 [정의한 마케팅 작업의 목록은 이 문서의 부록을 참조하십시오](#core-actions). DULE [!DNL Policy Service] API 또는 [!DNL Experience Platform ]사용자 인터페이스를 사용하여 고유한 사용자 지정 마케팅 작업을 정의할 수도 있습니다. 마케팅 작업 및 정책 작업에 대한 자세한 내용은 다음 섹션에서 제공됩니다.
+사용 가능한 Adobe에서 [정의한 마케팅 작업의 목록은 이 문서의 부록을 참조하십시오](#core-actions). API 또는 [!DNL Policy Service] [!DNL Experience Platform ]사용자 인터페이스를 사용하여 고유한 사용자 지정 마케팅 작업을 정의할 수도 있습니다. 마케팅 작업 및 정책 작업에 대한 자세한 내용은 다음 섹션에서 제공됩니다.
 
 <!-- (Add after AAM DEC mapping doc is published)
 ### Inheritance from Adobe Audience Manager Data Export Controls
@@ -50,7 +50,7 @@ For a reference on how specific Data Export Controls map to marketing actions in
 
 ## 데이터 사용 정책 관리 {#manage}
 
-데이터 사용 레이블이 적용되면 데이터 관리자는 DULE [!DNL Policy Service] API 또는 [!DNL Experience Platform] UI를 사용하여 데이터 사용 레이블이 포함된 데이터에 대해 수행되는 마케팅 작업과 관련된 정책을 관리하고 평가할 수 있습니다. 정책을 만들고 업데이트하며, 정책의 상태를 결정하고, 마케팅 작업을 통해 특정 작업이 데이터 사용 정책을 위반하는지 평가할 수 있습니다.
+데이터 사용 레이블이 적용되면 데이터 관리자는 [!DNL Policy Service] API 또는 [!DNL Experience Platform] UI를 사용하여 데이터 사용 레이블이 포함된 데이터에 대해 수행되는 마케팅 작업과 관련된 정책을 관리하고 평가할 수 있습니다. 정책을 만들고 업데이트하고, 정책의 상태를 결정하고, 마케팅 작업을 통해 특정 작업이 데이터 사용 정책을 위반하는지 평가할 수 있습니다.
 
 >[!IMPORTANT]
 >
@@ -62,7 +62,7 @@ UI에서 마케팅 작업 및 정책을 사용하는 방법에 대한 자세한 
 
 ## 다음 단계
 
-이 문서에서는 DULE 프레임워크 내의 데이터 사용 정책을 소개합니다. 이제 API와 UI에서 정책을 사용하는 방법에 대한 자세한 내용은 이 안내서 전체에서 연결된 프로세스 설명서를 계속 참조할 수 있습니다.
+이 문서에서는 프레임워크 내의 데이터 사용 정책을 [!DNL Data Governance] 소개합니다. 이제 API와 UI에서 정책을 사용하는 방법에 대한 자세한 내용은 이 안내서 전체에서 연결된 프로세스 설명서를 계속 참조할 수 있습니다.
 
 ## 부록
 
