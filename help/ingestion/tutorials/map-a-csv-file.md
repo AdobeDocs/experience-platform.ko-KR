@@ -4,7 +4,7 @@ solution: Experience Platform
 title: XDM 스키마에 CSV 파일 매핑
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '1371'
 ht-degree: 2%
@@ -29,13 +29,13 @@ CSV 데이터를 인제스트하려면 데이터 [!DNL Adobe Experience Platform
 
 ## 대상 선택
 
-[!DNL Adobe Experience Platform]에 [로그인한 다음](https://platform.adobe.com) 왼쪽 탐색 막대에서 **[!UICONTROL 워크플로우]** 를 선택하여 *[!UICONTROL 워크플로우 작업 영역에]* 액세스합니다.
+[!DNL Adobe Experience Platform]에 [로그인한 다음](https://platform.adobe.com) 왼쪽 탐색 막대에서 **[!UICONTROL 워크플로우]** 를 선택하여 **[!UICONTROL 워크플로우 작업 영역에]** 액세스합니다.
 
 워크플로우 **[!UICONTROL 화면에서]** **[!UICONTROL 데이터 수집]** 섹션 **[!UICONTROL 에서 CSV를 XDM에]** 매핑합니다 **[!UICONTROL 를 선택한 다음 LaunchDm을]**&#x200B;선택합니다.
 
 ![](../images/tutorials/map-a-csv-file/workflows.png)
 
-대상 *[!UICONTROL 단계부터 시작하여 XDM 스키마에]* CSV *[!UICONTROL 매핑 워크플로우가]* 나타납니다. 수집할 인바운드 데이터의 데이터 세트를 선택합니다. 기존 데이터 세트를 사용하거나 새 데이터 세트를 만들 수 있습니다.
+대상 **[!UICONTROL 단계부터 시작하여 XDM 스키마에]** CSV **[!UICONTROL 매핑 워크플로우가]** 나타납니다. 수집할 인바운드 데이터의 데이터 세트를 선택합니다. 기존 데이터 세트를 사용하거나 새 데이터 세트를 만들 수 있습니다.
 
 **기존 데이터 세트 사용**
 
@@ -49,27 +49,27 @@ CSV 데이터를 새 데이터 세트에 인제스트하려면 **[!UICONTROL 새
 
 ## 데이터 추가
 
-데이터 *[!UICONTROL 추가]* 단계가 나타납니다. CSV 파일을 제공된 공간으로 끌어다 놓거나 파일 선택 **[!UICONTROL 을 선택하여 CSV]** 파일을 수동으로 입력합니다.
+데이터 **[!UICONTROL 추가]** 단계가 나타납니다. CSV 파일을 제공된 공간으로 끌어다 놓거나 파일 선택 **[!UICONTROL 을 선택하여 CSV]** 파일을 수동으로 입력합니다.
 
 ![](../images/tutorials/map-a-csv-file/add-data.png)
 
-파일이 업로드되면 *[!UICONTROL 샘플 데이터]* 섹션이 나타나 처음 10개의 데이터 행을 보여 줍니다. 데이터가 예상대로 업로드되었음을 확인했으면 다음을 **[!UICONTROL 선택합니다]**.
+파일이 업로드되면 **[!UICONTROL 샘플 데이터]** 섹션이 나타나 처음 10개의 데이터 행을 보여 줍니다. 데이터가 예상대로 업로드되었음을 확인했으면 다음을 **[!UICONTROL 선택합니다]**.
 
 ![](../images/tutorials/map-a-csv-file/sample-data.png)
 
 ## XDM 스키마 필드에 CSV 필드 매핑
 
-매핑 *[!UICONTROL 단계가]* 나타납니다. CSV 파일의 열은 *[!UICONTROL 소스 필드]*&#x200B;아래에 나열되며 해당 XDM 스키마 필드는 *[!UICONTROL Target 필드]*&#x200B;아래에 나열됩니다. 선택되지 않은 대상 필드는 빨간색으로 표시됩니다. 필터 필드 옵션을 사용하여 사용 가능한 소스 필드 목록의 범위를 좁힐 수 있습니다.
+매핑 **[!UICONTROL 단계가]** 나타납니다. CSV 파일의 열은 **[!UICONTROL 소스 필드]**&#x200B;아래에 나열되며 해당 XDM 스키마 필드는 **[!UICONTROL Target 필드]**&#x200B;아래에 나열됩니다. 선택되지 않은 대상 필드는 빨간색으로 표시됩니다. 필터 필드 옵션을 사용하여 사용 가능한 소스 필드 목록의 범위를 좁힐 수 있습니다.
 
 CSV 열을 XDM 필드에 매핑하려면 열의 해당 대상 필드 옆에 있는 스키마 아이콘을 선택합니다.
 
 ![](../images/tutorials/map-a-csv-file/mapping.png)
 
-스키마 *[!UICONTROL 선택 필드]* 창이 나타납니다. XDM 스키마의 구조를 탐색하고 CSV 열을 매핑할 필드를 찾을 수 있습니다. XDM 필드를 클릭하여 선택한 다음 **[!UICONTROL 선택을 클릭합니다]**.
+스키마 **[!UICONTROL 선택 필드]** 창이 나타납니다. XDM 스키마의 구조를 탐색하고 CSV 열을 매핑할 필드를 찾을 수 있습니다. XDM 필드를 클릭하여 선택한 다음 **[!UICONTROL 선택을 클릭합니다]**.
 
 ![](../images/tutorials/map-a-csv-file/select-schema-field.png)
 
-선택한 XDM 필드가 이제 *[!UICONTROL Target 필드]* 아래에 나타나면서 매핑 *[!UICONTROL 화면이 다시 나타납니다]*.
+선택한 XDM 필드가 이제 **[!UICONTROL Target 필드]** 아래에 나타나면서 매핑 **[!UICONTROL 화면이 다시 나타납니다]**.
 
 ![](../images/tutorials/map-a-csv-file/field-mapped.png)
 
@@ -77,7 +77,7 @@ CSV 열을 XDM 필드에 매핑하려면 열의 해당 대상 필드 옆에 있�
 
 ![](../images/tutorials/map-a-csv-file/remove-mapping.png)
 
-새 매핑을 추가하려면 **[!UICONTROL 소스 필드]** 목록 맨 위에서 새 매핑 *[!UICONTROL 추가를]* 선택합니다.
+새 매핑을 추가하려면 **[!UICONTROL 소스 필드]** 목록 맨 위에서 새 매핑 **[!UICONTROL 추가를]** 선택합니다.
 
 ![](../images/tutorials/map-a-csv-file/add-mapping.png)
 
@@ -125,7 +125,7 @@ CSV 파일을 매핑하고 만들면 CSV 파일을 통해 수집되는 데이터
 
 ### 매핑 함수
 
-특정 매핑 함수를 사용하여 소스 필드에 입력된 값을 기반으로 값을 계산하고 계산할 수 있습니다. 함수를 사용하려면 적절한 구문 및 입력 *[!UICONTROL 과 함께 소스 필드]* 아래에 입력합니다.
+특정 매핑 함수를 사용하여 소스 필드에 입력된 값을 기반으로 값을 계산하고 계산할 수 있습니다. 함수를 사용하려면 적절한 구문 및 입력 **[!UICONTROL 과 함께 소스 필드]** 아래에 입력합니다.
 
 예를 들어 **구/군/시** 와 **국가** CSV 필드를 연결하고 **구/군** 시 `concat(city, ", ", county)`XDM 필드에 지정하려면 소스 필드를로설정합니다.
 
@@ -158,7 +158,7 @@ CSV 파일을 매핑하고 만들면 CSV 파일을 통해 수집되는 데이터
 | 형식 | 지정된 형식에 따라 타임스탬프를 날짜 문자열로 변환합니다. | dformat(1571829875, &quot;dd-MMM-yyyy hh:mm&quot;) | &quot;2019년 10월 23일 11시 24분&quot; |
 | 날짜 | 날짜 문자열을 ZunkedDateTime 개체(ISO 8601 형식)로 변환합니다. | date(&quot;2019년 10월 23일 11시 24분&quot;) | &quot;2019-10-23T11:24:00+00:00&quot; |
 | date_part | 날짜의 부분을 검색합니다. 다음 구성 요소 값이 지원됩니다. <br><br>&quot;year&quot;<br>&quot;<br>&quot;yyyy&quot;<br><br>&quot;yyyy<br>&quot;<br>&quot;yyy&quot;q<br><br>&quot;yyy&quot;q<br>&quot;<br>&quot;cq&quot;<br><br>&quot;cq&quot;<br>&quot;cumuld&quot;alk&quot;<br>&quot;ejy&quot;y&quot;y&quot;day&quot;y&quot;y&quot;y&quot;y&quot;day&quot;<br><br>&quot;<br>&quot;<br>y&quot;ev&quot;y&quot;eyyy&quot;<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>00000000000000000000000000000000000000000000000000000000000000000000000000000 4&quot;4&quot;&quot;hh12&quot;cuts&quot;minute&quot;minutes&quot;mymi&quot;emoth&quot;n&quot;second&quot;&quot;second&quot;&quot;&quot;sighters&quot;s&quot;&quot;s&quot;s&quot;milleconds&quot;ms. | date_part(date(&quot;2019-10-17 11:55:12&quot;), &quot;MM&quot;) | 10 |
-| set_date_part | 지정된 날짜의 구성 요소를 대체합니다. 다음 구성 요소가 허용됩니다. <br><br>&quot;year&quot;<br>&quot;<br>yyyy&quot;<br><br>&quot;yyy<br>&quot;<br>&quot;yyy<br><br>&quot;<br>s&quot;<br>&quot;m&quot;<br><br><br>&quot;<br><br>&quot;dd&quot;<br>&quot;<br>&quot;<br><br>&quot;chour&quot;hh&quot;cultly&quot;<br><br>&quot;cmi&quot;n&quot;&quot;n&quot;second&quot;&quot;&quot;&quot;&quot;s&quot; | set_date_part(&quot;m&quot;, 4, date(&quot;2016-11-09T11:44:44.797&quot;) | &quot;2016-04-09T11:44:44.797&quot; |
+| set_date_part | 지정된 날짜의 구성 요소를 대체합니다. 다음 구성 요소가 허용됩니다. <br><br>&quot;year&quot;<br>&quot;<br>yyyy&quot;<br><br>&quot;yyy<br>&quot;<br>&quot;yyy<br><br>&quot;<br>s&quot;<br>&quot;m&quot;<br><br><br>&quot;<br><br>&quot;dd&quot;<br>&quot;<br>&quot;<br><br>&quot;chour&quot;hh&quot;cultly&quot;<br><br>&quot;cmi&quot;n&quot;&quot;n&quot;second&quot;&quot;&quot;s&quot;&quot;s&quot; | set_date_part(&quot;m&quot;, 4, date(&quot;2016-11-09T11:44:44.797&quot;) | &quot;2016-04-09T11:44:44.797&quot; |
 | make_date_time /<br>make_timestamp | 부품으로부터 날짜를 만듭니다. | make_date_time(2019, 10, 17, 11, 55, 12, 999, &quot;America/Los_Angeles&quot;) | `2019-10-17T11:55:12.0&#x200B;00000999-07:00[America/Los_Angeles]` |
 | current_timestamp | 현재 타임스탬프를 반환합니다. | current_timestamp() | 1571850624571 |
 | current_date | 시간 구성 요소가 없는 현재 날짜를 반환합니다. | current_date() | &quot;2019년 11월 18일&quot; |
