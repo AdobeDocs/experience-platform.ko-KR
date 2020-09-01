@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 인바운드 소스 데이터를 활성화하여 고객 프로필 채우기
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6bd5dc5a68fb2814ab99d43b34f90aa7e50aa463
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '476'
 ht-degree: 0%
@@ -33,7 +33,7 @@ ht-degree: 0%
 
 - 스키마에 ID 속성으로 지정된 속성이 하나 이상 있습니다.
 - 스키마에 기본 ID로 정의된 ID 속성이 있습니다.
-- 기본 ID가 대상 속성인 데이터 흐름 내의 매핑이 있습니다.
+- 기본 ID가 target 속성인 데이터 흐름 내의 매핑이 있습니다.
 
 소스 작업 영역에서 찾아보기 **[!UICONTROL 탭을 클릭하여]** 기본 연결을 나열합니다. 표시된 목록에서 프로필을 채울 데이터 흐름을 포함하는 연결을 찾습니다. 연결 이름을 클릭하여 세부 정보에 액세스합니다.
 
@@ -47,7 +47,7 @@ ht-degree: 0%
 
 ![](../../images/tutorials/dataflow/cloud-storage/batch/select-dataset-schema.png)
 
-스키마 **[!UICONTROL 편집기가]** 나타나고 중앙 캔버스에 스키마의 구조를 표시합니다. 캔버스 내에서 기본 ID로 설정할 필드를 선택합니다. 표시되는 *[!UICONTROL 필드 속성]* 탭 아래에서 **[!UICONTROL ID]** 확인란을 선택한 다음 **[!UICONTROL 기본 ID를 선택합니다]**. 마지막으로 적절한 ID 네임스페이스를 **[!UICONTROL 선택한]**&#x200B;다음 적용을 **[!UICONTROL 클릭합니다]**.
+스키마 **[!UICONTROL 편집기가]** 나타나고 중앙 캔버스에 스키마의 구조를 표시합니다. 캔버스 내에서 기본 ID로 설정할 필드를 선택합니다. 표시되는 **[!UICONTROL 필드 속성]** 탭 아래에서 **[!UICONTROL ID]** 확인란을 선택한 다음 **[!UICONTROL 기본 ID를 선택합니다]**. 마지막으로 적절한 ID 네임스페이스를 **[!UICONTROL 선택한]**&#x200B;다음 적용을 **[!UICONTROL 클릭합니다]**.
 
 ![](../../images/tutorials/dataflow/cloud-storage/batch/set-schema-identity.png)
 
