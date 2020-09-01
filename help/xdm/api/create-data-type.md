@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;data type;data types;Data types;Data type;datatype;Datatype
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;datatype;Datatype;data type;Data type;create
 solution: Experience Platform
 title: 데이터 유형 만들기
 topic: developer guide
 description: '조직에서 여러 방법으로 사용하려는 일반적인 데이터 구조가 있는 경우 데이터 유형을 정의할 수 있습니다. 데이터 유형은 필드의 ''유형''으로 추가하여 스키마에서 어느 곳에나 포함할 수 있으므로 혼합보다 유연하면서 다중 필드 구조를 일관되게 사용할 수 있습니다. '
 translation-type: tm+mt
-source-git-commit: cc81d590f308c7e2677cec000c27e8aca42437f5
+source-git-commit: ed1f2fdac0f9c977d11c867327c084353c1bcd0f
 workflow-type: tm+mt
 source-wordcount: '256'
 ht-degree: 0%
@@ -117,4 +117,4 @@ curl -X POST \
 }
 ```
 
-테넌트 컨테이너에 모든 데이터 유형을 나열하기 위한 GET 요청을 수행하면 속성 구성 데이터 유형이 포함됩니다. 또한 URL 인코딩 URI를 사용하여 조회(GET) 요청을 수행하여 새 데이터 유형을 직접 볼 수도 `$id` 있습니다. 조회 요청에 대한 수락 헤더 `version` 에 해당 항목을 포함해야 합니다.
+테넌트 컨테이너에 모든 데이터 유형을 나열하기 위한 GET 요청을 수행하면 속성 구성 데이터 유형이 포함됩니다. URL 인코딩 URI를 사용하여 조회(GET) 요청을 수행하여 새 데이터 유형을 직접 볼 수도 `$id` 있습니다. 조회 요청에 대한 수락 헤더 `version` 에 해당 항목을 포함해야 합니다.
