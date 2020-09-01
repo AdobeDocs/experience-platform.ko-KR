@@ -3,11 +3,11 @@ keywords: Experience Platform;home;popular topics;data governance;data usage lab
 solution: Experience Platform
 title: 데이터 사용 레이블 개요
 topic: labels
-description: 데이터 사용 표시 및 실행(DULE)은 Adobe Experience Platform 데이터 거버넌스의 핵심 메커니즘입니다. DULE 기능을 사용하면 데이터 세트 및 필드에 데이터 사용 레이블을 적용하여 관련 데이터 사용 정책에 따라 각 데이터를 분류할 수 있습니다. 이 문서에서는 Experience Platform의 데이터 사용 레이블(DULE 레이블이라고도 함)에 대한 개요를 제공합니다.
+description: Adobe Experience Platform 데이터 거버넌스를 사용하면 데이터 세트 및 필드에 데이터 사용 레이블을 적용하여 관련 데이터 사용 정책에 따라 각 데이터를 분류할 수 있습니다. 이 문서에서는 Experience Platform의 데이터 사용 레이블에 대한 개요를 제공합니다.
 translation-type: tm+mt
-source-git-commit: cddc559dfb65ada888bb367d6265863091a9b2a1
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '632'
+source-wordcount: '614'
 ht-degree: 0%
 
 ---
