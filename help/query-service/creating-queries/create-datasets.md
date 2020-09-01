@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;Query service;generate datasets;generate dataset;create dataset;
 solution: Experience Platform
 title: 쿼리 결과에서 데이터 집합 생성
 topic: queries
 translation-type: tm+mt
-source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
 workflow-type: tm+mt
 source-wordcount: '270'
 ht-degree: 0%
@@ -21,8 +21,8 @@ ht-degree: 0%
 1. 연결된 클라이언트를 사용하여 쿼리를 작성하고 출력물의 유효성을 확인합니다.
 2. UI에 [!DNL Platform] 로그인하고 [쿼리]로 이동합니다.
 3. 목록에서 쿼리를 찾아 행 위에 마우스를 놓습니다.
-4. 데이터 세트 **[!UICONTROL 만들기를 클릭합니다]**. ![이미지](../images/queries/create-datasets/click-create-dataset.png)
-5. LDAP ID 앞에 데이터 세트 이름을 입력합니다(고유 또는 SQL-safe일 필요는 없음). 시스템에서는 여기에 지정된 이름을 기반으로 &quot;테이블 이름&quot;을 생성합니다.
+4. Click **[!UICONTROL Create Dataset]**. ![이미지](../images/queries/create-datasets/click-create-dataset.png)
+5. LDAP ID 앞에 데이터 세트 이름을 입력합니다(고유 또는 SQL-safe일 필요는 없음).시스템에서는 여기에 지정된 이름을 기반으로 &quot;테이블 이름&quot;을 생성합니다.
 6. 데이터 세트 설명을 입력하고 쿼리 **[!UICONTROL 실행을 클릭합니다]**.![이미지](../images/queries/create-datasets/run-query.png)
 7. 전체 쿼리를 확인한 다음 데이터 세트 목록 페이지로 이동하여 방금 만든 데이터 세트를 확인합니다.
 
