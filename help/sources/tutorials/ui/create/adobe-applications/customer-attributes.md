@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;customer attributes
 solution: Experience Platform
 title: UI에서 고객 속성 소스 커넥터 만들기
 topic: overview
+description: 이 자습서에서는 고객 속성 프로필 데이터를 Adobe Experience Platform에 수집하기 위해 UI에서 소스 커넥터를 만드는 단계를 제공합니다.
 translation-type: tm+mt
-source-git-commit: 999ff0e9525d7d9f67298862c68bb59ddc35e558
+source-git-commit: 0da686743e8bc57d310f7eff6f1bf812a8f31238
 workflow-type: tm+mt
-source-wordcount: '352'
+source-wordcount: '374'
 ht-degree: 8%
 
 ---
