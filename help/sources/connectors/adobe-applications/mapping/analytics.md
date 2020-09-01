@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Analytics mapping fields;analytics mapping
 solution: Experience Platform
 title: Analytics 매핑 필드
 topic: overview
+description: Adobe Experience Platform을 사용하면 ADC(Analytics Data Connector)를 통해 Adobe Analytics 데이터를 인제스트할 수 있습니다. ADC를 통해 인제스트된 일부 데이터는 Analytics 필드에서 XDM(경험 데이터 모델) 필드로 직접 매핑될 수 있지만, 다른 데이터에는 성공적으로 매핑되기 위해 변형 및 특정 기능이 필요합니다.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
 workflow-type: tm+mt
-source-wordcount: '3328'
+source-wordcount: '3378'
 ht-degree: 12%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 12%
 
 # Analytics 매핑 필드
 
-Adobe Experience Platform을 사용하면 ADC(Analytics 데이터 커넥터)를 통해 Adobe Analytics 데이터를 인제스트할 수 있습니다. ADC를 통해 인제스트된 일부 데이터는 Analytics 필드에서 XDM(Experience Data Model) 필드로 직접 매핑될 수 있지만, 다른 데이터에는 성공적으로 매핑되기 위해 변형과 특정 기능이 필요합니다.
+Adobe Experience Platform을 사용하면 ADC(Analytics Data Connector)를 통해 Adobe Analytics 데이터를 인제스트할 수 있습니다. ADC를 통해 인제스트된 일부 데이터는 Analytics 필드에서 XDM(경험 데이터 모델) 필드로 직접 매핑될 수 있지만, 다른 데이터에는 성공적으로 매핑되기 위해 변형 및 특정 기능이 필요합니다.
 
 ![](../images/analytics-data-experience-platform.png)
 
@@ -22,13 +23,13 @@ Adobe Experience Platform을 사용하면 ADC(Analytics 데이터 커넥터)를 
 
 일부 필드는 Adobe Analytics에서 경험 데이터 모델(XDM)으로 직접 매핑됩니다.
 
-다음 표에는 Analytics 필드(*Analytics 필드*) 이름, 해당 XDM 필드(*XDM 필드*) 및 해당 유형(*XDM 유형*)을 보여주는 열과 필드(설명&#x200B;*Description)에 대한 설명 등이*&#x200B;포함되어 있습니다.
+다음 표에는 Analytics 필드(*Analytics 필드*), 해당 XDM 필드(*XDM 필드*) 및 해당 유형(*XDM 유형**)과 필드 설명(설명* Description)을 보여 주는 열이 포함되어 있습니다.
 
 >[!NOTE]
 >
 >표의 전체 내용을 보려면 왼쪽/오른쪽으로 스크롤하십시오.
 
-| Analytics 필드 | XDM 필드 | XDM 유형 | 설명 |
+| 분석 필드 | XDM 필드 | XDM 유형 | 설명 |
 | --------------- | --------- | -------- | ---------- |
 | m_evar1 - m_evar250 | _experience.analytics.customDimensions.eVars.eVar1 - _experience.analytics.customDimensions.eVars.eVar250 | string | 사용자 지정 변수 - 1-250 범위일 수 있습니다. 각 조직은 이러한 사용자 지정 eVar를 다르게 사용하게 됩니다. |
 | m_prop1 - m_prop75 | _experience.analytics.customDimensions.prop1 - _experience.analytics.customDimensions.prop75 | string | 사용자 지정 트래픽 변수 - 1-75 범위입니다. |
@@ -127,7 +128,7 @@ Adobe Experience Platform을 사용하면 ADC(Analytics 데이터 커넥터)를 
 
 이러한 필드에는 단일 소스가 있지만 **여러** XDM 위치에 매핑됩니다.
 
-| Analytics 필드 | XDM 필드 | XDM 유형 | 설명 |
+| 분석 필드 | XDM 필드 | XDM 유형 | 설명 |
 | --------------- | --------- | -------- | ---------- |
 | s_resolution | device.screenWidth, device.screenHeight | 정수 | 모니터 해상도를 나타내는 숫자 ID. |
 | mobileosversion | environment.operatingSystem, environment.operatingSystemVersion | string | 모바일 운영 체제 버전 |
@@ -137,13 +138,13 @@ Adobe Experience Platform을 사용하면 ADC(Analytics 데이터 커넥터)를 
 
 XDM에서 생성하려면 ADC에서 나오는 일부 필드를 변형해야 하며, XDM에서 직접 사본이 아닌 로직을 필요로 합니다.
 
-다음 표에는 Analytics 필드(*Analytics 필드*) 이름, 해당 XDM 필드(*XDM 필드*) 및 해당 유형(*XDM 유형*)을 보여주는 열과 필드(설명&#x200B;*Description)에 대한 설명 등이*&#x200B;포함되어 있습니다.
+다음 표에는 Analytics 필드(*Analytics 필드*), 해당 XDM 필드(*XDM 필드*) 및 해당 유형(*XDM 유형**)과 필드 설명(설명* Description)을 보여 주는 열이 포함되어 있습니다.
 
 >[!NOTE]
 >
 >표의 전체 내용을 보려면 왼쪽/오른쪽으로 스크롤하십시오.
 
-| Analytics 필드 | XDM 필드 | XDM 유형 | 설명 |
+| 분석 필드 | XDM 필드 | XDM 유형 | 설명 |
 | --------------- | --------- | -------- | ----------- |
 | m_prop1 - m_prop75 | _experience.analytics.customDimensions.listprop1 - _experience.analytics.customDimensions.listprop75 | 개체 | 사용자 지정 트래픽 변수(1-75) | {} |
 | m_hier1 - m_hier5 | _experience.analytics.customDimensions.hierences.hier1 - _experience.analytics.customDimensions.hierences.hier5 | 개체 | 계층 변수에 사용됩니다. 여기에는 | 구분된 값 목록. | {values (array), 구분 기호(문자열)} |
@@ -151,7 +152,7 @@ XDM에서 생성하려면 ADC에서 나오는 일부 필드를 변형해야 하�
 | m_color | device.colorDepth | 정수 | c_color 열의 값을 기반으로 하는 색상 깊이 ID입니다. |
 | m_cookies | environment.browserDetails.cookiesEnabled | 부울 | 쿠키 지원 차원에 사용된 변수. |
 | m_event_list | commerce.purchases, commerce.productViews, commerce.productListOpens, commerce.checkout, commerce.productListAdds, commerce.productListRemoval, commerce.productListViews | 개체 | 히트에 대해 표준 상거래 이벤트가 트리거되었습니다. | {id (문자열), 값(숫자)} |
-| m_event_list | _experience.analytics.event1to100.event1 - _experience.analytics.event1to100.event100, _experience.analytics.event101 - _experience.analytics.event101to200.event20, _experience.analytics analytics.event201to300.event201 - _experience.analytics.event201to300.event300, _experience.analytics.event301to400.event400, _experience.analytics.event401to500.event401 - _experience.analytics.event401to500.event500, _experience.analytics.event501 - _experience.analytics 501to600.event600, _experience.analytics.event601to700.event601 - _experience.analytics.event601to700.event700, _experience.analytics.event77 01 - _experience.analytics.event701to800.event800, _experience.analytics.event801to900.event801 - _experience.analytics.event801to90, _experience.analytics.event900 1to1000.event901 - _experience.analytics.event901to100.event1000 | 개체 | 히트에 대해 트리거된 사용자 지정 이벤트. | {id (개체), 값(개체)} |
+| m_event_list | _experience.analytics.event1to100.event1 - _experience.analytics.event1to100.event100, _experience.analytics.event101 - _experience.analytics.event101to200.event20, _experience.analytics analytics.event201to300.event201 - _experience.analytics.event201to300.event300, _experience.analytics.event301to400.event400, _experience.analytics.event401to500.event401 - _experience.analytics.event401to500.event500, _experience.analytics.event501 - _experience.analytics 501to600.event600, _experience.analytics.event601to700.event601 - _experience.analytics.event601to700.event701-800.event7 01 - _experience.analytics.event701to800.event800, _experience.analytics.event801to900.event801 - _experience.analytics.event801to90, _experience.analytics.event900 1to1000.event901 - _experience.analytics.event901to100.event1000 | 개체 | 히트에 대해 트리거된 사용자 지정 이벤트. | {id (개체), 값(개체)} |
 | m_geo_country | placeContext.geo.countryCode | string | IP를 기반으로 하는 히트가 발생하는 국가의 약어. |
 | m_geo_latitude | placeContext.geo._schema.latitude | number | <!-- MISSING --> |
 | m_geo_경도 | placeContext.geo._schema.위도 | number | <!-- MISSING --> |
@@ -197,13 +198,13 @@ XDM에서 생성하려면 ADC에서 나오는 일부 필드를 변형해야 하�
 
 쿼리 서비스를 사용하여 이러한 변형 수행에 대한 자세한 내용은 [Adobe에서 정의한 함수](../../../../query-service/sql/adobe-defined-functions.md) 설명서를 참조하십시오.
 
-다음 표에는 Analytics 필드(*Analytics 필드*) 이름, 해당 XDM 필드(*XDM 필드*) 및 해당 유형(*XDM 유형*)을 보여주는 열과 필드(설명&#x200B;*Description)에 대한 설명 등이*&#x200B;포함되어 있습니다.
+다음 표에는 Analytics 필드(*Analytics 필드*), 해당 XDM 필드(*XDM 필드*) 및 해당 유형(*XDM 유형**)과 필드 설명(설명* Description)을 보여 주는 열이 포함되어 있습니다.
 
 >[!NOTE]
 >
 >표의 전체 내용을 보려면 왼쪽/오른쪽으로 스크롤하십시오.
 
-| Analytics 필드 | XDM 필드 | XDM 유형 | 설명 |
+| 분석 필드 | XDM 필드 | XDM 유형 | 설명 |
 | --------------- | --------- | -------- | ---------- |
 | post_evar1 - post_evar250 | _experience.analytics.customDimensions.eVars.eVar1 - _experience.analytics.customDimensions.eVars.eVar250 | string | 사용자 지정 변수 - 1-250 범위일 수 있습니다. 각 조직은 이러한 사용자 지정 eVar를 다르게 사용하게 됩니다. |
 | post_prop1 - post_prop75 | _experience.analytics.customDimensions.prop1 - _experience.analytics.customDimensions.prop75 | string | 사용자 지정 트래픽 변수 - 1-75 범위입니다. |
@@ -241,7 +242,7 @@ XDM에서 생성하려면 ADC에서 나오는 일부 필드를 변형해야 하�
 | post_mvvar1 - post_mvvar3 | _experience.analytics.customDimensions.list1.list[] - _experience.analytics.customDimensions.list3.list[] | 배열 | 변수 값 목록입니다. 구현에 따라 구분된 사용자 지정 값 목록을 포함합니다. | {value(문자열), 키(문자열)} |
 | post_cookies | environment.browserDetails.cookiesEnabled | 부울 | 쿠키 지원 차원에 사용되는 변수입니다. |
 | post_event_list | commerce.purchases, commerce.productViews, commerce.productListOpens, commerce.checkout, commerce.productListAdds, commerce.productListRemoval, commerce.productListViews | 개체 | 히트에 대해 표준 상거래 이벤트가 트리거되었습니다. | {id (문자열), 값(숫자)} |
-| post_event_list | _experience.analytics.event1to100.event1 - _experience.analytics.event1to100.event100, _experience.analytics.event101 - _experience.analytics.event101to200.event20, _experience.analytics analytics.event201to300.event201 - _experience.analytics.event201to300.event300, _experience.analytics.event301to400.event400, _experience.analytics.event401to500.event401 - _experience.analytics.event401to500.event500, _experience.analytics.event501 - _experience.analytics 501to600.event600, _experience.analytics.event601to700.event601 - _experience.analytics.event601to700.event700, _experience.analytics.event77 01 - _experience.analytics.event701to800.event800, _experience.analytics.event801to900.event801 - _experience.analytics.event801to90, _experience.analytics.event900 1to1000.event901 - _experience.analytics.event901to100.event1000 | 개체 | 히트에 대해 트리거된 사용자 지정 이벤트. | {id (개체), 값(개체)} |
+| post_event_list | _experience.analytics.event1to100.event1 - _experience.analytics.event1to100.event100, _experience.analytics.event101 - _experience.analytics.event101to200.event20, _experience.analytics analytics.event201to300.event201 - _experience.analytics.event201to300.event300, _experience.analytics.event301to400.event400, _experience.analytics.event401to500.event401 - _experience.analytics.event401to500.event500, _experience.analytics.event501 - _experience.analytics 501to600.event600, _experience.analytics.event601to700.event601 - _experience.analytics.event601to700.event701-800.event7 01 - _experience.analytics.event701to800.event800, _experience.analytics.event801to900.event801 - _experience.analytics.event801to90, _experience.analytics.event900 1to1000.event901 - _experience.analytics.event901to100.event1000 | 개체 | 히트에 대해 트리거된 사용자 지정 이벤트. | {id (개체), 값(개체)} |
 | post_java_enabled | environment.browserDetails.javaEnabled | 부울 | Java 활성화 여부를 나타내는 플래그. |
 | post_latitude | placeContext.geo._schema.latitude | number | <!-- MISSING --> |
 | post_위도 | placeContext.geo._schema.위도 | number | <!-- MISSING --> |
