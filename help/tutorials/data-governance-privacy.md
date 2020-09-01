@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: 데이터 거버넌스 및 개인 정보 보호 자습서
 topic: tutorial
+description: 데이터 사용 표시 및 실행(DULE)은 Adobe Experience Platform 데이터 거버넌스의 핵심 메커니즘입니다. DULE 기능을 사용하면 데이터 세트 및 필드에 데이터 사용 레이블을 적용하여 관련 데이터 사용 정책에 따라 각 데이터를 분류할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
+source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
 workflow-type: tm+mt
-source-wordcount: '470'
+source-wordcount: '506'
 ht-degree: 0%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 0%
 
 # [!DNL Data Governance] 및 [!DNL Privacy] Tutorials
 
-[!DNL Data Usage Labeling and Enforcement] (DULE)는 Adobe Experience Platform [!DNL Data Governanc]e의 핵심 메커니즘입니다. DULE 기능을 사용하면 데이터 세트 및 필드에 데이터 사용 레이블을 적용하여 관련 데이터 사용 정책에 따라 각 데이터를 분류할 수 있습니다. 레이블을 시작하기 전에 [데이터 거버넌스 개요](../data-governance/home.md) 를 참조하여 Within DULE 프레임워크에 대한 보다 강력한 소개를 [!DNL Platform]확인하십시오.
+[!DNL Data Usage Labeling and Enforcement] (DULE)는 Adobe Experience Platform의 핵심 메커니즘이다 [!DNL Data Governance]. DULE 기능을 사용하면 데이터 세트 및 필드에 데이터 사용 레이블을 적용하여 관련 데이터 사용 정책에 따라 각 데이터를 분류할 수 있습니다. 레이블을 시작하기 전에 [데이터 거버넌스 개요](../data-governance/home.md) 를 참조하여 Within DULE 프레임워크에 대한 보다 강력한 소개를 [!DNL Platform]확인하십시오.
 
 Adobe Experience Platform [!DNL Privacy Service] 는 다양한 솔루션에서 개인 정보 및 규정 준수 요청을 조정할 수 있는 RESTful API 및 사용자 인터페이스를 제공합니다. 자세한 내용은 [Privacy Service 개요를 읽어 보십시오](../privacy-service/home.md).
 
