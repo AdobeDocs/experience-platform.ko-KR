@@ -5,7 +5,7 @@ topic: overview
 title: 액세스 제어 개요
 description: Adobe Experience Platform에 대한 액세스 제어는 Adobe Admin Console을 통해 제공됩니다. 이 기능은 Admin Console의 제품 프로필을 활용하므로 사용자에게 사용 권한 및 샌드박스를 연결합니다.
 translation-type: tm+mt
-source-git-commit: e22b0f64fd6153f76cff862a6e973a235257430e
+source-git-commit: 397f08efa276f7885e099a0a8d9dc6d23fe0e8cc
 workflow-type: tm+mt
 source-wordcount: '1162'
 ht-degree: 2%
@@ -32,7 +32,7 @@ ht-degree: 2%
 - 관리자는 기본 [제품 프로필을](#product-profiles) 보거나 필요에 따라 새 고객 제품 프로필을 만들 수 있습니다.
 - 관리자는 기존 제품 프로필에 대한 권한 및 사용자를 편집할 수 있습니다.
 - 제품 프로필을 만들거나 편집할 때 관리자는 **[!UICONTROL 사용자]** 탭을 사용하여 프로필에 사용자를 추가하고 권한 탭에 액세스하여 이러한 사용자(&quot;[!UICONTROL 데이터 세트]읽기[!UICONTROL &quot; 또는 &quot;스키마]관리 **[!UICONTROL &quot;와 같은)에게]** 권한탭에 액세스하여 권한을 부여합니다. 마찬가지로 관리자는 동일한 권한 탭을 사용하여 샌드박스에 대한 액세스 권한을 할당할 수 있습니다.
-- 사용자가 [!DNL Experience Platform] 사용자 인터페이스에 로그인하면 기능에 대한 [!DNL Platform] 액세스 권한은 2단계에서 사용자에게 부여된 권한에 의해 결정됩니다. 예를 들어 사용자에게 &quot;데이터 집합[!UICONTROL 보기]&quot; 권한이 없는 경우, 측면 메뉴의 *[!UICONTROL 데이터 집합]* 탭이 해당 사용자에게 표시되지 않습니다.
+- 사용자가 [!DNL Experience Platform] 사용자 인터페이스에 로그인하면 기능에 대한 [!DNL Platform] 액세스 권한은 2단계에서 사용자에게 부여된 권한에 의해 결정됩니다. 예를 들어 사용자에게 &quot;데이터 집합[!UICONTROL 보기]&quot; 권한이 없는 경우, 측면 메뉴의 **[!UICONTROL 데이터 집합]** 탭이 해당 사용자에게 표시되지 않습니다.
 
 액세스 제어 관리 방법에 대한 자세한 단계 [!DNL Experience Platform]는 [액세스 제어 사용 안내서를 참조하십시오](./ui/overview.md).
 
@@ -95,10 +95,10 @@ Adobe Admin Console은 Adobe 제품 이용 권한 및 조직의 이용 권한을
 | [!DNL Sandbox Administration] | [!UICONTROL 샌드박스 보기] | 조직에 속하는 샌드박스에 대한 읽기 전용 액세스 |
 | [!DNL Sandbox Administration] | [!UICONTROL 샌드박스 재설정] | 샌드박스를 재설정하는 기능 |
 | [!DNL Destinations] | [!UICONTROL 대상 관리] | 대상을 읽고, 만들고, 편집하고, 비활성화하는 액세스 권한* |
-| [!DNL Destinations] | [!UICONTROL 대상 보기] | [카탈로그] 탭 및 [찾아보기] 탭 *[!UICONTROL 의 인증된 대상]* 및 사용 가능한 대상에 대한 읽기 전용 *[!UICONTROL 액세스]* .* |
+| [!DNL Destinations] | [!UICONTROL 대상 보기] | [카탈로그] 탭 및 [찾아보기] 탭 **[!UICONTROL 의 인증된 대상]** 및 사용 가능한 대상에 대한 읽기 전용 **[!UICONTROL 액세스]** .* |
 | [!DNL Destinations] | [!UICONTROL 대상 활성화] | 활성화된 대상에 데이터를 활성화하는 기능 이 권한을 사용하려면 대상을 활성화할 사용자에게 &quot;대상 보기&quot; 또는 &quot; [!UICONTROL 대상] 관리&quot;가 부여되어야 합니다.* |
 | [!DNL Data Ingestion] | [!UICONTROL 소스 관리] | 소스를 읽고, 만들고, 편집하고, 비활성화할 수 있습니다. |
-| [!DNL Data Ingestion] | [!UICONTROL 소스 보기] | [카탈로그] 탭의 사용 가능한 소스 및 [ *[!UICONTROL 찾아보기]* ] *[!UICONTROL 탭의 인증된 소스에 대한 읽기 전용]* 액세스. |
+| [!DNL Data Ingestion] | [!UICONTROL 소스 보기] | [카탈로그] 탭의 사용 가능한 소스 및 [ **[!UICONTROL 찾아보기]** ] **[!UICONTROL 탭의 인증된 소스에 대한 읽기 전용]** 액세스. |
 | [!DNL Data Science Workspace] | [!UICONTROL 데이터 과학 작업 공간 관리] | 액세스 권한을 사용하여 내용을 읽고, 만들고, 편집하고, 삭제할 수 [!DNL Data Science Workspace]있습니다. |
 
 _(*) 이 권한을 사용하려면[!DNL Real-time Customer Data Platform]실시간 CDP에 대한 자세한 내용은[실시간 CDP 개요를 읽어 보시기 바랍니다](https://docs.adobe.com/content/help/en/experience-platform/rtcdp/overview.html)._
