@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Azure Blob;azure blob;Azure blob connector
 solution: Experience Platform
 title: UI에서 Azure Blob 소스 커넥터 만들기
 topic: overview
+description: 이 자습서에서는 플랫폼 사용자 인터페이스를 사용하여 Azure Blob(이하 "물방울"이라 함)을 만드는 단계를 제공합니다.
 translation-type: tm+mt
-source-git-commit: dd036cf4df5d772206d2b73292c60f2d866ba0de
+source-git-commit: 0da686743e8bc57d310f7eff6f1bf812a8f31238
 workflow-type: tm+mt
-source-wordcount: '530'
+source-wordcount: '549'
 ht-degree: 1%
 
 ---
