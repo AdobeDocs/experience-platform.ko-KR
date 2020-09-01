@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;segmentation;segmentation service;troubleshooting;API;seg;segment;Segment
+keywords: Experience Platform;segmentation;segmentation service;troubleshooting;API;seg;segment;Segment;search;segment search;
 solution: Adobe Experience Platform
 title: 세그먼트 검색 끝점
 topic: guide
 description: 세그먼트 검색은 다양한 데이터 소스에 포함된 필드를 검색하고 거의 실시간으로 반환하는 데 사용됩니다. 이 안내서에서는 세그먼트 검색을 더 잘 이해할 수 있도록 정보를 제공하며 API를 사용하여 기본 작업을 수행하기 위한 샘플 API 호출을 포함합니다.
 translation-type: tm+mt
-source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
+source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
 workflow-type: tm+mt
 source-wordcount: '1179'
 ht-degree: 2%
@@ -259,7 +259,7 @@ curl -X GET \
 | run* | 와일드카드 검색입니다. 별표(*)를 사용하면 0개 이상의 문자가 검색됩니다. 즉, 검색 가능한 필드의 내용에 &quot;run&quot;으로 시작하는 단어가 포함된 경우 결과가 반환됩니다. 예를 들어 단어 &quot;runs&quot;, &quot;running&quot;, &quot;runt&quot; 또는 &quot;runt&quot;가 나타나면 결과를 반환합니다. |
 | 캠? | 와일드카드 검색입니다. 물음표(?) 사용 검색 가능한 필드의 내용이 &quot;cam&quot;과 추가 문자로 시작하는 경우 결과가 반환됩니다. 예를 들어 &quot;camp&quot; 또는 &quot;camams&quot;라는 단어가 나타나면 결과를 반환하지만 &quot;camera&quot; 또는 &quot;campfire&quot;라는 단어가 나타나면 결과를 반환하지 않습니다. |
 | &quot;블루 우산&quot; | 구문 검색. 검색 가능한 필드 컨텐츠에 전체 구문 &quot;파란색 우산&quot;이 포함된 경우 결과가 반환됩니다. |
-| 파란색\~ | 모호한 검색. 선택 사항으로 물결표(~) 뒤에 0-2 사이의 숫자를 입력하여 편집 거리를 지정할 수 있습니다. 예를 들어 &quot;blue\~1&quot;은 &quot;blue&quot;, &quot;blues&quot; 또는 &quot;gurl&quot;을 반환합니다. 퍼지 검색은 **구문이 아니라 용어에만** 적용할 수 있습니다. 하지만 구문의 각 단어 끝에 물결표를 추가할 수 있습니다. 예를 들어 &quot;camping\~ in\~ the\~ summer\~&quot;는 &quot;camping in the summer&quot; 와 일치합니다. |
+| 파란색\~ | 모호한 검색. 선택 사항으로 물결표(~) 뒤에 0-2 사이의 숫자를 입력하여 편집 거리를 지정할 수 있습니다. 예를 들어 &quot;blue\~1&quot;은 &quot;blue&quot;, &quot;blues&quot; 또는 &quot;gurl&quot;을 반환합니다. 퍼지 검색은 **구문이 아니라 용어에만** 적용할 수 있습니다. 하지만 구문의 각 단어 끝에 물결표를 추가할 수 있습니다. 예를 들어, &quot;camping\~ in\~ the\~ summer\~&quot;은 &quot;camping in the summer&quot; 와 일치합니다. |
 | &quot;호텔 공항&quot;\~5 | 근접 검색 이 유형의 검색은 문서에서 서로 가까운 용어를 찾는 데 사용됩니다. 예를 들어 문구는 문서에서 5단어 내에 &quot;hotel&quot;과 &quot;airport&quot;라는 용어를 찾습니다. `"hotel airport"~5` |
 | `/a[0-9]+b$/` | 정규 표현식 검색. 이 유형의 검색은 RegExp 클래스에 설명된 대로 슬래시 &quot;/&quot; 사이의 컨텐츠를 기준으로 일치를 찾습니다. 예를 들어 &quot;motel&quot; 또는 &quot;hotel&quot;이 포함된 문서를 찾으려면 을 지정합니다 `/[mh]otel/`. 정규 표현식 검색은 단일 단어와 일치합니다. |
 
