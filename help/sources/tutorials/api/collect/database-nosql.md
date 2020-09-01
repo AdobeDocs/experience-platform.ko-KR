@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics; flow service; database; sql; no sql; data warehouse
+keywords: Experience Platform;home;popular topics;third-party database;third party database
 solution: Experience Platform
 title: 소스 커넥터 및 API를 통해 타사 데이터베이스의 데이터 수집
 topic: overview
-description: 이 자습서에서는 소스 커넥터 및 Flow Service API를 통해 타사 데이터베이스에서 데이터를 검색하고 이를 플랫폼으로 인제하는 절차를 다룹니다.
+description: 이 자습서에서는 소스 커넥터 및 API를 통해 타사 데이터베이스에서 데이터를 검색하고 이를 플랫폼으로 인제스트하는 단계를 다룹니다.
 translation-type: tm+mt
-source-git-commit: 6578fd607d6f897a403d0af65c81dafe3dc12578
+source-git-commit: 6f4714561c2946a084eed4e89d3148df5b8044f5
 workflow-type: tm+mt
-source-wordcount: '1653'
+source-wordcount: '1650'
 ht-degree: 1%
 
 ---
