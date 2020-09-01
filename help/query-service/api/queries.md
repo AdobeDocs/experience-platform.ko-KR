@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;api guide;queries;query;Query service;
 solution: Experience Platform
 title: 쿼리 서비스 개발자 가이드
 topic: queries
 translation-type: tm+mt
-source-git-commit: a98e31f57c6ff4fc49d8d8f64441a6e1e18d89da
+source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
 workflow-type: tm+mt
 source-wordcount: '645'
 ht-degree: 2%
@@ -29,7 +29,7 @@ GET /queries
 GET /queries?{QUERY_PARAMETERS}
 ```
 
-- `{QUERY_PARAMETERS}`: (*선택*&#x200B;사항) 응답에서 반환된 결과를 구성하는 요청 경로에 추가된 매개 변수입니다. 여러 매개 변수를 앰퍼샌드(앰퍼샌드)로 구분하여 포함할 수`&`있습니다. 사용 가능한 매개 변수는 아래에 나열되어 있습니다.
+- `{QUERY_PARAMETERS}`:(*선택*&#x200B;사항) 응답에서 반환된 결과를 구성하는 요청 경로에 추가된 매개 변수입니다. 여러 매개 변수를 앰퍼샌드(앰퍼샌드)로 구분하여 포함할 수`&`있습니다. 사용 가능한 매개 변수는 아래에 나열되어 있습니다.
 
 **쿼리 매개 변수**
 
@@ -41,8 +41,8 @@ GET /queries?{QUERY_PARAMETERS}
 | `limit` | 페이지에 포함된 결과 수를 제어하기 위해 페이지 크기 제한을 지정합니다. (*Default value: 20*) |
 | `start` | 제로 기반 번호 지정을 사용하여 응답 목록을 오프셋합니다. 예를 들어 세 번째 나열된 쿼리에서 시작하는 목록을 `start=2` 반환합니다. (*Default value: 0*) |
 | `property` | 필드를 기반으로 결과를 필터링합니다. 필터는 HTML을 **escape해야 합니다** . 쉼표는 여러 필터 집합을 결합하는 데 사용됩니다. 지원되는 필드는 `created``updated`, `state`및 `id`입니다. 지원되는 연산자 목록은 `>` (보다 큼), `<` (보다 작음), `>=` (보다 크거나 같음), `<=` (보다 작음), `==` (같음), `!=` (같지 않음) 및 `~` (포함)입니다. 예를 들어, 지정된 ID가 있는 모든 쿼리를 `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` 반환합니다. |
-| `excludeSoftDeleted` | 소프트 삭제된 쿼리를 포함할지 여부를 나타냅니다. 예를 들어, `excludeSoftDeleted=false` 소프트 **삭제 쿼리는** 포함됩니다. (*부울, 기본값: true*) |
-| `excludeHidden` | 비 사용자 제어 쿼리를 표시할지를 나타냅니다. 이 값을 false로 설정하면 CURSOR 정의, FETCH 또는 메타데이터 쿼리와 같은 사용자 중심의 쿼리가 **포함됩니다** . (*부울, 기본값: true*) |
+| `excludeSoftDeleted` | 소프트 삭제된 쿼리를 포함할지 여부를 나타냅니다. 예를 들어, `excludeSoftDeleted=false` 소프트 **삭제 쿼리는** 포함됩니다. (*부울, 기본값:true*) |
+| `excludeHidden` | 비 사용자 제어 쿼리를 표시할지를 나타냅니다. 이 값을 false로 설정하면 CURSOR 정의, FETCH 또는 메타데이터 쿼리와 같은 사용자 중심의 쿼리가 **포함됩니다** . (*부울, 기본값:true*) |
 
 **요청**
 
