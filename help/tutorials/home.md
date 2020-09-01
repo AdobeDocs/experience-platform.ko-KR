@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Adobe Experience Platform 쿼리 서비스
 topic: overview
+description: 이 자습서는 Experience Platform 설명서에 있는 정보를 보완하기 위해 설계되었으므로 최상의 결과를 얻으려면 자습서를 완성하면서 문서를 최신 상태로 유지할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
 workflow-type: tm+mt
-source-wordcount: '148'
+source-wordcount: '175'
 ht-degree: 0%
 
 ---
