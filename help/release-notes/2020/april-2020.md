@@ -6,9 +6,9 @@ last-update: April 13, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '993'
+source-wordcount: '991'
 ht-degree: 5%
 
 ---
@@ -73,7 +73,7 @@ Adobe Experience Platform [!DNL Data Governance] 는 고객 데이터를 관리�
 
 데이터 거버넌스를 시작하려면 고객 데이터에 적용되는 규정, 계약 의무 및 기업 정책을 철저하게 이해해야 합니다. 여기에서, 데이터는 적절한 데이터 사용 레이블을 적용하여 분류할 수 있으며, 데이터 사용 정책의 정의를 통해 데이터를 사용할 수 있습니다.
 
-DULE 프레임워크는 [!DNL Experience Platform] 사용자 인터페이스 및 DULE [!DNL Policy Service] API를 통해 데이터를 분류하고 데이터 사용 정책을 만드는 과정을 간소화하고 간소화합니다.
+이 [!DNL Data Governance] 프레임워크는 [!DNL Experience Platform] 사용자 인터페이스 및 [!DNL Policy Service] API를 통해 데이터를 분류하고 데이터 사용 정책을 만드는 과정을 간소화하고 간소화합니다.
 
 **새로운 기능**
 
@@ -83,7 +83,7 @@ DULE 프레임워크는 [!DNL Experience Platform] 사용자 인터페이스 및
 
 **알려진 문제**
 
-* 없음.
+* None.
 
 자세한 내용은 [데이터 거버넌스 개요를 참조하십시오](../../data-governance/home.md).
 
@@ -117,7 +117,7 @@ Adobe 실시간 CDP는 50개 이상의 확장을 대상으로 데이터 활성�
 
 알려진 문제
 
-* 없음
+* None
 
 자세한 내용 [!DNL Privacy Service]은 먼저 [Privacy Service 개요를 읽어 보십시오](../../privacy-service/home.md).
 
@@ -137,6 +137,6 @@ Adobe Experience Platform은 외부 소스에서 데이터를 인제스트할 �
 
 **알려진 문제**
 
-* 없음
+* None
 
 소스에 대한 자세한 내용은 [소스 개요를 참조하십시오](../../sources/home.md).
