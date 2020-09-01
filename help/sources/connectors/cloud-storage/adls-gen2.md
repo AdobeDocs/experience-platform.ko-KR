@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Azure Data Lake Storage Gen2;ADLS-Gen2;adls gen2;ADLS Gen2
 solution: Experience Platform
 title: Azure Data Lake Storage Gen2 커넥터
 topic: overview
+description: 아래 설명서에서는 API 또는 사용자 인터페이스를 사용하여 Azure Data Lake Storage Gen2를 플랫폼에 연결하는 방법에 대한 정보를 제공합니다.
 translation-type: tm+mt
-source-git-commit: 4d3899e8a91d15da7e40523a03285f3ccec27191
+source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
 workflow-type: tm+mt
-source-wordcount: '202'
+source-wordcount: '224'
 ht-degree: 0%
 
 ---
