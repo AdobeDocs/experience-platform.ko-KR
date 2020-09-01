@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;query
+keywords: Experience Platform;home;popular topics;query service;Query service;query;query editor;Query Editor;Query editor;
 solution: Experience Platform
 title: Adobe Experience Platform 쿼리 서비스 UI 안내서
 topic: guide
 description: Adobe Experience Platform 쿼리 서비스는 쿼리를 작성 및 실행하고, 이전에 실행된 쿼리를 보고, IMS 조직 내에서 사용자가 저장한 쿼리에 액세스하는 데 사용할 수 있는 사용자 인터페이스를 제공합니다.
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: d2f098cb9e4aaf5beaad02173a22a25a87a43756
 workflow-type: tm+mt
 source-wordcount: '617'
 ht-degree: 2%
