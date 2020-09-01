@@ -5,7 +5,7 @@ title: Adobe Experience Platform ID 서비스
 topic: overview
 description: 'ID 네임스페이스는 ID 서비스의 구성 요소이며 ID가 연관되는 컨텍스트의 지표 역할을 합니다. 예를 들어 "name<span>@email.com"의 값을 이메일 주소로 구분하거나 "443522"의 값을 숫자 CRM ID로 구별합니다. '
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '774'
 ht-degree: 4%
@@ -53,7 +53,7 @@ ID 네임스페이스를 사용하여 작업하려면 관련 다양한 Adobe Exp
 
 Adobe Experience Platform은 모든 조직에서 사용할 수 있는 몇 가지 ID 네임스페이스를 제공합니다. 이러한 네임스페이스는 표준 네임스페이스라고 하며 [!DNL Identity Service] API나 [!DNL Platform] UI를 통해 볼 수 있습니다.
 
-UI에서 표준 네임스페이스를 보려면 왼쪽 레일에서 **[!UICONTROL ID를]** 클릭한 다음 *[!UICONTROL 찾아보기]* 탭을 클릭합니다. 조직에서 액세스할 수 있는 모든 ID 네임스페이스가 표시되지만 &quot;[!UICONTROL 표준]&quot;을 &quot;[!UICONTROL 소유자]&quot;로 사용하는 네임스페이스는 Adobe에서 제공하는 표준네임스페이스입니다.
+UI에서 표준 네임스페이스를 보려면 왼쪽 레일에서 **[!UICONTROL ID를]** 클릭한 다음 **[!UICONTROL 찾아보기]** 탭을 클릭합니다. 조직에서 액세스할 수 있는 모든 ID 네임스페이스가 표시되지만 &quot;[!UICONTROL 표준]&quot;을 &quot;[!UICONTROL 소유자]&quot;로 사용하는 네임스페이스는 Adobe에서 제공하는 표준네임스페이스입니다.
 
 그런 다음 나열된 네임스페이스 중 하나를 클릭하여 세부 사항을 볼 수 있습니다.
 
@@ -71,7 +71,7 @@ UI를 사용하여 사용자 정의 네임스페이스를 만들려면 ID 네임
 
 ![](./images/create-identity-namespace.png)
 
-표준 네임스페이스와 유사하게 *[!UICONTROL 검색]* 탭에서 사용자 지정 네임스페이스를 클릭하여 세부 사항을 볼 수 있지만, 사용자 지정 네임스페이스를 사용하면 세부 사항 영역에서 표시 이름 및 설명을 편집할 수도 있습니다.
+표준 네임스페이스와 유사하게 **[!UICONTROL 검색]** 탭에서 사용자 지정 네임스페이스를 클릭하여 세부 사항을 볼 수 있지만, 사용자 지정 네임스페이스를 사용하면 세부 사항 영역에서 표시 이름 및 설명을 편집할 수도 있습니다.
 
 >[!NOTE]
 >
