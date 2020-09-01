@@ -5,7 +5,7 @@ title: 스키마 편집기를 사용하여 스키마 만들기
 topic: tutorials
 description: 이 자습서에서는 Experience Platform 내의 스키마 편집기를 사용하여 스키마를 만드는 단계를 설명합니다.
 translation-type: tm+mt
-source-git-commit: ed1f2fdac0f9c977d11c867327c084353c1bcd0f
+source-git-commit: d946f5014707bf73f373d712b287de259c3df5cd
 workflow-type: tm+mt
 source-wordcount: '3528'
 ht-degree: 0%
@@ -113,7 +113,7 @@ UI의 [!UICONTROL 스키마] 작업 영역에서는 [!DNL Platform] 조직에 �
 
 &quot;[!UICONTROL 충성도 멤버]&quot; 스키마는 충성도 프로그램 멤버와 관련된 데이터를 캡처하기 위한 것으로 특정 충성도 관련 필드가 필요합니다. 필요한 필드가 포함된 표준 혼합이 없으므로 새 혼합을 정의해야 합니다.
 
-이 때 [혼합 *[!UICONTROL 추가]* ] 대화 상자를 열 때 [새 **[!UICONTROL 혼합 만들기]를 선택합니다]**. 그러면 혼합에 대한 **[!UICONTROL 표시 이름]** 및 **[!UICONTROL 설명]** 을제공하라는 메시지가 표시됩니다.
+이 때 [혼합 **[!UICONTROL 추가]** ] 대화 상자를 열 때 [새 **[!UICONTROL 혼합 만들기]를 선택합니다]**. 그러면 혼합에 대한 **[!UICONTROL 표시 이름]** 및 **[!UICONTROL 설명]** 을제공하라는 메시지가 표시됩니다.
 
 ![](../images/tutorials/create-schema/mixin_create_new.png)
 
