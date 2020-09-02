@@ -5,9 +5,9 @@ title: Azure 이벤트 허브 커넥터
 topic: overview
 description: 아래 설명서에서는 API 또는 사용자 인터페이스를 사용하여 Azure 이벤트 허브를 플랫폼에 연결하는 방법에 대한 정보를 제공합니다.
 translation-type: tm+mt
-source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
+source-git-commit: 7b92327cfeb2410baf313dd650f68cfeb6db36e6
 workflow-type: tm+mt
-source-wordcount: '243'
+source-wordcount: '241'
 ht-degree: 0%
 
 ---
@@ -55,15 +55,17 @@ Adobe Experience Platform은 AWS, [!DNL Google Cloud Platform]및 AWS와 같은 
 - `40.79.163.80/28`
 - `40.79.171.160/28`
 
+## 연결 [!DNL Azure Event Hubs] 을 [!DNL Platform]
+
 아래 설명서에서는 API 또는 사용자 인터페이스 [!DNL Azure Event Hubs] 를 [!DNL Platform] 사용하여 연결하는 방법에 대해 설명합니다.
 
-## API [!DNL Azure Event Hubs] 를 [!DNL Platform] 사용하는 데 연결
+### API 사용
 
 - [Flow Service API를 사용하여 Azure 이벤트 허브 커넥터 만들기](../../tutorials/api/create/cloud-storage/eventhub.md)
 - [Flow Service API를 사용하여 클라우드 스토리지 시스템 살펴보기](../../tutorials/api/explore/cloud-storage.md)
 - [Flow Service API를 사용하여 클라우드 스토리지 데이터 수집](../../tutorials/api/collect/cloud-storage.md)
 
-## UI [!DNL Azure Event Hubs] 를 [!DNL Platform] 사용하는 데 연결
+### UI 사용
 
 - [UI에서 Azure 이벤트 허브 원본 커넥터 만들기](../../tutorials/ui/create/cloud-storage/eventhub.md)
 - [UI에서 클라우드 스토리지 커넥터에 대한 데이터 흐름 구성](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
