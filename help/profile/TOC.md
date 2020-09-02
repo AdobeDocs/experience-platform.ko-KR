@@ -4,9 +4,9 @@ audience: user
 user-guide-title: 실시간 고객 프로필 도움말
 user-guide-description: Real-time Customer Profile provides a holistic view of each individual customer by combining data from multiple channels, including online, offline, CRM, and third-party data. Profile allows you to consolidate your disparate customer data into a unified view offering an actionable, timestamped account of every customer interaction.
 translation-type: tm+mt
-source-git-commit: bd3c31e7d39f7f66d755356a3dbb754e97c196fb
+source-git-commit: 31166ddf8afbe13874be66b29c89501bd6ce1e51
 workflow-type: tm+mt
-source-wordcount: '84'
+source-wordcount: '86'
 ht-degree: 22%
 
 ---
@@ -27,6 +27,7 @@ ht-degree: 22%
    * [[!DNL Profile] 시스템 작업(요청 삭제)](api/profile-system-jobs.md)
 * UI 가이드 {#ui}
    * [[!DNL Profile] 사용 안내서](ui/user-guide.md)
+   * [[!DNL Profile] 세부 맞춤화](ui/profile-customization.md)
    * [정책 병합 사용자 안내서](ui/merge-policies.md)
 * 자습서 {#tutorials}
    * [데이터 추가 [!DNL Profile]](tutorials/add-profile-data.md)
