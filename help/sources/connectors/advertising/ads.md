@@ -5,9 +5,9 @@ title: Google AdWords 커넥터
 topic: overview
 description: 아래 설명서에서는 API 또는 사용자 인터페이스를 사용하여 Google AdWords를 플랫폼에 연결하는 방법에 대한 정보를 제공합니다.
 translation-type: tm+mt
-source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
+source-git-commit: ca3084a9c30cc2dd9e0ebc9cef5ae630cbe47b98
 workflow-type: tm+mt
-source-wordcount: '219'
+source-wordcount: '217'
 ht-degree: 0%
 
 ---
@@ -55,15 +55,17 @@ Adobe Experience Platform은 [!DNL Platform] 서비스를 사용하여 들어오
 - `40.79.163.80/28`
 - `40.79.171.160/28`
 
+## 연결 [!DNL Google AdWords] 을 [!DNL Platform]
+
 아래 설명서에서는 API 또는 사용자 인터페이스 [!DNL Google AdWords] 를 [!DNL Platform] 사용하여 연결하는 방법에 대해 설명합니다.
 
-## API [!DNL Google AdWords] 를 [!DNL Platform] 사용하는 데 연결
+### API 사용
 
 - [Flow Service API를 사용하여 Google AdWords 커넥터 만들기](../../tutorials/api/create/advertising/ads.md)
 - [Flow Service API를 사용하여 광고 시스템 살펴보기](../../tutorials/api/explore/advertising.md)
 - [Flow Service API를 사용하여 광고 데이터 수집](../../tutorials/api/collect/advertising.md)
 
-## UI [!DNL Google AdWords] 를 [!DNL Platform] 사용하는 데 연결
+### UI 사용
 
 - [UI에서 Google AdWords 소스 커넥터 만들기](../../tutorials/ui/create/advertising/ads.md)
 - [UI에서 광고 커넥터에 대한 데이터 흐름 구성](../../tutorials/ui/dataflow/advertising.md)
