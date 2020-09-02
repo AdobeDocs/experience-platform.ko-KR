@@ -4,9 +4,9 @@ audience: user
 user-guide-title: Adobe Experience Platform 소스 커넥터 도움말
 user-guide-description: Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 translation-type: tm+mt
-source-git-commit: e628621903dbc0ec7381dfeae99902f503b34869
+source-git-commit: 1292e39ea7682b839ea75dd069ce32f1591345b8
 workflow-type: tm+mt
-source-wordcount: '619'
+source-wordcount: '627'
 ht-degree: 0%
 
 ---
@@ -132,6 +132,7 @@ ht-degree: 0%
    - [타사 클라우드 스토리지 시스템에서 쪽모이 세공 데이터를 인제스트](tutorials/api/cloud-storage-parquet.md)
    - [Flow Service API를 사용하여 데이터 세트 기본 연결 만들기](tutorials/api/create-dataset-base-connection.md)
    - [Flow Service API를 사용하여 데이터 흐름 모니터링](tutorials/api/monitor.md)
+   - [Flow Service API를 사용하여 연결 정보 업데이트](tutorials/api/update.md)
 - UI 자습서 {#ui-tutorials}
    - 소스 커넥터 만들기 {#create}
       - Adobe 응용 프로그램 {#adobe-applications}
