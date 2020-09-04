@@ -5,9 +5,9 @@ title: 프로필 미리 보기 - 실시간 고객 프로필 API
 description: Adobe Experience Platform을 사용하면 여러 소스에서 고객 데이터를 수집하여 개별 고객을 위한 강력한 통합 프로파일을 구축할 수 있습니다. 실시간 고객 프로파일에 대해 활성화된 데이터가 플랫폼으로 수집되므로 프로필 데이터 저장소 내에 저장됩니다. 프로필 저장소의 레코드 수가 늘어나거나 줄어들면서 데이터 저장소에 있는 프로필 조각 및 병합된 프로필 수에 대한 정보가 포함된 샘플 작업이 실행됩니다. 프로필 API를 사용하면 성공적인 최신 샘플뿐만 아니라 데이터 세트 및 ID 네임스페이스별로 프로필 배포를 나열할 수 있습니다.
 topic: guide
 translation-type: tm+mt
-source-git-commit: 75a07abd27f74bcaa2c7348fcf43820245b02334
+source-git-commit: 2edba7cba4892f5c8dd41b15219bf45597bd5219
 workflow-type: tm+mt
-source-wordcount: '1442'
+source-wordcount: '1478'
 ht-degree: 1%
 
 ---
@@ -59,6 +59,10 @@ curl -X GET \
 ```json
 {
   "numRowsToRead": "41003",
+  "sampleJobRunning": {
+    "status": true,
+    "submissionTimestamp": "2020-08-01 17:57:57.0"
+  },
   "cosmosDocCount": "\"300803\"",
   "totalFragmentCount": 47429,
   "lastSuccessfulBatchTimestamp": "\"null\"",
@@ -75,6 +79,7 @@ curl -X GET \
 | 속성 | 설명 |
 |---|---|
 | `numRowsToRead` | 샘플에 있는 병합된 프로필의 총 수입니다. |
+| `sampleJobRunning` | 샘플 작업이 진행 중일 `true` 때 반환하는 부울 값입니다. 일괄 처리 파일이 프로필 스토어에 실제로 추가되는 시점까지 발생하는 지연에 대한 투명도를 제공합니다. |
 | `cosmosDocCount` | Cosmos의 총 문서 수입니다. |
 | `totalFragmentCount` | 프로필 저장소의 총 프로필 조각 수입니다. |
 | `lastSuccessfulBatchTimestamp` | 마지막으로 성공한 일괄 처리 타임스탬프. |
@@ -206,7 +211,7 @@ GET /previewsamplestatus/report/namespace?{QUERY_PARAMETERS}
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/dataset \
+  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/namespace \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
