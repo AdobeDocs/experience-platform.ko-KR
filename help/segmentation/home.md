@@ -5,9 +5,9 @@ title: Adobe Experience Platform 세그멘테이션 서비스
 topic: overview
 description: 이 문서에서는 세그멘테이션 서비스와 Adobe Experience Platform에서 수행하는 역할에 대한 개요를 제공합니다.
 translation-type: tm+mt
-source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
+source-git-commit: 5dd07bf9afe96be3a4c3f4a4d4e3b23aef4fde70
 workflow-type: tm+mt
-source-wordcount: '1991'
+source-wordcount: '1387'
 ht-degree: 0%
 
 ---
@@ -129,97 +129,11 @@ API 또는 API를 통해 세그먼트를 구성하려면 세그먼트 이름 [!D
 
 ## 다중 엔티티 세그먼테이션 {#multi-entity}
 
-고급 다중 엔티티 세그먼테이션 기능을 사용하면 여러 XDM 클래스를 사용하여 세그먼트를 만들어 개인 스키마에 확장을 추가할 수 있습니다. 그 결과, 프로필 데이터 저장소가 기본인 것처럼 세그먼트 정의 중에 추가 필드에 액세스할 [!DNL Segmentation Service] 수 있습니다.
-
-다중 엔티티 세그먼테이션은 비즈니스 요구 사항과 관련된 데이터를 기반으로 고객을 식별하는 데 필요한 유연성을 제공합니다. 이 프로세스는 데이터베이스 쿼리에 대한 전문 지식 없이도 빠르고 쉽게 수행할 수 있습니다. 이를 통해 데이터 스트림을 값비싼 변경 작업을 하지 않아도 되고 백엔드 데이터 병합을 기다릴 필요 없이 주요 데이터를 세그먼트에 추가할 수 있습니다.
-
-다음 비디오는 다중 엔티티 세그먼테이션에 대한 이해를 지원하기 위해 마련되었으며, 다중 엔티티 세그먼테이션과 세그먼트 컨텍스트(세그먼트 페이로드)에 대한 개요를 설명합니다.
-
->[!VIDEO](https://video.tv.adobe.com/v/28947?quality=12&learn=on)
-
-### 사용 사례:가격 중심 프로모션
-
-이러한 고급 세분화 기능의 가치를 설명하려면 마케터와 공동으로 작업하는 데이터 아키텍트를 고려해 보십시오.
-
-이 예제에서 데이터 아키텍트는 키를 사용하여 개별(기본 클래스로 구성되고 [!DNL XDM Individual Profile] 있는 스키마로 구성됨)에 대한 데이터 [!DNL XDM ExperienceEvent] 를 다른 클래스에 결합하고 있습니다. 한 번 가입하면 데이터 아키텍처나 마케터는 세그먼트 정의 동안 이러한 새 필드를 기본 클래스 스키마에 대한 기본 필드인 것처럼 사용할 수 있습니다.
-
-**문제**
-
-데이터 설계자와 마케터는 모두 동일한 의류 소매업체를 위해 일합니다. 북미 전역에 1,000개 이상의 매장을 운영하고 있으며 제품 수명주기 전반에 걸쳐 제품 가격을 주기적으로 낮춥니다. 이에 따라 마케터는 이러한 제품을 구매한 고객에게 할인된 가격에 구매할 수 있는 기회를 제공하기 위해 특별 캠페인을 실시하고자 합니다.
-
-데이터 설계자의 리소스에는 고객 검색에서 웹 데이터에 대한 액세스와 제품 SKU 식별자가 포함된 장바구니 추가 데이터가 포함됩니다. 또한 별도의 &quot;제품&quot; 클래스에 액세스하여 추가 제품 정보(제품 가격 포함)를 저장할 수 있습니다. 이 고객의 지침은 지난 14일 이내에 장바구니에 제품을 추가했지만 가격이 떨어진 품목을 구매하지 않은 고객을 대상으로 합니다.
-
-**솔루션**
-
->[!NOTE]
->
->이 예에서는 데이터 아키텍트가 이미 ID 네임스페이스를 설정했다고 가정합니다.
-
-데이터 설계자는 API를 사용하여 스키마의 키를 &quot;products&quot; 클래스와 [!DNL ExperienceEvent] 연결합니다. 이렇게 하면 데이터 설계자가 스키마를 기본처럼 &quot;products&quot; 클래스의 추가 필드를 사용할 수 [!DNL ExperienceEvent] 있습니다. 구성 작업의 마지막 단계로서 데이터 아키텍처는 적절한 데이터를 가져와야 합니다 [!DNL Real-time Customer Profile]. 이 작업은 &quot;제품&quot; 데이터 세트를 사용하여 수행할 수 있습니다 [!DNL Profile]. 구성 작업이 완료되면 데이터 아키텍처나 마케터가 타겟 세그먼트를 [!DNL Segment Builder]
-
-XDM 클래스 간의 관계를 정의하는 방법을 알아보려면 [스키마 구성 개요를](../xdm/schema/composition.md#union) 참조하십시오.
-
-<!-- ## Personalization payload
-
-Segments can now carry a payload of contextual details to enable deep personalization of Adobe Solutions as well as external non-Adobe applications. These payloads can be added while defining your target segment.
-
-With contextual data built into the segment itself, this advanced Segmentation Service feature allows you to better connect with your customer.
-
-Segment Payload helps you answer questions surrounding your customer’s frame of reference such as:
-- What: What product was purchased? What product should be recommended next?
-- When: At what time and date did the purchase occur?
-- Where: In which store or city did the customer make their purchase?
-
-While this solution does not change the binary nature of segment membership, it does add additional context to each profile through an associated segment membership object. Each segment membership object has the capacity to include three kinds of contextual data:
-
-- **Identifier**: this is the ID for the segment 
-- **Attributes**: this would include information about the segment ID such as last qualification time, XDM version, status and so on.
-- **Event data**: Specific aspects of experience events which resulted in the profile qualifying for the segment
-
-Adding this specific data to the segment itself allows execution engines to personalize the experience for the customers in their target audience. -->
-
-### 사용 사례
-
-이 고급 세그멘테이션 기능의 가치를 설명하려면 세그먼트 페이로드 개선 사항 이전에 마케팅 애플리케이션에서 발생했던 문제를 설명하는 세 가지 표준 사용 사례를 고려하십시오.
-- 이메일 개인화
-- 이메일 리타겟팅
-- 광고 리타겟팅
-
-**이메일 개인화**
-
-이메일 캠페인을 빌드하는 마케터가 지난 3개월 이내에 최근 고객 스토어 구매를 사용하여 타겟 고객에 대한 세그먼트를 만들려고 시도했을 수 있습니다. 가장 좋은 방법은 이 세그먼트를 구매했던 스토어 이름과 항목 이름 모두를 필요로 하는 것입니다. 그 전에 구매 이벤트에서 스토어 식별자를 캡처하여 해당 고객의 프로필에 할당하는 것이 문제가 되었습니다.
-
-**이메일 리타겟팅**
-
-&quot;장바구니 포기&quot;를 타깃팅하는 이메일 캠페인에 대한 세그먼트를 만들고 평가하는 것은 종종 복잡합니다. 향상된 기능을 사용하기 전에, 필요한 데이터의 사용 가능성으로 인해 개인화된 메시지에 어떤 제품을 포함시키기가 어려웠습니다. 중단된 제품의 데이터는 이전에 데이터를 모니터링하고 추출하기 어려웠던 경험 이벤트와 연결되어 있습니다.
-
-**광고 리타겟팅**
-
-마케터에게 또 다른 일반적인 당면 과제는 중단된 장바구니 항목으로 고객을 재타깃팅하는 광고를 만드는 것입니다. 세그먼트 정의 시 이러한 문제가 해결되었지만, 향상된 기능 이전에 구입한 제품과 폐기된 제품을 구별할 수 있는 공식 방법은 없었습니다. 세그먼트 정의 동안 특정 데이터 세트를 타깃팅할 수 있습니다.
+고급 다중 엔티티 세그먼테이션 기능을 사용하면 제품, 스토어 또는 &quot;차원&quot; 개체라고도 하는 다른 개인을 기반으로 추가 데이터로 [!DNL Real-time Customer Profile] 데이터를 확장할 수 있습니다. 그 결과, 세그먼트 정의 중에 데이터 저장소가 기본인 것처럼 추가 필드에 액세스할 [!DNL Segmentation Service] 수 [!DNL Profile] 있습니다. 여러 엔티티 세그먼테이션을 사용하면 고유한 비즈니스 요구 사항과 관련된 데이터를 기반으로 고객을 식별할 때 유연성을 얻을 수 있습니다. 사용 사례 및 워크플로우 등 자세한 내용은 [다중 엔티티 세그먼테이션 안내서를 참조하십시오](multi-entity-segmentation.md).
 
 ## [!DNL Segmentation Service] 데이터 유형
 
-[!DNL Segmentation Service] 다음을 비롯한 다양한 데이터 유형을 지원합니다.
-
-- 문자열
-- 동일한 리소스 식별자
-- 열거형
-- 숫자
-- Long
-- 정수
-- Short
-- 바이트
-- 부울
-- 날짜
-- 날짜-시간
-- Array
-- 개체
-- 맵
-- 이벤트
-- 외부 대상
-- 세그먼트
-
-이러한 지원되는 데이터 유형에 대한 자세한 내용은 [지원되는 데이터 유형 문서에서 확인할 수 있습니다](./data-types.md).
+[!DNL Segmentation Service] 은 다양한 기본 및 복잡한 데이터 유형을 지원합니다. 지원되는 데이터 유형 목록을 비롯한 자세한 내용은 [지원되는 데이터 유형 안내서를 참조하십시오](./data-types.md).
 
 ## 다음 단계
 
