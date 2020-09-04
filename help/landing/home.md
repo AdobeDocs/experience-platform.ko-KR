@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;CJA;journey analytics;customer journey analytics;campaign orchestration;orchestration;customer journey;journey
+keywords: Experience Platform;home;popular topics;CJA;journey analytics;customer journey analytics;campaign orchestration;orchestration;customer journey;journey;journey orchestration
 solution: Experience Platform
 title: Adobe Experience Platform 개요
 topic: getting started
 description: Adobe Experience Platform은 고객 경험을 향상시키는 완벽한 솔루션을 구축하고 관리하기 위해 시장에서 가장 강력하고 유연하며 개방적인 시스템입니다. Experience Platform을 통해 기업은 모든 시스템의 고객 데이터와 콘텐츠를 통합 관리하고 표준화하고 데이터 과학 및 머신 러닝을 적용하여 개인화된 풍부한 경험의 디자인과 전달을 대폭 향상시킬 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 4c3a947051c11860ab4f0f53b48d8f4bda8dc195
+source-git-commit: 96be9401b3d3bf28176cbce5d139c42f63707c81
 workflow-type: tm+mt
-source-wordcount: '872'
-ht-degree: 3%
+source-wordcount: '936'
+ht-degree: 4%
 
 ---
 
@@ -82,6 +82,13 @@ Adobe Experience Platform 설명서는 여러 언어로 제공됩니다. 언어�
 
 [!DNL Experience Platform] 설명서는 다양한 기능 및 서비스를 위해 다양한 형식으로 제공됩니다. 사용 가능한 문서 유형에 대한 자세한 내용과 각 [!DNL Platform] 서비스에 대한 간단한 설명을 보려면 [Experience Platform 설명서 개요를 참조하십시오](documentation/overview.md). 또는 특정 [!DNL Platform] 서비스에 대한 자세한 내용을 바로 알려면 왼쪽 탐색 메뉴의 알파벳 목록에서 가이드를 선택하십시오.
 
+### 애플리케이션 서비스를 위한 문서 [!DNL Experience Platform]
+
+Adobe은 왼쪽 탐색 시 제공되는 서비스 외에도 Experience Platform 위에 다른 애플리케이션 서비스를 구축했습니다. 아래 링크된 해당 설명서 저장소에서 이러한 서비스에 대한 설명서를 찾을 수 있습니다.
+
+* [[!DNL Customer Journey Analytics]](https://docs.adobe.com/content/help/en/analytics-platform/using/cja-landing.html)
+* [[!DNL Journey Orchestration]](https://docs.adobe.com/content/help/ko-KR/journeys/using/journey-orchestration-home.html)
+
 >[!NOTE]
 >
 >2020년 5월부터 Adobe은 모든 Experience Cloud 애플리케이션에서 경험을 통합하고 개선하기 위해 도메인과 헤더 막대에 대한 업데이트를 출시하고 있습니다. 여기에는 새 도움말 메뉴가 포함됩니다. 새 도움말 메뉴에는 다음이 포함됩니다.
@@ -131,7 +138,7 @@ Adobe Experience Platform이 제공하는 주요 혜택 중 하나는 다른 기
 
 >[!VIDEO](https://video.tv.adobe.com/v/32553?quality=12&learn=on)
 
-Adobe Experience Platform의 기능에 대한 자세한 내용은 다음 비디오를 참조하십시오.
+Adobe Experience Platform을 지원하는 아키텍처에 대한 자세한 내용은 다음 비디오를 참조하십시오.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32456?quality=12&learn=on)
 
@@ -146,11 +153,6 @@ Adobe Experience Platform의 기능에 대한 자세한 내용은 다음 비디�
 **사용 사례:**
 
 >[!VIDEO](https://video.tv.adobe.com/v/32806?quality=12&learn=on)
-
-
-
-
-
 
 
 
