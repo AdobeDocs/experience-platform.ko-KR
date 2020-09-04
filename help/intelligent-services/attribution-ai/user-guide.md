@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;user guide;attribution ai;popular topics
+keywords: Experience Platform;user guide;attribution ai;popular topics;region
 solution: Experience Platform
 title: Attribution AI 사용 안내서
 topic: User guide
 description: 이 문서는 Intelligent Services 사용자 인터페이스에서 Attribution AI과 상호 작용하기 위한 가이드 역할을 합니다.
 translation-type: tm+mt
-source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
+source-git-commit: 2a528c705a7aa610f57047be39be1ce9886ce44c
 workflow-type: tm+mt
 source-wordcount: '1449'
 ht-degree: 0%
