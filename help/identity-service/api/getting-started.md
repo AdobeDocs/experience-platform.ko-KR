@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;identity service api;identity service developer guide
+keywords: Experience Platform;home;popular topics;identity service api;identity service developer guide;region
 solution: Experience Platform
 title: 시작하기
 topic: API guide
-description: null
+description: 'Adobe Experience Platform ID 서비스는 Adobe Experience Platform에서 ID 그래프라고 하는 것을 통해 고객의 크로스 디바이스, 크로스채널 및 거의 실시간 ID를 관리합니다. '
 translation-type: tm+mt
-source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
+source-git-commit: 2a528c705a7aa610f57047be39be1ce9886ce44c
 workflow-type: tm+mt
-source-wordcount: '726'
+source-wordcount: '754'
 ht-degree: 1%
 
 ---
