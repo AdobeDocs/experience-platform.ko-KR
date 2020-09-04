@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;consent;Consent
 solution: Experience Platform
 title: CPA FAQ
 topic: troubleshooting
+description: 본 문서는 CCPA(California Consumer Protection Act)와 Adobe Experience Cloud의 구현과 관련하여 자주 묻는 질문에 대한 답변을 제공합니다.
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: 172710c62b6f60de74e05364edb1191fbba0ff64
 workflow-type: tm+mt
-source-wordcount: '787'
+source-wordcount: '809'
 ht-degree: 0%
 
 ---
@@ -75,7 +76,7 @@ Adobe 서비스는 특정 데이터 공유 및 제3자 전송을 활성화하는
 
 ## 요구 사항이 적용되는 특정 유형의 데이터를 유지 관리하는 경우 CPA를 통해 소비자 개인 정보 보호 요구 사항을 어떻게 지원할 수 있습니까?
 
-CA 소비자를 인증하기 위해 필요한 단계를 수행한 Adobe Experience Platform [!DNL Privacy Service] 를 사용하면 호환 [!DNL Experience Cloud] 애플리케이션에 소비자 개인 정보 요청을 제출할 수 있습니다. 자세한 내용은 [Privacy Service 개요를](../home.md) 참조하십시오. 귀하의 특정 [!DNL Experience Cloud] 응용 프로그램이 개인정보 보호 요청을 승인하는 방법에 대한 자세한 내용은 [Privacy Service 및 Experience Cloud 응용 프로그램에 대한 설명서를 참조하십시오](../experience-cloud-apps.md).
+CA 소비자를 인증하기 위해 필요한 단계를 수행한 경우 Adobe Experience Platform을 [!DNL Privacy Service] 사용하면 호환 [!DNL Experience Cloud] 애플리케이션에 소비자 개인 정보 보호 요청을 제출할 수 있습니다. 자세한 내용은 [Privacy Service 개요를](../home.md) 참조하십시오. 귀하의 특정 [!DNL Experience Cloud] 응용 프로그램이 개인정보 보호 요청을 승인하는 방법에 대한 자세한 내용은 [Privacy Service 및 Experience Cloud 응용 프로그램에 대한 설명서를 참조하십시오](../experience-cloud-apps.md).
 
 >[!NOTE]
 >
