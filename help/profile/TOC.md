@@ -4,10 +4,10 @@ audience: user
 user-guide-title: 실시간 고객 프로필 도움말
 user-guide-description: Real-time Customer Profile provides a holistic view of each individual customer by combining data from multiple channels, including online, offline, CRM, and third-party data. Profile allows you to consolidate your disparate customer data into a unified view offering an actionable, timestamped account of every customer interaction.
 translation-type: tm+mt
-source-git-commit: 31166ddf8afbe13874be66b29c89501bd6ce1e51
+source-git-commit: 16f2bd7c650c5fbb09066940a730fa9dc768b261
 workflow-type: tm+mt
-source-wordcount: '86'
-ht-degree: 22%
+source-wordcount: '89'
+ht-degree: 21%
 
 ---
 
@@ -15,6 +15,7 @@ ht-degree: 22%
 # [!DNL Real-time Customer Profile] {#profile}
 
 * [[!DNL Profile] 개요](home.md)
+* [[!DNL Profile] 가금](guardrails.md)
 * [!DNL Profile] API 개발자 가이드 {#api}
    * [개요](api/overview.md)
    * [시작하기](api/getting-started.md)
@@ -31,7 +32,7 @@ ht-degree: 22%
    * [정책 병합 사용자 안내서](ui/merge-policies.md)
 * 자습서 {#tutorials}
    * [데이터 추가 [!DNL Profile]](tutorials/add-profile-data.md)
-   * [데이터 세트 구성(&amp;) [!DNL Profile]  [!DNL Identity]](tutorials/dataset-configuration.md)
+   * [서비스 데이터 집합 [!DNL Profile] & [!DNL Identity] 구성](tutorials/dataset-configuration.md)
    * [기타 튜토리얼](https://docs.adobe.com/content/help/ko-KR/experience-platform/tutorials/home.html)
 * [개인 정보 요청 처리](privacy.md)
 * [[!DNL Profile] 문제 해결 안내서](troubleshooting.md)
