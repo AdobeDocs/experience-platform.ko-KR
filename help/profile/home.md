@@ -5,9 +5,9 @@ title: 실시간 고객 프로필 개요
 topic: guide
 description: 실시간 고객 프로필은 다양한 엔터프라이즈 데이터 자산의 데이터를 수집한 다음 개별 고객 프로필 및 관련 시간 시리즈 이벤트의 형태로 해당 데이터에 대한 액세스를 제공하는 범용 조회 엔티티 스토어입니다. 이 기능을 통해 마케터는 다양한 채널에서 고객과 연관성 있고 조율된 경험을 제공할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 5dd07bf9afe96be3a4c3f4a4d4e3b23aef4fde70
 workflow-type: tm+mt
-source-wordcount: '1718'
+source-wordcount: '1649'
 ht-degree: 1%
 
 ---
@@ -17,21 +17,26 @@ ht-degree: 1%
 
 Adobe Experience Platform을 사용하면 고객이 브랜드와 언제 어디에서나 고객의 기대에 부응하는 일관된 경험을 제공할 수 있습니다. 온라인, 오프라인, CRM, 서드파티 데이터 등 다양한 채널의 데이터를 결합하는 각 개별 고객의 전체 상황을 파악할 수 있습니다. [!DNL Real-time Customer Profile] [!DNL Profile] 서로 다른 고객 데이터를 하나의 통합 뷰로 통합하여 고객 상호 작용에 대해 실행 가능하고 타임스탬프가 지정된 계정을 제공할 수 있습니다. 이 개요는 에서 의 역할과 사용 방법을 이해하는 데 도움이 [!DNL Real-time Customer Profile] 됩니다 [!DNL Experience Platform].
 
-## [!DNL Real-time Customer Profile] 이해 
+
+## [!DNL Profile] experience platform
+
+실시간 고객 프로필과 Experience Platform 내의 다른 서비스 간의 관계는 다음 다이어그램에서 강조됩니다.
+
+![Adobe Experience Platform 서비스.](images/profile-overview/profile-in-platform.png)
+
+## 프로필 데이터
 
 [!DNL Real-time Customer Profile] 은 다양한 엔터프라이즈 데이터 자산의 데이터를 병합한 다음 개별 고객 프로필 및 관련 시계열 이벤트의 형태로 해당 데이터에 대한 액세스를 제공하는 범용 조회 엔티티 스토어입니다. 이 기능을 통해 마케터는 다양한 채널에서 고객과 연관성 있고 조율된 경험을 제공할 수 있습니다.
 
-### [!DNL Profile] 데이터 저장소
+### 프로필 가드레일
+
+Experience Platform은 실시간 고객 프로필에서 지원할 수 없는 [경험 데이터 모델(XDM) 스키마를 만들지 않도록](../xdm/home.md) 하는 데 도움이 되는 일련의 지침을 제공합니다. 여기에는 성능 저하를 초래할 수 있는 소프트 한도 뿐만 아니라 오류 및 시스템 중단으로 이어질 수 있는 하드 제한이 포함됩니다. 지침 목록 및 사용 사례 예를 비롯한 자세한 내용은 [프로필 지침을 참조하십시오](guardrails.md) .
+
+### 프로필 스토어
 
 데이터 수집 [!DNL Real-time Customer Profile] 을 처리하고 ID 매핑을 통해 관련 데이터 [!DNL Identity Service] 를 병합하기 위해 Adobe Experience Platform을 사용하지만 스토어의 자체 데이터를 [!DNL Profile] 유지합니다. 즉, 스토어 [!DNL Profile] 는 [!DNL Catalog] 데이터([!DNL Data Lake]) 및 [!DNL Identity Service] 데이터(ID 그래프)와 별개입니다.
 
-### [!DNL Profile] 및 [!DNL Platform] 서비스
-
-다음 다이어그램에서 [!DNL Real-time Customer Profile] 와 다른 서비스 간의 관계 [!DNL Experience Platform] 가 강조 표시됩니다.
-
-![프로필 및 기타 Experience Platform 서비스 간의 관계.](images/profile-overview/profile-in-platform.png)
-
-### 프로필 및 데이터 기록
+### 데이터 기록
 
 프로필은 제목, 조직 또는 개인을 레코드 데이터라고 하는 표현입니다. 예를 들어 제품 프로필에는 SKU와 설명이 포함될 수 있지만 개인 프로필에는 이름, 성 및 이메일 주소와 같은 정보가 포함되어 있습니다. 를 [!DNL Experience Platform]사용하면 프로파일을 사용자 정의하여 비즈니스와 관련된 데이터 유형을 사용할 수 있습니다. 표준 [!DNL Experience Data Model] (XDM) [!DNL Individual Profile] 클래스는 고객 레코드 데이터를 설명할 때 스키마를 작성하고 플랫폼 서비스 간의 다양한 상호 작용에 데이터 통합 요소를 제공하는 기본 클래스입니다. 스키마 작업에 대한 자세한 내용 [!DNL Experience Platform]은 [XDM 시스템 개요를 읽어 보십시오](../xdm/home.md).
 
@@ -59,7 +64,7 @@ Adobe Experience Platform [!DNL Segmentation Service] 는 개별 고객의 경�
 
 >[!IMPORTANT]
 >
->이 문서에 요약된 계산된 속성 기능은 alpha입니다. 설명서 및 기능은 변경될 수 있습니다.
+>계산된 속성 기능은 alpha입니다. 설명서 및 기능은 변경될 수 있습니다.
 
 계산된 속성을 사용하면 다른 값, 계산 및 표현식을 기반으로 필드의 값을 자동으로 계산할 수 있습니다. 계산된 속성은 프로필 수준에서 작동합니다. 즉, 모든 레코드와 이벤트에 대한 값을 합산할 수 있습니다. 계산된 각 속성에는 들어오는 데이터를 평가하고 결과 값을 프로필 속성이나 이벤트에 저장하는 표현식 또는 &quot;규칙&quot;이 포함됩니다. 이러한 계산을 사용하면 정보가 필요할 때마다 복잡한 계산을 수동으로 수행하지 않고도 라이프타임 구매 값, 구매 시간 또는 애플리케이션 열기 횟수와 같은 문제와 관련된 질문에 쉽게 응답할 수 있습니다. 계산된 속성에 대한 자세한 내용 및 [!DNL Real-time Customer Profile] API를 사용한 작업에 대한 단계별 지침을 보려면 [계산된 속성 끝점 안내서를 참조하십시오](api/computed-attributes.md). 이 안내서는 Adobe Experience Platform 내에서 작동하는 역할 계산 속성을 더 잘 이해하는 데 도움이 되며 기본 CRUD 작업을 수행하기 위한 샘플 API 호출을 포함합니다.
 
@@ -75,7 +80,7 @@ Adobe Experience Platform [!DNL Segmentation Service] 는 개별 고객의 경�
 
 여러 채널에서 실시간으로 고객의 기대에 부응하는 개인화된 경험을 제공하기 위해서는 변경 사항이 발생하면 즉시 정확한 데이터를 제공하고 지속적으로 업데이트해야 합니다. Adobe Experience Platform은 가장자리라고 하는 요소를 사용하여 데이터에 대한 실시간 액세스를 가능하게 합니다. Edge는 데이터를 저장하고 애플리케이션에서 쉽게 액세스할 수 있도록 하는 지리적으로 배치된 서버입니다. 예를 들어, Adobe Target 및 Adobe Campaign과 같은 Adobe 애플리케이션은 실시간으로 개인화된 고객 경험을 제공하기 위해 가장자리를 사용합니다. 데이터는 투영에 의해 모서리로 라우팅되고, 투영 대상은 데이터가 전송될 가장자리를 정의하며, 가장자리에서 사용할 특정 정보를 정의하는 투영 구성이 있습니다. 자세한 내용을 살펴보고 [!DNL Real-time Customer Profile] API를 사용하여 투영 작업을 시작하려면 [가장자리 투영 끝점 안내서를 참조하십시오](api/edge-projections.md).
 
-## 데이터 추가 [!DNL Real-time Customer Profile]
+## 데이터 인제스트 [!DNL Profile]
 
 [!DNL Platform] 실시간 스트리밍 수집 및 일괄 처리를 지원하여 기록 및 시간 시리즈 데이터 [!DNL Profile]를 전송하도록 구성할 수 있습니다. 자세한 내용은 실시간 고객 프로필에 데이터를 [추가하는 방법에 대한 개요를 설명하는 자습서를 참조하십시오](tutorials/add-profile-data.md).
 
@@ -101,39 +106,6 @@ Adobe Experience Platform [!DNL Segmentation Service] 는 개별 고객의 경�
 ### 옵트아웃 및 데이터 개인 정보 요청 처리
 
 [!DNL Experience Platform] 고객은 자신의 데이터 사용 및 저장과 관련된 옵트아웃 요청을 보낼 수 있습니다 [!DNL Real-time Customer Profile]. 옵트아웃 요청을 처리하는 방법에 대한 자세한 내용은 옵트아웃 요청을 [존중하는 방법을 참조하십시오](../segmentation/honoring-opt-outs.md).
-
-## [!DNL Profile] 지침
-
-[!DNL Experience Platform] 는 효과적으로 사용하기 위해 따라야 할 일련의 지침을 가지고 있습니다 [!DNL Profile].
-
-| 섹션 | 경계 |
-| ------- | -------- |
-| [!DNL Profile] 조합 스키마 | 최대 **20** 개의 데이터 세트가 [!DNL Profile] 조합 스키마에 기여할 수 있습니다. |
-| 다중 엔티티 관계 | 최대 **5개의** 다중 엔티티 관계를 만들 수 있습니다. |
-| 다중 엔티티 연결을 위한 JSON 깊이 | 최대 JSON 깊이는 **4입니다**. |
-| 시계열 데이터 | 비인물 엔티티에서는 시간 계열 데이터가 **허용되지** [!DNL Profile] 않습니다. |
-| 비사용자 스키마 관계 | 사람들이 아닌 스키마 관계는 허용되지 **않습니다** . |
-| 프로필 조각 | 프로필 조각의 권장 최대 크기는 **10kB입니다**.<br><br> 프로필 조각의 절대 최대 크기는 **1MB입니다**. |
-| 비개인 엔티티 | 개인이 아닌 단일 엔티티의 최대 총 크기는 **200MB입니다**. |
-| 개인 엔터티당 데이터 집합 | 개인이 아닌 엔터티에 최대 **1** 개의 데이터 세트를 연결할 수 있습니다. |
-
-<!--
-| Section | Boundary | Enforcement |
-| ------- | -------- | ----------- |
-| Profile union schema | A maximum of **20** datasets can contribute to the Profile union schema. | A message stating you've reached the maximum number of datasets appears. You must either disable or clean up other obsolete datasets in order to create a new dataset. |
-| Multi-entity relationships | A maximum of **5** multi-entity relationship can be created. | A message stating all available mappings have been used appears when the fifth relationship is mapped. An error message letting you know you have exceeded the number of available mappings appears when attempting to map a sixth relationship. | 
-| JSON depth for multi-entity association | The maximum JSON depth is **4**. | When trying to use the relationship selector with a field that is more than four levels deep, an error message appears, stating it is ineligible for multi-entity association. |
-| Time series data | Time-series data is **not** permitted in Profile for non-people entities. | A message stating that this data cannot be enabled for Profile because it is of an unsupported type appears. |
-| Non-people schema relationships | Non-people schema relationships are **not** permitted. | Relationships between two non-people schemas cannot be created. The relationships checkbox will be disabled. |
-| Profile fragment | The recommended maximum size of a profile fragment is **10kB**.<br><br> The absolute maximum size of a profile fragment is **1MB**. | If you upload a fragment that is larger than 10kB, a warning appears, stating that performance may be degraded since the fragment exceeds the recommended maximum working size.<br><br> If you upload a fragment that is larger than 1MB, ingestion will fail, and an alert letting you know that records have failed will be sent. |
-| Non-person entity | The maximum total size for a single non-person entity is **200MB**. | If you load an object as a non-person entity that is larger than 200MB, an alert will appear, stating that the entity has exceeded the maximum allowable size and will not be useable for segmentation. |
-| Datasets per non-person entity | A maximum of **1** dataset can be associated to a non-person entity. | If you try to create a second dataset that is associated to the same non-person entity, an error appears, stating that only one dataset can be active per non-person entity. |
-
---->
-
->[!NOTE]
->
->개인이 아닌 엔터티는 일부가 **아닌** XDM 클래스를 참조합니다 [!DNL Profile].
 
 ## 다음 단계 및 추가 리소스
 
