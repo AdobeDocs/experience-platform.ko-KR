@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;CJA;journey analytics;customer journey analytics;campaign orchestration;orchestration;customer journey;journey;journey orchestration
+keywords: Experience Platform;home;popular topics;CJA;journey analytics;customer journey analytics;campaign orchestration;orchestration;customer journey;journey;journey orchestration;capability;workflow
 solution: Experience Platform
 title: Adobe Experience Platform 설명서
 topic: overview
+description: Adobe Experience Platform 설명서는 개요, 자습서, 사용자 인터페이스와 API에 대한 안내선 등 다양한 형식으로 제공됩니다. 다음은 Experience Platform 서비스에 사용할 수 있는 가장 일반적인 문서 유형에 대한 간략한 설명입니다.
 translation-type: tm+mt
-source-git-commit: 96be9401b3d3bf28176cbce5d139c42f63707c81
+source-git-commit: e94278c1b64e1d940f55861518c78cca24822c1b
 workflow-type: tm+mt
-source-wordcount: '1045'
+source-wordcount: '1084'
 ht-degree: 2%
 
 ---
