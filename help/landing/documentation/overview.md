@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;CJA;journey analytics;customer journey analytics;campaign orchestration;orchestration;customer journey;journey;journey orchestration
 solution: Experience Platform
 title: Adobe Experience Platform 설명서
 topic: overview
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 96be9401b3d3bf28176cbce5d139c42f63707c81
 workflow-type: tm+mt
-source-wordcount: '984'
-ht-degree: 1%
+source-wordcount: '1045'
+ht-degree: 2%
 
 ---
 
@@ -57,3 +57,10 @@ Adobe Experience Platform 설명서는 개요, 자습서, 사용자 인터페이
 * **[!DNL Segmentation]:** 실시간 고객 프로파일 데이터를 기반으로 세그먼트를 작성하여 고객을 생성하고 고객 경험을 강화합니다.
 * **[!DNL Sources](연결):**{#sources} Adobe 애플리케이션, 클라우드 기반의 스토리지, 데이터베이스 등 다양한 소스의 데이터를 Adobe Experience Platform으로 가져올 수 있습니다.
 * **XDM(경험 데이터 모델)**:Adobe을 기반으로 하는 XDM은 고객 경험 데이터를 표준화하고 고객 경험 관리를 위한 스키마를 정의하는 것입니다. 구성 요소 간의 데이터 상호 운용성을 지원하는 XDM 스키마 [!DNL Experience Platform] .
+
+## 애플리케이션 서비스 [!DNL Experience Platform]
+
+Adobe은 왼쪽 탐색 시 제공되는 서비스 외에도 Experience Platform 위에 다른 애플리케이션 서비스를 구축했습니다. 아래 링크된 해당 설명서 저장소에서 이러한 서비스에 대한 설명서를 찾을 수 있습니다.
+
+* [[!DNL Customer Journey Analytics]](https://docs.adobe.com/content/help/en/analytics-platform/using/cja-landing.html)
+* [[!DNL Journey Orchestration]](https://docs.adobe.com/content/help/ko-KR/journeys/using/journey-orchestration-home.html)
