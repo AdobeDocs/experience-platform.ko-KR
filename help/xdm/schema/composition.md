@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;enum;mixin;Mixin;Mixins;mixins;data type;data types;Data types;Data type;primary identity;primary idenity;XDM individual profile;XDM fields;enum datatype;Experience event;XDM Experience Event;XDM ExperienceEvent;experienceEvent;experienceevent;XDM Experienceevenet;schema design;class;Class;classes;Classes;datatype;Datatype;data type;Data type;schemas;Schemas;identityMap;identity map;Identity map;
+keywords: Experience Platform;home;popular topics;schema;Schema;enum;mixin;Mixin;Mixins;mixins;data type;data types;Data types;Data type;primary identity;primary idenity;XDM individual profile;XDM fields;enum datatype;Experience event;XDM Experience Event;XDM ExperienceEvent;experienceEvent;experienceevent;XDM Experienceevenet;schema design;class;Class;classes;Classes;datatype;Datatype;data type;Data type;schemas;Schemas;identityMap;identity map;Identity map;Schema design;map;Map;union schema;union
 solution: Experience Platform
 title: 스키마 컴포지션의 기본 사항
 topic: overview
 description: 이 문서에서는 XDM(Experience Data Model) 스키마 및 Adobe Experience Platform에서 사용할 스키마를 작성하기 위한 기본 블록, 원칙 및 모범 사례에 대해 소개합니다.
 translation-type: tm+mt
-source-git-commit: ed1f2fdac0f9c977d11c867327c084353c1bcd0f
+source-git-commit: 4251dc292ead3ce4dc8aef68ff04bb774047160d
 workflow-type: tm+mt
 source-wordcount: '2839'
 ht-degree: 0%
