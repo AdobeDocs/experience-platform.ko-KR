@@ -5,9 +5,9 @@ seo-title: 대상 작업 공간
 description: 대상 작업 공간은 아래의 섹션에 설명된 네 개의 섹션인 카탈로그, 찾아보기, 계정 및 시스템 보기로 구성됩니다.
 seo-description: Adobe 실시간 고객 데이터 플랫폼에서 왼쪽 탐색 막대에서 대상을 선택하여 대상 작업 영역에 액세스합니다.
 translation-type: tm+mt
-source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
+source-git-commit: 59ac673c35954696fbb37417510035bdebff6f62
 workflow-type: tm+mt
-source-wordcount: '809'
+source-wordcount: '825'
 ht-degree: 2%
 
 ---
@@ -52,9 +52,31 @@ Adobe 실시간 CDP 사용자 인터페이스는 대상 카탈로그 페이지�
 
 각 대상에 대한 대상 카테고리 및 정보에 대한 자세한 내용은 [대상 카탈로그](/help/rtcdp/destinations/destinations-catalog.md) 및 [대상 유형 및 카테고리를 참조하십시오](/help/rtcdp/destinations/destination-types.md).
 
+## [!UICONTROL 계정] {#accounts}
+
+계정 **[!UICONTROL 탭에서]** 다양한 대상으로 설정한 연결에 대해 자세히 알아볼 수 있습니다. 각 대상에 대한 모든 정보는 아래 표를 참조하십시오.
+
+>[!TIP]
+>
+>[ ![플랫폼](/help/rtcdp/destinations/assets/add-data-symbol.png) ] 열의 [데이터 추가] 단추 **** 단추를 사용하여 해당 계정에 대한 새 대상 연결을 만듭니다.
+
+![계정 탭](/help/rtcdp/destinations/assets/accounts-tab.png)
+
+| 요소 | 설명 |
+---------|----------
+| [!UICONTROL 플랫폼] | 연결을 설정한 대상. |
+| [!UICONTROL 연결 유형] | 저장소 버킷 또는 대상에 대한 연결 유형을 나타냅니다. <ul><li>이메일 마케팅 대상:S3 또는 FTP일 수 있습니다.</li><li>실시간 광고 대상:서버 간</li><li>Amazon S3 클라우드 스토리지 대상:액세스 키 </li><li>SFTP 클라우드 스토리지 대상:SFTP에 대한 기본 인증</li></ul> |
+| [!UICONTROL 사용자 이름] | 연결 대상 마법사에서 선택한 [사용자 이름입니다](/help/rtcdp/destinations/email-marketing-destinations.md#connect-destination). |
+| [!UICONTROL 대상] | 대상에 대해 만들어진 기본 정보와 연결된 고유한 성공한 대상 흐름 수를 나타냅니다. |
+| [!UICONTROL 인증됨] | 이 대상에 대한 연결이 승인된 날짜입니다. |
+
 ## [!UICONTROL 찾아보기] {#browse}
 
-[ **[!UICONTROL 찾아보기]** ] 탭에는 연결을 설정한 대상이 표시됩니다. 토글을 **[!UICONTROL 활성화한]** 대상은 대상을 활성으로, 그 반대의 경우는 활성으로 설정합니다. 세그먼트 > 찾아보기 **[!UICONTROL 를 선택하고 검사할 세그먼트를 선택하여 데이터]** 가 **[!UICONTROL 흐르는 대상을]** 볼 수도 있습니다. 검색 탭에서 각 대상에 대해 제공되는 모든 정보는 아래 표를 참조하십시오.
+[ **[!UICONTROL 찾아보기]** ] 탭에는 연결을 설정한 대상이 표시됩니다. 활성화 **[!UICONTROL 토글이]** 켜져 있는 대상은 대상을 활성으로 또는 그 반대로 설정합니다. 세그먼트 > 찾아보기 **[!UICONTROL 를 선택하고 검사할 세그먼트를 선택하여 데이터]** 가 **[!UICONTROL 흐르는 대상을]** 볼 수도 있습니다. 검색 탭에서 각 대상에 대해 제공되는 모든 정보는 아래 표를 참조하십시오.
+
+>[!TIP]
+>
+>이름 ![열의 데이터 추가 단추](/help/rtcdp/destinations/assets/add-data-symbol.png) 단추 **[!UICONTROL 를]** 사용하여 해당 대상에 대한 추가 세그먼트를 활성화합니다.
 
 ![검색 탭](/help/rtcdp/destinations/assets/browse-tab.png)
 
@@ -73,21 +95,6 @@ Adobe 실시간 CDP 사용자 인터페이스는 대상 카탈로그 페이지�
 ![대상 행 클릭](/help/rtcdp/destinations/assets/click-destination-row.png)
 
 이 대상에 대해 활성화된 세그먼트에 대한 정보를 보려면 대상 이름을 선택합니다. 활성화 **[!UICONTROL 편집을]** 클릭하여 이 대상에 전송되는 세그먼트를 수정하거나 추가합니다.
-
-## [!UICONTROL 계정] {#accounts}
-
-계정 **[!UICONTROL 탭에서]** 다양한 대상으로 설정한 연결에 대해 자세히 알아볼 수 있습니다. 각 대상에 대한 모든 정보는 아래 표를 참조하십시오.
-
-![계정 탭](/help/rtcdp/destinations/assets/accounts-tab.png)
-
-| 요소 | 설명 |
----------|----------
-| [!UICONTROL 플랫폼] | 연결을 설정한 대상. |
-| [!UICONTROL 연결 유형] | 저장소 버킷 또는 대상에 대한 연결 유형을 나타냅니다. <ul><li>이메일 마케팅 대상:S3 또는 FTP일 수 있습니다.</li><li>실시간 광고 대상:서버 간</li><li>Amazon S3 클라우드 스토리지 대상:액세스 키 </li><li>SFTP 클라우드 스토리지 대상:SFTP에 대한 기본 인증</li></ul> |
-| [!UICONTROL 사용자 이름] | 연결 대상 마법사에서 선택한 [사용자 이름입니다](/help/rtcdp/destinations/email-marketing-destinations.md#connect-destination). |
-| [!UICONTROL 데이터 흐름] | 대상에 대해 만들어진 기본 정보와 연결된 고유한 성공한 대상 흐름 수를 나타냅니다. |
-| [!UICONTROL 인증됨] | 이 대상에 대한 연결이 승인된 날짜입니다. |
-| [!UICONTROL 상태] | `Active` 또는 `Inactive`. 데이터가 현재 이 대상에 활성화되고 있는지 여부를 나타냅니다. 상태를 편집하려면 활성화 [비활성화를 참조하십시오](/help/rtcdp/destinations/activate-destinations.md#disable-activation). |
 
 ## [!UICONTROL 시스템 보기] {#system-view}
 
