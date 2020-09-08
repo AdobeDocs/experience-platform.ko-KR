@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Privacy Service 사용 안내서
 topic: UI guide
 translation-type: tm+mt
-source-git-commit: 172710c62b6f60de74e05364edb1191fbba0ff64
+source-git-commit: a09d80f4bacd5d4be77443d75aad278ad89259ef
 workflow-type: tm+mt
-source-wordcount: '1056'
+source-wordcount: '1059'
 ht-degree: 0%
 
 ---
@@ -24,11 +24,12 @@ UI에 대한 대시보드에서는 개인 정보 작업의 상태를 볼 수 있
 
 ### 규정 유형
 
-[!DNL Privacy Service] 세 가지 규칙 유형에 대한 작업 요청 지원:
+[!DNL Privacy Service] 네 가지 규칙 유형에 대한 작업 요청 지원:
 
 * 유럽 연합( [!DNL General Data Protection Regulation] GDPR)
-* The [!DNL California Consumer Privacy Act] (CPA)
-* 태국 [!DNL Personal Data Protection Act] (PDPA_THA)
+* The [!DNL California Consumer Privacy Act] ([!UICONTROL CPA])
+* 브라질 [!DNL Lei Geral de Proteção de Dados] ([!UICONTROL LGPD_BRA])
+* 태국 [!DNL Personal Data Protection Act] ([!UICONTROL PDPA_THA])
 
 각 규제 유형에 대한 작업은 별도로 추적됩니다. 규칙 유형 간에 전환하려면 **[!UICONTROL 규정 유형]** 드롭다운 메뉴를 클릭하고 목록에서 원하는 규칙을 선택합니다.
 
@@ -56,7 +57,7 @@ UI에 대한 대시보드에서는 개인 정보 작업의 상태를 볼 수 있
 
 >[!NOTE]
 >
->작업 요청 위젯에 필터가 적용되면 필터 알림에서 **[!UICONTROL X를]** 클릭하여 필터를 제거할 수 있습니다. 작업 요청은 기본 추적 목록으로 돌아갑니다.
+>작업 요청 위젯에 필터가 적용되면 필터 알림에서 **X를** 클릭하여 필터를 제거할 수 있습니다. 작업 요청은 기본 추적 목록으로 돌아갑니다.
 
 ### 작업 요청
 
