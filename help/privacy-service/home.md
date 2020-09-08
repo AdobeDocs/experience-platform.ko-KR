@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;home;popular topics;GDPR;gdpr;ccpa:CCPA
+keywords: Experience Platform;home;popular topics;GDPR;gdpr;ccpa:CCPA;pdpa;PDPA;pdpa_that;PDPA_THA;lgpd;LGPD;lgpd_bra;LGPD_BRA;
 solution: Experience Platform
 title: Adobe Experience Platform Privacy Service
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 5d88aca08b7cf1d55e1eed989de6aa514f82e113
 workflow-type: tm+mt
-source-wordcount: '1502'
+source-wordcount: '1565'
 ht-degree: 2%
 
 ---
@@ -47,7 +47,8 @@ Adobe Experience Platform [!DNL Privacy Service] 는 기업이 고객의 개인 
 | --- | --- |
 | CPA(캘리포니아) | The [!DNL California Consumer Privacy Act] (CCPA) enhances privacy rights and consumer protection for residents of California, United States. CPA는 캘리포니아 거주자들에게 개인 데이터를 액세스 및 삭제할 권리, 개인 데이터가 판매되거나 공개(및 누구에게) 되었는지, 그리고 자신의 데이터를 제3자에게 판매하지 못하도록 거부할 수 있는 권리 등 새로운 데이터 개인정보 보호 권한을 제공합니다.<br/><br/>추가 문서를 위한 링크: <ul><li>[법률 개요](https://oag.ca.gov/privacy/ccpa)</li><li>[CPA FAQ](ccpa/faq.md)</li></ul> |
 | GDPR(유럽 연합) | The [!DNL General Data Protection Regulation] (GDPR) introduced several new data privacy rights for members of the European Union, including the **Right to Access** and the **Right to be Forgotten**. 이것은 귀사가 개인 데이터를 수집한 모든 대상 EU 사용자는 언제든지 자신의 데이터에 대한 액세스나 삭제를 요청할 수 있음을 의미합니다. <br/><br/>추가 문서를 위한 링크: <ul><li>[법률 개요](https://gdpr-info.eu/)</li><li>[GDPR FAQ](gdpr/faq.md)</li><li>[GDPR 용어](gdpr/terminology.md)</li></ul> |
-| PDPA_THA(태국) | 태국 개인정보 보호법(Personal Data Protection Act of Thailand, PDPA)은 데이터 소유자들이 자신의 개인 데이터를 불법적으로 수집, 사용 또는 공개하는 것을 막기 위해 도입되었습니다. 유럽 연합의 GDPR에서 영감을 얻은 이 규제는 태국 시민들에게 저장된 개인 정보에 대한 액세스 또는 삭제를 요청할 수 있는 권한을 부여하고 있습니다.<br/><br/>추가 문서를 위한 링크: <ul><li>[법률 개요](https://www.dataprotectionreport.com/2020/02/thailand-personal-data-protection-law/)</li><li>[PDPA_THA FAQ](pdpa-tha/faq.md)</li><li>[PDPA_THA 용어](pdpa-tha/terminology.md)</li></ul> |
+| LGPD(브라질) | LGPD [!DNL Lei Geral de Proteção de Dados] (LGPD)는 브라질의 모든 개인 또는 자연인의 개인 정보를 처리하는 것을 규제하기 위한 것이다. LGPD는 브라질 시민들에게 개인 정보를 액세스하고 삭제할 수 있는 권리, 개인 데이터가 판매 또는 공개(및 대상) 여부, 그리고 제3자에게 자신의 데이터를 판매하는 것을 거부할 수 있는 권리를 제공합니다.<br/><br/>추가 문서를 위한 링크: <ul><li>[법률 개요](https://gdpr.eu/gdpr-vs-lgpd/)</li></ul> |
+| PDPA(태국) | 태국 [!DNL Personal Data Protection Act] (PDPA)는 태국 데이터 소유자들이 자신의 개인 데이터를 불법 수집, 사용 또는 공개하는 것을 방지하기 위해 도입되었습니다. 유럽 연합의 GDPR에서 영감을 얻은 이 규제는 태국 시민들에게 저장된 개인 정보에 대한 액세스 또는 삭제를 요청할 수 있는 권한을 부여하고 있습니다.<br/><br/>추가 문서를 위한 링크: <ul><li>[법률 개요](https://www.dataprotectionreport.com/2020/02/thailand-personal-data-protection-law/)</li><li>[PDPA FAQ](pdpa-tha/faq.md)</li><li>[PDPA 용어](pdpa-tha/terminology.md)</li></ul> |
 
 데이터 작업이 위의 규정 중 어느 하나의 목적을 이루는 경우, 문서를 검토하여 고객에게 제공하는 특정 개인정보 보호 권리, 개인정보 보호 요청을 준수하기 위한 규정 준수 여부와 같은 중요한 정보를 확인하십시오. 이 정보는 CRM 시스템 [!DNL Privacy Service] 에 통합하는 방법 및 고객이 개인 정보를 요청하기 위해 웹 사이트와 상호 작용하는 방법을 결정할 때 고려해야 합니다.
 
