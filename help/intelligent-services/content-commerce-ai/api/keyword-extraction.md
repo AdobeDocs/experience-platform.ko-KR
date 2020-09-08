@@ -5,10 +5,10 @@ title: 색상 추출
 topic: Developer guide
 description: 키워드 추출 서비스는 텍스트 문서에서 문서의 제목을 가장 잘 설명하는 키워드 또는 키구문을 자동으로 추출합니다. 키워드를 추출하기 위해 NER(명명된 엔티티 인식) 및 비감독 키워드 추출 알고리즘의 조합이 사용됩니다.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 31e4f1441676daa79f064c567ddc47e9198d0a0b
 workflow-type: tm+mt
-source-wordcount: '742'
-ht-degree: 3%
+source-wordcount: '625'
+ht-degree: 4%
 
 ---
 
@@ -20,14 +20,6 @@ ht-degree: 3%
 >[!DNL Content and Commerce AI] 가 베타 버전입니다. 설명서는 변경될 수 있습니다.
 
 키워드 추출 서비스는 텍스트 문서에서 문서의 제목을 가장 잘 설명하는 키워드 또는 키구문을 자동으로 추출합니다. 키워드를 추출하기 위해 NER(명명된 엔티티 인식) 및 비감독 키워드 추출 알고리즘의 조합이 사용됩니다.
-
-**무감독 키워드 추출**
-
-감독되지 않은 키워드 추출의 경우 [[!DNL YAKE]가](http://yake.inesctec.pt/) 사용됩니다. [!DNL YAKE] 은 문서에서 가장 중요한 키워드를 선택하는 데 사용되는 빠르고 정확한 감독 금지 자동 키워드 추출 방법입니다. 키워드 추출은 [!DNL YAKE] 명사 구문만 선택하도록 필터링됩니다.
-
-**명명된 엔티티 인식**
-
-명명된 엔티티 인식의 경우 [[!DNL spaCy]](https://spacy.io/)의 OntoNotes 모델이 사용됩니다. 이 모델은 컨텍스트별 토큰 벡터, POS(Part-of-Speech) 태그, 종속성 구문 분석 및 명명된 엔티티를 할당합니다. OntoNotes 모델은 핵심 [!DNL spaCy] 모델 중 하나입니다. OntoNotes 모델에 대한 자세한 내용은 [여기에서 확인할 수 있습니다](https://spacy.io/models/en).
 
 다음 표에 이름이 지정된 엔티티 [!DNL Content and Commerce AI] 가 나열됩니다.
 
@@ -44,8 +36,6 @@ ht-degree: 3%
 | WORK_OF_ART | 책, 노래 등의 제목 |
 | 법률 | 법률로 지정된 문서 |
 | 언어 | 지정된 언어 |
-
-그 결과 [!DNL OntoNotes] 가 키워드 [!DNL YAKE]와 결합되어 중요도에 따라 등급 순서대로 반환됩니다.
 
 **API 형식**
 
