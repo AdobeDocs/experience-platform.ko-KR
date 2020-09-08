@@ -5,9 +5,9 @@ title: 실시간 고객 프로필 개요
 topic: guide
 description: 실시간 고객 프로필은 다양한 엔터프라이즈 데이터 자산의 데이터를 수집한 다음 개별 고객 프로필 및 관련 시간 시리즈 이벤트의 형태로 해당 데이터에 대한 액세스를 제공하는 범용 조회 엔티티 스토어입니다. 이 기능을 통해 마케터는 다양한 채널에서 고객과 연관성 있고 조율된 경험을 제공할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 5dd07bf9afe96be3a4c3f4a4d4e3b23aef4fde70
+source-git-commit: cef27082fec97530031061476b46f60859717825
 workflow-type: tm+mt
-source-wordcount: '1649'
+source-wordcount: '1650'
 ht-degree: 1%
 
 ---
@@ -90,7 +90,7 @@ Adobe Experience Platform [!DNL Segmentation Service] 는 개별 고객의 경�
 
 ### [!DNL Profile] 지표 수집
 
-통찰력 통찰력을 통해 Adobe Experience Platform의 주요 지표를 표시할 수 있습니다. 다양한 기능에 대한 [!DNL Platform] 사용량 통계 및 성과 지표 외에도, [!DNL Platform] 들어오는 요청률, 성공률, 인제스트된 레코드 크기 등을 파악할 수 있는 특정 [!DNL Profile]관련 지표가 있습니다. 자세한 내용은 관찰성 통찰력 개요 [를](../observability/home.md)읽고 전체 지표 목록을 보려면 [!DNL Profile] 사용 가능한 지표에 대한 설명서를 참조하십시오 [](../observability/metrics.md).
+통찰력 통찰력을 통해 Adobe Experience Platform의 주요 지표를 표시할 수 있습니다. 다양한 기능에 대한 [!DNL Platform] 사용량 통계 및 성과 지표 외에도, [!DNL Platform] 들어오는 요청률, 성공률, 인제스트된 레코드 크기 등을 파악할 수 있는 특정 [!DNL Profile]관련 지표가 있습니다. 자세한 내용은 관찰성 통찰력 API 개요 [를](../observability/api/overview.md)읽고 전체 지표 목록을 보려면 [!DNL Profile] 사용 가능한 지표에 대한 설명서를 참조하십시오 [](../observability/api/metrics.md#available-metrics).
 
 ## [!DNL Data governance] 및 [!DNL Privacy]
 
