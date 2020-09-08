@@ -5,9 +5,9 @@ solution: Experience Platform
 title: 흐름 실행 알림
 topic: overview
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: c5455dc0812b251483170ac19506d7c60ad4ecaa
 workflow-type: tm+mt
-source-wordcount: '871'
+source-wordcount: '787'
 ht-degree: 1%
 
 ---
@@ -25,34 +25,23 @@ Adobe I/O 이벤트를 사용하면 이벤트를 구독하고 웹 후크를 사�
 
 ## 시작하기
 
-이 문서는 다음 Adobe Experience Platform 구성 요소에 대한 작업 이해를 필요로 합니다.
+이 자습서에서는 플로우를 모니터링할 소스 연결이 하나 이상 이미 생성되었다고 가정합니다. 소스 연결을 아직 구성하지 않은 경우, 이 안내서로 돌아가기 전에 [소스 개요를](./home.md) 방문하여 원하는 소스를 구성합니다.
 
-* [[!DNL 경험 데이터 모델(XDM) 시스템]](../xdm/home.md):고객 경험 데이터를 [!DNL Experience Platform] 구성하는 표준화된 프레임워크
-* [[!DNL 실시간 고객 프로필]](../profile/home.md):여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
-* [[!DNL Adobe Experience Platform 데이터 처리]](../ingestion/home.md): [!DNL Data Ingestion] 는 이러한 소스의 데이터를 [!DNL Platform] 인제스트하는 여러 메서드와 다운스트림 [!DNL Data Lake] [!DNL Platform] 서비스에서 사용하기 위해 데이터가 내부에서 유지되는 방식을 나타냅니다.
+또한 이 문서를 사용하려면 웹 후크에 대한 작업 내용과 한 응용 프로그램에서 다른 응용 프로그램으로 웹후크를 연결하는 방법을 이해해야 합니다. 웹후크 [[!DNL I/O Events] 에 대한 소개는 설명서를](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/intro/webhook_docs_intro.md) 참조하십시오.
 
-또한 이 문서를 사용하려면 웹 후크에 대한 작업 내용과 한 응용 프로그램에서 다른 응용 프로그램으로 웹후크를 연결하는 방법을 이해해야 합니다. 웹 후크에 대한 자세한 내용은 다음 [설명서를](https://requestbin.com/blog/working-with-webhooks/) 참조하십시오.
+## 흐름 실행 알림에 대한 웹 후크 등록
 
-## 웹 후크 등록
+흐름 실행 알림을 수신하려면 Adobe 개발자 콘솔을 사용하여 통합에 웹 후크를 등록해야 [!DNL Experience Platform] 합니다.
 
-흐름 실행 상태에 대한 알림을 받으려면 고유한 웹 후크 URL을 이벤트 등록 세부 정보의 일부로 지정하여 웹 후크를 등록해야 합니다. 웹 후크를 구독에 연결하려면 [!DNL I/O Events] 웹 후크 서비스 [](https://webhook.site/) 를 방문하여 제공된 고유한 URL을 복사하십시오.
-
-![웹 후크](./images/notifications/webhook-url.png)
-
-## 이벤트 구독
-
-고유한 웹 후크 URL을 얻으면 [Adobe I/O 이벤트로](https://www.adobe.io/apis/experienceplatform/events.html) 이동하여 [데이터 수집 알림](../ingestion/quality/subscribe-events.md) 문서에 설명된 단계에 따라 이벤트 구독을 시작합니다.
+가입 [방법에 대한 자세한 [!DNL I/O Event] 내용은](../observability/notifications/subscribe.md) 설정에 대한 자습서를따르십시오.
 
 >[!IMPORTANT]
 >
->구독 프로세스 동안 이벤트 제공자로 [!DNL Platform] 알림을 선택하고 다음 이벤트 구독을 선택하십시오.
+>구독 프로세스 동안 **[!UICONTROL 플랫폼 알림을]** 이벤트 제공자로 선택하고 다음 이벤트 구독을 선택하십시오.
 >
 >* **[!UICONTROL Experience Platform 소스의 흐름 실행 성공]**
 >* **[!UICONTROL Experience Platform 소스의 흐름 실행 실패]**
 
->
->
-웹 후크 주소를 제공하라는 메시지가 표시되면 이전에 획득한 웹 후크 URL을 사용합니다.
 
 ## 흐름 실행 알림 받기
 
