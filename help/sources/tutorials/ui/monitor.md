@@ -5,9 +5,9 @@ solution: Experience Platform
 title: 계정 및 데이터 흐름 모니터링
 topic: overview
 translation-type: tm+mt
-source-git-commit: a93b3a1980ca0f1d3a32257a923eb7ffc8896fd5
+source-git-commit: b900ea05cc046cf19d415543c581d0bcdc4296ba
 workflow-type: tm+mt
-source-wordcount: '890'
+source-wordcount: '971'
 ht-degree: 0%
 
 ---
@@ -42,15 +42,25 @@ Adobe Experience Platform의 소스 커넥터는 예약된 기준으로 외부 �
 
 정렬 패널을 사용하면 특정 소스의 계정에 액세스할 수 있습니다. 작업할 소스를 선택하고 오른쪽 목록에서 계정을 선택합니다.
 
+>[!TIP]
+>
+> [ ![이름](../../images/tutorials/monitor/spectrum-control.png) ] 열의 **[!UICONTROL 스펙트럼 제어]** 단추를 사용하여 선택한 계정에 대한 새 소스 데이터 흐름을 만듭니다.
+
 ![계정 선택](../../images/tutorials/monitor/accounts-sort.png)
 
-계정 **[!UICONTROL 페이지에서]** 액세스한 계정과 연결된 기존 데이터 흐름 또는 대상 데이터 집합 목록을 볼 수 있습니다.
+[ **[!UICONTROL 계정]** ] 페이지에서 액세스한 계정과 연결된 기존 데이터 흐름 또는 대상 데이터 집합 목록을 볼 수 있습니다.선택한 데이터 수에 사용 가능한 추가 옵션을 표시하려면 보조 컨트롤을 선택하십시오. 이러한 옵션은 아래에 자세히 설명되어 있습니다.
+
+| 컨트롤 | 설명 |
+| ------- | ----------- |
+| [!UICONTROL 예약 편집] | 데이터 흐름 통합 일정을 편집할 수 있습니다. |
+| [!UICONTROL 데이터 흐름 비활성화] | 선택한 데이터 흐름 동안 데이터 수집을 비활성화할 수 있습니다. |
+| [!UICONTROL 삭제] | 선택한 데이터 흐름을 삭제할 수 있습니다. |
 
 ![데이터 흐름](../../images/tutorials/monitor/dataflows.png)
 
 ## 데이터 흐름 모니터링
 
-데이터 파일은 계정을 보지 않고도 **[!UICONTROL 카탈로그]** 페이지에서 직접 액세스할 수 **[!UICONTROL 있습니다]**. 상단 헤더에서 **[!UICONTROL 데이터 흐름]** 을 선택하여 기존 데이터 흐름 목록을 봅니다.
+데이터 파일은 계정을 보지 않고도 **[!UICONTROL 카탈로그]** 페이지에서 직접 액세스할 수 **[!UICONTROL 있습니다]**. 데이터 **[!UICONTROL 흐름]** 목록을 보려면 상단 헤더에서 데이터 흐름을 선택합니다.
 
 ![카탈로그 데이터 흐름](../../images/tutorials/monitor/catalog-dataflows.png)
 
@@ -58,7 +68,7 @@ Adobe Experience Platform의 소스 커넥터는 예약된 기준으로 외부 �
 
 ![데이터 흐름 목록](../../images/tutorials/monitor/dataflows-list.png)
 
-정렬 패널이 나타납니다. 스크롤 메뉴에서 액세스할 소스를 선택하고 오른쪽의 목록에서 데이터 흐름을 선택합니다.
+정렬 패널이 나타납니다. 스크롤 메뉴에서 액세스할 소스를 선택하고 오른쪽의 목록에서 데이터 흐름을 선택합니다. 또한 보조 컨트롤을 선택하여 선택한 데이터 플로우에 사용할 수 있는 추가 옵션을 표시할 수도 있습니다.
 
 ![데이터 흐름 정렬](../../images/tutorials/monitor/dataflows-sort.png)
 
@@ -82,11 +92,10 @@ Adobe Experience Platform의 소스 커넥터는 예약된 기준으로 외부 �
 
 오류 요약에서 볼 수 있는 오류 코드는 다음 표를 **[!UICONTROL 참조하십시오]**.
 
-| 오류 코드 | 오류 메시지 |
+| 오류 | 설명 |
 | ---------- | ----------- |
-| `CONNECTOR-1001-500` | &quot;복사 활동에 문제가 발생했습니다.&quot; |
-| `CONNECTOR-2001-500` | &quot;Experience Platform 소스에서 데이터 세트로 복사하는 동안 문제가 발생했습니다.&quot; |
-| `CONNECTOR-3001-500` | &quot;벌크 인제스트 API를 사용하여 일괄 처리를 만드는 동안 흐름 공급자에 문제가 발생했습니다.&quot; |
+| `CONNECTOR-1001-500` | 소스에서 데이터를 복사하는 동안 오류가 발생했습니다. |
+| `CONNECTOR-2001-500` | 복사한 데이터를 처리하는 동안 오류가 발생했습니다 [!DNL Platform]. 구문 분석, 유효성 검사 또는 변환과 관련하여 이 오류가 발생할 수 있습니다. |
 
 화면 하단에는 데이터 흐름 실행 오류에 대한 **[!UICONTROL 정보가 포함되어 있습니다]**. 여기에서 인제스트된 파일을 보거나 오류 진단을 미리 보고 다운로드하거나 파일 매니페스트를 다운로드할 수도 있습니다.
 
