@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 작업
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: e7bb3e8a418631e9220865e49a1651e4dc065daf
 workflow-type: tm+mt
-source-wordcount: '1795'
+source-wordcount: '1782'
 ht-degree: 2%
 
 ---
@@ -33,7 +33,7 @@ GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{REGULATION}` | 쿼리할 규칙 유형입니다. 허용된 값은 `gdpr`, `ccpa`및 `pdpa_tha`입니다. |
+| `{REGULATION}` | 쿼리할 규칙 유형입니다. 허용되는 값 `gdpr`은 `ccpa`, `lgpd_bra`및 `pdpa_tha`입니다. |
 | `{PAGE}` | 0 기반 번호 지정을 사용하여 표시할 데이터 페이지입니다. 기본값은 `0`입니다. |
 | `{SIZE}` | 각 페이지에 표시할 결과 수입니다. 기본값은 `1` 이며 최대값은 입니다 `100`. 최대값을 초과하면 API가 400코드 오류를 반환합니다. |
 
@@ -67,8 +67,8 @@ curl -X GET \
 
 API는 개인 데이터에 대한 두 가지 작업 요청을 지원합니다. [!DNL Privacy Service]
 
-* [액세스 및/또는 삭제](#access-delete): 개인 데이터에 액세스(읽기) 또는 삭제합니다.
-* [판매](#opt-out)거부: 개인 데이터를 판매하지 않도록 표시합니다.
+* [액세스 및/또는 삭제](#access-delete):개인 데이터에 액세스(읽기) 또는 삭제합니다.
+* [판매](#opt-out)거부:개인 데이터를 판매하지 않도록 표시합니다.
 
 >[!IMPORTANT]
 >
@@ -147,13 +147,13 @@ curl -X POST \
 
 | 속성 | 설명 |
 | --- | --- |
-| `companyContexts` **(필수 여부)** | 조직에 대한 인증 정보가 포함된 배열입니다. 나열된 각 식별자에는 다음 속성이 포함됩니다. <ul><li>`namespace`: 식별자의 네임스페이스입니다.</li><li>`value`: 식별자의 값입니다.</li></ul>IMS 조직의 고유 ID를 포함하는 식별자 중 **은** 식별자 `imsOrgId` 로 사용해야 `namespace``value` 합니다. <br/><br/>추가 식별자는 조직에 속하는 Adobe 응용 프로그램과의 통합을 식별하는 제품별 회사 한정자( `Campaign`예:)일 수 있습니다. 잠재적 값에는 계정 이름, 클라이언트 코드, 테넌트 ID 또는 기타 응용 프로그램 식별자가 포함됩니다. |
-| `users` **(필수 여부)** | 액세스하거나 삭제하려는 정보가 있는 사용자 중 적어도 한 명의 컬렉션이 포함된 배열입니다. 단일 요청에서 최대 1,000개의 사용자 ID를 제공할 수 있습니다. 각 사용자 객체에는 다음 정보가 포함됩니다. <ul><li>`key`: 응답 데이터에서 개별 작업 ID의 자격을 규정하는 데 사용되는 사용자의 식별자입니다. 이 값에 대해 고유하고 쉽게 식별할 수 있는 문자열을 선택하여 나중에 쉽게 참조하거나 조회할 수 있도록 하는 것이 좋습니다.</li><li>`action`: 사용자의 데이터에 적용할 원하는 작업을 나열하는 배열입니다. 수행하려는 작업에 따라 이 배열에 포함 `access`또는 둘 다 `delete`포함되어야 합니다.</li><li>`userIDs`: 사용자의 ID 컬렉션입니다. 단일 사용자가 가질 수 있는 ID 수는 9개로 제한됩니다. 각 ID는 `namespace`a, a `value`및 네임스페이스 한정자(`type`)로 구성됩니다. 이러한 필수 속성에 대한 자세한 내용은 [부록을](appendix.md) 참조하십시오.</li></ul> 자세한 내용 `users` 및 `userIDs`은 [문제 해결 가이드를 참조하십시오](../troubleshooting-guide.md#user-ids). |
+| `companyContexts` **(필수 여부)** | 조직에 대한 인증 정보가 포함된 배열입니다. 나열된 각 식별자에는 다음 속성이 포함됩니다. <ul><li>`namespace`:식별자의 네임스페이스입니다.</li><li>`value`:식별자의 값입니다.</li></ul>IMS 조직의 고유 ID를 포함하는 식별자 중 **은** 식별자 `imsOrgId` 로 사용해야 `namespace``value` 합니다. <br/><br/>추가 식별자는 조직에 속하는 Adobe 응용 프로그램과의 통합을 식별하는 제품별 회사 한정자( `Campaign`예:)일 수 있습니다. 잠재적 값에는 계정 이름, 클라이언트 코드, 테넌트 ID 또는 기타 응용 프로그램 식별자가 포함됩니다. |
+| `users` **(필수 여부)** | 액세스하거나 삭제하려는 정보가 있는 사용자 중 적어도 한 명의 컬렉션이 포함된 배열입니다. 단일 요청에서 최대 1,000개의 사용자 ID를 제공할 수 있습니다. 각 사용자 객체에는 다음 정보가 포함됩니다. <ul><li>`key`:응답 데이터에서 개별 작업 ID의 자격을 규정하는 데 사용되는 사용자의 식별자입니다. 이 값에 대해 고유하고 쉽게 식별할 수 있는 문자열을 선택하여 나중에 쉽게 참조하거나 조회할 수 있도록 하는 것이 좋습니다.</li><li>`action`:사용자의 데이터에 적용할 원하는 작업을 나열하는 배열입니다. 수행하려는 작업에 따라 이 배열에 포함 `access`또는 둘 다 `delete`포함되어야 합니다.</li><li>`userIDs`:사용자의 ID 컬렉션입니다. 단일 사용자가 가질 수 있는 ID 수는 9개로 제한됩니다. 각 ID는 `namespace`a, a `value`및 네임스페이스 한정자(`type`)로 구성됩니다. 이러한 필수 속성에 대한 자세한 내용은 [부록을](appendix.md) 참조하십시오.</li></ul> 자세한 내용 `users` 및 `userIDs`은 [문제 해결 가이드를 참조하십시오](../troubleshooting-guide.md#user-ids). |
 | `include` **(필수 여부)** | 처리에 포함할 Adobe 제품 배열. 이 값이 없거나 비어 있으면 요청이 거부됩니다. 조직에 통합된 제품만 포함합니다. 자세한 내용은 부록에 있는 [승인된 제품 값](appendix.md) 섹션을 참조하십시오. |
 | `expandIDs` | 로 설정되면 응용 프로그램 `true`에서 ID 처리를 위한 최적화를 나타내는 선택적 속성(현재 [!DNL Analytics]에서 지원됨). If omitted, this value defaults to `false`. |
 | `priority` | 요청 처리 우선 순위를 설정하는 Adobe Analytics에서 사용하는 선택적 속성입니다. 허용된 값은 `normal` 및 `low`입니다. 이 `priority` 를 생략하면 기본 동작이 사용됩니다 `normal`. |
-| `analyticsDeleteMethod` | Adobe Analytics이 개인 데이터를 처리하는 방법을 지정하는 선택적 속성입니다. 이 속성에 대해 가능한 두 개의 값이 허용됩니다. <ul><li>`anonymize`: 지정된 사용자 ID 컬렉션에서 참조되는 모든 데이터는 익명으로 처리됩니다. 이 `analyticsDeleteMethod` 를 생략하면 기본 동작입니다.</li><li>`purge`: 모든 데이터가 완전히 제거됩니다.</li></ul> |
-| `regulation` **(필수 여부)** | 요청에 대한 규정. 다음 세 값 중 하나여야 합니다. <ul><li>gdpr</li><li>ccpa</li><li>pdpa_tha</li></ul> |
+| `analyticsDeleteMethod` | Adobe Analytics이 개인 데이터를 처리하는 방법을 지정하는 선택적 속성입니다. 이 속성에 대해 가능한 두 개의 값이 허용됩니다. <ul><li>`anonymize`:지정된 사용자 ID 컬렉션에서 참조되는 모든 데이터는 익명으로 처리됩니다. 이 `analyticsDeleteMethod` 를 생략하면 기본 동작입니다.</li><li>`purge`:모든 데이터가 완전히 제거됩니다.</li></ul> |
+| `regulation` **(필수 여부)** | 요청에 대한 규정. 다음 4개 값 중 하나여야 합니다. <ul><li>`gdpr`</li><li>`ccpa`</li><li>`lgpd_bra`</li><li>`pdpa_tha`</li></ul> |
 
 **응답**
 
@@ -280,13 +280,13 @@ curl -X POST \
 
 | 속성 | 설명 |
 | --- | --- |
-| `companyContexts` **(필수 여부)** | 조직에 대한 인증 정보가 포함된 배열입니다. 나열된 각 식별자에는 다음 속성이 포함됩니다. <ul><li>`namespace`: 식별자의 네임스페이스입니다.</li><li>`value`: 식별자의 값입니다.</li></ul>IMS 조직의 고유 ID를 포함하는 식별자 중 **은** 식별자 `imsOrgId` 로 사용해야 `namespace``value` 합니다. <br/><br/>추가 식별자는 조직에 속하는 Adobe 응용 프로그램과의 통합을 식별하는 제품별 회사 한정자( `Campaign`예:)일 수 있습니다. 잠재적 값에는 계정 이름, 클라이언트 코드, 테넌트 ID 또는 기타 응용 프로그램 식별자가 포함됩니다. |
-| `users` **(필수 여부)** | 액세스하거나 삭제하려는 정보가 있는 사용자 중 적어도 한 명의 컬렉션이 포함된 배열입니다. 단일 요청에서 최대 1,000개의 사용자 ID를 제공할 수 있습니다. 각 사용자 객체에는 다음 정보가 포함됩니다. <ul><li>`key`: 응답 데이터에서 개별 작업 ID의 자격을 규정하는 데 사용되는 사용자의 식별자입니다. 이 값에 대해 고유하고 쉽게 식별할 수 있는 문자열을 선택하여 나중에 쉽게 참조하거나 조회할 수 있도록 하는 것이 좋습니다.</li><li>`action`: 데이터에 적용할 원하는 작업을 나열하는 배열입니다. 판매 거부 요청의 경우 배열에는 값만 포함되어야 합니다 `opt-out-of-sale`.</li><li>`userIDs`: 사용자의 ID 컬렉션입니다. 단일 사용자가 가질 수 있는 ID 수는 9개로 제한됩니다. 각 ID는 `namespace`a, a `value`및 네임스페이스 한정자(`type`)로 구성됩니다. 이러한 필수 속성에 대한 자세한 내용은 [부록을](appendix.md) 참조하십시오.</li></ul> 자세한 내용 `users` 및 `userIDs`은 [문제 해결 가이드를 참조하십시오](../troubleshooting-guide.md#user-ids). |
+| `companyContexts` **(필수 여부)** | 조직에 대한 인증 정보가 포함된 배열입니다. 나열된 각 식별자에는 다음 속성이 포함됩니다. <ul><li>`namespace`:식별자의 네임스페이스입니다.</li><li>`value`:식별자의 값입니다.</li></ul>IMS 조직의 고유 ID를 포함하는 식별자 중 **은** 식별자 `imsOrgId` 로 사용해야 `namespace``value` 합니다. <br/><br/>추가 식별자는 조직에 속하는 Adobe 응용 프로그램과의 통합을 식별하는 제품별 회사 한정자( `Campaign`예:)일 수 있습니다. 잠재적 값에는 계정 이름, 클라이언트 코드, 테넌트 ID 또는 기타 응용 프로그램 식별자가 포함됩니다. |
+| `users` **(필수 여부)** | 액세스하거나 삭제하려는 정보가 있는 사용자 중 적어도 한 명의 컬렉션이 포함된 배열입니다. 단일 요청에서 최대 1,000개의 사용자 ID를 제공할 수 있습니다. 각 사용자 객체에는 다음 정보가 포함됩니다. <ul><li>`key`:응답 데이터에서 개별 작업 ID의 자격을 규정하는 데 사용되는 사용자의 식별자입니다. 이 값에 대해 고유하고 쉽게 식별할 수 있는 문자열을 선택하여 나중에 쉽게 참조하거나 조회할 수 있도록 하는 것이 좋습니다.</li><li>`action`:데이터에 적용할 원하는 작업을 나열하는 배열입니다. 판매 거부 요청의 경우 배열에는 값만 포함되어야 합니다 `opt-out-of-sale`.</li><li>`userIDs`:사용자의 ID 컬렉션입니다. 단일 사용자가 가질 수 있는 ID 수는 9개로 제한됩니다. 각 ID는 `namespace`a, a `value`및 네임스페이스 한정자(`type`)로 구성됩니다. 이러한 필수 속성에 대한 자세한 내용은 [부록을](appendix.md) 참조하십시오.</li></ul> 자세한 내용 `users` 및 `userIDs`은 [문제 해결 가이드를 참조하십시오](../troubleshooting-guide.md#user-ids). |
 | `include` **(필수 여부)** | 처리에 포함할 Adobe 제품 배열. 이 값이 없거나 비어 있으면 요청이 거부됩니다. 조직에 통합된 제품만 포함합니다. 자세한 내용은 부록에 있는 [승인된 제품 값](appendix.md) 섹션을 참조하십시오. |
 | `expandIDs` | 로 설정되면 응용 프로그램 `true`에서 ID 처리를 위한 최적화를 나타내는 선택적 속성(현재 [!DNL Analytics]에서 지원됨). If omitted, this value defaults to `false`. |
 | `priority` | 요청 처리 우선 순위를 설정하는 Adobe Analytics에서 사용하는 선택적 속성입니다. 허용된 값은 `normal` 및 `low`입니다. 이 `priority` 를 생략하면 기본 동작이 사용됩니다 `normal`. |
-| `analyticsDeleteMethod` | Adobe Analytics이 개인 데이터를 처리하는 방법을 지정하는 선택적 속성입니다. 이 속성에 대해 가능한 두 개의 값이 허용됩니다. <ul><li>`anonymize`: 지정된 사용자 ID 컬렉션에서 참조되는 모든 데이터는 익명으로 처리됩니다. 이 `analyticsDeleteMethod` 를 생략하면 기본 동작입니다.</li><li>`purge`: 모든 데이터가 완전히 제거됩니다.</li></ul> |
-| `regulation` **(필수 여부)** | 요청에 대한 규정. 다음 세 값 중 하나여야 합니다. <ul><li>gdpr</li><li>ccpa</li><li>pdpa_tha</li></ul> |
+| `analyticsDeleteMethod` | Adobe Analytics이 개인 데이터를 처리하는 방법을 지정하는 선택적 속성입니다. 이 속성에 대해 가능한 두 개의 값이 허용됩니다. <ul><li>`anonymize`:지정된 사용자 ID 컬렉션에서 참조되는 모든 데이터는 익명으로 처리됩니다. 이 `analyticsDeleteMethod` 를 생략하면 기본 동작입니다.</li><li>`purge`:모든 데이터가 완전히 제거됩니다.</li></ul> |
+| `regulation` **(필수 여부)** | 요청에 대한 규정. 다음 4개 값 중 하나여야 합니다. <ul><li>`gdpr`</li><li>`ccpa`</li><li>`lgpd_bra`</li><li>`pdpa_tha`</li></ul> |
 
 **응답**
 
@@ -440,7 +440,7 @@ curl -X GET \
 | `productStatusResponse.message` | 작업의 특정 상태(상태 카테고리에 해당). |
 | `productStatusResponse.responseMsgCode` | 수신한 제품 응답 메시지에 대한 표준 코드입니다 [!DNL Privacy Service]. 메시지의 세부 사항은 아래에 제공됩니다 `responseMsgDetail`. |
 | `productStatusResponse.responseMsgDetail` | 작업 상태에 대한 자세한 설명 비슷한 상태에 대한 메시지는 제품에 따라 다를 수 있습니다. |
-| `productStatusResponse.results` | 특정 상태에 대해 일부 제품은 포함되지 않은 추가 정보를 제공하는 `results` 객체를 반환할 수 있습니다 `responseMsgDetail`. |
+| `productStatusResponse.results` | 특정 상태에 대해 일부 제품은 포함되지 않은 추가 정보를 제공하는 `results` 개체를 반환할 수 있습니다 `responseMsgDetail`. |
 | `downloadURL` | 작업 상태가 `complete`ZIP 파일로 작업 결과를 다운로드하는 URL을 제공합니다. 이 파일은 작업이 완료된 후 60일 동안 다운로드할 수 있습니다. |
 
 ### 작업 상태 범주 {#status-categories}
@@ -449,14 +449,14 @@ curl -X GET \
 
 | 상태 범주 | 의미 |
 | -------------- | -------- |
-| 전체 | 작업이 완료되고 (필요한 경우) 파일이 모든 응용 프로그램에서 업로드됩니다. |
-| 처리 중 | 응용 프로그램이 작업을 승인했으며 현재 처리 중입니다. |
-| 제출됨 | 작업이 적용 가능한 모든 애플리케이션에 제출됩니다. |
-| 오류 | 작업을 처리하지 못했습니다. 개별 작업 세부 정보를 검색하여 더 구체적인 정보를 얻을 수 있습니다. |
+| `complete` | 작업이 완료되고 (필요한 경우) 파일이 모든 응용 프로그램에서 업로드됩니다. |
+| `processing` | 응용 프로그램이 작업을 승인했으며 현재 처리 중입니다. |
+| `submitted` | 작업이 적용 가능한 모든 애플리케이션에 제출됩니다. |
+| `error` | 작업을 처리하지 못했습니다. 개별 작업 세부 정보를 검색하여 더 구체적인 정보를 얻을 수 있습니다. |
 
 >[!NOTE]
 >
->제출된 작업이 여전히 처리 중인 종속 하위 작업이 있는 경우 처리 상태로 유지될 수 있습니다.
+>제출된 작업이 여전히 처리 중인 종속 하위 작업이 있는 경우 상태로 유지될 수 있습니다. `processing`
 
 ## 다음 단계
 
