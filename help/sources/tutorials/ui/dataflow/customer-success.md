@@ -5,9 +5,9 @@ title: UI에서 고객 성공 커넥터에 대한 데이터 흐름 구성
 topic: overview
 description: 데이터 흐름(Dataflow)은 소스에서 데이터 세트로 데이터를 검색하고 인제스트하는 예약된 [!DNL Platform] 작업입니다. 이 자습서에서는 고객 성공 계정을 사용하여 새 데이터 흐름을 구성하는 절차를 제공합니다.
 translation-type: tm+mt
-source-git-commit: 14044f9af50cd4c922294cd60f7b6549828e8aca
+source-git-commit: 5d4aa8eebc1837a5d8b275fa631f4af73c38158e
 workflow-type: tm+mt
-source-wordcount: '1321'
+source-wordcount: '1366'
 ht-degree: 0%
 
 ---
@@ -35,9 +35,15 @@ ht-degree: 0%
 - 인터페이스의 왼쪽 절반은 서버의 파일과 디렉토리를 표시하는 디렉토리 브라우저입니다.
 - 인터페이스의 오른쪽 절반을 사용하면 호환 파일에서 최대 100개의 데이터 행을 미리 볼 수 있습니다.
 
-사용할 디렉토리를 선택한 다음 **[!UICONTROL 다음을 클릭합니다]**.
+페이지 상단의 **[!UICONTROL 검색]** 옵션을 사용하여 사용할 소스 데이터를 빠르게 식별할 수 있습니다.
 
-![select-data](../../../images/tutorials/dataflow/customer-success/select-data.png)
+>[!NOTE]
+>
+>검색 소스 데이터 옵션은 Analytics, 분류, 이벤트 허브 및 Kinesis 커넥터를 제외한 모든 테이블 형식 기반 소스 커넥터에서 사용할 수 있습니다.
+
+소스 데이터를 찾은 후 디렉토리를 선택한 다음 **[!UICONTROL 다음을 클릭합니다]**.
+
+![select-data](../../../images/tutorials/dataflow/all-tabular/select-data.png)
 
 ## 데이터 필드를 XDM 스키마에 매핑
 
