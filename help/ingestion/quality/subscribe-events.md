@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 데이터 수집 이벤트 가입
 topic: overview
 translation-type: tm+mt
-source-git-commit: d2f098cb9e4aaf5beaad02173a22a25a87a43756
+source-git-commit: 80a1694f11cd2f38347989731ab7c56c2c198090
 workflow-type: tm+mt
-source-wordcount: '831'
+source-wordcount: '621'
 ht-degree: 2%
 
 ---
@@ -20,75 +20,77 @@ ht-degree: 2%
 
 수집 프로세스 모니터링을 지원하기 위해, [!DNL Experience Platform] 인제스트된 데이터의 상태 및 발생 가능한 실패를 알려 주기 위해 프로세스의 각 단계에 의해 게시된 일련의 이벤트에 가입할 수 있습니다.
 
-## 사용 가능한 상태 알림 이벤트
+## 데이터 통합 알림에 대한 웹 후크 등록
 
-다음은 가입할 수 있는 데이터 수집 상태 알림 목록입니다.
+데이터 통합 알림을 수신하려면 [Adobe 개발자 콘솔을](https://www.adobe.com/go/devs_console_ui) 사용하여 Experience Platform 통합에 웹 후크를 등록해야 합니다.
+
+가입 [방법에 대한 자세한 [!DNL Adobe I/O Event] 내용은](../../observability/notifications/subscribe.md) 설정에 대한 자습서를따르십시오.
+
+>[!IMPORTANT]
+>
+>구독 프로세스 동안 **[!UICONTROL 플랫폼 알림을]** 이벤트 제공자로 선택하고 메시지가 표시되었을 때 **[!UICONTROL 데이터 통합 알림]** 이벤트 구독을 선택합니다.
+
+## 데이터 수집 알림 받기
+
+웹 후크를 등록했고 새 데이터가 인제스트되면 이벤트 알림 수신을 시작할 수 있습니다. 이러한 이벤트는 웹 후크 자체를 사용하거나 Adobe 개발자 콘솔에서 프로젝트의 이벤트 등록 개요에서 **[!UICONTROL 디버그 추적]** 탭을 선택하여 볼 수 있습니다.
+
+다음 JSON은 실패한 일괄 처리 통합 이벤트의 경우 웹 후크에 전송되는 알림 페이로드의 예입니다.
+
+```json
+{
+  "event_id": "93a5b11a-b0e6-4b29-ad82-81b1499cb4f2",
+  "event": {
+    "xdm:ingestionId": "01EGK8H8HF9JGFKNDCABHGA24G",
+    "xdm:customerIngestionId": "01EGK8H8HF9JGFKNDCABHGA24G",
+    "xdm:imsOrg": "{IMS_ORG}",
+    "xdm:completed": 1598374341560,
+    "xdm:datasetId": "5e55b556c2ae4418a8446037",
+    "xdm:eventCode": "ing_load_failure",
+    "xdm:sandboxName": "prod",
+    "sentTime": "1598374341595",
+    "processStartTime": 1598374342614,
+    "transformedTime": 1598374342621,
+    "header": {
+      "_adobeio": {
+        "imsOrgId": "{IMS_ORG}",
+        "providerMetadata": "aep_observability_catalog_events",
+        "eventCode": "platform_event"
+      }
+    }
+  }
+}
+```
+
+| 속성 | 설명 |
+| --- | --- |
+| `event_id` | 알림을 위한 고유한 시스템 생성 ID. |
+| `event` | 알림을 트리거한 이벤트의 세부 정보가 포함된 개체입니다. |
+| `event.xdm:datasetId` | 통합 이벤트가 적용되는 데이터 세트의 ID입니다. |
+| `event.xdm:eventCode` | 데이터 세트에 대해 트리거된 이벤트 유형을 나타내는 상태 코드입니다. 특정 값과 [그 정의에 대해서는 부록을](#event-codes) 참조하십시오. |
+
+이벤트 알림의 전체 스키마를 보려면 [공용 GitHub 리포지토리를 참조하십시오](https://github.com/adobe/xdm/blob/master/schemas/notifications/ingestion.schema.json).
+
+## 다음 단계
+
+프로젝트에 [!DNL Platform] 알림을 등록하면 [!UICONTROL 프로젝트 개요에서 받은 이벤트를 볼 수 있습니다]. 이벤트 추적 방법에 대한 자세한 내용은 [Adobe I/O 이벤트](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) 추적 가이드를 참조하십시오.
+
+## 부록
+
+다음 섹션에는 데이터 통합 알림 페이로드 해석에 대한 추가 정보가 포함되어 있습니다.
+
+### 사용 가능한 상태 알림 이벤트 {#event-codes}
+
+다음 표에는 가입할 수 있는 데이터 통합 상태 알림이 나열됩니다.
+
+| 이벤트 코드 | 플랫폼 서비스 | 상태 | 이벤트 설명 |
+| --- | ---------------- | ------ | ----------------- |
+| `ing_load_success` | [!DNL Data Ingestion] | 성공 | 일괄 처리를 데이터 세트에 성공적으로 [!DNL Data Lake]수집했습니다. |
+| `ing_load_failure` | [!DNL Data Ingestion] | 실패 | 일괄 처리를 데이터 세트에 인제스트하지 못했습니다 [!DNL Data Lake]. |
+| `ps_load_success` | [!DNL Real-time Customer Profile] | 성공 | 일괄 처리를 데이터 [!DNL Profile] 저장소에 수집했습니다. |
+| `ps_load_failure` | [!DNL Real-time Customer Profile] | 실패 | 일괄 처리를 데이터 [!DNL Profile] 저장소에서 인제스트하지 못했습니다. |
+| `ig_load_success` | [!DNL Identity Service] | 성공 | 데이터가 ID 그래프로 로드되었습니다. |
+| `ig_load_failure` | [!DNL Identity Service] | 실패 | 데이터를 ID 그래프로 로드하지 못했습니다. |
 
 >[!NOTE]
 >
 >모든 데이터 수집 알림에 대해 제공된 이벤트 주제는 하나만 있습니다. 다른 상태를 구분하기 위해 이벤트 코드를 사용할 수 있습니다.
-
-| 플랫폼 서비스 | 상태 | 이벤트 설명 | 이벤트 코드 |
-| ---------------- | ------ | ----------------- | ---------- |
-| 데이터 랜딩 | 성공 | 통합 - 일괄 처리 성공 | ing_load_success |
-| 데이터 랜딩 | 실패 | 통합 - 일괄 처리 실패 | ing_load_failure |
-| 실시간 고객 프로필 | 성공 | 프로필 서비스 - 데이터 로드 배치 성공 | ps_load_success |
-| 실시간 고객 프로필 | 실패 | 프로필 서비스 - 데이터 로드 일괄 처리 실패 | ps_load_failure |
-| ID 그래프 | 성공 | ID 그래프 - 데이터 로드 일괄 성공 | ig_load_success |
-| ID 그래프 | 실패 | ID 그래프 - 데이터 로드 일괄 처리 실패 | ig_load_failure |
-
-## 알림 페이로드 스키마
-
-데이터 통합 알림 이벤트 스키마는 인제스트되는 데이터의 상태와 관련된 세부 정보를 제공하는 필드 및 값을 포함하는 [!DNL Experience Data Model] (XDM) 스키마입니다. 최신 [!DNL GitHub] 알림 페이로드 스키마를 보려면 공개 XDM 보고서 [를 방문하십시오](https://github.com/adobe/xdm/blob/master/schemas/notifications/ingestion.schema.json).
-
-## 데이터 수집 상태 알림 구독
-
-Adobe [I/O 이벤트를](https://www.adobe.io/apis/experienceplatform/events.html)통해 웹 후크를 사용하여 여러 알림 유형에 가입할 수 있습니다. 아래 섹션에서는 Adobe 개발자 콘솔을 사용하여 데이터 통합 이벤트에 대한 [!DNL Platform] 알림 가입 절차에 대해 간략하게 설명합니다.
-
-### Adobe 개발자 콘솔에서 새 프로젝트 만들기
-
-Adobe 개발자 [콘솔로](https://www.adobe.com/go/devs_console_ui) 이동하여 Adobe ID에 로그인합니다. 그런 다음 Adobe 개발자 콘솔 설명서에서 빈 프로젝트 [를 만드는](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) 자습서에 나와 있는 단계를 따릅니다.
-
-### 프로젝트에 [!DNL Experience Platform] 이벤트 추가
-
-새 프로젝트를 만들었으면 해당 프로젝트의 개요 화면으로 이동합니다. 여기에서 이벤트 **[!UICONTROL 추가를 클릭합니다]**.
-
-![](../images/quality/subscribe-events/add-event-button.png)
-
-이벤트 **[!UICONTROL 추가]** 대화 상자가 나타납니다. 사용 가능한 옵션 목록을 필터링하려면 **[!UICONTROL Experience Platform]** 를 클릭한 다음 **[!UICONTROL 다음]** 을 클릭하여 **[!UICONTROL 플랫폼 알림을]**&#x200B;클릭합니다.
-
-![](../images/quality/subscribe-events/select-platform-events.png)
-
-다음 화면에는 가입할 이벤트 유형 목록이 표시됩니다. 데이터 **[!UICONTROL 통합 알림을]**&#x200B;선택한 다음 **[!UICONTROL 다음을 클릭합니다]**.
-
-![](../images/quality/subscribe-events/choose-event-subscriptions.png)
-
-다음 화면에 JWT(JSON 웹 토큰)를 만들라는 메시지가 표시됩니다. 키 쌍을 자동으로 생성하거나 터미널에서 생성된 자신의 공개 키를 업로드할 수 있는 옵션이 제공됩니다.
-
-이 튜토리얼의 목적을 위해 첫 번째 옵션이 따릅니다. 키 쌍 **[!UICONTROL 생성 옵션 상자]**&#x200B;를 클릭한 다음 오른쪽 아래 모서리에서 키 쌍 **[!UICONTROL 생성]** 버튼을 클릭합니다.
-
-![](../images/quality/subscribe-events/generate-keypair.png)
-
-키 쌍이 생성되면 브라우저에 의해 자동으로 다운로드됩니다. 이 파일은 개발자 콘솔에서 지속되지 않으므로 직접 저장해야 합니다.
-
-다음 화면에서는 새로 생성된 키 쌍의 세부 사항을 검토할 수 있습니다. 계속하려면 **[!UICONTROL 다음]**&#x200B;을 클릭하십시오.
-
-![](../images/quality/subscribe-events/keypair-generated.png)
-
-다음 화면에서 이벤트 등록에 대한 이름과 설명을 입력합니다. 가장 좋은 방법은 이 이벤트 등록을 동일한 프로젝트의 다른 사용자와 구별할 수 있는 고유한 이름을 만드는 것입니다.
-
-![](../images/quality/subscribe-events/registration-details.png)
-
-동일한 화면에서 추가로, 이벤트를 수신하는 방법을 선택적으로 구성할 수 있습니다. **[!UICONTROL Webhook]** 를 사용하면 이벤트를 수신할 사용자 정의 웹 후크 주소를 제공할 수 있지만 **[!UICONTROL 런타임 작업을]** 사용하면 [Adobe I/O Runtime](https://www.adobe.io/apis/experienceplatform/runtime/docs.html)를 사용하여 동일한 작업을 수행할 수 있습니다.
-
-이 자습서는 이 선택적 구성 단계를 건너뜁니다. 완료되면 구성된 이벤트 **[!UICONTROL 저장을 클릭하여 이벤트]** 등록을 완료합니다.
-
-![](../images/quality/subscribe-events/receive-events.png)
-
-새로 만든 이벤트 등록에 대한 세부 정보 페이지가 나타납니다. 여기에서 수신한 이벤트를 검토하고 디버그 추적을 수행하며 구성을 편집할 수 있습니다.
-
-![](../images/quality/subscribe-events/registration-complete.png)
-
-## 다음 단계
-
-프로젝트에 [!DNL Platform] 알림을 등록하면 프로젝트 대시보드에서 수신된 이벤트를 볼 수 있습니다. 이벤트를 추적하는 방법에 대한 자세한 내용은 [추적 Adobe I/O 이벤트](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) 안내서를 참조하십시오.
