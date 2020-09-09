@@ -1,71 +1,104 @@
 ---
 title: Adobe Experience Platform 릴리스 정보
-description: Experience Platform 릴리스 노트
+description: 'Experience Platform 릴리스 노트: 2020년 9월 9일'
 doc-type: release notes
-last-update: August 10, 2020
-author: crhoades, ens28527
+last-update: September 8, 2020
+author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: b4ce4c2e5ff5083f663c2daf23c32a1cec32124c
+source-git-commit: 312794af2cdb111fb81c0aa226dec68db2cbc374
 workflow-type: tm+mt
-source-wordcount: '597'
-ht-degree: 5%
+source-wordcount: '883'
+ht-degree: 4%
 
 ---
 
 
 # Adobe Experience Platform 릴리스 노트
 
-**릴리스 날짜: 2020년 8월 12일**
+**릴리스 날짜: 2020년 9월 9일**
 
 Adobe Experience Platform의 기존 기능 업데이트:
 
-- [[!DNL 데이터 과학 작업 공간]](#dsw)
+- [[!DNL 데이터 거버넌스]](#governance)
 - [[!DNL 대상]](#destinations)
-- [[!DNL 실시간 고객 데이터 플랫폼]](#rtcdp)
+- [[!DNL Observability Insights]](#observability)
+- [[!DNL Privacy Service]](#privacy)
+- [[!DNL 실시간 고객 프로필]](#profile)
+- [[!DNL 세그멘테이션 서비스]](#segmentation)
 - [[!DNL 소스]](#sources)
 
-## [!DNL Data Science Workspace] {#dsw}
+## [!DNL Data Governance] {#governance}
 
-[!DNL Data Science Workspace] 머신 러닝과 인공 지능(AI)을 사용하여 데이터에서 인사이트를 도출합니다. Adobe Experience Platform에 통합되어 Adobe 솔루션에서 콘텐츠와 데이터 자산을 사용하여 예측할 수 [!DNL Data Science Workspace] 있습니다.
+Adobe Experience Platform 데이터 거버넌스는 고객 데이터를 관리하고 데이터 사용에 적용되는 규정, 제한 및 정책을 준수하는 데 사용되는 일련의 전략과 기술입니다. 카탈로그 작성, 데이터 계보, 데이터 사용 표시, 데이터 액세스 정책, 마케팅 작업을 위한 데이터 액세스 제어 등 다양한 [!DNL Experience Platform] 수준에서 핵심적인 역할을 합니다.
 
 **새로운 기능**
 
 | 기능 | 설명 |
 | ------- | ----------- |
-| VM의 [!DNL JupyterLab] | 장기 실행 [!DNL JupyterLab notebook] 가상 시스템의 안정성이 개선되었습니다. |
+| 데이터 세트 레이블 지정 UI 개선 사항 | 큰 스키마 작업을 더 쉽게 하기 위해 데이터 세트 레이블 지정 UI에 새로운 정렬 및 필터링 컨트롤이 추가되었습니다. <ul><li>전체 스키마 경로를 기준으로 필드를 알파벳순으로 정렬합니다.</li><li>필드 경로 이름에 대해 부분 검색을 수행합니다.</li><li>레이블, 선택된 레이블 또는 레이블 카테고리가 없는 필드를 필터링합니다.</li></ul> |
 
-자세한 내용 [!DNL JupyterLab]은 [[!DNL JupyterLab] 사용 안내서를 참조하십시오](../../data-science-workspace/jupyterlab/overview.md).
+서비스에 대한 자세한 내용은 [데이터 거버넌스](../../data-governance/home.md) 개요를 참조하십시오.
 
 ## 대상 {#destinations}
 
 Adobe의 실시간 고객 데이터 플랫폼 [](../../rtcdp/overview.md)에서 대상은 대상 플랫폼과 사전 구축된 통합으로 이러한 파트너에게 데이터를 원활하게 제공할 수 있습니다.
 
-**새 대상**
+**새로운 기능**
 
-Adobe Experience Platform 데이터를 활성화할 수 있는 새로운 대상을 사용할 수 있습니다. 자세한 내용은 아래를 참조하십시오.
+| 기능 | 설명 |
+| ------- | ----------- |
+| 향상된 UX | 사용자는 인라인 테이블 작업에 액세스하여 데이터 추가, 예약 편집 및 세그먼트 추가와 같은 기본 작업에 쉽게 액세스할 수 있습니다. 자세한 내용은 [대상 작업 공간](../../rtcdp/destinations/destinations-workspace.md) 문서를 참조하십시오. |
 
-| 대상 | 설명 |
-|--- | ---|
-| [!DNL Google Customer Match] | Google Customer Match를 사용하면 온라인 및 오프라인 데이터를 사용하여 다음과 같은 Google 소유 및 운영 자산에서 고객에게 도달하고 재참여할 수 있습니다. [!DNL Search], [!DNL Shopping], Gmail 및 YouTube. <br><br> 대상 카탈로그의 [!DNL Google Customer Match] 페이지 [](/help/rtcdp/destinations/google-customer-match-destination.md) 를 방문하여 대상 및 Adobe 실시간 CDP에서 대상을 설정하는 방법에 대한 자세한 내용을 확인하십시오. |
+자세한 내용은 [대상 개요를 참조하십시오](../../rtcdp/destinations/destinations-overview.md)
+
+## [!DNL Observability Insights] {#observability}
+
+[!DNL Observability Insights] 통계 지표 및 이벤트 알림을 사용하여 Adobe Experience Platform의 활동을 모니터링할 수 있습니다.
 
 **새로운 기능**
 
 | 기능 | 설명 |
-|------- | -----------|
-| 사용자 정의 파일 이름 편집기 | 내보낸 파일의 이름을 편집할 수 있는 이메일 마케팅 대상 및 클라우드 스토리지 대상에 대한 데이터 활성화 워크플로우로 업데이트합니다. 자세한 내용은 정품 인증 워크플로우의 [ 구성 단계를](/help/rtcdp/destinations/activate-destinations.md#configure) 참조하십시오. |
-| 권장 속성 | 내보낸 파일에 추가할 수 있는 권장 특성을 표시하는 이메일 마케팅 대상 및 클라우드 스토리지 대상에 대한 데이터 활성화 워크플로우로 업데이트합니다. 자세한 내용은 정품 인증 워크플로우의 [속성 선택 단계를](/help/rtcdp/destinations/activate-destinations.md#select-attributes) 참조하십시오. |
+| --- | --- |
+| Adobe I/O 이벤트 알림 | [!DNL Observability Insights] adobe I/O 이벤트를 활용하여 여러 Experience Platform 서비스에 대한 이벤트 알림을 만듭니다. 알림 페이로드는 구성된 웹 후크로 전송되며, 이를 통해 추가 다운스트림 프로세스를 자동화할 수 있습니다. 자세한 내용은 [알림 개요를](../../observability/notifications/overview.md) 참조하십시오. |
 
-## [!DNL Real-time Customer Data Platform] {#rtcdp}
+서비스에 대한 자세한 내용은 [[!DNL Observability Insights] 개요를](../../observability/home.md) 참조하십시오.
 
-Experience Platform에 내장된 Adobe 실시간 고객 데이터 플랫폼([!DNL Real-time CDP])을 사용하면 알려진 데이터와 알려지지 않은 데이터를 결합하여 고객 여정 전반에서 지능적인 의사 결정을 통해 고객 프로파일을 활성화할 수 있습니다. [!DNL Real-time CDP] 여러 엔터프라이즈 데이터 소스를 통합하여 고객 프로파일을 실시간으로 생성 그런 다음 이러한 프로파일에서 작성한 세그먼트를 다운스트림 대상으로 전송하여 모든 채널과 디바이스에 개인화된 경험을 제공할 수 있습니다.
+## [!DNL Privacy Service] {#privacy}
+
+여러 법률 및 조직 규정은 사용자가 요청 시 데이터 저장소에서 자신의 개인 데이터를 액세스하거나 삭제할 수 있는 권한을 제공합니다. Adobe Experience Platform [!DNL Privacy Service] 는 고객의 이러한 데이터 요청을 관리하는 데 도움이 되는 RESTful API 및 사용자 인터페이스를 제공합니다. 를 [!DNL Privacy Service]사용하면 Adobe Experience Cloud 애플리케이션에서 개인 또는 개인 고객 데이터를 액세스 및 삭제하기 위한 요청을 제출하여 법적 및 조직의 개인 정보 보호 규정을 자동으로 준수할 수 있습니다.
 
 **새로운 기능**
 
 | 기능 | 설명 |
 | ------- | ----------- |
-| IAB TCF 2.0 지원 | [!DNL Real-time CDP] 는 이제 (IAB)에 의해 설명한 대로 [!DNL Transparency & Consent Framework] (TCF) 2.0 버전의 [!DNL Interactive Advertising Bureau] 등록된 공급자입니다. CMP로 생성된 고객 동의 데이터를 수용하도록 데이터 작업 및 프로필 스키마를 구성할 수 있으며, 다운스트림 대상으로 세그먼트를 활성화할 때 고객의 동의 기본 설정을 적용할 수 있습니다. 자세한 내용은 실시간 CDP의 [IAB TCF 2.0 지원에 대한 개요를](../../rtcdp/privacy/iab/overview.md) 참조하십시오. |
+| LGPD 지원(브라질) | 이제 브라질의 [!DNL Lei Geral de Proteção de Dados] (LGPD) 규정에 따라 개인 정보 일자리를 창출할 수 있다. 이 일자리들은 규제 규정에 따라 추적된다 `lgpd_bra`. |
 
-자세한 내용 [!DNL Real-time CDP]은 [[!DNL Real-time CDP] 개요를 참조하십시오](../../rtcdp/overview.md).
+서비스에 대한 자세한 내용은 [Privacy Service 개요를](../../privacy-service/home.md) 참조하십시오.
+
+## 실시간 고객 프로필 {#profile}
+
+Adobe Experience Platform을 사용하면 고객이 브랜드와 언제 어디에서나 고객의 기대에 부응하는 일관된 경험을 제공할 수 있습니다. 온라인, 오프라인, CRM, 서드파티 데이터 등 다양한 채널의 데이터를 결합하는 각 개별 고객의 전체 상황을 파악할 수 있습니다. [!DNL Real-time Customer Profile] [!DNL Profile] 서로 다른 고객 데이터를 하나의 통합 뷰로 통합하여 고객 상호 작용에 대해 실행 가능하고 타임스탬프가 지정된 계정을 제공할 수 있습니다.
+
+| 기능 | 설명 |
+| ------- | ----------- |
+| 프로필 뷰어 | 플랫폼 UI에서 프로필 뷰어는 전체 사용자 지정이 가능한 대시보드로 업데이트되었습니다. 이제 사용자는 다음 작업을 수행할 수 있습니다. <ul><li>기본 정보 위젯에서 선택한 표준 및 사용자 지정된 속성을 업데이트합니다.</li><li>사용자 정의 위젯 만들기, 편집 및 제거</li><li>위젯 크기 조정 및 재정렬</li></ul> |
+
+데이터 작업을 위한 자습서 및 모범 사례 [!DNL Real-time Customer Profile]를 비롯한 자세한 내용은 [!DNL Profile] 실시간 고객 프로필 개요를 참조하십시오 [](../../profile/home.md).
+
+## 세그멘테이션 서비스 {#segmentation}
+
+Adobe Experience Platform 세그멘테이션 서비스는 세그먼트를 작성하고 [!DNL Real-time Customer Profile] 데이터에서 대상을 생성할 수 있는 사용자 인터페이스와 RESTful API를 제공합니다. 이러한 세그먼트는 중앙에서 구성 및 관리되므로 모든 Adobe 애플리케이션에서 쉽게 액세스할 수 [!DNL Platform]있습니다.
+
+[!DNL Segmentation Service] 고객 기반 내에서 마케팅 가능한 사람들을 구분하는 기준을 설명하여 특정 프로필 하위 집합을 정의합니다. 세그먼트는 브랜드와의 고객 상호 작용을 나타내는 레코드 데이터(인구 통계 정보 등) 또는 시간 시리즈 이벤트를 기반으로 할 수 있습니다.
+
+**새로운 기능**
+
+| 기능 | 설명 |
+| ------- | ----------- |
+| 내보내기 작업 | 세그먼트를 내보내기 작업의 일부로 평가할 수 있도록 플래그가 추가되었습니다. 따라서 사용자는 단일 작업에서 세그먼테이션과 내보내기를 모두 실행할 수 있습니다. |
+| 정책 병합 | 여러 병합 정책을 하나의 일괄 세분화 작업에 포함시킬 수 있습니다. |
+
+자세한 내용 [!DNL Segmentation Service]은 세그멘테이션 [개요를 참조하십시오.](../../segmentation/home.md)
 
 ## 소스 {#sources}
 
@@ -77,8 +110,7 @@ Adobe Experience Platform은 외부 소스에서 데이터를 인제스트할 �
 
 | 기능 | 설명 |
 | ------- | ----------- |
-| 흐름 실행 모니터링 | 사용자는 모든 흐름 실행을 모니터링하고 완료 상태, 실행 기간, 처리된 파일 목록, 오류 및 지표를 포함하여 각 실행에 대한 세부 보기를 볼 수 있습니다. 자세한 내용은 데이터 흐름 [모니터링](../../sources/tutorials/ui/monitor.md) 문서를 참조하십시오. |
-| 흐름 실행 알림 | 사용자는 이벤트에 구독하고 웹 후크를 등록하여 흐름 실행에 대한 상태, 지표 및 오류에 대한 실시간 알림을 받을 수 있습니다. |
-| 향상된 UI 카탈로그 | 선택한 개체의 기본 작업에 보다 쉽게 액세스할 수 있도록 소스 카탈로그 화면에 대한 업데이트 |
+| 자동 매핑 | [!DNL Platform] 사용자가 선택한 대상 스키마 또는 데이터 세트를 기반으로 데이터 통합 워크플로우 동안 자동 매핑에 대한 지능적인 권장 사항을 제공합니다. 사용 사례에 맞게 유연한 자동 매핑 규칙을 수동으로 조정할 수 있습니다. |
+| 향상된 UX | 사용자는 인라인 테이블 작업에 액세스하여 데이터 추가, 예약 편집 및 세그먼트 추가와 같은 기본 작업에 쉽게 액세스할 수 있습니다. 자세한 내용은 데이터 흐름 [모니터링](../../sources/tutorials/ui/monitor.md) 문서를 참조하십시오. |
 
 소스에 대한 자세한 내용은 [소스 개요를 참조하십시오](../../sources/home.md).
