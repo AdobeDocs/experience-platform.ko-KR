@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: September 8, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 64b6b59923d549cdcbf35d2e375529aec8cf81b8
+source-git-commit: 23c7a0d82cb849568d6411c1a09c7a16b86d4954
 workflow-type: tm+mt
-source-wordcount: '397'
-ht-degree: 6%
+source-wordcount: '507'
+ht-degree: 5%
 
 ---
 
@@ -21,6 +21,7 @@ Adobe Experience Platform의 기존 기능 업데이트:
 
 * [[!DNL 데이터 거버넌스]](#governance)
 * [[!DNL 대상]](#destinations)
+* [[!DNL Privacy Service]](#privacy)
 * [[!DNL 소스]](#sources)
 
 ## [!DNL Data Governance] {#governance}
@@ -46,6 +47,18 @@ Adobe의 실시간 고객 데이터 플랫폼 [](../../rtcdp/overview.md)에서 
 | 향상된 UX | 사용자는 인라인 테이블 작업에 액세스하여 데이터 추가, 예약 편집 및 세그먼트 추가와 같은 기본 작업에 쉽게 액세스할 수 있습니다. 자세한 내용은 [대상 작업 공간](../../rtcdp/destinations/destinations-workspace.md) 문서를 참조하십시오. |
 
 자세한 내용은 [대상 개요를 참조하십시오](../../rtcdp/destinations/destinations-overview.md)
+
+## [!DNL Privacy Service] {#privacy}
+
+여러 법률 및 조직 규정은 사용자가 요청 시 데이터 저장소에서 자신의 개인 데이터를 액세스하거나 삭제할 수 있는 권한을 제공합니다. Adobe Experience Platform [!DNL Privacy Service] 는 고객의 이러한 데이터 요청을 관리하는 데 도움이 되는 RESTful API 및 사용자 인터페이스를 제공합니다. 를 [!DNL Privacy Service]사용하면 Adobe Experience Cloud 애플리케이션에서 개인 또는 개인 고객 데이터를 액세스 및 삭제하기 위한 요청을 제출하여 법적 및 조직의 개인 정보 보호 규정을 자동으로 준수할 수 있습니다.
+
+**새로운 기능**
+
+| 기능 | 설명 |
+| --- | --- |
+| LGPD 지원(브라질) | 이제 브라질의 [!DNL Lei Geral de Proteção de Dados] (LGPD) 규정에 따라 개인 정보 일자리를 창출할 수 있다. 이 일자리들은 규제 규정에 따라 추적된다 `lgpd_bra`. |
+
+서비스에 대한 자세한 내용은 [Privacy Service 개요를](../../privacy-service/home.md) 참조하십시오.
 
 ## 소스 {#sources}
 
