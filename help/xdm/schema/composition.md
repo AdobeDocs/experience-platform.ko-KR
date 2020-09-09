@@ -5,7 +5,7 @@ title: 스키마 컴포지션의 기본 사항
 topic: overview
 description: 이 문서에서는 XDM(Experience Data Model) 스키마 및 Adobe Experience Platform에서 사용할 스키마를 작성하기 위한 기본 블록, 원칙 및 모범 사례에 대해 소개합니다.
 translation-type: tm+mt
-source-git-commit: 4251dc292ead3ce4dc8aef68ff04bb774047160d
+source-git-commit: 4a76101cb8a7afb947bdce263a73f79d931db154
 workflow-type: tm+mt
 source-wordcount: '2839'
 ht-degree: 0%
@@ -173,7 +173,7 @@ The infrastructure which [!DNL Experience Platform] is built, knowing [!DNL XDM 
 
 * 문자열
 * 정수
-* 숫자
+* 이중
 * 부울
 * Array
 * 개체
