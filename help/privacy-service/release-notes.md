@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Privacy Service 릴리스 노트
 topic: release notes
 translation-type: tm+mt
-source-git-commit: 4cfa64e3371496e2408fe8fee64d49883334917c
+source-git-commit: 6eee7e903d36ed641c9f8e6120f549c02cb4bce4
 workflow-type: tm+mt
-source-wordcount: '511'
-ht-degree: 5%
+source-wordcount: '538'
+ht-degree: 6%
 
 ---
 
@@ -19,6 +19,14 @@ ht-degree: 5%
 >[!NOTE]
 >
 >다른 [!DNL Experience Platform] 서비스에 대한 최신 릴리스 노트는 [여기에서 확인할 수 있습니다](../release-notes/latest/latest.md).
+
+## 2020년 9월 9일
+
+### 새로운 기능
+
+| 기능 | 설명 |
+| --- | --- |
+| LGPD 지원(브라질) | 이제 브라질의 [!DNL Lei Geral de Proteção de Dados] (LGPD) 규정에 따라 개인 정보 일자리를 창출할 수 있다. 이 일자리들은 규제 규정에 따라 추적된다 `lgpd_bra`. |
 
 ## 2020년 4월 8일
 
