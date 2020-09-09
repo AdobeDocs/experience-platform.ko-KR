@@ -5,7 +5,7 @@ title: 인증 및 액세스 Experience Platform API
 topic: tutorial
 description: '이 문서에서는 Experience Platform API를 호출하기 위해 Adobe Experience Platform 개발자 계정에 액세스할 수 있는 단계별 자습서를 제공합니다. '
 translation-type: tm+mt
-source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
+source-git-commit: 76e6e1a5484dce0a4640c2ce1f43cf7d84e049bf
 workflow-type: tm+mt
 source-wordcount: '878'
 ht-degree: 3%
@@ -156,7 +156,7 @@ curl -X GET https://platform.adobe.io/data/foundation/schemaregistry/global/clas
 
 ## JWT 인증 및 API 호출에 Postman 사용
 
-[Postman](https://www.getpostman.com/) 은 RESTful API를 사용하여 작업하는 데 널리 사용되는 도구입니다. 이 [중간 게시물은](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) JWT 인증을 자동으로 수행하고 이를 사용하여 Adobe Experience Platform API를 사용하는 방법에 대해 설명합니다.
+[Postman](https://www.postman.com/) 은 RESTful API를 사용하여 작업하는 데 널리 사용되는 도구입니다. 이 [중간 게시물은](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) JWT 인증을 자동으로 수행하고 이를 사용하여 Adobe Experience Platform API를 사용하는 방법에 대해 설명합니다.
 
 ## 다음 단계
 
