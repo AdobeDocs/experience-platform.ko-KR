@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 세그먼트 작업
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
+source-git-commit: 3926c989a05ee97f2a09c0ab38d6a444674563cb
 workflow-type: tm+mt
-source-wordcount: '993'
+source-wordcount: '1002'
 ht-degree: 3%
 
 ---
@@ -191,7 +191,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `segmentId` | 세그먼트 작업을 만들 세그먼트 정의의 ID입니다. 세그먼트 정의에 대한 자세한 내용은 [세그먼트 정의 끝점 안내서를 참조하십시오](./segment-definitions.md). |
+| `segmentId` | 세그먼트 작업을 만들 세그먼트 정의의 ID입니다. 이러한 세그먼트 정의는 서로 다른 병합 정책에 속할 수 있습니다. 세그먼트 정의에 대한 자세한 내용은 [세그먼트 정의 끝점 안내서를 참조하십시오](./segment-definitions.md). |
 
 **응답**
 
