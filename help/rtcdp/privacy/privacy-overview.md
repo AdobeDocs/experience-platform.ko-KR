@@ -5,38 +5,36 @@ seo-title: 실시간 고객 데이터 프로필의 개인 정보
 description: 실시간 고객 데이터 프로필을 사용하면 개인 정보 보호 규정을 준수하는 데이터 운영을 간소화할 수 있습니다.
 seo-description: 실시간 고객 데이터 프로필을 사용하면 개인 정보 보호 규정을 준수하는 데이터 운영을 간소화할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: f9b21ee51d6246dbdae4500aad050b200539ff88
+source-git-commit: 1eaadb1877cc5221bf6b0b8eed042287e59155bf
 workflow-type: tm+mt
-source-wordcount: '312'
-ht-degree: 1%
+source-wordcount: '361'
+ht-degree: 0%
 
 ---
 
 
-# 실시간 CDP의 개인 정보 보호
+# 개인 정보 보호 [!DNL Real-time CDP]
 
-[!DNL Real-time Customer Data Platform] (실시간 CDP)를 통해 마케터는 여러 엔터프라이즈 시스템의 데이터를 통합하여 고객을 보다 효과적으로 식별, 이해 및 참여시킬 수 있습니다. Adobe은 소비자 데이터 개인 정보를 기본적인 디자인 원칙에 포함하며 마케터가 고객의 데이터 개인 정보를 관리하는 데 도움이 되는 다양한 컨트롤을 제공합니다.
+[!DNL Real-time Customer Data Platform] ([!DNL Real-time CDP]) 마케터는 여러 엔터프라이즈 시스템의 데이터를 통합하여 고객을 보다 효과적으로 식별, 이해 및 참여시킬 수 있습니다. Adobe은 소비자 데이터 개인 정보를 기본적인 디자인 원칙에 포함하며 마케터가 고객의 데이터 개인 정보를 관리하는 데 도움이 되는 다양한 컨트롤을 제공합니다.
 
-대부분의 실시간 CDP 기능은 Adobe Experience Platform에서 제공합니다. 이 문서에서는 실시간 CDP가 지원하는 다양한 개인 정보 보호 개선 기술에 대한 정보와 자세한 내용은 설명서에 대한 링크를 [!DNL Experience Platform] 참조하십시오.
+대다수의 [!DNL Real-time CDP] 역량은 Adobe Experience Platform이 한다. 이 문서에서는 에서 지원하는 다양한 개인정보 보호 강화 기술에 대한 정보 [!DNL Real-time CDP]와 자세한 내용은 설명서 링크 [!DNL Experience Platform] 를 참조하십시오.
 
-## [!DNL Privacy Service]
+## 고객 액세스 및 삭제 요청 준수
 
-Adobe Experience Platform [!DNL Privacy Service] 를 사용하면 데이터 작업을 GDPR(개인 정보 보호 규정) [!DNL General Data Protection Regulation] 및 [!DNL California Consumer Privacy Act] (CPA)와 같은 개인 정보 보호 규정을 준수하는 프로세스를 간소화할 수 있습니다. 실시간 CDP는 데이터 수집 및 스토리지 [!DNL Experience Platform] 에 대한 기능을 활용하므로 GDPR 및 CPA에 대한 액세스 및 삭제 요청은 내부에서 관리되어야 합니다 [!DNL Platform]. 서비스에 대한 자세한 내용은 [Privacy Service 개요](../../privacy-service/home.md) 문서를 참조하십시오.
+GDPR [!DNL General Data Protection Regulation] (Adobe Certified Document Services) 및 [!DNL California Consumer Privacy Act] (CPA)와 같은 법적 개인 정보 보호 규정에서는 고객이 수집한 개인 데이터의 액세스 또는 삭제를 요청할 수 있습니다. 데이터 수집 및 저장에 대한 [!DNL Real-time CDP] 기능을 활용하므로 고객 개인 정보에 액세스하거나 삭제하기 위한 요청은 내부에서 관리되어야 [!DNL Experience Platform] [!DNL Platform]합니다. 자세한 내용은 [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) 개요를 참조하십시오.
 
-고객 데이터에 액세스하고 삭제할 수 있는 개별 GDPR 및 CPA 데이터 주체의 요청을 제출하는 방법에는 두 가지가 있습니다.
+## 옵트아웃 기능
 
-* 시각적 작업 공간 내에서 [[!DNL Privacy Service UI]](https://privacyui.cloud.adobe.io/) 액세스 및 삭제 요청을 만들고 모니터링합니다. 단계별 지침은 [Privacy Service 사용](../../privacy-service/ui/overview.md) 안내서를 참조하십시오.
-* RESTful API 호출 [을 사용하여 액세스 및 삭제 요청을](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml) 관리하려면 [!DNL Privacy Service API]를 사용하십시오. 단계별 지침은 [Privacy Service API 자습서를](../../privacy-service/api/getting-started.md) 참조하십시오.
+[!DNL Real-time CDP] 세그멘테이션 사용 사례에 고객 개인 데이터 포함 거부 고객의 옵트아웃 환경 설정은 에 의해 캡처되고 저장되며, 세그먼트 설명 [!DNL Real-time Customer Profile]에서 부울 논리(&quot;AND NOT&quot;)를 사용하여 세그먼트에서 옵트아웃한 사용자를 제외하여 적용할 수 있습니다.
 
-<!-- (Capability will not be available for November GA) 
-## Opt-out capabilities
+자세한 내용은 Adobe Experience Platform 세그멘테이션 서비스 문서의 [옵트아웃 요청](../../segmentation/honoring-opt-outs.md) 수리에 관한 문서를 참조하십시오.
 
-Real-time CDP provides two types of consumer opt-out capabilities:
+## IAB TCF 2.0 지원
 
-1. **General opt-out**: (Waiting on info)
-1. **Segment-level opt-out of sale**: Opt-out of sale requests are captured using the Profile Privacy mixin (see the section on "Handling opt-out requests" in the [Real-time Customer Profile overview](../../profile/home.md) for more information). Using this, you can exclude users who have opted out from a segment using boolean logic ("AND NOT") in the segment predicate.
--->
+[!DNL Real-time CDP] 는 (IAB)에서 설명한 [대로 (TCF)에 대해 등록된](https://iabeurope.eu/vendor-list-tcf-v2-0/) 공급업체 목록 [!DNL Transparency & Consent Framework] [!DNL Interactive Advertising Bureau] 의 일부입니다. TCF 2.0 요구 사항을 준수하여 자세한 고객 동의 데이터를 수집하여 저장된 고객 프로파일에 통합할 수 [!DNL Real-time CDP] 있습니다. 그런 다음 이 동의 데이터를 사용 사례에 따라 내보낸 대상 세그먼트에 특정 프로필이 포함되는지 여부를 고려시킬 수 있습니다.
+
+자세한 내용은 IAB [TCF 2.0 지원에 [!DNL Real-time CDP]](./iab/overview.md) 대한 개요를 참조하십시오.
 
 ## 다음 단계
 
-이 문서에서는 실시간 CDP의 개인 정보 보호 기능에 대해 간략하게 소개합니다. 액세스/삭제 요청을 제출하는 우수 사례 및 단계에 대한 자세한 내용은 [Privacy Service 설명서를 참조하십시오](../../privacy-service/home.md).
+이 문서는 개인정보 보호 기능에 대한 간단한 소개를 제공합니다 [!DNL Real-time CDP]. 각 기능에 대한 자세한 내용은 이 안내서 전체에 연결된 설명서를 참조하십시오.
