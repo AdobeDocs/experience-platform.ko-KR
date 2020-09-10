@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform에 데이터 수집
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: d2f098cb9e4aaf5beaad02173a22a25a87a43756
+source-git-commit: 0816781620ca73a0511290d8d04b8f1a96db8a11
 workflow-type: tm+mt
-source-wordcount: '1278'
+source-wordcount: '1279'
 ht-degree: 0%
 
 ---
@@ -32,17 +32,19 @@ Adobe Experience Platform을 사용하면 데이터를 일괄 처리 파일 [!DN
 >
 >검색 막대 옆에 있는 필터 아이콘을 클릭하여 필터링 기능을 사용하여 이 데이터 세트를 사용할 수 있도록 설정한 데이터 집합만 표시합니다 [!DNL Profile].
 
-![모든 데이터 집합 보기](../images/tutorials/ingest-batch-data/datasets_workspace.png)
+![모든 데이터 집합 보기](../images/tutorials/ingest-batch-data/datasets-overview.png)
 
 ## 데이터 세트 만들기
 
 데이터 세트를 만들려면 데이터 집합 작업 **[!UICONTROL 영역의 오른쪽]** 맨 위에 있는 데이터 집합 만들기를 클릭합니다.
 
+![](../images/tutorials/ingest-batch-data/click-create-datasets.png)
+
 데이터 집합 **[!UICONTROL 만들기]** 화면에서 &quot;스키마에서 데이터 집합[!UICONTROL 만들기&quot; 또는 &quot;]CSV 파일에서 데이터 집합[!UICONTROL 만들기&quot;]를선택합니다.
 
 이 자습서의 경우 스키마는 데이터 세트를 만드는 데 사용됩니다. 계속하려면 **[!UICONTROL 스키마에서 데이터 세트]** 만들기를 클릭합니다.
 
-![데이터 소스 선택](../images/tutorials/ingest-batch-data/create_dataset.png)
+![데이터 소스 선택](../images/tutorials/ingest-batch-data/create-dataset.png)
 
 ## 데이터 집합 스키마 선택
 
@@ -50,7 +52,7 @@ Adobe Experience Platform을 사용하면 데이터를 일괄 처리 파일 [!DN
 
 사용할 스키마 옆에 있는 라디오 단추를 선택한 후 **[!UICONTROL 다음을 클릭합니다]**.
 
-![스키마 선택](../images/tutorials/ingest-batch-data/select_schema.png)
+![스키마 선택](../images/tutorials/ingest-batch-data/select-schema.png)
 
 ## 데이터 세트 구성
 
@@ -64,7 +66,7 @@ Adobe Experience Platform을 사용하면 데이터를 일괄 처리 파일 [!DN
 
 데이터 세트에 이름과 설명이 있으면 마침을 **[!UICONTROL 클릭합니다]**.
 
-![데이터 세트 구성](../images/tutorials/ingest-batch-data/configure_dataset.png)
+![데이터 세트 구성](../images/tutorials/ingest-batch-data/configure-dataset.png)
 
 ## 데이터 집합 활동
 
@@ -74,7 +76,7 @@ Adobe Experience Platform을 사용하면 데이터를 일괄 처리 파일 [!DN
 
 또한 정보 탭에서는 데이터 **[!UICONTROL 세트]** 사용 시 사용되는 프로필 [!DNL Real-time Customer Profile]토글입니다. 이 전환 기능의 사용 및 [!DNL Real-time Customer Profile]다음 섹션에 더 자세히 설명되어 있습니다.
 
-![데이터 집합 활동](../images/tutorials/ingest-batch-data/dataset_activity.png)
+![데이터 집합 활동](../images/tutorials/ingest-batch-data/sample-dataset.png)
 
 ## 데이터 세트 사용 [!DNL Real-time Customer Profile]
 
@@ -86,15 +88,15 @@ ID 사용 및 작업에 대한 자세한 내용 [!DNL Real-time Customer Profile
 
 데이터 세트를 활성화하려면 [!DNL Real-time Customer Profile]정보 **[!UICONTROL 탭]** 에서 **[!UICONTROL 프로필]** 토글을클릭합니다.
 
-![프로필 전환](../images/tutorials/ingest-batch-data/enable_dataset_unified_profile.png)
+![프로필 전환](../images/tutorials/ingest-batch-data/dataset-profile-toggle.png)
 
 데이터 세트를 활성화할지 확인하는 대화 상자가 나타납니다 [!DNL Real-time Customer Profile].
 
-![프로필 사용 대화 상자](../images/tutorials/ingest-batch-data/confirm_dataset_enable.png)
+![프로필 사용 대화 상자](../images/tutorials/ingest-batch-data/enable-dataset-for-profile.png)
 
 활성화 **[!UICONTROL 를]** 클릭하면 토글이 파란색으로 바뀝니다. 이 메시지는 켜져 있음을 나타냅니다.
 
-![프로필 사용](../images/tutorials/ingest-batch-data/dataset_enabled.png)
+![프로필 사용](../images/tutorials/ingest-batch-data/profile-enabled-dataset.png)
 
 ## 데이터 세트에 데이터 추가
 
@@ -106,13 +108,13 @@ ID 사용 및 작업에 대한 자세한 내용 [!DNL Real-time Customer Profile
 >
 >플랫폼은 데이터 수집, 쪽모이 세공식 또는 JSON을 위한 두 가지 파일 유형을 지원합니다. 한 번에 최대 5개의 파일을 추가할 수 있으며 각 파일의 최대 파일 크기는 10GB입니다.
 
-![데이터 추가 탭](../images/tutorials/ingest-batch-data/add_data.png)
+![데이터 추가 탭](../images/tutorials/ingest-batch-data/drag-and-drop.png)
 
 ## 파일 업로드
 
 업로드하려는 쪽모이 세공된 또는 JSON 파일을 드래그 앤 드롭하거나 검색 및 선택하면 파일 처리가 즉시 [!DNL Platform] 시작되고 파일 업로드 진행 상황을 보여주는 **[!UICONTROL 업로드]** 대화 상자가 **[!UICONTROL 데이터]** 추가탭에나타납니다.
 
-![업로드 대화 상자](../images/tutorials/ingest-batch-data/uploading.png)
+![업로드 대화 상자](../images/tutorials/ingest-batch-data/uploading-file.png)
 
 ## 데이터 세트 지표
 
@@ -120,7 +122,7 @@ ID 사용 및 작업에 대한 자세한 내용 [!DNL Real-time Customer Profile
 
 탭 아래쪽에는 **[!UICONTROL &quot;데이터 세트에 데이터 추가&quot;]** 프로세스를 통해 인제스트된 데이터의 [배치](#add-data-to-dataset) ID를 보여주는 목록이있습니다. 인제스트된 날짜, 인제스트된 **[!UICONTROL 레코드 수]** 및 현재 **[!UICONTROL 배치]**&#x200B;상태 **[!UICONTROL 등 배치와 관련된 정보가]**&#x200B;포함되어 있습니다.
 
-![데이터 세트 지표](../images/tutorials/ingest-batch-data/batch_loading.png)
+![데이터 세트 지표](../images/tutorials/ingest-batch-data/batch-id.png)
 
 ## 배치 세부 사항
 
@@ -130,7 +132,7 @@ ID 사용 및 작업에 대한 자세한 내용 [!DNL Real-time Customer Profile
 
 데이터 세트 **[!UICONTROL 활동]** 화면으로 돌아가려면 탐색 경로에서 데이터 세트 이름(**[!UICONTROL 충성도 세부]**&#x200B;사항)을 클릭합니다.
 
-![배치 개요](../images/tutorials/ingest-batch-data/batch_overview.png)
+![배치 개요](../images/tutorials/ingest-batch-data/batch-details.png)
 
 ## 데이터 세트 미리 보기
 
@@ -138,7 +140,7 @@ ID 사용 및 작업에 대한 자세한 내용 [!DNL Real-time Customer Profile
 
 데이터 세트 **[!UICONTROL 미리]** 보기를 클릭하여 데이터 세트 내의 샘플 데이터를 보여주는 대화 상자를 엽니다. 스키마를 사용하여 데이터 세트를 만든 경우 데이터 집합 스키마에 대한 세부 정보가 미리 보기의 왼쪽에 표시됩니다. 화살표를 사용하여 스키마를 확장하여 스키마 구조를 볼 수 있습니다. 미리 보기 데이터의 각 열 헤더는 데이터 세트에 있는 필드를 나타냅니다.
 
-![데이터 세트 세부 정보](../images/tutorials/ingest-batch-data/dataset_details.png)
+![데이터 세트 세부 정보](../images/tutorials/ingest-batch-data/dataset-preview.png)
 
 ## 다음 단계 및 추가 리소스
 
@@ -151,3 +153,4 @@ ID 사용 및 작업에 대한 자세한 내용 [!DNL Real-time Customer Profile
 >다음 비디오에 표시된 [!DNL Platform] UI가 오래되었습니다. 최신 UI 스크린샷 및 기능은 위의 설명서를 참조하십시오.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27269?quality=12&learn=on)
+끌기
