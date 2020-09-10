@@ -5,9 +5,9 @@ title: Adobe Experience Platform 데이터 거버넌스
 topic: overview
 description: Adobe Experience Platform 데이터 거버넌스를 사용하면 고객 데이터를 관리하고 데이터 사용에 적용되는 규정, 제한 사항 및 정책을 준수할 수 있습니다. 카탈로그 작성, 데이터 계보, 데이터 사용 레이블 지정, 데이터 사용 정책, 마케팅 작업을 위한 데이터 사용 제어 등 다양한 수준에서 Experience Platform의 주요 역할을 합니다
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: fb21acc63448ec837b2f3bcbf6eb4da83fcddc63
 workflow-type: tm+mt
-source-wordcount: '1326'
+source-wordcount: '1338'
 ht-degree: 0%
 
 ---
@@ -120,3 +120,7 @@ Adobe Experience Platform [!DNL Data Governance] 를 사용하면 고객 데이�
 다음 비디오는 [!DNL Data Governance] 프레임워크 이해를 지원하기 위한 것입니다.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29708?quality=12&enable10seconds=on&speedcontrol=on)
+
+다음 비디오에서는 Experience Platform의 다양한 기능을 소개합니다 [!DNL Data Governance] .
+
+>[!VIDEO](https://video.tv.adobe.com/v/36653?quality=12&enable10seconds=on&speedcontrol=on)
