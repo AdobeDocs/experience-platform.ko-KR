@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 작업
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: e7bb3e8a418631e9220865e49a1651e4dc065daf
+source-git-commit: 5d06932cbfe8a04589d33590c363412c054fc9fd
 workflow-type: tm+mt
-source-wordcount: '1782'
-ht-degree: 2%
+source-wordcount: '1309'
+ht-degree: 1%
 
 ---
 
@@ -15,6 +15,10 @@ ht-degree: 2%
 # 개인 정보 작업
 
 이 문서에서는 API 호출을 사용하여 개인 정보 작업을 작업하는 방법에 대해 설명합니다. 특히 API에서 종단점의 사용을 `/job` [!DNL Privacy Service] 다룹니다. 이 안내서를 읽기 전에 [시작 섹션](./getting-started.md#getting-started) 에서 API를 성공적으로 호출하기 위해 필요한 필수 헤더 및 예제 API 호출 읽기 방법 등 알아야 하는 중요한 정보를 참조하십시오.
+
+>[!NOTE]
+>
+>고객의 동의 또는 수신 거부 요청을 관리하려는 경우 [동의 끝점 안내서를 참조하십시오](./consent.md).
 
 ## 모든 작업 나열 {#list}
 
@@ -206,128 +210,6 @@ curl -X POST \
 | `jobId` | 작업에 대한 읽기 전용, 고유한 시스템 생성 ID. 이 값은 특정 작업을 조회하는 다음 단계에서 사용됩니다. |
 
 작업 요청을 성공적으로 제출하면 작업의 상태를 [확인하는 다음 단계로 진행할 수 있습니다](#check-status).
-
-### 판매 거부 작업 만들기 {#opt-out}
-
-이 섹션에서는 API를 사용하여 판매 거부 작업 요청을 수행하는 방법을 보여 줍니다.
-
-**API 형식**
-
-```http
-POST /jobs
-```
-
-**요청**
-
-다음 요청은 아래와 같이 페이로드에서 제공된 속성으로 구성된 새 작업 요청을 만듭니다.
-
-```shell
-curl -X POST \
-  https://platform.adobe.io/data/privacy/gdpr/ \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'Content-Type: application/json' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -d '{
-    "companyContexts": [
-      {
-        "namespace": "imsOrgID",
-        "value": "{IMS_ORG}"
-      }
-    ],
-    "users": [
-      {
-        "key": "DavidSmith",
-        "action": ["opt-out-of-sale"],
-        "userIDs": [
-          {
-            "namespace": "email",
-            "value": "dsmith@acme.com",
-            "type": "standard"
-          },
-          {
-            "namespace": "ECID",
-            "type": "standard",
-            "value":  "443636576799758681021090721276",
-            "isDeletedClientSide": false
-          }
-        ]
-      },
-      {
-        "key": "user12345",
-        "action": ["opt-out-of-sale"],
-        "userIDs": [
-          {
-            "namespace": "email",
-            "value": "ajones@acme.com",
-            "type": "standard"
-          },
-          {
-            "namespace": "loyaltyAccount",
-            "value": "12AD45FE30R29",
-            "type": "integrationCode"
-          }
-        ]
-      }
-    ],
-    "include": ["Analytics", "AudienceManager"],
-    "expandIds": false,
-    "priority": "normal",
-    "analyticsDeleteMethod": "anonymize",
-    "regulation": "ccpa"
-}'
-```
-
-| 속성 | 설명 |
-| --- | --- |
-| `companyContexts` **(필수 여부)** | 조직에 대한 인증 정보가 포함된 배열입니다. 나열된 각 식별자에는 다음 속성이 포함됩니다. <ul><li>`namespace`:식별자의 네임스페이스입니다.</li><li>`value`:식별자의 값입니다.</li></ul>IMS 조직의 고유 ID를 포함하는 식별자 중 **은** 식별자 `imsOrgId` 로 사용해야 `namespace``value` 합니다. <br/><br/>추가 식별자는 조직에 속하는 Adobe 응용 프로그램과의 통합을 식별하는 제품별 회사 한정자( `Campaign`예:)일 수 있습니다. 잠재적 값에는 계정 이름, 클라이언트 코드, 테넌트 ID 또는 기타 응용 프로그램 식별자가 포함됩니다. |
-| `users` **(필수 여부)** | 액세스하거나 삭제하려는 정보가 있는 사용자 중 적어도 한 명의 컬렉션이 포함된 배열입니다. 단일 요청에서 최대 1,000개의 사용자 ID를 제공할 수 있습니다. 각 사용자 객체에는 다음 정보가 포함됩니다. <ul><li>`key`:응답 데이터에서 개별 작업 ID의 자격을 규정하는 데 사용되는 사용자의 식별자입니다. 이 값에 대해 고유하고 쉽게 식별할 수 있는 문자열을 선택하여 나중에 쉽게 참조하거나 조회할 수 있도록 하는 것이 좋습니다.</li><li>`action`:데이터에 적용할 원하는 작업을 나열하는 배열입니다. 판매 거부 요청의 경우 배열에는 값만 포함되어야 합니다 `opt-out-of-sale`.</li><li>`userIDs`:사용자의 ID 컬렉션입니다. 단일 사용자가 가질 수 있는 ID 수는 9개로 제한됩니다. 각 ID는 `namespace`a, a `value`및 네임스페이스 한정자(`type`)로 구성됩니다. 이러한 필수 속성에 대한 자세한 내용은 [부록을](appendix.md) 참조하십시오.</li></ul> 자세한 내용 `users` 및 `userIDs`은 [문제 해결 가이드를 참조하십시오](../troubleshooting-guide.md#user-ids). |
-| `include` **(필수 여부)** | 처리에 포함할 Adobe 제품 배열. 이 값이 없거나 비어 있으면 요청이 거부됩니다. 조직에 통합된 제품만 포함합니다. 자세한 내용은 부록에 있는 [승인된 제품 값](appendix.md) 섹션을 참조하십시오. |
-| `expandIDs` | 로 설정되면 응용 프로그램 `true`에서 ID 처리를 위한 최적화를 나타내는 선택적 속성(현재 [!DNL Analytics]에서 지원됨). If omitted, this value defaults to `false`. |
-| `priority` | 요청 처리 우선 순위를 설정하는 Adobe Analytics에서 사용하는 선택적 속성입니다. 허용된 값은 `normal` 및 `low`입니다. 이 `priority` 를 생략하면 기본 동작이 사용됩니다 `normal`. |
-| `analyticsDeleteMethod` | Adobe Analytics이 개인 데이터를 처리하는 방법을 지정하는 선택적 속성입니다. 이 속성에 대해 가능한 두 개의 값이 허용됩니다. <ul><li>`anonymize`:지정된 사용자 ID 컬렉션에서 참조되는 모든 데이터는 익명으로 처리됩니다. 이 `analyticsDeleteMethod` 를 생략하면 기본 동작입니다.</li><li>`purge`:모든 데이터가 완전히 제거됩니다.</li></ul> |
-| `regulation` **(필수 여부)** | 요청에 대한 규정. 다음 4개 값 중 하나여야 합니다. <ul><li>`gdpr`</li><li>`ccpa`</li><li>`lgpd_bra`</li><li>`pdpa_tha`</li></ul> |
-
-**응답**
-
-성공적인 응답은 새로 만든 작업의 세부 정보를 반환합니다.
-
-```json
-{
-    "jobs": [
-        {
-            "jobId": "6fc09b53-c24f-4a6c-9ca2-c6076bd9vjs0",
-            "customer": {
-                "user": {
-                    "key": "DavidSmith",
-                    "action": [
-                        "opt-out-of-sale"
-                    ]
-                }
-            }
-        },
-        {
-            "jobId": "6fc09b53-c24f-4a6c-9ca2-c6076bes0ewj2",
-            "customer": {
-                "user": {
-                    "key": "user12345",
-                    "action": [
-                        "opt-out-of-sale"
-                    ]
-                }
-            }
-        }
-    ],
-    "requestStatus": 1,
-    "totalRecords": 2
-}
-```
-
-| 속성 | 설명 |
-| --- | --- |
-| `jobId` | 작업에 대한 읽기 전용, 고유한 시스템 생성 ID. 이 값은 다음 단계에서 특정 작업을 조회하는 데 사용됩니다. |
-
-작업 요청을 성공적으로 제출하면 작업의 상태를 확인하는 다음 단계로 진행할 수 있습니다.
 
 ## 작업 상태 확인 {#check-status}
 
