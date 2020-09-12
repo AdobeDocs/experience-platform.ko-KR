@@ -2,9 +2,10 @@
 product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Privacy Service 도움말
+breadcrumb-title: Privacy Service Guide
 user-guide-description: Developed in response to a fundamental shift in how businesses are required to manage the personal data of their customers, Adobe Experience Platform Privacy Service provides a RESTful API and user interface to help you manage customer data requests. With Privacy Service, you can submit requests to access and delete personal customer data from Adobe Experience Cloud applications, facilitating automated compliance with legal and organizational privacy regulations.
 translation-type: tm+mt
-source-git-commit: bd3c31e7d39f7f66d755356a3dbb754e97c196fb
+source-git-commit: 1565c19fdd07935e503e9faa2d9f748331d7f933
 workflow-type: tm+mt
 source-wordcount: '87'
 ht-degree: 11%
@@ -37,4 +38,4 @@ ht-degree: 11%
    * [PDPA(태국) 용어](./pdpa-tha/terminology.md)
 * [문제 해결 가이드](troubleshooting-guide.md)
 * [API 참조](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml)
-* [릴리스 노트](release-notes.md)
+* [릴리스 정보](release-notes.md)
