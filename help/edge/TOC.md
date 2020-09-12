@@ -2,9 +2,10 @@
 product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform 웹 SDK 도움말
+breadcrumb-title: Web SDK Guide
 user-guide-description: The Adobe Experience Platform Web SDK is a client-side JavaScript library that allows you to interact with various Adobe Experience Cloud services through the Adobe Experience Platform Edge Network.
 translation-type: tm+mt
-source-git-commit: 57530cab231873b971394e90b6c759d806c3c6a6
+source-git-commit: 1565c19fdd07935e503e9faa2d9f748331d7f933
 workflow-type: tm+mt
 source-wordcount: '104'
 ht-degree: 18%
@@ -46,6 +47,6 @@ ht-degree: 18%
 * 참조 {#ref}
    * [자동으로 수집된 정보](reference/automatic-information.md)
    * [라이브러리 정보 검색](reference/retrieving-library-information.md)
-* [릴리스 노트](release-notes.md)
+* [릴리스 정보](release-notes.md)
 * [플랫폼 릴리스 정보](https://www.adobe.com/go/platform-release-notes-en)
 * [FAQ](getting-started/web-sdk-faq.md)
