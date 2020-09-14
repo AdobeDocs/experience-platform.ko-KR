@@ -5,9 +5,9 @@ solution: Experience Platform
 title: 계정 및 데이터 흐름 모니터링
 topic: overview
 translation-type: tm+mt
-source-git-commit: 737ee0bd55dbf178505c9be0875b2a0b75d3217a
+source-git-commit: 20c3037295b49cba45fcc5901803107dea26b3b2
 workflow-type: tm+mt
-source-wordcount: '971'
+source-wordcount: '1014'
 ht-degree: 0%
 
 ---
@@ -47,6 +47,14 @@ Adobe Experience Platform의 소스 커넥터는 예약된 기준으로 외부 �
 > [ ![이름](../../images/tutorials/monitor/spectrum-control.png) ] 열의 **[!UICONTROL 스펙트럼 제어]** 단추를 사용하여 선택한 계정에 대한 새 소스 데이터 흐름을 만듭니다.
 
 ![계정 선택](../../images/tutorials/monitor/accounts-sort.png)
+
+또한 기존 계정 정보를 편집하고 계정 자격 증명을 업데이트할 수 있습니다. 편집할 계정 정보의 연필 아이콘을 선택합니다.
+
+![](../../images/tutorials/monitor/click-edit.png)
+
+계정 **[!UICONTROL 세부 사항]** 모달이 나타납니다. 이 페이지에서 기존 계정 세부 사항 및 인증 자격 증명을 업데이트할 수 있습니다.
+
+![](../../images/tutorials/monitor/edit-account.png)
 
 계정 **[!UICONTROL 페이지에서]** 액세스한 계정과 연결된 기존 데이터 흐름 또는 대상 데이터 집합 목록을 볼 수 있습니다. 선택한 데이터 흐름`...`에 사용할 수 있는 추가 옵션을 표시하려면 줄임표(줄임표) 단추를 선택합니다. 이러한 옵션은 아래에 자세히 설명되어 있습니다.
 
