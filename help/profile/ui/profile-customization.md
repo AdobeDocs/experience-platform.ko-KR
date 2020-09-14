@@ -5,9 +5,9 @@ title: 프로필 세부 정보 맞춤화
 description: '이 안내서에서는 Adobe Experience Platform UI 내에 실시간 고객 프로필 데이터가 표시되는 방식을 사용자 지정하기 위한 단계별 지침을 제공합니다. '
 topic: guide
 translation-type: tm+mt
-source-git-commit: b08644102e6455d4c4c8b03e747411d3c05c7deb
+source-git-commit: 52cccd7436e203725a9fb4be8406332d8f23a71d
 workflow-type: tm+mt
-source-wordcount: '1224'
+source-wordcount: '1167'
 ht-degree: 0%
 
 ---
@@ -103,11 +103,7 @@ Experience Platform 내의 프로필 모양을 사용자 정의하려면 대시�
 
 ## 기본 카드 복원
 
-언제든지 편집 내용을 제거하고 기본 보기로 되돌리려는 경우 모든 기본 카드와 속성을 빠르고 손쉽게 복원할 수 있습니다. 이렇게 하려면 대시보드 **[!UICONTROL 수정을]**&#x200B;선택한 다음 **[!UICONTROL 기본 카드 복원을 선택합니다]**. 이렇게 하면 크기 조정을 포함한 모든 사용자 지정이 제거됩니다. 그런 다음 **[!UICONTROL 저장을]** 선택하여 변경 내용을 저장하거나, 기본값을 복원하지 않으려면 **[!UICONTROL 취소를 선택하여]** 편집한 내용을 유지할 수 있습니다.
-
->[!NOTE]
->
->기본 카드 및 특성을 복원할 때 주의하십시오. 기본 설정이 복원되고 저장되면 이 문서에 설명된 단계를 사용하여 사용자 정의 보기를 다시 만드는 유일한 방법이 됩니다.
+언제든지 제거된 기본 카드를 복원할 경우 빠르고 쉽게 복원할 수 있습니다. 먼저 대시보드 **[!UICONTROL 수정을]**&#x200B;선택한 다음 기본 카드 **[!UICONTROL 복원을 선택합니다]**. 기본 카드가 표시되면 **[!UICONTROL 저장을 선택하여]** 변경 사항을 저장하거나, 기본 카드를 복원하려면 **[!UICONTROL 취소를]** 선택할 수 있습니다.
 
 ![](../images/profile-customization/profiles-restore-default.png)
 
