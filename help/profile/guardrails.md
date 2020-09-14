@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Experience Platform 지침
 topic: guide
 translation-type: tm+mt
-source-git-commit: d9e4812e3506de3082670a8afde5480cd8f865d6
+source-git-commit: 51111b2e831a37949150b107eb76711e2470523c
 workflow-type: tm+mt
-source-wordcount: '1200'
+source-wordcount: '1201'
 ht-degree: 1%
 
 ---
@@ -96,5 +96,5 @@ Adobe Experience Platform은 지원할 수 없는 데이터 모델을 만들지 
 
 | 가드레일 | 제한 | 제한 유형 | 설명 |
 | --- | --- | --- | --- |
-| 차원 엔티티당 최대 총 크기 | 1GB | 부드러운 | **차원 엔티티의 최대 권장 총 크기는 1GB입니다.** 큰 차원 엔티티를 인제스트하면 시스템 성능이 저하됩니다. 예를 들어 10GB 제품 카탈로그를 차원 엔티티로 로드하려는 것은 권장되지 않습니다. |
+| 모든 차원 엔터티의 최대 총 크기 | 5GB | 부드러운 | **모든 차원 엔터티의 최대 권장 총 크기는 5GB입니다.** 큰 차원 엔티티를 인제스트하면 시스템 성능이 저하됩니다. 예를 들어 10GB 제품 카탈로그를 차원 엔티티로 로드하려는 것은 권장되지 않습니다. |
 | 차원 엔티티 스키마당 데이터 집합 | 5 | 부드러운 | **각 차원 엔티티 스키마와 연결된 최대 5개의 데이터 세트가 권장됩니다.** 예를 들어 &quot;제품&quot;에 대한 스키마를 만들고 5개의 기여 데이터 집합을 추가하는 경우 제품 스키마에 연결된 6번째 데이터 집합을 만들 수 없습니다. |
