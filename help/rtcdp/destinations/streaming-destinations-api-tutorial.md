@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 스트리밍 대상에 연결 및 데이터 활성화
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 3cfbee08c1948b2e073547f9bbf0c8526cbfd4bc
+source-git-commit: f31b03f027d8b44f761917f4edf19a0b5eedd76c
 workflow-type: tm+mt
-source-wordcount: '1819'
+source-wordcount: '1822'
 ht-degree: 2%
 
 ---
@@ -468,7 +468,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 * `{DATAFLOW_ID}`:이전 단계에서 얻은 데이터 흐름을 사용합니다.
 * `{ETAG}`:이전 단계에서 얻은 태그를 사용합니다.
-* `{SEGMENT_ID}`:이 대상으로 내보낼 세그먼트 ID를 제공합니다. 활성화할 세그먼트의 세그먼트 ID를 검색하려면 https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/으로 이동하고 왼쪽 탐색 메뉴에서 **[!UICONTROL 세그멘테이션 서비스 API]** 를 선택한 다음 작업을 `GET /segment/jobs` 찾습니다.
+* `{SEGMENT_ID}`:이 대상으로 내보낼 세그먼트 ID를 제공합니다. 활성화할 세그먼트에 대한 세그먼트 ID를 검색하려면 **https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/****[!UICONTROL 으로]** 이동하여 왼쪽 탐색 메뉴에서 `GET /segment/definitions` 세그멘테이션 서비스 API를 **[!UICONTROL 선택한 다음]**&#x200B;세그먼트 정의에서 작업을찾습니다.
 * `{PROFILE_ATTRIBUTE}`:예: `personalEmail.address` 또는 `person.lastName`
 
 **응답**
