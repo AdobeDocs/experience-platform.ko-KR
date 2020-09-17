@@ -4,9 +4,9 @@ solution: Experience Platform
 title: XDM 스키마에 CSV 파일 매핑
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: d2f098cb9e4aaf5beaad02173a22a25a87a43756
+source-git-commit: 785bc95ff3460ebbb1a126ac5fec85ad165ca973
 workflow-type: tm+mt
-source-wordcount: '1371'
+source-wordcount: '1350'
 ht-degree: 2%
 
 ---
@@ -61,6 +61,10 @@ CSV 데이터를 새 데이터 세트에 인제스트하려면 **[!UICONTROL 새
 
 매핑 **[!UICONTROL 단계가]** 나타납니다. CSV 파일의 열은 **[!UICONTROL 소스 필드]**&#x200B;아래에 나열되며 해당 XDM 스키마 필드는 **[!UICONTROL Target 필드]**&#x200B;아래에 나열됩니다. 선택되지 않은 대상 필드는 빨간색으로 표시됩니다. 필터 필드 옵션을 사용하여 사용 가능한 소스 필드 목록의 범위를 좁힐 수 있습니다.
 
+>[!TIP]
+>
+>[!DNL Platform] 선택한 대상 스키마나 데이터 세트에 따라 자동 매핑 필드에 대한 지능적인 권장 사항을 제공합니다. 사용 사례에 맞게 매핑 규칙을 수동으로 조정할 수 있습니다.
+
 CSV 열을 XDM 필드에 매핑하려면 열의 해당 대상 필드 옆에 있는 스키마 아이콘을 선택합니다.
 
 ![](../images/tutorials/map-a-csv-file/mapping.png)
@@ -69,17 +73,9 @@ CSV 열을 XDM 필드에 매핑하려면 열의 해당 대상 필드 옆에 있�
 
 ![](../images/tutorials/map-a-csv-file/select-schema-field.png)
 
-선택한 XDM 필드가 이제 **[!UICONTROL Target 필드]** 아래에 나타나면서 매핑 **[!UICONTROL 화면이 다시 나타납니다]**.
+매핑되지 않은 나머지 소스 필드에 대한 단계를 완료하면 **[!UICONTROL 매핑]** 화면이 다시 나타나고 선택한 XDM 필드가 **[!UICONTROL Target 필드]**&#x200B;아래에 나타납니다.
 
 ![](../images/tutorials/map-a-csv-file/field-mapped.png)
-
-특정 CSV 열을 매핑하지 않으려는 경우 대상 필드 옆에 있는 **제거 아이콘** 을 클릭하여 매핑을 제거할 수 있습니다. 모든 매핑 지우기 단추를 선택하여 모든 매핑 **[!UICONTROL 을 제거할 수도 있습니다]**.
-
-![](../images/tutorials/map-a-csv-file/remove-mapping.png)
-
-새 매핑을 추가하려면 **[!UICONTROL 소스 필드]** 목록 맨 위에서 새 매핑 **[!UICONTROL 추가를]** 선택합니다.
-
-![](../images/tutorials/map-a-csv-file/add-mapping.png)
 
 필드를 매핑할 때 입력 소스 필드를 기반으로 값을 계산하는 함수를 포함할 수도 있습니다. 자세한 내용은 부록에 있는 [매핑 기능](#mapping-functions) 섹션을 참조하십시오.
 
@@ -89,7 +85,7 @@ CSV 열을 XDM 필드에 매핑하려면 열의 해당 대상 필드 옆에 있�
 
 계속하려면 계산된 필드 **[!UICONTROL 추가]** 단추를 선택합니다.
 
-![](../images/tutorials/map-a-csv-file/add-calculated-field.png)
+![](../images/tutorials/map-a-csv-file/add-calculate-field.png)
 
 계산된 필드 **[!UICONTROL 만들기]** 패널이 나타납니다. 왼쪽 대화 상자에는 계산된 필드에서 지원되는 필드, 함수 및 연산자가 있습니다. 표현식 편집기에 함수, 필드 또는 연산자를 추가할 탭 중 하나를 선택합니다.
 
@@ -158,7 +154,7 @@ CSV 파일을 매핑하고 만들면 CSV 파일을 통해 수집되는 데이터
 | 형식 | 지정된 형식에 따라 타임스탬프를 날짜 문자열로 변환합니다. | dformat(1571829875, &quot;dd-MMM-yyyy hh:mm&quot;) | &quot;2019년 10월 23일 11시 24분&quot; |
 | 날짜 | 날짜 문자열을 ZunkedDateTime 개체(ISO 8601 형식)로 변환합니다. | date(&quot;2019년 10월 23일 11시 24분&quot;) | &quot;2019-10-23T11:24:00+00:00&quot; |
 | date_part | 날짜의 부분을 검색합니다. 다음 구성 요소 값이 지원됩니다. <br><br>&quot;year&quot;<br>&quot;<br>&quot;yyyy&quot;<br><br>&quot;yyyy<br>&quot;<br>&quot;yyy&quot;q<br><br>&quot;yyy&quot;q<br>&quot;<br>&quot;cq&quot;<br><br>&quot;cq&quot;<br>&quot;cumuld&quot;alk&quot;<br>&quot;ejy&quot;y&quot;y&quot;day&quot;y&quot;y&quot;y&quot;y&quot;day&quot;<br><br>&quot;<br>&quot;<br>y&quot;ev&quot;y&quot;eyyy&quot;<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>00000000000000000000000000000000000000000000000000000000000000000000000000000 4&quot;4&quot;&quot;hh12&quot;cuts&quot;minute&quot;minutes&quot;mymi&quot;emoth&quot;n&quot;second&quot;&quot;second&quot;&quot;&quot;sighters&quot;s&quot;&quot;s&quot;s&quot;milleconds&quot;ms. | date_part(date(&quot;2019-10-17 11:55:12&quot;), &quot;MM&quot;) | 10 |
-| set_date_part | 지정된 날짜의 구성 요소를 대체합니다. 다음 구성 요소가 허용됩니다. <br><br>&quot;year&quot;<br>&quot;<br>yyyy&quot;<br><br>&quot;yyy<br>&quot;<br>&quot;yyy<br><br>&quot;<br>s&quot;<br>&quot;m&quot;<br><br><br>&quot;<br><br>&quot;dd&quot;<br>&quot;<br>&quot;<br><br>&quot;chour&quot;hh&quot;cultly&quot;<br><br>&quot;cmi&quot;n&quot;&quot;n&quot;second&quot;&quot;&quot;s&quot;&quot;s&quot; | set_date_part(&quot;m&quot;, 4, date(&quot;2016-11-09T11:44:44.797&quot;) | &quot;2016-04-09T11:44:44.797&quot; |
+| set_date_part | 지정된 날짜의 구성 요소를 대체합니다. 다음 구성 요소가 허용됩니다. <br><br>&quot;year&quot;<br>&quot;<br>yyyy&quot;<br><br>&quot;yyy<br>&quot;<br>&quot;yyy<br><br>&quot;<br>s&quot;<br>&quot;m&quot;<br><br><br>&quot;<br><br>&quot;dd&quot;<br>&quot;<br>&quot;<br><br>&quot;chour&quot;hh&quot;cultly&quot;<br><br>&quot;cmi&quot;n&quot;&quot;n&quot;second&quot;&quot;&quot;&quot;&quot;s&quot; | set_date_part(&quot;m&quot;, 4, date(&quot;2016-11-09T11:44:44.797&quot;) | &quot;2016-04-09T11:44:44.797&quot; |
 | make_date_time /<br>make_timestamp | 부품으로부터 날짜를 만듭니다. | make_date_time(2019, 10, 17, 11, 55, 12, 999, &quot;America/Los_Angeles&quot;) | `2019-10-17T11:55:12.0&#x200B;00000999-07:00[America/Los_Angeles]` |
 | current_timestamp | 현재 타임스탬프를 반환합니다. | current_timestamp() | 1571850624571 |
 | current_date | 시간 구성 요소가 없는 현재 날짜를 반환합니다. | current_date() | &quot;2019년 11월 18일&quot; |
