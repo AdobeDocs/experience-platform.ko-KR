@@ -5,7 +5,7 @@ title: Jupiter 전자 필기장의 쿼리 서비스
 topic: Tutorial
 description: Adobe Experience Platform을 사용하면 쿼리 서비스를 JupiterLab에 표준 기능으로 통합하여 데이터 과학 작업 공간에서 SQL(구조화된 쿼리 언어)을 사용할 수 있습니다. 이 자습서에서는 Adobe Analytics 데이터를 탐색, 변환 및 분석하는 일반적인 사용 사례를 위한 샘플 SQL 쿼리를 보여줍니다.
 translation-type: tm+mt
-source-git-commit: 3876c33a2d20481f45bd12eda3921898e9e65654
+source-git-commit: 69c466658e1cb41f4da957148e63b962ad975a21
 workflow-type: tm+mt
 source-wordcount: '826'
 ht-degree: 1%
@@ -118,14 +118,12 @@ SELECT Substring(timestamp, 1, 10)                               AS Day,
        Count(DISTINCT concat(enduserids._experience.aaid.id, 
                              _experience.analytics.session.num)) AS Visit_Count 
 FROM   {target_table}
-WHERE _acp_year = {target_year} 
-      AND _acp_month = {target_month}  
-      AND _acp_day = {target_day}
+WHERE TIMESTAMP = to_timestamp('{target_year}-{target_month}-{target_day}')
 GROUP  BY Day, Hour
 ORDER  BY Hour;
 ```
 
-위 쿼리에서 절의 대상 `_acp_year` 은 `WHERE` 의 값으로 설정됩니다 `target_year`. 중괄호(중괄호)로 묶어서 SQL 쿼리에 변수를`{}`포함합니다.
+위 쿼리에서 절의 타임스탬프는 `WHERE` 값으로 설정됩니다 `target_year`. 중괄호(중괄호)로 묶어서 SQL 쿼리에 변수를`{}`포함합니다.
 
 쿼리의 첫 번째 줄에는 선택 변수가 포함됩니다 `hourly_visitor`. 쿼리 결과는 이 변수에 Paranda 데이터 프레임으로 저장됩니다. 결과를 데이터 프레임에 저장하면 원하는 [!DNL Python] 패키지를 사용하여 나중에 쿼리 결과를 시각화할 수 있습니다. 새 셀에서 다음 [!DNL Python] 코드를 실행하여 막대 그래프를 생성합니다.
 
@@ -160,9 +158,7 @@ SELECT Substring(timestamp, 1, 10)                        AS Day,
                     _experience.analytics.session.num,
                     _experience.analytics.session.depth)) AS Count 
 FROM   {target_table}
-WHERE  _acp_year = {target_year} 
-       AND _acp_month = {target_month}  
-       AND _acp_day = {target_day}
+WHERE TIMESTAMP = to_timestamp('{target_year}-{target_month}-{target_day}')
 GROUP  BY Day, Hour
 ORDER  BY Hour;
 ```
@@ -210,9 +206,7 @@ SELECT concat(enduserids._experience.aaid.id,
               _experience.analytics.session.num) AS aaid_sess_key, 
        Count(timestamp)                          AS Count 
 FROM   {target_table}
-WHERE  _acp_year = {target_year} 
-       AND _acp_month = {target_month}  
-       AND _acp_day = {target_day}
+WHERE TIMESTAMP = to_timestamp('{target_year}-{target_month}-{target_day}')
 GROUP BY aaid_sess_key
 ORDER BY Count DESC;
 ```
@@ -243,9 +237,7 @@ iplot(fig)
 SELECT web.webpagedetails.name                 AS Page_Name, 
        Sum(web.webpagedetails.pageviews.value) AS Page_Views 
 FROM   {target_table}
-WHERE  _acp_year = {target_year}
-       AND _acp_month = {target_month}
-       AND _acp_day = {target_day}
+WHERE TIMESTAMP = to_timestamp('{target_year}-{target_month}-{target_day}')
 GROUP  BY web.webpagedetails.name 
 ORDER  BY page_views DESC 
 LIMIT  10;
@@ -262,9 +254,7 @@ LIMIT  10;
 SELECT enduserids._experience.aaid.id AS aaid, 
        Count(timestamp)               AS Count
 FROM   {target_table}
-WHERE  _acp_year = {target_year}
-       AND _acp_month = {target_month}
-       AND _acp_day = {target_day}
+WHERE TIMESTAMP = to_timestamp('{target_year}-{target_month}-{target_day}')
 GROUP  BY aaid
 ORDER  BY Count DESC
 LIMIT  10;
@@ -281,9 +271,7 @@ LIMIT  10;
 SELECT concat(placeContext.geo.stateProvince, ' - ', placeContext.geo.city) AS state_city, 
        Count(timestamp)                                                     AS Count
 FROM   {target_table}
-WHERE  _acp_year = {target_year}
-       AND _acp_month = {target_month}
-       AND _acp_day = {target_day}
+WHERE TIMESTAMP = to_timestamp('{target_year}-{target_month}-{target_day}')
 GROUP  BY state_city
 ORDER  BY Count DESC
 LIMIT  10;
