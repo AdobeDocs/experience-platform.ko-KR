@@ -5,9 +5,9 @@ title: UI에서 마케팅 자동화 커넥터에 대한 데이터 흐름 구성
 topic: overview
 description: 데이터 흐름(Dataflow)은 소스에서 데이터 세트로 데이터를 검색하고 인제스트하는 예약된 [!DNL Platform] 작업입니다. 이 자습서에서는 마케팅 자동화 계정을 사용하여 새 데이터 흐름을 구성하는 절차를 제공합니다.
 translation-type: tm+mt
-source-git-commit: 785bc95ff3460ebbb1a126ac5fec85ad165ca973
+source-git-commit: ad9b52e46d3eb4f6ed7774e4cbcb031a52801b49
 workflow-type: tm+mt
-source-wordcount: '1387'
+source-wordcount: '1428'
 ht-degree: 0%
 
 ---
@@ -79,9 +79,15 @@ ht-degree: 0%
 >
 >[!DNL Platform] 선택한 대상 스키마나 데이터 세트에 따라 자동 매핑 필드에 대한 지능적인 권장 사항을 제공합니다. 사용 사례에 맞게 매핑 규칙을 수동으로 조정할 수 있습니다.
 
-소스 데이터가 매핑되면 다음을 **[!UICONTROL 선택합니다]**.
-
 ![](../../../images/tutorials/dataflow/all-tabular/mapping.png)
+
+선택한 **[!UICONTROL 데이터]** 세트에서 최대 100개의 샘플 데이터 행의 매핑 결과를 보려면 [데이터 미리 보기]를 선택합니다.
+
+미리 보기 중에 매핑 결과의 유효성을 확인할 때 필요한 주요 정보이므로 ID 열의 우선 순위가 첫 번째 필드로 지정됩니다.
+
+![](../../../images/tutorials/dataflow/all-tabular/mapping-preview.png)
+
+소스 데이터가 매핑되면 닫기를 **[!UICONTROL 선택합니다]**.
 
 ## 처리 실행 예약
 
