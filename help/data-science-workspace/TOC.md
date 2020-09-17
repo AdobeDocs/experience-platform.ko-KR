@@ -5,9 +5,9 @@ user-guide-title: Adobe Experience Platform 데이터 과학 작업 공간 도�
 breadcrumb-title: Data Science Workspace Guide
 user-guide-description: Adobe Experience Platform Data Science Workspace uses machine learning and artificial intelligence to unleash insights from your data. Integrated into Adobe Experience Platform, Data Science Workspace helps you make predictions using your content and data assets across Adobe applications.
 translation-type: tm+mt
-source-git-commit: 1565c19fdd07935e503e9faa2d9f748331d7f933
+source-git-commit: 638a7ea607ffe269b2c6788324860f3a25f43727
 workflow-type: tm+mt
-source-wordcount: '215'
+source-wordcount: '204'
 ht-degree: 5%
 
 ---
@@ -19,9 +19,10 @@ ht-degree: 5%
 * [데이터 과학 작업 공간 연습](walkthrough.md)
 * JupiterLab 노트북 {#jupyterlab}
    * [JupiterLab 사용 안내서](jupyterlab/overview.md)
-   * [노트북으로 데이터 분석](jupyterlab/analyze-your-data.md)
-   * [Jupiter 전자 필기장의 쿼리 서비스](jupyterlab/query-service.md)
-   * [Jupiter 노트북을 사용하여 레시피 만들기](jupyterlab/create-a-recipe.md)
+   * [데이터 액세스](jupyterlab/access-notebook-data.md)
+   * [데이터 분석](jupyterlab/analyze-your-data.md)
+   * [쿼리 서비스](jupyterlab/query-service.md)
+   * [레시피 만들기](jupyterlab/create-a-recipe.md)
    * [Git을 사용하여 JupiterLab에서 공동 작업](jupyterlab/using-git-for-collaboration.md)
 * Sensei Machine Learning API {#api}
    * [시작하기](api/getting-started.md)
@@ -61,7 +62,6 @@ ht-degree: 5%
    * [모델을 서비스로 게시(UI)](models-recipes/publish-model-service-ui.md)
    * [모델을 서비스로 게시(API)](models-recipes/publish-model-service-api.md)
    * [서비스에 대한 교육 및 점수 자동 지정(UI)](models-recipes/schedule-models-ui.md)
-* [레서피 및 노트북 마이그레이션 가이드](recipe-notebook-migration.md)
 * [문제 해결 가이드](troubleshooting-guide.md)
 * [API 참조](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)
 * [플랫폼 릴리스 정보](https://www.adobe.com/go/platform-release-notes-en)
