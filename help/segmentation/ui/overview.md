@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 세그멘테이션 서비스 사용 안내서
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: c9ff4d26accd880d5169526f84be607fc722883b
 workflow-type: tm+mt
-source-wordcount: '1359'
+source-wordcount: '1452'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,19 @@ IMS **[!UICONTROL 조직의]** 모든 세그먼트 정의 목록을 보려면 �
 
 ![](../images/ui/overview/segment-browse-all.png)
 
-이 보기에는 평가 방법, 만든 날짜 및 마지막으로 수정한 날짜를 포함한 세그먼트 정의에 대한 정보가 표시됩니다.
+이 보기에는 분류, 가입 해지, 프로필 수, 평가 방법, 만든 날짜, 마지막으로 수정한 날짜 등 세그먼트 정의에 대한 정보가 표시됩니다.
+
+분류에는 다음 각 상태에 속한 프로필의 백분율을 나타내는 막대 그래프가 표시됩니다. [!UICONTROL 입장], [!UICONTROL 실현됨]및 [!UICONTROL 종료됨].
+
+![](../images/ui/overview/segment-browse-breakdown.png)
+
+| 상태 | 설명 |
+| ------ | ----------- |
+| 입력됨 | 세그먼트 내의 새 프로필. |
+| 실현 | 세그먼트 내에 남아 있는 기존 프로필. |
+| 종료 중 | 세그먼트를 떠나는 기존 프로필. |
+
+이탈은 세그먼트 작업이 마지막으로 실행된 시간과 비교하여 세그먼트 정의 내에서 변경되는 프로필의 백분율을 나타내며 프로필 수는 세그먼트에 자격을 갖춘 총 프로필 수를 나타냅니다.
 
 평가 방법은 스트리밍 또는 일괄 처리일 수 있습니다. 데이터가 시스템에 입력되면 스트리밍 세그먼트는 지속적으로 평가됩니다. 배치 세그먼트는 설정된 일정에 따라 평가됩니다.
 
