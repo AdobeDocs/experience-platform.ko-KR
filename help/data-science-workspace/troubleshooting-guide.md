@@ -5,9 +5,9 @@ title: 데이터 과학 작업 공간 문제 해결 가이드
 topic: Troubleshooting
 description: 이 문서에서는 Adobe Experience Platform 데이터 과학 작업 공간에 대해 자주 묻는 질문에 대한 답변을 제공합니다.
 translation-type: tm+mt
-source-git-commit: 194a29124949571638315efe00ff0b04bff19303
+source-git-commit: 76e598c743df320e4b3cb821e118749fe7304d9c
 workflow-type: tm+mt
-source-wordcount: '680'
+source-wordcount: '750'
 ht-degree: 0%
 
 ---
@@ -112,3 +112,7 @@ PySpark 커널용 라이브러리를 추가로 설치할 수는 없습니다. �
 ```
 
 구성 가능한 속성의 전체 목록을 포함하여 클러스터 리소스 구성에 대한 자세한 내용은 JupiterLab [!DNL Spark] 사용 안내서를 참조하십시오 [](./jupyterlab/overview.md#kernels).
+
+## 대용량의 데이터 세트에 대해 특정 작업을 실행하려 할 때 오류가 발생하는 이유는 무엇입니까?
+
+일반적으로 드라이버나 실행자의 메모리가 부족함을 `Reason: Remote RPC client disassociated. Likely due to containers exceeding thresholds, or network issues.` 의미합니다. 데이터 제한 및 대규모 데이터 세트에서 작업을 실행하는 방법에 대한 자세한 내용은 JupiterLab [데이터 액세스](./jupyterlab/access-notebook-data.md) 설명서를 참조하십시오. 일반적으로 이 오류는 을(를) 에서 `mode` (으)로 변경하여 해결할 수 `interactive` 있습니다 `batch`.
