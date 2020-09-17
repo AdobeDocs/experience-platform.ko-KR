@@ -5,7 +5,7 @@ title: 노트북으로 데이터 분석
 topic: Tutorial
 description: 이 자습서에서는 데이터 과학 작업 공간에 내장된 Jupiter 노트북을 사용하여 데이터에 액세스하고, 탐색하고, 시각화하는 방법에 중점을 둡니다.
 translation-type: tm+mt
-source-git-commit: 33b14fed0d52792de0486897c11dd86c1ea2dd45
+source-git-commit: 3876c33a2d20481f45bd12eda3921898e9e65654
 workflow-type: tm+mt
 source-wordcount: '1731'
 ht-degree: 0%
@@ -41,7 +41,7 @@ ht-degree: 0%
 
 UI에서 [!DNL Adobe Experience Platform] 상단 메뉴의 데이터 과학 탭을 클릭하여 데이터 과학 작업 영역으로 이동합니다. 이 페이지에서 실행 관리자를 열 [!DNL JupyterLab] 탭을 [!DNL JupyterLab] 클릭합니다. 이와 유사한 페이지가 표시됩니다.
 
-![](../images/jupyterlab/analyze-data/jupyterlab_launcher.png)
+![](../images/jupyterlab/analyze-data/jupyterlab-launcher.png)
 
 튜토리얼에서는 Jupiter Notebook에서 [!DNL Python] 3을 사용하여 데이터에 액세스하고 데이터를 검색하는 방법을 살펴봅니다. 실행 시작 페이지에는 제공된 샘플 전자 필기장이 있습니다. 우리는 소매 영업 레시피를 [!DNL Python] 3일 동안 사용할 것이다.
 
