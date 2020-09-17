@@ -5,9 +5,9 @@ title: Jupiter 노트북을 사용하여 레시피 만들기
 topic: Tutorial
 description: 이 튜토리얼은 두 개의 기본 섹션을 살펴봅니다. 먼저 JupiterLab 노트북 내에서 템플릿을 사용하여 기계 학습 모델을 만듭니다. 그런 다음 JupiterLab 내에서 레서피 워크플로우에 맞게 노트북을 실행함으로써 데이터 과학 작업 공간 내에 레서피 작업을 만들 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
+source-git-commit: 3876c33a2d20481f45bd12eda3921898e9e65654
 workflow-type: tm+mt
-source-wordcount: '2336'
+source-wordcount: '2335'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ Recipe [!UICONTROL Builder] 전자 필기장을 사용하면 노트북 내에서
 >
 >Recipe Builder 전자 필기장은 모든 파일 포맷을 사용하여 작업할 수 있지만 현재 레서피 만들기 기능은 지원만 합니다 [!DNL Python].
 
-![](../images/jupyterlab/create-recipe/recipe-builder.png)
+![](../images/jupyterlab/create-recipe/recipe_builder.png)
 
 론쳐에서 레서피 빌더 노트북을 클릭하면 해당 노트가 탭에서 열립니다. 노트북에 사용되는 템플릿은 Python Retail Sales Forecast Recipe이며 [이 공용 저장소에서 찾을 수 있습니다](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail/)
 
