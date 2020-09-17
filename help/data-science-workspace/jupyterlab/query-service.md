@@ -5,7 +5,7 @@ title: Jupiter 전자 필기장의 쿼리 서비스
 topic: Tutorial
 description: Adobe Experience Platform을 사용하면 쿼리 서비스를 JupiterLab에 표준 기능으로 통합하여 데이터 과학 작업 공간에서 SQL(구조화된 쿼리 언어)을 사용할 수 있습니다. 이 자습서에서는 Adobe Analytics 데이터를 탐색, 변환 및 분석하는 일반적인 사용 사례를 위한 샘플 SQL 쿼리를 보여줍니다.
 translation-type: tm+mt
-source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
+source-git-commit: 3876c33a2d20481f45bd12eda3921898e9e65654
 workflow-type: tm+mt
 source-wordcount: '826'
 ht-degree: 1%
@@ -37,7 +37,7 @@ ht-degree: 1%
 
 1. [!DNL [Experience Platform]에서](https://platform.adobe.com)왼쪽 탐색 열에서 **[!UICONTROL 전자 필기장]** 으로 이동합니다. JupiterLab이 로드될 때까지 잠시 기다려 주십시오.
 
-   ![](../images/jupyterlab/query/jupyterlab_launcher.png)
+   ![](../images/jupyterlab/query/jupyterlab-launcher.png)
 
    >[!NOTE]
    >
@@ -289,6 +289,6 @@ ORDER  BY Count DESC
 LIMIT  10;
 ```
 
-## 다음 단계 <!-- omit in toc -->
+## 다음 단계
 
 이 자습서에서는 전자 필기장 사용에 대한 몇 가지 샘플 사용 사례 [!DNL Query Service] 를 [!DNL Jupyter] 시연했습니다. 데이터 [액세스 SDK를 사용하여 비슷한 작업이 수행되는 방식을 보려면 Jupiter 전자 필기장을 사용하여 데이터 분석](./analyze-your-data.md) 자습서에 따릅니다.
