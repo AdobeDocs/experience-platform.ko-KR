@@ -5,10 +5,10 @@ title: JupiterLab 사용 안내서
 topic: Overview
 description: JupiterLab은 Project Jupiter를 위한 웹 기반의 유저 인터페이스로 Adobe Experience Platform과 긴밀하게 통합되어 있습니다. 데이터 과학자들이 Jupiter 노트북, 코드 및 데이터를 사용하여 작업할 수 있는 인터랙티브한 개발 환경을 제공합니다. 이 문서에서는 JupiterLab 및 그 기능에 대한 개요와 일반적인 작업 수행 지침을 제공합니다.
 translation-type: tm+mt
-source-git-commit: 78f080fd7598799825c59a4fdfdcaf7d294560a3
+source-git-commit: d5e7679ac41fd476c77a98920d7f7aeaefacec6d
 workflow-type: tm+mt
-source-wordcount: '3702'
-ht-degree: 11%
+source-wordcount: '1940'
+ht-degree: 9%
 
 ---
 
@@ -60,7 +60,6 @@ Experience Platform의 JupiterLab과의 통합은 아키텍처 변경 사항, �
 * [코드 셀](#code-cells)
 * [커널](#kernels)
 * [커널 세션](#kernel-sessions)
-* [PySpark/Spark 실행 리소스](#execution-resource)
 * [론처](#launcher)
 
 ### 액세스 [!DNL JupyterLab] {#access-jupyterlab}
@@ -242,375 +241,9 @@ Experience Platform의 JupiterLab과의 통합은 아키텍처 변경 사항, �
 
 ![](../images/jupyterlab/user-guide/notebook-gpu-config.png)
 
-## 전자 필기장을 사용하여 [!DNL Platform] 데이터 액세스
+## 다음 단계
 
-지원되는 각 커널은 노트북 내의 데이터 세트에서 데이터를 읽을 수 있도록 하는 내장 기능을 제공합니다 [!DNL Platform] . 그러나 페이지 매김 데이터에 대한 지원은 [!DNL Python] 및 R 노트북으로 제한됩니다.
-
-### 노트북 데이터 제한
-
-다음 정보는 읽을 수 있는 최대 데이터 양, 사용된 데이터 유형 및 데이터를 읽는 예상 기간을 정의합니다. 및 [!DNL Python] R의 경우 40GB RAM으로 구성된 노트북 서버가 벤치마크에 사용되었습니다. PySpark 및 Scala의 경우 64GB RAM, 8개 코어, 2개의 DBU로 구성된 데이터베이스 클러스터는 아래 나와 있는 벤치마크에 최대 4명의 작업자를 사용했습니다.
-
-사용한 ExperienceEvent 스키마 데이터는 최대 10억 개(1B) 행에 이르는 1,000개 행에서 다양한 크기로 사용됩니다. PySpark 및 [!DNL Spark] 지표의 경우 XDM 데이터에 10일의 날짜 범위가 사용되었습니다.
-
-임시 스키마 데이터는 CTAS(Create Table as Select)를 사용하여 [!DNL Query Service] 미리 처리되었습니다. 또한 이 데이터는 최대 10억(1B) 행에 이르는 1,000개 행부터 크기가 달라집니다.
-
-#### [!DNL Python] 노트북 데이터 제한
-
-**XDM ExperienceEvent 스키마:** 최대 200만 개의 XDM 데이터 행(~6.1GB의 디스크 데이터)을 22분 이내에 읽을 수 있어야 합니다. 행을 더 추가하면 오류가 발생할 수 있습니다.
-
-| 행 수 | 1K | 10K | 100K | 1M | 2M |
-| ----------------------- | ------ | ------ | ----- | ----- | ----- |
-| 디스크 크기(MB) | 18.73 | 187.5 | 308 | 3000 | 6050 |
-| SDK(초) | 20.3 | 86.8 | 63 | 659 | 1315 |
-
-**임시 스키마:** XDM(Ad-Hoc) 데이터가 아닌 데이터의 최대 5백만 행(~5.6GB의 디스크에 있는 데이터)을 14분 이내에 읽을 수 있어야 합니다. 행을 더 추가하면 오류가 발생할 수 있습니다.
-
-| 행 수 | 1K | 10K | 100K | 1M | 2M | 3M | 5M |
-| ----------------------- | ------- | ------- | ----- | ----- | ----- | ----- | ------ |
-| 디스크 크기(MB) | 1.21 | 11.72 | 115 | 1120 | 2250 | 3380 | 5630 |
-| SDK(초) | 7.27 | 9.04 | 27.3 | 180 | 346 | 487 | 819 |
-
-#### 노트북 데이터 제한
-
-**XDM ExperienceEvent 스키마:** 13분 이내에 최대 100만 개의 XDM 데이터 행(디스크에 3GB 데이터)을 읽을 수 있어야 합니다.
-
-| 행 수 | 1K | 10K | 100K | 1M |
-| ----------------------- | ------ | ------ | ----- | ----- |
-| 디스크 크기(MB) | 18.73 | 187.5 | 308 | 3000 |
-| R 커널(초) | 14.03 | 69.6 | 86.8 | 775 |
-
-**임시 스키마:** 최대 300만 개의 애드혹 데이터 행(293MB 데이터 디스크)을 10분 이내에 읽을 수 있어야 합니다.
-
-| 행 수 | 1K | 10K | 100K | 1M | 2M | 3M |
-| ----------------------- | ------- | ------- | ----- | ----- | ----- | ----- |
-| 디스크 크기(MB) | 0.082 | 0.612 | 9.0 | 91 | 188 | 293 |
-| R SDK(초) | 7.7 | 4.58 | 35.9 | 233 | 470.5 | 603 |
-
-#### PySpark([!DNL Python] 커널) 노트북 데이터 제한:
-
-**XDM ExperienceEvent 스키마:** 대화형 모드에서는 20분 내에 최대 5백만 개의 XDM 데이터 행(~13.42GB 디스크 데이터)을 읽을 수 있습니다. 대화형 모드는 최대 5백만 개의 행만 지원합니다. 큰 데이터 세트를 읽으려면 일괄 처리 모드로 전환하는 것이 좋습니다. 일괄 처리 모드에서는 약 14시간 내에 XDM 데이터의 최대 5억개 행(~1.31TB 데이터)을 읽을 수 있어야 합니다.
-
-| 행 수 | 1K | 10K | 100K | 1M | 2M | 3M | 5M | 10M | 50M | 100M | 500M |
-|-------------------------|--------|--------|-------|-------|-------|-------|---------|---------|----------|--------|--------|
-| 디스크 크기 | 2.93MB | 4.38MB | 29.02 | 2.69GB | 5.39GB | 8.09GB | 13.42GB | 26.82GB | 134.24GB | 268.39GB | 1.31TB |
-| SDK(대화형 모드) | 33s | 32.4s | 55.1s | 253.5s | 489.2s | 729.6s | 1206.8s | - | - | - | - |
-| SDK(배치 모드) | 815.8s | 492.8s | 379.1s | 637.4s | 624.5s | 869.2s | 1104.1s | 1786s | 5387.2s | 10624.6s | 50547s |
-
-**임시 스키마:** 인터랙티브 모드에서는 XDM이 아닌 데이터의 최대 10억개 행(~1.05TB 데이터 디스크)을 3분 이내에 읽을 수 있어야 합니다. 일괄 처리 모드에서는 18분 내에 XDM 외의 데이터를 최대 10억개 행(~1.05TB 데이터 디스크에 포함)으로 읽을 수 있습니다.
-
-| 행 수 | 1K | 10K | 100K | 1M | 2M | 3M | 5M | 10M | 50M | 100M | 500M | 1B |
-|--------------|--------|---------|---------|-------|-------|-------|--------|--------|---------|--------|---------|-------|
-| 디스크 크기 | 1.12MB | 11.24MB | 109.48MB | 2.69GB | 2.14GB | 3.21GB | 5.36GB | 10.71GB | 53.58GB | 107.52GB | 535.88GB | 1.05TB |
-| SDK 대화형 모드(초) | 28.2s | 18.6s | 20.8s | 20.9s | 23.8s | 21.7s | 24.7s | 22s | 28.4s | 40s | 97.4s | 154.5s |
-| SDK 배치 모드(초) | 428.8s | 578.8s | 641.4s | 538.5s | 630.9s | 467.3s | 411s | 675s | 702s | 719.2s | 1022.1s | 1122.3s |
-
-#### [!DNL Spark] (스칼라 커널) 노트북 데이터 제한:
-
-**XDM ExperienceEvent 스키마:** 인터랙티브 모드에서는 18분 이내에 최대 5백만 개의 XDM 데이터 행(~13.42GB 디스크 데이터)을 읽을 수 있습니다. 대화형 모드는 최대 5백만 개의 행만 지원합니다. 큰 데이터 세트를 읽으려면 일괄 처리 모드로 전환하는 것이 좋습니다. 일괄 처리 모드에서는 약 14시간 내에 XDM 데이터의 최대 5억개 행(~1.31TB 데이터)을 읽을 수 있어야 합니다.
-
-| 행 수 | 1K | 10K | 100K | 1M | 2M | 3M | 5M | 10M | 50M | 100M | 500M |
-|---------------|--------|--------|-------|-------|-------|-------|---------|---------|----------|--------|--------|
-| 디스크 크기 | 2.93MB | 4.38MB | 29.02 | 2.69GB | 5.39GB | 8.09GB | 13.42GB | 26.82GB | 134.24GB | 268.39GB | 1.31TB |
-| SDK 대화형 모드(초) | 37.9s | 22.7s | 45.6s | 231.7s | 444.7s | 660.6s | 1100s | - | - | - | - |
-| SDK 배치 모드(초) | 374.4s | 398.5s | 527s | 487.9s | 588.9s | 829s | 939.1s | 1441s | 5473.2s | 10118.8 | 49207.6 |
-
-**임시 스키마:** 인터랙티브 모드에서는 XDM이 아닌 데이터의 최대 10억개 행(~1.05TB 데이터 디스크)을 3분 이내에 읽을 수 있어야 합니다. 일괄 처리 모드에서는 16분 내에 XDM 외의 데이터를 최대 10억개 행(~1.05TB 데이터 디스크에 포함)으로 읽을 수 있습니다.
-
-| 행 수 | 1K | 10K | 100K | 1M | 2M | 3M | 5M | 10M | 50M | 100M | 500M | 1B |
-|--------------|--------|---------|---------|-------|-------|-------|---------|---------|---------|--------|---------|-------|
-| 디스크 크기 | 1.12MB | 11.24MB | 109.48MB | 2.69GB | 2.14GB | 3.21GB | 5.36GB | 10.71GB | 53.58GB | 107.52GB | 535.88GB | 1.05TB |
-| SDK 대화형 모드(초) | 35.7s | 31s | 19.5s | 25.3s | 23s | 33.2s | 25.5s | 29.2s | 29.7s | 36.9s | 83.5s | 139s |
-| SDK 배치 모드(초) | 448.8s | 459.7s | 519s | 475.8s | 599.9s | 347.6s | 407.8s | 397s | 518.8s | 487.9s | 760.2s | 975.4s |
-
-### 데이터 세트 [!DNL Python]/R에서 읽기
-
-[!DNL Python] 및 R 노트북에서는 데이터 세트에 액세스할 때 데이터를 게시할 수 있습니다. 페이지 매김이 있거나 없는 데이터를 읽는 샘플 코드는 아래에 나와 있습니다.
-
-[//]: # (In the following samples, the first step is currently required but once the SDK is complete, users are no longer required to explicitly define client_context)
-
-#### 페이지 매김 없이 데이터 세트 [!DNL Python]에서 읽기
-
-다음 코드를 실행하면 전체 데이터 세트를 읽습니다. 실행이 성공하면 데이터는 변수에서 참조하는 판더 데이터 프레임으로 저장됩니다 `df`.
-
-```python
-# Python
-
-client_context = PLATFORM_SDK_CLIENT_CONTEXT
-from platform_sdk.dataset_reader import DatasetReader
-dataset_reader = DatasetReader(client_context, "{DATASET_ID}")
-df = dataset_reader.read()
-df.head()
-```
-
-```R
-# R
-
-library(reticulate)
-use_python("/usr/local/bin/ipython")
-psdk <- import("platform_sdk")
-py_run_file("../.ipython/profile_default/startup/platform_sdk_context.py")
-client_context <- py$PLATFORM_SDK_CLIENT_CONTEXT
-DatasetReader <- psdk$dataset_reader$DatasetReader
-dataset_reader <- DatasetReader(client_context, "{DATASET_ID}") 
-df <- dataset_reader$read() 
-df
-```
-
-* `{DATASET_ID}`:액세스할 데이터 집합의 고유 ID
-
-#### 페이지 매김이 있는 데이터 세트 [!DNL Python]에서 읽기
-
-다음 코드를 실행하면 지정된 데이터 집합의 데이터가 읽습니다. 페이지 매김은 함수 `limit()` 및 `offset()` 각각 데이터를 제한 및 오프셋하여 이루어집니다. 데이터 제한은 데이터를 읽기 전에 건너뛸 데이터 포인트 수를 나타내는 반면 데이터 제한은 읽을 최대 데이터 포인트 수를 나타냅니다. 읽기 작업이 성공적으로 실행되면 데이터가 변수에서 참조하는 판더 데이터 프레임으로 저장됩니다 `df`.
-
-```python
-# Python
-
-client_context = PLATFORM_SDK_CLIENT_CONTEXT
-from platform_sdk.dataset_reader import DatasetReader
-
-dataset_reader = DatasetReader(client_context, "{DATASET_ID}")
-df = dataset_reader.limit(100).offset(10).read()
-```
-
-```R
-# R
-
-library(reticulate)
-use_python("/usr/local/bin/ipython")
-psdk <- import("platform_sdk")
-py_run_file("../.ipython/profile_default/startup/platform_sdk_context.py")
-client_context <- py$PLATFORM_SDK_CLIENT_CONTEXT
-
-DatasetReader <- psdk$dataset_reader$DatasetReader
-dataset_reader <- DatasetReader(client_context, "{DATASET_ID}") 
-df <- dataset_reader$limit(100L)$offset(10L)$read() 
-```
-
-* `{DATASET_ID}`:액세스할 데이터 집합의 고유 ID
-
-### PySpark/[!DNL Spark]/Scala의 데이터 세트에서 읽기
-
-활성 PySpark 또는 Scala 전자 필기장이 열리고 왼쪽 사이드바에서 **Data Explorer** 탭을 확장하고 데이터 세트 **를 두 번 클릭하여 사용 가능한 데이터 집합** 목록을 봅니다. 액세스할 데이터 세트 목록을 마우스 오른쪽 단추로 클릭하고 **노트북에서 데이터 탐색을 클릭합니다**. 다음 코드 셀이 생성됩니다.
-
-#### PySpark([!DNL Spark] 2.4) {#pyspark2.4}
-
-Spark 2.4가 도입됨에 따라 [`%dataset`](#magic) 맞춤형 기능이 제공됩니다.
-
-```python
-# PySpark 3 (Spark 2.4)
-
-%dataset read --datasetId {DATASET_ID} --dataFrame pd0
-pd0.describe()
-pd0.show(10, False)
-```
-
-#### 스칼라([!DNL Spark] 2.4) {#spark2.4}
-
-```scala
-// Scala (Spark 2.4)
-
-// initialize the session
-import org.apache.spark.sql.{Dataset, SparkSession}
-val spark = SparkSession.builder().master("local").getOrCreate()
-
-val dataFrame = spark.read.format("com.adobe.platform.query")
-    .option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN"))
-    .option("ims-org", sys.env("IMS_ORG_ID"))
-    .option("api-key", sys.env("PYDASDK_IMS_CLIENT_ID"))
-    .option("service-token", sys.env("PYDASDK_IMS_SERVICE_TOKEN"))
-    .option("mode", "batch")
-    .option("dataset-id", "{DATASET_ID}")
-    .load()
-dataFrame.printSchema()
-dataFrame.show()
-```
-
->[!TIP]
->
->Scala에서는 값 `sys.env()` 을 선언하고 반환하는 데 사용할 수 있습니다 `option`.
-
-### PySpark 3([!DNL Spark] 2.4) 노트북에서 %dataset 매직 사용 {#magic}
-
-2.4의 도입으로 새로운 PySpark 3( [!DNL Spark] 2.4) 노트북( `%dataset`[!DNL Spark][!DNL Python] 3커널)에서 사용할 수 있는 맞춤형 기능이 제공됩니다.
-
-**사용**
-
-`%dataset {action} --datasetId {id} --dataFrame {df}`
-
-**설명**
-
-노트북( [!DNL Data Science Workspace] [!DNL Python][!DNL Python] 3커널)에서 데이터 세트를 읽거나 쓰는 사용자 정의 매직 명령입니다.
-
-* **{action}**:데이터 세트에 대해 수행할 작업 유형입니다. 두 가지 작업을 &quot;읽기&quot; 또는 &quot;쓰기&quot;로 사용할 수 있습니다.
-* **—datasetId {id}**:데이터를 읽거나 쓸 수 있도록 데이터 집합의 ID를 제공하는 데 사용됩니다. 이것은 필수 인수입니다.
-* **—dataFrame {df}**:판다들의 데이터 프레임 이것은 필수 인수입니다.
-   * 작업이 &quot;읽기&quot;인 경우 {df}는 데이터 집합 읽기 작업의 결과를 사용할 수 있는 변수입니다.
-   * 작업이 &quot;write&quot;이면 이 데이터 프레임 {df}이(가) 데이터 세트에 기록됩니다.
-* **—mode(선택 사항)**:허용되는 매개 변수는 &quot;batch&quot; 및 &quot;interactive&quot;입니다. 기본적으로 모드는 &quot;interactive&quot;로 설정됩니다. 대량의 데이터를 읽을 때는 &quot;일괄 처리&quot; 모드를 사용하는 것이 좋습니다.
-
-**예**
-
-* **예제**&#x200B;보기: `%dataset read --datasetId 5e68141134492718af974841 --dataFrame pd0`
-* **쓰기 예**: `%dataset write --datasetId 5e68141134492718af974842 --dataFrame pd0`
-
-### 데이터 쿼리 [!DNL Query Service] 는 [!DNL Python]
-
-[!DNL JupyterLab] 을 [!DNL Platform] 사용하면 전자 필기장의 SQL을 사용하여 [!DNL Python] Adobe Experience Platform 쿼리 서비스를 통해 데이터에 액세스할 수 있습니다 [](https://www.adobe.com/go/query-service-home-en). 데이터 세트를 통해 액세스하는 [!DNL Query Service] 것은 실행 시간이 매우 짧기 때문에 대규모 데이터 세트를 처리하는 데 유용합니다. 데이터를 쿼리하는 데 처리 시간 제한 [!DNL Query Service] 이 10분입니다.
-
-를 사용하기 전에 [!DNL Query Service] SQL 구문 [!DNL JupyterLab][[!DNL Query Service] ](https://www.adobe.com/go/query-service-sql-syntax-en)에 대한 작업 지식이 있어야 합니다.
-
-데이터를 쿼리하려면 대상 데이터 집합 이름을 제공해야 [!DNL Query Service] 합니다. 데이터 탐색기를 사용하여 원하는 데이터 세트를 찾아 필요한 **코드 셀을 생성할 수 있습니다**. 데이터 세트 목록을 마우스 오른쪽 단추로 클릭하고 **노트북의** 데이터 쿼리를 클릭하여 다음 두 개의 코드 셀을 생성합니다.
-
-
-이 [!DNL Query Service] 에서 활용하려면 먼저 작업 중인 [!DNL JupyterLab]노트북과 작업 중인 [!DNL Python] 노트북 간에 연결을 만들어야 합니다 [!DNL Query Service]. 이렇게 하려면 첫 번째 생성된 셀을 실행하여 할 수 있습니다.
-
-```python
-qs_connect()
-```
-
-두 번째 생성된 셀에서 첫 번째 행을 SQL 쿼리 앞에 정의해야 합니다. 기본적으로 생성된 셀은 쿼리 결과를 팬더 데이터 프레임으로 저장하는 선택적 변수(`df0`)를 정의합니다. <br>이 `-c QS_CONNECTION` 인수는 필수 항목이며 커널에 대해 SQL 쿼리를 실행하라고 지시합니다 [!DNL Query Service]. 추가 인수 목록은 [부록을](#optional-sql-flags-for-query-service) 참조하십시오.
-
-```python
-%%read_sql df0 -c QS_CONNECTION
-SELECT *
-FROM name_of_the_dataset
-LIMIT 10
-/* Querying table "name_of_the_dataset" (datasetId: {DATASET_ID})*/
-```
-
-다음 예제와 같이 문자열 형식의 구문을 사용하고 변수를 중괄호(중괄호)로 묶어서 SQL 쿼리 내에서 직접 Python 변수를 참조할 수 있습니다.`{}`
-
-```python
-table_name = 'name_of_the_dataset'
-table_columns = ','.join(['col_1','col_2','col_3'])
-```
-
-```python
-%%read_sql demo -c QS_CONNECTION
-SELECT {table_columns}
-FROM {table_name}
-```
-
-### ExperienceEvent 데이터 필터링: [!DNL Python]/R
-
-또는 R 전자 필기장에서 ExperienceEvent 데이터 세트에 액세스하고 필터링하려면, 논리 연산자를 사용하여 특정 시간 범위를 정의하는 필터 규칙과 함께 데이터 세트( [!DNL Python]`{DATASET_ID}`)의 ID를 제공해야 합니다. 시간 범위를 정의하면 지정된 모든 페이지 지정이 무시되고 전체 데이터 세트가 고려됩니다.
-
-필터링 연산자 목록은 아래에 설명되어 있습니다.
-
-* `eq()`: 같음
-* `gt()`: 보다 큼
-* `ge()`: 크거나 같음
-* `lt()`: 보다 작음
-* `le()`: 작거나 같음
-* `And()`:논리 AND 연산자
-* `Or()`:논리 OR 연산자
-
-다음 셀에서는 2019년 1월 1일부터 2019년 12월 31일 종료 사이에만 존재하는 데이터로 ExperienceEvent 데이터 세트를 필터링합니다.
-
-```python
-# Python
-
-client_context = PLATFORM_SDK_CLIENT_CONTEXT
-from platform_sdk.dataset_reader import DatasetReader
-
-dataset_reader = DatasetReader(client_context, "{DATASET_ID}")
-df = dataset_reader.\
-    where(dataset_reader["timestamp"].gt("2019-01-01 00:00:00").\
-    And(dataset_reader["timestamp"].lt("2019-12-31 23:59:59"))\
-).read()
-```
-
-```R
-# R
-
-library(reticulate)
-use_python("/usr/local/bin/ipython")
-psdk <- import("platform_sdk")
-py_run_file("../.ipython/profile_default/startup/platform_sdk_context.py")
-client_context <- py$PLATFORM_SDK_CLIENT_CONTEXT
-
-DatasetReader <- psdk$dataset_reader$DatasetReader
-dataset_reader <- DatasetReader(client_context, "{DATASET_ID}") 
-df <- dataset_reader$
-    where(dataset_reader["timestamp"]$gt("2019-01-01 00:00:00")$
-    And(dataset_reader["timestamp"]$lt("2019-12-31 23:59:59"))
-)$read()
-```
-
-### PySpark/에서 ExperienceEvent 데이터 필터링[!DNL Spark]
-
-PySpark 또는 Scala 전자 필기장에서 ExperienceEvent 데이터 세트에 액세스하고 이를 필터링하려면 데이터 세트 ID(`{DATASET_ID}`), 조직의 IMS ID 및 특정 시간 범위를 정의하는 필터 규칙을 제공해야 합니다. 필터링 시간 범위는 함수 매개 변수가 SQL 쿼리 문자열 `spark.sql()`인 함수를 사용하여 정의됩니다.
-
-다음 셀에서는 2019년 1월 1일부터 2019년 12월 31일 종료 사이에만 존재하는 데이터로 ExperienceEvent 데이터 세트를 필터링합니다.
-
-#### PySpark 3([!DNL Spark] 2.4) {#pyspark3-spark2.4}
-
-```python
-# PySpark 3 (Spark 2.4)
-
-from pyspark.sql import SparkSession
-spark = SparkSession.builder.getOrCreate()
-
-%dataset read --datasetId {DATASET_ID} --dataFrame df
-
-df.createOrReplaceTempView("event")
-timepd = spark.sql("""
-    SELECT *
-    FROM event
-    WHERE timestamp > CAST('2019-01-01 00:00:00.0' AS TIMESTAMP)
-    AND timestamp < CAST('2019-12-31 23:59:59.9' AS TIMESTAMP)
-""")
-timepd.show()
-```
-
-#### 스칼라([!DNL Spark] 2.4) {#scala-spark}
-
-```scala
-// Spark (Spark 2.4)
-
-// Turn off extra logging
-import org.apache.log4j.{Level, Logger}
-Logger.getLogger("org").setLevel(Level.OFF)
-Logger.getLogger("com").setLevel(Level.OFF)
-
-import org.apache.spark.sql.{Dataset, SparkSession}
-val spark = org.apache.spark.sql.SparkSession.builder().appName("Notebook")
-  .master("local")
-  .getOrCreate()
-
-// Stage Exploratory
-val dataSetId: String = "{DATASET_ID}"
-val orgId: String = sys.env("IMS_ORG_ID")
-val clientId: String = sys.env("PYDASDK_IMS_CLIENT_ID")
-val userToken: String = sys.env("PYDASDK_IMS_USER_TOKEN")
-val serviceToken: String = sys.env("PYDASDK_IMS_SERVICE_TOKEN")
-val mode: String = "batch"
-
-var df = spark.read.format("com.adobe.platform.query")
-  .option("user-token", userToken)
-  .option("ims-org", orgId)
-  .option("api-key", clientId)
-  .option("mode", mode)
-  .option("dataset-id", dataSetId)
-  .option("service-token", serviceToken)
-  .load()
-df.createOrReplaceTempView("event")
-val timedf = spark.sql("""
-    SELECT * 
-    FROM event 
-    WHERE timestamp > CAST('2019-01-01 00:00:00.0' AS TIMESTAMP)
-    AND timestamp < CAST('2019-12-31 23:59:59.9' AS TIMESTAMP)
-""")
-timedf.show()
-```
-
->[!TIP]
->
->Scala에서는 값 `sys.env()` 을 선언하고 반환하는 데 사용할 수 있습니다 `option`. 이렇게 하면 변수가 한 번만 사용된다는 사실을 알고 있으면 변수를 정의할 필요가 없습니다. 다음 예는 위 예제 `val userToken` 에서 가져온 다음 이 예제의 대체 요소 `option` 로 인라인 내에 선언합니다.
-> 
-```scala
-> .option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN"))
-> ```
+지원되는 각 노트북에 대한 자세한 내용과 사용 방법에 대한 자세한 내용은 [Jupiterlab 노트북 데이터 액세스](./access-notebook-data.md) 개발자 안내서를 참조하십시오. 이 안내서에서는 JupiterLab 전자 필기장을 사용하여 데이터 읽기, 쓰기 및 쿼리 등 데이터에 액세스하는 방법에 중점을 둡니다. 데이터 액세스 안내서에는 지원되는 각 노트북에서 읽을 수 있는 최대 데이터 양에 대한 정보도 포함되어 있습니다.
 
 ## 지원되는 라이브러리 {#supported-libraries}
 
@@ -699,15 +332,15 @@ timedf.show()
 | fanda_ml | 0.6.1 |
 | tensorflow gpu | 1.14.0 |
 | nodejs | 12.3.0 |
-| 코 | 3.0.5 |
+| 모의 | 3.0.5 |
 | 점선 | 0.3.3 |
 | 글꼴 아나콘드 | 1.0 |
 | psycopg2 | 2.8.3 |
-| 판다 | 1.3.7 |
+| 코 | 1.3.7 |
 | autovizwidget | 0.12.9 |
 | 알트에어 | 3.1.0 |
 | bega_datasets | 0.7.0 |
-| 모의 | 1.0.1 |
+| 종소 | 1.0.1 |
 | sql_magic | 0.0.4 |
 | iso3166 | 1.0 |
 | nbimporter | 0.3.1 |
@@ -720,7 +353,7 @@ timedf.show()
 | 겐심 | 2.3.0 |
 | 커라스 | 2.0.6 |
 | nltk | 3.2.4 |
-| sql | 0.20.1 |
+| 판다 | 0.20.1 |
 | pandasql | 0.7.3 |
 | 베개 | 5.3.0 |
 | scitkit 이미지 | 0.13.0 |
@@ -736,15 +369,3 @@ timedf.show()
 | azure-storage-blob | 1.4.0 |
 | [!DNL python] | 3.6.7 |
 | mkl-rt | 11.1 |
-
-## 다음에 대한 선택적 SQL 플래그 [!DNL Query Service] {#optional-sql-flags-for-query-service}
-
-이 표에서는 사용할 수 있는 선택적 SQL 플래그에 대해 간략하게 설명합니다 [!DNL Query Service].
-
-| **플래그** | **설명** |
-| --- | --- |
-| `-h`, `--help` | 도움말 메시지를 표시하고 종료합니다. |
-| `-n`, `--notify` | 쿼리 결과에 알리는 토글 옵션. |
-| `-a`, `--async` | 이 플래그를 사용하면 쿼리를 비동기 방식으로 실행하고 쿼리를 실행하는 동안 커널을 해제할 수 있습니다. 쿼리가 완료되지 않은 경우 정의되지 않을 수도 있으므로 쿼리 결과를 변수에 지정할 때는 주의하십시오. |
-| `-d`, `--display` | 이 플래그를 사용하면 결과가 표시되지 않습니다. |
-
