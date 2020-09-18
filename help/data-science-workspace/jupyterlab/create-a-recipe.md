@@ -5,7 +5,7 @@ title: Jupiter 노트북을 사용하여 레시피 만들기
 topic: Tutorial
 description: 이 튜토리얼은 두 개의 기본 섹션을 살펴봅니다. 먼저 JupiterLab 노트북 내에서 템플릿을 사용하여 기계 학습 모델을 만듭니다. 그런 다음 JupiterLab 내에서 레서피 워크플로우에 맞게 노트북을 실행함으로써 데이터 과학 작업 공간 내에 레서피 작업을 만들 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 3876c33a2d20481f45bd12eda3921898e9e65654
+source-git-commit: d9bf87e41fe002ac1d70a241b48c7b9fd1139d6c
 workflow-type: tm+mt
 source-wordcount: '2335'
 ht-degree: 0%
@@ -38,7 +38,7 @@ Recipe [!UICONTROL Builder] 전자 필기장을 사용하면 노트북 내에서
 
 론쳐에서 레서피 빌더 노트북을 클릭하면 해당 노트가 탭에서 열립니다. 노트북에 사용되는 템플릿은 Python Retail Sales Forecast Recipe이며 [이 공용 저장소에서 찾을 수 있습니다](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail/)
 
-도구 모음에는 세 가지 추가 작업( **[!UICONTROL 기차]**, 점수 **** 및 레서피 **[!UICONTROL 만들기)이 있습니다]**. 이러한 아이콘은 [!UICONTROL 레서피 빌더] 노트북에만 나타납니다. 이러한 작업에 대한 자세한 내용은 노트북 [에서 레서피](#training-and-scoring) 작성 후 교육 및 점수 지정 섹션에서 다룹니다.
+도구 모음에는 기차 **[!UICONTROL , 점수]**&#x200B;및 레서피 **[!UICONTROL 만들기]**&#x200B;등 세 가지 추가 작업 **[!UICONTROL 이 있음을 알 수]**&#x200B;있습니다. 이러한 아이콘은 [!UICONTROL 레서피 빌더] 노트북에만 나타납니다. 이러한 작업에 대한 자세한 내용은 노트북 [에서 레서피](#training-and-scoring) 작성 후 교육 및 점수 지정 섹션에서 다룹니다.
 
 ![](../images/jupyterlab/create-recipe/toolbar_actions.png)
 
