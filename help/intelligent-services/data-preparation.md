@@ -5,9 +5,9 @@ title: 지능형 서비스에서 사용할 데이터 준비
 topic: Intelligent Services
 description: 'Intelligent Services가 마케팅 이벤트 데이터에서 얻은 통찰력을 얻으려면 데이터가 세밀하게 농축되어 표준 구조로 유지되어야 합니다. 지능형 서비스는 이를 달성하기 위해 XDM(Experience Data Model) 스키마를 활용합니다. 특히, Intelligent Services에서 사용되는 모든 데이터 세트는 CEE(Consumer ExperienceEvent) XDM 스키마를 따라야 합니다. '
 translation-type: tm+mt
-source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
+source-git-commit: d9bf87e41fe002ac1d70a241b48c7b9fd1139d6c
 workflow-type: tm+mt
-source-wordcount: '1980'
+source-wordcount: '1979'
 ht-degree: 0%
 
 ---
@@ -238,7 +238,7 @@ CEE 믹스에는 유용한 인사이트를 생성하기 위해 활용해야 하�
 
 에 대한 각 필수 하위 필드에 대한 자세한 내용 `xdm:productListItems`은 [마케팅 섹션 사양을](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/marketing.schema.md) 참조하십시오.
 
-## 데이터 매핑 및 인제스트(#mapping)
+## 데이터 매핑 및 인제스트 {#mapping}
 
 마케팅 이벤트 데이터를 CEE 스키마에 매핑할 수 있는지 여부를 결정했으면 다음 단계로 가져올 데이터를 결정합니다 [!DNL Intelligent Services]. 사용된 모든 내역 데이터는 최소 4개월 데이터 기간 내에, 조회 기간으로 사용할 일 수는 포함되어야 [!DNL Intelligent Services] 합니다.
 
