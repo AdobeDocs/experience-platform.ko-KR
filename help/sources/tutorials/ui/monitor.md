@@ -5,10 +5,10 @@ solution: Experience Platform
 title: 계정 및 데이터 흐름 모니터링
 topic: overview
 translation-type: tm+mt
-source-git-commit: 20c3037295b49cba45fcc5901803107dea26b3b2
+source-git-commit: 8f752d6a08496f9583627781d9143ee7f9159bf0
 workflow-type: tm+mt
-source-wordcount: '1014'
-ht-degree: 0%
+source-wordcount: '1097'
+ht-degree: 1%
 
 ---
 
@@ -72,7 +72,18 @@ Adobe Experience Platform의 소스 커넥터는 예약된 기준으로 외부 �
 
 ![카탈로그 데이터 흐름](../../images/tutorials/monitor/catalog-dataflows.png)
 
-기존 데이터 흐름 목록이 나타납니다. 이 페이지에서는 소스, 사용자 이름, 데이터 흐름 수 및 상태에 대한 정보를 비롯하여 볼 수 있는 데이터 흐름 목록이 있습니다. 왼쪽 상단의 단계 아이콘을 선택하여 정렬합니다.
+기존 데이터 흐름 목록이 나타납니다. 이 페이지에서는 소스, 사용자 이름, 데이터 흐름 수 및 상태에 대한 정보를 비롯하여 볼 수 있는 데이터 흐름 목록이 있습니다.
+
+상태에 대한 자세한 내용은 다음 표를 참조하십시오.
+
+| 상태 | 설명 |
+| ------ | ----------- |
+| 활성화됨 | 상태는 데이터 흐름 `Enabled` 이 활성화되어 있고 제공된 일정에 따라 데이터를 인제스트하고 있음을 나타냅니다. |
+| 비활성화됨 | 상태는 데이터 흐름 `Disabled` 이 비활성 상태이며 데이터를 인제스트하고 있지 않음을 나타냅니다. |
+| 처리 중 | 상태는 데이터 흐름 `Processing` 이 아직 활성화되지 않았음을 나타냅니다. 이 상태는 종종 새 데이터 흐름 만들기 직후 발생합니다. |
+| 오류 | 데이터 흐름 활성화 프로세스가 중단되었음을 `Error` 나타냅니다. |
+
+왼쪽 상단의 단계 아이콘을 선택하여 정렬합니다.
 
 ![데이터 흐름 목록](../../images/tutorials/monitor/dataflows-list.png)
 
