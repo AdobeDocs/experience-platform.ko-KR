@@ -5,9 +5,9 @@ title: UI에서 광고 커넥터에 대한 데이터 흐름 구성
 topic: overview
 description: 데이터 흐름(Dataflow)은 소스에서 Adobe Experience Platform 데이터 집합으로 데이터를 검색하고 인제스트하는 예약된 작업입니다. 이 자습서에서는 광고 계정을 사용하여 새 데이터 흐름을 구성하는 절차를 제공합니다.
 translation-type: tm+mt
-source-git-commit: 33b0f69c1552957984c131c72a13e88167211295
+source-git-commit: e504e0be465c755a77aa30589731941ca50426d2
 workflow-type: tm+mt
-source-wordcount: '1418'
+source-wordcount: '1467'
 ht-degree: 0%
 
 ---
@@ -68,7 +68,11 @@ ht-degree: 0%
 
 스키마 선택 검색 막대에서 스키마 이름을 입력하여 스키마 필드를 **[!UICONTROL 첨부할]** 수 있습니다. 드롭다운 아이콘을 선택하여 기존 스키마 목록을 볼 수도 있습니다. 또는 **[!UICONTROL 고급 검색을 선택하여]** 해당 세부 정보를 포함한 기존 스키마의 화면에 액세스할 수 있습니다.
 
-![새로운 데이터 세트 만들기](../../../images/tutorials/dataflow/all-tabular/new-target-dataset.png)
+이 단계 동안 데이터 세트를 활성화하여 엔티티 [!DNL Real-time Customer Profile] 의 속성 및 비헤이비어를 전체적으로 볼 수 있습니다. 활성화된 모든 데이터 집합의 데이터가 포함되고 데이터 흐름 [!DNL Profile] 을 저장할 때 변경 사항이 적용됩니다.
+
+데이터 세트 **[!UICONTROL 단추]** 를 전환하여 대상 데이터 세트를 활성화합니다 [!DNL Profile].
+
+![새로운 데이터 세트 만들기](../../../images/tutorials/dataflow/advertising/target-dataset.png)
 
 스키마 **[!UICONTROL 선택]** 대화 상자가 나타납니다. 새 데이터 세트에 적용할 스키마를 선택한 다음 을 클릭합니다 **[!DNL Done]**.
 
