@@ -3,9 +3,9 @@ title: Adobe Experience Platform 웹 SDK 도움말
 seo-title: Adobe Experience Platform 웹 SDK 도움말
 description: Adobe Experience Platform 웹 SDK의 정의와 사용 방법을 살펴보십시오.
 seo-description: adobe experience cloud 고객이 Experience Cloud의 다양한 서비스와 상호 작용할 수 있도록 허용
-keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;edge;Visitor.js;AppMeasurement.js;AT.js;DIL.js;
+keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;edge;Visitor.js;AppMeasurement.js;AT.js;DIL.js;web sdk;SDK;web SDK;Launch;launch
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
 workflow-type: tm+mt
 source-wordcount: '702'
 ht-degree: 2%
@@ -42,7 +42,7 @@ Adobe Experience Platform 웹 SDK는 Adobe Experience Cloud 고객이 Adobe을 �
 
 ## 비디오 개요
 
-다음 비디오에서는 Adobe Experience Platform [!DNL Web SDK] 및 [!DNL Edge Network]에 대한 개요를 제공합니다.
+다음 비디오에서는 Adobe Experience Platform [!DNL Web SDK] 와 [!DNL Edge Network]에 대한 개요를 제공합니다.
 
 >[!VIDEO](https://video.tv.adobe.com/v/34141?quality=12&learn=on)
 
@@ -67,7 +67,7 @@ Adobe Experience Platform 웹 SDK는 다음 SDK를 대체합니다.
 
 Adobe 시작 [을 사용하는 방법에 대한 빠른 자습서를 보려면 시작 가이드](getting-started/quick-start-with-launch.md) 를 확인해 보는 것이 좋습니다.
 
-이 제품은 점점 더 많은 사용 사례를 지원하기 위해 끊임없이 진화하고 증가하고 있습니다. 최신 정보를 얻으려면 [지원되는 사용 사례 보드를 확인하십시오](https://github.com/adobe/alloy/projects/5). Adobe는 Adobe가 현재 지원하는 사용 사례와 귀하가 최선의 결정을 내릴 수 있도록 노력하고 있는 사례에 대해 최신 정보를 제공합니다.
+이 제품은 점점 더 많은 사용 사례를 지원하기 위해 끊임없이 진화하고 증가하고 있습니다. 최신 정보를 얻으려면 [지원되는 사용 사례 보드를 확인하십시오](https://github.com/adobe/alloy/projects/5). Adobe는 Adobe가 현재 지원하는 사용 사례와 귀하가 최상의 결정을 내릴 수 있도록 노력하고 있는 사례에 대해 이러한 최신 정보를 제공합니다.
 
 * **아직 지원되지 않는 사용 사례:** 향후 지원이 제공될 예정인 사용 사례입니다.
 * **진행 중인 사용 사례:** 팀이 현재 릴리스를 완료하기 위해 작업 중인 사용 사례입니다.
