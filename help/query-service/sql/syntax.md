@@ -5,9 +5,9 @@ title: SQL 구문
 topic: syntax
 description: 이 문서에서는 쿼리 서비스에서 지원하는 SQL 구문을 보여 줍니다.
 translation-type: tm+mt
-source-git-commit: 041165f501d35b811202362b524523b103d18113
+source-git-commit: 2672d0bdf1f34deb715415e7b660a35076edb06b
 workflow-type: tm+mt
-source-wordcount: '1982'
+source-wordcount: '2004'
 ht-degree: 1%
 
 ---
@@ -115,10 +115,10 @@ SELECT statement 2
 다음 구문은 에서 지원하는 `CREATE TABLE AS SELECT` (CTAS) 쿼리를 정의합니다 [!DNL Query Service].
 
 ```sql
-CREATE TABLE table_name [ WITH (schema='target_schema_title') ] AS (select_query)
+CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='false') ] AS (select_query)
 ```
 
-여기서 `target_schema_title` 는 XDM 스키마의 제목입니다. CTAS 쿼리에서 만든 새 데이터 세트에 대해 기존 XDM 스키마를 사용하려는 경우에만 이 절을 사용하십시오.
+여기서`target_schema_title` 는 XDM 스키마의 제목입니다. CTAS 쿼리를`rowvalidation` 통해 만든 새 데이터 세트에 대해 사용자가 새로 만든 데이터 세트에 대해 인제스트된 모든 새 배치의 행 수준 유효성 검사를 원하는지 여부를 지정하는 경우에만 이 절을 사용하십시오. 기본값은 &#39;false&#39;입니다.
 
 and `select_query` `SELECT` is a statement, the syntax of is defined above in this document.
 
