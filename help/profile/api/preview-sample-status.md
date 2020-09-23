@@ -1,11 +1,10 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;preview;sample
-solution: Adobe Experience Platform
 title: 프로필 미리 보기 - 실시간 고객 프로필 API
 description: Adobe Experience Platform을 사용하면 여러 소스에서 고객 데이터를 수집하여 개별 고객을 위한 강력한 통합 프로파일을 구축할 수 있습니다. 실시간 고객 프로파일에 대해 활성화된 데이터가 플랫폼으로 수집되므로 프로필 데이터 저장소 내에 저장됩니다. 프로필 저장소의 레코드 수가 늘어나거나 줄어들면서 데이터 저장소에 있는 프로필 조각 및 병합된 프로필 수에 대한 정보가 포함된 샘플 작업이 실행됩니다. 프로필 API를 사용하면 성공적인 최신 샘플뿐만 아니라 데이터 세트 및 ID 네임스페이스별로 프로필 배포를 나열할 수 있습니다.
 topic: guide
 translation-type: tm+mt
-source-git-commit: 2edba7cba4892f5c8dd41b15219bf45597bd5219
+source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
 workflow-type: tm+mt
 source-wordcount: '1478'
 ht-degree: 1%
