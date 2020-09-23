@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
-solution: Adobe Experience Platform
 title: 실시간 고객 프로필 문제 해결 가이드
 topic: guide
 translation-type: tm+mt
-source-git-commit: 94fd6ee324b35acb7ef1185f7851d76d76f3e91c
+source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
 workflow-type: tm+mt
 source-wordcount: '983'
 ht-degree: 0%
@@ -26,15 +25,15 @@ ht-degree: 0%
 
 문제의 데이터에 데이터를 고유한 개인 **과 연결하는 하나 이상의 ID 값이 포함되어 있는 한, 프로필은** 레코드 **및** 시간 시리즈데이터를 모두 수용합니다.
 
-모든 Platform 서비스와 마찬가지로, 프로필의 데이터는 XDM(Experience Data Model) 스키마에서 세밀하게 구조되어야 합니다. 따라서 이 스키마에는 **기본 ID가** 정의되어 있어야 하며 프로필에서 사용할 수 있도록 설정되어 있어야 합니다.
+모든 플랫폼 서비스와 마찬가지로 프로필도 데이터를 XDM(Experience Data Model) 스키마 아래에 의미있게 구조화해야 합니다. 따라서 이 스키마에는 **기본 ID가** 정의되어 있어야 하며 프로필에서 사용할 수 있도록 설정되어 있어야 합니다.
 
 XDM에 익숙하지 않은 경우 [XDM 개요를](../xdm/home.md) 참조하여 자세히 알아보십시오. ID 필드 [설정 및 프로필 스키마](../xdm/tutorials/create-schema-ui.md#identity-field) 활성화 방법에 대한 단계는 XDM 사용자 안내서를 참조하십시오 [](../xdm/tutorials/create-schema-ui.md#profile).
 
 ### 프로필 데이터는 어디에 저장됩니까?
 
-실시간 고객 프로필은 다른 인제스트된 Platform 데이터가 포함된 데이터 레이크와 별도로 데이터 저장소(&quot;프로필 스토어&quot;라고 함)를 유지합니다.
+실시간 고객 프로필은 다른 인제스트된 플랫폼 데이터가 포함된 데이터 레이크와 별도로 데이터 저장소(&quot;프로필 스토어&quot;라고 함)를 유지합니다.
 
-### 데이터를 Platform으로 이미 수집했다면 프로필 스토어에서 구할 수 있습니까?
+### 데이터를 이미 Platform(플랫폼)으로 가져온 경우 Profile Store에서 이용할 수 있습니까?
 
 데이터가 비프로필 데이터 세트에 인제스트된 경우 프로필 저장소에서 사용 가능하도록 하려면 해당 데이터를 프로필 사용 가능한 데이터 세트에 다시 인제스트해야 합니다. 기존 프로필 데이터 세트를 활성화할 수 있지만 해당 구성 전에 인제스트한 데이터는 여전히 프로필 저장소에 표시되지 않습니다.
 
@@ -48,7 +47,7 @@ API 또는 UI 사용 여부에 따라 프로필 데이터를 보는 방법에는
 
 액세스하려는 프로필 개체의 ID를 알고 있는 경우 프로필 API의 `/entities` (프로필 액세스) 끝점을 사용하여 해당 엔터티를 조회할 수 있습니다. 자세한 내용은 개발자 안내서의 [엔티티](./api/entities.md) 섹션을 참조하십시오.
 
-Adobe Experience Platform 세그멘테이션 서비스 API를 사용하여 세그먼트 멤버십에 자격이 있는 고객의 개별 프로필에 액세스할 수도 있습니다. See the [Segmentation Service overview](../segmentation/home.md) for more information.
+또한 Adobe Experience Platform 세그멘테이션 서비스 API를 사용하여 세그먼트 멤버십에 자격이 있는 고객의 개별 프로필에 액세스할 수도 있습니다. See the [Segmentation Service overview](../segmentation/home.md) for more information.
 
 #### UI 사용
 
@@ -58,7 +57,7 @@ Experience Platform UI에서 **[!UICONTROL 프로필]** 작업 영역의 [찾아
 
 ## 오류 코드
 
-다음은 실시간 고객 프로필 API를 사용하여 작업할 때 발생할 수 있는 오류 메시지 목록입니다. 여기에 오류가 표시되지 않으면 일반 [Platform 문제 해결 안내서에서 찾을 수 있습니다](../landing/troubleshooting.md) .
+다음은 실시간 고객 프로필 API를 사용하여 작업할 때 발생할 수 있는 오류 메시지 목록입니다. 여기에 오류가 표시되지 않으면 일반 [플랫폼 문제 해결 안내서에서 찾을 수 있습니다](../landing/troubleshooting.md) .
 
 ### 제공된 경로에 대해 계산된 속성의 스키마를 조회할 수 없습니다.
 
@@ -152,5 +151,5 @@ Experience Platform UI에서 **[!UICONTROL 프로필]** 작업 영역의 [찾아
 
 | 끝점 | 컨텐츠 유형 |
 | --- | --- |
-| `/config/projections` | application/vnd.adobe.platform.projectionConfig+json; version=1 |
-| `/config/destinations` | application/vnd.adobe.platform.projectionDestination+json; version=1 |
+| `/config/projections` | application/vnd.adobe.platform.projectionConfig+json;version=1 |
+| `/config/destinations` | application/vnd.adobe.platform.projectionDestination+json;version=1 |
