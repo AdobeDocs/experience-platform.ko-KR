@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
-solution: Adobe Experience Platform
 title: 내보내기 작업 - 실시간 고객 프로필 API
 topic: guide
 translation-type: tm+mt
-source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
+source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
 workflow-type: tm+mt
 source-wordcount: '1494'
 ht-degree: 2%
@@ -142,7 +141,7 @@ curl -X POST \
 | `mergePolicy` | *(선택 사항)* 내보낸 데이터를 제어하는 병합 정책을 지정합니다. 내보낼 세그먼트가 여러 개인 경우 이 매개 변수를 포함하십시오. |
 | `mergePolicy.id` | 병합 정책의 ID입니다. |
 | `mergePolicy.version` | 사용할 병합 정책의 특정 버전입니다. 이 값을 생략하면 기본적으로 최신 버전이 사용됩니다. |
-| `additionalFields.eventList` | *(선택 사항)* 다음 설정 중 하나 이상을 제공하여 하위 또는 관련 개체에 대해 내보낸 시계열 이벤트 필드를 제어합니다.<ul><li>`eventList.fields`: 내보낼 필드를 제어합니다.</li><li>`eventList.filter`: 관련 개체에서 포함된 결과를 제한하는 기준을 지정합니다. 내보내기에 필요한 최소 값(일반적으로 날짜)이 필요합니다.</li><li>`eventList.filter.fromIngestTimestamp`: 시간 시리즈 이벤트를 제공된 타임스탬프 이후에 인제스트된 이벤트로 필터링합니다. 이벤트 시간 자체가 아니라 이벤트에 대한 수집 시간입니다.</li></ul> |
+| `additionalFields.eventList` | *(선택 사항)* 다음 설정 중 하나 이상을 제공하여 하위 또는 관련 개체에 대해 내보낸 시계열 이벤트 필드를 제어합니다.<ul><li>`eventList.fields`:내보낼 필드를 제어합니다.</li><li>`eventList.filter`:관련 개체에서 포함된 결과를 제한하는 기준을 지정합니다. 내보내기에 필요한 최소 값(일반적으로 날짜)이 필요합니다.</li><li>`eventList.filter.fromIngestTimestamp`:시간 시리즈 이벤트를 제공된 타임스탬프 이후에 인제스트된 이벤트로 필터링합니다. 이벤트 시간 자체가 아니라 이벤트에 대한 수집 시간입니다.</li></ul> |
 | `destination` | **(필수)** 내보낸 데이터의 대상 정보:<ul><li>`destination.datasetId`: **(필수)** 데이터를 내보낼 데이터 세트의 ID입니다.</li><li>`destination.segmentPerBatch`: *(선택 사항)* 제공되지 않을 경우 기본적으로 제공되는 부울 값 `false`. 값이 모든 세그먼트 ID를 단일 배치 ID로 `false` 내보냅니다. 하나의 세그먼트 ID를 하나의 배치 ID로 `true` 내보내는 값. 값을 설정할 경우 일괄 내보내기 성능에 영향을 줄 `true` 수 있습니다.</li></ul> |
 | `schema.name` | **(필수)** 데이터를 내보낼 데이터 세트와 연관된 스키마의 이름입니다. |
 
@@ -406,7 +405,7 @@ curl -X GET \
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `batchId` | 프로필 데이터를 읽을 때 조회 목적으로 사용되는 성공적인 내보내기에서 만들어진 배치의 식별자입니다. |
+| `batchId` | 프로필 데이터를 읽을 때 조회 목적으로 사용되는 성공적인 내보내기에서 생성된 배치의 식별자입니다. |
 
 ## 내보내기 작업 취소
 
