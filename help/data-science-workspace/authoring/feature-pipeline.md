@@ -1,11 +1,10 @@
 ---
 keywords: Experience Platform;Tutorial;feature pipeline;Data Science Workspace;popular topics
-solution: Adobe Experience Platform Data Science Workspace
 title: 피쳐 파이프라인 만들기
 topic: Tutorial
 description: Adobe Experience Platform을 사용하면 Sensei Machine Learning Framework 런타임을 통해 기능 엔지니어링을 규모에 맞게 수행할 수 있는 맞춤형 기능 파이프라인을 구축 및 제작할 수 있습니다. 이 문서에서는 기능 파이프라인에서 발견되는 다양한 클래스에 대해 설명하고 PySpark에서 모델 작성 SDK를 사용하여 사용자 정의 기능 파이프라인을 만드는 단계별 자습서를 제공합니다.
 translation-type: tm+mt
-source-git-commit: 76e6e1a5484dce0a4640c2ce1f43cf7d84e049bf
+source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
 workflow-type: tm+mt
 source-wordcount: '1426'
 ht-degree: 0%
