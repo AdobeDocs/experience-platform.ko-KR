@@ -1,11 +1,10 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;unified profile;Unified Profile;unified;Profile;rtcp;enable profile;Enable profile;Union schema;UNION PROFILE;union profile
-solution: Adobe Experience Platform
 title: 실시간 고객 프로필 사용 안내서
 topic: guide
 description: 실시간 고객 프로파일은 온라인, 오프라인, CRM 및 서드파티 데이터를 비롯한 다양한 채널의 데이터를 취합하여 각 개별 고객에 대한 전체적인 관점을 생성합니다. 이 문서는 Adobe Experience Platform 사용자 인터페이스에서 실시간 고객 프로필과 상호 작용하기 위한 가이드 역할을 합니다.
 translation-type: tm+mt
-source-git-commit: e94278c1b64e1d940f55861518c78cca24822c1b
+source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
 workflow-type: tm+mt
 source-wordcount: '1292'
 ht-degree: 0%
