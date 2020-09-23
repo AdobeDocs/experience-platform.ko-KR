@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
-solution: Adobe Experience Platform
 title: 정책 병합 - 실시간 고객 프로필 API
 topic: guide
 translation-type: tm+mt
-source-git-commit: 95b4964f4d506a7f5618590fe43116e2297be22e
+source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
 workflow-type: tm+mt
 source-wordcount: '2382'
 ht-degree: 1%
