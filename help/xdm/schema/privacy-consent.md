@@ -1,11 +1,10 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;consent;Consent;preferences;Preferences;privacyOptOuts;marketingPreferences;optOutType;basisOfProcessing;consent;Consent
-solution: Adobe Experience Platform
 title: 개인 정보 혼합 개요
 description: 개인 정보/마케팅 기본 설정(동의) 혼합은 CMP와 고객의 다른 소스에서 생성된 사용자 권한 및 기본 설정의 수집을 지원하기 위한 XDM(Experience Data Model) 혼합입니다. 이 문서에서는 믹싱에서 제공하는 다양한 필드의 구조와 용도에 대해 설명합니다.
 topic: guide
 translation-type: tm+mt
-source-git-commit: 172710c62b6f60de74e05364edb1191fbba0ff64
+source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
 workflow-type: tm+mt
 source-wordcount: '1827'
 ht-degree: 1%
