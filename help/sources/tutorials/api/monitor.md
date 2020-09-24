@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;monitor dataflows;flow service
 solution: Experience Platform
 title: 흐름 및 실행 모니터링
 topic: overview
+type: Tutorial
 description: 이 자습서에서는 Flow Service API를 사용하여 흐름 실행 데이터, 오류 및 지표를 모니터링하기 위한 단계를 설명합니다.
 translation-type: tm+mt
-source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '617'
 ht-degree: 1%
