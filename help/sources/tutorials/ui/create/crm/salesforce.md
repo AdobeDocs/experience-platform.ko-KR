@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;Salesforce;salesforce
 solution: Experience Platform
 title: UI에서 Salesforce 소스 커넥터 만들기
 topic: overview
+type: Tutorial
 description: 이 자습서에서는 플랫폼 사용자 인터페이스를 사용하여 Salesforce 소스 커넥터를 만드는 단계를 제공합니다.
 translation-type: tm+mt
-source-git-commit: f82dfee2c75a0b8b2ec1615266780b309152ead4
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '452'
 ht-degree: 1%
