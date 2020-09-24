@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;manage decisioning;decisioning
 solution: Experience Platform
 title: API를 사용하여 의사 결정 서비스 엔티티 관리
 topic: tutorial
+type: Tutorial
 description: '이 문서에서는 Adobe Experience Platform API를 사용하는 의사 결정 서비스 업체 관련 작업에 대한 자습서를 제공합니다. '
 translation-type: tm+mt
-source-git-commit: f4a4e65a087313dc4e2414f999e021e3f6e17137
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '7239'
 ht-degree: 0%
