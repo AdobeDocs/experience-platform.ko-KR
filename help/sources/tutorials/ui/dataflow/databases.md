@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;database connector
 solution: Experience Platform
 title: UI에서 데이터베이스 커넥터에 대한 데이터 흐름 구성
 topic: overview
+type: Tutorial
 description: 데이터 흐름(Dataflow)은 소스에서 플랫폼 데이터 집합으로 데이터를 검색하고 인제스트하는 예약된 작업입니다. 이 자습서에서는 데이터베이스 계정을 사용하여 새 데이터 흐름을 구성하는 단계를 제공합니다.
 translation-type: tm+mt
-source-git-commit: 63eb8407617cda64f3f3b0cefd6bf427314e0216
+source-git-commit: eb6505bdcad9eee6d7e9674504223ca919f19c34
 workflow-type: tm+mt
 source-wordcount: '1445'
 ht-degree: 0%
