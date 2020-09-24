@@ -4,8 +4,9 @@ description: Adobe Experience Platform의 소스 커넥터는 예약된 기준�
 solution: Experience Platform
 title: 데이터 흐름 삭제
 topic: overview
+type: Tutorial
 translation-type: tm+mt
-source-git-commit: 6bd5dc5a68fb2814ab99d43b34f90aa7e50aa463
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '449'
 ht-degree: 1%
