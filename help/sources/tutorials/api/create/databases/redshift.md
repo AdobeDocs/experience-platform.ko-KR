@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;redshift;Redshift;Amazon Redsh
 solution: Experience Platform
 title: Flow Service API를 사용하여 Amazon Redshift 커넥터 만들기
 topic: overview
+type: Tutorial
 description: 이 자습서는 Flow Service API를 사용하여 Experience Platform을 Amazon Redshift(이하 "Redshift"라 한다)에 연결하는 단계를 단계별로 안내합니다.
 translation-type: tm+mt
-source-git-commit: 5959d4344ec1c16542de045899ce74beb39a7bc4
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '682'
 ht-degree: 1%
