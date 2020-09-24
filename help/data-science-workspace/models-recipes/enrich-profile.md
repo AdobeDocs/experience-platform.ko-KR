@@ -2,10 +2,11 @@
 keywords: Experience Platform;machine learning model;Data Science Workspace;Real-time Customer Profile;popular topics;machine learning insights
 solution: Experience Platform
 title: 머신 러닝 인사이트를 통해 실시간 고객 프로파일 강화
-topic: Tutorial
+topic: tutorial
+type: Tutorial
 description: 이 문서에서는 머신 러닝 인사이트를 활용하여 실시간 고객 프로파일을 강화할 수 있는 단계별 튜토리얼을 제공하고, 다음 섹션으로 세분화된 단계를 통해 출력 스키마/데이터 세트를 만들고, 출력 스키마/데이터 세트를 구성하고, 세그먼트 빌더를 사용하여 세그먼트를 만들 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '1230'
 ht-degree: 0%
