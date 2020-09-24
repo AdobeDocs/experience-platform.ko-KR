@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;decision events;decision event
 solution: Experience Platform
 title: API를 사용하여 의사 결정 서비스 런타임 사용
 topic: tutorial
+type: Tutorial
 description: '이 문서에서는 Adobe Experience Platform API를 사용하여 의사 결정 서비스의 런타임 서비스를 사용하기 위한 자습서를 제공합니다. '
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '2017'
 ht-degree: 0%
