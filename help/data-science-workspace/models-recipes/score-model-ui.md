@@ -2,10 +2,11 @@
 keywords: Experience Platform;score a model;Data Science Workspace;popular topics;ui;scoring run;scoring results
 solution: Experience Platform
 title: 모델 점수 지정(UI)
-topic: Tutorial
+topic: tutorial
+type: Tutorial
 description: 'Adobe Experience Platform 데이터 과학 작업 공간에서 채점하는 방법은 입력 데이터를 기존 트레이닝된 모델에 제공함으로써 달성됩니다. 그러면 점수 결과가 저장되고 지정된 출력 데이터 세트에 새로운 일괄 처리로 표시됩니다. '
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '609'
 ht-degree: 0%
