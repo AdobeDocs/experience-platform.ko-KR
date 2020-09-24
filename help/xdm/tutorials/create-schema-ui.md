@@ -5,9 +5,9 @@ title: 스키마 편집기를 사용하여 스키마 만들기
 topic: tutorials
 description: 이 자습서에서는 Experience Platform 내의 스키마 편집기를 사용하여 스키마를 만드는 단계를 설명합니다.
 translation-type: tm+mt
-source-git-commit: 58e0ee234492731d5f875ab845fca11fcda3539b
+source-git-commit: f0d3aad649fa550443db0fc5168c848ae85fb459
 workflow-type: tm+mt
-source-wordcount: '3797'
+source-wordcount: '3835'
 ht-degree: 0%
 
 ---
@@ -143,7 +143,7 @@ UI의 [!UICONTROL 스키마] 작업 영역에서는 [!DNL Platform] 조직에 �
 
 ![](../images/tutorials/create-schema/loyalty_details_structure.png)
 
-&quot; **[!UICONTROL Add field]** next to &quot;[!DNL Loyalty Members]to create a new node in the structure. 이 노드(이 예에서 &quot;_tenantId&quot;라고 함)는 IMS 조직의 테넌트 ID 앞에 밑줄이 있는 것을 나타냅니다. 테넌트 ID가 존재하면 추가할 필드가 조직의 네임스페이스에 포함되어 있음을 나타냅니다.
+&quot; **[!UICONTROL Add field]** next to &quot;[!DNL Loyalty Members]to create a new node in the structure. 이 노드 `_tenantId` (이 예에서 호출됨)는 IMS 조직의 테넌트 ID 앞에 밑줄이 있는 것을 나타냅니다. 테넌트 ID가 존재하면 추가할 필드가 조직의 네임스페이스에 포함되어 있음을 나타냅니다.
 
 즉, 추가하려는 필드는 조직에 고유하며 조직만 액세스할 수 있는 특정 영역 [!DNL Schema Registry] 에 저장됩니다. 정의한 필드는 항상 테넌트 네임스페이스에 추가되어야 다른 표준 클래스, 혼합, 데이터 유형 및 필드의 이름과 충돌하지 않습니다.
 
@@ -236,6 +236,10 @@ UI의 [!UICONTROL 스키마] 작업 영역에서는 [!DNL Platform] 조직에 �
 스키마에서 특정 필드를 찾는 경우 검색 막대를 사용하여 표시되는 필드를 이름에 따라 필터링할 수도 있습니다.
 
 ![](../images/tutorials/create-schema/search.png)
+
+>[!IMPORTANT]
+>
+>검색 함수는 일치하는 필드를 표시할 때 선택한 믹신 필터를 고려합니다. 검색 쿼리가 원하는 결과를 표시하지 않는 경우 관련 혼합을 필터링하지 않고 있는지 다시 확인해야 합니다.
 
 ## 스키마 필드를 ID 필드로 설정 {#identity-field}
 
