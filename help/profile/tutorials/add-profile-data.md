@@ -2,9 +2,10 @@
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;enable profile;Enable profile
 title: 실시간 고객 프로필에 데이터 추가
 topic: tutorial
+type: Tutorial
 description: 이 자습서에서는 실시간 고객 프로필에 데이터를 추가하는 데 필요한 단계를 간략하게 설명합니다.
 translation-type: tm+mt
-source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '368'
 ht-degree: 0%
