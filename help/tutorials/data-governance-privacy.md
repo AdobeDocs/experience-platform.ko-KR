@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: 데이터 거버넌스 및 개인 정보 보호 자습서
 topic: tutorial
+type: Tutorial
 description: 이 문서에서는 Adobe Experience Platform 데이터 거버넌스 및 Adobe Experience Platform Privacy Service과 관련하여 제공되는 다양한 자습서에 대한 개요를 제공합니다.
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '496'
 ht-degree: 0%
