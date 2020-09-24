@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;segment;Segment;create segment
 solution: Experience Platform
 title: 세그먼트 만들기
 topic: tutorial
+type: Tutorial
 description: 이 문서에서는 Adobe Experience Platform 세그멘테이션 서비스 API를 사용하여 세그먼트 정의를 개발, 테스트, 미리 보기 및 저장하기 위한 자습서를 제공합니다.
 translation-type: tm+mt
-source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '916'
 ht-degree: 0%
