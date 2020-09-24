@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: XDM 스키마 및 설명자
 topic: tutorial
+type: Tutorial
 description: 표준화 및 상호 운용성은 Adobe Experience Platform의 핵심 개념입니다. Adobe을 기반으로 하는 XDM(Experience Data Model)은 고객 경험 데이터를 표준화하고 고객 경험 관리를 위한 스키마를 정의하는 것입니다. 스키마는 Experience Platform에서 데이터를 설명하는 표준 방식으로서, 스키마를 따르는 모든 데이터를 조직 간의 충돌 없이 다시 사용할 수 있으며 여러 조직 간에 공유할 수도 있습니다.
 translation-type: tm+mt
-source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '473'
 ht-degree: 0%
