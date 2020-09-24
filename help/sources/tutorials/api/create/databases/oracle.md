@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;Oracle;oracle
 solution: Experience Platform
 title: Flow Service API를 사용하여 Oracle 커넥터 생성
 topic: overview
+type: Tutorial
 description: 이 자습서에서는 Flow Service API를 사용하여 Oracle을 Experience Platform에 연결하는 단계를 단계별로 안내합니다.
 translation-type: tm+mt
-source-git-commit: 5959d4344ec1c16542de045899ce74beb39a7bc4
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '535'
 ht-degree: 2%
