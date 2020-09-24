@@ -4,8 +4,9 @@ description: 이 자습서에서는 분류 데이터를 Adobe Experience Platfor
 solution: Experience Platform
 title: UI에서 Adobe Analytics 분류 데이터 커넥터 만들기
 topic: overview
+type: Tutorial
 translation-type: tm+mt
-source-git-commit: 0da686743e8bc57d310f7eff6f1bf812a8f31238
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '624'
 ht-degree: 2%
