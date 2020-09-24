@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: 데이터 통합 자습서
 topic: tutorial
+type: Tutorial
 description: 데이터 수집에는 일괄 처리, 스트리밍 통합 및 소스 커넥터를 사용한 습득 등이 포함됩니다.
 translation-type: tm+mt
-source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '492'
 ht-degree: 0%
