@@ -2,10 +2,11 @@
 keywords: Experience Platform;home;popular topics;ui;UI;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema editor;Schema Editor;schema;Schema;schemas;Schemas;create
 solution: Experience Platform
 title: 스키마 편집기를 사용하여 스키마 만들기
-topic: tutorials
+topic: tutorial
+type: Tutorials
 description: 이 자습서에서는 Experience Platform 내의 스키마 편집기를 사용하여 스키마를 만드는 단계를 설명합니다.
 translation-type: tm+mt
-source-git-commit: f0d3aad649fa550443db0fc5168c848ae85fb459
+source-git-commit: eb6505bdcad9eee6d7e9674504223ca919f19c34
 workflow-type: tm+mt
 source-wordcount: '3835'
 ht-degree: 0%
