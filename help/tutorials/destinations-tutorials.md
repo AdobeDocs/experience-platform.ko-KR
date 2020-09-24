@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;destinations tutorial
 solution: Experience Platform
 title: API를 사용하여 대상 생성 및 데이터 활성화
 topic: tutorial
+type: Tutorial
 description: 다양한 유형의 대상을 만들고 데이터를 활성화하는 방법을 알아봅니다.
 translation-type: tm+mt
-source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '78'
 ht-degree: 10%
