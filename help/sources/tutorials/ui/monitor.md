@@ -4,8 +4,9 @@ description: Adobe Experience Platform의 소스 커넥터는 예약된 기준�
 solution: Experience Platform
 title: 계정 및 데이터 흐름 모니터링
 topic: overview
+type: Tutorial
 translation-type: tm+mt
-source-git-commit: 8f752d6a08496f9583627781d9143ee7f9159bf0
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '1097'
 ht-degree: 1%
