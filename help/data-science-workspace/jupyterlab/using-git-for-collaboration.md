@@ -2,10 +2,11 @@
 keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;popular topics;Git;Github
 solution: Experience Platform
 title: Git을 사용하여 JupiterLab에서 공동 작업
-topic: Tutorial
+topic: tutorial
+type: Tutorial
 description: Git은 소프트웨어 개발 중에 소스 코드의 변경 사항을 추적할 수 있는 분산 버전 제어 시스템입니다. Git은 데이터 과학 작업 공간 JupiterLab 환경 내에 사전 설치되어 있습니다.
 translation-type: tm+mt
-source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '280'
 ht-degree: 1%
@@ -27,7 +28,7 @@ ht-degree: 1%
 
 ## 환경 [!DNL Git] 에 [!DNL Data Science Workspace JupyterLab Notebooks] 연결
 
-먼저 [!DNL Adobe Experience Platform] [[!DNL JupyterLabs Notebooks]](https://platform.adobe.com/notebooks/jupyterLab) 환경을 시작하고 탐색합니다.
+먼저 [!DNL Adobe Experience Platform] [!DNL JupiterLabs [](https://platform.adobe.com/notebooks/jupyterLab) 노트북] 환경을 시작하고 탐색합니다.
 
 내에서 파일 [!DNL JupyterLab]을 **[!UICONTROL 선택한]** 다음 새로 만들기 위로 **[!UICONTROL 마우스를 가져갑니다]**. 표시되는 드롭다운에서 터미널 **[!UICONTROL 을 선택합니다]**.
 
