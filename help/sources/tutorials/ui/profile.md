@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;activate inbound data;populate
 solution: Experience Platform
 title: 인바운드 소스 데이터를 활성화하여 고객 프로필 채우기
 topic: overview
+type: Tutorial
 description: 소스 커넥터의 인바운드 데이터를 사용하여 실시간 고객 프로필 데이터를 향상시키고 채울 수 있습니다.
 translation-type: tm+mt
-source-git-commit: fb60e11b9502c31e654d3fbe5dc240ace9429332
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '494'
 ht-degree: 0%
