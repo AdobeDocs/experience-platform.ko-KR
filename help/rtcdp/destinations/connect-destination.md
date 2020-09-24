@@ -2,9 +2,10 @@
 keywords: connect destination;destination connect;how to connect destination
 title: Adobe 실시간 고객 데이터 플랫폼의 대상에 연결
 seo-title: Adobe 실시간 고객 데이터 플랫폼의 대상에 연결
+type: Tutorial
 description: 이 자습서에서는 Adobe 실시간 고객 데이터 플랫폼에서 대상을 연결하는 단계를 나열합니다
 translation-type: tm+mt
-source-git-commit: 4c45da353b1deeb66b0dedb37450158f4bdc2a7c
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '126'
 ht-degree: 0%
