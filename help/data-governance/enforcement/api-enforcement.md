@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;Policy enforcement;Automatic e
 solution: Experience Platform
 title: 정책 서비스 API를 사용하여 데이터 사용 정책 적용
 topic: enforcement
+type: Tutorial
 description: 데이터에 대한 데이터 사용 레이블을 만들고 해당 레이블에 대한 마케팅 작업에 대한 사용 정책을 만들었다면 정책 서비스 API를 사용하여 데이터 세트에 대해 수행된 마케팅 작업 또는 임의 레이블 그룹이 정책 위반인지 여부를 평가할 수 있습니다. 그런 다음 API 응답을 기반으로 정책 위반을 처리하도록 자체 내부 프로토콜을 설정할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: d99a0a9211b5384b96e959d36f414cae47ab5f4e
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '936'
 ht-degree: 1%
