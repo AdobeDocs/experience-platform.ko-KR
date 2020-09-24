@@ -2,10 +2,11 @@
 keywords: Experience Platform;import packaged recipe;Data Science Workspace;popular topics;recipes;ui;create engine
 solution: Experience Platform
 title: 패키지된 레서피 가져오기(UI)
-topic: Tutorial
+topic: tutorial
+type: Tutorial
 description: 이 자습서에서는 제공된 소매 판매 예제를 사용하여 패키지된 레서피를 구성하고 가져오는 방법에 대한 통찰력을 제공합니다. 이 튜토리얼이 끝나면 Adobe Experience Platform 데이터 과학 작업 공간에서 모델을 생성, 교육 및 평가할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '1803'
 ht-degree: 0%
