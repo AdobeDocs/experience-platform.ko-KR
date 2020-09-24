@@ -2,10 +2,11 @@
 keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;popular topics;analyze data notebooks
 solution: Experience Platform
 title: 노트북으로 데이터 분석
-topic: Tutorial
+topic: tutorial
+type: Tutorial
 description: 이 자습서에서는 데이터 과학 작업 공간에 내장된 Jupiter 노트북을 사용하여 데이터에 액세스하고, 탐색하고, 시각화하는 방법에 중점을 둡니다.
 translation-type: tm+mt
-source-git-commit: 3876c33a2d20481f45bd12eda3921898e9e65654
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '1731'
 ht-degree: 0%
