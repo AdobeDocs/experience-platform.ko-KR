@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;Real-time Customer Profile;Ide
 solution: Experience Platform
 title: 실시간 고객 프로필 자습서
 topic: tutorial
+type: Tutorial
 description: 이 문서에서는 관련 단계에 대해 설명하고 각 개별 워크플로우를 완료하기 위한 자습서에 대한 링크를 제공합니다.
 translation-type: tm+mt
-source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '466'
 ht-degree: 0%
