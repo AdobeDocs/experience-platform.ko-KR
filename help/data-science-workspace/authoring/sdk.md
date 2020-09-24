@@ -5,7 +5,7 @@ title: SDK 개발자 가이드
 topic: Overview
 description: 모델 작성 SDK를 사용하면 Adobe Experience Platform 데이터 과학 작업 공간에서 사용할 수 있는 맞춤형 기계 학습 레서피 및 기능 파이프라인을 개발할 수 있으며 PySpark 및 Spark(Scala)에서 구현 가능한 템플릿을 제공할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 2a528c705a7aa610f57047be39be1ce9886ce44c
+source-git-commit: e1b8bc378c2f72862c0c28e44dceb8a35e44a29e
 workflow-type: tm+mt
 source-wordcount: '964'
 ht-degree: 1%
@@ -37,14 +37,14 @@ DataLoader 클래스는 원시 입력 데이터의 검색, 필터링 및 반환�
     <tbody>
         <tr>
             <td>
-                <p><code class=" language-undefined">load(self, configProperties, spark)</code></p>
+                <p><code>load(self, configProperties, spark)</code></p>
                 <p>Pendans DataFrame으로 플랫폼 데이터 로드 및 반환</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>:자체 참조</li>
-                    <li><code class=" language-undefined">configProperties</code>:구성 속성 맵</li>
-                    <li><code class=" language-undefined">spark</code>:Spark 세션</li>
+                    <li><code>self</code>:자체 참조</li>
+                    <li><code>configProperties</code>:구성 속성 맵</li>
+                    <li><code>spark</code>:Spark 세션</li>
                 </ul>
             </td>
         </tr>
@@ -65,13 +65,13 @@ DataLoader 클래스는 원시 입력 데이터의 검색, 필터링 및 반환�
     <tbody>
         <tr>
             <td>
-                <p><code class=" language-undefined">load(configProperties, sparkSession)</code></p>
+                <p><code>load(configProperties, sparkSession)</code></p>
                 <p>플랫폼 데이터를 DataFrame으로 로드 및 반환</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">configProperties</code>:구성 속성 맵</li>
-                    <li><code class=" language-undefined">sparkSession</code>:Spark 세션</li>
+                    <li><code>configProperties</code>:구성 속성 맵</li>
+                    <li><code>sparkSession</code>:Spark 세션</li>
                 </ul>
             </td>
         </tr>
@@ -211,14 +211,14 @@ DataSaver 클래스는 점수 지정 또는 기능 엔지니어링 등 출력 �
     <tbody>
         <tr>
             <td>
-                <p><code class=" language-undefined">save(self, configProperties, dataframe)</code></p>
+                <p><code>save(self, configProperties, dataframe)</code></p>
                 <p>출력 데이터를 DataFrame으로 수신하여 플랫폼 데이터 세트에 저장</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>:자체 참조</li>
-                    <li><code class=" language-undefined">configProperties</code>:구성 속성 맵</li>
-                    <li><code class=" language-undefined">dataframe</code>:DataFrame 형식으로 저장할 데이터</li>
+                    <li><code>self</code>:자체 참조</li>
+                    <li><code>configProperties</code>:구성 속성 맵</li>
+                    <li><code>dataframe</code>:DataFrame 형식으로 저장할 데이터</li>
                 </ul>
             </td>
         </tr>
@@ -239,13 +239,13 @@ DataSaver 클래스는 점수 지정 또는 기능 엔지니어링 등 출력 �
     <tbody>
         <tr>
             <td>
-                <p><code class=" language-undefined">save(configProperties, dataFrame)</code></p>
+                <p><code>save(configProperties, dataFrame)</code></p>
                 <p>출력 데이터를 DataFrame으로 수신하여 플랫폼 데이터 세트에 저장</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">configProperties</code>:구성 속성 맵</li>
-                    <li><code class=" language-undefined">dataFrame</code>:DataFrame 형식으로 저장할 데이터</li>
+                    <li><code>configProperties</code>:구성 속성 맵</li>
+                    <li><code>dataFrame</code>:DataFrame 형식으로 저장할 데이터</li>
                 </ul>
             </td>
         </tr>
@@ -413,14 +413,14 @@ DatasetTransformer 클래스는 데이터 집합의 구조를 수정 및 변환�
     <tbody>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">transform(self, configProperties, dataset)</code></p>
+                <p><i>abstract</i><br/><code>transform(self, configProperties, dataset)</code></p>
                 <p>데이터 세트를 입력으로 가져와 새로운 파생 데이터 세트를 출력합니다.</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>:자체 참조</li>
-                    <li><code class=" language-undefined">configProperties</code>:구성 속성 맵</li>
-                    <li><code class=" language-undefined">dataset</code>:변환용 입력 데이터 집합</li>
+                    <li><code>self</code>:자체 참조</li>
+                    <li><code>configProperties</code>:구성 속성 맵</li>
+                    <li><code>dataset</code>:변환용 입력 데이터 집합</li>
                 </ul>
             </td>
         </tr>
@@ -441,13 +441,13 @@ DatasetTransformer 클래스는 데이터 집합의 구조를 수정 및 변환�
     <tbody>
         <tr>
             <td>
-                <p><code class=" language-undefined">transform(configProperties, dataset)</code></p>
+                <p><code>transform(configProperties, dataset)</code></p>
                 <p>데이터 세트를 입력으로 가져와 새로운 파생 데이터 세트를 출력합니다.</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">configProperties</code>:구성 속성 맵</li>
-                    <li><code class=" language-undefined">dataset</code>:변환용 입력 데이터 집합</li>
+                    <li><code>configProperties</code>:구성 속성 맵</li>
+                    <li><code>dataset</code>:변환용 입력 데이터 집합</li>
                 </ul>
             </td>
         </tr>
@@ -472,26 +472,26 @@ FeaturePipelineFactory 클래스에는 피쳐 추출 알고리즘이 포함되�
     <tbody>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">create_pipeline(self, configProperties)</code></p>
+                <p><i>abstract</i><br/><code>create_pipeline(self, configProperties)</code></p>
                 <p>일련의 Spark Transformers가 포함된 Spark Pipeline을 만들어 다시 전송</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>:자체 참조</li>
-                    <li><code class=" language-undefined">configProperties</code>:구성 속성 맵</li>
+                    <li><code>self</code>:자체 참조</li>
+                    <li><code>configProperties</code>:구성 속성 맵</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">get_param_map(self, configProperties, sparkSession)</code></p>
+                <p><i>abstract</i><br/><code>get_param_map(self, configProperties, sparkSession)</code></p>
                 <p>구성 속성에서 매개 변수 맵 검색 및 반환</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>:자체 참조</li>
-                    <li><code class=" language-undefined">configProperties</code>:구성 속성</li>
-                    <li><code class=" language-undefined">sparkSession</code>:Spark 세션</li>
+                    <li><code>self</code>:자체 참조</li>
+                    <li><code>configProperties</code>:구성 속성</li>
+                    <li><code>sparkSession</code>:Spark 세션</li>
                 </ul>
             </td>
         </tr>
@@ -512,24 +512,24 @@ FeaturePipelineFactory 클래스에는 피쳐 추출 알고리즘이 포함되�
     <tbody>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">createPipeline(configProperties)</code></p>
+                <p><i>abstract</i><br/><code>createPipeline(configProperties)</code></p>
                 <p>여러 개의 트랜스포머가 포함된 파이프라인 생성 및 반환</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">configProperties</code>:구성 속성 맵</li>
+                    <li><code>configProperties</code>:구성 속성 맵</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">getParamMap(configProperties, sparkSession)</code></p>
+                <p><i>abstract</i><br/><code>getParamMap(configProperties, sparkSession)</code></p>
                 <p>구성 속성에서 매개 변수 맵 검색 및 반환</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">configProperties</code>:구성 속성</li>
-                    <li><code class=" language-undefined">sparkSession</code>:Spark 세션</li>
+                    <li><code>configProperties</code>:구성 속성</li>
+                    <li><code>sparkSession</code>:Spark 세션</li>
                 </ul>
             </td>
         </tr>
@@ -554,53 +554,53 @@ PipelineFactory 클래스는 트레이닝 로직과 알고리즘이 파이프라
     <tbody>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">apply(self, configProperties)</code></p>
+                <p><i>abstract</i><br/><code>apply(self, configProperties)</code></p>
                 <p>모델 트레이닝 및 점수에 대한 로직과 알고리즘이 포함된 스파크 파이프라인 만들기 및 반환</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>:자체 참조</li>
-                    <li><code class=" language-undefined">configProperties</code>:구성 속성</li>
+                    <li><code>self</code>:자체 참조</li>
+                    <li><code>configProperties</code>:구성 속성</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">train(self, configProperties, dataframe)</code></p>
+                <p><i>abstract</i><br/><code>train(self, configProperties, dataframe)</code></p>
                 <p>모델을 교육할 로직과 알고리즘이 포함된 사용자 지정 파이프라인을 반환합니다. Spark Pipeline을 사용하는 경우 이 메서드는 필요하지 않습니다</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>:자체 참조</li>
-                    <li><code class=" language-undefined">configProperties</code>:구성 속성</li>
-                    <li><code class=" language-undefined">dataframe</code>:트레이닝 입력을 위한 기능 데이터 세트</li>
+                    <li><code>self</code>:자체 참조</li>
+                    <li><code>configProperties</code>:구성 속성</li>
+                    <li><code>dataframe</code>:트레이닝 입력을 위한 기능 데이터 세트</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">score(self, configProperties, dataframe, model)</code></p>
+                <p><i>abstract</i><br/><code>score(self, configProperties, dataframe, model)</code></p>
                 <p>교육된 모델을 사용하여 점수를 매기고 결과를 반환합니다.</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>:자체 참조</li>
-                    <li><code class=" language-undefined">configProperties</code>:구성 속성</li>
-                    <li><code class=" language-undefined">dataframe</code>:점수 지정을 위한 데이터 세트 입력</li>
-                    <li><code class=" language-undefined">model</code>:채점하는 데 사용되는 트레이닝된 모델</li>
+                    <li><code>self</code>:자체 참조</li>
+                    <li><code>configProperties</code>:구성 속성</li>
+                    <li><code>dataframe</code>:점수 지정을 위한 데이터 세트 입력</li>
+                    <li><code>model</code>:채점하는 데 사용되는 트레이닝된 모델</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">get_param_map(self, configProperties, sparkSession)</code></p>
+                <p><i>abstract</i><br/><code>get_param_map(self, configProperties, sparkSession)</code></p>
                 <p>구성 속성에서 매개 변수 맵 검색 및 반환</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>:자체 참조</li>
-                    <li><code class=" language-undefined">configProperties</code>:구성 속성</li>
-                    <li><code class=" language-undefined">sparkSession</code>:Spark 세션</li>
+                    <li><code>self</code>:자체 참조</li>
+                    <li><code>configProperties</code>:구성 속성</li>
+                    <li><code>sparkSession</code>:Spark 세션</li>
                 </ul>
             </td>
         </tr>
@@ -621,24 +621,24 @@ PipelineFactory 클래스는 트레이닝 로직과 알고리즘이 파이프라
     <tbody>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">apply(configProperties)</code></p>
+                <p><i>abstract</i><br/><code>apply(configProperties)</code></p>
                 <p>모델 트레이닝 및 점수부여에 대한 로직과 알고리즘이 포함된 파이프라인 생성 및 반환</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">configProperties</code>:구성 속성</li>
+                    <li><code>configProperties</code>:구성 속성</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">getParamMap(configProperties, sparkSession)</code></p>
+                <p><i>abstract</i><br/><code>getParamMap(configProperties, sparkSession)</code></p>
                 <p>구성 속성에서 매개 변수 맵 검색 및 반환</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">configProperties</code>:구성 속성</li>
-                    <li><code class=" language-undefined">sparkSession</code>:Spark 세션</li>
+                    <li><code>configProperties</code>:구성 속성</li>
+                    <li><code>sparkSession</code>:Spark 세션</li>
                 </ul>
             </td>
         </tr>
@@ -663,28 +663,28 @@ MLEvaluator 클래스는 평가 지표를 정의하고 교육 및 데이터 세�
     <tbody>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">split(self, configProperties, dataframe)</code></p>
+                <p><i>abstract</i><br/><code>split(self, configProperties, dataframe)</code></p>
                 <p>입력 데이터 세트를 교육 및 테스트 하위 세트로 분할</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>:자체 참조</li>
-                    <li><code class=" language-undefined">configProperties</code>:구성 속성</li>
-                    <li><code class=" language-undefined">dataframe</code>:분할할 입력 데이터 세트</li>
+                    <li><code>self</code>:자체 참조</li>
+                    <li><code>configProperties</code>:구성 속성</li>
+                    <li><code>dataframe</code>:분할할 입력 데이터 세트</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">evaluate(self, dataframe, model, configProperties)</code></p>
+                <p><i>abstract</i><br/><code>evaluate(self, dataframe, model, configProperties)</code></p>
                 <p>교육된 모델을 평가하고 평가 결과를 반환합니다.</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>:자체 참조</li>
-                    <li><code class=" language-undefined">dataframe</code>:교육 및 테스트 데이터로 구성된 DataFrame</li>
-                    <li><code class=" language-undefined">model</code>:훈련된 모델</li>
-                    <li><code class=" language-undefined">configProperties</code>:구성 속성</li>
+                    <li><code>self</code>:자체 참조</li>
+                    <li><code>dataframe</code>:교육 및 테스트 데이터로 구성된 DataFrame</li>
+                    <li><code>model</code>:훈련된 모델</li>
+                    <li><code>configProperties</code>:구성 속성</li>
                 </ul>
             </td>
         </tr>
@@ -705,26 +705,26 @@ MLEvaluator 클래스는 평가 지표를 정의하고 교육 및 데이터 세�
     <tbody>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">split(configProperties, data)</code></p>
+                <p><i>abstract</i><br/><code>split(configProperties, data)</code></p>
                 <p>입력 데이터 세트를 교육 및 테스트 하위 세트로 분할</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">configProperties</code>:구성 속성</li>
-                    <li><code class=" language-undefined">data</code>:분할할 입력 데이터 세트</li>
+                    <li><code>configProperties</code>:구성 속성</li>
+                    <li><code>data</code>:분할할 입력 데이터 세트</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">evaluate(configProperties, model, data)</code></p>
+                <p><i>abstract</i><br/><code>evaluate(configProperties, model, data)</code></p>
                 <p>교육된 모델을 평가하고 평가 결과를 반환합니다.</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">configProperties</code>:구성 속성</li>
-                    <li><code class=" language-undefined">model</code>:훈련된 모델</li>
-                    <li><code class=" language-undefined">data</code>:교육 및 테스트 데이터로 구성된 DataFrame</li>
+                    <li><code>configProperties</code>:구성 속성</li>
+                    <li><code>model</code>:훈련된 모델</li>
+                    <li><code>data</code>:교육 및 테스트 데이터로 구성된 DataFrame</li>
                 </ul>
             </td>
         </tr>
