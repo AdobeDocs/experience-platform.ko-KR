@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;greenplum;Greenplum
 solution: Experience Platform
 title: Flow Service API를 사용하여 GreenPlum 커넥터 만들기
 topic: overview
+type: Tutorial
 description: 이 자습서에서는 Flow Service API를 사용하여 GreenPlum을 Experience Platform에 연결하는 단계를 단계별로 안내합니다.
 translation-type: tm+mt
-source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '547'
 ht-degree: 2%
