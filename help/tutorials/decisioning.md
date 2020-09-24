@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: 의사 결정 자습서
 topic: tutorial
+type: Tutorial
 description: 의사 결정 서비스는 Adobe Experience Platform에서 실행되는 애플리케이션에서 개인화되고 최적화된 통합 경험을 제작할 수 있는 기능을 제공합니다. 의사 결정 서비스를 사용하여 사용 가능한 선택 항목 세트에서 최상의 옵션을 결정할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '152'
 ht-degree: 0%
