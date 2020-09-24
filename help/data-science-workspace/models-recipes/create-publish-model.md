@@ -2,10 +2,11 @@
 keywords: Experience Platform;machine learning model;Data Science Workspace;popular topics;create and publish a model
 solution: Experience Platform
 title: 기계 학습 모델 연습 만들기 및 게시
-topic: Tutorial
+topic: tutorial
+type: Tutorial
 description: Adobe Experience Platform 데이터 과학 작업 공간은 미리 만들어진 제품 Recommendations 레서피를 사용하여 목표를 달성할 수 있는 방법을 제공합니다. 이 튜토리얼을 따라 소매 데이터에 액세스하고, 이해하고, 기계 학습 모델을 만들고, 최적화하고, 데이터 과학 작업 공간에서 통찰력을 생성하는 방법을 확인하십시오.
 translation-type: tm+mt
-source-git-commit: 78f080fd7598799825c59a4fdfdcaf7d294560a3
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '1595'
 ht-degree: 0%
