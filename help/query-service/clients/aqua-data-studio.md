@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Aqua Data Studio와 연결
 topic: connect
 translation-type: tm+mt
-source-git-commit: d2f098cb9e4aaf5beaad02173a22a25a87a43756
+source-git-commit: 106d5150371a890e2d4c295bf5d12c110c593568
 workflow-type: tm+mt
-source-wordcount: '238'
+source-wordcount: '245'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 - **[!UICONTROL 이름]**:연결 이름입니다.
 - **[!UICONTROL 로그인 이름 및 암호]**:사용할 로그인 자격 증명입니다. 사용자 이름은 형식을 사용합니다 `ORG_ID@AdobeOrg`.
-- **[!UICONTROL 호스트 및 포트]**:호스트 끝점 및 해당 포트 [!DNL Query Service].
+- **[!UICONTROL 호스트 및 포트]**:호스트 끝점 및 해당 포트 [!DNL Query Service]. 에 연결하려면 포트 80을 사용해야 합니다 [!DNL Query Service].
 - **[!UICONTROL 데이터베이스]:** 사용할 데이터베이스입니다.
 
 >[!NOTE]
