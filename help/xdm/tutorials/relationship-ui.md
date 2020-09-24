@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;ui;UI;XDM;XDM system;;experien
 solution: Experience Platform
 title: 스키마 편집기를 사용하여 두 스키마 간의 관계 정의
 description: 이 문서에서는 Experience Platform 사용자 인터페이스의 스키마 편집기를 사용하여 두 스키마 간의 관계를 정의하는 자습서를 제공합니다.
-topic: tutorials
+topic: tutorial
+type: Tutorials
 translation-type: tm+mt
-source-git-commit: 348ac63c0b13ddf87bf786a42688962b0b220ded
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '910'
 ht-degree: 0%
