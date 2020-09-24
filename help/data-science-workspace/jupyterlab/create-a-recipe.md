@@ -2,10 +2,11 @@
 keywords: Experience Platform;JupyterLab;recipe;notebooks;Data Science Workspace;popular topics;create recipe
 solution: Experience Platform
 title: Jupiter 노트북을 사용하여 레시피 만들기
-topic: Tutorial
+topic: tutorial
+type: Tutorial
 description: 이 튜토리얼은 두 개의 기본 섹션을 살펴봅니다. 먼저 JupiterLab 노트북 내에서 템플릿을 사용하여 기계 학습 모델을 만듭니다. 그런 다음 JupiterLab 내에서 레서피 워크플로우에 맞게 노트북을 실행함으로써 데이터 과학 작업 공간 내에 레서피 작업을 만들 수 있습니다.
 translation-type: tm+mt
-source-git-commit: d9bf87e41fe002ac1d70a241b48c7b9fd1139d6c
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '2335'
 ht-degree: 0%
