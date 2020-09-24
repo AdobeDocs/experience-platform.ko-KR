@@ -1,11 +1,12 @@
 ---
 keywords: activate destination;activate destinations;activate data
 title: 대상에 프로필 및 세그먼트 활성화
+type: Tutorial
 seo-title: 대상에 프로필 및 세그먼트 활성화
 description: 세그먼트를 대상에 매핑하여 Adobe의 실시간 고객 데이터 플랫폼에 있는 데이터를 활성화합니다. 이를 수행하려면 아래 단계를 따르십시오.
 seo-description: 세그먼트를 대상에 매핑하여 Adobe의 실시간 고객 데이터 플랫폼에 있는 데이터를 활성화합니다. 이를 수행하려면 아래 단계를 따르십시오.
 translation-type: tm+mt
-source-git-commit: 22bca041673cec5eee54ed4234aba19eca470441
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '1552'
 ht-degree: 0%
@@ -219,7 +220,7 @@ Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_202004100
 
 >[!TIP]
 >
->Adobe 실시간 CDP를 통합하고 이전 고객 채우기를 [!DNL Facebook] 지원합니다. 세그먼트를 대상에 활성화하면 모든 내역 세그먼트 자격 [!DNL Facebook] 이 전송됩니다.
+>Adobe 실시간 CDP를 통합하고 이전 고객 채우기를 [!DNL Facebook] 지원합니다. 세그먼트를 대상으로 활성화하면 모든 내역 세그먼트 자격 [!DNL Facebook] 이 전송됩니다.
 
 ## 활성화 비활성화 {#disable-activation}
 
