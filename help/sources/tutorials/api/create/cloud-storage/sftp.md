@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: 이 자습서에서는 Flow Service API를 사용하여 Experience Platform을 SFTP(Secure File Transfer Protocol) 서버에 연결하는 단계를 안내합니다.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 781a26486a42f304308f567284cef53d591aa124
 workflow-type: tm+mt
-source-wordcount: '568'
+source-wordcount: '793'
 ht-degree: 2%
 
 ---
@@ -44,6 +44,8 @@ SFTP에 [!DNL Flow Service] 연결하려면 다음 연결 속성에 대한 값�
 | `host` | SFTP 서버와 연결된 이름 또는 IP 주소입니다. |
 | `username` | SFTP 서버에 액세스할 수 있는 사용자 이름입니다. |
 | `password` | SFTP 서버의 암호입니다. |
+| `privateKeyContent` | Base64로 인코딩된 SSH 개인 키 콘텐츠입니다. SSH 개인 키 OpenSSH(RSA/DSA) 형식입니다. |
+| `passPhrase` | 키 파일 또는 키 콘텐트가 암호 구문으로 보호되는 경우 개인 키를 해독하기 위한 암호 구문 또는 암호입니다. PrivateKeyContent가 암호로 보호된 경우 이 매개 변수를 PrivateKeyContent 암호와 함께 값으로 사용해야 합니다. |
 
 ### 샘플 API 호출 읽기
 
@@ -68,6 +70,10 @@ API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 
 ## 연결 만들기
 
 연결은 소스를 지정하고 해당 소스에 대한 자격 증명을 포함합니다. 여러 소스 커넥터를 만들어 다른 데이터를 가져올 수 있으므로 SFTP 계정당 하나의 연결만 필요합니다.
+
+### 기본 인증을 사용하여 SFTP 연결 만들기
+
+기본 인증을 사용하여 SFTP 연결을 만들려면 연결 [!DNL Flow Service]`host`, 및 `userName``password`등에 대한 값을 제공하면서 API에 POST을 요청합니다.
 
 **API 형식**
 
@@ -105,7 +111,62 @@ curl -X POST \
 | `auth.params.host` | SFTP 서버의 호스트 이름입니다. |
 | `auth.params.username` | SFTP 서버와 연결된 사용자 이름입니다. |
 | `auth.params.password` | SFTP 서버와 연결된 암호입니다. |
-| `connectionSpec.id` | STFP 서버 연결 사양 ID: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
+| `connectionSpec.id` | SFTP 서버 연결 사양 ID: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
+
+**응답**
+
+성공적인 응답은 새로 만든 연결의 고유 식별자(`id`)를 반환합니다. 이 ID는 다음 자습서에서 SFTP 서버를 탐색하는 데 필요합니다.
+
+```json
+{
+    "id": "bf367b0d-3d9b-4060-b67b-0d3d9bd06094",
+    "etag": "\"1700cc7b-0000-0200-0000-5e3b3fba0000\""
+}
+```
+
+### SSH 공개 키 인증을 사용하여 SFTP 연결 만들기
+
+SSH 공개 키 인증을 사용하여 SFTP 연결을 만들려면 연결 [!DNL Flow Service]`host`, `userName`및 `privateKeyContent``passPhrase`API에 대한 값을 제공하면서 POST을 요청합니다.
+
+**API 형식**
+
+```http
+POST /connections
+```
+
+**요청**
+
+```shell
+curl -X POST \
+    'http://platform.adobe.io/data/foundation/flowservice/connections' \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}' \
+    -H 'Content-Type: application/json' \
+    -d  "auth": {
+        "specName": "SSH PublicKey Authentication for sftp",
+        "params": {
+            "host": "{HOST_NAME}",
+            "userName": "{USER_NAME}",
+            "privateKeyContent": "{PRIVATE_KEY_CONTENT}",
+            "passPhrase": "{PASS_PHRASE}"
+        }
+    },
+    "connectionSpec": {
+        "id": "b7bf2577-4520-42c9-bae9-cad01560f7bc",
+        "version": "1.0"
+    }
+}
+```
+
+| 속성 | 설명 |
+| -------- | ----------- |
+| `auth.params.host` | SFTP 서버의 호스트 이름입니다. |
+| `auth.params.username` | SFTP 서버와 연결된 사용자 이름입니다. |
+| `auth.params.privateKeyContent` | base64로 인코딩된 SSH 개인 키 콘텐츠입니다. SSH 개인 키 OpenSSH(RSA/DSA) 형식입니다. |
+| `auth.params.passPhrase` | 키 파일 또는 키 콘텐트가 암호 구문으로 보호되는 경우 개인 키를 해독하기 위한 암호 구문 또는 암호입니다. PrivateKeyContent가 암호로 보호된 경우 이 매개 변수를 PrivateKeyContent 암호와 함께 값으로 사용해야 합니다. |
+| `connectionSpec.id` | SFTP 서버 연결 사양 ID: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
 
 **응답**
 
