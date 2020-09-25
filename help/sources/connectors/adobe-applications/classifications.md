@@ -5,9 +5,9 @@ title: Adobe Analytics 분류 데이터 커넥터
 topic: overview
 description: 아래 설명서에서는 사용자 인터페이스를 사용하여 Analytics 분류를 플랫폼에 연결하는 방법에 대한 정보를 제공합니다
 translation-type: tm+mt
-source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
+source-git-commit: 1a49cccfbf8d565c8154329cf1f94382911b2f85
 workflow-type: tm+mt
-source-wordcount: '135'
+source-wordcount: '172'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Adobe Experience Platform은 [!DNL Platform] 서비스를 사용하여 들어오
 
 [!DNL Experience Platform] 는 Analytics 분류 데이터를 Adobe Experience Platform으로 인제스트하는 데 대한 지원을 제공합니다.
 
-분류를 사용하면 보고서가 생성될 때 다양한 방법으로 Analytics 변수 데이터를 분류하고 표시할 수 있습니다.
+분류를 사용하면 보고서가 생성될 때 다양한 방법으로 Analytics 변수 데이터를 분류하고 표시할 수 있습니다. Analytics 분류 데이터 커넥터를 사용하려면 데이터를 사용하기 전에 Adobe Analytics의 새로운 [!DNL Classifications] 인프라로 마이그레이션해야 합니다. 데이터의 마이그레이션 상태를 확인하려면 Adobe 고객 성공 관리자에게 문의하십시오.
 
 아래 설명서에서는 사용자 인터페이스를 사용하여 Analytics 분류를 플랫폼에 연결하는 방법에 대한 정보를 제공합니다.
 
