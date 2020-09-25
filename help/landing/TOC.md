@@ -5,9 +5,9 @@ user-guide-title: Adobe Experience Platform 도움말
 breadcrumb-title: Experience Platform Guide
 user-guide-description: Centralize and standardize customer data and content and apply data science and machine learning to improve the design and delivery of rich, personalized experiences.
 translation-type: tm+mt
-source-git-commit: 857ad65335db338c8d0e5d2ea1f92f00d6a1da1e
+source-git-commit: df881ceaeab7b5e51e1574b6487c3a8368c5c596
 workflow-type: tm+mt
-source-wordcount: '306'
+source-wordcount: '309'
 ht-degree: 52%
 
 ---
@@ -45,8 +45,9 @@ ht-degree: 52%
    * [웹 SDK](https://docs.adobe.com/content/help/ko-KR/experience-platform/edge/home.html)
    * [XDM(경험 데이터 모델)](https://docs.adobe.com/content/help/ko-KR/experience-platform/xdm/home.html)
 * [Experience Platform 자습서](https://docs.adobe.com/content/help/ko-KR/experience-platform/tutorials/home.html)
-* [릴리스 정보](https://docs.adobe.com/content/help/ko-KR/experience-platform/release-notes/latest.html)
+* [릴리스 노트](https://docs.adobe.com/content/help/ko-KR/experience-platform/release-notes/latest.html)
 * [용어 설명](glossary.md)
 * [문제 해결 가이드](troubleshooting.md)
+* [ADLS Gen2 마이그레이션](adls2-gen2-migration.md)
 * [API 기본 사항](api-fundamentals.md)
 * [API 참조](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)
