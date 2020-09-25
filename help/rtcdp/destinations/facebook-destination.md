@@ -1,14 +1,14 @@
 ---
-keywords: facebook extensions;facebook extension;facebook destinations;facebook
+keywords: facebook extensions;facebook extension;facebook destinations;facebook;instagram;messenger;facebook messenger
 title: Facebook 대상
 seo-title: Facebook 대상
 description: 해시된 이메일을 기반으로 고객 타깃팅, 개인화 및 억제를 위해 Facebook 캠페인에 대한 프로필을 활성화합니다.
 seo-description: 해시된 이메일을 기반으로 고객 타깃팅, 개인화 및 억제를 위해 Facebook 캠페인에 대한 프로필을 활성화합니다.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 72ceb747bd4b278afc51dfb5ab6d6386d7b05c82
 workflow-type: tm+mt
-source-wordcount: '722'
-ht-degree: 2%
+source-wordcount: '758'
+ht-degree: 4%
 
 ---
 
@@ -19,7 +19,10 @@ ht-degree: 2%
 
 해시된 이메일을 기반으로 고객 타깃팅, 개인화 및 억제를 위해 캠페인에 대한 프로필을 활성화합니다. [!DNL Facebook]
 
+이 대상을 사용하여, [!DNL Facebook’s][!DNL Custom Audiences]및 [!DNL Facebook]등 [!DNL Instagram]에서 지원하는 앱 제품군 [!DNL Audience Network] [!DNL Messenger]에서 대상을 타깃팅할 수 있습니다. 캠페인을 실행할 앱의 선택은 [!DNL Facebook Ads Manager]의 배치 수준에서 표시됩니다.
+
 ![실시간 CDP UI의 Facebook 대상](/help/rtcdp/destinations/assets/facebook-destination.png)
+
 
 ## 사용 사례
 
