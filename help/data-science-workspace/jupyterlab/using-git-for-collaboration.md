@@ -28,7 +28,7 @@ ht-degree: 1%
 
 ## 환경 [!DNL Git] 에 [!DNL Data Science Workspace JupyterLab Notebooks] 연결
 
-먼저 [!DNL Adobe Experience Platform] [!DNL JupiterLabs [](https://platform.adobe.com/notebooks/jupyterLab) 노트북] 환경을 시작하고 탐색합니다.
+먼저 [!DNL Adobe Experience Platform] [[!DNL JupiterLabs 노트북]](https://platform.adobe.com/notebooks/jupyterLab) 환경을 시작하고 탐색합니다.
 
 내에서 파일 [!DNL JupyterLab]을 **[!UICONTROL 선택한]** 다음 새로 만들기 위로 **[!UICONTROL 마우스를 가져갑니다]**. 표시되는 드롭다운에서 터미널 **[!UICONTROL 을 선택합니다]**.
 
