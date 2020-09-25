@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: 이 자습서에서는 플랫폼 사용자 인터페이스를 사용하여 FTP 또는 SFTP 소스 커넥터를 만드는 단계를 제공합니다.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: c3352c090ce9e5a89d9285aabdc4851632d4d437
 workflow-type: tm+mt
-source-wordcount: '562'
+source-wordcount: '702'
 ht-degree: 1%
 
 ---
@@ -61,9 +61,24 @@ SFTP에 **[!UICONTROL 연결]** 페이지가 나타납니다. 이 페이지에�
 
 ### 새 계정
 
-새 자격 증명을 사용 중인 경우 **[!UICONTROL 새 계정을 선택합니다]**. 표시되는 입력 양식에서 이름, 선택적 설명, FTP 또는 SFTP 자격 증명을 제공합니다. 완료되면 **[!UICONTROL Connect를]** 선택한 다음 새 연결이 설정될 때까지 잠시 기다립니다.
+새 자격 증명을 사용 중인 경우 **[!UICONTROL 새 계정을 선택합니다]**. 표시되는 입력 양식에서 이름, 선택적 설명 및 자격 증명을 제공합니다. 완료되면 **[!UICONTROL Connect를]** 선택한 다음 새 연결이 설정될 때까지 잠시 기다립니다.
 
-![connect](../../../../images/tutorials/create/sftp/new.png)
+SFTP 커넥터는 액세스할 수 있는 서로 다른 인증 유형을 제공합니다. 계정 **[!UICONTROL 인증]** 아래에서 **[!UICONTROL 암호]** 기반 자격 증명을 사용하려면 암호를 선택합니다.
+
+![connect-password](../../../../images/tutorials/create/sftp/password.png)
+
+또는 **[SSH 공개 키를]** 선택하고 **[!UICONTROL 개인 키 컨텐츠]** 및 암호를 조합하여 SFTP 계정을 연결할 수 **[!UICONTROL 있습니다]**.
+
+>[!IMPORTANT]
+>
+>SFTP 커넥터는 RSA/DSA OpenSSH 키를 지원합니다. 키 파일 컨텐츠가 다음으로 시작되는지 확인합니다 `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"`. 개인 키 파일이 PPK 형식 파일인 경우 PuTTY 도구를 사용하여 PPK에서 OpenSSH 형식으로 변환합니다.
+
+![connect-ssh](../../../../images/tutorials/create/sftp/ssh.png)
+
+| 자격 증명 | 설명 |
+| ---------- | ----------- |
+| 개인 키 컨텐츠 | Base64로 인코딩된 SSH 개인 키 컨텐츠입니다. SSH 개인 키는 OpenSSH 형식이어야 합니다. |
+| 암호 | 키 파일 또는 키 콘텐트가 암호 구문으로 보호되는 경우 개인 키를 해독하기 위한 비밀번호 구문 또는 암호를 지정합니다. PrivateKeyContent가 암호로 보호된 경우 이 매개 변수를 PrivateKeyContent 암호와 함께 값으로 사용해야 합니다. |
 
 ### 기존 계정
 
