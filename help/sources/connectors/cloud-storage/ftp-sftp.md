@@ -5,9 +5,9 @@ title: FTP 및 SFTP 커넥터
 topic: overview
 description: 아래 설명서에서는 API 또는 사용자 인터페이스를 사용하여 FTP 또는 STFP 서버를 플랫폼에 연결하는 방법에 대한 정보를 제공합니다.
 translation-type: tm+mt
-source-git-commit: d42351c194bb5a11f3175535de83fbd3b6ac58d2
+source-git-commit: 2aa6ef66444dbcd397e91e6f3075e020ba963579
 workflow-type: tm+mt
-source-wordcount: '424'
+source-wordcount: '476'
 ht-degree: 0%
 
 ---
@@ -67,6 +67,8 @@ Adobe Experience Platform은 AWS, [!DNL Google Cloud Platform]및 [!DNL Azure]�
 - 다음 파일 이름은 허용되지 않습니다.LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM8, COM9, COM9, prn, AUX, NUL, CON, CLOCK$, 점 문자(.) 및 두 점 문자(..)가 있습니다.
 
 ## FTP 및 SFTP를 [!DNL Platform]
+
+> [!IMPORTANT]:사용자는 연결하기 전에 SFTP 서버 구성에서 키보드 대화형 인증을 비활성화해야 합니다. 설정을 비활성화하면 서비스나 프로그램을 입력하는 대신 암호를 수동으로 입력할 수 있습니다. 키보드 인터랙티브 인증에 대한 자세한 내용은 [Component](https://doc.componentpro.com/ComponentPro-Sftp/authenticating-with-a-keyboard-interactive-authentication) Pro 문서를 참조하십시오.
 
 아래 설명서에서는 API 또는 사용자 인터페이스를 사용하여 FTP 또는 SFTP 서버를 연결하는 방법에 [!DNL Platform] 대한 정보를 제공합니다.
 
