@@ -5,7 +5,7 @@ user-guide-title: Adobe Experience Platform 데이터 통합 도움말
 breadcrumb-title: Data Ingestion Guide
 user-guide-description: Bring in your data to Platform through batch or streaming ingestion.
 translation-type: tm+mt
-source-git-commit: d7b9d2e78273999432355006dff25af6ecfabc25
+source-git-commit: 1bfb876dc1665ebef4450a6f5363fba1ea1b7c61
 workflow-type: tm+mt
 source-wordcount: '111'
 ht-degree: 7%
@@ -13,7 +13,7 @@ ht-degree: 7%
 ---
 
 
-# Adobe Experience Platform Data Ingestion {#ingestion}
+# Adobe Experience Platform 데이터 수집 {#ingestion}
 
 - [데이터 통합 개요](home.md)
 - 스트리밍 통합 {#streaming}
