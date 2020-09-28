@@ -4,7 +4,7 @@ audience: user
 user-guide-title: 실시간 고객 데이터 플랫폼 가이드
 user-guide-description: Bring together known and anonymous data from multiple enterprise sources to create customer profiles, create audience segments from those profiles, and activate those segments to third-party destinations.
 translation-type: tm+mt
-source-git-commit: 72b2172bbcc8613a2030b4784270321c3933f6aa
+source-git-commit: 1bfb876dc1665ebef4450a6f5363fba1ea1b7c61
 workflow-type: tm+mt
 source-wordcount: '460'
 ht-degree: 11%
@@ -26,7 +26,7 @@ ht-degree: 11%
 * 대상 {#destinations}
    * [대상 개요](destinations/destinations-overview.md)
    * [대상 유형 및 카테고리](/help/rtcdp/destinations/destination-types.md)
-   * 대상 인터페이스  {#destinations-interface}
+   * 대상 인터페이스 {#destinations-interface}
       * [대상 작업 공간](destinations/destinations-workspace.md)
       * [대상 세부 정보 페이지](destinations/destination-details-page.md)
    * 대상 카탈로그 {#destinations-cat}
