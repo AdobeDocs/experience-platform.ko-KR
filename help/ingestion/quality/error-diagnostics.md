@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform 부분 배치 처리 개요
 topic: overview
 translation-type: tm+mt
-source-git-commit: 01b1d9a0d0af82f5380bbc204e65b682d4a50ac1
+source-git-commit: 4652722b17a290c9ef53244498257eb4cb97ac6d
 workflow-type: tm+mt
-source-wordcount: '871'
+source-wordcount: '881'
 ht-degree: 2%
 
 ---
@@ -292,7 +292,15 @@ curl -X GET https://platform.adobe.io/data/foundation/catalog/batches/af838510-2
 >}
 >```
 
-## 부분 일괄 처리 오류 유형 {#appendix}
+## 다음 단계 {#next-steps}
+
+이 자습서에서는 부분 배치 처리 오류를 모니터링하는 방법을 다룹니다. 일괄 처리에 대한 자세한 내용은 [일괄 처리 통합 개발자 안내서를 참조하십시오](../batch-ingestion/api-overview.md).
+
+## 부록 {#appendix}
+
+이 섹션에서는 통합 오류 유형에 대한 보충 정보를 제공합니다.
+
+### 부분 일괄 처리 오류 유형 {#partial-ingestion-types}
 
 데이터 인제스트 시 부분 일괄 처리 문제에는 세 가지 다른 오류 유형이 있습니다.
 
@@ -379,7 +387,3 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/01EFZ7W203P
     "_filename": "parsing_errors_0.json"
 }
 ```
-
-## 다음 단계 {#next-steps}
-
-이 자습서에서는 부분 배치 처리 오류를 모니터링하는 방법을 다룹니다. 일괄 처리에 대한 자세한 내용은 [일괄 처리 통합 개발자 안내서를 참조하십시오](../batch-ingestion/api-overview.md).
