@@ -4,11 +4,12 @@ solution: Experience Platform
 title: Adobe 정의 함수
 topic: queries
 type: Tutorial
+description: 이 문서에서는 세 가지 주요 Analytics 활동, 기여도 및 경로 지정을 지원하는 Adobe에서 정의된 기능(ADF)을 다룹니다.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '287'
-ht-degree: 6%
+source-wordcount: '303'
+ht-degree: 5%
 
 ---
 
