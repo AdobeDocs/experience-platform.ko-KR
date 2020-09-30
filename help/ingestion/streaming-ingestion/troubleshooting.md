@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics;streaming;streaming ingestion;
 solution: Experience Platform
 title: 스트리밍 통합 문제 해결
 topic: troubleshooting
+description: 이 문서에서는 Adobe Experience Platform의 스트리밍 통합 관련 FAQ에 대한 답변을 제공합니다.
 translation-type: tm+mt
-source-git-commit: d2f098cb9e4aaf5beaad02173a22a25a87a43756
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '997'
+source-wordcount: '1012'
 ht-degree: 0%
 
 ---
