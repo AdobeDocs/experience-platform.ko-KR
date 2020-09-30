@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics;query service;Query service;Aq
 solution: Experience Platform
 title: Aqua Data Studio와 연결
 topic: connect
+description: 이 문서에서는 Aqua Data Studio와 Adobe Experience Platform 쿼리 서비스를 연결하는 단계를 안내합니다.
 translation-type: tm+mt
-source-git-commit: 106d5150371a890e2d4c295bf5d12c110c593568
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '245'
+source-wordcount: '262'
 ht-degree: 0%
 
 ---
