@@ -4,10 +4,11 @@ solution: Experience Platform
 title: 쿼리 작성
 topic: queries
 type: Tutorial
+description: 이 문서에서는 Adobe Experience Platform 쿼리 서비스에서 쿼리를 작성할 때 알아야 할 중요한 세부 사항을 자세히 설명합니다.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '643'
+source-wordcount: '659'
 ht-degree: 1%
 
 ---
