@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics;Query service;query service;co
 solution: Experience Platform
 title: 클라이언트를 쿼리 서비스에 연결
 topic: connect
+description: 이 문서에서는 다양한 데스크탑 클라이언트 응용 프로그램에서 쿼리 서비스에 연결하는 방법과 이러한 연결을 확인하는 방법에 대해 설명합니다.
 translation-type: tm+mt
-source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
+source-git-commit: 37356db1666b0c800119b1e254940ad72550848a
 workflow-type: tm+mt
-source-wordcount: '75'
+source-wordcount: '97'
 ht-degree: 0%
 
 ---
