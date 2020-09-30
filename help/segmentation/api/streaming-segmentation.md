@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segm
 solution: Experience Platform
 title: 스트리밍 세분화
 topic: developer guide
+description: 이 문서에는 스트리밍 세그멘테이션 API와 함께 스트리밍 세그멘테이션을 사용하는 방법에 대한 예가 나와 있습니다.
 translation-type: tm+mt
-source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '1426'
+source-wordcount: '1441'
 ht-degree: 1%
 
 ---
