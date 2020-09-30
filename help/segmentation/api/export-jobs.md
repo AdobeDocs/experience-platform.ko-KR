@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segm
 solution: Experience Platform
 title: 내보내기 작업 끝점
 topic: developer guide
+description: 내보내기 작업은 대상 세그먼트 멤버를 데이터 세트로 유지하는 데 사용되는 비동기 프로세스입니다. 프로그래밍 방식으로 내보내기 작업을 검색, 생성 및 취소할 수 있는 Adobe Experience Platform 세그멘테이션 API에서 /export/jobs 끝점을 사용할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '1521'
+source-wordcount: '1561'
 ht-degree: 2%
 
 ---
