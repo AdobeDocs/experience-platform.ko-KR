@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Privacy Service 도움말
 breadcrumb-title: Privacy Service Guide
-user-guide-description: Manage customer requests to access, delete, or provide consent for the use of their personal data, facilitating automated compliance with legal privacy regulations like GDPR and CCPA.
+user-guide-description: Manage customer data requests to comply with legal privacy regulations like GDPR and CCPA.
 translation-type: tm+mt
-source-git-commit: 72b2172bbcc8613a2030b4784270321c3933f6aa
+source-git-commit: 4e358fda1c8f7aebe57a009a146b8b73cf88e169
 workflow-type: tm+mt
 source-wordcount: '87'
 ht-degree: 11%
@@ -38,4 +38,4 @@ ht-degree: 11%
    * [PDPA(태국) 용어](./pdpa-tha/terminology.md)
 * [문제 해결 가이드](troubleshooting-guide.md)
 * [API 참조](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml)
-* [릴리스 정보](release-notes.md)
+* [릴리스 노트](release-notes.md)
