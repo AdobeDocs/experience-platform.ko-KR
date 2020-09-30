@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segm
 solution: Experience Platform
 title: 문자열 함수
 topic: developer guide
+description: PQL(프로필 쿼리 언어)은 문자열과 보다 간편하게 상호 작용하는 기능을 제공합니다.
 translation-type: tm+mt
-source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '754'
+source-wordcount: '766'
 ht-degree: 6%
 
 ---
