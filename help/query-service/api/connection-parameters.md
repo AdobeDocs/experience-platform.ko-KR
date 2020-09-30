@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics;query service;api guide;connec
 solution: Experience Platform
 title: 쿼리 서비스 개발자 가이드
 topic: connection parameters
+description: /connection_parameters 끝점에 GET 요청을 수행하여 대화형 서비스를 사용하기 위한 연결 매개 변수를 검색할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '122'
+source-wordcount: '143'
 ht-degree: 1%
 
 ---
