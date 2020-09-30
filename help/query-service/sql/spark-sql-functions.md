@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics;query service;Query service;sp
 solution: Experience Platform
 title: Spark SQL 함수
 topic: spark sql functions
+description: 이 설명서에는 SQL 기능을 확장하는 내장 Spark SQL 기능을 제공하는 Spark SQL 도움말에 대한 정보가 포함되어 있습니다.
 translation-type: tm+mt
-source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '4991'
+source-wordcount: '5009'
 ht-degree: 5%
 
 ---
