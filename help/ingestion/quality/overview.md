@@ -3,11 +3,12 @@ keywords: Experience Platform;home;popular topics;Data quality;quality;Quality;S
 solution: Experience Platform
 title: 데이터 수집 품질
 topic: overview
+description: 다음 문서에서는 Adobe Experience Platform에서 일괄 처리 및 스트리밍 인제스트를 위한 지원되는 검사 및 유효성 검사 동작에 대한 요약을 제공합니다.
 translation-type: tm+mt
-source-git-commit: c04fb056d4564e53f192e0734a700a13820f5ba7
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '282'
-ht-degree: 6%
+source-wordcount: '304'
+ht-degree: 5%
 
 ---
 
