@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics;query service;Query service;sq
 solution: Experience Platform
 title: SQL 참조
 topic: reference
+description: 쿼리 서비스는 SELECT 문 및 기타 제한된 명령에 표준 ANSI SQL을 사용하는 기능을 제공합니다.
 translation-type: tm+mt
-source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '42'
+source-wordcount: '59'
 ht-degree: 0%
 
 ---
