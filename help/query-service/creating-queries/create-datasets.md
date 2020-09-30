@@ -4,10 +4,11 @@ solution: Experience Platform
 title: 쿼리 결과에서 데이터 집합 생성
 topic: queries
 type: Tutorial
+description: '쿼리 서비스를 사용하면 UI에서 데이터 세트를 만들 수 있습니다. 데이터 세트를 만든 후 Data Lake의 다른 데이터세트처럼 액세스할 수 있으며 다양한 사용 사례에 사용할 수 있습니다. '
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '270'
+source-wordcount: '305'
 ht-degree: 0%
 
 ---
