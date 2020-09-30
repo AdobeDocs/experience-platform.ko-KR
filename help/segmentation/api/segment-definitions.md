@@ -3,11 +3,12 @@ keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segm
 solution: Experience Platform
 title: 세그먼트 정의
 topic: developer guide
+description: 이 안내서에서는 세그먼트 정의를 더 잘 이해하는 데 도움이 되는 정보를 제공하고 API를 사용하여 기본 작업을 수행하기 위한 샘플 API 호출을 포함합니다.
 translation-type: tm+mt
-source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '1041'
-ht-degree: 4%
+source-wordcount: '1064'
+ht-degree: 3%
 
 ---
 
