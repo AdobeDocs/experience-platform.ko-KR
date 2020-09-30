@@ -4,10 +4,11 @@ solution: Experience Platform
 title: XDM 스키마에 CSV 파일 매핑
 topic: tutorial
 type: Tutorial
+description: 이 자습서에서는 Adobe Experience Platform 사용자 인터페이스를 사용하여 XDM 스키마에 CSV 파일을 매핑하는 방법을 설명합니다.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '1350'
+source-wordcount: '1370'
 ht-degree: 2%
 
 ---
