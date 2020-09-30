@@ -4,10 +4,11 @@ solution: Experience Platform
 title: 데이터 세트와 테이블 및 스키마
 topic: queries
 type: Tutorial
+description: 이 문서에는 데이터 집합 스키마 구조 내에서 데이터 집합을 보고 PostgreSQL 명령을 사용하는 방법에 대한 정보가 포함되어 있습니다.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '181'
+source-wordcount: '198'
 ht-degree: 1%
 
 ---
