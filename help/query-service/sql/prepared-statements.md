@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics;query service;Query service;pr
 solution: Experience Platform
 title: 준비된 설명
 topic: prepared statements
+description: SQL에서는 유사한 쿼리 또는 업데이트를 서식 지정하는 데 준비된 문을 사용합니다. Adobe Experience Platform 쿼리 서비스는 매개 변수가 있는 쿼리를 사용하여 준비된 문을 지원합니다.
 translation-type: tm+mt
-source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '340'
+source-wordcount: '365'
 ht-degree: 8%
 
 ---
@@ -85,11 +86,11 @@ SELECT * FROM table WHERE id >= 10000 AND id <= 10005;
 | ID | 이름 | lastname | 생년월일 | 이메일 | city | country |
 |--- | --------- | -------- | --------- | ----- | ------- | ---- |
 | 10000 | 알렉산더 | 데이비스 | 1993-09-15 | example@example.com | 밴쿠버 | 캐나다 |
-| 10001 | antoine | 두부아 | 1967-03-14 | example2@example.com | Paris | 교구 |
-| 10002 | 파리 | 사쿠라 | 1999-11-26 | stabilexample3@example.com | 도쿄 | 일본 |
+| 10001 | 앙투안 | 두부아 | 1967-03-14 | example2@example.com | 파리 | 교구 |
+| 10002 | 교코 | 사쿠라 | 1999-11-26 | 프랑스 | 도쿄 | 일본 |
 | 10003 | 린스 | 페터슨 | 1982-06-03 | example4@example.com | 스톡홀름 | 스웨덴 |
-| 10004 | aasir | 야카 | 1976-12-17 | 이 | 나이로비 | 케냐 |
-| 10005 | 페르난도 | 리오스 | 2002-07-30 | example6@example.com | 산티아고 | 칠레 |
+| 10004 | aasir | 야카 | 1976-12-17 | example5@example.com | 나이로비 | 케냐 |
+| 10005 | 스톡홀름 | 리오스 | 2002-07-30 | example6@example.com | 산티아고 | 칠레 |
 
 다음 준비된 문을 사용하여 이 SQL 쿼리를 매개 변수화할 수 있습니다.
 
@@ -105,14 +106,14 @@ EXECUTE getIdRange(10000, 10005);
 
 이 메시지가 호출되면 이전과 동일한 결과가 표시됩니다.
 
-| ID | 이름 | lastname | 앙금 날짜 | 이메일 | city | country |
+| ID | 이름 | lastname | 생년월일 | 이메일 | city | country |
 |--- | --------- | -------- | --------- | ----- | ------- | ---- |
-| 10000 | 알렉산더 | 데이비스 | 1993-09-15 | 앙example@example.com | 밴쿠버 | 캐나다 |
-| 10001 | 이 | 두부아 | 1967-03-14 | example2@example.com | 생년월일 | 프랑스 |
-| 10002 | 파리 | 이름 | 1999-11-26 | 프랑스 | 도쿄 | 일본 |
+| 10000 | 알렉산더 | 데이비스 | 1993-09-15 | example@example.com | 밴쿠버 | 캐나다 |
+| 10001 | antoine | 두부아 | 1967-03-14 | example2@example.com | Paris | 프랑스 |
+| 10002 | 파리 | 사쿠라 | 1999-11-26 | stabilexample3@example.com | 도쿄 | 일본 |
 | 10003 | 린스 | 페터슨 | 1982-06-03 | example4@example.com | 스톡홀름 | 스웨덴 |
 | 10004 | aasir | 야카 | 1976-12-17 | example5@example.com | 나이로비 | 케냐 |
-| 10005 | 페르난도 | 프랑스 | 2002-07-30 | example6@example.com | 산티아고 | 칠레 |
+| 10005 | 페르난도 | 리오스 | 2002-07-30 | example6@example.com | 산티아고 | 칠레 |
 
 준비된 명령문 사용을 완료한 후 다음 호출을 사용하여 명령문을 할당 취소할 수 있습니다.
 
