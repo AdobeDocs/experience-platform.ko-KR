@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segm
 solution: Experience Platform
 title: 세그멘테이션 서비스 개발자 가이드
 topic: developer guide
+description: 다음 설명서는 세그멘테이션 API를 성공적으로 사용하기 위해 알아야 할 추가 정보를 제공합니다.
 translation-type: tm+mt
-source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '300'
+source-wordcount: '320'
 ht-degree: 0%
 
 ---
