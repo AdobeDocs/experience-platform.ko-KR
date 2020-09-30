@@ -4,10 +4,11 @@ solution: Experience Platform
 title: UI를 사용하여 스트리밍 연결 만들기
 topic: tutorial
 type: Tutorial
+description: 이 UI 가이드는 Adobe Experience Platform을 사용하여 스트리밍 연결을 만드는 데 도움이 됩니다.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '498'
+source-wordcount: '512'
 ht-degree: 0%
 
 ---
