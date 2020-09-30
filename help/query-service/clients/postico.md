@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics;Query service;query service;po
 solution: Experience Platform
 title: 포스티코 연결
 topic: connect
+description: 이 문서에는 Adobe Experience Platform 쿼리 서비스용 백업 클라이언트 Positico를 설치하는 링크가 포함되어 있습니다.
 translation-type: tm+mt
-source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '22'
+source-wordcount: '39'
 ht-degree: 0%
 
 ---
