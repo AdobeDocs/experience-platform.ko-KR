@@ -4,10 +4,11 @@ solution: Experience Platform
 title: 하나의 HTTP 요청으로 여러 메시지 스트리밍
 topic: tutorial
 type: Tutorial
+description: 이 문서에서는 스트리밍 통합 기능을 사용하여 단일 HTTP 요청 내에서 여러 메시지를 Adobe Experience Platform으로 전송하는 자습서를 제공합니다.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '1466'
+source-wordcount: '1487'
 ht-degree: 1%
 
 ---
