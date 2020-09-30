@@ -4,11 +4,12 @@ solution: Experience Platform
 title: 데이터 집합 참여
 topic: queries
 type: Tutorial
+description: 데이터 세트를 결합하면 쿼리에 다른 데이터 집합의 데이터를 포함할 수 있습니다. 이 예에서는 사용자 지정 운영 체제 데이터 세트를 사용하여 운영 체제 ID를 운영 체제 값에 매핑합니다.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 37356db1666b0c800119b1e254940ad72550848a
 workflow-type: tm+mt
-source-wordcount: '53'
-ht-degree: 3%
+source-wordcount: '82'
+ht-degree: 2%
 
 ---
 
