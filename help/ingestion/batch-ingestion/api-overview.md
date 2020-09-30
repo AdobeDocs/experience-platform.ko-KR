@@ -1,12 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;batch ingestion;Batch ingestion;ingestion;developer guide;api guide;upload;ingest parquet;ingest json;
 solution: Experience Platform
-title: Adobe Experience Platform 일괄 처리 통합 개발자 가이드
+title: 일괄 처리 통합 개발자 가이드
 topic: developer guide
+description: 이 문서에서는 일괄 처리 통합 API를 사용하는 방법에 대한 포괄적인 개요를 제공합니다.
 translation-type: tm+mt
-source-git-commit: c04fb056d4564e53f192e0734a700a13820f5ba7
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '2670'
+source-wordcount: '2678'
 ht-degree: 5%
 
 ---
