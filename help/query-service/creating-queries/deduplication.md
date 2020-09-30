@@ -4,10 +4,11 @@ solution: Experience Platform
 title: 데이터 중복 제거
 topic: queries
 type: Tutorial
+description: 이 문서에서는 ExperienceEvents, 구매 및 지표 중복 제거에 대한 하위 선택 및 전체 샘플 쿼리 예에 대해 설명합니다.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '405'
+source-wordcount: '424'
 ht-degree: 1%
 
 ---
