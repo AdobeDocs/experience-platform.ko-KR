@@ -1,12 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;ingested data;troubleshooting;faq;Ingestion;Batch ingestion;batch ingestion;
 solution: Experience Platform
-title: Adobe Experience Platform 일괄 처리 문제 해결 가이드
+title: 일괄 처리 처리 문제 해결 가이드
 topic: troubleshooting
+description: '이 설명서는 Adobe Experience Platform 일괄 처리 데이터 통합 API와 관련하여 자주 묻는 질문에 대한 답변을 제공합니다. '
 translation-type: tm+mt
-source-git-commit: c04fb056d4564e53f192e0734a700a13820f5ba7
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '1389'
+source-wordcount: '1402'
 ht-degree: 1%
 
 ---
