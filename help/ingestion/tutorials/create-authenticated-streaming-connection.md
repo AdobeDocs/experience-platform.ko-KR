@@ -4,10 +4,11 @@ solution: Experience Platform
 title: 인증된 스트리밍 연결 만들기
 topic: tutorial
 type: Tutorial
+description: 인증된 데이터 수집을 사용하면 실시간 고객 프로필 및 ID와 같은 Adobe Experience Platform 서비스를 통해 신뢰할 수 있는 출처의 레코드와 신뢰할 수 없는 출처의 레코드를 구별할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 37356db1666b0c800119b1e254940ad72550848a
 workflow-type: tm+mt
-source-wordcount: '633'
+source-wordcount: '659'
 ht-degree: 2%
 
 ---
@@ -15,7 +16,7 @@ ht-degree: 2%
 
 # 인증된 스트리밍 연결 만들기
 
-인증된 데이터 수집을 사용하면 [!DNL Real-time Customer Profile] 및 [!DNL Identity]과 같은 Adobe Experience Platform 서비스가 신뢰할 수 있는 소스에서 나오는 레코드와 신뢰할 수 없는 소스 간에 구별할 수 있습니다. PII(개인 식별 정보)를 보내려는 클라이언트는 POST 요청의 일부로 액세스 토큰을 전송함으로써 이를 수행할 수 있습니다.
+인증된 데이터 수집을 사용하면 [!DNL Real-time Customer Profile] 및 [!DNL Identity]과 같은 Adobe Experience Platform 서비스가 신뢰할 수 있는 출처의 레코드와 신뢰할 수 없는 출처의 레코드를 구별할 수 있습니다. PII(개인 식별 정보)를 보내려는 클라이언트는 POST 요청의 일부로 액세스 토큰을 전송함으로써 이를 수행할 수 있습니다.
 
 ## 시작하기
 
