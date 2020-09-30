@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics;query service;Query service;ad
 solution: Experience Platform
 title: Adobe 정의 함수
 topic: functions
+description: 이 문서에서는 쿼리 서비스에서 사용할 수 있는 Adobe으로 정의된 기능에 대한 정보를 제공합니다.
 translation-type: tm+mt
-source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '2156'
+source-wordcount: '2167'
 ht-degree: 3%
 
 ---
