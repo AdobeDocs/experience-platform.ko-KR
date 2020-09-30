@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics;data ingestion notifications;n
 solution: Experience Platform
 title: 데이터 수집 이벤트 가입
 topic: overview
+description: 수집 프로세스 모니터링을 지원하기 위해, Adobe Experience Platform은 프로세스의 각 단계에 의해 게시된 일련의 이벤트에 가입할 수 있도록 하여, 인제스트된 데이터의 상태 및 발생 가능한 실패를 사용자에게 알립니다.
 translation-type: tm+mt
-source-git-commit: 80a1694f11cd2f38347989731ab7c56c2c198090
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '621'
+source-wordcount: '663'
 ht-degree: 2%
 
 ---
