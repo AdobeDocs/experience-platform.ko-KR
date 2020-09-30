@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics;query service;Query service;sc
 solution: Experience Platform
 title: 쿼리 서비스 개발자 가이드
 topic: scheduled queries
+description: 다음 섹션에서는 쿼리 서비스 API를 사용하여 예약된 쿼리에 대해 수행할 수 있는 다양한 API 호출을 안내합니다.
 translation-type: tm+mt
-source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '943'
+source-wordcount: '963'
 ht-degree: 3%
 
 ---
