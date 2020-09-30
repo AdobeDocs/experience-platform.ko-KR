@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;data ingestion;batch;Batch;enable dataset;Batch ingestion overview;overview;batch ingestion overview;
 solution: Experience Platform
-title: Adobe Experience Platform 일괄 처리 처리 개요
+title: 일괄 처리 처리 개요
 topic: overview
 description: '일괄 처리 처리 통합 API를 사용하면 데이터를 Adobe Experience Platform에 일괄 처리 파일로 인제스트할 수 있습니다. 인제스트되는 데이터는 CRM 시스템의 플랫 파일(예: 쪽모이 세공 파일)의 프로필 데이터이거나 XDM(Experience Data Model) 레지스트리에서 알려진 스키마를 준수하는 데이터일 수 있습니다.'
 translation-type: tm+mt
-source-git-commit: c04fb056d4564e53f192e0734a700a13820f5ba7
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '1199'
+source-wordcount: '1196'
 ht-degree: 2%
 
 ---
