@@ -2,13 +2,13 @@
 keywords: RTCDP;CDP;Real-time Customer Data Platform;real time customer data platform;real time cdp;cdp;destinations;destination;rtcdp
 title: 대상 개요
 seo-title: 대상 개요
-description: Adobe Experience Platform의 대상을 사용하여 크로스채널 마케팅 캠페인, 이메일 캠페인, 타깃팅된 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화합니다.
+description: 크로스 채널 마케팅 캠페인, 이메일, 타깃팅된 광고 등을 위해 플랫폼에 대한 데이터를 활성화합니다.
 seo-description: 대상은 실시간 고객 데이터 플랫폼에서 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과의 사전 구축된 통합입니다. Adobe 실시간 고객 데이터 플랫폼의 대상을 사용하여 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타깃팅된 광고 및 기타 여러 가지 사용 사례에 대해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 5c3016e822ea23407af5de525c27785df8e2f795
+source-git-commit: 4e358fda1c8f7aebe57a009a146b8b73cf88e169
 workflow-type: tm+mt
-source-wordcount: '504'
-ht-degree: 0%
+source-wordcount: '491'
+ht-degree: 1%
 
 ---
 
