@@ -1,12 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;batch ingestion;Batch ingestion;partial ingestion;Partial ingestion;Retrieve error;retrieve error;Partial batch ingestion;partial batch ingestion;partial;ingestion;Ingestion;
 solution: Experience Platform
-title: Adobe Experience Platform 부분 배치 처리 개요
+title: 부분 일괄 처리 처리 개요
 topic: overview
+description: 이 문서에서는 부분 일괄 처리 처리를 관리하는 자습서를 제공합니다.
 translation-type: tm+mt
-source-git-commit: 9e579f115f1792774e7590bcb192fb5c4f79791a
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '910'
+source-wordcount: '917'
 ht-degree: 0%
 
 ---
