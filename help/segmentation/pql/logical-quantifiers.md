@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segm
 solution: Experience Platform
 title: 논리적 수량자
 topic: developer guide
+description: 논리 정량자는 PQL(프로필 쿼리 언어)에서 배열이 있는 조건을 표시하는 데 사용할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '185'
+source-wordcount: '200'
 ht-degree: 5%
 
 ---
