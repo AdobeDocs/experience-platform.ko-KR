@@ -2,10 +2,11 @@
 keywords: Experience Platform;home;popular topics;streaming;streaming ingestion;streaming ingestion validation;validation;Streaming ingestion validation;validate;Synchronous validation;synchronous validation;Asynchronous validation;asynchronous validation;
 solution: Experience Platform
 title: 스트리밍 통합 유효성 검사
-topic: overview
+topic: tutorial
+type: Tutorial
 description: 스트리밍 통합 기능을 사용하면 스트리밍 끝점을 실시간으로 사용하여 데이터를 Adobe Experience Platform에 업로드할 수 있습니다. 스트리밍 통합 API는 동기식 및 비동기식 두 가지 인증 모드를 지원합니다.
 translation-type: tm+mt
-source-git-commit: c04fb056d4564e53f192e0734a700a13820f5ba7
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
 source-wordcount: '852'
 ht-degree: 3%
