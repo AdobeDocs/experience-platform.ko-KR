@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics;batch ingestion;Batch ingestio
 solution: Experience Platform
 title: Adobe Experience Platform 부분 배치 처리 개요
 topic: overview
+description: 이 문서에서는 일괄 처리 처리 통합 모니터링, 부분 배치 처리 오류 관리 및 부분 일괄 처리 처리 처리 유형에 대한 참조에 대해 설명합니다.
 translation-type: tm+mt
-source-git-commit: 4652722b17a290c9ef53244498257eb4cb97ac6d
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '881'
+source-wordcount: '904'
 ht-degree: 2%
 
 ---
