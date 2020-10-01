@@ -1,0 +1,83 @@
+---
+keywords: Experience Platform;home;popular topics;map csv;map csv file;map csv file to xdm;map csv to xdm;ui guide;mapper;mapping;date;date functions;dates;
+solution: Experience Platform
+title: 날짜 함수
+topic: overview
+description: 이 문서에서는 데이터 준비와 함께 사용되는 날짜 기능을 소개합니다.
+translation-type: tm+mt
+source-git-commit: db38f0666f5c945461043ad08939ebda52c21855
+workflow-type: tm+mt
+source-wordcount: '389'
+ht-degree: 17%
+
+---
+
+
+# 날짜 함수
+
+데이터 준비에서는 문자열 및 datetime 개체 등의 날짜 함수를 지원합니다.
+
+## 날짜 함수 변환
+
+수신 데이터의 문자열 필드가 XDM(Experience Data Model)을 사용하여 스키마의 날짜 필드에 매핑되는 경우 날짜 형식이 명시적으로 언급되어야 합니다. 명시적으로 언급되지 않은 경우, 데이터 준비에서는 입력 데이터를 다음 포맷으로 일치시켜 변환합니다. 일치하는 형식이 발견되면 이후 형식 평가가 중지됩니다.
+
+```console
+"yyyy-MM-dd HH:mm:ssZ",
+"yyyy-MM-dd HH:mm:ss.SSSZ",
+"yyyy-MM-dd HH:mm:ss.SSS",
+"yyyy-MM-dd'T'HH:mm:ss.SSSX",
+"yyyy-MM-dd'T'HH:mm:ss'Z'",
+"yyyy-MM-dd",
+"yyyy/MM/dd",
+"yyyy.MM.dd",
+"yyyy-MMM-dd",
+"yyyyMMdd",
+"MM-dd-yyyy",
+"MMddyyyy",
+"M/dd/yyyy",
+"dd.M.yyyy",
+"M/dd/yyyy hh:mm:ss a",
+"dd.M.yyyy hh:mm:ss a",
+"dd.MMM.yyyy",
+"dd-MMM-yyyy"
+```
+
+>[!IMPORTANT]
+>
+> 데이터 준비에서는 문자열을 가능한 한 날짜로 변환하려고 합니다. 하지만 이러한 전환으로 인해 바람직하지 않은 결과가 발생할 수 있습니다. 예를 들어 문자열 값 &quot;12112020&quot;은 패턴 &quot;Mdyyyy&quot;와 일치하지만 사용자가 날짜를 &quot;ddMMyyyy&quot;로 읽으려고 할 수 있습니다. 따라서 사용자는 문자열의 날짜 형식을 명시적으로 언급해야 합니다.
+
+## 날짜/시간 형식 문자열
+
+다음 표는 형식 문자열에 대해 정의된 패턴 문자를 보여줍니다. 문자는 대/소문자를 구분합니다.
+
+| 심볼 | 의미 | 프레젠테이션 | 예 |
+| ------ | ------- | ------------ | ------- |
+| G | 시대 | 텍스트 | AD;Anno Domini;A |
+| Y | 연도, ISO 주 기준 | 숫자 | 1996; 96 |
+| y | 올해의 | 숫자 | 2004; 04 |
+| M/L | 연도의 월 | 숫자/텍스트 | 7.07;7월7월J |
+| w | 연중 주간 | 숫자 | 27 |
+| W | 월의 주 | 숫자 | 3 |
+| D | 일 | 숫자 | 189 |
+| d | 해당 월의 일 | 숫자 | 10 |
+| F | 한 달의 요일 | 숫자 | 2 |
+| E | 요일 이름 | 텍스트 | 화요일;화 |
+| u | 요일을 숫자로 표시합니다. 1은 월요일을, 7은 일요일을 나타냅니다. | 숫자 | 1 |
+| a | AM/PM 마커 | 텍스트 | PM |
+| H | 하루 중 시간(0-23) | 숫자 | 0 |
+| k | 하루 중 시간(1-24) | 숫자 | 24 |
+| K | 오전/오후(0-11) 시간 | 숫자 | 0 |
+| h | 오전/오후(1-12) 시간 | 숫자 | 12 |
+| m | 시간 단위 | 숫자 | 38 |
+| s | 초 단위 | 숫자 | 44 |
+| S | 밀레초 | 숫자 | 245 |
+| z | 시간대 | 일반 표준 시간대 | 태평양 표준시PST;GMT-08:00 |
+| Z | 시간대 | RFC 822 표준 시간대 | -0800 |
+| X | 시간대 | ISO 8601 표준 시간대 | -08; -0800; -08:00 |
+| V | 시간대 ID | 텍스트 | 아메리카/로스앤젤레스 |
+| O | 시간대 오프셋 | 텍스트 | GMT+8 |
+| Q/q | 연중 분기별 | 숫자/텍스트 | 3.03;3분기;3분기 |
+
+**예**
+
+이 값의 값이 &quot;2020년 12월 31일&quot;인 경우 이 표현식은 orderDate 값을 &quot;2020-12-31&quot; 값과 함께 날짜 시간으로 변환합니다. `date(orderDate, 'yyyy-MM-dd')`
