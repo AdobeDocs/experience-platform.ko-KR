@@ -5,15 +5,20 @@ description: Adobe Experience Platform 웹 SDK 릴리스 노트.
 seo-description: Adobe Experience Platform 웹 SDK 릴리스 노트.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;release notes;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: 738dfe782ee7d6bef06d14910e0c26540b0ec734
 workflow-type: tm+mt
-source-wordcount: '77'
+source-wordcount: '108'
 ht-degree: 3%
 
 ---
 
 
 # 릴리스 노트
+
+## 버전 2.2.0
+
+* 버그 수정:옵트인 개체가 합금이 전화하는 것을 막고 `idMigrationEnabled` 있었습니다 `true`.
+* 버그 수정:합금은 개인화 제안을 반환해야 하는 요청을 인지하여 깜박이는 문제를 방지합니다.
 
 ## 버전 2.1.0
 
