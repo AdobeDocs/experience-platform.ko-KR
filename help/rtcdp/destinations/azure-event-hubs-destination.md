@@ -5,9 +5,9 @@ seo-title: (베타) Azure 이벤트 허브 대상
 description: Azure 이벤트 허브 저장소에 대한 실시간 아웃바운드 연결을 만들어 Experience Platform의 데이터를 스트리밍합니다.
 seo-description: Azure 이벤트 허브 저장소에 대한 실시간 아웃바운드 연결을 만들어 Experience Platform의 데이터를 스트리밍합니다.
 translation-type: tm+mt
-source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
+source-git-commit: d0a04c61bfe4024a2bb45ea7babab9073fcd6c22
 workflow-type: tm+mt
-source-wordcount: '467'
+source-wordcount: '505'
 ht-degree: 2%
 
 ---
@@ -36,6 +36,10 @@ ht-degree: 2%
 이와 같은 스트리밍 대상을 사용하면 고부가가치 세그멘테이션 이벤트 및 관련 프로필 속성을 원하는 시스템에 손쉽게 제공할 수 [!DNL Azure Event Hubs]있습니다.
 
 예를 들어 잠재 고객이 &quot;전환율이 높은&quot; 세그먼트에 자격을 주는 백서를 다운로드했습니다. 잠재 고객이 대상에 속하는 세그먼트를 매핑하면 이 이벤트를 [!DNL Azure Event Hubs] 수신하게 됩니다 [!DNL Azure Event Hubs]. 기업 IT 시스템에서 가장 잘 작동하는 것처럼 현장 중심의 비즈니스 로직을 도입하여 설명할 수 있습니다.
+
+## 내보내기 유형 {#export-type}
+
+**프로필 내보내기** - 원하는 스키마 필드와 함께 세그먼트의 모든 멤버를 내보냅니다(예:이메일 주소, 전화 번호, 성)을 [대상 활성화 워크플로우의 속성 선택 화면에서 선택합니다](/help/rtcdp/destinations/activate-destinations.md#select-attributes).\
 
 ## 연결 대상 {#connect-destination}
 
