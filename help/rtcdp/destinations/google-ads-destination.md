@@ -5,9 +5,9 @@ seo-title: Google 광고 대상
 description: 이전에 Google AdWords로 알려졌던 Google Ads는 기업에서 텍스트 기반 검색, 그래픽 디스플레이, YouTube 비디오 및 인앱 모바일 디스플레이에서 클릭당 광고를 지불하는 온라인 광고 서비스입니다.
 seo-description: 이전에 Google AdWords로 알려졌던 Google Ads는 기업에서 텍스트 기반 검색, 그래픽 디스플레이, YouTube 비디오 및 인앱 모바일 디스플레이에서 클릭당 광고를 지불하는 온라인 광고 서비스입니다.
 translation-type: tm+mt
-source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
+source-git-commit: c66fb4cf0a414e02ceb58becc9d9b59db3fe987b
 workflow-type: tm+mt
-source-wordcount: '635'
+source-wordcount: '652'
 ht-degree: 0%
 
 ---
@@ -30,6 +30,10 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 >Experience Cloud ID 서비스 [!DNL Google Ads] 에서 이전에 [ID 동기화 기능을](https://docs.adobe.com/content/help/en/id-service/using/id-service-api/methods/idsync.html) 활성화하지 않은 상태로 첫 번째 대상을 만들려는 경우(Audience Manager 또는 다른 응용 프로그램 포함) Adobe 컨설팅 또는 고객 지원 센터에 연락하여 ID 동기화를 활성화하십시오. 이전에 Audience Manager에서 Google 통합을 설정한 경우 설정한 ID 동기화가 Adobe 실시간 CDP로 전달됩니다.
+
+### 내보내기 유형 {#export-type}
+
+**세그먼트 내보내기** - 세그먼트(대상)의 모든 멤버를 Google 대상으로 내보냅니다.
 
 ## 전제 조건
 
@@ -70,7 +74,7 @@ Adobe 실시간 CDP에서 [!DNL Google Ads] 대상을 생성하기 전에 Adobe 
 
 ## 세그먼트 활성화 [!DNL Google Ads]
 
-세그먼트를 활성화할 방법에 대한 지침은 대상 [!DNL Google Ads]에 데이터 [활성화를 참조하십시오](/help/rtcdp/destinations/activate-destinations.md).
+세그먼트를 활성화할 방법에 대한 지침 [!DNL Google Ads]은 대상에 [데이터 활성화를 참조하십시오](/help/rtcdp/destinations/activate-destinations.md).
 
 ## 내보낸 데이터
 
