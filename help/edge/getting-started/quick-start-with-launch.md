@@ -5,17 +5,17 @@ description: Experience Platform 웹 SDK 익스텐션을 사용하여 데이터�
 seo-description: Experience Platform 웹 SDK 익스텐션을 사용하여 데이터를 수집하는 빠른 시작 가이드
 keywords: 1st-party domain;CNAME;schema;create schema;launch;aep web sdk extension;extension;configuration id;configuration tool;data element;create data element;XDM Object;sendEvent;send Event;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: a9c45aed92dc7c7148db7c9383060bbeab763447
 workflow-type: tm+mt
-source-wordcount: '538'
-ht-degree: 5%
+source-wordcount: '566'
+ht-degree: 4%
 
 ---
 
 
-# 시작
+# Adobe Experience Platform 웹 SDK 시작 빠른 시작 가이드
 
-이 가이드는 Launch에서 Adobe Experience Platform 웹 SDK를 설정하는 다양한 방법을 안내합니다. 이 기능을 사용하려면 허용 목록에 포함되어야 합니다. 대기 목록에 오르려면 CSM에 문의하십시오.
+이 가이드는 Launch에서 Adobe Experience Platform 웹 SDK를 설정하는 다양한 방법을 안내합니다. 이 기능을 사용하려면에 있어야 허용 목록에 추가하다 합니다. 대기 목록에 오르려면 CSM(Certified Software Manager)에 문의하십시오.
 
 - 자사 도메인(CNAME)이 [활성화되어 있어야](https://docs.adobe.com/content/help/ko-KR/core-services/interface/ec-cookies/cookies-first-party.html) 합니다. 이미 Analytics용 CNAME이 있는 경우 이 CNAME을 사용해야 합니다. 개발 테스트에서는 CNAME이 없어도 되지만 프로덕션으로 이동하려면 먼저 테스트가 필요합니다.
 - Adobe Experience Platform에 대한 자격 부여 플랫폼을 구매하지 않은 경우, Adobe은 SDK와 함께 제한된 방식으로 사용할 수 있도록 Experience Platform 데이터 서비스 재단을 추가 비용 없이 제공합니다.
@@ -23,7 +23,7 @@ ht-degree: 5%
 
 ## 스키마 준비
 
-Experience Platform 에지 네트워크는 데이터를 XDM으로 가져옵니다. XDM은 스키마를 정의할 수 있는 데이터 형식입니다. 스키마는 Edge Network에서 데이터 형식을 예상하는 방법을 정의합니다. 데이터를 전송하려면 스키마를 정의해야 합니다.
+Experience Platform 에지 네트워크는 경험 데이터 모델(XDM)을 사용합니다. XDM은 스키마를 정의할 수 있는 데이터 형식입니다. 스키마는 Edge Network에서 데이터 형식을 예상하는 방법을 정의합니다. 데이터를 전송하려면 스키마를 정의해야 합니다.
 
 1. [스키마 만들기](../../xdm/tutorials/create-schema-ui.md)
 2. 만든 스키마에 AEP [!DNL Web SDK ExperienceEvent] Mixin을 추가합니다.
@@ -45,7 +45,7 @@ Launch에서 [Edge 구성 도구를 사용하여 구성](../fundamentals/edge-co
 
 >[!NOTE]
 >
->이 기능을 사용하려면 조직에서 허용 목록에 포함되어야 합니다. 최종 허용 목록에 포함하려면 CSM에 문의하십시오.
+>이 기능을 사용하려면 조직이허용 목록에 추가하다에 있어야 합니다. CSM(Certified Software Manager)에 문의하여를 허용 목록에 추가하다 이용하십시오.
 
 ## 스키마를 기반으로 데이터 요소 만들기
 
@@ -66,6 +66,7 @@ Launch에서 [Edge 구성 도구를 사용하여 구성](../fundamentals/edge-co
 - [스키마 구축](https://docs.adobe.com/content/help/ko-KR/experience-platform/xdm/schema/composition.html)
 - [디버깅에 대한 자세한 내용](../fundamentals/debugging.md)
 - 경험 [개인화](../fundamentals/rendering-personalization-content.md)
+- Adobe Experience Platform Launch에서 [IAB Transparency &amp; Consent Framework 2.0을](../solution-specific/iab-tcf/with-launch.md) 통합합니다.
 - 여러 솔루션으로 데이터 전송 방법 살펴보기
    - [Adobe Analytics](../solution-specific/analytics/analytics-overview.md)
    - [Adobe Audience Manager](../solution-specific/audience-manager/audience-manager-overview.md)
