@@ -5,7 +5,7 @@ seo-title: Google 고객 일치 대상
 description: Google Customer Match를 사용하면 온라인 및 오프라인 데이터를 사용하여 검색, 쇼핑, Gmail, YouTube 등 Google의 소유물과 운영 자산에서 고객에게 도달하고 다시 참여할 수 있습니다.
 seo-description: Google Customer Match를 사용하면 온라인 및 오프라인 데이터를 사용하여 검색, 쇼핑, Gmail, YouTube 등 Google의 소유물과 운영 자산에서 고객에게 도달하고 다시 참여할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
+source-git-commit: c66fb4cf0a414e02ceb58becc9d9b59db3fe987b
 workflow-type: tm+mt
 source-wordcount: '1555'
 ht-degree: 0%
@@ -40,7 +40,7 @@ ht-degree: 0%
 
 Adobe 실시간 CDP의 대상은 대상 플랫폼으로 전송되거나 수신되는 데이터에 대한 특정 규칙 및 의무를 가질 수 있습니다. 데이터의 제한 및 의무와 Adobe Experience Platform 및 대상 플랫폼에서 해당 데이터를 사용하는 방법을 이해해야 합니다. Adobe Experience Platform은 이러한 데이터 사용 의무 중 일부를 관리하는 데 도움이 되는 데이터 관리 툴을 제공합니다. [데이터 거버넌스 툴 및 정책에 대한 자세한](/help/data-governance/labels/overview.md) 내용을 살펴보십시오.
 
-## 활성화 유형 및 ID {#activation-type}
+## 내보내기 유형 및 ID {#export-type}
 
 **세그먼트 내보내기** - 식별자(이름, 전화 번호 등)를 사용하여 세그먼트(대상)의 모든 멤버를 내보냅니다. 대상에 [!DNL Google Customer Match] 사용됩니다.
 
@@ -56,7 +56,7 @@ Adobe 실시간 CDP에서 [!DNL Google Customer Match] 대상을 설정하기 �
 >
 >Adobe 실시간 CDP에서 첫 번째 [!DNL Google Customer Match] 대상을 설정하기 전에 Google의 허용 목록에 추가해야 합니다. 대상을 만들기 전에 아래에 설명된 허용 목록 프로세스가 Google에서 완료되었는지 확인하십시오.
 
-Adobe 실시간 CDP에서 [!DNL Google Customer Match] 대상을 생성하기 전에 Google에 연락하여 고객 일치 파트너 사용 [의 허용 목록 지침을 따라 Google 문서에서 데이터를](https://support.google.com/google-ads/answer/7361372?hl=en&amp;ref_topic=6296507) 업로드해야 합니다.
+Adobe 실시간 CDP에서 [!DNL Google Customer Match] 대상을 만들기 전에 Google에 문의하고 고객 일치 파트너 사용 [의 허용 목록 지침을 따라 Google 설명서에 데이터를](https://support.google.com/google-ads/answer/7361372?hl=en&amp;ref_topic=6296507) 업로드해야 합니다.
 
 
 ### 이메일 해싱 요구 사항 {#hashing-requirements}
@@ -92,7 +92,7 @@ Experience Platform에서 이메일 주소 인제스트에 대한 자세한 내�
 
 >[!IMPORTANT]
 >
->이메일 주소를 해시하지 않기로 선택하면 세그먼트를 활성화할 때 Adobe 실시간 CDP가 자동으로 수행됩니다 [!DNL Google Customer Match]. [활성화 워크플로우](/help/rtcdp/destinations/google-customer-match-destination.md#activate-segments) (5단계 참조)에서 `Email` 일반 텍스트 이메일 주소 *및 해시된 이메일 주소* 에 대해 아래에 표시된 옵션 `Email_LC_SHA256` 을 **&#x200B;선택합니다.
+>이메일 주소를 해시하지 않기로 선택하면 세그먼트를 활성화할 때 Adobe 실시간 CDP가 자동으로 수행됩니다 [!DNL Google Customer Match]. [활성화 워크플로우](/help/rtcdp/destinations/google-customer-match-destination.md#activate-segments) (5단계 참조)에서 `Email` 일반 텍스트 이메일 주소 *및 해시된 이메일 주소* 에 대해 아래 `Email_LC_SHA256` 와 같은 옵션을 **&#x200B;선택합니다.
 
 
 ![활성화 시 해싱](/help/rtcdp/destinations/assets/identity-mapping.png)
@@ -144,7 +144,7 @@ Experience Platform에서 이메일 주소 인제스트에 대한 자세한 내�
    ![세그먼트-대상](/help/rtcdp/destinations/assets/activate-segments-google-customer-match.png)
 5. ID **[!UICONTROL 매핑]** 단계에서 이 대상에 ID로 포함할 속성을 선택합니다. 새 **[!UICONTROL 매핑]** 추가를 선택하고 스키마를 검색하고 이메일 및/또는 해시된 이메일을 선택한 다음 해당 대상 ID에 매핑합니다
    ![ID 매핑 초기 화면](/help/rtcdp/destinations/assets/gcm-identity-mapping.png) <br> 
-   *일반 텍스트 이메일 주소(기본 ID*):스키마의 기본 ID로 일반 텍스트(해시되지 않은) 이메일 주소가 있는 경우 **[!UICONTROL 소스 속성]** 의 이메일 필드를 선택하고 **[!UICONTROL Target ID]**아래의 오른쪽 열에 있는 이메일 필드에 아래와 같이 매핑합니다.
+   *일반 텍스트 이메일 주소(기본 ID*):스키마의 기본 ID로 일반 텍스트(해시되지 않은) 이메일 주소가 있는 경우 **[!UICONTROL 소스 속성]** 의 이메일 필드를 선택하고 아래 **[!UICONTROL 와 같이 Target ID]**아래의 오른쪽 열에 있는 이메일 필드에 매핑합니다.
    ![일반 텍스트 이메일 ID 선택](/help/rtcdp/destinations/assets/gcm-raw-email.gif) <br> 
    *전자 메일 주소를 기본 ID로 해시했습니다*.스키마의 기본 ID로 이메일 주소를 해시한 경우 **[!UICONTROL 소스 속성]** 에서 해시된 이메일 필드를 선택하고 아래와 같이 Target ID ****아래의 오른쪽 열에 있는 Email_LC_SHA256 필드에 매핑합니다.
    ![해시 이메일 ID 선택](/help/rtcdp/destinations/assets/gcm-hashed-emails.gif) <br> 
