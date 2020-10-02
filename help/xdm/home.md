@@ -5,7 +5,7 @@ title: XDM(Experience Data Model) 시스템
 topic: overview
 description: '표준화 및 상호 운용성은 Adobe Experience Platform의 핵심 개념입니다. Adobe을 기반으로 하는 XDM(Experience Data Model)은 고객 경험 데이터를 표준화하고 고객 경험 관리를 위한 스키마를 정의하는 것입니다. '
 translation-type: tm+mt
-source-git-commit: ed1f2fdac0f9c977d11c867327c084353c1bcd0f
+source-git-commit: d49bbc91b67dec0468b46d165521c7d097a801ee
 workflow-type: tm+mt
 source-wordcount: '1638'
 ht-degree: 1%
@@ -56,7 +56,7 @@ XDM은 Adobe Experience Cloud이 제공하는 기본 프레임워크로, 정확�
 
 소비자 프로파일의 규모가 계속 커지면 개인 정보, 식별 정보, 연락처 정보 및 커뮤니케이션 환경 설정에 대한 강력한 저장소가 됩니다.
 
-### [!DNL XDM ExperienceEvent]
+### [!DNL XDM ExperienceEvent] {#xdm-experience-event}
 
 XDM ExperienceEvent는 이벤트(또는 이벤트 세트)가 발생한 시점과 관련된 대상의 ID를 포함하여 시스템 상태를 캡처하는 데 사용되는 시간 시리즈 기반 클래스입니다. 경험 이벤트는 발생한 사실에 대한 팩트 레코드이므로 변경할 수 없으며 집계 또는 해석 없이 발생한 사항을 나타냅니다. 특정 시간 동안 발생하는 변경 사항을 분석하고 트렌드를 추적하는 여러 시간 창 간에 비교할 수 있으므로 시간 도메인 분석에 매우 중요합니다.
 
