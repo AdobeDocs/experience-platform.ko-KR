@@ -5,9 +5,9 @@ seo-title: Google 디스플레이 및 비디오 360 대상
 description: 디스플레이 및 비디오 360(이전 DoubleClick 입찰 관리자)은 디스플레이, 비디오 및 모바일 재고 소스에서 타깃팅된 디지털 캠페인 및 대상 재타깃팅을 실행하는 데 사용되는 도구입니다.
 seo-description: '디스플레이 및 비디오 360(이전 DoubleClick 입찰 관리자)은 디스플레이, 비디오 및 모바일 재고 소스에서 타깃팅된 디지털 캠페인 및 대상 재타깃팅을 실행하는 데 사용되는 도구입니다. '
 translation-type: tm+mt
-source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
+source-git-commit: c66fb4cf0a414e02ceb58becc9d9b59db3fe987b
 workflow-type: tm+mt
-source-wordcount: '696'
+source-wordcount: '713'
 ht-degree: 0%
 
 ---
@@ -30,6 +30,10 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 >Google Display &amp; Video 360을 사용하여 첫 번째 대상을 만들고 이전에 Experience Cloud ID 서비스에서 [ID 동기화 기능을](https://docs.adobe.com/content/help/en/id-service/using/id-service-api/methods/idsync.html) 활성화하지 않은 경우(Adobe Audience Manager 또는 기타 애플리케이션 포함), Adobe 컨설팅 또는 고객 지원 센터에 연락하여 ID 동기화를 활성화하십시오. 이전에 Audience Manager에서 Google 통합을 설정한 경우 설정한 ID 동기화가 Adobe 실시간 CDP로 전달됩니다.
+
+### 내보내기 유형 {#export-type}
+
+**세그먼트 내보내기** - 세그먼트(대상)의 모든 멤버를 Google 대상으로 내보냅니다.
 
 ## 전제 조건
 
@@ -71,7 +75,7 @@ Adobe 실시간 CDP에서 [!DNL Google Display & Video 360] 대상을 생성하�
 
 ## 세그먼트 활성화 [!DNL Google Display & Video 360]
 
-세그먼트를 활성화할 방법에 대한 지침은 대상 [!DNL Google Display & Video 360]에 데이터 [활성화를 참조하십시오](/help/rtcdp/destinations/activate-destinations.md).
+세그먼트를 활성화할 방법에 대한 지침 [!DNL Google Display & Video 360]은 대상에 [데이터 활성화를 참조하십시오](/help/rtcdp/destinations/activate-destinations.md).
 
 ## 내보낸 데이터
 
