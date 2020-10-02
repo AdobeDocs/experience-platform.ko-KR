@@ -1,21 +1,21 @@
 ---
 keywords: Experience Platform;home;popular topics;map csv;map csv file;map csv file to xdm;map csv to xdm;ui guide;mapper;mapping;mapping fields;mapping functions;
 solution: Experience Platform
-title: 매핑 함수
+title: 데이터 준비 함수
 topic: overview
 description: 이 문서에서는 데이터 준비와 함께 사용되는 매핑 기능을 소개합니다.
 translation-type: tm+mt
-source-git-commit: db38f0666f5c945461043ad08939ebda52c21855
+source-git-commit: d47410106a6d3955cc9af78e605c893f08185ffa
 workflow-type: tm+mt
-source-wordcount: '3288'
-ht-degree: 5%
+source-wordcount: '3432'
+ht-degree: 3%
 
 ---
 
 
-# 매핑 함수
+# 데이터 준비 함수
 
-매핑 함수를 사용하여 소스 필드에 입력된 값을 기반으로 값을 계산하고 계산할 수 있습니다.
+데이터 준비 함수를 사용하여 소스 필드에 입력된 값을 기반으로 값을 계산하고 계산할 수 있습니다.
 
 ## 필드
 
@@ -37,6 +37,10 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 ### 문자열 함수
 
+>[!NOTE]
+>
+>표의 전체 내용을 보려면 왼쪽/오른쪽으로 스크롤하십시오.
+
 | 함수 | 설명 | 매개 변수 | 구문 | 표현식 | 샘플 출력 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | concat | 지정된 문자열을 연결합니다. | <ul><li>문자열:연결할 문자열.</li></ul> | concat(STRING_1, STRING_2) | concat(&quot;Hi, &quot;, &quot;there&quot;, &quot;!&quot;) | `"Hi, there!"` |
@@ -47,7 +51,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | lower /<br>lcase | 문자열을 소문자로 변환합니다. | <ul><li>입력: **필수** 소문자가 변환될 문자열입니다.</li></ul> | lower(INPUT) | lower(&quot;HeLlO&quot;)<br>소문자(&quot;HeLlO&quot;) | &quot;hello&quot; |
 | 상단/<br>ucase | 문자열을 대문자로 변환합니다. | <ul><li>입력: **필수** 대문자로 변환할 문자열입니다.</li></ul> | upper(INPUT) | upper(&quot;HeLlO&quot;)<br>ucase(&quot;HeLlO&quot;) | &quot;HELLO&quot; |
 | split | 구분 문자로 입력 문자열을 분할합니다. | <ul><li>입력: **필수** 분할될 입력 문자열입니다.</li><li>구분 문자: **필수** 입력 분할에 사용되는 문자열입니다.</li></ul> | split(INPUT, SEPARATOR) | split(&quot;Hello world&quot;, &quot; &quot;) | `["Hello", "world"]` |
-| join | 구분 기호를 사용하여 개체 목록을 연결합니다. | <ul><li>구분 문자: **필수** 개체 연결에 사용할 문자열입니다.</li><li>개체: **필수** 연결할 문자열 배열.</li></ul> | join(SEPARATOR, [OBJECTS]) | `join(" ", ["Hello", "world"])` | &quot;Hello world&quot; |
+| join | 구분 기호를 사용하여 개체 목록을 연결합니다. | <ul><li>구분 문자: **필수** 개체 연결에 사용할 문자열입니다.</li><li>개체: **필수** 연결할 문자열 배열.</li></ul> | `join(SEPARATOR, [OBJECTS])` | `join(" ", ["Hello", "world"])` | &quot;Hello world&quot; |
 | lpad | 문자열의 왼쪽에 지정된 문자열을 넣습니다. | <ul><li>입력: **필수** 채워질 문자열입니다. 이 문자열은 null일 수 있습니다.</li><li>카운트: **필수** 입력 가능한 문자열의 크기입니다.</li><li>패딩: **필수** 입력 내용을 패드하는 문자열입니다. null 또는 비어 있으면 단일 공백으로 처리됩니다.</li></ul> | lpad(INPUT, COUNT, PADDING) | lpad(&quot;bat&quot;, 8, &quot;yz&quot;) | &quot;yzygybat&quot; |
 | rpad | 지정된 문자열을 포함한 문자열의 오른쪽에 패드를 넣습니다. | <ul><li>입력: **필수** 채워질 문자열입니다. 이 문자열은 null일 수 있습니다.</li><li>카운트: **필수** 입력 가능한 문자열의 크기입니다.</li><li>패딩: **필수** 입력 내용을 패드하는 문자열입니다. null 또는 비어 있으면 단일 공백으로 처리됩니다.</li></ul> | rpad(INPUT, COUNT, PADDING) | rpad(&quot;bat&quot;, 8, &quot;yz&quot;) | &quot;batyzyzy&quot; |
 | left | 지정된 문자열의 첫 번째 &quot;n&quot; 문자를 가져옵니다. | <ul><li>문자열: **필수** : 첫 번째 &quot;n&quot; 문자를 가져오는 문자열입니다.</li><li>카운트: **필수**&#x200B;문자열에서 가져올 &quot;n&quot; 문자입니다.</li></ul> | left(STRING, COUNT) | left(&quot;abcde&quot;, 2) | &quot;ab&quot; |
@@ -60,15 +64,23 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 ### 해싱 함수
 
+>[!NOTE]
+>
+>표의 전체 내용을 보려면 왼쪽/오른쪽으로 스크롤하십시오.
+
 | 함수 | 설명 | 매개 변수 | 구문 | 표현식 | 샘플 출력 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| sha1 | SHA-1(보안 해시 알고리즘 1)을 사용하여 입력을 받고 해시 값을 생성합니다. | <ul><li>입력: **일반** 텍스트를 해시해야 합니다.</li><li>CHARSET: *선택* 사항문자 세트의 이름입니다. 가능한 값에는 UTF-8, UTF-16, ISO-8859-1 및 US-ASCII가 포함됩니다.</li></ul> | sha1(INPUT, CHARSET) | sha1(&quot;my text&quot;, &quot;UTF-8&quot;) | c3599c11e47719df18a2448690840c5dfcce3c80 |
-| sha256 | Secure Hash Algorithm 256(SHA-256)을 사용하여 입력을 받고 해시 값을 생성합니다. | <ul><li>입력: **일반** 텍스트를 해시해야 합니다.</li><li>CHARSET: *선택* 사항문자 세트의 이름입니다. 가능한 값에는 UTF-8, UTF-16, ISO-8859-1 및 US-ASCII가 포함됩니다.</li></ul> | sha256(INPUT, CHARSET) | sha256(&quot;내 텍스트&quot;, &quot;UTF-8&quot;) | 7330d2b39ca35eaf4cb95fc846c21ee6a39af698154a83a586ee270a0d372104 |
-| sha512 | Secure Hash Algorithm 512(SHA-512)를 사용하여 입력을 받고 해시 값을 생성합니다. | <ul><li>입력: **일반** 텍스트를 해시해야 합니다.</li><li>CHARSET: *선택* 사항문자 세트의 이름입니다. 가능한 값에는 UTF-8, UTF-16, ISO-8859-1 및 US-ASCII가 포함됩니다.</li></ul> | sha512(INPUT, CHARSET) | sha512(&quot;내 텍스트&quot;, &quot;UTF-8&quot;) | a3d7e45a0d9be5fd4e4b9a3b8c9c2163c21ef708bf11b4232bb21d2a8704ada2cdcd7b367dd0788a89a5c908cfe377aceb1072a7b386b7d4fd2ff68a8fd24d16 |
-| md5 | MD5를 사용하여 입력을 가져와 해시 값을 생성합니다. | <ul><li>입력: **일반** 텍스트를 해시해야 합니다.</li><li>CHARSET: *선택* 사항문자 세트의 이름입니다. 가능한 값에는 UTF-8, UTF-16, ISO-8859-1 및 US-ASCII가 포함됩니다. </li></ul> | md5(입력, CHARSET) | md5(&quot;내 텍스트&quot;, &quot;UTF-8&quot;) | d3b96ce8c9fb4e9bd0198d03ba6852c7 |
+| sha1 | SHA-1(보안 해시 알고리즘 1)을 사용하여 입력을 받고 해시 값을 생성합니다. | <ul><li>입력: **일반** 텍스트를 해시해야 합니다.</li><li>CHARSET: *선택* 사항문자 세트의 이름입니다. 가능한 값에는 UTF-8, UTF-16, ISO-8859-1 및 US-ASCII가 포함됩니다.</li></ul> | sha1(INPUT, CHARSET) | sha1(&quot;my text&quot;, &quot;UTF-8&quot;) | c3599c11e47719df18a24 &#x200B; 48690840c5dfcce3c80 |
+| sha256 | Secure Hash Algorithm 256(SHA-256)을 사용하여 입력을 받고 해시 값을 생성합니다. | <ul><li>입력: **일반** 텍스트를 해시해야 합니다.</li><li>CHARSET: *선택* 사항문자 세트의 이름입니다. 가능한 값에는 UTF-8, UTF-16, ISO-8859-1 및 US-ASCII가 포함됩니다.</li></ul> | sha256(INPUT, CHARSET) | sha256(&quot;내 텍스트&quot;, &quot;UTF-8&quot;) | 7330d2b39ca35eaf4cb95fc846c21 &#x200B; ee6a39af698154a83a586ee270a0d372104 |
+| sha512 | Secure Hash Algorithm 512(SHA-512)를 사용하여 입력을 받고 해시 값을 생성합니다. | <ul><li>입력: **일반** 텍스트를 해시해야 합니다.</li><li>CHARSET: *선택* 사항문자 세트의 이름입니다. 가능한 값에는 UTF-8, UTF-16, ISO-8859-1 및 US-ASCII가 포함됩니다.</li></ul> | sha512(INPUT, CHARSET) | sha512(&quot;내 텍스트&quot;, &quot;UTF-8&quot;) | a3d7e45a0d9be5fd4e4b3b8c9c2163c21ef &#x200B; 708bf11b4232bb21d2a8704ada2cdcd7b367dd0788 a89 &#x200B; a5c908cfe377aceb1072a7b386b7d4fd2ff68a8fd24d16 |
+| md5 | MD5를 사용하여 입력을 가져와 해시 값을 생성합니다. | <ul><li>입력: **일반** 텍스트를 해시해야 합니다.</li><li>CHARSET: *선택* 사항문자 세트의 이름입니다. 가능한 값에는 UTF-8, UTF-16, ISO-8859-1 및 US-ASCII가 포함됩니다. </li></ul> | md5(입력, CHARSET) | md5(&quot;내 텍스트&quot;, &quot;UTF-8&quot;) | d3b96ce8c9fb4 &#x200B; e9bd0198d03ba6852c7 |
 | crc32 | 입력은 CRC(Cycle Redundancy Check) 알고리즘을 사용하여 32비트 순환 코드를 생성합니다. | <ul><li>입력: **일반** 텍스트를 해시해야 합니다.</li><li>CHARSET: *선택* 사항문자 세트의 이름입니다. 가능한 값에는 UTF-8, UTF-16, ISO-8859-1 및 US-ASCII가 포함됩니다.</li></ul> | CRC32(INPUT, CHARSET) | crc32(&quot;my text&quot;, &quot;UTF-8&quot;) | 8df92e80 |
 
 ### URL 함수
+
+>[!NOTE]
+>
+>표의 전체 내용을 보려면 왼쪽/오른쪽으로 스크롤하십시오.
 
 | 함수 | 설명 | 매개 변수 | 구문 | 표현식 | 샘플 출력 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
@@ -79,6 +91,10 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | get_url_query_str | 지정된 URL의 쿼리 문자열을 반환합니다. | <ul><li>URL: **필수** 쿼리 문자열을 가져오려는 URL입니다.</li><li>앵커: **필수** 쿼리 문자열에서 앵커로 수행할 작업을 결정합니다. 다음 세 값 중 하나일 수 있습니다.&quot;retain&quot;, &quot;remove&quot; 또는 &quot;append&quot;를 선택합니다.<br><br>값이 &quot;retain&quot;이면 반환된 값에 앵커가 추가됩니다.<br>값이 &quot;remove&quot;이면 반환된 값에서 앵커가 제거됩니다.<br>값이 &quot;append&quot;이면 앵커가 별도의 값으로 반환됩니다.</li></ul> | get_url_query_str(URL, ANCHOR) | get_url_query_str(&quot;foo://example.com:8042/over/there?name=ferret#nose&quot;, &quot;retain&quot;)<br>get_url_query_str(&quot;foo://example.com:8042/over/there?name=ferret#nose&quot;, &quot;remove&quot;)<br>get_url_query_str(&quot;foo://example.com:8042/over/there?name=ferret#nose&quot;, &quot;append&quot;) | `{"name": "ferret#nose"}`<br>`{"name": "ferret"}`<br>`{"name": "ferret", "_anchor_": "nose"}` |
 
 ### 날짜 및 시간 함수
+
+>[!NOTE]
+>
+>표의 전체 내용을 보려면 왼쪽/오른쪽으로 스크롤하십시오.
 
 | 함수 | 설명 | 매개 변수 | 구문 | 표현식 | 샘플 출력 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
@@ -97,6 +113,10 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 ### 계층 - 객체
 
+>[!NOTE]
+>
+>표의 전체 내용을 보려면 왼쪽/오른쪽으로 스크롤하십시오.
+
 | 함수 | 설명 | 매개 변수 | 구문 | 표현식 | 샘플 출력 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | size_of | 입력의 크기를 반환합니다. | <ul><li>입력: **필수** 크기를 찾으려고 하는 개체입니다.</li></ul> | size_of(INPUT) | `size_of([1, 2, 3, 4])` | 4 |
@@ -108,6 +128,10 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 ### 계층 - 배열
 
+>[!NOTE]
+>
+>표의 전체 내용을 보려면 왼쪽/오른쪽으로 스크롤하십시오.
+
 | 함수 | 설명 | 매개 변수 | 구문 | 표현식 | 샘플 출력 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | 코알스 | 지정된 배열에서 null이 아닌 첫 번째 개체를 반환합니다. | <ul><li>입력: **필수** null이 아닌 첫 번째 개체를 찾을 배열입니다.</li></ul> | coalesce(INPUT) | coalesce(null, null, null, &quot;first&quot;, null, &quot;second&quot;) | &quot;first&quot; |
@@ -117,6 +141,10 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 ### 논리 연산자
 
+>[!NOTE]
+>
+>표의 전체 내용을 보려면 왼쪽/오른쪽으로 스크롤하십시오.
+
 | 함수 | 설명 | 매개 변수 | 구문 | 표현식 | 샘플 출력 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | 디코딩 | 키워드와 배열 키 값 쌍의 목록이 지정된 경우 이 함수는 키가 있는 경우 값을 반환하거나 배열에 있는 경우 기본값을 반환합니다. | <ul><li>키: **일치해야** 합니다.</li><li>OPTIONS: **필수** 키/값 쌍의 분리된 배열입니다. 선택적으로 기본값을 끝에 배치할 수 있습니다.</li></ul> | decode(KEY, OPTIONS) | decode(stateCode, &quot;ca&quot;, &quot;California&quot;, &quot;pa&quot;, &quot;Pennsylvania&quot;, &quot;N/A&quot;) | 지정된 stateCode가 &quot;ca&quot;, &quot;California&quot;인 경우.<br>만약 주법이 &quot;pa&quot;, &quot;펜실베이니아&quot; 라면.<br>stateCode가 다음과 일치하지 않는 경우 &quot;N/A&quot; |
@@ -124,12 +152,20 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 ### 집계
 
+>[!NOTE]
+>
+>표의 전체 내용을 보려면 왼쪽/오른쪽으로 스크롤하십시오.
+
 | 함수 | 설명 | 매개 변수 | 구문 | 표현식 | 샘플 출력 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | min | 지정된 인수의 최소 개수를 반환합니다. 자연스러운 순서를 사용합니다. | <ul><li>OPTIONS: **필요한** 하나 이상의 개체가 서로 비교할 수 있습니다.</li></ul> | min(OPTIONS) | 최소(3, 1, 4) | 1 |
 | max | 주어진 인수의 최대값을 반환합니다. 자연스러운 순서를 사용합니다. | <ul><li>OPTIONS: **필요한** 하나 이상의 개체가 서로 비교할 수 있습니다.</li></ul> | max(OPTIONS) | max(3, 1, 4) | 4 |
 
 ### 문자 변환
+
+>[!NOTE]
+>
+>표의 전체 내용을 보려면 왼쪽/오른쪽으로 스크롤하십시오.
 
 | 함수 | 설명 | 매개 변수 | 구문 | 표현식 | 샘플 출력 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
@@ -140,17 +176,29 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 ### JSON 함수
 
+>[!NOTE]
+>
+>표의 전체 내용을 보려면 왼쪽/오른쪽으로 스크롤하십시오.
+
 | 함수 | 설명 | 매개 변수 | 구문 | 표현식 | 샘플 출력 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | json_to_object | 지정된 문자열에서 JSON 콘텐츠를 역직렬화합니다. | <ul><li>문자열: **deserialize할 JSON 문자열이 필요합니다** .</li></ul> | json_to_object(STRING) | json_to_object({&quot;info&quot;:{&quot;firstName&quot;:&quot;John&quot;,&quot;lastName&quot; :&quot;Doe&quot;}) | JSON을 나타내는 개체입니다. |
 
 ### 특별 작업
 
+>[!NOTE]
+>
+>표의 전체 내용을 보려면 왼쪽/오른쪽으로 스크롤하십시오.
+
 | 함수 | 설명 | 매개 변수 | 구문 | 표현식 | 샘플 출력 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | uuid /<br>guid | 의사 임의 ID를 생성합니다. |  | uuid()<br>guid() | uuid()<br>guid() | 7c0267d2-bb74-4e1a-9275-3bf4fccda5f4<br>c7016dc7-3163-43f7-afc7-2e1c9c20633 |
 
 ### 사용자 에이전트 기능
+
+>[!NOTE]
+>
+>표의 전체 내용을 보려면 왼쪽/오른쪽으로 스크롤하십시오.
 
 | 함수 | 설명 | 매개 변수 | 구문 | 표현식 | 샘플 출력 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
