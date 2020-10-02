@@ -5,10 +5,10 @@ description: Experience Platform 웹 SDK를 구성하는 방법 살펴보기
 seo-description: Experience Platform 웹 SDK를 구성하는 방법 살펴보기
 keywords: configuring;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;environment;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;prehidingStyle;opacity;cookieDestinationsEnabled;urlDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 translation-type: tm+mt
-source-git-commit: fe53ecbf6adff4f1e09979cd170a88ac0bd3cb75
+source-git-commit: d036595dc96af98fd53c7eb40162585bac48f05c
 workflow-type: tm+mt
 source-wordcount: '749'
-ht-degree: 10%
+ht-degree: 11%
 
 ---
 
@@ -36,7 +36,7 @@ alloy("configure", {
 
 | **유형** | **필수 여부** | **기본값** |
 | -------- | ------------ | ----------------- |
-| 문자열 | 예 | none |
+| 문자열 | 예 | 없음 |
 
 SDK를 해당 계정 및 구성에 연결하는 할당된 구성 ID입니다.  단일 페이지 내에서 여러 인스턴스를 구성할 때 각 인스턴스에 대해 다른 인스턴스 `edgeConfigId` 를 구성해야 합니다.
 
@@ -73,7 +73,7 @@ Adobe 서비스와 상호 작용하는 데 사용되는 도메인. Adobe 에지 
 
 | **유형** | **필수 여부** | **기본값** |
 | -------- | ------------ | ----------------- |
-| 문자열 | 예 | none |
+| 문자열 | 예 | 없음 |
 
 Your assigned [!DNL Experience Cloud] organization ID.  페이지 내에서 여러 인스턴스를 구성할 때는 각 인스턴스에 대해 다른 인스턴스 `orgId` 를 구성해야 합니다.
 
@@ -103,7 +103,7 @@ Your assigned [!DNL Experience Cloud] organization ID.  페이지 내에서 여�
 
 ## 개인 정보 옵션
 
-### `defaultConsent`
+### `defaultConsent` {#default-consent}
 
 | **유형** | **필수 여부** | **기본값** |
 | -------- | ------------ | ----------------- |
@@ -117,7 +117,7 @@ Your assigned [!DNL Experience Cloud] organization ID.  페이지 내에서 여�
 
 | **유형** | **필수 여부** | **기본값** |
 | -------- | ------------ | ----------------- |
-| 문자열 | 아니요 | none |
+| 문자열 | 아니요 | 없음 |
 
 개인화된 컨텐츠가 서버에서 로드되는 동안 웹 페이지의 컨텐츠 영역을 숨기는 CSS 스타일 정의를 만드는 데 사용됩니다. 이 옵션을 제공하지 않으면 SDK에서 개인화된 컨텐츠가 로드되는 동안 컨텐츠 영역을 숨기지 않으므로 잠재적으로 &quot;깜박임&quot;이 발생합니다.
 
