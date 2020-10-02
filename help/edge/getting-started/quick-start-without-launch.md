@@ -5,17 +5,17 @@ description: Experience Platform 웹 SDK를 사용하여 데이터를 수집하�
 seo-description: Experience Platform 웹 SDK를 사용하여 데이터를 수집하는 빠른 시작 가이드
 keywords: 1st-party domain;CNAME;schema;create schema;configuration id;configuration tool;data element;create data element;XDM Object;sendEvent;send Event;install sdk;install web sdk;configure;configure web sdk;
 translation-type: tm+mt
-source-git-commit: 7aa0e654300f10db774794d66ece9d0d040cb2ba
+source-git-commit: f178da80d0902f76868986426600f3da426cf24d
 workflow-type: tm+mt
-source-wordcount: '517'
+source-wordcount: '530'
 ht-degree: 5%
 
 ---
 
 
-# 시작
+# Adobe Experience Platform 웹 SDK JavaScript 빠른 시작 안내서
 
-이 가이드는 Adobe Experience Platform 웹 SDK를 설정하는 다양한 방법을 안내합니다. 이 기능을 사용하려면 허용 목록에 포함되어야 합니다. 대기 목록에 오르려면 CSM에 문의하십시오.
+이 가이드는 Adobe Experience Platform 웹 SDK를 설정하는 다양한 방법을 안내합니다. 이 기능을 사용하려면에 있어야 허용 목록에 추가하다 합니다. 대기 목록에 오르고자 하는 경우 공인 소프트웨어 관리자(CSM)에게 문의하십시오.
 
 - 자사 도메인(CNAME)이 [활성화되어 있어야](https://docs.adobe.com/content/help/ko-KR/core-services/interface/ec-cookies/cookies-first-party.html) 합니다. 이미 Analytics용 CNAME이 있는 경우 이 CNAME을 사용해야 합니다. 개발 테스트에서는 CNAME이 없어도 되지만 프로덕션으로 이동하려면 먼저 테스트가 필요합니다.
 - Adobe Experience Platform에 대한 자격 부여  플랫폼을 구매하지 않은 경우, Adobe은 SDK와 함께 제한된 방식으로 사용할 수 있도록 Experience Platform 데이터 서비스 재단을 추가 비용 없이 제공합니다.
