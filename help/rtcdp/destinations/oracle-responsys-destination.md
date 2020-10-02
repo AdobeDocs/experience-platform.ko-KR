@@ -5,9 +5,9 @@ seo-title: Oracle Responsys 대상
 description: Responsys는 Oracle이 이메일, 모바일, 디스플레이 및 소셜 간의 상호 작용을 개인화하기 위해 제공하는 크로스채널 마케팅 캠페인을 위한 기업 이메일 마케팅 툴입니다.
 seo-description: Responsys는 Oracle이 이메일, 모바일, 디스플레이 및 소셜 간의 상호 작용을 개인화하기 위해 제공하는 크로스채널 마케팅 캠페인을 위한 기업 이메일 마케팅 툴입니다.
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: d0a04c61bfe4024a2bb45ea7babab9073fcd6c22
 workflow-type: tm+mt
-source-wordcount: '487'
+source-wordcount: '525'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,11 @@ ht-degree: 0%
 
 [Respondsys](https://www.oracle.com/marketingcloud/products/cross-channel-orchestration/) 는 이메일, 모바일, 디스플레이 및 소셜 간의 인터랙션을 개인화하도록 [!DNL Oracle] 하는 크로스채널 마케팅 캠페인을 위한 기업 이메일 마케팅 툴입니다.
 
-세그먼트 데이터를 대상 [!DNL Oracle Responsys]으로 전송하려면 먼저 Adobe 실시간 고객 데이터 플랫폼의 대상에 [](#connect-destination) 연결한 다음 스토리지 위치에서 [데이터 가져오기를](#import-data-into-responsys) 설정해야 합니다 [!DNL Oracle Responsys].
+세그먼트 데이터 [!DNL Oracle Responsys]를 전송하려면 먼저 Adobe 실시간 고객 데이터 플랫폼의 대상에 [](#connect-destination) 연결한 다음 스토리지 위치에서 [데이터 가져오기](#import-data-into-responsys) 를 다음 [!DNL Oracle Responsys]로 설정해야 합니다.
+
+## 내보내기 유형 {#export-type}
+
+**프로필 내보내기** - 원하는 스키마 필드와 함께 세그먼트의 모든 멤버를 내보냅니다(예:이메일 주소, 전화 번호, 성)을 [대상 활성화 워크플로우의 속성 선택 화면에서 선택한 대로 선택합니다](/help/rtcdp/destinations/activate-destinations.md#select-attributes).
 
 ## 연결 대상 {#connect-destination}
 
