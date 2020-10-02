@@ -5,10 +5,10 @@ user-guide-title: Adobe Experience Platform 웹 SDK 도움말
 breadcrumb-title: Web SDK Guide
 user-guide-description: Interact with Experience Cloud services through the Edge Network.
 translation-type: tm+mt
-source-git-commit: 4e358fda1c8f7aebe57a009a146b8b73cf88e169
+source-git-commit: 67928b35416928947a4b288d9aea92a065f080f6
 workflow-type: tm+mt
-source-wordcount: '104'
-ht-degree: 18%
+source-wordcount: '116'
+ht-degree: 17%
 
 ---
 
@@ -41,6 +41,10 @@ ht-degree: 18%
       * [Adobe Analytics으로 데이터 보내기](solution-specific/analytics/link-tracking.md)
    * Audience Manager {#aam}
       * [Audience Manager 개요](solution-specific/audience-manager/audience-manager-overview.md)
+   * IAB Transparency and Consent Framework 2.0 {#iab-tcf}
+      * [개요](solution-specific/iab-tcf/overview.md)
+      * [Launch와 통합](solution-specific/iab-tcf/with-launch.md)
+      * [실행 없이 통합](solution-specific/iab-tcf/without-launch.md)
    * Target {#target}
       * [Target 개요](solution-specific/target/target-overview.md)
       * [깜박임 관리](solution-specific/target/flicker-management.md)
