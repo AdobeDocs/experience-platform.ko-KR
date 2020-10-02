@@ -5,7 +5,7 @@ seo-title: Facebook 대상
 description: 해시된 이메일을 기반으로 고객 타깃팅, 개인화 및 억제를 위해 Facebook 캠페인에 대한 프로필을 활성화합니다.
 seo-description: 해시된 이메일을 기반으로 고객 타깃팅, 개인화 및 억제를 위해 Facebook 캠페인에 대한 프로필을 활성화합니다.
 translation-type: tm+mt
-source-git-commit: 72ceb747bd4b278afc51dfb5ab6d6386d7b05c82
+source-git-commit: c66fb4cf0a414e02ceb58becc9d9b59db3fe987b
 workflow-type: tm+mt
 source-wordcount: '758'
 ht-degree: 4%
@@ -52,7 +52,7 @@ ht-degree: 4%
 >
 >전송된 데이터에는 연결된 ID가 포함되지 [!DNL Facebook] 않아야 합니다. 귀하는 본 의무 사항을 지킬 책임이 있으며, 활성화를 위해 선택한 세그먼트가 병합 정책에 연결 옵션을 사용하지 않도록 함으로써 이에 대응할 수 있습니다. 병합 정책에 대한 자세한 [내용을 살펴보십시오](/help/profile/ui/merge-policies.md).
 
-### 활성화 유형 {#activation-type}
+### 내보내기 유형 {#export-type}
 
 **세그먼트 내보내기** - 식별자(이름, 전화 번호 등)를 사용하여 세그먼트(대상)의 모든 멤버를 내보냅니다. Facebook 대상에 사용됩니다.
 
