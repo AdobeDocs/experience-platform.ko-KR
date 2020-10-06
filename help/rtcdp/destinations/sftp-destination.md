@@ -5,9 +5,9 @@ seo-title: SFTP 대상
 description: SFTP 서버에 대한 라이브 아웃바운드 연결을 만들어 Experience Platform에서 구분된 데이터 파일을 정기적으로 내보냅니다.
 seo-description: SFTP 서버에 대한 라이브 아웃바운드 연결을 만들어 Experience Platform에서 구분된 데이터 파일을 정기적으로 내보냅니다.
 translation-type: tm+mt
-source-git-commit: d0a04c61bfe4024a2bb45ea7babab9073fcd6c22
+source-git-commit: 67a353c950bef11ccbaa52c49d213f08449baa96
 workflow-type: tm+mt
-source-wordcount: '206'
+source-wordcount: '205'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ SFTP 서버에 대한 라이브 아웃바운드 연결을 만들어 Experience P
 
 ## 내보내기 유형 {#export-type}
 
-**프로필 내보내기** - 원하는 스키마 필드와 함께 세그먼트의 모든 멤버를 내보냅니다(예:이메일 주소, 전화 번호, 성)을 [대상 활성화 워크플로우의 속성 선택 화면에서 선택한 대로 선택합니다](/help/rtcdp/destinations/activate-destinations.md#select-attributes).
+**프로필 기반** - 원하는 스키마 필드와 함께 세그먼트의 모든 멤버를 내보냅니다(예:이메일 주소, 전화 번호, 성)을 [대상 활성화 워크플로우의 속성 선택 화면에서 선택한 대로 선택합니다](/help/rtcdp/destinations/activate-destinations.md#select-attributes).
 
 ![SFTP 프로필 기반 내보내기 유형](/help/rtcdp/destinations/assets/sftp-export-type.png)
 
