@@ -4,11 +4,12 @@ solution: Experience Platform
 title: Adobe Experience Platform FAQ 및 문제 해결 안내서
 description: 이 문서에서는 Adobe Experience Platform에 대한 FAQ와 Experience Platform API에서 발생할 수 있는 일반적인 오류에 대한 고급 문제 해결 안내서를 제공합니다.
 topic: getting started
+user-guide-description: Find answers to frequently asked questions and a guide for troubleshooting common errors in Experience Platform.
 translation-type: tm+mt
-source-git-commit: ed0bbe1017790cd0b01757a2e43c0040a125be18
+source-git-commit: 9981c5e34d675f7fcb767a097af3b2d3c56ec091
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1996'
+ht-degree: 3%
 
 ---
 
