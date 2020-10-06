@@ -5,9 +5,9 @@ seo-title: Amazon S3 대상
 description: Amazon 웹 서비스(AWS) S3 스토리지에 대한 실시간 아웃바운드 연결을 만들어 Adobe Experience Platform에서 탭으로 구분된 또는 CSV 데이터 파일을 사용자 자신의 S3 버킷으로 주기적으로 내보냅니다.
 seo-description: Amazon 웹 서비스(AWS) S3 스토리지에 대한 실시간 아웃바운드 연결을 만들어 Adobe Experience Platform에서 탭으로 구분된 또는 CSV 데이터 파일을 사용자 자신의 S3 버킷으로 주기적으로 내보냅니다.
 translation-type: tm+mt
-source-git-commit: d0a04c61bfe4024a2bb45ea7babab9073fcd6c22
+source-git-commit: 67a353c950bef11ccbaa52c49d213f08449baa96
 workflow-type: tm+mt
-source-wordcount: '256'
+source-wordcount: '255'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ AWS) [!DNL Amazon Web Services] S3 스토리지에 대한 실시간 아웃바운
 
 ## 내보내기 유형 {#export-type}
 
-**프로필 내보내기** - 원하는 스키마 필드와 함께 세그먼트의 모든 멤버를 내보냅니다(예:이메일 주소, 전화 번호, 성)을 [대상 활성화 워크플로우의 속성 선택 화면에서 선택한 대로 선택합니다](/help/rtcdp/destinations/activate-destinations.md#select-attributes).
+**프로필 기반** - 원하는 스키마 필드와 함께 세그먼트의 모든 멤버를 내보냅니다(예:이메일 주소, 전화 번호, 성)을 [대상 활성화 워크플로우의 속성 선택 화면에서 선택한 대로 선택합니다](/help/rtcdp/destinations/activate-destinations.md#select-attributes).
 
 ![Amazon S3 프로필 기반 내보내기 유형](/help/rtcdp/destinations/assets/aws-export-type.png)
 
