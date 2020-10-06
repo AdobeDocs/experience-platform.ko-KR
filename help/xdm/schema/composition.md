@@ -5,7 +5,7 @@ title: 스키마 컴포지션의 기본 사항
 topic: overview
 description: 이 문서에서는 XDM(Experience Data Model) 스키마 및 Adobe Experience Platform에서 사용할 스키마를 작성하기 위한 기본 블록, 원칙 및 모범 사례에 대해 소개합니다.
 translation-type: tm+mt
-source-git-commit: 4a76101cb8a7afb947bdce263a73f79d931db154
+source-git-commit: f7abccb677294e1595fb35c27e03c30eb968082a
 workflow-type: tm+mt
 source-wordcount: '2839'
 ht-degree: 0%
@@ -58,7 +58,7 @@ The infrastructure which [!DNL Experience Platform] is built, knowing [!DNL XDM 
 
 레코드 및 시간 시리즈 스키마 모두 ID 맵을 포함합니다(`xdm:identityMap`). 이 필드에는 다음 섹션에 설명된 대로 &quot;ID&quot;로 표시된 필드에서 추출되는 대상의 ID 표현이 포함되어 있습니다.
 
-### [!UICONTROL ID]
+### [!UICONTROL ID] {#identity}
 
 스키마는 데이터를 인제스트하는 데 사용됩니다 [!DNL Experience Platform]. 이 데이터를 여러 서비스에서 사용하여 개별 엔티티의 단일 통합 뷰를 만들 수 있습니다. 따라서 고객 ID에 대해 생각해 볼 스키마와 데이터가 어디에서 오는지에 관계없이 주체를 식별하는 데 사용할 수 있는 필드를 고려할 때 중요합니다.
 
@@ -195,7 +195,7 @@ The infrastructure which [!DNL Experience Platform] is built, knowing [!DNL XDM 
 다운스트림 서비스 및 애플리케이션에서 사용되는 일부 데이터 작업은 특정 필드 유형에 대해 제한을 적용합니다. 해당되는 서비스에는 다음이 포함되지만 이에 국한되지 않습니다.
 
 * [[!DNL 실시간 고객 프로필]](../../profile/home.md)
-* [[!DNL ID 서비스]](../../identity-service/home.md)
+* [[!DNL Identity Service]](../../identity-service/home.md)
 * [[!DNL 세그멘테이션]](../../segmentation/home.md)
 * [[!DNL 쿼리 서비스]](../../query-service/home.md)
 * [[!DNL 데이터 과학 작업 공간]](../../data-science-workspace/home.md)
