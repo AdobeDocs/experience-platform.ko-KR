@@ -5,9 +5,9 @@ title: 텍스트 분류 API 끝점
 topic: Developer guide
 description: 텍스트 분류 서비스는 텍스트 조각이 주어지면 하나 이상의 레이블로 분류할 수 있습니다. 분류는 단일 레이블, 다중 레이블 또는 계층일 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 31e4f1441676daa79f064c567ddc47e9198d0a0b
+source-git-commit: 09200be6eb078ecbefc91c6449373f811b602797
 workflow-type: tm+mt
-source-wordcount: '431'
+source-wordcount: '432'
 ht-degree: 4%
 
 ---
