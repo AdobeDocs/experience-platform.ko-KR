@@ -5,7 +5,7 @@ title: 데이터 과학 작업 공간 문제 해결 가이드
 topic: Troubleshooting
 description: 이 문서에서는 Adobe Experience Platform 데이터 과학 작업 공간에 대해 자주 묻는 질문에 대한 답변을 제공합니다.
 translation-type: tm+mt
-source-git-commit: 76e598c743df320e4b3cb821e118749fe7304d9c
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '750'
 ht-degree: 0%
@@ -31,7 +31,7 @@ ht-degree: 0%
 
 ![chrome](./images/faq/chrome-advanced.png)
 
-개인 *정보 및 보안* 섹션이 나타납니다. 그런 다음 **사이트 설정을** 클릭한 다음 **쿠키 및 사이트 데이터를 클릭합니다**.
+개인 **정보 및 보안** 섹션이 나타납니다. 그런 다음 **사이트 설정을** 클릭한 다음 **쿠키 및 사이트 데이터를 클릭합니다**.
 
 ![chrome](./images/faq/privacy-security.png)
 
@@ -63,7 +63,7 @@ Safari 환경 설정 창에서 **고급을 선택합니다**. 그런 다음 메�
 
 ![Safari 고급](./images/faq/advanced.png)
 
-그런 다음 위쪽 탐색 모음에서 현상 **메뉴를** 선택합니다. 현상 드롭다운 *에서* 사용자 에이전트 *위로*&#x200B;마우스를 가져갑니다. 사용할 사용자 에이전트 **[!DNL Chrome]** 또는 **[!DNL Firefox]** 사용자 에이전트 문자열을 선택할 수 있습니다.
+그런 다음 위쪽 탐색 모음에서 현상 **메뉴를** 선택합니다. 현상 드롭다운 **에서** 사용자 에이전트 **위로**&#x200B;마우스를 가져갑니다. 사용할 사용자 에이전트 **[!DNL Chrome]** 또는 **[!DNL Firefox]** 사용자 에이전트 문자열을 선택할 수 있습니다.
 
 ![현상 메뉴](./images/faq/user-agent.png)
 
