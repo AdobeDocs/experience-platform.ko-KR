@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: 이 UI 가이드는 Adobe Experience Platform을 사용하여 스트리밍 연결을 만드는 데 도움이 됩니다.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '512'
 ht-degree: 0%
@@ -36,7 +36,7 @@ UI에 로그인한 후 [!DNL Experience Platform] 소스 **[!UICONTROL 를 클�
 
 ![](../images/streaming-ingestion/ui/click-connect-source.png)
 
-HTTP **[!UICONTROL 에 연결]** 화면이 나타납니다. 서비스 세부 **[!UICONTROL 정보]**&#x200B;아래에서 **** 새로운 스트리밍 연결에 대한 **[!UICONTROL 이름]** 및설명을모두제공합니다.
+HTTP **[!UICONTROL 에 연결]** 화면이 나타납니다. 서비스 세부 **[!UICONTROL 정보에서]**&#x200B;새로운 스트리밍 연결에 대한 이름과 설명을 모두 입력합니다.
 
 계정 **[!UICONTROL 인증]**&#x200B;아래에서 스트리밍 연결에 대해 다음 구성 속성을 선택합니다.
 
@@ -59,7 +59,7 @@ HTTP **[!UICONTROL 에 연결]** 화면이 나타납니다. 서비스 세부 **[
 
 ### 새 데이터 집합 만들기
 
-새 데이터 세트를 만들려면 데이터 세트에 대한 **[!UICONTROL 이름]**, **[!UICONTROL 설명]**&#x200B;과 대상 **[!UICONTROL 스키마를]** 제공합니다.
+새 데이터 세트를 만들려면 데이터 세트에 대한 대상 스키마와 이름, 설명을 입력합니다.
 
 ![](../images/streaming-ingestion/ui/create-new-dataset.png)
 
