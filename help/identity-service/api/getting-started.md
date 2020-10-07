@@ -5,7 +5,7 @@ title: 시작하기
 topic: API guide
 description: 'Adobe Experience Platform ID 서비스는 Adobe Experience Platform에서 ID 그래프라고 하는 것을 통해 고객의 크로스 디바이스, 크로스채널 및 거의 실시간 ID를 관리합니다. '
 translation-type: tm+mt
-source-git-commit: 2a528c705a7aa610f57047be39be1ce9886ce44c
+source-git-commit: fa667d86c089c692f22cfd1b46f3f11b6e9a68d7
 workflow-type: tm+mt
 source-wordcount: '754'
 ht-degree: 1%
@@ -88,4 +88,4 @@ ID가 유지되면 기본 ID 또는 XID라는 ID를 생성하여 해당 ID에 �
 
 ## 다음 단계
 
-이제 필요한 자격 증명을 수집했으므로 개발자 가이드의 나머지 부분을 계속 읽을 수 있습니다. 각 섹션은 해당 끝점과 관련된 중요한 정보를 제공하며 CRUD 작업을 수행하기 위한 예제 API 호출을 보여줍니다. 각 호출에는 일반 **API 형식**, 필수 헤더와 올바른 형식의 페이로드를 보여주는 샘플 **요청** 및 성공적인 호출을 위한 샘플 **응답이** 포함됩니다.
+이제 필요한 자격 증명을 수집했으므로 개발자 가이드의 나머지 부분을 계속 읽을 수 있습니다. 각 섹션은 해당 끝점과 관련된 중요한 정보를 제공하며 CRUD 작업을 수행하기 위한 예제 API 호출을 보여줍니다. 각 호출에는 일반 API 형식, 필요한 헤더와 올바른 형식의 페이로드를 보여주는 샘플 요청 및 성공적인 호출을 위한 샘플 응답이 포함됩니다.
