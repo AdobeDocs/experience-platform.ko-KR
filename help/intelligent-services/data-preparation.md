@@ -5,7 +5,7 @@ title: 지능형 서비스에서 사용할 데이터 준비
 topic: Intelligent Services
 description: 'Intelligent Services가 마케팅 이벤트 데이터에서 얻은 통찰력을 얻으려면 데이터가 세밀하게 농축되어 표준 구조로 유지되어야 합니다. 지능형 서비스는 이를 달성하기 위해 XDM(Experience Data Model) 스키마를 활용합니다. 특히, Intelligent Services에서 사용되는 모든 데이터 세트는 CEE(Consumer ExperienceEvent) XDM 스키마를 따라야 합니다. '
 translation-type: tm+mt
-source-git-commit: d9bf87e41fe002ac1d70a241b48c7b9fd1139d6c
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1979'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # 데이터 준비 [!DNL Intelligent Services]
 
-마케팅 이벤트 데이터에서 통찰력을 [!DNL Intelligent Services] 얻으려면 데이터가 세밀하게 농축되어 표준 구조로 유지되어야 합니다. [!DNL Intelligent Services] 이를 위해 [!DNL Experience Data Model] (XDM) 스키마를 활용합니다. 특히, 에서 사용되는 모든 데이터 집합은 CEE( [!DNL Intelligent Services] Consumer ExperienceEvent) **** XDM 스키마를 따라야 합니다.
+마케팅 이벤트 데이터에서 통찰력을 [!DNL Intelligent Services] 얻으려면 데이터가 세밀하게 농축되어 표준 구조로 유지되어야 합니다. [!DNL Intelligent Services] 이를 위해 [!DNL Experience Data Model] (XDM) 스키마를 활용합니다. 특히, 에서 사용되는 모든 데이터 세트는 CEE(Consumer ExperienceEvent) XDM 스키마를 [!DNL Intelligent Services] 준수해야 합니다.
 
 이 문서에서는 여러 채널에서 이 스키마로 마케팅 이벤트 데이터를 매핑하는 방법에 대한 일반적인 지침을 제공하며, 스키마 내의 중요한 필드에 대한 정보를 요약하여 데이터를 해당 구조에 효과적으로 매핑하는 방법을 결정하는 데 도움이 됩니다.
 
