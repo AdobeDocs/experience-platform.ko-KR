@@ -5,7 +5,7 @@ title: 스키마 컴포지션의 기본 사항
 topic: overview
 description: 이 문서에서는 XDM(Experience Data Model) 스키마 및 Adobe Experience Platform에서 사용할 스키마를 작성하기 위한 기본 블록, 원칙 및 모범 사례에 대해 소개합니다.
 translation-type: tm+mt
-source-git-commit: f7abccb677294e1595fb35c27e03c30eb968082a
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '2839'
 ht-degree: 0%
@@ -54,7 +54,7 @@ The infrastructure which [!DNL Experience Platform] is built, knowing [!DNL XDM 
 * **데이터**&#x200B;기록:제목 속성에 대한 정보를 제공합니다. 대상은 조직 또는 개인일 수 있습니다.
 * **시계열 데이터**:작업을 직접 또는 간접적으로 레코드 제목에 의해 수행한 시점에 시스템의 스냅샷을 제공합니다.
 
-모든 XDM 스키마는 레코드 또는 시간 시리즈로 분류할 수 있는 데이터를 설명합니다. 스키마의 데이터 동작은 스키마의 **클래스에**&#x200B;의해 정의됩니다. 이 클래스는 스키마를 처음 만들 때 스키마에 할당됩니다. XDM 클래스는 이 문서의 후반부에 자세히 설명되어 있습니다.
+모든 XDM 스키마는 레코드 또는 시간 시리즈로 분류할 수 있는 데이터를 설명합니다. 스키마의 데이터 동작은 스키마의 클래스에 의해 정의됩니다. 이 클래스는 스키마를 처음 만들 때 스키마에 할당됩니다. XDM 클래스는 이 문서의 후반부에 자세히 설명되어 있습니다.
 
 레코드 및 시간 시리즈 스키마 모두 ID 맵을 포함합니다(`xdm:identityMap`). 이 필드에는 다음 섹션에 설명된 대로 &quot;ID&quot;로 표시된 필드에서 추출되는 대상의 ID 표현이 포함되어 있습니다.
 
@@ -133,7 +133,7 @@ The infrastructure which [!DNL Experience Platform] is built, knowing [!DNL XDM 
 
 **클래스 + Mixin&amp;ast;= XDM 스키마**
 
-&amp;ast;스키마는 클래스와 _0 이상의_ 혼합으로 구성됩니다. 즉, 혼합을 사용하지 않고 데이터 집합 스키마를 구성할 수 있습니다.
+&amp;ast;스키마는 클래스와 0개 이상의 혼합으로 구성됩니다. 즉, 혼합을 사용하지 않고 데이터 집합 스키마를 구성할 수 있습니다.
 
 ### 클래스
 
