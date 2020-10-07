@@ -6,9 +6,9 @@ type: Tutorial
 description: ESP(Email Service Providers)를 사용하면 이메일 캠페인 전송과 같은 이메일 마케팅 활동을 관리할 수 있습니다.
 seo-description: ESP(Email Service Providers)를 사용하면 이메일 캠페인 전송과 같은 이메일 마케팅 활동을 관리할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '799'
+source-wordcount: '800'
 ht-degree: 1%
 
 ---
@@ -30,7 +30,7 @@ ESP(Email Service Providers)를 사용하면 프로모션 이메일 캠페인 �
 
    ![대상에 연결](/help/rtcdp/destinations/assets/connect-email-marketing.png)
 
-2. 이전에 이메일 마케팅 대상에 대한 연결을 **[!UICONTROL 설정한 경우 인증]** 단계에서 기존 계정 **[!UICONTROL 을]** 선택하고 기존 연결을 선택합니다. 또는 새 계정 **[!UICONTROL 을]** 선택하여 이메일 마케팅 대상에 새 연결을 설정할 수 있습니다. 연결 유형 **[!UICONTROL 선택기에서]** Amazon S3 **, 암호**&#x200B;가 있는 SFTP **, SSH 키가 있는 SFTP**&#x200B;중에서 선택할 수 ****&#x200B;있습니다. 연결 유형에 따라 아래 정보를 입력한 다음 **[!UICONTROL Connect를 선택합니다]**.
+2. 이전에 이메일 마케팅 대상에 대한 연결을 **[!UICONTROL 설정한 경우 인증]** 단계에서 기존 계정 **[!UICONTROL 을]** 선택하고 기존 연결을 선택합니다. 또는 새 계정 **[!UICONTROL 을]** 선택하여 이메일 마케팅 대상에 새 연결을 설정할 수 있습니다. 연결 유형 **** 선택기에서 Amazon S3, 암호가 있는 SFTP 또는 SSH 키가 있는 SFTP 중에서 선택할 수 있습니다. 연결 유형에 따라 아래 정보를 입력한 다음 **[!UICONTROL Connect를 선택합니다]**.
 
    **S3 연결의**&#x200B;경우 Amazon 액세스 키 ID와 비밀 액세스 키를 제공해야 합니다.
 
@@ -38,9 +38,9 @@ ESP(Email Service Providers)를 사용하면 프로모션 이메일 캠페인 �
 
    SSH 키 **** 연결이 있는 SFTP의 경우 SFTP 서버에 대한 도메인, 포트, 사용자 이름 및 SSH 키를 제공해야 합니다.
 
-3. [ **[!UICONTROL 설정]** ] **[!UICONTROL 단계에서 새 대상에 대한]** 이름 **[!UICONTROL 과]** 설명 **[!UICONTROL 과 내보낸 파일에 대한 파일 형식]** 을 입력합니다. <br>
-이전 단계에서 저장소 옵션으로 Amazon S3를 선택한 경우, 파일이 배달될 클라우드 스토리지 대상에 **[!UICONTROL 버킷 이름]** 및 **[!UICONTROL 폴더 경로를]** 삽입합니다. SFTP 저장소 옵션의 경우 파일이 배달될 **[!UICONTROL 폴더 경로를]** 삽입합니다. <br>
-또한 이 단계에서는 이 대상에 **[!UICONTROL 적용되어야 하는 모든]** 마케팅 사용 사례를 선택할 수 있습니다. 마케팅 사용 사례에서는 데이터를 대상으로 내보내려는 의도를 나타냅니다. Adobe에서 정의한 마케팅 사용 사례에서 선택하거나 고유한 마케팅 사용 사례를 만들 수 있습니다. 마케팅 활용 사례에 대한 자세한 내용은 실시간 CDP의 [데이터 거버넌스](/help/rtcdp/privacy/data-governance-overview.md#destinations) 페이지를 참조하십시오. 개별 Adobe에서 정의한 마케팅 사용 사례에 대한 자세한 내용은 [데이터 사용 정책 개요를 참조하십시오](/help/data-governance/policies/overview.md#core-actions). <br>
+3. [ **[!UICONTROL 설정]** ] [!UICONTROL 단계에서 새 대상에 대한] 이름 [!UICONTROL 과] 설명 [!UICONTROL 과 내보낸 파일에 대한 파일 형식] 을 입력합니다. <br>
+이전 단계에서 저장소 옵션으로 Amazon S3를 선택한 경우, 파일이 배달될 클라우드 스토리지 대상에 [!UICONTROL 버킷 이름] 및 [!UICONTROL 폴더 경로를] 삽입합니다. SFTP 저장소 옵션의 경우 파일이 배달될 [!UICONTROL 폴더 경로를] 삽입합니다. <br>
+또한 이 단계에서는 이 대상에 [!UICONTROL 적용되어야 하는 모든] 마케팅 사용 사례를 선택할 수 있습니다. 마케팅 사용 사례에서는 데이터를 대상으로 내보내려는 의도를 나타냅니다. Adobe에서 정의한 마케팅 사용 사례에서 선택하거나 고유한 마케팅 사용 사례를 만들 수 있습니다. 마케팅 활용 사례에 대한 자세한 내용은 실시간 CDP의 [데이터 거버넌스](/help/rtcdp/privacy/data-governance-overview.md#destinations) 페이지를 참조하십시오. 개별 Adobe에서 정의한 마케팅 사용 사례에 대한 자세한 내용은 [데이터 사용 정책 개요를 참조하십시오](/help/data-governance/policies/overview.md#core-actions). <br>
    ![이메일 설정 단계](/help/rtcdp/destinations/assets/email-setup-step.png)
 
 ## 2단계 - 대상 내보내기에 포함할 세그먼트 멤버를 선택합니다. {#select-segments}
