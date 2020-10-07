@@ -5,7 +5,7 @@ title: Privacy Service 개발자 가이드
 description: RESTful API를 사용하여 Adobe Experience Cloud 애플리케이션에서 데이터 주체의 개인 데이터를 관리합니다
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
+source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
 workflow-type: tm+mt
 source-wordcount: '762'
 ht-degree: 1%
@@ -77,7 +77,7 @@ API **[!UICONTROL 구성]** 화면이 나타납니다. 키 쌍 **[!UICONTROL 을
 
 ![](../images/api/getting-started/key-pair-generated.png)
 
-API가 프로젝트에 추가되면 프로젝트 페이지가 _Privacy Service API 개요_ 페이지에 다시 나타납니다. 여기에서 아래로 스크롤하여 **[!UICONTROL 서비스 계정(JWT)]** 섹션으로 이동합니다. 이 섹션은 [!DNL Privacy Service] API를 호출하는 모든 호출에 필요한 다음 액세스 인증서를 제공합니다.
+API가 프로젝트에 추가되면 프로젝트 페이지가 **Privacy Service API 개요** 페이지에 다시 나타납니다. 여기에서 아래로 스크롤하여 **[!UICONTROL 서비스 계정(JWT)]** 섹션으로 이동합니다. 이 섹션은 [!DNL Privacy Service] API를 호출하는 모든 호출에 필요한 다음 액세스 인증서를 제공합니다.
 
 * **[!UICONTROL 클라이언트 ID]**:클라이언트 ID는 x-api-key 헤더 `{API_KEY}` 에서 제공해야 하는 데 필요합니다.
 * **[!UICONTROL 조직 ID]**:조직 ID는 x-gw-ims-org-id 헤더에서 사용해야 하는 `{IMS_ORG}` 값입니다.
