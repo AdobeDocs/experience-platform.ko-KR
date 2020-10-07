@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: Adobe Experience Platform을 사용하면 쿼리 서비스를 JupiterLab에 표준 기능으로 통합하여 데이터 과학 작업 공간에서 SQL(구조화된 쿼리 언어)을 사용할 수 있습니다. 이 자습서에서는 Adobe Analytics 데이터를 탐색, 변환 및 분석하는 일반적인 사용 사례를 위한 샘플 SQL 쿼리를 보여줍니다.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '826'
 ht-degree: 1%
@@ -104,7 +104,7 @@ ht-degree: 1%
 
 ![](../images/jupyterlab/query/restart_button.png)
 
-노트북 커널이 재설정되지만 셀이 남아 있게 되고 **[!UICONTROL 모든]** 셀을 다시 실행하여 중단한 부분을 계속 진행합니다.
+노트북 커널이 재설정되지만 셀이 남아 있게 되고 **모든** 셀을 다시 실행하여 중단한 부분을 계속 진행합니다.
 
 ### 시간별 방문자 수 {#hourly-visitor-count}
 
