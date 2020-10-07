@@ -5,7 +5,7 @@ title: 액세스 제어 작업 영역 찾아보기
 topic: user guide
 description: 이 문서에서는 액세스 제어 작업 영역을 검색하는 데 필요한 단계를 다룹니다. Adobe Admin Console을 통해 Experience Platform에 대한 액세스 제어를 구성하려면 Experience Platform에 대한 구독이 있는 IMS 조직의 관리자여야 합니다.
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
 source-wordcount: '301'
 ht-degree: 2%
@@ -15,7 +15,7 @@ ht-degree: 2%
 
 # 액세스 제어 작업 영역 찾아보기
 
-Adobe Admin Console을 통해 액세스 제어 [!DNL Experience Platform] 를 구성하려면 구독이 있는 IMS 조직의 관리자여야 합니다 [!DNL Experience Platform]. Adobe은 IMS Orgs에 대한 유연한 관리자 계층을 지원하지만 액세스 제어를 구성하려면 **[!UICONTROL 시스템 관리자]**, **[!UICONTROL 제품 관리자]**&#x200B;또는 **[!UICONTROL 제품 프로필 관리자]** 권한이 있어야합니다. 자세한 내용은 [관리자 역할에](https://helpx.adobe.com/enterprise/using/admin-roles.html) 대한 Adobe Help Center 문서를 참조하십시오.
+Adobe Admin Console을 통해 액세스 제어 [!DNL Experience Platform] 를 구성하려면 구독이 있는 IMS 조직의 관리자여야 합니다 [!DNL Experience Platform]. Adobe은 IMS 조직에 대한 유연한 관리자 계층을 지원하지만 액세스 제어를 구성하려면 시스템 관리자, 제품 관리자 또는 제품 프로필 관리자 권한이 있어야 합니다. 자세한 내용은 [관리자 역할에](https://helpx.adobe.com/enterprise/using/admin-roles.html) 대한 Adobe Help Center 문서를 참조하십시오.
 
 관리자 권한이 없는 경우 시스템 관리자에게 문의하여 액세스 권한을 얻으십시오.
 
