@@ -5,7 +5,7 @@ title: 실시간 머신 러닝 노트북 사용자 가이드
 topic: Training and scoring a ML model
 description: 다음 가이드는 Adobe Experience Platform JupiterLab에서 실시간 머신 러닝 애플리케이션을 구축하는 데 필요한 단계에 대해 간략하게 설명합니다.
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
 workflow-type: tm+mt
 source-wordcount: '1656'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 ## 실시간 기계 학습 노트북 만들기
 
-Adobe Experience Platform UI의 **[!UICONTROL 데이터 과학]** 내에서 *노트북을 선택합니다*. 그런 다음 **[!UICONTROL JupiterLab을]** 선택하고 환경을 로드하는 데 시간을 허용합니다.
+Adobe Experience Platform UI의 **[!UICONTROL 데이터 과학]** 내에서 **노트북을 선택합니다**. 그런 다음 **[!UICONTROL JupiterLab을]** 선택하고 환경을 로드하는 데 시간을 허용합니다.
 
 ![open JupiterLab](../images/rtml/open-jupyterlab.png)
 
@@ -117,7 +117,7 @@ config_properties = {
 
 **데이터 변형**
 
-실시간 **[!UICONTROL ML]** 템플릿 *데이터 변환* 셀을 수정하여 데이터 세트에 사용해야 합니다. 일반적으로 열 이름 변경, 데이터 롤업 및 데이터 준비/기능 엔지니어링이 포함됩니다.
+실시간 **[!UICONTROL ML]** 템플릿 **데이터 변환** 셀을 수정하여 데이터 세트에 사용해야 합니다. 일반적으로 열 이름 변경, 데이터 롤업 및 데이터 준비/기능 엔지니어링이 포함됩니다.
 
 >[!NOTE]
 >
