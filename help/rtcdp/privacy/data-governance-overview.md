@@ -5,7 +5,7 @@ seo-title: 실시간 고객 데이터 플랫폼의 데이터 거버넌스
 description: '데이터 거버넌스를 사용하면 고객 데이터를 관리하고 데이터 사용에 적용되는 규정, 제한 사항 및 정책을 준수할 수 있습니다. '
 seo-description: '데이터 거버넌스를 사용하면 고객 데이터를 관리하고 데이터 사용에 적용되는 규정, 제한 사항 및 정책을 준수할 수 있습니다. '
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: 259c26a9d3b6ef397acd552e255f68ecb25b2dd1
 workflow-type: tm+mt
 source-wordcount: '1021'
 ht-degree: 0%
@@ -48,7 +48,7 @@ Adobe Experience Platform [!DNL Data Governance] 를 사용하면 고객 데이�
 
 데이터 사용 레이블이 데이터 규정 준수를 효과적으로 지원하려면 데이터 사용 정책을 정의하고 활성화해야 합니다. 데이터 사용 정책은 실시간 CDP 내에서 데이터에 대해 수행하도록 허용되거나 제한된 마케팅 작업의 종류를 설명하는 규칙입니다. 자세한 내용은 [!DNL Experience Platform] 데이터 거버넌스 개요 [](../../data-governance/home.md) 의 &quot;데이터 사용 정책&quot; 섹션을 참조하십시오.
 
-Adobe Experience Platform은 일반적인 고객 경험 사용 사례를 위한 몇 가지 **핵심 정책을** 제공합니다. 이러한 정책은 정책 작업 영역으로 이동한 후 **[!UICONTROL 찾아보기]** **[!UICONTROL 탭을 선택하여 UI에서 볼 수]** 있습니다. 자신만의 고유한 사용자 지정 정책을 만드는 방법을 포함하여 UI에서 정책 작업에 대한 자세한 단계는 [설명서의 정책 사용자 안내서를](../../data-governance/policies/user-guide.md) [!DNL Experience Platform] 참조하십시오.
+Adobe Experience Platform은 일반적인 고객 경험 사용 사례를 위한 몇 가지 핵심 정책을 제공합니다. 이러한 정책은 정책 작업 영역으로 이동한 후 **[!UICONTROL 찾아보기]** **[!UICONTROL 탭을 선택하여 UI에서 볼 수]** 있습니다. 자신만의 고유한 사용자 지정 정책을 만드는 방법을 포함하여 UI에서 정책 작업에 대한 자세한 단계는 [설명서의 정책 사용자 안내서를](../../data-governance/policies/user-guide.md) [!DNL Experience Platform] 참조하십시오.
 
 ## 데이터 사용 규정 준수 {#enforce-data-usage-compliance}
 
