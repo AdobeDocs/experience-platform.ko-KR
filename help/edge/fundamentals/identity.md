@@ -5,7 +5,7 @@ description: Adobe Experience Cloud ID를 얻는 방법을 알아봅니다.
 seo-description: Adobe Experience Cloud ID를 얻는 방법을 알아봅니다.
 keywords: Identity;First Party Identity;Identity Service;3rd Party Identity;ID Migration;Visitor ID;third party identity;thirdPartyCookiesEnabled;idMigrationEnabled;getIdentity;Syncing Identities;syncIdentity;sendEvent;identityMap;primary;ecid;Identity Namespace;namespace id;authenticationState;hashEnabled;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
 source-wordcount: '730'
 ht-degree: 5%
@@ -89,15 +89,15 @@ alloy("sendEvent", {
 
 | **유형** | **필수 여부** | **기본값** |
 | -------- | ------------ | ----------------- |
-| 문자열 | 예 | none |
+| 문자열 | 예 | 없음 |
 
-개체의 키는 ID 네임스페이스 [](../../identity-service/namespaces.md) 기호입니다. 이 목록은 Adobe Experience Platform 사용자 인터페이스에서 ID 아래에 [!UICONTROL 나와 있습니다].
+개체의 키는 ID 네임스페이스 [](../../identity-service/namespaces.md) 기호입니다. 이 목록은 Adobe Experience Platform 사용자 인터페이스에서 &quot;ID&quot;[!UICONTROL 에서 확인할 수 있습니다].
 
 #### `id`
 
 | **유형** | **필수 여부** | **기본값** |
 | -------- | ------------ | ----------------- |
-| 문자열 | 예 | none |
+| 문자열 | 예 | 없음 |
 
 지정된 네임스페이스에 대해 동기화할 ID입니다.
 
