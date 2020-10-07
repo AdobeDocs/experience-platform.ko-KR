@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: 이 자습서에서는 Sensei 기계 학습 API 호출을 사용하여 모델을 생성, 교육 및 평가하는 방법을 보여줍니다.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1210'
 ht-degree: 1%
@@ -35,7 +35,7 @@ API [호출](../../tutorials/authentication.md) 작업을 시작하려면 이 �
 
 ## API 워크플로우
 
-Adobe는 API를 사용하여 트레이닝을 위한 실험 실행을 만듭니다. 이 자습서의 경우 **엔진**, MLInestment **및**&#x200B;실험 **엔드포인트에 중점을** 둡니다. 다음 차트는 세 가지 사이의 관계를 설명하고, Run과 Model에 대한 아이디어를 소개합니다.
+Adobe는 API를 사용하여 트레이닝을 위한 실험 실행을 만듭니다. 이 자습서의 경우 엔진, MLInestablish 및 실험 끝점에 중점을 둡니다. 다음 차트는 세 가지 사이의 관계를 설명하고, Run과 Model에 대한 아이디어를 소개합니다.
 
 ![](../images/models-recipes/train-evaluate-api/engine_hierarchy_api.png)
 
