@@ -5,7 +5,7 @@ title: 제품 프로필에 대한 세부 정보 및 추가 서비스 관리
 topic: user guide
 description: 이 문서에서는 Adobe Admin Console의 제품 프로필에 대한 세부 사항 및 추가 서비스를 관리하는 데 필요한 단계를 다룹니다. 프로필 설정 메뉴에서 프로필의 세부 사항을 구성하고 추가 서비스에 액세스할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
 source-wordcount: '206'
 ht-degree: 1%
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 ![profile-settings](../images/profile-settings.png)
 
-[ **[!UICONTROL 프로필 설정]** ] 메뉴가 [세부 사항] **[!UICONTROL 탭부터]** 나타납니다. 이 탭에서는 프로필 이름 **[!UICONTROL 및 설명]** 을 입력하고 편집할 수 **[!UICONTROL 있습니다]**. 사용자 계정의 **[!UICONTROL 이메일 알림]** 설정뿐만 아니라 표시 이름을 수정할 수도 있습니다.
+[ **[!UICONTROL 프로필 설정]** ] 메뉴가 [세부 사항] **[!UICONTROL 탭부터]** 나타납니다. 이 탭에서는 프로필 이름과 설명을 입력하고 편집할 수 있습니다. 사용자의 계정에 대한 이메일 알림 설정뿐만 아니라 표시 이름을 수정할 수도 있습니다.
 
 ![edit-details-settings](../images/edit-details-settings.png)
 
