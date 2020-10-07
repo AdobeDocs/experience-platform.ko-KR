@@ -5,7 +5,7 @@ title: Attribution AI 사용 안내서
 topic: User guide
 description: 이 문서는 Intelligent Services 사용자 인터페이스에서 Attribution AI과 상호 작용하기 위한 가이드 역할을 합니다.
 translation-type: tm+mt
-source-git-commit: 2a528c705a7aa610f57047be39be1ce9886ce44c
+source-git-commit: c5e2ea5daf813bf580a11f0182361197e55c6fe8
 workflow-type: tm+mt
 source-wordcount: '1449'
 ht-degree: 0%
@@ -21,7 +21,7 @@ Attribution AI은 지능형 서비스의 일부로 고객 상호 작용이 특�
 
 ## 인스턴스 만들기
 
-UI [!DNL Adobe Experience Platform] 에서 왼쪽 탐색 **영역에서 서비스** 를 클릭합니다. 서비스 *브라우저가* 나타나고 사용 가능한 Adobe 지능형 서비스가 표시됩니다. Attribution AI 컨테이너에서 열기를 **클릭합니다**.
+UI [!DNL Adobe Experience Platform] 에서 왼쪽 탐색 **[!UICONTROL 영역에서 서비스]** 를 클릭합니다. 서비스 **[!UICONTROL 브라우저가]** 나타나고 사용 가능한 Adobe 지능형 서비스가 표시됩니다. Attribution AI 컨테이너에서 열기를 **[!UICONTROL 클릭합니다]**.
 
 ![인스턴스 액세스](./images/user-guide/open_Attribution_ai.png)
 
@@ -35,7 +35,7 @@ Attribution AI 서비스 페이지가 나타납니다. 이 페이지에는 Attri
 
 ### 인스턴스 이름 지정
 
-[ *기본 정보*]에서 서비스 인스턴스에 대한 이름과 선택적 설명을 제공합니다.
+[ **[!UICONTROL 기본 정보]**]에서 서비스 인스턴스에 대한 이름과 선택적 설명을 제공합니다.
 
 ![인스턴스 이름 지정](./images/user-guide/naming_instance.png)
 
@@ -67,15 +67,15 @@ Attribution AI 서비스 페이지가 나타납니다. 이 페이지에는 Attri
 
 ![드롭다운 없음](./images/user-guide/conversion_event_1.png)
 
-이벤트 *추가* 및 *그룹* 추가 단추를 사용하여 변환을 추가로 정의합니다. 정의하는 변환에 따라 추가 컨텍스트를 제공하기 위해 이벤트 *추가* 및 그룹 ** 추가 단추를 사용해야 할 수 있습니다.
+이벤트 **[!UICONTROL 추가]** 및 **[!UICONTROL 그룹]** 추가 단추를 사용하여 변환을 추가로 정의합니다. 정의하는 변환에 따라 추가 컨텍스트를 제공하기 위해 이벤트 **[!UICONTROL 추가]** 및 그룹 **** 추가 단추를 사용해야 할 수 있습니다.
 
 ![이벤트 추가](./images/user-guide/add_event.png)
 
-이벤트 **추가를 클릭하면** 위에 설명한 것과 동일한 방법으로 입력할 수 있는 추가 필드가 만들어집니다. 이렇게 하면 *AND* 문이 *전환 이름 아래의 문자열 정의에 추가됩니다*. 추가된 이벤트를 **제거하려면** x를 클릭합니다.
+이벤트 **[!UICONTROL 추가를 클릭하면]** 위에 설명한 것과 동일한 방법으로 입력할 수 있는 추가 필드가 만들어집니다. 이렇게 하면 전환 이름 아래의 문자열 정의에 AND 문이 추가됩니다. 추가된 이벤트를 **제거하려면** x를 클릭합니다.
 
 ![이벤트 메뉴 추가](./images/user-guide/add_event_result.png)
 
-그룹 **추가를** 클릭하면 원본과 별도로 추가 필드를 만들 수 있는 옵션이 제공됩니다. 그룹이 추가되면 파란색 *및* 단추가 나타납니다. And **를** 클릭하면 매개 변수를 &quot;Or&quot;로 변경하는 옵션이 제공됩니다. &quot;Or&quot;은 여러 개의 성공적인 전환 경로를 정의하는 데 사용됩니다. &quot;And&quot;는 추가 조건을 포함하도록 전환 경로를 확장합니다.
+그룹 **[!UICONTROL 추가를]** 클릭하면 원본과 별도로 추가 필드를 만들 수 있는 옵션이 제공됩니다. 그룹이 추가되면 파란색 *및* 단추가 나타납니다. And **를** 클릭하면 매개 변수를 &quot;Or&quot;로 변경하는 옵션이 제공됩니다. &quot;Or&quot;은 여러 개의 성공적인 전환 경로를 정의하는 데 사용됩니다. &quot;And&quot;는 추가 조건을 포함하도록 전환 경로를 확장합니다.
 
 ![and 또는](./images/user-guide/and_or.png)
 
@@ -157,7 +157,7 @@ Attribution AI의 마지막 페이지는 *교육 및 점수 설정에* 사용되
 
 고객의 행동은 국가와 지역에 따라 크게 다를 수 있습니다. 글로벌 비즈니스의 경우 국가 기반 또는 지역 기반 모델을 사용하면 기여도 정확도를 높일 수 있습니다. 추가된 각 영역은 해당 지역의 데이터를 사용하여 새 모델을 생성합니다.
 
-새 영역을 정의하려면 먼저 영역 **추가를 클릭합니다**. 표시되는 컨테이너에서 영역 이름을 입력합니다. 필드 이름 입력 드롭다운에서 하나의 값(&quot;placeContext.geo.countryCode&quot;) *만* 채워집니다. 이 값을 선택합니다.
+새 영역을 정의하려면 먼저 영역 **[!UICONTROL 추가를 클릭합니다]**. 표시되는 컨테이너에서 영역 이름을 입력합니다. 필드 이름 입력 드롭다운에서 하나의 값(&quot;placeContext.geo.countryCode&quot;) **[!UICONTROL 만]** 채워집니다. 이 값을 선택합니다.
 
 ![지역 선택](./images/user-guide/select_region_att.png)
 
@@ -165,7 +165,7 @@ Attribution AI의 마지막 페이지는 *교육 및 점수 설정에* 사용되
 
 ![지역 연산자](./images/user-guide/region_operators.png)
 
-마지막으로, 필드 값 입력 드롭다운에 국가 *코드를* 입력합니다.
+마지막으로, 필드 값 입력 드롭다운에 국가 **[!UICONTROL 코드를]** 입력합니다.
 
 >[!NOTE]
 >
@@ -183,7 +183,7 @@ Attribution AI의 마지막 페이지는 *교육 및 점수 설정에* 사용되
 
 ![교육 창](./images/user-guide/training_window.png)
 
-교육 창을 선택한 후 오른쪽 위 **의 [마침** ]을 클릭합니다. 데이터를 처리하는 데 약간의 시간이 소요됩니다. 완료되면 인스턴스 설정이 완료되었음을 확인하는 팝업 대화 상자가 나타납니다. 서비스 인스턴스를 볼 수 있는 **서비스 인스턴스** ** 페이지로 리디렉션하려면 확인을 클릭합니다.
+교육 창을 선택한 후 오른쪽 위 **[!UICONTROL 의 [마침]** ]을 클릭합니다. 데이터를 처리하는 데 약간의 시간이 소요됩니다. 완료되면 인스턴스 설정이 완료되었음을 확인하는 팝업 대화 상자가 나타납니다. 서비스 인스턴스를 볼 수 있는 **[!UICONTROL 서비스 인스턴스]** **** 페이지로 리디렉션하려면 확인을 클릭합니다.
 
 ![설치 완료](./images/user-guide/instance_setup_complete.png)
 
