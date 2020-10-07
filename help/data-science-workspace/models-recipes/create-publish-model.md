@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: Adobe Experience Platform 데이터 과학 작업 공간은 미리 만들어진 제품 Recommendations 레서피를 사용하여 목표를 달성할 수 있는 방법을 제공합니다. 이 튜토리얼을 따라 소매 데이터에 액세스하고, 이해하고, 기계 학습 모델을 만들고, 최적화하고, 데이터 과학 작업 공간에서 통찰력을 생성하는 방법을 확인하십시오.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1595'
 ht-degree: 0%
@@ -85,7 +85,7 @@ ht-degree: 0%
    ![](../images/models-recipes/model-walkthrough/browse_recipes.png)
 2. 제공된 **[!UICONTROL Recommendations 레시피]** 이름을 클릭하여 해당 레서피를 찾아 엽니다.
    ![](../images/models-recipes/model-walkthrough/recommendations_recipe_110.png)
-3. 오른쪽 레일에서 **[!UICONTROL Recommendations 입력 스키마를]** 클릭하여 레서피를 강력하게 하는 스키마를 봅니다. 스키마 필드 **[!UICONTROL itemId]** 및 **[!UICONTROL userId]** 는 특정 시간(타임스탬프)에 해당 고객이 구매한 제품(**[!UICONTROL interactionType]**)에&#x200B;****&#x200B;해당합니다. 동일한 단계에 따라 **[!UICONTROL Recommendations 출력 스키마의 필드를 검토하십시오]**.
+3. 오른쪽 레일에서 **[!UICONTROL Recommendations 입력 스키마를]** 클릭하여 레서피를 강력하게 하는 스키마를 봅니다. 스키마 필드 &quot;[!UICONTROL itemId]&quot; 및 &quot;[!UICONTROL userId]&quot;는 특정 시간(타임스탬프)에 해당 고객이 구매한 제품([!UICONTROL interactionType])에해당합니다. 동일한 단계에 따라 **[!UICONTROL Recommendations 출력 스키마의 필드를 검토하십시오]**.
    ![](../images/models-recipes/model-walkthrough/preview_schemas.png)
 
 이제 제품 Recommendations 레서피에 필요한 입력 및 출력 스키마를 검토했습니다. 이제 다음 섹션으로 이동하여 제품 Recommendations 모델을 생성, 교육 및 평가하는 방법을 확인할 수 있습니다.
@@ -113,9 +113,9 @@ ht-degree: 0%
 
 ### 사용자 지정 하이퍼매개 변수를 사용하여 모델 트레이닝
 
-1. [ *모델 개요* ] 페이지에서 오른쪽 위 **[!UICONTROL 의]** [교육]을 클릭하여 새 교육 실행을 만듭니다. 모델을 만들 때 사용한 것과 동일한 입력 데이터 세트를 선택하고 **[!UICONTROL 다음을 클릭합니다]**.
+1. [ **모델 개요** ] 페이지에서 오른쪽 위 **[!UICONTROL 의]** [교육]을 클릭하여 새 교육 실행을 만듭니다. 모델을 만들 때 사용한 것과 동일한 입력 데이터 세트를 선택하고 **[!UICONTROL 다음을 클릭합니다]**.
    ![](../images/models-recipes/model-walkthrough/training_select_dataset.png)
-2. 구성 *페이지가* 나타납니다. 여기서는 Hyperparameter라고도 하는 교육 실행의 **[!UICONTROL num_recommendations]** 값을 구성할 수 있습니다. 훈련되고 최적화된 모델은 트레이닝 실행 결과를 기반으로 가장 성과가 좋은 하이퍼링크 매개 변수를 활용합니다.
+2. 구성 **페이지가** 나타납니다. 여기서는 Hyperparameter라고도 하는 교육 실행의 &quot;[!UICONTROL num_recommendations]&quot; 값을 구성할 수 있습니다. 훈련되고 최적화된 모델은 트레이닝 실행 결과를 기반으로 가장 성과가 좋은 하이퍼링크 매개 변수를 활용합니다.
 
    하이퍼매개 변수는 알 수 없으므로, 교육이 실행되기 전에 할당해야 합니다. 하이퍼매개 변수를 조정하면 훈련된 모델의 정확도가 변경될 수 있습니다. 모델 최적화는 반복적인 프로세스이므로 만족스러운 평가가 이루어지기 전에 여러 개의 교육 실행이 필요할 수 있습니다.
 
@@ -159,7 +159,7 @@ ht-degree: 0%
 
 1. 점수 지정 실행 페이지에서 완료된 점수 실행을 클릭한 다음 오른쪽 레일에 있는 **[!UICONTROL 미리 보기 점수]** 결과 데이터 세트를 클릭합니다.
    ![](../images/models-recipes/model-walkthrough/score_complete.png)
-2. 미리 보기 테이블에서 각 행은 특정 고객에 대한 제품 권장 사항을 포함하며 각각 **[!UICONTROL recommendations]** 및 **[!UICONTROL userId로 레이블이]** 지정됩니다. 샘플 스크린샷에서 **[!UICONTROL num_recommendations]** Hyperparameter가 10으로 설정되었으므로 권장 사항의 각 행은 숫자 기호(#)로 구분된 최대 10개의 제품 ID를 포함할 수 있습니다.
+2. 미리 보기 테이블에서 각 행은 특정 고객에 대한 제품 권장 사항을 포함하며 각각 [!UICONTROL recommendations] 및 [!UICONTROL userId로 레이블이] 지정됩니다. 샘플 스크린샷에서 [!UICONTROL num_recommendations] Hyperparameter가 10으로 설정되었으므로 권장 사항의 각 행은 숫자 기호(#)로 구분된 최대 10개의 제품 ID를 포함할 수 있습니다.
    ![](../images/models-recipes/model-walkthrough/preview_score_results.png)
 
 ## 다음 단계 {#next-steps}
