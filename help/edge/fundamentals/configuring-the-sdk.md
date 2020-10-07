@@ -5,7 +5,7 @@ description: Experience Platform 웹 SDK를 구성하는 방법 살펴보기
 seo-description: Experience Platform 웹 SDK를 구성하는 방법 살펴보기
 keywords: configuring;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;environment;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;prehidingStyle;opacity;cookieDestinationsEnabled;urlDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 translation-type: tm+mt
-source-git-commit: d036595dc96af98fd53c7eb40162585bac48f05c
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '749'
 ht-degree: 11%
@@ -135,7 +135,7 @@ Your assigned [!DNL Experience Cloud] organization ID.  페이지 내에서 여�
 | -------- | ------------ | ----------------- |
 | 부울 | 아니요 | `true` |
 
-세그먼트 자격 [!DNL Audience Manager] 에 따라 쿠키 설정을 허용하는 쿠키 대상을 활성화합니다.
+세그먼트 자격 조건에 따라 쿠키 설정을 허용하는 [!DNL Audience Manager] 쿠키 대상을 활성화합니다.
 
 ### `urlDestinationsEnabled`
 
@@ -143,7 +143,7 @@ Your assigned [!DNL Experience Cloud] organization ID.  페이지 내에서 여�
 | -------- | ------------ | ----------------- |
 | 부울 | 아니요 | `true` |
 
-세그먼트 자격 [!DNL Audience Manager] 에 따라 URL을 실행할 수 있는 URL 대상을 활성화합니다.
+세그먼트 자격 조건에 따라 URL을 실행할 수 있는 URL 대상을 활성화합니다. [!DNL Audience Manager]
 
 ## ID 옵션
 
