@@ -6,7 +6,7 @@ seo-title: 소셜 네트워크 대상 워크플로우
 description: 소셜 네트워크 및 계정에 연결하는 지침
 seo-description: 소셜 네트워크 및 계정에 연결하는 지침
 translation-type: tm+mt
-source-git-commit: 120ba866cf6e6509c51a29cb07e73550006fe5eb
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '501'
 ht-degree: 0%
@@ -40,7 +40,7 @@ ht-degree: 0%
 
    ![자격 증명 확인됨](/help/rtcdp/destinations/assets/facebook-post-connection-view.png)
 
-4. 설정 **[!UICONTROL 단계에서]** **[!UICONTROL 이름]** 과 **[!UICONTROL 활성화]** 과정에 대한 설명 **[!UICONTROL 을 입력하고 소셜 네트워크 및 계정의]** 계정 ID를 입력합니다. <br> 또한 이 단계에서는 이 대상에 **[!UICONTROL 적용되어야 하는 모든]** 마케팅 사용 사례를 선택할 수 있습니다. 마케팅 사용 사례에서는 데이터를 대상으로 내보내려는 의도를 나타냅니다. Adobe에서 정의한 마케팅 사용 사례에서 선택하거나 고유한 마케팅 사용 사례를 만들 수 있습니다. 마케팅 활용 사례에 대한 자세한 내용은 실시간 CDP의 [데이터 거버넌스](/help/rtcdp/privacy/data-governance-overview.md#destinations) 페이지를 참조하십시오. 개별 Adobe에서 정의한 마케팅 사용 사례에 대한 자세한 내용은 [데이터 사용 정책 개요를 참조하십시오](/help/data-governance/policies/overview.md#core-actions). <br> 위 필드 **[!UICONTROL 를]** 채운 후 대상 만들기를 선택합니다.
+4. 설정 **[!UICONTROL 단계에서]** [!UICONTROL 이름] 과 [!UICONTROL 활성화] 과정에 대한 설명 [!UICONTROL 을 입력하고 소셜 네트워크 및 계정의] 계정 ID를 입력합니다. <br> 또한 이 단계에서는 이 대상에 **[!UICONTROL 적용되어야 하는 모든]** 마케팅 사용 사례를 선택할 수 있습니다. 마케팅 사용 사례에서는 데이터를 대상으로 내보내려는 의도를 나타냅니다. Adobe에서 정의한 마케팅 사용 사례에서 선택하거나 고유한 마케팅 사용 사례를 만들 수 있습니다. 마케팅 활용 사례에 대한 자세한 내용은 실시간 CDP의 [데이터 거버넌스](/help/rtcdp/privacy/data-governance-overview.md#destinations) 페이지를 참조하십시오. 개별 Adobe에서 정의한 마케팅 사용 사례에 대한 자세한 내용은 [데이터 사용 정책 개요를 참조하십시오](/help/data-governance/policies/overview.md#core-actions). <br> 위 필드 **[!UICONTROL 를]** 채운 후 대상 만들기를 선택합니다.
 
    >[!IMPORTANT]
    >
