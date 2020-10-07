@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Privacy Service 사용 안내서
 topic: UI guide
 translation-type: tm+mt
-source-git-commit: a09d80f4bacd5d4be77443d75aad278ad89259ef
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1059'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 ## UI [!DNL Privacy Service] 대시보드 찾아보기
 
-UI에 대한 대시보드에서는 개인 정보 작업의 상태를 볼 수 있는 두 개의 [!DNL Privacy Service] 위젯을 제공합니다. **[!UICONTROL 상태 보고서]** 및 **[!UICONTROL 작업 요청]**. 대시보드에는 표시된 작업에 대해 현재 선택된 규칙이 표시됩니다.
+UI에 대한 대시보드에서는 개인 정보 작업의 상태를 볼 수 있는 두 개의 [!DNL Privacy Service] 위젯을 제공합니다.&quot;[!UICONTROL 상태 보고서]&quot; 및 &quot;[!UICONTROL 작업 요청]&quot;. 대시보드에는 표시된 작업에 대해 현재 선택된 규칙이 표시됩니다.
 
 ![UI 대시보드](../images/user-guide/dashboard.png)
 
@@ -106,7 +106,7 @@ UI는 새 작업 요청을 만드는 두 가지 방법을 제공합니다. [!DNL
 
 <img src="../images/user-guide/request-builder.png" width="500" /><br/>
 
-요청의 **[!UICONTROL 작업 유형]** (&quot;삭제&quot; 또는 &quot;액세스&quot;)과 목록에서 하나 이상의 사용 가능한 **[!UICONTROL 제품을]** 선택합니다.
+요청의 **[!UICONTROL 작업 유형]** (&quot;삭제&quot; 또는 &quot;액세스&quot;)과 목록에서 하나 이상의 사용 가능한 제품을 선택합니다.
 
 <img src="../images/user-guide/type-and-products.png" width="500" /><br/>
 
@@ -114,11 +114,11 @@ UI는 새 작업 요청을 만드는 두 가지 방법을 제공합니다. [!DNL
 
 <img src="../images/user-guide/namespace-type.png" width="500" /><br/>
 
-표준 _네임스페이스 유형을 사용하는 경우 드롭다운 메뉴(이메일, ECID 또는 AID)에서 네임스페이스를 선택한 다음 오른쪽에 있는 텍스트 상자에 ID 값을 입력한 다음 각 ID에 대해_ \&lt;enter> **** 키를 눌러 목록에 추가합니다.
+표준 네임스페이스 유형을 사용하는 경우 드롭다운 메뉴(이메일, ECID 또는 AID)에서 네임스페이스를 선택한 다음 오른쪽에 있는 텍스트 상자에 ID 값을 입력한 다음 각 ID에 대해 **\&lt;enter>** 키를 눌러 목록에 추가합니다.
 
 <img src="../images/user-guide/standard-namespace.png" width="500" /><br/>
 
-사용자 _지정_ 네임스페이스 유형을 사용할 때는 아래 ID 값을 제공하기 전에 네임스페이스에 수동으로 입력해야 합니다.
+사용자 지정 네임스페이스 유형을 사용하는 경우 아래 ID 값을 제공하기 전에 네임스페이스에 수동으로 입력해야 합니다.
 
 <img src="../images/user-guide/custom-namespace.png" width="500" /><br/>
 
@@ -148,7 +148,7 @@ JSON **[!UICONTROL 파일]** 드래그 앤 드롭을 위한 창을 제공하는 
 
 컴퓨터에서 JSON 파일을 찾아 대화 상자 창으로 드래그합니다. 업로드에 성공하면 파일 이름이 대화 상자에 나타납니다. JSON 파일을 대화 상자로 드래그하여 놓아 필요에 따라 계속 추가할 수 있습니다.
 
-When finished, click **[!UICONTROL Create]**. 대화 상자가 사라지고 새 작업(또는 작업)이 현재 처리 상태와 함께 _작업 요청_ 위젯에 나열됩니다.
+When finished, click **[!UICONTROL Create]**. 대화 상자가 사라지고 새 작업(또는 작업)이 현재 처리 상태와 함께 작업 요청 위젯에 나열됩니다.
 
 ### 다음 단계
 
