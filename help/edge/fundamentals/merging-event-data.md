@@ -5,7 +5,7 @@ description: Experience Platform 웹 SDK 이벤트 데이터를 병합하는 방
 seo-description: Experience Platform 웹 SDK 이벤트 데이터를 병합하는 방법 살펴보기
 keywords: merge;event data;eventMergeId;createEventMergeId;sendEvent;mergeId;merge id;eventMergeIdPromise; Merge Id Promise;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
 workflow-type: tm+mt
 source-wordcount: '408'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 >
 >이 기능은 아직 개발 중입니다. 이 페이지에 설명된 대로 일부 솔루션에서 이벤트 데이터를 병합할 수는 없습니다.
 
-이벤트 발생 시 일부 데이터를 사용할 수 없는 경우가 있습니다. 예를 들어 사용자가 브라우저를 닫으면 데이터가 손실되지 않도록 _보유하고_ 있는 데이터를 캡처할 수 있습니다. 반면에 나중에 사용할 수 있게 될 데이터도 포함할 수 있습니다.
+이벤트 발생 시 일부 데이터를 사용할 수 없는 경우가 있습니다. 예를 들어 사용자가 브라우저를 닫으면 데이터가 손실되지 않도록 사용자가 갖고 있는 데이터를 캡처할 수 있습니다. 반면에 나중에 사용할 수 있게 될 데이터도 포함할 수 있습니다.
 
 이러한 경우 다음과 같은 명령 옵션으로 전달하여 이전 이벤트 `eventMergeId` 와 데이터를 `event` 병합할 수 있습니다.
 
