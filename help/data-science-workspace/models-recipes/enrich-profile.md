@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: 이 문서에서는 머신 러닝 인사이트를 활용하여 실시간 고객 프로파일을 강화할 수 있는 단계별 튜토리얼을 제공하고, 다음 섹션으로 세분화된 단계를 통해 출력 스키마/데이터 세트를 만들고, 출력 스키마/데이터 세트를 구성하고, 세그먼트 빌더를 사용하여 세그먼트를 만들 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1230'
 ht-degree: 0%
@@ -43,10 +43,10 @@ ht-degree: 0%
 
 스키마 구성은 클래스를 할당하는 것으로 시작됩니다. 클래스는 스키마에 포함할 데이터의 동작 측면(레코드 또는 시간 시리즈)을 정의합니다. 이 섹션에서는 스키마 빌더를 사용하여 스키마를 생성하는 기본 지침을 제공합니다. 보다 자세한 자습서는 스키마 편집기를 사용하여 스키마 [만들기에 대한 자습서를 참조하십시오](../../xdm/tutorials/create-schema-ui.md).
 
-1. Adobe Experience Platform에서 스키마 **[!UICONTROL 탭을]** 클릭하여 스키마 브라우저에 액세스합니다. 스키마 **[!UICONTROL 생성]** 을 *눌러 스키마 편집기*에서 대화식으로 스키마를 작성하고 만들 수 있습니다.
+1. Adobe Experience Platform에서 스키마 **[!UICONTROL 탭을]** 클릭하여 스키마 브라우저에 액세스합니다. 스키마 **[!UICONTROL 생성]** 을 **눌러 스키마 편집기**에서 대화식으로 스키마를 작성하고 만들 수 있습니다.
    ![](../images/models-recipes/enrich-rtcdp/schema_browser.png)
 
-2. [ *컴포지션* ] 창 **[!UICONTROL 에서 [할당]** ]을 클릭하여 사용 가능한 클래스를 찾아봅니다.
+2. [ **컴포지션** ] 창 **[!UICONTROL 에서 [할당]** ]을 클릭하여 사용 가능한 클래스를 찾아봅니다.
    * 기존 클래스를 지정하려면 원하는 클래스를 클릭하고 강조 표시한 다음 **[!UICONTROL 클래스 할당을 클릭합니다]**.
       ![](../images/models-recipes/enrich-rtcdp/existing_class.png)
 
@@ -55,7 +55,7 @@ ht-degree: 0%
 
    이때 스키마의 구조에는 일부 클래스 필드가 포함되어야 하며 혼합을 할당할 준비가 되었습니다. 혼합이란 특정 개념을 설명하는 하나 이상의 들판으로 이루어진 그룹입니다.
 
-3. [ *컴포지션* ] 창 **[!UICONTROL 에서 []** 혼합 *] 하위 섹션* 에서 [추가]를클릭합니다.
+3. [ **컴포지션** ] 창 **[!UICONTROL 에서 []** 혼합 **] 하위 섹션** 에서 [추가]를클릭합니다.
    * 기존 믹스를 할당하려면 원하는 믹스를 클릭하고 강조 표시한 다음 [믹싱 **[!UICONTROL 추가]를 클릭합니다]**. 클래스와 달리, 여러 혼합을 하나의 스키마에 할당하는 것이 적절하다면 가능합니다.
       ![](../images/models-recipes/enrich-rtcdp/existing_mixin.png)
 
