@@ -6,7 +6,7 @@ last-update: April 13, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
 workflow-type: tm+mt
 source-wordcount: '991'
 ht-degree: 5%
@@ -79,7 +79,7 @@ Adobe Experience Platform [!DNL Data Governance] 는 고객 데이터를 관리�
 
 | 기능 | 설명 |
 | -----------| ---------- |
-| UI에서 데이터 사용 정책 관리 | 이제 UI의 _정책_ 작업 영역에서 데이터 사용 정책을 관리할 수 [!DNL Experience Platform] 있습니다. 자세한 내용은 [정책 사용 안내서를](../../data-governance/policies/user-guide.md) 참조하십시오. |
+| UI에서 데이터 사용 정책 관리 | 이제 UI의 **정책** 작업 영역에서 데이터 사용 정책을 관리할 수 [!DNL Experience Platform] 있습니다. 자세한 내용은 [정책 사용 안내서를](../../data-governance/policies/user-guide.md) 참조하십시오. |
 
 **알려진 문제**
 
