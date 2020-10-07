@@ -4,7 +4,7 @@ seo-title: Adobe Experience Platform 웹 SDK FAQ
 description: Adobe Experience Platform 웹 SDK에 대한 FAQ
 seo-description: Adobe Experience Platform 웹 SDK에 대한 FAQ
 translation-type: tm+mt
-source-git-commit: f178da80d0902f76868986426600f3da426cf24d
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1683'
 ht-degree: 2%
@@ -117,7 +117,7 @@ Adobe Experience Platform 웹 SDK는 다음과 같은 사용자를 위해 개발
 
 * **다른 태그만:** 사이트에 솔루션에 대해 태그를 이미 지정했는데 태그를 다시 지정할 수는 없지만 Experience Platform 사용 사례 또는 예정된 Launch 서버측 기능(아래 참조)을 위해 데이터를 Adobe Experience Platform 에지 네트워크에 전송하려는 경우 사이트에 태그를 추가할 수 있습니다. 이 태그는 &quot;그저 다른 태그&quot;로 작동합니다. `alloy.js`
 
-* **유일한 태그:** Experience Cloud 솔루션에 웹 SDK를 사용하려면 해당 페이지의 _모든_ 솔루션에 사용해야 합니다. 예를 들어, 사이트에 Analytics 태그가 이미 지정되어 있고 Target에 사용하려는 경우, 이 태그를 향후 다른 사이트뿐만 아니라 둘 다에 사용해야 합니다.
+* **유일한 태그:** Experience Cloud 솔루션에 웹 SDK를 사용하려면 해당 페이지의 모든 솔루션에 사용해야 합니다. 예를 들어, 사이트에 Analytics 태그가 이미 지정되어 있고 Target에 사용하려는 경우, 이 태그를 향후 다른 사이트뿐만 아니라 둘 다에 사용해야 합니다.
 
 즉, 비솔루션 사용 사례에 Adobe Experience Platform 웹 SDK를 사용하려는 경우 사이트에 태그를 지정하고 새 솔루션인 것처럼 이동할 수 `alloy.js` 있습니다. Adobe Analytics, Target 또는 Audience Manager에 사용하거나 애플리케이션 사용 사례에 사용하려면 페이지에서 기존 코드를 제거해야 할 수 있습니다.
 
@@ -141,7 +141,7 @@ Adobe Experience Platform 웹 SDK는 다음과 같은 사용자를 위해 개발
 
 * Adobe Experience Platform 웹 SDK에는 Experience Edge 구성 ID라는 것이 필요합니다. 따라서 Edge Network가 스트림을 식별하고 데이터를 사용하여 수행할 작업을 결정할 수 있습니다. 이 ID는 론치 내에 만들어집니다. Launch를 사용하여 속성을 만들거나 JavaScript 코드를 배포해야 하는 것은 아니지만 Launch를 사용하여 구성 ID를 만들어야 합니다.
 
-* Adobe Experience Platform Launch은 사용 가능한 최고의 태그 및 SDK 관리자일 뿐만 아니라 XDM 스키마에 데이터를 손쉽게 배포 `alloy.js` 및 매핑할 수 있습니다. Launch를 사용하지 않기로 결정한 경우 데이터를 보내기 전에 XDM에 배포, 이벤트 `alloy.js`및 매핑을 관리해야 합니다. Launch를 사용하는 _것보다 훨씬_ 어려운 과정입니다.
+* Adobe Experience Platform Launch은 사용 가능한 최고의 태그 및 SDK 관리자일 뿐만 아니라 XDM 스키마에 데이터를 손쉽게 배포 `alloy.js` 및 매핑할 수 있습니다. Launch를 사용하지 않기로 결정한 경우 데이터를 보내기 전에 XDM에 배포, 이벤트 `alloy.js`및 매핑을 관리해야 합니다. Launch를 사용하는 것보다 훨씬 더 어려운 과정입니다.
 
 * Launch를 사용하여 배포하는 `alloy.js`것이 좋습니다.
 
