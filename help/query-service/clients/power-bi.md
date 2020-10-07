@@ -5,7 +5,7 @@ title: Power BI과 연결
 topic: connect
 description: 이 문서에서는 Adobe Experience Platform 쿼리 서비스와 Power BI을 연결하는 단계를 안내합니다.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '349'
 ht-degree: 0%
@@ -61,7 +61,7 @@ ORDER BY SUM(web.webPageDetails.pageviews.value) DESC
 LIMIT 10
 ```
 
-- DirectQuery **[!UICONTROL 또는 가져오기]** 모드 중 하나를 **[!UICONTROL 선택합니다]** . 가져오기 **** 모드에서 데이터를 가져옵니다 [!DNL Power BI]. DirectQuery **** 모드에서는 모든 쿼리가 실행되도록 [!DNL Query Service] 전송됩니다.
+- &quot;[!UICONTROL DirectQuery]&quot; 또는 &quot;[!UICONTROL 가져오기]&quot; 모드를 선택합니다. DirectQuery  모드에서는 모든 쿼리가 실행되도록 [!DNL Query Service] 전송됩니다. 가져오기  모드에서 데이터를 가져옵니다 [!DNL Power BI].
 
 - **[!UICONTROL 확인]**&#x200B;을 클릭합니다. 이제 [!DNL Power BI] 에 연결하여 오류가 [!DNL Query Service] 없는 경우 미리 보기를 생성합니다. 미리 보기 렌더링 숫자 열에 알려진 문제가 있습니다. 다음 단계로 진행합니다.
 
