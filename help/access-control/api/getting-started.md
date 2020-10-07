@@ -5,10 +5,10 @@ title: 액세스 제어 개발자 가이드
 topic: developer guide
 description: Adobe Experience Platform의 액세스 제어를 통해 Adobe Admin Console을 사용하여 다양한 플랫폼 기능에 대한 역할 및 권한을 관리할 수 있습니다. 다음 섹션에서는 스키마 레지스트리 API를 성공적으로 호출하기 위해 알아야 할 추가 정보를 제공합니다.
 translation-type: tm+mt
-source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
+source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
 workflow-type: tm+mt
 source-wordcount: '379'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -52,4 +52,4 @@ API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 
 
 ## 다음 단계
 
-이제 필요한 자격 증명을 수집했으므로 개발자 가이드의 나머지 부분을 계속 읽을 수 있습니다. 각 섹션은 해당 끝점과 관련된 중요한 정보를 제공하며 CRUD 작업을 수행하기 위한 예제 API 호출을 보여줍니다. 각 호출에는 일반 **API 형식**, 필수 헤더와 올바른 형식의 페이로드를 보여주는 샘플 **요청** 및 성공적인 호출을 위한 샘플 **응답이** 포함됩니다.
+이제 필요한 자격 증명을 수집했으므로 개발자 가이드의 나머지 부분을 계속 읽을 수 있습니다. 각 섹션은 해당 끝점과 관련된 중요한 정보를 제공하며 CRUD 작업을 수행하기 위한 예제 API 호출을 보여줍니다. 각 호출에는 일반 API 형식, 필요한 헤더와 올바른 형식의 페이로드를 보여주는 샘플 요청 및 성공적인 호출을 위한 샘플 응답이 포함됩니다.
