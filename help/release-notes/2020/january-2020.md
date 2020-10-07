@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: January 15, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
 workflow-type: tm+mt
 source-wordcount: '894'
-ht-degree: 5%
+ht-degree: 7%
 
 ---
 
@@ -55,7 +55,7 @@ API 및 사용자 인터페이스를 사용하여 XDM을 사용하는 방법에 
 | 새 API 끝점 | API의 기본 경로 [!DNL Privacy Service] 가 에서 (으)로 `/data/privacy/gdpr` 업데이트되었습니다 `/data/core/privacy/jobs`. |
 | 새 필수 `regulation` 속성 | API에서 새 작업을 만들 때 [!DNL Privacy Service] 작업 `regulation` 을 추적할 규칙을 나타내기 위해 요청 페이로드에서 속성을 제공해야 합니다. 허용된 값은 `gdpr` 및 `ccpa`입니다. |
 | 지원 대상 [!DNL Adobe Primetime Authentication] | [!DNL Privacy Service] 이제 Adobe의 액세스/삭제 요청 [!DNL Primetime Authentication]을 해당 제품 값 `primetimeAuthentication` 으로 사용할 수 있습니다. |
-| Privacy Service UI 개선 사항 | GDPR 및 CPA 규정에 대한 별도의 작업 추적 페이지를 참조하십시오. 새로운 _규정 유형_ 드롭다운을 사용하여 GDPR과 CCPA에 대한 추적 데이터 간을 전환할 수 있습니다. |
+| Privacy Service UI 개선 사항 | GDPR 및 CPA 규정에 대한 별도의 작업 추적 페이지를 참조하십시오. 새로운 **규정 유형 **드롭다운을 사용하여 GDPR과 CPA에 대한 추적 데이터 간을 전환할 수 있습니다. |
 
 **알려진 문제**
 
@@ -81,8 +81,8 @@ Adobe Experience Platform은 외부 소스에서 데이터를 인제스트할 �
 
 | 카테고리 | 사용 권한 | 설명 |
 |--- | --- | ---|
-| 데이터 수집 | 소스 관리 | 소스를 읽고, 만들고, 편집하고, 비활성화할 수 있습니다. |
-| 데이터 수집 | 소스 보기 | [카탈로그] 탭의 사용 가능한 소스 및 [ **[!UICONTROL 찾아보기]** ] **[!UICONTROL 탭의 인증된 소스에 대한 읽기 전용]** 액세스. |
+| 데이터 처리 | 소스 관리 | 소스를 읽고, 만들고, 편집하고, 비활성화할 수 있습니다. |
+| 데이터 처리 | 소스 보기 | [카탈로그] 탭의 사용 가능한 소스 및 [ **[!UICONTROL 찾아보기]** ] **[!UICONTROL 탭의 인증된 소스에 대한 읽기 전용]** 액세스. |
 
 **알려진 문제**
 
@@ -105,7 +105,7 @@ Adobe [실시간 CDP에서](../../rtcdp/overview.md)대상은 대상 플랫폼�
 | 카테고리 | 사용 권한 | 설명 |
 |--- | --- | ---|
 | 대상 | 대상 관리 | 대상을 읽고, 만들고, 편집하고, 비활성화하는 액세스 권한 |
-| 대상 | 대상 보기 | [카탈로그] 탭 및 [찾아보기] [!UICONTROL _탭_] 의 인증된 대상 및 사용 가능한 대상에 대한 읽기 전용 _액세스_ . |
+| 대상 | 대상 보기 | [카탈로그] 탭 및 [찾아보기] **[!UICONTROL 탭]** 의 인증된 대상 및 사용 가능한 대상에 대한 읽기 전용 **액세스** . |
 | 대상 | 대상 활성화 | 대상에 데이터 활성화 이 권한을 사용하려면 제품 프로필에 &quot;대상 관리&quot; 또는 &quot;대상 보기&quot;를 추가해야 합니다. |
 
 **알려진 문제**
