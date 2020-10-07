@@ -5,7 +5,7 @@ title: 세그멘테이션 서비스 사용 안내서
 topic: ui guide
 description: Adobe Experience Platform 세그멘테이션 서비스는 세그먼트 정의를 만들고 관리하기 위한 사용자 인터페이스를 제공합니다.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1467'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# [!UICONTROL 세그멘테이션 서비스] 사용 안내서
+# 세그멘테이션 서비스 사용 안내서
 
 [!DNL Adobe Experience Platform Segmentation Service] 세그먼트 정의를 만들고 관리하기 위한 사용자 인터페이스를 제공합니다.
 
