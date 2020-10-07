@@ -5,7 +5,7 @@ title: 쿼리 편집기 사용 안내서
 topic: query editor
 description: 쿼리 편집기는 Experience Platform 사용자 인터페이스 내에서 고객 경험 데이터에 대한 쿼리를 작성하고 유효성을 확인하고 실행할 수 있는 Adobe Experience Platform 쿼리 서비스에서 제공하는 대화형 도구입니다. 쿼리 편집기는 분석 및 데이터 탐색을 위한 쿼리 개발을 지원하며, Experience Platform에서 데이터 세트를 채우기 위한 비대화형 쿼리뿐만 아니라 개발 목적으로 대화형 쿼리를 실행할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: d2f098cb9e4aaf5beaad02173a22a25a87a43756
+source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
 workflow-type: tm+mt
 source-wordcount: '1086'
 ht-degree: 1%
@@ -99,7 +99,7 @@ UI [!DNL Experience Platform] 에서 왼쪽 탐색 **[!UICONTROL 메뉴의 쿼�
 
 ## 쿼리 편집기를 사용하여 쿼리 실행
 
-쿼리를 실행하려면 편집기에서 SQL을 입력하거나 [ [!DNL Query Editor]로그] *또는 [* 찾아보기 ** 탭에서 이전 쿼리를]** 로드한 다음 [ **재생]을 클릭합니다**. 쿼리 실행 상태는 아래의 **[!UICONTROL 콘솔]** 탭에 표시되며 출력 데이터는 **[!UICONTROL 결과]** 탭에 표시됩니다.
+쿼리를 실행하려면 편집기에서 SQL을 입력하거나 [ [!DNL Query Editor]로그] **[!UICONTROL 또는 []** 찾아보기 ** 탭에서 이전 쿼리를]** 로드한 다음 [ **재생]을 클릭합니다**. 쿼리 실행 상태는 아래의 **[!UICONTROL 콘솔]** 탭에 표시되며 출력 데이터는 **[!UICONTROL 결과]** 탭에 표시됩니다.
 
 ### 콘솔
 
