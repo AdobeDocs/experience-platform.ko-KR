@@ -5,7 +5,7 @@ title: 실시간 고객 데이터 플랫폼의 IAB TCF 2.0 지원
 topic: privacy events
 description: 이 문서에서는 IAB TCF 2.0 동의 데이터를 수집하기 위해 필요한 데이터 세트를 두 개 설정하는 절차를 제공합니다.
 translation-type: tm+mt
-source-git-commit: 172710c62b6f60de74e05364edb1191fbba0ff64
+source-git-commit: fa667d86c089c692f22cfd1b46f3f11b6e9a68d7
 workflow-type: tm+mt
 source-wordcount: '1369'
 ht-degree: 0%
@@ -72,7 +72,7 @@ TCF 2.0 지원에 필요한 고객 동의 필드를 제공하는 두 개의 XDM 
 
 ## 고객 동의 스키마 만들기 {#create-schemas}
 
-플랫폼 UI에서 왼쪽 탐색 **[!UICONTROL 에서]** 스키마를 클릭하여 스키마 작업 *[!UICONTROL 공간을]엽니다*. 여기에서 아래 섹션에 있는 단계에 따라 필요한 각 스키마를 만듭니다.
+플랫폼 UI에서 왼쪽 탐색 **[!UICONTROL 에서]** 스키마를 클릭하여 스키마 **[!UICONTROL 작업 영역을]** 엽니다. 여기에서 아래 섹션에 있는 단계에 따라 필요한 각 스키마를 만듭니다.
 
 >[!NOTE]
 >
@@ -80,7 +80,7 @@ TCF 2.0 지원에 필요한 고객 동의 필드를 제공하는 두 개의 XDM 
 
 ### 레코드 기반 동의 스키마 만들기 {#profile-schema}
 
-스키마 작업 영역의 **[!UICONTROL 찾아보기]** 탭 ******[!DNL XDM Individual Profile]에서**&#x200B;클래스를 기반으로 새 스키마를 생성합니다. 스키마 편집기 내에서 스키마를 연 후에는 캔버스 왼쪽의 **[!UICONTROL 믹싱]** 섹션 아래에 있는 **[!UICONTROL 추가]** 를 클릭합니다.
+스키마 작업 영역의 **[!UICONTROL 찾아보기]** 탭 ****[!DNL XDM Individual Profile] 에서클래스를 기반으로 새 스키마를 생성합니다. 스키마 편집기 내에서 스키마를 연 후에는 캔버스 왼쪽의 **[!UICONTROL 믹싱]** 섹션 아래에 있는 **[!UICONTROL 추가]** 를 클릭합니다.
 
 ![](../assets/iab/add-mixin-profile.png)
 
@@ -127,7 +127,7 @@ TCF 2.0 지원에 필요한 고객 동의 필드를 제공하는 두 개의 XDM 
 
 ### 시간 시리즈 기반 동의 스키마 만들기 {#event-schema}
 
-스키마 작업 영역의 **[!UICONTROL 찾아보기]** 탭 ******[!DNL XDM ExperienceEvent]에서**&#x200B;클래스를 기반으로 새 스키마를 생성합니다. 스키마 편집기 내에서 스키마를 연 후에는 캔버스 왼쪽의 **[!UICONTROL 믹싱]** 섹션 아래에 있는 **[!UICONTROL 추가]** 를 클릭합니다.
+스키마 작업 영역의 **[!UICONTROL 찾아보기]** 탭 **** 에서 [!DNL XDM ExperienceEvent] 클래스를기반으로 새 스키마를생성합니다. 스키마 편집기 내에서 스키마를 연 후에는 캔버스 왼쪽의 **[!UICONTROL 믹싱]** 섹션 아래에 있는 **[!UICONTROL 추가]** 를 클릭합니다.
 
 ![](../assets/iab/add-mixin-event.png)
 
