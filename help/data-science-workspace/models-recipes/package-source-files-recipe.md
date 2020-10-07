@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: 이 자습서에서는 제공된 소매 판매 샘플 소스 파일을 보관 파일로 패키지하는 방법에 대한 지침을 제공합니다. 이 지침은 레서피 가져오기 작업 과정을 UI나 API를 사용하여 Adobe Experience Platform 데이터 과학 작업 공간에서 레서피를 만드는 데 사용할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1156'
 ht-degree: 0%
@@ -44,7 +44,7 @@ Azure 컨테이너 레지스트리 자격 증명을 받으려면 [Adobe Experien
 
 ![](../images/models-recipes/package-source-files/import.png)
 
-구성 *페이지가* 열립니다. 적절한 *레서피 이름*(예: &quot;소매 영업 레서피&quot;)을 제공하고 선택적으로 설명 또는 설명서 URL을 제공합니다. 완료되면 [다음]을 **[!UICONTROL 클릭합니다]**.
+구성 **[!UICONTROL 페이지가]** 열립니다. 적절한 **[!UICONTROL 레서피 이름]**(예: &quot;소매 영업 레서피&quot;)을 제공하고 선택적으로 설명 또는 설명서 URL을 제공합니다. 완료되면 [다음]을 **[!UICONTROL 클릭합니다]**.
 
 ![](../images/models-recipes/package-source-files/configure.png)
 
@@ -64,7 +64,7 @@ Azure 컨테이너 레지스트리 자격 증명을 받으려면 [Adobe Experien
 
 ![](../images/models-recipes/package-source-files/docker-creds.png)
 
-Docker 호스트, *사용자 이름*&#x200B;및 *암호*&#x200B;값을 *확인합니다*. 이러한 이미지는 아래 나와 있는 워크플로우에서 [!DNL Docker] 이미지를 만들고 푸시하는 데 사용됩니다.
+Docker 호스트, 사용자 이름 및 암호에 대한 값을 확인합니다. 이러한 이미지는 아래 나와 있는 워크플로우에서 [!DNL Docker] 이미지를 만들고 푸시하는 데 사용됩니다.
 
 >[!NOTE]
 >
