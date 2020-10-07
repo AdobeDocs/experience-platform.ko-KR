@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: 이 자습서에서는 플랫폼 사용자 인터페이스를 사용하여 FTP 또는 SFTP 소스 커넥터를 만드는 단계를 제공합니다.
 translation-type: tm+mt
-source-git-commit: c3352c090ce9e5a89d9285aabdc4851632d4d437
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '702'
+source-wordcount: '701'
 ht-degree: 1%
 
 ---
@@ -43,7 +43,7 @@ Adobe Experience Platform의 소스 커넥터는 예약된 기준으로 외부 �
 
 ### 필요한 자격 증명 수집
 
-FTP 또는 SFTP 서버에 액세스하려면 서버 [!DNL Platform]의 **호스트 이름**, **사용자 이름**&#x200B;및 **암호를 제공해야 합니다**.
+FTP 또는 SFTP 서버에 액세스하려면 서버의 호스트 이름, 사용자 이름 [!DNL Platform]및 암호를 제공해야 합니다.
 
 ## FTP 또는 SFTP 서버에 연결
 
