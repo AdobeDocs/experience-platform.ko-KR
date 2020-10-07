@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Privacy Service 릴리스 노트
 topic: release notes
 translation-type: tm+mt
-source-git-commit: 6eee7e903d36ed641c9f8e6120f549c02cb4bce4
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 6%
@@ -53,7 +53,7 @@ ht-degree: 6%
 
 * [!DNL Privacy Service] 향상된 UI:
    * GDPR 및 CPA 규정에 대한 별도의 작업 추적 페이지를 참조하십시오.
-   * 새로운 _규정 유형_ 드롭다운을 사용하여 GDPR과 CCPA에 대한 추적 데이터 간을 전환할 수 있습니다.
+   * 새로운 *규정 유형* 드롭다운을 사용하여 GDPR과 CCPA에 대한 추적 데이터 간을 전환할 수 있습니다.
 
 ## 2019년 7월 25일
 
