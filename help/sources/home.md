@@ -5,7 +5,7 @@ title: Adobe Experience Platform 소스 커넥터 개요
 topic: overview
 description: Adobe Experience Platform은 플랫폼 서비스를 사용하여 들어오는 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 외부 소스에서 데이터를 수집할 수 있도록 허용합니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 등 다양한 소스의 데이터를 인제스트할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
 workflow-type: tm+mt
 source-wordcount: '866'
 ht-degree: 0%
@@ -118,7 +118,7 @@ CRM 시스템은 고객과의 관계를 구축하는 데 도움이 되는 데이
 
 | 권한 수준 | 설명 |
 | ---- | ----|
-| **[!UICONTROL 소스]** 보기 켜기 | [ *카탈로그* ] 탭에서 각 소스 유형의 소스는 물론 [검색 *], [계정*] 및 [ *DataFlow*] 탭에서도 읽기 전용 액세스 권한을 ** 부여합니다. |
+| **[!UICONTROL 소스]** 보기 켜기 | [카탈로그] 탭에서 각 소스 유형의 소스에 대한 읽기 전용 액세스 권한뿐만 아니라 [찾아보기], [계정] 및 [데이터 흐름] 탭을 부여할 수 있습니다. |
 | **[!UICONTROL 소스]** 관리 켜기 | 소스 **[!UICONTROL 보기에 포함된 기능 외에,]**&#x200B;카탈로그 **[!UICONTROL 의]** Connect 소스 **[!UICONTROL 옵션]** 에 대한 액세스 권한을 **[!UICONTROL 허용하며, Browse에서 Select Data]** 및 Select **** DataOption에 대한 액세스 권한을 부여합니다. **[!UICONTROL 또한 소스]** 관리를 사용하면 DataFlow를 활성화하거나 비활성화하고 **[!UICONTROL 해당 일정을]** 편집할 수 있습니다. |
 | **[!UICONTROL 소스 보기]** 해제 및 **[!UICONTROL 소스]** 관리 해제 | 소스에 대한 모든 액세스 권한을 취소합니다. |
 
