@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: 이 자습서에서는 Experience Platform UI를 사용하여 대상 세그먼트를 내보내는 데 사용할 수 있는 데이터 세트를 만드는 데 필요한 단계를 안내합니다.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: fce215edb99cccc8be0109f8743c9e56cace2be0
 workflow-type: tm+mt
 source-wordcount: '756'
 ht-degree: 1%
@@ -78,7 +78,7 @@ XDM 개인 프로필 옆에 있는 라디오 단추를 **[!UICONTROL 선택한]*
 
 이제 빈 데이터 세트가 생성되어 데이터 세트 작업 영역의 **[!UICONTROL 데이터 세트 활동]** 탭으로 **[!UICONTROL 돌아옵니다]** . &quot;배치가 추가되지 않았습니다.&quot;라는 알림과 함께 작업 공간의 왼쪽 위 모서리에 데이터 세트 이름이 표시됩니다. 이 데이터 세트에 아직 배치를 추가하지 않았기 때문에 예상됩니다.
 
-데이터 집합 작업 영역의 오른쪽에는 데이터 집합 ID, 이름, 설명, 테이블 이름, 스키마], 스트리밍 및 소스 같은 새 데이터 세트와 관련된 정보가 들어 있는 **[!UICONTROL 정보]** 탭이 표시됩니다. 또한 **[!UICONTROL 정보]** 탭에는 데이터 세트를 만든 날짜와 마지막으로 수정한 날짜에 대한 정보도 포함되어 있습니다.
+데이터 집합 작업 영역의 오른쪽에는 데이터 집합 ID, 이름, 설명, 테이블 이름, 스키마, 스트리밍 및 소스 같은 새 데이터 집합과 관련된 정보가 들어 있는 **[!UICONTROL 정보]** 탭이 표시됩니다. 또한 **[!UICONTROL 정보]** 탭에는 데이터 세트를 만든 날짜와 마지막으로 수정한 날짜에 대한 정보도 포함되어 있습니다.
 
 대상 세그먼트 내보내기 작업 과정을 완료하려면 이 값이 **[!UICONTROL 필요하므로 데이터 세트 ID에]**&#x200B;유의하십시오.
 
