@@ -5,7 +5,7 @@ title: Adobe Experience Platform ID 서비스 문제 해결 가이드
 topic: troubleshooting
 description: 이 문서에서는 Adobe Experience Platform ID 서비스에 대한 FAQ와 일반적인 오류에 대한 문제 해결 가이드를 제공합니다.
 translation-type: tm+mt
-source-git-commit: 04efbf63741ef39bbf0b22795be74087f1f7c595
+source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
 workflow-type: tm+mt
 source-wordcount: '2248'
 ht-degree: 1%
@@ -53,7 +53,7 @@ ID 데이터는 개인을 식별하는 데 사용할 수 있는 모든 데이터
 
 ID 필드는 각 개인에 고유한 값에 대해 예약해야 합니다. 예를 들어 고객 충성도 프로그램의 데이터 세트를 고려합니다. &quot;충성도 수준&quot; 필드(금, 은, 브론즈)는 유용한 ID 필드가 아니지만, 충성도 ID(고유한 값)는 유용하지 않습니다.
 
-ZIP 코드 및 IP 주소와 같은 필드는 둘 이상의 개인 사용자에게 적용할 수 있으므로 개인의 ID로 레이블을 지정할 수 없습니다. 이러한 유형의 필드는 가족 수준의 마케팅 전략에 대한 ID로 표시되어야 합니다.
+둘 이상의 개별 사람에게 적용할 수 있으므로 ZIP 코드 및 IP 주소와 같은 필드는 개인의 ID로 레이블을 지정할 수 없습니다. 이러한 유형의 필드는 가족 수준의 마케팅 전략에 대한 ID로 표시되어야 합니다.
 
 ## 내 ID 필드가 내 예상과 연결되지 않는 이유는 무엇입니까?
 
@@ -100,7 +100,7 @@ ID [서비스 API를](https://www.adobe.io/apis/experienceplatform/home/api-refe
 
 ## 복합 ID와 XID란 무엇입니까?
 
-ID는 합성 ID 또는 XID로 API 호출에서 참조됩니다. 복합 ID는 **ID** 값과 네임스페이스를 포함하는 ID를 나타냅니다. XID **** 는 복합 ID(ID 및 네임스페이스)와 동일한 구문을 나타내는 단일 값 식별자로, Identity Service에서 지속되는 경우 새 ID에 자동으로 할당됩니다. 자세한 내용은 [ID 서비스 API 개요를](./home.md) 참조하십시오.
+ID는 합성 ID 또는 XID로 API 호출에서 참조됩니다. 복합 ID는 ID 값과 네임스페이스를 포함하는 ID를 나타냅니다. XID는 복합 ID(ID 및 네임스페이스)와 동일한 구문을 나타내는 단일 값 식별자로, Identity Service에서 지속되는 경우 자동으로 새 ID에 할당됩니다. 자세한 내용은 [ID 서비스 API 개요를](./home.md) 참조하십시오.
 
 ## ID 서비스는 PII(개인 식별 정보)를 어떻게 처리합니까?
 
@@ -335,7 +335,7 @@ ID가 [!DNL Identity Service] 지속되면 ID의 ID와 관련 네임스페이스
 }
 ```
 
-[!DNL Identity Service] 단일 레코드가 두 개 이상의 ID 값을 나타낼 때만 링크 ID를 연결합니다. 이 오류 메시지는 인제스트된 각 배치에 대해 한 번 발생하고 ID가 하나만 찾을 수 있고 ID 그래프가 변경되지 않는 레코드 수를 표시합니다.
+[!DNL Identity Service] 단일 레코드가 두 개 이상의 ID 값을 나타낼 때 ID만 연결합니다. 이 오류 메시지는 인제스트된 각 배치에 대해 한 번 발생하고 ID가 하나만 찾을 수 있고 ID 그래프가 변경되지 않는 레코드 수를 표시합니다.
 
 ### 네임스페이스 코드가 이 IMS 조직에 등록되어 있지 않습니다.
 
