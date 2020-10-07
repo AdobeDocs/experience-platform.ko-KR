@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: 이 자습서에서는 소비자 데이터를 Adobe Experience Platform으로 가져오기 위해 UI에서 Adobe Analytics 소스 커넥터를 만드는 단계를 제공합니다.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '790'
 ht-degree: 1%
@@ -28,7 +28,7 @@ ht-degree: 1%
 
 ## Adobe Analytics과 소스 연결 만들기
 
-소스 작업 영역에 액세스하려면 [Adobe Experience Platform](https://platform.adobe.com) 에 로그인한 다음 **** 왼쪽 탐색 막대에서 소스를 선택합니다. [ *카탈로그* ] 화면에는 인바운드 연결을 만들 수 있는 사용 가능한 소스가 표시되고 각 소스에는 연관된 기존 계정 및 데이터 세트 흐름 수가 표시됩니다.
+소스 작업 영역에 액세스하려면 [Adobe Experience Platform](https://platform.adobe.com) 에 로그인한 다음 **** 왼쪽 탐색 막대에서 소스를 선택합니다. [ **카탈로그** ] 화면에는 인바운드 연결을 만들 수 있는 사용 가능한 소스가 표시되고 각 소스에는 연관된 기존 계정 및 데이터 세트 흐름 수가 표시됩니다.
 
 화면의 왼쪽에 있는 카탈로그에서 해당 범주를 선택할 수 있습니다. 또는 검색 옵션을 사용하여 작업할 특정 소스를 찾을 수 있습니다.
 
@@ -73,7 +73,7 @@ Adobe Analytics **[!UICONTROL 단계가]** 나타납니다. 이전에 설정한 
 
 ![](../../../../images/tutorials/create/analytics/catalog-dataset-flows.png)
 
-데이터 *집합 흐름* 화면이 나타납니다. 이 페이지에는 이름, 소스 데이터, 생성 시간 및 상태에 대한 정보를 포함한 데이터 세트 흐름 쌍이 있습니다.
+데이터 **집합 흐름** 화면이 나타납니다. 이 페이지에는 이름, 소스 데이터, 생성 시간 및 상태에 대한 정보를 포함한 데이터 세트 흐름 쌍이 있습니다.
 
 커넥터가 두 개의 데이터 세트 흐름을 인스턴스화합니다. 한 흐름은 채우기 데이터를, 다른 흐름은 라이브 데이터를 나타냅니다. 채우기 데이터는 프로필에 대해 구성되지 않지만 분석 및 데이터 과학 사용 사례를 위해 데이터 호수로 전송됩니다.
 
@@ -83,7 +83,7 @@ Adobe Analytics **[!UICONTROL 단계가]** 나타납니다. 이전에 설정한 
 
 ![](../../../../images/tutorials/create/analytics/backfill.png)
 
-데이터 *집합 활동* 페이지가 나타납니다. 이 페이지는 그래프 형식으로 소비되는 메시지 비율을 표시합니다. 상단 헤더에서 *데이터 거버넌스를* 선택하여 레이블 지정 필드에 액세스합니다.
+데이터 **집합 활동** 페이지가 나타납니다. 이 페이지는 그래프 형식으로 소비되는 메시지 비율을 표시합니다. 상단 헤더에서 *데이터 거버넌스를* 선택하여 레이블 지정 필드에 액세스합니다.
 
 ![](../../../../images/tutorials/create/analytics/batches.png)
 
@@ -91,7 +91,7 @@ Adobe Analytics **[!UICONTROL 단계가]** 나타납니다. 이전에 설정한 
 
 ![](../../../../images/tutorials/create/analytics/data-gov.png)
 
-관리 *레이블 편집* 패널이 나타납니다. 이 화면에서는 데이터 세트 흐름의 계약, ID 및 중요한 레이블에 액세스하고 편집할 수 있습니다.
+관리 **레이블 편집** 패널이 나타납니다. 이 화면에서는 데이터 세트 흐름의 계약, ID 및 중요한 레이블에 액세스하고 편집할 수 있습니다.
 
 Analytics에서 오는 데이터에 레이블을 지정하는 방법에 대한 자세한 내용은 [데이터 사용 레이블 안내서를 참조하십시오](../../../../../data-governance/labels/user-guide.md).
 
