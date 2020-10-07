@@ -3,12 +3,12 @@ keywords: Experience Platform;home;popular topics;CJA;journey analytics;customer
 solution: Experience Platform
 title: Adobe Experience Platform 개요
 topic: getting started
-description: Adobe Experience Platform은 고객 경험을 향상시키는 완벽한 솔루션을 구축하고 관리하기 위해 시장에서 가장 강력하고 유연하며 개방적인 시스템입니다. Experience Platform을 통해 기업은 모든 시스템의 고객 데이터와 콘텐츠를 통합 관리하고 표준화하고 데이터 과학 및 머신 러닝을 적용하여 개인화된 풍부한 경험의 디자인과 전달을 대폭 향상시킬 수 있습니다.
+description: Adobe Experience Platform은 고객 경험을 향상시키는 완벽한 솔루션을 구축하고 관리하기 위해 시장에서 가장 강력하고 유연하며 개방적인 시스템입니다. Experience Platform을 사용하면 조직 내 모든 시스템의 고객 데이터와 컨텐츠를 중앙 집중화 및 표준화하고 데이터 과학 및 시스템 학습을 적용하여 풍부한 개인별 경험을 더 잘 설계하고 전달할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: e94278c1b64e1d940f55861518c78cca24822c1b
+source-git-commit: fa667d86c089c692f22cfd1b46f3f11b6e9a68d7
 workflow-type: tm+mt
 source-wordcount: '936'
-ht-degree: 4%
+ht-degree: 8%
 
 ---
 
@@ -153,9 +153,6 @@ Adobe Experience Platform을 지원하는 아키텍처에 대한 자세한 내�
 **사용 사례:**
 
 >[!VIDEO](https://video.tv.adobe.com/v/32806?quality=12&learn=on)
-
-
-
 
 <!-- 
 ## What's New
