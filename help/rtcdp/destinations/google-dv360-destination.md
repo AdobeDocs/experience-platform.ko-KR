@@ -5,9 +5,9 @@ seo-title: Google 디스플레이 및 비디오 360 대상
 description: 디스플레이 및 비디오 360(이전 DoubleClick 입찰 관리자)은 디스플레이, 비디오 및 모바일 재고 소스에서 타깃팅된 디지털 캠페인 및 대상 재타깃팅을 실행하는 데 사용되는 도구입니다.
 seo-description: '디스플레이 및 비디오 360(이전 DoubleClick 입찰 관리자)은 디스플레이, 비디오 및 모바일 재고 소스에서 타깃팅된 디지털 캠페인 및 대상 재타깃팅을 실행하는 데 사용되는 도구입니다. '
 translation-type: tm+mt
-source-git-commit: c66fb4cf0a414e02ceb58becc9d9b59db3fe987b
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '713'
+source-wordcount: '714'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 대상에 대한 다음 세부 사항을 [!DNL Google Display & Video 360] 참고하십시오.
 
-* 다음 ID를 [대상으로](../../identity-service/namespaces.md) 보낼 수 [!DNL Google Display & Video 360] 있습니다. **Google 쿠키 ID, IDFA, GAID, Roku ID, Microsoft ID, Amazon Fire TV ID**.
+* 다음 ID를 [대상으로](../../identity-service/namespaces.md) 보낼 수 [!DNL Google Display & Video 360] 있습니다.Google 쿠키 ID, IDFA, GAID, Roku ID, Microsoft ID 및 Amazon Fire TV ID.
 * 활성화된 대상은 Google 플랫폼에서 프로그래밍 방식으로 생성됩니다.
 * Adobe 실시간 CDP에는 현재 성공적인 활성화를 확인하는 측정 지표가 포함되어 있지 않습니다. 통합을 확인하고 대상 타깃팅 크기를 이해하려면 Google의 대상 수를 참조하십시오.
 
@@ -56,7 +56,7 @@ Adobe 실시간 CDP에서 [!DNL Google Display & Video 360] 대상을 생성하�
 
    >[!NOTE]
    >
-   >이 대상과의 연결이 이미 있는 경우 대상 카드에 **[!UICONTROL 활성화]** 단추가 표시됩니다. 활성화 및 구성 **[!UICONTROL 의 차이에 대한 자세한]****[!UICONTROL 내용은 대상 작업 공간 설명서의]**&#x200B;카탈로그 [섹션을](/help/rtcdp/destinations/destinations-workspace.md#catalog) 참조하십시오.
+   >이 대상과의 연결이 이미 있는 경우 대상 카드에 **[!UICONTROL 활성화]** 단추가 표시됩니다. 활성화 및 구성 [!UICONTROL 의 차이에 대한 자세한][!UICONTROL 내용은 대상 작업 공간 설명서의]카탈로그 [섹션을](/help/rtcdp/destinations/destinations-workspace.md#catalog) 참조하십시오.
 
 2. 대상 **만들기 작업** 과정의 설정 [!UICONTROL 단계에서 대상에 대한] 기본 정보및 이 대상에 적용할 마케팅 사용 사례를 입력합니다. <br>
 
