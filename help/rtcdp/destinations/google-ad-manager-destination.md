@@ -5,7 +5,7 @@ seo-title: Google 광고 관리자 대상
 description: '이전에 발행자를 위한 DoubleClick 또는 DoubleClick AdX로 알려진 Google Ad Manager는 발행자가 비디오 및 모바일 앱을 통해 자사 웹 사이트에서 광고 표시를 관리할 수 있는 수단을 제공하는 Google의 광고 서비스 플랫폼입니다. '
 seo-description: '이전에 발행자를 위한 DoubleClick 또는 DoubleClick AdX로 알려진 Google Ad Manager는 발행자가 비디오 및 모바일 앱을 통해 자사 웹 사이트에서 광고 표시를 관리할 수 있는 수단을 제공하는 Google의 광고 서비스 플랫폼입니다. '
 translation-type: tm+mt
-source-git-commit: c66fb4cf0a414e02ceb58becc9d9b59db3fe987b
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '690'
 ht-degree: 0%
@@ -49,11 +49,11 @@ Adobe 실시간 CDP에서 [!DNL Google Ad Manager] 대상을 생성하기 전에
 * **고객 ID** :adobe 고객 계정 ID입니다 [!DNL Google]. 이 ID를 얻으려면 Adobe 고객 지원 센터 또는 Adobe 담당자에게 문의하십시오.
 * **네트워크 ID** :이 계정은 [!DNL Google Ad Manager]
 * **대상 링크 ID** :이 계정은 [!DNL Google Ad Manager]
-* 계정 유형. **Google** 또는 **AdX 구매자별 DFP**.
+* 계정 유형. Google 또는 AdX 구매자의 DFP.
 
 ## 대상 구성
 
-1. [ **[!UICONTROL 연결]** ] > **[!UICONTROL 대상]**&#x200B;에서 [!DNL Google Ad Manager]를 선택하고 구성을 **[!UICONTROL 선택합니다]**.
+1. [ **[!UICONTROL 연결]** ] > **[!UICONTROL 대상]**&#x200B;에서 **[!DNL Google Ad Manager]**&#x200B;를 선택하고 구성을 **[!UICONTROL 선택합니다]**.
    ![Google 광고 관리자 대상 연결](/help/rtcdp/destinations/assets/google-1-destination.png)
 
    >[!NOTE]
