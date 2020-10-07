@@ -5,10 +5,10 @@ topic: overview
 title: 액세스 제어 개요
 description: Adobe Experience Platform에 대한 액세스 제어는 Adobe Admin Console을 통해 제공됩니다. 이 기능은 Admin Console의 제품 프로필을 활용하므로 사용자에게 사용 권한 및 샌드박스를 연결합니다.
 translation-type: tm+mt
-source-git-commit: 397f08efa276f7885e099a0a8d9dc6d23fe0e8cc
+source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
 source-wordcount: '1162'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 2%
 
 ## 액세스 제어 계층 구조 및 워크플로우
 
-에 대한 액세스 제어를 구성하려면 [!DNL Experience Platform]제품 통합이 있는 조직에 대한 관리자 권한이 있어야 [!DNL Experience Platform] 합니다. 권한을 부여하거나 해지하는 최소 역할은 **[!UICONTROL 제품 프로필 관리자입니다]**. 권한을 관리할 수 있는 다른 관리자 역할은 **[!UICONTROL 제품 관리자]** (제품 내의 모든 프로필을 관리할 수 있음)와 **[!UICONTROL 시스템 관리자]** (제한 없음)입니다. 자세한 내용은 [관리자 역할에](https://helpx.adobe.com/enterprise/using/admin-roles.html) 대한 Adobe Help Center 문서를 참조하십시오.
+에 대한 액세스 제어를 구성하려면 [!DNL Experience Platform]제품 통합이 있는 조직에 대한 관리자 권한이 있어야 [!DNL Experience Platform] 합니다. 권한을 부여하거나 해지하는 최소 역할은 제품 프로필 관리자입니다. 권한을 관리할 수 있는 다른 관리자 역할은 제품 관리자(제품 내의 모든 프로필을 관리할 수 있음)와 시스템 관리자입니다(제한 없음). 자세한 내용은 [관리자 역할에](https://helpx.adobe.com/enterprise/using/admin-roles.html) 대한 Adobe Help Center 문서를 참조하십시오.
 
 >[!NOTE]
 >
@@ -44,7 +44,7 @@ Adobe Admin Console은 Adobe 제품 이용 권한 및 조직의 이용 권한을
 
 ### 제품 프로필
 
-에서 [!DNL Admin Console]권한은 **[!UICONTROL 제품 프로필]**&#x200B;사용을 통해 사용자에게 할당됩니다. 제품 프로필을 사용하면 한 명 또는 여러 사용자에게 권한을 부여할 수 있으며 제품 프로필을 통해 사용자에게 할당된 샌드박스 범위에 대한 액세스 권한을 포함할 수 있습니다. 사용자를 조직에 속한 하나 이상의 제품 프로필에 할당할 수 있습니다.
+에서 [!DNL Admin Console]는 제품 프로필 사용을 통해 사용자에게 권한이 할당됩니다. 제품 프로필을 사용하면 한 명 또는 여러 사용자에게 권한을 부여할 수 있으며 제품 프로필을 통해 사용자에게 할당된 샌드박스 범위에 대한 액세스 권한을 포함할 수 있습니다. 사용자를 조직에 속한 하나 이상의 제품 프로필에 할당할 수 있습니다.
 
 ### 기본 제품 프로필
 
@@ -57,7 +57,7 @@ Adobe Admin Console은 Adobe 제품 이용 권한 및 조직의 이용 권한을
 
 ## 샌드박스 및 권한
 
-비프로덕션 샌드박스는 다른 샌드박스에서 데이터를 격리할 수 있는 데이터 가상화의 한 형태이며 일반적으로 개발 실험, 테스트 또는 시험버전에 사용됩니다. 제품 프로필의 **[!UICONTROL 권한]** 을 통해 프로필 사용자는 액세스 권한이 부여된 샌드박스 환경 내의 [!DNL Platform] 기능에 액세스할 수 있습니다. 기본 Experience Platform 라이선스는 5개의 샌드박스(1개의 프로덕션과 4개의 비프로덕션)를 제공합니다. 비프로덕션 샌드박스 10개 팩을 총 75개의 샌드박스에 추가할 수 있습니다. 자세한 내용은 IMS 조직 관리자 또는 Adobe 영업 담당자에게 문의하십시오.
+비프로덕션 샌드박스는 다른 샌드박스에서 데이터를 격리할 수 있는 데이터 가상화의 한 형태이며 일반적으로 개발 실험, 테스트 또는 시험버전에 사용됩니다. 제품 프로필의 권한은 프로파일의 사용자에게 액세스 권한이 부여된 샌드박스 환경 내의 기능에 대한 액세스 권한을 부여합니다. [!DNL Platform] 기본 Experience Platform 라이선스는 5개의 샌드박스(1개의 프로덕션과 4개의 비프로덕션)를 제공합니다. 비프로덕션 샌드박스 10개 팩을 총 75개의 샌드박스에 추가할 수 있습니다. 자세한 내용은 IMS 조직 관리자 또는 Adobe 영업 담당자에게 문의하십시오.
 
 샌드박스에 대한 자세한 내용 [!DNL Experience Platform]은 [샌드박스 개요를 참조하십시오](../sandboxes/home.md).
 
@@ -71,7 +71,7 @@ Adobe Admin Console은 Adobe 제품 이용 권한 및 조직의 이용 권한을
 
 ### 권한
 
-제품 프로필 내의 **권한** 탭에는 해당 프로필에 대해 활성화된 샌드박스 및 권한이 표시됩니다.
+제품 프로필 내의 권한 탭에는 해당 프로필에 대해 활성화된 샌드박스 및 권한이 표시됩니다.
 
 ![](./images/permissions-overview.png)
 
