@@ -5,7 +5,7 @@ title: 스키마 레지스트리 API 개발자 가이드
 description: 스키마 레지스트리는 Adobe Experience Platform 내의 스키마 라이브러리에 액세스하는 데 사용되며, 사용 가능한 모든 라이브러리 리소스에 액세스할 수 있는 사용자 인터페이스 및 RESTful API를 제공합니다. 스키마 레지스트리 API를 사용하여 기본 CRUD 작업을 수행하여 Adobe Experience Platform 내에서 사용 가능한 모든 스키마 및 관련 리소스를 보고 관리할 수 있습니다.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
+source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
 workflow-type: tm+mt
 source-wordcount: '1295'
 ht-degree: 0%
@@ -162,7 +162,7 @@ curl -X GET \
 
 ## Adobe의 `CONTAINER_ID` {#container}
 
-API를 [!DNL Schema Registry] `CONTAINER_ID`호출하려면 API 호출을 수행할 수 있는 컨테이너는 두 가지가 있습니다.전역 컨테이너 **및** 테넌트 컨테이너 ****.
+API를 [!DNL Schema Registry] `CONTAINER_ID`호출하려면 API 호출을 수행할 수 있는 컨테이너는 두 가지가 있습니다.전역 컨테이너 및 테넌트 컨테이너
 
 ### 전역 컨테이너
 
