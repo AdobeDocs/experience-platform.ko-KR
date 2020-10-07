@@ -5,7 +5,7 @@ title: 세그멘테이션 서비스 세그먼트 빌더 사용 안내서
 topic: ui guide
 description: '세그먼트 빌더는 프로필 데이터 요소와 상호 작용할 수 있는 풍부한 작업 공간을 제공합니다. 작업 영역에서는 데이터 속성을 나타내는 데 사용되는 드래그 앤 드롭 타일과 같이 규칙을 작성하고 편집하기 위한 직관적인 컨트롤을 제공합니다. '
 translation-type: tm+mt
-source-git-commit: d2f098cb9e4aaf5beaad02173a22a25a87a43756
+source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
 source-wordcount: '1723'
 ht-degree: 0%
@@ -21,9 +21,9 @@ ht-degree: 0%
 
 ## 세그먼트 정의 구성 블록
 
-세그먼트 정의의 기본 구성 요소는 **[!UICONTROL 속성]** 및 **[!UICONTROL 이벤트입니다]**. 또한 기존 대상에 포함된 속성과 이벤트를 **[!UICONTROL 새 정의에]** 대한 구성 요소로 사용할 수도 있습니다.
+세그먼트 정의의 기본 구성 요소는 속성 및 이벤트입니다. 또한 기존 대상에 포함된 특성과 이벤트를 새 정의에 대한 구성 요소로 사용할 수도 있습니다.
 
-작업 영역의 왼쪽에 있는 **[!UICONTROL 필드]** 섹션에서 이러한 구성 요소를 [!DNL Segment Builder] 볼 수 있습니다. **[!UICONTROL 필드는]** 각 기본 구성 요소에 대한 탭을 포함합니다. **[!UICONTROL 속성]**, **[!UICONTROL 이벤트]**&#x200B;및 **[!UICONTROL 대상을 참조하십시오]**.
+작업 영역의 왼쪽에 있는 **[!UICONTROL 필드]** 섹션에서 이러한 구성 요소를 [!DNL Segment Builder] 볼 수 있습니다. **[!UICONTROL 필드는]** 각 기본 구성 요소에 대한 탭을 포함합니다.&quot;[!UICONTROL 속성][!UICONTROL &quot;, &quot;]이벤트[!UICONTROL &quot; 및 &quot;]대상&quot;.
 
 ![](../images/ui/segment-builder/segment-fields.png)
 
@@ -45,11 +45,11 @@ Lucene의 검색 구문을 사용하는 검색 막대에 구성 요소의 이름
 >
 >조직에서 정의한 사용자 정의 스키마 필드는 표시되는 데 최대 24시간이 걸릴 수 있으며 빌드 규칙에 사용할 수 있습니다.
 
-그런 다음 세그먼트 정의 [!DNL ExperienceEvents] 에 [!UICONTROL 이벤트 유형을] 손쉽게 드래그 앤 드롭할 수 있습니다.
+그런 다음 세그먼트 정의 [!DNL ExperienceEvents] 에 &quot;[!UICONTROL 이벤트 유형]&quot;을 드래그하여 놓을 수 있습니다.
 
 ![](../images/ui/segment-builder/events-eventTypes.png)
 
-기본적으로 데이터 저장소에서 채워진 스키마 필드만 표시됩니다. 여기에는 [!UICONTROL 이벤트 유형이 포함됩니다]. 이벤트 유형 [!UICONTROL 목록이 보이지 않거나, &quot;] 이벤트 유형[!UICONTROL &quot;을]유형 [!UICONTROL 으로]선택할 **[!UICONTROL 수 있는]**&#x200B;경우에만 &quot; **[!UICONTROL 임의의]** &quot;을 선택할 수 있습니다. 그런 다음 다음 다음 **[!UICONTROL 다음 필드]**&#x200B;를 선택하고, 다음을 선택하여 Twitter를 선택하고, TwitterShow FullDm 스키마를 Available 필드 아래에서 선택합니다. 톱니바퀴 아이콘을 다시 선택하여 **[!UICONTROL 필드]** 탭으로 돌아갈 수 있으며 이제 데이터가 포함되어 있는지 여부에 관계없이 여러 [!UICONTROL 이벤트 유형] 및 스키마 필드를 볼 수 있습니다.
+기본적으로 데이터 저장소에서 채워진 스키마 필드만 표시됩니다. 여기에는 &quot;[!UICONTROL 이벤트 유형&quot;이 포함됩니다]. &quot;이벤트 유형[!UICONTROL &quot; 목록이 보이지 않거나 &quot;]이벤트 유형[!UICONTROL &quot;으로 &quot;]임의의[!UICONTROL &quot;만]선택할 수 있는 경우, &quot;이벤트 유형 **&quot;으로** 선택할 **[!UICONTROL 수 있는 경우에만 &quot;]**&#x200B;임의의 **[!UICONTROL &quot;을]** 다음 **[!UICONTROL 아이콘을 선택하고 다음]**&#x200B;으로Twitter를 선택한 다음TwitterTwitter필드를 선택한 다음TwithoutCumfCuseCuseCuseXdm을 선택한 다음Cuse사용 가능한XfXfXpxPuts사용 가능한PdpXpspXpspPutsPutsPutsFPutsF사용 가능한FPuts사용 가능한FPutsPutsPutsPutsPutsPutsP 톱니바퀴 아이콘 **을 다시 선택하여** 필드 **[!UICONTROL 탭으로]** 돌아갈 수 있으며 이제 데이터가 포함되어 있는지 여부와 관계없이 여러 개의 &quot;[!UICONTROL 이벤트 유형]&quot;과 스키마 필드를 볼 수있습니다.
 
 ![](../images/ui/segment-builder/show-populated.png)
 
@@ -63,13 +63,13 @@ Lucene의 검색 구문을 사용하는 검색 막대에 구성 요소의 이름
 
 ![](../images/ui/segment-builder/audience-folder-structure.png)
 
-Lucene의 [!UICONTROL 검색 구문을 활용하는] 검색 막대를 사용하여 [대상을 검색할 수도 있습니다](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). 대상 **** 탭에서 최상위 폴더를 선택하면 검색 막대가 나타나므로 해당 폴더 내에서 검색할 수 있습니다. 전체 단어를 입력하면 검색 결과가 채워지기 시작합니다. 예를 들어 이름이 [!UICONTROL 지정된] 대상을 찾으려면 검색 `Online Shoppers`막대에 &quot;온라인&quot;을 입력합니다. 단어 &quot;Online&quot;을 모두 입력하면 단어 &quot;Online&quot;이 포함된 검색 결과가 나타납니다.
+Lucene의 검색 구문을 활용하는 검색 막대를 사용하여 [대상을 검색할 수도 있습니다](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). 대상 **** 탭에서 최상위 폴더를 선택하면 검색 막대가 나타나므로 해당 폴더 내에서 검색할 수 있습니다. 전체 단어를 입력하면 검색 결과가 채워지기 시작합니다. 예를 들어 이름이 지정된 대상을 찾으려면 검색 막대 `Online Shoppers`에 &quot;Online&quot;을 입력합니다. 단어 &quot;Online&quot;을 모두 입력하면 단어 &quot;Online&quot;이 포함된 검색 결과가 나타납니다.
 
 ## 규칙 빌더 캔버스 {#rule-builder-canvas}
 
 세그먼트 정의는 대상 대상의 주요 특성이나 행동을 설명하는 데 사용되는 규칙 모음입니다. 이러한 규칙은 의 가운데에 있는 규칙 빌더 캔버스를 사용하여 만듭니다 [!DNL Segment Builder].
 
-세그먼트 정의에 새 규칙을 추가하려면 필드 탭에서 **[!UICONTROL 타일을]** 드래그하여 규칙 빌더 캔버스에 놓습니다. 그런 다음 추가되는 데이터의 유형에 따라 컨텍스트별 옵션이 제공됩니다. 사용 가능한 데이터 유형은 다음과 같습니다.문자열, 날짜, [!DNL ExperienceEvents]이벤트 유형 [!UICONTROL 및]대상자 [!UICONTROL 등을]참조하십시오.
+세그먼트 정의에 새 규칙을 추가하려면 필드 탭에서 **[!UICONTROL 타일을]** 드래그하여 규칙 빌더 캔버스에 놓습니다. 그런 다음 추가되는 데이터의 유형에 따라 컨텍스트별 옵션이 제공됩니다. 사용 가능한 데이터 유형은 다음과 같습니다.문자열, 날짜, [!DNL ExperienceEvents]&quot;[!UICONTROL 이벤트 유형]&quot; 및 대상
 
 ![](../images/ui/segment-builder/rule-builder-canvas.png)
 
@@ -133,7 +133,7 @@ Lucene의 [!UICONTROL 검색 구문을 활용하는] 검색 막대를 사용하�
 
 세그먼트 정의를 작성할 때 작업 공간의 오른쪽에 있는 **[!UICONTROL 세그먼트 속성]** 섹션에 결과 세그먼트의 예상 크기가 표시되므로, 대상을 스스로 작성하기 전에 필요에 따라 세그먼트 정의를 조정할 수 있습니다.
 
-세그먼트 **[!UICONTROL 속성]** 섹션에서도 세그먼트 **[!UICONTROL 이름]** 및 설명 등 세그먼트 정의에 대한 중요한 정보를 지정할 수 **[!UICONTROL 있습니다]**. 세그먼트 정의 이름은 조직에서 정의한 세그먼트 중에서 세그먼트를 식별하는 데 사용되므로 설명적이고 간결하며 고유해야 합니다.
+세그먼트 **[!UICONTROL 속성]** 섹션에서는 세그먼트 정의에 대한 이름 및 설명을 포함하여 중요한 정보를 지정할 수도 있습니다. 세그먼트 정의 이름은 조직에서 정의한 세그먼트 중에서 세그먼트를 식별하는 데 사용되므로 설명적이고 간결하며 고유해야 합니다.
 
 세그먼트 정의를 계속 작성하면 프로필 보기를 선택하여 페이지의 대상 미리 보기를 볼 **[!UICONTROL 수 있습니다]**.
 
