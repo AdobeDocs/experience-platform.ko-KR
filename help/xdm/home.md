@@ -5,7 +5,7 @@ title: XDM(Experience Data Model) 시스템
 topic: overview
 description: '표준화 및 상호 운용성은 Adobe Experience Platform의 핵심 개념입니다. Adobe을 기반으로 하는 XDM(Experience Data Model)은 고객 경험 데이터를 표준화하고 고객 경험 관리를 위한 스키마를 정의하는 것입니다. '
 translation-type: tm+mt
-source-git-commit: d49bbc91b67dec0468b46d165521c7d097a801ee
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1638'
 ht-degree: 1%
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 XDM은 디지털 경험의 강력함을 향상시키도록 고안된 공개적으로 문서화된 사양입니다. 서비스와 통신하는 데 사용할 응용 프로그램에 대한 일반적인 구조와 정의를 제공합니다 [!DNL Platform] . XDM 표준을 준수하여 모든 고객 경험 데이터를 보다 빠르고 통합된 방식으로 통찰력을 전달할 수 있는 일반적인 표현으로 통합할 수 있습니다. 고객 행동을 통해 유용한 인사이트를 얻고, 세그먼트를 통해 고객 고객을 정의하고, 개인화를 위해 고객 속성을 표현할 수 있습니다.
 
-XDM은 Adobe Experience Cloud이 제공하는 기본 프레임워크로, 정확한 타이밍에 적합한 [!DNL Experience Platform]채널을 통해 올바른 고객에게 올바른 메시지를 전달할 수 있습니다. XDM 시스템 [!DNL Experience Platform] 이 구축된 방법론 **은**&#x200B;서비스 [!DNL Experience Data Model] 에서 사용할 수 있도록 스키마 [!DNL Platform] 운영을수행합니다.
+XDM은 Adobe Experience Cloud이 제공하는 기본 프레임워크로, 정확한 타이밍에 적합한 [!DNL Experience Platform]채널을 통해 올바른 고객에게 올바른 메시지를 전달할 수 있습니다. XDM 시스템 [!DNL Experience Platform] 이 구축된 방법론은 서비스 [!DNL Experience Data Model] 에서 사용할 수 있도록 스키마를 공식화합니다 [!DNL Platform] .
 
 이 문서에서는 XDM 시스템의 역할에 대한 개요를 제공합니다 [!DNL Experience Platform].
 
@@ -44,7 +44,7 @@ XDM은 Adobe Experience Cloud이 제공하는 기본 프레임워크로, 정확�
 * **데이터**&#x200B;기록:제목 속성에 대한 정보를 제공합니다. 대상은 조직 또는 개인일 수 있습니다.
 * **시계열 데이터**:작업을 직접 또는 간접적으로 레코드 제목에 의해 수행한 시점에 시스템의 스냅샷을 제공합니다.
 
-모든 XDM 스키마는 레코드 또는 시간 시리즈로 분류할 수 있는 데이터를 설명합니다. 스키마의 데이터 동작은 스키마의 **클래스에**&#x200B;의해 정의됩니다. 이 클래스는 스키마를 처음 만들 때 스키마에 할당됩니다. XDM 클래스는 특정 데이터 동작을 나타내려면 스키마에서 포함해야 하는 속성의 가장 작은 수를 설명합니다.
+모든 XDM 스키마는 레코드 또는 시간 시리즈로 분류할 수 있는 데이터를 설명합니다. 스키마의 데이터 동작은 스키마의 클래스에 의해 정의됩니다. 이 클래스는 스키마를 처음 만들 때 스키마에 할당됩니다. XDM 클래스는 특정 데이터 동작을 나타내려면 스키마에서 포함해야 하는 속성의 가장 작은 수를 설명합니다.
 
 클래스 내에서 고유한 클래스를 정의할 수 있지만, 기본 클래스 [!DNL Schema Registry]와 레코드 및 시간 시리즈 데이터 **[!DNL XDM Individual Profile]** **[!DNL XDM ExperienceEvent]** 에 각각 사용하는 것이 좋습니다. 이러한 클래스는 아래에 자세히 설명되어 있습니다.
 
