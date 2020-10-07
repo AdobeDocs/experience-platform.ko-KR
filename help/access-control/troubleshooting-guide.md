@@ -5,7 +5,7 @@ title: 액세스 제어 문제 해결 가이드
 topic: troubleshooting guide
 description: 이 문서에서는 Adobe Experience Platform의 액세스 제어에 대해 자주 묻는 질문에 대한 답변을 제공합니다.
 translation-type: tm+mt
-source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
+source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
 workflow-type: tm+mt
 source-wordcount: '313'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 이 문서에서는 Adobe Experience Platform의 액세스 제어에 대해 자주 묻는 질문에 대한 답변을 제공합니다. 다른 [!DNL Platform] 서비스와 관련된 질문 및 문제 해결에 대해서는 [Experience Platform 문제 해결 가이드를 참조하십시오](../landing/troubleshooting.md).
 
-[!DNL Experience Platform] 사용자는 사용 권한 및 샌드박스 [연결을 통해](http://adminconsole.adobe.com) Adobe Admin Console의 **제품 프로필을 활용하여 역할 기반**&#x200B;액세스 제어기능을 제공합니다.  자세한 내용은 [액세스 제어 개요를](home.md) 참조하십시오.
+[!DNL Experience Platform] 사용자는 사용 권한 및 샌드박스 연결을 통해 [Adobe Admin Console의](http://adminconsole.adobe.com) 제품 프로필을 활용하여 역할 기반의 액세스 제어를 제공할 수 있습니다.  자세한 내용은 [액세스 제어 개요를](home.md) 참조하십시오.
 
 ## 현재 액세스 권한은 어디에서 찾을 수 있습니까?
 
