@@ -5,7 +5,7 @@ title: 데이터 사용 정책 개요
 topic: policies
 description: 데이터 사용 레이블이 데이터 규정 준수를 효과적으로 지원하려면 데이터 사용 정책을 구현해야 합니다. 데이터 사용 정책은 Experience Platform 내에서 데이터에 대해 수행하도록 허용되거나 제한된 마케팅 작업의 종류를 설명하는 규칙입니다.
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: 259c26a9d3b6ef397acd552e255f68ecb25b2dd1
 workflow-type: tm+mt
 source-wordcount: '1003'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 ## 마케팅 작업 {#marketing-actions}
 
-**데이터 거버넌스**&#x200B;프레임워크( **마케팅 활용 사례**&#x200B;라고도 함)에서 수행하는 마케팅 작업은 [!DNL Experience Platform] 데이터 소비자가 할 수 있는 조치이며, 조직에서 데이터 사용을 제한하려는 것입니다. 따라서 데이터 사용 정책은 다음과 같이 정의됩니다.
+데이터 거버넌스 프레임워크 컨텍스트에서 마케팅 활동(마케팅 활용 사례)은 조직에서 데이터 사용을 제한하려는 [!DNL Experience Platform] 데이터 소비자가 할 수 있는 작업입니다. 따라서 데이터 사용 정책은 다음과 같이 정의됩니다.
 
 1. 특정 마케팅 작업
 2. 작업이 제한되는 데이터 사용 레이블
