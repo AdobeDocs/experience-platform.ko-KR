@@ -3,7 +3,7 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: 에지 예상 - 실시간 고객 프로필 API
 topic: guide
 translation-type: tm+mt
-source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1905'
 ht-degree: 2%
@@ -226,7 +226,7 @@ curl -X GET \
 
 ### 대상 업데이트
 
-종단점에 PUT 요청을 만들고 요청 경로에서 업데이트할 대상의 ID를 포함하여 기존 대상을 업데이트할 수 있습니다. `/config/destinations` 이 작업은 기본적으로 대상을 _다시 작성하고_ 있으므로 새 대상을 만들 때 제공된 것처럼 요청의 본문에 동일한 속성을 제공해야 합니다.
+종단점에 PUT 요청을 만들고 요청 경로에서 업데이트할 대상의 ID를 포함하여 기존 대상을 업데이트할 수 있습니다. `/config/destinations` 이 작업은 기본적으로 대상을 다시 작성하고 있으므로 새 대상을 만들 때 제공된 것과 같이 요청의 본문에 동일한 속성을 제공해야 합니다.
 
 >[!CAUTION]
 >
