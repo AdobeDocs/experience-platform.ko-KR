@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 실시간 고객 데이터 플랫폼의 IAB TCF 2.0 지원
 topic: privacy events
 translation-type: tm+mt
-source-git-commit: 172710c62b6f60de74e05364edb1191fbba0ff64
+source-git-commit: fa667d86c089c692f22cfd1b46f3f11b6e9a68d7
 workflow-type: tm+mt
 source-wordcount: '2388'
 ht-degree: 1%
@@ -89,7 +89,7 @@ IAB 동의 데이터가 수집되면 다운스트림 [!DNL Real-time CDP] 서비
 
 ### 동의 문자열 {#consent-strings}
 
-데이터를 수집하는 데 사용하는 방법에 관계없이, 목표는 고객이 선택한 **동의 문자열**(consent string)을 기반으로 문자열 값을 생성하는 것입니다.
+데이터를 수집하는 데 사용하는 방법에 관계없이, 목표는 고객이 선택한 동의 옵션인 동의 문자열을 기반으로 문자열 값을 생성하는 것입니다.
 
 TCF 사양에서 동의 문자열은 정책과 공급업체에서 정의한 특정 마케팅 목적을 기준으로 고객의 동의 설정에 대한 관련 세부 정보를 인코딩하는 데 사용됩니다. [!DNL Real-time CDP] 이러한 문자열을 사용하여 각 고객에 대한 동의 설정을 저장하므로 해당 설정이 변경될 때마다 새 동의 문자열을 생성해야 합니다.
 
