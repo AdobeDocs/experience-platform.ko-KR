@@ -5,7 +5,7 @@ title: Audience Manager 커넥터
 topic: overview
 description: Adobe Audience Manager 데이터 커넥터는 Adobe Audience Manager에서 수집한 자사 데이터를 Adobe Experience Platform으로 스트리밍합니다. Audience Manager 커넥터는 세 가지 데이터 카테고리를 플랫폼으로 인제스트합니다.
 translation-type: tm+mt
-source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
+source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
 workflow-type: tm+mt
 source-wordcount: '673'
 ht-degree: 1%
@@ -67,7 +67,7 @@ Audience Manager 데이터 세트는 기본적으로 프로필에 대해 비활�
 
 ### 연결
 
-Adobe Audience Manager, 카탈로그에 단일 연결 생성: **Audience Manager 연결**. 카탈로그는 Adobe Experience Platform 내 데이터 위치와 혈통 등에 대한 기록 시스템이다. 연결은 커넥터의 고객별 인스턴스인 카탈로그 오브젝트입니다. 카탈로그, 연결 및 커넥터에 대한 자세한 내용은 [카탈로그 서비스 개요를](../../../catalog/home.md) 참조하십시오.
+Adobe Audience Manager, 카탈로그에 단일 연결 생성:Audience Manager 연결. 카탈로그는 Adobe Experience Platform 내 데이터 위치와 혈통 등에 대한 기록 시스템이다. 연결은 커넥터의 고객별 인스턴스인 카탈로그 오브젝트입니다. 카탈로그, 연결 및 커넥터에 대한 자세한 내용은 [카탈로그 서비스 개요를](../../../catalog/home.md) 참조하십시오.
 
 ## 플랫폼의 Audience Manager 데이터에 대한 예상 지연은 무엇입니까?
 
