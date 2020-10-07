@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: 'Adobe Experience Platform 데이터 과학 작업 공간에서 채점하는 방법은 입력 데이터를 기존 트레이닝된 모델에 제공함으로써 달성됩니다. 그러면 점수 결과가 저장되고 지정된 출력 데이터 세트에 새로운 일괄 처리로 표시됩니다. '
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '609'
 ht-degree: 0%
@@ -32,7 +32,7 @@ Adobe Experience Platform에서 채점하는 것은 입력 데이터를 기존 �
 
 1. 점수를 매기는 데 해당 구성을 사용할 수 있는 최적의 트레이닝 실행을 찾습니다. 해당 이름을 클릭하여 원하는 교육 실행을 엽니다.
 
-2. [교육 실행 **[!UICONTROL 평가]** ] 탭에서 화면 오른쪽 위에 있는 **[!UICONTROL 점수]** 단추를 클릭합니다. 그러면 새로운 점수 *실행 워크플로우가* 시작됩니다.
+2. [교육 실행 **[!UICONTROL 평가]** ] 탭에서 화면 오른쪽 위에 있는 **[!UICONTROL 점수]** 단추를 클릭합니다. 그러면 새로운 점수 **실행 워크플로우가** 시작됩니다.
    ![](../images/models-recipes/score/training_run_overview.png)
 
 3. 입력 점수 데이터 세트를 선택하고 다음을 **[!UICONTROL 클릭합니다]**.
