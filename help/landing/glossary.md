@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform 제품 설명서
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
 source-wordcount: '7145'
 ht-degree: 0%
@@ -214,7 +214,7 @@ ht-degree: 0%
 
 **대상 카탈로그:** 대상 카탈로그는 에서 사용 가능한 대상 목록입니다 [!DNL Real-time Customer Data Platform].
 
-**직접 호출 규칙:** 에서 페이지 [!DNL Experience Platform Launch]에서 직접 호출될 때 실행되는 [!UICONTROL 직접 호출] [!UICONTROL 규칙] 을 설정할 수 있습니다. 페이지 로드 또는 사이트의 작업이 매우 간단하거나, 고유하며, 매번(X로 설정하고 매번 트리거) 특정 지침 세트 [!DNL eVar4] 를 실행할 수 있는 경우, [!DNL event2] 직접 호출 [!UICONTROL 규칙을 사용할 수 있습니다]. [!DNL Launch] 직접 호출 [!UICONTROL 규칙 만들기에 관한 설명서를] 참조하십시오 .
+**직접 호출 규칙:** 에서 페이지 [!DNL Experience Platform Launch]에서 직접 호출될 때 실행하는 직접 호출 규칙을 설정할 수 있습니다. 페이지 로드 또는 사이트의 작업이 매우 간단하거나, 고유하며, 매번(X로 설정하고 매번 트리거) 특정 지침 세트 [!DNL eVar4] 를 실행할 수 있는 경우, 직접 호출 규칙 [!DNL event2] 을 사용할 수 있습니다. 직접 호출 규칙 만들기에 대한 설명서를 [!DNL Launch] 참조하십시오.
 
 **표시 이름:** 표시 이름은 UI에 표시되는 필드의 사용자에게 친숙한 이름입니다.
 
@@ -370,7 +370,7 @@ ht-degree: 0%
 
 **오퍼:** 오퍼는 오퍼를 볼 수 있는 사람을 지정하여 이와 연관된 규칙을 가질 수 있는 마케팅 메시지입니다.
 
-**오퍼 결정:** 마케터는 다양한 채널과 애플리케이션에서 수집된 데이터를 기반으로 최종 사용자를 참여시킬 때 제안 사항에 대한 규칙과 교육 모델을 관리할 수 있습니다.
+**Offer Decisioning:** 마케터는 다양한 채널과 애플리케이션에서 수집된 데이터를 기반으로 최종 사용자를 참여시킬 때 제안 사항에 대한 규칙과 교육 모델을 관리할 수 있습니다.
 
 **오퍼 라이브러리:** 오퍼 라이브러리는 개인화된 오퍼, 폴백 오퍼, 의사 결정 규칙 및 활동을 관리하는 데 사용되는 중앙 라이브러리입니다.
 
