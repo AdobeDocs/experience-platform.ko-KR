@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: 이 자습서에서는 타사 CRM 시스템에서 데이터를 검색하고 소스 커넥터 및 API를 통해 플랫폼으로 가져오는 단계를 다룹니다.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1595'
 ht-degree: 1%
@@ -61,7 +61,7 @@ API에 POST 요청을 만들어 소스 연결을 만들 수 [!DNL Flow Service] 
 
 소스 연결을 만들려면 데이터 형식 특성에 대한 열거형 값도 정의해야 합니다.
 
-파일 기반 커넥터에 대해 다음 열거형 값을 **사용하십시오**.
+파일 기반 커넥터에 다음과 같은 열거형 값을 사용하십시오.
 
 | Data.format | 열거값 |
 | ----------- | ---------- |
@@ -69,7 +69,7 @@ API에 POST 요청을 만들어 소스 연결을 만들 수 [!DNL Flow Service] 
 | JSON 파일 | `json` |
 | 쪽모이 세공 파일 | `parquet` |
 
-모든 **테이블 기반 커넥터의** 경우 열거형 값을 사용합니다. `tabular`.
+모든 테이블 기반 커넥터의 경우 열거형 값을 사용합니다. `tabular`.
 
 **API 형식**
 
