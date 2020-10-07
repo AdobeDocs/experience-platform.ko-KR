@@ -5,7 +5,7 @@ title: ETL 통합 만들기
 topic: overview
 description: ETL 통합 가이드는 Experience Platform 및 데이터 인제스트를 위한 고성능 보안 커넥터를 제작하는 일반적인 단계를 간략하게 설명합니다.
 translation-type: tm+mt
-source-git-commit: f4a4e65a087313dc4e2414f999e021e3f6e17137
+source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
 workflow-type: tm+mt
 source-wordcount: '4173'
 ht-degree: 0%
@@ -95,7 +95,7 @@ ETL 도구에서 사용자는 자격 증명을 사용하여 적절한 연결을 
 
 사용 가능한 모든 데이터 집합(예: `GET /dataSets`). 응답 크기를 제한하는 쿼리 매개 변수를 포함하는 것이 좋습니다.
 
-전체 __ 데이터 세트 정보가 요청되는 경우 응답 페이로드가 3GB를 초과할 수 있으므로 전반적인 성능이 저하될 수 있습니다. 따라서 쿼리 매개 변수를 사용하여 필요한 정보만 필터링하면 보다 효율적으로 [!DNL Catalog] 쿼리를 작성할 수 있습니다.
+전체 데이터 세트 정보가 요청되는 경우 응답 페이로드가 3GB를 초과할 수 있으므로 전반적인 성능이 저하될 수 있습니다. 따라서 쿼리 매개 변수를 사용하여 필요한 정보만 필터링하면 보다 효율적으로 [!DNL Catalog] 쿼리를 작성할 수 있습니다.
 
 #### 목록 필터링
 
@@ -165,7 +165,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/dataSets?limit=3&
 
 ### 데이터 집합 스키마 보기
 
-데이터 집합의 &quot;schemaRef&quot; 속성에는 데이터 집합이 기반으로 하는 XDM 스키마를 참조하는 URI가 포함됩니다. XDM 스키마(&quot;schemaRef&quot;)는 데이터 세트에 사용할 수 있는 모든 _잠재적인_ 필드를 나타내며, _사용 중인_ 필드(&quot;observableSchema&quot; 참조)를나타냅니다.
+데이터 집합의 &quot;schemaRef&quot; 속성에는 데이터 집합이 기반으로 하는 XDM 스키마를 참조하는 URI가 포함됩니다. XDM 스키마(&quot;schemaRef&quot;)는 데이터 세트에 사용할 수 있는 모든 잠재적인 필드를 나타내며, 사용 중인 필드도 아닙니다(아래의 &quot;observableSchema&quot; 참조).
 
 XDM 스키마는 사용자가 작성될 수 있는 모든 필드 목록을 사용자에게 제공해야 할 때 사용하는 스키마입니다.
 
@@ -601,7 +601,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 
 ### 데이터 세트에 쓰기
 
-새 일괄 처리를 성공적으로 만든 후 파일을 특정 데이터 세트에 업로드할 수 있습니다. 여러 파일을 홍보할 때까지 일괄 게시할 수 있습니다. 작은 파일 업로드 API를 사용하여 _파일을 업로드할 수 있습니다_.그러나 파일이 너무 크고 게이트웨이 제한이 초과된 경우 _대용량 파일 업로드 API를 사용할 수 있습니다_. 대용량 파일 업로드와 작은 파일 업로드를 모두 사용하는 방법에 대한 자세한 내용은 일괄 처리 [처리 통합 개요를 참조하십시오](../ingestion/batch-ingestion/overview.md).
+새 일괄 처리를 성공적으로 만든 후 파일을 특정 데이터 세트에 업로드할 수 있습니다. 여러 파일을 홍보할 때까지 일괄 게시할 수 있습니다. 작은 파일 업로드 API를 사용하여 파일을 업로드할 수 있습니다.그러나 파일이 너무 크고 게이트웨이 제한이 초과된 경우 대용량 파일 업로드 API를 사용할 수 있습니다. 대용량 파일 업로드와 작은 파일 업로드를 모두 사용하는 방법에 대한 자세한 내용은 일괄 처리 [처리 통합 개요를 참조하십시오](../ingestion/batch-ingestion/overview.md).
 
 **요청**
 
