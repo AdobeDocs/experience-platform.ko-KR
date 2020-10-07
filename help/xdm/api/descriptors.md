@@ -5,7 +5,7 @@ title: 설명자
 description: '스키마는 데이터 엔티티의 정적 보기를 정의하지만 이러한 스키마(예: 데이터 집합)를 기반으로 한 데이터가 서로 관련될 수 있는 방법에 대한 구체적인 세부 정보를 제공하지 않습니다. Adobe Experience Platform에서는 설명자를 사용하여 스키마에 대한 이러한 관계 및 기타 해석 메타데이터를 설명할 수 있습니다. '
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
+source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
 workflow-type: tm+mt
 source-wordcount: '1528'
 ht-degree: 1%
@@ -200,7 +200,7 @@ PUT /tenant/descriptors/{DESCRIPTOR_ID}
 
 **요청**
 
-이 요청은 _설명자를 다시 작성하므로 요청 본문에는 해당 유형의 설명자를 정의하는 데 필요한 모든 필드가 포함되어야 합니다_ . 즉, 설명자를 업데이트하기 위한 요청 페이로드(PUT)은 동일한 유형의 설명자를 만들기 위한 페이로드(POST)과 동일합니다.
+이 요청은 기술자를 다시 작성하므로 요청 본문에는 해당 유형의 설명자를 정의하는 데 필요한 모든 필드가 포함되어야 합니다. 즉, 설명자를 업데이트하기 위한 요청 페이로드(PUT)은 동일한 유형의 설명자를 만들기 위한 페이로드(POST)과 동일합니다.
 
 이 예에서 ID 설명자가 다른 `xdm:sourceProperty` (&quot;휴대폰&quot;)을 참조하고 이 설명자를 &quot;전화&quot; `xdm:namespace` 로 변경하도록 업데이트됩니다.
 
