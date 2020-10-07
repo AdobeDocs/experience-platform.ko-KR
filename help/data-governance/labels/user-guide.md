@@ -5,7 +5,7 @@ title: 데이터 사용 레이블 사용 안내서
 topic: labels
 description: 이 사용자 안내서에서는 Adobe Experience Platform 사용자 인터페이스 내에서 데이터 사용 레이블을 사용하는 단계를 설명합니다.
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: 259c26a9d3b6ef397acd552e255f68ecb25b2dd1
 workflow-type: tm+mt
 source-wordcount: '1119'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 ## 데이터 세트 수준에서 데이터 사용 레이블 관리
 
-데이터 세트 수준에서 데이터 사용 레이블을 관리하려면 기존 데이터 세트를 선택하거나 새 데이터 세트를 만들어야 합니다. Adobe Experience Platform에 로그인한 후 왼쪽 탐색 **[!UICONTROL 에서 데이터]** 세트를 선택하여 _데이터 집합_ 작업 영역을 엽니다. 이 페이지에는 각 데이터 세트에 관련된 유용한 세부 사항과 함께 조직에 속하는 모든 데이터 집합이 나열됩니다.
+데이터 세트 수준에서 데이터 사용 레이블을 관리하려면 기존 데이터 세트를 선택하거나 새 데이터 세트를 만들어야 합니다. Adobe Experience Platform에 로그인한 후 왼쪽 탐색 **[!UICONTROL 에서 데이터]** 세트를 선택하여 **[!UICONTROL 데이터 집합]** 작업 영역을 엽니다. 이 페이지에는 각 데이터 세트에 관련된 유용한 세부 사항과 함께 조직에 속하는 모든 데이터 집합이 나열됩니다.
 
 ![데이터 작업 공간 내의 데이터 세트 탭](../images/labels/datasets.png)
 
@@ -43,7 +43,7 @@ ht-degree: 0%
 
 ![데이터 집합 스키마 선택](../images/labels/dataset_schema.png)
 
-데이터 세트 **[!UICONTROL 구성]** 화면이 나타납니다. 새 데이터 세트에 대한 **이름** (필수)과 **설명** (선택 사항이지만 권장)을 입력한 다음 **[!UICONTROL 마침을]**&#x200B;클릭합니다.
+데이터 세트 **[!UICONTROL 구성]** 화면이 나타납니다. 새 데이터 세트에 대한 이름(필수) 및 설명(선택 사항이지만 권장)을 제공한 다음 **[!UICONTROL 마침을 클릭합니다]**.
 
 ![이름 및 설명을 사용하여 데이터 세트 구성](../images/labels/dataset_configure.png)
 
