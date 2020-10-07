@@ -5,7 +5,7 @@ description: Experience Platform 웹 SDK를 사용하여 동의 환경 설정을
 seo-description: Experience Platform 웹 SDK를 사용하여 동의 환경 설정을 지원하는 방법 살펴보기
 keywords: consent;defaultConsent;default consent;setConsent;Profile Privacy Mixin;Experience Event Privacy Mixin;Privacy Mixin;
 translation-type: tm+mt
-source-git-commit: f178da80d0902f76868986426600f3da426cf24d
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '756'
 ht-degree: 0%
@@ -56,7 +56,7 @@ alloy("setConsent", {
 });
 ```
 
-사용자가 이제 옵트인되었으므로 SDK는 이전에 큐에 있는 모든 명령을 실행합니다. 옵트인된 사용자에 따라 달라지는 향후 명령은 큐에 _들어가지_ 않고 즉시 실행됩니다.
+사용자가 이제 옵트인되었으므로 SDK는 이전에 큐에 있는 모든 명령을 실행합니다. 옵트인된 사용자에 의존하는 이후 명령은 큐에 올라가 있지 않고 대신 즉시 실행됩니다.
 
 사용자가 옵트아웃을 선택한 경우 다음과 같이 옵션을 설정하여 `setConsent` 명령을 `general``out` 실행합니다.
 
