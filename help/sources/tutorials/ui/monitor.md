@@ -6,7 +6,7 @@ title: 계정 및 데이터 흐름 모니터링
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1097'
 ht-degree: 1%
@@ -96,7 +96,7 @@ Adobe Experience Platform의 소스 커넥터는 예약된 기준으로 외부 �
 
 ![datflow-activity](../../images/tutorials/monitor/dataflow-activity.png)
 
-달력에서 인제스트된 레코드의 다른 기간을 볼 수 있습니다. 지난 7일 **[!UICONTROL 또는]** 지난 30일 ****&#x200B;동안 두 개의 사전 설정 옵션 중 하나를 선택할 수 있습니다. 또는 달력을 사용하여 사용자 지정 기간을 설정할 수 있습니다. 원하는 시간대를 선택하고 적용을 **[!UICONTROL 선택하여]** 계속합니다.
+달력에서 인제스트된 레코드의 다른 기간을 볼 수 있습니다. 두 개의 사전 설정된 옵션 &quot;[!UICONTROL 지난 7일]&quot; 또는 &quot;[!UICONTROL 지난 30일]&quot;중 하나를 선택할 수 있습니다. 또는 달력을 사용하여 사용자 지정 기간을 설정할 수 있습니다. 원하는 시간대를 선택하고 적용을 **[!UICONTROL 선택하여]** 계속합니다.
 
 ![흐름 달력](../../images/tutorials/monitor/flow-calendar.png)
 
@@ -106,7 +106,7 @@ Adobe Experience Platform의 소스 커넥터는 예약된 기준으로 외부 �
 
 ![runs](../../images/tutorials/monitor/run-metadata.png)
 
-데이터 흐름 **[!UICONTROL 실행 개요에는]** 데이터 흐름 **[!UICONTROL 의 메타데이터, 부분 통합]** 상태, 할당된 **[!UICONTROL 오류 임계값]**&#x200B;등 데이터 수에 대한 정보가표시됩니다. 상단 헤더에는 **[!UICONTROL 오류 요약이 포함되어 있습니다]**. 오류 **[!UICONTROL 요약에는]** 처리 과정에서 오류가 발생한 단계를 보여주는 특정 최상위 오류가 포함되어 있습니다.
+데이터 흐름 **[!UICONTROL 실행 개요에는 데이터 흐름 메타데이터, 부분 통합 상태, 할당된 오류 임계값 등 데이터 수에 대한 정보가 표시됩니다]** . 상단 헤더에는 오류 요약이 포함되어 있습니다. 오류 **[!UICONTROL 요약에는]** 처리 과정에서 오류가 발생한 단계를 보여주는 특정 최상위 오류가 포함되어 있습니다.
 
 ![dataflow-run-overview](../../images/tutorials/monitor/dataflow-run-overview.png)
 
@@ -119,13 +119,13 @@ Adobe Experience Platform의 소스 커넥터는 예약된 기준으로 외부 �
 
 화면 하단에는 데이터 흐름 실행 오류에 대한 **[!UICONTROL 정보가 포함되어 있습니다]**. 여기에서 인제스트된 파일을 보거나 오류 진단을 미리 보고 다운로드하거나 파일 매니페스트를 다운로드할 수도 있습니다.
 
-데이터 흐름 **[!UICONTROL 실행 오류]** 섹션에는 **[!UICONTROL 오류 코드]**, 실패한 레코드 수 및 오류를 설명하는 정보가 표시됩니다.
+데이터 흐름 **[!UICONTROL 실행 오류]** 섹션에는 오류 코드, 실패한 레코드 수 및 오류를 설명하는 정보가 표시됩니다.
 
 문제 **[!UICONTROL 발생]** 오류에 대한 자세한 내용을 보려면 [오류 진단 미리 보기]를 선택합니다.
 
 ![데이터 흐름 실행 오류](../../images/tutorials/monitor/dataflow-run-errors.png)
 
-오류 **[!UICONTROL 진단 미리 보기]** 패널이 나타납니다. 이 화면에는 **[!UICONTROL 파일 이름]**, **[!UICONTROL 오류 코드]**, 오류가 발생한 열의 이름, 오류 설명 등 통합 실패와 관련된 특정 정보가 표시됩니다.
+오류 **[!UICONTROL 진단 미리 보기]** 패널이 나타납니다. 이 화면에는 파일 이름, 오류 코드, 오류가 발생한 열의 이름, 오류 설명 등 통합 실패와 관련된 특정 정보가 표시됩니다.
 
 이 섹션에는 오류가 포함된 열의 미리 보기도 포함됩니다.
 
