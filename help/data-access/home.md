@@ -5,9 +5,9 @@ title: 데이터 액세스 개요
 topic: overview
 description: 데이터 액세스는 Experience Platform 내에서 인제스트된 데이터 집합의 검색 기능과 액세스 가능성에 초점을 맞춘 도구를 사용자에게 제공함으로써 Adobe Experience Platform을 지원합니다.
 translation-type: tm+mt
-source-git-commit: 75e1d3c9912e54e925032bbc2ae4e984948a30eb
+source-git-commit: bececfde1df15fd8648d75b937da5e264d60b9a4
 workflow-type: tm+mt
-source-wordcount: '210'
+source-wordcount: '173'
 ht-degree: 4%
 
 ---
@@ -23,17 +23,11 @@ ht-degree: 4%
 
 API를 사용하여 연결하는 방법에 대한 자세한 내용 [!DNL Data Access] 은 [!DNL Platform] 데이터 액세스 개발자 안내서를 참조하십시오 [](api.md).
 
-## [!DNL Python] SDK
+## 데이터 과학 작업 공간에서 데이터 액세스
 
-SDK를 사용하여 데이터 세트를 읽고 쓸 수 [!DNL Python] 있습니다. SDK에 대한 자세한 내용은 Python [!DNL Python] SDK 자습서를 참조하십시오 [](./tutorials/python-sdk.md).
+데이터 과학 작업 공간에서 레서피 [!DNL Python] 와 모델 개발을 사용하여 데이터 세트 [!DNL Spark] 를 읽고 쓸 수 있습니다. 데이터에 액세스하는 방법에 대한 자세한 내용은 [Python 데이터 액세스](../data-science-workspace/authoring/python.md) 또는 [Spark 데이터 액세스](../data-science-workspace/authoring/spark.md) 설명서를 참조하십시오.
 
-[!DNL Data Science Workspace] 전자 필기장 및 레서피 내에서 [!DNL Python] SDK를 사용합니다. 자세한 내용 [!DNL Data Science Workspace]은 먼저 [데이터 과학 작업 공간 개요를 읽어 보십시오](../data-science-workspace/home.md).
-
-## [!DNL Spark] SDK
-
-SDK를 사용하여 데이터 세트를 읽고 쓸 수 [!DNL Spark] 있습니다. SDK에 대한 자세한 내용은 [!DNL Spark] Spark SDK 튜토리얼을 참조하십시오 [](./tutorials/spark-sdk.md).
-
-[!DNL Data Science Workspace] 전자 필기장 및 레서피 내에서 [!DNL Spark] SDK를 사용합니다. 자세한 내용 [!DNL Data Science Workspace]은 먼저 [데이터 과학 작업 공간 개요를 읽어 보십시오](../data-science-workspace/home.md).
+데이터 과학 작업 공간 개요 [!DNL Data Science Workspace]를 먼저 읽어 [보십시오](../data-science-workspace/home.md).
 
 ## 데이터 수집 이벤트 가입
 
