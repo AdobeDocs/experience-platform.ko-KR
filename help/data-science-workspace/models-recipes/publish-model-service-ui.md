@@ -6,9 +6,9 @@ topic: tutorial
 type: Tutorial
 description: Adobe Experience Platform 데이터 과학 작업 공간을 사용하면 교육되고 평가된 모델을 서비스로 게시하여 IMS 조직 내의 사용자가 자신의 모델을 만들지 않고도 데이터를 평가할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '453'
+source-wordcount: '456'
 ht-degree: 0%
 
 ---
@@ -49,9 +49,9 @@ Sensei Machine Learning API를 사용하여 모델을 게시하려면 [API 자�
    ![](../images/models-recipes/publish-model/7_scoring_output.png)
 4. 서비스가 생성되면 기본 점수 지정 구성이 상속됩니다. 이러한 구성을 검토하고 필요에 따라 값을 두 번 클릭하여 조정할 수 있습니다. 구성에 만족하면 **[!UICONTROL 마침을]** 클릭하여 점수 실행을 시작합니다.
    ![](../images/models-recipes/publish-model/8_scoring_configure.png)
-5. 서비스의 *개요* 페이지에 새로운 점수 지정 작업과 진행 상황에 대한 세부 정보가 표시됩니다. 작업이 완료되면 **[!UICONTROL 최근]** 점수 지정 작업이 업데이트됩니다.
+5. 서비스의 **개요** 페이지에 새로운 점수 지정 작업과 진행 상황에 대한 세부 정보가 표시됩니다. 작업이 완료되면 점수 지정 컨테이너 **[!UICONTROL 내]** 가장 최근 **** 헤더가업데이트됩니다.
    ![](../images/models-recipes/publish-model/score_pending.png)
 
 ## 다음 단계 {#next-steps}
 
-이 튜토리얼을 따라 액세스 가능한 서비스로 모델을 성공적으로 게시하고 서비스 갤러리를 통해 새로운 서비스를 사용하여 데이터를 **[!UICONTROL 획득한 것입니다]**. 서비스에서 자동 트레이닝 및 점수 지정을 [예약하는 방법에 대해 알려면 다음 튜토리얼을 계속 사용하십시오](./schedule-models-ui.md).
+이 튜토리얼을 따라 액세스 가능한 서비스로 모델을 성공적으로 게시하고 서비스 갤러리를 통해 새로운 서비스를 사용하여 데이터를 [!UICONTROL 획득한 것입니다]. 서비스에서 자동 트레이닝 및 점수 지정을 [예약하는 방법에 대해 알려면 다음 튜토리얼을 계속 사용하십시오](./schedule-models-ui.md).
