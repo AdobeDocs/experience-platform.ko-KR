@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorials
 description: 이 자습서에서는 Experience Platform 내의 스키마 편집기를 사용하여 스키마를 만드는 단계를 설명합니다.
 translation-type: tm+mt
-source-git-commit: eb6505bdcad9eee6d7e9674504223ca919f19c34
+source-git-commit: 9c7119ad836007af3437dc2e938b68aff3ca0f56
 workflow-type: tm+mt
 source-wordcount: '3835'
 ht-degree: 0%
@@ -126,7 +126,7 @@ UI의 [!UICONTROL 스키마] 작업 영역에서는 [!DNL Platform] 조직에 �
 
 &quot;[!UICONTROL 충성도 멤버]&quot; 스키마는 충성도 프로그램 멤버와 관련된 데이터를 캡처하기 위한 것으로 특정 충성도 관련 필드가 필요합니다. 필요한 필드가 포함된 표준 혼합이 없으므로 새 혼합을 정의해야 합니다.
 
-이 때 [혼합 **[!UICONTROL 추가]** ] 대화 상자를 열 때 [새 **[!UICONTROL 혼합 만들기]를 선택합니다]**. 그러면 혼합에 대한 **[!UICONTROL 표시 이름]** 및 **[!UICONTROL 설명]** 을제공하라는 메시지가 표시됩니다.
+이 때 [혼합 **[!UICONTROL 추가]** ] 대화 상자를 열 때 [새 **[!UICONTROL 혼합 만들기]를 선택합니다]**. 그러면 혼합에 대한 표시 이름과 설명을 제공하도록 요청을 받습니다.
 
 ![](../images/tutorials/create-schema/mixin_create_new.png)
 
@@ -167,7 +167,7 @@ UI의 [!UICONTROL 스키마] 작업 영역에서는 [!DNL Platform] 조직에 �
 * **[!UICONTROL 유형]:** 필드의 데이터 유형입니다. 여기에는 기본 스칼라 형식과 에 정의된 모든 데이터 유형이 포함됩니다 [!DNL Schema Registry]. 예: [!UICONTROL 문자열]정수, [!UICONTROL 부울], [!UICONTROL 개인],주소,전화 번호, 등
 * **[!UICONTROL 설명]:** 문장에 200자까지 입력할 수 있는 선택적 필드 설명이 포함되어야 합니다.
 
-객체의 첫 번째 필드는 `Loyalty` 문자열 `loyaltyId`입니다. 새 필드의 유형을 &quot;[!UICONTROL 문자열]&quot;로 설정할 때 **[!UICONTROL 필드 속성]****[!UICONTROL 섹션은 기본 값]**, 형식 **[!UICONTROL 및 최대 길이]**&#x200B;를 포함하여 **[!UICONTROL 기본 값]**,형식 및 최대 길이 제한을 적용하기 위한 몇 가지 옵션으로 채워집니다.
+객체의 첫 번째 필드는 `Loyalty` 문자열 `loyaltyId`입니다. 새 필드 유형을 &quot;[!UICONTROL 문자열]&quot;로 설정하면 **[!UICONTROL 필드 속성]** 섹션이 기본값, 형식 및 최대 길이 등 제한을 적용하기 위한 여러 가지 옵션으로 채워집니다.
 
 ![](../images/tutorials/create-schema/string_constraints.png)
 
@@ -226,7 +226,7 @@ UI의 [!UICONTROL 스키마] 작업 영역에서는 [!DNL Platform] 조직에 �
 
 ![](../images/tutorials/create-schema/loyalty_data_type.png)
 
-이후 스키마에서, 이제 &quot; **[!UICONTROL 유형]** &quot;에 필드를 할당할 수 있으며 ID, 충성도 수준, 이후의 멤버 및 포인트에 대한[!DNL Loyalty]필드가 자동으로 포함됩니다.
+이후 스키마에서 필드를 &quot;[!DNL Loyalty]&quot; 유형으로 할당할 수 있으며 ID, 충성도 수준, 이후의 멤버 및 포인트에 대한 필드를 자동으로 포함할 수 있습니다.
 
 ## 스키마 필드 검색 및 필터링
 
@@ -336,7 +336,7 @@ UI의 [!UICONTROL 스키마] 작업 영역에서는 [!DNL Platform] 조직에 �
 
 ![](../images/tutorials/create-schema/browse-classes.png)
 
-사용 가능한 클래스 목록에서 선택할 수 있는 대화 상자가 나타납니다. 대화 상자의 맨 위에서 새 클래스 **[!UICONTROL 만들기를 선택합니다]**. 그런 다음 새 클래스에 **[!UICONTROL 표시 이름]** (클래스에 대한 짧고 설명적이며 고유하며 사용자에게 친숙한 이름) **[!UICONTROL , 설명]**, 그리고 **[!UICONTROL 행동]** (&quot;Record&quot;[!UICONTROL 또는 &quot;BehaviorTime Series&quot;라고 정의되는 데이터 스키마에 대해]Display 이름[!UICONTROL (&quot;A RecordTime SeriesA BehaviorBehaviorBehavior]&quot;)을제공할 수 있습니다.
+사용 가능한 클래스 목록에서 선택할 수 있는 대화 상자가 나타납니다. 대화 상자의 맨 위에서 새 클래스 **[!UICONTROL 만들기를 선택합니다]**. 그런 다음 새 클래스에 스키마가 정의할 데이터에 대한 표시 이름(클래스에 대한 짧고 설명적이며 고유하며 사용자 친화적인 이름), 설명 및 비헤이비어(&quot;[!UICONTROL 레코드]&quot; 또는 &quot;[!UICONTROL 시간 시리즈]&quot;)를 지정할 수 있습니다.
 
 ![](../images/tutorials/create-schema/create_new_class.png)
 
