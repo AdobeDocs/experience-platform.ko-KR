@@ -5,7 +5,7 @@ title: Aqua Data Studio와 연결
 topic: connect
 description: 이 문서에서는 Aqua Data Studio와 Adobe Experience Platform 쿼리 서비스를 연결하는 단계를 안내합니다.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '262'
 ht-degree: 0%
@@ -38,7 +38,7 @@ Select the **[!UICONTROL Driver]** tab. 매개 **[!UICONTROL 변수에서]**&#x2
 
 ![](../images/clients/aqua-data-studio/register-server-driver-tab.png)
 
-연결 세부 사항을 입력한 후 연결 **[!UICONTROL 테스트를]** 클릭하여 자격 증명이 제대로 작동하는지 확인합니다. 연결이 성공하면 [ **[!UICONTROL 저장]** ]을 클릭하여 서버를 등록합니다. 등록이 완료되면 *대시보드* (dashboard)에 연결이 나타나 서버에 연결하여 스키마 개체를 볼 수 있음을 확인합니다.
+연결 세부 사항을 입력한 후 연결 **[!UICONTROL 테스트를]** 클릭하여 자격 증명이 제대로 작동하는지 확인합니다. 연결이 성공하면 [ **[!UICONTROL 저장]** ]을 클릭하여 서버를 등록합니다. 등록이 완료되면 **대시보드** (dashboard)에 연결이 나타나 서버에 연결하여 스키마 개체를 볼 수 있음을 확인합니다.
 
 ## 다음 단계
 
