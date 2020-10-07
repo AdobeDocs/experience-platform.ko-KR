@@ -6,7 +6,7 @@ description: 이 문서에서는 Experience Platform 사용자 인터페이스�
 topic: tutorial
 type: Tutorials
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '910'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 다양한 채널에서 고객과의 관계와 브랜드와의 상호 작용을 파악할 수 있는 기능은 Adobe Experience Platform의 중요한 부분입니다. XDM(Structure Relationship) 스키마 구조 내에서 이러한 관계를 정의하면 [!DNL Experience Data Model] 고객 데이터에 대한 복잡한 통찰력을 얻을 수 있습니다.
 
-스키마 관계는 조합 스키마 및 조합 스키마 사용을 통해 유추할 수 있지만, 이 [!DNL Real-time Customer Profile]는 동일한 클래스를 공유하는 스키마에만 적용됩니다. 다른 클래스에 속하는 두 스키마 간의 관계를 설정하려면 전용 **관계 필드를** 소스 스키마에 추가해야 대상 스키마의 ID를 참조합니다.
+스키마 관계는 조합 스키마 및 조합 스키마 사용을 통해 유추할 수 있지만, 이 [!DNL Real-time Customer Profile]는 동일한 클래스를 공유하는 스키마에만 적용됩니다. 다른 클래스에 속하는 두 스키마 간의 관계를 설정하려면 전용 관계 필드를 대상 스키마의 ID를 참조하는 소스 스키마에 추가해야 합니다.
 
 이 문서에서는 사용자 인터페이스에서 스키마 편집기를 사용하여 두 스키마 간의 관계를 정의하는 자습서를 [!DNL Experience Platform] 제공합니다. API를 사용하여 스키마 관계를 정의하는 단계는 스키마 레지스트리 API를 사용하여 관계를 [정의하는 자습서를 참조하십시오](relationship-api.md).
 
