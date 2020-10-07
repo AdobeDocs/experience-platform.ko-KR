@@ -5,7 +5,7 @@ title: 개인 정보 요청에 대한 ID 데이터
 topic: overview
 description: 이 문서에서는 데이터 작업을 구성하고 Adobe 기술을 활용하여 고객 개인 정보 요청에 적합한 ID 정보를 효과적으로 검색하는 방법에 대한 일반적인 지침을 제공합니다.
 translation-type: tm+mt
-source-git-commit: 4c3a947051c11860ab4f0f53b48d8f4bda8dc195
+source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
 workflow-type: tm+mt
 source-wordcount: '643'
 ht-degree: 3%
@@ -25,7 +25,7 @@ Adobe Experience Platform [!DNL Privacy Service] 가 개인 데이터에 대한 
 
 예를 들어, 고객 데이터 요청을 처리할 때 ID는 Adobe 제어 도메인 아래에 설정된 쿠키 값, 타사 도메인 아래에 있는 쿠키 값, Adobe과 공유되고 IMS 조직 내에서 명시적으로 정의하는 사용자 지정 식별자 등을 나타낼 수 있습니다. [!DNL Privacy Service]
 
-따라서 전송된 각 ID에는 ID 값 [!DNL Privacy Service] 을 원본 시스템과 관련시켜 컨텍스트를 제공하는 **네임스페이스가** 함께 있어야 합니다. 네임스페이스는 이메일 주소(&quot;이메일&quot;)와 같은 일반 개념을 나타내거나 ID를 Adobe Advertising Cloud ID(&quot;AdCloud&quot;) 또는 Adobe Target ID(&quot;TNTID&quot;)와 같은 특정 응용 프로그램과 연결할 수 있습니다.
+따라서 전송된 각 ID에는 ID 값 [!DNL Privacy Service] 과 원본 시스템의 관계를 지정하여 컨텍스트를 제공하는 네임스페이스가 함께 있어야 합니다. 네임스페이스는 이메일 주소(&quot;이메일&quot;)와 같은 일반 개념을 나타내거나 ID를 Adobe Advertising Cloud ID(&quot;AdCloud&quot;) 또는 Adobe Target ID(&quot;TNTID&quot;)와 같은 특정 응용 프로그램과 연결할 수 있습니다.
 
 Adobe Experience Platform ID 서비스는 전역적으로 정의된 사용자 정의 ID 네임스페이스의 저장소를 유지 관리합니다. 네임스페이스에 대한 자세한 내용은 [ID 네임스페이스 개요를 참조하십시오](../identity-service/namespaces.md). 일반적으로 사용되는 표준 네임스페이스 및 네임스페이스 한정자 목록 [!DNL Privacy Service]은 개발자 안내서의 [부록 섹션](api/appendix.md) 을 참조하십시오.
 
