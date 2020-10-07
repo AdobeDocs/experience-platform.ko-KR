@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: '이 문서에서는 Experience Platform API를 호출하기 위해 Adobe Experience Platform 개발자 계정에 액세스할 수 있는 단계별 자습서를 제공합니다. '
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '878'
 ht-degree: 3%
@@ -89,17 +89,17 @@ Adobe 개발자 콘솔을 사용하여 다음 세 가지 액세스 자격 증명
 
 Adobe 개발자 [콘솔로](https://www.adobe.com/go/devs_console_ui) 이동하여 Adobe ID에 로그인합니다. 그런 다음 Adobe 개발자 콘솔 설명서에서 빈 프로젝트 [를 만드는](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) 자습서에 나와 있는 단계를 따릅니다.
 
-새 프로젝트를 만들었으면 프로젝트 개요 **[!UICONTROL 화면에서 API]** _추가_ 를클릭합니다.
+새 프로젝트를 만들었으면 프로젝트 개요 **[!UICONTROL 화면에서 API]** **추가** 를클릭합니다.
 
 ![](images/authentication/add-api-button.png)
 
-API _추가_ 화면이 나타납니다. Adobe Experience Platform의 제품 아이콘을 클릭한 다음 **[!UICONTROL Experience Platform API]** 를 선택한 다음 다음을 **[!UICONTROL 클릭합니다]**.
+API **추가** 화면이 나타납니다. Adobe Experience Platform의 제품 아이콘을 클릭한 다음 **[!UICONTROL Experience Platform API]** 를 선택한 다음 다음을 **[!UICONTROL 클릭합니다]**.
 
 ![](images/authentication/add-platform-api.png)
 
 프로젝트에 추가할 API로 선택한 경우, 서비스 계정(JWT) [!DNL Experience Platform] (&quot;API 구성&quot; 단계에서 시작)을 사용하여 프로젝트에 API를 [](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/services-add-api-jwt.md) 추가하는 튜토리얼에 설명된 단계에 따라 프로세스를 완료합니다.
 
-API가 프로젝트에 추가되면 _프로젝트 개요_ 페이지에는 모든 API 호출에 필요한 다음 자격 증명이 [!DNL Experience Platform] 표시됩니다.
+API가 프로젝트에 추가되면 **프로젝트 개요** 페이지에는 모든 API 호출에 필요한 다음 자격 증명이 [!DNL Experience Platform] 표시됩니다.
 
 * `{API_KEY}` (클라이언트 ID)
 * `{IMS_ORG}` (조직 ID)
