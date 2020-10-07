@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: 이 문서에서는 Adobe Experience Platform 세그멘테이션 서비스 API를 사용하여 세그먼트 정의를 개발, 테스트, 미리 보기 및 저장하기 위한 자습서를 제공합니다.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '916'
 ht-degree: 0%
@@ -56,7 +56,7 @@ API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 
 
 ## 세그먼트 정의 개발
 
-세그멘테이션의 첫 번째 단계는 **세그먼트 정의라는 구문으로 표현되는 세그먼트를 정의하는 것입니다**. 세그먼트 정의는 PQL으로 작성된 쿼리를 캡슐화하는 [!DNL Profile Query Language] 개체입니다. 이 개체를 **PQL 술어라고도 합니다**. PQL은 사용자가 제공하는 레코드 또는 시간 시리즈 데이터와 관련된 조건을 기준으로 세그먼트에 대한 규칙을 정의합니다 [!DNL Real-time Customer Profile]. PQL 쿼리 [작성에 대한 자세한 내용은 PQL](../pql/overview.md) 가이드를 참조하십시오.
+세그먼테이션의 첫 번째 단계는 세그먼트 정의라고 하는 구문으로 표현되는 세그먼트를 정의하는 것입니다. 세그먼트 정의는 PQL으로 작성된 쿼리를 캡슐화하는 [!DNL Profile Query Language] 개체입니다. 이 개체를 PQL 술어라고도 합니다. PQL은 사용자가 제공하는 레코드 또는 시간 시리즈 데이터와 관련된 조건을 기준으로 세그먼트에 대한 규칙을 정의합니다 [!DNL Real-time Customer Profile]. PQL 쿼리 [작성에 대한 자세한 내용은 PQL](../pql/overview.md) 가이드를 참조하십시오.
 
 API의 종단점에 대한 POST 요청을 만들어 새 세그먼트 정의를 만들 수 `/segment/definitions` [!DNL Segmentation] 있습니다. 다음 예에서는 세그먼트를 성공적으로 정의하기 위해 필요한 정보를 포함하여 정의 요청의 형식을 지정하는 방법에 대해 설명합니다.
 
