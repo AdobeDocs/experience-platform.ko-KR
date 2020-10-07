@@ -4,7 +4,7 @@ title: 실시간 고객 프로필 사용 안내서
 topic: guide
 description: 실시간 고객 프로파일은 온라인, 오프라인, CRM 및 서드파티 데이터를 비롯한 다양한 채널의 데이터를 취합하여 각 개별 고객에 대한 전체적인 관점을 생성합니다. 이 문서는 Adobe Experience Platform 사용자 인터페이스에서 실시간 고객 프로필과 상호 작용하기 위한 가이드 역할을 합니다.
 translation-type: tm+mt
-source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1292'
 ht-degree: 0%
@@ -40,11 +40,11 @@ ID **[!UICONTROL 로]** 프로파일을 찾아보려면 [찾아보기] 탭을 �
 
 ### 프로필 지표 {#profile-metrics}
 
-[ [!UICONTROL 검색] ] 탭 오른쪽에는 전체 [프로필 수](#profile-count) 및 네임스페이스별 [프로필 목록 등 프로필 데이터와 관련된 몇 가지 중요한 지표가 있습니다](#profiles-by-namespace).
+[ **[!UICONTROL 검색]** ] 탭 오른쪽에는 전체 [프로필 수](#profile-count) 및 네임스페이스별 [프로필 목록 등 프로필 데이터와 관련된 몇 가지 중요한 지표가 있습니다](#profiles-by-namespace).
 
 이러한 프로필 지표는 조직의 기본 병합 정책을 사용하여 평가됩니다. 기본 병합 정책을 정의하는 방법을 비롯하여 병합 정책을 사용하는 방법에 대한 자세한 내용은 정책 [병합 사용 설명서를 참조하십시오](merge-policies.md).
 
-이러한 지표 외에도 프로필 지표 섹션에서는 지표가 마지막으로 평가된 시기를 보여주는 [!UICONTROL 마지막 업데이트] 날짜 및 시간도 제공합니다.
+이러한 지표 외에도 프로필 지표 섹션에서는 지표가 마지막으로 평가된 시기를 보여주는 마지막 업데이트 날짜 및 시간도 제공합니다.
 
 ![](../images/user-guide/profiles-profile-metrics.png)
 
@@ -80,7 +80,7 @@ ID 네임스페이스 **[!UICONTROL 선택]** 대화 상자에서 검색할 네�
 
 ### ID 값
 
-ID [!UICONTROL 네임스페이스를]선택한 후 [!UICONTROL ID] 값을 입력할 수 있는 **[!UICONTROL 찾아보기]**&#x200B;탭으로돌아갑니다. 이 값은 개별 고객 프로필에 고유하며 제공된 네임스페이스에 유효한 항목이어야 합니다. 예를 들어 [!UICONTROL ID 네임스페이스] &quot;이메일&quot;을 선택하려면 [!UICONTROL 유효한 이메일 주소] 형식의 ID 값이 필요합니다.
+ID 네임스페이스를 선택한 후 ID 값을 입력할 수 있는 **[!UICONTROL 검색]** 탭으로 **[!UICONTROL 돌아갑니다]**. 이 값은 개별 고객 프로필에 고유하며 제공된 네임스페이스에 유효한 항목이어야 합니다. 예를 들어 ID 네임스페이스 &quot;이메일&quot;을 선택하려면 유효한 이메일 주소 형식의 ID 값이 필요합니다.
 
 ![](../images/user-guide/profiles-show-profile.png)
 
@@ -90,17 +90,17 @@ ID [!UICONTROL 네임스페이스를]선택한 후 [!UICONTROL ID] 값을 입력
 
 ### 프로필 세부 사항 {#profile-detail}
 
-프로필 [!UICONTROL ID를]선택하면 **[!UICONTROL 세부 사항]** 탭이열립니다. 세부 사항  탭에 표시되는 프로필 정보는 여러 프로필 조각에서 통합하여 개별 고객의 단일 보기를 형성했습니다. 여기에는 기본 속성, 연결된 ID 및 채널 환경 설정과 같은 고객 세부 사항이 포함됩니다. 표시되는 기본 필드는 기본 프로필 속성을 표시하도록 조직 수준에서 변경할 수도 있습니다. 속성 추가 및 제거, 대시보드 패널 크기 조정을 위한 단계별 지침 등 이러한 필드 사용자 지정에 대한 자세한 내용은 [프로필 세부 사용자 정의 안내서를 참조하십시오](profile-customization.md).
+프로필 **[!UICONTROL ID를]**&#x200B;선택하면 **[!UICONTROL 세부 사항]** 탭이열립니다. 세부 사항 **** 탭에 표시되는 프로필 정보는 여러 프로필 조각에서 통합하여 개별 고객의 단일 보기를 형성했습니다. 여기에는 기본 속성, 연결된 ID 및 채널 환경 설정과 같은 고객 세부 사항이 포함됩니다. 표시되는 기본 필드는 기본 프로필 속성을 표시하도록 조직 수준에서 변경할 수도 있습니다. 속성 추가 및 제거, 대시보드 패널 크기 조정을 위한 단계별 지침 등 이러한 필드 사용자 지정에 대한 자세한 내용은 [프로필 세부 사용자 정의 안내서를 참조하십시오](profile-customization.md).
 
 ![](../images/user-guide/profiles-profile-detail.png)
 
-사용 가능한 다른 탭을 선택하여 개별 프로파일과 관련된 추가 정보를 볼 수 있습니다. 이러한 탭에는 [!UICONTROL 속성], [!UICONTROL 이벤트]및 [!UICONTROL 세그먼트 멤버십이]포함되어 [!UICONTROL 있으며, 이] 탭에서는 현재 프로필의 자격이 있는세그먼트를 보여줍니다.
+사용 가능한 다른 탭을 선택하여 개별 프로파일과 관련된 추가 정보를 볼 수 있습니다. 이러한 탭에는 프로필 자격이 있는 세그먼트를 보여주는 속성, 이벤트 및 세그먼트 멤버십이 있습니다.
 
 ![](../images/user-guide/profiles-attributes-events-segments.png)
 
 ## 정책 병합
 
-기본 [!UICONTROL 프로필] 메뉴에서 [정책 **[!UICONTROL 병합]** ] 탭을 선택하여 조직에 속하는 병합 정책 목록을 봅니다. 나열된 각 정책에는 해당 이름, 기본 병합 정책인지 여부 및 해당 정책이 적용되는 스키마가 표시됩니다.
+기본 **[!UICONTROL 프로필]** 메뉴에서 [정책 **[!UICONTROL 병합]** ] 탭을 선택하여 조직에 속하는 병합 정책 목록을 봅니다. 나열된 각 정책에는 해당 이름, 기본 병합 정책인지 여부 및 해당 정책이 적용되는 스키마가 표시됩니다.
 
 병합 정책에 대한 자세한 내용은 [병합 정책 사용 안내서를 참조하십시오](merge-policies.md).
 
@@ -108,7 +108,7 @@ ID [!UICONTROL 네임스페이스를]선택한 후 [!UICONTROL ID] 값을 입력
 
 ## 결합 스키마 {#union-schema}
 
-기본 [!UICONTROL 프로필] 메뉴에서 **[!UICONTROL 결합 스키마]** 탭을 선택하여 프로필 데이터에 대한 결합 스키마를 봅니다. 결합 스키마는 동일한 클래스 아래의 모든 [!DNL Experience Data Model] (XDM) 필드가 병합되어 스키마에서 사용할 수 있게 되었습니다 [!DNL Real-time Customer Profile]. 왼쪽에 있는 [!UICONTROL 클래스] 목록에서 클래스를 선택하여 캔버스에서 해당 스키마의 구조를 볼 수 있습니다. 예를 들어 &quot;[!DNL XDM Profile]&quot;를 선택하면 [!DNL XDM Individual Profile] 클래스에 대한 결합 스키마가 표시됩니다.
+기본 **[!UICONTROL 프로필]** 메뉴에서 **[!UICONTROL 결합 스키마]** 탭을 선택하여 프로필 데이터에 대한 결합 스키마를 봅니다. 결합 스키마는 동일한 클래스 아래의 모든 [!DNL Experience Data Model] (XDM) 필드가 병합되어 스키마에서 사용할 수 있게 되었습니다 [!DNL Real-time Customer Profile]. 왼쪽의 &quot;[!UICONTROL 클래스]&quot; 목록에서 클래스를 선택하면 캔버스에서 해당 스키마의 구조를 볼 수 있습니다. 예를 들어 &quot;[!DNL XDM Profile]&quot;를 선택하면 [!DNL XDM Individual Profile] 클래스에 대한 결합 스키마가 표시됩니다.
 
 Adobe Experience Platform 내의 조합 스키마 및 해당 역할에 대한 자세한 내용은 [스키마 구성 안내서의 조합 스키마 섹션을 참조하십시오](../../xdm/schema/composition.md).
 
