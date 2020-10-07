@@ -5,7 +5,7 @@ title: 데이터 사용 정책 사용 안내서
 topic: policies
 description: Adobe Experience Platform 데이터 거버넌스는 데이터 사용 정책을 만들고 관리할 수 있는 사용자 인터페이스를 제공합니다. 이 문서에서는 Experience Platform 사용자 인터페이스의 정책 작업 영역에서 수행할 수 있는 작업에 대한 개요를 제공합니다.
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
 workflow-type: tm+mt
 source-wordcount: '765'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # 데이터 사용 정책 사용 안내서
 
-Adobe Experience Platform [!DNL Data Governance] 는 데이터 사용 정책을 만들고 관리할 수 있는 사용자 인터페이스를 제공합니다. 이 문서에서는 _사용자 인터페이스의 정책 작업 공간에서 수행할 수 있는 작업에_ 대한 개요를 제공합니다 [!DNL Experience Platform] .
+Adobe Experience Platform [!DNL Data Governance] 는 데이터 사용 정책을 만들고 관리할 수 있는 사용자 인터페이스를 제공합니다. 이 문서에서는 **사용자 인터페이스의 정책 작업 공간에서 수행할 수 있는 작업에** 대한 개요를 제공합니다 [!DNL Experience Platform] .
 
 >[!IMPORTANT]
 >
@@ -56,7 +56,7 @@ UI [!DNL Experience Platform] 에서 정책 **** 을 클릭하여 **[!UICONTROL 
 
 >[!NOTE]
 >
->여러 마케팅 작업을 선택할 때 정책은 이를 &quot;OR&quot; 규칙으로 해석합니다. 즉, 선택한 마케팅 작업 중 _하나라도_ 수행된 경우 정책이 적용됩니다.
+>여러 마케팅 작업을 선택할 때 정책은 이를 &quot;OR&quot; 규칙으로 해석합니다. 즉, 선택한 마케팅 작업 중 **하나라도** 수행된 경우 정책이 적용됩니다.
 
 ![](../images/policies/add-marketing-actions.png)
 
