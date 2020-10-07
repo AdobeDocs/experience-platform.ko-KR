@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: Adobe Experience Platform을 사용하면 알려진 XDM(Experience Data Model) 스키마를 준수하는 데이터 또는 쪽모이 세공 마룻파일의 형태로 데이터를 일괄적으로 간편하게 가져올 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1308'
 ht-degree: 0%
@@ -28,7 +28,7 @@ Adobe Experience Platform을 사용하면 데이터를 일괄 처리 파일 [!DN
 
 데이터 세트 작업 영역을 사용하면 IMS 조직에서 만든 모든 데이터 세트를 보고 관리할 수 [!DNL Experience Platform] 있을 뿐만 아니라 새 데이터 세트를 만들 수 있습니다.
 
-왼쪽 탐색에서 데이터 세트 **[!UICONTROL 를]** 클릭하여 데이터 집합 작업 영역을 봅니다. 데이터 세트 목록에는 **[!UICONTROL 이름]**, **[!UICONTROL 만들어진]** 날짜 및 시간, **[!UICONTROL 소스]**, **[!UICONTROL 소스]**, Datasets ********&#x200B;및 DatasetsBatch Last 상태, 및 Batch StatusLast Status를 표시하는 열, DataSet의 마지막 업데이트 날짜 및 시간을 보여주는 열 등이 들어 있습니다.
+왼쪽 탐색에서 데이터 세트 **[!UICONTROL 를]** 클릭하여 데이터 집합 작업 영역을 봅니다. 데이터 집합 작업 영역에는 데이터 집합이 마지막으로 업데이트된 날짜 및 시간은 물론, 이름, 만들어진 날짜 및 시간, 소스, 스키마 및 마지막 일괄 처리 상태를 보여주는 열을 포함한 데이터 집합 목록이 들어 있습니다.
 
 >[!NOTE]
 >
@@ -58,7 +58,7 @@ Adobe Experience Platform을 사용하면 데이터를 일괄 처리 파일 [!DN
 
 ## 데이터 세트 구성
 
-데이터 세트 **[!UICONTROL 구성]** 화면에서 데이터 세트에 **[!UICONTROL 이름을]** 지정해야 **[!UICONTROL 하고 데이터 세트에 대한]** 설명도제공할 수 있습니다.
+데이터 세트 **[!UICONTROL 구성]** 화면에서 데이터 세트에 이름을 지정해야 하며 데이터 세트에 대한 설명도 제공할 수 있습니다.
 
 **데이터 세트 이름에 대한 참고 사항:**
 
@@ -74,7 +74,7 @@ Adobe Experience Platform을 사용하면 데이터를 일괄 처리 파일 [!DN
 
 이제 빈 데이터 세트가 만들어져서 데이터 집합 작업 영역의 **[!UICONTROL 데이터 집합 활동]** 탭으로 돌아갑니다. &quot;배치가 추가되지 않았습니다.&quot;라는 알림과 함께 작업 공간의 왼쪽 위 모서리에 데이터 세트 이름이 표시됩니다. 이 데이터 세트에 아직 배치를 추가하지 않았기 때문에 예상됩니다.
 
-데이터 집합 작업 영역의 오른쪽에는 새로운 데이터 집합 ID **[!UICONTROL ,]** 데이터 집합 ID **[!UICONTROL 이름,]**&#x200B;설명 **[!UICONTROL ,, Cedset]** Name, Cedet **[!UICONTROL Name, TainName, TainTableTemanTmediaStreamingSchemaStreamingSource와 같은]** Info ****************&#x200B;탭 정보가 들어 있습니다. 또한 정보 탭에는 데이터 세트를 만든 시기 **[!UICONTROL 와]** 해당 **[!UICONTROL 마지막 수정]** 날짜에 대한 정보도 포함되어 있습니다.
+데이터 집합 작업 영역의 오른쪽에는 데이터 집합 ID, 이름, 설명, 테이블 이름, 스키마, 스트리밍 및 소스 같은 새 데이터 집합과 관련된 정보가 들어 있는 **[!UICONTROL 정보]** 탭이 표시됩니다. 또한 정보 탭에는 데이터 세트를 만든 날짜와 마지막으로 수정한 날짜에 대한 정보도 포함되어 있습니다.
 
 또한 정보 탭에서는 데이터 **[!UICONTROL 세트]** 사용 시 사용되는 프로필 [!DNL Real-time Customer Profile]토글입니다. 이 전환 기능의 사용 및 [!DNL Real-time Customer Profile]다음 섹션에 더 자세히 설명되어 있습니다.
 
@@ -122,13 +122,13 @@ ID 사용 및 작업에 대한 자세한 내용 [!DNL Real-time Customer Profile
 
 파일 업로드가 완료된 후 데이터 세트 **[!UICONTROL 활동]** 탭에 더 이상 &quot;추가된 일괄 처리가 없습니다&quot;가 표시되지 않습니다. 대신 이제 데이터 집합 **[!UICONTROL 활동]** 탭에 데이터 집합 지표가 표시됩니다. 일괄 처리가 아직 로드되지 않았기 때문에 모든 지표가 이 단계에서 &quot;0&quot;으로 표시됩니다.
 
-탭 아래쪽에는 **[!UICONTROL &quot;데이터 세트에 데이터 추가&quot;]** 프로세스를 통해 인제스트된 데이터의 [배치](#add-data-to-dataset) ID를 보여주는 목록이있습니다. 인제스트된 날짜, 인제스트된 **[!UICONTROL 레코드 수]** 및 현재 **[!UICONTROL 배치]**&#x200B;상태 **[!UICONTROL 등 배치와 관련된 정보가]**&#x200B;포함되어 있습니다.
+탭 아래쪽에는 **[!UICONTROL &quot;데이터 세트에 데이터 추가&quot;]** 프로세스를 통해 인제스트된 데이터의 [배치](#add-data-to-dataset) ID를 보여주는 목록이있습니다. 인제스트된 날짜, 인제스트된 레코드 수 및 현재 배치 상태를 포함하여 배치와 관련된 정보가 포함됩니다.
 
 ![데이터 세트 지표](../images/tutorials/ingest-batch-data/batch-id.png)
 
 ## 배치 세부 사항
 
-배치 **[!UICONTROL ID를]** 클릭하여 배치 **[!UICONTROL 개요를]**&#x200B;보고 배치와 관련된 추가 세부 사항을 표시합니다. 배치 로드가 완료되면, 배치에 대한 정보가 업데이트되어 인제스트된 **[!UICONTROL 레코드 수]** 및 **[!UICONTROL 파일 크기]**&#x200B;를 보여줍니다. 또한 **[!UICONTROL 상태는]** &quot;성공&quot; 또는 &quot;실패&quot;로 변경됩니다. 일괄 처리에 실패할 경우 오류 코드 **** 섹션에는 통합 중 오류에 대한 세부 사항이 포함됩니다.
+배치 **[!UICONTROL ID를]** 클릭하여 배치 **[!UICONTROL 개요를]**&#x200B;보고 배치와 관련된 추가 세부 사항을 표시합니다. 일괄 처리가 로드를 완료하면 일괄 처리에 대한 정보가 업데이트되어 수집되는 레코드 수와 파일 크기가 표시됩니다. 상태는 &quot;성공&quot; 또는 &quot;실패&quot;로 변경됩니다. 일괄 처리에 실패할 경우 오류 코드 **** 섹션에는 통합 중 오류에 대한 세부 사항이 포함됩니다.
 
 일괄 처리 수집에 대한 자세한 내용 및 FAQ는 [일괄 처리 처리 처리 문제 해결 가이드를 참조하십시오](../batch-ingestion/troubleshooting.md).
 
