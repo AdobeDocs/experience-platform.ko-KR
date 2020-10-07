@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: 이 자습서에서는 Adobe Experience Platform 사용자 인터페이스를 사용하여 XDM 스키마에 CSV 파일을 매핑하는 방법을 설명합니다.
 translation-type: tm+mt
-source-git-commit: 7adf18e4251f377fee586c8a0f23b89acd75afca
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '886'
 ht-degree: 1%
@@ -117,7 +117,7 @@ CSV 파일을 매핑하고 만들면 CSV 파일을 통해 수집되는 데이터
 
 함수를 사용하려면 적절한 구문 및 입력 **[!UICONTROL 과 함께 소스 필드]** 아래에 입력합니다.
 
-예를 들어 **구/군/시** 와 **국가** CSV 필드를 연결하고 **구/군** 시 `concat(city, ", ", county)`XDM 필드에 지정하려면 소스 필드를로설정합니다.
+예를 들어 구/군/시 CSV 필드를 연결하고 구/군/시 XDM 필드에 지정하려면 소스 필드를 로 설정합니다 `concat(city, ", ", county)`.
 
 ![](../images/tutorials/map-a-csv-file/mapping-function.png)
 
