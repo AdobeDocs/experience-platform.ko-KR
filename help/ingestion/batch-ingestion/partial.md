@@ -5,9 +5,9 @@ title: 부분 일괄 처리 처리 개요
 topic: overview
 description: 이 문서에서는 부분 일괄 처리 처리를 관리하는 자습서를 제공합니다.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '917'
+source-wordcount: '916'
 ht-degree: 0%
 
 ---
@@ -121,7 +121,7 @@ UI를 통해 부분 섭취에 대한 배치를 활성화하려면 소스 연결�
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow-partial-ingestion-focus.png)
 
-오류 임계값 **[!UICONTROL 을 사용하면]** 전체 배치가 실패하기 전에 허용되는 오류 비율을 설정할 수 있습니다. 기본적으로 이 값은 5%로 설정됩니다.
+**[!UICONTROL 오류 임계값을]** 사용하면 전체 배치가 실패하기 전에 허용되는 오류 비율을 설정할 수 있습니다. 기본적으로 이 값은 5%로 설정됩니다.
 
 ## 다음 단계 {#next-steps}
 
