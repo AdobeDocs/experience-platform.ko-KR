@@ -5,7 +5,7 @@ description: 'Experience Platform 에지 네트워크를 구성하는 방법을 
 seo-description: 'Experience Platform 에지 네트워크를 구성하는 방법을 알아봅니다. '
 keywords: configuration;edge;edge configuration id;Environment Settings;edgeConfigId;identity;id sync enabled;ID Sync Container ID;Sandbox;Streaming Inlet;Event Dataset;target;client code;Property Token;Target Environment ID;Cookie Destinations;url Destinations;Analytics Settings Blockreport suite id;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
 source-wordcount: '870'
 ht-degree: 2%
@@ -41,7 +41,7 @@ SDK에서 구성 및 환경 `edgeConfigId` 을 지정하는 복합 ID로 사용�
 
 #### [!UICONTROL ID]
 
-ID 섹션은 항상 켜져 있는 유일한 섹션입니다. 두 가지 사용 가능한 설정이 있습니다. [!UICONTROL ID 동기화 사용] 및 [!UICONTROL ID 동기화 컨테이너 ID].
+ID 섹션은 항상 켜져 있는 유일한 섹션입니다. 두 가지 사용 가능한 설정이 있습니다.&quot;[!UICONTROL ID 동기화]&quot; 및 &quot;[!UICONTROL ID 동기화 컨테이너 ID]&quot;.
 
 ![구성 UI의 ID 섹션](../../assets/edge_configuration_identity.png)
 
@@ -65,7 +65,7 @@ ID 동기화를 컨테이너로 그룹화하여 서로 다른 시간에 다른 I
 
 ##### [!UICONTROL 스트리밍 입구]
 
-스트리밍 유입은 Adobe Experience Platform의 HTTP 소스입니다. 이러한 템플릿은 Adobe Experience Platform의 [!UICONTROL 소스] 탭 아래에 HTTP API로 만들어집니다.
+스트리밍 유입은 Adobe Experience Platform의 HTTP 소스입니다. 이러한 템플릿은 Adobe Experience Platform의 &quot;[!UICONTROL 소스]&quot; 탭 아래에서 HTTP API로 만들어집니다.
 
 ##### [!UICONTROL 이벤트 데이터 집합]
 
@@ -83,7 +83,7 @@ Adobe Target을 구성하려면 클라이언트 코드를 제공해야 합니다
 
 ##### [!UICONTROL 클라이언트 코드]
 
-타겟 계정의 고유 ID. 이를 찾으려면 [!UICONTROL Adobe Target] > [!UICONTROL 설정][!UICONTROL > 구현] > 설정 편집 [!UICONTROL 다음]  [!UICONTROL 에서 설정 편집To theDownloadButton forJs또는 mbox.js로 이동합니다.]
+타겟 계정의 고유 ID. 이를 찾으려면 [!UICONTROL Adobe Target] > [!UICONTROL 설정][!UICONTROL > 구현] > 설정 편집 [!UICONTROL 다음]  [!UICONTROL 에서 설정 편집DownloadButton forJs또는 mbox.js로 이동합니다.]
 
 ##### [!UICONTROL 속성 토큰]
 
@@ -95,7 +95,7 @@ Adobe Target을 구성하려면 클라이언트 코드를 제공해야 합니다
 
 [Adobe Target의 환경을](https://docs.adobe.com/content/help/en/target/using/administer/hosts.html) 사용하면 모든 개발 단계를 통해 구현을 관리할 수 있습니다. 이 설정은 각 환경에서 사용할 환경을 지정합니다.
 
-Adobe은 작업을 단순하게 유지하기 위해 각 `dev`, `stage`및 `prod` edge 구성 환경에 대해 이 설정을 다르게 설정하는 것이 좋습니다. 하지만 이미 [!UICONTROL Adobe Target 환경이] 정의된 경우 이러한 환경을 사용할 수 있습니다.
+Adobe은 작업을 단순하게 유지하기 위해 각 `dev`, `stage`및 `prod` edge 구성 환경에 대해 이 설정을 다르게 설정하는 것이 좋습니다. 하지만 이미 정의된 Adobe Target 환경이 있는 경우 이러한 환경을 사용할 수 있습니다.
 
 #### Adobe Audience Manager
 
