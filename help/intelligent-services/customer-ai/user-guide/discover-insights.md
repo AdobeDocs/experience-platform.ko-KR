@@ -5,7 +5,7 @@ title: 고객 AI를 통한 인사이트 검색
 topic: Discovering insights
 description: 고객 AI는 인텔리전트 서비스의 일부로 마케터에게 Adobe Sensei을 활용하여 향후 고객의 행동을 예측할 수 있는 기능을 제공합니다. 고객 AI는 규모에 따라 개별 프로파일에 대한 이탈 및 전환과 같은 사용자 지정 성향 점수를 생성하는 데 사용됩니다. 이 작업은 알고리즘, 트레이닝 또는 배포를 선택하여 비즈니스 요구 사항을 머신 러닝 문제로 전환할 필요 없이 이루어집니다.
 translation-type: tm+mt
-source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
+source-git-commit: c5e2ea5daf813bf580a11f0182361197e55c6fe8
 workflow-type: tm+mt
 source-wordcount: '1125'
 ht-degree: 0%
@@ -98,7 +98,7 @@ UI [!DNL Adobe Experience Platform] 에서 왼쪽 탐색 **[!UICONTROL 영역에
 
 ## 스코어 배포
 
-스코어 *카드* 분배는 점수를 기준으로 모집단의 시각적 요약을 제공합니다. 점수 ** 분포에 표시되는 색상은 생성된 성향 점수 유형을 나타냅니다.
+스코어 **[!UICONTROL 카드]** 분배는 점수를 기준으로 모집단의 시각적 요약을 제공합니다. 점수 ** 분포에 표시되는 색상은 생성된 성향 점수 유형을 나타냅니다.
 
 ![점수의 분포](../images/insights/distribution-of-scores.png)
 
@@ -128,7 +128,7 @@ UI [!DNL Adobe Experience Platform] 에서 왼쪽 탐색 **[!UICONTROL 영역에
 
 ![세그먼트 채우기](../images/insights/segment-saving.png)
 
-플랫폼 UI에서 새 세그먼트를 보려면 왼쪽 탐색 **[!UICONTROL 에서]** 세그먼트를 클릭합니다. 검색 *페이지가* 나타나고 사용 가능한 모든 세그먼트가 표시됩니다.
+플랫폼 UI에서 새 세그먼트를 보려면 왼쪽 탐색 **[!UICONTROL 에서]** 세그먼트를 클릭합니다. 검색 **[!UICONTROL 페이지가]** 나타나고 사용 가능한 모든 세그먼트가 표시됩니다.
 
 ![모든 세그먼트](../images/insights/Segments-dashboard.png)
 
