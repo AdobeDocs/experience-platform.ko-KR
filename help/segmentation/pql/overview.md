@@ -5,7 +5,7 @@ title: PQL(프로필 쿼리 언어) 개요
 topic: developer guide
 description: 이 안내서에서는 서식 지침을 다루는 PQL에 대한 일반적인 개요와 PQL 표현식 예를 제공합니다.
 translation-type: tm+mt
-source-git-commit: 5a10a31f4be5173af8b459b9ab8a53096348be1d
+source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
 workflow-type: tm+mt
 source-wordcount: '705'
 ht-degree: 2%
@@ -29,7 +29,7 @@ PQL 질의에는 다음 서명이 있습니다.
 
 입력 매개 변수는 부울 또는 문자열과 같은 간단한 원시 유형이거나 오브젝트, 배열 또는 맵과 같은 보다 복잡한 유형일 수 있습니다.
 
-PQL 표현식 본문 내의 입력 매개 변수를 참조하는 방법에는 **세** 가지가 있습니다.
+PQL 표현식 본문 내의 입력 매개 변수를 참조하는 방법에는 세 가지가 있습니다.
 
 ### 첫 번째 매개 변수에 대한 암시적 참조
 
