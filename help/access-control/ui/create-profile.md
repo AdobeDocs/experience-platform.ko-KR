@@ -5,7 +5,7 @@ title: 새 제품 프로필 만들기
 topic: user guide
 description: 이 문서에서는 Adobe Admin Console에서 새 제품 프로필을 만드는 데 필요한 단계를 다룹니다. 새 프로필 만들기를 시작하려면 제품 프로필 탭으로 이동하고 새 프로필을 클릭합니다.
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
 source-wordcount: '246'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 ![new-profile-button](../images/new-profile-button.png)
 
-새 **[!UICONTROL 프로필]** 만들기 대화 상자가 나타나고 새 프로필에 **[!UICONTROL 대한 프로필 이름]** 및 **[!UICONTROL 설명]** 을입력하라는 메시지가나타납니다. 프로파일의 표시 이름이 다르려면 프로필 이름과 **[!UICONTROL 동일함]** 의 선택을 취소하고 나타나는 텍스트 상자에 표시 이름을 입력합니다. 사용자 **[!UICONTROL 알림]**&#x200B;아래에서 사용자가 추가 또는 프로필에서 제거되면 이메일로 알림을 받을지 여부를 전환할 수 있습니다.
+새 프로필 **[!UICONTROL 에 대한 프로필 이름]** 및 설명을 입력하라는 메시지가 새 프로필 만들기 대화 상자가 나타납니다. 프로파일의 표시 이름이 다르려면 프로필 이름과 **[!UICONTROL 동일함]** 의 선택을 취소하고 나타나는 텍스트 상자에 표시 이름을 입력합니다. 사용자 **[!UICONTROL 알림]**&#x200B;아래에서 사용자가 추가 또는 프로필에서 제거되면 이메일로 알림을 받을지 여부를 전환할 수 있습니다.
 
 When finished, click **[!UICONTROL Next]**.
 
