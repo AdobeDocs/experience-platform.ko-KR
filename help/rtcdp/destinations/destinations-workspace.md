@@ -5,7 +5,7 @@ seo-title: 대상 작업 공간
 description: 대상 작업 공간은 아래의 섹션에 설명된 네 개의 섹션인 카탈로그, 찾아보기, 계정 및 시스템 보기로 구성됩니다.
 seo-description: Adobe 실시간 고객 데이터 플랫폼에서 왼쪽 탐색 막대에서 대상을 선택하여 대상 작업 영역에 액세스합니다.
 translation-type: tm+mt
-source-git-commit: 59ac673c35954696fbb37417510035bdebff6f62
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '825'
 ht-degree: 2%
@@ -17,7 +17,7 @@ ht-degree: 2%
 
 Adobe 실시간 고객 데이터 플랫폼의 경우 왼쪽 탐색 막대에서 **[!UICONTROL 대상]** 을 선택하여 대상 [!UICONTROL 작업 영역에] 액세스합니다.
 
-작업 [!UICONTROL 공간은] 아래 섹션에 설명된 네 개의 섹션, **[!UICONTROL 카탈로그]**, **[!UICONTROL 검색]**&#x200B;계정, ********&#x200B;및 System ViewFacebook으로 구성됩니다.
+작업 [!UICONTROL 공간은] 아래 섹션에 설명된 네 개의 섹션, [!UICONTROL 카탈로그], [!UICONTROL 검색]계정, 및 System ViewFacebook으로 구성됩니다.
 
 ![대상-개요](/help/rtcdp/destinations/assets/destinations-overview.png)
 
@@ -28,8 +28,8 @@ Adobe 실시간 고객 데이터 플랫폼의 경우 왼쪽 탐색 막대에서 
 Adobe 실시간 CDP 사용자 인터페이스는 대상 카탈로그 페이지에 다양한 검색 및 필터 옵션을 제공합니다.
 
 * 페이지의 검색 기능을 사용하여 특정 대상을 찾습니다.
-* 카테고리 컨트롤을 사용하여 **[!UICONTROL 대상을]** 필터링합니다.
-* 모든 **[!UICONTROL 대상]** 및 **[!UICONTROL 내 대상 간을 전환합니다]**. 모든 **[!UICONTROL 대상을]** 선택하면 사용 가능한 모든 Adobe 실시간 CDP 대상이 표시됩니다. 내 **[!UICONTROL 대상을]** 선택하면 사용자가 연결을 설정한 대상만 볼 수 있습니다.
+* 카테고리 컨트롤을 사용하여 [!UICONTROL 대상을] 필터링합니다.
+* 모든 [!UICONTROL 대상] 및 [!UICONTROL 내 대상 간을 전환합니다]. 모든 **[!UICONTROL 대상을]** 선택하면 사용 가능한 모든 Adobe 실시간 CDP 대상이 표시됩니다. 내 **[!UICONTROL 대상을]** 선택하면 사용자가 연결을 설정한 대상만 볼 수 있습니다.
 * 연결 및/ **[!UICONTROL 또는 확장]** 기능을 보려면 **[!UICONTROL 선택합니다]**. 두 카테고리 간의 차이를 이해하려면 [대상 유형과 카테고리를 참조하십시오](/help/rtcdp/destinations/destination-types.md).
 
 ![대상 필터링 및 검색 데모](/help/rtcdp/destinations/assets/destinations-search-and-filter.gif)
@@ -38,7 +38,7 @@ Adobe 실시간 CDP 사용자 인터페이스는 대상 카탈로그 페이지�
 
 | 컨트롤 | 설명 |
 ---------|----------
-| [!UICONTROL 메시지에 대한] | 대상에 대한 연결을 만들 수 있습니다. |
+|  구성 | 대상에 대한 연결을 만들 수 있습니다. |
 | [!UICONTROL 활성화] | 대상에 대한 연결을 설정했으면 세그먼트를 활성화할 수 있습니다. |
 | [!UICONTROL 계정 보기] | 대상에 대해 연결한 계정을 봅니다. |
 | [!UICONTROL 데이터 흐름 보기] | 대상에 대해 존재하는 데이터 활성화 흐름을 봅니다. |
