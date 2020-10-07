@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: 이 자습서에서는 고객 속성 프로필 데이터를 Adobe Experience Platform에 수집하기 위해 UI에서 소스 커넥터를 만드는 단계를 제공합니다.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '374'
 ht-degree: 8%
@@ -28,7 +28,7 @@ ht-degree: 8%
 
 ![](../../../../images/tutorials/create/customer-attributes/catalog.png)
 
-[ *소스 활동* ] 화면에는 고객 속성 프로필 데이터에 대해 이전에 설정한 모든 연결이 나열되며, 데이터 선택을 클릭하여 새 연결을 만들 수 **있습니다**.
+[ **소스 활동** ] 화면에는 고객 속성 프로필 데이터에 대해 이전에 설정한 모든 연결이 나열되며, 데이터 선택을 클릭하여 새 연결을 만들 수 **있습니다**.
 
 >[!NOTE]
 >
@@ -44,10 +44,10 @@ ht-degree: 8%
 
 ![](../../../../images/tutorials/create/customer-attributes/select_data.png)
 
-새 인바운드 연결을 생성하기 전에 *검토할 수 있는 검토* 단계가 나타납니다. 연결 세부 사항은 다음을 포함하여 범주별로 그룹화됩니다.
+새 인바운드 연결을 생성하기 전에 **검토할 수 있는 검토** 단계가 나타납니다. 연결 세부 사항은 다음을 포함하여 범주별로 그룹화됩니다.
 
-* *소스 세부 정보*:소스 연결 유형과 선택한 소스 데이터를 표시합니다.
-* *Target 세부 정보*:다른 소스 커넥터를 만들 때 이 컨테이너는 데이터 세트가 준수하는 스키마를 포함하여 소스 데이터가 수집 중인 데이터 세트를 표시합니다. 고객 속성 프로필 데이터는 자동으로 매핑되고 실시간 고객 프로파일에 수집됩니다.
+* **소스 세부 정보**:소스 연결 유형과 선택한 소스 데이터를 표시합니다.
+* **Target 세부 정보**:다른 소스 커넥터를 만들 때 이 컨테이너는 데이터 세트가 준수하는 스키마를 포함하여 소스 데이터가 수집 중인 데이터 세트를 표시합니다. 고객 속성 프로필 데이터는 자동으로 매핑되고 실시간 고객 프로파일에 수집됩니다.
 
 ![](../../../../images/tutorials/create/customer-attributes/review.png)
 
