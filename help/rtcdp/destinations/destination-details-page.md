@@ -5,7 +5,7 @@ seo-title: 대상 세부 정보 페이지
 description: '개별 대상에 대한 세부 사항 페이지에서는 대상 이름, ID, 대상에 매핑된 세그먼트, 활성화를 편집하고 데이터 흐름을 활성화 및 비활성화하는 컨트롤과 같은 대상 세부 사항에 대한 개요를 제공합니다. '
 seo-description: '개별 대상에 대한 세부 사항 페이지에서는 대상 이름, ID, 대상에 매핑된 세그먼트, 활성화를 편집하고 데이터 흐름을 활성화 및 비활성화하는 컨트롤과 같은 대상 세부 사항에 대한 개요를 제공합니다. '
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
 workflow-type: tm+mt
 source-wordcount: '505'
 ht-degree: 1%
@@ -53,8 +53,8 @@ ht-degree: 1%
 | 플랫폼 | 대상이 전송되는 대상 플랫폼을 나타냅니다. 자세한 [내용은 대상](/help/rtcdp/destinations/destinations-catalog.md) 카탈로그를 참조하십시오. |
 | 설명 | 대상 플로우의 설명을 편집할 수 있습니다. |
 | 카테고리 | 대상 유형을 나타냅니다. 자세한 [내용은 대상](/help/rtcdp/destinations/destinations-catalog.md) 카탈로그를 참조하십시오. |
-| 연결 유형 | 대상이 대상으로 전송되는 양식을 나타냅니다. 쿠키 **[!UICONTROL 또는]** **[!UICONTROL 프로필 기반]**&#x200B;이 될 수 있습니다. |
-| 빈도 | 대상이 대상으로 전송되는 빈도를 나타냅니다. 스트리밍 **[!UICONTROL 또는 일괄]** 처리 **[!UICONTROL 가 될 수 있습니다]**. |
+| 연결 유형 | 대상이 대상으로 전송되는 양식을 나타냅니다. 쿠키 [!UICONTROL 또는] [!UICONTROL 프로필 기반]이 될 수 있습니다. |
+| 빈도 | 대상이 대상으로 전송되는 빈도를 나타냅니다. 스트리밍 [!UICONTROL 또는 일괄] 처리 [!UICONTROL 가 될 수 있습니다]. |
 | ID | 대상에서 허용하는 ID 네임스페이스를 나타냅니다. 예를 들어 ID 필드는 GAID, IDFA, 이메일일 수 있습니다. 허용되는 모든 ID 네임스페이스는 ID 네임스페이스 개요에서 표준 [네임스페이스를 참조하십시오](../../identity-service/namespaces.md). |
 | 작성자 | 이 대상 흐름을 만든 사용자를 나타냅니다. |
 | 작성일 | 이 대상 흐름을 만든 UTC 날짜 및 시간을 나타냅니다. |
