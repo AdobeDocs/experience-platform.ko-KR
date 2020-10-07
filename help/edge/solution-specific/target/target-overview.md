@@ -5,7 +5,7 @@ description: Adobe Target을 사용하여 Experience Platform 웹 SDK로 개인�
 seo-description: Adobe Target을 사용하여 Experience Platform 웹 SDK로 개인화된 컨텐츠를 렌더링하는 방법 학습
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes;prehiding snippet;vec;Form-Based Experience Composer;xdm;audiences;decisions;scope;schema;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: 43a2074d4d1b9f642c3cbfb0c29217eb2fb112c3
 workflow-type: tm+mt
 source-wordcount: '634'
 ht-degree: 3%
@@ -87,7 +87,7 @@ alloy
 
 `decisionScopes` 개인화된 경험을 렌더링할 페이지의 섹션, 위치 또는 일부를 정의합니다. 사용자 정의 `decisionScopes` 가능하고 사용자가 정의할 수 있습니다. 현재 [!DNL Target] 고객의 경우 `decisionScopes` &quot;mbox&quot;라고도 합니다. UI에서 [!DNL Target] &quot;위치&quot; `decisionScopes` 로 나타납니다.
 
-## __범위__ 보기
+## The `__view__` Scope
 
 AEP는 AEP에 의존하지 않고 VEC 작업을 검색할 수 있는 기능 [!DNL Web SDK] [!DNL Web SDK] 을 제공합니다. &quot;a&quot;로 `__view__` 정의된 이벤트를 전송합니다 `decisionScopes`.
 
@@ -127,10 +127,10 @@ AEP 웹 SDK를 통해 전달할 Target 활동에 대해 대상을 정의할 때 
 
 ## 용어
 
-__의사 결정__ - [!DNL Target]이 활동 중에서 선택한 경험과 상호 작용합니다.
+**의사 결정** - [!DNL Target]이 활동 중에서 선택한 경험과 상호 작용합니다.
 
-__범위__ - 결정의 범위입니다. 여기서 [!DNL Target]는 mBox입니다. 글로벌 mBox는 `__view__` 범위입니다.
+**범위** - 결정의 범위입니다. 여기서 [!DNL Target]는 mBox입니다. 글로벌 mBox는 `__view__` 범위입니다.
 
-__스키마__ - 결정 스키마는 오퍼의 유형입니다 [!DNL Target].
+**스키마** - 결정 스키마는 오퍼의 유형입니다 [!DNL Target].
 
-__XDM__ - XDM은 점 표기법으로 시리얼라이즈 된 다음 mBox 매개 변수 [!DNL Target] 로 삽입됩니다.
+**XDM** - XDM은 점 표기법으로 시리얼라이즈 된 다음 mBox 매개 변수 [!DNL Target] 로 삽입됩니다.
