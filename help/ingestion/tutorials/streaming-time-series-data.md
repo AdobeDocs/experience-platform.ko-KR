@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: 이 자습서는 Adobe Experience Platform 데이터 통합 서비스 API의 일부인 스트리밍 통합 API를 사용하는 데 도움이 됩니다.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: fce215edb99cccc8be0109f8743c9e56cace2be0
 workflow-type: tm+mt
 source-wordcount: '1163'
 ht-degree: 2%
@@ -217,11 +217,12 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/des
 
 >[!NOTE]
 >
->&#x200B; &#x200B; ID 네임스페이스 코드&#x200B;****
+>ID **네임스페이스 코드**
 >
 > 코드가 유효한지 확인하십시오. 위의 예에서는 표준 ID 네임스페이스인 &quot;email&quot;을 사용합니다. 일반적으로 사용되는 기타 표준 ID 네임스페이스는 [Identity Service FAQ에서 찾을 수 있습니다](../../identity-service/troubleshooting-guide.md#what-are-the-standard-identity-namespaces-provided-by-experience-platform).
 >
 > 사용자 지정 네임스페이스를 만들려면 [ID 네임스페이스 개요에 설명된 단계를 따릅니다](../../identity-service/home.md).
+
 **응답**
 
 성공적으로 응답하면 스키마의 새로 생성된 기본 ID 네임스페이스에 대한 정보가 포함된 HTTP 상태 201을 반환합니다.
