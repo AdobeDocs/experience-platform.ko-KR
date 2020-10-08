@@ -5,9 +5,9 @@ title: 세그멘테이션 서비스 세그먼트 빌더 사용 안내서
 topic: ui guide
 description: '세그먼트 빌더는 프로필 데이터 요소와 상호 작용할 수 있는 풍부한 작업 공간을 제공합니다. 작업 영역에서는 데이터 속성을 나타내는 데 사용되는 드래그 앤 드롭 타일과 같이 규칙을 작성하고 편집하기 위한 직관적인 컨트롤을 제공합니다. '
 translation-type: tm+mt
-source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
+source-git-commit: beacce03136e1620ff57fb549f335d2199bb6001
 workflow-type: tm+mt
-source-wordcount: '1723'
+source-wordcount: '1774'
 ht-degree: 0%
 
 ---
@@ -72,6 +72,10 @@ Lucene의 검색 구문을 활용하는 검색 막대를 사용하여 [대상을
 세그먼트 정의에 새 규칙을 추가하려면 필드 탭에서 **[!UICONTROL 타일을]** 드래그하여 규칙 빌더 캔버스에 놓습니다. 그런 다음 추가되는 데이터의 유형에 따라 컨텍스트별 옵션이 제공됩니다. 사용 가능한 데이터 유형은 다음과 같습니다.문자열, 날짜, [!DNL ExperienceEvents]&quot;[!UICONTROL 이벤트 유형]&quot; 및 대상
 
 ![](../images/ui/segment-builder/rule-builder-canvas.png)
+
+>[!IMPORTANT]
+>
+>Adobe Experience Platform의 최신 변경 사항은 이벤트 간 `OR` 및 `AND` 논리 연산자의 사용을 업데이트했습니다. 이러한 업데이트는 기존 세그먼트에 영향을 주지 않습니다. 하지만 기존 세그먼트 및 새 세그먼트 만들기에 대한 모든 후속 업데이트에는 이러한 변경 내용이 영향을 받습니다. 자세한 내용은 [시간 상수 업데이트를](./segment-refactoring.md) 참조하십시오.
 
 ### 대상자 추가
 
