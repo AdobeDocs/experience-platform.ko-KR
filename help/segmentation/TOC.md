@@ -5,10 +5,10 @@ user-guide-title: Adobe Experience Platform 세그멘테이션 서비스 도움�
 breadcrumb-title: Segmentation Service Guide
 user-guide-description: Build segments and generate audiences from your Real-time Customer Profile data.
 translation-type: tm+mt
-source-git-commit: 1bfb876dc1665ebef4450a6f5363fba1ea1b7c61
+source-git-commit: beacce03136e1620ff57fb549f335d2199bb6001
 workflow-type: tm+mt
-source-wordcount: '118'
-ht-degree: 9%
+source-wordcount: '121'
+ht-degree: 19%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 9%
 
 - [개요](home.md)
 - [세그멘테이션 데이터 유형](data-types.md)
-- 세그멘테이션 API 개발자 가이드{#api}
+- 세그멘테이션 API 개발자 가이드 {#api}
    - [개요](api/overview.md)
    - [시작하기](api/getting-started.md)
    - [내보내기 작업](api/export-jobs.md)
@@ -31,6 +31,7 @@ ht-degree: 9%
    - [개요](ui/overview.md)
    - [세그먼트 빌더](ui/segment-builder.md)
    - [스트리밍 세분화](ui/streaming-segmentation.md)
+   - [시간 제한 리팩토링](ui/segment-refactoring.md)
 - [옵트아웃 준수](honoring-opt-outs.md)
 - [다중 엔티티 세그먼테이션](multi-entity-segmentation.md)
 - 프로필 쿼리 언어 {#pql}
