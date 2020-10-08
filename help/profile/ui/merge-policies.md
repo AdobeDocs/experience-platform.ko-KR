@@ -3,9 +3,9 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: 정책 병합 사용자 안내서
 topic: guide
 translation-type: tm+mt
-source-git-commit: fcced39c0a78457ebb108b7378e32f1b2f75808b
+source-git-commit: 45f42bae4060e107e6c131659cea5d10457c34f8
 workflow-type: tm+mt
-source-wordcount: '1441'
+source-wordcount: '1440'
 ht-degree: 0%
 
 ---
@@ -91,7 +91,7 @@ API를 사용하여 사용자 지정 타임스탬프를 사용하려면 [병합 
 
 사용 사례는 조직에서 다른 데이터 세트에 있는 데이터보다 선호되거나 신뢰할 수 있는 하나의 데이터 세트에 정보가 있는 경우입니다.
 
-데이터 세트 우선 순위 **[!UICONTROL 를]**&#x200B;선택하면 별도의 패널이 열리므로 **[!UICONTROL 데이터 세트를 포함할 사용 가능한 데이터 세트]** (또는 확인란을 사용하여 모두 선택)에서 선택해야 합니다. 그런 다음 해당 데이터 세트를 [**!UICONTROL 선택한 데이터 세트]** 패널에 드래그하여 놓고 올바른 우선 순위 순서로 드래그할 수 있습니다. 최상위 데이터 세트에 우선 순위가 가장 높은 경우 두 번째 데이터 세트에 두 번째 우선 순위가 되는 등
+데이터 세트 우선 순위 **[!UICONTROL 를]**&#x200B;선택하면 별도의 패널이 열리므로 **[!UICONTROL 데이터 세트를 포함할 사용 가능한 데이터 세트]** (또는 확인란을 사용하여 모두 선택)에서 선택해야 합니다. 그런 다음 해당 데이터 세트를 **[!UICONTROL 선택한 데이터 세트]** 패널에 드래그하여 놓고 올바른 우선 순위 순서로 드래그할 수 있습니다. 최상위 데이터 세트에 우선 순위가 가장 높은 경우 두 번째 데이터 세트에 두 번째 우선 순위가 되는 등
 
 ![](../images/merge-policies/dataset-precedence.png)
 
