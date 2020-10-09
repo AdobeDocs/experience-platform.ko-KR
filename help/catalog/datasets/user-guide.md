@@ -5,7 +5,7 @@ title: 데이터 집합 사용자 가이드
 topic: datasets
 description: 이 데이터 집합 사용자 안내서는 Adobe Experience Platform 사용자 인터페이스 내의 데이터 집합을 사용할 때 일반적인 작업을 수행하는 방법에 대한 지침을 제공합니다.
 translation-type: tm+mt
-source-git-commit: eaff457140ba4ac7c25a0f3a3e5aef47d1b99773
+source-git-commit: 79dca07d3e6ecf998a6278fa49178a7fa8cc0e8c
 workflow-type: tm+mt
 source-wordcount: '1162'
 ht-degree: 0%
@@ -62,10 +62,10 @@ UI [!DNL Experience Platform] 에서 왼쪽 탐색 **[!UICONTROL 의 데이터 �
 
 다음 화면에는 새 데이터 세트를 만들기 위한 다음 두 가지 옵션이 표시됩니다.
 
-* [스키마에서 데이터 집합 만들기](#create-a-dataset-with-an-existing-schema)
-* [CSV 파일에서 데이터 집합 만들기](#create-a-dataset-with-a-csv-file)
+* [스키마에서 데이터 집합 만들기](#schema)
+* [CSV 파일에서 데이터 집합 만들기](#csv)
 
-### 기존 스키마를 사용하여 데이터 집합 만들기
+### 기존 스키마를 사용하여 데이터 집합 만들기 {#schema}
 
 데이터 집합 **[!UICONTROL 만들기]** 화면에서 **[!UICONTROL 스키마에서]** 데이터 집합 만들기를 클릭하여 빈 데이터 집합을 새로 만듭니다.
 
@@ -79,7 +79,7 @@ UI [!DNL Experience Platform] 에서 왼쪽 탐색 **[!UICONTROL 의 데이터 �
 
 ![](../images/datasets/user-guide/configure_dataset_schema.png)
 
-### CSV 파일로 데이터 집합 만들기
+### CSV 파일로 데이터 집합 만들기 {#csv}
 
 CSV 파일을 사용하여 데이터 세트를 만들면, 제공된 CSV 파일과 일치하는 구조를 데이터 세트에 제공하기 위해 임시 스키마가 만들어집니다. 데이터 집합 **[!UICONTROL 만들기]** 화면에서 CSV 파일에서 **[!UICONTROL 데이터 집합 만들기 상자를 클릭합니다]**.
 
