@@ -5,7 +5,7 @@ title: Adobe Experience Platform 개요
 topic: getting started
 description: Adobe Experience Platform은 고객 경험을 향상시키는 완벽한 솔루션을 구축하고 관리하기 위해 시장에서 가장 강력하고 유연하며 개방적인 시스템입니다. Experience Platform을 사용하면 조직 내 모든 시스템의 고객 데이터와 컨텐츠를 중앙 집중화 및 표준화하고 데이터 과학 및 시스템 학습을 적용하여 풍부한 개인별 경험을 더 잘 설계하고 전달할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: fa667d86c089c692f22cfd1b46f3f11b6e9a68d7
+source-git-commit: 79dca07d3e6ecf998a6278fa49178a7fa8cc0e8c
 workflow-type: tm+mt
 source-wordcount: '936'
 ht-degree: 8%
@@ -76,7 +76,7 @@ Adobe Experience Platform 사용자 인터페이스는 현재 다음 언어로 �
 
 Adobe Experience Platform 설명서는 여러 언어로 제공됩니다. 언어를 변경하려면 언어 드롭다운을 클릭하고 원하는 언어를 선택합니다.
 
-![image](assets/lang.jpg)
+![image](images/overview/lang.jpg)
 
 ## [!DNL Experience Platform] 설명서
 
