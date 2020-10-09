@@ -5,10 +5,10 @@ user-guide-title: Adobe Experience Platform 도움말
 breadcrumb-title: Experience Platform Guide
 user-guide-description: Learn how Experience Platform makes it possible to deliver personalized experiences to your customers in real-time.
 translation-type: tm+mt
-source-git-commit: c9daf77f4b7db113b972ee268681999bc7f7fa8d
+source-git-commit: 84f1f840e15cb4487807c13131d0787772fa063a
 workflow-type: tm+mt
-source-wordcount: '319'
-ht-degree: 51%
+source-wordcount: '323'
+ht-degree: 52%
 
 ---
 
@@ -17,6 +17,7 @@ ht-degree: 51%
 
 * [Experience Platform 개요](home.md)
 * [시작하기](get-started.md)
+* [Experience Platform 사용 안내서](./ui-guide.md)
 * Experience Platform 설명서 {#documentation}
    * [설명서 개요](documentation/overview.md)
    * [액세스 제어](https://docs.adobe.com/content/help/ko-KR/experience-platform/access-control/home.html)
