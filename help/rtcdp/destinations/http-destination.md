@@ -5,7 +5,7 @@ seo-title: HTTP 대상은 타사 HTTP 끝점으로 프로필 데이터를 보내
 description: HTTP 대상은 타사 HTTP 끝점으로 프로필 데이터를 보내는 데 도움이 되는 Adobe 실시간 고객 데이터 플랫폼 대상입니다.
 seo-description: HTTP 대상은 타사 HTTP 끝점으로 프로필 데이터를 보내는 데 도움이 되는 Adobe 실시간 고객 데이터 플랫폼 대상입니다.
 translation-type: tm+mt
-source-git-commit: cf100e8df225a665eade5ee6ddab071707e93f8b
+source-git-commit: 5a5cbc31c6445f141d41fca5082b666ec3b26510
 workflow-type: tm+mt
 source-wordcount: '572'
 ht-degree: 2%
@@ -23,7 +23,7 @@ ht-degree: 2%
 
 대상 [!DNL HTTP] 은 [!DNL Adobe Real-Time Customer Data Platform] 프로필 데이터를 타사 끝점으로 보내는 데 도움이 되는 스트리밍 [!DNL HTTP] 대상입니다.
 
-끝점에 프로필 데이터를 [!DNL HTTP] 보내려면 먼저 해당 대상의 대상에 연결해야 합니다 [!DNL Adobe Real-Time Customer Data Platform](#connect-destination).
+끝점에 프로필 데이터를 [!DNL HTTP] 보내려면 먼저 해당 대상의 대상에 연결해야 합니다 [[!DNL Adobe Real-Time Customer Data Platform]](#connect-destination).
 
 ## 사용 사례 {#use-cases}
 
@@ -33,14 +33,15 @@ ht-degree: 2%
 
 ## 대상에 연결 {#connect-destination}
 
-1. [ **[!UICONTROL 연결]** ] > **[!UICONTROL 대상]**&#x200B;에서 [!DNL  HTTP API]를 선택하고 구성을 **[!UICONTROL 선택합니다]**.
+1. [ **[!UICONTROL 연결]** ] > **[!UICONTROL 대상]**&#x200B;에서 [!DNL HTTP API]를 선택하고 구성을 **[!UICONTROL 선택합니다]**.
 
    ![HTTP 대상 활성화](assets/activate-http-destination.png)
 
    >[!NOTE]
    >
    >이 대상과의 연결이 이미 있는 경우 대상 카드에 **[!UICONTROL 활성화]** 단추가 표시됩니다. 활성화 및 구성 **[!UICONTROL 의 차이에 대한 자세한]****[!UICONTROL 내용은 대상 작업 공간 설명서의]**&#x200B;카탈로그 [섹션을](../destinations/destinations-workspace.md#catalog) 참조하십시오.
-   ![HTTP 대상 활성화](assets/connect-http-destination.png)
+   >
+   >![HTTP 대상 활성화](assets/connect-http-destination.png)
 
 2. 계정 [!UICONTROL 단계에서] HTTP 끝점 연결 세부 사항을 정의해야 합니다. [ **[!UICONTROL 새 계정]** ]을 선택하고 연결할 HTTP 끝점에 대한 연결 세부 사항을 입력합니다.
    * **[!UICONTROL httpEndpoint]**:프로필 데이터 [!DNL URL] 를 보낼 HTTP 끝점의 완성입니다.
