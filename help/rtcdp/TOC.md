@@ -2,12 +2,12 @@
 product: adobe experience platform
 audience: user
 user-guide-title: 실시간 고객 데이터 플랫폼 안내서
-user-guide-description: Bring together known and anonymous data from multiple enterprise sources to create customer profiles, create audience segments from those profiles, and activate those segments to third-party destinations.
+user-guide-description: 여러 엔터프라이즈 소스에서 알려진 데이터와 익명의 데이터를 결합하여 고객 프로필을 생성하고, 이러한 프로필에서 고객 세그먼트를 생성하며, 이러한 세그먼트를 제3자 대상으로 활성화할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: e3017744bfe35c6a60cf921121135352a1119bdd
+source-git-commit: ac114a7d0313582c6adf05404e0626c618a13253
 workflow-type: tm+mt
-source-wordcount: '460'
-ht-degree: 12%
+source-wordcount: '489'
+ht-degree: 17%
 
 ---
 
@@ -31,6 +31,7 @@ ht-degree: 12%
       * [대상 세부 정보 페이지](destinations/destination-details-page.md)
    * 대상 카탈로그 {#destinations-cat}
       * [대상 카탈로그 개요](destinations/destinations-catalog.md)
+      * [HTTP 대상](/help/rtcdp/destinations/http-destination.md)
       * Adobe destinations{#adobe-destinations}
          * [Adobe 대상 개요](destinations/adobe-destinations.md)
          * [Adobe Campaign](destinations/adobe-campaign-destination.md)
