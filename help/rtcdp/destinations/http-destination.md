@@ -5,7 +5,7 @@ seo-title: HTTP 대상은 타사 HTTP 끝점으로 프로필 데이터를 보내
 description: HTTP 대상은 타사 HTTP 끝점으로 프로필 데이터를 보내는 데 도움이 되는 Adobe 실시간 고객 데이터 플랫폼 대상입니다.
 seo-description: HTTP 대상은 타사 HTTP 끝점으로 프로필 데이터를 보내는 데 도움이 되는 Adobe 실시간 고객 데이터 플랫폼 대상입니다.
 translation-type: tm+mt
-source-git-commit: 5a5cbc31c6445f141d41fca5082b666ec3b26510
+source-git-commit: f4840f028bb855e79c0f2ae5c82bc38906a7aaec
 workflow-type: tm+mt
 source-wordcount: '572'
 ht-degree: 2%
