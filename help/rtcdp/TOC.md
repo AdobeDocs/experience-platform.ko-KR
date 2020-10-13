@@ -4,9 +4,9 @@ audience: user
 user-guide-title: 실시간 고객 데이터 플랫폼 안내서
 user-guide-description: 여러 엔터프라이즈 소스에서 알려진 데이터와 익명의 데이터를 결합하여 고객 프로필을 생성하고, 이러한 프로필에서 고객 세그먼트를 생성하며, 이러한 세그먼트를 제3자 대상으로 활성화할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: ac114a7d0313582c6adf05404e0626c618a13253
+source-git-commit: d9e9440bb8a7735aa8a5d24285c1fb56f32733cb
 workflow-type: tm+mt
-source-wordcount: '489'
+source-wordcount: '507'
 ht-degree: 17%
 
 ---
@@ -31,10 +31,11 @@ ht-degree: 17%
       * [대상 세부 정보 페이지](destinations/destination-details-page.md)
    * 대상 카탈로그 {#destinations-cat}
       * [대상 카탈로그 개요](destinations/destinations-catalog.md)
-      * [HTTP 대상](/help/rtcdp/destinations/http-destination.md)
+      * [ (알파) HTTP 대상](/help/rtcdp/destinations/http-destination.md)
       * Adobe destinations{#adobe-destinations}
          * [Adobe 대상 개요](destinations/adobe-destinations.md)
          * [Adobe Campaign](destinations/adobe-campaign-destination.md)
+         * [Experience Platform 세그먼트 공유(Audience Manager 문서 열기)](https://docs.adobe.com/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
       * 광고 대상{#advertising-destinations}
          * [광고 대상 개요](destinations/advertising-destinations.md)
          * [Adobe Advertising Cloud 확장](/help/rtcdp/destinations/adobe-advertising-cloud-extension.md)
@@ -149,4 +150,4 @@ ht-degree: 17%
    * [소스 개요](sources/sources-overview.md)
    * [Adobe 시작을 사용하여 웹 사이트 태그 구현](sources/launch.md)
 * [Experience Platform 릴리스 노트](https://www.adobe.com/go/platform-release-notes-en)
-* [Experience Platform 용어집](https://www.adobe.com/go/platform-glossary-en)
+* [Experience Platform 용어](https://www.adobe.com/go/platform-glossary-en)
