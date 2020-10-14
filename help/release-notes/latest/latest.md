@@ -1,79 +1,38 @@
 ---
 title: Adobe Experience Platform 릴리스 정보
-description: 'Experience Platform 릴리스 노트: 2020년 9월 9일'
+description: Experience Platform 릴리스 노트
 doc-type: release notes
-last-update: September 8, 2020
+last-update: October 13, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: 312794af2cdb111fb81c0aa226dec68db2cbc374
+source-git-commit: 43ceda3d95511c3972fd0588f472c6c412dd95bf
 workflow-type: tm+mt
-source-wordcount: '883'
-ht-degree: 4%
+source-wordcount: '478'
+ht-degree: 6%
 
 ---
 
 
 # Adobe Experience Platform 릴리스 노트
 
-**릴리스 날짜: 2020년 9월 9일**
+**릴리스 날짜: 2020년 10월 14일**
 
-Adobe Experience Platform의 기존 기능 업데이트:
+- [데이터 준비](#data-prep)
+- [실시간 고객 프로필](#profile)
+- [소스](#sources)
 
-- [[!DNL 데이터 거버넌스]](#governance)
-- [[!DNL 대상]](#destinations)
-- [[!DNL Observability Insights]](#observability)
-- [[!DNL Privacy Service]](#privacy)
-- [[!DNL 실시간 고객 프로필]](#profile)
-- [[!DNL 세그멘테이션 서비스]](#segmentation)
-- [[!DNL 소스]](#sources)
+## 데이터 준비 {#data-prep}
 
-## [!DNL Data Governance] {#governance}
+데이터 준비를 사용하면 데이터 엔지니어가 XDM(Experience Data Model)을 통해 데이터를 매핑, 변환 및 확인할 수 있습니다.
 
-Adobe Experience Platform 데이터 거버넌스는 고객 데이터를 관리하고 데이터 사용에 적용되는 규정, 제한 및 정책을 준수하는 데 사용되는 일련의 전략과 기술입니다. 카탈로그 작성, 데이터 계보, 데이터 사용 표시, 데이터 액세스 정책, 마케팅 작업을 위한 데이터 액세스 제어 등 다양한 [!DNL Experience Platform] 수준에서 핵심적인 역할을 합니다.
-
-**새로운 기능**
+**주요 기능**
 
 | 기능 | 설명 |
 | ------- | ----------- |
-| 데이터 세트 레이블 지정 UI 개선 사항 | 큰 스키마 작업을 더 쉽게 하기 위해 데이터 세트 레이블 지정 UI에 새로운 정렬 및 필터링 컨트롤이 추가되었습니다. <ul><li>전체 스키마 경로를 기준으로 필드를 알파벳순으로 정렬합니다.</li><li>필드 경로 이름에 대해 부분 검색을 수행합니다.</li><li>레이블, 선택된 레이블 또는 레이블 카테고리가 없는 필드를 필터링합니다.</li></ul> |
+| `is_set` 함수 위에 있어야 합니다 | 이 `is_set` 함수를 사용하면 소스 데이터 내에 속성이 있는지 확인할 수 있습니다. `is_set` 과 함께 사용하여 속성 `is_empty` 의 존재와 속성 내의 값 존재를 모두 확인할 수 있습니다. |
+| `get_values` 함수 위에 있어야 합니다 | 이 `get_values` 함수를 사용하면 주어진 키에 대한 입력 맵에서 값을 가져올 수 있습니다. |
 
-서비스에 대한 자세한 내용은 [데이터 거버넌스](../../data-governance/home.md) 개요를 참조하십시오.
-
-## 대상 {#destinations}
-
-Adobe의 실시간 고객 데이터 플랫폼 [](../../rtcdp/overview.md)에서 대상은 대상 플랫폼과 사전 구축된 통합으로 이러한 파트너에게 데이터를 원활하게 제공할 수 있습니다.
-
-**새로운 기능**
-
-| 기능 | 설명 |
-| ------- | ----------- |
-| 향상된 UX | 사용자는 인라인 테이블 작업에 액세스하여 데이터 추가, 예약 편집 및 세그먼트 추가와 같은 기본 작업에 쉽게 액세스할 수 있습니다. 자세한 내용은 [대상 작업 공간](../../rtcdp/destinations/destinations-workspace.md) 문서를 참조하십시오. |
-
-자세한 내용은 [대상 개요를 참조하십시오](../../rtcdp/destinations/destinations-overview.md)
-
-## [!DNL Observability Insights] {#observability}
-
-[!DNL Observability Insights] 통계 지표 및 이벤트 알림을 사용하여 Adobe Experience Platform의 활동을 모니터링할 수 있습니다.
-
-**새로운 기능**
-
-| 기능 | 설명 |
-| --- | --- |
-| Adobe I/O 이벤트 알림 | [!DNL Observability Insights] adobe I/O 이벤트를 활용하여 여러 Experience Platform 서비스에 대한 이벤트 알림을 만듭니다. 알림 페이로드는 구성된 웹 후크로 전송되며, 이를 통해 추가 다운스트림 프로세스를 자동화할 수 있습니다. 자세한 내용은 [알림 개요를](../../observability/notifications/overview.md) 참조하십시오. |
-
-서비스에 대한 자세한 내용은 [[!DNL Observability Insights] 개요를](../../observability/home.md) 참조하십시오.
-
-## [!DNL Privacy Service] {#privacy}
-
-여러 법률 및 조직 규정은 사용자가 요청 시 데이터 저장소에서 자신의 개인 데이터를 액세스하거나 삭제할 수 있는 권한을 제공합니다. Adobe Experience Platform [!DNL Privacy Service] 는 고객의 이러한 데이터 요청을 관리하는 데 도움이 되는 RESTful API 및 사용자 인터페이스를 제공합니다. 를 [!DNL Privacy Service]사용하면 Adobe Experience Cloud 애플리케이션에서 개인 또는 개인 고객 데이터를 액세스 및 삭제하기 위한 요청을 제출하여 법적 및 조직의 개인 정보 보호 규정을 자동으로 준수할 수 있습니다.
-
-**새로운 기능**
-
-| 기능 | 설명 |
-| ------- | ----------- |
-| LGPD 지원(브라질) | 이제 브라질의 [!DNL Lei Geral de Proteção de Dados] (LGPD) 규정에 따라 개인 정보 일자리를 창출할 수 있다. 이 일자리들은 규제 규정에 따라 추적된다 `lgpd_bra`. |
-
-서비스에 대한 자세한 내용은 [Privacy Service 개요를](../../privacy-service/home.md) 참조하십시오.
+자세한 내용은 [데이터 준비 개요를 참조하십시오](../../data-prep/home.md).
 
 ## 실시간 고객 프로필 {#profile}
 
@@ -81,24 +40,10 @@ Adobe Experience Platform을 사용하면 고객이 브랜드와 언제 어디�
 
 | 기능 | 설명 |
 | ------- | ----------- |
-| 프로필 뷰어 | 플랫폼 UI에서 프로필 뷰어는 전체 사용자 지정이 가능한 대시보드로 업데이트되었습니다. 이제 사용자는 다음 작업을 수행할 수 있습니다. <ul><li>기본 정보 위젯에서 선택한 표준 및 사용자 지정된 속성을 업데이트합니다.</li><li>사용자 정의 위젯 만들기, 편집 및 제거</li><li>위젯 크기 조정 및 재정렬</li></ul> |
+| 프로필 미리 보기 API 추가 | 이제 프로필 미리 보기 API(`/previewsamplestatus`)에는 IMS 조직 전체에서 총 프로필 조각에 대한 분류를 보고 ID 네임스페이스에 프로필 조각 분포를 보는 기능이 포함되어 있습니다. |
+| 결합 스키마 보기 업데이트 | 사용자는 Experience Platform UI에서 조합 스키마에 기여하는 모든 스키마 및 데이터 집합뿐만 아니라 ID 및 관계 필드와 같은 표면 키 속성에 대한 정보를 보다 쉽게 찾을 수 있습니다. 이 업데이트는 프로필이 올바르게 구성되고, ID가 올바르게 연결되고, 데이터가 성공적으로 수집되었는지 문제를 해결하고 확인하는 기능을 개선합니다. |
 
 데이터 작업을 위한 자습서 및 모범 사례 [!DNL Real-time Customer Profile]를 비롯한 자세한 내용은 [!DNL Profile] 실시간 고객 프로필 개요를 참조하십시오 [](../../profile/home.md).
-
-## 세그멘테이션 서비스 {#segmentation}
-
-Adobe Experience Platform 세그멘테이션 서비스는 세그먼트를 작성하고 [!DNL Real-time Customer Profile] 데이터에서 대상을 생성할 수 있는 사용자 인터페이스와 RESTful API를 제공합니다. 이러한 세그먼트는 중앙에서 구성 및 관리되므로 모든 Adobe 애플리케이션에서 쉽게 액세스할 수 [!DNL Platform]있습니다.
-
-[!DNL Segmentation Service] 고객 기반 내에서 마케팅 가능한 사람들을 구분하는 기준을 설명하여 특정 프로필 하위 집합을 정의합니다. 세그먼트는 브랜드와의 고객 상호 작용을 나타내는 레코드 데이터(인구 통계 정보 등) 또는 시간 시리즈 이벤트를 기반으로 할 수 있습니다.
-
-**새로운 기능**
-
-| 기능 | 설명 |
-| ------- | ----------- |
-| 내보내기 작업 | 세그먼트를 내보내기 작업의 일부로 평가할 수 있도록 플래그가 추가되었습니다. 따라서 사용자는 단일 작업에서 세그먼테이션과 내보내기를 모두 실행할 수 있습니다. |
-| 정책 병합 | 여러 병합 정책을 하나의 일괄 세분화 작업에 포함시킬 수 있습니다. |
-
-자세한 내용 [!DNL Segmentation Service]은 세그멘테이션 [개요를 참조하십시오.](../../segmentation/home.md)
 
 ## 소스 {#sources}
 
@@ -110,7 +55,8 @@ Adobe Experience Platform은 외부 소스에서 데이터를 인제스트할 �
 
 | 기능 | 설명 |
 | ------- | ----------- |
-| 자동 매핑 | [!DNL Platform] 사용자가 선택한 대상 스키마 또는 데이터 세트를 기반으로 데이터 통합 워크플로우 동안 자동 매핑에 대한 지능적인 권장 사항을 제공합니다. 사용 사례에 맞게 유연한 자동 매핑 규칙을 수동으로 조정할 수 있습니다. |
-| 향상된 UX | 사용자는 인라인 테이블 작업에 액세스하여 데이터 추가, 예약 편집 및 세그먼트 추가와 같은 기본 작업에 쉽게 액세스할 수 있습니다. 자세한 내용은 데이터 흐름 [모니터링](../../sources/tutorials/ui/monitor.md) 문서를 참조하십시오. |
+| 계층 매핑 | 데이터 수집 프로세스 중에 JSON 또는 Partiented와 같은 계층적 소스 파일을 미리 볼 수 있습니다. |
+| SFTP에 대한 SSH 인증 지원 | SFTP 계정을 RSA/DSA Open SSH 키 [!DNL Platform] 를 사용하여 연결할 수 있습니다. 자세한 내용은 [SFTP 개요를](../../sources/connectors/cloud-storage/ftp-sftp.md) 참조하십시오. |
+| 향상된 UX | 데이터 수집 프로세스 [!DNL Profile] 중에 데이터 세트를 활성화할 수 있습니다. 자세한 내용은 [클라우드 스토리지 데이터 흐름](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) 자습서를 참조하십시오. |
 
 소스에 대한 자세한 내용은 [소스 개요를 참조하십시오](../../sources/home.md).
