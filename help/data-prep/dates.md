@@ -5,9 +5,9 @@ title: 날짜 함수
 topic: overview
 description: 이 문서에서는 데이터 준비와 함께 사용되는 날짜 기능을 소개합니다.
 translation-type: tm+mt
-source-git-commit: db38f0666f5c945461043ad08939ebda52c21855
+source-git-commit: 1f9833c06a3423c334edb8aa7e441adfd74be0f2
 workflow-type: tm+mt
-source-wordcount: '389'
+source-wordcount: '384'
 ht-degree: 17%
 
 ---
@@ -80,4 +80,4 @@ ht-degree: 17%
 
 **예**
 
-이 값의 값이 &quot;2020년 12월 31일&quot;인 경우 이 표현식은 orderDate 값을 &quot;2020-12-31&quot; 값과 함께 날짜 시간으로 변환합니다. `date(orderDate, 'yyyy-MM-dd')`
+식이 &quot; `date(orderDate, 'yyyy-MM-dd')` 2020년 12월 31일&quot; `orderDate` 값을 &quot;2020-12-31&quot;의 날짜/시간 값으로 변환합니다.
