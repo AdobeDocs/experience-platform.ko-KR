@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: 이 자습서에서는 Flow Service API를 사용하여 Azure 파일 저장소를 Experience Platform에 연결하는 단계를 안내합니다.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: d332226541685108b58d88096146ed6048606774
 workflow-type: tm+mt
 source-wordcount: '573'
 ht-degree: 2%
@@ -79,7 +79,6 @@ POST /connections
 **요청**
 
 다음 요청은 페이로드에 제공된 속성으로 구성된 새 [!DNL Azure File Storage] 연결을 만듭니다.
-
 
 ```shell
 curl -X POST \
