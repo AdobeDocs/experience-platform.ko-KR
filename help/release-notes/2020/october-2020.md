@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: October, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 43ceda3d95511c3972fd0588f472c6c412dd95bf
+source-git-commit: fc1174c8435c1afc3c58dd748daf89f387a19980
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '591'
 ht-degree: 6%
 
 ---
@@ -19,6 +19,7 @@ ht-degree: 6%
 
 - [데이터 준비](#data-prep)
 - [실시간 고객 프로필](#profile)
+- [세분화 서비스](#segmentation)
 - [소스](#sources)
 
 ## 데이터 준비 {#data-prep}
@@ -44,6 +45,20 @@ Adobe Experience Platform을 사용하면 고객이 브랜드와 언제 어디�
 | 결합 스키마 보기 업데이트 | 사용자는 Experience Platform UI에서 조합 스키마에 기여하는 모든 스키마 및 데이터 집합뿐만 아니라 ID 및 관계 필드와 같은 표면 키 속성에 대한 정보를 보다 쉽게 찾을 수 있습니다. 이 업데이트는 프로필이 올바르게 구성되고, ID가 올바르게 연결되고, 데이터가 성공적으로 수집되었는지 문제를 해결하고 확인하는 기능을 개선합니다. |
 
 데이터 작업을 위한 자습서 및 모범 사례 [!DNL Real-time Customer Profile]를 비롯한 자세한 내용은 [!DNL Profile] 실시간 고객 프로필 개요를 참조하십시오 [](../../profile/home.md).
+
+## 세분화 서비스 {#segmentation}
+
+Adobe Experience Platform 세그멘테이션 서비스는 세그먼트를 작성하고 [!DNL Real-time Customer Profile] 데이터에서 대상을 생성할 수 있는 사용자 인터페이스와 RESTful API를 제공합니다. 이러한 세그먼트는 중앙에서 구성 및 관리되므로 모든 Adobe 애플리케이션에서 쉽게 액세스할 수 [!DNL Platform]있습니다.
+
+[!DNL Segmentation Service] 고객 기반 내에서 마케팅 가능한 사람들을 구분하는 기준을 설명하여 특정 프로필 하위 집합을 정의합니다. 세그먼트는 브랜드와의 고객 상호 작용을 나타내는 레코드 데이터(인구 통계 정보 등) 또는 시간 시리즈 이벤트를 기반으로 할 수 있습니다.
+
+**새로운 기능**
+
+| 기능 | 설명 |
+| ------- | ----------- |
+| 스트리밍 세분화 제한 제거 | 룩백 기간에 대한 7일 제한이 제거되었습니다. |
+
+자세한 내용 [!DNL Segmentation Service]은 세그멘테이션 [개요를 참조하십시오.](../../segmentation/home.md)
 
 ## 소스 {#sources}
 
