@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: October, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: ab87cac94ae69acde3be75ae95b11cf003a274e9
+source-git-commit: bf4271cec6126de3b5d9f98df280afdcc798589d
 workflow-type: tm+mt
-source-wordcount: '281'
-ht-degree: 7%
+source-wordcount: '478'
+ht-degree: 6%
 
 ---
 
@@ -18,6 +18,7 @@ ht-degree: 7%
 **릴리스 날짜:2020년 10월**
 
 - [데이터 준비](#data-prep)
+- [실시간 고객 프로필](#profile)
 - [소스](#sources)
 
 ## 데이터 준비 {#data-prep}
@@ -32,6 +33,17 @@ ht-degree: 7%
 | `get_values` 함수 위에 있어야 합니다 | 이 `get_values` 함수를 사용하면 주어진 키에 대한 입력 맵에서 값을 가져올 수 있습니다. |
 
 자세한 내용은 [데이터 준비 개요를 참조하십시오](../../data-prep/home.md).
+
+## 실시간 고객 프로필 {#profile}
+
+Adobe Experience Platform을 사용하면 고객이 브랜드와 언제 어디에서나 고객의 기대에 부응하는 일관된 경험을 제공할 수 있습니다. 온라인, 오프라인, CRM, 서드파티 데이터 등 다양한 채널의 데이터를 결합하는 각 개별 고객의 전체 상황을 파악할 수 있습니다. [!DNL Real-time Customer Profile] [!DNL Profile] 서로 다른 고객 데이터를 하나의 통합 뷰로 통합하여 고객 상호 작용에 대해 실행 가능하고 타임스탬프가 지정된 계정을 제공할 수 있습니다.
+
+| 기능 | 설명 |
+| ------- | ----------- |
+| 프로필 미리 보기 API 추가 | 이제 프로필 미리 보기 API(`/previewsamplestatus`)에는 IMS 조직 전체에서 총 프로필 조각에 대한 분류를 보고 ID 네임스페이스에 프로필 조각 분포를 보는 기능이 포함되어 있습니다. |
+| 결합 스키마 보기 업데이트 | 사용자는 Experience Platform UI에서 조합 스키마에 기여하는 모든 스키마 및 데이터 집합뿐만 아니라 ID 및 관계 필드와 같은 표면 키 속성에 대한 정보를 보다 쉽게 찾을 수 있습니다. 이 업데이트는 프로필이 올바르게 구성되고, ID가 올바르게 연결되고, 데이터가 성공적으로 수집되었는지 문제를 해결하고 확인하는 기능을 개선합니다. |
+
+데이터 작업을 위한 자습서 및 모범 사례 [!DNL Real-time Customer Profile]를 비롯한 자세한 내용은 [!DNL Profile] 실시간 고객 프로필 개요를 참조하십시오 [](../../profile/home.md).
 
 ## 소스 {#sources}
 
