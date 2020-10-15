@@ -6,9 +6,9 @@ title: 계정 및 데이터 흐름 모니터링
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 2514c282d16a1b6ddb2232e46e6283ab2ab3d356
 workflow-type: tm+mt
-source-wordcount: '1097'
+source-wordcount: '1103'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ Adobe Experience Platform의 소스 커넥터는 예약된 기준으로 외부 �
 - [[!DNL Experience Data Model] (XDM) 시스템](../../../xdm/home.md):고객 경험 데이터를 [!DNL Experience Platform] 구성하는 표준화된 프레임워크
    - [스키마 컴포지션의 기본 사항](../../../xdm/schema/composition.md):스키마 컴포지션의 주요 원칙 및 모범 사례 등 XDM 스키마의 기본 구성 요소에 대해 알아봅니다.
    - [스키마 편집기 자습서](../../../xdm/tutorials/create-schema-ui.md):스키마 편집기 UI를 사용하여 사용자 정의 스키마를 생성하는 방법을 알아봅니다.
-- [[!DNL 실시간 고객 프로필]](../../../profile/home.md):여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
+- [[!DNL Real-time Customer Profile]](../../../profile/home.md):여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
 
 ## 계정 모니터링
 
@@ -54,6 +54,10 @@ Adobe Experience Platform의 소스 커넥터는 예약된 기준으로 외부 �
 ![](../../images/tutorials/monitor/click-edit.png)
 
 계정 **[!UICONTROL 세부 사항]** 모달이 나타납니다. 이 페이지에서 기존 계정 세부 사항 및 인증 자격 증명을 업데이트할 수 있습니다.
+
+>[!NOTE]
+>
+> 계정 세부 사항 편집은 모든 배치 소스 커넥터에서 사용할 수 있습니다.
 
 ![](../../images/tutorials/monitor/edit-account.png)
 
