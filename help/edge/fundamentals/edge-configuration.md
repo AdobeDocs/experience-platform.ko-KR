@@ -5,9 +5,9 @@ description: 'Experience Platform 에지 네트워크를 구성하는 방법을 
 seo-description: 'Experience Platform 에지 네트워크를 구성하는 방법을 알아봅니다. '
 keywords: configuration;edge;edge configuration id;Environment Settings;edgeConfigId;identity;id sync enabled;ID Sync Container ID;Sandbox;Streaming Inlet;Event Dataset;target;client code;Property Token;Target Environment ID;Cookie Destinations;url Destinations;Analytics Settings Blockreport suite id;
 translation-type: tm+mt
-source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
+source-git-commit: d069b3007265406367ca9de2b85540b2a070cf36
 workflow-type: tm+mt
-source-wordcount: '870'
+source-wordcount: '891'
 ht-degree: 2%
 
 ---
@@ -17,21 +17,23 @@ ht-degree: 2%
 
 Adobe Experience Platform의 구성은 두 곳 [!DNL Web SDK] 으로 나누어져 있다. SDK의 [구성 명령은](configuring-the-sdk.md) 클라이언트와 마찬가지로 클라이언트에서 처리해야 하는 작업을 제어합니다 `edgeDomain`. Edge Configuration handles all other configuration for the SDK. 요청이 Adobe Experience Platform으로 전송되면 [!DNL Edge Network]이 서버측 구성을 참조하는 데 `edgeConfigId` 사용됩니다. 따라서 웹 사이트에서 코드를 변경하지 않고도 구성을 업데이트할 수 있습니다.
 
+이 기능을 사용하려면 조직이 프로비저닝되어야 합니다. CSM(Certified Software Manager)에 문의하여를 허용 목록에 추가하다 이용하십시오.
+
 ## 에지 구성 ID 만들기
 
-Edge 구성 ID는 Edge 구성 도구를 [!DNL Launch] 사용하여 Adobe에서 만들 수 있습니다. 이 도구를 사용하면 이러한 구성 내의 환경뿐만 아니라 Edge 구성을 모두 만들 수 있습니다.
+Edge 구성 ID는 Edge 구성 도구를 [!DNL Experience Platform Launch] 사용하여 Adobe에서 만들 수 있습니다. 이 도구를 사용하면 이러한 구성 내의 환경뿐만 아니라 Edge 구성을 모두 만들 수 있습니다.
 
 ![edge 구성 툴 탐색](../../assets/edge_configuration_nav.png)
 
 >[!NOTE]
 >
->허용 목록 고객은 태그 관리자로 사용하는지에 관계없이 Edge 구성 도구 [!DNL Launch] 를 사용할 수 있습니다. 또한 사용자는 [!DNL Launch] 자세한 내용은 [설명서의 사용자](https://docs.adobe.com/content/help/ko-KR/launch/using/reference/admin/user-permissions.html) 권한 [!DNL Launch] 문서를 참조하십시오.
+>허용 목록 고객은 태그 관리자로 사용하는지에 관계없이 Edge 구성 도구 [!DNL Experience Platform Launch] 를 사용할 수 있습니다. 또한 사용자는 [!DNL Experience Platform Launch] 자세한 내용은 [설명서의 사용자](https://docs.adobe.com/content/help/ko-KR/launch/using/reference/admin/user-permissions.html) 권한 [!DNL Experience Platform Launch] 문서를 참조하십시오.
 
 화면의 오른쪽 상단 영역에서 **[!UICONTROL 새 가장자리 구성]** 을 클릭하여 Edge 구성을 만들 수 있습니다. 이름과 설명을 입력하면 각 환경에 대한 기본 설정을 묻는 메시지가 표시됩니다.
 
 ### 기본 환경 설정
 
-이러한 기본 설정은 동일한 설정으로 처음 세 개의 환경을 만드는 데 사용됩니다. 이러한 세 가지 환경은 *개발*, *단계*&#x200B;및 *prod*&#x200B;입니다. 세 가지 기본 환경과 일치합니다 [!DNL Launch]. 개발 환경에 라이브러리를 [!DNL Launch] 빌드하면 라이브러리는 자동으로 구성의 개발 환경을 사용합니다. 개별 환경에서 원하는 만큼 설정을 편집할 수 있습니다.
+이러한 기본 설정은 동일한 설정으로 처음 세 개의 환경을 만드는 데 사용됩니다. 이러한 세 가지 환경은 *개발*, *단계*&#x200B;및 *prod*&#x200B;입니다. 세 가지 기본 환경과 일치합니다 [!DNL Experience Platform Launch]. 개발 환경에 라이브러리를 [!DNL Experience Platform Launch] 빌드하면 라이브러리는 자동으로 구성의 개발 환경을 사용합니다. 개별 환경에서 원하는 만큼 설정을 편집할 수 있습니다.
 
 SDK에서 구성 및 환경 `edgeConfigId` 을 지정하는 복합 ID로 사용되는 ID입니다. 환경이 없으면 프로덕션 환경이 사용됩니다.
 
@@ -113,7 +115,7 @@ SDK에서 [URL 대상을 통해 세그먼트 정보를 공유할 수 있습니�
 
 #### Adobe Analytics
 
-데이터를 Adobe Analytics으로 전송할지 여부를 제어합니다. 자세한 내용은 [분석 개요에 나와 있습니다](../solution-specific/analytics/analytics-overview.md).
+데이터를 Adobe Analytics으로 전송할지 여부를 제어합니다. 자세한 내용은 [분석 개요에 나와 있습니다](../data-collection/adobe-analytics/analytics-overview.md).
 
 ![Adobe Analytics 설정 블록](../../assets/edge_configuration_aa.png)
 
