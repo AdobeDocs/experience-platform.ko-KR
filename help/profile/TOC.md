@@ -1,13 +1,13 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: 실시간 고객 프로필 가이드
-user-guide-description: Merge customer data to create a unified view of customer interactions across channels.
+user-guide-title: Real-time Customer Profile 안내서
+user-guide-description: 고객 데이터를 통합하여 다양한 채널에서 고객과의 상호 작용을 종합적으로 파악합니다.
 translation-type: tm+mt
 source-git-commit: 4e358fda1c8f7aebe57a009a146b8b73cf88e169
 workflow-type: tm+mt
-source-wordcount: '89'
-ht-degree: 21%
+source-wordcount: '96'
+ht-degree: 37%
 
 ---
 
@@ -21,10 +21,10 @@ ht-degree: 21%
    * [시작하기](api/getting-started.md)
    * [(알파) 계산된 속성](api/computed-attributes.md)
    * [에지 예상](api/edge-projections.md)
-   * [엔터티([!DNL 프로필] 액세스)](api/entities.md)
-   * [내보내기 작업([!DNL 프로필] 내보내기)](api/export-jobs.md)
+   * [엔티티([!DNL Profile] 액세스)](api/entities.md)
+   * [내보내기 작업([!DNL Profile] 내보내기)](api/export-jobs.md)
    * [정책 병합](api/merge-policies.md)
-   * [샘플 상태 미리 보기([!DNL 프로필] 미리 보기)](api/preview-sample-status.md)
+   * [샘플 상태 미리 보기([!DNL Profile] 미리 보기)](api/preview-sample-status.md)
    * [[!DNL Profile] 시스템 작업(요청 삭제)](api/profile-system-jobs.md)
 * UI 가이드 {#ui}
    * [[!DNL Profile] 사용 안내서](ui/user-guide.md)
