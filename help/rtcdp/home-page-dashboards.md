@@ -2,13 +2,13 @@
 keywords: metrics overview; rtcdp metrics overview
 title: 실시간 고객 데이터 플랫폼 홈 페이지 및 대시보드
 seo-title: 실시간 고객 데이터 플랫폼 홈 페이지 및 대시보드
-description: 대시보드, 홈 페이지 및 Adobe Experience Platform의 첫 사용자 경험
-seo-description: 대시보드, 홈 페이지 및 Adobe Experience Platform의 첫 사용자 경험
+description: 대시보드, 홈페이지 및 Adobe Experience Platform의 최초 사용자 경험
+seo-description: 대시보드, 홈페이지 및 Adobe Experience Platform의 최초 사용자 경험
 translation-type: tm+mt
 source-git-commit: 98d3792f50f2ab95b86d162c51af9445f06343b5
 workflow-type: tm+mt
 source-wordcount: '634'
-ht-degree: 1%
+ht-degree: 4%
 
 ---
 
