@@ -5,7 +5,7 @@ description: Experience Platform 웹 SDK를 구성하는 방법 살펴보기
 seo-description: Experience Platform 웹 SDK를 구성하는 방법 살펴보기
 keywords: configuring;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;environment;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;prehidingStyle;opacity;cookieDestinationsEnabled;urlDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 233bbd33e3d1e89ff67a9daa00372732934ac573
 workflow-type: tm+mt
 source-wordcount: '749'
 ht-degree: 11%
@@ -46,7 +46,7 @@ SDK를 해당 계정 및 구성에 연결하는 할당된 구성 ID입니다.  �
 | ---------------- | ------------ | -------------------------------------------------- |
 | 문자열 배열 | 아니요 | `["web", "device", "environment", "placeContext"]` |
 
-자동 정보에 설명된 대로 자동으로 수집할 컨텍스트 카테고리를 [나타냅니다](../reference/automatic-information.md).  이 구성을 지정하지 않으면 기본적으로 모든 카테고리가 사용됩니다.
+자동 정보에 설명된 대로 자동으로 수집할 컨텍스트 카테고리를 [나타냅니다](../data-collection/automatic-information.md).  이 구성을 지정하지 않으면 기본적으로 모든 카테고리가 사용됩니다.
 
 ### `debugEnabled`
 
@@ -109,7 +109,7 @@ Your assigned [!DNL Experience Cloud] organization ID.  페이지 내에서 여�
 | -------- | ------------ | ----------------- |
 | 개체 | 아니요 | `"in"` |
 
-사용자의 기본 동의를 설정합니다. 사용자에 대해 이미 저장된 동의 환경 설정이 없을 때 사용됩니다. 다른 유효한 값은 입니다 `"pending"`. 이 설정이 되면 사용자가 동의 환경 설정을 제공할 때까지 작업이 대기됩니다. 사용자의 환경 설정이 제공되면 사용자의 환경 설정에 따라 작업이 진행되거나 중단됩니다. 자세한 [내용은 동의](supporting-consent.md) 지원을 참조하십시오.
+사용자의 기본 동의를 설정합니다. 사용자에 대해 이미 저장된 동의 환경 설정이 없을 때 사용됩니다. 다른 유효한 값은 입니다 `"pending"`. 이 설정이 되면 사용자가 동의 환경 설정을 제공할 때까지 작업이 대기됩니다. 사용자의 환경 설정이 제공되면 사용자의 환경 설정에 따라 작업이 진행되거나 중단됩니다. 자세한 [내용은 동의](../consent/supporting-consent.md) 지원을 참조하십시오.
 
 ## 개인화 옵션
 
