@@ -1,13 +1,13 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: 카탈로그 및 데이터 집합 안내서
-user-guide-description: Explore data lineage, metadata, file descriptions, directories, and datasets within the Data Lake.
+user-guide-title: Catalog and Datasets 안내서
+user-guide-description: 데이터 레이크 내에서 데이터 계보, 메타데이터, 파일 설명, 디렉토리 및 데이터 세트를 탐색합니다.
 translation-type: tm+mt
 source-git-commit: 4e358fda1c8f7aebe57a009a146b8b73cf88e169
 workflow-type: tm+mt
-source-wordcount: '93'
-ht-degree: 5%
+source-wordcount: '106'
+ht-degree: 20%
 
 ---
 
