@@ -2,13 +2,13 @@
 product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform 도움말의 샌드박스
-breadcrumb-title: Sandoxes Guide
-user-guide-description: Partition a Platform instance into virtual environments for development, testing, and application deployment.
+breadcrumb-title: Sandoxes 안내서
+user-guide-description: 개발, 테스트 및 응용 프로그램 배포를 위해 플랫폼 인스턴스를 가상 환경으로 분할합니다.
 translation-type: tm+mt
 source-git-commit: 4e358fda1c8f7aebe57a009a146b8b73cf88e169
 workflow-type: tm+mt
-source-wordcount: '71'
-ht-degree: 7%
+source-wordcount: '86'
+ht-degree: 30%
 
 ---
 
