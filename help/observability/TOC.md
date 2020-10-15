@@ -1,18 +1,18 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: 통찰력 통찰력 가이드
-user-guide-description: Monitor Platform activities through the use of statistical metrics and event notifications.
+user-guide-title: Observability Insights 안내서
+user-guide-description: 통계 지표 및 이벤트 알림을 사용하여 플랫폼 활동을 모니터링합니다.
 translation-type: tm+mt
 source-git-commit: 72b2172bbcc8613a2030b4784270321c3933f6aa
 workflow-type: tm+mt
-source-wordcount: '43'
-ht-degree: 18%
+source-wordcount: '55'
+ht-degree: 45%
 
 ---
 
 
-# 통찰력 통찰력 {#observability}
+# 가시성 통찰력 {#observability}
 
 * [통찰력 통찰력 개요](home.md)
 * Observability Insights API 개발자 가이드 {#api}
