@@ -5,9 +5,9 @@ description: Experience Platform 웹 SDK 이벤트를 추적하는 방법 학습
 seo-description: Experience Platform 웹 SDK 이벤트를 추적하는 방법 학습
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
 translation-type: tm+mt
-source-git-commit: 69ddfca041624123b03eb01d0f10a5bdb36cd119
+source-git-commit: db742119d8f169817080f1fd4e0dc08a0f0faa47
 workflow-type: tm+mt
-source-wordcount: '1116'
+source-wordcount: '1139'
 ht-degree: 0%
 
 ---
@@ -54,7 +54,7 @@ alloy("sendEvent", {
 
 ### 설정 `eventType`
 
-XDM 경험 이벤트에는 선택 `eventType` 필드가 있습니다. 여기에는 레코드의 기본 이벤트 유형이 포함됩니다. 이벤트 유형을 설정하면 전송할 다른 이벤트를 구별할 수 있습니다. XDM은 사용할 수 있거나 사용 사례에 대해 사용자 지정 이벤트 유형을 항상 만들 수 있는 몇 가지 사전 정의된 이벤트 유형을 제공합니다. 다음은 XDM에서 제공하는 모든 사전 정의된 이벤트 유형 목록입니다.
+XDM 경험 이벤트에는 선택 `eventType` 필드가 있습니다. 여기에는 레코드의 기본 이벤트 유형이 포함됩니다. 이벤트 유형을 설정하면 전송할 다른 이벤트를 구별할 수 있습니다. XDM은 사용할 수 있거나 사용 사례에 대해 사용자 지정 이벤트 유형을 항상 만들 수 있는 몇 가지 사전 정의된 이벤트 유형을 제공합니다. 다음은 XDM에서 제공하는 모든 사전 정의된 이벤트 유형 목록입니다. [XDM 공개 보고서 보기](https://github.com/adobe/xdm/blob/master/docs/reference/behaviors/time-series.schema.md#xdmeventtype-known-values)
 
 
 | **이벤트 유형:** | **정의:** |
@@ -83,7 +83,7 @@ XDM 경험 이벤트에는 선택 `eventType` 필드가 있습니다. 여기에�
 | delivery.feedback | 전달에 대한 피드백 이벤트입니다. 이메일 전달에 대한 피드백 이벤트 예 |
 
 
-론치 확장 기능을 사용하거나 론치 없이 언제든지 전달할 수 있는 경우 이러한 이벤트 유형이 드롭다운에 표시됩니다. 옵션 일부로서 전달될 수 `xdm` 있습니다.
+이러한 이벤트 유형은 Adobe Experience Platform Launch 확장을 사용하거나 Experience Platform Launch 없이 언제든지 전달할 수 있는 경우 드롭다운에 표시됩니다. 옵션 일부로서 전달될 수 `xdm` 있습니다.
 
 
 ```javascript
@@ -131,7 +131,7 @@ alloy("sendEvent", {
 
 ### ID 정보 추가
 
-사용자 지정 ID 정보를 이벤트에 추가할 수도 있습니다. Experience Cloud [ID 검색을 참조하십시오.](./identity.md)
+사용자 지정 ID 정보를 이벤트에 추가할 수도 있습니다. Experience Cloud [ID 검색을 참조하십시오.](../identity/overview.md)
 
 ## sendBeacon API 사용
 
@@ -205,7 +205,7 @@ alloy("configure", {
 `xdm` 필드는 다음 순서로 설정됩니다.
 
 1. 이벤트 명령에 옵션으로 전달된 값 `alloy("sendEvent", { xdm: ... });`
-2. 자동으로 수집된 값.  자세한 내용은 [자동 정보를 참조하십시오](../reference/automatic-information.md).
+2. 자동으로 수집된 값.  자세한 내용은 [자동 정보를 참조하십시오](../data-collection/automatic-information.md).
 3. 콜백에서 수행된 `onBeforeEventSend` 변경 사항.
 
 콜백에서 `onBeforeEventSend` 예외가 발생해도 이벤트가 계속 전송됩니다.하지만 콜백 내에서 수행된 변경 사항은 최종 이벤트에 적용되지 않습니다.
