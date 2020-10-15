@@ -2,13 +2,13 @@
 product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform 세그멘테이션 서비스 도움말
-breadcrumb-title: Segmentation Service Guide
-user-guide-description: Build segments and generate audiences from your Real-time Customer Profile data.
+breadcrumb-title: Segmentation Service 안내서
+user-guide-description: 실시간 고객 프로필 데이터에서 세그먼트를 작성하고 대상을 생성합니다.
 translation-type: tm+mt
 source-git-commit: beacce03136e1620ff57fb549f335d2199bb6001
 workflow-type: tm+mt
-source-wordcount: '121'
-ht-degree: 19%
+source-wordcount: '135'
+ht-degree: 27%
 
 ---
 
