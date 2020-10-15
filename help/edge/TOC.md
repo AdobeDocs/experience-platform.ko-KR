@@ -5,10 +5,10 @@ user-guide-title: Adobe Experience Platform 웹 SDK 도움말
 breadcrumb-title: Web SDK 안내서
 user-guide-description: Edge Network를 통해 Experience Cloud 서비스와 상호 작용할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 67928b35416928947a4b288d9aea92a065f080f6
+source-git-commit: 233bbd33e3d1e89ff67a9daa00372732934ac573
 workflow-type: tm+mt
-source-wordcount: '128'
-ht-degree: 29%
+source-wordcount: '117'
+ht-degree: 32%
 
 ---
 
@@ -16,41 +16,37 @@ ht-degree: 29%
 # Adobe Experience Platform Web SDK {#edge}
 
 * [웹 SDK 개요](home.md)
-* 시작하기 {#get-started}
-   * [빠른 시작](getting-started/quick-start-with-launch.md)
-   * [실행 없이 빠른 시작](getting-started/quick-start-without-launch.md)
 * 기본 사항 {#fundamentals}
-   * [SDK 설치](fundamentals/installing-the-sdk.md)
-   * [명령 실행](fundamentals/executing-commands.md)
+   * [전제 조건](fundamentals/prerequisite.md)
    * [에지 구성](fundamentals/edge-configuration.md)
+   * [SDK 설치](fundamentals/installing-the-sdk.md)
    * [SDK 구성](fundamentals/configuring-the-sdk.md)
+   * [명령 실행](fundamentals/executing-commands.md)
    * [이벤트 추적](fundamentals/tracking-events.md)
-   * [이벤트 데이터 병합](fundamentals/merging-event-data.md)
    * [디버깅](fundamentals/debugging.md)
+   * [이벤트 데이터 병합](fundamentals/merging-event-data.md)
    * [여러 속성을 사용한 인터랙션](fundamentals/interacting-with-multiple-properties.md)
-   * [맞춤형 컨텐츠 렌더링](fundamentals/rendering-personalization-content.md)
-   * [지원 동의](fundamentals/supporting-consent.md)
-   * [ID](fundamentals/identity.md)
-* 구현할 사항 {#implement}
-   * [제품](what-to-implement/commerce.md)
-* 솔루션별 고려 사항 {#solutions}
-   * Analytics {#analytics}
-      * [분석 개요](solution-specific/analytics/analytics-overview.md)
-      * [Analytics에서 수동으로 변수 매핑](solution-specific/analytics/manually-mapping-variables.md)
-      * [자동으로 매핑된 변수](solution-specific/analytics/automatically-mapped-vars.md)
-      * [Adobe Analytics으로 데이터 보내기](solution-specific/analytics/link-tracking.md)
-   * Audience Manager {#aam}
-      * [Audience Manager 개요](solution-specific/audience-manager/audience-manager-overview.md)
+* ID {#identity}
+   * [개요](identity/overview.md)
+* 데이터 수집 {#data-collection}
+   * [자동으로 수집된 정보](data-collection/automatic-information.md)
+   * [링크 추적](data-collection/track-links.md)
+   * [상거래 및 제품 데이터 수집](data-collection/collect-commerce-data.md)
+   * Adobe Analytics {#adobe-analytics}
+      * [Analytics 개요](data-collection/adobe-analytics/analytics-overview.md)
+      * [Adobe Analytics에서 수동으로 변수 매핑](data-collection/adobe-analytics/manually-mapping-variables.md)
+      * [자동으로 매핑된 변수](data-collection/adobe-analytics/automatically-mapped-vars.md)
+      * [Adobe Analytics으로 데이터 보내기](data-collection/adobe-analytics/sending-data-to-analytics.md)
+* 개인화 {#personalization}
+   * [맞춤형 컨텐츠 렌더링](personalization/rendering-personalization-content.md)
+   * [깜박임 관리](personalization/manage-flicker.md)
+   * Adobe Target {#adobe-target}
+      * [Target 개요](personalization/adobe-target/target-overview.md)
+* 동의 {#consent}
+   * [지원 동의](consent/supporting-consent.md)
    * IAB Transparency and Consent Framework 2.0 {#iab-tcf}
-      * [개요](solution-specific/iab-tcf/overview.md)
-      * [Launch와 통합](solution-specific/iab-tcf/with-launch.md)
-      * [실행 없이 통합](solution-specific/iab-tcf/without-launch.md)
-   * Target {#target}
-      * [Target 개요](solution-specific/target/target-overview.md)
-      * [깜박임 관리](solution-specific/target/flicker-management.md)
-* 참조 {#ref}
-   * [자동으로 수집된 정보](reference/automatic-information.md)
-   * [라이브러리 정보 검색](reference/retrieving-library-information.md)
+      * [개요](consent/iab-tcf/overview.md)
+      * [Adobe Experience Platform Launch과 통합](consent/iab-tcf/with-launch.md)
+      * [Adobe Experience Platform Launch 없이 통합](consent/iab-tcf/without-launch.md)
 * [릴리스 노트](release-notes.md)
-* [플랫폼 릴리스 정보](https://www.adobe.com/go/platform-release-notes-en)
-* [FAQ](getting-started/web-sdk-faq.md)
+* [FAQ](web-sdk-faq.md)
