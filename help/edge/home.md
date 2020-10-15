@@ -5,9 +5,9 @@ description: Adobe Experience Platform 웹 SDK의 정의와 사용 방법을 살
 seo-description: adobe experience cloud 고객이 Experience Cloud의 다양한 서비스와 상호 작용할 수 있도록 허용
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;edge;Visitor.js;AppMeasurement.js;AT.js;DIL.js;web sdk;SDK;web SDK;Launch;launch
 translation-type: tm+mt
-source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
+source-git-commit: db742119d8f169817080f1fd4e0dc08a0f0faa47
 workflow-type: tm+mt
-source-wordcount: '702'
+source-wordcount: '708'
 ht-degree: 2%
 
 ---
@@ -15,13 +15,13 @@ ht-degree: 2%
 
 # Adobe Experience Platform 웹 SDK 소개
 
-Adobe Experience Platform 웹 SDK는 Adobe Experience Cloud 고객이 Adobe을 통해 다양한 서비스와 상호 작용할 수 있는 클라이언트측 JavaScript 라이브러리입니다 [!DNL Experience Cloud] [!DNL Experience Platform Edge Network]. JavaScript 라이브러리 외에도 웹 SDK 구성 [에 도움이 되는 Launch 익스텐션이](https://docs.adobe.com/content/help/ko-KR/launch/using/extensions-ref/adobe-extension/aep-extension/overview.html) 있습니다.
+Adobe Experience Platform 웹 SDK는 Adobe Experience Cloud 고객이 Adobe을 통해 다양한 서비스와 상호 작용할 수 있는 클라이언트측 JavaScript 라이브러리입니다 [!DNL Experience Cloud] [!DNL Experience Platform Edge Network]. JavaScript 라이브러리 외에도 웹 SDK 구성에 도움이 되는 [Experience Platform Launch](https://docs.adobe.com/content/help/ko-KR/launch/using/extensions-ref/adobe-extension/aep-extension/overview.html) 확장이 있습니다.
 
 ## 경험 에지
 
 [!DNL Adobe Experience Platform Web SDK] 는 Experience Edge를 구성하는 컬렉션의 일부입니다. Adobe Experience Edge는
 
-* **[!DNL Adobe Experience Platform Web SDK]:** JavaScript SDK 및 [!DNL Launch] 익스텐션을 통해 [!DNL Adobe] 기술 배포 간소화
+* **[!DNL Adobe Experience Platform Web SDK]:** JavaScript SDK 및 [!DNL Experience Platform Launch] 익스텐션을 통해 [!DNL Adobe] 기술 배포 간소화
 * **Adobe Experience Platform 모바일 SDK:** 고객이 새로운 배포 방법을 사용할 수 있도록 v5 모바일 SDK 확장
 * **[!DNL Adobe Experience Platform Edge Network]:** 제품을 배포하는 새로운 방법을 제공하는 글로벌 분산 서버 [!DNL Adobe] 네트워크
 
@@ -65,7 +65,7 @@ Adobe Experience Platform 웹 SDK는 다음 SDK를 대체합니다.
 
 ## 시작하기
 
-Adobe 시작 [을 사용하는 방법에 대한 빠른 자습서를 보려면 시작 가이드](getting-started/quick-start-with-launch.md) 를 확인해 보는 것이 좋습니다.
+Adobe Experience Platform Launch을 [사용하는 방법에 대한 빠른 자습서를 보려면 시작 안내서](consent/iab-tcf/with-launch.md) 를 참조하십시오.
 
 이 제품은 점점 더 많은 사용 사례를 지원하기 위해 끊임없이 진화하고 증가하고 있습니다. 최신 정보를 얻으려면 [지원되는 사용 사례 보드를 확인하십시오](https://github.com/adobe/alloy/projects/5). Adobe는 Adobe가 현재 지원하는 사용 사례와 귀하가 최상의 결정을 내릴 수 있도록 노력하고 있는 사례에 대해 이러한 최신 정보를 제공합니다.
 
