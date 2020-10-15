@@ -5,9 +5,9 @@ description: Experience Platform 웹 SDK 디버깅 전환 방법 살펴보기
 seo-description: Experience Platform 웹 SDK 디버깅 전환 방법 살펴보기
 keywords: debugging web sdk;debugging;configure;configure command;debug command;edgeConfigId;setDebug;debugEnabled;debug;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: e21374eb51ec1d572f6a4973d33cadf9ae17969b
 workflow-type: tm+mt
-source-wordcount: '324'
+source-wordcount: '384'
 ht-degree: 1%
 
 ---
@@ -68,3 +68,17 @@ http://example.com/?alloy_debug=true
 * 세션 종료
 * 명령을 `debug` 실행합니다
 * 쿼리 문자열 매개 변수를 다시 설정합니다
+
+## 라이브러리 정보 검색 중
+
+웹 사이트에 로드한 라이브러리 이면의 일부 세부 정보에 액세스하는 것은 종종 유용합니다. 이렇게 하려면 다음과 같이 `getLibraryInfo` 명령을 실행합니다.
+
+```js
+alloy("getLibraryInfo").then(function(libraryInfo) {
+  console.log(libraryInfo.version);
+});
+```
+
+현재 제공된 개체에는 다음 속성이 `libraryInfo` 포함되어 있습니다.
+
+* `version` 로드된 라이브러리의 버전입니다. 예를 들어 로드되는 라이브러리 버전이 1.0.0이면 값이 됩니다 `1.0.0`.
