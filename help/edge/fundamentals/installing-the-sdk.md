@@ -5,9 +5,9 @@ description: Experience Platform 웹 SDK 설치 방법 살펴보기
 seo-description: Experience Platform 웹 SDK 설치 방법 살펴보기
 keywords: web sdk installation;installing web sdk;internet explorer;promise;
 translation-type: tm+mt
-source-git-commit: 7aa0e654300f10db774794d66ece9d0d040cb2ba
+source-git-commit: 5ef902ef7f7717121744f7f0074c0aa17e5a9e9a
 workflow-type: tm+mt
-source-wordcount: '623'
+source-wordcount: '626'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 1%
 
 # SDK 설치 {#installing-the-sdk}
 
-Launch를 통해 Adobe Experience Platform 웹 SDK를 사용하는 것이 [좋습니다](http://launch.adobe.com/). Extension 카탈로그 `AEP Web SDK` 에서 Extension을 검색하고 설치한 다음 Extension을 구성합니다.
+Adobe Experience Platform 웹 SDK를 사용하는 가장 선호하는 방법은 [Adobe Experience Platform Launch을 이용하는 것입니다](http://launch.adobe.com/). Extension 카탈로그 `AEP Web SDK` 에서 Extension을 검색하고 설치한 다음 Extension을 구성합니다.
 
 AEP 웹 SDK는 CDN에서 사용할 수도 있습니다. 이 파일을 참조하거나 다운로드하여 자체 인프라에서 호스팅할 수 있습니다. 축소 및 축소 버전이 아닌 버전으로 사용할 수 있습니다. 분류되지 않은 버전은 디버깅에 유용합니다.
 
