@@ -5,9 +5,9 @@ title: Adobe Experience Platform 개요
 topic: getting started
 description: Adobe Experience Platform은 고객 경험을 향상시키는 완벽한 솔루션을 구축하고 관리하기 위해 시장에서 가장 강력하고 유연하며 개방적인 시스템입니다. Experience Platform을 사용하면 조직 내 모든 시스템의 고객 데이터와 컨텐츠를 중앙 집중화 및 표준화하고 데이터 과학 및 시스템 학습을 적용하여 풍부한 개인별 경험을 더 잘 설계하고 전달할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 13aa49c28db0818df5d47560ae7a220d0790610f
+source-git-commit: 36707e95a63b6be60d1d7badbe1cdc9d0bc3548c
 workflow-type: tm+mt
-source-wordcount: '465'
+source-wordcount: '466'
 ht-degree: 15%
 
 ---
@@ -44,7 +44,7 @@ Adobe은 Experience Platform을 기반으로 애플리케이션 서비스를 구
 * [**API 기본 사항**](api-fundamentals.md)\
    API 작업에 대한 기본 사항을 [!DNL Platform] 알아봅니다.
 
-* [**API 참조**](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)\
+* [**API 참조 문서**](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)\
    헤더, 매개 변수, 샘플 요청 및 응답을 비롯한 API를 검색할 수 있습니다. [!DNL Experience Platform]<br/>*이러한 문서는 Adobe I/O에 호스팅됩니다.*
 
 * [**용어 설명**](glossary.md)\
