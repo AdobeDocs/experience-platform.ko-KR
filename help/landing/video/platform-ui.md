@@ -9,9 +9,9 @@ doc-type: video
 activity: understand
 thumbnail: 32792.jpg
 translation-type: tm+mt
-source-git-commit: 13aa49c28db0818df5d47560ae7a220d0790610f
+source-git-commit: 86d6476877eb7a0413658e476802a1cd8905dcc3
 workflow-type: tm+mt
-source-wordcount: '87'
+source-wordcount: '105'
 ht-degree: 0%
 
 ---
@@ -20,5 +20,10 @@ ht-degree: 0%
 # Experience Platform UI 둘러보기
 
 이 비디오에서는 Experience Cloud에서 Experience Platform으로 이동하는 방법, 홈 페이지와 상호 작용하는 방법, 샌드박스 전환, UI 내에서 다양한 탐색 요소를 사용하는 방법 등 Adobe Experience Platform 유저 인터페이스(UI)를 빠르게 둘러볼 수 있습니다.
+
+>[!NOTE]
+>
+>Experience Platform 사용자 인터페이스는 자주 업데이트되며 이 비디오 레코딩 이후 변경되었을 수 있습니다.
+
 
 >[!VIDEO](https://video.tv.adobe.com/v/32792?quality=12&learn=on)
