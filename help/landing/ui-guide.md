@@ -5,9 +5,9 @@ title: Adobe Experience Platform UI 안내서
 topic: ui guide
 description: 'Adobe Experience Platform '
 translation-type: tm+mt
-source-git-commit: 84f1f840e15cb4487807c13131d0787772fa063a
+source-git-commit: bde9763aafb4ba32877f7ec14873eeae99760a45
 workflow-type: tm+mt
-source-wordcount: '1586'
+source-wordcount: '1597'
 ht-degree: 0%
 
 ---
@@ -111,7 +111,7 @@ Adobe Experience Platform에 로그인한 후에는 지표 대시보드, 최근 
 
 [ **[!UICONTROL 홈]** ] 섹션에서는 플랫폼 UI 홈 페이지로 돌아갈 수 있습니다.
 
-워크플로우 **[!UICONTROL 섹션]** 은 플랫폼 내에서 작업을 수행하기 위한 여러 단계로 구성된 워크플로우 목록을 보여줍니다.
+워크플로우 **[!UICONTROL 섹션]** 은 플랫폼 내에서 작업을 수행하기 위한 여러 단계로 구성된 워크플로우 목록을 보여줍니다. 워크플로우에 대한 자세한 내용은 [워크플로우 개요를 참조하십시오](./workflows.md).
 
 ### [!UICONTROL 연결]
 
