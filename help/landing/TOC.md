@@ -5,10 +5,10 @@ user-guide-title: Adobe Experience Platform 개요
 breadcrumb-title: Experience Platform 개요
 user-guide-description: Experience Platform을 통해 개인화된 경험을 실시간으로 고객에게 전달하는 방법을 살펴볼 수 있습니다.
 translation-type: tm+mt
-source-git-commit: e36a6be43bffa90ce707933c5f9407fade0b6474
+source-git-commit: 36707e95a63b6be60d1d7badbe1cdc9d0bc3548c
 workflow-type: tm+mt
 source-wordcount: '402'
-ht-degree: 42%
+ht-degree: 44%
 
 ---
 
@@ -26,13 +26,13 @@ ht-degree: 42%
    * [역할 및 프로젝트 단계(비디오)](video/roles-project-phases.md)
 * Experience Platform UI {#platform-ui}
    * [플랫폼 UI 안내서](ui-guide.md)
-   * [플랫폼 워크플로우 가이드](workflows.md)
    * [플랫폼 UI 둘러보기(비디오)](video/platform-ui.md)
+   * [워크플로우 UI 가이드](workflows.md)
    * [브라우저 및 언어 지원](browser-language-support.md)
 * Experience Platform API {#platform-apis}
    * [API 기본 사항](api-fundamentals.md)
+   * [API 참조 문서](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)
    * [Experience Platform API 인증](https://docs.adobe.com/content/help/en/platform-learn/tutorials/platform-api-authentication.html)
-   * [플랫폼 API 참조 문서](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)
 * 플랫폼 설명서 {#documentation}
    * [설명서 개요](documentation/overview.md)
    * [액세스 제어](https://docs.adobe.com/content/help/ko-KR/experience-platform/access-control/home.html)
@@ -56,8 +56,8 @@ ht-degree: 42%
    * [쿼리 서비스](https://docs.adobe.com/content/help/en/experience-platform/query/home.html)
    * [실시간 고객 데이터 플랫폼](https://docs.adobe.com/content/help/en/experience-platform/rtcdp/overview.html)
    * [샌드 박스](https://docs.adobe.com/content/help/ko-KR/experience-platform/sandbox/home.html)
-   * [세그먼테이션](https://docs.adobe.com/content/help/en/experience-platform/segmentation/home.html)
-   * [스키마](https://docs.adobe.com/content/help/ko-KR/experience-platform/xdm/home.html)
+   * [스키마(XDM)](https://docs.adobe.com/content/help/ko-KR/experience-platform/xdm/home.html)
+   * [세그먼테이션](https://docs.adobe.com/content/help/ko-KR/experience-platform/segmentation/home.html)
    * [소스(커넥터)](https://docs.adobe.com/content/help/en/experience-platform/sources/home.html)
    * [웹 SDK](https://docs.adobe.com/content/help/ko-KR/experience-platform/edge/home.html)
 * Adobe 에코시스템의 플랫폼 {#ecosystem}
