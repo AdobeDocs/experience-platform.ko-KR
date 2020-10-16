@@ -5,7 +5,7 @@ title: Adobe Experience Platform 설명서 개요
 topic: overview
 description: Adobe Experience Platform 설명서는 개요, 자습서, 사용자 인터페이스와 API에 대한 안내선 등 다양한 형식으로 제공됩니다. 다음은 Experience Platform 서비스에 사용할 수 있는 가장 일반적인 문서 유형에 대한 간략한 설명입니다.
 translation-type: tm+mt
-source-git-commit: 13aa49c28db0818df5d47560ae7a220d0790610f
+source-git-commit: 36707e95a63b6be60d1d7badbe1cdc9d0bc3548c
 workflow-type: tm+mt
 source-wordcount: '1035'
 ht-degree: 1%
@@ -31,7 +31,7 @@ Adobe Experience Platform 설명서는 개요, 자습서, 사용자 인터페이
 
 * **자습서:** 자습서는 UI, API 또는 두 가지 조합을 통해 특정 결과를 도출하는 단계별 가이드입니다. 개발자 안내서와 달리 API 자습서는 하나 또는 두 개의 끝점에 대해서만 초점을 맞출 수 있으며 완벽한 API 리소스는 아닙니다. 마찬가지로 UI 자습서는 해당 서비스에 사용할 수 있는 전체 사용자 인터페이스가 아닌 특정 단계에만 집중할 수 있습니다. Tutorials은 대규모 워크플로우의 일부이며, 다음에 시도해 볼 수 있는 자습서를 설명하는 &quot;다음 단계&quot;를 제공합니다.
 
-* **사용 안내서:** 사용자 안내서는 특정 서비스에 대해 [!DNL Platform] UI에서 사용할 수 있는 작업에 대해 대략적으로 설명합니다. 이 문서에는 사용자 인터페이스를 통해 플랫폼과의 상호 작용에 초점을 맞춘 스크린샷과 단계가 포함되어 있습니다. 개발자 안내서와 유사한 사용자 안내서에서는 &quot;gotchas&quot;를 비롯한 사용 가능한 모든 작업 및 옵션에 대해 설명합니다. UI 작업을 위한 가장 자세한 리소스입니다.
+* **UI 안내서:** UI 안내서에서는 특정 서비스에 대한 [!DNL Platform] 사용자 인터페이스에서 사용할 수 있는 작업에 대해 간략하게 설명합니다. 이 문서에는 스크린샷과 UI를 통해 플랫폼과의 상호 작용에 초점을 맞춘 단계가 포함되어 있습니다. 개발자 안내서와 유사한 UI 안내서에서는 &quot;gotchas&quot;를 비롯한 사용 가능한 모든 작업 및 옵션에 대해 설명합니다. UI 작업을 위한 가장 자세한 리소스입니다.
 
 ## 설명서 언어 지원
 
@@ -63,6 +63,6 @@ Experience Platform 설명서는 여러 언어로 제공됩니다. 언어를 변
 * **[!DNL Query Service]:** SQL 쿼리를 사용하여 Adobe 솔루션 데이터, 고객 자사 데이터 또는 기타 플랫폼 데이터와 같은 Adobe Experience Platform에서 데이터를 검색할 수 있습니다.
 * **[!DNL Real-time Customer Data Platform]:** 실시간 CDP는 여러 엔터프라이즈 데이터 소스를 통합하여 실시간으로 통합 프로파일을 생성하므로 모든 채널과 디바이스에서 개인화된 고객 경험을 제공하는 데 사용할 수 있습니다.
 * **[!DNL Sandboxes]:** 샌드박스는 단일 [!DNL Platform] 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 애플리케이션을 개발하고 발전시킬 수 있습니다.
+* **스키마**:Adobe을 기반으로 하는 XDM(Experience Data Model)은 고객 경험 데이터를 표준화하고 고객 경험 관리를 위한 스키마를 정의하는 것입니다. XDM 스키마는 구성 요소 간의 데이터 상호 운용성을 [!DNL Experience Platform] 지원합니다.
 * **[!DNL Segmentation]:** 실시간 고객 프로파일 데이터를 기반으로 세그먼트를 작성하여 고객을 생성하고 고객 경험을 강화합니다.
 * **[!DNL Sources](연결):**{#sources} Adobe 애플리케이션, 클라우드 기반의 스토리지, 데이터베이스 등 다양한 소스의 데이터를 Adobe Experience Platform으로 가져올 수 있습니다.
-* **스키마**:Adobe을 기반으로 하는 XDM(Experience Data Model)은 고객 경험 데이터를 표준화하고 고객 경험 관리를 위한 스키마를 정의하는 것입니다. XDM 스키마는 구성 요소 간의 데이터 상호 운용성을 [!DNL Experience Platform] 지원합니다.
