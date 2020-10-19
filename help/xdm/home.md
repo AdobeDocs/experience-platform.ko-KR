@@ -5,9 +5,9 @@ title: XDM(Experience Data Model) 시스템
 topic: overview
 description: '표준화 및 상호 운용성은 Adobe Experience Platform의 핵심 개념입니다. Adobe을 기반으로 하는 XDM(Experience Data Model)은 고객 경험 데이터를 표준화하고 고객 경험 관리를 위한 스키마를 정의하는 것입니다. '
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: b7b57c0b70b1af3a833f0386bc809bb92c9b50f8
 workflow-type: tm+mt
-source-wordcount: '1638'
+source-wordcount: '1639'
 ht-degree: 1%
 
 ---
@@ -48,7 +48,7 @@ XDM은 Adobe Experience Cloud이 제공하는 기본 프레임워크로, 정확�
 
 클래스 내에서 고유한 클래스를 정의할 수 있지만, 기본 클래스 [!DNL Schema Registry]와 레코드 및 시간 시리즈 데이터 **[!DNL XDM Individual Profile]** **[!DNL XDM ExperienceEvent]** 에 각각 사용하는 것이 좋습니다. 이러한 클래스는 아래에 자세히 설명되어 있습니다.
 
-### [!DNL XDM Individual Profile]
+### [!DNL XDM Individual Profile] (#xdm-individual-profile)
 
 [!DNL XDM Individual Profile] 은 식별된 피사체와 부분적으로 식별된 피사체의 속성을 하나의 표현으로 구성하는 기록 기반 클래스입니다. 식별이 높은 프로필은 개인 커뮤니케이션 또는 타깃팅된 참여에 사용할 수 있으며 이름, 성별, 생년월일, 위치, 전화 번호 및 이메일 주소를 비롯한 연락처 정보와 같은 세부 개인 정보를 포함할 수 있습니다.
 
