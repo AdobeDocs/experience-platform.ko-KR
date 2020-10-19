@@ -5,9 +5,9 @@ title: 스키마 컴포지션의 기본 사항
 topic: overview
 description: 이 문서에서는 XDM(Experience Data Model) 스키마 및 Adobe Experience Platform에서 사용할 스키마를 작성하기 위한 기본 블록, 원칙 및 모범 사례에 대해 소개합니다.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: b7b57c0b70b1af3a833f0386bc809bb92c9b50f8
 workflow-type: tm+mt
-source-wordcount: '2839'
+source-wordcount: '2834'
 ht-degree: 0%
 
 ---
@@ -62,9 +62,9 @@ The infrastructure which [!DNL Experience Platform] is built, knowing [!DNL XDM 
 
 스키마는 데이터를 인제스트하는 데 사용됩니다 [!DNL Experience Platform]. 이 데이터를 여러 서비스에서 사용하여 개별 엔티티의 단일 통합 뷰를 만들 수 있습니다. 따라서 고객 ID에 대해 생각해 볼 스키마와 데이터가 어디에서 오는지에 관계없이 주체를 식별하는 데 사용할 수 있는 필드를 고려할 때 중요합니다.
 
-이 프로세스를 돕기 위해 스키마 내의 키 필드를 ID로 표시할 수 있습니다. 데이터 수집 시 해당 필드의 데이터는 해당 개인에 대한 &quot;[!UICONTROL ID 그래프]&quot;에 삽입됩니다. 그런 다음 그래프 데이터에 [[!DNL 실시간 고객 프로필]](../../profile/home.md) 및 기타 [!DNL Experience Platform] 서비스에서 액세스하여 각 개별 고객에 대한 연결된 보기를 제공할 수 있습니다.
+이 프로세스를 돕기 위해 스키마 내의 키 필드를 ID로 표시할 수 있습니다. 데이터 수집 시 해당 필드의 데이터는 해당 개인에 대한 &quot;[!UICONTROL ID 그래프]&quot;에 삽입됩니다. 그러면 그래프 데이터에 [[!DNL Real-time Customer Profile]](../../profile/home.md) 액세스하고 다른 [!DNL Experience Platform] 서비스를 통해 각 개별 고객에 대한 연결된 보기를 제공할 수 있습니다.
 
-일반적으로 &quot;ID&quot;로 표시된 필드는[!UICONTROL 다음과]같습니다.이메일 주소, 전화 번호, [[!DNL Experience Cloud ID(ECID)]](https://docs.adobe.com/content/help/ko-KR/id-service/using/home.html), CRM ID 또는 기타 고유한 ID 필드 또한 &quot;[!UICONTROL Identity]&quot; 필드도 양호할 수 있으므로 조직 고유의 식별자를 고려해야 합니다.
+일반적으로 &quot;ID&quot;로 표시된 필드는[!UICONTROL 다음과]같습니다.이메일 주소, 전화 번호, [[!DNL Experience Cloud ID (ECID)]](https://docs.adobe.com/content/help/ko-KR/id-service/using/home.html)CRM ID 또는 기타 고유 ID 필드 또한 &quot;[!UICONTROL Identity]&quot; 필드도 양호할 수 있으므로 조직 고유의 식별자를 고려해야 합니다.
 
 가장 강력한 프로파일을 구축하기 위해 데이터를 취합하는 것을 돕기 위해 스키마 계획 단계 동안 고객 ID를 고려하는 것이 중요합니다. ID 정보를 통해 고객에게 디지털 경험을 전달하는 방법에 대한 자세한 내용은 [Adobe Experience Platform ID 서비스](../../identity-service/home.md) 개요를 참조하십시오.
 
@@ -123,7 +123,7 @@ The infrastructure which [!DNL Experience Platform] is built, knowing [!DNL XDM 
 
 ### 스키마 및 데이터 수집
 
-데이터를 인제스트하려면 먼저 데이터 세트 [!DNL Experience Platform]를 만들어야 합니다. 데이터 세트는 [[!DNL Catalog Service]에 대한 데이터 변환 및 추적을 위한 기본](../../catalog/home.md)블록이며, 일반적으로 인제스트된 데이터를 포함하는 테이블 또는 파일을 나타냅니다. 모든 데이터 집합은 기존 XDM 스키마를 기반으로 하며, 이는 인제스트된 데이터가 포함되어야 하는 내용과 데이터 구성 방식에 대한 제약 조건을 제공합니다. 자세한 내용은 [Adobe Experience Platform 데이터 수집](../../ingestion/home.md) 개요를 참조하십시오.
+데이터를 인제스트하려면 먼저 데이터 세트 [!DNL Experience Platform]를 만들어야 합니다. 데이터 집합은 데이터 변환 및 추적을 위한 기본 [[!DNL Catalog Service]](../../catalog/home.md)요소이며, 일반적으로 인제스트된 데이터가 들어 있는 테이블 또는 파일을 나타냅니다. 모든 데이터 집합은 기존 XDM 스키마를 기반으로 하며, 이는 인제스트된 데이터가 포함되어야 하는 내용과 데이터 구성 방식에 대한 제약 조건을 제공합니다. 자세한 내용은 [Adobe Experience Platform 데이터 수집](../../ingestion/home.md) 개요를 참조하십시오.
 
 ## 스키마 구성 블록
 
@@ -194,11 +194,11 @@ The infrastructure which [!DNL Experience Platform] is built, knowing [!DNL XDM 
 
 다운스트림 서비스 및 애플리케이션에서 사용되는 일부 데이터 작업은 특정 필드 유형에 대해 제한을 적용합니다. 해당되는 서비스에는 다음이 포함되지만 이에 국한되지 않습니다.
 
-* [[!DNL 실시간 고객 프로필]](../../profile/home.md)
+* [[!DNL Real-time Customer Profile]](../../profile/home.md)
 * [[!DNL Identity Service]](../../identity-service/home.md)
-* [[!DNL 세그멘테이션]](../../segmentation/home.md)
-* [[!DNL 쿼리 서비스]](../../query-service/home.md)
-* [[!DNL 데이터 과학 작업 공간]](../../data-science-workspace/home.md)
+* [[!DNL Segmentation]](../../segmentation/home.md)
+* [[!DNL Query Service]](../../query-service/home.md)
+* [[!DNL Data Science Workspace]](../../data-science-workspace/home.md)
 
 다운스트림 서비스에서 사용할 스키마를 만들기 전에 해당 서비스에 대한 적절한 설명서를 검토하여 스키마가 의도한 데이터 작업에 대한 필드 요구 사항과 제한 사항을 보다 잘 파악하십시오.
 
@@ -238,7 +238,12 @@ XDM은 기본 필드 및 고유한 데이터 유형을 정의하는 기능 외�
 
 ## 다음 단계
 
-스키마 컴포지션의 기본 사항을 이해하면 스키마를 사용하여 스키마 작성을 시작할 수 있습니다 [!DNL Schema Registry].
+이제 스키마 컴포지션의 기본 사항을 이해했으므로 스키마를 사용하여 스키마 탐색을 시작하고 작성을 시작할 수 있습니다 [!DNL Schema Registry].
+
+두 개의 핵심 XDM 클래스 및 일반적으로 사용되는 호환 믹스의 구조를 검토하려면 다음 참조 설명서를 참조하십시오.
+
+* [[!DNL XDM Individual Profile]](../classes/individual-profile.md)
+* [[!DNL XDM ExperienceEvent]](../classes/experienceevent.md)
 
 이 [!DNL Schema Registry] 는 Adobe Experience Platform [!DNL Schema Library] 내의 라이브러리에 액세스하는 데 사용되며 사용 가능한 모든 라이브러리 리소스에 액세스할 수 있는 사용자 인터페이스와 RESTful API를 제공합니다. 이 [!DNL Schema Library] 에는 Adobe으로 정의된 산업 리소스, 파트너가 정의한 공급업체 리소스, [!DNL Experience Platform] 조직의 구성원이 구성한 클래스, 믹싱, 데이터 유형 및 스키마가 포함되어 있습니다.
 
