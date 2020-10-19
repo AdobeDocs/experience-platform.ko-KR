@@ -1,11 +1,18 @@
 ---
-source-git-commit: 14cd3d17c7d9ba602d02925abddec9e0b246a8c8
+source-git-commit: e647db615371f5a153e180e5a0d06fd7439a45c6
+workflow-type: tm+mt
 translation-type: tm+mt
+source-wordcount: '643'
+ht-degree: 65%
 
 ---
 # 컨텐츠 기여
 
-| 프로덕션 | 스테이지 |
+| EXL-PR | EXL | 미리 보기 | 활성화 | 게시됨 | 도움말 |
+|--- |--- |--- |--- |--- |--- |
+| [![빌드 상태](https://docs.ci.corp.adobe.com/view/exl-pr/job/experience-platform.en_pr-exl/badge/icon)](https://docs.ci.corp.adobe.com/view/exl-pr/job/experience-platform.en_pr-exl/lastBuild/) | [![빌드 상태](https://docs.ci.corp.adobe.com/view/exl-pr/job/experience-platform.en_exl/lastBuild/badge/icon)](https://docs.ci.corp.adobe.com/view/exl-pr/job/experience-platform.en_exl/lastBuild/lastBuild) | [미리 보기 URL](https://experienceleague.corp.adobe.com/docs/experience-platform/using/home.html?lang=en) | [activate-exl](https://docs.ci.corp.adobe.com/job/experience-platform/build/) | [라이브 URL](https://experienceleague.adobe.com/docs/experience-platform/using/home.html?lang=en) | [Authoring 안내서](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/home.html?lang=en) |
+
+| 프로덕션 | 단계 |
 |---|---|
 | [![빌드 상태](https://docs.ci.corp.adobe.com/job/experience-platform.en_production/badge/icon)](https://docs.ci.corp.adobe.com/job/experience-platform.en_production/lastBuild) | [![빌드 상태](https://docs.ci.corp.adobe.com/job/experience-platform.en_stage/badge/icon)](https://docs.ci.corp.adobe.com/job/experience-platform.en_stage/lastBuild) |
 | [출력 제품](https://docs.adobe.com/content/help/ko-KR/experience-platform/landing/home.html) | [출력 단계](https://docs-stg.corp.adobe.com/content/help/en/experience-platform/landing/home.html) |
@@ -44,9 +51,9 @@ Adobe Experience Cloud 솔루션에 대한 제품 팀의 테크니컬 라이터,
 
 <!--Employees from other parts of the Adobe world should use the public repo for minor updates.-->
 
-## Experience Platform 설명서 팀 문의
+## Experience Platform 설명서 팀에 문의
 
-위에 명시된 바와 같이, Adobe 커뮤니티 구성원은 해당 작성자에게 지정될 문제를 제출할 수 있습니다. Adobe 직원은 문제를 제출하거나 Experience Platform 설명서 팀에 직접 문의하십시오. 특정 플랫폼 영역에 대한 리드 작성기를 찾으려면 [Adobe Experience Platform 문서 위키를 참조하십시오](https://wiki.corp.adobe.com/display/DMSArchitecture/Adobe+Experience+Platform+Documentation).
+위에 명시된 바와 같이, Adobe 커뮤니티 구성원은 적절한 작성자에게 지정될 문제를 제출할 수 있습니다. Adobe 직원은 문제를 제출하거나 Experience Platform 설명서 팀에 직접 문의할 수 있습니다. 특정 플랫폼 영역에 대한 리드 작성기를 찾으려면 [Adobe Experience Platform 문서 위키를 참조하십시오](https://wiki.corp.adobe.com/display/DMSArchitecture/Adobe+Experience+Platform+Documentation).
 
 ## 도구 및 설정
 
