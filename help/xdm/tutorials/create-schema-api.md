@@ -6,9 +6,9 @@ topic: tutorial
 type: Tutorials
 description: 이 자습서에서는 스키마 레지스트리 API를 사용하여 표준 클래스를 사용하여 스키마를 구성하는 단계를 안내합니다.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: de3d3a12e5e362bfa5d3149481a0eb7a6b278b70
 workflow-type: tm+mt
-source-wordcount: '2368'
+source-wordcount: '2343'
 ht-degree: 1%
 
 ---
@@ -24,10 +24,10 @@ ht-degree: 1%
 
 이 가이드는 Adobe Experience Platform의 다음 구성 요소에 대한 작업 이해를 필요로 합니다.
 
-* [[!DNL 경험 데이터 모델(XDM) 시스템]](../home.md):고객 경험 데이터를 [!DNL Experience Platform] 구성하는 표준화된 프레임워크
+* [[!DNL Experience Data Model (XDM) System]](../home.md):고객 경험 데이터를 [!DNL Experience Platform] 구성하는 표준화된 프레임워크
    * [스키마 컴포지션의 기본 사항](../schema/composition.md):스키마 컴포지션의 주요 원칙 및 모범 사례 등 XDM 스키마의 기본 구성 요소에 대해 알아봅니다.
-* [[!DNL 실시간 고객 프로필]](../../profile/home.md):여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
-* [[!DNL 샌드박스]](../../sandboxes/home.md): [!DNL Experience Platform] 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되도록 단일 [!DNL Platform] 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
+* [[!DNL Real-time Customer Profile]](../../profile/home.md):여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
+* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되도록 단일 [!DNL Platform] 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
 
 이 자습서를 시작하기 전에 [개발자 가이드에서](../api/getting-started.md) API를 성공적으로 호출하기 위해 알아야 할 중요한 정보가 있는지 [!DNL Schema Registry] 확인하십시오. 여기에는 사용자 `{TENANT_ID}`, &quot;컨테이너&quot;의 개념 및 요청 시 필요한 헤더가 포함됩니다(수락 헤더와 가능한 값에 특별히 주의).
 
@@ -956,9 +956,9 @@ curl -X PATCH \
 
 ### ID 설명자 정의
 
-스키마는 데이터를 인제스트하는 데 사용됩니다 [!DNL Experience Platform]. 이 데이터는 궁극적으로 여러 서비스에서 사용되어 하나의 통합된 개별 뷰를 생성합니다. 이 프로세스를 돕기 위해 키 필드를 &quot;ID&quot;로 표시하고 데이터 수집 시 해당 필드의 데이터가 해당 개인의 &quot;ID 그래프&quot;에 삽입됩니다. 그런 다음 그래프 데이터에 [[!DNL 실시간 고객 프로필]](../../profile/home.md) 및 기타 [!DNL Experience Platform] 서비스에서 액세스하여 각 개별 고객에 대한 연결된 보기를 제공할 수 있습니다.
+스키마는 데이터를 인제스트하는 데 사용됩니다 [!DNL Experience Platform]. 이 데이터는 궁극적으로 여러 서비스에서 사용되어 하나의 통합된 개별 뷰를 생성합니다. 이 프로세스를 돕기 위해 키 필드를 &quot;ID&quot;로 표시하고 데이터 수집 시 해당 필드의 데이터가 해당 개인의 &quot;ID 그래프&quot;에 삽입됩니다. 그러면 그래프 데이터에 [[!DNL Real-time Customer Profile]](../../profile/home.md) 액세스하고 다른 [!DNL Experience Platform] 서비스를 통해 각 개별 고객에 대한 연결된 보기를 제공할 수 있습니다.
 
-일반적으로 &quot;ID&quot;로 표시된 필드는 다음과 같습니다.이메일 주소, 전화 번호, [[!DNL Experience Cloud ID(ECID)]](https://docs.adobe.com/content/help/ko-KR/id-service/using/home.html), CRM ID 또는 기타 고유한 ID 필드
+일반적으로 &quot;ID&quot;로 표시된 필드는 다음과 같습니다.이메일 주소, 전화 번호, [[!DNL Experience Cloud ID (ECID)]](https://docs.adobe.com/content/help/ko-KR/id-service/using/home.html)CRM ID 또는 기타 고유 ID 필드
 
 ID 필드도 양호할 수 있으므로 조직 고유의 식별자를 고려해야 합니다.
 
@@ -997,7 +997,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->사용 가능한 &quot;xdm:namespace&quot; 값을 나열하거나 [[!DNL ID 서비스 API]를 사용하여 새 값을 만들 수 있습니다](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml). 사용되는 &quot;xdm:namespace&quot;에 따라 &quot;xdm:code&quot; 또는 &quot;xdm:id&quot;에 대한 값이 &quot;xdm:code&quot;일 수 있습니다.
+>사용 가능한 &quot;xdm:namespace&quot; 값을 나열하거나, 를 사용하여 새 값을 만들 수 있습니다 [[!DNL Identity Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml). 사용되는 &quot;xdm:namespace&quot;에 따라 &quot;xdm:code&quot; 또는 &quot;xdm:id&quot;에 대한 값이 &quot;xdm:code&quot;일 수 있습니다.
 
 **응답**
 
@@ -1614,7 +1614,7 @@ curl -X GET \
                 "stateProvince": {
                     "title": "State or province",
                     "type": "string",
-                    "description": "The state, or province portion of the observation. The format follows the [ISO 3166-2 (country and subdivision)][http://www.unece.org/cefact/locode/subdivisions.html] standard.",
+                    "description": "The state, or province portion of the observation. The format follows the ISO 3166-2 (country and subdivision) standard.",
                     "examples": [
                         "US-CA",
                         "DE-BB",
