@@ -8,7 +8,7 @@ description: 이 자습서에서는 Experience Platform 내의 스키마 편집�
 translation-type: tm+mt
 source-git-commit: 9c7119ad836007af3437dc2e938b68aff3ca0f56
 workflow-type: tm+mt
-source-wordcount: '3835'
+source-wordcount: '3819'
 ht-degree: 0%
 
 ---
@@ -28,9 +28,9 @@ Adobe Experience Platform 사용자 인터페이스를 사용하면 XDM(Interact
 
 이 자습서에서는 스키마 만들기와 관련된 Adobe Experience Platform의 다양한 측면을 파악해야 합니다. 이 자습서를 시작하기 전에 다음 개념을 살펴보십시오.
 
-* [[!DNL 경험 데이터 모델(XDM)]](../home.md):고객 경험 데이터를 [!DNL Platform] 구성하는 표준화된 프레임워크
+* [[!DNL Experience Data Model (XDM)]](../home.md):고객 경험 데이터를 [!DNL Platform] 구성하는 표준화된 프레임워크
    * [스키마 컴포지션의 기본 사항](../schema/composition.md):클래스, 믹싱, 데이터 유형 및 필드를 비롯한 XDM 스키마 및 구성 요소에 대한 개요입니다.
-* [[!DNL 실시간 고객 프로필]](../../profile/home.md):여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
+* [[!DNL Real-time Customer Profile]](../../profile/home.md):여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
 
 ## 스키마 작업 공간에서 기존 [!UICONTROL 스키마] 찾아보기 {#browse}
 
@@ -274,11 +274,11 @@ UI의 [!UICONTROL 스키마] 작업 영역에서는 [!DNL Platform] 조직에 �
 
 ![](../images/tutorials/create-schema/identity-applied.png)
 
-이제 `loyaltyId` 필드로 인제스트된 모든 데이터는 해당 고객을 식별하고 해당 고객의 한 보기를 연결하는 데 사용됩니다. ID 작업에 대한 자세한 내용 [!DNL Experience Platform]은 [[!DNL Identity Service]](../../identity-service/home.md) 설명서를 참조하십시오.
+이제 `loyaltyId` 필드로 인제스트된 모든 데이터는 해당 고객을 식별하고 해당 고객의 한 보기를 연결하는 데 사용됩니다. ID 작업에 대한 자세한 내용 [!DNL Experience Platform]은 설명서를 [[!DNL Identity Service]](../../identity-service/home.md) 참조하십시오.
 
 ## 스키마를 [!DNL Real-time Customer Profile] {#profile}
 
-[[!DNL 실시간 고객 프로필]](../../profile/home.md) ID 데이터 [!DNL Experience Platform] 를 활용하여 각 개별 고객을 전체적으로 파악합니다. 이 서비스는 고객 속성에 대한 360도 프로파일을 구축하고 고객과 통합된 모든 시스템에서 타임스탬프가 지정된 계정을 생성하며, [!DNL Experience Platform]
+[[!DNL Real-time Customer Profile]](../../profile/home.md) ID 데이터 [!DNL Experience Platform] 를 활용하여 각 개별 고객을 전체적으로 파악합니다. 이 서비스는 고객 속성에 대한 360도 프로파일을 구축하고 고객과 통합된 모든 시스템에서 타임스탬프가 지정된 계정을 생성하며, [!DNL Experience Platform]
 
 스키마는 함께 사용할 수 있도록 [!DNL Real-time Customer Profile]하려면 기본 ID가 정의되어 있어야 합니다. 주 ID를 먼저 정의하지 않고 스키마를 활성화하려고 하면 오류 메시지가 표시됩니다.
 
