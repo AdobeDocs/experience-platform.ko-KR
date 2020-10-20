@@ -8,14 +8,14 @@ translation-type: tm+mt
 source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
 workflow-type: tm+mt
 source-wordcount: '455'
-ht-degree: 0%
+ht-degree: 6%
 
 ---
 
 
 # Attribution AI 개요
 
-Attribution AI은 지능형 서비스의 일부로 고객 상호 작용이 특정 결과에 미치는 영향과 점진적인 영향을 계산하는 다중 채널 알고리즘 속성 서비스입니다. 마케터는 Attribution AI을 통해 고객 여정의 각 단계에서 개별 고객과의 인터랙션이 미치는 영향을 파악하여 마케팅 및 광고 비용을 측정하고 최적화할 수 있습니다.
+Attribution AI은 지능형 서비스의 일부로 고객 상호 작용이 특정 결과에 미치는 영향과 점진적인 영향을 계산하는 다중 채널 알고리즘 속성 서비스입니다. 마케터는 Attribution AI를 통해 고객 여정의 각 단계에서 개별 고객과의 인터랙션이 미치는 영향을 파악하여 마케팅 및 광고 비용을 측정하고 최적화할 수 있습니다.
 
 ## Attribution AI 이해
 
