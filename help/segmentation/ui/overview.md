@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;Segmentation Service;segmentation;segmentation service;user guide;ui guide;segmentation ui guide;segment builder;Segment builder;
+keywords: Experience Platform;home;popular topics;Segmentation Service;segmentation;segmentation service;user guide;ui guide;segmentation ui guide;segment builder;Segment builder;realized;existing;exiting;
 solution: Experience Platform
 title: 세그멘테이션 서비스 사용 안내서
 topic: ui guide
 description: Adobe Experience Platform 세그멘테이션 서비스는 세그먼트 정의를 만들고 관리하기 위한 사용자 인터페이스를 제공합니다.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 1aff9329e1ae97caa34a205bbfbbc6f51b54b8fb
 workflow-type: tm+mt
-source-wordcount: '1467'
+source-wordcount: '1449'
 ht-degree: 0%
 
 ---
@@ -21,10 +21,10 @@ ht-degree: 0%
 
 세그먼트 정의를 사용하려면 세그먼테이션과 관련된 다양한 [!DNL Experience Platform] 서비스를 이해해야 합니다. 이 사용자 안내서를 읽기 전에 다음 서비스에 대한 설명서를 검토하십시오.
 
-- [[!DNL 세그멘테이션 서비스]](../home.md): [!DNL Segmentation Service] 고객, 잠재 고객, 사용자 또는 조직과 같은 개인 [!DNL Experience Platform] 과 관련된 데이터를 작은 그룹으로 나눌 수 있습니다.
-- [[!DNL 실시간 고객 프로필]](../../profile/home.md):여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
-- [[!DNL Adobe Experience Platform ID 서비스]](../../identity-service/home.md):수집되는 다양한 데이터 소스에서 ID를 연결하여 고객 프로파일을 만들 수 [!DNL Platform]있습니다.
-- [[!DNL 경험 데이터 모델(XDM)]](../../xdm/home.md):고객 경험 데이터를 [!DNL Platform] 구성하는 표준화된 프레임워크
+- [[!DNL Segmentation Service]](../home.md): [!DNL Segmentation Service] 고객, 잠재 고객, 사용자 또는 조직과 같은 개인 [!DNL Experience Platform] 과 관련된 데이터를 작은 그룹으로 나눌 수 있습니다.
+- [[!DNL Real-time Customer Profile]](../../profile/home.md):여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
+- [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md):수집되는 다양한 데이터 소스에서 ID를 연결하여 고객 프로파일을 만들 수 [!DNL Platform]있습니다.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):고객 경험 데이터를 [!DNL Platform] 구성하는 표준화된 프레임워크
 
 또한 이 문서를 통해 사용되는 두 개의 주요 용어를 알고 이 용어 간의 차이점을 이해하는 것이 중요합니다.
 - **세그먼트 정의**:대상 대상의 주요 특성 또는 행동을 설명하는 데 사용되는 규칙 세트입니다.
