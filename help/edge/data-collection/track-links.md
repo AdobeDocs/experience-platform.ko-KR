@@ -5,7 +5,7 @@ description: Experience Platform 웹 SDK를 사용하여 링크 데이터를 Ado
 seo-description: Experience Platform 웹 SDK를 사용하여 링크 데이터를 Adobe Analytics으로 보내는 방법 살펴보기
 keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;web Interaction;page views;link tracking;links;track links;clickCollection;click collection;
 translation-type: tm+mt
-source-git-commit: ab1618a9d8c6cc60407d301dad03983ce432bbbe
+source-git-commit: 2e28fda40a135330054c749d73439448a55db52c
 workflow-type: tm+mt
 source-wordcount: '250'
 ht-degree: 0%
@@ -46,7 +46,7 @@ alloy("sendEvent", {
 
 ## 자동 링크 추적 {#automaticLinkTracking}
 
-기본적으로 웹 SDK는 [적격한](#labelingLinks)링크 태그를 캡처하고 레이블 [및](https://github.com/adobe/xdm/blob/master/docs/reference/context/webinteraction.schema.md) 레코드를 [](#qualifyingLinks) 만듭니다. 문서에 첨부된 [캡처](https://www.w3.org/TR/uievents/#capture-phase) 클릭 이벤트 리스너를 통해 클릭 수가 캡처됩니다.
+기본적으로 웹 SDK는 [적격한](#labelingLinks)링크 태그를 캡처하고 레이블 [및](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/webinteraction.schema.md) 레코드를 [](#qualifyingLinks) 만듭니다. 문서에 첨부된 [캡처](https://www.w3.org/TR/uievents/#capture-phase) 클릭 이벤트 리스너를 통해 클릭 수가 캡처됩니다.
 
 웹 SDK를 [구성하여](../fundamentals/configuring-the-sdk.md#clickCollectionEnabled) 자동 링크 추적을 비활성화할 수 있습니다.
 
