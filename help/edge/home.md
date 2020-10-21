@@ -5,10 +5,10 @@ description: Adobe Experience Platform 웹 SDK의 정의와 사용 방법을 살
 seo-description: adobe experience cloud 고객이 Experience Cloud의 다양한 서비스와 상호 작용할 수 있도록 허용
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;edge;Visitor.js;AppMeasurement.js;AT.js;DIL.js;web sdk;SDK;web SDK;Launch;launch
 translation-type: tm+mt
-source-git-commit: db742119d8f169817080f1fd4e0dc08a0f0faa47
+source-git-commit: 2e28fda40a135330054c749d73439448a55db52c
 workflow-type: tm+mt
 source-wordcount: '708'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -65,7 +65,7 @@ Adobe Experience Platform 웹 SDK는 다음 SDK를 대체합니다.
 
 ## 시작하기
 
-Adobe Experience Platform Launch을 [사용하는 방법에 대한 빠른 자습서를 보려면 시작 안내서](consent/iab-tcf/with-launch.md) 를 참조하십시오.
+Adobe Experience Platform Launch을 [사용하는 방법에 대한 빠른 자습서를 보려면 시작 안내서](fundamentals/prerequisite.md) 를 참조하십시오.
 
 이 제품은 점점 더 많은 사용 사례를 지원하기 위해 끊임없이 진화하고 증가하고 있습니다. 최신 정보를 얻으려면 [지원되는 사용 사례 보드를 확인하십시오](https://github.com/adobe/alloy/projects/5). Adobe는 Adobe가 현재 지원하는 사용 사례와 귀하가 최상의 결정을 내릴 수 있도록 노력하고 있는 사례에 대해 이러한 최신 정보를 제공합니다.
 
