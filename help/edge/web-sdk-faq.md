@@ -4,10 +4,10 @@ seo-title: Adobe Experience Platform 웹 SDK FAQ
 description: Adobe Experience Platform 웹 SDK에 대한 FAQ
 seo-description: Adobe Experience Platform 웹 SDK에 대한 FAQ
 translation-type: tm+mt
-source-git-commit: 5ef902ef7f7717121744f7f0074c0aa17e5a9e9a
+source-git-commit: 2e28fda40a135330054c749d73439448a55db52c
 workflow-type: tm+mt
-source-wordcount: '1710'
-ht-degree: 2%
+source-wordcount: '1631'
+ht-degree: 3%
 
 ---
 
@@ -145,15 +145,9 @@ Adobe Experience Platform 웹 SDK는 다음과 같은 사용자를 위해 개발
 
 * 사용하는 유일한 태그라도 Experience Platform Launch `alloy.js`를 사용하여 배포하는 것이 좋습니다.
 
-## XDM이란 무엇이며 웹 SDK에 사용해야 합니까?
-
-XDM은 Adobe Experience Platform 및 웹 SDK로 데이터를 전송하는 데 사용되는 데이터 형식입니다. 웹 [SDK 설명서는](https://docs.adobe.com/content/help/en/experience-platform/edge/get-started/quick-start-with-launch.html#prepare-a-schema) 특정 요구 사항에 맞게 사용자 정의할 수 있는 스키마를 쉽게 설정하는 방법을 설명합니다.
-
 ## &quot;Adobe Experience Platform Launch 서버측&quot;이란?
 
 2020년 후반에 Experience Platform Launch은 서버측 전달 기능을 출시할 예정입니다. Adobe의 SDK를 사용하고 XDM을 Experience Edge로 전송하는 경우, 이러한 새로운 기능을 통해 새로운 서버측 익스텐션을 설치하고 Edge Network에서 해당 데이터를 아무데나 매핑하고 전송할 수 있습니다. 이를 &quot;서비스로 데이터 수집&quot;으로 간주합니다.  이 번들 제품은 Adobe Experience Platform의 일부로 번들로 제공되거나, 비용이 부과됩니다.
-
-**자세한 정보**[Adobe Summit 프레젠테이션](https://adobe.bluejeans.com/playback/s/9LhauPOnRSUTYg6RMHAw4oJekhYfOQgdBLlNekVJdWevYktpxqX2IYyl5fz2Wxh9)
 
 ## CNAME 또는 퍼스트 파티 도메인이란 무엇이며, 이것이 중요한 이유는 무엇입니까?
 
