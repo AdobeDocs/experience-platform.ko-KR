@@ -5,7 +5,7 @@ description: Experience Platform 웹 SDK를 구성하는 방법 살펴보기
 seo-description: Experience Platform 웹 SDK를 구성하는 방법 살펴보기
 keywords: configuring;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;environment;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;prehidingStyle;opacity;cookieDestinationsEnabled;urlDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 translation-type: tm+mt
-source-git-commit: 233bbd33e3d1e89ff67a9daa00372732934ac573
+source-git-commit: 2e28fda40a135330054c749d73439448a55db52c
 workflow-type: tm+mt
 source-wordcount: '749'
 ht-degree: 11%
@@ -85,7 +85,7 @@ Your assigned [!DNL Experience Cloud] organization ID.  페이지 내에서 여�
 | -------- | ------------ | ----------------- |
 | 부울 | 아니요 | `true` |
 
-링크 클릭과 연관된 데이터를 자동으로 수집할지 여부를 나타냅니다. 링크 클릭으로 자격이 되는 클릭의 경우 다음 [웹 상호 작용](https://github.com/adobe/xdm/blob/master/docs/reference/context/webinteraction.schema.md) 데이터가 수집됩니다.
+링크 클릭과 연관된 데이터를 자동으로 수집할지 여부를 나타냅니다. 링크 클릭으로 자격이 되는 클릭의 경우 다음 [웹 상호 작용](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/webinteraction.schema.md) 데이터가 수집됩니다.
 
 | **속성** | **설명** |
 | ------------ | ----------------------------------- |
