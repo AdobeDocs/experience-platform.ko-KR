@@ -5,7 +5,7 @@ description: Experience Platform 웹 SDK를 사용하여 Adobe Analytics에서 �
 seo-description: Experience Platform 웹 SDK를 사용하여 Adobe Analytics에서 자동으로 매핑되는 변수 알아보기
 keywords: adobe analytics;variables;analytics;automatic map;automatically mapped;
 translation-type: tm+mt
-source-git-commit: 5ef902ef7f7717121744f7f0074c0aa17e5a9e9a
+source-git-commit: 2e28fda40a135330054c749d73439448a55db52c
 workflow-type: tm+mt
 source-wordcount: '547'
 ht-degree: 2%
@@ -18,7 +18,7 @@ ht-degree: 2%
 아래는 Adobe Experience Platform이 자동으로 매핑되는 변수 [!DNL Edge Network] 목록입니다 [!DNL Analytics].
 
 | XDM 필드 경로 | [!DNL Analytics Query String] / HTTP 헤더 | 설명 |
-| ---------- | ------------------------- | -------- |
+| ---------- | ------------------------- | ----------------------------------------- |
 | `commerce.order.purchaseID` | `pi` | AppMeasurement 쿼리 매개 변수 PURCHASEID 매핑입니다. |
 | `commerce.order.currencyCode` | `cc` | AppMeasurement 쿼리 매개 변수 CURRENCY 매핑을 참조하십시오. |
 | `commerce.purchases.value` | `events` | 구분 기호를 사용하여 전환 COMMERCE_PURCHASE를 사용하는 AppMeasurement 쿼리 매개 변수 EVENT_LIST_FULL 매핑 `,`. |
