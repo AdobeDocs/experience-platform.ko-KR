@@ -5,7 +5,7 @@ description: Experience Platform 웹 SDK를 사용하여 링크 데이터를 Ado
 seo-description: Experience Platform 웹 SDK를 사용하여 링크 데이터를 Adobe Analytics으로 보내는 방법 살펴보기
 keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;web Interaction;page views;link tracking;links;track links;clickCollection;click collection;
 translation-type: tm+mt
-source-git-commit: 9e1ad05285b27a9fc8b56db903609add3fef144e
+source-git-commit: c9d777f4350f0b039608c4f9b01d5206994e2572
 workflow-type: tm+mt
 source-wordcount: '160'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Adobe Analytics으로 데이터 보내기
 
-반면에 과거에는 페이지 보기와 링크(예: `s.t(), s.tl()`)를 구별하기 위해 다른 기능이 있었지만 웹 SDK에서는 명령만 `sendEvent` 있습니다. 이벤트와 함께 전송하는 데이터는 페이지 보기여야 하는지 아니면 링크여야 하는지를 결정합니다. [링크 추적에 대한 자세한 내용](../track-links.md)
+반면에 과거에는 페이지 보기와 링크(예: `s.t(), s.tl()`)를 구별하기 위해 다른 기능이 있었지만 웹 SDK에서는 명령만 `sendEvent` 있습니다. 이벤트와 함께 전송하는 데이터는 페이지 보기여야 하는지 아니면 링크여야 하는지를 결정합니다. [링크 추적에 대한 자세한 내용을 살펴보십시오](../track-links.md).
 
 ## 페이지 보기 보내기
 
