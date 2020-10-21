@@ -5,7 +5,7 @@ description: Experience Platform 웹 SDK 이벤트를 추적하는 방법 학습
 seo-description: Experience Platform 웹 SDK 이벤트를 추적하는 방법 학습
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
 translation-type: tm+mt
-source-git-commit: db742119d8f169817080f1fd4e0dc08a0f0faa47
+source-git-commit: 14b10aeeb382e9d638cf9fdf62deddbee3e72600
 workflow-type: tm+mt
 source-wordcount: '1139'
 ht-degree: 0%
@@ -54,7 +54,7 @@ alloy("sendEvent", {
 
 ### 설정 `eventType`
 
-XDM 경험 이벤트에는 선택 `eventType` 필드가 있습니다. 여기에는 레코드의 기본 이벤트 유형이 포함됩니다. 이벤트 유형을 설정하면 전송할 다른 이벤트를 구별할 수 있습니다. XDM은 사용할 수 있거나 사용 사례에 대해 사용자 지정 이벤트 유형을 항상 만들 수 있는 몇 가지 사전 정의된 이벤트 유형을 제공합니다. 다음은 XDM에서 제공하는 모든 사전 정의된 이벤트 유형 목록입니다. [XDM 공개 보고서 보기](https://github.com/adobe/xdm/blob/master/docs/reference/behaviors/time-series.schema.md#xdmeventtype-known-values)
+XDM 경험 이벤트에는 선택 `eventType` 필드가 있습니다. 여기에는 레코드의 기본 이벤트 유형이 포함됩니다. 이벤트 유형을 설정하면 전송할 다른 이벤트를 구별할 수 있습니다. XDM은 사용할 수 있거나 사용 사례에 대해 사용자 지정 이벤트 유형을 항상 만들 수 있는 몇 가지 사전 정의된 이벤트 유형을 제공합니다. 다음은 XDM에서 제공하는 모든 사전 정의된 이벤트 유형 목록입니다. [XDM 공개 보고서에서 자세한 내용을 살펴보십시오](https://github.com/adobe/xdm/blob/master/docs/reference/behaviors/time-series.schema.md#xdmeventtype-known-values).
 
 
 | **이벤트 유형:** | **정의:** |
@@ -131,7 +131,7 @@ alloy("sendEvent", {
 
 ### ID 정보 추가
 
-사용자 지정 ID 정보를 이벤트에 추가할 수도 있습니다. Experience Cloud [ID 검색을 참조하십시오.](../identity/overview.md)
+사용자 지정 ID 정보를 이벤트에 추가할 수도 있습니다. Experience Cloud [ID 검색을 참조하십시오](../identity/overview.md).
 
 ## sendBeacon API 사용
 
