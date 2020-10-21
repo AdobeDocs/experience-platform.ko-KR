@@ -5,9 +5,9 @@ description: Experience Platform 웹 SDK를 사용하여 동의 환경 설정을
 seo-description: Experience Platform 웹 SDK를 사용하여 동의 환경 설정을 지원하는 방법 살펴보기
 keywords: consent;defaultConsent;default consent;setConsent;Profile Privacy Mixin;Experience Event Privacy Mixin;Privacy Mixin;
 translation-type: tm+mt
-source-git-commit: d069b3007265406367ca9de2b85540b2a070cf36
+source-git-commit: 2e28fda40a135330054c749d73439448a55db52c
 workflow-type: tm+mt
-source-wordcount: '751'
+source-wordcount: '753'
 ht-degree: 0%
 
 ---
@@ -97,7 +97,7 @@ alloy("setConsent", {
 });
 ```
 
-이러한 방식으로 동의가 설정되면, 실시간 고객 프로필은 동의 정보로 업데이트됩니다. 이를 수행하려면 프로필 XDM 스키마에는 프로필 개인 정보 [믹신이 포함되어야 합니다](https://github.com/adobe/xdm/blob/master/docs/reference/context/profile-privacy.schema.md). 이벤트를 전송할 때 이벤트 XDM 개체에 IAB 동의 정보를 수동으로 추가해야 합니다. SDK는 이벤트에 동의 정보를 자동으로 포함하지 않습니다. 이벤트에서 동의 정보를 보내려면 [경험 이벤트 개인 정보](https://github.com/adobe/xdm/blob/master/docs/reference/context/experienceevent-privacy.schema.md) 혼합을 경험 이벤트 스키마에 추가해야 합니다.
+이러한 방식으로 동의가 설정되면, 실시간 고객 프로필은 동의 정보로 업데이트됩니다. 이를 수행하려면 프로필 XDM 스키마에는 프로필 개인 정보 [믹신이 포함되어야 합니다](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/profile/profile-privacy.schema.md). 이벤트를 전송할 때 이벤트 XDM 개체에 IAB 동의 정보를 수동으로 추가해야 합니다. SDK는 이벤트에 동의 정보를 자동으로 포함하지 않습니다. 이벤트에서 동의 정보를 보내려면 [경험 이벤트 개인 정보](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/experience-event/experienceevent-privacy.schema.md) 혼합을 경험 이벤트 스키마에 추가해야 합니다.
 
 ## 하나의 요청에 두 표준 전송
 
