@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform API 기본 사항
 topic: getting started
 translation-type: tm+mt
-source-git-commit: fa439ebb9d02d4a08c8ed92b18f2db819d089174
+source-git-commit: fac4b3d02a6e58a9d2c298f9b849fa7345e4fa93
 workflow-type: tm+mt
-source-wordcount: '422'
+source-wordcount: '483'
 ht-degree: 2%
 
 ---
@@ -22,63 +22,74 @@ JSON 포인터는 JSON 문서 내의 특정 값을 식별하기 위한 표준화
 
 ### JSON 스키마 개체 예
 
+다음 JSON은 JSON 포인터 문자열을 사용하여 필드를 참조할 수 있는 간소화된 XDM 스키마를 나타냅니다. 사용자 정의 혼합(예:)을 사용하여 추가된 모든 필드는 개체 아래에 `loyaltyLevel`지정되지만 핵심 혼합을 사용하여 추가된 필드(예: `_{TENANT_ID}` `fullName`필드)는 그렇지 않습니다.
+
 ```json
 {
-    "type": "object",
-    "title": "Loyalty Member Details",
-    "meta:intendedToExtend": [
-        "https://ns.adobe.com/xdm/context/profile"
-    ],
-    "description": "Loyalty Program Mixin.",
-    "definitions": {
-        "loyalty": {
-            "properties": {
-                "_{TENANT_ID}": {
-                    "type": "object",
-                    "properties": {
-                        "loyaltyId": {
-                            "title": "Loyalty Identifier",
-                            "type": "string",
-                            "description": "Loyalty Identifier.",
-                            "meta:xdmType": "string"
-                        },
-                        "loyaltyLevel": {
-                            "title": "Loyalty Level",
-                            "description": "The current loyalty program level to which the individual member belongs.",
-                            "type": "string",
-                            "enum": [
-                                "platinum",
-                                "gold",
-                                "silver",
-                                "bronze"
-                            ],
-                            "meta:enum": {
-                                "platinum": "Platinum",
-                                "gold": "Gold",
-                                "silver": "Silver",
-                                "bronze": "Bronze"
-                            },
-                            "meta:xdmType": "string"
-                        }
-                    },
-                    "meta:xdmType": "object"
-                }
-            },
-            "type": "object",
-            "meta:xdmType": "object"
+  "$id": "https://ns.adobe.com/{TENANT_ID}/schemas/85a4bdaa168b01bf44384e049fbd3d2e9b2ffaca440d35b9",
+  "meta:altId": "_{TENANT_ID}.schemas.85a4bdaa168b01bf44384e049fbd3d2e9b2ffaca440d35b9",
+  "meta:resourceType": "schemas",
+  "version": "1.0",
+  "title": "Example schema",
+  "type": "object",
+  "description": "This is an example schema.",
+  "properties": {
+    "_{TENANT_ID}": {
+      "type": "object",
+      "properties": {
+        "loyaltyLevel": {
+          "title": "Loyalty Level",
+          "description": "",
+          "type": "string",
+          "isRequired": false,
+          "enum": [
+            "platinum",
+            "gold",
+            "silver",
+            "bronze"
+          ]
         }
+      }
+    },
+    "person": {
+      "title": "Person",
+      "description": "An individual actor, contact, or owner.",
+      "type": "object",
+      "properties": {
+        "name": {
+          "title": "Full name",
+          "description": "The person's full name.",
+          "type": "object",
+          "properties": {
+            "fullName": {
+              "title": "Full name",
+              "type": "string",
+              "description": "The full name of the person, in writing order most commonly accepted in the language of the name.",
+            },
+            "suffix": {
+              "title": "Suffix",
+              "type": "string",
+              "description": "A group of letters provided after a person's name to provide additional information. The `suffix` is used at the end of someones name. For example Jr., Sr., M.D., PhD, I, II, III, etc.",
+            }
+          },
+          "meta:referencedFrom": "https://ns.adobe.com/xdm/context/person-name",
+          "meta:xdmField": "xdm:name"
+        }
+      }
     }
+  }
 }
 ```
 
 ### 스키마 개체를 기반으로 하는 JSON 포인터 예
 
 | JSON 포인터 | 해결 방법 |
-|--- | ---|
-| `"/title"` | &quot;충성도 회원 세부 정보&quot; |
-| `"/definitions/loyalty"` | (개체의 내용을 `loyalty` 반환합니다.) |
-| `"/definitions/loyalty/properties/_{TENANT_ID}/properties/loyaltyLevel/enum"` | `["platinum", "gold", "silver", "bronze"]` |
-| `"/definitions/loyalty/properties/_{TENANT_ID}/properties/loyaltyLevel/enum/0"` | `"platinum"` |
+| --- | --- |
+| `"/title"` | `"Example schema"` |
+| `"/properties/person/properties/name/properties/fullName"` | 코어 믹싱이 제공하는 `fullName` 필드에 대한 참조를 반환합니다. |
+| `"/properties/_{TENANT_ID}/properties/loyaltyLevel"` | 사용자 지정 혼합에서 제공하는 `loyaltyLevel` 필드에 대한 참조를 반환합니다. |
+| `"/properties/_{TENANT_ID}/properties/loyaltyLevel/enum"` | `["platinum", "gold", "silver", "bronze"]` |
+| `"/properties/_{TENANT_ID}/properties/loyaltyLevel/enum/0"` | `"platinum"` |
 
 >[!NOTE]
 >
