@@ -6,9 +6,9 @@ topic: enforcement
 type: Tutorial
 description: 데이터에 대한 데이터 사용 레이블을 만들고 해당 레이블에 대한 마케팅 작업에 대한 사용 정책을 만들었다면 정책 서비스 API를 사용하여 데이터 세트에 대해 수행된 마케팅 작업 또는 임의 레이블 그룹이 정책 위반인지 여부를 평가할 수 있습니다. 그런 다음 API 응답을 기반으로 정책 위반을 처리하도록 자체 내부 프로토콜을 설정할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 00688e271b3c1e3ad1a17ceb6045e3316bd65961
 workflow-type: tm+mt
-source-wordcount: '936'
+source-wordcount: '993'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 # API를 사용하여 데이터 사용 정책 [!DNL Policy Service] 적용
 
-데이터에 대한 데이터 사용 레이블을 만들고 해당 레이블에 대한 마케팅 작업에 대한 사용 정책을 만들었으면 [[!DNL 정책 서비스 API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) 를 사용하여 데이터 세트에 대해 수행된 마케팅 작업 또는 임의 레이블 그룹이 정책 위반인지 여부를 평가할 수 있습니다. 그런 다음 API 응답을 기반으로 정책 위반을 처리하도록 자체 내부 프로토콜을 설정할 수 있습니다.
+데이터에 대한 데이터 사용 레이블을 만들고 해당 레이블에 대한 마케팅 작업에 대한 사용 정책을 만들었으면 데이터 세트 또는 임의 레이블 그룹에 대해 수행된 마케팅 작업이 정책 위반인지 여부를 평가하는 데 이 [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) 를 사용할 수 있습니다. 그런 다음 API 응답을 기반으로 정책 위반을 처리하도록 자체 내부 프로토콜을 설정할 수 있습니다.
 
 >[!NOTE]
 >
@@ -170,7 +170,13 @@ curl -X POST \
     },
     {
       "entityType": "dataSet",
-      "entityId": "5cc1fb685410ef14b748c55f"
+      "entityId": "5cc1fb685410ef14b748c55f",
+      "entityMeta": {
+          "fields": [
+              "/properties/personalEmail/properties/address",
+              "/properties/person/properties/name/properties/fullName"
+          ]
+      }
     }
   ]'
 ```
@@ -179,6 +185,7 @@ curl -X POST \
 | --- | --- |
 | `entityType` | 페이로드 배열의 각 항목은 정의되는 엔티티 유형을 나타내야 합니다. 이 경우 값은 항상 &quot;dataSet&quot;입니다. |
 | `entityId` | 페이로드 배열의 각 항목은 데이터 세트에 대한 고유 ID를 제공해야 합니다. |
+| `entityMeta.fields` | (선택 사항) 데이터 세트 스키마의 특정 필드를 참조하는 [JSON 포인터](../../landing/api-fundamentals.md#json-pointer) 문자열 배열. 이 배열이 포함된 경우 배열에 포함된 필드만 평가에 참여합니다. 배열에 포함되지 않은 스키마 필드는 평가에 참여할 수 없습니다.<br><br>이 필드가 포함되지 않으면 데이터 집합 스키마 내의 모든 필드가 평가에 포함됩니다. |
 
 **응답**
 
@@ -304,13 +311,13 @@ curl -X POST \
                         "labels": [
                             "C5"
                         ],
-                        "path": "/properties/createdByBatchID"
+                        "path": "/properties/personalEmail/properties/address",
                     },
                     {
                         "labels": [
                             "C5"
                         ],
-                        "path": "/properties/faxPhone"
+                        "path": "/properties/person/properties/name/properties/fullName"
                     }
                 ]
             }
