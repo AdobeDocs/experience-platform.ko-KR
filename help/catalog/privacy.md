@@ -5,9 +5,9 @@ title: Data Lake의 개인 정보 요청 처리
 topic: overview
 description: Adobe Experience Platform Privacy Service은 법적 및 조직의 개인 정보 보호 규정에 따라 고객의 개인 데이터 액세스, 판매 거부 또는 삭제를 처리합니다. 이 문서에서는 Data Lake에 저장된 고객 데이터의 개인 정보 요청 처리와 관련된 필수 개념을 다룹니다.
 translation-type: tm+mt
-source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
+source-git-commit: 066337419431db24bde0a8d0d30b85132d08f43c
 workflow-type: tm+mt
-source-wordcount: '1249'
+source-wordcount: '1272'
 ht-degree: 0%
 
 ---
@@ -24,8 +24,8 @@ Adobe Experience Platform은 법적 및 조직의 개인 정보 보호 규정에
 이 안내서를 읽기 전에 다음 [!DNL Experience Platform] 서비스에 대해 잘 알고 있는 것이 좋습니다.
 
 * [[!DNL Privacy Service]](../privacy-service/home.md):Adobe Experience Cloud 애플리케이션에서 개인 데이터를 액세스, 판매 거부 또는 삭제하기 위한 고객 요청을 관리합니다.
-* [[!DNL 카탈로그 서비스]](home.md):데이터 위치 및 내부 계열에 대한 기록 [!DNL Experience Platform]시스템 데이터 세트 메타데이터를 업데이트하는 데 사용할 수 있는 API를 제공합니다.
-* [[!DNL 경험 데이터 모델(XDM) 시스템]](../xdm/home.md):고객 경험 데이터를 [!DNL Experience Platform] 구성하는 표준화된 프레임워크
+* [[!DNL Catalog Service]](home.md):데이터 위치 및 내부 계열에 대한 기록 [!DNL Experience Platform]시스템 데이터 세트 메타데이터를 업데이트하는 데 사용할 수 있는 API를 제공합니다.
+* [[!DNL Experience Data Model (XDM) System]](../xdm/home.md):고객 경험 데이터를 [!DNL Experience Platform] 구성하는 표준화된 프레임워크
 * [[!DNL Identity Service]](../identity-service/home.md):다양한 디바이스와 시스템에 ID를 연결하여 고객 경험 데이터의 세분화로 인한 기본적인 문제를 해결합니다.
 
 ## ID 네임스페이스 이해 {#namespaces}
@@ -136,6 +136,10 @@ curl -X POST \
 >이 섹션에서는 개인 정보 요청의 형식을 지정하는 방법에 대해 설명합니다 [!DNL Data Lake]. 요청 페이로드에서 제출된 사용자 ID 데이터의 형식을 적절하게 지정하는 방법을 포함하여 개인 정보 작업을 제출하는 방법에 대한 전체 단계를 보려면 [[!DNL Privacy Service] UI](../privacy-service/ui/overview.md) 또는 [[!DNL Privacy Service] API](../privacy-service/api/getting-started.md) 설명서를 검토해야 합니다.
 
 다음 섹션에서는 UI 또는 API를 [!DNL Data Lake] 사용하는 사용자에 대한 개인 정보 [!DNL Privacy Service] 보호 요청을 만드는 방법에 대해 설명합니다.
+
+>[!IMPORTANT]
+>
+>개인 정보 보호 요청을 완료하는 데 걸리는 시간은 보장할 수 없습니다. 요청이 여전히 처리되는 동안 Data Lake 내에서 변경 사항이 발생하는 경우 해당 레코드가 처리되는지 여부도 보장할 수 없습니다.
 
 ### UI 사용
 
