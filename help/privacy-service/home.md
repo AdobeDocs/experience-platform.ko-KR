@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform Privacy Service
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5d88aca08b7cf1d55e1eed989de6aa514f82e113
+source-git-commit: f3872d433949e6c14c28c6833b8498d4d01b8de3
 workflow-type: tm+mt
-source-wordcount: '1565'
+source-wordcount: '1627'
 ht-degree: 2%
 
 ---
@@ -30,7 +30,7 @@ Adobe Experience Platform [!DNL Privacy Service] 는 기업이 고객의 개인 
    * 최상의 사용 방법을 [!DNL Privacy Service]얻으려면 고객으로부터 수집하는 데이터의 유형과 그 중 어떤 데이터가 개인 정보 보호 규정에 위반되는지 자세히 파악해야 합니다. 자세한 내용은 개인 정보 요구 [사항](#requirements) 결정 섹션을 참조하십시오.
 1. **데이터 레이블이 올바르게 지정되었습니까?**
    * 서비스에서 개인 정보 작업 중에 액세스하거나 삭제할 필드를 결정하려면 데이터 레이블이 적절하게 지정되어 있어야 합니다. 자세한 내용은 데이터 [레이블 지정](#label) 섹션을 참조하십시오.
-1. **보낼 ID를 알고 있습니까[!DNL Privacy Service]?**
+1. **보낼 ID를 알고 있습니까 [!DNL Privacy Service]?**
    * 개인 정보 요청을 전송할 때는 특정 Adobe 응용 프로그램별 개별 고객 ID를 제공해야 합니다. 자세한 내용은 ID 데이터 [제공](#identity) 및 개인 정보 [요청](#requests) 에 대한 섹션을 참조하십시오.
 1. **개인 정보 보호 작업은 어떻게 추적합니까?**
    * 개인 정보를 요청하면 해당 상태와 결과를 추적할 수 있는 여러 가지 옵션이 있습니다. 자세한 내용은 개인 정보 작업 [모니터링에](#monitor) 대한 섹션을 참조하십시오.
@@ -75,10 +75,12 @@ CRM 시스템이 사용하는 [!DNL Experience Cloud] 응용 프로그램에 따
 >아래 섹션에서는 API 또는 UI에서 일반 개인 정보 요청을 만드는 방법을 설명하는 설명서에 대한 링크를 제공합니다. 그러나 사용 중인 [!DNL Experience Cloud] 응용 프로그램에 따라 요청 페이로드에서 전송해야 하는 필드는 이러한 안내서에 표시된 예제와 다를 수 있습니다.
 >
 >API 또는 UI 가이드와 함께 할 때 특정 응용 프로그램에 대한 개인 정보 요청의 형식을 지정하는 방법에 대한 자세한 설명은 [Privacy Service 및 Experience Cloud 응용](./experience-cloud-apps.md) 프로그램에 대한 문서를 참조하십시오 [!DNL Experience Cloud] .
+>
+>또한 개인 정보 요청은 Experience Cloud 응용 프로그램에서 비동기식으로 처리됩니다. Privacy Service에서 요청을 받으면 각 애플리케이션이 요청을 완료하는 데 몇 분에서 몇 주가 걸릴 수 있습니다. 각 요청을 완료하는 데 걸리는 시간은 작업 중인 응용 프로그램에 따라 다르며 처리해야 하는 데이터의 양입니다.
 
 #### API 사용
 
-[!DNL Privacy Service API] [는 RESTful API 호출을 사용하여 개인 정보 작업을 만들고 관리하기 위한 여러 끝점을 제공하므로](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml) 응용 프로그램에 대한 개인 정보 보호 규정 준수에 프로그래밍 방식으로 액세스할 수 [!DNL Experience Cloud] 있습니다. API 사용 방법에 대한 자세한 내용은 [Privacy Service API 개발자 안내서를 참조하십시오](api/getting-started.md).
+RESTful API 호출을 사용하여 개인 정보 작업을 만들고 관리하기 위한 여러 가지 끝점이 [[!DNL Privacy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml) 제공되므로 응용 프로그램에 대한 개인 정보 보호 규정 준수에 프로그래밍 방식으로 액세스할 수 [!DNL Experience Cloud] 있습니다. API 사용 방법에 대한 자세한 내용은 [Privacy Service API 개발자 안내서를 참조하십시오](api/getting-started.md).
 
 #### UI 사용
 
