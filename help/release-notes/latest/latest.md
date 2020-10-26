@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: October 13, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: 133aa5ace2567e9380eb970b5737d7327d0c99b2
+source-git-commit: 8f646c26ce73671ef4e427d8cba51091a8884795
 workflow-type: tm+mt
-source-wordcount: '1025'
+source-wordcount: '1028'
 ht-degree: 4%
 
 ---
@@ -21,6 +21,7 @@ ht-degree: 4%
 - [실시간 고객 프로필](#profile)
 - [세분화 서비스](#segmentation)
 - [소스](#sources)
+- [가치 창출 시간](#time-to-value)
 
 ## 데이터 준비 {#data-prep}
 
@@ -76,7 +77,7 @@ Adobe Experience Platform은 외부 소스에서 데이터를 인제스트할 �
 
 소스에 대한 자세한 내용은 [소스 개요를 참조하십시오](../../sources/home.md).
 
-## 가치 창출 시간
+## 가치 창출 시간 {#time-to-value}
 
 Adobe Experience Platform을 통해 마케팅 운영 팀은 광범위한 데이터 엔지니어링 전문 지식 없이도 고객의 전체 상황을 파악할 수 있습니다. 데이터 속도를 통해 팀 및 가치를 가속화하는 것이 목표입니다.
 
