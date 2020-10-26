@@ -5,7 +5,7 @@ title: SQL 구문
 topic: syntax
 description: 이 문서에서는 쿼리 서비스에서 지원하는 SQL 구문을 보여 줍니다.
 translation-type: tm+mt
-source-git-commit: 43bebfbe0c0fca57d6e1ed0116e317b03125f175
+source-git-commit: c044194ed22b5e6fcd5e2e2102f3cd4eda45aa84
 workflow-type: tm+mt
 source-wordcount: '2067'
 ht-degree: 1%
@@ -118,7 +118,7 @@ SELECT statement 2
 CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='false') ] AS (select_query)
 ```
 
-여기서`target_schema_title` 는 XDM 스키마의 제목입니다. CTAS 쿼리를`rowvalidation` 통해 만든 새 데이터 세트에 대해 사용자가 새로 만든 데이터 세트에 대해 인제스트된 모든 새 배치의 행 수준 유효성 검사를 원하는지 여부를 지정하는 경우에만 이 절을 사용하십시오. 기본값은 &#39;false&#39;입니다.
+여기서`target_schema_title` 는 XDM 스키마의 제목입니다. CTAS 쿼리를`rowvalidation` 통해 만든 새 데이터 세트에 대해 사용자가 새로 만든 데이터 세트에 대해 인제스트된 모든 새 배치의 행 수준 유효성 검사를 원하는지 여부를 지정하는 경우에만 이 절을 사용하십시오. 기본값은 &#39;true&#39;입니다.
 
 and `select_query` `SELECT` is a statement, the syntax of is defined above in this document.
 
