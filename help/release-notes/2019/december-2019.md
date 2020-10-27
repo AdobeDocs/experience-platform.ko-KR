@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: December 12, 2019
 author: ens71067
 translation-type: tm+mt
-source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
+source-git-commit: 801da8a705360688f230eae5772a8bed9a1e856e
 workflow-type: tm+mt
-source-wordcount: '682'
+source-wordcount: '656'
 ht-degree: 7%
 
 ---
@@ -19,10 +19,10 @@ ht-degree: 7%
 
 Adobe Experience Platform의 기존 기능 업데이트:
 
-* [[!DNL 세그멘테이션 서비스]](#segmentation)
-* [[!DNL 의사 결정 서비스]](#decisioning)
-* [[!DNL 소스]](#sources)
-* [[!DNL 경험 데이터 모델(XDM) 시스템]](#xdm)
+* [[!DNL Segmentation Service]](#segmentation)
+* [[!DNL Decisioning Service]](#decisioning)
+* [[!DNL Sources]](#sources)
+* [[!DNL Experience Data Model (XDM) System]](#xdm)
 
 ## [!DNL Segmentation Service] {#segmentation}
 
@@ -56,8 +56,6 @@ Adobe Experience Platform [!DNL Decisioning Service] 는 특정 개인에 대해
 **알려진 문제**
 
 * None.
-
-서비스에 대한 [자세한 내용은 의사 결정 서비스 개요를](../../decisioning-service/home.md) 참조하십시오.
 
 ## [!DNL Sources] {#sources}
 
