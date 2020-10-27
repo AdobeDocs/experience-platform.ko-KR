@@ -5,9 +5,9 @@ title: XDM(Experience Data Model) 시스템
 topic: overview
 description: '표준화 및 상호 운용성은 Adobe Experience Platform의 핵심 개념입니다. Adobe을 기반으로 하는 XDM(Experience Data Model)은 고객 경험 데이터를 표준화하고 고객 경험 관리를 위한 스키마를 정의하는 것입니다. '
 translation-type: tm+mt
-source-git-commit: 1aceddc02a5120b0bf7413db33c2c03d0ab2948c
+source-git-commit: 1c00456ee06c1fc09c8e4ce070c90255f51811e1
 workflow-type: tm+mt
-source-wordcount: '1638'
+source-wordcount: '1586'
 ht-degree: 1%
 
 ---
@@ -109,14 +109,6 @@ Adobe Experience Platform [!DNL Data Science Workspace] 는 기계 학습과 인
 데이터 [!DNL Data Science Workspace]과학자는 머신 러닝 기반의 지능형 서비스 API를 쉽게 만들 수 있습니다. 이러한 서비스는 Adobe Target, Adobe Analytics Cloud 등 다른 Adobe 솔루션과 연동되므로 개인화된 디지털 경험을 자동화할 수 있습니다.
 
 데이터를 사용하여 인사이트를 도출하는 방법에 대한 자세한 내용은 [!DNL Experience Platform] 데이터 과학 작업 공간 개요를 참조하십시오 [](../data-science-workspace/home.md).
-
-### [!DNL Decisioning Service]
-
-[!DNL Decisioning Service] 통합 애플리케이션에서 개인화된 오퍼 의사 결정 구성 기능을 [!DNL Platform]제공합니다. 오퍼는 제품 추천, 웹 경험을 위한 컨텐츠 구성 요소, 대화 스크립트 및 수행할 작업이 될 수 있습니다.
-
-[!DNL Decisioning Service] 데이터 [!DNL Real-time Customer Profile] 를 활용하므로 [!DNL XDM Individual Profile] 또는 [!DNL XDM ExperienceEvent] 클래스를 구현하는 스키마를 기반으로 데이터 집합과 호환됩니다.
-
-자세한 내용은 [의사 결정 서비스 개요를](../decisioning-service/home.md) 참조하십시오.
 
 ## 다음 단계 및 추가 리소스
 
