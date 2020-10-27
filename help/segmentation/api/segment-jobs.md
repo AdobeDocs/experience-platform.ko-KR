@@ -5,9 +5,9 @@ title: 세그먼트 작업
 topic: developer guide
 description: 이 안내서에서는 세그먼트 작업을 더 잘 이해하는 데 도움이 되는 정보를 제공하고 API를 사용하여 기본 작업을 수행하기 위한 샘플 API 호출을 포함합니다.
 translation-type: tm+mt
-source-git-commit: 8c5c3aed4d46c8b3873009ab9f17ff9bca93302c
+source-git-commit: 521b760da850144d7a8e75126453c2aae5c2ce72
 workflow-type: tm+mt
-source-wordcount: '1153'
+source-wordcount: '1152'
 ht-degree: 2%
 
 ---
@@ -177,7 +177,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 | `metrics.profileSegmentationTime` | 소요된 총 시간과 세그멘테이션 평가가 시작 및 종료된 시간에 대한 정보가 포함된 객체입니다. |
 | `metrics.segmentProfileCounter` | 세그먼트별로 자격이 있는 프로필 수입니다. |
 | `metrics.segmentedProfileByNamespaceCounter` | 세그먼트 단위로 각 ID 네임스페이스에 대해 자격이 있는 프로필 수입니다. |
-| `metrics.segmentProfileByStatusCounter` | 각 상태에 대한 **프로필 조각** 수입니다. 다음 세 가지 상태가 지원됩니다. <ul><li>&quot;실현&quot; - 세그먼트에 입력된 새 프로필 수입니다.</li><li>&quot;기존&quot; - 세그먼트에 계속 존재하는 프로필 수입니다.</li><li>&quot;종료한&quot; - 세그먼트에 더 이상 존재하지 않는 프로필 세그먼트 수입니다.</li></ul> |
+| `metrics.segmentProfileByStatusCounter` | 각 상태에 대한 프로필 수입니다. 다음 세 가지 상태가 지원됩니다. <ul><li>&quot;실현&quot; - 세그먼트에 입력된 새 프로필 수입니다.</li><li>&quot;기존&quot; - 세그먼트에 계속 존재하는 프로필 수입니다.</li><li>&quot;종료한&quot; - 세그먼트에 더 이상 존재하지 않는 프로필 세그먼트 수입니다.</li></ul> |
 | `metrics.totalProfilesByMergePolicy` | 병합 정책 기준별로 병합된 프로필의 총 수입니다. |
 
 ## 새 세그먼트 작업 만들기 {#create}
