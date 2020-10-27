@@ -1,21 +1,25 @@
 ---
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;mixin;mixin;environment;environment details;
 solution: Experience Platform
-title: ExperienceEvent 환경 세부 정보 혼합
+title: 환경 세부 정보 혼합
 topic: overview
 description: 이 문서에서는 ExperienceEvent 환경 세부 사항 혼합에 대한 개요를 제공합니다.
 translation-type: tm+mt
-source-git-commit: f5bddb39c16eb25e85297f56e331d3aa51510eb9
+source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
 workflow-type: tm+mt
-source-wordcount: '165'
+source-wordcount: '179'
 ht-degree: 2%
 
 ---
 
 
-# [!UICONTROL ExperienceEvent 환경 세부 정보] 혼합
+# [!UICONTROL 환경 세부 정보] 혼합
 
-[!UICONTROL ExperienceEvent 환경 세부 사항] 은 장치 세부 사항, 브라우저 정보, 현지 시간 및 기타 지역 정보와 같은 경험 이벤트와 관련된 환경 세부 사항을 캡처하는 데 사용되는 [[!DNL XDM ExperienceEvent] 클래스에 대한 표준 혼합입니다](../../classes/individual-profile.md) .
+>[!NOTE]
+>
+>여러 혼합물의 이름이 변경되었습니다. 자세한 내용은 [혼합 이름 업데이트에](../name-updates.md) 대한 문서를 참조하십시오.
+
+[!UICONTROL 환경 세부 사항] 은 장치 세부 사항, 브라우저 정보, 현지 시간 및 기타 지역 정보와 같은 경험 이벤트와 관련된 환경 세부 사항을 캡처하는 데 사용되는 [[!DNL XDM ExperienceEvent] 클래스에 대한 표준 혼합입니다](../../classes/individual-profile.md) .
 
 <img src="../../images/mixins/environment-details.png" width="500" /><br />
 
