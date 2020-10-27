@@ -1,21 +1,25 @@
 ---
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual profile;fields;schemas;Schemas;Schema design;mixin;mixins;work details;profile work;
 solution: Experience Platform
-title: 프로필 작업 세부 정보 혼합
+title: 연락처 세부 정보 혼합
 topic: overview
-description: 이 문서에서는 XDM 개별 프로필 클래스에 대한 개요를 제공합니다.
+description: 이 문서에서는 작업 연락처 세부 사항 혼합에 대한 개요를 제공합니다.
 translation-type: tm+mt
-source-git-commit: e58c669b5542453b7fbf6d90deedcd2cf349c0b6
+source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
 workflow-type: tm+mt
-source-wordcount: '139'
-ht-degree: 4%
+source-wordcount: '156'
+ht-degree: 3%
 
 ---
 
 
-# [!UICONTROL 프로필 작업 세부 정보] 혼합
+# [!UICONTROL 작업 연락처 세부 정보] 혼합
 
-[!UICONTROL 프로필 작업 세부 사항은] 클래스 [[!DNL XDM Individual Profile] ](../../classes/individual-profile.md)의 표준 믹스인입니다. 이 혼합물은 작업장 주소, 작업이메일, 직장 전화 번호, 그리고 그 사람이 속한 조직과 같은 개인의 직업적 정보를 캡처하는 여러 가지 분야를 제공합니다.
+>[!NOTE]
+>
+>여러 혼합물의 이름이 변경되었습니다. 자세한 내용은 [혼합 이름 업데이트에](../name-updates.md) 대한 문서를 참조하십시오.
+
+[!UICONTROL [작업 연락처 세부 사항] ]은 [[!DNL XDM Individual Profile] 클래스](../../classes/individual-profile.md)의 표준 믹스인입니다. 이 혼합물은 작업장 주소, 작업이메일, 직장 전화 번호, 그리고 그 사람이 속한 조직과 같은 개인의 직업적 정보를 캡처하는 여러 가지 분야를 제공합니다.
 
 <img src="../../images/mixins/profile-work-details.png" width="550" /><br />
 
