@@ -1,11 +1,12 @@
 ---
 product: experience-platform
+solution: Experience Platform, Intelligent Services
 audience: user
 user-guide-title: 지능형 서비스 도움말
 breadcrumb-title: Intelligent Services 안내서
 user-guide-description: 인텔리전트 AI 서비스를 활용하여 점수를 생성하고 인사이트를 발견하며 마케팅 이벤트 데이터를 통해 세그먼트를 만들 수 있습니다.
 translation-type: tm+mt
-source-git-commit: ada5a34ffa3ea9c90ff578ab27f425b82f7ed18c
+source-git-commit: 097fe219e0d64090de758f388ba98e6024db2201
 workflow-type: tm+mt
 source-wordcount: '114'
 ht-degree: 24%
