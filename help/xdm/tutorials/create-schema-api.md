@@ -3,10 +3,10 @@ keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experi
 solution: Experience Platform
 title: 스키마 레지스트리 API를 사용하여 스키마 만들기
 topic: tutorial
-type: Tutorials
+type: Tutorial
 description: 이 자습서에서는 스키마 레지스트리 API를 사용하여 표준 클래스를 사용하여 스키마를 구성하는 단계를 안내합니다.
 translation-type: tm+mt
-source-git-commit: de3d3a12e5e362bfa5d3149481a0eb7a6b278b70
+source-git-commit: 097fe219e0d64090de758f388ba98e6024db2201
 workflow-type: tm+mt
 source-wordcount: '2343'
 ht-degree: 1%
