@@ -5,9 +5,9 @@ user-guide-title: Adobe Experience Platform 소스 커넥터 도움말
 breadcrumb-title: Source Connectors 안내서
 user-guide-description: 다양한 소스 또는 구조에서 데이터를 수집하고 레이블을 지정하며 기존에 수집한 데이터를 향상시킬 수 있습니다.
 translation-type: tm+mt
-source-git-commit: da0c65b5afc19e2497816c4b84270f5f5c4617f2
+source-git-commit: 26d117726a59dea0c08cf6ca5a13bf54951f7f44
 workflow-type: tm+mt
-source-wordcount: '645'
+source-wordcount: '654'
 ht-degree: 4%
 
 ---
@@ -134,6 +134,7 @@ ht-degree: 4%
    - [Flow Service API를 사용하여 데이터 세트 기본 연결 만들기](tutorials/api/create-dataset-base-connection.md)
    - [Flow Service API를 사용하여 데이터 흐름 모니터링](tutorials/api/monitor.md)
    - [Flow Service API를 사용하여 연결 정보 업데이트](tutorials/api/update.md)
+   - [Flow Service API를 사용하여 연결 삭제](tutorials/api/delete.md)
 - UI 자습서 {#ui-tutorials}
    - 소스 커넥터 만들기 {#create}
       - Adobe 응용 프로그램 {#adobe-applications}
@@ -195,6 +196,7 @@ ht-degree: 4%
       - [프로토콜 커넥터에 대한 데이터 흐름 구성](tutorials/ui/dataflow/protocols.md)
    - [인바운드 데이터를 활성화하여 고객 프로필 채우기](tutorials/ui/profile.md)
    - [계정 및 데이터 흐름 모니터링](tutorials/ui/monitor.md)
+   - [계정 삭제](tutorials/ui/delete-accounts.md)
    - [데이터 흐름 삭제](tutorials/ui/delete.md)
 - [흐름 실행 알림](notifications.md)
 - [플랫폼 릴리스 정보](https://www.adobe.com/go/platform-release-notes-en)
