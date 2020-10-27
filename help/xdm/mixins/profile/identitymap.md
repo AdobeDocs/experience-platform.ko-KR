@@ -5,15 +5,19 @@ title: IdentityMap mixin
 topic: overview
 description: 이 문서에서는 XDM 개별 프로필 클래스에 대한 개요를 제공합니다.
 translation-type: tm+mt
-source-git-commit: fd5bd4134bd35d5d87c79bf1e75bc88c67511b2b
+source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
 workflow-type: tm+mt
-source-wordcount: '96'
+source-wordcount: '113'
 ht-degree: 0%
 
 ---
 
 
 # [!UICONTROL IdentityMap] mixin
+
+>[!NOTE]
+>
+>여러 혼합물의 이름이 변경되었습니다. 자세한 내용은 [혼합 이름 업데이트에](../name-updates.md) 대한 문서를 참조하십시오.
 
 [!UICONTROL IdentityMap] 은 [[!DNL XDM Individual Profile] 클래스](../../classes/individual-profile.md)의 표준 혼합입니다. 이 혼합은 네임스페이스별로 입력되는 사용자 ID 집합을 포함하는 단일 맵 필드를 제공합니다.
 
