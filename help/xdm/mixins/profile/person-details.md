@@ -1,21 +1,25 @@
 ---
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual profile;fields;schemas;Schemas;Schema design;mixin;mixin;person;person details;profile person details;person;
 solution: Experience Platform
-title: 프로필 인물 세부 정보 혼합
+title: 인구 통계 세부 정보 혼합
 topic: overview
-description: 이 문서에서는 XDM 개별 프로필 클래스에 대한 개요를 제공합니다.
+description: 이 문서에서는 인구 통계 세부 사항 혼합에 대한 개요를 제공합니다.
 translation-type: tm+mt
-source-git-commit: 27ce9b6e8608bbfccac25387ba96f998272273c1
+source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
 workflow-type: tm+mt
-source-wordcount: '227'
+source-wordcount: '241'
 ht-degree: 3%
 
 ---
 
 
-# [!UICONTROL 프로필 인물 세부 정보] 혼합
+# [!UICONTROL 인구 통계 세부] 정보 혼합
 
-[!UICONTROL 프로필 인물 세부 정보는] 클래스 [[!DNL XDM Individual Profile] ](../../classes/individual-profile.md)의 표준 혼합입니다. 이 혼합물은 루트 수준 개체를 제공하며, 이 하위 필드는 개별 사용자에 대한 정보를 설명합니다. `person`
+>[!NOTE]
+>
+>여러 혼합물의 이름이 변경되었습니다. 자세한 내용은 [혼합 이름 업데이트에](../name-updates.md) 대한 문서를 참조하십시오.
+
+[!UICONTROL 인구 통계 세부 사항] 은 [[!DNL XDM Individual Profile] 학급](../../classes/individual-profile.md)표준이다. 이 혼합물은 루트 수준 개체를 제공하며, 이 하위 필드는 개별 사용자에 대한 정보를 설명합니다. `person`
 
 <img src="../../images/mixins/profile-person-details.png" width="600" /><br />
 
@@ -33,4 +37,4 @@ ht-degree: 3%
 혼합에 대한 자세한 내용은 공용 XDM 저장소를 참조하십시오.
 
 * [채워진 예제](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-person-details.example.1.json)
-* [전체 스키마](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-person-details.schema.json)
+* [전체 스키마](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-person-details.schema.json)오
