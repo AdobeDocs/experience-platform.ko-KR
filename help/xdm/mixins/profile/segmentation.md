@@ -1,21 +1,25 @@
 ---
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual profile;fields;schemas;Schemas;segment;segmentMembership;segment membership;Schema design;map;Map;
 solution: Experience Platform
-title: 프로필 세분화
+title: 세그먼트 멤버십 세부 정보 혼합
 topic: overview
-description: 이 문서에서는 XDM 개별 프로필 클래스에 대한 개요를 제공합니다.
+description: 이 문서에서는 세그먼트 멤버십 세부 사항 혼합에 대한 개요를 제공합니다.
 translation-type: tm+mt
-source-git-commit: 53575488c08f73a65a7f1cc5f803f9ead707ae48
+source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
 workflow-type: tm+mt
-source-wordcount: '365'
+source-wordcount: '385'
 ht-degree: 1%
 
 ---
 
 
-# [!UICONTROL 프로필 세분화] 믹신
+# [!UICONTROL 세그먼트 멤버십 세부 정보] 혼합
 
-[!UICONTROL 프로필 세그먼테이션은] 클래스 [[!DNL XDM Individual Profile] ](../../classes/individual-profile.md)의 표준 믹스인입니다. 이 혼합은 개인이 속한 세그먼트, 마지막 자격 시간, 멤버십이 유효한 시점 등 세그먼트 멤버십과 관련된 정보를 캡처하는 단일 맵 필드를 제공합니다.
+>[!NOTE]
+>
+>여러 혼합물의 이름이 변경되었습니다. 자세한 내용은 [혼합 이름 업데이트에](../name-updates.md) 대한 문서를 참조하십시오.
+
+[!UICONTROL 세그먼트 회원 세부 사항] 은 [[!DNL XDM Individual Profile] 클래스](../../classes/individual-profile.md)의 표준 믹스인입니다. 이 혼합은 개인이 속한 세그먼트, 마지막 자격 시간, 멤버십이 유효한 시점 등 세그먼트 멤버십과 관련된 정보를 캡처하는 단일 맵 필드를 제공합니다.
 
 >[!WARNING]
 >
