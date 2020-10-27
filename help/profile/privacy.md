@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 실시간 고객 프로필의 개인 정보 요청 처리
 topic: overview
 translation-type: tm+mt
-source-git-commit: f7abccb677294e1595fb35c27e03c30eb968082a
+source-git-commit: 066337419431db24bde0a8d0d30b85132d08f43c
 workflow-type: tm+mt
-source-wordcount: '1024'
+source-wordcount: '1058'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ Adobe Experience Platform [!DNL Privacy Service] 는 GDPR(General Data Protectio
 
 * [[!DNL Privacy Service]](home.md):Adobe Experience Cloud 애플리케이션에서 개인 데이터를 액세스, 판매 거부 또는 삭제하기 위한 고객 요청을 관리합니다.
 * [[!DNL Identity Service]](../identity-service/home.md):다양한 디바이스와 시스템에 ID를 연결하여 고객 경험 데이터의 세분화로 인한 기본적인 문제를 해결합니다.
-* [[!DNL 실시간 고객 프로필]](../profile/home.md):여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
+* [[!DNL Real-time Customer Profile]](../profile/home.md):여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
 
 ## ID 네임스페이스 이해 {#namespaces}
 
@@ -43,6 +43,8 @@ ID 서비스는 전역적으로 정의된(표준) 및 사용자 정의(사용자
 >Privacy Service은 ID 연결을 수행하지 않는 병합 정책을 사용하여 [!DNL Profile] 데이터만 처리할 수 있습니다. UI를 사용하여 개인 정보 요청 처리 여부를 확인하는 경우, &quot;[!DNL None]&quot;가 있는 정책을 [!UICONTROL ID 연결] 유형으로 사용하고 있는지 확인하십시오. 즉, ID 스티칭이 &quot; [!UICONTROL 비공개 그래프] &quot;로 설정된 병합 정책은 사용할 수[!UICONTROL 없습니다].
 >
 >![](./images/privacy/no-id-stitch.png)
+>
+>또한 개인 정보 보호 요청을 완료하는 데 걸리는 시간은 보장할 수 없습니다. 요청이 아직 처리되는 동안 [!DNL Profile] 데이터에 변경 사항이 발생하는 경우 해당 레코드가 처리되는지 여부도 보장할 수 없습니다.
 
 ### API 사용
 
