@@ -5,9 +5,9 @@ user-guide-title: XDM(경험 데이터 모델) 시스템 도움말
 breadcrumb-title: Data Model (XDM) 안내서
 user-guide-description: XDM(경험 데이터 모델) 클래스와 mixin을 사용하여 경험 데이터를 표준화합니다.
 translation-type: tm+mt
-source-git-commit: a091acf1cfc572df7b300a7be6a673b1e7469be5
+source-git-commit: 6c52998421b6a5d9719f287ec8cb7099780cb1ff
 workflow-type: tm+mt
-source-wordcount: '197'
+source-wordcount: '198'
 ht-degree: 20%
 
 ---
@@ -28,13 +28,13 @@ ht-degree: 20%
 * 믹신 {#mixins}
    * 프로필 혼합 {#profile}
       * [IdentityMap](./mixins/profile/identitymap.md)
-      * [프로필 개인 정보](./mixins/profile/person-details.md)
-      * [프로필 개인 정보](./mixins/profile/personal-details.md)
-      * [프로필 세분화](./mixins/profile/segmentation.md)
-      * [프로필 작업 세부 사항](./mixins/profile/work-details.md)
+      * [인구 통계 세부 사항](./mixins/profile/person-details.md)
+      * [개인 연락처 세부 정보](./mixins/profile/personal-details.md)
+      * [세그먼트 멤버십 세부 정보](./mixins/profile/segmentation.md)
+      * [작업 연락처 세부 정보](./mixins/profile/work-details.md)
    * 이벤트 믹싱 {#event}
-      * [ExperienceEvent EndUserIDs](./mixins/event/enduserids.md)
-      * [ExperienceEvent 환경 세부 사항](./mixins/event/environment-details.md)
+      * [최종 사용자 ID 세부 정보](./mixins/event/enduserids.md)
+      * [환경 세부 사항](./mixins/event/environment-details.md)
    * [Mixin 이름 업데이트](./mixins/name-updates.md)
 * 데이터 유형 {#data-types}
    * [비콘](./data-types/beacon.md)
