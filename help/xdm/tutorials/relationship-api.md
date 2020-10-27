@@ -4,11 +4,11 @@ solution: Experience Platform
 title: 스키마 레지스트리 API를 사용하여 두 스키마 간의 관계 정의
 description: 이 문서에서는 스키마 레지스트리 API를 사용하여 조직에서 정의한 두 스키마 간의 1:1 관계를 정의하는 자습서를 제공합니다.
 topic: tutorial
-type: Tutorials
+type: Tutorial
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 097fe219e0d64090de758f388ba98e6024db2201
 workflow-type: tm+mt
-source-wordcount: '1304'
+source-wordcount: '1296'
 ht-degree: 1%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 1%
 
 스키마 관계는 조합 스키마 및 조합 스키마 사용을 통해 유추할 수 있지만, 이 [!DNL Real-time Customer Profile]는 동일한 클래스를 공유하는 스키마에만 적용됩니다. 다른 클래스에 속하는 두 스키마 간의 관계를 설정하려면 전용 관계 필드를 대상 스키마의 ID를 참조하는 소스 스키마에 추가해야 합니다.
 
-이 문서에서는 [[!DNL 스키마 레지스트리 API]를 사용하여 조직에서 정의한 두 스키마 간 1:1 관계를 정의하는 자습서를 제공합니다](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
+이 문서에서는 조직에서 이 문서를 사용하여 정의한 두 스키마 간의 1:1 관계를 정의하는 자습서를 제공합니다 [[!DNL Schema Registry API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
 
 ## 시작하기
 
@@ -28,7 +28,7 @@ ht-degree: 1%
 
 * [Experience Platform의 XDM 시스템](../home.md):XDM 및 XDM 구현에 대한 개요입니다 [!DNL Experience Platform].
    * [스키마 컴포지션의 기본 사항](../schema/composition.md):XDM 스키마의 기본 요소 소개
-* [[!DNL 실시간 고객 프로필]](../../profile/home.md):여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
+* [[!DNL Real-time Customer Profile]](../../profile/home.md):여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
 * [샌드박스](../../sandboxes/home.md): [!DNL Experience Platform] 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되도록 단일 [!DNL Platform] 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
 
 이 자습서를 시작하기 전에 [개발자 가이드에서](../api/getting-started.md) API를 성공적으로 호출하기 위해 알아야 할 중요한 정보가 있는지 [!DNL Schema Registry] 확인하십시오. 여기에는 사용자 `{TENANT_ID}`, &quot;컨테이너&quot;의 개념, 요청을 만드는 데 필요한 머리글이 포함됩니다(헤더와 가능한 값에 특별히 [!DNL Accept] 주의).
