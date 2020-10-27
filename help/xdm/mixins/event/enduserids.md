@@ -1,21 +1,25 @@
 ---
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;mixin;mixin;enduserids;end-user;end user;ids;
 solution: Experience Platform
-title: ExperienceEvent EndUserIDs mixin
+title: 최종 사용자 ID 세부 정보 혼합
 topic: overview
-description: 이 문서에서는 ExperienceEvent EndUserIDs mixin에 대한 개요를 제공합니다.
+description: 이 문서에서는 최종 사용자 ID 세부 사항 혼합에 대한 개요를 제공합니다.
 translation-type: tm+mt
-source-git-commit: f5bddb39c16eb25e85297f56e331d3aa51510eb9
+source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
 workflow-type: tm+mt
-source-wordcount: '150'
+source-wordcount: '175'
 ht-degree: 1%
 
 ---
 
 
-# [!UICONTROL ExperienceEvent EndUserIDs] mixin
+# [!UICONTROL 최종 사용자 ID 세부 정보] 믹싱
 
-[!UICONTROL ExperienceEvent EndUserIDs] 는 여러 Adobe 응용 프로그램에서 [[!DNL XDM ExperienceEvent] 개인의 ID 정보를 설명하는 데 사용되는 클래스](../../classes/individual-profile.md)표준 믹스인입니다. 이 혼합은 데이터 인제스트 시 값이 자동으로 업데이트되는 읽기 전용 `endUserIDs` `_experience` 필드가 포함된 루트 레벨 개체를 제공합니다.
+>[!NOTE]
+>
+>여러 혼합물의 이름이 변경되었습니다. 자세한 내용은 [혼합 이름 업데이트에](../name-updates.md) 대한 문서를 참조하십시오.
+
+[!UICONTROL 최종 사용자 ID 세부 사항] 은 [[!DNL XDM ExperienceEvent] 클래스](../../classes/individual-profile.md)의 표준 혼합으로서, 여러 Adobe 응용 프로그램에서 개인의 ID 정보를 설명하는 데 사용됩니다. 이 혼합은 데이터 인제스트 시 값이 자동으로 업데이트되는 읽기 전용 `endUserIDs` `_experience` 필드가 포함된 루트 레벨 개체를 제공합니다.
 
 <img src="../../images/mixins/enduserids.png" width="700" /><br />
 
