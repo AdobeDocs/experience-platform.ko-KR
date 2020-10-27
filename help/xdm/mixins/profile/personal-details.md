@@ -1,21 +1,25 @@
 ---
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual profile;fields;schemas;Schemas;personal details;Schema design;mixin;Mixin;
 solution: Experience Platform
-title: 프로필 개인 정보 혼합
+title: 개인 연락처 세부 정보 혼합
 topic: overview
-description: 이 문서에서는 XDM 개별 프로필 클래스에 대한 개요를 제공합니다.
+description: 이 문서에서는 개인 연락처 세부 사항 믹싱에 대한 개요를 제공합니다.
 translation-type: tm+mt
-source-git-commit: e58c669b5542453b7fbf6d90deedcd2cf349c0b6
+source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
 workflow-type: tm+mt
-source-wordcount: '122'
-ht-degree: 8%
+source-wordcount: '133'
+ht-degree: 7%
 
 ---
 
 
-# [!UICONTROL 프로필 개인 세부 정보] 혼합
+# [!UICONTROL 개인 연락처 세부 정보] 혼합
 
-[!UICONTROL 프로필 개인 세부 사항은] 학급 [[!DNL XDM Individual Profile] ](../../classes/individual-profile.md)의 표준 혼합입니다. 이 혼합은 루트 수준 개체를 제공하며, 이 하위 필드는 개별 사용자에 대한 연락처 정보를 설명합니다. `person`
+>[!NOTE]
+>
+>여러 혼합물의 이름이 변경되었습니다. 자세한 내용은 [혼합 이름 업데이트에](../name-updates.md) 대한 문서를 참조하십시오.
+
+[!UICONTROL 개인 연락처 세부 사항] 은 개인의 연락처 정보를 설명하는 [[!DNL XDM Individual Profile] 클래스](../../classes/individual-profile.md) 의 표준 혼합입니다.
 
 <img src="../../images/mixins/profile-personal-details.png" width="700" /><br />
 
