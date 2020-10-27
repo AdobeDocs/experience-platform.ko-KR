@@ -5,9 +5,9 @@ title: 데이터 집합 사용자 가이드
 topic: datasets
 description: 이 데이터 집합 사용자 안내서는 Adobe Experience Platform 사용자 인터페이스 내의 데이터 집합을 사용할 때 일반적인 작업을 수행하는 방법에 대한 지침을 제공합니다.
 translation-type: tm+mt
-source-git-commit: 79dca07d3e6ecf998a6278fa49178a7fa8cc0e8c
+source-git-commit: 1c00456ee06c1fc09c8e4ce070c90255f51811e1
 workflow-type: tm+mt
-source-wordcount: '1162'
+source-wordcount: '1146'
 ht-degree: 0%
 
 ---
@@ -22,11 +22,11 @@ ht-degree: 0%
 이 사용 안내서를 보려면 다음 Adobe Experience Platform 구성 요소에 대한 작업 정보가 필요합니다.
 
 * [데이터 집합](overview.md):데이터 지속성을 위한 스토리지 및 관리 구성 [!DNL Experience Platform].
-* [[!DNL 경험 데이터 모델(XDM) 시스템]](../../xdm/home.md):고객 경험 데이터를 [!DNL Experience Platform] 구성하는 표준화된 프레임워크
+* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md):고객 경험 데이터를 [!DNL Experience Platform] 구성하는 표준화된 프레임워크
    * [스키마 컴포지션의 기본 사항](../../xdm/schema/composition.md):스키마 컴포지션의 주요 원칙 및 모범 사례 등 XDM 스키마의 기본 구성 요소에 대해 알아봅니다.
    * [스키마 편집기](../../xdm/tutorials/create-schema-ui.md):사용자 인터페이스 내에서 사용자 정의 XDM 스키마를 사용하여 고유한 사용자 정의 XDM 스키마 [!DNL Schema Editor] 를 만드는 방법을 [!DNL Platform] 학습합니다.
-* [[!DNL 실시간 고객 프로필]](../../profile/home.md):여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
-* [[!DNL Adobe Experience Platform 데이터 거버넌스]](../../data-governance/home.md):고객 데이터 사용과 관련된 규정, 제한 사항 및 정책을 준수할 수 있습니다.
+* [[!DNL Real-time Customer Profile]](../../profile/home.md):여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
+* [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md):고객 데이터 사용과 관련된 규정, 제한 사항 및 정책을 준수할 수 있습니다.
 
 ## 데이터 집합 보기
 
@@ -122,7 +122,7 @@ CSV 파일을 사용하여 데이터 세트를 만들면, 제공된 CSV 파일�
 
 >[!NOTE]
 >
->Adobe 애플리케이션 및 서비스(예: Adobe Analytics, Adobe Audience Manager 또는 [!DNL Decisioning Service])에서 생성 및 활용하는 데이터 세트는 삭제할 수 없습니다.
+>Adobe 애플리케이션 및 서비스(예: Adobe Analytics, Adobe Audience Manager 또는 [!DNL Offer Decisioning])에서 생성 및 활용하는 데이터 세트는 삭제할 수 없습니다.
 
 ![](../images/datasets/user-guide/delete_dataset.png)
 
