@@ -5,10 +5,10 @@ user-guide-title: XDM(경험 데이터 모델) 시스템 도움말
 breadcrumb-title: Data Model (XDM) 안내서
 user-guide-description: XDM(경험 데이터 모델) 클래스와 mixin을 사용하여 경험 데이터를 표준화합니다.
 translation-type: tm+mt
-source-git-commit: 27ce9b6e8608bbfccac25387ba96f998272273c1
+source-git-commit: a091acf1cfc572df7b300a7be6a673b1e7469be5
 workflow-type: tm+mt
-source-wordcount: '194'
-ht-degree: 21%
+source-wordcount: '197'
+ht-degree: 20%
 
 ---
 
@@ -35,6 +35,7 @@ ht-degree: 21%
    * 이벤트 믹싱 {#event}
       * [ExperienceEvent EndUserIDs](./mixins/event/enduserids.md)
       * [ExperienceEvent 환경 세부 사항](./mixins/event/environment-details.md)
+   * [Mixin 이름 업데이트](./mixins/name-updates.md)
 * 데이터 유형 {#data-types}
    * [비콘](./data-types/beacon.md)
    * [브라우저 세부 사항](./data-types/browser-details.md)
