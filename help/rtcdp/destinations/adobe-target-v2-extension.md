@@ -5,9 +5,9 @@ seo-title: Adobe Target v2 확장
 description: Adobe Target v2 익스텐션은 Adobe 실시간 고객 데이터 플랫폼의 개인화 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 seo-description: Adobe Target v2 익스텐션은 Adobe 실시간 고객 데이터 플랫폼의 개인화 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: 164c51e543d5eba11e4756723f3fecd84ec48f59
+source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
 workflow-type: tm+mt
-source-wordcount: '571'
+source-wordcount: '575'
 ht-degree: 16%
 
 ---
@@ -17,11 +17,11 @@ ht-degree: 16%
 
 ## 개요 {#overview}
 
-Adobe Target은 사용자의 웹 및 모바일 사이트, 앱, 소셜 미디어 및 기타 디지털 채널에 대한 수익을 극대화하도록 고객의 환경을 재단하고 개인화하는 데 필요한 모든 것을 제공하는 Adobe Experience Cloud 솔루션입니다.
+Adobe Target은 웹 및 모바일 사이트, 앱, 소셜 미디어 및 기타 디지털 채널에서 매출을 극대화하기 위해 고객의 경험을 맞춤화하고 개인화하는 데 필요한 모든 것을 제공하는 Adobe Experience Cloud 솔루션입니다.
 
 Adobe Target v2는 Adobe 실시간 고객 데이터 플랫폼의 개인화 확장입니다. 확장 기능에 대한 자세한 내용은 [Adobe Exchange의 확장 페이지를 참조하십시오](https://exchange.adobe.com/experiencecloud.details.102722.adobe-target-v2-launch-extension.html).
 
-이 대상은 Experience Platform Launch 확장자입니다. Adobe 실시간 CDP에서 Launch 익스텐션이 작동하는 방법에 대한 자세한 내용은 [Experience Platform Launch 확장 개요를 참조하십시오](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
+이 목적지는 Adobe Experience Platform Launch 확장선입니다 Adobe 실시간 CDP에서 플랫폼 실행 확장 기능이 작동하는 방법에 대한 자세한 내용은 [Adobe Experience Platform Launch 확장 개요를 참조하십시오](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
 ![Adobe Target v2 확장](/help/rtcdp/destinations/assets/adobe-target-v2-extension.png)
 
@@ -29,7 +29,7 @@ Adobe Target v2는 Adobe 실시간 고객 데이터 플랫폼의 개인화 확�
 
 이 익스텐션은 실시간 CDP Adobe을 구입한 모든 고객을 위해 [!DNL Destinations] 카탈로그에서 제공됩니다.
 
-이 확장 기능을 사용하려면 액세스 권한이 필요합니다 [!DNL Experience Platform Launch]. [!DNL Experience Platform Launch] 이 포함된 부가 가치 기능으로 Adobe Experience Cloud 고객에게 제공됩니다. Extension을 설치할 수 [!DNL Launch] 있도록 조직 관리자에게 **[!UICONTROL manage_properties]** 권한을 부여하도록 요청하십시오.
+이 확장 기능을 사용하려면 액세스 권한이 필요합니다 [!DNL Adobe Experience Platform Launch]. [!DNL Platform Launch] 이 포함된 부가 가치 기능으로 Adobe Experience Cloud 고객에게 제공됩니다. Extension을 설치할 수 [!DNL Platform Launch] 있도록 조직 관리자에게 **[!UICONTROL manage_properties]** 권한을 부여하도록 요청하십시오.
 
 ## 확장 설치 {#install-extension}
 
@@ -43,21 +43,21 @@ Adobe Target v2 익스텐션을 설치하려면:
 
 확장 구성 옵션에 대한 자세한 내용은 설명서의 [Adobe Target v2 확장 페이지](https://docs.adobe.com/content/help/ko-KR/launch/using/extensions-ref/adobe-extension/targetv2-extension/adobe-target-extension-v2.html) 를 [!DNL Experience Launch] 참조하십시오.
 
-또한 [Experience Platform Launch 인터페이스에서 직접 익스텐션을 설치할 수 있습니다](https://launch.adobe.com/). 설명서에서 [새 확장](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html#add-a-new-extension) 추가를 [!DNL Launch] 참조하십시오.
+또한 [Adobe Experience Platform Launch 인터페이스에서 직접 익스텐션을 설치할 수 있습니다](https://launch.adobe.com/). 설명서에서 [새 확장](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html#add-a-new-extension) 추가를 [!DNL Platform Launch] 참조하십시오.
 
 
 ## 익스텐션 사용 방법 {#how-to-use}
 
-익스텐션을 설치한 후 에서 바로 규칙을 설정할 수 있습니다 [!DNL Launch].
+익스텐션을 설치한 후 에서 바로 규칙을 설정할 수 있습니다 [!DNL Platform Launch].
 
-에서 [!DNL Launch]이벤트 데이터를 특정 상황에서만 확장 대상에 보내도록 설치된 확장 기능에 대한 규칙을 설정할 수 있습니다. 확장 규칙 설정에 대한 자세한 내용은 [규칙 설명서를 참조하십시오](https://docs.adobe.com/help/ko-KR/launch/using/reference/manage-resources/rules.html).
+에서 [!DNL Platform Launch]이벤트 데이터를 특정 상황에서만 확장 대상에 보내도록 설치된 확장 기능에 대한 규칙을 설정할 수 있습니다. 확장 규칙 설정에 대한 자세한 내용은 [규칙 설명서를 참조하십시오](https://docs.adobe.com/help/ko-KR/launch/using/reference/manage-resources/rules.html).
 
 ## 확장 기능 구성, 업그레이드 및 삭제 {#configure-upgrade-delete}
 
-인터페이스에서 익스텐션을 구성, 업그레이드 및 삭제할 수 [!DNL Launch] 있습니다.
+인터페이스에서 익스텐션을 구성, 업그레이드 및 삭제할 수 [!DNL Platform Launch] 있습니다.
 
 >[!TIP]
 >
->확장이 이미 속성 중 하나에 설치되어 있는 경우 Adobe Real-time CDP UI에 **[!UICONTROL Install for the extension]** 이 여전히 표시됩니다. 확장 기능을 가져오고 구성하거나 삭제하려면 [설치 확장](#install-extension) 프로그램 [!DNL Launch] 에 설명된 대로 설치 워크플로우를 시작합니다.
+>확장이 이미 속성 중 하나에 설치되어 있는 경우 Adobe Real-time CDP UI에 **[!UICONTROL Install for the extension]** 이 여전히 표시됩니다. 확장 기능을 가져오고 구성하거나 삭제하려면 [설치 확장](#install-extension) 프로그램 [!DNL Platform Launch] 에 설명된 대로 설치 워크플로우를 시작합니다.
 
-익스텐션을 업그레이드하려면 설명서의 [익스텐션 업그레이드](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/extension-upgrade.html) 를 [!DNL Launch] 참조하십시오.
+익스텐션을 업그레이드하려면 설명서의 [익스텐션 업그레이드](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/extension-upgrade.html) 를 [!DNL Platform Launch] 참조하십시오.
