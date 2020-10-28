@@ -2,12 +2,12 @@
 keywords: destinations;destination;destination types
 title: 대상 유형 및 카테고리
 seo-title: 대상 유형 및 카테고리
-description: 'Adobe의 실시간 고객 데이터 플랫폼에서 프로필/세그먼트 내보내기 대상은 이벤트 데이터를 캡처하고, 다른 데이터 소스와 결합하고, 세그멘테이션을 적용하고, 세그먼트 및 자격이 있는 프로필을 대상에 내보냅니다. 익스텐션을 실행하면 원시 이벤트 데이터를 여러 유형의 대상으로 전달할 수 있습니다. '
-seo-description: Adobe의 실시간 고객 데이터 플랫폼에서 프로필/세그먼트 내보내기 대상은 이벤트 데이터를 캡처하고, 다른 데이터 소스와 결합하고, 세그멘테이션을 적용하고, 세그먼트 및 자격이 있는 프로필을 대상에 내보냅니다. 익스텐션을 실행하면 원시 이벤트 데이터를 여러 유형의 대상으로 전달할 수 있습니다.
+description: 'Adobe의 실시간 고객 데이터 플랫폼에서 프로필/세그먼트 내보내기 대상은 이벤트 데이터를 캡처하고, 다른 데이터 소스와 결합하고, 세그멘테이션을 적용하고, 세그먼트 및 자격이 있는 프로필을 대상에 내보냅니다. Experience Platform Launch 익스텐션은 원시 이벤트 데이터를 여러 유형의 대상으로 전달합니다. '
+seo-description: Adobe의 실시간 고객 데이터 플랫폼에서 프로필/세그먼트 내보내기 대상은 이벤트 데이터를 캡처하고, 다른 데이터 소스와 결합하고, 세그멘테이션을 적용하고, 세그먼트 및 자격이 있는 프로필을 대상에 내보냅니다. Experience Platform Launch 익스텐션은 원시 이벤트 데이터를 여러 유형의 대상으로 전달합니다.
 translation-type: tm+mt
-source-git-commit: b510f715133cc3fed98861f977b3ce9a857a5ced
+source-git-commit: e6276eac05f0a20a668051034e83831002a464f0
 workflow-type: tm+mt
-source-wordcount: '580'
+source-wordcount: '591'
 ht-degree: 0%
 
 ---
@@ -49,13 +49,13 @@ Adobe의 실시간 고객 데이터 플랫폼에서는 연결과 익스텐션 �
 
 ### 확장 {#extensions}
 
-Adobe 실시간 CDP는 Experience Platform Launch의 강력성과 유연성을 활용하여 Adobe 실시간 CDP 인터페이스에 Launch 익스텐션을 포함시킵니다.
+Adobe 실시간 CDP는 Adobe Experience Platform Launch의 기능과 유연성을 활용하여 Adobe 실시간 CDP 인터페이스에 플랫폼 실행 확장 기능을 포함시킵니다.
 
 >[!TIP]
 >
->사용 사례 및 인터페이스에서 Experience Platform Launch 익스텐션을 찾는 방법 등 익스텐션에 대한 자세한 내용은 [론치 익스텐션 개요를 참조하십시오](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
+>사용 사례 및 인터페이스에서 이를 찾는 방법 등 Adobe Experience Platform Launch 익스텐션에 대한 자세한 내용은 [Adobe Experience Platform Launch 익스텐션 개요를 참조하십시오](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
-익스텐션을 실행하면 원시 이벤트 데이터를 여러 유형의 대상으로 전달할 수 있습니다. 익스텐션을 대상의 **이벤트 전달** 유형으로 간주합니다. 이는 원시 이벤트 데이터만 전달하는 대상 플랫폼과의 단순한 통합 유형입니다. 이러한 예는 [Gainsight 개인화 확장](/help/rtcdp/destinations/gainsight-extension.md) 또는 [고객 확장의 확인 음보입니다](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md).
+플랫폼 론치 익스텐션은 원시 이벤트 데이터를 여러 유형의 대상으로 전달합니다. 익스텐션을 대상의 **이벤트 전달** 유형으로 간주합니다. 이는 원시 이벤트 데이터만 전달하는 대상 플랫폼과의 단순한 통합 유형입니다. 이러한 예는 [Gainsight 개인화 확장](/help/rtcdp/destinations/gainsight-extension.md) 또는 [고객 확장의 확인 음보입니다](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md).
 
 ![다른 대상과 Experience Platform Launch 확장](/help/rtcdp/destinations/assets/launch-and-other-destinations.png)
 
