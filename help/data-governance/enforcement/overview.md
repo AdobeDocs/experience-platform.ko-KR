@@ -5,9 +5,9 @@ title: 정책 실행 개요
 topic: enforcement
 description: 데이터 사용 레이블이 Adobe Experience Platform 데이터 세트에 적용되고 해당 레이블에 대한 마케팅 작업을 위해 데이터 사용 정책이 정의된 경우 데이터 거버넌스 기능을 사용하면 해당 정책을 적용하고 정책 위반을 구성하는 데이터 작업을 방지할 수 있습니다. 플랫폼의 데이터 거버넌스 기능, API 기반 적용 및 자동 실행에서 제공하는 두 가지 정책 실행 방법이 있습니다.
 translation-type: tm+mt
-source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
+source-git-commit: 83f1392ffab3571ebd91325123fbe7095ad59e28
 workflow-type: tm+mt
-source-wordcount: '262'
+source-wordcount: '257'
 ht-degree: 0%
 
 ---
@@ -29,4 +29,4 @@ API를 사용하여 정책을 평가하는 방법에 대한 단계는 [정책](a
 
 (예:) 위에 구축된 특정 응용 프로그램 [!DNL Experience Platform] 은 데이터 사용 정책을 자동으로 [!DNL Real-time Customer Data Platform]적용합니다. 각 애플리케이션은 정책 위반을 표시하고 문제 해결 단계를 제공하는 고유한 방법을 유지합니다.
 
-자동 데이터 사용 정책 실행에 대한 자세한 내용은 사용 중인 [!DNL Platform]기반 응용 프로그램의 설명서를 참조하십시오. 실시간 CDP의 자동 정책 실행에 대한 자세한 내용은 [실시간 CDP 데이터 거버넌스 개요를 참조하십시오](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance).
+실시간 CDP의 자동 정책 실행은 데이터 계보, 데이터 분류 및 정책 관리 기능을 활용하여 정책 위반 사항을 평가하고 이에 따른 영향을 미칩니다. 자세한 내용은 [실시간 CDP 데이터 거버넌스 개요를](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance) 참조하십시오.
