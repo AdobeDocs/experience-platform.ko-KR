@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;mixin;mixin;enduserids;end-user;end user;ids;
+keywords: Experience Platform;home;popular topics;schema;Schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;mixin;mixin;enduserids;end-user;end user;ids;updates;
 solution: Experience Platform
 title: Mixin 이름 업데이트
 topic: overview
 description: 최근 XDM 혼합 이름 변경 목록.
 translation-type: tm+mt
-source-git-commit: 0f36cf30e94c53aad8cdd11174a3656fda32d961
+source-git-commit: 4f50926a9c5bc02255bd62c51cca13fc9094a9e8
 workflow-type: tm+mt
-source-wordcount: '256'
+source-wordcount: '251'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,6 @@ ht-degree: 0%
 
 | 이전 이름 | 업데이트된 이름 |
 | --- | --- |
-| [!UICONTROL Consumer ExperienceEvent mixin] | [!UICONTROL 컨텐츠 소비 세부 사항] |
 | [!UICONTROL 이벤트 개인화 경험] | [!UICONTROL 개인 정보 세부 사항] |
 | [!UICONTROL ExperienceEvent 애플리케이션 세부 사항] | [!UICONTROL 애플리케이션 세부 정보] |
 | [!UICONTROL ExperienceEvent 채널 세부 사항] | [!UICONTROL 채널 세부 사항] |
@@ -44,7 +43,7 @@ ht-degree: 0%
 | [!UICONTROL 프로필 전화] | [!UICONTROL 전화 번호 세부 정보] |
 | [!UICONTROL 프로필 환경 설정 세부 사항] | [!UICONTROL 기본 설정 세부 사항] |
 | [!UICONTROL 프로필 개인 정보] | [!UICONTROL 개인 정보 세부 사항] |
-| [!UICONTROL 프로필 푸시 세부 사항] | [!UICONTROL 푸시 알림 세부 정보] |
+| [!UICONTROL 프로필 푸시 세부 사항] | [!UICONTROL 푸시 알림 토큰 세부 사항] |
 | [!UICONTROL 프로필 세분화] | [!UICONTROL 세그먼트 멤버십 세부 정보] |
 | [!UICONTROL 프로필 구독] | [!UICONTROL 구독 세부 사항] |
 | [!UICONTROL 프로필 작업 세부 사항] | [!UICONTROL 작업 연락처 세부 정보] |
