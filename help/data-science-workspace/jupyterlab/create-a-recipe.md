@@ -6,9 +6,9 @@ topic: tutorial
 type: Tutorial
 description: 이 튜토리얼은 두 개의 기본 섹션을 살펴봅니다. 먼저 JupiterLab 노트북 내에서 템플릿을 사용하여 기계 학습 모델을 만듭니다. 그런 다음 JupiterLab 내에서 레서피 워크플로우에 맞게 노트북을 실행함으로써 데이터 과학 작업 공간 내에 레서피 작업을 만들 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: adaa7fbaf78a37131076501c21bf18559c17ed94
 workflow-type: tm+mt
-source-wordcount: '2335'
+source-wordcount: '2350'
 ht-degree: 0%
 
 ---
@@ -67,10 +67,10 @@ Recipe [!UICONTROL Builder] 전자 필기장을 사용하면 노트북 내에서
 
 ### 요구 사항 파일 {#requirements-file}
 
-요구 사항 파일은 레시피에서 사용할 추가 라이브러리를 선언하는 데 사용됩니다. 종속성이 있는 경우 버전 번호를 지정할 수 있습니다. 추가 라이브러리를 보려면 https://anaconda.org을 참조하십시오. 이미 사용 중인 기본 라이브러리 목록은 다음과 같습니다.
+요구 사항 파일은 레시피에서 사용할 추가 라이브러리를 선언하는 데 사용됩니다. 종속성이 있는 경우 버전 번호를 지정할 수 있습니다. 추가 라이브러리를 찾으려면 [anconda.org를 방문하십시오](https://anaconda.org). 요구 사항 파일의 형식을 지정하는 방법을 알아보려면 Content를 [참조하십시오](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-file-manually). 이미 사용 중인 기본 라이브러리 목록은 다음과 같습니다.
 
 ```JSON
-python=3.5.2
+python=3.6.7
 scikit-learn
 pandas
 numpy
@@ -79,7 +79,7 @@ data_access_sdk_python
 
 >[!NOTE]
 >
->추가한 라이브러리 또는 특정 버전은 위의 라이브러리와 호환되지 않을 수 있습니다.
+>추가한 라이브러리 또는 특정 버전은 위의 라이브러리와 호환되지 않을 수 있습니다. 또한 환경 파일을 수동으로 만들도록 선택하는 경우 이 `name` 필드는 재정의할 수 없습니다.
 
 ### 구성 파일 {#configuration-files}
 
@@ -117,7 +117,7 @@ data_access_sdk_python
 
 이 단계에서는 [판다 데이터 프레임을 사용합니다](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html). SDK( [!DNL Adobe Experience Platform] SDK)를 [!DNL Platform] 사용하여 파일`platform_sdk`에서 또는 판다의 `read_csv()` 기능이나 기능을 사용하는 외부 소스에서 데이터를 로드할 수 `read_json()` 있습니다.
 
-- [[!DNL 플랫폼 SDK]](#platform-sdk)
+- [[!DNL Platform SDK]](#platform-sdk)
 - [외부 소스](#external-sources)
 
 >[!NOTE]
@@ -148,30 +148,32 @@ df = pd.read_json(data)
 
 이제 데이터가 데이터 프레임 개체에 있으며 [다음 섹션에서 분석 및 조작할 수 있습니다](#data-preparation-and-feature-engineering).
 
-### 데이터 액세스 SDK에서(더 이상 사용되지 않음)
+### 플랫폼 SDK에서
 
->[!CAUTION]
->
-> `data_access_sdk_python` 는 더 이상 권장되지 않습니다. 데이터 로더 사용에 대한 [가이드는 데이터 액세스 코드를 플랫폼 SDK로](../authoring/platform-sdk.md) 변환을 `platform_sdk` 참조하십시오.
+플랫폼 SDK를 사용하여 데이터를 로드할 수 있습니다. 다음 줄을 포함하여 페이지 맨 위에 라이브러리를 가져올 수 있습니다.
 
-사용자는 데이터 액세스 SDK를 사용하여 데이터를 로드할 수 있습니다. 다음 줄을 포함하여 페이지 맨 위에 라이브러리를 가져올 수 있습니다.
-
-`from data_access_sdk_python.reader import DataSetReader`
+`from platform_sdk.dataset_reader import DatasetReader`
 
 그런 다음 이 `load()` 방법을 사용하여 구성( `trainingDataSetId` ) 파일에 설정된`recipe.conf`대로 교육 데이터 세트를 가져옵니다.
 
 ```PYTHON
-prodreader = DataSetReader(client_id=configProperties['ML_FRAMEWORK_IMS_USER_CLIENT_ID'],
-                           user_token=configProperties['ML_FRAMEWORK_IMS_TOKEN'],
-                           service_token=configProperties['ML_FRAMEWORK_IMS_ML_TOKEN'])
+def load(config_properties):
+    print("Training Data Load Start")
 
-df = prodreader.load(data_set_id=configProperties['trainingDataSetId'],
-                     ims_org=configProperties['ML_FRAMEWORK_IMS_TENANT_ID'])
+    #########################################
+    # Load Data
+    #########################################    
+    client_context = get_client_context(config_properties)
+    
+    dataset_reader = DatasetReader(client_context, config_properties['trainingDataSetId'])
+    
+    timeframe = config_properties.get("timeframe")
+    tenant_id = config_properties.get("tenant_id")
 ```
 
 >[!NOTE]
 >
->구성 [파일 섹션에](#configuration-files)[!DNL Experience Platform]설명된 대로, 다음 구성 매개 변수는
+>구성 [파일 섹션에](#configuration-files)설명된 대로 다음을 사용하여 Experience Platform의 데이터에 액세스할 때 다음과 같은 구성 매개 변수가 설정됩니다 `client_context`.
 > - `ML_FRAMEWORK_IMS_USER_CLIENT_ID`
 > - `ML_FRAMEWORK_IMS_TOKEN`
 > - `ML_FRAMEWORK_IMS_ML_TOKEN`
@@ -227,46 +229,51 @@ dataframe.drop('date', axis=1, inplace=True)
 점수 지정을 위해 데이터를 로드하는 절차는 함수 로딩 교육 데이터와 `split()` 유사합니다. Adobe는 데이터 액세스 SDK를 사용하여 Adobe `scoringDataSetId` 파일 `recipe.conf` 에서 찾은 데이터를 로드합니다.
 
 ```PYTHON
-def load(configProperties):
+def load(config_properties):
 
     print("Scoring Data Load Start")
 
     #########################################
     # Load Data
     #########################################
-    prodreader = DataSetReader(client_id=configProperties['ML_FRAMEWORK_IMS_USER_CLIENT_ID'],
-                               user_token=configProperties['ML_FRAMEWORK_IMS_TOKEN'],
-                               service_token=configProperties['ML_FRAMEWORK_IMS_ML_TOKEN'])
+    client_context = get_client_context(config_properties)
 
-    df = prodreader.load(data_set_id=configProperties['scoringDataSetId'],
-                         ims_org=configProperties['ML_FRAMEWORK_IMS_TENANT_ID'])
+    dataset_reader = DatasetReader(client_context, config_properties['scoringDataSetId'])
+    timeframe = config_properties.get("timeframe")
+    tenant_id = config_properties.get("tenant_id")
 ```
 
 데이터를 로드한 후 데이터 준비 및 기능 엔지니어링이 수행됩니다.
 
 ```PYTHON
-#########################################
-# Data Preparation/Feature Engineering
-#########################################
-df.date = pd.to_datetime(df.date)
-df['week'] = df.date.dt.week
-df['year'] = df.date.dt.year
+    #########################################
+    # Data Preparation/Feature Engineering
+    #########################################
+    if '_id' in dataframe.columns:
+        #Rename columns to strip tenantId
+        dataframe = dataframe.rename(columns = lambda x : str(x)[str(x).find('.')+1:])
+        #Drop id, eventType and timestamp
+        dataframe.drop(['_id', 'eventType', 'timestamp'], axis=1, inplace=True)
 
-df = pd.concat([df, pd.get_dummies(df['storeType'])], axis=1)
-df.drop('storeType', axis=1, inplace=True)
-df['isHoliday'] = df['isHoliday'].astype(int)
+    dataframe.date = pd.to_datetime(dataframe.date)
+    dataframe['week'] = dataframe.date.dt.week
+    dataframe['year'] = dataframe.date.dt.year
 
-df['weeklySalesAhead'] = df.shift(-45)['weeklySales']
-df['weeklySalesLag'] = df.shift(45)['weeklySales']
-df['weeklySalesDiff'] = (df['weeklySales'] - df['weeklySalesLag']) / df['weeklySalesLag']
-df.dropna(0, inplace=True)
+    dataframe = pd.concat([dataframe, pd.get_dummies(dataframe['storeType'])], axis=1)
+    dataframe.drop('storeType', axis=1, inplace=True)
+    dataframe['isHoliday'] = dataframe['isHoliday'].astype(int)
 
-df = df.set_index(df.date)
-df.drop('date', axis=1, inplace=True)
+    dataframe['weeklySalesAhead'] = dataframe.shift(-45)['weeklySales']
+    dataframe['weeklySalesLag'] = dataframe.shift(45)['weeklySales']
+    dataframe['weeklySalesDiff'] = (dataframe['weeklySales'] - dataframe['weeklySalesLag']) / dataframe['weeklySalesLag']
+    dataframe.dropna(0, inplace=True)
 
-print("Scoring Data Load Finish")
+    dataframe = dataframe.set_index(dataframe.date)
+    dataframe.drop('date', axis=1, inplace=True)
 
-return df
+    print("Scoring Data Load Finish")
+
+    return dataframe
 ```
 
 이 모델의 목적은 향후 주간 판매를 예측하는 것이기 때문에 모델의 예측치가 얼마나 잘 수행되는지 평가하기 위해 점수 데이터 세트를 만들어야 합니다.
