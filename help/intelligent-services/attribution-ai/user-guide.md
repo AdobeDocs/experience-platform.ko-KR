@@ -5,17 +5,17 @@ title: Attribution AI 사용 안내서
 topic: User guide
 description: 이 문서는 Intelligent Services 사용자 인터페이스에서 Attribution AI과 상호 작용하기 위한 가이드 역할을 합니다.
 translation-type: tm+mt
-source-git-commit: c5e2ea5daf813bf580a11f0182361197e55c6fe8
+source-git-commit: 4c1aa1fc5ca1f335dedba47623709d5d2ce12c6e
 workflow-type: tm+mt
-source-wordcount: '1449'
-ht-degree: 0%
+source-wordcount: '1746'
+ht-degree: 1%
 
 ---
 
 
 # Attribution AI 사용 안내서
 
-Attribution AI은 지능형 서비스의 일부로 고객 상호 작용이 특정 결과에 미치는 영향과 점진적인 영향을 계산하는 다중 채널 알고리즘 속성 서비스입니다. 마케터는 Attribution AI을 통해 고객 여정의 각 단계에서 개별 고객과의 인터랙션이 미치는 영향을 파악하여 마케팅 및 광고 비용을 측정하고 최적화할 수 있습니다.
+Attribution AI은 지능형 서비스의 일부로 고객 상호 작용이 특정 결과에 미치는 영향과 점진적인 영향을 계산하는 다중 채널 알고리즘 속성 서비스입니다. 마케터는 Attribution AI를 통해 고객 여정의 각 단계에서 개별 고객과의 인터랙션이 미치는 영향을 파악하여 마케팅 및 광고 비용을 측정하고 최적화할 수 있습니다.
 
 이 문서는 Intelligent Services 사용자 인터페이스에서 Attribution AI과 상호 작용하기 위한 가이드 역할을 합니다.
 
@@ -25,7 +25,29 @@ UI [!DNL Adobe Experience Platform] 에서 왼쪽 탐색 **[!UICONTROL 영역에
 
 ![인스턴스 액세스](./images/user-guide/open_Attribution_ai.png)
 
-Attribution AI 서비스 페이지가 나타납니다. 이 페이지에는 Attribution AI의 서비스 인스턴스가 나열되며 인스턴스 이름, 전환 이벤트, 인스턴스 실행 횟수, 마지막 업데이트 상태 등에 대한 정보가 표시됩니다. 시작하려면 **인스턴스** 만들기를 클릭합니다.
+Attribution AI 서비스 페이지가 나타납니다. 이 페이지에는 Attribution AI의 서비스 인스턴스가 나열되며 인스턴스 이름, 전환 이벤트, 인스턴스 실행 횟수, 마지막 업데이트 상태 등에 대한 정보가 표시됩니다.
+
+인스턴스 만들기 컨테이너의 **[!UICONTROL 오른쪽 하단에 있는 총 전환 이벤트]** 지표를 **[!UICONTROL 찾을 수]** 있습니다. 이 지표는 모든 샌드박스 환경 및 삭제된 서비스 인스턴스를 포함하여 현재 달력 연도의 Attribution AI에서 획득한 총 전환 이벤트 수를 추적합니다.
+
+![](./images/user-guide/total_conversions.png)
+
+서비스 인스턴스는 UI 오른쪽의 컨트롤을 사용하여 편집, 복제 및 삭제할 수 있습니다. 이러한 컨트롤을 표시하려면 기존 **[!UICONTROL 서비스 인스턴스에서 인스턴스를 선택합니다]**. 컨트롤에는 다음 정보가 포함되어 있습니다.
+
+- **[!UICONTROL 편집]**:편집 **[!UICONTROL 을]** 선택하면 기존 서비스 인스턴스를 수정할 수 있습니다. 인스턴스의 이름, 설명, 상태 및 점수 지정 빈도를 편집할 수 있습니다.
+- **[!UICONTROL 복제]**:복제를 **[!UICONTROL 선택하면]** 선택한 서비스 인스턴스가 복사됩니다. 그런 다음 워크플로우를 수정하여 약간 수정하고 새 인스턴스로 이름을 변경할 수 있습니다.
+- **[!UICONTROL 삭제]**:모든 기록 실행을 포함하는 서비스 인스턴스를 삭제할 수 있습니다.
+- **[!UICONTROL 데이터 소스]**:이 인스턴스에서 사용되는 데이터 세트에 대한 링크.
+- **[!UICONTROL 마지막 실행 세부 정보]**:이는 실행이 실패할 때만 표시됩니다. 여기에 오류 코드와 같이 실행이 실패한 이유에 대한 정보가 표시됩니다.
+
+![](./images/user-guide/side_panel.png)
+
+- **[!UICONTROL 전환 이벤트]**:이 인스턴스에 대해 구성된 전환 이벤트에 대한 빠른 개요입니다.
+- **[!UICONTROL 조회 창]**:전환 이벤트 터치포인트를 포함하기 전 며칠을 나타내는 정의된 기간
+- **[!UICONTROL 터치포인트]**:이 인스턴스를 만드는 동안 정의한 모든 터치포인트 목록.
+
+![](./images/user-guide/side_panel_2.png)
+
+시작할 인스턴스 **[!UICONTROL 만들기를]** 선택합니다.
 
 ![인스턴스 만들기](./images/user-guide/landing_page.png)
 
@@ -133,7 +155,7 @@ Attribution AI 서비스 페이지가 나타납니다. 이 페이지에는 Attri
 
 ## 고급 트레이닝 및 점수 설정
 
-Attribution AI의 마지막 페이지는 *교육 및 점수 설정에* 사용되는 고급 페이지입니다.
+Attribution AI의 마지막 페이지는 **[!UICONTROL 교육 및 점수 설정에]** 사용되는 고급 페이지입니다.
 
 ![새 페이지 고급](./images/user-guide/advanced_settings.png)
 
@@ -152,6 +174,12 @@ Attribution AI의 마지막 페이지는 *교육 및 점수 설정에* 사용되
 >각 점수 지정 프로세스를 완료하는 데 최대 24시간이 걸릴 수 있습니다.
 
 ![시계 아이콘](./images/user-guide/time_of_day.png)
+
+### 추가 점수 데이터 집합 열(선택 사항)
+
+기본적으로 표준 스키마의 각 서비스 인스턴스에 대해 점수 데이터 집합이 만들어집니다. 전환 이벤트 및 터치포인트 구성을 기반으로 하여 점수 데이터 세트 출력에 열을 추가할 수 있습니다. 먼저 입력 데이터 세트에서 열을 선택한 다음 마우스 왼쪽 버튼을 햄버거 아이콘 위에 눌러 순서를 변경해 줄 수 있습니다.
+
+![점수 데이터 집합 열 추가](./images/user-guide/Add-score-dataset.png)
 
 ### 지역 기반 모델링(선택 사항) {#region-based-modeling-optional}
 
@@ -189,7 +217,7 @@ Attribution AI의 마지막 페이지는 *교육 및 점수 설정에* 사용되
 
 ## 다음 단계
 
-이 튜토리얼을 따라 Attribution AI에서 서비스 인스턴스를 만들었습니다. 인스턴스 점수가 끝나면(최대 24시간 허용) Attribution AI 통찰력을 [발견할 수 있습니다](./discover-insights.md). 또한 점수 결과를 다운로드하려면 원시 점수 [다운로드 설명서를](./download-scores.md) 참조하십시오.
+이 튜토리얼을 따라 Attribution AI에서 서비스 인스턴스를 만들었습니다. 인스턴스 점수가 끝나면(최대 24시간 허용) Attribution AI 통찰력을 [발견할 수 있습니다](./discover-insights.md). 또한 점수 결과를 다운로드하려면 [다운로드 점수](./download-scores.md) 설명서를 참조하십시오.
 
 ## Journey Orchestration용
 
