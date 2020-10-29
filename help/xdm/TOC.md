@@ -5,9 +5,9 @@ user-guide-title: XDM(경험 데이터 모델) 시스템 도움말
 breadcrumb-title: Data Model (XDM) 안내서
 user-guide-description: XDM(경험 데이터 모델) 클래스와 mixin을 사용하여 경험 데이터를 표준화합니다.
 translation-type: tm+mt
-source-git-commit: 6c52998421b6a5d9719f287ec8cb7099780cb1ff
+source-git-commit: 0a5b6bab6a0a11a572a4cd5de95b33f8d61d34bc
 workflow-type: tm+mt
-source-wordcount: '198'
+source-wordcount: '203'
 ht-degree: 20%
 
 ---
@@ -18,6 +18,7 @@ ht-degree: 20%
 * [XDM 시스템 개요](home.md)
 * 스키마 {#schema}
    * [스키마 컴포지션의 기본 사항](schema/composition.md)
+   * [데이터 모델링을 위한 모범 사례](schema/best-practices.md)
    * [XDM 필드 유형 제한](schema/field-constraints.md)
    * [XDM 필드 사전](schema/field-dictionary.md)
    * 스키마 사용 사례 {#use-cases}
