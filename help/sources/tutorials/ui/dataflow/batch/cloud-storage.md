@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: 데이터 흐름(Dataflow)은 소스에서 플랫폼 데이터 집합으로 데이터를 검색하고 인제스트하는 예약된 작업입니다. 이 자습서에서는 클라우드 저장소 계정을 사용하여 새 데이터 흐름을 구성하는 절차를 제공합니다.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 52129cbc597c6bef6f858e581edc0db23b06ad67
 workflow-type: tm+mt
-source-wordcount: '1674'
+source-wordcount: '1790'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 0%
 * [[!DNL Experience Data Model] (XDM) 시스템](../../../../../xdm/home.md):고객 경험 데이터를 [!DNL Experience Platform] 구성하는 표준화된 프레임워크
    * [스키마 컴포지션의 기본 사항](../../../../../xdm/schema/composition.md):스키마 컴포지션의 주요 원칙 및 모범 사례 등 XDM 스키마의 기본 구성 요소에 대해 알아봅니다.
    * [스키마 편집기 자습서](../../../../../xdm/tutorials/create-schema-ui.md):스키마 편집기 UI를 사용하여 사용자 정의 스키마를 생성하는 방법을 알아봅니다.
-* [[!DNL 실시간 고객 프로필]](../../../../../profile/home.md):여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
+* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md):여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
 
 또한 이 튜토리얼을 사용하려면 기존 클라우드 스토리지 계정이 있어야 합니다. UI에서 다른 클라우드 스토리지 계정을 만들기 위한 자습서 목록은 [소스 커넥터 개요에 있습니다](../../../../home.md).
 
@@ -54,17 +54,23 @@ ht-degree: 0%
 
 ### 인제스트 쪽모이 세공 또는 JSON 파일
 
-클라우드 스토리지 계정에 대해 지원되는 파일 형식에는 JSON 및 Parentoter도 포함되어 있습니다. JSON 및 Partiented 파일은 XDM과 호환되어야 합니다. JSON 또는 쪽모이 세공 마룻파일을 인제스트하려면 디렉토리 브라우저에서 해당 파일 포맷을 선택하고 올바른 인터페이스에서 호환 데이터 포맷을 적용합니다. 계속하려면 **[!UICONTROL 다음]** 을 선택합니다.
+클라우드 스토리지 계정은 JSON 및 쪽모이 세공 마룻파일도 지원합니다. Parentype 파일은 XDM과 호환되어야 하며 JSON 파일은 XDM-companion이 아니어야 합니다. JSON 또는 쪽모이 세공 마룻파일을 인제스트하려면 디렉토리 브라우저에서 해당 파일 포맷을 선택하고 올바른 인터페이스에서 호환 데이터 포맷을 적용합니다.
+
+데이터 형식이 JSON인 경우 파일 내의 데이터에 대한 정보를 보여주는 미리 보기가 나타납니다. 미리 보기 화면에서 **[!UICONTROL XDM 호환 드롭다운을 사용하여 JSON이 XDM을 준수하는지 여부를 선택할 수]** 있습니다.
+
+계속하려면 **[!UICONTROL 다음]** 을 선택합니다.
+
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/json-preview.png)
 
 >[!IMPORTANT]
 >
->구분된 파일 형식과는 달리 JSON 및 쪽모이 세공된 형식의 파일은 미리 볼 수 없습니다.
+>구분 기호로 구분된 파일 및 JSON 파일 형식과 달리, 미리 보기에서는 쪽모이 세공된 파일을 사용할 수 없습니다.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data-parquet.png)
 
 ## 데이터 필드를 XDM 스키마에 매핑
 
-소스 데이터를 데이터 세트에 매핑하기 위한 대화형 인터페이스를 제공하는 **[!UICONTROL 매핑]** 단계가 [!DNL Platform] 나타납니다. JSON 또는 쪽모이 세공된 환경에서 포맷된 소스 파일은 XDM과 호환되어야 하며 매핑을 수동으로 구성할 필요가 없습니다. 반대로 CSV 파일은 매핑을 명시적으로 구성해야 하지만 매핑할 소스 데이터 필드를 선택할 수 있도록 합니다.
+소스 데이터를 데이터 세트에 매핑하기 위한 대화형 인터페이스를 제공하는 **[!UICONTROL 매핑]** 단계가 [!DNL Platform] 나타납니다. 쪽모이 세공기에서 포맷된 소스 파일은 XDM과 호환되어야 하며 수동으로 매핑을 구성할 필요가 없는 반면 CSV 파일은 매핑을 명시적으로 구성해야 하지만 매핑할 소스 데이터 필드를 선택해야 합니다. XDM 불만 사항으로 표시된 JSON 파일은 수동 구성이 필요 없습니다. 그러나 XDM 규격으로 표시되지 않으면 매핑을 명시적으로 구성해야 합니다.
 
 수집할 인바운드 데이터의 데이터 세트를 선택합니다. 기존 데이터 세트를 사용하거나 새 데이터 세트를 만들 수 있습니다.
 
@@ -94,11 +100,19 @@ ht-degree: 0%
 
 필요에 따라 필드를 직접 매핑하거나 매퍼 함수를 사용하여 소스 데이터를 변환하여 계산된 값 또는 계산된 값을 추출할 수 있습니다. 데이터 매핑 및 매퍼 함수에 대한 자세한 내용은 CSV 데이터를 XDM 스키마 필드에 [매핑하는 방법에 대한 자습서를 참조하십시오](../../../../../ingestion/tutorials/map-a-csv-file.md).
 
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/mapping.png)
+
+JSON 파일의 경우 필드를 다른 필드에 직접 매핑하는 것 외에도 개체를 다른 개체 및 배열에 직접 매핑할 수 있습니다.
+
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/source-field-json.png)
+
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/target-field-json.png)
+
+서로 다른 유형으로는 매핑할 수 없습니다. 예를 들어 개체를 배열에 매핑하거나 필드를 개체에 매핑할 수 없습니다.
+
 >[!TIP]
 >
 >[!DNL Platform] 선택한 대상 스키마나 데이터 세트에 따라 자동 매핑 필드에 대한 지능적인 권장 사항을 제공합니다. 사용 사례에 맞게 매핑 규칙을 수동으로 조정할 수 있습니다.
-
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/mapping.png)
 
 선택한 **[!UICONTROL 데이터]** 세트에서 최대 100개의 샘플 데이터 행의 매핑 결과를 보려면 [데이터 미리 보기]를 선택합니다.
 
