@@ -5,9 +5,9 @@ title: 지능형 서비스에서 사용할 데이터 준비
 topic: Intelligent Services
 description: 'Intelligent Services가 마케팅 이벤트 데이터에서 얻은 통찰력을 얻으려면 데이터가 세밀하게 농축되어 표준 구조로 유지되어야 합니다. 지능형 서비스는 이를 달성하기 위해 XDM(Experience Data Model) 스키마를 활용합니다. 특히, Intelligent Services에서 사용되는 모든 데이터 세트는 CEE(Consumer ExperienceEvent) XDM 스키마를 따라야 합니다. '
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 3083c50b31746bfd32634278cb55b926bd477b2b
 workflow-type: tm+mt
-source-wordcount: '1979'
+source-wordcount: '1882'
 ht-degree: 0%
 
 ---
@@ -276,81 +276,15 @@ CEE 믹스에는 유용한 인사이트를 생성하기 위해 활용해야 하�
 
 ![](images/data-preparation/dataset-location.png)
 
-#### 데이터 세트에 기본 ID 네임스페이스 태그 추가
+#### 데이터 세트에 ID 필드 추가
 
 >[!NOTE]
 >
 >향후 릴리스는 [!DNL Intelligent Services] Adobe Experience Platform ID 서비스 [](../identity-service/home.md) 를 고객 식별 기능에 통합할 예정입니다. 따라서 아래 설명된 단계는 변경될 수 있습니다.
 
-다른 외부 소스 [!DNL Adobe Audience Manager], [!DNL Adobe Analytics]또는 다른 외부 소스에서 데이터를 가져오는 경우 `primaryIdentityNameSpace` 태그를 데이터 세트에 추가해야 합니다. 이 작업은 카탈로그 서비스 API에 PATCH 요청을 함으로써 수행할 수 있습니다.
+다른 외부 소스 [!DNL Adobe Audience Manager], [!DNL Adobe Analytics]또는 다른 외부 소스에서 데이터를 가져오는 경우 스키마 필드를 ID 필드로 설정하는 옵션이 있습니다. 스키마 필드를 ID 필드로 설정하려면 스키마 편집기를 사용하여 스키마를 생성하기 위한 [UI 자습서](../xdm/tutorials/create-schema-ui.md#identity-field) 내의 ID 필드 설정 섹션 또는 [API 자습서를](../xdm/tutorials/create-schema-api.md#define-an-identity-descriptor)봅니다.
 
 로컬 CSV 파일의 데이터를 인제스트하는 경우 데이터 [매핑 및 인제스트 관련 다음 섹션으로 건너뛸 수 있습니다](#ingest).
-
-아래의 예제 API 호출과 함께 [수행하기 전에 필요한 헤더에 대한 중요한 정보는 카탈로그 개발자 안내서의 시작 섹션](../catalog/api/getting-started.md) 을 참조하십시오.
-
-**API 형식**
-
-```http
-PATCH /dataSets/{DATASET_ID}
-```
-
-| 매개 변수 | 설명 |
-| --- | --- |
-| `{DATASET_ID}` | 이전에 만든 데이터 세트의 ID입니다. |
-
-**요청**
-
-데이터를 수집하는 소스에 따라, 요청 페이로드에서 적절한 `primaryIdentityNamespace` 및 `sourceConnectorId` 태그 값을 제공해야 합니다.
-
-다음 요청은 Audience Manager에 적합한 태그 값을 추가합니다.
-
-```shell
-curl -X PATCH \
-  https://platform.adobe.io/data/foundation/catalog/dataSets/5ba9452f7de80400007fc52a \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -H 'Content-Type: application/json' \
-  -d '{
-        "tags": {
-          "primaryIdentityNameSpace": ["mcid"],
-          "sourceConnectorId": ["audiencemanager"],
-        }
-      }'
-```
-
-다음 요청은 Analytics에 적합한 태그 값을 추가합니다.
-
-```shell
-curl -X PATCH \
-  https://platform.adobe.io/data/foundation/catalog/dataSets/5ba9452f7de80400007fc52a \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -H 'Content-Type: application/json' \
-  -d '{
-        "tags": {
-          "primaryIdentityNameSpace": ["aaid"],
-          "sourceConnectorId": ["analytics"],
-        }
-      }'
-```
-
->[!NOTE]
->
->플랫폼에서 ID 네임스페이스를 사용한 작업에 대한 자세한 내용은 [ID 네임스페이스 개요를 참조하십시오](../identity-service/namespaces.md).
-
-**응답**
-
-성공적인 응답은 업데이트된 데이터 세트의 ID가 포함된 배열을 반환합니다. 이 ID는 PATCH 요청에 전송된 ID와 일치해야 합니다.
-
-```json
-[
-    "@/dataSets/5ba9452f7de80400007fc52a"
-]
-```
 
 #### 데이터 매핑 및 인제스트 {#ingest}
 
@@ -367,4 +301,4 @@ CEE 스키마 및 데이터 세트를 만든 후 데이터 테이블을 스키�
 데이터 세트에 고객 경험 데이터를 성공적으로 채운 경우 인사이트를 생성하는 데 사용할 수 [!DNL Intelligent Services] 있습니다. 시작하려면 다음 문서를 참조하십시오.
 
 * [Attribution AI 개요](./attribution-ai/overview.md)
-* [고객 AI 개요](./customer-ai/overview.md)
+* [Customer AI 개요](./customer-ai/overview.md)
