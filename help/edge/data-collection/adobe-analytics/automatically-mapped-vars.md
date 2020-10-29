@@ -5,10 +5,10 @@ description: Experience Platform 웹 SDK를 사용하여 Adobe Analytics에서 �
 seo-description: Experience Platform 웹 SDK를 사용하여 Adobe Analytics에서 자동으로 매핑되는 변수 알아보기
 keywords: adobe analytics;variables;analytics;automatic map;automatically mapped;
 translation-type: tm+mt
-source-git-commit: 2e28fda40a135330054c749d73439448a55db52c
+source-git-commit: 8e3bef77b84e40c836a6279a9a3e3901565c9920
 workflow-type: tm+mt
-source-wordcount: '547'
-ht-degree: 2%
+source-wordcount: '681'
+ht-degree: 0%
 
 ---
 
@@ -28,11 +28,12 @@ ht-degree: 2%
 | `commerce.checkouts.value` | `events` | 구분 기호를 사용하여 전환 COMMERCE_SC_CHECKOUT을 사용하는 AppMeasurement 쿼리 매개 변수 EVENT_LIST_FULL 매핑 `,`. |
 | `commerce.productListAdds.value` | `events` | 구분 기호를 사용하여 전환 COMMERCE_SC_ADD를 사용하는 AppMeasurement 쿼리 매개 변수 EVENT_LIST_FULL 매핑 `,`. |
 | `commerce.productListRemovals.value` | `events` | 구분 기호를 사용하여 전환 COMMERCE_SC_REMOVE를 사용한 AppMeasurement 쿼리 매개 변수 EVENT_LIST_FULL 매핑 `,`. |
-| `commerce.productViews.id` | `events` | `prodView` 이벤트 정리. |
-| `commerce.productListOpens.id` | `events` | `scOpen` 이벤트 정리. |
-| `commerce.productListViews.id` | `events` | `scView` 이벤트 정리. |
-| `commerce.productListAdds.id` | `events` | `scAdd` 이벤트 정리. |
-| `commerce.productListRemovals.id` | `events` | `scRemove` 이벤트 정리. |
+| `commerce.productViews.id` | `events` | (선택 사항) `prodView` 이벤트 정리를 참조하십시오. 이 필드가 제외되면(즉, 일련화되지 않은 이벤트의 경우) 시스템에서 자체 ID 값을 생성하여 엔티티에 할당합니다. |
+| `commerce.productListOpens.id` | `events` | (선택 사항) `scOpen` 이벤트 정리를 참조하십시오. 이 필드가 제외되면(즉, 일련화되지 않은 이벤트의 경우) 시스템에서 자체 ID 값을 생성하여 엔티티에 할당합니다. |
+| `commerce.productListViews.id` | `events` | (선택 사항) `scView` 이벤트 정리를 참조하십시오. 이 필드가 제외되면(즉, 일련화되지 않은 이벤트의 경우) 시스템에서 자체 ID 값을 생성하여 엔티티에 할당합니다. |
+| `commerce.productListAdds.id` | `events` | (선택 사항) `scAdd` 이벤트 정리를 참조하십시오. 이 필드가 제외되면(즉, 일련화되지 않은 이벤트의 경우) 시스템에서 자체 ID 값을 생성하여 엔티티에 할당합니다. |
+| `commerce.productListRemovals.id` | `events` | (선택 사항) `scRemove` 이벤트 정리를 참조하십시오. 이 필드가 제외되면(즉, 일련화되지 않은 이벤트의 경우) 시스템에서 자체 ID 값을 생성하여 엔티티에 할당합니다. |
+| `commerce.checkouts.id` | `events` | (선택 사항) `scCheckout` 이벤트 정리를 참조하십시오. 이 필드가 제외되면(즉, 일련화되지 않은 이벤트의 경우) 시스템에서 자체 ID 값을 생성하여 엔티티에 할당합니다. |
 | `commerce.checkouts.id` | `events` | `scCheckout` 이벤트 정리. |
 | `device.screenHeight` | `s` | AppMeasurement 쿼리 매개 변수 화면 해상도 매핑입니다. |
 | `device.screenWidth` | `s` | AppMeasurement 쿼리 매개 변수 화면 해상도 매핑입니다. |
