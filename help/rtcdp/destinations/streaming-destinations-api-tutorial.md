@@ -5,9 +5,9 @@ title: 스트리밍 대상에 연결 및 데이터 활성화
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 51dd255156229adcb80c2a04aa1ccd5b01208a66
+source-git-commit: 34bf1c8aba555c5c8a527f4c0162cec4535b1dcf
 workflow-type: tm+mt
-source-wordcount: '1813'
+source-wordcount: '1871'
 ht-degree: 2%
 
 ---
@@ -231,6 +231,10 @@ POST /connections
 
 **요청**
 
+>[!IMPORTANT]
+>
+>아래 예에는 코드 댓글이 포함되어 있습니다 `//`. 이러한 주석은 서로 다른 스트리밍 대상에 서로 다른 값을 사용해야 하는 위치를 강조 표시합니다. 코드 조각을 사용하기 전에 설명을 제거하십시오.
+
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -240,7 +244,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Content-Type: application/json' \
 --data-raw '{
     "name": "Connection for Amazon Kinesis/ Azure Event Hubs",
-    "description": "your company's holiday campaign",
+    "description": "summer advertising campaign",
     "connectionSpec": {
         "id": "{_CONNECTION_SPEC_ID}",
         "version": "1.0"
@@ -289,6 +293,10 @@ POST /targetConnections
 ```
 
 **요청**
+
+>[!IMPORTANT]
+>
+>아래 예에는 코드 댓글이 포함되어 있습니다 `//`. 이러한 주석은 서로 다른 스트리밍 대상에 서로 다른 값을 사용해야 하는 위치를 강조 표시합니다. 코드 조각을 사용하기 전에 설명을 제거하십시오.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
