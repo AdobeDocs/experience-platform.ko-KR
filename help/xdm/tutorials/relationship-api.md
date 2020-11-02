@@ -6,7 +6,7 @@ description: 이 문서에서는 스키마 레지스트리 API를 사용하여 �
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 097fe219e0d64090de758f388ba98e6024db2201
+source-git-commit: 4d9e66a55c265b60ab12070dd5e435c6567b7d0f
 workflow-type: tm+mt
 source-wordcount: '1296'
 ht-degree: 1%
@@ -117,7 +117,7 @@ curl -X GET \
 >
 >대상 스키마와 달리 소스 스키마는 기본 ID를 참조 필드로 사용할 수 없습니다.
 
-이 자습서에서는 대상 스키마 &quot;[!DNL Hotels]&quot;에 스키마의 기본 ID로 사용되는 `email` 필드가 포함되어 있으므로 해당 참조 필드로도 작동합니다. 그러나 소스 스키마 &quot;[!DNL Loyalty Members]&quot;에 참조로 사용할 전용 필드가 없으며 스키마에 새 필드를 추가하는 새 믹스인이 주어져야 합니다. `favoriteHotel`.
+이 자습서에서는 대상 스키마 &quot;[!DNL Hotels]&quot;에 스키마의 기본 ID로 사용되는 `hotelId` 필드가 포함되어 있으므로 해당 참조 필드로도 작동합니다. 그러나 소스 스키마 &quot;[!DNL Loyalty Members]&quot;에 참조로 사용할 전용 필드가 없으며 스키마에 새 필드를 추가하는 새 믹스인이 주어져야 합니다. `favoriteHotel`.
 
 >[!NOTE]
 >
@@ -339,7 +339,7 @@ curl -X PATCH \
 
 ## 참조 ID 설명자 만들기 {#reference-identity}
 
-스키마 필드가 관계의 다른 스키마에서 참조로 사용되는 경우 해당 스키마 필드에 참조 ID 설명자가 적용되어야 합니다. &quot; `favoriteHotel` &quot;의[!DNL Loyalty Members]필드가 &quot; `email` &quot;의[!DNL Hotels]필드를 참조하므로 참조 ID 설명자 `email` 가제공되어야 합니다.
+스키마 필드가 관계의 다른 스키마에서 참조로 사용되는 경우 해당 스키마 필드에 참조 ID 설명자가 적용되어야 합니다. &quot; `favoriteHotel` &quot;의[!DNL Loyalty Members]필드가 &quot; `hotelId` &quot;의[!DNL Hotels]필드를 참조하므로 참조 ID 설명자 `favoriteHotel` 가제공되어야 합니다.
 
 종단점에 POST 요청을 만들어 대상 스키마에 대한 참조 설명자를 `/tenant/descriptors` 만듭니다.
 
@@ -351,7 +351,7 @@ POST /tenant/descriptors
 
 **요청**
 
-다음 요청은 대상 스키마 &quot; `email` &quot;에 있는 필드에 대한 참조 설명자를[!DNL Hotels]만듭니다.
+다음 요청은 대상 스키마 &quot; `hotelId` &quot;에 있는 필드에 대한 참조 설명자를[!DNL Hotels]만듭니다.
 
 ```shell
 curl -X POST \
@@ -365,8 +365,8 @@ curl -X POST \
     "@type": "xdm:descriptorReferenceIdentity",
     "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/d4ad4b8463a67f6755f2aabbeb9e02c7",
     "xdm:sourceVersion": 1,
-    "xdm:sourceProperty": "/_{TENANT_ID}/email",
-    "xdm:identityNamespace": "Email"
+    "xdm:sourceProperty": "/_{TENANT_ID}/hotelId",
+    "xdm:identityNamespace": "Hotel ID"
   }'
 ```
 
@@ -387,8 +387,8 @@ curl -X POST \
     "@type": "xdm:descriptorReferenceIdentity",
     "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/d4ad4b8463a67f6755f2aabbeb9e02c7",
     "xdm:sourceVersion": 1,
-    "xdm:sourceProperty": "/_{TENANT_ID}/email",
-    "xdm:identityNamespace": "Email",
+    "xdm:sourceProperty": "/_{TENANT_ID}/hotelId",
+    "xdm:identityNamespace": "Hotel ID",
     "meta:containerId": "tenant",
     "@id": "53180e9f86eed731f6bf8bf42af4f59d81949ba6"
 }
@@ -423,7 +423,7 @@ curl -X POST \
     "xdm:sourceProperty": "/_{TENANT_ID}/favoriteHotel",
     "xdm:destinationSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/d4ad4b8463a67f6755f2aabbeb9e02c7",
     "xdm:destinationVersion": 1,
-    "xdm:destinationProperty": "/_{TENANT_ID}/email"
+    "xdm:destinationProperty": "/_{TENANT_ID}/hotelId"
   }'
 ```
 
