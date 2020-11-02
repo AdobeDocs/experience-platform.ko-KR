@@ -4,9 +4,9 @@ title: 프로필 미리 보기 - 실시간 고객 프로필 API
 description: Adobe Experience Platform을 사용하면 여러 소스에서 고객 데이터를 수집하여 개별 고객을 위한 강력한 통합 프로파일을 구축할 수 있습니다. 실시간 고객 프로파일에 대해 활성화된 데이터가 플랫폼으로 수집되므로 프로필 데이터 저장소 내에 저장됩니다. 프로필 저장소의 레코드 수가 늘어나거나 줄어들면서 데이터 저장소에 있는 프로필 조각 및 병합된 프로필 수에 대한 정보가 포함된 샘플 작업이 실행됩니다. 프로필 API를 사용하면 성공적인 최신 샘플뿐만 아니라 데이터 세트 및 ID 네임스페이스별로 프로필 배포를 나열할 수 있습니다.
 topic: guide
 translation-type: tm+mt
-source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
+source-git-commit: 47c65ef5bdd083c2e57254189bb4a1f1d9c23ccc
 workflow-type: tm+mt
-source-wordcount: '1478'
+source-wordcount: '1608'
 ht-degree: 1%
 
 ---
@@ -23,6 +23,12 @@ Adobe Experience Platform을 사용하면 여러 소스에서 고객 데이터�
 ## 시작하기
 
 이 안내서에서 사용되는 API 끝점은 [[!DNL Real-time Customer Profile] API의 일부입니다](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). 계속하기 전에 [시작하기 가이드](getting-started.md) 에서 관련 문서 링크, 이 문서에서 샘플 API 호출 읽기 안내서, 모든 API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요 정보를 검토하십시오 [!DNL Experience Platform] .
+
+## 프로필 조각과 병합된 프로필 비교
+
+이 안내서에서는 &quot;프로필 조각&quot;과 &quot;병합된 프로필&quot;을 모두 참조합니다. 계속하기 전에 이러한 용어 간의 차이점을 이해하는 것이 중요합니다.
+
+각 개별 고객 프로파일은 해당 고객에 대한 단일 뷰를 구성하기 위해 병합된 여러 프로필 조각으로 구성됩니다. 예를 들어 고객이 여러 채널에서 브랜드와 상호 작용하는 경우 조직은 단일 고객과 관련된 여러 프로필 조각을 여러 데이터 세트에 표시할 수 있습니다. 이러한 조각을 Platform(플랫폼)으로 인제스트하면 병합 정책에 따라 병합되어 해당 고객에 대한 단일 프로파일을 만듭니다. 따라서 각 프로필은 여러 조각으로 구성되므로 전체 프로필 조각 수는 병합된 프로필의 총 수보다 항상 클 수 있습니다.
 
 ## 마지막 샘플 상태 보기 {#view-last-sample-status}
 
