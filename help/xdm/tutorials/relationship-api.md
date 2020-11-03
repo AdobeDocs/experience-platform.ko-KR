@@ -6,7 +6,7 @@ description: 이 문서에서는 스키마 레지스트리 API를 사용하여 �
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 4d9e66a55c265b60ab12070dd5e435c6567b7d0f
+source-git-commit: ce06550e9608163e6e5819d79cc73a4b1f92e915
 workflow-type: tm+mt
 source-wordcount: '1296'
 ht-degree: 1%
@@ -339,7 +339,7 @@ curl -X PATCH \
 
 ## 참조 ID 설명자 만들기 {#reference-identity}
 
-스키마 필드가 관계의 다른 스키마에서 참조로 사용되는 경우 해당 스키마 필드에 참조 ID 설명자가 적용되어야 합니다. &quot; `favoriteHotel` &quot;의[!DNL Loyalty Members]필드가 &quot; `hotelId` &quot;의[!DNL Hotels]필드를 참조하므로 참조 ID 설명자 `favoriteHotel` 가제공되어야 합니다.
+스키마 필드가 관계의 다른 스키마에서 참조로 사용되는 경우 해당 스키마 필드에 참조 ID 설명자가 적용되어야 합니다. &quot; `favoriteHotel` &quot;의[!DNL Loyalty Members]필드가 &quot; `hotelId` &quot;의[!DNL Hotels]필드를 참조하므로 참조 ID 설명자 `hotelId` 가제공되어야 합니다.
 
 종단점에 POST 요청을 만들어 대상 스키마에 대한 참조 설명자를 `/tenant/descriptors` 만듭니다.
 
