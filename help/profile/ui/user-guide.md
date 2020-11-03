@@ -1,28 +1,26 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;unified profile;Unified Profile;unified;Profile;rtcp;enable profile;Enable profile;Union schema;UNION PROFILE;union profile
-title: 실시간 고객 프로필 사용 안내서
+title: 실시간 고객 프로필 UI 가이드
 topic: guide
 description: 실시간 고객 프로파일은 온라인, 오프라인, CRM 및 서드파티 데이터를 비롯한 다양한 채널의 데이터를 취합하여 각 개별 고객에 대한 전체적인 관점을 생성합니다. 이 문서는 Adobe Experience Platform 사용자 인터페이스에서 실시간 고객 프로필과 상호 작용하기 위한 가이드 역할을 합니다.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 342a05e4c378732331968ab7695a3ba7b47f2956
 workflow-type: tm+mt
-source-wordcount: '1292'
+source-wordcount: '1245'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Real-time Customer Profile] 사용 안내서
+# [!DNL Real-time Customer Profile] UI 안내서
 
-[!DNL Real-time Customer Profile] 온라인, 오프라인, CRM, 서드파티 데이터 등 다양한 채널에서 얻은 데이터를 통합하여 각 개별 고객의 전체 상황을 파악할 수 있습니다.
-
-이 문서는 Adobe Experience Platform 사용자 인터페이스에서 [!DNL Real-time Customer Profile] 데이터와 상호 작용하는 데 대한 안내서의 역할을 합니다.
+[!DNL Real-time Customer Profile] 온라인, 오프라인, CRM, 서드파티 데이터 등 다양한 채널에서 얻은 데이터를 통합하여 각 개별 고객의 전체 상황을 파악할 수 있습니다. 이 문서는 Adobe Experience Platform 사용자 인터페이스(UI)에서 [!DNL Real-time Customer Profile] 데이터와 상호 작용하기 위한 가이드 역할을 합니다.
 
 ## 시작하기
 
-이 사용자 가이드는 관리와 관련된 다양한 [!DNL Experience Platform] 서비스를 이해해야 합니다 [!DNL Real-time Customer Profiles]. 이 사용자 안내서를 읽기 전에 다음 서비스에 대한 설명서를 검토하십시오.
+이 UI 가이드는 관리와 관련된 다양한 [!DNL Experience Platform] 서비스를 이해해야 합니다 [!DNL Real-time Customer Profiles]. 이 가이드를 읽거나 UI에서 작업하기 전에 다음 서비스에 대한 설명서를 검토하십시오.
 
-* [[!DNL 실시간 고객 프로필]](../home.md):여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
+* [[!DNL Real-time Customer Profile]](../home.md):여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
 * [[!DNL Identity Service]](../../identity-service/home.md):데이터 소스 [!DNL Real-time Customer Profile] 를 인제스트할 때 서로 다른 데이터 소스의 ID를 결합함으로써 사용할 수 있습니다 [!DNL Platform].
 * [[!DNL Experience Data Model] (XDM)](../../xdm/home.md):고객 경험 데이터를 [!DNL Platform] 구성하는 표준화된 프레임워크
 
@@ -102,15 +100,15 @@ ID 네임스페이스를 선택한 후 ID 값을 입력할 수 있는 **[!UICONT
 
 기본 **[!UICONTROL 프로필]** 메뉴에서 [정책 **[!UICONTROL 병합]** ] 탭을 선택하여 조직에 속하는 병합 정책 목록을 봅니다. 나열된 각 정책에는 해당 이름, 기본 병합 정책인지 여부 및 해당 정책이 적용되는 스키마가 표시됩니다.
 
-병합 정책에 대한 자세한 내용은 [병합 정책 사용 안내서를 참조하십시오](merge-policies.md).
+병합 정책에 대한 자세한 내용은 [병합 정책 UI 안내서를 참조하십시오](merge-policies.md).
 
 ![](../images/user-guide/profiles-merge-policies.png)
 
 ## 결합 스키마 {#union-schema}
 
-기본 **[!UICONTROL 프로필]** 메뉴에서 **[!UICONTROL 결합 스키마]** 탭을 선택하여 프로필 데이터에 대한 결합 스키마를 봅니다. 결합 스키마는 동일한 클래스 아래의 모든 [!DNL Experience Data Model] (XDM) 필드가 병합되어 스키마에서 사용할 수 있게 되었습니다 [!DNL Real-time Customer Profile]. 왼쪽의 &quot;[!UICONTROL 클래스]&quot; 목록에서 클래스를 선택하면 캔버스에서 해당 스키마의 구조를 볼 수 있습니다. 예를 들어 &quot;[!DNL XDM Profile]&quot;를 선택하면 [!DNL XDM Individual Profile] 클래스에 대한 결합 스키마가 표시됩니다.
+기본 **[!UICONTROL 프로필]** 메뉴에서 **[!UICONTROL 조합 스키마]** 탭을 선택하여 인제스트된 데이터에 대한 결합 스키마를 봅니다. 결합 스키마는 동일한 클래스 아래의 모든 [!DNL Experience Data Model] (XDM) 필드가 병합되어 스키마에서 사용할 수 있게 되었습니다 [!DNL Real-time Customer Profile].
 
-Adobe Experience Platform 내의 조합 스키마 및 해당 역할에 대한 자세한 내용은 [스키마 구성 안내서의 조합 스키마 섹션을 참조하십시오](../../xdm/schema/composition.md).
+결합 스키마에 대한 자세한 내용은 [조합 스키마 UI 안내서를 참조하십시오](union-schema.md).
 
 ![](../images/user-guide/profiles-union-schema.png)
 
