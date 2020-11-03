@@ -5,9 +5,9 @@ title: 데이터 준비 함수
 topic: overview
 description: 이 문서에서는 데이터 준비와 함께 사용되는 매핑 기능을 소개합니다.
 translation-type: tm+mt
-source-git-commit: 16c718c7c653a0cfe4c3dcefddfc5472525e1828
+source-git-commit: 6deb8f5e11b87550601679f06c8445d90fd22709
 workflow-type: tm+mt
-source-wordcount: '3432'
+source-wordcount: '3459'
 ht-degree: 3%
 
 ---
@@ -42,7 +42,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 >표의 전체 내용을 보려면 왼쪽/오른쪽으로 스크롤하십시오.
 
 | 함수 | 설명 | 매개 변수 | 구문 | 표현식 | 샘플 출력 |
-| -------- | ----------- | ---------- | -------| ---------- | ------------- |
+-------- | ----------- | ---------- | -------| ---------- | -------------
 | concat | 지정된 문자열을 연결합니다. | <ul><li>문자열:연결할 문자열.</li></ul> | concat(STRING_1, STRING_2) | concat(&quot;Hi, &quot;, &quot;there&quot;, &quot;!&quot;) | `"Hi, there!"` |
 | 분해 | regex를 기반으로 문자열을 분할하고 부품 배열을 반환합니다. 선택적으로 문자열을 분할할 regex를 포함할 수 있습니다. 기본적으로 분할은 &quot;,&quot;로 확인됩니다. | <ul><li>문자열: **필수** : 분할해야 하는 문자열입니다.</li><li>REGEX: *선택* 사항문자열을 분할하는 데 사용할 수 있는 정규 표현식.</li></ul> | explode(STRING, REGEX) | explode(&quot;Hi, there!&quot;, &quot; &quot;) | `["Hi,", "there"]` |
 | instr | 하위 문자열의 위치/인덱스를 반환합니다. | <ul><li>입력: **필수** 검색되는 문자열입니다.</li><li>하위 문자열: **필수** 문자열 내에서 검색되는 하위 문자열입니다.</li><li>START_POSITION: *선택* 사항문자열에서 찾을 위치의 위치입니다.</li><li>발생: *선택* 사항시작 위치에서 찾을 n번째 항목입니다. 기본적으로 1입니다. </li></ul> | instr(INPUT, SUBSTRING, START_POSITION, OCCURRENCE) | instr(&quot;adobe`<span>`.com&quot;, &quot;com&quot;) | 6 |
@@ -51,7 +51,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | lower /<br>lcase | 문자열을 소문자로 변환합니다. | <ul><li>입력: **필수** 소문자가 변환될 문자열입니다.</li></ul> | lower(INPUT) | lower(&quot;HeLlO&quot;)<br>소문자(&quot;HeLlO&quot;) | &quot;hello&quot; |
 | 상단/<br>ucase | 문자열을 대문자로 변환합니다. | <ul><li>입력: **필수** 대문자로 변환할 문자열입니다.</li></ul> | upper(INPUT) | upper(&quot;HeLlO&quot;)<br>ucase(&quot;HeLlO&quot;) | &quot;HELLO&quot; |
 | split | 구분 문자로 입력 문자열을 분할합니다. | <ul><li>입력: **필수** 분할될 입력 문자열입니다.</li><li>구분 문자: **필수** 입력 분할에 사용되는 문자열입니다.</li></ul> | split(INPUT, SEPARATOR) | split(&quot;Hello world&quot;, &quot; &quot;) | `["Hello", "world"]` |
-| join | 구분 기호를 사용하여 개체 목록을 연결합니다. | <ul><li>구분 문자: **필수** 개체 연결에 사용할 문자열입니다.</li><li>개체: **필수** 연결할 문자열 배열.</li></ul> | `join(SEPARATOR, [OBJECTS])` | `join(" ", ["Hello", "world"])` | &quot;Hello world&quot; |
+| join | 구분 기호를 사용하여 개체 목록을 연결합니다. | <ul><li>구분 문자: **필수** 개체 연결에 사용할 문자열입니다.</li><li>개체: **필수** 연결할 문자열 배열.</li></ul> | `join(SEPARATOR, [OBJECTS])` | `join(" ", to_array(true, "Hello", "world"))` | &quot;Hello world&quot; |
 | lpad | 문자열의 왼쪽에 지정된 문자열을 넣습니다. | <ul><li>입력: **필수** 채워질 문자열입니다. 이 문자열은 null일 수 있습니다.</li><li>카운트: **필수** 입력 가능한 문자열의 크기입니다.</li><li>패딩: **필수** 입력 내용을 패드하는 문자열입니다. null 또는 비어 있으면 단일 공백으로 처리됩니다.</li></ul> | lpad(INPUT, COUNT, PADDING) | lpad(&quot;bat&quot;, 8, &quot;yz&quot;) | &quot;yzygybat&quot; |
 | rpad | 지정된 문자열을 포함한 문자열의 오른쪽에 패드를 넣습니다. | <ul><li>입력: **필수** 채워질 문자열입니다. 이 문자열은 null일 수 있습니다.</li><li>카운트: **필수** 입력 가능한 문자열의 크기입니다.</li><li>패딩: **필수** 입력 내용을 패드하는 문자열입니다. null 또는 비어 있으면 단일 공백으로 처리됩니다.</li></ul> | rpad(INPUT, COUNT, PADDING) | rpad(&quot;bat&quot;, 8, &quot;yz&quot;) | &quot;batyzyzy&quot; |
 | left | 지정된 문자열의 첫 번째 &quot;n&quot; 문자를 가져옵니다. | <ul><li>문자열: **필수** : 첫 번째 &quot;n&quot; 문자를 가져오는 문자열입니다.</li><li>카운트: **필수**&#x200B;문자열에서 가져올 &quot;n&quot; 문자입니다.</li></ul> | left(STRING, COUNT) | left(&quot;abcde&quot;, 2) | &quot;ab&quot; |
@@ -69,7 +69,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 >표의 전체 내용을 보려면 왼쪽/오른쪽으로 스크롤하십시오.
 
 | 함수 | 설명 | 매개 변수 | 구문 | 표현식 | 샘플 출력 |
-| -------- | ----------- | ---------- | -------| ---------- | ------------- |
+-------- | ----------- | ---------- | -------| ---------- | -------------
 | sha1 | SHA-1(보안 해시 알고리즘 1)을 사용하여 입력을 받고 해시 값을 생성합니다. | <ul><li>입력: **일반** 텍스트를 해시해야 합니다.</li><li>CHARSET: *선택* 사항문자 세트의 이름입니다. 가능한 값에는 UTF-8, UTF-16, ISO-8859-1 및 US-ASCII가 포함됩니다.</li></ul> | sha1(INPUT, CHARSET) | sha1(&quot;my text&quot;, &quot;UTF-8&quot;) | c3599c11e47719df18a24 &#x200B; 48690840c5dfcce3c80 |
 | sha256 | Secure Hash Algorithm 256(SHA-256)을 사용하여 입력을 받고 해시 값을 생성합니다. | <ul><li>입력: **일반** 텍스트를 해시해야 합니다.</li><li>CHARSET: *선택* 사항문자 세트의 이름입니다. 가능한 값에는 UTF-8, UTF-16, ISO-8859-1 및 US-ASCII가 포함됩니다.</li></ul> | sha256(INPUT, CHARSET) | sha256(&quot;내 텍스트&quot;, &quot;UTF-8&quot;) | 7330d2b39ca35eaf4cb95fc846c21 &#x200B; ee6a39af698154a83a586ee270a0d372104 |
 | sha512 | Secure Hash Algorithm 512(SHA-512)를 사용하여 입력을 받고 해시 값을 생성합니다. | <ul><li>입력: **일반** 텍스트를 해시해야 합니다.</li><li>CHARSET: *선택* 사항문자 세트의 이름입니다. 가능한 값에는 UTF-8, UTF-16, ISO-8859-1 및 US-ASCII가 포함됩니다.</li></ul> | sha512(INPUT, CHARSET) | sha512(&quot;내 텍스트&quot;, &quot;UTF-8&quot;) | a3d7e45a0d9be5fd4e4b3b8c9c2163c21ef &#x200B; 708bf11b4232bb21d2a8704ada2cdcd7b367dd0788 a89 &#x200B; a5c908cfe377aceb1072a7b386b7d4fd2ff68a8fd24d16 |
@@ -83,7 +83,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 >표의 전체 내용을 보려면 왼쪽/오른쪽으로 스크롤하십시오.
 
 | 함수 | 설명 | 매개 변수 | 구문 | 표현식 | 샘플 출력 |
-| -------- | ----------- | ---------- | -------| ---------- | ------------- |
+-------- | ----------- | ---------- | -------| ---------- | -------------
 | get_url_protocol | 지정된 URL에서 프로토콜을 반환합니다. 입력이 잘못된 경우 null을 반환합니다. | <ul><li>URL: **필수** 프로토콜이 추출되어야 하는 URL입니다.</li></ul> | get_url_protocol(URL) | get_url_protocol(&quot;https://platform.adobe.com/home&quot;) | https |
 | get_url_host | 주어진 URL의 호스트를 반환합니다. 입력이 잘못된 경우 null을 반환합니다. | <ul><li>URL: **필수** 호스트를 추출해야 하는 URL입니다.</li></ul> | get_url_host(URL) | get_url_host(&quot;https://platform.adobe.com/home&quot;) | platform.adobe.com |
 | get_url_port | 지정된 URL의 포트를 반환합니다. 입력이 잘못된 경우 null을 반환합니다. | <ul><li>URL: **필수** 포트를 추출해야 하는 URL입니다.</li></ul> | get_url_port(URL) | get_url_port(&quot;sftp://example.com//home/joe/employee.csv&quot;) | 22 |
@@ -97,7 +97,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 >표의 전체 내용을 보려면 왼쪽/오른쪽으로 스크롤하십시오.
 
 | 함수 | 설명 | 매개 변수 | 구문 | 표현식 | 샘플 출력 |
-| -------- | ----------- | ---------- | -------| ---------- | ------------- |
+-------- | ----------- | ---------- | -------| ---------- | -------------
 | now | 현재 시간을 검색합니다. |  | now() | now() | `2020-09-23T10:10:24.556-07:00[America/Los_Angeles]` |
 | timestamp | 현재 Unix 시간을 검색합니다. |  | timestamp() | timestamp() | 1571850624571 |
 | format | 지정한 형식에 따라 입력 날짜를 지정합니다. | <ul><li>날짜: **필수** 형식을 지정할 ZunitedDateTime 개체로서 입력 날짜입니다.</li><li>형식: **필수** 날짜를 변경할 형식.</li></ul> | format(DATE, FORMAT) | format(2019-10-23T11:24:00+00:00, &quot;yyyy-MM-dd HH:mm:ss&quot;) | &quot;2019-10-23 11:24:35&quot; |
@@ -118,13 +118,14 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 >표의 전체 내용을 보려면 왼쪽/오른쪽으로 스크롤하십시오.
 
 | 함수 | 설명 | 매개 변수 | 구문 | 표현식 | 샘플 출력 |
-| -------- | ----------- | ---------- | -------| ---------- | ------------- |
+-------- | ----------- | ---------- | -------| ---------- | -------------
 | size_of | 입력의 크기를 반환합니다. | <ul><li>입력: **필수** 크기를 찾으려고 하는 개체입니다.</li></ul> | size_of(INPUT) | `size_of([1, 2, 3, 4])` | 4 |
 | is_empty | 개체가 비어 있는지 여부를 확인합니다. | <ul><li>입력: **필수** 확인하려는 개체가 비어 있습니다.</li></ul> | is_empty(INPUT) | `is_empty([1, 2, 3])` | false |
 | array_to_object | 개체 목록을 만듭니다. | <ul><li>입력: **필수** 키 및 배열 쌍의 그룹입니다.</li></ul> | array_to_object(INPUT) | 샘플 | 샘플 |
 | to_object | 주어진 플랫 키/값 쌍을 기반으로 개체를 만듭니다. | <ul><li>입력: **필수** 키/값 쌍의 일반 목록입니다.</li></ul> | to_object(INPUT) | to_object(&quot;firstName&quot;, &quot;John&quot;, &quot;lastName&quot;, &quot;Doe&quot;) | `{"firstName": "John", "lastName": "Doe"}` |
 | str_to_object | 입력 문자열에서 개체를 만듭니다. | <ul><li>문자열: **필수** 개체를 만들기 위해 파싱되는 문자열입니다.</li><li>VALUE_DELIMITER: *선택* 사항필드와 값을 구분하는 구분 기호입니다. The default delimiter is `:`.</li><li>FIELD_DELIMITER: *선택* 사항필드 값 쌍을 구분하는 구분 기호입니다. The default delimiter is `,`.</li></ul> | str_to_object(STRING, VALUE_DELIMITER, FIELD_DELIMITER) | str_to_object(&quot;firstName - John | lastName - | 전화 - 123 456 7890&quot;, &quot;-&quot;, &quot; | &quot;) | `{"firstName": "John", "lastName": "Doe", "phone": "123 456 7890"}` |
 | is_set | 소스 데이터 내에 개체가 있는지 확인합니다. | <ul><li>입력: **필수** 소스 데이터 내에 있는지 확인할 경로입니다.</li></ul> | is_set(INPUT) | is_set(&quot;evars.evar.field1&quot;) | true |
+| 무효 | 속성의 값을 로 설정합니다 `null`. 대상 스키마에 필드를 복사하지 않으려는 경우 사용해야 합니다. |  | useable() | useable() | `null` |
 
 ### 계층 - 배열
 
@@ -133,7 +134,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 >표의 전체 내용을 보려면 왼쪽/오른쪽으로 스크롤하십시오.
 
 | 함수 | 설명 | 매개 변수 | 구문 | 표현식 | 샘플 출력 |
-| -------- | ----------- | ---------- | -------| ---------- | ------------- |
+-------- | ----------- | ---------- | -------| ---------- | -------------
 | 코알스 | 지정된 배열에서 null이 아닌 첫 번째 개체를 반환합니다. | <ul><li>입력: **필수** null이 아닌 첫 번째 개체를 찾을 배열입니다.</li></ul> | coalesce(INPUT) | coalesce(null, null, null, &quot;first&quot;, null, &quot;second&quot;) | &quot;first&quot; |
 | first | 지정된 배열의 첫 번째 요소를 검색합니다. | <ul><li>입력: **필수** 요소의 첫 번째 요소를 찾을 배열입니다.</li></ul> | first(INPUT) | first(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;) | &quot;1&quot; |
 | last | 지정된 배열의 마지막 요소를 검색합니다. | <ul><li>입력: **필수** 마지막 요소를 찾을 배열입니다.</li></ul> | last(INPUT) | last(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;) | &quot;3&quot; |
@@ -146,7 +147,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 >표의 전체 내용을 보려면 왼쪽/오른쪽으로 스크롤하십시오.
 
 | 함수 | 설명 | 매개 변수 | 구문 | 표현식 | 샘플 출력 |
-| -------- | ----------- | ---------- | -------| ---------- | ------------- |
+-------- | ----------- | ---------- | -------| ---------- | -------------
 | 디코딩 | 키워드와 배열 키 값 쌍의 목록이 지정된 경우 이 함수는 키가 있는 경우 값을 반환하거나 배열에 있는 경우 기본값을 반환합니다. | <ul><li>키: **일치해야** 합니다.</li><li>OPTIONS: **필수** 키/값 쌍의 분리된 배열입니다. 선택적으로 기본값을 끝에 배치할 수 있습니다.</li></ul> | decode(KEY, OPTIONS) | decode(stateCode, &quot;ca&quot;, &quot;California&quot;, &quot;pa&quot;, &quot;Pennsylvania&quot;, &quot;N/A&quot;) | 지정된 stateCode가 &quot;ca&quot;, &quot;California&quot;인 경우.<br>만약 주법이 &quot;pa&quot;, &quot;펜실베이니아&quot; 라면.<br>stateCode가 다음과 일치하지 않는 경우 &quot;N/A&quot; |
 | iif | 주어진 부울 식을 평가하고 결과를 기준으로 지정된 값을 반환합니다. | <ul><li>BOOLEAN_EXPRESSION: **필수** 평가되는 부울 식입니다.</li><li>TRUE_VALUE: **필수** 표현식이 true로 평가되는 경우 반환되는 값입니다.</li><li>FALSE_VALUE: **필수** 표현식이 false로 평가되는 경우 반환되는 값입니다.</li></ul> | iif(BOOLEAN_EXPRESSION, TRUE_VALUE, FALSE_VALUE) | iif(&quot;s&quot;.equalsIgnoreCase(&quot;S&quot;), &quot;True&quot;, &quot;False&quot;) | &quot;True&quot; |
 
@@ -157,7 +158,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 >표의 전체 내용을 보려면 왼쪽/오른쪽으로 스크롤하십시오.
 
 | 함수 | 설명 | 매개 변수 | 구문 | 표현식 | 샘플 출력 |
-| -------- | ----------- | ---------- | -------| ---------- | ------------- |
+-------- | ----------- | ---------- | -------| ---------- | -------------
 | min | 지정된 인수의 최소 개수를 반환합니다. 자연스러운 순서를 사용합니다. | <ul><li>OPTIONS: **필요한** 하나 이상의 개체가 서로 비교할 수 있습니다.</li></ul> | min(OPTIONS) | 최소(3, 1, 4) | 1 |
 | max | 주어진 인수의 최대값을 반환합니다. 자연스러운 순서를 사용합니다. | <ul><li>OPTIONS: **필요한** 하나 이상의 개체가 서로 비교할 수 있습니다.</li></ul> | max(OPTIONS) | max(3, 1, 4) | 4 |
 
@@ -168,7 +169,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 >표의 전체 내용을 보려면 왼쪽/오른쪽으로 스크롤하십시오.
 
 | 함수 | 설명 | 매개 변수 | 구문 | 표현식 | 샘플 출력 |
-| -------- | ----------- | ---------- | -------| ---------- | ------------- |
+-------- | ----------- | ---------- | -------| ---------- | -------------
 | to_bigint | 문자열을 BigInteger로 변환합니다. | <ul><li>문자열: **필수** BigInteger로 변환할 문자열입니다.</li></ul> | to_bigint(STRING) | to_bigint(&quot;100000.34&quot;) | 1000000.34 |
 | to_decimal | 문자열을 Double로 변환합니다. | <ul><li>문자열: **필수** Double로 변환할 문자열입니다.</li></ul> | to_decimal(STRING) | to_decimal(&quot;20.5&quot;) | 20.5 |
 | to_float | 문자열을 Float로 변환합니다. | <ul><li>문자열: **필수** Float로 변환할 문자열입니다.</li></ul> | to_float(STRING) | to_float(&quot;12.3456&quot;) | 12.34566 |
@@ -181,7 +182,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 >표의 전체 내용을 보려면 왼쪽/오른쪽으로 스크롤하십시오.
 
 | 함수 | 설명 | 매개 변수 | 구문 | 표현식 | 샘플 출력 |
-| -------- | ----------- | ---------- | -------| ---------- | ------------- |
+-------- | ----------- | ---------- | -------| ---------- | -------------
 | json_to_object | 지정된 문자열에서 JSON 콘텐츠를 역직렬화합니다. | <ul><li>문자열: **deserialize할 JSON 문자열이 필요합니다** .</li></ul> | json_to_object(STRING) | json_to_object({&quot;info&quot;:{&quot;firstName&quot;:&quot;John&quot;,&quot;lastName&quot; :&quot;Doe&quot;}) | JSON을 나타내는 개체입니다. |
 
 ### 특별 작업
@@ -191,7 +192,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 >표의 전체 내용을 보려면 왼쪽/오른쪽으로 스크롤하십시오.
 
 | 함수 | 설명 | 매개 변수 | 구문 | 표현식 | 샘플 출력 |
-| -------- | ----------- | ---------- | -------| ---------- | ------------- |
+-------- | ----------- | ---------- | -------| ---------- | -------------
 | uuid /<br>guid | 의사 임의 ID를 생성합니다. |  | uuid()<br>guid() | uuid()<br>guid() | 7c0267d2-bb74-4e1a-9275-3bf4fccda5f4<br>c7016dc7-3163-43f7-afc7-2e1c9c20633 |
 
 ### 사용자 에이전트 기능
@@ -201,7 +202,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 >표의 전체 내용을 보려면 왼쪽/오른쪽으로 스크롤하십시오.
 
 | 함수 | 설명 | 매개 변수 | 구문 | 표현식 | 샘플 출력 |
-| -------- | ----------- | ---------- | -------| ---------- | ------------- |
+-------- | ----------- | ---------- | -------| ---------- | -------------
 | ua_os_name | 사용자 에이전트 문자열에서 운영 체제 이름을 추출합니다. | <ul><li>USER_AGENT: **필수** 사용자 에이전트 문자열입니다.</li></ul> | ua_os_name(USER_AGENT) | ua_os_name(&quot;Mozilla/5.0(iPhone;CPU iPhone OS 5_1_1(Mac OS X) AppleWebKit/534.46(KHTML(Gecko와 같은) 버전/5.1 Mobile/9B206 Safari/7534.48.3인치) | iOS |
 | ua_os_version_major | 사용자 에이전트 문자열에서 운영 체제의 주 버전을 추출합니다. | <ul><li>USER_AGENT: **필수** 사용자 에이전트 문자열입니다.</li></ul> | ua_os_version_major(USER_AGENT) | ua_os_version_major(&quot;Mozilla/5.0 (iPhone;CPU iPhone OS 5_1_1(Mac OS X) AppleWebKit/534.46(KHTML(Gecko와 같은) 버전/5.1 Mobile/9B206 Safari/7534.48.3인치) | iOS 5 |
 | ua_os_version | 사용자 에이전트 문자열에서 운영 체제의 버전을 추출합니다. | <ul><li>USER_AGENT: **필수** 사용자 에이전트 문자열입니다.</li></ul> | ua_os_version(USER_AGENT) | ua_os_version(&quot;Mozilla/5.0(iPhone;CPU iPhone OS 5_1_1(Mac OS X) AppleWebKit/534.46(KHTML(Gecko와 같은) 버전/5.1 Mobile/9B206 Safari/7534.48.3인치) | 5.1.1 |
