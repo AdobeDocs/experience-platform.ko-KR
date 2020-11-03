@@ -5,9 +5,9 @@ title: 지능형 서비스에서 사용할 데이터 준비
 topic: Intelligent Services
 description: 'Intelligent Services가 마케팅 이벤트 데이터에서 얻은 통찰력을 얻으려면 데이터가 세밀하게 농축되어 표준 구조로 유지되어야 합니다. 지능형 서비스는 이를 달성하기 위해 XDM(Experience Data Model) 스키마를 활용합니다. 특히, Intelligent Services에서 사용되는 모든 데이터 세트는 CEE(Consumer ExperienceEvent) XDM 스키마를 따라야 합니다. '
 translation-type: tm+mt
-source-git-commit: 3083c50b31746bfd32634278cb55b926bd477b2b
+source-git-commit: 630f3bd0249dc3d0e73ace52c534d5f20ec0f87a
 workflow-type: tm+mt
-source-wordcount: '1882'
+source-wordcount: '1851'
 ht-degree: 0%
 
 ---
@@ -278,11 +278,7 @@ CEE 믹스에는 유용한 인사이트를 생성하기 위해 활용해야 하�
 
 #### 데이터 세트에 ID 필드 추가
 
->[!NOTE]
->
->향후 릴리스는 [!DNL Intelligent Services] Adobe Experience Platform ID 서비스 [](../identity-service/home.md) 를 고객 식별 기능에 통합할 예정입니다. 따라서 아래 설명된 단계는 변경될 수 있습니다.
-
-다른 외부 소스 [!DNL Adobe Audience Manager], [!DNL Adobe Analytics]또는 다른 외부 소스에서 데이터를 가져오는 경우 스키마 필드를 ID 필드로 설정하는 옵션이 있습니다. 스키마 필드를 ID 필드로 설정하려면 스키마 편집기를 사용하여 스키마를 생성하기 위한 [UI 자습서](../xdm/tutorials/create-schema-ui.md#identity-field) 내의 ID 필드 설정 섹션 또는 [API 자습서를](../xdm/tutorials/create-schema-api.md#define-an-identity-descriptor)봅니다.
+다른 외부 소스 [!DNL Adobe Audience Manager], [!DNL Adobe Analytics]또는 다른 외부 소스에서 데이터를 가져오는 경우 스키마 필드를 ID 필드로 설정하는 옵션이 있습니다. 스키마 필드를 ID 필드로 설정하려면 스키마 생성을 위한 [UI 자습서](../xdm/tutorials/create-schema-ui.md#identity-field) 또는 [API 자습서](../xdm/tutorials/create-schema-api.md#define-an-identity-descriptor) 내에서 ID 필드 설정 섹션을확인하십시오.
 
 로컬 CSV 파일의 데이터를 인제스트하는 경우 데이터 [매핑 및 인제스트 관련 다음 섹션으로 건너뛸 수 있습니다](#ingest).
 
