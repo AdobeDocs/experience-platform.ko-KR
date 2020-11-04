@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Adobe 개인 정보 보호 JavaScript 라이브러리 개요
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: 6d706b33573e88b2f1ea9d386928dcfdb089a9c5
 workflow-type: tm+mt
-source-wordcount: '921'
-ht-degree: 5%
+source-wordcount: '922'
+ht-degree: 6%
 
 ---
 
@@ -31,12 +31,12 @@ ID [!DNL Privacy JS Library] 를 관리하는 데 몇 가지 기능을 제공합
 | 함수 | 설명 |
 | --- | --- |
 | `retrieveIdentities` | 에서 검색된 일치하는 ID(`validIds`)와 [!DNL Privacy Service]발견되지 않은 ID 배열(`failedIds`)을 반환합니다. |
-| `removeIdentities` | 브라우저에서 일치하는 각 ID를 제거합니다. 이 ID가 삭제되었는지 여부를 나타내는`validIds``isDeleteClientSide` 부울을 포함하는 각 ID와 일치하는 ID(Matching ID)의 배열을 반환합니다. |
+| `removeIdentities` | 브라우저에서 일치하는 각 ID를 제거합니다. 이 ID가 삭제되었는지 여부를 나타내는`validIds``isDeletedClientSide` 부울을 포함하는 각 ID와 일치하는 ID(Matching ID)의 배열을 반환합니다. |
 | `retrieveThenRemoveIdentities` | 일치하는 ID(`validIds`)의 배열을 검색한 다음 브라우저에서 해당 ID를 제거합니다. 이 기능은 유사한 기능이지만, 삭제하기 전에 사용 중인 Adobe 솔루션에 액세스 요청이 필요한 경우(예: 삭제 요청에 제공하기 전에 고유 식별자를 검색해야 하는 경우) 가장 많이 사용됩니다. `removeIdentities` |
 
 >[!NOTE]
 >
->`removeIdentities` 브라우저에서 ID만 `retrieveThenRemoveIdentities` 제거할 수 있습니다. 예를 들어, Adobe Audience Manager은 타사 쿠키에 저장된 demdex ID를 삭제하지 않고 Adobe Target은 해당 ID를 저장하는 모든 쿠키를 삭제합니다.
+>`removeIdentities` 브라우저에서 ID만 `retrieveThenRemoveIdentities` 제거할 수 있습니다. 예를 들어, Adobe Audience Manager은 타사 쿠키에 저장된 demdex ID를 삭제하지 않고, Adobe Target은 해당 ID를 저장하는 모든 쿠키를 삭제합니다.
 
 세 가지 기능이 모두 비동기 프로세스를 나타내므로 검색된 모든 ID는 콜백이나 약속을 사용하여 처리해야 합니다.
 
@@ -47,7 +47,7 @@ ID [!DNL Privacy JS Library] 를 관리하는 데 몇 가지 기능을 제공합
 
 * 다음 명령을 실행하여 npm을 사용하여 설치합니다. `npm install @adobe/adobe-privacy`
 * 이름 아래에 있는 Adobe 실행 확장 사용 `AdobePrivacy`
-* https://github.com/Adobe-Marketing-Cloud/adobe-privacy에서 [다운로드](https://github.com/Adobe-Marketing-Cloud/adobe-privacy)
+* Experience Cloud GitHub 저장소에서 [다운로드](https://github.com/Adobe-Marketing-Cloud/adobe-privacy)
 
 ## 인스턴스화 [!DNL Privacy JS Library]
 
@@ -56,7 +56,6 @@ ID [!DNL Privacy JS Library] 를 관리하는 데 몇 가지 기능을 제공합
 ```js
 var adobePrivacy = new AdobePrivacy({
     imsOrgID: "{IMS_ORG}",
-    key: "{DATA_SUBJECT_ID}",
     reportSuite: "{REPORT_SUITE_ID}",
     trackingServer: "{SERVER_URL}",
     clientCode: "{TARGET_CLIENT_CODE}"
@@ -186,7 +185,7 @@ adobePrivacy.removeIdentities().then(handleRemovedIDs)…
 | 매개 변수 | 설명 |
 | --- | --- |
 | `cookieDomainPeriods` | 쿠키 추적을 위한 도메인의 기간 수(기본값은 2). |
-| `dataCenter` | Adobe 데이터 수집 데이터 센터 이 값은 JavaScript 웹 비콘에 지정된 경우에만 포함되어야 합니다. 잠재적 값은 다음과 같습니다. <ul><li>&quot;d1&quot;: San Jose 데이터 센터.</li><li>&quot;d2&quot;: 달라스 데이터 센터</li></ul> |
+| `dataCenter` | Adobe 데이터 수집 데이터 센터 이 값은 JavaScript 웹 비콘에 지정된 경우에만 포함되어야 합니다. 잠재적 값은 다음과 같습니다. <ul><li>&quot;d1&quot;:San Jose 데이터 센터.</li><li>&quot;d2&quot;:달라스 데이터 센터</li></ul> |
 | `reportSuite` | JavaScript 웹 비콘에 지정된 보고서 세트 ID(예: &quot;s_code.js&quot; 또는 &quot;dtm&quot;). |
 | `trackingServer` | 데이터 수집 도메인(SSL이 아님). 이 값은 JavaScript 웹 비콘에 지정된 경우에만 포함되어야 합니다. |
 | `trackingServerSecure` | 데이터 수집 도메인(SSL). 이 값은 JavaScript 웹 비콘에 지정된 경우에만 포함되어야 합니다. |
