@@ -5,10 +5,10 @@ description: Experience Platform 웹 SDK 설치 방법 살펴보기
 seo-description: Experience Platform 웹 SDK 설치 방법 살펴보기
 keywords: web sdk installation;installing web sdk;internet explorer;promise;
 translation-type: tm+mt
-source-git-commit: 5ef902ef7f7717121744f7f0074c0aa17e5a9e9a
+source-git-commit: d23568f7ce63df5aa98dc237a6671eeadde0c9b2
 workflow-type: tm+mt
 source-wordcount: '626'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -23,8 +23,8 @@ URL 구조:https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.js OR 합�
 
 예:
 
-* 축소: [https://cdn1.adoberesources.net/alloy/2.1.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/2.1.0/alloy.min.js)
-* 축소 해제: [https://cdn1.adoberesources.net/alloy/2.1.0/alloy.js](https://cdn1.adoberesources.net/alloy/2.1.0/alloy.js)
+* 축소: [https://cdn1.adoberesources.net/alloy/2.3.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/2.3.0/alloy.min.js)
+* 축소 해제: [https://cdn1.adoberesources.net/alloy/2.3.0/alloy.js](https://cdn1.adoberesources.net/alloy/2.3.0/alloy.js)
 
 ## 코드 추가 {#adding-the-code}
 
@@ -37,7 +37,7 @@ Adobe Experience Platform 구현의 첫 번째 단계 [!DNL Web SDK] 는 HTML의
   function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
   (window,["alloy"]);
 </script>
-<script src="https://cdn1.adoberesources.net/alloy/2.1.0/alloy.min.js" async></script>
+<script src="https://cdn1.adoberesources.net/alloy/2.3.0/alloy.min.js" async></script>
 ```
 
 기본 코드는 이름이 인 전역 함수를 만듭니다 `alloy`. 이 함수를 사용하여 SDK와 상호 작용합니다. 전역 함수 이름을 다른 이름으로 지정하려면 다음과 같이 `alloy` 이름을 변경할 수 있습니다.
@@ -49,7 +49,7 @@ Adobe Experience Platform 구현의 첫 번째 단계 [!DNL Web SDK] 는 HTML의
   function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
   (window,["mycustomname"]);
 </script>
-<script src="https://cdn1.adoberesources.net/alloy/2.1.0/alloy.min.js" async></script>
+<script src="https://cdn1.adoberesources.net/alloy/2.3.0/alloy.min.js" async></script>
 ```
 
 이 예에서 전역 함수의 이름이 대신 `mycustomname`로 변경되었습니다 `alloy`.
@@ -99,5 +99,5 @@ Adobe Experience Platform 구현의 첫 번째 단계 [!DNL Web SDK] 는 HTML의
   function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
   (window,["alloy"]);
 </script>
-<script src="https://cdn1.adoberesources.net/alloy/2.1.0/alloy.min.js"></script>
+<script src="https://cdn1.adoberesources.net/alloy/2.3.0/alloy.min.js"></script>
 ```
