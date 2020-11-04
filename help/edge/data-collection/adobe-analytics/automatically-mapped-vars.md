@@ -5,9 +5,9 @@ description: Experience Platform 웹 SDK를 사용하여 Adobe Analytics에서 �
 seo-description: Experience Platform 웹 SDK를 사용하여 Adobe Analytics에서 자동으로 매핑되는 변수 알아보기
 keywords: adobe analytics;variables;analytics;automatic map;automatically mapped;
 translation-type: tm+mt
-source-git-commit: 3ed89011313006cf627945bf8c75bfd0b87a69bc
+source-git-commit: b81c0c450ddee4b0c0abedfd8ca53c3a599fb3cb
 workflow-type: tm+mt
-source-wordcount: '680'
+source-wordcount: '674'
 ht-degree: 0%
 
 ---
@@ -91,9 +91,8 @@ ht-degree: 0%
 | `placeContext.geo.postalCode` | `zip` | AppMeasurement 쿼리 매개 변수 ZIP 매핑을 참조하십시오. |
 | `placeContext.geo.stateProvince` | `state` | AppMeasurement 쿼리 매개 변수 STATE 매핑을 참조하십시오. |
 | `productlistitems.[N]._[NAME_SPACE].*` | `products` | AppMeasurement 쿼리 매개 변수 제품 상품 이벤트/Evar 매핑. |
-| `productlistitems.[N].lineitemid` | `products` | AppMeasurement 쿼리 매개 변수 제품 카테고리 매핑을 참조하십시오. |
 | `productlistitems.[N].name` | `products` | AppMeasurement 쿼리 매개 변수 제품 이름 매핑을 참조하십시오. |
-| `productlistitems.[N].pricetotal` | `products` | AppMeasurement 쿼리 매개 변수 제품 가격 매핑을 참조하십시오. |
+| `productlistitems.[N].priceTotal` | `products` | AppMeasurement 쿼리 매개 변수 제품 가격 매핑을 참조하십시오. |
 | `productlistitems.[N].quantity` | `products` | AppMeasurement 쿼리 매개 변수 제품 수량 매핑을 참조하십시오. |
 | `web.webInteraction.URL` | `pev1` | AppMeasurement 쿼리 매개 변수 PAGE_EVENT_VAR1 매핑을 참조하십시오. |
 | `web.webInteraction.name` | `pev2` | AppMeasurement 쿼리 매개 변수 PAGE_EVENT_VAR2 매핑입니다. |
