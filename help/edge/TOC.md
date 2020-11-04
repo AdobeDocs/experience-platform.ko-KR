@@ -6,9 +6,9 @@ user-guide-title: Adobe Experience Platform 웹 SDK 도움말
 breadcrumb-title: Web SDK 안내서
 user-guide-description: Edge Network를 통해 Experience Cloud 서비스와 상호 작용할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 502da50576dfd550598111658b41da6a62bb7e79
+source-git-commit: cea3e2f32d9489f5f06be70581bd974b9374646d
 workflow-type: tm+mt
-source-wordcount: '123'
+source-wordcount: '128'
 ht-degree: 34%
 
 ---
@@ -44,6 +44,8 @@ ht-degree: 34%
    * Adobe Target {#adobe-target}
       * [Target 개요](personalization/adobe-target/target-overview.md)
       * [단일 페이지 애플리케이션 구현](personalization/adobe-target/spa-implementation.md)
+   * Offer Decisioning {#offer-decisioning}
+      * [Offer Decisioning 개요](personalization/offer-decisioning/offer-decisioning-overview.md)
 * 동의 {#consent}
    * [지원 동의](consent/supporting-consent.md)
    * IAB Transparency and Consent Framework 2.0 {#iab-tcf}
