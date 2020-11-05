@@ -5,9 +5,9 @@ description: Adobe Target을 사용하여 Experience Platform 웹 SDK로 개인�
 seo-description: Adobe Target을 사용하여 Experience Platform 웹 SDK로 개인화된 컨텐츠를 렌더링하는 방법 학습
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes;prehiding snippet;vec;Form-Based Experience Composer;xdm;audiences;decisions;scope;schema;
 translation-type: tm+mt
-source-git-commit: d069b3007265406367ca9de2b85540b2a070cf36
+source-git-commit: f08452fa9a6ece93e40ef8ca811530feb0620969
 workflow-type: tm+mt
-source-wordcount: '634'
+source-wordcount: '621'
 ht-degree: 3%
 
 ---
@@ -20,10 +20,6 @@ Adobe Experience Platform은 Adobe Target에서 관리하는 개인화된 경험
 ## Adobe Target 활성화
 
 활성화하려면 [!DNL Target]다음을 수행해야 합니다.
-
-1. UI에서 activity.id 및 experience.id 응답 토큰을 [!DNL Target] 설정합니다.
-
-![target_reponse_token](./assets/target_response_token.png)
 
 1. 적절한 클라이언트 코드를 사용하여 [Edge 구성에서](../../fundamentals/edge-configuration.md) target을 활성화합니다.
 1. 이벤트에 `renderDecisions` 옵션을 추가합니다.
