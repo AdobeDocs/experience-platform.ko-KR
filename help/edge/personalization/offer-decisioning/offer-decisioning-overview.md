@@ -5,9 +5,9 @@ description: Adobe Experience Platform 웹 SDK는 Offer Decisioning에서 관리
 seo-description: Adobe Experience Platform 웹 SDK는 Offer Decisioning에서 관리하는 맞춤형 프로모션을 제공하고 렌더링할 수 있습니다. Offer Decisioning UI 또는 API를 사용하여 오퍼 및 기타 관련 개체를 만들 수 있습니다.
 keywords: offer decisioning;decisioning;Web SDK;Platform Web SDK;personalized offers;deliver offers;offer delivery;offer personalization;
 translation-type: tm+mt
-source-git-commit: b10b930dca504b7672eb05bd88ab44d09d9e5c0a
+source-git-commit: 86d819daf26eaf1b46afe76054d475e61720dd27
 workflow-type: tm+mt
-source-wordcount: '850'
+source-wordcount: '839'
 ht-degree: 9%
 
 ---
@@ -56,9 +56,9 @@ Offer Decisioning에서 일할 때 다음 용어를 이해하는 것이 중요�
 
    ![](assets/decision-scope-copy.png)
 
-**에지 구성:** 자세한 내용은 [Edge 구성](../../fundamentals/edge-configuration.md) 설명서를 참조하십시오.
+* **에지 구성:** 자세한 내용은 [Edge 구성](../../fundamentals/edge-configuration.md) 설명서를 참조하십시오.
 
-**ID**:자세한 내용은 Platform Web SDK가 Identity Service를 활용하는 방법에 대한 개요를 [설명하는 이 설명서를 참조하십시오](../../identity/overview.md).
+* **ID**:자세한 내용은 Platform Web SDK가 Identity Service를 활용하는 방법에 대한 개요를 [설명하는 이 설명서를 참조하십시오](../../identity/overview.md).
 
 ## Offer Decisioning 활성화
 
@@ -66,7 +66,7 @@ Offer Decisioning을 활성화하려면 다음 단계를 수행해야 합니다.
 
 1. Adobe Experience Platform을 [에지 구성에서](../../fundamentals/edge-configuration.md) 활성화한 다음 &quot;Offer Decisioning&quot; 상자를 선택합니다.
    ![offer-decising-edge-config](./assets/offer-decisioning-edge-config.png)
-2. 지침에 따라 SDK를 [설치합니다](../../fundamentals/installing-the-sdk.md) (SDK는 독립 실행형 또는 [Adobe Experience Platform Launch을 통해 설치할 수 있습니다](http://launch.adobe.com/). 다음은 Launch에 대한 [빠른 시작 안내서입니다](https://docs.adobe.com/content/help/ko-KR/launch/using/intro/get-started/quick-start.html).
+2. 지침에 따라 SDK를 [설치합니다](../../fundamentals/installing-the-sdk.md) (SDK는 독립 실행형 또는 [Adobe Experience Platform Launch을 통해 설치할 수 있습니다](http://launch.adobe.com/). 다음은 Platform Launch에 대한 [빠른 시작 가이드입니다](https://docs.adobe.com/content/help/ko-KR/launch/using/intro/get-started/quick-start.html).
 3. [Offer Decisioning용 SDK](../../fundamentals/configuring-the-sdk.md) 구성 아래에 Offer Decisioning 특정 추가 단계가 제공됩니다.
    * 독립형 설치 SDK
       1. &quot;sendEvent&quot; 동작을 `decisionScopes`
@@ -80,19 +80,19 @@ Offer Decisioning을 활성화하려면 다음 단계를 수행해야 합니다.
           ]
       })
       ```
-   * 설치된 SDK 실행
-      1. [론치 속성 만들기](https://docs.adobe.com/content/help/ko-KR/launch/using/reference/admin/companies-and-properties.html)
-      2. [Launch 포함 코드 추가](https://docs.adobe.com/content/help/en/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
-      3. &quot;에지 구성&quot; 드롭다운에서 구성을 선택하여 방금 만든 에지 구성을 사용하여 AEP 웹 SDK 익스텐션을 설치하고 구성합니다. 익스텐션에 대한 유용한 [설명서입니다](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html).
+   * 플랫폼 실행 설치된 SDK
+      1. [플랫폼 론치 속성 만들기](https://docs.adobe.com/content/help/ko-KR/launch/using/reference/admin/companies-and-properties.html)
+      2. [플랫폼 실행 포함 코드 추가](https://docs.adobe.com/content/help/en/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
+      3. &quot;에지 구성&quot; 드롭다운에서 구성을 선택하여 방금 만든 에지 구성을 사용하여 Adobe Experience Platform 웹 SDK 익스텐션을 설치하고 구성합니다. 익스텐션에 대한 유용한 [설명서입니다](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html).
          ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
 
          ![configure-aep-web-sdk-extension](./assets/configure-aep-web-sdk-extension.png)
-      4. 필요한 [데이터 요소를 만듭니다](https://docs.adobe.com/content/help/ko-KR/launch/using/reference/manage-resources/data-elements.html). 최소 AEP 웹 SDK Identity Map 및 AEP 웹 SDK XDM 개체 데이터 요소를 만들어야 합니다. (여기에서 연결할 수 있는 AEP 웹 SDK 데이터 요소에 대한 더 많은 설명서가 필요함)
+      4. 필요한 [데이터 요소를 만듭니다](https://docs.adobe.com/content/help/ko-KR/launch/using/reference/manage-resources/data-elements.html). 최소한 플랫폼 웹 SDK ID 맵과 플랫폼 웹 SDK XDM 개체 데이터 요소를 만들어야 합니다.
          ![identity-map-data-element](./assets/identity-map-data-element.png)
 
          ![xdm-object-data-element](./assets/xdm-object-data-element.png)
       5. 규칙 [만들기를 참조하십시오](https://docs.adobe.com/content/help/ko-KR/launch/using/reference/manage-resources/rules.html).
-         * AEP 웹 SDK 이벤트 보내기 작업 추가 및 해당 작업의 구성 `decisionScopes` 에 관련 추가
+         * 플랫폼 웹 SDK 이벤트 전송 작업 추가 및 해당 작업의 구성 `decisionScopes` 에 관련 추가
             ![send-event-action-decisionScopes](./assets/send-event-action-decisionScopes.png)
       6. [구성한 모든 관련 규칙, 데이터 요소 및 익스텐션이 포함된 라이브러리](https://docs.adobe.com/content/help/ko-KR/launch/using/reference/publish/libraries.html) 만들기 및 게시
 
