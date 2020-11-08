@@ -5,9 +5,9 @@ topic: overview
 title: 액세스 제어 개요
 description: Adobe Experience Platform에 대한 액세스 제어는 Adobe Admin Console을 통해 제공됩니다. 이 기능은 Admin Console의 제품 프로필을 활용하므로 사용자에게 사용 권한 및 샌드박스를 연결합니다.
 translation-type: tm+mt
-source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
+source-git-commit: ccb7286e47aa4cf6356d22f84111b0c0fb30dfa8
 workflow-type: tm+mt
-source-wordcount: '1162'
+source-wordcount: '1299'
 ht-degree: 3%
 
 ---
@@ -73,7 +73,7 @@ Adobe Admin Console은 Adobe 제품 이용 권한 및 조직의 이용 권한을
 
 제품 프로필 내의 권한 탭에는 해당 프로필에 대해 활성화된 샌드박스 및 권한이 표시됩니다.
 
-![](./images/permissions-overview.png)
+![permissions-overview](./images/permissions-overview.png)
 
 여러 가지 하위 수준 기능에 대한 액세스 권한을 부여하는 일부 권한과 함께, 이 [!DNL Admin Console] 를 통해 부여된 권한은 범주별로 정렬됩니다.
 
@@ -83,12 +83,19 @@ Adobe Admin Console은 Adobe 제품 이용 권한 및 조직의 이용 권한을
 | --- | --- | --- |
 | [!DNL Data Modeling] | [!UICONTROL 스키마 관리] | 스키마 및 관련 리소스를 읽고, 생성, 편집 및 삭제할 수 있습니다. |
 | [!DNL Data Modeling] | [!UICONTROL 스키마 보기] | 스키마 및 관련 리소스에 대한 읽기 전용 액세스 |
+| [!DNL Data Modeling] | [!UICONTROL 관계 관리] | 스키마 관계를 읽기, 생성, 편집 및 삭제할 수 있는 액세스 권한 |
+| [!DNL Data Modeling] | [!UICONTROL ID 메타데이터 관리] | 스키마에 대한 ID 메타데이터를 읽고 생성, 편집 및 삭제할 수 있는 액세스 권한 |
 | [!DNL Data Management] | [!UICONTROL 데이터 세트 관리] | 데이터 세트를 읽고, 생성, 편집 및 삭제할 수 있습니다. 스키마에 대한 읽기 전용 액세스 |
 | [!DNL Data Management] | [!UICONTROL 데이터 세트 보기] | 데이터 집합 및 스키마에 대한 읽기 전용 액세스 |
 | [!DNL Data Management] | [!UICONTROL 데이터 모니터링] | 데이터 세트 및 스트림 모니터링을 위한 읽기 전용 액세스 |
 | [!DNL Profile Management] | [!UICONTROL 프로필 관리] | 고객 프로파일에 사용되는 데이터 세트를 읽고, 작성하고, 편집하고, 삭제할 수 있습니다. 사용 가능한 프로파일에 대한 읽기 전용 액세스 |
 | [!DNL Profile Management] | [!UICONTROL 프로필 보기] | 사용 가능한 프로파일에 대한 읽기 전용 액세스 |
+| [!DNL Profile Management] | [!UICONTROL 세그먼트 관리] | 세그먼트를 읽고, 만들고, 편집하고, 삭제할 수 있습니다. |
+| [!DNL Profile Management] | [!UICONTROL 세그먼트 보기] | 사용 가능한 세그먼트에 대한 읽기 전용 액세스. |
+| [!DNL Profile Management] | [!UICONTROL 병합 정책 관리] | 병합 정책을 읽고, 만들고, 편집하고, 삭제할 수 있습니다. |
+| [!DNL Profile Management] | [!UICONTROL 병합 정책 보기] | 사용 가능한 병합 정책에 대한 읽기 전용 액세스 |
 | [!DNL Profile Management] | [!UICONTROL 세그먼트에 대한 대상 내보내기] | 평가된 대상 세그먼트를 데이터 세트로 내보내는 기능 |
+| [!DNL Profile Management] | [!UICONTROL 대상에 세그먼트 평가] | 세그먼트 정의를 평가하여 대상에 대한 프로파일을 생성하는 기능 |
 | [!DNL Identities] | [!UICONTROL ID 네임스페이스 관리] | ID 네임스페이스를 읽고, 만들고, 편집하고, 삭제할 수 있습니다. |
 | [!DNL Identities] | [!UICONTROL ID 네임스페이스 보기] | ID 네임스페이스에 대한 읽기 전용 액세스 |
 | [!DNL Sandbox Administration] | [!UICONTROL 샌드박스 관리] | 샌드박스를 읽고, 만들고, 편집하고, 삭제할 수 있습니다. |
@@ -100,8 +107,12 @@ Adobe Admin Console은 Adobe 제품 이용 권한 및 조직의 이용 권한을
 | [!DNL Data Ingestion] | [!UICONTROL 소스 관리] | 소스를 읽고, 만들고, 편집하고, 비활성화할 수 있습니다. |
 | [!DNL Data Ingestion] | [!UICONTROL 소스 보기] | [카탈로그] 탭의 사용 가능한 소스 및 [ **[!UICONTROL 찾아보기]** ] **[!UICONTROL 탭의 인증된 소스에 대한 읽기 전용]** 액세스. |
 | [!DNL Data Science Workspace] | [!UICONTROL 데이터 과학 작업 공간 관리] | 액세스 권한을 사용하여 내용을 읽고, 만들고, 편집하고, 삭제할 수 [!DNL Data Science Workspace]있습니다. |
+| [!DNL Data Governance] | [!UICONTROL 데이터 사용 레이블 적용] | 사용 레이블을 읽고, 만들고, 삭제할 수 있습니다. |
+| [!DNL Data Governance] | [!UICONTROL 데이터 사용 정책 관리] | 데이터 사용 정책을 읽고, 작성하고, 편집하고, 삭제할 수 있는 액세스 권한 |
+| [!DNL Data Governance] | [!UICONTROL 데이터 사용 정책 보기] | 조직에 속하는 데이터 사용 정책에 대한 읽기 전용 액세스 |
+| [!DNL Query Service] | [!UICONTROL 쿼리 관리] | 플랫폼 데이터에 대한 구조화된 SQL 쿼리를 읽고, 작성하고, 편집하고, 삭제할 수 있는 액세스 권한 |
 
-_(*) 이 권한을 사용하려면[!DNL Real-time Customer Data Platform]실시간 CDP에 대한 자세한 내용은[실시간 CDP 개요를 읽어 보시기 바랍니다](https://docs.adobe.com/content/help/en/experience-platform/rtcdp/overview.html)._
+_(*) 이 권한을 사용하려면 [!DNL Real-time Customer Data Platform] 실시간 CDP에 대한 자세한 내용은 [실시간 CDP 개요를 읽어 보시기 바랍니다](https://docs.adobe.com/content/help/en/experience-platform/rtcdp/overview.html)._
 
 ## 다음 단계
 
