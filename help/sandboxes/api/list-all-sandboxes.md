@@ -5,10 +5,10 @@ title: 모든 샌드박스 나열
 topic: developer guide
 description: IMS 조직에 속하는 모든 샌드박스를 나열하려면 /sandbox 종단점에 GET 요청을 하십시오.
 translation-type: tm+mt
-source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
+source-git-commit: 6326b3072737acf30ba2aee7081ce28dc9627a9a
 workflow-type: tm+mt
-source-wordcount: '205'
-ht-degree: 1%
+source-wordcount: '309'
+ht-degree: 2%
 
 ---
 
@@ -20,14 +20,18 @@ IMS 조직에 속하는 모든 샌드박스를 나열하려면(활성 또는 기
 **API 형식**
 
 ```http
-GET /sandboxes
+GET /sandboxes?{QUERY_PARAMS}
 ```
+
+| 매개 변수 | 설명 |
+| --------- | ----------- |
+| `{QUERY_PARAMS}` | 결과를 필터링하는 선택적 쿼리 매개 변수입니다. 자세한 내용은 [쿼리 매개 변수](#query) 섹션을 참조하십시오. |
 
 **요청**
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/foundation/sandbox-management/sandboxes \
+  https://platform.adobe.io/data/foundation/sandbox-management/sandboxes?&limit=4&offset=1 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -93,7 +97,25 @@ curl -X GET \
             "createdBy": "{USER_ID}",
             "modifiedBy": "{USER_ID}"
         }
-    ]
+    ],
+    "_page": {
+        "limit": 4,
+        "count": 4
+    },
+    "_links": {
+        "next": {
+            "href": "https://platform.adobe.io:443/data/foundation/sandbox-management/sandboxes/?limit={limit}&offset={offset}",
+            "templated": true
+        },
+        "prev": {
+            "href": "https://platform.adobe.io:443/data/foundation/sandbox-management/sandboxes?offset=0&limit=1",
+            "templated": null
+        },
+        "page": {
+            "href": "https://platform-int.adobe.io:443/data/foundation/sandbox-management/sandboxes?offset=1&limit=1",
+            "templated": null
+        }
+    }
 }
 ```
 
@@ -105,3 +127,16 @@ curl -X GET \
 | `type` | 샌드박스 유형, &quot;개발&quot; 또는 &quot;프로덕션&quot;입니다. |
 | `isDefault` | 이 샌드박스가 조직의 기본 샌드박스인지 여부를 나타내는 부울 속성입니다. 일반적으로 프로덕션 샌드박스입니다. |
 | `eTag` | 샌드박스의 특정 버전에 대한 식별자입니다. 버전 제어 및 캐싱 효율성에 사용되, 샌드박스를 변경할 때마다 이 값이 업데이트됩니다. |
+
+## 쿼리 매개 변수 사용 {#query}
+
+API는 [[!DNL Sandbox]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) 샌드박스를 나열할 때 쿼리 매개 변수를 페이지에 사용하고 결과를 필터링하는 기능을 지원합니다.
+
+>[!NOTE]
+>
+>및 `limit` `offset` 쿼리 매개 변수는 함께 지정해야 합니다. 하나만 지정하면 API에서 오류를 반환합니다. 없음을 지정하면 기본 제한은 50이고 오프셋은 0입니다.
+
+| 매개 변수 | 설명 |
+| --------- | ----------- |
+| `limit` | 응답에서 반환되는 최대 레코드 수입니다. |
+| `offset` | 응답 목록을 시작(오프셋)할 첫 번째 레코드부터 시작하는 엔티티 수입니다. |
