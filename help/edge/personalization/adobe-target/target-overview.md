@@ -5,9 +5,9 @@ description: Adobe Target을 사용하여 Experience Platform 웹 SDK로 개인�
 seo-description: Adobe Target을 사용하여 Experience Platform 웹 SDK로 개인화된 컨텐츠를 렌더링하는 방법 학습
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes;prehiding snippet;vec;Form-Based Experience Composer;xdm;audiences;decisions;scope;schema;
 translation-type: tm+mt
-source-git-commit: f08452fa9a6ece93e40ef8ca811530feb0620969
+source-git-commit: f2bd8b89207901e57272a4f56d7f561ac10eb60a
 workflow-type: tm+mt
-source-wordcount: '621'
+source-wordcount: '626'
 ht-degree: 3%
 
 ---
@@ -31,7 +31,7 @@ Adobe Experience Platform은 Adobe Target에서 관리하는 개인화된 경험
 
 ## Adobe Target VEC 사용
 
-SDK에서는 VEC를 일반적으로 다음 한 가지 예외를 사용할 수 있습니다.대상 VEC [도우미 익스텐션을](https://docs.adobe.com/content/help/en/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html) 설치하고 활성화해야 합니다.
+플랫폼 웹 SDK 구현에서 VEC를 사용하려면 [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) 또는 [Chrome](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak) VEC Helper Extension을 설치하고 활성화해야 합니다.
 
 ## VEC 활동 자동 렌더링
 
