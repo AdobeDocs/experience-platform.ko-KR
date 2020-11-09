@@ -5,9 +5,9 @@ description: Adobe Target을 사용하여 Experience Platform 웹 SDK로 개인�
 seo-description: Adobe Target을 사용하여 Experience Platform 웹 SDK로 개인화된 컨텐츠를 렌더링하는 방법 학습
 keywords: target;adobe target;xdm views; views;single page applications;SPA;SPA lifecycle;client-side;AB testing;AB;Experience targeting;XT;VEC
 translation-type: tm+mt
-source-git-commit: 485c2e3b0ad7b38a8e4a482cac49c123a744c47b
+source-git-commit: 8aeeef09602386f219fd8284b332469c04e88ffb
 workflow-type: tm+mt
-source-wordcount: '1664'
+source-wordcount: '1671'
 ht-degree: 14%
 
 ---
@@ -223,7 +223,7 @@ XDM 뷰 정의를 완료하고 전달된 XDM 뷰`sendEvent()` 로 구현하면 V
 
 >[!NOTE]
 >
->SPA용 Visual Experience Composer를 사용하려면 [Adobe Target VEC Helper Chrome Extension을 설치해야 합니다](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak).
+>SPA용 VEC를 사용하려면 [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) 또는 [Chrome](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak) VEC Helper Extension을 설치하고 활성화해야 합니다.
 
 ### 수정 패널
 
