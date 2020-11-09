@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;enum;;primary identity;primary identity;XDM individual profile;Experience event;XDM Experience Event;XDM ExperienceEvent;experienceEvent;experienceevent;XDM Experienceevenet;schema design
+keywords: Experience Platform;home;popular topics;schema;Schema;enum;;primary identity;primary identity;XDM individual profile;Experience event;XDM Experience Event;XDM ExperienceEvent;experienceEvent;experienceevent;XDM Experienceevenet;schema design;best practices
 solution: Experience Platform
 title: Adobe Experience Platform의 데이터 모델링을 위한 모범 사례
 topic: overview
 description: 이 문서에서는 XDM(Experience Data Model) 스키마 및 Adobe Experience Platform에서 사용할 스키마를 작성하기 위한 기본 블록, 원칙 및 모범 사례에 대해 소개합니다.
 translation-type: tm+mt
-source-git-commit: e15df78978c06da254319d9d394be35c4668caa9
+source-git-commit: 5fe75ab7c939c8437d675212b71229fe3fb70c01
 workflow-type: tm+mt
-source-wordcount: '2477'
+source-wordcount: '2485'
 ht-degree: 1%
 
 ---
@@ -220,7 +220,7 @@ Adobe Analytics의 경우 ECID가 기본 기본 ID입니다. 고객이 ECID 값�
 
 * 스키마를 구성하기 전에 데이터 테이블을 프로필, 조회 및 이벤트 카테고리로 정렬하여 하향식 접근 방법을 사용합니다.
 * 서로 다른 목적으로 스키마를 설계할 때는 여러 가지 접근 방식과 옵션이 있습니다.
-* 데이터 모델은 세그멘테이션 사용 사례를 지원해야 합니다.
+* 데이터 모델은 세분화 또는 고객 경로 분석과 같은 비즈니스 사용 사례를 지원해야 합니다.
 * 스키마를 가능한 한 간단하게 만들고 필요한 경우 새 필드만 추가합니다.
 
 준비가 되면 UI에서 스키마 [생성](../tutorials/create-schema-ui.md) 관련 자습서를 참조하여 스키마를 만들고, 엔터티에 적합한 클래스를 지정하고, 데이터를 매핑할 필드를 추가하는 방법에 대한 단계별 지침을 확인하십시오.
