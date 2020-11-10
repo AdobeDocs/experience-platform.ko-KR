@@ -6,9 +6,9 @@ topic: tutorial
 type: Tutorial
 description: 이 자습서에서는 API를 사용하여 실시간 고객 프로필 대상 세그먼트에 대한 데이터 사용 규정 준수를 적용하는 단계를 다룹니다.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
 workflow-type: tm+mt
-source-wordcount: '1351'
+source-wordcount: '1338'
 ht-degree: 1%
 
 ---
@@ -22,10 +22,10 @@ ht-degree: 1%
 
 이 자습서에서는 다음의 구성 요소에 대해 작업해야 [!DNL Adobe Experience Platform]합니다.
 
-- [[!DNL 실시간 고객 프로필]](../../profile/home.md): [!DNL Real-time Customer Profile] 은 범용 조회 엔티티 저장소이며, XDM( [!DNL Experience Data Model] Lookup Entity) 데이터를 관리하는 데 사용됩니다 [!DNL Platform]. 프로필은 다양한 엔터프라이즈 데이터 에셋에 있는 데이터를 병합하고 통합 프레젠테이션에서 해당 데이터에 액세스할 수 있도록 합니다.
+- [[!DNL Real-time Customer Profile]](../../profile/home.md): [!DNL Real-time Customer Profile] 은 범용 조회 엔티티 저장소이며, [!DNL Experience Data Model (XDM)] 데이터 관리에 사용됩니다 [!DNL Platform]. 프로필은 다양한 엔터프라이즈 데이터 에셋에 있는 데이터를 병합하고 통합 프레젠테이션에서 해당 데이터에 액세스할 수 있도록 합니다.
    - [정책 병합](../../profile/api/merge-policies.md):특정 조건 [!DNL Real-time Customer Profile] 에서 통합 보기로 병합할 수 있는 데이터를 결정하는 데 사용되는 규칙입니다. 병합 정책은 [!DNL Data Governance] 목적에 따라 구성할 수 있습니다.
-- [[!DNL 세그멘테이션]](../home.md):프로필 스토어에 포함된 대규모 개인 그룹을 비슷한 특성을 공유하고 마케팅 전략과 유사하게 반응하는 작은 그룹으로 나누는 방법 [!DNL Real-time Customer Profile] .
-- [[!DNL 데이터 거버넌스]](../../data-governance/home.md): [!DNL Data Governance] 에서는 다음 구성 요소를 사용하여 데이터 사용 레이블 지정 및 적용을 위한 인프라를 제공합니다.
+- [[!DNL Segmentation]](../home.md):프로필 스토어에 포함된 대규모 개인 그룹을 비슷한 특성을 공유하고 마케팅 전략과 유사하게 반응하는 작은 그룹으로 나누는 방법 [!DNL Real-time Customer Profile] .
+- [[!DNL Data Governance]](../../data-governance/home.md): [!DNL Data Governance] 에서는 다음 구성 요소를 사용하여 데이터 사용 레이블 지정 및 적용을 위한 인프라를 제공합니다.
    - [데이터 사용 레이블](../../data-governance/labels/user-guide.md):각 데이터를 처리하는 민감도 수준에서 데이터 세트와 필드를 설명하는 데 사용되는 레이블입니다.
    - [데이터 사용 정책](../../data-governance/policies/overview.md):특정 데이터 사용 레이블로 분류된 데이터에 허용되는 마케팅 작업을 나타내는 구성
    - [정책 실행](../../data-governance/enforcement/overview.md):데이터 사용 정책을 적용하고 정책 위반을 구성하는 데이터 작업을 방지할 수 있습니다.
@@ -385,4 +385,4 @@ API를 사용하여 세그먼트를 데이터 세트에 내보낼 때 내보내�
 
 ## 다음 단계
 
-이 튜토리얼을 따라 대상 세그먼트와 연관된 데이터 사용 레이블을 조회하고 특정 마케팅 작업에 대한 정책 위반을 테스트했습니다. 에 대한 자세한 내용 [!DNL Data Governance] 은 [!DNL Experience Platform][!DNL 데이터 거버넌스] [에 대한 개요를 읽어 보십시오](../../data-governance/home.md).
+이 튜토리얼을 따라 대상 세그먼트와 연관된 데이터 사용 레이블을 조회하고 특정 마케팅 작업에 대한 정책 위반을 테스트했습니다. 에 대한 자세한 내용 [!DNL Data Governance] 은 [!DNL Experience Platform]개요를 읽어 [[!DNL Data Governance]](../../data-governance/home.md)보십시오.
