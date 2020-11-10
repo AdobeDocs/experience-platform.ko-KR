@@ -5,9 +5,9 @@ title: 부분 일괄 처리 처리 개요
 topic: overview
 description: 이 문서에서는 부분 일괄 처리 처리를 관리하는 자습서를 제공합니다.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
 workflow-type: tm+mt
-source-wordcount: '916'
+source-wordcount: '915'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 0%
 이 자습서에서는 부분 일괄 처리에 관련된 다양한 Adobe Experience Platform 서비스에 대한 작업 지식이 필요합니다. 이 자습서를 시작하기 전에 다음 서비스에 대한 설명서를 검토하십시오.
 
 - [일괄 처리](./overview.md):CSV 및 [!DNL Platform] Portable과 같은 데이터 파일의 데이터를 인제하고 저장하는 방법입니다.
-- [[!DNL Experience Data Model] (XDM)](../../xdm/home.md):고객 경험 데이터를 [!DNL Platform] 구성하는 표준화된 프레임워크
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):고객 경험 데이터를 [!DNL Platform] 구성하는 표준화된 프레임워크
 
 다음 섹션에서는 API를 성공적으로 호출하기 위해 알아야 할 추가 정보를 [!DNL Platform] 제공합니다.
 
