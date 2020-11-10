@@ -5,9 +5,9 @@ title: 스트리밍 대상에 연결 및 데이터 활성화
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 34bf1c8aba555c5c8a527f4c0162cec4535b1dcf
+source-git-commit: 502d913400a8ddc0132c64253cd30ea9f9fcd239
 workflow-type: tm+mt
-source-wordcount: '1871'
+source-wordcount: '1870'
 ht-degree: 2%
 
 ---
@@ -265,8 +265,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-* `{CONNECTION_SPEC_ID}`:사용 가능한 대상 목록을 [가져옵니다. 단계에서 얻은 연결 사양 ID를 사용하십시오](#get-the-list-of-available-destinations).
-* `{AUTHENTICATION_CREDENTIALS}`:스트리밍 대상 이름(예: `Amazon Kinesis authentication credentials` 또는 `Azure Event Hubs authentication credentials`.
+* `{CONNECTION_SPEC_ID}`:사용 가능한 대상 목록을 [가져옵니다. 단계에서 얻은 연결 사양 ID를 사용하십시오](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md#get-the-list-of-available-destinations).
+* `{AUTHENTICATION_CREDENTIALS}`:스트리밍 대상의 이름을 입력합니다. `Aws Kinesis authentication credentials` 또는 `Azure EventHub authentication credentials`.
 * `{ACCESS_ID}`: *연결용 [!DNL Amazon Kinesis] .* Amazon Kinesis 저장소 위치에 대한 액세스 ID입니다.
 * `{SECRET_KEY}`: *연결용 [!DNL Amazon Kinesis] .* Amazon Kinesis 저장 위치에 대한 비밀 키
 * `{REGION}`: *연결용 [!DNL Amazon Kinesis] .* Adobe 실시간 CDP가 데이터를 스트리밍하는 계정의 영역입니다. [!DNL Amazon Kinesis]
@@ -313,7 +313,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "version": "1.0"
     },
     "data": {
-        "format": "json",
+        "format": "json"
     },
     "params": { // use these values for Amazon Kinesis connections
         "stream": "{NAME_OF_DATA_STREAM}", 
@@ -326,7 +326,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```
 
 * `{BASE_CONNECTION_ID}`:위 단계에서 얻은 기본 연결 ID를 사용하십시오.
-* `{CONNECTION_SPEC_ID}`:사용 가능한 대상 목록을 [가져옵니다. 단계에서 얻은 연결 사양을 사용하십시오](#get-the-list-of-available-destinations).
+* `{CONNECTION_SPEC_ID}`:사용 가능한 대상 목록을 [가져옵니다. 단계에서 얻은 연결 사양을 사용하십시오](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md#get-the-list-of-available-destinations).
 * `{NAME_OF_DATA_STREAM}`: *연결용 [!DNL Amazon Kinesis] .* 계정에 있는 기존 데이터 스트림의 이름을 [!DNL Amazon Kinesis] 입력합니다. Adobe 실시간 CDP는 데이터를 이 스트림으로 내보냅니다.
 * `{REGION}`: *연결용 [!DNL Amazon Kinesis] .* Adobe 실시간 CDP가 데이터를 스트리밍하는 Amazon Kinesis 계정의 영역
 * `{EVENT_HUB_NAME}`: *연결용 [!DNL Azure Event Hubs] .* Adobe 실시간 CDP가 데이터를 스트리밍하는 [!DNL Azure Event Hub] 이름을 입력합니다. 자세한 내용은 설명서에서 [이벤트 허브](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) 만들기를 [!DNL Microsoft] 참조하십시오.
@@ -368,20 +368,36 @@ curl -X POST \
 -H 'x-sandbox-name: {SANDBOX_NAME}' \
 -H 'Content-Type: application/json' \
 -d  '{
-   
-        "name": "Create dataflow to Amazon Kinesis/ Azure Event Hubs",
-        "description": "This operation creates a dataflow to Amazon Kinesis/ Azure Event Hubs",
-        "flowSpec": {
-            "id": "{FLOW_SPEC_ID}",
-            "version": "1.0"
+  "name": "Azure Event Hubs",
+  "description": "Azure Event Hubs",
+  "flowSpec": {
+    "id": "{FLOW_SPEC_ID}",
+    "version": "1.0"
+  },
+  "sourceConnectionIds": [
+    "{SOURCE_CONNECTION_ID}"
+  ],
+  "targetConnectionIds": [
+    "{TARGET_CONNECTION_ID}"
+  ],
+  "transformations": [
+    {
+      "name": "GeneralTransform",
+      "params": {
+        "profileSelectors": {
+          "selectors": [
+            
+          ]
         },
-        "sourceConnectionIds": [
-            "{SOURCE_CONNECTION_ID}"
-        ],
-        "targetConnectionIds": [
-            "{TARGET_CONNECTION_ID}"
-        ]
+        "segmentSelectors": {
+          "selectors": [
+            
+          ]
+        }
+      }
     }
+  ]
+}
 ```
 
 * `{FLOW_SPEC_ID}`:프로필 기반 대상에 대한 흐름 사양 ID입니다 `71471eba-b620-49e4-90fd-23f1fa0174d8`. 호출에서 이 값을 사용합니다.
@@ -425,53 +441,29 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'If-Match: "{ETAG}"' \
 --data-raw '[
-    {
-        "op": "add",
-        "path": "/transformations/0/params/segmentSelectors/selectors/-",
-        "value": {
-            "type": "PLATFORM_SEGMENT",
-            "value": {
-                "name": "Name of the segment that you are activating",
-                "description": "Description of the segment that you are activating",
-                "id": "{SEGMENT_ID}"
-            }
-        }
-    },
-        {
-        "op": "add",
-        "path": "/transformations/0/params/segmentSelectors/selectors/-",
-        "value": {
-            "type": "PLATFORM_SEGMENT",
-            "value": {
-                "name": "Name of the segment that you are activating",
-                "description": "Description of the segment that you are activating",
-                "id": "{SEGMENT_ID}"
-            }
-        }
-    },
-        {
-        "op": "add",
-        "path": "/transformations/0/params/profileSelectors/selectors/-",
-        "value": {
-            "type": "JSON_PATH",
-            "value": {
-                "operator": "EXISTS",
-                "path": "{PROFILE_ATTRIBUTE}"
-            }
-        }
-    },
-        },
-        {
-        "op": "add",
-        "path": "/transformations/0/params/profileSelectors/selectors/-",
-        "value": {
-            "type": "JSON_PATH",
-            "value": {
-                "operator": "EXISTS",
-                "path": "{PROFILE_ATTRIBUTE}"
-            }
-        }
+  {
+    "op": "add",
+    "path": "/transformations/0/params/segmentSelectors/selectors/-",
+    "value": {
+      "type": "PLATFORM_SEGMENT",
+      "value": {
+        "name": "Name of the segment that you are activating",
+        "description": "Description of the segment that you are activating",
+        "id": "{SEGMENT_ID}"
+      }
     }
+  },
+  {
+    "op": "add",
+    "path": "/transformations/0/params/profileSelectors/selectors/-",
+    "value": {
+      "type": "JSON_PATH",
+      "value": {
+        "operator": "EXISTS",
+        "path": "{PROFILE_ATTRIBUTE}"
+      }
+    }
+  }
 ]
 ```
 
