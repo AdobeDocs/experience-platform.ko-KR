@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: 이 자습서에서는 플랫폼 사용자 인터페이스를 사용하여 Azure 파일 저장소 원본 커넥터를 인증하는 단계를 제공합니다.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
 workflow-type: tm+mt
-source-wordcount: '480'
+source-wordcount: '475'
 ht-degree: 1%
 
 ---
@@ -26,10 +26,10 @@ Adobe Experience Platform의 소스 커넥터는 예약된 기준으로 외부 �
 
 이 자습서에서는 다음 Adobe Experience Platform 구성 요소에 대해 작업해야 합니다.
 
-- [[!DNL Experience Data Model] (XDM) 시스템](../../../../../xdm/home.md):고객 경험 데이터를 [!DNL Experience Platform] 구성하는 표준화된 프레임워크
+- [[!DNL Experience Data Model (XDM)] 시스템](../../../../../xdm/home.md):고객 경험 데이터를 [!DNL Experience Platform] 구성하는 표준화된 프레임워크
    - [스키마 컴포지션의 기본 사항](../../../../../xdm/schema/composition.md):스키마 컴포지션의 주요 원칙 및 모범 사례 등 XDM 스키마의 기본 구성 요소에 대해 알아봅니다.
    - [스키마 편집기 자습서](../../../../../xdm/tutorials/create-schema-ui.md):스키마 편집기 UI를 사용하여 사용자 정의 스키마를 생성하는 방법을 알아봅니다.
-- [[!DNL 실시간 고객 프로필]](../../../../../profile/home.md):여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
+- [[!DNL Real-time Customer Profile]](../../../../../profile/home.md):여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
 
 이미 유효한 [!DNL Azure File Storage] 연결이 있는 경우 이 문서의 나머지 부분을 건너뛰고 데이터 흐름 [구성 자습서로 진행할 수 있습니다](../../dataflow/batch/cloud-storage.md).
 
