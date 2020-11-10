@@ -5,7 +5,7 @@ title: SQL 구문
 topic: syntax
 description: 이 문서에서는 쿼리 서비스에서 지원하는 SQL 구문을 보여 줍니다.
 translation-type: tm+mt
-source-git-commit: c044194ed22b5e6fcd5e2e2102f3cd4eda45aa84
+source-git-commit: e02028e9808eab3373143aba7bbc4a115c52746b
 workflow-type: tm+mt
 source-wordcount: '2067'
 ht-degree: 1%
@@ -489,13 +489,15 @@ where 'format_name' is be one of:
 이 명령은 테이블에 기본 또는 외래 키 제약 조건을 추가하거나 삭제하는 데 도움이 됩니다.
 
 ```sql
-Alter TABLE table_name ADD ( column_name Primary key Namespace 'namespace')
+Alter TABLE table_name ADD CONSTRAINT Primary key ( column_name )
 
-Alter TABLE table_name ADD ( column_name Foreign key references referenced_table_name Namespace 'namespace')
+Alter TABLE table_name ADD CONSTRAINT Foreign key ( column_name ) references referenced_table_name ( primary_column_name )
 
-Alter TABLE table_name DROP ( column_name Primary key)
+Alter TABLE table_name ADD CONSTRAINT Foreign key ( column_name ) references referenced_table_name Namespace 'namespace'
 
-Alter TABLE table_name DROP ( column_name Foreign key)
+Alter TABLE table_name DROP CONSTRAINT Primary key ( column_name )
+
+Alter TABLE table_name DROP CONSTRAINT  Foreign key ( column_name )
 ```
 
 >[!NOTE]
