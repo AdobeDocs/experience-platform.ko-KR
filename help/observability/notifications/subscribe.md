@@ -5,10 +5,10 @@ title: Adobe I/O 이벤트 알림 구독
 topic: developer guide
 description: 이 문서에서는 Adobe Experience Platform 서비스에 대한 Adobe I/O 이벤트 알림을 구독하는 방법에 대해 설명합니다. 각 응용 프로그램에 대해 반환된 이벤트 데이터를 해석하는 방법에 대한 추가 설명서에 대한 링크와 함께 사용 가능한 이벤트 유형에 대한 참조 정보도 [!DNL Platform] 제공됩니다.
 translation-type: tm+mt
-source-git-commit: c5455dc0812b251483170ac19506d7c60ad4ecaa
+source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
 workflow-type: tm+mt
-source-wordcount: '765'
-ht-degree: 1%
+source-wordcount: '763'
+ht-degree: 2%
 
 ---
 
@@ -62,7 +62,7 @@ Adobe 개발자 [콘솔로](https://www.adobe.com/go/devs_console_ui) 이동하�
 >
 >* [[!DNL Privacy Service] 알림](../../privacy-service/privacy-events.md)
 >* [[!DNL Data Ingestion] 알림](../../ingestion/quality/subscribe-events.md)
->* [[!DNL Flow Service] (소스) 알림](../../sources/notifications.md)
+>* [[!DNL Flow Service (sources)] 알림](../../sources/notifications.md)
 
 
 ![](../images/notifications/choose-event-subscriptions.png)
@@ -99,6 +99,6 @@ Adobe 개발자 [콘솔로](https://www.adobe.com/go/devs_console_ui) 이동하�
 
 * [[!DNL Privacy Service] 알림](../../privacy-service/privacy-events.md)
 * [[!DNL Data Ingestion] 알림](../../ingestion/quality/subscribe-events.md)
-* [[!DNL Flow Service] (소스) 알림](../../sources/notifications.md)
+* [[!DNL Flow Service (sources)] 알림](../../sources/notifications.md)
 
 및 [[!DNL Observability Insights] 에서 활동을 모니터하는 방법에 대한 자세한 내용은](../home.md) 개요를 [!DNL Experience Platform] 참조하십시오 [!DNL Privacy Service].
