@@ -5,9 +5,9 @@ title: 일괄 처리 통합 개발자 가이드
 topic: developer guide
 description: 이 문서에서는 일괄 처리 통합 API를 사용하는 방법에 대한 포괄적인 개요를 제공합니다.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
 workflow-type: tm+mt
-source-wordcount: '2678'
+source-wordcount: '2675'
 ht-degree: 5%
 
 ---
@@ -28,8 +28,8 @@ ht-degree: 5%
 이 가이드는 Adobe Experience Platform의 다음 구성 요소에 대한 작업 이해를 필요로 합니다.
 
 - [일괄 처리](./overview.md):데이터를 Adobe Experience Platform에 일괄 파일로 인제스트할 수 있습니다.
-- [[!DNL Experience Data Model] (XDM) 시스템](../../xdm/home.md):고객 경험 데이터를 [!DNL Experience Platform] 구성하는 표준화된 프레임워크
-- [[!DNL 샌드박스]](../../sandboxes/home.md): [!DNL Experience Platform] 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되도록 단일 [!DNL Platform] 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
+- [[!DNL Experience Data Model (XDM)] 시스템](../../xdm/home.md):고객 경험 데이터를 [!DNL Experience Platform] 구성하는 표준화된 프레임워크
+- [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되도록 단일 [!DNL Platform] 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
 
 ### 샘플 API 호출 읽기
 
