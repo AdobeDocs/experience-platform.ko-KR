@@ -5,9 +5,9 @@ title: 데이터 사용 레이블 개요
 topic: labels
 description: Adobe Experience Platform 데이터 거버넌스를 사용하면 데이터 세트 및 필드에 데이터 사용 레이블을 적용하여 관련 데이터 사용 정책에 따라 각 데이터를 분류할 수 있습니다. 이 문서에서는 Experience Platform의 데이터 사용 레이블에 대한 개요를 제공합니다.
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
 workflow-type: tm+mt
-source-wordcount: '614'
+source-wordcount: '616'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ Adobe에서 제공하는 레이블 외에도 조직의 사용자 지정 레이�
 
 ## 대상 세그먼트에 대한 레이블 상속
 
-Adobe Experience Platform [세그멘테이션 서비스에서](../../segmentation/home.md) 만든 모든 대상 세그먼트는 해당 데이터 세트에 대한 사용 레이블을 상속합니다. 이를 통해 [!DNL Experience Platform] (예: [!DNL Real-time Customer Data Platform]) 위에 구축된 애플리케이션에서 세그먼트를 대상에 활성화할 때 데이터 사용 정책 적용을 자동으로 수행할 수 있습니다.
+Adobe Experience Platform [세그멘테이션 서비스에서](../../segmentation/home.md) 만든 모든 대상 세그먼트는 해당 데이터 세트에 대한 사용 레이블을 상속합니다. 이를 통해 Experience Platform(예:)를 기반으로 구축된 애플리케이션에서 세그먼트를 대상에 활성화할 때 자동 데이터 사용 정책 적용 [!DNL Real-time Customer Data Platform]을 제공할 수 있습니다.
 
 데이터 세트 수준 레이블을 상속하는 것 외에도 세그먼트는 기본적으로 연결된 데이터 세트에서 모든 필드 수준 레이블을 상속받습니다. 기반 애플리케이션에서 세그먼트를 사용하는 방법에 따라, 사용할 필드를 잠재적으로 지정하여 세그먼트가 제외된 필드에서 레이블을 상속할 수 없게 할 수 있습니다. [!DNL Platform]
 
