@@ -5,7 +5,7 @@ title: Spark SQL 함수
 topic: spark sql functions
 description: 이 설명서에는 SQL 기능을 확장하는 내장 Spark SQL 기능을 제공하는 Spark SQL 도움말에 대한 정보가 포함되어 있습니다.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: d0fa57effb45fad6934345323366ef45383bed01
 workflow-type: tm+mt
 source-wordcount: '5009'
 ht-degree: 5%
@@ -2813,7 +2813,7 @@ SQL [!DNL Spark] 도움말은 SQL 기능을 확장하는 내장 [!DNL Spark] SQL
 인수:
 - `start`:표현. 범위의 시작
 - `stop`:표현. 범위(포함)의 끝입니다.
-- `step`:선택적 표현식입니다. 범위의 단계입니다. 기본값 `step` 은 1( `start` 보다 작거나 같음) `stop`, 그렇지 않으면 -1입니다. 임시 시퀀스의 경우 각각 1일과 1일입니다. 보다 `start` 큰 경우 `stop`음수여야 `step` 하며, 그 반대도 음수여야 합니다.
+- `step`:선택적 표현식입니다. 범위의 단계입니다. 기본값 `step` 은 &#39;1&#39;이고 `start` 는 &#39;1&#39;이고, 그렇지 않으면 &#39; `stop`1&#39;입니다. 임시 시퀀스의 경우 각각 &#39;1&#39;일과 &#39;-1&#39;일입니다. 보다 `start` 큰 경우 `stop`음수여야 `step` 하며, 그 반대도 음수여야 합니다.
 
 예
 
@@ -2822,7 +2822,7 @@ SQL [!DNL Spark] 도움말은 SQL 기능을 확장하는 내장 [!DNL Spark] SQL
  [1,2,3,4,5]
 > SELECT sequence(5, 1);
  [5,4,3,2,1]
-> SELECT sequence(to_date('2018-01-01'), to_date('2018-03-01'), interval 1 month);
+> SELECT sequence(to_date('2018-01-01'), to_date('2018-03-01'), interval '1' month);
  [2018-01-01,2018-02-01,2018-03-01]
 ```
 
