@@ -4,9 +4,9 @@ title: 실시간 고객 프로필 UI 가이드
 topic: guide
 description: Adobe Experience Platform 사용자 인터페이스(UI)에서는 조직 내의 모든 조합 스키마를 쉽게 확인하고 특정 클래스에 대한 필드, ID, 관계 및 기여 스키마를 미리 볼 수 있습니다. 이 안내서에서는 플랫폼 UI를 사용하여 조합 스키마를 보고 검색하는 방법에 대한 자세한 정보를 제공합니다.
 translation-type: tm+mt
-source-git-commit: e1fc20a5f791f7628a19c5440db3741c8be3743a
+source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
 workflow-type: tm+mt
-source-wordcount: '1023'
+source-wordcount: '1022'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Adobe Experience Platform 사용자 인터페이스(UI)에서는 조직 내의 �
 
 * [[!DNL Real-time Customer Profile]](../home.md):여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
 * [[!DNL Identity Service]](../../identity-service/home.md):데이터 소스 [!DNL Real-time Customer Profile] 를 인제스트할 때 서로 다른 데이터 소스의 ID를 결합함으로써 사용할 수 있습니다 [!DNL Platform].
-* [[!DNL Experience Data Model] (XDM)](../../xdm/home.md):고객 경험 데이터를 [!DNL Platform] 구성하는 표준화된 프레임워크
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):고객 경험 데이터를 [!DNL Platform] 구성하는 표준화된 프레임워크
 
 ## 조합 스키마 이해
 
