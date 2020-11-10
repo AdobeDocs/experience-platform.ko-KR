@@ -6,9 +6,9 @@ title: UI에서 Adobe Analytics 분류 데이터 커넥터 만들기
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
 workflow-type: tm+mt
-source-wordcount: '661'
+source-wordcount: '654'
 ht-degree: 2%
 
 ---
@@ -22,9 +22,9 @@ ht-degree: 2%
 
 이 자습서에서는 다음 Adobe Experience Platform 구성 요소에 대해 작업해야 합니다.
 
-* [[!DNL Experience Data Model] (XDM) 시스템](../../../../../xdm/home.md):Experience Platform이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
-* [[!DNL 실시간 고객 프로필]](../../../../../profile/home.md):여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
-* [[!DNL 샌드박스]](../../../../../sandboxes/home.md):Experience Platform은 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되도록 단일 플랫폼 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
+* [[!DNL Experience Data Model (XDM)] 시스템](../../../../../xdm/home.md):Experience Platform이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
+* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md):여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
+* [[!DNL Sandboxes]](../../../../../sandboxes/home.md):Experience Platform은 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되도록 단일 플랫폼 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
 
 Analytics 분류 데이터 커넥터를 사용하려면 데이터를 사용하기 전에 Adobe Analytics의 새로운 [!DNL Classifications] 인프라로 마이그레이션해야 합니다. 데이터의 마이그레이션 상태를 확인하려면 Adobe 고객 성공 관리자에게 문의하십시오.
 
