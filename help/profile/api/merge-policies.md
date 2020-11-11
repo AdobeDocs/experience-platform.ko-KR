@@ -3,9 +3,9 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: 정책 병합 - 실시간 고객 프로필 API
 topic: guide
 translation-type: tm+mt
-source-git-commit: 47c65ef5bdd083c2e57254189bb4a1f1d9c23ccc
+source-git-commit: 6bfc256b50542e88e28f8a0c40cec7a109a05aa6
 workflow-type: tm+mt
-source-wordcount: '2458'
+source-wordcount: '2494'
 ht-degree: 1%
 
 ---
@@ -27,7 +27,13 @@ UI를 사용하여 병합 정책을 사용하려면 [병합 정책 사용 안내
 
 ## 병합 정책의 구성 요소 {#components-of-merge-policies}
 
-병합 정책은 IMS 조직에 대한 개인 정책이므로 필요한 특정 방식으로 스키마를 병합하기 위해 다른 정책을 만들 수 있습니다. 데이터에 액세스하는 모든 API는 병합 정책을 필요로 하지만, 기본값이 명시적으로 제공되지 않으면 사용됩니다. [!DNL Profile] [!DNL Platform] 기본 병합 정책을 제공하거나 특정 스키마에 대한 병합 정책을 만들어 조직의 기본값으로 표시할 수 있습니다. 각 조직에는 스키마당 여러 개의 병합 정책이 있을 수 있지만 각 스키마에는 하나의 기본 병합 정책만 있을 수 있습니다. 기본적으로 설정된 병합 정책은 스키마 이름을 제공하고 병합 정책이 필요하지만 제공되지 않는 경우에 사용됩니다. 병합 정책을 기본값으로 설정하면 이전에 기본값으로 설정된 기존 병합 정책이 더 이상 기본값으로 사용되지 않도록 자동으로 업데이트됩니다.
+병합 정책은 IMS 조직에 대한 개인 정책이므로 필요한 특정 방식으로 스키마를 병합하기 위해 다른 정책을 만들 수 있습니다. 데이터에 액세스하는 모든 API는 병합 정책을 필요로 하지만, 기본값이 명시적으로 제공되지 않으면 사용됩니다. [!DNL Profile] [!DNL Platform] 조직에 기본 병합 정책을 제공하거나 특정 XDM(Experience Data Model) 스키마 클래스에 대한 병합 정책을 만들어 조직의 기본값으로 표시할 수 있습니다.
+
+각 조직에는 스키마 클래스당 여러 개의 병합 정책이 있을 수 있지만 각 클래스에는 하나의 기본 병합 정책만 있을 수 있습니다. 스키마 클래스의 이름이 제공되고 병합 정책이 필요하지만 제공되지 않는 경우 기본값으로 설정된 병합 정책이 사용됩니다.
+
+>[!NOTE]
+>
+>새 병합 정책을 기본값으로 설정하면 이전에 기본값으로 설정된 기존 병합 정책이 더 이상 기본값으로 사용되지 않도록 자동으로 업데이트됩니다.
 
 ### 전체 병합 정책 개체
 
@@ -41,7 +47,7 @@ UI를 사용하여 병합 정책을 사용하려면 [병합 정책 사용 안내
         "name": "{NAME}",
         "imsOrgId": "{IMS_ORG}",
         "schema": {
-            "name": "{SCHEMA_NAME}"
+            "name": "{SCHEMA_CLASS_NAME}"
         },
         "version": 1,
         "identityGraph": {
@@ -62,7 +68,7 @@ UI를 사용하여 병합 정책을 사용하려면 [병합 정책 사용 안내
 | `imsOrgId` | 이 병합 정책이 속하는 조직 ID |
 | `identityGraph` | [관련 ID를 얻을 ID 그래프를 나타내는 ID 그래프](#identity-graph) 개체 모든 관련 ID에 대해 찾은 프로필 조각이 병합됩니다. |
 | `attributeMerge` | [데이터 충돌 시 병합 정책이 프로필 속성의 우선 순위를 지정하는 방법을 나타내는 속성 병합](#attribute-merge) 개체입니다. |
-| `schema` | 병합 정책을 사용할 수 있는 [스키마](#schema) 개체입니다. |
+| `schema.name` | 개체 [`schema`](#schema) 의 일부, `name` 필드에는 병합 정책이 관련된 XDM 스키마 클래스가 들어 있습니다. 스키마 및 클래스에 대한 자세한 내용은 [XDM 설명서를 참조하십시오](../../xdm/home.md). |
 | `default` | 이 병합 정책이 지정된 스키마의 기본값인지 여부를 나타내는 부울 값입니다. |
 | `version` | [!DNL Platform] 병합 정책을 유지 관리합니다. 이 읽기 전용 값은 병합 정책이 업데이트될 때마다 증가합니다. |
 | `updateEpoch` | 병합 정책에 대한 마지막 업데이트 날짜 |
@@ -132,7 +138,7 @@ UI를 사용하여 병합 정책을 사용하려면 [병합 정책 사용 안내
 * **`dataSetPrecedence`** :프로필 조각을 원래 있던 데이터 세트에 따라 우선 순위를 지정합니다. 한 데이터 세트에 있는 정보가 다른 데이터 세트에 있는 데이터를 통해 선호되거나 신뢰할 수 있는 경우 이 기능을 사용할 수 있습니다. 이 병합 유형을 사용하는 경우 우선 순위 순서로 데이터 세트를 나열하므로 `order` 속성이 필요합니다.
    * **`order`**:&quot;dataSetPriority&quot;를 사용하는 경우 데이터 집합 목록과 함께 `order` 배열을 제공해야 합니다. 목록에 포함되지 않은 데이터 세트는 병합되지 않습니다. 즉, 데이터 세트를 명시적으로 나열하여 프로필로 병합해야 합니다. 이 `order` 배열에는 데이터 집합의 ID가 우선 순위 순서로 나열됩니다.
 
-**유형을 사용하는 attributeMerge 개체의 `dataSetPrecedence` 예**
+#### 유형을 사용하는 `attributeMerge` 예제 `dataSetPrecedence` 개체
 
 ```json
     "attributeMerge": {
@@ -146,7 +152,7 @@ UI를 사용하여 병합 정책을 사용하려면 [병합 정책 사용 안내
     }
 ```
 
-**유형을 사용하는 attributeMerge 개체의 `timestampOrdered` 예**
+#### 유형을 사용하는 `attributeMerge` 예제 `timestampOrdered` 개체
 
 ```json
     "attributeMerge": {
@@ -156,7 +162,7 @@ UI를 사용하여 병합 정책을 사용하려면 [병합 정책 사용 안내
 
 ### 스키마 {#schema}
 
-스키마 개체는 이 병합 정책을 만드는 XDM(Experience Data Model) 스키마를 지정합니다.
+스키마 개체는 이 병합 정책을 만드는 XDM(Experience Data Model) 스키마 클래스를 지정합니다.
 
 **`schema`개체**
 
@@ -731,7 +737,7 @@ curl -X DELETE \
 
 ## 다음 단계
 
-이제 IMS 조직에 대한 병합 정책을 만들고 구성하는 방법을 알고 있으므로 이러한 정책을 사용하여 [!DNL Real-time Customer Profile] 데이터에서 대상 세그먼트를 만들 수 있습니다. 세그먼트 정의 및 작업을 시작하려면 [Adobe Experience Platform 세그멘테이션 서비스 설명서를](../../segmentation/home.md) 참조하십시오.
+조직의 병합 정책을 만들고 구성하는 방법을 알고 있으므로 이러한 정책을 사용하여 플랫폼 내에서 고객 프로필 보기를 조정하고 데이터를 통해 고객 세그먼트를 만들 수 [!DNL Real-time Customer Profile] 있습니다. 세그먼트 정의 및 작업을 시작하려면 [Adobe Experience Platform 세그멘테이션 서비스 설명서를](../../segmentation/home.md) 참조하십시오.
 
 ## 부록
 
