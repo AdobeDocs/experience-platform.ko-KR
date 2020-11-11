@@ -5,9 +5,9 @@ user-guide-title: Adobe Experience Platform 소스 커넥터 도움말
 breadcrumb-title: Source Connectors 안내서
 user-guide-description: 다양한 소스 또는 구조에서 데이터를 수집하고 레이블을 지정하며 기존에 수집한 데이터를 향상시킬 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 26d117726a59dea0c08cf6ca5a13bf54951f7f44
+source-git-commit: 9e005b0b225e8a643a080fb3d4b014d981748973
 workflow-type: tm+mt
-source-wordcount: '654'
+source-wordcount: '676'
 ht-degree: 4%
 
 ---
@@ -62,6 +62,8 @@ ht-degree: 4%
       - [Oracle 커넥터](connectors/databases/oracle.md)
       - [Phoenix 커넥터](connectors/databases/phoenix.md)
       - [PostgreSQL 커넥터](connectors/databases/postgres.md)
+   - eCommerce {#ecommerce}
+      - [Shopify 커넥터](connectors/ecommerce/shopify.md)
    - 마케팅 자동화 {#marketing-automation}
       - [HubSpot 커넥터](connectors/marketing-automation/hubspot.md)
    - 결제 {#payments}
@@ -106,6 +108,8 @@ ht-degree: 4%
          - [Phoenix 커넥터](tutorials/api/create/databases/phoenix.md)
          - [PostgreSQL 커넥터](tutorials/api/create/databases/postgres.md)
          - [SQL Server 커넥터](tutorials/api/create/databases/sql-server.md)
+      - eCommerce {#ecommerce}
+         - [Shopify 커넥터](tutorials/api/create/ecommerce/shopify.md)
       - 마케팅 자동화 {#marketing-automation}
          - [HubSpot 커넥터](tutorials/api/create/marketing-automation/hubspot.md)
       - 결제 {#payments}
@@ -118,6 +122,7 @@ ht-degree: 4%
       - [CRM 데이터 살펴보기](tutorials/api/explore/crm.md)
       - [고객 성공 데이터 살펴보기](tutorials/api/explore/customer-success.md)
       - [데이터베이스 또는 NoSQL 데이터 살펴보기](tutorials/api/explore/database-nosql.md)
+      - [e커머스 데이터 살펴보기](tutorials/api/explore/ecommerce.md)
       - [마케팅 자동화 데이터 살펴보기](tutorials/api/explore/marketing-automation.md)
       - [결제 데이터 살펴보기](tutorials/api/explore/payments.md)
       - [프로토콜 데이터 탐색](tutorials/api/explore/protocols.md)
@@ -127,6 +132,7 @@ ht-degree: 4%
       - [CRM 데이터 수집](tutorials/api/collect/crm.md)
       - [고객 성공 데이터 수집](tutorials/api/collect/customer-success.md)
       - [데이터베이스 또는 NoSQL 데이터 수집](tutorials/api/collect/database-nosql.md)
+      - [전자 상거래 데이터 수집](tutorials/api/collect/ecommerce.md)
       - [마케팅 자동화 데이터 수집](tutorials/api/collect/marketing-automation.md)
       - [결제 데이터 수집](tutorials/api/collect/payments.md)
       - [프로토콜 데이터 수집](tutorials/api/collect/protocols.md)
@@ -178,6 +184,8 @@ ht-degree: 4%
          - [Oracle 커넥터](tutorials/ui/create/databases/oracle.md)
          - [Phoenix 커넥터](tutorials/ui/create/databases/phoenix.md)
          - [PostgreSQL 커넥터](tutorials/ui/create/databases/postgres.md)
+      - eCommerce {#ecommerce}
+         - [Shopify 커넥터](tutorials/ui/create/ecommerce/shopify.md)
       - 마케팅 자동화 {#marketing-automation}
          - [HubSpot 커넥터](tutorials/ui/create/marketing-automation/hubspot.md)
       - 결제 {#payments}
@@ -188,9 +196,10 @@ ht-degree: 4%
       - [광고 커넥터에 대한 데이터 흐름 구성](tutorials/ui/dataflow/advertising.md)
       - [일괄 처리 클라우드 스토리지 커넥터에 대한 데이터 흐름 구성](tutorials/ui/dataflow/batch/cloud-storage.md)
       - [스트리밍 클라우드 스토리지 커넥터에 대한 데이터 흐름 구성](tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
-      - [데이터베이스 커넥터에 대한 데이터 흐름 구성](tutorials/ui/dataflow/databases.md)
       - [CRM 커넥터에 대한 데이터 흐름 구성](tutorials/ui/dataflow/crm.md)
       - [고객 성공 커넥터에 대한 데이터 흐름 구성](tutorials/ui/dataflow/customer-success.md)
+      - [데이터베이스 커넥터에 대한 데이터 흐름 구성](tutorials/ui/dataflow/databases.md)
+      - [eCommerce 커넥터에 대한 데이터 흐름 구성](tutorials/ui/dataflow/ecommerce.md)
       - [마케팅 자동화 커넥터에 대한 데이터 흐름 구성](tutorials/ui/dataflow/marketing-automation.md)
       - [결제 커넥터에 대한 데이터 흐름 구성](tutorials/ui/dataflow/payments.md)
       - [프로토콜 커넥터에 대한 데이터 흐름 구성](tutorials/ui/dataflow/protocols.md)
