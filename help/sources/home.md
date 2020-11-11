@@ -5,9 +5,9 @@ title: Adobe Experience Platform 소스 커넥터 개요
 topic: overview
 description: Adobe Experience Platform은 플랫폼 서비스를 사용하여 들어오는 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 외부 소스에서 데이터를 수집할 수 있도록 허용합니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 등 다양한 소스의 데이터를 인제스트할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
+source-git-commit: d26eaf699a67a1bc7111f5f97da277368fcc4629
 workflow-type: tm+mt
-source-wordcount: '866'
+source-wordcount: '886'
 ht-degree: 0%
 
 ---
@@ -91,6 +91,12 @@ CRM 시스템은 고객과의 관계를 구축하는 데 도움이 되는 데이
 - [[!DNL Oracle] 커넥터](connectors/databases/oracle.md)
 - [[!DNL Phoenix] 커넥터](connectors/databases/phoenix.md)
 - [[!DNL PostgreSQL] 커넥터](connectors/databases/postgres.md)
+
+### eCommerce
+
+[!DNL Experience Platform] 타사 e커머스 시스템에서 데이터 인제스트를 지원합니다. 특정 소스 커넥터에 대한 자세한 내용은 다음 관련 문서를 참조하십시오.
+
+- [[!DNL Shopify]](connectors/ecommerce/shopify.md)
 
 ### 마케팅 자동화
 
