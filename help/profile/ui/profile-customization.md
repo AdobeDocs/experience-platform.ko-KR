@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
+keywords: Experience Platform;profile;real-time customer profile;user interface;UI;customization;profile details;details
 title: 프로필 세부 정보 맞춤화
 description: '이 안내서에서는 Adobe Experience Platform UI 내에 실시간 고객 프로필 데이터가 표시되는 방식을 사용자 지정하기 위한 단계별 지침을 제공합니다. '
 topic: guide
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 9068d12e60da63a6a2a2ff18c016080ea581104f
 workflow-type: tm+mt
 source-wordcount: '1167'
 ht-degree: 0%
