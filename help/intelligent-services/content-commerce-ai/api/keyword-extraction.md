@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;getting started;content ai;commerce ai;content and commerce ai;keyword extraction;Keyword extraction
 solution: Experience Platform
-title: 색상 추출
+title: 키워드 추출
 topic: Developer guide
 description: 키워드 추출 서비스는 텍스트 문서에서 문서의 제목을 가장 잘 설명하는 키워드 또는 키구문을 자동으로 추출합니다. 키워드를 추출하기 위해 NER(명명된 엔티티 인식) 및 비감독 키워드 추출 알고리즘의 조합이 사용됩니다.
 translation-type: tm+mt
-source-git-commit: eb92a7d57b1ef0ca19bc2d175ad1b2014ac1a8b0
+source-git-commit: e397711baf31092402de83b826887ebef16321eb
 workflow-type: tm+mt
 source-wordcount: '1059'
 ht-degree: 3%
