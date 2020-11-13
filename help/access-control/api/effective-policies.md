@@ -5,7 +5,7 @@ title: 효과적인 정책 보기
 topic: developer guide
 description: Adobe Experience Platform의 액세스 제어를 통해 Adobe Admin Console을 사용하여 다양한 플랫폼 기능에 대한 역할 및 권한을 관리할 수 있습니다. 이 문서는 Adobe Experience Platform용 액세스 제어 API를 사용하여 효과적인 정책을 보는 방법에 대한 지침으로 제공됩니다.
 translation-type: tm+mt
-source-git-commit: 481f093e52c8533d2919504051af9e63704a0f4a
+source-git-commit: 8967a820ab19bceb2be69f37e3399ed99f0b8e72
 workflow-type: tm+mt
 source-wordcount: '309'
 ht-degree: 1%
@@ -95,8 +95,6 @@ permissions/manage-privacy-workflows
 permissions/manage-profile-configs
 permissions/manage-profiles
 permissions/manage-queries
-permissions/manage-schema-identities
-permissions/manage-schema-relationships
 permissions/manage-schemas
 permissions/manage-segments
 permissions/manage-sources
