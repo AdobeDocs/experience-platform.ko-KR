@@ -5,9 +5,9 @@ audience: user
 user-guide-title: 실시간 고객 데이터 플랫폼 안내서
 user-guide-description: 여러 엔터프라이즈 소스에서 알려진 데이터와 익명의 데이터를 결합하여 고객 프로필을 생성하고, 이러한 프로필에서 고객 세그먼트를 생성하며, 이러한 세그먼트를 제3자 대상으로 활성화할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 097fe219e0d64090de758f388ba98e6024db2201
+source-git-commit: 77b1ffdd20cbc4e1645688da83769277f6729091
 workflow-type: tm+mt
-source-wordcount: '507'
+source-wordcount: '510'
 ht-degree: 17%
 
 ---
@@ -56,6 +56,7 @@ ht-degree: 17%
          * [Google 태그 확장](/help/rtcdp/destinations/gtag-advertising-extension.md)
          * [LinkedIn Insight 태그 확장](/help/rtcdp/destinations/linkedin-extension.md)
          * [Pinterest 전환 추적 확장](destinations/pinterest-extension.md)
+         * [트레이드데스크](/help/rtcdp/destinations/tradedesk-destination.md)
          * [Twitter 범용 웹 사이트 태그 확장](destinations/twitter-uwt-extension.md)
       * 분석 대상 {#analytics-destinations}
          * [분석 대상 개요](destinations/analytics-destinations.md)
