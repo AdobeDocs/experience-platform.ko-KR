@@ -5,9 +5,9 @@ seo-title: 광고 대상
 description: '실시간 고객 데이터 플랫폼을 타사 광고 플랫폼(예: DSP, 광고 네트워크, SSP)에 연결하고 익명의 사용자를 이러한 플랫폼에 공유할 수 있습니다.'
 seo-description: '실시간 고객 데이터 플랫폼을 타사 광고 플랫폼(예: DSP, 광고 네트워크, SSP)에 연결하고 익명의 사용자를 이러한 플랫폼에 공유할 수 있습니다.'
 translation-type: tm+mt
-source-git-commit: 77b1ffdd20cbc4e1645688da83769277f6729091
+source-git-commit: d20b558a6f4518be74cd5969c50a5db310370c08
 workflow-type: tm+mt
-source-wordcount: '222'
+source-wordcount: '219'
 ht-degree: 2%
 
 ---
@@ -30,7 +30,6 @@ ht-degree: 2%
 * [Google 광고](/help/rtcdp/destinations/google-ads-destination.md)
 * [Google 광고 관리자](/help/rtcdp/destinations/google-ad-manager-destination.md)
 * [Google Customer Match](/help/rtcdp/destinations/google-customer-match-destination.md)
-* [트레이드데스크](/help/rtcdp/destinations/tradedesk-destination.md)
 
 
 ## 확장
