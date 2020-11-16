@@ -5,9 +5,9 @@ seo-title: 더 트레이드데스크
 description: '트레이드데스크(Trade Desk)는 광고 구매자가 디스플레이, 비디오 및 모바일 인벤토리 소스에서 타겟팅된 디지털 캠페인을 리타겟팅하고 실행할 수 있는 셀프 서비스 플랫폼입니다. '
 seo-description: 트레이드데스크(Trade Desk)는 광고 구매자가 디스플레이, 비디오 및 모바일 인벤토리 소스에서 타겟팅된 디지털 캠페인을 리타겟팅하고 실행할 수 있는 셀프 서비스 플랫폼입니다.
 translation-type: tm+mt
-source-git-commit: c9fb63b390d4c7dddcdb35a85710ff664614ad63
+source-git-commit: 43795e31f4e39dcabeaf6d69529e80cabe9c90c5
 workflow-type: tm+mt
-source-wordcount: '575'
+source-wordcount: '577'
 ht-degree: 1%
 
 ---
@@ -46,10 +46,10 @@ ht-degree: 1%
    >[!NOTE]
    >
    >이 대상과의 연결이 이미 있는 경우 대상 카드에 **[!UICONTROL 활성화]** 단추가 표시됩니다. 활성화 및 구성 **[!UICONTROL 의 차이에 대한 자세한]****[!UICONTROL 내용은 대상 작업 공간 설명서의]**&#x200B;카탈로그 [섹션을](../destinations/destinations-workspace.md#catalog) 참조하십시오.
-   >
-   >![무역부 대상 활성화](assets/tradedesk-destination-activate.png)
 
-1. 인증 [!UICONTROL 단계에서] 연결 [!DNL The Trade Desk] 세부 사항을 입력해야 합니다.
+       ![무역센터 대상 활성화](assets/tradedesk-destination-activate.png)
+   
+2. 인증 [!UICONTROL 단계에서] 연결 [!DNL The Trade Desk] 세부 사항을 입력해야 합니다.
 
    * **[!UICONTROL 이름]**:나중에 이 대상을 인식하는 이름입니다.
    * **[!UICONTROL 설명]**:나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
@@ -67,13 +67,13 @@ ht-degree: 1%
 
    ![Trade Desk Authentication Step](assets/tradedesk-destination-authentication.png)
 
-1. 대상 **[!UICONTROL 만들기를 클릭합니다]**. 이제 대상이 만들어집니다. 나중에 세그먼트를 [!UICONTROL 활성화하려면 저장] 및 종료를 [!UICONTROL 클릭하거나] 다음을 선택하여 워크플로우를 계속하고 활성화할 세그먼트를 선택할 수 있습니다. 두 경우 모두 워크플로우의 나머지 [에 대해 다음 섹션, 세그먼트](#activate-segments)활성화를 참조하십시오.
+3. 대상 **[!UICONTROL 만들기를 클릭합니다]**. 이제 대상이 만들어집니다. 나중에 세그먼트를 [!UICONTROL 활성화하려면 저장] 및 종료를 [!UICONTROL 클릭하거나] 다음을 선택하여 워크플로우를 계속하고 활성화할 세그먼트를 선택할 수 있습니다. 두 경우 모두 워크플로우의 나머지 [에 대해 다음 섹션, 세그먼트](#activate-segments)활성화를 참조하십시오.
 
 ## 세그먼트 활성화 {#activate-segments}
 
 세그먼트 [활성화 워크플로에 대한 자세한 내용은 대상에](activate-destinations.md#select-attributes) 프로필 및 세그먼트 활성화를 참조하십시오.
 
-세그먼트 [예약](activate-destinations.md#segment-schedule) 단계 동안 세그먼트를 대상의 해당 ID 또는 친숙한 이름에 수동으로 매핑해야 합니다.
+세그먼트 [예약](activate-destinations.md#segment-schedule) 단계에서 세그먼트를 대상의 해당 ID 또는 친숙한 이름에 수동으로 매핑해야 합니다.
 
 세그먼트를 매핑하는 경우 쉽게 사용할 수 있도록 세그먼트 [!DNL Platform] 이름 또는 더 짧은 형식을 사용하는 것이 좋습니다. 그러나 대상의 세그먼트 ID 또는 이름은 [!DNL Platform] 계정의 세그먼트 ID와 일치하지 않아도 됩니다. 매핑 필드에 삽입한 모든 값은 대상에 의해 반영됩니다.
 
