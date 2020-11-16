@@ -5,9 +5,9 @@ seo-title: 더 트레이드데스크
 description: '트레이드데스크(Trade Desk)는 광고 구매자가 디스플레이, 비디오 및 모바일 인벤토리 소스에서 타겟팅된 디지털 캠페인을 리타겟팅하고 실행할 수 있는 셀프 서비스 플랫폼입니다. '
 seo-description: 트레이드데스크(Trade Desk)는 광고 구매자가 디스플레이, 비디오 및 모바일 인벤토리 소스에서 타겟팅된 디지털 캠페인을 리타겟팅하고 실행할 수 있는 셀프 서비스 플랫폼입니다.
 translation-type: tm+mt
-source-git-commit: 43795e31f4e39dcabeaf6d69529e80cabe9c90c5
+source-git-commit: a64f9f1f078d8380cc25c9760eac1699512a5870
 workflow-type: tm+mt
-source-wordcount: '577'
+source-wordcount: '575'
 ht-degree: 1%
 
 ---
@@ -46,9 +46,9 @@ ht-degree: 1%
    >[!NOTE]
    >
    >이 대상과의 연결이 이미 있는 경우 대상 카드에 **[!UICONTROL 활성화]** 단추가 표시됩니다. 활성화 및 구성 **[!UICONTROL 의 차이에 대한 자세한]****[!UICONTROL 내용은 대상 작업 공간 설명서의]**&#x200B;카탈로그 [섹션을](../destinations/destinations-workspace.md#catalog) 참조하십시오.
+   >
+   >![무역부 대상 활성화](assets/tradedesk-destination-activate.png)
 
-       ![무역센터 대상 활성화](assets/tradedesk-destination-activate.png)
-   
 2. 인증 [!UICONTROL 단계에서] 연결 [!DNL The Trade Desk] 세부 사항을 입력해야 합니다.
 
    * **[!UICONTROL 이름]**:나중에 이 대상을 인식하는 이름입니다.
