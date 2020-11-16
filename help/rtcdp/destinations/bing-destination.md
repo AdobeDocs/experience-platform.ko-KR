@@ -5,7 +5,7 @@ seo-title: Microsoft Bing 대상은 프로필 데이터를 Microsoft 디스플�
 description: Microsoft Bing 대상을 사용하면 Microsoft 디스플레이 광고 전체에 걸쳐 리타겟팅 및 대상 타깃팅된 디지털 캠페인을 실행할 수 있습니다.
 seo-description: Microsoft Bing 대상을 사용하면 Microsoft 디스플레이 광고 전체에 걸쳐 리타겟팅 및 대상 타깃팅된 디지털 캠페인을 실행할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 43795e31f4e39dcabeaf6d69529e80cabe9c90c5
+source-git-commit: a64f9f1f078d8380cc25c9760eac1699512a5870
 workflow-type: tm+mt
 source-wordcount: '489'
 ht-degree: 0%
@@ -50,8 +50,8 @@ ht-degree: 0%
    >[!NOTE]
    >
    >이 대상과의 연결이 이미 있는 경우 대상 카드에 **[!UICONTROL 활성화]** 단추가 표시됩니다. 활성화 및 구성 **[!UICONTROL 의 차이에 대한 자세한]****[!UICONTROL 내용은 대상 작업 공간 설명서의]**&#x200B;카탈로그 [섹션을](../destinations/destinations-workspace.md#catalog) 참조하십시오.
-
-   ![Microsoft Bing 대상 활성화](assets/bing-destination-activate.png)
+   >
+   >![Microsoft Bing 대상 활성화](assets/bing-destination-activate.png)
 
 1. 인증 [!UICONTROL 단계에서 대상] 연결 세부 사항을 입력해야 합니다.
 
