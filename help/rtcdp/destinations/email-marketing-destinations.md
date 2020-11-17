@@ -6,9 +6,9 @@ type: Tutorial
 description: ESP(Email Service Providers)를 사용하면 이메일 캠페인 전송과 같은 이메일 마케팅 활동을 관리할 수 있습니다.
 seo-description: ESP(Email Service Providers)를 사용하면 이메일 캠페인 전송과 같은 이메일 마케팅 활동을 관리할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 5238d98db0554d34c2b0bcd28b64354f544faa0f
+source-git-commit: 42b694c532f140b51913ba5ceb0aaeacc2263039
 workflow-type: tm+mt
-source-wordcount: '803'
+source-wordcount: '835'
 ht-degree: 1%
 
 ---
@@ -35,6 +35,8 @@ ESP(Email Service Providers)를 사용하면 프로모션 이메일 캠페인 �
 - **S3 연결의**&#x200B;경우 Amazon 액세스 키 ID와 비밀 액세스 키를 제공해야 합니다.
 - 암호 **가** 연결된 SFTP의 경우 SFTP 서버의 도메인, 포트, 사용자 이름 및 암호를 제공해야 합니다.
 - SSH 키 **** 연결이 있는 SFTP의 경우 SFTP 서버에 대한 도메인, 포트, 사용자 이름 및 SSH 키를 제공해야 합니다.
+
+선택적으로 RSA 형식 공개 키를 연결하여 **[!UICONTROL 키]** 섹션 아래에 내보낸 파일에 암호화를 추가할 수 있습니다. 이 공개 키는 Base64 인코딩 문자열로 **작성해야** 합니다.
 
 [ **[!UICONTROL 설정]** ] 단계에서 새 대상에 대한 이름 및 설명과 내보낸 파일의 파일 형식을 입력합니다.
 
@@ -93,7 +95,7 @@ ESP(Email Service Providers)를 사용하면 프로모션 이메일 캠페인 �
 
 - [Adobe Campaign](/help/rtcdp/destinations/adobe-campaign-destination.md#import-data-into-campaign)
 - [Salesforce Marketing Cloud](/help/rtcdp/destinations/salesforce-marketing-cloud-destination.md#import-data-into-salesforce)
-- [Oracle Furnar](/help/rtcdp/destinations/oracle-eloqua-destination.md#import-data-into-eloqua)
+- [Oracle 웅변가](/help/rtcdp/destinations/oracle-eloqua-destination.md#import-data-into-eloqua)
 - [Oracle Responsys](/help/rtcdp/destinations/oracle-responsys-destination.md#import-data-into-responsys)
 
 ## 이메일 마케팅 대상에 세그먼트 활성화
