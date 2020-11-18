@@ -3,11 +3,11 @@ keywords: RTCDP;rtcdp
 title: 대상 작업 공간
 seo-title: 대상 작업 공간
 description: 대상 작업 공간은 아래의 섹션에 설명된 네 개의 섹션인 카탈로그, 찾아보기, 계정 및 시스템 보기로 구성됩니다.
-seo-description: Adobe 실시간 고객 데이터 플랫폼에서 왼쪽 탐색 막대에서 대상을 선택하여 대상 작업 영역에 액세스합니다.
+seo-description: 실시간 고객 데이터 플랫폼의 경우 왼쪽 탐색 막대에서 대상을 선택하여 대상 작업 영역에 액세스합니다.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: a3e35dee98b7b2758a4246a63bb0e1bde6b2f165
 workflow-type: tm+mt
-source-wordcount: '825'
+source-wordcount: '905'
 ht-degree: 2%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 2%
 
 # 대상 작업 공간 {#destinations-workspace}
 
-Adobe 실시간 고객 데이터 플랫폼의 경우 왼쪽 탐색 막대에서 **[!UICONTROL 대상]** 을 선택하여 대상 [!UICONTROL 작업 영역에] 액세스합니다.
+실시간 고객 데이터 플랫폼의 경우 왼쪽 탐색 막대에서 **[!UICONTROL 대상]** 을 선택하여 대상 작업 [!UICONTROL 영역에] 액세스합니다.
 
 작업 [!UICONTROL 공간은] 아래 섹션에 설명된 네 개의 섹션, [!UICONTROL 카탈로그], [!UICONTROL 검색]계정, 및 System ViewFacebook으로 구성됩니다.
 
@@ -23,13 +23,13 @@ Adobe 실시간 고객 데이터 플랫폼의 경우 왼쪽 탐색 막대에서 
 
 ## [!UICONTROL 카탈로그] {#catalog}
 
-[ **[!UICONTROL 카탈로그]** ] 탭에는 데이터를 보낼 수 있는 Adobe 실시간 CDP에서 사용할 수 있는 모든 대상 목록이 표시됩니다.
+[ **[!UICONTROL 카탈로그]** ] 탭에는 데이터를 보낼 수 있는 실시간 CDP에서 사용할 수 있는 모든 대상 목록이 표시됩니다.
 
-Adobe 실시간 CDP 사용자 인터페이스는 대상 카탈로그 페이지에 다양한 검색 및 필터 옵션을 제공합니다.
+실시간 CDP 사용자 인터페이스는 대상 카탈로그 페이지에 다양한 검색 및 필터 옵션을 제공합니다.
 
 * 페이지의 검색 기능을 사용하여 특정 대상을 찾습니다.
 * 카테고리 컨트롤을 사용하여 [!UICONTROL 대상을] 필터링합니다.
-* 모든 [!UICONTROL 대상] 및 [!UICONTROL 내 대상 간을 전환합니다]. 모든 **[!UICONTROL 대상을]** 선택하면 사용 가능한 모든 Adobe 실시간 CDP 대상이 표시됩니다. 내 **[!UICONTROL 대상을]** 선택하면 사용자가 연결을 설정한 대상만 볼 수 있습니다.
+* 모든 [!UICONTROL 대상] 및 [!UICONTROL 내 대상 간을 전환합니다]. 모든 **[!UICONTROL 대상을]** 선택하면 사용 가능한 모든 실시간 CDP 대상이 표시됩니다. 내 **[!UICONTROL 대상을]** 선택하면 사용자가 연결을 설정한 대상만 볼 수 있습니다.
 * 연결 및/ **[!UICONTROL 또는 확장]** 기능을 보려면 **[!UICONTROL 선택합니다]**. 두 카테고리 간의 차이를 이해하려면 [대상 유형과 카테고리를 참조하십시오](/help/rtcdp/destinations/destination-types.md).
 
 ![대상 필터링 및 검색 데모](/help/rtcdp/destinations/assets/destinations-search-and-filter.gif)
@@ -60,7 +60,7 @@ Adobe 실시간 CDP 사용자 인터페이스는 대상 카탈로그 페이지�
 >
 >[ ![플랫폼](/help/rtcdp/destinations/assets/add-data-symbol.png) ] 열의 [데이터 추가] 단추 **** 단추를 사용하여 해당 계정에 대한 새 대상 연결을 만듭니다.
 
-![계정 탭](/help/rtcdp/destinations/assets/accounts-tab.png)
+![계정 탭](./assets/workspace/edit-account-destinations.png)
 
 | 요소 | 설명 |
 ---------|----------
@@ -69,6 +69,18 @@ Adobe 실시간 CDP 사용자 인터페이스는 대상 카탈로그 페이지�
 | [!UICONTROL 사용자 이름] | 연결 대상 마법사에서 선택한 [사용자 이름입니다](/help/rtcdp/destinations/email-marketing-destinations.md#connect-destination). |
 | [!UICONTROL 대상] | 대상에 대해 만들어진 기본 정보와 연결된 고유한 성공한 대상 흐름 수를 나타냅니다. |
 | [!UICONTROL 인증됨] | 이 대상에 대한 연결이 승인된 날짜입니다. |
+
+또한 계정 정보를 편집하거나 업데이트할 수 있습니다. [ ![플랫폼](./assets/workspace/pencil-icon.png) ] 열에서 [계정 편집] 단추 **** 를 선택하여 계정 정보를 편집합니다.
+
+연결 유형을 사용하는 계정의 경우 `OAuth2` OAuth **[!UICONTROL 재연결을 선택하여 계정 자격 증명을]** 갱신할 수 있습니다.
+
+![Oauth 이미지](./assets/workspace/reconnect-oauth.png)
+
+액세스 ID, 비밀 키 또는 연결 문자열 등의 정보를 포함하여 `Access Key` 또는 `ConnectionString` 연결 유형을 사용하는 계정의 계정 인증 정보를 편집할 수 있습니다.
+
+![계정 정보 이미지](./assets/workspace/edit-account-details.png)
+
+계정 세부 사항 편집이 끝나면 **[!UICONTROL 저장을 선택하여]** 업데이트를 완료합니다.
 
 ## [!UICONTROL 찾아보기] {#browse}
 
