@@ -5,10 +5,10 @@ title: XDM ExperienceEvent 클래스
 topic: overview
 description: 이 문서에서는 XDM ExperienceEvent 클래스에 대한 개요를 제공합니다.
 translation-type: tm+mt
-source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
+source-git-commit: 4d109244e57799c7e3837ceee3e2f5d17fbf0a18
 workflow-type: tm+mt
-source-wordcount: '784'
-ht-degree: 0%
+source-wordcount: '797'
+ht-degree: 1%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 0%
 | `eventMergeId` | 레코드를 만든 인제스트된 일괄 처리 ID입니다. 이 필드는 데이터 수집 시 시스템에 의해 자동으로 채워집니다. |
 | `eventType` | 레코드의 기본 이벤트 유형을 나타내는 문자열. 승인된 값과 그 정의는 [부록 섹션에 제공됩니다](#eventType). |
 | `identityMap` | 이벤트가 적용되는 개별 ID의 세트가 포함된 지도 필드. ID 데이터가 수집되면 이 필드는 시스템에 의해 자동으로 업데이트됩니다. 실시간 고객 프로필에 이 필드를 [적절히 활용하려면 데이터](../../profile/home.md)작업에서 필드 내용을 수동으로 업데이트하지 마십시오.<br /><br />사용 사례에 대한 자세한 내용은 스키마 구성 [의 기본 사항에](../schema/composition.md#identityMap) 있는 ID 맵에 대한 섹션을 참조하십시오. |
-| `timestamp` | 사건이나 관찰이 발생한 시간입니다. |
+| `timestamp` | 사건이나 관찰이 발생한 시간입니다. 모든 datetime 값은 [RFC 339](https://tools.ietf.org/html/rfc3339) 형식으로 제공해야 합니다. |
 
 ## 호환 가능한 믹싱 {#mixins}
 
