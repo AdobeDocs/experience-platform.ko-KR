@@ -5,9 +5,9 @@ seo-title: Airship 속성 대상
 description: Airship 내에서 타깃팅하기 위해 Adobe 대상 데이터를 대상 특성으로 Airship에 매끄럽게 전달합니다.
 seo-description: Airship 내에서 타깃팅하기 위해 Adobe 대상 데이터를 대상 특성으로 Airship에 매끄럽게 전달합니다.
 translation-type: tm+mt
-source-git-commit: 0e065bbc0917d5009738b4cae890ffd13c0ab154
+source-git-commit: 4b1bf5bbce57a22529c5d025c5bae10557400d54
 workflow-type: tm+mt
-source-wordcount: '1245'
+source-wordcount: '1244'
 ht-degree: 1%
 
 ---
@@ -69,7 +69,7 @@ Adobe Experience Platform에서 수집된 프로필 데이터를 활용하여 �
 
 Adobe Experience Platform의 속성을 활용하여 프로파일을 더욱 강화하고 SDK 또는 예측 데이터와 결합할 수 [!DNL Airship] [!DNL Airship] 있습니다. 예를 들어 소매업체는 충성도 상태 및 위치 데이터(플랫폼의 특성)가 포함된 세그먼트를 만들고 데이터를 이탈하여 Las Vegas, NV)에 거주하는 사용자에게 고도로 타겟팅된 메시지를 전송하고 대량 추월 가능성이 높은 골드 로열티 상태에 있는 사용자를 대상으로 보낼 [!DNL Airship] 것으로 예측합니다.
 
-## 속성에 [!DNL Airship] 연결 {#connect-airship-attributes}
+## 연결 대상 [!DNL Airship Attributes] {#connect-airship-attributes}
 
 1. [ **[!UICONTROL 대상]** ] > [ **[!UICONTROL 카탈로그]**]에서 **[!UICONTROL 모바일 참여]** 범주로스크롤합니다. 을 **[!DNL Airship Attributes]**&#x200B;선택하고 구성을 **[!UICONTROL 선택합니다]**.
 
