@@ -1,23 +1,22 @@
 ---
 keywords: mobile messaging;mobile messaging destinations;Braze; Airship
-title: 모바일 대상
-seo-title: 모바일 대상
-description: 모바일 대상에 대한 사용 사례 삽입
-seo-description: 모바일 대상에 대한 사용 사례 삽입
+title: 모바일 참여 대상
+seo-title: 모바일 참여 대상
+description: Adobe Experience Platform은 아래 나열된 모바일 참여 대상을 지원합니다.
+seo-description: Adobe Experience Platform은 아래 나열된 모바일 참여 대상을 지원합니다.
 translation-type: tm+mt
-source-git-commit: 6c8084f35c4981b41a5beecd57ce5b3ef4e409d6
+source-git-commit: 4b1bf5bbce57a22529c5d025c5bae10557400d54
 workflow-type: tm+mt
-source-wordcount: '38'
+source-wordcount: '41'
 ht-degree: 0%
 
 ---
 
 
-# 모바일 대상 {#mobile-destinations}
+# 모바일 참여 대상 {#mobile-destinations}
 
-모바일 대상에 대한 설명 삽입
+[!DNL Adobe Experience Platform] 현재 다음과 같은 모바일 참여 대상을 지원합니다.
 
-[!DNL Adobe Experience Platform] 현재 지원되는 모바일 대상은 다음과 같습니다.
-
-* Airship - Airship 문서 페이지에 대한 링크 삽입
+* [Airship 속성](airship-attributes-destination.md)
+* [항공기 태그](airship-tags-destination.md)
 * [브라즈](braze-destination.md)
