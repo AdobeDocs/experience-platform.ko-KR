@@ -6,9 +6,9 @@ type: Tutorial
 description: ESP(Email Service Providers)를 사용하면 이메일 캠페인 전송과 같은 이메일 마케팅 활동을 관리할 수 있습니다.
 seo-description: ESP(Email Service Providers)를 사용하면 이메일 캠페인 전송과 같은 이메일 마케팅 활동을 관리할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 42b694c532f140b51913ba5ceb0aaeacc2263039
+source-git-commit: 425287d78deebf0113d6cf6350bcb516c99ee995
 workflow-type: tm+mt
-source-wordcount: '835'
+source-wordcount: '838'
 ht-degree: 1%
 
 ---
@@ -54,7 +54,7 @@ ESP(Email Service Providers)를 사용하면 프로모션 이메일 캠페인 �
 
 ## 파일 이름 구성
 
-파일 이름 편집 옵션에 대한 자세한 내용은 대상 활성화 자습서에서 [구성](/help/rtcdp/destinations/activate-destinations.md#configure) 단계를 참조하십시오.
+세그먼트 일정 및 파일 이름 편집 옵션에 대한 자세한 내용은 대상 활성화 자습서에서 [구성](/help/rtcdp/destinations/activate-destinations.md#configure) 단계를 참조하십시오.
 
 ## 속성 선택 - 내보낸 파일에서 대상 속성으로 사용할 스키마 필드를 선택합니다. {#destination-attributes}
 
