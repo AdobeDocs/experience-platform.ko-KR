@@ -5,7 +5,7 @@ audience: user
 user-guide-title: 실시간 고객 데이터 플랫폼 안내서
 user-guide-description: 여러 엔터프라이즈 소스에서 알려진 데이터와 익명의 데이터를 결합하여 고객 프로필을 생성하고, 이러한 프로필에서 고객 세그먼트를 생성하며, 이러한 세그먼트를 제3자 대상으로 활성화할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 97a4e335314d23a436817d46f9d218a2532acfe5
+source-git-commit: 44a129e5a92fc9994e43c199bf902459c012eca3
 workflow-type: tm+mt
 source-wordcount: '525'
 ht-degree: 16%
@@ -102,7 +102,7 @@ ht-degree: 16%
          * [Salesforce Marketing Cloud](destinations/salesforce-marketing-cloud-destination.md)
       * Experience Platform Launch extensions{#launch-extensions}
          * [Experience Platform Launch 확장 개요](/help/rtcdp/destinations/experience-platform-launch-extensions.md)
-      * 모바일 참여 대상 {#mobile}
+      * 모바일 참여 대상 {#mobile-engagement-destinations}
          * [모바일 참여 대상 개요](destinations/mobile-destinations.md)
          * [Airship 속성](destinations/airship-attributes-destination.md)
          * [항공기 태그](destinations/airship-tags-destination.md)
