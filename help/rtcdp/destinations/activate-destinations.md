@@ -6,9 +6,9 @@ seo-title: 대상에 프로필 및 세그먼트 활성화
 description: 세그먼트를 대상에 매핑하여 실시간 고객 데이터 플랫폼에 있는 데이터를 활성화합니다. 이를 수행하려면 아래 단계를 따르십시오.
 seo-description: 세그먼트를 대상에 매핑하여 실시간 고객 데이터 플랫폼에 있는 데이터를 활성화합니다. 이를 수행하려면 아래 단계를 따르십시오.
 translation-type: tm+mt
-source-git-commit: 74f49db15028aa27fc7ee73a79ea236ee42f37e8
+source-git-commit: bb59d93e016d49a0ebba77af1f90563a8767f072
 workflow-type: tm+mt
-source-wordcount: '1583'
+source-wordcount: '1768'
 ht-degree: 0%
 
 ---
@@ -78,7 +78,19 @@ Adobe Experience Platform `Email_LC_SHA256` 로 데이터 수집 시 [!DNL Faceb
 
 ![단계 구성](./assets/configure-icon.png)
 
-구성 **[!UICONTROL 단계에서]** 내보낼 각 세그먼트에 대한 파일 이름을 구성할 수 있습니다. 파일 이름 구성은 선택 사항입니다.
+구성 **[!UICONTROL 단계에서]** 내보낼 각 세그먼트에 대한 예약 및 파일 이름을 구성할 수 있습니다. 예약 구성은 필수지만 파일 이름 구성은 선택 사항입니다.
+
+세그먼트에 대한 예약을 추가하려면 예약 **[!UICONTROL 만들기를 선택합니다]**.
+
+![](./assets/activate-destinations/configure-destination-schedule.png)
+
+세그먼트 예약을 만드는 옵션을 표시하는 팝업이 나타납니다.
+
+- **파일 내보내기**:전체 파일 또는 증분 파일을 내보낼 수 있습니다. 전체 파일을 내보내면 해당 세그먼트에 적합한 모든 프로파일의 전체 스냅샷이 게시됩니다. 증분 파일을 내보내면 마지막 내보내기 이후 해당 세그먼트에 자격을 부여하는 프로파일 델타가 게시됩니다.
+- **빈도**:[전체 파일 **[!UICONTROL 내보내기]** ]를 선택한 경우 [ **[!UICONTROL 한 번]** ] 또는 [일별]을 내보낼 수 **[!UICONTROL 있습니다]**. 증분 파일 **[!UICONTROL 내보내기를]** 선택한 경우 **[!UICONTROL 일별]**&#x200B;내보내기 옵션만 있습니다. 파일 내보내기 한 번 **[!UICONTROL 은]** 파일을 한 번 내보냅니다. 파일 내보내기 **[!UICONTROL 일별]** 은 전체 파일을 선택한 경우 시작 날짜에서 종료 날짜까지 매일 파일을 12:00 AM UTC(7:00 PM EST)에 내보내며 증분 파일을 선택한 경우 12:00 PM UTC(7:00 EST)에 내보냅니다.
+- **날짜**:한 번 **[!UICONTROL 을]** 선택하면 한 번 내보낼 날짜를 선택할 수 있습니다. [ **[!UICONTROL 일별]** ]을 선택한 경우 내보내기 시작 날짜와 종료 날짜를 선택할 수 있습니다.
+
+![](./assets/activate-destinations/export-full-file.png)
 
 기본 파일 이름은 대상 이름, 세그먼트 ID, 날짜 및 시간 표시기로 구성됩니다. 예를 들어 내보낸 파일 이름을 편집하여 다른 캠페인을 구분하거나 데이터 내보내기 시간을 파일에 추가할 수 있습니다.
 
