@@ -1,11 +1,11 @@
 ---
 keywords: mobile; braze; messaging;
-title: 대상 브랜즈
-seo-title: 대상 브랜즈
+title: 대상 확장
+seo-title: 대상 확장
 description: Braze는 고객과 브랜드 간의 연관성 있고 기억에 오래 남는 경험을 제공하는 포괄적인 고객 참여 플랫폼입니다.
 seo-description: Braze는 고객과 브랜드 간의 연관성 있고 기억에 오래 남는 경험을 제공하는 포괄적인 고객 참여 플랫폼입니다.
 translation-type: tm+mt
-source-git-commit: 9126a9b3a27aa0a0ecefb5d490475423d7840791
+source-git-commit: 4b1bf5bbce57a22529c5d025c5bae10557400d54
 workflow-type: tm+mt
 source-wordcount: '924'
 ht-degree: 1%
@@ -57,6 +57,7 @@ ht-degree: 1%
    >![대상 확장 활성화](assets/braze-destination-activate.png)
 
 1. 계정  단계에서 [!DNL Braze] 계정 토큰을 제공해야 합니다. 이게 네 [!DNL Braze] [!DNL API] 열쇠야 아래 URL에서 [!DNL API] 키를 얻는 방법에 대한 자세한 지침을 확인할 수 있습니다. [REST API 키 개요](https://www.braze.com/docs/api/api_key/). 토큰을 입력하고 대상에 **[!UICONTROL 연결을 클릭합니다]**.
+
    ![대상 계정 단계 확장](assets/braze-destination-account.png)
 
 1. **[!UICONTROL 다음]**&#x200B;을 클릭합니다.
