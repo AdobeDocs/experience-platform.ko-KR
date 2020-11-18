@@ -5,7 +5,7 @@ seo-title: Airship 태그 대상
 description: Airship 내에서 타깃팅할 대상 태그로 Adobe 고객 데이터를 Airship으로 매끄럽게 전달할 수 있습니다.
 seo-description: Airship 내에서 타깃팅할 대상 태그로 Adobe 고객 데이터를 Airship으로 매끄럽게 전달할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: f08b90531455cdbeb73deb83eed05ba7a9b19df6
+source-git-commit: 4b1bf5bbce57a22529c5d025c5bae10557400d54
 workflow-type: tm+mt
 source-wordcount: '1236'
 ht-degree: 1%
