@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: b5fa40deb480f264b02a8be56aff2c50e4149cb2
+source-git-commit: 6cf9c88f6dc751a4cc877670a89cc99d1efb1b2a
 workflow-type: tm+mt
-source-wordcount: '2126'
+source-wordcount: '2180'
 ht-degree: 3%
 
 ---
@@ -113,20 +113,18 @@ For more information, please see the [[!DNL Offer Decisioning]](https://experien
 
 | 대상 | 설명 |
 | ----------- | ----------- |
+| 브라즈 | Braze는 고객과 브랜드 간의 연관성 있고 기억에 오래 남는 경험을 제공하는 포괄적인 고객 참여 플랫폼입니다. |
 | Microsoft Bing | Microsoft Bing 대상은 Microsoft 디스플레이 광고에서 리타겟팅 및 대상 타깃팅된 디지털 캠페인을 실행하는 데 도움이 됩니다. |
 | 트레이드데스크 | 트레이드데스크(Trade Desk)는 광고 구매자가 디스플레이, 비디오 및 모바일 인벤토리 소스에서 타겟팅된 디지털 캠페인을 리타겟팅하고 실행할 수 있는 셀프 서비스 플랫폼입니다. |
-
-<!-- | Braze | Braze is a comprehensive customer engagement platform that power relevant and memorable experiences between customers and the brands they love. |  -->
 
 **새로운 기능**
 
 | 기능 | 설명 |
 | ------- | ----------- |
 | 대상 세부 정보 UX 업데이트 | 실시간 CDP의 대상 워크플로우에는 인라인 모니터링이 포함되어 있으므로 성공적인 일괄 처리 작업을 확인할 수 있습니다. 이 기능을 사용하면 경고 및 모니터링 대시보드를 통해 배치 대상에 대한 워크플로우에서 직접 문제를 해결하고 처리 과정에서 발생하는 오류를 추적할 수 있습니다. |
+| 파일 암호화 | 이제 파일 기반 대상의 경우 내보낸 파일에 암호화를 추가할 수 있습니다. |
+| 파일 예약 | 이메일 기반 및 클라우드 스토리지 대상의 경우 일회성 내보내기를 만들거나 일일 스냅샷을 만들 수 있습니다. |
 | 필수 필드 | 사용자는 필드를 필수로 표시할 수 있으므로 필수 필드가 포함된 필드만 내보낼 수 있습니다. |
-
-<!-- | File scheduling | For both email based and cloud storage destinations, users can create a one-time export or create daily snapshots. |
-| File encryption | For file based destinations, users can now add encryption to their exported files. | -->
 
 자세한 내용은 대상 [개요를 참조하십시오](../../rtcdp/destinations/destinations-overview.md).
 
@@ -202,8 +200,9 @@ Adobe Experience Platform은 외부 소스에서 데이터를 인제스트할 �
 [!DNL Experience Platform] 은 다양한 데이터 공급자에 대한 소스 연결을 쉽게 설정할 수 있는 RESTful API와 대화형 UI를 제공합니다. 이러한 소스 연결을 통해 외부 스토리지 시스템 및 CRM 서비스에 인증 및 연결할 수 있고, 통합 실행에 대한 시간을 설정하고, 데이터 통합 처리량을 관리할 수 있습니다.
 
 **새로운 소스**
+
 | 기능 | 설명 |
-| — | — |
+| ------- | ----------- |
 | [!DNL Shopify] | 이제 [!DNL Shopify] API 또는 UI를 [!DNL Experience Platform] [!DNL Flow Service] 사용하여 연결할 수 있습니다. 자세한 내용은 [Shopify 커넥터 개요를](../../sources/connectors/ecommerce/shopify.md) 참조하십시오. |
 
 **주요 기능**
