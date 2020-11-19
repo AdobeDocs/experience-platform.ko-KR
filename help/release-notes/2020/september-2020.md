@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: September 8, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: 9436779e91bf82382056acd526671b30b55e11d4
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '883'
-ht-degree: 4%
+source-wordcount: '862'
+ht-degree: 6%
 
 ---
 
@@ -19,13 +19,13 @@ ht-degree: 4%
 
 Adobe Experience Platform의 기존 기능 업데이트:
 
-- [[!DNL 데이터 거버넌스]](#governance)
-- [[!DNL 대상]](#destinations)
+- [[!DNL Data Governance]](#governance)
+- [[!DNL Destinations]](#destinations)
 - [[!DNL Observability Insights]](#observability)
 - [[!DNL Privacy Service]](#privacy)
-- [[!DNL 실시간 고객 프로필]](#profile)
-- [[!DNL 세그멘테이션 서비스]](#segmentation)
-- [[!DNL 소스]](#sources)
+- [[!DNL Real-time Customer Profile]](#profile)
+- [[!DNL Segmentation Service]](#segmentation)
+- [[!DNL Sources]](#sources)
 
 ## [!DNL Data Governance] {#governance}
 
@@ -41,7 +41,7 @@ Adobe Experience Platform 데이터 거버넌스는 고객 데이터를 관리�
 
 ## 대상 {#destinations}
 
-Adobe의 실시간 고객 데이터 플랫폼 [](../../rtcdp/overview.md)에서 대상은 대상 플랫폼과 사전 구축된 통합으로 이러한 파트너에게 데이터를 원활하게 제공할 수 있습니다.
+실시간 [고객 데이터 플랫폼](../../rtcdp/overview.md)에서 대상은 대상 플랫폼과 사전 구축된 통합으로 이러한 파트너에게 데이터를 원활하게 제공할 수 있습니다.
 
 **새로운 기능**
 
@@ -59,7 +59,7 @@ Adobe의 실시간 고객 데이터 플랫폼 [](../../rtcdp/overview.md)에서 
 
 | 기능 | 설명 |
 | --- | --- |
-| Adobe I/O 이벤트 알림 | [!DNL Observability Insights] adobe I/O 이벤트를 활용하여 여러 Experience Platform 서비스에 대한 이벤트 알림을 만듭니다. 알림 페이로드는 구성된 웹 후크로 전송되며, 이를 통해 추가 다운스트림 프로세스를 자동화할 수 있습니다. 자세한 내용은 [알림 개요를](../../observability/notifications/overview.md) 참조하십시오. |
+| Adobe I/O 이벤트 알림 | [!DNL Observability Insights] adobe I/O 이벤트를 활용하여 여러 Experience Platform 서비스에 대한 이벤트 알림을 만듭니다. 알림 페이로드는 구성된 웹 후크로 전송되며, 이를 통해 추가 다운스트림 프로세스를 자동화할 수 있습니다. See the [notifications overview](../../observability/notifications/overview.md) for more information. |
 
 서비스에 대한 자세한 내용은 [[!DNL Observability Insights] 개요를](../../observability/home.md) 참조하십시오.
 
@@ -85,7 +85,7 @@ Adobe Experience Platform을 사용하면 고객이 브랜드와 언제 어디�
 
 데이터 작업을 위한 자습서 및 모범 사례 [!DNL Real-time Customer Profile]를 비롯한 자세한 내용은 [!DNL Profile] 실시간 고객 프로필 개요를 참조하십시오 [](../../profile/home.md).
 
-## 세그멘테이션 서비스 {#segmentation}
+## 세분화 서비스 {#segmentation}
 
 Adobe Experience Platform 세그멘테이션 서비스는 세그먼트를 작성하고 [!DNL Real-time Customer Profile] 데이터에서 대상을 생성할 수 있는 사용자 인터페이스와 RESTful API를 제공합니다. 이러한 세그먼트는 중앙에서 구성 및 관리되므로 모든 Adobe 애플리케이션에서 쉽게 액세스할 수 [!DNL Platform]있습니다.
 
