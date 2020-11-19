@@ -2,12 +2,12 @@
 keywords: JW player;jw player;JW Player;jw extension;JW extension
 title: JW 플레이어 분석(베타) 확장
 seo-title: JW 플레이어 분석(베타) 확장
-description: JW 플레이어 분석(베타) 익스텐션은 Adobe 실시간 고객 데이터 플랫폼의 분석 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
-seo-description: JW 플레이어 분석(베타) 익스텐션은 Adobe 실시간 고객 데이터 플랫폼의 분석 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
+description: JW 플레이어 분석(베타) 익스텐션은 실시간 고객 데이터 플랫폼의 분석 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
+seo-description: JW 플레이어 분석(베타) 익스텐션은 실시간 고객 데이터 플랫폼의 분석 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '587'
+source-wordcount: '584'
 ht-degree: 4%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 4%
 
 이 익스텐션은 이벤트를 Adobe 비디오 분석에 연결하는 [!DNL JW Player] 어댑터를 [!DNL JW Player] 설치합니다. 강력한 Adobe 비디오 분석 기능을 활용하여 고객의 동영상 시청률을 명확하게 파악할 수 있습니다.
 
-[!DNL JW Player Analytics] (베타)는 Adobe 실시간 고객 데이터 플랫폼의 분석 확장입니다. 확장 기능에 대한 자세한 내용은 [Adobe Exchange의 확장 페이지를 참조하십시오](https://exchange.adobe.com/experiencecloud.details.101523.jw-player-analytics-launch-extension.html).
+[!DNL JW Player Analytics] (베타)는 실시간 고객 데이터 플랫폼의 분석 확장입니다. 확장 기능에 대한 자세한 내용은 [Adobe Exchange의 확장 페이지를 참조하십시오](https://exchange.adobe.com/experiencecloud.details.101523.jw-player-analytics-launch-extension.html).
 
 이 목적지는 Adobe Experience Platform Launch 확장선입니다 Adobe 실시간 CDP에서 플랫폼 실행 확장 기능이 작동하는 방법에 대한 자세한 내용은 [Adobe Experience Platform Launch 확장 개요를 참조하십시오](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
