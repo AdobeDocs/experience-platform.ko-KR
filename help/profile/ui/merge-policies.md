@@ -3,9 +3,9 @@ keywords: Experience Platform;profile;real-time customer profile;merge policies;
 title: 정책 병합 UI 안내서
 topic: guide
 translation-type: tm+mt
-source-git-commit: 6bfc256b50542e88e28f8a0c40cec7a109a05aa6
+source-git-commit: e865bf254a9a3190fcfc053bd83e9968b1a4f7f1
 workflow-type: tm+mt
-source-wordcount: '2667'
+source-wordcount: '2673'
 ht-degree: 0%
 
 ---
@@ -25,9 +25,9 @@ API를 사용하여 병합 정책을 사용하고 싶으면 [!DNL Real-time Cust
 
 이 가이드에서는 몇 가지 중요한 기능에 대해 자세히 [!DNL Experience Platform] 알고 있어야 합니다. 이 안내서를 따르거나 프로필 API를 사용하기 전에 다음 서비스에 대한 설명서를 검토하십시오.
 
-* [[!DNL Real-time Customer Profile]](../home.md):여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
+* [실시간 고객 프로필](../home.md):여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
 * [Adobe Experience Platform ID 서비스](../../identity-service/home.md):수집되는 다양한 데이터 소스의 ID를 통합하여 실시간 고객 프로파일을 구현할 수 있습니다 [!DNL Platform].
-* [[!DNL Experience Data Model] (XDM)](../../xdm/home.md):고객 경험 데이터를 [!DNL Platform] 구성하는 표준화된 프레임워크
+* [XDM(Experience Data Model)](../../xdm/home.md):고객 경험 데이터를 [!DNL Platform] 구성하는 표준화된 프레임워크
 
 ## 병합 메서드 {#merge-methods}
 
