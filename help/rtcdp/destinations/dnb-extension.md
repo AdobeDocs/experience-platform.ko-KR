@@ -2,12 +2,12 @@
 keywords: D&B Visitor Intelligence;D&B;visitor intelligence extension
 title: D&B 방문자 인텔리전스 확장
 seo-title: D&B 방문자 인텔리전스 확장
-description: D&B 방문자 인텔리전스 익스텐션은 Adobe 실시간 고객 데이터 플랫폼의 개인화 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
-seo-description: D&B 방문자 인텔리전스 익스텐션은 Adobe 실시간 고객 데이터 플랫폼의 개인화 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
+description: D&B 방문자 인텔리전스 익스텐션은 실시간 고객 데이터 플랫폼의 개인화 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
+seo-description: D&B 방문자 인텔리전스 익스텐션은 실시간 고객 데이터 플랫폼의 개인화 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '543'
+source-wordcount: '540'
 ht-degree: 5%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 5%
 
 알 수 없는 방문자를 분석하여 리드로 변환합니다.
 
-[!DNL D&B Visitor Intelligence] adobe 실시간 고객 데이터 플랫폼의 개인화 확장입니다. 확장 기능에 대한 자세한 내용은 [D&amp;B 웹 사이트를 참조하십시오](https://www.dnb.com/).
+[!DNL D&B Visitor Intelligence] 실시간 고객 데이터 플랫폼의 개인화 확장입니다. 확장 기능에 대한 자세한 내용은 [D&amp;B 웹 사이트를 참조하십시오](https://www.dnb.com/).
 
 이 목적지는 Adobe Experience Platform Launch 확장선입니다 Adobe 실시간 CDP에서 플랫폼 실행 확장 기능이 작동하는 방법에 대한 자세한 내용은 [Adobe Experience Platform Launch 확장 개요를 참조하십시오](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
