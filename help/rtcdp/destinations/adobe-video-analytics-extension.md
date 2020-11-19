@@ -2,12 +2,12 @@
 keywords: media analytics extension;media analytics;audio and video extension
 title: Adobe Media Analytics for Audio 및 Video 확장
 seo-title: Adobe Media Analytics for Audio 및 Video 확장
-description: 오디오 및 비디오용 Adobe 미디어 분석 익스텐션은 Adobe 실시간 고객 데이터 플랫폼의 분석 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
-seo-description: Adobe Media Analytics for Video 익스텐션은 Adobe 실시간 고객 데이터 플랫폼의 분석 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
+description: 오디오 및 비디오용 Adobe 미디어 분석 익스텐션은 실시간 고객 데이터 플랫폼의 분석 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
+seo-description: 비디오 Adobe 미디어 분석 익스텐션은 실시간 고객 데이터 플랫폼의 분석 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: d9bf874dbfcc00c0a6e267f1a2e96f1223054825
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '587'
+source-wordcount: '584'
 ht-degree: 12%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 12%
 
 Adobe Media Analytics for Audio and Video는 고객에게 비디오, 오디오 및 광고에 대한 강력한 측정을 제공하는 기본 Analytics 오퍼의 추가 기능입니다.
 
-오디오 및 비디오용 Adobe 미디어 분석은 Adobe 실시간 고객 데이터 플랫폼의 분석 익스텐션입니다. 확장 기능에 대한 자세한 내용은 [Adobe Exchange의 확장 페이지를 참조하십시오](https://exchange.adobe.com/experiencecloud.details.100157.html).
+오디오 및 비디오용 Adobe 미디어 분석은 실시간 고객 데이터 플랫폼의 분석 익스텐션입니다. 확장 기능에 대한 자세한 내용은 [Adobe Exchange의 확장 페이지를 참조하십시오](https://exchange.adobe.com/experiencecloud.details.100157.html).
 
 이 대상은 [!DNL Adobe Experience Platform Launch] 확장자입니다. Adobe 실시간 CDP에서 익스텐션이 작동하는 방법에 대한 자세한 내용은 [!DNL Platform Launch] Experience Platform Launch 확장 개요를 참조하십시오 [](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
