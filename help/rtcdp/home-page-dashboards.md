@@ -5,9 +5,9 @@ seo-title: 실시간 고객 데이터 플랫폼 홈 페이지 및 대시보드
 description: 대시보드, 홈페이지 및 Adobe Experience Platform의 최초 사용자 경험
 seo-description: 대시보드, 홈페이지 및 Adobe Experience Platform의 최초 사용자 경험
 translation-type: tm+mt
-source-git-commit: 98d3792f50f2ab95b86d162c51af9445f06343b5
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '634'
+source-wordcount: '633'
 ht-degree: 4%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 4%
 
 # [!DNL Real-time Customer Data Platform] 지표 개요
 
-측정 지표 대시보드가 포함된 Adobe 실시간 고객 데이터 플랫폼(실시간 CDP) 홈 페이지는 실시간 CDP에 로그인할 때 나타납니다.
+측정 지표 대시보드가 포함된 실시간 고객 데이터 플랫폼(실시간 CDP) 홈 페이지는 실시간 CDP에 로그인할 때 나타납니다.
 
 홈 페이지는 지표 카드가 표시되는 곳 중 하나입니다. 실시간 CDP는 고객 경험 전반에서 측정 카드를 제공합니다. 이러한 지표는 시스템의 데이터, 프로필 및 세그먼트 대상에 대해 알려줍니다.
 
