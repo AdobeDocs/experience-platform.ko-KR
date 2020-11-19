@@ -5,9 +5,9 @@ seo-title: Adobe Campaign
 description: Adobe Campaign은 온라인과 오프라인의 모든 채널에서 캠페인을 개인화하고 전달할 수 있는 솔루션 집합입니다.
 seo-description: Adobe Campaign은 온라인과 오프라인의 모든 채널에서 캠페인을 개인화하고 전달할 수 있는 솔루션 집합입니다.
 translation-type: tm+mt
-source-git-commit: 67a353c950bef11ccbaa52c49d213f08449baa96
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '618'
+source-wordcount: '617'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 Adobe Campaign은 온라인과 오프라인의 모든 채널에서 캠페인을 개인화하고 전달할 수 있는 솔루션 집합입니다. 자세한 [내용은 Adobe Campaign Classic](https://docs.adobe.com/content/help/en/campaign-classic/using/getting-started/starting-with-adobe-campaign/about-adobe-campaign-classic.html) 정보를 참조하십시오.
 
-세그먼트 데이터를 Adobe Campaign으로 전송하려면 먼저 Adobe의 실시간 고객 데이터 플랫폼에서 대상을 [](#connect-destination) 연결한 다음 스토리지 위치에서 Adobe Campaign으로 데이터 가져오기를 [](#import-data-into-campaign) 설정해야 합니다.
+세그먼트 데이터를 Adobe Campaign으로 전송하려면 먼저 실시간 고객 데이터 플랫폼에서 대상 [을](#connect-destination) 연결한 다음 스토리지 위치에서 Adobe Campaign으로 데이터 가져오기 [를](#import-data-into-campaign) 설정해야 합니다.
 
 ## 내보내기 유형 {#export-type}
 
