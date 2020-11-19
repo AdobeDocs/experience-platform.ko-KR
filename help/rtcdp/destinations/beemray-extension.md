@@ -2,12 +2,12 @@
 keywords: beemray,beemray extension
 title: Beemray 확장
 seo-title: Beemray 확장
-description: Beemray 익스텐션은 Adobe 실시간 고객 데이터 플랫폼의 개인화 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
-seo-description: Beemray 익스텐션은 Adobe 실시간 고객 데이터 플랫폼의 개인화 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
+description: Beemray 익스텐션은 실시간 고객 데이터 플랫폼의 개인화 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
+seo-description: Beemray 익스텐션은 실시간 고객 데이터 플랫폼의 개인화 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: d9bf874dbfcc00c0a6e267f1a2e96f1223054825
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '564'
+source-wordcount: '561'
 ht-degree: 4%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 4%
 
 [!DNL Beemray] 상황에 따라 제품 속도를 높일 수 있습니다. 인사이트를 확보하고 새로운 경험을 구축하며 인터랙션을 주도하며 중요한 순간에 고객의 참여를 유도할 수 있습니다. Beemray는 머신 러닝을 사용하여 컨텍스트 기반의 인텔리전스를 자동화합니다. Beemray는 Adobe Experience Cloud 및 기타 기술 파트너와 연결됩니다. 모든 것이 실시간으로 이루어집니다. 이 익스텐션은 사이트에 [!DNL Beemray] SDK를 설치합니다.
 
-Beemray는 Adobe 실시간 고객 데이터 플랫폼의 개인화 확장입니다. 확장 기능에 대한 자세한 내용은 [Adobe Exchange의 확장 페이지를 참조하십시오](https://exchange.adobe.com/experiencecloud.details.101063.beemray-human-context.html).
+Beemray는 실시간 고객 데이터 플랫폼의 개인화 확장입니다. 확장 기능에 대한 자세한 내용은 [Adobe Exchange의 확장 페이지를 참조하십시오](https://exchange.adobe.com/experiencecloud.details.101063.beemray-human-context.html).
 
 이 대상은 [!DNL Adobe Experience Platform Launch] 확장자입니다. Adobe 실시간 CDP에서 익스텐션이 작동하는 방법에 대한 자세한 내용은 [!DNL Platform Launch] Experience Platform Launch 확장 개요를 참조하십시오 [](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
