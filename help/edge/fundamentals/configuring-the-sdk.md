@@ -5,9 +5,9 @@ description: Experience Platform 웹 SDK를 구성하는 방법 살펴보기
 seo-description: Experience Platform 웹 SDK를 구성하는 방법 살펴보기
 keywords: configuring;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;environment;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;prehidingStyle;opacity;cookieDestinationsEnabled;urlDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 translation-type: tm+mt
-source-git-commit: 2e28fda40a135330054c749d73439448a55db52c
+source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
 workflow-type: tm+mt
-source-wordcount: '749'
+source-wordcount: '710'
 ht-degree: 11%
 
 ---
@@ -85,13 +85,7 @@ Your assigned [!DNL Experience Cloud] organization ID.  페이지 내에서 여�
 | -------- | ------------ | ----------------- |
 | 부울 | 아니요 | `true` |
 
-링크 클릭과 연관된 데이터를 자동으로 수집할지 여부를 나타냅니다. 링크 클릭으로 자격이 되는 클릭의 경우 다음 [웹 상호 작용](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/webinteraction.schema.md) 데이터가 수집됩니다.
-
-| **속성** | **설명** |
-| ------------ | ----------------------------------- |
-| 링크 이름 | 링크 컨텍스트에 의해 결정된 이름 |
-| 링크 URL | 정규화된 URL |
-| 링크 유형 | 다운로드, 종료 또는 기타 |
+링크 클릭과 연관된 데이터를 자동으로 수집할지 여부를 나타냅니다. 자세한 내용은 [자동](../data-collection/track-links.md#automaticLinkTracking) 링크 추적을 참조하십시오.
 
 ### `onBeforeEventSend`
 
@@ -153,7 +147,7 @@ Your assigned [!DNL Experience Cloud] organization ID.  페이지 내에서 여�
 | -------- | ------------ | ----------------- |
 | 부울 | 아니요 | true |
 
-true이면 SDK가 이전 AMCV 쿠키를 읽고 설정합니다. 이렇게 하면 사이트의 일부 부분이 여전히 Visitor.js를 사용하고 있을 수 있지만 AEP 웹 SDK를 사용하는 것으로 전환하는 데 도움이 됩니다. 또한 방문자 API가 페이지에 정의된 경우 SDK는 방문자 API에 대해 ECID를 쿼리합니다. 이를 통해 AEP 웹 SDK를 사용하여 이중 태그 페이지를 만들 수 있으며 동일한 ECID를 가질 수 있습니다.
+true이면 SDK가 이전 AMCV 쿠키를 읽고 설정합니다. 이렇게 하면 사이트의 일부 부분이 여전히 Visitor.js를 사용하고 있을 수 있지만 Adobe Experience Platform 웹 SDK를 사용하는 것으로 전환하는 데 도움이 됩니다. 또한 방문자 API가 페이지에 정의된 경우 SDK는 방문자 API에 대해 ECID를 쿼리합니다. 이를 통해 AEP 웹 SDK를 사용하여 이중 태그 페이지를 만들 수 있으며 동일한 ECID를 가질 수 있습니다.
 
 ### `thirdPartyCookiesEnabled`
 
