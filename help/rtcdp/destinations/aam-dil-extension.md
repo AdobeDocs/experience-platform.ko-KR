@@ -2,12 +2,12 @@
 keywords: Audience Manager DIL extension;destination audience manager;dil extension
 title: Audience Manager DIL 확장
 seo-title: Audience Manager DIL 확장
-description: Audience Manager DIL 익스텐션은 Adobe 실시간 고객 데이터 플랫폼의 DMP(데이터 관리 플랫폼)입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
-seo-description: Audience Manager DIL 익스텐션은 Adobe 실시간 고객 데이터 플랫폼의 DMP(데이터 관리 플랫폼)입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
+description: Audience Manager DIL 익스텐션은 실시간 고객 데이터 플랫폼의 데이터 관리 플랫폼(DMP)입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
+seo-description: Audience Manager DIL 익스텐션은 실시간 고객 데이터 플랫폼의 데이터 관리 플랫폼(DMP)입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: d9bf874dbfcc00c0a6e267f1a2e96f1223054825
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '608'
+source-wordcount: '605'
 ht-degree: 7%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 7%
 
 Adobe Audience Manager Data Integration Library 확장(클라이언트측 구현)입니다. 참고:이 확장 기능은 Adobe Analytics 데이터의 SSF(서버측 전달)에 사용되지 않습니다. SSF의 경우 Adobe Analytics 익스텐션을 사용하십시오. 중요:버전 8.0부터 DIL은 [!DNL Experience Cloud] ID 서비스 버전 3.3 이상에 대한 강한 종속성을 갖습니다. 전체 데이터 통합 기능을 구현하려면 [!DNL Experience Cloud] ID 서비스와 DIL을 모두 구현하십시오 [!DNL Audience Manager] .
 
-[!DNL Audience Manager] DIL은 Adobe 실시간 고객 데이터 플랫폼의 DMP(데이터 관리 플랫폼) 익스텐션입니다. 확장 기능에 대한 자세한 내용은 Experience Platform Launch 설명서의 [Audience Manager 확장 페이지](https://docs.adobe.com/content/help/ko-KR/launch/using/extensions-ref/adobe-extension/adobe-audience-manager-extension.html) 를 참조하십시오.
+[!DNL Audience Manager] DIL은 실시간 고객 데이터 플랫폼의 DMP(데이터 관리 플랫폼) 확장입니다. 확장 기능에 대한 자세한 내용은 Experience Platform Launch 설명서의 [Audience Manager 확장 페이지](https://docs.adobe.com/content/help/ko-KR/launch/using/extensions-ref/adobe-extension/adobe-audience-manager-extension.html) 를 참조하십시오.
 
 이 대상은 [!DNL Experience Platform Launch] 확장자입니다. Adobe 실시간 CDP에서 Launch 익스텐션이 작동하는 방법에 대한 자세한 내용은 [Experience Platform Launch 확장 개요를 참조하십시오](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
