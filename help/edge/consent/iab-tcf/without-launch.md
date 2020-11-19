@@ -1,18 +1,18 @@
 ---
 title: Experience Platform Launch 없이 IAB TCF 2.0 사용
 seo-title: Adobe Experience Platform 웹 SDK로 IAB TCF 2.0 동의 설정
-description: Adobe Experience Platform 웹 SDK를 사용하여 IAB TCF 2.0 동의를 설정하는 방법을 알아봅니다.
-seo-description: Adobe Experience Platform 웹 SDK를 사용하여 IAB TCF 2.0 동의를 설정하는 방법을 알아봅니다.
+description: Adobe Experience Platform 웹 SDK를 사용하여 IAB TCF 2.0 동의 설정 방법 살펴보기
+seo-description: Adobe Experience Platform 웹 SDK를 사용하여 IAB TCF 2.0 동의 설정 방법 살펴보기
 translation-type: tm+mt
-source-git-commit: db742119d8f169817080f1fd4e0dc08a0f0faa47
+source-git-commit: 1b5ee9b1f9bdc7835fa8de59020b3eebb4f59505
 workflow-type: tm+mt
-source-wordcount: '697'
+source-wordcount: '687'
 ht-degree: 0%
 
 ---
 
 
-# Adobe Experience Platform 웹 SDK 익스텐션에서 IAB TCF 2.0 사용
+# AEP 웹 SDK 익스텐션에서 IAB TCF 2.0 사용
 
 본 가이드는 Experience Platform Launch을 사용하지 않고 Interactive Advertising Bureau Transparency &amp; Consent Framework, 버전 2.0(IAB TCF 2.0)을 Adobe Experience Platform 웹 SDK와 통합하는 방법을 보여줍니다. IAB TCF 2.0과의 통합에 대한 개요는 [개요를 참조하십시오](./overview.md). Experience Platform Launch과 통합하는 방법에 대한 자세한 내용은 Experience Platform Launch에 대한 [IAB TCF 2.0 안내서를 참조하십시오](./with-launch.md).
 
@@ -58,7 +58,7 @@ window.__tcfapi('getTCData', 2, function (tcData, success) {
 
 ## setConsent 이벤트 사용
 
-IAB TCF 2.0 API는 고객의 동의가 업데이트되는 시기를 위한 이벤트를 제공합니다. 이 문제는 고객이 처음 기본 설정을 지정하고 고객이 기본 설정을 업데이트할 때 발생합니다.
+IAB TCF 2.0 API는 고객이 동의를 업데이트할 때 이벤트를 제공합니다. 이 문제는 고객이 처음 기본 설정을 지정하고 고객이 기본 설정을 업데이트할 때 발생합니다.
 
 다음 예에서는 이 작업을 수행하는 방법을 보여 줍니다.
 
@@ -110,4 +110,4 @@ window.__tcfapi('getTCData', 2, function (tcData, success) {
 
 ## 다음 단계
 
-이제 IAB TCF 2.0을 Adobe Experience Platform 웹 SDK 익스텐션과 함께 사용하는 방법을 익혔으므로 Adobe Analytics 또는 실시간 고객 데이터 플랫폼과 같은 다른 Adobe 솔루션과 통합할 수도 있습니다. 자세한 내용은 [IAB Transparency &amp; Consent Framework 2.0 개요를](./overview.md) 참조하십시오.
+이제 AEP 웹 SDK 익스텐션과 IAB TCF 2.0을 사용하는 방법을 습득했으므로 Adobe Analytics 또는 실시간 고객 데이터 플랫폼과 같은 다른 Adobe 솔루션과 통합하도록 선택할 수도 있습니다. 자세한 내용은 [IAB Transparency &amp; Consent Framework 2.0 개요를](./overview.md) 참조하십시오.
