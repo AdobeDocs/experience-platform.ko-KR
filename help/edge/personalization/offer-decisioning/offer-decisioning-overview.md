@@ -5,9 +5,9 @@ description: Adobe Experience Platform 웹 SDK는 Offer Decisioning에서 관리
 seo-description: Adobe Experience Platform 웹 SDK는 Offer Decisioning에서 관리하는 맞춤형 프로모션을 제공하고 렌더링할 수 있습니다. Offer Decisioning UI 또는 API를 사용하여 오퍼 및 기타 관련 개체를 만들 수 있습니다.
 keywords: offer decisioning;decisioning;Web SDK;Platform Web SDK;personalized offers;deliver offers;offer delivery;offer personalization;
 translation-type: tm+mt
-source-git-commit: a0ede8c7d3088fe80d6ea014b4a4f9f08ee8a7aa
+source-git-commit: 5f90f238a8845cc7bf07d54b89c5c6ccff40469a
 workflow-type: tm+mt
-source-wordcount: '810'
+source-wordcount: '831'
 ht-degree: 9%
 
 ---
@@ -29,7 +29,7 @@ Adobe Experience Platform은 Offer Decisioning에서 관리되는 개인화된 �
 
 ## 용어
 
-Offer Decisioning에서 일할 때 다음 용어를 이해하는 것이 중요합니다. <!--For more information and to view additional terms, please visit the [Offer Decisioning glossary](/docs/offer-decisioning/using/get-started/glossary.html)-->.
+Offer Decisioning에서 일할 때 다음 용어를 이해하는 것이 중요합니다. 자세한 내용이나 추가 용어를 보려면 [Offer Decisioning 용어집을 방문하십시오](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html).
 
 * **컨테이너:** 컨테이너는 서로 다른 우려를 분리시키는 격리 메커니즘입니다. 컨테이너 ID는 모든 저장소 API에 대한 첫 번째 경로 요소입니다. 모든 의사 결정 개체는 컨테이너 내에 있습니다.
 
