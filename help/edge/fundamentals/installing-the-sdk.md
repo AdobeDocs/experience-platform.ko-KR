@@ -5,9 +5,9 @@ description: Experience Platform 웹 SDK 설치 방법 살펴보기
 seo-description: Experience Platform 웹 SDK 설치 방법 살펴보기
 keywords: web sdk installation;installing web sdk;internet explorer;promise;
 translation-type: tm+mt
-source-git-commit: d23568f7ce63df5aa98dc237a6671eeadde0c9b2
+source-git-commit: 1b5ee9b1f9bdc7835fa8de59020b3eebb4f59505
 workflow-type: tm+mt
-source-wordcount: '626'
+source-wordcount: '623'
 ht-degree: 2%
 
 ---
@@ -15,9 +15,9 @@ ht-degree: 2%
 
 # SDK 설치 {#installing-the-sdk}
 
-Adobe Experience Platform 웹 SDK를 사용하는 가장 선호하는 방법은 [Adobe Experience Platform Launch을 이용하는 것입니다](http://launch.adobe.com/). Extension 카탈로그 `AEP Web SDK` 에서 Extension을 검색하고 설치한 다음 Extension을 구성합니다.
+Adobe Experience Platform 웹 SDK를 사용하는 가장 선호하는 방법은 [Adobe Experience Platform Launch을 이용하는 것입니다](http://launch.adobe.com/). 익스텐션 카탈로그 `AEP Web SDK` 에서 검색한 다음 설치한 다음 익스텐션을 구성합니다.
 
-AEP 웹 SDK는 CDN에서 사용할 수도 있습니다. 이 파일을 참조하거나 다운로드하여 자체 인프라에서 호스팅할 수 있습니다. 축소 및 축소 버전이 아닌 버전으로 사용할 수 있습니다. 분류되지 않은 버전은 디버깅에 유용합니다.
+Adobe Experience Platform 웹 SDK는 CDN에서도 사용할 수 있습니다. 이 파일을 참조하거나 다운로드하여 자체 인프라에서 호스팅할 수 있습니다. 축소 및 축소 버전이 아닌 버전으로 사용할 수 있습니다. 분류되지 않은 버전은 디버깅에 유용합니다.
 
 URL 구조:https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.js OR 합금.js를 참조하십시오.
 
