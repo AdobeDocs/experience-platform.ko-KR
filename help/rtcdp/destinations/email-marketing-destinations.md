@@ -6,9 +6,9 @@ type: Tutorial
 description: ESP(Email Service Providers)를 사용하면 이메일 캠페인 전송과 같은 이메일 마케팅 활동을 관리할 수 있습니다.
 seo-description: ESP(Email Service Providers)를 사용하면 이메일 캠페인 전송과 같은 이메일 마케팅 활동을 관리할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 425287d78deebf0113d6cf6350bcb516c99ee995
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '838'
+source-wordcount: '837'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 # 이메일 마케팅 대상 {#email-marketing-destinations}
 
-ESP(Email Service Providers)를 사용하면 프로모션 이메일 캠페인 전송과 같은 이메일 마케팅 활동을 관리할 수 있습니다. Adobe 실시간 고객 데이터 플랫폼은 이메일 마케팅 대상으로 세그먼트를 활성화할 수 있으므로 ESP와 통합됩니다.
+ESP(Email Service Providers)를 사용하면 프로모션 이메일 캠페인 전송과 같은 이메일 마케팅 활동을 관리할 수 있습니다. 실시간 고객 데이터 플랫폼은 이메일 마케팅 대상으로 세그먼트를 활성화할 수 있으므로 ESP와 통합됩니다.
 
 캠페인을 위한 이메일 마케팅 대상으로 세그먼트를 전송하려면 Adobe 실시간 CDP가 먼저 대상에 연결되어야 합니다.
 
