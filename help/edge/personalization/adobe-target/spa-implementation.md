@@ -5,9 +5,9 @@ description: Adobe Target을 사용하여 Experience Platform 웹 SDK로 개인�
 seo-description: Adobe Target을 사용하여 Experience Platform 웹 SDK로 개인화된 컨텐츠를 렌더링하는 방법 학습
 keywords: target;adobe target;xdm views; views;single page applications;SPA;SPA lifecycle;client-side;AB testing;AB;Experience targeting;XT;VEC
 translation-type: tm+mt
-source-git-commit: 8aeeef09602386f219fd8284b332469c04e88ffb
+source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
 workflow-type: tm+mt
-source-wordcount: '1671'
+source-wordcount: '1669'
 ht-degree: 14%
 
 ---
@@ -68,15 +68,15 @@ Adobe Target에서 XDM 뷰를 활용하면 마케터가 Visual Experience Compos
 3. XDM 보기를 정의한 후 AB 또는 XT VEC 활동을 전달하려면 단일 페이지 애플리케이션에서 로 설정된 `sendEvent()` `renderDecisions` `true` 기능과 해당 XDM 뷰를 구현하십시오. XDM 뷰를 전달해야 합니다 `xdm.web.webPageDetails.viewName`. 이 단계에서는 마케터가 Visual Experience Composer를 활용하여 해당 XDM에 대한 A/B 및 XT 테스트를 실행할 수 있습니다.
 
    ```javascript
-   alloy("sendEvent",  { 
-     "renderDecisions": true, 
-     "xdm": { 
-       "web": { 
-         "webPageDetails": { 
-            "viewName":"home" 
-         }      
+   alloy("sendEvent", { 
+     "renderDecisions": true, 
+     "xdm": { 
+       "web": { 
+         "webPageDetails": { 
+         "viewName":"home" 
+         }
        } 
-     } 
+     } 
    });
    ```
 
@@ -96,7 +96,7 @@ Adobe Target에서 XDM 뷰를 활용하면 마케터가 Visual Experience Compos
 
 전체 홈 사이트에서 A/B 테스트를 실행하려면, XDM을 다음 `sendEvent()` 으로 설정하고 호출해야 `viewName` 합니다. `home`
 
-```javascript
+```jsx
 function onViewChange() { 
   
   var viewName = window.location.hash; // or use window.location.pathName if router works on path and not hash 
@@ -109,14 +109,15 @@ function onViewChange() {
     viewName = viewName.substr(1); 
   }
    
-  alloy("sendEvent",  { 
-    "renderDecisions": true, 
+  alloy("sendEvent", { 
+    "renderDecisions": true, 
     "xdm": { 
       "web": { 
         "webPageDetails": { 
           "viewName":"home" 
         } 
       } 
+    }
   }); 
 } 
 
@@ -137,18 +138,18 @@ history.listen(onViewChange);
 
 ![](assets/use-case-2.png)
 
-```javascript
+```jsx
 function onViewChange(viewName) { 
 
-  alloy("sendEvent",  { 
-    "renderDecisions": true, 
+  alloy("sendEvent", { 
+    "renderDecisions": true, 
     "xdm": { 
-       "web": { 
+      "web": { 
         "webPageDetails": { 
           "viewName": viewName
         }
       } 
-    } 
+    } 
   }); 
 } 
 
@@ -177,17 +178,16 @@ The marketing team want to run an A/B test to see whether changing the color of 
 
 선택한 배달 환경 설정에 따라 사이트에서 컨텐츠를 개인화하기 위해 각 배달 환경 설정에 대해 보기를 만들 수 있습니다. 일반 **배달을** 선택하면 보기 이름을 &quot;체크아웃-정상&quot;으로 지정할 수 있습니다. If **Express Delivery** is selected, the View can be named &quot;checkout-express&quot;.
 
-```javascript
+```jsx
 function onViewChange(viewName) { 
-
-  alloy("sendEvent",  { 
-    "renderDecisions": true, 
+  alloy("sendEvent", { 
+    "renderDecisions": true, 
     "xdm": { 
       "web": { 
         "webPageDetails": { 
-          "viewName": viewName   
+          "viewName": viewName 
         }
-      }
+      }
     }
   }); 
 } 
@@ -219,7 +219,7 @@ class Checkout extends Component {
 
 ## SPA용 Visual Experience Composer 사용
 
-XDM 뷰 정의를 완료하고 전달된 XDM 뷰`sendEvent()` 로 구현하면 VEC는 이러한 뷰를 감지할 수 있으며 사용자가 A/B 또는 XT 활동에 대한 작업과 수정 사항을 생성할 수 있습니다.
+XDM 뷰 정의를 완료하고 전달된 XDM 뷰 `sendEvent()` 로 구현하면 VEC는 이러한 뷰를 감지할 수 있으며 사용자가 A/B 또는 XT 활동에 대한 작업과 수정 사항을 생성할 수 있습니다.
 
 >[!NOTE]
 >
