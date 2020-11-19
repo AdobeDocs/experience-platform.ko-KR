@@ -2,12 +2,12 @@
 keywords: DoubleClick Floodlight;doubleclick floodlight extension;doubleclick;floodlight
 title: DoubleClick Floodlight(베타) 확장
 seo-title: DoubleClick Floodlight(베타) 확장
-description: DoubleClick Floodlight(베타) 익스텐션은 Adobe 실시간 고객 데이터 플랫폼의 광고 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
-seo-description: DoubleClick Floodlight(베타) 익스텐션은 Adobe 실시간 고객 데이터 플랫폼의 광고 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
+description: DoubleClick Floodlight(베타) 익스텐션은 실시간 고객 데이터 플랫폼의 광고 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
+seo-description: DoubleClick Floodlight(베타) 익스텐션은 실시간 고객 데이터 플랫폼의 광고 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '560'
+source-wordcount: '557'
 ht-degree: 4%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 4%
 
 이 확장 기능을 사용하면 기존 투광(Global Site Tag) 형식이 아닌 일반적인 [!DNL DoubleClick Floodlight] 태그를 빠르고 쉽게 배포할 수 있습니다. 참고:이 익스텐션은 베타 버전입니다.
 
-[!DNL DoubleClick Floodlight] (베타)는 Adobe 실시간 고객 데이터 플랫폼의 광고 확장입니다. 확장 기능에 대한 자세한 내용은 DoubleClick Floodlight에 대한 [!DNL Google] 지원 설명서를 [참조하십시오](https://support.google.com/dcm/answer/2823388?hl=en).
+[!DNL DoubleClick Floodlight] (베타)는 실시간 고객 데이터 플랫폼의 광고 확장입니다. 확장 기능에 대한 자세한 내용은 DoubleClick Floodlight에 대한 [!DNL Google] 지원 설명서를 [참조하십시오](https://support.google.com/dcm/answer/2823388?hl=en).
 
 이 목적지는 Adobe Experience Platform Launch 확장선입니다 Adobe 실시간 CDP에서 플랫폼 실행 확장 기능이 작동하는 방법에 대한 자세한 내용은 [Adobe Experience Platform Launch 확장 개요를 참조하십시오](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
