@@ -2,12 +2,12 @@
 keywords: bizible;bizible extension;bizible destination
 title: Bizible 확장
 seo-title: Bizible 확장
-description: eBizible 익스텐션은 Adobe 실시간 고객 데이터 플랫폼의 이메일 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
-seo-description: 비즈블 익스텐션은 Adobe 실시간 고객 데이터 플랫폼의 이메일 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
+description: 비즈블 익스텐션은 실시간 고객 데이터 플랫폼의 이메일 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
+seo-description: 비즈블 익스텐션은 실시간 고객 데이터 플랫폼의 이메일 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: d9bf874dbfcc00c0a6e267f1a2e96f1223054825
+source-git-commit: 6eabcd70b133051205b669253f280cb92c24412f
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '526'
 ht-degree: 5%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 5%
 
 [!DNL Bizible] 는 데이터에 대한 탁월한 가시성을 제공하는 업계 선도적인 B2B 기여도 분석 솔루션으로, 성장을 촉진하는 현명한 의사 결정을 내릴 수 있습니다.
 
-[!DNL Bizible] 는 Adobe 실시간 고객 데이터 플랫폼의 이메일 확장입니다. 확장 기능에 대한 자세한 내용은 [Adobe Exchange의 확장 페이지를 참조하십시오](https://exchange.adobe.com/experiencecloud.details.101055.bizible-analytics.html).
+[!DNL Bizible] 실시간 고객 데이터 플랫폼의 이메일 확장입니다. 확장 기능에 대한 자세한 내용은 [Adobe Exchange의 확장 페이지를 참조하십시오](https://exchange.adobe.com/experiencecloud.details.101055.bizible-analytics.html).
 
 이 대상은 [!DNL Adobe Experience Platform Launch] 확장자입니다. Adobe 실시간 CDP에서 익스텐션이 작동하는 방법에 대한 자세한 내용은 [!DNL Platform Launch] Experience Platform Launch 확장 개요를 참조하십시오 [](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
