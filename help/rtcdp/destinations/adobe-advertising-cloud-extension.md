@@ -2,12 +2,12 @@
 keywords: Advertising Cloud;advertising cloud extension; advertising cloud destination
 title: Adobe Advertising Cloud 확장
 seo-title: Adobe Advertising Cloud 확장
-description: Adobe Advertising Cloud 익스텐션은 Adobe 실시간 고객 데이터 플랫폼의 광고 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
-seo-description: Adobe Advertising Cloud 익스텐션은 Adobe 실시간 고객 데이터 플랫폼의 광고 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
+description: Adobe Advertising Cloud 익스텐션은 실시간 고객 데이터 플랫폼의 광고 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
+seo-description: Adobe Advertising Cloud 익스텐션은 실시간 고객 데이터 플랫폼의 광고 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: d9bf874dbfcc00c0a6e267f1a2e96f1223054825
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '507'
+source-wordcount: '504'
 ht-degree: 5%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 5%
 
 DSP과 검색 모두에 대한 [!DNL Advertising Cloud] [!DNL Advertising Cloud] 전환 및 세그먼트 태그를 구현하기 위한 확장입니다(현재 DCO는 지원되지 않음).
 
-Adobe Advertising Cloud은 Adobe 실시간 고객 데이터 플랫폼의 광고 확장입니다.
+Adobe Advertising Cloud은 실시간 고객 데이터 플랫폼의 광고 확장입니다.
 
 이 대상은 [!DNL Adobe Experience Platform Launch] 확장자입니다. Adobe 실시간 CDP에서 익스텐션이 작동하는 방법에 대한 자세한 내용은 [!DNL Platform Launch] Experience Platform Launch 확장 개요를 참조하십시오 [](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
