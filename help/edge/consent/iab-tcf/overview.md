@@ -5,9 +5,9 @@ description: Experience Platform 웹 SDK를 사용하여 IAB TCF 2.0 동의 환�
 seo-description: Experience Platform 웹 SDK를 사용하여 IAB TCF 2.0 동의 환경 설정을 지원하는 방법을 알아봅니다.
 keywords: consent;setConsent;Profile Privacy Mixin;Experience Event Privacy Mixin;Privacy Mixin;IAB TCF 2.0;Real-time CDP;Real-time Customer Data Profile
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '938'
+source-wordcount: '937'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ IAB TCF 2.0과 함께 AEP 웹 SDK를 구현하려면 XDM(Experience Data Model) 
 
 ## 실시간 고객 데이터 플랫폼 통합
 
-Adobe Experience Platform에 내장된 Adobe 실시간 고객 데이터 플랫폼(실시간 CDP)을 사용하면 다양한 엔터프라이즈 소스에서 알려진 데이터와 익명의 데이터를 취합할 수 있습니다. 이를 통해 모든 채널과 디바이스에서 개인화된 경험을 실시간으로 제공하는 데 사용할 수 있는 고객 프로파일을 만들 수 있습니다. AEP Web SDK를 통해 동의 데이터를 실시간 CDP에 전송하려면 다음을 수행해야 합니다.
+Adobe Experience Platform 기반의 실시간 CDP(Customer Data Platform)를 통해 다양한 엔터프라이즈 소스에서 알려진 익명의 데이터를 취합할 수 있습니다. 이를 통해 모든 채널과 디바이스에서 개인화된 경험을 실시간으로 제공하는 데 사용할 수 있는 고객 프로파일을 만들 수 있습니다. AEP Web SDK를 통해 동의 데이터를 실시간 CDP에 전송하려면 다음을 수행해야 합니다.
 
 - 프로필 개인 정보 혼합에서 사용할 수 있도록 설정된 [!DNL XDM Individual Profile] 클래스를 기반으로 하는 데이터 세트 [!DNL Real-time Customer Profile]입니다.
 - 실시간 CDP를 사용하여 에지 구성을 설정하고 위에 언급된 프로필 데이터 세트를 사용합니다.
