@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: ade9da107ee6dd100a33a7e7e9a20b4335721e0a
+source-git-commit: 5aa8dbcd85fa506f90515ce3e01d35993dd99c10
 workflow-type: tm+mt
-source-wordcount: '2078'
+source-wordcount: '2077'
 ht-degree: 3%
 
 ---
@@ -107,7 +107,7 @@ For more information, please see the [[!DNL Offer Decisioning]](https://experien
 
 ## [!DNL Destinations] 서비스 {#destinations}
 
-Adobe의 실시간 고객 데이터 플랫폼 [](../../rtcdp/overview.md)에서 대상은 대상 플랫폼과 사전 구축된 통합으로 이러한 파트너에게 데이터를 원활하게 제공할 수 있습니다.
+실시간 [고객 데이터 플랫폼](../../rtcdp/overview.md)에서 대상은 대상 플랫폼과 사전 구축된 통합으로 이러한 파트너에게 데이터를 원활하게 제공할 수 있습니다.
 
 **새 대상**
 
