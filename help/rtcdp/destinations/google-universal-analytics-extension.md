@@ -2,12 +2,12 @@
 keywords: google universal analytics;Google Universal Analytics;Google universal analytics
 title: Google Universal Analytics 확장
 seo-title: Google Universal Analytics 확장
-description: Google Universal Analytics 익스텐션은 Adobe 실시간 고객 데이터 플랫폼의 분석 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
-seo-description: Google Universal Analytics 익스텐션은 Adobe 실시간 고객 데이터 플랫폼의 분석 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
+description: Google Universal Analytics 익스텐션은 실시간 고객 데이터 플랫폼의 분석 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
+seo-description: Google Universal Analytics 익스텐션은 실시간 고객 데이터 플랫폼의 분석 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '569'
+source-wordcount: '566'
 ht-degree: 4%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 4%
 
 [!DNL Google Universal Analytics] 광고 ROI를 측정할 수 있을 뿐만 아니라 Flash, 동영상, 소셜 네트워킹 사이트 및 애플리케이션을 추적할 수 있습니다.
 
-[!DNL Google Universal Analytics] 는 Adobe 실시간 고객 데이터 플랫폼의 분석 확장입니다. 확장 기능에 대한 자세한 내용은 [Adobe Exchange의 확장 페이지를 참조하십시오](https://exchange.adobe.com/experiencecloud.details.102829.google-universal-analytics.html).
+[!DNL Google Universal Analytics] 실시간 고객 데이터 플랫폼의 분석 확장입니다. 확장 기능에 대한 자세한 내용은 [Adobe Exchange의 확장 페이지를 참조하십시오](https://exchange.adobe.com/experiencecloud.details.102829.google-universal-analytics.html).
 
 이 목적지는 Adobe Experience Platform Launch 확장선입니다 Adobe 실시간 CDP에서 플랫폼 실행 확장 기능이 작동하는 방법에 대한 자세한 내용은 [Adobe Experience Platform Launch 확장 개요를 참조하십시오](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
