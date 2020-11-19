@@ -3,9 +3,9 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: 엔티티 - 실시간 고객 프로필 API
 topic: guide
 translation-type: tm+mt
-source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
+source-git-commit: 3287203be574cf95d7e201dc99f681e237d96e67
 workflow-type: tm+mt
-source-wordcount: '1676'
+source-wordcount: '1695'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ Adobe Experience Platform을 사용하면 RESTful API 또는 사용자 인터페
 
 ## 시작하기
 
-이 안내서에 사용되는 API 끝점은 [[!DNL 실시간 고객 프로필 API]의 일부입니다](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). 계속하기 전에 [시작하기 가이드](getting-started.md) 에서 관련 문서 링크, 이 문서에서 샘플 API 호출 읽기 안내서, 모든 API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요 정보를 검토하십시오 [!DNL Experience Platform] .
+이 안내서에서 사용되는 API 끝점은 이 끝점의 일부입니다 [[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). 계속하기 전에 [시작하기 가이드](getting-started.md) 에서 관련 문서 링크, 이 문서에서 샘플 API 호출 읽기 안내서, 모든 API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요 정보를 검토하십시오 [!DNL Experience Platform] .
 
 ## ID로 프로필 데이터 액세스
 
@@ -910,4 +910,5 @@ curl -X GET \
 | `startTime` | 시계열 개체를 필터링할 시작 시간(밀리초)을 지정합니다. | `startTime=1539838505` |
 | `endTime` | 시계열 개체를 필터링할 종료 시간(밀리초)을 지정합니다. | `endTime=1539838510` |
 | `limit` | 반환할 최대 개체 수를 지정하는 숫자 값. 기본값:1000년 | `limit=100` |
+| `property` | 속성 값으로 필터링합니다. 다음 평가기를 지원합니다.=, !=, &lt;, &lt;=, >, >=. 최대 세 개의 속성이 지원되는 경험 이벤트에만 사용할 수 있습니다. | `property=webPageDetails.isHomepage=true&property=localTime<="2020-07-20"` |
 | `withCA` | 조회를 위해 계산된 속성을 활성화하는 기능 플래그. 기본값:false | `withCA=true` |
