@@ -2,12 +2,12 @@
 title: Adobe Experience Platform 웹 SDK 도움말
 seo-title: Adobe Experience Platform 웹 SDK 도움말
 description: Adobe Experience Platform 웹 SDK의 정의와 사용 방법을 살펴보십시오.
-seo-description: adobe experience cloud 고객이 Experience Cloud의 다양한 서비스와 상호 작용할 수 있도록 허용
+seo-description: Adobe Experience Cloud 고객이 Experience Cloud의 다양한 서비스와 인터랙션할 수 있는 방법을 살펴보십시오.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;edge;Visitor.js;AppMeasurement.js;AT.js;DIL.js;web sdk;SDK;web SDK;Launch;launch
 translation-type: tm+mt
-source-git-commit: 2e28fda40a135330054c749d73439448a55db52c
+source-git-commit: bdd80b15258bf4e3c0dee1e260fd3469c76d5885
 workflow-type: tm+mt
-source-wordcount: '708'
+source-wordcount: '689'
 ht-degree: 3%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 3%
 
 # Adobe Experience Platform 웹 SDK 소개
 
-Adobe Experience Platform 웹 SDK는 Adobe Experience Cloud 고객이 Adobe을 통해 다양한 서비스와 상호 작용할 수 있는 클라이언트측 JavaScript 라이브러리입니다 [!DNL Experience Cloud] [!DNL Experience Platform Edge Network]. JavaScript 라이브러리 외에도 웹 SDK 구성에 도움이 되는 [Experience Platform Launch](https://docs.adobe.com/content/help/ko-KR/launch/using/extensions-ref/adobe-extension/aep-extension/overview.html) 확장이 있습니다.
+Adobe Experience Platform 웹 SDK는 Adobe Experience Cloud 고객이 Adobe Experience Platform 에지 네트워크를 통해 다양한 서비스와 상호 작용할 수 있도록 하는 클라이언트측 JavaScript 라이브러리입니다. [!DNL Experience Cloud] JavaScript 라이브러리 외에도 웹 SDK 구성에 도움이 되는 [Experience Platform Launch](https://docs.adobe.com/content/help/ko-KR/launch/using/extensions-ref/adobe-extension/aep-extension/overview.html) 확장이 있습니다.
 
 ## 경험 에지
 
@@ -42,7 +42,7 @@ Adobe Experience Platform 웹 SDK는 Adobe Experience Cloud 고객이 Adobe을 �
 
 ## 비디오 개요
 
-다음 비디오에서는 Adobe Experience Platform [!DNL Web SDK] 와 [!DNL Edge Network]에 대한 개요를 제공합니다.
+다음 비디오에서는 Adobe Experience Platform [!DNL Web SDK] 와 Adobe Experience Platform에 대한 개요를 설명합니다 [!DNL Edge Network].
 
 >[!VIDEO](https://video.tv.adobe.com/v/34141?quality=12&learn=on)
 
@@ -59,13 +59,9 @@ Adobe Experience Platform 웹 SDK는 다음 SDK를 대체합니다.
 
 새로운 라이브러리 외에도 Adobe 솔루션에 대한 HTTP 요청을 간소화하는 새로운 종점이 있습니다. 이전에 Visitor.js는 방문자 ID 서비스에 차단 호출을 전송한 다음 AT.js에서 Adobe Target에 대한 호출을 전송하고, DIL.js는 Adobe Audience Manager에 대한 호출을 전송했으며, 마지막으로 AppMeasurement.js는 Adobe Analytics에 대한 호출을 전송했습니다. 이 새 라이브러리와 종단점은 ID를 검색하고, [!DNL Target] [!DNL Audience Manager]경험을 가져오고, 데이터를 보내고, 데이터를 한 번의 호출로 Adobe Experience Platform에 전달할 수 있습니다.
 
-다음 비디오에서는 Adobe Experience Platform [!DNL Web SDK] 와 [!DNL Edge Network] 활용 방법을 보여 줍니다. 이 비디오 예제에서는 Adobe에 대한 단일 호출을 사용하여 데이터 [!DNL Experience Platform], [!DNL Analytics][!DNL Audience Manager]및 [!DNL Target]데이터를 보냅니다.
+다음 비디오에서는 Adobe Experience Platform [!DNL Web SDK] 와 Adobe Experience Platform의 [!DNL Edge Network] 활용 방법을 설명합니다. 이 비디오 예제에서는 Adobe에 대한 단일 호출을 사용하여 데이터 [!DNL Experience Platform], [!DNL Analytics][!DNL Audience Manager]및 [!DNL Target]데이터를 보냅니다.
 
 >[!VIDEO](https://video.tv.adobe.com/v/34148?quality=12&learn=on)
-
-## 시작하기
-
-Adobe Experience Platform Launch을 [사용하는 방법에 대한 빠른 자습서를 보려면 시작 안내서](fundamentals/prerequisite.md) 를 참조하십시오.
 
 이 제품은 점점 더 많은 사용 사례를 지원하기 위해 끊임없이 진화하고 증가하고 있습니다. 최신 정보를 얻으려면 [지원되는 사용 사례 보드를 확인하십시오](https://github.com/adobe/alloy/projects/5). Adobe는 Adobe가 현재 지원하는 사용 사례와 귀하가 최상의 결정을 내릴 수 있도록 노력하고 있는 사례에 대해 이러한 최신 정보를 제공합니다.
 
