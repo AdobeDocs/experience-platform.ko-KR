@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: 5ff73aa1745e78f0026ada2c66908888be5f4498
+source-git-commit: ade9da107ee6dd100a33a7e7e9a20b4335721e0a
 workflow-type: tm+mt
-source-wordcount: '2086'
+source-wordcount: '2078'
 ht-degree: 3%
 
 ---
@@ -213,7 +213,7 @@ Adobe Experience Platform은 외부 소스에서 데이터를 인제스트할 �
 | 연결 삭제 | 이제 API 및 UI를 사용하여 오류가 있거나 불필요한 일괄 연결을 삭제할 수 [!DNL Flow Service] 있습니다. 자세한 내용은 Flow Service API를 사용하여 연결을 [삭제하고 UI를 사용하여 계정을](../../sources/tutorials/api/delete.md) 삭제하는 방법에 대한 자습서를 참조하십시오 [](../../sources/tutorials/ui/delete-accounts.md). |
 | 계층 매핑 | 데이터 수집 프로세스 중에 JSON 또는 Partiented와 같은 계층적 소스 파일을 미리 볼 수 있습니다. 자세한 내용은 UI에서 클라우드 스토리지 커넥터에 대한 데이터 흐름 [구성에 대한 자습서를](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) 참조하십시오. |
 | 스트리밍 소스의 매핑을 위한 API 지원 | 이제 API를 사용하여 스트리밍 소스에서 매핑 기능을 수행할 수 있습니다. |
-| 클라우드 스토리지 소스에 대한 사용자 정의 구분 기호에 대한 API 지원 | 이제 클라우드 스토리지 소스를 사용하여 CSV로 구분된 파일이 아닌 파일을 수집할 수 있습니다. 탭, 쉼표, 파이프, 세미콜론 또는 해시와 같은 단일 열 구분 기호를 사용하여 모든 형식의 플랫 파일을 수집할 수 있습니다. 값을 제공하지 않을 경우 기본값은 쉼표로 설정됩니다. |
+| 클라우드 스토리지 소스에 대한 사용자 정의 구분 기호에 대한 API 지원 | 이제 클라우드 스토리지 소스를 사용하여 CSV로 구분된 파일이 아닌 파일을 수집할 수 있습니다. 탭, 쉼표, 파이프, 세미콜론 또는 해시와 같은 단일 열 구분 기호를 사용하여 모든 형식의 플랫 파일을 수집할 수 있습니다. |
 | Adobe Audience Manager 커넥터를 위한 샌드박스 지원 | Audience Manager 커넥터가 이제 샌드박스를 인식합니다. 사용자는 Audience Manager 데이터 세트를 선택한 샌드박스(비프로덕션 샌드박스 포함)로 라우팅하도록 커넥터를 활성화할 수 있습니다. 구성은 IMS 조직당 하나의 샌드박스로 제한됩니다. |
 | 향상된 UX | 이제 소스 카탈로그를 통해 파일 기반 수집에 액세스할 수 있습니다. |
 
