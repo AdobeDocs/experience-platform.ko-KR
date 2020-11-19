@@ -5,24 +5,24 @@ doc-type: release notes
 last-update: August 10, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: b4ce4c2e5ff5083f663c2daf23c32a1cec32124c
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '597'
-ht-degree: 5%
+source-wordcount: '582'
+ht-degree: 7%
 
 ---
 
 
 # Adobe Experience Platform 릴리스 노트
 
-**릴리스 날짜: 2020년 8월 12일**
+**릴리스 날짜: 2020년 12월 8일**
 
 Adobe Experience Platform의 기존 기능 업데이트:
 
-- [[!DNL 데이터 과학 작업 공간]](#dsw)
-- [[!DNL 대상]](#destinations)
-- [[!DNL 실시간 고객 데이터 플랫폼]](#rtcdp)
-- [[!DNL 소스]](#sources)
+- [[!DNL Data Science Workspace]](#dsw)
+- [[!DNL Destinations]](#destinations)
+- [[!DNL Real-time Customer Data Platform]](#rtcdp)
+- [[!DNL Sources]](#sources)
 
 ## [!DNL Data Science Workspace] {#dsw}
 
@@ -38,7 +38,7 @@ Adobe Experience Platform의 기존 기능 업데이트:
 
 ## 대상 {#destinations}
 
-Adobe의 실시간 고객 데이터 플랫폼 [](../../rtcdp/overview.md)에서 대상은 대상 플랫폼과 사전 구축된 통합으로 이러한 파트너에게 데이터를 원활하게 제공할 수 있습니다.
+실시간 [고객 데이터 플랫폼](../../rtcdp/overview.md)에서 대상은 대상 플랫폼과 사전 구축된 통합으로 이러한 파트너에게 데이터를 원활하게 제공할 수 있습니다.
 
 **새 대상**
 
@@ -57,7 +57,7 @@ Adobe Experience Platform 데이터를 활성화할 수 있는 새로운 대상�
 
 ## [!DNL Real-time Customer Data Platform] {#rtcdp}
 
-Experience Platform에 내장된 Adobe 실시간 고객 데이터 플랫폼([!DNL Real-time CDP])을 사용하면 알려진 데이터와 알려지지 않은 데이터를 결합하여 고객 여정 전반에서 지능적인 의사 결정을 통해 고객 프로파일을 활성화할 수 있습니다. [!DNL Real-time CDP] 여러 엔터프라이즈 데이터 소스를 통합하여 고객 프로파일을 실시간으로 생성 그런 다음 이러한 프로파일에서 작성한 세그먼트를 다운스트림 대상으로 전송하여 모든 채널과 디바이스에 개인화된 경험을 제공할 수 있습니다.
+실시간 고객 데이터 플랫폼([!DNL Real-time CDP])은 Experience Platform에 기반하여 기업이 알려진 데이터와 알려지지 않은 데이터를 통합하여 고객 여정 전반에서 지능적인 의사 결정을 통해 고객 프로파일을 활성화할 수 있도록 지원합니다. [!DNL Real-time CDP] 여러 엔터프라이즈 데이터 소스를 통합하여 고객 프로파일을 실시간으로 생성 그런 다음 이러한 프로파일에서 작성한 세그먼트를 다운스트림 대상으로 전송하여 모든 채널과 디바이스에 개인화된 경험을 제공할 수 있습니다.
 
 **새로운 기능**
 
