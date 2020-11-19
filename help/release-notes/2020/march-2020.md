@@ -6,10 +6,10 @@ last-update: March 10, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '854'
-ht-degree: 5%
+source-wordcount: '840'
+ht-degree: 6%
 
 ---
 
@@ -20,11 +20,11 @@ ht-degree: 5%
 
 Adobe Experience Platform의 기존 기능 업데이트:
 
-* [[!DNL 데이터 거버넌스]](#governance)
-* [[!DNL 데이터 처리]](#ingestion)
-* [[!DNL 대상]](#destinations)
-* [[!DNL ID 서비스]](#identity)
-* [[!DNL 소스]](#sources)
+* [[!DNL Data Governance]](#governance)
+* [[!DNL Data Ingestion]](#ingestion)
+* [[!DNL Destinations]](#destinations)
+* [[!DNL Identity Service]](#identity)
+* [[!DNL Sources]](#sources)
 
 ## [!DNL Data Governance] {#governance}
 
@@ -69,7 +69,7 @@ Adobe Experience Platform은 모든 유형의 데이터와 지연 시간을 인�
 
 ## 대상 {#destinations}
 
-Adobe의 실시간 고객 데이터 플랫폼 [](../../rtcdp/overview.md)에서 대상은 대상 플랫폼과 사전 구축된 통합으로 이러한 파트너에게 데이터를 원활하게 제공할 수 있습니다.
+실시간 [고객 데이터 플랫폼](../../rtcdp/overview.md)에서 대상은 대상 플랫폼과 사전 구축된 통합으로 이러한 파트너에게 데이터를 원활하게 제공할 수 있습니다.
 
 **새 대상**
 
