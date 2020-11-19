@@ -5,9 +5,9 @@ description: Experience Platform 웹 SDK를 사용하여 Adobe Analytics에서 �
 seo-description: Experience Platform 웹 SDK를 사용하여 Adobe Analytics에서 자동으로 매핑되는 변수 알아보기
 keywords: adobe analytics;variables;analytics;automatic map;automatically mapped;
 translation-type: tm+mt
-source-git-commit: b81c0c450ddee4b0c0abedfd8ca53c3a599fb3cb
+source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
 workflow-type: tm+mt
-source-wordcount: '674'
+source-wordcount: '675'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # 변수가 [!DNL Analytics]
 
-아래는 Adobe Experience Platform이 자동으로 매핑되는 변수 [!DNL Edge Network] 목록입니다 [!DNL Analytics].
+다음은 Adobe Experience Platform 에지 네트워크가 자동으로 매핑하는 변수 목록입니다 [!DNL Analytics].
 
 | XDM 필드 경로 | [!DNL Analytics Query String] / HTTP 헤더 | 설명 |
 | ---------- | ------------------------- | ----------------------------------------- |
