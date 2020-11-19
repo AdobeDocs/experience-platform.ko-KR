@@ -5,9 +5,9 @@ seo-title: Google 고객 일치 대상
 description: Google Customer Match를 사용하면 온라인 및 오프라인 데이터를 사용하여 검색, 쇼핑, Gmail, YouTube 등 Google의 소유물과 운영 자산에서 고객에게 도달하고 다시 참여할 수 있습니다.
 seo-description: Google Customer Match를 사용하면 온라인 및 오프라인 데이터를 사용하여 검색, 쇼핑, Gmail, YouTube 등 Google의 소유물과 운영 자산에서 고객에게 도달하고 다시 참여할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '1555'
+source-wordcount: '1554'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 ## 사용 사례
 
-대상을 사용하는 방법과 시기를 보다 잘 이해할 수 있도록 Adobe의 실시간 고객 데이터 플랫폼 고객이 이 기능을 사용하여 해결할 수 있는 샘플 사용 사례를 소개합니다. [!DNL Google Customer Match]
+대상을 사용하는 방법과 시기를 보다 잘 이해할 수 있도록 실시간 고객 데이터 플랫폼 고객이 이 기능을 사용하여 해결할 수 있는 샘플 사용 사례를 소개합니다. [!DNL Google Customer Match]
 
 
 ### 사용 사례 #1
