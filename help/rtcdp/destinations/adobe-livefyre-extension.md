@@ -2,12 +2,12 @@
 keywords: livefyre;livefyre extension
 title: Adobe Livefyre 확장
 seo-title: Adobe Livefyre 확장
-description: Adobe Livefyre 익스텐션은 Adobe 실시간 고객 데이터 플랫폼의 소셜 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
-seo-description: Adobe Livefyre 익스텐션은 Adobe 실시간 고객 데이터 플랫폼의 소셜 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
+description: Adobe Livefyre 익스텐션은 실시간 고객 데이터 플랫폼의 소셜 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
+seo-description: Adobe Livefyre 익스텐션은 실시간 고객 데이터 플랫폼의 소셜 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: d9bf874dbfcc00c0a6e267f1a2e96f1223054825
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '543'
+source-wordcount: '540'
 ht-degree: 6%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 6%
 
 Adobe Livefyre를 사용하면 사용자 생성 컨텐츠의 지속적인 흐름을 검색, 구성 및 웹 사이트에 게시하여 고도로 개인화된 경험을 제작할 수 있습니다.
 
-Adobe Livefyre는 Adobe 실시간 고객 데이터 플랫폼의 소셜 확장입니다. 확장 기능에 대한 자세한 내용은 [Adobe Exchange의 확장 페이지를 참조하십시오](https://exchange.adobe.com/experiencecloud.details.100464.html).
+Adobe Livefyre는 실시간 고객 데이터 플랫폼의 소셜 확장입니다. 확장 기능에 대한 자세한 내용은 [Adobe Exchange의 확장 페이지를 참조하십시오](https://exchange.adobe.com/experiencecloud.details.100464.html).
 
 이 대상은 [!DNL Adobe Experience Platform Launch] 확장자입니다. Adobe 실시간 CDP에서 익스텐션이 작동하는 방법에 대한 자세한 내용은 [!DNL Platform Launch] Experience Platform Launch 확장 개요를 참조하십시오 [](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
