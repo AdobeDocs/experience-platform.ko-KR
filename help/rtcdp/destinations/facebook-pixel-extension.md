@@ -2,12 +2,12 @@
 keywords: facebook pixel extensions;facebook pixel extension;facebook pixel destinations;facebook pixel
 title: Facebook 픽셀 확장
 seo-title: Facebook 픽셀 확장
-description: Facebook 픽셀 확장 기능은 Adobe 실시간 고객 데이터 플랫폼의 광고 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
-seo-description: Facebook 픽셀 확장 기능은 Adobe 실시간 고객 데이터 플랫폼의 광고 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
+description: Facebook 픽셀 확장 기능은 실시간 고객 데이터 플랫폼의 광고 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
+seo-description: Facebook 픽셀 확장 기능은 실시간 고객 데이터 플랫폼의 광고 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '546'
+source-wordcount: '543'
 ht-degree: 5%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 5%
 
 이 [!DNL Facebook Pixel] 는 사람들이 웹 사이트에서 취하는 행동을 파악하여 광고의 효과를 측정할 수 있는 분석 도구입니다.
 
-[!DNL Facebook Pixel] 는 Adobe 실시간 고객 데이터 플랫폼의 광고 확장입니다. 확장 기능에 대한 자세한 내용은 [Facebook Pixel 웹 사이트를 참조하십시오](https://developers.facebook.com/docs/facebook-pixel/).
+[!DNL Facebook Pixel] 실시간 고객 데이터 플랫폼의 광고 확장입니다. 확장 기능에 대한 자세한 내용은 [Facebook Pixel 웹 사이트를 참조하십시오](https://developers.facebook.com/docs/facebook-pixel/).
 
 이 목적지는 Adobe Experience Platform Launch 확장선입니다 Adobe 실시간 CDP에서 플랫폼 실행 확장 기능이 작동하는 방법에 대한 자세한 내용은 [Adobe Experience Platform Launch 확장 개요를 참조하십시오](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
