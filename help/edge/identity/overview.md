@@ -5,17 +5,17 @@ description: Adobe Experience Cloud ID를 얻는 방법을 알아봅니다.
 seo-description: Adobe Experience Cloud ID를 얻는 방법을 알아봅니다.
 keywords: Identity;First Party Identity;Identity Service;3rd Party Identity;ID Migration;Visitor ID;third party identity;thirdPartyCookiesEnabled;idMigrationEnabled;getIdentity;Syncing Identities;syncIdentity;sendEvent;identityMap;primary;ecid;Identity Namespace;namespace id;authenticationState;hashEnabled;
 translation-type: tm+mt
-source-git-commit: d069b3007265406367ca9de2b85540b2a070cf36
+source-git-commit: 1b5ee9b1f9bdc7835fa8de59020b3eebb4f59505
 workflow-type: tm+mt
-source-wordcount: '730'
-ht-degree: 5%
+source-wordcount: '731'
+ht-degree: 3%
 
 ---
 
 
 # ID - Experience Cloud ID 검색
 
-Adobe Experience Platform [!DNL Web SDK] 는 [Adobe 아이덴티티 서비스를 활용합니다](../../identity-service/ecid.md). 이렇게 하면 각 장치에 페이지 간의 활동을 함께 연결할 수 있도록 장치에서 지속되는 고유한 식별자가 있습니다.
+Adobe Experience Platform 웹 SDK는 [Adobe ID 서비스를 활용합니다](../../identity-service/ecid.md). 이렇게 하면 각 장치에 페이지 간의 활동을 함께 연결할 수 있도록 장치에서 지속되는 고유한 식별자가 있습니다.
 
 ## 자사 ID
 
@@ -27,11 +27,11 @@ ID를 타사 도메인(demdex.net)과 동기화하여 사이트 간 추적을 �
 
 ## ID 마이그레이션
 
-방문자 API를 사용하여 마이그레이션할 때 기존 AMCV 쿠키를 마이그레이션할 수도 있습니다. ECID 마이그레이션을 활성화하려면 구성에서 매개 `idMigrationEnabled` 변수를 설정합니다. 일부 사용 사례를 사용하도록 id 마이그레이션이 설정되었습니다.
+방문자 API를 사용하여 마이그레이션할 때 기존 AMCV 쿠키를 마이그레이션할 수도 있습니다. ECID 마이그레이션을 활성화하려면 구성에서 매개 `idMigrationEnabled` 변수를 설정합니다. ID 마이그레이션은 다음 사용 사례를 활성화합니다.
 
-* 도메인의 일부 페이지가 방문자 API를 사용하고 다른 페이지가 이 SDK를 사용하는 경우 이 경우를 지원하기 위해 SDK는 기존 AMCV 쿠키를 읽고 기존 ECID를 사용하여 새 쿠키를 기록합니다. 또한, SDK는 AEP 웹 SDK로 구현된 페이지에서 ECID를 먼저 얻는 경우 방문자 API를 사용하여 구현된 후속 페이지의 ECID가 동일하도록 AMCV 쿠키를 기록합니다.
-* 방문자 API가 있는 페이지에서 AEP 웹 SDK가 설정되면 이 경우를 지원하기 위해 AMCV 쿠키가 설정되지 않은 경우 SDK는 페이지에서 방문자 API를 찾아 ECID를 얻기 위해 호출합니다.
-* 전체 사이트가 AEP 웹 SDK를 사용하고 있고 방문자 API가 없는 경우 ECID를 마이그레이션하여 재방문자 정보를 유지하는 것이 유용합니다. SDK가 일정 기간 `idMigrationEnabled` 에 배포되어 대부분의 방문자 쿠키가 마이그레이션되면 설정을 해제할 수 있습니다.
+* 도메인의 일부 페이지가 방문자 API를 사용하고 다른 페이지가 이 SDK를 사용하는 경우 이 경우를 지원하기 위해 SDK는 기존 AMCV 쿠키를 읽고 기존 ECID를 사용하여 새 쿠키를 기록합니다. 또한, SDK는 SDK로 구현된 페이지에서 ECID를 먼저 얻는 경우 방문자 API를 사용하여 구현된 후속 페이지의 ECID가 동일하도록 AMCV 쿠키를 기록합니다.
+* 방문자 API도 있는 페이지에서 Adobe Experience Platform 웹 SDK가 설정된 경우. 이 경우를 지원하기 위해 AMCV 쿠키가 설정되지 않은 경우 SDK는 페이지에서 방문자 API를 찾아 ECID를 얻기 위해 호출합니다.
+* 전체 사이트가 Adobe Experience Platform 웹 SDK를 사용하고 있고 방문자 API가 없는 경우 재방문자 정보가 보존되도록 ECID를 마이그레이션하는 것이 유용합니다. SDK가 일정 기간 `idMigrationEnabled` 에 배포되어 대부분의 방문자 쿠키가 마이그레이션되면 설정을 해제할 수 있습니다.
 
 ## 방문자 ID 검색
 
@@ -43,13 +43,14 @@ ID를 타사 도메인(demdex.net)과 동기화하여 사이트 간 추적을 �
 
 ```javascript
 alloy("getIdentity")
-  .then(function(result.identity.ECID) {
-    // This function will get called with Adobe Experience Cloud Id when the command promise is resolved
+  .then(function(result) {
+    // The command succeeded.
+    console.log(result.identity.ECID);
   })
   .catch(function(error) {
     // The command failed.
-    // "error" will be an error object with additional information
-  })
+    // "error" will be an error object with additional information.
+  });
 ```
 
 ## ID 동기화
@@ -79,21 +80,14 @@ alloy("sendEvent", {
       ]
     }
   }
-})
+});
 ```
 
+내의 각 속성은 특정 ID 네임스페이스에 속하는 ID를 `identityMap` 나타냅니다 [](../../identity-service/namespaces.md). 속성 이름은 ID 네임스페이스 기호여야 합니다. ID 아래의 Adobe Experience Platform 사용자 인터페이스에 나열될 수[!UICONTROL 있습니다]. 속성 값은 해당 ID 네임스페이스와 관련된 ID 배열이어야 합니다.
 
-### ID 옵션 동기화
+ID 배열의 각 ID 개체는 다음과 같이 구성됩니다.
 
-#### ID 네임스페이스 기호
-
-| **유형** | **필수 여부** | **기본값** |
-| -------- | ------------ | ----------------- |
-| 문자열 | 예 | 없음 |
-
-개체의 키는 ID 네임스페이스 [](../../identity-service/namespaces.md) 기호입니다. 이 목록은 Adobe Experience Platform 사용자 인터페이스에서 &quot;ID&quot;[!UICONTROL 에서 확인할 수 있습니다].
-
-#### `id`
+### `id`
 
 | **유형** | **필수 여부** | **기본값** |
 | -------- | ------------ | ----------------- |
@@ -101,7 +95,7 @@ alloy("sendEvent", {
 
 지정된 네임스페이스에 대해 동기화할 ID입니다.
 
-#### `authenticationState`
+### `authenticationState`
 
 | **유형** | **필수 여부** | **기본값** | **가능한 값** |
 | -------- | ------------ | ----------------- | ------------------------------------ |
@@ -109,18 +103,10 @@ alloy("sendEvent", {
 
 ID의 인증 상태입니다.
 
-#### `primary`
+### `primary`
 
 | **유형** | **필수 여부** | **기본값** |
 | -------- | ------------ | ----------------- |
 | 부울 | 옵션 | false |
 
 이 ID를 통합 프로필의 기본 조각으로 사용할지 여부를 결정합니다. 기본적으로 ECID는 사용자의 기본 식별자로 설정됩니다.
-
-#### `hashEnabled`
-
-| **유형** | **필수 여부** | **기본값** |
-| -------- | ------------ | ----------------- |
-| 부울 | 옵션 | false |
-
-활성화하면 SHA256 해싱을 사용하여 ID를 해시합니다.
