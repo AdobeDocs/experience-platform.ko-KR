@@ -5,9 +5,9 @@ description: Adobe Target을 사용하여 Experience Platform 웹 SDK로 개인�
 seo-description: Adobe Target을 사용하여 Experience Platform 웹 SDK로 개인화된 컨텐츠를 렌더링하는 방법 학습
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes;prehiding snippet;vec;Form-Based Experience Composer;xdm;audiences;decisions;scope;schema;
 translation-type: tm+mt
-source-git-commit: f2bd8b89207901e57272a4f56d7f561ac10eb60a
+source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
 workflow-type: tm+mt
-source-wordcount: '626'
+source-wordcount: '629'
 ht-degree: 3%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 3%
 
 # [!DNL Target] 개요
 
-Adobe Experience Platform은 Adobe Target에서 관리하는 개인화된 경험을 웹 채널에 전달하고 렌더링할 [!DNL Web SDK] 수 있습니다. VEC( [Visual Experience Composer](https://docs.adobe.com/content/help/en/target/using/experiences/vec/visual-experience-composer.html) )라고 하는 WYSIWYG 편집기 또는 [양식 기반 Experience Composer](https://docs.adobe.com/content/help/en/target/using/experiences/form-experience-composer.html)비시각적 인터페이스를 사용하여 활동 및 개인화 경험을 만들고 활성화하고 제공할 수 있습니다.
+Adobe Experience Platform은 Adobe Target에서 관리하는 개인화된 경험을 웹 채널에 전달하고 제공할 [!DNL Web SDK] 수 있습니다. VEC( [Visual Experience Composer](https://docs.adobe.com/content/help/en/target/using/experiences/vec/visual-experience-composer.html) )라고 하는 WYSIWYG 편집기 또는 [양식 기반 Experience Composer](https://docs.adobe.com/content/help/en/target/using/experiences/form-experience-composer.html)비시각적 인터페이스를 사용하여 활동 및 개인화 경험을 만들고 활성화하고 제공할 수 있습니다.
 
 ## Adobe Target 활성화
 
@@ -35,7 +35,7 @@ Adobe Experience Platform은 Adobe Target에서 관리하는 개인화된 경험
 
 ## VEC 활동 자동 렌더링
 
-AEP 웹 SDK는 사용자를 위해 웹상에서 Adobe Target의 VEC를 통해 정의된 경험을 자동으로 렌더링할 수 있는 강력한 기능을 제공합니다. AEP 웹 SDK에서 VEC 활동을 자동 렌더링하도록 나타내려면 다음을 사용하여 이벤트를 전송합니다. `renderDecisions = true`
+Adobe Experience Platform 웹 SDK는 사용자를 위해 웹에서 Adobe Target VEC를 통해 정의된 경험을 자동으로 렌더링할 수 있는 강력한 기능을 제공합니다. VEC 활동을 자동 렌더링하도록 Adobe Experience Platform 웹 SDK에 표시하려면 다음을 사용하여 이벤트를 전송합니다. `renderDecisions = true`
 
 ```javascript
 alloy
@@ -85,32 +85,33 @@ alloy
 
 ## The `__view__` Scope
 
-AEP는 AEP에 의존하지 않고 VEC 작업을 검색할 수 있는 기능 [!DNL Web SDK] [!DNL Web SDK] 을 제공합니다. &quot;a&quot;로 `__view__` 정의된 이벤트를 전송합니다 `decisionScopes`.
+Adobe Experience Platform 웹 SDK는 SDK에 의존하지 않고 VEC 작업을 검색할 수 있는 기능을 제공합니다. &quot;a&quot;로 `__view__` 정의된 이벤트를 전송합니다 `decisionScopes`.
 
 ```javascript
 alloy("sendEvent", {
-  decisionScopes: [“__view__”,"foo", "bar"], 
-  "xdm": { 
-    "web": { 
-      "webPageDetails": { 
-        "name": "Home Page"
-       }
-      } 
-     }
+      "decisionScopes": ["__view__", "foo", "bar"], 
+      "xdm": { 
+        "web": { 
+          "webPageDetails": { 
+            "name": "Home Page"
+          }
+        } 
+      }
     }
-   ).then(results){
-  for (decision of results.decisions){
-     if(decision.decisionScope == "__view__")
-       console.log(decision.content)
-}
-};
+  ).then(function(results) {
+    for (decision of results.decisions) {
+      if (decision.decisionScope === "__view__") {
+        console.log(decision.content)
+      }
+    }
+  });
 ```
 
 ## XDM 고객
 
-AEP 웹 SDK를 통해 전달할 Target 활동에 대해 대상을 정의할 때 [XDM을](https://docs.adobe.com/content/help/ko-KR/experience-platform/xdm/home.html) 정의하고 사용해야 합니다. XDM 스키마, 클래스 및 믹스를 정의한 후 타깃팅을 위해 XDM 데이터로 정의된 Target 대상 규칙을 만들 수 있습니다. Target 내에서 XDM 데이터는 Audience Builder에 사용자 지정 매개 변수로 표시됩니다. XDM은 점 표기법(예: )을 사용하여 `web.webPageDetails.name`정리됩니다.
+Adobe Experience Platform 웹 SDK를 통해 제공될 Target 활동에 대해 대상을 정의할 때 [XDM을](https://docs.adobe.com/content/help/ko-KR/experience-platform/xdm/home.html) 정의하고 사용해야 합니다. XDM 스키마, 클래스 및 믹스를 정의한 후 타깃팅을 위해 XDM 데이터로 정의된 Target 대상 규칙을 만들 수 있습니다. Target 내에서 XDM 데이터는 Audience Builder에 사용자 지정 매개 변수로 표시됩니다. XDM은 점 표기법(예: )을 사용하여 `web.webPageDetails.name`정리됩니다.
 
-사용자 지정 매개 변수 또는 사용자 프로필을 사용하는 사전 정의된 대상이 있는 Target 활동이 있는 경우 AEP 웹 SDK를 통해 올바로 전달되지 않습니다. 사용자 지정 매개 변수 또는 사용자 프로필을 사용하는 대신 XDM을 사용해야 합니다. 그러나 XDM이 필요하지 않은 AEP 웹 SDK를 통해 지원되는 기본 대상 타깃팅 필드가 있습니다. XDM이 필요하지 않은 Target UI에서 사용할 수 있는 필드는 다음과 같습니다.
+사용자 지정 매개 변수 또는 사용자 프로필을 사용하는 사전 정의된 대상이 있는 Target 활동이 있는 경우 SDK를 통해 올바로 전달되지 않습니다. 사용자 지정 매개 변수 또는 사용자 프로필을 사용하는 대신 XDM을 사용해야 합니다. 그러나 XDM이 필요하지 않은 최신 대상 타깃팅 필드가 Adobe Experience Platform 웹 SDK를 통해 지원됩니다. XDM이 필요하지 않은 Target UI에서 사용할 수 있는 필드는 다음과 같습니다.
 
 * 타겟 라이브러리
 * 지역
