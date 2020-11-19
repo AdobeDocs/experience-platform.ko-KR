@@ -2,12 +2,12 @@
 keywords: bing;bing ads event tracking;event tracking bing;UET;UET extension
 title: Bing 광고 UET(Universal Event Tracking) 확장
 seo-title: Bing 광고 UET(Universal Event Tracking) 확장
-description: Bing 광고 UET(Universal Event Tracking) 익스텐션은 Adobe 실시간 고객 데이터 플랫폼의 광고 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
-seo-description: Bing 광고 UET(Universal Event Tracking) 익스텐션은 Adobe 실시간 고객 데이터 플랫폼의 광고 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
+description: Bing 광고 UET(Universal Event Tracking) 익스텐션은 실시간 고객 데이터 플랫폼의 광고 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
+seo-description: Bing 광고 UET(Universal Event Tracking) 익스텐션은 실시간 고객 데이터 플랫폼의 광고 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: d9bf874dbfcc00c0a6e267f1a2e96f1223054825
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '582'
+source-wordcount: '579'
 ht-degree: 6%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 6%
 
 [!DNL Bing Ads Universal Event Tracking] (UET) for [!DNL Experience Platform Launch] 은 누군가 검색 광고를 클릭한 후 발생하는 상황을 추적하는 유용한 방법입니다. 단일 UET 태그를 사용하여 웹 사이트에서 고객의 작업을 기록하면 해당 데이터를 활용하여 전환율을 추적하거나 리마케팅 목록을 사용하여 고객을 타깃팅할 수 있습니다.
 
-[!DNL Bing Ads Universal Event Tracking] (UET)는 Adobe 실시간 고객 데이터 플랫폼의 광고 확장입니다. 확장 기능에 대한 자세한 내용은 [Adobe Exchange의 확장 페이지를 참조하십시오](https://exchange.adobe.com/experiencecloud.details.100154.html).
+[!DNL Bing Ads Universal Event Tracking] (UET)는 실시간 고객 데이터 플랫폼의 광고 확장입니다. 확장 기능에 대한 자세한 내용은 [Adobe Exchange의 확장 페이지를 참조하십시오](https://exchange.adobe.com/experiencecloud.details.100154.html).
 
 이 대상은 [!DNL Adobe Experience Platform Launch] 확장자입니다. Adobe 실시간 CDP에서 익스텐션이 작동하는 방법에 대한 자세한 내용은 [!DNL Platform Launch] Experience Platform Launch 확장 개요를 참조하십시오 [](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
