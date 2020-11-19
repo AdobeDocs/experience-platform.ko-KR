@@ -5,9 +5,9 @@ description: Experience Platform 웹 SDK를 사용하여 개인화된 컨텐츠�
 seo-description: Experience Platform 웹 SDK를 사용하여 개인화된 컨텐츠를 렌더링하는 방법 학습
 keywords: personalization;renderDecisions;sendEvent;decisionScopes;result.decisions;
 translation-type: tm+mt
-source-git-commit: db742119d8f169817080f1fd4e0dc08a0f0faa47
+source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
 workflow-type: tm+mt
-source-wordcount: '237'
+source-wordcount: '236'
 ht-degree: 0%
 
 ---
@@ -51,12 +51,12 @@ alloy("sendEvent",{
     if (result.decisions){
       // Do something with the decisions.
     }
-  })
+  });
 ```
 
 그러면 결정 목록이 각 결정에 대해 JSON 개체로서 반환됩니다.
 
-```javascript
+```json
 {
   "decisions": [
     {
