@@ -5,9 +5,9 @@ seo-title: 분석 대상
 description: Analytics 대상은 방문자가 사이트의 컨텐츠와 상호 작용하는 방식을 추적하고 데이터를 수집하여 대상자의 행동을 파악합니다. 이러한 플랫폼은 고부가가치 방문자의 참여 및 전환에 대한 고유한 통찰력을 제공합니다.
 seo-description: Analytics 대상은 방문자가 사이트의 컨텐츠와 상호 작용하는 방식을 추적하고 데이터를 수집하여 대상자의 행동을 파악합니다. 이러한 플랫폼은 고부가가치 방문자의 참여 및 전환에 대한 고유한 통찰력을 제공합니다.
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '202'
+source-wordcount: '201'
 ht-degree: 5%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 5%
 
 Analytics 대상은 방문자가 사이트의 컨텐츠와 상호 작용하는 방식을 추적하고 데이터를 수집하여 대상자의 행동을 파악합니다. 이러한 플랫폼은 고부가가치 방문자의 참여 및 전환에 대한 고유한 통찰력을 제공합니다.
 
-현재 Adobe 실시간 고객 데이터 플랫폼은 아래 나열된 분석 대상을 지원합니다. 이러한 대상에 연결하는 방법에 대한 자세한 내용은 개별 링크를 참조하십시오.
+현재 실시간 고객 데이터 플랫폼은 아래 나열된 분석 대상을 지원합니다. 이러한 대상에 연결하는 방법에 대한 자세한 내용은 개별 링크를 참조하십시오.
 
 * [웹 사이트 추적 확장 기능](/help/rtcdp/destinations/adform-extension.md)
 * [Adobe Analytics 확장](/help/rtcdp/destinations/adobe-analytics-extension.md)
