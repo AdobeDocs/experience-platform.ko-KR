@@ -2,12 +2,12 @@
 keywords: contentsquare extension;contentsquare destination;contentsquare
 title: Contentsquare 익스텐션
 seo-title: Contentsquare 익스텐션
-description: Contentsquare 익스텐션은 Adobe 실시간 고객 데이터 플랫폼의 분석 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
-seo-description: Contentsquare 익스텐션은 Adobe 실시간 고객 데이터 플랫폼의 분석 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
+description: Contentsquare 익스텐션은 실시간 고객 데이터 플랫폼의 분석 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
+seo-description: Contentsquare 익스텐션은 실시간 고객 데이터 플랫폼의 분석 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '583'
+source-wordcount: '580'
 ht-degree: 6%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 6%
 
 페이지 내 행동을 시각화하면 고객이 포기하는 이유와 개선 방법을 확인할 수 있습니다. 각 Analytics 세그먼트 및 Target 테스트에 대한 UX 및 컨텐츠 요소를 통해 매출을 창출할 수 있습니다. 태그를 [!DNL Contentsquare] 설치하고 사용자 지정 변수 및 이벤트를 설정합니다. 몇 번의 클릭만으로 UX 분석에 필요한 데이터를 수집할 수 있습니다.
 
-[!DNL Contentsquare] 는 Adobe 실시간 고객 데이터 플랫폼의 분석 확장입니다. 확장 기능에 대한 자세한 내용은 [Adobe Exchange의 확장 페이지를 참조하십시오](https://exchange.adobe.com/experiencecloud.details.100364.html).
+[!DNL Contentsquare] 실시간 고객 데이터 플랫폼의 분석 확장입니다. 확장 기능에 대한 자세한 내용은 [Adobe Exchange의 확장 페이지를 참조하십시오](https://exchange.adobe.com/experiencecloud.details.100364.html).
 
 이 목적지는 Adobe Experience Platform Launch 확장선입니다 Adobe 실시간 CDP에서 플랫폼 실행 확장 기능이 작동하는 방법에 대한 자세한 내용은 [Adobe Experience Platform Launch 확장 개요를 참조하십시오](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
