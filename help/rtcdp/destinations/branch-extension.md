@@ -2,12 +2,12 @@
 keywords: branch;branch extension;branch destination
 title: 지점 확장
 seo-title: 지점 확장
-description: 지점 익스텐션은 Adobe 실시간 고객 데이터 플랫폼의 광고 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
-seo-description: 지점 익스텐션은 Adobe 실시간 고객 데이터 플랫폼의 광고 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
+description: 지점 익스텐션은 실시간 고객 데이터 플랫폼의 광고 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
+seo-description: 지점 익스텐션은 실시간 고객 데이터 플랫폼의 광고 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 6eabcd70b133051205b669253f280cb92c24412f
 workflow-type: tm+mt
-source-wordcount: '539'
+source-wordcount: '536'
 ht-degree: 5%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 5%
 
 분기 서비스는 모든 디바이스, 채널 및 플랫폼에서 고객 확보, 참여 및 측정할 수 있는 강력한 링크 및 솔루션을 제공합니다.
 
-브랜치는 Adobe 실시간 고객 데이터 플랫폼의 광고 확장입니다. 확장 기능에 대한 자세한 내용은 분기 웹 사이트의 [기능 페이지를](https://branch.io/features/) 참조하십시오.
+지사 광고 담당자는 실시간 고객 데이터 플랫폼의 광고 확장입니다. 확장 기능에 대한 자세한 내용은 분기 웹 사이트의 [기능 페이지를](https://branch.io/features/) 참조하십시오.
 
 이 목적지는 Adobe Experience Platform Launch 확장선입니다 Adobe 실시간 CDP에서 플랫폼 실행 확장 기능이 작동하는 방법에 대한 자세한 내용은 [Adobe Experience Platform Launch 확장 개요를 참조하십시오](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
