@@ -2,12 +2,12 @@
 keywords: Marketo;marketo;Marketo extension;marketo extension
 title: 마케팅 확장
 seo-title: 마케팅 확장
-description: Marketing To 익스텐션은 Adobe 실시간 고객 데이터 플랫폼의 이메일 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
-seo-description: Marketing To 익스텐션은 Adobe 실시간 고객 데이터 플랫폼의 이메일 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
+description: Marketing To 익스텐션은 실시간 고객 데이터 플랫폼의 이메일 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
+seo-description: Marketing To 익스텐션은 실시간 고객 데이터 플랫폼의 이메일 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '558'
+source-wordcount: '555'
 ht-degree: 5%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 5%
 
 [!DNL Marketo's] 마케터는 강력한 마케팅 자동화 소프트웨어를 사용하여 디지털 마케팅의 예술과 과학을 마스터하여 고객과 잠재 고객의 참여를 유도할 수 있습니다.
 
-[!DNL Marketo] 는 Adobe 실시간 고객 데이터 플랫폼의 이메일 확장입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 [확장 페이지를 참조하십시오](https://exchange.adobe.com/experiencecloud.details.101071.marketo-for-adobe-launch.html).
+[!DNL Marketo] 실시간 고객 데이터 플랫폼의 이메일 확장입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 [확장 페이지를 참조하십시오](https://exchange.adobe.com/experiencecloud.details.101071.marketo-for-adobe-launch.html).
 
 이 목적지는 Adobe Experience Platform Launch 확장선입니다 Adobe 실시간 CDP에서 플랫폼 실행 확장 기능이 작동하는 방법에 대한 자세한 내용은 [Adobe Experience Platform Launch 확장 개요를 참조하십시오](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
