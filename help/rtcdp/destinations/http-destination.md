@@ -1,13 +1,13 @@
 ---
 keywords: streaming;
-title: HTTP 대상은 타사 HTTP 끝점으로 프로필 데이터를 보내는 데 도움이 되는 Adobe 실시간 고객 데이터 플랫폼 대상입니다.
-seo-title: HTTP 대상은 타사 HTTP 끝점으로 프로필 데이터를 보내는 데 도움이 되는 Adobe 실시간 고객 데이터 플랫폼 대상입니다.
-description: HTTP 대상은 타사 HTTP 끝점으로 프로필 데이터를 보내는 데 도움이 되는 Adobe 실시간 고객 데이터 플랫폼 대상입니다.
-seo-description: HTTP 대상은 타사 HTTP 끝점으로 프로필 데이터를 보내는 데 도움이 되는 Adobe 실시간 고객 데이터 플랫폼 대상입니다.
+title: HTTP 대상은 프로필 데이터를 타사 HTTP 끝점으로 보내는 데 도움이 되는 실시간 고객 데이터 플랫폼 대상입니다.
+seo-title: HTTP 대상은 프로필 데이터를 타사 HTTP 끝점으로 보내는 데 도움이 되는 실시간 고객 데이터 플랫폼 대상입니다.
+description: HTTP 대상은 프로필 데이터를 타사 HTTP 끝점으로 보내는 데 도움이 되는 실시간 고객 데이터 플랫폼 대상입니다.
+seo-description: HTTP 대상은 프로필 데이터를 타사 HTTP 끝점으로 보내는 데 도움이 되는 실시간 고객 데이터 플랫폼 대상입니다.
 translation-type: tm+mt
-source-git-commit: f4840f028bb855e79c0f2ae5c82bc38906a7aaec
+source-git-commit: 6eabcd70b133051205b669253f280cb92c24412f
 workflow-type: tm+mt
-source-wordcount: '572'
+source-wordcount: '568'
 ht-degree: 2%
 
 ---
@@ -21,9 +21,9 @@ ht-degree: 2%
 
 ## 개요 {#overview}
 
-대상 [!DNL HTTP] 은 [!DNL Adobe Real-Time Customer Data Platform] 프로필 데이터를 타사 끝점으로 보내는 데 도움이 되는 스트리밍 [!DNL HTTP] 대상입니다.
+대상 [!DNL HTTP] 은 [!DNL Real-time Customer Data Platform] 프로필 데이터를 타사 끝점으로 보내는 데 도움이 되는 스트리밍 [!DNL HTTP] 대상입니다.
 
-끝점에 프로필 데이터를 [!DNL HTTP] 보내려면 먼저 해당 대상의 대상에 연결해야 합니다 [[!DNL Adobe Real-Time Customer Data Platform]](#connect-destination).
+끝점에 프로필 데이터를 [!DNL HTTP] 보내려면 먼저 해당 대상의 대상에 연결해야 합니다 [[!DNL Real-time Customer Data Platform]](#connect-destination).
 
 ## 사용 사례 {#use-cases}
 
