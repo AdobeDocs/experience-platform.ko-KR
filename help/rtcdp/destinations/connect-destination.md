@@ -1,13 +1,13 @@
 ---
 keywords: connect destination;destination connect;how to connect destination
-title: Adobe 실시간 고객 데이터 플랫폼의 대상에 연결
-seo-title: Adobe 실시간 고객 데이터 플랫폼의 대상에 연결
+title: 실시간 고객 데이터 플랫폼에서 대상에 연결
+seo-title: 실시간 고객 데이터 플랫폼에서 대상에 연결
 type: Tutorial
-description: 이 자습서에서는 Adobe 실시간 고객 데이터 플랫폼에서 대상을 연결하는 단계를 나열합니다
+description: 이 자습서에서는 실시간 고객 데이터 플랫폼에서 대상을 연결하는 단계를 나열합니다
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '126'
+source-wordcount: '122'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # 대상을 연결하는 방법
 
-Adobe 실시간 고객 데이터 플랫폼의 대상에 연결하려면 아래 절차를 따르십시오.
+실시간 고객 데이터 플랫폼의 대상에 연결하려면 아래 절차를 따르십시오.
 
 1. 왼쪽 **[!UICONTROL 탐색 막대에서]** 대상으로 이동합니다.
 2. [ [[!UICONTROL 카탈로그]](/help/rtcdp/destinations/destinations-workspace.md#catalog) ] 탭에서 연결할 대상을 선택합니다.
