@@ -6,10 +6,10 @@ last-update: April 13, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '991'
-ht-degree: 5%
+source-wordcount: '972'
+ht-degree: 8%
 
 ---
 
@@ -22,11 +22,11 @@ Adobe Experience Platform의 새로운 기능:
 * [[!DNL Intelligent Services]](#intelligent)
 
 기존 기능 업데이트:
-* [[!DNL 경험 데이터 모델(XDM)]](#xdm)
-* [[!DNL 데이터 거버넌스]](#governance)
-* [[!DNL 대상]](#destinations)
+* [[!DNL Experience Data Model (XDM)]](#xdm)
+* [[!DNL Data Governance]](#governance)
+* [[!DNL Destinations]](#destinations)
 * [[!DNL Privacy Service]](#privacy)
-* [[!DNL 소스]](#sources)
+* [[!DNL Sources]](#sources)
 
 ## [!DNL Intelligent Services] {#intelligent}
 
@@ -37,7 +37,7 @@ Adobe Experience Platform의 새로운 기능:
 | 기능 | 설명 |
 |---|---|
 | [!DNL Customer AI] | [!DNL Customer AI] 마케터에게는 이에 대한 설명이 포함된 개별 수준에서 고객 예측을 생성할 수 있는 강력한 기능이 제공됩니다. 영향력 있는 요소의 도움을 통해 고객의 관심사와 이유를 파악할 [!DNL Customer AI] 수 있습니다. 또한 마케터는 [!DNL Customer AI] 예측 및 인사이트를 통해 가장 적합한 제안과 메시지를 제공하여 고객 경험을 개인화할 수 있습니다. |
-| [!DNL Attribution AI] | [!DNL Attribution AI] 는 지정된 결과에 대한 고객 인터랙션의 영향과 점진적 효과를 계산하는 다중 채널 알고리즘 속성 서비스입니다. 마케터는 [!DNL Attribution AI]고객 여정의 각 단계에서 개별 고객과의 인터랙션이 미치는 영향을 파악하여 마케팅 및 광고 비용을 측정하고 최적화할 수 있습니다. |
+| [!DNL Attribution AI] | [!DNL Attribution AI] 는 지정된 결과에 대한 고객 인터랙션의 영향과 점진적 효과를 계산하는 다중 채널 알고리즘 속성 서비스입니다. 마케터는 [!DNL Attribution AI]를 통해 고객 여정의 각 단계에서 개별 고객과의 인터랙션이 미치는 영향을 파악하여 마케팅 및 광고 비용을 측정하고 최적화할 수 있습니다. |
 
 **알려진 문제**
 
@@ -90,7 +90,7 @@ Adobe Experience Platform [!DNL Data Governance] 는 고객 데이터를 관리�
 
 ## 대상 {#destinations}
 
-Adobe의 실시간 고객 데이터 플랫폼 [](../../rtcdp/overview.md)에서 대상은 대상 플랫폼과 사전 구축된 통합으로 이러한 파트너에게 데이터를 원활하게 제공할 수 있습니다.
+실시간 [고객 데이터 플랫폼](../../rtcdp/overview.md)에서 대상은 대상 플랫폼과 사전 구축된 통합으로 이러한 파트너에게 데이터를 원활하게 제공할 수 있습니다.
 
 **새 대상**
 
