@@ -2,12 +2,12 @@
 keywords: Qualtrics;qualtrics;Qualtrics Website Feedback;qualtrics website feedback;Qualtricks website feedback
 title: Qualtrics 웹 사이트 피드백 확장
 seo-title: Qualtrics 웹 사이트 피드백 확장
-description: TestQualtrics 웹 사이트 피드백 익스텐션은 Adobe 실시간 고객 데이터 플랫폼의 설문 조사 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
-seo-description: Qualtrics 웹 사이트 피드백 익스텐션은 Adobe 실시간 고객 데이터 플랫폼의 설문 조사 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
+description: Qualtrics 웹 사이트 피드백 익스텐션은 실시간 고객 데이터 플랫폼의 설문 조사 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
+seo-description: Qualtrics 웹 사이트 피드백 익스텐션은 실시간 고객 데이터 플랫폼의 설문 조사 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 6eabcd70b133051205b669253f280cb92c24412f
 workflow-type: tm+mt
-source-wordcount: '629'
+source-wordcount: '626'
 ht-degree: 4%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 4%
 
 포인트-클릭 방식의 직관적인 인터페이스를 사용하여 정확한 타이밍에 브랜드화된 브랜드화된 웹 메시지를 제작 및 배포할 수 있습니다. 웹 사이트에서 수집한 데이터와 인사이트는 모든 채널에서 고객 경험을 전체적으로 확인할 수 있는 고객 피드백 데이터와 함께 하나의 플랫폼에서 확인할 수 있습니다.
 
-[!DNL Qualtrics Website Feedback] 는 Adobe 실시간 고객 데이터 플랫폼의 설문 조사 확장입니다. 확장 기능에 대한 자세한 내용은 [Adobe Exchange의 확장 페이지를 참조하십시오](https://exchange.adobe.com/experiencecloud.details.101569.qualtrics-website-feedback.html).
+[!DNL Qualtrics Website Feedback] 실시간 고객 데이터 플랫폼의 설문 조사 확장입니다. 확장 기능에 대한 자세한 내용은 [Adobe Exchange의 확장 페이지를 참조하십시오](https://exchange.adobe.com/experiencecloud.details.101569.qualtrics-website-feedback.html).
 
 이 목적지는 Adobe Experience Platform Launch 확장선입니다 Adobe 실시간 CDP에서 플랫폼 실행 확장 기능이 작동하는 방법에 대한 자세한 내용은 [Adobe Experience Platform Launch 확장 개요를 참조하십시오](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
