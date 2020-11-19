@@ -2,12 +2,12 @@
 keywords: email;Email;e-mail;email destinations;oracle responsys destination
 title: Oracle Responsys 대상
 seo-title: Oracle Responsys 대상
-description: Responsys는 Oracle이 이메일, 모바일, 디스플레이 및 소셜 간의 상호 작용을 개인화하기 위해 제공하는 크로스채널 마케팅 캠페인을 위한 기업 이메일 마케팅 툴입니다.
-seo-description: Responsys는 Oracle이 이메일, 모바일, 디스플레이 및 소셜 간의 상호 작용을 개인화하기 위해 제공하는 크로스채널 마케팅 캠페인을 위한 기업 이메일 마케팅 툴입니다.
+description: Respondsys는 Oracle이 이메일, 모바일, 디스플레이 및 소셜 간의 인터랙션을 개인화하기 위해 제공하는 크로스채널 마케팅 캠페인을 위한 기업 이메일 마케팅 툴입니다.
+seo-description: Respondsys는 Oracle이 이메일, 모바일, 디스플레이 및 소셜 간의 인터랙션을 개인화하기 위해 제공하는 크로스채널 마케팅 캠페인을 위한 기업 이메일 마케팅 툴입니다.
 translation-type: tm+mt
-source-git-commit: 67a353c950bef11ccbaa52c49d213f08449baa96
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '524'
+source-wordcount: '523'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 [Respondsys](https://www.oracle.com/marketingcloud/products/cross-channel-orchestration/) 는 이메일, 모바일, 디스플레이 및 소셜 간의 인터랙션을 개인화하도록 [!DNL Oracle] 하는 크로스채널 마케팅 캠페인을 위한 기업 이메일 마케팅 툴입니다.
 
-세그먼트 데이터 [!DNL Oracle Responsys]를 전송하려면 먼저 Adobe 실시간 고객 데이터 플랫폼의 대상에 [](#connect-destination) 연결한 다음 스토리지 위치에서 [데이터 가져오기](#import-data-into-responsys) 를 다음 [!DNL Oracle Responsys]로 설정해야 합니다.
+세그먼트 데이터를 대상 [!DNL Oracle Responsys]으로 전송하려면 먼저 실시간 고객 데이터 [플랫폼에서 대상에](#connect-destination) [연결한 다음 스토리지 위치에서 다음](#import-data-into-responsys) 위치로 데이터 가져오기를 [!DNL Oracle Responsys]설정해야 합니다.
 
 ## 내보내기 유형 {#export-type}
 
