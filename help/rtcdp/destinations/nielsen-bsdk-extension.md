@@ -2,12 +2,12 @@
 keywords: Nielsen BSDK;nielsen bsdk;nielsen BSDK
 title: Nielsen BSDK 익스텐션
 seo-title: Nielsen BSDK 익스텐션
-description: THe Nielsen BSDK 익스텐션은 Adobe 실시간 고객 데이터 플랫폼의 분석 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
-seo-description: Nielsen BSDK 익스텐션은 Adobe 실시간 고객 데이터 플랫폼의 분석 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
+description: Nielsen BSDK 익스텐션은 실시간 고객 데이터 플랫폼의 분석 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
+seo-description: Nielsen BSDK 익스텐션은 실시간 고객 데이터 플랫폼의 분석 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 6eabcd70b133051205b669253f280cb92c24412f
 workflow-type: tm+mt
-source-wordcount: '633'
+source-wordcount: '630'
 ht-degree: 5%
 
 ---
@@ -23,7 +23,7 @@ DCR:광고가 포함된 컨텐츠를 포함하여 비선형 디지털 컨텐츠�
 
 DTVR:프로그래밍 소스에 참여하는 데 데스크탑 및 모바일 디바이스에서 발생하는 선형 TV 시청에 대해 설명합니다. 이는 컴퓨터 및 모바일 디바이스에서 볼 수 있는 프로그램을 위한 TV 시청자 측정에 기여하여 MRC로부터 인증을 받은 첫 번째 솔루션입니다.
 
-[!DNL Nielsen BSDK] 는 Adobe 실시간 고객 데이터 플랫폼의 분석 확장입니다. 확장 기능에 대한 자세한 내용은 [Adobe Exchange의 확장 페이지를 참조하십시오](https://exchange.adobe.com/experiencecloud.details.101361.html).
+[!DNL Nielsen BSDK] 실시간 고객 데이터 플랫폼의 분석 확장입니다. 확장 기능에 대한 자세한 내용은 [Adobe Exchange의 확장 페이지를 참조하십시오](https://exchange.adobe.com/experiencecloud.details.101361.html).
 
 이 목적지는 Adobe Experience Platform Launch 확장선입니다 Adobe 실시간 CDP에서 플랫폼 실행 확장 기능이 작동하는 방법에 대한 자세한 내용은 [Adobe Experience Platform Launch 확장 개요를 참조하십시오](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
