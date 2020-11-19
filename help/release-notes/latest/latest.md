@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: 5aa8dbcd85fa506f90515ce3e01d35993dd99c10
+source-git-commit: b5fa40deb480f264b02a8be56aff2c50e4149cb2
 workflow-type: tm+mt
-source-wordcount: '2077'
+source-wordcount: '2126'
 ht-degree: 3%
 
 ---
@@ -122,6 +122,7 @@ For more information, please see the [[!DNL Offer Decisioning]](https://experien
 
 | 기능 | 설명 |
 | ------- | ----------- |
+| 대상 세부 정보 UX 업데이트 | 실시간 CDP의 대상 워크플로우에는 인라인 모니터링이 포함되어 있으므로 성공적인 일괄 처리 작업을 확인할 수 있습니다. 이 기능을 사용하면 경고 및 모니터링 대시보드를 통해 배치 대상에 대한 워크플로우에서 직접 문제를 해결하고 처리 과정에서 발생하는 오류를 추적할 수 있습니다. |
 | 필수 필드 | 사용자는 필드를 필수로 표시할 수 있으므로 필수 필드가 포함된 필드만 내보낼 수 있습니다. |
 
 <!-- | File scheduling | For both email based and cloud storage destinations, users can create a one-time export or create daily snapshots. |
