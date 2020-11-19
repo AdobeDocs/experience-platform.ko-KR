@@ -2,12 +2,12 @@
 keywords: Medallia;medallia
 title: 메달리아 익스텐션
 seo-title: 메달리아 익스텐션
-description: THe Medallia 익스텐션은 Adobe 실시간 고객 데이터 플랫폼의 고객 대상 음성입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
-seo-description: Medallia 익스텐션은 Adobe 실시간 고객 데이터 플랫폼의 고객 대상 음성입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
+description: Medallia 익스텐션은 실시간 고객 데이터 플랫폼의 고객 대상 음성입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
+seo-description: Medallia 익스텐션은 실시간 고객 데이터 플랫폼의 고객 대상 음성입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 6eabcd70b133051205b669253f280cb92c24412f
 workflow-type: tm+mt
-source-wordcount: '589'
+source-wordcount: '586'
 ht-degree: 4%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 4%
 
 웹 속성에 [!DNL Medallia] 빠르고 매끄럽게 배포할 수 있습니다. 또한 이 확장 기능을 통해 설문 조사 이벤트를 탐지하고 데이터 요소를 통해 실시간으로 고객 피드백을 수집하며 규칙에 따라 고객의 경험을 개인화하고 Adobe Analytics과 데이터를 공유할 수 있습니다.
 
-[!DNL Medallia] 는 Adobe 실시간 고객 데이터 플랫폼의 고객 확장의 음성입니다. 확장 기능에 대한 자세한 내용은 [Adobe Exchange의 확장 페이지를 참조하십시오](https://exchange.adobe.com/experiencecloud.details.103279.medallia-for-adobe-launch.html).
+[!DNL Medallia] 실시간 고객 데이터 플랫폼의 고객 익스텐션의 음성입니다. 확장 기능에 대한 자세한 내용은 [Adobe Exchange의 확장 페이지를 참조하십시오](https://exchange.adobe.com/experiencecloud.details.103279.medallia-for-adobe-launch.html).
 
 이 목적지는 Adobe Experience Platform Launch 확장선입니다 Adobe 실시간 CDP에서 플랫폼 실행 확장 기능이 작동하는 방법에 대한 자세한 내용은 [Adobe Experience Platform Launch 확장 개요를 참조하십시오](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
