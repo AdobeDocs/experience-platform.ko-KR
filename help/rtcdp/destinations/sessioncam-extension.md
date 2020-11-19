@@ -2,12 +2,12 @@
 keywords: SessionCam;session cam;sessioncam
 title: SessionCam 확장
 seo-title: SessionCam 확장
-description: THe SessionCam 익스텐션은 Adobe 실시간 고객 데이터 플랫폼의 분석 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
-seo-description: SessionCam 익스텐션은 Adobe 실시간 고객 데이터 플랫폼의 분석 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
+description: SessionCam 익스텐션은 실시간 고객 데이터 플랫폼의 분석 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
+seo-description: SessionCam 익스텐션은 실시간 고객 데이터 플랫폼의 분석 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 6eabcd70b133051205b669253f280cb92c24412f
 workflow-type: tm+mt
-source-wordcount: '559'
+source-wordcount: '556'
 ht-degree: 6%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 6%
 
 [!DNL SessionCam] 은 사용자 행동을 파악하고 가장 중요한 문제를 해결하는 필수 도구 모음을 제공합니다.
 
-[!DNL SessionCam] 는 Adobe 실시간 고객 데이터 플랫폼의 분석 확장입니다. 확장 기능에 대한 자세한 내용은 [Adobe Exchange의 확장 페이지를 참조하십시오](https://exchange.adobe.com/experiencecloud.details.100517.html).
+[!DNL SessionCam] 실시간 고객 데이터 플랫폼의 분석 확장입니다. 확장 기능에 대한 자세한 내용은 [Adobe Exchange의 확장 페이지를 참조하십시오](https://exchange.adobe.com/experiencecloud.details.100517.html).
 
 이 목적지는 Adobe Experience Platform Launch 확장선입니다 Adobe 실시간 CDP에서 플랫폼 실행 확장 기능이 작동하는 방법에 대한 자세한 내용은 [Adobe Experience Platform Launch 확장 개요를 참조하십시오](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
