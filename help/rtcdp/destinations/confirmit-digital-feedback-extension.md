@@ -2,12 +2,12 @@
 keywords: Confirmit Digital Feedback;confirmit extension;confirmit
 title: 디지털 피드백 확장 확인
 seo-title: 디지털 피드백 확장 확인
-description: 확인 디지털 피드백 익스텐션은 Adobe 실시간 고객 데이터 플랫폼의 고객 대상 음성입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
-seo-description: 확인 디지털 피드백 익스텐션은 Adobe 실시간 고객 데이터 플랫폼의 고객 대상 음성입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
+description: 확인 디지털 피드백 익스텐션은 실시간 고객 데이터 플랫폼의 고객 대상 음성입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
+seo-description: 확인 디지털 피드백 익스텐션은 실시간 고객 데이터 플랫폼의 고객 대상 음성입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '610'
+source-wordcount: '607'
 ht-degree: 4%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 4%
 * 전반적인 고객 만족도
 * 기타 기능
 
-[!DNL Confirmit] 디지털 피드백은 Adobe 실시간 고객 데이터 플랫폼에서 고객 확대의 소스입니다. 확장 기능에 대한 자세한 내용은 [Adobe Exchange의 확장 페이지를 참조하십시오](https://exchange.adobe.com/experiencecloud.details.103247.confirmit-digital-feedback-for-adobe-launch.html).
+[!DNL Confirmit] 디지털 피드백은 실시간 고객 데이터 플랫폼의 고객 익스텐션의 목소리입니다. 확장 기능에 대한 자세한 내용은 [Adobe Exchange의 확장 페이지를 참조하십시오](https://exchange.adobe.com/experiencecloud.details.103247.confirmit-digital-feedback-for-adobe-launch.html).
 
 이 목적지는 Adobe Experience Platform Launch 확장선입니다 Adobe 실시간 CDP에서 플랫폼 실행 확장 기능이 작동하는 방법에 대한 자세한 내용은 [Adobe Experience Platform Launch 확장 개요를 참조하십시오](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
