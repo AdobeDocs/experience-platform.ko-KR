@@ -6,9 +6,9 @@ seo-title: 소셜 네트워크 대상 워크플로우
 description: 소셜 네트워크 및 계정에 연결하는 지침
 seo-description: 소셜 네트워크 및 계정에 연결하는 지침
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '501'
+source-wordcount: '500'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 ## 소셜 네트워크 대상을 만드는 워크플로
 
-이 자습서는 예를 [!DNL Facebook] 들어 사용하지만 제품에 한 번 더 추가되면 Adobe 실시간 고객 데이터 플랫폼의 워크플로우는 모든 소셜 네트워크 대상에 대해 동일합니다.
+이 자습서는 예를 [!DNL Facebook] 들어 사용하지만 제품에 한 번 더 추가되면 실시간 고객 데이터 플랫폼의 워크플로우는 모든 소셜 네트워크 대상에 대해 동일합니다.
 
 1. 대상 **** > **[!UICONTROL 카탈로그]**&#x200B;에서 **[!UICONTROL Social]** 카테고리로스크롤합니다. 원하는 소셜 네트워크 대상을 선택한 다음 구성을 **[!UICONTROL 선택합니다]**.
 
