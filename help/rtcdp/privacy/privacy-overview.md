@@ -5,9 +5,9 @@ seo-title: 실시간 고객 데이터 프로필의 개인 정보
 description: 실시간 고객 데이터 프로필을 사용하면 개인 정보 보호 규정을 준수하는 데이터 운영을 간소화할 수 있습니다.
 seo-description: 실시간 고객 데이터 프로필을 사용하면 개인 정보 보호 규정을 준수하는 데이터 운영을 간소화할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: bdd80b15258bf4e3c0dee1e260fd3469c76d5885
 workflow-type: tm+mt
-source-wordcount: '360'
+source-wordcount: '359'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ GDPR [!DNL General Data Protection Regulation] (Adobe Certified Document Service
 
 ## IAB TCF 2.0 지원
 
-[!DNL Real-time CDP] 는 (IAB)에서 설명한 [대로](https://iabeurope.eu/vendor-list-tcf-v2-0/) 에 대해 등록된 [!DNL Transparency & Consent Framework (TCF)]공급업체 목록 [!DNL Interactive Advertising Bureau] 에포함되어 있습니다. TCF 2.0 요구 사항을 준수하여 자세한 고객 동의 데이터를 수집하여 저장된 고객 프로파일에 통합할 수 [!DNL Real-time CDP] 있습니다. 그런 다음 이 동의 데이터를 사용 사례에 따라 내보낸 대상 세그먼트에 특정 프로필이 포함되는지 여부를 고려시킬 수 있습니다.
+[!DNL Real-time CDP] 은 에 대한 등록된 [공급업체 목록](https://iabeurope.eu/vendor-list-tcf-v2-0/) 중 [!DNL Transparency & Consent Framework (TCF)]에 포함되어 있으며, 에 나와 [!DNL Interactive Advertising Bureau (IAB)]있습니다. TCF 2.0 요구 사항을 준수하여 자세한 고객 동의 데이터를 수집하여 저장된 고객 프로파일에 통합할 수 [!DNL Real-time CDP] 있습니다. 그런 다음 이 동의 데이터를 사용 사례에 따라 내보낸 대상 세그먼트에 특정 프로필이 포함되는지 여부를 고려시킬 수 있습니다.
 
 자세한 내용은 IAB [TCF 2.0 지원에 [!DNL Real-time CDP]](./iab/overview.md) 대한 개요를 참조하십시오.
 
