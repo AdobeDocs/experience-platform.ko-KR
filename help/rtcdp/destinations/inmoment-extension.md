@@ -2,12 +2,12 @@
 keywords: InMoment;inmoment;Inmoment;launch integration
 title: InMoment 확장
 seo-title: InMoment 확장
-description: InMoment 익스텐션은 Adobe 실시간 고객 데이터 플랫폼의 설문 조사 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
-seo-description: InMoment 익스텐션은 Adobe 실시간 고객 데이터 플랫폼의 설문 조사 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
+description: InMoment 익스텐션은 실시간 고객 데이터 플랫폼의 설문 조사 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
+seo-description: InMoment 익스텐션은 실시간 고객 데이터 플랫폼의 설문 조사 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '579'
+source-wordcount: '576'
 ht-degree: 6%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 6%
 
 Launch [!DNL InMoment] Integration을 사용하면 Digital Intercept 제품을 통해 온라인 피드백을 빠르고 손쉽게 활성화할 수 있습니다. 앱에서는 CX 관리자가 프로그램의 제어권을 더 잘 제어할 수 있도록 CXI 클라우드 관리자를 통해 가로채기를 구성 및 관리할 수 있습니다.
 
-[!DNL InMoment] 는 Adobe 실시간 고객 데이터 플랫폼의 설문 조사 확장입니다. 확장 기능에 대한 자세한 내용은 [Adobe Exchange의 확장 페이지를 참조하십시오](https://exchange.adobe.com/experiencecloud.details.100847.html).
+[!DNL InMoment] 실시간 고객 데이터 플랫폼의 설문 조사 확장입니다. 확장 기능에 대한 자세한 내용은 [Adobe Exchange의 확장 페이지를 참조하십시오](https://exchange.adobe.com/experiencecloud.details.100847.html).
 
 이 목적지는 Adobe Experience Platform Launch 확장선입니다 Adobe 실시간 CDP에서 플랫폼 실행 확장 기능이 작동하는 방법에 대한 자세한 내용은 [Adobe Experience Platform Launch 확장 개요를 참조하십시오](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
