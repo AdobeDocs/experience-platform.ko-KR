@@ -2,12 +2,12 @@
 keywords: PebblePost;pebblepost;PebblePost Programmatic Direct Mail;pebblepost programmatic direct mail
 title: 페블포스트 연장
 seo-title: 페블포스트 연장
-description: ThPebblePost 익스텐션은 Adobe 실시간 고객 데이터 플랫폼의 이메일 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
-seo-description: PebblePost 익스텐션은 Adobe 실시간 고객 데이터 플랫폼의 이메일 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
+description: PebblePost 익스텐션은 실시간 고객 데이터 플랫폼의 이메일 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
+seo-description: PebblePost 익스텐션은 실시간 고객 데이터 플랫폼의 이메일 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 6eabcd70b133051205b669253f280cb92c24412f
 workflow-type: tm+mt
-source-wordcount: '590'
+source-wordcount: '587'
 ht-degree: 4%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 4%
 
 [!DNL PebblePost's Programmatic Direct Mail®] 디지털 마케터는 온라인 관심사와 의도를 전환되는 오프라인 유형의 미디어에 연결할 수 있습니다. 마케터는 Adobe에서 만든 사용자 지정 데이터 세그먼트를 활용하여 고객과 연관성이 높고 오래 지속되는 내부 미디어 효과를 통해 소비자를 타깃팅할 수 있습니다. 응답 경로 활동 및 온사이트 전환을 기반으로 실시간으로 성과를 분석할 수 있습니다.
 
-[!DNL PebblePost] 는 Adobe 실시간 고객 데이터 플랫폼의 이메일 확장입니다. 확장 기능에 대한 자세한 내용은 [Adobe Exchange의 확장 페이지를 참조하십시오](https://exchange.adobe.com/experiencecloud.details.100315.programmatic-direct-mail.html).
+[!DNL PebblePost] 실시간 고객 데이터 플랫폼의 이메일 확장입니다. 확장 기능에 대한 자세한 내용은 [Adobe Exchange의 확장 페이지를 참조하십시오](https://exchange.adobe.com/experiencecloud.details.100315.programmatic-direct-mail.html).
 
 이 목적지는 Adobe Experience Platform Launch 확장선입니다 Adobe 실시간 CDP에서 플랫폼 실행 확장 기능이 작동하는 방법에 대한 자세한 내용은 [Adobe Experience Platform Launch 확장 개요를 참조하십시오](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
