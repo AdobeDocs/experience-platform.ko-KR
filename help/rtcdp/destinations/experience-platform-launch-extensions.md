@@ -5,9 +5,9 @@ seo-title: Experience Platform Launch 확장
 description: Launch는 Adobe의 차세대 태그 관리 기능입니다. Launch는 관련 고객 환경을 향상하는 데 필요한 모든 분석, 마케팅 및 광고 태그를 배포하고 관리하는 간단한 방법을 고객에게 제공합니다.
 seo-description: Launch는 Adobe의 차세대 태그 관리 기능입니다. Launch는 관련 고객 환경을 향상하는 데 필요한 모든 분석, 마케팅 및 광고 태그를 배포하고 관리하는 간단한 방법을 고객에게 제공합니다.
 translation-type: tm+mt
-source-git-commit: 6bb7bbeaceac8a69641138248a1c41cf9fb3dc63
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '646'
+source-wordcount: '645'
 ht-degree: 21%
 
 ---
@@ -31,7 +31,7 @@ Adobe 실시간 CDP 인터페이스에서 플랫폼 실행 확장 기능을 찾�
 
 플랫폼 론치 익스텐션은 원시 이벤트 데이터를 여러 유형의 대상으로 전달합니다. 익스텐션을 대상의 **이벤트 전달** 유형으로 간주합니다. 이는 원시 이벤트 데이터만 전달하는 대상 플랫폼과의 단순한 통합 유형입니다. 이러한 예는 [Gainsight 개인화 확장](/help/rtcdp/destinations/gainsight-extension.md) 또는 [고객 확장의 확인 음보입니다](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md).
 
-**Adobe의 프로필/세그먼트 내보내기** 대상은 실시간 고객 데이터 플랫폼을 통해 이벤트 데이터를 캡처하고, 다른 데이터 소스와 결합하고, 세그멘테이션을 적용하고, 세그먼트 및 자격이 있는 프로필을 대상에 내보냅니다. 이러한 예로는 [Amazon S3 클라우드 스토리지 대상](/help/rtcdp/destinations/amazon-s3-destination.md) 또는 [Google 디스플레이 및 비디오 360 광고 대상이 있습니다](/help/rtcdp/destinations/google-dv360-destination.md).
+**실시간 고객 데이터 플랫폼의 프로필/세그먼트 내보내기** 대상은 이벤트 데이터를 캡처하고, 다른 데이터 소스와 결합하고, 세그멘테이션을 적용하고, 세그먼트 및 자격 조건을 갖춘 프로필을 대상에 내보냅니다. 이러한 예로는 [Amazon S3 클라우드 스토리지 대상](/help/rtcdp/destinations/amazon-s3-destination.md) 또는 [Google 디스플레이 및 비디오 360 광고 대상이 있습니다](/help/rtcdp/destinations/google-dv360-destination.md).
 
 ![다른 대상과 Experience Platform Launch 확장](/help/rtcdp/destinations/assets/launch-and-other-destinations.png)
 
