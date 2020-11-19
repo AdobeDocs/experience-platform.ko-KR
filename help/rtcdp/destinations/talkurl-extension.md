@@ -2,12 +2,12 @@
 keywords: Talk URL Inbox;talk url inbox;Talk URL inbox;talk URL inbox;talk url;Talk URL;Talk url
 title: Talk URL 받은 편지함 확장
 seo-title: 대화 URL 받은 편지함
-description: Talk URL 받은 편지함 확장은 Adobe 실시간 고객 데이터 플랫폼의 고객 대상의 음성입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
-seo-description: Talk URL 받은 편지함 확장은 Adobe 실시간 고객 데이터 플랫폼의 고객 대상의 음성입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
+description: Talk URL 받은 편지함 확장은 실시간 고객 데이터 플랫폼에서 고객 대상의 음성입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
+seo-description: Talk URL 받은 편지함 확장은 실시간 고객 데이터 플랫폼에서 고객 대상의 음성입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '584'
+source-wordcount: '581'
 ht-degree: 6%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 6%
 
 웹 페이지 방문자로부터 음성 메시지를 수신합니다. 음성 메시지를 텍스트 통찰력으로 즉시 전송할 수 있는 호스팅 UI 및 클라우드 기반의 머신 러닝을 포함합니다.
 
-[!DNL Talk URL Inbox] 는 Adobe 실시간 고객 데이터 플랫폼의 고객 확장의 음성입니다. 확장 기능에 대한 자세한 내용은 [Adobe Exchange의 확장 페이지를 참조하십시오](https://exchange.adobe.com/experiencecloud.details.100583.html).
+[!DNL Talk URL Inbox] 실시간 고객 데이터 플랫폼의 고객 익스텐션의 음성입니다. 확장 기능에 대한 자세한 내용은 [Adobe Exchange의 확장 페이지를 참조하십시오](https://exchange.adobe.com/experiencecloud.details.100583.html).
 
 이 목적지는 Adobe Experience Platform Launch 확장선입니다 Adobe 실시간 CDP에서 플랫폼 실행 확장 기능이 작동하는 방법에 대한 자세한 내용은 [Adobe Experience Platform Launch 확장 개요를 참조하십시오](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
