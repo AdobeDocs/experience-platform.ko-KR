@@ -1,23 +1,23 @@
 ---
 keywords: RTCDP;CDP;Real-time Customer Data Platform;real time customer data platform;real time cdp;cdp;rtcdp
-title: Adobe 실시간 고객 데이터 플랫폼 시작하기
-seo-title: Adobe 실시간 고객 데이터 플랫폼 시작하기
-description: Adobe 실시간 고객 데이터 플랫폼을 위한 샘플 시나리오
-seo-description: Adobe 실시간 고객 데이터 플랫폼을 위한 샘플 시나리오
+title: 실시간 고객 데이터 플랫폼 시작하기
+seo-title: 실시간 고객 데이터 플랫폼 시작하기
+description: ' 실시간 고객 데이터 플랫폼을 위한 샘플 시나리오'
+seo-description: ' 실시간 고객 데이터 플랫폼을 위한 샘플 시나리오'
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '2326'
+source-wordcount: '2318'
 ht-degree: 1%
 
 ---
 
 
-# Adobe 실시간 고객 데이터 플랫폼 시작하기
+# 실시간 고객 데이터 플랫폼 시작하기
 
-이 시작 가이드는 Adobe 실시간 고객 데이터 플랫폼(실시간 CDP)의 샘플 구현을 안내합니다. 자체 구현을 설정할 때 예로 사용할 수 있습니다. 이 안내서에는 특정 예가 나와 있지만, 이 가이드는 설정을 만드는 동안 사용할 수 있는 추가 정보에 링크됩니다.
+이 시작 가이드는 실시간 고객 데이터 플랫폼(실시간 CDP)의 샘플 구현을 안내합니다. 자체 구현을 설정할 때 예로 사용할 수 있습니다. 이 안내서에는 특정 예가 나와 있지만, 이 가이드는 설정을 만드는 동안 사용할 수 있는 추가 정보에 링크됩니다.
 
-이 예에서는 Adobe Experience Platform에서 제공하는 실시간 고객 데이터 플랫폼 Adobe의 강력한 기능을 보여줍니다.
+이 예에서는 Adobe Experience Platform에서 제공하는 실시간 고객 데이터 플랫폼의 성능을 다음과 같이 보여줍니다.
 
 * 여러 소스에서 데이터 수집
 * 여러 문서를 하나의 [!DNL real-time customer profile]
@@ -121,7 +121,7 @@ Julia는 과거 구매와 의류 및 장비 런칭 성향을 감안한 Adobe Tar
 
 사라가 정신을 잃고 사이트를 떠나 그녀의 세션을 끝냅니다. 루마는 Adobe Experience Platform에 있는 자신의 데이터를 이용하여 사이트를 다시 방문할 수 있습니다.
 
-고객 경험 관리를 위해 Adobe Experience Platform에서 제공하는 Adobe 실시간 고객 데이터 플랫폼 조직에서는 다음을 수행할 수 있습니다.
+고객 경험 관리를 위해 Adobe Experience Platform에서 제공하는 실시간 고객 데이터 플랫폼입니다. 조직에서는 다음을 수행할 수 있습니다.
 
 * 데이터 통합 및 활성화 간소화
 * 알려진 데이터 및 알 수 없는 데이터 사용 관리
