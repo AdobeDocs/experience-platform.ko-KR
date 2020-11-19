@@ -5,9 +5,9 @@ description: Adobe Experience Platform 웹 SDK는 Offer Decisioning에서 관리
 seo-description: Adobe Experience Platform 웹 SDK는 Offer Decisioning에서 관리하는 맞춤형 프로모션을 제공하고 렌더링할 수 있습니다. Offer Decisioning UI 또는 API를 사용하여 오퍼 및 기타 관련 개체를 만들 수 있습니다.
 keywords: offer decisioning;decisioning;Web SDK;Platform Web SDK;personalized offers;deliver offers;offer delivery;offer personalization;
 translation-type: tm+mt
-source-git-commit: 86d819daf26eaf1b46afe76054d475e61720dd27
+source-git-commit: a0ede8c7d3088fe80d6ea014b4a4f9f08ee8a7aa
 workflow-type: tm+mt
-source-wordcount: '839'
+source-wordcount: '810'
 ht-degree: 9%
 
 ---
@@ -29,7 +29,7 @@ Adobe Experience Platform은 Offer Decisioning에서 관리되는 개인화된 �
 
 ## 용어
 
-Offer Decisioning에서 일할 때 다음 용어를 이해하는 것이 중요합니다. 자세한 내용이나 추가 용어를 보려면 [Offer Decisioning 용어집을 방문하십시오](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html?lang=en#get-started).
+Offer Decisioning에서 일할 때 다음 용어를 이해하는 것이 중요합니다. <!--For more information and to view additional terms, please visit the [Offer Decisioning glossary](/docs/offer-decisioning/using/get-started/glossary.html)-->.
 
 * **컨테이너:** 컨테이너는 서로 다른 우려를 분리시키는 격리 메커니즘입니다. 컨테이너 ID는 모든 저장소 API에 대한 첫 번째 경로 요소입니다. 모든 의사 결정 개체는 컨테이너 내에 있습니다.
 
@@ -83,7 +83,7 @@ Offer Decisioning을 활성화하려면 다음 단계를 수행해야 합니다.
    * 플랫폼 실행 설치된 SDK
       1. [플랫폼 론치 속성 만들기](https://docs.adobe.com/content/help/ko-KR/launch/using/reference/admin/companies-and-properties.html)
       2. [플랫폼 실행 포함 코드 추가](https://docs.adobe.com/content/help/en/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
-      3. &quot;에지 구성&quot; 드롭다운에서 구성을 선택하여 방금 만든 에지 구성을 사용하여 Adobe Experience Platform 웹 SDK 익스텐션을 설치하고 구성합니다. 익스텐션에 대한 유용한 [설명서입니다](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html).
+      3. &quot;에지 구성&quot; 드롭다운에서 구성을 선택하여 방금 만든 에지 구성을 사용하여 AEP 웹 SDK 익스텐션을 설치하고 구성합니다. 익스텐션에 대한 유용한 [설명서입니다](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html).
          ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
 
          ![configure-aep-web-sdk-extension](./assets/configure-aep-web-sdk-extension.png)
@@ -240,7 +240,7 @@ Offer Decisioning을 활성화하려면 다음 단계를 수행해야 합니다.
                 "language": [
                   "en-US"
                 ],
-                "content": "<p style="color:red;">20% Off on shipping</p>",
+                "content": "<p style=\"color:red;\">20% Off on shipping</p>",
                 "characteristics": {
                   "foo": "bar",
                   "foo1": "bar1"
