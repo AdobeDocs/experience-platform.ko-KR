@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: 이 자습서에서는 타사 e커머스 시스템에서 데이터를 검색하고 소스 커넥터 및 API를 통해 플랫폼으로 데이터를 인제하는 단계를 다룹니다.
 translation-type: tm+mt
-source-git-commit: 4696bcb17427bb50549a315294baf7fbd87ac01d
+source-git-commit: a9d6c6dda560ec401bdf41319994153e7f2c0572
 workflow-type: tm+mt
 source-wordcount: '1509'
 ht-degree: 1%
