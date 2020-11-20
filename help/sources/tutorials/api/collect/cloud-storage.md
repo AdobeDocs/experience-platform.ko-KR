@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: 이 자습서에서는 타사 클라우드 저장소에서 데이터를 검색하고 소스 커넥터 및 API를 통해 플랫폼으로 가져오는 단계를 다룹니다.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: b0f6e51a784aec7850d92be93175c21c91654563
 workflow-type: tm+mt
-source-wordcount: '1581'
+source-wordcount: '1567'
 ht-degree: 1%
 
 ---
@@ -22,15 +22,15 @@ ht-degree: 1%
 
 ## 시작하기
 
-이 자습서에서는 파일의 경로 및 구조를 포함하여 DNL 플랫폼으로 가져올 파일과 관련된 정보와 유효한 연결을 통해 타사 클라우드 스토리지에 액세스해야 합니다. 이 정보가 없는 경우 이 튜토리얼을 시작하기 전에 API를 사용하여 타사 클라우드 스토리지 [를 탐색하는 방법 [!DNL Flow Service] 을](../explore/cloud-storage.md) 참조하십시오.
+이 자습서에서는 파일의 경로 및 구조를 [!DNL Platform]포함하여 가져오려는 파일에 대한 정보와 유효한 연결을 통해 타사 클라우드 스토리지에 액세스해야 합니다. 이 정보가 없는 경우 이 튜토리얼을 시작하기 전에 API를 사용하여 타사 클라우드 스토리지 [를 탐색하는 방법 [!DNL Flow Service] 을](../explore/cloud-storage.md) 참조하십시오.
 
 또한 이 자습서에서는 다음과 같은 Adobe Experience Platform 구성 요소에 대해 작업해야 합니다.
 
-- [[!DNL 경험 데이터 모델(XDM) 시스템]](../../../../xdm/home.md):Experience Platform이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
+- [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md):Experience Platform이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
    - [스키마 컴포지션의 기본 사항](../../../../xdm/schema/composition.md):스키마 컴포지션의 주요 원칙 및 모범 사례 등 XDM 스키마의 기본 구성 요소에 대해 알아봅니다.
    - [스키마 레지스트리 개발자 가이드](../../../../xdm/api/getting-started.md):스키마 레지스트리 API에 대한 호출을 성공적으로 수행하기 위해 알아야 하는 중요한 정보를 포함합니다. 여기에는 사용자 `{TENANT_ID}`, &quot;컨테이너&quot;의 개념 및 요청 시 필요한 헤더가 포함됩니다(수락 헤더와 가능한 값에 특별히 주의).
-- [[!DNL 카탈로그 서비스]](../../../../catalog/home.md):카탈로그는 내부 데이터 위치 및 계열에 대한 기록 시스템이다 [!DNL Experience Platform].
-- [[!DNL 일괄 처리]](../../../../ingestion/batch-ingestion/overview.md):일괄 처리 통합 API를 사용하면 데이터를 일괄 처리 파일 [!DNL Experience Platform] 로 인제스트할 수 있습니다.
+- [[!DNL Catalog Service]](../../../../catalog/home.md):카탈로그는 내부 데이터 위치 및 계열에 대한 기록 시스템이다 [!DNL Experience Platform].
+- [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md):일괄 처리 통합 API를 사용하면 데이터를 일괄 처리 파일 [!DNL Experience Platform] 로 인제스트할 수 있습니다.
 - [샌드박스](../../../../sandboxes/home.md): [!DNL Experience Platform] 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되도록 단일 [!DNL Platform] 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
 다음 섹션에서는 [!DNL Flow Service] API를 사용하여 클라우드 스토리지에 성공적으로 연결하려면 알아야 할 추가 정보를 제공합니다.
 
