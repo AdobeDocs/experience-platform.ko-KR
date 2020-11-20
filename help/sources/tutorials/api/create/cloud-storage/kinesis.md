@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: 이 자습서에서는 Flow Service API를 사용하여 Experience Platform을 Amazon Kinesis 계정에 연결하는 단계를 안내합니다.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 967585ba078edd13f90c820f6b1a0490140ca0cf
 workflow-type: tm+mt
-source-wordcount: '540'
+source-wordcount: '534'
 ht-degree: 2%
 
 ---
@@ -41,7 +41,7 @@ ht-degree: 2%
 | ---------- | ----------- |
 | `accessKeyId` | 계정에 대한 액세스 키 [!DNL Kinesis] ID. |
 | `secretKey` | 계정에 대한 비밀 액세스 [!DNL Kinesis] 키 |
-| `region` |  | 계정 [!DNL Kinesis] 영역 |
+| `region` | 계정 [!DNL Kinesis] 영역 |
 | `connectionSpec.id` | 연결 [!DNL Kinesis] 사양 ID: `86043421-563b-46ec-8e6c-e23184711bf6` |
 
 이러한 값에 대한 자세한 내용은 [이 Kinesis 문서를 참조하십시오](https://docs.aws.amazon.com/streams/latest/dev/getting-started.html).
@@ -54,17 +54,17 @@ ht-degree: 2%
 
 API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 합니다](../../../../../tutorials/authentication.md). 인증 자습서를 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
 
-* 인증:무기명 `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* `Authorization: Bearer {ACCESS_TOKEN}`
+* `x-api-key: {API_KEY}`
+* `x-gw-ims-org-id: {IMS_ORG}`
 
 에 속하는 리소스를 [!DNL Experience Platform]포함한 모든 리소스 [!DNL Flow Service]는 특정 가상 샌드박스와 분리됩니다. API에 대한 모든 [!DNL Platform] 요청에는 작업이 수행할 샌드박스의 이름을 지정하는 헤더가 필요합니다.
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+* `x-sandbox-name: {SANDBOX_NAME}`
 
 페이로드(POST, PUT, PATCH)이 포함된 모든 요청에는 추가 미디어 유형 헤더가 필요합니다.
 
-* 컨텐츠 유형: `application/json`
+* `Content-Type: application/json`
 
 ## 연결 만들기
 
@@ -123,4 +123,4 @@ curl -X POST \
 
 ## 다음 단계
 
-이 튜토리얼을 따라 API를 사용하여 [!DNL Amazon Kinesis] 연결을 만들고 고유한 ID를 응답 본문의 일부로 받았습니다. 이 연결 ID를 사용하여 Flow Service API를 [사용하여 클라우드 스토리지를 탐색할 수 있습니다](../../explore/cloud-storage.md).
+이 튜토리얼을 따라 API를 사용하여 [!DNL Amazon Kinesis] 연결을 만들고 고유한 ID를 응답 본문의 일부로 받았습니다. 이 연결 ID를 사용하여 Flow Service API를 사용하여 스트리밍 데이터를 [수집할 수 있습니다](../../collect/streaming.md).
