@@ -5,9 +5,9 @@ user-guide-title: Adobe Experience Platform 소스 커넥터 도움말
 breadcrumb-title: Source Connectors 안내서
 user-guide-description: 다양한 소스 또는 구조에서 데이터를 수집하고 레이블을 지정하며 기존에 수집한 데이터를 향상시킬 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 89a807c0adbc3c9e4396adbb96764453034c8ea3
+source-git-commit: 39e419b78938afd91e3d7471241e377f352214ee
 workflow-type: tm+mt
-source-wordcount: '680'
+source-wordcount: '683'
 ht-degree: 4%
 
 ---
@@ -50,7 +50,7 @@ ht-degree: 4%
       - [Azure HDInsights 커넥터의 Apache Hive](connectors/databases/hive.md)
       - [Azure HDInsights 커넥터의 Apache Spark](connectors/databases/spark.md)
       - [Azure Data Explorer 커넥터](connectors/databases/data-explorer.md)
-      - [Azure Synapse Analytics 커넥터](connectors/databases/synapse-analytics.md)
+      - [azure synapse 분석 커넥터](connectors/databases/synapse-analytics.md)
       - [Azure 테이블 저장소 커넥터](connectors/databases/ats.md)
       - [Couchbase 커넥터](connectors/databases/couchbase.md)
       - [Google BigQuery 커넥터](connectors/databases/bigquery.md)
@@ -96,7 +96,7 @@ ht-degree: 4%
          - [Azure HDInsights 커넥터의 Apache Hive](tutorials/api/create/databases/hive.md)
          - [Azure HDInsights 커넥터의 Apache Spark](tutorials/api/create/databases/spark.md)
          - [Azure Data Explorer 커넥터](tutorials/api/create/databases/data-explorer.md)
-         - [Azure Synapse Analytics 커넥터](tutorials/api/create/databases/synapse-analytics.md)
+         - [azure synapse 분석 커넥터](tutorials/api/create/databases/synapse-analytics.md)
          - [Azure 테이블 저장소 커넥터](tutorials/api/create/databases/ats.md)
          - [Couchbase 커넥터](tutorials/api/create/databases/couchbase.md)
          - [Google BigQuery 커넥터](tutorials/api/create/databases/bigquery.md)
@@ -136,6 +136,7 @@ ht-degree: 4%
       - [마케팅 자동화 데이터 수집](tutorials/api/collect/marketing-automation.md)
       - [결제 데이터 수집](tutorials/api/collect/payments.md)
       - [프로토콜 데이터 수집](tutorials/api/collect/protocols.md)
+      - [스트리밍 데이터 수집](tutorials/api/collect/streaming.md)
    - [타사 클라우드 스토리지 시스템에서 쪽모이 세공 데이터를 인제스트](tutorials/api/cloud-storage-parquet.md)
    - [Flow Service API를 사용하여 데이터 세트 기본 연결 만들기](tutorials/api/create-dataset-base-connection.md)
    - [Flow Service API를 사용하여 데이터 흐름 모니터링](tutorials/api/monitor.md)
@@ -172,7 +173,7 @@ ht-degree: 4%
          - [Azure HDInsights 커넥터의 Apache Hive](tutorials/ui/create/databases/hive.md)
          - [Azure HDInsights 커넥터의 Apache Spark](tutorials/ui/create/databases/spark.md)
          - [Azure Data Explorer 커넥터](tutorials/ui/create/databases/data-explorer.md)
-         - [Azure Synapse Analytics 커넥터](tutorials/ui/create/databases/synapse-analytics.md)
+         - [azure synapse 분석 커넥터](tutorials/ui/create/databases/synapse-analytics.md)
          - [Azure 테이블 저장소 커넥터](tutorials/ui/create/databases/ats.md)
          - [Couchbase 커넥터](tutorials/ui/create/databases/couchbase.md)
          - [Google Big Query 커넥터](tutorials/ui/create/databases/bigquery.md)
