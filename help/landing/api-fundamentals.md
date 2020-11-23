@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform API 기본 사항
 topic: getting started
 translation-type: tm+mt
-source-git-commit: fac4b3d02a6e58a9d2c298f9b849fa7345e4fa93
+source-git-commit: b6d62492a60494deb848a88a9334e3ef20a93919
 workflow-type: tm+mt
 source-wordcount: '483'
 ht-degree: 2%
@@ -95,7 +95,7 @@ JSON 포인터는 JSON 문서 내의 특정 값을 식별하기 위한 표준화
 >
 >XDM 설명자의 `xdm:sourceProperty` 및 `xdm:destinationProperty` 속성 [!DNL Experience Data Model] 을 처리할 때 모든 `properties` 키는 JSON 포인터 문자열에서 **제외되어야** 합니다. 자세한 내용은 설명자에 대한 [!DNL Schema Registry] API 개발자 [가이드](../xdm/api/descriptors.md) 하위 가이드를 참조하십시오.
 
-## JSON 패치
+## JSON 패치 {#json-patch}
 
 요청 페이로드에 대해 JSON 패치 개체를 허용하는 [!DNL Platform] API에 대한 많은 PATCH 작업이 있습니다. JSON 패치는 JSON 문서의 변경 사항을 설명하는 표준 형식([RFC 6902](https://tools.ietf.org/html/rfc6902))입니다. 이를 통해 전체 문서를 요청 본문에 보내지 않고도 JSON에 대한 부분 업데이트를 정의할 수 있습니다.
 
