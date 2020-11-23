@@ -5,10 +5,10 @@ user-guide-title: XDM(경험 데이터 모델) 시스템 도움말
 breadcrumb-title: Data Model (XDM) 안내서
 user-guide-description: XDM(경험 데이터 모델) 클래스와 mixin을 사용하여 경험 데이터를 표준화합니다.
 translation-type: tm+mt
-source-git-commit: 0a5b6bab6a0a11a572a4cd5de95b33f8d61d34bc
+source-git-commit: 321dc16a1296aeb28ba78825f191a0368df16547
 workflow-type: tm+mt
-source-wordcount: '203'
-ht-degree: 20%
+source-wordcount: '181'
+ht-degree: 23%
 
 ---
 
@@ -56,18 +56,14 @@ ht-degree: 20%
    * [POI 상호 작용](./data-types/poi-interaction.md)
    * [우편 주소](./data-types/postal-address.md)
 * 스키마 레지스트리 API {#api}
+   * [개요](api/overview.md)
    * [시작하기](api/getting-started.md)
-   * [리소스 목록](api/list-resources.md)
-   * [리소스 찾기](api/look-up-resource.md)
-   * [리소스 업데이트](api/update-resource.md)
-   * [리소스 바꾸기](api/replace-resource.md)
-   * [리소스 삭제](api/delete-resource.md)
-   * [클래스 만들기](api/create-class.md)
-   * [혼합 만들기](api/create-mixin.md)
-   * [데이터 유형 만들기](api/create-data-type.md)
-   * [스키마 만들기](api/create-schema.md)
-   * [노조](api/unions.md)
+   * [스키마](api/schemas.md)
+   * [클래스](api/classes.md)
+   * [믹신](api/mixins.md)
+   * [데이터 유형](api/data-types.md)
    * [설명자](api/descriptors.md)
+   * [노조](api/unions.md)
    * [임시 스키마](api/ad-hoc.md)
    * [부록](api/appendix.md)
 * 자습서 {#tutorials}
