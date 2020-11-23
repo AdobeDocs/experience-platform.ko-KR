@@ -5,9 +5,9 @@ title: 스키마 레지스트리 개발자 부록
 description: 이 문서에서는 스키마 레지스트리 API 작업과 관련된 보충 정보를 제공합니다.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 42d3bed14c5f926892467baeeea09ee7a140ebdc
+source-git-commit: 0b55f18eabcf1d7c5c233234c59eb074b2670b93
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '730'
 ht-degree: 0%
 
 ---
@@ -16,6 +16,43 @@ ht-degree: 0%
 # 부록
 
 이 문서에서는 [!DNL Schema Registry] API 작업과 관련된 추가 정보를 제공합니다.
+
+## 쿼리 매개 변수 사용 {#query}
+
+이 [!DNL Schema Registry] 는 리소스를 나열할 때 페이지 및 필터 결과에 쿼리 매개 변수를 사용할 수 있도록 지원합니다.
+
+>[!NOTE]
+>
+>여러 쿼리 매개 변수를 결합할 때는 앰퍼샌드(앰퍼샌드)로 구분해야`&`합니다.
+
+### 페이징 {#paging}
+
+페이징 시 가장 일반적인 쿼리 매개 변수는 다음과 같습니다.
+
+| 매개 변수 | 설명 |
+| --- | --- |
+| `start` | 나열된 결과가 시작되는 위치를 지정합니다. 이 값은 목록 응답의 `_page.next` 속성에서 얻을 수 있으며 다음 결과 페이지에 액세스하는 데 사용할 수 있습니다. 값이 `_page.next` null이면 사용할 수 있는 추가 페이지가 없습니다. |
+| `limit` | 반환된 리소스 수를 제한합니다. 예: `limit=5` 5개의 리소스 목록을 반환합니다. |
+| `orderby` | 특정 속성별로 결과를 정렬합니다. 예: `orderby=title` 결과를 제목별로 오름차순(A-Z)으로 정렬합니다. 매개 변수 값( `-` )보다`orderby=-title`앞에 추가하면 제목별로 내림차순(Z-A)으로 항목이 정렬됩니다. |
+
+### 필터링 {#filtering}
+
+검색된 리소스 내의 지정된 JSON 속성에 대해 특정 연산자를 적용하는 데 사용되는 매개 변수를 사용하여 결과를 필터링할 수 있습니다. `property` 지원되는 연산자는 다음과 같습니다.
+
+| 연산자 | 설명 | 예 |
+| --- | --- | --- |
+| `==` | 속성이 제공된 값과 같은지 여부를 기준으로 필터링합니다. | `property=title==test` |
+| `!=` | 속성이 제공된 값과 동일하지 않은지 여부를 기준으로 필터링합니다. | `property=title!=test` |
+| `<` | 속성이 제공된 값보다 작은지 여부를 기준으로 필터링합니다. | `property=version<5` |
+| `>` | 속성이 제공된 값보다 큰지 여부를 기준으로 필터링합니다. | `property=version>5` |
+| `<=` | 속성이 제공된 값보다 작거나 같은지 여부를 기준으로 필터링합니다. | `property=version<=5` |
+| `>=` | 속성이 제공된 값보다 크거나 같은지 여부를 필터링합니다. | `property=version>=5` |
+| `~` | 속성이 제공된 정규 표현식과 일치하는지 여부를 기준으로 필터링합니다. | `property=title~test$` |
+| (None) | 속성 이름만 지정하면 속성이 있는 항목만 반환됩니다. | `property=title` |
+
+>[!TIP]
+>
+>매개 변수를 사용하여 호환 클래스에 따라 믹스를 필터링할 수 `property` 있습니다. 예를 들어, 클래스 `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` 와 호환되는 혼합만 [!DNL XDM Individual Profile] 반환합니다.
 
 ## 호환성 모드
 
