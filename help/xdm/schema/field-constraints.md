@@ -5,10 +5,10 @@ title: XDM 필드 유형 제한
 topic: overview
 description: 매핑할 수 있는 다른 직렬화 형식 및 API에서 고유한 필드 유형을 정의하는 방법을 포함한 XDM 필드 유형 제약 조건에 대한 참조입니다.
 translation-type: tm+mt
-source-git-commit: 19167f58fae6fac7d938deb74182d2e19960beb3
+source-git-commit: e92294b9dcea37ae2a4a398c9d3397dcf5aa9b9e
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '994'
+ht-degree: 6%
 
 ---
 
@@ -40,7 +40,7 @@ ht-degree: 0%
 | date-time | type:<br>stringformat:date-time<br>(RFC 339, section 5.6) | INT64/TIMESTAMP_MILLIS | TimestampType | java.util.Date | java.util.Date | System.DateTime | 문자열 | timestamp | 정수<br>(unix 밀리) | int64<br>(unix millis) |
 | 지도 | 개체 | MAP 주석 그룹<br><br>&lt;<span>key_type</span>>은 맵 값의 STRING<br><br>&lt;<span>value_type</span>> 유형이어야 합니다. | MapType<br><br>&quot;keyType&quot;은 맵 값의<br><br>유형입니다. | java.util.Map | 맵 | --- | 개체 | 개체 | 지도 | map&lt;<span>key_type, value_type</span>> |
 
-## API에서 XDM 필드 유형 정의
+## API에서 XDM 필드 유형 정의 {#define-fields}
 
 XDM 스키마는 [JSON 스키마](https://json-schema.org/) 표준 및 기본 필드 유형을 사용하여 정의되며, 필드 이름에 대한 추가 제한 사항은 [!DNL Experience Platform]다음과 같습니다. 스키마 [레지스트리 API를](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) 사용하면 형식 및 선택적 제약 조건을 사용하여 추가 필드 유형을 정의할 수 있습니다. XDM 필드 유형은 필드 수준 속성으로 노출됩니다 `meta:xdmType`.
 
@@ -50,7 +50,7 @@ XDM 스키마는 [JSON 스키마](https://json-schema.org/) 표준 및 기본 �
 
 다음 표에서는 선택적 속성을 사용하여 스칼라 필드 형식과 더 구체적인 필드 유형을 정의하는 적절한 서식 개요를 제공합니다. 선택적 속성 및 유형별 키워드에 대한 자세한 내용은 [JSON 스키마 설명서를 참조하십시오](https://json-schema.org/understanding-json-schema/reference/type.html).
 
-시작하려면 원하는 필드 유형을 찾아 제공된 샘플 코드를 사용하여 믹스를 [만들거나 데이터 유형을](../api/create-mixin.md) 만들기 위한 API 요청을 [작성합니다](../api/create-data-type.md).
+시작하려면 원하는 필드 유형을 찾아 제공된 샘플 코드를 사용하여 믹스를 [만들거나 데이터 유형을](../api/mixins.md#create) 만들기 위한 API 요청을 [작성합니다](../api/data-types.md#create).
 
 <table>
   <tr>
