@@ -5,9 +5,9 @@ title: 'API를 사용하여 데이터 사용 레이블 관리 '
 topic: developer guide
 description: 데이터 집합 서비스 API를 사용하여 데이터 집합에 대한 사용 레이블을 적용하고 편집할 수 있습니다. 이것은 Adobe Experience Platform의 데이터 카탈로그 기능의 일부이지만 데이터 세트 메타데이터를 관리하는 카탈로그 서비스 API와는 별개입니다.
 translation-type: tm+mt
-source-git-commit: 4096a7c1ec2b3640886d3a8c69b578987fe96dd4
+source-git-commit: 4b5e116d221e6689f95c8da0c54ef3af6827adc1
 workflow-type: tm+mt
-source-wordcount: '1007'
+source-wordcount: '1003'
 ht-degree: 3%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 3%
 
 이 문서에서는 [!DNL Policy Service] API 및 [!DNL Dataset Service] API를 사용하여 데이터 사용 레이블을 관리하는 방법에 대해 설명합니다.
 
-[!DNL Policy Service API] [는](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) 조직의 데이터 사용 레이블을 만들고 관리할 수 있는 여러 끝점을 제공합니다.
+이 [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) 는 조직의 데이터 사용 레이블을 만들고 관리할 수 있는 여러 끝점을 제공합니다.
 
 API를 [!DNL Dataset Service] 사용하면 데이터 세트에 대한 사용 레이블을 적용하고 편집할 수 있습니다. 이것은 Adobe Experience Platform의 데이터 카탈로그 기능의 일부이지만 데이터 세트 메타데이터를 관리하는 [!DNL Catalog Service] API와는 별개입니다.
 
@@ -327,7 +327,7 @@ curl -X POST \
 | 속성 | 설명 |
 | --- | --- |
 | `labels` | 데이터 세트에 추가할 데이터 사용 레이블 목록입니다. |
-| `optionalLabels` | 레이블을 추가할 데이터 세트 내의 개별 필드 목록입니다. 이 배열의 각 항목에는 다음 속성이 있어야 합니다. <br/><br/>`option`:필드의 [!DNL Experience Data Model] (XDM) 속성을 포함하는 개체 다음 세 가지 속성이 필요합니다.<ul><li>id</code>:필드와 연결된 스키마의 URI $id</code> 값입니다.</li><li>contentType</code>:스키마의 컨텐츠 유형 및 버전 번호입니다. XDM 조회 요청에 대해 유효한 <a href="../../xdm/api/look-up-resource.md">수락 헤더</a> 중 하나의 형태를 가져야 합니다.</li><li>schemaPath</code>:데이터 집합 스키마 내의 필드 경로입니다.</li></ul>`labels`:필드에 추가할 데이터 사용 레이블 목록입니다. |
+| `optionalLabels` | 레이블을 추가할 데이터 세트 내의 개별 필드 목록입니다. 이 배열의 각 항목에는 다음 속성이 있어야 합니다. <br/><br/>`option`:필드의 [!DNL Experience Data Model] (XDM) 속성을 포함하는 개체 다음 세 가지 속성이 필요합니다.<ul><li>id</code>:필드와 연결된 스키마의 URI $id</code> 값입니다.</li><li>contentType</code>:스키마의 컨텐츠 유형 및 버전 번호입니다. XDM 조회 요청에 대해 유효한 <a href="../../xdm/api/getting-started.md#accept">수락 헤더</a> 중 하나의 형태를 가져야 합니다.</li><li>schemaPath</code>:데이터 집합 스키마 내의 필드 경로입니다.</li></ul>`labels`:필드에 추가할 데이터 사용 레이블 목록입니다. |
 
 **응답**
 
