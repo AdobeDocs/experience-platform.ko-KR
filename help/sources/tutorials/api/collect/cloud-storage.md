@@ -6,17 +6,15 @@ topic: overview
 type: Tutorial
 description: 이 자습서에서는 타사 클라우드 저장소에서 데이터를 검색하고 소스 커넥터 및 API를 통해 플랫폼으로 가져오는 단계를 다룹니다.
 translation-type: tm+mt
-source-git-commit: b0f6e51a784aec7850d92be93175c21c91654563
+source-git-commit: 026007e5f80217f66795b2b53001b6cf5e6d2344
 workflow-type: tm+mt
-source-wordcount: '1567'
+source-wordcount: '1583'
 ht-degree: 1%
 
 ---
 
 
 # 소스 커넥터 및 API를 통해 클라우드 스토리지 데이터 수집
-
-[!DNL Flow Service] 는 Adobe Experience Platform 내의 다양한 소스에서 수집된 고객 데이터를 수집하고 중앙에서 관리하는 데 사용됩니다. 이 서비스는 지원되는 모든 소스가 연결되어 있는 사용자 인터페이스와 RESTful API를 제공합니다.
 
 이 자습서에서는 타사 클라우드 저장소에서 데이터를 검색하고 소스 커넥터 및 [[!DNL Flow Service] API를 통해 플랫폼으로 가져오는 단계를 다룹니다](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
@@ -62,13 +60,17 @@ API에 POST 요청을 만들어 소스 연결을 만들 수 [!DNL Flow Service] 
 
 파일 기반 커넥터에 다음과 같은 열거형 값을 사용하십시오.
 
-| Data.format | 열거값 |
+| 데이터 형식 | 열거값 |
 | ----------- | ---------- |
-| 구분된 파일 | `delimited` |
-| JSON 파일 | `json` |
-| 쪽모이 세공 파일 | `parquet` |
+| 구분 기호 | `delimited` |
+| JSON | `json` |
+| 쪽모이 세공 | `parquet` |
 
-모든 테이블 기반 커넥터의 경우 열거형 값을 사용합니다. `tabular`.
+모든 테이블 기반 커넥터의 경우 값을 로 설정합니다 `tabular`.
+
+>[!NOTE]
+>
+>열 구분 기호를 속성으로 지정하여 클라우드 저장소 소스 커넥터를 사용하여 CSV 및 TSV 파일을 인제스트할 수 있습니다. 모든 단일 문자 값은 허용되는 열 구분 기호입니다. 제공되지 않으면 쉼표 `(,)` 가 기본값으로 사용됩니다.
 
 **API 형식**
 
@@ -88,13 +90,14 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "name": "Cloud storage source connector",
-        "baseConnectionId": "9e2541a0-b143-4d23-a541-a0b143dd2301",
+        "connectionId": "9e2541a0-b143-4d23-a541-a0b143dd2301",
         "description": "Cloud storage source connector",
         "data": {
-            "format": "delimited"
+            "format": "delimited",
+            "columnDelimiter": "\t"
         },
         "params": {
-            "path": "/demo/data7.csv",
+            "path": "/ingestion-demos/leads/tsv_data/*.tsv",
             "recursive": "true"
         },
             "connectionSpec": {
@@ -106,7 +109,9 @@ curl -X POST \
 
 | 속성 | 설명 |
 | --- | --- |
-| `baseConnectionId` | 액세스하는 타사 클라우드 스토리지 시스템의 고유 연결 ID. |
+| `connectionId` | 액세스하는 타사 클라우드 스토리지 시스템의 고유 연결 ID. |
+| `data.format` | 데이터 형식 특성을 정의하는 열거형 값입니다. |
+| `data.columnDelimiter` | 단일 문자 열 구분 기호를 사용하여 플랫 파일을 수집할 수 있습니다. 이 속성은 CSV 또는 TSV 파일을 인제스트할 때만 필요합니다. |
 | `params.path` | 액세스하는 소스 파일의 경로입니다. |
 | `connectionSpec.id` | 특정 타사 클라우드 스토리지 시스템과 연결된 연결 사양 ID. 연결 사양 ID의 목록은 [부록을](#appendix) 참조하십시오. |
 
@@ -126,8 +131,6 @@ curl -X POST \
 소스 데이터를 사용하려면 필요에 따라 소스 데이터 [!DNL Platform]를 구조화하기 위해 대상 스키마를 만들어야 합니다. 그런 다음 대상 스키마를 사용하여 소스 데이터가 포함된 [!DNL Platform] 데이터 세트를 만듭니다.
 
 대상 XDM 스키마는 스키마 레지스트리 API에 대한 POST 요청을 수행하여 [만들 수 있습니다](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
-
-사용자 인터페이스를 에서 사용하려는 경우 스키마 편집기 자습서 [!DNL Experience Platform]는 스키마 편집기에서 유사한 작업 [](../../../../xdm/tutorials/create-schema-ui.md) 을 수행하기 위한 단계별 지침을 제공합니다.
 
 **API 형식**
 
@@ -279,9 +282,9 @@ curl -X POST \
 
 ## 대상 연결 만들기 {#target-connection}
 
-대상 연결은 인제스트된 데이터가 들어오는 대상에 대한 연결을 나타냅니다. 대상 연결을 만들려면 데이터 호수와 관련된 고정 연결 사양 ID를 제공해야 합니다. 이 연결 사양 ID: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+대상 연결은 인제스트된 데이터가 들어오는 대상에 대한 연결을 나타냅니다. 대상 연결을 만들려면 데이터 레이크와 연결된 고정 연결 사양 ID를 제공해야 합니다. 이 연결 사양 ID: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
-이제 대상 스키마의 고유한 식별자를 데이터 세트에 사용하고 데이터 호수에 대한 연결 사양 ID를 가집니다. 이러한 식별자를 사용하여 [!DNL Flow Service] API를 사용하여 대상 연결을 만들어 인바운드 소스 데이터를 포함할 데이터 세트를 지정할 수 있습니다.
+이제 대상 스키마에서 대상 데이터 세트 및 데이터 레이크에 대한 연결 사양 ID의 고유한 식별자가 있습니다. 이러한 식별자를 사용하여 [!DNL Flow Service] API를 사용하여 대상 연결을 만들어 인바운드 소스 데이터를 포함할 데이터 세트를 지정할 수 있습니다.
 
 **API 형식**
 
@@ -322,7 +325,7 @@ curl -X POST \
 | -------- | ----------- |
 | `data.schema.id` | 대상 XDM 스키마 `$id` 의 이름입니다. |
 | `params.dataSetId` | 대상 데이터 집합의 ID입니다. |
-| `connectionSpec.id` | 데이터 호수에 대한 연결 사양 ID가 수정되었습니다. 이 ID: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `connectionSpec.id` | 데이터 레이크에 대한 연결 사양 ID가 수정되었습니다. 이 ID: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 **응답**
 
@@ -403,8 +406,8 @@ curl -X POST \
     "version": 0,
     "createdDate": 1597784069368,
     "modifiedDate": 1597784069368,
-    "createdBy": "28AF22BA5DE6B0B40A494036@AdobeID",
-    "modifiedBy": "28AF22BA5DE6B0B40A494036@AdobeID"
+    "createdBy": "{CREATED_BY}",
+    "modifiedBy": "{MODIFIED_BY}"
 }
 ```
 
