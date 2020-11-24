@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics; flow service; update connections
+keywords: Experience Platform;home;popular topics;flow service;delete connections;delete;api
 solution: Experience Platform
 title: Flow Service API를 사용하여 연결 삭제
 topic: overview
 type: Tutorial
 description: 이 자습서에서는 Flow Service API를 사용한 연결 삭제 단계를 설명합니다.
 translation-type: tm+mt
-source-git-commit: 9c807270181084a94f288c248a678821ca58e194
+source-git-commit: 9e28591ef9f07217363cddf72356b8e5cd8a15a3
 workflow-type: tm+mt
-source-wordcount: '581'
+source-wordcount: '580'
 ht-degree: 2%
 
 ---
@@ -31,7 +31,7 @@ Adobe Experience Platform은 [!DNL Platform] 서비스를 사용하여 들어오
 * [소스](../../home.md): [!DNL Experience Platform] 서비스를 사용하여 들어오는 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 다양한 소스에서 데이터를 수집할 수 [!DNL Platform] 있습니다.
 * [샌드박스](../../../sandboxes/home.md): [!DNL Experience Platform] 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되도록 단일 [!DNL Platform] 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
 
-다음 섹션에서는 [!DNL Flow Service] API를 사용하여 연결 정보를 성공적으로 업데이트하려면 알아야 하는 추가 정보를 제공합니다.
+다음 섹션에서는 [!DNL Flow Service] API를 사용하여 연결을 성공적으로 삭제하려면 알아야 할 추가 정보를 제공합니다.
 
 ### 샘플 API 호출 읽기
 
@@ -132,7 +132,7 @@ DELETE /connections/{CONNECTION_ID}
 
 | 매개 변수 | 설명 |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | 업데이트할 연결에 대한 고유 `id` 값입니다. |
+| `{CONNECTION_ID}` | 삭제할 연결에 대한 고유 `id` 값입니다. |
 
 **요청**
 
