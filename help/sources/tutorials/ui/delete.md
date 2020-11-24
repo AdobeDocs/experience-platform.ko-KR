@@ -6,7 +6,7 @@ title: 데이터 흐름 삭제
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: e327a3e195d97c0b547608f360c5b0b6a8aded61
 workflow-type: tm+mt
 source-wordcount: '447'
 ht-degree: 0%
@@ -66,4 +66,4 @@ Adobe Experience Platform의 소스 커넥터는 예약된 기준으로 외부 �
 
 이 튜토리얼을 따라 소스 작업 **[!UICONTROL 영역을]** 사용하여 기존 데이터 흐름을 삭제합니다.
 
-API를 사용하여 프로그래밍 방식으로 이러한 작업을 수행하는 방법에 대한 자세한 내용은 Flow Service API를 사용하여 연결을 [!DNL Flow Service] [삭제하는 방법에 대한 자습서를 참조하십시오](../../tutorials/api/delete.md)
+API를 사용하여 프로그래밍 방식으로 이러한 작업을 수행하는 방법에 대한 자세한 내용은 Flow Service API를 사용하여 데이터 흐름 [!DNL Flow Service] [삭제에 대한 자습서를 참조하십시오](../../tutorials/api/delete-dataflows.md)
