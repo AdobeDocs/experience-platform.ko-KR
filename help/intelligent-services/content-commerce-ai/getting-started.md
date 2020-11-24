@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;getting started;content ai;commerce ai;content and commerce ai
 solution: Experience Platform
-title: 콘텐츠 및 상거래 AI 시작]
+title: Content and Commerce AI 시작하기
 topic: Getting started
 description: Content and Commerce AI는 Adobe I/O API를 사용합니다. Adobe I/O API 및 I/O 콘솔 통합을 호출하려면 먼저 인증 자습서를 완료해야 합니다.
 translation-type: tm+mt
-source-git-commit: 9ee888b02b4a402200ca4fcaed4a59c0a7eb94cd
+source-git-commit: 2be04547b96e1a6c293cc63e782fe1b3259619ba
 workflow-type: tm+mt
-source-wordcount: '572'
+source-wordcount: '576'
 ht-degree: 0%
 
 ---
 
 
-# Getting started with [!DNL Content and Commerce AI]
+# Content and Commerce AI 시작하기
 
 >[!NOTE]
 >
@@ -51,7 +51,7 @@ Adobe 개발자 콘솔에서 프로젝트 및 API를 설정한 경우 Postman용
 
 ![](./images/click-open.png)
 
-새 환경 이름이 채워진 환경 *관리* 탭으로 다시 리디렉션됩니다. Postman에서 사용 가능한 변수를 보고 편집할 환경 이름을 선택합니다. and를 수동으로 채워야 `JWT_TOKEN` 합니다 `ACCESS_TOKEN`. 이 값들은 [인증 자습서를](../../tutorials/authentication.md)완료하는 동안 획득해야 합니다.
+새 환경 이름이 채워진 환경 *관리* 탭으로 다시 리디렉션됩니다. Postman에서 사용 가능한 변수를 보고 편집할 환경 이름을 선택합니다. and를 수동으로 채워야 `JWT_TOKEN` 합니다 `ACCESS_TOKEN`. 이러한 값은 [인증 자습서를 완료하는 동안 얻어진 것이어야 합니다](../../tutorials/authentication.md).
 
 ![](./images/re-direct.png)
 
@@ -75,4 +75,4 @@ Postman을 사용한 Adobe I/O API 작업에 대한 자세한 내용은 Adobe I/
 
 확장성 프레임워크에 대한 자세한 내용은 확장성 [문서 소개를 참조하십시오](https://docs.adobe.com/content/help/en/asset-compute/using/extend/understand-extensibility.html) . 이 문서에서는 사전 요구 사항 및 프로비저닝 요구 사항에 대해 간략하게 설명합니다.
 
-환경 설정에 대한 자세한 내용 [!DNL Content and Commerce AI]은 먼저 개발자 환경 [설정에 대한 안내서를 읽어 봅니다](https://docs.adobe.com/content/help/en/asset-compute/using/extend/setup-environment.html). 이 문서에서는 자산 계산 서비스에 대해 개발할 수 있는 설정 지침을 제공합니다.
+환경 설정에 대한 자세한 내용 [!DNL Content and Commerce AI]은 먼저 개발자 환경 [설정에 대한 안내서를 읽어 봅니다](https://docs.adobe.com/content/help/en/asset-compute/using/extend/setup-environment.html). 이 문서에서는 Asset compute 서비스에 대한 개발을 허용하는 설치 지침을 제공합니다.
