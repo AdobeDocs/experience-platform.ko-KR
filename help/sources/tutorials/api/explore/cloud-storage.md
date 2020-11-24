@@ -5,9 +5,9 @@ title: Flow Service API를 사용하여 클라우드 스토리지 시스템 살�
 topic: overview
 description: 이 자습서에서는 Flow Service API를 사용하여 타사 클라우드 스토리지 시스템을 탐색합니다.
 translation-type: tm+mt
-source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
+source-git-commit: 026007e5f80217f66795b2b53001b6cf5e6d2344
 workflow-type: tm+mt
-source-wordcount: '697'
+source-wordcount: '745'
 ht-degree: 2%
 
 ---
@@ -15,9 +15,7 @@ ht-degree: 2%
 
 # API를 사용하여 클라우드 스토리지 시스템 [!DNL Flow Service] 살펴보기
 
-[!DNL Flow Service] 는 Adobe Experience Platform 내의 다양한 소스에서 수집된 고객 데이터를 수집하고 중앙에서 관리하는 데 사용됩니다. 이 서비스는 지원되는 모든 소스가 연결되어 있는 사용자 인터페이스와 RESTful API를 제공합니다.
-
-이 자습서에서는 [!DNL Flow Service] API를 사용하여 타사 클라우드 스토리지 시스템을 탐색합니다.
+이 자습서에서는 [[!DNL Flow Service] API를](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) 사용하여 타사 클라우드 스토리지 시스템을 탐색합니다.
 
 ## 시작하기
 
@@ -28,14 +26,16 @@ ht-degree: 2%
 
 다음 섹션에서는 [!DNL Flow Service] API를 사용하여 클라우드 스토리지 시스템에 성공적으로 연결하려면 알아야 할 추가 정보를 제공합니다.
 
-### 기본 연결 받기
+### 연결 ID 얻기
 
-API를 사용하여 타사 클라우드 스토리지를 탐색하려면 [!DNL Platform] 유효한 기본 연결 ID를 보유해야 합니다. 작업할 저장소에 대한 기본 연결이 아직 없는 경우 다음 자습서를 통해 기본 연결을 만들 수 있습니다.
+API를 사용하여 타사 클라우드 스토리지를 탐색하려면 유효한 연결 ID를 [!DNL Platform] 보유해야 합니다. 작업할 스토리지에 대한 연결이 아직 없는 경우 다음 자습서를 통해 이를 생성할 수 있습니다.
 
 * [Amazon S3](../create/cloud-storage/s3.md)
 * [Azure Blob](../create/cloud-storage/blob.md)
 * [Azure Data Lake Storage Gen2](../create/cloud-storage/adls-gen2.md)
+* [Azure 파일 저장소](../create/cloud-storage/azure-file-storage.md)
 * [Google 클라우드 스토어](../create/cloud-storage/google.md)
+* [HDFS](../create/cloud-storage/hdfs.md)
 * [SFTP](../create/cloud-storage/sftp.md)
 
 ### 샘플 API 호출 읽기
@@ -46,21 +46,21 @@ API를 사용하여 타사 클라우드 스토리지를 탐색하려면 [!DNL Pl
 
 API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 합니다](../../../../tutorials/authentication.md). 인증 자습서를 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
 
-* 인증:무기명 `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* `Authorization: Bearer {ACCESS_TOKEN}`
+* `x-api-key: {API_KEY}`
+* `x-gw-ims-org-id: {IMS_ORG}`
 
 에 속하는 리소스를 [!DNL Experience Platform]포함한 모든 리소스 [!DNL Flow Service]는 특정 가상 샌드박스와 분리됩니다. API에 대한 모든 [!DNL Platform] 요청에는 작업이 수행할 샌드박스의 이름을 지정하는 헤더가 필요합니다.
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+* `x-sandbox-name: {SANDBOX_NAME}`
 
 페이로드(POST, PUT, PATCH)이 포함된 모든 요청에는 추가 미디어 유형 헤더가 필요합니다.
 
-* 컨텐츠 유형: `application/json`
+* `Content-Type: application/json`
 
 ## 클라우드 스토리지 살펴보기
 
-클라우드 스토리지에 대한 기본 연결을 사용하면 GET 요청을 수행하여 파일 및 디렉토리를 탐색할 수 있습니다. 클라우드 스토리지를 탐색하기 위한 GET 요청을 수행할 때는 아래 표에 나열된 쿼리 매개 변수를 포함해야 합니다.
+클라우드 스토리지에 대한 연결 ID를 사용하면 GET 요청을 수행하여 파일 및 디렉토리를 탐색할 수 있습니다. 클라우드 스토리지를 탐색하기 위한 GET 요청을 수행할 때는 아래 표에 나열된 쿼리 매개 변수를 포함해야 합니다.
 
 | 매개 변수 | 설명 |
 | --------- | ----------- |
@@ -72,20 +72,20 @@ API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 
 **API 형식**
 
 ```http
-GET /connections/{BASE_CONNECTION_ID}/explore?objectType=root
-GET /connections/{BASE_CONNECTION_ID}/explore?objectType=folder&object={PATH}
+GET /connections/{CONNECTION_ID}/explore?objectType=root
+GET /connections/{CONNECTION_ID}/explore?objectType=folder&object={PATH}
 ```
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{BASE_CONNECTION_ID}` | 클라우드 스토리지 기반 연결의 ID입니다. |
+| `{CONNECTION_ID}` | 클라우드 저장소 소스 커넥터에 대한 연결 ID입니다. |
 | `{PATH}` | 디렉토리 경로입니다. |
 
 **요청**
 
 ```shell
 curl -X GET \
-    'http://platform.adobe.io/data/foundation/flowservice/connections/{BASE_CONNECTION_ID}/explore?objectType=folder&object=/some/path/' \
+    'http://platform.adobe.io/data/foundation/flowservice/connections/{CONNECTION_ID}/explore?objectType=folder&object=/some/path/' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -113,25 +113,30 @@ curl -X GET \
 
 ## Inspect 파일 구조
 
-클라우드 저장소에서 데이터 파일의 구조를 검사하려면 파일의 경로를 쿼리 매개 변수로 제공하면서 GET 요청을 수행합니다.
+클라우드 저장소에서 데이터 파일의 구조를 검사하려면 파일의 경로를 제공하고 쿼리 매개 변수로 입력하는 동안 GET 요청을 수행하십시오.
+
+사용자 지정 구분 기호를 쿼리 경계로 지정하여 CSV 또는 TSV 파일의 구조를 검사할 수 있습니다. 모든 단일 문자 값은 허용되는 열 구분 기호입니다. 제공되지 않으면 쉼표 `(,)` 가 기본값으로 사용됩니다.
 
 **API 형식**
 
 ```http
-GET /connections/{BASE_CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&fileType={FILE_TYPE}
+GET /connections/{CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&fileType={FILE_TYPE}
+GET /connections/{CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&fileType={FILE_TYPE}&preview=true&fileType=delimited&columnDelimiter=;
+GET /connections/{CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&fileType={FILE_TYPE}&preview=true&fileType=delimited&columnDelimiter=\t
 ```
 
 | 매개 변수 | 설명 |
-| --- | --- |
-| `{BASE_CONNECTION_ID}` | 클라우드 스토리지 기반 연결의 ID입니다. |
-| `{FILE_PATH}` | 파일의 경로입니다. |
+| --------- | ----------- |
+| `{CONNECTION_ID}` | 클라우드 저장소 소스 커넥터의 연결 ID입니다. |
+| `{FILE_PATH}` | 검사할 파일의 경로입니다. |
 | `{FILE_TYPE}` | 파일의 유형입니다. 지원되는 파일 유형은 다음과 같습니다.<ul><li>구분 기호</code>:구분 기호로 구분된 값. DSV 파일은 쉼표로 구분되어야 합니다.</li><li>JSON</code>:JavaScript 개체 표기법. JSON 파일은 XDM과 호환되어야 합니다.</li><li>쪽모이 세공</code>:아파치 쪽모이 세공. Parentheet 파일은 XDM과 호환되어야 합니다.</li></ul> |
+| `columnDelimiter` | CSV 또는 TSV 파일을 검사하기 위해 열 구분 기호로 지정한 단일 문자 값. 매개 변수를 제공하지 않으면 기본값은 쉼표로 설정됩니다 `(,)`. |
 
 **요청**
 
 ```shell
 curl -X GET \
-    'http://platform.adobe.io/data/foundation/flowservice/connections/{BASE_CONNECTION_ID}/explore?objectType=file&object=/some/path/data.csv&fileType=DELIMITED' \
+    'http://platform.adobe.io/data/foundation/flowservice/connections/{CONNECTION_ID}/explore?objectType=file&object=/some/path/data.csv&fileType=DELIMITED' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
