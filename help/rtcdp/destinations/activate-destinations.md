@@ -6,9 +6,9 @@ seo-title: 대상에 프로필 및 세그먼트 활성화
 description: 세그먼트를 대상에 매핑하여 실시간 고객 데이터 플랫폼에 있는 데이터를 활성화합니다. 이를 수행하려면 아래 단계를 따르십시오.
 seo-description: 세그먼트를 대상에 매핑하여 실시간 고객 데이터 플랫폼에 있는 데이터를 활성화합니다. 이를 수행하려면 아래 단계를 따르십시오.
 translation-type: tm+mt
-source-git-commit: bb59d93e016d49a0ebba77af1f90563a8767f072
+source-git-commit: 5928242537acdb1f130a0e8ac1bca3f14c184c6a
 workflow-type: tm+mt
-source-wordcount: '1768'
+source-wordcount: '1722'
 ht-degree: 0%
 
 ---
@@ -127,14 +127,6 @@ Adobe Experience Platform `Email_LC_SHA256` 로 데이터 수집 시 [!DNL Faceb
 >소셜 대상의 경우 이 단계에서 대상의 출처를 선택해야 합니다. 아래 이미지에서 옵션 중 하나를 선택한 후에만 다음 단계로 진행할 수 있습니다.
 
 ![데이터 원본 선택](./assets/choose-data-origin.png)
-
-### **[!UICONTROL 예약]** 단계 {#scheduling}
-
-적용 대상:이메일 마케팅 대상 및 클라우드 스토리지 대상
-
-![세그먼트 예약 단계](./assets/scheduling-icon.png)
-
-예약 **** 페이지에서 대상으로 데이터를 전송하는 시작 날짜와 대상으로 데이터를 보내는 빈도를 확인할 수 있습니다. 이러한 값은 편집할 수 없습니다.
 
 ### **[!UICONTROL 속성]** 선택 단계 {#select-attributes}
 
