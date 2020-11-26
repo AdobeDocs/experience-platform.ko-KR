@@ -6,9 +6,9 @@ type: Tutorial
 description: 클라우드 스토리지 위치에 연결하는 지침
 seo-description: 클라우드 스토리지 위치에 연결하는 지침
 translation-type: tm+mt
-source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
+source-git-commit: 7903d6c715747dfc298a5e4a4615d8ecbbe5d359
 workflow-type: tm+mt
-source-wordcount: '557'
+source-wordcount: '566'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 0%
    >
    >이 대상과의 연결이 이미 있는 경우 대상 카드에 **[!UICONTROL 활성화]** 단추가 표시됩니다. 활성화 및 구성 **[!UICONTROL 의 차이에 대한 자세한]****[!UICONTROL 내용은 대상 작업 공간 설명서의]**&#x200B;카탈로그 [섹션을](/help/rtcdp/destinations/destinations-workspace.md#catalog) 참조하십시오.
 
-2. 이전에 클라우드 스토리지 대상에 대한 연결을 **[!UICONTROL 설정한 경우 인증]** 단계에서 기존 계정 **[!UICONTROL 을]** 선택하고 기존 연결을 선택합니다. 또는 새 계정 **[!UICONTROL 을]** 선택하여 클라우드 스토리지 대상에 새 연결을 설정할 수 있습니다. 계정 인증 자격 증명을 입력하고 대상에 **[!UICONTROL 연결을 선택합니다]**. RSA 형식 공개 키를 연결하여 내보낸 파일에 암호화를 추가할 수도 있습니다. 이 공개 키는 Base64 인코딩 문자열로 **작성해야** 합니다. <br> 인증 단계에서 입력한 자격 증명에 대한 자세한 내용은 [Amazon S3](/help/rtcdp/destinations/amazon-s3-destination.md)[[!DNL Amazon Kinesis]](/help/rtcdp/destinations/amazon-kinesis-destination.md) 대상, 대상, [[!DNL Azure Event Hubs]](/help/rtcdp/destinations/azure-event-hubs-destination.md) 대상 및 [SFTP](/help/rtcdp/destinations/sftp-destination.md) 대상을 **** 참조하십시오.
+2. 이전에 클라우드 스토리지 대상에 대한 연결을 **[!UICONTROL 설정한 경우 인증]** 단계에서 기존 계정 **[!UICONTROL 을]** 선택하고 기존 연결을 선택합니다. 또는 새 계정 **[!UICONTROL 을]** 선택하여 클라우드 스토리지 대상에 새 연결을 설정할 수 있습니다. 계정 인증 자격 증명을 입력하고 대상에 **[!UICONTROL 연결을 선택합니다]**. 원하는 경우 **[!UICONTROL 암호화 PGP/GPG]** 섹션에서 RSA 형식의 공개 키를 연결하여 PGP/GPG를 포함한 암호화를 내보낸 파일에 추가할 수 있습니다. 이 공개 키는 Base64 인코딩 문자열로 **작성해야** 합니다. <br> 인증 단계에서 입력한 자격 증명에 대한 자세한 내용은 [Amazon S3](/help/rtcdp/destinations/amazon-s3-destination.md)[[!DNL Amazon Kinesis]](/help/rtcdp/destinations/amazon-kinesis-destination.md) 대상, 대상, [[!DNL Azure Event Hubs]](/help/rtcdp/destinations/azure-event-hubs-destination.md) 대상 및 [SFTP](/help/rtcdp/destinations/sftp-destination.md) 대상을 **** 참조하십시오.
 
    >[!NOTE]
    >
