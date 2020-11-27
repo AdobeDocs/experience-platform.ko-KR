@@ -1,11 +1,11 @@
 ---
 title: Adobe Analytics에서 수동으로 변수 매핑
 seo-title: 웹 SDK를 사용하여 Adobe Analytics의 변수 수동 매핑
-description: 처리 규칙을 사용하여 변수를 수동으로 Adobe Analytics에 매핑하는 방법
+description: 처리 규칙을 사용하여 변수를 Adobe Analytics에 수동으로 매핑하는 방법
 seo-description: 웹 SDK에서 처리 규칙을 사용하여 변수를 Adobe Analytics에 수동으로 매핑
 keywords: adobe analytics;analytics;variables;mapping variables;map variables;contextData;context Data;Processing rules;rules;xdm;schema;
 translation-type: tm+mt
-source-git-commit: 1b5ee9b1f9bdc7835fa8de59020b3eebb4f59505
+source-git-commit: 206b5addd6baf5a120b469b21313ee86ac1fe53b
 workflow-type: tm+mt
 source-wordcount: '385'
 ht-degree: 35%
@@ -52,7 +52,7 @@ To be used by [!DNL Analytics], XDM data is flattened using dot notation and mad
 
 에지 네트워크에서 수집한 모든 데이터는 [처리 규칙](https://docs.adobe.com/content/help/ko-KR/analytics/admin/admin-tools/processing-rules/processing-rules-configuration/t-processing-rules.html)을 통해 액세스할 수 있습니다. In [!DNL Analytics], you can use processing rules to incorporate context data into [!DNL Analytics] variables.
 
-For example, in the following rule, Adobe Analytics is set to populate **Internal Search terms (eVar2)** with the data associated with **a.x_atag.search.term(Context Data)**.
+For example, in the following rule, Adobe Analytics is set to populate **Internal Search terms (eVar2)** with the data associated with **a.x._atag.search.term(Context Data)**.
 
 ![](assets/examplerule.png)
 
