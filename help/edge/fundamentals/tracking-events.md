@@ -5,9 +5,9 @@ description: Experience Platform 웹 SDK 이벤트를 추적하는 방법 학습
 seo-description: Experience Platform 웹 SDK 이벤트를 추적하는 방법 학습
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
 translation-type: tm+mt
-source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
+source-git-commit: 51a846124f71012b2cb324cc1469ec7c9753e574
 workflow-type: tm+mt
-source-wordcount: '1138'
+source-wordcount: '1331'
 ht-degree: 0%
 
 ---
@@ -43,6 +43,35 @@ alloy("sendEvent", {
   }
 });
 ```
+
+명령이 실행될 때와 데이터가 서버로 전송될 때까지(예: 웹 SDK 라이브러리가 완전히 로드되지 않았거나 동의를 아직 받지 못한 경우) 어느 정도의 시간이 경과할 수 있습니다. `sendEvent` 명령을 실행한 후 `xdm` 객체의 일부 `sendEvent` 를 수정하려면 명령을 실행하기 `xdm` 전에 _객체를 복제하는 것이 좋습니다_ `sendEvent` . 예:
+
+```javascript
+var clone = function(value) {
+  return JSON.parse(JSON.stringify(value));
+};
+
+var dataLayer = {
+  "commerce": {
+    "order": {
+      "purchaseID": "a8g784hjq1mnp3",
+      "purchaseOrderNumber": "VAU3123",
+      "currencyCode": "USD",
+      "priceTotal": 999.98
+    }
+  }
+};
+
+alloy("sendEvent", {
+  "xdm": clone(dataLayer)
+});
+
+// This change will not be reflected in the data sent to the 
+// server for the prior sendEvent command.
+dataLayer.commerce = null;
+```
+
+이 예에서 데이터 레이어는 JSON에 일련화한 다음 역직렬화하여 복제됩니다. 그런 다음 복제된 결과가 `sendEvent` 명령으로 전달됩니다. 그렇게 하면 명령을 실행할 때 `sendEvent` 명령에는 데이터 레이어의 스냅샷이 `sendEvent` 있으므로 나중에 원래 데이터 레이어 객체의 수정 사항이 서버에 전송된 데이터에 반영되지 않습니다. 이벤트 기반 데이터 레이어를 사용하는 경우 이미 데이터 복제가 자동으로 처리됩니다. 예를 들어, [Adobe 클라이언트 데이터 레이어를](https://github.com/adobe/adobe-client-data-layer/wiki)사용하는 경우 이 `getState()` 방법은 모든 이전 변경 사항에 대한 계산된 복제된 스냅샷을 제공합니다. AEP 웹 SDK 실행 확장 프로그램을 사용하는 경우에도 자동으로 처리됩니다.
 
 >[!NOTE]
 >
