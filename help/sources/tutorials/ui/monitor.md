@@ -1,22 +1,22 @@
 ---
-keywords: Experience Platform;home;popular topics;monitor accounts;monitor dataflows;data flows
-description: Adobe Experience Platform의 소스 커넥터는 예약된 기준으로 외부 소스 데이터를 인제스트하는 기능을 제공합니다. 이 자습서에서는 소스 작업 영역에서 기존 계정 및 데이터 흐름을 보는 단계를 제공합니다.
+keywords: Experience Platform;home;popular topics;monitor accounts;monitor dataflows;dataflows
+description: Adobe Experience Platform의 소스 커넥터는 예약된 기준으로 외부 소스 데이터를 인제스트하는 기능을 제공합니다. 이 자습서에서는 소스 작업 영역에서 기존 데이터 흐름을 보는 단계를 제공합니다.
 solution: Experience Platform
-title: 계정 및 데이터 흐름 모니터링
+title: 데이터 흐름 모니터링
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: 12b8ced6705c2b14b50ea237391d9f829c894b99
 workflow-type: tm+mt
-source-wordcount: '1102'
+source-wordcount: '822'
 ht-degree: 1%
 
 ---
 
 
-# UI에서 계정 및 데이터 흐름 모니터링
+# UI에서 데이터 흐름 모니터링
 
-Adobe Experience Platform의 소스 커넥터는 예약된 기준으로 외부 소스 데이터를 인제스트하는 기능을 제공합니다. 이 자습서에서는 소스 작업 영역에서 기존 계정 및 데이터 흐름을 보는 단계를 [!UICONTROL 제공합니다] .
+Adobe Experience Platform의 소스 커넥터는 예약된 기준으로 외부 소스 데이터를 인제스트하는 기능을 제공합니다. 이 자습서에서는 소스 작업 영역에서 기존 데이터 흐름을 보는 [!UICONTROL 단계를] 제공합니다.
 
 ## 시작하기
 
@@ -27,53 +27,9 @@ Adobe Experience Platform의 소스 커넥터는 예약된 기준으로 외부 �
    - [스키마 편집기 자습서](../../../xdm/tutorials/create-schema-ui.md):스키마 편집기 UI를 사용하여 사용자 정의 스키마를 생성하는 방법을 알아봅니다.
 - [[!DNL Real-time Customer Profile]](../../../profile/home.md):여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
 
-## 계정 모니터링
-
-[Adobe Experience Platform](https://platform.adobe.com) 에 로그인한 다음 **** 왼쪽 탐색 막대에서 소스를 선택하여 **[!UICONTROL 소스 작업 영역에]** 액세스합니다. [ **[!UICONTROL 카탈로그]** ] 화면에는 계정 및 데이터 흐름을 만들 수 있는 다양한 소스가 표시됩니다. 각 소스에는 연결된 기존 계정 및 데이터 흐름 수가 표시됩니다.
-
-상단 헤더에서 **[!UICONTROL 계정을]** 선택하여 기존 계정을 봅니다.
-
-![카탈로그](../../images/tutorials/monitor/catalog-accounts.png)
-
-계정 **[!UICONTROL 페이지가]** 나타납니다. 이 페이지에는 소스, 사용자 이름, 데이터 흐름 수 및 작성 날짜에 대한 정보를 비롯하여 볼 수 있는 계정 목록이 있습니다.
-
-왼쪽 상단에 있는 단계 아이콘을 선택하여 정렬 창을 실행합니다.
-
-![계정](../../images/tutorials/monitor/accounts-list.png)
-
-정렬 패널을 사용하면 특정 소스의 계정에 액세스할 수 있습니다. 작업할 소스를 선택하고 오른쪽 목록에서 계정을 선택합니다.
-
->[!TIP]
->
-> [ ![이름](../../images/tutorials/monitor/spectrum-control.png) ] 열의 **[!UICONTROL 스펙트럼 제어]** 단추를 사용하여 선택한 계정에 대한 새 소스 데이터 흐름을 만듭니다.
-
-![계정 선택](../../images/tutorials/monitor/accounts-sort.png)
-
-또한 기존 계정 정보를 편집하고 계정 자격 증명을 업데이트할 수 있습니다. 편집할 계정 정보의 연필 아이콘을 선택합니다.
-
-![](../../images/tutorials/monitor/click-edit.png)
-
-계정 **[!UICONTROL 세부 사항]** 모달이 나타납니다. 이 페이지에서 기존 계정 세부 사항 및 인증 자격 증명을 업데이트할 수 있습니다.
-
->[!NOTE]
->
-> 계정 세부 사항 편집은 모든 배치 소스 커넥터에서 사용할 수 있습니다.
-
-![](../../images/tutorials/monitor/edit-account.png)
-
-계정 **[!UICONTROL 페이지에서]** 액세스한 계정과 연결된 기존 데이터 흐름 또는 대상 데이터 집합 목록을 볼 수 있습니다. 선택한 데이터 흐름`...`에 사용할 수 있는 추가 옵션을 표시하려면 줄임표(줄임표) 단추를 선택합니다. 이러한 옵션은 아래에 자세히 설명되어 있습니다.
-
-| 컨트롤 | 설명 |
-| ------- | ----------- |
-| [!UICONTROL 예약 편집] | 데이터 흐름 통합 일정을 편집할 수 있습니다. |
-| [!UICONTROL 데이터 흐름 비활성화] | 선택한 데이터 흐름 동안 데이터 수집을 비활성화할 수 있습니다. |
-| [!UICONTROL 삭제] | 선택한 데이터 흐름을 삭제할 수 있습니다. |
-
-![데이터 흐름](../../images/tutorials/monitor/dataflows.png)
-
 ## 데이터 흐름 모니터링
 
-데이터 파일은 계정을 보지 않고도 **[!UICONTROL 카탈로그]** 페이지에서 직접 액세스할 수 **[!UICONTROL 있습니다]**. 데이터 **[!UICONTROL 흐름]** 목록을 보려면 상단 헤더에서 데이터 흐름을 선택합니다.
+[ [Experience Platform UI](https://platform.adobe.com) 로그인]에 로그인한 다음 왼쪽 탐색 **[!UICONTROL 에서 [소스]** ]를 선택하여 [!UICONTROL 소스 작업 영역에] 액세스합니다. 상위 **[!UICONTROL 헤더에서 데이터 흐름]** 을 선택하여 기존 데이터 흐름을 봅니다.
 
 ![카탈로그 데이터 흐름](../../images/tutorials/monitor/catalog-dataflows.png)
 
