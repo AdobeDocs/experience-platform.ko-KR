@@ -5,9 +5,9 @@ title: 스트리밍 대상에 연결 및 데이터 활성화
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 502d913400a8ddc0132c64253cd30ea9f9fcd239
+source-git-commit: f12b400ca95e23d8e6ac282fafa8f4bb141d703a
 workflow-type: tm+mt
-source-wordcount: '1870'
+source-wordcount: '2012'
 ht-degree: 2%
 
 ---
@@ -592,6 +592,31 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
   }
 }
 ```
+
+## Postman 컬렉션을 사용하여 스트리밍 대상에 연결  {#collections}
+
+이 튜토리얼에서 설명하는 스트리밍 대상에 보다 간소화된 방식으로 연결하려면 를 사용할 수 있습니다 [[!DNL Postman]](https://www.postman.com/).
+
+[!DNL Postman] 은 사전 정의된 호출 및 환경의 라이브러리를 API를 호출하고 관리하는 데 사용할 수 있는 도구입니다.
+
+이 특정 자습서에서는 이 문서에 첨부된 다음 [!DNL Postman] 컬렉션을 포함했습니다.
+
+* [!DNL AWS Kinesis] [!DNL Postman] collection
+* [!DNL Azure Event Hubs] [!DNL Postman] collection
+
+컬렉션 보관 파일을 다운로드하려면 [여기를](assets/DestinationPostmanCollection.zip) 클릭하십시오.
+
+각 컬렉션에는 필요한 요청 및 환경 변수가 각각 포함되며, [!DNL AWS Kinesis]및 [!DNL Azure Event Hub]는 각각 해당됩니다.
+
+### Postman 컬렉션 사용 방법
+
+첨부된 [!DNL Postman] 컬렉션을 사용하여 대상에 연결하려면 다음 단계를 따르십시오.
+
+* Download and install [!DNL Postman];
+* [첨부된 컬렉션 다운로드](assets/DestinationPostmanCollection.zip) 및 압축 해제
+* 해당 폴더에서 Postman으로 컬렉션을 가져옵니다.
+* 이 문서의 지침에 따라 환경 변수를 입력합니다.
+* 이 문서의 지침에 따라 Postman의 [!DNL API] 요청을 실행합니다.
 
 ## 다음 단계
 
