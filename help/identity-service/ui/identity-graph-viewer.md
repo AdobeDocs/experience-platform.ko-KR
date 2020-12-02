@@ -5,9 +5,9 @@ title: Adobe Experience Platform ID 서비스
 topic: tutorial
 description: ID 그래프는 특정 고객에 대해 서로 다른 ID 간의 관계를 보여주는 지도로, 다양한 채널에서 고객이 브랜드와 상호 작용하는 방식을 시각적으로 보여줍니다.
 translation-type: tm+mt
-source-git-commit: af7eab0599b17be55d5a4c129f7ebaeba91333bc
+source-git-commit: df165baceaf8dc2b21055201ec78bd392044b938
 workflow-type: tm+mt
-source-wordcount: '840'
+source-wordcount: '847'
 ht-degree: 1%
 
 ---
@@ -75,7 +75,7 @@ ID 테이블에서 강조 표시된 행을 **[!UICONTROL 업데이트하고 ID�
 
 ![확대/축소](../images/identity-graph-viewer/zoom.png)
 
-헤더에서 **[!UICONTROL 데이터 소스를]** 선택하여 배치에 대한 자세한 정보를 볼 수 있습니다. 데이터 **[!UICONTROL 소스]** 테이블에는 그래프와 연관된 **[!UICONTROL 배치]** ID **[!UICONTROL 목록과 해당]**&#x200B;연결된 ID, 소스 스키마 및 통합 날짜가 표시됩니다.
+헤더에서 **[!UICONTROL 데이터 소스를]** 선택하여 배치에 대한 자세한 정보를 볼 수 있습니다. 데이터 **[!UICONTROL 소스]** 테이블에는 그래프와 연결된 **[!UICONTROL 배치]** ID **[!UICONTROL 목록과 해당]**&#x200B;연결된 ID, 소스 스키마 및 통합 날짜가 표시됩니다.
 
 ![데이터 소스](../images/identity-graph-viewer/data-source-table.png)
 
@@ -98,6 +98,7 @@ ID가 더 큰 클러스터를 사용하는 ID 그래프도 ID 그래프 뷰어�
 - 선택한 네임스페이스에 ID 값이 없습니다.
 - 그래프의 ID는 2개 미만입니다.
 - 그래프가 최대 400ID를 초과합니다.
+- 비프로덕션 샌드박스 환경에 속해 있습니다.
 
 ![대규모 클러스터](../images/identity-graph-viewer/error-screen.png)
 
