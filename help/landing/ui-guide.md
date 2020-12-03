@@ -5,7 +5,7 @@ title: Adobe Experience Platform UI 안내서
 topic: ui guide
 description: 'Adobe Experience Platform '
 translation-type: tm+mt
-source-git-commit: bde9763aafb4ba32877f7ec14873eeae99760a45
+source-git-commit: adf8e8457c8ffef263223a38d3f9c345cf7c6ab2
 workflow-type: tm+mt
 source-wordcount: '1597'
 ht-degree: 0%
@@ -37,7 +37,7 @@ Adobe Experience Platform에 로그인한 후에는 지표 대시보드, 최근 
 
 세그먼트 **[!UICONTROL 섹션]** 은 IMS 조직 내에서 생성된 총 세그먼트 수를 보여줍니다. 이 번호는 새 세그먼트가 생성될 때 업데이트됩니다. 세그먼트에 대한 자세한 내용은 [세그멘테이션 서비스 개요를 참조하십시오](../segmentation/home.md).
 
-대상 **[!UICONTROL 섹션]** 은 IMS 조직에 대해 생성된 총 대상 수를 보여줍니다. 이 번호는 새 대상이 생성될 때 업데이트됩니다. 대상에 대한 자세한 내용은 [대상 개요를 참조하십시오](../rtcdp/destinations/destinations-overview.md).
+대상 **[!UICONTROL 섹션]** 은 IMS 조직에 대해 생성된 총 대상 수를 보여줍니다. 이 번호는 새 대상이 생성될 때 업데이트됩니다. 대상에 대한 자세한 내용은 [대상 개요를 참조하십시오](../destinations/home.md).
 
 ### 최근 데이터
 
@@ -51,7 +51,7 @@ Adobe Experience Platform에 로그인한 후에는 지표 대시보드, 최근 
 
 최근 **[!UICONTROL 세그먼트]** 섹션에는 IMS 조직 내에서 가장 최근에 만든 5개의 세그먼트 정의가 나열됩니다. 이 목록은 새 세그먼트 정의를 만들 때마다 업데이트됩니다. 목록에서 세그먼트 정의를 선택하여 지정된 세그먼트 정의에 대한 자세한 정보를 보거나 모두 **** 보기를 선택하여 만들어진 모든 세그먼트 정의 목록을 볼 수 있습니다. 세그먼트에 대한 자세한 내용은 [세그멘테이션 서비스 개요를 참조하십시오](../segmentation/home.md).
 
-최근 **[!UICONTROL 대상]** 섹션에는 IMS 조직 내에서 가장 최근에 만든 5개의 대상 목록이 표시됩니다. 이 목록은 새 대상을 만들 때마다 업데이트됩니다. 목록에서 대상을 선택하여 지정한 대상에 대한 자세한 정보를 보거나 모두 **[!UICONTROL 보기를 선택하여]** 만들어진 모든 대상 목록을 볼 수 있습니다. 대상에 대한 자세한 내용은 [대상 개요를 참조하십시오](../rtcdp/destinations/destinations-overview.md).
+최근 **[!UICONTROL 대상]** 섹션에는 IMS 조직 내에서 가장 최근에 만든 5개의 대상 목록이 표시됩니다. 이 목록은 새 대상을 만들 때마다 업데이트됩니다. 목록에서 대상을 선택하여 지정한 대상에 대한 자세한 정보를 보거나 모두 **[!UICONTROL 보기를 선택하여]** 만들어진 모든 대상 목록을 볼 수 있습니다. 대상에 대한 자세한 내용은 [대상 개요를 참조하십시오](../destinations/home.md).
 
 ### 권장 학습
 
@@ -117,7 +117,7 @@ Adobe Experience Platform에 로그인한 후에는 지표 대시보드, 최근 
 
 소스 **[!UICONTROL 섹션에서]** 소스 연결을 생성, 업데이트 및 삭제할 수 있으므로 외부 소스의 데이터를 플랫폼으로 인제스트할 수 있습니다. 소스에 대한 자세한 내용은 [소스 개요를 참조하십시오](../sources/home.md).
 
-대상 **[!UICONTROL 섹션을]** 사용하면 대상을 만들고, 업데이트하고, 삭제할 수 있으므로, 플랫폼에서 여러 외부 대상으로 데이터를 내보낼 수 있습니다. 대상에 대한 자세한 내용은 [대상 개요를 참조하십시오](../rtcdp/destinations/destinations-overview.md).
+대상 **[!UICONTROL 섹션을]** 사용하면 대상을 만들고, 업데이트하고, 삭제할 수 있으므로, 플랫폼에서 여러 외부 대상으로 데이터를 내보낼 수 있습니다. 대상에 대한 자세한 내용은 [대상 개요를 참조하십시오](../destinations/home.md).
 
 ### [!UICONTROL 고객]
 
