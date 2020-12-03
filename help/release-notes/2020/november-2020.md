@@ -1,11 +1,11 @@
 ---
-title: Adobe Experience Platform 릴리스 정보
+title: Adobe Experience Platform 릴리스 노트
 description: Experience Platform 릴리스 노트
 doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: 6cf9c88f6dc751a4cc877670a89cc99d1efb1b2a
+source-git-commit: adf8e8457c8ffef263223a38d3f9c345cf7c6ab2
 workflow-type: tm+mt
 source-wordcount: '2180'
 ht-degree: 3%
@@ -126,7 +126,7 @@ For more information, please see the [[!DNL Offer Decisioning]](https://experien
 | 파일 예약 | 이메일 기반 및 클라우드 스토리지 대상의 경우 일회성 내보내기를 만들거나 일일 스냅샷을 만들 수 있습니다. |
 | 필수 필드 | 사용자는 필드를 필수로 표시할 수 있으므로 필수 필드가 포함된 필드만 내보낼 수 있습니다. |
 
-자세한 내용은 대상 [개요를 참조하십시오](../../rtcdp/destinations/destinations-overview.md).
+자세한 내용은 대상 [개요를 참조하십시오](../../destinations/home.md).
 
 ## Intelligent Services {#intelligent-services}
 
