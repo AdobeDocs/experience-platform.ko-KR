@@ -2,12 +2,12 @@
 keywords: RTCDP;CDP;Real-time Customer Data Platform;real time customer data platform;real time cdp;cdp;rtcdp
 title: 실시간 고객 데이터 플랫폼 시작하기
 seo-title: 실시간 고객 데이터 플랫폼 시작하기
-description: ' 실시간 고객 데이터 플랫폼을 위한 샘플 시나리오'
-seo-description: ' 실시간 고객 데이터 플랫폼을 위한 샘플 시나리오'
+description: 실시간 고객 데이터 플랫폼을 위한 샘플 시나리오
+seo-description: 실시간 고객 데이터 플랫폼을 위한 샘플 시나리오
 translation-type: tm+mt
-source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
+source-git-commit: 8369bd517639cc66eeb95a811c3ddf46b8c4c48d
 workflow-type: tm+mt
-source-wordcount: '2318'
+source-wordcount: '2317'
 ht-degree: 1%
 
 ---
@@ -237,7 +237,7 @@ Loyalty member
 
 대상에 **[!UICONTROL 보내기를 클릭합니다]**.
 
-Adobe 실시간 CDP에서 Luma는 고객 세그먼트에 맞게 원활하게 작업하여 개인화할 수 있습니다.\
+Luma는 실시간 CDP에서 고객 세그먼트에 대한 완벽한 개인화를 통해 고객 세그먼트 작업을 원활하게 수행할 수 있습니다.\
 여기에는 Luma가 이 대상을 Adobe 및 비Adobe 솔루션 모두에 보낼 수 있는 모든 대상이 표시됩니다.
 
 ![image](assets/luma-dest.png)
