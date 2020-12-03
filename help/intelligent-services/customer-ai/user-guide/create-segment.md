@@ -5,9 +5,9 @@ title: 예측된 점수가 있는 고객 세그먼트 만들기
 topic: Create a segment
 description: 예측 실행이 완료되면 예측된 성향 점수가 프로파일에서 자동으로 사용됩니다. 고객 AI 점수로 프로파일을 강화하면 고객 세그먼트를 만들어 고객 성향 점수를 기준으로 고객을 찾을 수 있습니다. 이 섹션에서는 세그먼트 빌더를 사용하여 세그먼트를 만드는 단계를 제공합니다.
 translation-type: tm+mt
-source-git-commit: c5e2ea5daf813bf580a11f0182361197e55c6fe8
+source-git-commit: d29f7c7243ec798abe60fff895b36277996cb4a0
 workflow-type: tm+mt
-source-wordcount: '317'
+source-wordcount: '308'
 ht-degree: 0%
 
 ---
@@ -41,4 +41,4 @@ ht-degree: 0%
 
 ## 다음 단계
 
-이 튜토리얼을 따라 세그먼트 빌더를 사용하여 성향 점수를 기준으로 대상을 찾았습니다. 대상을 활성화하여 대상을 타깃팅할 수 있습니다. 자세한 내용은 [대상 개요를](https://docs.adobe.com/content/help/en/experience-platform/rtcdp/destinations/destinations-overview.html) 참조하십시오.
+이 튜토리얼을 따라 세그먼트 빌더를 사용하여 성향 점수를 기준으로 대상을 찾았습니다. 대상을 활성화하여 대상을 타깃팅할 수 있습니다. See the [destinations overview](../../../destinations/home.md) for more information.
