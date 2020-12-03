@@ -1,11 +1,11 @@
 ---
-title: Adobe Experience Platform 릴리스 정보
+title: Adobe Experience Platform 릴리스 노트
 description: Experience Platform 릴리스 노트
 doc-type: release notes
 last-update: November 18, 2019
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
+source-git-commit: 5f120a716cc3396ef7749463bb6052a8ced2fbb4
 workflow-type: tm+mt
 source-wordcount: '1878'
 ht-degree: 2%
@@ -65,7 +65,7 @@ Adobe은 Adobe Experience Cloud와의 기본 통합은 물론 광범위한 파�
 
 ## [!DNL Destinations] {#destinations}
 
-[!DNL Destinations] adobe의 실시간 고객 데이터 플랫폼에서 지원하는 대상 플랫폼과의 사전 구축된 통합으로, 이러한 파트너에게 데이터를 원활하게 제공할 수 있습니다. 자세한 내용은 [대상 개요](../../rtcdp/destinations/destinations-overview.md) 문서를 참조하십시오.
+[!DNL Destinations] adobe의 실시간 고객 데이터 플랫폼에서 지원하는 대상 플랫폼과의 사전 구축된 통합으로, 이러한 파트너에게 데이터를 원활하게 제공할 수 있습니다. 자세한 내용은 [대상 개요](../../destinations/home.md) 문서를 참조하십시오.
 
 **사용 가능한 대상**
 
@@ -74,12 +74,12 @@ Adobe은 Adobe Experience Cloud와의 기본 통합은 물론 광범위한 파�
 * 광고: [!DNL Google]
 * 이메일 마케팅:Adobe Campaign, [!DNL Salesforce Marketing Cloud], [!DNL Responsys][!DNL Oracle Eloqua]
 
-각 대상에 대한 자세한 내용은 [대상 카탈로그를](../../rtcdp/destinations/destinations-catalog.md) 참조하십시오.
+각 대상에 대한 자세한 내용은 [대상 카탈로그를](../../destinations/catalog/overview.md) 참조하십시오.
 
 **알려진 제한 사항**
 
-* 초기 릴리스에서는 [활성화 과정](../../rtcdp/destinations/activate-destinations.md#activate-data) (예약 단계)에서 사용자 정의 활성화 일정을 허용하는 컨트롤을 사용할 수 없습니다.
-* 현재 대상 구성을 편집하거나 삭제할 수 있는 방법이 없습니다. 이 제한 사항을 해결하려면 [대상 세부 정보 페이지의 오른쪽 위 모서리에 있는 대상을 활성화하거나 비활성화할 수 있습니다](../../rtcdp/destinations/destination-details-page.md).
+* 초기 릴리스에서는 [활성화 과정](../../destinations/ui/activate-destinations.md#activate-data) (예약 단계)에서 사용자 정의 활성화 일정을 허용하는 컨트롤을 사용할 수 없습니다.
+* 현재 대상 구성을 편집하거나 삭제할 수 있는 방법이 없습니다. 이 제한 사항을 해결하려면 [대상 세부 정보 페이지의 오른쪽 위 모서리에 있는 대상을 활성화하거나 비활성화할 수 있습니다](../../destinations/ui/destination-details-page.md).
 * 대상 또는 저장소 계정에 연결할 때 현재 계정 세부 사항, 경로 또는 자격 증명을 위한 유효성 검사가 수행되지 않습니다. 올바른 자격 증명을 입력하고 맞춤법 오류나 오타를 다시 확인하십시오.
 * 초기 릴리스와 함께 자격 증명 갱신이 이루어지지 않습니다. 계정이 만료되거나 새로 고침이 필요한 경우 새 대상 연결을 만들고 이전에 매핑된 세그먼트를 다시 매핑해야 합니다.
 
