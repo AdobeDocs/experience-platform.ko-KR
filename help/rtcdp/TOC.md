@@ -5,7 +5,7 @@ audience: user
 user-guide-title: 실시간 고객 데이터 플랫폼 안내서
 user-guide-description: 여러 엔터프라이즈 소스에서 알려진 데이터와 익명의 데이터를 결합하여 고객 프로필을 생성하고, 이러한 프로필에서 고객 세그먼트를 생성하며, 이러한 세그먼트를 제3자 대상으로 활성화할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 44a129e5a92fc9994e43c199bf902459c012eca3
+source-git-commit: 24e8f6bce76c772567f9ef017ad82bdb459db1bf
 workflow-type: tm+mt
 source-wordcount: '525'
 ht-degree: 16%
@@ -95,13 +95,13 @@ ht-degree: 16%
          * [Adobe Campaign](destinations/adobe-campaign-destination.md)
          * [모바일 분석 확장](/help/rtcdp/destinations/bizible-extension.md)
          * [마케팅 확장](destinations/marketo-extension.md)
-         * [Marketo Munchkin 확장 프로그램](destinations/marketo-munchkin-extension.md)
+         * [Marketo Munchkin 확장](destinations/marketo-munchkin-extension.md)
          * [Oracle 웅변가](destinations/oracle-eloqua-destination.md)
          * [Oracle Responsys](destinations/oracle-responsys-destination.md)
          * [페블포스트 연장](destinations/pebblepost-extension.md)
          * [Salesforce Marketing Cloud](destinations/salesforce-marketing-cloud-destination.md)
       * Experience Platform Launch extensions{#launch-extensions}
-         * [Experience Platform Launch 확장 개요](/help/rtcdp/destinations/experience-platform-launch-extensions.md)
+         * [Experience Platform Launch 확장 개요](destinations/experience-platform-launch-extensions.md)
       * 모바일 참여 대상 {#mobile-engagement-destinations}
          * [모바일 참여 대상 개요](destinations/mobile-destinations.md)
          * [Airship 속성](destinations/airship-attributes-destination.md)
