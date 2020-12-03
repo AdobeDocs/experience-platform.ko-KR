@@ -1,11 +1,11 @@
 ---
-title: Adobe Experience Platform 릴리스 정보
+title: Adobe Experience Platform 릴리스 노트
 description: 'Experience Platform 릴리스 노트: 2020년 9월 9일'
 doc-type: release notes
 last-update: September 8, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
+source-git-commit: adf8e8457c8ffef263223a38d3f9c345cf7c6ab2
 workflow-type: tm+mt
 source-wordcount: '862'
 ht-degree: 6%
@@ -47,9 +47,9 @@ Adobe Experience Platform 데이터 거버넌스는 고객 데이터를 관리�
 
 | 기능 | 설명 |
 | ------- | ----------- |
-| 향상된 UX | 사용자는 인라인 테이블 작업에 액세스하여 데이터 추가, 예약 편집 및 세그먼트 추가와 같은 기본 작업에 쉽게 액세스할 수 있습니다. 자세한 내용은 [대상 작업 공간](../../rtcdp/destinations/destinations-workspace.md) 문서를 참조하십시오. |
+| 향상된 UX | 사용자는 인라인 테이블 작업에 액세스하여 데이터 추가, 예약 편집 및 세그먼트 추가와 같은 기본 작업에 쉽게 액세스할 수 있습니다. 자세한 내용은 [대상 작업 공간](../../destinations/ui/destinations-workspace.md) 문서를 참조하십시오. |
 
-자세한 내용은 [대상 개요를 참조하십시오](../../rtcdp/destinations/destinations-overview.md)
+자세한 내용은 [대상 개요를 참조하십시오](../../destinations/home.md)
 
 ## [!DNL Observability Insights] {#observability}
 
@@ -59,7 +59,7 @@ Adobe Experience Platform 데이터 거버넌스는 고객 데이터를 관리�
 
 | 기능 | 설명 |
 | --- | --- |
-| Adobe I/O 이벤트 알림 | [!DNL Observability Insights] adobe I/O 이벤트를 활용하여 여러 Experience Platform 서비스에 대한 이벤트 알림을 만듭니다. 알림 페이로드는 구성된 웹 후크로 전송되며, 이를 통해 추가 다운스트림 프로세스를 자동화할 수 있습니다. See the [notifications overview](../../observability/notifications/overview.md) for more information. |
+| Adobe I/O 이벤트 알림 | [!DNL Observability Insights] adobe i/o 이벤트를 활용하여 여러 Experience Platform 서비스에 대한 이벤트 알림을 만듭니다. 알림 페이로드는 구성된 웹 후크로 전송되며, 이를 통해 추가 다운스트림 프로세스를 자동화할 수 있습니다. See the [notifications overview](../../observability/notifications/overview.md) for more information. |
 
 서비스에 대한 자세한 내용은 [[!DNL Observability Insights] 개요를](../../observability/home.md) 참조하십시오.
 
