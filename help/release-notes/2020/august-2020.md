@@ -1,13 +1,13 @@
 ---
-title: Adobe Experience Platform 릴리스 정보
+title: Adobe Experience Platform 릴리스 노트
 description: Experience Platform 릴리스 노트
 doc-type: release notes
 last-update: August 10, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
+source-git-commit: d29f7c7243ec798abe60fff895b36277996cb4a0
 workflow-type: tm+mt
-source-wordcount: '582'
+source-wordcount: '581'
 ht-degree: 7%
 
 ---
@@ -46,14 +46,14 @@ Adobe Experience Platform 데이터를 활성화할 수 있는 새로운 대상�
 
 | 대상 | 설명 |
 |--- | ---|
-| [!DNL Google Customer Match] | Google Customer Match를 사용하면 온라인 및 오프라인 데이터를 사용하여 다음과 같은 Google 소유 및 운영 자산에서 고객에게 도달하고 재참여할 수 있습니다. [!DNL Search], [!DNL Shopping], Gmail 및 YouTube. <br><br> 대상 카탈로그의 [!DNL Google Customer Match] 페이지 [](/help/rtcdp/destinations/google-customer-match-destination.md) 를 방문하여 대상 및 Adobe 실시간 CDP에서 대상을 설정하는 방법에 대한 자세한 내용을 확인하십시오. |
+| [!DNL Google Customer Match] | Google Customer Match를 사용하면 온라인 및 오프라인 데이터를 사용하여 다음과 같은 Google 소유 및 운영 자산에서 고객에게 도달하고 재참여할 수 있습니다. [!DNL Search], [!DNL Shopping], Gmail 및 YouTube. <br><br> 대상 카탈로그의 [!DNL Google Customer Match] 페이지 [](../../destinations/catalog/advertising/google-customer-match.md) 에서 대상과 실시간 CDP에서 설정하는 방법에 대한 자세한 정보를 참조하십시오. |
 
 **새로운 기능**
 
 | 기능 | 설명 |
 |------- | -----------|
-| 사용자 정의 파일 이름 편집기 | 내보낸 파일의 이름을 편집할 수 있는 이메일 마케팅 대상 및 클라우드 스토리지 대상에 대한 데이터 활성화 워크플로우로 업데이트합니다. 자세한 내용은 정품 인증 워크플로우의 [ 구성 단계를](/help/rtcdp/destinations/activate-destinations.md#configure) 참조하십시오. |
-| 권장 속성 | 내보낸 파일에 추가할 수 있는 권장 특성을 표시하는 이메일 마케팅 대상 및 클라우드 스토리지 대상에 대한 데이터 활성화 워크플로우로 업데이트합니다. 자세한 내용은 정품 인증 워크플로우의 [속성 선택 단계를](/help/rtcdp/destinations/activate-destinations.md#select-attributes) 참조하십시오. |
+| 사용자 정의 파일 이름 편집기 | 내보낸 파일의 이름을 편집할 수 있는 이메일 마케팅 대상 및 클라우드 스토리지 대상에 대한 데이터 활성화 워크플로우로 업데이트합니다. 자세한 내용은 정품 인증 워크플로우의 [ 구성 단계를](../../destinations/ui/activate-destinations.md#configure) 참조하십시오. |
+| 권장 속성 | 내보낸 파일에 추가할 수 있는 권장 특성을 표시하는 이메일 마케팅 대상 및 클라우드 스토리지 대상에 대한 데이터 활성화 워크플로우로 업데이트합니다. 자세한 내용은 정품 인증 워크플로우의 [속성 선택 단계를](../../destinations/ui/activate-destinations.md#select-attributes) 참조하십시오. |
 
 ## [!DNL Real-time Customer Data Platform] {#rtcdp}
 
