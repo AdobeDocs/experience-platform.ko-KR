@@ -5,10 +5,10 @@ user-guide-title: Adobe Experience Platform 개요
 breadcrumb-title: Experience Platform 개요
 user-guide-description: Experience Platform을 통해 개인화된 경험을 실시간으로 고객에게 전달하는 방법을 살펴볼 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 36707e95a63b6be60d1d7badbe1cdc9d0bc3548c
+source-git-commit: 5761394285e56214fd59e31d530756eed1f5ad08
 workflow-type: tm+mt
-source-wordcount: '402'
-ht-degree: 44%
+source-wordcount: '399'
+ht-degree: 45%
 
 ---
 
@@ -45,7 +45,7 @@ ht-degree: 44%
    * [데이터 과학 작업 공간](https://docs.adobe.com/content/help/en/experience-platform/data-science-workspace/home.html)
    * [Debugger](https://docs.adobe.com/content/help/ko-KR/debugger/using/experience-cloud-debugger.html)
    * [Debugger 2.0(베타)](https://docs.adobe.com/content/help/ko-KR/debugger/using-v2/experience-cloud-debugger.html)
-   * [대상](https://docs.adobe.com/content/help/en/experience-platform/rtcdp/destinations/destinations-overview.html)
+   * [대상](https://experienceleague.adobe.com/docs/experience-platform/destinations/home.html)
    * [ETL(추출, 변형, 로드)](https://docs.adobe.com/content/help/en/experience-platform/etl/home.html)
    * [ID 서비스](https://docs.adobe.com/content/help/ko-KR/experience-platform/identity/home.html)
    * [Intelligent Services](https://docs.adobe.com/content/help/en/experience-platform/intelligent-services/home.html)
