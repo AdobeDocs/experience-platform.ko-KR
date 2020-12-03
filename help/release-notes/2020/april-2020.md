@@ -1,14 +1,14 @@
 ---
-title: Adobe Experience Platform 릴리스 정보
+title: Adobe Experience Platform 릴리스 노트
 description: Experience Platform 릴리스 노트
 doc-type: release notes
 last-update: April 13, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
+source-git-commit: adf8e8457c8ffef263223a38d3f9c345cf7c6ab2
 workflow-type: tm+mt
-source-wordcount: '972'
+source-wordcount: '969'
 ht-degree: 8%
 
 ---
@@ -94,14 +94,14 @@ Adobe Experience Platform [!DNL Data Governance] 는 고객 데이터를 관리�
 
 **새 대상**
 
-Adobe 실시간 CDP는 50개 이상의 확장을 대상으로 데이터 활성화를 지원하므로 분석, 개인화 및 기타 사용 사례를 활용할 수 있습니다 [!DNL Experience Cloud Launch] . 자세한 내용은 아래를 참조하십시오.
+실시간 CDP는 50개 이상의 확장을 대상으로 데이터 활성화를 지원하여 분석, 개인화 및 기타 사용 사례를 지원합니다. [!DNL Experience Cloud Launch] 자세한 내용은 아래를 참조하십시오.
 
 | 설명서 | 설명 |
 |--- | ---|
-| [대상 유형 및 카테고리](/help/rtcdp/destinations/destination-types.md) | 이 문서에서는 Adobe 실시간 CDP 인터페이스의 연결과 익스텐션의 차이점과 이러한 각 대상을 사용할 시기를 권장합니다. |
-| [Experience Platform Launch 확장](/help/rtcdp/destinations/experience-platform-launch-extensions.md) | 이 페이지에서는 어떤 확장 기능을 [!DNL Launch] 사용하는지, 사용 사례를 나열하고, Adobe 실시간 CDP의 각 익스텐션 [!DNL Launch] 에 대한 설명서 링크를 설명합니다. |
+| [대상 유형 및 카테고리](../../destinations/destination-types.md) | 이 문서에서는 실시간 CDP 인터페이스의 연결과 익스텐션의 차이점과 이러한 각 대상을 사용할 시기를 권장합니다. |
+| [Experience Platform Launch 확장](../../destinations/catalog/launch-extensions/overview.md) | 이 페이지에서는 익스텐션의 [!DNL Launch] 정의와 사용 사례를 나열하고 실시간 CDP의 각 익스텐션 [!DNL Launch] 에 대한 설명서 링크를 설명합니다. |
 
-자세한 내용은 대상 [개요를 참조하십시오](/help/rtcdp/destinations/destinations-overview.md).
+자세한 내용은 대상 [개요를 참조하십시오](../../destinations/home.md).
 
 ## [!DNL Privacy Service] {#privacy}
 
