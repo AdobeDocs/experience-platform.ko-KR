@@ -1,14 +1,14 @@
 ---
-title: Adobe Experience Platform 릴리스 정보
+title: Adobe Experience Platform 릴리스 노트
 description: Experience Platform 릴리스 노트
 doc-type: release notes
 last-update: March 10, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
+source-git-commit: adf8e8457c8ffef263223a38d3f9c345cf7c6ab2
 workflow-type: tm+mt
-source-wordcount: '840'
+source-wordcount: '838'
 ht-degree: 6%
 
 ---
@@ -77,10 +77,10 @@ Adobe Experience Platform 데이터를 활성화할 수 있는 새로운 대상�
 
 | 대상 | 설명 |
 |--- | ---|
-| 클라우드 스토리지 대상 | Adobe 실시간 CDP를 사용하면 세그먼트를 데이터 파일로 사용자 [!DNL Amazon S3] 또는 SFTP 클라우드 스토리지 위치에 전달할 수 있습니다. 이렇게 하면 CSV 또는 탭으로 구분된 파일을 통해 대상과 프로필 속성을 내부 시스템으로 보낼 수 있습니다. |
-| 광고 대상 | 이제 [!DNL Google] 대상 카드가 세 개의 대상 카드로 분할되어 현재 Adobe 실시간 CDP에서 지원되는 세 개의 다른 [!DNL Google] 플랫폼에 대해 제공됩니다. [!DNL Google Ads], [!DNL Google Ad Manager]Display &amp; [!DNL Google] Video 360. |
+| 클라우드 스토리지 대상 | 실시간 CDP를 통해 세그먼트를 데이터 파일로 사용자 [!DNL Amazon S3] 또는 SFTP 클라우드 스토리지 위치에 전달할 수 있습니다. 이렇게 하면 CSV 또는 탭으로 구분된 파일을 통해 대상과 프로필 속성을 내부 시스템으로 보낼 수 있습니다. |
+| 광고 대상 | 이제 [!DNL Google] 대상 카드가 세 개의 대상 카드로 분할되어 실시간 CDP에서 현재 지원되는 세 개의 다른 [!DNL Google] 플랫폼에 대해 제공됩니다. [!DNL Google Ads], [!DNL Google Ad Manager]Display &amp; [!DNL Google] Video 360. |
 
-자세한 내용은 [대상 개요를 참조하십시오](../../rtcdp/destinations/destinations-overview.md)
+자세한 내용은 [대상 개요를 참조하십시오](../../destinations/home.md)
 
 ## [!DNL Identity Service] {#identity}
 
