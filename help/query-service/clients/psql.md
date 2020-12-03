@@ -5,10 +5,10 @@ title: PSQL과 연결
 topic: connect
 description: 'PSQL은 컴퓨터에 Postres를 설치할 때 나타나는 명령줄 인터페이스입니다. 다음 지침에 따라 설치할 수 있습니다. '
 translation-type: tm+mt
-source-git-commit: d2f098cb9e4aaf5beaad02173a22a25a87a43756
+source-git-commit: 8ffe7c68c87cacb6b54d9634a5204fa24a9986ac
 workflow-type: tm+mt
-source-wordcount: '192'
-ht-degree: 1%
+source-wordcount: '209'
+ht-degree: 0%
 
 ---
 
@@ -71,7 +71,7 @@ psql (PostgreSQL) 9.5.14
 
 >[!IMPORTANT]
 >
->PC를 사용하는 경우 텍스트 편집기를 사용하여 명령 문자열에서 줄 바꿈을 제거한 다음 문자열을 복사합니다.
+>PC를 사용하는 경우 텍스트 편집기를 사용하여 명령 문자열에서 줄 바꿈을 제거한 다음 문자열을 복사합니다. 또한 버전 12.0 이상을 사용하는 경우 연결 문자열 `PGGSSENCMODE=disable` 에 추가해야 합니다.
 
 명령 문자열을 터미널 또는 명령 창에 붙여넣고 Enter 키를 누릅니다.
 
