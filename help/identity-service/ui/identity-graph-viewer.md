@@ -5,9 +5,9 @@ title: Adobe Experience Platform ID 서비스
 topic: tutorial
 description: ID 그래프는 특정 고객에 대해 서로 다른 ID 간의 관계를 보여주는 지도로, 다양한 채널에서 고객이 브랜드와 상호 작용하는 방식을 시각적으로 보여줍니다.
 translation-type: tm+mt
-source-git-commit: df165baceaf8dc2b21055201ec78bd392044b938
+source-git-commit: ef1025dfacc91b13c064db99e6304f2c09abb3d9
 workflow-type: tm+mt
-source-wordcount: '847'
+source-wordcount: '910'
 ht-degree: 1%
 
 ---
@@ -93,14 +93,19 @@ ID가 더 큰 클러스터를 사용하는 ID 그래프도 ID 그래프 뷰어�
 
 ## 부록
 
-다음 전제 조건이 충족되지 않으면 그래프 뷰어에서 오류를 반환합니다.
+다음 섹션에서는 ID 그래프 뷰어로 작업하기 위한 추가 정보를 제공합니다.
 
-- 선택한 네임스페이스에 ID 값이 없습니다.
-- 그래프의 ID는 2개 미만입니다.
-- 그래프가 최대 400ID를 초과합니다.
-- 비프로덕션 샌드박스 환경에 속해 있습니다.
+### 오류 메시지 이해
 
-![대규모 클러스터](../images/identity-graph-viewer/error-screen.png)
+ID 그래프 뷰어에 액세스할 때 오류가 발생할 수 있습니다. 다음은 ID 그래프 뷰어로 작업할 때 주의해야 할 사전 요구 사항 및 제한 사항의 목록입니다.
+
+- 선택한 네임스페이스에 ID 값이 있어야 합니다.
+- ID 그래프 뷰어에서는 생성하려면 최소 두 개의 연결된 ID가 필요합니다.
+- ID 그래프 뷰어는 최대 400ID를 초과할 수 없습니다.
+- ID 그래프 뷰어는 현재 비프로덕션 샌드박스에서 액세스할 수 없습니다.
+- ID 그래프 뷰어는 현재 일괄적으로 인제스트된 데이터만 지원하며 스트리밍 소스를 사용하여 인제스트된 데이터는 표시하지 않습니다.
+
+![error-screen](../images/identity-graph-viewer/error-screen.png)
 
 ## 다음 단계
 
