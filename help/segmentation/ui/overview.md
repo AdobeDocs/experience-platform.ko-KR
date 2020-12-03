@@ -5,7 +5,7 @@ title: 세그멘테이션 서비스 사용 안내서
 topic: ui guide
 description: Adobe Experience Platform 세그멘테이션 서비스는 세그먼트 정의를 만들고 관리하기 위한 사용자 인터페이스를 제공합니다.
 translation-type: tm+mt
-source-git-commit: 1aff9329e1ae97caa34a205bbfbbc6f51b54b8fb
+source-git-commit: adf8e8457c8ffef263223a38d3f9c345cf7c6ab2
 workflow-type: tm+mt
 source-wordcount: '1449'
 ht-degree: 0%
@@ -102,7 +102,7 @@ IMS **[!UICONTROL 조직의]** 모든 세그먼트 정의 목록을 보려면 �
 
 >[!NOTE]
 >
-> 대상은 에서 사용할 수 [!DNL Real-time Customer Data Platform]있는 기능으로, 외부 플랫폼으로 데이터를 내보낼 수 있습니다. 대상에 대한 자세한 내용은 [대상 개요를 참조하십시오](../../rtcdp/destinations/destinations-overview.md). 대상에 세그먼트를 활성화하는 방법을 알려면 세그먼트에 대한 활성화 [가이드를 참조하십시오](../../rtcdp/destinations/activate-destinations.md).
+> 대상은 에서 사용할 수 [!DNL Real-time Customer Data Platform]있는 기능으로, 외부 플랫폼으로 데이터를 내보낼 수 있습니다. 대상에 대한 자세한 내용은 [대상 개요를 참조하십시오](../../destinations/home.md). 대상에 세그먼트를 활성화하는 방법을 알려면 세그먼트에 대한 활성화 [가이드를 참조하십시오](../../destinations/ui/activate-destinations.md).
 
 ### 프로필 샘플
 
@@ -174,7 +174,7 @@ on-demand 평가에는 API를 사용하여 평가를 수행하고 필요에 따�
 >
 >대상에 지정된 세그먼트를 만드는 경우에만 정책 위반이 적용됩니다.
 
-세그먼트 작성을 완료하면 세그먼트 내에 정책 위반이 없도록 Adobe Experience Platform 데이터 거버넌스에 의해 세그먼트가 분석됩니다. 자세한 내용은 [[!DNL Data Governance] 개요를](../../data-governance/home.md) 참조하십시오.
+세그먼트 작성을 완료하면 세그먼트 내에 정책 위반이 없도록 Adobe Experience Platform 데이터 거버넌스에 의해 세그먼트가 분석됩니다. See the [[!DNL Data Governance] overview](../../data-governance/home.md) for more information.
 
 ![](../images/ui/overview/segment-dule-policy-violations.png)
 
