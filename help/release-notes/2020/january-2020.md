@@ -1,13 +1,13 @@
 ---
-title: Adobe Experience Platform 릴리스 정보
+title: Adobe Experience Platform 릴리스 노트
 description: Experience Platform 릴리스 노트
 doc-type: release notes
 last-update: January 15, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
+source-git-commit: adf8e8457c8ffef263223a38d3f9c345cf7c6ab2
 workflow-type: tm+mt
-source-wordcount: '894'
+source-wordcount: '880'
 ht-degree: 7%
 
 ---
@@ -19,10 +19,10 @@ ht-degree: 7%
 
 Adobe Experience Platform의 기존 기능 업데이트:
 
-* [[!DNL 경험 데이터 모델(XDM) 시스템]](#xdm)
+* [[!DNL Experience Data Model (XDM) System]](#xdm)
 * [[!DNL Privacy Service]](#privacy)
-* [[!DNL 소스]](#sources)
-* [[!DNL 대상]](#destinations)
+* [[!DNL Sources]](#sources)
+* [[!DNL Destinations]](#destinations)
 
 ## [!DNL Experience Data Model] (XDM) 시스템 {#xdm}
 
@@ -81,8 +81,8 @@ Adobe Experience Platform은 외부 소스에서 데이터를 인제스트할 �
 
 | 카테고리 | 사용 권한 | 설명 |
 |--- | --- | ---|
-| 데이터 처리 | 소스 관리 | 소스를 읽고, 만들고, 편집하고, 비활성화할 수 있습니다. |
-| 데이터 처리 | 소스 보기 | [카탈로그] 탭의 사용 가능한 소스 및 [ **[!UICONTROL 찾아보기]** ] **[!UICONTROL 탭의 인증된 소스에 대한 읽기 전용]** 액세스. |
+| 데이터 수집 | 소스 관리 | 소스를 읽고, 만들고, 편집하고, 비활성화할 수 있습니다. |
+| 데이터 수집 | 소스 보기 | [카탈로그] 탭의 사용 가능한 소스 및 [ **[!UICONTROL 찾아보기]** ] **[!UICONTROL 탭의 인증된 소스에 대한 읽기 전용]** 액세스. |
 
 **알려진 문제**
 
@@ -92,7 +92,7 @@ Adobe Experience Platform은 외부 소스에서 데이터를 인제스트할 �
 
 ## 대상 {#destinations}
 
-Adobe [실시간 CDP에서](../../rtcdp/overview.md)대상은 대상 플랫폼과 사전 구축된 통합으로, 해당 파트너에게 데이터를 원활하게 제공할 수 있습니다.
+실시간 [CDP에서](../../rtcdp/overview.md)대상은 대상 플랫폼과 사전 구축된 통합으로, 해당 파트너에게 데이터를 원활하게 제공할 수 있습니다.
 
 **새로운 기능**
 
@@ -112,4 +112,4 @@ Adobe [실시간 CDP에서](../../rtcdp/overview.md)대상은 대상 플랫폼�
 
 * None
 
-자세한 내용은 [대상 개요를](../../rtcdp/destinations/destinations-overview.md) 참조하십시오.
+See the [Destinations overview](../../destinations/home.md) for more information.
