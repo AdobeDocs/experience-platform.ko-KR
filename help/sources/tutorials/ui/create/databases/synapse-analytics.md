@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;home;popular topics;Azure Synapse Analytics;Synapse;synapse;azure synapse analytics
 solution: Experience Platform
-title: UI에서 Azure Synapse Analytics 원본 커넥터 만들기
+title: UI에서 Azure synapse 분석 소스 커넥터 만들기
 topic: overview
 type: Tutorial
-description: 이 자습서에서는 플랫폼 사용자 인터페이스를 사용하여 Azure 구문 분석(이하 "동기화") 소스 커넥터를 만드는 단계를 제공합니다.
+description: 이 자습서에서는 플랫폼 사용자 인터페이스를 사용하여 Azure synapse 분석(이하 "동기화") 소스 커넥터를 만드는 단계를 제공합니다.
 translation-type: tm+mt
 source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
 workflow-type: tm+mt
@@ -51,11 +51,11 @@ Adobe Experience Platform의 소스 커넥터는 예약된 기준으로 외부 �
 
 화면의 왼쪽에 있는 카탈로그에서 해당 범주를 선택할 수 있습니다. 또는 검색 옵션을 사용하여 작업할 특정 소스를 찾을 수 있습니다.
 
-데이터베이스 **[!UICONTROL 카테고리]** 아래에서 **[!UICONTROL Azure Synapse Analytics를 선택합니다]**. 이 커넥터를 처음 사용하는 경우 구성을 **[!UICONTROL 선택합니다]**. 그렇지 않으면 데이터 **[!UICONTROL 추가]** 를 선택하여 새 [!DNL Synapse] 커넥터를 만듭니다.
+데이터베이스 **[!UICONTROL 카테고리]** 아래에서 **[!UICONTROL Azure synapse 분석을 선택합니다]**. 이 커넥터를 처음 사용하는 경우 구성을 **[!UICONTROL 선택합니다]**. 그렇지 않으면 데이터 **[!UICONTROL 추가]** 를 선택하여 새 [!DNL Synapse] 커넥터를 만듭니다.
 
 ![](../../../../images/tutorials/create/azure-synapse-analytics/catalog.png)
 
-Azure **[!UICONTROL 에 연결 분석]** 페이지가 나타납니다. 이 페이지에서 새 자격 증명이나 기존 자격 증명을 사용할 수 있습니다.
+azure synapse **[!UICONTROL 분석에 연결]** 페이지가 나타납니다. 이 페이지에서 새 자격 증명이나 기존 자격 증명을 사용할 수 있습니다.
 
 ### 새 계정
 
