@@ -1,5 +1,5 @@
 ---
-title: Adobe Experience Platform 릴리스 정보
+title: Adobe Experience Platform 릴리스 노트
 description: Experience Platform 릴리스 노트
 doc-type: release notes
 last-update: September 13, 2019
@@ -7,21 +7,21 @@ author: ens28527
 translation-type: tm+mt
 source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '542'
-ht-degree: 5%
+source-wordcount: '532'
+ht-degree: 6%
 
 ---
 
 
 # Adobe Experience Platform 릴리스 노트
 
-**릴리스 날짜: 2019년 9월 10일**
+**릴리스 날짜: 2019년 10월 9일**
 
 Adobe Experience Platform의 기존 기능 업데이트:
 
-* [[!DNL 데이터 처리]](#ingestion)
-* [[!DNL 데이터 과학 작업 공간]](#dsw)
-* [[!DNL 쿼리 서비스]](#query)
+* [[!DNL Data Ingestion]](#ingestion)
+* [[!DNL Data Science Workspace]](#dsw)
+* [[!DNL Query Service]](#query)
 
 ## [!DNL Data Ingestion] {#ingestion}
 
