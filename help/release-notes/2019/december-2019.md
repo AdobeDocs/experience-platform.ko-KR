@@ -1,5 +1,5 @@
 ---
-title: Adobe Experience Platform 릴리스 정보
+title: Adobe Experience Platform 릴리스 노트
 description: Experience Platform 릴리스 노트
 doc-type: release notes
 last-update: December 12, 2019
