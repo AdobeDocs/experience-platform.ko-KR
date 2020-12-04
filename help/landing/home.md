@@ -45,7 +45,7 @@ Adobe은 Experience Platform을 기반으로 애플리케이션 서비스를 구
    API 작업에 대한 기본 사항을 [!DNL Platform] 알아봅니다.
 
 * [**API 참조 문서**](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)\
-   헤더, 매개 변수, 샘플 요청 및 응답을 비롯한 API를 검색할 수 있습니다. [!DNL Experience Platform]<br/>*이러한 문서는 Adobe I/O에 호스팅됩니다.*
+   헤더, 매개 변수, 샘플 요청 및 응답을 비롯한 API를 검색할 수 있습니다. [!DNL Experience Platform]<br/>*이러한 문서는 Adobe I/O에서 호스팅됩니다.*
 
 * [**용어 설명**](glossary.md)\
    Adobe Experience Platform 용어 검토
