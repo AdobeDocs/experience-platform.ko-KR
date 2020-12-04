@@ -18,9 +18,9 @@ Adobe Experience Platform [!DNL Privacy Service] 는 다양한 솔루션에서 �
 
 ## Log in to the [!DNL Privacy Service] UI
 
-UI에 인증하려면 Adobe ID이 있어야 [!DNL Privacy Service] 합니다. 또한 Adobe ID이 연결된 조직 내에서 시스템 관리자 권한이 있어야 합니다.
+UI에 인증하려면 Adobe ID이 있어야 [!DNL Privacy Service] 합니다. 또한, Adobe ID이 연결된 조직 내에서 시스템 관리자 권한이 있어야 합니다.
 
-https://experience.adobe.com의 Adobe Experience Cloud 로그인 페이지로 이동합니다. Adobe ID **[!UICONTROL 로 로그인을 클릭하고]** 메시지가 표시되면 Adobe ID 자격 증명을 입력합니다.
+https://experience.adobe.com의 Adobe Experience Cloud 로그인 페이지로 이동합니다. Adobe ID **[!UICONTROL 로 로그인을]** 클릭하고 메시지가 표시되면 Adobe ID 자격 증명을 입력합니다.
 
 로그인하고 나면 개인 정보 **[!UICONTROL UI를 클릭합니다]**.
 
@@ -34,4 +34,4 @@ Adobe Experience Platform UI에 액세스할 수 있는 경우 왼쪽 탐색 영
 
 ## 다음 단계
 
-로그인했으므로 [UI를 사용하여 다양한 작업을 수행하는 방법에 대한 단계는](user-guide.md) 사용자 안내서를 [!DNL Privacy Service] 참조하십시오.
+로그인했으므로 [UI를 사용하여 다양한 작업을 수행하는 방법에 대한 단계는](user-guide.md) 사용자 안내서 [!DNL Privacy Service] 를 참조하십시오.
