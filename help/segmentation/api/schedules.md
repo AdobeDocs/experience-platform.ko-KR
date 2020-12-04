@@ -142,7 +142,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
 | `name` | **필수 여부.** 예약의 이름입니다. |
 | `type` | **필수 여부.** 문자열 작업 유형입니다. 지원되는 두 가지 유형은 &quot;batch_segmentation&quot;과 &quot;export&quot;입니다. |
 | `properties` | **필수 여부.** 예약과 관련된 추가 속성이 포함된 개체입니다. |
-| `properties.segments` | **&quot;batch_segmentation&quot;과 같은 경우`type`필요합니다.** 을 사용하면 모든 세그먼트가 `["*"]` 포함됩니다. |
+| `properties.segments` | **&quot;batch_segmentation&quot;과 같은 경우 `type` 필요합니다.** 을 사용하면 모든 세그먼트가 `["*"]` 포함됩니다. |
 | `schedule` | *선택 사항입니다.* 작업 일정이 포함된 문자열. 작업은 하루에 한 번만 실행되도록 예약하면 됩니다. 즉, 24시간 동안 두 번 이상 작업이 실행되도록 예약할 수 없습니다. cron 일정에 대한 자세한 내용은 cron [expression format](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) 설명서를 참조하십시오. 이 예에서 &quot;0 0 1 * *&quot;는 이 일정이 매달 첫째 자정에 실행됨을 의미합니다. <br><br>이 문자열이 제공되지 않으면 시스템 생성 일정이 자동으로 생성됩니다. |
 | `state` | *선택 사항입니다.* 예약 상태를 포함하는 문자열. 지원되는 두 가지 상태는 &quot;활성&quot; 및 &quot;비활성&quot;입니다. 기본적으로 상태는 &quot;비활성&quot;으로 설정됩니다. |
 
