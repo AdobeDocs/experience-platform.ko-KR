@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 실시간 고객 데이터 플랫폼의 IAB TCF 2.0 지원
 topic: privacy events
 translation-type: tm+mt
-source-git-commit: b24c624df188be3cbe7f71dcdf8a23d2478c287c
+source-git-commit: 75a0b4ba1342ece3e34a7ef41782b9014516d4fe
 workflow-type: tm+mt
 source-wordcount: '2388'
 ht-degree: 1%
@@ -45,7 +45,7 @@ IAB( [!DNL Transparency & Consent Framework] TCF) [!DNL Interactive Advertising 
    * [SDK 동의 명령](../../../edge/consent/supporting-consent.md):이 안내서에 나와 있는 동의 관련 SDK 명령의 사용 사례 개요입니다.
 * [Adobe Experience Platform 세그멘테이션 서비스](../../../segmentation/home.md):비슷한 트레이트를 공유하고 마케팅 전략과 유사하게 반응하는 개인 그룹으로 [!DNL Real-time Customer Profile] 데이터를 나눌 수 있습니다.
 
-위에 나열된 [!DNL Platform] 서비스 외에도, 목적지 [](../../destinations/destinations-overview.md) 및 서비스 사용에 대해 잘 알고 있어야 합니다 [!DNL Real-time CDP].
+위에 나열된 [!DNL Platform] 서비스 외에도, 목적지 [](../../destinations/overview.md) 및 서비스 사용에 대해 잘 알고 있어야 합니다 [!DNL Real-time CDP].
 
 ## 고객 동의 흐름 요약 {#summary}
 
