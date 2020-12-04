@@ -31,7 +31,7 @@ Adobe Experience Platform은 다양한 소스에서 데이터를 수집합니다
 
 ### [!DNL Data Science Workspace]
 
-Adobe Experience Platform [!DNL Data Science Workspace] 는 기계 학습과 인공 지능을 사용하여 안에 저장된 데이터를 통해 통찰력을 얻고 [!DNL Experience Platform]있습니다. [!DNL Data Science Workspace] 데이터 과학자는 고객과 고객 활동에 대한 기록 및 시간 시리즈 데이터를 기반으로 레시피를 제작할 수 있으므로 개인별로 인식하거나 사용할 가능성이 높은 성향 및 권장 제안을 구입하는 것을 용이하게 합니다. Adobe Analytics 데이터를 탐색, 변환 및 분석할 수 있도록 [!DNL Data Science Workspace] 통합하여 SQL [!DNL Query Service] 을 [!DNL JupyterLab]내에서 사용할 수 있습니다. 자세한 내용은 [!DNL Data Science Workspace] 개요 [!DNL Data Science Workspace]및 [!DNL Query Service] 통합 가이드를 [!DNL Data Science Workspace] 참조하십시오 [!DNL Query Service].
+Adobe Experience Platform [!DNL Data Science Workspace] 는 기계 학습과 인공 지능을 사용하여 안에 저장된 데이터를 통해 통찰력을 얻고 [!DNL Experience Platform]있습니다. [!DNL Data Science Workspace] 데이터 과학자는 고객과 고객 활동에 대한 기록 및 시간 시리즈 데이터를 기반으로 레시피를 제작할 수 있으므로 개인별로 인식하거나 사용할 가능성이 높은 성향 및 권장 제안을 구입하는 것을 용이하게 합니다. Adobe Analytics 데이터를 탐색, 변형 및 분석할 수 있도록 통합 [!DNL Data Science Workspace] 을 통해 SQL [!DNL Query Service] [!DNL JupyterLab]에서 사용할 수 있습니다. 자세한 내용은 [!DNL Data Science Workspace] 개요 [!DNL Data Science Workspace]및 [!DNL Query Service] 통합 가이드를 [!DNL Data Science Workspace] 참조하십시오 [!DNL Query Service].
 
 ### [!DNL Segmentation Service]
 
