@@ -7,7 +7,7 @@ description: 카탈로그 서비스 API를 사용하면 요청 쿼리 매개 변
 translation-type: tm+mt
 source-git-commit: 71678b10c9e137016ea404305b272508b9c8cabe
 workflow-type: tm+mt
-source-wordcount: '2084'
+source-wordcount: '2077'
 ht-degree: 1%
 
 ---
@@ -207,8 +207,8 @@ curl -X GET \
 * 태그 이름은 IMS 조직에 고유합니다.
 * Adobe 프로세스는 특정 동작에 태그를 활용할 수 있습니다. 이러한 태그의 이름에는 &quot;adobe&quot;가 표준 접두사로 사용됩니다. 따라서 태그 이름을 선언할 때는 이 규칙을 사용하지 않아야 합니다.
 * 다음 태그 이름은 여러 조직에서 사용할 수 있도록 예약되어 [!DNL Experience Platform]있으므로 조직의 태그 이름으로 선언할 수 없습니다.
-   * `unifiedProfile`:이 태그 이름은 [[!DNL 실시간 고객 프로필]이(가) 수집하도록 데이터 세트에 예약되어 있습니다](../../profile/home.md).
-   * `unifiedIdentity`:이 태그 이름은 [[!DNL Identity Service]에서 인제스트할 데이터 세트에 예약되어 있습니다](../../identity-service/home.md).
+   * `unifiedProfile`:이 태그 이름은 데이터 세트에서 수집하도록 예약되어 있습니다 [[!DNL Real-time Customer Profile]](../../profile/home.md).
+   * `unifiedIdentity`:이 태그 이름은 데이터 세트에서 수집하도록 예약되어 있습니다 [[!DNL Identity Service]](../../identity-service/home.md).
 
 다음은 속성이 포함된 데이터 집합의 `tags` 예입니다. 해당 속성 내의 태그는 키-값 쌍의 형태를 취하며 각 태그 값은 단일 문자열을 포함하는 배열로 표시됩니다.
 
@@ -580,7 +580,7 @@ GET /{OBJECT_TYPE}?property={CONDITION}
 
 | 기호 | 설명 | 예 |
 | --- | --- | --- |
-| (없음) | 연산자가 없는 속성 이름을 지정하면 해당 값에 관계없이 속성이 있는 객체만 반환됩니다. | `property=name` |
+| (None) | 연산자가 없는 속성 이름을 지정하면 해당 값에 관계없이 속성이 있는 객체만 반환됩니다. | `property=name` |
 | ! | 매개 변수 값에 &quot;`!`&quot;를 접두사로 `property` 지정하면 속성이 없는 개체만 **반환합니다** . | `property=!name` |
 | ~ | 물결표(`~`) 기호 뒤에 제공된 정규 표현식과 속성 값(문자열)이 일치하는 객체만 반환합니다. | `property=name~^example` |
 | == | 이중 같음 기호(`==`) 뒤에 제공된 문자열과 속성 값이 정확히 일치하는 객체만 반환합니다. | `property=name==exampleName` |
