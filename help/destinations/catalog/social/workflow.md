@@ -6,7 +6,7 @@ seo-title: 소셜 네트워크 대상 워크플로우
 description: 소셜 네트워크 및 계정에 연결하는 지침
 seo-description: 소셜 네트워크 및 계정에 연결하는 지침
 translation-type: tm+mt
-source-git-commit: 85e6a65e1407ca60e7b63681c045fadaaa24aef9
+source-git-commit: f2fdc3b75d275698a4b1e4c8969b1b840429c919
 workflow-type: tm+mt
 source-wordcount: '499'
 ht-degree: 0%
@@ -38,7 +38,7 @@ ht-degree: 0%
 
 자격 증명이 확인되고 Adobe Experience Cloud이 소셜 네트워크에 연결되면 **[!UICONTROL 다음]** 을 선택하여 **[!UICONTROL 설정]** 단계를 진행할 수 있습니다.
 
-![자격 증명 확인됨](/help/rtcdp/destinations/assets/facebook-post-connection-view.png)
+![자격 증명 확인됨](../../assets/catalog/social/workflow/post-connect.png)
 
 설정 **[!UICONTROL 단계에서]** [!UICONTROL 이름] 과 [!UICONTROL 활성화] 과정에 대한 설명 [!UICONTROL 을 입력하고 소셜 네트워크 및 계정의] 계정 ID를 입력합니다.
 
