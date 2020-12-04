@@ -7,7 +7,7 @@ description: Adobe Experience Platform 데이터 거버넌스는 데이터 사�
 translation-type: tm+mt
 source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
 workflow-type: tm+mt
-source-wordcount: '765'
+source-wordcount: '762'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Adobe Experience Platform [!DNL Data Governance] 는 데이터 사용 정책을 
 
 이 안내서에서는 다음 [!DNL Experience Platform] 개념을 제대로 이해해야 합니다.
 
-- [[!DNL 데이터 거버넌스]](../home.md)
+- [[!DNL Data Governance]](../home.md)
 - [데이터 사용 정책](./overview.md)
 
 ## 데이터 사용 정책 보기 {#view-policies}
