@@ -1,5 +1,5 @@
 ---
-title: Adobe Experience Platform 릴리스 정보
+title: Adobe Experience Platform 릴리스 노트
 description: Experience Platform 릴리스 노트
 doc-type: release notes
 last-update: February 14, 2019
@@ -8,7 +8,7 @@ translation-type: tm+mt
 source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
 workflow-type: tm+mt
 source-wordcount: '195'
-ht-degree: 10%
+ht-degree: 15%
 
 ---
 
@@ -39,6 +39,6 @@ Adobe Experience Platform은 외부 소스에서 데이터를 인제스트할 �
 
 **알려진 문제**
 
-* 없음
+* None
 
 소스에 대한 자세한 내용은 [소스 개요를 참조하십시오](../../sources/home.md).
