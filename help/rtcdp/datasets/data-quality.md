@@ -19,4 +19,4 @@ ht-degree: 0%
 
 실시간 CDP는 Adobe Experience Platform에 구축되어 많은 서비스와 기능을 활용합니다. [!DNL Experience Platform] 따라서 데이터를 수집할 때 데이터가 확인되고 확인될 수 있습니다.
 
-데이터 품질에 대한 자세한 내용은 Adobe I/O에 대한 [데이터 품질 설명서를 참조하십시오](../../ingestion/quality/overview.md).
+데이터 품질에 대한 자세한 내용은 Adobe I/O의 [데이터 품질 설명서를 참조하십시오](../../ingestion/quality/overview.md).
