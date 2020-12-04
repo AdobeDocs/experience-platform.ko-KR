@@ -16,7 +16,7 @@ ht-degree: 10%
 
 ## 표준 ID 네임스페이스 {#standard-namespaces}
 
-전송될 모든 ID는 특정 ID 네임스페이스에서 제공되어야 [!DNL Privacy Service] 합니다. ID 네임스페이스는 ID와 관련된 컨텍스트를 나타내는 [Adobe Experience Platform ID](../../identity-service/home.md) 서비스의 구성 요소입니다.
+전송될 모든 ID는 특정 ID 네임스페이스에서 제공되어야 [!DNL Privacy Service] 합니다. Identity namespaces are a component of [Adobe Experience Platform Identity Service](../../identity-service/home.md) that indicate the context to which an identity relates.
 
 다음 표에서는 관련 값과 함께 일반적으로 사용되는 사전 정의된 ID 유형 [!DNL Experience Platform]`namespace` 에 대해 설명합니다.
 
