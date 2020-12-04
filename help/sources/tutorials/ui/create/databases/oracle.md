@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;home;popular topics;Oracle DB;oracle db
 solution: Experience Platform
-title: UI에서 Oracle DB 소스 커넥터 생성
+title: UI에서 Oracle DB 소스 커넥터 만들기
 topic: overview
 type: Tutorial
-description: 이 자습서에서는 플랫폼 사용자 인터페이스를 사용하여 Oracle DB 소스 커넥터를 생성하는 단계를 제공합니다.
+description: 이 자습서에서는 플랫폼 사용자 인터페이스를 사용하여 Oracle DB 소스 커넥터를 만드는 단계를 제공합니다.
 translation-type: tm+mt
 source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
 workflow-type: tm+mt
@@ -56,7 +56,7 @@ Adobe Experience Platform의 소스 커넥터는 예약된 기준으로 외부 �
 
 ![카탈로그](../../../../images/tutorials/create/oracle/catalog.png)
 
-Oracle **[!UICONTROL DB에]** 연결 페이지가 나타납니다. 이 페이지에서 새 자격 증명이나 기존 자격 증명을 사용할 수 있습니다.
+oracle DB에 **[!UICONTROL 연결]** 페이지가 나타납니다. 이 페이지에서 새 자격 증명이나 기존 자격 증명을 사용할 수 있습니다.
 
 ### 새 계정
 
