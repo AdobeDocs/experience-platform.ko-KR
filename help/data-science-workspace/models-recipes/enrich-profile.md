@@ -8,7 +8,7 @@ description: 이 문서에서는 머신 러닝 인사이트를 활용하여 실�
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '1230'
+source-wordcount: '1218'
 ht-degree: 0%
 
 ---
@@ -28,9 +28,9 @@ ht-degree: 0%
 
 이 자습서에서는 데이터 인제스트 및 세그먼트 만들기와 관련된 다양한 측면 [!DNL Adobe Experience Platform] 에 대해 [!DNL Profile] 잘 알아야 합니다. 이 자습서를 시작하기 전에 다음 서비스에 대한 설명서를 검토하십시오.
 
-* [[!DNL 실시간 고객 프로필]](../../rtcdp/overview.md):여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
+* [[!DNL Real-time Customer Profile]](../../rtcdp/overview.md):여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
 * [[!DNL Identity Service]](../../identity-service/home.md):인제스트되고 있는 여러 데이터 소스의 ID를 플랫폼에 연결하여 사용할 수 있습니다. [!DNL Real-time Customer Profile]
-* [[!DNL 경험 데이터 모델(XDM)]](../../xdm/home.md):Platform(플랫폼)이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):Platform(플랫폼)이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
 
 위에 언급된 문서 외에도 스키마 및 스키마 편집기에 대한 다음 안내서도 검토하는 것이 좋습니다.
 
