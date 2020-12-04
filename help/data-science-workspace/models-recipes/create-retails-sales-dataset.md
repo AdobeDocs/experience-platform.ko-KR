@@ -8,7 +8,7 @@ description: 이 자습서에서는 다른 모든 Adobe Experience Platform 데�
 translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
-source-wordcount: '544'
+source-wordcount: '539'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ ht-degree: 0%
    - [딕터](https://pypi.org/project/dictor/)
    - [JWT](https://pypi.org/project/jwt/)
 - 이 튜토리얼에서 사용되는 다음 개념에 대한 작업 이해:
-   - [[!DNL 경험 데이터 모델(XDM)]](../../xdm/home.md)
+   - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)
    - [스키마 컴포지션의 기본 사항](../../xdm/schema/field-dictionary.md)
 
 ## 소매 판매 스키마 및 데이터 세트 만들기
