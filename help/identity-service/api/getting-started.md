@@ -7,7 +7,7 @@ description: 'Adobe Experience Platform ID 서비스는 Adobe Experience Platfor
 translation-type: tm+mt
 source-git-commit: fa667d86c089c692f22cfd1b46f3f11b6e9a68d7
 workflow-type: tm+mt
-source-wordcount: '754'
+source-wordcount: '742'
 ht-degree: 1%
 
 ---
@@ -22,8 +22,8 @@ Adobe Experience Platform [!DNL Identity Service] 는 Adobe Experience Platform 
 이 가이드는 Adobe Experience Platform의 다음 구성 요소에 대한 작업 이해를 필요로 합니다.
 
 - [[!DNL Identity Service]](../home.md):고객 프로필 데이터 세분화로 인한 기본적인 문제를 해결합니다. 이는 고객이 브랜드와 상호 작용하는 장치 및 시스템 간의 ID를 결합함으로써 이루어집니다.
-- [[!DNL 실시간 고객 프로필]](../../profile/home.md):여러 소스에서 집계된 데이터를 기반으로 통합된 소비자 프로필을 실시간으로 제공합니다.
-- [[!DNL 경험 데이터 모델(XDM)]](../../xdm/home.md):고객 경험 데이터를 [!DNL Platform] 구성하는 표준화된 프레임워크
+- [[!DNL Real-time Customer Profile]](../../profile/home.md):여러 소스에서 집계된 데이터를 기반으로 통합된 소비자 프로필을 실시간으로 제공합니다.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):고객 경험 데이터를 [!DNL Platform] 구성하는 표준화된 프레임워크
 
 다음 섹션에서는 [!DNL Identity Service] API를 성공적으로 호출하기 위해 알아야 하거나 현 상태로 두어야 할 추가 정보를 제공합니다.
 
