@@ -8,7 +8,7 @@ description: 이 자습서에서는 제공된 소매 판매 샘플 소스 파일
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '1156'
+source-wordcount: '1146'
 ht-degree: 0%
 
 ---
