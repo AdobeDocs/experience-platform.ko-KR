@@ -5,7 +5,7 @@ title: 이메일 마케팅 대상 만들기
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 5f120a716cc3396ef7749463bb6052a8ced2fbb4
+source-git-commit: f2fdc3b75d275698a4b1e4c8969b1b840429c919
 workflow-type: tm+mt
 source-wordcount: '1624'
 ht-degree: 1%
@@ -344,7 +344,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```
 
 * `{CONNECTION_SPEC_ID}`:사용 가능한 대상 목록을 [가져옵니다. 단계에서 얻은 연결 사양 ID를 사용하십시오](#get-the-list-of-available-destinations).
-* `{S3 or SFTP}`:이 대상에 대해 원하는 연결 유형을 입력합니다. 대상 카탈로그에서 [원하는 대상으로 스크롤하여 S3 및/또는 SFTP 연결 유형이 지원되는지 확인합니다](../../rtcdp/destinations/destinations-catalog.md).
+* `{S3 or SFTP}`:이 대상에 대해 원하는 연결 유형을 입력합니다. 대상 카탈로그에서 [원하는 대상으로 스크롤하여 S3 및/또는 SFTP 연결 유형이 지원되는지 확인합니다](../catalog/overview.md).
 * `{ACCESS_ID}`:S3 저장소 위치에 대한 액세스 [!DNL Amazon] ID입니다.
 * `{SECRET_KEY}`:S3 저장 위치에 대한 [!DNL Amazon] 비밀 키
 
