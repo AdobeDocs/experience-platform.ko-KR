@@ -5,7 +5,7 @@ seo-title: 실시간 고객 데이터 플랫폼 개요
 description: 실시간 고객 데이터 플랫폼 개요
 seo-description: 실시간 고객 데이터 플랫폼 개요
 translation-type: tm+mt
-source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
+source-git-commit: 4dfef6649b3ae07593667eb5165dad6bacc8ed2f
 workflow-type: tm+mt
 source-wordcount: '289'
 ht-degree: 0%
@@ -38,5 +38,5 @@ Adobe Experience Platform에 대한 자세한 내용은 [Experience Platform 개
 * [데이터 인제스트 방법](sources/sources-overview.md)
 * [프로필에 액세스하는 방법](profile/profile-overview.md)
 * [세그먼트를 만드는 방법](segmentation/segmentation-overview.md)
-* [대상에 세그먼트를 활성화하는 방법](destinations/activate-destinations.md)
+* [대상에 세그먼트를 활성화하는 방법](destinations/overview.md)
 * [데이터 관리 정책을 정의하고 적용하는 방법](privacy/data-governance-overview.md)
