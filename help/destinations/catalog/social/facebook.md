@@ -98,4 +98,4 @@ Experience Platform에서 이메일 주소 인제스트에 대한 자세한 내�
 
 >[!TIP]
 >
->실시간 CDP와 기존 고객 채우기를 [!DNL Facebook] 지원합니다. 세그먼트를 대상에 활성화하면 모든 내역 세그먼트 자격 [!DNL Facebook] 이 전송됩니다.
+>실시간 CDP와 기존 고객 채우기를 [!DNL Facebook] 지원합니다. 세그먼트를 대상으로 활성화하면 모든 내역 세그먼트 자격 [!DNL Facebook] 이 전송됩니다.
