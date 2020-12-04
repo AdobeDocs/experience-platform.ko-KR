@@ -5,7 +5,7 @@ topic: guide
 translation-type: tm+mt
 source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
 workflow-type: tm+mt
-source-wordcount: '1201'
+source-wordcount: '1192'
 ht-degree: 1%
 
 ---
@@ -25,9 +25,9 @@ Adobe Experience Platform은 지원할 수 없는 데이터 모델을 만들지 
 
 에서 사용할 데이터 모델을 만들기 전에 다음 Experience Platform 서비스 설명서를 읽는 것이 좋습니다 [!DNL Real-time Customer Profile]. 데이터 모델 및 이 문서에 설명된 지침을 사용하려면 개체 관리와 관련된 다양한 Experience Platform 서비스에 대한 이해가 [!DNL Real-time Customer Profile] 필요합니다.
 
-* [[!DNL 실시간 고객 프로필]](home.md):여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
+* [[!DNL Real-time Customer Profile]](home.md):여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
 * [Adobe Experience Platform ID 서비스](../identity-service/home.md):인제스트할 때 서로 다른 데이터 소스에서 ID를 연결하여 &quot;고객에 대한 단일 뷰&quot;를 만들 수 있습니다 [!DNL Platform].
-* [[!DNL 경험 데이터 모델(XDM)]](../xdm/home.md):Platform(플랫폼)이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
+* [[!DNL Experience Data Model (XDM)]](../xdm/home.md):Platform(플랫폼)이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
    * [스키마 컴포지션의 기본 사항](../xdm/schema/composition.md):Experience Platform 내의 스키마 및 데이터 모델링에 대한 소개
 * [Adobe Experience Platform 세그멘테이션 서비스](../segmentation/home.md):고객 행동 및 특성을 기반으로 고객 프로파일에서 고객 세그먼트를 만드는 데 [!DNL Platform] 사용되는 세그먼트 엔진입니다.
    * [다중 엔티티 세그먼테이션](../segmentation/multi-entity-segmentation.md):차원 엔티티를 프로필 데이터와 통합하는 세그먼트를 만드는 지침입니다.
@@ -62,7 +62,7 @@ Adobe Experience Platform은 지원할 수 없는 데이터 모델을 만들지 
 
 | 가드레일 | 제한 | 제한 유형 | 설명 |
 | --- | --- | --- | --- |
-| 조합 스키마에 기여하는 데 권장되는 데이터 [!DNL Profile] 수 | 20 | 부드러운 | **데이터 세트를 최대 20[!DNL Profile]개까지 사용하는 것이 좋습니다.** 다른 데이터 세트를 사용하려면 먼저 기존 데이터 세트 [!DNL Profile]를 제거하거나 비활성화해야 합니다. |
+| 조합 스키마에 기여하는 데 권장되는 데이터 [!DNL Profile] 수 | 20 | 부드러운 | **데이터 세트를 최대 20 [!DNL Profile]개까지 사용하는 것이 좋습니다.** 다른 데이터 세트를 사용하려면 먼저 기존 데이터 세트 [!DNL Profile]를 제거하거나 비활성화해야 합니다. |
 | 권장되는 다중 엔티티 관계 수 | 5 | 부드러운 | **기본 엔티티와 차원 엔티티 사이에 정의된 최대 5개의 다중 엔티티 관계가 권장됩니다.** 기존 관계가 제거되거나 비활성화될 때까지 추가적인 관계 매핑을 해서는 안 됩니다. |
 | 다중 엔티티 관계에 사용된 ID 필드의 최대 JSON 깊이 | 4 | 부드러운 | **다중 엔티티 관계에 사용된 ID 필드에 대한 권장 최대 JSON 깊이는 4입니다.** 즉, 중첩된 스키마에서는 수준 깊이가 4개 이상인 중첩된 필드를 관계에 있는 ID 필드로 사용할 수 없습니다. |
 | 프로필 조각의 배열 카디널리티 | &lt;=500 | 부드러운 | **프로필 조각에서 최적의 배열 카디널리티(시간 독립적인 데이터)는 &lt;=500입니다.** |
@@ -72,8 +72,8 @@ Adobe Experience Platform은 지원할 수 없는 데이터 모델을 만들지 
 
 | 가드레일 | 제한 | 제한 유형 | 설명 |
 | --- | --- | --- | --- |
-| 비엔티티에 대해 시간 시리즈 데이터가 허용되지[!DNL XDM Individual Profile] 않음 | 0 | 하드 | **프로필 서비스의 비엔터티에는 시간[!DNL XDM Individual Profile]계열 데이터가 허용되지 않습니다.** 시간 시리즈 데이터 집합이 ID가 아닌 ID와[!DNL XDM Individual Profile] 연결된 경우 데이터 집합에 대해 활성화되지 않아야 합니다 [!DNL Profile]. |
-| 중첩 관계 없음 | 0 | 부드러운 | **두 가지 비-스키마 간에 관계를[!DNL XDM Individual Profile]만들면 안 됩니다.** 관계 생성 기능은 조합 스키마에 속하지 않는 모든 스키마에는 권장되지 [!DNL Profile] 않습니다. |
+| 비엔티티에 대해 시간 시리즈 데이터가 허용되지[!DNL XDM Individual Profile] 않음 | 0 | 하드 | **프로필 서비스의 비엔터티에는 시간[!DNL XDM Individual Profile] 계열 데이터가 허용되지 않습니다.** 시간 시리즈 데이터 집합이 ID가 아닌 ID와[!DNL XDM Individual Profile] 연결된 경우 데이터 집합에 대해 활성화되지 않아야 합니다 [!DNL Profile]. |
+| 중첩 관계 없음 | 0 | 부드러운 | **두 가지 비-스키마 간에 관계를[!DNL XDM Individual Profile] 만들면 안 됩니다.** 관계 생성 기능은 조합 스키마에 속하지 않는 모든 스키마에는 권장되지 [!DNL Profile] 않습니다. |
 | 기본 ID 필드의 최대 JSON 깊이 | 4 | 부드러운 | **기본 ID 필드에 대한 권장 최대 JSON 깊이는 4입니다.** 즉, 중첩된 스키마에서는 필드가 4개 수준 보다 깊이 중첩된 경우 기본 ID로 선택하지 않아야 합니다. 중첩 수준이 4번째인 필드는 기본 ID로 사용할 수 있습니다. |
 
 ## 데이터 크기 보장
