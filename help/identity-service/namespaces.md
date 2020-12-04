@@ -7,7 +7,7 @@ description: 'ID 네임스페이스는 ID 서비스의 구성 요소이며 ID가
 translation-type: tm+mt
 source-git-commit: dfb16c1808ac61e6c4f4d97c08ac3d1dcc8499a8
 workflow-type: tm+mt
-source-wordcount: '772'
+source-wordcount: '759'
 ht-degree: 4%
 
 ---
@@ -21,7 +21,7 @@ Identity namespaces are a component of [[!DNL Identity Service]](./home.md) that
 
 ID 네임스페이스를 사용하여 작업하려면 관련 다양한 Adobe Experience Platform 서비스에 대한 이해가 필요합니다. 네임스페이스로 작업하기 전에 다음 서비스에 대한 설명서를 검토하십시오.
 
-- [[!DNL 실시간 고객 프로필]](../profile/home.md):여러 소스에서 수집한 데이터를 기반으로 통합된 고객 프로필을 실시간으로 제공합니다.
+- [[!DNL Real-time Customer Profile]](../profile/home.md):여러 소스에서 수집한 데이터를 기반으로 통합된 고객 프로필을 실시간으로 제공합니다.
 - [[!DNL Identity Service]](./home.md):다양한 디바이스와 시스템에 ID를 연결하여 개별 고객 및 고객의 행동을 명확하게 파악할 수 있습니다.
 - [[!DNL Privacy Service]](../privacy-service/home.md):ID 네임스페이스는 네임스페이스와 관련하여 GDPR 요청을 수행할 수 있는 GDPR(General Data Protection Regulation)을 준수하는 데 사용됩니다.
 
