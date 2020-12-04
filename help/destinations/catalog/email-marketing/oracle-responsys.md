@@ -5,7 +5,7 @@ seo-title: Oracle Responsys 대상
 description: Respondsys는 Oracle이 이메일, 모바일, 디스플레이 및 소셜 간의 인터랙션을 개인화하기 위해 제공하는 크로스채널 마케팅 캠페인을 위한 기업 이메일 마케팅 툴입니다.
 seo-description: Respondsys는 Oracle이 이메일, 모바일, 디스플레이 및 소셜 간의 인터랙션을 개인화하기 위해 제공하는 크로스채널 마케팅 캠페인을 위한 기업 이메일 마케팅 툴입니다.
 translation-type: tm+mt
-source-git-commit: 0bb1622895b1e0f97fc47b5c61d456bc369746c8
+source-git-commit: f2fdc3b75d275698a4b1e4c8969b1b840429c919
 workflow-type: tm+mt
 source-wordcount: '522'
 ht-degree: 0%
@@ -60,22 +60,6 @@ SSH 키 **** 연결이 있는 SFTP의 경우 도메인, 포트, 사용자 이름
 ## 내보낸 데이터 {#exported-data}
 
 대상에 대해 [!DNL Oracle Responsys] 실시간 CDP는 사용자가 제공한 스토리지 위치에 탭으로 구분된 `.txt` 또는 `.csv` 파일을 생성합니다. 파일에 대한 자세한 내용은 세그먼트 활성화 자습서에서 [이메일 마케팅 대상 및 클라우드 스토리지 대상을](../../ui/activate-destinations.md#esp-and-cloud-storage) 참조하십시오.
-
-<!--
-
-Expect a new file to be created in your storage location every day. The file format is:
-
-`Oracle_Responsys_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv`
-
-```
-Oracle_Responsys_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv
-Oracle_Responsys_segment12341e18-abcd-49c2-836d-123c88e76c39_20200409052200.csv
-Oracle_Responsys_segment12341e18-abcd-49c2-836d-123c88e76c39_20200410061130.csv
-```
-
-The presence of these files in your storage location is confirmation of successful activation. To understand how the exported files are structured, you can [download a sample .csv file](/help/rtcdp/destinations/assets/sample_export_file_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv). This sample file includes the profile attributes `person.firstname`, `person.lastname`, `person.gender`, `person.birthyear`, and `personalEmail.address`.
-
--->
 
 ## 데이터 가져오기 설정 [!DNL Oracle Responsys] {#import-data-into-responsys}
 
