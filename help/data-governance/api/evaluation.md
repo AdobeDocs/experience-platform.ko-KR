@@ -168,7 +168,7 @@ curl -X POST \
 | 속성 | 설명 |
 | --- | --- |
 | `entityType` | 형제 속성에 ID가 표시된 엔티티 `entityId` 유형. 현재 허용된 유일한 값은 입니다 `dataSet`. |
-| `entityId` | 마케팅 작업을 테스트할 데이터 세트의 ID입니다. API의 종단점에 GET 요청을 함으로써 데이터 집합 및 해당 ID의 목록을 가져올 수 `/dataSets` [!DNL Catalog Service] 있습니다. 자세한 내용은 [ [!DNL Catalog] listinjects](../../catalog/api/list-objects.md) 가이드를 참조하십시오. |
+| `entityId` | 마케팅 작업을 테스트할 데이터 세트의 ID입니다. API의 종단점에 GET 요청을 함으로써 데이터 집합 및 해당 ID의 목록을 가져올 수 `/dataSets` [!DNL Catalog Service] 있습니다. See the guide on [listing [!DNL Catalog] objects](../../catalog/api/list-objects.md) for more information. |
 
 **응답**
 
@@ -416,7 +416,7 @@ curl -X POST \
 | 속성 | 설명 |
 | --- | --- |
 | `entityType` | 형제 속성에 ID가 표시된 엔티티 `entityId` 유형. 현재 허용된 유일한 값은 입니다 `dataSet`. |
-| `entityId` | 마케팅 작업에 대해 필드가 평가되는 데이터 세트의 ID입니다. API의 종단점에 GET 요청을 함으로써 데이터 집합 및 해당 ID의 목록을 가져올 수 `/dataSets` [!DNL Catalog Service] 있습니다. 자세한 내용은 [ [!DNL Catalog] listinjects](../../catalog/api/list-objects.md) 가이드를 참조하십시오. |
+| `entityId` | 마케팅 작업에 대해 필드가 평가되는 데이터 세트의 ID입니다. API의 종단점에 GET 요청을 함으로써 데이터 집합 및 해당 ID의 목록을 가져올 수 `/dataSets` [!DNL Catalog Service] 있습니다. See the guide on [listing [!DNL Catalog] objects](../../catalog/api/list-objects.md) for more information. |
 | `entityMeta.fields` | JSON 포인터 문자열 형태로 제공되는 데이터 세트 스키마 내의 특정 필드에 대한 경로 배열. 이러한 문자열에 대해 허용되는 구문에 대한 자세한 내용은 API [fundamentals](../../landing/api-fundamentals.md#json-pointer) 안내서의 JSON 포인터에 대한 섹션을 참조하십시오. |
 
 **응답**
