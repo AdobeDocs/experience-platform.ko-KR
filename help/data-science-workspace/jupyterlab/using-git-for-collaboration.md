@@ -8,7 +8,7 @@ description: Git은 소프트웨어 개발 중에 소스 코드의 변경 사항
 translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
-source-wordcount: '280'
+source-wordcount: '273'
 ht-degree: 1%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 1%
 
 ## 환경 [!DNL Git] 에 [!DNL Data Science Workspace JupyterLab Notebooks] 연결
 
-먼저 [!DNL Adobe Experience Platform] [[!DNL JupiterLabs 노트북]](https://platform.adobe.com/notebooks/jupyterLab) 환경을 시작하고 탐색합니다.
+먼저 환경 [!DNL Adobe Experience Platform] 을 시작하고 [[!DNL JupyterLabs Notebooks]](https://platform.adobe.com/notebooks/jupyterLab) 탐색합니다.
 
 내에서 파일 [!DNL JupyterLab]을 **[!UICONTROL 선택한]** 다음 새로 만들기 위로 **[!UICONTROL 마우스를 가져갑니다]**. 표시되는 드롭다운에서 터미널 **[!UICONTROL 을 선택합니다]**.
 
@@ -60,4 +60,4 @@ ht-degree: 1%
 
 ## 다음 단계
 
-저장소 복제를 완료하면 로컬 시스템에서와 마찬가지로 Git을 사용하여 노트북에서 다른 사람과 공동 작업을 할 수 있습니다. 내에서 수행할 수 있는 작업에 대한 자세한 내용 [!DNL JupyterLab]은 [[!DNL JupiterLab 사용자 안내서]를 참조하십시오](./overview.md).
+저장소 복제를 완료하면 로컬 시스템에서와 마찬가지로 Git을 사용하여 노트북에서 다른 사람과 공동 작업을 할 수 있습니다. 사용 가능한 작업에 대한 자세한 내용 [!DNL JupyterLab]은 를 참조하십시오 [[!DNL JupyterLab user guide]](./overview.md).
