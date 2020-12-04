@@ -8,7 +8,7 @@ translation-type: tm+mt
 source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '277'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 0%
 >
 >UI에서 가시성을 활성화하는 등 실시간 CDP 기능에 대한 액세스 권한을 부여하는 자세한 가이드는 제품 프로필에 대한 세부 정보 및 추가 서비스 관리를 위한 [액세스 제어 사용 안내서에](../../access-control/ui/overview.md)설명된 단계를 따르십시오.
 
-## 샌드박스
+## 샌드 박스
 
 Adobe Experience Platform(및 익스텐션별 실시간 CDP)는 글로벌 차원의 디지털 경험 애플리케이션을 보완하기 위해 구축되었습니다. 기업은 여러 디지털 경험 애플리케이션을 동시에 실행하면서 이러한 애플리케이션의 개발, 테스트 및 배포 요구 사항을 충족하고 운영 규정을 준수해야 합니다.
 
