@@ -39,7 +39,7 @@ Adobe Experience Platform은 마케터가 고객의 행동을 더 잘 이해할 
 
 소스 연결은 다른 Adobe 응용 프로그램(Adobe Analytics 및 Adobe Audience Manager 등), 타사 클라우드 스토리지 소스(예: [!DNL Azure Blob]S3, [!DNL Amazon] FTP 서버 및 SFTP 서버) 및 타사 CRM 시스템(예: [!DNL Microsoft Dynamics] 및 [!DNL Salesforce])의 데이터를 수집하도록 구성할 수 있습니다.
 
-자세한 내용은 [소스 개요를](../sources/home.md) 참조하십시오.
+See the [Sources overview](../sources/home.md) for more information.
 
 ## 다음 단계 및 추가 리소스
 
