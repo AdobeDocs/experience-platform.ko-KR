@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;overview;customer ai;popular topics;customer ai overview
 solution: Experience Platform
-title: 고객 AI 개요
+title: Customer AI 개요
 topic: Customer AI overview
-description: 고객 AI는 규모에 따라 개별 프로파일에 대한 이탈 및 전환과 같은 사용자 지정 성향 점수를 생성하는 데 사용됩니다. 머신 러닝 문제를 해결하거나 알고리즘 선택, 트레이닝 또는 배포하지 않아도 됩니다.
+description: 고객 AI는 규모에 따라 개별 프로필에 대한 이탈 및 전환과 같은 사용자 지정 성향 점수를 생성하는 데 사용됩니다. 비즈니스 요구 사항을 머신 러닝 문제로 변환하거나 알고리즘을 선택하거나 교육 또는 배포하지 않아도 됩니다.
 translation-type: tm+mt
 source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
 workflow-type: tm+mt
 source-wordcount: '526'
-ht-degree: 0%
+ht-degree: 16%
 
 ---
 
 
-# 고객 AI 개요
+# Customer AI 개요
 
 고객 AI는 인텔리전트 서비스의 일부로 마케터에게 개별 수준에서 고객 예측을 생성하는 기능을 제공합니다.
 
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 ## 고객 AI 이해
 
-고객 AI는 규모에 따라 개별 프로파일에 대한 이탈 및 전환과 같은 사용자 지정 성향 점수를 생성하는 데 사용됩니다. 머신 러닝 문제를 해결하거나 알고리즘 선택, 트레이닝 또는 배포하지 않아도 됩니다.
+고객 AI는 규모에 따라 개별 프로필에 대한 이탈 및 전환과 같은 사용자 지정 성향 점수를 생성하는 데 사용됩니다. 비즈니스 요구 사항을 머신 러닝 문제로 변환하거나 알고리즘을 선택하거나 교육 또는 배포하지 않아도 됩니다.
 
 고객 AI는
 
