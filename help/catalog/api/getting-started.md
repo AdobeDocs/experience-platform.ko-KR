@@ -7,7 +7,7 @@ description: 이 개발자 안내서에서는 카탈로그 API 사용을 시작�
 translation-type: tm+mt
 source-git-commit: c8e53a25c5b22e8d840658fe26ff47875947a6d0
 workflow-type: tm+mt
-source-wordcount: '588'
+source-wordcount: '583'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # [!DNL Catalog Service] 개발자 가이드
 
-[!DNL Catalog Service] adobe experience platform의 데이터 위치와 혈통에 대한 기록 시스템이다. [!DNL Catalog] 데이터 자체에 액세스할 필요 없이 데이터 내에서 데이터에 대한 정보를 찾을 수 [!DNL Experience Platform]있는 메타데이터 저장소 또는 &quot;카탈로그&quot;로 작동합니다. 자세한 내용은 [[!DNL Catalog] 개요를](../home.md) 참조하십시오.
+[!DNL Catalog Service] adobe experience platform의 데이터 위치와 혈통에 대한 기록 시스템이다. [!DNL Catalog] 데이터 자체에 액세스할 필요 없이 데이터 내에서 데이터에 대한 정보를 찾을 수 [!DNL Experience Platform]있는 메타데이터 저장소 또는 &quot;카탈로그&quot;로 작동합니다. See the [[!DNL Catalog] overview](../home.md) for more information.
 
 이 개발자 안내서에서는 [!DNL Catalog] API 사용을 시작하는 데 도움이 되는 단계를 제공합니다. 그런 다음 이 안내서에서는 를 사용하여 키 작업을 수행하기 위한 샘플 API 호출을 제공합니다 [!DNL Catalog].
 
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 [!DNL Catalog] 여러 종류의 리소스 및 작업에 대한 메타데이터를 [!DNL Experience Platform]추적합니다. 이 개발자 가이드는 이러한 리소스를 만들고 관리하는 것과 관련된 다양한 [!DNL Experience Platform] 서비스에 대해 작업해야 합니다.
 
-* [[!DNL 경험 데이터 모델(XDM)]](../../xdm/home.md):고객 경험 데이터를 [!DNL Platform] 구성하는 표준화된 프레임워크
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):고객 경험 데이터를 [!DNL Platform] 구성하는 표준화된 프레임워크
 * [일괄 처리](../../ingestion/batch-ingestion/overview.md):CSV 및 [!DNL Experience Platform] Portable과 같은 데이터 파일의 데이터를 인제스트 및 저장하는 방법입니다.
 * [스트리밍 통합](../../ingestion/streaming-ingestion/overview.md):클라이언트 [!DNL Experience Platform] 및 서버측 디바이스에서 실시간으로 데이터를 인제스트 및 저장하는 방법
 
