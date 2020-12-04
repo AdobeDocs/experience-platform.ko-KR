@@ -36,6 +36,6 @@ API를 [!DNL Policy Service] 사용하면 데이터 사용 정책을 만들고 �
 
 에서 사용할 수 있는 세그먼트에는 세그먼트 정의 내에 [!DNL Real-time Customer Profile] 병합 정책 ID가 포함됩니다. 이 병합 정책에는 세그먼트에 포함할 데이터 집합에 대한 정보가 포함되며, 이 정보에는 적용 가능한 데이터 사용 레이블이 포함됩니다. 대상 세그먼트에 대한 데이터 사용 규정 준수를 적용하는 특정 단계에 대해서는 세그먼트에 대한 [데이터 사용 규정 준수 시행 자습서를 따르십시오](../segmentation/tutorials/governance.md).
 
-## Get started with [!DNL Privacy Service]
+##  시작하기[!DNL Privacy Service]
 
 [!DNL Privacy Service] 는 Adobe Experience Cloud 애플리케이션에서 데이터 주체(고객)의 개인 데이터를 관리할 수 있도록 해주는 RESTful API 및 사용자 인터페이스를 제공합니다. [!DNL Privacy Service] 또한 [!DNL Experience Cloud] 응용 프로그램과 관련된 작업의 상태 및 결과에 액세스할 수 있는 중앙 감사 및 로깅 메커니즘을 제공합니다. 작업을 만들고 모니터링하는 방법에 대한 지침을 보려면 [!DNL Privacy Service] Privacy Service 개발자 가이드 [또는](../privacy-service/api/getting-started.md) Privacy Service 사용자 안내서에 설명된 단계를 따르십시오 [](../privacy-service/ui/overview.md).
