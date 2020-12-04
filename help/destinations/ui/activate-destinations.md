@@ -6,7 +6,7 @@ seo-title: 대상에 프로필 및 세그먼트 활성화
 description: 세그먼트를 대상에 매핑하여 실시간 고객 데이터 플랫폼에 있는 데이터를 활성화합니다. 이를 수행하려면 아래 단계를 따르십시오.
 seo-description: 세그먼트를 대상에 매핑하여 실시간 고객 데이터 플랫폼에 있는 데이터를 활성화합니다. 이를 수행하려면 아래 단계를 따르십시오.
 translation-type: tm+mt
-source-git-commit: 5f120a716cc3396ef7749463bb6052a8ced2fbb4
+source-git-commit: f2fdc3b75d275698a4b1e4c8969b1b840429c919
 workflow-type: tm+mt
 source-wordcount: '1768'
 ht-degree: 0%
@@ -68,7 +68,7 @@ ht-degree: 0%
 
 ![충성도 ID(ID)](../assets/ui/activate-destinations/rewardsid-as-identity.gif)
 
-Adobe Experience Platform `Email_LC_SHA256` 로 데이터 수집 시 [!DNL Facebook] 이메일 해싱 요구 사항에 따라 고객 이메일 주소를 해시 처리한 경우 [타겟 ID로 선택합니다](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements).
+Adobe Experience Platform `Email_LC_SHA256` 로 데이터 수집 시 [!DNL Facebook] 이메일 해싱 요구 사항에 따라 고객 이메일 주소를 해시 처리한 경우 [타겟 ID로 선택합니다](../catalog/social/facebook.md#email-hashing-requirements).
 
 사용 `Email` 중인 이메일 주소가 해시되지 않은 경우 타겟 ID로 선택합니다. 실시간 CDP는 요구 사항을 준수하기 위해 이메일 주소를 [!DNL Facebook] 해시합니다.
 
@@ -158,7 +158,7 @@ Adobe Experience Platform `Email_LC_SHA256` 로 데이터 수집 시 [!DNL Faceb
 
 또한 다른 속성을 필수로 표시할 수 있습니다. 속성을 필수로 표시하면 내보낸 세그먼트에 해당 속성이 포함되어야 합니다. 따라서 추가 필터링 양식으로 사용할 수 있습니다. 속성을 필수로 표시할 **필요는 없습니다** .
 
-특성 중 하나가 스키마에서 [고유한](/help/rtcdp/destinations/email-marketing-destinations.md#identity) 식별자입니다. 필수 속성에 대한 자세한 내용은 [이메일 마케팅 대상](/help/rtcdp/destinations/email-marketing-destinations.md#identity) 설명서의 ID 섹션을 참조하십시오.
+특성 중 하나가 스키마에서 [고유한](../../destinations/catalog/email-marketing/overview.md#identity) 식별자입니다. 필수 속성에 대한 자세한 내용은 [이메일 마케팅 대상](../../destinations/catalog/email-marketing/overview.md#identity) 설명서의 ID 섹션을 참조하십시오.
 
 >[!NOTE]
 > 
