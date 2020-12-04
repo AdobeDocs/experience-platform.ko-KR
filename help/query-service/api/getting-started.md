@@ -7,7 +7,7 @@ description: 이 개발자 안내서에서는 Adobe Experience Platform 쿼리 �
 translation-type: tm+mt
 source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '380'
+source-wordcount: '369'
 ht-degree: 1%
 
 ---
@@ -21,9 +21,9 @@ ht-degree: 1%
 
 이 가이드는 사용과 관련된 다양한 Adobe Experience Platform 서비스에 대한 작업 이해를 필요로 합니다 [!DNL Query Service].
 
-- [[!DNL 쿼리 서비스]](../home.md):데이터 세트를 쿼리하고 결과 쿼리를 새 데이터 집합으로 캡처하는 기능을 제공합니다 [!DNL Experience Platform].
-- [[!DNL 경험 데이터 모델(XDM) 시스템]](../../xdm/home.md):고객 경험 데이터를 [!DNL Experience Platform] 구성하는 표준화된 프레임워크
-- [[!DNL 샌드박스]](../../sandboxes/home.md): [!DNL Experience Platform] 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되도록 단일 [!DNL Platform] 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
+- [[!DNL Query Service]](../home.md):데이터 세트를 쿼리하고 결과 쿼리를 새 데이터 집합으로 캡처하는 기능을 제공합니다 [!DNL Experience Platform].
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md):고객 경험 데이터를 [!DNL Experience Platform] 구성하는 표준화된 프레임워크
+- [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되도록 단일 [!DNL Platform] 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
 
 다음 섹션에서는 API를 성공적으로 사용하기 위해 알아야 할 추가 정보 [!DNL Query Service] 를 제공합니다.
 
