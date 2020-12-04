@@ -9,12 +9,12 @@ translation-type: tm+mt
 source-git-commit: cea3e2f32d9489f5f06be70581bd974b9374646d
 workflow-type: tm+mt
 source-wordcount: '128'
-ht-degree: 34%
+ht-degree: 38%
 
 ---
 
 
-# Adobe Experience Platform Web SDK {#edge}
+# Adobe Experience Platform 웹 SDK {#edge}
 
 * [웹 SDK 개요](home.md)
 * 기본 사항 {#fundamentals}
