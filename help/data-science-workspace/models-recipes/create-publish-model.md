@@ -8,7 +8,7 @@ description: Adobe Experience Platform 데이터 과학 작업 공간은 미리 
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '1595'
+source-wordcount: '1589'
 ht-degree: 0%
 
 ---
@@ -47,10 +47,10 @@ ht-degree: 0%
 * Adobe [!DNL Jupyter Notebook] 공용 저장소에서 [필요한 세 개의 파일 [!DNL Git] 을 다운로드하면](https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources/Notebooks-Thurs)이 파일을 사용하여 작업 과정을 [!DNL JupyterLab] 보여줍니다 [!DNL Data Science Workspace].
 
 * 이 튜토리얼에서 사용되는 다음 주요 개념에 대한 작업 이해:
-   * [[!DNL 경험 데이터 모델]](../../xdm/home.md):Adobe이 고객 경험 관리를 위한 표준 스키마(예: [!DNL Profile] 및 ExperienceEvent)를 정의하는 데 주도적인 표준화 활동입니다.
+   * [[!DNL Experience Data Model]](../../xdm/home.md):Adobe이 고객 경험 관리를 위한 표준 스키마(예: [!DNL Profile] 및 ExperienceEvent)를 정의하는 데 주도적인 표준화 활동입니다.
    * 데이터 집합:실제 데이터를 위한 저장 및 관리 구성 XDM 스키마의 실제 인스턴스화된 [인스턴스입니다](../../xdm/schema/field-dictionary.md).
    * 배치:데이터 세트는 배치로 구성됩니다. 일괄 처리란 일정 기간 동안 수집된 데이터 집합이며 하나의 단위로 함께 처리됩니다.
-   * [!DNL JupyterLab]: [[!DNL JupiterLab]](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) 은 프로젝트를 위한 오픈 소스 웹 기반 인터페이스 [!DNL Jupyter] 로 긴밀하게 통합되어 [!DNL Experience Platform]있습니다.
+   * [!DNL JupyterLab]: [[!DNL JupyterLab]](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) 는 프로젝트를 위한 오픈 소스 웹 기반 인터페이스 [!DNL Jupyter] 로 긴밀하게 통합되어 [!DNL Experience Platform]있습니다.
 
 ## 데이터 준비 {#prepare-your-data}
 
