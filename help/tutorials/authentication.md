@@ -8,19 +8,19 @@ description: '이 문서에서는 Experience Platform API를 호출하기 위해
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '878'
-ht-degree: 3%
+source-wordcount: '875'
+ht-degree: 6%
 
 ---
 
 
-# API 인증 및 [!DNL Experience Platform] 액세스
+# Authenticate and access [!DNL Experience Platform] APIs
 
-이 문서에서는 API를 호출하기 위해 Adobe Experience Platform 개발자 계정에 액세스할 수 있는 단계별 자습서를 [!DNL Experience Platform] 제공합니다.
+This document provides a step-by-step tutorial for gaining access to an Adobe Experience Platform developer account in order to make calls to [!DNL Experience Platform] APIs.
 
 ## 인증을 통해 API 호출
 
-애플리케이션과 사용자의 보안을 유지하려면 OAuth 및 JWT(JSON 웹 토큰) 등의 표준을 사용하여 Adobe I/O API에 대한 모든 요청을 인증하고 인증해야 합니다. 그러면 JWT가 클라이언트별 정보와 함께 사용되어 개인 액세스 토큰을 생성합니다.
+애플리케이션과 사용자의 보안을 유지하려면 Adobe I/O API에 대한 모든 요청은 OAuth 및 JWT(JSON Web Tokens) 등의 표준을 사용하여 인증 및 인증되어야 합니다. 그러면 JWT가 클라이언트별 정보와 함께 사용되어 개인 액세스 토큰을 생성합니다.
 
 이 자습서에서는 다음 순서도에 설명된 액세스 토큰을 만드는 과정을 통해 인증 단계를 설명합니다.
 ![](images/authentication/authentication-flowchart.png)
@@ -45,11 +45,11 @@ Adobe ID이 없는 경우 다음 단계를 사용하여를 만들 수 있습니�
 
 ## 조직의 개발자 및 사용자 [!DNL Experience Platform] 가 되기
 
-Adobe I/O에 대한 통합을 만들기 전에 계정에 IMS 조직의 제품에 대한 개발자 권한이 있어야 합니다. Admin Console의 개발자 계정에 대한 자세한 내용은 개발자 관리를 위한 [지원 문서](https://helpx.adobe.com/kr/enterprise/using/manage-developers.html) 에서 확인할 수 있습니다.
+Adobe I/O에서 통합을 만들기 전에 계정에 IMS 조직의 제품에 대한 개발자 권한이 있어야 합니다. Admin Console의 개발자 계정에 대한 자세한 내용은 개발자 관리를 위한 [지원 문서](https://helpx.adobe.com/kr/enterprise/using/manage-developers.html) 에서 확인할 수 있습니다.
 
 **개발자 이용**
 
-조직 [!DNL Admin Console] 의 관리자에게 문의하여 [[!DNL Admin Console]을 사용하여 조직의 제품 중 하나에 대한 개발자로 사용자를 추가하십시오](https://adminconsole.adobe.com/).
+조직의 [!DNL Admin Console] 관리자에게 연락하여 사용자를 조직에서 사용하는 제품 중 하나의 개발자로 추가합니다 [[!DNL Admin Console]](https://adminconsole.adobe.com/).
 
 ![](images/authentication/assign-developer.png)
 
@@ -57,7 +57,7 @@ Adobe I/O에 대한 통합을 만들기 전에 계정에 IMS 조직의 제품에
 
 ![](images/authentication/add-developer.png)
 
-개발자로 지정되면 [Adobe I/O에 대한 통합을 만들 수 있는 액세스 권한이 부여됩니다](https://www.adobe.com/go/devs_console_ui). 이러한 통합은 외부 앱 및 서비스에서 Adobe API로 연결되는 파이프라인입니다.
+개발자로 지정되면 [Adobe I/O](https://www.adobe.com/go/devs_console_ui)에서 통합을 만들 수 있는 액세스 권한이 부여됩니다. 이러한 통합은 외부 앱 및 서비스에서 Adobe API로 연결되는 파이프라인입니다.
 
 **사용자 액세스 권한 얻기**
 
@@ -163,4 +163,4 @@ curl -X GET https://platform.adobe.io/data/foundation/schemaregistry/global/clas
 
 이 문서를 읽으면 API에 대한 액세스 자격 증명을 수집하여 성공적으로 테스트했습니다 [!DNL Platform] . 이제 문서 전체에서 제공되는 예제 API 호출을 [따를 수 있습니다](../landing/documentation/overview.md).
 
-이 튜토리얼에서 수집한 인증 값 외에 많은 [!DNL Platform] API도 헤더로 유효한 API를 제공해야 `{SANDBOX_NAME}` 합니다. 자세한 내용은 [샌드박스 개요를](../sandboxes/home.md) 참조하십시오.
+이 튜토리얼에서 수집한 인증 값 외에 많은 [!DNL Platform] API도 헤더로 유효한 API를 제공해야 `{SANDBOX_NAME}` 합니다. See the [sandboxes overview](../sandboxes/home.md) for more information.
