@@ -27,7 +27,7 @@ API 작업에 대한 자세한 내용은 [[!DNL Observability Insights] API 개�
 
 [!DNL Observability Insights] adobe experience platform 활동과 관련된 이벤트 알림에 가입할 수 있습니다. 이벤트를 구독하면 작업이 완료되었을 때, 워크플로우 내의 특정 이정표에 도달했거나 프로세스 중에 오류가 발생한 경우에 대해 고유한 다운스트림 프로토콜을 설정할 수 있습니다.
 
-자세한 내용은 [이벤트 알림](./notifications/overview.md) 개요를 참조하십시오.
+See the overview on [event notifications](./notifications/overview.md) for more information.
 
 ## 다음 단계
 
