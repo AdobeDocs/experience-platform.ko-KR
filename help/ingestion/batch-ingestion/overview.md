@@ -7,7 +7,7 @@ description: '일괄 처리 처리 통합 API를 사용하면 데이터를 Adobe
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '1196'
+source-wordcount: '1193'
 ht-degree: 2%
 
 ---
@@ -35,7 +35,7 @@ API를 사용하면 데이터를 일괄로 인제스트할 수 있습니다(단�
 ### [!DNL Data Ingestion] 사전 요구 사항
 
 - 업로드할 데이터는 쪽모이 세공기나 JSON 형식이어야 합니다.
-- [!DNL 카탈로그 서비스]에서 만든 [데이터 집합입니다](../../catalog/home.md).
+- 에서 만든 데이터 집합입니다 [[!DNL Catalog services]](../../catalog/home.md).
 - 쪽모이 세공 파일 내용이 업로드되는 데이터 집합의 스키마 하위 집합과 일치해야 합니다.
 - 인증 후 고유한 액세스 토큰을 보유합니다.
 
