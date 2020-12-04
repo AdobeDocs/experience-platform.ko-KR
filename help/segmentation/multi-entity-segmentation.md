@@ -7,7 +7,7 @@ description: 다중 엔티티 세그먼테이션은 제품, 스토어 또는 기
 translation-type: tm+mt
 source-git-commit: 4dd5a91146b116953ba180e3f39d24b4e1ec289e
 workflow-type: tm+mt
-source-wordcount: '671'
+source-wordcount: '656'
 ht-degree: 0%
 
 ---
@@ -21,10 +21,10 @@ ht-degree: 0%
 
 다중 엔티티 세그먼테이션을 사용하려면 세그멘테이션과 관련된 다양한 Adobe Experience Platform 서비스에 대한 작업 지식이 필요합니다. 이 가이드를 계속 사용하려면 다음 설명서를 검토하십시오.
 
-* [[!DNL 실시간 고객 프로필]](../profile/home.md):여러 소스에서 집계된 데이터를 기반으로 한 통합 소비자 프로필을 실시간으로 제공합니다.
+* [[!DNL Real-time Customer Profile]](../profile/home.md):여러 소스에서 집계된 데이터를 기반으로 한 통합 소비자 프로필을 실시간으로 제공합니다.
    * [프로필 가설](../profile/guardrails.md):지원되는 데이터 모델을 만들기 위한 모범 사례 [!DNL Profile]를 참조하십시오.
-* [[!DNL Adobe Experience Platform 세그멘테이션 서비스]](./home.md):데이터를 사용하여 세그먼트를 만들 수 [!DNL Real-time Customer Profile] 있습니다.
-* [[!DNL 경험 데이터 모델(XDM)]](../xdm/home.md):Experience Platform이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
+* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md):데이터를 사용하여 세그먼트를 만들 수 [!DNL Real-time Customer Profile] 있습니다.
+* [[!DNL Experience Data Model (XDM)]](../xdm/home.md):Experience Platform이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
    * [스키마 컴포지션의 기본 사항](../xdm/schema/composition.md#union):Experience Platform에서 사용할 스키마를 작성하기 위한 모범 사례를 알아봅니다.
 
 ## 사용 사례
