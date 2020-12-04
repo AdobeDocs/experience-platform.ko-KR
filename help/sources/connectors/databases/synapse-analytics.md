@@ -1,9 +1,9 @@
 ---
 keywords: Experience Platform;home;popular topics;Azure Synapse Analytics;azure synapse analytics;Synapse;synapse
 solution: Experience Platform
-title: Azure Synapse Analytics 커넥터
+title: azure synapse 분석 커넥터
 topic: overview
-description: 아래 설명서에서는 API 또는 사용자 인터페이스를 사용하여 Azure Synapse Analytics를 플랫폼에 연결하는 방법에 대한 정보를 제공합니다.
+description: 아래 설명서에서는 API 또는 사용자 인터페이스를 사용하여 Azure synapse 분석을 플랫폼에 연결하는 방법에 대한 정보를 제공합니다.
 translation-type: tm+mt
 source-git-commit: e0a0b7fc28b8cc85c5140d3840e06e5c7078c307
 workflow-type: tm+mt
@@ -27,11 +27,11 @@ Adobe Experience Platform은 [!DNL Platform] 서비스를 사용하여 들어오
 
 ## API [!DNL Azure Synapse Analytics] 를 [!DNL Platform] 사용하는 데 연결
 
-- [Flow Service API를 사용하여 Azure Synapse Analytics 커넥터 만들기](../../tutorials/api/create/databases/synapse-analytics.md)
+- [흐름 서비스 API를 사용하여 Azure synapse 분석 커넥터 만들기](../../tutorials/api/create/databases/synapse-analytics.md)
 - [Flow Service API를 사용하여 데이터베이스 시스템 살펴보기](../../tutorials/api/explore/database-nosql.md)
 - [Flow Service API를 사용하여 데이터베이스에서 데이터 수집](../../tutorials/api/collect/database-nosql.md)
 
 ## UI [!DNL Azure Synapse Analytics] 를 [!DNL Platform] 사용하는 데 연결
 
-- [UI에서 Azure Synapse Analytics 원본 커넥터 만들기](../../tutorials/ui/create/databases/synapse-analytics.md)
+- [UI에서 Azure synapse 분석 소스 커넥터 만들기](../../tutorials/ui/create/databases/synapse-analytics.md)
 - [UI에서 데이터베이스 커넥터에 대한 데이터 흐름 구성](../../tutorials/ui/dataflow/databases.md)
