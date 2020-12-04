@@ -91,7 +91,7 @@ evaluation.metrics=com.adobe.platform.ml.impl.Constants.FSCORE
 >
 >클래스에 대해, 새 `MLMetric` 를 만들 때 `"measures"` 는 데 사용하지 마십시오. `valueType` `MLMetric` 다른 경우 지표가 사용자 지정 평가 지표 테이블에 채워지지 않습니다.
 >  
-> 다음을 수행합니다. `metrics.add(new MLMetric("MAPE", mape, "double"))`\
+> 방법: `metrics.add(new MLMetric("MAPE", mape, "double"))`\
 > 그렇지 않음: `metrics.add(new MLMetric("MAPE", mape, "measures"))`
 
 
