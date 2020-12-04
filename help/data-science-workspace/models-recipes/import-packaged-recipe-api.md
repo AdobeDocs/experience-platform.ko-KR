@@ -8,7 +8,7 @@ description: '이 자습서는 Sensei 기계 학습 API를 사용하여 사용�
 translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
-source-wordcount: '981'
+source-wordcount: '976'
 ht-degree: 2%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 # 패키지된 레서피(API) 가져오기
 
-이 자습서는 [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) 를 사용하여 [엔진](../api/engines.md)(사용자 인터페이스의 레서피)을 만듭니다.
+이 자습서는 사용자 인터페이스 [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) 에서 [레서피](../api/engines.md)(Recipe)라고도 하는 엔진을 만드는 데 사용됩니다.
 
 시작하기 전에, Adobe Experience Platform은 API와 UI 내의 유사한 요소를 참조하기 위해 서로 다른 용어를 [!DNL Data Science Workspace] 사용합니다. API 용어는 이 자습서 전체에서 사용되며 다음 표에서는 상관 관계 용어의 개요를 설명합니다.
 
