@@ -8,7 +8,7 @@ description: Adobe Experience Platform을 사용하면 쿼리 서비스를 Jupit
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '826'
+source-wordcount: '807'
 ht-degree: 1%
 
 ---
@@ -29,14 +29,14 @@ ht-degree: 1%
 - 데이터 [!DNL Adobe Analytics] 집합
 
 - 이 튜토리얼에서 사용되는 다음 주요 개념에 대한 작업 이해:
-   - [[!DNL 경험 데이터 모델(XDM) 및 XDM 시스템]](../../xdm/home.md)
-   - [[!DNL 쿼리 서비스]](../../query-service/home.md)
-   - [[!DNL 쿼리 서비스 SQL 구문]](../../query-service/sql/overview.md)
+   - [[!DNL Experience Data Model (XDM) and XDM System]](../../xdm/home.md)
+   - [[!DNL Query Service]](../../query-service/home.md)
+   - [[!DNL Query Service SQL Syntax]](../../query-service/sql/overview.md)
    - Adobe Analytics
 
 ## 액세스 [!DNL JupyterLab] 및 [!DNL Query Service] {#access-jupyterlab-and-query-service}
 
-1. [!DNL [Experience Platform]에서](https://platform.adobe.com)왼쪽 탐색 열에서 **[!UICONTROL 전자 필기장]** 으로 이동합니다. JupiterLab이 로드될 때까지 잠시 기다려 주십시오.
+1. 에서 왼쪽 탐색 [[!DNL Experience Platform]](https://platform.adobe.com)열 **** 에서 전자 필기장으로 이동합니다. JupiterLab이 로드될 때까지 잠시 기다려 주십시오.
 
    ![](../images/jupyterlab/query/jupyterlab-launcher.png)
 
