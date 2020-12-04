@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# API [!DNL Observability Insights] 시작하기
+# Getting started with the [!DNL Observability Insights] API
 
 API를 [!DNL Observability Insights] 사용하면 다양한 Adobe Experience Platform 기능에 대한 지표 데이터를 검색할 수 있습니다. 이 문서에서는 [!DNL Observability Insights] API를 호출하기 전에 알아야 할 핵심 개념을 소개합니다.
 
