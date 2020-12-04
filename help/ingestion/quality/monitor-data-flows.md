@@ -7,7 +7,7 @@ description: 이 사용자 안내서에서는 Adobe Experience Platform 사용�
 translation-type: tm+mt
 source-git-commit: d2f098cb9e4aaf5beaad02173a22a25a87a43756
 workflow-type: tm+mt
-source-wordcount: '560'
+source-wordcount: '552'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Experience Platform [UI에서](https://platform.adobe.com)왼쪽 탐색 메뉴�
 
 ![](../images/quality/monitor-data-flows/click-streaming-end-to-end.png)
 
-Streaming **[!UICONTROL end-to-end]** monitoring 페이지가 나타납니다. 이 작업 공간은 들어오는 데이터의 세부 목록 [!DNL Platform]과 [[!DNL 실시간 고객 프로필]](../../profile/home.md)에서 성공적으로 처리된 스트리밍 이벤트의 비율을 표시하는 그래프, 수신 이벤트 수를 표시하는 그래프를 제공합니다.
+Streaming **[!UICONTROL end-to-end]** monitoring 페이지가 나타납니다. 이 작업 공간은 수신되는 스트리밍 이벤트 비율 [!DNL Platform], 성공적으로 처리된 스트리밍된 이벤트 비율과 들어오는 데이터의 세부 목록을 표시하는 그래프 [[!DNL Real-time Customer Profile]](../../profile/home.md)를 제공합니다.
 
 ![](../images/quality/monitor-data-flows/list-streams.png)
 
@@ -61,7 +61,7 @@ Streaming **[!UICONTROL end-to-end]** monitoring 페이지가 나타납니다. �
 
 ## 일괄적으로 엔드 투 엔드 데이터 수집 모니터링
 
-[!DNL Experience Platform [UI]](https://platform.adobe.com)에서 왼쪽 탐색 **[!UICONTROL 메뉴에서]** 모니터링을 클릭합니다.
+의 왼쪽 탐색 메뉴 [[!DNL Experience Platform UI]](https://platform.adobe.com)에서 **[!UICONTROL 모니터링]** 을 클릭합니다.
 
 ![](../images/quality/monitor-data-flows/click-monitoring.png)
 
