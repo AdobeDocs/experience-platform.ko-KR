@@ -1,5 +1,5 @@
 ---
-title: Adobe Experience Platform 릴리스 정보
+title: Adobe Experience Platform 릴리스 노트
 description: 2020년 10월 Experience Platform 릴리스 노트
 doc-type: release notes
 last-update: October, 2020
