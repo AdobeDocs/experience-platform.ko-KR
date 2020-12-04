@@ -8,7 +8,7 @@ description: 이 문서에서는 세그멘테이션 API를 사용하여 세그�
 translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
-source-wordcount: '1560'
+source-wordcount: '1535'
 ht-degree: 0%
 
 ---
@@ -16,15 +16,15 @@ ht-degree: 0%
 
 # 세그먼트 결과 평가 및 액세스
 
-이 문서에서는 [[!DNL 세그멘테이션 API]를 사용하여 세그먼트를 평가하고 세그먼트 결과에 액세스하는 자습서를 제공합니다](../api/getting-started.md).
+이 문서에서는 세그먼트 평가 및 세그먼트 결과에 액세스하는 자습서를 제공합니다 [[!DNL Segmentation API]](../api/getting-started.md).
 
 ## 시작하기
 
 이 자습서에서는 대상 세그먼트 만들기와 관련된 다양한 [!DNL Adobe Experience Platform] 서비스에 대해 작업해야 합니다. 이 자습서를 시작하기 전에 다음 서비스에 대한 설명서를 검토하십시오.
 
-- [[!DNL 실시간 고객 프로필]](../../profile/home.md):여러 소스에서 수집한 데이터를 기반으로 통합된 고객 프로필을 실시간으로 제공합니다.
-- [[!DNL Adobe Experience Platform 세그멘테이션 서비스]](../home.md):데이터를 통해 고객 세그먼트를 만들 수 [!DNL Real-time Customer Profile] 있습니다.
-- [[!DNL 경험 데이터 모델(XDM)]](../../xdm/home.md):Platform(플랫폼)이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
+- [[!DNL Real-time Customer Profile]](../../profile/home.md):여러 소스에서 수집한 데이터를 기반으로 통합된 고객 프로필을 실시간으로 제공합니다.
+- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md):데이터를 통해 고객 세그먼트를 만들 수 [!DNL Real-time Customer Profile] 있습니다.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):Platform(플랫폼)이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
 - [샌드박스](../../sandboxes/home.md): [!DNL Experience Platform] 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되도록 단일 [!DNL Platform] 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
 
 ### 필요한 헤더
@@ -230,10 +230,10 @@ curl -X POST \
 
 ## 다음 단계
 
-내보내기가 성공적으로 완료되면 in 내에서 데이터를 사용할 수 [!DNL Data Lake] 있습니다 [!DNL Experience Platform]. 그런 다음 [[!DNL 데이터 액세스](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) API]를 사용하여 내보내기와 `batchId` 연결된 데이터를 사용하여 데이터에 액세스할 수 있습니다. 세그먼트 크기에 따라 데이터가 청크 단위일 수 있으며 일괄 처리는 여러 파일로 구성될 수 있습니다.
+내보내기가 성공적으로 완료되면 in 내에서 데이터를 사용할 수 [!DNL Data Lake] 있습니다 [!DNL Experience Platform]. 그런 다음 내보내기와 연결된 데이터 [[!DNL Data Access API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) 를 사용하여 데이터에 `batchId` 액세스할 수 있습니다. 세그먼트 크기에 따라 데이터가 청크 단위일 수 있으며 일괄 처리는 여러 파일로 구성될 수 있습니다.
 
 API를 사용하여 일괄 파일에 액세스하고 다운로드하는 방법에 대한 단계별 지침을 보려면 [!DNL Data Access] 데이터 액세스 자습서를 따르십시오 [](../../data-access/tutorials/dataset-data.md).
 
 를 사용하여 성공적으로 내보낸 세그먼트 데이터에 액세스할 수도 있습니다 [!DNL Adobe Experience Platform Query Service]. UI 또는 RESTful API를 사용하여 데이터 [!DNL Query Service] 에 대한 쿼리를 작성하고 유효성을 확인하고 실행할 수 [!DNL Data Lake]있습니다.
 
-대상 데이터를 쿼리하는 방법에 대한 자세한 내용은 [[!DNL 쿼리 서비스]의 설명서를 참조하십시오](../../query-service/home.md).
+대상 데이터를 쿼리하는 방법에 대한 자세한 내용은 설명서를 참조하십시오 [[!DNL Query Service]](../../query-service/home.md).
