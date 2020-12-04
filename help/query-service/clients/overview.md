@@ -7,7 +7,7 @@ description: 이 문서에서는 다양한 데스크탑 클라이언트 응용 �
 translation-type: tm+mt
 source-git-commit: 37356db1666b0c800119b1e254940ad72550848a
 workflow-type: tm+mt
-source-wordcount: '97'
+source-wordcount: '78'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 - [[!DNL Aqua Data Studio]](./aqua-data-studio.md)
 - [[!DNL Looker]](./looker.md)
 - [[!DNL Postico (Mac)]](./postico.md)
-- [[!DNL Power BI(PC)]](./power-bi.md)
+- [[!DNL Power BI (PC)]](./power-bi.md)
 - [[!DNL PSQL]](./psql.md)
 - [[!DNL RStudio]](./rstudio.md)
-- [[!DNL 타블로]](./tableau.md)
+- [[!DNL Tableau]](./tableau.md)
