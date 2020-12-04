@@ -7,7 +7,7 @@ description: Adobe Experience Platform을 사용하면 Sensei Machine Learning F
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '1426'
+source-wordcount: '1421'
 ht-degree: 0%
 
 ---
@@ -439,4 +439,4 @@ Docker 이미지 위치가 지정되면 POST을 수행하여 [API를 사용하�
 
 [//]: # (Next steps section should refer to tutorials on how to score data using the feature pipeline Engine. Update this document once those tutorials are available)
 
-이 문서를 읽음으로써 모델 작성 SDK를 사용하여 피쳐 파이프라인을 만들고, Docker 이미지를 만들고, Docker 이미지 URL을 사용하여 [!DNL Sensei Machine Learning] API를 사용하여 피쳐 파이프라인 모델을 생성합니다. 이제 [[!DNL Sensei Machine Learning API]를 사용하여 데이터 세트를 계속해서 변환하고 데이터 기능을 추출할 준비가 되었습니다](../api/getting-started.md).
+이 문서를 읽음으로써 모델 작성 SDK를 사용하여 피쳐 파이프라인을 만들고, Docker 이미지를 만들고, Docker 이미지 URL을 사용하여 [!DNL Sensei Machine Learning] API를 사용하여 피쳐 파이프라인 모델을 생성합니다. 이제 데이터 세트를 계속 변환하고 데이터 기능을 확장할 준비가 되었습니다 [[!DNL Sensei Machine Learning API]](../api/getting-started.md).
