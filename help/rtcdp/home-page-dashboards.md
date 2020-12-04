@@ -5,7 +5,7 @@ seo-title: 실시간 고객 데이터 플랫폼 홈 페이지 및 대시보드
 description: 대시보드, 홈페이지 및 Adobe Experience Platform의 최초 사용자 경험
 seo-description: 대시보드, 홈페이지 및 Adobe Experience Platform의 최초 사용자 경험
 translation-type: tm+mt
-source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
+source-git-commit: f2fdc3b75d275698a4b1e4c8969b1b840429c919
 workflow-type: tm+mt
 source-wordcount: '633'
 ht-degree: 4%
@@ -68,7 +68,7 @@ Some information is shown in different ways on both the leaderboard and metric c
 
 **[!UICONTROL 대상은]** 조직에 대해 만들어진 총 대상 수를 보여줍니다. 이 번호는 새 대상이 생성될 때 업데이트됩니다.
 
-대상에 대한 자세한 내용은 대상 [개요를 참조하십시오](destinations/destinations-overview.md).
+대상에 대한 자세한 내용은 대상 [개요를 참조하십시오](destinations/overview.md).
 
 <!-- ### Successful profile records
 
@@ -134,4 +134,4 @@ The number of failed profile records is updated hourly. -->
 
 대상을 클릭하여 해당 항목에 대한 세부 사항을 보거나, **[!UICONTROL 추가 대상에 대한 정보를 보려면 모두]** 보기를 클릭합니다.
 
-대상에 대한 자세한 내용은 대상 [개요를 참조하십시오](destinations/destinations-overview.md).
+대상에 대한 자세한 내용은 대상 [개요를 참조하십시오](destinations/overview.md).
