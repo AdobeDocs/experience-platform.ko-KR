@@ -73,7 +73,7 @@ ht-degree: 2%
 
 ## 다음 단계
 
-프로젝트에 [!DNL Platform] 알림을 등록하면 [!UICONTROL 프로젝트 개요에서 받은 이벤트를 볼 수 있습니다]. 이벤트 추적 방법에 대한 자세한 내용은 [Adobe I/O 이벤트](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) 추적 가이드를 참조하십시오.
+프로젝트에 [!DNL Platform] 알림을 등록하면 [!UICONTROL 프로젝트 개요에서 받은 이벤트를 볼 수 있습니다]. 이벤트를 추적하는 방법에 대한 자세한 [설명은 Adobe I/O 이벤트](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) 추적에 대한 가이드를 참조하십시오.
 
 ## 부록
 
