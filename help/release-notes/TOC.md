@@ -1,7 +1,7 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Adobe Experience Platform 릴리스 정보
+user-guide-title: Adobe Experience Platform 릴리스 노트
 breadcrumb-title: Platform 릴리스 노트
 user-guide-description: Adobe Experience Platform의 월별 릴리스 노트입니다.
 translation-type: tm+mt
