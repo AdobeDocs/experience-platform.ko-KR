@@ -6,7 +6,7 @@ type: Tutorial
 translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
-source-wordcount: '1035'
+source-wordcount: '1020'
 ht-degree: 1%
 
 ---
@@ -27,10 +27,10 @@ ht-degree: 1%
 
 이 자습서에서는 활성화된 데이터 세트를 관리하는 데 관련된 다양한 Adobe Experience Platform 서비스에 대해 [!DNL Profile]알아야 합니다. 이 자습서를 시작하기 전에 관련 [!DNL Platform] 서비스에 대한 설명서를 검토하십시오.
 
-- [[!DNL 실시간 고객 프로필]](../home.md):여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
+- [[!DNL Real-time Customer Profile]](../home.md):여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
 - [[!DNL Identity Service]](../../identity-service/home.md):인제스트되는 여러 데이터 소스의 ID를 결합함으로써 사용할 수 [!DNL Real-time Customer Profile] [!DNL Platform]있습니다.
-- [[!DNL 카탈로그 서비스]](../../catalog/home.md):데이터 세트를 만들고 데이터 세트를 [!DNL Real-time Customer Profile] 및 구성할 수 있는 RESTful API입니다 [!DNL Identity Service].
-- [[!DNL 경험 데이터 모델(XDM)]](../../xdm/home.md):고객 경험 데이터를 [!DNL Platform] 구성하는 표준화된 프레임워크
+- [[!DNL Catalog Service]](../../catalog/home.md):데이터 세트를 만들고 데이터 세트를 [!DNL Real-time Customer Profile] 및 구성할 수 있는 RESTful API입니다 [!DNL Identity Service].
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):고객 경험 데이터를 [!DNL Platform] 구성하는 표준화된 프레임워크
 
 다음 섹션에서는 플랫폼 API를 성공적으로 호출하기 위해 알아야 할 추가 정보를 제공합니다.
 
