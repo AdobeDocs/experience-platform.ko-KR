@@ -7,7 +7,7 @@ description: 세그먼트 정의를 개발할 때 Adobe Experience Platform 내�
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '777'
+source-wordcount: '773'
 ht-degree: 2%
 
 ---
@@ -172,7 +172,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/preview/MDphcHAtMzJiZTAzMjgt
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `results` | 관련 ID와 함께 엔티티 ID 목록입니다. 제공된 링크를 사용하여 [[!DNL 프로필 액세스 API]를 사용하여 지정된 엔터티를 조회할 수 있습니다](../../profile/api/entities.md). |
+| `results` | 관련 ID와 함께 엔티티 ID 목록입니다. 제공된 링크를 사용하여 지정된 엔티티를 검색할 수 있습니다 [[!DNL Profile Access API]](../../profile/api/entities.md). |
 
 ## 특정 예상 작업의 결과 검색 {#get-estimate}
 
