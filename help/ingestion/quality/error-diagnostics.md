@@ -7,7 +7,7 @@ description: 이 문서에서는 일괄 처리 처리 통합 모니터링, 부�
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '904'
+source-wordcount: '892'
 ht-degree: 2%
 
 ---
@@ -23,8 +23,8 @@ Adobe Experience Platform은 데이터를 업로드하고 인제스트하는 두
 
 이 가이드는 Adobe Experience Platform의 다음 구성 요소에 대한 작업 이해를 필요로 합니다.
 
-- [[!DNL 경험 데이터 모델(XDM) 시스템]](../../xdm/home.md):고객 경험 데이터를 [!DNL Experience Platform] 구성하는 표준화된 프레임워크
-- [[!DNL Adobe Experience Platform 데이터 통합]](../home.md):데이터를 보낼 수 있는 메서드입니다 [!DNL Experience Platform].
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md):고객 경험 데이터를 [!DNL Experience Platform] 구성하는 표준화된 프레임워크
+- [[!DNL Adobe Experience Platform Data Ingestion]](../home.md):데이터를 보낼 수 있는 메서드입니다 [!DNL Experience Platform].
 
 ### 샘플 API 호출 읽기
 
