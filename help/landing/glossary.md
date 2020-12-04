@@ -44,7 +44,7 @@ ht-degree: 0%
 
 **Adobe 지능형 서비스:** Adobe Sensei은 강력한 정보 프레임워크입니다 [!DNL Experience Platform]. 또한 브랜드 기업이 개인화된 실시간 고객 경험을 제공할 수 있는 AI 서비스를 제공합니다.
 
-**Adobe I/O:** Adobe I/O는 API, 이벤트, 개발자 콘솔, 유용한 툴 등 Adobe Experience Platform을 통합, 확장 및 사용자 정의하는 데 필요한 모든 기능을 개발자에게 제공하고 있습니다. [!DNL Experience Platform]
+**Adobe I/O:** Adobe I/O은 API, 이벤트, 개발자 콘솔, 유용한 툴 등 Adobe Experience Platform을 통합, 확장 및 사용자 정의하는 데 필요한 모든 것을 개발자에게 제공하고 있습니다. [!DNL Experience Platform]
 
 **Adobe Sensei:** Adobe Sensei은 강력한 정보 프레임워크입니다 [!DNL Experience Platform]. 또한 브랜드 기업이 개인화된 실시간 고객 경험을 제공할 수 있는 AI 서비스를 제공합니다.
 
