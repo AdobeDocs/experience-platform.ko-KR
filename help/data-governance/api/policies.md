@@ -142,7 +142,7 @@ curl -X GET \
 | --- | --- |
 | `_page.count` | 검색된 총 정책 수입니다. |
 | `name` | 정책의 표시 이름입니다. |
-| `status` | 정책의 현재 상태입니다. 다음과 같은 세 가지 가능한 상태가 있습니다. `DRAFT`, `ENABLED`또는 `DISABLED`. 기본적으로 `ENABLED` 정책만 평가에 참여합니다. 자세한 내용은 [정책 평가에](../enforcement/overview.md) 대한 개요를 참조하십시오. |
+| `status` | 정책의 현재 상태입니다. 다음과 같은 세 가지 가능한 상태가 있습니다. `DRAFT`, `ENABLED`또는 `DISABLED`. 기본적으로 `ENABLED` 정책만 평가에 참여합니다. See the overview on [policy evaluation](../enforcement/overview.md) for more information. |
 | `marketingActionRefs` | 정책에 대해 적용 가능한 모든 마케팅 작업의 URI를 나열하는 배열. |
 | `description` | 정책 사용 사례에 대한 추가 컨텍스트를 제공하는 선택적 설명입니다. |
 | `deny` | 정책의 관련 마케팅 활동이 제한되는 특정 데이터 사용 레이블을 설명하는 개체 이 속성에 대한 자세한 [내용은 정책](#create-policy) 만들기에 대한 섹션을 참조하십시오. |
@@ -223,7 +223,7 @@ curl -X GET \
 | 속성 | 설명 |
 | --- | --- |
 | `name` | 정책의 표시 이름입니다. |
-| `status` | 정책의 현재 상태입니다. 다음과 같은 세 가지 가능한 상태가 있습니다. `DRAFT`, `ENABLED`또는 `DISABLED`. 기본적으로 `ENABLED` 정책만 평가에 참여합니다. 자세한 내용은 [정책 평가에](../enforcement/overview.md) 대한 개요를 참조하십시오. |
+| `status` | 정책의 현재 상태입니다. 다음과 같은 세 가지 가능한 상태가 있습니다. `DRAFT`, `ENABLED`또는 `DISABLED`. 기본적으로 `ENABLED` 정책만 평가에 참여합니다. See the overview on [policy evaluation](../enforcement/overview.md) for more information. |
 | `marketingActionRefs` | 정책에 대해 적용 가능한 모든 마케팅 작업의 URI를 나열하는 배열. |
 | `description` | 정책 사용 사례에 대한 추가 컨텍스트를 제공하는 선택적 설명입니다. |
 | `deny` | 정책의 관련 마케팅 활동이 제한되는 특정 데이터 사용 레이블을 설명하는 개체 이 속성에 대한 자세한 [내용은 정책](#create-policy) 만들기에 대한 섹션을 참조하십시오. |
@@ -317,7 +317,7 @@ curl -X POST \
 | 속성 | 설명 |
 | --- | --- |
 | `name` | 정책의 표시 이름입니다. |
-| `status` | 정책의 현재 상태입니다. 다음과 같은 세 가지 가능한 상태가 있습니다. `DRAFT`, `ENABLED`또는 `DISABLED`. 기본적으로 `ENABLED` 정책만 평가에 참여합니다. 자세한 내용은 [정책 평가에](../enforcement/overview.md) 대한 개요를 참조하십시오. |
+| `status` | 정책의 현재 상태입니다. 다음과 같은 세 가지 가능한 상태가 있습니다. `DRAFT`, `ENABLED`또는 `DISABLED`. 기본적으로 `ENABLED` 정책만 평가에 참여합니다. See the overview on [policy evaluation](../enforcement/overview.md) for more information. |
 | `marketingActionRefs` | 정책에 대해 적용 가능한 모든 마케팅 작업의 URI를 나열하는 배열. 마케팅 작업의 URI는 마케팅 작업 `_links.self.href` 을 [조회하는 응답에서 제공됩니다](./marketing-actions.md#look-up). |
 | `description` | 정책 사용 사례에 대한 추가 컨텍스트를 제공하는 선택적 설명입니다. |
 | `deny` | 특정 데이터 사용 레이블을 설명하는 정책 표현식은 정책의 관련 마케팅 작업이 수행되는 것을 제한합니다. |
@@ -425,7 +425,7 @@ curl -X PUT \
 | 속성 | 설명 |
 | --- | --- |
 | `name` | 정책의 표시 이름입니다. |
-| `status` | 정책의 현재 상태입니다. 다음과 같은 세 가지 가능한 상태가 있습니다. `DRAFT`, `ENABLED`또는 `DISABLED`. 기본적으로 `ENABLED` 정책만 평가에 참여합니다. 자세한 내용은 [정책 평가에](../enforcement/overview.md) 대한 개요를 참조하십시오. |
+| `status` | 정책의 현재 상태입니다. 다음과 같은 세 가지 가능한 상태가 있습니다. `DRAFT`, `ENABLED`또는 `DISABLED`. 기본적으로 `ENABLED` 정책만 평가에 참여합니다. See the overview on [policy evaluation](../enforcement/overview.md) for more information. |
 | `marketingActionRefs` | 정책에 대해 적용 가능한 모든 마케팅 작업의 URI를 나열하는 배열. 마케팅 작업의 URI는 마케팅 작업 `_links.self.href` 을 [조회하는 응답에서 제공됩니다](./marketing-actions.md#look-up). |
 | `description` | 정책 사용 사례에 대한 추가 컨텍스트를 제공하는 선택적 설명입니다. |
 | `deny` | 특정 데이터 사용 레이블을 설명하는 정책 표현식은 정책의 관련 마케팅 작업이 수행되는 것을 제한합니다. 이 속성에 대한 자세한 [내용은 정책](#create-policy) 만들기에 대한 섹션을 참조하십시오. |
