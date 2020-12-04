@@ -483,7 +483,7 @@ SQL [!DNL Spark] 도움말은 SQL 기능을 확장하는 내장 [!DNL Spark] SQL
 
 #### 백분위수
 
-`percentile(col, percentage [, frequency])`:지정된 백분율로 숫자 열의 정확한 백분위수 값 `col` 을 반환합니다. 값은 0.0에서 1.0 사이여야 `percentage` 합니다. 이 값은 `frequency` 양수여야 합니다.
+`percentile(col, percentage [, frequency])`:지정된 백분율로 숫자 열의 정확한 백분위수 값 `col` 을 반환합니다. 값은 0.0에서 1.0 사이여야 `percentage` 합니다. 이 값은 `frequency` 양의 필수 요소여야 합니다.
 
 `percentile(col, array(percentage1 [, percentage2]...) [, frequency])`:지정된 백분율로 숫자 열의 정확한 백분위수 값 배열 `col` 을 반환합니다. 백분율 배열의 각 값은 0.0에서 1.0 사이여야 합니다. 이 값은 양의 필수 요소여야 `frequency` 합니다.
 
