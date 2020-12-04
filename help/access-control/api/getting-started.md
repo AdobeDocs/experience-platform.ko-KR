@@ -7,8 +7,8 @@ description: Adobe Experience Platform의 액세스 제어를 통해 Adobe Admin
 translation-type: tm+mt
 source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
 workflow-type: tm+mt
-source-wordcount: '379'
-ht-degree: 3%
+source-wordcount: '375'
+ht-degree: 4%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 3%
 
 [!DNL Access control] 이 [!DNL Experience Platform] 는 [Adobe Admin Console](https://adminconsole.adobe.com)를 통해 관리된다. 이 기능은 Admin Console의 제품 프로필을 활용하므로 사용자에게 사용 권한 및 샌드박스를 연결합니다. 자세한 내용은 [액세스 제어 개요를](../home.md) 참조하십시오.
 
-이 개발자 안내서에서는 [[!DNL 액세스 제어 API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/access-control.yaml)요청에 형식을 지정하는 방법에 대한 정보를 제공하고 다음 작업을 다룹니다.
+이 개발자 안내서에서는 요청에 형식을 지정하는 방법에 대한 정보를 제공하고 다음 작업을 다룹니다. [[!DNL Access Control API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/access-control.yaml)
 
 - [권한 및 리소스 유형의 목록 이름](./permissions-and-resource-types.md)
 - [현재 사용자에 대한 효과적인 정책 보기](./effective-policies.md)
