@@ -8,7 +8,7 @@ description: 이 자습서에서는 Sensei Machine Learning API를 사용하여 
 translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
-source-wordcount: '1501'
+source-wordcount: '1496'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 # 모델을 서비스로 게시(API)
 
-이 자습서에서는 [[!DNL Sensei Machine Learning API]를 사용하여 모델을 서비스로 게시하는 프로세스에 대해 설명합니다](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml).
+이 자습서에서는 모델을 서비스를 사용하여 서비스로 게시하는 프로세스에 대해 설명합니다 [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml).
 
 ## 시작하기
 
