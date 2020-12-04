@@ -31,11 +31,11 @@ Adobe Experience Platform은 MySQL 및 같은 데이터베이스 제공업체를
 
 ## API [!DNL Oracle] 를 [!DNL Platform] 사용하는 데 연결
 
-- [Flow Service API를 사용하여 Oracle 커넥터 생성](../../tutorials/api/create/databases/oracle.md)
+- [Flow Service API를 사용하여 Oracle 커넥터 만들기](../../tutorials/api/create/databases/oracle.md)
 - [Flow Service API를 사용하여 데이터베이스 시스템 살펴보기](../../tutorials/api/explore/database-nosql.md)
 - [Flow Service API를 사용하여 데이터베이스에서 데이터 수집](../../tutorials/api/collect/database-nosql.md)
 
 ## UI [!DNL Oracle] 를 [!DNL Platform] 사용하는 데 연결
 
-- [UI에서 Oracle 소스 커넥터 생성](../../tutorials/ui/create/databases/oracle.md)
+- [UI에서 Oracle 소스 커넥터 만들기](../../tutorials/ui/create/databases/oracle.md)
 - [UI에서 데이터베이스 커넥터에 대한 데이터 흐름 구성](../../tutorials/ui/dataflow/databases.md)
