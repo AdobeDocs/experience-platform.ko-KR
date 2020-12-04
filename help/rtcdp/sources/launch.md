@@ -35,7 +35,7 @@ ht-degree: 8%
 
 먼저 Adobe Experience Platform [!DNL Web SDK] 익스텐션을 설치합니다.
 
-1. 에서 [!DNL Launch]확장 **[!UICONTROL 탭을]** 엽니다.
+1. In [!DNL Launch], open the **[!UICONTROL Extensions]** tab.
 
    ![image](assets/launch-overview.png)
 
@@ -50,7 +50,7 @@ ht-degree: 8%
    지금 필요한 유일한 설정은 다음과 같습니다.
 
    * **구성 ID:** Adobe 담당자로부터 받은 구성 ID를 지정합니다.
-   * **Edge Domain:** Adobe 담당자로부터 받은 에지 도메인을 지정합니다.
+   * **Edge Domain:** Adobe 담당자로부터 받은 Edge 도메인을 지정합니다.
 
 1. 저장 **[!UICONTROL 을]** 클릭하고 다음 단계로 계속 진행합니다.
 
