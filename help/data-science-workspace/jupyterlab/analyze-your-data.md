@@ -8,7 +8,7 @@ description: 이 자습서에서는 데이터 과학 작업 공간에 내장된 
 translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
-source-wordcount: '1731'
+source-wordcount: '1723'
 ht-degree: 0%
 
 ---
@@ -20,9 +20,9 @@ ht-degree: 0%
 
 다음 개념이 도입되었습니다.
 
-- **[!DNL JupyterLab]:**[[!DNL JupiterLab]](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) 은 Project Jupiter의 차세대 웹 기반 인터페이스로, 와 긴밀하게 통합되어 [!DNL Adobe Experience Platform]있습니다.
+- **[!DNL JupyterLab]:**[[!DNL JupyterLab]](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) Project Jupiter의 차세대 웹 기반 인터페이스로 긴밀하게 통합되어 [!DNL Adobe Experience Platform]있습니다.
 - **배치:** 데이터 세트는 배치로 구성됩니다. 일괄 처리란 일정 기간 동안 수집된 데이터 집합이며 하나의 단위로 함께 처리됩니다. 데이터를 데이터 세트에 추가할 때 새 일괄 처리가 만들어집니다.
-- **데이터 액세스 SDK(더 이상 사용되지 않음):** 이제 데이터 액세스 SDK는 더 이상 사용되지 않습니다. [!DNL [Platform SDK]](../authoring/platform-sdk.md) 가이드를 사용하십시오.
+- **데이터 액세스 SDK(더 이상 사용되지 않음):** 이제 데이터 액세스 SDK는 더 이상 사용되지 않습니다. 가이드 [[!DNL Platform SDK]](../authoring/platform-sdk.md) 사용
 
 ## 데이터 과학 작업 공간에서 노트북 살펴보기
 
@@ -92,7 +92,7 @@ Jupiter 노트북에서는 왼쪽의 **데이터** 탭에서 데이터에 액세
 
 >[!TIP]
 >
->코드를 변환하려면 [[!DNL Platform SDK]](../authoring/platform-sdk.md) 안내서를 참조하십시오.
+>코드를 변환하려면 [[!DNL Platform SDK]](../authoring/platform-sdk.md) 가이드를 참조하십시오.
 
 ```PYTHON
 from data_access_sdk_python.reader import DataSetReader
