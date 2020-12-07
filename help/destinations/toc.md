@@ -2,11 +2,11 @@
 product: experience-platform
 audience: user
 user-guide-title: 대상 안내서
-user-guide-description: 대상에 대한 설명을 여기에 삽입합니다.
+user-guide-description: 크로스채널 마케팅 캠페인, 이메일 캠페인, 타깃팅된 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화합니다.
 translation-type: tm+mt
-source-git-commit: eccf962fd9a24e6b5085f706766693ee7e468aea
+source-git-commit: 395a8c2aa7fc89cde04263dbbfb3315318245ef6
 workflow-type: tm+mt
-source-wordcount: '415'
+source-wordcount: '429'
 ht-degree: 0%
 
 ---
