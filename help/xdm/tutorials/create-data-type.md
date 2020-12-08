@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: 이 자습서에서는 Experience Platform UI를 사용하여 사용자 지정 데이터 유형을 구성하는 단계를 안내합니다.
 translation-type: tm+mt
-source-git-commit: 9008b49e1eb5e32b0f4cda7049bf873c689f6442
+source-git-commit: bfb65743764b454754ca8ebb01bfe4407833b291
 workflow-type: tm+mt
 source-wordcount: '1243'
 ht-degree: 0%
@@ -26,7 +26,7 @@ Adobe Experience Platform은 다양한 일반적인 경험 관리 사용 사례�
 
 이 자습서에서는 XDM 시스템에 대해 제대로 이해하고 있어야 합니다. Experience Platform 에코시스템 내 XDM의 역할 소개 [와 데이터 유형이 XDM 스키마에 기여하는 방법에 대한 스키마 구성](../home.md) [](../schema/composition.md) 기본 사항에 대해서는 XDM 개요를 참조하십시오.
 
-이 자습서에서는 필요하지 않지만 UI에서 스키마 [구성에 대한 자습서를 따라 UI의](./-schema-ui.md) 다양한 기능에 익숙해지도록 하는 것이 좋습니다 [!DNL Schema Editor].
+이 자습서에서는 필요하지 않지만 UI에서 스키마 [구성에 대한 자습서를 따라 UI의](./create-schema-ui.md) 다양한 기능에 익숙해지도록 하는 것이 좋습니다 [!DNL Schema Editor].
 
 ## 데이터 유형 [!DNL Schema Editor] 에 대해
 
