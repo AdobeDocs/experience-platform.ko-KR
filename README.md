@@ -1,21 +1,12 @@
 ---
-source-git-commit: 87d46c0d813cd31408eaed8331677b74fc42dd38
+source-git-commit: b0cc44b33b399eb64122374251840a4298946d80
 workflow-type: tm+mt
 translation-type: tm+mt
-source-wordcount: '643'
-ht-degree: 65%
+source-wordcount: '509'
+ht-degree: 81%
 
 ---
 # 컨텐츠 기여
-
-| EXL-PR | EXL | 미리 보기 | 활성화 | 게시됨 | 도움말 |
-|--- |--- |--- |--- |--- |--- |
-| [![빌드 상태](https://docs.ci.corp.adobe.com/view/exl-pr/job/experience-platform.en_pr-exl/badge/icon)](https://docs.ci.corp.adobe.com/view/exl-pr/job/experience-platform.en_pr-exl/lastBuild/) | [![빌드 상태](https://docs.ci.corp.adobe.com/view/exl-pr/job/experience-platform.en_exl/lastBuild/badge/icon)](https://docs.ci.corp.adobe.com/view/exl-pr/job/experience-platform.en_exl/lastBuild/lastBuild) | [미리 보기 URL](https://experienceleague.corp.adobe.com/docs/experience-platform/rtcdp/overview.html?lang=en) | [activate-exl](https://docs.ci.corp.adobe.com/job/experience-platform/build/) | [라이브 URL](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html?lang=en) | [Authoring 안내서](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/home.html?lang=en) |
-
-| 프로덕션 | 단계 |
-|---|---|
-| [![빌드 상태](https://docs.ci.corp.adobe.com/job/experience-platform.en_production/badge/icon)](https://docs.ci.corp.adobe.com/job/experience-platform.en_production/lastBuild) | [![빌드 상태](https://docs.ci.corp.adobe.com/job/experience-platform.en_stage/badge/icon)](https://docs.ci.corp.adobe.com/job/experience-platform.en_stage/lastBuild) |
-| [출력 제품](https://docs.adobe.com/content/help/ko-KR/experience-platform/landing/home.html) | [출력 단계](https://docs-stg.corp.adobe.com/content/help/en/experience-platform/landing/home.html) |
 
 Adobe는 Adobe 커뮤니티와 설명서 팀이 아닌 Adobe 직원들의 내용 기여를 환영합니다.
 
