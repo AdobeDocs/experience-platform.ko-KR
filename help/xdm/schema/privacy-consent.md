@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;consent;Consent;preferences;Preferences;privacyOptOuts;marketingPreferences;optOutType;basisOfProcessing;consent;Consent
-title: 개인 정보 혼합 개요
+title: 동의 및 기본 설정 데이터 유형
 description: 개인 정보/마케팅 기본 설정(동의) 데이터 유형은 CMP(Consent Management Platforms) 및 기타 데이터 작업에서 생성된 고객 권한 및 기본 설정의 수집을 지원하기 위한 것입니다.
 topic: guide
 translation-type: tm+mt
-source-git-commit: ba045a635f840c62980288a1a3ad5015f54121da
+source-git-commit: 1a4dd167ecd4f4f61ffe26af786b355e4561b30d
 workflow-type: tm+mt
-source-wordcount: '2022'
+source-wordcount: '2023'
 ht-degree: 1%
 
 ---
@@ -18,10 +18,6 @@ ht-degree: 1%
 
 이 문서에서는 [!DNL Consents & Preferences] 데이터 유형이 제공하는 필드의 구조와 용도에 대해 설명합니다.
 
->[!IMPORTANT]
->
->데이터 유형은 [!DNL Consents & Preferences] 동의 및 기본 설정 관리 사용 사례를 포함하도록 설계되었습니다. 그 결과, 이 문서에서는 데이터 유형의 필드를 일반 용어로 사용하는 방법에 대해 설명하고 이러한 필드의 사용을 해석하는 방법에 대한 제안만 합니다. 조직에서 이러한 동의 및 환경 설정을 어떻게 해석하고 고객에게 제시하는 방법에 따라 데이터 유형의 구조를 정렬하려면 개인 정보 법률 팀과 상의하십시오.
-
 ## 전제 조건 {#prerequisites}
 
 이 문서는 XDM에 대한 작업 이해와 스키마 사용을 필요로 합니다 [!DNL Experience Platform]. 계속하기 전에 다음 문서를 검토하십시오.
@@ -30,6 +26,10 @@ ht-degree: 1%
 * [스키마 컴포지션의 기본 사항](http://www.adobe.com/go/xdm-schema-best-practices-en)
 
 ## 데이터 유형 구조 {#structure}
+
+>[!IMPORTANT]
+>
+>데이터 유형은 [!DNL Consents & Preferences] 동의 및 기본 설정 관리 사용 사례를 포함하도록 설계되었습니다. 그 결과, 이 문서에서는 데이터 유형의 필드를 일반 용어로 사용하는 방법에 대해 설명하고 이러한 필드의 사용을 해석하는 방법에 대한 제안만 합니다. 조직에서 이러한 동의 및 환경 설정을 어떻게 해석하고 고객에게 제시하는 방법에 따라 데이터 유형의 구조를 정렬하려면 개인 정보 법률 팀과 상의하십시오.
 
 데이터 [!DNL Consents & Preferences] 유형은 **동의** 및 **기본 설정** 정보를 캡처하는 데 사용되는 여러 필드를 제공합니다.
 
