@@ -5,9 +5,9 @@ seo-title: 대상 확장
 description: Braze는 고객과 브랜드 간의 연관성 있고 기억에 오래 남는 경험을 제공하는 포괄적인 고객 참여 플랫폼입니다.
 seo-description: Braze는 고객과 브랜드 간의 연관성 있고 기억에 오래 남는 경험을 제공하는 포괄적인 고객 참여 플랫폼입니다.
 translation-type: tm+mt
-source-git-commit: 9380c9c24267f815b788eb51949da13b8c47558f
+source-git-commit: 6b19cfa3c4a5327b6b7543123f631d0355995f09
 workflow-type: tm+mt
-source-wordcount: '925'
+source-wordcount: '953'
 ht-degree: 1%
 
 ---
@@ -33,6 +33,10 @@ ht-degree: 1%
 
 * ID를 대상에 매핑하는 한 [ID를](../../../identity-service/namespaces.md) [!DNL Braze] 대상에 보낼 수 [!DNL Braze] 있습니다 [`external_id`](https://www.braze.com/docs/api/basics/#external-user-id-explanation).
 * [!DNL Adobe Experience Platform] 세그먼트는 속성 [!DNL Braze] 아래에 `AdobeExperiencePlatformSegments` 내보내집니다.
+
+>[!NOTE]
+>
+>추가적인 사용자 지정 속성을 전송하면 데이터 포인트 소비가 증가할 [!DNL Braze] 수 [!DNL Braze] 있습니다. 추가 사용자 지정 속성을 보내기 전에 계정 [!DNL Braze] 관리자에게 문의하십시오.
 
 ## 사용 사례 {#use-cases}
 
