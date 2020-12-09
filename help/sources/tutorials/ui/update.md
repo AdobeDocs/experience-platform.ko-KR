@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;update accounts;
-description: null
+keywords: Experience Platform;home;popular topics;update accounts
+description: 경우에 따라 기존 소스 계정의 세부 사항을 업데이트해야 할 수 있습니다. 소스 작업 공간에서는 이름, 설명, 자격 증명 등 기존 배치 또는 스트리밍 연결의 세부 사항을 추가, 편집 및 삭제할 수 있습니다.
 solution: Experience Platform
 title: UI에서 계정 세부 사항 업데이트
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 413687a0d9e790ea3f61a858002e9510216d7c34
+source-git-commit: 9b48bc1426e6259ea0b2cf9b420b55b92712f7c2
 workflow-type: tm+mt
-source-wordcount: '407'
+source-wordcount: '442'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 # UI에서 계정 세부 사항 업데이트
 
-경우에 따라 기존 소스 계정의 세부 사항을 업데이트해야 할 수 있습니다. 소스 [!UICONTROL 작업] 공간에서는 계정 이름, 설명 및 인증 자격 증명에 대한 값을 포함하여 계정의 세부 사항을 편집, 추가 및 삭제할 수 있습니다.
+경우에 따라 기존 소스 계정의 세부 사항을 업데이트해야 할 수 있습니다. 소스 [!UICONTROL 작업] 공간에서는 이름, 설명, 자격 증명 등 기존 배치 또는 스트리밍 연결의 세부 사항을 추가, 편집 및 삭제할 수 있습니다.
 
 이 자습서에서는 소스 작업 공간에서 기존 계정의 세부 사항 및 자격 증명을 업데이트하는 [!UICONTROL 단계를] 제공합니다.
 
@@ -24,14 +24,12 @@ ht-degree: 0%
 
 이 자습서에서는 다음 Adobe Experience Platform 구성 요소에 대해 작업해야 합니다.
 
-- [[!DNL Experience Data Model (XDM)] 시스템](../../../xdm/home.md):고객 경험 데이터를 [!DNL Experience Platform] 구성하는 표준화된 프레임워크
-   - [스키마 컴포지션의 기본 사항](../../../xdm/schema/composition.md):스키마 컴포지션의 주요 원칙 및 모범 사례 등 XDM 스키마의 기본 구성 요소에 대해 알아봅니다.
-   - [스키마 편집기 자습서](../../../xdm/tutorials/create-schema-ui.md):스키마 편집기 UI를 사용하여 사용자 정의 스키마를 생성하는 방법을 알아봅니다.
-- [[!DNL Real-time Customer Profile]](../../../profile/home.md):여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
+- [소스](../../home.md):DNL Experience Platform을 사용하면 플랫폼 서비스를 사용하여 들어오는 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 다양한 소스에서 데이터를 수집할 수 있습니다.
+- [샌드박스](../../../sandboxes/home.md):DNL Experience Platform은 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 단일 플랫폼 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
 
 ## 계정 업데이트
 
-[ [Experience Platform UI](https://platform.adobe.com) 로그인]에 로그인한 다음 왼쪽 탐색 **[!UICONTROL 에서 [소스]** ]를 선택하여 [!UICONTROL 소스 작업 영역에] 액세스합니다. 상단 헤더에서 **[!UICONTROL 계정을]** 선택하여 기존 계정을 봅니다.
+Experience Platform [UI에](https://platform.adobe.com) 로그인한 다음 왼쪽 탐색 **[!UICONTROL 에서 소스]** 를 선택하여 [!UICONTROL 소스 작업 영역에] 액세스합니다. 상단 헤더에서 **[!UICONTROL 계정을]** 선택하여 기존 계정을 봅니다.
 
 ![카탈로그](../../images/tutorials/update/catalog.png)
 
