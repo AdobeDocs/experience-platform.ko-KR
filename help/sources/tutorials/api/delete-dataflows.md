@@ -4,11 +4,11 @@ solution: Experience Platform
 title: Flow Service API를 사용하여 데이터 흐름 삭제
 topic: overview
 type: Tutorial
-description: 이 자습서에서는 Flow Service API를 사용하여 데이터 흐름 삭제를 위한 단계를 설명합니다.
+description: 이 자습서에서는 Flow Service API를 사용하여 데이터 흐름 일괄 처리 및 스트리밍 단계를 설명합니다.
 translation-type: tm+mt
-source-git-commit: ae3e64a5f9a82c0efe3cffeb6d4d425ae2e72bda
+source-git-commit: b63b17f2a7271fc673abc8245a4917c0daca4ef3
 workflow-type: tm+mt
-source-wordcount: '449'
+source-wordcount: '467'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,9 @@ ht-degree: 1%
 
 # Flow Service API를 사용하여 데이터 흐름 삭제
 
-이 자습서에서는 을 사용하여 일괄 처리 및 스트리밍 소스로 구성된 데이터 흐름을 삭제하는 단계를 설명합니다 [[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+오류가 있거나 [[!DNL Flow Service] API를 사용하여 사용되지 않는 일괄 처리 및 스트리밍 데이터 흐름을 삭제할 수 있습니다](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+
+이 자습서에서는 일괄 처리 및 스트리밍 소스를 사용한 데이터 흐름 삭제 단계를 설명합니다 [!DNL Flow Service].
 
 ## 시작하기
 
