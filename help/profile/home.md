@@ -4,9 +4,9 @@ title: 실시간 고객 프로필 개요
 topic: guide
 description: 실시간 고객 프로필은 다양한 엔터프라이즈 데이터 자산의 데이터를 수집한 다음 개별 고객 프로필 및 관련 시간 시리즈 이벤트의 형태로 해당 데이터에 대한 액세스를 제공하는 범용 조회 엔티티 스토어입니다. 이 기능을 통해 마케터는 다양한 채널에서 고객과 연관성 있고 조율된 경험을 제공할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 47c65ef5bdd083c2e57254189bb4a1f1d9c23ccc
+source-git-commit: b8d6bd5caf6c6f4d1da218b6ca12cec154d64412
 workflow-type: tm+mt
-source-wordcount: '1820'
+source-wordcount: '1844'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,9 @@ Adobe Experience Platform을 사용하면 고객이 브랜드와 언제 어디�
 
 ### 프로필 데이터 저장소
 
-데이터 수집 [!DNL Real-time Customer Profile] 을 처리하고 ID 매핑을 통해 관련 데이터 [!DNL Identity Service] 를 병합하기 위해 Adobe Experience Platform을 사용하지만 스토어의 자체 데이터를 [!DNL Profile] 유지합니다. 즉, 스토어 [!DNL Profile] 는 [!DNL Catalog] 데이터([!DNL Data Lake]) 및 [!DNL Identity Service] 데이터(ID 그래프)와 별개입니다.
+데이터 수집 [!DNL Real-time Customer Profile] 을 처리하고 ID 매핑을 통해 관련 데이터 [!DNL Identity Service] 를 병합하기 위해 Adobe Experience Platform을 사용하지만 스토어의 자체 데이터를 [!DNL Profile] 유지합니다. 스토어 [!DNL Profile] 는 ID 그래프의 [!DNL Catalog] 데이터 [!DNL Data Lake] 와 [!DNL Identity Service] 별개입니다.
+
+프로필 스토어에서 Microsoft Azure Cosmos DB 인프라를 사용하고 플랫폼 데이터 레이크는 Microsoft Azure Data Lake 저장소를 사용합니다.
 
 ### 프로필 가드레일
 
@@ -34,7 +36,7 @@ Experience Platform은 실시간 고객 프로필에서 지원할 수 없는 [�
 
 [!DNL Real-time Customer Profile] 다양한 엔터프라이즈 시스템의 데이터를 수집한 다음 고객 프로파일 형태로 해당 데이터에 대한 액세스를 관련 시계열 이벤트와 함께 제공합니다. 이 기능을 통해 마케터는 다양한 채널에서 고객과 연관성 있고 조율된 경험을 제공할 수 있습니다. 다음 섹션에서는 플랫폼 내에서 프로파일을 효과적으로 구축하고 유지 관리하기 위해 이해해야 하는 핵심 개념 중 일부를 집중적으로 설명합니다.
 
-### 프로필 조각과 병합된 프로필 비교
+### 프로필 조각과 병합된 프로필 비교 {#profile-fragments-vs-merged-profiles}
 
 각 개별 고객 프로파일은 해당 고객에 대한 단일 뷰를 구성하기 위해 병합된 여러 프로필 조각으로 구성됩니다. 예를 들어 고객이 여러 채널에서 브랜드와 상호 작용하는 경우 조직은 단일 고객과 관련된 여러 프로필 조각을 여러 데이터 세트에 표시할 수 있습니다. 이러한 조각을 Platform(플랫폼)으로 인제스트하면 해당 고객에 대한 단일 프로파일을 만들기 위해 병합됩니다.
 
