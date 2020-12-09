@@ -5,7 +5,7 @@ title: Adobe Experience Platform ID 서비스
 topic: tutorial
 description: ID 그래프는 특정 고객에 대해 서로 다른 ID 간의 관계를 보여주는 지도로, 다양한 채널에서 고객이 브랜드와 상호 작용하는 방식을 시각적으로 보여줍니다.
 translation-type: tm+mt
-source-git-commit: ef1025dfacc91b13c064db99e6304f2c09abb3d9
+source-git-commit: 7c52760bdceb8d45d76cd22d69241f8c23943674
 workflow-type: tm+mt
 source-wordcount: '910'
 ht-degree: 1%
@@ -55,7 +55,7 @@ ID 그래프 뷰어가 나타납니다. 화면의 왼쪽에는 선택한 네임�
 
 >[!IMPORTANT]
 >
->ID 그래프에는 두 개의 연결된 ID뿐만 아니라 유효한 네임스페이스 및 ID 쌍도 생성해야 합니다. 그래프 뷰어에서 표시할 수 있는 최대 ID 수는 400개입니다. 자세한 내용은 아래 [부록](#appendix) 섹션을 참조하십시오.
+>ID 그래프에는 두 개의 연결된 ID뿐만 아니라 유효한 네임스페이스 및 ID 쌍도 생성해야 합니다. 그래프 뷰어에서 표시할 수 있는 최대 ID 수는 150개입니다. 자세한 내용은 아래 [부록](#appendix) 섹션을 참조하십시오.
 
 ![identity-graph](../images/identity-graph-viewer/graph-viewer.png)
 
@@ -101,7 +101,7 @@ ID 그래프 뷰어에 액세스할 때 오류가 발생할 수 있습니다. �
 
 - 선택한 네임스페이스에 ID 값이 있어야 합니다.
 - ID 그래프 뷰어에서는 생성하려면 최소 두 개의 연결된 ID가 필요합니다.
-- ID 그래프 뷰어는 최대 400ID를 초과할 수 없습니다.
+- ID 그래프 뷰어는 최대 150ID를 초과할 수 없습니다.
 - ID 그래프 뷰어는 현재 비프로덕션 샌드박스에서 액세스할 수 없습니다.
 - ID 그래프 뷰어는 현재 일괄적으로 인제스트된 데이터만 지원하며 스트리밍 소스를 사용하여 인제스트된 데이터는 표시하지 않습니다.
 
