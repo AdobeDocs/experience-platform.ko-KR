@@ -4,10 +4,10 @@ title: 실시간 고객 프로필 UI 가이드
 topic: guide
 description: 실시간 고객 프로파일은 온라인, 오프라인, CRM 및 서드파티 데이터를 비롯한 다양한 채널의 데이터를 취합하여 각 개별 고객에 대한 전체적인 관점을 생성합니다. 이 문서는 Adobe Experience Platform 사용자 인터페이스에서 실시간 고객 프로필과 상호 작용하기 위한 가이드 역할을 합니다.
 translation-type: tm+mt
-source-git-commit: 295315ab052ff151bea9037567bf2690d705367b
+source-git-commit: b991a767f34f0e318b9ca5092fd4cf099de11e0a
 workflow-type: tm+mt
-source-wordcount: '1245'
-ht-degree: 0%
+source-wordcount: '1304'
+ht-degree: 1%
 
 ---
 
@@ -26,9 +26,19 @@ ht-degree: 0%
 
 ## 개요
 
-UI [[!DNL Experience Platform] ](http://platform.adobe.com)에서 **** 왼쪽 탐색 **[!UICONTROL 에서 프로필을 선택하여]** [개요]탭을엽니다. 이 탭에는 프로필 작업을 이해하고 시작하는 데 도움이 되는 설명서 및 비디오에 대한 링크가 제공됩니다.
+Experience Platform UI에서 왼쪽 탐색 **[!UICONTROL 에서]** 프로필을 선택하여 **[!UICONTROL 개요]** 탭을 엽니다. 이 탭에는 프로필 작업을 이해하고 시작하는 데 도움이 되는 설명서 및 비디오에 대한 링크가 제공됩니다.
 
 ![](../images/user-guide/profiles-overview.png)
+
+### (알파) 프로필 대시보드
+
+>[!IMPORTANT]
+>
+>대시보드 기능은 현재 알파에 있으며 일부 사용자는 사용할 수 없습니다. 설명서 및 기능은 변경될 수 있습니다.
+
+일부 사용자의 경우 왼쪽 탐색 **[!UICONTROL 에서]** 프로필을 선택하고 **[!UICONTROL 개요]** 탭을 열면 프로필 데이터와 관련된 주요 지표에 대한 개요를 제공하는 대시보드가 제공됩니다.
+
+자세한 내용은 [프로필 대시보드 안내서를 참조하십시오](profile-dashboard.md).
 
 ## 찾아보기
 
