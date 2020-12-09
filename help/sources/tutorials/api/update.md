@@ -4,11 +4,11 @@ solution: Experience Platform
 title: Flow Service API를 사용하여 연결 정보 업데이트
 topic: overview
 type: Tutorial
-description: 이 자습서에서는 Flow Service API를 사용한 연결 정보(이름, 설명 및 자격 증명)를 업데이트하는 단계에 대해 설명합니다.
+description: 경우에 따라 기존 소스 연결의 세부 사항을 업데이트해야 할 수 있습니다. Flow Service API는 이름, 설명 및 자격 증명을 포함하여 기존 배치 또는 스트리밍 연결의 세부 사항을 추가, 편집 및 삭제할 수 있는 기능을 제공합니다.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: d1a9f7d0c83b8bb34e26b6e5a9825488e62b43de
 workflow-type: tm+mt
-source-wordcount: '709'
+source-wordcount: '696'
 ht-degree: 2%
 
 ---
@@ -16,11 +16,9 @@ ht-degree: 2%
 
 # Flow Service API를 사용하여 연결 정보 업데이트
 
-Adobe Experience Platform은 [!DNL Platform] 서비스를 사용하여 들어오는 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 외부 소스에서 데이터를 수집할 수 있도록 허용합니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 등 다양한 소스의 데이터를 인제스트할 수 있습니다.
+경우에 따라 기존 소스 연결의 세부 사항을 업데이트해야 할 수 있습니다. [!DNL Flow Service] 이름, 설명 및 자격 증명을 포함하여 기존 배치 또는 스트리밍 연결의 세부 사항을 추가, 편집 및 삭제할 수 있는 기능을 제공합니다.
 
-[!DNL Flow Service] 는 Adobe Experience Platform 내의 다양한 소스에서 수집된 고객 데이터를 수집하고 중앙에서 관리하는 데 사용됩니다. 이 서비스는 지원되는 모든 소스가 연결되어 있는 사용자 인터페이스와 RESTful API를 제공합니다.
-
-이 자습서에서는 이름, 설명 및 자격 증명을 사용하여 연결 정보를 업데이트하는 단계를 설명합니다 [[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+이 자습서에서는 를 사용하여 기존 연결의 세부 사항 및 자격 증명을 업데이트하는 단계를 다룹니다 [[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## 시작하기
 
