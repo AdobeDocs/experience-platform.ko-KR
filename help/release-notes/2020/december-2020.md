@@ -3,12 +3,12 @@ title: Adobe Experience Platform 릴리스 노트
 description: Experience Platform 릴리스 노트
 doc-type: release notes
 last-update: December 9, 2020
-author: ens60013
+author: ens60013 & ens72471
 translation-type: tm+mt
-source-git-commit: 25c162f50f0a66d77eb638dbf87893af3c543ddc
+source-git-commit: 908b9e6e8b548dea8e39f9f9a5de396d4c9520f4
 workflow-type: tm+mt
-source-wordcount: '214'
-ht-degree: 10%
+source-wordcount: '343'
+ht-degree: 7%
 
 ---
 
@@ -19,7 +19,20 @@ ht-degree: 10%
 
 Adobe Experience Platform의 기존 기능 업데이트:
 
+- [[!DNL Data Science Workspace]](#dsw)
 - [[!DNL Sources]](#sources)
+
+## [!DNL Data Science Workspace] {#dsw}
+
+데이터 과학 작업 공간은 머신 러닝과 인공 지능을 사용하여 데이터를 통해 인사이트를 생성합니다. Adobe Experience Platform에 통합된 데이터 과학 작업 공간은 Adobe 솔루션에서 컨텐츠와 데이터 자산을 사용하여 예측할 수 있도록 도와줍니다.
+
+### 주요 기능
+
+| 기능 | 설명 |
+|--- | ---|
+| Adobe Experience Platform 인텔리전스 패키지 addon | Adobe Experience Platform 인텔리전스 패키지 addon은 다음과 같은 추가 주요 기능을 잠금 해제하는 데이터 과학 작업 공간 업그레이드입니다. <li> UI 기반의 모델 실험 및 평가</li><li> 예정된 트레이닝 및 검토 작업을 통해 모델을 배포 및 운영할 수 있습니다.</li><li> Tensorflow 모델(GPU Compute)의 심층 학습 지원</li><li> 대용량 데이터 세트(10MM + 행)를 트레이닝하고 점수를 매길 수 있는 Spark 기반의 분산 컴퓨팅</li><li>기타</li> |
+
+Adobe Experience Platform 인텔리전스 패키지에 대한 자세한 내용은 [데이터 과학 작업 공간 액세스 및 기능에 대한 설명서를 참조하십시오](../../data-science-workspace/access-features-dsw.md).
 
 ## [!DNL Sources] {#sources}
 
@@ -35,3 +48,5 @@ Adobe Experience Platform은 외부 소스에서 데이터를 인제스트할 �
 | 데이터 흐름 삭제 | 이제 API 및 UI를 사용하여 오류가 있거나 불필요한 데이터 흐름을 [!DNL Flow Service] 삭제할 수 있습니다. 자세한 내용은 API를 사용하여 데이터 흐름 [삭제](../../sources/tutorials/api/delete-dataflows.md) 및 UI를 사용하여 데이터 흐름 [삭제에 대한 자습서를 참조하십시오](../../sources/tutorials/ui/delete.md). |
 
 소스에 대한 자세한 내용은 [소스 개요를 참조하십시오](../../sources/home.md).
+
+
