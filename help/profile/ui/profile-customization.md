@@ -4,7 +4,7 @@ title: 프로필 세부 정보 맞춤화
 description: '이 안내서에서는 Adobe Experience Platform UI 내에 실시간 고객 프로필 데이터가 표시되는 방식을 사용자 지정하기 위한 단계별 지침을 제공합니다. '
 topic: guide
 translation-type: tm+mt
-source-git-commit: 9068d12e60da63a6a2a2ff18c016080ea581104f
+source-git-commit: d05884c87445ec16b0ad44f593cf782b8c80d646
 workflow-type: tm+mt
 source-wordcount: '1167'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 Adobe Experience Platform 유저 인터페이스 내에서 고객 프로파일 형태로 [!DNL Real-time Customer Profile] 데이터를 보고 인터랙션할 수 있습니다. UI에 표시되는 프로필 정보는 여러 프로필 조각에서 병합되어 각 개별 고객의 단일 보기를 형성했습니다. 여기에는 기본 속성, 연결된 ID 및 채널 환경 설정과 같은 세부 사항이 포함됩니다. 프로필에 표시된 기본 필드는 기본 속성을 표시하도록 조직 수준에서 변경할 수도 [!DNL Profile] 있습니다. 이 안내서에서는 플랫폼 UI 내에 데이터가 표시되는 방식을 사용자 지정하기 위한 단계별 지침을 제공합니다. [!DNL Profile]
 
-프로필 UI에 대한 전체 가이드를 보려면 [프로필 사용 안내서를 참조하십시오](user-guide.md).
+프로필 UI에 대한 전체 가이드를 보려면 [프로필 UI 안내서를 참조하십시오](user-guide.md).
 
 ## 카드 순서 변경 및 크기 조정 {#reorder-and-resize-cards}
 
