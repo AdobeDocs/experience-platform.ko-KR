@@ -5,9 +5,9 @@ user-guide-title: Adobe Experience Platform 데이터 과학 작업 공간 도�
 breadcrumb-title: Data Science Workspace 안내서
 user-guide-description: 머신 러닝을 활용하여 Adobe Sensei 및 JupiterLab Notebook에서 모델과 레시피를 개발, 트레이닝 및 평가할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: bececfde1df15fd8648d75b937da5e264d60b9a4
+source-git-commit: 9daddc4537d1600773459cc5b3f19a10cb9c41c0
 workflow-type: tm+mt
-source-wordcount: '231'
+source-wordcount: '237'
 ht-degree: 16%
 
 ---
@@ -16,6 +16,7 @@ ht-degree: 16%
 # 데이터 과학 작업 공간 {#data-science-workspace}
 
 * [데이터 과학 작업 공간 개요](home.md)
+* [데이터 과학 작업 공간 액세스 및 프로비저닝](access-features-dsw.md)
 * [데이터 과학 작업 공간 연습](walkthrough.md)
 * JupiterLab 노트북 {#jupyterlab}
    * [JupiterLab 사용 안내서](jupyterlab/overview.md)
