@@ -5,9 +5,9 @@ user-guide-title: Adobe Experience Platform 릴리스 노트
 breadcrumb-title: Platform 릴리스 노트
 user-guide-description: Adobe Experience Platform의 월별 릴리스 노트입니다.
 translation-type: tm+mt
-source-git-commit: cfa939f759e114be14da89070a491de9d71f8528
+source-git-commit: 3892020104e0c195126356ad01f3883ba001a61c
 workflow-type: tm+mt
-source-wordcount: '38'
+source-wordcount: '39'
 ht-degree: 100%
 
 ---
@@ -15,7 +15,8 @@ ht-degree: 100%
 
 # Adobe Experience Platform 릴리스 노트 {#release-notes}
 
-* [2020년 11월](latest/latest.md)
+* [2020년 12월](latest/latest.md)
+* [2020년 11월](2020/november-2020.md)
 * [2020년 10월](2020/october-2020.md)
 * [2020년 9월](2020/september-2020.md)
 * [2020년 8월](2020/august-2020.md)
