@@ -4,8 +4,9 @@ solution: Experience Platform
 title: Attribution AI 개요
 topic: Attribution AI
 description: Attribution AI는 전환 이벤트로 연결되는 터치포인트에 크레딧을 적용하는 데 사용됩니다. 이를 통해 마케터는 고객 여정 전반에서 각 개별 마케팅 터치포인트의 마케팅 효과를 수량화할 수 있습니다. 터치포인트의 예로는 디스플레이 광고 노출, 이메일 전송, 이메일 열기, 유료 검색 클릭 수가 있습니다.
+landing-page-description: Attribution AI is used to attribute credits to touchpoints leading to conversion events. This can be used by marketers to help quantify the marketing impact of each individual marketing touchpoint across customer journeys.
 translation-type: tm+mt
-source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
+source-git-commit: d4a205b2e5fe4ca1f8d419eec3e7636e2ed0e5ef
 workflow-type: tm+mt
 source-wordcount: '455'
 ht-degree: 29%
