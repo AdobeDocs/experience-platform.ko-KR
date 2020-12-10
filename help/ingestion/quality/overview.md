@@ -5,7 +5,7 @@ title: 데이터 수집 품질
 topic: overview
 description: 다음 문서에서는 Adobe Experience Platform에서 일괄 처리 및 스트리밍 인제스트를 위한 지원되는 검사 및 유효성 검사 동작에 대한 요약을 제공합니다.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: cfdaf72b7f4bf190877006ccd4cc6a7fd014adc2
 workflow-type: tm+mt
 source-wordcount: '304'
 ht-degree: 5%
@@ -56,4 +56,4 @@ Adobe Experience Platform은 일괄 처리 또는 스트리밍 통합(ingestion)
 | 데이터 집합 | 데이터 세트를 지정, 활성화 및 제거하지 않았는지 확인합니다. |
 | Header | 헤더가 지정되고 유효한지 확인합니다. |
 
-데이터를 모니터링하고 검증하는 방법에 대한 자세한 내용은 [!DNL Platform] 모니터링 데이터 흐름 설명서를 참조하십시오 [](./monitor-data-flows.md).
+데이터를 모니터링하고 검증하는 방법에 대한 자세한 내용은 [!DNL Platform] 모니터링 데이터 흐름 설명서를 참조하십시오 [](./monitor-data-ingestion.md).
