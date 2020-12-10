@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: 데이터 흐름(Dataflow)은 소스에서 플랫폼 데이터 집합으로 데이터를 검색하고 인제스트하는 예약된 작업입니다. 이 자습서에서는 클라우드 저장소 계정을 사용하여 새 데이터 흐름을 구성하는 절차를 제공합니다.
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: 7f24413a99b57e28ca2106214b7eedb5b068b045
 workflow-type: tm+mt
-source-wordcount: '1789'
+source-wordcount: '1808'
 ht-degree: 0%
 
 ---
@@ -143,11 +143,11 @@ JSON 파일의 경우 필드를 다른 필드에 직접 매핑하는 것 외에�
 
 ### 일회성 데이터 흐름 설정
 
-1회 질문을 설정하려면 빈도 드롭다운 화살표를 선택하고 **[!UICONTROL 한 번]**&#x200B;선택합니다. 1회 주파수 섭취를 위해 데이터 흐름 세트를 계속 편집할 수 있으므로 시작 시간이 앞으로 남아 있을 수 있습니다. 시작 시간이 경과하면 1회 빈도 값을 더 이상 편집할 수 없습니다.
+1회 질문을 설정하려면 빈도 드롭다운 화살표를 선택하고 **[!UICONTROL 한 번]**&#x200B;선택합니다. 1회 주파수 섭취를 위해 데이터 흐름 세트를 계속 편집할 수 있으므로 시작 시간이 앞으로 남아 있을 수 있습니다. 시작 시간이 경과하면 1회 빈도 값을 더 이상 편집할 수 없습니다. **[!UICONTROL 일회성 데이터]** 데이터 흐름 **[!UICONTROL 을 설정할 때는 간격]** 및 채우기 기능이 표시되지 않습니다.
 
->[!TIP]
+>[!IMPORTANT]
 >
->**[!UICONTROL 일회성]** 섭취 **[!UICONTROL 중에는 간격]** 및 채우기 기능이 표시되지 않습니다.
+>FTP 커넥터를 사용하는 경우 1회 인제용으로 데이터 흐름을 예약하는 것이 [좋습니다](../../../../connectors/cloud-storage/ftp.md).
 
 일정에 적절한 값을 제공한 후 다음을 **[!UICONTROL 선택합니다]**.
 
