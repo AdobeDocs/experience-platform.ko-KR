@@ -9,9 +9,9 @@ doc-type: video
 activity: understand
 thumbnail: 32792.jpg
 translation-type: tm+mt
-source-git-commit: 86d6476877eb7a0413658e476802a1cd8905dcc3
+source-git-commit: 72f60ef80a23f5ca4e70147ee6aa6027028fefd0
 workflow-type: tm+mt
-source-wordcount: '105'
+source-wordcount: '118'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Experience Platform 사용자 인터페이스는 자주 업데이트되며 이 비디오 레코딩 이후 변경되었을 수 있습니다.
+>Experience Platform 사용자 인터페이스는 자주 업데이트되며 이 비디오 레코딩 이후 변경되었을 수 있습니다. 최신 정보는 [Adobe Experience Platform UI 가이드를 참조하십시오](../ui-guide.md).
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/32792?quality=12&learn=on)
