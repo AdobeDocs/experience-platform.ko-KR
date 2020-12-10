@@ -5,7 +5,7 @@ title: 스트리밍 통합 문제 해결
 topic: troubleshooting
 description: 이 문서에서는 Adobe Experience Platform의 스트리밍 통합 관련 FAQ에 대한 답변을 제공합니다.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: cfdaf72b7f4bf190877006ccd4cc6a7fd014adc2
 workflow-type: tm+mt
 source-wordcount: '1008'
 ht-degree: 0%
@@ -37,7 +37,7 @@ Adobe Experience Platform [!DNL Data Ingestion] 는 데이터를 인제스트하
 
 ### 요청 페이로드를 보내기 전에 유효성을 확인할 수 있습니까 [!DNL Platform]?
 
-요청 페이로드는 전송 후에만 평가할 수 [!DNL Platform]있습니다. 동기 유효성 검사를 수행할 때 유효한 페이로드는 잘못된 페이로드를 수행하는 동안 채워진 JSON 개체를 반환합니다. 비동기 유효성 검사 동안 서비스는 잘못된 형식의 데이터를 감지하여 나중에 분석을 위해 검색할 수 있는 [!DNL Data Lake] 위치로 보냅니다. 자세한 내용은 [스트리밍 유효성 검사 개요를](../quality/streaming-validation.md) 참조하십시오.
+요청 페이로드는 전송 후에만 평가할 수 [!DNL Platform]있습니다. 동기 유효성 검사를 수행할 때 유효한 페이로드는 잘못된 페이로드를 수행하는 동안 채워진 JSON 개체를 반환합니다. 비동기 유효성 검사 동안 서비스는 잘못된 형식의 데이터를 감지하여 나중에 분석을 위해 검색할 수 있는 [!DNL Data Lake] 위치로 보냅니다. See the [streaming validation overview](../quality/streaming-validation.md) for more information.
 
 ### 동기적 유효성 검사가 지원되지 않는 가장자리에서 요청되면 어떻게 됩니까?
 
@@ -59,7 +59,7 @@ Adobe Experience Platform [!DNL Data Ingestion] 는 데이터를 인제스트하
 
 전송 대상 [!DNL Platform] (성공 또는 기타)으로 전송된 모든 데이터는 데이터 세트에 지속되기 전에 일괄 파일로 저장됩니다. 배치의 처리 상태가 보낸 데이터 세트 내에 나타납니다.
 
-데이터 세트 작업을 [Experience Platform 사용자 인터페이스를 사용하여 검사하여 데이터를 성공적으로 인제스트했는지 확인할 수 있습니다](https://platform.adobe.com). 왼쪽 탐색 **[!UICONTROL 에서 데이터]** 세트를 클릭하여 데이터 집합 목록을 표시합니다. 표시된 목록에서 스트리밍하고 있는 데이터 세트를 선택하여 데이터 세트 **[!UICONTROL 활동]** 페이지를 열고 선택한 기간 동안 전송된 모든 배치를 표시합니다. 데이터 스트림 모니터링 [!DNL Experience Platform] 에 사용하는 방법에 대한 자세한 내용은 스트리밍 데이터 흐름 [모니터링에 대한 가이드를 참조하십시오](../quality/monitor-data-flows.md).
+데이터 세트 작업을 [Experience Platform 사용자 인터페이스를 사용하여 검사하여 데이터를 성공적으로 인제스트했는지 확인할 수 있습니다](https://platform.adobe.com). 왼쪽 탐색 **[!UICONTROL 에서 데이터]** 세트를 클릭하여 데이터 집합 목록을 표시합니다. 표시된 목록에서 스트리밍하고 있는 데이터 세트를 선택하여 데이터 세트 **[!UICONTROL 활동]** 페이지를 열고 선택한 기간 동안 전송된 모든 배치를 표시합니다. 데이터 스트림 모니터링 [!DNL Experience Platform] 에 사용하는 방법에 대한 자세한 내용은 스트리밍 데이터 흐름 [모니터링에 대한 가이드를 참조하십시오](../quality/monitor-data-ingestion.md).
 
 데이터를 인제스트하지 못하고 데이터를 복구하려는 경우 해당 ID를 로 전송하여 실패한 배치를 검색할 수 [!DNL Platform][!DNL Data Access API]있습니다. 자세한 내용은 실패한 [배치](../quality/retrieve-failed-batches.md) 검색에 대한 가이드를 참조하십시오.
 
