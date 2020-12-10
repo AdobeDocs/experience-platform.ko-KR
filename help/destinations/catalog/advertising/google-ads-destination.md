@@ -5,9 +5,9 @@ seo-title: Google 광고 대상
 description: 이전에 Google AdWords로 알려졌던 Google Ads는 기업에서 텍스트 기반 검색, 그래픽 디스플레이, YouTube 비디오 및 인앱 모바일 디스플레이에서 클릭당 광고를 지불하는 온라인 광고 서비스입니다.
 seo-description: 이전에 Google AdWords로 알려졌던 Google Ads는 기업에서 텍스트 기반 검색, 그래픽 디스플레이, YouTube 비디오 및 인앱 모바일 디스플레이에서 클릭당 광고를 지불하는 온라인 광고 서비스입니다.
 translation-type: tm+mt
-source-git-commit: c24676970629f5a39297001357f8af40895533d9
+source-git-commit: 7129a375b1bf4623f78989ed75fcd2bb5dad4a02
 workflow-type: tm+mt
-source-wordcount: '646'
+source-wordcount: '663'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,9 @@ ht-degree: 0%
 
 ### 기존 [!DNL Google Ads] 계정
 
-[!DNL Google] 타사 공급업체와의 새로운 [!DNL Google Ads] 통합을 일시 중지했습니다. 다음 섹션에서 허용 목록 단계를 수행하고 실시간 CDP에서 대상을 만들려면 [!DNL Google Ads] [!DNL Google Ads] 와 기존 통합이 있어야 합니다.
+>[!IMPORTANT]
+>
+> [!DNL Google] 에 타사 공급업체와의 새로운 [!DNL Google Ads] 쿠키 통합이 더 이상 사용되지 않습니다. 다음 섹션의 허용 목록 단계를 수행하려면 기존 통합 기능이 있어야 합니다 [!DNL Google Ads]. 따라서 사용을 위한 권장 접근 방식 [!DNL Google Ads] 은 [!DNL Google Customer Match] 통합을 설정하는 것입니다. 통합 만들기에 대한 자세한 내용은 [!DNL Google Customer Match] 연결 만들기에 대한 자습서를 [[!DNL Google Customer Match]](./google-customer-match.md) 참조하십시오.
 
 ### 허용 목록
 
