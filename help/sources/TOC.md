@@ -5,9 +5,9 @@ user-guide-title: Adobe Experience Platform 소스 커넥터 도움말
 breadcrumb-title: Source Connectors 안내서
 user-guide-description: 다양한 소스 또는 구조에서 데이터를 수집하고 레이블을 지정하며 기존에 수집한 데이터를 향상시킬 수 있습니다.
 translation-type: tm+mt
-source-git-commit: e31e09449b79b8a1600cfb2b162f51c26d482847
+source-git-commit: 5e5ac80e0c79b3cc0354b469edc036523e29b45d
 workflow-type: tm+mt
-source-wordcount: '663'
+source-wordcount: '665'
 ht-degree: 4%
 
 ---
@@ -36,8 +36,9 @@ ht-degree: 4%
       - [Azure Blob 커넥터](connectors/cloud-storage/blob.md)
       - [Azure 이벤트 허브 커넥터](connectors/cloud-storage/eventhub.md)
       - [Azure 파일 저장소 커넥터](connectors/cloud-storage/azure-file-storage.md)
-      - [FTP 및 SFTP 커넥터](connectors/cloud-storage/ftp-sftp.md)
+      - [FTP 커넥터](connectors/cloud-storage/ftp.md)
       - [Google 클라우드 스토리지 커넥터](connectors/cloud-storage/google-cloud-storage.md)
+      - [SFTP 커넥터](connectors/cloud-storage/sftp.md)
       - [Amazon S3 및 Azure Blob 커넥터](connectors/cloud-storage/blob-s3.md)
    - CRM {#crm}
       - [Microsoft Dynamics 커넥터](connectors/crm/ms-dynamics.md)
@@ -82,6 +83,7 @@ ht-degree: 4%
          - [Azure Data Lake Storage Gen2 커넥터](tutorials/api/create/cloud-storage/adls-gen2.md)
          - [Azure 이벤트 허브 커넥터](tutorials/api/create/cloud-storage/eventhub.md)
          - [Azure 파일 저장소 커넥터](tutorials/api/create/cloud-storage/azure-file-storage.md)
+         - [FTP 커넥터](tutorials/api/create/cloud-storage/ftp.md)
          - [Google 클라우드 스토리지 커넥터](tutorials/api/create/cloud-storage/google.md)
          - [SFTP 커넥터](tutorials/api/create/cloud-storage/sftp.md)
       - CRM {#crm}
@@ -160,8 +162,9 @@ ht-degree: 4%
          - [Azure Blob 커넥터](tutorials/ui/create/cloud-storage/blob.md)
          - [Azure 이벤트 허브 커넥터](tutorials/ui/create/cloud-storage/eventhub.md)
          - [Azure 파일 저장소 커넥터](tutorials/ui/create/cloud-storage/azure-file-storage.md)
-         - [FTP 및 SFTP 커넥터](tutorials/ui/create/cloud-storage/ftp-sftp.md)
+         - [FTP 커넥터](tutorials/ui/create/cloud-storage/ftp.md)
          - [Google 클라우드 스토리지 커넥터](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
+         - [SFTP 커넥터](tutorials/ui/create/cloud-storage/sftp.md)
          - [Amazon S3 및 Blob 커넥터](tutorials/ui/create/cloud-storage/blob-s3.md)
       - CRM {#crm}
          - [Microsoft Dynamics 커넥터](tutorials/ui/create/crm/dynamics.md)
