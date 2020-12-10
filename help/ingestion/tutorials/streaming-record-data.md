@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: 이 자습서는 Adobe Experience Platform 데이터 통합 서비스 API의 일부인 스트리밍 통합 API를 사용하는 데 도움이 됩니다.
 translation-type: tm+mt
-source-git-commit: e94272bf9a18595a4efd0742103569a26e4be415
+source-git-commit: cfdaf72b7f4bf190877006ccd4cc6a7fd014adc2
 workflow-type: tm+mt
 source-wordcount: '1142'
 ht-degree: 2%
@@ -453,7 +453,7 @@ curl -X GET 'https://platform.adobe.io/data/core/ups/access/entities?schema.name
 
 ## 다음 단계
 
-이제 이 문서를 읽고 스트리밍 연결을 사용하여 레코드 데이터를 인제스트하는 방법을 [!DNL Platform] 알 수 있습니다. 다른 값으로 더 많은 호출을 만들고 업데이트된 값을 검색할 수 있습니다. 또한 [!DNL Platform] UI를 통해 인제스트된 데이터 모니터링을 시작할 수 있습니다. 자세한 내용은 [모니터링 데이터 수집](../quality/monitor-data-flows.md) 안내서를 참조하십시오.
+이제 이 문서를 읽고 스트리밍 연결을 사용하여 레코드 데이터를 인제스트하는 방법을 [!DNL Platform] 알 수 있습니다. 다른 값으로 더 많은 호출을 만들고 업데이트된 값을 검색할 수 있습니다. 또한 [!DNL Platform] UI를 통해 인제스트된 데이터 모니터링을 시작할 수 있습니다. 자세한 내용은 [모니터링 데이터 수집](../quality/monitor-data-ingestion.md) 안내서를 참조하십시오.
 
 일반적인 스트리밍 통합 방법에 대한 자세한 내용은 [스트리밍 통합 개요를 참조하십시오](../streaming-ingestion/overview.md).
 
