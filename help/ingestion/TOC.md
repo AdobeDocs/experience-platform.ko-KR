@@ -5,7 +5,7 @@ user-guide-title: Adobe Experience Platform 데이터 수집 도움말
 breadcrumb-title: Data Ingestion 안내서
 user-guide-description: 일괄 처리 또는 스트리밍 통합 기능을 통해 데이터를 플랫폼에 가져올 수 있습니다.
 translation-type: tm+mt
-source-git-commit: da0c65b5afc19e2497816c4b84270f5f5c4617f2
+source-git-commit: cfdaf72b7f4bf190877006ccd4cc6a7fd014adc2
 workflow-type: tm+mt
 source-wordcount: '124'
 ht-degree: 21%
@@ -36,7 +36,7 @@ ht-degree: 21%
    - [여러 메시지 스트리밍](tutorials/streaming-multiple-messages.md)
 - 데이터 수집 품질 및 모니터링{#quality}
    - [개요](quality/overview.md)
-   - [데이터 흐름 모니터링](quality/monitor-data-flows.md)
+   - [데이터 수집 모니터링](quality/monitor-data-ingestion.md)
    - [오류 진단 검색](quality/error-diagnostics.md)
    - [실패한 배치 검색](quality/retrieve-failed-batches.md)
    - [스트리밍 통합 유효성 검사](quality/streaming-validation.md)
