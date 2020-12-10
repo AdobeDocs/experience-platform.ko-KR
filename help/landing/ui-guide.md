@@ -5,9 +5,9 @@ title: Adobe Experience Platform UI 안내서
 topic: ui guide
 description: 'Adobe Experience Platform '
 translation-type: tm+mt
-source-git-commit: 3fc24b996d2c8bdf062e70a1c5e8d8206641cd06
+source-git-commit: 852792c1288cf7b4815fb0afb742046d7a595da2
 workflow-type: tm+mt
-source-wordcount: '1726'
+source-wordcount: '1737'
 ht-degree: 1%
 
 ---
@@ -17,15 +17,15 @@ ht-degree: 1%
 
 이 안내서는 다양한 구성 요소가 사용되는 요소를 설명하고 추가 설명서에 대한 링크를 제공하는 Adobe Experience Platform 사용자 인터페이스(UI)를 사용하는 방법에 대한 소개로 사용됩니다.
 
-Adobe Experience Platform에 대한 자세한 내용은 [Experience Platform 개요를 참조하십시오](./home.md).
+Adobe Experience Platform에 대한 자세한 내용은 [Experience Platform 개요를 참조하십시오](home.md).
 
 ## 홈 화면
 
-Adobe Experience Platform에 로그인한 후에는 지표 대시보드, 최근 데이터 및 권장 학습 섹션으로 구성된 [!UICONTROL 홈] 페이지에 도달합니다.
+Adobe Experience Platform에 로그인한 후에는 [!UICONTROL 홈] 페이지 [에 있는데, 이 페이지는](#metrics)지표 대시보드 [,](#recent-data)최근 데이터 [, 권장 학습 섹션](#recommended-learning) 등으로 구성됩니다.
 
 ![](images/user-guide/homepage.png)
 
-### 지표 대시보드
+### 지표
 
 지표 대시보드는 조직 내의 데이터 세트, 프로필, 세그먼트 및 대상에 대한 정보를 제공하는 카드를 제공합니다.
 
@@ -63,13 +63,13 @@ Adobe Experience Platform에 로그인한 후에는 지표 대시보드, 최근 
 
 플랫폼 UI의 위쪽 탐색 모음에는 현재 로그인되어 있는 IMS가 표시되며 몇 가지 중요한 컨트롤이 제공됩니다.
 
-내비게이션 바의 왼쪽에 Adobe Experience Platform 로고가 있습니다. 이 옵션을 선택하면 플랫폼 UI 홈 화면으로 돌아갑니다.
+내비게이션 바의 왼쪽에 Adobe Experience Platform 로고가 있습니다. 언제든지 이 옵션을 선택하면 플랫폼 UI 홈 화면으로 돌아갑니다.
 
 ![](./images/user-guide/homepage-top-nav-bar.png)
 
 ### IMS 조직 전환기
 
-내비게이션 막대 오른쪽에 있는 첫 번째 항목은 **IMS 조직 전환기입니다**.
+상단 내비게이션 막대 오른쪽에 있는 첫 번째 항목은 **IMS 조직 전환기입니다**.
 
 ![](./images/user-guide/homepage-ims-org.png)
 
@@ -79,7 +79,7 @@ Adobe Experience Platform에 로그인한 후에는 지표 대시보드, 최근 
 
 ### 애플리케이션 전환
 
-오른쪽에 있는 다음 항목은 **응용 프로그램 전환기**&#x200B;아이콘으로 표시되는 ![응용 프로그램 전환기입니다](./images/user-guide/app-switcher-icon.png) . 이 아이콘을 선택하면 Experience Platform, 자산, 교환 및 실행 간을 전환할 수 있습니다.
+위쪽 탐색의 오른쪽에 있는 다음 항목은 **응용 프로그램 전환기**&#x200B;아이콘으로 표시되는 ![응용 프로그램 전환기입니다](./images/user-guide/app-switcher-icon.png) . 이 아이콘을 선택하면 IMS 조직이 액세스할 수 있는 Experience Platform 애플리케이션(예: Adobe, Analytics, Assets, Launch) 간을 전환할 수 있습니다.
 
 ### 도움말
 
@@ -89,7 +89,7 @@ Adobe Experience Platform에 로그인한 후에는 지표 대시보드, 최근 
 
 ### 알림 및 공지
 
-도움말 및 지원 메뉴는 **알림 섹션이며**&#x200B;벨/알림 및 공지 ![](images/user-guide/notification-icon.png) 아이콘으로 표시됩니다. [ **[!UICONTROL 알림]** ] 탭에는 제품 및 기타 관련 업데이트에 대한 중요한 정보가 표시되지만 [공지 **]** 탭에는 서비스 유지 관리에 대한 알림이 표시됩니다.
+벨/ **알림 및 공지**&#x200B;아이콘으로 표시되는 ![알림 섹션에서](images/user-guide/notification-icon.png) 수행합니다. [ **[!UICONTROL 알림]** ] 탭에는 제품 및 기타 관련 업데이트에 대한 중요한 정보가 표시되지만 [공지 **]** 탭에는 서비스 유지 관리에 대한 정보가 표시됩니다.
 
 ### 사용자 프로필
 
