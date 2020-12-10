@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: 이 자습서에서는 Flow Service API를 사용하여 Experience Platform을 SFTP(Secure File Transfer Protocol) 서버에 연결하는 단계를 안내합니다.
 translation-type: tm+mt
-source-git-commit: 71653681a0f4b31319bd352202bf55fb3947a455
+source-git-commit: 7b638f0516804e6a2dbae3982d6284a958230f42
 workflow-type: tm+mt
-source-wordcount: '793'
+source-wordcount: '749'
 ht-degree: 2%
 
 ---
@@ -20,18 +20,14 @@ ht-degree: 2%
 >
 >SFTP 커넥터가 베타에 있습니다. 기능 및 설명서는 변경될 수 있습니다. 베타 [레이블이 지정된 커넥터 사용에 대한 자세한 내용은 소스 개요를](../../../../home.md#terms-and-conditions) 참조하십시오.
 
-[!DNL Flow Service] 는 Adobe Experience Platform 내의 다양한 소스에서 수집된 고객 데이터를 수집하고 중앙에서 관리하는 데 사용됩니다. 이 서비스는 지원되는 모든 소스가 연결되어 있는 사용자 인터페이스와 RESTful API를 제공합니다.
-
-이 자습서에서는 [!DNL Flow Service] API를 사용하여 SFTP(Secure File Transfer Protocol) 서버 [!DNL Experience Platform] 에 연결하는 단계를 안내합니다.
-
-사용자 인터페이스를 에서 사용하려는 경우 [!DNL Experience Platform]UI 자습서 [](../../../ui/create/cloud-storage/ftp-sftp.md) 는 유사한 작업을 수행하기 위한 단계별 지침을 제공합니다.
+이 자습서에서는 [!DNL Flow Service] API를 사용하여 Experience Platform을 SFTP(Secure File Transfer Protocol) 서버에 연결하는 단계를 안내합니다.
 
 ## 시작하기
 
 이 가이드는 Adobe Experience Platform의 다음 구성 요소에 대한 작업 이해를 필요로 합니다.
 
-* [소스](../../../../home.md): [!DNL Experience Platform] 서비스를 사용하여 들어오는 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 다양한 소스에서 데이터를 수집할 수 [!DNL Platform] 있습니다.
-* [샌드박스](../../../../../sandboxes/home.md): [!DNL Experience Platform] 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되도록 단일 [!DNL Platform] 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
+* [소스](../../../../home.md):Experience Platform을 사용하면 플랫폼 서비스를 사용하여 들어오는 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 다양한 소스에서 데이터를 수집할 수 있습니다.
+* [샌드박스](../../../../../sandboxes/home.md):Experience Platform은 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되도록 단일 플랫폼 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
 
 다음 섹션에서는 [!DNL Flow Service] API를 사용하여 SFTP 서버에 성공적으로 연결하기 위해 알아야 하는 추가 정보를 제공합니다.
 
