@@ -5,7 +5,7 @@ title: Adobe Experience Platform UI 안내서
 topic: ui guide
 description: 'Adobe Experience Platform '
 translation-type: tm+mt
-source-git-commit: 761a212abc407fac5bc59c6f5a57c6c17c932230
+source-git-commit: 3fc24b996d2c8bdf062e70a1c5e8d8206641cd06
 workflow-type: tm+mt
 source-wordcount: '1726'
 ht-degree: 1%
@@ -149,7 +149,7 @@ ID **[!UICONTROL 섹션을]** 사용하면 ID 네임스페이스를 만들고 �
 
 [ **[!UICONTROL 쿼리]** ] 섹션에서는 쿼리를 만들고 관리하고, Adobe Experience Platform 쿼리 서비스에서 만든 SQL 쿼리를 기록하고, PostgreSQL 자격 증명을 볼 수 있습니다. 쿼리에 대한 자세한 내용은 [쿼리 서비스 사용 안내서를 참조하십시오](../query-service/ui/overview.md).
 
-모니터링 **[!UICONTROL 섹션을]** 사용하면 일괄 처리 및 스트리밍 통합 과정을 모니터링할 수 있습니다. 모니터링에 대한 자세한 내용은 [모니터링 데이터 수집 사용자 안내서를 참조하십시오](../ingestion/quality/monitor-data-flows.md).
+모니터링 **[!UICONTROL 섹션을]** 사용하면 일괄 처리 및 스트리밍 통합 과정을 모니터링할 수 있습니다. 모니터링에 대한 자세한 내용은 [모니터링 데이터 수집 사용자 안내서를 참조하십시오](../ingestion/quality/monitor-data-ingestion.md).
 
 ### [!UICONTROL 의사 결정]
 
