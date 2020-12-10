@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: October, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 5ff73aa1745e78f0026ada2c66908888be5f4498
+source-git-commit: 5e5ac80e0c79b3cc0354b469edc036523e29b45d
 workflow-type: tm+mt
 source-wordcount: '1009'
 ht-degree: 4%
@@ -71,7 +71,7 @@ Adobe Experience Platform은 외부 소스에서 데이터를 인제스트할 �
 
 | 기능 | 설명 |
 | ------- | ----------- |
-| SFTP에 대한 SSH 인증 지원 | SFTP 계정을 RSA/DSA Open SSH 키 [!DNL Platform] 를 사용하여 연결할 수 있습니다. See the [SFTP overview](../../sources/connectors/cloud-storage/ftp-sftp.md) for more information. |
+| SFTP에 대한 SSH 인증 지원 | SFTP 계정을 RSA/DSA Open SSH 키 [!DNL Platform] 를 사용하여 연결할 수 있습니다. See the [SFTP overview](../../sources/connectors/cloud-storage/sftp.md) for more information. |
 | 향상된 UX | 데이터 수집 프로세스 [!DNL Profile] 중에 데이터 세트를 활성화할 수 있습니다. 자세한 내용은 [클라우드 스토리지 데이터 흐름](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) 자습서를 참조하십시오. |
 
 소스에 대한 자세한 내용은 [소스 개요를 참조하십시오](../../sources/home.md).
