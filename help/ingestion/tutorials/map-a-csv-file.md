@@ -6,9 +6,9 @@ topic: tutorial
 type: Tutorial
 description: 이 자습서에서는 Adobe Experience Platform 사용자 인터페이스를 사용하여 XDM 스키마에 CSV 파일을 매핑하는 방법을 설명합니다.
 translation-type: tm+mt
-source-git-commit: d69d0dd8c5a3d3a5e92cc88e390c079ed46aba32
+source-git-commit: c19360450d7b1f11063683b796774a04f3dbe16c
 workflow-type: tm+mt
-source-wordcount: '860'
+source-wordcount: '861'
 ht-degree: 1%
 
 ---
@@ -113,9 +113,9 @@ CSV 데이터를 새 데이터 세트에 인제스트하려면 **[!UICONTROL 새
 
 ![](../images/tutorials/map-a-csv-file/new-calculated-field.png)
 
-## 데이터 흐름 모니터링
+## 데이터 수집 모니터링
 
-CSV 파일을 매핑하고 만들면 CSV 파일을 통해 수집되는 데이터를 모니터링할 수 있습니다. 데이터 흐름 모니터링에 대한 자세한 내용은 스트리밍 데이터 흐름 [모니터링에 대한 자습서를 참조하십시오](../../ingestion/quality/monitor-data-flows.md).
+CSV 파일을 매핑하고 만들면 CSV 파일을 통해 수집되는 데이터를 모니터링할 수 있습니다. 데이터 수집 모니터링에 대한 자세한 내용은 데이터 수집 [모니터링에 대한 자습서를 참조하십시오](../../ingestion/quality/monitor-data-ingestion.md).
 
 ## 다음 단계
 
