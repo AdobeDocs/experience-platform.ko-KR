@@ -5,9 +5,9 @@ title: Adobe Experience Platform 소스 커넥터 개요
 topic: overview
 description: Adobe Experience Platform은 플랫폼 서비스를 사용하여 들어오는 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 외부 소스에서 데이터를 수집할 수 있도록 허용합니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 등 다양한 소스의 데이터를 인제스트할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: d26eaf699a67a1bc7111f5f97da277368fcc4629
+source-git-commit: 5e5ac80e0c79b3cc0354b469edc036523e29b45d
 workflow-type: tm+mt
-source-wordcount: '886'
+source-wordcount: '887'
 ht-degree: 0%
 
 ---
@@ -54,8 +54,9 @@ Adobe Experience Platform은 [!DNL Platform] 서비스를 사용하여 들어오
 - [[!DNL Apache HDFS] 커넥터](connectors/cloud-storage/hdfs.md)
 - [[!DNL Azure Event Hubs] 커넥터](connectors/cloud-storage/eventhub.md)
 - [[!DNL Azure File Storage] 커넥터](connectors/cloud-storage/azure-file-storage.md)
-- [[!DNL FTP and SFTP] 커넥터](connectors/cloud-storage/ftp-sftp.md)
+- [[!DNL FTP] 커넥터](connectors/cloud-storage/ftp.md)
 - [[!DNL Google Cloud Storage] 커넥터](connectors/cloud-storage/google-cloud-storage.md)
+- [[!DNL SFTP] 커넥터](connectors/cloud-storage/sftp.md)
 
 ### 고객 관계 관리(CRM)
 
