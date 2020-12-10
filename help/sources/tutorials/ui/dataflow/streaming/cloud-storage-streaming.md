@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: 데이터 흐름(Dataflow)은 소스에서 플랫폼 데이터 집합으로 데이터를 검색하고 인제스트하는 예약된 작업입니다. 이 자습서에서는 클라우드 스토리지 기반 커넥터를 사용하여 새 데이터 흐름을 구성하는 절차를 제공합니다.
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: cfdaf72b7f4bf190877006ccd4cc6a7fd014adc2
 workflow-type: tm+mt
 source-wordcount: '695'
 ht-degree: 0%
@@ -78,7 +78,7 @@ ht-degree: 0%
 
 ## 데이터 흐름 모니터링 및 삭제
 
-클라우드 스토리지 데이터 프롤이 생성되면 이를 통해 인제스트되는 데이터를 모니터링할 수 있습니다. 데이터 흐름 모니터링 및 삭제에 대한 자세한 내용은 데이터 흐름 [모니터링에 대한 자습서를 참조하십시오](../../../../../ingestion/quality/monitor-data-flows.md).
+클라우드 스토리지 데이터 프롤이 생성되면 이를 통해 인제스트되는 데이터를 모니터링할 수 있습니다. 데이터 흐름 모니터링 및 삭제에 대한 자세한 내용은 데이터 흐름 [모니터링에 대한 자습서를 참조하십시오](../../../../../ingestion/quality/monitor-data-ingestion.md).
 
 ## 다음 단계
 
