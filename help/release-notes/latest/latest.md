@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: December 9, 2020
 author: ens60013 & ens72471
 translation-type: tm+mt
-source-git-commit: a411ac92d946080abd7b22b9d57c7154d263a30a
+source-git-commit: ae353e6dda3f92647c32ee8e731be5785d24e5cb
 workflow-type: tm+mt
-source-wordcount: '343'
-ht-degree: 7%
+source-wordcount: '426'
+ht-degree: 6%
 
 ---
 
@@ -17,19 +17,35 @@ ht-degree: 7%
 
 **릴리스 날짜:2020년 12월 9일**
 
+Adobe Experience Platform의 새로운 기능:
+
+- [[!DNL Dataflows]](#dataflows)
+
 Adobe Experience Platform의 기존 기능 업데이트:
 
 - [[!DNL Data Science Workspace]](#dsw)
 - [[!DNL Sources]](#sources)
 
+## [!DNL Dataflows] {#dataflows}
+
+데이터 프롤링은 플랫폼 간에 데이터를 이동하는 데이터 작업을 나타냅니다. 이러한 데이터 프롤링은 다양한 서비스에서 구성되므로 소스 커넥터에서 대상 데이터 세트로 데이터를 이동하고 ID 및 프로필 서비스로 이동할 수 있습니다.
+
+**주요 기능**
+
+| 기능 | 설명 |
+| ------- | ----------- |
+| 데이터 흐름 투명도 | 소스 및 대상의 데이터 흐름을 모니터링할 수 있습니다. 자세한 내용은 소스 모니터링에 대한 [자습서](../../dataflows/ui/monitor-sources.md) 또는 대상 [에 대한 자습서를 참조하십시오](../../dataflows/ui/monitor-destinations.md). |
+
+데이터 흐름에 대한 자세한 내용은 데이터 흐름 [개요를 참조하십시오](../../dataflows/home.md).
+
 ## [!DNL Data Science Workspace] {#dsw}
 
 데이터 과학 작업 공간은 머신 러닝과 인공 지능을 사용하여 데이터를 통해 인사이트를 생성합니다. Adobe Experience Platform에 통합된 데이터 과학 작업 공간은 Adobe 솔루션에서 컨텐츠와 데이터 자산을 사용하여 예측할 수 있도록 도와줍니다.
 
-### 주요 기능
+**주요 기능**
 
 | 기능 | 설명 |
-|--- | ---|
+| --- | ---|
 | Adobe Experience Platform 인텔리전스 패키지 addon | Adobe Experience Platform 인텔리전스 패키지 addon은 다음과 같은 추가 주요 기능을 잠금 해제하는 데이터 과학 작업 공간 업그레이드입니다. <li> UI 기반의 모델 실험 및 평가</li><li> 예정된 트레이닝 및 검토 작업을 통해 모델을 배포 및 운영할 수 있습니다.</li><li> Tensorflow 모델(GPU Compute)의 심층 학습 지원</li><li> 대용량 데이터 세트(10MM + 행)를 트레이닝하고 점수를 매길 수 있는 Spark 기반의 분산 컴퓨팅</li><li>기타</li> |
 
 Adobe Experience Platform 인텔리전스 패키지에 대한 자세한 내용은 [데이터 과학 작업 공간 액세스 및 기능에 대한 설명서를 참조하십시오](../../data-science-workspace/access-features-dsw.md).
