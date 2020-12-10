@@ -7,10 +7,10 @@ landing-page-description: Find answers to frequently asked questions and a guide
 topic: getting started
 type: Documentation
 translation-type: tm+mt
-source-git-commit: 4a65d5e31eda3973d3e8e0d8e066692c667934e1
+source-git-commit: 72f60ef80a23f5ca4e70147ee6aa6027028fefd0
 workflow-type: tm+mt
-source-wordcount: '1940'
-ht-degree: 4%
+source-wordcount: '1954'
+ht-degree: 3%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 4%
 
 ## API란 [!DNL Experience Platform] 무엇입니까? {#what-are-experience-platform-apis}
 
-[!DNL Experience Platform] 은 리소스에 액세스하기 위해 HTTP 요청을 사용하는 여러 개의 RESTful API를 [!DNL Platform] 제공합니다. 이러한 서비스 API는 각각 여러 끝점을 노출하며, 목록(GET), 조회(GET), 편집(PUT 및/또는 PATCH), 삭제(DELETE) 등의 작업을 수행할 수 있도록 해줍니다. 각 서비스에 사용할 수 있는 특정 엔드포인트 및 작업에 대한 자세한 내용은 Adobe I/O의 [API 참조 설명서를](https://www.adobe.io/apis/experienceplatform/home/api-reference.html) 참조하십시오.
+[!DNL Experience Platform] 은 리소스에 액세스하기 위해 HTTP 요청을 사용하는 여러 개의 RESTful API를 [!DNL Platform] 제공합니다. 이러한 서비스 API는 각각 여러 끝점을 노출하며, 목록(GET), 조회(GET), 편집(PUT 및/또는 PATCH), 삭제(DELETE) 등의 작업을 수행할 수 있도록 해줍니다. 각 서비스에 사용할 수 있는 특정 엔드포인트 및 작업에 대한 자세한 내용은 Adobe I/O의 [API 참조 설명서를](http://www.adobe.com/go/platform-api-reference-en) 참조하십시오.
 
 ## API 요청의 포맷은 어떻게 됩니까? {#how-do-i-format-an-api-request}
 
@@ -87,19 +87,19 @@ curl -X GET \
 }
 ```
 
-플랫폼 API의 필수 헤더 및 요청 본문을 포함하여 특정 끝점에 대한 자세한 내용은 [API 참조 설명서를 참조하십시오](https://www.adobe.io/apis/experienceplatform/home/api-reference.html).
+플랫폼 API의 필수 헤더 및 요청 본문을 포함하여 특정 끝점에 대한 자세한 내용은 [API 참조 설명서를 참조하십시오](http://www.adobe.com/go/platform-api-reference-en).
 
 ## IMS 조직이란 무엇입니까? {#what-is-my-ims-organization}
 
-IMS 조직은 고객의 Adobe입니다. 모든 라이센스 Adobe 솔루션은 이 고객 조직과 통합됩니다. IMS 조직에서 권한을 부여받으면 개발자에게 액세스 권한 [!DNL Experience Platform]을 할당할 수 있습니다. IMS 조직 ID(`x-gw-ims-org-id`)는 API 호출이 실행되어야 하는 조직을 나타내며, 따라서 모든 API 요청의 헤더로 필요합니다. 이 ID는 [Adobe 개발자 콘솔을 통해 찾을 수 있습니다](https://www.adobe.com/go/devs_console_ui).통합 **** 탭에서 **특정 통합에 대한** 개요 **섹션으로 이동하여 클라이언트 자격 증명 아래에서 ID를**&#x200B;찾습니다. 인증 방법에 대한 단계별 연습은 [!DNL Platform]인증 자습서 [](../tutorials/authentication.md)를 참조하십시오.
+IMS 조직은 고객의 Adobe입니다. 모든 라이센스 Adobe 솔루션은 이 고객 조직과 통합됩니다. IMS 조직에서 권한을 부여받으면 개발자에게 액세스 권한 [!DNL Experience Platform]을 할당할 수 있습니다. IMS 조직 ID(`x-gw-ims-org-id`)는 API 호출이 실행되어야 하는 조직을 나타내며, 따라서 모든 API 요청의 헤더로 필요합니다. 이 ID는 [Adobe 개발자 콘솔을 통해 찾을 수 있습니다](https://www.adobe.com/go/devs_console_ui).통합 **** 탭에서 **특정 통합에 대한** 개요 **섹션으로 이동하여 클라이언트 자격 증명 아래에서 ID를**&#x200B;찾습니다. 인증 방법에 대한 단계별 연습은 [!DNL Platform]인증 자습서 [](http://www.adobe.com/go/platform-api-authentication-en)를 참조하십시오.
 
 ## API 키는 어디에서 찾을 수 있습니까? {#where-can-i-find-my-api-key}
 
-API 키는 모든 API 요청의 헤더로 필요합니다. Adobe 개발자 콘솔을 통해 찾을 수 [있습니다](https://www.adobe.com/go/devs_console_ui). 콘솔 내의 **통합** 탭에서 특정 통합에 대한 **개요** 섹션으로 이동하여 클라이언트 자격 증명 **에 있는 키를**&#x200B;찾습니다. 인증 방법에 대한 단계별 연습은 [!DNL Platform]인증 자습서 [](../tutorials/authentication.md)를 참조하십시오.
+API 키는 모든 API 요청의 헤더로 필요합니다. Adobe 개발자 콘솔을 통해 찾을 수 [있습니다](https://www.adobe.com/go/devs_console_ui). 콘솔 내의 **통합** 탭에서 특정 통합에 대한 **개요** 섹션으로 이동하여 클라이언트 자격 증명 **에 있는 키를**&#x200B;찾습니다. 인증 방법에 대한 단계별 연습은 [!DNL Platform]인증 자습서 [](http://www.adobe.com/go/platform-api-authentication-en)를 참조하십시오.
 
 ## 액세스 토큰을 어떻게 얻을 수 있습니까? {#how-do-i-get-an-access-token}
 
-액세스 토큰은 모든 API 호출의 인증 헤더에 필요합니다. IMS 조직에 대한 통합에 액세스할 수 있는 경우 `curl` 명령을 사용하여 생성할 수 있습니다. 액세스 토큰은 24시간 동안만 유효하며 그 이후부터는 API를 계속 사용하려면 새 토큰을 생성해야 합니다. 액세스 토큰 생성에 대한 자세한 내용은 [인증 자습서를 참조하십시오](../tutorials/authentication.md).
+액세스 토큰은 모든 API 호출의 인증 헤더에 필요합니다. IMS 조직에 대한 통합에 액세스할 수 있는 경우 `curl` 명령을 사용하여 생성할 수 있습니다. 액세스 토큰은 24시간 동안만 유효하며 그 이후부터는 API를 계속 사용하려면 새 토큰을 생성해야 합니다. 액세스 토큰 생성에 대한 자세한 내용은 [인증 자습서를 참조하십시오](http://www.adobe.com/go/platform-api-authentication-en).
 
 ## 쿼리 매개 변수는 어떻게 사용합니까? {#how-do-i-user-query-parameters}
 
@@ -153,7 +153,7 @@ UI 또는 API 사용 여부에 따라 다음 시스템 요구 사항이 적용�
 
 ## 요청 헤더 오류 {#request-header-errors}
 
-모든 API 호출에는 특정 요청 헤더가 [!DNL Platform] 필요합니다. 개별 서비스에 필요한 헤더를 확인하려면 [API 참조 설명서를 참조하십시오](https://www.adobe.io/apis/experienceplatform/home/api-reference.html). 필요한 인증 헤더의 값을 찾으려면 [인증 자습서를 참조하십시오](../tutorials/authentication.md). API 호출 시 이러한 헤더 중 하나가 누락되거나 잘못된 경우 다음 오류가 발생할 수 있습니다.
+모든 API 호출에는 특정 요청 헤더가 [!DNL Platform] 필요합니다. 개별 서비스에 필요한 헤더를 확인하려면 [API 참조 설명서를 참조하십시오](http://www.adobe.com/go/platform-api-reference-en). 필요한 인증 헤더의 값을 찾으려면 [인증 자습서를 참조하십시오](http://www.adobe.com/go/platform-api-authentication-en). API 호출 시 이러한 헤더 중 하나가 누락되거나 잘못된 경우 다음 오류가 발생할 수 있습니다.
 
 ### OAuth 토큰이 없습니다. {#oauth-token-is-missing}
 
@@ -175,7 +175,7 @@ UI 또는 API 사용 여부에 따라 다음 시스템 요구 사항이 적용�
 }
 ```
 
-헤더에 제공된 액세스 토큰이 유효하지 않을 때 이 오류 메시지가 `Authorization` 표시됩니다. 토큰이 올바르게 입력되었는지 확인하거나 Adobe I/O 콘솔에서 [새 토큰을](../tutorials/authentication.md) 생성합니다.
+헤더에 제공된 액세스 토큰이 유효하지 않을 때 이 오류 메시지가 `Authorization` 표시됩니다. 토큰이 올바르게 입력되었는지 확인하거나 Adobe I/O 콘솔에서 [새 토큰을](http://www.adobe.com/go/platform-api-authentication-en) 생성합니다.
 
 ### API 키가 필요합니다.
 
