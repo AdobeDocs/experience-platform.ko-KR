@@ -1,0 +1,97 @@
+---
+keywords: Experience Platform;home;popular topics;ui;UI;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema editor;Schema Editor;schema;Schema;schemas;Schemas;create;relationship;Relationship;reference;Reference;
+solution: Experience Platform
+title: UI에서 XDM 리소스 살펴보기
+description: 이 자습서에서는 Experience Platform UI에서 기존 스키마, 클래스, 혼합 및 데이터 유형을 탐색하는 단계를 설명합니다.
+topic: tutorial
+type: Tutorial
+translation-type: tm+mt
+source-git-commit: 49d37cdf14bd03b62fe64116842bacd0f806e5ce
+workflow-type: tm+mt
+source-wordcount: '748'
+ht-degree: 0%
+
+---
+
+
+# UI에서 XDM 리소스 살펴보기
+
+Adobe Experience Platform에서는 Adobe에서 제공하는 표준 리소스와 조직에서 정의한 사용자 지정 리소스를 [!DNL Schema Library]포함하여 모든 XDM(Experience Data Model) 리소스가 라이브러리에 저장됩니다. Experience Platform UI에서는 의 기존 스키마, 클래스, 혼합 또는 데이터 유형의 구조와 필드를 볼 수 [!DNL Schema Library]있습니다. 이 기능은 UI가 이러한 XDM 리소스에서 제공하는 각 필드의 예상 데이터 유형 및 사용 사례에 대한 정보를 제공하므로 데이터 수집에 대한 계획 및 준비를 할 때 특히 유용합니다.
+
+이 자습서에서는 Experience Platform UI에서 기존 스키마, 클래스, 혼합 및 데이터 유형을 탐색하는 단계를 설명합니다.
+
+## XDM 리소스 찾기 {#lookup}
+
+플랫폼 UI의 왼쪽 탐색 **[!UICONTROL 에서]** 스키마를 선택합니다. [ [!UICONTROL 스키마] ] 작업 영역에는 **[!UICONTROL [찾아보기]** ] **[!UICONTROL 탭과 특별히]**&#x200B;클래스 **[!UICONTROL , 믹싱]** dm, 및Data 유형을 탐구하는 추가 전용 탭과 함께 조직의 모든 기존 XXIA 리소스를 탐색하기 위한 추가 **** 검색 탭도 있습니다.
+
+![](../images/tutorials/explore/tabs.png)
+
+[ [!UICONTROL 찾아보기] ] 탭에서 필터 아이콘(![필터 아이콘 이미지](../images/tutorials/explore/icon.png))을 사용하여 왼쪽 레일에 컨트롤을 표시하여 나열된 결과를 좁힐 수 있습니다.
+
+예를 들어 Adobe에서 제공하는 표준 데이터 유형만 표시하도록 목록을 필터링하려면 **[!UICONTROL 유형]** 및 **** 소유자 **[!UICONTROL 섹션]** 아래 **[!UICONTROL 에서 각각 데이터]** 유형및 Adobe을선택합니다.
+
+프로필 **[!UICONTROL 에]** 포함됨 토글을 사용하면 결과를 필터링하여 실시간 고객 프로필에서 사용할 수 있도록 활성화된 스키마에서 사용된 리소스만 [표시할 수 있습니다](../../profile/home.md).
+
+![](../images/tutorials/explore/filter.png)
+
+검색 막대를 사용하여 검색 쿼리와 이름이 일치하는 리소스로 결과를 좁힐 수도 있습니다.
+
+![](../images/tutorials/explore/search.png)
+
+탐색할 리소스를 찾은 경우 목록에서 해당 이름을 선택하여 캔버스에서 해당 구조를 봅니다.
+
+## 캔버스에서 XDM 리소스 살펴보기 {#explore}
+
+리소스를 선택하면 해당 구조가 캔버스에서 열립니다.
+
+![](../images/tutorials/explore/canvas.png)
+
+하위 속성을 포함하는 모든 객체 유형 필드는 처음 캔버스에 표시될 때 기본적으로 축소됩니다. 필드의 하위 속성을 표시하려면 해당 이름 옆에 있는 아이콘을 선택합니다.
+
+![](../images/tutorials/explore/field-expand.png)
+
+### 시스템 생성 필드 {#system-fields}
+
+일부 스키마 필드에는 `_repo` 및 같은 밑줄이 추가됩니다 `_id`. 데이터가 인제스트될 때 시스템에서 자동으로 생성하고 할당할 필드의 자리 표시자를 나타냅니다.
+
+따라서, 이러한 필드의 대부분은 Platform(플랫폼)으로 인제스트할 때 데이터 구조에서 제외되어야 하며, 기본 예외는 `_{TENANT_ID}` 필드입니다. 이러한 필드는 사용자 조직에서 만든 모든 XDM 필드에 대해 아래에 이름을 지정해야 합니다.
+
+### 데이터 유형 {#data-types}
+
+캔버스에 표시된 각 필드에 대해 해당 데이터 유형이 이름 옆에 표시되어 필드가 수집해야 하는 데이터 유형을 한눈에 나타냅니다.
+
+대괄호(`[]`)가 추가되는 모든 데이터 유형은 해당 특정 데이터 유형의 배열을 나타냅니다. 예를 들어 **[!UICONTROL String]\[]** 의 데이터 유형은 필드에 문자열 값의 배열을 예상함을 나타냅니다. 결제 항목의 데이터 **[!UICONTROL 유형]\[]** [!UICONTROL 결제 항목] 데이터 유형을 준수하는 개체의 배열을나타냅니다.
+
+배열 필드가 객체 유형을 기반으로 하는 경우 캔버스에서 해당 아이콘을 선택하여 각 배열 항목에 대해 필요한 속성을 표시할 수 있습니다.
+
+![](../images/tutorials/explore/array-type.png)
+
+### [!UICONTROL 필드 속성] {#field-properties}
+
+캔버스에서 필드 이름을 선택하면 오른쪽 레일이 업데이트되어 필드 속성 아래에 해당 필드에 대한 세부 정보를 **[!UICONTROL 표시합니다]**. 여기에는 필드의 의도된 사용 사례 설명, 기본값, 패턴, 형식, 필드 필수 여부 등이 포함될 수 있습니다.
+
+![](../images/tutorials/explore/field-properties.png)
+
+검사하려는 필드가 열거형 필드이면 오른쪽 레일에 필드가 받을 허용 가능한 값도 표시됩니다.
+
+![](../images/tutorials/explore/enum-field.png)
+
+### ID 필드 {#identity}
+
+ID 필드가 포함된 스키마를 검사할 때 이러한 필드는 지문 아이콘(![지문 아이콘 이미지](../images/tutorials/explore/identity-symbol.png))과 함께 캔버스에서 강조 표시됩니다. ID 필드의 이름을 선택하는 경우 ID 네임스페이스 [](../../identity-service/namespaces.md) 및 해당 필드가 스키마의 기본 ID인지 여부와 같은 추가 정보를 볼 수 있습니다.
+
+![](../images/tutorials/explore/identity-field.png)
+
+### 관계 필드 {#relationship}
+
+관계 필드도 캔버스에서 고유하게 강조 표시되어 필드가 참조하는 대상 스키마의 이름을 표시합니다. 관계 필드의 이름을 선택하는 경우 대상 스키마의 기본 ID의 ID 네임스페이스를 볼 수 있습니다.
+
+![](../images/tutorials/explore/relationship-field.png)
+
+>[!NOTE]
+>
+>XDM 스키마에서 관계 [사용에 대한 자세한](./create-schema-ui.md) 내용은 UI에서 관계 만들기에 대한 자습서를 참조하십시오.
+
+## 다음 단계
+
+이 문서에서는 Experience Platform UI에서 기존 XDM 리소스를 탐색하는 방법을 다룹니다. 스키마 작업 공간 및 다른 기능에 대한 [!UICONTROL 자세한] 내용은 [!DNL Schema Editor]스키마 만들기 자습서를 참조하십시오 [](./create-schema-ui.md).
