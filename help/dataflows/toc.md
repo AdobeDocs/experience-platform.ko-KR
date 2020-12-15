@@ -1,13 +1,13 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: 대상 안내서
-user-guide-description: 대상에 대한 설명을 여기에 삽입합니다.
+user-guide-title: 데이터 흐름 가이드
+user-guide-description: 데이터 프롤링은 플랫폼 간에 데이터를 이동하는 데이터 작업을 나타냅니다.
 translation-type: tm+mt
-source-git-commit: cfdaf72b7f4bf190877006ccd4cc6a7fd014adc2
+source-git-commit: 12a6682b6e28e656899aee5c38d3bb4a84bcdd2f
 workflow-type: tm+mt
-source-wordcount: '24'
-ht-degree: 8%
+source-wordcount: '31'
+ht-degree: 0%
 
 ---
 
