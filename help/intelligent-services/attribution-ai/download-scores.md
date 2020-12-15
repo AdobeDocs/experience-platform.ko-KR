@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;attribution ai;access scores;popular topics;download scores;attribution ai scores;export;Export
-solution: Experience Platform
+solution: Experience Platform, Intelligent Services
 title: Attribution AI에서 점수 액세스
 topic: Accessing scores
-description: 이 문서는 Attribution AI에 대한 스코어 다운로드에 대한 안내서의 역할을 합니다.
+description: 이 문서는 Attribution AI의 스코어 다운로드 안내서 역할을 합니다.
 translation-type: tm+mt
-source-git-commit: 172710c62b6f60de74e05364edb1191fbba0ff64
+source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
 workflow-type: tm+mt
 source-wordcount: '1040'
 ht-degree: 2%
@@ -15,27 +15,27 @@ ht-degree: 2%
 
 # Attribution AI에서 스코어 다운로드
 
-이 문서는 Attribution AI에 대한 스코어 다운로드에 대한 안내서의 역할을 합니다.
+이 문서는 Attribution AI의 스코어 다운로드 안내서 역할을 합니다.
 
 ## 시작하기
 
-Attribution AI을 사용하면 점수가 쪽모이 세공 파일 형식으로 다운로드됩니다. 이 자습서에서는 시작하기 안내서에서 다운로드 Attribution AI 점수 섹션을 [읽고 완료해야](./getting-started.md) 합니다.
+Attribution AI을 사용하면 점수가 쪽모이 세공 마루 파일 형식으로 다운로드됩니다. 이 자습서에서는 시작하기 안내서에서 다운로드 Attribution AI 스코어 섹션을 [읽고 완료해야](./getting-started.md) 합니다.
 
 또한 Attribution AI에 대한 점수에 액세스하려면 성공적인 실행 상태의 서비스 인스턴스를 사용할 수 있어야 합니다. 새 서비스 인스턴스를 만들려면 [Attribution AI 사용 안내서를 참조하십시오](./user-guide.md). 최근에 서비스 인스턴스를 만들었는데 여전히 트레이닝과 점수 지정 중이라면 24시간 후에 실행을 완료하십시오.
 
 ## Find your dataset ID {#dataset-id}
 
-Attribution AI 인사이트의 서비스 인스턴스 내에서 오른쪽 상단 탐색에서 *추가 작업* 드롭다운을 클릭한 다음 **[!UICONTROL 액세스 점수를 선택합니다]**.
+Attribution AI 인사이트를 위한 서비스 인스턴스 내에서 오른쪽 위 탐색 *에서 추가 작업* 드롭다운 메뉴를 클릭한 다음 **[!UICONTROL 액세스 점수를 선택합니다]**.
 
 ![추가 작업](./images/download-scores/more-actions.png)
 
-다운로드 점수 설명서 및 현재 인스턴스에 대한 데이터 세트 ID에 대한 링크가 포함된 새 대화 상자가 나타납니다. 데이터 세트 ID를 클립보드에 복사하고 다음 단계로 진행합니다.
+다운로드 점수 설명서 및 현재 인스턴스의 데이터 세트 ID에 대한 링크가 포함된 새 대화 상자가 나타납니다. 데이터 세트 ID를 클립보드에 복사하고 다음 단계로 진행합니다.
 
 ![데이터 집합 ID](../customer-ai/images/download-scores/access-scores.png)
 
 ## 배치 ID 검색 {#retrieve-your-batch-id}
 
-이전 단계의 데이터 세트 ID를 사용하여 일괄 처리 ID를 검색하려면 카탈로그 API를 호출해야 합니다. 조직에 속하는 배치 목록 대신 최근 성공적인 배치를 반환하기 위해 이 API 호출에 추가 쿼리 매개 변수가 사용됩니다. 추가 배치를 반환하려면 `limit` 쿼리 매개 변수의 숫자를 반환하려는 금액으로 늘리십시오. 사용 가능한 쿼리 매개 변수 유형에 대한 자세한 내용은 쿼리 매개 변수를 사용하여 카탈로그 데이터 [필터링 가이드를 참조하십시오](../../catalog/api/filter-data.md).
+이전 단계에서 데이터 세트 ID를 사용하여 일괄 처리 ID를 검색하려면 카탈로그 API를 호출해야 합니다. 조직에 속한 배치 목록 대신 최근 성공적인 배치를 반환하기 위해 이 API 호출에 추가 쿼리 매개 변수가 사용됩니다. 추가 배치를 반환하려면 `limit` 쿼리 매개 변수의 숫자를 반환하려는 금액으로 늘리십시오. 사용 가능한 쿼리 매개 변수 유형에 대한 자세한 내용은 쿼리 매개 변수를 사용하여 카탈로그 데이터 [필터링 안내서를 참조하십시오](../../catalog/api/filter-data.md).
 
 **API 형식**
 
@@ -59,11 +59,11 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?&dataSet=
 
 **응답**
 
-성공적인 응답은 배치 ID 개체를 포함하는 페이로드를 반환합니다. 이 예에서 반환되는 개체의 키 값은 배치 ID입니다 `01E5QSWCAASFQ054FNBKYV6TIQ`. 다음 API 호출에 사용할 배치 ID를 복사합니다.
+성공적인 응답은 배치 ID 객체를 포함하는 페이로드를 반환합니다. 이 예에서 반환되는 객체에 대한 키 값은 일괄 처리 ID입니다 `01E5QSWCAASFQ054FNBKYV6TIQ`. 다음 API 호출에 사용할 배치 ID를 복사합니다.
 
 >[!NOTE]
 >
-> 다음 응답에는 가독성을 위해 `tags` 개체가 변형되어 있었습니다.
+> 다음 응답에 가독성을 위해 `tags` 개체가 수정되었습니다.
 
 ```json
 {
@@ -124,7 +124,7 @@ GET batches/{BATCH_ID}/files
 
 | 매개 변수 | 설명 |
 | --------- | ----------- |
-| `{BATCH_ID}` | 이전 단계에서 검색한 배치 ID는 배치 ID를 [검색합니다](#retrieve-your-batch-id). |
+| `{BATCH_ID}` | 이전 단계에서 검색한 배치 ID는 [배치 ID를 검색합니다](#retrieve-your-batch-id). |
 
 **요청**
 
@@ -140,7 +140,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/01E5QSWCAA
 
 **응답**
 
-성공적인 응답은 `_links` 개체를 포함하는 페이로드를 반환합니다. 개체 내 `_links` 는 새로운 API `href` 호출이 해당 값으로 설정되어 있습니다. 다음 단계로 진행하려면 이 값을 복사합니다.
+성공적인 응답은 객체가 포함된 페이로드를 `_links` 반환합니다. 객체 내 `_links` 는 새로운 API `href` 호출이 해당 값으로 되어 있습니다. 다음 단계로 진행하려면 이 값을 복사합니다.
 
 ```json
 {
@@ -168,7 +168,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/01E5QSWCAA
 
 ## 파일 검색 {#retrieving-your-files}
 
-이전 단계에서 `href` 얻은 값을 API 호출로 사용하여 파일 디렉토리를 검색할 새 GET 요청을 만듭니다.
+이전 단계에서 `href` 받은 값을 API 호출로 사용하여 파일 디렉토리를 검색할 새 GET 요청을 만듭니다.
 
 **API 형식**
 
@@ -178,7 +178,7 @@ GET files/{DATASETFILE_ID}
 
 | 매개 변수 | 설명 |
 | --------- | ----------- |
-| `{DATASETFILE_ID}` | dataSetFile ID가 `href` 이전 단계의 [값으로](#retrieve-the-next-api-call-with-your-batch-id)반환됩니다. 객체 유형 아래의 `data` 배열에서 액세스할 수도 있습니다 `dataSetFileId`. |
+| `{DATASETFILE_ID}` | dataSetFile ID는 `href` 이전 단계 [의](#retrieve-the-next-api-call-with-your-batch-id)값으로 반환됩니다. 객체 유형 아래의 `data` 배열에서 액세스할 수도 있습니다 `dataSetFileId`. |
 
 **요청**
 
@@ -192,7 +192,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/files/01E5QSWCAASF
 
 **응답**
 
-응답에는 단일 항목이 있거나 해당 디렉토리에 속하는 파일 목록이 있는 데이터 배열이 포함됩니다. 아래 예제는 파일 목록을 포함하며 가독성을 위해 압축되었습니다. 이 시나리오에서 파일에 액세스하려면 각 파일의 URL을 따라야 합니다.
+응답에는 단일 항목이 있거나 해당 디렉토리에 속하는 파일 목록이 있는 데이터 배열이 포함됩니다. 아래 예제는 파일 목록을 포함하며 가독성을 위해 압축되었습니다. 이 시나리오에서는 파일에 액세스하려면 각 파일의 URL을 따라야 합니다.
 
 ```json
 {
@@ -216,18 +216,18 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/files/01E5QSWCAASF
 
 | 매개 변수 | 설명 |
 | --------- | ----------- |
-| `_links.self.href` | 디렉토리에서 파일을 다운로드하는 데 사용되는 GET 요청 URL입니다. |
+| `_links.self.href` | 디렉토리에 파일을 다운로드하는 데 사용되는 GET 요청 URL입니다. |
 
 
-배열에 있는 모든 파일 객체 `href` 값을 `data` 복사한 다음 다음 다음 단계로 진행합니다.
+배열에 `href` 있는 모든 파일 객체의 값을 `data` 복사한 다음 다음 다음 단계로 진행합니다.
 
 ## 파일 데이터 다운로드
 
-파일 데이터를 다운로드하려면 파일 `"href"` 검색 [](#retrieving-your-files)이전 단계에서 복사한 값에 대해 GET 요청을 하십시오.
+파일 데이터를 다운로드하려면 이전 단계에서 복사한 `"href"` 값에 대해 GET을 요청하여 파일을 [검색합니다](#retrieving-your-files).
 
 >[!NOTE]
 >
->이 요청을 명령줄에서 직접 수행하는 경우 요청 헤더 뒤에 출력을 추가하라는 메시지가 표시될 수 있습니다. 다음 요청 예는 를 사용합니다 `--output {FILENAME.FILETYPE}`.
+>이 요청을 명령줄에서 직접 수행하는 경우 요청 헤더 뒤에 출력을 추가하라는 메시지가 표시될 수 있습니다. 다음 요청 예제에서는 를 사용합니다 `--output {FILENAME.FILETYPE}`.
 
 **API 형식**
 
@@ -253,29 +253,29 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/01E5QSWC
 
 >[!TIP]
 >
->GET 요청을 하기 전에 파일을 저장할 디렉터리 또는 폴더에 있는지 확인합니다.
+>GET 요청을 하기 전에 파일을 저장할 디렉토리 또는 폴더에 있는지 확인합니다.
 
 **응답**
 
-그러면 현재 디렉토리에서 요청한 파일이 다운로드됩니다. 이 예에서 파일 이름은 &quot;file.partiented&quot;입니다.
+그러면 요청한 파일이 현재 디렉토리에 다운로드됩니다. 이 예제에서 파일 이름은 &quot;file.portailed&quot;입니다.
 
 ![터미널](./images/download-scores/terminal-output.png)
 
-다운로드된 점들은 쪽모이 세공 마룻바닥으로 되어 있으며, 점수를 보려면 [!DNL Spark]셸 또는 쪽모이 세공 마룻바닥으로 되어 있어야 합니다. Raw 스코어를 보려면 [쪽모이 세공된 도구를 사용할 수 있습니다](https://github.com/apache/parquet-mr/tree/master/parquet-tools). 쪽모이 세공 툴로 데이터를 분석할 수 있습니다 [!DNL Spark].
+다운로드한 점들은 쪽모이 세공 마룻바닥으로 되어 있으며, 점수를 보려면 [!DNL Spark]쉘 또는 쪽모이 세공 마루 판독기가 필요합니다. Raw 점수를 보려면 [쪽모이 세공된 도구를 사용할 수 있습니다](https://github.com/apache/parquet-mr/tree/master/parquet-tools). 쪽모이 세공된 도구는 데이터를 분석할 수 있습니다 [!DNL Spark].
 
 ## 다음 단계
 
-이 문서에서는 Attribution AI 점수를 다운로드하는 데 필요한 단계를 간략하게 설명합니다. 점수 출력에 대한 자세한 내용은 속성 [AI 입력 및 출력](./input-output.md) 설명서를 참조하십시오.
+이 문서에서는 Attribution AI 점수를 다운로드하는 데 필요한 단계를 간략하게 설명합니다. 점수 출력에 대한 자세한 내용은 [특성 AI 입력 및 출력](./input-output.md) 설명서를 참조하십시오.
 
 ## Snowflake을 사용하여 점수 액세스
 
 >[!IMPORTANT]
 >
->Snowflake을 사용한 점수 액세스에 대한 자세한 내용은 attributionai-support@adobe.com에 문의하십시오.
+>Snowflake을 사용하여 스코어에 액세스하는 방법에 대한 자세한 내용은 attributionai-support@adobe.com으로 문의하십시오.
 
-Snowflake을 통해 집계된 Attribution AI 점수에 액세스할 수 있습니다. 현재 Snowflake에 대한 자격 증명을 설정하고 Reader 계정에 수신하려면 attributionai-support@adobe.com에서 Adobe 지원을 이메일로 보내야 합니다.
+Snowflake을 통해 집계된 Attribution AI 점수를 이용할 수 있습니다. 현재 Snowflake에 대한 자격 증명을 설정하고 Reader 계정에 수신하려면 attributionai-support@adobe.com에서 Adobe 지원을 이메일로 보내야 합니다.
 
-Adobe 지원이 요청을 처리하면 독자 계정의 Snowflake 및 아래 해당 자격 증명에 대한 URL을 제공합니다.
+Adobe 지원 기능이 요청을 처리하면 Snowflake에 대한 리더 계정의 URL과 아래 해당 자격 증명을 제공할 수 있습니다.
 
 - Snowflake URL
 - 사용자 이름
@@ -289,11 +289,11 @@ Adobe 지원이 요청을 처리하면 독자 계정의 Snowflake 및 아래 해
 
 ### Snowflake에서 스키마 찾기
 
-제공된 자격 증명을 사용하여 Snowflake에 로그인합니다. 왼쪽 **위 주 탐색 영역에서 워크시트** 탭을 클릭한 다음 왼쪽 패널에서 데이터베이스 디렉토리로 이동합니다.
+제공된 자격 증명을 사용하여 Snowflake에 로그인합니다. 왼쪽 **위** 주 탐색 메뉴에서 워크시트 탭을 클릭한 다음 왼쪽 패널에서 데이터베이스 디렉터리로 이동합니다.
 
 ![워크시트 및 탐색](./images/download-scores/edited_snowflake_1.png)
 
-그런 다음 **화면** 오른쪽 상단 모서리에서 스키마 선택을 클릭합니다. 표시되는 팝업에서 올바른 데이터베이스를 선택했는지 확인합니다. 그런 다음 *스키마* 드롭다운을 클릭하고 나열된 스키마 중 하나를 선택합니다. 선택한 스키마 아래에 나열된 점수 테이블에서 직접 쿼리할 수 있습니다.
+그런 다음 **화면** 오른쪽 상단 모서리에서 스키마 선택을 클릭합니다. 팝업 창에서 올바른 데이터베이스를 선택했는지 확인합니다. 그런 다음 *스키마* 드롭다운을 클릭하고 나열된 스키마 중 하나를 선택합니다. 선택한 스키마 아래에 나열된 점수 테이블에서 직접 쿼리할 수 있습니다.
 
 ![스키마 찾기](./images/download-scores/edited_snowflake_2.png)
 
@@ -305,4 +305,4 @@ Snowflake 자격 증명을 사용하여 PowerBI Desktop 및 Snowflake 데이터�
 
 ![POWERBI 예](./images/download-scores/powerbi-snowflake.png)
 
-연결이 설정된 후 Snowflake 데이터베이스를 선택한 다음 해당 스키마를 선택합니다. 이제 모든 테이블을 로드할 수 있습니다.
+연결이 설정되면 Snowflake 데이터베이스를 선택한 다음 적절한 스키마를 선택합니다. 이제 모든 테이블을 로드할 수 있습니다.
