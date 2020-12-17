@@ -5,15 +5,15 @@ user-guide-title: Adobe Experience Platform 쿼리 서비스 도움말
 breadcrumb-title: Query Service 안내서
 user-guide-description: 표준 SQL을 사용하여 플랫폼 데이터 레이크에서 데이터를 쿼리합니다.
 translation-type: tm+mt
-source-git-commit: 4e358fda1c8f7aebe57a009a146b8b73cf88e169
+source-git-commit: e38190aabfa5d36de85e03eb5fb4e76283fb7934
 workflow-type: tm+mt
-source-wordcount: '147'
-ht-degree: 19%
+source-wordcount: '144'
+ht-degree: 20%
 
 ---
 
 
-# Adobe Experience Platform Query Service {#query}
+# Adobe Experience Platform 쿼리 서비스 {#query}
 
 - [쿼리 서비스 개요](home.md)
 - [빠른 시작 가이드](quickstart.md)
@@ -28,9 +28,8 @@ ht-degree: 19%
    - [UI 개요](ui/overview.md)
    - [쿼리 편집기 사용 안내서](ui/user-guide.md)
 - 쿼리 만들기 {#creating-queries}
-   - [Adobe 정의 함수](creating-queries/using-adobe-defined-functions.md)
    - [쿼리 만들기 개요](creating-queries/creating-queries.md)
-   - [데이터 세트와 테이블 및 스키마](creating-queries/datasets-and-tables.md)
+   - [데이터 세트와 테이블 및 스키마 비교](creating-queries/datasets-and-tables.md)
    - [쿼리 실행에 대한 일반 지침](creating-queries/writing-queries.md)
    - [ExperienceEvent 쿼리](creating-queries/experience-event-queries.md)
    - [데이터 집합 참여](creating-queries/joining-datasets.md)
@@ -47,10 +46,10 @@ ht-degree: 19%
    - [샘플 쿼리 개요](sample-queries/overview.md)
    - [Adobe Analytics](sample-queries/adobe-analytics.md)
    - [Adobe Target](sample-queries/adobe-target.md)
-- 클라이언트를 쿼리 서비스에 연결 {#clients}
+- 클라이언트를 쿼리 서비스 {#clients}에 연결
    - [클라이언트 연결 개요](clients/overview.md)
    - [아쿠아 데이터 스튜디오](clients/aqua-data-studio.md)
-   - [보기](clients/looker.md)
+   - [자세히 보기](clients/looker.md)
    - [포스티코(Mac)](clients/postico.md)
    - [Power BI(PC)](clients/power-bi.md)
    - [PSQL](clients/psql.md)
