@@ -5,9 +5,9 @@ user-guide-title: Adobe Experience Platform 소스 커넥터 도움말
 breadcrumb-title: Source Connectors 안내서
 user-guide-description: 다양한 소스 또는 구조에서 데이터를 수집하고 레이블을 지정하며 기존에 수집한 데이터를 향상시킬 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 5e5ac80e0c79b3cc0354b469edc036523e29b45d
+source-git-commit: c9552b4d3bbb34c81996344f2e8c7cc385c525b6
 workflow-type: tm+mt
-source-wordcount: '665'
+source-wordcount: '663'
 ht-degree: 4%
 
 ---
@@ -19,11 +19,11 @@ ht-degree: 4%
 - 사용 가능한 소스 커넥터 {#connectors}
    - Adobe 응용 프로그램 {#adobe-applications}
       - [Analytics 분류 데이터 커넥터](connectors/adobe-applications/classifications.md)
-      - [Analytics 데이터 커넥터](connectors/adobe-applications/analytics.md)
+      - [분석 데이터 커넥터](connectors/adobe-applications/analytics.md)
       - [Audience Manager 커넥터](connectors/adobe-applications/audience-manager.md)
       - [고객 속성 커넥터](connectors/adobe-applications/customer-attributes.md)
-      - Adobe 응용 프로그램 필드 매핑 {#mapping}
-         - [Analytics 매핑 필드](connectors/adobe-applications/mapping/analytics.md)
+      - Adobe 응용 프로그램 필드 매핑 중 {#mapping}
+         - [분석 매핑 필드](connectors/adobe-applications/mapping/analytics.md)
          - [Audience Manager 매핑 필드](connectors/adobe-applications/mapping/audience-manager.md)
          - [대상 매핑 필드](connectors/adobe-applications/mapping/target.md)
    - 광고 {#advertising}
@@ -43,15 +43,15 @@ ht-degree: 4%
    - CRM {#crm}
       - [Microsoft Dynamics 커넥터](connectors/crm/ms-dynamics.md)
       - [Salesforce 커넥터](connectors/crm/salesforce.md)
-   - 고객 성공 사례 {#customer-success}
-      - [Salesforce Service Cloud 커넥터](connectors/customer-success/salesforce-service-cloud.md)
+   - 고객 성공 {#customer-success}
+      - [Salesforce 서비스 클라우드 커넥터](connectors/customer-success/salesforce-service-cloud.md)
       - [ServiceNow 커넥터](connectors/customer-success/servicenow.md)
    - 데이터베이스 {#databases}
       - [Amazon Redshift 커넥터](connectors/databases/redshift.md)
       - [Azure HDInsights 커넥터의 Apache Hive](connectors/databases/hive.md)
       - [Azure HDInsights 커넥터의 Apache Spark](connectors/databases/spark.md)
       - [Azure Data Explorer 커넥터](connectors/databases/data-explorer.md)
-      - [azure synapse 분석 커넥터](connectors/databases/synapse-analytics.md)
+      - [azure synapse Analytics 커넥터](connectors/databases/synapse-analytics.md)
       - [Azure 테이블 저장소 커넥터](connectors/databases/ats.md)
       - [Couchbase 커넥터](connectors/databases/couchbase.md)
       - [Google BigQuery 커넥터](connectors/databases/bigquery.md)
@@ -61,18 +61,18 @@ ht-degree: 4%
       - [Microsoft SQL Server 커넥터](connectors/databases/sql-server.md)
       - [MySQL 커넥터](connectors/databases/mysql.md)
       - [Oracle 커넥터](connectors/databases/oracle.md)
-      - [Phoenix 커넥터](connectors/databases/phoenix.md)
+      - [피닉스 커넥터](connectors/databases/phoenix.md)
       - [PostgreSQL 커넥터](connectors/databases/postgres.md)
    - eCommerce {#ecommerce}
       - [Shopify 커넥터](connectors/ecommerce/shopify.md)
    - 마케팅 자동화 {#marketing-automation}
       - [HubSpot 커넥터](connectors/marketing-automation/hubspot.md)
-   - 결제 {#payments}
+   - 지불 {#payments}
       - [PayPal 커넥터](connectors/payments/paypal.md)
    - 프로토콜 {#protocols}
       - [범용 OData 커넥터](connectors/protocols/odata.md)
 - API 자습서 {#api-tutorials}
-   - 소스 커넥터 만들기 {#create}
+   - 소스 커넥터 {#create} 만들기
       - 광고 {#advertising}
          - [Google AdWords 커넥터](tutorials/api/create/advertising/ads.md)
       - 클라우드 스토리지 {#cloud-storage}
@@ -87,18 +87,17 @@ ht-degree: 4%
          - [Google 클라우드 스토리지 커넥터](tutorials/api/create/cloud-storage/google.md)
          - [SFTP 커넥터](tutorials/api/create/cloud-storage/sftp.md)
       - CRM {#crm}
-         - [HubSpot 커넥터](tutorials/api/create/crm/hubspot.md)
          - [Microsoft Dynamics 커넥터](tutorials/api/create/crm/ms-dynamics.md)
          - [Salesforce 커넥터](tutorials/api/create/crm/salesforce.md)
-      - 고객 성공 사례 {#customer-success}
-         - [Salesforce Service Cloud 커넥터](tutorials/api/create/customer-success/salesforce-service-cloud.md)
+      - 고객 성공 {#customer-success}
+         - [Salesforce 서비스 클라우드 커넥터](tutorials/api/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow 커넥터](tutorials/api/create/customer-success/servicenow.md)
       - 데이터베이스 {#databases}
          - [Amazon Redshift 커넥터](tutorials/api/create/databases/redshift.md)
          - [Azure HDInsights 커넥터의 Apache Hive](tutorials/api/create/databases/hive.md)
          - [Azure HDInsights 커넥터의 Apache Spark](tutorials/api/create/databases/spark.md)
          - [Azure Data Explorer 커넥터](tutorials/api/create/databases/data-explorer.md)
-         - [azure synapse 분석 커넥터](tutorials/api/create/databases/synapse-analytics.md)
+         - [azure synapse Analytics 커넥터](tutorials/api/create/databases/synapse-analytics.md)
          - [Azure 테이블 저장소 커넥터](tutorials/api/create/databases/ats.md)
          - [Couchbase 커넥터](tutorials/api/create/databases/couchbase.md)
          - [Google BigQuery 커넥터](tutorials/api/create/databases/bigquery.md)
@@ -107,23 +106,23 @@ ht-degree: 4%
          - [IBM DB2 커넥터](tutorials/api/create/databases/ibm-db2.md)
          - [MySQL 커넥터](tutorials/api/create/databases/mysql.md)
          - [Oracle 커넥터](tutorials/api/create/databases/oracle.md)
-         - [Phoenix 커넥터](tutorials/api/create/databases/phoenix.md)
+         - [피닉스 커넥터](tutorials/api/create/databases/phoenix.md)
          - [PostgreSQL 커넥터](tutorials/api/create/databases/postgres.md)
          - [SQL Server 커넥터](tutorials/api/create/databases/sql-server.md)
       - eCommerce {#ecommerce}
          - [Shopify 커넥터](tutorials/api/create/ecommerce/shopify.md)
       - 마케팅 자동화 {#marketing-automation}
          - [HubSpot 커넥터](tutorials/api/create/marketing-automation/hubspot.md)
-      - 결제 {#payments}
+      - 지불 {#payments}
          - [PayPal 커넥터](tutorials/api/create/payments/paypal.md)
       - 프로토콜 {#protocols}
          - [범용 OData 커넥터](tutorials/api/create/protocols/odata.md)
-   - 데이터 살펴보기 {#explore}
+   - 데이터 탐색 {#explore}
       - [광고 데이터 살펴보기](tutorials/api/explore/advertising.md)
       - [클라우드 스토리지 데이터 살펴보기](tutorials/api/explore/cloud-storage.md)
-      - [CRM 데이터 살펴보기](tutorials/api/explore/crm.md)
+      - [CRM 데이터 탐색](tutorials/api/explore/crm.md)
       - [고객 성공 데이터 살펴보기](tutorials/api/explore/customer-success.md)
-      - [데이터베이스 또는 NoSQL 데이터 살펴보기](tutorials/api/explore/database-nosql.md)
+      - [데이터베이스 또는 NoSQL 데이터 탐색](tutorials/api/explore/database-nosql.md)
       - [e커머스 데이터 살펴보기](tutorials/api/explore/ecommerce.md)
       - [마케팅 자동화 데이터 살펴보기](tutorials/api/explore/marketing-automation.md)
       - [결제 데이터 살펴보기](tutorials/api/explore/payments.md)
@@ -139,14 +138,14 @@ ht-degree: 4%
       - [결제 데이터 수집](tutorials/api/collect/payments.md)
       - [프로토콜 데이터 수집](tutorials/api/collect/protocols.md)
       - [스트리밍 데이터 수집](tutorials/api/collect/streaming.md)
-   - [타사 클라우드 스토리지 시스템에서 쪽모이 세공 데이터를 인제스트](tutorials/api/cloud-storage-parquet.md)
+   - [제3자 클라우드 스토리지 시스템에서 쪽모이 세공 데이터를 인제스트](tutorials/api/cloud-storage-parquet.md)
    - [데이터 집합 연결 만들기](tutorials/api/create-dataset-base-connection.md)
    - [데이터 흐름 모니터링](tutorials/api/monitor.md)
    - [연결 업데이트](tutorials/api/update.md)
    - [연결 삭제](tutorials/api/delete.md)
    - [데이터 흐름 삭제](tutorials/api/delete-dataflows.md)
 - UI 자습서 {#ui-tutorials}
-   - 소스 커넥터 만들기 {#create}
+   - 소스 커넥터 {#create} 만들기
       - Adobe 응용 프로그램 {#adobe-applications}
          - [Adobe Analytics 분류 데이터 커넥터](tutorials/ui/create/adobe-applications/classifications.md)
          - [Adobe Analytics 커넥터](tutorials/ui/create/adobe-applications/analytics.md)
@@ -169,15 +168,15 @@ ht-degree: 4%
       - CRM {#crm}
          - [Microsoft Dynamics 커넥터](tutorials/ui/create/crm/dynamics.md)
          - [Salesforce 커넥터](tutorials/ui/create/crm/salesforce.md)
-      - 고객 성공 사례 {#customer-success}
-         - [Salesforce Service Cloud 커넥터](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
+      - 고객 성공 {#customer-success}
+         - [Salesforce 서비스 클라우드 커넥터](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow 커넥터](tutorials/ui/create/customer-success/servicenow.md)
       - 데이터베이스 {#databases}
          - [Amazon Redshift 커넥터](tutorials/ui/create/databases/redshift.md)
          - [Azure HDInsights 커넥터의 Apache Hive](tutorials/ui/create/databases/hive.md)
          - [Azure HDInsights 커넥터의 Apache Spark](tutorials/ui/create/databases/spark.md)
          - [Azure Data Explorer 커넥터](tutorials/ui/create/databases/data-explorer.md)
-         - [azure synapse 분석 커넥터](tutorials/ui/create/databases/synapse-analytics.md)
+         - [azure synapse Analytics 커넥터](tutorials/ui/create/databases/synapse-analytics.md)
          - [Azure 테이블 저장소 커넥터](tutorials/ui/create/databases/ats.md)
          - [Couchbase 커넥터](tutorials/ui/create/databases/couchbase.md)
          - [Google Big Query 커넥터](tutorials/ui/create/databases/bigquery.md)
@@ -187,20 +186,20 @@ ht-degree: 4%
          - [Microsoft SQL Server 커넥터](tutorials/ui/create/databases/sql-server.md)
          - [MySQL 커넥터](tutorials/ui/create/databases/mysql.md)
          - [Oracle 커넥터](tutorials/ui/create/databases/oracle.md)
-         - [Phoenix 커넥터](tutorials/ui/create/databases/phoenix.md)
+         - [피닉스 커넥터](tutorials/ui/create/databases/phoenix.md)
          - [PostgreSQL 커넥터](tutorials/ui/create/databases/postgres.md)
       - eCommerce {#ecommerce}
          - [Shopify 커넥터](tutorials/ui/create/ecommerce/shopify.md)
       - 마케팅 자동화 {#marketing-automation}
          - [HubSpot 커넥터](tutorials/ui/create/marketing-automation/hubspot.md)
-      - 결제 {#payments}
+      - 지불 {#payments}
          - [PayPal 커넥터](tutorials/ui/create/payments/paypal.md)
       - 프로토콜 {#protocols}
          - [범용 OData 커넥터](tutorials/ui/create/protocols/odata.md)
    - 데이터 흐름 구성 {#dataflow}
       - [광고 커넥터에 대한 데이터 흐름 구성](tutorials/ui/dataflow/advertising.md)
       - [일괄 처리 클라우드 스토리지 커넥터에 대한 데이터 흐름 구성](tutorials/ui/dataflow/batch/cloud-storage.md)
-      - [스트리밍 클라우드 스토리지 커넥터에 대한 데이터 흐름 구성](tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
+      - [스트리밍 클라우드 저장소 커넥터의 데이터 흐름 구성](tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
       - [CRM 커넥터에 대한 데이터 흐름 구성](tutorials/ui/dataflow/crm.md)
       - [고객 성공 커넥터에 대한 데이터 흐름 구성](tutorials/ui/dataflow/customer-success.md)
       - [데이터베이스 커넥터에 대한 데이터 흐름 구성](tutorials/ui/dataflow/databases.md)
