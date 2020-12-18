@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: 이 자습서는 Flow Service API를 사용하여 Experience Platform을 Google BigQuery(이하 "BigQuery"라 한다)에 연결하는 단계를 안내합니다.
 translation-type: tm+mt
-source-git-commit: 9092c3d672967d3f6f7bf7116c40466a42e6e7b1
+source-git-commit: 74fbf388cf645c89f9f6d00a5ae2e59ba94041b9
 workflow-type: tm+mt
-source-wordcount: '608'
+source-wordcount: '610'
 ht-degree: 1%
 
 ---
@@ -35,7 +35,7 @@ ht-degree: 1%
 
 ### 필요한 자격 증명 수집
 
-[!DNL Flow Service]이(가) BigQuery와 연결하려면 다음 연결 속성을 제공해야 합니다.
+[!DNL Flow Service]에서 BigQuery를 플랫폼에 연결하려면 다음 OAuth 2.0 인증 값을 제공해야 합니다.
 
 | 자격 증명 | 설명 |
 | ---------- | ----------- |
@@ -89,20 +89,22 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "BigQuery base connection",
-        "description": "Base connection for Google BigQuery",
+        "name": "Google BigQuery connection",
+        "description": "Google BigQuery connection",
         "auth": {
             "specName": "Basic Authentication",
+            "type": "OAuth2.0",
             "params": {
-                "project": "{PROJECT}",
-                "clientId": "{CLIENT_ID}",
-                "clientSecret": "{CLIENT_SECRET}",
-                "refreshToken": "{REFRESH_TOKEN}"
-            }
+                    "project": "{PROJECT}",
+                    "clientId": "{CLIENT_ID},
+                    "clientSecret": "{CLIENT_SECRET}",
+                    "refreshToken": "{REFRESH_TOKEN}"
+                }
         },
         "connectionSpec": {
             "id": "3c9b37f8-13a6-43d8-bad3-b863b941fedd",
             "version": "1.0"
+        }
     }'
 ```
 
