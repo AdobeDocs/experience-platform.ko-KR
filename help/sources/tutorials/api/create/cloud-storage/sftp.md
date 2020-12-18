@@ -6,10 +6,10 @@ topic: overview
 type: Tutorial
 description: 이 자습서는 Flow Service API를 사용하여 Experience Platform을 SFTP(Secure File Transfer Protocol) 서버에 연결하는 단계를 안내합니다.
 translation-type: tm+mt
-source-git-commit: 9092c3d672967d3f6f7bf7116c40466a42e6e7b1
+source-git-commit: c88b9400144f511ef456fd5fdc968a5a6b7a3dc0
 workflow-type: tm+mt
-source-wordcount: '770'
-ht-degree: 2%
+source-wordcount: '807'
+ht-degree: 1%
 
 ---
 
@@ -29,6 +29,10 @@ ht-degree: 2%
 * [소스](../../../../home.md):Experience Platform을 사용하면 Platform 서비스를 사용하여 수신 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 다양한 소스에서 데이터를 수집할 수 있습니다.
 * [샌드박스](../../../../../sandboxes/home.md):Experience Platform은 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되도록 단일 플랫폼 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
 
+>[!IMPORTANT]
+>
+>SFTP 소스 연결을 사용하여 JSON 개체를 인제스트할 때 뉴라인 또는 캐리지 리턴이 발생하지 않는 것이 좋습니다. 제한 사항을 해결하려면 라인당 단일 JSON 개체를 사용하고 이후 파일에 대해 여러 행을 사용하십시오.
+
 다음 섹션에서는 [!DNL Flow Service] API를 사용하여 SFTP 서버에 성공적으로 연결하려면 알아야 할 추가 정보를 제공합니다.
 
 ### 필요한 자격 증명 수집
@@ -45,11 +49,11 @@ ht-degree: 2%
 
 ### 샘플 API 호출 읽기
 
-이 자습서에서는 요청의 서식을 지정하는 방법을 보여주는 API 호출 예를 제공합니다. 여기에는 경로, 필수 헤더 및 올바른 형식의 요청 페이로드가 포함됩니다. API 응답으로 반환된 샘플 JSON도 제공됩니다. 샘플 API 호출에 대한 설명서에 사용된 규칙에 대한 자세한 내용은 [!DNL Experience Platform] 문제 해결 안내서의 [API 호출 예](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)를 읽는 방법에 대한 섹션을 참조하십시오.
+이 자습서에서는 요청의 서식을 지정하는 방법을 보여주는 API 호출 예를 제공합니다. 여기에는 경로, 필수 헤더 및 올바른 형식의 요청 페이로드가 포함됩니다. API 응답으로 반환된 샘플 JSON도 제공됩니다. 샘플 API 호출에 대한 설명서에 사용된 규칙에 대한 자세한 내용은 Experience Platform 문제 해결 안내서의 [API 호출 예](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)를 읽는 방법을 참조하십시오.
 
 ### 필수 헤더에 대한 값 수집
 
-[!DNL Platform] API를 호출하려면 먼저 [인증 자습서](../../../../../tutorials/authentication.md)를 완료해야 합니다. 인증 자습서를 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
+플랫폼 API를 호출하려면 먼저 [인증 자습서](../../../../../tutorials/authentication.md)를 완료해야 합니다. 인증 자습서를 완료하면 아래와 같이 모든 Experience Platform API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -65,7 +69,7 @@ ht-degree: 2%
 
 ## 연결 만들기
 
-연결은 소스를 지정하며 해당 소스의 자격 증명을 포함합니다. 다른 데이터를 가져오기 위해 여러 소스 커넥터를 만드는 데 사용할 수 있으므로 SFTP 계정당 하나의 연결만 필요합니다.
+연결은 소스를 지정하며 해당 소스의 자격 증명을 포함합니다. 여러 데이터 흐름을 만들어 서로 다른 데이터를 가져오는 데 사용할 수 있으므로 하나의 연결만 필요합니다.
 
 ### 기본 인증을 사용하여 SFTP 연결 만들기
 
