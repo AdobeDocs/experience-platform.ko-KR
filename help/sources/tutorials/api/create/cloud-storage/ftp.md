@@ -4,36 +4,36 @@ solution: Experience Platform
 title: Flow Service API를 사용하여 FTP 커넥터 만들기
 topic: overview
 type: Tutorial
-description: 이 자습서에서는 Flow Service API를 사용하여 Experience Platform을 FTP(File Transfer Protocol) 서버에 연결하는 단계를 안내합니다.
+description: 이 자습서는 Flow Service API를 사용하여 Experience Platform을 FTP(File Transfer Protocol) 서버에 연결하는 단계를 안내합니다.
 translation-type: tm+mt
-source-git-commit: 807b3110606daa6b8d42d2f9048668f7c121c8f4
+source-git-commit: 9092c3d672967d3f6f7bf7116c40466a42e6e7b1
 workflow-type: tm+mt
-source-wordcount: '537'
+source-wordcount: '565'
 ht-degree: 2%
 
 ---
 
 
-# API를 사용하여 FTP 커넥터 [!DNL Flow Service] 만들기
+# [!DNL Flow Service] API를 사용하여 FTP 커넥터 만들기
 
 >[!NOTE]
 >
->FTP 커넥터가 베타에 있습니다. 기능 및 설명서는 변경될 수 있습니다. 베타 [레이블이 지정된 커넥터 사용에 대한 자세한 내용은 소스 개요를](../../../../home.md#terms-and-conditions) 참조하십시오.
+>FTP 커넥터가 베타에 있습니다. 기능 및 설명서는 변경될 수 있습니다. 베타 레이블이 지정된 커넥터 사용에 대한 자세한 내용은 [소스 개요](../../../../home.md#terms-and-conditions)를 참조하십시오.
 
-이 자습서에서는 [!DNL Flow Service] API를 사용하여 FTP(File Transfer Protocol) 서버에 연결하는 단계 [!DNL Experience Platform] 를 안내합니다.
+이 자습서는 [!DNL Flow Service] API를 사용하여 [!DNL Experience Platform]을(를) FTP(파일 전송 프로토콜) 서버에 연결하는 단계를 안내합니다.
 
 ## 시작하기
 
-이 가이드는 Adobe Experience Platform의 다음 구성 요소에 대한 작업 이해를 필요로 합니다.
+이 가이드를 사용하려면 다음과 같은 Adobe Experience Platform 구성 요소에 대해 작업해야 합니다.
 
-* [소스](../../../../home.md): [!DNL Experience Platform] 서비스를 사용하여 들어오는 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 다양한 소스에서 데이터를 수집할 수 [!DNL Platform] 있습니다.
-* [샌드박스](../../../../../sandboxes/home.md): [!DNL Experience Platform] 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되도록 단일 [!DNL Platform] 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
+* [소스](../../../../home.md): [!DNL Experience Platform] 서비스를 사용하여 수신 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 다양한 소스에서 데이터를 수집할 수  [!DNL Platform] 있습니다.
+* [샌드박스](../../../../../sandboxes/home.md): [!DNL Experience Platform] 디지털 경험 애플리케이션을 개발 및 발전시키는 데 도움이 되도록 단일  [!DNL Platform] 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
 
-다음 섹션에서는 [!DNL Flow Service] API를 사용하여 FTP 서버에 성공적으로 연결하기 위해 알아야 할 추가 정보를 제공합니다.
+다음 섹션에서는 [!DNL Flow Service] API를 사용하여 FTP 서버에 성공적으로 연결하려면 알아야 할 추가 정보를 제공합니다.
 
 ### 필요한 자격 증명 수집
 
-FTP에 [!DNL Flow Service] 연결하려면 다음 연결 속성에 대한 값을 제공해야 합니다.
+[!DNL Flow Service]이(가) FTP에 연결하려면 다음 연결 속성에 대한 값을 제공해야 합니다.
 
 | 자격 증명 | 설명 |
 | ---------- | ----------- |
@@ -43,31 +43,31 @@ FTP에 [!DNL Flow Service] 연결하려면 다음 연결 속성에 대한 값을
 
 ### 샘플 API 호출 읽기
 
-이 자습서에서는 요청의 서식을 지정하는 방법을 보여주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 올바른 형식의 요청 페이로드가 포함됩니다. API 응답으로 반환된 샘플 JSON도 제공됩니다. 샘플 API 호출 설명서에 사용된 규칙에 대한 자세한 내용은 문제 해결 안내서의 예제 API 호출 [을 읽는](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) 방법에 대한 섹션을 [!DNL Experience Platform] 참조하십시오.
+이 자습서에서는 요청의 서식을 지정하는 방법을 보여주는 API 호출 예를 제공합니다. 여기에는 경로, 필수 헤더 및 올바른 형식의 요청 페이로드가 포함됩니다. API 응답으로 반환된 샘플 JSON도 제공됩니다. 샘플 API 호출에 대한 설명서에 사용된 규칙에 대한 자세한 내용은 [!DNL Experience Platform] 문제 해결 안내서의 [API 호출 예](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)를 읽는 방법에 대한 섹션을 참조하십시오.
 
 ### 필수 헤더에 대한 값 수집
 
-API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 합니다](../../../../../tutorials/authentication.md). 인증 자습서를 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
+[!DNL Platform] API를 호출하려면 먼저 [인증 자습서](../../../../../tutorials/authentication.md)를 완료해야 합니다. 인증 자습서를 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {IMS_ORG}`
 
-에 속하는 리소스를 [!DNL Experience Platform]포함한 모든 리소스 [!DNL Flow Service]는 특정 가상 샌드박스와 분리됩니다. API에 대한 모든 [!DNL Platform] 요청에는 작업이 수행할 샌드박스의 이름을 지정하는 헤더가 필요합니다.
+[!DNL Flow Service]에 속하는 리소스를 포함하여 [!DNL Experience Platform]의 모든 리소스는 특정 가상 샌드박스로 구분됩니다. [!DNL Platform] API에 대한 모든 요청에는 작업이 수행할 샌드박스의 이름을 지정하는 헤더가 필요합니다.
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
-페이로드(POST, PUT, PATCH)이 포함된 모든 요청에는 추가 미디어 유형 헤더가 필요합니다.
+페이로드(POST, PUT, PATCH)을 포함하는 모든 요청에는 추가 미디어 유형 헤더가 필요합니다.
 
 * `Content-Type: application/json`
 
 ## 연결 만들기
 
-연결은 소스를 지정하고 해당 소스에 대한 자격 증명을 포함합니다. 여러 소스 커넥터를 만들어 다른 데이터를 가져올 수 있으므로 FTP 계정당 하나의 연결만 필요합니다.
+연결은 소스를 지정하며 해당 소스의 자격 증명을 포함합니다. 다른 데이터를 가져오기 위해 여러 소스 커넥터를 만드는 데 사용할 수 있으므로 FTP 계정당 하나의 연결만 필요합니다.
 
 ### 기본 인증을 사용하여 FTP 연결 만들기
 
-기본 인증을 사용하여 FTP 연결을 만들려면 연결, [!DNL Flow Service] 및 `host``userName``password`등에 대한 값을 제공하면서 API에 POST을 요청합니다.
+기본 인증을 사용하여 FTP 연결을 만들려면 연결의 `host`, `userName` 및 `password`에 대한 값을 제공하면서 [!DNL Flow Service] API에 POST 요청을 하십시오.
 
 **API 형식**
 
@@ -76,6 +76,8 @@ POST /connections
 ```
 
 **요청**
+
+FTP 연결을 만들려면 고유한 연결 사양 ID를 POST 요청의 일부로 제공해야 합니다. FTP에 대한 연결 사양 ID는 `fb2e94c9-c031-467d-8103-6bd6e0a432f2`입니다.
 
 ```shell
 curl -X POST \
@@ -108,7 +110,7 @@ curl -X POST \
 | `auth.params.host` | FTP 서버의 호스트 이름입니다. |
 | `auth.params.username` | FTP 서버와 연결된 사용자 이름입니다. |
 | `auth.params.password` | FTP 서버와 연결된 암호입니다. |
-| `connectionSpec.id` | FTP 서버 연결 사양 ID: `fb2e94c9-c031-467d-8103-6bd6e0a432f2` |
+| `connectionSpec.id` | FTP 서버 연결 사양 ID:`fb2e94c9-c031-467d-8103-6bd6e0a432f2` |
 
 **응답**
 
@@ -123,4 +125,4 @@ curl -X POST \
 
 ## 다음 단계
 
-이 튜토리얼을 따라 API를 사용하여 FTP 연결을 만들고 연결 고유 ID 값을 [!DNL Flow Service] 얻게 됩니다. 이 연결 ID를 사용하여 Flow Service API를 사용하여 클라우드 스토리지 [를](../../explore/cloud-storage.md) 탐색하거나 Flow Service API를 사용하여 [인제스트 쪽모이 세공 데이터를 생성할 수 있습니다](../../cloud-storage-parquet.md).
+이 자습서를 따라 [!DNL Flow Service] API를 사용하여 FTP 연결을 만들고 연결의 고유 ID 값을 받았습니다. 이 연결 ID를 Flow Service API](../../explore/cloud-storage.md) 또는 [인제스트는 Flow Service API](../../cloud-storage-parquet.md)을 사용하여 [클라우드 스토리지 탐색에 사용할 수 있습니다.
