@@ -5,15 +5,15 @@ user-guide-title: XDM(경험 데이터 모델) 시스템 도움말
 breadcrumb-title: Experience Data Model(XDM) 안내서
 user-guide-description: XDM(경험 데이터 모델) 클래스와 mixin을 사용하여 경험 데이터를 표준화합니다.
 translation-type: tm+mt
-source-git-commit: df763e246cd6930a31402f0a2c94d657159f4fe8
+source-git-commit: 099e88373d945660e7529bbd508e616869fd01da
 workflow-type: tm+mt
-source-wordcount: '197'
-ht-degree: 22%
+source-wordcount: '216'
+ht-degree: 24%
 
 ---
 
 
-# Experience Data Model (XDM) System {#xdm}
+# 경험 데이터 모델(XDM) 시스템 {#xdm}
 
 * [XDM 시스템 개요](home.md)
 * 스키마 {#schema}
@@ -26,7 +26,7 @@ ht-degree: 22%
 * 클래스 {#classes}
    * [XDM 개별 프로필](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
-* 혼합 {#mixins}
+* 믹싱 {#mixins}
    * 프로필 혼합 {#profile}
       * [IdentityMap](./mixins/profile/identitymap.md)
       * [인구 통계 세부 사항](./mixins/profile/person-details.md)
@@ -56,6 +56,22 @@ ht-degree: 22%
    * [POI 세부 정보](./data-types/poi-details.md)
    * [POI 상호 작용](./data-types/poi-interaction.md)
    * [우편 주소](./data-types/postal-address.md)
+* [!UICONTROL 스키마 ] UI  {#ui}
+   * [개요](./ui/overview.md)
+   * [XDM 리소스 살펴보기](./ui/explore.md)
+   * 리소스 {#resources} 만들기 및 편집
+      * [스키마](./ui/resources/schemas.md)
+      * [클래스](./ui/resources/classes.md)
+      * [혼합](./ui/resources/mixins.md)
+      * [데이터 유형](./ui/resources/data-types.md)
+   * 필드 정의 {#fields}
+      * [개요](./ui/fields/overview.md)
+      * [필수 필드](./ui/fields/required.md)
+      * [개체 필드](./ui/fields/object.md)
+      * [배열 필드](./ui/fields/array.md)
+      * [열거형 필드](./ui/fields/enum.md)
+      * [ID 필드](./ui/fields/identity.md)
+      * [관계 필드](./ui/fields/relationship.md)
 * 스키마 레지스트리 API {#api}
    * [개요](api/overview.md)
    * [시작하기](api/getting-started.md)
@@ -69,10 +85,8 @@ ht-degree: 22%
    * [임시 스키마](api/ad-hoc.md)
    * [부록](api/appendix.md)
 * 자습서 {#tutorials}
-   * [UI에서 리소스 살펴보기](./tutorials/explore.md)
    * [스키마 만들기(API)](tutorials/create-schema-api.md)
    * [스키마 만들기(UI)](tutorials/create-schema-ui.md)
-   * [데이터 유형 만들기 및 편집(UI)](./tutorials/create-data-type.md)
    * [두 스키마(API) 간의 관계 정의](tutorials/relationship-api.md)
    * [두 스키마 간의 관계 정의(UI)](tutorials/relationship-ui.md)
    * [임시 스키마 만들기(API)](tutorials/ad-hoc.md)
