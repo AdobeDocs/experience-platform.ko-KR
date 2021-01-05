@@ -1,0 +1,142 @@
+---
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;data model;ui;workspace;schema;schemas;
+solution: Experience Platform
+title: UI에서 스키마 만들기 및 편집
+description: Experience Platform 사용자 인터페이스에서 스키마를 만들고 편집하는 방법에 대한 기본 사항을 알아봅니다.
+topic: user guide
+translation-type: tm+mt
+source-git-commit: efa1d8efb26f4196f6724702784ccd13a9337a8a
+workflow-type: tm+mt
+source-wordcount: '1032'
+ht-degree: 0%
+
+---
+
+
+# UI에서 스키마 만들기 및 편집
+
+이 안내서에서는 Adobe Experience Platform UI에서 조직에 대한 XDM(Experience Data Model) 스키마를 생성, 편집 및 관리하는 방법에 대한 개요를 제공합니다.
+
+>[!IMPORTANT]
+>
+>XDM 스키마는 매우 사용자 정의할 수 있으므로 스키마를 생성하는 데 필요한 단계는 스키마를 캡처할 데이터 유형에 따라 달라질 수 있습니다. 따라서 이 문서에서는 UI의 스키마로 만들 수 있는 기본 상호 작용만 다룹니다. 클래스 사용자 정의, 혼합, 데이터 유형 및 필드 사용자 지정과 같은 관련 단계는 제외됩니다.
+>
+>스키마 만들기 프로세스를 자세히 살펴보려면 [스키마 만들기 자습서](../../tutorials/create-schema-ui.md)와 함께 다음 작업을 수행하여 전체 예제 스키마를 만들고 [!DNL Schema Editor]의 많은 기능에 익숙해지십시오.
+
+## 전제 조건
+
+이 가이드를 사용하려면 XDM 시스템에 대한 작업 이해가 필요합니다. Experience Platform 에코시스템 내의 XDM 역할에 대한 소개는 [XDM 개요](../../home.md), 스키마 구성 방법에 대한 개요는 [스키마 구성 기본 사항](../../schema/composition.md)을 참조하십시오.
+
+## 새 스키마 만들기 {#create}
+
+[!UICONTROL 스키마] 작업 영역의 오른쪽 위 모서리에서 **[!UICONTROL 스키마 만들기]**&#x200B;를 선택합니다. 나타나는 드롭다운에서 **[!UICONTROL XDM 개인 프로필]**&#x200B;과 **[!UICONTROL XDM ExperienceEvent]** 중에서 스키마의 기본 클래스로 선택할 수 있습니다. 또는 **[!UICONTROL 찾아보기]**&#x200B;를 선택하여 사용 가능한 클래스의 전체 목록에서 선택하거나, [새 사용자 지정 클래스](./classes.md#create)를 대신 만들 수 있습니다.
+
+![](../../images/ui/resources/schemas/create-schema.png)
+
+클래스를 선택하면 [!DNL Schema Editor]이 표시되고 스키마의 기본 구조(클래스에서 제공)가 캔버스에 표시됩니다. 여기서 오른쪽 레일을 사용하여 스키마에 대해 **[!UICONTROL 표시 이름]** 및 **[!UICONTROL 설명]**&#x200B;을 추가할 수 있습니다.
+
+![](../../images/ui/resources/schemas/schema-details.png)
+
+이제 [mixins](#add-mixins)을(를) 추가하여 스키마 구조 작성을 시작할 수 있습니다.
+
+## 기존 스키마 {#edit} 편집
+
+>[!NOTE]
+>
+>스키마를 저장 및 데이터 수집에 사용하면 추가 변경 사항만 변경할 수 있습니다. 자세한 내용은 스키마 진화의 [규칙](../../schema/composition.md#evolution)을 참조하십시오.
+
+기존 스키마를 편집하려면 **[!UICONTROL 찾아보기]** 탭을 선택한 다음 편집할 스키마의 이름을 선택합니다.
+
+![](../../images/ui/resources/schemas/edit-schema.png)
+
+>[!TIP]
+>
+>작업 공간의 검색 및 필터링 기능을 사용하여 스키마를 쉽게 찾을 수 있습니다. 자세한 내용은 [XDM 리소스](../explore.md)에 대한 가이드를 참조하십시오.
+
+스키마를 선택하면 [!DNL Schema Editor]이 캔버스에 표시된 스키마 구조와 함께 나타납니다. 이제 [스키마에 믹싱](#add-mixins)을 추가하거나, 스키마에 고유한 사용자 정의 믹스가 있는 경우 [기존 사용자 정의 믹싱](./mixins.md#edit)을 편집할 수 있습니다.
+
+## 스키마 {#add-mixins}에 믹싱 추가
+
+>[!NOTE]
+>
+>이 섹션에서는 기존 혼합을 스키마에 추가하는 방법에 대해 설명합니다. 새 사용자 정의 믹싱을 만들려면 대신 [믹싱 만들기 및 편집](./mixins.md#create)의 안내서를 참조하십시오.
+
+[!DNL Schema Editor] 내에서 스키마를 열면 믹스를 사용하여 스키마에 필드를 추가할 수 있습니다. 시작하려면 왼쪽 레일에서 **[!UICONTROL 믹싱]** 옆에 있는 **[!UICONTROL 추가]**&#x200B;를 선택합니다.
+
+![](../../images/ui/resources/schemas/add-mixin-button.png)
+
+대화 상자가 나타나면 목록에서 원하는 믹스를 선택할 수 있습니다. 목록에서 여러 믹스를 선택할 수 있으며 선택한 각 믹스가 오른쪽 레일에 표시됩니다.
+
+![](../../images/ui/resources/schemas/add-mixin.png)
+
+>[!TIP]
+>
+>나열된 믹싱의 경우 미리 보기 아이콘(![](../../images/ui/resources/schemas/preview-icon.png))을 선택하여 스키마에 항목을 추가하기 전에 믹싱에서 제공하는 필드의 구조를 볼 수 있습니다.
+
+믹스인 선택이 끝나면 **[!UICONTROL 믹신 추가]**&#x200B;를 선택하여 스키마에 추가합니다.
+
+![](../../images/ui/resources/schemas/add-mixin-finish.png)
+
+[!DNL Schema Editor]이(가) 캔버스에 표시된 혼합 제공 필드와 함께 다시 나타납니다.
+
+![](../../images/ui/resources/schemas/mixins-added.png)
+
+## 실시간 고객 프로필에 대한 스키마 활성화 {#profile}
+
+[실시간 고객 프로파일에서는 ](../../../profile/home.md) 서로 다른 소스의 데이터를 수집하여 각 개별 고객에 대한 전체 뷰를 생성합니다. 스키마에서 캡처한 데이터가 이 프로세스에 참여하도록 하려면 [!DNL Profile]에서 사용할 스키마를 활성화해야 합니다.
+
+>[!IMPORTANT]
+>
+>[!DNL Profile]에 대한 스키마를 활성화하려면 기본 ID 필드를 정의해야 합니다. 자세한 내용은 [ID 필드 정의](../fields/identity.md)의 안내서를 참조하십시오.
+
+스키마를 활성화하려면 왼쪽 레일에서 스키마 이름을 선택하고 오른쪽 레일에서 **[!UICONTROL 프로필]** 전환을 선택합니다.
+
+![](../../images/ui/resources/schemas/profile-toggle.png)
+
+스키마가 활성화되고 저장되면 비활성화할 수 없다는 내용의 팝업이 나타납니다. 계속하려면 **[!UICONTROL 활성화]**&#x200B;를 선택합니다.
+
+![](../../images/ui/resources/schemas/profile-confirm.png)
+
+캔버스가 다시 나타나고 [!UICONTROL 프로필] 토글이 활성화됩니다.
+
+>[!IMPORTANT]
+>
+>스키마가 아직 저장되지 않았으므로 스키마를 실시간 고객 프로필에 참여하도록 하는 계획을 변경하는 경우 이는 반환되지 않는 점입니다.활성화된 스키마를 저장한 후에는 더 이상 비활성화할 수 없습니다. **[!UICONTROL 프로필]** 전환을 다시 선택하여 스키마를 비활성화합니다.
+
+프로세스를 완료하려면 **[!UICONTROL 저장]**&#x200B;을 선택하여 스키마를 저장합니다.
+
+![](../../images/ui/resources/schemas/profile-enabled.png)
+
+이제 스키마는 실시간 고객 프로필에서 사용할 수 있습니다. Platform(플랫폼)이 이 스키마를 기반으로 데이터 세트를 인제스트할 때 해당 데이터는 병합된 프로필 데이터에 통합됩니다.
+
+## 스키마 클래스 {#change-class} 변경
+
+스키마를 저장하기 전에 초기 컴포지션 프로세스 중에 언제든지 스키마 클래스를 변경할 수 있습니다.
+
+>[!WARNING]
+>
+>스키마에 대한 클래스 재지정은 매우 주의해야 합니다. 믹스는 특정 클래스와 호환되므로 클래스를 변경하면 캔버스 및 추가한 모든 필드가 재설정됩니다.
+
+클래스를 재할당하려면 캔버스의 왼쪽에 있는 **[!UICONTROL 할당]**&#x200B;을 선택합니다.
+
+![](../../images/ui/resources/schemas/assign-class-button.png)
+
+조직에서 정의한 모든 클래스(소유자(&quot;[!UICONTROL 고객]&quot;)와 Adobe에 의해 정의된 표준 클래스를 포함하여 사용 가능한 모든 클래스의 목록을 표시하는 대화 상자가 나타납니다.
+
+목록에서 클래스를 선택하여 대화 상자의 오른쪽에 해당 설명을 표시합니다. **[!UICONTROL 미리 보기 클래스 구조]**&#x200B;를 선택하여 클래스와 연결된 필드 및 메타데이터를 볼 수도 있습니다. 계속하려면 **[!UICONTROL 클래스 지정]**&#x200B;을 선택합니다.
+
+![](../../images/ui/resources/schemas/assign-class.png)
+
+새 클래스를 지정할 것인지 확인하는 새 대화 상자가 열립니다. **[!UICONTROL 할당]**&#x200B;을 선택하여 확인합니다.
+
+![](../../images/ui/resources/schemas/assign-confirm.png)
+
+클래스 변경을 확인한 후 캔버스가 재설정되고 모든 컴포지션 진행 상태가 손실됩니다.
+
+## 다음 단계
+
+이 문서에서는 플랫폼 UI에서 스키마를 만들고 편집하는 기본 사항에 대해 다룹니다. 고유한 사용 사례에 대한 사용자 정의 믹서와 데이터 형식을 만드는 것을 포함하여 UI에서 전체 스키마를 작성하기 위한 포괄적인 작업 과정을 보려면 [스키마 만들기 자습서](../../tutorials/create-schema-ui.md)를 검토하는 것이 좋습니다.
+
+[!UICONTROL 스키마] 작업 영역의 기능에 대한 자세한 내용은 [[!UICONTROL 스키마] 작업 영역 개요](../overview.md)를 참조하십시오.
+
+[!DNL Schema Registry] API에서 스키마를 관리하는 방법에 대해 알아보려면 [스키마 끝점 안내서](../../api/schemas.md)를 참조하십시오.
