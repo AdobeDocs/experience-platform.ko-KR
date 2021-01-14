@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;behavior;behaviour;behaviors;behaviours;
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;behavior;behaviour;behaviors;behaviours;
 solution: Experience Platform
-title: 동작 끝점 안내서
+title: 비헤이비어 끝점 안내서
 description: 스키마 레지스트리 API의 /behaviors 종단점을 사용하면 전역 컨테이너에서 사용 가능한 모든 동작을 검색할 수 있습니다.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 72c9147cefd00c9fe734ac64f8062c899b0588bc
+source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
 workflow-type: tm+mt
 source-wordcount: '394'
 ht-degree: 2%
@@ -13,28 +13,28 @@ ht-degree: 2%
 ---
 
 
-# 동작 끝점
+# 비헤이비어 끝점
 
-XDM(Experience Data Model)에서 비헤이비어는 스키마가 설명하는 데이터의 특성을 정의합니다. 각 XDM 클래스는 특정 동작을 참조해야 하며, 이 클래스를 사용하는 모든 스키마는 상속됩니다. Platform(플랫폼)에서 거의 모든 사용 사례에는 두 가지 사용 가능한 비헤이비어가 있습니다.
+XDM(경험 데이터 모델)에서 비헤이비어는 스키마에서 설명하는 데이터의 특성을 정의합니다. 각 XDM 클래스는 특정 비헤이비어를 참조해야 하며, 이 클래스를 사용하는 모든 스키마는 상속됩니다. Platform(플랫폼)에서 거의 모든 사용 사례에는 두 가지 사용 가능한 비헤이비어가 있습니다.
 
 * **[!UICONTROL 기록]**:제목 속성에 대한 정보를 제공합니다. 대상은 조직 또는 개인일 수 있습니다.
-* **[!UICONTROL 시계열]**:작업을 직접 또는 간접적으로 레코드 제목에 의해 수행한 시점에 시스템의 스냅샷을 제공합니다.
+* **[!UICONTROL 시계열]**:작업 수행 시 기록 제목에 의해 직접 또는 간접적으로 작업이 수행될 때 시스템의 스냅샷을 제공합니다.
 
 >[!NOTE]
 >
->Platform에는 위의 비헤이비어 중 하나를 사용하지 않는 스키마를 사용해야 하는 일부 사용 사례가 있습니다. 이러한 경우 세 번째 &quot;임시&quot; 동작을 사용할 수 있습니다. 자세한 내용은 임시 스키마 [를 만드는](../tutorials/ad-hoc.md) 자습서를 참조하십시오.
+>플랫폼에서 위의 비헤이비어 중 하나를 사용하지 않는 스키마를 사용해야 하는 경우도 있습니다. 이러한 경우 세 번째 &quot;임시&quot; 동작을 사용할 수 있습니다. 자세한 내용은 [애드혹 스키마 만들기](../tutorials/ad-hoc.md)의 자습서를 참조하십시오.
 >
->데이터 동작이 스키마 구성에 미치는 영향에 대한 일반적인 정보는 스키마 컴포지션의 [기본 사항에 대한 안내서를 참조하십시오](../schema/composition.md).
+>데이터 비헤이비어가 스키마 구성에 영향을 주는 방식에 대한 자세한 일반 정보는 스키마 컴포지션](../schema/composition.md)의 [기본 사항에 대한 안내서를 참조하십시오.
 
-API의 `/behaviors` 종단점을 사용하면 [!DNL Schema Registry] 컨테이너에서 사용 가능한 동작을 볼 수 `global` 있습니다.
+[!DNL Schema Registry] API의 `/behaviors` 끝점을 사용하면 `global` 컨테이너에서 사용 가능한 동작을 볼 수 있습니다.
 
 ## 시작하기
 
-이 안내서에서 사용되는 끝점은 [[!DNL Schema Registry] API의 일부입니다](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/behavior-registry.yaml). 계속하기 전에 [시작하기 가이드](./getting-started.md) (관련 문서 링크, 이 문서에서 샘플 API 호출 읽기 안내서)와 Experience Platform API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요 정보를 검토하십시오.
+이 안내서에 사용된 끝점은 [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/behavior-registry.yaml)의 일부입니다. 계속하기 전에 [시작하기 안내서](./getting-started.md)에서 관련 설명서에 대한 링크, 이 문서에서 샘플 API 호출 읽기 안내서, Experience Platform API를 성공적으로 호출하기 위해 필요한 필수 헤더에 대한 중요 정보를 검토하십시오.
 
 ## 비헤이비어 목록 검색 {#list}
 
-종단점에 GET 요청을 수행하여 사용 가능한 모든 비헤이비어 목록을 검색할 수 `/behaviors` 있습니다.
+`/behaviors` 끝점에 GET 요청을 하여 사용 가능한 모든 비헤이비어 목록을 검색할 수 있습니다.
 
 **API 형식**
 
@@ -89,9 +89,9 @@ curl -X GET \
 }
 ```
 
-## 동작 검색 {#lookup}
+## 비헤이비어 {#lookup} 조회
 
-종단점에 대한 GET 요청 경로에 해당 ID를 제공하여 특정 동작을 찾을 수 `/behaviors` 있습니다.
+`/behaviors` 종단점에 대한 GET 요청 경로에 해당 ID를 제공하여 특정 동작을 찾을 수 있습니다.
 
 **API 형식**
 
@@ -101,11 +101,11 @@ GET /global/behaviors/{BEHAVIOR_ID}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{BEHAVIOR_ID}` | 조회하려는 동작의 `meta:altId` 또는 URL 인코딩 `$id` 입니다. |
+| `{BEHAVIOR_ID}` | 조회하려는 비헤이비어의 `meta:altId` 또는 URL 인코딩 `$id`. |
 
 **요청**
 
-다음 요청은 요청 경로에 레코드 동작의 세부 사항 `meta:altId` 을 제공하여 이를 검색합니다.
+다음 요청은 요청 경로에 `meta:altId`을 제공하여 레코드 동작의 세부 사항을 검색합니다.
 
 ```shell
 curl -X GET \
@@ -119,7 +119,7 @@ curl -X GET \
 
 **응답**
 
-성공적인 응답은 해당 버전, 설명 및 비헤이비어가 해당 응답을 사용하는 클래스에 제공하는 특성을 포함하여 동작의 세부 사항을 반환합니다.
+성공적인 응답은 해당 버전, 설명 및 비헤이비어가 비헤이비어를 사용하는 클래스에 제공하는 특성을 비롯하여 비헤이비어의 세부 사항을 반환합니다.
 
 ```json
 {
@@ -172,4 +172,4 @@ curl -X GET \
 
 ## 다음 단계
 
-이 안내서에서는 API에서 종단점 `/behaviors` 사용을 [!DNL Schema Registry] 설명했습니다. API를 사용하여 클래스에 동작을 할당하는 방법을 알아보려면 [클래스 끝점 안내서를 참조하십시오](./classes.md).
+이 안내서에서는 [!DNL Schema Registry] API에서 `/behaviors` 끝점의 사용에 대해 다룹니다. API를 사용하여 클래스에 비헤이비어를 할당하는 방법을 알아보려면 [클래스 끝점 안내서](./classes.md)를 참조하십시오.
