@@ -5,10 +5,10 @@ user-guide-title: Adobe Experience Platform 쿼리 서비스 도움말
 breadcrumb-title: Query Service 안내서
 user-guide-description: 표준 SQL을 사용하여 플랫폼 데이터 레이크에서 데이터를 쿼리합니다.
 translation-type: tm+mt
-source-git-commit: e38190aabfa5d36de85e03eb5fb4e76283fb7934
+source-git-commit: e2c648829bb3268ab319da934f5cc6cc811290b3
 workflow-type: tm+mt
-source-wordcount: '144'
-ht-degree: 20%
+source-wordcount: '135'
+ht-degree: 18%
 
 ---
 
@@ -27,14 +27,13 @@ ht-degree: 20%
 - 쿼리 서비스 UI {#ui}
    - [UI 개요](ui/overview.md)
    - [쿼리 편집기 사용 안내서](ui/user-guide.md)
-- 쿼리 만들기 {#creating-queries}
-   - [쿼리 만들기 개요](creating-queries/creating-queries.md)
-   - [데이터 세트와 테이블 및 스키마 비교](creating-queries/datasets-and-tables.md)
-   - [쿼리 실행에 대한 일반 지침](creating-queries/writing-queries.md)
-   - [ExperienceEvent 쿼리](creating-queries/experience-event-queries.md)
-   - [데이터 집합 참여](creating-queries/joining-datasets.md)
-   - [데이터 중복 제거](creating-queries/deduplication.md)
-- [쿼리 결과에서 데이터 집합 생성](creating-queries/create-datasets.md)
+   - [쿼리 결과에서 데이터 집합 생성](ui/create-datasets.md)
+- 우수 사례 {#best-practices}
+   - [쿼리 실행에 대한 일반 지침](best-practices/writing-queries.md)
+   - [데이터 중복 제거](best-practices/deduplication.md)
+   - [샘플 경험 이벤트 쿼리](best-practices/experience-event-queries.md)
+   - [샘플 Adobe Analytics 쿼리](best-practices/adobe-analytics.md)
+   - [샘플 Adobe Target 쿼리](best-practices/adobe-target.md)
 - SQL 참조 {#sql}
    - [SQL 개요](sql/overview.md)
    - [SQL 구문](sql/syntax.md)
@@ -42,10 +41,6 @@ ht-degree: 20%
    - [Spark SQL 함수](sql/spark-sql-functions.md)
    - [메타데이터 명령](sql/metadata.md)
    - [준비된 설명](sql/prepared-statements.md)
-- 샘플 쿼리 {#samples}
-   - [샘플 쿼리 개요](sample-queries/overview.md)
-   - [Adobe Analytics](sample-queries/adobe-analytics.md)
-   - [Adobe Target](sample-queries/adobe-target.md)
 - 클라이언트를 쿼리 서비스 {#clients}에 연결
    - [클라이언트 연결 개요](clients/overview.md)
    - [아쿠아 데이터 스튜디오](clients/aqua-data-studio.md)
