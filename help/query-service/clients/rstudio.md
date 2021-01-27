@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;popular topics;Query service;query service;RStudio;rstudio;connect to query service;
 solution: Experience Platform
-title: RStudio와 연결
+title: 오디오 연결
 topic: connect
-description: 이 문서에서는 R Studio와 Adobe Experience Platform 쿼리 서비스를 연결하는 단계를 안내합니다.
+description: 이 문서에서는 Adobe Experience Platform 쿼리 서비스와 R Studio를 연결하는 단계를 안내합니다.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 9fbb6b829cd9ddec30f22b0de66874be7710e465
 workflow-type: tm+mt
 source-wordcount: '225'
 ht-degree: 2%
@@ -13,11 +13,11 @@ ht-degree: 2%
 ---
 
 
-# 연결 대상 [!DNL RStudio]
+# [!DNL RStudio]에 연결
 
-이 문서는 R Studio와 Adobe Experience Platform을 연결하는 단계를 안내합니다 [!DNL Query Service].
+이 문서에서는 Adobe Experience Platform [!DNL Query Service]에 R Studio를 연결하는 단계를 안내합니다.
 
-설치 후 [!DNL RStudio]나타나는 *콘솔* 화면에서 사용할 R 스크립트를 먼저 준비해야 [!DNL PostgreSQL]합니다.
+[!DNL RStudio]을(를) 설치한 후 나타나는 *콘솔* 화면에서 먼저 [!DNL PostgreSQL]을(를) 사용할 R 스크립트를 준비해야 합니다.
 
 ```r
 install.packages("RPostgreSQL")
@@ -26,7 +26,7 @@ require("RPostgreSQL")
 require("rstudioapi")
 ```
 
-사용할 R 스크립트를 준비하면 [!DNL PostgreSQL]이제 [!DNL RStudio] 드라이버를 로드하여 [!DNL Query Service] [!DNL PostgreSQL] 연결할 수 있습니다.
+[!DNL PostgreSQL]을 사용하도록 R 스크립트를 준비했으면 [!DNL PostgreSQL] 드라이버를 로드하여 [!DNL RStudio]을 [!DNL Query Service]에 연결할 수 있습니다.
 
 ```r
 drv <- dbDriver("PostgreSQL")
@@ -41,18 +41,18 @@ con <- dbConnect(drv,
 | 속성 | 설명 |
 | -------- | ----------- |
 | `{DATABASE_NAME}` | 사용할 데이터베이스의 이름입니다. |
-| `{HOST_NUMBER` 및 `{PORT_NUMBER}` | 쿼리 서비스에 대한 호스트 끝점 및 포트입니다. |
-| `{USERNAME}` 및 `{PASSWORD}` | 사용할 로그인 자격 증명입니다. 사용자 이름은 형식을 사용합니다 `ORG_ID@AdobeOrg`. |
+| `{HOST_NUMBER` 및 `{PORT_NUMBER}` | 쿼리 서비스에 대한 호스트 끝점과 포트입니다. |
+| `{USERNAME}` 및 `{PASSWORD}` | 사용할 로그인 자격 증명입니다. 사용자 이름은 `ORG_ID@AdobeOrg` 형식을 사용합니다. |
 
 >[!NOTE]
 >
->데이터베이스 이름, 호스트, 포트 및 로그인 자격 증명을 찾는 방법에 대한 자세한 내용은 플랫폼의 [자격 증명 페이지를 참조하십시오](https://platform.adobe.com/query/configuration). 자격 증명을 찾으려면 로그인하고 쿼리 [!DNL Platform]를 **[!UICONTROL 클릭한 다음 자격 증명]**&#x200B;을 **[!UICONTROL 클릭합니다]**.
+>데이터베이스 이름, 호스트, 포트 및 로그인 자격 증명을 찾는 방법에 대한 자세한 내용은 플랫폼](https://platform.adobe.com/query/configuration)의 [자격 증명 페이지를 참조하십시오. 자격 증명을 찾으려면 [!DNL Platform]에 로그인하고 **[!UICONTROL 쿼리]**&#x200B;를 클릭한 다음 **[!UICONTROL 자격 증명]**&#x200B;을 클릭합니다.
 
 ## 다음 단계
 
-이제 연결되어 있으므로 쿼리를 작성하여 SQL 문 [!DNL Query Service]을 실행하고 편집할 수 있습니다. 예를 들어 쿼리 `dbGetQuery(con, sql)` 를 실행하는 데 사용할 수 있습니다. 여기서 `sql` 는 실행할 SQL 쿼리입니다.
+이제 [!DNL Query Service]에 연결되었으므로 쿼리를 작성하여 SQL 문을 실행하고 편집할 수 있습니다. 예를 들어 `dbGetQuery(con, sql)`을 사용하여 쿼리를 실행할 수 있습니다. 여기서 `sql`은 실행하려는 SQL 쿼리입니다.
 
-다음 쿼리는 ExperienceEvents가 [포함된](../creating-queries/experience-event-queries.md) 데이터 세트를 사용하고 장치의 화면 높이로 인해 웹 사이트의 페이지 보기 막대 그래프를 만듭니다.
+다음 쿼리는 [ExperienceEvents](../best-practices/experience-event-queries.md)를 포함하는 데이터 세트를 사용하고 장치의 화면 높이에 따라 웹 사이트의 페이지 보기 막대 그래프를 만듭니다.
 
 ```sql
 df_pageviews <- dbGetQuery(con,
@@ -87,4 +87,4 @@ df_pageviews
 7 600-699 3097040
 ```
 
-쿼리를 작성하고 실행하는 방법에 대한 자세한 내용은 [실행 쿼리 안내서를 참조하십시오](../creating-queries/creating-queries.md).
+쿼리를 작성하고 실행하는 방법에 대한 자세한 내용은 [쿼리 실행 안내서](../best-practices/writing-queries.md)를 참조하십시오.
