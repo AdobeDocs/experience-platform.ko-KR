@@ -5,7 +5,7 @@ title: Adobe 정의 함수
 topic: functions
 description: 이 문서에서는 쿼리 서비스에서 사용할 수 있는 Adobe 정의 함수에 대한 정보를 제공합니다.
 translation-type: tm+mt
-source-git-commit: c95f976efd4a281640d2f47888b34bdd12a6c7a8
+source-git-commit: e15229601d35d1155fc9a8ab9296f8c41811ebf9
 workflow-type: tm+mt
 source-wordcount: '2889'
 ht-degree: 2%
@@ -120,7 +120,7 @@ SESS_START_IF({TIMESTAMP}, {TEST_EXPRESSION}) OVER ({PARTITION} {ORDER} {FRAME})
 | 매개 변수 | 설명 |
 | --------- | ----------- |
 | `{TIMESTAMP}` | 데이터 세트에 있는 타임스탬프 필드입니다. |
-| `{TEST_EXPRESSION}` | 데이터 필드를 확인하려는 표현식입니다. 예, `application.launches > 0`. |
+| `{TEST_EXPRESSION}` | 데이터 필드를 확인하려는 표현식입니다. 예: `application.launches > 0`. |
 
 `OVER()` 함수 내의 매개 변수에 대한 설명은 [window functions 섹션](#window-functions)에서 찾을 수 있습니다.
 
@@ -185,7 +185,7 @@ SESS_END_IF({TIMESTAMP}, {TEST_EXPRESSION}) OVER ({PARTITION} {ORDER} {FRAME})
 | 매개 변수 | 설명 |
 | --------- | ----------- |
 | `{TIMESTAMP}` | 데이터 세트에 있는 타임스탬프 필드입니다. |
-| `{TEST_EXPRESSION}` | 데이터 필드를 확인하려는 표현식입니다. 예, `application.launches > 0`. |
+| `{TEST_EXPRESSION}` | 데이터 필드를 확인하려는 표현식입니다. 예: `application.launches > 0`. |
 
 `OVER()` 함수 내의 매개 변수에 대한 설명은 [window functions 섹션](#window-functions)에서 찾을 수 있습니다.
 
@@ -511,7 +511,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 이 쿼리는 조건 후 또는 그 이전에 만료되는 대상 [!DNL Experience Event] 데이터 세트에 있는 단일 채널에 대한 마지막 터치 속성 값과 세부 사항을 반환합니다. 쿼리는 선택한 채널에 대해 반환되는 각 행에 대한 마지막 터치 값, 타임스탬프 및 속성이 있는 `struct` 개체를 반환합니다.
 
-이 쿼리는 선택한 조건에 따라 결정되는 [!DNL Experience Event] 데이터 세트 중 일부 내에서 일련의 고객 작업에서 마지막 상호 작용을 보려는 경우에 유용합니다. 아래 예에서, 구매는 결과(7월 15일, 21일, 23일 및 29일)에 표시된 4일 각각에 대해 기록되며, 매일의 마지막 추적 코드는 고객 작업에 대한 100%(`commerce.purchases.value IS NOT NULL`) 권한을 부여합니다.`1.0`
+이 쿼리는 선택한 조건에 따라 결정되는 [!DNL Experience Event] 데이터 세트 중 일부 내에서 일련의 고객 작업에서 마지막 상호 작용을 보려는 경우에 유용합니다. 아래 예에서, 구매는 결과(7월 15일, 21일, 23일 및 29일)에 표시된 4일 각각에 대해 기록되며, 매일의 마지막 추적 코드는 고객 작업에 대한 100%(`1.0`) 권한을 부여합니다.`commerce.purchases.value IS NOT NULL`
 
 **쿼리 구문**
 
@@ -667,14 +667,14 @@ PREVIOUS({KEY}, {SHIFT}, {IGNORE_NULLS}) OVER ({PARTITION} {ORDER} {FRAME})
 **쿼리 예**
 
 ```sql
-SELECT endUserIds._experience.mcid.id, _experience.analytics.session.num, timestamp, web.webPageDetails.name
+SELECT endUserIds._experience.mcid.id, timestamp, web.webPageDetails.name
     PREVIOUS(web.webPageDetails.name, 3)
-      OVER(PARTITION BY endUserIds._experience.mcid.id, _experience.analytics.session.num
+      OVER(PARTITION BY endUserIds._experience.mcid.id
            ORDER BY timestamp
            ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW)
       AS previous_page
 FROM experience_events
-ORDER BY endUserIds._experience.mcid.id, _experience.analytics.session.num, timestamp ASC
+ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 ```
 
 **결과**
@@ -723,7 +723,7 @@ SELECT endUserIds._experience.aaid.id, timestamp, web.webPageDetails.name,
       OVER(PARTITION BY endUserIds._experience.aaid.id
            ORDER BY timestamp
            ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING)
-      AS previous_page
+      AS next_page
 FROM experience_events
 ORDER BY endUserIds._experience.aaid.id, timestamp ASC
 LIMIT 10
@@ -881,7 +881,7 @@ LIMIT 10
 
 ## 다음 단계
 
-여기에 설명된 기능을 사용하여 [!DNL Query Service]을(를) 사용하여 자신의 [!DNL Experience Event] 데이터 세트에 액세스하는 쿼리를 작성할 수 있습니다. [!DNL Query Service]에서의 쿼리 작성에 대한 자세한 내용은 [쿼리 만들기](../creating-queries/creating-queries.md)에 대한 설명서를 참조하십시오.
+여기에 설명된 기능을 사용하여 [!DNL Query Service]을(를) 사용하여 자신의 [!DNL Experience Event] 데이터 세트에 액세스하는 쿼리를 작성할 수 있습니다. [!DNL Query Service]에서의 쿼리 작성에 대한 자세한 내용은 [쿼리 만들기](../best-practices/writing-queries.md)에 대한 설명서를 참조하십시오.
 
 ## Journey Orchestration용
 
