@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;data deduplication;deduplication;
+keywords: Experience Platform;홈;인기 항목;쿼리 서비스;데이터 중복 제거;데이터 중복 제거;home;popular topics;query service;data deduplication;deduplication
 solution: Experience Platform
 title: 데이터 중복 제거
 topic: queries
@@ -8,7 +8,7 @@ description: 이 문서에서는 경험 이벤트, 구매 및 지표의 세 가�
 translation-type: tm+mt
 source-git-commit: e2c648829bb3268ab319da934f5cc6cc811290b3
 workflow-type: tm+mt
-source-wordcount: '479'
+source-wordcount: '491'
 ht-degree: 0%
 
 ---
