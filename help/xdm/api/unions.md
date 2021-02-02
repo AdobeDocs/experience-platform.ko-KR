@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;union;Union;unions;Unions;segmentMembership;timeSeriesEvents;
+keywords: Experience Platform;홈;인기 항목;api;XDM;XDM 시스템;경험 데이터 모델;경험 데이터 모델;데이터 모델;데이터 모델;스키마 레지스트리;스키마 레지스트리;결합;결합;결합;Union;segmentMembership;timeSeriesEvents;home;XDM;XDM;experience data model;Model;Data model;Model;Model;Data Model;Model;Model;Data Data Model;Data Model;Data Model;Data Data Model;Model;Model;Data Data-Model;Data Model;Model;Data-Model;Data Model;Data-Model;Data Data-Model;Model;Model;Data Data-Model;Model;Data Data Model;Model;Model;Model;Model;Union;Union;Union;Union;Union;Union;Union;Union;Union;Union;Union;union;
 solution: Experience Platform
 title: 조합
 description: 스키마 레지스트리 API의 /union 끝점을 사용하면 경험 응용 프로그램에서 XDM 결합 스키마를 프로그래밍 방식으로 관리할 수 있습니다.
@@ -7,7 +7,7 @@ topic: developer guide
 translation-type: tm+mt
 source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
 workflow-type: tm+mt
-source-wordcount: '877'
+source-wordcount: '910'
 ht-degree: 1%
 
 ---
