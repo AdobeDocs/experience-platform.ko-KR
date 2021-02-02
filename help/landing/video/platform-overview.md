@@ -9,9 +9,9 @@ doc-type: video
 activity: understand
 thumbnail: 32797.jpg
 translation-type: tm+mt
-source-git-commit: 72f60ef80a23f5ca4e70147ee6aa6027028fefd0
+source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
 workflow-type: tm+mt
-source-wordcount: '53'
+source-wordcount: '55'
 ht-degree: 0%
 
 ---
@@ -19,6 +19,8 @@ ht-degree: 0%
 
 # Adobe Experience Platform 개요
 
-이 비디오에서는 Experience Platform의 정의와 기업이 해결하는 비즈니스 과제에 대한 간략한 개요를 제공합니다. 자세한 내용은 [Experience Platform 개요 설명서를 참조하십시오](../home.md).
+이 비디오에서는 Experience Platform에 대한 간단한 소개 내용을 제공하며 이 비디오에서 해결하는 몇 가지 비즈니스 과제를 간략하게 설명합니다.
+
+자세한 내용을 보려면 [Experience Platform 개요](../home.md)를 읽으십시오.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32797?quality=12&learn=on)
