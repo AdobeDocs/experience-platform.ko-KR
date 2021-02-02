@@ -1,11 +1,11 @@
 ---
-keywords: rtcdp segments;segment builder rtcdp;rtcdp segment;customer ai rtcdp
+keywords: rcdp 세그먼트;세그먼트 빌더 rtcdp;rtcdp 세그먼트;고객 ai rcdp
 title: 실시간 고객 데이터 플랫폼의 고객 AI
 description: 고객 AI에 대한 개요와 전환 또는 이탈과 같은 특정 결과에 대한 점수를 생성하는 데 도움이 되는 방법을 소개합니다.
 translation-type: tm+mt
 source-git-commit: de2f4b16677ec6e820903b1e586213a132b126be
 workflow-type: tm+mt
-source-wordcount: '294'
+source-wordcount: '304'
 ht-degree: 0%
 
 ---
