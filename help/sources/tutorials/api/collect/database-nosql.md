@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;database database;third party database
+keywords: Experience Platform;홈;인기 항목;데이터베이스 데이터베이스;타사 데이터베이스
 solution: Experience Platform
 title: 소스 커넥터 및 API를 통해 데이터베이스에서 데이터 수집
 topic: overview
 type: Tutorial
 description: 이 자습서에서는 소스 커넥터 및 API를 통해 데이터베이스에서 데이터를 검색하고 이를 플랫폼에 인제스트하는 절차를 다룹니다.
 translation-type: tm+mt
-source-git-commit: 326de658736387ab42cd2348a052c5c5217b6c2e
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '1610'
+source-wordcount: '1624'
 ht-degree: 1%
 
 ---
@@ -39,7 +39,7 @@ ht-degree: 1%
 
 ### 필수 헤더에 대한 값 수집
 
-플랫폼 API를 호출하려면 먼저 [인증 자습서](../../../../tutorials/authentication.md)를 완료해야 합니다. 인증 자습서를 완료하면 아래와 같이 모든 Experience Platform API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
+플랫폼 API를 호출하려면 먼저 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 완료해야 합니다. 인증 자습서를 완료하면 아래와 같이 모든 Experience Platform API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
