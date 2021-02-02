@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;Collect eCommerce data;eCommerce data
+keywords: Experience Platform;홈;인기 항목;전자 상거래 데이터 수집;eCommerce 데이터
 solution: Experience Platform
 title: 소스 커넥터 및 API를 통해 전자 상거래 데이터 수집
 topic: overview
 type: Tutorial
 description: 이 자습서에서는 제3자 eCommerce 시스템에서 데이터를 검색하고 소스 커넥터 및 API를 통해 플랫폼에 데이터를 수집하는 절차를 다룹니다.
 translation-type: tm+mt
-source-git-commit: a7a7c52f5b0c57562039883ae8ff48efefbcbbf5
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '1475'
+source-wordcount: '1489'
 ht-degree: 1%
 
 ---
@@ -39,7 +39,7 @@ ht-degree: 1%
 
 ### 필수 헤더에 대한 값 수집
 
-[!DNL Platform] API를 호출하려면 먼저 [인증 자습서](../../../../tutorials/authentication.md)를 완료해야 합니다. 인증 자습서를 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
+[!DNL Platform] API를 호출하려면 먼저 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 완료해야 합니다. 인증 자습서를 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
