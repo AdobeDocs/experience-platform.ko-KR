@@ -1,26 +1,27 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;홈;인기 항목
 solution: Experience Platform
-title: 동의
+title: 동의 끝점
 topic: developer guide
+description: Privacy Service API를 사용하여 Experience Cloud 응용 프로그램에 대한 고객 동의 요청을 관리하는 방법을 알아봅니다.
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: 238a9200e4b43d41335bed0efab079780b252717
 workflow-type: tm+mt
-source-wordcount: '220'
+source-wordcount: '243'
 ht-degree: 1%
 
 ---
 
 
-# 동의
+# 동의 끝점
 
-개인 데이터를 수집하기 전에 명시적인 고객 동의를 요구하는 규정도 있었다. API의 `/consent` 종단점을 통해 고객 동의 요청을 처리하고 이를 개인 정보 보호 워크플로우에 통합할 수 있습니다 [!DNL Privacy Service] .
+특정 규정에는 개인 데이터를 수집하기 전에 명시적 고객의 동의를 요구합니다. [!DNL Privacy Service] API의 `/consent` 종단점을 사용하면 고객 동의 요청을 처리하고 이를 개인 정보 보호 워크플로우에 통합할 수 있습니다.
 
-이 안내서를 사용하기 전에 아래의 예제 API 호출에 제시된 필수 인증 헤더에 대한 [정보는 시작하기](./getting-started.md) 섹션을 참조하십시오.
+이 안내서를 사용하기 전에 아래의 예제 API 호출에 있는 필수 인증 헤더에 대한 자세한 내용은 [시작하기](./getting-started.md) 섹션을 참조하십시오.
 
 ## 고객 동의 요청 처리
 
-종단점에 POST 요청을 하여 동의 요청이 `/consent` 처리됩니다.
+동의 요청은 `/consent` 끝점에 POST 요청을 하여 처리됩니다.
 
 **API 형식**
 
@@ -30,7 +31,7 @@ POST /consent
 
 **요청**
 
-다음 요청은 배열에 제공된 사용자 ID에 대한 새 동의 작업을 `entities` 만듭니다.
+다음 요청은 `entities` 배열에 제공된 사용자 ID에 대한 새 동의 작업을 만듭니다.
 
 ```shell
 curl -X POST \
@@ -61,15 +62,15 @@ curl -X POST \
 
 | 속성 | 설명 |
 | --- | --- |
-| `optOutOfSale` | true로 설정된 경우 제공된 사용자가 개인 데이터 판매 또는 공유를 `entities` 거부하려고 함을 나타냅니다. |
-| `entities` | 동의 요청이 적용되는 사용자를 나타내는 개체 배열. 각 개체에는 해당 네임스페이스와 개별 사용자 `namespace` 를 일치시킬 수 `values` 있는 하나의 배열 및 배열이 포함됩니다. |
-| `nameSpace` | 배열의 각 개체는 Privacy Service API에서 인식하는 `entities` 표준 ID 네임스페이스 [](./appendix.md#standard-namespaces) 중 하나를 포함해야 합니다. |
-| `values` | 제공된 값과 일치하는 각 사용자에 대한 값 배열 `nameSpace`. |
+| `optOutOfSale` | true로 설정된 경우 `entities`에 제공된 사용자가 개인 데이터의 판매 또는 공유를 거부하려고 함을 나타냅니다. |
+| `entities` | 동의 요청이 적용되는 사용자를 나타내는 개체 배열입니다. 각 객체에는 해당 네임스페이스의 개별 사용자와 일치시키는 `namespace` 및 `values` 배열이 포함됩니다. |
+| `nameSpace` | `entities` 배열의 각 개체는 Privacy Service API에서 인식하는 [표준 ID 네임스페이스](./appendix.md#standard-namespaces) 중 하나를 포함해야 합니다. |
+| `values` | 제공된 `nameSpace`에 해당하는 각 사용자의 값 배열입니다. |
 
 >[!NOTE]
 >
->전송할 고객 ID 값을 결정하는 방법에 대한 자세한 내용 [!DNL Privacy Service]은 ID 데이터 [제공 가이드를 참조하십시오](../identity-data.md).
+>[!DNL Privacy Service]에 보낼 고객 ID 값을 결정하는 방법에 대한 자세한 내용은 [ID 데이터](../identity-data.md)를 제공하는 가이드를 참조하십시오.
 
 **응답**
 
-성공적인 응답은 페이로드가 없는 HTTP 상태 202(허용됨)를 반환하여 요청이 수락되었으며 처리 중임을 [!DNL Privacy Service] 나타냅니다.
+성공적인 응답은 페이로드가 없는 HTTP 상태 202(허용됨)를 반환하고, 요청이 [!DNL Privacy Service]에 의해 수락되고 처리 중임을 나타냅니다.
