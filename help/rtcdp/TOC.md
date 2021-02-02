@@ -5,10 +5,10 @@ audience: user
 user-guide-title: 실시간 고객 데이터 플랫폼 안내서
 user-guide-description: 여러 엔터프라이즈 소스에서 알려진 데이터와 익명의 데이터를 결합하여 고객 프로필을 생성하고, 이러한 프로필에서 고객 세그먼트를 생성하며, 이러한 세그먼트를 제3자 대상으로 활성화할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: de2f4b16677ec6e820903b1e586213a132b126be
+source-git-commit: 4a282f8890ace3be7808ffbf018377d792e30cb7
 workflow-type: tm+mt
-source-wordcount: '126'
-ht-degree: 42%
+source-wordcount: '109'
+ht-degree: 49%
 
 ---
 
@@ -29,9 +29,6 @@ ht-degree: 42%
 * 개인 정보 및 데이터 거버넌스 {#privacy}
    * [개인 정보 보호 개요](privacy/privacy-overview.md)
    * [데이터 거버넌스 개요](privacy/data-governance-overview.md)
-   * IAB TCF 2.0 지원 {#iab}
-      * [실시간 CDP의 IAB TCF 2.0 지원](privacy/iab/overview.md)
-      * [IAB TCF 2.0 동의 데이터를 캡처하기 위한 데이터 집합 만들기](privacy/iab/dataset-preparation.md)
 * 프로필 {#profile}
    * [프로필 개요](profile/profile-overview.md)
    * [ID 및 ID 네임스페이스](profile/identities-overview.md)
