@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;preview;sample
+keywords: Experience Platform;프로필;실시간 고객 프로필;문제 해결;API;미리 보기;sample
 title: 프로필 미리 보기 - 실시간 고객 프로필 API
-description: Adobe Experience Platform을 사용하면 여러 소스에서 고객 데이터를 수집하여 개별 고객을 위한 강력한 통합 프로파일을 구축할 수 있습니다. 실시간 고객 프로파일에 대해 활성화된 데이터가 플랫폼으로 수집되므로 프로필 데이터 저장소 내에 저장됩니다. 프로필 저장소의 레코드 수가 늘어나거나 줄어들면서 데이터 저장소에 있는 프로필 조각 및 병합된 프로필 수에 대한 정보가 포함된 샘플 작업이 실행됩니다. 프로필 API를 사용하면 성공적인 최신 샘플뿐만 아니라 데이터 세트 및 ID 네임스페이스별로 프로필 배포를 나열할 수 있습니다.
+description: 실시간 고객 프로필 API 끝점을 사용하면 Adobe Experience Platform 내의 데이터 세트 및 ID 네임스페이스별 목록 프로필 배포뿐만 아니라 프로필 데이터의 최신 성공 샘플도 미리 볼 수 있습니다.
 topic: guide
 translation-type: tm+mt
-source-git-commit: 47c65ef5bdd083c2e57254189bb4a1f1d9c23ccc
+source-git-commit: fe93a3672f65168744b3a242be7f42012f323544
 workflow-type: tm+mt
-source-wordcount: '1608'
+source-wordcount: '1554'
 ht-degree: 1%
 
 ---
@@ -14,27 +14,27 @@ ht-degree: 1%
 
 # 샘플 상태 끝점 미리 보기(프로필 미리 보기)
 
-Adobe Experience Platform을 사용하면 여러 소스에서 고객 데이터를 수집하여 개별 고객을 위한 강력한 통합 프로파일을 구축할 수 있습니다. 실시간 고객 프로파일에 대해 활성화된 데이터가 인제스트되어 프로필 데이터 저장소 [!DNL Platform]에 저장됩니다.
+Adobe Experience Platform을 사용하면 여러 소스에서 고객 데이터를 인제스트하여 개별 고객을 위한 강력한 통합 프로파일을 구축할 수 있습니다. 실시간 고객 프로파일에 대해 활성화된 데이터를 [!DNL Platform]으로 인제스트하면 프로필 데이터 저장소 내에 저장됩니다.
 
-프로필 스토어에 레코드 수집이 전체 프로필 수를 5% 이상 늘리거나 줄이면 작업이 트리거되어 카운트를 업데이트합니다. 스트리밍 데이터 워크플로우의 경우 시간별로 검사하여 5% 증가 또는 감소 임계값이 충족되었는지 확인합니다. 이 경우 작업이 자동으로 트리거되어 카운트가 업데이트됩니다. 일괄 처리 수정의 경우, 배치를 성공적으로 프로필 스토어에 인제스트한 후 15분 이내에 5% 증가 또는 감소 임계값이 충족되면 작업이 실행되어 카운트를 업데이트합니다. 프로필 API를 사용하면 성공적인 최신 샘플 작업을 미리 볼 수 있을 뿐만 아니라 데이터 세트 및 ID 네임스페이스별 프로필 배포를 나열할 수 있습니다.
+프로필 스토어에 레코드를 수집하면 총 프로필 수가 5% 이상 증가하거나 감소하면 작업이 트리거되어 카운트를 업데이트합니다. 스트리밍 데이터 워크플로우의 경우 시간별로 검사하여 5% 증가 또는 감소 임계값이 충족되었는지 확인합니다. 있는 경우 작업이 자동으로 트리거되어 카운트가 업데이트됩니다. 배치를 성공적으로 Profile Store에 인제스트한 후 15분 이내에 5% 증가 또는 감소 임계값이 충족되면 작업을 실행하여 카운트를 업데이트합니다. 프로필 API를 사용하면 성공적인 최신 샘플 작업을 미리 볼 수 있을 뿐만 아니라 데이터 세트 및 ID 네임스페이스별 프로필 배포를 나열할 수 있습니다.
 
-이러한 지표는 Experience Platform UI의 [!UICONTROL 프로필] 섹션 내에서도 사용할 수 있습니다. UI를 사용하여 프로필 데이터에 액세스하는 방법에 대한 자세한 내용은 [[!DNL Profile] 사용자 안내서를 참조하십시오](../ui/user-guide.md).
+이러한 지표는 Experience Platform UI의 [!UICONTROL 프로필] 섹션 내에서도 사용할 수 있습니다. UI를 사용하여 프로필 데이터에 액세스하는 방법에 대한 자세한 내용은 [[!DNL Profile] 사용자 안내서](../ui/user-guide.md)를 참조하십시오.
 
 ## 시작하기
 
-이 안내서에서 사용되는 API 끝점은 [[!DNL Real-time Customer Profile] API의 일부입니다](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). 계속하기 전에 [시작하기 가이드](getting-started.md) 에서 관련 문서 링크, 이 문서에서 샘플 API 호출 읽기 안내서, 모든 API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요 정보를 검토하십시오 [!DNL Experience Platform] .
+이 안내서에 사용된 API 끝점은 [[!DNL Real-time Customer Profile] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)의 일부입니다. 계속하기 전에 [시작하기 안내서](getting-started.md)에서 관련 설명서에 대한 링크, 이 문서에서 샘플 API 호출 읽기 안내서, 모든 [!DNL Experience Platform] API를 성공적으로 호출하기 위해 필요한 필수 헤더에 대한 중요 정보를 검토하십시오.
 
 ## 프로필 조각과 병합된 프로필 비교
 
-이 안내서에서는 &quot;프로필 조각&quot;과 &quot;병합된 프로필&quot;을 모두 참조합니다. 계속하기 전에 이러한 용어 간의 차이점을 이해하는 것이 중요합니다.
+이 안내서는 &quot;프로필 조각&quot;과 &quot;병합된 프로필&quot;을 모두 참조합니다. 계속하기 전에 이러한 용어 간의 차이를 이해하는 것이 중요합니다.
 
-각 개별 고객 프로파일은 해당 고객에 대한 단일 뷰를 구성하기 위해 병합된 여러 프로필 조각으로 구성됩니다. 예를 들어 고객이 여러 채널에서 브랜드와 상호 작용하는 경우 조직은 단일 고객과 관련된 여러 프로필 조각을 여러 데이터 세트에 표시할 수 있습니다. 이러한 조각을 Platform(플랫폼)으로 인제스트하면 병합 정책에 따라 병합되어 해당 고객에 대한 단일 프로파일을 만듭니다. 따라서 각 프로필은 여러 조각으로 구성되므로 전체 프로필 조각 수는 병합된 프로필의 총 수보다 항상 클 수 있습니다.
+각 개별 고객 프로필은 여러 프로필 조각으로 구성되며, 병합되어 해당 고객에 대한 단일 보기를 형성합니다. 예를 들어 고객이 여러 채널에서 브랜드와 상호 작용하는 경우 조직은 여러 데이터 세트에 나타나는 해당 단일 고객과 관련된 여러 프로필 조각을 갖게 됩니다. 이러한 조각을 Platform(플랫폼)으로 인제스트하면 병합 정책에 따라 병합하여 해당 고객에 대한 단일 프로파일을 만듭니다. 따라서 각 프로파일이 여러 조각으로 구성되므로 전체 프로필 조각 수는 항상 병합된 프로필의 총 수보다 클 수 있습니다.
 
 ## 마지막 샘플 상태 보기 {#view-last-sample-status}
 
-종단점에 대한 GET 요청을 수행하여 IMS 조직에 대해 실행된 마지막 성공 샘플 작업에 대한 세부 사항을 볼 수 있습니다. `/previewsamplestatus` 여기에는 샘플에 있는 총 프로필 수, 프로필 수 지표 또는 Experience Platform 내에 있는 조직의 총 프로필 수가 포함됩니다. 프로필 개수는 프로필 조각을 병합한 후 생성되어 각 개별 고객에 대한 단일 프로필을 형성합니다. 즉, 조직은 여러 채널에서 브랜드와 상호 작용하는 단일 고객과 관련된 여러 프로필 조각을 가질 수 있지만 이러한 조각은 기본 병합 정책에 따라 병합되며 &quot;1&quot; 프로필의 개수가 반환됩니다. 모두 동일한 개인과 관련되어 있기 때문입니다.
+`/previewsamplestatus` 끝점에 대한 GET 요청을 수행하여 IMS 조직에 대해 실행된 마지막으로 성공한 샘플 작업에 대한 세부 정보를 볼 수 있습니다. 여기에는 샘플에 있는 총 프로필 수, 프로필 수 지표 또는 Experience Platform 내에 있는 총 프로필 수가 포함됩니다. 프로필 개수는 프로필 조각을 병합한 후 생성되어 각 개별 고객에 대한 단일 프로필을 형성합니다. 즉, 조직에 여러 채널을 통해 브랜드와 상호 작용하는 단일 고객과 관련된 여러 프로필 조각이 있을 수 있지만 이러한 조각은 기본 병합 정책에 따라 병합되며 &quot;1&quot; 프로필의 개수가 모두 동일한 개인과 관련되어 있기 때문에 반환됩니다.
 
-프로필 수에는 속성(레코드 데이터)이 있는 프로필 및 Adobe Analytics 프로필과 같은 시간 시리즈(이벤트) 데이터만 포함된 프로파일도 모두 포함됩니다. 플랫폼 내에서 최신 총 프로필 수를 제공하기 위해 프로필 데이터를 수집하므로 샘플 작업은 정기적으로 새로 고쳐집니다.
+프로필 수에는 속성(레코드 데이터)이 있는 프로필 및 Adobe Analytics 프로필과 같은 시간 시리즈(이벤트) 데이터만 포함된 프로파일도 모두 포함됩니다. Platform(플랫폼) 내에서 최신 총 프로필 수를 제공하기 위해 프로필 데이터를 인제스트할 때 샘플 작업은 정기적으로 새로 고쳐집니다.
 
 **API 형식**
 
@@ -55,11 +55,11 @@ curl -X GET \
 
 **응답**
 
-응답에는 IMS 조직에 대해 실행된 마지막 성공 샘플 작업에 대한 세부 정보가 포함됩니다.
+응답에는 IMS 조직에 대해 실행된 마지막 성공적인 샘플 작업에 대한 세부 사항이 포함됩니다.
 
 >[!NOTE]
 >
->이 예제 응답에서 `numRowsToRead` 는 `totalRows` 서로 같습니다. Experience Platform에 있는 조직의 프로필 수에 따라 이러한 경우가 해당될 수 있습니다. 그러나 일반적으로 이 두 숫자는 전체 프로필 수( `numRowsToRead``totalRows`)의 하위 집합으로 샘플을 나타내므로 더 작은 숫자가 되므로 차이가 있습니다.
+>이 예제 응답에서 `numRowsToRead` 및 `totalRows`는 서로 같습니다. Experience Platform에 있는 프로필 수에 따라 이러한 경우가 발생할 수 있습니다. 그러나 일반적으로 이러한 두 숫자는 서로 다르며, 샘플이 전체 프로필 수(`totalRows`)의 하위 집합으로 표시되기 때문에 `numRowsToRead`은 더 작은 숫자입니다.
 
 ```json
 {
@@ -83,22 +83,22 @@ curl -X GET \
 
 | 속성 | 설명 |
 |---|---|
-| `numRowsToRead` | 샘플에 있는 병합된 프로필의 총 수입니다. |
-| `sampleJobRunning` | 샘플 작업이 진행 중일 `true` 때 반환하는 부울 값입니다. 일괄 처리 파일이 프로필 스토어에 실제로 추가되는 시점까지 발생하는 지연에 대한 투명도를 제공합니다. |
+| `numRowsToRead` | 샘플에 병합된 프로필의 총 수입니다. |
+| `sampleJobRunning` | 샘플 작업이 진행 중일 때 `true`을 반환하는 부울 값입니다. 일괄 처리 파일이 프로필 스토어에 실제로 추가될 때까지 지연이 발생하는 지연에 대한 투명도를 제공합니다. |
 | `cosmosDocCount` | Cosmos의 총 문서 수입니다. |
 | `totalFragmentCount` | 프로필 저장소의 총 프로필 조각 수입니다. |
-| `lastSuccessfulBatchTimestamp` | 마지막으로 성공한 일괄 처리 타임스탬프. |
-| `streamingDriven` | *이 필드는 더 이상 사용되지 않으며 응답에 중요도가 없습니다.* |
-| `totalRows` | &#39;프로필 수&#39;로도 알려진 경험 플랫폼의 병합된 총 프로필 수입니다. |
+| `lastSuccessfulBatchTimestamp` | 마지막으로 성공한 일괄 처리 통합 타임스탬프. |
+| `streamingDriven` | *이 필드는 사용되지 않으며 응답에 대한 중요도가 없습니다.* |
+| `totalRows` | 경험 플랫폼의 병합된 총 프로필 수(&#39;프로필 수&#39;로도 알려져 있습니다.) |
 | `lastBatchId` | 마지막 일괄 처리 ID. |
 | `status` | 마지막 샘플의 상태입니다. |
-| `samplingRatio` | 십진수 형식의 백분율로 표현되는 병합된 프로필`numRowsToRead`(`totalRows`)의 전체 병합된 프로필입니다. |
+| `samplingRatio` | 총 병합된 프로필(`numRowsToRead`)에 대한 병합된 프로필 비율(`totalRows`)은 소수 형식으로 표현됩니다. |
 | `mergeStrategy` | 샘플에 사용된 병합 전략입니다. |
 | `lastSampledTimestamp` | 마지막으로 성공한 샘플 타임스탬프. |
 
 ## 데이터 세트별 프로필 배포 목록
 
-데이터 세트별 프로필 배포를 보려면 종단점에 대한 GET 요청을 수행할 수 `/previewsamplestatus/report/dataset` 있습니다.
+데이터 집합별 프로필 배포를 보려면 `/previewsamplestatus/report/dataset` 끝점에 대한 GET 요청을 수행할 수 있습니다.
 
 **API 형식**
 
@@ -109,11 +109,11 @@ GET /previewsamplestatus/report/dataset?{QUERY_PARAMETERS}
 
 | 매개 변수 | 설명 |
 |---|---|
-| `date` | 반환할 보고서 날짜를 지정합니다. 날짜에 여러 보고서가 실행되면 해당 날짜에 대한 최근 보고서가 반환됩니다. 지정된 날짜에 보고서가 존재하지 않으면 404 오류가 반환됩니다. 날짜를 지정하지 않으면 가장 최근 보고서가 반환됩니다. 형식:YYYY-MM-DD. 예: `date=2024-12-31` |
+| `date` | 보고서 반환 날짜를 지정합니다. 날짜에 여러 보고서가 실행되면 해당 날짜에 대한 최근 보고서가 반환됩니다. 지정된 날짜에 보고서가 존재하지 않으면 404 오류가 반환됩니다. 날짜를 지정하지 않으면 가장 최근 보고서가 반환됩니다. 형식:YYYY-MM-DD. 예: `date=2024-12-31` |
 
 **요청**
 
-다음 요청에서는 매개 변수를 사용하여 지정된 날짜에 대한 최신 보고서를 반환합니다. `date`
+다음 요청에서는 `date` 매개 변수를 사용하여 지정된 날짜에 대한 최신 보고서를 반환합니다.
 
 ```shell
 curl -X GET \
@@ -126,11 +126,11 @@ curl -X GET \
 
 **응답**
 
-응답에는 데이터 집합 개체 목록이 포함된 `data` 배열이 포함됩니다. 표시된 응답이 세 개의 데이터 세트를 표시하도록 잘렸습니다.
+응답에는 데이터 집합 개체 목록이 포함된 `data` 배열이 포함됩니다. 표시된 응답이 3개의 데이터 세트를 표시하도록 잘렸습니다.
 
 >[!NOTE]
 >
->날짜에 여러 보고서가 존재하는 경우 최신 보고서만 반환됩니다. 데이터 집합 보고서가 제공된 날짜에 존재하지 않으면 HTTP 상태 404(찾을 수 없음)가 반환됩니다.
+>날짜에 여러 보고서가 존재하면 최신 보고서만 반환됩니다. 제공된 날짜에 데이터 집합 보고서가 존재하지 않으면 HTTP 상태 404(찾을 수 없음)가 반환됩니다.
 
 ```json
 {
@@ -178,26 +178,26 @@ curl -X GET \
 
 | 속성 | 설명 |
 |---|---|
-| `sampleCount` | 이 데이터 집합 ID를 사용한 병합된 프로필의 총 수입니다. |
-| `samplePercentage` | 병합된 프로필의 총 수( `sampleCount` 마지막 샘플 상태로 반환되는 `numRowsToRead` 값)에 대한 백분율로, 십진수 형식으로 표현됩니다 [](#view-last-sample-status). |
-| `fullIDsCount` | 이 데이터 집합 ID를 가진 병합된 프로필의 총 수입니다. |
-| `fullIDsPercentage` | 병합된 프로필의 총 수( `fullIDsCount` 마지막 샘플 상태로 반환되는 `totalRows` 값)의 백분율로, 십진수 형식으로 표현됩니다 [](#view-last-sample-status). |
-| `name` | 데이터 세트를 만드는 동안 제공된 데이터 세트의 이름입니다. |
-| `description` | 데이터 세트를 만드는 동안 제공된 데이터 세트에 대한 설명입니다. |
+| `sampleCount` | 이 데이터 세트 ID를 사용하여 병합된 프로필의 샘플링된 총 수입니다. |
+| `samplePercentage` | 샘플링된 병합된 프로필의 총 수(`numRowsToRead` 값([마지막 샘플 상태](#view-last-sample-status)에서 반환됨)의 백분율로 표시됨)`sampleCount` |
+| `fullIDsCount` | 이 데이터 집합 ID를 사용한 병합된 프로필의 총 수입니다. |
+| `fullIDsPercentage` | 병합된 프로필의 총 수([마지막 샘플 상태](#view-last-sample-status)에서 반환되는 `totalRows` 값)의 백분율로 나타낸 `fullIDsCount`. |
+| `name` | 데이터 집합을 만드는 동안 제공된 데이터 집합의 이름입니다. |
+| `description` | 데이터 집합을 만드는 동안 제공된 데이터 세트에 대한 설명입니다. |
 | `value` | 데이터 세트의 ID입니다. |
-| `streamingIngestionEnabled` | 데이터 세트에 스트리밍 통합 기능이 있는지 여부 |
-| `createdUser` | 데이터 세트를 만든 사용자의 사용자 ID. |
-| `reportTimestamp` | 보고서의 타임스탬프입니다. 요청 중에 `date` 매개 변수가 제공된 경우 반환된 보고서는 제공된 날짜입니다. 매개 변수를 제공하지 않으면 가장 최근 보고서가 반환됩니다. `date` |
+| `streamingIngestionEnabled` | 데이터 세트에 스트리밍 통합 사용 여부. |
+| `createdUser` | 데이터 집합을 만든 사용자의 사용자 ID. |
+| `reportTimestamp` | 보고서의 타임스탬프. 요청 중에 `date` 매개 변수가 제공된 경우 반환된 보고서는 제공된 날짜에 대한 것입니다. `date` 매개 변수를 제공하지 않으면 가장 최근 보고서가 반환됩니다. |
 
 
 
 ## 네임스페이스별 프로필 배포 목록
 
-종단점에 대한 GET 요청을 수행하여 프로필 저장소의 병합된 모든 프로필에 대해 ID 네임스페이스별 분류를 볼 수 있습니다. `/previewsamplestatus/report/namespace` ID 네임스페이스는 고객 데이터와 관련된 컨텍스트의 지표로 사용되는 Adobe Experience Platform ID 서비스의 중요한 구성 요소입니다. 자세한 내용은 [ID 네임스페이스 개요를 참조하십시오](../../identity-service/namespaces.md).
+프로필 저장소에 있는 병합된 모든 프로필에서 ID 네임스페이스별 분류를 보려면 `/previewsamplestatus/report/namespace` 끝점에 GET 요청을 수행할 수 있습니다. ID 네임스페이스는 고객 데이터와 관련된 컨텍스트의 지표로 사용되는 Adobe Experience Platform Identity Service의 중요한 구성 요소입니다. 자세한 내용은 [ID 네임스페이스 개요](../../identity-service/namespaces.md)를 참조하십시오.
 
 >[!NOTE]
 >
->네임스페이스별 총 프로필 수(각 네임스페이스에 대해 표시된 값을 함께 추가)는 하나의 프로필이 여러 네임스페이스와 연결될 수 있으므로 항상 프로필 수 지표보다 높습니다. 예를 들어 고객이 두 개 이상의 채널에서 브랜드와 상호 작용하는 경우 해당 개별 고객과 여러 개의 네임스페이스가 연결됩니다.
+>네임스페이스별 전체 프로필 수(각 네임스페이스에 대해 표시된 값을 함께 추가)는 하나의 프로필이 여러 네임스페이스와 연결될 수 있으므로 항상 프로필 수 지표보다 높습니다. 예를 들어 고객이 두 개 이상의 채널에서 브랜드와 상호 작용하는 경우 여러 네임스페이스가 해당 개별 고객과 연결됩니다.
 
 **API 형식**
 
@@ -208,11 +208,11 @@ GET /previewsamplestatus/report/namespace?{QUERY_PARAMETERS}
 
 | 매개 변수 | 설명 |
 |---|---|
-| `date` | 반환할 보고서 날짜를 지정합니다. 날짜에 여러 보고서가 실행되면 해당 날짜에 대한 최근 보고서가 반환됩니다. 지정된 날짜에 보고서가 존재하지 않으면 404 오류가 반환됩니다. 날짜를 지정하지 않으면 가장 최근 보고서가 반환됩니다. 형식:YYYY-MM-DD. 예: `date=2024-12-31` |
+| `date` | 보고서 반환 날짜를 지정합니다. 날짜에 여러 보고서가 실행되면 해당 날짜에 대한 최근 보고서가 반환됩니다. 지정된 날짜에 보고서가 존재하지 않으면 404 오류가 반환됩니다. 날짜를 지정하지 않으면 가장 최근 보고서가 반환됩니다. 형식:YYYY-MM-DD. 예: `date=2024-12-31` |
 
 **요청**
 
-다음 요청은 매개 변수를 지정하지 않으므로 `date` 가장 최근 보고서를 반환합니다.
+다음 요청은 `date` 매개 변수를 지정하지 않으므로 가장 최근 보고서를 반환합니다.
 
 ```shell
 curl -X GET \
@@ -225,7 +225,7 @@ curl -X GET \
 
 **응답**
 
-응답에는 `data` 배열이 포함되며 각 네임스페이스에 대한 세부 정보가 들어 있습니다. 표시된 응답이 네 개의 네임스페이스를 표시하도록 잘렸습니다.
+응답에는 각 네임스페이스에 대한 세부 정보가 포함된 개별 객체가 포함된 `data` 배열이 포함됩니다. 표시된 응답이 4개의 네임스페이스를 표시하도록 잘렸습니다.
 
 ```json
 {
@@ -277,16 +277,16 @@ curl -X GET \
 
 | 속성 | 설명 |
 |---|---|
-| `sampleCount` | 네임스페이스에 있는 샘플링된 병합된 프로필의 총 수입니다. |
-| `samplePercentage` | 샘플링된 병합된 프로필 `sampleCount` 의 백분율( `numRowsToRead` 마지막 샘플 상태로 [](#view-last-sample-status)반환되는 값)으로서 소수점 형식으로 표시됩니다. |
-| `reportTimestamp` | 보고서의 타임스탬프입니다. 요청 중에 `date` 매개 변수가 제공된 경우 반환된 보고서는 제공된 날짜입니다. 매개 변수를 제공하지 않으면 가장 최근 보고서가 반환됩니다. `date` |
-| `fullIDsFragmentCount` | 네임스페이스에 있는 총 프로필 조각 수입니다. |
+| `sampleCount` | 네임스페이스에서 샘플링된 병합된 프로필의 총 수입니다. |
+| `samplePercentage` | 샘플링된 병합된 프로필의 백분율([마지막 샘플 상태](#view-last-sample-status)에서 반환되는 `numRowsToRead` 값)로 표시되는 `sampleCount`입니다. |
+| `reportTimestamp` | 보고서의 타임스탬프. 요청 중에 `date` 매개 변수가 제공된 경우 반환된 보고서는 제공된 날짜에 대한 것입니다. `date` 매개 변수를 제공하지 않으면 가장 최근 보고서가 반환됩니다. |
+| `fullIDsFragmentCount` | 네임스페이스에 있는 전체 프로필 조각 수입니다. |
 | `fullIDsCount` | 네임스페이스에 있는 병합된 프로필의 총 수입니다. |
-| `fullIDsPercentage` | 병합된 전체 프로필 `fullIDsCount` 의 백분율( `totalRows` 마지막 샘플 상태로 반환되는 값 [](#view-last-sample-status))으로서 소수점 형식으로 표시됩니다. |
-| `code` | 네임스페이스의 `code` 이름입니다. 이는 [Adobe Experience Platform ID 서비스 API를 사용하여 네임스페이스를](../../identity-service/api/list-namespaces.md) 사용하는 경우 찾을 수 있으며 Experience Platform UI에서 [!UICONTROL ID] 기호라고도 합니다. 자세한 내용은 [ID 네임스페이스 개요를 참조하십시오](../../identity-service/namespaces.md). |
-| `value` | 네임스페이스의 `id` 값입니다. ID 서비스 API를 사용하여 네임스페이스를 사용하는 경우 이 [매개 변수를 찾을 수 있습니다](../../identity-service/api/list-namespaces.md). |
+| `fullIDsPercentage` | 병합된 총 프로필([마지막 샘플 상태](#view-last-sample-status)에서 반환되는 `totalRows` 값)의 백분율로, 십진수 형식으로 표현됩니다.`fullIDsCount` |
+| `code` | 네임스페이스의 `code`. 이것은 [Adobe Experience Platform Identity Service API](../../identity-service/api/list-namespaces.md)를 사용하여 네임스페이스를 사용하여 작업할 때 찾을 수 있으며 Experience Platform UI에서 [!UICONTROL ID 기호]라고도 합니다. 자세한 내용은 [ID 네임스페이스 개요](../../identity-service/namespaces.md)를 참조하십시오. |
+| `value` | 네임스페이스의 `id` 값입니다. 이것은 [Identity Service API](../../identity-service/api/list-namespaces.md)를 사용하여 네임스페이스를 사용하여 작업할 때 찾을 수 있습니다. |
 
 ## 다음 단계
 
-유사한 예측과 미리 보기를 사용하여 세그먼트 정의와 관련된 요약 수준 정보를 보고 예상 고객을 분리할 수도 있습니다. 세그먼트 미리 보기 및 [!DNL Adobe Experience Platform Segmentation Service] API를 사용한 예상 작업에 대한 자세한 단계를 살펴보려면 [API 개발자 안내서의 일부인](../../segmentation/api/previews-and-estimates.md)미리 보기 및 예측 엔드포인트 가이드를 [!DNL Segmentation] 참조하십시오.
+유사한 예측과 미리 보기를 사용하여 세그먼트 정의와 관련된 요약 수준 정보를 보고 예상 고객을 분리할 수도 있습니다. [!DNL Adobe Experience Platform Segmentation Service] API를 사용하여 세그먼트 미리 보기 및 견적을 사용하기 위한 자세한 단계를 보려면 [ 미리 보기 및 예상 끝점 안내서](../../segmentation/api/previews-and-estimates.md)를 참조하십시오. [!DNL Segmentation] API 개발자 안내서의 일부입니다.
 
