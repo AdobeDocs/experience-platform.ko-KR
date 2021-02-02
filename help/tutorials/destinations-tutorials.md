@@ -1,22 +1,22 @@
 ---
-keywords: Experience Platform;home;popular topics;destinations tutorial
+keywords: Experience Platform;홈;인기 항목;대상 자습서
 solution: Experience Platform
-title: API를 사용하여 대상 생성 및 데이터 활성화
+title: 대상을 만들고 API를 사용하여 데이터 활성화
 topic: tutorial
 type: Tutorial
-description: 다양한 유형의 대상을 만들고 데이터를 활성화하는 방법을 알아봅니다.
+description: 다양한 유형의 대상을 만들고 데이터를 활성화하는 방법에 대해 학습합니다.
 translation-type: tm+mt
-source-git-commit: d29f7c7243ec798abe60fff895b36277996cb4a0
+source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
 workflow-type: tm+mt
-source-wordcount: '78'
-ht-degree: 10%
+source-wordcount: '77'
+ht-degree: 0%
 
 ---
 
 
-# API를 사용하여 대상 생성 및 데이터 활성화
+# 대상을 만들고 API를 사용하여 데이터 활성화
 
-다양한 유형의 대상을 만들고 데이터를 활성화하는 방법을 알아봅니다. 이 기능은 [Adobe의 실시간 고객 데이터 플랫폼](https://docs.adobe.com/content/help/en/experience-platform/rtcdp/overview.html)사용자에게 제공됩니다.
+다양한 유형의 대상을 만들고 데이터를 활성화하는 방법에 대해 학습합니다. 이 기능은 [Adobe의 실시간 고객 데이터 플랫폼](../rtcdp/overview.md) 사용자가 사용할 수 있습니다.
 
 ## 이메일 마케팅 대상 {#email-destinations}
 
