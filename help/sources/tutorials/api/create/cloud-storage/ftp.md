@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics; File Transfer Protocol; file transfer protocol
+keywords: Experience Platform;home;popular topics파일 전송 프로토콜;파일 전송 프로토콜
 solution: Experience Platform
 title: Flow Service API를 사용하여 FTP 커넥터 만들기
 topic: overview
 type: Tutorial
 description: 이 자습서는 Flow Service API를 사용하여 Experience Platform을 FTP(File Transfer Protocol) 서버에 연결하는 단계를 안내합니다.
 translation-type: tm+mt
-source-git-commit: 9092c3d672967d3f6f7bf7116c40466a42e6e7b1
+source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
 workflow-type: tm+mt
-source-wordcount: '565'
+source-wordcount: '580'
 ht-degree: 2%
 
 ---
@@ -47,7 +47,7 @@ ht-degree: 2%
 
 ### 필수 헤더에 대한 값 수집
 
-[!DNL Platform] API를 호출하려면 먼저 [인증 자습서](../../../../../tutorials/authentication.md)를 완료해야 합니다. 인증 자습서를 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
+[!DNL Platform] API를 호출하려면 먼저 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 완료해야 합니다. 인증 자습서를 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -125,4 +125,4 @@ curl -X POST \
 
 ## 다음 단계
 
-이 자습서를 따라 [!DNL Flow Service] API를 사용하여 FTP 연결을 만들고 연결의 고유 ID 값을 받았습니다. 이 연결 ID를 Flow Service API](../../explore/cloud-storage.md) 또는 [인제스트는 Flow Service API](../../cloud-storage-parquet.md)을 사용하여 [클라우드 스토리지 탐색에 사용할 수 있습니다.
+이 자습서를 따라 [!DNL Flow Service] API를 사용하여 FTP 연결을 만들고 연결의 고유 ID 값을 받았습니다. 이 연결 ID를 Flow Service API](../../explore/cloud-storage.md) 또는 [인제스트 Portable 데이터를 사용하여 [클라우드 스토리지 탐색에 사용할 수 있습니다. Flow Service API](../../cloud-storage-parquet.md)
