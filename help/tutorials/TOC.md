@@ -3,22 +3,22 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform 자습서
 breadcrumb-title: Platform 자습서
-user-guide-description: 데이터 섭취 준비, 고급 머신 러닝 알고리즘 사용 등 모든 것을 다루는 단계별 튜토리얼과 함께 Platform(플랫폼)을 빠르고 손쉽게 시작할 수 있습니다.
+user-guide-description: 데이터 수집에서 고급 기계 학습 알고리즘 사용에 이르는 모든 작업을 다루는 단계별 튜토리얼과 함께 Platform(플랫폼)을 빠르고 손쉽게 시작할 수 있습니다.
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 097fe219e0d64090de758f388ba98e6024db2201
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '70'
-ht-degree: 14%
+source-wordcount: '74'
+ht-degree: 13%
 
 ---
 
 
-# Adobe Experience Platform tutorials {#tutorials}
+# Adobe Experience Platform 자습서 {#tutorials}
 
 * [Tutorials 개요](home.md)
-* [Experience Platform API 인증](authentication.md)
-* [플랫폼 데이터 액세스](data-access.md)
+* [Experience Platform API 인증](https://www.adobe.com/go/platform-api-authentication-en)
+* [액세스 플랫폼 데이터](data-access.md)
 * [데이터 거버넌스 및 개인 정보](data-governance-privacy.md)
 * [데이터 과학 작업 영역](data-science-workspace.md)
 * [대상](destinations-tutorials.md)
