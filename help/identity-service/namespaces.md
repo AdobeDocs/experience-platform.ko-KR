@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;namespace;Namespace;Namespaces;namespaces;identity namespace;Identity namespace;identity;Identity;Identity service;identity service
+keywords: Experience Platform;홈;인기 항목;네임스페이스;네임스페이스;네임스페이스;네임스페이스;네임스페이스;네임스페이스;ID 네임스페이스;ID 네임스페이스;ID;ID;Identity;Service;ID 서비스;Identity Service
 solution: Experience Platform
 title: Adobe Experience Platform ID 서비스
 topic: overview
@@ -7,8 +7,8 @@ description: 'ID 네임스페이스는 ID 서비스의 구성 요소이며 ID가
 translation-type: tm+mt
 source-git-commit: 0547c33e831fe1ac684f55a0e79978cd7f191e65
 workflow-type: tm+mt
-source-wordcount: '1456'
-ht-degree: 3%
+source-wordcount: '1475'
+ht-degree: 2%
 
 ---
 
