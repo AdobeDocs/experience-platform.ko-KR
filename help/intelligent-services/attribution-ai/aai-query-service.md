@@ -1,5 +1,5 @@
 ---
-keywords: insights;attribution ai;attribution ai insights;AAI query service;attribution queries;attribution scores
+keywords: 인사이트;기여도 분석 ai;기여도 분석 ai 인사이트;AAI 쿼리 서비스;기여도 분석 쿼리;기여도 분석 점수
 solution: Intelligent Services, Experience Platform
 title: AAI 쿼리 서비스 빠른 시작 안내서
 topic: Attribution AI queries
@@ -7,7 +7,7 @@ description: 이 문서에서는 쿼리 서비스를 사용하여 속성 점수�
 translation-type: tm+mt
 source-git-commit: 32d49c9244414afeb2729ef44eb364fb2c609380
 workflow-type: tm+mt
-source-wordcount: '481'
+source-wordcount: '494'
 ht-degree: 0%
 
 ---
