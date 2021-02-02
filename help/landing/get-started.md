@@ -1,19 +1,20 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;홈;인기 항목
 solution: Experience Platform
-title: Adobe Experience Platform 제품 설명서
+title: ' Adobe Experience Platform 시작하기'
 topic: getting started
+description: 이 비디오에서는 Experience Platform에 대한 간단한 소개 내용을 제공하며 이 비디오에서 해결하는 비즈니스 과제에 대해 설명합니다.
 translation-type: tm+mt
-source-git-commit: b5503440aec5afd48cafdfa765fd3521f6ea4c68
+source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
 workflow-type: tm+mt
-source-wordcount: '61'
-ht-degree: 9%
+source-wordcount: '49'
+ht-degree: 24%
 
 ---
 
 
 #  Adobe Experience Platform 시작하기
 
-이 비디오에서는 비즈니스 과제 [!DNL Experience Platform] 에 대한 간략한 소개 및 개요를 제공합니다. 설명서를 보완하는 데 사용할 수 있는 다양한 비디오 자습서가 [!DNL Platform] 있습니다. 사용을 시작하는 데 도움이 되는 추가 비디오 [!DNL Platform]는 플랫폼 [소개 비디오 시리즈를 참조하십시오](https://docs.adobe.com/content/help/en/platform-learn/tutorials/intro-to-platform/overview.html).
+이 비디오에서는 [!DNL Experience Platform]에 대한 간단한 소개를 제공하며, 이 비디오에서 해결하는 몇 가지 비즈니스 과제에 대해 간략하게 설명합니다.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32797?quality=12&learn=on)
