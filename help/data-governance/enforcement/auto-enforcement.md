@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;Policy enforcement;Automatic enforcement;API-based enforcement;data governance
+keywords: Experience Platform;홈;인기 항목;정책 적용;자동 적용;API 기반 적용;데이터 거버넌스
 solution: Experience Platform
-title: 정책 실행 개요
-topic: enforcement
+title: 자동 정책 적용
+topic: guide
 description: 이 문서에서는 Experience Platform의 대상에 세그먼트를 활성화할 때 데이터 사용 정책이 자동으로 적용되는 방법을 설명합니다.
 translation-type: tm+mt
-source-git-commit: 385084f3de2ebfcbee94d6b0c116dae82f5df764
+source-git-commit: acc4fa59a4808ed9a32c2aaf664039e0d12dc1d8
 workflow-type: tm+mt
-source-wordcount: '1115'
+source-wordcount: '1128'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ ht-degree: 0%
 
 데이터 연결은 플랫폼에서의 정책 적용 방식에 중요한 역할을 합니다. 일반적으로 데이터 계보는 데이터 세트의 기원 및 경과(또는 이동 위치)를 의미합니다.
 
-[!DNL Data Governance] 컨텍스트에서 리니지는 데이터 사용 레이블이 데이터 세트에서 데이터를 사용하는 다운스트림 서비스(예: 실시간 고객 프로필 및 대상)로 전파되도록 합니다. 따라서 정책을 평가하고 플랫폼을 통해 데이터의 주요 단계에서 정책을 실행할 수 있으며, 정책 위반이 발생한 이유에 대한 컨텍스트를 데이터 소비자에게 제공할 수 있습니다.
+[!DNL Data Governance] 컨텍스트에서 리니지는 데이터 사용 레이블이 데이터 세트에서 데이터를 사용하는 다운스트림 서비스(예: 실시간 고객 프로필 및 대상)로 전파되도록 합니다. 따라서 정책을 평가하고 플랫폼을 통해 데이터 여정의 여러 주요 지점에서 적용할 수 있으며, 정책 위반이 발생한 이유에 대한 컨텍스트를 데이터 소비자에게 제공할 수 있습니다.
 
 Experience Platform에서 정책집행은 다음과 같은 계책을 안고 있다.
 
