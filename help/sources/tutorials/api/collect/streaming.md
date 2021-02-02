@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;cloud storage data;streaming data;streaming
+keywords: Experience Platform;홈;인기 항목;클라우드 저장소 데이터;스트리밍 데이터;스트리밍 데이터;;home;popular topics;cloud storage data;streaming data;streaming
 solution: Experience Platform
 title: 소스 커넥터 및 API를 통해 스트리밍 데이터 수집
 topic: overview
 type: Tutorial
-description: 이 자습서에서는 스트리밍 데이터를 검색하고 소스 커넥터 및 API를 통해 플랫폼에 가져오는 단계를 다룹니다.
+description: 이 자습서에서는 스트리밍 데이터를 검색하고 소스 커넥터 및 API를 통해 플랫폼에 가져오는 절차를 다룹니다.
 translation-type: tm+mt
-source-git-commit: a9d6c6dda560ec401bdf41319994153e7f2c0572
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '1288'
+source-wordcount: '1303'
 ht-degree: 2%
 
 ---
@@ -16,64 +16,64 @@ ht-degree: 2%
 
 # 소스 커넥터 및 API를 통해 스트리밍 데이터 수집
 
-[!DNL Flow Service] 는 Adobe Experience Platform 내의 다양한 소스에서 수집된 고객 데이터를 수집하고 중앙에서 관리하는 데 사용됩니다. 이 서비스는 지원되는 모든 소스가 연결되어 있는 사용자 인터페이스와 RESTful API를 제공합니다.
+[!DNL Flow Service] 는 Adobe Experience Platform 내의 다양한 소스에서 수집한 고객 데이터를 수집하고 중앙에서 관리하는 데 사용됩니다. 이 서비스는 지원되는 모든 소스가 연결되어 있는 사용자 인터페이스와 RESTful API를 제공합니다.
 
-이 자습서에서는 스트리밍 소스 커넥터에서 데이터를 검색하고 API [!DNL Experience Platform] 를 사용하여 데이터를 가져오는 단계를 [[!DNL Flow Service] 설명합니다](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+이 자습서는 스트리밍 소스 커넥터에서 데이터를 검색하고 [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)를 사용하여 [!DNL Experience Platform]으로 데이터를 가져오는 절차를 설명합니다.
 
 ## 시작하기
 
-이 자습서에서는 스트리밍 커넥터에 대해 유효한 연결 ID가 있어야 합니다. 이 정보가 없는 경우 이 자습서를 시작하기 전에 스트리밍 소스 연결을 만드는 다음 자습서를 참조하십시오.
+이 자습서를 사용하려면 스트리밍 커넥터에 대한 유효한 연결 ID가 있어야 합니다. 이 정보가 없는 경우 이 자습서를 시작하기 전에 스트리밍 소스 연결을 만드는 방법에 대한 다음 자습서를 참조하십시오.
 
 - [[!DNL Amazon Kinesis]](../create/cloud-storage/kinesis.md)
 - [[!DNL Azure Event Hubs]](../create/cloud-storage/eventhub.md)
 - [[!DNL HTTP API]](../../../../ingestion/tutorials/create-streaming-connection.md)
 
-또한 이 자습서에서는 다음과 같은 Adobe Experience Platform 구성 요소에 대해 작업해야 합니다.
+또한 이 자습서에서는 Adobe Experience Platform의 다음 구성 요소에 대해 자세히 알아야 합니다.
 
 - [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md):Experience Platform이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
-   - [스키마 컴포지션의 기본 사항](../../../../xdm/schema/composition.md):스키마 컴포지션의 주요 원칙 및 모범 사례 등 XDM 스키마의 기본 구성 요소에 대해 알아봅니다.
-   - [스키마 레지스트리 개발자 가이드](../../../../xdm/api/getting-started.md):스키마 레지스트리 API에 대한 호출을 성공적으로 수행하기 위해 알아야 하는 중요한 정보를 포함합니다. 여기에는 사용자 `{TENANT_ID}`, &quot;컨테이너&quot;의 개념 및 요청 시 필요한 헤더가 포함됩니다(수락 헤더와 가능한 값에 특별히 주의).
-- [[!DNL Catalog Service]](../../../../catalog/home.md):카탈로그는 내부 데이터 위치 및 계열에 대한 기록 시스템이다 [!DNL Experience Platform].
-- [[!DNL Streaming ingestion]](../../../../ingestion/streaming-ingestion/overview.md):스트리밍 방식 [!DNL Platform] 을 사용하면 클라이언트 및 서버측 디바이스에서 실시간으로 데이터를 전송할 수 [!DNL Experience Platform] 있습니다.
-- [샌드박스](../../../../sandboxes/home.md): [!DNL Experience Platform] 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되도록 단일 [!DNL Platform] 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
+   - [스키마 컴포지션의 기본 사항](../../../../xdm/schema/composition.md):스키마 컴포지션의 주요 원칙 및 모범 사례를 포함하여 XDM 스키마의 기본 구성 블록에 대해 알아봅니다.
+   - [스키마 레지스트리 개발자 안내서](../../../../xdm/api/getting-started.md):스키마 레지스트리 API에 대한 호출을 성공적으로 수행하기 위해 알아야 하는 중요한 정보를 포함합니다. 여기에는 `{TENANT_ID}`, &quot;컨테이너&quot; 개념 및 요청 수행에 필요한 머리글이 포함됩니다(수락 헤더와 가능한 값에 특히 유의함).
+- [[!DNL Catalog Service]](../../../../catalog/home.md):카탈로그는 데이터 위치 및 내부 연결을 위한 레코드 시스템입니다 [!DNL Experience Platform].
+- [[!DNL Streaming ingestion]](../../../../ingestion/streaming-ingestion/overview.md):스트리밍 방식 [!DNL Platform] 은 클라이언트 및 서버측 디바이스에서 실시간으로 데이터를 전송하는 방법 [!DNL Experience Platform] 을 제공합니다.
+- [샌드박스](../../../../sandboxes/home.md): [!DNL Experience Platform] 디지털 경험 애플리케이션을 개발 및 발전시키는 데 도움이 되도록 단일  [!DNL Platform] 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
 
-다음 섹션에서는 [!DNL Flow Service] API를 사용하여 스트리밍 데이터를 성공적으로 수집하기 위해 알아야 할 추가 정보를 제공합니다.
+다음 섹션에서는 [!DNL Flow Service] API를 사용하여 스트리밍 데이터를 성공적으로 수집하기 위해 알아야 하는 추가 정보를 제공합니다.
 
 ### 샘플 API 호출 읽기
 
-이 자습서에서는 요청의 서식을 지정하는 방법을 보여주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 올바른 형식의 요청 페이로드가 포함됩니다. API 응답으로 반환된 샘플 JSON도 제공됩니다. 샘플 API 호출 설명서에 사용된 규칙에 대한 자세한 내용은 문제 해결 안내서의 예제 API 호출 [을 읽는](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) 방법에 대한 섹션을 [!DNL Experience Platform] 참조하십시오.
+이 자습서에서는 요청의 서식을 지정하는 방법을 보여주는 API 호출 예를 제공합니다. 여기에는 경로, 필수 헤더 및 올바른 형식의 요청 페이로드가 포함됩니다. API 응답으로 반환된 샘플 JSON도 제공됩니다. 샘플 API 호출에 대한 설명서에 사용된 규칙에 대한 자세한 내용은 [!DNL Experience Platform] 문제 해결 안내서의 [API 호출 예](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)를 읽는 방법에 대한 섹션을 참조하십시오.
 
 ### 필수 헤더에 대한 값 수집
 
-API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 합니다](../../../../tutorials/authentication.md). 인증 자습서를 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
+[!DNL Platform] API를 호출하려면 먼저 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 완료해야 합니다. 인증 자습서를 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {IMS_ORG}`
 
-에 속하는 리소스를 [!DNL Experience Platform]포함한 모든 리소스 [!DNL Flow Service]는 특정 가상 샌드박스와 분리됩니다. API에 대한 모든 [!DNL Platform] 요청에는 작업이 수행할 샌드박스의 이름을 지정하는 헤더가 필요합니다.
+[!DNL Flow Service]에 속하는 리소스를 포함하여 [!DNL Experience Platform]의 모든 리소스는 특정 가상 샌드박스로 구분됩니다. [!DNL Platform] API에 대한 모든 요청에는 작업이 수행할 샌드박스의 이름을 지정하는 헤더가 필요합니다.
 
 - `x-sandbox-name: {SANDBOX_NAME}`
 
-페이로드(POST, PUT, PATCH)이 포함된 모든 요청에는 추가 미디어 유형 헤더가 필요합니다.
+페이로드(POST, PUT, PATCH)을 포함하는 모든 요청에는 추가 미디어 유형 헤더가 필요합니다.
 
 - `Content-Type: application/json`
 
-## 소스 연결 만들기 {#source}
+## 소스 연결 {#source} 만들기
 
-API에 POST 요청을 만들어 소스 연결을 만들 수 [!DNL Flow Service] 있습니다. 소스 연결은 연결 ID, 소스 데이터 파일에 대한 경로 및 연결 사양 ID로 구성됩니다.
+[!DNL Flow Service] API에 POST 요청을 하여 소스 연결을 만들 수 있습니다. 소스 연결은 연결 ID, 소스 데이터 파일의 경로 및 연결 사양 ID로 구성됩니다.
 
 소스 연결을 만들려면 데이터 형식 특성에 대한 열거형 값도 정의해야 합니다.
 
-파일 기반 커넥터에 다음과 같은 열거형 값을 사용하십시오.
+파일 기반 커넥터에 대해 다음 열거형 값을 사용하십시오.
 
-| 데이터 형식 | 열거값 |
+| 데이터 형식 | 열거형 값 |
 | ----------- | ---------- |
 | 구분 기호 | `delimited` |
 | JSON | `json` |
 | 쪽모이 세공 | `parquet` |
 
-모든 테이블 기반 커넥터의 경우 값을 로 설정합니다 `tabular`.
+모든 테이블 기반 커넥터의 경우 값을 `tabular`으로 설정합니다.
 
 **API 형식**
 
@@ -109,12 +109,12 @@ curl -X POST \
 | 속성 | 설명 |
 | --- | --- |
 | `providerId` | 스트리밍 커넥터의 공급자 ID입니다. |
-| `connectionId` | 스트리밍 커넥터의 고유한 연결 ID입니다. |
+| `connectionId` | 스트리밍 커넥터의 고유 연결 ID입니다. |
 | `connectionSpec.id` | 특정 스트리밍 커넥터와 연결된 연결 사양 ID입니다. |
 
 **응답**
 
-성공적인 응답은 새로 만든 소스 연결의 고유 식별자(`id`)를 반환합니다. 데이터 흐름을 만들려면 이 ID가 나중에 필요합니다.
+성공적인 응답은 새로 만든 소스 연결의 고유 식별자(`id`)를 반환합니다. 이 ID는 데이터 흐름을 만들려면 이후 단계에서 필요합니다.
 
 ```json
 {
@@ -123,11 +123,11 @@ curl -X POST \
 }
 ```
 
-## 대상 XDM 스키마 만들기 {#target-schema}
+## 대상 XDM 스키마 {#target-schema} 만들기
 
-소스 데이터를 사용하려면 필요에 따라 소스 데이터 [!DNL Platform]를 구조화하기 위해 대상 스키마를 만들어야 합니다. 그런 다음 대상 스키마를 사용하여 소스 데이터가 포함된 [!DNL Platform] 데이터 세트를 만듭니다. 이 대상 XDM 스키마도 XDM [!DNL Individual Profile] 클래스를 확장합니다.
+소스 데이터를 [!DNL Platform]에서 사용하려면 필요에 따라 소스 데이터를 구조화하기 위해 대상 스키마를 만들어야 합니다. 그런 다음 대상 스키마를 사용하여 소스 데이터가 포함된 [!DNL Platform] 데이터 집합을 만듭니다. 이 대상 XDM 스키마도 XDM [!DNL Individual Profile] 클래스를 확장합니다.
 
-대상 XDM 스키마는 스키마 레지스트리 API에 대한 POST 요청을 수행하여 [만들 수 있습니다](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
+대상 XDM 스키마는 [스키마 레지스트리 API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)에 대한 POST 요청을 수행하여 생성할 수 있습니다.
 
 **API 형식**
 
@@ -137,7 +137,7 @@ POST /tenant/schemas
 
 **요청**
 
-다음 예제 요청에서는 XDM 클래스를 확장하는 XDM 스키마를 [!DNL Individual Profile] 만듭니다.
+다음 예제 요청에서는 XDM [!DNL Individual Profile] 클래스를 확장하는 XDM 스키마를 만듭니다.
 
 ```shell
 curl -X POST \
@@ -171,7 +171,7 @@ curl -X POST \
 
 **응답**
 
-성공적인 응답은 고유한 식별자(`$id`)를 포함하여 새로 만든 스키마의 세부 정보를 반환합니다. 이 ID는 나중에 대상 데이터 집합, 매핑 및 데이터 흐름을 만들려면 필요합니다.
+성공적인 응답은 고유 식별자(`$id`)를 포함하여 새로 만든 스키마의 세부 정보를 반환합니다. 이 ID는 타겟 데이터 집합, 매핑 및 데이터 흐름을 만들려면 이후 단계에서 필요합니다.
 
 ```json
 {
@@ -235,7 +235,7 @@ curl -X POST \
 
 ## 대상 데이터 세트 만들기
 
-페이로드 내의 대상 스키마의 ID를 제공하여 [카탈로그 서비스 API에](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)POST 요청을 수행하여 대상 데이터 집합을 만들 수 있습니다.
+대상 데이터 집합은 페이로드 내의 대상 스키마의 ID를 제공하여 [카탈로그 서비스 API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)에 POST 요청을 수행하여 만들 수 있습니다.
 
 **API 형식**
 
@@ -279,7 +279,7 @@ curl -X POST \
 
 **응답**
 
-성공적인 응답은 새로 만든 데이터 세트의 ID가 포함된 배열을 반환합니다. 이 ID는 형식 `"@/datasets/{DATASET_ID}"`입니다. 데이터 세트 ID는 API 호출에서 데이터 세트를 참조하는 데 사용되는 읽기 전용 시스템 생성 문자열입니다. 대상 연결 및 데이터 흐름을 만들려면 나중에 대상 데이터 집합 ID가 필요합니다.
+성공적인 응답은 새로 만든 데이터 세트의 ID가 포함된 배열을 `"@/datasets/{DATASET_ID}"` 형식으로 반환합니다. 데이터 세트 ID는 API 호출에서 데이터 세트를 참조하는 데 사용되는 읽기 전용 시스템 생성 문자열입니다. 대상 연결 및 데이터 흐름을 만들려면 나중에 대상 데이터 집합 ID가 필요합니다.
 
 ```json
 [
@@ -287,11 +287,11 @@ curl -X POST \
 ]
 ```
 
-## 대상 연결 만들기 {#target-connection}
+## 대상 연결 {#target-connection} 만들기
 
-대상 연결은 인제스트된 데이터가 들어오는 대상에 대한 연결을 나타냅니다. 대상 연결을 만들려면 데이터 호수와 관련된 고정 연결 사양 ID를 제공해야 합니다. 이 연결 사양 ID: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+대상 연결은 인제스트된 데이터가 들어오는 대상에 대한 연결을 나타냅니다. 대상 연결을 만들려면 데이터 호수에 연결된 고정 연결 사양 ID를 제공해야 합니다. 이 연결 사양 ID:`c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
-이제 대상 스키마의 고유한 식별자를 데이터 세트에 사용하고 데이터 호수에 대한 연결 사양 ID를 가집니다. 이러한 식별자를 사용하여 [!DNL Flow Service] API를 사용하여 대상 연결을 만들어 인바운드 소스 데이터를 포함할 데이터 세트를 지정할 수 있습니다.
+이제 대상 데이터 세트에 대한 대상 스키마와 데이터 호수에 대한 연결 사양 ID에 대한 고유한 식별자가 있습니다. 이러한 식별자를 사용하여 [!DNL Flow Service] API를 사용하여 대상 연결을 만들어 인바운드 소스 데이터를 포함할 데이터 세트를 지정할 수 있습니다.
 
 **API 형식**
 
@@ -327,8 +327,8 @@ curl -X POST \
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `params.dataSetId` | 대상 데이터 집합의 ID입니다. |
-| `connectionSpec.id` | 데이터 레이크에 연결하는 데 사용되는 연결 사양 ID. 이 ID: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `params.dataSetId` | 대상 데이터 세트의 ID입니다. |
+| `connectionSpec.id` | 데이터 호수에 연결하는 데 사용되는 연결 사양 ID. 이 ID:`c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 **응답**
 
@@ -341,9 +341,9 @@ curl -X POST \
 }
 ```
 
-## 매핑 만들기 {#mapping}
+## 매핑 {#mapping} 만들기
 
-소스 데이터를 대상 데이터 세트에 수집하려면 먼저 대상 데이터 세트가 준수하는 대상 스키마에 매핑해야 합니다. 이것은 요청 페이로드 내에 정의된 데이터 매핑과 함께 전환 서비스에 대한 POST 요청을 수행하여 얻습니다.
+소스 데이터를 대상 데이터 세트에 수집하려면 먼저 대상 데이터 세트가 준수하는 대상 스키마에 매핑해야 합니다. 이것은 요청 페이로드 내에 정의된 데이터 매핑과 함께 전환 서비스에 대한 POST 요청을 수행하여 수행됩니다.
 
 **API 형식**
 
@@ -384,11 +384,11 @@ curl -X POST \
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `xdmSchema` | 대상 XDM 스키마 `$id` 의 이름입니다. |
+| `xdmSchema` | 대상 XDM 스키마의 `$id`. |
 
 **응답**
 
-성공적인 응답은 고유 식별자(`id`)를 포함하여 새로 만든 매핑의 세부 정보를 반환합니다. 데이터 흐름을 만들려면 이 ID가 나중에 필요합니다.
+성공적인 응답은 고유 식별자(`id`)를 포함하여 새로 만든 매핑의 세부 정보를 반환합니다. 이 ID는 데이터 흐름을 만들려면 이후 단계에서 필요합니다.
 
 ```json
 {
@@ -403,7 +403,7 @@ curl -X POST \
 
 ## 데이터 흐름 사양 검색 {#specs}
 
-데이터 프롤은 소스에서 데이터를 수집하여 데이터 센터로 가져옵니다 [!DNL Platform]. 데이터 흐름을 만들려면 먼저 [!DNL Flow Service] API에 대한 GET 요청을 수행하여 데이터 흐름 사양을 얻어야 합니다. 데이터 흐름 사양은 스트리밍 커넥터에서 데이터를 수집하는 책임을 집니다.
+데이터 플로우는 소스에서 데이터를 수집하고 [!DNL Platform]으로 가져와야 합니다. 데이터 흐름을 만들려면 먼저 [!DNL Flow Service] API에 대한 GET 요청을 수행하여 데이터 흐름 사양을 구해야 합니다. 데이터 흐름 사양은 스트리밍 커넥터에서 데이터를 수집하는 책임을 집니다.
 **API 형식**
 
 ```http
@@ -422,7 +422,7 @@ curl -X GET \
 
 **응답**
 
-성공적인 응답으로 스트리밍 커넥터의 데이터를 데이터 흐름 사양에 대한 세부 정보를 반환합니다 [!DNL Platform]. 이 ID는 새 데이터 흐름을 만들려면 다음 단계에서 필요합니다.
+성공적인 응답은 스트리밍 커넥터에서 데이터를 [!DNL Platform]으로 가져오는 작업을 담당하는 데이터 흐름 세부 항목의 세부 정보를 반환합니다. 이 ID는 새 데이터 흐름을 만들려면 다음 단계에서 필요합니다.
 
 ```json
 {
@@ -501,7 +501,7 @@ curl -X GET \
 - [매핑 ID](#mapping)
 - [데이터 흐름 사양 ID](#specs)
 
-데이터 프롤은 소스에서 데이터를 예약하고 수집합니다. 페이로드 내에 이전에 언급한 값을 제공하는 동안 POST 요청을 수행하여 데이터 흐름을 만들 수 있습니다.
+데이터 플로우는 소스에서 데이터를 예약하고 수집하는 작업을 수행합니다. 페이로드 내에서 이전에 언급한 값을 제공하는 동안 POST 요청을 수행하여 데이터 흐름을 만들 수 있습니다.
 
 **API 형식**
 
@@ -545,14 +545,14 @@ curl -X POST \
 
 | 속성 | 설명 |
 | --- | --- |
-| `flowSpec.id` | 이전 단계에서 검색된 [흐름 사양](#specs) ID. |
-| `sourceConnectionIds` | 이전 단계에서 검색된 [소스 연결](#source) ID입니다. |
-| `targetConnectionIds` | 이전 단계에서 검색된 [대상 연결](#target-connection) ID입니다. |
-| `transformations.params.mappingId` | 이전 단계에서 검색된 [매핑](#mapping) ID. |
+| `flowSpec.id` | 이전 단계에서 검색된 [플로우 사양 ID](#specs) |
+| `sourceConnectionIds` | 이전 단계에서 검색된 [소스 연결 ID](#source)입니다. |
+| `targetConnectionIds` | 이전 단계에서 검색된 [대상 연결 ID](#target-connection)입니다. |
+| `transformations.params.mappingId` | 이전 단계에서 검색된 [매핑 ID](#mapping)입니다. |
 
 **응답**
 
-성공적인 응답은 새로 만든 데이터 흐름`id`의 ID를 반환합니다.
+성공적인 응답은 새로 만든 데이터 흐름의 ID(`id`)를 반환합니다.
 
 ```json
 {
@@ -563,7 +563,7 @@ curl -X POST \
 
 ## 다음 단계
 
-이 튜토리얼을 따라 스트리밍 커넥터에서 스트리밍 데이터를 수집하는 데이터 흐름을 만들었습니다. 이제 및 같은 다운스트림 [!DNL Platform] 서비스에서 들어오는 데이터를 사용할 수 [!DNL Real-time Customer Profile] 있습니다 [!DNL Data Science Workspace]. 자세한 내용은 다음 문서를 참조하십시오.
+이 자습서를 따라 스트리밍 커넥터에서 스트리밍 데이터를 수집하는 데이터 흐름을 만들었습니다. 이제 [!DNL Real-time Customer Profile] 및 [!DNL Data Science Workspace] 등의 다운스트림 [!DNL Platform] 서비스에서 들어오는 데이터를 사용할 수 있습니다. 자세한 내용은 다음 문서를 참조하십시오.
 
 - [실시간 고객 프로필 개요](../../../../profile/home.md)
 - [데이터 과학 작업 공간 개요](../../../../data-science-workspace/home.md)
