@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;api guide;connection parameters;Query service;
+keywords: Experience Platform;홈;인기 항목;쿼리 서비스;api 안내서;연결 매개 변수;쿼리 서비스;Client;home;popular topics service;query service;
 solution: Experience Platform
 title: 쿼리 서비스 개발자 가이드
 topic: connection parameters
@@ -7,7 +7,7 @@ description: /connection_parameters 끝점에 GET 요청을 수행하여 대화�
 translation-type: tm+mt
 source-git-commit: 648544bc60c0cee8ca8b167118391980b6c33d91
 workflow-type: tm+mt
-source-wordcount: '134'
+source-wordcount: '147'
 ht-degree: 1%
 
 ---
