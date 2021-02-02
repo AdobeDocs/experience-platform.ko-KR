@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;ip address;ip addresses;ip address allow list; allow list
-description: 소스 커넥터를 사용하기 전에 IP 주소를 허용 목록에 추가해야 합니다.
+keywords: Experience Platform;홈;인기 항목;ip 주소;ip 주소;ip 주소 허용 목록;home;home;popular topics;ip address address;허용 목록
+description: 소스 커넥터로 작업하기 전에 IP 주소를 허용 목록에 추가해야 합니다.
 solution: Experience Platform
 title: IP 주소 허용 목록
 topic: overview
 translation-type: tm+mt
-source-git-commit: 7ba46b68a5910d5657ad8df73b6db574b421d513
+source-git-commit: a812ad3b130c5998013688dcda522e7d20ae578f
 workflow-type: tm+mt
-source-wordcount: '95'
+source-wordcount: '110'
 ht-degree: 0%
 
 ---
@@ -15,16 +15,16 @@ ht-degree: 0%
 
 # IP 주소 허용 목록
 
-네트워크 방화벽을 통해 네트워크 액세스 제어를 정의할 수 있습니다. 적절한 소스 IP 범위를 지정하여 데이터 전송 서비스에 대한 트래픽을 허용할 수 있습니다. 소스 커넥터를 사용하기 전에 다음 IP 주소를 허용 목록에 추가해야 합니다. 지역 특정 IP 주소를 허용 목록에 추가하지 않으면 소스를 사용할 때 오류나 성능이 저하될 수 있습니다.
+네트워크 방화벽을 통해 네트워크 액세스 제어를 정의할 수 있습니다. 적절한 소스 IP 범위를 지정하여 데이터 전송 서비스에 대한 트래픽을 허용할 수 있습니다. 소스 커넥터로 작업하기 전에 다음 IP 주소를 허용 목록에 추가해야 합니다. 지역 특정 IP 주소를 허용 목록에 추가하지 않으면 소스를 사용할 때 오류 또는 비성능이 발생할 수 있습니다.
 
 ## 미국 동부 지역
 
-- `20.41.2.0/23`
-- `20.41.4.0/26`
-- `20.44.17.80/28`
-- `20.49.102.16/29`
-- `40.70.148.160/28`
-- `52.167.107.224/28`
+- `20.42.2.0/23`
+- `20.42.4.0/26`
+- `20.42.64.0/28`
+- `20.49.111.0/29`
+- `40.71.14.32/28`
+- `40.78.229.96/28`
 
 ## 서유럽 지역
 
