@@ -1,79 +1,37 @@
 ---
-keywords: Experience Platform;home;popular topics;PSQL;psqlconnect to query service;Query service;query service;
+keywords: Experience Platform;home;popular topics;PSQL;쿼리 서비스에 대한 psqlconnect;쿼리 서비스;쿼리 서비스;
 solution: Experience Platform
 title: PSQL과 연결
 topic: connect
-description: 'PSQL은 컴퓨터에 Postres를 설치할 때 나타나는 명령줄 인터페이스입니다. 다음 지침에 따라 설치할 수 있습니다. '
+description: 'PSQL은 컴퓨터에 PostgreSQL을 설치할 때 제공되는 명령줄 인터페이스입니다. 다음 지침에 따라 설치할 수 있습니다. '
 translation-type: tm+mt
-source-git-commit: 8ffe7c68c87cacb6b54d9634a5204fa24a9986ac
+source-git-commit: bc1bbdddd75b11ac180b5e6faa391fd74e5f7e02
 workflow-type: tm+mt
-source-wordcount: '209'
-ht-degree: 0%
+source-wordcount: '244'
+ht-degree: 1%
 
 ---
 
 
-# PSQL과 연결
+# PSQL
 
-PSQL은 컴퓨터에 설치할 때 나타나는 명령줄 인터페이스 [!DNL Postgres] 입니다. 다음 지침에 따라 설치할 수 있습니다.
+PSQL은 컴퓨터에 [!DNL PostgreSQL]을(를) 설치할 때 설치되는 명령줄 인터페이스입니다. 이 문서에서는 Adobe Experience Platform [!DNL Query Service]에 PSQL을 연결하는 단계를 설명합니다.
 
-## Mac에 게시물 설치
+>[!NOTE]
+>
+> 이 안내서에서는 사용자가 이미 [!DNL PSQL]에 액세스할 수 있으며 이 기능을 사용하는 방법에 익숙하다고 가정합니다. [!DNL PSQL]에 대한 자세한 내용은 [공식 [!DNL PSQL] 설명서](https://www.postgresql.org/docs/current/app-psql.html)을 참조하십시오.
 
-터미널 창을 열고 다음 세 가지 명령을 실행합니다.
+## PSQL 및 [!DNL Query Service] 연결
 
-```shell
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-```
-
-```shell
-brew install postgres
-```
-
-```shell
-which psql
-```
-
-이러한 명령을 실행한 후 다음을 확인해야 합니다.
-
-```shell
-/usr/local/bin/psql
-```
-
-## PC [!DNL Postgres] 에 설치
-
-이 [!DNL Postgres] 위치 [에서 다운로드하여 설치합니다](https://www.postgresql.org/download/windows/).
-
-경로 변수 편집:
-
-![이미지](../images/clients/psql/path.png)
-
-&quot;[!DNL Postgres].&quot;가 포함된 두 줄을 추가합니다.
-
-업데이트를 저장한 다음 명령 프롬프트를 열고 다음을 입력합니다.
-
-```shell
-psql -V
-```
-
-다음과 같은 것이 표시됩니다.
-
-```shell
-psql (PostgreSQL) 9.5.14
-```
-
-## Connect PSQL 및 [!DNL Query Service]
-
-[ [!DNL Platform] Connect BI 도구] 페이지의 **[!UICONTROL UI로]** 돌아갑니다.
-
-[PSQL **[!UICONTROL 명령 복사]** ]를 **[!UICONTROL 클릭합니다]**.
+컴퓨터에 PSQL을 설치한 후 쿼리 서비스에 PSQL을 연결할 준비가 되었습니다. [!DNL Platform] UI로 돌아간 다음 **[!UICONTROL 쿼리]**&#x200B;를 선택하고 **[!UICONTROL 자격 증명]**&#x200B;을 차례로 선택합니다.
 
 ![이미지](../images/clients/psql/connect-bi.png)
 
+**[!UICONTROL PSQL 명령]** 섹션을 복사할 아이콘을 선택한 다음 Enter 키를 누르기 전에 명령 문자열을 터미널 또는 명령줄 창에 붙여넣습니다.
+
 >[!IMPORTANT]
 >
->PC를 사용하는 경우 텍스트 편집기를 사용하여 명령 문자열에서 줄 바꿈을 제거한 다음 문자열을 복사합니다. 또한 버전 12.0 이상을 사용하는 경우 연결 문자열 `PGGSSENCMODE=disable` 에 추가해야 합니다.
-
-명령 문자열을 터미널 또는 명령 창에 붙여넣고 Enter 키를 누릅니다.
+>PC를 사용하는 경우 텍스트 편집기를 사용하여 명령 문자열에서 줄 바꿈을 제거한 다음 문자열을 복사합니다. 또한 버전 12.0 이상을 사용하는 경우 연결 문자열에 `PGGSSENCMODE=disable`을 추가해야 합니다.
 
 다음과 같은 결과가 표시됩니다.
 
@@ -85,3 +43,7 @@ all=>
 ```
 
 버전 10.5 이상이 표시되지 않으면 해당 버전 이상을 다운로드해야 합니다.
+
+## 다음 단계
+
+이제 [!DNL Query Service]에 연결되었으므로 PSQL을 사용하여 쿼리를 작성할 수 있습니다. 쿼리를 작성하고 실행하는 방법에 대한 자세한 내용은 [쿼리 실행](../best-practices/writing-queries.md)에 대한 안내서를 참조하십시오.
