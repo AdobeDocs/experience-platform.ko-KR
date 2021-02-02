@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;sample queries;sample query;adobe analytics;
+keywords: Experience Platform;홈;인기 항목;쿼리 서비스;쿼리 서비스;샘플 쿼리;샘플 쿼리;adobe analytics;home;popular topics;query service;query queries;sample query;adobe analytics
 solution: Experience Platform
 title: 샘플 쿼리
 topic: queries
@@ -7,7 +7,7 @@ description: 선택한 Adobe Analytics 보고서 세트의 데이터는 XDM Expe
 translation-type: tm+mt
 source-git-commit: e2c648829bb3268ab319da934f5cc6cc811290b3
 workflow-type: tm+mt
-source-wordcount: '1002'
+source-wordcount: '1017'
 ht-degree: 1%
 
 ---
@@ -215,8 +215,8 @@ Adobe Analytics에 있는 다른 유형의 머천다이징 변수는 전환 구�
 
 | eVar6(제품 검색 방법) | 매출액 | 주문 | 제품 보기 | 장바구니 추가 |
 | ------------------------------ | ------- | ------ | ------------- | ----- |
-| 내부 검색:여름 셔츠 | 19.99 | 1 | 3 | 3 |
-| 내부 검색:겨울 모자 | 12.99 | 3 | 3 | 3 |
+| 내부 검색:여름 셔츠 | 19.99 | 1 | 1 | 3 |
+| 내부 검색:겨울 모자 | 12.99 | 1 | 3 | 3 |
 
 전환 구문 사용에 대한 자세한 내용은 전환 구문](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=en#implement-using-conversion-variable-syntax)을 사용하여 eVar 구현에 대한 Adobe Analytics 설명서를 참조하십시오.[
 
