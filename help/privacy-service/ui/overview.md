@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;홈;인기 항목
 solution: Experience Platform
 title: Privacy Service UI 개요
 topic: UI guide
+description: 다양한 Experience Cloud 응용 프로그램에서 Privacy Service 사용자 인터페이스를 사용하여 개인 정보 요청을 조정하고 모니터링합니다.
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: 5dad1fcc82707f6ee1bf75af6c10d34ff78ac311
 workflow-type: tm+mt
-source-wordcount: '167'
+source-wordcount: '180'
 ht-degree: 1%
 
 ---
@@ -14,24 +15,24 @@ ht-degree: 1%
 
 # [!DNL Privacy Service] UI 개요
 
-Adobe Experience Platform [!DNL Privacy Service] 는 다양한 솔루션에서 개인 정보 및 규정 준수 요청을 조정할 수 있는 RESTful API 및 사용자 인터페이스를 제공합니다. 이 문서는 [!DNL Privacy Service] UI를 탐색합니다. API 사용에 대한 자세한 내용은 [Privacy Service 개발자 안내서를 참조하십시오](../api/getting-started.md).
+Adobe Experience Platform [!DNL Privacy Service]은 다양한 솔루션에서 개인 정보 보호 및 규정 준수 요청을 조정할 수 있는 RESTful API 및 사용자 인터페이스를 제공합니다. 이 문서는 [!DNL Privacy Service] UI를 검색합니다. API 사용에 대한 자세한 내용은 [Privacy Service 개발자 안내서](../api/getting-started.md)를 참조하십시오.
 
-## Log in to the [!DNL Privacy Service] UI
+## [!DNL Privacy Service] UI에 로그인
 
-UI에 인증하려면 Adobe ID이 있어야 [!DNL Privacy Service] 합니다. 또한, Adobe ID이 연결된 조직 내에서 시스템 관리자 권한이 있어야 합니다.
+[!DNL Privacy Service] UI에 인증하려면 Adobe ID이 있어야 합니다. 또한 Adobe ID이 연결된 조직 내에서 시스템 관리자 권한이 있어야 합니다.
 
-https://experience.adobe.com의 Adobe Experience Cloud 로그인 페이지로 이동합니다. Adobe ID **[!UICONTROL 로 로그인을]** 클릭하고 메시지가 표시되면 Adobe ID 자격 증명을 입력합니다.
+**[!UICONTROL Adobe ID]**&#x200B;로 로그인을 선택하고 메시지가 표시되면 Adobe ID 자격 증명을 입력합니다.
 
-로그인하고 나면 개인 정보 **[!UICONTROL UI를 클릭합니다]**.
+로그인하고 나면 **[!UICONTROL 개인 정보 UI]**&#x200B;를 선택합니다.
 
 ![](../images/ui-overview/quick-access.png)
 
-### 로그인 위치 [!DNL Experience Platform]
+### [!DNL Experience Platform]에서 로그인
 
-Adobe Experience Platform UI에 액세스할 수 있는 경우 왼쪽 탐색 영역의 [!DNL Privacy Service] 요청 **** 탭을 통해 UI에 액세스할 수도 있습니다.
+Adobe Experience Platform UI에 액세스할 수 있는 경우 왼쪽 탐색 창의 **[!UICONTROL 요청]** 탭을 통해 [!DNL Privacy Service] UI에 액세스할 수도 있습니다.
 
 ![](../images/ui-overview/platform.png)
 
 ## 다음 단계
 
-로그인했으므로 [UI를 사용하여 다양한 작업을 수행하는 방법에 대한 단계는](user-guide.md) 사용자 안내서 [!DNL Privacy Service] 를 참조하십시오.
+로그인한 후에는 [!DNL Privacy Service] UI를 사용하여 다양한 작업을 수행하는 방법에 대한 단계를 보려면 [사용자 안내서](user-guide.md)를 참조하십시오.
