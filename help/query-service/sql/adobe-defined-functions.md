@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;adobe defined functions;sql;
+keywords: Experience Platform;홈;인기 항목;쿼리 서비스;쿼리 서비스;adobe defined functions;sql
 solution: Experience Platform
 title: Adobe 정의 함수
 topic: functions
@@ -7,7 +7,7 @@ description: 이 문서에서는 쿼리 서비스에서 사용할 수 있는 Ado
 translation-type: tm+mt
 source-git-commit: e15229601d35d1155fc9a8ab9296f8c41811ebf9
 workflow-type: tm+mt
-source-wordcount: '2889'
+source-wordcount: '2902'
 ht-degree: 2%
 
 ---
