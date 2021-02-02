@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;writing queries;writing query;
+keywords: Experience Platform;홈;인기 항목;쿼리 서비스;쿼리 서비스;쿼리 쓰기;쿼리 쓰기;;home;popular topics service;query;
 solution: Experience Platform
 title: 쿼리 쓰기
 topic: queries
@@ -8,7 +8,7 @@ description: 이 문서에서는 Adobe Experience Platform 쿼리 서비스에�
 translation-type: tm+mt
 source-git-commit: e2c648829bb3268ab319da934f5cc6cc811290b3
 workflow-type: tm+mt
-source-wordcount: '957'
+source-wordcount: '970'
 ht-degree: 3%
 
 ---
