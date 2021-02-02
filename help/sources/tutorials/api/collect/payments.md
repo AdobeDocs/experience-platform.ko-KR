@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;Collect payment data;payment data
+keywords: Experience Platform;홈;인기 항목;결제 데이터 수집;지불 데이터
 solution: Experience Platform
 title: 소스 커넥터 및 API를 통해 결제 데이터 수집
 topic: overview
 type: Tutorial
 description: 이 자습서는 결제 애플리케이션에서 데이터를 검색하고 소스 커넥터 및 API를 통해 플랫폼에 데이터를 인제스트하는 단계를 다룹니다.
 translation-type: tm+mt
-source-git-commit: d8ec9b4b28602bce30365fe64829c8c8df1b9211
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '1546'
+source-wordcount: '1560'
 ht-degree: 1%
 
 ---
@@ -39,7 +39,7 @@ ht-degree: 1%
 
 ### 필수 헤더에 대한 값 수집
 
-플랫폼 API를 호출하려면 먼저 [인증 자습서](../../../../tutorials/authentication.md)를 완료해야 합니다. 인증 자습서를 완료하면 아래와 같이 모든 Experience Platform API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
+플랫폼 API를 호출하려면 먼저 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 완료해야 합니다. 인증 자습서를 완료하면 아래와 같이 모든 Experience Platform API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
