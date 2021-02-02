@@ -1,67 +1,80 @@
 ---
 title: Adobe Experience Platform 릴리스 노트
-description: Experience Platform 릴리스 노트
+description: Experience Platform 릴리스 노트(2021년 1월 27일)
 doc-type: release notes
-last-update: December 9, 2020
-author: ens60013 & ens72471
+last-update: January 27, 2021
+author: ens60013
 translation-type: tm+mt
-source-git-commit: ae353e6dda3f92647c32ee8e731be5785d24e5cb
+source-git-commit: 74325dcfe9d7b117e3f812d88e0c4a980d44ef53
 workflow-type: tm+mt
-source-wordcount: '426'
-ht-degree: 6%
+source-wordcount: '639'
+ht-degree: 5%
 
 ---
 
 
 # Adobe Experience Platform 릴리스 노트
 
-**릴리스 날짜:2020년 12월 9일**
-
-Adobe Experience Platform의 새로운 기능:
-
-- [[!DNL Dataflows]](#dataflows)
+**릴리스 날짜: 2021년 1월 27일**
 
 Adobe Experience Platform의 기존 기능 업데이트:
 
-- [[!DNL Data Science Workspace]](#dsw)
+- [[!DNL Data Prep]](#data-prep)
+- [[!DNL Destinations]](#destinations)
 - [[!DNL Sources]](#sources)
+- [[!DNL Experience Platform Launch Server Side]](#launch)
 
-## [!DNL Dataflows] {#dataflows}
+## [!DNL Data Prep] {#data-prep}
 
-데이터 프롤링은 플랫폼 간에 데이터를 이동하는 데이터 작업을 나타냅니다. 이러한 데이터 프롤링은 다양한 서비스에서 구성되므로 소스 커넥터에서 대상 데이터 세트로 데이터를 이동하고 ID 및 프로필 서비스로 이동할 수 있습니다.
+[!DNL Data Prep] 데이터 엔지니어가 XDM(Experience Data Model)을 통해 데이터를 매핑, 변형 및 확인할 수 있습니다.
 
-**주요 기능**
+**새로운 기능**
 
 | 기능 | 설명 |
 | ------- | ----------- |
-| 데이터 흐름 투명도 | 소스 및 대상의 데이터 흐름을 모니터링할 수 있습니다. 자세한 내용은 소스 모니터링에 대한 [자습서](../../dataflows/ui/monitor-sources.md) 또는 대상 [에 대한 자습서를 참조하십시오](../../dataflows/ui/monitor-destinations.md). |
+| 정규 표현식 함수 | [!DNL Data Prep] 이제 매퍼가 일반 표현식을 기반으로 입력 필드의 일부를 일치 및 추출할 수 있습니다. |
 
-데이터 흐름에 대한 자세한 내용은 데이터 흐름 [개요를 참조하십시오](../../dataflows/home.md).
+자세한 내용은 [[!DNL Data Prep] 개요](../../data-prep/home.md)를 참조하십시오.
 
-## [!DNL Data Science Workspace] {#dsw}
+## 대상 {#destinations}
 
-데이터 과학 작업 공간은 머신 러닝과 인공 지능을 사용하여 데이터를 통해 인사이트를 생성합니다. Adobe Experience Platform에 통합된 데이터 과학 작업 공간은 Adobe 솔루션에서 컨텐츠와 데이터 자산을 사용하여 예측할 수 있도록 도와줍니다.
+[!DNL Destinations] adobe experience platform의 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과의 사전 구축된 통합입니다. 대상을 사용하여 크로스채널 마케팅 캠페인, 이메일 캠페인, 타깃팅된 광고 및 기타 여러 가지 사용 사례에 대해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 
-**주요 기능**
+**새로운 기능**
 
 | 기능 | 설명 |
-| --- | ---|
-| Adobe Experience Platform 인텔리전스 패키지 addon | Adobe Experience Platform 인텔리전스 패키지 addon은 다음과 같은 추가 주요 기능을 잠금 해제하는 데이터 과학 작업 공간 업그레이드입니다. <li> UI 기반의 모델 실험 및 평가</li><li> 예정된 트레이닝 및 검토 작업을 통해 모델을 배포 및 운영할 수 있습니다.</li><li> Tensorflow 모델(GPU Compute)의 심층 학습 지원</li><li> 대용량 데이터 세트(10MM + 행)를 트레이닝하고 점수를 매길 수 있는 Spark 기반의 분산 컴퓨팅</li><li>기타</li> |
+| ------- | ----------- |
+| 고급 ID 일치 | 외부 ID, 전화 번호 및 모바일 장치 ID와 같은 추가 ID 일치에 대한 지원을 추가하여 [!DNL Facebook Custom Audiences] 및 [!DNL Google Customer Match]의 대상 일치 비율 기능이 향상되었습니다. 자세한 내용은 다음 설명서를 참조하십시오. <ul><li>[Facebook 대상](../../destinations/catalog/social/facebook.md)</li><li>[Google 고객 일치 대상](../../destinations/catalog/advertising/google-customer-match.md)</li><li>[대상에 프로필 및 세그먼트 활성화](../../destinations/ui/activate-destinations.md)</li></ul> |
 
-Adobe Experience Platform 인텔리전스 패키지에 대한 자세한 내용은 [데이터 과학 작업 공간 액세스 및 기능에 대한 설명서를 참조하십시오](../../data-science-workspace/access-features-dsw.md).
+자세한 내용은 [대상 개요](../../destinations/home.md)를 참조하십시오.
 
 ## [!DNL Sources] {#sources}
 
-Adobe Experience Platform은 외부 소스에서 데이터를 인제스트할 수 있으며, [!DNL Platform] 서비스를 사용하여 해당 데이터를 구조화, 레이블 지정 및 개선할 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 타사 소프트웨어 및 CRM 시스템과 같은 다양한 소스의 데이터를 인제스트할 수 있습니다.
+Adobe Experience Platform은 외부 소스에서 데이터를 인제스트할 수 있는 한편, 플랫폼 서비스를 사용하여 해당 데이터를 구조화, 레이블 지정 및 개선할 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 제3자 소프트웨어 및 CRM 시스템과 같은 다양한 소스의 데이터를 인제스트할 수 있습니다.
 
-[!DNL Experience Platform] 은 다양한 데이터 공급자에 대한 소스 연결을 쉽게 설정할 수 있는 RESTful API와 대화형 UI를 제공합니다. 이러한 소스 연결을 통해 외부 스토리지 시스템 및 CRM 서비스에 인증 및 연결할 수 있고, 통합 실행에 대한 시간을 설정하고, 데이터 통합 처리량을 관리할 수 있습니다.
+Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 쉽게 설정할 수 있는 RESTful API와 대화형 UI를 제공합니다. 이러한 소스 연결을 통해 외부 스토리지 시스템 및 CRM 서비스에 인증 및 연결할 수 있고 통합 실행에 대한 시간을 설정할 수 있으며 데이터 통합 처리량을 관리할 수 있습니다.
 
-**주요 기능**
+**새로운 기능**
 
 | 기능 | 설명 |
 | ------- | ----------- |
-| 스트리밍 소스에 대한 계정 및 연결 세부 정보 업데이트 | 이제 API와 UI를 사용하여 기존 스트리밍 연결의 이름, 설명 및 자격 증명을 업데이트할 수 [!DNL Flow Service] 있습니다. 자세한 내용은 API를 사용하여 연결 [업데이트 및 UI를 사용하여 계정 세부 사항](../../sources/tutorials/api/update.md) [편집 관련 자습서를 참조하십시오](../../sources/tutorials/ui/monitor.md). |
-| 데이터 흐름 삭제 | 이제 API 및 UI를 사용하여 오류가 있거나 불필요한 데이터 흐름을 [!DNL Flow Service] 삭제할 수 있습니다. 자세한 내용은 API를 사용하여 데이터 흐름 [삭제](../../sources/tutorials/api/delete-dataflows.md) 및 UI를 사용하여 데이터 흐름 [삭제에 대한 자습서를 참조하십시오](../../sources/tutorials/ui/delete.md). |
+| Adobe Audience Manager 소스 커넥터 개선 사항 | 이제 Audience Manager에서 인제스트까지 개별 자사 세그먼트를 필터링하고 선택할 수 있을 뿐만 아니라 자사 트레이트를 필터링할 수 있습니다. 자세한 내용은 [Audience Manager 소스 커넥터 만들기](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md)의 자습서를 참조하십시오. |
+| [!DNL Google BigQuery] 소스 커넥터 개선 사항 | 이제 [!DNL BigQuery] 소스 커넥터를 사용하여 하나의 흐름 실행에서 10GB 이상의 파일을 인제스트할 수 있습니다. 자세한 내용은 [[!DNL BigQuery] 소스 커넥터 개요](../../sources/connectors/databases/bigquery.md)를 참조하십시오. |
+| 클라우드 스토리지를 위한 복잡한 데이터 유형 지원 | 이제 클라우드 스토리지 소스 커넥터를 사용할 때 JSON 파일의 배열과 같은 복잡한 데이터 유형을 인제스트할 수 있습니다. 자세한 내용은 UI](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) 또는 [API](../../sources/tutorials/api/collect/cloud-storage.md)를 사용하여 클라우드 저장소 데이터 흐름 [을 만드는 방법에 대한 자습서를 참조하십시오. [!DNL Flow Service]  |
+| [!DNL Microsoft Dynamics] 소스에 대한 서비스 주 키 기반 인증 지원 | 이제 서비스 인증 키를 사용하여 암호 기반 인증에 대한 대안으로 [!DNL Dynamics] 계정에 인증할 수 있습니다. 자세한 내용은 [[!DNL Dynamics] 소스 커넥터 개요](../../sources/connectors/crm/ms-dynamics.md)를 참조하십시오. |
+| 클라우드 스토리지 소스의 사용자 정의 구분 기호를 위한 UI 지원 | 이제 쉼표(`,`), 탭(`\t`) 또는 파이프(`|`)와 같은 사용자 지정 열 구분 기호를 설정하여 UI에서 구분된 파일을 수집할 수 있습니다. 자세한 내용은 [클라우드 저장소 소스 커넥터를 사용하여 데이터 흐름 만들기](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md)에서 자습서를 참조하십시오. |
 
-소스에 대한 자세한 내용은 [소스 개요를 참조하십시오](../../sources/home.md).
+소스에 대한 자세한 내용은 [소스 개요](../../sources/home.md)를 참조하십시오.
 
+## [!DNL Experience Platform Launch Server Side] {#launch}
+
+Adobe Experience Platform Launch Server Side는 Adobe Experience Platform Edge Network를 사용하여 클라이언트에서 정상적으로 수행하는 작업을 실행함으로써 웹 페이지 및 앱 가중치를 줄입니다. Platform Launch Server Side 규칙은 클라이언트측 구현을 변경하지 않고 데이터를 새로운 대상으로 변환하고 전송할 수 있습니다.
+
+Adobe Experience Platform 웹 및 모바일 SDK와 결합된 Platform Launch Server Side를 사용하면 다음과 같은 이점을 얻을 수 있습니다.
+
+- 데이터 페이로드가 포함된 페이지를 한 번 호출한 다음 이 데이터 서버측을 연합하여 클라이언트측 네트워크 트래픽을 줄이고 고객에게 보다 빠른 경험을 제공합니다.
+- 웹 페이지를 로드하는 데 걸리는 시간을 줄여 사이트가 성능에 대한 업계 모범 사례를 따르도록 하십시오.
+- 모든 클라이언트측 속성에서 어느 유형의 데이터를 전송할지 제어하고 투명도를 높입니다.
+- 이전에 추적한 데이터를 새 대상으로 전송하려면 서버측 규칙을 만듭니다.
+
+자세한 내용은 [플랫폼 시작 설명서](https://experienceleague.adobe.com/docs/launch/using/server-side-info/server-side-overview.html?lang=en)를 참조하십시오.
