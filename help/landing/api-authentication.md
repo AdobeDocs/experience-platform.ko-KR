@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;Authenticate;access
+keywords: Experience Platform;홈;인기 항목;인증;액세스
 solution: Experience Platform
 title: Experience Platform API 인증 및 액세스
 topic: tutorial
@@ -8,7 +8,7 @@ description: '이 문서에서는 Experience Platform API를 호출하기 위해
 translation-type: tm+mt
 source-git-commit: 681a2554111f988ec03d40f23a3b2c8225a077ae
 workflow-type: tm+mt
-source-wordcount: '875'
+source-wordcount: '882'
 ht-degree: 6%
 
 ---
