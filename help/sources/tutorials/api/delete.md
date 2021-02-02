@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;flow service;delete connections;delete;api
+keywords: Experience Platform;홈;인기 항목;흐름 서비스;삭제 연결;삭제;api
 solution: Experience Platform
 title: Flow Service API를 사용하여 연결 삭제
 topic: overview
 type: Tutorial
-description: 이 자습서에서는 Flow Service API를 사용한 연결 삭제 단계를 설명합니다.
+description: 이 자습서에서는 Flow Service API를 사용하여 연결을 삭제하는 절차를 설명합니다.
 translation-type: tm+mt
-source-git-commit: 9e28591ef9f07217363cddf72356b8e5cd8a15a3
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '580'
+source-wordcount: '595'
 ht-degree: 2%
 
 ---
@@ -16,49 +16,49 @@ ht-degree: 2%
 
 # Flow Service API를 사용하여 연결 삭제
 
-Adobe Experience Platform은 [!DNL Platform] 서비스를 사용하여 들어오는 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 외부 소스에서 데이터를 수집할 수 있도록 허용합니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 등 다양한 소스의 데이터를 인제스트할 수 있습니다.
+Adobe Experience Platform은 [!DNL Platform] 서비스를 사용하여 수신 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 외부 소스에서 데이터를 수집할 수 있도록 허용합니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 등 다양한 소스의 데이터를 인제스트할 수 있습니다.
 
-[!DNL Flow Service] 는 Adobe Experience Platform 내의 다양한 소스에서 수집된 고객 데이터를 수집하고 중앙에서 관리하는 데 사용됩니다. 이 서비스는 지원되는 모든 소스가 연결되어 있는 사용자 인터페이스와 RESTful API를 제공합니다.
+[!DNL Flow Service] 는 Adobe Experience Platform 내의 다양한 소스에서 수집한 고객 데이터를 수집하고 중앙에서 관리하는 데 사용됩니다. 이 서비스는 지원되는 모든 소스가 연결되어 있는 사용자 인터페이스와 RESTful API를 제공합니다.
 
-이 자습서에서는 을(를) 사용하여 삭제하는 단계를 설명합니다 [[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+이 자습서에서는 [[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)을(를) 사용하여 삭제하는 절차를 설명합니다.
 
 ## 시작하기
 
-이 자습서에서는 올바른 연결 ID를 필요로 합니다. 유효한 연결 ID가 없는 경우 [소스 개요에서 선택한 커넥터를 선택하고 이 튜토리얼을 시작하기 전에](../../home.md) 설명된 단계를 따르십시오.
+이 자습서를 사용하려면 유효한 연결 ID가 있어야 합니다. 유효한 연결 ID가 없는 경우 [소스 개요](../../home.md)에서 선택한 커넥터를 선택하고 이 자습서를 시작하기 전에 설명한 단계를 따르십시오.
 
-또한 이 자습서에서는 다음과 같은 Adobe Experience Platform 구성 요소에 대해 작업해야 합니다.
+또한 이 자습서에서는 Adobe Experience Platform의 다음 구성 요소에 대해 자세히 알아야 합니다.
 
-* [소스](../../home.md): [!DNL Experience Platform] 서비스를 사용하여 들어오는 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 다양한 소스에서 데이터를 수집할 수 [!DNL Platform] 있습니다.
-* [샌드박스](../../../sandboxes/home.md): [!DNL Experience Platform] 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되도록 단일 [!DNL Platform] 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
+* [소스](../../home.md): [!DNL Experience Platform] 서비스를 사용하여 수신 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 다양한 소스에서 데이터를 수집할 수  [!DNL Platform] 있습니다.
+* [샌드박스](../../../sandboxes/home.md): [!DNL Experience Platform] 디지털 경험 애플리케이션을 개발 및 발전시키는 데 도움이 되도록 단일  [!DNL Platform] 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
 
 다음 섹션에서는 [!DNL Flow Service] API를 사용하여 연결을 성공적으로 삭제하려면 알아야 할 추가 정보를 제공합니다.
 
 ### 샘플 API 호출 읽기
 
-이 자습서에서는 요청의 서식을 지정하는 방법을 보여주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 올바른 형식의 요청 페이로드가 포함됩니다. API 응답으로 반환된 샘플 JSON도 제공됩니다. 샘플 API 호출 설명서에 사용된 규칙에 대한 자세한 내용은 문제 해결 안내서의 예제 API 호출 [을 읽는](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) 방법에 대한 섹션을 [!DNL Experience Platform] 참조하십시오.
+이 자습서에서는 요청의 서식을 지정하는 방법을 보여주는 API 호출 예를 제공합니다. 여기에는 경로, 필수 헤더 및 올바른 형식의 요청 페이로드가 포함됩니다. API 응답으로 반환된 샘플 JSON도 제공됩니다. 샘플 API 호출에 대한 설명서에 사용된 규칙에 대한 자세한 내용은 [!DNL Experience Platform] 문제 해결 안내서의 [API 호출 예](../../../landing/troubleshooting.md#how-do-i-format-an-api-request)를 읽는 방법에 대한 섹션을 참조하십시오.
 
 ### 필수 헤더에 대한 값 수집
 
-API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 합니다](../../../tutorials/authentication.md). 인증 자습서를 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
+[!DNL Platform] API를 호출하려면 먼저 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 완료해야 합니다. 인증 자습서를 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {IMS_ORG}`
 
-에 속하는 리소스를 [!DNL Experience Platform]포함한 모든 리소스 [!DNL Flow Service]는 특정 가상 샌드박스와 분리됩니다. API에 대한 모든 [!DNL Platform] 요청에는 작업이 수행할 샌드박스의 이름을 지정하는 헤더가 필요합니다.
+[!DNL Flow Service]에 속하는 리소스를 포함하여 [!DNL Experience Platform]의 모든 리소스는 특정 가상 샌드박스로 구분됩니다. [!DNL Platform] API에 대한 모든 요청에는 작업이 수행할 샌드박스의 이름을 지정하는 헤더가 필요합니다.
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
-페이로드(POST, PUT, PATCH)이 포함된 모든 요청에는 추가 미디어 유형 헤더가 필요합니다.
+페이로드(POST, PUT, PATCH)을 포함하는 모든 요청에는 추가 미디어 유형 헤더가 필요합니다.
 
 * `Content-Type: application/json`
 
 ## 연결 세부 사항 보기
 
 >[!NOTE]
->이 자습서에서는 [Azure Blob 소스 커넥터를](../../connectors/cloud-storage/blob.md) 예로 사용하지만 요약된 단계는 [사용 가능한 소스 커넥터에 적용됩니다](../../home.md).
+>이 자습서에서는 [Azure Blob 소스 커넥터](../../connectors/cloud-storage/blob.md)을(를) 예로 사용하지만 요약된 단계가 [사용 가능한 소스 커넥터](../../home.md)에 적용됩니다.
 
-연결 정보를 업데이트하는 첫 번째 단계는 연결 ID를 사용하여 연결 세부 정보를 가져오는 것입니다.
+연결 정보를 업데이트하는 첫 번째 단계는 연결 ID를 사용하여 연결 세부 사항을 가져오는 것입니다.
 
 **API 형식**
 
@@ -68,7 +68,7 @@ GET /connections/{CONNECTION_ID}
 
 | 매개 변수 | 설명 |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | 검색할 연결에 대한 고유 `id` 값입니다. |
+| `{CONNECTION_ID}` | 검색할 연결에 대한 고유한 `id` 값입니다. |
 
 **요청**
 
@@ -132,7 +132,7 @@ DELETE /connections/{CONNECTION_ID}
 
 | 매개 변수 | 설명 |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | 삭제할 연결에 대한 고유 `id` 값입니다. |
+| `{CONNECTION_ID}` | 삭제할 연결에 대한 고유한 `id` 값입니다. |
 
 **요청**
 
@@ -153,6 +153,6 @@ curl -X DELETE \
 
 ## 다음 단계
 
-이 튜토리얼을 따라 API를 사용하여 기존 계정을 [!DNL Flow Service] 성공적으로 삭제했습니다.
+이 튜토리얼을 따라 [!DNL Flow Service] API를 사용하여 기존 계정을 성공적으로 삭제했습니다.
 
-사용자 인터페이스를 사용하여 이러한 작업을 수행하는 방법에 대한 자세한 내용은 UI에서 계정 [삭제에 대한 자습서를 참조하십시오](../../tutorials/ui/delete-accounts.md)
+사용자 인터페이스를 사용하여 이러한 작업을 수행하는 방법에 대한 자세한 내용은 UI](../../tutorials/ui/delete-accounts.md)에서 [계정 삭제의 자습서를 참조하십시오.
