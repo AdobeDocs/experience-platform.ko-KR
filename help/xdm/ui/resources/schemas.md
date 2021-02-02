@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;data model;ui;workspace;schema;schemas;
+keywords: Experience Platform;홈;인기 항목;api;XDM;XDM 시스템;경험 데이터 모델;ui;작업 공간;스키마;스키마;;home;popular topics;api;XDM system;experience data model;ui;workspace;schema;schemas
 solution: Experience Platform
 title: UI에서 스키마 만들기 및 편집
 description: Experience Platform 사용자 인터페이스에서 스키마를 만들고 편집하는 방법에 대한 기본 사항을 알아봅니다.
 topic: user guide
 translation-type: tm+mt
-source-git-commit: efa1d8efb26f4196f6724702784ccd13a9337a8a
+source-git-commit: 3aa838509e4e24c57508e7411b0ffcf135fbcf04
 workflow-type: tm+mt
-source-wordcount: '1032'
+source-wordcount: '1167'
 ht-degree: 0%
 
 ---
@@ -65,13 +65,21 @@ ht-degree: 0%
 
 ![](../../images/ui/resources/schemas/add-mixin-button.png)
 
-대화 상자가 나타나면 목록에서 원하는 믹스를 선택할 수 있습니다. 목록에서 여러 믹스를 선택할 수 있으며 선택한 각 믹스가 오른쪽 레일에 표시됩니다.
+스키마에 대해 선택할 수 있는 혼합 목록이 표시된 대화 상자가 나타납니다. 믹스는 하나의 클래스와 호환되므로 스키마의 선택된 클래스와 연결된 믹스만 나열됩니다. 기본적으로 나열된 믹스는 조직 내의 사용 인기도에 따라 정렬됩니다.
+
+![](../../images/ui/resources/schemas/mixin-popularity.png)
+
+검색 막대를 사용하여 원하는 믹싱을 찾을 수 있습니다. 쿼리와 일치하는 이름을 가진 믹스가 목록 맨 위에 표시됩니다. **[!UICONTROL 표준 필드]** 아래에서 원하는 데이터 특성을 설명하는 필드가 포함된 혼합이 표시됩니다.
+
+![](../../images/ui/resources/schemas/mixin-search.png)
+
+스키마에 추가할 믹스의 이름 옆에 있는 확인란을 선택합니다. 목록에서 여러 믹스를 선택할 수 있으며 선택한 각 믹스가 오른쪽 레일에 표시됩니다.
 
 ![](../../images/ui/resources/schemas/add-mixin.png)
 
 >[!TIP]
 >
->나열된 믹싱의 경우 미리 보기 아이콘(![](../../images/ui/resources/schemas/preview-icon.png))을 선택하여 스키마에 항목을 추가하기 전에 믹싱에서 제공하는 필드의 구조를 볼 수 있습니다.
+>나열된 믹싱의 경우 정보 아이콘(![](../../images/ui/resources/schemas/info-icon.png))을 마우스로 가리키거나 초점을 조정하여 믹싱이 캡처하는 데이터의 유형에 대한 간단한 설명을 볼 수 있습니다. 미리 보기 아이콘(![](../../images/ui/resources/schemas/preview-icon.png))을 선택하여 스키마에 추가하기 전에 믹싱에서 제공하는 필드의 구조를 볼 수도 있습니다.
 
 믹스인 선택이 끝나면 **[!UICONTROL 믹신 추가]**&#x200B;를 선택하여 스키마에 추가합니다.
 
