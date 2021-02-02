@@ -1,12 +1,12 @@
 ---
-source-git-commit: b0cc44b33b399eb64122374251840a4298946d80
+source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
 workflow-type: tm+mt
 translation-type: tm+mt
-source-wordcount: '509'
-ht-degree: 81%
+source-wordcount: '508'
+ht-degree: 79%
 
 ---
-# 컨텐츠 기여
+# 콘텐츠 기여
 
 Adobe는 Adobe 커뮤니티와 설명서 팀이 아닌 Adobe 직원들의 내용 기여를 환영합니다.
 
@@ -16,7 +16,7 @@ Adobe는 Adobe 커뮤니티와 설명서 팀이 아닌 Adobe 직원들의 내용
 
 ## Adobe 컨텐츠에 기여하는 방법
 
-[Adobe Docs 기여자 안내서](https://docs.adobe.com/help/en/contributor/contributor-guide/introduction.html)를 참조하십시오.
+[Adobe Docs 기여자 안내서](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=en)를 참조하십시오.
 
 기여하는 방식은 사용자의 신분과 사용자가 기여하고 싶은 변경 내용의 종류에 따라 다릅니다.
 
@@ -24,7 +24,7 @@ Adobe는 Adobe 커뮤니티와 설명서 팀이 아닌 Adobe 직원들의 내용
 
 요청을 제출하려면 문서에서 **문제 로그** 링크를 클릭하면 GitHub에서 문제가 열립니다. 제목과 설명을 지정한 다음 **새 문제 제출**&#x200B;을 클릭합니다.
 
-부분 업데이트를 요청하려면 문서에서 **이 페이지 편집** 링크를 클릭하여 GitHub에서 소스 문서를 엽니다. GitHub UI를 사용하여 업데이트를 만듭니다. 자세한 내용은 일반 [Adobe Docs 기여자 안내서](https://docs.adobe.com/help/en/contributor/contributor-guide/introduction.html)를 참조하십시오.
+부분 업데이트를 요청하려면 문서에서 **이 페이지 편집** 링크를 클릭하여 GitHub에서 소스 문서를 엽니다. GitHub UI를 사용하여 업데이트를 만듭니다. 자세한 내용은 일반 [Adobe Docs 기여자 안내서](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html)를 참조하십시오.
 
 이 REPO의 설명서 및 코드 샘플에 대해 사용자가 제출하는 부분 수정 또는 설명은 Adobe 사용 약관의 적용을 받습니다.
 
@@ -36,15 +36,15 @@ Adobe 커뮤니티 멤버가 문서를 만들거나 주요 변경 사항을 제�
 If you submit a pull request with significant changes to documentation and code examples, you'll see a message in the pull request asking you to submit an online contribution license agreement (CLA). You must complete the online form before we can review your pull request.
 -->
 
-### Adobe 직원의 주요 변경 사항 또는 새로운 문서
+### Adobe 직원의 주요 변경 사항 또는 새 문서
 
-Adobe Experience Cloud 솔루션에 대한 제품 팀의 테크니컬 라이터, 프로그램 관리자 또는 개발자이고 기술 문서에 기여하거나 기술 문서를 작성하는 것이 본인의 직무인 경우 개인 리포지토리(`https://git.corp.adobe.com/AdobeDocs`)를 사용해야 합니다. See the [Internal Collaboration Guide](https://docs.adobe.com/content/help/en/collaborative-doc-instructions/collaboration-guide/home.html) for more information.
+Adobe Experience Cloud 솔루션에 대한 제품 팀의 테크니컬 라이터, 프로그램 관리자 또는 개발자이고 기술 문서에 기여하거나 기술 문서를 작성하는 것이 본인의 직무인 경우 개인 리포지토리(`https://git.corp.adobe.com/AdobeDocs`)를 사용해야 합니다. 자세한 내용은 [내부 공동 작업 안내서](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/home.html?lang=ko-kr)를 참조하십시오.
 
 <!--Employees from other parts of the Adobe world should use the public repo for minor updates.-->
 
 ## Experience Platform 설명서 팀에 문의
 
-위에 명시된 바와 같이, Adobe 커뮤니티 구성원은 적절한 작성자에게 지정될 문제를 제출할 수 있습니다. Adobe 직원은 문제를 제출하거나 Experience Platform 설명서 팀에 직접 문의할 수 있습니다. 특정 플랫폼 영역에 대한 리드 작성기를 찾으려면 [Adobe Experience Platform 문서 위키를 참조하십시오](https://wiki.corp.adobe.com/display/DMSArchitecture/Adobe+Experience+Platform+Documentation).
+위에서 설명한 바와 같이, Adobe 커뮤니티 구성원은 적절한 작성자에게 지정될 문제를 제출할 수 있습니다. Adobe 직원은 문제를 제출하거나 Experience Platform 설명서 팀에 직접 문의할 수 있습니다. 특정 플랫폼 영역에 대한 리드 작성기를 찾으려면 [Adobe Experience Platform 설명서 wiki](https://wiki.corp.adobe.com/display/DMSArchitecture/Adobe+Experience+Platform+Documentation)를 참조하십시오.
 
 ## 도구 및 설정
 
@@ -52,7 +52,7 @@ Adobe Experience Cloud 솔루션에 대한 제품 팀의 테크니컬 라이터,
 
 커뮤니티 기여자는 기본 편집에 GitHub UI를 사용하거나 리포지토리를 포크하여 큰 기여를 할 수 있습니다.
 
-자세한 내용은 [Adobe Docs 기여자 안내서](https://docs.adobe.com/help/en/contributor/contributor-guide/introduction.html)를 참조하십시오.
+자세한 내용은 [Adobe Docs 기여자 안내서](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html)를 참조하십시오.
 
 ### Markdown
 
