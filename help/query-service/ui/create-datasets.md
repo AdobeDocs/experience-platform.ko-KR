@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;generate datasets;generate dataset;create dataset;
+keywords: Experience Platform;홈;인기 항목;쿼리 서비스;쿼리 서비스;데이터 집합 생성;데이터 집합 생성;데이터 집합 만들기;;home;popular topics;
 solution: Experience Platform
 title: 쿼리 결과에서 데이터 집합 생성
 topic: queries
@@ -8,7 +8,7 @@ description: '쿼리 서비스를 사용하면 UI에서 데이터 세트를 만�
 translation-type: tm+mt
 source-git-commit: 0ba4e26927cdc96855f35d72a8a6de55f4a34bfa
 workflow-type: tm+mt
-source-wordcount: '305'
+source-wordcount: '320'
 ht-degree: 0%
 
 ---
