@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;data type registry;Schema Registry;data type;Data type;data types;Data types;create
+keywords: Experience Platform;홈;인기 항목;api;API;XDM;XDM 시스템;경험 데이터 모델;경험 데이터 모델;경험 데이터 모델;데이터 모델;데이터 모델;데이터 형식 레지스트리;스키마 레지스트리;데이터 유형;데이터 유형;데이터 유형;데이터 유형;데이터 유형;데이터 유형;만들기;만들기
 solution: Experience Platform
 title: 데이터 유형 만들기
 description: 스키마 레지스트리 API의 /datatypes 끝점을 사용하면 경험 응용 프로그램 내에서 XDM 데이터 유형을 프로그래밍 방식으로 관리할 수 있습니다.
 translation-type: tm+mt
 source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
 workflow-type: tm+mt
-source-wordcount: '1110'
+source-wordcount: '1147'
 ht-degree: 2%
 
 ---
