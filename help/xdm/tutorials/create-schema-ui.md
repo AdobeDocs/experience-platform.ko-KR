@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;ui;UI;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema editor;Schema Editor;schema;Schema;schemas;Schemas;create
+keywords: Experience Platform;홈;인기 항목;UI;XDM;XDM 시스템;경험 데이터 모델;경험 데이터 모델;경험 데이터 모델;데이터 모델;데이터 모델;스키마 편집기;스키마;스키마;스키마;스키마;스키마;만들기;만들기
 solution: Experience Platform
 title: 스키마 편집기를 사용하여 스키마 만들기
 topic: tutorial
@@ -8,7 +8,7 @@ description: 이 자습서에서는 Experience Platform 내의 스키마 편집�
 translation-type: tm+mt
 source-git-commit: e5c5fea783aa4088d225f771905fa8b2098613cf
 workflow-type: tm+mt
-source-wordcount: '3568'
+source-wordcount: '3600'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Adobe Experience Platform 사용자 인터페이스를 사용하면 [!DNL Schema
 >
 >데모용으로 이 자습서의 단계에는 고객 충성도 프로그램의 구성원을 설명하는 예제 스키마를 만드는 작업이 포함됩니다. 이러한 단계를 사용하여 고유한 목적으로 다른 스키마를 만들 수 있지만 먼저 예제 스키마를 만들어 [!DNL Schema Editor]의 기능을 배우는 것이 좋습니다.
 
-대신 [!DNL Schema Registry] API를 사용하여 스키마를 작성하려면 [[!DNL Schema Registry] 개발자 안내서](../api/getting-started.md)에서 API](create-schema-api.md)를 사용하여 스키마를 만들기 전에 &lt;a1/>개발자 안내서&lt;a2/>를 읽으십시오.[
+대신 [!DNL Schema Registry] API를 사용하여 스키마를 작성하려면 [[!DNL Schema Registry] 개발자 안내서](../api/getting-started.md)에서 API](create-schema-api.md)를 사용하여 스키마를 만들기 전에 [개발자 안내서를 읽으십시오.
 
 ## 시작하기
 
@@ -264,7 +264,7 @@ Adobe Experience Platform 사용자 인터페이스를 사용하면 [!DNL Schema
 >
 >`identityMap`을(를) 사용할 계획이라면 스키마에 직접 추가하는 모든 기본 ID를 재정의한다는 점을 명심하십시오. 자세한 내용은 스키마 컴포지션 안내서의 [기본 사항](../schema/composition.md#identityMap)에 있는 `identityMap`의 섹션을 참조하십시오.
 
-편집기의 **[!UICONTROL 구조]** 섹션에서 `loyaltyId` 필드를 선택하고 **[!UICONTROL 필드 속성]** 아래에 &lt;a3/>ID ]**확인란이 나타납니다.**[!UICONTROL  상자에 **[!UICONTROL 기본 ID]**&#x200B;가 나타납니다. 이 상자도 선택하십시오.
+편집기의 **[!UICONTROL 구조]** 섹션에서 `loyaltyId` 필드를 선택하고 **[!UICONTROL 필드 속성]** 아래에 **[!UICONTROL ID]** 확인란이 나타납니다. 상자에 **[!UICONTROL 기본 ID]**&#x200B;가 나타납니다. 이 상자도 선택하십시오.
 
 >[!NOTE]
 >
