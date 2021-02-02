@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;
+keywords: Experience Platform;홈;인기 항목;api;XDM;XDM;경험 데이터 모델;경험 데이터 모델;경험 데이터 모델;데이터 모델;데이터 모델;스키마 레지스트리;스키마 레지스트리;;home;popular topics;api;XDM;XDM system;experience data model;data Model;schema registry;Schema Registry;Registry
 solution: Experience Platform
 title: 스키마 레지스트리 API 개발자 가이드
 description: '스키마 레지스트리 API를 사용하면 Experience Platform 내에서 사용 가능한 모든 스키마 및 관련 XDM 리소스를 프로그래밍 방식으로 관리할 수 있습니다. '
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
+source-git-commit: 44a727f6ce4c2b90aa010379583c7c4d3ebd011c
 workflow-type: tm+mt
 source-wordcount: '961'
 ht-degree: 0%
@@ -63,19 +63,19 @@ Platform을 사용하면 특정 사용 사례에 대해 스키마를 구성할 �
 
 스키마 레지스트리 API를 사용하면 샌드박스와 IMS 조직 간에 XDM 리소스를 전송하고 공유할 수 있습니다. 스키마, 혼합 또는 데이터 유형에 대해 리소스 구조와 종속 리소스가 포함된 내보내기 페이로드를 생성할 수 있습니다. 그런 다음 이 페이로드를 사용하여 대상 샌드박스 및 IMS 조직에 리소스를 가져올 수 있습니다.
 
-이 끝점의 사용에 대한 자세한 내용은 [스키마 레지스트리 API 참조](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)를 참조하십시오.
+이러한 끝점을 사용하는 방법에 대한 자세한 내용은 [내보내기/가져오기 끝점 안내서](./export-import.md)를 참조하십시오.
 
 ## 샘플 데이터
 
 스키마 라이브러리 내에서 지정된 스키마에 대한 샘플 데이터를 생성할 수 있습니다. 그런 다음 반환된 응답 개체를 데이터 수집의 소스로 사용할 수 있습니다.
 
-이 끝점의 사용에 대한 자세한 내용은 [스키마 레지스트리 API 참조](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)를 참조하십시오.
+이 끝점 사용에 대한 자세한 내용은 [샘플 데이터 끝점 안내서](./sample-data.md)를 참조하십시오.
 
 ## 감사 로그
 
 스키마 레지스트리는 다른 업데이트 간에 리소스(클래스, 혼합, 데이터 유형 또는 스키마)에 발생한 모든 변경 내용의 로그를 유지 관리합니다. 이 끝점에 대한 GET 요청 경로에 `$id` 또는 `meta:altId`을 제공하여 특정 리소스에 대한 로그를 검색할 수 있습니다.
 
-이 끝점의 사용에 대한 자세한 내용은 [스키마 레지스트리 API 참조](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)를 참조하십시오.
+이 끝점 사용에 대한 자세한 내용은 [감사 로그 끝점 안내서](./audit-log.md)를 참조하십시오.
 
 ## 다음 단계
 
