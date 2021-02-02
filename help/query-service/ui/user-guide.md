@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;Query editor;query editor;Query service;query service;
+keywords: Experience Platform;홈;인기 항목;쿼리 편집기;쿼리 서비스;쿼리 서비스;쿼리 서비스;;home;popular topics;query editor;Query service;query service;
 solution: Experience Platform
 title: 쿼리 편집기 사용 안내서
 topic: query editor
@@ -7,7 +7,7 @@ description: 쿼리 편집기는 Experience Platform 사용자 인터페이스 �
 translation-type: tm+mt
 source-git-commit: f35443046a3d2bc5101d0fa2a58d07f4b6a31151
 workflow-type: tm+mt
-source-wordcount: '1068'
+source-wordcount: '1081'
 ht-degree: 1%
 
 ---
