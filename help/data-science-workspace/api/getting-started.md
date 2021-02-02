@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;data science workspace;data science
+keywords: Experience Platform;개발자 가이드;끝점;데이터 과학 작업 공간;인기 있는 주제;데이터 과학 작업 공간;데이터 과학
 solution: Experience Platform
 title: Sensei 머신 러닝 API 개발자 가이드
 topic: Developer guide
-description: 이 개발자 안내서에서는 Sensei Machine Learning API를 사용하는 데 도움이 되는 단계를 제공하고 다양한 데이터 과학 작업 공간 리소스에서 CRUD 작업을 수행하는 API 호출을 시연합니다.
+description: 이 개발자 안내서에서는 Sensei 기계 학습 API를 사용하는 데 도움이 되는 단계를 제공하며 다양한 데이터 과학 작업 공간 리소스에서 CRUD 작업을 수행하는 API 호출을 보여줍니다.
 translation-type: tm+mt
-source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '225'
+source-wordcount: '244'
 ht-degree: 2%
 
 ---
@@ -15,25 +15,25 @@ ht-degree: 2%
 
 # [!DNL Sensei Machine Learning] API 개발자 가이드
 
-API는 [!DNL Sensei Machine Learning] 알고리즘 온보딩, 실험, 서비스 배포에 이르기까지 데이터 과학자들이 기계 학습 서비스를 구성하고 관리하는 메커니즘을 제공합니다.
+[!DNL Sensei Machine Learning] API는 알고리즘 온보딩, 실험 및 서비스 배포에 이르기까지 데이터 과학자들이 기계 학습 서비스를 구성하고 관리하는 메커니즘을 제공합니다.
 
-이 개발자 가이드는 Sensei Machine Learning API [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)사용을 시작하는 데 도움이 되는 단계를 제공하고 다양한 데이터 과학 작업 공간 리소스에서 CRUD 작업을 수행하는 API 호출을 시연합니다.
+이 개발자 안내서에서는 [Sensei 기계 학습 API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) 사용을 시작하는 데 도움이 되는 단계를 제공하며 다양한 데이터 과학 작업 공간 리소스에서 CRUD 작업을 수행하는 API 호출을 보여 줍니다.
 
 ## 시작하기
 
-API를 호출하기 위해 다음 요청 헤더에 액세스할 수 있으려면 [인증](../../tutorials/authentication.md) 자습서를 [!DNL Adobe Experience Platform] 완료해야 합니다.
+[!DNL Adobe Experience Platform] API를 호출하기 위해 다음 요청 헤더에 액세스하려면 [인증](https://www.adobe.com/go/platform-api-authentication-en) 자습서를 완료해야 합니다.
 
-* 인증:무기명 `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* 인증:Bearer `{ACCESS_TOKEN}`
+* x-api-key:`{API_KEY}`
+* x-gw-ims-org-id:`{IMS_ORG}`
 
-의 모든 리소스 [!DNL Experience Platform] 는 특정 가상 샌드박스와 분리됩니다. API에 대한 모든 [!DNL Platform] 요청에는 작업이 수행할 샌드박스의 이름을 지정하는 헤더가 필요합니다.
+[!DNL Experience Platform]의 모든 리소스는 특정 가상 샌드박스로 분리됩니다. [!DNL Platform] API에 대한 모든 요청에는 작업이 수행할 샌드박스의 이름을 지정하는 헤더가 필요합니다.
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+* x-sandbox-name:`{SANDBOX_NAME}`
 
-의 샌드박스에 대한 자세한 내용 [!DNL Platform]은 [샌드박스 개요 설명서를 참조하십시오](../../sandboxes/home.md).
+[!DNL Platform]의 샌드박스에 대한 자세한 내용은 [샌드박스 개요 설명서](../../sandboxes/home.md)를 참조하십시오.
 
-페이로드(POST, PUT, PATCH)이 포함된 모든 요청에는 추가 헤더가 필요합니다.
+페이로드(POST, PUT, PATCH)을 포함하는 모든 요청에는 추가 헤더가 필요합니다.
 
 * 컨텐츠 유형:application/json
 
@@ -44,7 +44,7 @@ API를 호출하기 위해 다음 요청 헤더에 액세스할 수 있으려면
 * [엔진](./engines.md)
 * [실험](./experiments.md)
 * [인사이트](./insights.md)
-* [MLInestas(레서피)](./mlinstances.md)
+* [MLInests(레서피)](./mlinstances.md)
 * [MLSservices](./mlservices.md)
 * [모델](./models.md)
 * [부록](./appendix.md)
