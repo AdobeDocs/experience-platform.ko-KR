@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;data model;ui;workspace;array;field;
+keywords: Experience Platform;홈;인기 항목;api;XDM;XDM 시스템;경험 데이터 모델;ui;작업 영역;배열;field;home;popular topics;api;XDM system;experience data model;ui;workspace;array;field;
 solution: Experience Platform
 title: UI에서 배열 필드 정의
 description: Experience Platform 사용자 인터페이스에서 배열 필드를 정의하는 방법을 알아봅니다.
@@ -7,7 +7,7 @@ topic: user guide
 translation-type: tm+mt
 source-git-commit: 2e20403122e65d28f04114af9b7e8d41874f76e2
 workflow-type: tm+mt
-source-wordcount: '346'
+source-wordcount: '365'
 ht-degree: 1%
 
 ---
@@ -37,7 +37,7 @@ Adobe Experience Platform 사용자 인터페이스에서 XDM(경험 데이터 �
 
 ![](../../images/ui/fields/special/array-config.png)
 
-캔버스는 필드의 변경 사항을 반영하도록 업데이트됩니다. 캔버스에서 필드 이름 옆에 표시되는 데이터 유형에는 해당 데이터 유형의 배열을 나타내는 대괄호(`[]`) 쌍(&lt;a0/>)이 추가됩니다.
+캔버스는 필드의 변경 사항을 반영하도록 업데이트됩니다. 캔버스에서 필드 이름 옆에 표시되는 데이터 유형에는 해당 데이터 유형의 배열을 나타내는 대괄호(`[]`) 쌍()이 추가됩니다.
 
 ![](../../images/ui/fields/special/array-applied.png)
 
