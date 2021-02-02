@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;experienceevent queries;experienceevent query;Experience Event query;
+keywords: Experience Platform;홈;인기 항목;쿼리 서비스;쿼리 서비스;경험 이벤트 쿼리;경험 이벤트 쿼리;경험 이벤트 쿼리;경험 이벤트 쿼리
 solution: Experience Platform
 title: 경험 이벤트 쿼리
 topic: queries
@@ -8,7 +8,7 @@ description: 다음 문서에서는 경험 이벤트와 관련된 쿼리의 예�
 translation-type: tm+mt
 source-git-commit: 5348ea4fb381f938ef635077c04cbff69c1b1a45
 workflow-type: tm+mt
-source-wordcount: '294'
+source-wordcount: '310'
 ht-degree: 0%
 
 ---
