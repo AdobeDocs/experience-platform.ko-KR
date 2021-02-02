@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;streaming connection;create streaming connection;api guide;tutorial;create a streaming connection;streaming ingestion;ingestion;
+keywords: Experience Platform;홈;인기 항목;스트리밍 연결;스트리밍 연결;api 안내서;자습서;스트리밍 연결;스트리밍 통합;통합;;home;popular topics;streaming connection;tutorial;streaming connection;streaming ingestion;inestion;
 solution: Experience Platform
 title: API를 사용하여 스트리밍 연결 만들기
 topic: tutorial
 type: Tutorial
 description: 이 자습서는 Adobe Experience Platform 데이터 통합 서비스 API의 일부인 스트리밍 통합 API를 사용하는 데 도움이 됩니다.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '653'
+source-wordcount: '677'
 ht-degree: 2%
 
 ---
@@ -16,42 +16,42 @@ ht-degree: 2%
 
 # API를 사용하여 스트리밍 연결 만들기
 
-이 자습서는 Adobe Experience Platform 데이터 API의 일부인 스트리밍 통합 API를 사용하는 데 도움이 [!DNL Ingestion Service] 됩니다.
+이 자습서는 Adobe Experience Platform 데이터 [!DNL Ingestion Service] API의 일부인 스트리밍 통합 API를 사용하는 데 도움이 됩니다.
 
 ## 시작하기
 
-Adobe Experience Platform로의 데이터 스트리밍을 시작하려면 스트리밍 연결 등록이 필요합니다. 스트리밍 연결을 등록할 때 스트리밍 데이터 소스와 같은 몇 가지 주요 세부 사항을 제공해야 합니다.
+Adobe Experience Platform에 대한 스트리밍 데이터를 시작하려면 스트리밍 연결 등록이 필요합니다. 스트리밍 연결을 등록할 때 스트리밍 데이터의 소스와 같은 몇 가지 주요 세부 정보를 제공해야 합니다.
 
-스트리밍 연결을 등록한 후 데이터 프로듀서로서 데이터를 플랫폼으로 스트리밍하는 데 사용할 수 있는 고유한 URL을 갖게 됩니다.
+스트리밍 연결을 등록한 후 데이터 프로듀서로 사용할 경우 데이터를 플랫폼에 스트리밍하는 데 사용할 수 있는 고유한 URL이 만들어집니다.
 
-또한 이 자습서에서는 다양한 Adobe Experience Platform 서비스에 대한 작업 지식이 필요합니다. 이 자습서를 시작하기 전에 다음 서비스에 대한 설명서를 검토하십시오.
+또한 이 자습서를 사용하려면 다양한 Adobe Experience Platform 서비스에 대한 작업 지식이 필요합니다. 이 자습서를 시작하기 전에 다음 서비스에 대한 설명서를 검토하십시오.
 
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):경험 데이터를 [!DNL Platform] 구성하는 표준화된 프레임워크
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):경험 데이터를  [!DNL Platform] 구성하는 표준화된 프레임워크.
 - [[!DNL Real-time Customer Profile]](../../profile/home.md):여러 소스에서 집계된 데이터를 기반으로 통합된 소비자 프로필을 실시간으로 제공합니다.
 
 다음 섹션에서는 스트리밍 통합 API를 성공적으로 호출하기 위해 알아야 할 추가 정보를 제공합니다.
 
 ### 샘플 API 호출 읽기
 
-이 안내서에서는 요청의 서식을 지정하는 방법을 보여주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 올바른 형식의 요청 페이로드가 포함됩니다. API 응답으로 반환된 샘플 JSON도 제공됩니다. 샘플 API 호출 설명서에 사용된 규칙에 대한 자세한 내용은 문제 해결 안내서의 예제 API 호출 [을 읽는](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 방법에 대한 섹션을 [!DNL Experience Platform] 참조하십시오.
+이 안내서에서는 요청의 서식을 지정하는 방법을 보여주는 API 호출 예를 제공합니다. 여기에는 경로, 필수 헤더 및 올바른 형식의 요청 페이로드가 포함됩니다. API 응답으로 반환된 샘플 JSON도 제공됩니다. 샘플 API 호출에 대한 설명서에 사용된 규칙에 대한 자세한 내용은 [!DNL Experience Platform] 문제 해결 안내서의 [API 호출 예](../../landing/troubleshooting.md#how-do-i-format-an-api-request)를 읽는 방법에 대한 섹션을 참조하십시오.
 
 ### 필수 헤더에 대한 값 수집
 
-API를 호출하려면 [!DNL Platform] 먼저 [인증 자습서를 완료해야 합니다](../../tutorials/authentication.md). 인증 자습서를 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
+[!DNL Platform] API를 호출하려면 먼저 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 완료해야 합니다. 인증 자습서를 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
 
-- 인증:무기명 `{ACCESS_TOKEN}`
-- x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
+- 인증:Bearer `{ACCESS_TOKEN}`
+- x-api-key:`{API_KEY}`
+- x-gw-ims-org-id:`{IMS_ORG}`
 
-의 모든 리소스 [!DNL Experience Platform] 는 특정 가상 샌드박스와 분리됩니다. API에 대한 모든 [!DNL Platform] 요청에는 작업이 수행할 샌드박스의 이름을 지정하는 헤더가 필요합니다.
+[!DNL Experience Platform]의 모든 리소스는 특정 가상 샌드박스로 분리됩니다. [!DNL Platform] API에 대한 모든 요청에는 작업이 수행할 샌드박스의 이름을 지정하는 헤더가 필요합니다.
 
-- x-sandbox-name: `{SANDBOX_NAME}`
+- x-sandbox-name:`{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->의 샌드박스에 대한 자세한 내용 [!DNL Platform]은 [샌드박스 개요 설명서를 참조하십시오](../../sandboxes/home.md).
+>[!DNL Platform]의 샌드박스에 대한 자세한 내용은 [샌드박스 개요 설명서](../../sandboxes/home.md)를 참조하십시오.
 
-페이로드(POST, PUT, PATCH)이 포함된 모든 요청에는 추가 헤더가 필요합니다.
+페이로드(POST, PUT, PATCH)을 포함하는 모든 요청에는 추가 헤더가 필요합니다.
 
 - 컨텐츠 유형:application/json
 
@@ -69,7 +69,7 @@ POST /flowservice/connections
 
 >[!NOTE]
 >
->스트리밍 통합 `providerId` 을 위한 스트리밍 연결을 만드는 API에 대해 지정하는 API와 같이 나열된 값과 이 값이 예와 같이 사용되어야 `connectionSpec`**** 합니다.
+>스트리밍 통합 스트리밍 연결을 만드는 API에 대해 지정하는 API는 다음 예제와 같이 나열된 `providerId` 및 `connectionSpec` **에 대한 값을 사용해야 합니다.**
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
@@ -99,7 +99,7 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 
 **응답**
 
-성공적인 응답은 새로 만든 연결에 대한 세부 사항과 함께 HTTP 상태 201을 반환합니다.
+성공적인 응답은 새로 만든 연결의 세부 정보와 함께 HTTP 상태 201을 반환합니다.
 
 ```json
 {
@@ -110,8 +110,8 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `id` | 새로 만든 연결 `id` 의 이름입니다. 이것은 본 계약서에 명시될 것입니다 `{CONNECTION_ID}`. |
-| `etag` | 연결에 할당된 식별자로, 연결 개정을 지정합니다. |
+| `id` | 새로 만든 연결의 `id`. 이것은 `{CONNECTION_ID}`이라고 합니다. |
+| `etag` | 연결의 개정을 지정하는 연결에 할당된 식별자입니다. |
 
 ## 데이터 수집 URL 가져오기
 
@@ -125,7 +125,7 @@ GET /flowservice/connections/{CONNECTION_ID}
 
 | 매개 변수 | 설명 |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | 이전에 만든 연결 `id` 값입니다. |
+| `{CONNECTION_ID}` | 이전에 만든 연결의 `id` 값입니다. |
 
 **요청**
 
@@ -139,7 +139,7 @@ curl -X GET https://platform.adobe.io/data/foundation/flowservice/connections/{C
 
 **응답**
 
-성공적인 응답은 요청된 연결에 대한 자세한 정보와 함께 HTTP 상태 200을 반환합니다. 데이터 수집 URL은 연결과 함께 자동으로 생성되며 이 `inletUrl` 값을 사용하여 검색할 수 있습니다.
+성공적인 응답은 요청된 연결에 대한 자세한 정보와 함께 HTTP 상태 200을 반환합니다. 데이터 수집 URL은 연결을 사용하여 자동으로 생성되며 `inletUrl` 값을 사용하여 검색할 수 있습니다.
 
 ```json
 {
@@ -178,14 +178,14 @@ curl -X GET https://platform.adobe.io/data/foundation/flowservice/connections/{C
 
 ## 다음 단계
 
-스트리밍 연결을 만들었으므로 데이터를 스트리밍하거나 시계열 또는 기록할 수 있으므로 데이터 내에서 데이터를 인제스트할 수 있습니다 [!DNL Platform]. 시계열 데이터를 스트리밍하는 방법 [!DNL Platform]을 알려면 [스트리밍 시계열 데이터 자습서로 이동합니다](./streaming-time-series-data.md). 기록 데이터를 스트리밍하는 방법을 [!DNL Platform]알아보려면 [스트리밍 레코드 데이터 자습서로 이동합니다](./streaming-record-data.md).
+스트리밍 연결을 만들었으므로 이제 시계열 또는 레코드 데이터를 스트리밍할 수 있으므로 [!DNL Platform] 내에 데이터를 인제스트할 수 있습니다. 시간 시리즈 데이터를 [!DNL Platform]에 스트리밍하는 방법을 알아보려면 [스트리밍 시간 시리즈 데이터 자습서](./streaming-time-series-data.md)로 이동하십시오. 레코드 데이터를 [!DNL Platform]에 스트리밍하는 방법을 알아보려면 [스트리밍 레코드 데이터 자습서](./streaming-record-data.md)로 이동하십시오.
 
 ## 부록
 
-이 섹션에서는 API를 사용하여 스트리밍 연결을 만드는 방법에 대한 보충 정보를 제공합니다.
+이 섹션에서는 API를 사용하여 스트리밍 연결을 만드는 방법에 대한 추가 정보를 제공합니다.
 
 ### 인증된 스트리밍 연결
 
-인증된 데이터 수집을 사용하면 [!DNL Real-time Customer Profile] 및 [!DNL Identity]과 같은 Adobe Experience Platform 서비스가 신뢰할 수 있는 출처의 레코드와 신뢰할 수 없는 출처의 레코드를 구별할 수 있습니다. PII(개인 식별 정보)를 전송하려는 클라이언트는 IMS 액세스 토큰을 POST 요청의 일부로 전송함으로써 이를 수행할 수 있습니다. IMS 토큰이 유효한 경우 레코드는 신뢰할 수 있는 소스에서 수집된 것으로 표시됩니다.
+인증된 데이터 수집을 통해 Adobe Experience Platform 서비스(예: [!DNL Real-time Customer Profile] 및 [!DNL Identity])는 신뢰할 수 있는 출처의 레코드와 신뢰할 수 없는 출처의 레코드를 구별할 수 있습니다. PII(개인 식별 정보)를 보내려는 클라이언트는 IMS 액세스 토큰을 POST 요청의 일부로 전송하여 전송할 수 있습니다. IMS 토큰이 유효한 경우 레코드는 신뢰할 수 있는 소스에서 수집한 것으로 표시됩니다.
 
-인증된 스트리밍 연결을 만드는 방법에 대한 자세한 내용은 인증된 스트리밍 연결 [만들기 자습서를 참조하십시오](create-authenticated-streaming-connection.md).
+인증된 스트리밍 연결을 만드는 방법에 대한 자세한 내용은 [인증된 스트리밍 연결 자습서 만들기](create-authenticated-streaming-connection.md)를 참조하십시오.
