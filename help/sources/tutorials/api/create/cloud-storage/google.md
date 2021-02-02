@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;Google Cloud Storage;google cloud storage;google;Google
+keywords: Experience Platform;홈;인기 항목;Google 클라우드 스토리지;google 클라우드 스토리지;google;home;popular topics;Google
 solution: Experience Platform
 title: Flow Service API를 사용하여 Google 클라우드 스토리지 커넥터 만들기
 topic: overview
 type: Tutorial
 description: 이 자습서에서는 Flow Service API를 사용하여 Experience Platform을 Google 클라우드 스토리지 계정에 연결하는 단계를 안내합니다.
 translation-type: tm+mt
-source-git-commit: 9092c3d672967d3f6f7bf7116c40466a42e6e7b1
+source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
 workflow-type: tm+mt
-source-wordcount: '540'
+source-wordcount: '557'
 ht-degree: 2%
 
 ---
@@ -46,7 +46,7 @@ ht-degree: 2%
 
 ### 필수 헤더에 대한 값 수집
 
-[!DNL Platform] API를 호출하려면 먼저 [인증 자습서](../../../../../tutorials/authentication.md)를 완료해야 합니다. 인증 자습서를 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
+[!DNL Platform] API를 호출하려면 먼저 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 완료해야 합니다. 인증 자습서를 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -118,4 +118,4 @@ curl -X POST \
 
 ## 다음 단계
 
-이 자습서를 따라 API를 사용하여 [!DNL Google Cloud Storage] 연결을 만들고 고유한 ID를 응답 본문의 일부로 받았습니다. 이 연결 ID를 Flow Service API](../../explore/cloud-storage.md) 또는 [인제스트는 Flow Service API](../../cloud-storage-parquet.md)을 사용하여 [클라우드 스토리지 탐색에 사용할 수 있습니다.
+이 자습서를 따라 API를 사용하여 [!DNL Google Cloud Storage] 연결을 만들고 고유한 ID를 응답 본문의 일부로 받았습니다. 이 연결 ID를 Flow Service API](../../explore/cloud-storage.md) 또는 [인제스트 Portable 데이터를 사용하여 [클라우드 스토리지 탐색에 사용할 수 있습니다. Flow Service API](../../cloud-storage-parquet.md)
