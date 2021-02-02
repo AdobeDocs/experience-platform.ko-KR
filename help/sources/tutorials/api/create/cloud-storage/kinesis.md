@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;Kinesis;kinesis;Amazon Kinesis;amazon kinesis
+keywords: Experience Platform;홈;인기 항목;Kinesis;kinesis;Amazon Kinesis;amazon kinesis
 solution: Experience Platform
 title: Flow Service API를 사용하여 Amazon Kinesis 커넥터 만들기
 topic: overview
 type: Tutorial
 description: 이 자습서에서는 Flow Service API를 사용하여 Experience Platform을 Amazon Kinesis 계정에 연결하는 단계를 안내합니다.
 translation-type: tm+mt
-source-git-commit: fc6449d260ea7b96956689ce6c95c5e8b9002d89
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '534'
+source-wordcount: '549'
 ht-degree: 2%
 
 ---
@@ -52,7 +52,7 @@ ht-degree: 2%
 
 ### 필수 헤더에 대한 값 수집
 
-[!DNL Platform] API를 호출하려면 먼저 [인증 자습서](../../../../../tutorials/authentication.md)를 완료해야 합니다. 인증 자습서를 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
+[!DNL Platform] API를 호출하려면 먼저 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 완료해야 합니다. 인증 자습서를 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -123,4 +123,4 @@ curl -X POST \
 
 ## 다음 단계
 
-이 자습서를 따라 API를 사용하여 [!DNL Amazon Kinesis] 연결을 만들고 고유한 ID를 응답 본문의 일부로 받았습니다. 이 연결 ID를 사용하여 Flow Service API[를 사용하여 스트리밍 데이터를 수집할 수 있습니다.](../../collect/streaming.md)
+이 자습서를 따라 API를 사용하여 [!DNL Amazon Kinesis] 연결을 만들고 고유한 ID를 응답 본문의 일부로 받았습니다. 이 연결 ID를 사용하여 Flow Service API](../../collect/streaming.md)를 사용하여 스트리밍 데이터를 수집할 수 있습니다.[
