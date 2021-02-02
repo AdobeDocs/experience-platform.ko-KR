@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;audit;audit log;changelog;change log;rpc;
+keywords: Experience Platform;홈;인기 항목;api;XDM;XDM 시스템;경험 데이터 모델;경험 데이터 모델;경험 데이터 모델;데이터 모델;감사;감사 로그;변경 로그;rpc;rpc
 solution: Experience Platform
 title: 감사 로그 끝점 안내서
 description: 스키마 레지스트리 API의 /audition 끝점을 사용하면 기존 XDM 리소스에 대해 수행된 변경 사항의 시간순 목록을 검색할 수 있습니다.
@@ -7,7 +7,7 @@ topic: developer guide
 translation-type: tm+mt
 source-git-commit: eb5e34dc3b48a6fe0757635cad1df08caa68b019
 workflow-type: tm+mt
-source-wordcount: '366'
+source-wordcount: '396'
 ht-degree: 2%
 
 ---
