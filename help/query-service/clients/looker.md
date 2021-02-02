@@ -1,27 +1,33 @@
 ---
-keywords: Experience Platform;home;popular topics;Query service;query service;Looker;looker;connect to query service;
+keywords: Experience Platform;home;popular topics;Query Service;Looker;looker;Connect to query service;;home;popular topics service;query service;looker;query service;
 solution: Experience Platform
 title: 룩과 연결
 topic: connect
 description: 이 문서에서는 Looker와 Adobe Experience Platform 쿼리 서비스를 연결하는 단계를 안내합니다.
 translation-type: tm+mt
-source-git-commit: 9fbb6b829cd9ddec30f22b0de66874be7710e465
+source-git-commit: bc1bbdddd75b11ac180b5e6faa391fd74e5f7e02
 workflow-type: tm+mt
-source-wordcount: '217'
+source-wordcount: '241'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Looker]에 연결
+# [!DNL Looker]
 
-Adobe Experience Platform에서 [!DNL Looker]을(를) [!DNL Query Service]에 연결하려면 아래 단계를 따르십시오.
+이 문서에서는 [!DNL Looker]과(와) Adobe Experience Platform [!DNL Query Service]을(를) 연결하는 단계를 다룹니다.
 
-[!DNL Looker]에 로그인한 후 **[!UICONTROL 관리]**&#x200B;를 클릭한 다음 **[!UICONTROL 연결]**&#x200B;을 클릭합니다.
+>[!NOTE]
+>
+> 이 안내서에서는 사용자가 이미 [!DNL Looker]에 액세스할 수 있으며 인터페이스를 탐색하는 방법에 익숙하다고 가정합니다. [!DNL Looker]에 대한 자세한 내용은 [공식 [!DNL Looker] 설명서](https://docs.looker.com/)에서 확인할 수 있습니다.
+
+## 플랫폼과 [!DNL Looker] 연결
+
+[!DNL Looker]에 로그인한 후 **[!DNL Admin]**&#x200B;을 선택하고 **[!DNL Connections]**&#x200B;를 차례로 선택합니다.
 
 ![](../images/clients/looker/click-admin-connections.png)
 
-이 페이지에서 **새 연결**&#x200B;을 클릭합니다.
+이 페이지에서 **[!DNL New Connection]**&#x200B;을 선택합니다.
 
 ![](../images/clients/looker/click-new-connection.png)
 
@@ -29,17 +35,17 @@ Adobe Experience Platform에서 [!DNL Looker]을(를) [!DNL Query Service]에 �
 
 ![](../images/clients/looker/new-connection.png)
 
-- **이름:** 연결 이름입니다.
-- **언어:** SQL 데이터베이스에 사용되는 언어입니다. [!DNL Query Service] 를 사용합니다 **[!DNL PostgreSQL]**.
-- **호스트 및 포트:** 호스트 끝점과 해당 포트입니다 [!DNL Query Service].
-- **데이터베이스:** 사용할 데이터베이스입니다.
-- **사용자 이름 및 암호:** 사용할 로그인 자격 증명입니다. 사용자 이름은 `ORG_ID@AdobeOrg` 형식입니다.
+- **[!DNL Name]:** 연결 이름입니다.
+- **[!DNL Dialect]:** SQL 데이터베이스에 사용되는 언어입니다. [!DNL Query Service] 를 사용합니다 **[!DNL PostgreSQL]**.
+- **[!DNL Host and Port]:** 호스트 끝점과 해당 포트 [!DNL Query Service]입니다.
+- **[!DNL Database]** : 사용할 데이터베이스입니다.
+- **[!DNL Username and Password]** : 사용할 로그인 자격 증명입니다. 사용자 이름은 `ORG_ID@AdobeOrg` 형식입니다.
 
 >[!NOTE]
 >
->호스트 및 포트, 데이터베이스 이름 및 로그인 자격 증명을 찾는 방법에 대한 자세한 내용은 플랫폼](https://platform.adobe.com/query/configuration)의 [자격 증명 페이지를 참조하십시오. 자격 증명을 찾으려면 [!DNL Platform]에 로그인하고 **[!UICONTROL 쿼리]**&#x200B;를 클릭한 다음 **[!UICONTROL 자격 증명]**&#x200B;을 클릭합니다.
+>호스트 및 포트, 데이터베이스 이름 및 로그인 자격 증명을 찾는 방법에 대한 자세한 내용은 플랫폼](https://platform.adobe.com/query/configuration)의 [자격 증명 페이지를 참조하십시오. 자격 증명을 찾으려면 [!DNL Platform]에 로그인한 다음 **[!UICONTROL 쿼리]**&#x200B;를 선택하고 **[!UICONTROL 자격 증명]**&#x200B;을 선택합니다.
 
-연결 세부 정보를 입력한 후 **[!UICONTROL 이 설정 테스트]**&#x200B;를 클릭하여 자격 증명이 제대로 작동하는지 확인합니다. 이러한 경우 연결할 수 있다는 메시지가 아래에 표시됩니다. 연결이 성공적으로 완료되면 **[!UICONTROL 연결 추가]**&#x200B;를 클릭하여 연결을 만듭니다.
+연결 세부 사항을 입력한 후 자격 증명이 제대로 작동하는지 확인하려면 **[!DNL Test These Settings]**&#x200B;을 선택합니다. 이러한 경우 연결할 수 있다는 메시지가 아래에 표시됩니다. 연결이 성공적으로 완료되면 **[!DNL Add Connection]**&#x200B;을 선택하여 연결을 만듭니다.
 
 ![](../images/clients/looker/click-test-connection.png)
 
