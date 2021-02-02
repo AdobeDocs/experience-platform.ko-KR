@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;data model;ui;workspace;
+keywords: Experience Platform;홈;인기 항목;api;XDM;XDM 시스템;경험 데이터 모델;ui;작업 영역;home;popular topics;api;XDM system;experience data model;ui;workspace;
 solution: Experience Platform
 title: 스키마 작업 영역 개요
 description: 이 개요에서는 Experience Platform의 스키마 작업 영역의 주요 기능을 설명합니다.
@@ -7,7 +7,7 @@ topic: user guide
 translation-type: tm+mt
 source-git-commit: 2e20403122e65d28f04114af9b7e8d41874f76e2
 workflow-type: tm+mt
-source-wordcount: '275'
+source-wordcount: '292'
 ht-degree: 2%
 
 ---
