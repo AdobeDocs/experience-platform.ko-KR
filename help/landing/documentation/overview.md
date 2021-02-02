@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;CJA;journey analytics;customer journey analytics;campaign orchestration;orchestration;customer journey;journey;journey orchestration;capability;workflow
+keywords: Experience Platform;홈;인기 항목;CJA;여정 분석;고객 여정 분석;캠페인 통합 운영;고객 여정;여정;여정 통합 운영;기능;작업 과정
 solution: Experience Platform
 title: Adobe Experience Platform 설명서 개요
 topic: overview
@@ -7,7 +7,7 @@ description: Adobe Experience Platform 설명서는 사용자 인터페이스와
 translation-type: tm+mt
 source-git-commit: 96600567bb4965a1611e2b9a7cd6cb49298a567f
 workflow-type: tm+mt
-source-wordcount: '463'
+source-wordcount: '484'
 ht-degree: 0%
 
 ---
