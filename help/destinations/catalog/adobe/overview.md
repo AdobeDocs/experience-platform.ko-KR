@@ -1,31 +1,31 @@
 ---
-keywords: destinations;experience cloud solutions; target;target destination; ad cloud; advertising cloud; audience manager; adobe target destination; target; audience manager destination;
+keywords: 대상;experience cloud solutions;대상;대상 대상 대상;광고 클라우드;광고 클라우드audience manager;adobe target 대상;target;audience manager 대상;
 title: Adobe 대상
 seo-title: Adobe 대상
-description: 광고 타깃팅, 개인화, 마케팅 자동화 등을 위해 실시간 CDP의 데이터를 다른 Adobe Experience Cloud 솔루션에 연결하여 고객 경험 관리
-seo-description: 광고 타깃팅, 개인화, 마케팅 자동화 등을 위해 실시간 CDP의 데이터를 다른 Adobe Experience Cloud 솔루션에 연결하여 고객 경험 관리
+description: 광고 타겟팅, 개인화, 마케팅 자동화 등을 위해 플랫폼의 데이터를 다른 Adobe Experience Cloud 솔루션에 연결하여 고객 경험을 관리합니다
+seo-description: 광고 타겟팅, 개인화, 마케팅 자동화 등을 위해 플랫폼의 데이터를 다른 Adobe Experience Cloud 솔루션에 연결하여 고객 경험을 관리합니다
 translation-type: tm+mt
-source-git-commit: 0bb1622895b1e0f97fc47b5c61d456bc369746c8
+source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
 workflow-type: tm+mt
-source-wordcount: '224'
-ht-degree: 13%
+source-wordcount: '243'
+ht-degree: 12%
 
 ---
 
 
-# Adobe Destinations {#adobe-destinations}
+# Adobe 대상 {#adobe-destinations}
 
-광고 타깃팅, 개인화, 마케팅 자동화 등을 위해 실시간 CDP의 데이터를 다른 Adobe Experience Cloud 솔루션에 연결하여 고객 경험을 관리합니다.
+광고 타겟팅, 개인화, 마케팅 자동화 등을 위해 Adobe Experience Platform의 데이터를 다른 Adobe Experience Cloud 솔루션에 연결하여 고객 경험을 관리할 수 있습니다.
 
 ## 연결
 
-연결 및 확장 간의 차이를 이해하려면 대상 유형 및 [카테고리](../../destination-types.md#connections) 페이지의 연결을 참조하십시오.
+연결과 확장 간의 차이를 이해하려면 대상 유형 및 카테고리 페이지에서 [연결](../../destination-types.md#connections)을 참조하십시오.
 
 - [Adobe Campaign](../email-marketing/adobe-campaign.md)
 
 ## 확장
 
-연결 및 확장 간의 차이를 이해하려면 대상 유형 및 [카테고리](../../destination-types.md#extensions) 페이지의 확장을 참조하십시오.
+연결과 확장 간의 차이를 이해하려면 대상 유형 및 카테고리 페이지에서 [확장](../../destination-types.md#extensions)을 참조하십시오.
 
 - [Adobe Advertising Cloud 확장](../advertising/adobe-advertising-cloud.md)
 - [Adobe Analytics 확장](../analytics/adobe-analytics.md)
@@ -35,7 +35,7 @@ ht-degree: 13%
 - [Adobe Target v2 확장](../personalization/adobe-target-v2.md)
 - [Audience Manager DIL 확장](../data-management/aam-dil-extension.md)
 - [Experience Cloud ID 서비스 확장](../personalization/adobe-ecid.md)
-- [마케팅 확장](../email/marketo.md)
+- [Marketing To 확장](../email/marketo.md)
 - [Marketo Munchkin 확장](../email/marketo-munchkin.md)
 - [Marketing to Web Personalization 확장](../personalization/marketo-web-personalization.md)
 
