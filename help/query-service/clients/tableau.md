@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;tableau;Tableau;query service;Query service;connect to query service;
+keywords: Experience Platform;홈;인기 항목;타블로;쿼리 서비스;쿼리 서비스;쿼리 서비스에 연결;
 solution: Experience Platform
 title: 타블로와 연결
 topic: connect
@@ -7,8 +7,8 @@ description: 이 문서에서는 타블로와 Adobe Experience Platform 쿼리 �
 translation-type: tm+mt
 source-git-commit: eac93f3465fa6ce4af7a6aa783cf5f8fb4ac9b9b
 workflow-type: tm+mt
-source-wordcount: '195'
-ht-degree: 1%
+source-wordcount: '210'
+ht-degree: 0%
 
 ---
 
