@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;flow service;advertising;google adwords;advertising
+keywords: Experience Platform;홈;인기 항목;흐름 서비스;광고;구글 애드워즈;광고
 solution: Experience Platform
 title: 소스 커넥터 및 API를 통해 광고 데이터 수집
 topic: overview
 type: Tutorial
 description: 이 자습서에서는 소스 커넥터 및 Flow Service API를 통해 제3자 광고 응용 프로그램에서 데이터를 검색하고 이를 플랫폼에 인제스트하는 절차를 다룹니다.
 translation-type: tm+mt
-source-git-commit: 90a7e49033afe3bc348225df0688e17dbf842a15
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '1498'
+source-wordcount: '1513'
 ht-degree: 1%
 
 ---
@@ -39,7 +39,7 @@ ht-degree: 1%
 
 ### 필수 헤더에 대한 값 수집
 
-플랫폼 API를 호출하려면 먼저 [인증 자습서](../../../../tutorials/authentication.md)를 완료해야 합니다. 인증 자습서를 완료하면 아래와 같이 모든 Experience Platform API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
+플랫폼 API를 호출하려면 먼저 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 완료해야 합니다. 인증 자습서를 완료하면 아래와 같이 모든 Experience Platform API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
