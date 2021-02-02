@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;Policy enforcement;Automatic enforcement;API-based enforcement;data governance
+keywords: Experience Platform;홈;인기 항목;정책 적용;자동 적용;API 기반 적용;데이터 거버넌스
 solution: Experience Platform
 title: 정책 실행 개요
-topic: enforcement
+topic: guide
 description: 데이터 사용 레이블이 Adobe Experience Platform 데이터 세트에 적용되었고 해당 레이블에 대한 마케팅 작업을 위해 데이터 사용 정책이 정의된 경우 데이터 거버넌스 기능을 사용하여 이러한 정책을 적용하고 정책 위반을 구성하는 데이터 작업을 방지할 수 있습니다. 플랫폼의 데이터 거버넌스 기능, API 기반의 적용 및 자동 실행으로 제공되는 두 가지 정책 실행 방법이 있습니다.
 translation-type: tm+mt
-source-git-commit: 30733f2274ff8cb9ae73cf2b9f7f0219fefbd393
+source-git-commit: acc4fa59a4808ed9a32c2aaf664039e0d12dc1d8
 workflow-type: tm+mt
-source-wordcount: '219'
+source-wordcount: '232'
 ht-degree: 0%
 
 ---
