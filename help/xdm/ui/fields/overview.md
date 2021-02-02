@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;data model;ui;workspace;field;
+keywords: Experience Platform;홈;인기 항목;api;XDM;XDM 시스템;경험 데이터 모델;ui;작업 영역;field;home;popular topics;api;XDM system;experience data model;ui;workspace;field;
 solution: Experience Platform
 title: UI에서 XDM 필드 정의
 description: Experience Platform 사용자 인터페이스에서 XDM 필드를 정의하는 방법을 알아봅니다.
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 2e20403122e65d28f04114af9b7e8d41874f76e2
+source-git-commit: 70b3ad788dd78c6100782869e3065cc17a54ece1
 workflow-type: tm+mt
-source-wordcount: '1241'
+source-wordcount: '1311'
 ht-degree: 4%
 
 ---
@@ -86,10 +86,10 @@ UI에서 새 XDM 필드를 정의하려면 먼저 [!DNL Schema Editor] 내에 �
 | [!UICONTROL 형식] | [!UICONTROL 문자열] | 값이 준수해야 하는 문자열에 대해 사전 정의된 형식 목록에서 선택합니다. 사용 가능한 포맷은 다음과 같습니다. <ul><li>[[!UICONTROL date-time]](https://tools.ietf.org/html/rfc3339)</li><li>[[!UICONTROL 이메일]](https://tools.ietf.org/html/rfc2822)</li><li>[[!UICONTROL hostname]](https://tools.ietf.org/html/rfc1123#page-13)</li><li>[[!UICONTROL ipv4]](https://tools.ietf.org/html/rfc791)</li><li>[[!UICONTROL ipv6]](https://tools.ietf.org/html/rfc2460)</li><li>[[!UICONTROL uri]](https://tools.ietf.org/html/rfc3986)</li><li>[[!UICONTROL uri-reference]](https://tools.ietf.org/html/rfc3986#section-4.1)</li><li>[[!UICONTROL url-template]](https://tools.ietf.org/html/rfc6570)</li><li>[[!UICONTROL json 포인터]](https://tools.ietf.org/html/rfc6901)</li></ul> |
 | [!UICONTROL 최소 길이] | [!UICONTROL 문자열] | 통합 중에 값을 수락하려면 문자열에 포함해야 하는 최소 문자 수입니다. |
 | [!UICONTROL 최대 길이] | [!UICONTROL 문자열] | 통합 중에 값을 수락하려면 문자열에 포함해야 하는 최대 문자 수입니다. |
-| [!UICONTROL 최소 값] | [!UICONTROL 이중] | 섭취 중 수락할 Double에 대한 최소값입니다. 인제스트된 값이 여기에 입력한 값과 정확히 일치하는 경우 값이 허용됩니다. |
-| [!UICONTROL 최대 값] | [!UICONTROL 이중] | 섭취 중 수락할 Double의 최대값입니다. 인제스트된 값이 여기에 입력한 값과 정확히 일치하는 경우 값이 허용됩니다. |
-| [!UICONTROL 독점적 최소값] | [!UICONTROL 이중] | 섭취 중 수락할 Double의 최대값입니다. 인제스트된 값이 여기에 입력한 값과 정확히 일치하는 경우 값이 거부됩니다. |
-| [!UICONTROL 독점적 최대값] | [!UICONTROL 이중] | 섭취 중 수락할 Double의 최대값입니다. 인제스트된 값이 여기에 입력한 값과 정확히 일치하는 경우 값이 거부됩니다. |
+| [!UICONTROL 최소 값] | [!UICONTROL 이중] | 섭취 중 수락할 Double에 대한 최소값입니다. 인제스트된 값이 여기에 입력한 값과 정확히 일치하는 경우 값이 허용됩니다. 이 제약 조건을 사용할 때는 &quot;[!UICONTROL 배타적 최소값]&quot; 제약 조건을 비워두어야 합니다. |
+| [!UICONTROL 최대 값] | [!UICONTROL 이중] | 섭취 중 수락할 Double의 최대값입니다. 인제스트된 값이 여기에 입력한 값과 정확히 일치하는 경우 값이 허용됩니다. 이 제약 조건을 사용할 때는 &quot;[!UICONTROL 배타적 최대값]&quot; 제약 조건을 비워두어야 합니다. |
+| [!UICONTROL 독점적 최소값] | [!UICONTROL 이중] | 섭취 중 수락할 Double의 최대값입니다. 인제스트된 값이 여기에 입력한 값과 정확히 일치하는 경우 값이 거부됩니다. 이 제약 조건을 사용할 때는 &quot;[!UICONTROL 최소 값]&quot;(비배타적) 제약 조건을 비워두어야 합니다. |
+| [!UICONTROL 독점적 최대값] | [!UICONTROL 이중] | 섭취 중 수락할 Double의 최대값입니다. 인제스트된 값이 여기에 입력한 값과 정확히 일치하는 경우 값이 거부됩니다. 이 제약 조건을 사용할 때는 &quot;[!UICONTROL 최대값]&quot;(비배타적) 제약 조건을 비워두어야 합니다. |
 
 ## 특수 필드 유형 {#special}
 
