@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;sampledata;sample data;rpc;
+keywords: Experience Platform;홈;인기 항목;api;XDM;XDM 시스템;경험 데이터 모델;경험 데이터 모델;경험 데이터 모델;데이터 모델;데이터 모델;샘플 데이터;sample data;rpc;rpc
 solution: Experience Platform
 title: 샘플 데이터 끝점 안내서
 description: 스키마 레지스트리 API의 /samplledata 끝점을 사용하면 기존 XDM 스키마 구조에 매핑되는 샘플 데이터를 생성할 수 있습니다.
@@ -7,8 +7,8 @@ topic: developer guide
 translation-type: tm+mt
 source-git-commit: eb5e34dc3b48a6fe0757635cad1df08caa68b019
 workflow-type: tm+mt
-source-wordcount: '292'
-ht-degree: 2%
+source-wordcount: '319'
+ht-degree: 1%
 
 ---
 
