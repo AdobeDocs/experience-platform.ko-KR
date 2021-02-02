@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;ui;UI;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;explore;class;mixin;data type;schema;
+keywords: Experience Platform;홈;인기 항목;UI;XDM;XDM 시스템;경험 데이터 모델;경험 데이터 모델;경험 데이터 모델;데이터 모델;탐색;클래스;믹스;데이터 유형;스키마;;home;popular topics;ui;XDM;experience data model;data model;explore;explore;sin;data type;schema
 solution: Experience Platform
 title: UI에서 XDM 리소스 살펴보기
 description: Experience Platform 사용자 인터페이스에서 기존 스키마, 클래스, 혼합 및 데이터 유형을 탐색하는 방법을 알아봅니다.
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: e5c5fea783aa4088d225f771905fa8b2098613cf
+source-git-commit: 912d02477febdafa4a53aebc83bc3a93b0f84f09
 workflow-type: tm+mt
-source-wordcount: '859'
+source-wordcount: '941'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ Adobe Experience Platform에서 모든 XDM(경험 데이터 모델) 리소스는
 
 ![](../images/ui/explore/filter.png)
 
-검색 막대를 사용하여 검색 쿼리와 이름이 일치하는 리소스로 결과를 좁힐 수도 있습니다.
+검색 막대를 사용하여 검색 결과의 범위를 더 좁힐 수도 있습니다. 검색어를 검색할 때 상위 항목은 이름이 검색 쿼리와 일치하는 리소스를 나타냅니다. 이 항목 아래의 **[!UICONTROL 표준 필드]** 아래에 쿼리와 일치하는 필드를 포함하는 리소스가 나열됩니다. 따라서 사전에 리소스의 이름을 알지 않아도 포함된 데이터 유형을 기준으로 XDM 리소스를 검색할 수 있습니다.
 
 ![](../images/ui/explore/search.png)
 
