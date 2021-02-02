@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;machine learning model;Data Science Workspace;Real-time Customer Profile;popular topics;machine learning insights
+keywords: Experience Platform;기계 학습 모델;데이터 과학 작업 공간;실시간 고객 프로필;인기 항목;기계 학습 통찰력
 solution: Experience Platform
 title: 머신 러닝 인사이트를 활용하여 실시간 고객 프로파일 강화
 topic: tutorial
@@ -8,7 +8,7 @@ description: 이 문서에서는 컴퓨터에 대한 통찰력으로 실시간 �
 translation-type: tm+mt
 source-git-commit: 62e6bb7e72637b06808ff87dc21f40af2c4e2d45
 workflow-type: tm+mt
-source-wordcount: '619'
+source-wordcount: '635'
 ht-degree: 0%
 
 ---
