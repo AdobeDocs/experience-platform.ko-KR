@@ -2,12 +2,13 @@
 product: experience-platform
 audience: user
 user-guide-title: 대상 안내서
-user-guide-description: 크로스채널 마케팅 캠페인, 이메일 캠페인, 타깃팅된 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화합니다.
+user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화합니다.
+description: 이 문서에서는 Adobe Experience Platform 대상에 대한 목차 목록
 translation-type: tm+mt
-source-git-commit: 395a8c2aa7fc89cde04263dbbfb3315318245ef6
+source-git-commit: b348a5493b13112291dd8e9234d457ff8c694147
 workflow-type: tm+mt
-source-wordcount: '429'
-ht-degree: 0%
+source-wordcount: '443'
+ht-degree: 5%
 
 ---
 
@@ -17,25 +18,25 @@ ht-degree: 0%
 * [대상 개요](./home.md)
 * [대상 유형 및 카테고리](./destination-types.md)
 * API 자습서 {#api}
-   * [스트리밍 대상(AWS Kinesis 및 Azure 이벤트 허브)에 연결하고 데이터 활성화](./api/streaming-destinations.md)
-   * [이메일 마케팅 대상에 연결 및 데이터 활성화](./api/email-marketing.md)
-* UI 가이드 {#ui}
+   * [스트리밍 대상(AWS Kinesis 및 Azure 이벤트 허브)에 연결하고 데이터를 활성화합니다.](./api/streaming-destinations.md)
+   * [이메일 마케팅 대상에 연결하고 데이터 활성화](./api/email-marketing.md)
+* UI 안내서 {#ui}
    * [대상 작업 공간](./ui/destinations-workspace.md)
-   * [대상 세부 정보 페이지](./ui/destination-details-page.md)
+   * [대상 세부 사항 페이지](./ui/destination-details-page.md)
    * [대상에 연결](./ui/connect-destination.md)
    * [대상에 프로필 및 세그먼트 활성화](./ui/activate-destinations.md)
 * 대상 카탈로그 {#catalog}
    * [대상 카탈로그 개요](./catalog/overview.md)
    * [ (알파) HTTP 대상](./catalog/http-destination.md)
-   * Adobe destinations{#adobe}
+   * Adobe 대상{#adobe}
       * [Adobe 대상 개요](./catalog/adobe/overview.md)
-      * [Experience Platform 세그먼트 공유](https://docs.adobe.com/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
+      * [Experience Platform 세그먼트 공유](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
    * 광고 대상{#advertising}
       * [광고 대상 개요](./catalog/advertising/overview.md)
-      * [Adobe Advertising Cloud 도착지](./catalog/advertising/adobe-advertising-cloud.md)
-      * [Awin 광고 전환 태그 대상](./catalog/advertising/awin-conversiontag.md)
+      * [Adobe Advertising Cloud 대상](./catalog/advertising/adobe-advertising-cloud.md)
+      * [Win 광고 전환 태그 대상](./catalog/advertising/awin-conversiontag.md)
       * [Awin 광고 마스터태그 대상](./catalog/advertising/awin-mastertag.md)
-      * [Bing 광고 범용 이벤트 추적 대상](./catalog/advertising/bing-ads.md)
+      * [Bing 광고 유니버설 이벤트 추적 대상](./catalog/advertising/bing-ads.md)
       * [분기 대상](./catalog/advertising/branch.md)
       * [DoubleClick Floodlight 대상](./catalog/advertising/doubleclick-floodlight.md)
       * [Facebook 픽셀 대상](./catalog/advertising/facebook-pixel.md)
@@ -44,18 +45,18 @@ ht-degree: 0%
       * [Google 광고 대상(확장)](./catalog/advertising/google-ads-extension.md)
       * [Google 광고 관리자 대상](./catalog/advertising/google-ad-manager.md)
       * [Google 고객 일치 대상](./catalog/advertising/google-customer-match.md)
-      * [Google Display &amp; Video 360 대상](./catalog/advertising/google-dv360.md)
+      * [Google 표시 및 비디오 360 대상](./catalog/advertising/google-dv360.md)
       * [Google 태그 대상](./catalog/advertising/gtag-advertising.md)
       * [LinkedIn 인사이트 태그 대상](./catalog/advertising/linkedin.md)
       * [Microsoft Bing 대상](./catalog/advertising/bing.md)
       * [Pinterest 전환 추적 대상](./catalog/advertising/pinterest.md)
-      * [무역센터](./catalog/advertising/tradedesk.md)
+      * [무역센터 대상](./catalog/advertising/tradedesk.md)
       * [Twitter 범용 웹 사이트 태그 대상](./catalog/advertising/twitter-uwt.md)
    * 분석 대상 {#analytics}
       * [분석 대상 개요](./catalog/analytics/overview.md)
       * [웹 사이트 추적 대상 추가](./catalog/analytics/adform.md)
-      * [Adobe Analytics 도착지](./catalog/analytics/adobe-analytics.md)
-      * [오디오 및 비디오용 Adobe 미디어 분석 대상](./catalog/analytics/adobe-video-analytics.md)
+      * [Adobe Analytics 대상](./catalog/analytics/adobe-analytics.md)
+      * [오디오 및 비디오 대상에 대한 Adobe 미디어 분석](./catalog/analytics/adobe-video-analytics.md)
       * [클릭 대상](./catalog/analytics/clicktale.md)
       * [Contentsquare 대상](./catalog/analytics/contentsquare.md)
       * [데시벨 대상](./catalog/analytics/decibel.md)
@@ -67,33 +68,34 @@ ht-degree: 0%
       * [Nielsen BSDK 대상](./catalog/analytics/nielsen-bsdk.md)
       * [Nielsen IMA 처리기 대상](./catalog/analytics/nielsen-ima.md)
       * [Nielsen VideoJS 플레이어 처리기 대상](./catalog/analytics/nielsen-videojs.md)
-      * [Parse.ly Analytics 대상](./catalog/analytics/parsely.md)
+      * [구문 분석.ly 분석 대상](./catalog/analytics/parsely.md)
       * [양자 지표 대상](./catalog/analytics/quantum-metric.md)
       * [SessionCam 대상](./catalog/analytics/sessioncam.md)
       * [TMMData 대상](./catalog/analytics/tmmdata.md)
-      * [텍스트 전환 추적 대상](./catalog/analytics/yext.md)
+      * [다음 전환 추적 대상](./catalog/analytics/yext.md)
    * 클라우드 스토리지 대상{#cloud-storage}
       * [클라우드 스토리지 대상 개요](./catalog/cloud-storage/overview.md)
       * [클라우드 스토리지 대상을 만드는 워크플로우](./catalog/cloud-storage/workflow.md)
       * [Amazon Kinesis 대상](./catalog/cloud-storage/amazon-kinesis.md)
       * [Amazon S3 대상](./catalog/cloud-storage/amazon-s3.md)
+      * [Azure Blob 대상](./catalog/cloud-storage/azure-blob.md)
       * [Azure 이벤트 허브 대상](./catalog/cloud-storage/azure-event-hubs.md)
       * [SFTP 대상](./catalog/cloud-storage/sftp.md)
    * 데이터 관리 플랫폼 대상 {#data-management}
       * [데이터 관리 플랫폼 대상 개요](./catalog/data-management/overview.md)
       * [Audience Manager DIL 대상](./catalog/data-management/aam-dil-extension.md)
    * 이메일 대상 {#email}
-      * [모바일 분석 대상](./catalog/email/bizible.md)
+      * [Bizable Analytics 대상](./catalog/email/bizible.md)
       * [Marketing to 대상](./catalog/email/marketo.md)
-      * [Markto Munchkin 대상](./catalog/email/marketo-munchkin.md)
+      * [Marketing To Munchkin 대상](./catalog/email/marketo-munchkin.md)
       * [페블포스트 대상](./catalog/email/pebblepost.md)
    * 이메일 마케팅 대상{#email-marketing}
       * [이메일 마케팅 대상 개요](./catalog/email-marketing/overview.md)
-      * [Adobe Campaign 도착지](./catalog/email-marketing/adobe-campaign.md)
-      * [Oracle 언스피어](./catalog/email-marketing/oracle-eloqua.md)
+      * [Adobe Campaign 대상](./catalog/email-marketing/adobe-campaign.md)
+      * [Oracle 언변 대상](./catalog/email-marketing/oracle-eloqua.md)
       * [Oracle Responsys 대상](./catalog/email-marketing/oracle-responsys.md)
       * [Salesforce Marketing Cloud 대상](./catalog/email-marketing/salesforce-marketing-cloud.md)
-   * Experience Platform Launch extensions{#launch-extensions}
+   * Experience Platform Launch 확장{#launch-extensions}
       * [Experience Platform Launch 확장 개요](./catalog/launch-extensions/overview.md)
    * 모바일 참여 대상 {#mobile-engagement}
       * [모바일 참여 대상 개요](./catalog/mobile-engagement/overview.md)
@@ -102,12 +104,12 @@ ht-degree: 0%
       * [대상 확장](./catalog/mobile-engagement/braze.md)
    * 개인화 대상 {#personalization}
       * [개인화 대상 개요](./catalog/personalization/overview.md)
-      * [Adobe Target 도착지](./catalog/personalization/adobe-target.md)
+      * [Adobe Target 대상](./catalog/personalization/adobe-target.md)
       * [Adobe Target v2 대상](./catalog/personalization/adobe-target-v2.md)
       * [비메레이 대상](./catalog/personalization/beemray.md)
       * [D&amp;B 방문자 인텔리전스 대상](./catalog/personalization/dnb.md)
       * [Experience Cloud ID 서비스 대상](./catalog/personalization/adobe-ecid.md)
-      * [게인사이트 대상](./catalog/personalization/gainsight.md)
+      * [Gainsight 대상](./catalog/personalization/gainsight.md)
       * [킥파이어 대상](./catalog/personalization/kickfire.md)
       * [Marketing to Web Personalization 대상](./catalog/personalization/marketo-web-personalization.md)
    * 소셜 네트워크 대상{#social}
