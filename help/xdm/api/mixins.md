@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;mixin registry;Schema Registry;mixin;Mixin;mixins;Mixins;create
+keywords: Experience Platform;홈;인기 항목;api;XDM;XDM;경험 데이터 모델;경험 데이터 모델;경험 데이터 모델;데이터 모델;데이터 모델;믹신;스키마 레지스트리;믹신;믹신;믹신;믹싱;믹싱;만들기
 solution: Experience Platform
 title: 혼합 만들기
 description: 스키마 레지스트리 API의 /mixins 종단점을 사용하면 경험 응용 프로그램 내에서 XDM 믹스를 프로그래밍 방식으로 관리할 수 있습니다.
@@ -7,7 +7,7 @@ topic: developer guide
 translation-type: tm+mt
 source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
 workflow-type: tm+mt
-source-wordcount: '1102'
+source-wordcount: '1134'
 ht-degree: 2%
 
 ---
