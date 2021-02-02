@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;download scores;customer ai;popular topics;Export;export;customer ai download;customer ai scores
+keywords: Experience Platform;다운로드 스코어;고객 아이디;인기 항목;내보내기;고객 아이디 다운로드;고객 아이에이 점수
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: 고객 AI에서 점수 다운로드
 topic: Downloading scores
-description: 고객 AI를 통해 점수를 쪽모이 세공 마루 파일 형식으로 다운로드할 수 있습니다.
+description: 고객 AI를 통해 점수를 Portable 파일 형식으로 다운로드할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
 workflow-type: tm+mt
-source-wordcount: '945'
+source-wordcount: '961'
 ht-degree: 2%
 
 ---
@@ -19,18 +19,18 @@ ht-degree: 2%
 
 ## 시작하기
 
-고객 AI를 통해 점수를 쪽모이 세공 마루 파일 형식으로 다운로드할 수 있습니다. 이 자습서에서는 시작 안내서에서 고객 AI 점수 다운로드 섹션을 [읽고 완료해야](../getting-started.md) 합니다.
+고객 AI를 통해 점수를 Portable 파일 형식으로 다운로드할 수 있습니다. 이 자습서에서는 [시작하기](../getting-started.md) 안내서의 고객 AI 점수 다운로드 섹션을 읽고 완료해야 합니다.
 
-또한 고객 AI의 점수에 액세스하려면 성공적인 실행 상태의 서비스 인스턴스를 사용할 수 있어야 합니다. 새 서비스 인스턴스를 만들려면 [고객 AI 인스턴스 구성을 방문하십시오](./configure.md). 최근에 서비스 인스턴스를 만들었는데 여전히 트레이닝과 점수 지정 중이라면 24시간 후에 실행을 완료하십시오.
+또한 고객 AI의 점수에 액세스하려면 성공적인 실행 상태의 서비스 인스턴스를 사용할 수 있어야 합니다. 새 서비스 인스턴스를 만들려면 [고객 AI 인스턴스 구성](./configure.md)을 방문하십시오. 최근에 서비스 인스턴스를 만들었는데 여전히 트레이닝과 점수 지정 중이라면 24시간 후에 실행을 완료하십시오.
 
 현재 두 가지 방법으로 고객 AI 점수를 다운로드할 수 있습니다.
 
-1. 개별 수준에서 점수를 다운로드하거나 실시간 고객 프로필을 사용하지 않으려면 먼저 데이터 세트 ID [를 찾아 보십시오](#dataset-id).
-2. 프로필을 활성화한 상태에서 고객 AI를 사용하여 구성한 세그먼트를 다운로드하려면 고객 AI로 구성된 세그먼트를 [다운로드하십시오](#segment).
+1. 개별 수준에서 점수를 다운로드하거나 실시간 고객 프로필을 사용하지 않으려면 [데이터 세트 ID](#dataset-id)로 이동하여 시작합니다.
+2. 프로필을 활성화한 상태에서 고객 AI를 사용하여 구성한 세그먼트를 다운로드하려면 [고객 AI](#segment)로 구성된 세그먼트를 다운로드하십시오.
 
-## Find your dataset ID {#dataset-id}
+## 데이터 집합 ID {#dataset-id} 찾기
 
-고객 AI 인사이트에 대한 서비스 인스턴스 내에서 오른쪽 상단 탐색 *에서 추가 작업* 드롭다운 메뉴를 클릭한 다음 **[!UICONTROL 액세스 점수를 선택합니다]**.
+고객 AI 인사이트의 서비스 인스턴스 내에서 오른쪽 상단 탐색에서 *추가 작업* 드롭다운을 클릭한 다음 **[!UICONTROL 액세스 점수]**&#x200B;를 선택합니다.
 
 ![추가 작업](../images/insights/more-actions.png)
 
@@ -38,9 +38,9 @@ ht-degree: 2%
 
 ![데이터 집합 ID](../images/download-scores/access-scores.png)
 
-## 배치 ID 검색 {#retrieve-your-batch-id}
+## 배치 ID {#retrieve-your-batch-id} 검색
 
-이전 단계에서 데이터 세트 ID를 사용하여 일괄 처리 ID를 검색하려면 카탈로그 API를 호출해야 합니다. 조직에 속한 배치 목록 대신 최근 성공적인 배치를 반환하기 위해 이 API 호출에 추가 쿼리 매개 변수가 사용됩니다. 추가 배치를 반환하려면 한도 쿼리 매개 변수의 숫자를 반환하려는 금액으로 늘리십시오. 사용 가능한 쿼리 매개 변수 유형에 대한 자세한 내용은 쿼리 매개 변수를 사용하여 카탈로그 데이터 [필터링 안내서를 참조하십시오](../../../catalog/api/filter-data.md).
+이전 단계에서 데이터 세트 ID를 사용하여 일괄 처리 ID를 검색하려면 카탈로그 API를 호출해야 합니다. 조직에 속한 배치 목록 대신 최근 성공적인 배치를 반환하기 위해 이 API 호출에 추가 쿼리 매개 변수가 사용됩니다. 추가 배치를 반환하려면 한도 쿼리 매개 변수의 숫자를 반환하려는 금액으로 늘리십시오. 사용할 수 있는 쿼리 매개 변수 유형에 대한 자세한 내용은 쿼리 매개 변수](../../../catalog/api/filter-data.md)를 사용하여 카탈로그 데이터 필터링에 대한 가이드를 참조하십시오.[
 
 **API 형식**
 
@@ -64,7 +64,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?dataSet=5
 
 **응답**
 
-성공적인 응답은 배치 ID 객체를 포함하는 페이로드를 반환합니다. 이 예에서 반환되는 객체의 키 값은 일괄 처리 ID입니다 `01E5QSWCAASFQ054FNBKYV6TIQ`. 다음 API 호출에 사용할 배치 ID를 복사합니다.
+성공적인 응답은 배치 ID 객체를 포함하는 페이로드를 반환합니다. 이 예에서 반환되는 개체의 키 값은 일괄 처리 ID `01E5QSWCAASFQ054FNBKYV6TIQ`입니다. 다음 API 호출에 사용할 배치 ID를 복사합니다.
 
 ```json
 {
@@ -113,9 +113,9 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?dataSet=5
 }
 ```
 
-## 배치 ID로 다음 API 호출 검색 {#retrieve-the-next-api-call-with-your-batch-id}
+## 배치 ID {#retrieve-the-next-api-call-with-your-batch-id}로 다음 API 호출 검색
 
-배치 ID가 있으면 새 GET 요청을 만들 수 있습니다 `/batches`. 요청은 다음 API 요청으로 사용되는 링크를 반환합니다.
+배치 ID가 있으면 `/batches`에 새 GET 요청을 만들 수 있습니다. 요청은 다음 API 요청으로 사용되는 링크를 반환합니다.
 
 **API 형식**
 
@@ -125,7 +125,7 @@ GET batches/{BATCH_ID}/files
 
 | 매개 변수 | 설명 |
 | --------- | ----------- |
-| `{BATCH_ID}` | 이전 단계에서 검색한 배치 ID는 [배치 ID를 검색합니다](#retrieve-your-batch-id). |
+| `{BATCH_ID}` | 이전 단계 [에서 검색된 배치 ID는 배치 ID](#retrieve-your-batch-id)를 검색합니다. |
 
 **요청**
 
@@ -141,7 +141,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/035e2520-5
 
 **응답**
 
-성공적인 응답은 객체가 포함된 페이로드를 `_links` 반환합니다. 객체 내 `_links` 는 새로운 API `href` 호출이 해당 값으로 되어 있습니다. 다음 단계로 진행하려면 이 값을 복사합니다.
+성공적인 응답은 `_links` 개체를 포함하는 페이로드를 반환합니다. `_links` 개체 내에 새 API 호출이 있는 `href`이(가) 있습니다. 다음 단계로 진행하려면 이 값을 복사합니다.
 
 ```json
 {
@@ -169,7 +169,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/035e2520-5
 
 ## 파일 검색 {#retrieving-your-files}
 
-이전 단계에서 `href` 받은 값을 API 호출로 사용하여 파일 디렉토리를 검색할 새 GET 요청을 만듭니다.
+이전 단계에서 API 호출로 얻은 `href` 값을 사용하여 파일 디렉토리를 검색할 새 GET 요청을 만듭니다.
 
 **API 형식**
 
@@ -179,7 +179,7 @@ GET files/{DATASETFILE_ID}
 
 | 매개 변수 | 설명 |
 | --------- | ----------- |
-| `{DATASETFILE_ID}` | dataSetFile ID는 `href` 이전 단계 [의](#retrieve-the-next-api-call-with-your-batch-id)값으로 반환됩니다. 객체 유형 아래의 `data` 배열에서 액세스할 수도 있습니다 `dataSetFileId`. |
+| `{DATASETFILE_ID}` | dataSetFile ID는 [이전 단계](#retrieve-the-next-api-call-with-your-batch-id)의 `href` 값으로 반환됩니다. 객체 유형 `dataSetFileId` 아래의 `data` 배열에서 액세스할 수도 있습니다. |
 
 **요청**
 
@@ -238,15 +238,15 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/035e2520
 | `_links.self.href` | 디렉토리에 파일을 다운로드하는 데 사용되는 GET 요청 URL입니다. |
 
 
-배열에 `href` 있는 모든 파일 객체의 값을 `data` 복사한 다음 다음 다음 단계로 진행합니다.
+`data` 배열에 있는 모든 파일 객체의 `href` 값을 복사한 다음 다음 다음 단계로 진행합니다.
 
 ## 파일 데이터 다운로드
 
-파일 데이터를 다운로드하려면 이전 단계에서 복사한 `"href"` 값에 대해 GET을 요청하여 파일을 [검색합니다](#retrieving-your-files).
+파일 데이터를 다운로드하려면 이전 단계 [파일 검색](#retrieving-your-files)에서 복사한 `"href"` 값에 GET 요청을 하십시오.
 
 >[!NOTE]
 >
->이 요청을 명령줄에서 직접 수행하는 경우 요청 헤더 뒤에 출력을 추가하라는 메시지가 표시될 수 있습니다. 다음 요청 예제에서는 를 사용합니다 `--output {FILENAME.FILETYPE}`.
+>이 요청을 명령줄에서 직접 수행하는 경우 요청 헤더 뒤에 출력을 추가하라는 메시지가 표시될 수 있습니다. 다음 요청 예제에서는 `--output {FILENAME.FILETYPE}`을 사용합니다.
 
 **API 형식**
 
@@ -256,7 +256,7 @@ GET files/{DATASETFILE_ID}?path={FILE_NAME}
 
 | 매개 변수 | 설명 |
 | --------- | ----------- |
-| `{DATASETFILE_ID}` | dataSetFile ID는 `href` 이전 단계의 [값으로](#retrieve-the-next-api-call-with-your-batch-id)반환됩니다. |
+| `{DATASETFILE_ID}` | dataSetFile ID는 [이전 단계](#retrieve-the-next-api-call-with-your-batch-id)의 `href` 값으로 반환됩니다. |
 | `{FILE_NAME}` | 파일의 이름입니다. |
 
 **요청**
@@ -280,21 +280,21 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/035e2520
 
 ![터미널](../images/download-scores/response.png)
 
-## 고객 AI로 구성된 세그먼트 다운로드 {#segment}
+## 고객 AI {#segment}로 구성된 세그먼트 다운로드
 
-점수 데이터를 다운로드하는 또 다른 방법은 대상을 데이터 세트로 내보내는 것입니다. 세그멘테이션 작업이 성공적으로 완료된 후(속성 값 `status` 이 &quot;성공&quot;됨) 대상을 액세스 및 작업이 가능한 데이터 세트로 내보낼 수 있습니다. 세그멘테이션에 대한 자세한 내용은 세그멘테이션 [개요를 참조하십시오](../../../segmentation/home.md).
+점수 데이터를 다운로드하는 또 다른 방법은 대상을 데이터 세트로 내보내는 것입니다. 세그멘테이션 작업이 성공적으로 완료된 후(`status` 속성의 값이 &quot;성공&quot;됨), 액세스 및 작업이 가능한 데이터 세트로 대상을 내보낼 수 있습니다. 세그멘테이션에 대한 자세한 내용은 [세그멘테이션 개요](../../../segmentation/home.md)를 참조하십시오.
 
 >[!IMPORTANT]
 >
 >이 내보내기 방법을 활용하려면 데이터 세트에 대해 실시간 고객 프로필을 활성화해야 합니다.
 
-세그먼트 [평가 안내서의 세그먼트](../../../segmentation/tutorials/evaluate-a-segment.md) 내보내기 섹션에서는 대상 데이터 세트를 내보내는 데 필요한 단계를 다룹니다. 안내선은 다음과 같은 예를 보여주고 있습니다.
+세그먼트 평가 안내서의 [세그먼트 내보내기](../../../segmentation/tutorials/evaluate-a-segment.md) 섹션에서는 대상 데이터 세트를 내보내는 데 필요한 단계를 다룹니다. 안내선은 다음과 같은 예를 보여주고 있습니다.
 
-- **대상 데이터 세트 만들기:** 대상 구성원을 포함할 데이터 세트를 만듭니다.
-- **데이터 세트에서 대상 프로필을 생성합니다.** 세그먼트 작업의 결과를 기반으로 XDM 개별 프로필로 데이터 세트를 채웁니다.
+- **대상 데이터 집합 만들기:대상 구성원을** 포함할 데이터 집합을 만듭니다.
+- **데이터 세트에서 대상 프로필 생성:** 세그먼트 작업의 결과를 기반으로 XDM 개별 프로필로 데이터 세트를 채웁니다.
 - **내보내기 진행 모니터링:** 내보내기 프로세스의 현재 진행 상태를 확인합니다.
-- **고객 데이터 읽기:** 대상 구성원을 나타내는 결과 XDM 개별 프로필을 검색합니다.
+- **대상 데이터 읽기:** 대상 구성원을 나타내는 결과 XDM 개별 프로필을 검색합니다.
 
 ## 다음 단계
 
-이 문서에서는 고객 AI 점수를 다운로드하는 데 필요한 단계를 간략하게 설명합니다. 이제 제공되는 다른 [지능형 서비스](../../home.md) 및 가이드를 계속 검색할 수 있습니다.
+이 문서에서는 고객 AI 점수를 다운로드하는 데 필요한 단계를 간략하게 설명합니다. 이제 제공되는 다른 [Intelligent Services](../../home.md) 및 안내선을 계속 검색할 수 있습니다.
