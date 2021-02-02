@@ -4,9 +4,9 @@ seo-title: Adobe Experience Platform 웹 SDK FAQ
 description: Adobe Experience Platform Web SDK에 대한 FAQ
 seo-description: Adobe Experience Platform Web SDK에 대한 FAQ
 translation-type: tm+mt
-source-git-commit: a493fad1bbd6114ba06074ebb3064268ba25b445
+source-git-commit: f4f0b00dfd324f69aa2b4348740f6e767e86a6de
 workflow-type: tm+mt
-source-wordcount: '1683'
+source-wordcount: '1808'
 ht-degree: 2%
 
 ---
@@ -73,7 +73,7 @@ Adobe Experience Platform Launch을 사용하면 이러한 라이브러리를 �
 * **Adobe Experience Edge:** 데이터를 필요한 포맷으로 Adobe Experience Platform 및 솔루션에 손쉽게 전달할 수 있습니다.
 * **Adobe Experience Platform 및 Adobe 솔루션:** 가치 제안을 활성화합니다.
 
-**컨트롤:** 모든 데이터는 하나의 연결된 데이터 스트림을 사용하므로, 데이터를 애플리케이션 간, 이동 후 매 밀리초 동안 데이터가 어떻게 표시되는지를 논리적으로 따라잡고 제어할 수 있습니다.
+**컨트롤:** 모든 데이터는 하나의 연결된 데이터 스트림을 사용하기 때문에 데이터 여정의 매 초, 애플리케이션간, 그리고 모든 데이터를 논리적으로 따르고 제어할 수 있습니다.
 
 **미래 준비: 웹 SDK** 와 Experience Edge Network와의 연결을 통해 Adobe은 Adobe이 데이터 수집, 개인화, 동의 및 제3자 쿠키의 미래를 다루는 방법을 상당히 현대화할 수 있게 되었습니다. (Adobe에서 관리하는 퍼스트 파티 도메인을 활성화합니다.)
 
@@ -110,7 +110,7 @@ Adobe Experience Platform 웹 SDK는 다음 사용자를 위해 개발되었습�
 
 ## 웹 SDK에서 현재 지원되는 사용 사례는 무엇입니까?
 
-웹 SDK는 빠르게 진화하고 있습니다. 더 많은 활용 사례가 진행 중입니다. 여기에서 현재 지원되는 사용 사례 목록을 찾을 수 있습니다.[](https://github.com/adobe/alloy/projects/5)
+웹 SDK는 빠르게 진화하고 있습니다. 더 많은 활용 사례가 진행 중입니다. 여기에서 현재 지원되는 사용 사례 목록을 찾을 수 있습니다.](https://github.com/adobe/alloy/projects/5)[
 
 ## 현 고객은 사이트에 태그를 다시 지정해야 합니까?
 
@@ -124,7 +124,7 @@ Adobe Experience Platform 웹 SDK는 다음 사용자를 위해 개발되었습�
 
 ## 합금 사용을 시작할 때 ECID를 마이그레이션하여 웹 사이트 방문자가 새 방문자로 표시되지 않도록 할 수 있습니까?
 
-예. Adobe Experience Platform 웹 SDK는 ID 마이그레이션 기능을 제공합니다. 자세한 내용은 [이 문서](https://docs.adobe.com/content/help/en/experience-platform/edge/fundamentals/identity.html#id-migration)의 지침을 따르십시오.
+예. Adobe Experience Platform 웹 SDK는 ID 마이그레이션 기능을 제공합니다. 자세한 내용은 [플랫폼 웹 SDK ID 설명서](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html?lang=en#id-migration)의 ID 마이그레이션 지침을 따르십시오.
 
 ## 웹 SDK는 Adobe Experience Platform Launch과 어떻게 다릅니까?
 
@@ -153,6 +153,18 @@ Adobe Experience Platform 웹 SDK는 다음 사용자를 위해 개발되었습�
 ## CNAME 또는 퍼스트 파티 도메인이란 무엇이며, 이러한 도메인이 중요한 이유는 무엇입니까?
 
 CNAME에 대한 자세한 내용은 [Adobe 설명서](https://docs.adobe.com/content/help/ko-KR/id-service/using/reference/analytics-reference/cname.html)에서 확인할 수 있습니다.
+
+## Adobe Experience Platform 웹 SDK에서 쿠키를 사용합니까? 그렇다면 어떤 쿠키를 사용합니까?
+
+예. 현재 웹 SDK는 구현에 따라 1-4 쿠키 사이의 어느 곳이든 사용합니다. 다음은 웹 SDK에서 볼 수 있는 4개의 쿠키와 쿠키 사용 방법입니다.
+
+**kndct_orgid_id:** ID 쿠키는 ECID와 ECID와 관련된 기타 일부 정보를 저장하는 데 사용됩니다.
+
+**kndctr_orgid_concepts:** 이 쿠키는 웹 사이트에 대한 사용자의 동의 기본 설정을 저장합니다.
+
+**kndctr_orgid_personalization:** 이 쿠키에는 Adobe Target이 웹 페이지를 개인화하기 위해 사용하는 세션 정보가 포함되어 있습니다.
+
+**kndctr_orgid_consentecheck:** 이 세션 기반 쿠키는 서버가 동의 환경 설정 서버측 항목을 찾도록 알립니다.
 
 ## Adobe Experience Platform 웹 SDK에 대한 자세한 내용은 어디에서 확인할 수 있습니까?
 
