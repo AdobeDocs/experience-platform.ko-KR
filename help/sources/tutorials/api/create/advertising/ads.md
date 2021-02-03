@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: 이 자습서에서는 Flow Service API를 사용하여 Experience Platform을 Google AdWords에 연결하는 단계를 안내합니다.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 48a5dcfe5679e360da1e33f6021dc1229b92948f
 workflow-type: tm+mt
-source-wordcount: '636'
+source-wordcount: '622'
 ht-degree: 1%
 
 ---
@@ -39,12 +39,12 @@ ht-degree: 1%
 
 | **자격 증명** | **설명** |
 | -------------- | --------------- |
-| 클라이언트 고객 ID | AdWords 계정의 클라이언트 고객 ID. |
-| 개발자 토큰 | 관리자 계정과 연결된 개발자 토큰입니다. |
-| 토큰 새로 고침 | AdWords에 대한 액세스 권한을 인증하기 위해 [!DNL Google]에서 얻은 새로 고침 토큰입니다. |
-| 클라이언트 ID | 새로 고침 토큰을 가져오는 데 사용되는 [!DNL Google] 응용 프로그램의 클라이언트 ID. |
-| 클라이언트 암호 | 새로 고침 토큰을 가져오는 데 사용되는 [!DNL Google] 응용 프로그램의 클라이언트 암호입니다. |
-| 연결 사양 ID | 연결을 만드는 데 필요한 고유 식별자입니다. [!DNL Google AdWords]에 대한 연결 사양 ID는 다음과 같습니다.`d771e9c1-4f26-40dc-8617-ce58c4b53702` |
+| `clientCustomerId` | AdWords 계정의 클라이언트 고객 ID. |
+| `developerToken` | 관리자 계정과 연결된 개발자 토큰입니다. |
+| `refreshToken` | AdWords에 대한 액세스 권한을 인증하기 위해 [!DNL Google]에서 얻은 새로 고침 토큰입니다. |
+| `clientId` | 새로 고침 토큰을 가져오는 데 사용되는 [!DNL Google] 응용 프로그램의 클라이언트 ID. |
+| `clientSecret` | 새로 고침 토큰을 가져오는 데 사용되는 [!DNL Google] 응용 프로그램의 클라이언트 암호입니다. |
+| `connectionSpec` | 연결을 만드는 데 필요한 고유 식별자입니다. [!DNL Google AdWords]에 대한 연결 사양 ID는 다음과 같습니다.`d771e9c1-4f26-40dc-8617-ce58c4b53702` |
 
 이러한 값에 대한 자세한 내용은 이 [Google AdWords 문서](https://developers.google.com/adwords/api/docs/guides/authentication)를 참조하십시오.
 
