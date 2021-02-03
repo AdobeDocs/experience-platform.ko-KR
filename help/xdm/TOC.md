@@ -5,9 +5,9 @@ user-guide-title: XDM(경험 데이터 모델) 시스템 도움말
 breadcrumb-title: Experience Data Model(XDM) 안내서
 user-guide-description: XDM(경험 데이터 모델) 클래스와 mixin을 사용하여 경험 데이터를 표준화합니다.
 translation-type: tm+mt
-source-git-commit: 2c0dc4d54dcd1dcd17ffec70dbe3b16bb45ee141
+source-git-commit: cbdeb7529d27cb8b1cacc4a64b90637bb80f514d
 workflow-type: tm+mt
-source-wordcount: '217'
+source-wordcount: '225'
 ht-degree: 24%
 
 ---
@@ -36,6 +36,7 @@ ht-degree: 24%
       * [환경 세부 사항](./mixins/event/environment-details.md)
    * [Mixin 이름 업데이트](./mixins/name-updates.md)
 * 데이터 유형 {#data-types}
+   * [애플리케이션](./data-types/application.md)
    * [비콘](./data-types/beacon.md)
    * [브라우저 세부 사항](./data-types/browser-details.md)
    * [동의 및 기본 설정](./data-types/consents.md)
@@ -48,6 +49,7 @@ ht-degree: 24%
    * [지역 상호 작용 세부 사항](./data-types/geo-interaction-details.md)
    * [지역 모양](./data-types/geo-shape.md)
    * [ID](./data-types/identity.md)
+   * [측정](./data-types/measure.md)
    * [사람](./data-types/person.md)
    * [사람 이름](./data-types/person-name.md)
    * [전화번호](./data-types/phone-number.md)
@@ -55,7 +57,10 @@ ht-degree: 24%
    * [POI 세부 정보](./data-types/poi-details.md)
    * [POI 상호 작용](./data-types/poi-interaction.md)
    * [우편 주소](./data-types/postal-address.md)
+   * [검색](./data-types/search.md)
    * [구독](./data-types/subscription.md)
+   * [웹 상호 작용](./data-types/web-interactions.md)
+   * [웹 페이지 세부 사항](./data-types/webpage-details.md)
 * [!UICONTROL 스키마 ] UI  {#ui}
    * [개요](./ui/overview.md)
    * [XDM 리소스 살펴보기](./ui/explore.md)
