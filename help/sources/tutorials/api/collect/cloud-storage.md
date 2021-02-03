@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: 이 자습서에서는 제3자 클라우드 저장소에서 데이터를 검색하고 소스 커넥터 및 API를 통해 플랫폼에 가져오는 절차를 다룹니다.
 translation-type: tm+mt
-source-git-commit: 64627592b873a48b9cb58ef911e049869a2c21fb
+source-git-commit: c168a1b597a1ac2d85a8b896f3b6a8d213fcb1ae
 workflow-type: tm+mt
-source-wordcount: '1621'
+source-wordcount: '1639'
 ht-degree: 1%
 
 ---
@@ -341,6 +341,10 @@ curl -X POST \
 ## 매핑 {#mapping} 만들기
 
 소스 데이터를 대상 데이터 세트에 수집하려면 먼저 대상 데이터 세트가 준수하는 대상 스키마에 매핑해야 합니다. 이것은 요청 페이로드 내에 정의된 데이터 매핑과 함께 전환 서비스에 대한 POST 요청을 수행하여 수행됩니다.
+
+>[!TIP]
+>
+>클라우드 스토리지 소스 커넥터를 사용하여 JSON 파일의 배열과 같은 복잡한 데이터 유형을 매핑할 수 있습니다.
 
 **API 형식**
 
