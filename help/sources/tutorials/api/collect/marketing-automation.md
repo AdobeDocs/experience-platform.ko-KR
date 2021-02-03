@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: 이 자습서에서는 마케팅 자동화 시스템에서 데이터를 검색하고 소스 커넥터 및 API를 통해 플랫폼에 데이터를 가져오는 절차를 다룹니다.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: a9a4bbbd7128043596ebab45d12bdd6954554537
 workflow-type: tm+mt
 source-wordcount: '1537'
 ht-degree: 1%
@@ -87,7 +87,7 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "name": "HubSpot source connection",
-        "connectionId": "c6d4ee17-6752-4e83-94ee-1767522e83fa",
+        "baseConnectionId": "c6d4ee17-6752-4e83-94ee-1767522e83fa",
         "description": "HubSpot source connection",
         "data": {
             "format": "tabular",
@@ -104,7 +104,7 @@ curl -X POST \
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `connectionId` | 액세스하는 제3자 마케팅 자동화 시스템의 고유 연결 ID. |
+| `baseConnectionId` | 액세스하는 제3자 마케팅 자동화 시스템의 고유 연결 ID. |
 | `params.path` | 액세스하는 소스 파일의 경로입니다. |
 | `connectionSpec.id` | 마케팅 자동화 시스템의 연결 사양 ID. |
 
