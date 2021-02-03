@@ -5,7 +5,7 @@ title: UI에서 스키마 만들기 및 편집
 description: Experience Platform 사용자 인터페이스에서 스키마를 만들고 편집하는 방법에 대한 기본 사항을 알아봅니다.
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 3aa838509e4e24c57508e7411b0ffcf135fbcf04
+source-git-commit: e9df977272524b6aba516982e93f3128d1b9278b
 workflow-type: tm+mt
 source-wordcount: '1167'
 ht-degree: 0%
@@ -81,7 +81,7 @@ ht-degree: 0%
 >
 >나열된 믹싱의 경우 정보 아이콘(![](../../images/ui/resources/schemas/info-icon.png))을 마우스로 가리키거나 초점을 조정하여 믹싱이 캡처하는 데이터의 유형에 대한 간단한 설명을 볼 수 있습니다. 미리 보기 아이콘(![](../../images/ui/resources/schemas/preview-icon.png))을 선택하여 스키마에 추가하기 전에 믹싱에서 제공하는 필드의 구조를 볼 수도 있습니다.
 
-믹스인 선택이 끝나면 **[!UICONTROL 믹신 추가]**&#x200B;를 선택하여 스키마에 추가합니다.
+믹스를 선택하고 나면 **[!UICONTROL 믹신 추가]**&#x200B;를 선택하여 스키마에 추가합니다.
 
 ![](../../images/ui/resources/schemas/add-mixin-finish.png)
 
