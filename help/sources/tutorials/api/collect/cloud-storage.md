@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: 이 자습서에서는 제3자 클라우드 저장소에서 데이터를 검색하고 소스 커넥터 및 API를 통해 플랫폼에 가져오는 절차를 다룹니다.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 64627592b873a48b9cb58ef911e049869a2c21fb
 workflow-type: tm+mt
 source-wordcount: '1621'
 ht-degree: 1%
@@ -90,7 +90,7 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "name": "Cloud storage source connector",
-        "connectionId": "9e2541a0-b143-4d23-a541-a0b143dd2301",
+        "baseConnectionId": "9e2541a0-b143-4d23-a541-a0b143dd2301",
         "description": "Cloud storage source connector",
         "data": {
             "format": "delimited",
@@ -109,7 +109,7 @@ curl -X POST \
 
 | 속성 | 설명 |
 | --- | --- |
-| `connectionId` | 액세스하는 타사 클라우드 스토리지 시스템의 고유 연결 ID. |
+| `baseConnectionId` | 액세스하는 타사 클라우드 스토리지 시스템의 고유 연결 ID. |
 | `data.format` | 데이터 형식 특성을 정의하는 열거형 값입니다. |
 | `data.columnDelimiter` | 단일 문자 열 구분 기호를 사용하여 플랫 파일을 수집할 수 있습니다. 이 속성은 CSV 또는 TSV 파일을 인제스트할 때만 필요합니다. |
 | `params.path` | 액세스하는 소스 파일의 경로입니다. |
