@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: 이 자습서에서는 프로토콜 애플리케이션에서 데이터를 검색하고 소스 커넥터 및 API를 통해 플랫폼에 데이터를 인제스트하는 절차를 다룹니다.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 478c73935d674ef4eb40511cc562b27df77f58c8
 workflow-type: tm+mt
 source-wordcount: '1528'
 ht-degree: 1%
@@ -85,13 +85,49 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "name": "Generic OData source connection",
-        "connectionId": "a5c6b647-e784-4b58-86b6-47e784ab580b",
+        "baseConnectionId": "a5c6b647-e784-4b58-86b6-47e784ab580b",
         "description": "Generic OData source connection",
         "data": {
             "format": "tabular",
         },
         "params": {
-            "path": "Orders"
+            "tableName": "Orders",
+            "columns": [
+                {
+                "name": "OrderID",
+                "type": "integer",
+                "xdm": {
+                    "type": "integer",
+                    "minimum": -2147483648,
+                    "maximum": 2147483647
+                }
+                },
+                {
+                    "name": "CustomerID",
+                    "type": "string",
+                    "xdm": {
+                        "type": "string"
+                    }
+                },
+                {
+                    "name": "OrderDate",
+                    "type": "string",
+                    "meta:xdmType": "date-time",
+                    "xdm": {
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                },
+                {
+                    "name": "ShippedDate",
+                    "type": "string",
+                    "meta:xdmType": "date-time",
+                    "xdm": {
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                }
+            ]
         },
         "connectionSpec": {
             "id": "8e6b41a8-d998-4545-ad7d-c6a9fff406c3",
@@ -102,7 +138,7 @@ curl -X POST \
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `connectionId` | 프로토콜 응용 프로그램의 연결 ID |
+| `baseConnectionId` | 프로토콜 응용 프로그램의 연결 ID |
 | `params.path` | 소스 파일의 경로입니다. |
 | `connectionSpec.id` | 프로토콜 응용 프로그램의 연결 사양 ID. |
 
