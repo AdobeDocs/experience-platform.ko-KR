@@ -5,9 +5,9 @@ title: Flow Service API를 사용하여 광고 시스템 탐색
 topic: overview
 description: Flow Service는 Adobe Experience Platform 내의 다양한 소스에서 수집한 고객 데이터를 중앙에서 수집하고 관리하는 데 사용됩니다. 이 서비스는 지원되는 모든 소스가 연결되어 있는 사용자 인터페이스와 RESTful API를 제공합니다. 이 자습서는 Flow Service API를 사용하여 광고 시스템을 탐색합니다.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 48a5dcfe5679e360da1e33f6021dc1229b92948f
 workflow-type: tm+mt
-source-wordcount: '639'
+source-wordcount: '633'
 ht-degree: 1%
 
 ---
@@ -40,17 +40,17 @@ ht-degree: 1%
 
 [!DNL Platform] API를 호출하려면 먼저 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 완료해야 합니다. 인증 자습서를 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
 
-* 인증:Bearer `{ACCESS_TOKEN}`
-* x-api-key:`{API_KEY}`
-* x-gw-ims-org-id:`{IMS_ORG}`
+* `Authorization: Bearer {ACCESS_TOKEN}`
+* `x-api-key: {API_KEY}`
+* `x-gw-ims-org-id: {IMS_ORG}`
 
 [!DNL Flow Service]에 속하는 리소스를 포함하여 [!DNL Experience Platform]의 모든 리소스는 특정 가상 샌드박스로 구분됩니다. [!DNL Platform] API에 대한 모든 요청에는 작업이 수행할 샌드박스의 이름을 지정하는 헤더가 필요합니다.
 
-* x-sandbox-name:`{SANDBOX_NAME}`
+* `x-sandbox-name: {SANDBOX_NAME}`
 
 페이로드(POST, PUT, PATCH)을 포함하는 모든 요청에는 추가 미디어 유형 헤더가 필요합니다.
 
-* 컨텐츠 유형:`application/json`
+* `Content-Type: application/json`
 
 ## 데이터 테이블 살펴보기
 
@@ -70,7 +70,7 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=root
 
 ```shell
 curl -X GET \
-    'http://platform.adobe.io/data/foundation/flowservice/connections/2484f2df-c057-4ab5-84f2-dfc0577ab592/explore?objectType=root' \
+    'https://platform.adobe.io/data/foundation/flowservice/connections/2484f2df-c057-4ab5-84f2-dfc0577ab592/explore?objectType=root' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -133,7 +133,7 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=table&object={TABLE_PAT
 
 ```shell
 curl -X GET \
-    'http://platform.adobe.io/data/foundation/flowservice/connections/2484f2df-c057-4ab5-84f2-dfc0577ab592/explore?objectType=table&object=v201809.AD_PERFORMANCE_REPORT' \
+    'https://platform.adobe.io/data/foundation/flowservice/connections/2484f2df-c057-4ab5-84f2-dfc0577ab592/explore?objectType=table&object=v201809.AD_PERFORMANCE_REPORT' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
