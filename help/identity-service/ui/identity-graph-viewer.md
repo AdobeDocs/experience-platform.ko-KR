@@ -5,9 +5,9 @@ title: Adobe Experience Platform ID 서비스
 topic: tutorial
 description: ID 그래프는 특정 고객에 대해 서로 다른 ID 간의 관계를 보여주는 지도로, 고객이 다양한 채널에서 브랜드와 상호 작용하는 방식을 시각적으로 보여줍니다.
 translation-type: tm+mt
-source-git-commit: 7c9c81492df9333945ac62602f10b6097296d62b
+source-git-commit: 22685a8519529ba7afb7e50262ea4d40a450b382
 workflow-type: tm+mt
-source-wordcount: '905'
+source-wordcount: '930'
 ht-degree: 1%
 
 ---
@@ -100,7 +100,7 @@ ID 클러스터가 큰 ID 그래프도 ID 그래프 뷰어를 통해 액세스�
 ID 그래프 뷰어에 액세스할 때 오류가 발생할 수 있습니다. 다음은 ID 그래프 뷰어로 작업할 때 주의해야 할 사전 요구 사항 및 제한 사항 목록입니다.
 
 - 선택한 네임스페이스에 ID 값이 있어야 합니다.
-- ID 그래프 뷰어는 생성하려면 최소 2개의 연결된 ID가 필요합니다.
+- ID 그래프 뷰어는 생성하려면 최소 2개의 연결된 ID가 필요합니다. ID 값이 하나만 있고 연결된 ID가 없을 수 있으며 이 경우 이 값은 [!DNL Profile] 뷰어에만 존재합니다.
 - ID 그래프 뷰어는 최대 150ID를 초과할 수 없습니다.
 
 ![error-screen](../images/identity-graph-viewer/error-screen.png)
