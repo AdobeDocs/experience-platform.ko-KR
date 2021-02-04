@@ -5,9 +5,9 @@ title: UI에서 스키마 만들기 및 편집
 description: Experience Platform 사용자 인터페이스에서 스키마를 만들고 편집하는 방법에 대한 기본 사항을 알아봅니다.
 topic: user guide
 translation-type: tm+mt
-source-git-commit: e9df977272524b6aba516982e93f3128d1b9278b
+source-git-commit: babe47cc864d9f79eee28989ca8b658350b9d790
 workflow-type: tm+mt
-source-wordcount: '1167'
+source-wordcount: '1321'
 ht-degree: 0%
 
 ---
@@ -53,7 +53,7 @@ ht-degree: 0%
 >
 >작업 공간의 검색 및 필터링 기능을 사용하여 스키마를 쉽게 찾을 수 있습니다. 자세한 내용은 [XDM 리소스](../explore.md)에 대한 가이드를 참조하십시오.
 
-스키마를 선택하면 [!DNL Schema Editor]이 캔버스에 표시된 스키마 구조와 함께 나타납니다. 이제 [스키마에 믹싱](#add-mixins)을 추가하거나, 스키마에 고유한 사용자 정의 믹스가 있는 경우 [기존 사용자 정의 믹싱](./mixins.md#edit)을 편집할 수 있습니다.
+스키마를 선택하면 [!DNL Schema Editor]이 캔버스에 표시된 스키마 구조와 함께 나타납니다. 이제 [스키마에 믹싱](#add-mixins)을 추가하거나, [필드 표시 이름](#display-names) 또는 [이(가) 있는 경우 기존 사용자 정의 믹싱](./mixins.md#edit)을 편집할 수 있습니다.
 
 ## 스키마 {#add-mixins}에 믹싱 추가
 
@@ -116,6 +116,22 @@ ht-degree: 0%
 ![](../../images/ui/resources/schemas/profile-enabled.png)
 
 이제 스키마는 실시간 고객 프로필에서 사용할 수 있습니다. Platform(플랫폼)이 이 스키마를 기반으로 데이터 세트를 인제스트할 때 해당 데이터는 병합된 프로필 데이터에 통합됩니다.
+
+## 스키마 필드 {#display-names} 표시 이름 편집
+
+클래스를 할당하고 스키마에 혼합을 추가한 후에는 표준 또는 사용자 정의 XDM 리소스에서 해당 필드를 제공했는지 여부에 관계없이 스키마 필드의 표시 이름을 편집할 수 있습니다.
+
+>[!NOTE]
+>
+>표준 클래스 또는 혼합에 속하는 필드의 표시 이름은 특정 스키마 컨텍스트에서만 편집할 수 있습니다. 즉, 하나의 스키마에서 표준 필드의 표시 이름을 변경해도 동일한 관련 클래스나 믹싱을 사용하는 다른 스키마는 영향을 주지 않습니다.
+
+스키마 필드의 표시 이름을 편집하려면 캔버스에서 필드를 선택합니다. 오른쪽 레일에서 **[!UICONTROL 표시 이름]** 아래에 새 이름을 입력합니다.
+
+![](../../images/ui/resources/schemas/display-name.png)
+
+오른쪽 레일에서 **[!UICONTROL 적용]**&#x200B;을 선택하고 캔버스 업데이트를 선택하여 필드의 새 표시 이름을 표시합니다. **[!UICONTROL 저장]**&#x200B;을 선택하여 스키마에 변경 내용을 적용합니다.
+
+![](../../images/ui/resources/schemas/display-name-changed.png)
 
 ## 스키마 클래스 {#change-class} 변경
 
