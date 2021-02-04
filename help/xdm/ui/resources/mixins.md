@@ -5,9 +5,9 @@ title: UI에서 믹싱 만들기 및 편집
 description: Experience Platform 사용자 인터페이스에서 믹스를 만들고 편집하는 방법을 알아봅니다.
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 2e20403122e65d28f04114af9b7e8d41874f76e2
+source-git-commit: cf74c7922271035474c7f10534692983add48616
 workflow-type: tm+mt
-source-wordcount: '668'
+source-wordcount: '704'
 ht-degree: 0%
 
 ---
@@ -45,9 +45,9 @@ Adobe Experience Platform은 다양한 마케팅 사례를 포함하는 다양�
 
 >[!NOTE]
 >
->조직에서 정의한 사용자 정의 믹스만 편집할 수 있습니다.
+>조직에서 정의한 사용자 정의 믹스만 완전히 편집하고 사용자 정의할 수 있습니다. Adobe에 의해 정의된 코어 믹스의 경우 개별 스키마 컨텍스트 내에서 해당 필드의 표시 이름만 편집할 수 있습니다. 자세한 내용은 [스키마 필드에 대한 표시 이름 편집](./schemas.md#display-names)의 섹션을 참조하십시오.
 >
->또한 데이터 수집에 대한 스키마에서 믹스를 저장 및 사용한 후에는 이후에 혼합에 대한 추가 변경만 수행할 수 있습니다. 자세한 내용은 스키마 진화의 [규칙](../../schema/composition.md#evolution)을 참조하십시오.
+>사용자 정의 믹싱이 저장되고 데이터 수집에 대한 스키마에 사용되면 이후 혼합에 대한 추가 변경만 수행할 수 있습니다. 자세한 내용은 스키마 진화의 [규칙](../../schema/composition.md#evolution)을 참조하십시오.
 
 기존 믹스를 편집하려면 먼저 [!DNL Schema Editor] 내에 혼합을 사용하는 스키마를 열어야 합니다. [기존 스키마를 선택하여 ](./schemas.md#edit)편집하거나 [새 스키마](./schemas.md#create)를 만들고 믹신 질문에 추가할 수 있습니다.
 
