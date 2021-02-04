@@ -5,9 +5,9 @@ seo-title: Google 고객 일치 대상
 description: Google Customer Match를 사용하면 온라인 및 오프라인 데이터를 사용하여 검색, 쇼핑, Gmail, YouTube 등 Google의 소유물 및 운영 체제에서 고객에게 도달하고 다시 참여할 수 있습니다.
 seo-description: Google Customer Match를 사용하면 온라인 및 오프라인 데이터를 사용하여 검색, 쇼핑, Gmail, YouTube 등 Google의 소유물 및 운영 체제에서 고객에게 도달하고 다시 참여할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 4e3b7e5ad440cae1ce15e5ecb2c9bd53863a445a
+source-git-commit: 38b2bfd93bda85cf87dde4e0345ca9c11e419c2f
 workflow-type: tm+mt
-source-wordcount: '1502'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->새 대상 구성 경험으로의 고객 마이그레이션이 현재 진행 중입니다. 현재 대상 구성 페이지에 액세스하는 데 문제가 있을 수 있습니다.
+>새 대상 버전으로의 고객 마이그레이션이 현재 진행 중입니다. 마이그레이션이 완료될 때까지 이 대상에 대해 사용 가능한 ID는 [!UICONTROL EMAIL] 및 [!UICONTROL EMAIL_LC_SHA_256]만 표시됩니다.
 
 [Google Customer ](https://support.google.com/google-ads/answer/6379332?hl=en) Match를 사용하면 온라인 및 오프라인 데이터를 사용하여 다음과 같이 Google의 소유 및 운영 자산에서 고객에게 도달하고 다시 참여할 수 있습니다. [!DNL Search],  [!DNL Shopping],  [!DNL Gmail]및  [!DNL YouTube]을 참조하십시오.
 
