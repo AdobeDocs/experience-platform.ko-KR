@@ -5,10 +5,10 @@ seo-title: Facebook 대상
 description: 해시 처리된 이메일을 기반으로 고객 타깃팅, 개인화 및 억제를 위해 Facebook 캠페인에 대한 프로필을 활성화합니다.
 seo-description: 해시 처리된 이메일을 기반으로 고객 타깃팅, 개인화 및 억제를 위해 Facebook 캠페인에 대한 프로필을 활성화합니다.
 translation-type: tm+mt
-source-git-commit: 4e3b7e5ad440cae1ce15e5ecb2c9bd53863a445a
+source-git-commit: 38b2bfd93bda85cf87dde4e0345ca9c11e419c2f
 workflow-type: tm+mt
-source-wordcount: '963'
-ht-degree: 3%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->새 대상 구성 경험으로의 고객 마이그레이션이 현재 진행 중입니다. 현재 대상 구성 페이지에 액세스하는 데 문제가 있을 수 있습니다.
+>새 대상 버전으로의 고객 마이그레이션이 현재 진행 중입니다. 마이그레이션이 완료될 때까지 이 대상에 대해 사용 가능한 ID는 [!UICONTROL EMAIL] 및 [!UICONTROL EMAIL_LC_SHA_256]만 표시됩니다.
 
 해시 처리된 이메일을 기반으로 고객 타깃팅, 개인화 및 억제를 위해 [!DNL Facebook] 캠페인에 대한 프로파일을 활성화합니다.
 
