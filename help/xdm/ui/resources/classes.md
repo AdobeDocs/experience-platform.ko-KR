@@ -5,9 +5,9 @@ title: UI에서 클래스 만들기 및 편집
 description: Experience Platform 사용자 인터페이스에서 클래스를 만들고 편집하는 방법을 알아봅니다.
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 2e20403122e65d28f04114af9b7e8d41874f76e2
+source-git-commit: 5bf729197de53e9d24675c8a1d0455e807fb90c5
 workflow-type: tm+mt
-source-wordcount: '850'
+source-wordcount: '886'
 ht-degree: 0%
 
 ---
@@ -53,9 +53,9 @@ Adobe은 [!DNL XDM Individual Profile] 및 [!DNL XDM ExperienceEvent]을 비롯�
 
 >[!NOTE]
 >
->조직에서 정의한 사용자 지정 클래스만 편집할 수 있습니다.
+>조직에서 정의한 사용자 정의 클래스만 완전히 편집하고 사용자 정의할 수 있습니다. Adobe에 의해 정의된 핵심 클래스의 경우 개별 스키마 컨텍스트 내에서 해당 필드의 표시 이름만 편집할 수 있습니다. 자세한 내용은 [스키마 필드에 대한 표시 이름 편집](./schemas.md#display-names)의 섹션을 참조하십시오.
 >
->또한 클래스가 저장되고 데이터 수집에 사용되면 이후 추가로 변경할 수만 있습니다. 자세한 내용은 스키마 진화의 [규칙](../../schema/composition.md#evolution)을 참조하십시오.
+>사용자 지정 클래스가 저장되고 데이터 수집에 사용되면 이후 추가 변경만 수행할 수 있습니다. 자세한 내용은 스키마 진화의 [규칙](../../schema/composition.md#evolution)을 참조하십시오.
 
 기존 클래스를 편집하려면 **[!UICONTROL 찾아보기]** 탭을 선택한 다음 편집할 클래스를 사용하는 스키마의 이름을 선택합니다.
 
