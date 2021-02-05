@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;홈;인기 항목;쿼리 서비스;쿼리 서비스;경험 이벤트 쿼리;경험 이벤트 쿼리;경험 이벤트 쿼리;경험 이벤트 쿼리
 solution: Experience Platform
-title: 경험 이벤트 쿼리
+title: 경험 이벤트에 대한 샘플 쿼리
 topic: queries
 type: Tutorial
-description: 다음 문서에서는 경험 이벤트와 관련된 쿼리의 예를 제공합니다.
+description: 다음 문서에서는 Adobe Experience Platform 쿼리 서비스의 경험 이벤트와 관련된 쿼리의 예를 제공합니다.
 translation-type: tm+mt
-source-git-commit: 5348ea4fb381f938ef635077c04cbff69c1b1a45
+source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
 workflow-type: tm+mt
-source-wordcount: '310'
+source-wordcount: '320'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Experience Event] 쿼리
+# [!DNL Experience Events]에 대한 샘플 쿼리
 
 표준 SQL 쿼리 외에도 Adobe Experience Platform [!DNL Query Service]은 [!DNL Experience Events]을(를) 사용하여 쿼리 작성을 지원합니다. 경험 이벤트는 XDM(경험 데이터 모델) ExperienceEvent 클래스로 표현됩니다. 이 클래스는 사용자가 웹 사이트 또는 서비스와 상호 작용할 때 시스템의 변경 불가능하고 집계되지 않은 스냅샷을 캡처하므로 시간 도메인 분석에 사용할 수 있습니다.
 
