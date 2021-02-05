@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;map functions;map;
+keywords: Experience Platform;홈;인기 항목;세그멘테이션;세그멘테이션 서비스;pql;PQL;프로필 쿼리 언어;맵 기능;map
 solution: Experience Platform
-title: 매핑 함수
+title: PQL 맵 함수
 topic: developer guide
-description: PQL(프로필 쿼리 언어)은 맵과의 상호 작용을 용이하게 하는 기능을 제공합니다.
+description: PQL(프로파일 쿼리 언어)은 맵과 보다 쉽게 상호 작용할 수 있는 기능을 제공합니다.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '155'
+source-wordcount: '173'
 ht-degree: 5%
 
 ---
 
 
-# 매핑 함수
+# 맵 함수
 
-[!DNL Profile Query Language] (PQL)은 맵과의 상호 작용을 용이하게 하는 기능을 제공합니다. 다른 PQL 기능에 대한 자세한 내용은 [[!DNL Profile Query Language] 개요를 참조하십시오](./overview.md).
+[!DNL Profile Query Language] (PQL)은 맵과의 상호 작용을 용이하게 하는 기능을 제공합니다. 다른 PQL 함수에 대한 자세한 내용은 [[!DNL Profile Query Language] 개요](./overview.md)에서 확인할 수 있습니다.
 
 ## 가져오기
 
-이 `get` 함수는 지정된 키에 대한 맵 값을 검색하는 데 사용됩니다.
+`get` 함수는 지정된 키에 대한 맵 값을 검색하는 데 사용됩니다.
 
 **형식**
 
@@ -29,7 +29,7 @@ ht-degree: 5%
 
 **예**
 
-다음 PQL 쿼리는 키에 대한 ID 맵의 값을 가져옵니다 `example@example.com`.
+다음 PQL 쿼리는 `example@example.com` 키의 ID 맵 값을 가져옵니다.
 
 ```sql
 identityMap.get("example@example.com")
@@ -37,7 +37,7 @@ identityMap.get("example@example.com")
 
 ## 키
 
-이 `keys` 함수는 지정된 맵에 대한 모든 키를 검색하는 데 사용됩니다.
+`keys` 함수는 지정된 맵에 대한 모든 키를 검색하는 데 사용됩니다.
 
 **형식**
 
@@ -47,7 +47,7 @@ identityMap.get("example@example.com")
 
 **예**
 
-다음 PQL 쿼리는 맵에 대한 모든 키를 가져옵니다 `identityMap`.
+다음 PQL 쿼리는 `identityMap` 맵에 대한 모든 키를 가져옵니다.
 
 ```sql
 identityMap.keys()
@@ -55,7 +55,7 @@ identityMap.keys()
 
 ## 값
 
-이 `values` 함수는 지정된 맵의 모든 값을 검색하는 데 사용됩니다.
+`values` 함수는 지정된 맵의 모든 값을 검색하는 데 사용됩니다.
 
 **형식**
 
@@ -65,7 +65,7 @@ identityMap.keys()
 
 **예**
 
-다음 PQL 쿼리는 맵에 대한 모든 값을 가져옵니다 `identityMap`.
+다음 PQL 쿼리는 `identityMap` 맵에 대한 모든 값을 가져옵니다.
 
 ```sql
 identityMap.values()
@@ -73,4 +73,4 @@ identityMap.values()
 
 ## 다음 단계
 
-맵 기능에 대해 알아냈으므로 PQL 쿼리 내에서 사용할 수 있습니다. 다른 PQL 기능에 대한 자세한 내용은 [프로필 쿼리 언어 개요를 참조하십시오](./overview.md).
+이제 맵 기능에 대해 배웠으므로 PQL 쿼리 내에서 사용할 수 있습니다. 다른 PQL 기능에 대한 자세한 내용은 [프로필 쿼리 언어 개요](./overview.md)를 참조하십시오.
