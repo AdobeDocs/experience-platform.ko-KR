@@ -1,21 +1,17 @@
 ---
 keywords: 광고;무역센터
-title: 더 트레이드데스크
-seo-title: 더 트레이드데스크
+title: 무역 센터 연결 대상
 description: 'Trade Desk는 광고 구매자가 디스플레이, 비디오 및 모바일 인벤토리 소스에서 타겟팅된 디지털 캠페인을 리타겟팅하고 실행할 수 있는 셀프 서비스 플랫폼입니다. '
-seo-description: Trade Desk는 광고 구매자가 디스플레이, 비디오 및 모바일 인벤토리 소스에서 타겟팅된 디지털 캠페인을 리타겟팅하고 실행할 수 있는 셀프 서비스 플랫폼입니다.
 translation-type: tm+mt
-source-git-commit: 95f57f9d1b3eeb0b16ba209b9774bd94f5758009
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '579'
-ht-degree: 1%
+source-wordcount: '550'
+ht-degree: 0%
 
 ---
 
 
-# [!DNL The Trade Desk] 대상
-
-## 개요 {#overview}
+# [!DNL The Trade Desk] 연결
 
 [!DNL The Trade Desk] 대상은 프로필 데이터를 다음으로 보내는 데 도움이  [!DNL The Trade Desk]됩니다.
 
