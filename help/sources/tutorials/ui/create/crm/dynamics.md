@@ -1,22 +1,22 @@
 ---
 keywords: Experience Platform;홈;인기 항목;Microsoft Dynamics;microsoft dynamics;Dynamics;Dynamics
 solution: Experience Platform
-title: UI에서 Microsoft Dynamics 소스 커넥터 만들기
+title: UI에서 Microsoft Dynamics 소스 연결 만들기
 topic: overview
 type: Tutorial
-description: 이 자습서에서는 플랫폼 사용자 인터페이스를 사용하여 Microsoft Dynamics(이하 "Dynamics") 소스 커넥터를 만드는 단계를 제공합니다.
+description: Adobe Experience Platform UI를 사용하여 Microsoft Dynamics 소스 연결을 만드는 방법을 알아봅니다.
 translation-type: tm+mt
-source-git-commit: 4241e00fd444969e5a40c8b34dd7786b1a3c6dcb
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '601'
-ht-degree: 0%
+source-wordcount: '596'
+ht-degree: 1%
 
 ---
 
 
-# UI에 [!DNL Microsoft Dynamics] 소스 커넥터 만들기
+# UI에 [!DNL Microsoft Dynamics] 소스 연결 만들기
 
-이 자습서에서는 플랫폼 사용자 인터페이스를 사용하여 [!DNL Microsoft Dynamics](이하 &quot;[!DNL Dynamics]&quot;) 소스 커넥터를 만드는 단계를 제공합니다.
+이 자습서에서는 Adobe Experience Platform UI를 사용하여 [!DNL Microsoft Dynamics](이하 &quot;[!DNL Dynamics]&quot;) 소스 연결을 만드는 단계를 제공합니다.
 
 ## 시작하기
 
