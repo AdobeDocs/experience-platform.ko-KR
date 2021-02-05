@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 소스 커넥터 및 API를 통해 CRM 데이터 수집
 topic: overview
 type: Tutorial
-description: 이 자습서에서는 제3자 CRM 시스템에서 데이터를 검색하고 소스 커넥터 및 API를 통해 플랫폼에 가져오는 절차를 다룹니다.
+description: 이 자습서에서는 소스 커넥터 및 API를 사용하여 제3자 CRM 시스템에서 데이터를 검색하고 플랫폼에 가져오는 절차를 다룹니다.
 translation-type: tm+mt
-source-git-commit: 48a5dcfe5679e360da1e33f6021dc1229b92948f
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
 source-wordcount: '1552'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 ---
 
 
-# 소스 커넥터 및 API를 통해 CRM 데이터 수집
+# 소스 커넥터 및 API를 사용하여 CRM 데이터 수집
 
 이 자습서는 소스 커넥터와 [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API를 통해 타사 CRM에서 데이터를 검색하고 Adobe Experience Platform으로 데이터를 인제스트하는 절차를 설명합니다.
 
