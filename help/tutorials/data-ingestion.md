@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: 데이터 통합에는 소스 커넥터를 사용한 일괄 처리, 스트리밍 통합 및 수집이 포함됩니다.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
 source-wordcount: '497'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 Adobe Experience Platform은 마케터가 고객의 행동을 더 잘 이해할 수 있도록 다양한 소스의 데이터를 통합합니다. Adobe [!DNL Experience Platform Data Ingestion]은 [!DNL Platform]이(가) 이러한 소스의 데이터를 수집하는 여러 메서드와 다운스트림 [!DNL Platform services]에서 사용하기 위해 Data Lake 내에서 데이터가 지속되는 방식을 나타냅니다. [!DNL Data Ingestion] 소스 커넥터를 사용한 일괄 통합, 스트리밍 통합 및 섭취 포함 자세한 내용을 보려면 [데이터 통합 개요](../ingestion/home.md)를 읽거나 [소스 설명서](../sources/home.md)로 직접 이동하십시오.
 
-## UI 및 API에서 소스 커넥터 만들기
+## UI 및 API에서 소스 연결 만들기
 
 소스 커넥터를 사용하면 여러 소스에서 데이터를 인제스트할 수 있습니다. 여기서 [!DNL Platform services]을(를) 사용하여 레이블 지정, 구조 지정 및 개선할 수 있습니다. 소스 커넥터를 만들려면 [소스 개요](../sources/home.md)를 참조하십시오.
 
