@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;홈;인기 항목;csv;맵 csv;csv 파일;csv 파일을 xdm에 매핑;csv를 xdm;ui 안내서;매퍼;날짜;날짜;날짜 함수;날짜;Analytics;home;popular csv;map csv;mapper;mapping;date functions;date;date
 solution: Experience Platform
-title: 날짜 함수
+title: 데이터 준비 날짜 함수
 topic: overview
 description: 이 문서에서는 데이터 준비와 함께 사용되는 날짜 함수를 소개합니다.
 translation-type: tm+mt
-source-git-commit: 28c13101be37c5c7680c5d46005509bfd122018f
+source-git-commit: 37c1c98ccba50fa917acc5e93763294f4dde5c36
 workflow-type: tm+mt
-source-wordcount: '411'
+source-wordcount: '415'
 ht-degree: 16%
 
 ---
 
 
-# 날짜 함수
+# 데이터 준비 날짜 함수
 
 데이터 준비에서는 문자열 및 datetime 객체로 날짜 함수를 지원합니다.
 
