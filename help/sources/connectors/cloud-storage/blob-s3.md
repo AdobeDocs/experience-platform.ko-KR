@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;홈;인기 항목;Azure Blob;Amazon S3;blob;S3;s3;s3
 solution: Experience Platform
-title: Azure Blob 및 Amazon S3 커넥터
+title: Azure Blob 및 Amazon S3 소스 커넥터 개요
 topic: overview
-description: 아래 설명서는 API 또는 사용자 인터페이스를 사용하여 Azure Blob 및 Amazon S3를 플랫폼에 연결하는 방법에 대한 정보를 제공합니다.
+description: API 또는 사용자 인터페이스를 사용하여 Azure Blob 및 Amazon S3를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
-source-wordcount: '141'
+source-wordcount: '140'
 ht-degree: 0%
 
 ---
