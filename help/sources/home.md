@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;홈;인기 항목;소스 커넥터;소스 커넥터;소스;데이터 소스;데이터 소스;데이터 소스;데이터 소스 연결
 solution: Experience Platform
-title: Adobe Experience Platform 소스 커넥터 개요
+title: 소스 커넥터 개요
 topic: overview
 description: Adobe Experience Platform을 사용하면 Platform 서비스를 사용하여 수신 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 외부 소스에서 데이터를 수집할 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 등 다양한 소스의 데이터를 인제스트할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
-source-wordcount: '943'
+source-wordcount: '940'
 ht-degree: 0%
 
 ---
@@ -30,12 +30,12 @@ Experience Platform의 소스는 다음 카테고리로 그룹화됩니다.
 Experience Platform을 사용하면 Adobe Analytics, Adobe Audience Manager 및 [!DNL Experience Platform Launch] 등 다른 Adobe 애플리케이션에서 데이터를 수집할 수 있습니다. 자세한 내용은 다음 관련 문서를 참조하십시오.
 
 - [Adobe Audience Manager 커넥터 개요](connectors/adobe-applications/audience-manager.md)
-- [UI에서 Adobe Audience Manager 소스 커넥터 만들기](./tutorials/ui/create/adobe-applications/audience-manager.md)
+- [UI에서 Adobe Audience Manager 소스 연결 만들기](./tutorials/ui/create/adobe-applications/audience-manager.md)
 - [Adobe Analytics 분류 데이터 커넥터 개요](connectors/adobe-applications/classifications.md)
-- [UI에서 Adobe Analytics 분류 데이터 소스 커넥터 만들기](./tutorials/ui/create/adobe-applications/classifications.md)
+- [UI에서 Adobe Analytics 분류 데이터 소스 연결 만들기](./tutorials/ui/create/adobe-applications/classifications.md)
 - [Adobe Analytics 데이터 커넥터 개요](connectors/adobe-applications/analytics.md)
-- [UI에서 Adobe Analytics 소스 커넥터 만들기](./tutorials/ui/create/adobe-applications/analytics.md)
-- [UI에서 고객 속성 소스 커넥터 만들기](./tutorials/ui/create/adobe-applications/customer-attributes.md)
+- [UI에서 Adobe Analytics 소스 연결 만들기](./tutorials/ui/create/adobe-applications/analytics.md)
+- [UI에서 고객 속성 소스 연결 만들기](./tutorials/ui/create/adobe-applications/customer-attributes.md)
 
 ### 광고
 
