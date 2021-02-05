@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;홈;인기 항목;데이터 집합 연결 흐름 서비스;흐름 서비스;흐름 서비스 연결
 solution: Experience Platform
-title: Flow Service API를 사용하여 Experience Platform 데이터 세트 기본 연결 만들기
+title: Flow Service API를 사용하여 Adobe Experience Platform 데이터 세트 기본 연결 만들기
 topic: overview
 type: Tutorial
-description: Flow Service는 Adobe Experience Platform 내의 다양한 소스에서 수집한 고객 데이터를 중앙에서 수집하고 관리하는 데 사용됩니다. 이 서비스는 지원되는 모든 소스가 연결되어 있는 사용자 인터페이스와 RESTful API를 제공합니다.
+description: Flow Service API를 사용하여 Adobe Experience Platform에 대한 데이터 세트 기본 연결을 만드는 방법을 알아봅니다.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '736'
+source-wordcount: '721'
 ht-degree: 1%
 
 ---
