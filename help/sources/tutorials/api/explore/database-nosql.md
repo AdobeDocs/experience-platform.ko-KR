@@ -5,7 +5,7 @@ title: Flow Service API를 사용하여 데이터베이스 탐색
 topic: overview
 description: 이 자습서에서는 Flow Service API를 사용하여 타사 데이터베이스의 내용과 파일 구조를 살펴봅니다.
 translation-type: tm+mt
-source-git-commit: ddf5be2f30bc347a881bdcbc6b880f087c03e263
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
 source-wordcount: '563'
 ht-degree: 2%
