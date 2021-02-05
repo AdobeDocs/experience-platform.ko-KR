@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;홈;인기 항목;쿼리 서비스;api 안내서;연결 매개 변수;쿼리 서비스;Client;home;popular topics service;query service;
 solution: Experience Platform
-title: 쿼리 서비스 개발자 가이드
+title: 연결 매개 변수 API 끝점
 topic: connection parameters
 description: /connection_parameters 끝점에 GET 요청을 수행하여 대화형 서비스를 사용하기 위한 연결 매개 변수를 검색할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 648544bc60c0cee8ca8b167118391980b6c33d91
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '147'
+source-wordcount: '148'
 ht-degree: 1%
 
 ---
 
 
-# 연결 매개 변수
+# 연결 매개 변수 끝점
 
 ## 샘플 API 호출
 
