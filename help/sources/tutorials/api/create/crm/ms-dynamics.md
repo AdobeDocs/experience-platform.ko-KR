@@ -1,24 +1,24 @@
 ---
 keywords: Experience Platform;홈;인기 항목;Microsoft Dynamics;microsoft dynamics;dynamics;Dynamics
 solution: Experience Platform
-title: Flow Service API를 사용하여 Microsoft Dynamics 커넥터 만들기
+title: Flow Service API를 사용하여 Microsoft Dynamics 소스 연결 만들기
 topic: overview
 type: Tutorial
-description: 이 자습서에서는 Flow Service API를 사용하여 CRM 데이터를 수집하기 위해 플랫폼을 Microsoft Dynamics(이하 "Dynamics") 계정에 연결하는 단계를 안내합니다.
+description: Flow Service API를 사용하여 플랫폼을 Microsoft Dynamics 계정에 연결하는 방법을 알아봅니다.
 translation-type: tm+mt
-source-git-commit: 75566ef0dc45f59b47af0b85f4692c2496e53f29
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '751'
+source-wordcount: '739'
 ht-degree: 2%
 
 ---
 
 
-# [!DNL Flow Service] API를 사용하여 [!DNL Microsoft Dynamics] 커넥터를 만듭니다.
+# [!DNL Flow Service] API를 사용하여 [!DNL Microsoft Dynamics] 소스 연결 만들기
 
 [!DNL Flow Service] 는 Adobe Experience Platform 내의 다양한 소스에서 수집한 고객 데이터를 수집하고 중앙에서 관리하는 데 사용됩니다. 이 서비스는 지원되는 모든 소스가 연결되어 있는 사용자 인터페이스와 RESTful API를 제공합니다.
 
-이 자습서는 [!DNL Flow Service] API를 사용하여 CRM 데이터를 수집하기 위해 플랫폼을 [!DNL Microsoft Dynamics](이하 &quot;Dynamics&quot;) 계정에 연결하는 단계를 안내합니다.
+이 자습서는 [!DNL Flow Service] API를 사용하여 Flow Service API를 사용하여 [!DNL Microsoft Dynamics](이하 &quot;Dynamics&quot;) 계정에 플랫폼을 연결하는 단계를 안내합니다.
 
 ## 시작하기
 
