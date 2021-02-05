@@ -1,19 +1,17 @@
 ---
 keywords: 항공 선박 태그;항공 수송 대상
-title: Airship 태그 대상
-seo-title: Airship 태그 대상
+title: Airship 태그 연결 대상
 description: Airship 내에서 타깃팅할 대상 태그로 Adobe 고객 데이터를 Airship으로 원활하게 전달할 수 있습니다.
-seo-description: Airship 내에서 타깃팅할 대상 태그로 Adobe 고객 데이터를 Airship으로 원활하게 전달할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 95f57f9d1b3eeb0b16ba209b9774bd94f5758009
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '1213'
+source-wordcount: '1197'
 ht-degree: 1%
 
 ---
 
 
-# (베타) [!DNL Airship Tags] 대상 {#airship-tags-destination}
+# (베타) [!DNL Airship Tags] 연결 {#airship-tags-destination}
 
 >[!IMPORTANT]
 >
