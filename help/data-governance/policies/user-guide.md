@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;홈;인기 항목;데이터 거버넌스;데이터 사용 정책 사용 안내서
 solution: Experience Platform
-title: 데이터 사용 정책 사용 안내서
+title: UI에서 데이터 사용 정책 관리
 topic: policies
 description: Adobe Experience Platform 데이터 거버넌스는 데이터 사용 정책을 만들고 관리할 수 있는 사용자 인터페이스를 제공합니다. 이 문서에서는 Experience Platform 사용자 인터페이스의 정책 작업 공간에서 수행할 수 있는 작업에 대한 개요를 제공합니다.
 translation-type: tm+mt
-source-git-commit: 00010d38a5d05800aeac9af8505093fee3593b45
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '773'
+source-wordcount: '772'
 ht-degree: 0%
 
 ---
 
 
-# 데이터 사용 정책 사용 안내서
+# UI에서 데이터 사용 정책 관리
 
 Adobe Experience Platform [!DNL Data Governance]은 데이터 사용 정책을 만들고 관리할 수 있는 사용자 인터페이스를 제공합니다. 이 문서에서는 [!DNL Experience Platform] 사용자 인터페이스의 **정책** 작업 영역에서 수행할 수 있는 작업에 대한 개요를 제공합니다.
 
@@ -28,7 +28,7 @@ Adobe Experience Platform [!DNL Data Governance]은 데이터 사용 정책을 �
 - [[!DNL Data Governance]](../home.md)
 - [데이터 사용 정책](./overview.md)
 
-## 데이터 사용 정책 보기 {#view-policies}
+## 기존 정책 보기 {#view-policies}
 
 [!DNL Experience Platform] UI에서 **[!UICONTROL 정책]**&#x200B;을 선택하여 **[!UICONTROL 정책]** 작업 영역을 엽니다. **[!UICONTROL 찾아보기]** 탭에서 관련 레이블, 마케팅 작업 및 상태를 포함한 사용 가능한 정책 목록을 볼 수 있습니다.
 
@@ -38,7 +38,7 @@ Adobe Experience Platform [!DNL Data Governance]은 데이터 사용 정책을 �
 
 ![](../images/policies/policy-details.png)
 
-## 사용자 지정 데이터 사용 정책 {#create-policy} 만들기
+## 사용자 지정 정책 {#create-policy} 만들기
 
 새 사용자 지정 데이터 사용 정책을 만들려면 **[!UICONTROL 정책]** 작업 영역의 **[!UICONTROL 찾아보기]** 탭의 오른쪽 맨 위에 있는 **[!UICONTROL 정책 만들기]**&#x200B;를 선택합니다.
 
@@ -68,7 +68,7 @@ Adobe Experience Platform [!DNL Data Governance]은 데이터 사용 정책을 �
 
 ![](../images/policies/created-policy.png)
 
-## 데이터 사용 정책 {#enable} 활성화 또는 비활성화
+## 정책 {#enable} 활성화 또는 비활성화
 
 모든 데이터 사용 정책(Adobe에서 제공하는 핵심 정책 포함)은 기본적으로 비활성화됩니다. 개별 정책을 적용하려면 API 또는 UI를 통해 해당 정책을 수동으로 활성화해야 합니다.
 
