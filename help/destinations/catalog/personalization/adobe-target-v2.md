@@ -1,21 +1,17 @@
 ---
 keywords: 대상 확장;대상 v2;대상 v2 확장
-title: Adobe Target v2 확장
-seo-title: Adobe Target v2 확장
+title: Adobe Target v2 확장 대상
 description: Adobe Target v2 익스텐션은 Adobe Experience Platform에서 개인화 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
-seo-description: Adobe Target v2 익스텐션은 Adobe Experience Platform에서 개인화 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '562'
-ht-degree: 12%
+source-wordcount: '531'
+ht-degree: 11%
 
 ---
 
 
 # Adobe Target v2 확장 {#adobe-target-v2-extension}
-
-## 개요 {#overview}
 
 Adobe Target은 웹 및 모바일 사이트, 앱, 소셜 미디어 및 기타 디지털 채널에서 매출을 극대화하기 위해 고객의 경험을 맞춤화하고 개인화하는 데 필요한 모든 것을 제공하는 Adobe Experience Cloud 솔루션입니다.
 
