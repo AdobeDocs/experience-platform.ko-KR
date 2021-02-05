@@ -1,19 +1,19 @@
 ---
 keywords: 인사이트;기여도 분석 ai;기여도 분석 ai 인사이트;AAI 쿼리 서비스;기여도 분석 쿼리;기여도 분석 점수
 solution: Intelligent Services, Experience Platform
-title: AAI 쿼리 서비스 빠른 시작 안내서
+title: 쿼리 서비스를 사용하여 속성 점수 분석
 topic: Attribution AI queries
-description: 이 문서에서는 쿼리 서비스를 사용하여 속성 점수를 분석하는 데 사용할 수 있는 지침과 템플릿을 제공합니다.
+description: Adobe Experience Platform 쿼리 서비스를 사용하여 Attribution AI 점수를 분석하는 방법을 알아봅니다.
 translation-type: tm+mt
-source-git-commit: 32d49c9244414afeb2729ef44eb364fb2c609380
+source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
 workflow-type: tm+mt
-source-wordcount: '494'
+source-wordcount: '487'
 ht-degree: 0%
 
 ---
 
 
-# 속성 점수 분석을 위한 Adobe Experience Platform 쿼리 서비스 빠른 시작 안내서
+# 쿼리 서비스를 사용하여 속성 점수 분석
 
 데이터의 각 행은 전환을 나타내며 이 변환은 관련 접점에 대한 정보가 `touchpointsDetail` 열 아래에 있는 구조의 배열로 저장됩니다.
 
@@ -21,7 +21,7 @@ ht-degree: 0%
 | ---------------------- | ------ |
 | 터치포인트 이름 | `touchpointsDetail. touchpointName` |
 | 터치포인트 채널 | `touchpointsDetail.touchPoint.mediaChannel` |
-| 터치포인트 AAI 알고리즘 점수 | <li>`touchpointsDetail.scores.algorithmicSourced`</li> <li> `touchpointsDetail.scores.algorithmicInfluenced` </li> |
+| 터치포인트 Attribution AI 알고리즘 점수 | <li>`touchpointsDetail.scores.algorithmicSourced`</li> <li> `touchpointsDetail.scores.algorithmicInfluenced` </li> |
 
 ## 데이터 경로 찾기
 
