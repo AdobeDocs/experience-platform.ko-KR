@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;홈;인기 항목;스트리밍 통합;기록 데이터;스트림 레코드 데이터;;home;popular topics;streaming ingestion;ingestion;record data;stream record data;
 solution: Experience Platform
-title: 스트리밍 레코드 데이터
+title: 스트리밍 통합 API를 사용한 스트림 레코드 데이터
 topic: tutorial
 type: Tutorial
 description: 이 자습서는 Adobe Experience Platform 데이터 통합 서비스 API의 일부인 스트리밍 통합 API를 사용하는 데 도움이 됩니다.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '1159'
+source-wordcount: '1163'
 ht-degree: 2%
 
 ---
 
 
-# Adobe Experience Platform으로 레코드 데이터 스트리밍
+# 스트리밍 통합 API를 사용하여 데이터 스트리밍
 
 이 자습서는 Adobe Experience Platform [!DNL Data Ingestion Service] API의 일부인 스트리밍 통합 API를 사용하는 데 도움이 됩니다.
 
