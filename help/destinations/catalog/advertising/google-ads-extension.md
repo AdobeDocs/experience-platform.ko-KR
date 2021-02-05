@@ -1,21 +1,17 @@
 ---
 keywords: Google 광고;Google 광고;Google 광고 확장;Google 광고 확장
-title: Google 광고 확장
-seo-title: Google 광고 확장
+title: Google 광고 확장 대상
 description: Google 광고 확장 프로그램은 Adobe Experience Platform의 광고 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
-seo-description: Google 광고 확장 프로그램은 Adobe Experience Platform의 광고 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '567'
+source-wordcount: '538'
 ht-degree: 3%
 
 ---
 
 
 # [!DNL Google Ads] 확장
-
-## 개요 {#overview}
 
 이 확장은 [!DNL Google Ads]을 클릭하는 사용자의 전환을 추적합니다. 또한 gtag.js 확장자를 설치하고 라이브러리에 추가해야 합니다. 이 확장자는 [!DNL Google Ads]에 따라 다릅니다.
 
