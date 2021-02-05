@@ -1,12 +1,12 @@
 ---
 keywords: 세분화;세분화 rtcdp;실시간 고객 데이터 플랫폼 세분화
-title: 세그멘테이션 서비스 개요
+title: 실시간 고객 데이터 플랫폼의 세분화 서비스
 seo-title: 실시간 고객 데이터 플랫폼의 세분화 서비스
 description: 실시간 CDP는 Adobe Experience Platform을 기반으로 구축되어 많은 Experience Platform 서비스 및 기능을 활용합니다. 세그멘테이션 서비스를 사용하면 유사한 트레이트를 가진 작은 그룹으로 고객을 구분하여 맞춤 마케팅을 제공할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 9f20f8bfeefb5bc427a72a11ac1f01816cdbc4b2
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
-source-wordcount: '540'
+source-wordcount: '544'
 ht-degree: 0%
 
 ---
