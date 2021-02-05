@@ -5,7 +5,7 @@ title: 데이터 사용 레이블 개요
 topic: labels
 description: Adobe Experience Platform 데이터 거버넌스를 사용하면 데이터 세트 및 필드에 데이터 사용 레이블을 적용하여 관련 데이터 사용 정책에 따라 각 데이터를 분류할 수 있습니다. 이 문서에서는 Experience Platform의 데이터 사용 레이블에 대한 개요를 제공합니다.
 translation-type: tm+mt
-source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '619'
 ht-degree: 0%
