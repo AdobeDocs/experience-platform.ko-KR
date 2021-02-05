@@ -1,21 +1,17 @@
 ---
 keywords: 전자 메일;전자 메일;전자 메일 대상;전자 메일 대상;salesforce;salesforce 대상
-title: Salesforce Marketing Cloud
-seo-title: Salesforce Marketing Cloud
-description: Salesforce Marketing Cloud은 방문자와 고객이 경험을 개인화할 수 있도록 여정을 구축하고 사용자 정의할 수 있도록 하는 이전 ExactTarget으로 알려진 디지털 마케팅 패키지입니다.
+title: Salesforce Marketing Cloud 연결 대상
 seo-description: Salesforce Marketing Cloud은 방문자와 고객이 경험을 개인화할 수 있도록 여정을 구축하고 사용자 정의할 수 있도록 하는 이전 ExactTarget으로 알려진 디지털 마케팅 패키지입니다.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '542'
+source-wordcount: '513'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Salesforce Marketing Cloud]
-
-## 개요
+# [!DNL Salesforce Marketing Cloud] 연결
 
 [[!DNL Salesforce Marketing Cloud]](https://www.salesforce.com/products/marketing-cloud/email-marketing/) 는 방문자 및 고객이 자신의 경험을 개인화할 수 있도록 여정을 구축하고 사용자 정의할 수 있도록 해주는 이전 ExactTarget으로 알려진 디지털 마케팅 패키지입니다.
 
