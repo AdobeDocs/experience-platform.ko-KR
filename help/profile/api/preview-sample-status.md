@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;프로필;실시간 고객 프로필;문제 해결;API;미리 보기;sample
-title: 프로필 미리 보기 - 실시간 고객 프로필 API
+title: 프로필 샘플 상태 API 끝점
 description: 실시간 고객 프로필 API 끝점을 사용하면 Adobe Experience Platform 내의 데이터 세트 및 ID 네임스페이스별 목록 프로필 배포뿐만 아니라 프로필 데이터의 최신 성공 샘플도 미리 볼 수 있습니다.
 topic: guide
 translation-type: tm+mt
-source-git-commit: fe93a3672f65168744b3a242be7f42012f323544
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '1554'
+source-wordcount: '1553'
 ht-degree: 1%
 
 ---
