@@ -5,10 +5,10 @@ audience: user
 user-guide-title: 실시간 고객 데이터 플랫폼 안내서
 user-guide-description: 여러 엔터프라이즈 소스에서 알려진 데이터와 익명의 데이터를 결합하여 고객 프로필을 생성하고, 이러한 프로필에서 고객 세그먼트를 생성하며, 이러한 세그먼트를 제3자 대상으로 활성화할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 4a282f8890ace3be7808ffbf018377d792e30cb7
+source-git-commit: 1305d789c68ac8f84d5a5f82d8f17035e56ef712
 workflow-type: tm+mt
-source-wordcount: '109'
-ht-degree: 49%
+source-wordcount: '103'
+ht-degree: 52%
 
 ---
 
@@ -40,6 +40,5 @@ ht-degree: 49%
    * [고객 AI](segmentation/customer-ai.md)
 * 소스 {#sources}
    * [소스 개요](sources/sources-overview.md)
-   * [Adobe 시작을 사용하여 웹 사이트 태그 구현](sources/launch.md)
 * [Experience Platform 릴리스 노트](https://www.adobe.com/go/platform-release-notes-en)
 * [Experience Platform 용어](https://www.adobe.com/go/platform-glossary-en)
