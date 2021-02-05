@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;filter;Filter;filter data;Filter data
+keywords: Experience Platform;홈;인기 항목;필터;필터;필터 데이터;필터 데이터;;home;popular topics;filter;data;filter data
 solution: Experience Platform
-title: 목록 개체
+title: 카탈로그 개체 목록
 topic: developer guide
-description: 단일 API 호출을 통해 특정 유형의 모든 사용 가능한 개체 목록을 검색할 수 있습니다. 응답 크기를 제한하는 필터를 포함하는 것이 좋습니다.
+description: 단일 API 호출을 통해 특정 유형의 사용 가능한 모든 개체 목록을 검색할 수 있으며, 응답 크기를 제한하는 필터를 포함하는 것이 좋습니다.
 translation-type: tm+mt
-source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
+source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
 workflow-type: tm+mt
-source-wordcount: '229'
+source-wordcount: '242'
 ht-degree: 1%
 
 ---
 
 
-# 목록 개체
+# 카탈로그 개체 목록
 
-단일 API 호출을 통해 특정 유형의 모든 사용 가능한 개체 목록을 검색할 수 있습니다. 응답 크기를 제한하는 필터를 포함하는 것이 좋습니다.
+단일 API 호출을 통해 특정 유형의 사용 가능한 모든 개체 목록을 검색할 수 있으며, 응답 크기를 제한하는 필터를 포함하는 것이 좋습니다.
 
 **API 형식**
 
@@ -27,11 +27,11 @@ GET /{OBJECT_TYPE}?{FILTER}={VALUE}&{FILTER_2}={VALUE}
 | 매개 변수 | 설명 |
 | --- | --- |
 | `{OBJECT_TYPE}` | 나열할 [!DNL Catalog] 개체의 유형입니다. 유효한 개체는 다음과 같습니다. <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
-| `{FILTER}` | 응답으로 반환된 결과를 필터링하는 데 사용되는 쿼리 매개 변수입니다. 여러 매개 변수는 앰퍼샌드(앰퍼샌드)로`&`구분됩니다. 자세한 내용은 카탈로그 데이터 [필터링에](filter-data.md) 대한 가이드를 참조하십시오. |
+| `{FILTER}` | 응답에서 반환된 결과를 필터링하는 데 사용되는 쿼리 매개 변수입니다. 여러 매개 변수는 앰퍼샌드(`&`)로 구분됩니다. 자세한 내용은 [카탈로그 데이터 필터링](filter-data.md)의 안내서를 참조하십시오. |
 
 **요청**
 
-아래의 샘플 요청은 데이터 집합 목록을 검색하며, 필터 `limit` 를 사용하면 5개의 결과가 줄어들고, 각 데이터 세트에 대해 표시되는 속성을 제한하는 `properties` 필터가 있습니다.
+아래 샘플 요청은 데이터 집합 목록을 검색합니다. 여기에는 `limit` 필터가 있으면 결과가 5개로 줄어들고 각 데이터 세트에 대해 표시된 속성을 제한하는 `properties` 필터가 있습니다.
 
 ```shell
 curl -X GET \
@@ -44,11 +44,11 @@ curl -X GET \
 
 **응답**
 
-성공적인 응답은 요청에 제공된 쿼리 매개 변수를 기준으로 필터링된 키-값 쌍 형식의 [!DNL Catalog] 개체 목록을 반환합니다. 각 키-값 쌍에 대해 키는 해당 개체에 대한 고유 식별자를 나타내며, 이 식별자는 다른 호출에서 해당 특정 개체를 [!DNL Catalog] 보고 자세한 내용을 [](look-up-object.md) 위해 사용할 수 있습니다.
+성공적인 응답은 요청에 제공된 쿼리 매개 변수를 기준으로 필터링된 키-값 쌍 형식의 [!DNL Catalog] 개체 목록을 반환합니다. 각 키-값 쌍에 대해 키는 해당 [!DNL Catalog] 개체에 대한 고유 식별자를 나타냅니다. 이러한 식별자는 자세한 내용을 보려면 [해당 특정 개체](look-up-object.md)을(를) 다른 호출에서 사용할 수 있습니다.
 
 >[!NOTE]
 >
->반환된 개체에 쿼리에 의해 지정된 하나 이상의 요청된 속성이 `properties` 포함되어 있지 않으면 응답에 포함된 요청된 속성만 ***`Sample Dataset 3`*** 반환됩니다(아래 및 ***`Sample Dataset 4`*** 참조).
+>반환된 개체에 `properties` 쿼리에 지정된 요청된 속성 중 하나 이상이 포함되어 있지 않으면 응답에 포함된 요청된 속성만 반환됩니다(예: ***`Sample Dataset 3`*** 및 ***`Sample Dataset 4`*** 아래 참조).
 
 ```json
 {
