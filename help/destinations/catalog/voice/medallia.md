@@ -1,21 +1,17 @@
 ---
 keywords: 메달리아;메달리아
-title: 메달리아 확장
-seo-title: 메달리아 확장
+title: Medallia 확장 대상
 description: Medallia 익스텐션은 Adobe Experience Platform의 고객 대상의 목소리입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
-seo-description: Medallia 익스텐션은 Adobe Experience Platform의 고객 대상의 목소리입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
 workflow-type: tm+mt
-source-wordcount: '572'
+source-wordcount: '542'
 ht-degree: 3%
 
 ---
 
 
 # [!DNL Medallia] 확장 {#medallia-extension}
-
-## 개요 {#overview}
 
 웹 속성에 [!DNL Medallia]을(를) 빠르고 매끄럽게 배포합니다. 또한 확장 기능을 통해 설문 조사 이벤트를 탐지하고 데이터 요소를 통해 실시간으로 고객 피드백을 수집하며 규칙에 따라 고객의 경험을 개인화하고 Adobe Analytics과 데이터를 공유할 수 있습니다.
 
