@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;프로파일;실시간 고객 프로파일;문제 해결;API;통합 프로파일;통합 프로파일;통합 프로파일;프로파일;프로파일 사용;프로파일 사용;프로파일 사용;프로파일 사용
-title: 실시간 고객 프로필 API 개발자 가이드
+title: 실시간 고객 프로필 API 안내서
 topic: guide
-description: 실시간 고객 프로필 API에는 프로필 보기, 병합 정책 만들기 및 업데이트, 프로필 데이터 내보내기 또는 샘플링, 더 이상 필요하지 않거나 오류로 추가된 프로필 데이터 삭제를 포함하여 프로필 데이터를 확인하고 작업하기 위한 여러 끝점이 포함되어 있습니다.
+description: 개발자는 실시간 고객 프로필 API를 사용하여 프로필 보기, 병합 정책 만들기 및 업데이트, 프로필 데이터 내보내기 또는 샘플 데이터, 더 이상 필요하지 않거나 오류로 추가된 프로필 데이터를 포함하여 프로필 데이터를 탐색 및 작업할 수 있습니다. API를 사용하여 주요 작업을 수행하는 방법에 대해 알아보려면 이 안내서를 따르십시오.
 translation-type: tm+mt
-source-git-commit: 823d89ab37156e775a2879e3a2c91bfd911b83bb
+source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
 workflow-type: tm+mt
-source-wordcount: '861'
+source-wordcount: '870'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Real-time Customer Profile] API 개발자 가이드
+# [!DNL Real-time Customer Profile] API 안내서
 
 [!DNL Real-time Customer Profile] adobe experience platform에서 각 개별 고객을 전체적으로 확인할 수 있습니다. [!DNL Profile] 온라인, 오프라인, CRM 및 제3자 데이터와 같은 다양한 채널에서 얻은 서로 다른 고객 데이터를 하나의 통합 뷰로 통합하면 모든 고객 인터랙션에 대해 실행 가능하고 타임스탬프가 지정된 계정을 제공할 수 있습니다.
 
