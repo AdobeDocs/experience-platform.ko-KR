@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;홈;인기 항목;쿼리 서비스;쿼리 서비스;쿼리 쓰기;쿼리 쓰기;;home;popular topics service;query;
 solution: Experience Platform
-title: 쿼리 쓰기
+title: 쿼리 서비스에서 쿼리 실행에 대한 일반 지침
 topic: queries
 type: Tutorial
 description: 이 문서에서는 Adobe Experience Platform 쿼리 서비스에서 쿼리를 작성할 때 알아야 할 중요한 세부 사항을 자세히 설명합니다.
 translation-type: tm+mt
-source-git-commit: e2c648829bb3268ab319da934f5cc6cc811290b3
+source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
 workflow-type: tm+mt
-source-wordcount: '970'
+source-wordcount: '976'
 ht-degree: 3%
 
 ---
