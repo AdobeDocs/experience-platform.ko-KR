@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;home;popular topics;catalog;multiple object lookup;api
+keywords: Experience Platform;홈;인기 항목;카탈로그;다중 개체 조회;api
 solution: Experience Platform
-title: 여러 개체 검색
+title: 여러 카탈로그 개체 찾기
 topic: developer guide
-description: 개체당 한 번의 요청을 하는 대신 몇 개의 특정 개체를 보려는 경우 카탈로그는 동일한 유형의 여러 개체를 요청하는 간단한 단축키를 제공합니다. 하나의 GET 요청을 사용하여 쉼표로 구분된 ID 목록을 포함하여 여러 특정 개체를 반환할 수 있습니다.
+description: 개체당 하나의 요청을 하는 대신 몇 개의 특정 개체를 보려는 경우 카탈로그는 동일한 유형의 여러 개체를 요청하는 간단한 단축키를 제공합니다. 단일 GET 요청을 사용하여 쉼표로 구분된 ID 목록을 포함하여 여러 특정 개체를 반환할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: b791e9e060d7686e8fc264c445bbfd1e01ff5987
+source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
 workflow-type: tm+mt
-source-wordcount: '225'
+source-wordcount: '237'
 ht-degree: 1%
 
 ---
 
 
-# 여러 개체 검색
+# 여러 카탈로그 개체 찾기
 
-개체당 한 번의 요청을 하는 대신 여러 특정 개체를 보려면 동일한 유형의 여러 개체를 요청하는 간단한 단축키를 [!DNL Catalog] 제공합니다. 하나의 GET 요청을 사용하여 쉼표로 구분된 ID 목록을 포함하여 여러 특정 개체를 반환할 수 있습니다.
+개체당 하나의 요청을 하는 대신 몇 개의 특정 개체를 보려는 경우 동일한 유형의 여러 개체를 요청하는 간단한 단축키를 제공합니다. [!DNL Catalog] 단일 GET 요청을 사용하여 쉼표로 구분된 ID 목록을 포함하여 여러 특정 개체를 반환할 수 있습니다.
 
 >[!NOTE]
 >
->특정 [!DNL Catalog] 개체를 요청할 경우에도 필요한 속성만 반환하도록 매개 변수를 `properties` 쿼리하는 것이 좋습니다.
+>특정 [!DNL Catalog] 개체를 요청할 경우에도 필요한 속성만 반환하도록 `properties` 쿼리 매개 변수를 사용하는 것이 좋습니다.
 
 **API 형식**
 
@@ -35,7 +35,7 @@ GET /{OBJECT_TYPE}/{ID_1},{ID_2},{ID_3},{ID_4}?properties={PROPERTY_1},{PROPERTY
 
 **요청**
 
-다음 요청에는 데이터 세트 ID의 쉼표로 구분된 목록과 각 데이터 세트에 대해 반환되는 속성의 쉼표로 구분된 목록이 포함됩니다.
+다음 요청에는 데이터 세트 ID의 쉼표로 구분된 목록과 각 데이터 세트에 대해 반환할 속성의 쉼표로 구분된 목록이 포함되어 있습니다.
 
 ```shell
 curl -X GET \
@@ -48,11 +48,11 @@ curl -X GET \
 
 **응답**
 
-성공적인 응답은 지정된 데이터 집합 목록을 반환하며 각 데이터 집합에 대해 요청된 속성(`name`, `description`및 `files`)만 포함합니다.
+성공적인 응답은 각 데이터 세트에 대해 요청된 속성(`name`, `description` 및 `files`)만 포함하는 지정된 데이터 집합 목록을 반환합니다.
 
 >[!NOTE]
 >
->반환된 개체에 쿼리에 의해 지정된 하나 이상의 요청된 속성이 `properties` 포함되어 있지 않으면 ***`Sample Dataset 3`*** 및 ***`Sample Dataset 4`*** 아래에 표시된 것처럼 응답에 포함된 요청된 속성만 반환됩니다.
+>반환된 객체에 `properties` 쿼리에 지정된 요청된 속성이 하나 이상 포함되어 있지 않으면 응답은 ***`Sample Dataset 3`*** 및 ***`Sample Dataset 4`***&#x200B;에 표시된 대로 포함된 요청된 속성만 반환합니다.
 
 ```json
 {
