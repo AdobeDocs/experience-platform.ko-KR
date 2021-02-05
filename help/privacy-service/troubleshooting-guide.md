@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;홈;인기 항목
 solution: Experience Platform
-title: Privacy Service 문제 해결 가이드
+title: Privacy Service 문제 해결 안내서
 topic: troubleshooting
 description: 이 문서에서는 Privacy Service과 관련하여 자주 묻는 질문에 대한 답변과 API에서 자주 발생하는 오류에 대한 정보를 제공합니다.
 translation-type: tm+mt
-source-git-commit: 5dad1fcc82707f6ee1bf75af6c10d34ff78ac311
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '884'
 ht-degree: 0%
