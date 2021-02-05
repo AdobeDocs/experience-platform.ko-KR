@@ -1,21 +1,17 @@
 ---
 keywords: Amazon S3;S3 대상;s3;amazon s3
-title: Amazon S3 대상
-seo-title: Amazon S3 대상
+title: Amazon S3 연결 대상
 description: Amazon 웹 서비스(AWS) S3 스토리지에 대한 라이브 아웃바운드 연결을 생성하여 Adobe Experience Platform에서 탭으로 구분된 데이터 또는 CSV 데이터 파일을 S3 버킷으로 주기적으로 내보냅니다.
-seo-description: Amazon 웹 서비스(AWS) S3 스토리지에 대한 라이브 아웃바운드 연결을 생성하여 Adobe Experience Platform에서 탭으로 구분된 데이터 또는 CSV 데이터 파일을 S3 버킷으로 주기적으로 내보냅니다.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '256'
+source-wordcount: '223'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Amazon S3] 대상
-
-## 개요
+# [!DNL Amazon S3] 연결
 
 [!DNL Amazon Web Services](AWS) S3 스토리지에 대한 실시간 아웃바운드 연결을 만들어 Adobe Experience Platform에서 탭으로 구분된 데이터 또는 CSV 데이터 파일을 고유한 S3 버킷으로 주기적으로 내보냅니다.
 
