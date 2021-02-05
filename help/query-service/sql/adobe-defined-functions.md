@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;홈;인기 항목;쿼리 서비스;쿼리 서비스;adobe defined functions;sql
 solution: Experience Platform
-title: Adobe 정의 함수
+title: 쿼리 서비스의 Adobe 정의 SQL 함수
 topic: functions
-description: 이 문서에서는 쿼리 서비스에서 사용할 수 있는 Adobe 정의 함수에 대한 정보를 제공합니다.
+description: 이 문서에서는 Adobe Experience Platform 쿼리 서비스에서 사용할 수 있는 Adobe 정의 기능에 대한 정보를 제공합니다.
 translation-type: tm+mt
-source-git-commit: e15229601d35d1155fc9a8ab9296f8c41811ebf9
+source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
 workflow-type: tm+mt
-source-wordcount: '2902'
+source-wordcount: '2913'
 ht-degree: 2%
 
 ---
 
 
-# Adobe 정의 함수
+# 쿼리 서비스의 Adobe 정의 SQL 함수
 
 여기에서 ADF라고 하는 Adobe 정의 함수는 [!DNL Experience Event] 데이터에서 일반적인 비즈니스 관련 작업을 수행하는 데 도움이 되는 Adobe Experience Platform 쿼리 서비스에 미리 작성된 함수입니다. 여기에는 Adobe Analytics에 있는 것과 같은 [세션화](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html) 및 [속성](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html)에 대한 함수가 포함됩니다.
 
