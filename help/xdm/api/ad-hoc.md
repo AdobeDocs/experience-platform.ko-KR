@@ -5,7 +5,7 @@ title: 임시 스키마
 description: 특정 상황에서는 단일 데이터 집합에서만 사용하도록 이름이 지정된 필드가 있는 XDM 스키마를 만들어야 할 수 있습니다. 이를 애드혹 스키마라고 합니다.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '146'
 ht-degree: 0%
