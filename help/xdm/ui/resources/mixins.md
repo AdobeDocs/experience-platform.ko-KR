@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;홈;인기 항목;api;XDM;XDM 시스템;경험 데이터 모델;ui;작업 영역;mixin;mixin
 solution: Experience Platform
-title: UI에서 믹싱 만들기 및 편집
+title: UI에서 혼합 만들기 및 편집
 description: Experience Platform 사용자 인터페이스에서 믹스를 만들고 편집하는 방법을 알아봅니다.
 topic: user guide
 translation-type: tm+mt
-source-git-commit: cf74c7922271035474c7f10534692983add48616
+source-git-commit: aa2088d30716f56ac2909214badbb39c0ae97855
 workflow-type: tm+mt
 source-wordcount: '704'
 ht-degree: 0%
