@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;home;popular topics;catalog;object lookup;api
+keywords: Experience Platform;홈;인기 항목;카탈로그;개체 조회;api
 solution: Experience Platform
-title: 개체 검색
+title: 카탈로그 개체 찾기
 topic: developer guide
 description: '특정 카탈로그 개체의 고유 식별자를 알고 있는 경우 GET 요청을 수행하여 해당 개체의 세부 정보를 볼 수 있습니다. '
 translation-type: tm+mt
-source-git-commit: dd1f508b93e8eac14e3c41fac9d8f49769d08f46
+source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
 workflow-type: tm+mt
-source-wordcount: '154'
+source-wordcount: '165'
 ht-degree: 2%
 
 ---
 
 
-# 개체 검색
+# 카탈로그 개체 찾기
 
 특정 [!DNL Catalog] 개체의 고유 식별자를 알고 있는 경우 GET 요청을 수행하여 해당 개체의 세부 정보를 볼 수 있습니다.
 
 >[!NOTE]
 >
->특정 개체를 볼 때는 여전히 속성별로 [필터링하고](filter-data.md) 관심 있는 속성만 반환하는 것이 좋습니다.
+>특정 개체를 볼 때는 여전히 [속성](filter-data.md)으로 필터링하고 관심 있는 속성만 반환하는 것이 좋습니다.
 
 **API 형식**
 
@@ -35,7 +35,7 @@ GET /{OBJECT_TYPE}/{OBJECT_ID}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 
 **요청**
 
-다음 요청은 ID로 데이터 세트를 검색하고, 데이터 세트 `name`, `description``state`, `tags`속성 `files` 을반환합니다.
+다음 요청은 해당 ID로 데이터 세트를 검색하여 `name`, `description`, `state`, `tags` 및 `files` 속성을 반환합니다.
 
 ```shell
 curl -X GET \
@@ -48,7 +48,7 @@ curl -X GET \
 
 **응답**
 
-성공적인 응답으로 지정한 데이터 세트에 본문 `properties` 의 요청만 있는 데이터를 반환합니다.
+성공적으로 응답하면 본문에 요청된 `properties`만 있는 지정된 데이터 세트를 반환합니다.
 
 ```json
 {
@@ -68,4 +68,4 @@ curl -X GET \
 
 >[!NOTE]
 >
->값이 접두사로 붙어 있는 속성은 관련 개체를 `@` 나타냅니다. 이러한 개체의 세부 사항을 보는 방법에 대한 자세한 내용은 관련 개체 [](appendix.md#view-interrelated-objects) 보기 부록 섹션을 참조하십시오.
+>값 앞에 `@`이(가) 있는 속성은 관련 개체를 나타냅니다. 이러한 개체의 세부 사항을 보는 방법에 대한 자세한 내용은 [상호 관련 개체 보기](appendix.md#view-interrelated-objects)의 부록 섹션을 참조하십시오.
