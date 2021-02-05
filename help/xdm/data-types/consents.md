@@ -4,7 +4,7 @@ title: 동의 및 기본 설정 데이터 유형
 description: 개인 정보/마케팅 기본 설정(동의) 데이터 유형은 데이터 작업에서 동의 관리 플랫폼(CMP)과 기타 소스에서 생성된 고객 권한 및 기본 설정의 수집을 지원하기 위한 것입니다.
 topic: guide
 translation-type: tm+mt
-source-git-commit: caebdcd48e03bd8b91da624532569b55d8696fb4
+source-git-commit: 10ccccf72ff7a2fd726066332b9771dff1929af6
 workflow-type: tm+mt
 source-wordcount: '2040'
 ht-degree: 1%
