@@ -1,21 +1,17 @@
 ---
 keywords: adform extension;adform
-title: Adform 확장
-seo-title: Adform 확장
+title: 확장 대상 추가
 description: Adform 확장명은 Adobe Experience Platform의 분석 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
-seo-description: Adform 확장명은 Adobe Experience Platform의 분석 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '510'
+source-wordcount: '483'
 ht-degree: 3%
 
 ---
 
 
 # Adform 확장 {#adform-extension}
-
-## 개요 {#overview}
 
 Adform 웹 사이트 추적 익스텐션을 사용하면 광고주는 [!DNL Experience Platform Launch] 플랫폼을 사용하여 사이트에서 Adform 추적 점을 쉽게 구현할 수 있습니다.
 
