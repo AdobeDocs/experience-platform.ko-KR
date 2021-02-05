@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;문제 해결;데이터 과학 작업 공간;인기 있는 주제
 solution: Experience Platform
-title: 데이터 과학 작업 공간 문제 해결 가이드
+title: 데이터 과학 작업 공간 문제 해결 안내서
 topic: Troubleshooting
 description: 이 문서에서는 Adobe Experience Platform Data Science Workspace에 대한 질문과 답변을 제공합니다.
 translation-type: tm+mt
-source-git-commit: 045ad186efac59317635439a05b9d24e703c9859
+source-git-commit: 10ccccf72ff7a2fd726066332b9771dff1929af6
 workflow-type: tm+mt
 source-wordcount: '925'
 ht-degree: 0%
