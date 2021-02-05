@@ -1,27 +1,25 @@
 ---
 keywords: Experience Platform;홈;인기 항목;타블로;쿼리 서비스;쿼리 서비스;쿼리 서비스에 연결;
 solution: Experience Platform
-title: 타블로와 연결
+title: 쿼리 서비스에 타블로 연결
 topic: connect
 description: 이 문서에서는 타블로와 Adobe Experience Platform 쿼리 서비스를 연결하는 단계를 안내합니다.
 translation-type: tm+mt
-source-git-commit: eac93f3465fa6ce4af7a6aa783cf5f8fb4ac9b9b
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '210'
+source-wordcount: '213'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Tableau]
+# 쿼리 서비스에 [!DNL Tableau] 연결
 
 이 문서에서는 타블로와 Adobe Experience Platform [!DNL Query Service]을(를) 연결하는 단계를 다룹니다.
 
 >[!NOTE]
 >
 > 이 안내서에서는 사용자가 이미 [!DNL Tableau]에 액세스할 수 있으며 인터페이스를 탐색하는 방법에 익숙하다고 가정합니다. [!DNL Tableau]에 대한 자세한 내용은 [공식 [!DNL Tableau] 설명서](https://help.tableau.com/current/pro/desktop/en-us/default.htm)에서 확인할 수 있습니다.
-
-## 플랫폼과 [!DNL Tableau] 연결
 
 [!DNL Tableau]을 [!DNL Query Service]에 연결하려면 [!DNL Tableau]을 열고 **[!DNL To a Server]** 섹션에서 **[!DNL More]** 다음에 **[!DNL PostgreSQL]**&#x200B;를 선택합니다.
 
