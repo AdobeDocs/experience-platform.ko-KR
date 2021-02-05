@@ -5,7 +5,7 @@ title: UI에서 XDM 필드 정의
 description: Experience Platform 사용자 인터페이스에서 XDM 필드를 정의하는 방법을 알아봅니다.
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 70b3ad788dd78c6100782869e3065cc17a54ece1
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
 source-wordcount: '1311'
 ht-degree: 4%
