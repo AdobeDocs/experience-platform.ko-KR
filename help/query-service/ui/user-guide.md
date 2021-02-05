@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;홈;인기 항목;쿼리 편집기;쿼리 서비스;쿼리 서비스;쿼리 서비스;;home;popular topics;query editor;Query service;query service;
 solution: Experience Platform
-title: 쿼리 편집기 사용 안내서
+title: 쿼리 편집기 UI 안내서
 topic: query editor
 description: 쿼리 편집기는 Experience Platform 사용자 인터페이스 내에서 고객 경험 데이터에 대한 쿼리를 작성하고 유효성을 확인하고 실행할 수 있는 Adobe Experience Platform 쿼리 서비스에서 제공하는 대화형 도구입니다. 쿼리 편집기는 분석 및 데이터 탐색을 위한 쿼리 개발을 지원하며, Experience Platform에 데이터 세트를 채우는 비대화형 쿼리뿐만 아니라 개발 목적으로 대화형 쿼리를 실행할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: f35443046a3d2bc5101d0fa2a58d07f4b6a31151
+source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
 workflow-type: tm+mt
-source-wordcount: '1081'
+source-wordcount: '1082'
 ht-degree: 1%
 
 ---
 
 
-# [!DNL Query Editor] 사용 안내서
+# [!DNL Query Editor] UI 가이드
 
 [!DNL Query Editor] 는 Adobe Experience Platform에서 제공하는 대화형 도구로서,  [!DNL Query Service]  [!DNL Experience Platform] 사용자 인터페이스 내에서 고객 경험 데이터에 대한 쿼리를 작성, 확인 및 실행할 수 있도록 해줍니다. [!DNL Query Editor] 은 분석 및 데이터 탐색을 위한 쿼리 개발을 지원하며, 개발용으로 대화형 쿼리를 실행하고 상호 작용 기능이 없는 쿼리를 실행하여 데이터 세트를 채울 수 있도록  [!DNL Experience Platform]해줍니다.
 
