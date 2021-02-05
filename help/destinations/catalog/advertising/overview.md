@@ -1,19 +1,19 @@
 ---
 keywords: 광고 대상;대상;플랫폼 대상
 title: 광고 대상
-seo-title: 광고 대상
+seo-title: 광고 대상 개요
 description: 'Adobe Experience Platform을 타사 광고 플랫폼(예: DSP, 광고 네트워크, SSP)에 연결하고 익명의 사용자를 이러한 플랫폼에 공유합니다.'
 seo-description: 'Adobe Experience Platform을 타사 광고 플랫폼(예: DSP, 광고 네트워크, SSP)에 연결하고 익명의 사용자를 이러한 플랫폼에 공유합니다.'
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '225'
+source-wordcount: '227'
 ht-degree: 2%
 
 ---
 
 
-# 광고 대상 {#advertising-destinations}
+# 광고 대상 개요 {#advertising-destinations}
 
 Adobe Experience Platform을 타사 광고 플랫폼(예: DSP, 광고 네트워크, SSP)에 연결하고 익명의 사용자를 이러한 플랫폼에 공유합니다.
 
