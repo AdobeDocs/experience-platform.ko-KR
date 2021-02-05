@@ -1,21 +1,17 @@
 ---
 keywords: 이메일;이메일;이메일;이메일 대상;adobe campaign;campaign;email;email;e-mail;email destinations;adobe campaign;campaign
-title: Adobe Campaign
-seo-title: Adobe Campaign
+title: Adobe Campaign 연결 대상
 description: Adobe Campaign은 온라인과 오프라인 등 모든 채널에서 캠페인을 개인화하고 전달할 수 있는 솔루션 집합입니다.
-seo-description: Adobe Campaign은 온라인과 오프라인 등 모든 채널에서 캠페인을 개인화하고 전달할 수 있는 솔루션 집합입니다.
 translation-type: tm+mt
-source-git-commit: cf2d76799c03a2ea0414aedd83b35f3ce2ca3cb5
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '675'
-ht-degree: 1%
+source-wordcount: '654'
+ht-degree: 0%
 
 ---
 
 
-# Adobe Campaign
-
-## 개요
+# Adobe Campaign 연결
 
 Adobe Campaign은 온라인과 오프라인 등 모든 채널에서 캠페인을 개인화하고 전달할 수 있는 솔루션 집합입니다. 자세한 내용은 [Adobe Campaign Classic](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/starting-with-adobe-campaign/about-adobe-campaign-classic.html) 정보를 참조하십시오.
 
