@@ -5,9 +5,9 @@ title: 정책 실행 개요
 topic: guide
 description: 데이터 사용 레이블이 Adobe Experience Platform 데이터 세트에 적용되었고 해당 레이블에 대한 마케팅 작업을 위해 데이터 사용 정책이 정의된 경우 데이터 거버넌스 기능을 사용하여 이러한 정책을 적용하고 정책 위반을 구성하는 데이터 작업을 방지할 수 있습니다. 플랫폼의 데이터 거버넌스 기능, API 기반의 적용 및 자동 실행으로 제공되는 두 가지 정책 실행 방법이 있습니다.
 translation-type: tm+mt
-source-git-commit: acc4fa59a4808ed9a32c2aaf664039e0d12dc1d8
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '232'
+source-wordcount: '237'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # 정책 실행 개요
 
-데이터 사용 레이블이 [!DNL Platform] 데이터 세트에 적용되고 해당 레이블에 대한 마케팅 작업을 위해 데이터 사용 정책이 정의된 경우 [!DNL Data Governance] 기능을 사용하여 해당 정책을 적용하고 정책 위반을 구성하는 데이터 작업을 방지할 수 있습니다.
+데이터 세트에 데이터 사용 레이블이 적용되고 해당 레이블에 대한 마케팅 작업을 위해 데이터 사용 정책이 정의되면 Adobe Experience Platform 데이터 거버넌스 기능을 사용하여 이러한 정책을 적용하고 정책 위반을 구성하는 데이터 작업을 방지할 수 있습니다.
 
 [!DNL Platform]의 [!DNL Data Governance] 기능에서 제공하는 2가지 정책 적용 방법이 있습니다.API 기반의 적용 및 자동 실행
 
