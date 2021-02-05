@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;홈;인기 항목;HDFS;Apache HDFS;apache hdfs
 solution: Experience Platform
-title: HDFS 커넥터
+title: Apache HDFS 소스 커넥터 개요
 topic: overview
-description: 아래 설명서에서는 API 또는 사용자 인터페이스를 사용하여 Apache HDFS를 플랫폼에 연결하는 방법에 대한 정보를 제공합니다.
+description: API 또는 사용자 인터페이스를 사용하여 Apache HDFS를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
-source-wordcount: '380'
+source-wordcount: '381'
 ht-degree: 0%
 
 ---
@@ -42,11 +42,11 @@ Adobe Experience Platform은 AWS, [!DNL Google Cloud Platform] 및 [!DNL Azure] 
 
 ### API 사용
 
-- [Flow Service API를 사용하여 HDFS 커넥터 만들기](../../tutorials/api/create/cloud-storage/hdfs.md)
+- [Flow Service API를 사용하여 HDFS 소스 연결 만들기](../../tutorials/api/create/cloud-storage/hdfs.md)
 - [Flow Service API를 사용하여 클라우드 스토리지 시스템 살펴보기](../../tutorials/api/explore/cloud-storage.md)
 - [Flow Service API를 사용하여 클라우드 스토리지 데이터 수집](../../tutorials/api/collect/cloud-storage.md)
 
 ### UI 사용
 
-- [UI에서 Apache HDFS 소스 커넥터 만들기](../../tutorials/ui/create/cloud-storage/hdfs.md)
-- [UI에서 클라우드 스토리지 커넥터에 대한 데이터 흐름 구성](../../tutorials/ui/dataflow/batch/cloud-storage.md)
+- [UI에서 Apache HDFS 소스 연결 만들기](../../tutorials/ui/create/cloud-storage/hdfs.md)
+- [UI에서 클라우드 스토리지 연결에 대한 데이터 흐름 구성](../../tutorials/ui/dataflow/batch/cloud-storage.md)
