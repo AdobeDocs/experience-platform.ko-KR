@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;popular topics;batch ingestion;batch ingestion;partial ingestion;retrieve error;부분 일괄 처리;부분 일괄 처리 통합;부분 일괄 처리;통합;통합;오류 진단;오류 진단 검색;오류 진단 가져오기;오류 가져오기;오류 오류 가져오기;오류 오류 가져오기;오류 가져오기;오류 오류 가져오기;오류 가져오기;오류 가져오기;오류 가져오기;오류 검색
 solution: Experience Platform
-title: Adobe Experience Platform 부분 일괄 처리 통합 개요
+title: 데이터 통합 오류 진단 검색 중
 topic: overview
 description: 이 문서에서는 일괄 처리 통합 모니터링, 부분 배치 처리 오류 관리 및 부분 일괄 처리 통합 유형에 대한 참조를 제공합니다.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
 source-wordcount: '936'
 ht-degree: 2%
@@ -13,7 +13,7 @@ ht-degree: 2%
 ---
 
 
-# 오류 진단 검색 중
+# 데이터 통합 오류 진단 검색 중
 
 Adobe Experience Platform은 데이터를 업로드하고 인제스트하는 두 가지 방법을 제공합니다. 일괄 처리 처리를 사용하면 다양한 파일 유형(예: CSV)을 사용하여 데이터를 삽입할 수 있도록 하거나 스트리밍 통합 기능을 사용하여 실시간으로 스트리밍 끝점을 사용하여 [!DNL Platform]에 데이터를 삽입할 수 있습니다.
 
