@@ -1,21 +1,17 @@
 ---
 keywords: URL 받은 편지함;말하기 URL 받은 편지함;말하기 URL 받은 편지함;말하기 URL 받은 편지함;말하기 URL;말하기 URL;말하기 URL;말하기 URL
-title: Talk URL 받은 편지함 확장
-seo-title: 대화 URL 받은 편지함
+title: 대화 URL 받은 편지함 확장 대상
 description: Talk URL 받은 편지함 확장은 Adobe Experience Platform의 고객 대상의 음성이다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
-seo-description: Talk URL 받은 편지함 확장은 Adobe Experience Platform의 고객 대상의 음성이다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
 workflow-type: tm+mt
-source-wordcount: '583'
+source-wordcount: '550'
 ht-degree: 4%
 
 ---
 
 
 # [!DNL Talk URL Inbox] 확장 {#talk-url-extension}
-
-## 개요 {#overview}
 
 웹 페이지 방문자로부터 음성 메시지를 받습니다. 음성 메시지를 텍스트 통찰력으로 즉시 전송할 수 있는 호스팅 UI 및 클라우드 기반의 머신 러닝을 포함합니다.
 
