@@ -3,19 +3,19 @@ keywords: Experience Platform;홈;인기 항목;데이터 통합;일괄 처리;�
 solution: Experience Platform
 title: 일괄 처리 통합 개요
 topic: overview
-description: '일괄 처리 통합 API를 사용하면 데이터를 Adobe Experience Platform에 일괄 처리 파일로 통합할 수 있습니다. 인제스트되는 데이터는 CRM 시스템의 플랫 파일(예: 쪽모이 세공 항목 파일)의 프로필 데이터이거나 XDM(Experience Data Model) 레지스트리에서 알려진 스키마를 따르는 데이터일 수 있습니다.'
+description: 'Adobe Experience Platform 데이터 통합 API를 사용하면 데이터를 플랫폼에 일괄 파일로 통합할 수 있습니다. 인제스트되는 데이터는 CRM 시스템의 플랫 파일(예: 쪽모이 세공 항목 파일)의 프로필 데이터이거나 XDM(Experience Data Model) 레지스트리에서 알려진 스키마를 따르는 데이터일 수 있습니다.'
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
-source-wordcount: '1216'
+source-wordcount: '1222'
 ht-degree: 2%
 
 ---
 
 
-# [!DNL Batch Ingestion]개요
+# 일괄 처리 통합 개요
 
-[!DNL Batch Ingestion] API를 사용하여 데이터를 Adobe Experience Platform에 일괄 파일로 인제스트할 수 있습니다. 인제스트되는 데이터는 CRM 시스템의 플랫 파일(예: 쪽모이 세공 항목 파일)의 프로필 데이터이거나 [!DNL Experience Data Model] (XDM) 레지스트리에서 알려진 스키마를 따르는 데이터일 수 있습니다.
+Adobe Experience Platform 데이터 통합 API를 사용하면 데이터를 플랫폼에 일괄 파일로 통합할 수 있습니다. 인제스트되는 데이터는 CRM 시스템의 플랫 파일(예: 쪽모이 세공 항목 파일)의 프로필 데이터이거나 [!DNL Experience Data Model] (XDM) 레지스트리에서 알려진 스키마를 따르는 데이터일 수 있습니다.
 
 [데이터 통합 API 참조](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)는 이러한 API 호출에 대한 추가 정보를 제공합니다.
 
