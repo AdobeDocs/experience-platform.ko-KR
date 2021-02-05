@@ -5,7 +5,7 @@ title: 부분 일괄 처리 통합 개요
 topic: overview
 description: 이 문서에서는 부분 일괄 처리를 관리하는 자습서를 제공합니다.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
 source-wordcount: '945'
 ht-degree: 0%
