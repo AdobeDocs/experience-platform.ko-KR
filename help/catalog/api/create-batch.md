@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;create batch;catalog service;api
+keywords: Experience Platform;홈;인기 항목;일괄 작성;카탈로그 서비스;api
 solution: Experience Platform
-title: 데이터 세트 만들기
+title: API에서 일괄 처리 만들기
 topic: developer guide
-description: 데이터 세트에 데이터를 인제스트하려면 데이터 세트에 묶음이 있어야 합니다. 기존 데이터 세트의 id 값을 사용하여 카탈로그 API의 /batches 종단점에 POST 요청을 수행하여 배치를 만들 수 있습니다.
+description: 카탈로그 API의 /batches 끝점에 POST 요청을 하여 배치를 만들 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
+source-git-commit: 8a213ac0ef1ac0f9c42e4b880b24157d28878bf1
 workflow-type: tm+mt
-source-wordcount: '128'
+source-wordcount: '117'
 ht-degree: 3%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 3%
 
 # 일괄 처리 만들기
 
-데이터 세트에 데이터를 인제스트하려면 데이터 세트에 묶음이 있어야 합니다. 기존 데이터 집합의 `id` 값을 사용하여 API의 종단점에 POST 요청을 함으로써 일괄 처리를 만들 수 `/batches` [!DNL Catalog] 있습니다.
+데이터 세트에 데이터를 인제스트하려면 데이터 세트에 묶음이 있어야 합니다. 기존 데이터 세트의 `id` 값을 사용하면 [!DNL Catalog] API의 `/batches` 끝점에 POST 요청을 하여 일괄 처리를 만들 수 있습니다.
 
 **API 형식**
 
@@ -40,11 +40,11 @@ curl -X POST 'https://platform.adobe.io/data/foundation/import/batches' \
 
 | 속성 | 설명 |
 | --- | --- |
-| `datasetId` | 일괄 `id` 이 연결될 데이터 세트 |
+| `datasetId` | 일괄 처리가 연결될 데이터 세트의 `id` |
 
 **응답**
 
-성공적인 응답은 HTTP Status 201(Created)과 시스템에서 생성된 문자열, 읽기 전용 등 새로 만든 일괄 처리 `id`의 세부 사항이 포함된 응답 개체를 반환합니다.
+성공적인 응답은 HTTP 상태 201(생성됨) 및 새로 만든 일괄 처리에 대한 세부 사항을 포함하는 응답 개체(예: `id`, 읽기 전용 시스템 생성 문자열)를 반환합니다.
 
 ```JSON
 {
