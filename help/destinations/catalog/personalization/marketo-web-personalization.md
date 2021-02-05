@@ -1,21 +1,17 @@
 ---
 keywords: Marketing To Web Personalization;marketing to web personalization;Marketing to Web Personalization extension;marketing to web personalization extension;marketing to;Marketing
-title: Marketing to Web Personalization 확장
-seo-title: Marketing to Web Personalization 확장
+title: Marketing to Web Personalization 확장 대상
 description: Marketing to Web Personalization 익스텐션은 Adobe Experience Platform에서 개인화를 위한 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
-seo-description: Marketing to Web Personalization 익스텐션은 Adobe Experience Platform에서 개인화를 위한 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: f4095a90ff70e8d054bae4f3b0f884552ffd30df
 workflow-type: tm+mt
-source-wordcount: '611'
+source-wordcount: '580'
 ht-degree: 3%
 
 ---
 
 
 # [!DNL Marketo Web Personalization] 확장 {#marketo-web-personalization-extension}
-
-## 개요 {#overview}
 
 이 확장은 [!DNL Marketo’s] 웹 개인화 및 ContentAI 응용 프로그램의 스크립트를 배포합니다. [!DNL Marketo] 웹 개인화는 익명의 방문자를 위한 첫 번째 그래픽과 알려진 방문자를 위한  [!DNL Marketo] 참여 플랫폼 내의 다양한 행동 특성과 같은 컨텐츠를 웹 방문자 특성에 고유하게 식별하고 개인화합니다. [!DNL Marketo] ContentAI에는 B2B 고객에게 고유한 웹 및 이메일 캠페인을 위한 AI 기반의 추천 기능과 개인화 기능이 포함되어 있습니다.
 
