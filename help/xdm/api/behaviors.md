@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;홈;인기 항목;api;XDM;XDM 시스템;경험 데이터 모델;경험 데이터 모델;경험 데이터 모델;데이터 모델;데이터 모델;스키마 레지스트리;스키마 레지스트리;비헤이비어;비헤이비어;비헤이비어;비헤이비어;behaviors;behavior
 solution: Experience Platform
-title: 비헤이비어 끝점 안내서
+title: 비헤이비어 API 끝점
 description: 스키마 레지스트리 API의 /behaviors 종단점을 사용하면 전역 컨테이너에서 사용 가능한 모든 동작을 검색할 수 있습니다.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '425'
 ht-degree: 2%
