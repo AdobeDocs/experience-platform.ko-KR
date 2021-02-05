@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;홈;인기 항목;api;XDM;XDM;경험 데이터 모델;경험 데이터 모델;경험 데이터 모델;데이터 모델;데이터 모델;스키마 레지스트리;스키마 레지스트리;;home;popular topics;api;XDM;XDM system;experience data model;data Model;schema registry;Schema Registry;Registry
 solution: Experience Platform
-title: 스키마 레지스트리 API 개발자 가이드
-description: '스키마 레지스트리 API를 사용하면 Experience Platform 내에서 사용 가능한 모든 스키마 및 관련 XDM 리소스를 프로그래밍 방식으로 관리할 수 있습니다. '
+title: 스키마 레지스트리 API 안내서
+description: 스키마 레지스트리 API를 사용하여 개발자는 Adobe Experience Platform 내의 모든 스키마 및 관련 XDM(Experience Data Model) 리소스를 프로그래밍 방식으로 관리할 수 있습니다. API를 사용하여 주요 작업을 수행하는 방법에 대해 알아보려면 이 안내서를 따르십시오.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 44a727f6ce4c2b90aa010379583c7c4d3ebd011c
+source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
 workflow-type: tm+mt
-source-wordcount: '961'
+source-wordcount: '973'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Schema Registry] API 개발자 가이드
+# [!DNL Schema Registry] API 안내서
 
 [!DNL Schema Registry]은 Adobe Experience Platform 내의 스키마 라이브러리에 액세스하는 데 사용되며, 사용 가능한 모든 라이브러리 리소스에 액세스할 수 있는 사용자 인터페이스와 RESTful API를 제공합니다.
 
