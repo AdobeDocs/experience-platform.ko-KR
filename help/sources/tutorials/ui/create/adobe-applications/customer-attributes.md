@@ -1,22 +1,22 @@
 ---
 keywords: Experience Platform;홈;인기 항목;사용자 특성;InDesign;home;popular topics;customer attributes
 solution: Experience Platform
-title: UI에서 고객 속성 소스 커넥터 만들기
+title: UI에서 고객 속성 소스 연결 만들기
 topic: overview
 type: Tutorial
-description: 이 자습서에서는 고객 속성 프로필 데이터를 Adobe Experience Platform에 수집하기 위해 UI에서 소스 커넥터를 만드는 단계를 제공합니다.
+description: 고객 속성 프로필 데이터를 Adobe Experience Platform에 수집하기 위해 UI에서 소스 연결을 만드는 방법을 알아봅니다.
 translation-type: tm+mt
-source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '379'
+source-wordcount: '377'
 ht-degree: 5%
 
 ---
 
 
-# UI에서 고객 속성 소스 커넥터 만들기
+# UI에서 고객 속성 소스 연결 만들기
 
-이 자습서에서는 고객 속성 프로필 데이터를 Adobe Experience Platform에 수집하기 위해 UI에서 소스 커넥터를 만드는 단계를 제공합니다. 고객 속성에 대한 자세한 내용은 [개요 문서](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/attributes.html)를 참조하십시오.
+이 자습서에서는 고객 속성 프로필 데이터를 Adobe Experience Platform에 수집하기 위해 UI에서 소스 연결을 만드는 단계를 제공합니다. 고객 속성에 대한 자세한 내용은 [개요 문서](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/attributes.html)를 참조하십시오.
 
 ## 소스 연결 만들기
 
