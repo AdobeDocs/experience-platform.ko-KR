@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;홈;인기 항목;세그멘테이션;세그멘테이션 서비스;api;
 solution: Experience Platform
-title: 세그멘테이션 서비스 개발자 가이드
+title: 세그멘테이션 서비스 API 시작하기
 topic: developer guide
 description: 다음 설명서는 세그멘테이션 API를 성공적으로 사용하기 위해 알아야 하는 추가 정보를 제공합니다.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '322'
+source-wordcount: '329'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Segmentation Service] {#getting-started} 시작하기
+# 세그멘테이션 서비스 API 시작 {#getting-started}
 
 Adobe Experience Platform [!DNL Segmentation Service]을(를) 사용하면 [!DNL Real-time Customer Profile] 데이터에서 세그먼트를 작성하고 Adobe Experience Platform에서 대상을 생성할 수 있습니다.
 
