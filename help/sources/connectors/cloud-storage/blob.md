@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;홈;인기 항목;물방울;Azure Blob;azure blob
 solution: Experience Platform
-title: Azure Blob 커넥터
+title: Azure Blob 소스 커넥터 개요
 topic: overview
-description: 아래 설명서는 API 또는 사용자 인터페이스를 사용하여 Azure Blob을 플랫폼에 연결하는 방법에 대한 정보를 제공합니다.
+description: API 또는 사용자 인터페이스를 사용하여 Azure Blob을 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
-source-wordcount: '397'
+source-wordcount: '399'
 ht-degree: 0%
 
 ---
@@ -36,15 +36,15 @@ Adobe Experience Platform은 AWS, [!DNL Google Cloud Platform] 및 [!DNL Azure] 
 
 ## [!DNL Azure Blob]을(를) [!DNL Platform]에 연결
 
-아래 설명서는 API 또는 사용자 인터페이스를 사용하여 Azure Blob을 플랫폼에 연결하는 방법에 대한 정보를 제공합니다.
+아래 설명서는 API 또는 사용자 인터페이스를 사용하여 Azure Blob을 Adobe Experience Platform에 연결하는 방법에 대한 정보를 제공합니다.
 
 ### API 사용
 
-- [Flow Service API를 사용하여 Azure Blob 커넥터 만들기](../../tutorials/api/create/cloud-storage/blob.md)
+- [흐름 서비스 API를 사용하여 Azure Blob 소스 연결 만들기](../../tutorials/api/create/cloud-storage/blob.md)
 - [Flow Service API를 사용하여 클라우드 스토리지 시스템 살펴보기](../../tutorials/api/explore/cloud-storage.md)
 - [Flow Service API를 사용하여 클라우드 스토리지 데이터 수집](../../tutorials/api/collect/cloud-storage.md)
 
 ### UI 사용
 
-- [UI에서 Azure Blob 소스 커넥터 만들기](../../tutorials/ui/create/cloud-storage/blob.md)
-- [UI에서 클라우드 스토리지 커넥터에 대한 데이터 흐름 구성](../../tutorials/ui/dataflow/batch/cloud-storage.md)
+- [UI에서 Azure Blob 소스 연결 만들기](../../tutorials/ui/create/cloud-storage/blob.md)
+- [UI에서 클라우드 스토리지 연결에 대한 데이터 흐름 구성](../../tutorials/ui/dataflow/batch/cloud-storage.md)
