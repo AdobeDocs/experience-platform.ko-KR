@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;홈;인기 항목;GDPR;GDPR;GDPA;PDPA;PDPA;PDPA_that;PDPA_THA;LGPD;LGPD_bra;LGPD_LGPD_BRA;
 solution: Experience Platform
-title: Adobe Experience Platform Privacy Service 개요
+title: Privacy Service 개요
 topic: overview
 description: Privacy Service을 사용하면 Experience Cloud 데이터 작업에서 법률 개인 정보 보호 규정을 자동으로 준수할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 5dad1fcc82707f6ee1bf75af6c10d34ff78ac311
+source-git-commit: 37c1c98ccba50fa917acc5e93763294f4dde5c36
 workflow-type: tm+mt
-source-wordcount: '1400'
+source-wordcount: '1394'
 ht-degree: 0%
 
 ---
 
 
-# Adobe Experience Platform [!DNL Privacy Service] 개요
+# [!DNL Privacy Service]개요
 
 더 나은 고객 경험을 제공하기 위해서는 고객의 개인 데이터를 수집하고 저장해야 합니다. 이 데이터를 사용할 때는 고객의 개인 정보를 이해하고 존중해야 합니다. 새로운 법률 및 조직 규정은 사용자가 요청 시 데이터 저장소에서 개인 데이터를 액세스하거나 삭제할 수 있는 권한을 제공합니다.
 
