@@ -5,15 +5,15 @@ seo-title: 실시간 고객 데이터 플랫폼 홈 페이지 및 대시보드
 description: 대시보드, 홈페이지 및 Adobe Experience Platform의 최초 사용자 경험
 seo-description: 대시보드, 홈페이지 및 Adobe Experience Platform의 최초 사용자 경험
 translation-type: tm+mt
-source-git-commit: 00010d38a5d05800aeac9af8505093fee3593b45
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
-source-wordcount: '636'
+source-wordcount: '638'
 ht-degree: 4%
 
 ---
 
 
-# [!DNL Real-time Customer Data Platform] 지표 개요
+# [!DNL Real-time Customer Data Platform] 홈 페이지 및 대시보드
 
 측정 지표 대시보드가 포함된 실시간 고객 데이터 플랫폼(실시간 CDP) 홈 페이지는 실시간 CDP에 로그인할 때 나타납니다.
 
