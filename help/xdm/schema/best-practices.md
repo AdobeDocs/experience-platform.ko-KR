@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;홈;인기 항목;스키마;스키마;열거형;기본 ID;기본 ID;XDM 개별 프로필;경험 이벤트;XDM 경험 이벤트;XDM ExperienceEvent;experienceEvent;experienceEvent;XDM 경험 이벤트;스키마 디자인;모범 사례
 solution: Experience Platform
-title: Adobe Experience Platform의 데이터 모델링에 대한 모범 사례
+title: 데이터 모델링에 대한 우수 사례
 topic: overview
 description: 이 문서에서는 XDM(Experience Data Model) 스키마 및 Adobe Experience Platform에서 사용할 스키마를 작성하기 위한 기본 블록, 원칙 및 모범 사례에 대해 설명합니다.
 translation-type: tm+mt
-source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '2515'
+source-wordcount: '2507'
 ht-degree: 1%
 
 ---
 
 
-# Adobe Experience Platform의 데이터 모델링에 대한 모범 사례
+# 데이터 모델링을 위한 모범 사례
 
 [!DNL Experience Data Model] (XDM)은 다운스트림 Adobe Experience Platform 서비스에서 사용할 수 있는 일반적인 구조 및 정의를 제공하여 고객 경험 데이터를 표준화하는 핵심 프레임워크입니다. XDM 표준을 준수함으로써 모든 고객 경험 데이터를 하나의 공통 표현으로 통합하여 고객의 행동을 통해 중요한 통찰력을 얻을 수 있고 세그먼트를 통해 고객 고객을 정의할 수 있으며 개인화를 위해 고객 속성을 표현할 수 있습니다.
 
@@ -75,7 +75,7 @@ Experience Platform에서 사용할 데이터 모델을 디자인하기 위한 �
 | --- | --- | --- | --- | --- |
 | 1234567 | 이벤트가 복제되지 않도록 하면서 현재 이벤트 변수에 | 275098 | 2 | 10월 1일 오전 10:32 |
 | 1234567 | 제거 | 275098 | 1 | 10월 1일 오전 10:33 |
-| 1234567 | 이벤트가 복제되지 않도록 하면서 현재 이벤트 변수에 | 486502 | 3 | 10월 1일 오전 10:41 |
+| 1234567 | 이벤트가 복제되지 않도록 하면서 현재 이벤트 변수에 | 486502 | 1 | 10월 1일 오전 10:41 |
 | 1234567 | 이벤트가 복제되지 않도록 하면서 현재 이벤트 변수에 | 910482 | 5 | 10월 3일 오후 2:15 |
 
 #### 세분화 사용 사례
