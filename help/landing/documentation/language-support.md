@@ -5,7 +5,7 @@ title: Experience Platform 설명서 언어 지원
 topic: getting started
 description: Adobe Experience Platform을 사용하면 데이터 과학 및 머신 러닝을 적용하기 전에 고객 데이터를 중앙에서 관리하고 표준화하여 개인화된 풍부한 경험을 디자인하고 전달할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 96600567bb4965a1611e2b9a7cd6cb49298a567f
+source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
 workflow-type: tm+mt
 source-wordcount: '103'
 ht-degree: 0%
