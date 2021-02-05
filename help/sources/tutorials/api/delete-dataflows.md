@@ -4,11 +4,11 @@ solution: Experience Platform
 title: Flow Service API를 사용하여 데이터 흐름 삭제
 topic: overview
 type: Tutorial
-description: 이 자습서에서는 Flow Service API를 사용하여 일괄 처리 및 스트리밍 데이터 흐름을 삭제하는 단계를 설명합니다.
+description: Flow Service API를 사용하여 일괄 처리 및 스트리밍 데이터 흐름을 삭제하는 방법을 알아봅니다.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '483'
+source-wordcount: '480'
 ht-degree: 1%
 
 ---
