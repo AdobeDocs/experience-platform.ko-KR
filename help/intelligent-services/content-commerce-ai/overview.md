@@ -1,13 +1,13 @@
 ---
-keywords: Experience Cloud;getting started;content and commerce ai;popular topics;Intelligent Services;ccai
+keywords: Experience Cloud;시작하기;컨텐트 및 상거래 ai;인기 항목;Intelligent Services;ccai
 solution: Experience Cloud, Intelligent Services, Experience Platform
 title: 콘텐츠 및 상거래 AI 개요
 topic: Content and Commerce AI
 description: Content and Commerce AI는 콘텐츠에서 지능적인 기능을 추출하고 콘텐츠 흐름을 구성하며 콘텐츠 흐름을 간소화하며 효과적이고 개인화된 경험을 고객에게 전달할 수 있는 AI 서비스 세트입니다.
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
 workflow-type: tm+mt
-source-wordcount: '406'
+source-wordcount: '419'
 ht-degree: 1%
 
 ---
@@ -38,7 +38,7 @@ Content and Commerce AI는 콘텐츠에서 지능적인 기능을 추출하고 �
 
 >[!NOTE]
 >
->Beta의 경우 Content and Commerce AI는 여정의 기초 단계(1단계)를 테스트하는 데 주력하고 있습니다. 2단계와 3단계는 후속 릴리스에서 문서화되어 현재 문서에서 확장되지 않습니다.
+>베타의 경우, 컨텐트 및 상거래 AI는 여정(1단계)의 기초 단계 테스트에 주력하고 있습니다. 2단계와 3단계는 후속 릴리스에서 문서화되어 현재 문서에서 확장되지 않습니다.
 
 **1단계:컨텐츠 이해**
 - 지능형 기능 및 메타데이터를 추출합니다.
