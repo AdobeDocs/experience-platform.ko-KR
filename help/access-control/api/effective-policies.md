@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;effective policies;access control api
+keywords: Experience Platform;홈;인기 항목;효과적인 정책;액세스 제어 api
 solution: Experience Platform
-title: 효과적인 정책 보기
+title: 효과적인 정책 API 끝점
 topic: developer guide
-description: Adobe Experience Platform의 액세스 제어를 통해 Adobe Admin Console을 사용하여 다양한 플랫폼 기능에 대한 역할 및 권한을 관리할 수 있습니다. 이 문서는 Adobe Experience Platform용 액세스 제어 API를 사용하여 효과적인 정책을 보는 방법에 대한 지침으로 제공됩니다.
+description: Adobe Experience Platform의 액세스 제어를 사용하면 Adobe Admin Console을 사용하여 다양한 플랫폼 기능에 대한 역할 및 권한을 관리할 수 있습니다. 이 문서는 Adobe Experience Platform용 액세스 제어 API를 사용하여 효과적인 정책을 보는 방법에 대한 지침으로 제공됩니다.
 translation-type: tm+mt
-source-git-commit: 8967a820ab19bceb2be69f37e3399ed99f0b8e72
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '309'
+source-wordcount: '320'
 ht-degree: 1%
 
 ---
 
 
-# 효과적인 정책 보기
+# 효과적인 정책 끝점
 
-현재 사용자에 대한 유효한 정책을 보려면 API의 종단점에 대해 POST `/acl/effective-policies` 요청을 [!DNL Access Control] 하십시오. 검색할 권한 및 리소스 유형은 배열 형태로 요청 페이로드에서 제공해야 합니다. 이것은 아래의 예제 API 호출에서 입증되었습니다.
+현재 사용자에 대한 유효한 정책을 보려면 [!DNL Access Control] API의 `/acl/effective-policies` 끝점에 POST 요청을 하십시오. 검색할 권한 및 리소스 유형은 배열 형태로 요청 페이로드에서 제공해야 합니다. 이것은 아래의 예제 API 호출에서 입증되었습니다.
 
 **API 형식**
 
@@ -25,7 +25,7 @@ POST /acl/effective-policies
 
 **요청**
 
-다음 요청은 데이터 집합[!UICONTROL 관리 권한에 대한 정보를 검색하고 현재 사용자에 대한 &quot;]스키마[!UICONTROL &quot; 리소스 유형에 대한 액세스를]가져옵니다.
+다음 요청은 현재 사용자의 &quot;[!UICONTROL 데이터 집합 관리]&quot; 권한에 대한 정보와 &quot;[!UICONTROL 스키마]&quot; 리소스 유형에 대한 액세스를 검색합니다.
 
 ```shell
 curl -X POST \
@@ -43,7 +43,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->페이로드 배열에서 제공할 수 있는 권한 및 리소스 유형의 전체 목록은 [허용된 권한 및 리소스 유형에 대한 부록 섹션을 참조하십시오](#accepted-permissions-and-resource-types).
+>페이로드 배열에서 제공할 수 있는 권한 및 리소스 유형의 전체 목록은 [허용된 권한 및 리소스 유형](#accepted-permissions-and-resource-types)의 부록 섹션을 참조하십시오.
 
 **응답**
 
@@ -66,7 +66,7 @@ curl -X POST \
 
 ## 다음 단계
 
-이 문서에서는 리소스 유형에 대한 활성 권한 및 관련 정책에 대한 정보를 반환하기 위해 [!DNL Access Control] API를 호출하는 방법에 대해 다룹니다. 액세스 제어에 대한 자세한 내용 [!DNL Experience Platform]은 [액세스 제어 개요를 참조하십시오](../home.md).
+이 문서에서는 리소스 유형에 대한 활성 권한 및 관련 정책에 대한 정보를 반환하기 위해 [!DNL Access Control] API를 호출하는 방법에 대해 다룹니다. [!DNL Experience Platform]에 대한 액세스 제어에 대한 자세한 내용은 [액세스 제어 개요](../home.md)를 참조하십시오.
 
 ## 부록
 
@@ -74,7 +74,7 @@ curl -X POST \
 
 ### 허용된 권한 및 리소스 유형
 
-다음은 종단점에 대한 POST 요청의 페이로드에서 포함할 수 있는 권한 및 리소스 유형 `/acl/active-permissions` 목록입니다.
+다음은 POST 요청의 페이로드에서 `/acl/active-permissions` 끝점에 포함할 수 있는 권한 및 리소스 유형 목록입니다.
 
 **권한**
 
