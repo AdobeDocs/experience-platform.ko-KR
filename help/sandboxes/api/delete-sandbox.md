@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;delete sandbox
+keywords: Experience Platform;홈;인기 항목;샌드박스 삭제
 solution: Experience Platform
-title: 샌드박스 삭제
+title: API에서 샌드박스 삭제
 topic: developer guide
 description: 요청 경로에 샌드박스의 이름을 포함하는 DELETE 요청을 수행하여 샌드박스를 삭제할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
-source-wordcount: '103'
+source-wordcount: '116'
 ht-degree: 3%
 
 ---
 
 
-# 샌드박스 삭제
+# API에서 샌드박스 삭제
 
-요청 경로에 샌드박스의 DELETE 요청을 수행하여 샌드박스를 삭제할 수 `name` 있습니다.
+요청 경로에서 샌드박스의 `name`을 포함하는 DELETE 요청을 수행하여 샌드박스를 삭제할 수 있습니다.
 
 >[!NOTE]
 >
@@ -29,7 +29,7 @@ DELETE /sandboxes/{SANDBOX_NAME}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{SANDBOX_NAME}` | 삭제할 샌드박스 `name` 의 이름입니다. |
+| `{SANDBOX_NAME}` | 삭제할 샌드박스의 `name`. |
 
 **요청**
 
@@ -46,7 +46,7 @@ curl -X DELETE \
 
 **응답**
 
-성공적인 응답은 샌드박스의 업데이트된 세부 정보를 반환하며, 이 세부 사항은 &quot;삭제&quot; `state` 되었음을 나타냅니다.
+성공적인 응답은 샌드박스의 업데이트된 세부 정보를 반환하고 해당 `state`이(가) &quot;삭제됨&quot;임을 표시합니다.
 
 ```json
 {
