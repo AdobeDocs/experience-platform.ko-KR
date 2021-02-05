@@ -5,10 +5,10 @@ user-guide-title: Adobe Experience Platform 개요
 breadcrumb-title: Experience Platform 개요
 user-guide-description: Experience Platform을 통해 개인화된 경험을 실시간으로 고객에게 전달하는 방법을 살펴볼 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 6ec317dd790b6ad77d8181c1398934f9636c5f5f
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
-source-wordcount: '161'
-ht-degree: 21%
+source-wordcount: '159'
+ht-degree: 22%
 
 ---
 
@@ -30,12 +30,12 @@ ht-degree: 21%
    * [워크플로우 UI 가이드](workflows.md)
    * [브라우저 및 언어 지원](browser-language-support.md)
 * Experience Platform API {#platform-apis}
+   * [인증 및 액세스 플랫폼 API](api-authentication.md)
    * [API 기본 사항](api-fundamentals.md)
    * [API 참조 문서](http://www.adobe.com/go/platform-api-reference-en)
-   * [인증 및 액세스 플랫폼 API 자습서](api-authentication.md)
 * 플랫폼 설명서 {#documentation}
-   * [설명서 개요](documentation/overview.md)
-   * [설명서 언어 지원](documentation/language-support.md)
+   * [개요](documentation/overview.md)
+   * [언어 지원](documentation/language-support.md)
 * Adobe 에코시스템의 플랫폼 {#ecosystem}
    * [응용 프로그램 서비스](application-services.md)
    * [애플리케이션 및 지능형 서비스(비디오)](video/application-intelligent-services.md)
@@ -48,6 +48,6 @@ ht-degree: 21%
          * [동의 및 기본 설정 데이터를 캡처하도록 데이터 세트 구성](./governance-privacy-security/consent/iab/dataset.md)
 * [라이선스 사용 대시보드](license-usage-dashboard.md)
 * [문제 해결 가이드](troubleshooting.md)
-* [ADLS Gen2 마이그레이션](adls2-gen2-migration.md)
+* [Gen2 데이터 레이크 마이그레이션](adls2-gen2-migration.md)
 * [용어 설명](glossary.md)
 * [릴리스 정보](https://www.adobe.com/go/platform-release-notes-en)
