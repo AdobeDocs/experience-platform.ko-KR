@@ -1,21 +1,17 @@
 ---
 keywords: 분석 확장;분석 확장;대상 분석
-title: Adobe Analytics 확장
-seo-title: Adobe Analytics 확장
+title: Adobe Analytics 확장 대상
 description: Adobe Analytics 익스텐션은 Adobe Experience Platform의 분석 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
-seo-description: Adobe Analytics 익스텐션은 Adobe Experience Platform의 분석 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '528'
-ht-degree: 10%
+source-wordcount: '499'
+ht-degree: 9%
 
 ---
 
 
 # Adobe Analytics 확장 {#adobe-analytics-extension}
-
-## 개요 {#overview}
 
 Adobe Analytics는 고객 인텔리전스로 고객을 사람으로 이해하고 고객 인텔리전스로 비즈니스를 이끌어 나갈 수 있는 업계 선도적인 솔루션입니다.
 
