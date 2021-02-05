@@ -1,21 +1,17 @@
 ---
 keywords: Nielsen BSDK;nielsen bsdk;nielsen BSDK
-title: Nielsen BSDK 확장
-seo-title: Nielsen BSDK 확장
+title: Nielsen BSDK 확장 대상
 description: Nielsen BSDK 익스텐션은 Adobe Experience Platform의 분석 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
-seo-description: Nielsen BSDK 익스텐션은 Adobe Experience Platform의 분석 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '620'
+source-wordcount: '591'
 ht-degree: 4%
 
 ---
 
 
 # [!DNL Nielsen BSDK] 확장 {#nielsen-bsdk-extension}
-
-## 개요 {#overview}
 
 [!DNL Nielsen Digital SDK] launch extension은 다음 디지털 측정 제품을 통해 대상 측정을 제공합니다.
 
