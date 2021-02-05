@@ -1,21 +1,17 @@
 ---
 keywords: InMoment;inmoment;Inmoment;실행 통합
-title: InMoment 확장
-seo-title: InMoment 확장
+title: InMoment 확장 대상
 description: InMoment 익스텐션은 Adobe Experience Platform의 설문 조사 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
-seo-description: InMoment 익스텐션은 Adobe Experience Platform의 설문 조사 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '565'
+source-wordcount: '538'
 ht-degree: 4%
 
 ---
 
 
 # [!DNL InMoment] 확장 {#inmoment-extension}
-
-## 개요 {#overview}
 
 [!DNL InMoment] Launch Integration을 사용하면 디지털 출구 제품을 통해 온라인 피드백을 빠르고 쉽게 활성화할 수 있습니다. 앱에서는 CX 관리자가 프로그램의 제어권을 더 쉽게 제어할 수 있도록 CXI Cloud 관리자를 통해 가로채기를 구성 및 관리할 수 있습니다.
 
