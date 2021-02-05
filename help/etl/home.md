@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;홈;인기 항목;ETL;etl 통합;ETL 통합
 solution: Experience Platform
-title: ETL 통합 만들기
+title: Adobe Experience Platform용 ETL 통합 개발
 topic: overview
 description: ETL 통합 안내서는 Experience Platform을 위한 고성능 보안 커넥터를 제작하고 데이터를 플랫폼에 인제스트하기 위한 일반적인 단계를 설명합니다.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
-source-wordcount: '4139'
+source-wordcount: '4143'
 ht-degree: 0%
 
 ---
