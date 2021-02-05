@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform;home;popular topics;namespace list;list namespace
+keywords: Experience Platform;홈;인기 항목;네임스페이스 목록;목록 네임스페이스
 solution: Experience Platform
-title: 사용 가능한 네임스페이스 목록
+title: 사용 가능한 ID 네임스페이스 목록
 topic: API guide
 description: 사용 가능한 모든 네임스페이스를 나열합니다.
 translation-type: tm+mt
-source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
+source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
 workflow-type: tm+mt
-source-wordcount: '72'
-ht-degree: 5%
+source-wordcount: '83'
+ht-degree: 4%
 
 ---
 
 
-# 사용 가능한 네임스페이스 목록
+# 사용 가능한 ID 네임스페이스 목록
 
 **API 형식**
 
@@ -34,11 +34,11 @@ curl -X GET \
 
 **응답**
 
-응답에는 사용 가능한 네임스페이스를 나타내는 각 개체가 포함된 개체 배열이 포함됩니다. &quot;[!UICONTROL false]&quot; 값이 &quot;[!UICONTROL custom]&quot;인 네임스페이스는 표준 네임스페이스이며, &quot;trueValue&quot;의 &quot;custom[!UICONTROL &quot;이 있는 네임스페이스는]조직에서 만든 네임스페이스입니다.
+응답에는 사용 가능한 네임스페이스를 나타내는 각 객체가 포함된 객체 배열이 포함됩니다. &quot;[!UICONTROL custom]&quot; 값이 &quot;[!UICONTROL false]&quot;인 네임스페이스는 표준 네임스페이스이며, &quot;[!UICONTROL custom]&quot; 값이 &quot;[!UICONTROL true]&quot;인 네임스페이스는 조직에서 만든 네임스페이스입니다.
 
 >[!NOTE]
 >
->공간이 잘렸습니다.
+>이 응답은 공간에 대해 잘렸습니다.
 
 ```json
 [
@@ -80,4 +80,4 @@ curl -X GET \
 
 ## 다음 단계
 
-다음 자습서로 진행하여 사용자 정의 네임스페이스 [만들기](./create-custom-namespace.md)
+다음 자습서로 진행하여 [사용자 정의 네임스페이스 만들기](./create-custom-namespace.md)
