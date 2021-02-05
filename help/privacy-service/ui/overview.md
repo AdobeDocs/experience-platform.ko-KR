@@ -5,7 +5,7 @@ title: Privacy Service UI 개요
 topic: UI guide
 description: 다양한 Experience Cloud 응용 프로그램에서 Privacy Service 사용자 인터페이스를 사용하여 개인 정보 요청을 조정하고 모니터링합니다.
 translation-type: tm+mt
-source-git-commit: 5dad1fcc82707f6ee1bf75af6c10d34ff78ac311
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '180'
 ht-degree: 1%
