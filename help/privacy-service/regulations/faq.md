@@ -5,7 +5,7 @@ title: 개인 정보 보호 규정 FAQ
 topic: troubleshooting
 description: 이 문서에서는 Adobe Experience Cloud에서 지원되는 법적 개인 정보 보호 규정 및 그 구현과 관련하여 자주 묻는 질문에 대한 답변을 제공합니다.
 translation-type: tm+mt
-source-git-commit: 00904291ab7e2f119d3886b5aae9be50d4e8bd2b
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '1599'
 ht-degree: 0%
