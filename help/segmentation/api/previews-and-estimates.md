@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;previews;estimates;previews and estimates;estimates and previews;api;API;
+keywords: Experience Platform;홈;인기 항목;세그멘테이션;세그멘테이션 서비스;미리 보기;미리 보기;미리 보기 및 예측;예측 및 미리 보기;api;Segmentation;Segmentation;Service;
 solution: Experience Platform
-title: 끝점 미리 보기 및 예측
+title: API 끝점 미리 보기 및 예측
 topic: developer guide
-description: 세그먼트 정의를 개발할 때 Adobe Experience Platform 내의 예측 및 미리 보기 도구를 사용하여 요약 수준 정보를 보고 예상 고객을 분리할 수 있습니다.
+description: Adobe Experience Platform 세그멘테이션 서비스 API의 미리 보기 및 예측 끝점을 사용하면 세그먼트에서 예상 대상을 분리하는 데 도움이 되는 요약 수준 정보를 볼 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '773'
+source-wordcount: '793'
 ht-degree: 2%
 
 ---
@@ -15,39 +15,39 @@ ht-degree: 2%
 
 # 끝점 미리 보기 및 예측
 
-세그먼트 정의를 개발하면 내 [!DNL Adobe Experience Platform] 에서 예측 및 미리 보기 도구를 사용하여 예상 대상을 분리하는 데 도움이 되는 요약 수준 정보를 볼 수 있습니다. **미리** 보기에서는 세그먼트 정의에 대해 페이지에 지정된 프로필 목록을 제공하므로 결과를 예상과 비교할 수 있습니다. **예상 대상 크기, 신뢰 구간 및 오류 표준 편차와 같은 세그먼트 정의에 대한 통계 정보를 제공합니다** .
+세그먼트 정의를 개발할 때 [!DNL Adobe Experience Platform] 내의 예측 및 미리 보기 도구를 사용하여 예상 대상을 분리하는 데 도움이 되는 요약 수준 정보를 볼 수 있습니다. **미리** 보기세그먼트 정의에 대한 페이지로 구분된 프로필 목록을 제공하므로 결과를 예상과 비교할 수 있습니다. **예상** 대상 크기, 신뢰 구간 및 오류 표준 편차 등 세그먼트 정의에 대한 통계 정보를 제공합니다.
 
 ## 시작하기
 
-이 안내서에 사용되는 끝점은 [!DNL Adobe Experience Platform Segmentation Service] API의 일부입니다. 계속하기 전에 [시작 안내서](./getting-started.md) 에서 필수 머리글 및 예제 API 호출 읽기 방법을 포함하여 API를 성공적으로 호출하기 위해 알아야 하는 중요한 정보를 검토하십시오.
+이 안내서에 사용된 끝점은 [!DNL Adobe Experience Platform Segmentation Service] API의 일부입니다. 계속하기 전에 필수 헤더 및 예제 API 호출 방법을 포함하여 API를 성공적으로 호출하기 위해 알아야 하는 중요한 정보가 필요하면 [시작 안내서](./getting-started.md)를 검토하십시오.
 
-## 예상 생성 방법
+## 추정치가 생성되는 방식
 
-데이터 샘플링이 트리거되는 방법은 섭취 방법에 따라 다릅니다.
+데이터 샘플링을 트리거하는 방법은 수집 방법에 따라 다릅니다.
 
-일괄 처리를 위해 프로필 스토어는 마지막 샘플링 작업이 실행된 이후 새 일괄 처리가 성공적으로 수집되었는지 확인하기 위해 15분마다 자동으로 스캔됩니다. 그런 경우 프로필 스토어는 이후 스캔되어 레코드 수가 5% 이상 변경되었는지 확인합니다. 이러한 조건이 충족되면 새 샘플링 작업이 트리거됩니다.
+일괄 처리를 위해 프로필 스토어는 마지막 샘플링 작업이 실행된 이후 새 일괄 처리가 성공적으로 인제스트되었는지 확인하기 위해 15분마다 자동으로 스캔됩니다. 그런 경우 나중에 프로필 스토어를 스캔하여 레코드 수가 5% 이상 변경되었는지 확인합니다. 이러한 조건이 충족되면 새 샘플링 작업이 트리거됩니다.
 
-스트리밍 통합 시, 프로필 스토어는 매시간마다 자동으로 스캔되어 레코드 수가 최소 5% 이상 변경되었는지 확인합니다. 이 조건이 충족되면 새 샘플링 작업이 트리거됩니다.
+스트리밍 수집에 대해 프로필 스토어는 매시간 자동으로 스캔되어 기록 수가 최소 5% 변경되었는지 확인합니다. 이 조건이 충족되면 새 샘플링 작업이 트리거됩니다.
 
-스캔 샘플 크기는 프로필 스토어의 전체 개체 수에 따라 달라집니다. 이러한 샘플 크기는 다음 표에 나와 있습니다.
+스캔의 샘플 크기는 프로필 저장소의 전체 개체 수에 따라 달라집니다. 이러한 샘플 크기는 다음 표에 나와 있습니다.
 
 | 프로필 스토어의 엔티티 | 샘플 크기 |
 | ------------------------- | ----------- |
 | 100만 미만 | 전체 데이터 세트 |
-| 1~2000만 | 100만 |
-| 2,000만 이상 | 합계의 5% |
+| 1~2,000만 | 100만 |
+| 2천만 명 이상 | 합계의 5% |
 
 >[!NOTE]
 >
->추정은 일반적으로 10초에서 15초 정도 소요되며, 추정은 더 많은 기록을 읽으면서 세부적으로 시작합니다.
+>추정은 일반적으로 10초에서 15초 정도 소요되며, 추정은 대략적으로 시작되며 기록을 더 많이 읽으면 세부적으로 조정됩니다.
 
-## Create a new preview {#create-preview}
+## 새 미리 보기 {#create-preview} 만들기
 
-종단점에 POST 요청을 만들어 새 미리 보기를 만들 수 `/preview` 있습니다.
+`/preview` 끝점에 POST 요청을 하여 새 미리 보기를 만들 수 있습니다.
 
 >[!NOTE]
 >
->미리 보기 작업을 만들면 예상 작업이 자동으로 생성됩니다. 이 두 작업은 동일한 ID를 공유합니다.
+>미리 보기 작업을 만들면 예측 작업이 자동으로 생성됩니다. 이 두 작업은 동일한 ID를 공유합니다.
 
 **API 형식**
 
@@ -74,9 +74,9 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `predicateExpression` | 데이터를 쿼리할 PQL 식입니다. |
-| `predicateType` | 아래의 쿼리 식에 대한 설명 유형입니다 `predicateExpression`. 현재 이 속성에 대해 허용된 유일한 값은 입니다 `pql/text`. |
-| `predicateModel` | 프로필 데이터를 기반으로 하는 [!DNL Experience Data Model] (XDM) 스키마의 이름입니다. |
+| `predicateExpression` | 데이터를 쿼리할 PQL 표현식입니다. |
+| `predicateType` | `predicateExpression` 아래의 쿼리 식에 대한 설명 유형입니다. 현재 이 속성에 대해 허용된 유일한 값은 `pql/text`입니다. |
+| `predicateModel` | 프로필 데이터가 기반으로 하는 [!DNL Experience Data Model](XDM) 스키마의 이름입니다. |
 
 **응답**
 
@@ -94,12 +94,12 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `state` | 미리 보기 작업의 현재 상태입니다. 처음 만들 때 &quot;NEW&quot; 상태가 됩니다. 그 후 처리가 완료될 때까지 &quot;RUNNING&quot; 상태가 되며, 여기서 &quot;RESULT_READY&quot; 또는 &quot;FAILED&quot;가 됩니다. |
-| `previewId` | 다음 섹션에 설명된 대로 예측 또는 미리 보기를 볼 때 조회 목적으로 사용되는 미리 보기 작업의 ID입니다. |
+| `state` | 미리 보기 작업의 현재 상태입니다. 처음 만들 때 &quot;새로 만들기&quot; 상태가 됩니다. 이후 처리가 완료될 때까지 &quot;실행 중&quot; 상태가 되며, 이 시점에서 &quot;RESULT_READY&quot; 또는 &quot;FAILED&quot;가 됩니다. |
+| `previewId` | 다음 섹션에 설명된 대로 예측 또는 미리 보기를 볼 때 조회 목적으로 사용할 미리 보기 작업의 ID입니다. |
 
-## 특정 미리 보기 결과 검색 {#get-preview}
+## 특정 미리 보기 {#get-preview} 결과 검색
 
-종단점에 GET 요청을 만들고 요청 경로에 미리 보기 ID를 제공하여 특정 미리 보기에 대한 자세한 정보를 검색할 수 `/preview` 있습니다.
+`/preview` 끝점에 GET 요청을 하고 요청 경로에 미리 보기 ID를 제공하여 특정 미리 보기에 대한 자세한 정보를 검색할 수 있습니다.
 
 **API 형식**
 
@@ -172,11 +172,11 @@ curl -X GET https://platform.adobe.io/data/core/ups/preview/MDphcHAtMzJiZTAzMjgt
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `results` | 관련 ID와 함께 엔티티 ID 목록입니다. 제공된 링크를 사용하여 지정된 엔티티를 검색할 수 있습니다 [[!DNL Profile Access API]](../../profile/api/entities.md). |
+| `results` | 관련 ID와 함께 엔티티 ID 목록입니다. 제공된 링크는 [[!DNL Profile Access API]](../../profile/api/entities.md)을 사용하여 지정된 엔티티를 찾는 데 사용할 수 있습니다. |
 
-## 특정 예상 작업의 결과 검색 {#get-estimate}
+## 특정 예상 작업 {#get-estimate} 결과 검색
 
-미리 보기 작업을 만든 후에는 종단점에 대한 GET 요청 경로 `previewId` `/estimate` 에서 해당 작업을 사용하여 예상 대상 크기, 신뢰 구간 및 오류 표준 편차 등 세그먼트 정의에 대한 통계 정보를 볼 수 있습니다.
+미리 보기 작업을 만들었으면 `/estimate` 끝점에 대한 GET 요청 경로에 `previewId`을 사용하여 예상 대상 크기, 신뢰 구간 및 오류 표준 편차를 포함한 세그먼트 정의에 대한 통계 정보를 볼 수 있습니다.
 
 **API 형식**
 
@@ -186,11 +186,11 @@ GET /estimate/{PREVIEW_ID}
 
 | 매개 변수 | 설명 |
 | --------- | ----------- |
-| `{PREVIEW_ID}` | 예상 작업은 미리 보기 작업을 만들 때만 트리거되며 두 작업은 조회 목적으로 동일한 ID 값을 공유합니다. 특히 미리 보기 작업을 만들 때 반환되는 `previewId` 값입니다. |
+| `{PREVIEW_ID}` | 예상 작업은 미리 보기 작업이 만들어질 때만 트리거되며, 두 작업은 조회 목적으로 동일한 ID 값을 공유합니다. 특히 미리 보기 작업을 만들 때 반환된 `previewId` 값입니다. |
 
 **요청**
 
-다음 요청은 특정 예상 작업의 결과를 가져옵니다.
+다음 요청은 특정 예상 작업의 결과를 검색합니다.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/estimate/MDoyOjRhNDVlODUzLWFjOTEtNGJiNy1hNDI2LTE1MDkzN2I2YWY1Yzo0Mg \
@@ -202,7 +202,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/estimate/MDoyOjRhNDVlODUzLWF
 
 **응답**
 
-성공적인 응답은 예상 작업의 세부 사항과 함께 HTTP 상태 200을 반환합니다.
+성공적인 응답은 예상 작업의 세부 정보와 함께 HTTP 상태 200을 반환합니다.
 
 ```json
 {
@@ -231,4 +231,4 @@ curl -X GET https://platform.adobe.io/data/core/ups/estimate/MDoyOjRhNDVlODUzLWF
 
 ## 다음 단계
 
-이 가이드를 읽고 나면 미리 보기 및 예상 작업 방법을 더 잘 이해할 수 있습니다. 다른 [!DNL Segmentation Service] API 끝점에 대한 자세한 내용은 [세그멘테이션 서비스 개발자 가이드 개요를 참조하십시오](./overview.md).
+이 안내서를 읽고 나면 미리 보기와 견적을 사용한 작업 방법을 더 잘 이해할 수 있습니다. 다른 [!DNL Segmentation Service] API 끝점에 대한 자세한 내용은 [세그멘테이션 서비스 개발자 안내서 개요](./overview.md)를 참조하십시오.
