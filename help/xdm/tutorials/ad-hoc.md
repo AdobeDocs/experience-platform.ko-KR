@@ -6,7 +6,7 @@ description: 특정 상황에서는 단일 데이터 집합에서만 사용하�
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '823'
 ht-degree: 2%
