@@ -1,21 +1,17 @@
 ---
 keywords: PebblePost;페블포스트;PebblePost 프로그래머틱 다이렉트 메일;자블포스트 프로그래머틱 다이렉트 메일
-title: PebblePost 확장
-seo-title: PebblePost 확장
+title: 페블포스트 확장 대상
 description: PebblePost 익스텐션은 Adobe Experience Platform의 이메일 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
-seo-description: PebblePost 익스텐션은 Adobe Experience Platform의 이메일 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '581'
+source-wordcount: '554'
 ht-degree: 3%
 
 ---
 
 
 # [!DNL PebblePost] 확장 {#pebblepost-extension}
-
-## 개요 {#overview}
 
 [!DNL PebblePost's Programmatic Direct Mail®] 디지털 마케터는 온라인 관심사와 의도를 전환되는 오프라인 유형의 미디어에 연결할 수 있습니다. 마케터는 Adobe에서 만든 사용자 지정 데이터 세그먼트를 활용하여 고객과 연관성이 높고 오래 지속되는 내부 미디어 효과를 통해 소비자를 타깃팅할 수 있습니다. 응답 경로 활동 및 온사이트 전환을 기반으로 실시간으로 성과를 분석할 수 있습니다.
 
