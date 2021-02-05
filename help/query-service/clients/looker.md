@@ -1,27 +1,25 @@
 ---
 keywords: Experience Platform;home;popular topics;Query Service;Looker;looker;Connect to query service;;home;popular topics service;query service;looker;query service;
 solution: Experience Platform
-title: 룩과 연결
+title: 쿼리 서비스에 연결 보기
 topic: connect
 description: 이 문서에서는 Looker와 Adobe Experience Platform 쿼리 서비스를 연결하는 단계를 안내합니다.
 translation-type: tm+mt
-source-git-commit: bc1bbdddd75b11ac180b5e6faa391fd74e5f7e02
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '241'
+source-wordcount: '244'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Looker]
+# 쿼리 서비스에 [!DNL Looker] 연결
 
 이 문서에서는 [!DNL Looker]과(와) Adobe Experience Platform [!DNL Query Service]을(를) 연결하는 단계를 다룹니다.
 
 >[!NOTE]
 >
 > 이 안내서에서는 사용자가 이미 [!DNL Looker]에 액세스할 수 있으며 인터페이스를 탐색하는 방법에 익숙하다고 가정합니다. [!DNL Looker]에 대한 자세한 내용은 [공식 [!DNL Looker] 설명서](https://docs.looker.com/)에서 확인할 수 있습니다.
-
-## 플랫폼과 [!DNL Looker] 연결
 
 [!DNL Looker]에 로그인한 후 **[!DNL Admin]**&#x200B;을 선택하고 **[!DNL Connections]**&#x200B;를 차례로 선택합니다.
 
