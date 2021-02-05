@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;홈;인기 항목
 solution: Experience Platform
-title: ' Adobe Experience Platform 시작하기'
+title: Adobe Experience Platform 시작하기
 topic: getting started
 description: 이 비디오에서는 Experience Platform에 대한 간단한 소개 내용을 제공하며 이 비디오에서 해결하는 비즈니스 과제에 대해 설명합니다.
 translation-type: tm+mt
-source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
+source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
 workflow-type: tm+mt
 source-wordcount: '49'
-ht-degree: 24%
+ht-degree: 12%
 
 ---
 
