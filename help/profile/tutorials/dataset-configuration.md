@@ -5,7 +5,7 @@ topic: tutorial
 type: Tutorial
 description: 이 자습서는 Adobe Experience Platform API를 사용하여 실시간 고객 프로필 및 ID 서비스에 사용할 데이터 세트를 활성화하는 방법을 보여줍니다.
 translation-type: tm+mt
-source-git-commit: f34983dc13a900e7c8fe2e2cef454400c1b6a726
+source-git-commit: cad9c690be986961aea2969ef0ade975f33a8ee5
 workflow-type: tm+mt
 source-wordcount: '1057'
 ht-degree: 1%
