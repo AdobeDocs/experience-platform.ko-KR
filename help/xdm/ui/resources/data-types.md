@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: Experience Platform 사용자 인터페이스에서 데이터 유형을 만들고 편집하는 방법을 알아봅니다.
 translation-type: tm+mt
-source-git-commit: eca896ca068a02da7ec7379e8ced2105bbca9f2d
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '1137'
 ht-degree: 0%
