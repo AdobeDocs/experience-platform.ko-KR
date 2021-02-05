@@ -1,22 +1,22 @@
 ---
 keywords: Experience Platform;home;popular topics분석;분류
-description: 이 자습서에서는 분류 데이터를 Adobe Experience Platform에 가져오기 위해 UI에서 Adobe Analytics 분류 데이터 커넥터를 만드는 단계를 제공합니다.
+description: UI에서 Adobe Analytics 소스 커넥터를 만들어 분류 데이터를 Adobe Experience Platform에 가져오는 방법에 대해 알아봅니다.
 solution: Experience Platform
-title: UI에서 Adobe Analytics 분류 데이터 커넥터 만들기
+title: UI에서 분류 데이터에 대한 Adobe Analytics 소스 연결 만들기
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '659'
+source-wordcount: '660'
 ht-degree: 0%
 
 ---
 
 
-# UI에서 Adobe Analytics 분류 데이터 커넥터 만들기
+# UI에서 분류 데이터에 대한 Adobe Analytics 소스 연결 만들기
 
-이 자습서에서는 분류 데이터를 Adobe Experience Platform에 가져오기 위해 UI에서 Adobe Analytics 분류 데이터 커넥터를 만드는 단계를 제공합니다.
+이 자습서에서는 분류 데이터를 Adobe Experience Platform에 가져오기 위해 UI에서 Adobe Analytics 분류 데이터 소스 연결을 만드는 단계를 제공합니다.
 
 ## 시작하기
 
@@ -56,7 +56,7 @@ Analytics 분류 데이터 커넥터를 사용하려면 데이터를 사용하�
 * **[!UICONTROL 데이터 유형]**:선택한 수를 표시합니다 [!DNL Classifications].
 * **[!UICONTROL 예약]**:데이터의 동기화 빈도를  [!DNL Classifications] 표시합니다.
 
-데이터 흐름을 검토했으면 **[!UICONTROL 완료]**&#x200B;를 클릭하고 데이터 흐름을 만드는 데 약간의 시간이 소요됩니다.
+데이터 흐름을 검토했으면 **[!UICONTROL 완료]**&#x200B;를 클릭하고 데이터 흐름을 만들 시간을 잠시 기다립니다.
 
 ![](../../../../images/tutorials/create/classifications/review.png)
 
@@ -86,5 +86,5 @@ Analytics 분류 데이터 커넥터를 사용하려면 데이터를 사용하�
 이 자습서를 따라 [!DNL Classifications] 데이터를 [!DNL Platform]에 가져오는 분석 분류 데이터 커넥터를 만들었습니다. [!DNL Analytics] 및 [!DNL Classifications] 데이터에 대한 자세한 내용은 다음 문서를 참조하십시오.
 
 * [분석 데이터 커넥터 개요](../../../../connectors/adobe-applications/analytics.md)
-* [UI에서 분석 데이터 커넥터 만들기](./analytics.md)
+* [UI에서 분석 데이터 연결 만들기](./analytics.md)
 * [분류 정보](https://experienceleague.adobe.com/docs/analytics/components/classifications/c-classifications.html)
