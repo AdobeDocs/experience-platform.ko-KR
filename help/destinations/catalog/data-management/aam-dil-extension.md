@@ -1,21 +1,17 @@
 ---
 keywords: Audience Manager DIL 확장;대상 대상 대상 대상 관리자;dil 확장
-title: Audience Manager DIL 확장
-seo-title: Audience Manager DIL 확장
+title: Audience Manager DIL 확장 대상
 description: Audience Manager DIL 확장은 Adobe Experience Platform의 DMP(데이터 관리 플랫폼) 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
-seo-description: Audience Manager DIL 확장은 Adobe Experience Platform의 DMP(데이터 관리 플랫폼) 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '594'
+source-wordcount: '560'
 ht-degree: 3%
 
 ---
 
 
 # Audience Manager DIL 확장 {#aam-dil-extension}
-
-## 개요 {#overview}
 
 Adobe Audience Manager Data Integration Library 확장(클라이언트측 구현)입니다. 참고:이 확장은 Adobe Analytics 데이터의 서버측 전달(SSF)에 사용되지 않습니다. SSF의 경우 Adobe Analytics 확장 기능을 사용합니다. 중요:버전 8.0부터 시작하여 DIL은 [!DNL Experience Cloud] ID 서비스 버전 3.3 이상에 대한 강한 종속성을 갖습니다. 전체 [!DNL Audience Manager] 데이터 통합 기능에 대해 [!DNL Experience Cloud] ID 서비스와 DIL을 모두 구현하십시오.
 
