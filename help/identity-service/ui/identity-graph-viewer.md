@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;홈;인기 항목;ID 그래프 뷰어;ID 그래프 뷰어;그래프 뷰어;그래프 뷰어;ID 네임스페이스;ID;ID;Service;ID 서비스;Identity Service;Identity Service
 solution: Experience Platform
-title: Adobe Experience Platform ID 서비스
+title: ID 그래프 뷰어 개요
 topic: tutorial
 description: ID 그래프는 특정 고객에 대해 서로 다른 ID 간의 관계를 보여주는 지도로, 고객이 다양한 채널에서 브랜드와 상호 작용하는 방식을 시각적으로 보여줍니다.
 translation-type: tm+mt
-source-git-commit: 22685a8519529ba7afb7e50262ea4d40a450b382
+source-git-commit: 8ec904d584225113a6791533ff544560fc2efdf3
 workflow-type: tm+mt
-source-wordcount: '930'
-ht-degree: 1%
+source-wordcount: '946'
+ht-degree: 0%
 
 ---
 
 
-# (베타) ID 그래프 뷰어
+# (베타) ID 그래프 뷰어 개요
 
 >[!NOTE]
 >
@@ -108,3 +108,9 @@ ID 그래프 뷰어에 액세스할 때 오류가 발생할 수 있습니다. �
 ## 다음 단계
 
 이 문서를 읽고 플랫폼 UI에서 고객의 ID 그래프를 살펴보는 방법을 알아보았습니다. 플랫폼의 ID에 대한 자세한 내용은 [ID 서비스 개요](../home.md)를 참조하십시오.
+
+## Journey Orchestration용
+
+다음 비디오는 ID 그래프 뷰어에 대한 이해를 지원하기 위한 것입니다.
+
+>[!VIDEO](https://video.tv.adobe.com/v/331030/?quality=12&learn=on)
