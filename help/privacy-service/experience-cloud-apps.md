@@ -5,7 +5,7 @@ title: Privacy Service 및 Experience Cloud 애플리케이션
 topic: overview
 description: 이 문서에서는 개인 정보 관련 작업에 대해 서로 다른 Experience Cloud 응용 프로그램을 구성하는 방법에 대한 참조를 제공합니다.
 translation-type: tm+mt
-source-git-commit: 5dad1fcc82707f6ee1bf75af6c10d34ff78ac311
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '576'
 ht-degree: 21%
