@@ -1,21 +1,17 @@
 ---
 keywords: 전자 메일;전자 메일;전자 메일 대상;oracle 응답 대상
-title: Oracle Responsys 대상
-seo-title: Oracle Responsys 대상
+title: Oracle Responsys 연결 대상
 description: Responsys는 Oracle이 이메일, 모바일, 디스플레이 및 소셜 상호 작용을 개인화하기 위해 제공하는 크로스채널 마케팅 캠페인을 위한 기업 이메일 마케팅 툴입니다.
-seo-description: Responsys는 Oracle이 이메일, 모바일, 디스플레이 및 소셜 상호 작용을 개인화하기 위해 제공하는 크로스채널 마케팅 캠페인을 위한 기업 이메일 마케팅 툴입니다.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '526'
+source-wordcount: '501'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Oracle Responsys]
-
-## 개요
+# [!DNL Oracle Responsys] 연결
 
 [응답](https://www.oracle.com/marketingcloud/products/cross-channel-orchestration/) 은 이메일, 모바일, 디스플레이 및 소셜 상호 작용을 개인화하기  [!DNL Oracle] 위해 제공되는 크로스채널 마케팅 캠페인을 위한 기업 이메일 마케팅 툴입니다.
 
