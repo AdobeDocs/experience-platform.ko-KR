@@ -5,15 +5,15 @@ user-guide-title: Adobe Experience Platform 데이터 수집 도움말
 breadcrumb-title: Data Ingestion 안내서
 user-guide-description: 일괄 처리 또는 스트리밍 통합 기능을 통해 데이터를 플랫폼에 가져올 수 있습니다.
 translation-type: tm+mt
-source-git-commit: cfdaf72b7f4bf190877006ccd4cc6a7fd014adc2
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
-source-wordcount: '124'
-ht-degree: 21%
+source-wordcount: '121'
+ht-degree: 22%
 
 ---
 
 
-# Adobe Experience Platform Data Ingestion {#ingestion}
+# Adobe Experience Platform 데이터 통합 {#ingestion}
 
 - [데이터 통합 개요](home.md)
 - 스트리밍 통합 {#streaming}
@@ -22,7 +22,7 @@ ht-degree: 21%
    - [문제 해결](streaming-ingestion/troubleshooting.md)
 - 일괄 처리{#batch}
    - [개요](batch-ingestion/overview.md)
-   - [일괄 처리 API](batch-ingestion/api-overview.md)
+   - [일괄 처리 통합 API](batch-ingestion/api-overview.md)
    - [부분 일괄 처리](batch-ingestion/partial.md)
    - [문제 해결](batch-ingestion/troubleshooting.md)
 - 자습서 {#tutorials}
@@ -32,15 +32,15 @@ ht-degree: 21%
    - [스트리밍 연결(API) 만들기](tutorials/create-streaming-connection.md)
    - [스트리밍 연결 만들기(UI)](tutorials/create-streaming-connection-ui.md)
    - [스트리밍 레코드 데이터](tutorials/streaming-record-data.md)
-   - [스트리밍 시계열 데이터](tutorials/streaming-time-series-data.md)
+   - [스트리밍 시간 시리즈 데이터](tutorials/streaming-time-series-data.md)
    - [여러 메시지 스트리밍](tutorials/streaming-multiple-messages.md)
-- 데이터 수집 품질 및 모니터링{#quality}
+- 데이터 품질 및 모니터링{#quality}
    - [개요](quality/overview.md)
    - [데이터 수집 모니터링](quality/monitor-data-ingestion.md)
    - [오류 진단 검색](quality/error-diagnostics.md)
    - [실패한 배치 검색](quality/retrieve-failed-batches.md)
    - [스트리밍 통합 유효성 검사](quality/streaming-validation.md)
-   - [데이터 수집 이벤트 가입](quality/subscribe-events.md)
+   - [데이터 통합 알림](quality/subscribe-events.md)
 - [소스 커넥터](source-connectors.md)
 - [API 참조](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)
 - [플랫폼 릴리스 정보](https://www.adobe.com/go/platform-release-notes-en)
