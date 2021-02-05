@@ -1,21 +1,17 @@
 ---
 keywords: QuestionPro Intercept Survey;questionpro intercept survey;Questionpro;questionpro
-title: QuestionPro 출구 설문 조사 확장
-seo-title: QuestionPro 출구 설문 조사 확장
+title: QuestionPro 출구 확장 대상
 description: QuestionPro 출구 설문 조사 확장은 Adobe Experience Platform의 설문 조사 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
-seo-description: QuestionPro 출구 설문 조사 확장은 Adobe Experience Platform의 설문 조사 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '563'
+source-wordcount: '532'
 ht-degree: 3%
 
 ---
 
 
 # [!DNL QuestionPro Intercept Surveys] 확장 {#questionpro-extension}
-
-## 개요 {#overview}
 
 [!DNL QuestionPro Intercept Surveys] 는 트랜잭션 시 또는 사용자가 웹 사이트를 시작/나갈 때 설문 조사를 배포하고 특성 데이터를 수집하는 플랫폼입니다.
 
