@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;popular topics;batch ingestion;통합;통합;개발자 가이드;api guide;upload;ingest Portable;ingest json
 solution: Experience Platform
-title: 일괄 처리 통합 개발자 가이드
+title: 일괄 처리 통합 API 안내서
 topic: developer guide
 description: 이 문서에서는 일괄 처리 통합 API 사용에 대한 포괄적인 개요를 제공합니다.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
 source-wordcount: '2698'
 ht-degree: 5%
@@ -13,7 +13,7 @@ ht-degree: 5%
 ---
 
 
-# 일괄 처리 통합 개발자 가이드
+# 일괄 처리 통합 API 안내서
 
 이 문서에서는 [일괄 처리 통합 API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) 사용에 대한 포괄적인 개요를 제공합니다.
 
