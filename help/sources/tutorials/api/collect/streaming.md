@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;홈;인기 항목;클라우드 저장소 데이터;스트리밍 데이터;스트리밍 데이터;;home;popular topics;cloud storage data;streaming data;streaming
 solution: Experience Platform
-title: 소스 커넥터 및 API를 통해 스트리밍 데이터 수집
+title: 소스 커넥터 및 API를 사용하여 스트리밍 데이터 수집
 topic: overview
 type: Tutorial
-description: 이 자습서에서는 스트리밍 데이터를 검색하고 소스 커넥터 및 API를 통해 플랫폼에 가져오는 절차를 다룹니다.
+description: 이 자습서에서는 소스 커넥터 및 API를 사용하여 스트리밍 데이터를 검색하고 플랫폼에 가져오는 절차를 다룹니다.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '1303'
 ht-degree: 2%
@@ -14,7 +14,7 @@ ht-degree: 2%
 ---
 
 
-# 소스 커넥터 및 API를 통해 스트리밍 데이터 수집
+# 소스 커넥터 및 API를 사용하여 스트리밍 데이터 수집
 
 [!DNL Flow Service] 는 Adobe Experience Platform 내의 다양한 소스에서 수집한 고객 데이터를 수집하고 중앙에서 관리하는 데 사용됩니다. 이 서비스는 지원되는 모든 소스가 연결되어 있는 사용자 인터페이스와 RESTful API를 제공합니다.
 
