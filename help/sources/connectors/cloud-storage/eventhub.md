@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;홈;인기 항목;Azure 이벤트 허브;azure 이벤트 허브;이벤트 허브;이벤트 허브;이벤트 허브
 solution: Experience Platform
-title: Azure 이벤트 허브 커넥터
+title: Azure 이벤트 허브 원본 커넥터 개요
 topic: overview
-description: 아래 설명서는 API 또는 사용자 인터페이스를 사용하여 Azure 이벤트 허브를 플랫폼에 연결하는 방법에 대한 정보를 제공합니다.
+description: API 또는 사용자 인터페이스를 사용하여 Azure 이벤트 허브를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
 source-wordcount: '248'
 ht-degree: 0%
@@ -33,10 +33,10 @@ Adobe Experience Platform은 AWS, [!DNL Google Cloud Platform] 및 [!DNL Azure] 
 
 ### API 사용
 
-- [흐름 서비스 API를 사용하여 Azure 이벤트 허브 커넥터를 만듭니다.](../../tutorials/api/create/cloud-storage/eventhub.md)
+- [흐름 서비스 API를 사용하여 Azure 이벤트 허브 원본 연결 만들기](../../tutorials/api/create/cloud-storage/eventhub.md)
 - [Flow Service API를 사용하여 스트리밍 데이터 수집](../../tutorials/api/collect/streaming.md)
 
 ### UI 사용
 
-- [UI에서 Azure 이벤트 허브 소스 커넥터 만들기](../../tutorials/ui/create/cloud-storage/eventhub.md)
-- [UI에서 클라우드 스토리지 커넥터에 대한 데이터 흐름 구성](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
+- [UI에서 Azure 이벤트 허브 소스 연결 만들기](../../tutorials/ui/create/cloud-storage/eventhub.md)
+- [UI에서 클라우드 스토리지 연결에 대한 데이터 흐름 구성](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
