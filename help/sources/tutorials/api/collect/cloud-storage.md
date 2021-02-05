@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;홈;인기 항목;클라우드 저장소 데이터
 solution: Experience Platform
-title: 소스 커넥터 및 API를 통해 클라우드 스토리지 데이터 수집
+title: 소스 커넥터 및 API를 사용하여 클라우드 스토리지 데이터 수집
 topic: overview
 type: Tutorial
-description: 이 자습서에서는 제3자 클라우드 저장소에서 데이터를 검색하고 소스 커넥터 및 API를 통해 플랫폼에 가져오는 절차를 다룹니다.
+description: 이 자습서에서는 소스 커넥터 및 API를 사용하여 제3자 클라우드 저장소에서 데이터를 검색하고 플랫폼으로 가져오는 절차를 다룹니다.
 translation-type: tm+mt
-source-git-commit: c168a1b597a1ac2d85a8b896f3b6a8d213fcb1ae
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
 source-wordcount: '1639'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 ---
 
 
-# 소스 커넥터 및 API를 통해 클라우드 스토리지 데이터 수집
+# 소스 커넥터 및 API를 사용하여 클라우드 스토리지 데이터 수집
 
 이 자습서에서는 소스 커넥터 및 [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)를 통해 제3자 클라우드 저장소에서 데이터를 검색하고 플랫폼으로 가져오는 절차를 다룹니다.
 
