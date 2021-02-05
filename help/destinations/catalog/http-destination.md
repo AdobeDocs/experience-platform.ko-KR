@@ -1,25 +1,21 @@
 ---
 keywords: 스트리밍;
-title: HTTP 대상은 프로필 데이터를 타사 HTTP 끝점으로 보내는 데 도움이 되는 Adobe Experience Platform 대상입니다.
-seo-title: HTTP 대상은 프로필 데이터를 타사 HTTP 끝점으로 보내는 데 도움이 되는 Adobe Experience Platform 대상입니다.
-description: HTTP 대상은 프로필 데이터를 타사 HTTP 끝점으로 보내는 데 도움이 되는 Adobe Experience Platform 대상입니다.
-seo-description: HTTP 대상은 프로필 데이터를 타사 HTTP 끝점으로 보내는 데 도움이 되는 Adobe Experience Platform 대상입니다.
+title: HTTP 연결 대상
+description: Adobe Experience Platform의 HTTP 대상을 사용하면 프로필 데이터를 타사 HTTP 끝점으로 보낼 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 95f57f9d1b3eeb0b16ba209b9774bd94f5758009
+source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
 workflow-type: tm+mt
-source-wordcount: '545'
+source-wordcount: '488'
 ht-degree: 2%
 
 ---
 
 
-# (알파) [!DNL HTTP] 대상
+# (알파) [!DNL HTTP] 연결
 
 >[!IMPORTANT]
 >
 >플랫폼의 [!DNL HTTP] 대상이 현재 알파입니다. 설명서 및 기능은 변경될 수 있습니다.
-
-## 개요 {#overview}
 
 [!DNL HTTP] 대상은 제3자 [!DNL HTTP] 끝점으로 프로필 데이터를 보내는 데 도움이 되는 [!DNL Adobe Experience Platform] 스트리밍 대상입니다.
 
