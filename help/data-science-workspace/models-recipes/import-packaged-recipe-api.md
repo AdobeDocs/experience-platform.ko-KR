@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;패키지화된 레서피 가져오기;데이터 과학 작업 공간;인기 항목;레서피;api;sensei 기계 학습;엔진 만들기
 solution: Experience Platform
-title: 패키지화된 레서피(API) 가져오기
+title: Sensei Machine Learning API를 사용하여 패키징된 레서피 가져오기
 topic: tutorial
 type: Tutorial
 description: '이 자습서는 Sensei 기계 학습 API를 사용하여 사용자 인터페이스에서 레서피라고도 하는 엔진을 만듭니다. '
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
 workflow-type: tm+mt
-source-wordcount: '997'
+source-wordcount: '1007'
 ht-degree: 2%
 
 ---
 
 
-# 패키지화된 레서피(API) 가져오기
+# Sensei Machine Learning API를 사용하여 패키징된 레서피 가져오기
 
 이 자습서는 [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)을 사용하여 사용자 인터페이스에서 레서피라고도 하는 [엔진](../api/engines.md)을 만듭니다.
 
