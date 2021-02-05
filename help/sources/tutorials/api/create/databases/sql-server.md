@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;home;popular topics;Microsoft SQL;microsoft sql;sql server;SQL server;;home;popular topics;Microsoft SQL;sql server;SQL server
 solution: Experience Platform
-title: Flow Service API를 사용하여 SQL Server 커넥터 만들기
+title: Flow Service API를 사용하여 SQL Server 소스 연결 만들기
 topic: overview
 type: Tutorial
-description: 이 자습서에서는 Flow Service API를 사용하여 Experience Platform을 Microsoft SQL Server(이하 "SQL Server"라 한다)에 연결하는 단계를 안내합니다.
+description: Flow Service API를 사용하여 Microsoft SQL Server에 Adobe Experience Platform을 연결하는 방법을 알아봅니다.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '618'
+source-wordcount: '609'
 ht-degree: 1%
 
 ---
 
 
-# [!DNL Flow Service] API를 사용하여 [!DNL Microsoft] SQL Server 커넥터를 만듭니다.
+# [!DNL Flow Service] API를 사용하여 [!DNL Microsoft] SQL Server 소스 연결 만들기
 
 >[!NOTE]
 >
