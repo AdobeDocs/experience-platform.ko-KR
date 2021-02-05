@@ -5,17 +5,17 @@ seo-title: 대상 카탈로그
 description: 대상 카탈로그는 데이터를 받을 준비가 된 사용 가능한 대상 목록을 제공합니다. 이러한 대상에는 Adobe 솔루션, 광고 플랫폼, 설문 조사 플랫폼, 이메일 마케팅 플랫폼 등이 포함됩니다.
 seo-description: 대상 카탈로그는 데이터를 받을 준비가 된 사용 가능한 대상 목록을 제공합니다. 이러한 대상에는 Adobe 솔루션, 광고 플랫폼, 설문 조사 플랫폼, 이메일 마케팅 플랫폼 등이 포함됩니다.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '170'
+source-wordcount: '174'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Destinations Catalog]
+# 대상 카탈로그
 
-**[!DNL Destinations Catalog]**&#x200B;은 데이터를 받을 준비가 된 사용 가능한 대상 플랫폼 목록을 제공합니다. 이러한 대상 플랫폼에는 Adobe 솔루션, 광고 플랫폼, 설문 조사 플랫폼, 이메일 마케팅 플랫폼, Experience Platform 확장 등이 포함됩니다.
+대상 카탈로그는 데이터를 받을 준비가 된 사용 가능한 대상 플랫폼 목록을 제공합니다. 이러한 대상 플랫폼에는 Adobe 솔루션, 광고 플랫폼, 설문 조사 플랫폼, 이메일 마케팅 플랫폼, Experience Platform 확장 등이 포함됩니다.
 
 카탈로그를 탐색하여 광고 및 개인화 사용 사례에 가장 적합한 대상 플랫폼을 결정한 다음 세그먼트를 대상에 활성화하려면 흐름을 설정합니다.
 
