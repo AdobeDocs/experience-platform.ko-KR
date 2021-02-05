@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;홈;인기 항목
 solution: Experience Platform
-title: Privacy Service API 개발자 가이드 부록
+title: Privacy Service API 안내서 부록
 topic: developer guide
 description: 이 문서에는 Privacy Service API 작업에 대한 추가 정보가 포함되어 있습니다.
 translation-type: tm+mt
-source-git-commit: 5dad1fcc82707f6ee1bf75af6c10d34ff78ac311
+source-git-commit: b395535cbe7e4030606ee2808eb173998f5c32e0
 workflow-type: tm+mt
-source-wordcount: '498'
+source-wordcount: '501'
 ht-degree: 9%
 
 ---
 
 
-# 부록
+# Privacy Service API 안내서 부록
 
 다음 섹션에는 Adobe Experience Platform Privacy Service API 작업에 대한 추가 정보가 포함되어 있습니다.
 
