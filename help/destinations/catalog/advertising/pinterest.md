@@ -1,21 +1,17 @@
 ---
 keywords: Pinterest;Pinterest;Pinterest 변환 추적;고정 변환 추적
-title: Pinterest 전환 추적 확장
-seo-title: Pinterest 전환 추적 확장
+title: Pinterest 전환 추적 확장 대상
 description: Pinterest 전환 추적 확장은 Adobe Experience Platform의 광고 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
-seo-description: Pinterest 전환 추적 확장은 Adobe Experience Platform의 광고 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '567'
+source-wordcount: '536'
 ht-degree: 3%
 
 ---
 
 
 # [!DNL Pinterest Conversion Tracking] 확장 {#pinterest-extension}
-
-## 개요 {#overview}
 
 홍보 PIN을 본 후 웹 사이트에서 방문자 작업을 추적합니다. 광고 지출에 대한 수익률을 측정하고 타깃팅된 고객을 생성할 수 있습니다. [여기](https://ads.pinterest.com/)에서 추가 정보를 확인하십시오.
 
