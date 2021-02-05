@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;홈;인기 항목;쿼리 서비스;쿼리 서비스;;home;popular topics;query service;query
 solution: Experience Platform
-title: 쿼리 서비스 개발자 가이드
+title: 쿼리 서비스 API 안내서
 topic: query templates
-description: 이 개발자 안내서에서는 Adobe Experience Platform 쿼리 서비스 API에서 다양한 작업을 수행하는 단계를 제공합니다.
+description: 쿼리 서비스 API를 사용하면 개발자는 표준 SQL을 사용하여 Adobe Experience Platform 데이터를 쿼리할 수 있습니다. API를 사용하여 주요 작업을 수행하는 방법에 대해 알아보려면 이 안내서를 따르십시오.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
 workflow-type: tm+mt
-source-wordcount: '383'
+source-wordcount: '395'
 ht-degree: 1%
 
 ---
 
 
-# [!DNL Query Service] 개발자 가이드
+# [!DNL Query Service] API 안내서
 
 이 개발자 안내서에서는 Adobe Experience Platform [!DNL Query Service] API에서 다양한 작업을 수행하는 단계를 제공합니다.
 
