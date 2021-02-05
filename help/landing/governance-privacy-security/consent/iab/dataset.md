@@ -5,7 +5,7 @@ title: IAB TCF 2.0 동의 데이터를 캡처하기 위한 데이터 집합 만�
 topic: privacy events
 description: 이 문서에서는 IAB TCF 2.0 동의 데이터를 수집하기 위해 필요한 데이터 세트를 2개 설정하는 절차를 제공합니다.
 translation-type: tm+mt
-source-git-commit: 58bafd206e42caba9879594ca95fe17376be327b
+source-git-commit: b0af9d49f6cfe50f6dff745dfac174dbaa76d070
 workflow-type: tm+mt
 source-wordcount: '1645'
 ht-degree: 0%
