@@ -1,21 +1,17 @@
 ---
 keywords: 분기;분기 확장;분기 대상
-title: 분기 확장
-seo-title: 분기 확장
+title: 분기 확장 대상
 description: 분기 확장은 Adobe Experience Platform의 광고 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
-seo-description: 분기 확장은 Adobe Experience Platform의 광고 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '525'
+source-wordcount: '498'
 ht-degree: 3%
 
 ---
 
 
 # [!DNL Branch] 확장 {#branch-extension}
-
-## 개요 {#overview}
 
 브랜치는 모든 디바이스, 채널 및 플랫폼에서 고객의 참여를 유도하고 측정할 수 있는 강력한 링크 및 솔루션을 제공합니다.
 
