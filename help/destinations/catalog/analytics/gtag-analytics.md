@@ -1,21 +1,17 @@
 ---
 keywords: Google 글로벌 사이트 태그;태그;google 태그;google 확장;google 태그 확장;GTAG 확장;GTAG
-title: Google 글로벌 사이트 태그 확장
-seo-title: Google 글로벌 사이트 태그 확장
+title: Google 글로벌 사이트 태그 확장 대상
 description: Google 글로벌 사이트 태그 확장 기능은 Adobe Experience Platform의 분석 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
-seo-description: Google 글로벌 사이트 태그 확장 기능은 Adobe Experience Platform의 분석 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '560'
+source-wordcount: '527'
 ht-degree: 3%
 
 ---
 
 
 # [!DNL Google Global Site Tag] 확장 {#gtag-analytics-extension}
-
-## 개요 {#overview}
 
 데이터를 [!DNL Google's Global Site Tag] 또는 gtag.js를 통해 [!DNL Google Analytics], [!DNL Google Ads] 및 [!DNL Google Marketing Platform]로 보냅니다. 제품당 여러 계정을 구성할 수 있습니다.
 
