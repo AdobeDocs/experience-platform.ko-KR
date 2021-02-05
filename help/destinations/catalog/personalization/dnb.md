@@ -1,21 +1,17 @@
 ---
 keywords: D&B 방문자 인텔리전스;D&B;방문자 인텔리전스 확장
-title: D&B 방문자 인텔리전스 확장
-seo-title: D&B 방문자 인텔리전스 확장
+title: D&B 방문자 인텔리전스 확장 대상
 description: D&B 방문자 인텔리전스 익스텐션은 Adobe Experience Platform의 개인화 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
-seo-description: D&B 방문자 인텔리전스 익스텐션은 Adobe Experience Platform의 개인화 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '534'
+source-wordcount: '501'
 ht-degree: 3%
 
 ---
 
 
 # [!DNL D&B Visitor Intelligence] 확장 {#dnb-extension}
-
-## 개요 {#overview}
 
 알 수 없는 방문자를 분석하여 리드로 변환합니다.
 
