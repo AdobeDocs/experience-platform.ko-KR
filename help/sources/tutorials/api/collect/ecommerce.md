@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;홈;인기 항목;전자 상거래 데이터 수집;eCommerce 데이터
 solution: Experience Platform
-title: 소스 커넥터 및 API를 통해 전자 상거래 데이터 수집
+title: 소스 커넥터 및 API를 사용하여 전자 상거래 데이터 수집
 topic: overview
 type: Tutorial
-description: 이 자습서에서는 제3자 eCommerce 시스템에서 데이터를 검색하고 소스 커넥터 및 API를 통해 플랫폼에 데이터를 수집하는 절차를 다룹니다.
+description: 이 자습서에서는 제3자 eCommerce 시스템에서 데이터를 검색하고 소스 커넥터 및 API를 사용하여 이를 플랫폼에 인제스트하는 절차를 다룹니다.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '1489'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 ---
 
 
-# 소스 커넥터 및 API를 통해 전자 상거래 데이터 수집
+# 소스 커넥터 및 API를 사용하여 전자 상거래 데이터 수집
 
 이 자습서에서는 제3자 **[!UICONTROL eCommerce]** 시스템에서 데이터를 검색하고 소스 커넥터 및 [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)를 통해 [!DNL Platform]에 데이터를 인제하는 절차를 다룹니다.
 
