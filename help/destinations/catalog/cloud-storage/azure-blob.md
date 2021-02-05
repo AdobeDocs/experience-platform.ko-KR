@@ -1,19 +1,17 @@
 ---
 keywords: Azure Blob;Blob 대상;s3;azure Blob 대상
-title: Azure Blob 대상
-seo-title: Azure Blob 대상
+title: Azure Blob 연결 대상
 description: Azure Blob 저장소에 대한 실시간 아웃바운드 연결을 만들어 Adobe Experience Platform에서 탭으로 구분된 데이터 또는 CSV 데이터 파일을 주기적으로 내보냅니다.
-seo-description: Azure Blob 저장소에 대한 실시간 아웃바운드 연결을 만들어 Adobe Experience Platform에서 탭으로 구분된 데이터 또는 CSV 데이터 파일을 주기적으로 내보냅니다.
 translation-type: tm+mt
-source-git-commit: 739c7cb55f943675d5ee63d81bba58a2b250c814
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '506'
+source-wordcount: '477'
 ht-degree: 1%
 
 ---
 
 
-# UI에서 [!DNL Azure Blob] 대상 만들기
+# [!DNL Azure Blob] 연결
 
 [!DNL Azure Blob] (이하 &quot;[!DNL Blob]&quot;라 한다)는 클라우드를 위한 Microsoft의 객체 스토리지 솔루션입니다. 이 자습서에서는 [!DNL Platform] 사용자 인터페이스를 사용하여 [!DNL Blob] 대상을 만드는 단계를 제공합니다.
 
