@@ -5,7 +5,7 @@ title: XDM ExperienceEvent 클래스
 topic: overview
 description: 이 문서에서는 XDM ExperienceEvent 클래스의 개요를 제공합니다.
 translation-type: tm+mt
-source-git-commit: 00010d38a5d05800aeac9af8505093fee3593b45
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '820'
 ht-degree: 1%
