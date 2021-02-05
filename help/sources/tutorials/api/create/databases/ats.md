@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;홈;인기 항목;ATS;Azure 테이블 저장소
 solution: Experience Platform
-title: 흐름 서비스 API를 사용하여 Azure 테이블 저장소 커넥터 만들기
+title: 흐름 서비스 API를 사용하여 Azure 테이블 저장소 원본 연결 만들기
 topic: overview
 type: Tutorial
-description: 이 자습서에서는 흐름 서비스 API를 사용하여 Azure 테이블 저장소(이하 "ATS"라 한다)를 Experience Platform에 연결하는 단계를 안내합니다.
+description: 흐름 서비스 API를 사용하여 Azure 테이블 저장소를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '594'
+source-wordcount: '586'
 ht-degree: 2%
 
 ---
 
 
-# [!DNL Flow Service] API를 사용하여 [!DNL Azure Table Storage] 커넥터를 만듭니다.
+# [!DNL Flow Service] API를 사용하여 [!DNL Azure Table Storage] 소스 연결 만들기
 
 >[!NOTE]
 >
