@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;홈;인기 항목;Azure Blob;azure blob;Azure Blob 커넥터
 solution: Experience Platform
-title: UI에서 Azure Blob 소스 커넥터 만들기
+title: UI에서 Azure Blob 소스 연결 만들기
 topic: overview
 type: Tutorial
-description: 이 자습서에서는 플랫폼 사용자 인터페이스를 사용하여 Azure Blob(이하 "Blob"라고 함)을 만드는 단계를 제공합니다.
+description: 플랫폼 사용자 인터페이스를 사용하여 Azure Blob 소스 커넥터를 만드는 방법을 알아봅니다.
 translation-type: tm+mt
-source-git-commit: e22e57e20b985b50e1d29e944fb8f04addc91703
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '649'
+source-wordcount: '644'
 ht-degree: 1%
 
 ---
 
 
-# UI에 [!DNL Azure Blob] 소스 커넥터 만들기
+# UI에 [!DNL Azure Blob] 소스 연결 만들기
 
 이 자습서에서는 플랫폼 사용자 인터페이스를 사용하여 [!DNL Azure Blob](이하 &quot;a1/>&quot;라 함)을 만드는 단계를 제공합니다.[!DNL Blob]
 
