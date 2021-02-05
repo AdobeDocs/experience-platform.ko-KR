@@ -1,21 +1,17 @@
 ---
 keywords: 이메일;이메일;이메일;이메일 대상;oracle 언변;oracle
-title: Oracle 언변 대상
-seo-title: Oracle 언변 대상
+title: Oracle 언변 연결 대상
 description: Oracle Fura는 B2B 마케터 및 조직이 마케팅 캠페인과 영업 리드 생성을 관리하는 데 도움이 되는 Oracle이 제공하는 마케팅 자동화를 위한 서비스(SaaS) 플랫폼입니다.
-seo-description: Oracle Fura는 B2B 마케터 및 조직이 마케팅 캠페인과 영업 리드 생성을 관리하는 데 도움이 되는 Oracle이 제공하는 마케팅 자동화를 위한 서비스(SaaS) 플랫폼입니다.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '555'
+source-wordcount: '521'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Oracle Eloqua]
-
-## 개요
+# [!DNL Oracle Eloqua] 연결
 
 [[!DNL Oracle Eloqua]](https://www.oracle.com/marketingcloud/products/marketing-automation/) 는 B2B 마케터 및 조직이 마케팅 캠페인 및 영업 리드 생성을 관리하는 데 도움이  [!DNL Oracle] 되는 마케팅 자동화를 위한 서비스(SaaS) 플랫폼입니다.
 
