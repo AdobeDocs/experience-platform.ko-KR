@@ -6,9 +6,9 @@ user-guide-title: Intelligent Services 도움말
 breadcrumb-title: Intelligent Services 안내서
 user-guide-description: 인텔리전트 AI 서비스를 활용하여 점수를 생성하고 인사이트를 발견하며 마케팅 이벤트 데이터를 통해 세그먼트를 만들 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 0675b38397667e8764c75e22a1e2f2e4aaddeb3c
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '120'
+source-wordcount: '119'
 ht-degree: 23%
 
 ---
@@ -23,9 +23,9 @@ ht-degree: 23%
    - [Attribution AI 시작하기](attribution-ai/getting-started.md)
    - [입력 및 출력](attribution-ai/input-output.md)
    - [사용자 인터페이스 가이드](attribution-ai/user-guide.md)
-   - [인사이트 찾기](attribution-ai/discover-insights.md)
-   - [점수 액세스](attribution-ai/download-scores.md)
-   - [AAI 쿼리 서비스 빠른 시작 안내서](attribution-ai/aai-query-service.md)
+   - [인사이트 발견](attribution-ai/discover-insights.md)
+   - [다운로드 점수](attribution-ai/download-scores.md)
+   - [쿼리 서비스를 사용하여 점수 분석](attribution-ai/aai-query-service.md)
 - 콘텐츠 및 상거래 AI(베타) {#content-commerce-ai}
    - [개요](content-commerce-ai/overview.md)
    - [시작하기](content-commerce-ai/getting-started.md)
@@ -41,7 +41,7 @@ ht-degree: 23%
    - [입력 및 출력](customer-ai/input-output.md)
    - UI 안내서{#user-guide}
       - [인스턴스 구성](customer-ai/user-guide/configure.md)
-      - [인사이트 찾기](customer-ai/user-guide/discover-insights.md)
+      - [인사이트 발견](customer-ai/user-guide/discover-insights.md)
       - [고객 AI 점수를 사용하여 세그먼트 만들기](customer-ai/user-guide/create-segment.md)
-      - [스코어 다운로드](customer-ai/user-guide/download-scores.md)
+      - [다운로드 점수](customer-ai/user-guide/download-scores.md)
 - [플랫폼 릴리스 정보](https://www.adobe.com/go/platform-release-notes-en)
