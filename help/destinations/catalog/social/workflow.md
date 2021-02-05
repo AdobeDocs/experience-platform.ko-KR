@@ -1,22 +1,18 @@
 ---
 keywords: Facebook;Facebook;소셜 네트워크;소셜 네트워크;소셜 네트워크 인증;소셜 네트워크 인증;Facebook;facebook;Social network authentication;Social network authentication
-title: 소셜 네트워크 대상 워크플로우
+title: 소셜 네트워크 대상 만들기
 type: Tutorial
-seo-title: 소셜 네트워크 대상 워크플로우
-description: 소셜 네트워크 및 계정에 연결하는 지침
-seo-description: 소셜 네트워크 및 계정에 연결하는 지침
+description: Adobe Experience Platform에서 소셜 네트워크 및 계정에 연결하는 방법을 알아봅니다.
 translation-type: tm+mt
-source-git-commit: d1aa2c825cd679d593cf97d84506058482a7fe8f
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '473'
+source-wordcount: '460'
 ht-degree: 0%
 
 ---
 
 
-# 소셜 네트워크 대상 인증 워크플로 {#social-network-destinations-workflow}
-
-## 소셜 네트워크 대상을 만드는 워크플로
+# 소셜 네트워크 대상 {#social-network-destinations-workflow} 만들기
 
 이 자습서에서는 [!DNL Facebook]을(를) 예로 사용하지만 제품에 한 번 더 추가되면 Adobe Experience Platform의 워크플로우는 모든 소셜 네트워크 대상에 대해 동일합니다.
 
