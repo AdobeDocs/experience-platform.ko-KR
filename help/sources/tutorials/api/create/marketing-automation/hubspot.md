@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;홈;인기 항목;허별색;Hubspot;home;popular topas;hubspot
 solution: Experience Platform
-title: Flow Service API를 사용하여 HubSpot 커넥터 만들기
+title: Flow Service API를 사용하여 허브 스팟 소스 연결 만들기
 topic: overview
 type: Tutorial
-description: 이 자습서에서는 Flow Service API를 사용하여 Experience Platform을 HubSpot에 연결하는 단계를 안내합니다.
+description: Flow Service API를 사용하여 Adobe Experience Platform을 HubSpot에 연결하는 방법을 알아봅니다.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '597'
+source-wordcount: '594'
 ht-degree: 1%
 
 ---
 
 
-# [!DNL Flow Service] API를 사용하여 [!DNL HubSpot] 커넥터를 만듭니다.
+# [!DNL Flow Service] API를 사용하여 [!DNL HubSpot] 소스 연결 만들기
 
 >[!NOTE]
 >
