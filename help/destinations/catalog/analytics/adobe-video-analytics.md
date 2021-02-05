@@ -1,21 +1,17 @@
 ---
 keywords: 미디어 분석 확장;미디어 분석;오디오 및 비디오 확장
-title: Adobe Media Analytics for Audio 및 Video 확장
-seo-title: Adobe Media Analytics for Audio 및 Video 확장
+title: 오디오 및 비디오 확장 대상에 대한 Adobe 미디어 분석
 description: 오디오 및 비디오용 Adobe 미디어 분석 익스텐션은 Adobe Experience Platform의 분석 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
-seo-description: Adobe Media Analytics for Video 익스텐션은 Adobe Experience Platform의 분석 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '575'
-ht-degree: 9%
+source-wordcount: '538'
+ht-degree: 6%
 
 ---
 
 
-# Adobe Media Analytics for Audio and Video 확장 {#adobe-analytics-for-video-extension}
-
-## 개요 {#overview}
+# Adobe Media Analytics for Audio 및 Video 확장 {#adobe-analytics-for-video-extension}
 
 Adobe Media Analytics for Audio 및 Video는 고객에게 비디오, 오디오 및 광고에 대한 강력한 측정을 제공하는 기본 Analytics 서비스에 대한 추가 기능입니다.
 
