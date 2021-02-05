@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;홈;인기 항목;Google 클라우드 스토리지;google 클라우드 스토리지;google;home;popular topics;Google
 solution: Experience Platform
-title: Flow Service API를 사용하여 Google 클라우드 스토리지 커넥터 만들기
+title: Flow Service API를 사용하여 Google 클라우드 스토리지 소스 연결 만들기
 topic: overview
 type: Tutorial
-description: 이 자습서에서는 Flow Service API를 사용하여 Experience Platform을 Google 클라우드 스토리지 계정에 연결하는 단계를 안내합니다.
+description: Flow Service API를 사용하여 Google Cloud 스토리지 계정에 Adobe Experience Platform을 연결하는 방법을 알아봅니다.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
-source-wordcount: '557'
+source-wordcount: '554'
 ht-degree: 2%
 
 ---
 
 
-# [!DNL Flow Service] API를 사용하여 [!DNL Google Cloud Storage] 커넥터를 만듭니다.
+# [!DNL Flow Service] API를 사용하여 [!DNL Google Cloud Storage] 소스 연결 만들기
 
 [!DNL Flow Service] 는 Adobe Experience Platform 내의 다양한 소스에서 수집한 고객 데이터를 수집하고 중앙에서 관리하는 데 사용됩니다. 이 서비스는 지원되는 모든 소스가 연결되어 있는 사용자 인터페이스와 RESTful API를 제공합니다.
 
