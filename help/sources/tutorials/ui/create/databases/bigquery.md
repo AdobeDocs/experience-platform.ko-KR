@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;home;popular topics;Google Big Query;google big query;GBQ;gbq
 solution: Experience Platform
-title: UI에서 Google Big Query 소스 커넥터 만들기
+title: UI에서 Google 대형 쿼리 소스 연결 만들기
 topic: overview
 type: Tutorial
-description: 이 자습서에서는 플랫폼 사용자 인터페이스를 사용하여 Google 빅 쿼리(이하 "GBQ") 소스 커넥터를 만드는 단계를 제공합니다.
+description: Adobe Experience Platform UI를 사용하여 Google Big Query 소스 연결을 만드는 방법을 알아봅니다.
 translation-type: tm+mt
-source-git-commit: 74fbf388cf645c89f9f6d00a5ae2e59ba94041b9
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '508'
+source-wordcount: '515'
 ht-degree: 0%
 
 ---
 
 
-# UI에 [!DNL Google Big Query] 소스 커넥터 만들기
+# UI에 [!DNL Google Big Query] 소스 연결 만들기
 
 >[!NOTE]
 >
