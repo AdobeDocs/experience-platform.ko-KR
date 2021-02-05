@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;홈;인기 항목;Amazon S3;Azure Blob
 solution: Experience Platform
-title: UI에서 Azure Blob 또는 Amazon S3 소스 커넥터 만들기
+title: UI에서 Azure Blob 또는 Amazon S3 소스 연결 만들기
 topic: overview
 type: Tutorial
-description: 'Adobe Experience Platform의 소스 커넥터는 예약된 기준에 따라 외부 소스 데이터를 인제스트하는 기능을 제공합니다. '
+description: Adobe Experience Platform UI를 사용하여 Azure Blob 또는 Amazon S3 소스 연결을 만드는 방법을 알아봅니다.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
 source-wordcount: '144'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 ---
 
 
-# UI에 [!DNL Azure Blob] 또는 [!DNL Amazon] S3 소스 커넥터를 만듭니다.
+# UI에 [!DNL Azure Blob] 또는 [!DNL Amazon] S3 소스 연결 만들기
 
 Adobe Experience Platform의 소스 커넥터는 예약된 기준에 따라 외부 소스 데이터를 인제스트하는 기능을 제공합니다.
 
