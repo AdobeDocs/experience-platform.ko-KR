@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;홈;인기 항목;샌드박스 개발자 안내서
 solution: Experience Platform
-title: 샌드박스 API 개발자 가이드
+title: 샌드박스 API 안내서
 topic: developer guide
-description: 이 개발자 안내서에서는 샌드박스 API를 사용하여 Experience Platform의 샌드박스를 관리하는 데 도움이 되는 단계를 제공하며 다양한 작업을 수행하기 위한 샘플 API 호출을 포함합니다.
+description: Sandbox API를 사용하면 개발자는 Adobe Experience Platform에서 샌드박스를 프로그래밍 방식으로 관리할 수 있습니다. API를 사용하여 주요 작업을 수행하는 방법에 대해 알아보려면 이 안내서를 따르십시오.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
 workflow-type: tm+mt
-source-wordcount: '376'
+source-wordcount: '373'
 ht-degree: 0%
 
 ---
 
 
-# 샌드박스 API 개발자 가이드
+# 샌드박스 API 안내서
 
 Adobe Experience Platform의 샌드박스는 제작 환경에 영향을 미치지 않고 기능을 테스트하고 실험을 실행하며 사용자 정의 구성을 만들 수 있는 분리된 개발 환경을 제공합니다.
 
