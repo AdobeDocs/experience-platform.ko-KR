@@ -5,7 +5,7 @@ description: Adobe Experience Platform 사용자 인터페이스에서 기존 �
 topic: user guide
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 2d6e833db7cd79135e6da4c68c9dca8cbed09ce4
+source-git-commit: 8d6916890a94300dc68d018d56579df9616c177c
 workflow-type: tm+mt
 source-wordcount: '502'
 ht-degree: 0%
@@ -205,11 +205,11 @@ ht-degree: 0%
 
 페이로드는 내보낼 사용자 지정 XDM 리소스를 나타내는 개체로서 각 배열 항목이 포함된 배열 형태를 취합니다. 위의 예에서 &quot;[!DNL Loyalty details]&quot; 사용자 정의 믹스인과 &quot;[!DNL Loyalty Members]&quot; 스키마가 포함됩니다. 스키마에서 사용되는 모든 핵심 리소스는 모든 샌드박스 및 IMS 조직에서 사용할 수 있으므로 내보내기에 포함되지 않습니다.
 
-조직의 테넌트 ID의 각 인스턴스는 페이로드에서 `<XDM_TENANTID_PLACEHOLDER>`으로 나타납니다. 다음 단계에서 스키마를 내보내는 위치에 따라 이러한 자리 표시자는 적절한 임차인 ID 값으로 자동 대체됩니다.
+조직의 테넌트 ID의 각 인스턴스는 페이로드에서 `<XDM_TENANTID_PLACEHOLDER>`으로 나타납니다. 다음 단계에서 스키마를 가져오는 위치에 따라 이러한 자리 표시자는 해당 테넌트 ID 값으로 자동 대체됩니다.
 
 ## API를 사용하여 리소스 가져오기
 
-스키마에 대한 내보내기 JSON을 복사했으면 스키마 레지스트리 API의 `/import` 끝점에 대한 POST 요청에 대한 페이로드로 사용할 수 있습니다. 스키마를 올바른 IMS 조직 및 샌드박스로 보내기 위한 호출을 구성하는 방법에 대한 자세한 내용은 API](../api/export-import.md#import)의 [XDM 리소스 가져오기 섹션을 참조하십시오.
+스키마에 대한 내보내기 JSON을 복사했으면 스키마 레지스트리 API의 `/import` 끝점에 대한 POST 요청에 대한 페이로드로 사용할 수 있습니다. 원하는 IMS 조직 및 샌드박스로 스키마를 보내는 호출을 구성하는 방법에 대한 자세한 내용은 API](../api/export-import.md#import)의 [XDM 리소스 가져오기 섹션을 참조하십시오.
 
 ## 다음 단계
 
