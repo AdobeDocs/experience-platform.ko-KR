@@ -1,23 +1,23 @@
 ---
-keywords: Experience Platform;home;popular topics;namespace;Namespace;namespaces;Namespaces;identity namespace;Identity namespace;identity;Identity
+keywords: Experience Platform;홈;인기 항목;네임스페이스;네임스페이스;네임스페이스;네임스페이스;네임스페이스;네임스페이스;ID 네임스페이스;ID 네임스페이스;ID 네임스페이스;ID;ID
 solution: Experience Platform
-title: 사용자 정의 네임스페이스 만들기
+title: ID 서비스 API에서 사용자 정의 네임스페이스 만들기
 topic: API guide
 description: ID 네임스페이스 API를 사용하여 조직에서만 사용할 수 있는 사용자 지정 ID 네임스페이스를 만들 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 3376d6cace9ab196f457e2bf7b84cde06693103c
+source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
 workflow-type: tm+mt
-source-wordcount: '95'
-ht-degree: 4%
+source-wordcount: '120'
+ht-degree: 3%
 
 ---
 
 
-# 사용자 정의 네임스페이스 만들기
+# ID 서비스 API에서 사용자 정의 네임스페이스 만들기
 
-API를 사용하여 [!DNL Identity Namespace] 조직에서만 사용할 수 있는 사용자 지정 ID 네임스페이스를 만들 수 있습니다.
+[!DNL Identity Namespace] API를 사용하여 조직에서만 사용할 수 있는 사용자 지정 ID 네임스페이스를 만들 수 있습니다.
 
-사용자 정의 네임스페이스 만들기에 대한 권장 사항 [은 Identity Service FAQ 설명서를 참조하십시오](../troubleshooting-guide.md).
+사용자 정의 네임스페이스 만들기에 대한 권장 사항은 [Identity Service FAQ 설명서](../troubleshooting-guide.md)를 참조하십시오.
 
 >[!NOTE]
 >
@@ -65,4 +65,4 @@ curl -X POST \
 
 ## 다음 단계
 
-다음 자습서로 진행하여 ID의 기본 ID를 [나열합니다](./list-native-id.md)
+다음 튜토리얼로 진행하여 [ID](./list-native-id.md)의 기본 ID를 나열합니다.
