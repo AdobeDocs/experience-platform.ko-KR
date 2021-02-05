@@ -1,25 +1,21 @@
 ---
 keywords: Amazon Kinesis;kinesis destination;kinesis
-title: Amazon Kinesis 대상
-seo-title: Amazon Kinesis 대상
+title: Amazon Kinesis 연결 대상
 description: Amazon Kinesis 스토리지에 대한 실시간 아웃바운드 연결을 생성하여 Adobe Experience Platform의 데이터를 스트리밍합니다.
-seo-description: Amazon Kinesis 스토리지에 대한 실시간 아웃바운드 연결을 생성하여 Adobe Experience Platform의 데이터를 스트리밍합니다.
 translation-type: tm+mt
-source-git-commit: a78dd4b95896387aa1daa022c9e1d5a6cf978448
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '471'
+source-wordcount: '451'
 ht-degree: 2%
 
 ---
 
 
-# (베타) [!DNL Amazon Kinesis] 대상
+# (베타) [!DNL Amazon Kinesis] 연결
 
 >[!IMPORTANT]
 >
 >플랫폼의 [!DNL Amazon Kinesis] 대상이 현재 베타 상태입니다. 설명서 및 기능은 변경될 수 있습니다.
-
-## 개요 {#overview}
 
 [!DNL Amazon Web Services]의 [!DNL Kinesis Data Streams] 서비스를 사용하면 대량의 데이터 레코드를 실시간으로 수집하고 처리할 수 있습니다.
 
