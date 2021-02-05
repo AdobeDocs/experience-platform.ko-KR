@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;속성 ai;액세스 스코어;인기 항목;다운로드 스코어;특성 점수;내보내기;Attribution ai;Export
 solution: Experience Platform, Intelligent Services
-title: Attribution AI에서 점수 액세스
-topic: Accessing scores
+title: Attribution AI에서 스코어 다운로드
+topic: Downloading scores
 description: 이 문서는 Attribution AI의 스코어 다운로드 안내서 역할을 합니다.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '1056'
 ht-degree: 2%
