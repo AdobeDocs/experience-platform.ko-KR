@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;홈;인기 항목;데이터베이스 데이터베이스;타사 데이터베이스
 solution: Experience Platform
-title: 소스 커넥터 및 API를 통해 데이터베이스에서 데이터 수집
+title: 소스 커넥터 및 API를 사용하여 데이터베이스에서 데이터 수집
 topic: overview
 type: Tutorial
-description: 이 자습서에서는 소스 커넥터 및 API를 통해 데이터베이스에서 데이터를 검색하고 이를 플랫폼에 인제스트하는 절차를 다룹니다.
+description: 이 자습서에서는 소스 커넥터 및 API를 사용하여 데이터베이스에서 데이터를 검색하고 이를 플랫폼에 인제스트하는 절차를 다룹니다.
 translation-type: tm+mt
-source-git-commit: ddf5be2f30bc347a881bdcbc6b880f087c03e263
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
 source-wordcount: '1611'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 ---
 
 
-# 소스 커넥터 및 API를 통해 데이터베이스에서 데이터 수집
+# 소스 커넥터 및 API를 사용하여 데이터베이스에서 데이터 수집
 
 이 자습서에서는 소스 커넥터 및 [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)를 통해 제3자 데이터베이스에서 데이터를 검색하고 이를 플랫폼으로 인제하는 절차를 다룹니다.
 
