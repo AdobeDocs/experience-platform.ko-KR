@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;홈;인기 항목;클라우드 저장소;Cloud storage;home;popular topics;cloud storage
 solution: Experience Platform
-title: Flow Service API를 사용하여 클라우드 스토리지 시스템 살펴보기
+title: Flow Service API를 사용하여 클라우드 스토리지 시스템 탐색
 topic: overview
-description: 이 자습서에서는 Flow Service API를 사용하여 제3자 클라우드 스토리지 시스템을 탐색합니다.
+description: 이 자습서에서는 Flow Service API를 사용하여 타사 클라우드 스토리지 시스템을 탐색합니다.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '759'
+source-wordcount: '758'
 ht-degree: 2%
 
 ---
