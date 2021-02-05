@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;홈;인기 항목;액세스 제어;api;시작
 solution: Experience Platform
-title: 액세스 제어 개발자 가이드
+title: 액세스 제어 API 안내서
 topic: developer guide
-description: Adobe Experience Platform의 액세스 제어를 사용하면 Adobe Admin Console을 사용하여 다양한 플랫폼 기능에 대한 역할 및 권한을 관리할 수 있습니다. 다음 섹션에서는 스키마 레지스트리 API를 성공적으로 호출하기 위해 알아야 하는 추가 정보를 제공합니다.
+description: Adobe Experience Platform의 액세스 제어를 사용하면 Adobe Admin Console을 사용하여 다양한 플랫폼 기능에 대한 역할 및 권한을 관리할 수 있습니다. 다음 섹션에서는 스키마 레지스트리 API를 성공적으로 호출하기 위해 개발자가 알아야 하는 추가 정보를 제공합니다.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
 workflow-type: tm+mt
 source-wordcount: '389'
 ht-degree: 3%
@@ -13,7 +13,7 @@ ht-degree: 3%
 ---
 
 
-# [!DNL Access control] 개발자 가이드
+# [!DNL Access Control] API 안내서
 
 [!DNL Access control] for [!DNL Experience Platform] 은  [Adobe Admin Console](https://adminconsole.adobe.com)를 통해 관리됩니다. 이 기능은 Admin Console의 제품 프로필을 활용하므로 사용자에게 사용 권한 및 샌드박스를 연결합니다. 자세한 내용은 [액세스 제어 개요](../home.md)를 참조하십시오.
 
