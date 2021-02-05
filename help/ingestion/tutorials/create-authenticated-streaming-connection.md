@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: 인증된 데이터 수집을 사용하면 실시간 고객 프로필 및 ID와 같은 Adobe Experience Platform 서비스를 통해 신뢰할 수 있는 출처의 레코드와 신뢰할 수 없는 출처의 레코드를 구별할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
 source-wordcount: '674'
 ht-degree: 2%
