@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;홈;인기 항목;데이터 액세스;데이터 액세스 api;쿼리 데이터 액세스
 solution: Experience Platform
-title: 데이터 액세스 개요
+title: 데이터 액세스 API를 사용하여 데이터 세트 데이터 보기
 topic: tutorial
 type: Tutorial
-description: 이 문서에서는 Adobe Experience Platform의 데이터 액세스 API를 사용하여 데이터 세트 내에 저장된 데이터를 검색, 액세스 및 다운로드하는 방법을 설명하는 단계별 자습서를 제공합니다. 페이징 및 부분 다운로드와 같은 데이터 액세스 API의 몇 가지 고유한 기능을 소개합니다.
+description: Adobe Experience Platform의 데이터 액세스 API를 사용하여 데이터 세트 내에 저장된 데이터를 찾고, 액세스하고, 다운로드하는 방법을 알아봅니다. 페이징 및 부분 다운로드와 같은 데이터 액세스 API의 몇 가지 고유한 기능을 소개합니다.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '1400'
+source-wordcount: '1398'
 ht-degree: 2%
 
 ---
 
 
-# [!DNL Data Access] API를 사용하여 데이터 집합 데이터 쿼리
+# [!DNL Data Access] API를 사용하여 데이터 집합 데이터 보기
 
 이 문서에서는 Adobe Experience Platform의 [!DNL Data Access] API를 사용하여 데이터 세트 내에 저장된 데이터를 검색, 액세스 및 다운로드하는 방법을 설명하는 단계별 자습서를 제공합니다. 페이지 지정 및 부분 다운로드와 같은 [!DNL Data Access] API의 일부 고유 기능을 소개합니다.
 
