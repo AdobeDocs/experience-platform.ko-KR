@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;홈;인기 항목;마케팅 자동화 시스템;마케팅 자동화 데이터 수집
 solution: Experience Platform
-title: 소스 커넥터 및 API를 통해 마케팅 자동화 데이터 수집
+title: 소스 커넥터 및 API를 사용하여 마케팅 자동화 데이터 수집
 topic: overview
 type: Tutorial
-description: 이 자습서에서는 마케팅 자동화 시스템에서 데이터를 검색하고 소스 커넥터 및 API를 통해 플랫폼에 데이터를 가져오는 절차를 다룹니다.
+description: 이 자습서에서는 마케팅 자동화 시스템에서 데이터를 검색하고 소스 커넥터 및 API를 사용하여 Adobe Experience Platform으로 데이터를 가져오는 단계를 설명합니다.
 translation-type: tm+mt
-source-git-commit: a9a4bbbd7128043596ebab45d12bdd6954554537
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
-source-wordcount: '1537'
+source-wordcount: '1538'
 ht-degree: 1%
 
 ---
 
 
-# 소스 커넥터 및 API를 통해 마케팅 자동화 데이터 수집
+# 소스 커넥터 및 API를 사용하여 마케팅 자동화 데이터 수집
 
 이 자습서에서는 소스 커넥터 및 [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API를 통해 제3자 마케팅 자동화 시스템에서 데이터를 검색하고 이를 플랫폼으로 인제하는 절차를 다룹니다.
 
