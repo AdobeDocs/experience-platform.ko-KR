@@ -5,7 +5,7 @@ title: 데이터 사용 정책 개요
 topic: policies
 description: 데이터 사용 레이블이 데이터 규정 준수를 효과적으로 지원하기 위해서는 데이터 사용 정책을 구현해야 합니다. 데이터 사용 정책은 Experience Platform 내에서 데이터에 대해 수행하도록 허용되거나 제한된 마케팅 작업의 종류를 설명하는 규칙입니다.
 translation-type: tm+mt
-source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '1010'
 ht-degree: 0%
