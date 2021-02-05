@@ -1,19 +1,17 @@
 ---
 keywords: 클라우드 스토리지 대상;클라우드 스토리지
-title: 클라우드 스토리지 대상
-seo-title: 클라우드 스토리지 대상
-description: 플랫폼은 세그먼트를 Amazon S3, AWS Kinesis, Azure 이벤트 허브 또는 SFTP 클라우드 스토리지 위치에 데이터 파일로 제공할 수 있습니다.
-seo-description: 플랫폼은 세그먼트를 Amazon S3, AWS Kinesis, Azure 이벤트 허브 또는 SFTP 클라우드 스토리지 위치에 데이터 파일로 제공할 수 있습니다.
+title: 클라우드 스토리지 대상 개요
+description: Adobe Experience Platform은 세그먼트를 Amazon S3, AWS Kinesis, Azure 이벤트 허브 또는 SFTP 클라우드 스토리지 위치에 데이터 파일로 전달할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: b348a5493b13112291dd8e9234d457ff8c694147
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '182'
+source-wordcount: '161'
 ht-degree: 0%
 
 ---
 
 
-# 클라우드 스토리지 대상 {#cloud-storage-destinations}
+# 클라우드 스토리지 대상 개요 {#cloud-storage-destinations}
 
 Adobe Experience Platform은 세그먼트를 데이터 파일로 클라우드 스토리지 위치에 전달할 수 있습니다. 이렇게 하면 [!DNL Amazon S3] 및 SFTP에 대해 CSV 또는 탭으로 구분된 파일을 통해 대상과 프로필 속성을 내부 시스템으로 보낼 수 있습니다. [!DNL AWS Kinesis] 및 [!DNL Azure Event Hubs] 대상의 경우 데이터는 JSON 형식의 Experience Platform에서 스트리밍됩니다.
 
