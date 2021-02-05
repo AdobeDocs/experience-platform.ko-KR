@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;홈;인기 항목;고객 성공 수집;고객 성공
 solution: Experience Platform
-title: 소스 커넥터 및 API를 통해 고객 성공 시스템에서 데이터 수집
+title: 소스 커넥터 및 API를 사용하여 고객 성공 시스템에서 데이터 수집
 topic: overview
 type: Tutorial
-description: 이 자습서에서는 소스 커넥터 및 API를 통해 고객 성공 시스템에서 데이터를 검색하고 이를 플랫폼으로 인제스트하는 절차를 다룹니다.
+description: 이 자습서에서는 소스 커넥터 및 API를 사용하여 고객 성공 시스템에서 데이터를 검색하고 이를 플랫폼에 인제스트하는 절차를 다룹니다.
 translation-type: tm+mt
-source-git-commit: 85a715a6a56c0a885cb6f5b63c1a90ba81479862
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
 source-wordcount: '1541'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 ---
 
 
-# 소스 커넥터 및 API를 통해 고객 성공 시스템에서 데이터 수집
+# 소스 커넥터 및 API를 사용하여 고객 성공 시스템에서 데이터 수집
 
 이 자습서에서는 소스 커넥터 및 [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API를 통해 제3자 고객 성공 시스템에서 데이터를 검색하고 이를 [!DNL Platform]에 인제스트하는 절차를 다룹니다.
 
