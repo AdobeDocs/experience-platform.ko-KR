@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;home;popular topics;catalog;api;replace an object
+keywords: Experience Platform;홈;인기 항목;카탈로그;api;개체 바꾸기
 solution: Experience Platform
-title: 개체 바꾸기
+title: 카탈로그 개체 바꾸기
 topic: developer guide
-description: PUT 요청을 사용하여 카탈로그 개체의 콘텐츠를 덮어쓸 수 있습니다. 요청에서는 전체 리소스가 요청 페이로드로 대체됩니다.
+description: 전체 리소스가 요청 페이로드로 대체되는 PUT 요청을 사용하여 카탈로그 개체의 내용을 덮어쓸 수 있습니다.
 translation-type: tm+mt
-source-git-commit: dd1f508b93e8eac14e3c41fac9d8f49769d08f46
+source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
 workflow-type: tm+mt
-source-wordcount: '161'
+source-wordcount: '173'
 ht-degree: 2%
 
 ---
 
 
-# 개체 바꾸기
+# 카탈로그 개체 바꾸기
 
-PUT 요청을 사용하여 [!DNL Catalog] 개체의 내용을 덮어쓸 수 있습니다. 요청에서는 전체 리소스가 요청 페이로드로 대체됩니다.
+전체 리소스가 요청 페이로드로 대체되는 PUT 요청을 사용하여 [!DNL Catalog] 개체의 내용을 덮어쓸 수 있습니다.
 
 >[!NOTE]
 >
->개체 내의 일부 특정 필드만 업데이트해야 하는 경우 PATCH 요청을 사용하는 것이 더 효율적일 수 있습니다. [!DNL Catalog]
+>[!DNL Catalog] 개체 내의 일부 특정 필드만 업데이트할 필요가 있는 경우 PATCH 요청을 사용하는 것이 더 효율적일 수 있습니다.
 
 **API 형식**
 
@@ -34,7 +34,7 @@ PUT /{OBJECT_TYPE}/{OBJECT_ID}
 
 **요청**
 
-다음 요청은 데이터 세트에 페이로드에서 제공된 값을 덮어씁니다.
+다음 요청은 데이터 세트를 페이로드에서 제공된 값으로 덮어씁니다.
 
 ```shell
 curl -X PUT \
@@ -59,7 +59,7 @@ curl -X PUT \
 
 **응답**
 
-성공적인 응답은 덮어쓴 객체의 ID가 포함된 배열을 반환합니다. 이 ID는 PUT 요청에 전송된 ID와 일치해야 합니다. 이제 이 개체에 대한 GET 요청을 수행하면 해당 세부 사항이 이전 PUT 요청의 페이로드에서 제공된 세부 항목으로 대체되었음을 알 수 있습니다.
+성공적으로 응답하면 덮어쓴 객체의 ID가 포함된 배열을 반환합니다. 이 ID는 PUT 요청에서 보낸 ID와 일치해야 합니다. 이제 이 개체에 대한 GET 요청을 수행하면 해당 세부 사항이 이전 PUT 요청의 페이로드에서 제공된 세부 항목으로 대체되었음을 알 수 있습니다.
 
 ```json
 [
