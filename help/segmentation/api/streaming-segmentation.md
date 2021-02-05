@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;홈;인기 항목;세그멘테이션;세그멘테이션 서비스;스트리밍 세그멘테이션;연속 평가
 solution: Experience Platform
-title: 스트리밍 세분화
+title: '스트리밍 세분화를 통해 거의 실시간으로 이벤트 평가 '
 topic: developer guide
-description: 이 문서에는 스트리밍 세그멘테이션 API에서 스트리밍 세그멘테이션을 사용하는 방법에 대한 예가 포함되어 있습니다.
+description: 이 문서에는 Adobe Experience Platform 세그멘테이션 서비스 API에서 스트리밍 세그멘테이션을 사용하는 방법에 대한 예가 포함되어 있습니다.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '1329'
+source-wordcount: '1338'
 ht-degree: 1%
 
 ---
