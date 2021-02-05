@@ -1,19 +1,18 @@
 ---
 keywords: 연결 대상;대상 연결;대상 연결 방법
 title: Adobe Experience Platform에서 대상에 연결
-seo-title: Adobe Experience Platform에서 대상에 연결
 type: Tutorial
 description: 이 자습서는 Adobe Experience Platform에서 대상을 연결하는 단계를 나열합니다
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '126'
+source-wordcount: '117'
 ht-degree: 0%
 
 ---
 
 
-# 대상을 연결하는 방법
+# 대상에 연결
 
 Adobe Experience Platform의 대상에 연결하려면 아래 절차를 따르십시오.
 
