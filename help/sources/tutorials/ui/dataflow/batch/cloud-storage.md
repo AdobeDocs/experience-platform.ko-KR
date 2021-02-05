@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: 데이터 흐름(Dataflow)은 소스에서 플랫폼 데이터 집합으로 데이터를 검색하고 인제스트하는 예약된 작업입니다. 이 자습서에서는 클라우드 저장소 계정을 사용하여 새 데이터 흐름을 구성하는 절차를 제공합니다.
 translation-type: tm+mt
-source-git-commit: 2d1b49d774d04e7befbcc1c9e5417ee82323634a
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
 source-wordcount: '1898'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 ---
 
 
-# UI에서 클라우드 스토리지 배치 커넥터에 대한 데이터 흐름 구성
+# UI에서 클라우드 스토리지 일괄 연결에 대한 데이터 흐름 구성
 
 데이터 흐름(Dataflow)은 소스의 데이터를 검색하여 [!DNL Platform] 데이터 세트로 인제스트하는 예약된 작업입니다. 이 자습서에서는 클라우드 저장소 계정을 사용하여 새 데이터 흐름을 구성하는 절차를 제공합니다.
 
