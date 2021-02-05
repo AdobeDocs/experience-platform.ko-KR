@@ -5,7 +5,7 @@ user-guide-title: XDM(경험 데이터 모델) 시스템 도움말
 breadcrumb-title: Experience Data Model(XDM) 안내서
 user-guide-description: XDM(경험 데이터 모델) 클래스와 mixin을 사용하여 경험 데이터를 표준화합니다.
 translation-type: tm+mt
-source-git-commit: c82ad393ecaa46d01596dbba06f5fc756711bc31
+source-git-commit: 288f47306853fcc39234ad098bc0e73f24f8540a
 workflow-type: tm+mt
 source-wordcount: '232'
 ht-degree: 23%
@@ -95,10 +95,10 @@ ht-degree: 23%
    * [임시 스키마](api/ad-hoc.md)
    * [부록](api/appendix.md)
 * 자습서 {#tutorials}
-   * [스키마 만들기(API)](tutorials/create-schema-api.md)
    * [스키마 만들기(UI)](tutorials/create-schema-ui.md)
-   * [두 스키마(API) 간의 관계 정의](tutorials/relationship-api.md)
+   * [스키마 만들기(API)](tutorials/create-schema-api.md)
    * [두 스키마 간의 관계 정의(UI)](tutorials/relationship-ui.md)
+   * [두 스키마(API) 간의 관계 정의](tutorials/relationship-api.md)
    * [임시 스키마 만들기(API)](tutorials/ad-hoc.md)
 * [문제 해결 가이드](troubleshooting-guide.md)
 * [API 참조](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)
