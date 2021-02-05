@@ -1,27 +1,27 @@
 ---
 keywords: Experience Platform;홈;인기 항목;쿼리 서비스;쿼리 서비스;RStudio;rstudio;쿼리 서비스에 연결
 solution: Experience Platform
-title: 오디오 연결
+title: 오디오를 쿼리 서비스에 연결
 topic: connect
 description: 이 문서에서는 Adobe Experience Platform 쿼리 서비스와 R Studio를 연결하는 단계를 안내합니다.
 translation-type: tm+mt
-source-git-commit: eac93f3465fa6ce4af7a6aa783cf5f8fb4ac9b9b
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '272'
+source-wordcount: '282'
 ht-degree: 2%
 
 ---
 
 
-# [!DNL RStudio]
+# 쿼리 서비스에 [!DNL RStudio] 연결
 
 이 문서에서는 [!DNL RStudio]과(와) Adobe Experience Platform [!DNL Query Service]을(를) 연결하는 단계를 안내합니다.
 
 >[!NOTE]
 >
-> 이 안내서에서는 이미 [!DNL RStudio]에 액세스할 수 있고 사용 방법에 익숙하다고 가정합니다. [!DNL RStudio]에 대한 자세한 내용은 [공식 [!DNL RStudio] 설명서](https://rstudio.com/products/rstudio/)에서 확인할 수 있습니다.
+> 이 안내서에서는 사용자가 이미 [!DNL RStudio]에 액세스할 수 있으며 이 기능을 사용하는 방법에 익숙하다고 가정합니다. [!DNL RStudio]에 대한 자세한 내용은 [공식 [!DNL RStudio] 설명서](https://rstudio.com/products/rstudio/)에서 확인할 수 있습니다.
 
-## [!DNL RStudio]과(와) [!DNL Query Service]에 연결
+## [!DNL RStudio] 인터페이스에서 [!DNL Query Service] 연결 만들기
 
 [!DNL RStudio]을 설치한 후 나타나는 **[!DNL Console]** 화면에서 먼저 [!DNL PostgreSQL]를 사용하도록 R 스크립트를 준비해야 합니다.
 
