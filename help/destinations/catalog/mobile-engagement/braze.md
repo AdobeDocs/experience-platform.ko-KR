@@ -1,25 +1,21 @@
 ---
 keywords: mobile;brize;메시지;
-title: 대상 확장
-seo-title: 대상 확장
+title: Braze 연결 대상
 description: Braze는 고객과 브랜드 간의 연관성 있고 기억에 오래 남는 경험을 제공하는 포괄적인 고객 참여 플랫폼입니다.
-seo-description: Braze는 고객과 브랜드 간의 연관성 있고 기억에 오래 남는 경험을 제공하는 포괄적인 고객 참여 플랫폼입니다.
 translation-type: tm+mt
-source-git-commit: 95f57f9d1b3eeb0b16ba209b9774bd94f5758009
+source-git-commit: f4095a90ff70e8d054bae4f3b0f884552ffd30df
 workflow-type: tm+mt
-source-wordcount: '954'
+source-wordcount: '932'
 ht-degree: 1%
 
 ---
 
 
-# (베타) [!DNL Braze] 대상
+# (베타) [!DNL Braze] 연결
 
 >[!IMPORTANT]
 >
 >Adobe Experience Platform의 Braze 대상은 현재 베타에 있습니다. 설명서 및 기능은 변경될 수 있습니다.
-
-## 개요 {#overview}
 
 [!DNL Braze] 대상은 프로필 데이터를 [!DNL Braze]에 보내는 데 도움이 됩니다.
 
