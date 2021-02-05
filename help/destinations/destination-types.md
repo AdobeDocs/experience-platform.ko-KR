@@ -2,12 +2,11 @@
 keywords: 대상;대상;대상 유형
 title: 대상 유형 및 카테고리
 seo-title: 대상 유형 및 카테고리
-description: 'Adobe Experience Platform에서 프로필/세그먼트 내보내기 대상은 이벤트 데이터를 캡처하고, 다른 데이터 소스와 결합하고, 세그멘테이션을 적용하고, 세그먼트 및 자격이 있는 프로필을 대상으로 내보냅니다. Experience Platform Launch 익스텐션은 원시 이벤트 데이터를 여러 유형의 대상으로 전달합니다. '
-seo-description: Adobe Experience Platform에서 프로필/세그먼트 내보내기 대상은 이벤트 데이터를 캡처하고, 다른 데이터 소스와 결합하고, 세그멘테이션을 적용하고, 세그먼트 및 자격이 있는 프로필을 대상으로 내보냅니다. Experience Platform Launch 익스텐션은 원시 이벤트 데이터를 여러 유형의 대상으로 전달합니다.
+description: Adobe Experience Platform의 다양한 대상 유형과 카테고리에 대해 알아봅니다.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '581'
+source-wordcount: '514'
 ht-degree: 0%
 
 ---
