@@ -1,21 +1,17 @@
 ---
 keywords: Nielsen IMA Handler;nielsen ima 핸들러;nielsen ima;Nielsen ima;Nielsen IMA
-title: Nielsen IMA 처리기 확장
-seo-title: Nielsen IMA 처리기 확장
+title: Nielsen IMA 처리기 확장 대상
 description: Nielsen IMA 처리기 확장은 Adobe Experience Platform의 분석 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
-seo-description: Nielsen IMA 처리기 확장은 Adobe Experience Platform의 분석 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '504'
+source-wordcount: '473'
 ht-degree: 3%
 
 ---
 
 
 # [!DNL Nielsen IMA Handler] 확장 {#nielsen-ima-extension}
-
-## 개요 {#overview}
 
 [!DNL Nielsen IMA Handler] 는 Adobe Experience Platform의 분석 확장입니다.
 
