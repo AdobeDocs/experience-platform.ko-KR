@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: 경우에 따라 기존 소스 연결의 세부 사항을 업데이트해야 할 수 있습니다. Flow Service API는 이름, 설명 및 자격 증명을 포함하여 기존 배치 또는 스트리밍 연결의 세부 정보를 추가, 편집 및 삭제할 수 있는 기능을 제공합니다.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '709'
 ht-degree: 2%
