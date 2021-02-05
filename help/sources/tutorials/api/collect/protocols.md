@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;홈;인기 항목;프로토콜 데이터 수집;프로토콜 데이터
 solution: Experience Platform
-title: 소스 커넥터 및 API를 통해 프로토콜 데이터 수집
+title: 소스 커넥터 및 API를 사용하여 프로토콜 데이터 수집
 topic: overview
 type: Tutorial
-description: 이 자습서에서는 프로토콜 애플리케이션에서 데이터를 검색하고 소스 커넥터 및 API를 통해 플랫폼에 데이터를 인제스트하는 절차를 다룹니다.
+description: 이 자습서에서는 소스 커넥터 및 API를 사용하여 프로토콜 애플리케이션에서 데이터를 검색하고 이를 플랫폼에 인제스트하는 절차를 다룹니다.
 translation-type: tm+mt
-source-git-commit: 478c73935d674ef4eb40511cc562b27df77f58c8
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
 source-wordcount: '1528'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 ---
 
 
-# 소스 커넥터 및 API를 통해 프로토콜 데이터 수집
+# 소스 커넥터 및 API를 사용하여 프로토콜 데이터 수집
 
 이 자습서에서는 소스 커넥터 및 [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API를 통해 제3자 프로토콜 응용 프로그램에서 데이터를 검색하고 Adobe Experience Platform으로 데이터를 인제하는 단계를 다룹니다.
 
