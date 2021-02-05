@@ -1,21 +1,17 @@
 ---
 keywords: demandbase extension;demandbase;demandbase;demandbase 대상
-title: Demandbase 확장
-seo-title: Demandbase 확장
+title: Demandbase 확장 대상
 description: Demandbase 익스텐션은 Adobe Experience Platform의 분석 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
-seo-description: Demandbase 익스텐션은 Adobe Experience Platform의 분석 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '566'
+source-wordcount: '539'
 ht-degree: 4%
 
 ---
 
 
 # [!DNL Demandbase] 확장 {#demandbase-extension}
-
-## 개요 {#overview}
 
 업계, 매출 및 타겟 계정으로 트래픽과 행동을 세그먼트화할 수 있는 Adobe Analytics에 대한 [!DNL Demandbase] B2B 계정 통찰력을 얻을 수 있습니다. 이 계정 기반 보기는 참여, 전환 및 가장 중요한 방문자의 소스에 대한 고유한 통찰력을 제공합니다.
 
