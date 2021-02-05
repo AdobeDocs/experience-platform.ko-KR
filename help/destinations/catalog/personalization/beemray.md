@@ -1,21 +1,17 @@
 ---
 keywords: beemray,베엠레이 확장
-title: Beemray 확장
-seo-title: Beemray 확장
+title: Beemray 확장 대상
 description: Beemray 확장은 Adobe Experience Platform의 개인화 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
-seo-description: Beemray 확장은 Adobe Experience Platform의 개인화 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '548'
+source-wordcount: '521'
 ht-degree: 3%
 
 ---
 
 
 # [!DNL Beemray] 확장 {#beemray-extension}
-
-## 개요 {#overview}
 
 [!DNL Beemray] 상황에 따라 제품 속도를 높일 수 있습니다. 인사이트를 확보하고 새로운 경험을 구축하며 고객과의 상호 작용을 이끌어내며 중요한 순간에 참여를 유도할 수 있습니다. Beemray는 머신 러닝을 사용하여 컨텍스트 기반의 인텔리전스를 자동화합니다. Beemray는 Adobe Experience Cloud 및 기타 기술 파트너와의 연결을 통해 모든 것이 실시간으로 이루어집니다. 이 확장은 사이트에 [!DNL Beemray] SDK를 설치합니다.
 
