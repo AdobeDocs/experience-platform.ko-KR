@@ -1,21 +1,17 @@
 ---
 keywords: Marketing;marketing;Marketing to extension;marketing to extension
-title: Marketing To 확장
-seo-title: Marketing To 확장
+title: Marketing To 확장 대상
 description: Marketing To 확장은 Adobe Experience Platform의 이메일 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
-seo-description: Marketing To 확장은 Adobe Experience Platform의 이메일 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '546'
+source-wordcount: '519'
 ht-degree: 3%
 
 ---
 
 
 # [!DNL Marketo] 확장 {#marketo-extension}
-
-## 개요 {#overview}
 
 [!DNL Marketo]마케터는 강력한 마케팅 자동화 소프트웨어를 사용하여 디지털 마케팅의 예술과 과학을 마스터하여 고객과 잠재 고객의 참여를 유도할 수 있습니다.
 
