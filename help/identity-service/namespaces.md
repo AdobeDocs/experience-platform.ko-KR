@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;홈;인기 항목;네임스페이스;네임스페이스;네임스페이스;네임스페이스;네임스페이스;네임스페이스;ID 네임스페이스;ID 네임스페이스;ID;ID;Identity;Service;ID 서비스;Identity Service
+keywords: Experience Platform;홈;인기 항목;네임스페이스;네임스페이스;네임스페이스;네임스페이스;네임스페이스;네임스페이스;ID 네임스페이스;ID 네임스페이스;ID;ID;ID 서비스;ID 서비스;Identity Service
 solution: Experience Platform
-title: Adobe Experience Platform ID 서비스
+title: ID 네임스페이스 개요
 topic: overview
 description: 'ID 네임스페이스는 ID 서비스의 구성 요소이며 ID가 연관되는 컨텍스트의 지표 역할을 합니다. 예를 들어, "name@email.com" 값을 이메일 주소로 구분하거나 "443522" 값을 숫자 CRM ID로 구분할 수 있습니다. '
 translation-type: tm+mt
-source-git-commit: 0547c33e831fe1ac684f55a0e79978cd7f191e65
+source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
 workflow-type: tm+mt
-source-wordcount: '1475'
+source-wordcount: '1473'
 ht-degree: 2%
 
 ---
