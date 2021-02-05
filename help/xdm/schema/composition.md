@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;홈;인기 항목;스키마;스키마;스키마;믹신;믹신;데이터 유형;데이터 유형;데이터 유형;데이터 유형;데이터 유형;데이터 유형;기본 ID;기본 ID;XDM 개별 프로필;XDM 필드;데이터 유형;경험 이벤트;XDM 경험 이벤트;XDM ExperienceEvent;experienceEvent;experienceEvent;experience XDM Experienceevent;스키마 디자인;클래스;클래스;클래스;데이터 유형;데이터 유형;데이터 유형;스키마;ID맵;ID 맵;스키마 디자인;맵;맵;결합 스키마;클래스;클래스;클래스;데이터 유형;데이터 유형;스키마;스키마;ID 맵;스키마 디자인;매핑;조합 스키마;공용
 solution: Experience Platform
-title: 스키마 컴포지션의 기본 사항
+tiTle: Basics of Schema Composition
 topic: overview
 description: 이 문서에서는 XDM(Experience Data Model) 스키마 및 Adobe Experience Platform에서 사용할 스키마를 작성하기 위한 기본 블록, 원칙 및 모범 사례에 대해 설명합니다.
 translation-type: tm+mt
-source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '3165'
+source-wordcount: '3161'
 ht-degree: 0%
 
 ---
