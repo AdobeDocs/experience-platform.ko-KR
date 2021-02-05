@@ -1,21 +1,17 @@
 ---
 keywords: Qualtrics;Qualtrics;Qualtrics 웹 사이트 피드백;품질 웹 사이트 피드백;Qualtricks 웹 사이트 피드백
-title: Qualtrics 웹 사이트 피드백 확장
-seo-title: Qualtrics 웹 사이트 피드백 확장
+title: Qualtrics 웹 사이트 피드백 확장 대상
 description: Qualtrics 웹 사이트 피드백 확장은 Adobe Experience Platform의 설문 조사 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
-seo-description: Qualtrics 웹 사이트 피드백 확장은 Adobe Experience Platform의 설문 조사 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '621'
+source-wordcount: '590'
 ht-degree: 3%
 
 ---
 
 
 # [!DNL Qualtrics Website Feedback] 확장 {#qualtrics-extension}
-
-## 개요 {#overview}
 
 [!DNL Qualtrics Website Feedback] 적절한 메시지를 적시에 웹 사이트 방문자의 참여를 유도할 수 있습니다. 웹 사이트 피드백 설문 조사를 통해 방문자 경험을 개선하거나 전환율을 높이려는 경우 [!DNL Qualtrics Website Feedback]에 대한 지원이 제공됩니다.
 
