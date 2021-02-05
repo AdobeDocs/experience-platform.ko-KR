@@ -5,7 +5,7 @@ title: 쿼리 서비스에 클라이언트 연결
 topic: connect
 description: 이 문서에서는 다양한 데스크탑 클라이언트 응용 프로그램에서 쿼리 서비스에 연결하는 방법과 이러한 연결을 확인하는 방법에 대해 설명합니다.
 translation-type: tm+mt
-source-git-commit: 5c5ea35dbed85518f7925bd13a2280cae6215927
+source-git-commit: 2b8c08dad34bcd69368c00050323835f05379c82
 workflow-type: tm+mt
 source-wordcount: '112'
 ht-degree: 0%
