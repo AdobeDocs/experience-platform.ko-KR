@@ -5,7 +5,7 @@ title: UI에서 스키마 만들기 및 편집
 description: Experience Platform 사용자 인터페이스에서 스키마를 만들고 편집하는 방법에 대한 기본 사항을 알아봅니다.
 topic: user guide
 translation-type: tm+mt
-source-git-commit: babe47cc864d9f79eee28989ca8b658350b9d790
+source-git-commit: aa2088d30716f56ac2909214badbb39c0ae97855
 workflow-type: tm+mt
 source-wordcount: '1321'
 ht-degree: 0%
