@@ -1,21 +1,17 @@
 ---
 keywords: facebook 픽셀 확장;facebook 픽셀 확장;facebook 픽셀 대상;facebook pixel pixel pixel
-title: Facebook 픽셀 확장
-seo-title: Facebook 픽셀 확장
+title: Facebook 픽셀 확장 대상
 description: Facebook 픽셀 확장 기능은 Adobe Experience Platform의 광고 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
-seo-description: Facebook 픽셀 확장 기능은 Adobe Experience Platform의 광고 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '538'
+source-wordcount: '509'
 ht-degree: 3%
 
 ---
 
 
 # [!DNL Facebook Pixel] 확장 {#facebook-pixel-extension}
-
-## 개요 {#overview}
 
 [!DNL Facebook Pixel]은 사람들이 웹 사이트에서 수행하는 작업을 이해함으로써 광고의 효과를 측정할 수 있는 분석 도구입니다.
 
