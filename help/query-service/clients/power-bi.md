@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;홈;인기 항목;쿼리 서비스;쿼리 서비스;Power BI;power bi;쿼리 서비스에 연결;;home;popular topics service;query service;;power bi;connect to query service;
 solution: Experience Platform
-title: Power BI과 연결
+title: 쿼리 서비스에 Power BI 연결
 topic: connect
 description: 이 문서에서는 Adobe Experience Platform 쿼리 서비스에 Power BI을 연결하는 단계를 안내합니다.
 translation-type: tm+mt
-source-git-commit: eac93f3465fa6ce4af7a6aa783cf5f8fb4ac9b9b
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '461'
+source-wordcount: '466'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Power BI]
+# 쿼리 서비스에 [!DNL Power BI] 연결(PC)
 
 이 문서에서는 Adobe Experience Platform 쿼리 서비스에 Power BI을 연결하는 단계를 다룹니다.
 
@@ -22,8 +22,6 @@ ht-degree: 0%
 > 이 안내서에서는 사용자가 이미 [!DNL Power BI]에 액세스할 수 있으며 인터페이스를 탐색하는 방법에 익숙하다고 가정합니다. [!DNL Power BI]에 대한 자세한 내용은 [공식 [!DNL Power BI] 설명서](https://docs.looker.com/)에서 확인할 수 있습니다.
 >
 > 또한 Power BI은 **Windows 장치에서**&#x200B;만 사용할 수 있습니다.
-
-## [!DNL Power BI] 설정
 
 Power BI을 설치한 후 PostgreSQL용 .NET 드라이버 패키지인 `Npgsql`을(를) 설치해야 합니다. Npgsql에 대한 자세한 내용은 [Npgsql 설명서](https://www.npgsql.org/doc/index.html)에서 확인할 수 있습니다.
 
