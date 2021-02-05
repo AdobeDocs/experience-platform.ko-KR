@@ -5,10 +5,10 @@ user-guide-title: Adobe Experience Platform 데이터 거버넌스 도움말
 breadcrumb-title: Data Governance 안내서
 user-guide-description: 레이블, 마케팅 활동 및 정책 사용을 통해 데이터 사용 제한을 적용합니다.
 translation-type: tm+mt
-source-git-commit: d139eed4768384412a17b62037ed41c06c2941bd
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '118'
-ht-degree: 25%
+source-wordcount: '98'
+ht-degree: 33%
 
 ---
 
@@ -17,19 +17,19 @@ ht-degree: 25%
 
 * [데이터 거버넌스 개요](home.md)
 * 데이터 사용 레이블 {#labels}
-   * [데이터 사용 레이블 개요](labels/overview.md)
-   * [핵심 데이터 사용 레이블](labels/reference.md)
-   * [UI에서 데이터 사용 레이블 관리](labels/user-guide.md)
-   * [API를 사용하여 데이터 세트 및 필드에 대한 레이블 관리](labels/dataset-api.md)
+   * [개요](labels/overview.md)
+   * [레이블 용어집](labels/reference.md)
+   * [UI에서 레이블 관리](labels/user-guide.md)
+   * [API를 사용하여 데이터 세트에 대한 레이블 관리](labels/dataset-api.md)
 * 데이터 사용 정책 {#policies}
-   * [데이터 사용 정책 개요](policies/overview.md)
-   * [데이터 사용 정책 사용 안내서](policies/user-guide.md)
-   * [정책 서비스 API를 사용하여 데이터 사용 정책 만들기](policies/create.md)
+   * [개요](policies/overview.md)
+   * [UI에서 정책 관리](policies/user-guide.md)
+   * [API에서 정책 만들기](policies/create.md)
 * 정책 실행 {#enforcement}
-   * [정책 실행 개요](enforcement/overview.md)
+   * [개요](enforcement/overview.md)
    * [자동 실행](enforcement/auto-enforcement.md)
    * [API 기반 적용](enforcement/api-enforcement.md)
-* 정책 서비스 API 개발자 가이드 {#api}
+* 정책 서비스 API {#api}
    * [개요](api/overview.md)
    * [시작하기](api/getting-started.md)
    * [레이블](api/labels.md)
