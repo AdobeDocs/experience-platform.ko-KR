@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;홈;인기 항목;ID 서비스 api;ID 서비스 개발자 안내서;지역
 solution: Experience Platform
-title: 시작하기
+title: ID 서비스 API 안내서
 topic: API guide
-description: 'Adobe Experience Platform Identity Service는 Adobe Experience Platform 내의 ID 그래프로 알려진 것을 통해 고객을 거의 실시간으로 식별하면서 디바이스 간, 크로스채널을 관리합니다. '
+description: 개발자는 Identity Service API를 사용하여 ID 그래프를 사용하여 디바이스 간, 크로스 채널 및 거의 실시간 고객 ID를 관리할 수 있습니다. API를 사용하여 주요 작업을 수행하는 방법에 대해 알아보려면 이 안내서를 따르십시오.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
 workflow-type: tm+mt
-source-wordcount: '759'
-ht-degree: 1%
+source-wordcount: '769'
+ht-degree: 0%
 
 ---
 
 
-# [!DNL Identity Service] API 개발자 가이드
+# [!DNL Identity Service] API 안내서
 
 Adobe Experience Platform [!DNL Identity Service]은 Adobe Experience Platform 내의 ID 그래프라고 하는 것을 통해 고객을 거의 실시간으로 식별하면서 디바이스 간, 크로스 채널을 관리합니다.
 
