@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;홈;인기 항목;데이터 집합;데이터 집합;데이터 집합 만들기;데이터 집합 만들기;데이터 집합 사용
 solution: Experience Platform
-title: 데이터 세트 만들기
+title: API에서 데이터 세트 만들기
 topic: developer guide
-description: 이 문서에서는 카탈로그에서 데이터 세트 개체를 만드는 방법을 설명합니다.
+description: 이 문서에서는 카탈로그 서비스 API에서 데이터 세트 개체를 만드는 방법을 설명합니다.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
-source-wordcount: '223'
+source-wordcount: '232'
 ht-degree: 1%
 
 ---
 
 
-# 데이터 세트 만들기
+# API에서 데이터 세트 만들기
 
 [!DNL Catalog] API를 사용하여 데이터 집합을 만들려면 데이터 집합의 기반이 되는 [!DNL Experience Data Model](XDM) 스키마의 `$id` 값을 알고 있어야 합니다. 스키마 ID가 있으면 [!DNL Catalog] API의 `/datasets` 끝점에 POST 요청을 하여 데이터 세트를 만들 수 있습니다.
 
