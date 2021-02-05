@@ -1,23 +1,23 @@
 ---
 keywords: Experience Platform;홈;인기 항목;데이터 거버넌스;데이터 사용 레이블;정책 서비스;데이터 사용 레이블 사용자 안내서
 solution: Experience Platform
-title: 데이터 사용 레이블 사용 안내서
+title: UI에서 데이터 사용 레이블 관리
 topic: labels
-description: 이 사용자 안내서에서는 Adobe Experience Platform 사용자 인터페이스 내에서 데이터 사용 레이블 작업을 위한 단계를 설명합니다.
+description: 이 안내서에서는 Adobe Experience Platform 사용자 인터페이스 내에서 데이터 사용 레이블을 사용하여 작업하는 단계를 설명합니다.
 translation-type: tm+mt
-source-git-commit: 00010d38a5d05800aeac9af8505093fee3593b45
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '1136'
+source-wordcount: '1134'
 ht-degree: 0%
 
 ---
 
 
-# 데이터 사용 레이블 사용 안내서
+# UI에서 데이터 사용 레이블 관리
 
 이 사용자 안내서는 [!DNL Experience Platform] 사용자 인터페이스 내에서 데이터 사용 레이블을 사용하여 작업하는 단계를 설명합니다. 안내서를 사용하기 전에 [!DNL Data Governance] 프레임워크에 대한 보다 강력한 소개를 보려면 [[!DNL Data Governance] 개요](../home.md)를 참조하십시오.
 
-## 데이터 세트 수준에서 데이터 사용 레이블 관리
+## 데이터 세트 수준에서 레이블 관리
 
 데이터 세트 수준에서 데이터 사용 레이블을 관리하려면 기존 데이터 세트를 선택하거나 새 데이터 세트를 만들어야 합니다. Adobe Experience Platform에 로그인한 후 왼쪽 탐색 영역에서 **[!UICONTROL 데이터 집합]**&#x200B;을 선택하여 **[!UICONTROL 데이터 집합]** 작업 영역을 엽니다. 이 페이지에는 조직에 속하는 모든 데이터 세트와 각 데이터 세트에 관련된 유용한 세부 정보가 나열됩니다.
 
@@ -75,7 +75,7 @@ ht-degree: 0%
 
 ![상속된 레이블 숨기기](../images/labels/hide_inherited_labels.png)
 
-## 데이터 세트 필드 수준에서 데이터 사용 레이블 관리
+## 필드 수준에서 레이블 관리
 
 데이터 세트 수준](#add-labels)에서 데이터 사용 레이블을 추가 및 편집하는 작업 과정을 계속하면 해당 데이터 세트에 대한 **[!UICONTROL 데이터 거버넌스]** 작업 공간 내에서 필드 수준 레이블을 관리할 수도 있습니다.[
 
