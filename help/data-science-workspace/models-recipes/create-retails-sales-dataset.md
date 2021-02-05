@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: 이 자습서에서는 다른 모든 Adobe Experience Platform Data Science Workspace 튜토리얼에 필요한 사전 요구 사항과 에셋을 제공합니다. 완료되면 소매 판매 스키마 및 데이터 세트를 Experience Platform에 있는 사용자 및 IMS 조직 구성원이 사용할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '554'
 ht-degree: 0%
@@ -113,6 +113,6 @@ ht-degree: 0%
 
 인제스트된 데이터로 계속 작업하려면:
 - [Jupiter 노트북을 사용하여 데이터 분석](../jupyterlab/analyze-your-data.md)
-   - 데이터 과학 작업 공간의 Jupiter 노트북을 사용하여 데이터를 액세스, 탐색, 시각화 및 이해할 수 있습니다.
+   - 데이터 과학 작업 영역의 Jupiter 노트북을 사용하여 데이터를 액세스, 탐색, 시각화 및 이해할 수 있습니다.
 - [소스 파일을 레서피에 패키지화](./package-source-files-recipe.md)
    - 이 자습서에 따라 소스 파일을 가져올 수 있는 레서피 파일에 패키징하여 자신의 모델을 [!DNL Data Science Workspace]으로 가져오는 방법을 알아보십시오.
