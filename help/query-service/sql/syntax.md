@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;홈;인기 항목;쿼리 서비스;쿼리 서비스;sql 구문;sql;ctas;CTAS;테이블을 선택 항목으로 만들기
 solution: Experience Platform
-title: SQL 구문
+title: 쿼리 서비스의 SQL 구문
 topic: syntax
-description: 이 문서에서는 쿼리 서비스에서 지원되는 SQL 구문을 보여 줍니다.
+description: 이 문서에서는 Adobe Experience Platform 쿼리 서비스에서 지원되는 SQL 구문을 보여 줍니다.
 translation-type: tm+mt
-source-git-commit: 14cb1d304fd8aad2ca287f8d66ac6865425db4c5
+source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
 workflow-type: tm+mt
-source-wordcount: '2212'
+source-wordcount: '2221'
 ht-degree: 0%
 
 ---
 
 
-# SQL 구문
+# 쿼리 서비스의 SQL 구문
 
 [!DNL Query Service] 명령문 및 기타 제한된 명령에 표준 ANSI SQL `SELECT` 을 사용하는 기능을 제공합니다. 이 문서에는 [!DNL Query Service]에서 지원하는 SQL 구문이 표시됩니다.
 
