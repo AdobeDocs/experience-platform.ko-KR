@@ -1,19 +1,17 @@
 ---
 keywords: 음성 대상;음성 대상
-title: 고객 대상 음성
-seo-title: 고객 대상 음성
+title: 고객 대상 개요
 description: 음성 플랫폼은 음성 메시지, 전화 데이터 및 채팅 대화를 비롯한 다양한 소스의 데이터를 수집하고 취합합니다. 수집된 정보를 필터링하여 분석할 수 있으므로 기업은 자신의 웹 사이트를 최적화하여 요구 사항을 충족할 수 있습니다.
-seo-description: 음성 플랫폼은 음성 메시지, 전화 데이터 및 채팅 대화를 비롯한 다양한 소스의 데이터를 수집하고 취합합니다. 수집된 정보를 필터링하여 분석할 수 있으므로 기업은 자신의 웹 사이트를 최적화하여 요구 사항을 충족할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '166'
+source-wordcount: '127'
 ht-degree: 0%
 
 ---
 
 
-# 고객 대상 음성 {#voice-of-customer-destinations}
+# 고객 대상 개요 {#voice-of-customer-destinations}
 
 음성 플랫폼은 음성 메시지, 전화 데이터 및 채팅 대화를 비롯한 다양한 소스의 데이터를 수집하고 취합합니다. 수집된 정보를 필터링하여 분석할 수 있으므로 기업은 자신의 웹 사이트를 최적화하여 요구 사항을 충족할 수 있습니다.
 
