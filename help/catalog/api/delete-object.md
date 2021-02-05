@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;home;popular topics;delete an object;catalog service;api
+keywords: Experience Platform;홈;인기 항목;개체 삭제;카탈로그 서비스;api
 solution: Experience Platform
-title: 개체 삭제
+title: API에서 개체 삭제
 topic: developer guide
 description: DELETE 요청 경로에 카탈로그 ID를 제공하여 카탈로그 개체를 삭제할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
+source-git-commit: b395535cbe7e4030606ee2808eb173998f5c32e0
 workflow-type: tm+mt
-source-wordcount: '190'
-ht-degree: 2%
+source-wordcount: '207'
+ht-degree: 1%
 
 ---
 
 
-# 개체 삭제
+# API에서 개체 삭제
 
-DELETE 요청 경로에 개체 ID를 제공하여 삭제할 수 있습니다. [!DNL Catalog]
+DELETE 요청 경로에 해당 ID를 제공하여 [!DNL Catalog] 개체를 삭제할 수 있습니다.
 
 >[!WARNING]
 >
->실행 취소할 수 없으며 다른 곳에서 변경 사항이 발생할 수 있으므로 개체를 삭제할 때 특별히 주의하십시오 [!DNL Experience Platform].
+>이 작업은 실행 취소할 수 없으며 [!DNL Experience Platform]의 다른 곳에서 변경 내용이 발생할 수 있으므로 개체를 삭제할 때 주의하십시오.
 
 **API 형식**
 
@@ -29,7 +29,7 @@ DELETE /{OBJECT_TYPE}/{OBJECT_ID}
 
 >[!IMPORTANT]
 >
->끝점은 `DELETE /batches/{ID}` 더 이상 사용되지 않습니다. 배치를 삭제하려면 일괄 처리 통합 [API를 사용해야 합니다](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch).
+>`DELETE /batches/{ID}` 끝점은 더 이상 사용되지 않습니다. 배치를 삭제하려면 [일괄 처리 통합 API](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch)를 사용해야 합니다.
 
 | 매개 변수 | 설명 |
 | --- | --- |
@@ -51,7 +51,7 @@ curl -X DELETE \
 
 **응답**
 
-성공적인 응답은 HTTP 상태 200(OK)과 삭제된 데이터 세트의 ID가 포함된 배열을 반환합니다. 이 ID는 DELETE 요청에 전송된 ID와 일치해야 합니다. 삭제된 개체에 대한 GET 요청을 수행하면 HTTP 상태 404(찾을 수 없음)가 반환되어 데이터 세트가 성공적으로 삭제되었음을 확인합니다.
+성공적인 응답은 HTTP 상태 200(OK) 및 삭제된 데이터 세트의 ID를 포함하는 배열을 반환합니다. 이 ID는 DELETE 요청에서 보낸 ID와 일치해야 합니다. 삭제된 개체에 대해 GET 요청을 수행하면 HTTP 상태 404(찾을 수 없음)가 반환되어 데이터 세트가 성공적으로 삭제되었음을 확인합니다.
 
 ```json
 [
@@ -61,4 +61,4 @@ curl -X DELETE \
 
 >[!NOTE]
 >
->요청에 제공된 ID와 일치하는 [!DNL Catalog] 개체가 없는 경우에도 HTTP 상태 코드 200을 받을 수 있지만 응답 배열은 비어 있게 됩니다.
+>요청에 제공된 ID와 일치하는 [!DNL Catalog] 개체가 없는 경우 여전히 HTTP 상태 코드 200을 받을 수 있지만 응답 배열은 비어 있게 됩니다.
