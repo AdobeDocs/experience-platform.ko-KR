@@ -1,23 +1,23 @@
 ---
-keywords: Experience Platform;home;popular topics;Access control;Adobe admin console
+keywords: Experience Platform;홈;인기 항목;액세스 제어;Adobe 관리 콘솔
 solution: Experience Platform
-title: 액세스 제어 사용 안내서
+title: 액세스 제어 UI 개요
 topic: user guide
-description: Adobe Experience Platform의 액세스 제어를 통해 Adobe Admin Console을 사용하여 다양한 플랫폼 기능에 대한 역할 및 권한을 관리할 수 있습니다. 이 문서는 플랫폼의 액세스 제어를 관리하기 위해 Admin Console을 탐색하는 방법에 대한 지침으로 사용됩니다.
+description: Adobe Experience Platform의 액세스 제어를 사용하면 Adobe Admin Console을 사용하여 다양한 플랫폼 기능에 대한 역할 및 권한을 관리할 수 있습니다. 이 문서는 Admin Console을 탐색하여 플랫폼에 대한 액세스 제어를 관리하는 방법에 대한 지침으로 제공됩니다.
 translation-type: tm+mt
-source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
+source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
 workflow-type: tm+mt
-source-wordcount: '184'
+source-wordcount: '194'
 ht-degree: 1%
 
 ---
 
 
-# 액세스 제어 사용 안내서
+# 액세스 제어 UI 개요
 
-Adobe Experience Platform의 액세스 제어를 사용하면 [!DNL Platform] Adobe Admin Console [](https://adminconsole.adobe.com)를 사용하여 다양한 기능에 대한 역할 및 권한을 관리할 수 있습니다. 이 문서는 액세스 제어를 관리하기 위해 탐색하는 방법 [!DNL Admin Console] 에 대한 안내서의 역할을 합니다 [!DNL Platform]. 액세스 제어에 대한 개요 [!DNL Experience Platform]는 [액세스 제어 개요를 참조하십시오](./../home.md).
+Adobe Experience Platform의 액세스 제어를 사용하면 [Adobe Admin Console](https://adminconsole.adobe.com)을 사용하여 다양한 [!DNL Platform] 기능에 대한 역할 및 권한을 관리할 수 있습니다. 이 문서는 [!DNL Admin Console]을(를) 탐색하여 [!DNL Platform]에 대한 액세스 제어를 관리하는 방법에 대한 안내서의 역할을 합니다. [!DNL Experience Platform]의 액세스 제어에 대한 수준 높은 개요를 보려면 [액세스 제어 개요](./../home.md)를 참조하십시오.
 
-다음 작업에 대해 다룹니다.
+다음 작업을 다룹니다.
 
 - [Admin Console 액세스](./browse.md)
 - [새 제품 프로필 만들기](./create-profile.md)
@@ -25,4 +25,4 @@ Adobe Experience Platform의 액세스 제어를 사용하면 [!DNL Platform] Ad
 - [제품 프로필에 대한 세부 정보 및 추가 서비스 관리](./details-and-services.md)
 - [제품 프로필의 사용자 관리](./users.md)
 
-필요에 따라 사용자를 계속 추가하려면 위 단계를 반복합니다. 을 통해 기능에 대한 액세스를 제어하는 방법을 살펴보았으므로 [!DNL Platform] 액세스 제어 개요 [!DNL Admin Console]의 부록 섹션에서 [각 개인 권한 및 액세스 권한이 부여하는 기능에 대한 자세한 내용을](../home.md) [!DNL Platform] 참조하십시오.
+필요에 따라 사용자를 계속 추가하려면 위 단계를 반복합니다. [!DNL Admin Console]을 통해 [!DNL Platform] 기능에 대한 액세스를 제어하는 방법에 대해 학습하였으므로, 각 개인 사용 권한과 액세스 권한을 부여하는 [!DNL Platform] 기능에 대한 자세한 내용은 [액세스 제어 개요](../home.md)의 부록 섹션을 참조하십시오.
