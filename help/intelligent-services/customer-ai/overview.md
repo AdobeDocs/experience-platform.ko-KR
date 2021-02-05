@@ -1,15 +1,15 @@
 ---
-keywords: Experience Platform;overview;customer ai;popular topics;customer ai overview
+keywords: Experience Platform;개요;고객 ai;인기 항목;고객 아이 개요
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: Customer AI 개요
-topic: Customer AI overview
+topic: Customer AI Overview
 description: 고객 AI는 규모에 따라 개별 프로필에 대한 이탈 및 전환과 같은 사용자 지정 성향 점수를 생성하는 데 사용됩니다. 비즈니스 요구 사항을 머신 러닝 문제로 변환하거나 알고리즘을 선택하거나 교육 또는 배포하지 않아도 됩니다.
-landing-page-description: Customer AI is used to generate custom propensity scores such as churn and conversion for individual profiles at-scale.
+landing-page-description: 고객 AI는 규모에 따라 개별 프로필에 대한 이탈 및 전환과 같은 사용자 지정 성향 점수를 생성하는 데 사용됩니다.
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
 workflow-type: tm+mt
-source-wordcount: '526'
-ht-degree: 16%
+source-wordcount: '554'
+ht-degree: 18%
 
 ---
 
@@ -37,8 +37,8 @@ ht-degree: 16%
 
 - 고객 AI를 사용하여 동적 가격 또는 고객이 구매하고자 하는 가격 포인트를 예측할 수 없습니다.
 - 고객 AI는 제안을 제공하면 고객이 항목을 더 구매할 가능성이 있는지 여부를 결정할 수 없습니다. 성향 점수를 기반으로 할인 혜택을 전송하기로 결정할 수 있지만 이러한 고객을 전환시키는 가장 좋은 방법은 아닙니다.
-- 고객 AI는 제품 추천 도구가 아닙니다. 수천 개의 SKU가 있는 경우 실제 제품 추천 솔루션에 대한 프록시로 고객 AI를 사용하지 마십시오 [!DNL Adobe Target].
-- 고객 AI는 고객이 &quot;인지도&quot;, &quot;고려&quot;, &quot;구매&quot; 또는 &quot;유지&quot; 단계인 경우 고객이 어느 단계의 구매 경로를 예측할 수 없습니다.
+- 고객 AI는 제품 추천 도구가 아닙니다. 수천 개의 SKU가 있는 경우 고객 AI를 실제 제품 추천 솔루션 [!DNL Adobe Target]과 같은 프록시로 사용하지 마십시오.
+- 고객 AI는 고객이 &quot;인지도&quot;, &quot;고려&quot;, &quot;구매&quot; 또는 &quot;유지&quot; 단계인 경우 고객이 속한 구매 여정의 단계를 예측할 수 없습니다.
 - 나중에 출시될 제품을 구매할 가능성이 있는 고객을 파악하기 위해 고객 AI를 사용하지 마십시오. 이를 위해서는 고객 AI가 데이터에 대한 기계 학습 알고리즘을 성공적으로 교육하기 위해 특정 성공 이벤트가 과거에 있어야 합니다.
 
 다음 비디오는 고객 AI에 대한 이해를 지원하기 위해 만들어졌습니다.
@@ -51,4 +51,4 @@ ht-degree: 16%
 
 ## 다음 단계
 
-시작 가이드 [를 따라 시작할](./getting-started.md) 수 있습니다. 이 안내서에서는 고객 AI에 필요한 모든 사전 요구 사항을 설정하는 절차를 안내합니다. 이미 모든 자격 증명과 데이터를 준비했으면 고객 AI 인스턴스 [구성을 참조하십시오](./user-guide/configure.md). 고객 AI 사용 단계를 제공합니다.
+[시작하기](./getting-started.md) 가이드를 따라 시작할 수 있습니다. 이 안내서에서는 고객 AI에 필요한 모든 사전 요구 사항을 설정하는 절차를 안내합니다. 이미 모든 자격 증명과 데이터를 준비했으면 [고객 AI 인스턴스 구성](./user-guide/configure.md)을 방문하십시오. 고객 AI 사용 단계를 제공합니다.
