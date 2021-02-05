@@ -1,21 +1,17 @@
 ---
 keywords: google Universal Analytics;Google Universal Analytics;Google Universal Analytics;Google Analytics
-title: Google Universal Analytics 확장
-seo-title: Google Universal Analytics 확장
+title: Google Universal Analytics 확장 대상
 description: Google Universal Analytics 확장은 Adobe Experience Platform의 분석 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
-seo-description: Google Universal Analytics 확장은 Adobe Experience Platform의 분석 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '559'
+source-wordcount: '528'
 ht-degree: 3%
 
 ---
 
 
 # [!DNL Google Universal Analytics] 확장 {#google-universal-analytics-extension}
-
-## 개요 {#overview}
 
 [!DNL Google Universal Analytics] 광고 ROI를 측정할 수 있을 뿐만 아니라 Flash, 동영상, 소셜 네트워킹 사이트 및 애플리케이션을 추적할 수 있습니다.
 
