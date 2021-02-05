@@ -1,19 +1,17 @@
 ---
 keywords: 개인화;개인화
-title: 개인화 대상
-seo-title: 개인화 대상
+title: 개인화 대상 개요
 description: 개인화 플랫폼은 개별 행동을 통해 데이터와 인사이트를 수집합니다. 이러한 플랫폼은 마케터가 익명의 데이터를 탐색하고, 이전 활동을 기반으로 또는 유사한 습관을 가진 고객 세그먼트의 일부로서 잠재 고객에게 오퍼나 광고를 제공하는 데 도움이 됩니다.
-seo-description: 개인화 플랫폼은 개별 행동을 통해 데이터와 인사이트를 수집합니다. 이러한 플랫폼은 마케터가 익명의 데이터를 탐색하고, 이전 활동을 기반으로 또는 유사한 습관을 가진 고객 세그먼트의 일부로서 잠재 고객에게 오퍼나 광고를 제공하는 데 도움이 됩니다.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '170'
-ht-degree: 7%
+source-wordcount: '132'
+ht-degree: 9%
 
 ---
 
 
-# 개인화 대상 {#personalization-destinations}
+# 개인화 대상 개요 {#personalization-destinations}
 
 개인화 플랫폼은 개별 행동을 통해 데이터와 인사이트를 수집합니다. 이러한 플랫폼은 마케터가 익명의 데이터를 탐색하고, 이전 활동을 기반으로 또는 유사한 습관을 가진 고객 세그먼트의 일부로서 잠재 고객에게 오퍼나 광고를 제공하는 데 도움이 됩니다.
 
