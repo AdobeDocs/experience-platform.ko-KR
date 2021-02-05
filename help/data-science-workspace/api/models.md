@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;models;sensei machine learning api
+keywords: Experience Platform;개발자 가이드;끝점;데이터 과학 작업 공간;인기 항목;모델;sensei 기계 학습 api
 solution: Experience Platform
-title: 모델
+title: 모델 API 끝점
 topic: Developer guide
 description: 모델은 비즈니스 사용 사례를 해결하기 위해 내역 데이터 및 구성을 사용하여 교육되는 기계 학습 레서피 인스턴스입니다.
 translation-type: tm+mt
-source-git-commit: 194a29124949571638315efe00ff0b04bff19303
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '846'
+source-wordcount: '864'
 ht-degree: 4%
 
 ---
 
 
-# 모델
+# 모델 끝점
 
 모델은 비즈니스 사용 사례를 해결하기 위해 내역 데이터 및 구성을 사용하여 교육되는 기계 학습 레서피 인스턴스입니다.
 
 ## 모델 목록 검색
 
-/models에 대한 단일 GET 요청을 수행하여 모든 모델에 속하는 모델 세부 사항 목록을 검색할 수 있습니다. 기본적으로 이 목록은 가장 오래된 생성된 모델에서 자체적으로 순서를 지정하고 결과를 25개로 제한합니다. 일부 쿼리 매개 변수를 지정하여 결과를 필터링하도록 선택할 수 있습니다. 사용 가능한 질의 목록은 자산 검색을 위한 [쿼리 매개 변수의 부록 섹션을 참조하십시오](./appendix.md#query).
+/models에 대한 단일 GET 요청을 수행하여 모든 모델에 속하는 모델 세부 사항 목록을 검색할 수 있습니다. 기본적으로 이 목록은 가장 오래된 생성된 모델에서 자체적으로 순서를 지정하고 결과를 25개로 제한합니다. 일부 쿼리 매개 변수를 지정하여 결과를 필터링하도록 선택할 수 있습니다. 사용 가능한 쿼리 목록은 [자산 검색을 위한 매개 변수 쿼리](./appendix.md#query)의 부록 섹션을 참조하십시오.
 
 **API 형식**
 
@@ -95,13 +95,13 @@ curl -X GET \
 | 속성 | 설명 |
 | --- | --- |
 | `id` | 모델에 해당하는 ID. |
-| `modelArtifactUri` | 모델이 저장되는 위치를 나타내는 URI입니다. URI가 모델의 `name` 값으로 끝납니다. |
+| `modelArtifactUri` | 모델이 저장되는 위치를 나타내는 URI입니다. URI는 모델의 `name` 값으로 끝납니다. |
 | `experimentId` | 유효한 실험 ID. |
 | `experimentRunId` | 유효한 실험 실행 ID입니다. |
 
 ## 특정 모델 검색
 
-단일 GET 요청을 수행하고 요청 경로에서 유효한 모델 ID를 제공하여 특정 모델에 속한 모델 세부 사항 목록을 검색할 수 있습니다. 결과를 필터링하는 데 도움이 되도록 요청 경로에서 쿼리 매개 변수를 지정할 수 있습니다. 사용 가능한 질의 목록은 자산 검색을 위한 [쿼리 매개 변수의 부록 섹션을 참조하십시오](./appendix.md#query).
+단일 GET 요청을 수행하고 요청 경로에 유효한 모델 ID를 제공하여 특정 모델에 속하는 모델 세부 사항 목록을 가져올 수 있습니다. 결과를 필터링하는 데 도움이 되도록 요청 경로에서 쿼리 매개 변수를 지정할 수 있습니다. 사용 가능한 쿼리 목록은 [자산 검색을 위한 매개 변수 쿼리](./appendix.md#query)의 부록 섹션을 참조하십시오.
 
 **API 형식**
 
@@ -112,12 +112,12 @@ GET /models/?property=experimentRunID=={EXPERIMENT_RUN_ID}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{MODEL_ID}` | 교육되었거나 게시된 모델의 식별자입니다. |
+| `{MODEL_ID}` | 훈련되거나 게시된 모델의 식별자입니다. |
 | `{EXPERIMENT_RUN_ID}` | 실험 실행의 식별자입니다. |
 
 **요청**
 
-다음 요청에는 쿼리가 포함되어 있고 동일한 experimentRunID({EXPERIMENT_RUN_ID})를 공유하는 교육된 모델의 목록을 검색합니다.
+다음 요청에는 쿼리가 포함되어 있으며 동일한 experimentRunID({EXPERIMENT_RUN_ID})를 공유하는 교육 모델 목록을 검색합니다.
 
 ```shell
 curl -X GET \
@@ -159,13 +159,13 @@ curl -X GET \
 | 속성 | 설명 |
 | --- | --- |
 | `id` | 모델에 해당하는 ID. |
-| `modelArtifactUri` | 모델이 저장되는 위치를 나타내는 URI입니다. URI가 모델의 `name` 값으로 끝납니다. |
+| `modelArtifactUri` | 모델이 저장되는 위치를 나타내는 URI입니다. URI는 모델의 `name` 값으로 끝납니다. |
 | `experimentId` | 유효한 실험 ID. |
 | `experimentRunId` | 유효한 실험 실행 ID입니다. |
 
-## 사전 생성된 모델 등록 {#register-a-model}
+## 사전 생성된 모델 {#register-a-model} 등록
 
-종단점에 POST 요청을 만들어 미리 생성된 모델을 등록할 수 `/models` 있습니다. 모델을 등록하려면 `modelArtifact` 파일 및 `model` 속성 값을 요청 본문에 포함해야 합니다.
+`/models` 끝점에 POST 요청을 하여 사전 생성된 모델을 등록할 수 있습니다. 모델을 등록하려면 `modelArtifact` 파일과 `model` 속성 값을 요청 본문에 포함해야 합니다.
 
 **API 형식**
 
@@ -175,7 +175,7 @@ POST /models
 
 **요청**
 
-다음 POST에는 필요한 `modelArtifact` 파일 및 `model` 속성 값이 포함되어 있습니다. 이러한 값에 대한 자세한 내용은 아래 표를 참조하십시오.
+다음 POST에는 필요한 `modelArtifact` 파일과 `model` 속성 값이 포함되어 있습니다. 이러한 값에 대한 자세한 내용은 아래 표를 참조하십시오.
 
 ```shell
 curl -X POST \
@@ -193,8 +193,8 @@ curl -X POST \
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `modelArtifact` | 포함시킬 전체 모델 객체의 위치입니다. |
-| `model` | 만들어야 하는 Model 개체의 양식 데이터입니다. |
+| `modelArtifact` | 포함시킬 전체 모델 가공물의 위치입니다. |
+| `model` | 만들어야 하는 Model 객체의 양식 데이터입니다. |
 
 **응답**
 
@@ -215,15 +215,15 @@ curl -X POST \
 | 속성 | 설명 |
 | --- | --- |
 | `id` | 모델에 해당하는 ID. |
-| `modelArtifactUri` | 모델이 저장되는 위치를 나타내는 URI입니다. URI가 모델의 값으로 `id` 끝납니다. |
+| `modelArtifactUri` | 모델이 저장되는 위치를 나타내는 URI입니다. URI는 모델의 `id` 값으로 끝납니다. |
 
 ## ID로 모델 업데이트
 
-요청 경로에 대상 모델의 ID가 포함된 PUT 요청을 통해 속성을 덮어쓰고 업데이트된 속성이 포함된 JSON 페이로드를 제공하여 기존 모델을 업데이트할 수 있습니다.
+요청 경로에서 대상 모델의 ID를 포함하는 PUT 요청을 통해 해당 속성을 덮어쓰고 업데이트된 속성이 포함된 JSON 페이로드를 제공함으로써 기존 모델을 업데이트할 수 있습니다.
 
 >[!TIP]
 >
->이 PUT 요청의 성공을 보장하기 위해 먼저 ID로 모델을 검색하기 위해 GET 요청을 수행하는 것이 좋습니다. 그런 다음 반환된 JSON 개체를 수정 및 업데이트하고 수정된 JSON 개체 전체를 PUT 요청에 대한 페이로드로 적용합니다.
+>이 PUT 요청이 성공하도록 하려면 먼저 ID로 모델을 검색하기 위해 GET 요청을 수행하는 것이 좋습니다. 그런 다음 반환된 JSON 개체를 수정 및 업데이트하고 수정된 JSON 개체 전체를 PUT 요청에 대한 페이로드로 적용합니다.
 
 **API 형식**
 
@@ -233,7 +233,7 @@ PUT /models/{MODEL_ID}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{MODEL_ID}` | 교육되었거나 게시된 모델의 식별자입니다. |
+| `{MODEL_ID}` | 훈련되거나 게시된 모델의 식별자입니다. |
 
 **요청**
 
@@ -262,7 +262,7 @@ curl -X PUT \
 
 **응답**
 
-성공적인 응답은 실험 세부 정보가 포함된 페이로드를 반환합니다.
+성공적인 응답은 실험시의 업데이트된 세부 정보가 포함된 페이로드를 반환합니다.
 
 ```json
 {
@@ -292,7 +292,7 @@ DELETE /models/{MODEL_ID}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{MODEL_ID}` | 교육되었거나 게시된 모델의 식별자입니다. |
+| `{MODEL_ID}` | 훈련되거나 게시된 모델의 식별자입니다. |
 
 **요청**
 
@@ -317,9 +317,9 @@ curl -X DELETE \
 }
 ```
 
-## 모델의 새로운 트랜스코딩 만들기 {#create-transcoded-model}
+## 모델 {#create-transcoded-model}에 대한 새 트랜스코딩 만들기
 
-트랜스코딩은 한 인코딩을 디지털로 디지털화하여 다른 인코딩으로 바로 변환하는 것입니다. 새 출력이 포함될 대상 `{MODEL_ID}` 및 `targetFormat` 을 제공하여 모델에 대한 새로운 트랜스코딩(transcoding)을 생성합니다.
+트랜스코딩은 한 인코딩을 다른 인코딩으로 디지털로 바로 변환하는 것입니다. 새 출력이 포함될 `{MODEL_ID}` 및 `targetFormat`을 제공하여 모델에 대한 새 트랜스코딩을 만듭니다.
 
 **API 형식**
 
@@ -329,7 +329,7 @@ POST /models/{MODEL_ID}/transcodings
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{MODEL_ID}` | 교육되었거나 게시된 모델의 식별자입니다. |
+| `{MODEL_ID}` | 훈련되거나 게시된 모델의 식별자입니다. |
 
 **요청**
 
@@ -356,7 +356,7 @@ curl -X POST \
 
 **응답**
 
-성공적인 응답은 트랜스코딩의 정보와 함께 JSON 개체가 포함된 페이로드를 반환합니다. 여기에는 특정 트랜스코딩된 모델`id`을 [검색하는 데 사용되는 거래 고유 식별자(ID)가 포함됩니다](#retrieve-transcoded-model).
+성공적인 응답은 코드 변환에 대한 정보와 함께 JSON 개체가 포함된 페이로드를 반환합니다. 여기에는 [특정 코드 변환된 모델](#retrieve-transcoded-model)을 검색하는 데 사용된 거래 고유 식별자(`id`)가 포함됩니다.
 
 ```json
 {
@@ -372,9 +372,9 @@ curl -X POST \
 }
 ```
 
-## 모델에 대한 변환 목록 검색 {#retrieve-transcoded-model-list}
+## 모델 {#retrieve-transcoded-model-list} 변환 목록 검색
 
-모델과 함께 GET 요청을 수행하여 모델에 대해 수행된 변환 목록을 검색할 수 있습니다 `{MODEL_ID}`.
+`{MODEL_ID}`으로 GET 요청을 수행하여 모델에 대해 수행된 변환 목록을 검색할 수 있습니다.
 
 **API 형식**
 
@@ -384,7 +384,7 @@ GET /models/{MODEL_ID}/transcodings
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{MODEL_ID}` | 교육되었거나 게시된 모델의 식별자입니다. |
+| `{MODEL_ID}` | 훈련되거나 게시된 모델의 식별자입니다. |
 
 **요청**
 
@@ -399,7 +399,7 @@ curl -X GET \
 
 **응답**
 
-성공적인 응답은 모델에서 수행된 각 트랜스코딩 목록이 포함된 json 개체를 포함하는 페이로드를 반환합니다. 각 트랜스코딩된 모델은 고유한 식별자(`id`)를 받습니다.
+성공적인 응답은 모델에서 수행한 각 트랜스코딩 목록이 포함된 json 개체를 포함하는 페이로드를 반환합니다. 각 코드 변환된 모델은 고유한 식별자(`id`)를 받습니다.
 
 ```json
 {
@@ -432,9 +432,9 @@ curl -X GET \
 }
 ```
 
-## 특정 트랜스코딩 모델 검색 {#retrieve-transcoded-model}
+## 특정 코드 변환된 모델 {#retrieve-transcoded-model} 검색
 
-사용자 및 코드 변환된 모델의 ID로 GET 요청을 수행하여 특정 코드 변환된 모델 `{MODEL_ID}` 을 검색할 수 있습니다.
+`{MODEL_ID}` 및 코드 변환된 모델의 ID로 GET 요청을 수행하여 특정 코드 변환된 모델을 검색할 수 있습니다.
 
 **API 형식**
 
@@ -444,7 +444,7 @@ GET /models/{MODEL_ID}/transcodings/{TRANSCODING_ID}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{MODEL_ID}` | 교육되었거나 게시된 모델의 고유 식별자입니다. |
+| `{MODEL_ID}` | 훈련되거나 게시된 모델의 고유 식별자입니다. |
 | `{TRANSCODING_ID}` | 코드 변환된 모델의 고유 식별자입니다. |
 
 **요청**
