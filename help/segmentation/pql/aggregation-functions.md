@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;aggregation functions;aggregation;
+keywords: Experience Platform;홈;인기 항목;세그멘테이션;세그멘테이션 서비스;pql;PQL;프로필 쿼리 언어;집계 함수;집계
 solution: Experience Platform
-title: 집계 함수
+title: PQL 집계 함수
 topic: developer guide
-description: '집계 함수는 PQL(Profile Query Language) 배열 내에서 여러 값을 함께 그룹화하여 단일 요약 값을 구성하는 데 사용됩니다. '
+description: '집계 함수는 PQL(Profile Query Language) 배열 내에서 여러 값을 그룹화하여 단일 요약 값을 구성하는 데 사용됩니다. '
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '226'
-ht-degree: 6%
+source-wordcount: '244'
+ht-degree: 5%
 
 ---
 
 
 # 집계 함수
 
-집계 함수는 PQL(Againing Array) [!DNL Profile Query Language] 배열에서 여러 값을 함께 그룹화하여 단일 요약 값을 구성하는 데 사용됩니다. 다른 PQL 기능에 대한 자세한 내용은 [[!DNL Profile Query Language] 개요를 참조하십시오](./overview.md).
+집계 함수는 PQL([!DNL Profile Query Language] 배열 내에서 여러 값을 함께 그룹화하여 단일 요약 값을 구성하는 데 사용됩니다. 다른 PQL 함수에 대한 자세한 내용은 [[!DNL Profile Query Language] 개요](./overview.md)에서 확인할 수 있습니다.
 
 ## 카운트
 
-이 `count` 함수는 지정된 배열 내의 요소 수를 반환합니다.
+`count` 함수는 지정된 배열 내의 요소 수를 반환합니다.
 
 **형식**
 
@@ -37,7 +37,7 @@ orders.count()
 
 ## 합계
 
-이 `sum` 함수는 배열 내에서 선택한 모든 값의 합계를 반환합니다.
+`sum` 함수는 배열 내에서 선택한 모든 값의 합계를 반환합니다.
 
 **형식**
 
@@ -55,7 +55,7 @@ orders.sum(order.price)
 
 ## 평균
 
-이 `average` 함수는 배열 내에서 선택한 모든 값의 산술 평균을 반환합니다.
+`average` 함수는 배열 내에서 선택한 모든 값의 산술 평균을 반환합니다.
 
 **형식**
 
@@ -73,7 +73,7 @@ orders.average(order.price)
 
 ## 최소값
 
-이 `min` 함수는 배열 내에서 선택한 모든 값 중 가장 작은 값을 반환합니다.
+`min` 함수는 배열 내에서 선택한 모든 값 중 가장 작은 값을 반환합니다.
 
 **형식**
 
@@ -91,7 +91,7 @@ orders.min(order.price)
 
 ## 최대값
 
-이 `max` 함수는 배열 내에서 선택한 모든 값 중 가장 큰 값을 반환합니다.
+`max` 함수는 배열 내에서 선택한 모든 값 중 가장 큰 값을 반환합니다.
 
 **형식**
 
@@ -109,4 +109,4 @@ orders.max(order.price)
 
 ## 다음 단계
 
-이제 집계 기능에 대해 배웠으므로 PQL 쿼리 내에서 사용할 수 있습니다. 다른 PQL 기능에 대한 자세한 내용은 [프로필 쿼리 언어 개요를 참조하십시오](./overview.md).
+이제 집계 기능에 대해 배웠으므로 PQL 쿼리 내에서 사용할 수 있습니다. 다른 PQL 기능에 대한 자세한 내용은 [프로필 쿼리 언어 개요](./overview.md)를 참조하십시오.
