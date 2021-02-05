@@ -5,7 +5,7 @@ title: Attribution AI 시작하기
 topic: Getting started
 description: 다음 가이드를 사용하려면 Attribution AI 사용과 관련된 다양한 Adobe Experience Platform 서비스에 대해 이해해야 합니다. 자습서를 시작하기 전에 다음 문서를 검토하십시오.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
 workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 0%
