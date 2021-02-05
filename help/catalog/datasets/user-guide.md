@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;홈;인기 항목;데이터 집합 사용;데이터 집합;데이터 집합;;home;popular topics;enable dataset;dataset
 solution: Experience Platform
-title: 데이터 세트 사용 안내서
+title: 데이터 집합 UI 안내서
 topic: datasets
-description: 이 데이터 집합 사용자 안내서는 Adobe Experience Platform 사용자 인터페이스 내에서 데이터 집합을 사용할 때 일반적인 작업을 수행하는 방법에 대한 지침을 제공합니다.
+description: Adobe Experience Platform 사용자 인터페이스에서 데이터 세트를 사용하여 작업할 때 일반적인 작업을 수행하는 방법을 알아봅니다.
 translation-type: tm+mt
-source-git-commit: d2ace7cadb06f77bdf14b6a4ef83e879c4ca88fd
+source-git-commit: 2b8c08dad34bcd69368c00050323835f05379c82
 workflow-type: tm+mt
-source-wordcount: '1143'
+source-wordcount: '1140'
 ht-degree: 0%
 
 ---
 
 
-# 데이터 세트 사용 안내서
+# 데이터 세트 UI 가이드
 
 이 사용자 안내서는 Adobe Experience Platform 사용자 인터페이스 내에서 데이터 세트를 사용하여 작업할 때 일반적인 작업을 수행하는 방법에 대한 지침을 제공합니다.
 
