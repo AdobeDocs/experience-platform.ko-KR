@@ -1,31 +1,31 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;mixin;mixin;enduserids;end-user;end user;ids;
+keywords: Experience Platform;홈;인기 항목;스키마;스키마;XDM;ExperienceEvent;필드;스키마;스키마;스키마 디자인;혼합;최종 사용자;id;end-user;ids
 solution: Experience Platform
 title: 최종 사용자 ID 세부 정보 혼합
 topic: overview
 description: 이 문서에서는 최종 사용자 ID 세부 사항 혼합에 대한 개요를 제공합니다.
 translation-type: tm+mt
-source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '175'
+source-wordcount: '196'
 ht-degree: 1%
 
 ---
 
 
-# [!UICONTROL 최종 사용자 ID 세부 정보] 믹싱
+# [!UICONTROL 최종 사용자 ID ] 세부 정보
 
 >[!NOTE]
 >
->여러 혼합물의 이름이 변경되었습니다. 자세한 내용은 [혼합 이름 업데이트에](../name-updates.md) 대한 문서를 참조하십시오.
+>여러 혼합물의 이름이 변경되었습니다. 자세한 내용은 [혼합 이름 업데이트](../name-updates.md)에 있는 문서를 참조하십시오.
 
-[!UICONTROL 최종 사용자 ID 세부 사항] 은 [[!DNL XDM ExperienceEvent] 클래스](../../classes/individual-profile.md)의 표준 혼합으로서, 여러 Adobe 응용 프로그램에서 개인의 ID 정보를 설명하는 데 사용됩니다. 이 혼합은 데이터 인제스트 시 값이 자동으로 업데이트되는 읽기 전용 `endUserIDs` `_experience` 필드가 포함된 루트 레벨 개체를 제공합니다.
+[!UICONTROL 최종 사용자 ID ] 세부 사항은 여러  [[!DNL XDM ExperienceEvent] Adobe 응용 프로그램에서](../../classes/individual-profile.md) 개인의 ID 정보를 설명하는 데 사용되는 클래스에 대한 표준 혼합입니다. 믹신은 데이터 인제스트될 때 값이 자동으로 업데이트되는 읽기 전용 `_experience` 필드를 포함하는 루트 레벨 `endUserIDs` 객체를 제공합니다.
 
 <img src="../../images/mixins/enduserids.png" width="700" /><br />
 
 | 속성 | 데이터 유형 | 설명 |
 | --- | --- | --- |
-| `aacustomid` | [ID](../../data-types/identity.md) | Adobe Analytics Cloud의 사용자 지정 최종 사용자 ID. |
+| `aacustomid` | [ID](../../data-types/identity.md) | Adobe Analytics Cloud에 대한 사용자 지정 최종 사용자 ID. |
 | `aaid` | [ID](../../data-types/identity.md) | Adobe Analytics Cloud의 최종 사용자 ID. |
 | `acid` | [ID](../../data-types/identity.md) | Adobe Campaign의 최종 사용자 ID. |
 | `adcloud` | [ID](../../data-types/identity.md) | Adobe Advertising Cloud의 최종 사용자 ID. |
@@ -34,7 +34,7 @@ ht-degree: 1%
 | `phonenumberid` | [ID](../../data-types/identity.md) | 전화 번호 ID. |
 | `tntid` | [ID](../../data-types/identity.md) | Adobe Target의 최종 사용자 ID. |
 
-혼합에 대한 자세한 내용은 공용 XDM 저장소를 참조하십시오.
+혼합에 대한 자세한 내용은 공개 XDM 저장소를 참조하십시오.
 
 * [채워진 예제](https://github.com/adobe/xdm/blob/master/components/mixins/experience-event/experienceevent-enduserids.example.1.json)
 * [전체 스키마](https://github.com/adobe/xdm/blob/master/components/mixins/experience-event/experienceevent-enduserids.schema.json)
