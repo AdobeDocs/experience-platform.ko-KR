@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: 스트리밍 통합 기능을 사용하면 스트리밍 끝점을 사용하여 실시간으로 Adobe Experience Platform에 데이터를 업로드할 수 있습니다. 스트리밍 통합 API는 동기 및 비동기 방식으로 두 가지 인증 모드를 지원합니다.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
 source-wordcount: '875'
 ht-degree: 3%
