@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;홈;인기 항목;대상 관리자 소스 커넥터;Audience Manager;대상 관리자 커넥터
 solution: Experience Platform
-title: UI에서 Adobe Audience Manager 소스 커넥터 만들기
+title: UI에서 Adobe Audience Manager 소스 연결 만들기
 topic: overview
 type: Tutorial
 description: 이 자습서에서는 사용자 인터페이스를 사용하여 Consumer Experience Event 데이터를 Platform으로 가져오기 위한 Adobe Audience Manager용 소스 커넥터를 만드는 단계를 안내합니다.
 translation-type: tm+mt
-source-git-commit: bdf95d75bf8db9f3438011f298d17c4259d2c63c
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '466'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 ---
 
 
-# UI에서 Adobe Audience Manager 소스 커넥터 만들기
+# UI에서 Adobe Audience Manager 소스 연결 만들기
 
 이 자습서에서는 사용자 인터페이스를 사용하여 Consumer Experience Event 데이터를 Platform으로 가져오기 위해 Adobe Audience Manager용 소스 커넥터를 만드는 단계를 안내합니다.
 
