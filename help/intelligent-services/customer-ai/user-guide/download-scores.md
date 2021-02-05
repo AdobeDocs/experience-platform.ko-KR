@@ -5,7 +5,7 @@ title: 고객 AI에서 점수 다운로드
 topic: Downloading scores
 description: 고객 AI를 통해 점수를 Portable 파일 형식으로 다운로드할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '961'
 ht-degree: 2%
