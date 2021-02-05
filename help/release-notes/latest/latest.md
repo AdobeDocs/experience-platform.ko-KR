@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: January 27, 2021
 author: ens60013
 translation-type: tm+mt
-source-git-commit: 74325dcfe9d7b117e3f812d88e0c4a980d44ef53
+source-git-commit: 2e3a6acbfaa7f733a9843068c00f31f0b7f535b6
 workflow-type: tm+mt
-source-wordcount: '639'
+source-wordcount: '651'
 ht-degree: 5%
 
 ---
@@ -39,6 +39,12 @@ Adobe Experience Platform의 기존 기능 업데이트:
 ## 대상 {#destinations}
 
 [!DNL Destinations] adobe experience platform의 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과의 사전 구축된 통합입니다. 대상을 사용하여 크로스채널 마케팅 캠페인, 이메일 캠페인, 타깃팅된 광고 및 기타 여러 가지 사용 사례에 대해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
+
+**새 대상**
+
+| 대상 | 설명 |
+| ----------- | ----------- |
+| [!DNL Azure Blob] | [!DNL Azure Blob] 는 클라우드를 위한 Microsoft의 객체 스토리지 솔루션입니다. |
 
 **새로운 기능**
 
