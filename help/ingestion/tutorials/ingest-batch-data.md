@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;홈;인기 항목;섭취;인제스트 일괄 데이터;자습서;일괄 처리 통합;자습서;ui 안내서;
 solution: Experience Platform
-title: Adobe Experience Platform에 데이터 인제스트
+title: Experience Platform에 데이터 인제스트
 topic: tutorial
 type: Tutorial
 description: Adobe Experience Platform을 사용하면 알려진 XDM(Experience Data Model) 스키마를 준수하는 데이터 또는 쪽모이 세공 마루 파일 형식의 일괄 파일로 데이터를 손쉽게 가져올 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
 workflow-type: tm+mt
-source-wordcount: '1323'
+source-wordcount: '1322'
 ht-degree: 0%
 
 ---
