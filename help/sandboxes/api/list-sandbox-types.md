@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;list sandboxes
+keywords: Experience Platform;홈;인기 항목;목록 샌드박스
 solution: Experience Platform
-title: 지원되는 샌드박스 유형 목록
+title: API에서 지원되는 샌드박스 유형 나열
 topic: developer guide
-description: /sandboxTypes 종단점에 GET 요청을 수행하여 조직에 대해 지원되는 샌드박스 유형 목록을 검색할 수 있습니다.
+description: /sandboxTypes 종단점에 GET 요청을 함으로써 조직에 대해 지원되는 샌드박스 유형 목록을 검색할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
-source-wordcount: '68'
+source-wordcount: '81'
 ht-degree: 2%
 
 ---
 
 
-# 지원되는 샌드박스 유형 목록
+# API에서 지원되는 샌드박스 유형을 나열합니다.
 
-종단점에 GET 요청을 하여 조직에 대해 지원되는 샌드박스 유형 목록을 검색할 수 `/sandboxTypes` 있습니다.
+`/sandboxTypes` 종단점에 GET 요청을 하여 조직에 대해 지원되는 샌드박스 유형 목록을 검색할 수 있습니다.
 
 **API 형식**
 
@@ -36,7 +36,7 @@ curl -X GET \
 
 **응답**
 
-성공적인 응답은 조직에서 지원되는 샌드박스 유형 목록을 반환합니다.
+성공적인 응답은 조직에 대해 지원되는 샌드박스 유형 목록을 반환합니다.
 
 ```json
 {
