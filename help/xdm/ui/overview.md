@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;홈;인기 항목;api;XDM;XDM 시스템;경험 데이터 모델;ui;작업 영역;home;popular topics;api;XDM system;experience data model;ui;workspace;
 solution: Experience Platform
-title: 스키마 작업 영역 개요
+title: 스키마 UI 개요
 description: 이 개요에서는 Experience Platform의 스키마 작업 영역의 주요 기능을 설명합니다.
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 2e20403122e65d28f04114af9b7e8d41874f76e2
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '292'
 ht-degree: 2%
@@ -13,7 +13,7 @@ ht-degree: 2%
 ---
 
 
-# [!UICONTROL 스키마 작업 ] 공간 개요
+# [!UICONTROL 스키마 ] UI 개요
 
 Adobe Experience Platform 사용자 인터페이스의 [!UICONTROL 스키마] 작업 영역을 사용하면 스키마, 클래스, 믹싱 및 데이터 유형을 비롯한 XDM(경험 데이터 모델) 리소스를 관리할 수 있습니다. Adobe에서 제공하는 핵심 리소스를 보고 탐색할 수 있으며 조직의 사용자 정의 리소스 및 스키마를 만들 수 있습니다.
 
