@@ -1,24 +1,24 @@
 ---
 keywords: Experience Platform;기계 학습 모델;데이터 과학 작업 공간;실시간 고객 프로필;인기 항목;기계 학습 통찰력
 solution: Experience Platform
-title: 머신 러닝 인사이트를 활용하여 실시간 고객 프로파일 강화
+title: 머신 러닝 인사이트를 통해 실시간 고객 프로파일 강화
 topic: tutorial
 type: Tutorial
-description: 이 문서에서는 컴퓨터에 대한 통찰력으로 실시간 고객 프로필을 향상시키는 방법에 대한 가이드를 제공합니다.
+description: 이 문서에서는 머신 러닝 인사이트를 활용하여 실시간 고객 프로필을 향상시키는 방법에 대한 가이드를 제공합니다.
 translation-type: tm+mt
-source-git-commit: 62e6bb7e72637b06808ff87dc21f40af2c4e2d45
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '635'
+source-wordcount: '640'
 ht-degree: 0%
 
 ---
 
 
-# 기계 학습 인사이트를 통해 [!DNL Real-time Customer Profile] 강화
+# 머신 러닝 인사이트를 통해 [!DNL Real-time Customer Profile] 강화
 
-Adobe Experience Platform [!DNL Data Science Workspace]은 머신 러닝 모델을 생성, 평가 및 활용하여 데이터 예측 및 통찰력을 생성하는 툴 및 리소스를 제공합니다. 기계 학습 인사이트를 [!DNL Profile] 사용 가능한 데이터 세트에 인제스트할 때 동일한 데이터를 [!DNL Profile] 기록과 인제스트하여 [!DNL Adobe Experience Platform Segmentation Service]를 사용하여 세그먼트화할 수 있습니다. 프로필 및 시간 시리즈 데이터가 수집되면 실시간 고객 프로필은 기존 데이터와 병합하고 조합 보기를 업데이트하기 전에 스트리밍 세그먼테이션이라는 지속적인 프로세스를 통해 세그먼트에서 해당 데이터를 포함하거나 제외하기로 자동으로 결정합니다. 그 결과, 계산을 즉시 수행하고 고객이 브랜드와 상호 작용할 때 개인화된 향상된 경험을 고객에게 제공하는 결정을 내릴 수 있습니다.
+Adobe Experience Platform [!DNL Data Science Workspace]은(는) 머신 러닝 모델을 생성, 평가 및 활용하여 데이터 예측 및 통찰력을 생성하는 도구와 리소스를 제공합니다. 머신 러닝 인사이트를 [!DNL Profile] 사용 가능한 데이터 세트에 인제스트할 때 동일한 데이터를 [!DNL Profile] 기록과 인제스트하여 [!DNL Adobe Experience Platform Segmentation Service]를 사용하여 세그먼트화할 수 있습니다. 프로필 및 시간 시리즈 데이터가 수집되면 실시간 고객 프로필은 기존 데이터와 병합하고 조합 보기를 업데이트하기 전에 스트리밍 세그먼테이션이라는 지속적인 프로세스를 통해 세그먼트에서 해당 데이터를 포함하거나 제외하기로 자동으로 결정합니다. 그 결과, 계산을 즉시 수행하고 고객이 브랜드와 상호 작용할 때 개인화된 향상된 경험을 고객에게 제공하는 결정을 내릴 수 있습니다.
 
-이 문서에서는 컴퓨터에 대한 인사이트를 바탕으로 [!DNL Real-time Customer Profile]에 대한 풍부한 기능을 제공하는 자습서 링크를 제공합니다.
+이 문서에서는 기계 학습 인사이트를 바탕으로 [!DNL Real-time Customer Profile]에 대한 풍부한 기능을 제공하는 자습서 링크를 제공합니다.
 
 ## 시작하기
 
