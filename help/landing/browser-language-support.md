@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;홈;인기 항목;CJA;여정 분석;고객 여정 분석;캠페인 통합 운영;고객 여정;여정;여정 통합 운영;기능;지역
 solution: Experience Platform
-title: Adobe Experience Platform 브라우저 및 언어 지원
+title: Experience Platform UI에 대한 브라우저 및 언어 지원
 topic: getting started
 description: Adobe Experience Platform은 고객 경험을 향상시키는 완벽한 솔루션을 구축하고 관리하기 위해 시장에서 가장 강력하고 유연하며 개방적인 시스템입니다. Experience Platform을 사용하면 조직 내 모든 시스템의 고객 데이터와 컨텐츠를 중앙 집중화 및 표준화하고 데이터 과학 및 시스템 학습을 적용하여 풍부한 개인별 경험을 더 잘 설계하고 전달할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 00010d38a5d05800aeac9af8505093fee3593b45
+source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
 workflow-type: tm+mt
-source-wordcount: '243'
+source-wordcount: '248'
 ht-degree: 17%
 
 ---
 
 
-# Experience Platform 브라우저 및 언어 지원
+# Experience Platform UI에 대한 브라우저 및 언어 지원
 
 Adobe Experience Platform 유저 인터페이스(UI)는 다양한 브라우저와 언어를 지원하도록 설계되었습니다.
 
