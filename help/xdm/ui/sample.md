@@ -4,7 +4,7 @@ title: UI에서 XDM 스키마에 대한 샘플 데이터 생성
 description: Adobe Experience Platform 사용자 인터페이스에서 기존 스키마를 기반으로 샘플 JSON 데이터를 생성하는 방법을 알아봅니다.
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 87497ef8a0ebf8de8b6c2dff1650c0b982299e8a
+source-git-commit: 8d6916890a94300dc68d018d56579df9616c177c
 workflow-type: tm+mt
 source-wordcount: '336'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 Experience Platform UI에서 정의하는 모든 스키마의 경우 스키마 구조를 준수하는 샘플 JSON 개체를 생성할 수 있습니다. 이 객체는 해당 스키마를 사용하는 데이터 세트에 인제스트된 모든 데이터에 대한 템플릿 역할을 할 수 있습니다.
 
-플랫폼 UI의 왼쪽 탐색 영역에서 **[!UICONTROL 스키마]**&#x200B;를 선택합니다. **[!UICONTROL 찾아보기]** 탭에서 샘플 데이터를 생성할 스키마를 찾습니다. 목록에서 해당 스키마를 선택하고 오른쪽 레일 업데이트를 통해 스키마에 대한 세부 정보를 표시합니다. 여기에서 **[!UICONTROL 샘플 파일 다운로드]를 선택합니다.**
+플랫폼 UI의 왼쪽 탐색 영역에서 **[!UICONTROL 스키마]**&#x200B;를 선택합니다. **[!UICONTROL 찾아보기]** 탭에서 샘플 데이터를 생성할 스키마를 찾습니다. 목록에서 해당 스키마를 선택하고 오른쪽 레일 업데이트를 통해 스키마에 대한 세부 정보를 표시합니다. 여기에서 **[!UICONTROL 샘플 파일 다운로드]**&#x200B;를 선택합니다.
 
 ![](../images/ui/sample/sample-data.png)
 
