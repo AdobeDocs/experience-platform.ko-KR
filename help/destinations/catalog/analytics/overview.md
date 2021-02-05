@@ -1,19 +1,17 @@
 ---
 keywords: 분석 대상;분석 대상
-title: 분석 대상
-seo-title: 분석 대상
+title: 분석 대상 개요
 description: 분석 대상은 방문자가 사이트에서 컨텐트와 상호 작용하는 방식을 추적하고 데이터를 수집하여 방문자의 행동을 파악합니다. 이러한 플랫폼은 가장 중요한 방문자의 참여 및 전환에 대한 고유한 통찰력을 제공합니다.
-seo-description: 분석 대상은 방문자가 사이트에서 컨텐트와 상호 작용하는 방식을 추적하고 데이터를 수집하여 방문자의 행동을 파악합니다. 이러한 플랫폼은 가장 중요한 방문자의 참여 및 전환에 대한 고유한 통찰력을 제공합니다.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '204'
-ht-degree: 5%
+source-wordcount: '169'
+ht-degree: 6%
 
 ---
 
 
-# 분석 대상 {#analytics-destinations}
+# 분석 대상 개요 {#analytics-destinations}
 
 분석 대상은 방문자가 사이트에서 컨텐트와 상호 작용하는 방식을 추적하고 데이터를 수집하여 방문자의 행동을 파악합니다. 이러한 플랫폼은 가장 중요한 방문자의 참여 및 전환에 대한 고유한 통찰력을 제공합니다.
 
