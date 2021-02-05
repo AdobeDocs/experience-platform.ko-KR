@@ -1,21 +1,17 @@
 ---
 keywords: 인보카
-title: Invoca 태그 확장
-seo-title: Invoca 태그 확장
+title: 초대차 태그 확장 대상
 description: 인보카 태그 확장은 Adobe Experience Platform의 고객 대상 음성이다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
-seo-description: 인보카 태그 확장은 Adobe Experience Platform의 고객 대상 음성이다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '568'
+source-wordcount: '536'
 ht-degree: 3%
 
 ---
 
 
 # [!DNL Invoca Tags] 확장 {#invoca-extension}
-
-## 개요 {#overview}
 
 [!DNL Invoca] 디지털 고객 여정에 전화 데이터 및 음성 인사이트를 제공합니다. [!DNL Invoca’s] 콜인텔리전스 플랫폼을 통해 마케터는 마침내 호출 결과를 측정하고 오프라인 전환을 다시 디지털 지출로 연결할 수 있는 분석을 갖게 되었습니다.
 
