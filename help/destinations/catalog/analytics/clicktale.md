@@ -1,21 +1,17 @@
 ---
 keywords: clicktale;clicktale extension;클릭 대상
-title: Clicktale 확장
-seo-title: Clicktale 확장
+title: 클릭 가능한 확장 대상
 description: Clicktale 확장은 Adobe Experience Platform의 분석 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
-seo-description: Clicktale 확장은 Adobe Experience Platform의 분석 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '546'
-ht-degree: 4%
+source-wordcount: '519'
+ht-degree: 5%
 
 ---
 
 
 # [!DNL Clicktale] 확장 {#clicktale-extension}
-
-## 개요 {#overview}
 
 [!DNL Clicktale's] experience platform launch와의 통합을 통해  [!DNL Clicktale] 코드를 배포하고  [!DNL Clicktale's] 시각적 편집기를 사용하여 Launch 내에서 데이터 요소를 매핑할 수 있습니다.
 
