@@ -1,21 +1,17 @@
 ---
 keywords: contentsquare extension;contentsquare destination;contentsquare
-title: Contentsquare 확장
-seo-title: Contentsquare 확장
+title: 콘텐츠 사각형 확장 대상
 description: Contentsquare 익스텐션은 Adobe Experience Platform의 분석 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
-seo-description: Contentsquare 익스텐션은 Adobe Experience Platform의 분석 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '569'
+source-wordcount: '542'
 ht-degree: 4%
 
 ---
 
 
 # [!DNL Contentsquare] 확장 {#contentsquare-extension}
-
-## 개요 {#overview}
 
 페이지 내 행동을 시각화하면 고객이 포기한 이유 및 개선할 수 있는 방법을 확인할 수 있습니다. 매출액을 각 Analytics 세그먼트 및 Target 테스트에 대한 UX 및 컨텐츠 요소에 기여합니다. [!DNL Contentsquare] 태그를 설치하고 사용자 지정 변수 및 이벤트를 설정합니다. 몇 번의 클릭만으로 UX 분석을 위한 데이터를 수집할 수 있습니다.
 
