@@ -1,21 +1,17 @@
 ---
 keywords: twitter;twitter;twitter 유니버설 웹 사이트 태그;Twitter UWT 태그;Twitter uwt;twitter uwt
-title: Twitter 범용 웹 사이트 태그 확장
-seo-title: Twitter 범용 웹 사이트 태그 확장
+title: Twitter 범용 웹 사이트 태그 확장 대상
 description: Twitter 범용 웹 사이트 태그 익스텐션은 Adobe Experience Platform의 광고 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
-seo-description: Twitter 범용 웹 사이트 태그 익스텐션은 Adobe Experience Platform의 광고 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '541'
+source-wordcount: '508'
 ht-degree: 3%
 
 ---
 
 
 # [!DNL Twitter Universal Website Tag] 확장 {#twitter-uwt-extension}
-
-## 개요 {#overview}
 
 [!DNL Twitter Universal Website Tag] 는 Twitter UWT 태그에 비콘을 보내는 동작을 제공합니다.
 
