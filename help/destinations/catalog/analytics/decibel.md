@@ -1,21 +1,17 @@
 ---
 keywords: 데시벨 확장;데시벨;데시벨 대상
-title: 데시벨 확장
-seo-title: 데시벨 확장
+title: 데시벨 확장 대상
 description: Decibel 확장은 Adobe Experience Platform의 분석 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
-seo-description: Decibel 확장은 Adobe Experience Platform의 분석 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '548'
+source-wordcount: '521'
 ht-degree: 4%
 
 ---
 
 
 # [!DNL Decibel] 확장 {#decibel-extension}
-
-## 개요 {#overview}
 
 웹 속성에 [!DNL Decibel]을(를) 빠르고 매끄럽게 배포합니다. 확장 기능을 통해 사용 가능한 작업을 사용하여 규칙을 사용하여 고급 구성을 추가로 배포할 수도 있습니다.
 
