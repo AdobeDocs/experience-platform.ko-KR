@@ -1,26 +1,26 @@
 ---
-keywords: Experience Platform;home;popular topics;SFTP;sftp
+keywords: Experience Platform;홈;인기 항목;SFTP;sftp
 solution: Experience Platform
-title: UI에서 SFTP 소스 커넥터 만들기
+title: UI에서 SFTP 소스 연결 만들기
 topic: overview
 type: Tutorial
-description: 이 자습서에서는 플랫폼 사용자 인터페이스를 사용하여 SFTP 소스 커넥터를 만드는 단계를 제공합니다.
+description: Adobe Experience Platform UI를 사용하여 SFTP 소스 연결을 만드는 방법을 알아봅니다.
 translation-type: tm+mt
-source-git-commit: 0d0d3aa4213f3a8252de82c47eef6e9caa4d3e9e
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '695'
+source-wordcount: '702'
 ht-degree: 0%
 
 ---
 
 
-# UI에서 SFTP 소스 커넥터 만들기
+# UI에서 SFTP 소스 연결 만들기
 
 >[!NOTE]
 >
 >SFTP 커넥터가 베타에 있습니다. 베타 레이블이 지정된 커넥터 사용에 대한 자세한 내용은 [소스 개요](../../../../home.md#terms-and-conditions)를 참조하십시오.
 
-이 자습서에서는 플랫폼 사용자 인터페이스를 사용하여 SFTP 소스 커넥터를 만드는 단계를 제공합니다.
+이 자습서에서는 Adobe Experience Platform UI를 사용하여 SFTP 소스 연결을 만드는 단계를 제공합니다.
 
 ## 시작하기
 
