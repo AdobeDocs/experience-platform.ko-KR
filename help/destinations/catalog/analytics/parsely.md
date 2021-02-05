@@ -1,21 +1,17 @@
 ---
 keywords: 구문 분석. ly;parison;parse.ly;Parse.ly;Parse.ly
-title: Parse.ly Analytics 확장
-seo-title: Parse.ly Analytics 확장
+title: 구문 분석.ly 분석 확장 대상
 description: Parse.ly Analytics 확장 기능은 Adobe Experience Platform의 분석 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
-seo-description: Parse.ly Analytics 확장 기능은 Adobe Experience Platform의 분석 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '531'
+source-wordcount: '502'
 ht-degree: 3%
 
 ---
 
 
 # [!DNL Parse.ly Analytics] 확장 {#parsely-analytics-extension}
-
-## 개요 {#overview}
 
 [!DNL Parse.ly Analytics] 2,500개 이상의 기업이 데이터를 사용하여 온라인 고객을 파악하는 데 도움이 됩니다. 이 확장은 방문자가 사이트의 컨텐츠와 상호 작용하는 방법을 추적하는 JavaScript 조각을 설치합니다.
 
