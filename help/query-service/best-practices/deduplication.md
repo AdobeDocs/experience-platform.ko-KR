@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;홈;인기 항목;쿼리 서비스;데이터 중복 제거;데이터 중복 제거;home;popular topics;query service;data deduplication;deduplication
 solution: Experience Platform
-title: 데이터 중복 제거
+title: 쿼리 서비스의 데이터 중복 제거
 topic: queries
 type: Tutorial
 description: 이 문서에서는 경험 이벤트, 구매 및 지표의 세 가지 일반적인 사용 사례를 중복 제거하는 하위 선택 및 전체 샘플 쿼리 예에 대해 설명합니다.
 translation-type: tm+mt
-source-git-commit: e2c648829bb3268ab319da934f5cc6cc811290b3
+source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
 workflow-type: tm+mt
-source-wordcount: '491'
+source-wordcount: '494'
 ht-degree: 0%
 
 ---
