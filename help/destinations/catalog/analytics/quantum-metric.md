@@ -1,21 +1,17 @@
 ---
 keywords: 양자 지표 확장;양자 지표;양자 지표;양자 지표
-title: 양자 지표 확장
-seo-title: 양자 지표 확장
+title: 양자 지표 확장 대상
 description: 양자 지표 확장은 Adobe Experience Platform의 분석 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
-seo-description: 양자 지표 확장은 Adobe Experience Platform의 분석 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '565'
+source-wordcount: '536'
 ht-degree: 3%
 
 ---
 
 
 # [!DNL Quantum Metric] 확장 {#quantum-metric-extension}
-
-## 개요 {#overview}
 
 [!DNL Quantum Metric's] adobe Launch와의 통합을 통해  [!DNL Quantum Metric's] 데이터 수집 태그의 코델스 배포를 용이하게 합니다. 또한 이 확장은 [!DNL Quantum Metric] API의 유용한 정보가 포함된 시작 데이터 요소를 캡처하는 기능을 제공합니다.
 
