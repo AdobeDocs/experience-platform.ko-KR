@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;home;popular topics;kafka;kafka connector;Kafka;
+keywords: Experience Platform;홈;인기 항목;카프카;카프카 커넥터;Kafka
 solution: Experience Platform
-title: Kafka 커넥터
+title: Kafka Connector
 topic: overview
-description: Adobe Experience Platform용 스트림 커넥터는 Apache Kafka Connect를 기반으로 합니다. 이 라이브러리는 데이터 센터의 Kafka 주제에서 실시간으로 Experience Platform으로 JSON 이벤트를 스트리밍하는 데 사용할 수 있습니다.
+description: Adobe Experience Platform용 스트림 커넥터는 Apache Kafka Connect를 기반으로 합니다. 이 라이브러리는 데이터 센터의 Kafka 주제에 있는 JSON 이벤트를 실시간으로 Experience Platform에 직접 스트리밍하는 데 사용할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 7fc7f0e525d994904dc71b1eb7136f11c05d5672
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
-source-wordcount: '177'
+source-wordcount: '186'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Kafka] adobe experience platform
+# [!DNL Kafka] adobe experience platform용 커넥터
 
-Adobe Experience Platform의 스트림 커넥터는 기반 [!DNL Apache Kafka Connect]입니다. 이 라이브러리를 사용하여 데이터 센터의 [!DNL Kafka] 주제 [!DNL Experience Platform] 에서 실시간으로 JSON 이벤트를 스트리밍할 수 있습니다.
+Adobe Experience Platform의 스트림 커넥터는 [!DNL Apache Kafka Connect]을 기반으로 합니다. 이 라이브러리는 데이터 센터의 [!DNL Kafka] 주제에서 실시간으로 [!DNL Experience Platform]로 JSON 이벤트를 바로 스트리밍하는 데 사용할 수 있습니다.
 
-스트림 커넥터가 싱크(단방향) 커넥터로 주제의 데이터를 등록된 종단점으로 [!DNL Kafka] 배달합니다 [!DNL Experience Platform]. 이 커넥터를 사용하려면 라이브러리를 다운로드하고 기존 배포에 추가하고 Adobe 스트리밍 HTTP URL에 [!DNL Kafka] [!DNL Kafka] 항목을 구성해야 합니다. 추가 코드는 **필요하지 않습니다** . 커넥터는 다음 기능을 지원합니다.
+스트림 커넥터는 싱크(단방향) 커넥터로, [!DNL Kafka] 주제의 데이터를 [!DNL Experience Platform]의 등록된 끝점으로 전달합니다. 이 커넥터를 사용하려면 라이브러리를 다운로드하고 기존 [!DNL Kafka] 배포에 추가하고 [!DNL Kafka] 항목을 Adobe 스트리밍 HTTP URL에 구성해야 합니다. 추가 코드는 **이(가) 필요하지 않습니다.** 커넥터는 다음 기능을 지원합니다.
 
 - 인증된 데이터 수집
-- 메시지를 일괄 처리하여 네트워크 호출 감소 및 처리량 증가
+- 메시지를 묶어서 네트워크 호출을 줄이고 처리량을 늘림
 
-커넥터를 설정하는 방법에 대한 지침을 비롯하여 [!DNL Kafka] 커넥터에 대한 자세한 내용은 [시작 안내서를 참조하십시오](https://github.com/adobe/experience-platform-streaming-connect). 자세한 작업 과정은 [개발자 안내서를 참조하십시오](https://www.adobe.com/go/kafka-connector-developer-guide).
+커넥터 설정 방법에 대한 지침을 포함한 [!DNL Kafka] 커넥터에 대한 자세한 내용은 [시작 안내서](https://github.com/adobe/experience-platform-streaming-connect)를 참조하십시오. 자세한 작업 과정은 [개발자 안내서](https://www.adobe.com/go/kafka-connector-developer-guide)를 참조하십시오.
