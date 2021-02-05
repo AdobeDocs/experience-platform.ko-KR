@@ -1,21 +1,17 @@
 ---
 keywords: kickfire;kickfire;kickfire 확장자;Kickfire 확장
-title: KickFire 확장
-seo-title: KickFire 확장
+title: KickFire 확장 대상
 description: KickFire 확장은 Adobe Experience Platform의 개인화 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
-seo-description: KickFire 확장은 Adobe Experience Platform의 개인화 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '534'
+source-wordcount: '507'
 ht-degree: 3%
 
 ---
 
 
 # [!DNL KickFire] 확장 {#kickfire-extension}
-
-## 개요 {#overview}
 
 [!DNL KickFire's] IP 주소 인텔리전스 및 B2B 우선 순위 데이터를 사용하면 IP 주소를 회사에 변환하고 익명 웹 방문자를 식별하며 기술 스택에 계정 데이터를 통합할 수 있습니다. 이 모든 것은 회사의 IP 주소를 기반으로 합니다.
 
