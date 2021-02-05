@@ -1,21 +1,21 @@
 ---
 keywords: Experience Platform;프로필;실시간 고객 프로필;문제 해결;가드레일;지침;제한;개체;기본 개체;차원 개체;;profile;real-time customer profile;troubleshooting;guidelines;limit;entity;primary entity;dimension entity;
-title: 실시간 고객 프로파일 데이터에 대한 Experience Platform 보증
+title: 실시간 고객 프로필 데이터 보증
 solution: Experience Platform
 product: experience platform
 topic: guide
 type: Documentation
 description: 'Adobe Experience Platform은 실시간 고객 프로필에서 지원할 수 없는 데이터 모델을 만들지 않도록 하기 위해 일련의 지침을 제공합니다. 이 문서에서는 프로필 데이터를 모델링할 때 잊지 않도록 하기 위한 모범 사례 및 제한 사항에 대해 간략히 설명합니다. '
 translation-type: tm+mt
-source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
+source-git-commit: ba1cbed3b5e3f3a8879b3882856a03ef4be9b96a
 workflow-type: tm+mt
-source-wordcount: '1457'
+source-wordcount: '1456'
 ht-degree: 1%
 
 ---
 
 
-# [!DNL Platform] 가드레일  [!DNL Real-time Customer Profile]
+# [!DNL Real-time Customer Profile] 데이터의 가드레일
 
 [!DNL Real-time Customer Profile] 행동 인사이트 및 고객 속성을 기반으로 개인화된 크로스채널 경험을 제공할 수 있는 개별 프로필을 제공합니다. 이러한 타깃팅을 수행하기 위해 Adobe Experience Platform의 세그멘테이션 엔진에서는 고객 프로파일을 개발하는 데 새로운 방법을 제공하는 고도로 구분된 하이브리드 데이터 모델을 사용합니다. [!DNL Profile] 이 하이브리드 데이터 모델을 사용하면 수집 중인 데이터가 올바르게 모델링되는 것이 매우 중요합니다. 프로필 데이터를 유지 관리하는 [!DNL Profile] 데이터 저장소는 관계형 저장소가 아니지만, [!DNL Profile]는 단순화되고 직관적인 방식으로 세그먼트를 만들기 위해 작은 차원 엔터티와의 통합을 허용합니다. 이 통합을 다중 엔티티 세그먼테이션이라고 합니다.
 
