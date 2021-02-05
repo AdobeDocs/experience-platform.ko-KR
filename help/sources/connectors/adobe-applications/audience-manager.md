@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;홈;인기 항목;Audience Manager 커넥터;대상 관리자;대상 관리자
 solution: Experience Platform
-title: Audience Manager 커넥터
+title: Audience Manager 소스 커넥터 개요
 topic: overview
-description: Adobe Audience Manager 데이터 커넥터는 Adobe Audience Manager에서 수집한 자사 데이터를 Adobe Experience Platform으로 스트리밍합니다. Audience Manager 커넥터는 두 가지 데이터 카테고리를 Platform으로 인제스트합니다.
+description: Adobe Audience Manager 소스 커넥터는 Audience Manager에서 수집한 자사 데이터를 Adobe Experience Platform으로 스트리밍합니다.
 translation-type: tm+mt
-source-git-commit: b88c358d128ba2016c9449fefc8862bd503c4aa5
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '886'
+source-wordcount: '875'
 ht-degree: 0%
 
 ---
