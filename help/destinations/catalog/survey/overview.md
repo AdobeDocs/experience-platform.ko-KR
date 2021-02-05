@@ -1,19 +1,17 @@
 ---
 keywords: 설문 조사 대상;설문 조사;foresee;inmoment;웹 출구 설문 조사;qualtrics
-title: 설문 조사 대상
-seo-title: 설문 조사 대상
-description: 설문 조사 플랫폼은 데이터 요소를 통해 설문 조사 이벤트를 검색하고, 고객 피드백을 실시간으로 수집하며, Platform과 데이터를 공유합니다.
-seo-description: 설문 조사 플랫폼은 데이터 요소를 통해 설문 조사 이벤트를 검색하고, 고객 피드백을 실시간으로 수집하며, Platform과 데이터를 공유합니다.
+title: 설문 조사 대상 개요
+description: 설문 조사 플랫폼은 데이터 요소를 통해 설문 조사 이벤트를 검색하고, 고객 피드백을 실시간으로 캡처하고, Adobe Experience Platform과 데이터를 공유합니다.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '105'
+source-wordcount: '89'
 ht-degree: 0%
 
 ---
 
 
-# 설문 조사 대상 {#survey-destinations}
+# 설문 조사 대상 개요 {#survey-destinations}
 
 설문 조사 플랫폼은 데이터 요소를 통해 설문 조사 이벤트를 검색하고, 고객 피드백을 실시간으로 캡처하고, Adobe Experience Platform과 데이터를 공유합니다.
 
