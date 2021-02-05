@@ -1,19 +1,19 @@
 ---
 keywords: 데이터 거버넌스 rtcdp;rtcdp 데이터 거버넌스;실시간 고객 데이터 프로필 데이터 거버넌스;개인 정보 rtcdp;rtcdp privacy
-title: 실시간 고객 데이터 프로필의 개인 정보
-seo-title: 실시간 고객 데이터 프로필의 개인 정보
-description: 실시간 고객 데이터 프로필을 사용하면 개인 정보 보호 규정을 준수하는 데이터 작업을 간소화할 수 있습니다.
-seo-description: 실시간 고객 데이터 프로필을 사용하면 개인 정보 보호 규정을 준수하는 데이터 작업을 간소화할 수 있습니다.
+title: 실시간 고객 데이터 플랫폼의 개인 정보
+seo-title: 실시간 고객 데이터 플랫폼의 개인 정보
+description: 실시간 고객 데이터 플랫폼을 사용하면 개인 정보 보호 규정을 준수하는 데이터 작업을 간소화할 수 있습니다.
+seo-description: 실시간 고객 데이터 플랫폼을 사용하면 개인 정보 보호 규정을 준수하는 데이터 작업을 간소화할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 49c984a60fd699706eec508ec1d786340df40b57
+source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
 workflow-type: tm+mt
-source-wordcount: '386'
+source-wordcount: '390'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Real-time CDP]의 개인 정보
+# 실시간 고객 데이터 플랫폼의 개인 정보
 
 [!DNL Real-time Customer Data Platform] ([!DNL Real-time CDP]마케터는 여러 엔터프라이즈 시스템의 데이터를 통합하여 고객을 보다 효과적으로 식별, 이해 및 참여시킬 수 있습니다. Adobe은 소비자 데이터 개인 정보를 기본적인 디자인 원칙으로서 보유하고 있으며 마케터가 고객의 데이터 개인 정보를 관리하는 데 도움이 되는 다양한 제어 기능을 제공합니다.
 
