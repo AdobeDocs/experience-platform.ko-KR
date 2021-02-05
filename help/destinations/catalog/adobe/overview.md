@@ -1,19 +1,17 @@
 ---
 keywords: 대상;experience cloud solutions;대상;대상 대상 대상;광고 클라우드;광고 클라우드audience manager;adobe target 대상;target;audience manager 대상;
-title: Adobe 대상
-seo-title: Adobe 대상
+title: Adobe 대상 개요
 description: 광고 타겟팅, 개인화, 마케팅 자동화 등을 위해 플랫폼의 데이터를 다른 Adobe Experience Cloud 솔루션에 연결하여 고객 경험을 관리합니다
-seo-description: 광고 타겟팅, 개인화, 마케팅 자동화 등을 위해 플랫폼의 데이터를 다른 Adobe Experience Cloud 솔루션에 연결하여 고객 경험을 관리합니다
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '243'
-ht-degree: 12%
+source-wordcount: '219'
+ht-degree: 13%
 
 ---
 
 
-# Adobe 대상 {#adobe-destinations}
+# Adobe 대상 개요 {#adobe-destinations}
 
 광고 타겟팅, 개인화, 마케팅 자동화 등을 위해 Adobe Experience Platform의 데이터를 다른 Adobe Experience Cloud 솔루션에 연결하여 고객 경험을 관리할 수 있습니다.
 
