@@ -1,13 +1,13 @@
 ---
-keywords: Visual similarity;visual similarity;ccai api
+keywords: 시각적 유사성;시각적 유사성;ccai api
 solution: Experience Platform, Intelligent Services
-title: 시각적 유사성
+title: 컨텐트 및 상거래 AI API의 시각적 유사성
 topic: Developer guide
 description: 이미지가 주어지면 시각적 유사성 서비스는 카탈로그에서 시각적으로 유사한 이미지를 자동으로 찾습니다.
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: d10c00694b0a3b2a9da693bd59615b533cfae468
 workflow-type: tm+mt
-source-wordcount: '497'
+source-wordcount: '510'
 ht-degree: 3%
 
 ---
@@ -37,7 +37,7 @@ POST /services/v1/predict
 
 >[!CAUTION]
 >
->`analyzer_id` 사용할 항목 [!DNL Sensei Content Framework] 을 결정합니다. 요청하기 전에 적절한 `analyzer_id` 것이 있는지 확인하십시오. 이 서비스를 받으려면 콘텐츠 및 상거래 AI 베타 팀 `analyzer_id` 에 문의하십시오.
+>`analyzer_id` 사용할 항목 [!DNL Sensei Content Framework] 을 결정합니다. 요청을 하기 전에 적절한 `analyzer_id`이 있는지 확인하십시오. 이 서비스에 대한 `analyzer_id`을(를) 받으려면 콘텐츠 및 상거래 AI 베타 팀에 문의하십시오.
 
 ```SHELL
 curl -i -X POST https://sensei.adobe.io/services/v1/predict \
@@ -76,21 +76,21 @@ curl -i -X POST https://sensei.adobe.io/services/v1/predict \
 
 | 속성 | 설명 | 필수입니다 |
 | --- | --- | --- |
-| `analyzer_id` | 요청이 배포된 [!DNL Sensei] 서비스 ID. 이 ID는 사용할 항목 중 하나를 [!DNL Sensei Content Frameworks] 결정합니다. 사용자 지정 서비스의 경우 콘텐츠 및 상거래 AI 팀에 문의하여 사용자 지정 ID를 설정하십시오. | 예 |
+| `analyzer_id` | 요청이 배포된 [!DNL Sensei] 서비스 ID. 이 ID는 [!DNL Sensei Content Frameworks] 중 어느 것이 사용되는지 결정합니다. 사용자 지정 서비스의 경우 콘텐츠 및 상거래 AI 팀에 문의하여 사용자 지정 ID를 설정하십시오. | 예 |
 | `application-id` | 만든 응용 프로그램의 ID. | 예 |
-| `data` | 배열에 이미지를 나타내는 각 객체가 포함된 JSON 객체가 포함된 배열입니다. 이 배열의 일부로 전달되는 모든 매개 변수는 배열 외부에서 지정된 전역 매개 변수를 `data` 무시합니다. 이 표에 나와 있는 나머지 속성은 내에서 재정의할 수 있습니다 `data`. | 예 |
+| `data` | 배열에 이미지를 나타내는 각 객체가 포함된 JSON 객체가 포함된 배열입니다. 이 배열의 일부로 전달되는 모든 매개 변수는 `data` 배열 외부에 지정된 전역 매개 변수를 무시합니다. 이 표에 나와 있는 나머지 속성은 `data` 내에서 재정의할 수 있습니다. | 예 |
 | `content-id` | 응답에서 반환되는 데이터 요소의 고유 ID. 이 값이 전달되지 않으면 자동 생성된 ID가 할당됩니다. | 아니요 |
-| `content` | 시각적 유사성 서비스에 의해 분석되는 내용. 이미지가 요청 본문에 포함된 경우 말림 명령 `-F file=@<filename>` 을 사용하여 이미지를 전달하고 이 매개 변수를 빈 문자열로 남겨둡니다. <br> 이미지가 S3의 파일인 경우 서명된 URL을 전달합니다. 컨텐츠가 요청 본문에 포함된 경우 데이터 요소 목록에는 하나의 객체만 있어야 합니다. 두 개 이상의 객체가 전달되면 첫 번째 객체만 처리됩니다. | 예 |
-| `content-type` | 입력이 요청 본문과 S3 버킷에 대한 서명된 URL인지 여부를 나타내는 데 사용됩니다. 이 속성의 기본값은 입니다 `inline`. | 아니요 |
-| `encoding` | 입력 이미지의 파일 형식입니다. 현재 JPEG 및 PNG 이미지만 처리할 수 있습니다. 이 속성의 기본값은 입니다 `jpeg`. | 아니요 |
-| `threshold` | 결과를 반환해야 하는 점수(0~1)의 임계값. 값을 사용하여 모든 결과 `0` 를 반환합니다. 이 속성의 기본값은 입니다 `0`. | 아니요 |
-| `top-N` | 반환할 결과 수입니다(음수가 될 수 없음). 값을 사용하여 모든 결과 `0` 를 반환합니다. 함께 사용할 경우 반환되는 결과 `threshold`의 수가 두 제한 세트 중 더 적습니다. 이 속성의 기본값은 입니다 `0`. | 아니요 |
+| `content` | 시각적 유사성 서비스에 의해 분석되는 내용. 이미지가 요청 본문에 포함된 경우 말림 명령에 `-F file=@<filename>`을 사용하여 이미지를 전달하고 이 매개 변수를 빈 문자열로 남겨둡니다. <br> 이미지가 S3의 파일인 경우 서명된 URL을 전달합니다. 컨텐츠가 요청 본문에 포함된 경우 데이터 요소 목록에는 하나의 객체만 있어야 합니다. 두 개 이상의 객체가 전달되면 첫 번째 객체만 처리됩니다. | 예 |
+| `content-type` | 입력이 요청 본문과 S3 버킷에 대한 서명된 URL인지 여부를 나타내는 데 사용됩니다. 이 속성의 기본값은 `inline`입니다. | 아니요 |
+| `encoding` | 입력 이미지의 파일 형식입니다. 현재 JPEG 및 PNG 이미지만 처리할 수 있습니다. 이 속성의 기본값은 `jpeg`입니다. | 아니요 |
+| `threshold` | 결과를 반환해야 하는 점수(0~1)의 임계값. 모든 결과를 반환하려면 `0` 값을 사용합니다. 이 속성의 기본값은 `0`입니다. | 아니요 |
+| `top-N` | 반환할 결과 수입니다(음수가 될 수 없음). 모든 결과를 반환하려면 `0` 값을 사용합니다. `threshold`과 함께 사용할 경우 반환되는 결과 수가 두 제한 중 하나 보다 적습니다. 이 속성의 기본값은 `0`입니다. | 아니요 |
 | `custom` | 전달할 사용자 지정 매개 변수입니다. | 아니요 |
 | `historic-metadata` | 메타데이터를 전달할 수 있는 배열입니다. | 아니요 |
 
 **응답**
 
-성공적인 응답은 카탈로그에 있는 시각적으로 유사한 각 이미지 `response` 에 대한 `feature_value` `feature_name` 및 를 포함하는 배열을 반환합니다.
+성공적으로 응답하면 카탈로그에 있는 시각적으로 비슷한 각 이미지에 대해 `feature_value` 및 `feature_name`가 포함된 `response` 배열이 반환됩니다.
 
 아래 표시된 예제 응답에서 시각적으로 유사한 다음 이미지가 반환되었습니다.
 
