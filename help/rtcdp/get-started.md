@@ -3,7 +3,7 @@ keywords: RTCDP;CDP;실시간 고객 데이터 플랫폼;실시간 고객 데이
 title: 실시간 고객 데이터 플랫폼 시작하기
 description: 실시간 고객 데이터 플랫폼 구현을 설정할 때 이 샘플 시나리오를 예로 사용하십시오.
 translation-type: tm+mt
-source-git-commit: 00010d38a5d05800aeac9af8505093fee3593b45
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
 source-wordcount: '2326'
 ht-degree: 1%
