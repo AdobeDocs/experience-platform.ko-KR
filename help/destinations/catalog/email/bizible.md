@@ -1,21 +1,17 @@
 ---
 keywords: biggable;bizable extension;bizable destination
-title: Biz가능 확장
-seo-title: Biz가능 확장
+title: Biz가능 확장 대상
 description: Biz가능 확장명은 Adobe Experience Platform의 이메일 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
-seo-description: Biz가능 확장명은 Adobe Experience Platform의 이메일 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '488'
 ht-degree: 3%
 
 ---
 
 
 # [!DNL Bizible] 확장 {#bizible-extension}
-
-## 개요 {#overview}
 
 [!DNL Bizible] 는 데이터에 대한 탁월한 가시성을 제공하는 업계 선도적인 B2B 기여도 분석 솔루션으로, 데이터 증가에 따른 현명한 의사 결정을 내릴 수 있습니다.
 
