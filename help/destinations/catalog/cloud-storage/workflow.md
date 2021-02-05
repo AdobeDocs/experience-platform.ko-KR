@@ -1,22 +1,19 @@
 ---
 keywords: 클라우드 스토리지 대상;클라우드 스토리지
-title: 클라우드 스토리지 대상 워크플로우
-seo-title: 클라우드 스토리지 대상 워크플로우
+title: 클라우드 스토리지 대상 만들기
 type: Tutorial
 description: 클라우드 스토리지 위치에 연결하는 지침
 seo-description: 클라우드 스토리지 위치에 연결하는 지침
 translation-type: tm+mt
-source-git-commit: 95f57f9d1b3eeb0b16ba209b9774bd94f5758009
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '539'
+source-wordcount: '534'
 ht-degree: 0%
 
 ---
 
 
-# 클라우드 스토리지 대상을 만드는 워크플로우
-
-## 개요
+# 클라우드 스토리지 대상 만들기
 
 이 페이지에서는 Adobe Experience Platform의 클라우드 저장소 위치에 연결할 수 있는 방법에 대해 설명합니다.
 
