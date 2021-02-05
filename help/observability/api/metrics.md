@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;홈;인기 항목
 solution: Experience Platform
-title: 지표 끝점
+title: 지표 API 끝점
 topic: developer guide
 description: Observability Insights API를 사용하여 Experience Platform에서 관측성 지표를 검색하는 방법을 알아봅니다.
 translation-type: tm+mt
-source-git-commit: 5dad1fcc82707f6ee1bf75af6c10d34ff78ac311
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '2026'
+source-wordcount: '2027'
 ht-degree: 2%
 
 ---
