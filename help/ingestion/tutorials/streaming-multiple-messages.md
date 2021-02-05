@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;홈;인기 항목;스트리밍 통합;통합;여러 메시지 스트리밍;여러 메시지;;home;popular topics;streaming ingestion;ingestion;streaming multiple messages;multiple messages;
 solution: Experience Platform
-title: 하나의 HTTP 요청으로 여러 메시지 스트리밍
+title: 단일 HTTP 요청으로 여러 메시지 보내기
 topic: tutorial
 type: Tutorial
 description: 이 문서에서는 스트리밍 통합 기능을 사용하여 단일 HTTP 요청 내에서 여러 메시지를 Adobe Experience Platform으로 전송하는 자습서를 제공합니다.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
 source-wordcount: '1497'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 ---
 
 
-# 단일 HTTP 요청에서 여러 메시지 보내기
+# 하나의 HTTP 요청으로 여러 메시지 보내기
 
 Adobe Experience Platform으로 데이터를 스트리밍할 때 많은 HTTP 호출을 하는 것은 비용이 많이 들 수 있습니다. 예를 들어 1KB 페이로드로 200개의 HTTP 요청을 만드는 대신 200KB의 단일 페이로드를 사용하여 1KB의 200개 메시지를 포함하는 1개의 HTTP 요청을 만드는 것이 훨씬 효율적입니다. 올바르게 사용할 경우 단일 요청 내에서 여러 메시지를 그룹화하는 것은 [!DNL Experience Platform]으로 전송되는 데이터를 최적화하는 좋은 방법입니다.
 
