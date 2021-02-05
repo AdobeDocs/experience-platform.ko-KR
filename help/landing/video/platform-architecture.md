@@ -1,5 +1,5 @@
 ---
-title: Adobe Experience Platform의 기초건축
+title: Experience Platform 아키텍처 개요
 description: 이 비디오에서는 개요 다이어그램을 살펴보고 Adobe Experience Platform의 기본 구성 요소에 대해 설명합니다.
 feature: platform
 topics: null
@@ -9,16 +9,16 @@ doc-type: video
 activity: understand
 thumbnail: 32456.jpg
 translation-type: tm+mt
-source-git-commit: 333b89ccf2365c04646df9dc0434036bdd6f12ac
+source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
 workflow-type: tm+mt
-source-wordcount: '42'
-ht-degree: 35%
+source-wordcount: '40'
+ht-degree: 0%
 
 ---
 
 
-# Experience Platform의 기본 구조
+# Experience Platform 아키텍처 개요
 
-이 비디오에서는 개요 다이어그램을 살펴보고 Experience Platform의 기본 구성 요소에 대해 설명합니다.
+이 비디오에서는 Experience Platform의 기본 구성 요소를 설명하는 고급 아키텍처 다이어그램을 살펴봅니다.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32456?quality=12&learn=on)
