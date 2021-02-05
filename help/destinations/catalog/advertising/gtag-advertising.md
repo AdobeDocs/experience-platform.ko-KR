@@ -1,21 +1,17 @@
 ---
 keywords: gtag;google gtag;google extension;google gtag extension;GTAG
-title: Google 태그 확장
-seo-title: Google 태그 확장
+title: Google 태그 확장 대상
 description: Google 태그 확장은 Adobe Experience Platform의 광고 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
-seo-description: Google 태그 확장은 Adobe Experience Platform의 광고 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '582'
+source-wordcount: '553'
 ht-degree: 3%
 
 ---
 
 
 # Google 태그 확장 {#gtag-advertising-extension}
-
-## 개요 {#overview}
 
 Google의 `gtag.js`을 사이트에 로드하여 이벤트 데이터를 [!DNL Google Analytics], Google 광고 및 [!DNL Google Marketing Platform]로 보냅니다. 이 확장은 사이트에 태그 코드만 추가합니다. 다른 Google 확장을 사용하여 gtag를 사용할 이벤트와 작업을 추가해야 합니다.
 
