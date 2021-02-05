@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;홈;인기 항목;데이터 소스 연결
 solution: Experience Platform
-title: Flow Service API를 사용하여 제3자 클라우드 스토리지 시스템에서 Eningest Portable 데이터
+title: Flow Service API를 사용하여 제3자 클라우드 스토리지 시스템에서 쪽모이 세공 데이터를 인제스트
 topic: overview
 type: Tutorial
-description: 이 자습서에서는 Flow Service API를 사용하여 타사 클라우드 스토리지 시스템에서 Portable 데이터를 인제스트하는 단계를 안내합니다.
+description: 이 자습서에서는 Flow Service API를 사용하여 제3자 클라우드 스토리지 시스템에서 Apache Timeline 데이터를 인제스트하는 단계를 안내합니다.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
-source-wordcount: '1100'
+source-wordcount: '1101'
 ht-degree: 2%
 
 ---
