@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;홈;인기 항목;CJA;여정 분석;고객 여정 분석;캠페인 통합 운영;고객 여정;여정;여정 통합 운영;기능;작업 과정
 solution: Experience Platform
-title: Adobe Experience Platform 설명서 개요
+title: Experience Platform 설명서 개요
 topic: overview
 description: Adobe Experience Platform 설명서는 사용자 인터페이스와 API에 대한 개요, 자습서 및 안내선 등 다양한 형식으로 제공됩니다. 다음은 Experience Platform 서비스에 사용할 수 있는 가장 일반적인 문서 유형에 대한 간략한 설명입니다.
 translation-type: tm+mt
-source-git-commit: 96600567bb4965a1611e2b9a7cd6cb49298a567f
+source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
 workflow-type: tm+mt
-source-wordcount: '484'
+source-wordcount: '483'
 ht-degree: 0%
 
 ---
