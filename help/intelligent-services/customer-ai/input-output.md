@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;getting started;customer ai;popular topics;customer ai input;customer ai output
+keywords: Experience Platform;시작하기;고객 아이디;인기 항목;고객 아이에이 입력;고객 아이에이 출력
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
-title: 고객 AI 입력 및 출력
+title: 고객 AI의 입력 및 출력
 topic: Getting started
 description: 다음 문서는 고객 AI에서 사용되는 다양한 입력 및 출력 개요를 설명합니다.
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
 workflow-type: tm+mt
-source-wordcount: '824'
+source-wordcount: '840'
 ht-degree: 1%
 
 ---
 
 
-# 고객 AI 입력 및 출력
+# 고객 AI에서 입력 및 출력
 
 다음 문서는 고객 AI에서 사용되는 다양한 입력 및 출력 개요를 설명합니다.
 
 ## 고객 AI 입력 데이터
 
-고객 AI는 고객 경험 이벤트 데이터를 사용하여 성향 점수를 계산합니다. 소비자 경험 이벤트에 대한 자세한 내용은 Intelligent Services에서 사용할 [데이터 준비 설명서를 참조하십시오](../data-preparation.md).
+고객 AI는 고객 경험 이벤트 데이터를 사용하여 성향 점수를 계산합니다. 소비자 경험 이벤트에 대한 자세한 내용은 [Intelligent Services 설명서에서 사용할 데이터 준비](../data-preparation.md)를 참조하십시오.
 
 ### 이전 데이터
 
@@ -68,4 +68,4 @@ ht-degree: 1%
 
 ## 다음 단계 {#next-steps}
 
-데이터를 준비하고 자격 증명과 스키마를 모두 준비했으면 고객 AI 인스턴스 [구성](./user-guide/configure.md) 가이드를 따라 시작합니다. 이 안내서에서는 고객 AI에 대한 인스턴스를 만드는 과정을 안내합니다.
+데이터를 준비하고 자격 증명과 스키마를 모두 준비했으면 [고객 AI 인스턴스 구성](./user-guide/configure.md) 가이드를 따라 시작합니다. 이 안내서에서는 고객 AI에 대한 인스턴스를 만드는 과정을 안내합니다.
