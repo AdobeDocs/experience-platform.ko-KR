@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;Sandbox;sandbox
+keywords: Experience Platform;홈;인기 항목;샌드박스;Sandbox;home;popular topics;sandbox
 solution: Experience Platform
-title: 샌드박스 만들기
+title: API에서 샌드박스 만들기
 topic: developer guide
 description: '''/sandbox'' 끝점에 POST 요청을 만들어 새 샌드박스를 만들 수 있습니다.'
 translation-type: tm+mt
-source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
-source-wordcount: '151'
+source-wordcount: '164'
 ht-degree: 2%
 
 ---
 
 
-# 샌드박스 만들기
+# API에서 샌드박스 만들기
 
-종단점에 POST 요청을 만들어 새 샌드박스를 만들 수 `/sandboxes` 있습니다.
+`/sandboxes` 끝점에 POST 요청을 하여 새 샌드박스를 만들 수 있습니다.
 
 **API 형식**
 
@@ -44,13 +44,13 @@ curl -X POST \
 
 | 속성 | 설명 |
 | --- | --- |
-| `name` | 이후 요청에서 샌드박스에 액세스하는 데 사용할 식별자입니다. 이 값은 고유해야 하며 가능한 설명적인 방법으로 만드는 것이 좋습니다. 공백이나 대문자를 포함할 수 없습니다. |
-| `title` | 플랫폼 사용자 인터페이스에 표시용으로 사용되는 읽을 수 있는 이름입니다. |
-| `type` | 만들 샌드박스 유형입니다. 현재 조직은 &quot;개발&quot; 유형의 샌드박스만 만들 수 있습니다. |
+| `name` | 이후 요청의 샌드박스에 액세스하는 데 사용할 식별자입니다. 이 값은 고유해야 하며, 이 값을 가능한 설명으로 만드는 것이 가장 좋습니다. 공백이나 대문자를 포함할 수 없습니다. |
+| `title` | 플랫폼 사용자 인터페이스에서 표시 용도로 사용되는 사람이 읽을 수 있는 이름입니다. |
+| `type` | 만들 샌드박스의 유형입니다. 현재 조직은 &quot;개발&quot; 유형 샌드박스만 만들 수 있습니다. |
 
 **응답**
 
-성공적인 응답은 새로 만든 샌드박스의 세부 사항을 반환하며, 이 세부 사항은 &quot;생성&quot; `state` 임을 나타냅니다.
+성공적으로 응답하면 새로 만든 샌드박스의 세부 사항이 반환되고, 이 응답의 `state`이(가) &quot;생성&quot;임을 표시합니다.
 
 ```json
 {
@@ -64,4 +64,4 @@ curl -X POST \
 
 >[!NOTE]
 >
->샌드박스는 시스템에서 프로비저닝하는 데 약 15분이 소요되며, 그 후 샌드박스는 &quot;활성&quot; 또는 &quot;실패&quot; `state` 가 됩니다.
+>샌드박스는 시스템에서 프로비저닝하는 데 약 15분이 소요되며, 그 후 `state`은 &quot;활성&quot; 또는 &quot;실패&quot;가 됩니다.
