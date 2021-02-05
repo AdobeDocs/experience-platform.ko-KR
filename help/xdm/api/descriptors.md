@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;홈;인기 항목;API;XDM;XDM 시스템;경험 데이터 모델;경험 데이터 모델;경험 데이터 모델;데이터 모델;스키마 레지스트리;스키마 레지스트리;설명자;설명자;ID;친숙한 이름;이름;대체 표시;참조;참조;관계;관계
 solution: Experience Platform
-title: 설명자
+title: 설명자 API 끝점
 description: 스키마 레지스트리 API의 /descriptors 끝점을 사용하면 경험 응용 프로그램 내에서 XDM 설명자를 프로그래밍 방식으로 관리할 수 있습니다.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '1611'
+source-wordcount: '1613'
 ht-degree: 1%
 
 ---
