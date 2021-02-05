@@ -5,10 +5,10 @@ user-guide-title: Adobe Experience Platform 데이터 과학 작업 공간 도�
 breadcrumb-title: Data Science Workspace 안내서
 user-guide-description: 머신 러닝을 활용하여 Adobe Sensei 및 JupiterLab Notebook에서 모델과 레시피를 개발, 트레이닝 및 평가할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
 workflow-type: tm+mt
-source-wordcount: '237'
-ht-degree: 16%
+source-wordcount: '233'
+ht-degree: 17%
 
 ---
 
@@ -19,13 +19,13 @@ ht-degree: 16%
 * [데이터 과학 작업 공간 액세스 및 기능](access-features-dsw.md)
 * [데이터 과학 작업 공간 연습](walkthrough.md)
 * JupiterLab 노트북 {#jupyterlab}
-   * [JupiterLab 사용 안내서](jupyterlab/overview.md)
+   * [개요](jupyterlab/overview.md)
    * [데이터 액세스](jupyterlab/access-notebook-data.md)
    * [데이터 분석](jupyterlab/analyze-your-data.md)
    * [쿼리 서비스](jupyterlab/query-service.md)
    * [레서피 만들기](jupyterlab/create-a-recipe.md)
    * [Git을 사용하여 JupiterLab에서 공동 작업](jupyterlab/using-git-for-collaboration.md)
-* Sensei Machine Learning API {#api}
+* Sensei 기계 학습 API {#api}
    * [시작하기](api/getting-started.md)
    * [엔진](api/engines.md)
    * [MLInesses(레서피)](api/mlinstances.md)
@@ -37,20 +37,20 @@ ht-degree: 16%
 * 실시간 기계 학습(알파) {#real-time-machine-learning}
    * [개요](real-time-machine-learning/home.md)
    * [시작하기](real-time-machine-learning/getting-started.md)
-   * [RTML 작성 노트북 사용자 안내서](real-time-machine-learning/rtml-authoring-notebook.md)
+   * [노트북 관리](real-time-machine-learning/rtml-authoring-notebook.md)
    * [노드 참조 가이드](real-time-machine-learning/node-reference.md)
-* 사전 구성된 레서피 {#pre-built-recipes}
+* 미리 작성된 레서피 {#pre-built-recipes}
    * [제품 추천 레서피](pre-built-recipes/product-recommendations.md)
    * [제품 구매 예측](pre-built-recipes/product-purchase-prediction.md)
    * [소매 영업 방법](pre-built-recipes/retail-sales.md)
 * 모델 작성 {#authoring}
    * [모델 작성 SDK](authoring/sdk.md)
    * [피쳐 파이프라인 만들기](authoring/feature-pipeline.md)
-   * [플랫폼 SDK 안내서(Python)](authoring/platform-sdk.md)
+   * [플랫폼 SDK(Python)를 사용한 모델 작성](authoring/platform-sdk.md)
    * [Python 데이터 액세스](authoring/python.md)
    * [Spark 데이터 액세스](authoring/spark.md)
 * 모델 및 레서피 자습서 {#models-recipes}
-   * [기계 학습 모델 연습 만들기 및 게시](models-recipes/create-publish-model.md)
+   * [기계 학습 모델 만들기 및 게시](models-recipes/create-publish-model.md)
    * [소매 판매 스키마 및 데이터 세트 만들기](models-recipes/create-retails-sales-dataset.md)
    * [스키마 및 데이터 집합 미리 보기](models-recipes/preview-schema-data.md)
    * [소스 파일을 레서피에 패키지화](models-recipes/package-source-files-recipe.md)
