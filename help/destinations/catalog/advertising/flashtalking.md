@@ -1,21 +1,17 @@
 ---
 keywords: Flashtalking OneTag 확장;Flashtaling OneTag 확장;Flashtaling OneTag 대상;Flashtalking OneTag;flashtalking onetag
-title: Flashtaling OneTag 확장
-seo-title: Flashtaling OneTag 확장
+title: Flashtaling OneTag 확장 대상
 description: Flashtalking OneTag 확장 기능은 Adobe Experience Platform의 광고 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
-seo-description: Flashtalking OneTag 확장 기능은 Adobe Experience Platform의 광고 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '567'
+source-wordcount: '538'
 ht-degree: 3%
 
 ---
 
 
 # [!DNL Flashtalking OneTag] 확장 {#flashtalking-extension}
-
-## 개요 {#overview}
 
 Experience Platform Launch용 [!DNL Flashtalking OneTag] 확장을 사용하면 사이트 동작을 표시, 비디오 및 모바일 광고 활동에 쉽게 적용할 수 있습니다. Launch를 사용하여 [!DNL Flashtalking OneTag]을 웹 속성에 배포합니다.
 
