@@ -1,25 +1,21 @@
 ---
 keywords: Azure 이벤트 허브 대상;azure 이벤트 허브;azure 이벤트 하위 그룹
-title: (베타) Azure 이벤트 허브 대상
-seo-title: (베타) Azure 이벤트 허브 대상
+title: (베타) Azure 이벤트 허브 연결 대상
 description: Experience Platform의 데이터를 스트리밍하기 위해 Azure 이벤트 허브 저장소에 대한 실시간 아웃바운드 연결을 만듭니다.
-seo-description: Experience Platform의 데이터를 스트리밍하기 위해 Azure 이벤트 허브 저장소에 대한 실시간 아웃바운드 연결을 만듭니다.
 translation-type: tm+mt
-source-git-commit: 97c0a9f4726ec85b7a72dc682fbd201a6152c1ba
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '509'
+source-wordcount: '487'
 ht-degree: 2%
 
 ---
 
 
-# (베타) [!DNL Azure Event Hubs] 대상
+# (베타) [!DNL Azure Event Hubs] 연결
 
 >[!IMPORTANT]
 >
 >플랫폼의 [!DNL Azure Event Hubs] 대상이 현재 베타 상태입니다. 설명서 및 기능은 변경될 수 있습니다.
-
-## 개요 {#overview}
 
 [!DNL Azure Event Hubs] 빅데이터 스트리밍 플랫폼 및 이벤트 통합 서비스입니다. 초당 수백만 개의 이벤트를 받고 처리할 수 있습니다. 이벤트 허브로 전송된 데이터는 실시간 분석 공급자 또는 배치/저장 어댑터를 사용하여 변환하여 저장할 수 있습니다.
 
