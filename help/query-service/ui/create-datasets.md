@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;홈;인기 항목;쿼리 서비스;쿼리 서비스;데이터 집합 생성;데이터 집합 생성;데이터 집합 만들기;;home;popular topics;
 solution: Experience Platform
-title: 쿼리 결과에서 데이터 집합 생성
+title: 쿼리 서비스의 결과에서 데이터 집합 생성
 topic: queries
 type: Tutorial
-description: '쿼리 서비스를 사용하면 UI에서 데이터 세트를 만들 수 있습니다. 데이터 세트를 만든 후 Data Lake의 다른 데이터세트처럼 액세스하여 다양한 사용 사례에 사용할 수 있습니다. '
+description: 'Adobe Experience Platform 쿼리 서비스를 사용하면 UI에서 데이터 세트를 만들 수 있습니다. 데이터 세트를 만든 후 Data Lake의 다른 데이터세트처럼 액세스하여 다양한 사용 사례에 사용할 수 있습니다. '
 translation-type: tm+mt
-source-git-commit: 0ba4e26927cdc96855f35d72a8a6de55f4a34bfa
+source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
 workflow-type: tm+mt
-source-wordcount: '320'
+source-wordcount: '327'
 ht-degree: 0%
 
 ---
 
 
-# 쿼리 결과에서 데이터 집합 생성
+# 쿼리 서비스의 결과에서 데이터 집합 생성
 
 [!DNL Query Service]의 진정한 힘은 쿼리가 더 많은 쿼리 또는 [!DNL Data Science Workspace], [!DNL Real-time Customer Profile] 또는 [!DNL Analysis Workspace]와 같은 다른 서비스에 입력하기 위해 [!DNL Data Lake]에서 데이터 세트를 생성하는 데 사용될 때 표시됩니다.
 
