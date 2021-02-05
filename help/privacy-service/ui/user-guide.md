@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;홈;인기 항목;내보내기;Export;home;popular topics;export
 solution: Experience Platform
-title: Privacy Service 사용 안내서
+title: Privacy Service UI에서 개인 정보 작업 관리
 topic: UI guide
 description: Privacy Service 사용자 인터페이스를 사용하여 다양한 Experience Cloud 응용 프로그램에서 개인 정보 요청을 조정하고 모니터링하는 방법을 알아봅니다.
 translation-type: tm+mt
-source-git-commit: 238a9200e4b43d41335bed0efab079780b252717
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '1090'
+source-wordcount: '1100'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Privacy Service] 사용 안내서
+# Privacy Service UI에서 개인 정보 작업 관리
 
 이 문서에서는 [!DNL Privacy Service] 사용자 인터페이스를 사용하여 개인 정보 요청을 만들고 관리하는 단계를 제공합니다.
 
