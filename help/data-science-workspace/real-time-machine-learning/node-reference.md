@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;developer guide;Data Science Workspace;popular topics;Real-time Machine Learning;node reference;
+keywords: Experience Platform;개발자 가이드;데이터 과학 작업 공간;인기 항목;실시간 기계 학습;노드 참조;
 solution: Experience Platform
-title: 실시간 기계 학습 노드 참조 안내서
+title: 실시간 기계 학습 노드 참조
 topic: Nodes reference
-description: 노드는 그래프가 형성되는 기본 단위입니다. 각 노드는 특정 작업을 수행하고 ML 파이프라인을 나타내는 그래프를 형성하는 링크를 사용하여 서로 연결할 수 있습니다. 노드에서 수행하는 작업은 데이터 또는 스키마 변환 또는 기계 학습 유추와 같은 입력 데이터에 대한 작업을 나타냅니다. 노드는 변형되거나 유추된 값을 다음 노드로 출력합니다.
+description: 노드는 그래프가 형성되는 기본 단위입니다. 각 노드는 특정 작업을 수행하고 ML 파이프라인을 나타내는 그래프를 형성하는 링크를 사용하여 함께 연결할 수 있습니다. 노드에서 수행하는 작업은 데이터 또는 스키마 변형 또는 기계 학습 유추와 같은 입력 데이터에 대한 작업을 나타냅니다. 이 노드는 변형되거나 유추된 값을 다음 노드로 출력합니다.
 translation-type: tm+mt
-source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
+source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
 workflow-type: tm+mt
-source-wordcount: '666'
+source-wordcount: '678'
 ht-degree: 1%
 
 ---
 
 
-# 실시간 기계 학습 노드 참조 안내서(알파)
+# 실시간 기계 학습 노드 참조(알파)
 
 >[!IMPORTANT]
 >
->모든 사용자는 아직 실시간 머신 러닝을 사용할 수 없습니다. 이 기능은 알파에 있으며 여전히 테스트되고 있습니다. 이 문서는 변경될 수 있습니다.
+>아직 모든 사용자는 실시간 기계 학습을 사용할 수 없습니다. 이 기능은 알파 버전이며 여전히 테스트되고 있습니다. 이 문서는 변경될 수 있습니다.
 
-노드는 그래프가 형성되는 기본 단위입니다. 각 노드는 특정 작업을 수행하고 ML 파이프라인을 나타내는 그래프를 형성하는 링크를 사용하여 서로 연결할 수 있습니다. 노드에서 수행하는 작업은 데이터 또는 스키마 변환 또는 기계 학습 유추와 같은 입력 데이터에 대한 작업을 나타냅니다. 노드는 변형되거나 유추된 값을 다음 노드로 출력합니다.
+노드는 그래프가 형성되는 기본 단위입니다. 각 노드는 특정 작업을 수행하고 ML 파이프라인을 나타내는 그래프를 형성하는 링크를 사용하여 함께 연결할 수 있습니다. 노드에서 수행하는 작업은 데이터 또는 스키마 변형 또는 기계 학습 유추와 같은 입력 데이터에 대한 작업을 나타냅니다. 이 노드는 변형되거나 유추된 값을 다음 노드로 출력합니다.
 
 다음 가이드는 실시간 기계 학습을 위해 지원되는 노드 라이브러리에 대해 간략하게 설명합니다.
 
@@ -38,7 +38,7 @@ from rtml_nodelibs.core.nodefactory import NodeFactory as nf
 pprint(nf.discover_nodes())
 ```
 
-**예제 응답**
+**응답 예**
 
 ```json
 {'FieldOps': 'rtml_nodelibs.nodes.standard.preprocessing.fieldops.FieldOps',
@@ -59,7 +59,7 @@ pprint(nf.discover_nodes())
 
 ### ModelUpload
 
-ModelUpload 노드는 model_path를 가져와 로컬 모델 경로에서 실시간 기계 학습 Blob 저장소에 모델을 업로드하는 내부 Adobe 노드입니다.
+ModelUpload 노드는 model_path를 가져와 로컬 모델 경로에서 실시간 기계 학습 Blob 저장소로 모델을 업로드하는 내부 Adobe 노드입니다.
 
 ```python
 model = ModelUpload(params={'model_path': model_path})
@@ -71,7 +71,7 @@ model_id = msg_model.model['model_id']
 
 ### ONNXNode
 
-ONNXNode는 모델 ID를 가져와 사전 교육된 ONNX 모델을 가져와서 들어오는 데이터에 대해 점수를 매기는 내부 Adobe 노드입니다.
+ONNXNode는 사전 교육된 ONNX 모델을 가져오기 위해 모델 ID를 사용하고 이를 통해 들어오는 데이터에 대해 점수를 매기는 내부 Adobe 노드입니다.
 
 >[!TIP]
 >
@@ -81,11 +81,11 @@ ONNXNode는 모델 ID를 가져와 사전 교육된 ONNX 모델을 가져와서 
 node_model_score = ONNXNode(params={"features": ['browser', 'device', 'login_page', 'product_page', 'search_page'], "model_id": model_id})
 ```
 
-### 팬더 {#pandas}
+### 판다 {#pandas}
 
-다음 팬더 노드를 사용하면 모든 `pd.DataFrame` 방식이나 일반적인 팬더 최상위 기능을 가져올 수 있습니다. 팬더 기술에 대한 자세한 내용은 [팬더 방법 설명서를 참조하십시오](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html). 최상위 기능에 대한 자세한 내용은 일반 기능에 대한 [Fanda API 참조 안내서를 참조하십시오](https://pandas.pydata.org/pandas-docs/stable/reference/general_functions.html).
+다음 팬더 노드를 사용하면 `pd.DataFrame` 메서드 또는 일반적인 팬더 최상위 함수를 가져올 수 있습니다. 팬더 방식에 대한 자세한 내용은 [팬더 메서드 설명서](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html)를 참조하십시오. 최상위 함수에 대한 자세한 내용은 일반 함수](https://pandas.pydata.org/pandas-docs/stable/reference/general_functions.html)에 대한 [Fanda API 참조 안내서를 참조하십시오.
 
-아래 노드는 매개 변수 `"import": "map"` 에서 메서드 이름을 문자열로 가져온 다음 매개 변수를 지도 함수로 입력하는 데 사용합니다. 아래 예제는 다음을 사용하여 수행합니다 `{"arg": {"Desktop": 1, "Mobile": 0}, "na_action": 0}`. 맵을 제자리에 두고 나면, 또는 `inplace` 으로 설정할 수 `True` 있습니다 `False`. 변형 `inplace` 을 즉석 `True` 으로 적용할지 여부 `False` 를 기준으로 설정할 수 있습니다. 기본적으로 새 열 `"inplace": False` 이 만들어집니다. 새 열 이름을 제공하기 위한 지원이 이후 릴리스에서 추가되도록 설정되어 있습니다. 마지막 줄은 단일 열 이름 또는 열 목록일 `cols` 수 있습니다. 변형을 적용할 열을 지정합니다. 이 예에서 `device` 는 지정됩니다.
+아래 노드는 `"import": "map"`을 사용하여 메서드 이름을 매개 변수에 문자열로 가져온 다음 매개 변수를 지도 함수로 삽입합니다. 아래 예제는 `{"arg": {"Desktop": 1, "Mobile": 0}, "na_action": 0}`을 사용하여 이 작업을 수행합니다. 맵을 제자리에 배치하면 `inplace`을 `True` 또는 `False`로 설정할 수 있습니다. 변형을 즉석 적용할지 여부를 기준으로 `inplace`을 `True` 또는 `False`로 설정합니다. 기본적으로 `"inplace": False`은(는) 새 열을 만듭니다. 새 열 이름을 제공하기 위한 지원이 후속 릴리스에서 추가되도록 설정되어 있습니다. 마지막 행 `cols`은 단일 열 이름 또는 열 목록이 될 수 있습니다. 변형을 적용할 열을 지정합니다. 이 예에서 `device`이(가) 지정되었습니다.
 
 ```python
 #  df["device"] = df["device"].map({"Desktop":1, "Mobile":0}, na_action=0)
@@ -106,7 +106,7 @@ node_browser_apply = Pandas(params={"import": "map",
 
 ### Scikit학습
 
-ScrikitLearn 노드를 사용하면 ScrikitLearn ML 모델 또는 스케일러를 가져올 수 있습니다. 아래 표를 사용하여 예제에서 사용되는 값에 대한 자세한 내용을 살펴보십시오.
+ScikitLearn 노드를 사용하면 ScrikitLearn ML 모델 또는 스케일러를 가져올 수 있습니다. 다음 예제에서 사용되는 값에 대한 자세한 내용은 아래 표를 참조하십시오.
 
 ```python
 model_train = ScikitLearn(params={
@@ -123,17 +123,17 @@ msg6 = model_train.process(msg5)
 
 | 값 | 설명 |
 | --- | --- |
-| features | 모델에 기능 입력(문자열 목록). <br> 예: `browser`, `device`, `login_page`, `product_page`, `search_page` |
+| features | 모델에 기능을 입력합니다(문자열 목록). <br> 예: `browser`, `device`, `login_page`, `product_page`, `search_page` |
 | label | Target 열 이름(문자열). |
-| mode | 기차/테스트(문자열). |
-| model_path | 로컬(onnx 형식)으로 저장 모델에 대한 경로입니다. |
-| params.model | 모델(문자열)에 대한 절대 가져오기 경로(예: `sklearn.linear_model.LogisticRegression`. |
-| params.model_params | 모델 하이퍼매개 변수는 [sklearn API(map/dict)](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html) 설명서를 참조하십시오. |
-| node_instance.process(data_message_from_previous_node) | 이 메서드는 이전 노드에서 DataMsg를 `process()` 가져와서 변환을 적용합니다. 이는 사용 중인 현재 노드에 따라 다릅니다. |
+| mode | 트레이닝/테스트(문자열). |
+| model_path | 저장 모델의 경로를 onnx 형식으로 로컬로 설정합니다. |
+| params.model | 모델(문자열)에 대한 절대 가져오기 경로(예:`sklearn.linear_model.LogisticRegression`. |
+| params.model_params | 모델 하이퍼매개 변수는 자세한 내용은 [Sklearn API(map/dict)](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html) 설명서를 참조하십시오. |
+| node_instance.process(data_message_from_previous_node) | `process()` 메서드는 이전 노드에서 DataMsg를 가져와서 변환을 적용합니다. 사용 중인 현재 노드에 따라 다릅니다. |
 
 ### 분할
 
-다음 노드를 사용하여 데이터 프레임을 교육 및 테스트로 분할하고 전달 `train_size` 또는 테스트를 수행합니다 `test_size`. 다중 인덱스가 있는 데이터 프레임을 반환합니다. 다음 예를 사용하여 데이터 파일에 액세스하고 테스트할 수 있습니다 `msg5.data.xs(“train”)`.
+다음 노드를 사용하여 `train_size` 또는 `test_size`을(를) 전달하여 데이터 프레임을 트레이닝하고 테스트합니다. 다중 인덱스가 있는 데이터 프레임을 반환합니다. 다음 예인 `msg5.data.xs(“train”)`을 사용하여 데이터 프레임을 교육 및 테스트할 수 있습니다.
 
 ```python
 splitter = Split(params={"train_size": 0.7})
@@ -142,4 +142,4 @@ msg5 = splitter.process(msg4)
 
 ## 다음 단계
 
-다음 단계는 실시간 머신 러닝 모델을 평가할 때 사용할 노드를 만드는 것입니다. 자세한 내용은 [실시간 기계 학습 노트북 사용 안내서를 참조하십시오](./rtml-authoring-notebook.md).
+다음 단계는 실시간 기계 학습 모델 점수를 매길 때 사용할 노드를 만드는 것입니다. 자세한 내용은 [실시간 기계 학습 노트북 사용자 안내서](./rtml-authoring-notebook.md)를 참조하십시오.
