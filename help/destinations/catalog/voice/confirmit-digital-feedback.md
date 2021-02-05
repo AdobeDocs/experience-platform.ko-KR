@@ -1,21 +1,17 @@
 ---
 keywords: 디지털 피드백 확인;확인 확장;확인
-title: 디지털 피드백 확장 확인
-seo-title: 디지털 피드백 확장 확인
+title: 디지털 피드백 확장 대상 확인
 description: 확인 디지털 피드백 익스텐션은 Adobe Experience Platform에서 고객을 위한 음성이다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
-seo-description: 확인 디지털 피드백 익스텐션은 Adobe Experience Platform에서 고객을 위한 음성이다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '597'
+source-wordcount: '563'
 ht-degree: 3%
 
 ---
 
 
 # [!DNL Confirmit Digital Feedback] 확장
-
-## 개요 {#overview}
 
 [!DNL Confirmit Digital Feedback] 솔루션을 사용하면 웹 사이트 트래픽을 실시간으로 파악할 수 있습니다. [!DNL Confirmit]을 사용하면 사용자의 요구 사항에 맞게 완벽하고 타깃팅이 높은 설문 조사를 표시할 수 있으므로 방문자가 다음과 같은 피드백을 제공할 수 있습니다.
 
