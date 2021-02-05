@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;홈;인기 항목
 solution: Experience Platform
-title: Privacy Service 개발자 가이드
-description: RESTful API를 사용하여 Adobe Experience Cloud 애플리케이션에서 데이터 주체의 개인 데이터를 관리할 수 있습니다.
+title: Privacy Service API 안내서
+description: 개발자는 Privacy Service API를 사용하여 법적 개인 정보 보호 규정을 준수하여 Experience Cloud 애플리케이션에서 고객 개인 데이터를 액세스하거나 삭제할 수 있는 고객 요청을 작성하고 관리할 수 있습니다. API를 사용하여 주요 작업을 수행하는 방법에 대해 알아보려면 이 안내서를 따르십시오.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 5d1b22253f2b382bef83e30a4295218ba6b85331
+source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
 workflow-type: tm+mt
-source-wordcount: '771'
+source-wordcount: '795'
 ht-degree: 1%
 
 ---
 
 
-# [!DNL Privacy Service] 개발자 가이드
+# [!DNL Privacy Service] API 안내서
 
 Adobe Experience Platform [!DNL Privacy Service]은 Adobe Experience Cloud 응용 프로그램에서 데이터 주체(고객)의 개인 데이터를 관리(액세스 및 삭제)할 수 있는 RESTful API 및 사용자 인터페이스를 제공합니다. [!DNL Privacy Service] 또한 애플리케이션과 관련된 작업의 상태 및 결과에 액세스할 수 있는 중앙 감사 및 로깅 메커니즘을  [!DNL Experience Cloud] 제공합니다.
 
