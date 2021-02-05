@@ -1,47 +1,47 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;identity;datatype;data-type;data type;
+keywords: Experience Platform;홈;인기 항목;스키마;스키마;XDM;필드;스키마;스키마;ID;데이터 유형;데이터 유형;데이터 유형;a home;popular topics;schema;XDM;fields;schemas;identity;datatype;data-type;data-type;
 solution: Experience Platform
 title: ID 데이터 유형
 topic: overview
 description: 이 문서에서는 ID XDM 데이터 유형에 대한 개요를 제공합니다.
 translation-type: tm+mt
-source-git-commit: f5bddb39c16eb25e85297f56e331d3aa51510eb9
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '267'
-ht-degree: 2%
+source-wordcount: '283'
+ht-degree: 3%
 
 ---
 
 
-# [!UICONTROL ID] 데이터 유형
+# [!UICONTROL ID ] 데이터 유형
 
-[!UICONTROL ID는] 디지털 경험과 상호 작용하는 사용자를 명확하게 구분하는 데 사용되는 표준 XDM 데이터 유형입니다. ID는 ID 공급자가 설정하며, 이 ID는 `namespace` 속성에서 참조됩니다. 각 ID `namespace`는 고유합니다.
+[!UICONTROL ID] 는 디지털 경험과 상호 작용하는 사람을 명확하게 구분하는 데 사용되는 표준 XDM 데이터 유형입니다. ID는 ID 공급자가 설정하며, 이 ID 자체는 `namespace` 속성에서 참조됩니다. 각 `namespace` 내에서 ID는 고유합니다.
 
 <img src="../images/data-types/identity.png" width="550" /><br />
 
 | 속성 | 데이터 유형 | 설명 |
 | --- | --- | --- |
-| `namespace` | 개체 | 제공된 속성과 연결된 네임스페이스를 나타내는 단일 문자열 필드(`code`)가 들어 있는 `id` 개체입니다. |
-| `authenticatedState` | 문자열 | 관찰된 경험 이벤트 시 이 ID에 대한 인증된 상태입니다. 허용되는 값 및 정의는 [부록을](#authenticatedState) 참조하십시오. |
+| `namespace` | 개체 | 제공된 `id` 속성과 연결된 네임스페이스를 나타내는 단일 문자열 필드(`code`)가 포함된 객체입니다. |
+| `authenticatedState` | 문자열 | 관찰된 경험 이벤트 시 이 ID에 대한 인증된 상태입니다. 허용되는 값과 정의는 [부록](#authenticatedState)을 참조하십시오. |
 | `id` | 문자열 | 관련 네임스페이스에 있는 소비자의 ID입니다. |
-| `primary` | 부울 | 개인 ID인지 여부를 나타냅니다. 각 개인은 하나의 기본 ID만 가질 수 있습니다. |
-| `xid` | 문자열 | 이 값은 모든 네임스페이스의 모든 네임스페이스 범위 식별자에 대해 고유한 상호 네임스페이스 식별자를 나타냅니다. |
+| `primary` | 부울 | 이것이 개인의 기본 ID인지 여부를 나타냅니다. 각 개인은 하나의 기본 ID만 가질 수 있습니다. |
+| `xid` | 문자열 | 이 값이 있는 경우 이 값은 모든 네임스페이스의 모든 네임스페이스 범위 식별자에 대해 고유한 네임스페이스 간 식별자를 나타냅니다. |
 
-혼합에 대한 자세한 내용은 공용 XDM 저장소를 참조하십시오.
+혼합에 대한 자세한 내용은 공개 XDM 저장소를 참조하십시오.
 
 * [채워진 예제](https://github.com/adobe/xdm/blob/master/components/datatypes/identity.example.1.json)
 * [전체 스키마](https://github.com/adobe/xdm/blob/master/components/datatypes/identity.schema.json)
 
 ## 부록
 
-다음 섹션에는 [!UICONTROL ID] 데이터 유형에 대한 추가 정보가 포함되어 있습니다.
+다음 섹션에는 [!UICONTROL Identity] 데이터 유형에 대한 추가 정보가 포함되어 있습니다.
 
-## authenticatedState에 대해 허용된 값 {#authenticatedState}
+## authenticatedState {#authenticatedState}에 대해 허용된 값
 
-다음 표에서는 해당 의미와 관련하여 허용된 값에 대해 `authenticatedState` 개괄적으로 설명합니다.
+다음 표는 `authenticatedState`에 대해 허용된 값과 이와 관련된 의미를 대략적으로 설명합니다.
 
 | 값 | 설명 |
 | --- | --- |
-| `ambiguous` | 인증된 상태는 모호합니다. |
+| `ambiguous` | 인증된 상태가 모호합니다. |
 | `authenticated` | 사용자가 이벤트 관찰 시 유효한 로그인 또는 유사한 동작으로 식별되었습니다. |
-| `loggedOut` | 사용자가 이전 시점의 로그인 동작으로 식별되었지만 이벤트 관찰 당시에 로그인하지 않았습니다. |
+| `loggedOut` | 사용자가 이전 시점의 로그인 동작으로 식별되었지만 이벤트 관찰 시 로그인되지 않았습니다. |
