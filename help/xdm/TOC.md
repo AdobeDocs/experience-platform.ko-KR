@@ -5,9 +5,9 @@ user-guide-title: XDM(경험 데이터 모델) 시스템 도움말
 breadcrumb-title: Experience Data Model(XDM) 안내서
 user-guide-description: XDM(경험 데이터 모델) 클래스와 mixin을 사용하여 경험 데이터를 표준화합니다.
 translation-type: tm+mt
-source-git-commit: 288f47306853fcc39234ad098bc0e73f24f8540a
+source-git-commit: b735e5f7eb8d1f0526d8786430c844b4d36fa09d
 workflow-type: tm+mt
-source-wordcount: '232'
+source-wordcount: '236'
 ht-degree: 23%
 
 ---
@@ -39,6 +39,7 @@ ht-degree: 23%
    * [애플리케이션](./data-types/application.md)
    * [비콘](./data-types/beacon.md)
    * [브라우저 세부 사항](./data-types/browser-details.md)
+   * [상거래](./data-types/commerce.md)
    * [동의 및 기본 설정](./data-types/consents.md)
    * [장치](./data-types/device.md)
    * [이메일 주소](./data-types/email-address.md)
@@ -50,6 +51,8 @@ ht-degree: 23%
    * [지역 모양](./data-types/geo-shape.md)
    * [ID](./data-types/identity.md)
    * [측정](./data-types/measure.md)
+   * [주문](./data-types/order.md)
+   * [결제 항목](./data-types/payment-item.md)
    * [사람](./data-types/person.md)
    * [사람 이름](./data-types/person-name.md)
    * [전화번호](./data-types/phone-number.md)
