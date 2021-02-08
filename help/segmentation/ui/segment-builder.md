@@ -5,9 +5,9 @@ title: 세그먼트 빌더 UI 안내서
 topic: ui guide
 description: 'Adobe Experience Platform UI의 세그먼트 빌더는 프로필 데이터 요소와 상호 작용할 수 있는 풍부한 작업 공간을 제공합니다. 작업 영역은 데이터 속성을 나타내는 데 사용되는 드래그 앤 드롭 타일과 같이 규칙을 작성하고 편집하기 위한 직관적인 컨트롤을 제공합니다. '
 translation-type: tm+mt
-source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
+source-git-commit: 8fc1c5414f38e84ed1700ee95b1c382007ff2c27
 workflow-type: tm+mt
-source-wordcount: '1800'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -100,6 +100,22 @@ ht-degree: 0%
 코드 보기는 API 호출에 사용할 세그먼트 값을 복사할 수 있는 단추를 제공합니다. 최신 버전의 세그먼트를 가져오려면 세그먼트에 최신 변경 사항을 저장했는지 확인하십시오.
 
 ![](../images/ui/segment-builder/copy-code.png)
+
+### 집계 함수
+
+[!DNL Segment Builder]의 집계는 데이터 유형이 숫자(이중 또는 정수)인 XDM 속성 그룹의 계산입니다. 세그먼트 빌더 내에서 지원되는 4개의 집계 함수는 SUM, AVERAGE, MIN 및 MAX입니다.
+
+집계 함수를 만들려면 왼쪽 레일에서 이벤트를 선택하고 [!UICONTROL 이벤트] 컨테이너에 삽입하십시오.
+
+![](../images/ui/segment-builder/select-event.png)
+
+이벤트 컨테이너 내에 이벤트를 배치한 후 줄임표 아이콘(...)을 선택하고 **[!UICONTROL 집계]**&#x200B;를 차례로 선택합니다.
+
+![](../images/ui/segment-builder/add-aggregation.png)
+
+이제 집계가 추가됩니다. 이제 합계 함수를 선택하고, 합산할 속성, 항등 함수 및 값을 선택할 수 있습니다. 아래 예에서 이 세그먼트는 각 개별 구입이 $100 미만인 경우에도 $100보다 큰 구매 값의 합계를 가진 모든 프로파일을 검증합니다.
+
+![](../images/ui/segment-builder/filled-aggregation.png)
 
 ## 컨테이너
 
