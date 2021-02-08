@@ -5,7 +5,7 @@ description: Experience Platform 웹 SDK를 구성하는 방법 알아보기
 seo-description: Experience Platform 웹 SDK를 구성하는 방법 알아보기
 keywords: 구성;구성;구성;SDK;edge;웹 SDK;구성;edgeConfigId;컨텍스트;웹;장치;환경;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConceptions;웹 sdk 설정;prehingStyle;cookieEnabled;urlEnabled DestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 translation-type: tm+mt
-source-git-commit: 723711ee0c2b7b5ca4aea617a81241dbebbc839c
+source-git-commit: 3ac00fda2c0a43437fb212dcba7e98c63503b9c4
 workflow-type: tm+mt
 source-wordcount: '740'
 ht-degree: 11%
@@ -94,7 +94,7 @@ Adobe 서비스와 상호 작용하는 데 사용되는 도메인입니다. Adob
 | -------- | ------------ | ----------------- |
 | 함수 | 아니요 | () => 정의되지 않음 |
 
-수신자가 전송되기 직전에 모든 이벤트에 대해 호출되는 콜백을 구성하려면 이 설정을 설정하십시오.  필드가 `xdm`인 객체가 콜백으로 전송됩니다.  `xdm` 개체를 수정하여 보낸 내용을 변경합니다.  콜백 내에서 `xdm` 개체는 이벤트 명령에서 전달된 데이터와 자동으로 수집된 정보를 이미 갖습니다.  이 콜백 시간 및 예제에 대한 자세한 내용은 [전역 이벤트 수정](tracking-events.md#modifying-events-globally)을 참조하십시오.
+수신자가 전송되기 직전에 모든 이벤트에 대해 호출되는 콜백을 구성하려면 이 설정을 설정하십시오.  필드가 `xdm`인 객체가 콜백으로 전송됩니다.  `xdm` 개체를 수정하여 보낸 내용을 변경합니다.  콜백 내에서 `xdm` 개체는 이벤트 명령에서 전달된 데이터와 자동으로 수집된 정보를 이미 갖습니다. 이 콜백 시간 및 예제에 대한 자세한 내용은 [전역 이벤트 수정](tracking-events.md#modifying-events-globally)을 참조하십시오.
 
 ## 개인 정보 옵션
 
