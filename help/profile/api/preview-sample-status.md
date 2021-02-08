@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;프로필;실시간 고객 프로필;문제 해결;API;미리 보기;sample
-title: 프로필 샘플 상태 API 끝점
-description: 실시간 고객 프로필 API 끝점을 사용하면 Adobe Experience Platform 내의 데이터 세트 및 ID 네임스페이스별 목록 프로필 배포뿐만 아니라 프로필 데이터의 최신 성공 샘플도 미리 볼 수 있습니다.
+title: 미리 보기 샘플 상태(프로필 미리 보기) API 끝점
+description: 실시간 고객 프로필 API의 일부인 미리 보기 샘플 상태 끝점을 사용하여 프로필 데이터의 성공적인 최신 샘플뿐만 아니라 데이터 집합별 및 ID 네임스페이스별 목록 프로필 배포를 Adobe Experience Platform 내에서 미리 볼 수 있습니다.
 topic: guide
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5266c393b034d1744134522cf1769304f39733da
 workflow-type: tm+mt
-source-wordcount: '1553'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -16,13 +16,20 @@ ht-degree: 1%
 
 Adobe Experience Platform을 사용하면 여러 소스에서 고객 데이터를 인제스트하여 개별 고객을 위한 강력한 통합 프로파일을 구축할 수 있습니다. 실시간 고객 프로파일에 대해 활성화된 데이터를 [!DNL Platform]으로 인제스트하면 프로필 데이터 저장소 내에 저장됩니다.
 
-프로필 스토어에 레코드를 수집하면 총 프로필 수가 5% 이상 증가하거나 감소하면 작업이 트리거되어 카운트를 업데이트합니다. 스트리밍 데이터 워크플로우의 경우 시간별로 검사하여 5% 증가 또는 감소 임계값이 충족되었는지 확인합니다. 있는 경우 작업이 자동으로 트리거되어 카운트가 업데이트됩니다. 배치를 성공적으로 Profile Store에 인제스트한 후 15분 이내에 5% 증가 또는 감소 임계값이 충족되면 작업을 실행하여 카운트를 업데이트합니다. 프로필 API를 사용하면 성공적인 최신 샘플 작업을 미리 볼 수 있을 뿐만 아니라 데이터 세트 및 ID 네임스페이스별 프로필 배포를 나열할 수 있습니다.
+프로필 스토어에 레코드를 수집하면 총 프로필 수가 5% 이상 증가하거나 감소하면 샘플링 작업이 시작되어 카운트가 업데이트됩니다. 샘플이 트리거되는 방법은 사용되는 섭취 유형에 따라 달라집니다.
+
+* **스트리밍 데이터 워크플로우**&#x200B;의 경우 5% 증가 또는 감소 임계값이 충족되었는지 확인하기 위해 시간별로 확인이 수행됩니다. 있을 경우 샘플 작업이 자동으로 트리거되어 카운트를 업데이트합니다.
+* **일괄 처리 통합**&#x200B;의 경우, 배치를 프로필 스토어에 성공적으로 인제스트한 후 15분 이내에 5% 증가 또는 감소 임계값이 충족되면 작업을 실행하여 카운트를 업데이트합니다. 프로필 API를 사용하면 성공적인 최신 샘플 작업을 미리 볼 수 있을 뿐만 아니라 데이터 세트 및 ID 네임스페이스별 프로필 배포를 나열할 수 있습니다.
 
 이러한 지표는 Experience Platform UI의 [!UICONTROL 프로필] 섹션 내에서도 사용할 수 있습니다. UI를 사용하여 프로필 데이터에 액세스하는 방법에 대한 자세한 내용은 [[!DNL Profile] 사용자 안내서](../ui/user-guide.md)를 참조하십시오.
 
+>[!NOTE]
+>
+>예상 대상을 분리하는 데 도움이 되도록 세그먼트 정의와 관련된 요약 수준 정보를 볼 수 있는 Adobe Experience Platform 세그멘테이션 서비스 API의 일부로 사용할 수 있는 예측 및 미리 보기 끝점이 있습니다. 세그먼트 미리 보기 및 예상 끝점을 사용하여 작업하는 자세한 단계를 보려면 [!DNL Segmentation] API 개발자 안내서의 일부인 [미리 보기 및 예상 끝점 안내서](../../segmentation/api/previews-and-estimates.md)를 참조하십시오.
+
 ## 시작하기
 
-이 안내서에 사용된 API 끝점은 [[!DNL Real-time Customer Profile] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)의 일부입니다. 계속하기 전에 [시작하기 안내서](getting-started.md)에서 관련 설명서에 대한 링크, 이 문서에서 샘플 API 호출 읽기 안내서, 모든 [!DNL Experience Platform] API를 성공적으로 호출하기 위해 필요한 필수 헤더에 대한 중요 정보를 검토하십시오.
+이 안내서에 사용된 API 끝점은 [[!DNL Real-time Customer Profile] API](https://www.adobe.com/go/profile-apis-en)의 일부입니다. 계속하기 전에 [시작하기 안내서](getting-started.md)에서 관련 설명서에 대한 링크, 이 문서에서 샘플 API 호출 읽기 안내서, 모든 [!DNL Experience Platform] API를 성공적으로 호출하기 위해 필요한 필수 헤더에 대한 중요 정보를 검토하십시오.
 
 ## 프로필 조각과 병합된 프로필 비교
 
@@ -89,7 +96,7 @@ curl -X GET \
 | `totalFragmentCount` | 프로필 저장소의 총 프로필 조각 수입니다. |
 | `lastSuccessfulBatchTimestamp` | 마지막으로 성공한 일괄 처리 통합 타임스탬프. |
 | `streamingDriven` | *이 필드는 사용되지 않으며 응답에 대한 중요도가 없습니다.* |
-| `totalRows` | 경험 플랫폼의 병합된 총 프로필 수(&#39;프로필 수&#39;로도 알려져 있습니다.) |
+| `totalRows` | Experience Platform에서 병합된 프로필의 총 수입니다. &#39;프로필 수&#39;로도 알려져 있습니다. |
 | `lastBatchId` | 마지막 일괄 처리 ID. |
 | `status` | 마지막 샘플의 상태입니다. |
 | `samplingRatio` | 총 병합된 프로필(`numRowsToRead`)에 대한 병합된 프로필 비율(`totalRows`)은 소수 형식으로 표현됩니다. |
@@ -189,8 +196,6 @@ curl -X GET \
 | `createdUser` | 데이터 집합을 만든 사용자의 사용자 ID. |
 | `reportTimestamp` | 보고서의 타임스탬프. 요청 중에 `date` 매개 변수가 제공된 경우 반환된 보고서는 제공된 날짜에 대한 것입니다. `date` 매개 변수를 제공하지 않으면 가장 최근 보고서가 반환됩니다. |
 
-
-
 ## 네임스페이스별 프로필 배포 목록
 
 프로필 저장소에 있는 병합된 모든 프로필에서 ID 네임스페이스별 분류를 보려면 `/previewsamplestatus/report/namespace` 끝점에 GET 요청을 수행할 수 있습니다. ID 네임스페이스는 고객 데이터와 관련된 컨텍스트의 지표로 사용되는 Adobe Experience Platform Identity Service의 중요한 구성 요소입니다. 자세한 내용은 [ID 네임스페이스 개요](../../identity-service/namespaces.md)를 참조하십시오.
@@ -288,5 +293,4 @@ curl -X GET \
 
 ## 다음 단계
 
-유사한 예측과 미리 보기를 사용하여 세그먼트 정의와 관련된 요약 수준 정보를 보고 예상 고객을 분리할 수도 있습니다. [!DNL Adobe Experience Platform Segmentation Service] API를 사용하여 세그먼트 미리 보기 및 견적을 사용하기 위한 자세한 단계를 보려면 [ 미리 보기 및 예상 끝점 안내서](../../segmentation/api/previews-and-estimates.md)를 참조하십시오. [!DNL Segmentation] API 개발자 안내서의 일부입니다.
-
+프로필 스토어에서 샘플 데이터를 미리 보는 방법을 알므로 세그멘테이션 서비스 API의 예상 및 미리 보기 끝점을 사용하여 세그먼트 정의에 대한 요약 수준 정보를 볼 수도 있습니다. 이 정보는 세그먼트에서 예상 대상을 분리하는 데 도움이 됩니다. 세그멘테이션 API를 사용하여 세그먼트 미리 보기 및 견적을 사용하는 방법에 대한 자세한 내용은 [미리 보기 및 예상 끝점 안내서](../../segmentation/api/previews-and-estimates.md)를 참조하십시오.
