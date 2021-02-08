@@ -5,9 +5,9 @@ description: Adobe Experience Cloud ID를 가져오는 방법에 대해 알아�
 seo-description: Adobe Experience Cloud ID를 가져오는 방법에 대해 알아봅니다.
 keywords: ID;퍼스트 파티 ID;ID 서비스;3번째 파티 ID;ID 마이그레이션;방문자 ID;3자 ID;thirdPartyCookiesEnabled;idMigrationEnabled;getIdentity;동기화 ID;syncIdentity;sendEvent;idMap;기본;ID;네임스페이스 id;authenticationState hashEnabled;
 translation-type: tm+mt
-source-git-commit: 60945f7f3a87568b82d968692cc7a6e07593fa01
+source-git-commit: 3ac00fda2c0a43437fb212dcba7e98c63503b9c4
 workflow-type: tm+mt
-source-wordcount: '921'
+source-wordcount: '919'
 ht-degree: 3%
 
 ---
@@ -23,7 +23,7 @@ Adobe Experience Platform 웹 SDK는 [Adobe ID 서비스](../../identity-service
 
 ## 타사 ID
 
-[!DNL Identity Service]은(는) ID를 타사 도메인(demdex.net)과 동기화하여 사이트 간에 추적을 활성화할 수 있습니다. 이 옵션이 활성화되면 방문자(예: ECID가 없는 사람)에 대한 첫 번째 요청이 demdex.net으로 수행됩니다. 이 작업은 해당 작업을 허용하는 브라우저(예: 크롬)에서만 수행되며 구성에서 `thirdPartyCookiesEnabled` 매개 변수로 제어됩니다. 이 기능을 모두 비활성화하려면 `thirdPartyCookiesEnabled`을(를) false로 설정합니다.
+[!DNL Identity Service]은(는) ID를 타사 도메인(demdex.net)과 동기화하여 사이트 전체에서 추적을 활성화할 수 있습니다. 이 옵션이 활성화되면 방문자에 대한 첫 번째 요청(예: ECID가 없는 사람)이 demdex.net으로 수행됩니다. 이 작업은 크롬과 같이 이를 허용하는 브라우저에서만 수행되며 구성의 `thirdPartyCookiesEnabled` 매개 변수로 제어됩니다. 이 기능을 모두 비활성화하려면 `thirdPartyCookiesEnabled`을(를) false로 설정합니다.
 
 ## ID 마이그레이션
 
