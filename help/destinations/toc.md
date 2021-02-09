@@ -5,10 +5,10 @@ user-guide-title: 대상 안내서
 user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화합니다.
 description: 이 문서에서는 Adobe Experience Platform 대상에 대한 목차 목록
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: f98fb81fee57151e6424355f64bccb29c5669dad
 workflow-type: tm+mt
-source-wordcount: '332'
-ht-degree: 21%
+source-wordcount: '339'
+ht-degree: 20%
 
 ---
 
@@ -129,3 +129,4 @@ ht-degree: 21%
       * [Invoca 태그](./catalog/voice/invoca.md)
       * [메달리아](./catalog/voice/medallia.md)
       * [대화 URL 받은 편지함](./catalog/voice/talkurl.md)
+* [플랫폼 릴리스 정보](https://www.adobe.com/go/platform-release-notes-en)
