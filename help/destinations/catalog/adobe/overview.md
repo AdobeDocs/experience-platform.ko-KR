@@ -3,7 +3,7 @@ keywords: 대상;experience cloud solutions;대상;대상 대상 대상;광고 �
 title: Adobe 대상 개요
 description: 광고 타겟팅, 개인화, 마케팅 자동화 등을 위해 플랫폼의 데이터를 다른 Adobe Experience Cloud 솔루션에 연결하여 고객 경험을 관리합니다
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
 source-wordcount: '219'
 ht-degree: 13%
@@ -34,7 +34,7 @@ ht-degree: 13%
 - [Audience Manager DIL 확장](../data-management/aam-dil-extension.md)
 - [Experience Cloud ID 서비스 확장](../personalization/adobe-ecid.md)
 - [Marketing To 확장](../email/marketo.md)
-- [Marketo Munchkin 확장](../email/marketo-munchkin.md)
+- [Marketo Munchkin 확장 프로그램](../email/marketo-munchkin.md)
 - [Marketing to Web Personalization 확장](../personalization/marketo-web-personalization.md)
 
 ## Experience Platform 세그먼트 공유
