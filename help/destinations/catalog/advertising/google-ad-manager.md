@@ -1,11 +1,11 @@
 ---
 keywords: google 광고 관리자;google ad;doubleclick;DoubleClick AdX;DoubleClick;Google 광고 관리자;Google 광고 관리자;google ad manager;google ad manager
-title: Google 광고 관리자 연결 대상
+title: Google 광고 관리자 연결
 description: '이전에 발행자를 위한 DoubleClick 또는 DoubleClick AdX로 알려졌던 Google Ad Manager는 발행자가 비디오 및 모바일 앱을 통해 자사 웹 사이트의 광고 표시를 관리할 수 있는 수단을 제공하는 Google의 광고 서비스 플랫폼입니다.  '
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '676'
+source-wordcount: '675'
 ht-degree: 0%
 
 ---
