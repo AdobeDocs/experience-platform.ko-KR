@@ -1,14 +1,14 @@
 ---
 keywords: 광고 대상;대상;플랫폼 대상
-title: 광고 대상
+title: 광고 대상 개요
 seo-title: 광고 대상 개요
 description: 'Adobe Experience Platform을 타사 광고 플랫폼(예: DSP, 광고 네트워크, SSP)에 연결하고 익명의 사용자를 이러한 플랫폼에 공유합니다.'
 seo-description: 'Adobe Experience Platform을 타사 광고 플랫폼(예: DSP, 광고 네트워크, SSP)에 연결하고 익명의 사용자를 이러한 플랫폼에 공유합니다.'
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '227'
-ht-degree: 2%
+source-wordcount: '233'
+ht-degree: 0%
 
 ---
 
@@ -25,12 +25,12 @@ Adobe Experience Platform을 타사 광고 플랫폼(예: DSP, 광고 네트워�
 
 연결과 확장 간의 차이를 이해하려면 대상 유형 및 카테고리 페이지에서 [연결](../../destination-types.md#connections)을 참조하십시오.
 
-- [Google 디스플레이 및 비디오 360](./google-dv360.md)
-- [Google 광고](./google-ads-destination.md)
-- [Google 광고 관리자](./google-ad-manager.md)
-- [Google Customer Match](./google-customer-match.md)
-- [Microsoft Bing](./bing.md)
-- [무역센터 대상](./tradedesk.md)
+- [Google 디스플레이 및 비디오 360 연결](./google-dv360.md)
+- [Google 광고 연결](./google-ads-destination.md)
+- [Google 광고 관리자 연결](./google-ad-manager.md)
+- [Google 고객 일치 연결](./google-customer-match.md)
+- [Microsoft Bing 연결](./bing.md)
+- [무역센터 연결](./tradedesk.md)
 
 ## 확장
 
