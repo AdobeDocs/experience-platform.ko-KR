@@ -1,17 +1,17 @@
 ---
 keywords: '광고;bing; '
-title: Microsoft Bing 연결 대상
+title: Microsoft Bing 연결
 description: Microsoft Bing 연결 대상을 사용하여 Microsoft 디스플레이 광고에서 리타깃팅 및 대상 타깃팅된 디지털 캠페인을 실행할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '461'
+source-wordcount: '460'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Microsoft Bing] 연결
+# [!DNL Microsoft Bing] 연결  {#bing-destination}
 
 [!DNL Microsoft Bing] 대상은 프로필 데이터를 [!DNL Microsoft Display Advertising]에 보내는 데 도움이 됩니다.
 
