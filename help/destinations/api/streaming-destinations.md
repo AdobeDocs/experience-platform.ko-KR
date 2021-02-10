@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topicsAPI 자습서;스트리밍 대상 API;플랫폼
 solution: Experience Platform
-title: 스트리밍 대상에 연결 및 API 호출을 사용하여 데이터 활성화
+title: Adobe Experience Platform에서 API 호출을 사용하여 스트리밍 대상에 연결하고 데이터 활성화
 description: 이 문서에서는 Adobe Experience Platform API를 사용하여 스트리밍 대상을 만드는 방법에 대해 설명합니다
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
 source-wordcount: '2021'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 ---
 
 
-# Adobe Experience Platform에서 API 호출을 사용하여 스트리밍 대상에 연결하고 데이터 활성화
+# 스트리밍 대상에 연결하고 API 호출을 사용하여 데이터 활성화
 
 >[!NOTE]
 >
@@ -67,7 +67,7 @@ Experience Platform의 리소스는 특정 가상 샌드박스로 분리할 수 
 
 페이로드(POST, PUT, PATCH)을 포함하는 모든 요청에는 추가 미디어 유형 헤더가 필요합니다.
 
-* 컨텐츠 유형:`application/json`
+* Content-Type: `application/json`
 
 ### Swagger 설명서 {#swagger-docs}
 
