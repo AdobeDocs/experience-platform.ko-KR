@@ -1,11 +1,11 @@
 ---
 keywords: Marketing To Web Personalization;marketing to web personalization;Marketing to Web Personalization extension;marketing to web personalization extension;marketing to;Marketing
-title: Marketing to Web Personalization 확장 대상
+title: Marketing to Web Personalization 확장
 description: Marketing to Web Personalization 익스텐션은 Adobe Experience Platform에서 개인화를 위한 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: f4095a90ff70e8d054bae4f3b0f884552ffd30df
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '580'
+source-wordcount: '579'
 ht-degree: 3%
 
 ---
