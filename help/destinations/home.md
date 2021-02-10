@@ -5,7 +5,7 @@ seo-title: 대상 개요
 description: 크로스 채널 마케팅 캠페인, 이메일, 타깃팅된 광고 등을 위해 Adobe Experience Platform 데이터를 대상으로 활성화하는 방법을 알아봅니다.
 seo-description: 대상은 대상 플랫폼과의 사전 구축된 통합으로, Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있습니다. Adobe Experience Platform의 대상을 사용하여 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타깃팅된 광고 및 기타 많은 사용 사례에서 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: fc0813b457f039c0f0fa965df2d1100170424d23
 workflow-type: tm+mt
 source-wordcount: '493'
 ht-degree: 1%
