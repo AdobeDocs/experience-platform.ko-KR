@@ -1,19 +1,19 @@
 ---
 keywords: 카탈로그;카탈로그
-title: 대상 카탈로그
-seo-title: 대상 카탈로그
+title: 대상 카탈로그 개요
+seo-title: 대상 카탈로그 개요
 description: 대상 카탈로그는 데이터를 받을 준비가 된 사용 가능한 대상 목록을 제공합니다. 이러한 대상에는 Adobe 솔루션, 광고 플랫폼, 설문 조사 플랫폼, 이메일 마케팅 플랫폼 등이 포함됩니다.
 seo-description: 대상 카탈로그는 데이터를 받을 준비가 된 사용 가능한 대상 목록을 제공합니다. 이러한 대상에는 Adobe 솔루션, 광고 플랫폼, 설문 조사 플랫폼, 이메일 마케팅 플랫폼 등이 포함됩니다.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '174'
+source-wordcount: '177'
 ht-degree: 0%
 
 ---
 
 
-# 대상 카탈로그
+# 대상 카탈로그 개요
 
 대상 카탈로그는 데이터를 받을 준비가 된 사용 가능한 대상 플랫폼 목록을 제공합니다. 이러한 대상 플랫폼에는 Adobe 솔루션, 광고 플랫폼, 설문 조사 플랫폼, 이메일 마케팅 플랫폼, Experience Platform 확장 등이 포함됩니다.
 
