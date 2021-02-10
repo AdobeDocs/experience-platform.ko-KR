@@ -1,11 +1,11 @@
 ---
 keywords: SFTP;sftp
-title: SFTP 연결 대상
+title: SFTP 연결
 description: SFTP 서버에 대한 라이브 아웃바운드 연결을 만들어 Experience Platform에서 구분된 데이터 파일을 정기적으로 내보냅니다.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '185'
+source-wordcount: '184'
 ht-degree: 0%
 
 ---
