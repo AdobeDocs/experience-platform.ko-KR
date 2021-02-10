@@ -4,7 +4,7 @@ title: 소셜 네트워크 대상 만들기
 type: Tutorial
 description: Adobe Experience Platform에서 소셜 네트워크 및 계정에 연결하는 방법을 알아봅니다.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
 source-wordcount: '460'
 ht-degree: 0%
