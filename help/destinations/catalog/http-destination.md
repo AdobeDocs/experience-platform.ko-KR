@@ -1,11 +1,11 @@
 ---
 keywords: 스트리밍;
-title: HTTP 연결 대상
+title: HTTP 연결
 description: Adobe Experience Platform의 HTTP 대상을 사용하면 프로필 데이터를 타사 HTTP 끝점으로 보낼 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '488'
+source-wordcount: '487'
 ht-degree: 2%
 
 ---
