@@ -1,9 +1,9 @@
 ---
-keywords: facebook 확장명;facebook 확장명;facebook 대상;facebook;instagram;messenger;facebook messenger
-title: Facebook 확장
+keywords: facebook 연결;facebook 연결;facebook 대상;facebook;instagram;messenger;facebook messenger;facebook 연결;facebook 연결;facebook 연결;facebook 연결;facebook destinagram;messenger;facebook messenger;messenger
+title: Facebook 연결
 description: 해시 처리된 이메일을 기반으로 고객 타깃팅, 개인화 및 억제를 위해 Facebook 캠페인에 대한 프로필을 활성화합니다.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 2efdefc69c937c70f6a463113a73ca71d8998e14
 workflow-type: tm+mt
 source-wordcount: '951'
 ht-degree: 3%
@@ -11,7 +11,7 @@ ht-degree: 3%
 ---
 
 
-# [!DNL Facebook] 확장
+# [!DNL Facebook] 연결
 
 >[!IMPORTANT]
 >
