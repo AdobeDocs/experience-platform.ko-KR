@@ -1,11 +1,11 @@
 ---
 keywords: JW 플레이어;JW 플레이어;JW 확장;JW 확장
-title: JW 플레이어 분석(베타) 확장 대상
+title: JW 플레이어 분석(베타) 확장
 description: JW 플레이어 분석(베타) 익스텐션은 Adobe Experience Platform의 분석 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '545'
+source-wordcount: '544'
 ht-degree: 3%
 
 ---
