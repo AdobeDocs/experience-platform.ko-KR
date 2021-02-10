@@ -3,7 +3,7 @@ keywords: 소셜 네트워크;소셜 네트워크 대상;Livefyre;facebook;Faceb
 title: 소셜 네트워크 대상 개요
 description: 소셜 네트워크 대상을 사용하면 해시 이메일을 기반으로 고객 타깃팅, 개인화 및 억제를 위해 캠페인에 대한 프로필을 활성화할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
 source-wordcount: '71'
 ht-degree: 0%
