@@ -1,11 +1,11 @@
 ---
 keywords: Azure 이벤트 허브 대상;azure 이벤트 허브;azure 이벤트 하위 그룹
-title: (베타) Azure 이벤트 허브 연결 대상
+title: (베타) Azure 이벤트 허브 연결
 description: Experience Platform의 데이터를 스트리밍하기 위해 Azure 이벤트 허브 저장소에 대한 실시간 아웃바운드 연결을 만듭니다.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '487'
+source-wordcount: '486'
 ht-degree: 2%
 
 ---
