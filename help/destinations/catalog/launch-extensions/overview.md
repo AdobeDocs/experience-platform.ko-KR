@@ -1,12 +1,12 @@
 ---
 keywords: 시작 확장;시작 확장;시작 대상;launch extensions;launch destination;플랫폼 실행 확장;플랫폼 시작 확장;플랫폼 시작 대상
-title: Adobe Experience Platform Launch 확장 대상
+title: Adobe Experience Platform Launch 확장
 description: Adobe Experience Platform Launch은 Adobe의 차세대 태그 관리 기능입니다. Platform Launch는 관련 고객 환경을 향상하는 데 필요한 모든 분석, 마케팅 및 광고 태그를 배포하고 관리하는 간단한 방법을 고객에게 제공합니다.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '617'
-ht-degree: 11%
+source-wordcount: '616'
+ht-degree: 12%
 
 ---
 
