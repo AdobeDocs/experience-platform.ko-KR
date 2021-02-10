@@ -1,11 +1,11 @@
 ---
 keywords: Azure Blob;Blob 대상;s3;azure Blob 대상
-title: Azure Blob 연결 대상
+title: Azure Blob 연결
 description: Azure Blob 저장소에 대한 실시간 아웃바운드 연결을 만들어 Adobe Experience Platform에서 탭으로 구분된 데이터 또는 CSV 데이터 파일을 주기적으로 내보냅니다.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '477'
+source-wordcount: '476'
 ht-degree: 1%
 
 ---
