@@ -1,11 +1,11 @@
 ---
 keywords: facebook 확장명;facebook 확장명;facebook 대상;facebook;instagram;messenger;facebook messenger
-title: Facebook 확장 대상
+title: Facebook 확장
 description: 해시 처리된 이메일을 기반으로 고객 타깃팅, 개인화 및 억제를 위해 Facebook 캠페인에 대한 프로필을 활성화합니다.
 translation-type: tm+mt
-source-git-commit: aa2088d30716f56ac2909214badbb39c0ae97855
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '952'
+source-wordcount: '951'
 ht-degree: 3%
 
 ---
