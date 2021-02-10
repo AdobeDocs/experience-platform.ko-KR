@@ -5,7 +5,7 @@ seo-title: 대상 개요
 description: 크로스 채널 마케팅 캠페인, 이메일, 타깃팅된 광고 등을 위해 Adobe Experience Platform 데이터를 대상으로 활성화하는 방법을 알아봅니다.
 seo-description: 대상은 대상 플랫폼과의 사전 구축된 통합으로, Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있습니다. Adobe Experience Platform의 대상을 사용하여 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타깃팅된 광고 및 기타 많은 사용 사례에서 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: fc0813b457f039c0f0fa965df2d1100170424d23
+source-git-commit: 2efdefc69c937c70f6a463113a73ca71d8998e14
 workflow-type: tm+mt
 source-wordcount: '493'
 ht-degree: 1%
@@ -21,12 +21,12 @@ ht-degree: 1%
 
 ## 대상 및 소스 {#destinations-and-sources}
 
-플랫폼의 핵심 기능 중 하나는 자사 데이터를 수집하여 비즈니스 요구에 맞게 데이터를 활성화하는 것입니다. 데이터를 플랫폼 및 대상으로 인제스트하여 플랫폼에서 데이터를 내보낼 수 있습니다.
+플랫폼의 핵심 기능 중 하나는 자사 데이터를 수집하여 비즈니스 요구에 맞게 데이터를 활성화하는 것입니다. 플랫폼 및 대상으로 데이터를 인제스트하여 플랫폼에서 데이터를 내보내려면 [sources](../sources/home.md)를 사용합니다.
 
 ## 대상 단계 {#steps}
 
 * 플랫폼에서 사용 가능한 모든 대상 중 [셀프 서비스 카탈로그](./catalog/overview.md)에서 선택합니다.
-* **[!UICONTROL 대상]**&#x200B;을 사용하여 [활성화](./ui/activate-destinations.md)하고 프로필 또는 세그먼트를 마케팅 자동화 플랫폼, 디지털 광고 플랫폼 등으로 보냅니다.
+* 대상을 [활성화](./ui/activate-destinations.md)하고 프로필 또는 세그먼트를 마케팅 자동화 플랫폼, 디지털 광고 플랫폼 등으로 보냅니다.
 * 데이터 내보내기를 정기적으로 원하는 대상으로 예약합니다.
 
 ## 컨트롤 {#controls}
