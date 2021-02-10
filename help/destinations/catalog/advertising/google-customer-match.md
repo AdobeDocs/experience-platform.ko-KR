@@ -1,17 +1,17 @@
 ---
 keywords: google 고객 일치;Google 고객 일치;Google 고객 일치
-title: Google 고객 일치 연결 대상
+title: Google 고객 일치 연결
 description: Google Customer Match를 사용하면 온라인 및 오프라인 데이터를 사용하여 검색, 쇼핑, Gmail, YouTube 등 Google의 소유물 및 운영 체제에서 고객에게 도달하고 다시 참여할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: aa2088d30716f56ac2909214badbb39c0ae97855
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '1474'
+source-wordcount: '1470'
 ht-degree: 0%
 
 ---
 
 
-# Google 고객 일치 연결
+# [!DNL Google Customer Match] 연결
 
 >[!IMPORTANT]
 >
