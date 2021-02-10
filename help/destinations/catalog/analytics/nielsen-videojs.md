@@ -1,11 +1,11 @@
 ---
 keywords: Nielsen VideoJS Player Handler;nielsen 비디오 js player;nielsen videojs player;Nielsen;Nielsen videojs player;Nielsen Digital SDK;nielsen 디지털 SDK
-title: Nielsen VideoJS 플레이어 처리기 확장 대상
+title: Nielsen VideoJS 플레이어 처리기 확장
 description: Nielsen VideoJS 플레이어 처리기 확장은 Adobe Experience Platform의 분석 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '614'
+source-wordcount: '613'
 ht-degree: 2%
 
 ---
