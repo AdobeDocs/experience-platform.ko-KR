@@ -1,11 +1,11 @@
 ---
 keywords: Amazon Kinesis;kinesis destination;kinesis
-title: Amazon Kinesis 연결 대상
+title: Amazon Kinesis 연결
 description: Amazon Kinesis 스토리지에 대한 실시간 아웃바운드 연결을 생성하여 Adobe Experience Platform의 데이터를 스트리밍합니다.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '451'
+source-wordcount: '450'
 ht-degree: 2%
 
 ---
