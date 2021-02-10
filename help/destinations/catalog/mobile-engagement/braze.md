@@ -1,11 +1,11 @@
 ---
 keywords: mobile;brize;메시지;
-title: Braze 연결 대상
+title: 브라즈 연결
 description: Braze는 고객과 브랜드 간의 연관성 있고 기억에 오래 남는 경험을 제공하는 포괄적인 고객 참여 플랫폼입니다.
 translation-type: tm+mt
-source-git-commit: f4095a90ff70e8d054bae4f3b0f884552ffd30df
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '932'
+source-wordcount: '931'
 ht-degree: 1%
 
 ---
