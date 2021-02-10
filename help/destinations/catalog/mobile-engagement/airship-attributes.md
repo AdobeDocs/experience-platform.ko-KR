@@ -1,11 +1,11 @@
 ---
 keywords: 항공 선박 특성;비행선 대상
-title: 무선 속성 연결 대상
+title: Airship 속성 연결
 description: Airship 내에서 타깃팅할 대상 특성으로 Adobe 대상 데이터를 Airship으로 원활하게 전달할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: f4095a90ff70e8d054bae4f3b0f884552ffd30df
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '1205'
+source-wordcount: '1204'
 ht-degree: 0%
 
 ---
