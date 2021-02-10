@@ -3,7 +3,7 @@ keywords: 클라우드 스토리지 대상;클라우드 스토리지
 title: 클라우드 스토리지 대상 개요
 description: Adobe Experience Platform은 세그먼트를 Amazon S3, AWS Kinesis, Azure 이벤트 허브 또는 SFTP 클라우드 스토리지 위치에 데이터 파일로 전달할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 48c5f6d6a45de5f7982543f7a43cb4ece8cf3a9f
 workflow-type: tm+mt
 source-wordcount: '161'
 ht-degree: 0%
@@ -25,11 +25,11 @@ Adobe Experience Platform은 세그먼트를 데이터 파일로 클라우드 �
 
 ## 사용 가능한 클라우드 스토리지 대상
 
-- [Amazon S3 대상](./amazon-s3.md)
-- [Azure Blob 대상](./azure-blob.md)
-- [SFTP 대상](./sftp.md)
+- [Amazon S3 연결](./amazon-s3.md)
+- [Azure Blob 연결](./azure-blob.md)
+- [SFTP 연결](./sftp.md)
 
 ## 사용 가능한 클라우드 스토리지 스트리밍 대상
 
-- [Amazon Kinesis 대상](./amazon-kinesis.md)
-- [Azure 이벤트 허브 대상](./azure-event-hubs.md)
+- [Amazon Kinesis 연결](./amazon-kinesis.md)
+- [Azure 이벤트 허브 연결](./azure-event-hubs.md)
