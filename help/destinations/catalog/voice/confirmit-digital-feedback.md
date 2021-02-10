@@ -1,11 +1,11 @@
 ---
 keywords: 디지털 피드백 확인;확인 확장;확인
-title: 디지털 피드백 확장 대상 확인
+title: 디지털 피드백 확장 확인
 description: 확인 디지털 피드백 익스텐션은 Adobe Experience Platform에서 고객을 위한 음성이다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '563'
+source-wordcount: '562'
 ht-degree: 3%
 
 ---
