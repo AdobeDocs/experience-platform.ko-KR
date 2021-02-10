@@ -3,10 +3,10 @@ keywords: 대상;experience cloud solutions;대상;대상 대상 대상;광고 �
 title: Adobe 대상 개요
 description: 광고 타겟팅, 개인화, 마케팅 자동화 등을 위해 플랫폼의 데이터를 다른 Adobe Experience Cloud 솔루션에 연결하여 고객 경험을 관리합니다
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 48c5f6d6a45de5f7982543f7a43cb4ece8cf3a9f
 workflow-type: tm+mt
-source-wordcount: '219'
-ht-degree: 13%
+source-wordcount: '220'
+ht-degree: 12%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 13%
 
 연결과 확장 간의 차이를 이해하려면 대상 유형 및 카테고리 페이지에서 [연결](../../destination-types.md#connections)을 참조하십시오.
 
-- [Adobe Campaign](../email-marketing/adobe-campaign.md)
+- [Adobe Campaign 연결](../email-marketing/adobe-campaign.md)
 
 ## 확장
 
