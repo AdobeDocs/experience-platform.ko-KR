@@ -4,7 +4,7 @@ title: 대상 작업 공간 개요
 description: 대상 작업 공간은 아래의 섹션에 설명된 4개의 섹션인 카탈로그, 찾아보기, 계정 및 시스템 보기로 구성됩니다.
 seo-description: Adobe Experience Platform의 왼쪽 탐색 막대에서 대상을 선택하여 대상 작업 영역에 액세스합니다.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
 source-wordcount: '910'
 ht-degree: 2%
