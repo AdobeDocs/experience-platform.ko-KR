@@ -1,11 +1,11 @@
 ---
 keywords: Marketing Munchkin;marketing to munchkin;Marketing to Munchkin extension;marketing to munchkin extension;marketing;marketing to;Marketing
-title: Marketing To Munchkin 확장 대상
+title: Marketo Munchkin 확장 프로그램
 description: Marketing To Munchkin 확장은 Adobe Experience Platform에서 개인화를 위한 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '552'
+source-wordcount: '551'
 ht-degree: 7%
 
 ---
