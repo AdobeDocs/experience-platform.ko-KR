@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;홈;인기 항목
 solution: Experience Platform
-title: API 호출을 사용하여 이메일 마케팅 대상 만들기
+title: 이메일 마케팅 대상에 연결하고 API 호출을 사용하여 데이터 활성화
 description: 이 문서에서는 Adobe Experience Platform API를 사용하여 이메일 마케팅 대상을 만드는 방법에 대해 설명합니다
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '1644'
+source-wordcount: '1649'
 ht-degree: 1%
 
 ---
 
 
-# 이메일 마케팅 대상을 만들고 API 호출을 사용하여 데이터 활성화
+# 이메일 마케팅 대상에 연결하고 API 호출을 사용하여 데이터 활성화
 
 이 자습서에서는 API 호출을 사용하여 Adobe Experience Platform 데이터에 연결하고, [이메일 마케팅 대상](../catalog/email-marketing/overview.md)을 만들고, 데이터 흐름을 새로 만든 대상에 만들고, 데이터를 새로 만든 대상에 활성화하는 방법을 보여 줍니다.
 
@@ -63,7 +63,7 @@ ht-degree: 1%
 
 페이로드(POST, PUT, PATCH)을 포함하는 모든 요청에는 추가 미디어 유형 헤더가 필요합니다.
 
-* 컨텐츠 유형:`application/json`
+* Content-Type: `application/json`
 
 ### Swagger 설명서
 
