@@ -3,9 +3,9 @@ keywords: 광고;무역센터
 title: 무역센터 연결
 description: 'Trade Desk는 광고 구매자가 디스플레이, 비디오 및 모바일 인벤토리 소스에서 타겟팅된 디지털 캠페인을 리타겟팅하고 실행할 수 있는 셀프 서비스 플랫폼입니다. '
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: ad025630cbae5c220f5bbd7f55cad70620b6f335
 workflow-type: tm+mt
-source-wordcount: '549'
+source-wordcount: '540'
 ht-degree: 0%
 
 ---
@@ -50,7 +50,6 @@ ht-degree: 0%
 * **[!UICONTROL 이름]**:나중에 이 대상을 인식할 이름.
 * **[!UICONTROL 설명]**:나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
 * **[!UICONTROL 계정 ID]**:계정  [!DNL Trade Desk] [!UICONTROL ID].
-* **[!UICONTROL 클라이언트 암호]**:클라이언트  `clientSecret` 자격 증명에 사용되는  [!DNL OAuth2] 매개 변수입니다.
 * **[!UICONTROL 서버 위치]**:사용할  [!DNL The Trade Desk] 지역 서버를 담당자에게 요청하십시오. 다음 중에서 선택할 수 있는 지역 서버가 있습니다.
 
    * **[!UICONTROL 유럽]**
