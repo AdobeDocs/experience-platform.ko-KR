@@ -2,14 +2,14 @@
 product: experience-platform
 solution: Experience Platform, Data Collection
 audience: user
-user-guide-title: Adobe Experience Platform 웹 SDK 도움말
+user-guide-title: Adobe Experience Platform Web SDK 도움말
 breadcrumb-title: Web SDK 안내서
-user-guide-description: Edge Network를 통해 Experience Cloud 서비스와 상호 작용할 수 있습니다.
+user-guide-description: Edge 네트워크를 통해 Experience Cloud 서비스와 상호 작용할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: cea3e2f32d9489f5f06be70581bd974b9374646d
+source-git-commit: b7e8a1a72ed199440748f570f13ea844f3276682
 workflow-type: tm+mt
-source-wordcount: '128'
-ht-degree: 38%
+source-wordcount: '144'
+ht-degree: 37%
 
 ---
 
@@ -19,14 +19,14 @@ ht-degree: 38%
 * [웹 SDK 개요](home.md)
 * 기본 사항 {#fundamentals}
    * [전제 조건](fundamentals/prerequisite.md)
-   * [에지 구성](fundamentals/edge-configuration.md)
+   * [가장자리 구성](fundamentals/edge-configuration.md)
    * [SDK 설치](fundamentals/installing-the-sdk.md)
    * [SDK 구성](fundamentals/configuring-the-sdk.md)
-   * [명령 실행](fundamentals/executing-commands.md)
+   * [명령 실행 중](fundamentals/executing-commands.md)
    * [이벤트 추적](fundamentals/tracking-events.md)
    * [디버깅](fundamentals/debugging.md)
    * [이벤트 데이터 병합](fundamentals/merging-event-data.md)
-   * [여러 속성을 사용한 인터랙션](fundamentals/interacting-with-multiple-properties.md)
+   * [여러 속성을 사용한 상호 작용](fundamentals/interacting-with-multiple-properties.md)
 * ID {#identity}
    * [개요](identity/overview.md)
 * 데이터 수집 {#data-collection}
@@ -48,10 +48,14 @@ ht-degree: 38%
       * [Offer Decisioning 개요](personalization/offer-decisioning/offer-decisioning-overview.md)
 * 동의 {#consent}
    * [지원 동의](consent/supporting-consent.md)
-   * IAB Transparency and Consent Framework 2.0 {#iab-tcf}
+   * IAB 투명도 및 동의 프레임워크 2.0 {#iab-tcf}
       * [개요](consent/iab-tcf/overview.md)
       * [Adobe Experience Platform Launch과 통합](consent/iab-tcf/with-launch.md)
       * [Adobe Experience Platform Launch 없이 통합](consent/iab-tcf/without-launch.md)
-* [릴리스 노트](release-notes.md)
+* Adobe Experience Platform Launch용 웹 SDK 익스텐션 {#extension}
+   * [웹 SDK 확장](extension/web-sdk-extension.md)
+   * [작업 유형](extension/action-types.md)
+   * [데이터 요소 유형](extension/data-element-types.md)
+* [릴리스 정보](release-notes.md)
 * [FAQ](web-sdk-faq.md)
 * [블로그 게시물](blog-posts.md)
