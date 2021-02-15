@@ -3,9 +3,9 @@ keywords: facebook 연결;facebook 연결;facebook 대상;facebook;instagram;mes
 title: Facebook 연결
 description: 해시 처리된 이메일을 기반으로 고객 타깃팅, 개인화 및 억제를 위해 Facebook 캠페인에 대한 프로필을 활성화합니다.
 translation-type: tm+mt
-source-git-commit: 2efdefc69c937c70f6a463113a73ca71d8998e14
+source-git-commit: 8b7befd9775654a2d55d28a64b4b104e7f9576aa
 workflow-type: tm+mt
-source-wordcount: '951'
+source-wordcount: '1001'
 ht-degree: 3%
 
 ---
@@ -15,7 +15,9 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->새 대상 버전으로의 고객 마이그레이션이 현재 진행 중입니다. 마이그레이션이 완료될 때까지 이 대상에 대해 사용 가능한 ID는 [!UICONTROL EMAIL] 및 [!UICONTROL EMAIL_LC_SHA_256]만 표시됩니다.
+>현재 고객을 이 대상의 새 버전인 [!DNL Facebook Custom Audience]으로 마이그레이션하고 있습니다.
+>
+> 이 문서의 지침은 다음 메모와 함께 두 버전 모두에 적용됩니다.이 마이그레이션이 진행되는 동안 사용자 인터페이스에 [!DNL Facebook] 대상의 현재 버전만 표시됩니다. 이 경우 활성화에는 [!UICONTROL EMAIL] 및 [!UICONTROL EMAIL_LC_SHA_256] ID만 사용할 수 있습니다.
 
 해시 처리된 이메일을 기반으로 고객 타깃팅, 개인화 및 억제를 위해 [!DNL Facebook] 캠페인에 대한 프로파일을 활성화합니다.
 
@@ -95,9 +97,12 @@ Experience Platform에서 이메일 주소 인제스트에 대한 자세한 내�
    - 예:`55E79200C1635B37AD31A378C39FEB12F120F116625093A19bC32FFF15041149`;`55e79200c1635b37ad31a378c39feb12f120f116625093a19bc32fff15041149`
 - 문자열에 소금을 넣지 마십시오.
 
-해시되지 않은 네임스페이스의 데이터는 활성화 시 [!DNL Platform]에 의해 자동으로 해시됩니다.
+>[!NOTE]
+>
+>해시되지 않은 네임스페이스의 데이터는 활성화 시 [!DNL Platform]에 의해 자동으로 해시됩니다.
+> 속성 소스 데이터가 자동으로 해시되지 않습니다. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL 변형 적용]** 옵션을 선택하여 [!DNL Platform]에서 활성화 시 데이터를 자동으로 해시하도록 하십시오.
+> **[!UICONTROL 변환 적용]** 옵션은 속성을 소스 필드로 선택할 때만 표시됩니다. 네임스페이스를 선택할 때 표시되지 않습니다.
 
-속성 소스 데이터가 자동으로 해시되지 않습니다. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL 변형 적용]** 옵션을 선택하여 [!DNL Platform]에서 활성화 시 데이터를 자동으로 해시하도록 하십시오.
 ![ID 매핑 변형](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
 #### 사용자 정의 네임스페이스 사용 {#custom-namespaces}
