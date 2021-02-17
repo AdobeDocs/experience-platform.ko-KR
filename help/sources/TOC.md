@@ -5,10 +5,10 @@ user-guide-title: Adobe Experience Platform 소스 커넥터 도움말
 breadcrumb-title: Source Connectors 안내서
 user-guide-description: 다양한 소스 또는 구조에서 데이터를 수집하고 레이블을 지정하며 기존에 수집한 데이터를 향상시킬 수 있습니다.
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 17eb7b9cb715d7d8d0d7bce930ddec43259149cc
 workflow-type: tm+mt
-source-wordcount: '551'
-ht-degree: 12%
+source-wordcount: '557'
+ht-degree: 13%
 
 ---
 
@@ -117,6 +117,8 @@ ht-degree: 12%
          - [PayPal](tutorials/api/create/payments/paypal.md)
       - 프로토콜 {#protocols}
          - [범용 OData](tutorials/api/create/protocols/odata.md)
+      - 스트리밍 {#streaming}
+         - [HTTP API](tutorials/api/create/streaming/http.md)
    - 데이터 탐색 {#explore}
       - [광고 데이터 살펴보기](tutorials/api/explore/advertising.md)
       - [클라우드 스토리지 데이터 살펴보기](tutorials/api/explore/cloud-storage.md)
@@ -196,6 +198,8 @@ ht-degree: 12%
          - [PayPal](tutorials/ui/create/payments/paypal.md)
       - 프로토콜 {#protocols}
          - [범용 OData](tutorials/ui/create/protocols/odata.md)
+      - 스트리밍 {#streaming}
+         - [HTTP API](tutorials/ui/create/streaming/http.md)
    - 데이터 흐름 구성 {#dataflow}
       - [광고 연결 데이터 흐름](tutorials/ui/dataflow/advertising.md)
       - [일괄 클라우드 스토리지 연결 데이터 흐름](tutorials/ui/dataflow/batch/cloud-storage.md)
