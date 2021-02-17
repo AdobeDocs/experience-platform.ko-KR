@@ -1,14 +1,14 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Adobe Experience Platform 세그멘테이션 서비스
+user-guide-title: Adobe Experience Platform Segmentation Service
 breadcrumb-title: Segmentation Service 안내서
 user-guide-description: 실시간 고객 프로필 데이터에서 세그먼트를 작성하고 대상을 생성합니다.
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: b37cf48b839ac30026162d2224528d8aabd3d263
 workflow-type: tm+mt
-source-wordcount: '135'
-ht-degree: 17%
+source-wordcount: '152'
+ht-degree: 22%
 
 ---
 
@@ -32,6 +32,7 @@ ht-degree: 17%
    - [세그먼트 대시보드](ui/segment-dashboard.md)
    - [세그먼트 빌더](ui/segment-builder.md)
    - [스트리밍 세분화](ui/streaming-segmentation.md)
+   - [스트리밍 세분화(비디오)](video/streaming-segmentation-overview.md)
    - [시간 제한 리팩토링](ui/segment-refactoring.md)
 - [옵트아웃 준수](honoring-opt-outs.md)
 - [다중 엔티티 세그먼테이션](multi-entity-segmentation.md)
@@ -51,6 +52,9 @@ ht-degree: 17%
    - [기타 함수](pql/misc-functions.md)
 - 자습서 {#tutorials}
    - [세그먼트 만들기](tutorials/create-a-segment.md)
+   - [세그먼트 만들기(비디오)](video/create-segment.md)
+   - [동적 세그먼트 만들기(비디오)](video/create-a-dynamic-segment.md)
+   - [다중 엔티티 세그먼트 만들기(비디오)](video/create-multi-entity-segments.md)
    - [세그먼트 평가](tutorials/evaluate-a-segment.md)
    - [데이터를 내보낼 데이터 세트 만들기](tutorials/create-dataset-export-segment.md)
    - [세그먼트에 대한 데이터 사용 준수](tutorials/governance.md)
