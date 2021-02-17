@@ -5,9 +5,9 @@ title: 세그멘테이션 서비스 개요
 topic: overview
 description: Adobe Experience Platform 세그멘테이션 서비스와 플랫폼 생태계에서 수행하는 역할에 대해 알아봅니다.
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: c0c42f872666323bfb3bdbdf5fb02475d3b5bc79
 workflow-type: tm+mt
-source-wordcount: '1394'
+source-wordcount: '1407'
 ht-degree: 0%
 
 ---
@@ -46,6 +46,8 @@ API를 사용하여 세그먼트 정의를 작성하는 방법에 대한 자세�
 >스키마가 확장되는 경우 모든 향후 업로드가 그에 따라 새로 추가된 필드를 업데이트해야 합니다. [!DNL Experience Data Model](XDM) 사용자 정의에 대한 자세한 내용은 [스키마 편집기 자습서](../xdm/tutorials/create-schema-ui.md)를 참조하십시오.
 
 ## 세그먼트 평가
+
+플랫폼은 현재 두 가지 세그먼트 평가 방법을 지원합니다.스트리밍 세그먼테이션 및 일괄 세그먼테이션.
 
 ### 스트리밍 세분화
 
@@ -143,6 +145,6 @@ API 또는 [!DNL Segment Builder] 중 하나를 통해 세그먼트를 구성하
 - [!DNL Segmentation] 은 프로필 저장소에서 프로필 하위 집합을 정의하는 프로세스로서, 원하는 마케팅 가능 그룹의 행동이나 특성을 규명할 수 있습니다. [!DNL Segmentation Service] 이 프로세스를 가능하게 합니다.
 - 세그먼트를 계획할 때는 다른 세그먼트에서 세그먼트를 참조하고 결합할 수 있다는 점을 염두에 두십시오.
 - 세그먼트는 프로필 데이터, 관련 시간 시리즈 데이터 또는 둘 다를 기반으로 하는 규칙에서 작성할 수 있습니다.
-- 세그먼트는 on-demand 또는 지속적으로 평가할 수 있습니다. On-Demand로 평가하면 모든 프로필 데이터가 세그먼트 정의를 한 번에 통과합니다. 지속적으로 평가되면 데이터가 [!DNL Platform]에 입력될 때 세그먼트 정의를 통해 스트리밍됩니다.
+- 세그먼트는 on-demand 또는 지속적으로 평가할 수 있습니다. On-Demand로 평가하면 모든 프로필 데이터가 세그먼트 정의를 한 번에 통과합니다. 지속적으로 평가되면 데이터가 [!DNL Platform]에 입력되면 세그먼트 정의를 통해 스트리밍됩니다.
 
 UI에서 세그먼트를 정의하는 방법을 알려면 [세그먼트 빌더 안내서](./ui/overview.md)를 참조하십시오. API를 사용하여 세그먼트 정의를 작성하는 방법에 대한 자세한 내용은 [API](./tutorials/create-a-segment.md)를 사용하여 세그먼트 만들기에 대한 자습서를 참조하십시오.
