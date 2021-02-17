@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;프로필;실시간 고객 프로필;문제 해결;API;동의;동의;기본 설정;개인 정보 보호 옵트아웃;마케팅 기본 설정;optOutType;basisOfProcessing;동의;동의
 title: 동의 및 기본 설정 데이터 유형
-description: 개인 정보/마케팅 기본 설정(동의) 데이터 유형은 데이터 작업에서 동의 관리 플랫폼(CMP)과 기타 소스에서 생성된 고객 권한 및 기본 설정의 수집을 지원하기 위한 것입니다.
+description: 개인 정보, 개인화 및 마케팅 기본 설정에 대한 동의 데이터 유형은 CMP(Consent Management Platform) 및 데이터 작업에서 생성된 기타 소스와 고객 권한 및 기본 설정의 수집을 지원하기 위한 것입니다.
 topic: guide
 translation-type: tm+mt
-source-git-commit: 10ccccf72ff7a2fd726066332b9771dff1929af6
+source-git-commit: 865379292985037b184d92e5d3fc1abc1873e962
 workflow-type: tm+mt
-source-wordcount: '2040'
+source-wordcount: '2067'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # [!DNL Consents & Preferences] 데이터 유형
 
-[!DNL Privacy/Marketing Preferences (Consent)] 데이터 유형(이하 &quot;[!DNL Consents & Preferences] 데이터 유형&quot;이라 함)은 CMP(동의 관리 플랫폼) 및 데이터 작업의 기타 소스에서 생성된 고객 권한 및 환경 설정의 수집을 지원하기 위한 XDM(데이터 유형)입니다.[!DNL Experience Data Model]
+[!UICONTROL 개인 정보, 개인화 및 마케팅 기본 설정에 대한 동의] 데이터 유형(이하 &quot;[!DNL Consents & Preferences] 데이터 유형&quot;이라 한다)은 CMP(Consent Management Platform)에서 생성된 고객 권한 및 기본 설정의 수집을 지원하기 위한 XDM(데이터 유형)입니다.[!DNL Experience Data Model]
 
 이 문서에서는 [!DNL Consents & Preferences] 데이터 유형이 제공하는 필드의 구조와 용도에 대해 다룹니다.
 
@@ -40,234 +40,246 @@ ht-degree: 1%
 * **개인화 환경 설정**:브랜드가 고객에게 전달된 경험을 개인화하는 방법에 대한 기본 설정
 * **마케팅 기본 설정**:브랜드가 다양한 채널을 통해 고객에게 연락할 수 있는지 여부에 대한 기본 설정.
 
+다음 스크린샷은 플랫폼 UI에서 데이터 유형의 구조가 표시되는 방식을 보여줍니다.
+
+![](../images/data-types/consents.png)
+
+>[!TIP]
+>
+>XDM 리소스를 조회하고 플랫폼 UI에서 해당 구조를 검사하는 방법에 대한 자세한 내용은 [XDM 리소스](../ui/explore.md)에 대한 가이드를 참조하십시오.
+
 다음 JSON은 [!DNL Consents & Preferences] 데이터 유형이 처리할 수 있는 데이터 유형의 예를 보여줍니다. 이러한 각 필드의 특정 사용에 대한 정보는 다음 섹션에 제공됩니다.
 
 ```json
 {
-  "xdm:consents": {
-    "xdm:collect": {
-      "xdm:val": "y",
+  "consents": {
+    "collect": {
+      "val": "y",
     },
-    "xdm:adID": {
-      "xdm:val": "VI"
+    "adID": {
+      "val": "VI"
     },
-    "xdm:share": {
-      "xdm:val": "y",
+    "share": {
+      "val": "y",
     },
-    "xdm:personalize": {
-      "xdm:content": {
-        "xdm:val": "y"
+    "personalize": {
+      "content": {
+        "val": "y"
       }
     },
-    "xdm:marketing": {
-      "xdm:preferred": "email",
-      "xdm:any": {
-        "xdm:val": "u"
+    "marketing": {
+      "preferred": "email",
+      "any": {
+        "val": "u"
       },
-      "xdm:push": {
-        "xdm:val": "n",
-        "xdm:reason": "Too Frequent",
-        "xdm:time": "2019-01-01T15:52:25+00:00"
+      "push": {
+        "val": "n",
+        "reason": "Too Frequent",
+        "time": "2019-01-01T15:52:25+00:00"
       }
     },
-    "xdm:idSpecific": {
+    "metadata": {
+      "time": "2019-01-01T15:52:25+00:00"
+    },
+    "idSpecific": {
       "email": {
         "jdoe@example.com": {
-          "xdm:marketing": {
-            "xdm:email": {
-              "xdm:val": "n"
+          "marketing": {
+            "email": {
+              "val": "n"
             }
           }
         }
       }
     }
-  },
-  "xdm:metadata": {
-    "xdm:time": "2019-01-01T15:52:25+00:00"
   }
 }
 ```
 
->[!NOTE]
+>[!TIP]
 >
->위의 예는 데이터 유형에 의해 제공된 주요 필드를 설명하는 이 문서의 나머지 부분에 컨텍스트를 제공하기 위해 [!DNL Consents & Preferences] 데이터 유형을 통해 [!DNL Platform]에 전송된 데이터의 구조를 설명하기 위한 것입니다. 데이터 유형 구조에 대한 전체 스키마는 참조용으로 [부록](#full-schema)에 있습니다.
+>Experience Platform에서 정의하는 모든 XDM 스키마에 대한 샘플 JSON 데이터를 생성하여 고객 동의 및 기본 설정 데이터를 매핑하는 방법을 시각화할 수 있습니다. 자세한 내용은 다음 설명서를 참조하십시오.
+>
+>* [UI에서 샘플 데이터 생성](../ui/sample.md)
+>* [API에서 샘플 데이터 생성](../api/sample-data.md)
 
-## xdm:incuses {#choices}
 
-`xdm:consents` 고객의 동의 및 기본 설정을 설명하는 여러 필드가 포함되어 있습니다. 이러한 필드는 아래 하위 섹션에서 자세히 설명합니다.
+## `consents` {#choices}
+
+`consents` 고객의 동의 및 기본 설정을 설명하는 여러 필드가 포함되어 있습니다. 이러한 필드는 아래 하위 섹션에서 자세히 설명합니다.
 
 ```json
-"xdm:consents": {
-  "xdm:collect": {
-    "xdm:val": "y",
+"consents": {
+  "collect": {
+    "val": "y",
   },
-  "xdm:adID": {
-    "xdm:val": "VI"
+  "adID": {
+    "val": "VI"
   },
-  "xdm:share": {
-    "xdm:val": "y",
+  "share": {
+    "val": "y",
   },
-  "xdm:personalize": {
-    "xdm:content": {
-      "xdm:val": "y"
+  "personalize": {
+    "content": {
+      "val": "y"
     }
   },
-  "xdm:marketing": {
-    "xdm:preferred": "email",
-    "xdm:any": {
-      "xdm:val": "u"
+  "marketing": {
+    "preferred": "email",
+    "any": {
+      "val": "u"
     },
-    "xdm:email": {
-      "xdm:val": "n",
-      "xdm:reason": "Too Frequent",
-      "xdm:time": "2019-01-01T15:52:25+00:00"
+    "email": {
+      "val": "n",
+      "reason": "Too Frequent",
+      "time": "2019-01-01T15:52:25+00:00"
     }
   }
 }
 ```
 
-### xdm:수집
+### `collect`
 
-`xdm:collect` 데이터를 수집하기 위한 고객의 동의를 나타냅니다.
+`collect` 데이터를 수집하기 위한 고객의 동의를 나타냅니다.
 
 ```json
-"xdm:collect" : {
-  "xdm:val": "y"
+"collect" : {
+  "val": "y"
 }
 ```
 
 | 속성 | 설명 |
 | --- | --- |
-| `xdm:val` | 이 사용 사례에 대해 고객이 제공한 동의 선택 사항입니다. 허용되는 값과 정의는 [부록](#choice-values)을 참조하십시오. |
+| `val` | 이 사용 사례에 대해 고객이 제공한 동의 선택 사항입니다. 허용되는 값과 정의는 [부록](#choice-values)을 참조하십시오. |
 
-### xdm:adID
+### `adID`
 
-`xdm:adID` 광고주 ID(IDFA 또는 GAID)를 사용하여 고객을 이 장치의 앱 간에 연결할 수 있는지 여부에 대한 고객의 동의를 나타냅니다.
+`adID` 광고주 ID(IDFA 또는 GAID)를 사용하여 고객을 이 장치의 앱 간에 연결할 수 있는지 여부에 대한 고객의 동의를 나타냅니다.
 
 ```json
-"xdm:adID" : {
-  "xdm:val": "y"
+"adID" : {
+  "val": "y"
 }
 ```
 
 | 속성 | 설명 |
 | --- | --- |
-| `xdm:val` | 이 사용 사례에 대해 고객이 제공한 동의 선택 사항입니다. 허용되는 값과 정의는 [부록](#choice-values)을 참조하십시오. |
+| `val` | 이 사용 사례에 대해 고객이 제공한 동의 선택 사항입니다. 허용되는 값과 정의는 [부록](#choice-values)을 참조하십시오. |
 
-### xdm:공유
+### `share`
 
-`xdm:share` 데이터를 제2자 또는 제3자와 공유(또는 판매)할 수 있는지 여부에 대한 고객의 동의를 나타냅니다.
+`share` 데이터를 제2자 또는 제3자와 공유(또는 판매)할 수 있는지 여부에 대한 고객의 동의를 나타냅니다.
 
 ```json
-"xdm:share" : {
-  "xdm:val": "y"
+"share" : {
+  "val": "y"
 }
 ```
 
 | 속성 | 설명 |
 | --- | --- |
-| `xdm:val` | 이 사용 사례에 대해 고객이 제공한 동의 선택 사항입니다. 허용되는 값과 정의는 [부록](#choice-values)을 참조하십시오. |
+| `val` | 이 사용 사례에 대해 고객이 제공한 동의 선택 사항입니다. 허용되는 값과 정의는 [부록](#choice-values)을 참조하십시오. |
 
-### xdm:개인 설정 {#personalize}
+### `personalize` {#personalize}
 
-`xdm:personalize` 개인화에 데이터를 사용할 수 있는 방법에 대한 고객 선호도를 캡처합니다. 고객은 특정 개인화 사용 사례를 배제하거나 개인화를 완전히 거부할 수 있습니다.
+`personalize` 개인화에 데이터를 사용할 수 있는 방법에 대한 고객 선호도를 캡처합니다. 고객은 특정 개인화 사용 사례를 배제하거나 개인화를 완전히 거부할 수 있습니다.
 
 >[!IMPORTANT]
 >
->`xdm:personalize` 는 마케팅 사례를 포함하지 않습니다. 예를 들어 고객이 모든 채널에 대한 개인화를 거부하는 경우 이러한 채널을 통해 커뮤니케이션의 수신을 중지해서는 안 됩니다. 대신, 받는 메시지는 프로필을 기반으로 하지 않고 일반적이어야 합니다.
+>`personalize` 는 마케팅 사례를 포함하지 않습니다. 예를 들어 고객이 모든 채널에 대한 개인화를 거부하는 경우 이러한 채널을 통해 커뮤니케이션의 수신을 중지해서는 안 됩니다. 대신, 받는 메시지는 프로필을 기반으로 하지 않고 일반적이어야 합니다.
 >
->동일한 예를 들어 고객이 모든 채널([다음 섹션](#marketing)에 설명된 `xdm:marketing`을 통해)에 대한 직접 마케팅을 옵트아웃하는 경우 개인화가 허용되더라도 해당 고객은 어떠한 메시지도 받지 않아야 합니다.
+>동일한 예를 들어 고객이 모든 채널([다음 섹션](#marketing)에 설명된 `marketing`을 통해)에 대한 직접 마케팅을 옵트아웃하는 경우 개인화가 허용되더라도 해당 고객은 어떠한 메시지도 받지 않아야 합니다.
 
 ```json
-"xdm:personalize": {
-  "xdm:content": {
-    "xdm:val": "y",
+"personalize": {
+  "content": {
+    "val": "y",
   }
 }
 ```
 
 | 속성 | 설명 |
 | --- | --- |
-| `xdm:content` | 웹 사이트 또는 애플리케이션에서 개인화된 컨텐트에 대한 고객의 선호 사항을 나타냅니다. |
-| `xdm:val` | 지정된 사용 사례에 대한 고객 제공 개인화 기본 설정입니다. 고객에게 동의 요청을 받을 필요가 없는 경우, 이 필드의 값은 개인화가 이루어져야 하는 기반을 나타내야 합니다. 허용되는 값과 정의는 [부록](#choice-values)을 참조하십시오. |
+| `content` | 웹 사이트 또는 애플리케이션에서 개인화된 컨텐트에 대한 고객의 선호 사항을 나타냅니다. |
+| `val` | 지정된 사용 사례에 대한 고객 제공 개인화 기본 설정입니다. 고객에게 동의 요청을 받을 필요가 없는 경우, 이 필드의 값은 개인화가 이루어져야 하는 기반을 나타내야 합니다. 허용되는 값과 정의는 [부록](#choice-values)을 참조하십시오. |
 
-### xdm:marketing {#marketing}
+### `marketing` {#marketing}
 
-`xdm:marketing` 데이터를 사용할 수 있는 마케팅 목적에 대한 고객 선호도를 캡처합니다. 고객은 특정 마케팅 사용 사례를 옵트아웃하거나 다이렉트 마케팅을 완전히 거부할 수 있습니다.
+`marketing` 데이터를 사용할 수 있는 마케팅 목적에 대한 고객 선호도를 캡처합니다. 고객은 특정 마케팅 사용 사례를 옵트아웃하거나 다이렉트 마케팅을 완전히 거부할 수 있습니다.
 
 ```json
-"xdm:marketing": {
-  "xdm:preferred": "email",
-  "xdm:any": {
-    "xdm:val": "u"
+"marketing": {
+  "preferred": "email",
+  "any": {
+    "val": "u"
   },
-  "xdm:email": {
-    "xdm:val": "n",
-    "xdm:reason": "Too Frequent"
+  "email": {
+    "val": "n",
+    "reason": "Too Frequent"
   },
-  "xdm:push": {
-    "xdm:val": "y"
+  "push": {
+    "val": "y"
   },
-  "xdm:sms": {
-    "xdm:val": "y"
+  "sms": {
+    "val": "y"
   }
 }
 ```
 
 | 속성 | 설명 |
 | --- | --- |
-| `xdm:preferred` | 고객이 선호하는 통신 수신 채널을 나타냅니다. 허용되는 값은 [부록](#preferred-values)을 참조하십시오. |
-| `xdm:any` | 다이렉트 마케팅을 전체적으로 선호하는 고객의 기호를 나타냅니다. 이 필드에 제공된 동의 환경 설정은 `xdm:marketing`에 제공된 추가 하위 필드로 대체되지 않는 한 모든 마케팅 채널에 대한 &quot;기본&quot; 환경 설정으로 간주됩니다. 더 세부적인 동의 옵션을 사용할 계획인 경우 이 필드를 제외하는 것이 좋습니다.<br><br>값을 로 설정하면 더  `n`구체적인 개인화 설정이 모두 무시됩니다. 값이 `y`으로 설정된 경우 명시적으로 `n`로 설정되지 않은 경우 모든 미세한 개인화 옵션도 `y`으로 취급해야 합니다. 값이 설정이 해제된 경우 각 개인화 옵션에 대한 값이 지정된 대로 적용됩니다. |
-| `xdm:email` | 고객이 이메일 메시지를 수신하기로 동의하는지 여부를 나타냅니다. |
-| `xdm:push` | 고객이 푸시 알림 수신을 허용하는지 여부를 나타냅니다. |
-| `xdm:sms` | 고객이 문자 메시지를 수신하기로 동의하는지 여부를 나타냅니다. |
-| `xdm:val` | 지정된 사용 사례에 대해 고객이 제공한 환경 설정. 고객에게 동의를 요청할 필요가 없는 경우, 이 필드의 값은 마케팅 사용 사례가 발생해야 하는 기반을 명시해야 합니다. 허용되는 값과 정의는 [부록](#choice-values)을 참조하십시오. |
-| `xdm:time` | 해당되는 경우 마케팅 기본 설정이 변경된 시점의 ISO 8601 타임스탬프. 개별 환경 설정에 대한 타임스탬프가 `xdm:metadata`에 제공된 타임스탬프와 같은 경우 이 필드는 해당 기본 설정에 대해 설정되지 않습니다. |
-| `xdm:reason` | 고객이 마케팅 사용 사례를 옵트아웃할 때 이 문자열 필드는 고객이 옵트아웃한 이유를 나타냅니다. |
+| `preferred` | 고객이 선호하는 통신 수신 채널을 나타냅니다. 허용되는 값은 [부록](#preferred-values)을 참조하십시오. |
+| `any` | 다이렉트 마케팅을 전체적으로 선호하는 고객의 기호를 나타냅니다. 이 필드에 제공된 동의 환경 설정은 `marketing`에 제공된 추가 하위 필드로 대체되지 않는 한 모든 마케팅 채널에 대한 &quot;기본&quot; 환경 설정으로 간주됩니다. 더 세부적인 동의 옵션을 사용할 계획인 경우 이 필드를 제외하는 것이 좋습니다.<br><br>값을 로 설정하면 더  `n`구체적인 개인화 설정이 모두 무시됩니다. 값이 `y`으로 설정된 경우 명시적으로 `n`로 설정되지 않은 경우 모든 미세한 개인화 옵션도 `y`으로 취급해야 합니다. 값이 설정이 해제된 경우 각 개인화 옵션에 대한 값이 지정된 대로 적용됩니다. |
+| `email` | 고객이 이메일 메시지를 수신하기로 동의하는지 여부를 나타냅니다. |
+| `push` | 고객이 푸시 알림 수신을 허용하는지 여부를 나타냅니다. |
+| `sms` | 고객이 문자 메시지를 수신하기로 동의하는지 여부를 나타냅니다. |
+| `val` | 지정된 사용 사례에 대해 고객이 제공한 환경 설정. 고객에게 동의를 요청할 필요가 없는 경우, 이 필드의 값은 마케팅 사용 사례가 발생해야 하는 기반을 명시해야 합니다. 허용되는 값과 정의는 [부록](#choice-values)을 참조하십시오. |
+| `time` | 해당되는 경우 마케팅 기본 설정이 변경된 시점의 ISO 8601 타임스탬프. 개별 환경 설정에 대한 타임스탬프가 `metadata`에 제공된 타임스탬프와 같은 경우 이 필드는 해당 기본 설정에 대해 설정되지 않습니다. |
+| `reason` | 고객이 마케팅 사용 사례를 옵트아웃할 때 이 문자열 필드는 고객이 옵트아웃한 이유를 나타냅니다. |
 
-### xdm:idSpecific
+### `metadata`
 
-`xdm:idSpecific` 특정 동의 또는 기본 설정이 일반적으로 고객에게 적용되지 않지만 단일 장치 또는 ID로 제한되는 경우에 사용할 수 있습니다. 예를 들어, 고객은 한 주소로 이메일의 수신을 거부할 수 있으며 다른 주소로 이메일을 보낼 수도 있습니다.
+`metadata` 마지막으로 업데이트될 때마다 고객의 동의 및 선호도에 대한 일반 메타데이터를 캡처합니다.
+
+```json
+"metadata": {
+  "time": "2019-01-01T15:52:25+00:00",
+}
+```
+
+| 속성 | 설명 |
+| --- | --- |
+| `time` | 고객의 동의 및 기본 설정이 마지막으로 업데이트된 시간에 대한 ISO 8601 타임스탬프. 로드 및 복잡성을 줄이기 위해 이 필드를 개별 환경 설정에 타임스탬프를 적용하는 대신 사용할 수 있습니다. 개별 환경 설정 아래에 `time` 값을 제공하면 해당 특정 환경 설정에 대한 `metadata` 타임스탬프가 무시됩니다. |
+
+### `idSpecific`
+
+`idSpecific` 특정 동의 또는 기본 설정이 일반적으로 고객에게 적용되지 않지만 단일 장치 또는 ID로 제한되는 경우에 사용할 수 있습니다. 예를 들어, 고객은 한 주소로 이메일의 수신을 거부할 수 있으며 다른 주소로 이메일을 보낼 수도 있습니다.
 
 >[!IMPORTANT]
 >
->채널 수준의 동의 및 환경 설정(즉, `xdm:idSpecific` 외부의 `xdm:consents`에 제공된 것)은 해당 채널 내의 ID에 적용됩니다. 따라서 모든 채널 수준의 동의 및 기본 설정은 등가 ID 또는 디바이스별 설정이 적용되는지 여부에 직접적인 영향을 줍니다.
+>채널 수준의 동의 및 환경 설정(즉, `idSpecific` 외부의 `consents`에 제공된 것)은 해당 채널 내의 ID에 적용됩니다. 따라서 모든 채널 수준의 동의 및 기본 설정은 등가 ID 또는 디바이스별 설정이 적용되는지 여부에 직접적인 영향을 줍니다.
 >
->* 고객이 채널 수준에서 선택한 경우 `xdm:idSpecific`에 명시된 동의 또는 기본 설정은 무시됩니다.
->* 채널 수준 동의 또는 기본 설정이 설정되지 않았거나 고객이 선택한 경우 `xdm:idSpecific`에 동의나 환경 설정이 적용됩니다.
+>* 고객이 채널 수준에서 선택한 경우 `idSpecific`에 명시된 동의 또는 기본 설정은 무시됩니다.
+>* 채널 수준 동의 또는 기본 설정이 설정되지 않았거나 고객이 선택한 경우 `idSpecific`에 동의나 환경 설정이 적용됩니다.
 
 
-`xdm:idSpecific` 개체의 각 키는 Adobe Experience Platform Identity Service에서 인식하는 특정 ID 네임스페이스를 나타냅니다. 고유한 사용자 정의 네임스페이스를 정의하여 서로 다른 식별자를 분류할 수 있지만, Identity Service에서 제공하는 표준 네임스페이스 중 하나를 사용하여 실시간 고객 프로필의 저장소 크기를 줄이는 것이 좋습니다. ID 네임스페이스에 대한 자세한 내용은 ID 서비스 문서의 [ID 네임스페이스 개요](../../identity-service/namespaces.md)를 참조하십시오.
+`idSpecific` 개체의 각 키는 Adobe Experience Platform Identity Service에서 인식하는 특정 ID 네임스페이스를 나타냅니다. 고유한 사용자 정의 네임스페이스를 정의하여 서로 다른 식별자를 분류할 수 있지만, Identity Service에서 제공하는 표준 네임스페이스 중 하나를 사용하여 실시간 고객 프로필의 저장소 크기를 줄이는 것이 좋습니다. ID 네임스페이스에 대한 자세한 내용은 ID 서비스 문서의 [ID 네임스페이스 개요](../../identity-service/namespaces.md)를 참조하십시오.
 
-각 네임스페이스 객체의 키는 고객이 환경 설정을 지정한 고유한 ID 값을 나타냅니다. 각 ID 값에는 `xdm:consents`과 같은 방식으로 서식이 지정된 동의 및 기본 설정의 전체 세트가 포함될 수 있습니다.
+각 네임스페이스 객체의 키는 고객이 환경 설정을 지정한 고유한 ID 값을 나타냅니다. 각 ID 값에는 `consents`과 같은 방식으로 서식이 지정된 동의 및 기본 설정의 전체 세트가 포함될 수 있습니다.
 
 ```json
-"xdm:idSpecific": {
+"idSpecific": {
   "email": {
     "jdoe@example.com": {
-      "xdm:marketing": {
-        "xdm:email": {
-          "xdm:val": "n"
+      "marketing": {
+        "email": {
+          "val": "n"
         }
       }
     }
   }
 }
 ```
-
-## xdm:메타데이터
-
-`xdm:metadata` 마지막으로 업데이트될 때마다 고객의 동의 및 선호도에 대한 일반 메타데이터를 캡처합니다.
-
-```json
-"xdm:metadata": {
-  "xdm:time": "2019-01-01T15:52:25+00:00",
-}
-```
-
-| 속성 | 설명 |
-| --- | --- |
-| `xdm:time` | 고객의 동의 및 기본 설정이 마지막으로 업데이트된 타임스탬프. 로드 및 복잡성을 줄이기 위해 이 필드를 개별 환경 설정에 타임스탬프를 적용하는 대신 사용할 수 있습니다. 개별 환경 설정 아래에 `xdm:time` 값을 제공하면 해당 특정 환경 설정에 대한 `xdm:metadata` 타임스탬프가 무시됩니다. |
 
 ## 데이터 유형 {#ingest}을(를) 사용하여 데이터 인제스트
 
@@ -289,9 +301,9 @@ ht-degree: 1%
 
 아래 섹션은 [!DNL Consents & Preferences] 데이터 유형에 대한 추가 참조 정보를 제공합니다.
 
-### xdm:val {#choice-values}에 허용된 값
+### `val` {#choice-values}에 허용된 값
 
-다음 표에서는 `xdm:val`에 대해 허용된 값에 대해 대략적으로 설명합니다.
+다음 표에서는 `val`에 대해 허용된 값에 대해 대략적으로 설명합니다.
 
 | 값 | Title | 설명 |
 | --- | --- | --- |
@@ -305,9 +317,9 @@ ht-degree: 1%
 | `VI` | 개인의 중요한 관심 | 특정 목적을 위해 데이터를 수집하여 개인의 중요한 이익을 보호해야 합니다. |
 | `PI` | 공익 | 특정 목적을 위한 자료의 수집은 공익적 또는 공권력의 행사에 필요한 것이다. |
 
-### xdm:preferred {#preferred-values}에 대해 허용된 값
+### `preferred` {#preferred-values}에 허용된 값
 
-다음 표에서는 `xdm:preferred`에 대해 허용된 값에 대해 대략적으로 설명합니다.
+다음 표에서는 `preferred`에 대해 허용된 값에 대해 대략적으로 설명합니다.
 
 | 값 | 설명 |
 | --- | --- |
