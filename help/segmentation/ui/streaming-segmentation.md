@@ -5,9 +5,9 @@ title: 스트리밍 세그멘테이션 UI 안내서
 topic: ui guide
 description: Adobe Experience Platform의 스트리밍 세분화를 통해 거의 실시간으로 세분화를 수행하고 데이터 풍부함에 초점을 맞출 수 있습니다. 스트리밍 세분화를 통해 데이터가 Platform(플랫폼)으로 유입되므로 세분화 작업을 예약하고 실행할 필요가 없습니다. 이 기능을 사용하면 이제 데이터가 플랫폼에 전달되면 대부분의 세그먼트 규칙을 평가할 수 있으므로 세그먼트 멤버십은 예약된 세그멘테이션 작업을 실행하지 않고 최신 상태로 유지됩니다.
 translation-type: tm+mt
-source-git-commit: c0c42f872666323bfb3bdbdf5fb02475d3b5bc79
+source-git-commit: 405b7eb0c95ebef0b05d2b10ef92f28a37b7cc86
 workflow-type: tm+mt
-source-wordcount: '802'
+source-wordcount: '769'
 ht-degree: 0%
 
 ---
@@ -75,12 +75,6 @@ ht-degree: 0%
 ![](../images/ui/streaming-segmentation/info-bubble.png)
 
 세그먼트 정의에 대한 자세한 내용은 [세그먼트 정의 세부 사항](#segment-details)의 이전 섹션을 참조하십시오.
-
-## 스트리밍 세분화 비디오 데모
-
-다음 비디오는 스트리밍 세그멘테이션에 대한 이해를 지원하기 위한 것입니다. 고객 경험의 예를 보여주고, [!DNL Platform] 인터페이스에서 주요 기능을 빠르게 둘러볼 수 있습니다.
-
->[!VIDEO](https://video.tv.adobe.com/v/36184?quality=12&learn=on)
 
 ## 다음 단계
 
