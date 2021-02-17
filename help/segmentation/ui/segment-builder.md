@@ -5,9 +5,9 @@ title: 세그먼트 빌더 UI 안내서
 topic: ui guide
 description: 'Adobe Experience Platform UI의 세그먼트 빌더는 프로필 데이터 요소와 상호 작용할 수 있는 풍부한 작업 공간을 제공합니다. 작업 영역은 데이터 속성을 나타내는 데 사용되는 드래그 앤 드롭 타일과 같이 규칙을 작성하고 편집하기 위한 직관적인 컨트롤을 제공합니다. '
 translation-type: tm+mt
-source-git-commit: 8fc1c5414f38e84ed1700ee95b1c382007ff2c27
+source-git-commit: 354b756e53b360f31c1832c2b0f946b67099a87f
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '1896'
 ht-degree: 0%
 
 ---
@@ -163,7 +163,7 @@ ht-degree: 0%
 >
 >대상 추정은 해당 일의 샘플 데이터의 샘플 크기를 사용하여 생성됩니다. 프로필 스토어에 1백만 개 미만의 엔티티가 있는 경우 전체 데이터 세트가 사용됩니다.1백만~2천만 개의 개체 중 100만 개의 개체가 사용됩니다.2천만 개 이상의 개체에 대해 전체 엔티티의 5%가 사용됩니다. 세그먼트 예상 생성에 대한 자세한 내용은 세그먼트 작성 자습서의 [예측 생성 섹션](../tutorials/create-a-segment.md#estimate-and-preview-an-audience)에서 확인할 수 있습니다.
 
-## 다음 단계 및 추가 리소스 {#next-steps}
+## 다음 단계 {#next-steps}
 
 세그먼트 빌더는 [!DNL Real-time Customer Profile] 데이터에서 마케팅 가능한 대상을 분리할 수 있는 풍부한 워크플로우를 제공합니다. 이 안내서를 본 후 다음을 수행할 수 있습니다.
 
@@ -173,16 +173,4 @@ ht-degree: 0%
 - 예약된 세그먼테이션에 대해 모든 세그먼트 정의를 활성화합니다.
 - 스트리밍 세그먼테이션에 지정된 세그먼트 정의를 활성화합니다.
 
-[!DNL Segmentation Service]에 대한 자세한 내용을 보려면 설명서를 계속 읽고 아래 비디오를 시청하여 학습 내용을 보완해 주십시오. [!DNL Segmentation Service] UI의 다른 부분에 대한 자세한 내용은 [[!DNL Segmentation Service] 사용자 안내서](./overview.md)를 참조하십시오.
-
->[!WARNING]
->
-> 다음 비디오에 표시된 [!DNL Platform] UI가 최신 상태가 아닙니다. 최신 UI 스크린샷 및 기능은 위의 설명서를 참조하십시오.
-
-**세그먼트 만들기:**
-
->[!VIDEO](https://video.tv.adobe.com/v/27254?quality=12&learn=on)
-
-**동적 세그먼트 만들기:**
-
->[!VIDEO](https://video.tv.adobe.com/v/27428?quality=12&learn=on)
+[!DNL Segmentation Service]에 대한 자세한 내용을 보려면 설명서를 계속 읽고 관련 비디오를 시청하여 학습 내용을 보완하십시오. [!DNL Segmentation Service] UI의 다른 부분에 대한 자세한 내용은 [[!DNL Segmentation Service] 사용자 안내서](./overview.md)를 참조하십시오.
