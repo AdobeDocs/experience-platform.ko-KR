@@ -5,7 +5,7 @@ title: Experience Platform API 기본 사항
 topic: getting started
 description: 이 문서에서는 Experience Platform API와 관련된 일부 기본 기술 및 구문에 대한 간단한 개요를 제공합니다.
 translation-type: tm+mt
-source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
+source-git-commit: 8c98632b67ddae4fb7800e80fb8c83aca9bfa291
 workflow-type: tm+mt
 source-wordcount: '504'
 ht-degree: 1%
@@ -120,7 +120,7 @@ JSON 포인터는 JSON 문서 내의 특정 값을 식별하기 위한 표준 �
 
 `op`에 지정된 작업 유형에 따라 JSON 패치 객체에는 추가 속성이 필요할 수 있습니다. 다양한 JSON 패치 작업 및 필요한 구문에 대한 자세한 내용은 [JSON 패치 문서](http://jsonpatch.com/)를 참조하십시오.
 
-## JSON 스키마
+## JSON 스키마 {#json-schema}
 
 JSON 스키마는 JSON 데이터의 구조를 설명하고 확인하는 데 사용되는 형식입니다. [XDM(Experience Data Model)은 JSON 스키마 기능을 ](../xdm/home.md) 활용하여 인제스트된 고객 경험 데이터의 구조와 형식에 대한 제약 사항을 적용합니다. JSON 스키마에 대한 자세한 내용은 [공식 설명서](https://json-schema.org/)를 참조하십시오.
 
