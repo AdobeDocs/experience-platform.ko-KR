@@ -1,19 +1,18 @@
 ---
-title: Experience Cloud ID 검색 중
-seo-title: Adobe Experience Platform 웹 SDK Experience Cloud ID 검색
-description: Adobe Experience Cloud ID를 가져오는 방법에 대해 알아봅니다.
+title: Adobe Experience Platform 웹 SDK를 사용하여 Experience Cloud ID 검색
+description: Adobe Experience Platform 웹 SDK를 사용하여 Adobe Experience Cloud ID(ECID)를 검색하는 방법을 알아봅니다.
 seo-description: Adobe Experience Cloud ID를 가져오는 방법에 대해 알아봅니다.
 keywords: ID;퍼스트 파티 ID;ID 서비스;3번째 파티 ID;ID 마이그레이션;방문자 ID;3자 ID;thirdPartyCookiesEnabled;idMigrationEnabled;getIdentity;동기화 ID;syncIdentity;sendEvent;idMap;기본;ID;네임스페이스 id;authenticationState hashEnabled;
 translation-type: tm+mt
-source-git-commit: 3ac00fda2c0a43437fb212dcba7e98c63503b9c4
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '919'
+source-wordcount: '924'
 ht-degree: 3%
 
 ---
 
 
-# ID - Experience Cloud ID 검색
+# Adobe Experience Cloud ID 검색
 
 Adobe Experience Platform 웹 SDK는 [Adobe ID 서비스](../../identity-service/ecid.md)를 활용합니다. 이렇게 하면 각 장치에 페이지 간 활동을 함께 연결할 수 있도록 장치에 지속되는 고유 식별자가 있습니다.
 
