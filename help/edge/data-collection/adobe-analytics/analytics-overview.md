@@ -1,14 +1,12 @@
 ---
-title: Adobe Analytics으로 데이터 보내기
-seo-title: Adobe Experience Platform Web SDK를 사용하여 Adobe Analytics으로 데이터 보내기
-description: Experience Platform 웹 SDK를 사용하여 Adobe Analytics으로 데이터를 전송하는 방법 살펴보기
-seo-description: Experience Platform 웹 SDK를 사용하여 Adobe Analytics으로 데이터를 전송하는 방법 살펴보기
+title: Adobe Experience Platform 웹 SDK를 사용하여 Adobe Analytics으로 데이터 보내기
+description: Adobe Experience Platform 웹 SDK를 사용하여 Adobe Analytics으로 데이터를 전송하는 방법을 알아봅니다.
 keywords: adobe analytics;analytics;매핑된 데이터;매핑된 vars;adobe analytics;analytics;mapped data;mapped vars;
 translation-type: tm+mt
-source-git-commit: 723711ee0c2b7b5ca4aea617a81241dbebbc839c
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '207'
-ht-degree: 6%
+source-wordcount: '192'
+ht-degree: 7%
 
 ---
 
