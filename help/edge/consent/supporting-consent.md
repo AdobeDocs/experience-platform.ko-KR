@@ -1,32 +1,30 @@
 ---
-title: 지원 동의
-seo-title: Adobe Experience Platform 웹 SDK 동의 지원 기본 설정
-description: Experience Platform 웹 SDK를 사용하여 동의 환경 설정을 지원하는 방법 살펴보기
-seo-description: Experience Platform 웹 SDK를 사용하여 동의 환경 설정을 지원하는 방법 살펴보기
-keywords: consent;defaultConsent;default consent;setConsent;Profile Privacy Mixin;Experience Event Privacy Mixin;Privacy Mixin;
+title: Adobe Experience Platform 웹 SDK를 사용하여 고객 동의 기본 설정 지원
+description: Adobe Experience Platform 웹 SDK를 사용하여 동의 기본 설정을 지원하는 방법을 알아봅니다.
+keywords: 동의;defaultConsent;default consent;setConsent;프로필 개인 정보 혼합;경험 이벤트 개인 정보 혼합;개인 정보 혼합
 translation-type: tm+mt
-source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '752'
+source-wordcount: '760'
 ht-degree: 0%
 
 ---
 
 
-# 지원 동의
+# 고객 동의 환경 설정 지원
 
-사용자의 개인 정보를 존중하기 위해 SDK가 특정 목적을 위해 사용자별 데이터를 사용하도록 허용하기 전에 사용자의 동의를 요청할 수 있습니다. 현재, SDK는 사용자가 모든 목적을 선택하거나 거부할 수 있도록 허용하지만, 향후 Adobe은 특정 목적을 보다 세부적으로 제어하기를 희망하고 있습니다.
+사용자의 개인 정보를 존중하기 위해 SDK가 특정 목적을 위해 사용자별 데이터를 사용하도록 허용하기 전에 사용자의 동의를 요청할 수 있습니다. 현재, SDK는 사용자가 모든 목적에 한해서만 가입 또는 가입을 하도록 허용하지만, 향후 Adobe은 특정 목적에 대한 보다 세밀한 제어를 제공하기를 희망하고 있습니다.
 
 사용자가 모든 목적으로 액세스하는 경우 SDK는 다음 작업을 수행할 수 있습니다.
 
 * Adobe 서버에서 데이터를 전송합니다.
-* 쿠키 또는 웹 저장소 항목을 읽고 씁니다(사용자의 옵트인 환경 설정을 유지하는 경우는 제외).
+* 쿠키 또는 웹 저장소 항목을 읽고 씁니다(사용자의 옵트인 기본 설정을 유지하는 경우는 제외).
 
 사용자가 모든 목적을 벗어나는 경우 SDK는 이러한 작업을 수행하지 않습니다.
 
 ## 동의 구성
 
-기본적으로 사용자는 모든 목적으로 선택되어 있습니다. 사용자가 로그인할 때까지 SDK가 위의 작업을 수행하지 않도록 하려면 다음과 같이 SDK 구성 `"defaultConsent": "pending"` 동안 전달합니다.
+기본적으로 사용자는 모든 목적으로 옵트인됩니다. 사용자가 로그인할 때까지 SDK가 위 작업을 수행하지 않도록 하려면 다음과 같이 SDK 구성 중에 `"defaultConsent": "pending"`을(를) 전달합니다.
 
 ```javascript
 alloy("configure", {
@@ -36,13 +34,13 @@ alloy("configure", {
 });
 ```
 
-일반 용도에 대한 기본 동의가 보류 중으로 설정된 경우 사용자 옵트인 환경 설정(예: 명령)에 의존하는 모든 명령을 실행하려고 하면 SDK 내에서 명령이 대기됩니다. `event` 이러한 명령은 사용자의 옵트인 환경 설정을 SDK에 전달해야만 처리됩니다.
+일반적인 용도의 기본 동의를 보류 중으로 설정하면 사용자 옵트인 기본 설정(예: `event` 명령)에 의존하는 명령을 실행하려고 하면 SDK 내에서 명령이 큐에 오르게 됩니다. 이러한 명령은 사용자의 옵트인 기본 설정을 SDK에 전달해야만 처리됩니다.
 
-이 경우 사용자에게 사용자 인터페이스 내 특정 위치에서 옵트인하도록 요청할 수 있습니다. 사용자의 기본 설정이 수집되면 SDK에 이러한 기본 설정을 알립니다.
+이 시점에서 사용자에게 사용자 인터페이스 내 특정 위치에서 옵트인하도록 요청할 수 있습니다. 사용자의 기본 설정이 수집되면 SDK에 이러한 기본 설정을 알립니다.
 
-## Adobe 표준을 통해 동의 기본 사항 전달
+## Adobe 표준을 통해 동의 기본 설정 통신
 
-사용자가 옵션을 선택한 경우 다음과 같이 `setConsent` 옵션 `general` `in` 을 설정하여 명령을 실행합니다.
+사용자가 옵션을 선택하는 경우 다음과 같이 `general` 옵션이 `in`로 설정된 `setConsent` 명령을 실행합니다.
 
 ```javascript
 alloy("setConsent", {
@@ -56,9 +54,9 @@ alloy("setConsent", {
 });
 ```
 
-사용자가 이제 옵트인되었으므로 SDK는 이전에 큐에 있는 모든 명령을 실행합니다. 옵트인된 사용자에 의존하는 이후 명령은 큐에 올라가 있지 않고 대신 즉시 실행됩니다.
+사용자가 이제 옵트인되었으므로 SDK는 이전에 큐에 있는 모든 명령을 실행합니다. 옵트인된 사용자에 따라 달라지는 이후의 명령은 큐에 올라가 있지 않고 대신 즉시 실행됩니다.
 
-사용자가 옵트아웃을 선택한 경우 다음과 같이 옵션을 설정하여 `setConsent` 명령을 `general``out` 실행합니다.
+사용자가 그만두기로 선택한 경우 다음과 같이 `general` 옵션이 `out`로 설정된 `setConsent` 명령을 실행합니다.
 
 ```javascript
 alloy("setConsent", {
@@ -74,17 +72,17 @@ alloy("setConsent", {
 
 >[!NOTE]
 >
->사용자가 옵트아웃한 후에는 SDK에서 사용자에게 동의 설정을 허용하지 않습니다 `in`.
+>사용자가 옵트아웃한 후에는 SDK에서 사용자가 `in`에 대한 동의를 설정할 수 없습니다.
 
-사용자가 옵트아웃을 선택했기 때문에 이전에 큐에 있는 명령에서 반환된 약속이 거부됩니다. 사용자가 선택한 이후에 명령하면 비슷하게 거부된 약속이 반환됩니다. 오류 처리 또는 억제에 대한 자세한 내용은 명령 [실행을 참조하십시오](../fundamentals/executing-commands.md).
+사용자가 옵트아웃을 선택했기 때문에 이전에 큐에 있는 명령에서 반환된 약속이 거부됩니다. 옵트인된 사용자에 따라 달라지는 향후 명령은 비슷하게 거부된 약속을 반환합니다. 오류 처리 또는 억제에 대한 자세한 내용은 [명령 실행](../fundamentals/executing-commands.md)을 참조하십시오.
 
 >[!NOTE]
 >
->현재 SDK는 `general` 목적만 지원합니다. 서로 다른 Adobe 기능 및 제품 오퍼에 해당하는 보다 강력한 목적 또는 카테고리를 구축할 계획이지만 현재 구현은 옵트인하기 위한 전체 또는 전혀 접근 방식이 아닙니다.  이는 Adobe Experience Platform에만 적용되며 다른 Adobe JavaScript 라이브러리는 [!DNL Web SDK] 해당되지 않습니다.
+>현재 SDK는 `general` 목적만 지원합니다. 서로 다른 Adobe 기능 및 제품 오퍼링에 해당하는 더 강력한 목적 또는 카테고리 세트를 구축할 계획이지만, 현재 구현은 옵트인에 대한 전체 또는 전혀 도움이 되지 않습니다.  이는 Adobe Experience Platform [!DNL Web SDK]에만 적용되며 다른 Adobe JavaScript 라이브러리는 해당되지 않습니다.
 
-## IAB TCF 표준을 통해 동의 환경 설정 통신
+## IAB TCF 표준을 통해 동의 환경 설정을 통신합니다.
 
-SDK는 IAB(Interactive Advertising Bureau Europe) TCF(Transparency and Consent Framework) 표준을 통해 제공되는 사용자의 동의 환경 설정을 기록하는 것을 지원합니다. 동의 문자열은 위와 동일한 `setConsent` 명령을 통해 다음과 같이 설정할 수 있습니다.
+SDK는 IAB(Interactive Advertising Bureau Europe) TCF(Transparency and Consent Framework) 표준을 통해 제공되는 사용자의 동의 기본 설정을 기록하는 것을 지원합니다. 동의 문자열은 위와 동일한 `setConsent` 명령을 통해 다음과 같이 설정할 수 있습니다.
 
 ```javascript
 alloy("setConsent", {
@@ -97,9 +95,9 @@ alloy("setConsent", {
 });
 ```
 
-이러한 방식으로 동의가 설정되면, 실시간 고객 프로필은 동의 정보로 업데이트됩니다. 이를 수행하려면 프로필 XDM 스키마에는 프로필 개인 정보 [믹신이 포함되어야 합니다](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/profile/profile-privacy.schema.md). 이벤트를 전송할 때 이벤트 XDM 개체에 IAB 동의 정보를 수동으로 추가해야 합니다. SDK는 이벤트에 동의 정보를 자동으로 포함하지 않습니다. 이벤트에서 동의 정보를 보내려면 [경험 이벤트 개인 정보](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/experience-event/experienceevent-privacy.schema.md) 혼합을 경험 이벤트 스키마에 추가해야 합니다.
+이러한 방식으로 동의가 설정되면, 실시간 고객 프로필은 동의 정보로 업데이트됩니다. 이 작업을 수행하려면 프로필 XDM 스키마에는 [프로필 개인 정보 혼합](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/profile/profile-privacy.schema.md)이 포함되어야 합니다. 이벤트를 전송할 때 IAB 동의 정보를 이벤트 XDM 개체에 수동으로 추가해야 합니다. SDK는 이벤트에 동의 정보를 자동으로 포함하지 않습니다. 이벤트에서 동의 정보를 보내려면 [경험 이벤트 개인 정보 혼합](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/experience-event/experienceevent-privacy.schema.md)을 경험 이벤트 스키마에 추가해야 합니다.
 
-## 하나의 요청에 두 표준 전송
+## 하나의 요청에서 두 표준 전송
 
 또한 SDK는 요청에서 두 개 이상의 동의 개체 전송을 지원합니다.
 
@@ -120,11 +118,11 @@ alloy("setConsent", {
 });
 ```
 
-## 지속적인 동의 환경 설정
+## 동의 기본 사항 지속성
 
-명령을 사용하여 SDK에 대한 사용자 환경 설정을 통신하면 SDK는 사용자 환경 설정을 쿠키로 유지합니다. `setConsent` 다음에 사용자가 브라우저에서 웹 사이트를 로드할 때 SDK는 이러한 지속적인 환경 설정을 검색하고 사용하여 이벤트를 Adobe으로 보낼 수 있는지 여부를 결정합니다. 사용자 환경 설정에서 변경 사항을 알리는 것 외에는 `setConsent` 명령을 다시 실행할 필요가 없습니다. 이 작업은 언제든지 수행할 수 있습니다.
+`setConsent` 명령을 사용하여 SDK에 대한 사용자 환경 설정을 전달한 후 SDK는 사용자의 환경 설정을 쿠키에 유지합니다. 다음에 사용자가 브라우저에서 웹 사이트를 로드할 때 SDK는 이러한 지속적인 환경 설정을 검색하고 사용하여 이벤트를 Adobe으로 보낼 수 있는지 여부를 결정합니다. 언제든지 사용자 환경 설정에서 변경할 수 있는 사항을 알리는 것 외에는 `setConsent` 명령을 다시 실행할 필요가 없습니다.
 
 ## 동의를 설정하는 동안 ID 동기화
 
-기본 동의가 보류 중일 때, 첫 번째 요청은 외부로 나가서 신원을 확인하는 것일 `setConsent` 수 있습니다. 이러한 이유로 첫 번째 요청에서 ID를 동기화하는 것이 중요할 수 있습니다. 명령에서와 마찬가지로 ID 맵을 명령에 추가할 수 `setConsent` `sendEvent` 있습니다. Experience Cloud [ID 검색을 참조하십시오.](../identity/overview.md)
+기본 동의가 보류 중일 때 `setConsent`은 외부로 이동하여 ID를 설정하는 첫 번째 요청일 수 있습니다. 따라서 첫 번째 요청에서 ID를 동기화하는 것이 중요할 수 있습니다. ID 맵은 `sendEvent` 명령에서처럼 `setConsent` 명령에 추가할 수 있습니다. [Experience Cloud ID 검색](../identity/overview.md) 참조
 
