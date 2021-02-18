@@ -1,11 +1,11 @@
 ---
-title: 플랫폼 웹 SDK 확장 데이터 요소 유형
-description: Adobe Experience Platform Launch의 Adobe Experience Platform 웹 SDK 확장 데이터 요소 유형
+title: Adobe Experience Platform 웹 SDK 확장의 데이터 요소 유형
+description: Adobe Experience Platform Launch의 Adobe Experience Platform Web SDK 익스텐션에서 제공하는 다양한 데이터 요소 유형에 대해 알아보십시오.
 translation-type: tm+mt
-source-git-commit: 473cc1f7617f1d65cdb70ff0e758178ea0174f00
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '307'
-ht-degree: 81%
+source-wordcount: '318'
+ht-degree: 78%
 
 ---
 
