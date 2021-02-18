@@ -1,20 +1,19 @@
 ---
-title: Adobe Experience Platform 웹 SDK 확장
-seo-title: Adobe Experience Platform Launch의 Adobe Experience Platform 웹 SDK 확장
+title: Adobe Experience Platform Web SDK 확장 릴리스 노트
 description: Adobe Experience Platform Launch의 Adobe Experience Platform 웹 SDK 확장
 seo-description: Adobe Experience Platform Launch의 Adobe Experience Platform 웹 SDK 확장
 translation-type: tm+mt
-source-git-commit: 56f0b3abd859a6b27f0117fb6ec4c312ca93ba5d
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '970'
-ht-degree: 100%
+source-wordcount: '988'
+ht-degree: 94%
 
 ---
 
 
-# Adobe Experience Platform Web SDK 릴리스 노트
+# Adobe Experience Platform Web SDK 확장 릴리스 노트
 
-[자세히 알아보기: Adobe Experience Platform 웹 SDK 릴리스 노트](https://docs.adobe.com/content/help/ko-KR/experience-platform/edge/release-notes.html)
+이 문서에서는 Adobe Experience Platform Launch용 Adobe Experience Platform Web SDK 익스텐션에 대한 릴리스 노트에 대해 다룹니다. SDK 자체에 대한 최신 릴리스 노트는 [플랫폼 웹 SDK 릴리스 노트](https://docs.adobe.com/content/help/ko-KR/experience-platform/edge/release-notes.html)를 참조하십시오.
 
 ## 2020년 11월 4일
 
