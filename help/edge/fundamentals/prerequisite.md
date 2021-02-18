@@ -1,13 +1,11 @@
 ---
 title: Adobe Experience Platform 웹 SDK 사용을 위한 사전 요구 사항
-seo-title: Adobe Experience Platform 웹 SDK 사용을 위한 사전 요구 사항
-description: Adobe Experience Platform 웹 SDK 사용을 위한 사전 요구 사항
-seo-description: Adobe Experience Platform 웹 SDK 사용을 위한 사전 요구 사항
+description: Adobe Experience Platform 웹 SDK 사용에 필요한 사전 요구 사항에 대해 알아봅니다.
 keywords: 1차 도메인;CNAME;스키마;만들기;스키마;시작;aep 웹 sdk 확장;구성 ID;구성 도구;데이터 요소;데이터 요소 만들기;데이터 요소 만들기;XDM 개체;sendEvent;send Event;send Event;
 translation-type: tm+mt
-source-git-commit: a19b4384e2ea64eb9ab5f0f5443fd329ec44a2a0
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '281'
+source-wordcount: '270'
 ht-degree: 0%
 
 ---
