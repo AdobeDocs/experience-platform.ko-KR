@@ -1,19 +1,17 @@
 ---
-title: 에지 구성
-seo-title: Experience Platform 웹 SDK용 Edge 구성
+title: Experience Platform 웹 SDK용 Edge 구성 만들기
 description: 'Experience Platform 에지 네트워크를 구성하는 방법을 알아봅니다. '
-seo-description: 'Experience Platform 에지 네트워크를 구성하는 방법을 알아봅니다. '
-keywords: configuration;edge;edge configuration id;Environment Settings;edgeConfigId;identity;id sync enabled;ID Sync Container ID;Sandbox;Streaming Inlet;Event Dataset;target;client code;Property Token;Target Environment ID;Cookie Destinations;url Destinations;Analytics Settings Blockreport suite id;
+keywords: 구성;edge;edge 구성 id;환경 설정;edgeConfigId;id 동기화 사용;ID 동기화 컨테이너 ID;샌드박스;스트리밍 가져오기;이벤트 데이터 세트;대상;클라이언트 코드;Target 환경 ID;쿠키 대상;URL 대상;Analytics 설정 블록 보고서 세트 id;
 translation-type: tm+mt
-source-git-commit: 94b3faf3157f4e1f4e46b6055914a04883dc44fa
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '886'
+source-wordcount: '916'
 ht-degree: 1%
 
 ---
 
 
-# 가장자리 구성
+# 에지 구성 만들기
 
 Adobe Experience Platform Web SDK에 대한 구성은 두 곳으로 분할됩니다. SDK의 [구성 명령](configuring-the-sdk.md)은 `edgeDomain`와 같이 클라이언트에서 처리해야 하는 작업을 제어합니다. Edge 구성은 SDK에 대한 다른 모든 구성을 처리합니다. Adobe Experience Platform Edge Network에 요청이 전송되면 `edgeConfigId`은(는) 서버측 구성을 참조하는 데 사용됩니다. 이렇게 하면 웹 사이트에서 코드를 변경하지 않고도 구성을 업데이트할 수 있습니다.
 
@@ -81,7 +79,7 @@ Adobe Target을 구성하려면 클라이언트 코드를 제공해야 합니다
 
 ### [!UICONTROL 클라이언트 코드]
 
-타겟 계정의 고유 ID. 이를 찾으려면 [!UICONTROL Adobe Target] > [!UICONTROL 설정] [!UICONTROL 구현] > [!UICONTROL 설정 편집]&lt;a7/>[!UICONTROL 다운로드] 단추([!UICONTROL at.js] 또는 &lt;a11/>)로 이동할 수 있습니다. 2/>mbox.js][!UICONTROL 
+타겟 계정의 고유 ID. 이를 찾으려면 [!UICONTROL Adobe Target] > [!UICONTROL 설정] [!UICONTROL 구현] > [!UICONTROL 설정 편집][!UICONTROL [!UICONTROL 다운로드] 단추([!UICONTROL at.js] 또는 )로 이동할 수 있습니다. 2/>mbox.js]
 
 ### [!UICONTROL 속성 토큰]
 
@@ -91,7 +89,7 @@ Adobe Target을 구성하려면 클라이언트 코드를 제공해야 합니다
 
 ### [!UICONTROL Target 환경 ID]
 
-[adobe target](https://docs.adobe.com/content/help/en/target/using/administer/hosts.html) 의 환경을 사용하면 모든 개발 단계를 통해 구현을 관리할 수 있습니다. 이 설정은 각 환경에서 사용할 환경을 지정합니다.
+[Adobe Target](https://docs.adobe.com/content/help/en/target/using/administer/hosts.html) 의 환경을 사용하면 모든 개발 단계를 통해 구현을 관리할 수 있습니다. 이 설정은 각 환경에서 사용할 환경을 지정합니다.
 
 Adobe에서는 작업을 단순화하기 위해 `dev`, `stage` 및 `prod` 에지 구성 환경에 대해 이 설정을 다르게 설정하는 것이 좋습니다. 그러나 이미 Adobe Target 환경이 정의된 경우 이러한 환경을 사용할 수 있습니다.
 
