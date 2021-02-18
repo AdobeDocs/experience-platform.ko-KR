@@ -1,18 +1,16 @@
 ---
-title: Adobe Experience Platform 웹 SDK 확장
-seo-title: Adobe Experience Platform Launch의 Adobe Experience Platform 웹 SDK 확장
-description: Adobe Experience Platform Launch의 Adobe Experience Platform 웹 SDK 확장
-seo-description: 'Adobe Experience Platform Launch의 Adobe Experience Platform 웹 SDK 확장 '
+title: Adobe Experience Platform 웹 SDK 확장 개요
+description: Adobe Experience Platform Launch용 Adobe Experience Platform Web SDK 익스텐션에 대한 자세한 내용
 translation-type: tm+mt
-source-git-commit: 473cc1f7617f1d65cdb70ff0e758178ea0174f00
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '664'
-ht-degree: 58%
+source-wordcount: '645'
+ht-degree: 55%
 
 ---
 
 
-# 플랫폼 시작을 위한 Adobe Experience Platform Web SDK 익스텐션
+# Adobe Experience Platform 웹 SDK 확장 개요
 
 Adobe Experience Platform 웹 SDK 익스텐션은 Adobe Experience Platform Edge 네트워크를 통해 웹 속성에서 Adobe Experience Cloud으로 데이터를 전송합니다. Adobe Experience Platform 웹 SDK 확장을 사용하면 데이터를 플랫폼으로 스트리밍하고 ID와 옵트인을 동기화하며 컨텍스트 데이터를 자동으로 수집할 수 있습니다.
 
