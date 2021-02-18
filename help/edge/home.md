@@ -1,19 +1,17 @@
 ---
-title: Adobe Experience Platform 웹 SDK 도움말
-seo-title: Adobe Experience Platform 웹 SDK 도움말
-description: Adobe Experience Platform Web SDK의 정의와 사용 방법을 알아봅니다.
-seo-description: Adobe Experience Cloud 고객이 Experience Cloud의 다양한 서비스와 상호 작용할 수 있도록 허용하는 방법을 알아봅니다.
+title: Adobe Experience Platform 웹 SDK 개요
+description: Adobe Experience Platform 웹 SDK를 사용하여 플랫폼 기능을 웹 사이트에 통합하는 방법을 살펴볼 수 있습니다.
 keywords: Adobe Experience Platform 웹 SDK;플랫폼 웹 SDK;웹 SDK;Web SDK;Edge;Visitor.js;AppMeasurement.js;AT.js;DIL.js;웹 sdk;SDK;웹 SDK;시작;시작
 translation-type: tm+mt
-source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '709'
-ht-degree: 1%
+source-wordcount: '685'
+ht-degree: 2%
 
 ---
 
 
-# Adobe Experience Platform Web SDK 소개
+# Adobe Experience Platform 웹 SDK 개요
 
 Adobe Experience Platform 웹 SDK는 Adobe Experience Cloud 고객이 Adobe Experience Platform Edge 네트워크를 통해 [!DNL Experience Cloud]의 다양한 서비스와 상호 작용할 수 있도록 하는 클라이언트측 JavaScript 라이브러리입니다. JavaScript 라이브러리 외에도 웹 SDK 구성에 도움이 되는 [Experience Platform Launch 확장](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/aep-extension/overview.html)이 있습니다.
 
@@ -38,7 +36,7 @@ Adobe Experience Platform 웹 SDK는 Adobe Experience Cloud 고객이 Adobe Expe
 * 혁신 속도 향상
 * Adobe 고객에게 지속적인 경쟁 우위 창출
 
-하나의 통합 에지 시스템을 통해 모든 채널에서 광고, 마케팅 또는 개인화 캠페인을 통합 경험으로 관리할 수 있습니다.  이를 통해 [!DNL Adobe]은(는) 고객에게 TCO가 낮은 서비스를 제공할 수 있습니다.  또한 실시간 에지 플러깅을 수행하고 [!DNL Adobe] 및 고객이 새로운 기능과 고객 정의 로직을 해당 실시간 시스템에 보다 신속하게 추가할 수 있도록 함으로써 제품 혁신 속도를 높일 수 있습니다.
+하나의 통합 에지 시스템을 통해 모든 채널에서 광고, 마케팅 또는 개인화 캠페인을 통합 경험으로 관리할 수 있습니다.  이를 통해 [!DNL Adobe]은(는) 고객에게 TCO가 낮은 서비스를 제공할 수 있습니다.  또한 실시간 에지 플러깅을 수행하고 [!DNL Adobe] 및 고객이 새로운 기능과 고객 정의 로직을 해당 실시간 시스템에 보다 신속하게 추가할 수 있도록 함으로써 제품 혁신 속도를 높이는 데 도움이 됩니다.
 
 ## 비디오 개요
 
