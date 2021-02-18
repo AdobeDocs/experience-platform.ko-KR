@@ -1,21 +1,19 @@
 ---
-title: IAB 투명도 및 동의 프레임워크 2.0 개요
-seo-title: Interactive Advertising Bureau Transparency & Consent Framework 2.0에서 Adobe Experience Platform Web SDK 동의 기본 설정 지원
-description: Experience Platform 웹 SDK를 사용하여 IAB TCF 2.0 동의 환경 설정을 지원하는 방법에 대해 알아봅니다.
-seo-description: Experience Platform 웹 SDK를 사용하여 IAB TCF 2.0 동의 환경 설정을 지원하는 방법에 대해 알아봅니다.
+title: Adobe Experience Platform 웹 SDK에서 IAB TCF 2.0 지원
+description: Adobe Experience Platform 웹 SDK를 사용하여 IAB TCF 2.0 동의 환경 설정을 지원하는 방법에 대해 알아봅니다.
 keywords: 동의;setConsent;프로필 개인 정보 혼합;경험 이벤트 개인 정보 혼합;개인 정보 혼합;IAB TCF 2.0;실시간 CDP;실시간 고객 데이터 프로필
 translation-type: tm+mt
-source-git-commit: 49c984a60fd699706eec508ec1d786340df40b57
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '894'
+source-wordcount: '878'
 ht-degree: 0%
 
 ---
 
 
-# IAB 투명도 및 동의 프레임워크 2.0 개요
+# Adobe Experience Platform 웹 SDK에서 IAB TCF 2.0 지원
 
-Adobe Experience Platform 웹 SDK는 Interactive Advertising Bureau Transparency &amp; Consent Framework, 버전 2.0(IAB TCF 2.0)을 지원합니다. 본 가이드는 실시간 고객 데이터 플랫폼, Audience Manager, 경험 이벤트, Adobe Analytics 및 Experience Edge와 통합되는 Adobe Experience Platform 웹 SDK를 통해 IAB TCF 2.0을 지원하기 위한 요구 사항을 보여줍니다.
+Adobe Experience Platform 웹 SDK는 Interactive Advertising Bureau Transparency &amp; Consent Framework 버전 2.0(IAB TCF 2.0)을 지원합니다. 본 가이드는 실시간 고객 데이터 플랫폼, Audience Manager, 경험 이벤트, Adobe Analytics 및 Experience Edge와 통합되는 Adobe Experience Platform 웹 SDK를 통해 IAB TCF 2.0을 지원하기 위한 요구 사항을 보여줍니다.
 
 또한 Adobe Experience Platform Launch과 IAB TCF 2.0을 통합하는 방법과를 사용하지 않는 방법에 대한 학습을 지원하기 위해 다음 가이드를 사용할 수 있습니다.
 
@@ -62,13 +60,13 @@ XDM 경험 이벤트를 분석 히트로 변환하는 방법에 대한 자세한
 
 >[!NOTE]
 >
->실시간 CDP 또는 Audience Manager을 설정하지 않아도 IAB TCF 2.0을 웹 SDK와 통합할 수 있습니다. 동의 환경 설정은 경험 이벤트 컬렉션을 제어하고 ID 쿠키를 설정하는 데 사용할 수 있습니다.
+>실시간 CDP 또는 Audience Manager을 설정하지 않더라도 IAB TCF 2.0을 웹 SDK와 통합할 수 있습니다. 동의 환경 설정은 경험 이벤트 컬렉션을 제어하고 ID 쿠키를 설정하는 데 사용할 수 있습니다.
 
 ### 기본 동의
 
 기본 동의는 고객에 대해 이미 저장된 동의 환경 설정이 없을 때 사용됩니다. 즉, 기본 동의 옵션은 Adobe Experience Platform 웹 SDK의 비헤이비어를 제어할 수 있고 고객의 지역에 따라 변경할 수 있습니다.
 
-예를 들어, GDPR(General Data Protection Regulation)의 관할권이 아닌 고객이 있는 경우, 기본 동의를 `in`로 설정할 수 있지만, GDPR의 관할권 내에서는 기본 동의를 `pending`로 설정할 수 있습니다. 클라우드 관리 플랫폼(CMP)은 고객의 지역을 감지하고 IAB TCF 2.0에 플래그 `gdprApplies`을 제공할 수 있습니다. 이 플래그를 사용하여 기본 동의를 설정할 수 있습니다.
+예를 들어, GDPR(General Data Protection Regulation)의 관할권이 아닌 고객이 있는 경우, 기본 동의는 `in`로 설정될 수 있지만, GDPR의 관할권 내에서는 기본 동의를 `pending`로 설정할 수 있습니다. 클라우드 관리 플랫폼(CMP)은 고객의 지역을 감지하고 IAB TCF 2.0에 플래그 `gdprApplies`을 제공할 수 있습니다. 이 플래그를 사용하여 기본 동의를 설정할 수 있습니다.
 
 기본 동의에 대한 자세한 내용은 SDK 구성 설명서의 [기본 동의 섹션](../../fundamentals/configuring-the-sdk.md#default-consent)을 참조하십시오.
 
