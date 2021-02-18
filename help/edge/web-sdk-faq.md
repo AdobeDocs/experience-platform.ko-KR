@@ -1,12 +1,10 @@
 ---
-title: 웹 SDK FAQ
-seo-title: Adobe Experience Platform 웹 SDK FAQ
-description: Adobe Experience Platform Web SDK에 대한 FAQ
-seo-description: Adobe Experience Platform Web SDK에 대한 FAQ
+title: Adobe Experience Platform 웹 SDK FAQ
+description: Adobe Experience Platform 웹 SDK에 대한 질문과 답변을 확인할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: f4f0b00dfd324f69aa2b4348740f6e767e86a6de
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '1808'
+source-wordcount: '1804'
 ht-degree: 2%
 
 ---
@@ -14,7 +12,7 @@ ht-degree: 2%
 
 # Experience Cloud 핵심 서비스에 대한
 
-이 FAQ에는 Adobe 웹 SDK에 대해 자주 묻는 질문이 포함되어 있습니다.
+이 안내서에서는 Adobe Experience Platform 웹 SDK에 대해 자주 묻는 질문에 대한 답변을 제공합니다.
 
 ## Adobe Experience Platform Web SDK 소개
 
