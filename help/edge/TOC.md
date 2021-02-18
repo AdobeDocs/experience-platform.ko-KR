@@ -6,27 +6,27 @@ user-guide-title: Adobe Experience Platform Web SDK 도움말
 breadcrumb-title: Web SDK 안내서
 user-guide-description: Edge 네트워크를 통해 Experience Cloud 서비스와 상호 작용할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 090050d89c628d82ebe1da6625a2ef1f2adf3e6c
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '149'
-ht-degree: 36%
+source-wordcount: '142'
+ht-degree: 34%
 
 ---
 
 
 # Adobe Experience Platform 웹 SDK {#edge}
 
-* [웹 SDK 개요](home.md)
+* [플랫폼 웹 SDK 개요](home.md)
 * 기본 사항 {#fundamentals}
    * [전제 조건](fundamentals/prerequisite.md)
-   * [가장자리 구성](fundamentals/edge-configuration.md)
+   * [에지 구성 만들기](fundamentals/edge-configuration.md)
    * [SDK 설치](fundamentals/installing-the-sdk.md)
    * [SDK 구성](fundamentals/configuring-the-sdk.md)
-   * [명령 실행 중](fundamentals/executing-commands.md)
+   * [명령 실행](fundamentals/executing-commands.md)
    * [이벤트 추적](fundamentals/tracking-events.md)
    * [디버깅](fundamentals/debugging.md)
    * [이벤트 데이터 병합](fundamentals/merging-event-data.md)
-   * [여러 속성을 사용한 상호 작용](fundamentals/interacting-with-multiple-properties.md)
+   * [여러 속성과 상호 작용](fundamentals/interacting-with-multiple-properties.md)
 * ID {#identity}
    * [개요](identity/overview.md)
 * 데이터 수집 {#data-collection}
@@ -34,18 +34,18 @@ ht-degree: 36%
    * [링크 추적](data-collection/track-links.md)
    * [상거래 및 제품 데이터 수집](data-collection/collect-commerce-data.md)
    * Adobe Analytics {#adobe-analytics}
-      * [Analytics 개요](data-collection/adobe-analytics/analytics-overview.md)
-      * [Adobe Analytics에서 수동으로 변수 매핑](data-collection/adobe-analytics/manually-mapping-variables.md)
+      * [개요](data-collection/adobe-analytics/analytics-overview.md)
+      * [Analytics 변수 매핑](data-collection/adobe-analytics/manually-mapping-variables.md)
       * [자동으로 매핑된 변수](data-collection/adobe-analytics/automatically-mapped-vars.md)
-      * [Adobe Analytics으로 데이터 보내기](data-collection/adobe-analytics/sending-data-to-analytics.md)
+      * [Analytics로 데이터 보내기](data-collection/adobe-analytics/sending-data-to-analytics.md)
 * 개인화 {#personalization}
-   * [맞춤형 컨텐츠 렌더링](personalization/rendering-personalization-content.md)
+   * [개인화된 컨텐츠 렌더링](personalization/rendering-personalization-content.md)
    * [깜박임 관리](personalization/manage-flicker.md)
    * Adobe Target {#adobe-target}
-      * [Target 개요](personalization/adobe-target/target-overview.md)
+      * [개요](personalization/adobe-target/target-overview.md)
       * [단일 페이지 애플리케이션 구현](personalization/adobe-target/spa-implementation.md)
    * Offer Decisioning {#offer-decisioning}
-      * [Offer Decisioning 개요](personalization/offer-decisioning/offer-decisioning-overview.md)
+      * [개요](personalization/offer-decisioning/offer-decisioning-overview.md)
 * 동의 {#consent}
    * [지원 동의](consent/supporting-consent.md)
    * IAB 투명도 및 동의 프레임워크 2.0 {#iab-tcf}
