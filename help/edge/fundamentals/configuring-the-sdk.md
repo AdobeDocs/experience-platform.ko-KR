@@ -1,19 +1,18 @@
 ---
-title: SDK 구성
-seo-title: Adobe Experience Platform 웹 SDK 구성
-description: Experience Platform 웹 SDK를 구성하는 방법 알아보기
+title: Adobe Experience Platform 웹 SDK 구성
+description: Adobe Experience Platform 웹 SDK를 구성하는 방법을 알아봅니다.
 seo-description: Experience Platform 웹 SDK를 구성하는 방법 알아보기
-keywords: 구성;구성;구성;SDK;edge;웹 SDK;구성;edgeConfigId;컨텍스트;웹;장치;환경;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConceptions;웹 sdk 설정;prehingStyle;cookieEnabled;urlEnabled DestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
+keywords: 구성;구성;구성;SDK;edge;웹 SDK;구성;EdgeConfigId;컨텍스트;웹;장치;환경;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConceptions;웹 sdk 설정;prehingStyle;cookieEnabled;urlEnabled;urlEnabled DestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 translation-type: tm+mt
-source-git-commit: 3ac00fda2c0a43437fb212dcba7e98c63503b9c4
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '740'
+source-wordcount: '741'
 ht-degree: 11%
 
 ---
 
 
-# SDK 구성
+# 플랫폼 웹 SDK 구성
 
 SDK 구성은 `configure` 명령으로 수행됩니다.
 
