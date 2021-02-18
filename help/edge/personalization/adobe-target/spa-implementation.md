@@ -1,13 +1,11 @@
 ---
-title: 'Adobe Target 및 Adobe Experience Platform Web SDK. '
-seo-title: Adobe Experience Platform 웹 SDK 및 Adobe Target 사용
-description: Adobe Target을 사용하여 Experience Platform 웹 SDK로 개인화된 컨텐츠를 렌더링하는 방법 학습
-seo-description: Adobe Target을 사용하여 Experience Platform 웹 SDK로 개인화된 컨텐츠를 렌더링하는 방법 학습
+title: Adobe Experience Platform 웹 SDK용 단일 페이지 애플리케이션 구현
+description: Adobe Target을 사용하여 Adobe Experience Platform Web SDK의 단일 페이지 애플리케이션(SPA) 구현을 만드는 방법을 알아봅니다.
 keywords: target;adobe target;xdm 보기;보기;단일 페이지 응용 프로그램;SPA;SPA 라이프사이클;클라이언트측;AB 테스트;경험 타깃팅;XT;VEC
 translation-type: tm+mt
-source-git-commit: 3ac00fda2c0a43437fb212dcba7e98c63503b9c4
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '1688'
+source-wordcount: '1665'
 ht-degree: 12%
 
 ---
@@ -15,11 +13,11 @@ ht-degree: 12%
 
 # 단일 페이지 애플리케이션 구현
 
-Adobe Experience Platform 웹 SDK는 SPA(Single Page Applications)와 같은 차세대 클라이언트측 기술을 통해 개인화를 구현할 수 있는 풍부한 기능을 제공합니다.
+Adobe Experience Platform 웹 SDK는 단일 페이지 애플리케이션(SPA)과 같은 차세대 클라이언트측 기술을 통해 개인화를 구현할 수 있는 풍부한 기능을 제공합니다.
 
 기존의 웹 사이트는, 웹 사이트 디자인이 URL과 밀접하게 연결되어 있고 한 웹 페이지에서 다른 웹 페이지로 전환하려면 페이지를 로드해야 하는 다중 페이지 애플리케이션으로도 알려진 &quot;페이지-투-페이지&quot; 탐색 모델에서 작동했습니다.
 
-단일 페이지 애플리케이션과 같은 최신 웹 애플리케이션에서는 대신 페이지 다시 로드와 독립적인 브라우저 UI 렌더링을 신속하게 사용할 수 있도록 하는 모델을 채택했습니다. 이러한 경험은 스크롤링, 클릭 및 커서 이동과 같은 고객 인터랙션에 의해 트리거될 수 있습니다. 최신 웹의 패러다임이 진화함에 따라 페이지 로드와 같은 일반적인 기존 이벤트의 연관성은 더 이상 개인화와 실험을 배포할 수 없습니다.
+단일 페이지 애플리케이션과 같은 최신 웹 애플리케이션에서는 페이지 재로드와 관계없이 브라우저 UI 렌더링을 신속하게 사용할 수 있도록 하는 모델을 채택했습니다. 이러한 경험은 스크롤링, 클릭 및 커서 이동과 같은 고객 인터랙션에 의해 트리거될 수 있습니다. 최신 웹의 패러다임이 진화함에 따라 페이지 로드와 같은 일반적인 기존 이벤트의 연관성은 더 이상 개인화와 실험을 배포할 수 없습니다.
 
 ![](assets/spa-vs-traditional-lifecycle.png)
 
@@ -33,7 +31,7 @@ Adobe Experience Platform 웹 SDK는 SPA(Single Page Applications)와 같은 차
 
 ## XDM 보기 및 단일 페이지 애플리케이션
 
-SPA용 Adobe Target VEC는 뷰라는 개념을 활용합니다.spa 경험을 구성하는 시각적 요소의 논리적 그룹입니다. 따라서 단일 페이지 애플리케이션은 사용자 상호 작용에 따라 URL 대신 보기를 통해 전환하는 것으로 간주할 수 있습니다. &quot;보기&quot;는 일반적으로 전체 사이트를 나타내거나 사이트 내의 그룹화된 시각적 요소를 나타낼 수 있습니다.
+SPA용 Adobe Target VEC는 뷰라는 개념을 활용합니다.SPA 경험을 구성하는 시각적 요소의 논리적 그룹입니다. 따라서 단일 페이지 애플리케이션은 사용자 상호 작용에 따라 URL 대신 보기를 통해 전환하는 것으로 간주할 수 있습니다. &quot;보기&quot;는 일반적으로 전체 사이트를 나타내거나 사이트 내의 그룹화된 시각적 요소를 나타낼 수 있습니다.
 
 뷰가 무엇인지 자세히 설명하기 위해 다음 예에서는 Response에서 구현된 가상 온라인 전자 상거래 사이트를 사용하여 예제 뷰를 탐색합니다.
 
