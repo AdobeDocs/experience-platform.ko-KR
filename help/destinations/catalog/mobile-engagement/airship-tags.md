@@ -3,9 +3,9 @@ keywords: 항공 선박 태그;항공 수송 대상
 title: Airship 태그 연결
 description: Airship 내에서 타깃팅할 대상 태그로 Adobe 고객 데이터를 Airship으로 원활하게 전달할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '1196'
+source-wordcount: '1193'
 ht-degree: 1%
 
 ---
@@ -99,7 +99,7 @@ Adobe Experience Platform의 세그먼트 개념은 Airship의 [Tags](https://do
 
 **[!UICONTROL 인증]** 단계에서 활성화 과정에 대해 **[!UICONTROL 이름]** 및 **[!UICONTROL 설명]**&#x200B;을 입력합니다.
 
-또한 이 단계에서는 이 대상에 적용되는 [!DNL Airship] 데이터 센터에 따라 미국 또는 EU 데이터 센터를 선택할 수 있습니다. 마지막으로 대상으로 데이터를 내보낼 마케팅 사용 사례를 하나 이상 선택합니다. Adobe에서 정의한 마케팅 사용 사례에서 선택하거나 직접 만들 수 있습니다. 마케팅 사용 사례에 대한 자세한 내용은 [데이터 사용 정책 개요](../../../data-governance/policies/overview.md)를 참조하십시오.
+또한 이 단계에서는 이 대상에 적용되는 [!DNL Airship] 데이터 센터에 따라 미국 또는 EU 데이터 센터를 선택할 수 있습니다. 마지막으로 데이터를 대상으로 내보낼 **[!UICONTROL 마케팅 작업]** 중 하나 이상을 선택합니다. Adobe 정의 마케팅 작업 중에서 선택하거나 직접 만들 수 있습니다. 마케팅 작업에 대한 자세한 내용은 [데이터 사용 정책 개요](../../../data-governance/policies/overview.md)를 참조하십시오.
 
 위의 필드를 채운 후 **[!UICONTROL 대상 만들기]**&#x200B;를 선택합니다.
 
