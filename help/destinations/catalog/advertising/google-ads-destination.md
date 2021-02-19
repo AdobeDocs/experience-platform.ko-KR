@@ -3,9 +3,9 @@ keywords: Google 광고;google 광고;google 광고;Google 애드워즈;Google �
 title: Google 광고 연결
 description: 이전에 Google AdWords로 알려졌던 Google Ads는 기업에서 텍스트 기반 검색, 그래픽 디스플레이, YouTube 비디오 및 인앱 모바일 디스플레이에 걸쳐 클릭당 광고를 지불하는 온라인 광고 서비스입니다.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '659'
+source-wordcount: '654'
 ht-degree: 0%
 
 ---
@@ -48,8 +48,8 @@ ht-degree: 0%
 
 플랫폼에서 [!DNL Google Ads] 대상을 만들기 전에 허용되는 데이터 공급자 목록에 Adobe을 배치하고 허용 목록에 계정을 추가하려면 [!DNL Google]에 문의해야 합니다. [!DNL Google]에 연락하여 다음 정보를 제공합니다.
 
-* **계정 ID** :adobe 계정 ID입니다 [!DNL Google]. 이 ID를 얻으려면 Adobe 고객 지원 센터 또는 Adobe 담당자에게 문의하십시오.
-* **고객 ID** :adobe의 고객 계정 ID입니다 [!DNL Google]. 이 ID를 얻으려면 Adobe 고객 지원 센터 또는 Adobe 담당자에게 문의하십시오.
+* **계정 ID** :Adobe 계정 ID입니다 [!DNL Google]. 이 ID를 얻으려면 Adobe 고객 지원 센터 또는 Adobe 담당자에게 문의하십시오.
+* **고객 ID** :Adobe의 고객 계정 ID입니다 [!DNL Google]. 이 ID를 얻으려면 Adobe 고객 지원 센터 또는 Adobe 담당자에게 문의하십시오.
 * 계정 유형:**AdWords**
 * **Google AdWords ID** :ID입니다 [!DNL Google]. ID 형식은 일반적으로 123-456-7890.
 
@@ -71,7 +71,7 @@ ht-degree: 0%
 * **[!UICONTROL 설명]**:선택 사항. 예를 들어 이 대상을 사용하는 캠페인을 언급할 수 있습니다.
 * **[!UICONTROL 계정 유형]**:AdWords만 사용할 수 있습니다.
 * **[!UICONTROL 계정 ID]**:계정 ID를 다음으로 입력합니다 [!DNL Google Ads]. ID 형식은 일반적으로 123-456-7890.
-* **[!UICONTROL 마케팅 활용 사례]**:마케팅 사용 사례는 데이터를 대상에 내보내려는 의도를 나타냅니다. Adobe에서 정의한 마케팅 사용 사례 중에서 선택하거나 자신의 마케팅 사용 사례를 만들 수 있습니다. 마케팅 사용 사례에 대한 자세한 내용은 [데이터 사용 정책 개요](../../../data-governance/policies/overview.md)를 참조하십시오.
+* **[!UICONTROL 마케팅 작업]**:마케팅 작업은 데이터를 대상에 내보내려는 의도를 나타냅니다. Adobe 정의 마케팅 작업 중에서 선택하거나 자신의 마케팅 작업을 만들 수 있습니다. 마케팅 작업에 대한 자세한 내용은 [데이터 사용 정책 개요](../../../data-governance/policies/overview.md)를 참조하십시오.
 
 ## 세그먼트를 [!DNL Google Ads]에 활성화
 
