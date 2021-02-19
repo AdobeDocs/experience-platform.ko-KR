@@ -3,9 +3,9 @@ keywords: 스트리밍;
 title: HTTP 연결
 description: Adobe Experience Platform의 HTTP 대상을 사용하면 프로필 데이터를 타사 HTTP 끝점으로 보낼 수 있습니다.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 5435661d750c4138ea6a2d40619a48236b7b1e4f
 workflow-type: tm+mt
-source-wordcount: '487'
+source-wordcount: '542'
 ht-degree: 2%
 
 ---
@@ -58,6 +58,7 @@ ht-degree: 2%
 - **[!UICONTROL 이름]**:나중에 이 대상을 인식할 이름을 입력합니다.
 - **[!UICONTROL 설명]**:나중에 이 대상을 식별하는 데 도움이 되는 설명을 입력합니다.
 - **[!UICONTROL 사용자 지정 머리글]**:다음 형식을 따라 대상 호출에 포함할 사용자 지정 헤더를 입력합니다. `header1:value1,header2:value2,...headerN:valueN`.
+- **[!UICONTROL 마케팅 작업]**:마케팅 작업은 데이터를 대상에 내보내려는 의도를 나타냅니다. Adobe 정의 마케팅 작업 중에서 선택하거나 자신의 마케팅 작업을 만들 수 있습니다. 마케팅 작업에 대한 자세한 내용은 Adobe Experience Platform](/help/data-governance/policies/overview.md) 페이지의 [데이터 거버넌스 페이지를 참조하십시오. 개별 Adobe 정의 마케팅 작업에 대한 자세한 내용은 [데이터 사용 정책 개요](/help/data-governance/policies/overview.md)를 참조하십시오.
 
 >[!IMPORTANT]
 >
@@ -65,7 +66,7 @@ ht-degree: 2%
 
 ![HTTP 인증](../assets/catalog/http/authenticate.png)
 
-**[!UICONTROL 마케팅 활용 사례]**:마케팅 사용 사례는 데이터를 대상에 내보내려는 의도를 나타냅니다. Adobe에서 정의한 마케팅 사용 사례 중에서 선택하거나 자신의 마케팅 사용 사례를 만들 수 있습니다. 마케팅 사용 사례에 대한 자세한 내용은 [데이터 사용 정책 개요](../../data-governance/policies/overview.md)를 참조하십시오.
+**[!UICONTROL 마케팅 작업]**:마케팅 작업은 데이터를 대상에 내보내려는 의도를 나타냅니다. Adobe 정의 마케팅 작업 중에서 선택하거나 자신의 마케팅 작업을 만들 수 있습니다. 마케팅 작업에 대한 자세한 내용은 [데이터 사용 정책 개요](../../data-governance/policies/overview.md)를 참조하십시오.
 
 **[!UICONTROL 대상 만들기]**&#x200B;를 클릭합니다.
 
