@@ -3,9 +3,9 @@ keywords: google 고객 일치;Google 고객 일치;Google 고객 일치
 title: Google 고객 일치 연결
 description: Google Customer Match를 사용하면 온라인 및 오프라인 데이터를 사용하여 검색, 쇼핑, Gmail, YouTube 등 Google의 소유물 및 운영 체제에서 고객에게 도달하고 다시 참여할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: ef0f7e20a55804c013756e261818c2ee2df4d103
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '1498'
+source-wordcount: '1491'
 ht-degree: 0%
 
 ---
@@ -129,13 +129,13 @@ Attribute source data is not automatically hashed. When your source field contai
 
 **[!UICONTROL 인증]** 단계에서 활성화 플로우에 [!UICONTROL 이름] 및 [!UICONTROL 설명]을 입력하고 Google에 [!UICONTROL 계정 ID]을 입력합니다.
 
-또한 이 단계에서는 이 대상에 적용할 **[!UICONTROL 마케팅 사용 사례]**&#x200B;를 선택할 수 있습니다. 마케팅 사용 사례는 데이터를 대상에 내보내려는 의도를 나타냅니다. Adobe에서 정의한 마케팅 사용 사례 중에서 선택하거나 자신의 마케팅 사용 사례를 만들 수 있습니다. 마케팅 사용 사례에 대한 자세한 내용은 [실시간 CDP의 데이터 거버넌스](../../../rtcdp/privacy/data-governance-overview.md#destinations) 페이지를 참조하십시오. 개별 Adobe 정의 마케팅 사용 사례에 대한 자세한 내용은 [데이터 사용 정책 개요](../../../data-governance/policies/overview.md#core-actions)를 참조하십시오.
+또한 이 단계에서 이 대상에 적용할 **[!UICONTROL 마케팅 작업]**&#x200B;을 선택할 수 있습니다. 마케팅 작업은 데이터를 대상에 내보내려는 의도를 나타냅니다. Adobe 정의 마케팅 작업 중에서 선택하거나 자신의 마케팅 작업을 만들 수 있습니다. 마케팅 작업에 대한 자세한 내용은 [실시간 CDP의 데이터 거버넌스](../../../rtcdp/privacy/data-governance-overview.md#destinations) 페이지를 참조하십시오. 개별 Adobe 정의 마케팅 작업에 대한 자세한 내용은 [데이터 사용 정책 개요](../../../data-governance/policies/overview.md#core-actions)를 참조하십시오.
 
 위의 필드를 채운 후 **[!UICONTROL 대상 만들기]**&#x200B;를 선택합니다.
 
 >[!IMPORTANT]
 >
-> * **[!UICONTROL PII]** 마케팅 사용 사례와 결합은 기본적으로 [!DNL Google Customer Match] 대상에 대해 선택되어 있으며 제거할 수 없습니다.
+> * **[!UICONTROL PII]**&#x200B;와 결합 마케팅 작업은 기본적으로 [!DNL Google Customer Match] 대상에 대해 선택되어 있으며 제거할 수 없습니다.
 > * [!DNL Google Customer Match] 대상의 경우. **[!UICONTROL 계정]** ID는 Google의 고객 클라이언트 ID입니다. ID의 형식은 xxx-xxx-xxxx입니다.
 
 
