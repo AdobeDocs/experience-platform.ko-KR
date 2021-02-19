@@ -3,9 +3,9 @@ keywords: 광고;무역센터
 title: 무역센터 연결
 description: 'Trade Desk는 광고 구매자가 디스플레이, 비디오 및 모바일 인벤토리 소스에서 타겟팅된 디지털 캠페인을 리타겟팅하고 실행할 수 있는 셀프 서비스 플랫폼입니다. '
 translation-type: tm+mt
-source-git-commit: ad025630cbae5c220f5bbd7f55cad70620b6f335
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '540'
+source-wordcount: '534'
 ht-degree: 0%
 
 ---
@@ -59,7 +59,7 @@ ht-degree: 0%
    * **[!UICONTROL 북미 서부]**
    * **[!UICONTROL 라틴 아메리카]**
 
-* **[!UICONTROL 마케팅 활용 사례]**:마케팅 사용 사례는 데이터를 대상에 내보내려는 의도를 나타냅니다. Adobe에서 정의한 마케팅 사용 사례 중에서 선택하거나 자신의 마케팅 사용 사례를 만들 수 있습니다. 마케팅 사용 사례에 대한 자세한 내용은 Adobe Experience Platform](../../../data-governance/policies/overview.md) 페이지의 [데이터 거버넌스 페이지를 참조하십시오. 개별 Adobe 정의 마케팅 사용 사례에 대한 자세한 내용은 [데이터 사용 정책 개요](../../../data-governance/policies/overview.md)를 참조하십시오.
+* **[!UICONTROL 마케팅 작업]**:마케팅 작업은 데이터를 대상에 내보내려는 의도를 나타냅니다. Adobe 정의 마케팅 작업 중에서 선택하거나 자신의 마케팅 작업을 만들 수 있습니다. 마케팅 작업에 대한 자세한 내용은 Adobe Experience Platform](../../../data-governance/policies/overview.md) 페이지의 [데이터 거버넌스 페이지를 참조하십시오. 개별 Adobe 정의 마케팅 작업에 대한 자세한 내용은 [데이터 사용 정책 개요](../../../data-governance/policies/overview.md)를 참조하십시오.
 
 ![영업 데스크 인증 단계](../../assets/catalog/advertising/tradedesk/authenticate.png)
 
