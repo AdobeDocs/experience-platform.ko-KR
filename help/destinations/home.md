@@ -3,11 +3,11 @@ keywords: 대상;adobe experience platform;platform;destinations overview;activa
 title: 대상 개요
 seo-title: 대상 개요
 description: 크로스 채널 마케팅 캠페인, 이메일, 타깃팅된 광고 등을 위해 Adobe Experience Platform 데이터를 대상으로 활성화하는 방법을 알아봅니다.
-seo-description: 대상은 대상 플랫폼과의 사전 구축된 통합으로, Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있습니다. Adobe Experience Platform의 대상을 사용하여 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타깃팅된 광고 및 기타 많은 사용 사례에서 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
+seo-description: 대상은 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과의 사전 구축된 통합입니다. Adobe Experience Platform의 대상을 사용하여 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타깃팅된 광고 및 기타 많은 사용 사례에서 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 2efdefc69c937c70f6a463113a73ca71d8998e14
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '493'
+source-wordcount: '489'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 ![대상 개요 배너](./assets/overview/destinations-overview-banner.png)
 
-**[!DNL Destinations]** adobe experience platform의 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과의 사전 구축된 통합입니다. 대상을 사용하여 크로스채널 마케팅 캠페인, 이메일 캠페인, 타깃팅된 광고 및 기타 여러 가지 사용 사례에 대해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
+**[!DNL Destinations]** Adobe Experience Platform의 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과의 사전 구축된 통합입니다. 대상을 사용하여 크로스채널 마케팅 캠페인, 이메일 캠페인, 타깃팅된 광고 및 기타 여러 가지 사용 사례에 대해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 
 ## 대상 및 소스 {#destinations-and-sources}
 
@@ -53,12 +53,12 @@ ht-degree: 1%
 
 데이터 거버넌스는 다음을 통해 플랫폼 대상에 적용됩니다.
 
-* *대상* 만들기 워크플로우에서 선택할 수 있는 마케팅 사용 사례;
-* *특정* 사용 레이블이 들어 있는 데이터를 특정 마케팅 사용 사례가 있는 대상으로 활성화하지 않는 데이터 사용 정책입니다.
+* *대상* 만들기 워크플로우에서 선택할 수 있는 마케팅 동작;
+* *특정* 사용 레이블이 들어 있는 데이터를 특정 마케팅 활동이 있는 대상으로 활성화하지 않는 데이터 사용 정책입니다.
 
-[마케팅 사용 사례](../data-governance/policies/overview.md) 및 [데이터 정책 위반 해결](../data-governance/enforcement/auto-enforcement.md)에 대한 자세한 내용은 플랫폼 설명서의 [!DNL Data Governance]을 참조하십시오.
+[마케팅 작업](../data-governance/policies/overview.md) 및 [데이터 정책 위반 해결](../data-governance/enforcement/auto-enforcement.md)에 대한 자세한 내용은 플랫폼 설명서의 [!DNL Data Governance]을 참조하십시오.
 
-대상 만들기 워크플로우에서 마케팅 사용 사례를 선택하는 방법에 대한 자세한 내용은 플랫폼의 다양한 대상 유형에 대한 다음 페이지를 참조하십시오.
+대상 만들기 워크플로우에서 마케팅 작업을 선택하는 방법에 대한 자세한 내용은 플랫폼의 다양한 대상 유형에 대한 다음 페이지를 참조하십시오.
 
 * [광고 대상 - Google 광고 관리자  ](./catalog/advertising/google-ad-manager.md)
 * [광고 대상 - Google 광고](./catalog/advertising/google-ads-destination.md)
