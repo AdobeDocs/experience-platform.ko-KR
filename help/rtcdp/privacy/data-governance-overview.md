@@ -1,13 +1,13 @@
 ---
-keywords: data governance rtcdp;rtcdp data governance;real time customer data profile data governance
+keywords: 데이터 거버넌스 rtcdp;rtcdp 데이터 거버넌스;실시간 고객 데이터 프로파일 데이터 거버넌스
 title: 데이터 거버넌스 개요
 seo-title: 실시간 고객 데이터 플랫폼의 데이터 거버넌스
 description: '데이터 거버넌스를 사용하면 고객 데이터를 관리하고 데이터 사용에 적용되는 규정, 제한 사항 및 정책을 준수할 수 있습니다. '
 seo-description: '데이터 거버넌스를 사용하면 고객 데이터를 관리하고 데이터 사용에 적용되는 규정, 제한 사항 및 정책을 준수할 수 있습니다. '
 translation-type: tm+mt
-source-git-commit: e680191d495e4c33baa8242d40a15b9124eec8cd
+source-git-commit: 5435661d750c4138ea6a2d40619a48236b7b1e4f
 workflow-type: tm+mt
-source-wordcount: '694'
+source-wordcount: '701'
 ht-degree: 0%
 
 ---
@@ -31,17 +31,17 @@ Adobe Experience Platform [!DNL Data Governance]을 사용하면 고객 데이�
 
 데이터 사용 레이블 작업에 대한 자세한 내용은 Adobe Experience Platform용 [데이터 사용 레이블 사용자 안내서](../../data-governance/labels/overview.md)를 참조하십시오.
 
-## 대상 {#destinations}에 대한 마케팅 사용 사례 구성
+## 대상 {#destinations}에 대한 마케팅 작업 구성
 
-대상에 대한 마케팅 사용 사례(마케팅 작업이라고도 함)를 정의하여 대상에 대한 데이터 사용 제한을 설정할 수 있습니다. 대상에 대한 마케팅 사용 사례는 해당 대상으로 내보낼 데이터의 의도를 나타냅니다.
+대상에 대한 마케팅 작업(마케팅 사용 사례라고도 함)을 정의하여 대상에 대한 데이터 사용 제한을 설정할 수 있습니다. 대상에 대한 마케팅 작업은 해당 대상으로 내보낼 데이터의 의도를 나타냅니다.
 
 >[!NOTE]
 >
 >마케팅 작업 및 데이터 사용 정책에 대한 자세한 내용은 [!DNL Experience Platform] 설명서의 [데이터 사용 정책 개요](../../data-governance/policies/overview.md)를 참조하십시오.
 
-대상에 대한 마케팅 사용 사례를 정의하면 해당 대상으로 전송된 프로파일 또는 세그먼트가 데이터 사용 정책을 준수하도록 할 수 있습니다. 따라서 활성화 정책에 대한 제한을 시행해야 하는 조직의 요구 사항에 따라 해당 마케팅 활용 사례를 대상에 추가해야 합니다.
+대상에 대한 마케팅 작업을 정의하면 해당 대상으로 전송된 프로파일 또는 세그먼트가 데이터 사용 정책을 준수하도록 할 수 있습니다. 따라서 활성화 정책에 대한 제한을 시행해야 하는 조직의 요구를 기반으로 적절한 마케팅 활동을 대상에 추가해야 합니다.
 
-마케팅 사용 사례는 처음 대상을 설정할 때만 선택할 수 있습니다. 작업 중인 대상 유형에 따라, 마케팅 사용 사례를 구성할 기회가 설정 워크플로우의 다른 지점에 나타납니다. 특정 대상을 구성하는 방법에 대한 단계는 [대상 설명서](../destinations/overview.md)를 참조하십시오.
+처음 대상을 설정할 때만 마케팅 작업을 선택할 수 있습니다. 작업 중인 대상 유형에 따라 마케팅 작업을 구성할 기회가 설정 워크플로우의 다른 지점에 나타납니다. 특정 대상을 구성하는 방법에 대한 단계는 [대상 설명서](../destinations/overview.md)를 참조하십시오.
 
 ## 데이터 사용 정책 관리 {#policies}
 
