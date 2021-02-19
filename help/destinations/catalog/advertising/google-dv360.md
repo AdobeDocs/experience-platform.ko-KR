@@ -3,9 +3,9 @@ keywords: DoubleClick 입찰 관리자;DoubleClick 입찰 관리자;DoubleClick;
 title: Google 디스플레이 및 비디오 360 연결
 description: 디스플레이 및 비디오 360(이전 DoubleClick 입찰 관리자)은 디스플레이, 비디오 및 모바일 인벤토리 소스에서 리타겟팅된 디지털 캠페인 및 대상 타깃팅을 실행하는 데 사용되는 도구입니다.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '710'
+source-wordcount: '704'
 ht-degree: 0%
 
 ---
@@ -56,7 +56,7 @@ Platform에서 [!DNL Google Display & Video 360] 대상을 만들기 전에 Goog
 >
 >이 대상과의 연결이 이미 있는 경우 대상 카드에 **[!UICONTROL 활성화]** 단추가 표시될 수 있습니다. [!UICONTROL 활성화]와 [!UICONTROL 구성]의 차이에 대한 자세한 내용은 대상 작업 공간 설명서의 [카탈로그](../../ui/destinations-workspace.md#catalog) 섹션을 참조하십시오.
 
-대상 만들기 작업 과정의 **설정** 단계에서 대상에 대한 [!UICONTROL 기본 정보]와 이 대상에 적용할 마케팅 사용 사례를 채웁니다.
+대상 만들기 작업 과정의 **설정** 단계에서 대상에 대한 [!UICONTROL 기본 정보]와 이 대상에 적용할 마케팅 작업을 입력합니다.
 
 ![기본 정보 Google Display &amp; Video 360](../../assets/catalog/advertising/google-dv360/setup.png)
 
@@ -66,7 +66,7 @@ Platform에서 [!DNL Google Display & Video 360] 대상을 만들기 전에 Goog
    * 디스플레이 및 비디오 360 계정에서 특정 브랜드에만 대상을 공유할 수 있도록 하려면 `Invite Advertiser`을 사용합니다.
    * 디스플레이 및 비디오 360 계정의 모든 브랜드에 대상을 공유할 수 있도록 하려면 `Invite Partner`을 사용합니다.
 * **[!UICONTROL 계정 ID]**:Google로  **[!DNL Invite partner]** 또는  **[!DNL Invite advertiser]** 계정 ID를 입력합니다. 일반적으로 6자리 또는 7자리 ID입니다.
-* **[!UICONTROL 마케팅 활용 사례]**:마케팅 사용 사례는 데이터를 대상에 내보내려는 의도를 나타냅니다. Adobe에서 정의한 마케팅 사용 사례 중에서 선택하거나 자신의 마케팅 사용 사례를 만들 수 있습니다. 마케팅 사용 사례에 대한 자세한 내용은 [데이터 사용 정책 개요](../../../data-governance/policies/overview.md)를 참조하십시오.
+* **[!UICONTROL 마케팅 작업]**:마케팅 작업은 데이터를 대상에 내보내려는 의도를 나타냅니다. Adobe 정의 마케팅 작업 중에서 선택하거나 자신의 마케팅 작업을 만들 수 있습니다. 마케팅 작업에 대한 자세한 내용은 [데이터 사용 정책 개요](../../../data-governance/policies/overview.md)를 참조하십시오.
 
 >[!NOTE]
 >
