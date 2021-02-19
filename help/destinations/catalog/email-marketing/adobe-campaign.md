@@ -3,9 +3,9 @@ keywords: 이메일;이메일;이메일;이메일 대상;adobe campaign;campaign
 title: Adobe Campaign 연결
 description: Adobe Campaign은 온라인과 오프라인 등 모든 채널에서 캠페인을 개인화하고 전달할 수 있는 솔루션 집합입니다.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '653'
+source-wordcount: '713'
 ht-degree: 0%
 
 ---
@@ -47,6 +47,7 @@ Connect 대상 작업 과정에서 저장소 위치에 대한 **[!UICONTROL 연�
 - **[!UICONTROL 폴더 경로]**:Platform에서 내보내기 데이터를 CSV 또는 탭으로 구분된 파일로 저장할 스토리지 위치에 경로를 제공합니다.
 - **[!UICONTROL 컨테이너]**: *Blob 연결의 경우*. 폴더 경로가 있는 Blob가 들어 있는 컨테이너입니다.
 - **[!UICONTROL 파일 형식]**: **CSV** 또는  **TAB_DIPORTED**. 저장소 위치로 내보낼 파일 형식을 선택합니다.
+- **[!UICONTROL 마케팅 작업]**:마케팅 작업은 데이터를 대상에 내보내려는 의도를 나타냅니다. Adobe 정의 마케팅 작업 중에서 선택하거나 자신의 마케팅 작업을 만들 수 있습니다. 마케팅 작업에 대한 자세한 내용은 Adobe Experience Platform](../../../data-governance/policies/overview.md) 페이지의 [데이터 거버넌스 페이지를 참조하십시오. 개별 Adobe 정의 마케팅 작업에 대한 자세한 내용은 [데이터 사용 정책 개요](../../../data-governance/policies/overview.md)를 참조하십시오.
 
 ![캠페인 기본 정보](../../assets/catalog/email-marketing/adobe-campaign/basic-information.png)
 
