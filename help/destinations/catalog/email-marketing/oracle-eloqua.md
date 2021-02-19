@@ -3,9 +3,9 @@ keywords: 이메일;이메일;이메일;이메일 대상;oracle 언변;oracle
 title: Oracle 언변 연결
 description: Oracle Fura는 B2B 마케터 및 조직이 마케팅 캠페인과 영업 리드 생성을 관리하는 데 도움이 되는 Oracle이 제공하는 마케팅 자동화를 위한 서비스(SaaS) 플랫폼입니다.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '520'
+source-wordcount: '628'
 ht-degree: 0%
 
 ---
@@ -37,8 +37,10 @@ ht-degree: 0%
 **[!UICONTROL 설정]** 단계에서 아래 표시된 대로 대상에 대한 관련 정보를 입력합니다.
 - **[!UICONTROL 이름]**:대상의 관련 이름을 선택합니다.
 - **[!UICONTROL 설명]**:대상에 대한 설명을 입력합니다.
+- **[!UICONTROL 버킷 이름]**:Amazon S3 버킷으로, Platform은 데이터 내보내기를 저장합니다. 입력은 3-63자 사이여야 합니다. 문자 또는 숫자로 시작하고 끝나야 합니다. 소문자, 숫자 또는 하이픈( - )만 포함해야 합니다. IP 주소(예: 192.100.1.1)으로 형식을 지정할 수 없습니다.
 - **[!UICONTROL 폴더 경로]**:Platform에서 내보내기 데이터를 CSV 또는 탭으로 구분된 파일로 저장할 스토리지 위치에 경로를 제공합니다.
 - **[!UICONTROL 파일 형식]**: **CSV** 또는  **TAB_DIPORTED**. 저장소 위치로 내보낼 파일 형식을 선택합니다.
+- **[!UICONTROL 마케팅 작업]**:마케팅 작업은 데이터를 대상에 내보내려는 의도를 나타냅니다. Adobe 정의 마케팅 작업 중에서 선택하거나 자신의 마케팅 작업을 만들 수 있습니다. 마케팅 작업에 대한 자세한 내용은 Adobe Experience Platform](../../../data-governance/policies/overview.md) 페이지의 [데이터 거버넌스 페이지를 참조하십시오. 개별 Adobe 정의 마케팅 작업에 대한 자세한 내용은 [데이터 사용 정책 개요](../../../data-governance/policies/overview.md)를 참조하십시오.
 
 ![웅변가 기본 정보](../../assets/catalog/email-marketing/oracle-eloqua/basic-information.png)
 
