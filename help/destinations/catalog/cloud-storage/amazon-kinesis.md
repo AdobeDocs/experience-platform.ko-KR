@@ -3,9 +3,9 @@ keywords: Amazon Kinesis;kinesis destination;kinesis
 title: Amazon Kinesis 연결
 description: Amazon Kinesis 스토리지에 대한 실시간 아웃바운드 연결을 생성하여 Adobe Experience Platform의 데이터를 스트리밍합니다.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '450'
+source-wordcount: '510'
 ht-degree: 2%
 
 ---
@@ -55,6 +55,7 @@ Adobe Experience Platform의 데이터를 스트리밍하기 위해 [!DNL Amazon
 * **이름**:연결 대상 이름 입력  [!DNL Amazon Kinesis]
 * **설명**:연결에 대한 설명을 제공합니다 [!DNL Amazon Kinesis].
 * **스트림**:계정에 있는 기존 데이터 스트림의 이름을  [!DNL Amazon Kinesis] 제공합니다. 플랫폼이 데이터를 이 스트림으로 내보냅니다.
+* **[!UICONTROL 마케팅 작업]**:마케팅 작업은 데이터를 대상에 내보내려는 의도를 나타냅니다. Adobe 정의 마케팅 작업 중에서 선택하거나 자신의 마케팅 작업을 만들 수 있습니다. 마케팅 작업에 대한 자세한 내용은 Adobe Experience Platform](../../../data-governance/policies/overview.md) 페이지의 [데이터 거버넌스 페이지를 참조하십시오. 개별 Adobe 정의 마케팅 작업에 대한 자세한 내용은 [데이터 사용 정책 개요](../../../data-governance/policies/overview.md)를 참조하십시오.
 
 ![인증 단계의 입력 필드](../../assets/catalog/cloud-storage/amazon-kinesis/setup.png)
 
