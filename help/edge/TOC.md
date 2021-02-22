@@ -6,10 +6,10 @@ user-guide-title: Adobe Experience Platform Web SDK 도움말
 breadcrumb-title: Web SDK 안내서
 user-guide-description: Edge 네트워크를 통해 Experience Cloud 서비스와 상호 작용할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 85bb984231a3069aad0c63707f5024612181798c
 workflow-type: tm+mt
-source-wordcount: '142'
-ht-degree: 34%
+source-wordcount: '145'
+ht-degree: 33%
 
 ---
 
@@ -26,6 +26,7 @@ ht-degree: 34%
    * [이벤트 추적](fundamentals/tracking-events.md)
    * [디버깅](fundamentals/debugging.md)
    * [이벤트 데이터 병합](fundamentals/merging-event-data.md)
+   * [CSP 구성](fundamentals/configuring-a-csp.md)
    * [여러 속성과 상호 작용](fundamentals/interacting-with-multiple-properties.md)
 * ID {#identity}
    * [개요](identity/overview.md)
