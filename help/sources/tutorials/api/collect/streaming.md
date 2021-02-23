@@ -2,13 +2,13 @@
 keywords: Experience Platform;홈;인기 항목;클라우드 저장소 데이터;스트리밍 데이터;스트리밍 데이터;;home;popular topics;cloud storage data;streaming data;streaming
 solution: Experience Platform
 title: 소스 커넥터 및 API를 사용하여 스트리밍 데이터 수집
-topic: overview
-type: Tutorial
+topic: 개요
+type: 자습서
 description: 이 자습서에서는 소스 커넥터 및 API를 사용하여 스트리밍 데이터를 검색하고 플랫폼에 가져오는 절차를 다룹니다.
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: b8f7f6e7f110dc9ebd025cd594fd1a54126ccdf3
 workflow-type: tm+mt
-source-wordcount: '1303'
+source-wordcount: '1305'
 ht-degree: 2%
 
 ---
@@ -26,7 +26,8 @@ ht-degree: 2%
 
 - [[!DNL Amazon Kinesis]](../create/cloud-storage/kinesis.md)
 - [[!DNL Azure Event Hubs]](../create/cloud-storage/eventhub.md)
-- [[!DNL HTTP API]](../../../../ingestion/tutorials/create-streaming-connection.md)
+- [[!DNL HTTP API]](../create/streaming/http.md)
+- [[!DNL Google PubSub]](../create/cloud-storage/google-pubsub.md)
 
 또한 이 자습서에서는 Adobe Experience Platform의 다음 구성 요소에 대해 자세히 알아야 합니다.
 
