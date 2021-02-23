@@ -2,12 +2,12 @@
 keywords: Experience Platform;홈;인기 항목;클라우드 저장소;Cloud storage;home;popular topics;cloud storage
 solution: Experience Platform
 title: Flow Service API를 사용하여 클라우드 스토리지 시스템 탐색
-topic: overview
+topic: 개요
 description: 이 자습서에서는 Flow Service API를 사용하여 타사 클라우드 스토리지 시스템을 탐색합니다.
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 60a70352c2e13565fd3e8c44ae68e011a1d443a6
 workflow-type: tm+mt
-source-wordcount: '758'
+source-wordcount: '742'
 ht-degree: 2%
 
 ---
@@ -30,14 +30,15 @@ ht-degree: 2%
 
 [!DNL Platform] API를 사용하여 타사 클라우드 스토리지를 탐색하려면 유효한 연결 ID를 보유해야 합니다. 작업할 저장소에 대한 연결이 아직 없는 경우 다음 자습서를 통해 연결을 만들 수 있습니다.
 
-* [Amazon S3](../create/cloud-storage/s3.md)
-* [Azure Blob](../create/cloud-storage/blob.md)
-* [Azure Data Lake Storage Gen2](../create/cloud-storage/adls-gen2.md)
-* [Azure 파일 저장소](../create/cloud-storage/azure-file-storage.md)
-* [FTP](../create/cloud-storage/ftp.md)
-* [Google Cloud 스토어](../create/cloud-storage/google.md)
+* [[!DNL Amazon S3]](../create/cloud-storage/s3.md)
+* [[!DNL Azure Blob]](../create/cloud-storage/blob.md)
+* [[!DNL Azure Data Lake Storage Gen2]](../create/cloud-storage/adls-gen2.md)
+* [[!DNL Azure File Storage]](../create/cloud-storage/azure-file-storage.md)
+* [[!DNL FTP]](../create/cloud-storage/ftp.md)
+* [[!DNL Google Cloud Storage]](../create/cloud-storage/google.md)
 * [HDFS](../create/cloud-storage/hdfs.md)
-* [SFTP](../create/cloud-storage/sftp.md)
+* [[!DNL Oracle Object Storage]](../create/cloud-storage/oracle-object-storage.md)
+* [[!DNL SFTP]](../create/cloud-storage/sftp.md)
 
 ### 샘플 API 호출 읽기
 
