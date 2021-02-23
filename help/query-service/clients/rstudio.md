@@ -5,10 +5,10 @@ title: 오디오를 쿼리 서비스에 연결
 topic: connect
 description: 이 문서에서는 Adobe Experience Platform 쿼리 서비스와 R Studio를 연결하는 단계를 안내합니다.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: f1b2fd7efd43f317a85c831cd64c09be29688f7a
 workflow-type: tm+mt
-source-wordcount: '282'
-ht-degree: 2%
+source-wordcount: '368'
+ht-degree: 0%
 
 ---
 
@@ -20,39 +20,40 @@ ht-degree: 2%
 >[!NOTE]
 >
 > 이 안내서에서는 사용자가 이미 [!DNL RStudio]에 액세스할 수 있으며 이 기능을 사용하는 방법에 익숙하다고 가정합니다. [!DNL RStudio]에 대한 자세한 내용은 [공식 [!DNL RStudio] 설명서](https://rstudio.com/products/rstudio/)에서 확인할 수 있습니다.
+> 
+> 또한 쿼리 서비스에서 RStudio를 사용하려면 PostgreSQL JDBC 4.2 드라이버를 설치해야 합니다. [PostgreSQL 공식 사이트](https://jdbc.postgresql.org/download.html)에서 JDBC 드라이버를 다운로드할 수 있습니다.
 
 ## [!DNL RStudio] 인터페이스에서 [!DNL Query Service] 연결 만들기
 
-[!DNL RStudio]을 설치한 후 나타나는 **[!DNL Console]** 화면에서 먼저 [!DNL PostgreSQL]를 사용하도록 R 스크립트를 준비해야 합니다.
+[!DNL RStudio]을(를) 설치한 후 RJDBC 패키지를 설치해야 합니다. **[!DNL Packages]** 창으로 이동하여 **[!DNL Install]**&#x200B;을 선택합니다.
 
-```r
-install.packages("RPostgreSQL")
-install.packages("rstudioapi")
-require("RPostgreSQL")
-require("rstudioapi")
+![](../images/clients/rstudio/install-package.png)
+
+**[!DNL Install Packages]** 화면이 표시된 팝업이 나타납니다. **[!DNL Install from]** 섹션에 대해 **[!DNL Repository (CRAN)]**&#x200B;이(가) 선택되어 있는지 확인합니다. **[!DNL Packages]**&#x200B;의 값은 `RJDBC`이어야 합니다. **[!DNL Install dependencies]**&#x200B;이(가) 선택되었는지 확인합니다. 모든 값이 올바른지 확인한 후 **[!DNL Install]**&#x200B;을 선택하여 패키지를 설치합니다.
+
+![](../images/clients/rstudio/install-jrdbc.png)
+
+이제 RJDBC 패키지가 설치되었으므로 RStuto를 다시 시작하여 설치 프로세스를 완료합니다.
+
+이제 RStudio를 다시 시작한 후 쿼리 서비스에 연결할 수 있습니다. **[!DNL Packages]** 창에서 **[!DNL RJDBC]** 패키지를 선택하고 콘솔에 다음 명령을 입력합니다.
+
+```console
+pgsql <- JDBC("org.postgresql.Driver", "{PATH TO THE POSTGRESQL JDBC JAR}", "`")
 ```
 
-[!DNL PostgreSQL]을 사용하도록 R 스크립트를 준비했으면 [!DNL PostgreSQL] 드라이버를 로드하여 [!DNL RStudio]을 [!DNL Query Service]에 연결할 수 있습니다.
+여기서 {PATH TO THE POSTGRESQL JDBC JAR}은 컴퓨터에 설치된 PostgreSQL JDBC JAR의 경로를 나타냅니다.
 
-```r
-drv <- dbDriver("PostgreSQL")
-con <- dbConnect(drv, 
- dbname = "{DATABASE_NAME}",
- host="{HOST_NUMBER}",
- port={PORT_NUMBER},
- user="{USERNAME}",
- password="{PASSWORD}")
+이제 콘솔에서 다음 명령을 입력하여 쿼리 서비스에 대한 연결을 만들 수 있습니다.
+
+```console
+qsconnection <- dbConnect(pgsql, "jdbc:postgresql://{HOSTNAME}:{PORT}/{DATABASE_NAME}?user={USERNAME}&password={PASSWORD}&sslmode=require")
 ```
-
-| 속성 | 설명 |
-| -------- | ----------- |
-| `{DATABASE_NAME}` | 사용할 데이터베이스의 이름입니다. |
-| `{HOST_NUMBER` 및 `{PORT_NUMBER}` | 쿼리 서비스에 대한 호스트 끝점과 포트입니다. |
-| `{USERNAME}` 및 `{PASSWORD}` | 사용할 로그인 자격 증명입니다. 사용자 이름은 `ORG_ID@AdobeOrg` 형식을 사용합니다. |
 
 >[!NOTE]
 >
 >데이터베이스 이름, 호스트, 포트 및 로그인 자격 증명을 찾는 방법에 대한 자세한 내용은 플랫폼](https://platform.adobe.com/query/configuration)의 [자격 증명 페이지를 참조하십시오. 자격 증명을 찾으려면 [!DNL Platform]에 로그인한 다음 **[!UICONTROL 쿼리]**&#x200B;를 선택하고 **[!UICONTROL 자격 증명]**&#x200B;을 선택합니다.
+
+![](../images/clients/rstudio/connection-rjdbc.png)
 
 ## 쿼리 쓰기
 
