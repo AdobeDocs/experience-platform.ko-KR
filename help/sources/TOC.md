@@ -5,9 +5,9 @@ user-guide-title: Adobe Experience Platform 소스 커넥터 도움말
 breadcrumb-title: Source Connectors 안내서
 user-guide-description: 다양한 소스 또는 구조에서 데이터를 수집하고 레이블을 지정하며 기존에 수집한 데이터를 향상시킬 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 17eb7b9cb715d7d8d0d7bce930ddec43259149cc
+source-git-commit: b8f7f6e7f110dc9ebd025cd594fd1a54126ccdf3
 workflow-type: tm+mt
-source-wordcount: '557'
+source-wordcount: '563'
 ht-degree: 13%
 
 ---
@@ -38,6 +38,7 @@ ht-degree: 13%
       - [Azure 파일 저장소 커넥터](connectors/cloud-storage/azure-file-storage.md)
       - [FTP 커넥터](connectors/cloud-storage/ftp.md)
       - [Google 클라우드 스토리지 커넥터](connectors/cloud-storage/google-cloud-storage.md)
+      - [Google PubSub](connectors/cloud-storage/google-pubsub.md)
       - [SFTP 커넥터](connectors/cloud-storage/sftp.md)
       - [Amazon S3 및 Azure Blob 커넥터](connectors/cloud-storage/blob-s3.md)
    - CRM {#crm}
@@ -51,7 +52,7 @@ ht-degree: 13%
       - [Azure HDInsights 커넥터의 Apache Hive](connectors/databases/hive.md)
       - [Azure HDInsights 커넥터의 Apache Spark](connectors/databases/spark.md)
       - [Azure Data Explorer 커넥터](connectors/databases/data-explorer.md)
-      - [azure synapse Analytics 커넥터](connectors/databases/synapse-analytics.md)
+      - [Azure Synapse 분석 커넥터](connectors/databases/synapse-analytics.md)
       - [Azure 테이블 저장소 커넥터](connectors/databases/ats.md)
       - [Couchbase 커넥터](connectors/databases/couchbase.md)
       - [Google BigQuery 커넥터](connectors/databases/bigquery.md)
@@ -85,6 +86,7 @@ ht-degree: 13%
          - [Azure 파일 저장소](tutorials/api/create/cloud-storage/azure-file-storage.md)
          - [FTP](tutorials/api/create/cloud-storage/ftp.md)
          - [Google 클라우드 스토리지](tutorials/api/create/cloud-storage/google.md)
+         - [Google PubSub](tutorials/api/create/cloud-storage/google-pubsub.md)
          - [SFTP](tutorials/api/create/cloud-storage/sftp.md)
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
@@ -97,7 +99,7 @@ ht-degree: 13%
          - [Azure HDInsights의 Apache Hive](tutorials/api/create/databases/hive.md)
          - [Azure HDInsights의 Apache Spark](tutorials/api/create/databases/spark.md)
          - [Azure Data Explorer](tutorials/api/create/databases/data-explorer.md)
-         - [azure synapse Analytics](tutorials/api/create/databases/synapse-analytics.md)
+         - [Azure Synapse 분석](tutorials/api/create/databases/synapse-analytics.md)
          - [Azure 테이블 저장소](tutorials/api/create/databases/ats.md)
          - [Couchbase](tutorials/api/create/databases/couchbase.md)
          - [Google BigQuery](tutorials/api/create/databases/bigquery.md)
@@ -165,6 +167,7 @@ ht-degree: 13%
          - [Azure 파일 저장소](tutorials/ui/create/cloud-storage/azure-file-storage.md)
          - [FTP](tutorials/ui/create/cloud-storage/ftp.md)
          - [Google 클라우드 스토리지](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
+         - [Google PubSub](tutorials/ui/create/cloud-storage/google-pubsub.md)
          - [SFTP](tutorials/ui/create/cloud-storage/sftp.md)
          - [Amazon S3 및 Blob](tutorials/ui/create/cloud-storage/blob-s3.md)
       - CRM {#crm}
@@ -178,7 +181,7 @@ ht-degree: 13%
          - [Azure HDInsights의 Apache Hive](tutorials/ui/create/databases/hive.md)
          - [Azure HDInsights의 Apache Spark](tutorials/ui/create/databases/spark.md)
          - [Azure Data Explorer](tutorials/ui/create/databases/data-explorer.md)
-         - [azure synapse Analytics](tutorials/ui/create/databases/synapse-analytics.md)
+         - [Azure Synapse 분석](tutorials/ui/create/databases/synapse-analytics.md)
          - [Azure 테이블 저장소](tutorials/ui/create/databases/ats.md)
          - [Couchbase](tutorials/ui/create/databases/couchbase.md)
          - [Google Big Query](tutorials/ui/create/databases/bigquery.md)
