@@ -2,12 +2,12 @@
 keywords: Experience Platform;홈;인기 항목;소스 커넥터;소스 커넥터;소스;데이터 소스;데이터 소스;데이터 소스;데이터 소스 연결
 solution: Experience Platform
 title: 소스 커넥터 개요
-topic: overview
+topic: 개요
 description: Adobe Experience Platform을 사용하면 Platform 서비스를 사용하여 수신 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 외부 소스에서 데이터를 수집할 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 등 다양한 소스의 데이터를 인제스트할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: b8f7f6e7f110dc9ebd025cd594fd1a54126ccdf3
 workflow-type: tm+mt
-source-wordcount: '940'
+source-wordcount: '942'
 ht-degree: 0%
 
 ---
@@ -56,6 +56,7 @@ Experience Platform은 제3자 광고 시스템의 데이터 인제스트 지원
 - [[!DNL Azure File Storage] 커넥터](connectors/cloud-storage/azure-file-storage.md)
 - [[!DNL FTP] 커넥터](connectors/cloud-storage/ftp.md)
 - [[!DNL Google Cloud Storage] 커넥터](connectors/cloud-storage/google-cloud-storage.md)
+- [[!DNL Google PubSub] 커넥터](connectors/cloud-storage/google-pubsub.md)
 - [[!DNL SFTP] 커넥터](connectors/cloud-storage/sftp.md)
 
 ### 고객 관계 관리(CRM)
@@ -125,7 +126,7 @@ Experience Platform은 제3자 프로토콜 시스템의 데이터 인제스트 
 
 | 권한 수준 | 설명 |
 | ---- | ----|
-| **[!UICONTROL 소스]** 보기 켜기 | [카탈로그] 탭에서 각 소스 유형의 소스에 대한 읽기 전용 액세스 권한과 [검색], [계정] 및 [데이터 흐름] 탭을 부여할 수 있습니다. |
+| **[!UICONTROL 소스]** 보기 켜기 | [카탈로그] 탭에서 각 소스 유형의 소스에 대한 읽기 전용 액세스 권한과 [탐색], [계정] 및 [데이터 흐름] 탭을 부여할 수 있습니다. |
 | **[!UICONTROL 소스]** 관리 켜기 | **[!UICONTROL 소스 보기]**&#x200B;에 포함된 함수 외에도 **[!UICONTROL 카탈로그]**&#x200B;의 **[!UICONTROL 연결 소스]** 옵션과 **[!UICONTROL 찾아보기]**&#x200B;의 **[!UICONTROL 데이터 선택]** 옵션에 대한 액세스 권한을 부여합니다. **[!UICONTROL 소스]** 관리를 사용하면 DataFlow를 활성화하거나 비활성화하고  **** 일정을 편집할 수도 있습니다. |
 | **[!UICONTROL 소스]** 보기 **[!UICONTROL 소스]** 해제 및 관리 | 소스에 대한 모든 액세스 권한을 취소합니다. |
 
