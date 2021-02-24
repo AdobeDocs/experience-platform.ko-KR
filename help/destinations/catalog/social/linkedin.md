@@ -1,9 +1,9 @@
 ---
 keywords: linkedin 연결;linkedin 연결;linkedin 대상;linkedin 대상;linkedin
-title: LinkedIn 일치된 대상 연결
+title: Linkedin 일치된 대상 연결
 description: 해시 처리된 이메일을 기반으로 고객 타깃팅, 개인화 및 억제를 위해 LinkedIn 캠페인의 프로필을 활성화합니다.
 translation-type: tm+mt
-source-git-commit: d51de1ab4b2d4e91232166657466e597093f22ef
+source-git-commit: db2e5d51a5ed07b91997df8a566272c86a7c1708
 workflow-type: tm+mt
 source-wordcount: '564'
 ht-degree: 0%
