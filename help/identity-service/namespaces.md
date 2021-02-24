@@ -2,12 +2,12 @@
 keywords: Experience Platform;홈;인기 항목;네임스페이스;네임스페이스;네임스페이스;네임스페이스;네임스페이스;네임스페이스;ID 네임스페이스;ID 네임스페이스;ID;ID;ID 서비스;ID 서비스;Identity Service
 solution: Experience Platform
 title: ID 네임스페이스 개요
-topic: overview
+topic: 개요
 description: 'ID 네임스페이스는 ID 서비스의 구성 요소이며 ID가 연관되는 컨텍스트의 지표 역할을 합니다. 예를 들어, "name@email.com" 값을 이메일 주소로 구분하거나 "443522" 값을 숫자 CRM ID로 구분할 수 있습니다. '
 translation-type: tm+mt
-source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
+source-git-commit: fc493a207e305887e798238ba6883f4934c5cba5
 workflow-type: tm+mt
-source-wordcount: '1473'
+source-wordcount: '1474'
 ht-degree: 2%
 
 ---
@@ -54,7 +54,7 @@ Experience Platform은 모든 조직에서 사용할 수 있는 몇 가지 ID �
 
 플랫폼 내의 모든 조직에서 사용할 수 있도록 다음과 같은 표준 네임스페이스가 제공됩니다.
 
-| 표시 이름 | 설명 |
+| 디스플레이 이름 | 설명 |
 | ------------ | ----------- |
 | AdCloud | Adobe AdCloud를 나타내는 네임스페이스입니다. |
 | Adobe Analytics(기존 ID) | Adobe Analytics을 나타내는 네임스페이스입니다. 자세한 내용은 [Adobe Analytics 네임스페이스](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-namespaces.html?lang=en#namespaces)에 대한 다음 문서를 참조하십시오. |
@@ -84,7 +84,7 @@ UI에서 표준 네임스페이스를 보려면 왼쪽 탐색 영역에서 **[!U
 
 ![](./images/browse-namespaces.png)
 
-## 사용자 정의 네임스페이스 관리
+## 사용자 정의 네임스페이스 관리 {#manage-namespaces}
 
 조직 데이터 및 사용 사례에 따라 사용자 정의 네임스페이스가 필요할 수 있습니다. 사용자 정의 네임스페이스는 [[!DNL Identity Service]](./api/create-custom-namespace.md) API를 사용하거나 UI를 통해 만들 수 있습니다.
 
