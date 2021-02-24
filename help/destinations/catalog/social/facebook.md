@@ -3,7 +3,7 @@ keywords: facebook 연결;facebook 연결;facebook 대상;facebook;instagram;mes
 title: Facebook 연결
 description: 해시 처리된 이메일을 기반으로 고객 타깃팅, 개인화 및 억제를 위해 Facebook 캠페인에 대한 프로필을 활성화합니다.
 translation-type: tm+mt
-source-git-commit: 8b7befd9775654a2d55d28a64b4b104e7f9576aa
+source-git-commit: 28cfac3d7fed311d9eec01ef464cf921f44a10e9
 workflow-type: tm+mt
 source-wordcount: '1001'
 ht-degree: 3%
