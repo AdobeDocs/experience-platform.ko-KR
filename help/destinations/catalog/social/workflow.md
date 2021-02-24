@@ -1,12 +1,12 @@
 ---
 keywords: Facebook;Facebook;소셜 네트워크;소셜 네트워크;소셜 네트워크 인증;소셜 네트워크 인증;Facebook;facebook;Social network authentication;Social network authentication
 title: 소셜 네트워크 대상 만들기
-type: Tutorial
+type: 튜토리얼
 description: Adobe Experience Platform에서 소셜 네트워크 및 계정에 연결하는 방법을 알아봅니다.
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: 19e38faa84d365682e97c2ec1c6352d127c0ac29
 workflow-type: tm+mt
-source-wordcount: '455'
+source-wordcount: '460'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # 소셜 네트워크 대상 {#social-network-destinations-workflow} 만들기
 
-이 자습서에서는 [!DNL Facebook]을(를) 예로 사용하지만 제품에 한 번 더 추가되면 Adobe Experience Platform의 워크플로우는 모든 소셜 네트워크 대상에 대해 동일합니다.
+이 자습서에서는 [!DNL Facebook]을(를) 예로 사용하지만 Adobe Experience Platform 워크플로우는 모든 소셜 네트워크 대상에 대해 동일합니다.
 
 **[!UICONTROL 대상]** > **[!UICONTROL 카탈로그]**&#x200B;에서 **[!UICONTROL 소셜]** 범주로 스크롤합니다. 원하는 소셜 네트워크 대상을 선택한 다음 **[!UICONTROL 구성]**&#x200B;을 선택합니다.
 
@@ -38,16 +38,19 @@ ht-degree: 0%
 
 **[!UICONTROL 설정]** 단계에서 활성화 플로우에 [!UICONTROL 이름] 및 [!UICONTROL 설명]을 입력하고 소셜 네트워크 광고 계정의 [!UICONTROL 계정 ID]을 입력합니다.
 
-또한 이 단계에서 이 대상에 적용할 **[!UICONTROL 마케팅 작업]**&#x200B;을 선택할 수 있습니다. 마케팅 작업은 데이터를 대상에 내보내려는 의도를 나타냅니다. Adobe 정의 마케팅 작업 중에서 선택하거나 자신의 마케팅 작업을 만들 수 있습니다. 마케팅 작업에 대한 자세한 내용은 [데이터 사용 정책 개요](../../../data-governance/policies/overview.md)를 참조하십시오.
+>[!IMPORTANT]
+>
+> [!DNL Facebook] 대상의 경우 **[!UICONTROL 계정 ID]**&#x200B;는 [!DNL Facebook Ad Account ID]입니다. 이 ID는 [!DNL Facebook Ads Manager]에서 찾을 수 있습니다. 아래 표시된 대로 ID에 `act_`을(를) 접두어로 지정합니다.
 
-위의 필드를 채운 후 **[!UICONTROL 대상 만들기]**&#x200B;를 선택합니다.
+![소셜 네트워크 대상에 연결 - 설정 단계](../../assets/catalog/social/workflow/setup.png)
 
 >[!IMPORTANT]
 >
-> * [!DNL Facebook] 대상의 경우. **[!UICONTROL 계정]** ID가 귀하의  [!DNL Facebook Ad Account ID]것입니다. 이 ID는 [!DNL Facebook Ads Manager]에서 찾을 수 있습니다. 아래 표시된 대로 ID에 `act_`을(를) 접두어로 지정합니다.
+> [!DNL LinkedIn] 대상의 경우 **[!UICONTROL 계정 ID]**&#x200B;는 [!DNL LinkedIn Campaign Manager Account ID]입니다. 이 ID는 [!DNL LinkedIn Campaign Manager]에서 찾을 수 있습니다.
 
+또한 이 단계에서 이 대상에 적용할 **[!UICONTROL 마케팅 작업]**&#x200B;을 선택할 수 있습니다. 마케팅 작업은 데이터를 대상에 내보내려는 의도를 나타냅니다. Adobe 정의 마케팅 작업 중에서 선택하거나 자신의 마케팅 작업을 만들 수 있습니다. 마케팅 작업에 대한 자세한 내용은 [데이터 사용 정책 개요](../../../data-governance/policies/overview.md)를 참조하십시오.
 
-![소셜 네트워크 대상에 연결 - 설정 단계](../../assets/catalog/social/workflow/setup.png)
+위의 필드를 채운 후 **[!UICONTROL 대상 만들기]**&#x200B;를 선택합니다.
 
 이제 대상이 만들어집니다. 나중에 세그먼트를 활성화하려면 **[!UICONTROL 저장 및 종료]**&#x200B;을 선택하고, **[!UICONTROL 다음]**&#x200B;을 선택하여 워크플로우를 계속하고 활성화할 세그먼트를 선택할 수 있습니다. 이 두 경우 모두 워크플로우의 나머지 부분에 대해서는 다음 섹션 [소셜 네트워크에 세그먼트 활성화](#activate-segments)를 참조하십시오.
 
