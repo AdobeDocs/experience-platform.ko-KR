@@ -3,7 +3,7 @@ keywords: linkedin 연결;linkedin 연결;linkedin 대상;linkedin 대상;linked
 title: Linkedin 일치된 대상 연결
 description: 해시 처리된 이메일을 기반으로 고객 타깃팅, 개인화 및 억제를 위해 LinkedIn 캠페인의 프로필을 활성화합니다.
 translation-type: tm+mt
-source-git-commit: 48cc2017e4a65321fb7ef54ea26aca0a98606516
+source-git-commit: 6d64bc362aa8c85e354f5c02cc2acbe6f1405c99
 workflow-type: tm+mt
 source-wordcount: '564'
 ht-degree: 0%
@@ -19,17 +19,17 @@ ht-degree: 0%
 
 ## 사용 사례
 
-Adobe Experience Platform 고객이 이 기능을 사용하여 해결할 수 있는 사용 방법은 [!DNL LinkedIn Matched Audience] 대상을 사용하는 방법과 시기를 이해하는 데 도움이 됩니다.
+Adobe Experience Platform 고객이 이 기능을 사용하여 해결할 수 있는 사용 방법은 [!DNL LinkedIn Matched Audiences] 대상을 사용하는 방법과 시기를 이해하는 데 도움이 됩니다.
 
 소프트웨어 업체는 컨퍼런스를 조직하여 참가자와 계속 연락하고 컨퍼런스 참석 상태를 기반으로 개인화된 제안을 제공합니다. 회사는 자체 [!DNL CRM]의 이메일 주소 또는 모바일 장치 ID를 Adobe Experience Platform으로 인제스트하고, 자체 오프라인 데이터에서 세그먼트를 작성하고, 이러한 세그먼트를 [!DNL LinkedIn] 소셜 플랫폼으로 보내 광고 지출을 최적화할 수 있습니다.
 
 ## 대상 세부 사항 {#destination-specs}
 
-[!DNL LinkedIn Matched Audience] 에서는 다음 ID 활성화를 지원합니다.해시된 이메일,  [!DNL GAID]및  [!DNL IDFA]
+[!DNL LinkedIn Matched Audiences] 에서는 다음 ID 활성화를 지원합니다.해시된 이메일,  [!DNL GAID]및  [!DNL IDFA]
 
 ### 내보내기 유형 {#export-type}
 
-**세그먼트 내보내기**  - 식별자(이름, 전화 번호 등)를 사용하여 세그먼트(대상)의 모든 구성원을 내보냅니다. [!DNL LinkedIn Matched Audience] 대상에 사용됨
+**세그먼트 내보내기**  - 식별자(이름, 전화 번호 등)를 사용하여 세그먼트(대상)의 모든 구성원을 내보냅니다. [!DNL LinkedIn Matched Audiences] 대상에 사용됨
 
 ### LinkedIn 계정 사전 요구 사항 {#LinkedIn-account-prerequisites}
 
@@ -39,7 +39,7 @@ Adobe Experience Platform 고객이 이 기능을 사용하여 해결할 수 있
 
 ### 요구 사항 {#id-matching-requirements} 일치하는 ID
 
-[!DNL LinkedIn Matched Audience] 는 PII(개인 식별 정보)가 명확하게 전송되지 않도록 요구합니다. 따라서 [!DNL LinkedIn Matched Audience]에 대해 활성화된 대상은 이메일 주소 또는 모바일 장치 ID와 같이 *해시* 식별자를 해제할 수 있습니다.
+[!DNL LinkedIn Matched Audiences] 는 PII(개인 식별 정보)가 명확하게 전송되지 않도록 요구합니다. 따라서 [!DNL LinkedIn Matched Audiences]에 대해 활성화된 대상은 이메일 주소 또는 모바일 장치 ID와 같이 *해시* 식별자를 해제할 수 있습니다.
 
 Adobe Experience Platform에 인제스트하는 ID 유형에 따라 해당 요구 사항을 준수해야 합니다.
 
@@ -71,11 +71,11 @@ Experience Platform에서 이메일 주소 인제스트에 대한 자세한 내�
 
 ## 대상 {#connect-destination}에 연결
 
-[!DNL LinkedIn Matched Audience] 대상에 연결하려면 [소셜 네트워크 대상 인증 워크플로](./workflow.md)를 참조하십시오.
+[!DNL LinkedIn Matched Audiences] 대상에 연결하려면 [소셜 네트워크 대상 인증 워크플로](./workflow.md)를 참조하십시오.
 
-## 세그먼트를 [!DNL LinkedIn Matched Audience] {#activate-segments}에 활성화
+## 세그먼트를 [!DNL LinkedIn Matched Audiences] {#activate-segments}에 활성화
 
-세그먼트를 [!DNL LinkedIn Matched Audience]에 활성화하는 방법에 대한 지침은 [대상에 데이터 활성화](../../ui/activate-destinations.md)를 참조하십시오.
+세그먼트를 [!DNL LinkedIn Matched Audiences]에 활성화하는 방법에 대한 지침은 [대상에 데이터 활성화](../../ui/activate-destinations.md)를 참조하십시오.
 
 ## 내보낸 데이터 {#exported-data}
 
@@ -83,4 +83,4 @@ Experience Platform에서 이메일 주소 인제스트에 대한 자세한 내�
 
 >[!TIP]
 >
->Adobe Experience Platform과 [!DNL LinkedIn Matched Audience] 간의 통합은 이전 대상 채우기를 지원합니다. 세그먼트를 대상으로 활성화하면 모든 내역 세그먼트 자격 조건은 [!DNL LinkedIn]으로 전송됩니다.
+>Adobe Experience Platform과 [!DNL LinkedIn Matched Audiences] 간의 통합은 이전 대상 채우기를 지원합니다. 세그먼트를 대상으로 활성화하면 모든 내역 세그먼트 자격 조건은 [!DNL LinkedIn]으로 전송됩니다.
