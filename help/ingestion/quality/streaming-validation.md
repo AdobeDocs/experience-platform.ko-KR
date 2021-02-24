@@ -2,13 +2,13 @@
 keywords: Experience Platform;홈;인기 항목;스트리밍;스트리밍 통합;스트리밍 통합 유효성 검사;유효성 검사;스트리밍 통합 유효성 검사;유효성 검사;동기 유효성 검사;비동기 유효성 검사;비동기 유효성 검사;Asynchronous validation;Asynchronous validation;
 solution: Experience Platform
 title: 스트리밍 통합 유효성 검사
-topic: tutorial
-type: Tutorial
+topic: 자습서
+type: 튜토리얼
 description: 스트리밍 통합 기능을 사용하면 스트리밍 끝점을 사용하여 실시간으로 Adobe Experience Platform에 데이터를 업로드할 수 있습니다. 스트리밍 통합 API는 동기 및 비동기 방식으로 두 가지 인증 모드를 지원합니다.
 translation-type: tm+mt
-source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
+source-git-commit: 8f863eb3427097406237aa443262917fdc3f3e1c
 workflow-type: tm+mt
-source-wordcount: '875'
+source-wordcount: '898'
 ht-degree: 3%
 
 ---
@@ -47,12 +47,12 @@ ht-degree: 3%
 
 페이로드(POST, PUT, PATCH)을 포함하는 모든 요청에는 추가 헤더가 필요합니다.
 
-- 컨텐츠 유형:`application/json`
+- Content-Type: `application/json`
 
 ### 유효성 검사 범위
 
 [!DNL Streaming Validation Service] 는 다음 영역의 유효성 검사를 포함합니다.
-- 범위
+- Range
 - 현재 상태
 - 열거형
 - 패턴
@@ -66,6 +66,10 @@ ht-degree: 3%
 기본적으로 동기 유효성 검사가 켜져 있지 않습니다. 이를 활성화하려면 API 호출 시 선택적 쿼리 매개 변수 `synchronousValidation=true`을(를) 전달해야 합니다. 또한 현재 스트림 끝점이 VA7 데이터 센터에 있는 경우에만 동기 유효성 검사를 사용할 수 있습니다.
 
 동기 유효성 검사 중에 메시지가 실패하면 출력 큐에 메시지가 기록되지 않으므로 사용자에게 즉각적인 피드백을 제공합니다.
+
+>[!NOTE]
+>
+>변경 사항이 캐시되므로 스키마 변경 사항을 즉시 사용할 수 없습니다. 캐시를 새로 고침하려면 최대 15분을 허용합니다.
 
 **API 형식**
 
