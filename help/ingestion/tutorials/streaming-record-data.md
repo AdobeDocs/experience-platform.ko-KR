@@ -2,13 +2,13 @@
 keywords: Experience Platform;홈;인기 항목;스트리밍 통합;기록 데이터;스트림 레코드 데이터;;home;popular topics;streaming ingestion;ingestion;record data;stream record data;
 solution: Experience Platform
 title: 스트리밍 통합 API를 사용한 스트림 레코드 데이터
-topic: tutorial
-type: Tutorial
+topic: 자습서
+type: 튜토리얼
 description: 이 자습서는 Adobe Experience Platform 데이터 통합 서비스 API의 일부인 스트리밍 통합 API를 사용하는 데 도움이 됩니다.
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 27a7855492f2f8e7a92651cd97371c904dd1561d
 workflow-type: tm+mt
-source-wordcount: '1163'
+source-wordcount: '1165'
 ht-degree: 2%
 
 ---
@@ -264,7 +264,7 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
 ]
 ```
 
-## 스트리밍 연결에 레코드 데이터 인제스트
+## 스트리밍 연결 {#ingest-data}에 레코드 데이터를 인제스트합니다.
 
 데이터 세트 및 스트리밍 연결을 적절히 사용하여 XDM 형식의 JSON 레코드를 인제스트하여 레코드 데이터를 [!DNL Platform]에 인제스트할 수 있습니다.
 
