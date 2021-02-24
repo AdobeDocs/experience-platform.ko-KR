@@ -1,24 +1,24 @@
 ---
-title: 플랫폼 실행 및 플랫폼 웹 SDK 익스텐션을 사용하여 IAB TCF 2.0 지원 통합
+title: platform launch 및 Platform Web SDK Extension을 사용하여 IAB TCF 2.0 지원 통합
 description: Adobe Experience Platform Launch 및 Adobe Experience Platform Web SDK 익스텐션을 사용하여 IAB TCF 2.0 동의를 설정하는 방법을 알아봅니다.
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
 workflow-type: tm+mt
-source-wordcount: '832'
+source-wordcount: '834'
 ht-degree: 0%
 
 ---
 
 
-# Platform Launch 및 Platform Web SDK 익스텐션을 사용하여 IAB TCF 2.0 지원 통합
+# platform launch 및 Platform Web SDK 익스텐션을 사용하여 IAB TCF 2.0 지원 통합
 
-Adobe Experience Platform 웹 SDK는 Interactive Advertising Bureau Transparency &amp; Consent Framework 버전 2.0(IAB TCF 2.0)을 지원합니다. 이 안내서에서는 Experience Platform Launch용 AEP 웹 SDK 확장을 사용하여 Adobe에 IAB TCF 2.0 동의 정보를 보내기 위한 Adobe Experience Platform Launch 속성을 설정하는 방법을 보여 줍니다.
+Adobe Experience Platform 웹 SDK는 Interactive Advertising Bureau Transparency &amp; Consent Framework 버전 2.0(IAB TCF 2.0)을 지원합니다. 이 안내서에서는 Experience Platform Launch용 Adobe Experience Platform Web SDK 확장을 사용하여 Adobe에 IAB TCF 2.0 동의 정보를 보내기 위한 Adobe Experience Platform Launch 속성을 설정하는 방법을 보여 줍니다.
 
 Experience Platform Launch을 사용하지 않으려면 Experience Platform Launch](./without-launch.md) 없이 IAB TCF 2.0을 사용하는 [의 가이드를 참조하십시오.
 
 ## 시작하기
 
-Experience Platform Launch 및 AEP 웹 SDK 확장 기능이 있는 IAB TCF 2.0을 사용하려면 XDM 스키마 및 데이터 세트를 사용할 수 있어야 합니다.
+Experience Platform Launch 및 Platform Web SDK 확장 기능이 있는 IAB TCF 2.0을 사용하려면 XDM 스키마 및 데이터 세트를 사용할 수 있어야 합니다.
 
 또한 이 안내서를 보려면 Adobe Experience Platform 웹 SDK에 대한 작업 지식이 있어야 합니다. 빠른 재교육을 위해 [Adobe Experience Platform 웹 SDK 개요](../../home.md) 및 [FAQ](../../web-sdk-faq.md) 설명서를 참조하십시오.
 
@@ -77,7 +77,7 @@ addEventListener();
 
 ## 경험 이벤트에 대한 XDM 데이터 요소 만들기
 
-XDM 경험 이벤트에 동의 문자열을 포함해야 합니다. 이렇게 하려면 XDM 개체 데이터 요소를 사용합니다. 먼저 새 XDM 개체 데이터 요소를 만들거나 이벤트를 전송하기 위해 이미 만든 XDM 개체 데이터 요소를 사용합니다. 사용자 스키마에 경험 이벤트 개인 정보 혼합을 추가한 경우 XDM 개체에 `consentStrings` 키가 있어야 합니다.
+XDM 경험 이벤트에 동의 문자열을 포함해야 합니다. 이렇게 하려면 XDM 개체 데이터 요소를 사용합니다. 먼저 새 XDM 개체 데이터 요소를 만들거나 이미 만든 XDM 개체 데이터 요소를 사용하여 이벤트를 전송하십시오. 사용자 스키마에 경험 이벤트 개인 정보 혼합을 추가한 경우 XDM 개체에 `consentStrings` 키가 있어야 합니다.
 
 1. **[!UICONTROL consentStrings]**&#x200B;를 선택합니다.
 
@@ -120,7 +120,7 @@ addEventListener();
 
 이 코드는 `useractioncomplete` 및 `tcloaded` 이벤트를 모두 처리한다는 점을 제외하고, 이전 사용자 지정 코드와 동일합니다. [이전 사용자 지정 코드](#consent-code-1)는 고객이 처음 자신의 환경 설정을 선택할 때만 트리거됩니다. 또한 이 코드는 고객이 이미 자신의 환경 설정을 선택했을 때도 트리거됩니다. 예를 들어 두 번째 페이지를 로드할 때
 
-AEP 웹 SDK 익스텐션에서 &quot;이벤트 보내기&quot; 동작을 추가합니다. XDM 필드에서 이전 섹션에서 만든 XDM 데이터 요소를 선택합니다.
+플랫폼 웹 SDK 확장 프로그램에서 &quot;이벤트 보내기&quot; 동작을 추가합니다. XDM 필드에서 이전 섹션에서 만든 XDM 데이터 요소를 선택합니다.
 
 ## IAB TCF 2.0 동의 정보와 함께 다른 이벤트 보내기
 
@@ -128,4 +128,4 @@ AEP 웹 SDK 익스텐션에서 &quot;이벤트 보내기&quot; 동작을 추가�
 
 ## 다음 단계
 
-이제 AEP Web SDK 익스텐션과 함께 IAB TCF 2.0을 사용하는 방법을 습득했으므로 Adobe Analytics 또는 실시간 고객 데이터 플랫폼과 같은 다른 Adobe 솔루션과 통합할 수도 있습니다. 자세한 내용은 [IAB 투명도 및 동의 프레임워크 2.0 개요](./overview.md)를 참조하십시오.
+이제 IAB TCF 2.0을 Platform Web SDK 익스텐션과 함께 사용하는 방법을 습득했으므로 Adobe Analytics 또는 실시간 고객 데이터 플랫폼과 같은 다른 Adobe 솔루션과 통합할 수도 있습니다. 자세한 내용은 [IAB 투명도 및 동의 프레임워크 2.0 개요](./overview.md)를 참조하십시오.
