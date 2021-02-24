@@ -3,10 +3,10 @@ title: Adobe Experience Platform Web SDK 확장 릴리스 노트
 description: Adobe Experience Platform Launch의 Adobe Experience Platform 웹 SDK 확장
 seo-description: Adobe Experience Platform Launch의 Adobe Experience Platform 웹 SDK 확장
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
 workflow-type: tm+mt
-source-wordcount: '988'
-ht-degree: 94%
+source-wordcount: '990'
+ht-degree: 89%
 
 ---
 
@@ -33,7 +33,7 @@ Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.3.0을 포함합�
 
 #### 버그 수정
 
-* 고객이 샌드박스 스키마에서 XDM 개체를 만들려고 했을 때 인증 문제가 발생했습니다. AEP를 호출하는 API는 이제 환경을 인식하므로 사용자가 편집할 수 있는 액세스 권한이 있는 스키마만 표시됩니다.
+* 고객이 샌드박스 스키마에서 XDM 개체를 만들려고 했을 때 인증 문제가 발생했습니다. 플랫폼을 호출하는 API는 이제 환경을 인식하므로 사용자는 편집에 액세스할 수 있는 스키마만 표시됩니다.
 
 #### 기능
 
@@ -62,7 +62,7 @@ Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.3.0을 포함합�
 * `sendEvent` 작업에서 데이터 세트 ID 재정의를 지원합니다.
 * 이제 활성화된 XDM 개체 데이터 요소와 `IdentityMap` 작업에 `identityMap` 항목을 채우는 데 사용할 수 있는 `setConsent` 유형의 새 데이터 요소를 추가합니다.
 * `setConsent` 작업에서 ID 맵 전달을 지원합니다.
-* XDM 개체 데이터 요소에서 AEP 샌드박스 선택을 지원합니다.
+* XDM 개체 데이터 요소에서 플랫폼 샌드박스 선택을 지원합니다.
 
 
 ## 2020년 5월 26일
@@ -92,7 +92,7 @@ Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.3.0을 포함합�
 * 데이터 요소가 참조될 때마다 재설정되는 이벤트 병합 ID의 문제가 해결되었습니다.
 * `setCustomerIds` 작업 이름이 `syncIdentity`로 변경되었습니다.
 * `getIdentity` 명령이 추가되었습니다. 현재는 사용자 지정 코드를 통해서만 사용할 수 있습니다.
-* `_satellite`를 사용하여 디버그를 활성화하면 AEP 웹 SDK에서 디버깅이 활성화됩니다.
+* 이제 `_satellite`을(를) 사용하여 디버깅을 활성화하면 Adobe Experience Platform 웹 SDK에서 디버깅이 활성화됩니다.
 * XDM 개체에 입력 값(부울, 숫자 및 소수점)에 대한 지원이 추가되었습니다.
 
 ## 2020년 3월 16일
@@ -169,7 +169,7 @@ Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.3.0을 포함합�
 * 확장이 존재하게 됨
 * 추가 라이브러리 또는 네트워크 호출 없이 ECID 지원
 * 옵트인 지원
-* XDM을 AEP로 전송하도록 지원
+* 플랫폼에 XDM 보내기 지원
 * 자사 도메인 지원
 * 브라우저 컨텍스트 자동 수집
 * 전체 오픈 소스([확장](https://github.com/adobe/reactor-extension-alloy), [SDK](https://github.com/adobe/reactor-extension-alloy))
