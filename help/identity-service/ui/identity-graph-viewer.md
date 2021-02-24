@@ -2,26 +2,28 @@
 keywords: Experience Platform;홈;인기 항목;ID 그래프 뷰어;ID 그래프 뷰어;그래프 뷰어;그래프 뷰어;ID 네임스페이스;ID;ID;Service;ID 서비스;Identity Service;Identity Service
 solution: Experience Platform
 title: ID 그래프 뷰어 개요
-topic: tutorial
+topic: 자습서
 description: ID 그래프는 특정 고객에 대해 서로 다른 ID 간의 관계를 보여주는 지도로, 고객이 다양한 채널에서 브랜드와 상호 작용하는 방식을 시각적으로 보여줍니다.
 translation-type: tm+mt
-source-git-commit: 8ec904d584225113a6791533ff544560fc2efdf3
+source-git-commit: f4326c7a8bb8af90c092d3790e51c133744d498f
 workflow-type: tm+mt
-source-wordcount: '946'
-ht-degree: 0%
+source-wordcount: '1038'
+ht-degree: 1%
 
 ---
 
 
-# (베타) ID 그래프 뷰어 개요
-
->[!NOTE]
->
->ID 그래프 뷰어는 현재 베타 버전입니다. 해당 기능은 변경될 수 있습니다.
+# ID 그래프 뷰어 개요
 
 ID 그래프는 특정 고객에 대해 서로 다른 ID 간의 관계를 보여주는 지도로, 고객이 다양한 채널에서 브랜드와 상호 작용하는 방식을 시각적으로 보여줍니다. 모든 고객 ID 그래프는 고객 활동에 대한 대응으로 거의 실시간으로 Adobe Experience Platform Identity Service에서 통합 관리 및 업데이트됩니다.
 
 플랫폼 사용자 인터페이스의 ID 그래프 뷰어를 사용하면 어떤 고객 ID가 함께 결합되어 있는지, 어떤 방식으로 결합되어 있는지 시각화하고 더 잘 이해할 수 있습니다. 뷰어를 사용하면 그래프의 여러 부분과 드래그 앤 인터랙션할 수 있으므로 복잡한 ID 관계를 검사하거나 보다 효율적으로 디버깅할 수 있을 뿐만 아니라 정보 활용 방법을 통해 투명도를 높일 수 있습니다.
+
+## 자습서 비디오
+
+다음 비디오는 ID 그래프 뷰어에 대한 이해를 지원하기 위한 것입니다.
+
+>[!VIDEO](https://video.tv.adobe.com/v/331030/?quality=12&learn=on)
 
 ## 시작하기
 
@@ -50,6 +52,20 @@ UI에서 ID 그래프 뷰어를 사용하려면 왼쪽 탐색에서 **[!UICONTRO
 네임스페이스를 선택하고 나면 **[!UICONTROL ID 값]** 텍스트 상자에 특정 고객에 해당하는 값을 입력하고 **[!UICONTROL 보기]**&#x200B;를 선택합니다.
 
 ![add-identity-value](../images/identity-graph-viewer/identity-value-filled.png)
+
+### 데이터 세트에서 ID 그래프 뷰어에 액세스
+
+데이터 집합 인터페이스를 사용하여 ID 그래프 뷰어에 액세스할 수도 있습니다. 데이터 집합 [!UICONTROL 찾아보기] 페이지에서 상호 작용할 데이터 집합을 선택한 다음 **[!UICONTROL 데이터 집합 미리 보기]**
+
+![미리 보기 데이터 세트](../images/identity-graph-viewer/preview-dataset.png)
+
+미리 보기 창에서 지문 아이콘을 선택하여 ID 그래프 뷰어를 통해 표시되는 ID를 확인합니다.
+
+>[!TIP]
+>
+>지문 아이콘은 데이터 세트에 2개 이상의 ID가 있는 경우에만 나타납니다.
+
+![지문](../images/identity-graph-viewer/fingerprint.png)
 
 ID 그래프 뷰어가 나타납니다. 화면의 왼쪽에는 선택한 네임스페이스에 연결된 모든 ID와 입력한 ID 값이 표시된 ID 그래프가 있습니다. 각 ID 노드는 네임스페이스와 해당 ID 값으로 구성됩니다. ID를 선택하고 유지하여 그래프를 드래그하여 상호 작용할 수 있습니다. 또는 ID 위로 마우스를 가져가면 ID 값에 대한 정보를 볼 수 있습니다. 그래프 출력은 또한 화면 중앙에 놓기 목록으로 표시됩니다.
 
@@ -109,8 +125,9 @@ ID 그래프 뷰어에 액세스할 때 오류가 발생할 수 있습니다. �
 
 이 문서를 읽고 플랫폼 UI에서 고객의 ID 그래프를 살펴보는 방법을 알아보았습니다. 플랫폼의 ID에 대한 자세한 내용은 [ID 서비스 개요](../home.md)를 참조하십시오.
 
-## Journey Orchestration용
+## Changelog
 
-다음 비디오는 ID 그래프 뷰어에 대한 이해를 지원하기 위한 것입니다.
-
->[!VIDEO](https://video.tv.adobe.com/v/331030/?quality=12&learn=on)
+| Date | 작업 |
+| ---- | ------ |
+| 2021-01 | <ul><li>인제스트한 스트리밍 데이터 및 비프로덕션 샌드박스에 대한 지원을 추가했습니다.</li><li>사소한 버그가 수정되었습니다.</li></ul> |
+| 2021-02 | <ul><li>ID 그래프 뷰어는 데이터 집합 미리 보기를 통해 액세스할 수 있습니다.</li><li>사소한 버그가 수정되었습니다.</li><li>ID 그래프 뷰어는 일반적으로 사용할 수 있게 됩니다.</li></ul> |
