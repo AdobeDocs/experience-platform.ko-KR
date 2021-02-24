@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: February 24, 2021
 author: ens70167
 translation-type: tm+mt
-source-git-commit: 9f7d7ae9c721d1ce7abf0dc7d3eaff18eed09d6f
+source-git-commit: 7142d13b144f34d92087affe101c5ccfcb52d90e
 workflow-type: tm+mt
-source-wordcount: '682'
-ht-degree: 8%
+source-wordcount: '770'
+ht-degree: 6%
 
 ---
 
@@ -19,12 +19,25 @@ ht-degree: 8%
 
 Adobe Experience Platform의 기존 기능 업데이트:
 
-- [데이터 흐름](#dataflows)
-- [경험 데이터 모델(XDM) 시스템](#xdm)
-- [ID 서비스](#identity)
-- [소스](#sources)
+- [[!DNL Data Science Workspace]](#dsw)
+- [[!DNL Dataflows]](#dataflows)
+- [[!DNL Experience Data Model (XDM) System]](#xdm)
+- [[!DNL Identity Service]](#identity)
+- [[!DNL Sources]](#sources)
 
-## 데이터 흐름 {#dataflows}
+## [!DNL Data Science Workspace] {#dsw}
+
+데이터 과학 작업 공간은 머신 러닝과 인공 지능을 사용하여 데이터를 통해 인사이트를 생성합니다. Adobe Experience Platform에 통합된 Data Science Workspace를 사용하면 Adobe 솔루션에서 콘텐츠와 데이터 자산을 사용하여 예측할 수 있습니다.
+
+**새로운 기능**
+
+| 기능 | 설명 |
+| --- | --- |
+| JupiterLab EDA 노트북 | Jupiterlab에서는 EDA(Survey Data Analysis) Python 노트북을 사용할 수 있습니다. 이 노트북은 데이터에서 패턴을 찾고, 데이터 안정성을 확인하고, 예측 모델에 대한 관련 데이터를 요약하는 데 도움이 되도록 설계되었습니다. 자세한 내용은 [예측 모델에 대한 웹 기반 데이터 탐색](../../data-science-workspace/jupyterlab/eda-notebook.md)의 자습서를 참조하십시오. |
+
+데이터 과학 작업 공간에 대한 자세한 내용은 [데이터 과학 작업 공간 개요](../../data-science-workspace/home.md)를 참조하십시오.
+
+## [!DNL Dataflows] {#dataflows}
 
 Adobe Experience Platform에서 데이터는 다양한 소스에서 수집되어 Experience Platform 내에서 분석되고 다양한 대상으로 활성화됩니다. Platform(플래시 플랫폼)을 사용하면 데이터 흐름 투명도를 활용하여 잠재적으로 선형 방식으로 데이터 흐름을 보다 손쉽게 추적할 수 있습니다.
 
@@ -38,7 +51,7 @@ Adobe Experience Platform에서 데이터는 다양한 소스에서 수집되어
 
 데이터 흐름에 대한 자세한 내용은 [데이터 흐름 개요](../../dataflows/home.md)를 참조하십시오.
 
-## 경험 데이터 모델(XDM) 시스템 {#xdm}
+## [!DNL Experience Data Model (XDM) System] {#xdm}
 
 표준화 및 상호 운용성은 [!DNL Experience Platform]의 주요 개념입니다. [!DNL Experience Data Model] (XDM)은 Adobe을 기반으로 고객 경험 데이터를 표준화하고 고객 경험 관리를 위한 스키마를 정의하는 것입니다.
 
@@ -52,7 +65,7 @@ XDM은 디지털 경험의 강력함을 향상시키도록 고안된 문서화�
 
 XDM에 대한 자세한 내용은 [XDM 시스템 개요](../../xdm/home.md)를 참조하십시오.
 
-## ID 서비스 {#identity}
+## [!DNL Identity Service] {#identity}
 
 고객의 기대에 부응하는 디지털 경험을 제공하려면 고객을 완벽하게 이해해야 합니다. 고객 데이터가 서로 다른 시스템에서 단편화되어 있는 경우 이를 더욱 어렵게 만들 수 있으므로, 개별 고객은 여러 개의 &quot;ID&quot;를 갖고 있는 것처럼 보입니다.
 
@@ -66,7 +79,7 @@ Adobe Experience Platform [!DNL Identity Service]을(를) 사용하면 디바이
 
 [!DNL Identity Service]에 대한 자세한 내용은 [ID 서비스 개요](../../identity-service/home.md)를 참조하십시오.
 
-## 소스 {#sources}
+## [!DNL Sources] {#sources}
 
 Adobe Experience Platform은 외부 소스에서 데이터를 인제스트할 수 있는 한편, 플랫폼 서비스를 사용하여 해당 데이터를 구조화, 레이블 지정 및 개선할 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 제3자 소프트웨어 및 CRM 시스템과 같은 다양한 소스의 데이터를 인제스트할 수 있습니다.
 
