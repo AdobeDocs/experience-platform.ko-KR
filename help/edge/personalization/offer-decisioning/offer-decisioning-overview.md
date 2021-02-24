@@ -1,9 +1,9 @@
 ---
-title: Platform Web SDK와 함께 Offer Decisioning 사용
-description: Adobe Experience Platform 웹 SDK는 Offer Decisioning에서 관리하는 맞춤형 오퍼를 전달하고 렌더링할 수 있습니다. Offer Decisioning UI 또는 API를 사용하여 오퍼 및 기타 관련 개체를 만들 수 있습니다.
-keywords: 제안 결정;의사 결정;웹 SDK;플랫폼 웹 SDK;개인화된 제안;제안 제공;오퍼 전달;오퍼 개인화;offication decision decision;의사 결정;Web SDK;Platform Web SDK;personalized offers;delivery offer delivery;offer personalization;
+title: 플랫폼 웹 SDK에서 Offer decisioning 사용
+description: Adobe Experience Platform 웹 SDK는 Offer decisioning에서 관리되는 개인화된 오퍼를 제공하고 렌더링할 수 있습니다. offer decisioning UI 또는 API를 사용하여 오퍼 및 기타 관련 개체를 만들 수 있습니다.
+keywords: offer decisioning;의사 결정;웹 SDK;플랫폼 웹 SDK;개인화된 제안;제공 제안;오퍼 전달;제안 개인화;Marketing Cloud;
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
 workflow-type: tm+mt
 source-wordcount: '849'
 ht-degree: 9%
@@ -11,13 +11,13 @@ ht-degree: 9%
 ---
 
 
-# Platform Web SDK와 함께 Offer Decisioning 사용
+# 플랫폼 웹 SDK에서 Offer decisioning 사용
 
 >[!NOTE]
 >
->Adobe Experience Platform Web SDK에서 Offer Decisioning을 사용하면 현재 특정 사용자를 조기에 이용할 수 있습니다. 이 기능은 일부 IMS 조직에서는 사용할 수 없습니다.
+>Adobe Experience Platform Web SDK의 Offer decisioning은 현재 특정 사용자를 조기에 액세스할 수 있습니다. 이 기능은 일부 IMS 조직에서는 사용할 수 없습니다.
 
-Adobe Experience Platform [!DNL Web SDK]은(는) Offer Decisioning에서 관리되는 개인화된 오퍼를 제공하고 렌더링할 수 있습니다. Offer Decisioning 사용자 인터페이스(UI) 또는 API를 사용하여 오퍼 및 기타 관련 개체를 만들 수 있습니다.
+Adobe Experience Platform [!DNL Web SDK]은 Offer decisioning에서 관리되는 개인화된 오퍼를 제공하고 렌더링할 수 있습니다. offer decisioning 사용자 인터페이스(UI) 또는 API를 사용하여 오퍼 및 기타 관련 개체를 만들 수 있습니다.
 
 ## 전제 조건
 
@@ -27,11 +27,11 @@ Adobe Experience Platform [!DNL Web SDK]은(는) Offer Decisioning에서 관리�
 
 ## 용어
 
-Offer Decisioning 작업 시 다음 용어를 이해하는 것이 중요합니다. 자세한 내용이나 추가 용어를 보려면 [Offer Decisioning 용어집](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html)을 방문하십시오.
+offer decisioning 작업 시 다음 용어를 이해하는 것이 중요합니다. 자세한 내용이나 추가 용어를 보려면 [Offer decisioning 용어집](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html)을 방문하십시오.
 
 * **컨테이너:** 컨테이너는 서로 다른 우려를 분리시키는 격리 메커니즘입니다. 컨테이너 ID는 모든 저장소 API에 대한 첫 번째 경로 요소입니다. 모든 의사 결정 개체는 컨테이너 내에 있습니다.
 
-* **결정 범위:** Offer Decisioning의 경우, 오퍼 의사 결정 서비스에서 오퍼를 제안하는 데 사용할 활동 및 배치 ID를 포함하는 JSON의 Base64 인코딩 문자열입니다.
+* **결정 범위:** Offer decisioning의 경우, offer decisioning 서비스에서 오퍼를 제안하는 데 사용할 활동 및 배치 ID를 포함하는 JSON의 Base64 인코딩 문자열입니다.
 
    *결정 범위 JSON:*
 
@@ -58,14 +58,14 @@ Offer Decisioning 작업 시 다음 용어를 이해하는 것이 중요합니�
 
 * **ID**:자세한 내용은 Platform Web SDK가 Identity Service를 활용하는 방법에 대한  [개요를 설명하는 문서를 참조하십시오](../../identity/overview.md).
 
-## Offer Decisioning 활성화
+## offer decisioning 활성화
 
-Offer Decisioning을 활성화하려면 다음 단계를 수행해야 합니다.
+offer decisioning을 활성화하려면 다음 단계를 수행해야 합니다.
 
-1. [edge 구성](../../fundamentals/edge-configuration.md)에서 Adobe Experience Platform을 활성화한 후 &quot;Offer Decisioning&quot; 상자를 선택합니다.
+1. [edge 구성](../../fundamentals/edge-configuration.md)에서 Adobe Experience Platform을 활성화한 후 &quot;Offer decisioning&quot; 상자를 선택합니다.
    ![offer-decision-edge-config](./assets/offer-decisioning-edge-config.png)
-2. [SDK](../../fundamentals/installing-the-sdk.md) 설치(SDK는 독립 실행형 또는 [Adobe Experience Platform Launch](http://launch.adobe.com/)을 통해 설치할 수 있습니다. 다음은 플랫폼 시작](https://docs.adobe.com/content/help/ko-KR/launch/using/intro/get-started/quick-start.html)에 대한 [빠른 시작 안내서입니다.
-3. [Offer Decisioning](../../fundamentals/configuring-the-sdk.md) 용 SDK를 구성합니다. Offer Decisioning 관련 추가 단계는 아래에 제공됩니다.
+2. [SDK](../../fundamentals/installing-the-sdk.md) 설치(SDK는 독립 실행형 또는 [Adobe Experience Platform Launch](http://launch.adobe.com/)을 통해 설치할 수 있습니다. 다음은 Platform launch](https://docs.adobe.com/content/help/ko-KR/launch/using/intro/get-started/quick-start.html)에 대한 [빠른 시작 안내서입니다.
+3. [offer decisioning](../../fundamentals/configuring-the-sdk.md) 용 SDK를 구성합니다. 추가적인 Offer decisioning 특정 단계는 아래에 제공됩니다.
    * 독립형 설치된 SDK
       1. `decisionScopes`으로 &quot;sendEvent&quot; 동작을 구성합니다.
 
@@ -78,10 +78,10 @@ Offer Decisioning을 활성화하려면 다음 단계를 수행해야 합니다.
           ]
       })
       ```
-   * 플랫폼 시작 설치된 SDK
-      1. [플랫폼 시작 속성 만들기](https://docs.adobe.com/content/help/ko-KR/launch/using/reference/admin/companies-and-properties.html)
-      2. [플랫폼 실행 포함 코드 추가](https://docs.adobe.com/content/help/en/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
-      3. &quot;에지 구성&quot; 드롭다운에서 구성을 선택하여 방금 만든 에지 구성으로 AEP 웹 SDK 확장을 설치하고 구성합니다. [extensions](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html)에 대한 유용한 설명서입니다.
+   * platform launch 설치 SDK
+      1. [platform launch 속성 만들기](https://docs.adobe.com/content/help/ko-KR/launch/using/reference/admin/companies-and-properties.html)
+      2. [platform launch 포함 코드 추가](https://docs.adobe.com/content/help/en/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
+      3. &quot;에지 구성&quot; 드롭다운에서 구성을 선택하여 방금 만든 에지 구성으로 플랫폼 웹 SDK 확장을 설치하고 구성합니다. [extensions](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html)에 대한 유용한 설명서입니다.
          ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
 
          ![configure-aep-web-sdk-extension](./assets/configure-aep-web-sdk-extension.png)
