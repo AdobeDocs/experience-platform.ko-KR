@@ -5,10 +5,10 @@ user-guide-title: Adobe Experience Platform Segmentation Service
 breadcrumb-title: Segmentation Service 안내서
 user-guide-description: 실시간 고객 프로필 데이터에서 세그먼트를 작성하고 대상을 생성합니다.
 translation-type: tm+mt
-source-git-commit: b37cf48b839ac30026162d2224528d8aabd3d263
+source-git-commit: fc493a207e305887e798238ba6883f4934c5cba5
 workflow-type: tm+mt
-source-wordcount: '152'
-ht-degree: 22%
+source-wordcount: '157'
+ht-degree: 21%
 
 ---
 
@@ -56,6 +56,7 @@ ht-degree: 22%
    - [동적 세그먼트 만들기(비디오)](video/create-a-dynamic-segment.md)
    - [다중 엔티티 세그먼트 만들기(비디오)](video/create-multi-entity-segments.md)
    - [세그먼트 평가](tutorials/evaluate-a-segment.md)
+   - [외부 대상 가져오기 및 사용](tutorials/using-external-audiences.md)
    - [데이터를 내보낼 데이터 세트 만들기](tutorials/create-dataset-export-segment.md)
    - [세그먼트에 대한 데이터 사용 준수](tutorials/governance.md)
 - [API 참조](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)
