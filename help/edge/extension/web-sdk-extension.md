@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 웹 SDK 확장 개요
 description: Adobe Experience Platform Launch용 Adobe Experience Platform Web SDK 익스텐션에 대한 자세한 내용
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
 workflow-type: tm+mt
-source-wordcount: '645'
-ht-degree: 55%
+source-wordcount: '640'
+ht-degree: 53%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 55%
 
 Adobe Experience Platform 웹 SDK 익스텐션은 Adobe Experience Platform Edge 네트워크를 통해 웹 속성에서 Adobe Experience Cloud으로 데이터를 전송합니다. Adobe Experience Platform 웹 SDK 확장을 사용하면 데이터를 플랫폼으로 스트리밍하고 ID와 옵트인을 동기화하며 컨텍스트 데이터를 자동으로 수집할 수 있습니다.
 
-## AEP 웹 SDK 확장 구성
+## 확장 프로그램 구성
 
 이 섹션에서는 Adobe Experience Platform 웹 SDK 확장을 구성할 때 사용할 수 있는 옵션에 대한 참조를 제공합니다.
 
@@ -47,11 +47,11 @@ Adobe Experience Platform 웹 SDK 익스텐션은 페이지에서 여러 인스�
 
 ### **[!UICONTROL 옵트인 활성화]**
 
-**[!UICONTROL Enable Opt-in]**&#x200B;이(가) 활성화된 경우 AEP 웹 SDK 익스텐션은 옵트인을 받을 때까지 히트를 보류할 수 있습니다. 이 확장은 옵트인 환경 설정을 지정하는 동작을 표시합니다.
+**[!UICONTROL Enable Opt-in]**&#x200B;이(가) 활성화된 경우, 확장이 옵트인을 받을 때까지 히트를 보류할 수 있습니다. 이 확장은 옵트인 환경 설정을 지정하는 동작을 표시합니다.
 
 ### **[!UICONTROL ECID 마이그레이션 활성화]**
 
-AEP 웹 SDK 확장은 새 쿠키를 사용하여 ECID를 저장합니다. 이 설정을 사용하면 마이그레이션을 위해 새 쿠키와 이전 쿠키가 호환됩니다. ECID가 있는 기존 방문자가 없는 한 이 기능을 사용할 것을 적극 권장합니다.
+플랫폼 웹 SDK 확장 프로그램은 새 쿠키를 사용하여 ECID를 저장합니다. 이 설정을 사용하면 마이그레이션을 위해 새 쿠키와 이전 쿠키가 호환됩니다. ECID가 있는 기존 방문자가 없는 한 이 기능을 사용할 것을 적극 권장합니다.
 
 ### **[!UICONTROL 타사 쿠키 사용]**
 
