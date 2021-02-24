@@ -3,9 +3,9 @@ title: Adobe Experience Platform 웹 SDK를 사용하여 이벤트 추적
 seo-description: Adobe Experience Platform 웹 SDK 이벤트를 추적하는 방법을 알아봅니다.
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;send Beacon;send Beacon;documentUnaring;document Unloading;onBeforeEventSend;
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
 workflow-type: tm+mt
-source-wordcount: '1334'
+source-wordcount: '1340'
 ht-degree: 0%
 
 ---
@@ -69,7 +69,7 @@ alloy("sendEvent", {
 dataLayer.commerce = null;
 ```
 
-이 예에서 데이터 레이어는 JSON으로 직렬화한 다음 역직렬화하여 복제됩니다. 다음으로 복제된 결과가 `sendEvent` 명령에 전달됩니다. 이렇게 하면 `sendEvent` 명령이 실행될 때 데이터 레이어의 스냅샷이 존재하므로 나중에 원본 데이터 레이어 개체에 대한 수정 내용이 서버에 전송된 데이터에 반영되지 않습니다. `sendEvent` 이벤트 기반 데이터 레이어를 사용하는 경우 데이터 복제가 이미 자동으로 처리됩니다. 예를 들어 [Adobe 클라이언트 데이터 레이어](https://github.com/adobe/adobe-client-data-layer/wiki)를 사용하는 경우 `getState()` 메서드는 모든 이전 변경 사항에 대한 계산된 복제된 스냅샷을 제공합니다. AEP 웹 SDK 시작 확장 프로그램을 사용하는 경우에도 자동으로 처리됩니다.
+이 예에서 데이터 레이어는 JSON으로 직렬화한 다음 역직렬화하여 복제됩니다. 다음으로 복제된 결과가 `sendEvent` 명령에 전달됩니다. 이렇게 하면 `sendEvent` 명령이 실행될 때 데이터 레이어의 스냅샷이 존재하므로 나중에 원본 데이터 레이어 개체에 대한 수정 내용이 서버에 전송된 데이터에 반영되지 않습니다. `sendEvent` 이벤트 기반 데이터 레이어를 사용하는 경우 데이터 복제가 이미 자동으로 처리됩니다. 예를 들어 [Adobe 클라이언트 데이터 레이어](https://github.com/adobe/adobe-client-data-layer/wiki)를 사용하는 경우 `getState()` 메서드는 모든 이전 변경 사항에 대한 계산된 복제된 스냅샷을 제공합니다. Adobe Experience Platform Launch에서 Adobe Experience Platform 웹 SDK 확장 프로그램을 사용하는 경우에도 자동으로 처리됩니다.
 
 >[!NOTE]
 >
