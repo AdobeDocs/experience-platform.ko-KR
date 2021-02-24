@@ -2,12 +2,12 @@
 keywords: Experience Platform;홈;인기 항목;데이터 집합 사용;데이터 집합;데이터 집합;;home;popular topics;enable dataset;dataset
 solution: Experience Platform
 title: 데이터 집합 UI 안내서
-topic: datasets
+topic: 데이터 집합
 description: Adobe Experience Platform 사용자 인터페이스에서 데이터 세트를 사용하여 작업할 때 일반적인 작업을 수행하는 방법을 알아봅니다.
 translation-type: tm+mt
-source-git-commit: 2b8c08dad34bcd69368c00050323835f05379c82
+source-git-commit: fc493a207e305887e798238ba6883f4934c5cba5
 workflow-type: tm+mt
-source-wordcount: '1140'
+source-wordcount: '1141'
 ht-degree: 0%
 
 ---
@@ -97,7 +97,7 @@ CSV 파일을 사용하여 데이터 세트를 만들 때 제공된 CSV 파일�
 
 ![](../images/datasets/user-guide/add_csv_data.png)
 
-## 실시간 고객 프로파일에 대한 데이터 세트 활성화
+## 실시간 고객 프로필 {#enable-profile}에 대한 데이터 집합 활성화
 
 모든 데이터 세트에 인제스트한 데이터로 고객 프로파일을 강화할 수 있습니다. 이렇게 하려면 데이터 세트가 준수하는 스키마는 [!DNL Real-time Customer Profile]에서 사용할 수 있어야 합니다. 호환되는 스키마는 다음 요구 사항을 충족합니다.
 
