@@ -4,9 +4,9 @@ description: Adobe Experience Platform 웹 SDK를 구성하는 방법을 알아�
 seo-description: Experience Platform 웹 SDK를 구성하는 방법 알아보기
 keywords: 구성;구성;구성;SDK;edge;웹 SDK;구성;EdgeConfigId;컨텍스트;웹;장치;환경;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConceptions;웹 sdk 설정;prehingStyle;cookieEnabled;urlEnabled;urlEnabled DestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 translation-type: tm+mt
-source-git-commit: 85bb984231a3069aad0c63707f5024612181798c
+source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
 workflow-type: tm+mt
-source-wordcount: '741'
+source-wordcount: '743'
 ht-degree: 11%
 
 ---
@@ -147,7 +147,7 @@ Adobe 서비스와 상호 작용하는 데 사용되는 도메인입니다. Adob
 | -------- | ------------ | ----------------- |
 | 부울 | 아니요 | true |
 
-true인 경우 SDK는 이전 AMCV 쿠키를 읽고 설정합니다. 이렇게 하면 사이트의 일부 부분이 여전히 Visitor.js를 사용하고 있을 수 있지만 Adobe Experience Platform 웹 SDK를 사용하는 것으로 전환할 수 있습니다. 또한 방문자 API가 페이지에 정의된 경우 SDK는 방문자 API에 대해 ECID를 쿼리합니다. 이렇게 하면 AEP 웹 SDK를 사용하여 이중 태그 페이지에 동일한 ECID를 사용할 수 있습니다.
+true인 경우 SDK는 이전 AMCV 쿠키를 읽고 설정합니다. 이렇게 하면 사이트의 일부 부분이 여전히 Visitor.js를 사용하고 있을 수 있지만 Adobe Experience Platform 웹 SDK를 사용하는 것으로 전환할 수 있습니다. 또한 방문자 API가 페이지에 정의된 경우 SDK는 방문자 API에 대해 ECID를 쿼리합니다. 이를 통해 Adobe Experience Platform 웹 SDK를 사용하여 이중 태그 페이지에 동일한 ECID를 사용할 수 있습니다.
 
 ### `thirdPartyCookiesEnabled`
 
