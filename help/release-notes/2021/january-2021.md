@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: January 27, 2021
 author: ens60013
 translation-type: tm+mt
-source-git-commit: 2e3a6acbfaa7f733a9843068c00f31f0b7f535b6
+source-git-commit: 18712835b2408b24cd2735b19c94bf1b1fe50df1
 workflow-type: tm+mt
-source-wordcount: '490'
-ht-degree: 7%
+source-wordcount: '712'
+ht-degree: 6%
 
 ---
 
@@ -21,6 +21,7 @@ Adobe Experience Platform의 기존 기능 업데이트:
 
 - [[!DNL Data Prep]](#data-prep)
 - [[!DNL Destinations]](#destinations)
+- [[!DNL Real-time Customer Profile]](#profile)
 - [[!DNL Sources]](#sources)
 
 ## [!DNL Data Prep] {#data-prep}
@@ -37,7 +38,7 @@ Adobe Experience Platform의 기존 기능 업데이트:
 
 ## 대상 {#destinations}
 
-[!DNL Destinations] adobe experience platform의 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과의 사전 구축된 통합입니다. 대상을 사용하여 크로스채널 마케팅 캠페인, 이메일 캠페인, 타깃팅된 광고 및 기타 여러 가지 사용 사례에 대해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
+[!DNL Destinations] Adobe Experience Platform의 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과의 사전 구축된 통합입니다. 대상을 사용하여 크로스채널 마케팅 캠페인, 이메일 캠페인, 타깃팅된 광고 및 기타 여러 가지 사용 사례에 대해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 
 **새 대상**
 
@@ -52,6 +53,19 @@ Adobe Experience Platform의 기존 기능 업데이트:
 | 고급 ID 일치 | 외부 ID, 전화 번호 및 모바일 장치 ID와 같은 추가 ID 일치에 대한 지원을 추가하여 [!DNL Facebook Custom Audiences] 및 [!DNL Google Customer Match]의 대상 일치 비율 기능이 향상되었습니다. 자세한 내용은 다음 설명서를 참조하십시오. <ul><li>[Facebook 대상](../../destinations/catalog/social/facebook.md)</li><li>[Google 고객 일치 대상](../../destinations/catalog/advertising/google-customer-match.md)</li><li>[대상에 프로필 및 세그먼트 활성화](../../destinations/ui/activate-destinations.md)</li></ul> |
 
 자세한 내용은 [대상 개요](../../destinations/home.md)를 참조하십시오.
+
+## 실시간 고객 프로필 {#profile}
+
+Adobe Experience Platform을 사용하면 고객이 브랜드와 상호 작용하는 장소 또는 시기와 상관없이 고객의 관심사와 연관성 있는 경험을 일관되게 전달할 수 있습니다. 실시간 고객 프로파일을 사용하면 온라인, 오프라인, CRM 및 제3자 데이터를 비롯한 다양한 채널의 데이터를 취합하는 각 개별 고객의 전체 상황을 파악할 수 있습니다. [!DNL Profile] 고객 데이터를 하나의 통합 뷰로 통합하여 고객 상호 작용에 대해 실행 가능하고 타임스탬프가 지정된 계정을 제공할 수 있습니다.
+
+**새로운 기능**
+
+| 기능 | 설명 |
+| ------- | ----------- |
+| 프로필 저장소에서 데이터 집합 삭제 | Experience Platform Data Lake에서 데이터 세트를 삭제하면 이 데이터 세트는 프로필 저장소에서도 자동으로 삭제됩니다. 프로필 저장소에서 데이터 집합을 명시적으로 삭제하기 위해 프로필 시스템 작업 API 끝점을 사용하여 삭제 요청을 할 필요가 없습니다. 자세한 내용은 [프로필 시스템 작업 API 끝점 안내서](../../profile/api/profile-system-jobs.md)를 참조하십시오. |
+| 지정된 세그먼트에 대한 예상 ID 네임스페이스 수 | 예상 프로필 수에 대해 미리 보기 API가 이제 다음과 같이 보고합니다.<ul><li>지정된 네임스페이스에 대한 세그먼트에서 예상 프로필의 총 수입니다.</li><li>지정된 네임스페이스에 대한 프로필 조합 스키마의 예상 프로필의 총 수입니다.</li></ul>자세한 내용은 [프로필 미리 보기 API 끝점 안내서](../../profile/api/preview-sample-status.md)를 참조하십시오. |
+
+[!DNL Profile] 데이터 작업에 대한 자습서 및 모범 사례를 포함하여 실시간 고객 프로파일에 대한 자세한 내용은 [실시간 고객 프로필 개요](../../profile/home.md)를 읽으십시오.
 
 ## [!DNL Sources] {#sources}
 
