@@ -2,12 +2,12 @@
 keywords: Experience Platform;홈;인기 항목;세그멘테이션;세그멘테이션 서비스;세그먼트 정의;세그먼트 정의;api;API;home;popular topmentation;segmentation Service;segmentation definition;api;API
 solution: Experience Platform
 title: 세그먼트 정의 API 끝점
-topic: developer guide
+topic: 개발자 가이드
 description: Adobe Experience Platform 세그멘테이션 서비스 API의 세그먼트 정의 끝점을 사용하여 조직의 세그먼트 정의를 프로그래밍 방식으로 관리할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 24a5af0440f58b4e1db639ec971c4e1611f107d8
 workflow-type: tm+mt
-source-wordcount: '1080'
+source-wordcount: '1124'
 ht-degree: 3%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 3%
 
 Adobe Experience Platform을 사용하면 프로필 그룹에서 특정 특성 또는 비헤이비어 그룹을 정의하는 세그먼트를 만들 수 있습니다. 세그먼트 정의는 [!DNL Profile Query Language](PQL)에 작성된 쿼리를 캡슐화하는 객체입니다. 이 객체를 PQL 조건자라고도 합니다. PQL은 [!DNL Real-time Customer Profile]에 제공하는 레코드 또는 시계열 데이터와 관련된 조건에 따라 세그먼트의 규칙을 정의합니다. PQL 쿼리 작성에 대한 자세한 내용은 [PQL 안내서](../pql/overview.md)를 참조하십시오.
 
-이 안내서에서는 세그먼트 정의를 더 잘 이해할 수 있도록 정보를 제공하며 API를 사용한 기본 작업을 수행하기 위한 샘플 API 호출을 포함합니다.
+이 안내서에서는 세그먼트 정의를 더 잘 이해할 수 있도록 정보를 제공하며 API를 사용하여 기본 작업을 수행하기 위한 샘플 API 호출을 포함합니다.
 
 ## 시작하기
 
@@ -197,6 +197,12 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 | `expression.format` | 값에서 표현식의 구조를 나타냅니다. 현재 지원되는 형식은 다음과 같습니다. <ul><li>`pql/text`:게시된 PQL 문법에 따라 세그먼트 정의에 대한 텍스트 표현입니다.  예: `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
 | `expression.value` | `expression.format`에 지정된 유형을 따르는 표현식입니다. |
 | `description` | 그 정의에 대한 사람이 읽을 수 있는 설명입니다. |
+
+>[!NOTE]
+>
+>세그먼트 정의 표현식은 계산된 속성을 참조할 수도 있습니다. 자세한 내용은 [계산된 특성 API 끝점 안내서](../../profile/computed-attributes/ca-api.md)를 참조하십시오.
+>
+>계산된 속성 기능은 알파에 있으며 일부 사용자는 사용할 수 없습니다. 설명서 및 기능은 변경될 수 있습니다.
 
 **응답**
 
