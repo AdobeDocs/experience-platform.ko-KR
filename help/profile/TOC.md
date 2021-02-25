@@ -4,10 +4,10 @@ audience: user
 user-guide-title: Real-time Customer Profile 안내서
 user-guide-description: 고객 데이터를 통합하여 다양한 채널에서 고객과의 상호 작용을 종합적으로 파악합니다.
 translation-type: tm+mt
-source-git-commit: cab7ba65cc62d8cab402bc23ea38c17d77841363
+source-git-commit: 08eff53f107549fab0f167a6c206b632f3c8c183
 workflow-type: tm+mt
-source-wordcount: '111'
-ht-degree: 20%
+source-wordcount: '122'
+ht-degree: 19%
 
 ---
 
@@ -20,7 +20,6 @@ ht-degree: 20%
 * [!DNL Profile] API {#api}
    * [개요](api/overview.md)
    * [시작하기](api/getting-started.md)
-   * [(알파) 계산된 속성](api/computed-attributes.md)
    * [가장자리 예상](api/edge-projections.md)
    * [엔티티([!DNL Profile] 액세스)](api/entities.md)
    * [내보내기 작업([!DNL Profile] 내보내기)](api/export-jobs.md)
@@ -35,6 +34,11 @@ ht-degree: 20%
    * [병합 정책 만들기(비디오)](video/create-merge-policies.md)
    * [조합 스키마 UI 가이드](ui/union-schema.md)
    * [결합 스키마 개요(비디오)](video/union-schemas-overview.md)
+* (알파) 계산된 특성 {#computed-attributes}
+   * [개요](computed-attributes/overview.md)
+   * [계산된 특성 API](computed-attributes/ca-api.md)
+   * [계산된 속성 필드 구성](computed-attributes/configure-api.md)
+   * [샘플 표현식](computed-attributes/expressions.md)
 * 자습서 {#tutorials}
    * [데이터 추가 위치 [!DNL Profile]](tutorials/add-profile-data.md)
    * [서비스용 데이터 세트  [!DNL Profile] & [!DNL Identity] 구성](tutorials/dataset-configuration.md)
