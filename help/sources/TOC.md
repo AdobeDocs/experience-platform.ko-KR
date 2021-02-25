@@ -5,9 +5,9 @@ user-guide-title: Adobe Experience Platform 소스 커넥터 도움말
 breadcrumb-title: Source Connectors 안내서
 user-guide-description: 다양한 소스 또는 구조에서 데이터를 수집하고 레이블을 지정하며 기존에 수집한 데이터를 향상시킬 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 0e4fda4abf5c02df81b74f15d2fbcafb68548070
+source-git-commit: f3b27fbe75af7499f4ce43d8904d2f7e01384cb3
 workflow-type: tm+mt
-source-wordcount: '572'
+source-wordcount: '574'
 ht-degree: 13%
 
 ---
@@ -53,7 +53,7 @@ ht-degree: 13%
       - [Azure HDInsights 커넥터의 Apache Hive](connectors/databases/hive.md)
       - [Azure HDInsights 커넥터의 Apache Spark](connectors/databases/spark.md)
       - [Azure Data Explorer 커넥터](connectors/databases/data-explorer.md)
-      - [Azure Synapse 분석 커넥터](connectors/databases/synapse-analytics.md)
+      - [azure synapse 분석 커넥터](connectors/databases/synapse-analytics.md)
       - [Azure 테이블 저장소 커넥터](connectors/databases/ats.md)
       - [Couchbase 커넥터](connectors/databases/couchbase.md)
       - [Google BigQuery 커넥터](connectors/databases/bigquery.md)
@@ -101,7 +101,7 @@ ht-degree: 13%
          - [Azure HDInsights의 Apache Hive](tutorials/api/create/databases/hive.md)
          - [Azure HDInsights의 Apache Spark](tutorials/api/create/databases/spark.md)
          - [Azure Data Explorer](tutorials/api/create/databases/data-explorer.md)
-         - [Azure Synapse 분석](tutorials/api/create/databases/synapse-analytics.md)
+         - [azure synapse 분석](tutorials/api/create/databases/synapse-analytics.md)
          - [Azure 테이블 저장소](tutorials/api/create/databases/ats.md)
          - [Couchbase](tutorials/api/create/databases/couchbase.md)
          - [Google BigQuery](tutorials/api/create/databases/bigquery.md)
@@ -148,6 +148,7 @@ ht-degree: 13%
    - [데이터 집합 연결 만들기](tutorials/api/create-dataset-base-connection.md)
    - [데이터 흐름 모니터링](tutorials/api/monitor.md)
    - [연결 업데이트](tutorials/api/update.md)
+   - [데이터 흐름 업데이트](tutorials/api/update-dataflows.md)
    - [연결 삭제](tutorials/api/delete.md)
    - [데이터 흐름 삭제](tutorials/api/delete-dataflows.md)
 - UI 자습서 {#ui-tutorials}
@@ -184,7 +185,7 @@ ht-degree: 13%
          - [Azure HDInsights의 Apache Hive](tutorials/ui/create/databases/hive.md)
          - [Azure HDInsights의 Apache Spark](tutorials/ui/create/databases/spark.md)
          - [Azure Data Explorer](tutorials/ui/create/databases/data-explorer.md)
-         - [Azure Synapse 분석](tutorials/ui/create/databases/synapse-analytics.md)
+         - [azure synapse 분석](tutorials/ui/create/databases/synapse-analytics.md)
          - [Azure 테이블 저장소](tutorials/ui/create/databases/ats.md)
          - [Couchbase](tutorials/ui/create/databases/couchbase.md)
          - [Google Big Query](tutorials/ui/create/databases/bigquery.md)
