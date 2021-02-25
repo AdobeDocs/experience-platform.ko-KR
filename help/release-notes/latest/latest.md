@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: February 24, 2021
 author: ens70167
 translation-type: tm+mt
-source-git-commit: d3151d9ccaf61e6ec1a88e147f3694292e953de0
+source-git-commit: a2470d44512821996a2d5ee44722cb24990d1054
 workflow-type: tm+mt
-source-wordcount: '770'
-ht-degree: 6%
+source-wordcount: '1069'
+ht-degree: 7%
 
 ---
 
@@ -17,13 +17,28 @@ ht-degree: 6%
 
 **릴리스 날짜: 2021년 2월 24일**
 
+Adobe Experience Platform의 새로운 기능:
+
+- [(베타) 대시보드](#dashboards)
+
 Adobe Experience Platform의 기존 기능 업데이트:
 
 - [[!DNL Data Science Workspace]](#dsw)
 - [[!DNL Dataflows]](#dataflows)
 - [[!DNL Experience Data Model (XDM) System]](#xdm)
 - [[!DNL Identity Service]](#identity)
+- [[!DNL Real-time Customer Profile]](#profile)
 - [[!DNL Sources]](#sources)
+
+## (베타) 대시보드 {#dashboards}
+
+Adobe Experience Platform은 일별 스냅샷 중에 캡처된 조직의 데이터에 대한 중요한 정보를 볼 수 있는 여러 개의 대시보드를 제공합니다.
+
+**새로운 기능**
+
+| 기능 | 설명 |
+| --- | --- |
+| 프로필, 세그먼트, 대상 및 라이센스 사용 대시보드(베타) | **참고:대시보드 기능은 현재 베타 버전이며 일부 사용자는 사용할 수 없습니다. 설명서 및 기능은 변경될 수 있습니다.**<br/><br/>&#x200B;대시보드는 조직의 데이터에 대한 즉시 보고를 제공하며 Platform의 마케터 워크플로우에 직접 구축됩니다. 이러한 대시보드는 추가 IT 지원이 필요하거나 추가 데이터 웨어하우징 설계 및 구현을 통해 데이터를 내보내고 처리하는 데 소요되는 시간 및 노력 없이도 사용할 수 있습니다. |
 
 ## [!DNL Data Science Workspace] {#dsw}
 
@@ -78,6 +93,18 @@ Adobe Experience Platform [!DNL Identity Service]을(를) 사용하면 디바이
 | ID 그래프 뷰어 | ID 그래프 뷰어를 사용하면 UI에서 서로 연결된 ID의 유효성을 확인하고 시각화하여 디버깅과 투명도를 개선할 수 있습니다. 자세한 내용은 [ID 그래프 뷰어 문서](../../identity-service/ui/identity-graph-viewer.md)를 참조하십시오. |
 
 [!DNL Identity Service]에 대한 자세한 내용은 [ID 서비스 개요](../../identity-service/home.md)를 참조하십시오.
+
+## 실시간 고객 프로필 {#profile}
+
+Adobe Experience Platform을 사용하면 고객이 브랜드와 상호 작용하는 장소 또는 시기와 상관없이 고객의 관심사와 연관성 있는 경험을 일관되게 전달할 수 있습니다. 실시간 고객 프로파일을 사용하면 온라인, 오프라인, CRM 및 제3자 데이터를 비롯한 다양한 채널의 데이터를 취합하는 각 개별 고객의 전체 상황을 파악할 수 있습니다. [!DNL Profile] 고객 데이터를 하나의 통합 뷰로 통합하여 고객 상호 작용에 대해 실행 가능하고 타임스탬프가 지정된 계정을 제공할 수 있습니다.
+
+**새로운 기능**
+
+| 기능 | 설명 |
+| ------- | ----------- |
+| 계산된 속성(알파) | ***참고:이 기능은 현재 알파에 있으며 일부 사용자는 사용할 수 없습니다. 설명서 및 기능은 변경될 수 있습니다.*** <br/><br/>계산된 속성은 이벤트 수준 데이터를 프로필 수준 속성으로 집계하는 데 사용되는 함수입니다. 그런 다음 세그먼트를 세분화, 활성화 및 개인화에서 집계물을 사용할 수 있습니다. 이러한 함수의 일부 예에는 count, sum, average, min, max, true/false가 있습니다. 계산된 속성은 현재 API를 통해서만 사용할 수 있습니다. 자세한 내용은 [계산된 특성 개요](../../profile/computed-attributes/overview.md)를 참조하십시오. |
+
+[!DNL Profile] 데이터 작업에 대한 자습서 및 모범 사례를 포함하여 실시간 고객 프로파일에 대한 자세한 내용은 [실시간 고객 프로필 개요](../../profile/home.md)를 읽으십시오.
 
 ## [!DNL Sources] {#sources}
 
