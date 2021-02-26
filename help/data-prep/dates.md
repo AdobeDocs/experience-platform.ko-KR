@@ -1,21 +1,39 @@
 ---
-keywords: Experience Platform;홈;인기 항목;csv;맵 csv;csv 파일;csv 파일을 xdm에 매핑;csv를 xdm;ui 안내서;매퍼;날짜;날짜;날짜 함수;날짜;Analytics;home;popular csv;map csv;mapper;mapping;date functions;date;date
+keywords: Experience Platform;홈;인기 항목;csv;맵 csv;csv 파일;csv 파일을 xdm에 매핑;csv를 xdm;ui 안내서;매퍼;날짜;날짜 함수;날짜;날짜 함수;날짜;날짜;날짜 함수
 solution: Experience Platform
 title: 데이터 준비 날짜 함수
-topic: overview
+topic: 개요
 description: 이 문서에서는 데이터 준비와 함께 사용되는 날짜 함수를 소개합니다.
 translation-type: tm+mt
-source-git-commit: 37c1c98ccba50fa917acc5e93763294f4dde5c36
+source-git-commit: d3531248f8a7116b66f9a7ca00e0eadbc3d9df3d
 workflow-type: tm+mt
-source-wordcount: '415'
-ht-degree: 16%
+source-wordcount: '483'
+ht-degree: 15%
 
 ---
 
 
-# 데이터 준비 날짜 함수
+# 날짜 함수
 
 데이터 준비에서는 문자열 및 datetime 객체로 날짜 함수를 지원합니다.
+
+## 날짜 함수 형식
+
+date 함수는 문자열 및 datetime 개체를 ISO 8601 형식의 ZunkedDateTime 개체로 변환합니다.
+
+**형식**
+
+```http
+date({DATE}, {FORMAT}, {DEFAULT_DATE})
+```
+
+| 매개 변수 | 설명 |
+| --------- | ----------- |
+| `{DATE}` | 필수 여부. 날짜를 나타내는 문자열. |
+| `{FORMAT}` | 선택 사항. 날짜 형식을 나타내는 문자열입니다. 문자열 서식에 대한 자세한 내용은 [date/time format 문자열 섹션](#format)에서 확인할 수 있습니다. |
+| `{DEFAULT_DATE}` | 선택 사항. 제공된 날짜가 null일 경우 반환할 기본 날짜입니다. |
+
+예를 들어 `date(orderDate, "yyyy-MM-dd")` 표현식은 `orderDate` 값 &quot;2020년 12월 31일&quot;을 &quot;2020-12-31&quot;의 datetime 값으로 변환합니다.
 
 ## 날짜 함수 변환
 
@@ -46,7 +64,7 @@ ht-degree: 16%
 >
 > 데이터 준비에서는 문자열을 가능한 한 날짜로 변환하려고 합니다. 그러나 이러한 전환으로 인해 바람직하지 않은 결과가 발생할 수 있습니다. 예를 들어 문자열 값 &quot;12112020&quot;은 &quot;MmDyyyyy&quot; 패턴과 일치하지만 사용자가 날짜를 &quot;ddMmYYYY&quot; 패턴으로 읽도록 의도했을 수 있습니다. 따라서 사용자는 문자열의 날짜 형식을 명시적으로 언급해야 합니다.
 
-## 날짜/시간 형식 문자열
+## 날짜/시간 형식 문자열 {#format}
 
 다음 표는 형식 문자열에 대해 정의된 패턴 문자를 보여줍니다. 문자는 대/소문자를 구분합니다.
 
@@ -77,7 +95,3 @@ ht-degree: 16%
 | V | 시간대 ID | 텍스트 | 미국/로스앤젤레스(_A) |
 | O | 시간대 오프셋 | 텍스트 | GMT+8 |
 | Q/q | 연중 분기 | 숫자/텍스트 | 3.03;3분기;3분기 |
-
-**예**
-
-`date(orderDate, "yyyy-MM-dd")` 표현식은 `orderDate` 값 &quot;2020년 12월 31일&quot;을 &quot;2020-12-31&quot;의 datetime 값으로 변환합니다.
