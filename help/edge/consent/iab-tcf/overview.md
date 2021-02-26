@@ -3,7 +3,7 @@ title: Adobe Experience Platform 웹 SDK에서 IAB TCF 2.0 지원
 description: Adobe Experience Platform 웹 SDK를 사용하여 IAB TCF 2.0 동의 환경 설정을 지원하는 방법에 대해 알아봅니다.
 keywords: 동의;setConsent;프로필 개인 정보 혼합;경험 이벤트 개인 정보 혼합;개인 정보 혼합;IAB TCF 2.0;실시간 CDP;실시간 고객 데이터 프로필
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 1c6238a0cf72230e019fd10d9a72f30444bd9fb9
 workflow-type: tm+mt
 source-wordcount: '878'
 ht-degree: 0%
@@ -66,7 +66,7 @@ XDM 경험 이벤트를 분석 히트로 변환하는 방법에 대한 자세한
 
 기본 동의는 고객에 대해 이미 저장된 동의 환경 설정이 없을 때 사용됩니다. 즉, 기본 동의 옵션은 Adobe Experience Platform 웹 SDK의 비헤이비어를 제어할 수 있고 고객의 지역에 따라 변경할 수 있습니다.
 
-예를 들어, GDPR(General Data Protection Regulation)의 관할권이 아닌 고객이 있는 경우, 기본 동의는 `in`로 설정될 수 있지만, GDPR의 관할권 내에서는 기본 동의를 `pending`로 설정할 수 있습니다. 클라우드 관리 플랫폼(CMP)은 고객의 지역을 감지하고 IAB TCF 2.0에 플래그 `gdprApplies`을 제공할 수 있습니다. 이 플래그를 사용하여 기본 동의를 설정할 수 있습니다.
+예를 들어, GDPR(General Data Protection Regulation)의 관할권이 아닌 고객이 있는 경우, 기본 동의는 `in`로 설정될 수 있지만, GDPR의 관할권 내에서는 기본 동의를 `pending`로 설정할 수 있습니다. CMP(동의 관리 플랫폼)은 고객의 지역을 감지하고 IAB TCF 2.0에 플래그 `gdprApplies`를 제공할 수 있습니다. 이 플래그를 사용하여 기본 동의를 설정할 수 있습니다.
 
 기본 동의에 대한 자세한 내용은 SDK 구성 설명서의 [기본 동의 섹션](../../fundamentals/configuring-the-sdk.md#default-consent)을 참조하십시오.
 
