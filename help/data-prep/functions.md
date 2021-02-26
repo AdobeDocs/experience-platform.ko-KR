@@ -2,12 +2,12 @@
 keywords: Experience Platform;홈;인기 항목;csv;맵 csv;csv 파일;csv 파일을 xdm에 매핑;csv를 xdm;ui 안내서;매퍼;매핑;매핑 필드;매핑 기능;매핑 함수
 solution: Experience Platform
 title: 데이터 준비 매핑 함수
-topic: overview
+topic: 개요
 description: 이 문서에서는 데이터 준비와 함께 사용되는 매핑 함수를 소개합니다.
 translation-type: tm+mt
-source-git-commit: 49124d58fffa3670b332fab07843f2ef3db65f79
+source-git-commit: fd2dffd5b8957833b670e9cb434517bcb0f886a3
 workflow-type: tm+mt
-source-wordcount: '3609'
+source-wordcount: '3625'
 ht-degree: 3%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 3%
 
 필드 이름이 이 규칙을 따르지 않으면 필드 이름은 `${}`으로 둘러싸야 합니다. 예를 들어 필드 이름이 &quot;이름&quot; 또는 &quot;이름&quot;인 경우 이름이 각각 `${First Name}` 또는 `${First.Name}`과 같이 둘러싸야 합니다.
 
-또한 필드 이름은 다음 예약된 키워드의 **임의의**&#x200B;이므로 `${}`로 둘러싸야 합니다.
+또한 필드 이름이 다음 예약 키워드의 **임의의**&#x200B;인 경우 `${}`로 둘러싸야 합니다.
 
 ```console
 new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continue, else, and, ne, true, le, if, ge, return
@@ -103,7 +103,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 >[!NOTE]
 >
->표의 전체 내용을 보려면 왼쪽/오른쪽으로 스크롤하십시오.
+>표의 전체 내용을 보려면 왼쪽/오른쪽으로 스크롤하십시오. `date` 함수에 대한 자세한 내용은 [date 함수 안내서](./dates.md)에서 확인할 수 있습니다.
 
 | 함수 | 설명 | 매개 변수 | 구문 | 표현식 | 샘플 출력 |
 -------- | ----------- | ---------- | -------| ---------- | -------------
