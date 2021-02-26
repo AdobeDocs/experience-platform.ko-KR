@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: February 24, 2021
 author: ens70167
 translation-type: tm+mt
-source-git-commit: a2470d44512821996a2d5ee44722cb24990d1054
+source-git-commit: c1fed1ff4be5f32a93b41a74bb4c541813907354
 workflow-type: tm+mt
-source-wordcount: '1069'
+source-wordcount: '1126'
 ht-degree: 7%
 
 ---
@@ -65,6 +65,16 @@ Adobe Experience Platform에서 데이터는 다양한 소스에서 수집되어
 | 신규 모니터링 대시보드 | 이제 모니터링 대시보드를 사용하여 소스 데이터 가져오기 작업을 위한 크로스 서비스 투명도와 실행 가능한 통찰력을 얻을 수 있습니다. 새로운 모니터링 대시보드에서는 처리 속도, 성공 및 실패를 모니터링할 수 있는 동시에 [!DNL Data Lake]에서 [!DNL Identity Service] 및 [!DNL Profile]로 처리된 데이터를 포괄적으로 볼 수 있습니다. 자세한 내용은 UI](../../dataflows/ui/monitor-sources.md)에서 소스 데이터 흐름 모니터링에 대한 자습서를 참조하십시오.[ |
 
 데이터 흐름에 대한 자세한 내용은 [데이터 흐름 개요](../../dataflows/home.md)를 참조하십시오.
+
+## [!DNL Destinations] {#destinations}
+
+[!DNL Destinations] Adobe Experience Platform의 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과의 사전 구축된 통합입니다. 대상을 사용하여 크로스채널 마케팅 캠페인, 이메일 캠페인, 타깃팅된 광고 및 기타 여러 가지 사용 사례에 대해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
+
+**새 대상**
+
+| 대상 | 설명 |
+| ----------- | ----------- |
+| [[!DNL LinkedIn Matched Audiences]](../../destinations/catalog/social/linkedin.md) | [!DNL LinkedIn Matched Audiences] 연결을 사용하면 [!DNL LinkedIn] 소셜 플랫폼에서 대상을 활성화할 수 있습니다. |
 
 ## [!DNL Experience Data Model (XDM) System] {#xdm}
 
