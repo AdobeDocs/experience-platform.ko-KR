@@ -3,21 +3,15 @@ keywords: facebook 연결;facebook 연결;facebook 대상;facebook;instagram;mes
 title: Facebook 연결
 description: 해시 처리된 이메일을 기반으로 고객 타깃팅, 개인화 및 억제를 위해 Facebook 캠페인에 대한 프로필을 활성화합니다.
 translation-type: tm+mt
-source-git-commit: 28cfac3d7fed311d9eec01ef464cf921f44a10e9
+source-git-commit: bec44832a235dd3f9e2ee0f3ffc77854ee5784d7
 workflow-type: tm+mt
-source-wordcount: '1001'
+source-wordcount: '942'
 ht-degree: 3%
 
 ---
 
 
 # [!DNL Facebook] 연결
-
->[!IMPORTANT]
->
->현재 고객을 이 대상의 새 버전인 [!DNL Facebook Custom Audience]으로 마이그레이션하고 있습니다.
->
-> 이 문서의 지침은 다음 메모와 함께 두 버전 모두에 적용됩니다.이 마이그레이션이 진행되는 동안 사용자 인터페이스에 [!DNL Facebook] 대상의 현재 버전만 표시됩니다. 이 경우 활성화에는 [!UICONTROL EMAIL] 및 [!UICONTROL EMAIL_LC_SHA_256] ID만 사용할 수 있습니다.
 
 해시 처리된 이메일을 기반으로 고객 타깃팅, 개인화 및 억제를 위해 [!DNL Facebook] 캠페인에 대한 프로파일을 활성화합니다.
 
