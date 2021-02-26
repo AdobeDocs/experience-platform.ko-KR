@@ -2,13 +2,13 @@
 keywords: Experience Platform;home;popular topics;streaming ingestion;ingestion;time series data;stream time series time series data
 solution: Experience Platform
 title: 스트리밍 통합 API를 사용한 스트림 시간 시리즈 데이터
-topic: tutorial
-type: Tutorial
+topic: 자습서
+type: 튜토리얼
 description: 이 자습서는 Adobe Experience Platform 데이터 통합 서비스 API의 일부인 스트리밍 통합 API를 사용하는 데 도움이 됩니다.
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: d3531248f8a7116b66f9a7ca00e0eadbc3d9df3d
 workflow-type: tm+mt
-source-wordcount: '1236'
+source-wordcount: '1313'
 ht-degree: 2%
 
 ---
@@ -316,9 +316,11 @@ POST /collection/{CONNECTION_ID}?synchronousValidation=true
 
 아래 예시 요청은 소스 이름이 누락된 시간 시리즈 데이터를 플랫폼에 인제스트합니다. 데이터에 소스 이름이 없으면 스트리밍 연결 정의에서 소스 ID가 추가됩니다.
 
->[!NOTE]
+>[!IMPORTANT]
 >
->자신의 `xdmEntity._id` 및 `xdmEntity.timestamp`을(를) 생성해야 합니다. ID를 생성하는 좋은 방법은 UUID를 사용하는 것입니다. 또한 다음 API 호출은 **인증 헤더가 필요하지 않습니다.**
+>자신의 `xdmEntity._id` 및 `xdmEntity.timestamp`을(를) 생성해야 합니다. ID를 생성하는 좋은 방법은 데이터 준비에서 UUID 함수를 사용하는 것입니다. UUID 함수에 대한 자세한 내용은 [데이터 준비 함수 안내서](../../data-prep/functions.md)에서 확인할 수 있습니다. `xdmEntity._id` 속성은 레코드 자체의 고유 식별자, 레코드가 있는 개인 또는 장치의 고유 ID가 아닌 **을(를) 나타냅니다.** 개인 또는 장치 ID는 스키마의 개인 또는 장치 식별자로 지정된 특성에 따라 다릅니다.
+>
+>`xdmEntity._id` 및 `xdmEntity.timestamp` 모두 시간 시리즈 데이터에 대한 유일한 필수 필드입니다. 또한 다음 API 호출은 **인증 헤더가 필요하지 않습니다.**
 
 ```shell
 curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValidation=true \
