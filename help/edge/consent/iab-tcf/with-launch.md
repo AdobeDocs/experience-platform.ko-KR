@@ -2,9 +2,9 @@
 title: platform launch 및 Platform Web SDK Extension을 사용하여 IAB TCF 2.0 지원 통합
 description: Adobe Experience Platform Launch 및 Adobe Experience Platform Web SDK 익스텐션을 사용하여 IAB TCF 2.0 동의를 설정하는 방법을 알아봅니다.
 translation-type: tm+mt
-source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
+source-git-commit: 1a51ce92eb5c41ff65ebcf4c652640dd0782487f
 workflow-type: tm+mt
-source-wordcount: '834'
+source-wordcount: '836'
 ht-degree: 0%
 
 ---
@@ -24,13 +24,9 @@ Experience Platform Launch 및 Platform Web SDK 확장 기능이 있는 IAB TCF 
 
 ## 기본 동의 설정
 
-확장 구성 내에 기본 동의에 대한 설정이 있습니다. 동의 쿠키가 없는 고객의 행동을 제어합니다. 동의 쿠키가 없는 고객의 경험 이벤트를 대기시키려면 `pending`으로 설정합니다.
+확장 구성 내에 기본 동의에 대한 설정이 있습니다. 동의 쿠키가 없는 고객의 행동을 제어합니다. 동의 쿠키가 없는 고객의 경험 이벤트를 대기시키려면 `pending`으로 설정합니다. 데이터 요소를 사용하여 기본 동의 값을 동적으로 설정할 수도 있습니다.
 
->[!NOTE]
->
->현재 Experience Platform Launch 확장을 통해 동적으로 설정할 수 있는 방법이 없습니다.
-
-기본 동의에 대한 자세한 내용은 SDK 구성 설명서의 [기본 동의 섹션](../../fundamentals/configuring-the-sdk.md#default-consent)을 참조하십시오.
+기본 동의를 구성하는 방법에 대한 자세한 내용은 SDK 구성 안내서의 [기본 동의 섹션](../../fundamentals/configuring-the-sdk.md#default-consent)을 참조하십시오.
 
 ## 동의 정보 {#consent-code-1}(으)로 프로필 업데이트
 
@@ -69,7 +65,7 @@ addEventListener();
 * 값:&quot;%IAB TCF 동의 문자열%&quot;
 * GDPR 적용:&quot;%IAB TCF 동의 GDPR%&quot;
 
-![IAB 설정 동의 조치](../../../assets/iab_set_consent_action.png)
+![IAB 설정 동의 조치](../../images/consent/iab-tcf/with-launch/iab-action.png)
 
 >[!IMPORTANT]
 >
