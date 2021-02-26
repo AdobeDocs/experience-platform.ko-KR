@@ -2,13 +2,13 @@
 keywords: Experience Platform;홈;인기 항목;이벤트 허브;Azure 이벤트 허브;이벤트 허브
 solution: Experience Platform
 title: 흐름 서비스 API를 사용하여 Azure 이벤트 허브 원본 연결 만들기
-topic: overview
-type: Tutorial
+topic: 개요
+type: 튜토리얼
 description: 흐름 서비스 API를 사용하여 Adobe Experience Platform을 Azure 이벤트 허브 계정에 연결하는 방법을 알아봅니다.
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 4f3d88e1241fd19dc9963f34dd60086ae2135557
 workflow-type: tm+mt
-source-wordcount: '566'
+source-wordcount: '568'
 ht-degree: 2%
 
 ---
@@ -90,7 +90,7 @@ curl -X POST \
         "name": "Azure Event Hubs connection",
         "description": "Connector for Azure Event Hubs",
         "auth": {
-            "specName": "Basic Authentication for Event Hubs",
+            "specName": "Azure EventHub authentication credentials",
             "params": {
                 "sasKeyName": "sasKeyName",
                 "sasKey": "sasKey",
