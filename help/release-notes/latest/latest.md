@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: February 24, 2021
 author: ens70167
 translation-type: tm+mt
-source-git-commit: c1fed1ff4be5f32a93b41a74bb4c541813907354
+source-git-commit: efa06bec5af65240fdd586da4fd0439b8d1146b8
 workflow-type: tm+mt
-source-wordcount: '1126'
+source-wordcount: '1137'
 ht-degree: 7%
 
 ---
@@ -25,6 +25,7 @@ Adobe Experience Platform의 기존 기능 업데이트:
 
 - [[!DNL Data Science Workspace]](#dsw)
 - [[!DNL Dataflows]](#dataflows)
+- [[!DNL Destinations]](#destinations)
 - [[!DNL Experience Data Model (XDM) System]](#xdm)
 - [[!DNL Identity Service]](#identity)
 - [[!DNL Real-time Customer Profile]](#profile)
@@ -75,6 +76,8 @@ Adobe Experience Platform에서 데이터는 다양한 소스에서 수집되어
 | 대상 | 설명 |
 | ----------- | ----------- |
 | [[!DNL LinkedIn Matched Audiences]](../../destinations/catalog/social/linkedin.md) | [!DNL LinkedIn Matched Audiences] 연결을 사용하면 [!DNL LinkedIn] 소셜 플랫폼에서 대상을 활성화할 수 있습니다. |
+
+대상에 대한 자세한 내용은 [대상 개요](../../destinations/home.md)를 참조하십시오.
 
 ## [!DNL Experience Data Model (XDM) System] {#xdm}
 
