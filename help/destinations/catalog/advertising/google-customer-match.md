@@ -3,21 +3,15 @@ keywords: google 고객 일치;Google 고객 일치;Google 고객 일치
 title: Google 고객 일치 연결
 description: Google Customer Match를 사용하면 온라인 및 오프라인 데이터를 사용하여 검색, 쇼핑, Gmail, YouTube 등 Google의 소유물 및 운영 체제에서 고객에게 도달하고 다시 참여할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: bec44832a235dd3f9e2ee0f3ffc77854ee5784d7
 workflow-type: tm+mt
-source-wordcount: '1491'
+source-wordcount: '1432'
 ht-degree: 0%
 
 ---
 
 
 # [!DNL Google Customer Match] 연결
-
->[!IMPORTANT]
->
->현재 고객을 이 대상의 새 버전으로 마이그레이션하고 있습니다.
->
-> 이 문서의 지침은 다음 메모와 함께 두 버전 모두에 적용됩니다.이 마이그레이션이 진행되는 동안 사용자 인터페이스에 [!DNL Google Customer Match] 대상의 현재 버전만 표시됩니다. 이 경우 활성화에는 [!UICONTROL EMAIL] 및 [!UICONTROL EMAIL_LC_SHA_256] ID만 사용할 수 있습니다.
 
 [Google Customer ](https://support.google.com/google-ads/answer/6379332?hl=en) Match를 사용하면 온라인 및 오프라인 데이터를 사용하여 다음과 같이 Google의 소유 및 운영 자산에서 고객에게 도달하고 다시 참여할 수 있습니다. [!DNL Search],  [!DNL Shopping],  [!DNL Gmail]및  [!DNL YouTube]을 참조하십시오.
 
