@@ -2,13 +2,13 @@
 product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform 대시보드 도움말
-breadcrumb-title: 대시보드 가이드
-user-guide-description: 사용자 정의 가능한 대시보드에서 Experience Platform 데이터를 시각화할 수 있습니다.
+breadcrumb-title: 대시보드 안내서
+user-guide-description: 맞춤형 대시보드에서 Experience Platform 데이터를 시각화합니다.
 translation-type: tm+mt
 source-git-commit: 2f2459c1c88c97a3ab322b08ee178463fbb4a592
 workflow-type: tm+mt
 source-wordcount: '34'
-ht-degree: 8%
+ht-degree: 50%
 
 ---
 
