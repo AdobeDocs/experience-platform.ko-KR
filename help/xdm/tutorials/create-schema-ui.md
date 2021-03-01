@@ -2,13 +2,13 @@
 keywords: Experience Platform;홈;인기 항목;UI;XDM;XDM 시스템;경험 데이터 모델;경험 데이터 모델;경험 데이터 모델;데이터 모델;데이터 모델;스키마 편집기;스키마;스키마;스키마;스키마;스키마;만들기;만들기
 solution: Experience Platform
 title: 스키마 편집기를 사용하여 스키마 만들기
-topic: tutorial
-type: Tutorial
-description: 이 자습서에서는 Experience Platform 내의 스키마 편집기를 사용하여 스키마를 만드는 단계를 설명합니다.
+topic: 자습서
+type: 튜토리얼
+description: 이 튜토리얼에서는 Experience Platform 내의 스키마 편집기를 사용하여 스키마를 만드는 단계를 설명합니다.
 translation-type: tm+mt
 source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '3600'
+source-wordcount: '3602'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Adobe Experience Platform 사용자 인터페이스를 사용하면 [!DNL Schema
 이 자습서에서는 스키마 만들기와 관련된 Adobe Experience Platform의 다양한 측면을 파악해야 합니다. 이 자습서를 시작하기 전에 다음 개념에 대한 설명서를 검토하십시오.
 
 * [[!DNL Experience Data Model (XDM)]](../home.md):고객 경험 데이터를  [!DNL Platform] 구성하는 표준화된 프레임워크
-   * [스키마 컴포지션의 기본 사항](../schema/composition.md):클래스, 믹싱, 데이터 유형 및 필드를 비롯한 XDM 스키마 및 구성 요소에 대한 개요입니다.
+   * [스키마 컴포지션의 기본 사항](../schema/composition.md):클래스, 믹싱, 데이터 유형 및 필드를 비롯한 XDM 스키마 및 해당 구성 요소에 대한 개요입니다.
 * [[!DNL Real-time Customer Profile]](../../profile/home.md):여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
 
 ## [!UICONTROL 스키마] 작업 영역 {#browse} 열기
@@ -100,7 +100,7 @@ Adobe Experience Platform 사용자 인터페이스를 사용하면 [!DNL Schema
 
 >[!NOTE]
 >
->필드는 [!DNL Schema Registry] 내에 정의된 데이터 유형(일반적인 개념을 나타내는 필드 그룹)은 물론 문자열, 정수, 배열 또는 날짜와 같은 스칼라 유형을 사용할 수 있습니다.
+>필드는 [!DNL Schema Registry] 내에 정의된 데이터 유형(공통 개념을 나타내는 필드 그룹)은 물론 문자열, 정수, 배열 또는 날짜와 같은 스칼라 유형을 사용할 수 있습니다.
 
 `name` 필드에는 &quot;[!UICONTROL 사람 이름]&quot;의 데이터 유형이 있습니다. 이것은 일반적인 개념을 설명하고 이름, 성, 관례 제목 및 접미어 같은 이름 관련 하위 필드를 포함합니다.
 
@@ -116,7 +116,7 @@ Adobe Experience Platform 사용자 인터페이스를 사용하면 [!DNL Schema
 
 일단 추가되면 캔버스가 다시 나타납니다. &quot;[!UICONTROL 개인 연락처 세부 사항]&quot;이 이제 **[!UICONTROL 컴포지션]** 섹션의 **[!UICONTROL 믹싱]** 아래에 나열되고, 홈 주소, 휴대폰 등의 필드가 **[!UICONTROL 구조]**&#x200B;에 추가되었습니다.
 
-`name` 필드와 유사하게 방금 추가한 필드는 다중 필드 개념을 나타냅니다. 예를 들어 `homeAddress`의 데이터 유형은 &quot;[!UICONTROL 우편 주소]&quot;이고 `mobilePhone`의 데이터 유형은 &quot;[!UICONTROL 전화 번호]&quot;입니다. 이러한 각 필드를 선택하여 확장하고 데이터 유형에 포함된 추가 필드를 볼 수 있습니다.
+`name` 필드와 유사하게 방금 추가한 필드는 다중 필드 개념을 나타냅니다. 예를 들어 `homeAddress`의 데이터 유형은 &quot;[!UICONTROL 우편 주소]&quot;이고 `mobilePhone`의 데이터 유형은 &quot;[!UICONTROL 전화 번호]&quot;입니다. 이러한 필드를 선택하여 확장할 수 있으며 데이터 유형에 포함된 추가 필드를 확인할 수 있습니다.
 
 ![](../images/tutorials/create-schema/personal_details_structure.png)
 
@@ -204,7 +204,7 @@ Adobe Experience Platform 사용자 인터페이스를 사용하면 [!DNL Schema
 >
 >![](../images/tutorials/create-schema/left-rail-special.png)
 
-이 자습서의 경우 스키마에 있는 [!DNL "loyalty"] 개체에는 고객의 &quot;충성도 수준&quot;을 설명하는 새 열거형 필드가 필요합니다. 여기서 이 값은 가능한 4개의 옵션 중 하나만 사용할 수 있습니다. 이 필드를 스키마에 추가하려면 `loyalty` 개체 옆에 있는 **더하기(+)** 아이콘을 선택하고 **[!UICONTROL 필드 이름]** 및 **[!UICONTROL 표시 이름]**&#x200B;에 대한 필수 필드를 채웁니다. **[!UICONTROL 유형]**&#x200B;에 대해 &quot;[!UICONTROL 문자열]&quot;을 선택합니다.
+이 자습서의 경우 스키마에 있는 [!DNL "loyalty"] 객체에는 고객의 &quot;충성도 수준&quot;을 설명하는 새 열거형 필드가 필요합니다. 여기서 이 값은 가능한 4개의 옵션 중 하나만 사용할 수 있습니다. 이 필드를 스키마에 추가하려면 `loyalty` 개체 옆에 있는 **더하기(+)** 아이콘을 선택하고 **[!UICONTROL 필드 이름]** 및 **[!UICONTROL 표시 이름]**&#x200B;에 대한 필수 필드를 채웁니다. **[!UICONTROL 유형]**&#x200B;에 대해 &quot;[!UICONTROL 문자열]&quot;을 선택합니다.
 
 ![](../images/tutorials/create-schema/loyalty-level-type.png)
 
