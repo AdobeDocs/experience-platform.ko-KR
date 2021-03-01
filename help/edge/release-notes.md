@@ -1,12 +1,12 @@
 ---
 title: Adobe Experience Platform Web SDK 릴리스 노트
-description: Adobe Experience Platform 웹 SDK의 최신 릴리스 노트입니다.
+description: Adobe Experience Platform Web SDK에 대한 최신 릴리스 정보입니다.
 keywords: Adobe Experience Platform 웹 SDK;플랫폼 웹 SDK;웹 SDK;릴리스 노트;
 translation-type: tm+mt
 source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
 source-wordcount: '223'
-ht-degree: 5%
+ht-degree: 10%
 
 ---
 
