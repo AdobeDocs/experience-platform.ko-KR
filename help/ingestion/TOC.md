@@ -8,7 +8,7 @@ translation-type: tm+mt
 source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
 source-wordcount: '121'
-ht-degree: 22%
+ht-degree: 25%
 
 ---
 
@@ -16,11 +16,11 @@ ht-degree: 22%
 # Adobe Experience Platform 데이터 통합 {#ingestion}
 
 - [데이터 통합 개요](home.md)
-- 스트리밍 통합 {#streaming}
+- 스트리밍 수집 {#streaming}
    - [개요](streaming-ingestion/overview.md)
    - [Kafka 커넥터](streaming-ingestion/kafka.md)
    - [문제 해결](streaming-ingestion/troubleshooting.md)
-- 일괄 처리{#batch}
+- 일괄 처리 수집{#batch}
    - [개요](batch-ingestion/overview.md)
    - [일괄 처리 통합 API](batch-ingestion/api-overview.md)
    - [부분 일괄 처리](batch-ingestion/partial.md)
