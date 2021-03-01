@@ -3,9 +3,9 @@ title: Adobe Experience Platform 웹 SDK를 사용하여 고객 동의 기본 �
 description: Adobe Experience Platform 웹 SDK를 사용하여 동의 기본 설정을 지원하는 방법을 알아봅니다.
 keywords: 동의;defaultConsent;default consent;setConsent;프로필 개인 정보 혼합;경험 이벤트 개인 정보 혼합;개인 정보 혼합
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 308c10eb0d1f78dad2b8b6158f28d0384a65c78c
 workflow-type: tm+mt
-source-wordcount: '760'
+source-wordcount: '753'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 사용자가 모든 목적으로 액세스하는 경우 SDK는 다음 작업을 수행할 수 있습니다.
 
 * Adobe 서버에서 데이터를 전송합니다.
-* 쿠키 또는 웹 저장소 항목을 읽고 씁니다(사용자의 옵트인 기본 설정을 유지하는 경우는 제외).
+* 쿠키 또는 웹 저장소 항목을 읽고 씁니다.
 
 사용자가 모든 목적을 벗어나는 경우 SDK는 이러한 작업을 수행하지 않습니다.
 
