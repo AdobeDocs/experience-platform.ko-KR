@@ -3,9 +3,9 @@ title: Adobe Experience Platform 웹 SDK 명령 실행
 description: Experience Platform 웹 SDK 명령을 실행하는 방법 알아보기
 keywords: 명령 실행;commandName;Provides;getLibraryInfo;응답 개체;동의;
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 308c10eb0d1f78dad2b8b6158f28d0384a65c78c
 workflow-type: tm+mt
-source-wordcount: '417'
+source-wordcount: '416'
 ht-degree: 2%
 
 ---
@@ -13,7 +13,8 @@ ht-degree: 2%
 
 # 명령 실행
 
-기본 코드가 웹 페이지에 구현되면 SDK로 명령 실행을 시작할 수 있습니다. 명령을 실행하기 전에 외부 파일(합금.js)이 서버에서 로드될 때까지 기다릴 필요가 없습니다. SDK의 로드가 완료되지 않은 경우 명령은 SDK에서 가능한 빨리 큐에 올라가 처리됩니다.
+
+기본 코드가 웹 페이지에 구현되면 SDK로 명령 실행을 시작할 수 있습니다. 명령을 실행하기 전에 외부 파일(`alloy.js`)이 서버에서 로드될 때까지 기다릴 필요가 없습니다. SDK의 로드가 완료되지 않은 경우 명령은 SDK에서 가능한 빨리 큐에 올라가 처리됩니다.
 
 명령은 다음 구문을 사용하여 실행됩니다.
 
