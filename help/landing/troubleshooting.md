@@ -4,12 +4,12 @@ solution: Experience Platform
 title: Adobe Experience Platform FAQ 및 문제 해결 안내서
 description: 자주 묻는 질문에 대한 답변과 Experience Platform에서 일반적인 오류를 해결하기 위한 안내서를 확인하십시오.
 landing-page-description: 자주 묻는 질문에 대한 답변과 Experience Platform에서 일반적인 오류를 해결하기 위한 안내서를 확인하십시오.
-topic: getting started
-type: Documentation
+topic: 시작하기
+type: 설명서
 translation-type: tm+mt
 source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '1994'
+source-wordcount: '1997'
 ht-degree: 4%
 
 ---
@@ -220,7 +220,7 @@ API 요청에서 API 키 헤더(`x-api-key`)가 누락되었을 때 이 오류 �
 }
 ```
 
-이 오류 메시지는 사용자 또는 Adobe I/O 통합(`Authorization` 헤더에서 [액세스 토큰](#how-do-i-get-an-access-token)으로 식별됨)이 `x-gw-ims-org-id` 헤더에서 제공하는 IMS 조직에 대해 [!DNL Experience Platform] API를 호출할 권한이 없는 경우에 표시됩니다. 다시 시도하기 전에 헤더에서 IMS 조직에 대한 올바른 ID를 제공했는지 확인하십시오. 조직 ID를 모르는 경우 [Adobe I/O 콘솔](https://console.adobe.io)에서 찾을 수 있습니다.**통합** 탭에서 **개요** 섹션으로 이동하여 **클라이언트 자격 증명**&#x200B;에서 ID를 찾습니다.
+이 오류 메시지는 사용자 또는 Adobe I/O 통합(`Authorization` 헤더에서 [액세스 토큰](#how-do-i-get-an-access-token)으로 식별됨)이 `x-gw-ims-org-id` 헤더에서 제공하는 IMS 조직에 대해 [!DNL Experience Platform] API를 호출할 권한이 없는 경우에 표시됩니다. 다시 시도하기 전에 헤더에서 IMS 조직에 대한 올바른 ID를 제공했는지 확인하십시오. 조직 ID를 모를 경우 [Adobe I/O 콘솔](https://console.adobe.io)에서 찾을 수 있습니다.**통합** 탭에서 **개요** 섹션으로 이동하여 **클라이언트 자격 증명**&#x200B;에서 ID를 찾습니다.
 
 ### 유효한 콘텐츠 형식을 지정하지 않았습니다.
 
@@ -248,7 +248,7 @@ API 요청에서 API 키 헤더(`x-api-key`)가 누락되었을 때 이 오류 �
 | Adobe Experience Platform 데이터 거버넌스 | [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) |  |
 | Adobe Experience Platform ID 서비스 | [[!DNL Identity Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml) | [[!DNL Identity Service] 문제 해결 안내서](../identity-service/troubleshooting-guide.md) |
 | Adobe Experience Platform 쿼리 서비스 | [[!DNL Query Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/qs-api.yaml) | [[!DNL Query Service] 문제 해결 안내서](../query-service/troubleshooting-guide.md) |
-| Adobe Experience Platform 세그멘테이션 | [[!DNL Segmentation API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml) |
+| Adobe Experience Platform Segmentation | [[!DNL Segmentation API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml) |
 | [!DNL Catalog Service] | [[!DNL Catalog Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) |  |
 | [!DNL Experience Data Model] (XDM) | [[!DNL Schema Registry API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) | [[!DNL XDM System] FAQ 및 문제 해결 가이드](../xdm/troubleshooting-guide.md) |
 | [!DNL Flow Service] ([!DNL Sources] 및 [!DNL Destinations]) | [[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) |  |
