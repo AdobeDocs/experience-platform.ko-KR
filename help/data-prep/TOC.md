@@ -16,5 +16,5 @@ ht-degree: 48%
 
 * [데이터 준비 개요](home.md)
 * [데이터 준비 함수](functions.md)
-* [날짜/시간 개체](dates.md)
+* [Datetime 개체](dates.md)
 * [플랫폼 릴리스 정보](https://www.adobe.com/go/platform-release-notes-en)
