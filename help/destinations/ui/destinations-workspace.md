@@ -4,9 +4,9 @@ title: 대상 작업 공간 개요
 description: 대상 작업 공간은 아래의 섹션에 설명된 4개의 섹션인 카탈로그, 찾아보기, 계정 및 시스템 보기로 구성됩니다.
 seo-description: Adobe Experience Platform의 왼쪽 탐색 막대에서 대상을 선택하여 대상 작업 영역에 액세스합니다.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 9305936ca1e73821b2fe948ff1a17a7168840cba
 workflow-type: tm+mt
-source-wordcount: '910'
+source-wordcount: '939'
 ht-degree: 2%
 
 ---
@@ -97,7 +97,7 @@ Adobe Experience Platform의 왼쪽 탐색 막대에서 **[!UICONTROL 대상]**&
 | [!UICONTROL 대상] | 정품 인증 과정에 대해 선택한 대상 플랫폼입니다. |
 | [!UICONTROL 연결 유형] | 저장소 버킷 또는 대상에 대한 연결 유형을 나타냅니다. <ul><li>이메일 마케팅 대상:S3 또는 FTP일 수 있습니다.</li><li>실시간 광고 대상:서버 간</li></ul> |
 | [!UICONTROL 사용자 이름] | 대상 플로우에 대해 선택한 계정 자격 증명입니다. |
-| [!UICONTROL 세그먼트] | 이 대상에 대해 활성화되는 세그먼트 수입니다. |
+| [!UICONTROL 활성화 데이터] | 이 대상에 대해 활성화되는 세그먼트 수를 나타냅니다. 활성화된 세그먼트에 대한 자세한 내용을 보려면 이 컨트롤을 선택합니다. 활성화된 세그먼트에 대한 자세한 내용은 대상 세부 정보 페이지에서 [활성화 데이터](/help/destinations/ui/destination-details-page.md#activation-data)를 참조하십시오. |
 | [!UICONTROL 작성일] | 대상으로 활성화 흐름이 만들어진 날짜 및 UTC 시간입니다. |
 | [!UICONTROL 상태] | `Active` 또는 `Inactive`. 데이터가 현재 이 대상에 대해 활성화되고 있는지 여부를 나타냅니다. 상태를 편집하려면 [활성화 비활성화](./activate-destinations.md#disable-activation)를 참조하십시오. |
 
