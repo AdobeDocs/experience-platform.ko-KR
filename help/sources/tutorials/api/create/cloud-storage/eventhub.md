@@ -6,7 +6,7 @@ topic: 개요
 type: 튜토리얼
 description: 흐름 서비스 API를 사용하여 Adobe Experience Platform을 Azure 이벤트 허브 계정에 연결하는 방법을 알아봅니다.
 translation-type: tm+mt
-source-git-commit: 4f3d88e1241fd19dc9963f34dd60086ae2135557
+source-git-commit: 643da0981b3c955a9f66b6542ddaf2bda7398a2e
 workflow-type: tm+mt
 source-wordcount: '568'
 ht-degree: 2%
@@ -92,9 +92,9 @@ curl -X POST \
         "auth": {
             "specName": "Azure EventHub authentication credentials",
             "params": {
-                "sasKeyName": "sasKeyName",
-                "sasKey": "sasKey",
-                "namespace": "namespace"
+                "sasKeyName": "{SAS_KEY_NAME}",
+                "sasKey": "{SAS_KEY}",
+                "namespace": "{NAMESPACE}"
             }
         },
         "connectionSpec": {
