@@ -6,9 +6,9 @@ topic: 개요
 type: 튜토리얼
 description: Flow Service API를 사용하여 Adobe Experience Platform을 Amazon Kinesis 계정에 연결하는 방법을 알아봅니다.
 translation-type: tm+mt
-source-git-commit: 4f3d88e1241fd19dc9963f34dd60086ae2135557
+source-git-commit: ed14fe464a4dc82f54902c8dc92fe00bc2a5381e
 workflow-type: tm+mt
-source-wordcount: '548'
+source-wordcount: '561'
 ht-degree: 2%
 
 ---
@@ -92,8 +92,9 @@ curl -X POST \
         "auth": {
             "specName": "Aws Kinesis authentication credentials",
             "params": {
-                "accessKeyId": "accessKeyId",
-                "secretKey": "secretKey"
+                "accessKeyId": "{ACCESS_KEY_ID}",
+                "secretKey": "{SECRET_KEY}",
+                "region: "{REGION}
             }
         },
         "connectionSpec": {
@@ -107,7 +108,7 @@ curl -X POST \
 | -------- | ----------- |
 | `auth.params.accessKeyId` | [!DNL Kinesis] 계정의 액세스 키 ID입니다. |
 | `auth.params.secretKey` | [!DNL Kinesis] 계정의 비밀 액세스 키. |
-| `auth.params.region` | [!DNL Kinesis] 계정의 영역입니다. |
+| `auth.params.region` | [!DNL Kinesis] 계정의 영역입니다. 지역에 대한 자세한 내용은 [IP 주소 허용 목록](../../../../ip-address-allow-list.md)에 있는 문서를 참조하십시오. |
 | `connectionSpec.id` | [!DNL Kinesis] 연결 사양 ID:`86043421-563b-46ec-8e6c-e23184711bf6` |
 
 **응답**
