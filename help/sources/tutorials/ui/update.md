@@ -3,10 +3,10 @@ keywords: Experience Platform;홈;인기 항목;계정 업데이트
 description: 경우에 따라 기존 소스 계정의 세부 정보를 업데이트해야 할 수 있습니다. 소스 작업 공간에서는 이름, 설명 및 자격 증명을 포함하여 기존 배치 또는 스트리밍 연결의 세부 사항을 추가, 편집 및 삭제할 수 있습니다.
 solution: Experience Platform
 title: UI에서 소스 연결 계정 세부 사항 업데이트
-topic: overview
-type: Tutorial
+topic: 개요
+type: 튜토리얼
 translation-type: tm+mt
-source-git-commit: ac477ee8053b30e88a38800ebe33fc9b5a520308
+source-git-commit: 04cf2cc1f15d9a673a0753643fc6263bcaf41464
 workflow-type: tm+mt
 source-wordcount: '681'
 ht-degree: 1%
@@ -26,8 +26,8 @@ ht-degree: 1%
 
 이 자습서에서는 Adobe Experience Platform의 다음 구성 요소에 대해 작업해야 합니다.
 
-- [소스](../../home.md):DNL Experience Platform을 사용하면 플랫폼 서비스를 사용하여 들어오는 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 다양한 소스에서 데이터를 수집할 수 있습니다.
-- [샌드박스](../../../sandboxes/home.md):DNL Experience Platform은 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되도록 단일 플랫폼 인스턴스를 개별 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
+- [소스](../../home.md):Experience Platform을 사용하면 Platform 서비스를 사용하여 수신 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 다양한 소스에서 데이터를 수집할 수 있습니다.
+- [샌드박스](../../../sandboxes/home.md):Experience Platform은 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되도록 단일 플랫폼 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
 
 ## 계정 업데이트
 
