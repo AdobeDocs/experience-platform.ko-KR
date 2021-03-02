@@ -4,7 +4,7 @@ title: 대상 세부 사항 보기
 description: '개별 대상에 대한 세부 사항 페이지에서는 대상 이름, ID, 대상에 매핑된 세그먼트, 활성화를 편집하고 데이터 흐름을 활성화 및 비활성화하는 컨트롤과 같은 대상 세부 사항에 대한 개요를 제공합니다. '
 seo-description: '개별 대상에 대한 세부 사항 페이지에서는 대상 이름, ID, 대상에 매핑된 세그먼트, 활성화를 편집하고 데이터 흐름을 활성화 및 비활성화하는 컨트롤과 같은 대상 세부 사항에 대한 개요를 제공합니다. '
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 9305936ca1e73821b2fe948ff1a17a7168840cba
 workflow-type: tm+mt
 source-wordcount: '740'
 ht-degree: 1%
@@ -79,7 +79,7 @@ Adobe Experience Platform 사용자 인터페이스에서 대상의 속성 및 �
 
 ![](../assets/ui/details-page/dataflow.png)
 
-## [!UICONTROL 정품 인증 데이터]
+## [!UICONTROL 정품 인증 데이터] {#activation-data}
 
 [!UICONTROL 활성화 데이터] 탭에는 시작 날짜 및 종료 날짜(해당하는 경우)를 포함하여 대상에 매핑된 세그먼트 목록이 표시됩니다. 특정 세그먼트에 대한 세부 사항을 보려면 목록에서 해당 이름을 선택합니다.
 
