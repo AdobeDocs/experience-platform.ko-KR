@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 웹 SDK 확장의 데이터 요소 유형
 description: Adobe Experience Platform Launch의 Adobe Experience Platform Web SDK 익스텐션에서 제공하는 다양한 데이터 요소 유형에 대해 알아보십시오.
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 2a0ae9541a8bb2bb985d43a402d0842e73b23c81
 workflow-type: tm+mt
-source-wordcount: '318'
-ht-degree: 78%
+source-wordcount: '305'
+ht-degree: 47%
 
 ---
 
@@ -22,18 +22,18 @@ ht-degree: 78%
 
 ## ID 맵
 
-이 ID 맵 데이터 요소를 사용하면 다른 데이터 요소 또는 지정한 다른 값에서 ID를 만들 수 있습니다. 만드는 모든 ID는 해당 네임스페이스에 다시 연결해야 합니다. 이 데이터 요소는 사용자가 만든 모든 기본 네임스페이스와 모든 기본 네임스페이스를 표시하는 드롭다운을 제공합니다.
+이 ID 맵 데이터 요소를 사용하면 다른 데이터 요소 또는 지정한 다른 값에서 ID를 만들 수 있습니다. 만드는 모든 ID는 해당 네임스페이스에 다시 연결해야 합니다. 이 데이터 요소는 모든 기본 네임스페이스와 사용자가 만든 모든 네임스페이스를 보여주는 드롭다운을 제공합니다.
 
 ![](./assets/identity-map-data-element.png)
 
 ## XDM 개체
 
-Adobe Experience Platform 웹 SDK로 전송하는 모든 데이터는 XDM 형식이어야 합니다. XDM 개체 데이터 요소를 사용하면 데이터 형식을 보다 손쉽게 지정할 수 있습니다. 이 데이터 요소를 처음 열면 올바른 Adobe Experience Platform 샌드박스 및 스키마를 선택합니다. 스키마를 선택하면 스키마 구조가 표시되어 쉽게 작성할 수 있습니다.
+XDM 포맷을 사용하여 모든 데이터를 Adobe Experience Platform Web SDK로 전송할 수 있습니다. XDM 개체 데이터 요소를 사용하면 데이터 형식을 보다 손쉽게 지정할 수 있습니다. 이 데이터 요소를 처음 열면 올바른 Adobe Experience Platform 샌드박스 및 스키마를 선택합니다. 스키마를 선택한 후에는 스키마 구조를 볼 수 있으므로 손쉽게 작성할 수 있습니다.
 
 ![](./assets/XDM-object.png)
 
-`web.webPageDetails.URL`과 같은 스키마의 특정 필드를 열면 일부 항목이 자동으로 수집됩니다. 여러 항목이 자동으로 수집되지만 필요한 경우 덮어쓸 수 있는 옵션이 있습니다. 모든 값은 수동으로 채우거나 다른 데이터 요소를 사용할 수 있습니다.
+`web.webPageDetails.URL`과 같은 스키마의 특정 필드를 열면 일부 항목이 자동으로 수집됩니다. 여러 항목이 자동으로 수집되지만 필요한 경우 덮어쓸 수 있습니다. 모든 값은 수동으로 채우거나 다른 데이터 요소를 사용할 수 있습니다.
 
 >[!NOTE]
 >
->수집하려는 정보만 작성하면 됩니다. 작성되지 않은 모든 내용은 데이터를 솔루션으로 전송할 때 무시됩니다.
+>수집하고자 하는 정보만 작성하십시오. 채워지지 않은 모든 내용은 데이터를 솔루션으로 보낼 때 생략됩니다.
