@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 웹 SDK 확장 개요
 description: Adobe Experience Platform Launch용 Adobe Experience Platform Web SDK 익스텐션에 대한 자세한 내용
 translation-type: tm+mt
-source-git-commit: 18e511337eaa8b6eb7785b1ee5f1ce2366ddd7c7
+source-git-commit: 2a0ae9541a8bb2bb985d43a402d0842e73b23c81
 workflow-type: tm+mt
-source-wordcount: '560'
-ht-degree: 19%
+source-wordcount: '553'
+ht-degree: 14%
 
 ---
 
@@ -32,17 +32,17 @@ Adobe Experience Platform 웹 SDK 익스텐션은 Adobe Experience Platform Edge
 
 ## 일반 구성 옵션
 
-페이지 상단의 구성 옵션은 Adobe Experience Platform에 데이터를 라우팅할 위치와 서버에서 사용해야 하는 구성을 알려줍니다.
+페이지 상단의 구성 옵션은 Adobe Experience Platform에서 데이터를 라우팅할 위치와 서버에서 사용할 구성을 알려줍니다.
 
 ### [!UICONTROL 이름]
 
-Adobe Experience Platform 웹 SDK 익스텐션은 페이지에서 여러 인스턴스를 지원합니다. 이 확장은 단일 Platform Launch 구성을 사용하여 여러 조직에 데이터를 전송하는 데 사용됩니다.
+Adobe Experience Platform 웹 SDK 익스텐션은 페이지에서 여러 인스턴스를 지원합니다. 이 이름은 단일 Platform launch 구성을 사용하여 여러 조직에 데이터를 보내는 데 사용됩니다.
 
 확장 프로그램의 이름은 기본적으로 &quot;[!DNL alloy]&quot;입니다. 그러나 인스턴스 이름을 유효한 JavaScript 개체 이름으로 변경할 수 있습니다.
 
 ### **[!UICONTROL IMS 조직 ID]**
 
-[!UICONTROL IMS 조직 ID]는 Adobe에서 데이터를 보내려는 조직입니다. 대부분의 경우 자동 채우기되는 기본값을 사용해야 합니다. 페이지에 인스턴스가 여러 개 있으면 데이터를 보내려는 두 번째 조직의 값으로 이 필드를 채웁니다.
+[!UICONTROL IMS 조직 ID]는 Adobe에서 데이터를 보내려는 조직입니다. 대부분의 경우 자동 계산되는 기본값을 사용합니다. 페이지에 인스턴스가 여러 개 있으면 데이터를 보내려는 두 번째 조직의 값으로 이 필드를 채웁니다.
 
 ### **[!UICONTROL Edge 도메인]**
 
@@ -50,7 +50,7 @@ Adobe Experience Platform 웹 SDK 익스텐션은 페이지에서 여러 인스�
 
 ## [!UICONTROL 에지 구성]
 
-Adobe Experience Platform Edge Network에 요청이 전송되면 서버측 구성을 참조하는 데 Edge 구성 ID가 사용됩니다. 이렇게 하면 웹 사이트에서 코드를 변경하지 않고도 구성을 업데이트할 수 있습니다.
+Adobe Experience Platform Edge Network에 요청이 전송되면 서버측 구성을 참조하는 데 Edge 구성 ID가 사용됩니다. 웹 사이트에서 코드를 변경하지 않고도 구성을 업데이트할 수 있습니다.
 
 자세한 내용은 [edge 구성](../fundamentals/edge-configuration.md)의 안내서를 참조하십시오.
 
@@ -61,5 +61,5 @@ Adobe Experience Platform Edge Network에 요청이 전송되면 서버측 구�
 | [!UICONTROL 기본 동의 수준] | 설명 |
 | --- | --- |
 | [!UICONTROL 시작] | 옵트인. 기본적으로 고객의 동의를 가정하고 옵트아웃 신호만 준수하는 경우 이 옵션을 사용합니다. |
-| [!UICONTROL 보류 중] | &quot;보류 중&quot; 동의의 고객은 옵트인 신호가 전송될 때까지 옵트아웃되는 것으로 간주됩니다. 업무 운영에 대한 명시적 고객 동의를 필요로 하는 경우 이 옵션을 사용합니다. |
+| [!UICONTROL 보류 중] | &quot;보류 중&quot; 동의를 받은 고객은 옵트인 신호가 전송될 때까지 옵트아웃됩니다. 업무 운영에 대한 명시적 고객 동의를 필요로 하는 경우 이 옵션을 사용합니다. |
 | [!UICONTROL 데이터 요소로 제공] | 기본 동의 수준은 사용자가 정의하는 별도의 데이터 요소에 의해 결정됩니다. 이 옵션을 사용할 때는 제공된 드롭다운 메뉴를 사용하여 데이터 요소를 지정해야 합니다. |
