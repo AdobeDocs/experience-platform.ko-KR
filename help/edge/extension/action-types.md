@@ -2,10 +2,10 @@
 title: Adobe Experience Platform Web SDK Extension의 작업 유형
 description: Adobe Experience Platform Launch의 Adobe Experience Platform Web SDK 익스텐션에서 제공하는 다양한 작업 유형에 대해 알아보십시오.
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 2a0ae9541a8bb2bb985d43a402d0842e73b23c81
 workflow-type: tm+mt
-source-wordcount: '365'
-ht-degree: 52%
+source-wordcount: '354'
+ht-degree: 18%
 
 ---
 
@@ -18,19 +18,19 @@ ht-degree: 52%
 
 ## 이벤트 보내기
 
-사용자가 전송하는 데이터를 수집하고 해당 정보에 대해 조치를 취할 수 있도록 Adobe Experience Platform이 Adobe [!DNL Experience Platform]에 이벤트를 전송합니다. 인스턴스를 선택해야 합니다(인스턴스가 두 개 이상인 경우). 페이지가 로드될 때 또는 단일 페이지 응용 프로그램에서 보기 변경 중에 이벤트가 발생하는 경우 보기 시작 시 **[!UICONTROL 발생]**&#x200B;을 선택합니다.
+사용자가 전송하는 데이터를 수집하고 해당 정보에 대해 조치를 취할 수 있도록 Adobe Experience Platform이 Adobe [!DNL Experience Platform]에 이벤트를 전송합니다. 인스턴스를 선택합니다(인스턴스가 두 개 이상인 경우). 페이지가 로드될 때 또는 단일 페이지 응용 프로그램에서 보기 변경 중에 이벤트가 발생하는 경우 보기 시작 시 **[!UICONTROL 발생]**&#x200B;을 선택합니다.
 
-보내려는 모든 데이터는 **[!UICONTROL XDM 데이터]** 필드에 보낼 수 있습니다. XDM 스키마의 구조를 준수하는 JSON 개체여야 합니다. 이 개체는 페이지에서 또는 **[!UICONTROL 사용자 지정 코드]** **[!UICONTROL 데이터 요소]**&#x200B;를 통해 만들 수 있습니다.
+보내려는 모든 데이터는 **[!UICONTROL XDM 데이터]** 필드에 보낼 수 있습니다. XDM 스키마 구조를 준수하는 JSON 개체를 사용합니다. 이 개체는 페이지에서 또는 **[!UICONTROL 사용자 지정 코드]** **[!UICONTROL 데이터 요소]**&#x200B;를 통해 만들 수 있습니다.
 
 ## 동의 설정
 
-사용자의 동의를 받은 후에는 Adobe Experience Platform 웹 SDK에 통신해야 합니다. 이렇게 하려면 &quot;동의 설정&quot; 작업 유형을 사용합니다. 현재 &quot;Adobe&quot; 및 &quot;IAB TCF&quot;, 2가지 유형의 표준이 지원됩니다. Adobe 표준을 사용하는 경우, 현재 동의를 &quot;시작&quot;, &quot;종료&quot;로 설정하거나 데이터 요소를 사용하여 제공할 수 있습니다. IAB TCF 표준을 사용하는 경우, 사용할 버전 및 값과 GDPR에 대한 추가 정보를 제공합니다.
+사용자의 동의를 받은 후에는 &quot;동의 설정&quot; 작업 유형을 사용하여 이 동의를 Adobe Experience Platform 웹 SDK에 전달해야 합니다. 현재 &quot;Adobe&quot; 및 &quot;IAB TCF&quot;, 2가지 유형의 표준이 지원됩니다. Adobe 표준을 사용하는 경우, 현재 동의를 &quot;시작&quot;, &quot;종료&quot;로 설정하거나 데이터 요소를 사용하여 제공할 수 있습니다. IAB TCF 표준을 사용하는 경우, 사용할 버전 및 값과 GDPR에 대한 추가 정보를 제공합니다.
 
-이 작업에서는 동의를 받으면 ID를 동기화할 수 있도록 ID 맵을 포함할 선택적 필드도 제공됩니다. 이 기능은 동의 호출이 실행되는 첫 번째 호출일 가능성이 있어 &quot;보류 중&quot;으로 구성된 경우 유용합니다.
+이 작업에서는 동의를 받으면 ID를 동기화할 수 있도록 ID 맵을 포함할 선택 필드도 제공됩니다. 동기화는 동의 호출이 &quot;보류 중&quot;으로 구성된 경우 동의 호출이 처음 실행할 호출일 가능성이 높기 때문에 유용합니다.
 
 ## 이벤트 병합 ID 재설정
 
-페이지에서 이벤트 병합 ID를 재설정하려면 이 작업을 사용할 수 있습니다. ID를 재설정하려면 재설정할 병합 ID를 선택하고 필요에 따라 작업을 실행해야 합니다.
+페이지에서 이벤트 병합 ID를 재설정하려면 이 작업으로 할 수 있습니다. ID를 재설정하려면 재설정할 병합 ID를 선택하고 필요에 따라 작업을 실행합니다.
 
 ## 다음 단계
 
