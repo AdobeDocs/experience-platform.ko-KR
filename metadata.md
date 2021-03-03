@@ -3,21 +3,22 @@ cloud: experience-cloud
 product: adobe experience platform
 feature-set: Platform
 solution-title: 플랫폼 개요
-solution-hub-url: https://docs.adobe.com/content/help/ko-KR/experience-platform/landing/home.html
+solution-hub-url: https://experienceleague.adobe.com/docs/experience-platform/landing/home.html
 solution-image: assets/experience_cloud_appicon_32.png
 getting-started-title: 설명서
-getting-started-url: https://docs.adobe.com/content/help/en/experience-platform/landing/documentation/overview.html
+getting-started-url: https://experienceleague.adobe.com/docs/experience-platform.html
 tutorials-title: 자습서
-tutorials-url: https://docs.adobe.com/content/help/ko-KR/experience-platform/tutorials/home.html
+tutorials-url: https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html
 git-repo: https://git.corp.adobe.com/AdobeDocs/experience-platform.ko-KR
 solution: Experience Platform
 type: 설명서
 index: true
+role: 건축가, 개발자, 데이터 아키텍트, 데이터 엔지니어, 비즈니스 책임자, 관리자, 리더
 translation-type: tm+mt
-source-git-commit: 100e17f44c3af2a888d92d982ae3b2de1ed45ec5
+source-git-commit: 467edb785bd3c8609d2fc64183edd1d7b34d7e86
 workflow-type: tm+mt
-source-wordcount: '146'
-ht-degree: 86%
+source-wordcount: '147'
+ht-degree: 74%
 
 ---
 
