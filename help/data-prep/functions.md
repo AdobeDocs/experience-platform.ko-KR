@@ -5,9 +5,9 @@ title: 데이터 준비 매핑 함수
 topic: 개요
 description: 이 문서에서는 데이터 준비와 함께 사용되는 매핑 함수를 소개합니다.
 translation-type: tm+mt
-source-git-commit: fd2dffd5b8957833b670e9cb434517bcb0f886a3
+source-git-commit: 6a541cca307dec8937c2d49470e8bcab770c80c7
 workflow-type: tm+mt
-source-wordcount: '3625'
+source-wordcount: '3719'
 ht-degree: 3%
 
 ---
@@ -149,6 +149,8 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | 코알스 | 지정된 배열에서 null이 아닌 첫 번째 객체를 반환합니다. | <ul><li>입력:**필수** null이 아닌 첫 번째 개체를 찾을 배열입니다.</li></ul> | coalesce(INPUT) | coalesce(null, null, null, 첫 번째, null, &quot;두 번째&quot;) | &quot;first&quot; |
 | first | 지정된 배열의 첫 번째 요소를 검색합니다. | <ul><li>입력:**필수** 의 첫 번째 요소를 찾을 배열입니다.</li></ul> | first(INPUT) | first(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;) | &quot;1&quot; |
 | last | 지정된 배열의 마지막 요소를 검색합니다. | <ul><li>입력:**필수** 의 마지막 요소를 찾을 배열입니다.</li></ul> | last(INPUT) | last(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;) | &quot;3&quot; |
+| add_to_array | 배열 끝에 요소를 추가합니다. | <ul><li>배열:**필수** 요소를 추가할 배열입니다.</li><li>값:배열에 추가할 요소입니다.</li></ul> | add_to_array&#x200B;(ARRAY, VALUES) | add_to_array([&#39;a&#39;, &#39;b&#39;], &#39;c&#39;, &#39;d&#39;) | [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;] |
+| join_array | 배열을 서로 결합합니다. | <ul><li>배열:**필수** 요소를 추가할 배열입니다.</li><li>값:상위 배열에 추가할 배열입니다.</li></ul> | join_array&#x200B;(ARRAY, VALUES) | join_arrays([&#39;a&#39;, &#39;b&#39;], [&#39;c&#39;], [&#39;d&#39;, &#39;e&#39;]) | [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;] |
 | to_array | 입력 목록을 가져와서 배열로 변환합니다. | <ul><li>INCLUDE_NULL:**필수** 응답 배열에 null을 포함할지 여부를 나타내는 부울 값입니다.</li><li>값:**필수** 배열로 변환할 요소입니다.</li></ul> | to_&#x200B;array(INCLUDE_NULL, VALUES) | to_array(false, 1, null, 2, 3) | `[1, 2, 3]` |
 
 ### 논리 연산자
