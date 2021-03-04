@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;프로필;실시간 고객 프로필;문제 해결;API
 title: 가장자리 투영 API 끝점
-topic: guide
-type: Documentation
+topic: 가이드
+type: 설명서
 description: Adobe Experience Platform을 사용하면 변경 사항이 발생하면 즉시 올바른 데이터를 사용할 수 있고 지속적으로 업데이트하여 다양한 채널에서 고객에게 개인화되고 일관된 경험을 실시간으로 제공할 수 있습니다. 이러한 작업은 데이터를 저장하고 응용 프로그램에서 쉽게 액세스할 수 있도록 지리적으로 배치된 서버인 Edge를 사용하여 수행됩니다.
 translation-type: tm+mt
-source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '1961'
+source-wordcount: '1966'
 ht-degree: 2%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 2%
 
 # 가장자리 투영 구성 및 대상 끝점
 
-여러 채널에서 실시간으로 고객에게 개인화되고 체계적이고 일관된 경험을 제공하기 위해서는 변경 사항이 발생하면 즉시 정확한 데이터를 이용할 수 있어야 하며 지속적으로 업데이트해야 합니다. Adobe Experience Platform을 사용하면 가장자리라고 하는 요소를 사용하여 데이터에 실시간으로 액세스할 수 있습니다. Edge는 데이터를 저장하고 응용 프로그램에서 쉽게 액세스할 수 있도록 하는 지리적으로 배치된 서버입니다. 예를 들어 Adobe Target 및 Adobe Campaign과 같은 Adobe 애플리케이션은 실시간으로 개인화된 고객 경험을 제공하기 위해 가장자리를 사용합니다. 데이터는 투영에 의해 모서리로 라우팅되고, 투영 대상은 데이터를 보낼 가장자리를 정의하고 가장자리에서 사용할 특정 정보를 정의하는 투영 구성이 있습니다. 이 안내서에서는 대상 및 구성을 포함하여 에지 예상 작업에 [!DNL Real-time Customer Profile] API를 사용하는 방법에 대한 자세한 지침을 제공합니다.
+여러 채널에서 실시간으로 고객에게 일관되고 개인화된 경험을 제공하기 위해서는 변경 사항이 발생하면 즉시 적합한 데이터를 제공하고 지속적으로 업데이트해야 합니다. Adobe Experience Platform을 사용하면 가장자리라고 하는 요소를 사용하여 데이터에 실시간으로 액세스할 수 있습니다. Edge는 데이터를 저장하고 응용 프로그램에서 쉽게 액세스할 수 있도록 하는 지리적으로 배치된 서버입니다. 예를 들어 Adobe Target 및 Adobe Campaign과 같은 Adobe 애플리케이션은 실시간으로 개인화된 고객 경험을 제공하기 위해 가장자리를 사용합니다. 데이터는 투영에 의해 모서리로 라우팅되고, 투영 대상은 데이터를 보낼 가장자리를 정의하고 가장자리에서 사용할 특정 정보를 정의하는 투영 구성이 있습니다. 이 안내서에서는 대상 및 구성을 포함하여 에지 예상 작업에 [!DNL Real-time Customer Profile] API를 사용하는 방법에 대한 자세한 지침을 제공합니다.
 
 ## 시작하기
 
