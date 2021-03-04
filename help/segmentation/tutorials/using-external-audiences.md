@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 대상 세그먼트에 대한 데이터 사용 규정 준수
 topic: 자습서
 translation-type: tm+mt
-source-git-commit: 2ca0768c951cf67a775fdfc2c1f9440596d118bf
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '639'
+source-wordcount: '640'
 ht-degree: 0%
 
 ---
