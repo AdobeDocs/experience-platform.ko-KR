@@ -3,12 +3,12 @@ keywords: Experience Platform;홈;인기 항목;클라우드 저장소 데이터
 solution: Experience Platform
 title: 소스 커넥터 및 API를 사용하여 스트리밍 데이터 수집
 topic: 개요
-type: 자습서
+type: 튜토리얼
 description: 이 자습서에서는 소스 커넥터 및 API를 사용하여 스트리밍 데이터를 검색하고 플랫폼에 가져오는 절차를 다룹니다.
 translation-type: tm+mt
-source-git-commit: b8f7f6e7f110dc9ebd025cd594fd1a54126ccdf3
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '1305'
+source-wordcount: '1306'
 ht-degree: 2%
 
 ---
