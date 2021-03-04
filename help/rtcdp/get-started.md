@@ -3,9 +3,9 @@ keywords: RTCDP;CDP;실시간 고객 데이터 플랫폼;실시간 고객 데이
 title: 실시간 고객 데이터 플랫폼 시작하기
 description: 실시간 고객 데이터 플랫폼 구현을 설정할 때 이 샘플 시나리오를 예로 사용하십시오.
 translation-type: tm+mt
-source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '2326'
+source-wordcount: '2328'
 ht-degree: 1%
 
 ---
@@ -66,7 +66,7 @@ Adobe Experience Platform 기반의 실시간 CDP를 통해 Luma의 마케팅 �
 
 ![image](assets/luma-site.png)
 
-탐색 시 데이터는 실시간으로 캡처되고 Adobe Analytics의 보고서 세트뿐만 아니라 Adobe Experience Platform으로 직접 전송됩니다. 데이터가 수집되면 [!DNL Experience Platform's real-time customer profile]의 행동 데이터를 기반으로 고객에 대한 단일 보기를 형성하기 시작합니다.
+탐색 시 데이터는 실시간으로 캡처되어 Adobe Analytics의 보고서 세트뿐만 아니라 Adobe Experience Platform으로 직접 전송됩니다. 데이터가 수집되면 [!DNL Experience Platform's real-time customer profile]의 행동 데이터를 기반으로 고객에 대한 단일 보기를 형성하기 시작합니다.
 
 웹 사이트의 많은 방문자가 Luma에서 이전에 구매한 반복 고객일 수 있습니다.  Luma는 알려진 고객뿐만 아니라 신규 방문자와 반복 방문자 모두를 충족하기 위해 메시지와 상품을 개인화하는 것이 중요합니다.
 
