@@ -2,12 +2,12 @@
 keywords: Experience Platform;home;popular topics;identity namespace;Identity namespace
 solution: Experience Platform
 title: ID 서비스 문제 해결 안내서
-topic: troubleshooting
+topic: 문제 해결
 description: 이 문서에서는 Adobe Experience Platform ID 서비스에 대한 질문과 더불어 일반적인 오류에 대한 문제 해결 안내서를 제공합니다.
 translation-type: tm+mt
-source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '2188'
+source-wordcount: '2190'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 ## ID 데이터란 무엇입니까?
 
-ID 데이터는 개인을 식별하는 데 사용할 수 있는 모든 데이터입니다. 조직 내에서 데이터가 사용되는 방식에 따라 ID 데이터에는 CRM 시스템의 사용자 이름, 이메일 주소 및 ID가 포함될 수 있습니다. 익명 사용자는 자신의 디바이스 또는 쿠키 ID로 식별되므로 ID 데이터는 웹 사이트 또는 서비스의 등록된 사용자에게만 국한되지 않습니다.
+ID 데이터는 개인을 식별하는 데 사용할 수 있는 모든 데이터입니다. 조직 내에서 데이터가 사용되는 방식에 따라 ID 데이터에는 CRM 시스템의 사용자 이름, 이메일 주소 및 ID가 포함될 수 있습니다. 익명 사용자는 디바이스 또는 쿠키 ID로 식별할 수 있으므로 ID 데이터는 웹 사이트 또는 서비스의 등록된 사용자에게만 국한되지 않습니다.
 
 ## ID로 데이터 필드를 레이블을 지정할 때 어떤 이점이 있습니까?
 
