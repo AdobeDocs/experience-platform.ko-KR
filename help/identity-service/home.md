@@ -2,12 +2,12 @@
 keywords: Experience Platform;홈;인기 항목;ID;XDM 그래프;ID 서비스;ID 서비스;home;popular topics;identity;
 solution: Experience Platform
 title: ID 서비스 개요
-topic: overview
+topic: 개요
 description: Adobe Experience Platform Identity Service를 사용하면 다양한 디바이스와 시스템에 ID를 연결시켜 효과적이고 개인화된 디지털 경험을 실시간으로 전달할 수 있으므로 고객의 행동과 행동을 보다 정확하게 파악할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '1730'
+source-wordcount: '1733'
 ht-degree: 0%
 
 ---
