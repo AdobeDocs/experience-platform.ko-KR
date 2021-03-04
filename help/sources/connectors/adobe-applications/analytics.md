@@ -2,12 +2,12 @@
 keywords: Experience Platform;홈;인기 항목;분석 데이터 커넥터;분석;분석;Analytics;home;popular topics
 solution: Experience Platform
 title: 보고서 세트 데이터용 Adobe Analytics 소스 커넥터
-topic: overview
+topic: 개요
 description: 이 문서에서는 Analytics의 개요를 제공하며 Analytics 데이터의 사용 사례에 대해 설명합니다.
 translation-type: tm+mt
-source-git-commit: e480ce789c849db24713da312345ea3162e617a6
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '502'
+source-wordcount: '504'
 ht-degree: 3%
 
 ---
@@ -47,8 +47,8 @@ XDM에 대한 자세한 내용은 [XDM 시스템 개요](../../../xdm/home.md)�
 
 | 분석 데이터 | 예상 지연 |
 | -------------- | ---------------- |
-| [!DNL Real-time Customer Profile] (A4T **이(가) 활성화되지 않음**) 새 데이터 | &lt; 2분 |
-| [!DNL Real-time Customer Profile] (A4T **이(가)**&#x200B;이(가) 활성화됨) 새 데이터 | &lt; 15분 |
+| [!DNL Real-time Customer Profile](A4T **이(가) 활성화되지 않음**) 새 데이터 | &lt; 2분 |
+| [!DNL Real-time Customer Profile](A4T **이(가)**&#x200B;이(가) 활성화됨) 새 데이터 | &lt; 15분 |
 | Data Lake의 새로운 데이터 | &lt; 90분 |
 | 데이터 채우기(13개월 데이터 또는 100억 이벤트 중 더 낮음) | &lt; 4주 |
 
