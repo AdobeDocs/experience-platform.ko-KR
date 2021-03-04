@@ -6,9 +6,9 @@ description: 이 문서에서는 Adobe Experience Platform API를 사용하여 �
 topic: 자습서
 type: 튜토리얼
 translation-type: tm+mt
-source-git-commit: c8b08b2feb30bf137d802ce82df92d3f9f8bdb78
+source-git-commit: 789534c02746ed24dfa01c7b471cdf3be407711e
 workflow-type: tm+mt
-source-wordcount: '1681'
+source-wordcount: '1701'
 ht-degree: 1%
 
 ---
@@ -366,6 +366,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 >[!IMPORTANT]
 > 
 >[!DNL Adobe Experience Platform] 내보내기 파일을 파일당 5백만 개의 레코드(행)로 자동으로 분할합니다. 각 행은 하나의 프로파일을 나타냅니다.
+>
+>분할된 파일 이름에 파일이 더 큰 내보내기의 일부임을 나타내는 숫자가 추가됩니다.`filename.csv`, `filename_2.csv`, `filename_3.csv`.
 
 **API 형식**
 
