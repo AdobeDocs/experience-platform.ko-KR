@@ -2,13 +2,13 @@
 keywords: Experience Platform;홈;인기 항목;세그먼트 평가;세그멘테이션 서비스;세그멘테이션;세그먼트 평가;액세스 세그먼트 결과;평가 및 액세스 세그먼트
 solution: Experience Platform
 title: 세그먼트 결과 평가 및 액세스
-topic: tutorial
-type: Tutorial
+topic: 자습서
+type: 튜토리얼
 description: Adobe Experience Platform 세그멘테이션 서비스 API를 사용하여 세그먼트를 평가하고 세그먼트 결과에 액세스하는 방법을 알아보려면 이 자습서를 따르십시오.
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '1567'
+source-wordcount: '1570'
 ht-degree: 0%
 
 ---
