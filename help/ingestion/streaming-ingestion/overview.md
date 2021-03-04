@@ -2,12 +2,12 @@
 keywords: Experience Platform;홈;인기 항목;데이터 통합;인제스트된 데이터;스트리밍;개요;스트리밍 통합;지연;스트리밍 지연;;home;popular topics;ensouristed data;streaming;overview;streaming ingestion;laytency;streaming latency
 solution: Experience Platform
 title: 스트리밍 통합 개요
-topic: overview
+topic: 개요
 description: Adobe Experience Platform에 대한 스트리밍 수집은 사용자에게 클라이언트 및 서버측 디바이스에서 실시간으로 Experience Platform으로 데이터를 보내는 방법을 제공합니다.
 translation-type: tm+mt
-source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '283'
+source-wordcount: '286'
 ht-degree: 3%
 
 ---
@@ -27,7 +27,7 @@ Adobe Experience Platform을 사용하면 각 개별 고객에 대해 [!DNL Real
 
 ### 스트림 프로필 레코드 및 [!DNL ExperienceEvents]
 
-스트리밍 통합 기능을 통해 사용자는 프로필 기록과 [!DNL ExperienceEvents]을(를) [!DNL Platform]으로 스트리밍하여 실시간으로 개인화할 수 있습니다. 스트리밍 통합 API로 전송된 모든 데이터는 자동으로 [!DNL Data Lake]에 보관됩니다.
+스트리밍 통합 기능을 통해 사용자는 프로필 기록과 [!DNL ExperienceEvents]을(를) [!DNL Platform](으)로 스트리밍하여 실시간으로 개인화할 수 있습니다. 스트리밍 통합 API로 전송된 모든 데이터는 자동으로 [!DNL Data Lake]에 보관됩니다.
 
 자세한 내용은 [스트리밍 연결 안내서](../tutorials/create-streaming-connection.md)를 참조하십시오.
 
