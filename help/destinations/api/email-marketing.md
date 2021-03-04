@@ -3,12 +3,12 @@ keywords: Experience Platform;홈;인기 항목
 solution: Experience Platform
 title: 이메일 마케팅 대상에 연결하고 API 호출을 사용하여 데이터 활성화
 description: 이 문서에서는 Adobe Experience Platform API를 사용하여 이메일 마케팅 대상을 만드는 방법에 대해 설명합니다
-topic: tutorial
-type: Tutorial
+topic: 자습서
+type: 튜토리얼
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: c8b08b2feb30bf137d802ce82df92d3f9f8bdb78
 workflow-type: tm+mt
-source-wordcount: '1649'
+source-wordcount: '1681'
 ht-degree: 1%
 
 ---
@@ -360,6 +360,12 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```
 
 ### 저장소 위치 및 데이터 형식 지정
+
+[!DNL Adobe Experience Platform] 이메일 마케팅 및 클라우드 스토리지 대상에 대한 데이터를  [!DNL CSV] 파일 형식으로 내보냅니다.
+
+>[!IMPORTANT]
+> 
+>[!DNL Adobe Experience Platform] 내보내기 파일을 파일당 5백만 개의 레코드(행)로 자동으로 분할합니다. 각 행은 하나의 프로파일을 나타냅니다.
 
 **API 형식**
 
