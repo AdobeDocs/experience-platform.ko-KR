@@ -6,9 +6,9 @@ seo-title: 대상에 프로필 및 세그먼트 활성화
 description: 세그먼트를 대상에 매핑하여 Adobe Experience Platform에 있는 데이터를 활성화합니다. 이를 수행하려면 아래 단계를 따르십시오.
 seo-description: 세그먼트를 대상에 매핑하여 Adobe Experience Platform에 있는 데이터를 활성화합니다. 이를 수행하려면 아래 단계를 따르십시오.
 translation-type: tm+mt
-source-git-commit: efb66b6374f8c0579d90f63452528353f4d1418d
+source-git-commit: 789534c02746ed24dfa01c7b471cdf3be407711e
 workflow-type: tm+mt
-source-wordcount: '2164'
+source-wordcount: '2184'
 ht-degree: 0%
 
 ---
@@ -147,6 +147,9 @@ If you are using another ID, such as "Rewards ID" or "Loyalty ID", as primary id
 >[!IMPORTANT]
 > 
 >[!DNL Adobe Experience Platform] 내보내기 파일을 파일당 5백만 개의 레코드(행)로 자동으로 분할합니다. 각 행은 하나의 프로파일을 나타냅니다.
+>
+>분할된 파일 이름에 파일이 더 큰 내보내기의 일부임을 나타내는 숫자가 추가됩니다.`filename.csv`, `filename_2.csv`, `filename_3.csv`.
+
 
 세그먼트에 대한 일정을 추가하려면 **[!UICONTROL 일정 만들기]**&#x200B;를 선택합니다.
 
