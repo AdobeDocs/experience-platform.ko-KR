@@ -2,12 +2,12 @@
 keywords: Experience Platform;홈;IAB;IAB 2.0;동의;동의
 solution: Experience Platform
 title: Experience Platform에서 IAB TCF 2.0 지원
-topic: privacy events
+topic: 개인 정보 보호 이벤트
 description: 세그먼트를 Adobe Experience Platform의 대상에 활성화할 때 고객 동의 선택 사항을 전달하도록 데이터 작업 및 스키마를 구성하는 방법을 알아봅니다.
 translation-type: tm+mt
-source-git-commit: b0af9d49f6cfe50f6dff745dfac174dbaa76d070
+source-git-commit: a845ade0fc1e6e18c36b5f837fe7673a976f01c7
 workflow-type: tm+mt
-source-wordcount: '2458'
+source-wordcount: '2472'
 ht-degree: 0%
 
 ---
@@ -165,7 +165,7 @@ alloy("setConsent", {
 | `standard` | 사용 중인 동의 기준. TCF 2.0 동의 처리를 위해서는 이 값을 `IAB`으로 설정해야 합니다. |
 | `version` | `standard` 아래에 표시된 동의 표준의 버전 번호입니다. TCF 2.0 동의 처리를 위해서는 이 값을 `2.0`으로 설정해야 합니다. |
 | `value` | CMP에 의해 생성된 기본-64 인코딩 동의 문자열. |
-| `gdprApplies` | GDPR이 현재 로그인한 고객에게 적용되는지 여부를 나타내는 부울 값입니다. 이 고객에게 TCF 2.0이 적용되려면 이 값을 `true`으로 설정해야 합니다. |
+| `gdprApplies` | GDPR이 현재 로그인한 고객에게 적용되는지 여부를 나타내는 부울 값입니다. 이 고객에게 TCF 2.0이 적용되려면 이 값을 `true`으로 설정해야 합니다. 정의되지 않은 경우 기본값은 `true`입니다. |
 
 `setConsent` 명령은 동의 설정의 변경 사항을 감지하는 CMP 후크의 일부로 사용해야 합니다. 다음 JavaScript는 `setConsent` 명령을 OneTrust의 `OnConsentChanged` 후크에 사용할 수 있는 방법의 예를 제공합니다.
 
@@ -219,7 +219,7 @@ alloy("sendEvent", {
 | `consentStandard` | 사용 중인 동의 기준. TCF 2.0 동의 처리를 위해서는 이 값을 `IAB`으로 설정해야 합니다. |
 | `consentStandardVersion` | `standard` 아래에 표시된 동의 표준의 버전 번호입니다. TCF 2.0 동의 처리를 위해서는 이 값을 `2.0`으로 설정해야 합니다. |
 | `consentStringValue` | CMP에 의해 생성된 기본-64 인코딩 동의 문자열. |
-| `gdprApplies` | GDPR이 현재 로그인한 고객에게 적용되는지 여부를 나타내는 부울 값입니다. 이 고객에게 TCF 2.0이 적용되려면 이 값을 `true`으로 설정해야 합니다. |
+| `gdprApplies` | GDPR이 현재 로그인한 고객에게 적용되는지 여부를 나타내는 부울 값입니다. 이 고객에게 TCF 2.0이 적용되려면 이 값을 `true`으로 설정해야 합니다. 정의되지 않은 경우 기본값은 `true`입니다. |
 
 ### SDK 응답 처리
 
@@ -233,7 +233,7 @@ alloy("sendEvent", {
 
 고객 동의 데이터를 수집하고 필수 동의 속성이 포함된 대상 세그먼트를 만든 후 해당 세그먼트를 다운스트림 대상으로 내보낼 때 TCF 2.0 규정 준수를 적용할 수 있습니다.
 
-고객 프로필 집합에 대해 동의 설정 `gdprApplies`이(가) `true`으로 설정되어 있는 경우, 다운스트림 대상으로 내보내는 프로필의 모든 데이터는 각 프로필에 대한 동의 기본 설정에 따라 필터링됩니다. 내보내기 프로세스 중에 필수 동의 기본 설정에 맞지 않는 모든 프로파일은 건너뜁니다.
+고객 프로필 집합에 대해 동의 설정 `gdprApplies`이(가) `true`으로 설정되어 있는 경우, 다운스트림 대상으로 내보낸 프로필의 모든 데이터는 각 프로필에 대한 TCF 동의 환경 설정에 따라 필터링됩니다. 내보내기 프로세스 중에 필수 동의 기본 설정에 맞지 않는 모든 프로파일은 건너뜁니다.
 
 대상으로 내보내는 세그먼트에 자신의 프로파일을 포함하려면 고객은 다음 목적(예: [TCF 2.0 정책](https://iabeurope.eu/iab-europe-transparency-consent-framework-policies/#Appendix_A_Purposes_and_Features_Definitions))에 동의해야 합니다.
 
