@@ -2,12 +2,12 @@
 keywords: Experience Platform;홈;인기 항목;옵트아웃;세그멘테이션 서비스;세그멘테이션 서비스;옵트아웃;옵트아웃;옵트아웃;옵트아웃
 solution: Experience Platform
 title: 세그먼트에서 옵트아웃 요청 준수
-topic: overview
+topic: 개요
 description: 'Adobe Experience Platform을 사용하면 고객은 실시간 고객 프로필] 내에서 데이터의 사용 및 저장과 관련된 옵트아웃 요청을 보낼 수 있습니다. 이러한 수신 거부 요청은 캘리포니아 주민들에게 개인 데이터를 액세스 및 삭제할 권리, 그리고 개인 데이터가 판매 또는 공개(및 누구에게)되었는지 알 수 있는 권리를 제공하는 CPA(California Consumer Privacy Act)의 일부입니다. '
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '1031'
+source-wordcount: '1033'
 ht-degree: 0%
 
 ---
