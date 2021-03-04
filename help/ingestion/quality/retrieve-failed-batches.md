@@ -2,21 +2,21 @@
 keywords: Experience Platform;홈;인기 항목;실패한 일괄 처리 가져오기;일괄 처리;일괄 처리 통합;실패한 일괄 처리;실패한 일괄 처리 가져오기;실패한 일괄 처리 가져오기;실패한 일괄 처리 다운로드;다운로드 실패 일괄 처리;다운로드 실패 일괄 처리
 solution: Experience Platform
 title: 데이터 액세스 API를 사용하여 실패한 배치 검색
-topic: tutorial
-type: Tutorial
+topic: 자습서
+type: 튜토리얼
 description: 이 자습서에서는 데이터 통합 API를 사용하여 실패한 일괄 처리에 대한 정보를 검색하는 절차를 다룹니다.
 translation-type: tm+mt
-source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '652'
-ht-degree: 1%
+source-wordcount: '655'
+ht-degree: 2%
 
 ---
 
 
 # 데이터 액세스 API를 사용하여 실패한 배치 검색
 
-Adobe Experience Platform은 데이터를 업로드하고 인제스트하는 두 가지 방법을 제공합니다. 일괄 처리 통합 기능을 사용하면 다양한 파일 유형(예: CSV)을 사용하여 데이터를 삽입할 수 있고 스트리밍 통합 기능을 사용하여 실시간으로 스트리밍 끝점을 사용하여 데이터를 [!DNL Platform]에 삽입할 수 있습니다.
+Adobe Experience Platform은 데이터를 업로드하고 인제스트하는 두 가지 방법을 제공합니다. 일괄 처리 처리를 사용하면 다양한 파일 유형(예: CSV)을 사용하여 데이터를 삽입할 수 있도록 하거나 스트리밍 통합 기능을 사용하여 실시간으로 스트리밍 끝점을 사용하여 [!DNL Platform]에 데이터를 삽입할 수 있습니다.
 
 이 자습서에서는 [!DNL Data Ingestion] API를 사용하여 실패한 일괄 처리에 대한 정보를 검색하는 절차를 다룹니다.
 
@@ -49,7 +49,7 @@ Adobe Experience Platform은 데이터를 업로드하고 인제스트하는 두
 
 페이로드(POST, PUT, PATCH)을 포함하는 모든 요청에는 추가 헤더가 필요합니다.
 
-- 컨텐츠 유형:`application/json`
+- Content-Type: `application/json`
 
 ### 샘플 일괄 처리 실패
 
