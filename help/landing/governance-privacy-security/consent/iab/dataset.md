@@ -2,12 +2,12 @@
 keywords: Experience Platform;홈;IAB;IAB 2.0;동의;동의
 solution: Experience Platform
 title: IAB TCF 2.0 동의 데이터를 캡처하기 위한 데이터 집합 만들기
-topic: privacy events
+topic: 개인 정보 보호 이벤트
 description: 이 문서에서는 IAB TCF 2.0 동의 데이터를 수집하기 위해 필요한 데이터 세트를 2개 설정하는 절차를 제공합니다.
 translation-type: tm+mt
-source-git-commit: b0af9d49f6cfe50f6dff745dfac174dbaa76d070
+source-git-commit: a845ade0fc1e6e18c36b5f837fe7673a976f01c7
 workflow-type: tm+mt
-source-wordcount: '1645'
+source-wordcount: '1647'
 ht-degree: 0%
 
 ---
@@ -105,7 +105,7 @@ ID 값 개체 내에 단일 필드인 `xdm:identityIABConsent`이(가) 있습니
 | `xdm:consentStandard` | 데이터가 적용되는 동의 프레임워크입니다. TCF 준수 시 값은 `IAB TCF`이어야 합니다. |
 | `xdm:consentStandardVersion` | `xdm:consentStandard`으로 표시된 동의 프레임워크의 버전 번호입니다. TCF 2.0 준수 시 값은 `2.0`이어야 합니다. |
 | `xdm:consentStringValue` | 고객의 선택된 설정을 기반으로 CMP(동의 관리 플랫폼)에서 생성된 동의 문자열. |
-| `xdm:gdprApplies` | GDPR이 고객에게 적용되는지 여부를 나타내는 부울 값입니다. TCF 2.0 실행이 발생하려면 값을 `true`으로 설정해야 합니다. 포함되지 않은 경우 기본값은 `false`입니다. |
+| `xdm:gdprApplies` | GDPR이 고객에게 적용되는지 여부를 나타내는 부울 값입니다. TCF 2.0 실행이 발생하려면 값을 `true`으로 설정해야 합니다. 포함되지 않은 경우 기본값은 `true`입니다. |
 | `xdm:containsPersonalData` | 동의 업데이트에 개인 데이터가 포함되어 있는지 여부를 나타내는 부울 값 포함되지 않은 경우 기본값은 `false`입니다. |
 
 ## 고객 동의 스키마 만들기 {#create-schemas}
