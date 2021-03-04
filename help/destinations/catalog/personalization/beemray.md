@@ -3,9 +3,9 @@ keywords: beemray,베엠레이 확장
 title: Beemray 확장
 description: Beemray 확장은 Adobe Experience Platform의 개인화 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '520'
+source-wordcount: '521'
 ht-degree: 3%
 
 ---
@@ -25,7 +25,7 @@ Beemray는 Adobe Experience Platform의 개인화 익스텐션입니다. 확장 
 
 이 확장 프로그램은 Platform을 구입한 모든 고객의 [!DNL Destinations] 카탈로그에서 사용할 수 있습니다.
 
-이 확장을 사용하려면 [!DNL Adobe Experience Platform Launch]에 액세스해야 합니다. [!DNL Platform Launch] adobe experience cloud 고객에게 제공되는 부가 가치 기능 [!DNL Platform Launch]에 대한 액세스 권한을 받으려면 조직 관리자에게 문의하여 확장 기능을 설치할 수 있도록 **[!UICONTROL manage_properties]** 권한을 요청하십시오.
+이 확장을 사용하려면 [!DNL Adobe Experience Platform Launch]에 액세스해야 합니다. [!DNL Platform Launch] Adobe Experience Cloud 고객에게 제공되는 부가 가치 기능 [!DNL Platform Launch]에 대한 액세스 권한을 받으려면 조직 관리자에게 문의하여 확장 기능을 설치할 수 있도록 **[!UICONTROL manage_properties]** 권한을 요청하십시오.
 
 ## 확장 설치 {#install-extension}
 
@@ -37,7 +37,7 @@ Beemray는 Adobe Experience Platform의 개인화 익스텐션입니다. 확장 
 
 대상을 클릭하여 강조 표시한 다음 오른쪽 레일에서 **[!UICONTROL 구성]**&#x200B;을 선택합니다. **[!UICONTROL 구성]** 컨트롤이 회색으로 표시되면 **[!UICONTROL manage_properties]** 권한이 없습니다. [사전 요구 사항](#prerequisites)을 참조하십시오.
 
-**[!UICONTROL 사용 가능한 플랫폼 시작 속성 선택]** 창에서 확장을 설치할 [!DNL Platform Launch] 속성을 선택합니다. [!DNL Platform Launch]에 새 속성을 만들 수도 있습니다. 속성은 규칙, 데이터 요소, 구성된 확장, 환경 및 라이브러리의 컬렉션입니다. [!DNL Launch] 설명서의 [속성 페이지 섹션](https://experienceleague.adobe.com/docs/launch/using/reference/admin/companies-and-properties.html#properties-page)에서 속성에 대해 알아봅니다.
+**[!UICONTROL 사용 가능한 Platform launch 속성 선택]** 창에서 확장을 설치할 [!DNL Platform Launch] 속성을 선택합니다. [!DNL Platform Launch]에 새 속성을 만들 수도 있습니다. 속성은 규칙, 데이터 요소, 구성된 확장, 환경 및 라이브러리의 컬렉션입니다. [!DNL Launch] 설명서의 [속성 페이지 섹션](https://experienceleague.adobe.com/docs/launch/using/reference/admin/companies-and-properties.html#properties-page)에서 속성에 대해 알아봅니다.
 
 워크플로우에서 [!DNL Platform Launch]으로 이동하여 설치를 완료합니다.
 
