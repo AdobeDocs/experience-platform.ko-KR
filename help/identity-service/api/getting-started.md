@@ -2,12 +2,12 @@
 keywords: Experience Platform;홈;인기 항목;ID 서비스 api;ID 서비스 개발자 안내서;지역
 solution: Experience Platform
 title: ID 서비스 API 안내서
-topic: API guide
+topic: API 안내서
 description: 개발자는 Identity Service API를 사용하여 ID 그래프를 사용하여 디바이스 간, 크로스 채널 및 거의 실시간 고객 ID를 관리할 수 있습니다. API를 사용하여 주요 작업을 수행하는 방법에 대해 알아보려면 이 안내서를 따르십시오.
 translation-type: tm+mt
-source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '769'
+source-wordcount: '772'
 ht-degree: 0%
 
 ---
