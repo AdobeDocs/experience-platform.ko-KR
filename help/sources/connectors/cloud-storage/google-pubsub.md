@@ -5,9 +5,9 @@ title: Google Pub하위 소스 커넥터 개요
 topic: 개요
 description: API 또는 사용자 인터페이스를 사용하여 Google PubSub를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 translation-type: tm+mt
-source-git-commit: 0af90253f04377149986aedf2e9d3012ca06d4f8
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '243'
+source-wordcount: '244'
 ht-degree: 0%
 
 ---
