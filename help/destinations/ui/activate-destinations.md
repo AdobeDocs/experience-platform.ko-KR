@@ -1,14 +1,14 @@
 ---
 keywords: 대상 활성화;대상 활성화;데이터 활성화
 title: 대상에 프로필 및 세그먼트 활성화
-type: Tutorial
+type: 튜토리얼
 seo-title: 대상에 프로필 및 세그먼트 활성화
 description: 세그먼트를 대상에 매핑하여 Adobe Experience Platform에 있는 데이터를 활성화합니다. 이를 수행하려면 아래 단계를 따르십시오.
 seo-description: 세그먼트를 대상에 매핑하여 Adobe Experience Platform에 있는 데이터를 활성화합니다. 이를 수행하려면 아래 단계를 따르십시오.
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: efb66b6374f8c0579d90f63452528353f4d1418d
 workflow-type: tm+mt
-source-wordcount: '2140'
+source-wordcount: '2164'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 # 대상에 프로필 및 세그먼트 활성화
 
-세그먼트를 대상에 매핑하여 Adobe Experience Platform에 있는 데이터를 활성화합니다. 이를 수행하려면 아래 단계를 따르십시오.
+세그먼트를 대상에 매핑하여 [!DNL Adobe Experience Platform]에 있는 데이터를 활성화합니다. 이를 수행하려면 아래 단계를 따르십시오.
 
 ## 전제 조건 {#prerequisites}
 
@@ -38,7 +38,9 @@ Adobe Experience Platform 사용자 인터페이스에서 **[!UICONTROL 대상]*
 
 ![활성화 흐름](../assets/ui/activate-destinations/activate-flow.png)
 
-대상에 대한 활성화 워크플로우가 이미 존재하는 경우 대상에 대해 현재 활성화된 세그먼트를 볼 수 있습니다. 오른쪽 레일에서 **[!UICONTROL 활성화 편집]**&#x200B;을 선택하고 아래 단계에 따라 활성화 세부 사항을 수정합니다.
+>[!NOTE]
+>
+>대상에 대한 활성화 워크플로가 이미 존재하는 경우 대상에 대해 현재 활성화된 세그먼트를 볼 수 있습니다. 오른쪽 레일에서 **[!UICONTROL 활성화 편집]**&#x200B;을 선택하고 아래 단계에 따라 활성화 세부 사항을 수정합니다.
 
 대상을 선택하고 나면 **[!UICONTROL 활성화]**&#x200B;를 선택합니다.
 
@@ -62,7 +64,7 @@ Adobe Experience Platform 사용자 인터페이스에서 **[!UICONTROL 대상]*
 
 #### 예:[!DNL Facebook Custom Audience] {#example-facebook}에서 대상 데이터 활성화
 
-이것은 [!DNL Facebook]에서 대상 데이터를 활성화할 때 올바른 ID 매핑의 예입니다.
+다음은 [!DNL Facebook]에서 대상 데이터를 활성화할 때 올바른 ID 매핑의 예입니다.
 
 소스 필드 선택:
 
@@ -140,13 +142,17 @@ If you are using another ID, such as "Rewards ID" or "Loyalty ID", as primary id
 
 ![단계 구성](../assets/ui/activate-destinations/configure-icon.png)
 
-**[!UICONTROL 구성]** 단계에서 내보내려는 각 세그먼트에 대한 일정 및 파일 이름을 구성할 수 있습니다. 일정을 구성하는 것은 필수이지만 파일 이름을 구성하는 것은 선택 사항입니다.
+[!DNL Adobe Experience Platform] 이메일 마케팅 및 클라우드 스토리지 대상에 대한 데이터를  [!DNL CSV] 파일 형식으로 내보냅니다. **[!UICONTROL 구성]** 단계에서 내보내려는 각 세그먼트에 대한 일정 및 파일 이름을 구성할 수 있습니다. 일정을 구성하는 것은 필수이지만 파일 이름을 구성하는 것은 선택 사항입니다.
+
+>[!IMPORTANT]
+> 
+>[!DNL Adobe Experience Platform] 내보내기 파일을 파일당 5백만 개의 레코드(행)로 자동으로 분할합니다. 각 행은 하나의 프로파일을 나타냅니다.
 
 세그먼트에 대한 일정을 추가하려면 **[!UICONTROL 일정 만들기]**&#x200B;를 선택합니다.
 
 ![](../assets/ui/activate-destinations/configure-destination-schedule.png)
 
-세그먼트 일정을 만드는 옵션이 표시된 팝업이 나타납니다.
+세그먼트 일정을 만드는 옵션이 표시된 대화 상자가 나타납니다.
 
 * **파일 내보내기**:전체 파일 또는 증분 파일을 내보낼 수 있습니다. 전체 파일을 내보내면 해당 세그먼트에 해당하는 모든 프로파일의 전체 스냅샷이 게시됩니다. 증분 파일을 내보내면 마지막 내보내기 이후 해당 세그먼트를 자격을 갖춘 프로필 델타가 게시됩니다.
 * **빈도**:전체 파일  **[!UICONTROL 내보내기]** 를 선택한 경우 Onceor Daily를 내보낼  **** 수  **[!UICONTROL 있습니다]**. **[!UICONTROL 증분 파일 내보내기]**&#x200B;를 선택한 경우 **[!UICONTROL 일별]**&#x200B;만 내보낼 수 있습니다. 파일 **[!UICONTROL 한 번]**&#x200B;을 내보내면 파일이 한 번 내보내집니다. 파일 **[!UICONTROL 매일]**&#x200B;을 내보내면 전체 파일을 선택한 경우 시작 날짜에서 종료 날짜(오전 12:00 UTC(오후 7:00 EST)까지 매일 파일을 내보냅니다. 증분 파일이 선택된 경우 오후 12:00 PM UTC(7:00 AM EST).
@@ -182,7 +188,7 @@ If you are using another ID, such as "Rewards ID" or "Loyalty ID", as primary id
 
 ![세그먼트 예약 단계](../assets/ui/activate-destinations/segment-schedule-icon.png)
 
-**[!UICONTROL 세그먼트 일정]** 페이지에서 대상으로 데이터를 전송하는 시작 날짜와 대상으로 데이터를 보내는 빈도를 설정할 수 있습니다.
+**[!UICONTROL 세그먼트 일정]** 페이지에서 데이터를 대상에 보내기 위한 시작 날짜와 대상으로 데이터를 보내는 빈도를 설정할 수 있습니다.
 
 >[!IMPORTANT]
 >
