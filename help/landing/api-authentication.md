@@ -2,14 +2,14 @@
 keywords: Experience Platform;홈;인기 항목;인증;액세스
 solution: Experience Platform
 title: Experience Platform API 인증 및 액세스
-topic: tutorial
-type: Tutorial
+topic: 자습서
+type: 튜토리얼
 description: '이 문서에서는 Experience Platform API를 호출하기 위해 Adobe Experience Platform 개발자 계정에 액세스할 수 있는 단계별 자습서를 제공합니다. '
 translation-type: tm+mt
-source-git-commit: 681a2554111f988ec03d40f23a3b2c8225a077ae
+source-git-commit: ca5c8527b1b54856aa1e762a06ddbe404f30ec42
 workflow-type: tm+mt
-source-wordcount: '882'
-ht-degree: 6%
+source-wordcount: '908'
+ht-degree: 5%
 
 ---
 
@@ -45,7 +45,7 @@ Adobe ID이 없는 경우 다음 단계를 사용하여를 만들 수 있습니�
 
 ## 조직의 [!DNL Experience Platform]에 대한 개발자 및 사용자 되기
 
-Adobe I/O에서 통합을 만들기 전에 계정에 IMS 조직의 제품에 대한 개발자 권한이 있어야 합니다. Admin Console의 개발자 계정에 대한 자세한 내용은 개발자를 관리하기 위한 [지원 문서](https://helpx.adobe.com/kr/enterprise/using/manage-developers.html)에서 확인할 수 있습니다.
+Adobe I/O에 통합을 생성하기 전에 계정에 IMS 조직의 제품에 대한 개발자 권한이 있어야 합니다. Admin Console의 개발자 계정에 대한 자세한 내용은 개발자를 관리하기 위한 [지원 문서](https://helpx.adobe.com/kr/enterprise/using/manage-developers.html)에서 확인할 수 있습니다.
 
 **개발자 액세스 권한 얻기**
 
@@ -97,7 +97,7 @@ Adobe 개발자 콘솔을 사용하여 다음 3개의 액세스 자격 증명을
 
 ![](images/api-authentication/add-platform-api.png)
 
-프로젝트에 추가할 API로 [!DNL Experience Platform]을 선택한 경우 서비스 계정(JWT)](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/services-add-api-jwt.md)(&quot;API 구성&quot; 단계에서 시작)을 사용하여 프로젝트에 API를 추가하는 튜토리얼에 설명된 단계를 따라 프로세스를 완료합니다.[
+[!DNL Experience Platform]을(를) 프로젝트에 추가할 API로 선택한 경우 서비스 계정(JWT)](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/services-add-api-jwt.md)(&quot;API 구성&quot; 단계에서 시작)을 사용하여 프로젝트에 API를 추가하는 튜토리얼에 설명된 단계를 따라 프로세스를 완료합니다.[
 
 API가 프로젝트에 추가되면 **프로젝트 개요** 페이지에는 [!DNL Experience Platform] API에 대한 모든 호출에 필요한 다음 자격 증명이 표시됩니다.
 
@@ -161,6 +161,6 @@ curl -X GET https://platform.adobe.io/data/foundation/schemaregistry/global/clas
 
 ## 다음 단계
 
-이 문서를 읽으면 [!DNL Platform] API에 대한 액세스 자격 증명을 수집하여 테스트했습니다. 이제 [documentation](../landing/documentation/overview.md)에서 제공되는 예제 API 호출과 함께 따를 수 있습니다.
+이 문서를 읽으면 [!DNL Platform] API에 대한 액세스 자격 증명을 수집하여 테스트했습니다. 이제 플랫폼 API](api-guide.md)에 대한 시작 안내서에 제공된 예제를 따라 할 수 있습니다. [ 이 안내서에는 각 플랫폼 서비스에 대한 API 안내서에 대한 링크가 포함되어 있으며 추가 정보를 제공합니다. 오류, 포스트맨 및 JSON에 대해 설명합니다.
 
 이 튜토리얼에서 수집한 인증 값 외에도 많은 [!DNL Platform] API는 유효한 `{SANDBOX_NAME}`을 헤더로 제공해야 합니다. 자세한 내용은 [샌드박스 개요](../sandboxes/home.md)를 참조하십시오.
