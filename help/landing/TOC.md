@@ -5,10 +5,10 @@ user-guide-title: Adobe Experience Platform 개요
 breadcrumb-title: Experience Platform 개요
 user-guide-description: Experience Platform을 통해 개인화된 경험을 실시간으로 고객에게 전달하는 방법을 살펴볼 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 36b85bee308fdcf599c9b7913cf94774404f06d2
 workflow-type: tm+mt
-source-wordcount: '160'
-ht-degree: 11%
+source-wordcount: '170'
+ht-degree: 14%
 
 ---
 
@@ -30,8 +30,10 @@ ht-degree: 11%
    * [워크플로우 UI 가이드](workflows.md)
    * [브라우저 및 언어 지원](browser-language-support.md)
 * Experience Platform API {#platform-apis}
-   * [인증 및 액세스 플랫폼 API](api-authentication.md)
+   * [플랫폼 API 시작하기](api-guide.md)
+   * [ Platform API 인증 및 액세스](api-authentication.md)
    * [API 기본 사항](api-fundamentals.md)
+   * [플랫폼 API에서 Postman 사용](postman.md)
    * [API 참조 문서](http://www.adobe.com/go/platform-api-reference-en)
 * 플랫폼 설명서 {#documentation}
    * [개요](documentation/overview.md)
