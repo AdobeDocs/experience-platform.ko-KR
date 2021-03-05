@@ -2,12 +2,12 @@
 keywords: Experience Platform;홈;인기 항목
 solution: Experience Platform
 title: Experience Platform API 기본 사항
-topic: getting started
+topic: 시작하기
 description: 이 문서에서는 Experience Platform API와 관련된 일부 기본 기술 및 구문에 대한 간단한 개요를 제공합니다.
 translation-type: tm+mt
-source-git-commit: 8c98632b67ddae4fb7800e80fb8c83aca9bfa291
+source-git-commit: ca5c8527b1b54856aa1e762a06ddbe404f30ec42
 workflow-type: tm+mt
-source-wordcount: '504'
+source-wordcount: '513'
 ht-degree: 1%
 
 ---
@@ -126,4 +126,4 @@ JSON 스키마는 JSON 데이터의 구조를 설명하고 확인하는 데 사�
 
 ## 다음 단계
 
-이 문서에서는 [!DNL Experience Platform]에 대한 JSON 기반 리소스 관리와 관련된 기술 및 구문을 소개합니다. 모범 사례 및 FAQ 답변 등 [!DNL Platform] API 작업에 대한 자세한 내용은 [플랫폼 문제 해결 안내서](troubleshooting.md)를 참조하십시오.
+이 문서에서는 [!DNL Experience Platform]에 대한 JSON 기반 리소스 관리와 관련된 기술 및 구문을 소개합니다. 최상의 작업 방법을 포함하여 플랫폼 API 작업에 대한 자세한 내용은 [시작 안내서](api-guide.md)를 참조하십시오. FAQ에 대한 답변은 [플랫폼 문제 해결 안내서](troubleshooting.md)를 참조하십시오.
