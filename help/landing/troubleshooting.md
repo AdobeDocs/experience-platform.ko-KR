@@ -7,10 +7,10 @@ landing-page-description: 자주 묻는 질문에 대한 답변과 Experience Pl
 topic: 시작하기
 type: 설명서
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 83cc3ddbf067f413cb524a3a685d985d5853eafd
 workflow-type: tm+mt
-source-wordcount: '1997'
-ht-degree: 4%
+source-wordcount: '1718'
+ht-degree: 5%
 
 ---
 
@@ -31,63 +31,7 @@ ht-degree: 4%
 
 요청 형식은 사용 중인 [!DNL Platform] API에 따라 달라집니다. API 호출을 구조화하는 방법을 학습하는 가장 좋은 방법은 사용 중인 특정 [!DNL Platform] 서비스에 대한 설명서에 나와 있는 예제와 함께 따르는 것입니다.
 
-### 예제 API 호출 읽기
-
-[!DNL Experience Platform]에 대한 설명서에는 두 가지 방법으로 API 호출 예를 보여줍니다. 먼저 호출은 **API 형식**&#x200B;으로 표시되고 작업(GET, POST, PUT, PATCH, DELETE) 및 사용된 끝점(예: `/global/classes`)만 표시하는 템플릿 표현입니다. 일부 템플릿은 `GET /{VARIABLE}/classes/{ANOTHER_VARIABLE}` 등의 호출을 공식화하는 방법을 보여주는 데 도움이 되는 변수의 위치를 보여줍니다.
-
-그런 다음 호출은 API와 성공적으로 상호 작용하는 데 필요한 헤더와 전체 &quot;기본 경로&quot;를 포함하는 **요청**&#x200B;에 cURL 명령으로 표시됩니다. 기본 경로는 모든 끝점에 프리펜드되어야 합니다. 예를 들어 전술한 `/global/classes` 끝점은 `https://platform.adobe.io/data/foundation/schemaregistry/global/classes`이 됩니다. 설명서 전반에서 API 형식/요청 패턴을 볼 수 있으며 플랫폼 API를 직접 호출할 때 요청 예제에 표시된 전체 경로를 사용해야 합니다.
-
-### API 요청 예
-
-다음은 설명서에서 보게 될 형식을 보여 주는 API 요청의 예입니다.
-
-**API 형식**
-
-API 형식은 사용 중인 작업(GET) 및 끝점을 표시합니다. 변수는 중괄호로 표시됩니다(이 경우 `{CONTAINER_ID}`).
-
-```http
-GET /{CONTAINER_ID}/classes
-```
-
-**요청**
-
-이 예제 요청에서 API 형식의 변수는 요청 경로에 실제 값이 주어집니다. 모든 필수 헤더도 표시되며, 샘플 헤더 값 또는 중요한 정보(예: 보안 토큰 및 액세스 ID)가 포함되어야 하는 변수도 표시됩니다.
-
-```shell
-curl -X GET \
-  https://platform.adobe.io/data/foundation/schemaregistry/global/classes \
-  -H 'Accept: application/vnd.adobe.xed-id+json' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**응답**
-
-응답은 전송된 요청을 기준으로 API에 대한 성공적인 호출 후 받게 될 응답을 보여줍니다. 경우에 따라 응답이 공간을 위해 잘리는 경우가 있습니다. 즉, 샘플에 표시되는 추가 정보 또는 정보를 볼 수 있습니다.
-
-```json
-{
-    "results": [
-        {
-            "title": "XDM ExperienceEvent",
-            "$id": "https://ns.adobe.com/xdm/context/experienceevent",
-            "meta:altId": "_xdm.context.experienceevent",
-            "version": "1"
-        },
-        {
-            "title": "XDM Individual Profile",
-            "$id": "https://ns.adobe.com/xdm/context/profile",
-            "meta:altId": "_xdm.context.profile",
-            "version": "1"
-        }
-    ],
-    "_links": {}
-}
-```
-
-필수 헤더 및 요청 본문을 포함하여 플랫폼 API의 특정 끝점에 대한 자세한 내용은 [API 참조 설명서](http://www.adobe.com/go/platform-api-reference-en)를 참조하십시오.
+API 요청 서식 지정에 대한 자세한 내용은 플랫폼 API 시작 안내서 [샘플 API 호출](./api-guide.md#sample-api) 섹션을 참조하십시오.
 
 ## IMS 조직이란 무엇입니까?{#what-is-my-ims-organization}
 
@@ -121,7 +65,7 @@ GET /batches?createdAfter=1559775880000&orderBy=desc:created
 
 ## Postman을 사용하여 [!DNL Platform] API를 호출할 수 있습니까?{#how-do-i-use-postman-to-make-calls-to-platform-apis}
 
-[Postmanis](https://www.postman.com/) 는 RESTful API에 대한 호출을 시각화하는 데 유용한 도구입니다. 이 [중간 게시물](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f)에서는 Postman을 설정하여 자동으로 인증을 수행하고 이를 사용하여 [!DNL Experience Platform] API를 사용하는 방법에 대해 설명합니다.
+[Postmanis](https://www.postman.com/) 는 RESTful API에 대한 호출을 시각화하는 데 유용한 도구입니다. [플랫폼 API 시작 안내서](api-guide.md)에는 Postman 컬렉션을 가져오기 위한 비디오 및 지침이 포함되어 있습니다. 또한 각 서비스에 대한 Postman 컬렉션 목록이 제공됩니다.
 
 ## [!DNL Platform]에 대한 시스템 요구 사항은 무엇입니까?{#what-are-the-system-requirements-for-platform}
 
