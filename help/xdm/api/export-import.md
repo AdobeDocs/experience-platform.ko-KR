@@ -3,11 +3,11 @@ keywords: Experience Platform;홈;인기 항목;api;API;XDM;XDM 시스템;경험
 solution: Experience Platform
 title: API 끝점 내보내기/가져오기
 description: 스키마 레지스트리 API의 /export 및/import 끝점을 사용하면 IMS 조직 및 샌드박스 간에 XDM 리소스를 공유할 수 있습니다.
-topic: developer guide
+topic: 개발자 가이드
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 0727ffa0c72bcb6a85de1a13215b691b97889b70
 workflow-type: tm+mt
-source-wordcount: '500'
+source-wordcount: '502'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 ## 시작하기
 
-이 안내서에 사용된 끝점은 [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/mixin-registry.yaml)의 일부입니다. 계속하기 전에 [시작하기 안내서](./getting-started.md)에서 관련 설명서에 대한 링크, 이 문서에서 샘플 API 호출 읽기 안내서, Experience Platform API를 성공적으로 호출하기 위해 필요한 필수 헤더에 대한 중요 정보를 검토하십시오.
+이 안내서에 사용된 끝점은 [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)의 일부입니다. 계속하기 전에 [시작하기 안내서](./getting-started.md)에서 관련 설명서에 대한 링크, 이 문서에서 샘플 API 호출 읽기 안내서, Experience Platform API를 성공적으로 호출하기 위해 필요한 필수 헤더에 대한 중요 정보를 검토하십시오.
 
 내보내기/가져오기 끝점은 [!DNL Schema Registry]에서 지원하는 원격 프로시저 호출(RPC)의 일부입니다. [!DNL Schema Registry] API의 다른 끝점과 달리 RPC 끝점에는 `Accept` 또는 `Content-Type` 같은 추가 헤더가 필요하지 않으며 `CONTAINER_ID`을(를) 사용하지 않습니다. 대신, 아래 API 호출에 설명된 대로 `/rpc` 네임스페이스를 사용해야 합니다.
 
