@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;홈;인기 항목
 solution: Experience Platform
-title: 이메일 마케팅 대상에 연결하고 API 호출을 사용하여 데이터 활성화
+title: 이메일 마케팅 대상에 연결하고 Flow Service API를 사용하여 데이터를 활성화합니다
 description: 이 문서에서는 Adobe Experience Platform API를 사용하여 이메일 마케팅 대상을 만드는 방법에 대해 설명합니다
 topic: 자습서
 type: 튜토리얼
 translation-type: tm+mt
-source-git-commit: 789534c02746ed24dfa01c7b471cdf3be407711e
+source-git-commit: 32cb198bcf2c142b50c4b7a60282f0c923be06b1
 workflow-type: tm+mt
-source-wordcount: '1701'
+source-wordcount: '1707'
 ht-degree: 1%
 
 ---
 
 
-# 이메일 마케팅 대상에 연결하고 API 호출을 사용하여 데이터 활성화
+# 이메일 마케팅 대상에 연결하고 Flow Service API를 사용하여 데이터를 활성화합니다
 
 이 자습서에서는 API 호출을 사용하여 Adobe Experience Platform 데이터에 연결하고, [이메일 마케팅 대상](../catalog/email-marketing/overview.md)을 만들고, 데이터 흐름을 새로 만든 대상에 만들고, 데이터를 새로 만든 대상에 활성화하는 방법을 보여 줍니다.
 
@@ -67,7 +67,7 @@ ht-degree: 1%
 
 ### Swagger 설명서
 
-이 자습서에서는 Swagger에서 모든 API 호출에 대한 참조 설명서를 찾을 수 있습니다. Adobe.io](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)에 대한 [Flow Service API 설명서를 참조하십시오. 이 자습서와 Swagger 설명서 페이지를 동시에 사용하는 것이 좋습니다.
+이 자습서에서는 Swagger에서 모든 API 호출에 대한 참조 설명서를 찾을 수 있습니다. Adobe I/O](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)에 대한 [Flow Service API 설명서를 참조하십시오. 이 자습서와 Swagger 설명서 페이지를 동시에 사용하는 것이 좋습니다.
 
 ## 사용 가능한 대상 목록 {#get-the-list-of-available-destinations} 가져오기
 
