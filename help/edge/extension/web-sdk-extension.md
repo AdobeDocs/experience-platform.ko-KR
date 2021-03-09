@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 웹 SDK 확장 개요
 description: Adobe Experience Platform Launch용 Adobe Experience Platform Web SDK 익스텐션에 대한 자세한 내용
 translation-type: tm+mt
-source-git-commit: 2a0ae9541a8bb2bb985d43a402d0842e73b23c81
+source-git-commit: b9fb71ac7eca95c65165d6780b681ada3f16325b
 workflow-type: tm+mt
-source-wordcount: '553'
-ht-degree: 14%
+source-wordcount: '584'
+ht-degree: 13%
 
 ---
 
@@ -56,10 +56,13 @@ Adobe Experience Platform Edge Network에 요청이 전송되면 서버측 구�
 
 ## [!UICONTROL 개인 정보 보호]
 
-[!UICONTROL 개인 정보] 섹션에서는 SDK가 웹 사이트의 고객 동의 신호를 처리하는 방법을 구성할 수 있습니다. 특히, 다른 명시적 동의 기본 설정이 제공되지 않은 경우 고객에 대해 가정되는 기본 동의 수준을 선택할 수 있습니다. 다음 표에서는 각 옵션에 대해 설명합니다.
+[!UICONTROL 개인 정보] 섹션에서는 SDK가 웹 사이트의 사용자 동의 신호를 처리하는 방법을 구성할 수 있습니다. 특히, 다른 명시적 동의 기본 설정이 제공되지 않은 경우 사용자에게 가정되는 기본 동의 수준을 선택할 수 있습니다. 기본 동의 수준은 사용자의 프로필에 저장되지 않습니다. 다음 표에서는 각 옵션에 대해 설명합니다.
 
 | [!UICONTROL 기본 동의 수준] | 설명 |
 | --- | --- |
-| [!UICONTROL 시작] | 옵트인. 기본적으로 고객의 동의를 가정하고 옵트아웃 신호만 준수하는 경우 이 옵션을 사용합니다. |
-| [!UICONTROL 보류 중] | &quot;보류 중&quot; 동의를 받은 고객은 옵트인 신호가 전송될 때까지 옵트아웃됩니다. 업무 운영에 대한 명시적 고객 동의를 필요로 하는 경우 이 옵션을 사용합니다. |
+| [!UICONTROL 시작] | 사용자가 동의 기본 설정을 제공하기 전에 발생하는 이벤트를 수집합니다. |
+| [!UICONTROL 종료] | 사용자가 동의 기본 설정을 제공하기 전에 발생하는 이벤트를 버립니다. |
+| [!UICONTROL 보류 중] | 사용자가 동의 환경 설정을 제공하기 전에 발생하는 큐 이벤트입니다. 동의 기본 설정이 제공되면 제공된 기본 설정에 따라 이벤트가 수집되거나 무시됩니다. |
 | [!UICONTROL 데이터 요소로 제공] | 기본 동의 수준은 사용자가 정의하는 별도의 데이터 요소에 의해 결정됩니다. 이 옵션을 사용할 때는 제공된 드롭다운 메뉴를 사용하여 데이터 요소를 지정해야 합니다. |
+
+업무 운영에 대한 명시적 사용자 동의를 필요로 하는 경우 종료 또는 보류 중 을 사용하십시오.
