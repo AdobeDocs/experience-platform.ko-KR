@@ -3,7 +3,7 @@ title: Adobe Experience Platform 웹 SDK 설치
 description: Experience Platform 웹 SDK를 설치하는 방법을 알아봅니다.
 keywords: 웹 sdk 설치;웹 sdk 설치;internet explorer;promise;npm 패키지
 translation-type: tm+mt
-source-git-commit: 29272856d766e5adeb4b00ea62b28ea77abe338e
+source-git-commit: 63c0c5cae5ca2800b1f049b2b33e2a6f36ee7255
 workflow-type: tm+mt
 source-wordcount: '901'
 ht-degree: 4%
@@ -31,8 +31,10 @@ URL 구조:https://cdn1.adoberesources.net/alloy/[버전]/alloy.min.js OR 합금
 
 예:
 
-* 축소:[https://cdn1.adoberesources.net/alloy/2.3.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/2.3.0/alloy.min.js)
-* 축소 안 됨:[https://cdn1.adoberesources.net/alloy/2.3.0/alloy.js](https://cdn1.adoberesources.net/alloy/2.3.0/alloy.js)
+
+* 축소:[https://cdn1.adoberesources.net/alloy/2.4.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/2.4.0/alloy.min.js)
+* 축소 해제:[https://cdn1.adoberesources.net/alloy/2.4.0/alloy.js](https://cdn1.adoberesources.net/alloy/2.4.0/alloy.js)
+
 
 ### {#adding-the-code} 코드 추가
 
@@ -45,7 +47,7 @@ URL 구조:https://cdn1.adoberesources.net/alloy/[버전]/alloy.min.js OR 합금
   function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
   (window,["alloy"]);
 </script>
-<script src="https://cdn1.adoberesources.net/alloy/2.3.0/alloy.min.js" async></script>
+<script src="https://cdn1.adoberesources.net/alloy/2.4.0/alloy.min.js" async></script>
 ```
 
 &quot;기본 코드&quot;는 `alloy`이라는 글로벌 함수를 만듭니다. 이 함수를 사용하여 SDK와 상호 작용합니다. 전역 함수의 이름을 다른 이름으로 지정하려면 `alloy` 이름을 다음과 같이 변경합니다.
@@ -57,7 +59,7 @@ URL 구조:https://cdn1.adoberesources.net/alloy/[버전]/alloy.min.js OR 합금
   function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
   (window,["mycustomname"]);
 </script>
-<script src="https://cdn1.adoberesources.net/alloy/2.3.0/alloy.min.js" async></script>
+<script src="https://cdn1.adoberesources.net/alloy/2.4.0/alloy.min.js" async></script>
 ```
 
 이 예에서 전역 함수의 이름이 `alloy` 대신 `mycustomname`으로 변경되었습니다.
@@ -107,7 +109,7 @@ URL 구조:https://cdn1.adoberesources.net/alloy/[버전]/alloy.min.js OR 합금
   function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
   (window,["alloy"]);
 </script>
-<script src="https://cdn1.adoberesources.net/alloy/2.3.0/alloy.min.js"></script>
+<script src="https://cdn1.adoberesources.net/alloy/2.4.0/alloy.min.js"></script>
 ```
 
 ## 옵션 3:NPM 패키지 사용
