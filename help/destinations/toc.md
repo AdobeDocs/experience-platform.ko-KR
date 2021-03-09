@@ -6,9 +6,9 @@ user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페�
 description: 이 문서에서는 Adobe Experience Platform 대상에 대한 목차 목록
 feature: 대상
 translation-type: tm+mt
-source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
+source-git-commit: 32cb198bcf2c142b50c4b7a60282f0c923be06b1
 workflow-type: tm+mt
-source-wordcount: '456'
+source-wordcount: '460'
 ht-degree: 11%
 
 ---
@@ -19,8 +19,8 @@ ht-degree: 11%
 * [대상 개요](./home.md)
 * [대상 유형 및 카테고리](./destination-types.md)
 * API 자습서 {#api}
-   * [스트리밍 대상에 연결하고 API 호출을 사용하여 데이터 활성화](./api/streaming-destinations.md)
-   * [이메일 마케팅 대상에 연결하고 API 호출을 사용하여 데이터 활성화](./api/email-marketing.md)
+   * [Flow Service API를 사용하여 스트리밍 대상에 연결하고 데이터를 활성화합니다.](./api/streaming-destinations.md)
+   * [이메일 마케팅 대상에 연결하고 Flow Service API를 사용하여 데이터를 활성화합니다](./api/email-marketing.md)
 * UI 안내서 {#ui}
    * [대상 작업 공간 개요](./ui/destinations-workspace.md)
    * [대상 세부 사항 보기](./ui/destination-details-page.md)
