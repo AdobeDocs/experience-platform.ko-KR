@@ -4,9 +4,9 @@ description: Adobe Experience Platform 웹 SDK를 사용하여 Adobe Experience 
 seo-description: Adobe Experience Cloud ID를 가져오는 방법에 대해 알아봅니다.
 keywords: ID;퍼스트 파티 ID;ID 서비스;3번째 파티 ID;ID 마이그레이션;방문자 ID;3자 ID;thirdPartyCookiesEnabled;idMigrationEnabled;getIdentity;동기화 ID;syncIdentity;sendEvent;idMap;기본;ID;네임스페이스 id;authenticationState hashEnabled;
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 882bcd2f9aa7a104270865783eed82089862dea3
 workflow-type: tm+mt
-source-wordcount: '924'
+source-wordcount: '963'
 ht-degree: 3%
 
 ---
@@ -40,19 +40,20 @@ XDM 형식 데이터를 Audience Manager으로 보낼 때 데이터를 마이그
 
 현재 서버 측 전달이 활성화되어 있고 `appmeasurement.js`을(를) 사용하고 있는 경우 및 `visitor.js` 서버 측 전달 기능을 사용하도록 설정할 수 있으며 이로 인해 문제가 발생하지 않습니다. 백엔드에서 Adobe은 모든 AAM 세그먼트를 가져오고 Analytics에 대한 호출에 추가합니다. Analytics 호출에 이러한 세그먼트가 포함되어 있으면 Analytics는 Audience Manager을 호출하지 않고 데이터를 전달하므로 이중 데이터 수집은 없습니다. 또한 동일한 세그멘테이션 끝점이 백엔드에서 호출되므로 웹 SDK를 사용할 때는 위치 힌트가 필요하지 않습니다.
 
-## 방문자 ID 검색
+## 방문자 ID 및 지역 ID 검색
 
-이 고유 ID를 사용하려면 `getIdentity` 명령을 사용합니다. `getIdentity` 현재 방문자에 대한 기존 ECID를 반환합니다. 아직 ECID가 없는 처음 방문자의 경우 이 명령은 새 ECID를 생성합니다.
+고유 방문자 ID를 사용하려면 `getIdentity` 명령을 사용합니다. `getIdentity` 현재 방문자에 대한 기존 ECID를 반환합니다. 아직 ECID가 없는 처음 방문자의 경우 이 명령은 새 ECID를 생성합니다. `getIdentity` 방문자의 지역 ID도 반환합니다. 자세한 내용은 [Adobe Audience Manager 사용 안내서](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-api-reference/dcs-regions.html)를 참조하십시오.
 
 >[!NOTE]
 >
->이 메서드는 일반적으로 [!DNL Experience Cloud] ID를 읽어야 하는 사용자 지정 솔루션에서 사용됩니다. 표준 구현에서는 사용되지 않습니다.
+>이 메서드는 일반적으로 [!DNL Experience Cloud] ID를 읽어야 하거나 Adobe Audience Manager 위치 힌트가 필요한 사용자 지정 솔루션에서 사용됩니다. 표준 구현에서는 사용되지 않습니다.
 
 ```javascript
 alloy("getIdentity")
   .then(function(result) {
     // The command succeeded.
-    console.log(result.identity.ECID);
+    console.log("ECID:", result.identity.ECID);
+    console.log("RegionId:", result.edge.regionId);
   })
   .catch(function(error) {
     // The command failed.
