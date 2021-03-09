@@ -3,9 +3,9 @@ title: Adobe Experience Platform 웹 SDK를 사용하여 IAB TCF 2.0 지원 통�
 description: Adobe Experience Platform Launch을 사용하지 않고도 웹 사이트에 대한 IAB TCF 2.0 지원을 설정하는 방법을 알아봅니다.
 seo-description: Adobe Experience Platform 웹 SDK를 사용하여 IAB TCF 2.0 동의를 설정하는 방법에 대해 알아봅니다.
 translation-type: tm+mt
-source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
+source-git-commit: b9fb71ac7eca95c65165d6780b681ada3f16325b
 workflow-type: tm+mt
-source-wordcount: '685'
+source-wordcount: '688'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ IAB TCF 2.0(Experience Platform Launch 및 Adobe Experience Platform 웹 SDK 확
 
 ## 기본 동의 활성화
 
-알 수 없는 모든 사용자를 동일하게 처리하려면 기본 동의를 `pending`에 설정할 수 있습니다. 동의 기본 설정이 수신될 때까지 경험 이벤트를 대기시킵니다.
+알 수 없는 모든 사용자를 동일하게 처리하려면 기본 동의를 `pending` 또는 `out`에 설정할 수 있습니다. 동의 기본 설정이 수신될 때까지 경험 이벤트를 대기하거나 삭제합니다.
 
 기본 동의에 대한 자세한 내용은 플랫폼 웹 SDK 구성 설명서의 [기본 동의 섹션](../../fundamentals/configuring-the-sdk.md#default-consent)을 참조하십시오.
 
