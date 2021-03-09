@@ -4,10 +4,10 @@ description: Adobe Experience Platform 웹 SDK를 구성하는 방법을 알아�
 seo-description: Experience Platform 웹 SDK를 구성하는 방법 알아보기
 keywords: 구성;구성;구성;SDK;edge;웹 SDK;구성;EdgeConfigId;컨텍스트;웹;장치;환경;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConceptions;웹 sdk 설정;prehingStyle;cookieEnabled;urlEnabled;urlEnabled DestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 translation-type: tm+mt
-source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
+source-git-commit: f78da58ba7a593d9c161030833d9b69e2ba57c9a
 workflow-type: tm+mt
-source-wordcount: '743'
-ht-degree: 11%
+source-wordcount: '793'
+ht-degree: 10%
 
 ---
 
@@ -103,7 +103,11 @@ Adobe 서비스와 상호 작용하는 데 사용되는 도메인입니다. Adob
 | -------- | ------------ | ----------------- |
 | 개체 | 아니요 | `"in"` |
 
-사용자의 기본 동의를 설정합니다. 이 설정은 사용자에 대해 이미 저장된 동의 환경 설정이 없을 때 사용됩니다. 다른 유효한 값은 `"pending"`입니다. 이 설정이 지정되면 사용자가 동의 환경 설정을 제공할 때까지 작업은 큐에 오르게 됩니다. 사용자의 기본 설정이 제공되면 사용자의 기본 설정에 따라 작업이 진행되거나 취소됩니다. 자세한 내용은 [지원 동의](../consent/supporting-consent.md)를 참조하십시오.
+사용자의 기본 동의를 설정합니다. 이 설정은 사용자에 대해 이미 저장된 동의 환경 설정이 없을 때 사용됩니다. 다른 유효한 값은 `"pending"` 및 `"out"`입니다. 이 기본값은 사용자의 프로필에 지속되지 않습니다. setConcepts가 호출될 때만 사용자의 프로필이 업데이트됩니다.
+* `"in"`:이 설정이 되어 있거나 값을 제공하지 않으면 사용자 동의 기본 설정 없이 작업을 진행합니다.
+* `"pending"`:이 설정이 지정되면 사용자가 동의 환경 설정을 제공할 때까지 작업은 큐에 오르게 됩니다.
+* `"out"`:이 설정이 지정되면 사용자가 동의 기본 설정을 제공할 때까지 작업이 무시됩니다.
+사용자의 기본 설정이 제공되면 사용자의 기본 설정에 따라 작업이 진행되거나 취소됩니다. 자세한 내용은 [지원 동의](../consent/supporting-consent.md)를 참조하십시오.
 
 ## 개인화 옵션
 
