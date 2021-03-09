@@ -2,10 +2,10 @@
 title: Adobe Experience Platform Web SDK Extension의 작업 유형
 description: Adobe Experience Platform Launch의 Adobe Experience Platform Web SDK 익스텐션에서 제공하는 다양한 작업 유형에 대해 알아보십시오.
 translation-type: tm+mt
-source-git-commit: 2a0ae9541a8bb2bb985d43a402d0842e73b23c81
+source-git-commit: ff261c507d310b8132912680b6ddd1e7d5675d08
 workflow-type: tm+mt
-source-wordcount: '354'
-ht-degree: 18%
+source-wordcount: '341'
+ht-degree: 6%
 
 ---
 
@@ -24,9 +24,9 @@ ht-degree: 18%
 
 ## 동의 설정
 
-사용자의 동의를 받은 후에는 &quot;동의 설정&quot; 작업 유형을 사용하여 이 동의를 Adobe Experience Platform 웹 SDK에 전달해야 합니다. 현재 &quot;Adobe&quot; 및 &quot;IAB TCF&quot;, 2가지 유형의 표준이 지원됩니다. Adobe 표준을 사용하는 경우, 현재 동의를 &quot;시작&quot;, &quot;종료&quot;로 설정하거나 데이터 요소를 사용하여 제공할 수 있습니다. IAB TCF 표준을 사용하는 경우, 사용할 버전 및 값과 GDPR에 대한 추가 정보를 제공합니다.
+사용자의 동의를 받은 후에는 &quot;동의 설정&quot; 작업 유형을 사용하여 이 동의를 Adobe Experience Platform 웹 SDK에 전달해야 합니다. 현재 &quot;Adobe&quot; 및 &quot;IAB TCF&quot;, 2가지 유형의 표준이 지원됩니다. [고객 동의 기본 설정 지원](../consent/supporting-consent.md)을 참조하십시오. Adobe 버전 2.0을 사용하는 경우 데이터 요소 값만 지원됩니다. 동의 개체로 확인되는 데이터 요소를 만들어야 합니다.
 
-이 작업에서는 동의를 받으면 ID를 동기화할 수 있도록 ID 맵을 포함할 선택 필드도 제공됩니다. 동기화는 동의 호출이 &quot;보류 중&quot;으로 구성된 경우 동의 호출이 처음 실행할 호출일 가능성이 높기 때문에 유용합니다.
+이 작업에서는 동의를 받으면 ID를 동기화할 수 있도록 ID 맵을 포함할 선택 필드도 제공됩니다. 동기화는 동의 호출이 &quot;보류 중&quot; 또는 &quot;종료&quot;로 구성된 경우 동의 호출이 처음 실행되도록 할 수 있으므로 유용합니다.
 
 ## 이벤트 병합 ID 재설정
 
