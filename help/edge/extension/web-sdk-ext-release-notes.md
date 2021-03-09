@@ -3,10 +3,10 @@ title: Adobe Experience Platform Web SDK 확장 릴리스 노트
 description: Adobe Experience Platform Launch의 Adobe Experience Platform 웹 SDK 확장
 seo-description: Adobe Experience Platform Launch의 Adobe Experience Platform 웹 SDK 확장
 translation-type: tm+mt
-source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
+source-git-commit: 14cf62084c88956906cd9454176619ed08081a0e
 workflow-type: tm+mt
-source-wordcount: '990'
-ht-degree: 89%
+source-wordcount: '1134'
+ht-degree: 79%
 
 ---
 
@@ -14,6 +14,19 @@ ht-degree: 89%
 # Adobe Experience Platform Web SDK 확장 릴리스 노트
 
 이 문서에서는 Adobe Experience Platform Launch용 Adobe Experience Platform Web SDK 익스텐션에 대한 릴리스 노트에 대해 다룹니다. SDK 자체에 대한 최신 릴리스 노트는 [플랫폼 웹 SDK 릴리스 노트](https://docs.adobe.com/content/help/ko-KR/experience-platform/edge/release-notes.html)를 참조하십시오.
+
+## 2020년 3월 9일
+
+### Adobe Experience Platform 웹 SDK 2.4.0
+
+Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.4.0을 포함합니다.
+
+* 이벤트 작업 UI 보내기에 [&quot;문서 언로드&quot;](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#using-the-sendbeacon-api) 확인란을 추가했습니다.
+* 동의를 받을 때까지 모든 이벤트를 삭제하는 기본 동의](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#default-consent)구성 시 `out` 옵션에 대한 지원을 추가했습니다(기존 `pending` 옵션은 이벤트를 대기열에 넣고 동의를 받으면 전송합니다).[
+* 기본 동의 필드에 도구 설명을 추가했습니다.
+* [Adobe의 동의 2.0 표준](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html?communicating-consent-preferences-via-the-adobe-standard)에 대한 지원을 추가했습니다.
+* 이제 사용자의 액세스 토큰이 유효하지 않거나 잘못 제공된 경우 XDM 개체 데이터 요소 UI에 더 나은 오류가 표시됩니다.
+* XDM 개체 데이터 요소를 볼 때 브라우저 개발자 콘솔에 나타나는 교차 출처 오류(확장 작업에 영향을 주지 않음)를 수정했습니다.
 
 ## 2020년 11월 4일
 
