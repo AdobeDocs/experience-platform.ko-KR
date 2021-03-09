@@ -2,12 +2,12 @@
 keywords: Experience Platform;홈;인기 항목;Azure 파일 저장소;azure 파일 저장소
 solution: Experience Platform
 title: Azure 파일 저장소 원본 커넥터 개요
-topic: overview
+topic: 개요
 description: API 또는 사용자 인터페이스를 사용하여 Azure 파일 저장소를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 0fb97fcf5d3f8230ff86906aeef245e4a7f44f30
 workflow-type: tm+mt
-source-wordcount: '419'
+source-wordcount: '470'
 ht-degree: 0%
 
 ---
@@ -26,6 +26,10 @@ Adobe Experience Platform은 AWS, [!DNL Google Cloud Platform] 및 [!DNL Azure] 
 ## IP 주소 허용 목록
 
 소스 커넥터로 작업하기 전에 IP 주소 목록을 허용 목록에 추가해야 합니다. 지역 특정 IP 주소를 허용 목록에 추가하지 않으면 소스를 사용할 때 오류 또는 비성능이 발생할 수 있습니다. 자세한 내용은 [IP 주소 허용 목록](../../ip-address-allow-list.md) 페이지를 참조하십시오.
+
+>[!IMPORTANT]
+>
+>현재 [!DNL Azure File Storage] 소스 커넥터는 플랫폼에 동일한 영역 연결을 지원하지 않습니다. 즉, Azure 인스턴스가 플랫폼과 동일한 네트워크 영역을 사용하는 경우 플랫폼 소스에 대한 연결을 설정할 수 없습니다. 현재 교차 영역 연결만 지원됩니다. 자세한 내용은 Adobe 계정 관리자에게 문의하십시오.
 
 ## 파일 및 디렉토리에 대한 이름 지정 제한
 
