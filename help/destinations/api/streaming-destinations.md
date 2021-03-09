@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;home;popular topicsAPI 자습서;스트리밍 대상 API;플랫폼
 solution: Experience Platform
-title: Adobe Experience Platform에서 API 호출을 사용하여 스트리밍 대상에 연결하고 데이터 활성화
+title: Adobe Experience Platform의 Flow Service API를 사용하여 스트리밍 대상에 연결하고 데이터를 활성화할 수 있습니다
 description: 이 문서에서는 Adobe Experience Platform API를 사용하여 스트리밍 대상을 만드는 방법에 대해 설명합니다
-topic: tutorial
-type: Tutorial
+topic: 자습서
+type: 튜토리얼
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 32cb198bcf2c142b50c4b7a60282f0c923be06b1
 workflow-type: tm+mt
-source-wordcount: '2021'
+source-wordcount: '2029'
 ht-degree: 1%
 
 ---
 
 
-# 스트리밍 대상에 연결하고 API 호출을 사용하여 데이터 활성화
+# Flow Service API를 사용하여 스트리밍 대상에 연결하고 데이터를 활성화합니다.
 
 >[!NOTE]
 >
@@ -71,7 +71,7 @@ Experience Platform의 리소스는 특정 가상 샌드박스로 분리할 수 
 
 ### Swagger 설명서 {#swagger-docs}
 
-이 자습서에서는 Swagger에서 모든 API 호출에 대한 참조 설명서를 찾을 수 있습니다. Adobe.io](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)에 대한 [Flow Service API 설명서를 참조하십시오. 이 자습서와 Swagger 설명서 페이지를 동시에 사용하는 것이 좋습니다.
+이 자습서에서는 Swagger에서 모든 API 호출에 대한 참조 설명서를 찾을 수 있습니다. Adobe I/O](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)에 대한 [Flow Service API 설명서를 참조하십시오. 이 자습서와 Swagger 설명서 페이지를 동시에 사용하는 것이 좋습니다.
 
 ## 사용 가능한 스트리밍 대상 목록 {#get-the-list-of-available-streaming-destinations} 가져오기
 
