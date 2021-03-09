@@ -2,33 +2,33 @@
 keywords: Experience Platform;스키마 데이터 미리 보기;데이터 과학 작업 공간;인기 항목
 solution: Experience Platform
 title: 소매 판매 스키마 및 데이터 세트 미리 보기
-topic: tutorial
-type: Tutorial
+topic: 자습서
+type: 튜토리얼
 description: 다음 문서에서는 Adobe Experience Platform에서 스키마 및 데이터 세트를 미리 볼 수 있는 개요를 설명합니다.
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5129a75071af680bc54a7f60bb89ce32d3216d09
 workflow-type: tm+mt
-source-wordcount: '243'
-ht-degree: 0%
+source-wordcount: '238'
+ht-degree: 1%
 
 ---
 
 
 # 소매 판매 스키마 및 데이터 세트 미리 보기
 
-[소매 판매 스키마 만들기](./create-retails-sales-dataset.md) 자습서에서 부트스트랩 스크립트가 성공적으로 완료되면 출력 스키마 및 데이터 세트는 [!DNL Experience Platform]에서 볼 수 있습니다. 스키마 및 데이터 세트를 보려면 아래 절차를 따르십시오.
+[소매 판매 스키마 및 데이터 세트](./create-retails-sales-dataset.md) 자습서에서 부트스트랩 스크립트가 성공적으로 완료되면 출력 스키마 및 데이터 세트는 [!DNL Experience Platform]에서 볼 수 있습니다. 스키마 및 데이터 세트를 보려면 아래 절차를 따르십시오.
 
-1. 왼쪽 탐색 열에 있는 **[!UICONTROL 스키마]** 링크를 클릭하고 부트스트랩 스크립트에서 만든 입력 스키마를 찾습니다. 스키마의 이름은 이전 단계에서 `config.yaml`에 정의된 내용과 일치합니다. 스키마 세부 사항을 클릭하여 확인하고 컴포지션을 표시합니다.
+왼쪽 탐색에 있는 **[!UICONTROL 스키마]** 탭을 선택하고 부트스트랩 스크립트에서 만든 입력 스키마를 찾습니다. 스키마의 이름은 이전 단계에서 `config.yaml`에 정의된 내용과 일치합니다. 스키마 세부 사항을 클릭하여 확인하고 컴포지션을 표시합니다.
 
-   ![](../images/models-recipes/access-data/schema_overview.png)
+![](../images/models-recipes/access-data/schema.PNG)
 
-2. 왼쪽 탐색 열에 있는 **[!UICONTROL 데이터 집합]** 링크를 클릭하고 목록의 이름을 클릭하여 만든 입력 데이터 집합을 엽니다. 데이터 세트의 이름은 이전 단계에서 `config.yaml`에 정의된 것과 일치합니다.
+왼쪽 탐색에 있는 **[!UICONTROL 데이터 집합]** 탭을 선택하고 데이터 집합 이름을 선택하여 만든 입력 데이터 집합을 엽니다. 데이터 세트의 이름은 이전 단계에서 `config.yaml`에 정의된 내용에 해당합니다.
 
-   ![](../images/models-recipes/access-data/dataset_overview.png)
+![](../images/models-recipes/access-data/dataset.PNG)
 
-3. 오른쪽 상단의 데이터 세트 미리 보기&#x200B;]**를 클릭하여 데이터 세트 하위 집합을 미리 봅니다.**[!UICONTROL 
+데이터 집합의 하위 집합을 미리 보려면 오른쪽 상단에 있는 **[!UICONTROL 데이터 집합 미리 보기]**&#x200B;를 선택합니다.
 
-   ![](../images/models-recipes/access-data/preview_dataset.png)
+![](../images/models-recipes/access-data/preview.PNG)
 
 ## 다음 단계
 
