@@ -3,15 +3,29 @@ title: Adobe Experience Platform Web SDK 릴리스 노트
 description: Adobe Experience Platform Web SDK에 대한 최신 릴리스 정보입니다.
 keywords: Adobe Experience Platform 웹 SDK;플랫폼 웹 SDK;웹 SDK;릴리스 노트;
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: b0e6d1f7cf7302bb3a7403bb18dfd8b7489d583e
 workflow-type: tm+mt
-source-wordcount: '223'
-ht-degree: 10%
+source-wordcount: '496'
+ht-degree: 6%
 
 ---
 
 
 # 릴리스 노트
+
+## 버전 2.4.0
+
+* 이제 SDK는 npm 패키지](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/installing-the-sdk.html)로 [설치할 수 있습니다.
+* 동의를 받을 때까지 모든 이벤트를 반환하는 기본 동의](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#default-consent)를 구성하는 경우 `out` 옵션에 대한 지원을 추가했습니다(기존 `pending` 옵션은 이벤트를 대기열에 넣고 동의를 받으면 전송합니다).[
+* 이제 [onBeforeEventSend 콜백](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#onbeforeeventsend)을(를) 사용하여 이벤트가 전송되지 않도록 할 수 있습니다.
+* 이제 렌더링되거나 클릭되는 맞춤형 콘텐츠에 대한 이벤트를 전송할 때 `meta.personalization` 대신 XDM 믹싱을 사용합니다.
+* 이제 [getIdentity 명령](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html#retrieving-the-visitor-id)은 ID와 함께 가장자리 영역 ID를 반환합니다.
+* 서버에서 받은 경고 및 오류가 개선되었으며 보다 적절한 방식으로 처리됩니다.
+* [Adobe의 동의 2.0 표준](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html?communicating-consent-preferences-via-the-adobe-standard)에 대한 지원을 추가했습니다.
+* 동의 환경 설정이 수신되면 해시되어 로컬 스토리지에 저장되므로 CMP, Platform Web SDK 및 Platform Edge Network 간의 최적의 통합을 활용할 수 있습니다. 동의 기본 설정을 수집하는 경우, 이제 모든 페이지 로드 시 `setConsent`에 전화하도록 권장합니다.
+* 2개의 [모니터링 후크](https://github.com/adobe/alloy/wiki/Monitoring-Hooks), `onCommandResolved` 및 `onCommandRejected`이(가) 추가되었습니다.
+* 버그 수정:개인화 상호 작용 알림 이벤트는 사용자가 새로운 단일 페이지 앱 보기로 이동, 원래 보기로 돌아가기, 전환 적격 요소를 클릭할 때 동일한 활동에 대한 중복 정보를 포함합니다.
+* 버그 수정:SDK에서 보낸 첫 번째 이벤트에 `documentUnloading`이(가) `true`으로 설정된 경우 [`sendBeacon`](https://developer.mozilla.org/ko-KR/docs/Web/API/Navigator/sendBeacon)이(가) 이벤트를 전송하는 데 사용되므로 ID가 설정되지 않은 경우 오류가 발생합니다.
 
 ## 버전 2.3.0
 
