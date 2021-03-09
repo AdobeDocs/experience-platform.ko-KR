@@ -3,9 +3,9 @@ keywords: google 고객 일치;Google 고객 일치;Google 고객 일치
 title: Google 고객 일치 연결
 description: Google Customer Match를 사용하면 온라인 및 오프라인 데이터를 사용하여 검색, 쇼핑, Gmail, YouTube 등 Google의 소유물 및 운영 체제에서 고객에게 도달하고 다시 참여할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: bec44832a235dd3f9e2ee0f3ffc77854ee5784d7
+source-git-commit: 494b41265a0eec71ec15c7896eb8c652b3164e18
 workflow-type: tm+mt
-source-wordcount: '1432'
+source-wordcount: '1420'
 ht-degree: 0%
 
 ---
@@ -15,27 +15,27 @@ ht-degree: 0%
 
 [Google Customer ](https://support.google.com/google-ads/answer/6379332?hl=en) Match를 사용하면 온라인 및 오프라인 데이터를 사용하여 다음과 같이 Google의 소유 및 운영 자산에서 고객에게 도달하고 다시 참여할 수 있습니다. [!DNL Search],  [!DNL Shopping],  [!DNL Gmail]및  [!DNL YouTube]을 참조하십시오.
 
-![실시간 CDP UI에서 Google 고객 일치 대상](../../assets/catalog/advertising/google-customer-match/catalog.png)
+![Adobe Experience Platform UI의 Google 고객 일치 대상](../../assets/catalog/advertising/google-customer-match/catalog.png)
 
 ## 사용 사례
 
-[!DNL Google Customer Match] 대상을 사용하는 방법과 시기를 더 잘 이해할 수 있도록, 다음은 실시간 고객 데이터 플랫폼 고객이 이 기능을 사용하여 해결할 수 있는 샘플 사용 사례입니다.
+다음은 Adobe Experience Platform 고객이 이 기능을 사용하여 해결할 수 있는 샘플 사용 사례입니다. [!DNL Google Customer Match] 대상을 사용하는 방법과 시기를 이해하는 데 도움이 됩니다.
 
 ### 사용 사례 #1
 
-운동복 브랜드 기업은 [!DNL Google Search] 및 [!DNL Google Shopping]을 통해 기존 고객에게 도달하여 과거 구매 및 검색 내역을 기반으로 오퍼와 항목을 개인화하고자 합니다. 의류 브랜드는 자신의 CRM에서 실시간 CDP로 이메일 주소를 인제스트하고, 자체 오프라인 데이터에서 세그먼트를 작성하고, 이러한 세그먼트를 [!DNL Search] 및 [!DNL Shopping]에서 사용할 [!DNL Google Customer Match]으로 보내 광고 지출을 최적화할 수 있습니다.
+운동복 브랜드 기업은 [!DNL Google Search] 및 [!DNL Google Shopping]을 통해 기존 고객에게 도달하여 과거 구매 및 검색 내역을 기반으로 오퍼와 항목을 개인화하고자 합니다. 의류 브랜드는 자신의 CRM에서 Experience Platform으로 이메일 주소를 인제스트하고, 자체 오프라인 데이터에서 세그먼트를 작성하고, 이러한 세그먼트를 [!DNL Search] 및 [!DNL Shopping]에서 사용할 [!DNL Google Customer Match]으로 보내 광고 지출을 최적화할 수 있습니다.
 
 ### 사용 사례 #2
 
 한 유명 기술 회사가 방금 새 휴대폰을 출시했다. 이 새로운 전화 모델을 홍보하기 위한 노력의 일환으로, 그들은 전화를 이전 모델을 소유하고 있는 고객에게 전화기의 새로운 기능과 기능에 대한 인식을 높이고자 노력하고 있다.
 
-이 릴리스를 홍보하기 위해 이메일 주소를 식별자로 사용하여 CRM 데이터베이스의 이메일 주소를 실시간 CDP로 업로드합니다. 세그먼트는 이전 전화 모델을 소유하고 있는 고객을 기반으로 생성되어 [!DNL Google Customer Match]으로 전송되므로 현재 고객, 이전 전화 모델을 보유한 고객 및 [!DNL YouTube]에 있는 유사한 고객을 타깃팅할 수 있습니다.
+이 릴리스를 홍보하기 위해 CRM 데이터베이스의 이메일 주소를 식별자로 사용하여 Experience Platform으로 업로드합니다. 세그먼트는 이전 전화 모델을 소유하고 있는 고객을 기반으로 생성되어 [!DNL Google Customer Match]으로 전송되므로 현재 고객, 이전 전화 모델을 보유한 고객 및 [!DNL YouTube]에 있는 유사한 고객을 타깃팅할 수 있습니다.
 
 ## 대상 세부 사항 {#destination-specs}
 
 ### [!DNL Google Customer Match] 대상 {#data-governance}에 대한 데이터 거버넌스
 
-실시간 CDP의 대상은 대상 플랫폼으로 전송되거나 수신되는 데이터에 대한 특정 규칙 및 의무가 있을 수 있습니다. 데이터의 제한 및 의무와 Adobe Experience Platform 및 대상 플랫폼에서 해당 데이터를 사용하는 방법에 대한 책임은 귀하에게 있습니다. Adobe Experience Platform은 이러한 데이터 사용 의무 사항 중 일부를 관리하는 데 도움이 되는 데이터 관리 툴을 제공합니다. [데이터 거버넌스 툴 및 정책에 대한 ](../../..//data-governance/labels/overview.md) 자세한 내용을 살펴보십시오.
+Experience Platform의 대상은 대상 플랫폼으로 전송되거나 수신되는 데이터에 대한 특정 규칙 및 의무를 가질 수 있습니다. 데이터의 제한 및 의무와 Adobe Experience Platform 및 대상 플랫폼에서 해당 데이터를 사용하는 방법에 대한 책임은 귀하에게 있습니다. Adobe Experience Platform은 이러한 데이터 사용 의무 사항 중 일부를 관리하는 데 도움이 되는 데이터 관리 툴을 제공합니다. [데이터 거버넌스 툴 및 정책에 대한 ](../../..//data-governance/labels/overview.md) 자세한 내용을 살펴보십시오.
 
 ### 내보내기 유형 및 ID {#export-type}
 
@@ -45,15 +45,15 @@ ht-degree: 0%
 
 ### [!DNL Google Customer Match] 계정 전제 조건  {#google-account-prerequisites}
 
-실시간 CDP에서 [!DNL Google Customer Match] 대상을 설정하기 전에 [Google 지원 문서](https://support.google.com/google-ads/answer/6299717)에 설명된 대로 [!DNL Customer Match] 사용을 위한 Google의 정책을 읽고 따르도록 하십시오.
+Experience Platform에서 [!DNL Google Customer Match] 대상을 설정하기 전에 [Google 지원 문서](https://support.google.com/google-ads/answer/6299717)에 설명된 대로 [!DNL Customer Match] 사용에 대한 Google의 정책을 읽고 따르도록 하십시오.
 
 ### 허용 목록 {#allowlist}
 
 >[!NOTE]
 >
->실시간 CDP에서 첫 번째 [!DNL Google Customer Match] 대상을 설정하기 전에 Google 허용 목록에 추가해야 합니다. 대상을 만들기 전에 아래에 설명된 허용 목록 프로세스가 Google에서 완료되었는지 확인하십시오.
+>Experience Platform에서 첫 번째 [!DNL Google Customer Match] 대상을 설정하기 전에 Google 허용 목록에 추가해야 합니다. 대상을 만들기 전에 아래에 설명된 허용 목록 프로세스가 Google에서 완료되었는지 확인하십시오.
 
-실시간 CDP에서 [!DNL Google Customer Match] 대상을 만들기 전에 Google에 문의하고 [고객 일치 파트너 사용 설명서의 허용 목록 지침을 따라 Google 설명서에 데이터](https://support.google.com/google-ads/answer/7361372?hl=en&amp;ref_topic=6296507)를 업로드해야 합니다.
+Experience Platform에서 [!DNL Google Customer Match] 대상을 만들기 전에 Google에 문의하고 [고객 일치 파트너 사용]의 허용 목록 지침을 따라 Google 설명서에 있는 데이터](https://support.google.com/google-ads/answer/7361372?hl=en&amp;ref_topic=6296507)를 업로드해야 합니다.
 
 또한 Google의 [User_ID](https://developers.google.com/adwords/api/docs/guides/remarketing#customer_match_with_email_address_address_or_user_id)을 사용하여 데이터를 업로드할 계획인 경우 계정을 추가해야 하는 두 번째 Google 허용 목록이 있습니다. 허용 목록에 추가되어 있는지 확인하려면 Google 계정 관리자에게 문의하십시오.
 
@@ -92,7 +92,7 @@ Experience Platform에서 이메일 주소 인제스트에 대한 자세한 내�
 
 #### 사용자 정의 네임스페이스 사용 {#custom-namespaces}
 
-`User_ID` 네임스페이스를 사용하여 데이터를 Google에 보내려면 [!DNL gTag]을(를) 사용하여 자체 식별자를 동기화해야 합니다. 자세한 내용은 [공식 설명서](https://support.google.com/google-ads/answer/9199250)를 참조하십시오.
+`User_ID` 네임스페이스를 사용하여 데이터를 Google에 보내려면 [!DNL gTag]을(를) 사용하여 자체 식별자를 동기화해야 합니다. 자세한 내용은 [Google 공식 문서](https://support.google.com/google-ads/answer/9199250)를 참조하십시오.
 
 <!-- Data from unhashed namespaces is automatically hashed by [!DNL Platform] upon activation.
 
@@ -113,17 +113,17 @@ Attribute source data is not automatically hashed. When your source field contai
 
 >[!NOTE]
 >
->실시간 CDP는 인증 프로세스의 자격 증명 유효성 검사를 지원하며 [!DNL Google Ad] 계정에 잘못된 자격 증명을 입력하는 경우 오류 메시지를 표시합니다. 이렇게 하면 자격 증명이 잘못된 작업 흐름을 완료하지 못합니다.
+>Experience Platform은 인증 프로세스의 자격 증명 유효성 검사를 지원하며 [!DNL Google Ad] 계정에 잘못된 자격 증명을 입력하는 경우 오류 메시지를 표시합니다. 이렇게 하면 자격 증명이 잘못된 작업 흐름을 완료하지 못합니다.
 
 ![Google 고객 일치 대상에 연결 - 인증 단계](../../assets/catalog/advertising/google-customer-match/connection.png)
 
-자격 증명이 확인되고 Adobe Experience Cloud이 Google 계정에 연결되면 **[!UICONTROL 다음]**&#x200B;을 선택하여 **[!UICONTROL 설정]** 단계로 진행할 수 있습니다.
+자격 증명이 확인되고 Adobe Experience Cloud이 Google 계정에 연결되면 **[!UICONTROL 다음]**&#x200B;을 선택하여 **[!UICONTROL 인증]** 단계로 진행할 수 있습니다.
 
 ![자격 증명 확인](../../assets/catalog/advertising/google-customer-match/connection-success.png)
 
-**[!UICONTROL 인증]** 단계에서 활성화 플로우에 [!UICONTROL 이름] 및 [!UICONTROL 설명]을 입력하고 Google에 [!UICONTROL 계정 ID]을 입력합니다.
+**[!UICONTROL 인증]** 단계에서 활성화 플로우에 **[!UICONTROL 이름]** 및 **[!UICONTROL 설명]**&#x200B;을 입력하고 Google **[!UICONTROL 계정 ID]**&#x200B;을 입력합니다.
 
-또한 이 단계에서 이 대상에 적용할 **[!UICONTROL 마케팅 작업]**&#x200B;을 선택할 수 있습니다. 마케팅 작업은 데이터를 대상에 내보내려는 의도를 나타냅니다. Adobe 정의 마케팅 작업 중에서 선택하거나 자신의 마케팅 작업을 만들 수 있습니다. 마케팅 작업에 대한 자세한 내용은 [실시간 CDP의 데이터 거버넌스](../../../rtcdp/privacy/data-governance-overview.md#destinations) 페이지를 참조하십시오. 개별 Adobe 정의 마케팅 작업에 대한 자세한 내용은 [데이터 사용 정책 개요](../../../data-governance/policies/overview.md#core-actions)를 참조하십시오.
+이 단계에서 이 대상에 적용할 **[!UICONTROL 마케팅 작업]**&#x200B;을 선택할 수도 있습니다. 마케팅 작업은 데이터를 대상에 내보내려는 의도를 나타냅니다. Adobe 정의 마케팅 작업 중에서 선택하거나 자신의 마케팅 작업을 만들 수 있습니다. 마케팅 작업에 대한 자세한 내용은 [데이터 사용 정책 개요](../../../data-governance/policies/overview.md)를 참조하십시오.
 
 위의 필드를 채운 후 **[!UICONTROL 대상 만들기]**&#x200B;를 선택합니다.
 
@@ -146,7 +146,7 @@ Attribute source data is not automatically hashed. When your source field contai
 
 ![Google 고객 일치 앱 ID](../../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
 
-[!DNL App ID]을(를) 찾는 방법에 대한 자세한 내용은 [공식 문서](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.CrmBasedUserList#appid)를 참조하십시오.
+[!DNL App ID]을(를) 찾는 방법에 대한 자세한 내용은 [Google 공식 문서](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.CrmBasedUserList#appid)를 참조하십시오.
 
 
 
