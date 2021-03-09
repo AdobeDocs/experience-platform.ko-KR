@@ -1,11 +1,11 @@
 ---
 title: Adobe Experience Platform 웹 SDK를 사용하여 이벤트 추적
-seo-description: Adobe Experience Platform 웹 SDK 이벤트를 추적하는 방법을 알아봅니다.
+description: Adobe Experience Platform 웹 SDK 이벤트를 추적하는 방법을 알아봅니다.
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;send Beacon;send Beacon;documentUnaring;document Unloading;onBeforeEventSend;
 translation-type: tm+mt
-source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
+source-git-commit: 25cf425df92528cec88ea027f3890abfa9cd9b41
 workflow-type: tm+mt
-source-wordcount: '1340'
+source-wordcount: '1397'
 ht-degree: 0%
 
 ---
@@ -79,7 +79,7 @@ dataLayer.commerce = null;
 
 현재 XDM 스키마와 일치하지 않는 데이터 전송이 지원되지 않습니다. 지원은 향후 날짜에 예정되어 있습니다.
 
-### 설정 `eventType`
+### 설정 `eventType` {#event-types}
 
 XDM 경험 이벤트에는 선택적 `eventType` 필드가 있습니다. 레코드에 대한 기본 이벤트 유형을 보유합니다. 이벤트 유형을 설정하면 전송할 다른 이벤트를 구분할 수 있습니다. XDM은 사용할 수 있는 사전 정의된 이벤트 유형을 몇 가지 제공하며 사용자가 사용 사례에 대해 사용자 지정 이벤트 유형을 항상 생성합니다. 다음은 XDM에서 제공하는 사전 정의된 이벤트 유형의 목록입니다. [XDM 공개 보고서에서 자세히 알아보십시오](https://github.com/adobe/xdm/blob/master/docs/reference/behaviors/time-series.schema.md#xdmeventtype-known-values).
 
@@ -211,20 +211,20 @@ alloy("sendEvent", {
 
 ## 전역적으로 이벤트 수정 {#modifying-events-globally}
 
-이벤트에서 전체적으로 필드를 추가, 제거 또는 수정하려면 `onBeforeEventSend` 콜백을 구성할 수 있습니다.  이 콜백은 이벤트를 보낼 때마다 호출됩니다.  이 콜백은 `xdm` 필드가 있는 이벤트 객체에 전달됩니다.  이벤트에서 전송된 데이터를 변경하려면 `event.xdm`을(를) 수정합니다.
+이벤트에서 전체적으로 필드를 추가, 제거 또는 수정하려면 `onBeforeEventSend` 콜백을 구성할 수 있습니다.  이 콜백은 이벤트를 보낼 때마다 호출됩니다.  이 콜백은 `xdm` 필드가 있는 이벤트 객체에 전달됩니다.  `content.xdm`을(를) 수정하여 이벤트와 함께 전송된 데이터를 변경합니다.
 
 
 ```javascript
 alloy("configure", {
   "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
   "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
-  "onBeforeEventSend": function(event) {
+  "onBeforeEventSend": function(content) {
     // Change existing values
-    event.xdm.web.webPageDetails.URL = xdm.web.webPageDetails.URL.toLowerCase();
+    content.xdm.web.webPageDetails.URL = xdm.web.webPageDetails.URL.toLowerCase();
     // Remove existing values
-    delete event.xdm.web.webReferrer.URL;
+    delete content.xdm.web.webReferrer.URL;
     // Or add new values
-    event.xdm._adb3lettersandnumbers.mycustomkey = "value";
+    content.xdm._adb3lettersandnumbers.mycustomkey = "value";
   }
 });
 ```
@@ -235,10 +235,54 @@ alloy("configure", {
 2. 자동으로 수집된 값.  ([자동 정보](../data-collection/automatic-information.md)를 참조하십시오.)
 3. `onBeforeEventSend` 콜백에서 변경한 내용
 
-`onBeforeEventSend` 콜백에서 예외가 발생해도 이벤트는 여전히 전송됩니다.하지만 콜백 내에서 수행된 변경 사항은 최종 이벤트에 적용되지 않습니다.
+`onBeforeEventSend` 콜백에 대한 몇 가지 참고 사항:
+
+* 콜백 중에 이벤트 XDM을 수정할 수 있습니다. 콜백이 반환되면
+content.xdm 및 content.data 객체는 이벤트와 함께 전송됩니다.
+
+   ```javascript
+   onBeforeEventSend: function(content){
+     //sets a query parameter in XDM
+     const queryString = window.location.search;
+     const urlParams = new URLSearchParams(queryString);
+     content.xdm.marketing.trackingCode = urlParams.get('cid')
+   }
+   ```
+
+* 콜백에서 예외가 발생하면 이벤트에 대한 처리가 중단되고 이벤트가 전송되지 않습니다.
+* 콜백이 `false`의 부울 값을 반환하면 이벤트 처리가 중단됩니다.
+오류가 없으면 이벤트가 전송되지 않습니다. 이 메커니즘을 사용하면 특정 이벤트를
+이벤트를 전송하지 않아야 하는 경우 이벤트 데이터를 검사하고 `false`을 반환합니다.
+
+   >[!NOTE]
+   >페이지의 첫 번째 이벤트에서 false가 반환되지 않도록 주의해야 합니다. 첫 번째 이벤트에서 false를 반환하면 개인화에 부정적인 영향을 줄 수 있습니다.
+
+```javascript
+   onBeforeEventSend: function(content) {
+     // ignores events from bots
+     if (MyBotDetector.isABot()) {
+       return false;
+     }
+   }
+```
+
+부울 `false` 이외의 모든 반환 값은 콜백 후에 이벤트를 처리하고 전송할 수 있도록 합니다.
+
+* 이벤트 유형을 검사하여 이벤트를 필터링할 수 있습니다([이벤트 유형](#event-types) 참조).
+
+```javascript
+    onBeforeEventSend: function(content) {  
+      // augments XDM if link click event is to a partner website
+      if (
+        content.xdm.eventType === "web.webinteraction.linkClicks" &&
+        content.xdm.web.webInteraction.URL ===
+          "http://example.com/partner-page.html"
+      ) {
+        content.xdm.partnerWebsiteClick = true;
+      }
+   }
+```
 
 ## 실행 가능한 잠재적 오류
 
 이벤트를 전송할 때 전송 중인 데이터가 너무 큰 경우(전체 요청인 경우 32KB 이상) 오류가 발생할 수 있습니다. 이 경우 전송되는 데이터의 양을 줄여야 합니다.
-
-디버깅이 활성화되면 서버는 구성된 XDM 스키마에 대해 전송되는 이벤트 데이터를 동기적으로 확인합니다. 데이터가 스키마와 일치하지 않으면 서버에서 불일치 세부 정보가 반환되고 오류가 발생합니다. 이 경우 스키마에 맞게 데이터를 수정합니다. 디버깅이 활성화되지 않으면 서버가 데이터를 비동기적으로 검사하므로 해당 오류가 발생하지 않습니다.
