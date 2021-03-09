@@ -3,7 +3,7 @@ keywords: Amazon Kinesis;kinesis destination;kinesis
 title: Amazon Kinesis 연결
 description: Amazon Kinesis 스토리지에 대한 실시간 아웃바운드 연결을 생성하여 Adobe Experience Platform의 데이터를 스트리밍합니다.
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: 32cb198bcf2c142b50c4b7a60282f0c923be06b1
 workflow-type: tm+mt
 source-wordcount: '510'
 ht-degree: 2%
@@ -22,7 +22,7 @@ ht-degree: 2%
 Adobe Experience Platform의 데이터를 스트리밍하기 위해 [!DNL Amazon Kinesis] 스토리지에 대한 실시간 아웃바운드 연결을 만들 수 있습니다.
 
 * [!DNL Amazon Kinesis]에 대한 자세한 내용은 [Amazon 설명서](https://docs.aws.amazon.com/streams/latest/dev/introduction.html)를 참조하십시오.
-* API 호출을 사용하여 [!DNL Amazon Kinesis]에 연결하려면 [스트리밍 대상 API 자습서](../../api/streaming-destinations.md)를 참조하십시오.
+* 프로그램 방식으로 [!DNL Amazon Kinesis]에 연결하려면 [스트리밍 대상 API 자습서](../../api/streaming-destinations.md)를 참조하십시오.
 * 플랫폼 사용자 인터페이스를 사용하여 [!DNL Amazon Kinesis]에 연결하려면 아래 섹션을 참조하십시오.
 
 ![UI의 Amazon Kinesis](../../assets/catalog/cloud-storage/amazon-kinesis/catalog.png)
@@ -117,7 +117,7 @@ Adobe Experience Platform의 데이터를 스트리밍하기 위해 [!DNL Amazon
 
 >[!MORELIKETHIS]
 >
->* [Amazon Kinesis에 연결하고 API 호출을 사용하여 데이터 활성화](../../api/streaming-destinations.md)
+>* [Amazon Kinesis에 연결하고 Flow Service API를 사용하여 데이터 활성화](../../api/streaming-destinations.md)
 >* [Azure 이벤트 허브 대상](./azure-event-hubs.md)
 >* [대상 유형 및 카테고리](../../destination-types.md)
 
