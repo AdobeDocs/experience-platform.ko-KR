@@ -2,14 +2,14 @@
 keywords: Experience Platform;홈;인기 항목;SFTP;SFTP;보안 파일 전송 프로토콜;보안 파일 전송 프로토콜
 solution: Experience Platform
 title: Flow Service API를 사용하여 SFTP 소스 연결 만들기
-topic: overview
-type: Tutorial
+topic: 개요
+type: 튜토리얼
 description: Flow Service API를 사용하여 SFTP(Secure File Transfer Protocol) 서버에 Adobe Experience Platform을 연결하는 방법을 알아봅니다.
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: b39426d768a0c6fdfa742ec74e4e0bed9c432269
 workflow-type: tm+mt
-source-wordcount: '823'
-ht-degree: 1%
+source-wordcount: '877'
+ht-degree: 2%
 
 ---
 
@@ -44,7 +44,7 @@ ht-degree: 1%
 | `host` | SFTP 서버와 연결된 이름 또는 IP 주소입니다. |
 | `username` | SFTP 서버에 액세스할 수 있는 사용자 이름입니다. |
 | `password` | SFTP 서버의 암호입니다. |
-| `privateKeyContent` | Base64 인코딩된 SSH 개인 키 콘텐츠입니다. SSH 개인 키 OpenSSH(RSA/DSA) 형식입니다. |
+| `privateKeyContent` | Base64 인코딩된 SSH 개인 키 콘텐츠입니다. OpenSSH 키 유형은 RSA 또는 DSA로 분류되어야 합니다. |
 | `passPhrase` | 키 파일 또는 키 내용이 암호 구문으로 보호되는 경우 개인 키를 해독하기 위한 암호 구문 또는 암호입니다. PrivateKeyContent가 암호로 보호되는 경우 이 매개 변수를 PrivateKeyContent 암호와 함께 값으로 사용해야 합니다. |
 
 ### 샘플 API 호출 읽기
@@ -133,6 +133,10 @@ curl -X POST \
 
 SSH 공개 키 인증을 사용하여 SFTP 연결을 만들려면 `host`, `userName`, `privateKeyContent` 및 `passPhrase`에 대한 값을 제공하는 동안 [!DNL Flow Service] API에 POST 요청을 하십시오.
 
+>[!IMPORTANT]
+>
+>SFTP 커넥터는 RSA 또는 DSA 유형 OpenSSH 키를 지원합니다. 키 파일 내용이 `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"`으로 시작하고 `"-----END [RSA/DSA] PRIVATE KEY-----"`로 끝나야 합니다. 개인 키 파일이 PPK 형식 파일인 경우 PuTTY 도구를 사용하여 PPK에서 OpenSSH 형식으로 변환합니다.
+
 **API 형식**
 
 ```http
@@ -172,7 +176,7 @@ curl -X POST \
 | -------- | ----------- |
 | `auth.params.host` | SFTP 서버의 호스트 이름입니다. |
 | `auth.params.username` | SFTP 서버와 연결된 사용자 이름입니다. |
-| `auth.params.privateKeyContent` | base64 인코딩된 SSH 개인 키 콘텐츠입니다. SSH 개인 키 OpenSSH(RSA/DSA) 형식입니다. |
+| `auth.params.privateKeyContent` | Base64 인코딩된 SSH 개인 키 콘텐츠입니다. OpenSSH 키 유형은 RSA 또는 DSA로 분류되어야 합니다. |
 | `auth.params.passPhrase` | 키 파일 또는 키 내용이 암호 구문으로 보호되는 경우 개인 키를 해독하기 위한 암호 구문 또는 암호입니다. PrivateKeyContent가 암호로 보호되는 경우 이 매개 변수를 PrivateKeyContent 암호와 함께 값으로 사용해야 합니다. |
 | `connectionSpec.id` | SFTP 서버 연결 사양 ID:`b7bf2577-4520-42c9-bae9-cad01560f7bc` |
 
