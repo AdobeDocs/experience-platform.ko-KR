@@ -2,13 +2,13 @@
 keywords: Experience Platform;JupiterLab;노트북;데이터 과학 작업 영역;인기 있는 주제;jupiterlab
 solution: Experience Platform
 title: JupiterLab UI 개요
-topic: Overview
+topic: 개요
 description: JupiterLab은 Project Jupiter를 위한 웹 기반의 유저 인터페이스로 Adobe Experience Platform과 긴밀하게 통합되어 있습니다. 데이터 과학자들이 Jupiter 노트북, 코드 및 데이터와 함께 작업할 수 있는 인터랙티브한 개발 환경을 제공합니다. 이 문서에서는 JupiterLab 및 그 기능에 대한 개요와 일반적인 작업을 수행하는 지침을 제공합니다.
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 23128fb481452b558c52f962f78ae638fc1f0418
 workflow-type: tm+mt
-source-wordcount: '1950'
-ht-degree: 9%
+source-wordcount: '1816'
+ht-degree: 3%
 
 ---
 
@@ -32,7 +32,7 @@ Experience Platform의 JupiterLab 통합은 아키텍처 변경 사항, 디자�
 | **[!DNL Platform]서비스 통합** | 내장된 통합을 통해 [!DNL JupyterLab] 내에서 직접 다른 [!DNL Platform] 서비스를 이용할 수 있습니다. 지원되는 통합의 전체 목록은 [다른 플랫폼 서비스와의 통합](#service-integration)의 섹션에 제공됩니다. |
 | **인증** | <a href="https://jupyter-notebook.readthedocs.io/en/latest/security.html" target="_blank">JupiterLab의 내장된 보안 모델</a> 이외에도 플랫폼 서비스 간 통신(IMS)</a>을 통해 응용 프로그램과 Experience Platform 간의 모든 상호 작용이 암호화되어 인증됩니다.<a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System] |
 | **개발 라이브러리** | [!DNL Experience Platform]에서 [!DNL JupyterLab]은 [!DNL Python], R 및 PySpark용 사전 설치된 라이브러리를 제공합니다. 지원되는 라이브러리의 전체 목록은 [부록](#supported-libraries)을 참조하십시오. |
-| **라이브러리 컨트롤러** | 사전 설치된 라이브러리가 요구 사항에 맞지 않을 경우 Python 및 R에 추가 라이브러리를 설치할 수 있으며 [!DNL Platform] 무결성을 유지하고 데이터를 안전하게 유지하기 위해 격리된 컨테이너에 임시로 저장할 수 있습니다. 자세한 내용은 [커널](#kernels) 섹션을 참조하십시오. |
+| **라이브러리 컨트롤러** | 사전 설치된 라이브러리가 요구 사항에 맞지 않을 경우 Python 및 R용으로 추가 라이브러리를 설치할 수 있으며, [!DNL Platform] 무결성을 유지하고 데이터를 안전하게 유지하기 위해 격리된 컨테이너에 임시로 저장할 수 있습니다. 자세한 내용은 [커널](#kernels) 섹션을 참조하십시오. |
 
 >[!NOTE]
 >
@@ -64,7 +64,7 @@ Experience Platform의 JupiterLab 통합은 아키텍처 변경 사항, 디자�
 
 ### 액세스 [!DNL JupyterLab] {#access-jupyterlab}
 
-[Adobe Experience Platform](https://platform.adobe.com)의 왼쪽 탐색 열에서 **노트북**&#x200B;을 선택합니다. [!DNL JupyterLab]이(가) 완전히 초기화되는 데 약간의 시간이 소요됩니다.
+[Adobe Experience Platform](https://platform.adobe.com)의 왼쪽 탐색 열에서 **[!UICONTROL 노트북]**&#x200B;을 선택합니다. [!DNL JupyterLab]이(가) 완전히 초기화되는 데 약간의 시간이 소요됩니다.
 
 ![](../images/jupyterlab/user-guide/access_jupyterlab.png)
 
@@ -96,7 +96,7 @@ Experience Platform의 JupiterLab 통합은 아키텍처 변경 사항, 디자�
 * **셀 관리자:** 프레젠테이션용 전자 필기장을 설정하는 데 유용한 도구 및 메타데이터에 대한 액세스를 제공하는 셀 편집기
 * **탭:** 열린 탭 목록
 
-탭을 클릭하여 해당 기능을 표시하거나, 확장된 탭을 클릭하여 아래 표시된 대로 왼쪽 사이드바를 축소합니다.
+해당 기능을 표시할 탭을 선택하거나, 확장된 탭에서 선택하여 아래 표시된 대로 왼쪽 사이드바를 축소합니다.
 
 ![](../images/jupyterlab/user-guide/left_sidebar_collapse.gif)
 
@@ -105,6 +105,24 @@ Experience Platform의 JupiterLab 통합은 아키텍처 변경 사항, 디자�
 [!DNL JupyterLab]의 기본 작업 영역을 사용하면 문서 및 기타 활동을 탭 패널로 크기를 조절하거나 세분할 수 있습니다. 탭을 마이그레이션하려면 탭을 탭 패널의 가운데로 드래그합니다. 탭을 패널의 왼쪽, 오른쪽, 위쪽 또는 아래쪽으로 드래그하여 패널을 나눕니다.
 
 ![](../images/jupyterlab/user-guide/main_work_area.gif)
+
+### [!DNL Python]/R의 GPU 및 메모리 서버 구성
+
+[!DNL JupyterLab]의 오른쪽 위 모서리에서 톱니바퀴 아이콘을 선택하여 *노트북 서버 구성*&#x200B;을 엽니다. 슬라이더를 사용하여 GPU를 켜거나 필요한 메모리 양을 할당할 수 있습니다. 할당할 수 있는 메모리 양은 조직에서 프로비저닝한 양에 따라 다릅니다. 저장할 **[!UICONTROL 구성 업데이트]**&#x200B;를 선택합니다.
+
+>[!NOTE]
+>
+>전자 필기장에 대해 조직당 하나의 GPU만 제공됩니다. GPU가 사용 중인 경우 현재 GPU를 출시하도록 예약한 사용자가 이를 해제할 때까지 기다려야 합니다. 이 작업은 4시간 이상 GPU를 유휴 상태로 전환하거나 로그아웃하여 수행할 수 있습니다.
+
+![](../images/jupyterlab/user-guide/notebook-gpu-config.png)
+
+### [!DNL JupyterLab] 종료 후 다시 시작
+
+[!DNL JupyterLab]에서 추가 리소스가 사용되지 않도록 세션을 종료할 수 있습니다. 먼저 **전원 아이콘**&#x200B;을 선택한 다음 세션을 종료하기 위해 나타나는 팝업에서 **[!UICONTROL 종료]**&#x200B;를 선택합니다. 12시간 동안 아무 활동이 없는 노트북 세션이 자동으로 종료됩니다.
+
+[!DNL JupyterLab]을(를) 다시 시작하려면 전원 아이콘 왼쪽에 있는 **다시 시작 아이콘**&#x200B;을 선택하고 나타나는 팝업에서 **[!UICONTROL 다시 시작]**&#x200B;을 선택합니다.
+
+![jubiterlab 종료](../images/jupyterlab/user-guide/shutdown-jupyterlab.gif)
 
 ### 코드 셀 {#code-cells}
 
@@ -231,141 +249,12 @@ Experience Platform의 JupiterLab 통합은 아키텍처 변경 사항, 디자�
 
 ![](../images/jupyterlab/user-guide/new_launcher.gif)
 
-### [!DNL Python]/R의 GPU 및 메모리 서버 구성
-
-[!DNL JupyterLab]의 오른쪽 위 모서리에서 톱니바퀴 아이콘을 선택하여 *노트북 서버 구성*&#x200B;을 엽니다. 슬라이더를 사용하여 GPU를 켜거나 필요한 메모리 양을 할당할 수 있습니다. 할당할 수 있는 메모리 양은 조직에서 프로비저닝한 양에 따라 다릅니다. 저장할 **[!UICONTROL 구성 업데이트]**&#x200B;를 선택합니다.
-
->[!NOTE]
->
->전자 필기장에 대해 조직당 하나의 GPU만 제공됩니다. GPU가 사용 중인 경우 현재 GPU를 출시하도록 예약한 사용자가 이를 해제할 때까지 기다려야 합니다. 이 작업은 4시간 이상 GPU를 유휴 상태로 전환하거나 로그아웃하여 수행할 수 있습니다.
-
-![](../images/jupyterlab/user-guide/notebook-gpu-config.png)
-
 ## 다음 단계
 
 지원되는 각 노트북에 대한 자세한 내용과 사용 방법에 대한 자세한 내용은 [Jupiterlab 노트북 데이터 액세스](./access-notebook-data.md) 개발자 안내서를 참조하십시오. 이 안내서에서는 JupiterLab 전자 필기장을 사용하여 데이터 읽기, 쓰기 및 쿼리 등 데이터에 액세스하는 방법에 중점을 둡니다. 데이터 액세스 안내서에는 지원되는 각 노트북에서 읽을 수 있는 최대 데이터 양에 대한 정보도 포함되어 있습니다.
 
 ## 지원되는 라이브러리 {#supported-libraries}
 
-### [!DNL Python] / R
+Python, R 및 PySpark에서 지원되는 패키지 목록을 보려면 `!pip list --format=columns` 을 복사하여 새 셀에 붙여넣은 다음 셀을 실행하십시오. 지원되는 패키지 목록은 알파벳순으로 채워집니다.
 
-| 라이브러리 | 버전 |
-| :------ | :------ |
-| 노트북 | 6.0.0 |
-| 요청 | 2.22.0 |
-| 순순해 | 4.0.0 |
-| folio | 0.10.0 |
-| ipywidgets | 7.5.1 |
-| 보케 | 1.3.1 |
-| 겐심 | 3.7.3 |
-| 이평행 | 0.5.2 |
-| jq | 1.6 |
-| 각선 | 2.2.4 |
-| nltk | 3.2.5 |
-| 판다 | 0.22.0 |
-| pandasql | 0.7.3 |
-| 베개 | 6.0.0 |
-| scikit 이미지 | 0.15.0 |
-| scikit 학습 | 0.21.3 |
-| 혈통 | 1.3.0 |
-| 스크랩하기 | 1.3.0 |
-| seaborn | 0.9.0 |
-| stamsmodels | 0.10.1 |
-| 탄성 | 5.1.0.17 |
-| 플롯 | 0.11.5 |
-| py-xgboost | 0.90 |
-| opencv | 3.4.1 |
-| 불꽃 | 2.4.3 |
-| 올림픽 | 1.0.1 |
-| wxpython | 4.0.6 |
-| 색칠가 | 0.3.0 |
-| 지질학 | 0.5.1 |
-| 피쉬 | 2.1.0 |
-| 사철 | 1.6.4 |
-| rpy2 | 2.9.4 |
-| r-essentials | 3.6 |
-| 알갱이 | 1.6_3 |
-| r-fpc | 2.2_3 |
-| r-e1071 | 1.7_2 |
-| r-gam | 1.16.1 |
-| r-gbm | 2.1.5 |
-| r-ggthemes | 4.2.0 |
-| r-gvis | 0.4.4 |
-| 영어 | 1.2.4.1 |
-| 벼락 | 3.0 |
-| r-조작 | 1.0.1 |
-| r-rocr | 1.0_7 |
-| r-rmysql | 0.10.17 |
-| r-rodbc | 1.3_15 |
-| r-rsqlite | 2.1.2 |
-| r-rstan | 2.19.2 |
-| r-sqldf | 0.4_11 |
-| 생존율 | 2.44_1.1 |
-| r-동물원 | 1.8_6 |
-| r-stringdist | 0.9.5.2 |
-| r-quadprog | 1.5_7 |
-| r-rjson | 0.2.20 |
-| r-forecast | 8.7 |
-| r-rsolnp | 1.16 |
-| 망사 | 1.12 |
-| r-mlr | 2.14.0 |
-| r-viridis | 0.5.1 |
-| r-corrplot | 0.84 |
-| r-fnn | 1.1.3 |
-| r-lubridate | 1.7.4 |
-| r-randomforest | 4.6_14 |
-| 역경 | 1.2.1 |
-| r-tree | 1.0_39 |
-| 피몬고 | 3.8.0 |
-| 화살 | 0.14.1 |
-| boto3 | 1.9.199 |
-| ipyvolume | 0.5.2 |
-| 통나무 | 0.3.2 |
-| 비단뱀 | 0.5.4 |
-| ipywbrtc | 0.5.0 |
-| justyter_client | 5.3.1 |
-| wordcloud | 1.5.0 |
-| graphviz | 2.40.1 |
-| python-graphviz | 0.11.1 |
-| azure-storage | 0.36.0 |
-| [!DNL jupyterlab] | 1.0.4 |
-| 판다 ml | 0.6.1 |
-| tensorflow-gpu | 1.14.0 |
-| nodejs | 12.3.0 |
-| mock | 3.0.5 |
-| 점막 | 0.3.3 |
-| 글꼴 아나콘드 | 1.0 |
-| syncopg2 | 2.8.3 |
-| 코 | 1.3.7 |
-| autovizwidget | 0.12.9 |
-| 알토에어 | 3.1.0 |
-| bega_datets | 0.7.0 |
-| 종소 | 1.0.1 |
-| sql_magic | 0.0.4 |
-| iso3166 | 1.0 |
-| nbimporter | 0.3.1 |
-
-### PySpark
-
-| 라이브러리 | 버전 |
-| :------ | :------ |
-| 요청 | 2.18.4 |
-| 겐심 | 2.3.0 |
-| 각선 | 2.0.6 |
-| nltk | 3.2.4 |
-| 판다 | 0.20.1 |
-| pandasql | 0.7.3 |
-| 베개 | 5.3.0 |
-| scikit 이미지 | 0.13.0 |
-| scikit 학습 | 0.19.0 |
-| 혈통 | 0.19.1 |
-| 스크랩하기 | 1.3.3 |
-| stamsmodels | 0.8.0 |
-| 탄성 | 4.0.30.44 |
-| py-xgboost | 0.60 |
-| opencv | 3.1.0 |
-| 화살 | 0.8.0 |
-| boto3 | 1.5.18 |
-| azure-storage-blob | 1.4.0 |
-| [!DNL python] | 3.6.7 |
-| mkl-rt | 11.1 |
+![example](../images/jupyterlab/user-guide/libraries.PNG)
