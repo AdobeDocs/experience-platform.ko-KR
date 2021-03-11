@@ -2,13 +2,13 @@
 keywords: Experience Platform;JupiterLab;전자 필기장;데이터 과학 작업 공간;인기 항목;쿼리 서비스
 solution: Experience Platform
 title: Jupiter 전자 필기장의 쿼리 서비스
-topic: tutorial
-type: Tutorial
+topic: 자습서
+type: 튜토리얼
 description: Adobe Experience Platform에서는 쿼리 서비스를 JupiterLab에 표준 기능으로 통합하여 데이터 과학 작업 공간에서 구조화된 쿼리 언어(SQL)를 사용할 수 있습니다. 이 자습서에서는 Adobe Analytics 데이터를 탐색, 변형 및 분석하는 일반적인 사용 사례에 대한 샘플 SQL 쿼리를 보여 줍니다.
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 9d84fc1eb898020ed4b154c091fcc9fc4933c7de
 workflow-type: tm+mt
-source-wordcount: '818'
+source-wordcount: '824'
 ht-degree: 1%
 
 ---
@@ -98,13 +98,11 @@ ht-degree: 1%
 
 ## 데이터 {#query-your-data} 쿼리
 
-개별 전자 필기장 셀에 다음 SQL 쿼리를 입력합니다. **[!UICONTROL 재생]** 단추를 클릭한 다음 해당 셀을 클릭하여 쿼리를 실행합니다. 성공적인 쿼리 결과 또는 오류 로그가 실행된 셀 아래에 표시됩니다.
+개별 전자 필기장 셀에 다음 SQL 쿼리를 입력합니다. 셀에서 선택한 다음 **[!UICONTROL 재생]** 단추를 선택하여 쿼리를 실행합니다. 성공적인 쿼리 결과 또는 오류 로그가 실행된 셀 아래에 표시됩니다.
 
-장시간 노트북이 비활성화되면 노트북과 [!DNL Query Service] 간의 연결이 끊어질 수 있습니다. 이 경우 오른쪽 상단 모서리에 있는 **[!UICONTROL 전원]** 단추를 클릭하여 [!DNL JupyterLab]을 다시 시작합니다.
+장시간 노트북이 비활성화되면 노트북과 [!DNL Query Service] 간의 연결이 끊어질 수 있습니다. 이러한 경우 전원 단추 옆의 오른쪽 위 모서리에 있는 **다시 시작** 단추 ![다시 시작 단추](../images/jupyterlab/user-guide/restart_button.png)를 선택하여 [!DNL JupyterLab]을 다시 시작합니다.
 
-![](../images/jupyterlab/query/restart_button.png)
-
-전자 필기장 커널이 재설정되지만 셀이 그대로 남아 있게 되고 **모두** 셀을 다시 실행하여 중단된 부분에서 계속하십시오.
+전자 필기장 커널은 재설정되지만 셀이 남아 있게 되고, 모든 셀을 다시 실행하여 중단한 부분을 계속합니다.
 
 ### 시간별 방문자 수 {#hourly-visitor-count}
 
