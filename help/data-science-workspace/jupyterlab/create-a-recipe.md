@@ -2,13 +2,13 @@
 keywords: Experience Platform;JupiterLab;레서피;노트북;데이터 과학 작업 공간;인기 있는 주제;레서피 만들기
 solution: Experience Platform
 title: Jupiter 공책을 사용하여 레서피 만들기
-topic: tutorial
-type: Tutorial
+topic: 자습서
+type: 튜토리얼
 description: 이 자습서는 두 개의 기본 섹션을 살펴봅니다. 먼저 JupiterLab Notebook 내에 템플릿을 사용하여 기계 학습 모델을 만듭니다. 그런 다음 JupiterLab 내의 레서피 워크플로에 노트북을 실행하여 데이터 과학 작업 공간 내에서 레서피 작업을 만듭니다.
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 9d84fc1eb898020ed4b154c091fcc9fc4933c7de
 workflow-type: tm+mt
-source-wordcount: '2362'
+source-wordcount: '2366'
 ht-degree: 0%
 
 ---
@@ -92,9 +92,9 @@ data_access_sdk_python
 - `ACP_DSW_SCORING_RESULTS_XDM_SCHEMA`
 - `scoringResultsDataSetId`
 
-데이터 세트 및 스키마 ID를 찾으려면 왼쪽 탐색 막대의 전자 필기장 내 데이터 탭으로 이동합니다(폴더 아이콘 아래).
+데이터 세트 및 스키마 ID를 찾으려면 왼쪽 탐색 막대의 전자 필기장 내 ![데이터 탭](../images/jupyterlab/create-recipe/dataset-tab.png)으로 이동합니다(폴더 아이콘 아래).
 
-![](../images/jupyterlab/create-recipe/datasets.png)
+![](../images/jupyterlab/create-recipe/dataset_tab.png)
 
 [Adobe Experience Platform](https://platform.adobe.com/)스키마](https://platform.adobe.com/schema)**및**[&#x200B;데이터 집합](https://platform.adobe.com/dataset/overview)**탭에서 동일한 정보를 찾을 수 있습니다.**[
 
