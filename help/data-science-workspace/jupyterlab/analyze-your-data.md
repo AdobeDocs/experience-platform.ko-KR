@@ -2,13 +2,13 @@
 keywords: Experience Platform;JupiterLab;노트북;데이터 과학 작업 공간;인기 있는 주제;데이터 노트북 분석
 solution: Experience Platform
 title: 전자 필기장을 사용하여 데이터 분석
-topic: tutorial
-type: Tutorial
+topic: 자습서
+type: 튜토리얼
 description: 이 자습서에서는 데이터 과학 작업 공간에 내장된 Jupiter 노트북을 사용하여 데이터를 액세스, 탐색 및 시각화하는 방법에 중점을 둡니다.
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 6908c582cb7e0d60b82112dbc0854411d76b4fd4
 workflow-type: tm+mt
-source-wordcount: '1735'
+source-wordcount: '1733'
 ht-degree: 0%
 
 ---
@@ -80,7 +80,7 @@ ht-degree: 0%
 
 이 섹션의 경우 소매 판매 샘플 노트북에 사용된 것과 동일한 데이터 세트를 사용하는 소매 판매 데이터 세트를 사용합니다.
 
-Jupiter 전자 필기장에서 왼쪽의 **데이터** 탭에서 데이터에 액세스할 수 있습니다. 탭을 클릭하면 데이터 세트 목록을 볼 수 있습니다.
+Jupiter Notebook에서 왼쪽의 **데이터** 탭 ![데이터 탭](../images/jupyterlab/analyze-data/dataset-tab.png)에서 데이터에 액세스할 수 있습니다. 탭을 선택하면 2개의 폴더가 제공됩니다. **[!UICONTROL 데이터 집합]** 폴더를 선택합니다.
 
 ![](../images/jupyterlab/analyze-data/dataset_tab.png)
 
