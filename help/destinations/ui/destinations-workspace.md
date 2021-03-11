@@ -4,9 +4,9 @@ title: 대상 작업 공간 개요
 description: 대상 작업 공간은 아래의 섹션에 설명된 4개의 섹션인 카탈로그, 찾아보기, 계정 및 시스템 보기로 구성됩니다.
 seo-description: Adobe Experience Platform의 왼쪽 탐색 막대에서 대상을 선택하여 대상 작업 영역에 액세스합니다.
 translation-type: tm+mt
-source-git-commit: 9305936ca1e73821b2fe948ff1a17a7168840cba
+source-git-commit: 95ff15b212e0d6f454f0319ac1ec5bbee9c07dac
 workflow-type: tm+mt
-source-wordcount: '939'
+source-wordcount: '1017'
 ht-degree: 2%
 
 ---
@@ -87,15 +87,19 @@ Adobe Experience Platform의 왼쪽 탐색 막대에서 **[!UICONTROL 대상]**&
 
 >[!TIP]
 >
->**[!UICONTROL 이름]** 열에 있는 ![데이터 추가 단추](../assets/ui/workspace/add-data-symbol.png) 단추를 사용하여 해당 대상에 대한 추가 세그먼트를 활성화합니다.
+> * **[!UICONTROL 이름]** 열에 있는 ![세그먼트 추가 단추](../assets/ui/workspace/add-data-symbol.png) 단추를 사용하여 해당 대상에 대한 추가 세그먼트를 활성화합니다.
+> * 대상에 대한 기존 연결을 삭제하려면 **[!UICONTROL 이름]** 열에 있는 ![대상 삭제 단추](../assets/ui/workspace/delete-destination-symbol.png) 단추를 사용합니다.
+
 
 ![검색 탭](../assets/ui/workspace/browse-tab.png)
 
 | 요소 | 설명 |
 ---------|----------
-| 이름 | 활성화 과정을 위해 입력한 이름이 이 대상으로 전송됩니다. |
+| 이름 | 활성화 과정을 위해 입력한 이름이 이 대상으로 전송됩니다. 동일한 열에는 2개의 컨트롤이 있습니다. 및 [!UICONTROL 대상 삭제]를 활성화합니다. |
+| 마지막 흐름 실행 상태 | 마지막 데이터 흐름 실행의 상태입니다. 데이터 흐름 실행에 대한 자세한 내용은 [대상 세부 사항 보기](destination-details-page.md)를 참조하십시오. |
+| 마지막 흐름 실행 날짜 | 마지막 데이터 흐름 실행이 발생한 시간 및 날짜입니다. 데이터 흐름 실행에 대한 자세한 내용은 [대상 세부 사항 보기](destination-details-page.md)를 참조하십시오. |
 | [!UICONTROL 대상] | 정품 인증 과정에 대해 선택한 대상 플랫폼입니다. |
-| [!UICONTROL 연결 유형] | 저장소 버킷 또는 대상에 대한 연결 유형을 나타냅니다. <ul><li>이메일 마케팅 대상:S3 또는 FTP일 수 있습니다.</li><li>실시간 광고 대상:서버 간</li></ul> |
+| [!UICONTROL 연결 유형] | 저장소 버킷 또는 대상에 대한 연결 유형을 나타냅니다. <ul><li>이메일 마케팅 대상:S3, FTP 또는 [!DNL Azure Blob]일 수 있습니다.</li><li>실시간 광고 대상:서버 간</li><li>스트리밍 대상:[!DNL Azure Event Hubs] 또는 [!DNL Amazon Kinesis]일 수 있습니다.</li></ul> |
 | [!UICONTROL 사용자 이름] | 대상 플로우에 대해 선택한 계정 자격 증명입니다. |
 | [!UICONTROL 활성화 데이터] | 이 대상에 대해 활성화되는 세그먼트 수를 나타냅니다. 활성화된 세그먼트에 대한 자세한 내용을 보려면 이 컨트롤을 선택합니다. 활성화된 세그먼트에 대한 자세한 내용은 대상 세부 정보 페이지에서 [활성화 데이터](/help/destinations/ui/destination-details-page.md#activation-data)를 참조하십시오. |
 | [!UICONTROL 작성일] | 대상으로 활성화 흐름이 만들어진 날짜 및 UTC 시간입니다. |
