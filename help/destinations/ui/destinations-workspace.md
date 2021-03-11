@@ -4,7 +4,7 @@ title: 대상 작업 공간 개요
 description: 대상 작업 공간은 아래의 섹션에 설명된 4개의 섹션인 카탈로그, 찾아보기, 계정 및 시스템 보기로 구성됩니다.
 seo-description: Adobe Experience Platform의 왼쪽 탐색 막대에서 대상을 선택하여 대상 작업 영역에 액세스합니다.
 translation-type: tm+mt
-source-git-commit: 95ff15b212e0d6f454f0319ac1ec5bbee9c07dac
+source-git-commit: 37b0ec0e04c45cb065eca9d262249016e80655ef
 workflow-type: tm+mt
 source-wordcount: '1017'
 ht-degree: 2%
@@ -117,6 +117,6 @@ Adobe Experience Platform의 왼쪽 탐색 막대에서 **[!UICONTROL 대상]**&
 
 ![데이터 흐름1](../assets/ui/workspace/data-flows1.png)
 
-페이지에 표시되는 대상을 선택하고 **[!UICONTROL 흐름 보기]**&#x200B;를 눌러 각 대상에 대해 설정한 모든 연결에 대한 정보를 봅니다.
+페이지에 표시되는 대상을 선택하고 **[!UICONTROL 흐름 보기]**&#x200B;를 클릭하여 각 대상에 대해 설정한 모든 연결에 대한 정보를 봅니다.
 
 ![데이터 흐름2](../assets/ui/workspace/data-flows2.png)
