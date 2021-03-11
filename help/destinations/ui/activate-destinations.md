@@ -6,9 +6,9 @@ seo-title: 대상에 프로필 및 세그먼트 활성화
 description: 세그먼트를 대상에 매핑하여 Adobe Experience Platform에 있는 데이터를 활성화합니다. 이를 수행하려면 아래 단계를 따르십시오.
 seo-description: 세그먼트를 대상에 매핑하여 Adobe Experience Platform에 있는 데이터를 활성화합니다. 이를 수행하려면 아래 단계를 따르십시오.
 translation-type: tm+mt
-source-git-commit: 6c8bf05285dcfc3e631ae5a41dcf40f90217320a
+source-git-commit: 95ff15b212e0d6f454f0319ac1ec5bbee9c07dac
 workflow-type: tm+mt
-source-wordcount: '2184'
+source-wordcount: '2151'
 ht-degree: 0%
 
 ---
@@ -30,19 +30,11 @@ ht-degree: 0%
 
 적용 대상:모든 대상
 
-Adobe Experience Platform 사용자 인터페이스에서 **[!UICONTROL 대상]** > **[!UICONTROL 찾아보기]**&#x200B;로 이동하여 세그먼트를 활성화할 대상을 선택합니다.
+Adobe Experience Platform 사용자 인터페이스에서 **[!UICONTROL 대상]** > **[!UICONTROL 찾아보기]**&#x200B;로 이동한 다음 아래 이미지와 같이 세그먼트를 활성화할 대상에 해당하는 **[!UICONTROL 활성화]** 단추를 누릅니다.
 
-![대상 찾아보기](../assets/ui/activate-destinations/connect.png)
+![대상에 활성화](../assets/ui/activate-destinations/browse-tab-activate.png)
 
-활성화 작업 과정으로 이동할 대상 이름을 선택합니다.
-
-![활성화 흐름](../assets/ui/activate-destinations/activate-flow.png)
-
->[!NOTE]
->
->대상에 대한 활성화 워크플로가 이미 존재하는 경우 대상에 대해 현재 활성화된 세그먼트를 볼 수 있습니다. 오른쪽 레일에서 **[!UICONTROL 활성화 편집]**&#x200B;을 선택하고 아래 단계에 따라 활성화 세부 사항을 수정합니다.
-
-대상을 선택하고 나면 **[!UICONTROL 활성화]**&#x200B;를 선택합니다.
+다음 섹션의 단계를 따라 활성화할 세그먼트를 선택합니다.
 
 ### [!UICONTROL 세그먼트 ] 선택 단계  {#select-segments}
 
