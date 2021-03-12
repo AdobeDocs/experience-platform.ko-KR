@@ -2,18 +2,18 @@
 keywords: Experience Platform;사용자 인터페이스;사용자 인터페이스;사용자 정의;라이센스 사용 대시보드;대시보드;라이센스 사용;자격 부여;소비
 title: 라이센스 사용 대시보드
 description: Adobe Experience Platform은 조직의 라이선스 사용에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
-topic: guide
-type: Documentation
+topic: 가이드
+type: 설명서
 translation-type: tm+mt
-source-git-commit: 084aaa315f694d696abee7f078be3a121111f6cc
+source-git-commit: 3908011b31dd24b13a58a2bc5ad5137dd3af5f63
 workflow-type: tm+mt
-source-wordcount: '594'
-ht-degree: 1%
+source-wordcount: '656'
+ht-degree: 3%
 
 ---
 
 
-# (베타) [!UICONTROL 라이센스 사용] 대시보드 {#license-usage-dashboard}
+# (베타) 라이센스 사용 대시보드 {#license-usage-dashboard}
 
 >[!IMPORTANT]
 >
@@ -43,7 +43,7 @@ Adobe Experience Platform 사용자 인터페이스(UI)는 일일 스냅샷 중�
 
 >[!NOTE]
 >
->샌드박스에 대한 소비 보고는 동일한 유형의 모든 샌드박스에 대해 누적됩니다. 즉, [!UICONTROL 프로덕션] 또는 [!UICONTROL 개발]을 선택하면 모든 프로덕션 또는 개발 샌드박스에 대해 각각 보고합니다.
+>샌드박스에 대한 소비 보고는 동일한 유형의 모든 샌드박스에 대해 누적됩니다. 즉, [!UICONTROL 프로덕션] 또는 [!UICONTROL 개발]을 선택하면 모든 프로덕션 또는 개발 샌드박스에 대한 소비 보고서가 각각 제공됩니다.
 
 ![](../images/license-usage/select-sandbox.png)
 
@@ -53,26 +53,35 @@ Adobe Experience Platform 사용자 인터페이스(UI)는 일일 스냅샷 중�
 
 ![](../images/license-usage/select-date-range.png)
 
-### 위젯 및 지표
+## 위젯
 
-라이선스 사용량 대시보드는 위젯으로 구성되어 있으며, 조직의 라이선스 사용과 관련된 중요 정보를 제공하는 읽기 전용 지표가 표시됩니다. 이러한 위젯에 대한 자세한 내용은 이 안내서의 사용 가능한 위젯 섹션을 참조하십시오.
+라이선스 사용량 대시보드는 위젯으로 구성되어 있으며, 조직의 라이선스 사용과 관련된 중요 정보를 제공하는 읽기 전용 지표가 표시됩니다. 표시되는 지표는 조직의 특정 라이선스에 따라 다릅니다(자세한 내용은 [사용 가능한 지표](#available-metrics) 섹션 참조).
 
-## 사용 가능한 위젯 {#available-widgets}
+각 위젯에는 조직의 실제 번호와 조직의 라이센스에서 사용할 수 있는 총수를 비교하여 라인 그래프가 표시되며 총 사용량의 백분율을 제공합니다.
 
-Experience Platform은 현재 라이선스 사용을 시각화하는 데 사용할 수 있는 하나의 위젯을 제공하므로 더 많은 위젯이 곧 릴리스됩니다.
+![](../images/license-usage/widgets.png)
 
-### [!UICONTROL 대응 가능 고객] {#addressable-audiences}
+## 사용 가능한 지표
 
-결정(비공개) 그래프 알고리즘을 사용하여 현재 모든 데이터 세트에서 프로필 조각을 결합하기 위해 시스템 생성 병합 정책을 적용한 후 **[!UICONTROL 대응 가능 대상]** 위젯은 프로필 데이터 저장소 내의 병합된 프로필의 총 수를 표시합니다.
+현재 라이선스 사용량 대시보드에는 4개의 지표가 있습니다.
 
-조각 및 병합된 프로파일에 대한 자세한 내용은 [프로필 개요](../../profile/home.md)의 *프로필 조각과 병합된 프로필* 섹션을 읽으십시오.
+* [!UICONTROL 대응 가능 대상] (프로필 수로 측정됨)
+* [!UICONTROL 평균 프로파일 풍부함]
+* [!UICONTROL 총 사용량 스토리지]
+* [!UICONTROL 세그멘테이션 비율당 스캔한 데이터]
 
->[!NOTE]
->
->이 지표를 계산하는 데 사용되는 병합 정책은 Experience Platform에 의해 생성되며 편집할 수 없거나 다른 병합 정책을 선택할 수 없습니다. 이 시스템에서 생성한 병합 정책은 [!DNL Profile] 대시보드에서 [!UICONTROL 대상 크기]을 계산하는 데 사용되는 기본 병합 정책과 동일하지 않으므로 [!UICONTROL 라이선스 사용량] 및 [!DNL Profile] 대시보드의 대상 수가 정확히 동일하지는 않습니다.
+이러한 각 지표의 정의는 조직에서 구입한 라이센스에 따라 다릅니다. 각 지표에 대한 자세한 정의는 다음 제품 설명 설명서를 참조하십시오.
 
-![](../images/license-usage/addressable-audiences.png)
+| 라이선스 | 제품 설명 |
+|---|---|
+| <ul><li>Adobe Experience Platform:OD LITE</li><li>Adobe Experience Platform:OD STANDARD</li><li>Adobe Experience Platform:OD HEAVY</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
+| <ul><li>Adobe Experience Platform:OD</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
+| <ul><li>RT 고객 데이터 플랫폼:OD</li><li>RT 고객 데이터 플랫폼: OD PRFL에서 10M까지</li><li>RT 고객 데이터 플랫폼: OD PRFL에서 50M까지</li></ul> | [실시간 고객 데이터 플랫폼](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
+| <ul><li>AEP:OD 활성화</li><li>AEP:OD 활성화 과정 - 10M</li><li>AEP:최대 50M 활성화 과정</li></ul> | [Adobe Experience Platform 활성화](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html) |
+| <ul><li>AEP:OD 인텔리전스</li></ul> | [Adobe Experience Platform Intelligence](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
 
 ## 다음 단계
 
-이 문서를 따르면 이제 라이선스 사용 대시보드를 찾아 볼 샌드박스를 선택할 수 있습니다. 사용 가능한 위젯에 표시되는 지표도 이해해야 합니다. Experience Platform UI에 대한 자세한 내용은 [플랫폼 UI 안내서](../../landing/ui-guide.md)를 참조하십시오.
+이 문서를 읽고 나면 라이센스 사용 대시보드를 찾아 볼 샌드박스를 선택할 수 있습니다. 조직에서 구입한 라이선스를 기반으로 조직에서 사용할 수 있는 지표에 대한 자세한 정보를 확인할 수도 있습니다.
+
+Experience Platform UI에서 사용 가능한 다른 기능에 대한 자세한 내용은 [플랫폼 UI 안내서](../../landing/ui-guide.md)를 참조하십시오.
