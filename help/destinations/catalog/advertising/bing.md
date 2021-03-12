@@ -3,9 +3,9 @@ keywords: '광고;bing; '
 title: Microsoft Bing 연결
 description: Microsoft Bing 연결 대상을 사용하여 Microsoft 디스플레이 광고에서 리타깃팅 및 대상 타깃팅된 디지털 캠페인을 실행할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: 0ef107963f7da377070eb845fd7c24218a99464b
 workflow-type: tm+mt
-source-wordcount: '454'
+source-wordcount: '527'
 ht-degree: 0%
 
 ---
@@ -23,6 +23,10 @@ ht-degree: 0%
 
 * 다음 [id](../../../identity-service/namespaces.md)를 [!DNL Microsoft Bing] 대상으로 보낼 수 있습니다.[!DNL Microsoft ID].
 
+>[!IMPORTANT]
+>
+>[!DNL Microsoft Bing]을(를) 사용하여 첫 번째 대상을 만들고 이전에 Experience Cloud ID 서비스에서 [ID 동기화 기능](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html)을(를) 활성화하지 않은 경우(Adobe Audience Manager 또는 다른 응용 프로그램에서) Adobe 컨설팅 또는 고객 지원 센터에 문의하여 ID 동기화를 활성화하십시오. 이전에 Audience Manager에서 [!DNL Microsoft Bing] 통합을 설정한 경우 설정한 ID 동기화가 플랫폼으로 이월됩니다.
+
 ## 사용 사례 {#use-cases}
 
 마케터로서 [!DNL Microsoft Advertising IDs]을(를) 기반으로 구축된 세그먼트를 사용하여 [!DNL Microsoft Advertising] 채널에 디스플레이 광고를 통해 사용자를 타깃팅할 수 있기를 바랍니다.
@@ -33,7 +37,7 @@ ht-degree: 0%
 
 ## 전제 조건 {#prerequisites}
 
-대상을 구성할 때 다음과 같은 정보를 입력하라는 메시지가 표시됩니다.
+대상을 구성할 때 다음 정보를 제공해야 합니다.
 
 * [!UICONTROL 계정 ID]:정수 형식 [!DNL Bing Ads CID]으로 표시됩니다.
 
