@@ -6,10 +6,10 @@ breadcrumb-title: 대시보드 안내서
 user-guide-description: 맞춤형 대시보드에서 Experience Platform 데이터를 시각화합니다.
 feature: 데이터 관리
 translation-type: tm+mt
-source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
+source-git-commit: 4b087685f065d05894fb45c19fce453346448614
 workflow-type: tm+mt
-source-wordcount: '36'
-ht-degree: 47%
+source-wordcount: '40'
+ht-degree: 42%
 
 ---
 
@@ -22,4 +22,6 @@ ht-degree: 47%
    * [세그먼트](guides/segments.md)
    * [대상](guides/destinations.md)
    * [라이선스 사용량](guides/license-usage.md)
+* [대시보드 수정](modify.md)
+* [위젯 라이브러리](widget-library.md)
 * [플랫폼 릴리스 정보](https://www.adobe.com/go/platform-release-notes-en)
