@@ -6,9 +6,9 @@ topic: 개요
 type: 튜토리얼
 description: 데이터 흐름(Dataflow)은 소스에서 플랫폼 데이터 집합으로 데이터를 검색하고 인제스트하는 예약된 작업입니다. 이 자습서에서는 클라우드 저장소 계정을 사용하여 새 데이터 흐름을 구성하는 절차를 제공합니다.
 translation-type: tm+mt
-source-git-commit: 115442a90ab56a93748bf161aa2e7ed680980f6e
+source-git-commit: 1fb4a272a914bf4ce7653f3f4f7fff63f36f9a48
 workflow-type: tm+mt
-source-wordcount: '1874'
+source-wordcount: '1924'
 ht-degree: 0%
 
 ---
@@ -41,38 +41,52 @@ ht-degree: 0%
 
 클라우드 저장소 계정을 만든 후 클라우드 저장소 파일 계층 구조를 탐색하는 데 사용할 수 있는 인터페이스를 제공하는 **[!UICONTROL 데이터]** 선택 단계가 나타납니다.
 
-* 인터페이스의 왼쪽 절반은 서버 파일과 디렉토리를 표시하는 디렉토리 브라우저입니다.
-* 인터페이스의 오른쪽 절반을 사용하면 호환 파일에서 최대 100개의 데이터 행을 미리 볼 수 있습니다.
+* 인터페이스의 왼쪽 부분은 클라우드 스토리지 파일과 디렉토리를 표시하는 디렉토리 브라우저입니다.
+* 인터페이스의 오른쪽에서는 호환 파일에서 최대 100개의 데이터 행을 미리 볼 수 있습니다.
 
-나열된 폴더를 선택하면 폴더 계층 구조를 더 깊은 폴더로 이동할 수 있습니다. 호환되는 파일 또는 폴더를 선택한 경우 [미리 보기] 창에 데이터를 표시할 형식을 선택할 수 있는 **[!UICONTROL 데이터 형식 선택]** 드롭다운이 나타납니다.
+![인터페이스](../../../../images/tutorials/dataflow/cloud-storage/batch/interface.png)
 
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data.png)
+나열된 폴더를 선택하면 폴더 계층 구조를 더 깊은 폴더로 이동할 수 있습니다. 하나의 폴더를 선택하여 폴더의 모든 파일을 재귀적으로 인제스트할 수 있습니다. 전체 폴더를 인제스트할 때 폴더의 모든 파일이 동일한 스키마를 공유하는지 확인해야 합니다.
 
-인제스트할 파일에 적합한 데이터 형식을 선택하고 미리 보기 창이 채워질 때까지 몇 초 동안 허용합니다.
+호환되는 파일 또는 폴더를 선택한 후에는 [!UICONTROL 데이터 형식 선택] 드롭다운 메뉴에서 해당 데이터 형식을 선택합니다.
 
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/data-format.png)
+다음 표에는 지원되는 파일 유형에 적합한 데이터 형식이 표시됩니다.
 
-구분된 파일을 인제스트할 때 사용자 지정 구분 기호를 설정할 수 있습니다. **[!UICONTROL 구분 기호]** 옵션을 선택한 다음 드롭다운 메뉴에서 구분 기호를 선택합니다. 메뉴는 쉼표(`,`), 탭(`\t`) 및 파이프(`|`)를 포함하여 구분 기호에 가장 자주 사용되는 옵션을 표시합니다. 또는 **[!UICONTROL 사용자 지정]**&#x200B;을 선택하고 팝업 입력 막대에서 원하는 사용자 정의 구분 기호를 입력합니다.
+| 파일 유형 | 데이터 형식 |
+| --- | --- |
+| CSV로 내보내기 | [!UICONTROL 구분 기호] |
+| JSON | [!UICONTROL JSON] |
+| 쪽모이 세공 | [!UICONTROL XDM 쪽모이 세공] |
+
+**[!UICONTROL JSON]**&#x200B;을 선택하고 미리 보기 인터페이스가 채워질 때까지 몇 초 정도 기다립니다.
+
+![select-data](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data.png)
+
+>[!NOTE]
+>
+>구분된 파일 유형 및 JSON 파일 형식과 달리, 미리 보기에서는 쪽모이 세공 문서 형식 파일을 사용할 수 없습니다.
+
+미리 보기 인터페이스를 사용하면 파일의 내용 및 구조를 검사할 수 있습니다. 기본적으로 미리 보기 인터페이스는 선택한 폴더의 첫 번째 파일을 표시합니다.
+
+다른 파일을 미리 보려면 검사할 파일 이름 옆에 있는 미리 보기 아이콘을 선택합니다.
+
+![default-preview](../../../../images/tutorials/dataflow/cloud-storage/batch/default-preview.png)
+
+폴더에 있는 파일의 내용과 구조를 검사했으면 **[!UICONTROL 다음]**&#x200B;을 선택하여 폴더에 있는 모든 파일을 재귀적으로 인제스트합니다.
+
+![select-folder](../../../../images/tutorials/dataflow/cloud-storage/batch/select-folder.png)
+
+특정 파일을 선택하려면 인제스트할 파일을 선택한 다음 **[!UICONTROL 다음]**&#x200B;을 선택합니다.
+
+![select-file](../../../../images/tutorials/dataflow/cloud-storage/batch/select-file.png)
+
+### 구분된 파일에 대한 사용자 정의 구분 기호 설정
+
+구분된 파일을 인제스트할 때 사용자 지정 구분 기호를 설정할 수 있습니다. **[!UICONTROL 구분 기호]** 옵션을 선택한 다음 드롭다운 메뉴에서 구분 기호를 선택합니다. 메뉴는 쉼표(`,`), 탭(`\t`) 및 파이프(`|`)를 포함하여 구분 기호에 가장 자주 사용되는 옵션을 표시합니다. 사용자 정의 구분 기호를 사용하려면 **[!UICONTROL 사용자 지정]**&#x200B;을 선택하고 팝업 입력 막대에서 원하는 단일 문자 구분 기호를 입력합니다.
 
 데이터 형식을 선택하고 구분 기호를 설정한 후 **[!UICONTROL 다음]**&#x200B;을 선택합니다.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/delimiter.png)
-
-### 인제스트 쪽모이 세공 또는 JSON 파일
-
-클라우드 스토리지 계정은 JSON 및 쪽모이 세공 마룻파일도 지원합니다. XDM과 호환되어야 하며 JSON 파일은 XDM을 사용하지 않아도 됩니다. JSON 또는 쪽모이 세공 마룻바닥으로 인제스트하려면 디렉토리 브라우저에서 적절한 파일 형식을 선택하고 올바른 인터페이스에서 호환되는 데이터 형식을 적용합니다.
-
-데이터 형식이 JSON인 경우 파일 내의 데이터에 대한 정보를 보여주는 미리 보기가 표시됩니다. 미리 보기 화면에서 **[!UICONTROL XDM 호환]** 드롭다운을 사용하여 JSON이 XDM과 호환되는지 선택할 수 있습니다.
-
-계속하려면 **[!UICONTROL 다음]**&#x200B;을 선택합니다.
-
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/json-preview.png)
-
->[!IMPORTANT]
->
->구분된 파일 유형 및 JSON 파일 형식과 달리, 미리 보기에서는 쪽모이 세공 문서 형식 파일을 사용할 수 없습니다.
-
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data-parquet.png)
 
 ## 데이터 필드를 XDM 스키마에 매핑
 
