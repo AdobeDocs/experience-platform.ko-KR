@@ -5,10 +5,10 @@ description: Adobe Experience Platform은 조직의 라이선스 사용에 대�
 topic: 가이드
 type: 설명서
 translation-type: tm+mt
-source-git-commit: 3908011b31dd24b13a58a2bc5ad5137dd3af5f63
+source-git-commit: 6baf1fbff20a02cd599d9ad9102d56db5a9004c3
 workflow-type: tm+mt
-source-wordcount: '656'
-ht-degree: 3%
+source-wordcount: '660'
+ht-degree: 2%
 
 ---
 
@@ -75,8 +75,8 @@ Adobe Experience Platform 사용자 인터페이스(UI)는 일일 스냅샷 중�
 | 라이선스 | 제품 설명 |
 |---|---|
 | <ul><li>Adobe Experience Platform:OD LITE</li><li>Adobe Experience Platform:OD STANDARD</li><li>Adobe Experience Platform:OD HEAVY</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
-| <ul><li>Adobe Experience Platform:OD</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
-| <ul><li>RT 고객 데이터 플랫폼:OD</li><li>RT 고객 데이터 플랫폼: OD PRFL에서 10M까지</li><li>RT 고객 데이터 플랫폼: OD PRFL에서 50M까지</li></ul> | [실시간 고객 데이터 플랫폼](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
+| <ul><li>Adobe Experience Platform:OD</li></ul> | [Experience Platform, 앱 서비스 및 지능형 서비스](https://helpx.adobe.com/legal/product-descriptions/exp-platform-app-svcs.html) |
+| <ul><li>RT 고객 데이터 플랫폼:OD</li><li>RT 고객 데이터 플랫폼: OD PRFL에서 10M까지</li><li>RT 고객 데이터 플랫폼: OD PRFL에서 50M까지</li></ul> | [실시간 고객 데이터 플랫폼](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) |
 | <ul><li>AEP:OD 활성화</li><li>AEP:OD 활성화 과정 - 10M</li><li>AEP:최대 50M 활성화 과정</li></ul> | [Adobe Experience Platform 활성화](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html) |
 | <ul><li>AEP:OD 인텔리전스</li></ul> | [Adobe Experience Platform Intelligence](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
 
