@@ -3,9 +3,9 @@ title: Adobe Experience Platform 웹 SDK를 사용하여 고객 동의 기본 �
 description: Adobe Experience Platform 웹 SDK를 사용하여 동의 기본 설정을 지원하는 방법을 알아봅니다.
 keywords: 동의;defaultConsent;default consent;setConsent;프로필 개인 정보 혼합;경험 이벤트 개인 정보 혼합;개인 정보 혼합
 translation-type: tm+mt
-source-git-commit: ff261c507d310b8132912680b6ddd1e7d5675d08
+source-git-commit: dd9101079a1093c109f43b268a78c07770221156
 workflow-type: tm+mt
-source-wordcount: '964'
+source-wordcount: '977'
 ht-degree: 0%
 
 ---
@@ -66,13 +66,16 @@ alloy("setConsent", {
       value: {
         collect: {
           val: "y"
+        },
+        metadata: {
+          time: "2021-03-17T15:48:42-07:00"
         }
       }
     }]
 });
 ```
 
-사용자가 옵트아웃하도록 선택한 경우 다음과 같이 컬렉션 환경 설정이 `n`으로 설정된 `setConsent` 명령을 실행합니다.
+시간 필드는 사용자가 마지막으로 동의 기본 설정을 업데이트한 시기를 지정해야 합니다. 사용자가 옵트아웃하도록 선택한 경우 다음과 같이 컬렉션 환경 설정이 `n`으로 설정된 `setConsent` 명령을 실행합니다.
 
 ```javascript
 alloy("setConsent", {
@@ -82,6 +85,9 @@ alloy("setConsent", {
       value: {
         collect: {
           val: "n"
+        },
+        metadata: {
+          time: "2021-03-17T15:51:30-07:00"
         }
       }
     }]
@@ -155,6 +161,9 @@ alloy("setConsent", {
       value: {
         collect: {
           val: "y"
+        },
+        metadata: {
+          time: "2021-03-17T15:48:42-07:00"
         }
       }
     },{
