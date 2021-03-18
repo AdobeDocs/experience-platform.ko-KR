@@ -1,20 +1,20 @@
 ---
-keywords: Experience Platform;홈;인기 항목;흐름 서비스;업데이트 연결
+keywords: Experience Platform;홈;인기 항목;흐름 서비스;계정 업데이트;;home;popular topics;flow service;update accounts
 solution: Experience Platform
-title: Flow Service API를 사용하여 연결 업데이트
+title: Flow Service API를 사용하여 계정 업데이트
 topic: 개요
 type: 튜토리얼
-description: 이 자습서에서는 Flow Service API를 사용하여 연결의 세부 사항 및 자격 증명을 업데이트하는 절차를 다룹니다.
+description: 이 자습서에서는 Flow Service API를 사용하여 계정의 세부 사항 및 자격 증명을 업데이트하는 절차를 설명합니다.
 translation-type: tm+mt
-source-git-commit: 5187647dfcf82a476bc776bf2b606db228ca70a4
+source-git-commit: 37be5f5ffa4640d7d4442a24cc257069237f15cb
 workflow-type: tm+mt
-source-wordcount: '689'
-ht-degree: 2%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
 
-# Flow Service API를 사용하여 연결 업데이트
+# Flow Service API를 사용하여 계정 업데이트
 
 경우에 따라 기존 소스 연결의 세부 사항을 업데이트해야 할 수 있습니다. [!DNL Flow Service] 이름, 설명 및 자격 증명을 포함하여 기존 배치 또는 스트리밍 연결의 세부 사항을 추가, 편집 및 삭제할 수 있는 기능을 제공합니다.
 
