@@ -3,9 +3,9 @@ keywords: facebook 연결;facebook 연결;facebook 대상;facebook;instagram;mes
 title: Facebook 연결
 description: 해시 처리된 이메일을 기반으로 고객 타깃팅, 개인화 및 억제를 위해 Facebook 캠페인에 대한 프로필을 활성화합니다.
 translation-type: tm+mt
-source-git-commit: bec44832a235dd3f9e2ee0f3ffc77854ee5784d7
+source-git-commit: 950dc24e44a32cfd3e0cdde0fee967cb687c572e
 workflow-type: tm+mt
-source-wordcount: '942'
+source-wordcount: '1128'
 ht-degree: 3%
 
 ---
@@ -35,19 +35,29 @@ ht-degree: 3%
 
 다음으로, 연결된 멤버십 ID 및 고객 계층을 비롯한 오프라인 데이터를 사용하여 [!DNL Facebook] 대상을 통해 타깃팅할 수 있는 새 대상 세그먼트를 만들 수 있습니다.
 
-## 대상 세부 사항 {#destination-specs}
-
-### [!DNL Facebook] 대상 {#data-governance}에 대한 데이터 거버넌스
+## [!DNL Facebook] 대상 {#data-governance}에 대한 데이터 거버넌스
 
 >[!IMPORTANT]
 >
 >[!DNL Facebook]에 전송된 데이터에는 연결된 ID가 포함되지 않아야 합니다. 귀하는 이러한 의무를 지킬 책임이 있으며, 활성화를 위해 선택한 세그먼트가 병합 정책에 봉합 옵션을 사용하지 않도록 하여 이를 수행할 수 있습니다. [병합 정책](/help/profile/ui/merge-policies.md)에 대해 자세히 알아보십시오.
 
-### 내보내기 유형 {#export-type}
+## 지원되는 ID {#supported-identities}
+
+[!DNL Facebook Custom Audiences] 에서는 아래 표에 설명된 ID 활성화를 지원합니다. [id](/help/identity-service/namespaces.md)에 대해 자세히 알아보십시오.
+
+| Target ID | 설명 | 고려 사항 |
+|---|---|---|
+| GAID | Google 광고 ID | 소스 ID가 GAID 네임스페이스인 경우 이 대상 ID를 선택합니다. |
+| IDFA | 광고주용 Apple ID | 소스 ID가 IDFA 네임스페이스인 경우 이 대상 ID를 선택합니다. |
+| phone_sha256 | SHA256 알고리즘으로 전화 번호 해시됨 | 일반 텍스트와 SHA256 해시된 전화 번호는 모두 Adobe Experience Platform에서 지원합니다. [ID 일치 요구 사항](#id-matching-requirements-id-matching-requirements) 섹션의 지침을 따르고 일반 텍스트 및 해시 전화 번호에 적합한 네임스페이스를 각각 사용합니다. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL Apply transformation]** 옵션을 선택하여 [!DNL Platform] 활성화 시 데이터를 자동으로 해시합니다. |
+| email_lc_sha256 | SHA256 알고리즘으로 해시된 이메일 주소 | 일반 텍스트와 SHA256 해시된 이메일 주소는 모두 Adobe Experience Platform에서 지원합니다. [ID 일치 요구 사항](#id-matching-requirements-id-matching-requirements) 섹션의 지침을 따르고 일반 텍스트 및 해시된 이메일 주소에 적합한 네임스페이스를 각각 사용합니다. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL Apply transformation]** 옵션을 선택하여 [!DNL Platform] 활성화 시 데이터를 자동으로 해시합니다. |
+| extern_id | 사용자 지정 사용자 ID | 소스 ID가 사용자 지정 네임스페이스인 경우 이 대상 ID를 선택합니다. |
+
+## 내보내기 유형 {#export-type}
 
 **세그먼트 내보내기**  - 식별자(이름, 전화 번호 등)를 사용하여 세그먼트(대상)의 모든 구성원을 내보냅니다. Facebook 대상에 사용됩니다.
 
-### Facebook 계정 사전 요구 사항 {#facebook-account-prerequisites}
+## Facebook 계정 사전 요구 사항 {#facebook-account-prerequisites}
 
 대상 세그먼트를 [!DNL Facebook]에 보내려면 먼저 다음 요구 사항을 충족해야 합니다.
 
@@ -58,13 +68,13 @@ ht-degree: 3%
    > Adobe Experience Cloud에 대한 권한을 구성할 때 **캠페인 관리** 권한을 활성화해야 합니다. 이 단계는 [!DNL Adobe Experience Platform] 통합에 필요합니다.
 - [!DNL Facebook Custom Audiences] 서비스 약관을 읽고 서명합니다. 이렇게 하려면 `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]`로 이동하십시오. 여기서 `accountID`는 [!DNL Facebook Ad Account ID]입니다.
 
-### 요구 사항 {#id-matching-requirements} 일치하는 ID
+## 요구 사항 {#id-matching-requirements} 일치하는 ID
 
 [!DNL Facebook] 는 PII(개인 식별 정보)가 명확하게 전송되지 않도록 요구합니다. 따라서 [!DNL Facebook]에 대해 활성화된 대상은 이메일 주소 또는 전화 번호와 같은 *해시된* 식별자에서 키잉할 수 있습니다.
 
 Adobe Experience Platform에 인제스트하는 ID 유형에 따라 해당 요구 사항을 준수해야 합니다.
 
-#### 전화 번호 해싱 요구 사항 {#phone-number-hashing-requirements}
+### 전화 번호 해싱 요구 사항 {#phone-number-hashing-requirements}
 
 [!DNL Facebook]에는 전화 번호를 활성화하는 두 가지 방법이 있습니다.
 
@@ -76,7 +86,7 @@ Adobe Experience Platform에 인제스트하는 ID 유형에 따라 해당 요�
 >`Phone` 네임스페이스로 인제스트된 전화 번호는 [!DNL Facebook]에서 활성화할 수 없습니다.
 
 
-#### 전자 메일 해싱 요구 사항 {#email-hashing-requirements}
+### 전자 메일 해싱 요구 사항 {#email-hashing-requirements}
 
 이메일 주소를 Adobe Experience Platform으로 인제스트하기 전에 해시하도록 선택하거나, Experience Platform에서 지워진 이메일 주소를 사용하여 작업하도록 선택하고 알고리즘에서 활성화를 처리하도록 할 수 있습니다.
 
@@ -94,12 +104,12 @@ Experience Platform에서 이메일 주소 인제스트에 대한 자세한 내�
 >[!NOTE]
 >
 >해시되지 않은 네임스페이스의 데이터는 활성화 시 [!DNL Platform]에 의해 자동으로 해시됩니다.
-> 속성 소스 데이터가 자동으로 해시되지 않습니다. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL 변형 적용]** 옵션을 선택하여 [!DNL Platform]에서 활성화 시 데이터를 자동으로 해시하도록 하십시오.
-> **[!UICONTROL 변환 적용]** 옵션은 속성을 소스 필드로 선택할 때만 표시됩니다. 네임스페이스를 선택할 때 표시되지 않습니다.
+> 속성 소스 데이터가 자동으로 해시되지 않습니다. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL Apply transformation]** 옵션을 선택하여 [!DNL Platform] 활성화 시 데이터를 자동으로 해시합니다.
+> **[!UICONTROL Apply transformation]** 옵션은 속성을 소스 필드로 선택할 때만 표시됩니다. 네임스페이스를 선택할 때 표시되지 않습니다.
 
 ![ID 매핑 변형](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
-#### 사용자 정의 네임스페이스 사용 {#custom-namespaces}
+### 사용자 정의 네임스페이스 사용 {#custom-namespaces}
 
 `Extern_ID` 네임스페이스를 사용하여 데이터를 [!DNL Facebook]에 보내려면 [!DNL Facebook Pixel]을(를) 사용하여 자체 식별자를 동기화해야 합니다. 자세한 내용은 [공식 설명서](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences/#external_identifiers)를 참조하십시오.
 
@@ -111,7 +121,7 @@ Experience Platform에서 이메일 주소 인제스트에 대한 자세한 내�
 
 세그먼트를 [!DNL Facebook]에 활성화하는 방법에 대한 지침은 [대상에 데이터 활성화](../../ui/activate-destinations.md)를 참조하십시오.
 
-세그먼트를 [!DNL Facebook Custom Audiences]으로 보낼 때 **[!UICONTROL 세그먼트 일정]** 단계에서 대상]의 [!UICONTROL 출처를 제공해야 합니다.
+**[!UICONTROL Segment schedule]** 단계에서 세그먼트를 [!DNL Facebook Custom Audiences]에 보낼 때 [!UICONTROL Origin of audience]을 제공해야 합니다.
 
 ![대상자의 Facebook 출처](../../assets/catalog/social/facebook/facebook-origin-audience.png)
 
