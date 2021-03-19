@@ -3,12 +3,12 @@ keywords: Experience Platform;홈;인기 항목;Google PubSub;google pubsub
 solution: Experience Platform
 title: Flow Service API를 사용하여 Google PubSub 소스 연결 만들기
 topic: 개요
-type: 자습서
+type: 튜토리얼
 description: Flow Service API를 사용하여 Google PubSub 계정에 Adobe Experience Platform을 연결하는 방법을 알아봅니다.
 translation-type: tm+mt
-source-git-commit: 0af90253f04377149986aedf2e9d3012ca06d4f8
+source-git-commit: b5358ce206888c413035b46fe751520fd9aefb14
 workflow-type: tm+mt
-source-wordcount: '549'
+source-wordcount: '613'
 ht-degree: 2%
 
 ---
@@ -40,7 +40,11 @@ ht-degree: 2%
 | `projectId` | [!DNL PubSub] 인증에 필요한 프로젝트 ID. |
 | `credentials` | [!DNL PubSub] 인증에 필요한 자격 증명 또는 키 |
 
-이러한 값에 대한 자세한 내용은 다음 [PubSub 인증](https://cloud.google.com/pubsub/docs/authentication) 문서를 참조하십시오.
+이러한 값에 대한 자세한 내용은 다음 [PubSub 인증](https://cloud.google.com/pubsub/docs/authentication) 문서를 참조하십시오. 서비스 계정 기반 인증을 사용하는 경우 자격 증명을 생성하는 방법에 대한 자세한 내용은 다음 [PubSub 안내서](https://cloud.google.com/docs/authentication/production#create_service_account)를 참조하십시오.
+
+>[!TIP]
+>
+>서비스 계정 기반 인증을 사용하는 경우 자격 증명을 복사하고 붙여넣을 때 서비스 계정에 충분한 사용자 액세스 권한을 부여했는지, JSON에 추가 공백이 없는지 확인하십시오.
 
 ### 샘플 API 호출 읽기
 
