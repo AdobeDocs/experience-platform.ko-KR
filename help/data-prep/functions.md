@@ -5,7 +5,7 @@ title: 데이터 준비 매핑 함수
 topic: 개요
 description: 이 문서에서는 데이터 준비와 함께 사용되는 매핑 함수를 소개합니다.
 translation-type: tm+mt
-source-git-commit: 6a541cca307dec8937c2d49470e8bcab770c80c7
+source-git-commit: 85a99171a6786b47bf50d4579a3ebc88af3c82f6
 workflow-type: tm+mt
 source-wordcount: '3719'
 ht-degree: 3%
@@ -35,7 +35,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 다음 표는 샘플 표현식 및 결과 출력을 포함하여 지원되는 모든 매핑 함수를 나열합니다.
 
-### 문자열 함수
+### 문자열 함수 {#string}
 
 >[!NOTE]
 >
@@ -71,7 +71,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | extract_regex | 정규 표현식을 기반으로 입력 문자열에서 그룹을 추출합니다. | <ul><li>문자열:**필수** 그룹을 추출하는 문자열입니다.</li><li>REGEX:**필수** 그룹을 일치시킬 정규 표현식.</li></ul> | extract_regex(STRING, REGEX) | extract_regex(&quot;E259,E259B_009,1_1&quot; &#x200B;, &quot;([^,]+),[^,]*,([^,]+)&quot;)) | [&quot;E259,E259B_009,1_1&quot;, &quot;E259&quot;, &quot;1_1&quot;] |
 | matches_regex | 문자열이 입력된 정규 표현식과 일치하는지 확인합니다. | <ul><li>문자열:**필수** 검사 중인 문자열이 정규 표현식과 일치합니다.</li><li>REGEX:**필수** 비교할 일반 표현식.</li></ul> | matches_regex(STRING, REGEX) | matches_regex(&quot;E259,E259B_009,1_1&quot;, &quot;([^,]+),[^,]*,([^,]+)&quot;)&quot;) | true |
 
-### 해싱 함수
+### 해시 함수 {#hashing}
 
 >[!NOTE]
 >
@@ -85,7 +85,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | md5 | MD5를 사용하여 입력을 받고 해시 값을 생성합니다. | <ul><li>입력:**필수** 해시할 일반 텍스트입니다.</li><li>문자 세트:*선택적* 문자 집합의 이름입니다. 가능한 값에는 UTF-8, UTF-16, ISO-8859-1 및 US-ASCII가 포함됩니다. </li></ul> | md5(입력, 문자 세트) | md5(&quot;내 텍스트&quot;, &quot;UTF-8&quot;) | d3b96ce8c9fb4 &#x200B; e9bd0198d03ba6852c7 |
 | crc32 | 입력은 CRC(순환 중복 검사) 알고리즘을 사용하여 32비트 순환 코드를 생성합니다. | <ul><li>입력:**필수** 해시할 일반 텍스트입니다.</li><li>문자 세트:*선택적* 문자 집합의 이름입니다. 가능한 값에는 UTF-8, UTF-16, ISO-8859-1 및 US-ASCII가 포함됩니다.</li></ul> | crc32(입력, 문자 집합) | crc32(&quot;내 텍스트&quot;, &quot;UTF-8&quot;) | 8df92e80 |
 
-### URL 함수
+### URL 함수 {#url}
 
 >[!NOTE]
 >
@@ -99,7 +99,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | get_url_path | 지정된 URL의 경로를 반환합니다. 기본적으로 전체 경로가 반환됩니다. | <ul><li>URL:**필수** 경로를 추출해야 하는 URL입니다.</li><li>FULL_PATH:*선택적* 전체 경로가 반환되는지 여부를 결정하는 부울 값입니다. false로 설정하면 경로의 끝만 반환됩니다.</li></ul> | get_url_&#x200B;path(URL, FULL_PATH) | get_url_path &#x200B;(&quot;sftp://example.com// &#x200B; home/joe/employee.csv&quot;) | &quot;//home/joe/ &#x200B; employee.csv&quot; |
 | get_url_query_str | 지정된 URL의 쿼리 문자열을 반환합니다. | <ul><li>URL:**필수** 쿼리 문자열을 가져오려는 URL입니다.</li><li>앵커:**필수** 쿼리 문자열에서 앵커로 수행할 작업을 결정합니다. 다음 3개 값 중 하나일 수 있습니다.&quot;retain&quot;, &quot;remove&quot; 또는 &quot;append&quot;를 클릭합니다.<br><br>값이 &quot;retain&quot;이면 반환된 값에 앵커가 추가됩니다.<br>값이 &quot;remove&quot;이면 반환된 값에서 앵커가 제거됩니다.<br>값이 &quot;append&quot;이면 앵커가 별도의 값으로 반환됩니다.</li></ul> | get_url_query_str&#x200B;(URL, ANCHOR) | get_url_query_str(&quot;foo://example.com:8042//over/there?name=&#x200B;을) ferrete#nose를 &#x200B;), &quot;rette&quot;<br>get_url_str(&quot;foo://example.com:8042을 사용하여 //?name=을을, &quot;제거&quot;))&lt;get_url_url을 get_url이_이 될 수 있습니다. #noes&quot;, &quot;append&quot;)<br> | `{"name": "ferret#nose"}`<br>`{"name": "ferret"}`<br>`{"name": "ferret", "_anchor_": "nose"}` |
 
-### 날짜 및 시간 함수
+### 날짜 및 시간 함수 {#date-and-time}
 
 >[!NOTE]
 >
@@ -122,7 +122,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 &#x200B;
 
-### 계층 - 객체
+### 계층 - 개체 {#objects}
 
 >[!NOTE]
 >
@@ -138,7 +138,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | is_set | 개체가 소스 데이터 내에 있는지 확인합니다. | <ul><li>입력:**필수** 소스 데이터 내에 있는 경우 확인할 경로입니다.</li></ul> | is_set(INPUT) | is_set(&quot;evars.evar.field1&quot;) | true |
 | 무효 | 특성 값을 `null`으로 설정합니다. 이 옵션은 필드를 대상 스키마에 복사하지 않으려는 경우에 사용해야 합니다. |  | untrue() | untrue() | `null` |
 
-### 계층 - 배열
+### 계층 - 배열 {#arrays}
 
 >[!NOTE]
 >
@@ -153,7 +153,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | join_array | 배열을 서로 결합합니다. | <ul><li>배열:**필수** 요소를 추가할 배열입니다.</li><li>값:상위 배열에 추가할 배열입니다.</li></ul> | join_array&#x200B;(ARRAY, VALUES) | join_arrays([&#39;a&#39;, &#39;b&#39;], [&#39;c&#39;], [&#39;d&#39;, &#39;e&#39;]) | [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;] |
 | to_array | 입력 목록을 가져와서 배열로 변환합니다. | <ul><li>INCLUDE_NULL:**필수** 응답 배열에 null을 포함할지 여부를 나타내는 부울 값입니다.</li><li>값:**필수** 배열로 변환할 요소입니다.</li></ul> | to_&#x200B;array(INCLUDE_NULL, VALUES) | to_array(false, 1, null, 2, 3) | `[1, 2, 3]` |
 
-### 논리 연산자
+### 논리 연산자 {#logical-operators}
 
 >[!NOTE]
 >
@@ -164,7 +164,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | decode | 키와 배열 형태로 분리된 키 값 쌍 목록이 지정된 경우 키가 있으면 값을 반환하고 배열에 있는 경우 기본값을 반환합니다. | <ul><li>키:**필수** 일치할 키입니다.</li><li>OPTIONS:**필수** 키/값 쌍의 분리된 배열입니다. 선택적으로 기본값을 끝에 배치할 수 있습니다.</li></ul> | decode(KEY, OPTIONS) | decode(stateCode, &quot;ca&quot;, &quot;California&quot;, &quot;pa&quot;, &quot;Pennsylvania&quot;, &quot;N/A&quot;) | 지정된 stateCode가 &quot;ca&quot;, &quot;California&quot;인 경우.<br>주어진 stateCode가 &quot;pa&quot;, &quot;Pennsylvania&quot;인 경우<br>stateCode가 다음과 일치하지 않는 경우 &quot;N/A&quot;. |
 | iif | 주어진 부울 표현식을 평가하고 결과를 기준으로 지정된 값을 반환합니다. | <ul><li>표현식:**필수** 평가 중인 부울 식입니다.</li><li>TRUE_VALUE:**필수** 표현식이 true로 평가되는 경우 반환되는 값입니다.</li><li>FALSE_VALUE:**필수** 표현식이 false로 평가되는 경우 반환되는 값입니다.</li></ul> | iif(EXPRESSION, TRUE_VALUE, FALSE_VALUE) | iif(&quot;s&quot;.equalsIgnoreCase(&quot;S&quot;), &quot;True&quot;, &quot;False&quot;) | &quot;True&quot; |
 
-### 집계
+### 집계 {#aggregation}
 
 >[!NOTE]
 >
@@ -175,7 +175,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | min | 지정된 인수의 최소 개수를 반환합니다. 자연스러운 순서를 사용합니다. | <ul><li>OPTIONS:**필수** 서로 비교할 수 있는 하나 이상의 객체입니다.</li></ul> | min(OPTIONS) | 최소(3, 1, 4) | 1 |
 | max | 주어진 인수의 최대값을 반환합니다. 자연스러운 순서를 사용합니다. | <ul><li>OPTIONS:**필수** 서로 비교할 수 있는 하나 이상의 객체입니다.</li></ul> | max(OPTIONS) | max(3, 1, 4) | 4 |
 
-### 문자 변환
+### 전환 입력 {#type-conversions}
 
 >[!NOTE]
 >
@@ -188,7 +188,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | to_float | 문자열을 Float로 변환합니다. | <ul><li>문자열:**필수** float로 변환할 문자열입니다.</li></ul> | to_float(STRING) | to_float(&quot;12.3456&quot;) | 12.34566 |
 | to_integer | 문자열을 정수로 변환합니다. | <ul><li>문자열:**필수** 정수로 변환할 문자열입니다.</li></ul> | to_integer(STRING) | to_integer(&quot;12&quot;) | 12 |
 
-### JSON 함수
+### JSON 함수 {#json}
 
 >[!NOTE]
 >
@@ -198,7 +198,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 -------- | ----------- | ---------- | -------| ---------- | -------------
 | json_to_object | 지정된 문자열에서 JSON 콘텐츠를 역직렬화합니다. | <ul><li>문자열:**필수** 역직렬화할 JSON 문자열입니다.</li></ul> | json_to_object&#x200B;(STRING) | json_to_object({&quot;info&quot;:{&quot;firstName&quot;:&quot;John&quot;,&quot;lastName&quot; :&quot;Doe&quot;}) | JSON을 나타내는 객체입니다. |
 
-### 특별 작업
+### 특수 작업 {#special-operations}
 
 >[!NOTE]
 >
@@ -208,7 +208,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 -------- | ----------- | ---------- | -------| ---------- | -------------
 | uuid /<br>guid | 의사 임의 ID를 생성합니다. |  | uuid()<br>guid() | uuid()<br>guid() | 7c0267d2-bb74-4e1a-9275-3bf4fccda5f4<br>c7016dc7-3163-43f7-afc7-2e1c9c206333 |
 
-### 사용자 에이전트 함수
+### 사용자 에이전트 함수 {#user-agent}
 
 >[!NOTE]
 >
