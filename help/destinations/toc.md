@@ -6,7 +6,7 @@ user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페�
 description: 이 문서에서는 Adobe Experience Platform 대상에 대한 목차 목록
 feature: 대상
 translation-type: tm+mt
-source-git-commit: 648be489aa77870f67564ee350c4d85885673832
+source-git-commit: 3ae5efca9744e5f5edde56038beab93be5157de3
 workflow-type: tm+mt
 source-wordcount: '464'
 ht-degree: 10%
@@ -130,6 +130,6 @@ ht-degree: 10%
       * [고객 대상 개요](./catalog/voice/overview.md)
       * [디지털 피드백 확장 확인](./catalog/voice/confirmit-digital-feedback.md)
       * [Invoca 태그 확장](./catalog/voice/invoca.md)
-      * [Medallia etension](./catalog/voice/medallia.md)
+      * [메달리아 확장](./catalog/voice/medallia.md)
       * [Talk URL 받은 편지함 확장](./catalog/voice/talkurl.md)
 * [플랫폼 릴리스 정보](https://www.adobe.com/go/platform-release-notes-en)
