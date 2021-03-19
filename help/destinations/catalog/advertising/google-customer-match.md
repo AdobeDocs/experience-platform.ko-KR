@@ -3,9 +3,9 @@ keywords: google 고객 일치;Google 고객 일치;Google 고객 일치
 title: Google 고객 일치 연결
 description: Google Customer Match를 사용하면 온라인 및 오프라인 데이터를 사용하여 검색, 쇼핑, Gmail, YouTube 등 Google의 소유물 및 운영 체제에서 고객에게 도달하고 다시 참여할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 494b41265a0eec71ec15c7896eb8c652b3164e18
+source-git-commit: 950dc24e44a32cfd3e0cdde0fee967cb687c572e
 workflow-type: tm+mt
-source-wordcount: '1420'
+source-wordcount: '1565'
 ht-degree: 0%
 
 ---
@@ -31,19 +31,27 @@ ht-degree: 0%
 
 이 릴리스를 홍보하기 위해 CRM 데이터베이스의 이메일 주소를 식별자로 사용하여 Experience Platform으로 업로드합니다. 세그먼트는 이전 전화 모델을 소유하고 있는 고객을 기반으로 생성되어 [!DNL Google Customer Match]으로 전송되므로 현재 고객, 이전 전화 모델을 보유한 고객 및 [!DNL YouTube]에 있는 유사한 고객을 타깃팅할 수 있습니다.
 
-## 대상 세부 사항 {#destination-specs}
-
-### [!DNL Google Customer Match] 대상 {#data-governance}에 대한 데이터 거버넌스
+## [!DNL Google Customer Match] 대상 {#data-governance}에 대한 데이터 거버넌스
 
 Experience Platform의 대상은 대상 플랫폼으로 전송되거나 수신되는 데이터에 대한 특정 규칙 및 의무를 가질 수 있습니다. 데이터의 제한 및 의무와 Adobe Experience Platform 및 대상 플랫폼에서 해당 데이터를 사용하는 방법에 대한 책임은 귀하에게 있습니다. Adobe Experience Platform은 이러한 데이터 사용 의무 사항 중 일부를 관리하는 데 도움이 되는 데이터 관리 툴을 제공합니다. [데이터 거버넌스 툴 및 정책에 대한 ](../../..//data-governance/labels/overview.md) 자세한 내용을 살펴보십시오.
 
-### 내보내기 유형 및 ID {#export-type}
+## 지원되는 ID {#supported-identities}
+
+[!DNL Google Customer Match] 에서는 아래 표에 설명된 ID 활성화를 지원합니다. [id](/help/identity-service/namespaces.md)에 대해 자세히 알아보십시오.
+
+| Target ID | 설명 | 고려 사항 |
+|---|---|---|
+| GAID | Google 광고 ID | 소스 ID가 GAID 네임스페이스인 경우 이 대상 ID를 선택합니다. |
+| IDFA | 광고주용 Apple ID | 소스 ID가 IDFA 네임스페이스인 경우 이 대상 ID를 선택합니다. |
+| phone_sha256_e.164 | SHA256 알고리즘으로 해시된 E164 형식의 전화 번호 | 일반 텍스트와 SHA256 해시된 전화 번호는 모두 Adobe Experience Platform에서 지원합니다. [ID 일치 요구 사항](#id-matching-requirements-id-matching-requirements) 섹션의 지침을 따르고 일반 텍스트 및 해시 전화 번호에 적합한 네임스페이스를 각각 사용합니다. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL Apply transformation]** 옵션을 선택하여 [!DNL Platform] 활성화 시 데이터를 자동으로 해시합니다. |
+| email_lc_sha256 | SHA256 알고리즘으로 해시된 이메일 주소 | 일반 텍스트와 SHA256 해시된 이메일 주소는 모두 Adobe Experience Platform에서 지원합니다. [ID 일치 요구 사항](#id-matching-requirements-id-matching-requirements) 섹션의 지침을 따르고 일반 텍스트 및 해시된 이메일 주소에 적합한 네임스페이스를 각각 사용합니다. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL Apply transformation]** 옵션을 선택하여 [!DNL Platform] 활성화 시 데이터를 자동으로 해시합니다. |
+| user_id | 사용자 지정 사용자 ID | 소스 ID가 사용자 지정 네임스페이스인 경우 이 대상 ID를 선택합니다. |
+
+## 내보내기 유형 {#export-type}
 
 **세그먼트 내보내기**  - 식별자(이름, 전화 번호 등)를 사용하여 세그먼트(대상)의 모든 구성원을 내보냅니다. [!DNL Google Customer Match] 대상에 사용됨
 
-**ID**  - Google에서 원시 또는 해시된 이메일을 고객 ID로 사용할 수 있습니다.
-
-### [!DNL Google Customer Match] 계정 전제 조건  {#google-account-prerequisites}
+## [!DNL Google Customer Match] 계정 전제 조건  {#google-account-prerequisites}
 
 Experience Platform에서 [!DNL Google Customer Match] 대상을 설정하기 전에 [Google 지원 문서](https://support.google.com/google-ads/answer/6299717)에 설명된 대로 [!DNL Customer Match] 사용에 대한 Google의 정책을 읽고 따르도록 하십시오.
 
@@ -101,15 +109,15 @@ Attribute source data is not automatically hashed. When your source field contai
 
 ## 대상 {#connect-destination}에 연결
 
-**[!UICONTROL 대상]** > **[!UICONTROL 카탈로그]**&#x200B;에서 **[!UICONTROL 광고]** 범주로 스크롤합니다. [!DNL Google Customer Match]을 선택하고 **[!UICONTROL 구성]**&#x200B;을 선택합니다.
+**[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**&#x200B;에서 **[!UICONTROL Advertising]** 범주로 스크롤합니다. [!DNL Google Customer Match]을 선택하고 **[!UICONTROL Configure]**&#x200B;을 선택합니다.
 
 ![Google 고객 일치 대상에 연결](../../assets/catalog/advertising/google-customer-match/connect.png)
 
 >[!NOTE]
 >
->이 대상과의 연결이 이미 있는 경우 대상 카드에 **[!UICONTROL 활성화]** 단추가 표시될 수 있습니다. **[!UICONTROL 활성화]**&#x200B;와 **[!UICONTROL 구성]**&#x200B;의 차이에 대한 자세한 내용은 대상 작업 공간 설명서의 [카탈로그](../../ui/destinations-workspace.md#catalog) 섹션을 참조하십시오.
+>이 대상과의 연결이 이미 있는 경우 대상 카드에 **[!UICONTROL Activate]** 단추가 표시될 수 있습니다. **[!UICONTROL Activate]**&#x200B;과 **[!UICONTROL Configure]** 사이의 차이에 대한 자세한 내용은 대상 작업 공간 설명서의 [카탈로그](../../ui/destinations-workspace.md#catalog) 섹션을 참조하십시오.
 
-**계정** 단계에서 이전에 [!DNL Google Customer Match] 대상에 대한 연결을 설정한 경우 **[!UICONTROL 기존 계정]**&#x200B;을 선택하고 기존 연결을 선택합니다. 또는 **[!UICONTROL 새 계정]**&#x200B;을 선택하여 [!DNL Google Customer Match]에 대한 새 연결을 설정할 수 있습니다. **[!UICONTROL 대상에 연결]**&#x200B;을 선택하여 로그인하고 Adobe Experience Cloud을 [!DNL Google Ad] 계정에 연결합니다.
+**계정** 단계에서 이전에 [!DNL Google Customer Match] 대상에 대한 연결을 설정한 경우 **[!UICONTROL Existing Account]**&#x200B;을 선택하고 기존 연결을 선택합니다. 또는 **[!UICONTROL New Account]**&#x200B;을 선택하여 [!DNL Google Customer Match]에 대한 새 연결을 설정할 수 있습니다. **[!UICONTROL Connect to destination]**&#x200B;을 선택하여 로그인하고 Adobe Experience Cloud을 [!DNL Google Ad] 계정에 연결합니다.
 
 >[!NOTE]
 >
@@ -117,32 +125,32 @@ Attribute source data is not automatically hashed. When your source field contai
 
 ![Google 고객 일치 대상에 연결 - 인증 단계](../../assets/catalog/advertising/google-customer-match/connection.png)
 
-자격 증명이 확인되고 Adobe Experience Cloud이 Google 계정에 연결되면 **[!UICONTROL 다음]**&#x200B;을 선택하여 **[!UICONTROL 인증]** 단계로 진행할 수 있습니다.
+자격 증명이 확인되고 Adobe Experience Cloud이 Google 계정에 연결되면 **[!UICONTROL Next]**&#x200B;을 선택하여 **[!UICONTROL Authentication]** 단계로 진행할 수 있습니다.
 
 ![자격 증명 확인](../../assets/catalog/advertising/google-customer-match/connection-success.png)
 
-**[!UICONTROL 인증]** 단계에서 활성화 플로우에 **[!UICONTROL 이름]** 및 **[!UICONTROL 설명]**&#x200B;을 입력하고 Google **[!UICONTROL 계정 ID]**&#x200B;을 입력합니다.
+**[!UICONTROL Authentication]** 단계에서 활성화 과정에 **[!UICONTROL Name]** 및 **[!UICONTROL Description]**&#x200B;를 입력하고 Google **[!UICONTROL Account ID]**&#x200B;을 입력합니다.
 
-이 단계에서 이 대상에 적용할 **[!UICONTROL 마케팅 작업]**&#x200B;을 선택할 수도 있습니다. 마케팅 작업은 데이터를 대상에 내보내려는 의도를 나타냅니다. Adobe 정의 마케팅 작업 중에서 선택하거나 자신의 마케팅 작업을 만들 수 있습니다. 마케팅 작업에 대한 자세한 내용은 [데이터 사용 정책 개요](../../../data-governance/policies/overview.md)를 참조하십시오.
+이 단계에서 이 대상에 적용할 **[!UICONTROL Marketing actions]**&#x200B;을 선택할 수도 있습니다. 마케팅 작업은 데이터를 대상에 내보내려는 의도를 나타냅니다. Adobe 정의 마케팅 작업 중에서 선택하거나 자신의 마케팅 작업을 만들 수 있습니다. 마케팅 작업에 대한 자세한 내용은 [데이터 사용 정책 개요](../../../data-governance/policies/overview.md)를 참조하십시오.
 
-위의 필드를 채운 후 **[!UICONTROL 대상 만들기]**&#x200B;를 선택합니다.
+위의 필드를 채운 후 **[!UICONTROL Create Destination]**&#x200B;을 선택합니다.
 
 >[!IMPORTANT]
 >
-> * **[!UICONTROL PII]**&#x200B;와 결합 마케팅 작업은 기본적으로 [!DNL Google Customer Match] 대상에 대해 선택되어 있으며 제거할 수 없습니다.
-> * [!DNL Google Customer Match] 대상의 경우. **[!UICONTROL 계정]** ID는 Google의 고객 클라이언트 ID입니다. ID의 형식은 xxx-xxx-xxxx입니다.
+> * **[!UICONTROL Combine with PII]** 마케팅 작업은 기본적으로 [!DNL Google Customer Match] 대상에 대해 선택되며 제거할 수 없습니다.
+> * [!DNL Google Customer Match] 대상의 경우. **[!UICONTROL Account ID]** 은 Google의 고객 클라이언트 ID입니다. ID의 형식은 xxx-xxx-xxxx입니다.
 
 
 ![Connect Google 고객 일치 - 인증 단계](../../assets/catalog/advertising/google-customer-match/authentication.png)
 
-이제 대상이 만들어집니다. 나중에 세그먼트를 활성화하려면 **[!UICONTROL 저장 및 종료]**&#x200B;을 선택하고, **[!UICONTROL 다음]**&#x200B;을 선택하여 워크플로우를 계속하고 활성화할 세그먼트를 선택할 수 있습니다. 두 경우 모두 워크플로우의 나머지 부분에 대해서는 다음 섹션 [세그먼트 활성화 [!DNL Google Customer Match]](#activate-segments)를 참조하십시오.
+이제 대상이 만들어집니다. 나중에 세그먼트를 활성화하거나 **[!UICONTROL Next]**&#x200B;을 선택하여 워크플로우를 계속 진행하고 활성화할 세그먼트를 선택할 수 있습니다. **[!UICONTROL Save & Exit]** 두 경우 모두 워크플로우의 나머지 부분에 대해서는 다음 섹션 [세그먼트 활성화 [!DNL Google Customer Match]](#activate-segments)를 참조하십시오.
 
 ## 세그먼트를 [!DNL Google Customer Match] {#activate-segments}에 활성화
 
 세그먼트를 [!DNL Google Customer Match]에 활성화하는 방법에 대한 지침은 [대상에 데이터 활성화](../../ui/activate-destinations.md)를 참조하십시오.
 
 
-**[!UICONTROL 세그먼트 일정]** 단계에서 [!DNL IDFA] 또는 [!DNL GAID] 세그먼트를 [!DNL Google Customer Match]에 보낼 때 [!UICONTROL 앱 ID]을 제공해야 합니다.
+**[!UICONTROL Segment schedule]** 단계에서 [!DNL IDFA] 또는 [!DNL GAID] 세그먼트를 [!DNL Google Customer Match]에 보낼 때 [!UICONTROL App ID]을 제공해야 합니다.
 
 ![Google 고객 일치 앱 ID](../../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
 
@@ -197,7 +205,7 @@ If no policy violations have been detected, select **[!UICONTROL Finish]** to co
 
 ## 세그먼트 활성화가 성공했는지 확인 {#verify-activation}
 
-활성화 과정을 완료한 후 **[!UICONTROL Google 광고]** 계정으로 전환하십시오. 활성화된 세그먼트가 이제 Google 계정에 고객 목록으로 표시됩니다. 세그먼트 크기에 따라, 제공할 활성 사용자가 100명 이상인 경우 일부 대상이 채워지지 않습니다.
+정품 인증 과정을 완료한 후 **[!UICONTROL Google Ads]** 계정으로 전환합니다. 활성화된 세그먼트가 이제 Google 계정에 고객 목록으로 표시됩니다. 세그먼트 크기에 따라, 제공할 활성 사용자가 100명 이상인 경우 일부 대상이 채워지지 않습니다.
 
 세그먼트를 [!DNL IDFA] 및 [!DNL GAID] 모바일 ID 모두에 매핑하면 [!DNL Google Customer Match]는 각 ID 매핑에 대해 별도의 세그먼트를 만듭니다. [!DNL Google Ads] 계정에는 [!DNL IDFA] 및 [!DNL GAID] 매핑에 대해 각각 다른 두 개의 세그먼트가 표시됩니다.
 
