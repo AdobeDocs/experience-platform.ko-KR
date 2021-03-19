@@ -1,20 +1,20 @@
 ---
-keywords: Experience Platform;홈;인기 항목;흐름 서비스;삭제 연결;삭제;api
+keywords: Experience Platform;홈;인기 항목;흐름 서비스;삭제 계정;삭제;api
 solution: Experience Platform
-title: Flow Service API를 사용하여 연결 삭제
-topic: overview
-type: Tutorial
-description: Flow Service API를 사용하여 연결을 삭제하는 방법을 알아봅니다.
+title: Flow Service API를 사용하여 계정 삭제
+topic: 개요
+type: 튜토리얼
+description: Flow Service API를 사용하여 계정을 삭제하는 방법을 알아봅니다.
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 37be5f5ffa4640d7d4442a24cc257069237f15cb
 workflow-type: tm+mt
-source-wordcount: '592'
+source-wordcount: '594'
 ht-degree: 2%
 
 ---
 
 
-# Flow Service API를 사용하여 연결 삭제
+# Flow Service API를 사용하여 계정 삭제
 
 Adobe Experience Platform은 [!DNL Platform] 서비스를 사용하여 수신 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 외부 소스에서 데이터를 수집할 수 있도록 허용합니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 등 다양한 소스의 데이터를 인제스트할 수 있습니다.
 
