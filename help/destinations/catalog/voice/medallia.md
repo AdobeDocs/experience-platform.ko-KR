@@ -1,11 +1,11 @@
 ---
 keywords: 메달리아;메달리아
-title: Medallia etension
+title: 메달리아 확장
 description: Medallia 익스텐션은 Adobe Experience Platform의 고객 대상의 목소리입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 205382b68bd8dde8d40a290c4c4825f851216ce2
 workflow-type: tm+mt
-source-wordcount: '542'
+source-wordcount: '528'
 ht-degree: 3%
 
 ---
@@ -25,19 +25,19 @@ ht-degree: 3%
 
 이 확장 프로그램은 Platform을 구입한 모든 고객의 [!DNL Destinations] 카탈로그에서 사용할 수 있습니다.
 
-이 확장을 사용하려면 Adobe Experience Platform Launch에 액세스해야 합니다. platform launch은 Adobe Experience Cloud 고객에게 제공되는 부가 가치 기능으로 제공됩니다. platform launch에 대한 액세스 권한을 얻으려면 조직 관리자에게 문의하여 확장을 설치할 수 있도록 **[!UICONTROL manage_properties]** 권한을 사용자에게 부여하도록 요청하십시오.
+이 확장을 사용하려면 Adobe Experience Platform Launch에 액세스해야 합니다. platform launch은 Adobe Experience Cloud 고객에게 제공되는 부가 가치 기능으로 제공됩니다. platform launch에 대한 액세스 권한을 얻으려면 조직 관리자에게 문의하여 확장을 설치할 수 있도록 **[!UICONTROL manage_properties]** 권한을 부여하도록 요청하십시오.
 
 ## 확장 설치 {#install-extension}
 
 [!DNL Medallia] 확장을 설치하려면:
 
-[플랫폼 인터페이스](http://platform.adobe.com/)에서 **[!UICONTROL 대상]** > **[!UICONTROL 카탈로그]**&#x200B;로 이동합니다.
+[플랫폼 인터페이스](http://platform.adobe.com/)에서 **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**&#x200B;으로 이동합니다.
 
 카탈로그에서 확장을 선택하거나 검색 막대를 사용합니다.
 
-대상을 클릭하여 강조 표시한 다음 오른쪽 레일에서 **[!UICONTROL 구성]**&#x200B;을 선택합니다. **[!UICONTROL 구성]** 컨트롤이 회색으로 표시되면 **[!UICONTROL manage_properties]** 권한이 없습니다. [사전 요구 사항](#prerequisites)을 참조하십시오.
+대상을 클릭하여 강조 표시한 다음 오른쪽 레일에서 **[!UICONTROL Configure]**&#x200B;을 선택합니다. **[!UICONTROL Configure]** 컨트롤이 회색으로 표시되면 **[!UICONTROL manage_properties]** 권한이 없습니다. [사전 요구 사항](#prerequisites)을 참조하십시오.
 
-**[!UICONTROL 사용 가능한 Platform launch 속성 선택]** 창에서 확장을 설치할 Platform launch 속성을 선택합니다. platform launch에서 새 속성을 만들 수도 있습니다. 속성은 규칙, 데이터 요소, 구성된 확장, 환경 및 라이브러리의 컬렉션입니다. platform launch 설명서의 [속성 페이지 섹션](https://experienceleague.adobe.com/docs/launch/using/reference/admin/companies-and-properties.html#properties-page)에서 속성에 대해 알아봅니다.
+**[!UICONTROL Select available Platform Launch property]** 창에서 확장을 설치할 Platform launch 속성을 선택합니다. platform launch에서 새 속성을 만들 수도 있습니다. 속성은 규칙, 데이터 요소, 구성된 확장, 환경 및 라이브러리의 컬렉션입니다. platform launch 설명서의 [속성 페이지 섹션](https://experienceleague.adobe.com/docs/launch/using/reference/admin/companies-and-properties.html#properties-page)에서 속성에 대해 알아봅니다.
 
 워크플로우에서 Platform launch으로 이동하여 설치를 완료합니다.
 
@@ -57,6 +57,6 @@ platform launch 인터페이스에서 확장을 구성, 업그레이드 및 삭�
 
 >[!TIP]
 >
->확장이 이미 속성 중 하나에 설치되어 있는 경우 플랫폼 UI에 확장명에 대해 **[!UICONTROL 설치]**&#x200B;가 여전히 표시됩니다. [Install extension](#install-extension)에 설명된 대로 설치 작업 과정을 시작하고 Platform launch에 도달하고 확장을 구성하거나 삭제합니다.
+>확장이 이미 속성 중 하나에 설치되어 있는 경우 플랫폼 UI에 확장명에 대해 **[!UICONTROL Install]**&#x200B;이 여전히 표시됩니다. [Install extension](#install-extension)에 설명된 대로 설치 작업 과정을 시작하고 Platform launch에 도달하고 확장을 구성하거나 삭제합니다.
 
 확장을 업그레이드하려면 Platform launch 설명서에서 [확장 업그레이드](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/extensions/extension-upgrade.html)를 참조하십시오.
