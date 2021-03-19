@@ -6,10 +6,10 @@ breadcrumb-title: Source Connectors 안내서
 user-guide-description: 다양한 소스 또는 구조에서 데이터를 수집하고 레이블을 지정하며 기존에 수집한 데이터를 향상시킬 수 있습니다.
 feature: 데이터 통합, 소스
 translation-type: tm+mt
-source-git-commit: 73ad0a264bcb0e9510ef500592fd945903c5cfea
+source-git-commit: 26e7116858574b366760ffd4f92b14117ccd28eb
 workflow-type: tm+mt
-source-wordcount: '579'
-ht-degree: 12%
+source-wordcount: '582'
+ht-degree: 13%
 
 ---
 
@@ -227,4 +227,5 @@ ht-degree: 12%
    - [데이터 흐름 삭제](tutorials/ui/delete.md)
 - [흐름 실행 알림](notifications.md)
 - [IP 주소 허용 목록](ip-address-allow-list.md)
+- [FAQ](./troubleshooting.md)
 - [플랫폼 릴리스 정보](https://www.adobe.com/go/platform-release-notes-en)
