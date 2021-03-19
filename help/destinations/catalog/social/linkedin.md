@@ -3,9 +3,9 @@ keywords: linkedin 연결;linkedin 연결;linkedin 대상;linkedin 대상;linked
 title: Linkedin 일치된 대상 연결
 description: 해시 처리된 이메일을 기반으로 고객 타깃팅, 개인화 및 억제를 위해 LinkedIn 캠페인의 프로필을 활성화합니다.
 translation-type: tm+mt
-source-git-commit: 950dc24e44a32cfd3e0cdde0fee967cb687c572e
+source-git-commit: fd95357f3e3533fe6b7b9752798dd99eb1cc0eb5
 workflow-type: tm+mt
-source-wordcount: '673'
+source-wordcount: '666'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 Adobe Experience Platform 고객이 이 기능을 사용하여 해결할 수 있는 사용 방법은 [!DNL LinkedIn Matched Audiences] 대상을 사용하는 방법과 시기를 이해하는 데 도움이 됩니다.
 
-소프트웨어 업체는 컨퍼런스를 조직하여 참가자와 계속 연락하고 컨퍼런스 참석 상태를 기반으로 개인화된 제안을 제공합니다. 회사는 자체 [!DNL CRM]의 이메일 주소 또는 모바일 장치 ID를 Adobe Experience Platform으로 인제스트하고, 자체 오프라인 데이터에서 세그먼트를 작성하고, 이러한 세그먼트를 [!DNL LinkedIn] 소셜 플랫폼으로 보내 광고 지출을 최적화할 수 있습니다.
+소프트웨어 업체는 컨퍼런스를 조직하여 참가자와 계속 연락하고 컨퍼런스 참석 상태를 기반으로 개인화된 제안을 제공합니다. 회사는 자신의 [!DNL CRM]에서 Adobe Experience Platform으로 이메일 주소 또는 모바일 장치 ID를 인제스트할 수 있습니다. 그런 다음 자체 오프라인 데이터에서 세그먼트를 작성하고 이러한 세그먼트를 [!DNL LinkedIn] 소셜 플랫폼으로 보내 광고 지출을 최적화할 수 있습니다.
 
 ## 대상 세부 사항 {#destination-specs}
 
@@ -40,7 +40,7 @@ Adobe Experience Platform 고객이 이 기능을 사용하여 해결할 수 있
 
 ### 내보내기 유형 {#export-type}
 
-**세그먼트 내보내기**  - 식별자(이름, 전화 번호 등)를 사용하여 세그먼트(대상)의 모든 구성원을 내보냅니다. [!DNL LinkedIn Matched Audiences] 대상에 사용됨
+**세그먼트 내보내기**  - 대상에 사용된 식별자(이름, 전화 번호 등)를 사용하여 세그먼트(대상)의 모든 구성원을  [!DNL LinkedIn Matched Audiences] 내보냅니다.
 
 ### LinkedIn 계정 사전 요구 사항 {#LinkedIn-account-prerequisites}
 
@@ -56,7 +56,7 @@ Adobe Experience Platform에 인제스트하는 ID 유형에 따라 해당 요�
 
 #### 전자 메일 해싱 요구 사항 {#email-hashing-requirements}
 
-이메일 주소를 Adobe Experience Platform으로 인제스트하기 전에 해시하도록 선택하거나, Experience Platform에서 지워진 이메일 주소를 사용하여 작업하도록 선택하고 알고리즘에서 활성화를 처리하도록 할 수 있습니다.
+전자 메일 주소를 Adobe Experience Platform으로 인제스트하기 전에 해시하거나, Experience Platform에서 명확하게 전자 메일 주소를 사용하고 활성화 시 [!DNL Platform] 해시하도록 할 수 있습니다.
 
 Experience Platform에서 이메일 주소 인제스트에 대한 자세한 내용은 [일괄 처리 통합 개요](/help/ingestion/batch-ingestion/overview.md) 및 [스트리밍 통합 개요](/help/ingestion/streaming-ingestion/overview.md)를 참조하십시오.
 
@@ -65,7 +65,7 @@ Experience Platform에서 이메일 주소 인제스트에 대한 자세한 내�
 - 이메일 문자열에서 모든 선행 및 후행 공백을 트리밍합니다. 예:`<space>johndoe@example.com<space>`;`johndoe@example.com`
 - 이메일 문자열을 해싱할 때는 반드시 소문자 문자열을 해시해야 합니다.
    - 예:`EXAMPLE@EMAIL.COM`;`example@email.com`
-- 해시된 문자열이 모두 소문자인지 확인하십시오.
+- 해시된 문자열이 모두 소문자인지 확인
    - 예:`55E79200C1635B37AD31A378C39FEB12F120F116625093A19bC32FFF15041149`;`55e79200c1635b37ad31a378c39feb12f120f116625093a19bc32fff15041149`
 - 문자열에 소금을 넣지 마십시오.
 
