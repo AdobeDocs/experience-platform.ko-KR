@@ -5,7 +5,7 @@ title: Azure Data Lake Storage Gen2 소스 커넥터 개요
 topic: 개요
 description: API 또는 사용자 인터페이스를 사용하여 Azure Data Lake Storage Gen2를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 translation-type: tm+mt
-source-git-commit: 0fb97fcf5d3f8230ff86906aeef245e4a7f44f30
+source-git-commit: 5c6539d45df91369c3608965fd887c013d528b98
 workflow-type: tm+mt
 source-wordcount: '457'
 ht-degree: 0%
@@ -48,7 +48,7 @@ Adobe Experience Platform은 AWS, [!DNL Google Cloud Platform] 및 [!DNL Azure] 
 - [Flow Service API를 사용하여 클라우드 스토리지 시스템 살펴보기](../../tutorials/api/explore/cloud-storage.md)
 - [Flow Service API를 사용하여 클라우드 스토리지 데이터 수집](../../tutorials/api/collect/cloud-storage.md)
 
-## UI 사용
+### UI 사용
 
 - [UI에 ADLS-Gen2 소스 연결 만들기](../../tutorials/ui/create/cloud-storage/adls-gen2.md)
 - [UI에서 클라우드 스토리지 연결에 대한 데이터 흐름 구성](../../tutorials/ui/dataflow/batch/cloud-storage.md)
