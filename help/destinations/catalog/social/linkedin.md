@@ -3,9 +3,9 @@ keywords: linkedin 연결;linkedin 연결;linkedin 대상;linkedin 대상;linked
 title: Linkedin 일치된 대상 연결
 description: 해시 처리된 이메일을 기반으로 고객 타깃팅, 개인화 및 억제를 위해 LinkedIn 캠페인의 프로필을 활성화합니다.
 translation-type: tm+mt
-source-git-commit: 6d64bc362aa8c85e354f5c02cc2acbe6f1405c99
+source-git-commit: 950dc24e44a32cfd3e0cdde0fee967cb687c572e
 workflow-type: tm+mt
-source-wordcount: '564'
+source-wordcount: '673'
 ht-degree: 0%
 
 ---
@@ -27,13 +27,24 @@ Adobe Experience Platform 고객이 이 기능을 사용하여 해결할 수 있
 
 [!DNL LinkedIn Matched Audiences] 에서는 다음 ID 활성화를 지원합니다.해시된 이메일,  [!DNL GAID]및  [!DNL IDFA]
 
+### 지원되는 ID {#supported-identities}
+
+[!DNL LinkedIn Matched Audiences] 에서는 아래 표에 설명된 ID 활성화를 지원합니다. [id](/help/identity-service/namespaces.md)에 대해 자세히 알아보십시오.
+
+| Target ID | 설명 | 고려 사항 |
+|---|---|---|
+| GAID | Google 광고 ID | 소스 ID가 GAID 네임스페이스인 경우 이 대상 ID를 선택합니다. |
+| IDFA | 광고주용 Apple ID | 소스 ID가 IDFA 네임스페이스인 경우 이 대상 ID를 선택합니다. |
+| email_lc_sha256 | SHA256 알고리즘으로 해시된 이메일 주소 | 일반 텍스트와 SHA256 해시된 이메일 주소는 모두 Adobe Experience Platform에서 지원합니다. [ID 일치 요구 사항](#id-matching-requirements-id-matching-requirements) 섹션의 지침을 따르고 일반 텍스트 및 해시 이메일에 적합한 네임스페이스를 각각 사용합니다. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL Apply transformation]** 옵션을 선택하여 [!DNL Platform] 활성화 시 데이터를 자동으로 해시합니다. |
+
+
 ### 내보내기 유형 {#export-type}
 
 **세그먼트 내보내기**  - 식별자(이름, 전화 번호 등)를 사용하여 세그먼트(대상)의 모든 구성원을 내보냅니다. [!DNL LinkedIn Matched Audiences] 대상에 사용됨
 
 ### LinkedIn 계정 사전 요구 사항 {#LinkedIn-account-prerequisites}
 
-[!UICONTROL LinkedIn 일치된 대상] 대상을 사용하려면 먼저 [!DNL LinkedIn Campaign Manager] 계정에 [!DNL Creative Manager] 권한 수준 이상이 있는지 확인하십시오.
+[!UICONTROL LinkedIn Matched Audience] 대상을 사용하려면 먼저 [!DNL LinkedIn Campaign Manager] 계정에 [!DNL Creative Manager] 권한 수준 이상이 있는지 확인합니다.
 
 [!DNL LinkedIn Campaign Manager] 사용자 권한을 편집하는 방법에 대한 자세한 내용은 LinkedIn 문서에서 [광고 계정에 대한 사용자 권한 추가, 편집 및 제거를 참조하십시오.](https://www.linkedin.com/help/lms/answer/5753)
 
@@ -63,9 +74,9 @@ Experience Platform에서 이메일 주소 인제스트에 대한 자세한 내�
 >해시되지 않은 네임스페이스의 데이터는 활성화 시 [!DNL Platform]에 의해 자동으로 해시됩니다.
 > 속성 소스 데이터가 자동으로 해시되지 않습니다.
 > 
-> [ID 매핑](../../ui/activate-destinations.md#identity-mapping) 단계 동안 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL 변형 적용]** 옵션을 선택하여 [!DNL Platform]에서 활성화 시 데이터를 자동으로 해시하도록 하십시오.
+> [ID 매핑](../../ui/activate-destinations.md#identity-mapping) 단계 동안 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL Apply transformation]** 옵션을 선택하여 [!DNL Platform]에서 활성화 데이터를 자동으로 해시하도록 하십시오.
 > 
-> **[!UICONTROL 변환 적용]** 옵션은 속성을 소스 필드로 선택할 때만 표시됩니다. 네임스페이스를 선택할 때 표시되지 않습니다.
+> **[!UICONTROL Apply transformation]** 옵션은 속성을 소스 필드로 선택할 때만 표시됩니다. 네임스페이스를 선택할 때 표시되지 않습니다.
 
 ![ID 매핑 변형](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
