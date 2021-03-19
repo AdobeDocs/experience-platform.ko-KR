@@ -6,10 +6,10 @@ user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페�
 description: 이 문서에서는 Adobe Experience Platform 대상에 대한 목차 목록
 feature: 대상
 translation-type: tm+mt
-source-git-commit: 32cb198bcf2c142b50c4b7a60282f0c923be06b1
+source-git-commit: 648be489aa77870f67564ee350c4d85885673832
 workflow-type: tm+mt
-source-wordcount: '460'
-ht-degree: 11%
+source-wordcount: '464'
+ht-degree: 10%
 
 ---
 
@@ -82,6 +82,7 @@ ht-degree: 11%
       * [Azure Blob 연결](./catalog/cloud-storage/azure-blob.md)
       * [(베타) Azure 이벤트 허브 연결](./catalog/cloud-storage/azure-event-hubs.md)
       * [SFTP 연결](./catalog/cloud-storage/sftp.md)
+      * [IP 주소 허용 목록](./catalog/cloud-storage/ip-address-allow-list.md)
    * 데이터 관리 플랫폼 대상 {#data-management}
       * [DMP(데이터 관리 플랫폼) 대상 개요](./catalog/data-management/overview.md)
       * [Audience Manager DIL 확장](./catalog/data-management/aam-dil-extension.md)
