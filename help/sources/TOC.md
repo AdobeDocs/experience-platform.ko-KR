@@ -6,10 +6,10 @@ breadcrumb-title: Source Connectors 안내서
 user-guide-description: 다양한 소스 또는 구조에서 데이터를 수집하고 레이블을 지정하며 기존에 수집한 데이터를 향상시킬 수 있습니다.
 feature: 데이터 통합, 소스
 translation-type: tm+mt
-source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
+source-git-commit: 73ad0a264bcb0e9510ef500592fd945903c5cfea
 workflow-type: tm+mt
-source-wordcount: '577'
-ht-degree: 13%
+source-wordcount: '579'
+ht-degree: 12%
 
 ---
 
@@ -148,9 +148,9 @@ ht-degree: 13%
    - [제3자 클라우드 스토리지 시스템에서 Ingest Partional 데이터](tutorials/api/cloud-storage-parquet.md)
    - [데이터 집합 연결 만들기](tutorials/api/create-dataset-base-connection.md)
    - [데이터 흐름 모니터링](tutorials/api/monitor.md)
-   - [연결 업데이트](tutorials/api/update.md)
+   - [계정 업데이트](tutorials/api/update.md)
    - [데이터 흐름 업데이트](tutorials/api/update-dataflows.md)
-   - [연결 삭제](tutorials/api/delete.md)
+   - [계정 삭제](tutorials/api/delete.md)
    - [데이터 흐름 삭제](tutorials/api/delete-dataflows.md)
 - UI 자습서 {#ui-tutorials}
    - 소스 연결 {#create} 만들기
@@ -222,6 +222,7 @@ ht-degree: 13%
    - [인바운드 데이터를 활성화하여 고객 프로필 채우기](tutorials/ui/profile.md)
    - [데이터 흐름 모니터링](tutorials/ui/monitor.md)
    - [계정 업데이트](tutorials/ui/update.md)
+   - [데이터 흐름 업데이트](tutorials/ui/update-dataflows.md)
    - [계정 삭제](tutorials/ui/delete-accounts.md)
    - [데이터 흐름 삭제](tutorials/ui/delete.md)
 - [흐름 실행 알림](notifications.md)
