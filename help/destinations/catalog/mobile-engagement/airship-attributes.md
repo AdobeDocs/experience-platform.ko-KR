@@ -3,9 +3,9 @@ keywords: 항공 선박 특성;비행선 대상
 title: Airship 속성 연결
 description: Airship 내에서 타깃팅할 대상 특성으로 Adobe 대상 데이터를 Airship으로 원활하게 전달할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '1142'
+source-wordcount: '1143'
 ht-degree: 1%
 
 ---
@@ -16,6 +16,8 @@ ht-degree: 1%
 >[!IMPORTANT]
 >
 >Adobe Experience Platform의 [!DNL Airship Attributes] 대상이 현재 베타 상태입니다. 설명서 및 기능은 변경될 수 있습니다.
+
+## 개요 {#overview}
 
 [!DNL Airship] 선도적인 고객 참여 플랫폼으로 고객 라이프사이클의 모든 단계에서 사용자에게 의미 있고 개인화된 옴니채널 메시지를 제공할 수 있습니다.
 
