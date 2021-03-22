@@ -3,9 +3,9 @@ keywords: linkedin 연결;linkedin 연결;linkedin 대상;linkedin 대상;linked
 title: Linkedin 일치된 대상 연결
 description: 해시 처리된 이메일을 기반으로 고객 타깃팅, 개인화 및 억제를 위해 LinkedIn 캠페인의 프로필을 활성화합니다.
 translation-type: tm+mt
-source-git-commit: fd95357f3e3533fe6b7b9752798dd99eb1cc0eb5
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
-source-wordcount: '666'
+source-wordcount: '654'
 ht-degree: 0%
 
 ---
@@ -23,11 +23,7 @@ Adobe Experience Platform 고객이 이 기능을 사용하여 해결할 수 있
 
 소프트웨어 업체는 컨퍼런스를 조직하여 참가자와 계속 연락하고 컨퍼런스 참석 상태를 기반으로 개인화된 제안을 제공합니다. 회사는 자신의 [!DNL CRM]에서 Adobe Experience Platform으로 이메일 주소 또는 모바일 장치 ID를 인제스트할 수 있습니다. 그런 다음 자체 오프라인 데이터에서 세그먼트를 작성하고 이러한 세그먼트를 [!DNL LinkedIn] 소셜 플랫폼으로 보내 광고 지출을 최적화할 수 있습니다.
 
-## 대상 세부 사항 {#destination-specs}
-
-[!DNL LinkedIn Matched Audiences] 에서는 다음 ID 활성화를 지원합니다.해시된 이메일,  [!DNL GAID]및  [!DNL IDFA]
-
-### 지원되는 ID {#supported-identities}
+## 지원되는 ID {#supported-identities}
 
 [!DNL LinkedIn Matched Audiences] 에서는 아래 표에 설명된 ID 활성화를 지원합니다. [id](/help/identity-service/namespaces.md)에 대해 자세히 알아보십시오.
 
@@ -38,23 +34,23 @@ Adobe Experience Platform 고객이 이 기능을 사용하여 해결할 수 있
 | email_lc_sha256 | SHA256 알고리즘으로 해시된 이메일 주소 | 일반 텍스트와 SHA256 해시된 이메일 주소는 모두 Adobe Experience Platform에서 지원합니다. [ID 일치 요구 사항](#id-matching-requirements-id-matching-requirements) 섹션의 지침을 따르고 일반 텍스트 및 해시 이메일에 적합한 네임스페이스를 각각 사용합니다. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL Apply transformation]** 옵션을 선택하여 [!DNL Platform] 활성화 시 데이터를 자동으로 해시합니다. |
 
 
-### 내보내기 유형 {#export-type}
+## 내보내기 유형 {#export-type}
 
 **세그먼트 내보내기**  - 대상에 사용된 식별자(이름, 전화 번호 등)를 사용하여 세그먼트(대상)의 모든 구성원을  [!DNL LinkedIn Matched Audiences] 내보냅니다.
 
-### LinkedIn 계정 사전 요구 사항 {#LinkedIn-account-prerequisites}
+## LinkedIn 계정 사전 요구 사항 {#LinkedIn-account-prerequisites}
 
 [!UICONTROL LinkedIn Matched Audience] 대상을 사용하려면 먼저 [!DNL LinkedIn Campaign Manager] 계정에 [!DNL Creative Manager] 권한 수준 이상이 있는지 확인합니다.
 
 [!DNL LinkedIn Campaign Manager] 사용자 권한을 편집하는 방법에 대한 자세한 내용은 LinkedIn 문서에서 [광고 계정에 대한 사용자 권한 추가, 편집 및 제거를 참조하십시오.](https://www.linkedin.com/help/lms/answer/5753)
 
-### 요구 사항 {#id-matching-requirements} 일치하는 ID
+## 요구 사항 {#id-matching-requirements} 일치하는 ID
 
 [!DNL LinkedIn Matched Audiences] 는 PII(개인 식별 정보)가 명확하게 전송되지 않도록 요구합니다. 따라서 [!DNL LinkedIn Matched Audiences]에 대해 활성화된 대상은 이메일 주소 또는 모바일 장치 ID와 같이 *해시* 식별자를 해제할 수 있습니다.
 
 Adobe Experience Platform에 인제스트하는 ID 유형에 따라 해당 요구 사항을 준수해야 합니다.
 
-#### 전자 메일 해싱 요구 사항 {#email-hashing-requirements}
+## 전자 메일 해싱 요구 사항 {#email-hashing-requirements}
 
 전자 메일 주소를 Adobe Experience Platform으로 인제스트하기 전에 해시하거나, Experience Platform에서 명확하게 전자 메일 주소를 사용하고 활성화 시 [!DNL Platform] 해시하도록 할 수 있습니다.
 
