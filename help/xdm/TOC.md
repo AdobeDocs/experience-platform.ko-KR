@@ -6,10 +6,10 @@ breadcrumb-title: Experience Data Model(XDM) 안내서
 user-guide-description: XDM(경험 데이터 모델) 클래스와 mixin을 사용하여 경험 데이터를 표준화합니다.
 feature: 스키마
 translation-type: tm+mt
-source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
+source-git-commit: b99af98c99a75863ed8e8408841d93aa17d61ae0
 workflow-type: tm+mt
-source-wordcount: '237'
-ht-degree: 24%
+source-wordcount: '259'
+ht-degree: 22%
 
 ---
 
@@ -22,6 +22,12 @@ ht-degree: 24%
    * [데이터 모델링을 위한 모범 사례](schema/best-practices.md)
    * [XDM 필드 유형 제약 조건](schema/field-constraints.md)
    * [XDM 필드 사전](schema/field-dictionary.md)
+   * 업계 데이터 모델 {#industries}
+      * [개요](./schema/industries/overview.md)
+      * [소매 데이터 모델 ERD](./schema/industries/retail.md)
+      * [금융 서비스 데이터 모델 ERD](./schema/industries/financial.md)
+      * [여행 및 숙박 데이터 모델 ERD](./schema/industries/travel-hospitality.md)
+      * [텔레커뮤니케이션 데이터 모델 ERD](./schema/industries/telecom.md)
 * 클래스 {#classes}
    * [XDM 개별 프로필](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
@@ -40,7 +46,7 @@ ht-degree: 24%
    * [애플리케이션](./data-types/application.md)
    * [비콘](./data-types/beacon.md)
    * [브라우저 세부 사항](./data-types/browser-details.md)
-   * [상거래](./data-types/commerce.md)
+   * [Commerce](./data-types/commerce.md)
    * [동의 및 기본 설정](./data-types/consents.md)
    * [장치](./data-types/device.md)
    * [이메일 주소](./data-types/email-address.md)
@@ -65,7 +71,7 @@ ht-degree: 24%
    * [구독](./data-types/subscription.md)
    * [웹 상호 작용](./data-types/web-interactions.md)
    * [웹 페이지 세부 사항](./data-types/webpage-details.md)
-* [!UICONTROL 스키마 ] UI  {#ui}
+* [!UICONTROL Schemas] UI {#ui}
    * [개요](./ui/overview.md)
    * [XDM 리소스 살펴보기](./ui/explore.md)
    * 리소스 {#resources} 만들기 및 편집
@@ -98,7 +104,7 @@ ht-degree: 24%
    * [감사 로그](api/audit-log.md)
    * [임시 스키마](api/ad-hoc.md)
    * [부록](api/appendix.md)
-* 자습서 {#tutorials}
+* 튜토리얼 {#tutorials}
    * [스키마 만들기(UI)](tutorials/create-schema-ui.md)
    * [스키마 만들기(API)](tutorials/create-schema-api.md)
    * [두 스키마 간의 관계 정의(UI)](tutorials/relationship-ui.md)
