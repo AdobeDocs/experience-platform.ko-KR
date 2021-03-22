@@ -3,9 +3,9 @@ keywords: google 광고 관리자;google ad;doubleclick;DoubleClick AdX;DoubleCl
 title: Google 광고 관리자 연결
 description: '이전에 발행자를 위한 DoubleClick 또는 DoubleClick AdX로 알려졌던 Google Ad Manager는 발행자가 비디오 및 모바일 앱을 통해 자사 웹 사이트의 광고 표시를 관리할 수 있는 수단을 제공하는 Google의 광고 서비스 플랫폼입니다.  '
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 24e0a274e61fcf6311c647067920686e4f25e840
 workflow-type: tm+mt
-source-wordcount: '739'
+source-wordcount: '738'
 ht-degree: 0%
 
 ---
@@ -17,16 +17,12 @@ ht-degree: 0%
 
 [!DNL Google Ad Manager]이전에 게시자 또 [!DNL DoubleClick] 는 [!DNL DoubleClick AdX]는 [!DNL Google] 는 광고 표시를 발행자에게 자사 웹 사이트, 비디오 및 모바일 앱을 통해 관리할 수있는 수단을 제공하는 광고 서비스 플랫폼입니다.
 
-## 대상 사양
+## 대상 세부 사항 {#specifics}
 
 [!DNL Google Ad Manager] 대상에 대한 다음 세부 정보를 참조하십시오.
 
 * 활성화된 대상은 [!DNL Google] 플랫폼에서 프로그래밍 방식으로 생성됩니다.
-* 현재 플랫폼에 성공적인 활성화를 확인할 측정 지표가 포함되어 있지 않습니다. 통합을 확인하고 대상 타깃팅 크기를 이해하려면 Google의 대상 수를 참조하십시오.
-
->[!IMPORTANT]
->
->[!DNL Google Ad Manager]을(를) 사용하여 첫 번째 대상을 만들고 이전에 Experience Cloud ID 서비스에서 [ID 동기화 기능](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html)을(를) 활성화하지 않은 경우(Audience Manager 또는 다른 응용 프로그램 포함) Adobe 컨설팅 또는 고객 지원 센터에 문의하여 ID 동기화를 활성화하십시오. 이전에 Audience Manager에서 [!DNL Google] 통합을 설정한 경우 설정한 ID 동기화가 플랫폼으로 이월됩니다.
+* [!DNL Platform] 은(는) 현재 성공적인 활성화를 확인하는 측정 지표를 포함하지 않습니다. 통합을 확인하고 대상 타깃팅 크기를 이해하려면 Google의 대상 수를 참조하십시오.
 
 ## 지원되는 ID {#supported-identities}
 
@@ -48,7 +44,9 @@ ht-degree: 0%
 
 ## 전제 조건
 
-### 허용 목록
+[!DNL Google Ad Manager]을(를) 사용하여 첫 번째 대상을 만들고 이전에 Experience Cloud ID 서비스에서 [ID 동기화 기능](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html)을(를) 활성화하지 않은 경우(Audience Manager 또는 다른 응용 프로그램 포함) Adobe 컨설팅 또는 고객 지원 센터에 문의하여 ID 동기화를 활성화하십시오. 이전에 Audience Manager에서 [!DNL Google] 통합을 설정한 경우 설정한 ID 동기화가 플랫폼으로 이월됩니다.
+
+## 허용 목록
 
 >[!NOTE]
 >
