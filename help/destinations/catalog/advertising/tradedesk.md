@@ -3,15 +3,17 @@ keywords: 광고;무역센터
 title: 무역센터 연결
 description: 'Trade Desk는 광고 구매자가 디스플레이, 비디오 및 모바일 인벤토리 소스에서 타겟팅된 디지털 캠페인을 리타겟팅하고 실행할 수 있는 셀프 서비스 플랫폼입니다. '
 translation-type: tm+mt
-source-git-commit: 0ef107963f7da377070eb845fd7c24218a99464b
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '609'
+source-wordcount: '577'
 ht-degree: 0%
 
 ---
 
 
 # [!DNL The Trade Desk] 연결
+
+## 개요 {#overview}
 
 [!DNL The Trade Desk] 대상은 프로필 데이터를 다음으로 보내는 데 도움이  [!DNL The Trade Desk]됩니다.
 
@@ -39,35 +41,35 @@ ht-degree: 0%
 
 ## 대상 {#connect-destination}에 연결
 
-**[!UICONTROL 연결]** > **[!UICONTROL 대상]**&#x200B;에서 [!DNL The Trade Desk]를 선택하고 **[!UICONTROL 구성]**&#x200B;을 선택합니다.
+**[!UICONTROL Connections]** > **[!UICONTROL Destinations]**&#x200B;에서 [!DNL The Trade Desk]를 선택하고 **[!UICONTROL Configure]**&#x200B;을 선택합니다.
 
 ![대상 거래 데스크 구성](../../assets/catalog/advertising/tradedesk/configure.png)
 
 >[!NOTE]
 >
->이 대상과의 연결이 이미 있는 경우 대상 카드에 **[!UICONTROL 활성화]** 단추가 표시될 수 있습니다. **[!UICONTROL 활성화]**&#x200B;와 **[!UICONTROL 구성]**&#x200B;의 차이에 대한 자세한 내용은 대상 작업 공간 설명서의 [카탈로그](../../ui/destinations-workspace.md#catalog) 섹션을 참조하십시오.
+>이 대상과의 연결이 이미 있는 경우 대상 카드에 **[!UICONTROL Activate]** 단추가 표시될 수 있습니다. **[!UICONTROL Activate]**&#x200B;과 **[!UICONTROL Configure]** 사이의 차이에 대한 자세한 내용은 대상 작업 공간 설명서의 [카탈로그](../../ui/destinations-workspace.md#catalog) 섹션을 참조하십시오.
 >
 >![대상 거래 센터 활성화](../../assets/catalog/advertising/tradedesk/activate.png)
 
-[!UICONTROL 인증] 단계에서 [!DNL The Trade Desk] 연결 세부 정보를 입력해야 합니다.
+[!UICONTROL Authentication] 단계에서 [!DNL The Trade Desk] 연결 세부 정보를 입력해야 합니다.
 
-* **[!UICONTROL 이름]**:나중에 이 대상을 인식할 이름.
-* **[!UICONTROL 설명]**:나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
-* **[!UICONTROL 계정 ID]**:계정  [!DNL Trade Desk] [!UICONTROL ID].
-* **[!UICONTROL 서버 위치]**:사용할  [!DNL Trade Desk] 지역 서버를 담당자에게 요청하십시오. 다음 중에서 선택할 수 있는 지역 서버가 있습니다.
+* **[!UICONTROL Name]**:나중에 이 대상을 인식할 이름.
+* **[!UICONTROL Description]**:나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
+* **[!UICONTROL Account ID]**:고객 [!DNL Trade Desk] [!UICONTROL Account ID]의
+* **[!UICONTROL Server Location]**:사용할  [!DNL Trade Desk] 지역 서버를 담당자에게 요청하십시오. 다음 중에서 선택할 수 있는 지역 서버가 있습니다.
 
-   * **[!UICONTROL 유럽]**
-   * **[!UICONTROL 싱가포르]**
-   * **[!UICONTROL 도쿄]**
-   * **[!UICONTROL 북미 동부]**
-   * **[!UICONTROL 북미 서부]**
-   * **[!UICONTROL 라틴 아메리카]**
+   * **[!UICONTROL Europe]**
+   * **[!UICONTROL Singapore]**
+   * **[!UICONTROL Tokyo]**
+   * **[!UICONTROL North America East]**
+   * **[!UICONTROL North America West]**
+   * **[!UICONTROL Latin America]**
 
-* **[!UICONTROL 마케팅 작업]**:마케팅 작업은 데이터를 대상에 내보내려는 의도를 나타냅니다. Adobe 정의 마케팅 작업 중에서 선택하거나 자신의 마케팅 작업을 만들 수 있습니다. 마케팅 작업에 대한 자세한 내용은 Adobe Experience Platform](../../../data-governance/policies/overview.md) 페이지의 [데이터 거버넌스 페이지를 참조하십시오. 개별 Adobe 정의 마케팅 작업에 대한 자세한 내용은 [데이터 사용 정책 개요](../../../data-governance/policies/overview.md)를 참조하십시오.
+* **[!UICONTROL Marketing action]**:마케팅 작업은 데이터를 대상에 내보내려는 의도를 나타냅니다. Adobe 정의 마케팅 작업 중에서 선택하거나 자신의 마케팅 작업을 만들 수 있습니다. 마케팅 작업에 대한 자세한 내용은 Adobe Experience Platform](../../../data-governance/policies/overview.md) 페이지의 [데이터 거버넌스 페이지를 참조하십시오. 개별 Adobe 정의 마케팅 작업에 대한 자세한 내용은 [데이터 사용 정책 개요](../../../data-governance/policies/overview.md)를 참조하십시오.
 
 ![영업 데스크 인증 단계](../../assets/catalog/advertising/tradedesk/authenticate.png)
 
-**[!UICONTROL 대상 만들기]**&#x200B;를 클릭합니다. 이제 대상이 만들어집니다. 나중에 세그먼트를 활성화하려면 [!UICONTROL 저장 및 종료]을 클릭하거나 [!UICONTROL 다음]을 선택하여 워크플로우를 계속하고 활성화할 세그먼트를 선택할 수 있습니다. 이 두 경우 모두 나머지 워크플로에 대해 다음 섹션 [세그먼트 활성화](#activate-segments)를 참조하십시오.
+**[!UICONTROL Create destination]**&#x200B;을 클릭합니다. 이제 대상이 만들어집니다. 나중에 세그먼트를 활성화하려면 [!UICONTROL Save & Exit]을(를) 클릭하거나 [!UICONTROL Next]을(를) 선택하여 워크플로우를 계속하고 활성화할 세그먼트를 선택할 수 있습니다. 이 두 경우 모두 나머지 워크플로에 대해 다음 섹션 [세그먼트 활성화](#activate-segments)를 참조하십시오.
 
 ## 세그먼트 활성화 {#activate-segments}
 
