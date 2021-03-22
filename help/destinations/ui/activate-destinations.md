@@ -6,9 +6,9 @@ seo-title: 대상에 프로필 및 세그먼트 활성화
 description: 세그먼트를 대상에 매핑하여 Adobe Experience Platform에 있는 데이터를 활성화합니다. 이를 수행하려면 아래 단계를 따르십시오.
 seo-description: 세그먼트를 대상에 매핑하여 Adobe Experience Platform에 있는 데이터를 활성화합니다. 이를 수행하려면 아래 단계를 따르십시오.
 translation-type: tm+mt
-source-git-commit: 37b0ec0e04c45cb065eca9d262249016e80655ef
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
-source-wordcount: '2151'
+source-wordcount: '2070'
 ht-degree: 0%
 
 ---
@@ -26,27 +26,27 @@ ht-degree: 0%
 
 활성화 작업 과정의 단계는 대상 유형에 따라 약간 다릅니다. 모든 대상 유형에 대한 전체 워크플로우는 아래에 요약되어 있습니다.
 
-### 데이터를 {#select-destination}에 활성화할 대상 선택
+## 데이터를 {#select-destination}에 활성화할 대상 선택
 
 적용 대상:모든 대상
 
-Adobe Experience Platform 사용자 인터페이스에서 **[!UICONTROL 대상]** > **[!UICONTROL 찾아보기]**&#x200B;로 이동한 다음 아래 이미지와 같이 세그먼트를 활성화할 대상에 해당하는 **[!UICONTROL 활성화]** 단추를 클릭합니다.
+Adobe Experience Platform 사용자 인터페이스에서 **[!UICONTROL Destinations]** > **[!UICONTROL Browse]**&#x200B;으로 이동하고 아래 이미지에 표시된 것처럼 세그먼트를 활성화할 대상에 해당하는 **[!UICONTROL Activate]** 단추를 클릭합니다.
 
 ![대상에 활성화](../assets/ui/activate-destinations/browse-tab-activate.png)
 
 다음 섹션의 단계를 따라 활성화할 세그먼트를 선택합니다.
 
-### [!UICONTROL 세그먼트 ] 선택 단계  {#select-segments}
+## [!UICONTROL Select Segments] 단계  {#select-segments}
 
 적용 대상:모든 대상
 
 ![세그먼트 선택 단계](../assets/ui/activate-destinations/select-segments-icon.png)
 
-**[!UICONTROL 대상 활성화]** 작업 과정의 **[!UICONTROL 세그먼트 선택]** 페이지에서 대상에 활성화할 세그먼트를 하나 이상 선택합니다. 다음 단계로 진행하려면 **[!UICONTROL 다음]**&#x200B;을 선택합니다.
+**[!UICONTROL Activate destination]** 작업 과정의 **[!UICONTROL Select Segments]** 페이지에서 대상에 활성화할 세그먼트를 하나 이상 선택합니다. 다음 단계로 진행하려면 **[!UICONTROL Next]**&#x200B;을 선택합니다.
 
 ![세그먼트-대상](../assets/ui/activate-destinations/email-select-segments.png)
 
-### [!UICONTROL ID 매핑 ] 단계  {#identity-mapping}
+## [!UICONTROL Identity mapping] 단계  {#identity-mapping}
 
 적용 대상:소셜 대상 및 Google 고객 일치 광고 대상
 
@@ -54,7 +54,7 @@ Adobe Experience Platform 사용자 인터페이스에서 **[!UICONTROL 대상]*
 
 소셜 대상의 경우 소스 특성 또는 ID 네임스페이스를 선택하여 대상의 대상 ID로 매핑해야 합니다.
 
-#### 예:[!DNL Facebook Custom Audience] {#example-facebook}에서 대상 데이터 활성화
+## 예:[!DNL Facebook Custom Audience] {#example-facebook}에서 대상 데이터 활성화
 
 다음은 [!DNL Facebook]에서 대상 데이터를 활성화할 때 올바른 ID 매핑의 예입니다.
 
@@ -79,12 +79,12 @@ Adobe Experience Platform 사용자 인터페이스에서 **[!UICONTROL 대상]*
 
 해시되지 않은 네임스페이스의 데이터는 활성화 시 [!DNL Platform]에 의해 자동으로 해시됩니다.
 
-속성 소스 데이터가 자동으로 해시되지 않습니다. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL 변형 적용]** 옵션을 선택하여 [!DNL Platform]에서 활성화 시 데이터를 자동으로 해시하도록 하십시오.
+속성 소스 데이터가 자동으로 해시되지 않습니다. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL Apply transformation]** 옵션을 선택하여 [!DNL Platform] 활성화 시 데이터를 자동으로 해시합니다.
 ![ID 매핑 변형](../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
  
 
-#### 예:[!DNL Google Customer Match] {#example-gcm}에서 대상 데이터 활성화
+## 예:[!DNL Google Customer Match] {#example-gcm}에서 대상 데이터 활성화
 
 이것은 [!DNL Google Customer Match]에서 대상 데이터를 활성화할 때 올바른 ID 매핑의 예입니다.
 
@@ -109,32 +109,16 @@ Adobe Experience Platform 사용자 인터페이스에서 **[!UICONTROL 대상]*
 
 해시되지 않은 네임스페이스의 데이터는 활성화 시 [!DNL Platform]에 의해 자동으로 해시됩니다.
 
-속성 소스 데이터가 자동으로 해시되지 않습니다. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL 변형 적용]** 옵션을 선택하여 [!DNL Platform]에서 활성화 시 데이터를 자동으로 해시하도록 하십시오.
+속성 소스 데이터가 자동으로 해시되지 않습니다. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL Apply transformation]** 옵션을 선택하여 [!DNL Platform] 활성화 시 데이터를 자동으로 해시합니다.
 ![ID 매핑 변형](../assets/ui/activate-destinations/identity-mapping-gcm-transformation.png)
 
-<!-- 
-`IDFA` IDs will be mapped to:
-
-* [MADID](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences#hash) if you are activating audiences in [[!DNL Facebook]](../../destinations/catalog/social/facebook.md).
-* [mobileId](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.Member#mobileid) if you are activating audiences in [[!DNL Google Customer Match]](../../destinations/catalog/advertising/google-customer-match.md).
-
-Select `GAID` as target identity if your data consists of Android device IDs. `GAID` IDs will be mapped to:
-
-* [MADID](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences#hash) if you are activating audiences in [[!DNL Facebook]](../../destinations/catalog/social/facebook.md).
-* [mobileId](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.Member#mobileid) if you are activating audiences in [[!DNL Google Customer Match]](../../destinations/catalog/advertising/google-customer-match.md).
-
-If you are using another ID, such as "Rewards ID" or "Loyalty ID", as primary identity in your schema, you need to map it to the following target identities:
-
-* [EXTERN_ID](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences#external_identifiers) if you are activating audiences in [[!DNL Facebook]](../../destinations/catalog/social/facebook.md).
-* [USER_ID](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.Member#userid) if you are activating audiences in [[!DNL Google Customer Match]](../../destinations/catalog/advertising/google-customer-match.md). -->
-
-### **[!UICONTROL 구성]** 단계  {#configure}
+## **[!UICONTROL Configure]** 단계  {#configure}
 
 적용 대상:이메일 마케팅 대상 및 클라우드 스토리지 대상
 
 ![단계 구성](../assets/ui/activate-destinations/configure-icon.png)
 
-[!DNL Adobe Experience Platform] 이메일 마케팅 및 클라우드 스토리지 대상에 대한 데이터를  [!DNL CSV] 파일 형식으로 내보냅니다. **[!UICONTROL 구성]** 단계에서 내보내려는 각 세그먼트에 대한 일정 및 파일 이름을 구성할 수 있습니다. 일정을 구성하는 것은 필수이지만 파일 이름을 구성하는 것은 선택 사항입니다.
+[!DNL Adobe Experience Platform] 이메일 마케팅 및 클라우드 스토리지 대상에 대한 데이터를  [!DNL CSV] 파일 형식으로 내보냅니다. **[!UICONTROL Configure]** 단계에서 내보내려는 각 세그먼트에 대한 일정 및 파일 이름을 구성할 수 있습니다. 일정을 구성하는 것은 필수이지만 파일 이름을 구성하는 것은 선택 사항입니다.
 
 >[!IMPORTANT]
 > 
@@ -143,15 +127,15 @@ If you are using another ID, such as "Rewards ID" or "Loyalty ID", as primary id
 >분할된 파일 이름에 파일이 더 큰 내보내기의 일부임을 나타내는 숫자가 추가됩니다.`filename.csv`, `filename_2.csv`, `filename_3.csv`.
 
 
-세그먼트에 대한 일정을 추가하려면 **[!UICONTROL 일정 만들기]**&#x200B;를 선택합니다.
+세그먼트에 대한 일정을 추가하려면 **[!UICONTROL Create schedule]**&#x200B;을 선택합니다.
 
 ![](../assets/ui/activate-destinations/configure-destination-schedule.png)
 
 세그먼트 일정을 만드는 옵션이 표시된 대화 상자가 나타납니다.
 
 * **파일 내보내기**:전체 파일 또는 증분 파일을 내보낼 수 있습니다. 전체 파일을 내보내면 해당 세그먼트에 해당하는 모든 프로파일의 전체 스냅샷이 게시됩니다. 증분 파일을 내보내면 마지막 내보내기 이후 해당 세그먼트를 자격을 갖춘 프로필 델타가 게시됩니다.
-* **빈도**:전체 파일  **[!UICONTROL 내보내기]** 를 선택한 경우 Onceor Daily를 내보낼  **** 수  **[!UICONTROL 있습니다]**. **[!UICONTROL 증분 파일 내보내기]**&#x200B;를 선택한 경우 **[!UICONTROL 일별]**&#x200B;만 내보낼 수 있습니다. 파일 **[!UICONTROL 한 번]**&#x200B;을 내보내면 파일이 한 번 내보내집니다. 파일 **[!UICONTROL 매일]**&#x200B;을 내보내면 전체 파일을 선택한 경우 시작 날짜에서 종료 날짜(오전 12:00 UTC(오후 7:00 EST)까지 매일 파일을 내보냅니다. 증분 파일이 선택된 경우 오후 12:00 PM UTC(7:00 AM EST).
-* **날짜**:온테일 **** 을 선택한 경우 한 번 내보낼 날짜를 선택할 수 있습니다. **[!UICONTROL 일별]**&#x200B;을 선택한 경우 내보내기에 대한 시작 날짜와 종료 날짜를 선택할 수 있습니다.
+* **빈도**:이  **[!UICONTROL Export full files]** 옵션을 선택하면 내보내거나 내보낼  **[!UICONTROL Once]** 수 있습니다 **[!UICONTROL Daily]**. **[!UICONTROL Export incremental files]**&#x200B;을(를) 선택한 경우 **[!UICONTROL Daily]**&#x200B;을(를) 내보낼 옵션만 있습니다. 파일 **[!UICONTROL Once]**&#x200B;을 내보내면 파일이 한 번 내보내집니다. 파일 **[!UICONTROL Daily]**&#x200B;을 내보내면 전체 파일을 선택한 경우 시작 날짜에서 종료 날짜의 UTC(오후 7:00 PM EST)를 기준으로 매일 파일을 내보냅니다. 증분 파일이 선택된 경우 오후 12:00 UTC(오전 7:00 EST)를 나타냅니다.
+* **날짜**:이 **[!UICONTROL Once]** 를 선택하면 한 번 내보낼 날짜를 선택할 수 있습니다. **[!UICONTROL Daily]**&#x200B;을(를) 선택한 경우 내보내기 시작 날짜와 종료 날짜를 선택할 수 있습니다.
 
 ![](../assets/ui/activate-destinations/export-full-file.png)
 
@@ -163,27 +147,27 @@ If you are using another ID, such as "Rewards ID" or "Loyalty ID", as primary id
 
 파일 이름 편집기에서 파일 이름에 추가할 여러 구성 요소를 선택할 수 있습니다. 대상 이름 및 세그먼트 ID는 파일 이름에서 제거할 수 없습니다. 이 외에 다음을 추가할 수 있습니다.
 
-* **[!UICONTROL 세그먼트 이름]**:세그먼트 이름을 파일 이름에 추가할 수 있습니다.
-* **[!UICONTROL 날짜 및 시간]**:파일이  `MMDDYYYY_HHMMSS` 생성되는 시간의 Unix 10자리 타임스탬프 또는 형식을 추가할 때 선택합니다. 각 증분 내보내기로 동적 파일 이름을 생성하려는 경우 다음 옵션 중 하나를 선택합니다.
-* **[!UICONTROL 사용자 정의 텍스트]**:파일 이름에 사용자 정의 텍스트를 추가합니다.
+* **[!UICONTROL Segment name]**:세그먼트 이름을 파일 이름에 추가할 수 있습니다.
+* **[!UICONTROL Date and time]**:파일이  `MMDDYYYY_HHMMSS` 생성되는 시간의 Unix 10자리 타임스탬프 또는 형식을 추가할 때 선택합니다. 각 증분 내보내기로 동적 파일 이름을 생성하려는 경우 다음 옵션 중 하나를 선택합니다.
+* **[!UICONTROL Custom text]**:파일 이름에 사용자 정의 텍스트를 추가합니다.
 
-**[!UICONTROL 변경 내용 적용]**&#x200B;을 선택하여 선택을 확인합니다.
+**[!UICONTROL Apply changes]**&#x200B;을 선택하여 선택을 확인합니다.
 
 >[!IMPORTANT]
 > 
->**[!UICONTROL 날짜 및 시간]** 구성 요소를 선택하지 않으면 파일 이름이 고정되고 새로 내보낸 파일이 내보낼 때마다 저장소 위치의 이전 파일을 덮어씁니다. 저장소 위치에서 이메일 마케팅 플랫폼으로 반복 가져오기 작업을 실행할 때 권장되는 옵션입니다.
+>**[!UICONTROL Date and Time]** 구성 요소를 선택하지 않으면 파일 이름이 고정되고 새로 내보낸 파일이 내보낼 때마다 저장소 위치의 이전 파일을 덮어씁니다. 저장소 위치에서 이메일 마케팅 플랫폼으로 반복 가져오기 작업을 실행할 때 권장되는 옵션입니다.
 
 ![파일 이름 옵션 편집](../assets/ui/activate-destinations/activate-workflow-configure-step-2.png)
 
-모든 세그먼트 구성을 완료했으면 **[!UICONTROL 다음]**&#x200B;을 선택하여 계속하십시오.
+모든 세그먼트 구성이 완료되면 **[!UICONTROL Next]**&#x200B;을 선택하여 계속합니다.
 
-### **[!UICONTROL 세그먼트]** 예약 단계  {#segment-schedule}
+## **[!UICONTROL Segment schedule]** 단계  {#segment-schedule}
 
 적용 대상:광고 대상, 소셜 대상
 
 ![세그먼트 예약 단계](../assets/ui/activate-destinations/segment-schedule-icon.png)
 
-**[!UICONTROL 세그먼트 일정]** 페이지에서 데이터를 대상에 보내기 위한 시작 날짜와 대상으로 데이터를 보내는 빈도를 설정할 수 있습니다.
+**[!UICONTROL Segment schedule]** 페이지에서 데이터를 대상에 보내기 위한 시작 날짜와 대상으로 데이터를 보내는 빈도를 설정할 수 있습니다.
 
 >[!IMPORTANT]
 >
@@ -193,32 +177,32 @@ If you are using another ID, such as "Rewards ID" or "Loyalty ID", as primary id
 
 >[!IMPORTANT]
 >
->Google 고객 일치의 경우 [!DNL IDFA] 또는 [!DNL GAID] 세그먼트를 활성화할 때 이 단계에서 [!UICONTROL 앱 ID]을 제공해야 합니다.
+>Google 고객 일치의 경우 [!DNL IDFA] 또는 [!DNL GAID] 세그먼트를 활성화할 때 이 단계에서 [!UICONTROL App ID]을 제공해야 합니다.
 
 ![앱 id 입력](../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
 
-### **[!UICONTROL 단계]** 예약  {#scheduling}
+## **[!UICONTROL Scheduling]** 단계  {#scheduling}
 
 적용 대상:이메일 마케팅 대상 및 클라우드 스토리지 대상
 
 ![세그먼트 예약 단계](../assets/ui/activate-destinations/scheduling-icon.png)
 
-**[!UICONTROL 예약]** 페이지에서는 대상으로 데이터를 전송하는 시작 날짜와 대상으로 데이터를 보내는 빈도를 볼 수 있습니다. 이러한 값은 편집할 수 없습니다.
+**[!UICONTROL Scheduling]** 페이지에서는 대상으로 데이터를 전송하는 시작 날짜와 대상으로 데이터를 보내는 빈도를 확인할 수 있습니다. 이러한 값은 편집할 수 없습니다.
 
-### **[!UICONTROL 속성]** 선택 단계  {#select-attributes}
+## **[!UICONTROL Select attributes]** 단계  {#select-attributes}
 
 적용 대상:이메일 마케팅 대상 및 클라우드 스토리지 대상
 
 ![속성 단계 선택](../assets/ui/activate-destinations/select-attributes-icon.png)
 
-**[!UICONTROL 특성 선택]** 페이지에서 **[!UICONTROL 새 필드 추가]**&#x200B;를 선택하고 대상에 보낼 특성을 선택합니다.
+**[!UICONTROL Select attributes]** 페이지에서 **[!UICONTROL Add new field]**&#x200B;을 선택하고 대상에 보낼 속성을 선택합니다.
 
 >[!NOTE]
 >
 > Adobe Experience Platform에서는 스키마에서 일반적으로 사용되는 4가지 속성을 사용하여 선택 사항을 미리 정의합니다.`person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.status`.
 
 파일 내보내기 옵션은 `segmentMembership.status`의 선택 여부에 따라 다음과 같이 달라집니다.
-* `segmentMembership.status` 필드를 선택한 경우 내보낸 파일에는 초기 전체 스냅샷에 **[!UICONTROL Active]** 구성원과 후속 증분 내보내기에 있는 **[!UICONTROL Active]** 및 **[!UICONTROL Expired]** 구성원이 포함됩니다.
+* `segmentMembership.status` 필드를 선택하면 내보낸 파일에는 초기 전체 스냅샷에 **[!UICONTROL Active]** 구성원과 후속 증분 내보내기에 **[!UICONTROL Active]** 및 **[!UICONTROL Expired]** 구성원이 포함됩니다.
 * `segmentMembership.status` 필드를 선택하지 않으면 내보낸 파일에는 초기 전체 스냅샷과 후속 증분 내보내기에 **[!UICONTROL Active]** 멤버만 포함됩니다.
 
 ![권장 특성](../assets/ui/activate-destinations/mark-mandatory.png)
@@ -237,13 +221,13 @@ If you are using another ID, such as "Rewards ID" or "Loyalty ID", as primary id
 > 
 예를 들어 `person.name.firstName` 필드에 대상의 마케팅 작업과 충돌하는 특정 데이터 사용 레이블이 있는 경우 검토 단계에서 데이터 사용 정책 위반이 표시됩니다. 자세한 내용은 Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations)의 데이터 거버넌스를 참조하십시오.[
 
-### **[!UICONTROL 검토]** 단계  {#review}
+## **[!UICONTROL Review]** 단계  {#review}
 
 적용 대상:모든 대상
 
 ![검토 단계](../assets/ui/activate-destinations/review-icon.png)
 
-**[!UICONTROL Review]** 페이지에서 선택 사항의 요약을 볼 수 있습니다. 흐름을 구분하려면 **[!UICONTROL 취소]**, 설정을 수정하려면 **[!UICONTROL 뒤로]**, 선택을 확인하고 대상에 데이터를 보내기 시작하려면 **[!UICONTROL 완료]**&#x200B;를 선택합니다.
+**[!UICONTROL Review]** 페이지에서 선택 사항의 요약을 볼 수 있습니다. 흐름을 구분하려면 **[!UICONTROL Cancel]**, 설정을 수정하려면 **[!UICONTROL Back]**, 선택을 확인하고 대상에 데이터를 보내기 시작하려면 **[!UICONTROL Finish]**&#x200B;를 선택합니다.
 
 >[!IMPORTANT]
 >
@@ -251,7 +235,7 @@ If you are using another ID, such as "Rewards ID" or "Loyalty ID", as primary id
 
 ![데이터 정책 위반](../assets/common/data-policy-violation.png)
 
-정책 위반이 감지되지 않은 경우 **[!UICONTROL 완료]**&#x200B;를 선택하여 선택한 내용을 확인하고 대상으로 데이터를 보내기 시작합니다.
+정책 위반이 감지되지 않은 경우 **[!UICONTROL Finish]**&#x200B;을 선택하여 선택을 확인하고 대상으로 데이터 전송을 시작합니다.
 
 ![선택 확인](../assets/ui/activate-destinations/confirm-selection.png)
 
@@ -259,8 +243,8 @@ If you are using another ID, such as "Rewards ID" or "Loyalty ID", as primary id
 
 Adobe Experience Platform에서 기존 활성화 흐름을 편집하려면 아래 절차를 따르십시오.
 
-1. 왼쪽 탐색 막대에서 **[!UICONTROL 대상]**&#x200B;을 선택한 다음 **[!UICONTROL 찾아보기]** 탭을 클릭하고 대상 이름을 클릭합니다.
-2. 오른쪽 레일에서 **[!UICONTROL 활성화 편집]**&#x200B;을 선택하여 대상에 보낼 세그먼트를 변경합니다.
+1. 왼쪽 탐색 막대에서 **[!UICONTROL Destinations]**&#x200B;을 선택하고 **[!UICONTROL Browse]** 탭을 클릭한 다음 대상 이름을 클릭합니다.
+2. 대상에 보낼 세그먼트를 변경하려면 오른쪽 레일에서 **[!UICONTROL Edit activation]**&#x200B;을 선택합니다.
 
 ## 세그먼트 활성화가 성공했는지 확인 {#verify-activation}
 
@@ -281,13 +265,13 @@ Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_202004100
 
 스토리지 위치에 이러한 파일이 있는 경우 정품 인증이 성공적으로 완료되었음을 확인할 수 있습니다. 내보낸 파일의 구조를 이해하려면 [샘플 .csv 파일](../assets/common/sample_export_file_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv)을(를) 다운로드할 수 있습니다. 이 샘플 파일에는 프로필 속성 `person.firstname`, `person.lastname`, `person.gender`, `person.birthyear` 및 `personalEmail.address`이 포함됩니다.
 
-### 광고 대상
+## 광고 대상
 
 데이터를 활성화할 각 광고 대상의 계정을 확인합니다. 정품 인증이 완료되면 대상이 광고 플랫폼에 채워집니다.
 
-### 소셜 네트워크 대상
+## 소셜 네트워크 대상
 
-[!DNL Facebook]의 경우 [!DNL Facebook] 사용자 지정 대상이 [[!UICONTROL Facebook 광고 관리자]](https://www.facebook.com/adsmanager/manage/)에서 프로그래밍 방식으로 작성됨을 의미합니다. 활성화된 세그먼트에 대해 자격이 부여되거나 자격이 부여되지 않으면 대상의 세그먼트 멤버십이 추가 및 제거됩니다.
+[!DNL Facebook]의 경우 [!DNL Facebook] 사용자 지정 대상이 [[!UICONTROL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/)에서 프로그래밍 방식으로 만들어진다는 의미입니다. 활성화된 세그먼트에 대해 자격이 부여되거나 자격이 부여되지 않으면 대상의 세그먼트 멤버십이 추가 및 제거됩니다.
 
 >[!TIP]
 >
@@ -297,6 +281,6 @@ Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_202004100
 
 기존 활성화 과정을 비활성화하려면 아래 단계를 따르십시오.
 
-1. 왼쪽 탐색 막대에서 **[!UICONTROL 대상]**&#x200B;을 선택한 다음 **[!UICONTROL 찾아보기]** 탭을 클릭하고 대상 이름을 클릭합니다.
-2. 오른쪽 레일에서 **[!UICONTROL 활성화]** 컨트롤을 클릭하여 활성화 흐름 상태를 변경합니다.
+1. 왼쪽 탐색 막대에서 **[!UICONTROL Destinations]**&#x200B;을 선택하고 **[!UICONTROL Browse]** 탭을 클릭한 다음 대상 이름을 클릭합니다.
+2. 오른쪽 레일의 **[!UICONTROL Enabled]** 컨트롤을 클릭하여 활성화 흐름 상태를 변경합니다.
 3. **데이터 흐름 상태 업데이트** 창에서 **확인**&#x200B;을 선택하여 활성화 흐름을 비활성화합니다.
