@@ -3,10 +3,10 @@ keywords: '광고;bing; '
 title: Microsoft Bing 연결
 description: Microsoft Bing 연결 대상을 사용하여 Microsoft 디스플레이 광고에서 리타깃팅 및 대상 타깃팅된 디지털 캠페인을 실행할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 24e0a274e61fcf6311c647067920686e4f25e840
 workflow-type: tm+mt
-source-wordcount: '508'
-ht-degree: 0%
+source-wordcount: '513'
+ht-degree: 1%
 
 ---
 
@@ -19,25 +19,25 @@ ht-degree: 0%
 
 프로필 데이터를 [!DNL Microsoft Bing]에 보내려면 먼저 대상에 연결해야 합니다.
 
-## 대상 사양 {#destination-specs}
-
-[!DNL Microsoft Bing] 대상에 대한 다음 세부 사항을 참조하십시오.
-
-* 다음 [id](../../../identity-service/namespaces.md)를 [!DNL Microsoft Bing] 대상으로 보낼 수 있습니다.[!DNL Microsoft ID].
-
->[!IMPORTANT]
->
->[!DNL Microsoft Bing]을(를) 사용하여 첫 번째 대상을 만들고 이전에 Experience Cloud ID 서비스에서 [ID 동기화 기능](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html)을(를) 활성화하지 않은 경우(Adobe Audience Manager 또는 다른 응용 프로그램에서) Adobe 컨설팅 또는 고객 지원 센터에 문의하여 ID 동기화를 활성화하십시오. 이전에 Audience Manager에서 [!DNL Microsoft Bing] 통합을 설정한 경우 설정한 ID 동기화가 플랫폼으로 이월됩니다.
-
 ## 사용 사례 {#use-cases}
 
 마케터로서 [!DNL Microsoft Advertising IDs]을(를) 기반으로 구축된 세그먼트를 사용하여 [!DNL Microsoft Advertising] 채널에 디스플레이 광고를 통해 사용자를 타깃팅할 수 있기를 바랍니다.
+
+## 지원되는 ID {#supported-identities}
+
+[!DNL The Trade Desk] 에서는 아래 표에 설명된 ID 활성화를 지원합니다. [id](/help/identity-service/namespaces.md)에 대해 자세히 알아보십시오.
+
+| Target ID | 설명 |
+|---|---|
+| 가정부 | Microsoft 광고 ID |
 
 ## 내보내기 유형 {#export-type}
 
 **[!DNL Segment Export]** - 세그먼트(대상)의 모든 구성원을 대상으로  [!DNL Microsoft Bing] 내보냅니다.
 
 ## 전제 조건 {#prerequisites}
+
+[!DNL Microsoft Bing]을(를) 사용하여 첫 번째 대상을 만들고 이전에 Experience Cloud ID 서비스에서 [ID 동기화 기능](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html)을(를) 활성화하지 않은 경우(Adobe Audience Manager 또는 다른 응용 프로그램에서) Adobe 컨설팅 또는 고객 지원 센터에 문의하여 ID 동기화를 활성화하십시오. 이전에 Audience Manager에서 [!DNL Microsoft Bing] 통합을 설정한 경우 설정한 ID 동기화가 플랫폼으로 이월됩니다.
 
 대상을 구성할 때 다음 정보를 제공해야 합니다.
 
@@ -49,13 +49,13 @@ ht-degree: 0%
 
 ![Microsoft Bing 대상 구성](../../assets/catalog/advertising/bing/configure.png)
 
->[!NOTE]
->
->이 대상과의 연결이 이미 있는 경우 대상 카드에 **[!UICONTROL Activate]** 단추가 표시될 수 있습니다. **[!UICONTROL Activate]**&#x200B;과 **[!UICONTROL Configure]** 사이의 차이에 대한 자세한 내용은 대상 작업 공간 설명서의 [카탈로그](../../ui/destinations-workspace.md#catalog) 섹션을 참조하십시오.
->
->![Microsoft Bing 대상 활성화](../../assets/catalog/advertising/bing/activate.png)
+이 대상과의 연결이 이미 있는 경우 대상 카드에 **[!UICONTROL Activate]** 단추가 표시될 수 있습니다. **[!UICONTROL Activate]**&#x200B;과 **[!UICONTROL Configure]** 사이의 차이에 대한 자세한 내용은 대상 작업 공간 설명서의 [카탈로그](../../ui/destinations-workspace.md#catalog) 섹션을 참조하십시오.
 
-[!UICONTROL Authentication] 단계에서 대상 연결 세부 정보를 입력해야 합니다.
+![Microsoft Bing 대상 활성화](../../assets/catalog/advertising/bing/activate.png)
+
+## 인증 단계 {#authentication}
+
+**[!UICONTROL Authentication]** 단계에서 대상 연결 세부 정보를 입력해야 합니다.
 
 * **[!UICONTROL Name]**:나중에 이 대상을 인식할 이름.
 * **[!UICONTROL Description]**:나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
