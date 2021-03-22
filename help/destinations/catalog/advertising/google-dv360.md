@@ -3,9 +3,9 @@ keywords: DoubleClick 입찰 관리자;DoubleClick 입찰 관리자;DoubleClick;
 title: Google 디스플레이 및 비디오 360 연결
 description: 디스플레이 및 비디오 360(이전 DoubleClick 입찰 관리자)은 디스플레이, 비디오 및 모바일 인벤토리 소스에서 리타겟팅된 디지털 캠페인 및 대상 타깃팅을 실행하는 데 사용되는 도구입니다.
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 24e0a274e61fcf6311c647067920686e4f25e840
 workflow-type: tm+mt
-source-wordcount: '773'
+source-wordcount: '772'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 [!DNL Google Display & Video 360] 대상에 대한 다음 세부 정보를 참조하십시오.
 
 * 활성화된 대상은 Google 플랫폼에서 프로그래밍 방식으로 생성됩니다.
-* 현재 플랫폼에 성공적인 활성화를 확인할 측정 지표가 포함되어 있지 않습니다. 통합을 확인하고 대상 타깃팅 크기를 이해하려면 Google의 대상 수를 참조하십시오.
+* [!DNL Platform] 은(는) 현재 성공적인 활성화를 확인하는 측정 지표를 포함하지 않습니다. 통합을 확인하고 대상 타깃팅 크기를 이해하려면 Google의 대상 수를 참조하십시오.
 
 >[!IMPORTANT]
 >
