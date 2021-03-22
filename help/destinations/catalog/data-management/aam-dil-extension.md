@@ -3,15 +3,17 @@ keywords: Audience Manager DIL 확장;대상 대상 대상 대상 관리자;dil 
 title: Audience Manager DIL 확장
 description: Audience Manager DIL 확장은 Adobe Experience Platform의 DMP(데이터 관리 플랫폼) 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '559'
+source-wordcount: '547'
 ht-degree: 3%
 
 ---
 
 
 # Audience Manager DIL 확장 {#aam-dil-extension}
+
+## 개요 {#overview}
 
 Adobe Audience Manager Data Integration Library 확장(클라이언트측 구현)입니다. 참고:이 확장은 Adobe Analytics 데이터의 서버측 전달(SSF)에 사용되지 않습니다. SSF의 경우 Adobe Analytics 확장 기능을 사용합니다. 중요:버전 8.0부터 시작하여 DIL은 [!DNL Experience Cloud] ID 서비스 버전 3.3 이상에 대한 강한 종속성을 갖습니다. 전체 [!DNL Audience Manager] 데이터 통합 기능에 대해 [!DNL Experience Cloud] ID 서비스와 DIL을 모두 구현하십시오.
 
@@ -25,19 +27,19 @@ Adobe Audience Manager Data Integration Library 확장(클라이언트측 구현
 
 이 확장 프로그램은 Platform을 구입한 모든 고객의 [!DNL Destinations] 카탈로그에서 사용할 수 있습니다.
 
-이 확장을 사용하려면 [!DNL Adobe Experience Platform Launch]에 액세스해야 합니다. [!DNL Platform Launch] adobe experience cloud 고객에게 제공되는 부가 가치 기능 [!DNL Platform Launch]에 대한 액세스 권한을 받으려면 조직 관리자에게 문의하여 확장 기능을 설치할 수 있도록 **[!UICONTROL manage_properties]** 권한을 요청하십시오.
+이 확장을 사용하려면 [!DNL Adobe Experience Platform Launch]에 액세스해야 합니다. [!DNL Platform Launch] Adobe Experience Cloud 고객에게 제공되는 부가 가치 기능 조직 관리자에게 문의하여 [!DNL Platform Launch]에 액세스할 수 있도록 **[!UICONTROL manage_properties]** 권한을 요청하십시오. 그러면 확장을 설치할 수 있습니다.
 
 ## 확장 설치 {#install-extension}
 
 [!DNL Audience Manager] DIL 확장을 설치하려면:
 
-[플랫폼 인터페이스](http://platform.adobe.com/)에서 **[!UICONTROL 대상]** > **[!UICONTROL 카탈로그]**&#x200B;로 이동합니다.
+[플랫폼 인터페이스](http://platform.adobe.com/)에서 **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**&#x200B;으로 이동합니다.
 
 카탈로그에서 확장을 선택하거나 검색 막대를 사용합니다.
 
-대상을 클릭하여 강조 표시한 다음 오른쪽 레일에서 **[!UICONTROL 구성]**&#x200B;을 선택합니다. **[!UICONTROL 구성]** 컨트롤이 회색으로 표시되면 **[!UICONTROL manage_properties]** 권한이 없습니다. [사전 요구 사항](#prerequisites)을 참조하십시오.
+대상을 클릭하여 강조 표시한 다음 오른쪽 레일에서 **[!UICONTROL Configure]**&#x200B;을 선택합니다. **[!UICONTROL Configure]** 컨트롤이 회색으로 표시되면 **[!UICONTROL manage_properties]** 권한이 없습니다. [사전 요구 사항](#prerequisites)을 참조하십시오.
 
-**[!UICONTROL 사용 가능한 시작 속성 선택]** 창에서 확장을 설치할 [!DNL Launch] 속성을 선택합니다. Launch에서 새 속성을 만들 수도 있습니다. 속성은 규칙, 데이터 요소, 구성된 확장, 환경 및 라이브러리의 컬렉션입니다. [!DNL Launch] 설명서의 [속성 페이지 섹션](https://experienceleague.adobe.com/docs/launch/using/reference/admin/companies-and-properties.html#properties-page)에서 속성에 대해 알아봅니다.
+**[!UICONTROL Select available Launch property]** 창에서 확장을 설치할 [!DNL Launch] 속성을 선택합니다. Launch에서 새 속성을 만들 수도 있습니다. 속성은 규칙, 데이터 요소, 구성된 확장, 환경 및 라이브러리의 컬렉션입니다. [!DNL Launch] 설명서의 [속성 페이지 섹션](https://experienceleague.adobe.com/docs/launch/using/reference/admin/companies-and-properties.html#properties-page)에서 속성에 대해 알아봅니다.
 
 워크플로우에서 [!DNL Launch]으로 이동하여 설치를 완료합니다.
 
@@ -57,7 +59,7 @@ Adobe Audience Manager Data Integration Library 확장(클라이언트측 구현
 
 >[!TIP]
 >
->확장이 이미 속성 중 하나에 설치되어 있는 경우 플랫폼 UI에 확장명에 대해 **[!UICONTROL 설치]**&#x200B;가 여전히 표시됩니다. [!DNL Platform Launch]Install extension](#install-extension)에 설명된 대로 설치 작업 과정을 시작하고 확장을 구성하거나 삭제합니다.[
+>확장이 이미 속성 중 하나에 설치되어 있는 경우 플랫폼 UI에 확장명에 대해 **[!UICONTROL Install]**&#x200B;이 여전히 표시됩니다. [!DNL Platform Launch]Install extension](#install-extension)에 설명된 대로 설치 작업 과정을 시작하고 확장을 구성하거나 삭제합니다.[
 
 확장을 업그레이드하려면 [!DNL Platform Launch] 설명서의 [확장 업그레이드](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/extensions/extension-upgrade.html)를 참조하십시오.
 
