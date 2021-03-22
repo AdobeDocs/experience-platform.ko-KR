@@ -3,10 +3,10 @@ keywords: 항공 선박 특성;비행선 대상
 title: Airship 속성 연결
 description: Airship 내에서 타깃팅할 대상 특성으로 Adobe 대상 데이터를 Airship으로 원활하게 전달할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
-source-wordcount: '1201'
-ht-degree: 0%
+source-wordcount: '1142'
+ht-degree: 1%
 
 ---
 
@@ -39,21 +39,21 @@ ht-degree: 0%
 >
 >아직 계정이 없는 경우 [이 등록 링크](https://go.airship.eu/accounts/register/plan/starter/)를 통해 [!DNL Airship] 계정을 만듭니다.
 
-### {#enable-attributes} 특성 사용
+## {#enable-attributes} 특성 사용
 
 Adobe Experience Platform 프로필 속성은 [!DNL Airship] 속성과 유사하며 이 페이지에서 아래에 자세히 설명된 매핑 도구를 사용하여 플랫폼의 다른 사람과 쉽게 매핑할 수 있습니다.
 
 [!DNL Airship] 프로젝트에는 여러 개의 사전 정의된 기본 속성이 있습니다. 사용자 지정 특성이 있는 경우 먼저 [!DNL Airship]에서 정의해야 합니다. 자세한 내용은 [특성 설정 및 관리](https://docs.airship.com/tutorials/audience/attributes/)를 참조하십시오.
 
-### 베어러 토큰 {#bearer-token}
+## 베어러 토큰 {#bearer-token} 생성
 
-[Airship 대시보드](https://go.airship.com)의 **[!UICONTROL 설정]**&quot; **[!UICONTROL APIs &amp; 통합]**&#x200B;으로 이동하고 왼쪽 메뉴에서 **[!UICONTROL 토큰]**&#x200B;을 선택합니다.
+[Airship 대시보드](https://go.airship.com)의 **[!UICONTROL Settings]**&quot; **[!UICONTROL APIs & Integrations]**&#x200B;으로 이동하고 왼쪽 메뉴에서 **[!UICONTROL Tokens]**&#x200B;을 선택합니다.
 
-**[!UICONTROL 토큰 만들기]**&#x200B;를 클릭합니다.
+**[!UICONTROL Create Token]**&#x200B;을 클릭합니다.
 
 토큰에 대해 사용자에게 친근한 이름을 입력하고(예: &quot;Adobe 속성 대상&quot;) 역할에 대해 &quot;모든 액세스&quot;를 선택합니다.
 
-**[!UICONTROL 토큰 만들기]**&#x200B;를 클릭하고 세부 정보를 기밀 정보로 저장합니다.
+**[!UICONTROL Create Token]**&#x200B;을 클릭하고 세부 정보를 기밀로 저장합니다.
 
 ## 사용 사례 {#use-cases}
 
@@ -69,15 +69,15 @@ Adobe Experience Platform의 속성을 활용하여 [!DNL Airship] 프로파일�
 
 ## [!DNL Airship Attributes] {#connect-airship-attributes}에 연결
 
-**[!UICONTROL 대상]** > **[!UICONTROL 카탈로그]**&#x200B;에서 **[!UICONTROL 모바일 참여]** 범주로 스크롤합니다. **[!DNL Airship Attributes]**&#x200B;을 선택하고 **[!UICONTROL 구성]**&#x200B;을 선택합니다.
+**[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**&#x200B;에서 **[!UICONTROL Mobile Engagement]** 범주로 스크롤합니다. **[!DNL Airship Attributes]**&#x200B;을 선택하고 **[!UICONTROL Configure]**&#x200B;을 선택합니다.
 
 >[!NOTE]
 >
->이 대상과의 연결이 이미 있는 경우 대상 카드에 **[!UICONTROL 활성화]** 단추가 표시될 수 있습니다. **[!UICONTROL 활성화]**&#x200B;와 **[!UICONTROL 구성]**&#x200B;의 차이에 대한 자세한 내용은 대상 작업 공간 설명서의 [카탈로그](../../ui/destinations-workspace.md#catalog) 섹션을 참조하십시오.
+>이 대상과의 연결이 이미 있는 경우 대상 카드에 **[!UICONTROL Activate]** 단추가 표시될 수 있습니다. **[!UICONTROL Activate]**&#x200B;과 **[!UICONTROL Configure]** 사이의 차이에 대한 자세한 내용은 대상 작업 공간 설명서의 [카탈로그](../../ui/destinations-workspace.md#catalog) 섹션을 참조하십시오.
 
 ![Airship 속성에 연결](../../assets/catalog/mobile-engagement/airship/catalog.png)
 
-**계정** 단계에서 이전에 [!DNL Airship Attributes] 대상에 대한 연결을 설정한 경우 **[!UICONTROL 기존 계정]**&#x200B;을 선택하고 기존 연결을 선택합니다. 또는 **[!UICONTROL 새 계정]**&#x200B;을 선택하여 [!DNL Airship Attributes]에 대한 새 연결을 설정할 수 있습니다. [!DNL Airship] 대시보드에서 생성한 베어러 토큰을 사용하여 Adobe Experience Platform을 [!DNL Airship] 프로젝트에 연결하려면 **[!UICONTROL 대상에 연결]**&#x200B;을 선택합니다.
+**계정** 단계에서 이전에 [!DNL Airship Attributes] 대상에 대한 연결을 설정한 경우 **[!UICONTROL Existing Account]**&#x200B;을 선택하고 기존 연결을 선택합니다. 또는 **[!UICONTROL New Account]**&#x200B;을 선택하여 [!DNL Airship Attributes]에 대한 새 연결을 설정할 수 있습니다. **[!UICONTROL Connect to destination]**&#x200B;을 선택하여 [!DNL Airship] 대시보드에서 생성한 베어러 토큰을 사용하여 Adobe Experience Platform을 [!DNL Airship] 프로젝트에 연결합니다.
 
 >[!NOTE]
 >
@@ -85,41 +85,41 @@ Adobe Experience Platform의 속성을 활용하여 [!DNL Airship] 프로파일�
 
 ![Airship 속성에 연결](../../assets/catalog/mobile-engagement/airship/connect.png)
 
-자격 증명이 확인되고 Adobe Experience Platform이 [!DNL Airship] 프로젝트에 연결되면 **[!UICONTROL 다음]**&#x200B;을 선택하여 **[!UICONTROL 설정]** 단계로 진행할 수 있습니다.
+자격 증명이 확인되고 Adobe Experience Platform이 [!DNL Airship] 프로젝트에 연결되면 **[!UICONTROL Next]**&#x200B;을 선택하여 **[!UICONTROL Setup]** 단계로 진행할 수 있습니다.
 
-**[!UICONTROL 인증]** 단계에서 활성화 과정에 대해 **[!UICONTROL 이름]** 및 **[!UICONTROL 설명]**&#x200B;을 입력합니다.
+**[!UICONTROL Authentication]** 단계에서 활성화 과정에 대해 **[!UICONTROL Name]** 및 **[!UICONTROL Description]**&#x200B;를 입력합니다.
 
-또한 이 단계에서는 이 대상에 적용되는 [!DNL Airship] 데이터 센터에 따라 미국 또는 EU 데이터 센터를 선택할 수 있습니다. 마지막으로 데이터를 대상으로 내보낼 **[!UICONTROL 마케팅 작업]** 중 하나 이상을 선택합니다. Adobe 정의 마케팅 작업 중에서 선택하거나 직접 만들 수 있습니다. 마케팅 작업에 대한 자세한 내용은 [데이터 사용 정책 개요](../../../data-governance/policies/overview.md)를 참조하십시오.
+또한 이 단계에서는 이 대상에 적용되는 [!DNL Airship] 데이터 센터에 따라 미국 또는 EU 데이터 센터를 선택할 수 있습니다. 마지막으로 대상으로 내보낼 데이터를 하나 이상 **[!UICONTROL Marketing Actions]**&#x200B;으로 선택합니다. Adobe 정의 마케팅 작업 중에서 선택하거나 직접 만들 수 있습니다. 마케팅 작업에 대한 자세한 내용은 [데이터 사용 정책 개요](../../../data-governance/policies/overview.md)를 참조하십시오.
 
-위의 필드를 채운 후 **[!UICONTROL 대상 만들기]**&#x200B;를 선택합니다.
+위의 필드를 채운 후 **[!UICONTROL Create Destination]**&#x200B;을 선택합니다.
 
 ![Airship 속성에 연결](../../assets/catalog/mobile-engagement/airship/select-domain.png)
 
-이제 대상이 만들어집니다. 나중에 세그먼트를 활성화하려면 **[!UICONTROL 저장 및 종료]**&#x200B;을 선택하고, **[!UICONTROL 다음]**&#x200B;을 선택하여 워크플로우를 계속하고 활성화할 세그먼트를 선택할 수 있습니다. 이 두 경우 모두 나머지 워크플로에 대해 다음 섹션 [세그먼트 활성화](#activate-segments)를 참조하십시오.
+이제 대상이 만들어집니다. 나중에 세그먼트를 활성화하거나 **[!UICONTROL Next]**&#x200B;을 선택하여 워크플로우를 계속 진행하고 활성화할 세그먼트를 선택할 수 있습니다. **[!UICONTROL Save & Exit]** 이 두 경우 모두 나머지 워크플로에 대해 다음 섹션 [세그먼트 활성화](#activate-segments)를 참조하십시오.
 
 ## 세그먼트 활성화 {#activate-segments}
 
 세그먼트를 [!DNL Airship Attributes]에 활성화하려면 아래 절차를 따르십시오.
 
-**[!UICONTROL 대상 > 찾아보기]**&#x200B;에서 세그먼트를 활성화할 [!DNL Airship Attributes] 대상을 선택합니다.
+**[!UICONTROL Destinations > Browse]**&#x200B;에서 세그먼트를 활성화할 [!DNL Airship Attributes] 대상을 선택합니다.
 
 ![활성화 흐름](../../assets/catalog/mobile-engagement/airship/browse.png)
 
 대상의 이름을 클릭합니다. 활성화 흐름으로 이동합니다.
 
-대상에 대한 활성화 흐름이 이미 있는 경우 대상으로 현재 전송되고 있는 세그먼트를 볼 수 있습니다. 오른쪽 레일에서 **[!UICONTROL 활성화 편집]**&#x200B;을 선택하고 아래 단계에 따라 활성화 세부 사항을 수정합니다.
+대상에 대한 활성화 흐름이 이미 있는 경우 대상으로 현재 전송되고 있는 세그먼트를 볼 수 있습니다. 오른쪽 레일에서 **[!UICONTROL Edit activation]**&#x200B;을 선택하고 아래 단계에 따라 정품 인증 세부 사항을 수정합니다.
 
 ![활성화 흐름](../../assets/catalog/mobile-engagement/airship/activate.png)
 
-**[!UICONTROL 활성화]**&#x200B;를 선택합니다. **[!UICONTROL 대상 활성화]** 작업 과정의 **[!UICONTROL 세그먼트 선택]** 페이지에서 [!DNL Airship Attributes]에 보낼 세그먼트를 선택합니다.
+**[!UICONTROL Activate]**&#x200B;를 선택합니다. **[!UICONTROL Activate destination]** 작업 과정의 **[!UICONTROL Select Segments]** 페이지에서 [!DNL Airship Attributes]에 보낼 세그먼트를 선택합니다.
 
 ![세그먼트-대상](../../assets/catalog/mobile-engagement/airship/select-segments.png)
 
-**[!UICONTROL 매핑]** 단계에서 대상 스키마에 매핑할 [XDM](../../../xdm/home.md) 스키마에서 특성 및 ID를 선택합니다. **[!UICONTROL 새 매핑]**&#x200B;을 선택하여 스키마를 검색하고 해당 대상 ID에 매핑합니다.
+**[!UICONTROL Mapping]** 단계에서 대상 스키마에 매핑할 [XDM](../../../xdm/home.md) 스키마에서 특성 및 ID를 선택합니다. **[!UICONTROL Add new mapping]**&#x200B;을 선택하여 스키마를 검색하고 해당 대상 ID에 매핑합니다.
 
 ![id 매핑 초기 화면](../../assets/catalog/mobile-engagement/airship/identity-mapping.png)
 
-[!DNL Airship] 속성은 모든 사용자의 장치를 고객 ID와 같은 일반적인 식별자에 매핑하는 장치 인스턴스(예: iPhone 또는 지정된 사용자)를 나타내는 채널에서 설정할 수 있습니다. 스키마에 기본 ID로 일반 텍스트(해시되지 않은) 이메일 주소가 있는 경우 **[!UICONTROL 소스 속성]**&#x200B;에서 이메일 필드를 선택하고 아래 표시된 대로 오른쪽 열에 있는 [!DNL Airship] 지정된 사용자에게 매핑합니다.****
+[!DNL Airship] 속성은 모든 사용자의 장치를 고객 ID와 같은 일반적인 식별자에 매핑하는 장치 인스턴스(예: iPhone 또는 지정된 사용자)를 나타내는 채널에서 설정할 수 있습니다. 스키마에 기본 ID로 일반 텍스트(해시되지 않은) 이메일 주소가 있는 경우 **[!UICONTROL Source Attributes]**&#x200B;에서 이메일 필드를 선택하고 아래 표시된 대로 오른쪽 열에 있는 [!DNL Airship] 지정된 사용자에게 매핑합니다.**[!UICONTROL Target Identities]**
 
 ![지정된 사용자 매핑](../../assets/catalog/mobile-engagement/airship/mapping.png)
 
@@ -156,11 +156,11 @@ Adobe Experience Platform의 속성을 활용하여 [!DNL Airship] 프로파일�
 
 ![채널 매핑](../../assets/catalog/mobile-engagement/airship/mapping.png)
 
-**[!UICONTROL 세그먼트 일정]** 페이지에서 현재 예약이 비활성화되어 있습니다. 검토 단계를 계속하려면 **[!UICONTROL 다음]**&#x200B;을 클릭합니다.
+**[!UICONTROL Segment schedule]** 페이지에서 예약은 현재 비활성화되어 있습니다. 검토 단계를 계속하려면 **[!UICONTROL Next]**&#x200B;을 클릭합니다.
 
 ![현재 예약 비활성화](../../assets/catalog/mobile-engagement/airship/scheduling.png)
 
-**[!UICONTROL Review]** 페이지에서 선택 사항의 요약을 볼 수 있습니다. 흐름을 구분하려면 **[!UICONTROL 취소]**, 설정을 수정하려면 **[!UICONTROL 뒤로]**, 선택을 확인하고 대상에 데이터를 보내기 시작하려면 **[!UICONTROL 완료]**&#x200B;를 선택합니다.
+**[!UICONTROL Review]** 페이지에서 선택 사항의 요약을 볼 수 있습니다. 흐름을 구분하려면 **[!UICONTROL Cancel]**, 설정을 수정하려면 **[!UICONTROL Back]**, 선택을 확인하고 대상에 데이터를 보내기 시작하려면 **[!UICONTROL Finish]**&#x200B;를 선택합니다.
 
 >[!IMPORTANT]
 >
@@ -168,7 +168,7 @@ Adobe Experience Platform의 속성을 활용하여 [!DNL Airship] 프로파일�
 
 ![선택 확인](../../assets/common/data-policy-violation.png)
 
-정책 위반이 감지되지 않은 경우 **[!UICONTROL 완료]**&#x200B;를 선택하여 선택한 내용을 확인하고 대상으로 데이터를 보내기 시작합니다.
+정책 위반이 감지되지 않은 경우 **[!UICONTROL Finish]**&#x200B;을 선택하여 선택을 확인하고 대상으로 데이터 전송을 시작합니다.
 
 ![검토](../../assets/catalog/mobile-engagement/airship/review.png)
 
