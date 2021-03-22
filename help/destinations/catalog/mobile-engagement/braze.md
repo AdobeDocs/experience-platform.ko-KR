@@ -3,7 +3,7 @@ keywords: mobile;brize;메시지;
 title: 브라즈 연결
 description: Braze는 고객과 브랜드 간의 연관성 있고 기억에 오래 남는 경험을 제공하는 포괄적인 고객 참여 플랫폼입니다.
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 24e0a274e61fcf6311c647067920686e4f25e840
 workflow-type: tm+mt
 source-wordcount: '901'
 ht-degree: 2%
@@ -25,7 +25,7 @@ ht-degree: 2%
 
 프로필 데이터를 [!DNL Braze]에 보내려면 먼저 대상에 연결해야 합니다.
 
-## 대상 사양 {#destination-specs}
+## 대상 세부 사항 {#specifics}
 
 [!DNL Braze] 대상에 대한 다음 세부 사항을 참조하십시오.
 
