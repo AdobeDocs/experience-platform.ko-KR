@@ -3,9 +3,9 @@ keywords: 이메일;이메일;이메일;이메일 대상;adobe campaign;campaign
 title: Adobe Campaign 연결
 description: Adobe Campaign은 온라인과 오프라인 등 모든 채널에서 캠페인을 개인화하고 전달할 수 있는 솔루션 집합입니다.
 translation-type: tm+mt
-source-git-commit: b6e795d33b5590001a3270ea42995fdbad28dd88
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
-source-wordcount: '843'
+source-wordcount: '793'
 ht-degree: 0%
 
 ---
@@ -19,45 +19,44 @@ Adobe Campaign은 온라인과 오프라인 등 모든 채널에서 캠페인을
 
 ## 내보내기 유형 {#export-type}
 
-**프로필 기반**  - 원하는 스키마 필드와 함께 세그먼트의 모든 구성원을 내보냅니다(예:이메일 주소, 전화 번호, 성)을  **[!UICONTROL 대상 활성화 작업]**  과정의  [속성 ](../../ui/activate-destinations.md#select-attributes)선택 단계에서 선택한 대로
+**프로필 기반**  - 원하는 스키마 필드와 함께 세그먼트의 모든 구성원을 내보냅니다(예:이메일 주소, 전화 번호, 성)을  **[!UICONTROL Select attributes]** 대상 활성화  [작업 과정](../../ui/activate-destinations.md#select-attributes) 단계에서 선택한 대로 설정합니다.
 
 ## 연결 대상 {#connect-destination}
 
-**[!UICONTROL 연결]** > **[!UICONTROL 대상]**&#x200B;에서 Adobe Campaign을 선택한 다음 **[!UICONTROL 구성]**&#x200B;을 선택합니다.
+**[!UICONTROL Connections]** > **[!UICONTROL Destinations]**&#x200B;에서 Adobe Campaign을 선택한 다음 **[!UICONTROL Configure]**&#x200B;를 선택합니다.
 
 >[!NOTE]
 >
->이 대상과의 연결이 이미 있는 경우 대상 카드에 **[!UICONTROL 활성화]** 단추가 표시될 수 있습니다. [!UICONTROL 활성화]와 [!UICONTROL 구성]의 차이에 대한 자세한 내용은 대상 작업 공간 설명서의 [카탈로그](../../ui/destinations-workspace.md#catalog) 섹션을 참조하십시오.
+>이 대상과의 연결이 이미 있는 경우 대상 카드에 **[!UICONTROL Activate]** 단추가 표시될 수 있습니다. [!UICONTROL Activate]과 [!UICONTROL Configure] 사이의 차이에 대한 자세한 내용은 대상 작업 공간 설명서의 [카탈로그](../../ui/destinations-workspace.md#catalog) 섹션을 참조하십시오.
 
 ![Adobe Campaign에 연결](../../assets/catalog/email-marketing/adobe-campaign/catalog.png)
 
-Connect 대상 작업 과정의 **[!UICONTROL 계정]** 단계에서 저장소 위치에 대한 **[!UICONTROL 연결 유형]**&#x200B;을 선택합니다. Adobe Campaign의 경우 **[!UICONTROL Amazon S3]**, **[!UICONTROL 암호가 있는 SFTP]**, **[!UICONTROL SFTP 및**[!UICONTROL  SSH 키가 있는 SFTP ]**및 Azure Blob]** 중에서 선택할 수 있습니다. Adobe Campaign으로 데이터를 보내는 데 권장되는 방법은 [!DNL Amazon S3] 또는 [!DNL Azure Blob]입니다. 연결 유형에 따라 아래 정보를 입력한 다음 **[!UICONTROL Connect]**&#x200B;를 선택합니다.
-
+Connect 대상 작업 과정의 **[!UICONTROL Account]** 단계에서 저장소 위치에 대한 **[!UICONTROL Connection type]**&#x200B;을 선택합니다. Adobe Campaign의 경우 **[!UICONTROL Amazon S3]**, **[!UICONTROL SFTP with Password]**, **[!UICONTROL SFTP with SSH Key]** 및 **[!UICONTROL Azure Blob]** 중에서 선택할 수 있습니다. Adobe Campaign으로 데이터를 보내는 데 권장되는 방법은 [!DNL Amazon S3] 또는 [!DNL Azure Blob]입니다. 연결 유형에 따라 아래 정보를 입력한 다음 **[!UICONTROL Connect]**&#x200B;을 선택합니다.
 
 
 ![캠페인 설정 마법사](../../assets/catalog/email-marketing/adobe-campaign/connection-type.png)
 
-- **[!UICONTROL Amazon S3]** 연결의 경우 액세스 키 ID 및 비밀 액세스 키를 제공해야 합니다.
-- 암호&#x200B;]**연결이 있는**[!UICONTROL  SFTP의 경우 도메인, 포트, 사용자 이름 및 암호를 제공해야 합니다.
-- **[!UICONTROL SFTP에서 SSH 키]** 연결을 사용하려면 도메인, 포트, 사용자 이름 및 SSH 키를 제공해야 합니다.
+- **[!UICONTROL Amazon S3]** 연결의 경우 액세스 키 ID와 비밀 액세스 키를 제공해야 합니다.
+- **[!UICONTROL SFTP with Password]** 연결의 경우 도메인, 포트, 사용자 이름 및 암호를 제공해야 합니다.
+- **[!UICONTROL SFTP with SSH Key]** 연결의 경우 도메인, 포트, 사용자 이름 및 SSH 키를 제공해야 합니다.
 - **[!UICONTROL Azure Blob]** 연결의 경우 연결 문자열을 제공해야 합니다.
 
-선택적으로 RSA 형식 공개 키를 첨부하여 **[!UICONTROL 키]** 섹션 아래의 내보낸 파일에 PGP/GPG를 사용하여 암호화를 추가할 수 있습니다. 이 공개 키 **는 Base64 인코딩 문자열로 기록되어야 합니다.**
+원하는 경우, RSA 형식 공개 키를 첨부하여 PGP/GPG를 사용하여 암호화를 **[!UICONTROL Key]** 섹션 아래의 내보낸 파일에 추가할 수 있습니다. 이 공개 키 **는 Base64 인코딩 문자열로 기록되어야 합니다.**
 
 ![캠페인 정보 입력](../../assets/catalog/email-marketing/adobe-campaign/account-info.png)
 
-**[!UICONTROL 계정 인증]**&#x200B;에서 아래와 같이 대상에 대한 관련 정보를 입력합니다.
-- **[!UICONTROL 이름]**:대상의 관련 이름을 선택합니다.
-- **[!UICONTROL 설명]**:대상에 대한 설명을 입력합니다.
-- **[!UICONTROL 버킷 이름]**: *S3 연결을 참조하십시오*. 내보내기 데이터를 CSV 또는 탭으로 구분된 파일로 저장할 S3 버킷의 위치를 입력합니다.[!DNL Platform]
-- **[!UICONTROL 폴더 경로]**:내보내기 데이터를 CSV 또는 탭 구분 파일 [!DNL Platform] 로 저장할 저장 위치에 경로를 제공합니다.
-- **[!UICONTROL 컨테이너]**: *Blob 연결의 경우*. 폴더 경로가 있는 Blob가 들어 있는 컨테이너입니다.
-- **[!UICONTROL 파일 형식]**: **CSV** 또는  **TAB_DIPORTED**. 저장소 위치로 내보낼 파일 형식을 선택합니다.
-- **[!UICONTROL 마케팅 작업]**:마케팅 작업은 데이터를 대상에 내보내려는 의도를 나타냅니다. Adobe 정의 마케팅 작업 중에서 선택하거나 자신의 마케팅 작업을 만들 수 있습니다. 마케팅 작업에 대한 자세한 내용은 [데이터 사용 정책 개요](../../../data-governance/policies/overview.md) 페이지를 참조하십시오. 같은 문서에서 [Adobe 정의 마케팅 작업](../../../data-governance/policies/overview.md#core-actions)도 참조하십시오.
+**[!UICONTROL Account authentication]**&#x200B;에서 아래와 같이 대상에 대한 관련 정보를 입력합니다.
+- **[!UICONTROL Name]**:대상의 관련 이름을 선택합니다.
+- **[!UICONTROL Description]**:대상에 대한 설명을 입력합니다.
+- **[!UICONTROL Bucket Name]**: *S3 연결을 참조하십시오*. 내보내기 데이터를 CSV 또는 탭으로 구분된 파일로 저장할 S3 버킷의 위치를 입력합니다.[!DNL Platform]
+- **[!UICONTROL Folder Path]**:내보내기 데이터를 CSV 또는 탭 구분 파일 [!DNL Platform] 로 저장할 저장 위치에 경로를 제공합니다.
+- **[!UICONTROL Container]**: *Blob 연결의 경우*. 폴더 경로가 있는 Blob가 들어 있는 컨테이너입니다.
+- **[!UICONTROL File Format]**: **CSV** 또는  **TAB_DIPORTED**. 저장소 위치로 내보낼 파일 형식을 선택합니다.
+- **[!UICONTROL Marketing actions]**:마케팅 작업은 데이터를 대상에 내보내려는 의도를 나타냅니다. Adobe 정의 마케팅 작업 중에서 선택하거나 자신의 마케팅 작업을 만들 수 있습니다. 마케팅 작업에 대한 자세한 내용은 [데이터 사용 정책 개요](../../../data-governance/policies/overview.md) 페이지를 참조하십시오. 같은 문서에서 [Adobe 정의 마케팅 작업](../../../data-governance/policies/overview.md#core-actions)도 참조하십시오.
 
 ![캠페인 기본 정보](../../assets/catalog/email-marketing/adobe-campaign/basic-information.png)
 
-위의 필드를 채운 후 **[!UICONTROL 대상 만들기]**&#x200B;를 선택합니다. 이제 대상이 연결되었으며 [세그먼트](../../ui/activate-destinations.md)를 대상에 활성화할 수 있습니다.
+위의 필드를 채운 후 **[!UICONTROL Create destination]**&#x200B;을 선택합니다. 이제 대상이 연결되었으며 [세그먼트](../../ui/activate-destinations.md)를 대상에 활성화할 수 있습니다.
 
 ## 세그먼트 활성화 {#activate-segments}
 
