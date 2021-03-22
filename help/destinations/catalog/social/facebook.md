@@ -3,7 +3,7 @@ keywords: facebook 연결;facebook 연결;facebook 대상;facebook;instagram;mes
 title: Facebook 연결
 description: 해시 처리된 이메일을 기반으로 고객 타깃팅, 개인화 및 억제를 위해 Facebook 캠페인에 대한 프로필을 활성화합니다.
 translation-type: tm+mt
-source-git-commit: fd95357f3e3533fe6b7b9752798dd99eb1cc0eb5
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
 source-wordcount: '1118'
 ht-degree: 2%
@@ -74,7 +74,7 @@ ht-degree: 2%
 
 Adobe Experience Platform에 인제스트하는 ID 유형에 따라 해당 요구 사항을 준수해야 합니다.
 
-### 전화 번호 해싱 요구 사항 {#phone-number-hashing-requirements}
+## 전화 번호 해싱 요구 사항 {#phone-number-hashing-requirements}
 
 [!DNL Facebook]에는 전화 번호를 활성화하는 두 가지 방법이 있습니다.
 
@@ -86,7 +86,7 @@ Adobe Experience Platform에 인제스트하는 ID 유형에 따라 해당 요�
 >`Phone` 네임스페이스로 인제스트된 전화 번호는 [!DNL Facebook]에서 활성화할 수 없습니다.
 
 
-### 전자 메일 해싱 요구 사항 {#email-hashing-requirements}
+## 전자 메일 해싱 요구 사항 {#email-hashing-requirements}
 
 전자 메일 주소를 Adobe Experience Platform으로 인제스트하기 전에 해시하거나, Experience Platform에서 명확하게 전자 메일 주소를 사용하고 활성화 시 [!DNL Platform] 해시하도록 할 수 있습니다.
 
@@ -109,7 +109,7 @@ Experience Platform에서 이메일 주소 인제스트에 대한 자세한 내�
 
 ![ID 매핑 변형](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
-### 사용자 정의 네임스페이스 사용 {#custom-namespaces}
+## 사용자 정의 네임스페이스 사용 {#custom-namespaces}
 
 `Extern_ID` 네임스페이스를 사용하여 데이터를 [!DNL Facebook]에 보내려면 [!DNL Facebook Pixel]을(를) 사용하여 자체 식별자를 동기화해야 합니다. 자세한 내용은 [공식 설명서](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences/#external_identifiers)를 참조하십시오.
 
