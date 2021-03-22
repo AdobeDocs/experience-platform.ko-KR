@@ -3,15 +3,17 @@ keywords: facebook 연결;facebook 연결;facebook 대상;facebook;instagram;mes
 title: Facebook 연결
 description: 해시 처리된 이메일을 기반으로 고객 타깃팅, 개인화 및 억제를 위해 Facebook 캠페인에 대한 프로필을 활성화합니다.
 translation-type: tm+mt
-source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '1118'
+source-wordcount: '1119'
 ht-degree: 2%
 
 ---
 
 
 # [!DNL Facebook] 연결
+
+## 개요 {#overview}
 
 해시 처리된 이메일을 기반으로 고객 타깃팅, 개인화 및 억제를 위해 [!DNL Facebook] 캠페인에 대한 프로파일을 활성화합니다.
 
