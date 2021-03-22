@@ -3,15 +3,17 @@ keywords: 대상 확장;대상
 title: Adobe Target 확장
 description: Adobe Target 익스텐션은 Adobe Experience Platform의 개인화 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '510'
-ht-degree: 12%
+source-wordcount: '497'
+ht-degree: 13%
 
 ---
 
 
 # Adobe Target 확장 {#adobe-target-extension}
+
+## 개요 {#overview}
 
 Adobe Target은 웹 및 모바일 사이트, 앱, 소셜 미디어 및 기타 디지털 채널에서 매출을 극대화하기 위해 고객의 경험을 맞춤화하고 개인화하는 데 필요한 모든 것을 제공하는 Adobe Experience Cloud 솔루션입니다.
 
@@ -25,19 +27,19 @@ Adobe Target은 Adobe Experience Platform의 개인화 익스텐션입니다. �
 
 이 확장 프로그램은 Platform을 구입한 모든 고객의 [!DNL Destinations] 카탈로그에서 사용할 수 있습니다.
 
-이 확장을 사용하려면 [!DNL Adobe Experience Platform Launch]에 액세스해야 합니다. [!DNL Platform Launch] adobe experience cloud 고객에게 제공되는 부가 가치 기능 [!DNL Platform Launch]에 대한 액세스 권한을 받으려면 조직 관리자에게 문의하여 확장 기능을 설치할 수 있도록 **[!UICONTROL manage_properties]** 권한을 요청하십시오.
+이 확장을 사용하려면 [!DNL Adobe Experience Platform Launch]에 액세스해야 합니다. [!DNL Platform Launch] Adobe Experience Cloud 고객에게 제공되는 부가 가치 기능 조직 관리자에게 문의하여 [!DNL Platform Launch]에 액세스할 수 있도록 **[!UICONTROL manage_properties]** 권한을 요청하십시오. 그러면 확장을 설치할 수 있습니다.
 
 ## 확장 설치 {#install-extension}
 
 Adobe Target 확장을 설치하려면:
 
-[플랫폼 인터페이스](http://platform.adobe.com/)에서 **[!UICONTROL 대상]** > **[!UICONTROL 카탈로그]**&#x200B;로 이동합니다.
+[플랫폼 인터페이스](http://platform.adobe.com/)에서 **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**&#x200B;으로 이동합니다.
 
 카탈로그에서 확장을 선택하거나 검색 막대를 사용합니다.
 
-대상을 클릭하여 강조 표시한 다음 오른쪽 레일에서 **[!UICONTROL 구성]**&#x200B;을 선택합니다. **[!UICONTROL 구성]** 컨트롤이 회색으로 표시되면 **[!UICONTROL manage_properties]** 권한이 없습니다. [사전 요구 사항](#prerequisites)을 참조하십시오.
+대상을 클릭하여 강조 표시한 다음 오른쪽 레일에서 **[!UICONTROL Configure]**&#x200B;을 선택합니다. **[!UICONTROL Configure]** 컨트롤이 회색으로 표시되면 **[!UICONTROL manage_properties]** 권한이 없습니다. [사전 요구 사항](#prerequisites)을 참조하십시오.
 
-**[!UICONTROL 사용 가능한 플랫폼 시작 속성 선택]** 창에서 확장을 설치할 [!DNL Platform Launch] 속성을 선택합니다. [!DNL Platform Launch]에 새 속성을 만들 수도 있습니다. 속성은 규칙, 데이터 요소, 구성된 확장, 환경 및 라이브러리의 컬렉션입니다. [!DNL Launch] 설명서의 [속성 페이지 섹션](https://experienceleague.adobe.com/docs/launch/using/reference/admin/companies-and-properties.html#properties-page)에서 속성에 대해 알아봅니다.
+**[!UICONTROL Select available Platform Launch property]** 창에서 확장을 설치할 [!DNL Platform Launch] 속성을 선택합니다. [!DNL Platform Launch]에 새 속성을 만들 수도 있습니다. 속성은 규칙, 데이터 요소, 구성된 확장, 환경 및 라이브러리의 컬렉션입니다. [!DNL Launch] 설명서의 [속성 페이지 섹션](https://experienceleague.adobe.com/docs/launch/using/reference/admin/companies-and-properties.html#properties-page)에서 속성에 대해 알아봅니다.
 
 워크플로우에서 [!DNL Platform Launch]으로 이동하여 설치를 완료합니다.
 
@@ -57,6 +59,6 @@ Adobe Target 확장을 설치하려면:
 
 >[!TIP]
 >
->확장이 이미 속성 중 하나에 설치되어 있는 경우 플랫폼 UI에 확장명에 대해 **[!UICONTROL 설치]**&#x200B;가 여전히 표시됩니다. [!DNL Platform Launch]Install extension](#install-extension)에 설명된 대로 설치 작업 과정을 시작하고 확장을 구성하거나 삭제합니다.[
+>확장이 이미 속성 중 하나에 설치되어 있는 경우 플랫폼 UI에 확장명에 대해 **[!UICONTROL Install]**&#x200B;이 여전히 표시됩니다. [!DNL Platform Launch]Install extension](#install-extension)에 설명된 대로 설치 작업 과정을 시작하고 확장을 구성하거나 삭제합니다.[
 
 확장을 업그레이드하려면 [!DNL Platform Launch] 설명서의 [확장 업그레이드](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/extensions/extension-upgrade.html)를 참조하십시오.
