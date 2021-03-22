@@ -3,7 +3,7 @@ keywords: Google 광고;google 광고;google 광고;Google 애드워즈;Google �
 title: Google 광고 연결
 description: 이전에 Google AdWords로 알려졌던 Google Ads는 기업에서 텍스트 기반 검색, 그래픽 디스플레이, YouTube 비디오 및 인앱 모바일 디스플레이에 걸쳐 클릭당 광고를 지불하는 온라인 광고 서비스입니다.
 translation-type: tm+mt
-source-git-commit: 0759919dc458798ca4bc5f233a9cb319194ea534
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
 source-wordcount: '722'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 [!DNL Google Ads](이전 이름 [!DNL Google AdWords]으로 알려짐)은 기업이 텍스트 기반 검색, 그래픽 디스플레이,  [!DNL YouTube] 비디오 및 인앱 모바일 디스플레이에서 클릭당 광고를 유료 표시할 수 있도록 하는 온라인 광고 서비스입니다.
 
-## 대상 사양
+## 대상 세부 사항 {#specifics}
 
 [!DNL Google Ads] 대상에 대한 다음 세부 정보를 참조하십시오.
 
@@ -26,7 +26,7 @@ ht-degree: 0%
 >
 >[!DNL Google Ads]을(를) 사용하여 첫 번째 대상을 만들고 이전에 Experience Cloud ID 서비스에서 [ID 동기화 기능](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html)을(를) 활성화하지 않은 경우(Audience Manager 또는 다른 응용 프로그램 포함) Adobe 컨설팅 또는 고객 지원 센터에 문의하여 ID 동기화를 활성화하십시오. 이전에 Audience Manager에서 Google 통합을 설정한 경우 설정한 ID 동기화가 플랫폼으로 이월됩니다.
 
-### 지원되는 ID {#supported-identities}
+## 지원되는 ID {#supported-identities}
 
 [!DNL Google Ad Manager] 에서는 아래 표에 설명된 ID 활성화를 지원합니다.
 
@@ -40,7 +40,7 @@ ht-degree: 0%
 | 가정부 | Microsoft 광고 ID. 이 ID는 Windows 10을 실행하는 장치를 고유하게 식별합니다. |  |
 | Amazon Fire TV ID | 이 ID는 Amazon Fire TV를 고유하게 식별합니다. |  |
 
-### 내보내기 유형 {#export-type}
+## 내보내기 유형 {#export-type}
 
 **세그먼트 내보내기**  - 세그먼트(대상)의 모든 구성원을 Google 대상으로 내보냅니다.
 
