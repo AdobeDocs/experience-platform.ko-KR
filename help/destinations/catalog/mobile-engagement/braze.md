@@ -3,9 +3,9 @@ keywords: mobile;brize;메시지;
 title: 브라즈 연결
 description: Braze는 고객과 브랜드 간의 연관성 있고 기억에 오래 남는 경험을 제공하는 포괄적인 고객 참여 플랫폼입니다.
 translation-type: tm+mt
-source-git-commit: 0759919dc458798ca4bc5f233a9cb319194ea534
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
-source-wordcount: '899'
+source-wordcount: '900'
 ht-degree: 2%
 
 ---
@@ -37,7 +37,7 @@ ht-degree: 2%
 
 마케터는 [!DNL Adobe Experience Platform]에 내장된 세그먼트로 모바일 참여 대상의 사용자를 타깃팅하고자 합니다. 또한 세그먼트와 프로필이 [!DNL Adobe Experience Platform]에서 업데이트되는 즉시, [!DNL Adobe Experience Platform] 프로필의 특성에 따라 개인화된 경험을 전달하려고 합니다.
 
-### 지원되는 ID {#supported-identities}
+## 지원되는 ID {#supported-identities}
 
 [!DNL Google Ad Manager] 에서는 아래 표에 설명된 ID 활성화를 지원합니다.
 
@@ -49,7 +49,6 @@ ht-degree: 2%
 
 **[!DNL Profile-based]** - 원하는 스키마 필드와 함께 세그먼트의 모든 구성원을 내보낼 것입니다(예:필드 매핑에 따라 이메일 주소, 전화 번호, 성) 및/또는 ID를 지정합니다.
 [!DNL Adobe Experience Platform] 세그먼트는 특성  [!DNL Braze] 아래에  `AdobeExperiencePlatformSegments` 내보내집니다.
-
 
 ## 대상 {#connect-destination}에 연결
 
@@ -128,7 +127,7 @@ XDM 필드를 [!DNL Braze] 대상 필드에 올바르게 매핑하려면 다음 
 
 매핑을 더 추가하려면 이전 단계를 반복합니다.
 
-### 예 {#mapping-example}
+## 매핑 예 {#mapping-example}
 
 XDM 프로필 스키마와 [!DNL Braze] 인스턴스에 다음 특성 및 ID가 포함되어 있다고 가정합니다.
 
