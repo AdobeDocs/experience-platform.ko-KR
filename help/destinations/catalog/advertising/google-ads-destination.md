@@ -3,15 +3,17 @@ keywords: Google 광고;google 광고;google 광고;Google 애드워즈;Google �
 title: Google 광고 연결
 description: 이전에 Google AdWords로 알려졌던 Google Ads는 기업에서 텍스트 기반 검색, 그래픽 디스플레이, YouTube 비디오 및 인앱 모바일 디스플레이에 걸쳐 클릭당 광고를 지불하는 온라인 광고 서비스입니다.
 translation-type: tm+mt
-source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '722'
+source-wordcount: '723'
 ht-degree: 0%
 
 ---
 
 
 # [!DNL Google Ads] 연결
+
+## 개요 {#overview}
 
 [!DNL Google Ads](이전 이름 [!DNL Google AdWords]으로 알려짐)은 기업이 텍스트 기반 검색, 그래픽 디스플레이,  [!DNL YouTube] 비디오 및 인앱 모바일 디스플레이에서 클릭당 광고를 유료 표시할 수 있도록 하는 온라인 광고 서비스입니다.
 
