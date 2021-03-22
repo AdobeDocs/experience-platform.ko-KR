@@ -3,9 +3,9 @@ keywords: Amazon Kinesis;kinesis destination;kinesis
 title: Amazon Kinesis 연결
 description: Amazon Kinesis 스토리지에 대한 실시간 아웃바운드 연결을 생성하여 Adobe Experience Platform의 데이터를 스트리밍합니다.
 translation-type: tm+mt
-source-git-commit: 32cb198bcf2c142b50c4b7a60282f0c923be06b1
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
-source-wordcount: '510'
+source-wordcount: '504'
 ht-degree: 2%
 
 ---
@@ -43,19 +43,19 @@ Adobe Experience Platform의 데이터를 스트리밍하기 위해 [!DNL Amazon
 
 [!DNL Amazon Kinesis] 대상의 경우 대상 만들기 작업 과정에 다음 정보를 입력합니다.
 
-### 인증 단계 {#authentication-step}
+## 인증 단계 {#authentication-step}
 
 * **[!DNL Amazon Web Services]액세스 키 및 비밀 키**:에서  [!DNL Amazon Web Services]쌍을 생성하여  `access key - secret access key` 플랫폼에 사용자 계정에 대한 액세스 권한을  [!DNL Amazon Kinesis] 부여합니다. [Amazon 웹 서비스 설명서](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)에서 자세한 내용을 살펴보십시오.
 * **지역**:데이터를  [!DNL Amazon Web Services] 스트리밍할 지역을 표시합니다.
 
 ![계정 단계의 입력 필드](../../assets/catalog/cloud-storage/amazon-kinesis/account.png)
 
-### 설정 단계 {#setup-step}
+## 설정 단계 {#setup-step}
 
 * **이름**:연결 대상 이름 입력  [!DNL Amazon Kinesis]
 * **설명**:연결에 대한 설명을 제공합니다 [!DNL Amazon Kinesis].
 * **스트림**:계정에 있는 기존 데이터 스트림의 이름을  [!DNL Amazon Kinesis] 제공합니다. 플랫폼이 데이터를 이 스트림으로 내보냅니다.
-* **[!UICONTROL 마케팅 작업]**:마케팅 작업은 데이터를 대상에 내보내려는 의도를 나타냅니다. Adobe 정의 마케팅 작업 중에서 선택하거나 자신의 마케팅 작업을 만들 수 있습니다. 마케팅 작업에 대한 자세한 내용은 Adobe Experience Platform](../../../data-governance/policies/overview.md) 페이지의 [데이터 거버넌스 페이지를 참조하십시오. 개별 Adobe 정의 마케팅 작업에 대한 자세한 내용은 [데이터 사용 정책 개요](../../../data-governance/policies/overview.md)를 참조하십시오.
+* **[!UICONTROL Marketing actions]**:마케팅 작업은 데이터를 대상에 내보내려는 의도를 나타냅니다. Adobe 정의 마케팅 작업 중에서 선택하거나 자신의 마케팅 작업을 만들 수 있습니다. 마케팅 작업에 대한 자세한 내용은 Adobe Experience Platform](../../../data-governance/policies/overview.md) 페이지의 [데이터 거버넌스 페이지를 참조하십시오. 개별 Adobe 정의 마케팅 작업에 대한 자세한 내용은 [데이터 사용 정책 개요](../../../data-governance/policies/overview.md)를 참조하십시오.
 
 ![인증 단계의 입력 필드](../../assets/catalog/cloud-storage/amazon-kinesis/setup.png)
 
