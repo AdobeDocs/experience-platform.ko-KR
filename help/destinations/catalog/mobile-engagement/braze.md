@@ -3,9 +3,9 @@ keywords: mobile;brize;메시지;
 title: 브라즈 연결
 description: Braze는 고객과 브랜드 간의 연관성 있고 기억에 오래 남는 경험을 제공하는 포괄적인 고객 참여 플랫폼입니다.
 translation-type: tm+mt
-source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '900'
+source-wordcount: '901'
 ht-degree: 2%
 
 ---
@@ -16,6 +16,8 @@ ht-degree: 2%
 >[!IMPORTANT]
 >
 >Adobe Experience Platform의 Braze 대상은 현재 베타에 있습니다. 설명서 및 기능은 변경될 수 있습니다.
+
+## 개요 {#overview}
 
 [!DNL Braze] 대상은 프로필 데이터를 [!DNL Braze]에 보내는 데 도움이 됩니다.
 
