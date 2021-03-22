@@ -2,13 +2,13 @@
 keywords: Experience Platform;홈;인기 항목;Google 클라우드 스토리지;google 클라우드 스토리지;google;home;popular topics;Google
 solution: Experience Platform
 title: Flow Service API를 사용하여 Google 클라우드 스토리지 소스 연결 만들기
-topic: overview
-type: Tutorial
+topic: 개요
+type: 튜토리얼
 description: Flow Service API를 사용하여 Google Cloud 스토리지 계정에 Adobe Experience Platform을 연결하는 방법을 알아봅니다.
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: f6a63ca1e21b3c3f6a55574f31fdf04038b7e5c4
 workflow-type: tm+mt
-source-wordcount: '554'
+source-wordcount: '597'
 ht-degree: 2%
 
 ---
@@ -35,10 +35,10 @@ ht-degree: 2%
 
 | 자격 증명 | 설명 |
 | ---------- | ----------- |
-| `accessKeyId` | [!DNL Google Cloud Storage] 계정의 액세스 키 ID입니다. |
-| `secretAccessKey` | [!DNL Google Cloud Storage] 계정의 비밀 액세스 키. |
+| 액세스 키 ID | 플랫폼에 대한 [!DNL Google Cloud Storage] 계정을 인증하는 데 사용되는 61자의 영숫자 문자열입니다. |
+| 비밀 액세스 키 | 플랫폼에 대한 [!DNL Google Cloud Storage] 계정을 인증하는 데 사용되는 40자의 기본-64로 인코딩된 문자열. |
 
-시작하는 방법에 대한 자세한 내용은 [이 Google Cloud 문서](https://cloud.google.com/docs/authentication)를 참조하십시오.
+이러한 값에 대한 자세한 내용은 [Google Cloud 저장소 HMAC 키](https://cloud.google.com/storage/docs/authentication/hmackeys#overview) 안내서를 참조하십시오. 자신의 액세스 키 ID 및 비밀 액세스 키를 생성하는 방법에 대한 자세한 내용은 [[!DNL Google Cloud Storage] overview](../../../../connectors/cloud-storage/google-cloud-storage.md)을 참조하십시오.
 
 ### 샘플 API 호출 읽기
 
