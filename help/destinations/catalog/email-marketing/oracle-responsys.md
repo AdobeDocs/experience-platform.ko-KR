@@ -3,9 +3,9 @@ keywords: 전자 메일;전자 메일;전자 메일 대상;oracle 응답 대상
 title: Oracle Responsys 연결
 description: Responsys는 Oracle이 이메일, 모바일, 디스플레이 및 소셜 상호 작용을 개인화하기 위해 제공하는 크로스채널 마케팅 캠페인을 위한 기업 이메일 마케팅 툴입니다.
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 02754055e2be8a45a0699386cb559dad8f25717c
 workflow-type: tm+mt
-source-wordcount: '567'
+source-wordcount: '524'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 ## 개요 {#overview}
 
-[응답](https://www.oracle.com/marketingcloud/products/cross-channel-orchestration/) 은 이메일, 모바일, 디스플레이 및 소셜 상호 작용을 개인화하기  [!DNL Oracle] 위해 제공되는 크로스채널 마케팅 캠페인을 위한 기업 이메일 마케팅 툴입니다.
+[응답](https://www.oracle.com/cx/marketing/campaign-management/) 은 이메일, 모바일, 디스플레이 및 소셜 상호 작용을 개인화하기  [!DNL Oracle] 위해 제공되는 크로스채널 마케팅 캠페인을 위한 기업 이메일 마케팅 툴입니다.
 
 세그먼트 데이터를 [!DNL Oracle Responsys]에 보내려면 먼저 [을(를) Adobe Experience Platform의 대상](#connect-destination)에 연결한 다음 [스토리지 위치에서 ](#import-data-into-responsys)로 데이터 가져오기[!DNL Oracle Responsys]를 설정해야 합니다.
 
@@ -29,21 +29,33 @@ ht-degree: 0%
 
 ![Responsys에 연결](../../assets/catalog/email-marketing/oracle-responsys/catalog.png)
 
-**[!UICONTROL Authentication]** 단계에서 이전에 클라우드 스토리지 대상에 대한 연결을 설정한 경우 **[!UICONTROL Existing Account]**&#x200B;을 선택하고 기존 연결 중 하나를 선택합니다. 또는 **[!UICONTROL New Account]**&#x200B;을 선택하여 새 연결을 설정할 수 있습니다. 계정 인증 자격 증명을 입력하고 **[!UICONTROL Connect to destination]**&#x200B;을 선택합니다. [!DNL Oracle Responsys]의 경우 **[!UICONTROL SFTP with Password]**&#x200B;과 **[!UICONTROL SFTP with SSH Key]** 중에서 선택할 수 있습니다. 연결 유형에 따라 아래 정보를 입력하고 **[!UICONTROL Connect to destination]**&#x200B;을 선택합니다.
+**[!UICONTROL Account]** 단계에서 이전에 클라우드 스토리지 대상에 대한 연결을 설정한 경우 **[!UICONTROL Existing Account]**&#x200B;을 선택하고 기존 연결 중 하나를 선택합니다. 또는 **[!UICONTROL New Account]**&#x200B;을 선택하여 새 연결을 설정할 수 있습니다. 계정 인증 자격 증명을 입력하고 **[!UICONTROL Connect to destination]**&#x200B;을 선택합니다. [!DNL Oracle Responsys]의 경우 **[!UICONTROL SFTP with Password]**&#x200B;과 **[!UICONTROL SFTP with SSH Key]** 중에서 선택할 수 있습니다.
 
-**[!UICONTROL SFTP with Password]** 연결의 경우 도메인, 포트, 사용자 이름 및 암호를 제공해야 합니다.
+![Connect Responsys 계정](../../assets/catalog/email-marketing/oracle-responsys/connection-type.png)
 
-**[!UICONTROL SFTP with SSH Key]** 연결의 경우 도메인, 포트, 사용자 이름 및 SSH 키를 제공해야 합니다.
+연결 유형에 따라 아래 정보를 입력하고 **[!UICONTROL Configure]**&#x200B;을 선택합니다.
+
+- **[!UICONTROL SFTP with Password]** 연결의 경우 [!UICONTROL Domain], [!UICONTROL Port], [!UICONTROL Username] 및 [!UICONTROL Password]를 제공해야 합니다.
+- **[!UICONTROL SFTP with SSH Key]** 연결의 경우 [!UICONTROL Domain], [!UICONTROL Port], [!UICONTROL Username] 및 [!UICONTROL SSH Key]를 제공해야 합니다.
+
+원하는 경우, RSA 형식 공개 키를 첨부하여 PGP/GPG를 사용하여 암호화를 **[!UICONTROL Key]** 섹션 아래의 내보낸 파일에 추가할 수 있습니다. 공개 키는 [!DNL Base64] 인코딩 문자열로 작성해야 합니다.
 
 ![Responsys 정보 입력](../../assets/catalog/email-marketing/oracle-responsys/account-info.png)
 
-**[!UICONTROL Setup]** 단계에서 아래와 같이 대상에 대한 관련 정보를 입력합니다.
+**[!UICONTROL Authentication]** 단계에서 아래와 같이 대상에 대한 관련 정보를 입력합니다.
 - **[!UICONTROL Name]**:대상의 관련 이름을 선택합니다.
 - **[!UICONTROL Description]**:대상에 대한 설명을 입력합니다.
-- **[!UICONTROL Bucket name]**:Amazon S3 버킷으로, Platform은 데이터 내보내기를 저장합니다. 입력은 3-63자 사이여야 합니다. 문자 또는 숫자로 시작하고 끝나야 합니다. 소문자, 숫자 또는 하이픈( - )만 포함해야 합니다. IP 주소(예: 192.100.1.1)으로 형식을 지정할 수 없습니다.
 - **[!UICONTROL Folder Path]**:Platform에서 내보내기 데이터를 CSV 또는 탭으로 구분된 파일로 저장할 스토리지 위치에 경로를 제공합니다.
 - **[!UICONTROL File Format]**: **CSV** 또는  **TAB_DIPORTED**. 저장소 위치로 내보낼 파일 형식을 선택합니다.
-- **[!UICONTROL Marketing actions]**:마케팅 작업은 데이터를 대상에 내보내려는 의도를 나타냅니다. Adobe 정의 마케팅 작업 중에서 선택하거나 자신의 마케팅 작업을 만들 수 있습니다. 마케팅 작업에 대한 자세한 내용은 Adobe Experience Platform](../../../data-governance/policies/overview.md) 페이지의 [데이터 거버넌스 페이지를 참조하십시오. 개별 Adobe 정의 마케팅 작업에 대한 자세한 내용은 [데이터 사용 정책 개요](../../../data-governance/policies/overview.md)를 참조하십시오.
+- **[!UICONTROL Marketing actions]**:마케팅 작업은 데이터를 대상에 내보내려는 의도를 나타냅니다. Adobe 정의 마케팅 작업 중에서 선택하거나 자신의 마케팅 작업을 만들 수 있습니다. 마케팅 작업에 대한 자세한 내용은 [데이터 사용 정책 개요](../../../data-governance/policies/overview.md)를 참조하십시오.
+
+<!--
+
+Commenting out Amazon S3 bucket part for now until support is clarified
+
+- **[!UICONTROL Bucket name]**: Your Amazon S3 bucket, where Platform will deposit the data export. Your input must be between 3 and 63 characters long. Must begin and end with a letter or number. Must contain only lowercase letters, numbers, or hyphens ( - ). Must not be formatted as an IP address (for example, 192.100.1.1).
+
+-->
 
 ![Responsys 기본 정보](../../assets/catalog/email-marketing/oracle-responsys/basic-information.png)
 
@@ -55,7 +67,7 @@ ht-degree: 0%
 
 ## 대상 특성 {#destination-attributes}
 
-[세그먼트](../../ui/activate-destinations.md)를 [!DNL Oracle Responsys] 대상으로 활성화하는 경우 [union schema](../../../profile/home.md#profile-fragments-and-union-schemas)에서 고유한 식별자를 선택하는 것이 좋습니다. 대상으로 내보낼 고유 식별자 및 기타 XDM 필드를 선택합니다. 자세한 내용은 이메일 마케팅 대상의 내보낸 파일](./overview.md#destination-attributes)에서 대상 특성으로 사용할 스키마 필드 선택을 참조하십시오.[
+[세그먼트](../../ui/activate-destinations.md)를 [!DNL Oracle Responsys] 대상에 활성화할 경우 Adobe은 [union schema](../../../profile/home.md#profile-fragments-and-union-schemas)에서 고유한 식별자를 선택하는 것이 좋습니다. 대상으로 내보낼 고유 식별자 및 기타 XDM 필드를 선택합니다. 자세한 내용은 [내보낸 파일에서 대상 특성으로 사용할 스키마 필드 선택](./overview.md#destination-attributes)을 참조하십시오.
 
 ## 내보낸 데이터 {#exported-data}
 
@@ -63,4 +75,4 @@ ht-degree: 0%
 
 ## 데이터 가져오기를 [!DNL Oracle Responsys] {#import-data-into-responsys}에 설정
 
-플랫폼을 [!DNL Amazon S3] 또는 SFTP 스토리지에 연결한 후 저장소 위치에서 [!DNL Oracle Responsys]로 데이터 가져오기를 설정해야 합니다. 이를 수행하는 방법에 대한 자세한 내용은 [!DNL Oracle Responsys Help Center]의 [연락처 또는 계정 가져오기](https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCEA/Connect_WizardUpload.htm)를 참조하십시오.
+[!DNL Platform]을(를) SFTP 저장소에 연결한 후 저장소 위치에서 [!DNL Oracle Responsys]으로 데이터 가져오기를 설정해야 합니다. 이를 수행하는 방법에 대한 자세한 내용은 [!DNL Oracle Responsys Help Center]의 [연락처 또는 계정 가져오기](https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCEA/Connect_WizardUpload.htm)를 참조하십시오.
