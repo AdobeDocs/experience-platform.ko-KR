@@ -4,7 +4,7 @@ title: 소셜 네트워크 대상 만들기
 type: 튜토리얼
 description: Adobe Experience Platform에서 소셜 네트워크 및 계정에 연결하는 방법을 알아봅니다.
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 02754055e2be8a45a0699386cb559dad8f25717c
 workflow-type: tm+mt
 source-wordcount: '433'
 ht-degree: 0%
@@ -54,7 +54,7 @@ ht-degree: 0%
 >
 > [!DNL LinkedIn] 대상의 경우 **[!UICONTROL Account ID]**&#x200B;은 [!DNL LinkedIn Campaign Manager Account ID]입니다. 이 ID는 [!DNL LinkedIn Campaign Manager]에서 찾을 수 있습니다.
 
-또한 이 단계에서 이 대상에 적용할 **[!UICONTROL Marketing action]**&#x200B;을 선택할 수 있습니다. 마케팅 작업은 데이터를 대상에 내보내려는 의도를 나타냅니다. Adobe 정의 마케팅 작업 중에서 선택하거나 자신의 마케팅 작업을 만들 수 있습니다. 마케팅 작업에 대한 자세한 내용은 [데이터 사용 정책 개요](../../../data-governance/policies/overview.md)를 참조하십시오.
+이 단계에서 이 대상에 적용할 **[!UICONTROL Marketing action]**&#x200B;을 선택할 수도 있습니다. 마케팅 작업은 데이터를 대상에 내보내려는 의도를 나타냅니다. Adobe 정의 마케팅 작업 중에서 선택하거나 자신의 마케팅 작업을 만들 수 있습니다. 마케팅 작업에 대한 자세한 내용은 [데이터 사용 정책 개요](../../../data-governance/policies/overview.md)를 참조하십시오.
 
 위의 필드를 채운 후 **[!UICONTROL Create Destination]**&#x200B;을 선택합니다.
 
