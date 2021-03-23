@@ -3,9 +3,9 @@ keywords: Azure Blob;Blob 대상;s3;azure Blob 대상
 title: Azure Blob 연결
 description: Azure Blob 저장소에 대한 실시간 아웃바운드 연결을 만들어 Adobe Experience Platform에서 탭으로 구분된 데이터 또는 CSV 데이터 파일을 주기적으로 내보냅니다.
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 02754055e2be8a45a0699386cb559dad8f25717c
 workflow-type: tm+mt
-source-wordcount: '580'
+source-wordcount: '577'
 ht-degree: 1%
 
 ---
@@ -56,7 +56,7 @@ ht-degree: 1%
 
 [!DNL Blob] 연결 문자열 구성에 대한 자세한 내용은 Microsoft 설명서에서 [Azure 저장소 계정](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string#configure-a-connection-string-for-an-azure-storage-account)에 대한 연결 문자열 구성을 참조하십시오.
 
-RSA 형식 공개 키를 첨부하여 내보낸 파일에 암호화를 추가할 수도 있습니다. 이 공개 키 **는 Base64 인코딩 문자열로 기록되어야 합니다.**
+RSA 형식 공개 키를 첨부하여 내보낸 파일에 암호화를 추가할 수도 있습니다. 공개 키는 [!DNL Base64] 인코딩 문자열로 작성해야 합니다.
 
 ![새 계정](../../assets/catalog/cloud-storage/blob/new.png)
 
