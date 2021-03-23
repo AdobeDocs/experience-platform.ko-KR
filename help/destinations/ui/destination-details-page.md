@@ -1,12 +1,12 @@
 ---
 keywords: 대상;대상;대상 세부 정보 페이지;대상 세부 정보 페이지
 title: 대상 세부 사항 보기
-description: '개별 대상에 대한 세부 사항 페이지에서는 대상 이름, ID, 대상에 매핑된 세그먼트, 활성화를 편집하고 데이터 흐름을 활성화 및 비활성화하는 컨트롤과 같은 대상 세부 사항에 대한 개요를 제공합니다. '
-seo-description: '개별 대상에 대한 세부 사항 페이지에서는 대상 이름, ID, 대상에 매핑된 세그먼트, 활성화를 편집하고 데이터 흐름을 활성화 및 비활성화하는 컨트롤과 같은 대상 세부 사항에 대한 개요를 제공합니다. '
+description: '개별 대상에 대한 세부 사항 페이지에서는 대상 세부 사항에 대한 개요를 제공합니다. 대상 세부 사항에는 대상 이름, ID, 대상에 매핑된 세그먼트, 활성화를 편집하고 데이터 흐름을 활성화 및 비활성화하기 위한 컨트롤이 포함됩니다. '
+seo-description: '개별 대상에 대한 세부 사항 페이지에서는 대상 세부 사항에 대한 개요를 제공합니다. 대상 세부 사항에는 대상 이름, ID, 대상에 매핑된 세그먼트, 활성화를 편집하고 데이터 흐름을 활성화 및 비활성화하기 위한 컨트롤이 포함됩니다. '
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 49905060a18fc94fe524401fb3cf86f212b639ce
 workflow-type: tm+mt
-source-wordcount: '697'
+source-wordcount: '698'
 ht-degree: 0%
 
 ---
@@ -45,7 +45,7 @@ Adobe Experience Platform 사용자 인터페이스에서 대상의 속성 및 �
 | 오른쪽 레일 항목 | 설명 |
 | --- | --- |
 | [!UICONTROL Activate] | 대상에 매핑되는 세그먼트를 편집하려면 이 컨트롤을 선택합니다. 자세한 내용은 [대상](./activate-destinations.md)에 세그먼트 활성화에 대한 안내서를 참조하십시오. |
-| [!UICONTROL Delete] | 이 데이터 흐름을 삭제하고 이전에 활성화한 세그먼트(있는 경우)를 매핑하지 않을 수 있습니다. |
+| [!UICONTROL Delete] | 이 데이터 흐름을 삭제하고 이전에 활성화한 세그먼트(있는 경우)를 매핑 해제할 수 있습니다. |
 | [!UICONTROL Destination name] | 대상 이름을 업데이트하려면 이 필드를 편집할 수 있습니다. |
 | [!UICONTROL Description] | 대상에 선택적 설명을 업데이트하거나 추가하기 위해 이 필드를 편집할 수 있습니다. |
 | [!UICONTROL Destination] | 대상이 전송되는 대상 플랫폼을 나타냅니다. 자세한 내용은 [대상 카탈로그](../catalog/overview.md)를 참조하십시오. |
