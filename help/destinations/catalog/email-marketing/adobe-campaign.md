@@ -3,9 +3,9 @@ keywords: 이메일;이메일;이메일;이메일 대상;adobe campaign;campaign
 title: Adobe Campaign 연결
 description: Adobe Campaign은 온라인과 오프라인 등 모든 채널에서 캠페인을 개인화하고 전달할 수 있는 솔루션 집합입니다.
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 02754055e2be8a45a0699386cb559dad8f25717c
 workflow-type: tm+mt
-source-wordcount: '794'
+source-wordcount: '762'
 ht-degree: 0%
 
 ---
@@ -38,12 +38,12 @@ Connect 대상 작업 과정의 **[!UICONTROL Account]** 단계에서 저장소 
 
 ![캠페인 설정 마법사](../../assets/catalog/email-marketing/adobe-campaign/connection-type.png)
 
-- **[!UICONTROL Amazon S3]** 연결의 경우 액세스 키 ID와 비밀 액세스 키를 제공해야 합니다.
-- **[!UICONTROL SFTP with Password]** 연결의 경우 도메인, 포트, 사용자 이름 및 암호를 제공해야 합니다.
-- **[!UICONTROL SFTP with SSH Key]** 연결의 경우 도메인, 포트, 사용자 이름 및 SSH 키를 제공해야 합니다.
+- **[!UICONTROL Amazon S3]** 연결의 경우 [!UICONTROL Access Key ID] 및 [!UICONTROL Secret Access Key]를 제공해야 합니다.
+- **[!UICONTROL SFTP with Password]** 연결의 경우 [!UICONTROL Domain], [!UICONTROL Port], [!UICONTROL Username] 및 [!UICONTROL Password]를 제공해야 합니다.
+- **[!UICONTROL SFTP with SSH Key]** 연결의 경우 [!UICONTROL Domain], [!UICONTROL Port], [!UICONTROL Username] 및 [!UICONTROL SSH Key]를 제공해야 합니다.
 - **[!UICONTROL Azure Blob]** 연결의 경우 연결 문자열을 제공해야 합니다.
 
-원하는 경우, RSA 형식 공개 키를 첨부하여 PGP/GPG를 사용하여 암호화를 **[!UICONTROL Key]** 섹션 아래의 내보낸 파일에 추가할 수 있습니다. 이 공개 키 **는 Base64 인코딩 문자열로 기록되어야 합니다.**
+원하는 경우, RSA 형식 공개 키를 첨부하여 PGP/GPG를 사용하여 암호화를 **[!UICONTROL Key]** 섹션 아래의 내보낸 파일에 추가할 수 있습니다. 공개 키는 [!DNL Base64] 인코딩 문자열로 작성해야 합니다.
 
 ![캠페인 정보 입력](../../assets/catalog/email-marketing/adobe-campaign/account-info.png)
 
@@ -54,7 +54,7 @@ Connect 대상 작업 과정의 **[!UICONTROL Account]** 단계에서 저장소 
 - **[!UICONTROL Folder Path]**:내보내기 데이터를 CSV 또는 탭 구분 파일 [!DNL Platform] 로 저장할 저장 위치에 경로를 제공합니다.
 - **[!UICONTROL Container]**: *Blob 연결의 경우*. 폴더 경로가 있는 Blob가 들어 있는 컨테이너입니다.
 - **[!UICONTROL File Format]**: **CSV** 또는  **TAB_DIPORTED**. 저장소 위치로 내보낼 파일 형식을 선택합니다.
-- **[!UICONTROL Marketing actions]**:마케팅 작업은 데이터를 대상에 내보내려는 의도를 나타냅니다. Adobe 정의 마케팅 작업 중에서 선택하거나 자신의 마케팅 작업을 만들 수 있습니다. 마케팅 작업에 대한 자세한 내용은 [데이터 사용 정책 개요](../../../data-governance/policies/overview.md) 페이지를 참조하십시오. 같은 문서에서 [Adobe 정의 마케팅 작업](../../../data-governance/policies/overview.md#core-actions)도 참조하십시오.
+- **[!UICONTROL Marketing actions]**:마케팅 작업은 데이터를 대상에 내보내려는 의도를 나타냅니다. Adobe 정의 마케팅 작업 중에서 선택하거나 자신의 마케팅 작업을 만들 수 있습니다. 마케팅 작업에 대한 자세한 내용은 [데이터 사용 정책 개요](../../../data-governance/policies/overview.md) 페이지를 참조하십시오.
 
 ![캠페인 기본 정보](../../assets/catalog/email-marketing/adobe-campaign/basic-information.png)
 
@@ -66,7 +66,7 @@ Connect 대상 작업 과정의 **[!UICONTROL Account]** 단계에서 저장소 
 
 ## 대상 특성 {#destination-attributes}
 
-[세그먼트](../../ui/activate-destinations.md)를 Adobe Campaign 대상에 활성화하는 경우 [공용 스키마](../../../profile/home.md#profile-fragments-and-union-schemas)에서 고유한 식별자를 선택하는 것이 좋습니다. 대상으로 내보낼 고유 식별자 및 기타 XDM 필드를 선택합니다. 자세한 내용은 이메일 마케팅 대상 문서에서 내보낸 파일](./overview.md#destination-attributes)에서 대상 특성으로 사용할 스키마 필드 선택을 참조하십시오.[
+[세그먼트](../../ui/activate-destinations.md)를 Adobe Campaign 대상에 활성화할 때 [공용 스키마](../../../profile/home.md#profile-fragments-and-union-schemas)에서 고유 식별자를 선택하는 것이 좋습니다. 대상으로 내보낼 고유 식별자 및 기타 XDM 필드를 선택합니다. 자세한 내용은 [내보낸 파일에서 대상 특성으로 사용할 스키마 필드 선택](./overview.md#destination-attributes)을 참조하십시오.
 
 ## 내보낸 데이터 {#exported-data}
 
