@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;홈;인기 항목;스키마;스키마;스키마;믹신;믹신;데이터 유형;데이터 유형;데이터 유형;데이터 유형;데이터 유형;데이터 유형;기본 ID;기본 ID;XDM 개별 프로필;XDM 필드;데이터 유형;경험 이벤트;XDM 경험 이벤트;XDM ExperienceEvent;experienceEvent;experienceEvent;experience XDM Experienceevent;스키마 디자인;클래스;클래스;클래스;데이터 유형;데이터 유형;데이터 유형;스키마;ID맵;ID 맵;스키마 디자인;맵;맵;결합 스키마;클래스;클래스;클래스;데이터 유형;데이터 유형;스키마;스키마;ID 맵;스키마 디자인;매핑;조합 스키마;공용
 solution: Experience Platform
-tiTle: Basics of Schema Composition
-topic: overview
+title: 스키마 구성 기초
+topic: 개요
 description: 이 문서에서는 XDM(Experience Data Model) 스키마 및 Adobe Experience Platform에서 사용할 스키마를 작성하기 위한 기본 블록, 원칙 및 모범 사례에 대해 설명합니다.
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 8448b5dcedc42898d8a403aae1e044841bc2734c
 workflow-type: tm+mt
-source-wordcount: '3161'
+source-wordcount: '3142'
 ht-degree: 0%
 
 ---
@@ -60,13 +60,13 @@ ht-degree: 0%
 
 레코드 및 시간 시리즈 스키마 모두 ID 맵(`xdm:identityMap`)을 포함합니다. 이 필드에는 다음 섹션에 설명된 대로 &quot;ID&quot;로 표시된 필드에서 추출되는 대상의 ID 표현이 포함되어 있습니다.
 
-### [!UICONTROL ID] {#identity}
+### [!UICONTROL Identity] {#identity}
 
 스키마는 데이터를 [!DNL Experience Platform]에 인제스트하는 데 사용됩니다. 여러 서비스에서 이 데이터를 사용하여 개별 엔티티의 단일 뷰를 만들 수 있습니다. 따라서 고객 ID에 대해 생각해 볼 때와 데이터가 어디에서 오는지에 관계없이 주체를 식별하는 데 사용할 수 있는 필드를 고려할 때 중요합니다.
 
-이 프로세스를 돕기 위해 스키마 내의 키 필드를 ID로 표시할 수 있습니다. 데이터를 수집하면 해당 필드의 데이터가 해당 개인에 대한 &quot;[!UICONTROL ID 그래프]&quot;에 삽입됩니다. 그런 다음 그래프 데이터에 [[!DNL Real-time Customer Profile]](../../profile/home.md) 및 다른 [!DNL Experience Platform] 서비스에서 액세스하여 각 개별 고객에 대한 연결된 보기를 제공할 수 있습니다.
+이 프로세스를 돕기 위해 스키마 내의 키 필드를 ID로 표시할 수 있습니다. 데이터를 수집하면 해당 필드의 데이터가 해당 개인에 대한 &quot;[!UICONTROL Identity Graph]&quot;에 삽입됩니다. 그런 다음 그래프 데이터에 [[!DNL Real-time Customer Profile]](../../profile/home.md) 및 다른 [!DNL Experience Platform] 서비스에서 액세스하여 각 개별 고객에 대한 연결된 보기를 제공할 수 있습니다.
 
-일반적으로 &quot;[!UICONTROL ID]&quot;로 표시된 필드는 다음과 같습니다.이메일 주소, 전화 번호, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html), CRM ID 또는 기타 고유 ID 필드. 또한 &quot;[!UICONTROL ID]&quot; 필드에도 적합한 고유한 식별자를 고려해야 합니다.
+일반적으로 &quot;[!UICONTROL Identity]&quot;으로 표시된 필드는 다음과 같습니다.이메일 주소, 전화 번호, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html), CRM ID 또는 기타 고유 ID 필드. 또한 &quot;[!UICONTROL Identity]&quot; 필드에도 적합한 고유한 식별자를 고려해야 합니다.
 
 가장 강력한 프로파일을 구축하기 위해 데이터를 취합할 수 있도록 스키마 계획 단계 동안 고객 ID를 고려하는 것이 중요합니다. ID 정보를 통해 고객에게 디지털 경험을 전달하는 데 도움이 되는 방법에 대한 자세한 내용은 [Adobe Experience Platform Identity Service](../../identity-service/home.md)의 개요를 참조하십시오.
 
@@ -153,7 +153,7 @@ Mixins는 해당 클래스가 나타내는 데이터(기록 또는 시간 시리
 
 [!DNL Experience Platform] 다양한 표준 Adobe 혼합을 포함하며 공급업체가 사용자를 위한 믹스를 정의하고 개별 사용자가 고유한 개념으로 믹싱을 정의할 수 있도록 합니다.
 
-예를 들어 &quot;[!UICONTROL 로열티 멤버]&quot; 스키마에 대해 &quot;[!UICONTROL 이름]&quot; 및 &quot;[!UICONTROL 집 주소]&quot;와 같은 세부 정보를 캡처하려면 이러한 일반적인 개념을 정의하는 표준 믹스를 사용할 수 있습니다. 그러나 일반적이지 않은 사용 사례(예: &quot;[!UICONTROL 로열티 프로그램 수준]&quot;)에만 해당하는 개념이 사전 정의된 믹신이 없는 경우가 많습니다. 이 경우 이 정보를 캡처하려면 자신의 믹싱을 정의해야 합니다.
+예를 들어 &quot;[!UICONTROL Loyalty Members]&quot; 스키마에 대해 &quot;[!UICONTROL First Name]&quot; 및 &quot;[!UICONTROL Home Address]&quot;과 같은 세부 정보를 캡처하려면 이러한 일반적인 개념을 정의하는 표준 믹스를 사용할 수 있습니다. 그러나 일반적이지 않은 사용 사례(예: &quot;[!UICONTROL Loyalty Program Level]&quot;)에만 해당하는 개념이 사전 정의된 믹신이 없는 경우가 많습니다. 이 경우 이 정보를 캡처하려면 자신의 믹싱을 정의해야 합니다.
 
 스키마는 &quot;0개 이상&quot; 혼합으로 구성되므로 믹스를 전혀 사용하지 않고 유효한 스키마를 구성할 수 있습니다.
 
@@ -171,7 +171,7 @@ Mixins는 해당 클래스가 나타내는 데이터(기록 또는 시간 시리
 
 ### 필드
 
-필드는 스키마의 가장 기본적인 구성 블록입니다. 필드는 특정 데이터 유형을 정의하여 포함할 수 있는 데이터 유형에 대한 제약 조건을 제공합니다. 이러한 기본 데이터 유형은 단일 필드를 정의하는 반면, 이전에 설명한 [데이터 유형](#data-type)에서는 여러 하위 필드를 정의하고 다양한 스키마 전체에서 동일한 다중 필드 구조를 다시 사용할 수 있습니다. 따라서 [!DNL Experience Platform] 은 필드의 &quot;데이터 유형&quot;을 레지스트리에 정의된 데이터 형식 중 하나로 정의하는 것 외에도 다음과 같은 기본 스칼라 형식을 지원합니다.
+필드는 스키마의 가장 기본적인 구성 블록입니다. 필드는 특정 데이터 유형을 정의하여 포함할 수 있는 데이터 유형에 대한 제약 조건을 제공합니다. 이러한 기본 데이터 유형은 단일 필드를 정의하는 반면, 이전에 설명한 [데이터 유형](#data-type)에서는 여러 하위 필드를 정의하고 다양한 스키마 전체에서 동일한 다중 필드 구조를 다시 사용할 수 있습니다. 따라서 [!DNL Experience Platform] 은 필드의 &quot;데이터 유형&quot;을 레지스트리에 정의된 데이터 유형 중 하나로 정의하는 것 외에도 다음과 같은 기본 스칼라 유형을 지원합니다.
 
 * 문자열
 * 정수
@@ -190,7 +190,7 @@ Mixins는 해당 클래스가 나타내는 데이터(기록 또는 시간 시리
 * Long
 * Short
 * 바이트
-* 날짜
+* Date
 * 날짜-시간
 * 맵
 
@@ -210,7 +210,7 @@ Mixins는 해당 클래스가 나타내는 데이터(기록 또는 시간 시리
 
 ### XDM 필드
 
-XDM은 기본 필드와 고유한 데이터 유형을 정의하는 기능 외에도 [!DNL Experience Platform] 서비스에서 암시적으로 이해되는 표준 필드 및 데이터 유형 세트를 제공하며 [!DNL Platform] 구성 요소에서 사용할 때 보다 일관적인 결과를 제공합니다.
+XDM은 기본 필드와 고유한 데이터 유형을 정의할 수 있는 기능 외에도 [!DNL Experience Platform] 서비스에서 암시적으로 이해되는 표준 필드 및 데이터 유형 세트를 제공하며 [!DNL Platform] 구성 요소에서 사용할 때 보다 일관적인 결과를 제공합니다.
 
 &quot;이름&quot; 및 &quot;이메일 주소&quot;와 같은 이러한 필드는 기본 스칼라 필드 형식을 벗어나는 추가된 의미를 포함하므로 [!DNL Platform] 동일한 XDM 데이터 형식을 공유하는 모든 필드가 동일한 방식으로 동작한다는 것을 알립니다. 이 동작은 데이터가 어디에서 오는지 또는 데이터가 사용 중인 [!DNL Platform] 서비스에 관계없이 일관되도록 신뢰할 수 있습니다.
 
@@ -220,11 +220,11 @@ XDM은 기본 필드와 고유한 데이터 유형을 정의하는 기능 외에
 
 스키마는 [!DNL Platform]에 인제스트될 데이터의 형식 및 구조를 나타내며 컴포지션 모델을 사용하여 빌드됩니다. 이전에 언급했듯이 이러한 스키마는 해당 클래스와 호환되는 클래스 및 0개 이상의 혼합으로 구성됩니다.
 
-예를 들어 소매 저장소에서 구매를 설명하는 스키마는 &quot;[!UICONTROL 스토어 트랜잭션]&quot;이라고 할 수 있습니다. 스키마는 표준 [!UICONTROL Commerce] 믹싱과 사용자 정의 [!UICONTROL 제품 정보] 믹싱과 결합된 [!DNL XDM ExperienceEvent] 클래스를 구현합니다.
+예를 들어 소매 저장소에서 구매를 설명하는 스키마를 &quot;[!UICONTROL Store Transactions]&quot;이라고 할 수 있습니다. 스키마는 표준 [!UICONTROL Commerce] 믹싱 및 사용자 정의 [!UICONTROL Product Info] 믹싱과 결합된 [!DNL XDM ExperienceEvent] 클래스를 구현합니다.
 
-웹 사이트 트래픽을 추적하는 다른 스키마를 &quot;[!UICONTROL 웹 방문 횟수]&quot;라고 할 수 있습니다. 또한 [!DNL XDM ExperienceEvent] 클래스를 구현하지만 이번에는 표준 [!UICONTROL Web] 믹싱을 결합합니다.
+웹 사이트 트래픽을 추적하는 다른 스키마를 &quot;[!UICONTROL Web Visits]&quot;이라고 할 수 있습니다. 또한 [!DNL XDM ExperienceEvent] 클래스를 구현하지만 이번에는 표준 [!UICONTROL Web] 믹싱을 결합합니다.
 
-아래 다이어그램은 이러한 스키마와 각 믹싱에 의해 기고한 필드를 보여줍니다. 또한 이 안내서에 앞서 언급한 &quot;[!UICONTROL Attributes Members]&quot; 스키마를 포함하여 [!DNL XDM Individual Profile] 클래스를 기반으로 하는 2개의 스키마가 포함되어 있습니다.
+아래 다이어그램은 이러한 스키마와 각 믹싱에 의해 기고한 필드를 보여줍니다. 또한 이 안내서에 앞서 언급한 &quot;[!UICONTROL Loyalty Members]&quot; 스키마를 포함하여 [!DNL XDM Individual Profile] 클래스를 기반으로 하는 2개의 스키마가 포함되어 있습니다.
 
 ![](../images/schema-composition/composition.png)
 
@@ -296,4 +296,4 @@ UI를 사용하여 스키마 작성을 시작하려면 이 문서 전체에 언�
 
 **반대**:
 
-* 스키마 내의 자유형 필드의 위치는 애드혹(스키마 편집기 내의 알파벳 순서로 표시됨을 의미합니다. 이렇게 하면 스키마가 구조화되어 있지 않고 유사한 자유 형식 필드는 이름에 따라 멀어질 수 있습니다.
+* 스키마 내의 자유 형식 필드의 위치는 애드혹(스키마 편집기 내에서 알파벳 순서로 표시됨을 의미합니다. 이렇게 하면 스키마가 구조화되어 있지 않고 유사한 자유 형식 필드는 이름에 따라 멀어질 수 있습니다.
