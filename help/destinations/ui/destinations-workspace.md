@@ -4,9 +4,9 @@ title: 대상 작업 공간
 description: 대상 작업 공간은 아래의 섹션에 설명된 4개의 섹션인 카탈로그, 찾아보기, 계정 및 시스템 보기로 구성됩니다.
 seo-description: Adobe Experience Platform의 왼쪽 탐색 막대에서 대상을 선택하여 대상 작업 영역에 액세스합니다.
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 49905060a18fc94fe524401fb3cf86f212b639ce
 workflow-type: tm+mt
-source-wordcount: '946'
+source-wordcount: '934'
 ht-degree: 1%
 
 ---
@@ -26,7 +26,7 @@ Adobe Experience Platform의 왼쪽 탐색 막대에서 **[!UICONTROL Destinatio
 
 **[!UICONTROL Catalog]** 탭에는 데이터를 보낼 수 있는 플랫폼에서 사용할 수 있는 모든 대상 목록이 표시됩니다.
 
-플랫폼 사용자 인터페이스는 대상 카탈로그 페이지에 다양한 검색 및 필터 옵션을 제공합니다.
+플랫폼 사용자 인터페이스는 대상 카탈로그 페이지에 여러 검색 및 필터 옵션을 제공합니다.
 
 * 페이지의 검색 기능을 사용하여 특정 대상을 찾습니다.
 * [!UICONTROL Categories] 컨트롤을 사용하여 대상을 필터링합니다.
@@ -35,7 +35,7 @@ Adobe Experience Platform의 왼쪽 탐색 막대에서 **[!UICONTROL Destinatio
 
 ![대상 필터링 및 검색 데모](../assets/ui/workspace/destinations-search-and-filter.gif)
 
-대상 카드에는 **[!UICONTROL Configure]** 또는 **[!UICONTROL Activate]** 컨트롤과 더 많은 옵션을 표시하는 보조 컨트롤이 포함되어 있습니다. 이러한 모든 내용은 아래에 설명되어 있습니다.
+대상 카드에는 **[!UICONTROL Configure]** 또는 **[!UICONTROL Activate]** 컨트롤과 더 많은 옵션을 표시하는 보조 컨트롤이 포함되어 있습니다. 이러한 컨트롤은 아래에 설명되어 있습니다.
 
 | 제어 | 설명 |
 ---------|----------
@@ -47,7 +47,7 @@ Adobe Experience Platform의 왼쪽 탐색 막대에서 **[!UICONTROL Destinatio
 
 ![대상 카드의 컨트롤](../assets/ui/workspace/destination-card-options.png)
 
-카탈로그에서 대상 카드를 선택하여 오른쪽 레일을 엽니다.  여기에서 대상에 대한 설명을 볼 수 있습니다. 오른쪽 레일은 위 표에 설명된 것과 동일한 컨트롤, 대상에 대한 설명, 대상 카테고리 및 유형을 표시합니다.
+카탈로그에서 대상 카드를 선택하여 오른쪽 레일을 엽니다. 여기에서 대상에 대한 설명을 볼 수 있습니다. 오른쪽 레일은 위 표에 설명된 것과 동일한 컨트롤, 대상에 대한 설명, 대상 카테고리 및 유형을 표시합니다.
 
 ![대상 카탈로그 옵션](../assets/ui/workspace/destination-right-rail.png)
 
@@ -98,14 +98,14 @@ Adobe Experience Platform의 왼쪽 탐색 막대에서 **[!UICONTROL Destinatio
 | 요소 | 설명 |
 ---------|----------
 | 이름 | 활성화 과정을 위해 입력한 이름이 이 대상으로 전송됩니다. 동일한 열에는 2개의 컨트롤이 있습니다.[!UICONTROL Activate ] 및 [!UICONTROL Delete destination]. |
-| 마지막 흐름 실행 상태 | 마지막 데이터 흐름 실행의 상태입니다. 데이터 흐름 실행에 대한 자세한 내용은 [대상 세부 사항 보기](destination-details-page.md)를 참조하십시오. |
-| 마지막 흐름 실행 날짜 | 마지막 데이터 흐름 실행이 발생한 시간 및 날짜입니다. 데이터 흐름 실행에 대한 자세한 내용은 [대상 세부 사항 보기](destination-details-page.md)를 참조하십시오. |
+| [!UICONTROL Last Flow Run Status] | 마지막 데이터 흐름 실행의 상태입니다. 데이터 흐름 실행에 대한 자세한 내용은 [대상 세부 사항 보기](destination-details-page.md)를 참조하십시오. |
+| [!UICONTROL Last Flow Run Date] | 마지막 데이터 흐름 실행이 발생한 시간 및 날짜입니다. 데이터 흐름 실행에 대한 자세한 내용은 [대상 세부 사항 보기](destination-details-page.md)를 참조하십시오. |
 | [!UICONTROL Destination] | 정품 인증 과정에 대해 선택한 대상 플랫폼입니다. |
 | [!UICONTROL Connection Type] | 저장소 버킷 또는 대상에 대한 연결 유형을 나타냅니다. <ul><li>이메일 마케팅 대상:S3, FTP 또는 [!DNL Azure Blob]일 수 있습니다.</li><li>실시간 광고 대상:서버 간</li><li>스트리밍 대상:[!DNL Azure Event Hubs] 또는 [!DNL Amazon Kinesis]일 수 있습니다.</li></ul> |
 | [!UICONTROL Username] | 대상 플로우에 대해 선택한 계정 자격 증명입니다. |
 | [!UICONTROL Activation Data] | 이 대상에 대해 활성화되는 세그먼트 수를 나타냅니다. 활성화된 세그먼트에 대한 자세한 내용을 보려면 이 컨트롤을 선택합니다. 활성화된 세그먼트에 대한 자세한 내용은 대상 세부 정보 페이지에서 [활성화 데이터](/help/destinations/ui/destination-details-page.md#activation-data)를 참조하십시오. |
 | [!UICONTROL Created] | 대상으로 활성화 흐름이 만들어진 날짜 및 UTC 시간입니다. |
-| [!UICONTROL Status] | `Active` 또는 `Inactive`. 데이터가 현재 이 대상에 대해 활성화되고 있는지 여부를 나타냅니다. 상태를 편집하려면 [활성화 비활성화](./activate-destinations.md#disable-activation)를 참조하십시오. |
+| [!UICONTROL Status] | `Active` 또는 `Inactive`. 데이터가 이 대상에 활성화되는지 여부를 나타냅니다. 상태를 편집하려면 [활성화 비활성화](./activate-destinations.md#disable-activation)를 참조하십시오. |
 
 오른쪽 레일의 대상에 대한 자세한 정보를 표시하려면 대상 행을 클릭합니다.
 
