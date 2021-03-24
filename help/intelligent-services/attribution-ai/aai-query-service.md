@@ -2,12 +2,12 @@
 keywords: 인사이트;기여도 분석 ai;기여도 분석 ai 인사이트;AAI 쿼리 서비스;기여도 분석 쿼리;기여도 분석 점수
 solution: Intelligent Services, Experience Platform
 title: 쿼리 서비스를 사용하여 속성 점수 분석
-topic: Attribution AI queries
+topic: Attribution AI 쿼리
 description: Adobe Experience Platform 쿼리 서비스를 사용하여 Attribution AI 점수를 분석하는 방법을 알아봅니다.
 translation-type: tm+mt
-source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
+source-git-commit: d83244ac93830b0e40f6d14e87497d4cb78544d9
 workflow-type: tm+mt
-source-wordcount: '487'
+source-wordcount: '581'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 ## 데이터 경로 찾기
 
-Adobe Experience Platform UI의 왼쪽 탐색 영역에서 **[!UICONTROL 데이터 세트]**&#x200B;를 선택합니다. **[!UICONTROL 데이터 집합]** 페이지가 나타납니다. 그런 다음 **[!UICONTROL 찾아보기]** 탭을 선택하고 Attribution AI 점수에 대한 출력 데이터 세트를 찾습니다.
+Adobe Experience Platform UI의 왼쪽 탐색 영역에서 **[!UICONTROL Datasets]**&#x200B;을 선택합니다. **[!UICONTROL Datasets]** 페이지가 나타납니다. 그런 다음 **[!UICONTROL Browse]** 탭을 선택하고 Attribution AI 점수에 대한 출력 데이터 세트를 찾습니다.
 
 ![인스턴스 액세스](./images/aai-query/datasets_browse.png)
 
@@ -33,7 +33,7 @@ Adobe Experience Platform UI의 왼쪽 탐색 영역에서 **[!UICONTROL 데이�
 
 ![데이터 집합 활동 페이지](./images/aai-query/select_preview.png)
 
-데이터 세트 활동 페이지 내에서 오른쪽 위 모서리에서 **[!UICONTROL 데이터 세트 미리 보기]**&#x200B;를 선택하여 데이터를 미리 보고 예상대로 인제스트되었는지 확인합니다.
+데이터 세트 활동 페이지 내에서 오른쪽 위 모서리의 **[!UICONTROL Preview dataset]**&#x200B;을 선택하여 데이터를 미리 보고 예상대로 인제스트되었는지 확인합니다.
 
 ![데이터 집합 미리 보기](./images/aai-query/preview_dataset.JPG)
 
@@ -41,17 +41,17 @@ Adobe Experience Platform UI의 왼쪽 탐색 영역에서 **[!UICONTROL 데이�
 
 ![스키마 선택](./images/aai-query/select_schema.png)
 
-채점 스키마를 사용하여 값을 선택하거나 검색할 수 있습니다. 선택하면 쿼리를 만들 때 사용할 경로를 복사할 수 있는 **[!UICONTROL 필드 속성]** 사이드 레일이 열립니다.
+채점 스키마를 사용하여 값을 선택하거나 검색할 수 있습니다. 선택하면 쿼리를 만들 때 사용할 경로를 복사할 수 있는 **[!UICONTROL Field properties]** 사이드 레일이 열립니다.
 
 ![패스 복사](./images/aai-query/copy_path.png)
 
 ## 액세스 쿼리 서비스
 
-플랫폼 UI 내에서 쿼리 서비스에 액세스하려면 왼쪽 탐색 메뉴에서 **[!UICONTROL 쿼리]**&#x200B;를 선택한 다음 **[!UICONTROL 찾아보기]** 탭을 선택합니다. 이전에 저장한 쿼리 목록이 로드됩니다.
+플랫폼 UI 내에서 쿼리 서비스에 액세스하려면 왼쪽 탐색 영역에서 **[!UICONTROL Queries]**&#x200B;을 선택한 다음 **[!UICONTROL Browse]** 탭을 선택합니다. 이전에 저장한 쿼리 목록이 로드됩니다.
 
 ![쿼리 서비스 검색](./images/aai-query/query_tab.png)
 
-그런 다음 오른쪽 위 모서리에서 **[!UICONTROL 쿼리 만들기]**&#x200B;를 선택합니다. 쿼리 편집기가 로드됩니다. 쿼리 편집기를 사용하여 점수 데이터를 사용하여 쿼리를 만들기 시작할 수 있습니다.
+그런 다음 오른쪽 위 모서리에서 **[!UICONTROL Create query]**&#x200B;을 선택합니다. 쿼리 편집기가 로드됩니다. 쿼리 편집기를 사용하여 점수 데이터를 사용하여 쿼리를 만들기 시작할 수 있습니다.
 
 ![쿼리 편집기](./images/aai-query/query_example.png)
 
@@ -59,7 +59,7 @@ Adobe Experience Platform UI의 왼쪽 탐색 영역에서 **[!UICONTROL 데이�
 
 ## 속성 점수 분석을 위한 쿼리 템플릿
 
-아래 쿼리는 다양한 점수 분석 전송을 위한 템플릿으로 사용될 수 있습니다. `_tenantId` 및 `your_score_output_dataset`을 채점 출력 스키마에 있는 올바른 값으로 대체해야 합니다.
+아래 쿼리는 다양한 점수 분석 시나리오에 대한 템플릿으로 사용될 수 있습니다. `_tenantId` 및 `your_score_output_dataset`을 채점 출력 스키마에 있는 올바른 값으로 대체해야 합니다.
 
 >[!NOTE]
 >
@@ -299,4 +299,58 @@ Adobe Experience Platform UI의 왼쪽 탐색 영역에서 **[!UICONTROL 데이�
         conversionName, num_dist_tp
     ORDER BY
         conversionName, num_dist_tp
+```
+
+### 스키마 병합 및 폭발 예
+
+이 쿼리는 구조체 열을 여러 단일 열로 병합하고 배열을 여러 행으로 확장합니다. 이것은 속성 점수를 CSV 형식으로 변환하는 데 도움이 됩니다. 이 쿼리의 결과에는 하나의 전환이 있고 각 행에서 해당 변환에 해당하는 터치포인트 중 하나가 있습니다.
+
+>[!TIP]
+>
+> 이 예에서 `_tenantId` 및 `your_score_output_dataset` 외에 `{COLUMN_NAME}`을(를) 교체해야 합니다. `COLUMN_NAME` 변수는 Attribution AI 인스턴스를 구성하는 동안 추가된 선택적인 통과 열 이름(보고 열) 값을 사용할 수 있습니다. 이 쿼리를 완료하는 데 필요한 `{COLUMN_NAME}` 값을 찾으려면 점수 출력 스키마를 검토하십시오.
+
+```sql
+SELECT 
+  segmentation,
+  conversionName,
+  scoreCreatedTime,
+  aaid, _id, eventMergeId,
+  conversion.eventType as conversion_eventType,
+  conversion.quantity as conversion_quantity,
+  conversion.eventSource as conversion_eventSource,
+  conversion.priceTotal as conversion_priceTotal,
+  conversion.timestamp as conversion_timestamp,
+  conversion.geo as conversion_geo,
+  conversion.receivedTimestamp as conversion_receivedTimestamp,
+  conversion.dataSource as conversion_dataSource,
+  conversion.productType as conversion_productType,
+  conversion.passThrough.{COLUMN_NAME} as conversion_passThru_column,
+  conversion.skuId as conversion_skuId,
+  conversion.product as conversion_product,
+  touchpointName,
+  touchPoint.campaignGroup as tp_campaignGroup, 
+  touchPoint.mediaType as tp_mediaType,
+  touchPoint.campaignTag as tp_campaignTag,
+  touchPoint.timestamp as tp_timestamp,
+  touchPoint.geo as tp_geo,
+  touchPoint.receivedTimestamp as tp_receivedTimestamp,
+  touchPoint.passThrough.{COLUMN_NAME} as tp_passThru_column,
+  touchPoint.campaignName as tp_campaignName,
+  touchPoint.mediaAction as tp_mediaAction,
+  touchPoint.mediaChannel as tp_mediaChannel,
+  touchPoint.eventid as tp_eventid,
+  scores.*
+FROM (
+  SELECT
+        _tenantId.your_score_output_dataset.segmentation,
+        _tenantId.your_score_output_dataset.conversionName,
+        _tenantId.your_score_output_dataset.scoreCreatedTime,
+        _tenantId.your_score_output_dataset.conversion,
+        _id,
+        eventMergeId,
+        map_values(identityMap)[0][0].id as aaid,
+        inline(_tenantId.your_score_output_dataset.touchpointsDetail)
+  FROM
+        your_score_output_dataset
+)
 ```
