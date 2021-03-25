@@ -5,15 +5,15 @@ title: ID 서비스 개요
 topic: 개요
 description: Adobe Experience Platform Identity Service를 사용하면 다양한 디바이스와 시스템에 ID를 연결시켜 효과적이고 개인화된 디지털 경험을 실시간으로 전달할 수 있으므로 고객의 행동과 행동을 보다 정확하게 파악할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: bb218fc0cca6fe74693e99747963058bd0dc962a
 workflow-type: tm+mt
-source-wordcount: '1733'
+source-wordcount: '1718'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Identity Service]개요
+# [!DNL Identity Service] 개요
 
 고객의 기대에 부응하는 디지털 경험을 제공하려면 고객을 완벽하게 이해해야 합니다. 고객 데이터가 서로 다른 시스템에서 단편화되어 있는 경우 이를 더욱 어렵게 만들 수 있으므로, 개별 고객은 여러 개의 &quot;ID&quot;를 갖고 있는 것처럼 보입니다. Adobe Experience Platform [!DNL Identity Service]을(를) 사용하면 디바이스 및 시스템 전반에 걸쳐 ID를 연결함으로써 효과적이고 개인화된 디지털 경험을 실시간으로 전달할 수 있으므로 고객의 행동과 행동을 보다 정확하게 파악할 수 있습니다.
 
@@ -63,10 +63,6 @@ ID는 엔티티(일반적으로 개별 개인)에 고유한 데이터입니다. 
 [!DNL Experience Platform] 다음 두 가지 개념을 통해 이 문제를 해결합니다. [id ](#identity-namespaces) namespacespaces 및  [id 그래프](#identity-graphs).
 
 다음 비디오는 ID 및 ID 그래프에 대한 이해를 지원하기 위한 것입니다. 다음 비디오에서는 ID 수집, ID 그래프 및 API의 3가지 기능에 대해 설명합니다. 또한 결정론적 및 확률적 알고리즘이 개인 ID 그래프를 구성하는 데 어떻게 사용되는지 설명하고, 개인 ID 그래프, Adobe Experience Platform Identity Service Co-Op 그래프 및 제3자 그래프의 역할에 대해 설명합니다.
-
->[!IMPORTANT]
->
-> 확률적 개인 그래프가 아직 개발 중에 있으며 나중에 출시될 예정입니다.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27841?quality=12&learn=on)
 
