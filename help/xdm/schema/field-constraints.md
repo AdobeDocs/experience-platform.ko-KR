@@ -2,13 +2,13 @@
 keywords: Experience Platform;홈;인기 항목;스키마;스키마;믹신;믹싱;데이터 유형;데이터 유형;데이터 유형;데이터 유형;데이터 유형;스키마 디자인;데이터 유형;데이터 유형;데이터 유형;데이터 유형;스키마;스키마;스키마 디자인;맵;맵;맵;스키마;home;publicin;mixin;mixin;data types;data;
 solution: Experience Platform
 title: XDM 필드 유형 제한
-topic: overview
+topic: 개요
 description: 매핑할 수 있는 다른 직렬화 형식 및 API에서 고유한 필드 유형을 정의하는 방법을 포함하여, XDM(경험 데이터 모델)의 필드 유형 제약 조건에 대한 참조입니다.
 translation-type: tm+mt
-source-git-commit: c9ea7471bb18c92443a5e45c14c8505ef3ccf30d
+source-git-commit: cc1fa21df0bb2d49106775c75a0cb3c4f4d73941
 workflow-type: tm+mt
-source-wordcount: '1079'
-ht-degree: 2%
+source-wordcount: '1052'
+ht-degree: 1%
 
 ---
 
@@ -151,7 +151,7 @@ XDM은 JSON 스키마 상단에 구축되므로 XDM 필드는 유형을 정의�
 
 >[!IMPORTANT]
 >
->아래 표에 나열된 표준 XDM 유형 중 [!UICONTROL Map] 유형도 포함됩니다. 맵은 데이터가 특정 값에 매핑되는 키로 표현되거나, 정적 스키마에 키를 합리적으로 포함할 수 없고 데이터 값으로 처리되어야 하는 경우 표준 스키마에서 사용됩니다.
+>아래 표에 나와 있는 표준 XDM 유형 중 [!UICONTROL Map] 유형도 포함되어 있습니다. 맵은 데이터가 특정 값에 매핑되는 키로 표현되거나, 정적 스키마에 키를 합리적으로 포함할 수 없고 데이터 값으로 처리되어야 하는 경우 표준 스키마에서 사용됩니다.
 >
 >맵 유형 필드는 업계 및 공급업체 스키마 사용을 위해 예약되어 있으므로 사용자가 정의하는 사용자 지정 리소스에는 사용할 수 없습니다. 아래 표에 포함된 맵 유형은 현재 XDM이 아래 나열된 형식으로 저장된 경우 기존 데이터를 XDM에 매핑하는 방법을 결정하는 데만 도움이 됩니다.
 
@@ -159,46 +159,46 @@ XDM은 JSON 스키마 상단에 구축되므로 XDM 필드는 유형을 정의�
 
 | XDM 유형 | 쪽모이 세공 | Spark SQL | Java |
 | --- | --- | --- | --- |
-| [!UICONTROL 문자열] | 유형:`BYTE_ARRAY`<br>주석:`UTF8` | `StringType` | `java.lang.String` |
-| [!UICONTROL 이중] | 유형: `DOUBLE` | `LongType` | `java.lang.Double` |
+| [!UICONTROL String] | 유형:`BYTE_ARRAY`<br>주석:`UTF8` | `StringType` | `java.lang.String` |
+| [!UICONTROL Double] | 유형: `DOUBLE` | `LongType` | `java.lang.Double` |
 | [!UICONTROL Long] | 유형: `INT64` | `LongType` | `java.lang.Long` |
-| [!UICONTROL 정수] | 유형:`INT32`<br>주석:`INT_32` | `IntegerType` | `java.lang.Integer` |
+| [!UICONTROL Integer] | 유형:`INT32`<br>주석:`INT_32` | `IntegerType` | `java.lang.Integer` |
 | [!UICONTROL Short] | 유형:`INT32`<br>주석:`INT_16` | `ShortType` | `java.lang.Short` |
-| [!UICONTROL 바이트] | 유형:`INT32`<br>주석:`INT_8` | `ByteType` | `java.lang.Short` |
+| [!UICONTROL Byte] | 유형:`INT32`<br>주석:`INT_8` | `ByteType` | `java.lang.Short` |
 | [!UICONTROL Date] | 유형:`INT32`<br>주석:`DATE` | `DateType` | `java.util.Date` |
 | [!UICONTROL DateTime] | 유형:`INT64`<br>주석:`TIMESTAMP_MILLIS` | `TimestampType` | `java.util.Date` |
-| [!UICONTROL 부울] | 유형: `BOOLEAN` | `BooleanType` | `java.lang.Boolean` |
-| [!UICONTROL 맵] | `MAP`-annotated group<br><br>(`<key-type>` 필수 `STRING`) | `MapType`<br><br>(`keyType` 필수 `StringType`) | `java.util.Map` |
+| [!UICONTROL Boolean] | 유형: `BOOLEAN` | `BooleanType` | `java.lang.Boolean` |
+| [!UICONTROL Map] | `MAP`-annotated group<br><br>(`<key-type>` 필수 `STRING`) | `MapType`<br><br>(`keyType` 필수 `StringType`) | `java.util.Map` |
 
 ### Scala, .NET 및 CosmosDB {#scala}
 
 | XDM 유형 | 스칼라 | .NET | CosmosDB |
 | --- | --- | --- | --- |
-| [!UICONTROL 문자열] | `String` | `System.String` | `String` |
-| [!UICONTROL 이중] | `Double` | `System.Double` | `Number` |
+| [!UICONTROL String] | `String` | `System.String` | `String` |
+| [!UICONTROL Double] | `Double` | `System.Double` | `Number` |
 | [!UICONTROL Long] | `Long` | `System.Int64` | `Number` |
-| [!UICONTROL 정수] | `Int` | `System.Int32` | `Number` |
+| [!UICONTROL Integer] | `Int` | `System.Int32` | `Number` |
 | [!UICONTROL Short] | `Short` | `System.Int16` | `Number` |
-| [!UICONTROL 바이트] | `Byte` | `System.SByte` | `Number` |
-| [!UICONTROL 날짜] | `java.util.Date` | `System.DateTime` | `String` |
+| [!UICONTROL Byte] | `Byte` | `System.SByte` | `Number` |
+| [!UICONTROL Date] | `java.util.Date` | `System.DateTime` | `String` |
 | [!UICONTROL DateTime] | `java.util.Date` | `System.DateTime` | `String` |
-| [!UICONTROL 부울] | `Boolean` | `System.Boolean` | `Boolean` |
-| [!UICONTROL 맵] | `Map` | (N/A) | `object` |
+| [!UICONTROL Boolean] | `Boolean` | `System.Boolean` | `Boolean` |
+| [!UICONTROL Map] | `Map` | (N/A) | `object` |
 
 ### MongoDB, Aerospike 및 Protobuf 2 {#mongo}
 
 | XDM 유형 | MongoDB | 공기스파이크 | Protobuf 2 |
 | --- | --- | --- | --- |
-| [!UICONTROL 문자열] | `string` | `String` | `string` |
-| [!UICONTROL 이중] | `double` | `Double` | `double` |
+| [!UICONTROL String] | `string` | `String` | `string` |
+| [!UICONTROL Double] | `double` | `Double` | `double` |
 | [!UICONTROL Long] | `long` | `Integer` | `int64` |
-| [!UICONTROL 정수] | `int` | `Integer` | `int32` |
+| [!UICONTROL Integer] | `int` | `Integer` | `int32` |
 | [!UICONTROL Short] | `int` | `Integer` | `int32` |
-| [!UICONTROL 바이트] | `int` | `Integer` | `int32` |
-| [!UICONTROL 날짜] | `date` | `Integer`<br>(Unix 밀리초) | `int64`<br>(Unix 밀리초) |
+| [!UICONTROL Byte] | `int` | `Integer` | `int32` |
+| [!UICONTROL Date] | `date` | `Integer`<br>(Unix 밀리초) | `int64`<br>(Unix 밀리초) |
 | [!UICONTROL DateTime] | `timestamp` | `Integer`<br>(Unix 밀리초) | `int64`<br>(Unix 밀리초) |
-| [!UICONTROL 부울] | `bool` | `Integer`<br>(0/1 이진) | `bool` |
-| [!UICONTROL 맵] | `object` | `map` | `map<key_type, value_type>` |
+| [!UICONTROL Boolean] | `bool` | `Integer`<br>(0/1 이진) | `bool` |
+| [!UICONTROL Map] | `object` | `map` | `map<key_type, value_type>` |
 
 ## API {#define-fields}에서 XDM 필드 유형 정의
 
@@ -448,3 +448,5 @@ XDM은 JSON 스키마 상단에 구축되므로 XDM 필드는 유형을 정의�
     </td>
   </tr>
 </table>
+
+{style=&quot;table-layout:auto&quot;}
