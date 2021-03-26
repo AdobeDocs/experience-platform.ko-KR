@@ -5,9 +5,9 @@ title: XDM 필드 유형 제한
 topic: 개요
 description: 매핑할 수 있는 다른 직렬화 형식 및 API에서 고유한 필드 유형을 정의하는 방법을 포함하여, XDM(경험 데이터 모델)의 필드 유형 제약 조건에 대한 참조입니다.
 translation-type: tm+mt
-source-git-commit: cc1fa21df0bb2d49106775c75a0cb3c4f4d73941
+source-git-commit: bb5880340ca4c01d0b25c7cb16fd422d3182a89e
 workflow-type: tm+mt
-source-wordcount: '1052'
+source-wordcount: '1049'
 ht-degree: 1%
 
 ---
@@ -212,7 +212,7 @@ XDM은 JSON 스키마 상단에 구축되므로 XDM 필드는 유형을 정의�
 
 시작하려면 원하는 필드 유형을 찾아 [mixin](../api/mixins.md#create) 또는 [데이터 유형 만들기 API 요청을 작성하기 위해 제공된 샘플 코드를 사용하십시오](../api/data-types.md#create).
 
-<table>
+<table style="table-layout:auto">
   <tr>
     <th>XDM 유형</th>
     <th>선택적 속성</th>
@@ -448,5 +448,3 @@ XDM은 JSON 스키마 상단에 구축되므로 XDM 필드는 유형을 정의�
     </td>
   </tr>
 </table>
-
-{style=&quot;table-layout:auto&quot;}
