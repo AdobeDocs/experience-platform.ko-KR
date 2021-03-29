@@ -5,9 +5,9 @@ title: XDM 필드 유형 제한
 topic: 개요
 description: 매핑할 수 있는 다른 직렬화 형식 및 API에서 고유한 필드 유형을 정의하는 방법을 포함하여, XDM(경험 데이터 모델)의 필드 유형 제약 조건에 대한 참조입니다.
 translation-type: tm+mt
-source-git-commit: bb5880340ca4c01d0b25c7cb16fd422d3182a89e
+source-git-commit: 456e595e66436c35c7d081ddf4699263e9c87234
 workflow-type: tm+mt
-source-wordcount: '1049'
+source-wordcount: '1055'
 ht-degree: 1%
 
 ---
@@ -33,7 +33,7 @@ XDM은 JSON 스키마 상단에 구축되므로 XDM 필드는 유형을 정의�
 
 다음 표에서는 각 XDM 유형이 JSON 스키마에서 해당 유형을 준수하는 예제 값과 함께 어떻게 표현되는지를 보여 줍니다.
 
-<table>
+<table style="table-layout:auto">
   <thead>
     <tr>
       <th>XDM 유형</th>
@@ -185,6 +185,8 @@ XDM은 JSON 스키마 상단에 구축되므로 XDM 필드는 유형을 정의�
 | [!UICONTROL Boolean] | `Boolean` | `System.Boolean` | `Boolean` |
 | [!UICONTROL Map] | `Map` | (N/A) | `object` |
 
+{style=&quot;table-layout:auto&quot;}
+
 ### MongoDB, Aerospike 및 Protobuf 2 {#mongo}
 
 | XDM 유형 | MongoDB | 공기스파이크 | Protobuf 2 |
@@ -199,6 +201,8 @@ XDM은 JSON 스키마 상단에 구축되므로 XDM 필드는 유형을 정의�
 | [!UICONTROL DateTime] | `timestamp` | `Integer`<br>(Unix 밀리초) | `int64`<br>(Unix 밀리초) |
 | [!UICONTROL Boolean] | `bool` | `Integer`<br>(0/1 이진) | `bool` |
 | [!UICONTROL Map] | `object` | `map` | `map<key_type, value_type>` |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## API {#define-fields}에서 XDM 필드 유형 정의
 
