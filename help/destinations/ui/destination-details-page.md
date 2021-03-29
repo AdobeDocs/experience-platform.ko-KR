@@ -4,9 +4,9 @@ title: 대상 세부 사항 보기
 description: '개별 대상에 대한 세부 사항 페이지에서는 대상 세부 사항에 대한 개요를 제공합니다. 대상 세부 사항에는 대상 이름, ID, 대상에 매핑된 세그먼트, 활성화를 편집하고 데이터 흐름을 활성화 및 비활성화하기 위한 컨트롤이 포함됩니다. '
 seo-description: '개별 대상에 대한 세부 사항 페이지에서는 대상 세부 사항에 대한 개요를 제공합니다. 대상 세부 사항에는 대상 이름, ID, 대상에 매핑된 세그먼트, 활성화를 편집하고 데이터 흐름을 활성화 및 비활성화하기 위한 컨트롤이 포함됩니다. '
 translation-type: tm+mt
-source-git-commit: 49905060a18fc94fe524401fb3cf86f212b639ce
+source-git-commit: 4f5e7dfee17b2dde371efb82cf52d91c08696f39
 workflow-type: tm+mt
-source-wordcount: '698'
+source-wordcount: '701'
 ht-degree: 0%
 
 ---
@@ -57,6 +57,8 @@ Adobe Experience Platform 사용자 인터페이스에서 대상의 속성 및 �
 | [!UICONTROL Identity] | 대상이 허용하는 ID 네임스페이스를 나타냅니다(예: `GAID`, `IDFA` 또는 `email`). 허용되는 ID 네임스페이스에 대한 자세한 내용은 [ID 네임스페이스 개요](../../identity-service/namespaces.md)를 참조하십시오. |
 | [!UICONTROL Created by] | 이 대상을 만든 사용자를 나타냅니다. |
 | [!UICONTROL Created] | 이 대상을 만들 때의 UTC datetime을 나타냅니다. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## [!UICONTROL Enabled]/[!UICONTROL Disabled] 토글
 
