@@ -4,9 +4,9 @@ title: 대상 작업 공간
 description: 대상 작업 공간은 아래의 섹션에 설명된 4개의 섹션인 카탈로그, 찾아보기, 계정 및 시스템 보기로 구성됩니다.
 seo-description: Adobe Experience Platform의 왼쪽 탐색 막대에서 대상을 선택하여 대상 작업 영역에 액세스합니다.
 translation-type: tm+mt
-source-git-commit: 49905060a18fc94fe524401fb3cf86f212b639ce
+source-git-commit: 4f5e7dfee17b2dde371efb82cf52d91c08696f39
 workflow-type: tm+mt
-source-wordcount: '934'
+source-wordcount: '940'
 ht-degree: 1%
 
 ---
@@ -45,6 +45,8 @@ Adobe Experience Platform의 왼쪽 탐색 막대에서 **[!UICONTROL Destinatio
 | [!UICONTROL View dataflows] | 대상에 대해 존재하는 데이터 활성화 흐름을 봅니다. |
 | [!UICONTROL View documentation] | 특정 대상에 대한 문서 페이지에 대한 링크를 열고 자세한 정보를 확인하고 설정을 도와줍니다. |
 
+{style=&quot;table-layout:auto&quot;}
+
 ![대상 카드의 컨트롤](../assets/ui/workspace/destination-card-options.png)
 
 카탈로그에서 대상 카드를 선택하여 오른쪽 레일을 엽니다. 여기에서 대상에 대한 설명을 볼 수 있습니다. 오른쪽 레일은 위 표에 설명된 것과 동일한 컨트롤, 대상에 대한 설명, 대상 카테고리 및 유형을 표시합니다.
@@ -70,6 +72,8 @@ Adobe Experience Platform의 왼쪽 탐색 막대에서 **[!UICONTROL Destinatio
 | [!UICONTROL Username] | [연결 대상 마법사](../catalog/email-marketing/overview.md#connect-destination)에서 선택한 사용자 이름입니다. |
 | [!UICONTROL Destinations] | 대상에 대해 만들어진 기본 정보와 연결된 고유한 성공적인 대상 흐름 수를 나타냅니다. |
 | [!UICONTROL Authorized] | 이 대상에 대한 연결이 허가된 날짜입니다. |
+
+{style=&quot;table-layout:auto&quot;}
 
 또한 계정 정보를 편집하거나 업데이트할 수 있습니다. 계정의 정보를 편집하려면 **[!UICONTROL Platform]** 열에서 ![계정 편집 단추](../assets/ui/workspace/pencil-icon.png)를 선택합니다.
 
