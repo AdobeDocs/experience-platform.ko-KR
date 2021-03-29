@@ -2,12 +2,12 @@
 keywords: Experience Platform;홈;인기 항목
 solution: Experience Platform
 title: 지표 API 끝점
-topic: developer guide
+topic: 개발자 가이드
 description: Observability Insights API를 사용하여 Experience Platform에서 관측성 지표를 검색하는 방법을 알아봅니다.
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 136c75f56c2ba4d61fef7981ff8a7889a0ade3d1
 workflow-type: tm+mt
-source-wordcount: '2027'
+source-wordcount: '2056'
 ht-degree: 2%
 
 ---
@@ -178,6 +178,8 @@ curl -X POST \
 | `aggregator` | 여러 시리즈 레코드를 단일 결과로 그룹화하는 데 사용할 집계 함수를 지정합니다. 사용 가능한 컨텐츠 집계인에 대한 자세한 내용은 [OpenTSDB 설명서](http://opentsdb.net/docs/build/html/user_guide/query/aggregators.html)를 참조하십시오. |
 | `downsample` | 필드를 간격(또는 &quot;버킷&quot;)으로 정렬하여 지표 데이터의 샘플링 비율을 줄이기 위해 집계 함수를 지정할 수 있는 선택적 필드입니다. 다운샘플링 간격은 `granularity` 속성에 의해 결정됩니다. 다운샘플링에 대한 자세한 내용은 [OpenTSDB 설명서](http://opentsdb.net/docs/build/html/user_guide/query/downsampling.html)를 참조하십시오. |
 
+{style=&quot;table-layout:auto&quot;}
+
 **응답**
 
 성공적인 응답은 요청에 지정된 지표 및 필터에 대한 결과 데이터를 반환합니다.
@@ -270,6 +272,8 @@ curl -X POST \
 | `groupBy` | 지표의 `filter` 속성에 여러 데이터 세트가 지정되고 요청에서 `groupBy` 옵션이 true로 설정된 경우 이 개체에는 해당 `dps` 속성이 적용되는 데이터 세트의 ID가 포함됩니다.<br><br>응답에서 이 객체가 비어 있는 것으로 나타나면 해당  `dps` 속성이  `filters` 배열에 제공된 모든 데이터 세트(또는 필터를 제공하지  [!DNL Platform] 않은 경우 모든 데이터 세트)에 적용됩니다. |
 | `dps` | 주어진 지표, 필터 및 시간 범위에 대해 반환된 데이터입니다. 이 개체의 각 키는 지정된 지표에 해당하는 값을 가진 타임스탬프를 나타냅니다. 각 데이터 포인트 사이의 기간은 요청에 지정된 `granularity` 값에 따라 다릅니다. |
 
+{style=&quot;table-layout:auto&quot;}
+
 ## 부록
 
 다음 섹션에는 `/metrics` 끝점 작업에 대한 추가 정보가 포함되어 있습니다.
@@ -310,6 +314,8 @@ curl -X POST \
 | **timelines.data.collection.inlet.success** | 하나의 데이터 입력 또는 모든 데이터 인렛에 대한 성공적인 HTTP 호출 총 수입니다. | 입구 ID |
 | **timelines.data.collection.inlet.failure** | 하나의 데이터 입력 또는 모든 데이터 인렛에 대한 실패한 HTTP 호출의 총 수입니다. | 입구 ID |
 
+{style=&quot;table-layout:auto&quot;}
+
 #### [!DNL Identity Service] {#identity}
 
 다음 표에서는 Adobe Experience Platform [!DNL Identity Service]에 대한 지표를 대략적으로 설명합니다.
@@ -326,6 +332,8 @@ curl -X POST \
 | timeseries.identity.graph.imsorg.numidgraphs.count | IMS 조직에 대한 ID 그래프에 저장된 고유 그래프 ID 수입니다. | 해당 없음 |
 | timeseries.identity.graph.imsorg.graphstrength.uniqueidentities.count | IMS에 대한 ID 그래프에 저장된 고유 ID 수 특정 그래프 강도(&quot;알 수 없음&quot;, &quot;약함&quot; 또는 &quot;강함&quot;)에 대한 조직 | 그래프 강도(**필수**) |
 
+{style=&quot;table-layout:auto&quot;}
+
 #### [!DNL Privacy Service] {#privacy}
 
 다음 표에서는 Adobe Experience Platform [!DNL Privacy Service]에 대한 지표를 대략적으로 설명합니다.
@@ -335,6 +343,8 @@ curl -X POST \
 | timeseries.gdpr.jobs.totaljobs.count | GDPR에서 만든 총 작업 수입니다. | ENV(**필수**) |
 | timeseries.gdpr.jobs.completedjobs.count | GDPR에서 완료된 총 작업 수입니다. | ENV(**필수**) |
 | timeseries.gdpr.jobs.errorjobs.count | GDPR의 총 오류 작업 수입니다. | ENV(**필수**) |
+
+{style=&quot;table-layout:auto&quot;}
 
 #### [!DNL Query Service] {#query}
 
@@ -348,6 +358,8 @@ curl -X POST \
 | timeseries.queryservice.query.scheduledquery.count | 실행된 총 예약된 쿼리 수입니다. | 해당 없음 |
 | timeseries.queryservice.query.interactivequery.count | 실행된 총 대화형 쿼리 수입니다. | 해당 없음 |
 | timeseries.queryservice.query.batchfrompsqlquery.count | PSQL에서 실행된 총 일괄 처리 쿼리 수입니다. | 해당 없음 |
+
+{style=&quot;table-layout:auto&quot;}
 
 #### [!DNL Real-time Customer Profile] {#profile}
 
@@ -369,6 +381,8 @@ curl -X POST \
 | platform.ups.profile-commons.ingest.streaming.dataSet.record.updated.timestamp | 데이터 세트에 대한 마지막 업데이트 레코드 요청에 대한 타임스탬프 | 데이터 집합 ID(**필수**) |
 | platform.ups.ingest.streaming.record.size.m1_rate | 평균 레코드 크기. | IMS 조직(**필수**) |
 | platform.ups.ingest.streaming.records.updated.m15_rate | 데이터 세트에 대해 수집되는 레코드에 대한 업데이트 요청 비율입니다. | 데이터 집합 ID(**필수**) |
+
+{style=&quot;table-layout:auto&quot;}
 
 ### 오류 메시지
 
@@ -403,6 +417,8 @@ curl -X POST \
 | `title` | 오류 메시지와 발생 가능한 이유를 포함하는 문자열입니다. |
 | `report` | 이 오류를 트리거한 작업에 사용되는 샌드박스 및 IMS 조직 등 오류에 대한 컨텍스트 정보를 포함합니다. |
 
+{style=&quot;table-layout:auto&quot;}
+
 다음 표에는 API에서 반환할 수 있는 다양한 오류 코드가 나열되어 있습니다.
 
 | 오류 코드 | Title | 설명 |
@@ -412,3 +428,5 @@ curl -X POST \
 | `INSGHT-1001-500` | 지표 쿼리 실패 | 서버 오류로 인해 지표 데이터베이스를 쿼리하는 동안 오류가 발생했습니다. 요청을 다시 시도하십시오. 문제가 지속되면 Adobe 지원 팀에 문의하십시오. |
 | `INSGHT-1002-500` | 서비스 오류 | 내부 오류로 인해 요청을 처리할 수 없습니다. 요청을 다시 시도하십시오. 문제가 지속되면 Adobe 지원 팀에 문의하십시오. |
 | `INSGHT-1003-401` | 샌드박스 유효성 검사 오류 | 샌드박스 유효성 검사 오류로 인해 요청을 처리할 수 없습니다. `x-sandbox-name` 헤더에서 제공한 샌드박스 이름이 IMS 조직에 대해 활성화된 유효한 샌드박스를 나타내야 합니다. 요청을 다시 시도하십시오. |
+
+{style=&quot;table-layout:auto&quot;}
