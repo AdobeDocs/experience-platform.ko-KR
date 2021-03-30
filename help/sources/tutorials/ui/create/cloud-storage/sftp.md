@@ -6,19 +6,15 @@ topic: 개요
 type: 튜토리얼
 description: Adobe Experience Platform UI를 사용하여 SFTP 소스 연결을 만드는 방법을 알아봅니다.
 translation-type: tm+mt
-source-git-commit: b39426d768a0c6fdfa742ec74e4e0bed9c432269
+source-git-commit: 0e11acc4a599d360cb3048445003f61848ad23d3
 workflow-type: tm+mt
-source-wordcount: '718'
+source-wordcount: '678'
 ht-degree: 1%
 
 ---
 
 
 # UI에서 SFTP 소스 연결 만들기
-
->[!NOTE]
->
->SFTP 커넥터가 베타에 있습니다. 베타 레이블이 지정된 커넥터 사용에 대한 자세한 내용은 [소스 개요](../../../../home.md#terms-and-conditions)를 참조하십시오.
 
 이 자습서에서는 Adobe Experience Platform UI를 사용하여 SFTP 소스 연결을 만드는 단계를 제공합니다.
 
@@ -53,25 +49,25 @@ SFTP에 연결하려면 다음 연결 속성에 대한 값을 제공해야 합�
 
 ## SFTP 서버에 연결
 
-[Adobe Experience Platform](https://platform.adobe.com)에 로그인한 다음 왼쪽 탐색 막대에서 **[!UICONTROL 소스]**&#x200B;를 선택하여 [!UICONTROL 소스] 작업 영역에 액세스합니다. [!UICONTROL 카탈로그] 화면에는 인바운드 계정을 만들 수 있는 다양한 소스가 표시됩니다.
+[Adobe Experience Platform](https://platform.adobe.com)에 로그인한 다음 왼쪽 탐색 막대에서 **[!UICONTROL Sources]**&#x200B;를 선택하여 [!UICONTROL Sources] 작업 영역에 액세스합니다. [!UICONTROL Catalog] 화면에는 인바운드 계정을 만들 수 있는 다양한 소스가 표시됩니다.
 
 화면의 왼쪽에 있는 카탈로그에서 적절한 범주를 선택할 수 있습니다. 또는 검색 옵션을 사용하여 작업할 특정 소스를 찾을 수 있습니다.
 
-[!UICONTROL 클라우드 스토리지] 범주에서 **[!UICONTROL SFTP]**&#x200B;를 선택합니다. 이 커넥터를 처음 사용하는 경우 **[!UICONTROL 구성]**&#x200B;을 선택합니다. 그렇지 않은 경우 **[!UICONTROL 데이터 추가]**&#x200B;를 선택하여 새 SFTP 연결을 만듭니다.
+[!UICONTROL Cloud storage] 범주에서 **[!UICONTROL SFTP]**&#x200B;을 선택합니다. 이 커넥터를 처음 사용하는 경우 **[!UICONTROL Configure]** 을 선택합니다. 그렇지 않은 경우 **[!UICONTROL Add data]**&#x200B;을 선택하여 새 SFTP 연결을 만듭니다.
 
 ![카탈로그](../../../../images/tutorials/create/sftp/catalog.png)
 
-**[!UICONTROL SFTP에 연결]** 페이지가 나타납니다. 이 페이지에서 새 자격 증명이나 기존 자격 증명을 사용할 수 있습니다.
+**[!UICONTROL Connect to SFTP]** 페이지가 나타납니다. 이 페이지에서 새 자격 증명이나 기존 자격 증명을 사용할 수 있습니다.
 
 ### 새 계정
 
-새 자격 증명을 사용 중인 경우 **[!UICONTROL 새 계정]**&#x200B;을 선택합니다. 표시되는 입력 양식에서 이름, 선택적 설명 및 자격 증명을 제공합니다. 완료되면 **[!UICONTROL Connect]**&#x200B;를 선택한 다음 새 연결이 설정될 때까지 잠시 기다려 주십시오.
+새 자격 증명을 사용 중인 경우 **[!UICONTROL New account]**&#x200B;을 선택합니다. 표시되는 입력 양식에서 이름, 선택적 설명 및 자격 증명을 제공합니다. 완료되면 **[!UICONTROL Connect]**&#x200B;을 선택한 다음 새 연결이 설정될 때까지 잠시 기다려 주십시오.
 
-SFTP 커넥터는 액세스할 수 있는 서로 다른 인증 유형을 제공합니다. 암호 기반 자격 증명을 사용하려면 **[!UICONTROL 계정 인증]** 아래에서 **[!UICONTROL 암호]**&#x200B;를 선택합니다.
+SFTP 커넥터는 액세스할 수 있는 서로 다른 인증 유형을 제공합니다. 암호 기반 자격 증명을 사용하려면 **[!UICONTROL Account authentication]** 아래에서 **[!UICONTROL Password]**&#x200B;을 선택합니다.
 
 ![connect-password](../../../../images/tutorials/create/sftp/password.png)
 
-또는 **[SSH 공개 키]**&#x200B;를 선택하고 [!UICONTROL 개인 키 내용] 및 [!UICONTROL 암호]의 조합을 사용하여 SFTP 계정을 연결할 수 있습니다.
+또는 **[SSH 공개 키]**&#x200B;를 선택하고 [!UICONTROL Private key content] 및 [!UICONTROL Passphrase]의 조합을 사용하여 SFTP 계정을 연결할 수 있습니다.
 
 >[!IMPORTANT]
 >
@@ -86,7 +82,7 @@ SFTP 커넥터는 액세스할 수 있는 서로 다른 인증 유형을 제공�
 
 ### 기존 계정
 
-기존 계정을 연결하려면 연결할 FTP 또는 SFTP 계정을 선택한 다음 **[!UICONTROL 다음]**&#x200B;을 선택하여 계속 진행합니다.
+기존 계정을 연결하려면 연결할 FTP 또는 SFTP 계정을 선택한 다음 **[!UICONTROL Next]**&#x200B;을 선택하여 계속 진행합니다.
 
 ![기존](../../../../images/tutorials/create/sftp/existing.png)
 
