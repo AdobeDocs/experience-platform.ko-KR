@@ -2,23 +2,19 @@
 keywords: Experience Platform;홈;인기 항목;PostgreSQL;postgresql;PSQL;psql
 solution: Experience Platform
 title: Flow 서비스 API를 사용하여 PostgreSQL 소스 연결 만들기
-topic: overview
-type: Tutorial
+topic: 개요
+type: 튜토리얼
 description: Flow Service API를 사용하여 Adobe Experience Platform을 PostgreSQL에 연결하는 방법을 알아봅니다.
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 8851e11e956b393e56714d4d48870b7f68947c18
 workflow-type: tm+mt
-source-wordcount: '576'
+source-wordcount: '562'
 ht-degree: 2%
 
 ---
 
 
 # [!DNL Flow Service] API를 사용하여 [!DNL PostgreSQL] 소스 연결 만들기
-
->[!NOTE]
->
->[!DNL PostgreSQL] 커넥터가 베타에 있습니다. 베타 레이블이 지정된 커넥터 사용에 대한 자세한 내용은 [소스 개요](../../../../home.md#terms-and-conditions)를 참조하십시오.
 
 [!DNL Flow Service] 는 Adobe Experience Platform 내의 다양한 소스에서 수집한 고객 데이터를 수집하고 중앙에서 관리하는 데 사용됩니다. 이 서비스는 지원되는 모든 소스가 연결되어 있는 사용자 인터페이스와 RESTful API를 제공합니다.
 
@@ -120,4 +116,4 @@ curl -X POST \
 
 ## 다음 단계
 
-이 자습서를 따라 [!DNL Flow Service] API를 사용하여 PSQL 연결을 만들고 연결의 고유 ID 값을 받았습니다. 다음 자습서에서는 흐름 서비스 API](../../explore/database-nosql.md)를 사용하여 데이터베이스 또는 NoSQL 시스템을 탐색하는 방법을 배울 때 이 연결 ID를 사용할 수 있습니다.[
+이 자습서를 따라 [!DNL Flow Service] API를 사용하여 PSQL 연결을 만들고 연결의 고유 ID 값을 받았습니다. 흐름 서비스 API](../../explore/database-nosql.md)를 사용하여 데이터베이스 또는 NoSQL 시스템을 탐색하는 방법을 배울 때 다음 자습서에서 이 연결 ID를 사용할 수 있습니다.[
