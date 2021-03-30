@@ -3,13 +3,13 @@ keywords: Experience Platform;홈;인기 항목;클라우드 저장소 데이터
 solution: Experience Platform
 title: 소스 커넥터 및 API를 사용하여 클라우드 스토리지 데이터 수집
 topic: 개요
-type: 자습서
+type: 튜토리얼
 description: 이 자습서에서는 소스 커넥터 및 API를 사용하여 제3자 클라우드 저장소에서 데이터를 검색하고 플랫폼으로 가져오는 절차를 다룹니다.
 translation-type: tm+mt
-source-git-commit: 60a70352c2e13565fd3e8c44ae68e011a1d443a6
+source-git-commit: 8b85b25112ee16b09b1411c5d001bf13fb7fbcaa
 workflow-type: tm+mt
-source-wordcount: '1639'
-ht-degree: 1%
+source-wordcount: '1768'
+ht-degree: 2%
 
 ---
 
@@ -58,7 +58,7 @@ ht-degree: 1%
 
 소스 연결을 만들려면 데이터 형식 특성에 대한 열거형 값도 정의해야 합니다.
 
-파일 기반 커넥터에 대해 다음 열거형 값을 사용하십시오.
+파일 기반 소스에 대해 다음 열거형 값을 사용하십시오.
 
 | 데이터 형식 | 열거형 값 |
 | ----------- | ---------- |
@@ -66,11 +66,10 @@ ht-degree: 1%
 | JSON | `json` |
 | 쪽모이 세공 | `parquet` |
 
-모든 테이블 기반 커넥터의 경우 값을 `tabular`으로 설정합니다.
+모든 테이블 기반 소스의 경우 값을 `tabular`으로 설정합니다.
 
->[!NOTE]
->
->열 구분 기호를 속성으로 지정하여 클라우드 저장소 소스 커넥터로 CSV 및 TSV 파일을 인제스트할 수 있습니다. 단일 문자 값은 허용되는 열 구분 기호입니다. 제공되지 않으면 쉼표 `(,)`이 기본값으로 사용됩니다.
+- [사용자 지정 구분된 파일을 사용하여 소스 연결 만들기](#using-custom-delimited-files)
+- [압축된 파일을 사용하여 소스 연결 만들기](#using-compressed-files)
 
 **API 형식**
 
@@ -78,7 +77,13 @@ ht-degree: 1%
 POST /sourceConnections
 ```
 
+### 사용자 지정 구분 파일 {#using-custom-delimited-files}을(를) 사용하여 소스 연결 만들기
+
 **요청**
+
+`columnDelimiter`을 속성으로 지정하여 사용자 지정 구분 기호로 구분된 파일을 인제스트할 수 있습니다. 단일 문자 값은 허용되는 열 구분 기호입니다. 제공되지 않으면 쉼표 `(,)`이 기본값으로 사용됩니다.
+
+다음 예제 요청에서는 탭으로 구분된 값을 사용하여 구분된 파일 유형에 대한 소스 연결을 만듭니다.
 
 ```shell
 curl -X POST \
@@ -89,9 +94,9 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Cloud storage source connector",
-        "baseConnectionId": "9e2541a0-b143-4d23-a541-a0b143dd2301",
+        "name": "Cloud storage source connection for delimited files",
         "description": "Cloud storage source connector",
+        "baseConnectionId": "9e2541a0-b143-4d23-a541-a0b143dd2301",
         "data": {
             "format": "delimited",
             "columnDelimiter": "\t"
@@ -100,7 +105,7 @@ curl -X POST \
             "path": "/ingestion-demos/leads/tsv_data/*.tsv",
             "recursive": "true"
         },
-            "connectionSpec": {
+        "connectionSpec": {
             "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
             "version": "1.0"
         }
@@ -114,6 +119,64 @@ curl -X POST \
 | `data.columnDelimiter` | 단일 문자 열 구분 기호를 사용하여 플랫 파일을 수집할 수 있습니다. 이 속성은 CSV 또는 TSV 파일을 인제스트할 때만 필요합니다. |
 | `params.path` | 액세스하는 소스 파일의 경로입니다. |
 | `connectionSpec.id` | 특정 타사 클라우드 스토리지 시스템과 연결된 연결 사양 ID. 연결 사양 ID 목록은 [부록](#appendix)을 참조하십시오. |
+
+**응답**
+
+성공적인 응답은 새로 만든 소스 연결의 고유 식별자(`id`)를 반환합니다. 이 ID는 데이터 흐름을 만들려면 이후 단계에서 필요합니다.
+
+```json
+{
+    "id": "26b53912-1005-49f0-b539-12100559f0e2",
+    "etag": "\"11004d97-0000-0200-0000-5f3c3b140000\""
+}
+```
+
+### 압축된 파일 {#using-compressed-files}을(를) 사용하여 소스 연결 만들기
+
+**요청**
+
+`compressionType`을(를) 속성으로 지정하여 압축된 JSON 또는 구분된 파일을 인제스트할 수도 있습니다. 지원되는 압축 파일 유형 목록은 다음과 같습니다.
+
+- `bzip2`
+- `gzip`
+- `deflate`
+- `zipDeflate`
+- `tarGzip`
+- `tar`
+
+다음 예제 요청에서는 `gzip` 파일 유형을 사용하여 압축된 구분된 파일의 소스 연결을 만듭니다.
+
+```shell
+curl -X POST \
+    'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}' \
+    -H 'Content-Type: application/json' \
+    -d '{
+        "name": "Cloud storage source connection for compressed files",
+        "description": "Cloud storage source connection for compressed files",
+        "baseConnectionId": "9e2541a0-b143-4d23-a541-a0b143dd2301",
+        "data": {
+            "format": "delimited",
+            "properties": {
+                "compressionType" : "gzip"
+            }
+        },
+        "params": {
+            "path": "/compressed/files.gzip"
+        },
+        "connectionSpec": {
+            "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
+            "version": "1.0"
+        }
+     }'
+```
+
+| 속성 | 설명 |
+| --- | --- |
+| `data.properties.compressionType` | 수집할 압축된 파일 유형을 결정합니다. 이 속성은 압축된 JSON 또는 구분된 파일을 인제스트하는 경우에만 필요합니다. |
 
 **응답**
 
