@@ -2,23 +2,19 @@
 keywords: Experience Platform;홈;인기 항목;ssc;SSC;Salesforce 서비스 클라우드;salesforce 서비스 클라우드
 solution: Experience Platform
 title: Flow Service API를 사용하여 Salesforce 서비스 클라우드 소스 연결 만들기
-topic: overview
-type: Tutorial
+topic: 개요
+type: 튜토리얼
 description: Flow Service API를 사용하여 Salesforce Service Cloud에 Adobe Experience Platform을 연결하는 방법을 알아봅니다.
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: a0b016e8adc519bc79701f9fd850b6ddf7d46127
 workflow-type: tm+mt
-source-wordcount: '594'
+source-wordcount: '580'
 ht-degree: 2%
 
 ---
 
 
 # [!DNL Flow Service] API를 사용하여 [!DNL Salesforce Service Cloud] 소스 연결 만들기
-
->[!NOTE]
->
->[!DNL Salesforce Service Cloud] 커넥터가 베타에 있습니다. 베타 레이블이 지정된 커넥터 사용에 대한 자세한 내용은 [소스 개요](../../../../home.md#terms-and-conditions)를 참조하십시오.
 
 [!DNL Flow Service] 는 Adobe Experience Platform 내의 다양한 소스에서 수집한 고객 데이터를 수집하고 중앙에서 관리하는 데 사용됩니다. 이 서비스는 지원되는 모든 소스가 연결되어 있는 사용자 인터페이스와 RESTful API를 제공합니다.
 
