@@ -5,9 +5,9 @@ title: Flow Service API를 사용하여 클라우드 스토리지 시스템 탐�
 topic: 개요
 description: 이 자습서에서는 Flow Service API를 사용하여 타사 클라우드 스토리지 시스템을 탐색합니다.
 translation-type: tm+mt
-source-git-commit: 60a70352c2e13565fd3e8c44ae68e011a1d443a6
+source-git-commit: 457fc9e1b0c445233f0f574fefd31bc1fc3bafc8
 workflow-type: tm+mt
-source-wordcount: '742'
+source-wordcount: '821'
 ht-degree: 2%
 
 ---
@@ -101,14 +101,25 @@ curl -X GET \
 ```json
 [
     {
-        "type": "File",
-        "name": "data.csv",
-        "path": "/some/path/data.csv"
+        "type": "file",
+        "name": "account.csv",
+        "path": "/test-connectors/testFolder-fileIngestion/account.csv",
+        "canPreview": true,
+        "canFetchSchema": true
     },
     {
-        "type": "Folder",
-        "name": "foobar",
-        "path": "/some/path/foobar"
+        "type": "file",
+        "name": "profileData.json",
+        "path": "/test-connectors/testFolder-fileIngestion/profileData.json",
+        "canPreview": true,
+        "canFetchSchema": true
+    },
+    {
+        "type": "file",
+        "name": "sampleprofile--3.parquet",
+        "path": "/test-connectors/testFolder-fileIngestion/sampleprofile--3.parquet",
+        "canPreview": true,
+        "canFetchSchema": true
     }
 ]
 ```
@@ -117,14 +128,14 @@ curl -X GET \
 
 클라우드 저장소에서 데이터 파일의 구조를 검사하려면 파일의 경로를 제공하고 쿼리 매개 변수로 입력하는 동안 GET 요청을 수행합니다.
 
-사용자 지정 구분 기호를 쿼리 둘레로 지정하여 CSV 또는 TSV 파일의 구조를 검사할 수 있습니다. 단일 문자 값은 허용되는 열 구분 기호입니다. 제공되지 않으면 쉼표 `(,)`이 기본값으로 사용됩니다.
+파일의 경로와 유형을 제공하는 동안 GET 요청을 수행하여 클라우드 스토리지 소스에서 데이터 파일의 구조를 검사할 수 있습니다. 쿼리 매개 변수의 일부로 파일 유형을 지정하여 CSV, TSV 또는 압축된 JSON과 구분된 파일과 같은 다양한 파일 유형을 검사할 수도 있습니다.
 
 **API 형식**
 
 ```http
-GET /connections/{CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&fileType={FILE_TYPE}
-GET /connections/{CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&fileType={FILE_TYPE}&preview=true&fileType=delimited&columnDelimiter=;
-GET /connections/{CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&fileType={FILE_TYPE}&preview=true&fileType=delimited&columnDelimiter=\t
+GET /connections/{CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&fileType={FILE_TYPE}&{QUERY_PARAMS}&preview=true
+GET /connections/{CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&preview=true&fileType=delimited&columnDelimiter=\t
+GET /connections/{CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&preview=true&fileType=delimited&compressionType=gzip;
 ```
 
 | 매개 변수 | 설명 |
@@ -132,13 +143,13 @@ GET /connections/{CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&file
 | `{CONNECTION_ID}` | 클라우드 스토리지 소스 커넥터의 연결 ID입니다. |
 | `{FILE_PATH}` | 검사할 파일의 경로입니다. |
 | `{FILE_TYPE}` | 파일의 유형입니다. 지원되는 파일 유형은 다음과 같습니다.<ul><li>구분 기호</code>:구분 기호로 구분된 값. DSV 파일은 쉼표로 구분되어야 합니다.</li><li>JSON</code>:JavaScript 개체 표기법. JSON 파일은 XDM 규격이어야 합니다.</li><li>쪽모이 세공</code>:아파치 쪽모이 세공. 쪽모이 세공 마룻바닥으로 되어 있어야 합니다.</li></ul> |
-| `columnDelimiter` | CSV 또는 TSV 파일을 검사하기 위해 열 구분 기호로 지정한 단일 문자 값. 매개 변수를 제공하지 않으면 값의 기본값은 쉼표 `(,)`입니다. |
+| `{QUERY_PARAMS}` | 결과를 필터링하는 데 사용할 수 있는 선택적 쿼리 매개 변수입니다. 자세한 내용은 [쿼리 매개 변수](#query)의 섹션을 참조하십시오. |
 
 **요청**
 
 ```shell
 curl -X GET \
-    'http://platform.adobe.io/data/foundation/flowservice/connections/{CONNECTION_ID}/explore?objectType=file&object=/some/path/data.csv&fileType=DELIMITED' \
+    'http://platform.adobe.io/data/foundation/flowservice/connections/{CONNECTION_ID}/explore?objectType=file&object=/aep-bootcamp/Adobe%20Pets%20Customer%2020190801%20EXP.json&fileType=json&preview=true' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -173,6 +184,15 @@ curl -X GET \
     }
 ]
 ```
+
+## 쿼리 매개 변수 {#query} 사용
+
+[[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)에서는 쿼리 매개 변수를 사용하여 다른 파일 유형을 미리 보고 검사할 수 있습니다.
+
+| 매개 변수 | 설명 |
+| --------- | ----------- |
+| `columnDelimiter` | CSV 또는 TSV 파일을 검사하기 위해 열 구분 기호로 지정한 단일 문자 값. 매개 변수를 제공하지 않으면 값의 기본값은 쉼표 `(,)`입니다. |
+| `compressionType` | 압축된 구분된 파일 또는 JSON 파일을 미리 보기 위한 필수 쿼리 매개 변수입니다. 지원되는 압축 파일은 다음과 같습니다. <ul><li>`bzip2`</li><li>`gzip`</li><li>`deflate`</li><li>`zipDeflate`</li><li>`tarGzip`</li><li>`tar`</li></ul> |
 
 ## 다음 단계
 
