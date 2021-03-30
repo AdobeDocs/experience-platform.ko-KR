@@ -2,13 +2,13 @@
 keywords: Experience Platform;교육 및 평가;데이터 과학 작업 공간;인기 있는 주제;모델 만들기;교육 실행 만들기
 solution: Experience Platform
 title: 데이터 과학 작업 공간 UI에서 모델 트레이닝 및 평가
-topic: tutorial
-type: Tutorial
+topic: 자습서
+type: 튜토리얼
 description: Adobe Experience Platform 데이터 과학 작업 공간에서 기계 학습 모델은 모델의 의도에 적합한 기존 레서피를 결합하여 만들어집니다. 그런 다음 연관된 하이퍼매개 변수를 미세 조정하여 모델의 운영 효율성과 효과를 최적화하기 위해 교육 및 평가를 수행합니다. 레서피는 재사용 가능하므로, 하나의 레서피를 사용하여 여러 모델을 생성하고 특정 목적에 맞게 변경할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 52415eb572a82f18f6daa3f45be1c670cae98b83
 workflow-type: tm+mt
-source-wordcount: '1065'
+source-wordcount: '1085'
 ht-degree: 1%
 
 ---
@@ -28,63 +28,76 @@ Adobe Experience Platform 데이터 과학 작업 공간에서 기계 학습 모
 
 ## 모델 만들기
 
-1. Adobe Experience Platform에서 왼쪽 탐색 열에 있는 **[!UICONTROL 모델]** 링크를 클릭하여 모든 기존 모델을 나열합니다. 페이지 오른쪽 상단 근처에 있는 **[!UICONTROL 모델 만들기]**를 클릭하여 모델 생성 프로세스를 시작합니다.
-   ![](../images/models-recipes/train-evaluate-ui/models_browse.png)
+Experience Platform에서 왼쪽 탐색 창에 있는 **[!UICONTROL Models]** 탭을 선택한 다음 찾아보기 탭을 선택하여 기존 모델을 확인합니다. 모델 생성 프로세스를 시작하려면 페이지 오른쪽 상단의 **[!UICONTROL Create Model]**&#x200B;을 선택합니다.
 
-2. 기존 레서피 목록을 탐색하고, 모델을 만드는 데 사용할 레서피를 찾아 선택하고 **[!UICONTROL 다음]**을 클릭합니다.
-   ![](../images/models-recipes/train-evaluate-ui/select_recipe.png)
+![](../images/models-recipes/train-evaluate-ui/models_browse.png)
 
-3. 적절한 입력 데이터 세트를 선택하고 **[!UICONTROL 다음]**을 클릭합니다. 그러면 모델에 대한 기본 입력 교육 데이터 세트가 설정됩니다.
-   ![](../images/models-recipes/train-evaluate-ui/select_dataset.png)
+기존 레서피 목록을 탐색하고, 모델을 생성하는 데 사용할 레서피를 찾아 선택하고 **[!UICONTROL Next]**을 선택합니다.
+![](../images/models-recipes/train-evaluate-ui/select_recipe.png)
 
-4. 모델 이름을 입력하고 기본 모델 구성을 검토합니다. 기본 구성은 레서피 생성 중에 적용되었으며 값을 두 번 클릭하여 구성 값을 검토하고 수정합니다. 새 구성 세트를 제공하려면 **[!UICONTROL 새 구성 업로드]**&#x200B;를 클릭하고 모델 구성이 포함된 JSON 파일을 브라우저 창으로 드래그합니다. **[!UICONTROL 완료]**&#x200B;를 클릭하여 모델을 생성합니다.
+적절한 입력 데이터 세트를 선택하고 **[!UICONTROL Next]**을 선택합니다. 그러면 모델에 대한 기본 입력 교육 데이터 세트가 설정됩니다.
+![](../images/models-recipes/train-evaluate-ui/select_dataset.png)
 
-   >[!NOTE]
-   >
-   >구성은 고유하며 의도한 레서피에 따라 달라지며, 이것은 소매 판매 레서피에 대한 구성이 제품 Recommendations 레서피에 대해 작동하지 않음을 의미합니다. 소매 판매 레서피 구성 목록은 [참조](#reference) 섹션을 참조하십시오.
+모델 이름을 입력하고 기본 모델 구성을 검토합니다. 기본 구성은 레서피 생성 중에 적용되었으며 값을 두 번 클릭하여 구성 값을 검토하고 수정합니다.
 
-   ![](../images/models-recipes/train-evaluate-ui/name_and_configure.png)
+새 구성 세트를 제공하려면 **[!UICONTROL Upload New Config]**&#x200B;을 선택하고 모델 구성이 포함된 JSON 파일을 브라우저 창으로 드래그합니다. **[!UICONTROL Finish]**&#x200B;을 선택하여 모델을 생성합니다.
+
+>[!NOTE]
+>
+>구성은 고유하며 의도한 레서피에 따라 달라지며, 이것은 소매 판매 레서피에 대한 구성이 제품 Recommendations 레서피에 대해 작동하지 않음을 의미합니다. 소매 판매 레서피 구성 목록은 [참조](#reference) 섹션을 참조하십시오.
+
+![](../images/models-recipes/train-evaluate-ui/name_and_configure.png)
 
 ## 교육 실행 만들기
 
-1. Adobe Experience Platform에서 왼쪽 탐색 열에 있는 **[!UICONTROL 모델]** 링크를 클릭하여 모든 기존 모델을 나열합니다. 교육할 모델의 이름을 찾아 클릭합니다.
-   ![](../images/models-recipes/train-evaluate-ui/models_browse.png)
+Experience Platform에서 왼쪽 탐색 창에 있는 **[!UICONTROL Models]** 탭을 선택한 다음 찾아보기 탭을 선택하여 기존 모델을 확인합니다. 트레이닝할 모델 이름에 첨부된 하이퍼링크를 찾아 선택합니다.
 
-2. 현재 교육 상태의 모든 기존 교육 실행이 나열됩니다. [!DNL Data Science Workspace] 사용자 인터페이스를 사용하여 만든 모델의 경우 기본 구성 및 입력 교육 데이터 세트를 사용하여 교육 실행이 자동으로 생성되고 실행됩니다.
-   ![](../images/models-recipes/train-evaluate-ui/model_overview.png)
+![](../images/models-recipes/train-evaluate-ui/model-hyperlink.png)
 
-3. 모델 개요 페이지의 오른쪽 상단 근처에 있는 **[!UICONTROL 기차]**를 클릭하여 새 교육 실행을 만듭니다.
-   ![](../images/models-recipes/train-evaluate-ui/training_input.png)
+현재 교육 상태의 모든 기존 교육 실행이 나열됩니다. [!DNL Data Science Workspace] 사용자 인터페이스를 사용하여 만든 모델의 경우 기본 구성 및 입력 교육 데이터 세트를 사용하여 교육 실행이 자동으로 생성되고 실행됩니다.
 
-4. 교육 실행에 대한 교육 입력 데이터 세트를 선택하고 **[!UICONTROL 다음]**을 클릭합니다.
-   ![](../images/models-recipes/train-evaluate-ui/training_configuration.png)
+모델 개요 페이지의 오른쪽 상단 근처에 있는 **[!UICONTROL Train]**&#x200B;을 선택하여 새 교육 실행을 만듭니다.
 
-5. 모델을 생성하는 동안 제공된 기본 구성이 표시되고 값을 두 번 클릭하여 변경하고 이에 따라 수정합니다. **[!UICONTROL 완료]**&#x200B;를 클릭하여 교육 실행을 만들고 실행합니다.
+![](../images/models-recipes/train-evaluate-ui/model_overview.png)
 
-   >[!NOTE]
-   >
-   >구성은 고유하며 의도한 레서피에 따라 달라지며, 이것은 소매 판매 레서피에 대한 구성이 제품 Recommendations 레서피에 대해 작동하지 않음을 의미합니다. 소매 판매 레서피 구성 목록은 [참조](#reference) 섹션을 참조하십시오.
+교육 실행에 대한 교육 입력 데이터 세트를 선택한 다음 **[!UICONTROL Next]**&#x200B;을 선택합니다.
 
-   ![](../images/models-recipes/train-evaluate-ui/training_configuration.png)
+![](../images/models-recipes/train-evaluate-ui/training_input.png)
+
+모델을 생성하는 동안 제공된 기본 구성이 표시되고 값을 두 번 클릭하여 변경하고 이에 따라 수정합니다. **[!UICONTROL Finish]**&#x200B;을 선택하여 교육 실행을 만들고 실행합니다.
+
+>[!NOTE]
+>
+>구성은 고유하며 의도한 레서피에 따라 달라지며, 이것은 소매 판매 레서피에 대한 구성이 제품 Recommendations 레서피에 대해 작동하지 않음을 의미합니다. 소매 판매 레서피 구성 목록은 [참조](#reference) 섹션을 참조하십시오.
+
+![](../images/models-recipes/train-evaluate-ui/training_configuration.png)
+
 
 ## 모델 평가
 
-1. Adobe Experience Platform에서 왼쪽 탐색 열에 있는 **[!UICONTROL 모델]** 링크를 클릭하여 모든 기존 모델을 나열합니다. 평가할 모델의 이름을 찾아 클릭합니다.
-   ![](../images/models-recipes/train-evaluate-ui/models_browse.png)
+Experience Platform에서 왼쪽 탐색 창에 있는 **[!UICONTROL Models]** 탭을 선택한 다음 찾아보기 탭을 선택하여 기존 모델을 확인합니다. 평가할 모델의 이름에 첨부된 하이퍼링크를 찾아 선택합니다.
 
-2. 현재 교육 상태의 모든 기존 교육 실행이 나열됩니다. 완료된 여러 개의 교육 실행을 사용할 경우, 모델 평가 차트에서 여러 교육 실행에서 평가 지표를 비교할 수 있으며 그래프 위의 드롭다운 목록을 사용하여 평가 지표를 선택합니다.
+![모델 선택](../images/models-recipes/train-evaluate-ui/model-hyperlink.png)
 
-   MAPE(평균 절대 퍼센트 오류) 지표는 정확도를 오류 백분율로 나타냅니다. 이 방법은 성과가 가장 높은 실험을 식별하는 데 사용됩니다. MAPE가 낮을수록 좋습니다.
+현재 교육 상태의 모든 기존 교육 실행이 나열됩니다. 여러 개의 완료된 교육 실행을 사용할 경우 모델 평가 차트에서 여러 교육 실행 간에 평가 지표를 비교할 수 있습니다. 그래프 위의 드롭다운 목록을 사용하여 평가 지표를 선택합니다.
 
-   ![](../images/models-recipes/train-evaluate-ui/complete_training_run.png)
+MAPE(평균 절대 퍼센트 오류) 지표는 정확도를 오류 백분율로 나타냅니다. 이 방법은 성과가 가장 높은 실험을 식별하는 데 사용됩니다. MAPE가 낮을수록 좋습니다.
 
-   &quot;정밀도&quot; 지표는 총 *retried* 인스턴스와 비교하여 관련 인스턴스의 백분율을 설명합니다. 정밀도는 무작위로 선택된 결과가 정확할 확률을 볼 수 있습니다.
-   ![](../images/models-recipes/train-evaluate-ui/multiple_training_runs.png)
+![교육 실행 개요](../images/models-recipes/train-evaluate-ui/complete_training_run.png)
 
-   특정 교육 실행을 클릭하여 해당 실행에 대한 세부 사항을 확인합니다. 이 작업은 실행이 완료되기 전에도 수행할 수 있습니다. 실행 세부 정보 페이지에서는 교육 실행에만 적용되는 다른 평가 지표, 구성 매개 변수 및 시각화를 볼 수 있습니다. 실행 세부 사항을 보려면 활동 로그를 다운로드할 수도 있습니다. 로그는 실패한 실행이 잘못된 내용을 확인하는 데 특히 유용합니다.
-   ![](../images/models-recipes/train-evaluate-ui/activity_logs.png)
+&quot;정밀도&quot; 지표는 총 *retried* 인스턴스와 비교하여 관련 인스턴스의 백분율을 설명합니다. 정밀도는 무작위로 선택된 결과가 정확할 확률을 볼 수 있습니다.
 
-3. 하이퍼매개 변수를 교육할 수 없으며, 서로 다른 하이퍼매개 변수 조합을 테스트하여 모델을 최적화해야 합니다. 최적화된 모델에 도착할 때까지 이 모델 교육 및 평가 과정을 반복합니다.
+![여러 실행 실행 실행](../images/models-recipes/train-evaluate-ui/multiple_training_runs.png)
+
+특정 교육 실행을 선택하면 평가 페이지를 열어 실행되는 세부 정보가 제공됩니다. 이 작업은 실행이 완료되기 전에도 수행할 수 있습니다. 평가 페이지에서 교육 실행에만 적용되는 다른 평가 지표, 구성 매개 변수 및 시각화를 볼 수 있습니다.
+
+![미리 보기 로그](../images/models-recipes/train-evaluate-ui/evaluate_training.png)
+
+실행 세부 사항을 보려면 활동 로그를 다운로드할 수도 있습니다. 로그는 실패한 실행이 잘못된 내용을 확인하는 데 특히 유용합니다.
+
+![활동 로그](../images/models-recipes/train-evaluate-ui/activity_logs.png)
+
+하이퍼매개 변수를 교육할 수 없으며, 서로 다른 하이퍼매개 변수 조합을 테스트하여 모델을 최적화해야 합니다. 최적화된 모델에 도착할 때까지 이 모델 교육 및 평가 과정을 반복합니다.
 
 ## 다음 단계
 
