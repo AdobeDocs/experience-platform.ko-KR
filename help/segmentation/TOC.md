@@ -6,10 +6,10 @@ breadcrumb-title: Segmentation Service 안내서
 user-guide-description: 실시간 고객 프로필 데이터에서 세그먼트를 작성하고 대상을 생성합니다.
 feature: 세그먼트
 translation-type: tm+mt
-source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
+source-git-commit: 5839ab36a7d8f992e92c7f9eff8c58459c4c3260
 workflow-type: tm+mt
-source-wordcount: '158'
-ht-degree: 22%
+source-wordcount: '162'
+ht-degree: 21%
 
 ---
 
@@ -21,6 +21,7 @@ ht-degree: 22%
 - 세그멘테이션 API {#api}
    - [개요](api/overview.md)
    - [시작하기](api/getting-started.md)
+   - [에지 세분화](api/edge-segmentation.md)
    - [내보내기 작업](api/export-jobs.md)
    - [미리 보기 및 예측](api/previews-and-estimates.md)
    - [예약](api/schedules.md)
@@ -32,6 +33,7 @@ ht-degree: 22%
    - [개요](ui/overview.md)
    - [세그먼트 대시보드](ui/segment-dashboard.md)
    - [세그먼트 빌더](ui/segment-builder.md)
+   - [에지 세분화](ui/edge-segmentation.md)
    - [스트리밍 세분화](ui/streaming-segmentation.md)
    - [스트리밍 세분화(비디오)](video/streaming-segmentation-overview.md)
    - [시간 제한 리팩토링](ui/segment-refactoring.md)
@@ -51,7 +53,7 @@ ht-degree: 22%
    - [필터 함수](pql/filter-functions.md)
    - [논리적 한정 기호](pql/logical-quantifiers.md)
    - [기타 함수](pql/misc-functions.md)
-- 자습서 {#tutorials}
+- 튜토리얼 {#tutorials}
    - [세그먼트 만들기](tutorials/create-a-segment.md)
    - [세그먼트 만들기(비디오)](video/create-segment.md)
    - [동적 세그먼트 만들기(비디오)](video/create-a-dynamic-segment.md)
