@@ -2,12 +2,12 @@
 keywords: Experience Platform;홈;인기 항목;목록 활성 샌드박스;목록 샌드박스
 solution: Experience Platform
 title: API의 현재 사용자에 대한 활성 샌드박스 목록
-topic: developer guide
+topic: 개발자 가이드
 description: 루트 끝점에 GET 요청을 함으로써 현재 사용자에 대해 활성 상태인 샌드박스를 표시할 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
+source-git-commit: ca3de18c093d7b692b582045afea4401d7133b9b
 workflow-type: tm+mt
-source-wordcount: '361'
+source-wordcount: '363'
 ht-degree: 2%
 
 ---
@@ -39,7 +39,6 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **응답**
