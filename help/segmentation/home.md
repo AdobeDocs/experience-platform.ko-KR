@@ -2,18 +2,18 @@
 keywords: Experience Platform;홈;인기 항목;세그멘테이션;세그멘테이션;세그먼트 서비스;세그먼트;세그먼트;세그먼트;세그먼트;;home;popular topacmentation;segmentation
 solution: Experience Platform
 title: 세그멘테이션 서비스 개요
-topic: overview
+topic: 개요
 description: Adobe Experience Platform 세그멘테이션 서비스와 플랫폼 생태계에서 수행하는 역할에 대해 알아봅니다.
 translation-type: tm+mt
-source-git-commit: c0c42f872666323bfb3bdbdf5fb02475d3b5bc79
+source-git-commit: 7eadb14dc71792174dfd750775148763f55834dd
 workflow-type: tm+mt
-source-wordcount: '1407'
+source-wordcount: '1449'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Segmentation Service]개요
+# [!DNL Segmentation Service] 개요
 
 Adobe Experience Platform [!DNL Segmentation Service]은 세그먼트를 작성하고 [!DNL Real-time Customer Profile] 데이터에서 대상을 생성할 수 있는 사용자 인터페이스와 RESTful API를 제공합니다. 이러한 세그먼트는 중앙에 구성되고 [!DNL Platform]에 유지 관리되며 Adobe 솔루션에서 쉽게 액세스할 수 있습니다.
 
@@ -60,6 +60,12 @@ API를 사용하여 세그먼트 정의를 작성하는 방법에 대한 자세�
 지속적인 데이터 선택 프로세스의 대안으로 일괄 세그먼테이션은 세그먼트 정의를 통해 모든 프로필 데이터를 한 번에 이동시켜 해당 고객을 생성합니다. 세그먼트를 만들면, 이 세그먼트가 저장되고 저장되므로 사용할 목적으로 내보낼 수 있습니다.
 
 세그먼트를 평가하는 방법을 알려면 [세그먼트 평가 자습서](./tutorials/evaluate-a-segment.md)를 참조하십시오.
+
+### 에지 세분화
+
+Edge Segmentation은 Platform에서 세그먼트를 즉시 평가하여 동일한 페이지와 다음 페이지 개인화 사용 사례를 활성화하는 기능입니다.
+
+가장자리 세그멘테이션에 대한 자세한 내용은 [API 설명서](./api/edge-segmentation.md) 또는 [UI 설명서](./ui/edge-segmentation.md)를 참조하십시오.
 
 ## 세그멘테이션 결과 액세스
 
