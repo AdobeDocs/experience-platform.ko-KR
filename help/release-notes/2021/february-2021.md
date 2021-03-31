@@ -1,13 +1,13 @@
 ---
-title: Adobe Experience Platform 릴리스 노트
+title: Adobe Experience Platform 릴리스 정보
 description: 2021년 2월 24일자 Experience Platform 릴리스 노트
 doc-type: release notes
 last-update: February 24, 2021
 author: ens70167
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 398e55f442a2c8ecab0c3d9315fbdd5c02946e45
 workflow-type: tm+mt
-source-wordcount: '1138'
+source-wordcount: '1136'
 ht-degree: 7%
 
 ---
@@ -75,7 +75,7 @@ Adobe Experience Platform에서 데이터는 다양한 소스에서 수집되어
 
 | 대상 | 설명 |
 | ----------- | ----------- |
-| [[!DNL LinkedIn Matched Audiences]](destinations/catalog/social/linkedin.md) | [!DNL LinkedIn Matched Audiences] 연결을 사용하면 [!DNL LinkedIn] 소셜 플랫폼에서 대상을 활성화할 수 있습니다. |
+| [[!DNL LinkedIn Matched Audiences]](../../destinations/catalog/social/linkedin.md) | [!DNL LinkedIn Matched Audiences] 연결을 사용하면 [!DNL LinkedIn] 소셜 플랫폼에서 대상을 활성화할 수 있습니다. |
 
 대상에 대한 자세한 내용은 [대상 개요](../../destinations/home.md)를 참조하십시오.
 
@@ -89,7 +89,7 @@ XDM은 디지털 경험의 강력함을 향상시키도록 고안된 문서화�
 
 | 기능 | 설명 |
 | --- | --- |
-| 검색 UI 업그레이드 | 이제 [!UICONTROL 스키마] 작업 영역의 [!UICONTROL 찾아보기] 탭과 [!DNL Schema Editor]의 혼합 선택 대화 상자에서 향상된 검색 기능을 사용할 수 있습니다.<br><br>이전에 검색어를 검색할 때 검색 쿼리와 이름이 일치하는 XDM 리소스만 결과에 포함됩니다. 이제 쿼리와 이름이 일치하는 리소스 외에도 용어와 일치하는 개별 속성이 포함된 리소스도 포함됩니다. 따라서 리소스 이름이 아닌 XDM 리소스를 포함하는 특성을 기준으로 검색할 수 있습니다.<br><br>자세한 내용은 XDM 리소스  [탐색 ](../../xdm/ui/explore.md) 및 UI [의 구성 ](../../xdm/ui/resources/schemas.md) 관리에 대한 문서를 참조하십시오. |
+| 검색 UI 업그레이드 | 이제 [!UICONTROL Schemas] 작업 영역의 [!UICONTROL Browse] 탭과 [!DNL Schema Editor]의 혼합 선택 대화 상자에서 향상된 검색 기능을 사용할 수 있습니다.<br><br>이전에 검색어를 검색할 때 검색 쿼리와 이름이 일치하는 XDM 리소스만 결과에 포함됩니다. 이제 쿼리와 이름이 일치하는 리소스 외에도 용어와 일치하는 개별 속성이 포함된 리소스도 포함됩니다. 따라서 리소스 이름이 아닌 XDM 리소스를 포함하는 특성을 기준으로 검색할 수 있습니다.<br><br>자세한 내용은 XDM 리소스  [탐색 ](../../xdm/ui/explore.md) 및 UI [의 구성 ](../../xdm/ui/resources/schemas.md) 관리에 대한 문서를 참조하십시오. |
 
 XDM에 대한 자세한 내용은 [XDM 시스템 개요](../../xdm/home.md)를 참조하십시오.
 
