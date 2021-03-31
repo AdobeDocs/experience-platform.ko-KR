@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: March 31, 2021
 author: ens72741
 translation-type: tm+mt
-source-git-commit: 0192c951a288cc1e0891a12ba9eff32aea120518
+source-git-commit: 523e09b9af19b1deb01a69be0673b9a17084b7e4
 workflow-type: tm+mt
-source-wordcount: '436'
-ht-degree: 7%
+source-wordcount: '554'
+ht-degree: 6%
 
 ---
 
@@ -20,6 +20,7 @@ ht-degree: 7%
 Adobe Experience Platform의 기존 기능 업데이트:
 
 - [[!DNL Data Prep]](#data-prep)
+- [[!DNL Sandboxes]](#sandboxes)
 - [[!DNL Segmentation Service]](#segmentation)
 - [[!DNL Sources]](#sources)
 
@@ -33,6 +34,18 @@ Adobe Experience Platform의 기존 기능 업데이트:
 | `to_array` 함수 위에 있어야 합니다 | 객체를 매개 변수로 지원하도록 기능을 업데이트했습니다. |
 
 자세한 내용은 [[!DNL Data Prep] 개요](../../data-prep/home.md)를 참조하십시오.
+
+## [!DNL Sandboxes] {#sandboxes}
+
+Adobe Experience Platform은 디지털 경험 애플리케이션을 글로벌 규모로 보완하도록 구축되었습니다. 기업은 여러 디지털 경험 애플리케이션을 동시에 실행하며 운영 규정을 준수하면서 이러한 애플리케이션의 개발, 테스트 및 배포를 고려해야 합니다.
+
+이러한 요구를 해결하기 위해 Experience Platform은 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되도록 단일 플랫폼 인스턴스를 별도의 가상 환경으로 분할하는 샌드박스를 제공합니다.
+
+| 기능 | 설명 |
+| ------- | ----------- |
+| (베타) 여러 제작 샌드박스 | 이제 IMS 조직에서 여러 개의 프로덕션 샌드박스를 생성하고 관리할 수 있으며 특정 프로덕션 샌드박스를 고유한 사업, 브랜드, 프로젝트 또는 지역에 적용할 수 있습니다. 자세한 내용은 UI](../../sandboxes/ui/user-guide.md) 또는 API](../../sandboxes/api/create-sandbox.md)을 사용하여 프로덕션 샌드박스 [를 만드는 방법에 대한 자습서를 참조하십시오.[ |
+
+샌드박스에 대한 자세한 내용은 [샌드박스 개요](../../sandboxes/home.md)를 참조하십시오.
 
 ## 세분화 서비스 {#segmentation}
 
@@ -54,8 +67,6 @@ Adobe Experience Platform 세그멘테이션 서비스는 세그먼트를 작성
 Adobe Experience Platform은 외부 소스에서 데이터를 인제스트할 수 있는 한편, 플랫폼 서비스를 사용하여 해당 데이터를 구조화, 레이블 지정 및 개선할 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 제3자 소프트웨어 및 CRM 시스템과 같은 다양한 소스의 데이터를 인제스트할 수 있습니다.
 
 Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 쉽게 설정할 수 있는 RESTful API와 대화형 UI를 제공합니다. 이러한 소스 연결을 통해 외부 스토리지 시스템 및 CRM 서비스에 인증 및 연결할 수 있고 통합 실행에 대한 시간을 설정할 수 있으며 데이터 통합 처리량을 관리할 수 있습니다.
-
-다음 소스 업데이트가 2021년 3월 Experience Platform 릴리스에 포함됩니다.
 
 | 기능 | 설명 |
 | ------- | ----------- |
