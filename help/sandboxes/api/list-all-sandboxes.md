@@ -2,12 +2,12 @@
 keywords: Experience Platform;홈;인기 항목;목록 샌드박스
 solution: Experience Platform
 title: API의 샌드박스 목록
-topic: developer guide
+topic: 개발자 가이드
 description: IMS 조직에 속한 모든 샌드박스를 나열하려면 /sandbox 종단점에 GET 요청을 하십시오.
 translation-type: tm+mt
-source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
+source-git-commit: ca3de18c093d7b692b582045afea4401d7133b9b
 workflow-type: tm+mt
-source-wordcount: '320'
+source-wordcount: '322'
 ht-degree: 2%
 
 ---
@@ -35,7 +35,6 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **응답**
