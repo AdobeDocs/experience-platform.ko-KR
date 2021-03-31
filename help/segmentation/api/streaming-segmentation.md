@@ -5,9 +5,9 @@ title: '스트리밍 세분화를 통해 거의 실시간으로 이벤트 평가
 topic: 개발자 가이드
 description: 이 문서에는 Adobe Experience Platform 세그멘테이션 서비스 API에서 스트리밍 세그멘테이션을 사용하는 방법에 대한 예가 포함되어 있습니다.
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: bb7edcaccca87918c56d00e092e4b7154d7c5d6e
 workflow-type: tm+mt
-source-wordcount: '1341'
+source-wordcount: '1342'
 ht-degree: 1%
 
 ---
@@ -403,6 +403,6 @@ curl -X POST \
 
 ## 다음 단계
 
-이제 스트리밍 세그먼테이션을 위해 새 세그먼트와 기존 세그먼트를 모두 활성화했고 기준선을 개발하고 반복 평가를 수행하기 위해 예약된 세그먼테이션을 활성화했으므로 조직의 세그먼트를 만들기 시작할 수 있습니다.
+스트리밍 세그먼테이션을 위해 새 세그먼트와 기존 세그먼트를 모두 활성화했고 기준선을 개발하고 반복 평가를 수행하는 예약된 세그먼테이션을 활성화했으므로 이제 조직에 대해 스트리밍이 가능한 세그먼트를 만들기 시작할 수 있습니다.
 
 유사한 작업을 수행하고 Adobe Experience Platform 사용자 인터페이스를 사용하여 세그먼트를 작업하는 방법에 대해 알아보려면 [세그먼트 빌더 사용자 안내서](../ui/segment-builder.md)를 방문하십시오.
