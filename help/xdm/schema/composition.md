@@ -5,7 +5,7 @@ title: 스키마 구성 기초
 topic: 개요
 description: 이 문서에서는 XDM(Experience Data Model) 스키마 및 Adobe Experience Platform에서 사용할 스키마를 작성하기 위한 기본 블록, 원칙 및 모범 사례에 대해 설명합니다.
 translation-type: tm+mt
-source-git-commit: 9a5618674946f67528de1b40609596dbb75ced0c
+source-git-commit: ae2c5f9fa4e732fefe55a8536894844986aea1e2
 workflow-type: tm+mt
 source-wordcount: '3461'
 ht-degree: 0%
@@ -165,7 +165,7 @@ Mixins는 해당 클래스가 나타내는 데이터(기록 또는 시간 시리
 
 [!DNL Experience Platform] 일반적인 데이터 구조를 설명하는 표준 패턴 사용을 지원하기  [!DNL Schema Registry] 위해 의 일부로 다양한 일반 데이터 유형을 제공합니다. 이 내용은 데이터 유형을 정의하는 단계를 거치면 더 분명해지는 [!DNL Schema Registry] 튜토리얼에서 자세히 설명합니다.
 
-다음 스크린샷은 플랫폼 UI에서 데이터 유형이 표시되는 방법을 보여줍니다. ([!UICONTROL Demographic Details]) 혼합에서 제공하는 필드 중 하나는 필드 이름 옆에 있는 파이프 문자(`|`) 다음에 나오는 텍스트로 표시된 &quot;[!UICONTROL Person name]&quot; 데이터 유형을 사용합니다. 이 특정 데이터 유형은 개인 이름과 관련된 여러 하위 필드, 이름을 캡처해야 하는 다른 필드에 대해 다시 사용할 수 있는 구문을 제공합니다.
+다음 스크린샷은 플랫폼 UI에서 데이터 유형이 표시되는 방법을 보여줍니다. [!UICONTROL Demographic Details] 혼합에서 제공하는 필드 중 하나는 필드 이름 옆에 있는 파이프 문자(`|`) 다음에 나오는 텍스트로 표시된 &quot;[!UICONTROL Person name]&quot; 데이터 유형을 사용합니다. 이 특정 데이터 유형은 개인 이름과 관련된 여러 하위 필드, 이름을 캡처해야 하는 다른 필드에 대해 다시 사용할 수 있는 구문을 제공합니다.
 
 ![](../images/schema-composition/data-type.png)
 
