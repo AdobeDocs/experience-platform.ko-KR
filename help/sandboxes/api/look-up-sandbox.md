@@ -5,7 +5,7 @@ title: API에서 샌드박스 찾기
 topic: 개발자 가이드
 description: 요청 경로에서 샌드박스의 이름 속성을 포함하는 GET 요청을 수행하여 개별 샌드박스를 찾을 수 있습니다.
 translation-type: tm+mt
-source-git-commit: ca3de18c093d7b692b582045afea4401d7133b9b
+source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31
 workflow-type: tm+mt
 source-wordcount: '245'
 ht-degree: 2%
@@ -37,6 +37,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **응답**
