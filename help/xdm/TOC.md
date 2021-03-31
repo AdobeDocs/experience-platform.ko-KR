@@ -6,9 +6,9 @@ breadcrumb-title: Experience Data Model(XDM) 안내서
 user-guide-description: XDM(경험 데이터 모델) 클래스와 믹스인을 사용하여 경험 데이터를 표준화합니다.
 feature: 스키마
 translation-type: tm+mt
-source-git-commit: 27cdb65c846293d7edce340e1cb5a360c0e40604
+source-git-commit: 4a67bcbd2a1458ae47ba64fe2647da442fdf4695
 workflow-type: tm+mt
-source-wordcount: '236'
+source-wordcount: '238'
 ht-degree: 24%
 
 ---
@@ -25,6 +25,7 @@ ht-degree: 24%
 * 클래스 {#classes}
    * [XDM 개별 프로필](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
+   * [세그먼트 정의](./classes/segment-definition.md)
 * 믹싱 {#mixins}
    * 프로필 혼합 {#profile}
       * [IdentityMap](./mixins/profile/identitymap.md)
