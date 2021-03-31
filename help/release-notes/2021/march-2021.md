@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: March 31, 2021
 author: ens72741
 translation-type: tm+mt
-source-git-commit: 8d4270d9168a570fcf92ba60d70dbc8e9af98136
+source-git-commit: 0192c951a288cc1e0891a12ba9eff32aea120518
 workflow-type: tm+mt
-source-wordcount: '244'
-ht-degree: 9%
+source-wordcount: '436'
+ht-degree: 7%
 
 ---
 
@@ -19,7 +19,35 @@ ht-degree: 9%
 
 Adobe Experience Platform의 기존 기능 업데이트:
 
+- [[!DNL Data Prep]](#data-prep)
+- [[!DNL Segmentation Service]](#segmentation)
 - [[!DNL Sources]](#sources)
+
+## [!DNL Data Prep] {#data-prep}
+
+[!DNL Data Prep] 데이터 엔지니어가 XDM(Experience Data Model)을 통해 데이터를 매핑, 변형 및 확인할 수 있습니다.
+
+| 기능 | 설명 |
+| ------- | ----------- |
+| `add_to_array` 함수 위에 있어야 합니다 | 어레이를 매개 변수로 지원하는 기능을 업데이트했습니다. |
+| `to_array` 함수 위에 있어야 합니다 | 객체를 매개 변수로 지원하도록 기능을 업데이트했습니다. |
+
+자세한 내용은 [[!DNL Data Prep] 개요](../../data-prep/home.md)를 참조하십시오.
+
+## 세분화 서비스 {#segmentation}
+
+Adobe Experience Platform 세그멘테이션 서비스는 세그먼트를 작성하고 [!DNL Real-time Customer Profile] 데이터에서 대상을 생성할 수 있는 사용자 인터페이스와 RESTful API를 제공합니다. 이러한 세그먼트는 Adobe 응용 프로그램에서 쉽게 액세스할 수 있도록 [!DNL Platform]에 중앙에서 구성 및 유지 관리됩니다.
+
+[!DNL Segmentation Service] 고객 기반 내에서 마케팅 가능한 사용자 그룹을 구분하는 기준을 설명하여 특정 프로필 하위 집합을 정의합니다. 세그먼트는 브랜드 고객과의 상호 작용을 나타내는 레코드 데이터(인구 통계 정보 등) 또는 시간 시리즈 이벤트를 기반으로 할 수 있습니다.
+
+**새로운 기능**
+
+| 기능 | 설명 |
+| ------- | ----------- |
+| (베타) 에지 세분화 | 에지 세그먼테이션은 세그먼트를 실시간으로 평가하므로 동일한 페이지 및 다음 페이지 개인화 사용 사례를 허용합니다. 가장자리 세그멘테이션에 대한 자세한 내용은 [세그멘테이션 UI 개요](../../segmentation/ui/overview.md)에서 확인할 수 있습니다. |
+| (베타) 증분 세그먼테이션 | 일괄 세그먼테이션에서 평가한 기존 세그먼트 정의의 신선도를 최대 1시간까지 높입니다. |
+
+[!DNL Segmentation Service]에 대한 자세한 내용은 [세그멘테이션 개요](../../segmentation/home.md)를 참조하십시오.
 
 ## [!DNL Sources] {#sources}
 
