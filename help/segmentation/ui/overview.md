@@ -2,12 +2,12 @@
 keywords: Experience Platform;홈;인기 항목;세그멘테이션 서비스;세그멘테이션 서비스;사용자 안내서;사용자 안내서;세그멘테이션 ui 안내서;세그먼트 빌더;실현됨;기존;종료
 solution: Experience Platform
 title: 세그멘테이션 서비스 UI 안내서
-topic: ui guide
+topic: ui 안내서
 description: Adobe Experience Platform 세그멘테이션 서비스는 세그먼트 정의를 만들고 관리하기 위한 사용자 인터페이스를 제공합니다.
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 1634466d3a1d8eadc4c98bb93214d8772b6a47a3
 workflow-type: tm+mt
-source-wordcount: '1473'
+source-wordcount: '1481'
 ht-degree: 0%
 
 ---
@@ -32,19 +32,19 @@ ht-degree: 0%
 
 ## 개요
 
-[[!DNL Experience Platform] UI](http://platform.adobe.com/)의 왼쪽 탐색 메뉴에서 **[!UICONTROL 세그먼트]**&#x200B;를 선택하여 **[!UICONTROL 개요]** 탭을 엽니다. 이 탭에서는 세그먼트를 이해하고 작업을 시작하는 데 도움이 되는 설명서 및 비디오에 대한 링크를 제공합니다.
+[[!DNL Experience Platform] UI](http://platform.adobe.com/)에서 왼쪽 탐색 영역에서 **[!UICONTROL Segments]**&#x200B;을 선택하여 **[!UICONTROL Overview]** 탭을 엽니다. 이 탭에서는 세그먼트를 이해하고 작업을 시작하는 데 도움이 되는 설명서 및 비디오에 대한 링크를 제공합니다.
 
 ![](../images/ui/overview/segment-overview.png)
 
 ## 찾아보기
 
-**[!UICONTROL 찾아보기]** 탭을 선택하여 IMS 조직에 대한 모든 세그먼트 정의 목록을 확인합니다.
+IMS 조직에 대한 모든 세그먼트 정의 목록을 보려면 **[!UICONTROL Browse]** 탭을 선택합니다.
 
 ![](../images/ui/overview/segment-browse-all.png)
 
 이 보기는 분류, 이탈, 프로필 수, 평가 방법, 만든 날짜 및 마지막으로 수정한 날짜를 포함한 세그먼트 정의에 대한 정보를 나열합니다.
 
-분류에는 다음 각 상태에 속하는 프로파일의 백분율을 나타내는 막대 그래프가 표시됩니다.[!UICONTROL 입력됨], [!UICONTROL 실현됨] 및 [!UICONTROL 종료].
+분류에는 다음 각 상태에 속하는 프로파일의 백분율을 나타내는 막대 그래프가 표시됩니다.[!UICONTROL Entered], [!UICONTROL Realized] 및 [!UICONTROL Exiting].
 
 ![](../images/ui/overview/segment-browse-breakdown.png)
 
@@ -62,9 +62,9 @@ ht-degree: 0%
 
 페이지 상단에는 모든 세그먼트를 일정에 추가하고 새 세그먼트를 만드는 옵션이 있습니다.
 
-**[!UICONTROL 모든 세그먼트를 일정에 추가]**&#x200B;를 전환하면 예약된 세그먼테이션이 활성화됩니다. 예약된 세그멘테이션에 대한 자세한 내용은 이 사용 안내서](#scheduled-segmentation)의 [예약된 세그멘테이션 섹션에서 확인할 수 있습니다.
+**[!UICONTROL Add all segments to schedule]**&#x200B;을(를) 전환하면 예약된 세그먼테이션이 활성화됩니다. 예약된 세그멘테이션에 대한 자세한 내용은 이 사용 안내서](#scheduled-segmentation)의 [예약된 세그멘테이션 섹션에서 확인할 수 있습니다.
 
-**[!UICONTROL 세그먼트 만들기]**&#x200B;를 선택하면 세그먼트 빌더로 이동합니다. 세그먼트 만들기에 대한 자세한 내용은 사용자 안내서](#create-segment)에서 세그먼트 만들기에 대한 섹션을 참조하십시오.[
+**[!UICONTROL Create segment]**&#x200B;을 선택하면 세그먼트 빌더로 이동합니다. 세그먼트 만들기에 대한 자세한 내용은 사용자 안내서](#create-segment)에서 세그먼트 만들기에 대한 섹션을 참조하십시오.[
 
 ![](../images/ui/overview/segment-browse-top.png)
 
@@ -78,7 +78,7 @@ ht-degree: 0%
 
 ## 세그먼트 정의 세부 정보 {#segment-details}
 
-특정 세그먼트 정의에 대한 자세한 내용을 보려면 **[!UICONTROL 찾아보기]** 탭 내에서 세그먼트 이름을 선택합니다.
+특정 세그먼트 정의에 대한 자세한 내용을 보려면 **[!UICONTROL Browse]** 탭 내에서 세그먼트 이름을 선택합니다.
 
 세그먼트 세부 사항 페이지가 나타납니다. 맨 위에는 세그먼트 정의 요약, 자격이 있는 대상 크기에 대한 정보 및 세그먼트가 활성화된 대상이 있습니다.
 
@@ -86,19 +86,19 @@ ht-degree: 0%
 
 ### 세그먼트 요약
 
-**[!UICONTROL 세그먼트 요약]** 섹션에서는 ID, 이름, 설명 및 속성의 세부 사항과 같은 정보를 제공합니다.
+**[!UICONTROL Segment summary]** 섹션에서는 ID, 이름, 설명 및 속성의 세부 사항과 같은 정보를 제공합니다.
 
-또한 세그먼트를 편집할 수 있는 옵션이 제공됩니다. **[!UICONTROL 세그먼트 편집]**&#x200B;을 선택하면 [!DNL Segment Builder]로 이동합니다. [!DNL Segment Builder] 작업 영역 사용에 대한 자세한 내용은 [[!DNL Segment Builder] 사용자 안내서](./segment-builder.md)를 참조하십시오.
+또한 세그먼트를 편집할 수 있는 옵션이 제공됩니다. **[!UICONTROL Edit segment]**&#x200B;을 선택하면 [!DNL Segment Builder]로 이동합니다. [!DNL Segment Builder] 작업 영역 사용에 대한 자세한 내용은 [[!DNL Segment Builder] 사용자 안내서](./segment-builder.md)를 참조하십시오.
 
 ### 세그먼트의 총 고객 수
 
-세그먼트&#x200B;]**섹션의**[!UICONTROL &#x200B;총 대상 수는 세그먼트에 자격을 갖춘 프로필의 총 수를 보여줍니다.
+**[!UICONTROL Total audience in segment]** 섹션에는 세그먼트에 적합한 총 프로필 수가 표시됩니다.
 
 추정은 해당 일의 샘플 데이터의 샘플 크기를 사용하여 생성됩니다. 프로필 스토어에 1백만 개 미만의 엔티티가 있는 경우 전체 데이터 세트가 사용됩니다.1백만~2천만 개의 개체 중 100만 개의 개체가 사용됩니다.2천만 개 이상의 개체에 대해 전체 엔티티의 5%가 사용됩니다. 세그먼트 예상 생성에 대한 자세한 내용은 세그먼트 작성 자습서의 [예측 생성 섹션](../tutorials/create-a-segment.md#estimate-and-preview-an-audience)에서 확인할 수 있습니다.
 
 ### 활성화된 대상
 
-**[!UICONTROL 활성화된 대상]** 섹션에는 이 세그먼트가 활성화된 대상이 표시됩니다.
+**[!UICONTROL Activated destinations]** 섹션에는 이 세그먼트가 활성화된 대상이 표시됩니다.
 
 >[!NOTE]
 >
@@ -128,7 +128,7 @@ ht-degree: 0%
 
 ## 세그먼트 만들기 {#create-segment}
 
-오른쪽 위 모서리에서 **[!UICONTROL 세그먼트 만들기]**&#x200B;를 선택하면 세그먼트 정의 만들기를 시작할 수 있는 [!DNL Segment Builder] 작업 영역이 열립니다.
+오른쪽 위 모서리에서 **[!UICONTROL Create segment]**&#x200B;을 선택하면 세그먼트 정의 만들기를 시작할 수 있는 [!DNL Segment Builder] 작업 영역이 열립니다.
 
 ![](../images/ui/overview/segment-browse-create.png)
 
@@ -148,7 +148,7 @@ ht-degree: 0%
 
 ### 예약된 세그먼테이션 사용 {#enable-scheduled-segmentation}
 
-예약된 평가에 대한 세그먼트 정의 활성화는 UI 또는 API를 사용하여 수행할 수 있습니다. UI에서 **[!UICONTROL 세그먼트]** 내 **[!UICONTROL 찾아보기]** 탭으로 돌아가서 **[!UICONTROL 모든 세그먼트를 추가하여 예약]**&#x200B;을 선택합니다. 이렇게 하면 조직에서 설정한 일정에 따라 모든 세그먼트가 평가됩니다.
+예약된 평가에 대한 세그먼트 정의 활성화는 UI 또는 API를 사용하여 수행할 수 있습니다. UI에서 **[!UICONTROL Segments]** 내의 **[!UICONTROL Browse]** 탭으로 돌아가 **[!UICONTROL Add all segments to schedule]**&#x200B;를 전환합니다. 이렇게 하면 조직에서 설정한 일정에 따라 모든 세그먼트가 평가됩니다.
 
 >[!NOTE]
 >
@@ -167,6 +167,12 @@ ht-degree: 0%
 >[!NOTE]
 >
 >스트리밍 세그먼테이션이 작동하려면 조직에 대해 예약된 세그먼테이션을 활성화해야 합니다. 예약된 세그멘테이션 활성화에 대한 자세한 내용은 이 사용 안내서](#scheduled-segmentation)의 스트리밍 세그멘테이션 섹션을 참조하십시오.[
+
+## 가장자리 세그멘테이션 {#edge-segmentation}
+
+Edge Segmentation은 Platform에서 세그먼트를 즉시 평가하여 동일한 페이지와 다음 페이지 개인화 사용 사례를 활성화하는 기능입니다.
+
+가장자리 세그멘테이션에 대한 자세한 내용은 [가장자리 세그멘테이션 UI 안내서](./edge-segmentation.md)에서 확인할 수 있습니다.
 
 ## 정책 위반
 
