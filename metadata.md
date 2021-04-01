@@ -1,5 +1,5 @@
 ---
-cloud: experience-cloud
+cloud: Experience Cloud
 product: adobe experience platform
 feature-set: Platform
 solution-title: 플랫폼 개요
@@ -15,7 +15,7 @@ type: 설명서
 index: true
 role: 건축가, 개발자, 데이터 아키텍트, 데이터 엔지니어, 비즈니스 책임자, 관리자, 리더
 translation-type: tm+mt
-source-git-commit: 467edb785bd3c8609d2fc64183edd1d7b34d7e86
+source-git-commit: b3ab087a9cae13d2ff270916d88b8086a4122af6
 workflow-type: tm+mt
 source-wordcount: '147'
 ht-degree: 74%
