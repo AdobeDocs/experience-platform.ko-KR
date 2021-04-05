@@ -6,7 +6,7 @@ description: 클라우드 스토리지 위치에 연결하는 지침
 seo-description: 클라우드 스토리지 위치에 연결하는 지침
 exl-id: 58003c1e-2f70-4e28-8a38-3be00da7cc3c
 translation-type: tm+mt
-source-git-commit: 1e33a7b48e20d7afe9f10b206a6fd68433b205db
+source-git-commit: 7bb862c4c6c52c42e45d5e736fa6d239e812ac2c
 workflow-type: tm+mt
 source-wordcount: '581'
 ht-degree: 0%
@@ -71,22 +71,19 @@ SFTP 대상의 경우 파일이 배달될 **[!UICONTROL Folder path]**&#x200B;�
 
 아래 예는 ID `25768be6-ebd5-45cc-8913-12fb3f348615`가 있는 샘플 세그먼트 `Luxury Audience`을 참조합니다.
 
-### 매크로 1 - `%SEGMENT_NAME%`
+**매크로 1:`%SEGMENT_NAME%`**
 
 입력:`acme/campaigns/2021/%SEGMENT_NAME%`
-
 저장소 위치의 폴더 경로:`acme/campaigns/2021/Luxury Audience`
 
-### 매크로 2 - `%SEGMENT_ID%`
+**매크로 2:`%SEGMENT_ID%`**
 
 입력:`acme/campaigns/2021/%SEGMENT_ID%`
-
 저장소 위치의 폴더 경로:`acme/campaigns/2021/25768be6-ebd5-45cc-8913-12fb3f348615`
 
-### 매크로 3 - `%SEGMENT_NAME%/%SEGMENT_ID%`
+**매크로 3:`%SEGMENT_NAME%/%SEGMENT_ID%`**
 
 입력:`acme/campaigns/2021/%SEGMENT_NAME%/%SEGMENT_ID%`
-
 저장소 위치의 폴더 경로:`acme/campaigns/2021/Luxury Audience/25768be6-ebd5-45cc-8913-12fb3f348615`
 
 
