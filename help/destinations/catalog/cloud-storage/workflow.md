@@ -6,9 +6,9 @@ description: 클라우드 스토리지 위치에 연결하는 지침
 seo-description: 클라우드 스토리지 위치에 연결하는 지침
 exl-id: 58003c1e-2f70-4e28-8a38-3be00da7cc3c
 translation-type: tm+mt
-source-git-commit: 7bb862c4c6c52c42e45d5e736fa6d239e812ac2c
+source-git-commit: ecda1f1c4a2829124aedaae2395a74e54929c7ad
 workflow-type: tm+mt
-source-wordcount: '581'
+source-wordcount: '595'
 ht-degree: 0%
 
 ---
@@ -64,6 +64,10 @@ SFTP 대상의 경우 파일이 배달될 **[!UICONTROL Folder path]**&#x200B;�
 이제 대상이 만들어집니다. 나중에 세그먼트를 활성화하거나 **[!UICONTROL Next]**&#x200B;을 선택하여 워크플로우를 계속 진행하고 활성화할 세그먼트를 선택할 수 있습니다. **[!UICONTROL Save & Exit]** 데이터를 내보내는 워크플로의 나머지 부분에서 [세그먼트 활성화](#activate-segments) 섹션을 읽어 보십시오.
 
 ## 매크로를 사용하여 저장소 위치에 폴더 만들기{#use-macros}
+
+>[!NOTE]
+>
+> 이 섹션에 설명된 기능은 현재 [Amazon S3](./amazon-s3.md) 목적으로만 사용할 수 있습니다.
 
 저장 위치에 세그먼트 파일당 사용자 지정 폴더를 만들려면 폴더 경로 입력 필드에서 매크로를 사용할 수 있습니다. 아래와 같이 입력 필드 끝에 매크로를 삽입합니다.
 
