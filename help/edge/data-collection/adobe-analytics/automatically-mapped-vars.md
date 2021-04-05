@@ -3,14 +3,14 @@ title: Adobe Experience Platform 웹 SDK에서 자동으로 매핑된 Adobe Anal
 description: Experience Platform 웹 SDK를 사용하여 Adobe Analytics에 자동으로 매핑되는 변수 알아보기
 seo-description: Adobe Analytics에서 Adobe Experience Platform 웹 SDK와 함께 자동으로 매핑되는 변수에 대해 알아봅니다.
 keywords: adobe analytics;variables;analytics;automatic map;automatically mapped;
+exl-id: 856fada7-b62c-4fd2-9372-a19ae1cdec33
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 7a6a9f1ee764ab614fa163f90a2051bd35b76b7f
 workflow-type: tm+mt
-source-wordcount: '681'
+source-wordcount: '684'
 ht-degree: 0%
 
 ---
-
 
 # 변수는 [!DNL Analytics]에 자동으로 매핑됩니다.
 
@@ -103,3 +103,5 @@ ht-degree: 0%
 | `web.webPageDetails.server` | `sv` | AppMeasurement 쿼리 매개 변수 USER_SERVER 매핑입니다. |
 | `web.webPageDetails.siteSection` | `ch` | AppMeasurement 쿼리 매개 변수 CHANNEL 매핑을 참조하십시오. |
 | `web.webReferrer.URL` | `r` | AppMeasurement 쿼리 매개 변수 REFERRER 매핑입니다. |
+
+{style=&quot;table-layout:auto&quot;}
