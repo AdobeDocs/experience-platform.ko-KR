@@ -4,14 +4,14 @@ title: 클라우드 스토리지 대상 만들기
 type: 튜토리얼
 description: 클라우드 스토리지 위치에 연결하는 지침
 seo-description: 클라우드 스토리지 위치에 연결하는 지침
+exl-id: 58003c1e-2f70-4e28-8a38-3be00da7cc3c
 translation-type: tm+mt
-source-git-commit: 632003773100ec8ef0389840695a1c75a1aa663d
+source-git-commit: 1e33a7b48e20d7afe9f10b206a6fd68433b205db
 workflow-type: tm+mt
-source-wordcount: '496'
+source-wordcount: '581'
 ht-degree: 0%
 
 ---
-
 
 # 클라우드 스토리지 대상 만들기
 
@@ -37,7 +37,7 @@ ht-degree: 0%
 >
 >플랫폼은 인증 프로세스에서 자격 증명 유효성 검사를 지원하고 클라우드 스토리지 위치에 잘못된 자격 증명을 입력하는 경우 오류 메시지를 표시합니다. 이렇게 하면 자격 증명이 잘못된 작업 흐름을 완료하지 못합니다.
 
-![클라우드 저장소 대상에 연결 - 인증 단계](../../assets/catalog/cloud-storage/workflow/destination-account.png)
+![클라우드 스토리지 대상에 연결 - 계정 단계](../../assets/catalog/cloud-storage/workflow/destination-account.png)
 
 ## 인증 단계 {#authentication}
 
@@ -61,7 +61,35 @@ SFTP 대상의 경우 파일이 배달될 **[!UICONTROL Folder path]**&#x200B;�
 
 ![이벤트 허브 클라우드 스토리지 대상에 연결 - 인증 단계](../../assets/catalog/cloud-storage/workflow/event-hubs-setup.png)
 
-이제 대상이 만들어집니다. 나중에 세그먼트를 활성화하거나 **[!UICONTROL Next]**&#x200B;을 선택하여 워크플로우를 계속 진행하고 활성화할 세그먼트를 선택할 수 있습니다. **[!UICONTROL Save & Exit]** 두 경우 모두 데이터를 내보내는 워크플로의 나머지 부분에서 다음 섹션 [세그먼트 활성화](#activate-segments)를 참조하십시오.
+이제 대상이 만들어집니다. 나중에 세그먼트를 활성화하거나 **[!UICONTROL Next]**&#x200B;을 선택하여 워크플로우를 계속 진행하고 활성화할 세그먼트를 선택할 수 있습니다. **[!UICONTROL Save & Exit]** 데이터를 내보내는 워크플로의 나머지 부분에서 [세그먼트 활성화](#activate-segments) 섹션을 읽어 보십시오.
+
+## 매크로를 사용하여 저장소 위치에 폴더 만들기{#use-macros}
+
+저장 위치에 세그먼트 파일당 사용자 지정 폴더를 만들려면 폴더 경로 입력 필드에서 매크로를 사용할 수 있습니다. 아래와 같이 입력 필드 끝에 매크로를 삽입합니다.
+
+![매크로를 사용하여 저장소에서 폴더를 만드는 방법](../../assets/catalog/cloud-storage/workflow/macros-folder-path.png)
+
+아래 예는 ID `25768be6-ebd5-45cc-8913-12fb3f348615`가 있는 샘플 세그먼트 `Luxury Audience`을 참조합니다.
+
+### 매크로 1 - `%SEGMENT_NAME%`
+
+입력:`acme/campaigns/2021/%SEGMENT_NAME%`
+
+저장소 위치의 폴더 경로:`acme/campaigns/2021/Luxury Audience`
+
+### 매크로 2 - `%SEGMENT_ID%`
+
+입력:`acme/campaigns/2021/%SEGMENT_ID%`
+
+저장소 위치의 폴더 경로:`acme/campaigns/2021/25768be6-ebd5-45cc-8913-12fb3f348615`
+
+### 매크로 3 - `%SEGMENT_NAME%/%SEGMENT_ID%`
+
+입력:`acme/campaigns/2021/%SEGMENT_NAME%/%SEGMENT_ID%`
+
+저장소 위치의 폴더 경로:`acme/campaigns/2021/Luxury Audience/25768be6-ebd5-45cc-8913-12fb3f348615`
+
+
 
 ## 세그먼트 활성화 {#activate-segments}
 
