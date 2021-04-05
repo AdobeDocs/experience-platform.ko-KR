@@ -3,15 +3,15 @@ keywords: Experience Platform;홈;인기 항목;에지 세그멘테이션;세그
 solution: Experience Platform
 title: Edge 세그멘테이션 UI 안내서
 topic: ui 안내서
-description: 'Edge Segmentation은 Platform에서 세그먼트를 즉시 평가하여 동일한 페이지와 다음 페이지 개인화 사용 사례를 활성화하는 기능입니다. '
+description: Edge Segmentation은 Platform에서 세그먼트를 즉시 평가하여 동일한 페이지와 다음 페이지 개인화 사용 사례를 활성화하는 기능입니다.
+exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
 translation-type: tm+mt
-source-git-commit: 7eadb14dc71792174dfd750775148763f55834dd
+source-git-commit: 692bfca8d14ac247527f956bbcba8b4eb37516e3
 workflow-type: tm+mt
-source-wordcount: '328'
+source-wordcount: '332'
 ht-degree: 1%
 
 ---
-
 
 # Edge 세그멘테이션 UI 안내서
 
@@ -25,8 +25,8 @@ Edge Segmentation은 Adobe Experience Platform에서 세그먼트를 바로 에�
 | ---------- | ------- | ------- |
 | 들어오는 히트 | 시간 제한 없이 단일 들어오는 이벤트를 참조하는 모든 세그먼트 정의 | ![](../images/ui/edge-segmentation/incoming-hit.png) |
 | 프로필을 참조하는 들어오는 히트 | 시간 제한 없이 단일 들어오는 이벤트를 참조하고 하나 이상의 프로필 속성을 참조하는 세그먼트 정의입니다. | ![](../images/ui/edge-segmentation/profile-hit.png) |
-| 주파수 쿼리 | 특정 횟수만큼 발생하는 이벤트를 참조하는 모든 세그먼트 정의 |  |
-| 프로필을 참조하는 빈도 쿼리 | 특정 횟수만큼 발생하는 이벤트를 참조하는 세그먼트 정의에는 하나 이상의 프로필 속성이 있습니다. |  |
+| 주파수 쿼리 | 이벤트를 참조하는 세그먼트 정의 중 적어도 일정 횟수만큼 발생하는 모든 세그먼트 정의입니다. |  |
+| 프로필을 참조하는 빈도 쿼리 | 이벤트를 참조하는 세그먼트 정의에는 적어도 일정 횟수만큼 발생하며 하나 이상의 프로필 속성이 있습니다. |  |
 
 쿼리가 위의 쿼리 유형과 일치하는 경우 **[!UICONTROL Evaluate as streaming segment on the edge]** 토글을 켜서 가장자리 세그멘테이션에 사용할 수 있습니다.
 
