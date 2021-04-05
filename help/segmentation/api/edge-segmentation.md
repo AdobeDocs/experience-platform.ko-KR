@@ -4,14 +4,14 @@ solution: Experience Platform
 title: 'API를 사용한 에지 세그멘테이션 '
 topic: 개발자 가이드
 description: 이 문서에는 Adobe Experience Platform 세그멘테이션 서비스 API에서 가장자리 세그멘테이션을 사용하는 방법에 대한 예가 포함되어 있습니다.
+exl-id: effce253-3d9b-43ab-b330-943fb196180f
 translation-type: tm+mt
-source-git-commit: 0c4625ec0728c8c94b72e3e16e7ecf45ea2d0c0b
+source-git-commit: 692bfca8d14ac247527f956bbcba8b4eb37516e3
 workflow-type: tm+mt
-source-wordcount: '632'
+source-wordcount: '636'
 ht-degree: 1%
 
 ---
-
 
 # 에지 세분화
 
@@ -39,8 +39,8 @@ Edge Segmentation은 Adobe Experience Platform에서 세그먼트를 바로 에�
 | ---------- | ------- |
 | 들어오는 히트 | 시간 제한 없이 단일 들어오는 이벤트를 참조하는 모든 세그먼트 정의 |
 | 프로필을 참조하는 들어오는 히트 | 시간 제한 없이 단일 들어오는 이벤트를 참조하고 하나 이상의 프로필 속성을 참조하는 세그먼트 정의입니다. |
-| 주파수 쿼리 | 특정 횟수만큼 발생하는 이벤트를 참조하는 모든 세그먼트 정의 |
-| 프로필을 참조하는 빈도 쿼리 | 특정 횟수만큼 발생하는 이벤트를 참조하는 세그먼트 정의에는 하나 이상의 프로필 속성이 있습니다. |
+| 주파수 쿼리 | 이벤트를 참조하는 세그먼트 정의 중 적어도 일정 횟수만큼 발생하는 모든 세그먼트 정의입니다. |
+| 프로필을 참조하는 빈도 쿼리 | 이벤트를 참조하는 세그먼트 정의에는 적어도 일정 횟수만큼 발생하며 하나 이상의 프로필 속성이 있습니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
