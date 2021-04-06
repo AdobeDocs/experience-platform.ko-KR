@@ -5,14 +5,14 @@ solution: Experience Platform
 title: 데이터 흐름 모니터링
 topic: 개요
 type: 튜토리얼
+exl-id: fbe35ee1-4ee8-4d67-976b-0c45f0168da4
 translation-type: tm+mt
-source-git-commit: ebe2a35e66b78acf6a9ffa20664877913cd35648
+source-git-commit: e436d7147c613dad5b2ff596a412759fd60d228c
 workflow-type: tm+mt
 source-wordcount: '133'
 ht-degree: 1%
 
 ---
-
 
 # 데이터 흐름 모니터링
 
