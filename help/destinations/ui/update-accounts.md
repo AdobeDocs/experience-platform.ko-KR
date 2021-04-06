@@ -4,7 +4,7 @@ title: 대상 계정 업데이트
 type: 튜토리얼
 description: 이 자습서는 Adobe Experience Platform UI에서 대상 계정을 업데이트하는 단계를 나열합니다
 translation-type: tm+mt
-source-git-commit: 6fd980b486c4a330f9188065bac55c624af584a1
+source-git-commit: e4afbdd6ff8f45ea8d5506f0228f0a80b44eee51
 workflow-type: tm+mt
 source-wordcount: '313'
 ht-degree: 1%
@@ -21,7 +21,7 @@ ht-degree: 1%
 ![계정 탭](../assets/ui/update-accounts/destination-accounts.png)
 
 | 요소 | 설명 |
----------|----------
+|---|---|
 | [!UICONTROL Platform] | 연결을 설정한 대상. |
 | [!UICONTROL Connection Type] | 저장소 버킷 또는 대상에 대한 연결 유형을 나타냅니다. <ul><li>이메일 마케팅 대상:S3 또는 FTP일 수 있습니다.</li><li>실시간 광고 대상:서버 간</li><li>Amazon S3 클라우드 스토리지 대상:액세스 키 </li><li>SFTP 클라우드 스토리지 대상:SFTP에 대한 기본 인증</li></ul> |
 | [!UICONTROL Username] | [연결 대상 마법사](../catalog/email-marketing/overview.md#connect-destination)에서 선택한 사용자 이름입니다. |
