@@ -1,16 +1,16 @@
 ---
-keywords: 대상 계정 업데이트,대상 계정
+keywords: 대상 계정 업데이트;대상 계정;계정 업데이트 방법
 title: 대상 계정 업데이트
 type: 튜토리얼
 description: 이 자습서는 Adobe Experience Platform UI에서 대상 계정을 업데이트하는 단계를 나열합니다
-exl-id: afb41878-4205-4c64-af4d-e2740f852785
 translation-type: tm+mt
-source-git-commit: 07869d63f395bbab6c49a3976051facdf94d43b7
+source-git-commit: ebe2a35e66b78acf6a9ffa20664877913cd35648
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '313'
+ht-degree: 1%
 
 ---
+
 
 # 대상 계정 업데이트
 
