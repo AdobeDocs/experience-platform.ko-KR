@@ -5,14 +5,14 @@ type: 튜토리얼
 seo-title: 대상에 프로필 및 세그먼트 활성화
 description: 세그먼트를 대상에 매핑하여 Adobe Experience Platform에 있는 데이터를 활성화합니다. 이를 수행하려면 아래 단계를 따르십시오.
 seo-description: 세그먼트를 대상에 매핑하여 Adobe Experience Platform에 있는 데이터를 활성화합니다. 이를 수행하려면 아래 단계를 따르십시오.
+exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
 translation-type: tm+mt
-source-git-commit: 0992b223a96b77446a9f9c2823f5195541dd93fa
+source-git-commit: 0bb6db19dc27031115e47415c1b3241661e0a0ae
 workflow-type: tm+mt
-source-wordcount: '2069'
+source-wordcount: '2025'
 ht-degree: 0%
 
 ---
-
 
 # 대상에 프로필 및 세그먼트 활성화
 
@@ -240,13 +240,6 @@ Adobe Experience Platform 사용자 인터페이스에서 **[!UICONTROL Destinat
 정책 위반이 감지되지 않은 경우 **[!UICONTROL Finish]**&#x200B;을 선택하여 선택을 확인하고 대상으로 데이터 전송을 시작합니다.
 
 ![선택 확인](../assets/ui/activate-destinations/confirm-selection.png)
-
-## 활성화 편집 {#edit-activation}
-
-Adobe Experience Platform에서 기존 활성화 흐름을 편집하려면 아래 절차를 따르십시오.
-
-1. 왼쪽 탐색 막대에서 **[!UICONTROL Destinations]**&#x200B;을 선택하고 **[!UICONTROL Browse]** 탭을 클릭한 다음 대상 이름을 클릭합니다.
-2. 대상에 보낼 세그먼트를 변경하려면 오른쪽 레일에서 **[!UICONTROL Edit activation]**&#x200B;을 선택합니다.
 
 ## 세그먼트 활성화가 성공했는지 확인 {#verify-activation}
 
