@@ -3,22 +3,22 @@ keywords: Experience Platform;홈;인기 항목;api;API;XDM;XDM 시스템;경험
 solution: Experience Platform
 title: 클래스 API 끝점
 description: 스키마 레지스트리 API의 /classes 끝점을 사용하면 경험 응용 프로그램 내에서 XDM 클래스를 프로그래밍 방식으로 관리할 수 있습니다.
-topic: developer guide
+topic: 개발자 가이드
+exl-id: 7beddb37-0bf2-4893-baaf-5b292830f368
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
-source-wordcount: '1502'
+source-wordcount: '1497'
 ht-degree: 1%
 
 ---
 
-
 # 클래스 끝점
 
-모든 경험 데이터 모델(XDM) 스키마는 클래스를 기반으로 해야 합니다. 클래스는 해당 클래스를 기반으로 하는 모든 스키마는 포함해야 하는 공통 속성의 기본 구조와 이러한 스키마에서 사용할 수 있는 믹스를 결정합니다. 또한 스키마의 클래스는 스키마에는 포함할 데이터의 비헤이비어 측면을 결정하며, 이 데이터에는 다음 두 가지 유형이 있습니다.
+모든 경험 데이터 모델(XDM) 스키마는 클래스를 기반으로 해야 합니다. 클래스는 해당 클래스를 기반으로 하는 모든 스키마는 포함해야 하는 공통 속성의 기본 구조와 이러한 스키마에서 사용할 수 있는 믹스를 결정합니다. 또한 스키마의 클래스는 스키마에는 포함할 데이터의 비헤이비어 측면을 결정합니다. 이 양식은 두 가지 유형입니다.
 
-* **[!UICONTROL 기록]**:제목 속성에 대한 정보를 제공합니다. 대상은 조직 또는 개인일 수 있습니다.
-* **[!UICONTROL 시계열]**:작업 수행 시 기록 제목에 의해 직접 또는 간접적으로 작업이 수행될 때 시스템의 스냅샷을 제공합니다.
+* **[!UICONTROL Record]**:제목 속성에 대한 정보를 제공합니다. 대상은 조직 또는 개인일 수 있습니다.
+* **[!UICONTROL Time-series]**:작업 수행 시 기록 제목에 의해 직접 또는 간접적으로 작업이 수행될 때 시스템의 스냅샷을 제공합니다.
 
 >[!NOTE]
 >
@@ -143,11 +143,11 @@ curl -X GET \
 
 | `Accept` header | 설명 |
 | ------- | ------------ |
-| `application/vnd.adobe.xed+json; version={MAJOR_VERSION}` | `$ref` 및 `allOf`이(가) 있는 Raw에는 제목 및 설명이 있습니다. |
-| `application/vnd.adobe.xed-full+json; version={MAJOR_VERSION}` | `$ref` 그리고  `allOf` 해결되었습니다. 제목 및 설명이 있습니다. |
-| `application/vnd.adobe.xed-notext+json; version={MAJOR_VERSION}` | `$ref` 및 `allOf`이 있는 Raw에 제목이나 설명이 없습니다. |
-| `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref` 제목 또는 설명 없이  `allOf` 해결되었습니다. |
-| `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` 설명자가 포함된  `allOf` 문제가 해결되었습니다. |
+| `application/vnd.adobe.xed+json; version=1` | `$ref` 및 `allOf`이(가) 있는 Raw에는 제목 및 설명이 있습니다. |
+| `application/vnd.adobe.xed-full+json; version=1` | `$ref` 그리고  `allOf` 해결되었습니다. 제목 및 설명이 있습니다. |
+| `application/vnd.adobe.xed-notext+json; version=1` | `$ref` 및 `allOf`이 있는 Raw에 제목이나 설명이 없습니다. |
+| `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` 제목 또는 설명 없이  `allOf` 해결되었습니다. |
+| `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` 설명자가 포함된  `allOf` 문제가 해결되었습니다. |
 
 **응답**
 
@@ -248,7 +248,7 @@ POST 요청을 수행하여 `tenant` 컨테이너 아래에 사용자 지정 클
 >
 >정의한 사용자 정의 클래스를 기반으로 스키마를 작성할 때 표준 믹스를 사용할 수 없습니다. 각 혼합은 `meta:intendedToExtend` 특성에서 해당 클래스가 호환되는 클래스를 정의합니다. 새 클래스와 호환되는 믹스를 정의하고 나면(믹싱의 `meta:intendedToExtend` 필드에서 새 클래스의 `$id` 사용), 정의한 클래스를 구현하는 스키마를 정의할 때마다 이러한 믹스를 다시 사용할 수 있습니다. 자세한 내용은 해당 끝점 안내서에서 [믹싱 만들기](./mixins.md#create) 및 [스키마 만들기](./schemas.md#create)에 대한 섹션을 참조하십시오.
 >
->실시간 고객 프로필의 사용자 지정 클래스를 기반으로 스키마를 사용하려는 경우 조합 스키마는 동일한 클래스를 공유하는 스키마만 기반으로 구성된다는 점을 염두에 두어야 합니다. [!UICONTROL XDM 개인 프로필] 또는 [!UICONTROL XDM ExperienceEvent]와 같은 다른 클래스에 대해 사용자 지정 클래스 스키마를 공용 클래스에 포함하려면 해당 클래스를 사용하는 다른 스키마와 관계를 설정해야 합니다. 자세한 내용은 API](../tutorials/relationship-api.md)에서 두 스키마 간의 관계 설정에 대한 자습서를 참조하십시오.[
+>실시간 고객 프로필의 사용자 지정 클래스를 기반으로 스키마를 사용하려는 경우 조합 스키마는 동일한 클래스를 공유하는 스키마만 기반으로 구성된다는 점을 염두에 두어야 합니다. [!UICONTROL XDM Individual Profile] 또는 [!UICONTROL XDM ExperienceEvent]과 같은 다른 클래스에 대한 사용자 정의 클래스 스키마를 공용 클래스에 포함하려면 해당 클래스를 사용하는 다른 스키마와 관계를 설정해야 합니다. 자세한 내용은 API](../tutorials/relationship-api.md)에서 두 스키마 간의 관계 설정에 대한 자습서를 참조하십시오.[
 
 **API 형식**
 
