@@ -3,15 +3,15 @@ keywords: Experience Platform;홈;인기 항목;api;API;XDM;XDM 시스템;경험
 solution: Experience Platform
 title: 스키마 API 끝점
 description: 스키마 레지스트리 API의 /schemas 끝점을 사용하면 경험 응용 프로그램 내에서 XDM 스키마를 프로그래밍 방식으로 관리할 수 있습니다.
-topic: developer guide
+topic: 개발자 가이드
+exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
-source-wordcount: '1418'
+source-wordcount: '1420'
 ht-degree: 2%
 
 ---
-
 
 # 스키마 끝점
 
@@ -128,11 +128,11 @@ curl -X GET \
 
 | `Accept` header | 설명 |
 | ------- | ------------ |
-| `application/vnd.adobe.xed+json; version={MAJOR_VERSION}` | `$ref` 및 `allOf`이(가) 있는 Raw에는 제목 및 설명이 있습니다. |
-| `application/vnd.adobe.xed-full+json; version={MAJOR_VERSION}` | `$ref` 그리고  `allOf` 해결되었습니다. 제목 및 설명이 있습니다. |
-| `application/vnd.adobe.xed-notext+json; version={MAJOR_VERSION}` | `$ref` 및 `allOf`이 있는 Raw에 제목이나 설명이 없습니다. |
-| `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref` 제목 또는 설명 없이  `allOf` 해결되었습니다. |
-| `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` 설명자가 포함된  `allOf` 문제가 해결되었습니다. |
+| `application/vnd.adobe.xed+json; version=1` | `$ref` 및 `allOf`이(가) 있는 Raw에는 제목 및 설명이 있습니다. |
+| `application/vnd.adobe.xed-full+json; version=1` | `$ref` 그리고  `allOf` 해결되었습니다. 제목 및 설명이 있습니다. |
+| `application/vnd.adobe.xed-notext+json; version=1` | `$ref` 및 `allOf`이 있는 Raw에 제목이나 설명이 없습니다. |
+| `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` 제목 또는 설명 없이  `allOf` 해결되었습니다. |
+| `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` 설명자가 포함된  `allOf` 문제가 해결되었습니다. |
 
 **응답**
 
@@ -231,7 +231,7 @@ curl -X POST \
 
 **응답**
 
-성공적인 응답은 HTTP 상태 201(만들어짐)과 새로 만든 스키마의 `$id`, `meta:altId` 및 `version`을(를) 포함하여 세부 정보가 포함된 페이로드를 반환합니다. 이러한 값은 읽기 전용이며 [!DNL Schema Registry]에 의해 할당됩니다.
+성공적인 응답은 HTTP 상태 201(생성됨)과 새로 만든 스키마의 `$id`, `meta:altId` 및 `version`을(를) 포함하여 세부 정보가 포함된 페이로드를 반환합니다. 이러한 값은 읽기 전용이며 [!DNL Schema Registry]에 의해 할당됩니다.
 
 ```JSON
 {
