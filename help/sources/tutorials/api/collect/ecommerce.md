@@ -2,25 +2,25 @@
 keywords: Experience Platform;홈;인기 항목;전자 상거래 데이터 수집;eCommerce 데이터
 solution: Experience Platform
 title: 소스 커넥터 및 API를 사용하여 전자 상거래 데이터 수집
-topic: overview
-type: Tutorial
+topic: 개요
+type: 튜토리얼
 description: 이 자습서에서는 제3자 eCommerce 시스템에서 데이터를 검색하고 소스 커넥터 및 API를 사용하여 이를 플랫폼에 인제스트하는 절차를 다룹니다.
+exl-id: 0952f037-5e20-4d84-a2e6-2c9470f168f5
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
-source-wordcount: '1489'
+source-wordcount: '1521'
 ht-degree: 1%
 
 ---
 
-
 # 소스 커넥터 및 API를 사용하여 전자 상거래 데이터 수집
 
-이 자습서에서는 제3자 **[!UICONTROL eCommerce]** 시스템에서 데이터를 검색하고 소스 커넥터 및 [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)를 통해 [!DNL Platform]에 데이터를 인제하는 절차를 다룹니다.
+이 자습서에서는 소스 커넥터와 [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)를 통해 제3자 **[!UICONTROL eCommerce]** 시스템에서 데이터를 검색하고 이를 [!DNL Platform]에 인제하는 절차를 설명합니다.
 
 ## 시작하기
 
-이 자습서에서는 **[!UICONTROL eCommerce]** 시스템에 대한 액세스 권한과 [!DNL Platform]로 가져오려는 파일(파일의 경로와 구조 포함)에 대한 정보를 필요로 합니다. 이 정보가 없는 경우 이 튜토리얼을 시작하기 전에 [Flow Service API](../explore/ecommerce.md)를 사용하여 eCommerce 시스템 둘러보기를 참조하십시오.
+이 자습서에서는 **[!UICONTROL eCommerce]** 시스템에 대한 액세스 권한과 [!DNL Platform](파일의 경로와 구조 포함)로 가져오려는 파일에 대한 정보를 필요로 합니다. 이 정보가 없는 경우 이 튜토리얼을 시작하기 전에 [Flow Service API](../explore/ecommerce.md)를 사용하여 eCommerce 시스템 둘러보기를 참조하십시오.
 
 또한 이 자습서에서는 Adobe Experience Platform의 다음 구성 요소에 대해 자세히 알아야 합니다.
 
@@ -271,6 +271,7 @@ curl -X POST \
 | 속성 | 설명 |
 | -------- | ----------- |
 | `schemaRef.id` | 대상 XDM 스키마의 `$id`. |
+| `schemaRef.contentType` | 스키마의 버전입니다. 이 값은 스키마의 최신 부 버전을 반환하는 `application/vnd.adobe.xed-full-notext+json;version=1`으로 설정해야 합니다. |
 
 **응답**
 
@@ -327,6 +328,7 @@ curl -X POST \
 | 속성 | 설명 |
 | -------- | ----------- |
 | `data.schema.id` | 대상 XDM 스키마의 `$id`. |
+| `data.schema.version` | 스키마의 버전입니다. 이 값은 스키마의 최신 부 버전을 반환하는 `application/vnd.adobe.xed-full+json;version=1`으로 설정해야 합니다. |
 | `params.dataSetId` | 대상 데이터 세트의 ID입니다. |
 | `connectionSpec.id` | 데이터 호수에 연결하는 데 사용되는 연결 사양 ID. 이 ID:`c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
@@ -716,7 +718,7 @@ curl -X POST \
 | `sourceConnectionIds` | 이전 단계에서 검색된 [소스 연결 ID](#source)입니다. |
 | `targetConnectionIds` | 이전 단계에서 검색된 [대상 연결 ID](#target-connection)입니다. |
 | `transformations.params.mappingId` | 이전 단계에서 검색된 [매핑 ID](#mapping)입니다. |
-| `transformations.params.mappingId` | **[!UICONTROL eCommerce]** 소스와 연결된 매핑 ID입니다. |
+| `transformations.params.mappingId` | **[!UICONTROL eCommerce]** 소스와 연결된 매핑 ID. |
 | `scheduleParams.startTime` | epolow 시간의 데이터 흐름 시작 시간입니다. |
 | `scheduleParams.frequency` | 데이터 흐름 데이터가 수집되는 `frequency` 사용할 수 있는 값은 다음과 같습니다.`once`, `minute`, `hour`, `day` 또는 `week`. |
 | `scheduleParams.interval` | 간격은 두 개의 연속 흐름 실행 사이의 기간을 지정합니다. 간격의 값은 0이 아닌 정수여야 합니다. `frequency`이(가) `once`로 설정되고 다른 `frequency` 값에 대해 `15`보다 크거나 같아야 하는 경우 간격이 필요하지 않습니다. |
@@ -738,7 +740,7 @@ curl -X POST \
 
 ## 다음 단계
 
-이 자습서를 따라 일정 기준으로 **[!UICONTROL eCommerce]** 데이터를 수집하는 소스 커넥터를 만들었습니다. 이제 [!DNL Real-time Customer Profile] 및 [!DNL Data Science Workspace] 등의 다운스트림 [!DNL Platform] 서비스에서 들어오는 데이터를 사용할 수 있습니다. 자세한 내용은 다음 문서를 참조하십시오.
+이 자습서를 따라 **[!UICONTROL eCommerce]** 데이터를 예약별로 수집하는 소스 커넥터를 만들었습니다. 이제 [!DNL Real-time Customer Profile] 및 [!DNL Data Science Workspace] 등의 다운스트림 [!DNL Platform] 서비스에서 들어오는 데이터를 사용할 수 있습니다. 자세한 내용은 다음 문서를 참조하십시오.
 
 * [실시간 고객 프로필 개요](../../../../profile/home.md)
 * [데이터 과학 작업 공간 개요](../../../../data-science-workspace/home.md)
