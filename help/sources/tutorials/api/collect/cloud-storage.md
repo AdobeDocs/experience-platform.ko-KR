@@ -5,14 +5,14 @@ title: 소스 커넥터 및 API를 사용하여 클라우드 스토리지 데이
 topic: 개요
 type: 튜토리얼
 description: 이 자습서에서는 소스 커넥터 및 API를 사용하여 제3자 클라우드 저장소에서 데이터를 검색하고 플랫폼으로 가져오는 절차를 다룹니다.
+exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
 translation-type: tm+mt
-source-git-commit: 8b85b25112ee16b09b1411c5d001bf13fb7fbcaa
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
-source-wordcount: '1768'
-ht-degree: 2%
+source-wordcount: '1806'
+ht-degree: 1%
 
 ---
-
 
 # 소스 커넥터 및 API를 사용하여 클라우드 스토리지 데이터 수집
 
@@ -332,6 +332,7 @@ curl -X POST \
 | 속성 | 설명 |
 | --- | --- |
 | `schemaRef.id` | 대상 XDM 스키마의 ID입니다. |
+| `schemaRef.contentType` | 스키마의 버전입니다. 이 값은 스키마의 최신 부 버전을 반환하는 `application/vnd.adobe.xed-full-notext+json;version=1`으로 설정해야 합니다. |
 
 **응답**
 
@@ -371,7 +372,7 @@ curl -X POST \
         "data": {
             "schema": {
                 "id": "https://ns.adobe.com/{TENANT_ID}/schemas/995dabbea86d58e346ff91bd8aa741a9f36f29b1019138d4",
-                "version": "application/vnd.adobe.xed-full+json;version=1.0"
+                "version": "application/vnd.adobe.xed-full+json;version=1"
             }
         },
         "params": {
@@ -387,6 +388,7 @@ curl -X POST \
 | 속성 | 설명 |
 | -------- | ----------- |
 | `data.schema.id` | 대상 XDM 스키마의 `$id`. |
+| `data.schema.version` | 스키마의 버전입니다. 이 값은 스키마의 최신 부 버전을 반환하는 `application/vnd.adobe.xed-full+json;version=1`으로 설정해야 합니다. |
 | `params.dataSetId` | 대상 데이터 세트의 ID입니다. |
 | `connectionSpec.id` | 데이터 호수에 대한 고정 연결 사양 ID입니다. 이 ID:`c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
