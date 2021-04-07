@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;데이터 집합;데이터 집합;데이터 집합 만들기;데이터 집합 만들기;데이터 집합 만들기
 solution: Experience Platform
 title: API를 사용하여 데이터 세트 만들기
-topic: datasets
+topic: 데이터 집합
 description: 이 문서에서는 Adobe Experience Platform API를 사용하여 데이터 세트를 만들고 파일을 사용하여 데이터 세트를 채우는 일반적인 단계를 제공합니다.
+exl-id: 3a5f48cf-ad05-4b9e-be1d-ff213a26a477
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
-source-wordcount: '1268'
+source-wordcount: '1306'
 ht-degree: 1%
 
 ---
-
 
 # API를 사용하여 데이터 세트 만들기
 
@@ -51,7 +51,7 @@ ht-degree: 1%
 
 * 컨텐츠 유형:application/json
 
-## 자습서
+## 튜토리얼
 
 데이터 집합을 만들려면 먼저 스키마를 정의해야 합니다. 스키마는 데이터를 나타내는 데 도움이 되는 규칙 세트입니다. 스키마는 데이터 구조를 설명하는 것 외에도 시스템 간에 이동할 때 적용할 수 있고 데이터를 검증하는 데 사용할 수 있는 제한과 기대를 제공합니다.
 
@@ -212,6 +212,11 @@ curl -X POST \
     }
 }'
 ```
+
+| 속성 | 설명 |
+| --- | --- |
+| `schemaRef.id` | 데이터 세트에 기반이 되는 XDM 스키마의 URI `$id` 값입니다. |
+| `schemaRef.contentType` | 스키마의 형식 및 버전을 나타냅니다. 자세한 내용은 XDM API 안내서의 [스키마 버전 관리](../../xdm/api/getting-started.md#versioning)에 대한 섹션을 참조하십시오. |
 
 >[!NOTE]
 >
