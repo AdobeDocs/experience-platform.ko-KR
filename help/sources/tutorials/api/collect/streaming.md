@@ -5,14 +5,14 @@ title: 소스 커넥터 및 API를 사용하여 스트리밍 데이터 수집
 topic: 개요
 type: 튜토리얼
 description: 이 자습서에서는 소스 커넥터 및 API를 사용하여 스트리밍 데이터를 검색하고 플랫폼에 가져오는 절차를 다룹니다.
+exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
-source-wordcount: '1306'
+source-wordcount: '1325'
 ht-degree: 2%
 
 ---
-
 
 # 소스 커넥터 및 API를 사용하여 스트리밍 데이터 수집
 
@@ -257,7 +257,7 @@ curl -X POST \
     -d '{
         "schemaRef": {
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/e45dd983026ce0daec5185cfddd48cbc0509015d880d6186",
-            "contentType": "application/vnd.adobe.xed-full-notext+json; version=1.1"
+            "contentType": "application/vnd.adobe.xed-full-notext+json; version=1"
         },
         "fileDescription": {
             "format": "parquet"
@@ -277,6 +277,7 @@ curl -X POST \
 | 속성 | 설명 |
 | --- | --- |
 | `schemaRef.id` | 대상 XDM 스키마의 ID입니다. |
+| `schemaRef.contentType` | 스키마의 버전입니다. 이 값은 스키마의 최신 부 버전을 반환하는 `application/vnd.adobe.xed-full-notext+json;version=1`으로 설정해야 합니다. |
 
 **응답**
 
