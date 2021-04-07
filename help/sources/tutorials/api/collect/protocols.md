@@ -2,17 +2,17 @@
 keywords: Experience Platform;홈;인기 항목;프로토콜 데이터 수집;프로토콜 데이터
 solution: Experience Platform
 title: 소스 커넥터 및 API를 사용하여 프로토콜 데이터 수집
-topic: overview
-type: Tutorial
+topic: 개요
+type: 튜토리얼
 description: 이 자습서에서는 소스 커넥터 및 API를 사용하여 프로토콜 애플리케이션에서 데이터를 검색하고 이를 플랫폼에 인제스트하는 절차를 다룹니다.
+exl-id: e14e75c2-2a93-45d8-8056-f06075bd4b8d
 translation-type: tm+mt
-source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
-source-wordcount: '1528'
+source-wordcount: '1549'
 ht-degree: 1%
 
 ---
-
 
 # 소스 커넥터 및 API를 사용하여 프로토콜 데이터 수집
 
@@ -300,6 +300,7 @@ curl -X POST \
 | 속성 | 설명 |
 | -------- | ----------- |
 | `schemaRef.id` | 대상 XDM 스키마의 `$id`. |
+| `schemaRef.contentType` | 스키마의 버전입니다. 이 값은 스키마의 최신 부 버전을 반환하는 `application/vnd.adobe.xed-full-notext+json;version=1`으로 설정해야 합니다. |
 
 **응답**
 
