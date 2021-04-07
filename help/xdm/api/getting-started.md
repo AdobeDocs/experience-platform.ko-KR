@@ -3,15 +3,15 @@ keywords: Experience Platform;홈;인기 항목;api;XDM;XDM;경험 데이터 모
 solution: Experience Platform
 title: 스키마 레지스트리 API 시작하기
 description: 이 문서에서는 스키마 레지스트리 API를 호출하기 전에 알아야 하는 핵심 개념을 소개합니다.
-topic: developer guide
+topic: 개발자 가이드
+exl-id: 7daebb7d-72d2-4967-b4f7-1886736db69f
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
-source-wordcount: '1163'
+source-wordcount: '1365'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL Schema Registry] API 시작하기
 
@@ -203,25 +203,42 @@ URI를 보다 REST에 사용하기 위해 스키마에는 `meta:altId`이라는 
 
 다음 표에는 버전 번호가 있는 값을 포함하여 호환되는 `Accept` 헤더 값이 나와 있으며 API가 사용될 때 반환할 내용에 대한 설명이 나와 있습니다.
 
-| 수락 | 설명 |
+| Accept | 설명 |
 | ------- | ------------ |
 | `application/vnd.adobe.xed-id+json` | ID 목록만 반환합니다. 리소스를 나열하는 데 가장 일반적으로 사용됩니다. |
 | `application/vnd.adobe.xed+json` | 원래 `$ref` 및 `allOf`이 포함된 전체 JSON 스키마 목록을 반환합니다. 전체 리소스 목록을 반환하는 데 사용됩니다. |
-| `application/vnd.adobe.xed+json; version={MAJOR_VERSION}` | `$ref` 및 `allOf`의 원시 XDM입니다. 제목과 설명이 있습니다. |
-| `application/vnd.adobe.xed-full+json; version={MAJOR_VERSION}` | `$ref` 속성 및  `allOf` 해결됨. 제목과 설명이 있습니다. |
-| `application/vnd.adobe.xed-notext+json; version={MAJOR_VERSION}` | `$ref` 및 `allOf`의 원시 XDM입니다. 제목이나 설명이 없습니다. |
-| `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref` 속성 및  `allOf` 해결됨. 제목이나 설명이 없습니다. |
-| `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` 속성 및  `allOf` 해결됨. 설명자가 포함되어 있습니다. |
+| `application/vnd.adobe.xed+json; version=1` | `$ref` 및 `allOf`의 원시 XDM입니다. 제목과 설명이 있습니다. |
+| `application/vnd.adobe.xed-full+json; version=1` | `$ref` 속성 및  `allOf` 해결됨. 제목과 설명이 있습니다. |
+| `application/vnd.adobe.xed-notext+json; version=1` | `$ref` 및 `allOf`의 원시 XDM입니다. 제목이나 설명이 없습니다. |
+| `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` 속성 및  `allOf` 해결됨. 제목이나 설명이 없습니다. |
+| `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` 속성 및  `allOf` 해결됨. 설명자가 포함되어 있습니다. |
 
 >[!NOTE]
 >
->주 버전만 제공하는 경우(예: 1, 2, 3) 레지스트리는 최신 마이너 버전(예:.1, .2, .3)을 자동으로 설정할 수 있습니다.
+>플랫폼은 현재 각 스키마(`1`)에 대해 하나의 주요 버전만 지원합니다. 따라서 스키마의 최신 부 버전을 반환하려면 조회 요청을 수행할 때 `version`의 값은 항상 `1`이어야 합니다. 스키마 버전 관리에 대한 자세한 내용은 아래 하위 섹션을 참조하십시오.
+
+### 스키마 버전 관리 {#versioning}
+
+스키마 버전은 스키마 레지스트리 API의 `Accept` 헤더와 다운스트림 플랫폼 서비스 API 페이로드의 `schemaRef.contentType` 속성에서 참조됩니다.
+
+현재 플랫폼은 각 스키마에 대해 단일 주요 버전(`1`)만 지원합니다. 스키마 진행](../schema/composition.md#evolution)의 [규칙에 따르면 스키마에 대한 각 업데이트는 비파괴적이어야 합니다. 즉, 새로운 부 버전의 스키마(`1.2`, `1.3` 등) 이전 보조 버전과 항상 이전 버전과 호환됩니다. 따라서 `version=1`을 지정하는 경우 스키마 레지스트리는 항상 스키마의 **최신** 주 버전 `1`을 반환합니다. 즉, 이전 부 버전은 반환되지 않습니다.
+
+>[!NOTE]
+>
+>스키마 진화에 대한 비파괴 요구 사항은 데이터 세트에 의해 스키마가 참조되고 다음 중 하나가 참인 후에만 적용됩니다.
+>
+>* 데이터를 데이터 세트에 수집했습니다.
+>* 데이터 세트를 실시간 고객 프로필에서 사용할 수 있습니다(데이터를 인제스트하지 않은 경우에도).
+
+>
+>
+스키마가 위의 조건 중 하나를 충족하는 데이터 세트와 연결되어 있지 않으면 스키마를 변경할 수 있습니다. 그러나 모든 경우 `version` 구성 요소는 여전히 `1`에 있습니다.
 
 ## XDM 필드 제한 및 우수 사례
 
 스키마의 필드는 해당 `properties` 개체 내에 나열됩니다. 각 필드는 필드가 포함할 수 있는 데이터를 설명하고 제한하는 특성을 포함하는 객체입니다.
 
-API에서 필드 유형을 정의하는 방법에 대한 자세한 내용은 이 안내서의 [부록](appendix.md)에 코드 샘플 및 가장 일반적으로 사용되는 데이터 유형에 대한 선택적 제약 조건을 참조하십시오.
+API에서 필드 유형을 정의하는 방법에 대한 자세한 내용은 이 안내서의 [필드 제한 조건 안내서](../schema/field-constraints.md)에서 코드 샘플 및 가장 일반적으로 사용되는 데이터 유형에 대한 선택적 제약 조건을 참조하십시오.
 
 다음 샘플 필드는 올바른 형식의 XDM 필드를 보여 주며, 아래에 제공된 제한 조건 및 우수 사례에 대한 자세한 내용을 보여 줍니다. 비슷한 속성을 포함하는 다른 리소스를 정의할 때도 이러한 방법을 적용할 수 있습니다.
 
