@@ -3,14 +3,14 @@ keywords: Experience Platform;홈;인기 항목;api;API;XDM;XDM 시스템;경험
 solution: Experience Platform
 title: 데이터 유형 API 끝점
 description: 스키마 레지스트리 API의 /datatypes 끝점을 사용하면 경험 응용 프로그램 내에서 XDM 데이터 유형을 프로그래밍 방식으로 관리할 수 있습니다.
+exl-id: 2a58d641-c681-40cf-acc8-7ad842cd6243
 translation-type: tm+mt
-source-git-commit: 0727ffa0c72bcb6a85de1a13215b691b97889b70
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
 source-wordcount: '1147'
 ht-degree: 2%
 
 ---
-
 
 # 데이터 유형 끝점
 
@@ -127,11 +127,11 @@ curl -X GET \
 
 | `Accept` header | 설명 |
 | ------- | ------------ |
-| `application/vnd.adobe.xed+json; version={MAJOR_VERSION}` | `$ref` 및 `allOf`이(가) 있는 Raw에는 제목 및 설명이 있습니다. |
-| `application/vnd.adobe.xed-full+json; version={MAJOR_VERSION}` | `$ref` 그리고  `allOf` 해결되었습니다. 제목 및 설명이 있습니다. |
-| `application/vnd.adobe.xed-notext+json; version={MAJOR_VERSION}` | `$ref` 및 `allOf`이 있는 Raw에 제목이나 설명이 없습니다. |
-| `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref` 제목 또는 설명 없이  `allOf` 해결되었습니다. |
-| `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` 설명자가 포함된  `allOf` 문제가 해결되었습니다. |
+| `application/vnd.adobe.xed+json; version=1` | `$ref` 및 `allOf`이(가) 있는 Raw에는 제목 및 설명이 있습니다. |
+| `application/vnd.adobe.xed-full+json; version=1` | `$ref` 그리고  `allOf` 해결되었습니다. 제목 및 설명이 있습니다. |
+| `application/vnd.adobe.xed-notext+json; version=1` | `$ref` 및 `allOf`이 있는 Raw에 제목이나 설명이 없습니다. |
+| `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` 제목 또는 설명 없이  `allOf` 해결되었습니다. |
+| `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` 설명자가 포함된  `allOf` 문제가 해결되었습니다. |
 
 **응답**
 
