@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;필터;필터;필터 데이터;필터 데이터;날짜 범위
 solution: Experience Platform
 title: 쿼리 매개 변수를 사용하여 카탈로그 데이터 필터링
-topic: developer guide
+topic: 개발자 가이드
 description: 카탈로그 서비스 API를 사용하면 요청 쿼리 매개 변수의 사용을 통해 응답 데이터를 필터링할 수 있습니다. 카탈로그에 대한 우수 사례 중 하나는 API에 대한 로드를 줄이고 전반적인 성능을 개선하는 데 도움이 되기 때문에 모든 API 호출에서 필터를 사용하는 것입니다.
+exl-id: 0cdb5a7e-527b-46be-9ad8-5337c8dc72b7
 translation-type: tm+mt
-source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
-source-wordcount: '2090'
+source-wordcount: '2123'
 ht-degree: 1%
 
 ---
-
 
 # 쿼리 매개 변수를 사용하여 [!DNL Catalog] 데이터 필터링
 
@@ -38,7 +38,7 @@ GET /{OBJECT_TYPE}?limit={LIMIT}
 | 매개 변수 | 설명 |
 | --- | --- |
 | `{OBJECT_TYPE}` | 검색할 [!DNL Catalog] 개체의 유형입니다. 유효한 개체는 다음과 같습니다. <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
-| `{LIMIT}` | 1부터 100까지의 반환할 개체 수를 나타내는 정수입니다. |
+| `{LIMIT}` | 반환할 개체의 수를 1부터 100까지 나타내는 정수입니다. |
 
 **요청**
 
@@ -155,6 +155,10 @@ curl -X GET \
 * 개체에 요청된 속성이 포함되어 있지 않으면 빈 개체로 표시됩니다.(`Dataset2`)
 * 데이터 세트에 속성이 포함되어 있지만 값이 없는 경우 요청된 속성을 빈 개체로 반환할 수 있습니다.(`Dataset3`)
 * 그렇지 않으면 데이터 세트에 요청된 모든 속성의 전체 값이 표시됩니다.(`Dataset4`)
+
+>[!NOTE]
+>
+>각 데이터 세트에 대한 `schemaRef` 속성에서 버전 번호는 스키마의 최신 부 버전을 나타냅니다. 자세한 내용은 XDM API 안내서의 [스키마 버전 관리](../../xdm/api/getting-started.md#versioning)에 대한 섹션을 참조하십시오.
 
 ## 응답 목록의 오프셋 시작 인덱스
 
@@ -333,7 +337,7 @@ curl -X GET \
 
 ## 날짜 범위별로 필터링
 
-[!DNL Catalog] API의 일부 끝점에는 대부분의 날짜 경우에 범위 쿼리를 허용하는 쿼리 매개 변수가 있습니다.
+[!DNL Catalog] API의 일부 끝점에는 대부분의 날짜 경우 범위 쿼리를 허용하는 쿼리 매개 변수가 있습니다.
 
 **API 형식**
 
@@ -574,7 +578,7 @@ GET /{OBJECT_TYPE}?property={CONDITION}
 | 매개 변수 | 설명 |
 | --- | --- |
 | `{OBJECT_TYPE}` | 검색할 [!DNL Catalog] 개체의 유형입니다. 유효한 개체는 다음과 같습니다. <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
-| `{CONDITION}` | 쿼리할 속성과 그 값이 평가되는 방법을 나타내는 조건부 표현식. 예제는 아래에 제공됩니다. |
+| `{CONDITION}` | 쿼리할 속성과 해당 값이 평가되는 방법을 나타내는 조건부 표현식. 예제는 아래에 제공됩니다. |
 
 `property` 매개 변수의 값은 여러 종류의 조건부 표현식을 지원합니다. 다음 표에서는 지원되는 표현식에 대한 기본 구문에 대해 설명합니다.
 
