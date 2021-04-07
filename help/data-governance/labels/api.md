@@ -2,13 +2,13 @@
 keywords: Experience Platform;홈;인기 항목;데이터 거버넌스;데이터 사용 레이블 api;정책 서비스 api
 solution: Experience Platform
 title: 'API를 사용하여 데이터 사용 레이블 관리 '
-topic: developer guide
+topic: 개발자 가이드
 description: 데이터 집합 서비스 API를 사용하여 데이터 집합에 대한 사용 레이블을 적용하고 편집할 수 있습니다. 이것은 Adobe Experience Platform의 데이터 카탈로그 기능의 일부이지만 데이터 세트 메타데이터를 관리하는 카탈로그 서비스 API와는 별개입니다.
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 4e75e3fbdcd480c384411c2f33bad5b2cdcc5c42
 workflow-type: tm+mt
-source-wordcount: '1017'
-ht-degree: 3%
+source-wordcount: '1147'
+ht-degree: 2%
 
 ---
 
@@ -280,7 +280,11 @@ curl -X GET \
 | 속성 | 설명 |
 | --- | --- |
 | `labels` | 데이터 세트에 적용된 데이터 사용 레이블 목록입니다. |
-| `optionalLabels` | 데이터 사용 레이블이 적용된 데이터 세트 내의 개별 필드 목록입니다. |
+| `optionalLabels` | 데이터 사용 레이블이 적용된 데이터 세트 내의 개별 필드 목록입니다. <br/><br/>`option` 하위 속성이 필요합니다.필드의 [!DNL Experience Data Model](XDM) 특성을 포함하는 객체입니다. 다음 세 가지 속성이 필요합니다.<ul><li>`id`:필드와  `$id` 연결된 스키마의 URI 값입니다.</li><li>`contentType`:스키마의 형식 및 버전을 나타냅니다. 자세한 내용은 XDM API 안내서의 [스키마 버전 관리](../../xdm/api/getting-started.md#versioning)에 대한 섹션을 참조하십시오.</li><li>`schemaPath`:JSON Porintersyntax에서 작성된 문제의 스키마  [속성 ](../../landing/api-fundamentals.md#json-pointer) 경로입니다.</li></ul>`labels`:필드에 추가할 데이터 사용 레이블 목록입니다. |
+
+- id:데이터 세트가 기반으로 하는 XDM 스키마의 URI $id 값입니다.
+- contentType:스키마의 형식 및 버전을 나타냅니다. 자세한 내용은 XDM API 안내서의 [스키마 버전 관리](../../xdm/api/getting-started.md#versioning)에 대한 섹션을 참조하십시오.
+- schemaPath:[JSON 포인터](../../landing/api-fundamentals.md#json-pointer) 구문으로 작성된 해당 스키마 속성의 경로입니다.
 
 ## 데이터 세트 {#apply-dataset-labels}에 레이블 적용
 
@@ -327,7 +331,7 @@ curl -X POST \
 | 속성 | 설명 |
 | --- | --- |
 | `labels` | 데이터 세트에 추가할 데이터 사용 레이블 목록입니다. |
-| `optionalLabels` | 레이블을 추가할 데이터 세트 내의 개별 필드 목록입니다. 이 배열의 각 항목에는 다음 속성이 있어야 합니다.<br/><br/>`option`:필드의 [!DNL Experience Data Model](XDM) 특성을 포함하는 객체입니다. 다음 세 가지 속성이 필요합니다.<ul><li>id</code>:필드에 연결된 스키마의 URI $id</code> 값입니다.</li><li>contentType</code>:스키마의 내용 유형 및 버전 번호입니다. XDM 조회 요청에 대해 유효한 <a href="../../xdm/api/getting-started.md#accept">헤더 수락</a> 중 하나의 형태를 가져야 합니다.</li><li>schemaPath</code>:데이터 집합 스키마 내의 필드 경로입니다.</li></ul>`labels`:필드에 추가할 데이터 사용 레이블 목록입니다. |
+| `optionalLabels` | 레이블을 추가할 데이터 세트 내의 개별 필드 목록입니다. 이 배열의 각 항목에는 <br/><br/>`option` 속성이 있어야 합니다.필드의 [!DNL Experience Data Model](XDM) 특성을 포함하는 객체입니다. 다음 세 가지 속성이 필요합니다.<ul><li>`id`:필드와  `$id` 연결된 스키마의 URI 값입니다.</li><li>`contentType`:스키마의 형식 및 버전을 나타냅니다. 자세한 내용은 XDM API 안내서의 [스키마 버전 관리](../../xdm/api/getting-started.md#versioning)에 대한 섹션을 참조하십시오.</li><li>`schemaPath`:JSON Porintersyntax에서 작성된 문제의 스키마  [속성 ](../../landing/api-fundamentals.md#json-pointer) 경로입니다.</li></ul>`labels`:필드에 추가할 데이터 사용 레이블 목록입니다. |
 
 **응답**
 
