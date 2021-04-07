@@ -2,17 +2,17 @@
 keywords: Experience Platform;홈;인기 항목;흐름 서비스;광고;구글 애드워즈;광고
 solution: Experience Platform
 title: 소스 커넥터 및 API를 사용하여 광고 데이터 수집
-topic: overview
-type: Tutorial
+topic: 개요
+type: 튜토리얼
 description: 이 자습서에서는 소스 커넥터 및 Flow Service API를 사용하여 제3자 광고 응용 프로그램에서 데이터를 검색하고 이를 Platform으로 인제스트하는 절차를 다룹니다.
+exl-id: 2a0eb13b-d09e-4bc1-aae3-84c8741eead1
 translation-type: tm+mt
-source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
-source-wordcount: '1513'
+source-wordcount: '1553'
 ht-degree: 1%
 
 ---
-
 
 # 소스 커넥터 및 API를 사용하여 광고 데이터 수집
 
@@ -300,6 +300,7 @@ curl -X POST \
 | 속성 | 설명 |
 | -------- | ----------- |
 | `schemaRef.id` | 대상 XDM 스키마의 `$id`. |
+| `schemaRef.contentType` | 스키마의 버전입니다. 이 값은 스키마의 최신 부 버전을 반환하는 `application/vnd.adobe.xed-full-notext+json;version=1`으로 설정해야 합니다. |
 
 **응답**
 
@@ -339,7 +340,7 @@ curl -X POST \
         "data": {
             "schema": {
                 "id": "https://ns.adobe.com/{TENANT_ID}/schemas/b9bf50e91f28528e5213c7ed8583018f48970d69040c37dc",
-                "version": "application/vnd.adobe.xed-full+json;version=1.0"
+                "version": "application/vnd.adobe.xed-full+json;version=1"
             }
         },
         "params": {
@@ -355,6 +356,7 @@ curl -X POST \
 | 속성 | 설명 |
 | -------- | ----------- |
 | `data.schema.id` | 대상 XDM 스키마의 `$id`. |
+| `data.schema.version` | 스키마의 버전입니다. 이 값은 스키마의 최신 부 버전을 반환하는 `application/vnd.adobe.xed-full+json;version=1`으로 설정해야 합니다. |
 | `params.dataSetId` | 대상 데이터 세트의 ID입니다. |
 | `connectionSpec.id` | 데이터 호수에 연결하는 데 사용되는 연결 사양 ID. 이 ID:`c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
