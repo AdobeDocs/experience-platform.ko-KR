@@ -3,15 +3,15 @@ keywords: Experience Platform;홈;인기 항목;api;XDM;XDM 시스템;경험 데
 solution: Experience Platform
 title: 조합 API 끝점
 description: 스키마 레지스트리 API의 /union 끝점을 사용하면 경험 응용 프로그램에서 XDM 결합 스키마를 프로그래밍 방식으로 관리할 수 있습니다.
-topic: developer guide
+topic: 개발자 가이드
+exl-id: d0ece235-72e8-49d9-856b-5dba44e16ee7
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
-source-wordcount: '912'
+source-wordcount: '902'
 ht-degree: 1%
 
 ---
-
 
 # 조합 끝점
 
@@ -124,10 +124,10 @@ curl -X GET \
 
 결합 스키마 조회에 사용할 수 있는 헤더는 다음과 같습니다.
 
-| 수락 | 설명 |
+| Accept | 설명 |
 | -------|------------ |
-| application/vnd.adobe.xed+json;version={MAJOR_VERSION} | `$ref` 및 `allOf`이(가) 있는 원시. 제목 및 설명이 포함되어 있습니다. |
-| application/vnd.adobe.xed-full+json;version={MAJOR_VERSION} | `$ref` 속성 및  `allOf` 해결됨. 제목 및 설명이 포함되어 있습니다. |
+| `application/vnd.adobe.xed+json; version=1` | `$ref` 및 `allOf`이(가) 있는 원시. 제목 및 설명이 포함되어 있습니다. |
+| `application/vnd.adobe.xed-full+json; version=1` | `$ref` 속성 및  `allOf` 해결됨. 제목 및 설명이 포함되어 있습니다. |
 
 **응답**
 
@@ -194,7 +194,7 @@ GET /tenant/schemas?property=meta:immutableTags==union&property=meta:class=={CLA
 
 **요청**
 
-다음 요청은 [!DNL XDM Individual Profile] 클래스에 대한 유니코드에 포함된 모든 스키마 목록을 검색합니다.
+다음 요청은 [!DNL XDM Individual Profile] 클래스에 대한 유니션에 포함된 모든 스키마 목록을 검색합니다.
 
 ```SHELL
 curl -X GET \
