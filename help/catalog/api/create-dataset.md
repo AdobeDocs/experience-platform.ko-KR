@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;데이터 집합;데이터 집합;데이터 집합 만들기;데이터 집합 만들기;데이터 집합 사용
 solution: Experience Platform
 title: API에서 데이터 세트 만들기
-topic: developer guide
+topic: 개발자 가이드
 description: 이 문서에서는 카탈로그 서비스 API에서 데이터 세트 개체를 만드는 방법을 설명합니다.
+exl-id: f3e5de7f-1781-4898-ac42-063eb51e661a
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
-source-wordcount: '232'
+source-wordcount: '256'
 ht-degree: 1%
 
 ---
-
 
 # API에서 데이터 세트 만들기
 
@@ -57,6 +57,7 @@ curl -X POST \
 | --- | --- |
 | `name` | 만들 데이터 세트의 이름입니다. |
 | `schemaRef.id` | 데이터 세트에 기반이 되는 XDM 스키마의 URI `$id` 값입니다. |
+| `schemaRef.contentType` | 스키마의 형식 및 버전을 나타냅니다. 자세한 내용은 XDM API 안내서의 [스키마 버전 관리](../../xdm/api/getting-started.md#versioning)에 대한 섹션을 참조하십시오. |
 
 >[!NOTE]
 >
