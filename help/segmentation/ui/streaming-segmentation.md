@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;스트리밍 세그멘테이션;세그멘테이션 서비스;세그멘테이션 서비스;ui guide;
 solution: Experience Platform
 title: 스트리밍 세그멘테이션 UI 안내서
-topic: ui guide
+topic: ui 안내서
 description: Adobe Experience Platform의 스트리밍 세분화를 통해 거의 실시간으로 세분화를 수행하고 데이터 풍부함에 초점을 맞출 수 있습니다. 스트리밍 세분화를 통해 데이터가 Platform(플랫폼)으로 유입되므로 세분화 작업을 예약하고 실행할 필요가 없습니다. 이 기능을 사용하면 이제 데이터가 플랫폼에 전달되면 대부분의 세그먼트 규칙을 평가할 수 있으므로 세그먼트 멤버십은 예약된 세그멘테이션 작업을 실행하지 않고 최신 상태로 유지됩니다.
+exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
 translation-type: tm+mt
-source-git-commit: 405b7eb0c95ebef0b05d2b10ef92f28a37b7cc86
+source-git-commit: e1ae20412f449c991f53fdd0f095d0c3a6de262c
 workflow-type: tm+mt
-source-wordcount: '769'
+source-wordcount: '798'
 ht-degree: 0%
 
 ---
-
 
 # 스트리밍 세분화
 
@@ -39,9 +39,11 @@ ht-degree: 0%
 | ---------- | ------- | ------- |
 | 들어오는 히트 | 시간 제한 없이 단일 들어오는 이벤트를 참조하는 모든 세그먼트 정의 | ![](../images/ui/streaming-segmentation/incoming-hit.png) |
 | 상대 시간 창 내에서 들어오는 히트 | 단일 들어오는 이벤트를 참조하는 모든 세그먼트 정의 | ![](../images/ui/streaming-segmentation/relative-hit-success.png) |
+| 시간 창으로 들어오는 히트 | 시간 창이 있는 단일 들어오는 이벤트를 참조하는 세그먼트 정의입니다. | ![](../images/ui/streaming-segmentation/historic-time-window.png) |
 | 프로필 전용 | 프로필 속성만 참조하는 모든 세그먼트 정의 |  |
 | 프로필을 참조하는 들어오는 히트 | 시간 제한 없이 단일 들어오는 이벤트를 참조하고 하나 이상의 프로필 속성을 참조하는 세그먼트 정의입니다. | ![](../images/ui/streaming-segmentation/profile-hit.png) |
 | 상대 시간 창 내의 프로파일을 참조하는 들어오는 히트 | 단일 들어오는 이벤트와 하나 이상의 프로필 속성을 참조하는 모든 세그먼트 정의입니다. | ![](../images/ui/streaming-segmentation/profile-relative-success.png) |
+| 세그먼트 | 하나 이상의 일괄 처리 또는 스트리밍 세그먼트를 포함하는 모든 세그먼트 정의 | ![](../images/ui/streaming-segmentation/two-batches.png) |
 | 프로파일을 참조하는 여러 이벤트 | 지난 24시간 이내에 여러 이벤트 **을 참조하고 (선택 사항) 하나 이상의 프로필 특성이 있는 세그먼트 정의입니다.** | ![](../images/ui/streaming-segmentation/event-history-success.png) |
 
 세그먼트 정의는 다음 시나리오에서 스트리밍 세그먼테이션에 대해 **활성화되지 않습니다.**.
@@ -64,7 +66,7 @@ ht-degree: 0%
 
 ![](../images/ui/streaming-segmentation/monitoring-streaming-segment.png)
 
-특히 **[!UICONTROL 총 적격한 대상 크기]**&#x200B;에 대한 세부 사항이 표시됩니다. **[!UICONTROL 자격이 있는 총 대상 크기]**&#x200B;는 마지막으로 완료된 세그먼트 작업 실행의 자격이 있는 총 대상 수를 보여줍니다. 지난 24시간 이내에 세그먼트 작업이 완료되지 않은 경우 대신 예상에서 대상 수를 가져옵니다.
+특히 **[!UICONTROL total qualified audience size]**&#x200B;에 대한 세부 사항이 표시됩니다. **[!UICONTROL Total qualified audience size]**&#x200B;은 마지막으로 완료된 세그먼트 작업 실행의 자격이 있는 총 대상 수를 보여줍니다. 지난 24시간 이내에 세그먼트 작업이 완료되지 않은 경우 대신 예상에서 대상 수를 가져옵니다.
 
 아래에는 지난 24시간 동안 자격이 있고 결격 처리된 세그먼트 수가 표시되는 선 그래프가 있습니다. 드롭다운을 조정하여 지난 24시간, 지난 주 또는 최근 30일을 표시할 수 있습니다.
 
