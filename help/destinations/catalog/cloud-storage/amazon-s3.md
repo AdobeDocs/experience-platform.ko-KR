@@ -2,14 +2,14 @@
 keywords: Amazon S3;S3 대상;s3;amazon s3
 title: Amazon S3 연결
 description: Amazon 웹 서비스(AWS) S3 스토리지에 대한 라이브 아웃바운드 연결을 생성하여 Adobe Experience Platform에서 탭으로 구분된 데이터 또는 CSV 데이터 파일을 S3 버킷으로 주기적으로 내보냅니다.
+exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: d77cd063e61118631b757d9821267b2fd6ab0148
 workflow-type: tm+mt
-source-wordcount: '223'
+source-wordcount: '233'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL Amazon S3] 연결  {#s3-connection}
 
@@ -31,10 +31,34 @@ ht-degree: 0%
 
 * **[!DNL Amazon S3]액세스 키 및  [!DNL Amazon S3] 비밀 키**:에서  [!DNL Amazon S3]쌍을 생성하여  `access key - secret access key` 플랫폼에 사용자 계정에 대한 액세스 권한을  [!DNL Amazon S3] 부여합니다. [Amazon 웹 서비스 설명서](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)에서 자세한 내용을 살펴보십시오.
 
+## 필수 [!DNL Amazon S3] 권한 {#required-s3-permission}
+
+데이터를 [!DNL Amazon S3] 스토리지 위치에 성공적으로 연결하고 내보내려면 [!DNL Amazon S3]에 [!DNL Platform]에 대한 IAM 사용자를 만들고 다음 작업에 대한 권한을 할당합니다.
+
+* `s3:DeleteObject`
+* `s3:DeleteObjectVersion`
+* `s3:GetBucketLocation`
+* `s3:GetObject`
+* `s3:GetObjectVersion`
+* `s3:ListBucket`
+* `s3:ListBuckets`
+* `s3:PutBucketVersioning`
+* `s3:PutObject`
+* `s3:ReplicateObject`
+* `s3:RestoreObject`
+
+
+<!--
+
+Commenting out this note, as write permissions are assigned through the s3:PutObject permission.
+
 >[!IMPORTANT]
 >
->플랫폼에 내보내기 파일이 전달될 버킷 개체에 `write` 권한이 필요합니다.
+>Platform needs `write` permissions on the bucket object where the export files will be delivered.
+
+-->
+
 
 ## 내보낸 데이터 {#exported-data}
 
-[!DNL Amazon S3] 대상의 경우 Platform은 사용자가 제공한 저장 위치에 탭으로 구분된 `.txt` 또는 `.csv` 파일을 만듭니다. 파일에 대한 자세한 내용은 세그먼트 활성화 자습서에서 [이메일 마케팅 대상 및 클라우드 스토리지 대상](../../ui/activate-destinations.md#esp-and-cloud-storage)을 참조하십시오.
+[!DNL Amazon S3] 대상의 경우 [!DNL Platform]은 사용자가 제공한 저장 위치에 탭으로 구분된 `.txt` 또는 `.csv` 파일을 만듭니다. 파일에 대한 자세한 내용은 세그먼트 활성화 자습서에서 [이메일 마케팅 대상 및 클라우드 스토리지 대상](../../ui/activate-destinations.md#esp-and-cloud-storage)을 참조하십시오.
