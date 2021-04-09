@@ -6,14 +6,18 @@ topic: ui 안내서
 description: Edge Segmentation은 Platform에서 세그먼트를 즉시 평가하여 동일한 페이지와 다음 페이지 개인화 사용 사례를 활성화하는 기능입니다.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
 translation-type: tm+mt
-source-git-commit: 692bfca8d14ac247527f956bbcba8b4eb37516e3
+source-git-commit: 36169a42c7f6a73ca9cc165cd338d6a1cf245bfc
 workflow-type: tm+mt
-source-wordcount: '332'
-ht-degree: 1%
+source-wordcount: '348'
+ht-degree: 4%
 
 ---
 
-# Edge 세그멘테이션 UI 안내서
+# Edge 세그멘테이션 UI 안내서(베타)
+
+>[!NOTE]
+>
+>에지 세그먼테이션은 현재 베타 버전입니다. 설명서 및 기능은 변경될 수 있습니다.
 
 Edge Segmentation은 Adobe Experience Platform에서 세그먼트를 바로 에지 시 평가하는 기능으로, 동일한 페이지 및 다음 페이지 개인화 사용 사례를 활성화합니다.
 
