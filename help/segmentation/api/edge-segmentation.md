@@ -6,18 +6,18 @@ topic: 개발자 가이드
 description: 이 문서에는 Adobe Experience Platform 세그멘테이션 서비스 API에서 가장자리 세그멘테이션을 사용하는 방법에 대한 예가 포함되어 있습니다.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
 translation-type: tm+mt
-source-git-commit: 692bfca8d14ac247527f956bbcba8b4eb37516e3
+source-git-commit: 36169a42c7f6a73ca9cc165cd338d6a1cf245bfc
 workflow-type: tm+mt
-source-wordcount: '636'
-ht-degree: 1%
+source-wordcount: '653'
+ht-degree: 3%
 
 ---
 
-# 에지 세분화
+# 에지 세분화(베타)
 
 >[!NOTE]
 >
->다음 문서에서는 API를 사용하여 가장자리 세그멘테이션을 수행하는 방법을 설명합니다. UI를 사용하여 에지 세그멘테이션을 수행하는 방법에 대한 자세한 내용은 [가장자리 세그멘테이션 UI 안내서](../ui/edge-segmentation.md)를 참조하십시오.
+>다음 문서에서는 API를 사용하여 가장자리 세그멘테이션을 수행하는 방법을 설명합니다. UI를 사용하여 에지 세그멘테이션을 수행하는 방법에 대한 자세한 내용은 [가장자리 세그멘테이션 UI 안내서](../ui/edge-segmentation.md)를 참조하십시오. 또한 에지 세그먼테이션은 현재 베타 버전입니다. 설명서 및 기능은 변경될 수 있습니다.
 
 Edge Segmentation은 Adobe Experience Platform에서 세그먼트를 바로 에지 시 평가하는 기능으로, 동일한 페이지 및 다음 페이지 개인화 사용 사례를 활성화합니다.
 
