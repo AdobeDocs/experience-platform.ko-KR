@@ -4,14 +4,14 @@ solution: Experience Platform
 title: 소스 문제 해결
 topic: 문제 해결
 description: 이 문서에서는 Adobe Experience Platform 관련 출처에 대한 질문과 답변을 제공합니다.
+exl-id: 94875121-7d4d-4eb2-8760-aa795933dd7e
 translation-type: tm+mt
-source-git-commit: 26e7116858574b366760ffd4f92b14117ccd28eb
+source-git-commit: 827a593c046530edba701edf26d9a47918cfd8f8
 workflow-type: tm+mt
-source-wordcount: '655'
+source-wordcount: '663'
 ht-degree: 0%
 
 ---
-
 
 # (베타) 소스 문제 해결 안내서
 
@@ -57,7 +57,7 @@ ht-degree: 0%
 
 ### 지원되는 날짜 및 시간 형식은 무엇입니까?
 
-소스는 데이터를 인제스트하는 동안 다양한 datetime 형식을 지원합니다. 지원되는 datetime 형식에 대한 자세한 내용은 [데이터 준비 날짜 함수 안내서](../data-prep/dates.md)에서 확인할 수 있습니다.
+소스는 데이터를 인제스트하는 동안 다양한 datetime 형식을 지원합니다. 지원되는 datetime 형식에 대한 자세한 내용은 데이터 준비 설명서의 [데이터 형식 처리 안내서](../data-prep/data-handling.md#dates)의 날짜 섹션에서 확인할 수 있습니다.
 
 ### CSV, JSON 및 Components 파일에서 배열의 서식을 지정하려면 어떻게 합니까?
 
