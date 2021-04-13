@@ -6,9 +6,9 @@ topic: 개요
 description: 이 문서에서는 데이터 준비와 함께 사용되는 매핑 함수를 소개합니다.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
 translation-type: tm+mt
-source-git-commit: 8b74cf5f54ddf56486d7b947b38bef58823c3684
+source-git-commit: c3939d4ce30bf12748b898f461a166f28f010abf
 workflow-type: tm+mt
-source-wordcount: '3793'
+source-wordcount: '3798'
 ht-degree: 3%
 
 ---
@@ -109,7 +109,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 >[!NOTE]
 >
->표의 전체 내용을 보려면 왼쪽/오른쪽으로 스크롤하십시오. `date` 함수에 대한 자세한 내용은 [date 함수 안내서](./dates.md)에서 확인할 수 있습니다.
+>표의 전체 내용을 보려면 왼쪽/오른쪽으로 스크롤하십시오. `date` 함수에 대한 자세한 내용은 [데이터 형식 처리 안내서](./data-handling.md#dates)의 날짜 섹션에서 확인할 수 있습니다.
 
 | 함수 | 설명 | 매개 변수 | 구문 | 표현식 | 샘플 출력 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
