@@ -4,10 +4,11 @@ solution: Experience Platform
 title: 데이터 준비 개요
 topic: 개요
 description: 이 문서에서는 Adobe Experience Platform 내의 데이터 준비를 소개합니다.
+exl-id: f15eeb50-a531-4560-a524-1a670fbda706
 translation-type: tm+mt
-source-git-commit: 73bf6abb143c0866a400aafe984f9a553ffc1abf
+source-git-commit: 827a593c046530edba701edf26d9a47918cfd8f8
 workflow-type: tm+mt
-source-wordcount: '352'
+source-wordcount: '389'
 ht-degree: 1%
 
 ---
@@ -35,6 +36,10 @@ ht-degree: 1%
 
 한 스키마를 다른 스키마로 변환하는 매핑 세트를 통칭하여 매핑 집합이라고 합니다. 단일 매핑 세트가 각 데이터 흐름의 일부로 생성됩니다. 매핑 세트는 데이터 플로우의 필수 부분이며 데이터 플로우의 일부로 생성, 편집 및 모니터링됩니다.
 
+## 데이터 형식 처리
+
+데이터 실행은 플랫폼에 인제스트된 다양한 데이터 형식을 효율적으로 처리할 수 있습니다. 데이터 준비를 통해 다양한 데이터 유형을 처리하는 방법에 대한 자세한 내용은 [데이터 형식 처리 개요](./data-handling.md)를 참조하십시오.
+
 ## 다음 단계
 
-이 문서에서는 Adobe Experience Platform의 데이터 준비에 대한 기본 사항을 다룹니다. 다른 매핑 함수에 대한 자세한 내용은 [매핑 함수 안내서](./functions.md)를 참조하십시오. 서로 다른 datetime 문자열에 대한 자세한 내용은 [날짜 문자열 안내서](./dates.md)를 참조하십시오. 데이터 준비 API를 사용하는 방법에 대한 자세한 내용은 [데이터 준비 개발자 가이드](api/overview.md)를 참조하십시오.
+이 문서에서는 Adobe Experience Platform의 데이터 준비에 대한 기본 사항을 다룹니다. 다른 매핑 함수에 대한 자세한 내용은 [매핑 함수 안내서](./functions.md)를 참조하십시오. 데이터 준비를 통해 다양한 데이터 유형을 처리하는 방법에 대한 자세한 내용은 [데이터 형식 처리 안내서](./data-handling.md#dates)를 참조하십시오. 데이터 준비 API를 사용하는 방법에 대한 자세한 내용은 [데이터 준비 개발자 가이드](api/overview.md)를 참조하십시오.
