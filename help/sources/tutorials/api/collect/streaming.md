@@ -3,13 +3,13 @@ keywords: Experience Platform;홈;인기 항목;클라우드 저장소 데이터
 solution: Experience Platform
 title: 소스 커넥터 및 API를 사용하여 스트리밍 데이터 수집
 topic: 개요
-type: 튜토리얼
+type: Tutorial
 description: 이 자습서에서는 소스 커넥터 및 API를 사용하여 스트리밍 데이터를 검색하고 플랫폼에 가져오는 절차를 다룹니다.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
 translation-type: tm+mt
-source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
+source-git-commit: a63208dcdbe6851262e567a89c00b160dffa0e41
 workflow-type: tm+mt
-source-wordcount: '1325'
+source-wordcount: '1499'
 ht-degree: 2%
 
 ---
@@ -119,10 +119,89 @@ curl -X POST \
 
 ```json
 {
-    "id": "2abd97c4-91bb-4c93-bd97-c491bbfc933d",
+    "id": "e96d6135-4b50-446e-922c-6dd66672b6b2",
     "etag": "\"66013508-0000-0200-0000-5f6e2ae70000\""
 }
 ```
+
+## 스트리밍 끝점 URL {#get-endpoint} 가져오기
+
+소스 연결이 만들어지면 이제 스트리밍 끝점 URL을 검색할 수 있습니다.
+
+**API 형식**
+
+```http
+GET /flowservice/sourceConnections/{CONNECTION_ID}
+```
+
+| 매개 변수 | 설명 |
+| --------- | ----------- |
+| `{CONNECTION_ID}` | 이전에 만든 sourceConnections의 `id` 값입니다. |
+
+**요청**
+
+```shell
+curl -X GET https://platform.adobe.io/data/foundation/flowservice/sourceConnections/e96d6135-4b50-446e-922c-6dd66672b6b2 \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+**응답**
+
+성공적인 응답은 요청된 연결에 대한 자세한 정보와 함께 HTTP 상태 200을 반환합니다. 스트리밍 끝점 URL은 연결과 함께 자동으로 만들어지며 `inletUrl` 값을 사용하여 검색할 수 있습니다.
+
+```json
+{
+    "items": [
+        {
+            "id": "e96d6135-4b50-446e-922c-6dd66672b6b2",
+            "createdAt": 1617743929826,
+            "updatedAt": 1617743930363,
+            "createdBy": "{CREATED_BY}",
+            "updatedBy": "{UPDATED_BY}",
+            "createdClient": "{USER_ID}",
+            "updatedClient": "{USER_ID}",
+            "sandboxId": "d537df80-c5d7-11e9-aafb-87c71c35cac8",
+            "sandboxName": "prod",
+            "imsOrgId": "{IMS_ORG}",
+            "name": "Test source connector for streaming data",
+            "description": "Test source connector for streaming data",
+            "baseConnectionId": "f6aa6c58-3c3d-4c59-aa6c-583c3d6c599c",
+            "state": "enabled",
+            "data": {
+                "format": "delimited",
+                "schema": null,
+                "properties": null
+            },
+            "connectionSpec": {
+                "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
+                "version": "1.0"
+            },
+            "params": {
+                "sourceId": "Streaming raw data",
+                "inletUrl": "https://dcs.adobedc.net/collection/2301a1f761f6d7bf62c5312c535e1076bbc7f14d728e63cdfd37ecbb4344425b",
+                "inletId": "2301a1f761f6d7bf62c5312c535e1076bbc7f14d728e63cdfd37ecbb4344425b",
+                "dataType": "raw",
+                "name": "hgtest"
+            },
+            "version": "\"d6006bc1-0000-0200-0000-606cd03a0000\"",
+            "etag": "\"d6006bc1-0000-0200-0000-606cd03a0000\"",
+            "inheritedAttributes": {
+                "baseConnection": {
+                    "id": "f6aa6c58-3c3d-4c59-aa6c-583c3d6c599c",
+                    "connectionSpec": {
+                        "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
+                        "version": "1.0"
+                    }
+                }
+            }
+        }
+    ]
+}
+```
+
 
 ## 대상 XDM 스키마 {#target-schema} 만들기
 
@@ -528,7 +607,7 @@ curl -X POST \
             "version": "1.0"
         },
         "sourceConnectionIds": [
-            "2abd97c4-91bb-4c93-bd97-c491bbfc933d"
+            "e96d6135-4b50-446e-922c-6dd66672b6b2"
         ],
         "targetConnectionIds": [
             "723222e2-6ab9-4b0b-b222-e26ab9bb0bc2"
@@ -562,6 +641,62 @@ curl -X POST \
     "etag": "\"8e000533-0000-0200-0000-5f3c40fd0000\""
 }
 ```
+
+## 인제스트할 원시 데이터 게시 {#ingest-data}
+
+이제 흐름을 만들었으므로 JSON 메시지를 이전에 제작한 스트리밍 끝점으로 보낼 수 있습니다.
+
+**API 형식**
+
+```http
+POST /collection/{CONNECTION_ID}
+```
+
+| 매개 변수 | 설명 |
+| --------- | ----------- |
+| `{CONNECTION_ID}` | 새로 만든 스트리밍 연결의 `id` 값입니다. |
+
+**요청**
+
+이 예제는 이전에 만든 스트리밍 끝점에 원시 데이터를 인제스트합니다.
+
+```shell
+curl -X POST https://dcs.adobedc.net/collection/2301a1f761f6d7bf62c5312c535e1076bbc7f14d728e63cdfd37ecbb4344425b \
+  -H 'Content-Type: application/json' \
+  -H 'x-adobe-flow-id: 1f086c23-2ea8-4d06-886c-232ea8bd061d' \
+  -d '{
+      "name": "Johnson Smith",
+      "location": {
+          "city": "Seattle",
+          "country": "United State of America",
+          "address": "3692 Main Street"
+      },
+      "gender": "Male"
+      "birthday": {
+          "year": 1984
+          "month": 6
+          "day": 9
+      }
+  }'
+```
+
+**응답**
+
+성공적인 응답은 새로 인제스트된 정보에 대한 세부 정보가 있는 HTTP 상태 200을 반환합니다.
+
+```json
+{
+    "inletId": "{CONNECTION_ID}",
+    "xactionId": "1584479347507:2153:240",
+    "receivedTimeMs": 1584479347507
+}
+```
+
+| 속성 | 설명 |
+| -------- | ----------- |
+| `{CONNECTION_ID}` | 이전에 만든 스트리밍 연결의 ID입니다. |
+| `xactionId` | 방금 보낸 레코드에 대해 서버측에서 생성된 고유 식별자. 이 ID는 Adobe이 다양한 시스템과 디버깅을 통해 이 레코드의 주기를 추적하는 데 도움이 됩니다. |
+| `receivedTimeMs`:요청을 받은 시간을 표시하는 타임스탬프(밀리초 단위)입니다. |
 
 ## 다음 단계
 
