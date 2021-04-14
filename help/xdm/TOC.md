@@ -6,10 +6,10 @@ breadcrumb-title: Experience Data Model(XDM) 안내서
 user-guide-description: XDM(경험 데이터 모델) 클래스와 믹스인을 사용하여 경험 데이터를 표준화합니다.
 feature: 스키마
 translation-type: tm+mt
-source-git-commit: 3e1005aa11b648bd633ee4f64d527cae56cca620
+source-git-commit: 8b88a828f8680ac4d064f7f84e0db9e315526833
 workflow-type: tm+mt
-source-wordcount: '257'
-ht-degree: 22%
+source-wordcount: '279'
+ht-degree: 21%
 
 ---
 
@@ -36,6 +36,7 @@ ht-degree: 22%
       * [IdentityMap](./mixins/profile/identitymap.md)
       * [인구 통계 세부 사항](./mixins/profile/person-details.md)
       * [개인 연락처 세부 사항](./mixins/profile/personal-details.md)
+      * [개인 정보/개인화/마케팅 기본 설정(동의)](./mixins/profile/consents.md)
       * [세그먼트 멤버십 세부 사항](./mixins/profile/segmentation.md)
       * [작업 연락처 세부 사항](./mixins/profile/work-details.md)
    * 이벤트 믹싱 {#event}
@@ -51,6 +52,10 @@ ht-degree: 22%
    * [장치](./data-types/device.md)
    * [이메일 주소](./data-types/email-address.md)
    * [환경](./data-types/environment.md)
+   * [범용 동의 필드](./data-types/consent-field.md)
+   * [범용 마케팅 환경 설정 필드](./data-types/marketing-field.md)
+   * [구독이 있는 범용 마케팅 기본 설정 필드](./data-types/marketing-field-subscriptions.md)
+   * [범용 개인화 환경 설정 필드](./data-types/personalization-field.md)
    * [지역](./data-types/geo.md)
    * [지역 서클](./data-types/geo-circle.md)
    * [지역 좌표](./data-types/geo-coordinates.md)
