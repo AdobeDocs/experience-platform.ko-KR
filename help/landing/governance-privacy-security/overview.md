@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목
 solution: Experience Platform
 title: 거버넌스, 개인정보 보호 및 보안 개요
-topic: overview
+topic: 개요
 description: Adobe Experience Platform은 비즈니스 방침, 법적 책임 및 개발 프로세스를 준수하기 위해 수집한 경험 데이터를 안전하게 제어할 수 있는 다양한 서비스와 툴을 제공합니다.
+exl-id: 1ab5a436-c5dd-4e7a-aba1-549f0613f224
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 3f7808a08d033c5940d2115006c269b8c4079822
 workflow-type: tm+mt
-source-wordcount: '811'
-ht-degree: 0%
+source-wordcount: '833'
+ht-degree: 1%
 
 ---
-
 
 # Adobe Experience Platform의 거버넌스, 개인 정보 보호 및 보안
 
@@ -37,13 +37,13 @@ Experience Platform은 비즈니스 관행, 법적 책임 및 개발 프로세�
 
 ### 카탈로그 및 데이터 집합 {#catalog}
 
-Catalog Service는 Platform의 데이터 위치 및 리니지에 대한 레코드 시스템입니다. Experience Platform에 인제스트된 모든 데이터는 파일과 디렉터리로 데이터 레이크에 저장되지만 카탈로그는 조회 및 모니터링을 위해 해당 파일 및 디렉토리에 대한 메타데이터와 설명을 보관합니다.
+Catalog Service는 Platform의 데이터 위치 및 리니지에 대한 레코드 시스템입니다. Experience Platform에 인제스트된 모든 데이터가 파일 및 디렉터리로 Data Lake에 저장되지만 카탈로그는 조회 및 모니터링을 위해 해당 파일 및 디렉토리에 대한 메타데이터와 설명을 보관합니다.
 
 카탈로그는 데이터를 데이터 집합에 구성합니다. 여기에는 포함된 데이터의 레이블과 분류하는 데 사용할 수 있는 메타데이터가 포함된 각 데이터 세트가 있습니다.
 
 서비스에 대한 자세한 내용은 [카탈로그 서비스 개요](../../catalog/home.md)를 참조하십시오. Experience Platform에서 데이터 세트를 관리하는 방법에 대해 알아보려면 [데이터 집합 개요](../../catalog/datasets/overview.md)를 참조하십시오.
 
-## 개인 정보 보호 {#privacy}
+## 개인 정보 {#privacy}
 
 개인 정보는 비즈니스, 국회의원 및 고객에게 매우 중요한 문제입니다. 고객으로부터 수집한 개인 데이터는 거의 모든 Experience Platform 워크플로우의 핵심이므로 Platform은 이러한 이니셔티브를 지원하는 서비스를 제공합니다.
 
@@ -55,13 +55,13 @@ Adobe Experience Platform Privacy Service은 이러한 요청을 관리하는 �
 
 자세한 내용은 [Privacy Service 개요](../../privacy-service/home.md)를 참조하십시오.
 
-### 동의 컬렉션 {#consent}
+### 동의 처리 {#consent}
 
 많은 법률 개인 정보 보호 규정에서 데이터 수집, 개인화 및 기타 마케팅 사용 사례와 관련하여 적극적인 구체적인 동의에 대한 요구 사항을 도입했습니다. 이러한 요구 사항을 충족하기 위해 Experience Platform을 사용하면 개별 고객 프로파일에서 동의 정보를 캡처하고 이러한 기본 설정을 다운스트림 플랫폼 워크플로우에서 각 고객의 데이터가 사용되는 방식을 결정하는 요소로 사용할 수 있습니다.
 
-IAB 투명도 및 동의 프레임워크(TCF) 2.0에 따라 고객 동의 데이터를 수집하고 처리하는 방법에 대해 알아보려면 플랫폼](./consent/iab/overview.md)에서 [IAB TCF 2.0 지원에 대한 개요를 참조하십시오.
+Adobe 표준을 사용하여 고객 동의 및 선호 데이터를 처리하는 방법에 대해 알려면 Experience Platform](./consent/adobe/overview.md)의 [동의 처리에 대한 개요를 참조하십시오.
 
-<!-- For more information on the consent collection process using the Adobe standard, see the [consent collection overview]. -->
+IAB 투명도 및 동의 프레임워크(TCF) 2.0에 따라 고객 동의 데이터를 처리하는 방법에 대한 자세한 내용은 플랫폼](./consent/iab/overview.md)에서 [IAB TCF 2.0 지원에 대한 개요를 참조하십시오.
 
 ## 보안 {#security}
 
