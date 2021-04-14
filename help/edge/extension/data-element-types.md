@@ -1,14 +1,14 @@
 ---
 title: Adobe Experience Platform 웹 SDK 확장의 데이터 요소 유형
 description: Adobe Experience Platform Launch의 Adobe Experience Platform Web SDK 익스텐션에서 제공하는 다양한 데이터 요소 유형에 대해 알아보십시오.
+exl-id: 3c2c257f-1fbc-4722-8040-61ad19aa533f
 translation-type: tm+mt
-source-git-commit: 2a0ae9541a8bb2bb985d43a402d0842e73b23c81
+source-git-commit: 3f7808a08d033c5940d2115006c269b8c4079822
 workflow-type: tm+mt
 source-wordcount: '305'
 ht-degree: 47%
 
 ---
-
 
 # 데이터 요소 유형
 
@@ -26,7 +26,7 @@ ht-degree: 47%
 
 ![](./assets/identity-map-data-element.png)
 
-## XDM 개체
+## XDM 개체 {#xdm-object}
 
 XDM 포맷을 사용하여 모든 데이터를 Adobe Experience Platform Web SDK로 전송할 수 있습니다. XDM 개체 데이터 요소를 사용하면 데이터 형식을 보다 손쉽게 지정할 수 있습니다. 이 데이터 요소를 처음 열면 올바른 Adobe Experience Platform 샌드박스 및 스키마를 선택합니다. 스키마를 선택한 후에는 스키마 구조를 볼 수 있으므로 손쉽게 작성할 수 있습니다.
 
