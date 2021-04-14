@@ -5,10 +5,10 @@ user-guide-title: Adobe Experience Platform 개요
 breadcrumb-title: Experience Platform 개요
 user-guide-description: Experience Platform을 통해 개인화된 경험을 실시간으로 고객에게 전달하는 방법을 살펴볼 수 있습니다.
 translation-type: tm+mt
-source-git-commit: 36b85bee308fdcf599c9b7913cf94774404f06d2
+source-git-commit: 3f7808a08d033c5940d2115006c269b8c4079822
 workflow-type: tm+mt
-source-wordcount: '170'
-ht-degree: 14%
+source-wordcount: '193'
+ht-degree: 21%
 
 ---
 
@@ -45,11 +45,15 @@ ht-degree: 14%
 * 거버넌스, 개인 정보 및 보안 {#governance-privacy-security}
    * [개요](./governance-privacy-security/overview.md)
    * 동의 관리 {#consent}
+      * Adobe 표준 {#adobe}
+         * [개요](./governance-privacy-security/consent/adobe/overview.md)
+         * [동의 및 기본 설정 데이터를 캡처하도록 데이터 세트 구성](./governance-privacy-security/consent/adobe/dataset.md)
+         * [플랫폼 웹 SDK를 통합하여 동의 및 기본 설정 데이터 처리](./governance-privacy-security/consent/adobe/sdk.md)
       * IAB TCF 2.0 {#iab}
          * [개요](./governance-privacy-security/consent/iab/overview.md)
          * [동의 및 기본 설정 데이터를 캡처하도록 데이터 세트 구성](./governance-privacy-security/consent/iab/dataset.md)
 * [라이선스 사용 대시보드](license-usage-dashboard.md)
 * [문제 해결 가이드](troubleshooting.md)
 * [Gen2 데이터 레이크 마이그레이션](adls2-gen2-migration.md)
-* [용어 설명](glossary.md)
+* [용어집](glossary.md)
 * [릴리스 정보](https://www.adobe.com/go/platform-release-notes-en)
