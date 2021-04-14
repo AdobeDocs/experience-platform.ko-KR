@@ -2,19 +2,19 @@
 keywords: Experience Platform;프로필;실시간 고객 프로필;문제 해결;API;동의;동의;기본 설정;개인 정보 보호 옵트아웃;마케팅 기본 설정;optOutType;basisOfProcessing;동의;동의
 title: 동의 및 기본 설정 데이터 유형
 description: 개인 정보, 개인화 및 마케팅 기본 설정에 대한 동의 데이터 유형은 CMP(Consent Management Platform) 및 데이터 작업에서 생성된 기타 소스와 고객 권한 및 기본 설정의 수집을 지원하기 위한 것입니다.
-topic: guide
+topic: 가이드
+exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
 translation-type: tm+mt
-source-git-commit: 865379292985037b184d92e5d3fc1abc1873e962
+source-git-commit: 4e9395b4551842cf75b0d1a4ec36c85930c42da5
 workflow-type: tm+mt
-source-wordcount: '2067'
+source-wordcount: '1838'
 ht-degree: 1%
 
 ---
 
-
 # [!DNL Consents & Preferences] 데이터 유형
 
-[!UICONTROL 개인 정보, 개인화 및 마케팅 기본 설정에 대한 동의] 데이터 유형(이하 &quot;[!DNL Consents & Preferences] 데이터 유형&quot;이라 한다)은 CMP(Consent Management Platform)에서 생성된 고객 권한 및 기본 설정의 수집을 지원하기 위한 XDM(데이터 유형)입니다.[!DNL Experience Data Model]
+[!UICONTROL Consent for Privacy, Personalization and Marketing Preferences] 데이터 유형(이하 &quot;[!DNL Consents & Preferences] 데이터 유형&quot;이라 함)은 CMP(동의 관리 플랫폼) 및 데이터 작업의 기타 소스에서 생성된 고객 권한 및 환경 설정의 수집을 지원하기 위한 XDM(데이터 유형)입니다.[!DNL Experience Data Model]
 
 이 문서에서는 [!DNL Consents & Preferences] 데이터 유형이 제공하는 필드의 구조와 용도에 대해 다룹니다.
 
@@ -80,17 +80,6 @@ ht-degree: 1%
     },
     "metadata": {
       "time": "2019-01-01T15:52:25+00:00"
-    },
-    "idSpecific": {
-      "email": {
-        "jdoe@example.com": {
-          "marketing": {
-            "email": {
-              "val": "n"
-            }
-          }
-        }
-      }
     }
   }
 }
@@ -250,36 +239,6 @@ ht-degree: 1%
 | 속성 | 설명 |
 | --- | --- |
 | `time` | 고객의 동의 및 기본 설정이 마지막으로 업데이트된 시간에 대한 ISO 8601 타임스탬프. 로드 및 복잡성을 줄이기 위해 이 필드를 개별 환경 설정에 타임스탬프를 적용하는 대신 사용할 수 있습니다. 개별 환경 설정 아래에 `time` 값을 제공하면 해당 특정 환경 설정에 대한 `metadata` 타임스탬프가 무시됩니다. |
-
-### `idSpecific`
-
-`idSpecific` 특정 동의 또는 기본 설정이 일반적으로 고객에게 적용되지 않지만 단일 장치 또는 ID로 제한되는 경우에 사용할 수 있습니다. 예를 들어, 고객은 한 주소로 이메일의 수신을 거부할 수 있으며 다른 주소로 이메일을 보낼 수도 있습니다.
-
->[!IMPORTANT]
->
->채널 수준의 동의 및 환경 설정(즉, `idSpecific` 외부의 `consents`에 제공된 것)은 해당 채널 내의 ID에 적용됩니다. 따라서 모든 채널 수준의 동의 및 기본 설정은 등가 ID 또는 디바이스별 설정이 적용되는지 여부에 직접적인 영향을 줍니다.
->
->* 고객이 채널 수준에서 선택한 경우 `idSpecific`에 명시된 동의 또는 기본 설정은 무시됩니다.
->* 채널 수준 동의 또는 기본 설정이 설정되지 않았거나 고객이 선택한 경우 `idSpecific`에 동의나 환경 설정이 적용됩니다.
-
-
-`idSpecific` 개체의 각 키는 Adobe Experience Platform Identity Service에서 인식하는 특정 ID 네임스페이스를 나타냅니다. 고유한 사용자 정의 네임스페이스를 정의하여 서로 다른 식별자를 분류할 수 있지만, Identity Service에서 제공하는 표준 네임스페이스 중 하나를 사용하여 실시간 고객 프로필의 저장소 크기를 줄이는 것이 좋습니다. ID 네임스페이스에 대한 자세한 내용은 ID 서비스 문서의 [ID 네임스페이스 개요](../../identity-service/namespaces.md)를 참조하십시오.
-
-각 네임스페이스 객체의 키는 고객이 환경 설정을 지정한 고유한 ID 값을 나타냅니다. 각 ID 값에는 `consents`과 같은 방식으로 서식이 지정된 동의 및 기본 설정의 전체 세트가 포함될 수 있습니다.
-
-```json
-"idSpecific": {
-  "email": {
-    "jdoe@example.com": {
-      "marketing": {
-        "email": {
-          "val": "n"
-        }
-      }
-    }
-  }
-}
-```
 
 ## 데이터 유형 {#ingest}을(를) 사용하여 데이터 인제스트
 
