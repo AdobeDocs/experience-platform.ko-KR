@@ -3,15 +3,15 @@ keywords: Experience Platform;홈;지능형 서비스;인기 항목;지능형 �
 solution: Experience Platform, Intelligent Services
 title: 지능형 서비스에서 사용할 데이터 준비
 topic: Intelligent Services
-description: 'Intelligent Services가 마케팅 이벤트 데이터에서 통찰력을 얻으려면 데이터가 세밀하게 농축되어 표준 구조로 유지되어야 합니다. 지능형 서비스는 이를 위해 XDM(Experience Data Model) 스키마를 활용합니다. 특히, Intelligent Services에서 사용되는 모든 데이터 세트는 CEE(Consumer ExperienceEvent) XDM 스키마를 따라야 합니다. '
+description: Intelligent Services가 마케팅 이벤트 데이터에서 통찰력을 얻으려면 데이터가 세밀하게 농축되어 표준 구조로 유지되어야 합니다. 지능형 서비스는 이를 위해 XDM(Experience Data Model) 스키마를 활용합니다. 특히, Intelligent Services에서 사용되는 모든 데이터 세트는 CEE(Consumer ExperienceEvent) XDM 스키마를 따라야 합니다.
+exl-id: 17bd7cc0-da86-4600-8290-cd07bdd5d262
 translation-type: tm+mt
-source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
+source-git-commit: b311a5970a121a3277bdb72f5a1285216444b339
 workflow-type: tm+mt
-source-wordcount: '1862'
-ht-degree: 0%
+source-wordcount: '2020'
+ht-degree: 1%
 
 ---
-
 
 # [!DNL Intelligent Services]에서 사용할 데이터 준비
 
@@ -75,7 +75,28 @@ CEE 믹싱에는 유용한 인사이트를 생성하기 위해 [!DNL Intelligent
 * &quot;mcid&quot;(Adobe Audience Manager ID의 경우)
 * &quot;aid&quot;(Adobe Analytics ID용)
 
-기본 ID로 사용해야 하는 필드를 잘 모르는 경우 Adobe 컨설팅 서비스에 문의하여 최상의 해결 방법을 확인하십시오.
+기본 ID로 사용해야 하는 필드를 잘 모르는 경우 Adobe 컨설팅 서비스에 문의하여 최상의 해결 방법을 확인하십시오. 기본 ID가 설정되지 않은 경우 Intelligent Service 응용 프로그램은 다음 기본 동작을 사용합니다.
+
+| 기본값 | Attribution AI | 고객 AI |
+| --- | --- | --- |
+| ID 열 | `endUserIDs._experience.aaid.id` | `endUserIDs._experience.mcid.id` |
+| 네임스페이스 | AAID | ECID |
+
+기본 ID를 설정하려면 **[!UICONTROL Schemas]** 탭에서 스키마로 이동하고 스키마 이름 하이퍼링크를 선택하여 **[!DNL Schema Editor]**&#x200B;을(를) 엽니다.
+
+![스키마 탐색](./images/data-preparation/navigate_schema.png)
+
+그런 다음 기본 ID로 사용할 필드로 이동하여 선택합니다. 해당 필드에 대해 **[!UICONTROL Field properties]** 메뉴가 열립니다.
+
+![필드 선택](./images/data-preparation/find_field.png)
+
+**[!UICONTROL Field properties]** 메뉴에서 **[!UICONTROL Identity]** 확인란을 찾을 때까지 아래로 스크롤합니다. 확인란을 선택하면 선택한 ID를 **[!UICONTROL Primary identity]**&#x200B;으로 설정하는 옵션이 표시됩니다. 이 상자도 선택하십시오.
+
+![선택 확인란](./images/data-preparation/set_primary_identity.png)
+
+다음으로 드롭다운에 있는 사전 정의된 네임스페이스 목록에서 **[!UICONTROL Identity namespace]**&#x200B;을 제공해야 합니다. 이 예에서는 Adobe Audience Manager ID `mcid.id`을(를) 사용하고 있으므로 ECID 이름이 선택됩니다. 업데이트를 확인하려면 **[!UICONTROL Apply]**&#x200B;을 선택하고 오른쪽 위 모서리에서 **[!UICONTROL Save]**&#x200B;을 선택하여 스키마에 대한 변경 내용을 저장합니다.
+
+![변경 사항을 저장합니다](./images/data-preparation/select_namespace.png)
 
 #### xdm:timestamp {#timestamp}
 
@@ -104,7 +125,7 @@ CEE 믹싱에는 유용한 인사이트를 생성하기 위해 [!DNL Intelligent
 
 `xdm:channel`에 필요한 각 하위 필드에 대한 자세한 내용은 [경험 채널 스키마](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/channels/channel.schema.md) 사양을 참조하십시오. 일부 예제 매핑은 [표 아래](#example-channels)를 참조하십시오.
 
-##### 채널 매핑 예 {#example-channels}
+#### 채널 매핑 예 {#example-channels}
 
 다음 표에서는 `xdm:channel` 스키마에 매핑된 마케팅 채널의 몇 가지 예를 제공합니다.
 
@@ -272,7 +293,7 @@ CEE 믹싱에는 유용한 인사이트를 생성하기 위해 [!DNL Intelligent
 * [UI에서 데이터 집합](../catalog/datasets/user-guide.md#create)  만들기(기존 스키마 사용 워크플로에 따라)
 * [API에서 데이터 세트 만들기](../catalog/datasets/create.md)
 
-데이터 세트를 만든 후 플랫폼 UI에서 **[!UICONTROL 데이터 세트]** 작업 공간 내에서 이를 찾을 수 있습니다.
+데이터 세트가 만들어지면 **[!UICONTROL Datasets]** 작업 공간 내의 플랫폼 UI에서 이를 찾을 수 있습니다.
 
 ![](images/data-preparation/dataset-location.png)
 
