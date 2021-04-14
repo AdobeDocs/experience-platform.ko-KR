@@ -6,10 +6,10 @@ breadcrumb-title: Experience Data Model(XDM) 안내서
 user-guide-description: XDM(경험 데이터 모델) 클래스와 믹스인을 사용하여 경험 데이터를 표준화합니다.
 feature: 스키마
 translation-type: tm+mt
-source-git-commit: 4a67bcbd2a1458ae47ba64fe2647da442fdf4695
+source-git-commit: 3e1005aa11b648bd633ee4f64d527cae56cca620
 workflow-type: tm+mt
-source-wordcount: '238'
-ht-degree: 24%
+source-wordcount: '257'
+ht-degree: 22%
 
 ---
 
@@ -22,6 +22,11 @@ ht-degree: 24%
    * [데이터 모델링을 위한 모범 사례](schema/best-practices.md)
    * [XDM 필드 유형 제약 조건](schema/field-constraints.md)
    * [XDM 필드 사전](schema/field-dictionary.md)
+   * 업계 데이터 모델 {#industries}
+      * [개요](./schema/industries/overview.md)
+      * [소매 데이터 모델 ERD](./schema/industries/retail.md)
+      * [금융 서비스 데이터 모델 ERD](./schema/industries/financial.md)
+      * [여행 및 숙박 데이터 모델 ERD](./schema/industries/travel-hospitality.md)
 * 클래스 {#classes}
    * [XDM 개별 프로필](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
