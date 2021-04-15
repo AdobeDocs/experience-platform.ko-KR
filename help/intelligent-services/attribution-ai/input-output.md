@@ -2,16 +2,16 @@
 keywords: Experience Platform;시작;속성 ai;인기 항목;속성(attribution ai) ai input;속성(attribution ai) ai output
 solution: Experience Platform, Intelligent Services
 title: Attribution AI의 입력 및 출력
-topic: Input and Output data for Attribution AI
+topic: Attribution AI 입력 및 출력 데이터
 description: 다음 문서에서는 Attribution AI에서 사용되는 다양한 입력 및 출력 개요를 설명합니다.
+exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
 translation-type: tm+mt
-source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
+source-git-commit: 2ef2a6431865e8ffdc2abd6cf527249e8b5ca4d0
 workflow-type: tm+mt
 source-wordcount: '2091'
 ht-degree: 3%
 
 ---
-
 
 # [!DNL Attribution AI]에 입력 및 출력
 
@@ -37,7 +37,7 @@ ht-degree: 3%
 | Marketing.trackingCode | 터치포인트 |
 | Marketing.campaignname | 터치포인트 |
 | Marketing.campaigngroup | 터치포인트 |
-| 상거래 | 전환 |
+| Commerce | 전환 |
 
 일반적으로 속성은 &quot;상거래&quot; 아래의 주문, 구매 및 체크아웃과 같은 전환 열에서 실행됩니다. &quot;채널&quot; 및 &quot;마케팅&quot; 열은 유용한 인사이트를 위해 접점을 정의하는 데 적극 권장됩니다. 하지만 위의 열과 함께 다른 추가 열을 포함하여 전환 또는 터치포인트 정의로 구성할 수 있습니다.
 
@@ -49,7 +49,7 @@ ht-degree: 3%
 - web.webPageDetails
 - xdm:productListItems
 
-### 이전 데이터
+### 이전 데이터 {#data-requirements}
 
 >[!IMPORTANT]
 >
@@ -136,11 +136,11 @@ Attribution AI은 점수 열을 기준으로 점수를 슬라이스하여 가릴
 
 ### 원시 점수 경로 보기(UI) {#raw-score-path}
 
-UI에서 원시 점수에 대한 경로를 볼 수 있습니다. 먼저 플랫폼 UI에서 **[!UICONTROL 스키마]**&#x200B;를 선택한 다음 **[!UICONTROL 찾아보기]** 탭 내에서 속성 AI 점수 스키마를 검색하고 선택합니다.
+UI에서 원시 점수에 대한 경로를 볼 수 있습니다. 먼저 플랫폼 UI에서 **[!UICONTROL Schemas]**&#x200B;을 선택한 다음 **[!UICONTROL Browse]** 탭 내에서 속성 AI 점수 스키마를 검색하고 선택합니다.
 
 ![스키마 선택](./images/input-output/schemas_browse.png)
 
-그런 다음 UI의 **[!UICONTROL 구조]** 창 내에서 필드를 선택합니다. **[!UICONTROL 필드 속성]** 탭이 열립니다. **[!UICONTROL 필드 속성]** 내에는 원시 점수에 매핑되는 경로 필드가 있습니다.
+그런 다음 UI의 **[!UICONTROL Structure]** 창 내에서 필드를 선택합니다. **[!UICONTROL Field properties]** 탭이 열립니다. **[!UICONTROL Field properties]** 내에는 원시 점수에 매핑되는 경로 필드가 있습니다.
 
 ![스키마 선택](./images/input-output/field_properties.png)
 
