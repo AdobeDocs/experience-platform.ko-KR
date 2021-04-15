@@ -2,20 +2,20 @@
 keywords: Experience Platform;인사이트;고객 아이디;인기 있는 항목;고객 아이사이트에 대한 통찰력
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: 고객 AI를 통한 인사이트 확보
-topic: Discovering insights
+topic: 인사이트 찾기
 description: 이 문서는 Intelligent Services 고객 AI 사용자 인터페이스에서 서비스 인스턴스 인사이트와 상호 작용하기 위한 가이드 역할을 합니다.
+exl-id: 8aaae963-4029-471e-be9b-814147a5f160
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: ff953cf0aed2b9122b78126a87625e88f1ca4506
 workflow-type: tm+mt
-source-wordcount: '1399'
+source-wordcount: '1572'
 ht-degree: 1%
 
 ---
 
-
 # 고객 AI를 통한 인사이트 확보
 
-고객 AI는 지능형 서비스의 일환으로 마케터에게 Adobe Sensei을 활용하여 향후 고객의 행동을 예측할 수 있는 기능을 제공합니다. 고객 AI는 규모에 따라 개별 프로필에 대한 이탈 및 전환과 같은 사용자 지정 성향 점수를 생성하는 데 사용됩니다. 머신 러닝 문제를 해결하고 알고리즘, 트레이닝 또는 배포를 선택하며 비즈니스 요구를 충족할 필요가 없습니다.
+고객 AI는 지능형 서비스의 일부인 마케터에게 Adobe Sensei을 활용하여 향후 고객의 행동을 예측할 수 있는 기능을 제공합니다. 고객 AI는 규모에 따라 개별 프로필에 대한 이탈 및 전환과 같은 사용자 지정 성향 점수를 생성하는 데 사용됩니다. 머신 러닝 문제를 해결하고 알고리즘, 트레이닝 또는 배포를 선택하며 비즈니스 요구를 충족할 필요가 없습니다.
 
 이 문서는 Intelligent Services 고객 AI 사용자 인터페이스에서 서비스 인스턴스 인사이트와 상호 작용하기 위한 가이드 역할을 합니다.
 
@@ -25,7 +25,7 @@ ht-degree: 1%
 
 ## 서비스 인스턴스 개요
 
-[!DNL Adobe Experience Platform] UI에서 왼쪽 탐색 영역에서 **[!UICONTROL 서비스]**&#x200B;를 클릭합니다. *서비스* 브라우저가 나타나고 사용 가능한 Intelligent Services가 표시됩니다. 고객 AI의 컨테이너에서 **[!UICONTROL 열기]**&#x200B;를 클릭합니다.
+[!DNL Adobe Experience Platform] UI의 왼쪽 탐색 영역에서 **[!UICONTROL Services]**&#x200B;을 클릭합니다. *서비스* 브라우저가 나타나고 사용 가능한 Intelligent Services가 표시됩니다. 고객 AI의 컨테이너에서 **[!UICONTROL Open]**&#x200B;을 클릭합니다.
 
 ![인스턴스 액세스](../images/insights/navigate-to-service.png)
 
@@ -37,14 +37,15 @@ ht-degree: 1%
 
 ![인스턴스 만들기](../images/insights/dashboard.png)
 
-시작하려면 서비스 인스턴스 이름을 클릭합니다.
+시작할 서비스 인스턴스 이름을 선택합니다.
 
 ![인스턴스 만들기](../images/insights/click-the-name.png)
 
-그런 다음 해당 서비스 인스턴스에 대한 인사이트 페이지가 나타나며 여기에서 데이터의 시각화가 제공됩니다. 시각화 및 데이터를 사용하여 수행할 수 있는 작업은 이 안내서 전반에서 자세히 설명합니다.
+그런 다음 해당 서비스 인스턴스에 대한 인사이트 페이지가 **[!UICONTROL Latest scores]** 또는 **[!UICONTROL Performance summary]** 선택 옵션과 함께 나타납니다. 기본 탭 **[!UICONTROL Latest scores]**&#x200B;은 데이터의 시각화를 제공합니다. 시각화 및 데이터를 사용하여 수행할 수 있는 작업은 이 안내서 전반에서 자세히 설명합니다.
 
-![설정 페이지](../images/insights/landing-page.png)
+**[!UICONTROL Performance summary]** 탭에는 각 성향 버킷에 대한 실제 이탈 또는 전환율이 표시됩니다. 자세한 내용은 [성능 요약 지표](#performance-metrics)의 섹션을 참조하십시오.
 
+![설정 페이지](../images/insights/landing_page_insights.png)
 
 ### 서비스 인스턴스 세부 사항
 
@@ -52,12 +53,12 @@ ht-degree: 1%
 
 대시보드 내의 서비스 인스턴스 세부 정보에 대한 개요를 보려면 서비스 인스턴스 컨테이너를 선택하고 이름에 첨부된 하이퍼링크를 피하십시오. 그러면 추가 세부 정보를 제공하는 오른쪽 레일이 열립니다. 컨트롤에는 다음이 포함됩니다.
 
-- **[!UICONTROL 편집]**:편집 **** 을 선택하면 기존 서비스 인스턴스를 수정할 수 있습니다. 인스턴스의 이름, 설명 및 점수 지정 빈도를 편집할 수 있습니다.
-- **[!UICONTROL 클론]**:클론 **** 을 선택하면 현재 선택된 서비스 인스턴스가 설정됩니다. 그런 다음 워크플로우를 수정하여 일부를 수정하고 새 인스턴스로 이름을 변경할 수 있습니다.
-- **[!UICONTROL 삭제]**:모든 기록 실행을 포함하여 서비스 인스턴스를 삭제할 수 있습니다.
-- **[!UICONTROL 데이터 소스]**:이 인스턴스에서 사용하는 데이터 세트에 대한 링크입니다.
-- **[!UICONTROL 실행 빈도]**:점수 매기는 빈도 및 시기.
-- **[!UICONTROL 점수 정의]**:이 인스턴스에 대해 구성한 목표에 대한 빠른 개요입니다.
+- **[!UICONTROL Edit]**:을  **[!UICONTROL Edit]** 선택하면 기존 서비스 인스턴스를 수정할 수 있습니다. 인스턴스의 이름, 설명 및 점수 지정 빈도를 편집할 수 있습니다.
+- **[!UICONTROL Clone]**:을  **[!UICONTROL Clone]** 선택하면 현재 선택한 서비스 인스턴스 설정이 복사됩니다. 그런 다음 워크플로우를 수정하여 일부를 수정하고 새 인스턴스로 이름을 변경할 수 있습니다.
+- **[!UICONTROL Delete]**:모든 기록 실행을 포함하여 서비스 인스턴스를 삭제할 수 있습니다.
+- **[!UICONTROL Data source]**:이 인스턴스에서 사용하는 데이터 세트에 대한 링크입니다.
+- **[!UICONTROL Run Frequency]**:점수 매기는 빈도 및 시기.
+- **[!UICONTROL Score definition]**:이 인스턴스에 대해 구성한 목표에 대한 빠른 개요입니다.
 
 ![](../images/user-guide/service-instance-panel.png)
 
@@ -67,7 +68,7 @@ ht-degree: 1%
 
 ![실패한 실행 메시지](../images/insights/failed-run.png)
 
-서비스 인스턴스에 대한 추가 세부 정보를 보는 두 번째 방법은 인사이트 페이지 내에 있습니다. 오른쪽 상단에서 **[!UICONTROL 자세히 보기]**&#x200B;를 클릭하여 드롭다운을 채울 수 있습니다. 점수 정의, 생성된 시기 및 성향 유형과 같은 세부 사항이 나열됩니다. 나열된 속성에 대한 자세한 내용은 [고객 AI 인스턴스 구성](./configure.md)을 참조하십시오.
+서비스 인스턴스에 대한 추가 세부 정보를 보는 두 번째 방법은 인사이트 페이지 내에 있습니다. 오른쪽 상단에 있는 **[!UICONTROL Show more]**&#x200B;을 클릭하여 드롭다운을 채울 수 있습니다. 점수 정의, 생성된 시기 및 성향 유형과 같은 세부 사항이 나열됩니다. 나열된 속성에 대한 자세한 내용은 [고객 AI 인스턴스 구성](./configure.md)을 참조하십시오.
 
 ![자세히 보기](../images/insights/landing-show-more.png)
 
@@ -75,22 +76,22 @@ ht-degree: 1%
 
 ### 인스턴스 편집
 
-인스턴스를 편집하려면 오른쪽 위 탐색 메뉴에서 **[!UICONTROL 편집]**&#x200B;을 클릭합니다.
+인스턴스를 편집하려면 오른쪽 위 탐색 메뉴에서 **[!UICONTROL Edit]**&#x200B;을 클릭합니다.
 
 ![편집 단추 클릭](../images/insights/edit-button.png)
 
-인스턴스의 이름, 설명, 상태 및 점수 지정 빈도를 편집할 수 있는 편집 대화 상자가 나타납니다. 변경 내용을 확인하고 대화 상자를 닫으려면 오른쪽 하단 모서리에서 **[!UICONTROL 저장]**&#x200B;을 선택합니다.
+인스턴스의 이름, 설명, 상태 및 점수 지정 빈도를 편집할 수 있는 편집 대화 상자가 나타납니다. 변경 내용을 확인하고 대화 상자를 닫으려면 오른쪽 하단 모서리에서 **[!UICONTROL Save]**&#x200B;을 선택합니다.
 
 ![팝오버 편집](../images/insights/edit-instance.png)
 
 ### 추가 작업
 
-**[!UICONTROL 추가 작업]** 단추는 **[!UICONTROL 편집]** 옆의 오른쪽 위 탐색에 있습니다. **[!UICONTROL 추가 작업]**&#x200B;을 클릭하면 다음 작업 중 하나를 선택할 수 있는 드롭다운이 열립니다.
+**[!UICONTROL More actions]** 단추는 **[!UICONTROL Edit]** 옆의 오른쪽 위 탐색에 있습니다. **[!UICONTROL More actions]**&#x200B;을 클릭하면 다음 작업 중 하나를 선택할 수 있는 드롭다운이 열립니다.
 
-- **[!UICONTROL 클론]**:클릭 **** 을 선택하면 서비스 인스턴스가 설정됩니다. 그런 다음 워크플로우를 수정하여 일부를 수정하고 새 인스턴스로 이름을 변경할 수 있습니다.
-- **[!UICONTROL 삭제]**:인스턴스를 삭제합니다.
-- **[!UICONTROL 액세스 점수]**:액세스  **[!UICONTROL 점수]** 를  [선택하면 고객 AI 자습서의 ](./download-scores.md) 다운로드 점수에 대한 링크를 제공하는 대화 상자가열리고 API 호출을 하는 데 필요한 데이터 세트 ID도 대화 상자가 표시됩니다.
-- **[!UICONTROL 실행 내역 보기]**:서비스 인스턴스와 연관된 모든 점수 실행 목록이 포함된 대화 상자가 나타납니다.
+- **[!UICONTROL Clone]**:을  **[!UICONTROL Clone]** 선택하면 설정된 서비스 인스턴스가 복사됩니다. 그런 다음 워크플로우를 수정하여 일부를 수정하고 새 인스턴스로 이름을 변경할 수 있습니다.
+- **[!UICONTROL Delete]**:인스턴스를 삭제합니다.
+- **[!UICONTROL Access scores]**:고객  **[!UICONTROL Access scores]** AI 자습서의  [다운로드 점수에 대한 링크를 제공하는 대화 상자가 ](./download-scores.md) 열리면 이 대화 상자는 API 호출을 하는 데 필요한 데이터 세트 ID도 제공합니다.
+- **[!UICONTROL View run history]**:서비스 인스턴스와 연관된 모든 점수 실행 목록이 포함된 대화 상자가 나타납니다.
 
 ![추가 작업](../images/insights/more-actions.png)
 
@@ -110,7 +111,7 @@ ht-degree: 1%
 
 ## 스코어 배포
 
-**[!UICONTROL 스코어 배포]** 카드는 점수를 기준으로 모집단의 시각적 요약을 제공합니다. [!UICONTROL 스코어 배포] 카드에 표시되는 색상은 생성된 성향 점수의 유형을 나타냅니다. 채점 분포에 마우스를 가져가면 해당 분포에 속하는 정확한 카운트가 제공됩니다.
+**[!UICONTROL Distribution of Scores]** 카드는 점수를 기준으로 모집단의 시각적 요약을 제공합니다. [!UICONTROL Distribution of Scores] 카드에 표시되는 색상은 생성된 성향 점수의 유형을 나타냅니다. 채점 분포에 마우스를 가져가면 해당 분포에 속하는 정확한 카운트가 제공됩니다.
 
 ![스코어 배포](../images/insights/distribution-of-scores.png)
 
@@ -134,17 +135,17 @@ ht-degree: 1%
 
 ### 세그먼트 만들기
 
-저지형, 중간 및 고성향에 대한 버킷에서 **[!UICONTROL 세그먼트 만들기]** 단추를 선택하면 세그먼트 빌더로 리디렉션됩니다.
+낮음, 보통 및 높은 성향에 대한 버킷에서 **[!UICONTROL Create Segment]** 단추를 선택하면 세그먼트 빌더로 리디렉션됩니다.
 
 >[!NOTE]
 >
->**[!UICONTROL 세그먼트 만들기]** 단추는 데이터 세트에 대해 실시간 고객 프로필이 활성화된 경우에만 사용할 수 있습니다. 실시간 고객 프로필을 활성화하는 방법에 대한 자세한 내용은 [실시간 고객 프로필 개요](../../../rtcdp/overview.md)를 참조하십시오.
+>**[!UICONTROL Create Segment]** 단추는 데이터 세트에 대해 실시간 고객 프로필을 사용하는 경우에만 사용할 수 있습니다. 실시간 고객 프로필을 활성화하는 방법에 대한 자세한 내용은 [실시간 고객 프로필 개요](../../../rtcdp/overview.md)를 참조하십시오.
 
 ![세그먼트 만들기를 클릭합니다.](../images/insights/influential-factors-create-segment.png)
 
 ![세그먼트 만들기](../images/insights/create-segment.png)
 
-세그먼트 빌더는 세그먼트를 정의하는 데 사용됩니다. 인사이트 페이지에서 **[!UICONTROL 세그먼트 만들기]**&#x200B;를 선택하면 고객 AI가 선택한 버킷 정보를 세그먼트에 자동으로 추가합니다. 세그먼트 만들기를 완료하려면 세그먼트 빌더 사용자 인터페이스의 오른쪽 레일에 있는 *이름* 및 *설명* 컨테이너를 작성해 주십시오. 세그먼트에 이름과 설명을 지정한 후 오른쪽 상단에서 **[!UICONTROL 저장]**&#x200B;을 클릭합니다.
+세그먼트 빌더는 세그먼트를 정의하는 데 사용됩니다. 인사이트 페이지에서 **[!UICONTROL Create Segment]**&#x200B;을 선택하면 고객 AI가 선택한 버킷 정보를 세그먼트에 자동으로 추가합니다. 세그먼트 만들기를 완료하려면 세그먼트 빌더 사용자 인터페이스의 오른쪽 레일에 있는 *이름* 및 *설명* 컨테이너를 작성해 주십시오. 세그먼트에 이름과 설명을 지정한 후 오른쪽 상단에서 **[!UICONTROL Save]**&#x200B;을 클릭합니다.
 
 >[!NOTE]
 >
@@ -152,15 +153,39 @@ ht-degree: 1%
 
 ![세그먼트 채우기](../images/insights/segment-saving.png)
 
-플랫폼 UI에서 새 세그먼트를 보려면 왼쪽 탐색 창에서 **[!UICONTROL 세그먼트]**&#x200B;를 클릭합니다. **[!UICONTROL 검색]** 페이지가 나타나고 사용 가능한 모든 세그먼트가 표시됩니다.
+플랫폼 UI에서 새 세그먼트를 보려면 왼쪽 탐색 메뉴에서 **[!UICONTROL Segments]**&#x200B;을 클릭합니다. **[!UICONTROL Browse]** 페이지가 나타나고 사용 가능한 모든 세그먼트가 표시됩니다.
 
 ![모든 세그먼트](../images/insights/Segments-dashboard.png)
+
+## 성과 요약 지표 {#performance-metrics}
+
+**[!UICONTROL Performance summary]** 탭에는 고객 AI에서 획득한 각 성향 버킷으로 구분된 실제 이탈 또는 전환율이 표시됩니다.
+
+![성능 요약 탭](../images/insights/summary_tab.png)
+
+처음에는 예상 비율(점선)만 표시됩니다. 점수 실행이 발생하지 않았으며 데이터를 아직 사용할 수 없을 때 예상 요금이 표시됩니다. 그러나 결과 창이 지나면 예상 비율이 실제 비율(실선)으로 대체됩니다.
+
+라인 위로 마우스를 가져가면 해당 버킷의 해당 날짜에 대한 날짜 및 실제/예상 비율이 표시됩니다.
+
+![버킷 예](../images/insights/churn_tab.png)
+
+표시되는 예상 및 실제 비율에 대한 기간을 필터링할 수 있습니다. **달력 아이콘** ![아이콘](../images/insights/calendar_icon.png)을 선택한 다음 새 날짜 범위를 선택합니다. 각 버킷의 결과는 새 날짜 범위 내에 표시되도록 업데이트됩니다.
+
+![날짜 선택기](../images/insights/date_selector.png)
+
+### 개별 점수 실행 비율
+
+**[!UICONTROL Performance summary]** 탭의 아래쪽 절반은 각 개별 점수 실행에 대한 결과를 표시합니다. 오른쪽 상단의 드롭다운 날짜를 선택하여 다른 점수 실행 결과를 표시합니다.
+
+이탈 또는 전환을 예측하는 경우에 따라 [!UICONTROL Distribution of Scores] 그래프는 각 증분으로 변환되거나 변환되지 않은 프로파일 분포를 차례대로 표시합니다.
+
+![개인 채점](../images/insights/scoring_tab.png)
 
 ## 다음 단계
 
 이 문서에서는 고객 AI 서비스 인스턴스에서 제공하는 인사이트를 간략하게 설명합니다. 이제 고객 AI](./download-scores.md)에서 스코어 다운로드에 대한 튜토리얼을 계속 진행하거나 제공된 다른 [Adobe 지능형 서비스](../../home.md) 가이드를 탐색할 수 있습니다.[
 
-## Journey Orchestration용
+## 추가 리소스
 
 다음 비디오에서는 고객 AI를 사용하여 모델과 영향력 있는 요소의 결과를 확인하는 방법을 설명합니다.
 
