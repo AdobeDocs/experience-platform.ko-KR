@@ -3,13 +3,13 @@ keywords: Experience Platform;home;popular topics;streaming ingestion;ingestion;
 solution: Experience Platform
 title: 스트리밍 통합 API를 사용한 스트림 시간 시리즈 데이터
 topic: 자습서
-type: 튜토리얼
+type: Tutorial
 description: 이 자습서는 Adobe Experience Platform 데이터 통합 서비스 API의 일부인 스트리밍 통합 API를 사용하는 데 도움이 됩니다.
 exl-id: 720b15ea-217c-4c13-b68f-41d17b54d500
 translation-type: tm+mt
-source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
+source-git-commit: 727c9dbd87bacfd0094ca29157a2d0283c530969
 workflow-type: tm+mt
-source-wordcount: '1314'
+source-wordcount: '1313'
 ht-degree: 2%
 
 ---
@@ -272,11 +272,6 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
     "schemaRef": {
         "id": "{SCHEMA_REF_ID}",
         "contentType": "application/vnd.adobe.xed-full+json;version=1"
-    },
-    "fileDescription": {
-        "persisted": true,
-        "containerFormat": "parquet",
-        "format": "parquet"
     },
     "tags": {
         "unifiedIdentity": ["enabled:true"],
