@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform;프로필;실시간 고객 프로필;문제 해결;API;데이터 집합 사용
 title: API를 사용하여 프로필 및 ID 서비스에 대한 데이터 집합 구성
-topic: tutorial
+topic: 자습서
 type: Tutorial
 description: 이 자습서는 Adobe Experience Platform API를 사용하여 실시간 고객 프로필 및 ID 서비스에 사용할 데이터 세트를 활성화하는 방법을 보여줍니다.
+exl-id: 142cb7df-072a-4f3a-8a9c-9a78afb35312
 translation-type: tm+mt
-source-git-commit: cad9c690be986961aea2969ef0ade975f33a8ee5
+source-git-commit: 87729e4996b0b2ac26e1a0abaa80af717825f9e6
 workflow-type: tm+mt
-source-wordcount: '1057'
+source-wordcount: '1058'
 ht-degree: 1%
 
 ---
-
 
 # API를 사용하여 [!DNL Profile] 및 [!DNL Identity Service]에 대한 데이터 집합 구성
 
@@ -79,9 +79,7 @@ curl -X POST \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
     "fileDescription" : {
-    "persisted": true,
-        "containerFormat": "parquet",
-        "format": "parquet"
+        "persisted": true
     },
     "fields":[],
     "schemaRef" : {
@@ -175,9 +173,7 @@ curl -X GET \
         "viewId": "5b020a27e7040801dedbf46f",
         "status": "enabled",
         "fileDescription": {
-            "persisted": true,
-            "containerFormat": "parquet",
-            "format": "parquet"
+            "persisted": true
         },
         "transforms": "@/dataSets/5b020a27e7040801dedbf46e/views/5b020a27e7040801dedbf46f/transforms",
         "files": "@/dataSets/5b020a27e7040801dedbf46e/views/5b020a27e7040801dedbf46f/files",
