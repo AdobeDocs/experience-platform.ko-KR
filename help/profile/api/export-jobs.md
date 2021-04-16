@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform;프로필;실시간 고객 프로필;문제 해결;API
 title: 내보내기 작업 API 끝점
-topic: guide
+topic: 가이드
 type: Documentation
 description: 실시간 고객 프로파일을 사용하면 속성 데이터와 행동 데이터를 비롯한 다양한 소스의 데이터를 취합하여 Adobe Experience Platform 내에서 개별 고객에 대한 단일 뷰를 구축할 수 있습니다. 이후 처리를 위해 프로필 데이터를 데이터 세트로 내보낼 수 있습니다.
+exl-id: d51b1d1c-ae17-4945-b045-4001e4942b67
 translation-type: tm+mt
-source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
+source-git-commit: 87729e4996b0b2ac26e1a0abaa80af717825f9e6
 workflow-type: tm+mt
-source-wordcount: '1542'
+source-wordcount: '1543'
 ht-degree: 2%
 
 ---
-
 
 # 내보내기 작업 끝점
 
@@ -68,9 +68,7 @@ curl -X POST \
           "contentType": "application/vnd.adobe.xed+json;version=1"
         },
         "fileDescription": {
-          "persisted": true,
-          "containerFormat": "parquet",
-          "format": "parquet"
+          "persisted": true
         }
       }'
 ```
