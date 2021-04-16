@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: April 21, 2021
 author: ens72741
 translation-type: tm+mt
-source-git-commit: 2736b81ae32eebe4cbc997e106315be2529c0d15
+source-git-commit: fff9e6455c6eae5f9903e1d28ab365cddfd51ef8
 workflow-type: tm+mt
-source-wordcount: '298'
-ht-degree: 15%
+source-wordcount: '331'
+ht-degree: 23%
 
 ---
 
@@ -38,6 +38,8 @@ Intelligent Services를 통해 마케팅 분석가와 전문가는 인공 지능
 지원되는 데이터 집합에 대한 자세한 내용은 [[!DNL Intelligent Services] 데이터 준비 설명서](../../intelligent-services/data-preparation.md)를 참조하십시오.
 
 ### Attribution AI
+
+Attribution AI는 전환 이벤트로 연결되는 터치포인트에 크레딧을 적용하는 데 사용됩니다. 이를 통해 마케터는 고객 여정 전반에서 각 개별 마케팅 터치포인트의 마케팅 효과를 수량화할 수 있습니다.
 
 | 기능 | 설명 |
 | ------- | ----------- |
