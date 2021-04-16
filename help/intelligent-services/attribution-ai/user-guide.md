@@ -2,16 +2,16 @@
 keywords: Experience Platform;사용자 안내서;속성 아이디;인기 항목;지역
 solution: Experience Platform, Intelligent Services
 title: Attribution AI UI 안내서
-topic: User guide
+topic: '사용 안내서 '
 description: 이 문서는 Intelligent Services 사용자 인터페이스에서 Attribution AI과 상호 작용하기 위한 가이드 역할을 합니다.
+exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
 translation-type: tm+mt
-source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
+source-git-commit: 013f8d99fc394477177fdbf7eb9dd9b8ce94b88f
 workflow-type: tm+mt
-source-wordcount: '1755'
+source-wordcount: '1712'
 ht-degree: 1%
 
 ---
-
 
 # Attribution AI UI 가이드
 
@@ -21,33 +21,33 @@ Attribution AI은 지능형 서비스의 일부로 고객 상호 작용에 대�
 
 ## 인스턴스 만들기
 
-[!DNL Adobe Experience Platform] UI에서 왼쪽 탐색 영역에서 **[!UICONTROL 서비스]**&#x200B;를 클릭합니다. **[!UICONTROL 서비스]** 브라우저가 나타나고 사용 가능한 Adobe 지능형 서비스가 표시됩니다. Attribution AI 컨테이너에서 **[!UICONTROL 열기]**&#x200B;를 클릭합니다.
+[!DNL Adobe Experience Platform] UI의 왼쪽 탐색 영역에서 **[!UICONTROL Services]**&#x200B;을 클릭합니다. **[!UICONTROL Services]** 브라우저가 나타나고 사용 가능한 Adobe 지능형 서비스가 표시됩니다. Attribution AI 컨테이너에서 **[!UICONTROL Open]**&#x200B;을 클릭합니다.
 
 ![인스턴스 액세스](./images/user-guide/open_Attribution_ai.png)
 
 Attribution AI 서비스 페이지가 나타납니다. 이 페이지에는 Attribution AI의 서비스 인스턴스가 나열되며 인스턴스 이름, 전환 이벤트, 인스턴스 실행 횟수, 마지막 업데이트 상태 등에 대한 정보가 표시됩니다.
 
-**[!UICONTROL 인스턴스 만들기]** 컨테이너의 오른쪽 하단에 있는 총 전환 이벤트 점수&#x200B;]**지표를 찾을 수 있습니다.**[!UICONTROL  이 지표는 모든 샌드박스 환경 및 삭제된 서비스 인스턴스를 포함하여 현재 달력 연도에 대해 Attribution AI이 획득한 총 전환 이벤트 수를 추적합니다.
+**[!UICONTROL Create instance]** 컨테이너의 오른쪽 하단에 있는 **[!UICONTROL Total conversion events scored]** 지표를 찾을 수 있습니다. 이 지표는 모든 샌드박스 환경 및 삭제된 서비스 인스턴스를 포함하여 현재 달력 연도에 대해 Attribution AI이 획득한 총 전환 이벤트 수를 추적합니다.
 
 ![](./images/user-guide/total_conversions.png)
 
-서비스 인스턴스는 UI 오른쪽의 컨트롤을 사용하여 편집, 복제 및 삭제할 수 있습니다. 이러한 컨트롤을 표시하려면 기존 **[!UICONTROL 서비스 인스턴스]**&#x200B;에서 인스턴스를 선택합니다. 컨트롤에는 다음 정보가 포함되어 있습니다.
+서비스 인스턴스는 UI 오른쪽의 컨트롤을 사용하여 편집, 복제 및 삭제할 수 있습니다. 이러한 컨트롤을 표시하려면 기존 **[!UICONTROL Service instances]**&#x200B;에서 인스턴스를 선택합니다. 컨트롤에는 다음 정보가 포함되어 있습니다.
 
-- **[!UICONTROL 편집]**:편집 **** 을 선택하면 기존 서비스 인스턴스를 수정할 수 있습니다. 인스턴스의 이름, 설명, 상태 및 점수 지정 빈도를 편집할 수 있습니다.
-- **[!UICONTROL 클론]**:클릭 **** 을 선택하면 선택한 서비스 인스턴스가 선택됩니다. 그런 다음 워크플로우를 수정하여 일부를 수정하고 새 인스턴스로 이름을 변경할 수 있습니다.
-- **[!UICONTROL 삭제]**:모든 내역 실행을 포함하는 서비스 인스턴스를 삭제할 수 있습니다.
-- **[!UICONTROL 데이터 소스]**:이 인스턴스에서 사용하는 데이터 세트에 대한 링크입니다.
-- **[!UICONTROL 마지막 실행 세부 정보]**:이것은 실행이 실패할 때만 표시됩니다. 여기에 오류 코드와 같이 실행이 실패한 이유에 대한 정보가 표시됩니다.
+- **[!UICONTROL Edit]**:을  **[!UICONTROL Edit]** 선택하면 기존 서비스 인스턴스를 수정할 수 있습니다. 인스턴스의 이름, 설명, 상태 및 점수 지정 빈도를 편집할 수 있습니다.
+- **[!UICONTROL Clone]**:을  **[!UICONTROL Clone]** 선택하면 선택한 서비스 인스턴스가 복사됩니다. 그런 다음 워크플로우를 수정하여 일부를 수정하고 새 인스턴스로 이름을 변경할 수 있습니다.
+- **[!UICONTROL Delete]**:모든 내역 실행을 포함하는 서비스 인스턴스를 삭제할 수 있습니다.
+- **[!UICONTROL Data source]**:이 인스턴스에서 사용하는 데이터 세트에 대한 링크입니다.
+- **[!UICONTROL Last run details]**:이것은 실행이 실패할 때만 표시됩니다. 여기에 오류 코드와 같이 실행이 실패한 이유에 대한 정보가 표시됩니다.
 
 ![](./images/user-guide/side_panel.png)
 
-- **[!UICONTROL 전환 이벤트]**:이 인스턴스에 대해 구성된 전환 이벤트에 대한 빠른 개요.
-- **[!UICONTROL 전환 확인 창]**:전환 이벤트 터치포인트를 포함하기 전 일 수를 나타내는 정의된 기간
-- **[!UICONTROL 터치포인트]**:이 인스턴스를 만드는 동안 정의한 모든 터치포인트 목록입니다.
+- **[!UICONTROL Conversion events]**:이 인스턴스에 대해 구성된 전환 이벤트에 대한 빠른 개요.
+- **[!UICONTROL Lookback window]**:전환 이벤트 터치포인트를 포함하기 전 일 수를 나타내는 정의된 기간
+- **[!UICONTROL Touchpoints]**:이 인스턴스를 만드는 동안 정의한 모든 터치포인트 목록입니다.
 
 ![](./images/user-guide/side_panel_2.png)
 
-시작하려면 **[!UICONTROL 인스턴스 만들기]**&#x200B;를 선택합니다.
+시작하려면 **[!UICONTROL Create instance]**&#x200B;을 선택합니다.
 
 ![인스턴스 만들기](./images/user-guide/landing_page.png)
 
@@ -57,7 +57,7 @@ Attribution AI 서비스 페이지가 나타납니다. 이 페이지에는 Attri
 
 ### 인스턴스 이름 지정
 
-**[!UICONTROL 기본 정보]**&#x200B;에서 서비스 인스턴스에 대한 이름 및 선택적 설명을 입력합니다.
+**[!UICONTROL Basic information]** 아래에서 서비스 인스턴스에 대한 이름과 선택적 설명을 입력합니다.
 
 ![인스턴스 이름 지정](./images/user-guide/naming_instance.png)
 
@@ -65,7 +65,11 @@ Attribution AI 서비스 페이지가 나타납니다. 이 페이지에는 Attri
 
 기본 정보를 입력한 후 **데이터 집합 선택** 드롭다운을 클릭하여 데이터 집합을 선택합니다. 데이터 집합은 모델을 교육하는 데 사용되고 이후에 생성되는 데이터에 점수를 매깁니다. 드롭다운 선택기에서 데이터 세트를 선택하면 Attribution AI과 호환되고 XDM(Experience Data Model) 스키마를 준수하는 데이터만 나열됩니다. 데이터 세트를 선택한 후 오른쪽 위 모서리의 **다음**&#x200B;을 클릭하여 이벤트 정의 페이지로 이동합니다.
 
-![설정 페이지](./images/user-guide/initial_creation_attribution.png)
+>[!TIP]
+>
+>Adobe Analytics 데이터 세트는 Analytics 소스 커넥터를 통해 지원됩니다.
+
+![설정 페이지](./images/user-guide/dataset_selector.png)
 
 ## 이벤트 정의
 
@@ -89,15 +93,15 @@ Attribution AI 서비스 페이지가 나타납니다. 이 페이지에는 Attri
 
 ![드롭다운 없음](./images/user-guide/conversion_event_1.png)
 
-**[!UICONTROL 이벤트 추가]** 및 **[!UICONTROL 그룹 추가]** 단추를 사용하여 변환을 추가로 정의합니다. 정의하는 변환에 따라 추가 컨텍스트를 제공하기 위해 **[!UICONTROL 이벤트 추가]** 및 **[!UICONTROL 그룹 추가]** 단추를 사용해야 할 수 있습니다.
+**[!UICONTROL Add event]** 및 **[!UICONTROL Add Group]** 단추는 변환을 추가로 정의하는 데 사용됩니다. 정의하는 변환에 따라 추가 컨텍스트를 제공하기 위해 **[!UICONTROL Add event]** 및 **[!UICONTROL Add group]** 단추를 사용해야 할 수 있습니다.
 
 ![이벤트 추가](./images/user-guide/add_event.png)
 
-**[!UICONTROL 이벤트 추가]**&#x200B;를 클릭하면 위에 설명한 것과 동일한 방법으로 입력할 수 있는 추가 필드가 만들어집니다. 이렇게 하면 변환 이름 아래의 문자열 정의에 AND 문이 추가됩니다. 추가된 이벤트를 제거하려면 **x**&#x200B;을 클릭합니다.
+**[!UICONTROL Add event]**&#x200B;을 클릭하면 위에 설명한 것과 동일한 방법으로 입력할 수 있는 추가 필드가 만들어집니다. 이렇게 하면 변환 이름 아래의 문자열 정의에 AND 문이 추가됩니다. 추가된 이벤트를 제거하려면 **x**&#x200B;을 클릭합니다.
 
 ![이벤트 메뉴 추가](./images/user-guide/add_event_result.png)
 
-**[!UICONTROL 그룹 추가]**&#x200B;를 클릭하면 원본과 다른 추가 필드를 만들 수 있는 옵션이 제공됩니다. 그룹이 추가되면 파란색 *And* 단추가 나타납니다. **And**&#x200B;을 클릭하면 매개 변수를 &quot;Or&quot;로 변경하는 옵션이 제공됩니다. &quot;Or&quot;는 여러 개의 성공적인 전환 경로를 정의하는 데 사용됩니다. &quot;And&quot;는 추가 조건을 포함하도록 전환 경로를 확장합니다.
+**[!UICONTROL Add Group]**&#x200B;을(를) 클릭하면 원본과 별도로 추가 필드를 만드는 옵션이 제공됩니다. 그룹이 추가되면 파란색 *And* 단추가 나타납니다. **And**&#x200B;을 클릭하면 매개 변수를 &quot;Or&quot;로 변경하는 옵션이 제공됩니다. &quot;Or&quot;는 여러 개의 성공적인 전환 경로를 정의하는 데 사용됩니다. &quot;And&quot;는 추가 조건을 포함하도록 전환 경로를 확장합니다.
 
 ![및 또는](./images/user-guide/and_or.png)
 
@@ -155,7 +159,7 @@ Attribution AI 서비스 페이지가 나타납니다. 이 페이지에는 Attri
 
 ## 고급 트레이닝 및 점수 설정
 
-Attribution AI의 최종 페이지는 교육 및 점수 설정에 사용되는 **[!UICONTROL 고급]** 페이지입니다.
+Attribution AI의 마지막 페이지는 교육 및 점수 설정에 사용되는 **[!UICONTROL Advanced]** 페이지입니다.
 
 ![새 페이지 고급](./images/user-guide/advanced_settings.png)
 
@@ -185,7 +189,7 @@ Attribution AI의 최종 페이지는 교육 및 점수 설정에 사용되는 *
 
 고객의 행동은 국가와 지역에 따라 크게 다를 수 있습니다. 글로벌 비즈니스의 경우 국가 기반 또는 지역 기반 모델을 사용하면 기여도 분석 정확도를 높일 수 있습니다. 추가된 각 영역은 해당 영역의 데이터로 새 모델을 만듭니다.
 
-새 영역을 정의하려면 **[!UICONTROL 영역 추가]**&#x200B;를 클릭하여 시작합니다. 나타나는 컨테이너에서 영역 이름을 입력합니다. **[!UICONTROL 필드 이름 입력]** 드롭다운에서 하나의 값(&quot;placeContext.geo.countryCode&quot;)만 채워집니다. 이 값을 선택합니다.
+새 영역을 정의하려면 **[!UICONTROL Add region]**&#x200B;을 클릭하여 시작합니다. 나타나는 컨테이너에서 영역 이름을 입력합니다. **[!UICONTROL Enter Field Name]** 드롭다운에서 하나의 값(&quot;placeContext.geo.countryCode&quot;)만 채워집니다. 이 값을 선택합니다.
 
 ![지역 선택](./images/user-guide/select_region_att.png)
 
@@ -193,7 +197,7 @@ Attribution AI의 최종 페이지는 교육 및 점수 설정에 사용되는 *
 
 ![지역 연산자](./images/user-guide/region_operators.png)
 
-마지막으로, **[!UICONTROL 필드 값 입력]** 드롭다운에 국가 코드를 입력합니다.
+마지막으로, **[!UICONTROL Enter Field Value]** 드롭다운에 국가 코드를 입력합니다.
 
 >[!NOTE]
 >
@@ -211,7 +215,7 @@ Attribution AI의 최종 페이지는 교육 및 점수 설정에 사용되는 *
 
 ![교육 창](./images/user-guide/training_window.png)
 
-교육 창을 선택하고 오른쪽 위 모서리에서 **[!UICONTROL 마침]**&#x200B;을 클릭합니다. 데이터를 처리하는 데 약간의 시간이 소요됩니다. 완료되면 인스턴스 설정이 완료되었음을 확인하는 팝업 대화 상자가 나타납니다. 서비스 인스턴스를 볼 수 있는 **[!UICONTROL 서비스 인스턴스]** 페이지로 리디렉션하려면 **[!UICONTROL 확인]**&#x200B;을 클릭합니다.
+교육 창을 선택한 후 오른쪽 위 모서리에서 **[!UICONTROL Finish]**&#x200B;을 클릭합니다. 데이터를 처리하는 데 약간의 시간이 소요됩니다. 완료되면 인스턴스 설정이 완료되었음을 확인하는 팝업 대화 상자가 나타납니다. 서비스 인스턴스를 볼 수 있는 **[!UICONTROL Service instances]** 페이지로 리디렉션하려면 **[!UICONTROL Ok]**&#x200B;을 클릭합니다.
 
 ![설치 완료](./images/user-guide/instance_setup_complete.png)
 
@@ -219,7 +223,7 @@ Attribution AI의 최종 페이지는 교육 및 점수 설정에 사용되는 *
 
 이 튜토리얼을 따라 Attribution AI에서 서비스 인스턴스를 만들었습니다. 인스턴스 점수가 완료된 후(최대 24시간 허용), [Attribution AI 인사이트 검색](./discover-insights.md)을(를) 수행할 준비가 되었습니다. 또한 점수 결과를 다운로드하려면 [다운로드 스코어](./download-scores.md) 설명서를 참조하십시오.
 
-## Journey Orchestration용
+## 추가 리소스
 
 다음 비디오에서는 Attribution AI에서 새 인스턴스를 만들기 위한 엔드 투 엔드 워크플로우에 대해 설명합니다.
 
