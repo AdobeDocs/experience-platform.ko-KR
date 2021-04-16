@@ -6,9 +6,9 @@ topic: Attribution AI 입력 및 출력 데이터
 description: 다음 문서에서는 Attribution AI에서 사용되는 다양한 입력 및 출력 개요를 설명합니다.
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
 translation-type: tm+mt
-source-git-commit: 2ef2a6431865e8ffdc2abd6cf527249e8b5ca4d0
+source-git-commit: 35b3994287d4f556fab8ee75c3bf242ff2690aef
 workflow-type: tm+mt
-source-wordcount: '2091'
+source-wordcount: '2182'
 ht-degree: 3%
 
 ---
@@ -19,7 +19,16 @@ ht-degree: 3%
 
 ## [!DNL Attribution AI] 입력 데이터
 
-[!DNL Attribution AI] 는  [!DNL Consumer Experience Event] 데이터를 사용하여 알고리즘 점수를 계산합니다. [!DNL Consumer Experience Event]에 대한 자세한 내용은 [Intelligent Services 설명서에서 사용할 데이터 준비](../data-preparation.md)를 참조하십시오.
+Attribution AI은 다음 데이터 집합 중 하나를 분석하여 알고리즘 점수를 계산하는 방식으로 작동합니다.
+
+- CEE(Consumer Experience Event) 데이터 세트
+- [Analytics 소스 커넥터를 사용하는 Adobe Analytics 데이터 집합](../../sources/tutorials/ui/create/adobe-applications/analytics.md)
+
+>[!IMPORTANT]
+>
+>Adobe Analytics 소스 커넥터는 데이터를 채우는 데 최대 4주가 걸릴 수 있습니다. 최근에 커넥터를 설정하는 경우 데이터 세트에 Attribution AI에 필요한 최소 데이터 길이가 있는지 확인해야 합니다. [내역 데이터](#data-requirements) 섹션을 검토하여 정확한 알고리즘 점수를 계산하는 데 충분한 데이터가 있는지 확인하십시오.
+
+[!DNL Consumer Experience Event](CEE) 스키마 설정에 대한 자세한 내용은 [지능형 서비스 데이터 준비](../data-preparation.md) 안내서를 참조하십시오. Adobe Analytics 데이터 매핑에 대한 자세한 내용은 [분석 필드 매핑](../../sources/connectors/adobe-applications/analytics.md) 설명서를 참조하십시오.
 
 [!DNL Consumer Experience Event](CEE) 스키마의 모든 열이 Attribution AI에 필수는 아닙니다.
 
