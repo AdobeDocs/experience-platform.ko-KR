@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;popular topics;batch ingestion;통합;통합;개발자 가이드;api guide;upload;ingest Portable;ingest json
 solution: Experience Platform
 title: 일괄 처리 통합 API 안내서
-topic: developer guide
+topic: 개발자 가이드
 description: 이 문서에서는 일괄 처리 통합 API 사용에 대한 포괄적인 개요를 제공합니다.
+exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 727c9dbd87bacfd0094ca29157a2d0283c530969
 workflow-type: tm+mt
-source-wordcount: '2698'
-ht-degree: 5%
+source-wordcount: '2558'
+ht-degree: 6%
 
 ---
-
 
 # 일괄 처리 통합 API 안내서
 
@@ -63,7 +63,7 @@ ht-degree: 5%
 
 아래 표는 데이터를 인제스트할 때 지원되는 전환을 보여줍니다.
 
-| 인바운드(행)과 Target(열) 비교 | 문자열 | 바이트 | Short | 정수 | Long | 이중 | 날짜 | 날짜-시간 | 개체 | 맵 |
+| 인바운드(행)과 Target(열) 비교 | 문자열 | 바이트 | Short | 정수 | Long | 이중 | Date | 날짜-시간 | 개체 | 맵 |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | 문자열 | X | X | X | X | X | X | X | X |  |  |
 | 바이트 | X | X | X | X | X | X |  |  |  |  |
@@ -470,7 +470,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ### 대용량 파일 청크 업로드
 
-이제 파일이 만들어졌으므로, 파일의 각 섹션에 대해 PATCH 요청을 반복하여 이후의 모든 청크를 업로드할 수 있습니다.
+이제 파일이 만들어졌으므로, 파일의 각 섹션에 대해 PATCH 요청을 반복하여 모든 후속 청크를 업로드할 수 있습니다.
 
 **API 형식**
 
@@ -608,15 +608,7 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
       "schemaRef": {
           "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
           "contentType": "application/vnd.adobe.xed+json;version=1"
-      },
-      "fileDescription": {
-          "format": "parquet",
-          "delimiters": [","], 
-          "quotes": ["\""],
-          "escapes": ["\\"],
-          "header": true,
-          "charset": "UTF-8"
-      }      
+      }
   }'
 ```
 
@@ -624,32 +616,6 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
 | --------- | ----------- |
 | `{TENANT_ID}` | 이 ID는 사용자가 만든 리소스가 적절하게 대체되고 IMS 조직 내에 포함되도록 하는 데 사용됩니다. |
 | `{SCHEMA_ID}` | 만든 스키마의 ID. |
-
-JSON 본문의 &quot;fileDescription&quot; 섹션의 여러 부분이 아래에 표시될 수 있는 내용에 대한 설명입니다.
-
-```json
-{
-    "fileDescription": {
-        "format": "parquet",
-        "delimiters": [","],
-        "quotes": ["\""],
-        "escapes": ["\\"],
-        "header": true,
-        "charset": "UTF-8"
-    }
-}
-```
-
-| 매개 변수 | 설명 |
-| --------- | ----------- |
-| `format` | 입력 파일의 형식이 아니라 마스터된 파일의 형식입니다. |
-| `delimiters` | 구분 기호로 사용할 문자입니다. |
-| `quotes` | 따옴표에 사용할 문자입니다. |
-| `escapes` | 이스케이프 문자로 사용할 문자입니다. |
-| `header` | 업로드된 파일 **에 머리글이 포함되어야 합니다.** 스키마 유효성 검사가 수행되므로 true로 설정해야 합니다. 또한 헤더에 공백이 있으면 **에 공백이 포함되지 않을 수 있습니다. 헤더에 공백이 있으면 대신 밑줄로 바꾸십시오.** |
-| `charset` | 선택적 필드입니다. 기타 지원되는 문자 세트에는 &quot;US-ASCII&quot; 및 &quot;ISO-8869-1&quot;이 있습니다. 비워 두면 기본적으로 UTF-8로 가정합니다. |
-
-참조된 데이터 집합에는 위에 나열된 파일 설명 블록이 있어야 하며 레지스트리에서 유효한 스키마를 가리켜야 합니다. 그렇지 않으면 파일이 Parenterminate로 마스터되지 않습니다.
 
 ### 일괄 처리 만들기
 
