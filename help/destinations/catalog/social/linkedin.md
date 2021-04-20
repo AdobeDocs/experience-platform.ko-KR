@@ -4,9 +4,9 @@ title: Linkedin 일치된 대상 연결
 description: 해시 처리된 이메일을 기반으로 고객 타깃팅, 개인화 및 억제를 위해 LinkedIn 캠페인에 대한 프로파일을 활성화합니다.
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
 translation-type: tm+mt
-source-git-commit: 95ca7112d1f2655bf33e8a1c549e886ced244a5d
+source-git-commit: 805cb72e91e6446f74cc3461d39841740eb576c7
 workflow-type: tm+mt
-source-wordcount: '669'
+source-wordcount: '668'
 ht-degree: 1%
 
 ---
@@ -80,7 +80,7 @@ Experience Platform에서 이메일 주소 인제스트에 대한 자세한 내�
 
 ## 대상 {#connect-destination}에 연결
 
-[!DNL LinkedIn Matched Audiences] 대상에 연결하려면 [소셜 네트워크 대상 인증 워크플로](./workflow.md)를 참조하십시오.
+[!DNL LinkedIn Matched Audiences] 대상에 연결하려면 [소셜 대상 인증 워크플로](./workflow.md)를 참조하십시오.
 
 아래 비디오에서는 [!DNL LinkedIn Matched Audiences] 대상을 구성하고 세그먼트를 활성화하는 단계도 보여 줍니다.
 
