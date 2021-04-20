@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;소스 커넥터;소스 커넥터;소스;데이터 소스;데이터 소스;데이터 소스;데이터 소스 연결
 solution: Experience Platform
 title: 소스 커넥터 개요
-topic: overview
+topic-legacy: overview
 description: Adobe Experience Platform을 사용하면 Platform 서비스를 사용하여 수신 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 외부 소스에서 데이터를 수집할 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 등 다양한 소스의 데이터를 인제스트할 수 있습니다.
+exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
 translation-type: tm+mt
-source-git-commit: 0e4fda4abf5c02df81b74f15d2fbcafb68548070
+source-git-commit: af5564a07577a0123e1a45043d5479f6ad45d73e
 workflow-type: tm+mt
-source-wordcount: '943'
+source-wordcount: '921'
 ht-degree: 0%
 
 ---
-
 
 # 소스 커넥터 개요
 
@@ -36,6 +36,8 @@ Experience Platform을 사용하면 Adobe Analytics, Adobe Audience Manager 및 
 - [Adobe Analytics 데이터 커넥터 개요](connectors/adobe-applications/analytics.md)
 - [UI에서 Adobe Analytics 소스 연결 만들기](./tutorials/ui/create/adobe-applications/analytics.md)
 - [UI에서 고객 속성 소스 연결 만들기](./tutorials/ui/create/adobe-applications/customer-attributes.md)
+- [[!DNL Marketo Engage] 커넥터 개요](connectors/adobe-applications/marketo/marketo.md)
+- [UI [!DNL Marketo Engage] 에서 리소스 연결 만들기](./tutorials/ui/create/adobe-applications/marketo.md)
 
 ### 광고
 
@@ -121,15 +123,15 @@ Experience Platform은 제3자 프로토콜 시스템의 데이터 인제스트 
 
 ## 데이터 수집에서 소스에 대한 액세스 제어
 
-데이터 수집의 소스에 대한 권한은 Adobe Admin Console 내에서 관리할 수 있습니다. 특정 제품 프로필의 **[!UICONTROL 권한]** 탭을 통해 권한을 액세스할 수 있습니다. **[!UICONTROL 권한 편집]** 패널에서 **[!UICONTROL 데이터 통합]** 메뉴 항목을 통해 소스와 관련된 권한에 액세스할 수 있습니다. **[!UICONTROL 소스 보기]** 권한은 **[!UICONTROL 카탈로그]** 탭 및 **[!UICONTROL 찾아보기]** 탭의 인증된 소스에 대한 읽기 전용 액세스 권한을 부여합니다. 반면 **[!UICONTROL 소스 관리]** 권한은 소스를 읽고, 만들고, 편집하고, 비활성화할 수 있는 모든 액세스 권한을 부여합니다.
+데이터 수집의 소스에 대한 권한은 Adobe Admin Console 내에서 관리할 수 있습니다. 특정 제품 프로필의 **[!UICONTROL Permissions]** 탭을 통해 권한을 액세스할 수 있습니다. **[!UICONTROL Edit Permissions]** 패널에서 **[!UICONTROL data ingestion]** 메뉴 항목을 통해 소스와 관련된 권한에 액세스할 수 있습니다. **[!UICONTROL View Sources]** 권한은 **[!UICONTROL Catalog]** 탭의 사용 가능한 소스와 **[!UICONTROL Browse]** 탭의 인증된 소스에 대한 읽기 전용 액세스 권한을 부여하는 반면 **[!UICONTROL Manage Sources]** 권한은 소스를 읽고, 만들고, 편집하고, 비활성화하기 위한 모든 액세스 권한을 부여합니다.
 
 다음 표에서는 이러한 권한의 다양한 조합을 기반으로 UI가 어떻게 동작하는지를 설명합니다.
 
 | 권한 수준 | 설명 |
 | ---- | ----|
-| **[!UICONTROL 소스]** 보기 켜기 | [카탈로그] 탭에서 각 소스 유형의 소스에 대한 읽기 전용 액세스 권한과 [탐색], [계정] 및 [데이터 흐름] 탭을 부여할 수 있습니다. |
-| **[!UICONTROL 소스]** 관리 켜기 | **[!UICONTROL 소스 보기]**&#x200B;에 포함된 함수 외에도 **[!UICONTROL 카탈로그]**&#x200B;의 **[!UICONTROL 연결 소스]** 옵션과 **[!UICONTROL 찾아보기]**&#x200B;의 **[!UICONTROL 데이터 선택]** 옵션에 대한 액세스 권한을 부여합니다. **[!UICONTROL 소스]** 관리를 사용하면 DataFlow를 활성화하거나 비활성화하고  **** 일정을 편집할 수도 있습니다. |
-| **[!UICONTROL 소스]** 보기 **[!UICONTROL 소스]** 해제 및 관리 | 소스에 대한 모든 액세스 권한을 취소합니다. |
+| **[!UICONTROL View Sources]** 설정 | [카탈로그] 탭에서 각 소스 유형의 소스에 대한 읽기 전용 액세스 권한과 [탐색], [계정] 및 [데이터 흐름] 탭을 부여할 수 있습니다. |
+| **[!UICONTROL Manage Sources]** 설정 | **[!UICONTROL View Sources]**&#x200B;에 포함된 함수 외에도 **[!UICONTROL Catalog]**&#x200B;의 **[!UICONTROL Connect Source]** 옵션과 **[!UICONTROL Browse]**&#x200B;의 **[!UICONTROL Select Data]** 옵션에 대한 액세스 권한을 부여합니다. **[!UICONTROL Manage Sources]** 일정을 활성화 또는 비활성화하고  **[!UICONTROL DataFlows]** 편집할 수도 있습니다. |
+| **[!UICONTROL View Sources]** 해제 및  **[!UICONTROL Manage Sources]** 해제 | 소스에 대한 모든 액세스 권한을 취소합니다. |
 
 이러한 4개의 소스를 포함하여 Admin Console을 통해 부여된 사용 가능한 권한에 대한 자세한 내용은 [액세스 제어 개요](../access-control/home.md)를 참조하십시오.
 
