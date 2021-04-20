@@ -1,15 +1,15 @@
 ---
 keywords: linkedin 연결;linkedin 연결;linkedin 대상;linkedin 대상;linkedin
 title: Linkedin 일치된 대상 연결
-description: 해시 처리된 이메일을 기반으로 고객 타깃팅, 개인화 및 억제를 위해 LinkedIn 캠페인의 프로필을 활성화합니다.
+description: 해시 처리된 이메일을 기반으로 고객 타깃팅, 개인화 및 억제를 위해 LinkedIn 캠페인에 대한 프로파일을 활성화합니다.
+exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 95ca7112d1f2655bf33e8a1c549e886ced244a5d
 workflow-type: tm+mt
-source-wordcount: '655'
+source-wordcount: '669'
 ht-degree: 1%
 
 ---
-
 
 # [!DNL LinkedIn Matched Audiences] 연결
 
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 해시 처리된 이메일 및 모바일 ID를 기반으로 고객 타깃팅, 개인화 및 억제를 위해 [!DNL LinkedIn] 캠페인에 대한 프로파일을 활성화합니다.
 
-![Adobe Experience Platform UI의 LinkedIn 대상](../../assets/catalog/social/linkedin/catalog.png)
+![Adobe Experience Platform UI의 linkedIn 대상](../../assets/catalog/social/linkedin/catalog.png)
 
 ## 사용 사례
 
@@ -40,11 +40,11 @@ Adobe Experience Platform 고객이 이 기능을 사용하여 해결할 수 있
 
 **세그먼트 내보내기**  - 대상에 사용된 식별자(이름, 전화 번호 등)를 사용하여 세그먼트(대상)의 모든 구성원을  [!DNL LinkedIn Matched Audiences] 내보냅니다.
 
-## LinkedIn 계정 사전 요구 사항 {#LinkedIn-account-prerequisites}
+## linkedIn 계정 사전 요구 사항 {#LinkedIn-account-prerequisites}
 
 [!UICONTROL LinkedIn Matched Audience] 대상을 사용하려면 먼저 [!DNL LinkedIn Campaign Manager] 계정에 [!DNL Creative Manager] 권한 수준 이상이 있는지 확인합니다.
 
-[!DNL LinkedIn Campaign Manager] 사용자 권한을 편집하는 방법에 대한 자세한 내용은 LinkedIn 문서에서 [광고 계정에 대한 사용자 권한 추가, 편집 및 제거를 참조하십시오.](https://www.linkedin.com/help/lms/answer/5753)
+[!DNL LinkedIn Campaign Manager] 사용자 권한을 편집하는 방법에 대한 자세한 내용은 LinkedIn 설명서의 [광고 계정에 대한 사용자 권한 추가, 편집 및 제거를 참조하십시오.](https://www.linkedin.com/help/lms/answer/5753)
 
 ## 요구 사항 {#id-matching-requirements} 일치하는 ID
 
@@ -81,6 +81,10 @@ Experience Platform에서 이메일 주소 인제스트에 대한 자세한 내�
 ## 대상 {#connect-destination}에 연결
 
 [!DNL LinkedIn Matched Audiences] 대상에 연결하려면 [소셜 네트워크 대상 인증 워크플로](./workflow.md)를 참조하십시오.
+
+아래 비디오에서는 [!DNL LinkedIn Matched Audiences] 대상을 구성하고 세그먼트를 활성화하는 단계도 보여 줍니다.
+
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
 ## 세그먼트를 [!DNL LinkedIn Matched Audiences] {#activate-segments}에 활성화
 
