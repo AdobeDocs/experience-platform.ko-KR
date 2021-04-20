@@ -5,7 +5,7 @@ type: Tutorial
 description: Adobe Experience Platform에서 소셜 광고 계정에 연결하는 방법을 알아봅니다.
 exl-id: a0cdf2b7-b1e8-4a8e-9d5b-58a118e7b689
 translation-type: tm+mt
-source-git-commit: 805cb72e91e6446f74cc3461d39841740eb576c7
+source-git-commit: e2af4fcfe232889f3f928c00c9f9b37cf9754ca1
 workflow-type: tm+mt
 source-wordcount: '457'
 ht-degree: 0%
@@ -64,8 +64,8 @@ ht-degree: 0%
 
 위의 필드를 채운 후 **[!UICONTROL Create Destination]**&#x200B;을 선택합니다.
 
-이제 대상이 만들어집니다. 나중에 세그먼트를 활성화하거나 **[!UICONTROL Next]**&#x200B;을 선택하여 워크플로우를 계속 진행하고 활성화할 세그먼트를 선택할 수 있습니다. **[!UICONTROL Save & Exit]** 이 두 경우 모두 워크플로우의 나머지 부분에 대해서는 다음 섹션 [소셜 네트워크에 세그먼트 활성화](#activate-segments)를 참조하십시오.
+이제 대상이 만들어집니다. 나중에 세그먼트를 활성화하거나 **[!UICONTROL Next]**&#x200B;을 선택하여 워크플로우를 계속 진행하고 활성화할 세그먼트를 선택할 수 있습니다. **[!UICONTROL Save & Exit]** 이 두 경우 모두 워크플로우의 나머지 부분에 대해서는 다음 섹션 [소셜 대상에 세그먼트 활성화](#activate-segments)를 참조하십시오.
 
-## 세그먼트를 소셜 네트워크에 활성화 {#activate-segments}
+## 소셜 대상 {#activate-segments}(으)로 세그먼트 활성화
 
-소셜 네트워크에 세그먼트를 활성화하는 방법에 대한 지침은 [대상에 데이터 활성화](../../ui/activate-destinations.md)를 참조하십시오.
+소셜 대상에 세그먼트를 활성화하는 방법에 대한 지침은 [대상에 데이터 활성화](../../ui/activate-destinations.md)를 참조하십시오.
