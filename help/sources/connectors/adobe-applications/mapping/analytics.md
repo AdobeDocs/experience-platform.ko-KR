@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;분석 매핑 필드;분석 매핑
 solution: Experience Platform
 title: Adobe Analytics 소스 커넥터의 매핑 필드
-topic: overview
+topic-legacy: overview
 description: Adobe Experience Platform에서는 ADC(Analytics Data Connector)를 통해 Adobe Analytics 데이터를 인제스트할 수 있습니다. ADC를 통해 인제스트된 데이터 중 일부는 분석 필드에서 XDM(경험 데이터 모델) 필드로 직접 매핑할 수 있으며, 다른 데이터에는 성공적으로 매핑되기 위해 변형 및 특정 기능이 필요합니다.
+exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: af5564a07577a0123e1a45043d5479f6ad45d73e
 workflow-type: tm+mt
-source-wordcount: '3393'
-ht-degree: 12%
+source-wordcount: '3405'
+ht-degree: 14%
 
 ---
-
 
 # 분석 필드 매핑
 
@@ -48,7 +48,7 @@ Adobe Experience Platform에서는 ADC(Analytics Data Connector)를 통해 Adobe
 | m_page_url | web.webPageDetails.URL | 문자열 | 페이지 히트의 URL. |
 | m_pagename_no_url | web.webPageDetails.</span>이름 | 문자열 | 페이지 차원을 채우는 데 사용되는 변수. |
 | m_referrer | web.webReferrer.URL | 문자열 | 이전 페이지의 페이지 URL. |
-| m_search_page_num | search.pageDepth | 정수 | 모든 검색 페이지 등급 차원에 의해 사용됩니다. 사용자가 사이트를 클릭스루하기 전에 사이트가 어떤 검색 결과 페이지를 표시했는지 나타냅니다. |
+| m_search_page_num | search.pageDepth | 정수 | 모든 검색 페이지 등급 차원에 사용됩니다. 사용자가 사이트에 클릭 스루하기 전에 사이트가 표시된 검색 결과 페이지를 나타냅니다. |
 | m_state | _experience.analytics.customDimensions.stateProminity | 문자열 | state 변수. |
 | m_user_server | web.webPageDetails.server | 문자열 | 서버 차원에 사용된 변수. |
 | m_zip | _experience.analytics.customDimensions.postalCode | 문자열 | 우편 번호 차원을 채우는 데 사용되는 변수. |
@@ -124,15 +124,19 @@ Adobe Experience Platform에서는 ADC(Analytics Data Connector)를 통해 Adobe
 | videopausetime | media.mediaTimed.pauseTime | 개체 | <!-- MISSING --> | {id (문자열), 값(숫자)} |
 | videosecssincelastcall | media.mediaTimed.primaryAssetViewDetails.sessionTimeout | 정수 |
 
+{style=&quot;table-layout:auto&quot;}
+
 ## 매핑 필드 분할
 
 이러한 필드에는 단일 소스가 있지만, **여러** XDM 위치에 매핑됩니다.
 
 | 분석 필드 | XDM 필드 | XDM 유형 | 설명 |
 | --------------- | --------- | -------- | ---------- |
-| s_resolution | device.screenWidth, device.screenHeight | 정수 | 모니터 해상도를 나타내는 숫자 ID. |
+| s_resolution | device.screenWidth, device.screenHeight | 정수 | 모니터의 해상도를 나타내는 숫자 ID입니다. |
 | mobileosversion | environment.operatingSystem, environment.operatingSystemVersion | 문자열 | 모바일 운영 체제 버전. |
 | videoadlength | advertising.adAssetReference._xmpDM.duration | 정수 | 비디오 광고 길이. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## 생성된 매핑 필드
 
@@ -153,7 +157,7 @@ XDM에서 생성되려면 ADC에서 나오는 일부 필드를 변형해야 하�
 | m_cookies | environment.browserDetails.cookiesEnabled | 부울 | 쿠키 지원 차원에 사용된 변수. |
 | m_event_list | commerce.purchases, commerce.productViews, commerce.productListOpens, commerce.checkout, commerce.productListAdds, commerce.productListRemoval, commerce.productListViews | 개체 | 히트에 대해 표준 상거래 이벤트가 트리거되었습니다. | {id (문자열), 값(숫자)} |
 | m_event_list | _experience.analytics.event1to100.event1 - _experience.analytics.event1to100.event100, _experience.analytics.event101to200.event101 - _experience.analytics.event100, _experience.event analytics.event201to300.event201 - _experience.analytics.event201to300.event300, _experience.analytics.event301to400.event301 - _experience.analytics.event00 .event400, _experience.analytics.event401to500.event401 - _experience.analytics.event401to500.event500, _experience.analytics.event501to600 - _experience.analytics.event 501to600.event600, _experience.analytics.event601to700.event601 - _experience.analytics.event601to700.event70, _experience.analytics.event77 101 - _experience.analytics.event701to800.event800, _experience.analytics.event801to900.event801 - _experience.analytics.event801~900, _experience.analytics.event00 1to1000.event901 - _experience.analytics.event901to1000.event1000 | 개체 | 히트에 대해 트리거된 사용자 지정 이벤트. | {id (객체), 값(객체)} |
-| m_geo_country | placeContext.geo.countryCode | 문자열 | IP를 기반으로 하는 히트 출처 국가의 약어. |
+| m_geo_country | placeContext.geo.countryCode | 문자열 | IP를 기반으로 하는 히트가 발생한 국가의 약어입니다. |
 | m_geo_latitude | placeContext.geo._schema.latitude | number | <!-- MISSING --> |
 | m_geo_경도 | placeContext.geo._schema.위도 | number | <!-- MISSING --> |
 | m_java_enabled | environment.browserDetails.javaEnabled | 부울 | Java 활성화 여부를 나타내는 플래그. |
@@ -191,6 +195,8 @@ XDM에서 생성되려면 ADC에서 나오는 일부 필드를 변형해야 하�
 | mobilebeaconproximity | placeContext.POIinteraction.POIDetail.beaconInteractionDetails.proximity | 문자열 | Mobile Services 비콘 Proximity. |
 | videochapter | media.mediaTimed.mediaChapter.chapterAssetReference._xmpDM.duration | 정수 | 비디오 장의 이름입니다. |
 | violength | media.mediaTimed.primaryAssetReference._xmpDM.duration | 정수 | 비디오 길이입니다. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## 고급 매핑 필드
 
@@ -237,7 +243,7 @@ XDM에서 생성되려면 ADC에서 나오는 일부 필드를 변형해야 하�
 | visit_page_num | _experience.analytics.session.depth | 정수 | 히트 깊이 차원에 사용된 변수. 이 값은 사용자가 생성하는 각 히트에 대해 1씩 증가하고 각 방문 후에 재설정됩니다. |
 | visit_referrer | _experience.analytics.session.web.webReferrer.URL | 문자열 | 방문의 첫 번째 레퍼러. |
 | visit_search_page_num | _experience.analytics.session.search.pageDepth | 정수 | 방문의 첫 번째 페이지 이름입니다. |
-| post_prop1 - post_prop75 | _experience.analytics.customDimensions.listprop.prop1 - _experience.analytics.customDimensions.listprop75 | 개체 | 사용자 지정 트래픽 변수 1-75입니다. |
+| post_prop1 - post_prop75 | _experience.analytics.customDimensions.listprop.prop1 - _experience.analytics.customDimensions.listprop75 | 개체 | 사용자 지정 트래픽 변수 1 - 75. |
 | post_hier1 - post_hier5 | _experience.analytics.customDimensions.hierarches.hierarchy1 - _experience.analytics.customDimensions.hierarchy5 | 개체 | 계층 변수에 사용되며 구분된 값 목록을 포함합니다. | {values (array), 구분 기호(문자열)} |
 | post_mvvar1 - post_mvvar3 | _experience.analytics.customDimensions.lists1.list[] - _experience.analytics.customDimensions.lists.list3.list[] | array | 변수 값 목록입니다. 구현에 따라 구분된 사용자 지정 값 목록을 포함합니다. | {value (string), key(string)} |
 | post_cookies | environment.browserDetails.cookiesEnabled | 부울 | 쿠키 지원 차원에 사용되는 변수입니다. |
@@ -260,12 +266,14 @@ XDM에서 생성되려면 ADC에서 나오는 일부 필드를 변형해야 하�
 | color | device.colorDepth | 정수 | c_color 열의 값을 기반으로 하는 색상 깊이 ID. |
 | first_hit_ref_type | _experience.analytics.endUser.firstWeb.webReferrer.type | 문자열 | 방문자의 첫 번째 레퍼러의 레퍼러 유형을 나타내는 숫자 ID. |
 | first_hit_time_gmt | _experience.analytics.endUser.firstTimestamp | 정수 | Unix 시간에서 방문자의 첫 번째 히트 타임스탬프입니다. |
-| geo_country | placeContext.geo.countryCode | 문자열 | IP를 기반으로 히트한 국가의 약어. |
+| geo_country | placeContext.geo.countryCode | 문자열 | IP를 기반으로 한, 히트가 발생한 국가의 약어입니다. |
 | geo_latitude | placeContext.geo._schema.latitude | number | <!-- MISSING --> |
 | geo_lightroom | placeContext.geo._schema.위도 | number | <!-- MISSING --> |
 | paid_search | search.isPaid | 부울 | 히트가 유료 검색 감지와 일치하는 경우 설정되는 플래그. |
 | ref_type | web.webReferrer.type | 문자열 | 히트에 대한 참조 유형을 나타내는 숫자 ID입니다. |
 | visit_paid_search | _experience.analytics.session.search.isPaid | 부울 | 방문의 첫 번째 히트가 유료 검색 히트에서 왔는지를 나타내는 플래그(1=유료, 0=유료). |
-| visit_ref_type | _experience.analytics.session.web.webReferrer.type | 문자열 | 방문의 첫 번째 레퍼러의 레퍼러 유형을 나타내는 숫자 ID. |
-| visit_search_engine | _experience.analytics.session.search.searchEngine | 문자열 | 방문의 첫 번째 검색 엔진의 숫자 ID. |
+| visit_ref_type | _experience.analytics.session.web.webReferrer.type | 문자열 | 방문의 첫 번째 레퍼러 유형을 나타내는 숫자 ID입니다. |
+| visit_search_engine | _experience.analytics.session.search.searchEngine | 문자열 | 방문의 첫 번째 검색 엔진에 대한 숫자 ID입니다. |
 | visit_start_time_gmt | _experience.analytics.session.timestamp | 정수 | Unix 시간에 방문의 첫 번째 히트의 타임스탬프. |
+
+{style=&quot;table-layout:auto&quot;}
