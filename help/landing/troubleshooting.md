@@ -4,16 +4,16 @@ solution: Experience Platform
 title: Adobe Experience Platform FAQ 및 문제 해결 안내서
 description: 자주 묻는 질문에 대한 답변과 Experience Platform에서 일반적인 오류를 해결하기 위한 안내서를 확인하십시오.
 landing-page-description: 자주 묻는 질문에 대한 답변과 Experience Platform에서 일반적인 오류를 해결하기 위한 안내서를 확인하십시오.
-topic: getting started
+topic: 시작하기
 type: Documentation
+exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
 translation-type: tm+mt
-source-git-commit: 83cc3ddbf067f413cb524a3a685d985d5853eafd
+source-git-commit: e722d7598a558bcbc5c48d237d394f91c0803352
 workflow-type: tm+mt
-source-wordcount: '1718'
+source-wordcount: '1717'
 ht-degree: 5%
 
 ---
-
 
 # [!DNL Platform] FAQ 및 문제 해결 가이드
 
@@ -88,7 +88,7 @@ UI 또는 API를 사용하는지 여부에 따라 다음 시스템 요구 사항
 [!DNL Experience Platform] API에서 다음 상태 코드가 나타날 수 있습니다. 각각 다양한 원인이 있기 때문에 이 섹션에서 설명한 내용은 일반적으로 자연적입니다. 개별 [!DNL Platform] 서비스의 특정 오류에 대한 자세한 내용은 아래 [서비스 문제 해결 디렉토리](#service-troubleshooting-directory)를 참조하십시오.
 
 | 상태 코드 | 설명 | 가능한 원인 |
---- | --- | ---
+|--- | --- | ---|
 | 400 | 잘못된 요청 | 요청이 잘못 구성되었거나, 키 정보가 누락되었거나, 잘못된 구문이 포함되어 있습니다. |
 | 401년 | 인증 실패 | 요청이 인증 검사를 통과하지 못했습니다. 액세스 토큰이 없거나 유효하지 않을 수 있습니다. 자세한 내용은 아래 [OAuth 토큰 오류](#oauth-token-is-missing) 섹션을 참조하십시오. |
 | 403년 | 금지 | 리소스를 찾았지만 볼 수 있는 자격 증명이 없습니다. |
@@ -198,4 +198,3 @@ API 요청에서 API 키 헤더(`x-api-key`)가 누락되었을 때 이 오류 �
 | [!DNL Flow Service] ([!DNL Sources] 및 [!DNL Destinations]) | [[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) |  |
 | [!DNL Real-time Customer Profile] | [[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml) | [[!DNL Profile] 문제 해결 안내서](../profile/troubleshooting.md) |
 | 샌드 박스 | [샌드박스 API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) | [샌드박스 문제 해결 안내서](../sandboxes/troubleshooting-guide.md) |
-
