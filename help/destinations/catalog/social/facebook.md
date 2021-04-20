@@ -1,15 +1,15 @@
 ---
-keywords: facebook 연결;facebook 연결;facebook 대상;facebook;instagram;messenger;facebook messenger;facebook 연결;facebook 연결;facebook 연결;facebook 연결;facebook destinagram;messenger;facebook messenger;messenger
+keywords: facebook 연결;facebook 연결;facebook 대상;facebook;instagram;메신저;facebook messenger
 title: Facebook 연결
-description: 해시 처리된 이메일을 기반으로 고객 타깃팅, 개인화 및 억제를 위해 Facebook 캠페인에 대한 프로필을 활성화합니다.
+description: 해시 처리된 이메일을 기반으로 고객 타깃팅, 개인화 및 억제를 위해 Facebook 캠페인에 대한 프로파일을 활성화합니다.
+exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 01aed33913b5334263090aea17f75ce181717c50
 workflow-type: tm+mt
-source-wordcount: '1119'
+source-wordcount: '1134'
 ht-degree: 2%
 
 ---
-
 
 # [!DNL Facebook] 연결
 
@@ -19,7 +19,7 @@ ht-degree: 2%
 
 [!DNL Facebook], [!DNL Instagram], [!DNL Audience Network] 및 [!DNL Messenger]를 포함하여 [!DNL Custom Audiences] 제품군에서 대상 타깃팅에 이 대상을 사용할 수 있습니다. [!DNL Facebook’s] 캠페인을 실행할 앱의 선택은 [!DNL Facebook Ads Manager]의 배치 수준에서 표시됩니다.
 
-![Adobe Experience Platform UI의 Facebook 대상](../../assets/catalog/social/facebook/catalog.png)
+![Adobe Experience Platform UI의 facebook 대상](../../assets/catalog/social/facebook/catalog.png)
 
 ## 사용 사례
 
@@ -57,7 +57,7 @@ ht-degree: 2%
 
 ## 내보내기 유형 {#export-type}
 
-**세그먼트 내보내기**  - Facebook 대상에 사용된 식별자(이름, 전화 번호 또는 기타)를 사용하여 세그먼트(대상자)의 모든 구성원을 내보냅니다.
+**세그먼트 내보내기**  - Facebook 대상에 사용된 식별자(이름, 전화 번호 또는 기타)를 사용하여 세그먼트(대상)의 모든 구성원을 내보냅니다.
 
 ## Facebook 계정 사전 요구 사항 {#facebook-account-prerequisites}
 
@@ -113,11 +113,15 @@ Experience Platform에서 이메일 주소 인제스트에 대한 자세한 내�
 
 ## 사용자 정의 네임스페이스 사용 {#custom-namespaces}
 
-`Extern_ID` 네임스페이스를 사용하여 데이터를 [!DNL Facebook]에 보내려면 [!DNL Facebook Pixel]을(를) 사용하여 자체 식별자를 동기화해야 합니다. 자세한 내용은 [공식 설명서](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences/#external_identifiers)를 참조하십시오.
+`Extern_ID` 네임스페이스를 사용하여 데이터를 [!DNL Facebook]에 보내려면 [!DNL Facebook Pixel]을(를) 사용하여 자체 식별자를 동기화해야 합니다. 자세한 내용은 [Facebook 공식 문서](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences/#external_identifiers)를 참조하십시오.
 
 ## 대상 {#connect-destination}에 연결
 
 [!DNL Facebook] 대상에 연결하려면 [소셜 네트워크 대상 인증 워크플로](./workflow.md)를 참조하십시오.
+
+아래 비디오에서는 [!DNL Facebook] 대상을 구성하고 세그먼트를 활성화하는 단계도 보여 줍니다.
+
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
 ## 세그먼트를 [!DNL Facebook] {#activate-segments}에 활성화
 
@@ -125,7 +129,7 @@ Experience Platform에서 이메일 주소 인제스트에 대한 자세한 내�
 
 **[!UICONTROL Segment schedule]** 단계에서 세그먼트를 [!DNL Facebook Custom Audiences]에 보낼 때 [!UICONTROL Origin of audience]을 제공해야 합니다.
 
-![대상자의 Facebook 출처](../../assets/catalog/social/facebook/facebook-origin-audience.png)
+![Facebook Origin of Audience](../../assets/catalog/social/facebook/facebook-origin-audience.png)
 
 ## 내보낸 데이터 {#exported-data}
 
