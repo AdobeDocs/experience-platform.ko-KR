@@ -1,15 +1,14 @@
 ---
-product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform 소스 커넥터 도움말
 breadcrumb-title: Source Connectors 안내서
 user-guide-description: 다양한 소스 또는 구조에서 데이터를 수집하고 레이블을 지정하며 기존에 수집한 데이터를 향상시킬 수 있습니다.
-feature: Data Ingestion, Sources
+feature: 데이터 통합, 소스
 translation-type: tm+mt
-source-git-commit: 26e7116858574b366760ffd4f92b14117ccd28eb
+source-git-commit: af5564a07577a0123e1a45043d5479f6ad45d73e
 workflow-type: tm+mt
-source-wordcount: '582'
-ht-degree: 13%
+source-wordcount: '602'
+ht-degree: 12%
 
 ---
 
@@ -27,6 +26,11 @@ ht-degree: 13%
          - [분석 필드 매핑](connectors/adobe-applications/mapping/analytics.md)
          - [Audience Manager 필드 매핑](connectors/adobe-applications/mapping/audience-manager.md)
          - [Target 필드 매핑](connectors/adobe-applications/mapping/target.md)
+         - [Marketo Engage 필드 매핑](connectors/adobe-applications/mapping/marketo.md)
+      - Marketo Engage {#marketo}
+         - [Marketo Engage 커넥터](connectors/adobe-applications/marketo/marketo.md)
+         - [Marketo Engage 인증 가이드](connectors/adobe-applications/marketo/marketo-auth.md)
+         - [Marketo Engage 네임스페이스 및 스키마](connectors/adobe-applications/marketo/marketo-namespaces.md)
    - 광고 {#advertising}
       - [Google AdWords 커넥터](connectors/advertising/ads.md)
    - 클라우드 스토리지 {#cloud-storage}
@@ -159,6 +163,7 @@ ht-degree: 13%
          - [Adobe Analytics(분류 데이터)](tutorials/ui/create/adobe-applications/classifications.md)
          - [Adobe Audience Manager](tutorials/ui/create/adobe-applications/audience-manager.md)
          - [고객 속성](tutorials/ui/create/adobe-applications/customer-attributes.md)
+         - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
       - 광고 {#create}
          - [Google AdWords](tutorials/ui/create/advertising/ads.md)
       - 클라우드 스토리지 {#cloud-storage}
