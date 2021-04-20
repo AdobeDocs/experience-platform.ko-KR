@@ -2,18 +2,18 @@
 title: Adobe Experience Platform Web SDK 릴리스 노트
 description: Adobe Experience Platform Web SDK에 대한 최신 릴리스 정보입니다.
 keywords: Adobe Experience Platform 웹 SDK;플랫폼 웹 SDK;웹 SDK;릴리스 노트;
+exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
 translation-type: tm+mt
-source-git-commit: b0e6d1f7cf7302bb3a7403bb18dfd8b7489d583e
+source-git-commit: d4ed6c8fa9c86eb2beec829ab24c381b665c2f03
 workflow-type: tm+mt
-source-wordcount: '496'
-ht-degree: 6%
+source-wordcount: '500'
+ht-degree: 5%
 
 ---
 
+# 릴리스 정보
 
-# 릴리스 노트
-
-## 버전 2.4.0
+## 버전 2.4.0, 2021년 3월
 
 * 이제 SDK는 npm 패키지](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/installing-the-sdk.html)로 [설치할 수 있습니다.
 * 동의를 받을 때까지 모든 이벤트를 반환하는 기본 동의](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#default-consent)를 구성하는 경우 `out` 옵션에 대한 지원을 추가했습니다(기존 `pending` 옵션은 이벤트를 대기열에 넣고 동의를 받으면 전송합니다).[
@@ -27,7 +27,7 @@ ht-degree: 6%
 * 버그 수정:개인화 상호 작용 알림 이벤트는 사용자가 새로운 단일 페이지 앱 보기로 이동, 원래 보기로 돌아가기, 전환 적격 요소를 클릭할 때 동일한 활동에 대한 중복 정보를 포함합니다.
 * 버그 수정:SDK에서 보낸 첫 번째 이벤트에 `documentUnloading`이(가) `true`으로 설정된 경우 [`sendBeacon`](https://developer.mozilla.org/ko-KR/docs/Web/API/Navigator/sendBeacon)이(가) 이벤트를 전송하는 데 사용되므로 ID가 설정되지 않은 경우 오류가 발생합니다.
 
-## 버전 2.3.0
+## 버전 2.3.0, 2020년 11월
 
 * 더 엄격한 컨텐츠 보안 정책을 허용하는 추가 지원을 추가했습니다.
 * 단일 페이지 애플리케이션에 대한 개인화 지원을 추가했습니다.
@@ -37,12 +37,12 @@ ht-degree: 6%
 * 버그 수정:읽기 전용 `message` 속성을 포함하는 특정 브라우저 오류가 적절하게 처리되지 않아 고객에게 다른 오류가 표시됩니다.
 * 버그 수정:iframe 내에서 SDK를 실행하면 iframe의 HTML 페이지가 상위 창의 HTML 페이지와 다른 하위 도메인의 경우 오류가 발생합니다.
 
-## 버전 2.2.0
+## 버전 2.2.0, 2020년 10월
 
 * 버그 수정:`idMigrationEnabled`이(가) `true`인 경우 Opt-in 개체가 합금으로 호출을 수행할 수 없도록 차단했습니다.
 * 버그 수정:합금은 개인화 제안을 반환해야 하는 요청을 인식하여 깜박이는 문제를 방지합니다.
 
-## 버전 2.1.0
+## 버전 2.1.0, 2020년 8월
 
 * `syncIdentity` 명령을 제거하고 `sendEvent` 명령에서 해당 ID 전달을 지원합니다.
 * IAB 2.0 동의 표준을 지원합니다.
