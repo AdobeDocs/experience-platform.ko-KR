@@ -6,9 +6,9 @@ user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페�
 description: 이 문서에서는 Adobe Experience Platform 대상에 대한 목차 목록
 feature: 대상
 translation-type: tm+mt
-source-git-commit: 0bb6db19dc27031115e47415c1b3241661e0a0ae
+source-git-commit: 805cb72e91e6446f74cc3461d39841740eb576c7
 workflow-type: tm+mt
-source-wordcount: '473'
+source-wordcount: '470'
 ht-degree: 10%
 
 ---
@@ -52,7 +52,7 @@ ht-degree: 10%
       * [Google 고객 일치 연결](./catalog/advertising/google-customer-match.md)
       * [Google 디스플레이 및 비디오 360 연결](./catalog/advertising/google-dv360.md)
       * [Google 태그 확장](./catalog/advertising/gtag-advertising.md)
-      * [LinkedIn 인사이트 태그 확장](./catalog/advertising/linkedin.md)
+      * [linkedIn Insight 태그 확장](./catalog/advertising/linkedin.md)
       * [Microsoft Bing 연결](./catalog/advertising/bing.md)
       * [Pinterest 전환 추적 확장](./catalog/advertising/pinterest.md)
       * [무역센터 연결](./catalog/advertising/tradedesk.md)
@@ -92,7 +92,7 @@ ht-degree: 10%
       * [Audience Manager DIL 확장](./catalog/data-management/aam-dil-extension.md)
    * 이메일 대상 {#email}
       * [Biz가능 확장](./catalog/email/bizible.md)
-      * [Marketing To 확장](./catalog/email/marketo.md)
+      * [Marketo 확장](./catalog/email/marketo.md)
       * [Marketo Munchkin 확장 프로그램](./catalog/email/marketo-munchkin.md)
       * [PebblePost 확장](./catalog/email/pebblepost.md)
    * 이메일 마케팅 대상 {#email-marketing}
@@ -117,10 +117,10 @@ ht-degree: 10%
       * [Experience Cloud ID 서비스 확장](./catalog/personalization/adobe-ecid.md)
       * [Gainsight 확장](./catalog/personalization/gainsight.md)
       * [KickFire 확장](./catalog/personalization/kickfire.md)
-      * [Marketing to Web Personalization 확장](./catalog/personalization/marketo-web-personalization.md)
-   * 소셜 네트워크 대상{#social}
-      * [소셜 네트워크 대상 개요](./catalog/social/overview.md)
-      * [소셜 네트워크 대상 만들기](./catalog/social/workflow.md)
+      * [Marketo 웹 개인화 확장](./catalog/personalization/marketo-web-personalization.md)
+   * 소셜 대상{#social}
+      * [소셜 대상 개요](./catalog/social/overview.md)
+      * [소셜 대상 만들기](./catalog/social/workflow.md)
       * [Adobe Livefyre 확장](./catalog/social/adobe-livefyre.md)
       * [Facebook 연결](./catalog/social/facebook.md)
       * [Linkedin 일치된 대상 연결](./catalog/social/linkedin.md)
