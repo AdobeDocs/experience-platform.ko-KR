@@ -4,16 +4,16 @@ title: 대상 개요
 seo-title: 대상 개요
 description: 크로스 채널 마케팅 캠페인, 이메일, 타깃팅된 광고 등을 위해 Adobe Experience Platform 데이터를 대상으로 활성화하는 방법을 알아봅니다.
 seo-description: 대상은 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과의 사전 구축된 통합입니다. Adobe Experience Platform의 대상을 사용하여 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타깃팅된 광고 및 기타 많은 사용 사례에서 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
+exl-id: afd07ddc-652e-4e22-b298-feba27332462
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: 805cb72e91e6446f74cc3461d39841740eb576c7
 workflow-type: tm+mt
-source-wordcount: '489'
+source-wordcount: '488'
 ht-degree: 1%
 
 ---
 
-
-# [!DNL Destinations]개요{#overview}
+# [!DNL Destinations] 개요 {#overview}
 
 ![대상 개요 배너](./assets/overview/destinations-overview-banner.png)
 
@@ -65,6 +65,6 @@ ht-degree: 1%
 * [광고 대상 - Google 디스플레이 및 비디오 360  ](./catalog/advertising/google-dv360.md)
 * [클라우드 스토리지 대상](./catalog/cloud-storage/workflow.md)
 * [이메일 마케팅 대상](./catalog/email-marketing/overview.md)
-* [소셜 네트워크 대상](./catalog/social/workflow.md)
+* [소셜 대상](./catalog/social/workflow.md)
 
 세그먼트 활성화 작업 과정의 데이터 정책 위반에 대한 자세한 내용은 [프로필 및 세그먼트를 대상](./ui/activate-destinations.md#review)에 대한 검토 단계를 참조하십시오.
