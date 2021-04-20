@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;Audience Manager 매핑;대상 관리자 매핑
 solution: Experience Platform
 title: Adobe Audience Manager 소스 커넥터의 매핑 필드
-topic: overview
+topic-legacy: overview
 description: Adobe Audience Manager 데이터(실시간, 온보드 및 프로필 데이터)를 Audience Manager 소스 커넥터의 해당 XDM(Experience Data Model) 필드에 매핑하는 방법을 알아봅니다.
+exl-id: b800ba43-c308-4334-adce-3d554d50cefb
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: af5564a07577a0123e1a45043d5479f6ad45d73e
 workflow-type: tm+mt
-source-wordcount: '169'
+source-wordcount: '175'
 ht-degree: 0%
 
 ---
-
 
 # Audience Manager 필드 매핑
 
@@ -38,6 +38,8 @@ ht-degree: 0%
 | `request_user_agent` | `ExperienceEvent.environment.browserDetails` <ul><li>h_user-agent → userAgent</li><li>h_accept-language → acceptLanguage</li></ul> |
 | `client_ip` | `ExperienceEvent.environment` <ul><li>d_os_name → os 이름 </li><li>d_os_version → os_version</li></ul> |
 
+{style=&quot;table-layout:auto&quot;}
+
 ## 프로필 데이터
 
 유형:프로필 XDM
@@ -47,3 +49,5 @@ ht-degree: 0%
 | `ids` | `identityMap` |
 | `smem` | `ExperienceEvent.segmentMemberships["AAMSegments"]` |
 | `tmem` | `ExperienceEvent.segmentMemberships["AAMTraits"]` |
+
+{style=&quot;table-layout:auto&quot;}
