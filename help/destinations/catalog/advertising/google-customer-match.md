@@ -1,15 +1,15 @@
 ---
 keywords: google 고객 일치;Google 고객 일치;Google 고객 일치
 title: Google 고객 일치 연결
-description: Google Customer Match를 사용하면 온라인 및 오프라인 데이터를 사용하여 검색, 쇼핑, Gmail, YouTube 등 Google의 소유물 및 운영 체제에서 고객에게 도달하고 다시 참여할 수 있습니다.
+description: Google Customer Match를 사용하면 온라인 및 오프라인 데이터를 사용하여 검색, 쇼핑, Gmail, YouTube 등 Google의 소유물 및 운영 자산에서 고객에게 도달하고 다시 참여시킬 수 있습니다.
+exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 95ca7112d1f2655bf33e8a1c549e886ced244a5d
 workflow-type: tm+mt
-source-wordcount: '1546'
+source-wordcount: '1574'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL Google Customer Match] 연결
 
@@ -108,6 +108,12 @@ Experience Platform에서 이메일 주소 인제스트에 대한 자세한 내�
 
 Attribute source data is not automatically hashed. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.
 ![Identity mapping transformation](../../assets/ui/activate-destinations/identity-mapping-transformation.png) -->
+
+## 대상 구성 - 비디오 연습 {#video}
+
+아래 비디오에서는 [!DNL Google Customer Match] 대상을 구성하고 세그먼트를 활성화하는 단계를 보여 줍니다. 이 단계는 다음 섹션에도 순차적으로 배치됩니다.
+
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
 ## 대상 {#connect-destination}에 연결
 
