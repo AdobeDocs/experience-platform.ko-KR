@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
 title: 범용 동의 필드 데이터 유형
-topic: 개요
+topic: overview
 description: 이 문서에서는 범용 동의 필드 XDM 데이터 유형에 대한 개요를 제공합니다.
 translation-type: tm+mt
 source-git-commit: ebcd8900687b6e91d3f06690a9db0e118bbc3b58

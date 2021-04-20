@@ -2,8 +2,8 @@
 keywords: Experience Platform;모델 예약;데이터 과학 작업 공간;인기 있는 주제;점수 지정;일정 교육
 solution: Experience Platform
 title: 데이터 과학 작업 공간 UI에서 모델 예약
-topic: 자습서
-type: 튜토리얼
+topic: tutorial
+type: Tutorial
 description: Adobe Experience Platform Data Science Workspace를 사용하면 머신 러닝 서비스에서 예약된 점수 지정 및 트레이닝 실행을 설정할 수 있습니다. 트레이닝 및 채점 과정을 자동화하면 데이터 내의 패턴을 유지하여 시간 경과에 따라 서비스의 효율성을 유지 관리하고 개선하는 데 도움이 됩니다.
 translation-type: tm+mt
 source-git-commit: 8f5b7018a52d4c5860e03cec3108435ede8815f1

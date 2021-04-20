@@ -2,8 +2,8 @@
 keywords: Experience Platform;홈;인기 항목;흐름 서비스;삭제 계정;삭제;api
 solution: Experience Platform
 title: Flow Service API를 사용하여 계정 삭제
-topic: 개요
-type: 튜토리얼
+topic: overview
+type: Tutorial
 description: Flow Service API를 사용하여 계정을 삭제하는 방법을 알아봅니다.
 translation-type: tm+mt
 source-git-commit: 37be5f5ffa4640d7d4442a24cc257069237f15cb

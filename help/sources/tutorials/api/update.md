@@ -2,8 +2,8 @@
 keywords: Experience Platform;홈;인기 항목;흐름 서비스;계정 업데이트;;home;popular topics;flow service;update accounts
 solution: Experience Platform
 title: Flow Service API를 사용하여 계정 업데이트
-topic: 개요
-type: 튜토리얼
+topic: overview
+type: Tutorial
 description: 이 자습서에서는 Flow Service API를 사용하여 계정의 세부 사항 및 자격 증명을 업데이트하는 절차를 설명합니다.
 translation-type: tm+mt
 source-git-commit: 37be5f5ffa4640d7d4442a24cc257069237f15cb

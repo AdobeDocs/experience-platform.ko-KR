@@ -2,7 +2,7 @@
 keywords: Experience Platform;홈;인기 항목;Google 클라우드 스토리지;google 클라우드 스토리지
 solution: Experience Platform
 title: Google 클라우드 스토리지 소스 커넥터 개요
-topic: 개요
+topic: overview
 description: API 또는 사용자 인터페이스를 사용하여 Google 클라우드 스토리지를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 translation-type: tm+mt
 source-git-commit: 7fc99214272d2ce743b3666826c66f5d65e4d2ca

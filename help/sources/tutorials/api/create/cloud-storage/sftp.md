@@ -2,8 +2,8 @@
 keywords: Experience Platform;홈;인기 항목;SFTP;SFTP;보안 파일 전송 프로토콜;보안 파일 전송 프로토콜
 solution: Experience Platform
 title: Flow Service API를 사용하여 SFTP 소스 연결 만들기
-topic: 개요
-type: 튜토리얼
+topic: overview
+type: Tutorial
 description: Flow Service API를 사용하여 SFTP(Secure File Transfer Protocol) 서버에 Adobe Experience Platform을 연결하는 방법을 알아봅니다.
 translation-type: tm+mt
 source-git-commit: 0e11acc4a599d360cb3048445003f61848ad23d3

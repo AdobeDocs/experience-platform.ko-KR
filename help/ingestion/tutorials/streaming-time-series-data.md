@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;streaming ingestion;ingestion;time series data;stream time series time series data
 solution: Experience Platform
 title: 스트리밍 통합 API를 사용한 스트림 시간 시리즈 데이터
-topic: 자습서
+topic: tutorial
 type: Tutorial
 description: 이 자습서는 Adobe Experience Platform 데이터 통합 서비스 API의 일부인 스트리밍 통합 API를 사용하는 데 도움이 됩니다.
 exl-id: 720b15ea-217c-4c13-b68f-41d17b54d500

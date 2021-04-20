@@ -2,7 +2,7 @@
 keywords: Experience Platform;사용 안내서;고객 아이디;인기 있는 주제;인스턴스 구성;인스턴스 만들기;;user guide;customer ai;popular topics;configure instance;create instance;
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: 고객 AI 인스턴스 구성
-topic: 인스턴스 생성
+topic: Instance creation
 description: 지능형 서비스는 고객 AI를 다른 사용 사례용으로 구성할 수 있는 사용이 간편한 Adobe Sensei 서비스로 제공합니다. 다음 섹션에서는 고객 AI 인스턴스를 구성하는 절차를 제공합니다.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
 translation-type: tm+mt

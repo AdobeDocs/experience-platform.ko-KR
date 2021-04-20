@@ -2,8 +2,8 @@
 keywords: Experience Platform;홈;인기 항목;데이터 흐름;데이터 흐름
 solution: Experience Platform
 title: UI에서 클라우드 스토리지 배치 커넥터에 대한 데이터 흐름 구성
-topic: 개요
-type: 튜토리얼
+topic: overview
+type: Tutorial
 description: 데이터 흐름(Dataflow)은 소스에서 플랫폼 데이터 집합으로 데이터를 검색하고 인제스트하는 예약된 작업입니다. 이 자습서에서는 클라우드 저장소 계정을 사용하여 새 데이터 흐름을 구성하는 절차를 제공합니다.
 translation-type: tm+mt
 source-git-commit: 1fb4a272a914bf4ce7653f3f4f7fff63f36f9a48

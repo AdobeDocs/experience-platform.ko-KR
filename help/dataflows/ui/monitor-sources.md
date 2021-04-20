@@ -3,8 +3,8 @@ keywords: Experience Platform;홈;인기 항목;모니터 계정;데이터 흐�
 description: 이 자습서에서는 집계 모니터링 보기 및 서비스 간 모니터링을 사용하여 데이터 흐름을 모니터링하는 단계를 제공합니다.
 solution: Experience Platform
 title: UI에서 소스의 데이터 흐름 모니터링
-topic: 개요
-type: 자습서
+topic: overview
+type: Tutorial
 translation-type: tm+mt
 source-git-commit: 4c668a47e62ba7736dd2d7afe4e71fd015198356
 workflow-type: tm+mt

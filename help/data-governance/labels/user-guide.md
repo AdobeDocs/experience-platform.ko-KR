@@ -2,7 +2,7 @@
 keywords: Experience Platform;홈;인기 항목;데이터 거버넌스;데이터 사용 레이블;정책 서비스;데이터 사용 레이블 사용자 안내서
 solution: Experience Platform
 title: UI에서 데이터 사용 레이블 관리
-topic: 레이블
+topic: labels
 description: 이 안내서에서는 Adobe Experience Platform 사용자 인터페이스 내에서 데이터 사용 레이블을 사용하여 작업하는 단계를 설명합니다.
 translation-type: tm+mt
 source-git-commit: 41d01b3aec0afa60dd602716a30cc94402702a70

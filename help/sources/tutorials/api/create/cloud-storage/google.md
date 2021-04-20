@@ -2,8 +2,8 @@
 keywords: Experience Platform;홈;인기 항목;Google 클라우드 스토리지;google 클라우드 스토리지;google;home;popular topics;Google
 solution: Experience Platform
 title: Flow Service API를 사용하여 Google 클라우드 스토리지 소스 연결 만들기
-topic: 개요
-type: 튜토리얼
+topic: overview
+type: Tutorial
 description: Flow Service API를 사용하여 Google Cloud 스토리지 계정에 Adobe Experience Platform을 연결하는 방법을 알아봅니다.
 translation-type: tm+mt
 source-git-commit: f6a63ca1e21b3c3f6a55574f31fdf04038b7e5c4

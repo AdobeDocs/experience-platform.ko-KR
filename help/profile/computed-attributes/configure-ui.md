@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform;프로필;실시간 고객 프로필;문제 해결;API
 title: 계산된 속성 필드를 구성하는 방법
-topic: 가이드
-type: 설명서
+topic: guide
+type: Documentation
 description: 계산된 속성은 이벤트 수준 데이터를 프로필 수준 속성으로 집계하는 데 사용되는 함수입니다. 계산된 속성을 구성하려면 먼저 계산된 속성 값이 있을 필드를 식별해야 합니다. 이 필드는 믹싱을 사용하여 기존 스키마에 필드를 추가하거나 스키마 내에서 이미 정의한 필드를 선택하여 만들 수 있습니다.
 translation-type: tm+mt
 source-git-commit: 92533f732cc14b57d2a0a34ce9afe99554f9af04

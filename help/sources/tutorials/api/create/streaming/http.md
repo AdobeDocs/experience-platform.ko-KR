@@ -2,7 +2,7 @@
 keywords: Experience Platform;홈;인기 항목;스트리밍 연결;스트리밍 연결;api 안내서;자습서;스트리밍 연결;스트리밍 통합;통합;;home;popular topics;streaming connection;tutorial;streaming connection;streaming ingestion;inestion;
 solution: Experience Platform
 title: API를 사용하여 스트리밍 연결 만들기
-topic: 자습서
+topic: tutorial
 type: Tutorial
 description: 이 자습서는 Adobe Experience Platform 데이터 통합 서비스 API의 일부인 스트리밍 통합 API를 사용하는 데 도움이 됩니다.
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34

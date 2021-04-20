@@ -2,7 +2,7 @@
 keywords: Experience Platform;홈;인기 항목;분석 데이터 커넥터;분석;분석;Analytics;home;popular topics
 solution: Experience Platform
 title: 보고서 세트 데이터용 Adobe Analytics 소스 커넥터
-topic: 개요
+topic: overview
 description: 이 문서에서는 Analytics의 개요를 제공하며 Analytics 데이터의 사용 사례에 대해 설명합니다.
 translation-type: tm+mt
 source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac

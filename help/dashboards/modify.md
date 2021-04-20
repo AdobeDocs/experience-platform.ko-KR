@@ -2,7 +2,7 @@
 keywords: Experience Platform;사용자 인터페이스;UI;대시보드;대시보드;프로필;세그먼트;대상;라이센스 사용
 title: UI에서 플랫폼 대시보드 수정
 description: '이 안내서에서는 조직의 Adobe Experience Platform 데이터가 대시보드 내에 표시되는 방식을 사용자 지정하기 위한 단계별 지침을 제공합니다. '
-topic: 가이드
+topic: guide
 translation-type: tm+mt
 source-git-commit: 5cc973a5db88eb23c6e1aeee3695820a0555e4cf
 workflow-type: tm+mt

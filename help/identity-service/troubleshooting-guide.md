@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;identity namespace;Identity namespace
 solution: Experience Platform
 title: ID 서비스 문제 해결 안내서
-topic: 문제 해결
+topic: troubleshooting
 description: 이 문서에서는 Adobe Experience Platform ID 서비스에 대한 질문과 더불어 일반적인 오류에 대한 문제 해결 안내서를 제공합니다.
 translation-type: tm+mt
 source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac

@@ -2,8 +2,8 @@
 keywords: Experience Platform;JupiterLab;전자 필기장;데이터 과학 작업 공간;인기 항목;쿼리 서비스
 solution: Experience Platform
 title: Jupiter 전자 필기장의 쿼리 서비스
-topic: 자습서
-type: 튜토리얼
+topic: tutorial
+type: Tutorial
 description: Adobe Experience Platform에서는 쿼리 서비스를 JupiterLab에 표준 기능으로 통합하여 데이터 과학 작업 공간에서 구조화된 쿼리 언어(SQL)를 사용할 수 있습니다. 이 자습서에서는 Adobe Analytics 데이터를 탐색, 변형 및 분석하는 일반적인 사용 사례에 대한 샘플 SQL 쿼리를 보여 줍니다.
 translation-type: tm+mt
 source-git-commit: 9d84fc1eb898020ed4b154c091fcc9fc4933c7de

@@ -2,7 +2,7 @@
 keywords: Experience Platform;홈;인기 항목
 solution: Experience Platform
 title: 동의 및 기본 설정 데이터를 캡처하도록 데이터 세트 구성
-topic: 시작하기
+topic: getting started
 description: Adobe Experience Platform에서 동의 및 기본 설정 데이터를 캡처하기 위해 XDM(Experience Data Model) 스키마 및 데이터 집합을 구성하는 방법에 대해 알아보십시오.
 translation-type: tm+mt
 source-git-commit: 980bff169659d3ffc92a0678f8a0b153b3189906

@@ -2,8 +2,8 @@
 keywords: Experience Platform;홈;인기 항목;인증;액세스
 solution: Experience Platform
 title: Experience Platform API 인증 및 액세스
-topic: 자습서
-type: 튜토리얼
+topic: tutorial
+type: Tutorial
 description: '이 문서에서는 Experience Platform API를 호출하기 위해 Adobe Experience Platform 개발자 계정에 액세스할 수 있는 단계별 자습서를 제공합니다. '
 translation-type: tm+mt
 source-git-commit: ca5c8527b1b54856aa1e762a06ddbe404f30ec42

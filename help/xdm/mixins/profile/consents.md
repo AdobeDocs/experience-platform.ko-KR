@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
 title: 개인 정보/개인화/마케팅 기본 설정(동의) 혼합
-topic: 개요
+topic: overview
 description: 이 문서에서는 개인 정보/개인화/마케팅 기본 설정(동의) 믹싱에 대한 개요를 제공합니다.
 translation-type: tm+mt
 source-git-commit: 8c5ab298bad69305358ae961ebaf7836a90a0eaa

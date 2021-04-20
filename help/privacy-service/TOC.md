@@ -4,7 +4,7 @@ audience: user
 user-guide-title: Adobe Experience Platform Privacy Service 도움말
 breadcrumb-title: Privacy Service 안내서
 user-guide-description: GDPR 및 CPA와 같은 법적 개인 정보 보호 규정을 준수하도록 고객 데이터 요청을 관리합니다.
-feature: 개인 정보 보호
+feature: Privacy
 translation-type: tm+mt
 source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
 workflow-type: tm+mt

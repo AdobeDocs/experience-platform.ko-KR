@@ -2,7 +2,7 @@
 keywords: Experience Platform;시작;속성 ai;인기 항목;속성(attribution ai) ai input;속성(attribution ai) ai output
 solution: Experience Platform, Intelligent Services
 title: Attribution AI의 입력 및 출력
-topic: Attribution AI 입력 및 출력 데이터
+topic: Input and Output data for Attribution AI
 description: 다음 문서에서는 Attribution AI에서 사용되는 다양한 입력 및 출력 개요를 설명합니다.
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
 translation-type: tm+mt

@@ -1,7 +1,7 @@
 ---
 keywords: 활성화 편집;대상 편집;
 title: 활성화 흐름 편집
-type: 튜토리얼
+type: Tutorial
 seo-title: 활성화 흐름 편집
 description: 이 문서의 단계에 따라 Adobe Experience Platform의 기존 활성화 과정을 편집합니다.
 seo-description: 이 문서의 단계에 따라 Adobe Experience Platform의 기존 활성화 과정을 편집합니다.

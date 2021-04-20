@@ -2,7 +2,7 @@
 keywords: Experience Platform;홈;인기 항목;샌드박스 재설정
 solution: Experience Platform
 title: API의 샌드박스 재설정
-topic: 개발자 가이드
+topic: developer guide
 description: 개발 샌드박스에는 샌드박스에서 기본이 아닌 모든 리소스를 삭제하는 "공장 재설정" 기능이 있습니다. 요청 경로에 샌드박스의 이름을 포함하는 PUT 요청을 만들어 샌드박스를 재설정할 수 있습니다.
 translation-type: tm+mt
 source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31

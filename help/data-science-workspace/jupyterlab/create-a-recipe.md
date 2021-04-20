@@ -2,8 +2,8 @@
 keywords: Experience Platform;JupiterLab;레서피;노트북;데이터 과학 작업 공간;인기 있는 주제;레서피 만들기
 solution: Experience Platform
 title: Jupiter 공책을 사용하여 레서피 만들기
-topic: 자습서
-type: 튜토리얼
+topic: tutorial
+type: Tutorial
 description: 이 자습서는 두 개의 기본 섹션을 살펴봅니다. 먼저 JupiterLab Notebook 내에 템플릿을 사용하여 기계 학습 모델을 만듭니다. 그런 다음 JupiterLab 내의 레서피 워크플로에 노트북을 실행하여 데이터 과학 작업 공간 내에서 레서피 작업을 만듭니다.
 translation-type: tm+mt
 source-git-commit: 9d84fc1eb898020ed4b154c091fcc9fc4933c7de

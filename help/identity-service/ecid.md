@@ -2,7 +2,7 @@
 keywords: Experience Platform;홈;인기 항목;ECID;ecid
 solution: Experience Platform
 title: ECID 개요
-topic: 개요
+topic: overview
 description: ECID(Experience Cloud Identifier)는 ID 관리에 대한 액세스를 제공하는 클라이언트측 모듈로, 3개의 기본 기능을 제공합니다.
 exl-id: da7717d2-da2e-414b-978d-2eab8ff2c5a0
 translation-type: tm+mt

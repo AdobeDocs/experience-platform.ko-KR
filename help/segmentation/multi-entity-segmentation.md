@@ -2,7 +2,7 @@
 keywords: Experience Platform;홈;인기 항목;세그멘테이션;세그먼트 서비스;세그먼트;세그먼트;다중 엔터티;다중 엔터티 세그먼테이션;다중 엔터티 세그먼트
 solution: Experience Platform
 title: 다중 엔티티 세그먼테이션 개요
-topic: 개요
+topic: overview
 description: 다중 개체 세그먼트화는 제품, 스토어 또는 기타 비프로필 클래스에 기반한 추가 데이터로 프로필 데이터를 확장하는 기능입니다. 연결되면 추가 클래스의 데이터를 프로필 스키마에 대한 기본인 것처럼 사용할 수 있습니다.
 translation-type: tm+mt
 source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac

@@ -2,8 +2,8 @@
 keywords: Experience Platform;홈;인기 항목;shopify;Shopify
 solution: Experience Platform
 title: UI에서 Shopify 소스 연결 만들기
-topic: 개요
-type: 튜토리얼
+topic: overview
+type: Tutorial
 description: Adobe Experience Platform UI를 사용하여 Shopify 소스 연결을 만드는 방법을 알아봅니다.
 translation-type: tm+mt
 source-git-commit: cc23228cb410dc4c70a56c5142be00c2ca1c40d3

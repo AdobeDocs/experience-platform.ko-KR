@@ -1,7 +1,7 @@
 ---
 keywords: 연결 대상;대상 연결;대상 연결 방법
 title: 대상에 연결
-type: 튜토리얼
+type: Tutorial
 description: 이 자습서는 Adobe Experience Platform에서 대상을 연결하는 단계를 나열합니다
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
 translation-type: tm+mt

@@ -2,8 +2,8 @@
 keywords: Experience Platform;JupiterLab;노트북;데이터 과학 작업 공간;인기 있는 주제;데이터 노트북 분석;데이터 데이터 분석;탐색 데이터 분석;데이터 과학
 solution: Experience Platform
 title: 탐구적 데이터 분석(EDA) 노트북
-topic: 개요
-type: 자습서
+topic: overview
+type: Tutorial
 description: 이 안내서는 EDA(Transactional Data Analysis) 노트북을 사용하여 웹 데이터의 패턴을 발견하고 예측 목표를 사용하여 이벤트를 집계하고 집계한 데이터를 정리하며 예측자와 목표 간의 관계를 이해하는 방법에 중점을 둡니다.
 translation-type: tm+mt
 source-git-commit: 1d1a19c75d2972a6fce0d39aa508cca91fb4becd

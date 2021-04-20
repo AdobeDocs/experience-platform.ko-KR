@@ -2,8 +2,8 @@
 keywords: Experience Platform;홈;인기 항목;Oracle 개체 저장소;oracle 개체 저장소
 solution: Experience Platform
 title: UI에서 Oracle 개체 저장소 소스 연결 만들기
-topic: 개요
-type: 자습서
+topic: overview
+type: Tutorial
 description: Adobe Experience Platform UI를 사용하여 Oracle 개체 저장소 소스 연결을 만드는 방법을 알아봅니다.
 translation-type: tm+mt
 source-git-commit: c1453a9f0be42f834d35af871051324df8dadf80

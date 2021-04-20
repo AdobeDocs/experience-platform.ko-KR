@@ -2,7 +2,7 @@
 keywords: Experience Platform;홈;인기 항목;데이터 위치;데이터 관리;데이터 관리;계보;계보;계보;데이터 유형;데이터 유형;데이터 유형;데이터 유형;데이터 유형;데이터 유형;데이터 유형;Home;popular topics;data location location;
 solution: Experience Platform
 title: 데이터 세트 개요
-topic: 데이터 집합
+topic: datasets
 description: 이 문서는 Experience Platform의 데이터 집합에 대한 수준 높은 개요를 제공합니다.
 translation-type: tm+mt
 source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac

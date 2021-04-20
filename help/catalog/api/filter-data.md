@@ -2,7 +2,7 @@
 keywords: Experience Platform;홈;인기 항목;필터;필터;필터 데이터;필터 데이터;날짜 범위
 solution: Experience Platform
 title: 쿼리 매개 변수를 사용하여 카탈로그 데이터 필터링
-topic: 개발자 가이드
+topic: developer guide
 description: 카탈로그 서비스 API를 사용하면 요청 쿼리 매개 변수의 사용을 통해 응답 데이터를 필터링할 수 있습니다. 카탈로그에 대한 우수 사례 중 하나는 API에 대한 로드를 줄이고 전반적인 성능을 개선하는 데 도움이 되기 때문에 모든 API 호출에서 필터를 사용하는 것입니다.
 exl-id: 0cdb5a7e-527b-46be-9ad8-5337c8dc72b7
 translation-type: tm+mt

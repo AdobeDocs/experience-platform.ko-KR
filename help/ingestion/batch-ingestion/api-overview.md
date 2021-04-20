@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;batch ingestion;통합;통합;개발자 가이드;api guide;upload;ingest Portable;ingest json
 solution: Experience Platform
 title: 일괄 처리 통합 API 안내서
-topic: 개발자 가이드
+topic: developer guide
 description: 이 문서에서는 일괄 처리 통합 API 사용에 대한 포괄적인 개요를 제공합니다.
 exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
 translation-type: tm+mt

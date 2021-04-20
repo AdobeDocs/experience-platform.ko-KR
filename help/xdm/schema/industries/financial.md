@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
 title: 금융 서비스 업계 데이터 모델 ERD
-topic: 개요
+topic: overview
 description: 은행, 금융 서비스 및 보험(BFSI) 업계에 대한 표준화된 데이터 모델을 설명하는 ERD(법인 관계 다이어그램)를 봅니다. 이 데이터 모델은 Adobe Experience Platform에서 사용할 XDM(Experience Data Model)과 호환됩니다.
 translation-type: tm+mt
 source-git-commit: ffc113c0c85c76e6645fb4276c174779682f2b60

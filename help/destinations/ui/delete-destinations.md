@@ -1,7 +1,7 @@
 ---
 keywords: 대상 삭제;대상을 삭제하는 방법
 title: 대상 삭제
-type: 튜토리얼
+type: Tutorial
 description: 이 자습서는 Adobe Experience Platform UI에서 기존 대상을 삭제하는 단계를 나열합니다
 exl-id: 7b672859-e61a-4b3c-9db9-62048258f0aa
 translation-type: tm+mt

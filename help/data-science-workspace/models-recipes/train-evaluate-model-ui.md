@@ -2,8 +2,8 @@
 keywords: Experience Platform;교육 및 평가;데이터 과학 작업 공간;인기 있는 주제;모델 만들기;교육 실행 만들기
 solution: Experience Platform
 title: 데이터 과학 작업 공간 UI에서 모델 트레이닝 및 평가
-topic: 자습서
-type: 튜토리얼
+topic: tutorial
+type: Tutorial
 description: Adobe Experience Platform 데이터 과학 작업 공간에서 기계 학습 모델은 모델의 의도에 적합한 기존 레서피를 결합하여 만들어집니다. 그런 다음 연관된 하이퍼매개 변수를 미세 조정하여 모델의 운영 효율성과 효과를 최적화하기 위해 교육 및 평가를 수행합니다. 레서피는 재사용 가능하므로, 하나의 레서피를 사용하여 여러 모델을 생성하고 특정 목적에 맞게 변경할 수 있습니다.
 translation-type: tm+mt
 source-git-commit: 52415eb572a82f18f6daa3f45be1c670cae98b83

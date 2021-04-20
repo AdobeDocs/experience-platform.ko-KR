@@ -2,7 +2,7 @@
 keywords: Experience Platform;시작;내용 ai;커머스 ai;컨텐트 및 상거래 ai;;시작하기;content ai;getting started;content ai;commerce ai;content and commerce ai
 solution: Experience Platform, Intelligent Services
 title: Content and Commerce AI 시작하기
-topic: Getting started
+topic: Getting started 
 description: Content and Commerce AI는 Adobe I/O API를 활용합니다. Adobe I/O API 및 I/O 콘솔 통합을 호출하려면 먼저 인증 자습서를 완료해야 합니다.
 translation-type: tm+mt
 source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f

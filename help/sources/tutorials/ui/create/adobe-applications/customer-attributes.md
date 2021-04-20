@@ -2,8 +2,8 @@
 keywords: Experience Platform;홈;인기 항목;사용자 특성;InDesign;home;popular topics;customer attributes
 solution: Experience Platform
 title: UI에서 고객 속성 소스 연결 만들기
-topic: 개요
-type: 튜토리얼
+topic: overview
+type: Tutorial
 description: 고객 속성 프로필 데이터를 Adobe Experience Platform에 수집하기 위해 UI에서 소스 연결을 만드는 방법을 알아봅니다.
 translation-type: tm+mt
 source-git-commit: 08a3026e969a8739a8b57226c35a6d1d3150006e

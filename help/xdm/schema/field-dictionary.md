@@ -2,7 +2,7 @@
 keywords: Experience Platform;홈;인기 항목;스키마;스키마;필드;표준 필드;표준 필드;사전;맵;InDesignInDesign
 solution: Experience Platform
 title: 경험 데이터 모델(XDM) 필드 사전
-topic: 개요
+topic: overviews
 description: XDM(경험 데이터 모델)은 Adobe Experience Platform 스키마를 작성할 때 사용할 수 있는 표준 필드 세트를 정의합니다. 이러한 필드를 사용하면 XDM을 사용하는 모든 서비스가 이러한 필드에서 제공하는 특정 정의를 명시적으로 이해하므로 플랫폼 서비스 간에 일관된 비헤이비어가 생성됩니다.
 translation-type: tm+mt
 source-git-commit: cc1fa21df0bb2d49106775c75a0cb3c4f4d73941

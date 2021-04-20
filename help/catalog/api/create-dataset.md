@@ -2,7 +2,7 @@
 keywords: Experience Platform;홈;인기 항목;데이터 집합;데이터 집합;데이터 집합 만들기;데이터 집합 만들기;데이터 집합 사용
 solution: Experience Platform
 title: API에서 데이터 세트 만들기
-topic: 개발자 가이드
+topic: developer guide
 description: 이 문서에서는 카탈로그 서비스 API에서 데이터 세트 개체를 만드는 방법을 설명합니다.
 exl-id: f3e5de7f-1781-4898-ac42-063eb51e661a
 translation-type: tm+mt

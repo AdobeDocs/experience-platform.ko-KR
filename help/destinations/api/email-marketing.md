@@ -3,8 +3,8 @@ keywords: Experience Platform;홈;인기 항목
 solution: Experience Platform
 title: 이메일 마케팅 대상에 연결하고 Flow Service API를 사용하여 데이터를 활성화합니다
 description: 이 문서에서는 Adobe Experience Platform API를 사용하여 이메일 마케팅 대상을 만드는 방법에 대해 설명합니다
-topic: 자습서
-type: 튜토리얼
+topic: tutorial
+type: Tutorial
 translation-type: tm+mt
 source-git-commit: 32cb198bcf2c142b50c4b7a60282f0c923be06b1
 workflow-type: tm+mt

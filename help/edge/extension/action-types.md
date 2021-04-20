@@ -2,7 +2,7 @@
 title: Adobe Experience Platform Web SDK Extension의 작업 유형
 description: Adobe Experience Platform Launch의 Adobe Experience Platform Web SDK 익스텐션에서 제공하는 다양한 작업 유형에 대해 알아보십시오.
 solution: Experience Platform
-feature: 웹 SDK
+feature: Web SDK
 translation-type: tm+mt
 source-git-commit: 9ce6dd5a290b55da04f4ae185cab96c120777775
 workflow-type: tm+mt

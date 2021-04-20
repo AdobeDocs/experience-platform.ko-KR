@@ -2,7 +2,7 @@
 keywords: Experience Platform;개발자 가이드;데이터 과학 작업 공간;인기 있는 주제;실시간 기계 학습;
 solution: Experience Platform
 title: 실시간 기계 학습 개요
-topic: 개요
+topic: Overview
 description: 실시간 머신 러닝을 사용하면 최종 사용자에게 디지털 경험 컨텐츠의 연관성을 크게 향상시킬 수 있습니다. 이는 Experience Edge의 실시간 컨퍼런싱과 지속적인 학습을 통해 가능합니다.
 translation-type: tm+mt
 source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac

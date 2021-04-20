@@ -2,7 +2,7 @@
 keywords: Experience Platform;홈;인기 항목;세그멘테이션 서비스;세그멘테이션 서비스;사용 안내서;세그멘테이션 ui 안내서;세그먼트 빌더;세그먼트 빌더;Segmentation Service;segmentation Service;segmentation-service;segmentation builder;segmentation builder;
 solution: Experience Platform
 title: 세그먼트 빌더 UI 안내서
-topic: ui 안내서
+topic: ui guide
 description: Adobe Experience Platform UI의 세그먼트 빌더는 프로필 데이터 요소와 상호 작용할 수 있는 풍부한 작업 공간을 제공합니다. 작업 영역은 데이터 속성을 나타내는 데 사용되는 드래그 앤 드롭 타일과 같이 규칙을 작성하고 편집하기 위한 직관적인 컨트롤을 제공합니다.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 translation-type: tm+mt

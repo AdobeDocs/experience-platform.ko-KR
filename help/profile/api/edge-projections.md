@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform;프로필;실시간 고객 프로필;문제 해결;API
 title: 가장자리 투영 API 끝점
-topic: 가이드
-type: 설명서
+topic: guide
+type: Documentation
 description: Adobe Experience Platform을 사용하면 변경 사항이 발생하면 즉시 올바른 데이터를 사용할 수 있고 지속적으로 업데이트하여 다양한 채널에서 고객에게 개인화되고 일관된 경험을 실시간으로 제공할 수 있습니다. 이러한 작업은 데이터를 저장하고 응용 프로그램에서 쉽게 액세스할 수 있도록 지리적으로 배치된 서버인 Edge를 사용하여 수행됩니다.
 translation-type: tm+mt
 source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac

@@ -3,7 +3,7 @@ keywords: Experience Platform;홈;인기 항목;api;XDM;XDM 시스템;경험 데
 solution: Experience Platform
 title: 감사 로그 API 끝점
 description: 스키마 레지스트리 API의 /audition 끝점을 사용하면 기존 XDM 리소스에 대해 수행된 변경 사항의 시간순 목록을 검색할 수 있습니다.
-topic: 개발자 가이드
+topic: developer guide
 translation-type: tm+mt
 source-git-commit: 0727ffa0c72bcb6a85de1a13215b691b97889b70
 workflow-type: tm+mt

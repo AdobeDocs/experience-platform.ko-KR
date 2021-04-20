@@ -1,7 +1,7 @@
 ---
 keywords: 전자 메일;전자 메일;전자 메일;전자 메일 대상
 title: 이메일 마케팅 대상 개요
-type: 튜토리얼
+type: Tutorial
 description: ESP(Email Service Providers)를 사용하면 이메일 캠페인을 전송하는 것과 같은 이메일 마케팅 활동을 관리할 수 있습니다.
 translation-type: tm+mt
 source-git-commit: 02754055e2be8a45a0699386cb559dad8f25717c

@@ -4,7 +4,7 @@ audience: user
 user-guide-title: Adobe Experience Platform 도움말의 샌드박스
 breadcrumb-title: Sandoxes 안내서
 user-guide-description: 개발, 테스트 및 응용 프로그램 배포를 위해 플랫폼 인스턴스를 가상 환경으로 분할합니다.
-feature: 데이터 관리
+feature: Data Management
 translation-type: tm+mt
 source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
 workflow-type: tm+mt

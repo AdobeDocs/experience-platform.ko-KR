@@ -2,7 +2,7 @@
 keywords: Experience Platform;홈;인기 항목;스트리밍 세그멘테이션;세그멘테이션 서비스;세그멘테이션 서비스;ui guide;
 solution: Experience Platform
 title: 스트리밍 세그멘테이션 UI 안내서
-topic: ui 안내서
+topic: ui guide
 description: Adobe Experience Platform의 스트리밍 세분화를 통해 거의 실시간으로 세분화를 수행하고 데이터 풍부함에 초점을 맞출 수 있습니다. 스트리밍 세분화를 통해 데이터가 Platform(플랫폼)으로 유입되므로 세분화 작업을 예약하고 실행할 필요가 없습니다. 이 기능을 사용하면 이제 데이터가 플랫폼에 전달되면 대부분의 세그먼트 규칙을 평가할 수 있으므로 세그먼트 멤버십은 예약된 세그멘테이션 작업을 실행하지 않고 최신 상태로 유지됩니다.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
 translation-type: tm+mt

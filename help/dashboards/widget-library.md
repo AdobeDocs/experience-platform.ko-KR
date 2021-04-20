@@ -2,7 +2,7 @@
 keywords: Experience Platform;사용자 인터페이스;UI;대시보드;대시보드;프로필;세그먼트;대상;라이센스 사용
 title: 위젯 라이브러리를 사용하여 대시보드 위젯 추가 및 만들기
 description: '이 안내서에서는 Adobe Experience Platform에서 대시보드 데이터를 시각화하기 위해 표준 위젯을 추가하고 사용자 정의 위젯을 만들기 위한 단계별 지침을 제공합니다. '
-topic: 가이드
+topic: guide
 translation-type: tm+mt
 source-git-commit: 27444a0106eacbd69149168d7439773ebbb26119
 workflow-type: tm+mt

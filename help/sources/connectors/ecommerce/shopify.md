@@ -2,7 +2,7 @@
 keywords: Experience Platform;홈;인기 항목;shopify;shopify;hopify;
 solution: Experience Platform
 title: Shopify 소스 커넥터 개요
-topic: 개요
+topic: overview
 description: API 또는 사용자 인터페이스를 사용하여 Shopify를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 translation-type: tm+mt
 source-git-commit: cc23228cb410dc4c70a56c5142be00c2ca1c40d3

@@ -2,7 +2,7 @@
 keywords: Experience Platform;홈;인기 항목;샌드박스 삭제
 solution: Experience Platform
 title: API에서 샌드박스 삭제
-topic: 개발자 가이드
+topic: developer guide
 description: 요청 경로에 샌드박스의 이름을 포함하는 DELETE 요청을 수행하여 샌드박스를 삭제할 수 있습니다.
 translation-type: tm+mt
 source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31

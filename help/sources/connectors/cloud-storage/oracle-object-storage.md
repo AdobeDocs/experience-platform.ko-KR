@@ -2,7 +2,7 @@
 keywords: Experience Platform;홈;인기 항목;Oracle 개체 저장소;oracle 개체 저장소
 solution: Experience Platform
 title: Oracle 개체 저장소 원본 커넥터 개요
-topic: 개요
+topic: overview
 description: API 또는 사용자 인터페이스를 사용하여 Oracle 개체 저장소를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 translation-type: tm+mt
 source-git-commit: 04c605aedd4c52b54d0f075c169ce919650cdee9

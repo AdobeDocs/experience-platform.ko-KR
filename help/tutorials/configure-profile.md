@@ -2,8 +2,8 @@
 keywords: Experience Platform;홈;인기 항목;실시간 고객 프로필;ID 서비스
 solution: Experience Platform
 title: 실시간 고객 프로필 자습서
-topic: 자습서
-type: 튜토리얼
+topic: tutorial
+type: Tutorial
 description: 이 문서에서는 관련 단계에 대해 간략히 설명하고 각 개별 워크플로우를 완료하기 위한 자습서에 대한 링크를 제공합니다.
 translation-type: tm+mt
 source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac

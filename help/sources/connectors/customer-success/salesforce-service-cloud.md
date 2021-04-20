@@ -2,7 +2,7 @@
 keywords: Experience Platform;홈;인기 항목;Salesforce 서비스 클라우드;salesforce 서비스 클라우드
 solution: Experience Platform
 title: Salesforce 서비스 클라우드 소스 커넥터 개요
-topic: 개요
+topic: overview
 description: API 또는 사용자 인터페이스를 사용하여 Salesforce Service Cloud를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 translation-type: tm+mt
 source-git-commit: a0b016e8adc519bc79701f9fd850b6ddf7d46127

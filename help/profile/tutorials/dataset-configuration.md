@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;프로필;실시간 고객 프로필;문제 해결;API;데이터 집합 사용
 title: API를 사용하여 프로필 및 ID 서비스에 대한 데이터 집합 구성
-topic: 자습서
+topic: tutorial
 type: Tutorial
 description: 이 자습서는 Adobe Experience Platform API를 사용하여 실시간 고객 프로필 및 ID 서비스에 사용할 데이터 세트를 활성화하는 방법을 보여줍니다.
 exl-id: 142cb7df-072a-4f3a-8a9c-9a78afb35312

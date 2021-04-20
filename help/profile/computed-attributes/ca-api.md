@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform;프로필;실시간 고객 프로필;문제 해결;API
 title: 계산된 특성 API 끝점
-topic: 가이드
-type: 설명서
+topic: guide
+type: Documentation
 description: Adobe Experience Platform에서 계산된 속성은 이벤트 수준 데이터를 프로필 수준 속성으로 집계하는 데 사용되는 함수입니다. 이러한 함수는 세분화, 활성화 및 개인화 간에 사용할 수 있도록 자동으로 계산됩니다. 이 안내서에서는 실시간 고객 프로필 API를 사용하여 계산된 속성을 만들고, 보고, 업데이트하고, 삭제하는 방법을 보여줍니다.
 translation-type: tm+mt
 source-git-commit: 4ed2b80ebfd87f8920462ae0a918b01bb13d4210

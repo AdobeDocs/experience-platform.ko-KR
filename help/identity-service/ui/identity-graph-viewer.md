@@ -2,7 +2,7 @@
 keywords: Experience Platform;홈;인기 항목;ID 그래프 뷰어;ID 그래프 뷰어;그래프 뷰어;그래프 뷰어;ID 네임스페이스;ID;ID;Service;ID 서비스;Identity Service;Identity Service
 solution: Experience Platform
 title: ID 그래프 뷰어 개요
-topic: 자습서
+topic: tutorial
 description: ID 그래프는 특정 고객에 대해 서로 다른 ID 간의 관계를 보여주는 지도로, 고객이 다양한 채널에서 브랜드와 상호 작용하는 방식을 시각적으로 보여줍니다.
 translation-type: tm+mt
 source-git-commit: f4326c7a8bb8af90c092d3790e51c133744d498f

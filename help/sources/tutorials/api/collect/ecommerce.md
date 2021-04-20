@@ -2,8 +2,8 @@
 keywords: Experience Platform;홈;인기 항목;전자 상거래 데이터 수집;eCommerce 데이터
 solution: Experience Platform
 title: 소스 커넥터 및 API를 사용하여 전자 상거래 데이터 수집
-topic: 개요
-type: 튜토리얼
+topic: overview
+type: Tutorial
 description: 이 자습서에서는 제3자 eCommerce 시스템에서 데이터를 검색하고 소스 커넥터 및 API를 사용하여 이를 플랫폼에 인제스트하는 절차를 다룹니다.
 exl-id: 0952f037-5e20-4d84-a2e6-2c9470f168f5
 translation-type: tm+mt

@@ -2,8 +2,8 @@
 keywords: Experience Platform;모델 게시;데이터 과학 작업 공간;인기 있는 주제;서비스 점수
 solution: Experience Platform
 title: 데이터 과학 작업 공간 UI에서 서비스로 모델 게시
-topic: 자습서
-type: 튜토리얼
+topic: tutorial
+type: Tutorial
 description: Adobe Experience Platform Data Science Workspace를 사용하면 교육 및 평가 모델을 서비스로 게시하여 IMS 조직 내의 사용자가 모델을 직접 작성하지 않고도 데이터를 기록할 수 있습니다.
 translation-type: tm+mt
 source-git-commit: 13fa4af388c6f31768a6b7e1da05cb56c5635c9e

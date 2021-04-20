@@ -3,8 +3,8 @@ keywords: Experience Platform;home;popular topicsAPI 자습서;스트리밍 대�
 solution: Experience Platform
 title: Adobe Experience Platform의 Flow Service API를 사용하여 스트리밍 대상에 연결하고 데이터를 활성화할 수 있습니다
 description: 이 문서에서는 Adobe Experience Platform API를 사용하여 스트리밍 대상을 만드는 방법에 대해 설명합니다
-topic: 자습서
-type: 튜토리얼
+topic: tutorial
+type: Tutorial
 translation-type: tm+mt
 source-git-commit: 32cb198bcf2c142b50c4b7a60282f0c923be06b1
 workflow-type: tm+mt

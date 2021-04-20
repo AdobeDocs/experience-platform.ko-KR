@@ -2,7 +2,7 @@
 keywords: Experience Platform;홈;인기 항목
 solution: Experience Platform
 title: Experience Platform API 기본 사항
-topic: 시작하기
+topic: getting started
 description: 이 문서에서는 Experience Platform API와 관련된 일부 기본 기술 및 구문에 대한 간단한 개요를 제공합니다.
 translation-type: tm+mt
 source-git-commit: ca5c8527b1b54856aa1e762a06ddbe404f30ec42

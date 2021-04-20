@@ -2,8 +2,8 @@
 keywords: Experience Platform;홈;인기 항목;결제 데이터 수집;지불 데이터
 solution: Experience Platform
 title: 소스 커넥터 및 API를 사용하여 결제 데이터 수집
-topic: 개요
-type: 튜토리얼
+topic: overview
+type: Tutorial
 description: 이 자습서에서는 소스 커넥터 및 API를 사용하여 결제 애플리케이션에서 데이터를 검색하고 이를 플랫폼에 인제스트하는 절차를 다룹니다.
 exl-id: b75e2a3d-6590-4079-a261-fa4e9626e8dc
 translation-type: tm+mt

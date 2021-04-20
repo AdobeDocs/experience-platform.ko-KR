@@ -2,7 +2,7 @@
 keywords: Experience Platform;홈;인기 항목;데이터 소스 연결
 solution: Experience Platform
 title: Flow Service API를 사용하여 제3자 클라우드 스토리지 시스템에서 쪽모이 세공 데이터를 인제스트
-topic: 개요
+topic: overview
 type: Tutorial
 description: 이 자습서에서는 Flow Service API를 사용하여 제3자 클라우드 스토리지 시스템에서 Apache Timeline 데이터를 인제스트하는 단계를 안내합니다.
 exl-id: fb1b19d6-16bb-4a5f-9e81-f537bac95041

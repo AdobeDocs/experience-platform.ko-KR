@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
 title: 가입 데이터 유형이 있는 범용 마케팅 환경 설정 필드
-topic: 개요
+topic: overview
 description: 이 문서에서는 구독 XDM 데이터 유형이 있는 범용 마케팅 기본 설정 필드에 대한 개요를 제공합니다.
 translation-type: tm+mt
 source-git-commit: 8c5ab298bad69305358ae961ebaf7836a90a0eaa

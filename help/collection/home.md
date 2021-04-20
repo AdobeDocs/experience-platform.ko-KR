@@ -2,7 +2,7 @@
 keywords: Experience Platform;홈;인기 항목;데이터 수집;시작;웹 sdk
 solution: Experience Platform
 title: 데이터 수집 개요
-topic: 개요
+topic: overview
 description: Adobe Experience Platform에서 고객 경험에 대한 데이터를 수집하는 것과 관련된 다양한 기술에 대해 알아봅니다.
 translation-type: tm+mt
 source-git-commit: 629fe68029a9f45e45d5e2d238ffff455c7d6de6

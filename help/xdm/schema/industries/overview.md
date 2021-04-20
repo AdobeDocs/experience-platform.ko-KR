@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
 title: 업계 데이터 모델 개요
-topic: 개요
+topic: overview
 description: 표준 XDM(Experience Data Model) 구성 요소를 사용하여 구성할 수 있는 다양한 산업 분야의 표준화된 데이터 모델에 대해 알아보십시오.
 translation-type: tm+mt
 source-git-commit: 9862cbcb8d8c74c96dd6bf44c5fa416f4f42fe64

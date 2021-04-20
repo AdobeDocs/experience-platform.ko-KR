@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;Azure Data Lake Storage Gen2;ADLS-Gen2;ADLS Gen2
 solution: Experience Platform
 title: Azure Data Lake Storage Gen2 소스 커넥터 개요
-topic: 개요
+topic: overview
 description: API 또는 사용자 인터페이스를 사용하여 Azure Data Lake Storage Gen2를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 translation-type: tm+mt
 source-git-commit: 7fc99214272d2ce743b3666826c66f5d65e4d2ca

@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: 데이터 준비 안내서
 user-guide-description: Adobe Experience Platform에 수집하기 위한 데이터를 준비합니다.
-feature: 데이터 관리, 데이터 통합
+feature: Data Management, Data Ingestion
 translation-type: tm+mt
 source-git-commit: c3939d4ce30bf12748b898f461a166f28f010abf
 workflow-type: tm+mt

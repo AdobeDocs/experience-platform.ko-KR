@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Catalog and Datasets 안내서
 user-guide-description: 데이터 레이크 내에서 데이터 계보, 메타데이터, 파일 설명, 디렉토리 및 데이터 세트를 탐색합니다.
-feature: 데이터 관리
+feature: Data Management
 translation-type: tm+mt
 source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
 workflow-type: tm+mt

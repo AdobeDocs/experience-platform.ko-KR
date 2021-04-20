@@ -2,7 +2,7 @@
 keywords: Experience Platform;홈;인기 항목;세그멘테이션;세그멘테이션 서비스;세그먼트 정의;세그먼트 정의;api;API;home;popular topmentation;segmentation Service;segmentation definition;api;API
 solution: Experience Platform
 title: 세그먼트 정의 API 끝점
-topic: 개발자 가이드
+topic: developer guide
 description: Adobe Experience Platform 세그멘테이션 서비스 API의 세그먼트 정의 끝점을 사용하여 조직의 세그먼트 정의를 프로그래밍 방식으로 관리할 수 있습니다.
 translation-type: tm+mt
 source-git-commit: 4e4672f4101f92f035985d187512d917890aab6b

@@ -2,8 +2,8 @@
 keywords: Experience Platform;스키마 데이터 미리 보기;데이터 과학 작업 공간;인기 항목
 solution: Experience Platform
 title: 소매 판매 스키마 및 데이터 세트 미리 보기
-topic: 자습서
-type: 튜토리얼
+topic: tutorial
+type: Tutorial
 description: 다음 문서에서는 Adobe Experience Platform에서 스키마 및 데이터 세트를 미리 볼 수 있는 개요를 설명합니다.
 translation-type: tm+mt
 source-git-commit: 5129a75071af680bc54a7f60bb89ce32d3216d09

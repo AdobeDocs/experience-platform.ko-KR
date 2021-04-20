@@ -2,7 +2,7 @@
 keywords: Experience Platform;사용자 안내서;속성 아이디;인기 항목;지역
 solution: Experience Platform, Intelligent Services
 title: Attribution AI UI 안내서
-topic: '사용 안내서 '
+topic: User guide 
 description: 이 문서는 Intelligent Services 사용자 인터페이스에서 Attribution AI과 상호 작용하기 위한 가이드 역할을 합니다.
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
 translation-type: tm+mt

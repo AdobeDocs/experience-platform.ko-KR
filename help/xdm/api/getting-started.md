@@ -3,7 +3,7 @@ keywords: Experience Platform;홈;인기 항목;api;XDM;XDM;경험 데이터 모
 solution: Experience Platform
 title: 스키마 레지스트리 API 시작하기
 description: 이 문서에서는 스키마 레지스트리 API를 호출하기 전에 알아야 하는 핵심 개념을 소개합니다.
-topic: 개발자 가이드
+topic: developer guide
 exl-id: 7daebb7d-72d2-4967-b4f7-1886736db69f
 translation-type: tm+mt
 source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27

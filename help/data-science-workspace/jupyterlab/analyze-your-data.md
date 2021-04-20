@@ -2,8 +2,8 @@
 keywords: Experience Platform;JupiterLab;노트북;데이터 과학 작업 공간;인기 있는 주제;데이터 노트북 분석
 solution: Experience Platform
 title: 전자 필기장을 사용하여 데이터 분석
-topic: 자습서
-type: 튜토리얼
+topic: tutorial
+type: Tutorial
 description: 이 자습서에서는 데이터 과학 작업 공간에 내장된 Jupiter 노트북을 사용하여 데이터를 액세스, 탐색 및 시각화하는 방법에 중점을 둡니다.
 translation-type: tm+mt
 source-git-commit: 6908c582cb7e0d60b82112dbc0854411d76b4fd4

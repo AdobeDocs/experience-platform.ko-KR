@@ -2,7 +2,7 @@
 keywords: Experience Platform;홈;인기 항목
 solution: Experience Platform
 title: Adobe Experience Platform 용어집
-topic: 시작하기
+topic: getting started
 description: Experience Platform의 중요한 용어에 대한 용어집입니다.
 translation-type: tm+mt
 source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c

@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
 title: 세그먼트 정의 클래스
-topic: 개요
+topic: overview
 description: 이 문서에서는 XDM(경험 데이터 모델)의 세그먼트 정의 클래스에 대한 개요를 제공합니다.
 translation-type: tm+mt
 source-git-commit: f4e80cc6a5e5e135bedb77b2d56ae5cb2c8d8c53

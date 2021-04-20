@@ -2,7 +2,7 @@
 keywords: Experience Platform;홈;인기 항목;모니터링;모니터;데이터 흐름;모니터 통합;데이터 통합;데이터 통합;보기 레코드;보기 배치
 solution: Experience Platform
 title: 데이터 수집 모니터링
-topic: 개요
+topic: overview
 description: 이 사용자 안내서는 Adobe Experience Platform 사용자 인터페이스 내에서 데이터를 모니터링하는 방법에 대한 단계를 제공합니다. 이 가이드를 사용하려면 Adobe ID을 보유하고 Adobe Experience Platform에 액세스해야 합니다.
 translation-type: tm+mt
 source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac

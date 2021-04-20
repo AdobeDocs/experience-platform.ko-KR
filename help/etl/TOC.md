@@ -4,7 +4,7 @@ audience: user
 user-guide-title: Adobe Experience Platform ETL 안내서
 breadcrumb-title: ETL 안내서
 user-guide-description: 플랫폼으로 데이터를 수집하기 위한 안전한 고성능 커넥터를 제작하는 일반적인 단계를 살펴볼 수 있습니다.
-feature: 데이터 관리, 데이터 통합
+feature: Data Management, Data Ingestion
 translation-type: tm+mt
 source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
 workflow-type: tm+mt

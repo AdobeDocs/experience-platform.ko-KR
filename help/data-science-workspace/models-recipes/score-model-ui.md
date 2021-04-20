@@ -2,8 +2,8 @@
 keywords: Experience Platform;점수 모델;데이터 과학 작업 공간;인기 항목;ui;점수 실행;점수 지정 결과
 solution: Experience Platform
 title: 데이터 과학 작업 공간 UI에서 모델 점수 지정
-topic: 자습서
-type: 튜토리얼
+topic: tutorial
+type: Tutorial
 description: 'Adobe Experience Platform Data Science Workspace에서 입력 데이터를 기존 트레이닝된 모델에 제공함으로써 점수를 향상시킬 수 있습니다. 그러면 점수 지정 결과가 저장되고 지정된 출력 데이터 세트에 새로운 일괄 처리로 표시됩니다. '
 translation-type: tm+mt
 source-git-commit: 7feda18351061600b05dc7be8afbbfb9a0fa7ec1

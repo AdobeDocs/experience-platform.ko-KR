@@ -2,8 +2,8 @@
 keywords: Experience Platform;홈;인기 항목;ssc;SSC;Salesforce 서비스 클라우드;salesforce 서비스 클라우드
 solution: Experience Platform
 title: Flow Service API를 사용하여 Salesforce 서비스 클라우드 소스 연결 만들기
-topic: 개요
-type: 튜토리얼
+topic: overview
+type: Tutorial
 description: Flow Service API를 사용하여 Salesforce Service Cloud에 Adobe Experience Platform을 연결하는 방법을 알아봅니다.
 translation-type: tm+mt
 source-git-commit: a0b016e8adc519bc79701f9fd850b6ddf7d46127

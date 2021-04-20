@@ -2,8 +2,8 @@
 keywords: Experience Platform;홈;인기 항목;클라우드 저장소 데이터
 solution: Experience Platform
 title: 소스 커넥터 및 API를 사용하여 클라우드 스토리지 데이터 수집
-topic: 개요
-type: 튜토리얼
+topic: overview
+type: Tutorial
 description: 이 자습서에서는 소스 커넥터 및 API를 사용하여 제3자 클라우드 저장소에서 데이터를 검색하고 플랫폼으로 가져오는 절차를 다룹니다.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
 translation-type: tm+mt

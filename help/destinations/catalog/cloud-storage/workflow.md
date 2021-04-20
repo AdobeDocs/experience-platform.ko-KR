@@ -1,7 +1,7 @@
 ---
 keywords: 클라우드 스토리지 대상;클라우드 스토리지
 title: 클라우드 스토리지 대상 만들기
-type: 튜토리얼
+type: Tutorial
 description: 클라우드 스토리지 위치에 연결하는 지침
 seo-description: 클라우드 스토리지 위치에 연결하는 지침
 exl-id: 58003c1e-2f70-4e28-8a38-3be00da7cc3c

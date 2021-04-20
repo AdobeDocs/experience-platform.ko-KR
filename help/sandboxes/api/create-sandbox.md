@@ -2,7 +2,7 @@
 keywords: Experience Platform;홈;인기 항목;샌드박스;Sandbox;home;popular topics;sandbox
 solution: Experience Platform
 title: API에서 샌드박스 만들기
-topic: 개발자 가이드
+topic: developer guide
 description: '''/sandbox'' 끝점에 POST 요청을 만들어 새 샌드박스를 만들 수 있습니다.'
 translation-type: tm+mt
 source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31

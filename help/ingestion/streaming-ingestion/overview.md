@@ -2,7 +2,7 @@
 keywords: Experience Platform;홈;인기 항목;데이터 통합;인제스트된 데이터;스트리밍;개요;스트리밍 통합;지연;스트리밍 지연;;home;popular topics;ensouristed data;streaming;overview;streaming ingestion;laytency;streaming latency
 solution: Experience Platform
 title: 스트리밍 통합 개요
-topic: 개요
+topic: overview
 description: Adobe Experience Platform에 대한 스트리밍 수집은 사용자에게 클라이언트 및 서버측 디바이스에서 실시간으로 Experience Platform으로 데이터를 보내는 방법을 제공합니다.
 translation-type: tm+mt
 source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac

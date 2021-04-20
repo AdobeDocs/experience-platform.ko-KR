@@ -2,8 +2,8 @@
 keywords: Experience Platform;홈;인기 있는 항목;흐름 서비스;데이터 흐름 업데이트
 solution: Experience Platform
 title: Flow Service API를 사용하여 데이터 흐름 업데이트
-topic: 개요
-type: 튜토리얼
+topic: overview
+type: Tutorial
 description: 이 자습서에서는 Flow Service API를 사용하여 데이터 흐름 이름, 설명 및 일정을 포함한 데이터 흐름 업데이트 단계를 설명합니다.
 translation-type: tm+mt
 source-git-commit: e19b5b905a38c63b7dc47904c5af30dc2ed21e22

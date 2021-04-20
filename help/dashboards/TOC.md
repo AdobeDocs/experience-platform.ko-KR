@@ -4,7 +4,7 @@ audience: user
 user-guide-title: Adobe Experience Platform 대시보드 도움말
 breadcrumb-title: 대시보드 안내서
 user-guide-description: 맞춤형 대시보드에서 Experience Platform 데이터를 시각화합니다.
-feature: 데이터 관리
+feature: Data Management
 translation-type: tm+mt
 source-git-commit: 4b087685f065d05894fb45c19fce453346448614
 workflow-type: tm+mt
