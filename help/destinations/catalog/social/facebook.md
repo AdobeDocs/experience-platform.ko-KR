@@ -4,9 +4,9 @@ title: Facebook 연결
 description: 해시 처리된 이메일을 기반으로 고객 타깃팅, 개인화 및 억제를 위해 Facebook 캠페인에 대한 프로파일을 활성화합니다.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
 translation-type: tm+mt
-source-git-commit: 01aed33913b5334263090aea17f75ce181717c50
+source-git-commit: 805cb72e91e6446f74cc3461d39841740eb576c7
 workflow-type: tm+mt
-source-wordcount: '1134'
+source-wordcount: '1133'
 ht-degree: 2%
 
 ---
@@ -117,7 +117,7 @@ Experience Platform에서 이메일 주소 인제스트에 대한 자세한 내�
 
 ## 대상 {#connect-destination}에 연결
 
-[!DNL Facebook] 대상에 연결하려면 [소셜 네트워크 대상 인증 워크플로](./workflow.md)를 참조하십시오.
+[!DNL Facebook] 대상에 연결하려면 [소셜 대상 인증 워크플로](./workflow.md)를 참조하십시오.
 
 아래 비디오에서는 [!DNL Facebook] 대상을 구성하고 세그먼트를 활성화하는 단계도 보여 줍니다.
 
