@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;대상 매핑;대상 매핑;Target mapping;Marketing Cloud;Marketing Cloud;Adobe Analytics Server ManagerAnalytics를
 solution: Experience Platform
 title: Adobe Target 이벤트 데이터를 XDM에 매핑
-topic: overview
+topic-legacy: overview
 description: Adobe Experience Platform에서 사용할 수 있도록 Adobe Target 이벤트 필드를 XDM(Experience Data Model) 스키마에 매핑하는 방법을 알아봅니다.
+exl-id: dab08ab6-6c1c-460a-bb52-8dcdb5709a34
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: af5564a07577a0123e1a45043d5479f6ad45d73e
 workflow-type: tm+mt
-source-wordcount: '462'
+source-wordcount: '465'
 ht-degree: 0%
 
 ---
-
 
 # 대상 매핑 필드 매핑
 
@@ -88,3 +88,5 @@ Adobe Experience Platform을 사용하면 Target 소스 커넥터를 통해 Adob
 | **`identityMap`** |
 | `identityMap.TNTID` | `tntId.mboxPC` |
 | `identityMap.ECID` | `marketingCloudVisitorId` |
+
+{style=&quot;table-layout:auto&quot;}
