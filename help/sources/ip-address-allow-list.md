@@ -3,15 +3,15 @@ keywords: Experience Platform;홈;인기 항목;ip 주소;ip 주소;ip 주소 �
 description: 소스 커넥터로 작업하기 전에 IP 주소를 허용 목록에 추가해야 합니다.
 solution: Experience Platform
 title: 소스 연결에 대한 IP 주소 허용 목록
-topic: overview
+topic-legacy: overview
+exl-id: 40093c80-dbdb-4dc1-97bb-81a8200b731f
 translation-type: tm+mt
-source-git-commit: 6ee71de86d487a38ca4acc76813111994eb44bd9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '117'
+source-wordcount: '116'
 ht-degree: 0%
 
 ---
-
 
 # IP 주소 허용 목록
 
