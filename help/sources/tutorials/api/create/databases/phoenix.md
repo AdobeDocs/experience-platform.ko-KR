@@ -2,17 +2,17 @@
 keywords: Experience Platform;홈;인기 항목;불사조;Phoenix;
 solution: Experience Platform
 title: Flow Service API를 사용하여 Phoenix 소스 연결 만들기
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Flow Service API를 사용하여 Phoenix 데이터베이스를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
+exl-id: b69d9593-06fe-4fff-88a9-7860e4e45eb7
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '648'
 ht-degree: 1%
 
 ---
-
 
 # [!DNL Flow Service] API를 사용하여 [!DNL Phoenix] 소스 연결 만들기
 
