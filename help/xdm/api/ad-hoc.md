@@ -3,15 +3,15 @@ keywords: Experience Platform;홈;인기 항목;API;XDM;XDM 시스템;경험 데
 solution: Experience Platform
 title: 임시 스키마
 description: 특정 상황에서는 단일 데이터 집합에서만 사용하도록 이름이 지정된 필드가 있는 XDM 스키마를 만들어야 할 수 있습니다. 이를 애드혹 스키마라고 합니다.
-topic: developer guide
+topic-legacy: developer guide
+exl-id: 8ee43bdc-3f16-4ec9-b17a-9942e4599023
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '146'
 ht-degree: 0%
 
 ---
-
 
 # 임시 스키마
 
