@@ -2,13 +2,13 @@
 keywords: Experience Platform;홈;인기 항목;세그멘테이션;세그멘테이션 서비스;가장자리 세그멘테이션;Edge segmentation;streaming edge
 solution: Experience Platform
 title: 'API를 사용한 에지 세그멘테이션 '
-topic: developer guide
+topic-legacy: developer guide
 description: 이 문서에는 Adobe Experience Platform 세그멘테이션 서비스 API에서 가장자리 세그멘테이션을 사용하는 방법에 대한 예가 포함되어 있습니다.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
 translation-type: tm+mt
-source-git-commit: 36169a42c7f6a73ca9cc165cd338d6a1cf245bfc
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '653'
+source-wordcount: '651'
 ht-degree: 3%
 
 ---
