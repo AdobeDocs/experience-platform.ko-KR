@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;데이터 통합;일괄 처리;데이터 집합 활성화;일괄 처리 통합 개요;개요;일괄 처리 통합 개요;Analytics;Mobizing topics
 solution: Experience Platform
 title: 일괄 처리 통합 개요
-topic: overview
+topic-legacy: overview
 description: 'Adobe Experience Platform 데이터 통합 API를 사용하면 데이터를 플랫폼에 일괄 파일로 통합할 수 있습니다. 인제스트되는 데이터는 CRM 시스템의 플랫 파일(예: 쪽모이 세공 항목 파일)의 프로필 데이터이거나 XDM(Experience Data Model) 레지스트리에서 알려진 스키마를 따르는 데이터일 수 있습니다.'
+exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1222'
 ht-degree: 2%
 
 ---
-
 
 # 일괄 처리 통합 개요
 
