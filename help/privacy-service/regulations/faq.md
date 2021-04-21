@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;GDPR;GDPA;PDPA;PDPA;PDPA;LGPD;faq;FAQ;규제;규정;규정;규정;개인 정보;개인 정보 보호;Privacy
 solution: Experience Platform
 title: 개인 정보 보호 규정 FAQ
-topic: troubleshooting
+topic-legacy: troubleshooting
 description: 이 문서에서는 Adobe Experience Cloud에서 지원되는 법적 개인 정보 보호 규정 및 그 구현과 관련하여 자주 묻는 질문에 대한 답변을 제공합니다.
+exl-id: ec553e53-664b-4e18-abb1-4e4063fdd2c9
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1599'
 ht-degree: 0%
 
 ---
-
 
 # 개인 정보 보호 규정 FAQ
 
