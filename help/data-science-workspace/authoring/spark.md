@@ -2,17 +2,17 @@
 keywords: Experience Platform;홈;인기 항목;데이터 액세스;spark sdk;데이터 액세스 api;spark 레서피;읽기 spark;쓰기
 solution: Experience Platform
 title: 데이터 과학 작업 공간에서 Spark를 사용하여 데이터 액세스
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: 다음 문서에는 Data Science Workspace에서 사용할 Spark를 사용하여 데이터에 액세스하는 방법에 대한 예가 나와 있습니다.
+exl-id: 9bffb52d-1c16-4899-b455-ce570d76d3b4
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '450'
 ht-degree: 0%
 
 ---
-
 
 # 데이터 과학 작업 공간에서 Spark를 사용하여 데이터 액세스
 
