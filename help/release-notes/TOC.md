@@ -1,13 +1,12 @@
 ---
-product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform 릴리스 정보
 breadcrumb-title: Platform 릴리스 노트
 user-guide-description: Adobe Experience Platform의 월별 릴리스 정보입니다.
 translation-type: tm+mt
-source-git-commit: fb4fb3ba79c6eb3a5439c119157a43b38dfd85dc
+source-git-commit: 0c9b60fe0777286819841c520a41007634622578
 workflow-type: tm+mt
-source-wordcount: '43'
+source-wordcount: '44'
 ht-degree: 100%
 
 ---
@@ -15,7 +14,8 @@ ht-degree: 100%
 
 # Adobe Experience Platform 릴리스 노트 {#release-notes}
 
-* [2021년 3월](latest/latest.md)
+* [2021년 4월](latest/latest.md)
+* [2021년 3월](2021/march-2021.md)
 * [2021년 2월](2021/february-2021.md)
 * [2021년 1월](2021/january-2021.md)
 * 2020 {#2020}
