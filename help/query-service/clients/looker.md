@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;popular topics;Query Service;Looker;looker;Connect to query service;;home;popular topics service;query service;looker;query service;
 solution: Experience Platform
 title: 쿼리 서비스에 연결 보기
-topic: connect
+topic-legacy: connect
 description: 이 문서에서는 Looker와 Adobe Experience Platform 쿼리 서비스를 연결하는 단계를 안내합니다.
+exl-id: 806e9077-533a-4546-b5ca-8124751957f5
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '244'
+source-wordcount: '242'
 ht-degree: 0%
 
 ---
-
 
 # 쿼리 서비스에 [!DNL Looker] 연결
 
@@ -41,7 +41,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->호스트 및 포트, 데이터베이스 이름 및 로그인 자격 증명을 찾는 방법에 대한 자세한 내용은 플랫폼](https://platform.adobe.com/query/configuration)의 [자격 증명 페이지를 참조하십시오. 자격 증명을 찾으려면 [!DNL Platform]에 로그인한 다음 **[!UICONTROL 쿼리]**&#x200B;를 선택하고 **[!UICONTROL 자격 증명]**&#x200B;을 선택합니다.
+>호스트 및 포트, 데이터베이스 이름 및 로그인 자격 증명을 찾는 방법에 대한 자세한 내용은 플랫폼](https://platform.adobe.com/query/configuration)의 [자격 증명 페이지를 참조하십시오. 자격 증명을 찾으려면 [!DNL Platform]에 로그인한 다음 **[!UICONTROL Queries]** 뒤에 **[!UICONTROL Credentials]**&#x200B;를 선택합니다.
 
 연결 세부 사항을 입력한 후 자격 증명이 제대로 작동하는지 확인하려면 **[!DNL Test These Settings]**&#x200B;을 선택합니다. 이러한 경우 연결할 수 있다는 메시지가 아래에 표시됩니다. 연결이 성공적으로 완료되면 **[!DNL Add Connection]**&#x200B;을 선택하여 연결을 만듭니다.
 
