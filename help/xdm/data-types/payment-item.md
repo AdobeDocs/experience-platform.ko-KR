@@ -2,20 +2,20 @@
 keywords: Experience Platform;홈;인기 항목;스키마;스키마;XDM;필드;스키마;스키마;지불 항목;데이터 유형;데이터 유형;data-type;data type
 solution: Experience Platform
 title: 지급 항목 데이터 유형
-topic: overview
+topic-legacy: overview
 description: 이 문서에서는 XDM(Payment Item Experience Data Model) 데이터 유형에 대한 개요를 제공합니다.
+exl-id: d25a358b-73c1-468b-a9c5-808385689932
 translation-type: tm+mt
-source-git-commit: 8bbb062df47b6e94630626d0a89a179d759d922d
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '161'
+source-wordcount: '157'
 ht-degree: 5%
 
 ---
 
+# [!UICONTROL Payment Item] 데이터 유형
 
-# [!UICONTROL 결제 ] 항목 데이터 유형
-
-[!UICONTROL 결제 ] 항목은 지급 유형, 금액 및 관련 통화를 정의하는 주문과 연관된 지급을 설명하는 표준 XDM(Experience Data Model) 데이터 유형입니다.
+[!UICONTROL Payment Item] 는 지급 유형, 금액 및 관련 통화를 정의하는 주문과 연관된 지급을 설명하는 표준 XDM(Experience Data Model) 데이터 유형입니다.
 
 <img src="../images/data-types/payment-item.PNG" width="400" /><br />
 
