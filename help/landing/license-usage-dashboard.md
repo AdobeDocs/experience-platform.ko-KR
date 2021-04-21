@@ -2,18 +2,18 @@
 keywords: Experience Platform;사용자 인터페이스;사용자 인터페이스;사용자 정의;라이센스 사용 대시보드;대시보드;라이센스 사용;자격 부여;소비
 title: 라이센스 사용 대시보드
 description: 'Adobe Experience Platform UI는 조직의 라이선스 사용에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다. '
-topic: guide
+topic-legacy: guide
 type: Documentation
+exl-id: 8cf34653-acf6-4af3-af7b-6c07e68bbc03
 translation-type: tm+mt
-source-git-commit: a3233ba44652c280775f77ef326dc7aeabd4ed71
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '148'
+source-wordcount: '146'
 ht-degree: 6%
 
 ---
 
-
-# (베타) [!UICONTROL 라이센스 사용] 대시보드 {#license-usage-dashboard}
+# (베타) [!UICONTROL License usage] 대시보드 {#license-usage-dashboard}
 
 >[!IMPORTANT]
 >
