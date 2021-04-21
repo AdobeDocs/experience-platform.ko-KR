@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;csv;맵 csv;csv 파일;csv 파일을 xdm에 매핑;csv를 xdm;ui 안내서;매퍼;매핑;데이터 준비;데이터 준비;데이터 준비;데이터 준비;매핑;csv
 solution: Experience Platform
 title: 데이터 준비를 사용하여 데이터 형식 처리
-topic: overview
+topic-legacy: overview
 description: 이 문서에서는 데이터 준비에서 서로 다른 데이터 유형을 처리하는 방법에 대해 대략적으로 설명합니다.
+exl-id: 4ad253b7-3f83-48cd-9c46-8b5ba627c09e
 translation-type: tm+mt
-source-git-commit: 41656d204f7227388ee1a0a7cad01f737fb96c4f
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '568'
+source-wordcount: '567'
 ht-degree: 13%
 
 ---
-
 
 # 데이터 준비를 사용하여 데이터 형식 처리
 
