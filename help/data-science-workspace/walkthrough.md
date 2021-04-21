@@ -2,16 +2,16 @@
 keywords: Experience Platform;연습;데이터 과학 작업 공간;인기 있는 주제
 solution: Experience Platform
 title: 데이터 과학 작업 공간 연습
-topic: Walkthrough
+topic-legacy: Walkthrough
 description: 이 문서에서는 Adobe Experience Platform 데이터 과학 작업 공간에 대한 연습을 제공합니다. 특히 데이터 과학자가 기계 학습을 통해 문제를 해결하기 위해 수행하는 일반적인 작업 과정입니다.
+exl-id: d814846e-52a9-46c6-831a-3399241959f2
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1716'
+source-wordcount: '1709'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL Data Science Workspace] 연습
 
@@ -39,13 +39,13 @@ ht-degree: 0%
 
 ### [!DNL Data Science Workspace]의 노트북
 
-Adobe Experience Platform UI의 **[!UICONTROL 데이터 과학]** 탭 내에서 **[!UICONTROL 노트북]**&#x200B;을 선택하여 [!UICONTROL 노트북] 개요 페이지로 이동합니다. 이 페이지에서 [!DNL JupyterLab] 탭을 선택하여 [!DNL JupyterLab] 환경을 시작합니다. [!DNL JupyterLab]의 기본 랜딩 페이지는 **[!UICONTROL Launcher]**&#x200B;입니다.
+Adobe Experience Platform UI의 **[!UICONTROL Data Science]** 탭 내에서 **[!UICONTROL Notebooks]**&#x200B;을 선택하여 [!UICONTROL Notebooks] 개요 페이지로 이동합니다. 이 페이지에서 [!DNL JupyterLab] 탭을 선택하여 [!DNL JupyterLab] 환경을 시작합니다. [!DNL JupyterLab]의 기본 랜딩 페이지는 **[!UICONTROL Launcher]**&#x200B;입니다.
 
 ![](./images/walkthrough/notebooks.png)
 
 ![](./images/walkthrough/jupyterlab_launcher.png)
 
-이 자습서는 [!DNL JupyterLab Notebooks]의 [!DNL Python] 3을 사용하여 데이터에 액세스하고 데이터를 탐색하는 방법을 보여 줍니다. 실행 시작 페이지에는 제공된 샘플 전자 필기장이 있습니다. **[!UICONTROL 소매 판매]** 샘플 전자 필기장은 아래 예에 사용됩니다.
+이 자습서는 [!DNL JupyterLab Notebooks]의 [!DNL Python] 3을 사용하여 데이터에 액세스하고 데이터를 탐색하는 방법을 보여 줍니다. 실행 시작 페이지에는 제공된 샘플 전자 필기장이 있습니다. **[!UICONTROL Retail Sales]** 샘플 노트북은 아래 예에서 사용됩니다.
 
 ### 설정 {#setup}
 
