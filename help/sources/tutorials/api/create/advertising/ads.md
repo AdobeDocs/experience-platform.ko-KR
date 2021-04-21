@@ -2,17 +2,17 @@
 keywords: Experience Platform;홈;인기 항목;google AdWords;adwords
 solution: Experience Platform
 title: Flow 서비스 API를 사용하여 Google AdWords 소스 연결 만들기
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Flow Service API를 사용하여 Google AdWords에 Adobe Experience Platform을 연결하는 방법을 알아봅니다.
+exl-id: 4658e392-1bd9-4e74-aa05-96109f9b62a0
 translation-type: tm+mt
-source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '619'
 ht-degree: 1%
 
 ---
-
 
 # [!DNL Flow Service] API를 사용하여 [!DNL Google AdWords] 소스 연결 만들기
 
