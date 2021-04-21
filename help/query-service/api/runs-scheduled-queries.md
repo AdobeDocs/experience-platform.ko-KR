@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;popular topics;query service;run scheduled queries;run scheduled query service;scheduled queries;scheduled queries
 solution: Experience Platform
 title: 예약된 쿼리 실행 API 끝점
-topic: runs for scheduled queries
+topic-legacy: runs for scheduled queries
 description: 다음 섹션에서는 쿼리 서비스 API를 사용하여 예약된 쿼리를 실행하기 위해 수행할 수 있는 다양한 API 호출을 안내합니다.
+exl-id: 1e69b467-460a-41ea-900c-00348c3c923c
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '696'
 ht-degree: 2%
 
 ---
-
 
 # 예약된 쿼리 실행 끝점
 
