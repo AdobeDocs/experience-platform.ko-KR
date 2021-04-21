@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform;자습서;기능 파이프라인;데이터 과학 작업 공간;인기 있는 주제
 title: 모델 작성 SDK를 사용하여 피쳐 파이프라인 생성
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Adobe Experience Platform을 사용하면 Sensei Machine Learning Framework 런타임을 통해 기능 엔지니어링을 규모에 맞게 수행할 수 있는 맞춤형 기능 파이프라인을 구축하고 만들 수 있습니다. 이 문서에서는 기능 파이프라인에 있는 다양한 클래스에 대해 설명하고 PySpark의 모델 작성 SDK를 사용하여 사용자 정의 기능 파이프라인을 만드는 단계별 자습서를 제공합니다.
+exl-id: c2c821d5-7bfb-4667-ace9-9566e6754f98
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1441'
 ht-degree: 0%
 
 ---
-
 
 # 모델 작성 SDK를 사용하여 피쳐 파이프라인 만들기
 
