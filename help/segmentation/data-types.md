@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;데이터 유형;데이터 유형;데이터 유형;데이터 유형;세그멘테이션 데이터 유형;세그멘테이션;세그멘테이션 서비스;세그멘테이션 서비스 데이터 유형;;home;popular topics;data types;Data types;Segmentation data types;Segmentation data types;
 solution: Experience Platform
 title: 세그멘테이션 서비스에서 지원되는 데이터 유형
-topic: overview
+topic-legacy: overview
 description: 모든 XDM(Experience Data Model) 데이터 유형은 Adobe 세그멘테이션 서비스 내에서 지원됩니다. 세그먼트 정의를 구성하는 규칙은 다음 데이터 유형에 따라 상황에 맞게 지정됩니다.
+exl-id: 73f932a7-f864-4566-ade7-c148a12dc83c
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '514'
 ht-degree: 3%
 
 ---
-
 
 # 세그멘테이션 서비스에서 지원되는 데이터 유형
 
@@ -59,7 +59,7 @@ Adobe Experience Platform 스키마로서 [!DNL XDM ExperienceEvents]은 인터�
 
 ### 세그먼트 공유
 
-플랫폼에서 만들어진 세그먼트는 다른 [Adobe Experience Cloud 핵심 서비스](https://docs.adobe.com/content/help/ko-KR/core-services/interface/experience-cloud.html) 내에서 사용할 수 있습니다. 이 기능을 사용하려면 솔루션 설계자 또는 컨설턴트에게 문의해야 합니다.
+플랫폼에서 만들어진 세그먼트는 다른 [Adobe Experience Cloud 핵심 서비스](https://docs.adobe.com/content/help/ko/core-services/interface/experience-cloud.html) 내에서 사용할 수 있습니다. 이 기능을 사용하려면 솔루션 설계자 또는 컨설턴트에게 문의해야 합니다.
 
 ## 기타 데이터 유형
 
