@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;타사 데이터베이스;데이터베이스 흐름 서비스
 solution: Experience Platform
 title: Flow Service API를 사용하여 데이터베이스 탐색
-topic: overview
+topic-legacy: overview
 description: 이 자습서에서는 Flow Service API를 사용하여 타사 데이터베이스의 내용과 파일 구조를 살펴봅니다.
+exl-id: 94935492-a7be-48dc-8089-18476590bf98
 translation-type: tm+mt
-source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '563'
 ht-degree: 2%
 
 ---
-
 
 # [!DNL Flow Service] API를 사용하여 데이터베이스 탐색
 
