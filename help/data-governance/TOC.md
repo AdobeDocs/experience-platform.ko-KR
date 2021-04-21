@@ -1,12 +1,11 @@
 ---
-product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform 데이터 거버넌스 도움말
 breadcrumb-title: Data Governance 안내서
 user-guide-description: 레이블, 마케팅 활동 및 정책 사용을 통해 데이터 사용 제한을 적용합니다.
-feature: Data Governance
+feature: 데이터 거버넌스
 translation-type: tm+mt
-source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '100'
 ht-degree: 35%
