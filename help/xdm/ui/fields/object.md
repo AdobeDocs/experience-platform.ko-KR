@@ -3,25 +3,25 @@ keywords: Experience Platform;홈;인기 항목;api;XDM;XDM 시스템;경험 데
 solution: Experience Platform
 title: UI에서 개체 필드 정의
 description: Experience Platform 사용자 인터페이스에서 객체 유형 필드를 정의하는 방법을 알아봅니다.
-topic: user guide
+topic-legacy: user guide
+exl-id: 5b7b3cf0-7f11-4e15-af87-09127f4423a5
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '306'
+source-wordcount: '301'
 ht-degree: 0%
 
 ---
-
 
 # UI에서 개체 필드 정의
 
 Adobe Experience Platform을 사용하면 XDM(Experience Data Model) 클래스, 혼합 및 데이터 유형의 구조를 완벽하게 사용자 정의할 수 있습니다. 사용자 정의 XDM 리소스에 관련 필드를 구성하고 중첩하기 위해 추가 하위 필드를 포함할 수 있는 객체 유형 필드를 정의할 수 있습니다.
 
-Adobe Experience Platform 사용자 인터페이스에서 [새 필드](./overview.md#define)를 정의할 때 **[!UICONTROL 유형]** 드롭다운을 사용하고 목록에서 &quot;[!UICONTROL 개체]&quot;를 선택합니다.
+Adobe Experience Platform 사용자 인터페이스에서 [새 필드](./overview.md#define)을 정의할 때 **[!UICONTROL Type]** 드롭다운을 사용하고 목록에서 &quot;[!UICONTROL Object]&quot;을 선택합니다.
 
 ![](../../images/ui/fields/special/object.png)
 
-**[!UICONTROL 적용]**&#x200B;을 선택하여 스키마에 객체를 추가합니다. 캔버스가 업데이트되어 객체에 하위 필드를 편집하고 추가하는 컨트롤을 포함하여 [!UICONTROL 개체] 데이터 유형이 적용된 새 필드를 표시합니다.
+**[!UICONTROL Apply]**&#x200B;을 선택하여 스키마에 객체를 추가합니다. 캔버스가 업데이트되어 객체에 하위 필드를 편집하고 추가하는 컨트롤을 포함하여 [!UICONTROL Object] 데이터 유형이 적용된 새 필드를 표시합니다.
 
 ![](../../images/ui/fields/special/object-applied.png)
 
@@ -29,7 +29,7 @@ Adobe Experience Platform 사용자 인터페이스에서 [새 필드](./overvie
 
 ![](../../images/ui/fields/special/object-add-field.png)
 
-하위 필드를 구성하고 **[!UICONTROL 적용]**&#x200B;을 선택하면 동일한 프로세스를 사용하여 개체에 필드를 계속 추가할 수 있습니다. 또한 객체 자체인 하위 필드를 추가할 수 있으므로 원하는 만큼 필드를 중첩할 수 있습니다.
+하위 필드를 구성하고 **[!UICONTROL Apply]**&#x200B;을 선택하면 동일한 프로세스를 사용하여 객체에 필드를 계속 추가할 수 있습니다. 또한 객체 자체인 하위 필드를 추가할 수 있으므로 원하는 만큼 필드를 중첩할 수 있습니다.
 
 ![](../../images/ui/fields/special/object-nested.png)
 
