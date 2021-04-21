@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;필터;필터;필터 데이터;필터 데이터;;home;popular topics;filter;data;filter data
 solution: Experience Platform
 title: 카탈로그 개체 목록
-topic: developer guide
+topic-legacy: developer guide
 description: 단일 API 호출을 통해 특정 유형의 사용 가능한 모든 개체 목록을 검색할 수 있으며, 응답 크기를 제한하는 필터를 포함하는 것이 좋습니다.
+exl-id: 2c65e2bc-4ddd-445a-a52d-6ceb1153ccea
 translation-type: tm+mt
-source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '242'
 ht-degree: 1%
 
 ---
-
 
 # 카탈로그 개체 목록
 
