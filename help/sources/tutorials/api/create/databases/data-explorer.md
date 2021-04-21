@@ -2,17 +2,17 @@
 keywords: Experience Platform;홈;인기 항목;Azure Data Explorer;데이터 탐색기;Data Explorer
 solution: Experience Platform
 title: 흐름 서비스 API를 사용하여 Azure Data Explorer 원본 연결 만들기
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Flow Service API를 사용하여 Azure Data Explorer을 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
+exl-id: 1b17bbb0-1f7b-4d89-a158-ad269e6edf30
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '632'
 ht-degree: 1%
 
 ---
-
 
 # [!DNL Flow Service] API를 사용하여 [!DNL Azure Data Explorer] 소스 연결 만들기
 
