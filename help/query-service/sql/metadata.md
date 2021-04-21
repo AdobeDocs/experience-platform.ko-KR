@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;PSQL;쿼리 서비스;쿼리 서비스;메타데이터;명령;메타데이터 명령;메타데이터 명령
 solution: Experience Platform
 title: 쿼리 서비스의 메타데이터 PostgreSQL 명령
-topic: metadata
+topic-legacy: metadata
 description: Adobe Experience Platform 쿼리 서비스에서 메타데이터를 쿼리하는 데 현재 지원되는 PostgreSQL 명령 목록입니다.
+exl-id: bfcbad55-3086-44c9-9938-6ba0504e747b
 translation-type: tm+mt
-source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '338'
 ht-degree: 0%
 
 ---
-
 
 # 쿼리 서비스의 메타데이터 PostgreSQL 명령
 
@@ -45,4 +45,3 @@ ht-degree: 0%
 `\d`으로 시작하는 모든 명령을 결합할 수 있습니다. 예를 들어 `\dtsn`을 발행하여 모든 테이블, 시퀀스 및 스키마 목록을 표시할 수 있습니다. `\d` 그 자체는 모든 보이는 테이블, 뷰, 구체화된 뷰 및 시퀀스를 보여줍니다.
 
 위에 나열된 명령에 대한 자세한 내용은 [postgresql.org](https://www.postgresql.org/docs/10/app-psql.html)의 설명서를 참조하십시오. 그러나 PostgreSQL 설명서에 표시된 일부 옵션은 [!DNL Experience Platform]에서 지원되지 않습니다.
-
