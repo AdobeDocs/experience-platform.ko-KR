@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;데이터 거버넌스;데이터 사용 레이블 api;정책 서비스 api;데이터 사용 레이블 개요
 solution: Experience Platform
 title: 데이터 사용 레이블 개요
-topic: labels
+topic-legacy: labels
 description: Adobe Experience Platform 데이터 거버넌스를 사용하면 데이터 세트 및 필드에 데이터 사용 레이블을 적용하여 관련 데이터 사용 정책에 따라 각 데이터를 분류할 수 있습니다. 이 문서에서는 Experience Platform의 데이터 사용 레이블에 대한 개요를 제공합니다.
+exl-id: 4f113000-b9a1-4dfb-9502-6a5d08f0b26f
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '619'
+source-wordcount: '618'
 ht-degree: 0%
 
 ---
-
 
 # 데이터 사용 레이블 개요
 
@@ -39,7 +39,7 @@ Adobe에서 제공하는 레이블 외에도 조직에 대해 고유한 사용�
 
 ### Adobe Audience Manager 데이터 내보내기 컨트롤에서 상속
 
-[!DNL Experience Platform] adobe audience manager과 세그먼트를 공유할 수 있습니다. Audience Manager 세그먼트에 적용된 모든 데이터 내보내기 컨트롤은 [!DNL Experience Platform] [!DNL Data Governance]에서 인식하는 동일한 레이블 및 마케팅 작업으로 변환됩니다.
+[!DNL Experience Platform] Adobe Audience Manager과 세그먼트를 공유할 수 있습니다. Audience Manager 세그먼트에 적용된 모든 데이터 내보내기 컨트롤은 [!DNL Experience Platform] [!DNL Data Governance]에서 인식하는 동일한 레이블 및 마케팅 작업으로 변환됩니다.
 
 특정 데이터 내보내기 컨트롤이 [!DNL Platform]의 데이터 사용 레이블에 매핑되는 방법에 대한 참조를 보려면 [Audience Manager 설명서](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep)를 참조하십시오.
 
@@ -49,7 +49,7 @@ Adobe에서 제공하는 레이블 외에도 조직에 대해 고유한 사용�
 
 ### UI 사용
 
-[!DNL Experience Platform] UI의 **[!UICONTROL 정책]** 작업 영역에서 조직의 핵심 및 사용자 지정 레이블을 보고 관리할 수 있습니다. **[!DNL Datasets]** 작업 영역에서 데이터 세트 및 필드에 레이블을 적용할 수 있습니다. 자세한 내용은 [레이블 사용자 안내서](user-guide.md)를 참조하십시오.
+[!DNL Experience Platform] UI의 **[!UICONTROL Policies]** 작업 영역에서 조직의 핵심 및 사용자 지정 레이블을 보고 관리할 수 있습니다. **[!DNL Datasets]** 작업 영역에서 데이터 세트 및 필드에 레이블을 적용할 수 있습니다. 자세한 내용은 [레이블 사용자 안내서](user-guide.md)를 참조하십시오.
 
 ### API 사용
 
