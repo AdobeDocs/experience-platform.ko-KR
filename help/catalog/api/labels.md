@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;데이터 사용 레이블;카탈로그 서비스
 solution: Experience Platform
 title: 데이터 세트 서비스 API의 데이터 사용 레이블
-topic: developer guide
+topic-legacy: developer guide
 description: 데이터 집합 서비스 API는 데이터 집합에 대한 데이터 사용 레이블을 관리하는 끝점을 제공합니다.
+exl-id: 2451e5b0-b117-4465-8e58-70fc341c0748
 translation-type: tm+mt
-source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '85'
 ht-degree: 0%
 
 ---
-
 
 # 데이터 집합 서비스 API의 데이터 사용 레이블
 
