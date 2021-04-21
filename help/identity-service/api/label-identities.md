@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;레이블 ID
 solution: Experience Platform
 title: 필드에 ID로 레이블 지정
-topic: api guide
+topic-legacy: api guide
 description: PII(개인 식별 정보)가 포함된 필드는 ID 필드로 레이블이 지정될 수 있습니다. ID 필드에 제공된 값은 ID 서비스에 의해 ID로 해석됩니다. ID의 네임스페이스는 필드 레이블의 일부로 지정됩니다.
+exl-id: f0b3f18b-7302-4a0b-b444-2d4b59787681
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '196'
 ht-degree: 1%
 
 ---
-
 
 # 필드에 ID로 레이블 지정
 
