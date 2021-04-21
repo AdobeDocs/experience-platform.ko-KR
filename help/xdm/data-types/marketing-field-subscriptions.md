@@ -1,16 +1,16 @@
 ---
 solution: Experience Platform
 title: 가입 데이터 유형이 있는 범용 마케팅 환경 설정 필드
-topic: overview
+topic-legacy: overview
 description: 이 문서에서는 구독 XDM 데이터 유형이 있는 범용 마케팅 기본 설정 필드에 대한 개요를 제공합니다.
+exl-id: 170ea6ca-77fc-4b0a-87f9-6d4b6f32d953
 translation-type: tm+mt
-source-git-commit: 8c5ab298bad69305358ae961ebaf7836a90a0eaa
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '712'
+source-wordcount: '711'
 ht-degree: 2%
 
 ---
-
 
 # [!UICONTROL Generic Marketing Preference Field with Subscriptions] 데이터 유형
 
