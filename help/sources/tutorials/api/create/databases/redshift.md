@@ -2,17 +2,17 @@
 keywords: Experience Platform;홈;인기 항목;적색;적색;Amazon Redshift;amazon redshift
 solution: Experience Platform
 title: Flow Service API를 사용하여 Amazon Redshift 소스 연결 만들기
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Flow Service API를 사용하여 Adobe Experience Platform을 Amazon Redshift에 연결하는 방법을 알아봅니다.
+exl-id: 2728ce08-05c9-4dca-af1d-d2d1b266c5d9
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '549'
 ht-degree: 2%
 
 ---
-
 
 # [!DNL Flow Service] API를 사용하여 [!DNL Amazon Redshift] 소스 연결 만들기
 
@@ -126,4 +126,4 @@ curl -X POST \
 
 ## 다음 단계
 
-이 자습서를 따라 [!DNL Flow Service] API를 사용하여 [!DNL Redshift] 연결을 만들고 연결의 고유 ID 값을 받았습니다. 다음 자습서에서는 흐름 서비스 API](../../explore/database-nosql.md)를 사용하여 데이터베이스 또는 NoSQL 시스템을 탐색하는 방법을 배울 때 이 연결 ID를 사용할 수 있습니다.[
+이 자습서를 따라 [!DNL Flow Service] API를 사용하여 [!DNL Redshift] 연결을 만들고 연결의 고유 ID 값을 받았습니다. 흐름 서비스 API](../../explore/database-nosql.md)를 사용하여 데이터베이스 또는 NoSQL 시스템을 탐색하는 방법을 배울 때 다음 자습서에서 이 연결 ID를 사용할 수 있습니다.[
