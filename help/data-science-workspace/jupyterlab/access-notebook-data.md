@@ -2,16 +2,16 @@
 keywords: Experience Platform;JupiterLab;노트북;데이터 과학 작업 공간;인기 있는 주제;%데이터 세트;대화형 모드;일괄 처리 모드;Spark sdk;python sdk;액세스 데이터;노트북 데이터 액세스
 solution: Experience Platform
 title: Jupiterlab 노트북의 데이터 액세스
-topic: Developer Guide
+topic-legacy: Developer Guide
 description: 이 안내서에서는 데이터 과학 작업 공간 내에 구축된 Jupiter 노트북을 사용하여 데이터에 액세스하는 방법에 중점을 둡니다.
+exl-id: 2035a627-5afc-4b72-9119-158b95a35d32
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '3101'
+source-wordcount: '3031'
 ht-degree: 9%
 
 ---
-
 
 # [!DNL Jupyterlab] 전자 필기장의 데이터 액세스
 
@@ -150,13 +150,13 @@ df = dataset_reader.limit(100).offset(10).read()
 
 ### Python {#write-python}의 데이터 세트에 쓰기
 
-JupiterLab 전자 필기장의 데이터 세트에 기록하려면 JupiterLab의 왼쪽 탐색 창에서 데이터 아이콘 탭(아래 강조 표시)을 선택합니다. **[!UICONTROL 데이터 집합]** 및 **[!UICONTROL 스키마]** 디렉토리가 표시됩니다. **[!UICONTROL 데이터 집합]**&#x200B;을 선택하고 마우스 오른쪽 단추를 클릭한 다음 사용할 데이터 집합의 드롭다운 메뉴에서 **[!UICONTROL 전자 필기장에서 데이터 쓰기]** 옵션을 선택합니다. 실행 가능한 코드 항목이 전자 필기장 하단에 표시됩니다.
+JupiterLab 전자 필기장의 데이터 세트에 기록하려면 JupiterLab의 왼쪽 탐색 창에서 데이터 아이콘 탭(아래 강조 표시)을 선택합니다. **[!UICONTROL Datasets]** 및 **[!UICONTROL Schemas]** 디렉토리가 표시됩니다. **[!UICONTROL Datasets]**&#x200B;을 선택하고 마우스 오른쪽 단추를 클릭한 다음 사용할 데이터 집합의 드롭다운 메뉴에서 **[!UICONTROL Write Data in Notebook]** 옵션을 선택합니다. 실행 가능한 코드 항목이 전자 필기장 하단에 표시됩니다.
 
 ![](../images/jupyterlab/data-access/write-dataset.png)
 
-- **[!UICONTROL 전자 필기장에서 데이터 쓰기]**&#x200B;를 사용하여 선택한 데이터 집합으로 쓰기 셀을 생성합니다.
-- **[!UICONTROL 노트북의 데이터 탐색]**&#x200B;을 사용하여 선택한 데이터 집합으로 읽기 셀을 생성합니다.
-- 선택한 데이터 집합으로 기본 쿼리 셀을 생성하려면 **[!UICONTROL 전자 필기장의 데이터 쿼리]**&#x200B;를 사용합니다.
+- **[!UICONTROL Write Data in Notebook]**&#x200B;을(를) 사용하여 선택한 데이터 집합으로 쓰기 셀을 생성합니다.
+- **[!UICONTROL Explore Data in Notebook]**&#x200B;을(를) 사용하여 선택한 데이터 세트에 대한 읽기 셀을 생성합니다.
+- **[!UICONTROL Query Data in Notebook]**&#x200B;을(를) 사용하여 선택한 데이터 세트에 대한 기본 쿼리 셀을 생성합니다.
 
 또는 다음 코드 셀을 복사하여 붙여넣을 수 있습니다. `{DATASET_ID}` 및 `{PANDA_DATAFRAME}` 모두 교체합니다.
 
@@ -175,7 +175,7 @@ write_tracker = dataset_writer.write({PANDA_DATAFRAME}, file_format='json')
 
 [!DNL JupyterLab]에서 [!DNL Query Service]을(를) 사용하기 전에 [[!DNL Query Service] SQL 구문](https://www.adobe.com/go/query-service-sql-syntax-en)에 대한 작업 이해가 있는지 확인하십시오.
 
-[!DNL Query Service]을(를) 사용하여 데이터를 쿼리하려면 대상 데이터 집합의 이름을 제공해야 합니다. **[!UICONTROL 데이터 탐색기]**&#x200B;를 사용하여 원하는 데이터 세트를 찾아 필요한 코드 셀을 생성할 수 있습니다. 데이터 세트 목록을 마우스 오른쪽 단추로 클릭하고 전자 필기장에서 **[!UICONTROL 데이터 쿼리]**&#x200B;를 클릭하여 전자 필기장에 2개의 코드 셀을 생성합니다. 이 두 개의 셀은 아래에 자세히 나와 있습니다.
+[!DNL Query Service]을(를) 사용하여 데이터를 쿼리하려면 대상 데이터 집합의 이름을 제공해야 합니다. **[!UICONTROL Data explorer]**&#x200B;을 사용하여 원하는 데이터 세트를 찾아 필요한 코드 셀을 생성할 수 있습니다. 데이터 세트 목록을 마우스 오른쪽 단추로 클릭하고 **[!UICONTROL Query Data in Notebook]**&#x200B;을 클릭하여 노트북에 2개의 코드 셀을 생성합니다. 이 두 개의 셀은 아래에 자세히 나와 있습니다.
 
 ![](../images/jupyterlab/data-access/python-query-dataset.png)
 
@@ -286,12 +286,12 @@ df0 <- dataset_reader$limit(100L)$offset(10L)$read()
 
 ### R {#write-r}의 데이터 세트에 쓰기
 
-JupiterLab 전자 필기장의 데이터 세트에 기록하려면 JupiterLab의 왼쪽 탐색 창에서 데이터 아이콘 탭(아래 강조 표시)을 선택합니다. **[!UICONTROL 데이터 집합]** 및 **[!UICONTROL 스키마]** 디렉토리가 표시됩니다. **[!UICONTROL 데이터 집합]**&#x200B;을 선택하고 마우스 오른쪽 단추를 클릭한 다음 사용할 데이터 집합의 드롭다운 메뉴에서 **[!UICONTROL 전자 필기장에서 데이터 쓰기]** 옵션을 선택합니다. 실행 가능한 코드 항목이 전자 필기장 하단에 표시됩니다.
+JupiterLab 전자 필기장의 데이터 세트에 기록하려면 JupiterLab의 왼쪽 탐색 창에서 데이터 아이콘 탭(아래 강조 표시)을 선택합니다. **[!UICONTROL Datasets]** 및 **[!UICONTROL Schemas]** 디렉토리가 표시됩니다. **[!UICONTROL Datasets]**&#x200B;을 선택하고 마우스 오른쪽 단추를 클릭한 다음 사용할 데이터 집합의 드롭다운 메뉴에서 **[!UICONTROL Write Data in Notebook]** 옵션을 선택합니다. 실행 가능한 코드 항목이 전자 필기장 하단에 표시됩니다.
 
 ![](../images/jupyterlab/data-access/r-write-dataset.png)
 
-- **[!UICONTROL 전자 필기장에서 데이터 쓰기]**&#x200B;를 사용하여 선택한 데이터 집합으로 쓰기 셀을 생성합니다.
-- **[!UICONTROL 노트북의 데이터 탐색]**&#x200B;을 사용하여 선택한 데이터 집합으로 읽기 셀을 생성합니다.
+- **[!UICONTROL Write Data in Notebook]**&#x200B;을(를) 사용하여 선택한 데이터 집합으로 쓰기 셀을 생성합니다.
+- **[!UICONTROL Explore Data in Notebook]**&#x200B;을(를) 사용하여 선택한 데이터 세트에 대한 읽기 셀을 생성합니다.
 
 또는 다음 코드 셀을 복사하여 붙여넣을 수 있습니다.
 
@@ -388,10 +388,10 @@ spark = SparkSession.builder.getOrCreate()
 
 다음 방법을 사용하여 JupiterLab buy에서 위의 예를 자동으로 생성할 수 있습니다.
 
-JupiterLab의 왼쪽 탐색 메뉴에서 데이터 아이콘 탭(아래 강조 표시)을 선택합니다. **[!UICONTROL 데이터 집합]** 및 **[!UICONTROL 스키마]** 디렉토리가 표시됩니다. **[!UICONTROL 데이터 집합]**&#x200B;을 선택하고 마우스 오른쪽 단추를 클릭한 다음 사용할 데이터 집합의 드롭다운 메뉴에서 **[!UICONTROL 전자 필기장에서 데이터 쓰기]** 옵션을 선택합니다. 실행 가능한 코드 항목이 전자 필기장 하단에 표시됩니다.
+JupiterLab의 왼쪽 탐색 메뉴에서 데이터 아이콘 탭(아래 강조 표시)을 선택합니다. **[!UICONTROL Datasets]** 및 **[!UICONTROL Schemas]** 디렉토리가 표시됩니다. **[!UICONTROL Datasets]**&#x200B;을 선택하고 마우스 오른쪽 단추를 클릭한 다음 사용할 데이터 집합의 드롭다운 메뉴에서 **[!UICONTROL Write Data in Notebook]** 옵션을 선택합니다. 실행 가능한 코드 항목이 전자 필기장 하단에 표시됩니다.
 
-- 읽기 셀을 생성하려면 **[!UICONTROL 노트북의 데이터 탐색]**&#x200B;을 사용합니다.
-- 쓰기 셀을 생성하려면 **[!UICONTROL 전자 필기장에서 데이터 쓰기]**&#x200B;를 사용합니다.
+- 읽기 셀을 생성하려면 **[!UICONTROL Explore Data in Notebook]**&#x200B;을 사용합니다.
+- **[!UICONTROL Write Data in Notebook]**&#x200B;을 사용하여 쓰기 셀을 생성합니다.
 
 ![](../images/jupyterlab/data-access/pyspark-write-dataset.png)
 
@@ -510,10 +510,10 @@ df1.show(10)
 
 다음 방법을 사용하여 JupiterLab buy에서 위의 예를 자동으로 생성할 수 있습니다.
 
-JupiterLab의 왼쪽 탐색 메뉴에서 데이터 아이콘 탭(아래 강조 표시)을 선택합니다. **[!UICONTROL 데이터 집합]** 및 **[!UICONTROL 스키마]** 디렉토리가 표시됩니다. **[!UICONTROL 데이터 집합]**&#x200B;을 선택하고 마우스 오른쪽 단추를 클릭한 다음 사용할 데이터 집합의 드롭다운 메뉴에서 **[!UICONTROL 노트북의 데이터 탐색]** 옵션을 선택합니다. 실행 가능한 코드 항목이 전자 필기장 하단에 표시됩니다.
+JupiterLab의 왼쪽 탐색 메뉴에서 데이터 아이콘 탭(아래 강조 표시)을 선택합니다. **[!UICONTROL Datasets]** 및 **[!UICONTROL Schemas]** 디렉토리가 표시됩니다. **[!UICONTROL Datasets]**&#x200B;을 선택하고 마우스 오른쪽 단추를 클릭한 다음 사용할 데이터 집합의 드롭다운 메뉴에서 **[!UICONTROL Explore Data in Notebook]** 옵션을 선택합니다. 실행 가능한 코드 항목이 전자 필기장 하단에 표시됩니다.
 그리고
-- 읽기 셀을 생성하려면 **[!UICONTROL 노트북의 데이터 탐색]**&#x200B;을 사용합니다.
-- 쓰기 셀을 생성하려면 **[!UICONTROL 전자 필기장에서 데이터 쓰기]**&#x200B;를 사용합니다.
+- 읽기 셀을 생성하려면 **[!UICONTROL Explore Data in Notebook]**&#x200B;을 사용합니다.
+- **[!UICONTROL Write Data in Notebook]**&#x200B;을 사용하여 쓰기 셀을 생성합니다.
 
 ![](../images/jupyterlab/data-access/scala-write-dataset.png)
 
@@ -619,4 +619,3 @@ timedf.show()
 | `-n`,  `--notify` | 쿼리 결과를 알리는 토글 옵션. |
 | `-a`,  `--async` | 이 플래그를 사용하면 쿼리를 비동기적으로 실행하고 쿼리를 실행하는 동안 커널을 해제할 수 있습니다. 쿼리가 완료되지 않은 경우 정의되지 않을 수도 있으므로 쿼리 결과를 변수에 지정할 때는 주의하십시오. |
 | `-d`,  `--display` | 이 플래그를 사용하면 결과가 표시되지 않습니다. |
-
