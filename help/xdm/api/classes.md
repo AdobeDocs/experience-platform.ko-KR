@@ -3,19 +3,19 @@ keywords: Experience Platform;홈;인기 항목;api;API;XDM;XDM 시스템;경험
 solution: Experience Platform
 title: 클래스 API 끝점
 description: 스키마 레지스트리 API의 /classes 끝점을 사용하면 경험 응용 프로그램 내에서 XDM 클래스를 프로그래밍 방식으로 관리할 수 있습니다.
-topic: developer guide
+topic-legacy: developer guide
 exl-id: 7beddb37-0bf2-4893-baaf-5b292830f368
 translation-type: tm+mt
-source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1497'
+source-wordcount: '1495'
 ht-degree: 1%
 
 ---
 
 # 클래스 끝점
 
-모든 경험 데이터 모델(XDM) 스키마는 클래스를 기반으로 해야 합니다. 클래스는 해당 클래스를 기반으로 하는 모든 스키마는 포함해야 하는 공통 속성의 기본 구조와 이러한 스키마에서 사용할 수 있는 믹스를 결정합니다. 또한 스키마의 클래스는 스키마에는 포함할 데이터의 비헤이비어 측면을 결정합니다. 이 양식은 두 가지 유형입니다.
+모든 경험 데이터 모델(XDM) 스키마는 클래스를 기반으로 해야 합니다. 클래스는 해당 클래스를 기반으로 하는 모든 스키마는 포함해야 하는 공통 속성의 기본 구조와 이러한 스키마에서 사용할 수 있는 믹스를 결정합니다. 또한 스키마의 클래스는 스키마에는 포함할 데이터의 비헤이비어 측면을 결정하며, 이 데이터에는 다음 두 가지 유형이 있습니다.
 
 * **[!UICONTROL Record]**:제목 속성에 대한 정보를 제공합니다. 대상은 조직 또는 개인일 수 있습니다.
 * **[!UICONTROL Time-series]**:작업 수행 시 기록 제목에 의해 직접 또는 간접적으로 작업이 수행될 때 시스템의 스냅샷을 제공합니다.
