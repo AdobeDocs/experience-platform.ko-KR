@@ -2,20 +2,20 @@
 keywords: Experience Platform;홈;인기 항목;스키마;스키마;XDM;필드;스키마;비콘;상호 작용 세부 사항;데이터 유형;데이터 유형;데이터 유형;;home;popular topics;schema;fields;schemas;interaction details;data-type;data-type;
 solution: Experience Platform
 title: 비콘 데이터 유형
-topic: overview
+topic-legacy: overview
 description: 이 문서에서는 XDM 개별 프로필 클래스에 대한 개요를 제공합니다.
+exl-id: a3767c8d-a009-49b4-81a4-b084b6e5101a
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '248'
+source-wordcount: '245'
 ht-degree: 3%
 
 ---
 
+# [!UICONTROL Beacon] 데이터 유형
 
-# [!UICONTROL 비콘 ] 데이터 유형
-
-[!UICONTROL 비콘] 은 ID 정보를 모바일 장치가 범위 내에 들어올 때 모바일 애플리케이션에 전달하는 무선 장치를 설명하는 표준 XDM 데이터 유형입니다.
+[!UICONTROL Beacon] 는 모바일 장치가 범위 내에 있을 때 ID 정보를 모바일 응용 프로그램에 전달하는 무선 장치를 설명하는 표준 XDM 데이터 유형입니다.
 
 <img src="../images/data-types/beacon.png" width="450" /><br />
 
@@ -33,7 +33,7 @@ ht-degree: 3%
 
 ## 부록
 
-다음 섹션에는 [!UICONTROL 비콘] 데이터 유형에 대한 추가 정보가 포함되어 있습니다.
+다음 섹션에는 [!UICONTROL Beacon] 데이터 유형에 대한 추가 정보가 포함되어 있습니다.
 
 ## 근접성 {#proximity}에 대해 허용된 값
 
