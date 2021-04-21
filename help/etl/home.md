@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;ETL;etl 통합;ETL 통합
 solution: Experience Platform
 title: Adobe Experience Platform용 ETL 통합 개발
-topic: overview
+topic-legacy: overview
 description: ETL 통합 안내서는 Experience Platform을 위한 고성능 보안 커넥터를 제작하고 데이터를 플랫폼에 인제스트하기 위한 일반적인 단계를 설명합니다.
+exl-id: 7d29b61c-a061-46f8-a31f-f20e4d725655
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '4143'
 ht-degree: 0%
 
 ---
-
 
 # Adobe Experience Platform용 ETL 통합 개발
 
@@ -197,7 +197,7 @@ curl -X GET \
 
 응답 형식은 요청에서 전송된 수락 헤더 유형에 따라 달라집니다. 조회 요청에는 수락 헤더에 `version`이 포함되어야 합니다. 다음 표에서는 룩업에 대한 헤더 승인 기능을 간략하게 설명합니다.
 
-| 수락 | 설명 |
+| Accept | 설명 |
 | ------ | ----------- |
 | `application/vnd.adobe.xed-id+json` | 목록(GET) 요청, 제목, ID 및 버전 |
 | `application/vnd.adobe.xed-full+json; version={major version}` | $refs 및 allOf resolved, 제목 및 설명이 있음 |
@@ -258,7 +258,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/xdms/context/pers
 
 >[!NOTE]
 >
->&quot;schema&quot; 필드가 비어 있거나 완전히 없는 경우, 커넥터는 &quot;schemaRef&quot; 필드를 읽고 이전 단계에 표시된 [스키마 레지스트리 API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)를 사용하여 데이터 세트 스키마](#view-dataset-schema)를 보십시오.[
+>&quot;schema&quot; 필드가 비어 있거나 완전히 없는 경우, 커넥터는 &quot;schemaRef&quot; 필드를 읽고 이전 단계에 표시된 [스키마 레지스트리 API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)를 사용하여 데이터 세트 스키마](#view-dataset-schema)을(를) 보십시오.[
 
 ### &quot;observableSchema&quot; 속성
 
@@ -786,7 +786,7 @@ Adobe Experience Platform은 현재 지연된 데이터를 식별하지 않으�
 
 ## Changelog
 
-| 날짜 | 작업 | 설명 |
+| Date | 작업 | 설명 |
 | ---- | ------ | ----------- |
 | 2019-01-19 | 데이터 세트에서 &quot;필드&quot; 속성을 제거했습니다. | 이전에 데이터 집합은 스키마의 복사본을 포함하는 &quot;필드&quot; 속성을 포함했습니다. 이 기능은 더 이상 사용할 수 없습니다. &quot;fields&quot; 속성이 발견되면 이 속성은 무시되고 대신 &quot;observedSchema&quot; 또는 &quot;schemaRef&quot;가 사용됩니다. |
 | 2019-03-15 | 데이터 집합에 추가된 &quot;schemaRef&quot; 속성 | 데이터 집합의 &quot;schemaRef&quot; 속성에는 데이터 집합의 기반이 되는 XDM 스키마를 참조하는 URI가 포함되어 있으며 데이터 집합에 사용할 수 있는 모든 잠재적인 필드를 나타냅니다. |
