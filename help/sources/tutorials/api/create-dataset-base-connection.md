@@ -2,17 +2,17 @@
 keywords: Experience Platform;홈;인기 항목;데이터 집합 연결 흐름 서비스;흐름 서비스;흐름 서비스 연결
 solution: Experience Platform
 title: Flow Service API를 사용하여 Adobe Experience Platform 데이터 세트 기본 연결 만들기
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Flow Service API를 사용하여 Adobe Experience Platform에 대한 데이터 세트 기본 연결을 만드는 방법을 알아봅니다.
+exl-id: 5e829f4a-954b-4011-a003-c42c7a0d5617
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '721'
 ht-degree: 1%
 
 ---
-
 
 # [!DNL Flow Service] API를 사용하여 [!DNL Experience Platform] 데이터 집합 기본 연결을 만듭니다.
 
