@@ -2,17 +2,17 @@
 keywords: Experience Platform;홈;인기 항목;bigquery;Google;Google;BigQuery
 solution: Experience Platform
 title: Flow Service API를 사용하여 Google BigQuery 소스 연결 만들기
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Flow Service API를 사용하여 Adobe Experience Platform을 Google BigQuery에 연결하는 방법을 학습합니다.
+exl-id: 51f90366-7a0e-49f1-bd57-b540fa1d15af
 translation-type: tm+mt
-source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '616'
 ht-degree: 1%
 
 ---
-
 
 # [!DNL Flow Service] API를 사용하여 [!DNL Google BigQuery] 소스 연결 만들기
 
@@ -129,4 +129,4 @@ curl -X POST \
 
 ## 다음 단계
 
-이 자습서를 따라 [!DNL Flow Service] API를 사용하여 [!DNL BigQuery] 연결을 만들고 연결의 고유 ID 값을 받았습니다. 다음 자습서에서는 흐름 서비스 API](../../explore/database-nosql.md)를 사용하여 데이터베이스 또는 NoSQL 시스템을 탐색하는 방법을 배울 때 이 연결 ID를 사용할 수 있습니다.[
+이 자습서를 따라 [!DNL Flow Service] API를 사용하여 [!DNL BigQuery] 연결을 만들고 연결의 고유 ID 값을 받았습니다. 흐름 서비스 API](../../explore/database-nosql.md)를 사용하여 데이터베이스 또는 NoSQL 시스템을 탐색하는 방법을 배울 때 다음 자습서에서 이 연결 ID를 사용할 수 있습니다.[
