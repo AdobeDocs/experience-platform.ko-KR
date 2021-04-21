@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;데이터 통합;데이터 위치;데이터 관리;리니지;리니지;일괄 처리;인제스트된 데이터
 solution: Experience Platform
 title: 데이터 통합 개요
-topic: overview
+topic-legacy: overview
 description: 이 문서에서는 보다 자세한 정보를 위해 관련 개요 설명서에 대한 링크를 포함하여, 데이터를 플랫폼에 수집하기 위한 3가지 주요 방법을 소개합니다.
+exl-id: c189dd4a-5c59-4189-a18c-a3e45a9ff01d
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '462'
+source-wordcount: '461'
 ht-degree: 14%
 
 ---
-
 
 # 데이터 통합 개요
 
