@@ -3,15 +3,15 @@ keywords: Experience Platform;홈;인기 항목;api;API;XDM;XDM 시스템;경험
 solution: Experience Platform
 title: API 끝점 내보내기/가져오기
 description: 스키마 레지스트리 API의 /export 및/import 끝점을 사용하면 IMS 조직 및 샌드박스 간에 XDM 리소스를 공유할 수 있습니다.
-topic: developer guide
+topic-legacy: developer guide
+exl-id: 33b62f75-2670-42f4-9aac-fa1540cd7d4a
 translation-type: tm+mt
-source-git-commit: 0727ffa0c72bcb6a85de1a13215b691b97889b70
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '502'
+source-wordcount: '500'
 ht-degree: 1%
 
 ---
-
 
 # 끝점 내보내기/가져오기
 
