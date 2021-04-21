@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;DULE;dule
 solution: Experience Platform
 title: 데이터 거버넌스 개요
-topic: overview
+topic-legacy: overview
 description: Adobe Experience Platform 데이터 거버넌스를 사용하면 고객 데이터를 관리하고 데이터 사용에 적용되는 규정, 제한 사항 및 정책을 준수할 수 있습니다. 카탈로그 작성, 데이터 계보, 데이터 사용 표시, 데이터 사용 정책, 데이터 사용 정책, 마케팅 작업을 위한 데이터 사용 제어 등 다양한 수준에서 Experience Platform 내에서 중요한 역할을 합니다
+exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
 translation-type: tm+mt
-source-git-commit: 37c1c98ccba50fa917acc5e93763294f4dde5c36
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1345'
 ht-degree: 0%
 
 ---
-
 
 # 데이터 거버넌스 개요
 
@@ -102,7 +102,7 @@ Adobe Experience Platform [!DNL Data Governance]을 사용하면 고객 데이�
 | 용어 | 정의 |
 |---|---|
 | **계약 레이블** | 계약 &quot;C&quot; 레이블은 계약 의무가 있거나 조직의 데이터 관리 정책과 관련된 데이터를 분류하는 데 사용됩니다. |
-| **사이트 간 데이터** | 사이트 간 데이터는 사이트 내 데이터와 외부 데이터의 조합 또는 여러 외부 소스의 데이터 조합을 포함하여 여러 사이트의 데이터를 조합하는 것입니다. |
+| **사이트 간 데이터** | 사이트 간 데이터는 사이트 내 데이터와 오프사이트 데이터의 조합 또는 여러 외부 소스의 데이터 조합을 포함하여 여러 사이트의 데이터를 조합한 것입니다. |
 | **데이터 거버넌스** | 데이터 거버넌스는 데이터 사용과 관련된 규정 및 기업 정책을 준수하도록 하는 데 사용되는 전략과 기술을 포함합니다. |
 | **데이터 관리자** | 데이터 관리자는 조직의 데이터 에셋을 관리, 감독 및 관리하는 담당자입니다. 또한 데이터 관리자는 데이터 거버넌스 정책을 안전하게 보호하고 정부 규정 및 조직 정책을 준수하도록 유지 관리할 수 있습니다. |
 | **데이터 사용 레이블** | 데이터 사용 레이블은 사용자에게 개인 정보 관련 고려 사항 및 계약 조건을 반영하는 데이터를 분류하여 규정 및 기업 정책을 준수하도록 합니다. |
@@ -115,7 +115,7 @@ Adobe Experience Platform [!DNL Data Governance]을 사용하면 고객 데이�
 | **정책** | 데이터 거버넌스 프레임워크에서 정책은 특정 데이터에 대해 허용되거나 허용되지 않는 마케팅 작업의 종류를 설명하는 규칙입니다. |
 | **중요 레이블** | 민감한 &quot;S&quot; 레이블은 사용자와 조직에서 민감한 데이터를 분류하는 데 사용됩니다. |
 
-## Journey Orchestration용
+## 추가 리소스
 
 다음 비디오는 [!DNL Data Governance] 프레임워크에 대한 이해를 지원하기 위한 것입니다.
 
