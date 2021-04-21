@@ -7,18 +7,14 @@ type: Tutorial
 description: Adobe Experience Platform UI를 사용하여 Amazon Kinesis 소스 연결을 만드는 방법을 알아봅니다.
 exl-id: 4152e48b-bec7-4b05-a172-eea71c9d9880
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d6f1521470b8dc630060584189690545c724de6b
 workflow-type: tm+mt
-source-wordcount: '464'
+source-wordcount: '448'
 ht-degree: 1%
 
 ---
 
 # UI에 [!DNL Amazon Kinesis] 소스 연결 만들기
-
->[!NOTE]
->
->[!DNL Amazon Kinesis] 커넥터가 베타에 있습니다. 베타 레이블이 지정된 커넥터 사용에 대한 자세한 내용은 [소스 개요](../../../../home.md#terms-and-conditions)를 참조하십시오.
 
 Adobe Experience Platform의 소스 커넥터는 예약된 기준에 따라 외부 소스 데이터를 인제스트하는 기능을 제공합니다. 이 자습서에서는 [!DNL Platform] 사용자 인터페이스를 사용하여 [!DNL Amazon Kinesis](이하 [!DNL "Kinesis"]) 소스 커넥터를 인증하는 단계를 제공합니다.
 
