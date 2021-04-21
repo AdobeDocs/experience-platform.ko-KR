@@ -3,12 +3,12 @@ keywords: Experience Platform;홈;인기 항목;api;XDM;XDM;경험 데이터 모
 solution: Experience Platform
 title: 혼합 API 끝점
 description: 스키마 레지스트리 API의 /mixins 종단점을 사용하면 경험 응용 프로그램 내에서 XDM 믹스를 프로그래밍 방식으로 관리할 수 있습니다.
-topic: developer guide
+topic-legacy: developer guide
 exl-id: 93ba2fe3-0277-4c06-acf6-f236cd33252e
 translation-type: tm+mt
-source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1136'
+source-wordcount: '1134'
 ht-degree: 2%
 
 ---
