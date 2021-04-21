@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;옵트아웃;세그멘테이션 서비스;세그멘테이션 서비스;옵트아웃;옵트아웃;옵트아웃;옵트아웃
 solution: Experience Platform
 title: 세그먼트에서 옵트아웃 요청 준수
-topic: overview
-description: 'Adobe Experience Platform을 사용하면 고객은 실시간 고객 프로필] 내에서 데이터의 사용 및 저장과 관련된 옵트아웃 요청을 보낼 수 있습니다. 이러한 수신 거부 요청은 캘리포니아 주민들에게 개인 데이터를 액세스 및 삭제할 권리, 그리고 개인 데이터가 판매 또는 공개(및 누구에게)되었는지 알 수 있는 권리를 제공하는 CPA(California Consumer Privacy Act)의 일부입니다. '
+topic-legacy: overview
+description: Adobe Experience Platform을 사용하면 고객은 실시간 고객 프로필] 내에서 데이터의 사용 및 저장과 관련된 옵트아웃 요청을 보낼 수 있습니다. 이러한 수신 거부 요청은 캘리포니아 주민들에게 개인 데이터를 액세스 및 삭제할 권리, 그리고 개인 데이터가 판매 또는 공개(및 누구에게)되었는지 알 수 있는 권리를 제공하는 CPA(California Consumer Privacy Act)의 일부입니다.
+exl-id: fe851ce3-60db-4984-a73c-f9c5964bfbad
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1033'
+source-wordcount: '1013'
 ht-degree: 0%
 
 ---
-
 
 # 세그먼트에서 옵트아웃 요청 준수
 
@@ -112,15 +112,15 @@ CPA 옵트아웃 플래그가 표시된 프로필이 세그먼트에 포함되�
 
 ### 일반 옵트아웃
 
-[!DNL Segmentation] &quot;[!UICONTROL 일반 옵트아웃]&quot; 플래그가 포함된 모든 프로파일을 자동으로 처리합니다. 즉, 해당 프로필은 기본적으로 대상 또는 내보내기에 포함되지 않습니다. 하지만 옵트아웃 프로필이 대상 및 마케팅 활동에 포함되지 않도록 적절한 필드를 추가하는 것이 좋습니다.
+[!DNL Segmentation] &quot;[!UICONTROL General Opt-Out]&quot; 플래그가 포함된 모든 프로파일을 자동으로 처리합니다. 즉, 해당 프로필은 기본적으로 대상 또는 내보내기에 포함되지 않습니다. 하지만 옵트아웃 프로필이 대상 및 마케팅 활동에 포함되지 않도록 적절한 필드를 추가하는 것이 좋습니다.
 
-이 작업은 **[!UICONTROL 개인 정보 옵트아웃]** 특성을 추가하여 사용자 인터페이스를 사용하여 수행할 수 있습니다. 이 경우 세그먼트는 선택한 사람만 포함하도록 설정됩니다(즉, 프로필에 일반적인 옵트아웃 플래그가 없음을 의미합니다. 이것은 &quot;[!UICONTROL 옵트아웃 유형]&quot;이 &quot;[!UICONTROL 일반 옵트아웃]&quot;이고 &quot;[!UICONTROL 옵트아웃 값]&quot;이 &quot;[!UICONTROL 옵트인]&quot;이라고 선언하여 수행됩니다.
+이 작업은 **[!UICONTROL Privacy Opt-Outs]** 특성을 추가하여 사용자 인터페이스를 사용하여 수행할 수 있습니다. 이 경우 세그먼트는 선택한 사람만 포함하도록 설정됩니다(즉, 프로필에 일반적인 옵트아웃 플래그가 없음을 의미합니다. 이것은 &quot;[!UICONTROL Opt-Out Type]&quot;이 &quot;[!UICONTROL General Opt-Out]&quot;이고 &quot;[!UICONTROL Opt-Out Value]&quot;이 &quot;[!UICONTROL Opt-in]&quot;임을 선언하여 수행됩니다.
 
 ![](images/opt-outs/segment-general-opt-out.png)
 
 ### 판매/공유 옵트아웃
 
-사용자의 프로필에 판매/공유 옵트아웃 플래그가 설정되어 있는 경우 이 프로필을 더 이상 세그먼트 생성 또는 마케팅 활동에 사용하지 않아야 합니다. 이 플래그가 적용되도록 하려면 &quot;[!UICONTROL 옵트아웃 유형]&quot;이 &quot;[!UICONTROL 영업 공유 옵트아웃]&quot;이어야 하며 &quot;[!UICONTROL 옵트아웃 값]&quot;은 &quot;[!UICONTROL 옵트인]&quot;이어야 합니다.
+사용자의 프로필에 판매/공유 옵트아웃 플래그가 설정되어 있는 경우 이 프로필을 더 이상 세그먼트 생성 또는 마케팅 활동에 사용하지 않아야 합니다. 이 플래그가 적용되도록 하려면 &quot;[!UICONTROL Opt-Out Type]&quot;이 &quot;[!UICONTROL Sales Sharing Opt-Out]&quot;이고 &quot;[!UICONTROL Opt-Out Value]&quot;은 &quot;[!UICONTROL Opt-in]&quot;과(와) 같아야 합니다.
 
 ![](images/opt-outs/segment-sales-sharing-opt-out.png)
 
