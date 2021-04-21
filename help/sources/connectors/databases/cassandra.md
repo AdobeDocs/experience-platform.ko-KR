@@ -2,10 +2,10 @@
 keywords: Experience Platform;홈;인기 항목;Apache Cassandra;Apache cassandra;Cassandra;Cassandra
 solution: Experience Platform
 title: Apache Cassandra 소스 커넥터 개요
-topic: overview
+topic-legacy: overview
 description: API를 사용하여 Apache Cassandra를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '148'
 ht-degree: 0%
