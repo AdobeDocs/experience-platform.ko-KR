@@ -2,16 +2,16 @@
 keywords: Experience Platform;시작하기;특성 ai;인기 항목;Getting started;attribution ai;popular topics
 solution: Experience Platform, Intelligent Services
 title: Attribution AI 시작하기
-topic: Getting started
+topic-legacy: Getting started
 description: 다음 가이드를 사용하려면 Attribution AI 사용과 관련된 다양한 Adobe Experience Platform 서비스에 대해 이해해야 합니다. 자습서를 시작하기 전에 다음 문서를 검토하십시오.
+exl-id: ab269c24-97ac-4da9-9b6c-7d2dde61f0dc
 translation-type: tm+mt
-source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 0%
 
 ---
-
 
 # Attribution AI 시작하기
 
