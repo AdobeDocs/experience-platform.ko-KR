@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;스키마;스키마;열거형;기본 ID;기본 ID;XDM 개별 프로필;경험 이벤트;XDM 경험 이벤트;XDM ExperienceEvent;experienceEvent;experienceEvent;XDM 경험 이벤트;스키마 디자인;모범 사례
 solution: Experience Platform
 title: 데이터 모델링에 대한 우수 사례
-topic: overview
+topic-legacy: overview
 description: 이 문서에서는 XDM(Experience Data Model) 스키마 및 Adobe Experience Platform에서 사용할 스키마를 작성하기 위한 기본 블록, 원칙 및 모범 사례에 대해 설명합니다.
+exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '2507'
+source-wordcount: '2502'
 ht-degree: 1%
 
 ---
-
 
 # 데이터 모델링을 위한 모범 사례
 
@@ -202,11 +202,11 @@ Experience Platform은 다음 Adobe 응용 프로그램과 관련된 데이터�
 * Adobe Campaign
 * Adobe Target
 
-예를 들어 [[!UICONTROL Adobe Analytics ExperienceEvent Template Mixin]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json)에서는 [!DNL Analytics] 특정 필드를 XDM 스키마에 매핑할 수 있습니다. 작업 중인 Adobe 응용 프로그램에 따라 스키마에 Adobe 제공 믹스를 사용해야 합니다.
+예를 들어 [[!UICONTROL Adobe Analytics ExperienceEvent Template Mixin]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json)에서는 [!DNL Analytics] 관련 필드를 XDM 스키마에 매핑할 수 있습니다. 작업 중인 Adobe 응용 프로그램에 따라 스키마에 Adobe 제공 믹스를 사용해야 합니다.
 
 <img src="../images/best-practices/analytics-mixin.png" width="700"><br>
 
-Adobe 응용 프로그램 믹스는 시스템 생성 읽기 전용 개체인 `identityMap` 필드를 사용하여 기본 ID를 자동으로 할당합니다. 이 개체는 개별 고객의 표준 ID 값을 매핑합니다.
+Adobe 응용 프로그램 믹스는 개별 고객에 대한 표준 ID 값을 매핑하는 시스템 생성 읽기 전용 개체인 `identityMap` 필드를 사용하여 기본 ID를 자동으로 할당합니다.
 
 Adobe Analytics의 경우 ECID가 기본 기본 ID입니다. 고객이 ECID 값을 제공하지 않으면 기본 ID가 대신 AAID로 기본 설정됩니다.
 
