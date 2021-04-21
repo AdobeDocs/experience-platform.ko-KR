@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;일괄 작성;카탈로그 서비스;api
 solution: Experience Platform
 title: API에서 일괄 처리 만들기
-topic: developer guide
+topic-legacy: developer guide
 description: 카탈로그 API의 /batches 끝점에 POST 요청을 하여 배치를 만들 수 있습니다.
+exl-id: 1d2cbca9-1cd6-4b89-9b77-3687268bd849
 translation-type: tm+mt
-source-git-commit: 8a213ac0ef1ac0f9c42e4b880b24157d28878bf1
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '117'
 ht-degree: 3%
 
 ---
-
 
 # 일괄 처리 만들기
 
