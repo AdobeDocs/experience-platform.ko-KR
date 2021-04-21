@@ -1,15 +1,15 @@
 ---
 title: Adobe Experience Platform 웹 SDK를 사용하여 고객 동의 데이터 처리
-topic: getting started
+topic-legacy: getting started
 description: Adobe 2.0 표준을 사용하여 Adobe Experience Platform에서 고객 동의 데이터를 처리하기 위해 Adobe Experience Platform Web SDK를 통합하는 방법을 알아봅니다.
+exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
 translation-type: tm+mt
-source-git-commit: fee3f005ca3679f8639cea45c16150090b2a1e0f
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1213'
+source-wordcount: '1211'
 ht-degree: 0%
 
 ---
-
 
 # Adobe 2.0 표준을 사용하여 고객 동의 데이터를 처리하기 위해 플랫폼 웹 SDK 통합
 
