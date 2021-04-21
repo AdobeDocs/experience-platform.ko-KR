@@ -3,15 +3,15 @@ keywords: Experience Platform;홈;인기 항목;api;XDM;XDM 시스템;경험 데
 solution: Experience Platform
 title: UI에서 관계 필드 정의
 description: Experience Platform 사용자 인터페이스에서 관계 필드를 정의하는 방법을 알아봅니다.
-topic: user guide
+topic-legacy: user guide
+exl-id: 8a6be545-0edb-4b9c-b164-e44a7a5f54f5
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '249'
 ht-degree: 0%
 
 ---
-
 
 # UI에서 관계 필드 정의
 
