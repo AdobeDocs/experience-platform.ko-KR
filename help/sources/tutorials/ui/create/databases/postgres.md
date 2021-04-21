@@ -2,17 +2,17 @@
 keywords: Experience Platform;홈;인기 항목;PSQL;psql;PostgreSQL
 solution: Experience Platform
 title: UI에서 PostgreSQL 소스 연결 만들기
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Adobe Experience Platform UI를 사용하여 PostgreSQL 소스 연결을 만드는 방법을 알아봅니다.
+exl-id: e556d867-a1eb-4900-b8a9-189666a4f3f1
 translation-type: tm+mt
-source-git-commit: 8851e11e956b393e56714d4d48870b7f68947c18
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '441'
+source-wordcount: '439'
 ht-degree: 1%
 
 ---
-
 
 # UI에 [!DNL PostgreSQL] 소스 연결 만들기
 
