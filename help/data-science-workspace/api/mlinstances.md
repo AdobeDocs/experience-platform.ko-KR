@@ -2,16 +2,16 @@
 keywords: Experience Platform;개발자 가이드;끝점;데이터 과학 작업 공간;인기 항목;mlinstances;sensei 기계 학습 api
 solution: Experience Platform
 title: MLInests API 끝점
-topic: Developer guide
+topic-legacy: Developer guide
 description: MLInstance는 교육 매개 변수, 점수 매개 변수 또는 하드웨어 리소스 구성을 정의하는 적절한 구성 세트와 기존 엔진의 결합입니다.
+exl-id: e78cda69-1ff9-47ce-b25d-915de4633e11
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '619'
 ht-degree: 4%
 
 ---
-
 
 # MLInests 끝점
 
