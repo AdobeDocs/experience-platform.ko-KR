@@ -2,17 +2,17 @@
 keywords: Experience Platform;홈;인기 항목;Azure Blob;azure blob;Azure Blob 커넥터
 solution: Experience Platform
 title: UI에서 Azure Blob 소스 연결 만들기
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: 플랫폼 사용자 인터페이스를 사용하여 Azure Blob 소스 커넥터를 만드는 방법을 알아봅니다.
+exl-id: 0e54569b-7305-4065-981e-951623717648
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '644'
+source-wordcount: '619'
 ht-degree: 1%
 
 ---
-
 
 # UI에 [!DNL Azure Blob] 소스 연결 만들기
 
@@ -50,29 +50,29 @@ ht-degree: 1%
 
 필요한 자격 증명을 수집했으면 아래 단계에 따라 [!DNL Blob] 계정을 플랫폼에 연결할 수 있습니다.
 
-[플랫폼 UI](https://platform.adobe.com)의 왼쪽 탐색 막대에서 **[!UICONTROL 소스]**&#x200B;를 선택하여 [!UICONTROL 소스] 작업 영역에 액세스합니다. [!UICONTROL 카탈로그] 화면에는 계정을 만들 수 있는 다양한 소스가 표시됩니다.
+[플랫폼 UI](https://platform.adobe.com)의 왼쪽 탐색 막대에서 **[!UICONTROL Sources]**&#x200B;를 선택하여 [!UICONTROL Sources] 작업 영역에 액세스합니다. [!UICONTROL Catalog] 화면에는 계정을 만들 수 있는 다양한 소스가 표시됩니다.
 
 화면의 왼쪽에 있는 카탈로그에서 적절한 범주를 선택할 수 있습니다. 또는 검색 막대를 사용하여 작업할 특정 소스를 찾을 수 있습니다.
 
-[!UICONTROL 클라우드 스토리지] 범주에서 **[!UICONTROL Azure Blob 저장소]**&#x200B;을 선택한 다음 **[!UICONTROL 데이터 추가]**&#x200B;를 선택합니다.
+[!UICONTROL Cloud storage] 범주에서 **[!UICONTROL Azure Blob Storage]**&#x200B;을 선택한 다음 **[!UICONTROL Add data]**&#x200B;를 선택합니다.
 
 ![카탈로그](../../../../images/tutorials/create/blob/catalog.png)
 
-**[!UICONTROL Azure Blob 저장소에 연결]** 페이지가 나타납니다. 이 페이지에서 새 자격 증명이나 기존 자격 증명을 사용할 수 있습니다.
+**[!UICONTROL Connect to Azure Blob Storage]** 페이지가 나타납니다. 이 페이지에서 새 자격 증명이나 기존 자격 증명을 사용할 수 있습니다.
 
 ### 기존 계정
 
-기존 계정을 사용하려면 새 데이터 흐름을 만들 [!DNL Blob] 계정을 선택한 다음 **[!UICONTROL 다음]**&#x200B;을 선택하여 계속 진행합니다.
+기존 계정을 사용하려면 새 데이터 흐름을 만들 [!DNL Blob] 계정을 선택한 다음 **[!UICONTROL Next]**&#x200B;을 선택하여 계속 진행합니다.
 
 ![기존](../../../../images/tutorials/create/blob/existing.png)
 
 ### 새 계정
 
-새 계정을 만드는 경우 **[!UICONTROL 새 계정]**&#x200B;을 선택한 다음 새 [!DNL Blob] 계정에 대한 이름과 옵션 설명을 입력합니다.
+새 계정을 만드는 경우 **[!UICONTROL New account]**&#x200B;을 선택한 다음 새 [!DNL Blob] 계정에 대한 이름과 옵션 설명을 입력합니다.
 
 **연결 문자열을 사용하여 인증**
 
-[!DNL Blob] 커넥터는 액세스할 수 있는 다른 인증 유형을 제공합니다. 연결 문자열 기반 자격 증명을 사용하려면 [!UICONTROL 계정 인증] 아래에서 **[!UICONTROL ConnectionString]**&#x200B;을 선택합니다.
+[!DNL Blob] 커넥터는 액세스할 수 있는 다른 인증 유형을 제공합니다. [!UICONTROL Account authentication] 아래에서 **[!UICONTROL ConnectionString]** 을 선택하여 연결 문자열 기반 자격 증명을 사용합니다.
 
 ![연결 문자열](../../../../images/tutorials/create/blob/connectionstring.png)
 
@@ -80,7 +80,7 @@ ht-degree: 1%
 
 SAS(Shared Access Signature) URI를 사용하면 [!DNL Blob] 계정에 대한 보안 위임 인증을 허용합니다. SAS 기반 인증을 통해 특정 리소스에 대한 규정 및 권한, 시작 및 만료 날짜를 설정할 수 있으므로 SAS를 사용하여 액세스 수준이 다른 인증 자격 증명을 만들 수 있습니다.
 
-**[!UICONTROL SasURIAuthentication]**&#x200B;을 선택한 다음 [!DNL Blob] SAS URI를 제공합니다. 계속하려면 **[!UICONTROL 소스]**&#x200B;에 연결을 선택합니다.
+**[!UICONTROL SasURIAuthentication]**&#x200B;을 선택한 다음 [!DNL Blob] SAS URI를 제공합니다. 계속하려면 **[!UICONTROL Connect to source]**&#x200B;을 선택합니다.
 
 ![sas-uri](../../../../images/tutorials/create/blob/sas-uri.png)
 
