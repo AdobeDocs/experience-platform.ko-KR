@@ -2,17 +2,17 @@
 keywords: Experience Platform;홈;인기 항목;api;API;XDM;XDM 시스템;경험 데이터 모델;경험 데이터 모델;경험 데이터 모델;데이터 모델;데이터 모델;스키마 레지스트리;스키마 레지스트리;스키마;스키마;스키마;스키마;스키마;스키마;만들기;만들기
 solution: Experience Platform
 title: 스키마 레지스트리 API를 사용하여 스키마 만들기
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: 이 자습서에서는 스키마 레지스트리 API를 사용하여 표준 클래스를 사용하여 스키마를 구성하는 단계를 안내합니다.
+exl-id: fa487a5f-d914-48f6-8d1b-001a60303f3d
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '2373'
 ht-degree: 1%
 
 ---
-
 
 # [!DNL Schema Registry] API를 사용하여 스키마 만들기
 
