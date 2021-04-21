@@ -2,16 +2,16 @@
 keywords: Experience Platform;개발자 가이드;끝점;데이터 과학 작업 공간;인기 항목;엔진;sensei 기계 학습 api
 solution: Experience Platform
 title: 엔진 API 끝점
-topic: Developer guide
+topic-legacy: Developer guide
 description: 엔진은 데이터 과학 작업 공간의 머신 러닝 모델을 위한 기반입니다. 특정 문제를 해결하는 기계 학습 알고리즘, 기능 엔지니어링 수행 기능 파이프라인 또는 두 가지 모두를 포함합니다.
+exl-id: 7c670abd-636c-47d8-bd8c-5ce0965ce82f
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1165'
 ht-degree: 3%
 
 ---
-
 
 # 엔진 끝점
 
