@@ -3,16 +3,16 @@ keywords: Experience Platform;홈;인기 항목;모니터 계정;데이터 흐�
 description: 대상을 사용하면 Adobe Experience Platform에서 수많은 외부 파트너에 대한 데이터를 활성화할 수 있습니다. 이 자습서에서는 Experience Platform 사용자 인터페이스를 사용하여 대상에 대한 데이터 흐름 모니터링 방법에 대한 지침을 제공합니다.
 solution: Experience Platform
 title: UI에서 대상에 대한 데이터 흐름 모니터링
-topic: overview
+topic-legacy: overview
 type: Tutorial
+exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
 translation-type: tm+mt
-source-git-commit: f8186e467dc982003c6feb01886ed16d23572955
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '442'
+source-wordcount: '430'
 ht-degree: 1%
 
 ---
-
 
 # UI의 대상에 대한 데이터 흐름 모니터링
 
@@ -27,7 +27,7 @@ ht-degree: 1%
 
 ## 데이터 흐름 모니터링
 
-플랫폼 UI 내의 **[!UICONTROL 대상]** 작업 영역에서 **[!UICONTROL 찾아보기]** 탭으로 이동하여 보려는 대상의 이름을 선택합니다.
+플랫폼 UI 내의 **[!UICONTROL Destinations]** 작업 영역에서 **[!UICONTROL Browse]** 탭으로 이동하여 보려는 대상의 이름을 선택합니다.
 
 ![](../assets/ui/monitor-destinations/select-destination.png)
 
@@ -42,12 +42,12 @@ ht-degree: 1%
 | 처리 중 | `Processing` 상태는 데이터 흐름이 아직 활성화되지 않았음을 나타냅니다. 새 데이터 흐름 만들기 직후 이 상태가 발생하는 경우가 많습니다. |
 | 오류 | `Error` 상태는 데이터 흐름 활성화 프로세스가 중단되었음을 나타냅니다. |
 
-## [!UICONTROL Dataflow 실행]
+## [!UICONTROL Dataflow runs]
 
-[!UICONTROL 데이터 흐름 실행] 탭에서는 데이터 흐름 실행에 대한 지표 데이터를 일괄 처리 대상으로 제공합니다. 프로필 레코드에 대한 다음 합계와 함께 개별 실행 및 해당 특정 지표 목록이 표시됩니다.
+[!UICONTROL Dataflow runs] 탭은 데이터 흐름 실행에 대한 지표 데이터를 일괄 처리 대상으로 제공합니다. 프로필 레코드에 대한 다음 합계와 함께 개별 실행 및 해당 특정 지표 목록이 표시됩니다.
 
-- **[!UICONTROL 프로필 레코드 활성화]**:활성화용으로 만들거나 업데이트된 프로필 레코드의 총 수입니다.
-- **[!UICONTROL 건너뛴 프로필 레코드]**:프로필 종료 또는 누락된 특성을 기반으로 활성화용으로 건너뛴 프로필 레코드의 총 수입니다.
+- **[!UICONTROL Profile records activated]**:활성화용으로 만들거나 업데이트된 프로필 레코드의 총 수입니다.
+- **[!UICONTROL Profile records skipped]**:프로필 종료 또는 누락된 특성을 기반으로 활성화용으로 건너뛴 프로필 레코드의 총 수입니다.
 
 ![](../assets/ui/monitor-destinations/dataflow-runs.png)
 
