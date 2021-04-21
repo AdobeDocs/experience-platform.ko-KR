@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;인제스트된 데이터;문제 해결;faq;인제스트;일괄 처리;일괄 처리 통합;;home;popular topics;insourcing;faq;ingestion;batch ingestion;
 solution: Experience Platform
 title: 일괄 처리 통합 문제 해결 안내서
-topic: troubleshooting
-description: '이 설명서는 Adobe Experience Platform Batch Data Ingestion API와 관련하여 자주 묻는 질문에 대한 답변을 제공하는 데 도움이 됩니다. '
+topic-legacy: troubleshooting
+description: 이 설명서는 Adobe Experience Platform Batch Data Ingestion API와 관련하여 자주 묻는 질문에 대한 답변을 제공하는 데 도움이 됩니다.
+exl-id: 0a750d7e-a4ee-4a79-a697-b4b732478b2b
 translation-type: tm+mt
-source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1416'
 ht-degree: 1%
 
 ---
-
 
 # 일괄 처리 통합 문제 해결 가이드
 
@@ -269,7 +269,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID
 
 | 상태 코드 | 설명 |
 | ----------- | ----------- |
-| 106년 | 데이터 집합 파일이 비어 있습니다. |
+| 106 | 데이터 집합 파일이 비어 있습니다. |
 | 118년 | CSV 파일에 빈 머리글 행이 있습니다. |
 | 200 | 일괄 처리가 승인되어 활성 또는 실패와 같은 최종 상태로 전환됩니다. 제출한 후 `GetBatch` 끝점을 사용하여 배치를 모니터링할 수 있습니다. |
 | 400 | 잘못된 요청. 일괄 처리에서 누락되거나 겹쳐진 청크가 있는 경우 반환됩니다. |
