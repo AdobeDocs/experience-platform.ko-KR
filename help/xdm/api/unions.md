@@ -3,12 +3,12 @@ keywords: Experience Platform;홈;인기 항목;api;XDM;XDM 시스템;경험 데
 solution: Experience Platform
 title: 조합 API 끝점
 description: 스키마 레지스트리 API의 /union 끝점을 사용하면 경험 응용 프로그램에서 XDM 결합 스키마를 프로그래밍 방식으로 관리할 수 있습니다.
-topic: developer guide
+topic-legacy: developer guide
 exl-id: d0ece235-72e8-49d9-856b-5dba44e16ee7
 translation-type: tm+mt
-source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '902'
+source-wordcount: '900'
 ht-degree: 1%
 
 ---
