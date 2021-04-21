@@ -3,15 +3,15 @@ keywords: Experience Platform;홈;인기 항목;api;API;XDM;XDM 시스템;경험
 solution: Experience Platform
 title: 스키마 레지스트리 API 안내서 부록
 description: 이 문서에서는 스키마 레지스트리 API 작업과 관련된 추가 정보를 제공합니다.
-topic: developer guide
+topic-legacy: developer guide
+exl-id: 2ddc7fe8-dd0b-4cf9-8561-e89fcdadbfce
 translation-type: tm+mt
-source-git-commit: b395535cbe7e4030606ee2808eb173998f5c32e0
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '772'
 ht-degree: 0%
 
 ---
-
 
 # 스키마 레지스트리 API 안내서 부록
 
