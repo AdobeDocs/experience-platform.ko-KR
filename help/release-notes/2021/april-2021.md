@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: April 21, 2021
 author: ens72741
 translation-type: tm+mt
-source-git-commit: 1072b95469fac19a2e03ca4eacaae05250e11be8
+source-git-commit: f0350be580394516016373b1754a49951b58e846
 workflow-type: tm+mt
-source-wordcount: '868'
+source-wordcount: '883'
 ht-degree: 10%
 
 ---
@@ -95,5 +95,6 @@ Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 
 | 기능 | 설명 |
 | ------- | ----------- |
 | [!DNL Marketo Engage] (베타) | 이제 UI를 사용하여 [!DNL Marketo Engage] 소스 연결을 만들어 B2B 데이터를 플랫폼에 연결된 애플리케이션을 사용하여 최신 상태로 유지할 수 있습니다. 자세한 내용은 [[!DNL Marketo Engage] 소스 커넥터 설명서](../../sources/connectors/adobe-applications/marketo/marketo.md)를 참조하십시오. |
+| GA로 이동하는 베타 소스 | 다음 소스는 베타에서 GA로 승격되었습니다. <ul><li>[[!DNL Amazon Kinesis]](../../sources/connectors/cloud-storage/kinesis.md)</li><li>[[!DNL Azure EventHubs]](../../sources/connectors/cloud-storage/eventhub.md)</li><li>[[!DNL HTTP API]](../../sources/connectors/streaming/http.md)</li><li>[[!DNL MariaDB]](../../sources/connectors/databases/mariadb.md)</li><li>[[!DNL Microsoft SQL Server]](../../sources/connectors/databases/sql-server.md)</li><li>[[!DNL Oracle]](../../sources/connectors/databases/oracle.md)</li></ul> |
 
 소스에 대한 자세한 내용은 [소스 개요](../../sources/home.md)를 참조하십시오.
