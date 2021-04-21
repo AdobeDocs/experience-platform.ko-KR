@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;목록 ID;목록 클러스터
 solution: Experience Platform
 title: 클러스터의 모든 ID 나열
-topic: API guide
+topic-legacy: API guide
 description: 네임스페이스와 관계없이 ID 그래프에 관련된 ID는 해당 ID 그래프에서 동일한 "클러스터"의 일부로 간주됩니다. 아래 옵션은 모든 클러스터 구성원에 액세스할 수 있는 수단을 제공합니다.
+exl-id: 0fb9eac9-2dc2-4881-8598-02b3053d0b31
 translation-type: tm+mt
-source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '359'
 ht-degree: 1%
 
 ---
-
 
 # 클러스터의 모든 ID 나열
 
