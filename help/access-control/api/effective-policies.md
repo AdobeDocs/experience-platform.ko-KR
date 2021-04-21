@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;효과적인 정책;액세스 제어 api
 solution: Experience Platform
 title: 효과적인 정책 API 끝점
-topic: developer guide
+topic-legacy: developer guide
 description: Adobe Experience Platform의 액세스 제어를 사용하면 Adobe Admin Console을 사용하여 다양한 플랫폼 기능에 대한 역할 및 권한을 관리할 수 있습니다. 이 문서는 Adobe Experience Platform용 액세스 제어 API를 사용하여 효과적인 정책을 보는 방법에 대한 지침으로 제공됩니다.
+exl-id: 555d73db-115d-4f4c-8bd2-b91477799591
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '320'
+source-wordcount: '317'
 ht-degree: 1%
 
 ---
-
 
 # 효과적인 정책 끝점
 
@@ -25,7 +25,7 @@ POST /acl/effective-policies
 
 **요청**
 
-다음 요청은 현재 사용자의 &quot;[!UICONTROL 데이터 집합 관리]&quot; 권한에 대한 정보와 &quot;[!UICONTROL 스키마]&quot; 리소스 유형에 대한 액세스를 검색합니다.
+다음 요청은 현재 사용자의 &quot;[!UICONTROL Manage Datasets]&quot; 권한 및 &quot;[!UICONTROL schemas]&quot; 리소스 유형에 대한 액세스 정보를 검색합니다.
 
 ```shell
 curl -X POST \
