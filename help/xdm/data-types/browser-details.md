@@ -2,20 +2,20 @@
 keywords: Experience Platform;홈;인기 항목;스키마;스키마;XDM;필드;스키마;스키마;브라우저;브라우저 세부 정보;데이터 유형;데이터 유형;데이터 유형;
 solution: Experience Platform
 title: 브라우저 세부 사항 데이터 유형
-topic: overview
+topic-legacy: overview
 description: 이 문서에서는 브라우저 세부 정보 XDM 데이터 유형에 대한 개요를 제공합니다.
+exl-id: c67ff8bc-0614-4422-9bb7-689b98d7086d
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '262'
+source-wordcount: '258'
 ht-degree: 6%
 
 ---
 
+# [!UICONTROL Browser details] 데이터 유형
 
-# [!UICONTROL 브라우저 ] 세부 정보데이터 유형
-
-[!UICONTROL 브라우저 ] 세부 사항은 브라우저 또는 애플리케이션과 관련된 세부 사항을 설명하는 표준 XDM 데이터 유형입니다.
+[!UICONTROL Browser details] 브라우저 또는 응용 프로그램과 관련된 세부 사항을 설명하는 표준 XDM 데이터 유형입니다.
 
 <img src="../images/data-types/browser-details.png" width="450" /><br />
 
