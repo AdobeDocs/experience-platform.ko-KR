@@ -2,17 +2,17 @@
 keywords: Experience Platform;JupiterLab;노트북;데이터 과학 작업 영역;인기 있는 주제;Git;Github;Git
 solution: Experience Platform
 title: Git을 사용하여 JupiterLab에서 공동 작업
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Git은 소프트웨어 개발 중에 소스 코드의 변경 사항을 추적하기 위한 분산 버전 제어 시스템입니다. Git은 데이터 과학 작업 공간 JupiterLab 환경 내에 사전 설치되어 있습니다.
+exl-id: d7b766f7-b97d-4007-bc53-b83742425047
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '284'
+source-wordcount: '281'
 ht-degree: 1%
 
 ---
-
 
 # [!DNL Git]을(를) 사용하여 [!DNL JupyterLab]에서 공동 작업
 
@@ -24,13 +24,13 @@ ht-degree: 1%
 >
 > 사용하려는 Git 서버를 인터넷을 통해 액세스할 수 있어야 합니다.
 
-[!DNL Data Science Workspace JupyterLab] 환경은 호스팅된 환경이며 회사 방화벽 내에 배포되지 않으므로 연결한 Git 서버는 공용 인터넷에서 액세스할 수 있어야 합니다. 이것은 [GitHub](https://github.com/)에 있는 공용 또는 비공개 저장소이거나, 자신을 호스팅하기로 결정한 [!DNL Git] 서버의 다른 인스턴스일 수 있습니다.
+[!DNL Data Science Workspace JupyterLab] 환경은 호스팅된 환경이며 회사 방화벽 내에 배포되지 않으므로 연결하는 Git 서버는 공용 인터넷에서 액세스할 수 있어야 합니다. 이것은 [GitHub](https://github.com/)에 있는 공용 또는 비공개 저장소이거나, 자신을 호스팅하기로 결정한 [!DNL Git] 서버의 다른 인스턴스일 수 있습니다.
 
 ## [!DNL Git]을(를) [!DNL Data Science Workspace JupyterLab Notebooks] 환경에 연결
 
 [!DNL Adobe Experience Platform]을 시작하고 [[!DNL JupyterLabs Notebooks]](https://platform.adobe.com/notebooks/jupyterLab) 환경으로 이동하여 시작합니다.
 
-[!DNL JupyterLab] 내에서 **[!UICONTROL 파일]**&#x200B;을 선택한 다음 **[!UICONTROL 새로 만들기]** 위로 마우스를 가져갑니다. 나타나는 드롭다운에서 **[!UICONTROL 터미널]**&#x200B;을 선택합니다.
+[!DNL JupyterLab] 내에서 **[!UICONTROL File]**&#x200B;을 선택하고 **[!UICONTROL New]** 위로 마우스를 가져갑니다. 나타나는 드롭다운에서 **[!UICONTROL Terminal]**&#x200B;을 선택합니다.
 
 ![JupiterLab Nav](../images/jupyterlab/tutorials/open-terminal.png)
 
