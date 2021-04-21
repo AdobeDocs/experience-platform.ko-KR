@@ -1,12 +1,11 @@
 ---
-product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform 데이터 수집 도움말
 breadcrumb-title: Data Ingestion 안내서
 user-guide-description: 일괄 처리 또는 스트리밍 통합 기능을 통해 데이터를 플랫폼에 가져올 수 있습니다.
-feature: Data Ingestion
+feature: 데이터 수집
 translation-type: tm+mt
-source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '123'
 ht-degree: 26%
@@ -26,7 +25,7 @@ ht-degree: 26%
    - [일괄 처리 통합 API](batch-ingestion/api-overview.md)
    - [부분 일괄 처리](batch-ingestion/partial.md)
    - [문제 해결](batch-ingestion/troubleshooting.md)
-- 자습서 {#tutorials}
+- 튜토리얼 {#tutorials}
    - [XDM에 CSV 파일 매핑](tutorials/map-a-csv-file.md)
    - [UI를 사용하여 일괄 처리 데이터 인제스트](tutorials/ingest-batch-data.md)
    - [인증된 스트리밍 연결 만들기](tutorials/create-authenticated-streaming-connection.md)
