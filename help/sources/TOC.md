@@ -5,9 +5,9 @@ breadcrumb-title: Source Connectors 안내서
 user-guide-description: 다양한 소스 또는 구조에서 데이터를 수집하고 레이블을 지정하며 기존에 수집한 데이터를 향상시킬 수 있습니다.
 feature: 데이터 통합, 소스
 translation-type: tm+mt
-source-git-commit: af5564a07577a0123e1a45043d5479f6ad45d73e
+source-git-commit: fb24f7cf82038a38c2861bd84404531062e47485
 workflow-type: tm+mt
-source-wordcount: '602'
+source-wordcount: '606'
 ht-degree: 12%
 
 ---
@@ -65,6 +65,7 @@ ht-degree: 12%
       - [GreenPlum 커넥터](connectors/databases/greenplum.md)
       - [HP Vertica 커넥터](connectors/databases/hp-vertica.md)
       - [IBM DB2 커넥터](connectors/databases/ibm-db2.md)
+      - [MariaDB 커넥터](connectors/databases/mariadb.md)
       - [Microsoft SQL Server 커넥터](connectors/databases/sql-server.md)
       - [MySQL 커넥터](connectors/databases/mysql.md)
       - [Oracle 커넥터](connectors/databases/oracle.md)
@@ -113,6 +114,7 @@ ht-degree: 12%
          - [GreenPlum](tutorials/api/create/databases/greenplum.md)
          - [HP Vertica](tutorials/api/create/databases/hp-vertica.md)
          - [IBM DB2](tutorials/api/create/databases/ibm-db2.md)
+         - [MariaDB](tutorials/api/create/databases/mariadb.md)
          - [MySQL](tutorials/api/create/databases/mysql.md)
          - [Oracle](tutorials/api/create/databases/oracle.md)
          - [피닉스](tutorials/api/create/databases/phoenix.md)
@@ -198,6 +200,7 @@ ht-degree: 12%
          - [GreenPlum](tutorials/ui/create/databases/greenplum.md)
          - [HP Vertica](tutorials/ui/create/databases/hp-vertica.md)
          - [IBM DB2](tutorials/ui/create/databases/ibm-db2.md)
+         - [MariaDB](tutorials/ui/create/databases/mariadb.md)
          - [Microsoft SQL Server](tutorials/ui/create/databases/sql-server.md)
          - [MySQL](tutorials/ui/create/databases/mysql.md)
          - [Oracle](tutorials/ui/create/databases/oracle.md)
