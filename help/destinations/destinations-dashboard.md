@@ -2,18 +2,18 @@
 keywords: Experience Platform;사용자 인터페이스;사용자 인터페이스;사용자 정의;라이센스 사용 대시보드;대시보드;라이센스 사용;자격 부여;소비
 title: 대상 대시보드
 description: 'Adobe Experience Platform UI는 조직의 활성 대상에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다. '
-topic: guide
+topic-legacy: guide
 type: Documentation
 translation-type: tm+mt
-source-git-commit: ecce042332fed790bbcf8b8a554217842f63a647
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '144'
+source-wordcount: '143'
 ht-degree: 6%
 
 ---
 
 
-# (베타) [!UICONTROL 대상] 대시보드 {#destinations-dashboard}
+# (베타) [!UICONTROL Destinations] 대시보드 {#destinations-dashboard}
 
 >[!IMPORTANT]
 >
