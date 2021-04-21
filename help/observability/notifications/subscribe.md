@@ -2,20 +2,20 @@
 keywords: Experience Platform;홈;인기 항목;날짜 범위
 solution: Experience Platform
 title: Adobe I/O 이벤트 알림 구독
-topic: developer guide
+topic-legacy: developer guide
 description: 이 문서에서는 Adobe Experience Platform 서비스에 대한 Adobe I/O 이벤트 알림을 구독하는 방법에 대해 설명합니다. 사용 가능한 이벤트 유형에 대한 참조 정보도 함께 제공되며, 각 해당  [!DNL Platform] 서비스에 대해 반환된 이벤트 데이터를 해석하는 방법에 대한 추가 설명서에 대한 링크도 제공됩니다.
+exl-id: c0ad7217-ce84-47b0-abf6-76bcf280f026
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '770'
+source-wordcount: '740'
 ht-degree: 2%
 
 ---
 
-
 # Adobe I/O 이벤트 알림 구독
 
-[!DNL Observability Insights] adobe experience platform 활동에 대한 Adobe I/O 이벤트 알림에 가입할 수 있습니다. 이러한 이벤트는 작업 모니터링을 효율적으로 자동화할 수 있도록 구성된 웹 후크로 전송됩니다.
+[!DNL Observability Insights] Adobe Experience Platform 활동에 대한 Adobe I/O 이벤트 알림에 가입할 수 있습니다. 이러한 이벤트는 작업 모니터링을 효율적으로 자동화할 수 있도록 구성된 웹 후크로 전송됩니다.
 
 이 문서에서는 Adobe Experience Platform 서비스에 대한 Adobe I/O 이벤트 알림을 구독하는 방법에 대해 설명합니다. 사용 가능한 이벤트 유형에 대한 참조 정보와 해당 [!DNL Platform] 서비스에 대해 반환된 이벤트 데이터를 해석하는 방법에 대한 추가 설명서에 대한 링크도 제공됩니다.
 
@@ -41,20 +41,20 @@ ht-degree: 2%
 
 ## 이벤트 구독
 
-새 프로젝트를 만들었으면 해당 프로젝트의 개요 화면으로 이동합니다. 여기서 **[!UICONTROL 이벤트]** 추가를 선택합니다.
+새 프로젝트를 만들었으면 해당 프로젝트의 개요 화면으로 이동합니다. 여기서 **[!UICONTROL Add event]**&#x200B;을 선택합니다.
 
 ![](../images/notifications/add-event-button.png)
 
 프로젝트에 이벤트 공급자를 추가할 수 있는 대화 상자가 나타납니다.
 
-* [!DNL Experience Platform] 알림을 구독하는 경우 **[!UICONTROL 플랫폼 알림]**&#x200B;을 선택합니다.
-* Adobe Experience Platform [!DNL Privacy Service] 알림을 구독하는 경우 **[!UICONTROL Privacy Service 이벤트]** 선택
+* [!DNL Experience Platform] 알림을 구독하는 경우 **[!UICONTROL Platform notifications]**
+* Adobe Experience Platform [!DNL Privacy Service] 알림을 구독하는 경우 **[!UICONTROL Privacy Service Events]**
 
-이벤트 공급자를 선택한 후 **[!UICONTROL 다음]**&#x200B;을 선택합니다.
+이벤트 공급자를 선택한 후 **[!UICONTROL Next]**&#x200B;을 선택합니다.
 
 ![](../images/notifications/event-provider.png)
 
-다음 화면에는 가입할 이벤트 유형 목록이 표시됩니다. 가입할 이벤트를 선택한 다음 **[!UICONTROL 다음]**&#x200B;을 선택합니다.
+다음 화면에는 가입할 이벤트 유형 목록이 표시됩니다. 가입할 이벤트를 선택한 다음 **[!UICONTROL Next]**&#x200B;을 선택합니다.
 
 >[!NOTE]
 >
@@ -69,23 +69,23 @@ ht-degree: 2%
 
 다음 화면에 JWT(JSON 웹 토큰)를 만들라는 메시지가 표시됩니다. 키 쌍을 자동으로 생성하거나 터미널에서 생성한 자신의 공개 키를 업로드할 수 있는 옵션이 제공됩니다.
 
-이 튜토리얼을 위해 첫 번째 옵션 뒤에 **[!UICONTROL 키 쌍 생성]**&#x200B;에 대한 옵션 상자를 선택한 다음 오른쪽 하단에 있는 **[!UICONTROL 키 쌍 생성]** 단추를 선택합니다.
+이 튜토리얼을 위해 첫 번째 옵션 뒤에 **[!UICONTROL Generate a key pair]**&#x200B;에 대한 옵션 상자를 선택한 다음 오른쪽 하단에 있는 **[!UICONTROL Generate keypair]** 단추를 선택합니다.
 
 ![](../images/notifications/generate-keypair.png)
 
 키 쌍이 생성되면 브라우저에 의해 자동으로 다운로드됩니다. 이 파일은 개발자 콘솔에서 지속되지 않으므로 직접 저장해야 합니다.
 
-다음 화면에서는 새로 생성된 키 쌍의 세부 사항을 검토할 수 있습니다. 계속하려면 **[!UICONTROL 다음]**&#x200B;을 선택합니다.
+다음 화면에서는 새로 생성된 키 쌍의 세부 사항을 검토할 수 있습니다. 계속하려면 **[!UICONTROL Next]**&#x200B;을 선택합니다.
 
 ![](../images/notifications/keypair-generated.png)
 
-다음 화면에서 [!UICONTROL 이벤트 등록 세부 사항] 섹션에 이벤트 등록에 대한 이름 및 설명을 입력합니다. 가장 좋은 방법은 이 이벤트 등록을 동일한 프로젝트의 다른 사용자와 구별할 수 있도록 고유하고 쉽게 식별할 수 있는 이름을 만드는 것입니다.
+다음 화면에서 [!UICONTROL Event registration details] 섹션에 이벤트 등록에 대한 이름과 설명을 입력합니다. 가장 좋은 방법은 이 이벤트 등록을 동일한 프로젝트의 다른 사용자와 구별할 수 있도록 고유하고 쉽게 식별할 수 있는 이름을 만드는 것입니다.
 
 ![](../images/notifications/registration-details.png)
 
-[!UICONTROL 이벤트 수신 방법] 섹션의 동일한 화면에서 추가로 이벤트를 받는 방법을 구성할 수도 있습니다. **[!UICONTROL 웹]** 후크를 사용하면 이벤트를 수신할 사용자 정의 웹 후크 주소를 제공할 수 있지만, 런타임  **** 작업을 통해  [Adobe I/O Runtime](https://www.adobe.io/apis/experienceplatform/runtime/docs.html)를 사용하여 동일한 작업을 수행할 수 있습니다.
+[!UICONTROL How to receive events] 섹션 아래의 동일한 화면에서 추가로, 이벤트를 수신할 방법을 구성할 수도 있습니다. **[!UICONTROL Webhook]** 이벤트를 수신할 사용자 정의 웹 후크 주소를 제공하지만  **[!UICONTROL Runtime action]** Adobe I/O Runtime [을 사용하여 동일한 작업을 수행할 ](https://www.adobe.io/apis/experienceplatform/runtime/docs.html)수 있습니다.
 
-이 자습서의 경우 **[!UICONTROL 웹후크]**&#x200B;를 선택하고 이전에 만든 웹 후크의 URL을 제공합니다. 완료되면 **[!UICONTROL 구성된 이벤트 저장]**&#x200B;을 선택하여 이벤트 등록을 완료하십시오.
+이 자습서의 경우 **[!UICONTROL Webhook]**&#x200B;을 선택하고 이전에 만든 웹 후크의 URL을 제공합니다. 완료되면 **[!UICONTROL Save configured events]**&#x200B;을 선택하여 이벤트 등록을 완료하십시오.
 
 ![](../images/notifications/receive-events.png)
 
