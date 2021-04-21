@@ -3,31 +3,31 @@ keywords: Experience Platform;홈;인기 항목;api;XDM;XDM 시스템;경험 데
 solution: Experience Platform
 title: UI에서 열거형 필드 정의
 description: Experience Platform 사용자 인터페이스에서 열거형 필드를 정의하는 방법을 알아봅니다.
-topic: user guide
+topic-legacy: user guide
+exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '251'
+source-wordcount: '244'
 ht-degree: 0%
 
 ---
-
 
 # UI에서 열거형 필드 정의
 
 XDM(경험 데이터 모델)에서 열거형 필드는 허용 가능한 값의 사전 정의된 목록으로 제한되는 필드를 나타냅니다.
 
-Adobe Experience Platform 사용자 인터페이스에서 [새 필드](./overview.md#define)를 정의할 때 오른쪽 레일에서 **[!UICONTROL 열거형]** 확인란을 선택하여 이 필드를 열거형 필드로 설정할 수 있습니다.
+Adobe Experience Platform 사용자 인터페이스에서 [새 필드](./overview.md#define)를 정의할 때 오른쪽 레일에서 **[!UICONTROL Enum]** 확인란을 선택하여 이 필드를 열거형 필드로 설정할 수 있습니다.
 
 ![](../../images/ui/fields/special/enum.png)
 
-확인란을 선택하면 열거형에 대한 값 제약 조건을 지정할 수 있는 추가 컨트롤이 표시됩니다. **[!UICONTROL 값]** 열에서 필드를 제한할 정확한 값을 제공해야 합니다. 이 값은 열거형 필드에 대해 선택한 [!UICONTROL Type]을 준수해야 합니다. 제약 조건에 대해 친숙한 **[!UICONTROL Label]**&#x200B;도 선택적으로 제공할 수 있습니다.
+확인란을 선택하면 열거형에 대한 값 제약 조건을 지정할 수 있는 추가 컨트롤이 표시됩니다. **[!UICONTROL Value]** 열에서 필드를 제한할 정확한 값을 제공해야 합니다. 이 값은 열거형 필드에 대해 선택한 [!UICONTROL Type]을(를) 준수해야 합니다. 제약 조건에 대해 친숙한 **[!UICONTROL Label]**&#x200B;을 선택적으로 제공할 수도 있습니다.
 
-열거형에 추가 제약 조건을 추가하려면 **[!UICONTROL 행 추가]**&#x200B;를 선택합니다.
+열거형에 추가 제약 조건을 추가하려면 **[!UICONTROL Add row]**&#x200B;을 선택합니다.
 
 ![](../../images/ui/fields/special/enum-add-row.png)
 
-원하는 제약 조건과 선택적 레이블을 열거형에 계속 추가합니다. 완료되면 **[!UICONTROL 적용]**&#x200B;을 선택하여 스키마에 변경 사항을 적용합니다.
+원하는 제약 조건과 선택적 레이블을 열거형에 계속 추가합니다. 완료되면 **[!UICONTROL Apply]**&#x200B;을 선택하여 스키마에 변경 사항을 적용합니다.
 
 ![](../../images/ui/fields/special/enum-configured.png)
 
