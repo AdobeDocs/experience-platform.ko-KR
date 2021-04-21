@@ -2,16 +2,16 @@
 keywords: Experience Platform;시작하기;고객 ai;인기 항목;;getting started;customer ai;popular topics
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: 고객 AI에서 시작하기
-topic: Getting started
+topic-legacy: Getting started
 description: 이 안내서에서는 요청의 서식을 지정하는 방법을 보여주는 API 호출 예를 제공합니다. 여기에는 경로, 필수 헤더 및 올바른 형식의 요청 페이로드가 포함됩니다.
+exl-id: 90c9a83a-8e66-4239-b2d6-2049a6319b25
 translation-type: tm+mt
-source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '571'
 ht-degree: 0%
 
 ---
-
 
 # 고객 AI에서 시작하기
 
