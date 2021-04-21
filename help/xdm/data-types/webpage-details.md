@@ -2,20 +2,20 @@
 keywords: Experience Platform;홈;인기 항목;스키마;스키마;XDM;필드;스키마;스키마;웹 페이지 정보;데이터 유형;데이터 유형;웹 페이지
 solution: Experience Platform
 title: 웹 페이지 세부 사항 데이터 유형
-topic: overview
+topic-legacy: overview
 description: 이 문서에서는 웹 페이지 세부 정보 XDM(Experience Data Model) 데이터 유형에 대한 개요를 제공합니다.
+exl-id: 31108e57-d416-485b-a6c3-4ebc4f5b1152
 translation-type: tm+mt
-source-git-commit: d282ea5526a05b28c6a82470eabf23e44d1fb420
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '408'
+source-wordcount: '401'
 ht-degree: 2%
 
 ---
 
+# [!UICONTROL Web page details] 데이터 유형
 
-# [!UICONTROL 웹 페이지 ] 세부 정보데이터 유형
-
-[!UICONTROL 웹 페이지 ] 세부 사항은 ExperienceEvent에 의해 기록되는 대로, 로드 및 조회된 웹 페이지에 대한 세부 사항을 설명하는 표준 XDM(Experience Data Model) 데이터 유형입니다.
+[!UICONTROL Web page details] 는 ExperienceEvent에 의해 기록되는 대로, 로드 및 본 웹 페이지에 대한 세부 사항을 설명하는 표준 XDM(Experience Data Model) 데이터 유형입니다.
 
 데이터 유형은 단일 페이지 웹 애플리케이션(SPA)의 전체 페이지 세부 사항 및 초기 페이지 로드를 대상으로 합니다. 새 페이지 로드를 트리거하지 않는 로드된 페이지에서 발생하는 상호 작용에 대해서는 [웹 상호 작용](./web-interactions.md) 데이터 유형을 참조하십시오.
 
@@ -23,7 +23,7 @@ ht-degree: 2%
 
 | 속성 | 데이터 유형 | 설명 |
 | --- | --- | --- |
-| `pageViews` | [[!UICONTROL 측정]](./measure.md) | 웹 페이지의 보기 수. |
+| `pageViews` | [[!UICONTROL Measure]](./measure.md) | 웹 페이지의 보기 수. |
 | `URL` | 문자열 | 웹 페이지의 표준 또는 일반적인 URL입니다. 페이지에 도달하는 데 사용되는 실제 URL일 수도 있고 아닐 수도 있습니다. 페이지에 도달하는 데 사용되는 URL을 기록하려면 `webLink`을 사용합니다. URI 형식은 [RFC 3986](https://tools.ietf.org/html/rfc3986) 표준을 따라야 합니다. |
 | `isErrorPage` | 부울 | 이 속성은 페이지가 오류 페이지인지 여부를 나타내는 플래그를 사용합니다. 이 플래그는 웹 상호 작용을 폭넓게 분류하는 데 사용됩니다. 이 오류는 응용 프로그램에서 정의하며 HTTP 오류 코드와 함께 제공되는 페이지에 해당될 수 있습니다. |
 | `isHomePage` | 부울 | 이 속성은 페이지가 홈 페이지인지 여부를 나타내는 플래그를 사용합니다. 이 플래그는 웹 상호 작용을 폭넓게 분류하는 데 사용됩니다. 홈 페이지의 정의는 응용 프로그램에 의해 결정됩니다. |
