@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;GDPR;GDPA;PDPA;PDPA;PDPA;LGPD;개요;개요;규정;규정;규정;규정;개인 정보;개인 정보 보호;
 solution: Experience Platform
 title: 개인 정보 보호 규정 용어
-topic: troubleshooting
+topic-legacy: troubleshooting
 description: 이 문서는 Adobe Experience Cloud에서 지원하는 개인 정보 보호 규정과 관련된 주요 용어에 대한 정의를 제공합니다.
+exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1512'
 ht-degree: 3%
 
 ---
-
 
 # 개인 정보 보호 규정 용어
 
@@ -61,7 +61,7 @@ ht-degree: 3%
 
 **기업**:개인, 조합, 협회 등을 비롯한 법적 형태에 상관없이 경제 활동에 종사하는 법인
 
-**명시적 동의**:구술 또는 서면 형식의 자료 주체의 취향을 구체적이고, 알고 있으며 모호하지 않은 동의를 위한 표준. 간단히 말해서, 동의를 명시적으로 간주하기 위해서는 데이터 주체가 문자 그대로 명시적으로 &quot;동의&quot; 또는 &quot;동의&quot;를 해야 합니다. 동의의 철회는 그만큼 용이하다.
+**명시적 동의**:구술 또는 서면 형식의 자료 주체의 취향을 구체적이고, 알고 있으며 명확한 표기가 포함된 동의 기준입니다. 간단히 말해서, 동의를 명시적으로 간주하기 위해서는 데이터 주체가 문자 그대로 명시적으로 &quot;동의&quot; 또는 &quot;동의&quot;를 해야 합니다. 동의의 철회는 그만큼 용이하다.
 
 ## F
 
