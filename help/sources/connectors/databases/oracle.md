@@ -6,18 +6,14 @@ topic-legacy: overview
 description: API 또는 사용자 인터페이스를 사용하여 Oracle을 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: be422cf8-fb24-48c7-8369-34f0f2ec95fc
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: b2384bfe26fa3d111c342062b2d9bb37c4226857
 workflow-type: tm+mt
-source-wordcount: '207'
+source-wordcount: '190'
 ht-degree: 0%
 
 ---
 
-# (베타) [!DNL Oracle] 커넥터
-
->[!NOTE]
->
->[!DNL Oracle] 커넥터가 베타에 있습니다. 베타 레이블이 지정된 커넥터 사용에 대한 자세한 내용은 [소스 개요](../../home.md#terms-and-conditions)를 참조하십시오.
+# [!DNL Oracle] 커넥터
 
 Adobe Experience Platform은 [!DNL Microsoft], MySQL 및 [!DNL Azure] 같은 데이터베이스 공급자에 대한 기본 연결을 제공합니다. 이러한 시스템의 데이터를 [!DNL Platform]으로 가져올 수 있습니다.
 
