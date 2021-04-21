@@ -2,17 +2,17 @@
 keywords: Experience Platform;JupiterLab;전자 필기장;데이터 과학 작업 공간;인기 항목;쿼리 서비스
 solution: Experience Platform
 title: Jupiter 전자 필기장의 쿼리 서비스
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Adobe Experience Platform에서는 쿼리 서비스를 JupiterLab에 표준 기능으로 통합하여 데이터 과학 작업 공간에서 구조화된 쿼리 언어(SQL)를 사용할 수 있습니다. 이 자습서에서는 Adobe Analytics 데이터를 탐색, 변형 및 분석하는 일반적인 사용 사례에 대한 샘플 SQL 쿼리를 보여 줍니다.
+exl-id: c5ac7d11-a3bd-4ef8-a650-9f496a8bbaa7
 translation-type: tm+mt
-source-git-commit: 9d84fc1eb898020ed4b154c091fcc9fc4933c7de
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '824'
+source-wordcount: '810'
 ht-degree: 1%
 
 ---
-
 
 # Jupiter 전자 필기장의 쿼리 서비스
 
@@ -36,13 +36,13 @@ ht-degree: 1%
 
 ## [!DNL JupyterLab] 및 [!DNL Query Service] {#access-jupyterlab-and-query-service}에 액세스
 
-1. [[!DNL Experience Platform]](https://platform.adobe.com)에서 왼쪽 탐색 열에서 **[!UICONTROL Notebook]**&#x200B;으로 이동합니다. JupiterLab이 로드될 때까지 잠시 기다려 주십시오.
+1. [[!DNL Experience Platform]](https://platform.adobe.com)에서 왼쪽 탐색 열에서 **[!UICONTROL Notebooks]**&#x200B;로 이동합니다. JupiterLab이 로드될 때까지 잠시 기다려 주십시오.
 
    ![](../images/jupyterlab/query/jupyterlab-launcher.png)
 
    >[!NOTE]
    >
-   >새 시작 관리자 탭이 자동으로 표시되지 않으면 **[!UICONTROL 파일]**&#x200B;을 클릭하여 새 시작 관리자 탭을 연 다음 **[!UICONTROL 새 시작 관리자]**&#x200B;를 선택합니다.
+   >새 시작 관리자 탭이 자동으로 나타나지 않으면 **[!UICONTROL File]**&#x200B;을 클릭하여 새 시작 관리자 탭을 연 다음 **[!UICONTROL New Launcher]**&#x200B;을 선택합니다.
 
 2. 시작 관리자 탭에서 Python 3 환경의 **[!UICONTROL Blank]** 아이콘을 클릭하여 빈 전자 필기장을 엽니다.
 
@@ -52,11 +52,11 @@ ht-degree: 1%
    >
    >현재 Python 3은 전자 필기장에서 쿼리 서비스에 대해 지원되는 유일한 환경입니다.
 
-3. 왼쪽 선택 레일에서 **[!UICONTROL 데이터]** 아이콘을 클릭하고 **[!UICONTROL 데이터 세트]** 디렉토리를 두 번 클릭하여 모든 데이터 세트를 나열합니다.
+3. 왼쪽 선택 레일에서 **[!UICONTROL Data]** 아이콘을 클릭하고 **[!UICONTROL Datasets]** 디렉토리를 두 번 클릭하여 모든 데이터 세트를 나열합니다.
 
    ![](../images/jupyterlab/query/dataset.png)
 
-4. 목록을 탐색하고 마우스 오른쪽 단추로 클릭한 다음 **[!UICONTROL 전자 필기장의 데이터 쿼리]**&#x200B;를 클릭하여 빈 전자 필기장에서 SQL 쿼리를 생성합니다.[!DNL Adobe Analytics]
+4. 목록을 탐색하고 마우스 오른쪽 버튼으로 클릭한 다음 **[!UICONTROL Query Data in Notebook]** 을 클릭하여 빈 노트북에서 SQL 쿼리를 생성합니다.[!DNL Adobe Analytics]
 
 5. 함수 `qs_connect()`이(가) 포함된 첫 번째 생성된 셀을 클릭하고 재생 단추를 클릭하여 실행합니다. 이 함수는 전자 필기장 인스턴스와 [!DNL Query Service] 간의 연결을 만듭니다.
 
@@ -98,7 +98,7 @@ ht-degree: 1%
 
 ## 데이터 {#query-your-data} 쿼리
 
-개별 전자 필기장 셀에 다음 SQL 쿼리를 입력합니다. 셀에서 선택한 다음 **[!UICONTROL 재생]** 단추를 선택하여 쿼리를 실행합니다. 성공적인 쿼리 결과 또는 오류 로그가 실행된 셀 아래에 표시됩니다.
+개별 전자 필기장 셀에 다음 SQL 쿼리를 입력합니다. 셀에서 선택한 다음 **[!UICONTROL play]** 단추를 선택하여 쿼리를 실행합니다. 성공적인 쿼리 결과 또는 오류 로그가 실행된 셀 아래에 표시됩니다.
 
 장시간 노트북이 비활성화되면 노트북과 [!DNL Query Service] 간의 연결이 끊어질 수 있습니다. 이러한 경우 전원 단추 옆의 오른쪽 위 모서리에 있는 **다시 시작** 단추 ![다시 시작 단추](../images/jupyterlab/user-guide/restart_button.png)를 선택하여 [!DNL JupyterLab]을 다시 시작합니다.
 
