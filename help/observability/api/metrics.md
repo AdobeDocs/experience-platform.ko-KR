@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목
 solution: Experience Platform
 title: 지표 API 끝점
-topic: developer guide
+topic-legacy: developer guide
 description: Observability Insights API를 사용하여 Experience Platform에서 관측성 지표를 검색하는 방법을 알아봅니다.
+exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
 translation-type: tm+mt
-source-git-commit: 136c75f56c2ba4d61fef7981ff8a7889a0ade3d1
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '2056'
-ht-degree: 2%
+source-wordcount: '2054'
+ht-degree: 4%
 
 ---
-
 
 # 지표 끝점
 
@@ -293,22 +293,22 @@ curl -X POST \
 | 인사이트 지표 | 설명 | ID 쿼리 매개 변수 |
 | ---- | ---- | ---- |
 | timeseries.ingestion.dataset.new.count | 만든 총 데이터 집합 수입니다. | N/A |
-| timeseries.ingestion.dataset.size | 데이터 세트 하나 또는 모든 데이터 세트에 대해 수집되는 모든 데이터의 누적 크기입니다. | 데이터 집합 ID |
-| timeseries.ingestion.dataset.dailysize | 하나의 데이터 세트 또는 모든 데이터 세트에 대해 일별로 수집되는 데이터의 크기입니다. | 데이터 집합 ID |
-| timeseries.ingestion.dataset.batchfailed.count | 하나의 데이터 세트 또는 모든 데이터 세트에 대해 실패한 일괄 처리 수입니다. | 데이터 집합 ID |
-| timeseries.ingestion.dataset.batchsuccess.count | 하나의 데이터 세트 또는 모든 데이터 세트에 대해 수집되는 일괄 처리 수입니다. | 데이터 집합 ID |
-| timeseries.ingestion.dataset.recordsuccess.count | 하나의 데이터 세트 또는 모든 데이터 세트에 대해 수집되는 레코드 수입니다. | 데이터 집합 ID |
-| **timelines.data.collection.validation.total.messages.rate** | 하나의 데이터 세트 또는 모든 데이터 세트에 대한 총 메시지 수입니다. | 데이터 집합 ID |
-| **timelines.data.collection.validation.valid.messages.rate** | 하나의 데이터 세트 또는 모든 데이터 세트에 대해 유효한 총 메시지 수입니다. | 데이터 집합 ID |
-| **timelines.data.collection.validation.invalid.messages.rate** | 하나의 데이터 세트 또는 모든 데이터 세트에 대해 잘못된 메시지의 총 수입니다. | 데이터 집합 ID |
-| **timelines.data.collection.validation.category.type.count** | 하나의 데이터 세트 또는 모든 데이터 세트에 대해 잘못된 &quot;유형&quot; 메시지의 총 수입니다. | 데이터 집합 ID |
-| **timelines.data.collection.validation.category.range.count** | 하나의 데이터 세트 또는 모든 데이터 세트에 대해 잘못된 &quot;범위&quot; 메시지의 총 수입니다. | 데이터 집합 ID |
-| **timelines.data.collection.validation.category.format.count** | 하나의 데이터 세트 또는 모든 데이터 세트에 대해 잘못된 &quot;형식&quot; 메시지의 총 수입니다. | 데이터 집합 ID |
-| **timelines.data.collection.validation.category.pattern.count** | 하나의 데이터 세트 또는 모든 데이터 세트에 대해 잘못된 &quot;패턴&quot; 메시지의 총 수입니다. | 데이터 집합 ID |
-| **timelines.data.collection.validation.category.presence.count** | 하나의 데이터 세트 또는 모든 데이터 세트에 대해 잘못된 &quot;존재 여부&quot; 메시지의 총 수입니다. | 데이터 집합 ID |
-| **timelines.data.collection.validation.category.enum.count** | 하나의 데이터 세트 또는 모든 데이터 세트에 대해 잘못된 &quot;열거형&quot; 메시지의 총 수입니다. | 데이터 집합 ID |
-| **timelines.data.collection.validation.category.unclassified.count** | 하나의 데이터 세트 또는 모든 데이터 세트에 대해 잘못된 &quot;분류되지 않은&quot; 메시지의 총 수입니다. | 데이터 집합 ID |
-| **timelines.data.collection.validation.category.unknown.count** | 하나의 데이터 세트 또는 모든 데이터 세트에 대해 잘못된 &quot;알 수 없음&quot; 메시지의 총 수입니다. | 데이터 집합 ID |
+| timeseries.ingestion.dataset.size | 데이터 세트 하나 또는 모든 데이터 세트에 대해 수집되는 모든 데이터의 누적 크기입니다. | 데이터 세트 ID |
+| timeseries.ingestion.dataset.dailysize | 하나의 데이터 세트 또는 모든 데이터 세트에 대해 일별로 수집되는 데이터의 크기입니다. | 데이터 세트 ID |
+| timeseries.ingestion.dataset.batchfailed.count | 하나의 데이터 세트 또는 모든 데이터 세트에 대해 실패한 일괄 처리 수입니다. | 데이터 세트 ID |
+| timeseries.ingestion.dataset.batchsuccess.count | 하나의 데이터 세트 또는 모든 데이터 세트에 대해 수집되는 일괄 처리 수입니다. | 데이터 세트 ID |
+| timeseries.ingestion.dataset.recordsuccess.count | 하나의 데이터 세트 또는 모든 데이터 세트에 대해 수집되는 레코드 수입니다. | 데이터 세트 ID |
+| **timelines.data.collection.validation.total.messages.rate** | 하나의 데이터 세트 또는 모든 데이터 세트에 대한 총 메시지 수입니다. | 데이터 세트 ID |
+| **timelines.data.collection.validation.valid.messages.rate** | 하나의 데이터 세트 또는 모든 데이터 세트에 대해 유효한 총 메시지 수입니다. | 데이터 세트 ID |
+| **timelines.data.collection.validation.invalid.messages.rate** | 하나의 데이터 세트 또는 모든 데이터 세트에 대해 잘못된 메시지의 총 수입니다. | 데이터 세트 ID |
+| **timelines.data.collection.validation.category.type.count** | 하나의 데이터 세트 또는 모든 데이터 세트에 대해 잘못된 &quot;유형&quot; 메시지의 총 수입니다. | 데이터 세트 ID |
+| **timelines.data.collection.validation.category.range.count** | 하나의 데이터 세트 또는 모든 데이터 세트에 대해 잘못된 &quot;범위&quot; 메시지의 총 수입니다. | 데이터 세트 ID |
+| **timelines.data.collection.validation.category.format.count** | 하나의 데이터 세트 또는 모든 데이터 세트에 대해 잘못된 &quot;형식&quot; 메시지의 총 수입니다. | 데이터 세트 ID |
+| **timelines.data.collection.validation.category.pattern.count** | 하나의 데이터 세트 또는 모든 데이터 세트에 대해 잘못된 &quot;패턴&quot; 메시지의 총 수입니다. | 데이터 세트 ID |
+| **timelines.data.collection.validation.category.presence.count** | 하나의 데이터 세트 또는 모든 데이터 세트에 대해 잘못된 &quot;존재 여부&quot; 메시지의 총 수입니다. | 데이터 세트 ID |
+| **timelines.data.collection.validation.category.enum.count** | 하나의 데이터 세트 또는 모든 데이터 세트에 대해 잘못된 &quot;열거형&quot; 메시지의 총 수입니다. | 데이터 세트 ID |
+| **timelines.data.collection.validation.category.unclassified.count** | 하나의 데이터 세트 또는 모든 데이터 세트에 대해 잘못된 &quot;분류되지 않은&quot; 메시지의 총 수입니다. | 데이터 세트 ID |
+| **timelines.data.collection.validation.category.unknown.count** | 하나의 데이터 세트 또는 모든 데이터 세트에 대해 잘못된 &quot;알 수 없음&quot; 메시지의 총 수입니다. | 데이터 세트 ID |
 | **timeselines.data.collection.inlet.total.messages.received** | 하나의 데이터 입력 또는 모든 데이터 입력기에 대해 수신된 총 메시지 수입니다. | 입구 ID |
 | **timeselines.data.collection.total.messages.size.received** | 하나의 데이터 입력 또는 모든 데이터 입력란에 대해 수신된 데이터의 총 크기입니다. | 입구 ID |
 | **timelines.data.collection.inlet.success** | 하나의 데이터 입력 또는 모든 데이터 인렛에 대한 성공적인 HTTP 호출 총 수입니다. | 입구 ID |
@@ -322,8 +322,8 @@ curl -X POST \
 
 | 인사이트 지표 | 설명 | ID 쿼리 매개 변수 |
 | ---- | ---- | ---- |
-| timeseries.identity.dataset.recordsuccess.count | 데이터 세트 하나 또는 모든 데이터 세트에 대해 [!DNL Identity Service]이(가) 데이터 소스에 쓴 레코드 수입니다. | 데이터 집합 ID |
-| timeseries.identity.dataset.recordfailed.count | 하나의 데이터 세트 또는 모든 데이터 세트에 대해 [!DNL Identity Service]이(가) 실패한 레코드 수입니다. | 데이터 집합 ID |
+| timeseries.identity.dataset.recordsuccess.count | 데이터 세트 하나 또는 모든 데이터 세트에 대해 [!DNL Identity Service]이(가) 데이터 소스에 쓴 레코드 수입니다. | 데이터 세트 ID |
+| timeseries.identity.dataset.recordfailed.count | 하나의 데이터 세트 또는 모든 데이터 세트에 대해 [!DNL Identity Service]이(가) 실패한 레코드 수입니다. | 데이터 세트 ID |
 | timeseries.identity.dataset.namespacecode.recordsuccess.count | 네임스페이스에 대해 인제스트된 ID 레코드 수입니다. | 네임스페이스 ID(**필수**) |
 | timeseries.identity.dataset.namespacecode.recordfailed.count | 네임스페이스에 의해 실패한 ID 레코드 수입니다. | 네임스페이스 ID(**필수**) |
 | timeseries.identity.dataset.namespacecode.recordskipped.count | 네임스페이스에 의해 건너뛴 ID 레코드 수입니다. | 네임스페이스 ID(**필수**) |
@@ -367,11 +367,11 @@ curl -X POST \
 
 | 인사이트 지표 | 설명 | ID 쿼리 매개 변수 |
 | ---- | ---- | ---- |
-| timeseries.profiles.dataset.recordread.count | 하나의 데이터 세트 또는 모든 데이터 세트에 대해 [!DNL Data Lake]이(가) [!DNL Profile]에서 읽은 레코드 수입니다. | 데이터 집합 ID |
-| timeseries.profiles.dataset.recordsuccess.count | 하나의 데이터 세트 또는 모든 데이터 세트에 대해 데이터 소스에 [!DNL Profile]까지 기록된 레코드 수입니다. | 데이터 집합 ID |
-| timeseries.profiles.dataset.recordfailed.count | 하나의 데이터 세트 또는 모든 데이터 세트에 대해 [!DNL Profile]이(가) 실패한 레코드 수입니다. | 데이터 집합 ID |
-| timeseries.profiles.dataset.batchsuccess.count | 데이터 세트 또는 모든 데이터 세트에 대해 수집되는 [!DNL Profile] 일괄 처리 수입니다. | 데이터 집합 ID |
-| timeseries.profiles.dataset.batchfailed.count | 하나의 데이터 세트 또는 모든 데이터 세트에 대해 [!DNL Profile] 일괄 처리 수가 실패했습니다. | 데이터 집합 ID |
+| timeseries.profiles.dataset.recordread.count | 하나의 데이터 세트 또는 모든 데이터 세트에 대해 [!DNL Data Lake]이(가) [!DNL Profile]에서 읽은 레코드 수입니다. | 데이터 세트 ID |
+| timeseries.profiles.dataset.recordsuccess.count | 하나의 데이터 세트 또는 모든 데이터 세트에 대해 데이터 소스에 [!DNL Profile]까지 기록된 레코드 수입니다. | 데이터 세트 ID |
+| timeseries.profiles.dataset.recordfailed.count | 하나의 데이터 세트 또는 모든 데이터 세트에 대해 [!DNL Profile]이(가) 실패한 레코드 수입니다. | 데이터 세트 ID |
+| timeseries.profiles.dataset.batchsuccess.count | 데이터 세트 또는 모든 데이터 세트에 대해 수집되는 [!DNL Profile] 일괄 처리 수입니다. | 데이터 세트 ID |
+| timeseries.profiles.dataset.batchfailed.count | 하나의 데이터 세트 또는 모든 데이터 세트에 대해 [!DNL Profile] 일괄 처리 수가 실패했습니다. | 데이터 세트 ID |
 | platform.ups.ingest.streaming.request.m1_rate | 들어오는 요청 비율입니다. | IMS 조직(**필수**) |
 | platform.ups.ingest.streaming.access.put.success.m1_rate | 통합 성공률. | IMS 조직(**필수**) |
 | platform.ups.ingest.streaming.records.created.m15_rate | 데이터 세트에 대해 수집되는 새 레코드 비율입니다. | 데이터 집합 ID(**필수**) |
