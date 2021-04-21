@@ -2,17 +2,17 @@
 keywords: Experience Platform;홈;인기 항목;PayPal 커넥터;Paypal;Paypal
 solution: Experience Platform
 title: Flow Service API를 사용하여 PayPal 소스 연결 만들기
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Flow Service API를 사용하여 PayPal을 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
+exl-id: 5e6ca7b4-5e2f-4706-a339-ac159e2e0938
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '576'
 ht-degree: 2%
 
 ---
-
 
 # [!DNL Flow Service] API를 사용하여 [!DNL PayPal] 소스 연결 만들기
 
