@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;카탈로그 서비스;카탈로그 api;부록
 solution: Experience Platform
 title: 카탈로그 서비스 API 안내서 부록
-topic: developer guide
+topic-legacy: developer guide
 description: 이 문서에는 Adobe Experience Platform의 카탈로그 API를 사용하여 작업하는 데 도움이 되는 추가 정보가 포함되어 있습니다.
+exl-id: fafc8187-a95b-4592-9736-cfd9d32fd135
 translation-type: tm+mt
-source-git-commit: b395535cbe7e4030606ee2808eb173998f5c32e0
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '920'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
-
 
 # [!DNL Catalog Service] API 안내서 부록
 
@@ -179,7 +179,7 @@ curl -X POST \
 
 [!DNL Catalog] 는 업데이트 중에 데이터의 무결성을 유지하는 데 도움이 되는 여러 헤더 규칙을 제공합니다.
 
-### 일치
+### If-Match
 
 객체를 여러 사용자가 동시에 저장할 때 발생하는 데이터 손상 유형을 방지하기 위해 객체 버전 관리를 사용하는 것이 좋습니다.
 
