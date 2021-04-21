@@ -2,17 +2,17 @@
 keywords: Experience Platform;홈;인기 항목;정책 적용;자동 적용;API 기반 적용;데이터 거버넌스;테스트
 solution: Experience Platform
 title: 정책 서비스 API를 사용하여 데이터 사용 정책 적용
-topic: guide
+topic-legacy: guide
 type: Tutorial
 description: 데이터에 대한 데이터 사용 레이블을 만들고 해당 레이블에 대한 마케팅 작업에 대한 사용 정책을 만들었으면 정책 서비스 API를 사용하여 데이터 세트에 대해 수행된 마케팅 작업 또는 임의 레이블 그룹이 정책 위반인지 여부를 평가할 수 있습니다. 그런 다음 API 응답을 기반으로 정책 위반을 처리하도록 자체 내부 프로토콜을 설정할 수 있습니다.
+exl-id: 093db807-c49d-4086-a676-1426426b43fd
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1006'
 ht-degree: 1%
 
 ---
-
 
 # [!DNL Policy Service] API를 사용하여 데이터 사용 정책 적용
 
@@ -370,7 +370,7 @@ curl -X POST \
 
 | 속성 | 설명 |
 | --- | --- |
-| `duleLabels` | 요청 페이로드에 제공된 데이터 세트에서 추출된 데이터 사용 레이블 목록입니다. |
+| `duleLabels` | 요청 페이로드에 제공된 데이터 세트에서 추출된 데이터 사용 레이블 목록. |
 | `discoveredLabels` | 요청 페이로드에서 제공된 데이터 세트 목록으로, 각 데이터세트에 있는 데이터 세트 수준 및 필드 수준 레이블을 표시합니다. |
 | `violatedPolicies` | 제공된 `duleLabels`에 대해 마케팅 작업(`marketingActionRef`에 지정됨)을 테스트하여 위반된 정책을 나열하는 배열입니다. |
 
