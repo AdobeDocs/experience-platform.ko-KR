@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;ID;클러스터 기록
 solution: Experience Platform
 title: ID의 클러스터 내역 가져오기
-topic: API guide
+topic-legacy: API guide
 description: ID는 다양한 장치 그래프 실행 과정에서 클러스터를 이동할 수 있습니다. Identity Service는 시간에 따라 지정된 ID의 클러스터 연결을 표시합니다.
+exl-id: e52edb15-e3d6-4085-83d5-212bbd952632
 translation-type: tm+mt
-source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '337'
 ht-degree: 1%
 
 ---
-
 
 # ID의 클러스터 내역 가져오기
 
