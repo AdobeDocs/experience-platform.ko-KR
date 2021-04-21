@@ -2,20 +2,20 @@
 keywords: Experience Platform;홈;인기 항목;스키마;스키마;XDM;필드;스키마;검색;데이터 유형;데이터 유형;데이터 유형;;home;popular topics;schema;XDM;fields;schemas;search;datatype;data-type;data-type;
 solution: Experience Platform
 title: 검색 데이터 유형
-topic: overview
+topic-legacy: overview
 description: 이 문서에서는 XDM(Search Experience Data Model) 데이터 유형에 대한 개요를 제공합니다.
+exl-id: 9893cb67-b0c7-4f91-a0d4-96f7b87d9510
 translation-type: tm+mt
-source-git-commit: d282ea5526a05b28c6a82470eabf23e44d1fb420
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '181'
+source-wordcount: '179'
 ht-degree: 4%
 
 ---
 
+# [!UICONTROL Search] 데이터 유형
 
-# [!UICONTROL 검색 ] 데이터 유형
-
-[!UICONTROL 검색] 은 웹 검색 활동에 대한 정보를 포함하는 표준 XDM(Experience Data Model) 데이터 유형입니다.
+[!UICONTROL Search] 는 웹 검색 활동에 대한 정보를 포함하는 표준 XDM(Experience Data Model) 데이터 유형입니다.
 
 <img src="../images/data-types/search.PNG" width="500" /><br />
 
