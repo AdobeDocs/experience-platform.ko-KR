@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;프로토콜
 solution: Experience Platform
 title: Flow Service API를 사용하여 프로토콜 시스템 탐색
-topic: overview
+topic-legacy: overview
 description: 이 자습서에서는 Flow Service API를 사용하여 프로토콜 애플리케이션을 살펴봅니다.
+exl-id: e4b24312-543e-4014-aa53-e8ca9c620950
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '588'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
-
 
 # [!DNL Flow Service] API를 사용하여 프로토콜 시스템 탐색
 
@@ -52,7 +52,7 @@ ht-degree: 1%
 
 페이로드(POST, PUT, PATCH)을 포함하는 모든 요청에는 추가 미디어 유형 헤더가 필요합니다.
 
-* 컨텐츠 유형:`application/json`
+* Content-Type: `application/json`
 
 ## 데이터 테이블 살펴보기
 
