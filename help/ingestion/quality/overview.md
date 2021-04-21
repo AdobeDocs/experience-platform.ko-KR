@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;데이터 품질;품질;지원되는 유효성 검사;유효성 검사;지원되는 유효성 검사;
 solution: Experience Platform
 title: 데이터 품질
-topic: overview
+topic-legacy: overview
 description: 다음 문서에서는 Adobe Experience Platform에서 일괄 처리 및 스트리밍 입시에 대해 지원되는 검사 및 유효성 검사 동작에 대한 요약을 제공합니다.
+exl-id: 7ef40859-235a-4759-9492-c63e5fd80c8e
 translation-type: tm+mt
-source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '317'
-ht-degree: 5%
+ht-degree: 6%
 
 ---
-
 
 # Adobe Experience Platform의 데이터 품질
 
@@ -32,7 +32,7 @@ Adobe Experience Platform은 일괄 처리 또는 스트리밍 습득 중 하나
 
 일괄 처리 및 스트리밍 통합 모두 [!DNL Data Lake]에서 검색 및 분석을 위해 잘못된 데이터를 이동함으로써 실패한 데이터가 다운스트림으로 이동하는 것을 방지합니다. 데이터 수집은 일괄 처리 및 스트리밍 수집에 대한 다음 유효성 검사를 제공합니다.
 
-### 일괄 처리
+### 일괄 처리 수집
 
 일괄 수집에 대해 다음 유효성 검사가 수행됩니다.
 
@@ -42,7 +42,7 @@ Adobe Experience Platform은 일괄 처리 또는 스트리밍 습득 중 하나
 | `identityField` | 모든 유효한 ID 설명자가 정의되어 있는지 확인합니다. |
 | `createdUser` | 배치를 인제스트한 사용자가 배치를 인제스트할 수 있도록 합니다. |
 
-### 스트리밍 통합
+### 스트리밍 수집
 
 스트리밍 수집에 대해 다음 유효성 검사가 수행됩니다.
 
@@ -53,7 +53,7 @@ Adobe Experience Platform은 일괄 처리 또는 스트리밍 습득 중 하나
 | JSON | JSON이 유효한지 확인합니다. |
 | IMS 조직 | 나열된 IMS 조직이 유효한 조직인지 확인합니다. |
 | 소스 이름 | 데이터 소스의 이름을 지정합니다. |
-| 데이터 집합 | 데이터 세트를 지정, 활성화 및 제거하지 않았는지 확인합니다. |
+| 데이터 세트 | 데이터 세트를 지정, 활성화 및 제거하지 않았는지 확인합니다. |
 | Header | 헤더가 지정되고 유효한지 확인합니다. |
 
 [!DNL Platform]의 데이터 모니터링 및 유효성 검사에 대한 자세한 내용은 [모니터링 데이터 흐름 설명서](./monitor-data-ingestion.md)에서 확인할 수 있습니다.
