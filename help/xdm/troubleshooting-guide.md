@@ -3,15 +3,15 @@ keywords: Experience Platform;홈;인기 항목;XDM;XDM 시스템;XDM 개별 프
 solution: Experience Platform
 title: XDM 시스템 문제 해결 안내서
 description: 이 문서에서는 Adobe Experience Platform의 경험 데이터 모델(XDM) 및 XDM 시스템에 대한 질문과 더불어 일반적인 오류에 대한 문제 해결 가이드를 제공합니다.
-topic: troubleshooting
+topic-legacy: troubleshooting
+exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1879'
+source-wordcount: '1869'
 ht-degree: 0%
 
 ---
-
 
 # XDM 시스템 문제 해결 가이드
 
@@ -67,7 +67,7 @@ API에서 ID 설명자를 만드는 방법에 대한 자세한 내용은 [!DNL S
 
 #### UI에서 ID 정의
 
-스키마 편집기에서 스키마를 열고 ID로 표시하려는 편집기의 **[!UICONTROL 구조]** 섹션에서 필드를 선택합니다. 오른쪽의 **[!UICONTROL 필드 속성]**&#x200B;에서 **[!UICONTROL ID]** 확인란을 선택합니다.
+스키마 편집기에서 스키마를 열고 ID로 표시하려는 편집기의 **[!UICONTROL Structure]** 섹션에서 필드를 선택합니다. 오른쪽의 **[!UICONTROL Field Properties]** 아래에서 **[!UICONTROL Identity]** 확인란을 선택합니다.
 
 UI에서 ID 관리에 대한 자세한 내용은 스키마 편집기 자습서의 [ID 필드 정의](./tutorials/create-schema-ui.md#identity-field) 섹션에 있는 섹션을 참조하십시오.
 
@@ -87,10 +87,10 @@ API를 사용하여 [!DNL Real-time Customer Profile]에서 사용할 스키마�
 
 #### UI를 사용하여 [!DNL Profile]에 대한 기존 스키마 활성화
 
-[!DNL Experience Platform]의 왼쪽 탐색 영역에서 **[!UICONTROL 스키마]**&#x200B;를 선택하고 스키마 목록에서 활성화할 스키마의 이름을 선택합니다. 그런 다음 **[!UICONTROL 스키마 속성]** 아래의 편집기의 오른쪽에서 **[!UICONTROL 프로필]**&#x200B;을 선택하여 켜십시오.
+[!DNL Experience Platform]의 왼쪽 탐색 메뉴에서 **[!UICONTROL Schemas]**&#x200B;을 선택하고 스키마 목록에서 활성화할 스키마 이름을 선택합니다. 그런 다음 **[!UICONTROL Schema Properties]** 아래의 편집기의 오른쪽에서 **[!UICONTROL Profile]**&#x200B;을 선택하여 켜십시오.
 
 
-자세한 내용은 [!UICONTROL 스키마 편집기] 자습서의 [실시간 고객 프로필](./tutorials/create-schema-ui.md#profile)에서 사용 섹션을 참조하십시오.
+자세한 내용은 [!UICONTROL Schema Editor] 자습서의 [실시간 고객 프로필](./tutorials/create-schema-ui.md#profile)에서 사용 섹션을 참조하십시오.
 
 ### 조합 스키마를 직접 편집할 수 있습니까?
 
