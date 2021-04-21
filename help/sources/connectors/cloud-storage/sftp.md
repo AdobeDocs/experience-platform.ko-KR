@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;SFTP;sftp
 solution: Experience Platform
 title: SFTP 소스 커넥터 개요
-topic: overview
+topic-legacy: overview
 description: API 또는 사용자 인터페이스를 사용하여 SFTP 서버를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
+exl-id: d5bced3d-cd33-40ea-bce0-32c76ecd2790
 translation-type: tm+mt
-source-git-commit: 0e11acc4a599d360cb3048445003f61848ad23d3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '452'
+source-wordcount: '451'
 ht-degree: 0%
 
 ---
-
 
 # SFTP 커넥터
 
