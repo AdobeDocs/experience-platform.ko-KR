@@ -2,28 +2,28 @@
 keywords: Experience Platform;홈;인기 항목;스키마;스키마;XDM;필드;스키마;스키마;개인;데이터 유형;데이터 유형;데이터 유형;data-type;
 solution: Experience Platform
 title: 개인 데이터 유형
-topic: overview
+topic-legacy: overview
 description: 이 문서에서는 XDM(Person Experience Data Model) 데이터 유형에 대한 개요를 제공합니다.
+exl-id: f28a52be-90c7-4ed0-a460-97165bb58046
 translation-type: tm+mt
-source-git-commit: 194b604d4b23f2acfaa4243155b04a6793fb0727
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '338'
+source-wordcount: '334'
 ht-degree: 4%
 
 ---
 
+# [!UICONTROL Person] 데이터 유형
 
-# [!UICONTROL 개인 ] 데이터 유형
-
-[!UICONTROL 개인] 은 개인 사용자를 설명하는 표준 XDM(Experience Data Model) 데이터 유형입니다. 이 데이터 유형은 고객, 담당자 또는 소유자와 같은 다양한 역할을 수행하는 사람을 나타낼 수 있습니다.
+[!UICONTROL Person] 은 개별 개인을 설명하는 표준 경험 데이터 모델(XDM) 데이터 유형입니다. 이 데이터 유형은 고객, 담당자 또는 소유자와 같은 다양한 역할을 수행하는 사람을 나타낼 수 있습니다.
 
 <img src="../images/data-types/person.PNG" width="500" /><br />
 
 | 속성 | 데이터 유형 | 설명 |
 | --- | --- | --- |
-| `name` | [[!UICONTROL 사람 이름]](./person-name.md) | 개인 이름에 대한 세부 사항을 설명합니다. |
-| `birthDate` | 날짜 | 한 사람이 출생한 모든 날짜. 날짜 형식(시간 없이)은 [RFC 3339, 5.6](https://tools.ietf.org/html/rfc3339#section-5.6) 표준을 따라야 합니다. |
-| `birthDayAndMonth` | 문자열 | MM-DD 형식으로 사람이 태어난 날과 달. 이 필드는 출생한 날짜와 달이 알려졌을 때 사용되어야 하지만 해는 사용하지 말아야 합니다. 이 속성의 형식은 이 정규식 `[0-1][0-9]-[0-9][0-9]`을(를) 따라야 합니다. |
+| `name` | [[!UICONTROL Person name]](./person-name.md) | 개인 이름에 대한 세부 사항을 설명합니다. |
+| `birthDate` | Date | 한 사람이 출생한 모든 날짜. 날짜 형식(시간 없이)은 [RFC 3339, 5.6](https://tools.ietf.org/html/rfc3339#section-5.6) 표준을 따라야 합니다. |
+| `birthDayAndMonth` | 문자열 | MM-DD 형식으로 사람이 태어난 날과 달. 이 필드는 출생일 및 월을 알고 있을 때는 사용해야 하지만, 해는 그렇지 않다. 이 속성의 형식은 이 정규식 `[0-1][0-9]-[0-9][0-9]`을(를) 따라야 합니다. |
 | `birthYear` | 정수 | 세기가 포함된 사람이 태어난 연도(예: `1983`). 이 필드는 만 알고 출생일이 아닌 연령만 알고 있을 때 사용해야 합니다. 이 값은 1에서 32767 사이여야 합니다. |
 | `gender` | 문자열 | 사람의 성 ID. 이 속성의 값은 다음과 같은 알려진 열거형 값 중 하나와 같아야 합니다. <li> `female` </li> <li> `male` </li> <li> `not_specified` </li> <li> `non_specific` </li> 이 값의 기본값은 `not_specified`입니다. |
 | `maritalStatus` | 문자열 | 중요한 다른 사람과의 관계에 대해 설명합니다. 이 속성의 값은 다음 열거형 값 중 하나와 같아야 합니다. <li> `married` </li> <li> `single` </li> <li> `divorced` </li> <li> `widowed` </li> <li> `not_specified` </li> 이 값의 기본값은 `not_specified`입니다. |
