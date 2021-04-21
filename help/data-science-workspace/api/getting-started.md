@@ -2,16 +2,16 @@
 keywords: Experience Platform;개발자 가이드;끝점;데이터 과학 작업 공간;인기 있는 주제;데이터 과학 작업 공간;데이터 과학
 solution: Experience Platform
 title: Sensei 기계 학습 API 가이드
-topic: Developer guide
+topic-legacy: Developer guide
 description: 개발자는 Sensei 기계 학습 API를 사용하여 다양한 데이터 과학 작업 공간 리소스에 대해 CRUD 작업을 수행할 수 있습니다. API를 사용하여 주요 작업을 수행하는 방법에 대해 알아보려면 이 안내서를 따르십시오.
+exl-id: d51d0eb2-b1e9-4cc1-889a-9487395703b0
 translation-type: tm+mt
-source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '243'
 ht-degree: 2%
 
 ---
-
 
 # [!DNL Sensei Machine Learning] API 안내서
 
