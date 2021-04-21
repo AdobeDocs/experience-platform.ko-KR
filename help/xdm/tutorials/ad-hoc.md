@@ -3,16 +3,16 @@ keywords: Experience Platform;홈;인기 항목;API;XDM;XDM 시스템;경험 데
 solution: Experience Platform
 title: 임시 스키마 만들기
 description: 특정 상황에서는 단일 데이터 집합에서만 사용하도록 지정된 필드가 있는 XDM(경험 데이터 모델) 스키마를 만들어야 할 수 있습니다. 이를 "임시" 스키마라고 합니다. 애드혹 스키마는 CSV 파일 인제스트 및 특정 유형의 소스 연결 만들기를 포함하여 Experience Platform에 대한 다양한 데이터 통합 워크플로에서 사용됩니다.
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
+exl-id: bef01000-909a-4594-8cf4-b9dbe0b358d5
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '823'
 ht-degree: 2%
 
 ---
-
 
 # 임시 스키마 만들기
 
