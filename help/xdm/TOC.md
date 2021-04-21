@@ -1,12 +1,11 @@
 ---
-product: experience-platform
 audience: user
 user-guide-title: XDM(경험 데이터 모델) 시스템 도움말
 breadcrumb-title: Experience Data Model(XDM) 안내서
 user-guide-description: XDM(경험 데이터 모델) 클래스와 믹스인을 사용하여 경험 데이터를 표준화합니다.
-feature: Schemas
+feature: 스키마
 translation-type: tm+mt
-source-git-commit: 8b88a828f8680ac4d064f7f84e0db9e315526833
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '279'
 ht-degree: 21%
