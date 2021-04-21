@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Adobe Experience Platform을 사용하면 Platform 서비스를 사용하여 수신 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 외부 소스에서 데이터를 수집할 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 등 다양한 소스의 데이터를 인제스트할 수 있습니다.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
 translation-type: tm+mt
-source-git-commit: af5564a07577a0123e1a45043d5479f6ad45d73e
+source-git-commit: 412d7c247353bfd30e134656140ba13f55d2ca07
 workflow-type: tm+mt
-source-wordcount: '921'
+source-wordcount: '922'
 ht-degree: 0%
 
 ---
@@ -91,6 +91,7 @@ Experience Platform은 제3자 데이터베이스의 데이터 인제스트 지�
 - [[!DNL GreenPlum] 커넥터](connectors/databases/greenplum.md)
 - [[!DNL HP Vertica] 커넥터](connectors/databases/hp-vertica.md)
 - [[!DNL IBM DB2] 커넥터](connectors/databases/ibm-db2.md)
+- [[!DNL MariaDB] 커넥터](connectors/databases/mariadb.md)
 - [[!DNL Microsoft SQL Server] 커넥터](connectors/databases/sql-server.md)
 - [[!DNL MySQL] 커넥터](connectors/databases/mysql.md)
 - [[!DNL Oracle] 커넥터](connectors/databases/oracle.md)
