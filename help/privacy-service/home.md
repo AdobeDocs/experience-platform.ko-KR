@@ -2,18 +2,18 @@
 keywords: Experience Platform;홈;인기 항목;GDPR;GDPR;GDPA;PDPA;PDPA;PDPA_that;PDPA_THA;LGPD;LGPD_bra;LGPD_LGPD_BRA;
 solution: Experience Platform
 title: Privacy Service 개요
-topic: overview
+topic-legacy: overview
 description: Privacy Service을 사용하면 Experience Cloud 데이터 작업에서 법률 개인 정보 보호 규정을 자동으로 준수할 수 있습니다.
+exl-id: 585f7619-5072-413b-9a62-be0ea0cd4d1b
 translation-type: tm+mt
-source-git-commit: 37c1c98ccba50fa917acc5e93763294f4dde5c36
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1394'
+source-wordcount: '1390'
 ht-degree: 0%
 
 ---
 
-
-# [!DNL Privacy Service]개요
+# [!DNL Privacy Service] 개요
 
 더 나은 고객 경험을 제공하기 위해서는 고객의 개인 데이터를 수집하고 저장해야 합니다. 이 데이터를 사용할 때는 고객의 개인 정보를 이해하고 존중해야 합니다. 새로운 법률 및 조직 규정은 사용자가 요청 시 데이터 저장소에서 개인 데이터를 액세스하거나 삭제할 수 있는 권한을 제공합니다.
 
@@ -82,7 +82,7 @@ CRM 시스템에서 사용하는 [!DNL Experience Cloud] 응용 프로그램에 
 >
 >[!DNL Privacy Service] UI는 현재 액세스 및 삭제 요청만 지원합니다. 모든 옵트아웃 요청은 대신 API를 통해 해야 합니다.
 
-[!DNL Privacy Service] UI를 사용하면 그래픽 인터페이스를 사용하여 개인 정보 작업을 만들고 모니터링할 수 있습니다. UI에는 모든 활성 요청의 상태를 시각적으로 표시하는 **[!UICONTROL 상태 보고서]** 위젯이 포함되어 있으며, 내장된 **[!UICONTROL 요청 빌더]**&#x200B;를 사용하거나 JSON 파일을 업로드하여 새 요청을 만들 수 있습니다. UI 사용에 대한 자세한 내용은 [Privacy Service 사용 안내서](ui/overview.md)를 참조하십시오.
+[!DNL Privacy Service] UI를 사용하면 그래픽 인터페이스를 사용하여 개인 정보 작업을 만들고 모니터링할 수 있습니다. UI에는 모든 활성 요청의 상태를 시각적으로 표시하는 **[!UICONTROL Status Report]** 위젯이 포함되어 있으며, 내장 **[!UICONTROL Request Builder]**&#x200B;을 사용하거나 JSON 파일을 업로드하여 새 요청을 만들 수 있습니다. UI 사용에 대한 자세한 내용은 [Privacy Service 사용 안내서](ui/overview.md)를 참조하십시오.
 
 ### 개인 정보 작업 모니터링 {#monitor}
 
@@ -92,7 +92,7 @@ CRM 시스템에서 사용하는 [!DNL Experience Cloud] 응용 프로그램에 
 | --- | --- |
 | [!DNL Privacy Service] UI | [!DNL Privacy Service] UI는 모든 활성 요청의 상태를 시각적으로 표시할 수 있는 모니터링 대시보드를 제공합니다. 자세한 내용은 [Privacy Service 사용 안내서](ui/overview.md)를 참조하십시오. |
 | [!DNL Privacy Service] API | [!DNL Privacy Service] API에서 제공하는 조회 끝점을 사용하여 개인 정보 작업 상태를 프로그래밍 방식으로 모니터링할 수 있습니다. API 사용 방법에 대한 자세한 내용은 [Privacy Service 개발자 안내서](./api/getting-started.md)를 참조하십시오. |
-| [!DNL Privacy Events] | [!DNL Privacy Events] 효율적인 작업 요청 자동화를 촉진하기 위해 구성된 웹후크에 전송된 Adobe I/O 이벤트를 활용합니다. 작업이 완료되었는지 또는 워크플로우 내의 특정 이정표에 도달했는지 확인하기 위해 [!DNL Privacy Service] API를 폴링할 필요가 줄어들었습니다. 자세한 내용은 [개인정보 보호 이벤트 가입](./privacy-events.md)의 자습서를 참조하십시오. |
+| [!DNL Privacy Events] | [!DNL Privacy Events] 효율적인 작업 요청 자동화를 촉진하기 위해 구성된 웹 후크에 전송된 Adobe I/O 이벤트를 활용합니다. 작업이 완료되었는지 또는 워크플로우 내의 특정 이정표에 도달했는지 확인하기 위해 [!DNL Privacy Service] API를 폴링할 필요가 줄어들었습니다. 자세한 내용은 [개인정보 보호 이벤트 가입](./privacy-events.md)의 자습서를 참조하십시오. |
 
 ## 다음 단계
 
