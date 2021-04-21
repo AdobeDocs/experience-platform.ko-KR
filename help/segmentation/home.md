@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;세그멘테이션;세그멘테이션;세그먼트 서비스;세그먼트;세그먼트;세그먼트;세그먼트;;home;popular topacmentation;segmentation
 solution: Experience Platform
 title: 세그멘테이션 서비스 개요
-topic: overview
+topic-legacy: overview
 description: Adobe Experience Platform 세그멘테이션 서비스와 플랫폼 생태계에서 수행하는 역할에 대해 알아봅니다.
+exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
 translation-type: tm+mt
-source-git-commit: eff833f20eba4e51579a43fbb98c1e2333e326ef
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1581'
+source-wordcount: '1580'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL Segmentation Service] 개요
 
