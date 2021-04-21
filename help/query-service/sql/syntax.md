@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;쿼리 서비스;쿼리 서비스;sql 구문;sql;ctas;CTAS;테이블을 선택 항목으로 만들기
 solution: Experience Platform
 title: 쿼리 서비스의 SQL 구문
-topic: syntax
+topic-legacy: syntax
 description: 이 문서에서는 Adobe Experience Platform 쿼리 서비스에서 지원되는 SQL 구문을 보여 줍니다.
+exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
 translation-type: tm+mt
-source-git-commit: 78707257c179101b29e68036bf9173d74f01e03a
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1981'
 ht-degree: 1%
 
 ---
-
 
 # 쿼리 서비스의 SQL 구문
 
