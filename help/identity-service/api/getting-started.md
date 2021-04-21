@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;ID 서비스 api;ID 서비스 개발자 안내서;지역
 solution: Experience Platform
 title: ID 서비스 API 안내서
-topic: API guide
+topic-legacy: API guide
 description: 개발자는 Identity Service API를 사용하여 Adobe Experience Platform에서 ID 그래프를 사용하여 디바이스 간, 크로스 채널 및 거의 실시간으로 고객 ID를 관리할 수 있습니다. API를 사용하여 주요 작업을 수행하는 방법에 대해 알아보려면 이 안내서를 따르십시오.
+exl-id: d612af38-4648-4c3e-8cfd-3f306c9370e1
 translation-type: tm+mt
-source-git-commit: 69c3106070e31377ea8571cd14dc33aa9b6f7037
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '773'
+source-wordcount: '771'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL Identity Service] API 안내서
 
