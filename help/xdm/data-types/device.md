@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;홈;인기 항목;스키마;스키마;XDM;필드;스키마;스키마;장치;데이터 유형;데이터 유형;데이터 유형;data-type;
+keywords: Experience Platform;홈;인기 항목;스키마;스키마;XDM;필드;스키마;스키마;장치;데이터 유형;데이터 유형;데이터 유형;;home;popular topics;schema;XDM;fields;schemas;device;datatype;data-type;data-type;
 solution: Experience Platform
 title: 장치 데이터 유형
-topic: overview
+topic-legacy: overview
 description: 이 문서에서는 장치 XDM 데이터 유형에 대한 개요를 제공합니다.
+exl-id: 049a2ca1-6bc3-4b9c-832a-77102e8a0ed2
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '325'
+source-wordcount: '322'
 ht-degree: 4%
 
 ---
 
+# [!UICONTROL Device] 데이터 유형
 
-# [!UICONTROL 장치 ] 데이터 유형
-
-[!UICONTROL 디바이스] 는 식별된 디바이스를 설명하는 표준 XDM 데이터 유형입니다. 장치는 일반적으로 쿠키로 세션 간에 추적할 수 있는 응용 프로그램 또는 브라우저 인스턴스입니다.
+[!UICONTROL Device] 은 식별된 장치를 설명하는 표준 XDM 데이터 유형입니다. 장치는 일반적으로 쿠키로 세션 간에 추적할 수 있는 응용 프로그램 또는 브라우저 인스턴스입니다.
 
 <img src="../images/data-types/device.png" width="450" /><br />
 
@@ -39,7 +39,7 @@ ht-degree: 4%
 
 ## 부록
 
-다음 섹션에는 [!UICONTROL 장치] 데이터 유형에 대한 추가 정보가 포함되어 있습니다.
+다음 섹션에는 [!UICONTROL Device] 데이터 유형에 대한 추가 정보가 포함되어 있습니다.
 
 ## typeIDService {#typeIDService}에 허용된 값
 
