@@ -2,13 +2,13 @@
 keywords: Experience Platform;인사이트;고객 아이디;인기 있는 항목;고객 아이사이트에 대한 통찰력
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: 고객 AI를 통한 인사이트 확보
-topic: Discovering insights
+topic-legacy: Discovering insights
 description: 이 문서는 Intelligent Services 고객 AI 사용자 인터페이스에서 서비스 인스턴스 인사이트와 상호 작용하기 위한 가이드 역할을 합니다.
 exl-id: 8aaae963-4029-471e-be9b-814147a5f160
 translation-type: tm+mt
-source-git-commit: ff953cf0aed2b9122b78126a87625e88f1ca4506
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1572'
+source-wordcount: '1570'
 ht-degree: 1%
 
 ---
