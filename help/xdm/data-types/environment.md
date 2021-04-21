@@ -2,20 +2,20 @@
 keywords: Experience Platform;홈;인기 항목;스키마;스키마;XDM;필드;스키마;스키마;환경;데이터 유형;데이터 유형;데이터 유형;data-type;
 solution: Experience Platform
 title: 환경 데이터 유형
-topic: overview
+topic-legacy: overview
 description: 이 문서에서는 환경 XDM 데이터 유형에 대한 개요를 제공합니다.
+exl-id: ec806ee5-ed65-4148-9dbe-e297d9e8cd73
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '464'
+source-wordcount: '461'
 ht-degree: 4%
 
 ---
 
+# [!UICONTROL Environment] 데이터 유형
 
-# [!UICONTROL 환경 ] 데이터 유형
-
-[!UICONTROL 환경] 은 관찰된 이벤트의 주변 환경을 설명하는 표준 XDM 데이터 유형으로, 특히 네트워크 및 소프트웨어 버전과 같은 임시 정보를 자세히 설명합니다.
+[!UICONTROL Environment] 은 관찰된 이벤트의 주변 환경을 설명하는 표준 XDM 데이터 유형이며, 특히 네트워크 및 소프트웨어 버전과 같은 임시 정보를 자세히 설명합니다.
 
 >[!IMPORTANT]
 >
@@ -48,7 +48,7 @@ ht-degree: 4%
 
 ## 부록
 
-다음 섹션에는 [!UICONTROL 장치] 데이터 유형에 대한 추가 정보가 포함되어 있습니다.
+다음 섹션에는 [!UICONTROL Device] 데이터 유형에 대한 추가 정보가 포함되어 있습니다.
 
 ## {#type} 유형의 허용된 값
 
