@@ -2,16 +2,16 @@
 keywords: Experience Platform;속성 ai;액세스 스코어;인기 항목;다운로드 스코어;특성 점수;내보내기;Attribution ai;Export
 solution: Experience Platform, Intelligent Services
 title: Attribution AI에서 스코어 다운로드
-topic: Downloading scores
+topic-legacy: Downloading scores
 description: 이 문서는 Attribution AI의 스코어 다운로드 안내서 역할을 합니다.
+exl-id: 8821e3fb-c520-4933-8eb7-0b0aa10db916
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1056'
+source-wordcount: '1054'
 ht-degree: 2%
 
 ---
-
 
 # Attribution AI에서 스코어 다운로드
 
@@ -25,13 +25,13 @@ Attribution AI을 사용하면 점수를 쪽모이 세공 마루 파일 형식�
 
 ## 데이터 집합 ID {#dataset-id} 찾기
 
-Attribution AI 인사이트를 위한 서비스 인스턴스 내에서 오른쪽 상단 탐색에서 *추가 작업* 드롭다운을 클릭한 다음 **[!UICONTROL 액세스 점수]**&#x200B;를 선택합니다.
+Attribution AI 인사이트를 위한 서비스 인스턴스 내에서 오른쪽 상단 탐색에서 *추가 작업* 드롭다운을 클릭한 다음 **[!UICONTROL Access scores]**&#x200B;를 선택합니다.
 
 ![추가 작업](./images/download-scores/more-actions.png)
 
 다운로드 점수 설명서 및 현재 인스턴스의 데이터 세트 ID에 대한 링크가 포함된 새 대화 상자가 나타납니다. 데이터 세트 ID를 클립보드에 복사하고 다음 단계로 진행합니다.
 
-![데이터 집합 ID](../customer-ai/images/download-scores/access-scores.png)
+![데이터 세트 ID](../customer-ai/images/download-scores/access-scores.png)
 
 ## 배치 ID {#retrieve-your-batch-id} 검색
 
@@ -261,7 +261,7 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/01E5QSWC
 
 ![터미널](./images/download-scores/terminal-output.png)
 
-다운로드한 점수는 쪽모이 세공 마루 형식으로 표시되며 점수를 보려면 [!DNL Spark]-shell 또는 Parentheet reader가 필요합니다. Raw 점수를 보려면 [Apache Compiled tools](https://github.com/apache/parquet-mr/tree/master/parquet-tools)를 사용할 수 있습니다. 쪽모이 세공 도구는 [!DNL Spark]으로 데이터를 분석할 수 있습니다.
+다운로드한 점수는 쪽모이 세공 마루 형식으로 표시되며 점수를 보려면 [!DNL Spark]-shell 또는 Parentheet reader가 필요합니다. Raw 점수를 보려면 [Apache Compiled 도구](https://github.com/apache/parquet-mr/tree/master/parquet-tools)를 사용할 수 있습니다. 쪽모이 세공 도구는 [!DNL Spark]으로 데이터를 분석할 수 있습니다.
 
 ## 다음 단계
 
