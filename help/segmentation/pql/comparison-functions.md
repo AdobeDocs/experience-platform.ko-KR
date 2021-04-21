@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;세그멘테이션;세그멘테이션 서비스;pql;PQL;프로필 쿼리 언어;비교 함수;비교;비교;
 solution: Experience Platform
 title: PQL 비교 함수
-topic: developer guide
+topic-legacy: developer guide
 description: 비교 함수는 서로 다른 표현식과 값을 비교하고 그에 따라 "true" 또는 "false"를 반환하는 데 사용됩니다.
+exl-id: 15f106c7-b88b-4042-b925-703e2a309573
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '326'
 ht-degree: 9%
 
 ---
-
 
 # 비교 함수
 
