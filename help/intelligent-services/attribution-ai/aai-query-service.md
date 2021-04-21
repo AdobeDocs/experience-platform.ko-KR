@@ -2,16 +2,16 @@
 keywords: 인사이트;기여도 분석 ai;기여도 분석 ai 인사이트;AAI 쿼리 서비스;기여도 분석 쿼리;기여도 분석 점수
 solution: Intelligent Services, Experience Platform
 title: 쿼리 서비스를 사용하여 속성 점수 분석
-topic: Attribution AI queries
+topic-legacy: Attribution AI queries
 description: Adobe Experience Platform 쿼리 서비스를 사용하여 Attribution AI 점수를 분석하는 방법을 알아봅니다.
+exl-id: 35d7f6f2-a118-4093-8dbc-cb020ec35e90
 translation-type: tm+mt
-source-git-commit: d83244ac93830b0e40f6d14e87497d4cb78544d9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '581'
+source-wordcount: '578'
 ht-degree: 0%
 
 ---
-
 
 # 쿼리 서비스를 사용하여 속성 점수 분석
 
