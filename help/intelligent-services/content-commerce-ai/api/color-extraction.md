@@ -2,16 +2,16 @@
 keywords: Experience Platform;시작하기;내용 ai;커머스 ai;내용 및 상거래 ai;색상 추출;색상 추출;시작하기;content ai;commerce ai;color extraction;getting started;content ai;content and commerce ai;color extraction;
 solution: Experience Platform, Intelligent Services
 title: 컨텐츠 및 상거래 AI API의 색상 추출
-topic: Developer guide
+topic-legacy: Developer guide
 description: 이미지 제공 시 색상 추출 서비스를 사용하면 픽셀 색상의 막대 그래프를 계산하고 우세한 색상을 버킷으로 정렬할 수 있습니다.
+exl-id: 6b3b6314-cb67-404f-888c-4832d041f5ed
 translation-type: tm+mt
-source-git-commit: d10c00694b0a3b2a9da693bd59615b533cfae468
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '712'
 ht-degree: 2%
 
 ---
-
 
 # 색상 추출
 
