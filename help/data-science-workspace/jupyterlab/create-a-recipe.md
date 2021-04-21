@@ -2,17 +2,17 @@
 keywords: Experience Platform;JupiterLab;레서피;노트북;데이터 과학 작업 공간;인기 있는 주제;레서피 만들기
 solution: Experience Platform
 title: Jupiter 공책을 사용하여 레서피 만들기
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: 이 자습서는 두 개의 기본 섹션을 살펴봅니다. 먼저 JupiterLab Notebook 내에 템플릿을 사용하여 기계 학습 모델을 만듭니다. 그런 다음 JupiterLab 내의 레서피 워크플로에 노트북을 실행하여 데이터 과학 작업 공간 내에서 레서피 작업을 만듭니다.
+exl-id: d3f300ce-c9e8-4500-81d2-ea338454bfde
 translation-type: tm+mt
-source-git-commit: 9d84fc1eb898020ed4b154c091fcc9fc4933c7de
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '2366'
+source-wordcount: '2345'
 ht-degree: 0%
 
 ---
-
 
 # Jupiter Notebook을 사용하여 레시피 만들기
 
@@ -27,9 +27,9 @@ ht-degree: 0%
 
 ## [!DNL JupyterLab] 노트북 환경 시작하기
 
-처음부터 레서피 만들기는 [!DNL Data Science Workspace] 내에서 수행할 수 있습니다. 시작하려면 [Adobe Experience Platform](https://platform.adobe.com)으로 이동하고 왼쪽에 있는 **[!UICONTROL Notebooks]** 탭을 클릭합니다. [!DNL JupyterLab Launcher]에서 레서피 빌더 템플릿을 선택하여 새 전자 필기장을 만듭니다.
+처음부터 레서피 만들기는 [!DNL Data Science Workspace] 내에서 수행할 수 있습니다. 시작하려면 [Adobe Experience Platform](https://platform.adobe.com)으로 이동하고 왼쪽의 **[!UICONTROL Notebooks]** 탭을 클릭합니다. [!DNL JupyterLab Launcher]에서 레서피 빌더 템플릿을 선택하여 새 전자 필기장을 만듭니다.
 
-[!UICONTROL Recipe Builder] 전자 필기장을 사용하면 노트북 내에서 트레이닝과 점수를 실행할 수 있습니다. 따라서 교육 및 점수 데이터에 대한 실험을 실행하는 동안 `train()` 및 `score()` 메서드를 변경할 수 있습니다. 트레이닝 및 점수 출력 결과가 만족스러우면 Recipe Builder 노트북에 내장된 레서피 기능을 사용하여 [!DNL Data Science Workspace]에서 사용할 레서피를 만들 수 있습니다.
+[!UICONTROL Recipe Builder] 전자 필기장을 사용하면 노트북 내에서 트레이닝과 점수 지정 실행을 실행할 수 있습니다. 따라서 교육 및 점수 데이터에 대한 실험을 실행하는 동안 `train()` 및 `score()` 메서드를 변경할 수 있습니다. 트레이닝 및 점수 출력 결과가 만족스러우면 Recipe Builder 노트북에 내장된 레서피 기능을 사용하여 [!DNL Data Science Workspace]에서 사용할 레서피를 만들 수 있습니다.
 
 >[!NOTE]
 >
@@ -39,7 +39,7 @@ ht-degree: 0%
 
 launcher에서 Recipe Builder 전자 필기장을 클릭하면 전자 필기장이 탭에서 열립니다. 노트북에 사용되는 템플릿은 [이 공용 저장소](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail/)에서도 찾을 수 있는 Python Retail 판매 예측 레서피입니다.
 
-도구 모음에는 **[!UICONTROL Train]**, **[!UICONTROL 점수]** 및 **[!UICONTROL 레서피 만들기]**&#x200B;와 같은 세 가지 추가 작업이 있습니다. 이러한 아이콘은 [!UICONTROL 레서피 빌더] 노트북에만 표시됩니다. 이러한 작업에 대한 자세한 내용은 전자 필기장에서 레서피를 작성한 후 교육 및 점수 지정 섹션](#training-and-scoring)에서 [에 대해 설명합니다.
+도구 모음에는 **[!UICONTROL Train]**, **[!UICONTROL Score]** 및 **[!UICONTROL Create Recipe]** 등 3개의 추가 작업이 있습니다. 이러한 아이콘은 [!UICONTROL Recipe Builder] 전자 필기장에만 나타납니다. 이러한 작업에 대한 자세한 내용은 전자 필기장에서 레서피를 작성한 후 교육 및 점수 지정 섹션](#training-and-scoring)에서 [에 대해 설명합니다.
 
 ![](../images/jupyterlab/create-recipe/toolbar_actions.png)
 
@@ -460,13 +460,13 @@ def save(configProperties, prediction):
 
 전자 필기장에 대한 변경 작업을 완료하고 레서피 교육을 받으려면 막대 맨 위에 있는 관련 단추를 클릭하여 셀에서 교육 실행을 만들 수 있습니다. 단추를 클릭하면 교육 스크립트의 명령 및 출력 로그가 전자 필기장(`evaluator.py` 셀 아래)에 나타납니다. Conda는 먼저 모든 종속성을 설치한 다음, 교육이 시작됩니다.
 
-점수를 매기기 전에 최소 한 번 트레이닝을 실행해야 합니다. **[!UICONTROL 채점 실행]** 단추를 클릭하면 교육 중에 생성된 트레이닝된 모델에 점수가 지정됩니다. 채점 스크립트가 `datasaver.py` 아래에 나타납니다.
+점수를 매기기 전에 최소 한 번 트레이닝을 실행해야 합니다. **[!UICONTROL Run Scoring]** 단추를 클릭하면 교육 중에 생성된 훈련 모델에 점수가 지정됩니다. 채점 스크립트가 `datasaver.py` 아래에 나타납니다.
 
 디버깅을 위해 숨겨진 출력을 보려면 출력 셀의 끝에 `debug`을 추가하고 다시 실행하십시오.
 
 ## 레서피 {#create-recipe} 만들기
 
-레서피를 편집하고 교육/점수 출력 결과에 만족하면 오른쪽 위 탐색에서 **[!UICONTROL 레서피 만들기]**&#x200B;를 눌러 노트북에서 레서피를 만들 수 있습니다.
+레서피를 편집하고 트레이닝/점수 출력 결과에 만족하면 오른쪽 위 탐색에서 **[!UICONTROL Create Recipe]**&#x200B;을 눌러 노트북에서 레서피를 만들 수 있습니다.
 
 ![](../images/jupyterlab/create-recipe/create-recipe.png)
 
@@ -474,7 +474,7 @@ def save(configProperties, prediction):
 
 ![](../images/jupyterlab/create-recipe/enter_recipe_name.png)
 
-**[!UICONTROL 확인]**&#x200B;을 누르면 [Adobe Experience Platform](https://platform.adobe.com/)에서 새 레서피를 탐색할 수 있습니다. **[!UICONTROL 레서피 보기]** 단추를 클릭하여 **[!UICONTROL ML 모델]** 아래의 **[!UICONTROL 레서피]** 탭으로 이동할 수 있습니다.
+**[!UICONTROL Ok]**&#x200B;을 누르면 [Adobe Experience Platform](https://platform.adobe.com/)에서 새 레서피를 탐색할 수 있습니다. **[!UICONTROL View Recipes]** 단추를 클릭하여 **[!UICONTROL ML Models]** 아래의 **[!UICONTROL Recipes]** 탭으로 이동할 수 있습니다.
 
 ![](../images/jupyterlab/create-recipe/recipe_creation_started.png)
 
@@ -500,5 +500,3 @@ def save(configProperties, prediction):
 다음 비디오는 모델 구축 및 배포에 대한 이해를 지원하기 위해 만들어졌습니다.
 
 >[!VIDEO](https://video.tv.adobe.com/v/30575?quality=12&enable10seconds=on&speedcontrol=on)
-
-
