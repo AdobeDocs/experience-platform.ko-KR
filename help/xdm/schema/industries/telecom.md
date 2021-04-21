@@ -1,13 +1,13 @@
 ---
 solution: Experience Platform
 title: 통신 업계 데이터 모델 ERD
-topic: overview
+topic-legacy: overview
 description: Adobe Experience Platform에서 사용할 수 있는 XDM(Experience Data Model)과 호환되는 텔레커뮤니케이션 산업 표준 데이터 모델을 설명하는 ERD(엔터티 관계 다이어그램)를 봅니다.
 translation-type: tm+mt
-source-git-commit: ffc113c0c85c76e6645fb4276c174779682f2b60
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '74'
-ht-degree: 1%
+source-wordcount: '73'
+ht-degree: 0%
 
 ---
 
