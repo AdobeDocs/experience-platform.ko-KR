@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;세그멘테이션;세그멘테이션 서비스;pql;PQL;프로필 쿼리 언어;개체 기능;개체
 solution: Experience Platform
 title: PQL 개체 함수
-topic: developer guide
+topic-legacy: developer guide
 description: PQL(프로파일 쿼리 언어)은 개체와의 상호 작용을 단순화하는 기능을 제공합니다.
+exl-id: e65257d8-5bc8-46c8-8487-33bc7ce4059b
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '138'
 ht-degree: 4%
 
 ---
-
 
 # 객체 함수
 
