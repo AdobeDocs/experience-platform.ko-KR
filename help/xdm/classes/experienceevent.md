@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform;홈;인기 항목;스키마;스키마;스키마;XDM;개별 프로필;필드;스키마;ID맵;ID 맵;스키마 디자인;맵;결합 스키마;공용 스키마;Identity Map;Map;Union schema
+keywords: Experience Platform;홈;인기 항목;스키마;스키마;스키마;XDM;개별 프로필;필드;스키마;ID맵;ID 맵;스키마 디자인;맵;결합 스키마;공용 스키마
 solution: Experience Platform
 title: XDM ExperienceEvent 클래스
-topic: overview
+topic-legacy: overview
 description: 이 문서에서는 XDM ExperienceEvent 클래스의 개요를 제공합니다.
+exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '820'
+source-wordcount: '812'
 ht-degree: 1%
 
 ---
-
 
 # [!DNL XDM ExperienceEvent] class
 
@@ -39,8 +39,8 @@ ht-degree: 1%
 
 Adobe은 [!DNL XDM ExperienceEvent] 클래스에 사용할 수 있도록 여러 가지 표준 믹스를 제공합니다. 다음은 클래스에 일반적으로 사용되는 일부 믹싱 목록입니다.
 
-* [[!UICONTROL 최종 사용자 ID 세부 사항]](../mixins/event/enduserids.md)
-* [[!UICONTROL 환경 세부 사항]](../mixins/event/environment-details.md)
+* [[!UICONTROL End User ID Details]](../mixins/event/enduserids.md)
+* [[!UICONTROL Environment Details]](../mixins/event/environment-details.md)
 
 ## 부록
 
@@ -52,7 +52,7 @@ Adobe은 [!DNL XDM ExperienceEvent] 클래스에 사용할 수 있도록 여러 
 
 | 값 | 정의 |
 | --- | --- |
-| `advertising.completes` | 완료 시 미디어 에셋을 감시했습니다. 뷰어가 건너뛸 수 있기 때문에 시청자가 전체 비디오를 시청했다는 의미는 아닙니다. |
+| `advertising.completes` | 완료 시 미디어 에셋을 감시했습니다. 뷰어가 건너뛸 수 있기 때문에 시청자가 전체 비디오를 시청했다고 볼 필요는 없습니다. |
 | `advertising.timePlayed` | 특정 시간 제한 미디어 자산에서 사용자가 보낸 시간을 설명합니다. |
 | `advertising.federated` | 데이터 통합을 통해 경험 이벤트가 만들어졌는지(고객 간의 데이터 공유) 여부를 나타냅니다. |
 | `advertising.clicks` | 광고에서 작업을 클릭합니다. |
