@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;CJA;여정 분석;고객 여정 분석;캠페인 통합 운영;고객 여정;여정;여정 통합 운영;기능;지역
 solution: Experience Platform
 title: Adobe Experience Platform 개요
-topic: getting started
+topic-legacy: getting started
 description: Adobe Experience Platform을 사용하면 데이터 과학 및 머신 러닝을 적용하기 전에 고객 데이터를 중앙에서 관리하고 표준화하여 개인화된 풍부한 경험을 디자인하고 전달할 수 있습니다.
+exl-id: edcce353-338a-440e-99eb-a64e2abca579
 translation-type: tm+mt
-source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '459'
 ht-degree: 1%
 
 ---
-
 
 # Adobe Experience Platform 개요
 
@@ -52,7 +52,7 @@ Adobe은 Experience Platform 위에 여러 애플리케이션 서비스를 구�
 * [**API 참조 문서**](https://www.adobe.com/go/platform-api-reference-en)\
    헤더, 매개 변수, 샘플 요청 및 응답을 포함하여 [!DNL Experience Platform] API를 검색합니다.<br/>*이러한 문서는 Adobe I/O에서 호스팅됩니다.*
 
-* [**용어 설명**](glossary.md)\
+* [**용어집**](glossary.md)\
    Adobe Experience Platform 용어 검토
 
 * [**릴리스 정보**](https://www.adobe.com/go/platform-release-notes.en)\
