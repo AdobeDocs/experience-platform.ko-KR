@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;쿼리 서비스;쿼리 서비스;Power BI;power bi;쿼리 서비스에 연결;;home;popular topics service;query service;;power bi;connect to query service;
 solution: Experience Platform
 title: 쿼리 서비스에 Power BI 연결
-topic: connect
+topic-legacy: connect
 description: 이 문서에서는 Adobe Experience Platform 쿼리 서비스에 Power BI을 연결하는 단계를 안내합니다.
+exl-id: 8fcd3056-aac7-4226-a354-ed7fb8fe9ad7
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '466'
+source-wordcount: '464'
 ht-degree: 0%
 
 ---
-
 
 # 쿼리 서비스에 [!DNL Power BI] 연결(PC)
 
@@ -43,7 +43,7 @@ npgsql이 제대로 설치되었는지 확인하려면 다음 단계로 진행�
 
 ![](../images/clients/power-bi/get-data.png)
 
-이제 서버 및 데이터베이스의 값을 입력할 수 있습니다. 데이터베이스 이름, 호스트, 포트 및 로그인 자격 증명을 찾는 방법에 대한 자세한 내용은 플랫폼](https://platform.adobe.com/query/configuration)의 [자격 증명 페이지를 참조하십시오. 자격 증명을 찾으려면 [!DNL Platform]에 로그인한 다음 **[!UICONTROL 쿼리]**&#x200B;를 선택하고 **[!UICONTROL 자격 증명]**&#x200B;을 선택합니다.
+이제 서버 및 데이터베이스의 값을 입력할 수 있습니다. 데이터베이스 이름, 호스트, 포트 및 로그인 자격 증명을 찾는 방법에 대한 자세한 내용은 플랫폼](https://platform.adobe.com/query/configuration)의 [자격 증명 페이지를 참조하십시오. 자격 증명을 찾으려면 [!DNL Platform]에 로그인한 다음 **[!UICONTROL Queries]** 뒤에 **[!UICONTROL Credentials]**&#x200B;를 선택합니다.
 
 **[!DNL Server]** 은 연결 세부 사항 아래에 있는 호스트입니다. 프로덕션의 경우 호스트 문자열 끝에 `:80` 포트를 추가합니다. **[!DNL Database]** &quot;all&quot; 또는 데이터 집합 테이블 이름을 사용할 수 있습니다.
 
