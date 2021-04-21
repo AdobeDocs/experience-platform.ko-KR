@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;Azure 이벤트 허브;azure 이벤트 허브;이벤트 허브;이벤트 허브;이벤트 허브
 solution: Experience Platform
 title: Azure 이벤트 허브 원본 커넥터 개요
-topic: overview
+topic-legacy: overview
 description: API 또는 사용자 인터페이스를 사용하여 Azure 이벤트 허브를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
+exl-id: b4d4bc7f-2241-482d-a5c2-4422c31705bf
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '250'
+source-wordcount: '249'
 ht-degree: 0%
 
 ---
-
 
 # (베타) Azure 이벤트 허브 커넥터
 
