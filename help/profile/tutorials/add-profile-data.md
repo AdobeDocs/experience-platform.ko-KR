@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform;프로필;실시간 고객 프로필;문제 해결;API;프로필 사용;프로필 사용;프로필 사용
 title: 실시간 고객 프로필에 데이터 추가
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: 이 자습서에서는 실시간 고객 프로필에 데이터를 추가하는 데 필요한 단계를 설명합니다.
+exl-id: c2df224b-bf3d-4994-aa3a-9e9f4a6a726c
 translation-type: tm+mt
-source-git-commit: cad9c690be986961aea2969ef0ade975f33a8ee5
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '380'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL Real-time Customer Profile]에 데이터 추가
 
