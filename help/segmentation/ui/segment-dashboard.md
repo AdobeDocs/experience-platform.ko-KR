@@ -2,18 +2,18 @@
 keywords: Experience Platform;프로파일;세그먼트;세그먼트;세그먼테이션;사용자 인터페이스;사용자 정의;세그먼트 대시보드;대시보드
 title: 세그먼트 대시보드
 description: 'Adobe Experience Platform UI는 조직에서 만들고 유지 관리하는 세그먼트와 관련된 중요한 지표를 볼 수 있는 대시보드를 제공합니다. '
-topic: guide
+topic-legacy: guide
 type: Documentation
+exl-id: 4a45bc3a-be5e-42b5-abd1-f0fb5795f5f4
 translation-type: tm+mt
-source-git-commit: 77c94fb4654f7dcb0eb4ba9af6972be439eca55e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '148'
+source-wordcount: '147'
 ht-degree: 6%
 
 ---
 
-
-# (베타) [!UICONTROL 세그먼트] 대시보드 {#segment-dashboard}
+# (베타) [!UICONTROL Segments] 대시보드 {#segment-dashboard}
 
 >[!IMPORTANT]
 >
