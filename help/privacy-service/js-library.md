@@ -2,20 +2,20 @@
 keywords: Experience Platform;홈;인기 항목
 solution: Experience Platform
 title: Adobe 개인 정보 JavaScript 라이브러리 개요
-topic: overview
+topic-legacy: overview
 description: Adobe 개인 정보 JavaScript 라이브러리를 사용하면 Privacy Service에서 사용할 데이터 주체 ID를 검색할 수 있습니다.
+exl-id: 757bf69e-25bf-4ef9-9787-3e74b213908a
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '944'
 ht-degree: 6%
 
 ---
 
-
 # Adobe 개인 정보 보호 JavaScript 라이브러리 개요
 
-데이터 프로세서로서 Adobe은 회사의 허가와 지침에 따라 개인 데이터를 처리합니다. 귀하는 데이터 제어자로서 Adobe가 귀하를 대신하여 처리하고 저장하는 개인 데이터를 결정합니다. Adobe Experience Cloud 솔루션을 통해 전송하는 정보에 따라 Adobe은 [!DNL General Data Protection Regulation](GDPR) 및 [!DNL California Consumer Privacy Act](CPA)와 같은 개인 정보 보호 규정에 적용되는 개인 정보를 저장할 수 있습니다. Experience Cloud 솔루션이 개인 데이터를 수집하는 방법에 대한 자세한 내용은 Adobe Experience Cloud](https://www.adobe.com/privacy/marketing-cloud.html)의 [개인 정보에 대한 문서를 참조하십시오.
+데이터 프로세서로서 Adobe은 회사의 허가와 지침에 따라 개인 데이터를 처리합니다. 귀하는 데이터 제어자로서 Adobe가 귀하를 대신하여 처리하고 저장하는 개인 데이터를 결정합니다. Adobe Experience Cloud 솔루션을 통해 전송하는 정보에 따라 Adobe은 [!DNL General Data Protection Regulation](GDPR) 및 [!DNL California Consumer Privacy Act](CPA)와 같은 개인 정보 보호 규정에 적용되는 개인 정보를 저장할 수 있습니다. Experience Cloud 솔루션이 개인 데이터를 수집하는 방법에 대한 자세한 내용은 Adobe Experience Cloud](https://www.adobe.com/kr/privacy/marketing-cloud.html)의 [개인 정보에 대한 문서를 참조하십시오.
 
 데이터 관리자는 **Adobe 개인 정보 JavaScript 라이브러리**&#x200B;를 사용하여 특정 도메인에 대해 [!DNL Experience Cloud] 솔루션에서 생성한 모든 데이터 주체 ID의 검색을 자동화할 수 있습니다. 그런 다음 [Adobe Experience Platform Privacy Service](home.md)에서 제공하는 API를 사용하여 이러한 ID를 사용하여 해당 데이터 대상에 속하는 개인 데이터에 대한 액세스 및 삭제 요청을 만들 수 있습니다.
 
