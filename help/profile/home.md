@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;프로파일;실시간 고객 프로파일;문제 해결;API;통합 프로파일;통합 프로파일;프로파일;rtcp;XDM 그래프
 title: 실시간 고객 프로필 개요
-topic: guide
+topic-legacy: guide
 description: 실시간 고객 프로필은 다양한 엔터프라이즈 데이터 자산의 데이터를 병합한 다음 개별 고객 프로필 및 관련 시간 시리즈 이벤트의 형태로 해당 데이터에 대한 액세스를 제공하는 범용 조회 엔티티 스토어입니다. 이 기능을 통해 마케터는 다양한 채널에서 고객과 연관성 높은 경험을 일관되게 제작할 수 있습니다.
+exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1827'
+source-wordcount: '1826'
 ht-degree: 0%
 
 ---
 
-
-# [!DNL Real-time Customer Profile]개요
+# [!DNL Real-time Customer Profile] 개요
 
 Adobe Experience Platform을 사용하면 고객이 브랜드와 상호 작용하는 장소 또는 시기와 상관없이 고객의 관심사와 연관성 있는 경험을 일관되게 전달할 수 있습니다. [!DNL Real-time Customer Profile]을 사용하면 온라인, 오프라인, CRM 및 제3자 등 다양한 채널의 데이터를 취합하여 각 개별 고객의 전체 상황을 파악할 수 있습니다. [!DNL Profile] 고객 데이터를 하나의 통합 뷰로 통합하여 고객 상호 작용에 대해 실행 가능하고 타임스탬프가 지정된 계정을 제공할 수 있습니다. 이 개요는 [!DNL Experience Platform]에서 [!DNL Real-time Customer Profile]의 역할과 사용 방법을 이해하는 데 도움이 됩니다.
 
