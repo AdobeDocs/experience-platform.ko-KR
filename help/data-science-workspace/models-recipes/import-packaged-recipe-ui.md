@@ -2,17 +2,17 @@
 keywords: Experience Platform;패키지화된 레서피 가져오기;데이터 과학 작업 공간;인기 있는 주제;레서피;ui;엔진 만들기
 solution: Experience Platform
 title: 데이터 과학 작업 공간 UI에서 패키지된 레서피 가져오기
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: 이 자습서에서는 제공된 소매 판매 예제를 사용하여 패키지화된 레서피를 구성하고 가져오는 방법에 대한 통찰력을 제공합니다. 이 자습서가 끝나면 Adobe Experience Platform Data Science Workspace에서 모델을 생성, 교육 및 평가할 수 있습니다.
+exl-id: 2556e1f0-3f9c-4884-a699-06c041d5c4d1
 translation-type: tm+mt
-source-git-commit: 13fa4af388c6f31768a6b7e1da05cb56c5635c9e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1740'
+source-wordcount: '1738'
 ht-degree: 0%
 
 ---
-
 
 # 데이터 과학 작업 공간 UI에서 패키지된 레서피 가져오기
 
