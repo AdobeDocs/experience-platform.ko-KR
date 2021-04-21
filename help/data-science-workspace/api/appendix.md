@@ -2,16 +2,16 @@
 keywords: Experience Platform;개발자 가이드;종단점;데이터 과학 작업 공간;인기 있는 주제
 solution: Experience Platform
 title: Sensei 기계 학습 API 가이드 부록
-topic: Developer guide
+topic-legacy: Developer guide
 description: 다음 섹션에서는 Sensei Machine Learning API의 다양한 기능에 대한 참조 정보를 제공합니다.
+exl-id: 2c8d3ae8-7ad7-4ff6-8d6b-3a42d3eccdff
 translation-type: tm+mt
-source-git-commit: b395535cbe7e4030606ee2808eb173998f5c32e0
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '330'
 ht-degree: 3%
 
 ---
-
 
 # [!DNL Sensei Machine Learning] API 안내서 부록
 
