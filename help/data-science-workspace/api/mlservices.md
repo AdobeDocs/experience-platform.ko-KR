@@ -2,20 +2,20 @@
 keywords: Experience Platform;개발자 가이드;끝점;데이터 과학 작업 공간;인기 항목;mlservices;sensei 기계 학습 api
 solution: Experience Platform
 title: MLSservices API 끝점
-topic: Developer guide
-description: MLService는 이전에 개발된 모델에 액세스하고 재사용할 수 있는 기능을 조직에 제공하는 게시된 훈련된 모델입니다. MLSservices의 주요 기능은 일정에 따라 트레이닝과 점수를 자동화하는 기능입니다. 예약된 교육 실행은 모델의 효율성과 정확성을 유지하는 데 도움이 되지만, 예약된 점수 실행을 통해 새로운 인사이트가 일관되게 생성되도록 할 수 있습니다.
+topic-legacy: Developer guide
+description: MLService는 이전에 개발된 모델에 액세스하고 재사용할 수 있는 능력을 조직에 제공하는 게시된 훈련된 모델입니다. MLSservices의 주요 기능은 일정에 따라 트레이닝과 점수를 자동화하는 기능입니다. 예약된 교육 실행은 모델의 효율성과 정확성을 유지하는 데 도움이 되지만, 예약된 점수 실행을 통해 새로운 인사이트가 일관되게 생성되도록 할 수 있습니다.
+exl-id: cd236e0b-3bfc-4d37-83eb-432f6ad5c5b6
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '890'
 ht-degree: 2%
 
 ---
 
-
 # MLSservices 끝점
 
-MLService는 이전에 개발된 모델에 액세스하고 재사용할 수 있는 기능을 조직에 제공하는 게시된 훈련된 모델입니다. MLSservices의 주요 기능은 일정에 따라 트레이닝과 점수를 자동화하는 기능입니다. 예약된 교육 실행은 모델의 효율성과 정확성을 유지하는 데 도움이 되지만, 예약된 점수 실행을 통해 새로운 인사이트가 일관되게 생성되도록 할 수 있습니다.
+MLService는 이전에 개발된 모델에 액세스하고 재사용할 수 있는 능력을 조직에 제공하는 게시된 훈련된 모델입니다. MLSservices의 주요 기능은 일정에 따라 트레이닝과 점수를 자동화하는 기능입니다. 예약된 교육 실행은 모델의 효율성과 정확성을 유지하는 데 도움이 되지만, 예약된 점수 실행을 통해 새로운 인사이트가 일관되게 생성되도록 할 수 있습니다.
 
 자동화된 교육 및 점수 지정 일정은 시작 타임스탬프, 종료 타임스탬프 및 [cron 표현식](https://en.wikipedia.org/wiki/Cron)으로 표시되는 빈도로 정의됩니다. [MLService](#create-an-mlservice)을(를) 만들거나 기존 MLService](#update-an-mlservice)을(를) 업데이트하여 [을(를) 적용할 때 일정을 정의할 수 있습니다.
 
