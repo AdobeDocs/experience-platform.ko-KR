@@ -2,20 +2,20 @@
 keywords: Experience Platform;홈;인기 항목;스키마;스키마;XDM;필드;스키마;주소;xdm:address;data-type;data-type;data type
 solution: Experience Platform
 title: 우편 주소 데이터 유형
-topic: overview
+topic-legacy: overview
 description: 이 문서에서는 우편 주소 XDM 데이터 유형에 대한 개요를 제공합니다.
+exl-id: 94457fe5-80bc-4822-9f6c-48f77d56c89b
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '336'
+source-wordcount: '332'
 ht-degree: 0%
 
 ---
 
+# [!UICONTROL Postal address] 데이터 유형
 
-# [!UICONTROL 우편 ] 주소 데이터 유형
-
-[!UICONTROL 우편 ] 주소는 우편 주소의 세부 사항을 설명하는 표준 XDM 데이터 유형입니다.
+[!UICONTROL Postal address] 은 우편 주소의 세부 사항을 설명하는 표준 XDM 데이터 유형입니다.
 
 <img src="../images/data-types/postal-address.png" width="450" /><br />
 
@@ -39,7 +39,7 @@ ht-degree: 0%
 | `stateProvince` | 관찰의 주 또는 도 부분. 형식은 [ISO 3166-2(국가 및 하위 분)](http://www.unece.org/cefact/locode/subdivisions.html) 표준을 따릅니다. |
 | `status` | 주소를 현재 사용할 수 있는지 여부를 나타냅니다. |
 | `statusReason` | 현재 `status`에 대한 설명입니다. |
-| `street1` - `street4` | 이 네 개의 필드는 1차 거리 수준 정보, 아파트 번호, 거리 번호, 그리고 거리 이름을 포함하기 위한 것입니다. `street2` 에 `street4` 는 선택 사항입니다. |
+| `street1` - `street4` | 이 네 개의 필드는 1차 거리 정보, 아파트 번호, 거리 번호, 그리고 거리 이름을 포함하기 위한 것입니다. `street2` 에 `street4` 는 선택 사항입니다. |
 
 우편 주소 데이터 유형에 대한 자세한 내용은 공개 XDM 저장소를 참조하십시오.
 
