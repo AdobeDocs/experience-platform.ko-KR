@@ -2,14 +2,14 @@
 keywords: Experience Platform;홈;인기 항목;흐름 서비스;광고;구글 애드워즈;광고
 solution: Experience Platform
 title: 소스 커넥터 및 API를 사용하여 광고 데이터 수집
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: 이 자습서에서는 소스 커넥터 및 Flow Service API를 사용하여 제3자 광고 응용 프로그램에서 데이터를 검색하고 이를 Platform으로 인제스트하는 절차를 다룹니다.
 exl-id: 2a0eb13b-d09e-4bc1-aae3-84c8741eead1
 translation-type: tm+mt
-source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1553'
+source-wordcount: '1551'
 ht-degree: 1%
 
 ---
