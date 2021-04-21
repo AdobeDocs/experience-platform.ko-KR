@@ -2,17 +2,17 @@
 keywords: Experience Platform;홈;인기 항목;데이터 거버넌스;데이터 사용 정책;home;popular topics;data governance;data usage policy
 solution: Experience Platform
 title: API에서 데이터 사용 정책 만들기
-topic: policies
+topic-legacy: policies
 type: Tutorial
 description: 정책 서비스 API를 사용하면 데이터 사용 정책을 만들고 관리하여 특정 데이터 사용 레이블이 포함된 데이터에 대해 수행할 수 있는 마케팅 작업을 결정할 수 있습니다. 이 문서에서는 정책 서비스 API를 사용하여 정책을 만들기 위한 단계별 자습서를 제공합니다.
+exl-id: 8483f8a1-efe8-4ebb-b074-e0577e5a81a4
 translation-type: tm+mt
-source-git-commit: 55a54463e918fc62378c660ef17f36e2ede471e0
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1219'
 ht-degree: 2%
 
 ---
-
 
 # API에서 데이터 사용 정책 만들기
 
