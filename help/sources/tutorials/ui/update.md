@@ -3,16 +3,16 @@ keywords: Experience Platform;홈;인기 항목;계정 업데이트
 description: 경우에 따라 기존 소스 계정의 세부 정보를 업데이트해야 할 수 있습니다. 소스 작업 공간에서는 이름, 설명 및 자격 증명을 포함하여 기존 배치 또는 스트리밍 연결의 세부 사항을 추가, 편집 및 삭제할 수 있습니다.
 solution: Experience Platform
 title: UI에서 소스 연결 계정 세부 사항 업데이트
-topic: overview
+topic-legacy: overview
 type: Tutorial
+exl-id: de264bd4-fe3d-4622-9f24-f1612d8334c9
 translation-type: tm+mt
-source-git-commit: 4a7405e2c8c97442d2781295dd827c6940aa33eb
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '437'
-ht-degree: 1%
+source-wordcount: '435'
+ht-degree: 0%
 
 ---
-
 
 # UI에서 계정 세부 사항 업데이트
 
