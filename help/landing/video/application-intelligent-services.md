@@ -1,21 +1,19 @@
 ---
 title: Experience Platform 기반의 애플리케이션 및 지능형 서비스
 description: 이 비디오에서는 Experience Cloud Applications&mdash;Real-time Customer Data Platform, Journey Orchestration, Customer Journey Analytics,, Attribution AI, 및, 고객 AI를 보완하는 Adobe Experience Platform 기반으로 구축된 애플리케이션 서비스 및 지능형 서비스에 대한 개요를 제공합니다.
-feature: platform
-topics: null
 kt: 4333
 audience: all
 doc-type: video
 activity: understand
 thumbnail: 32554.jpg
+exl-id: d2f30bba-4b49-40b2-9f2a-80905894baa6
 translation-type: tm+mt
-source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
+source-git-commit: f12baaa9d4b37f1101792a4ae479b5a62893eb68
 workflow-type: tm+mt
 source-wordcount: '118'
 ht-degree: 22%
 
 ---
-
 
 # Experience Platform 기반의 애플리케이션 및 지능형 서비스
 
@@ -25,12 +23,8 @@ ht-degree: 22%
 
 * [[!DNL Customer Journey Analytics]](https://docs.adobe.com/content/help/en/analytics-platform/using/cja-landing.html)
 * [Intelligent Services](https://experienceleague.adobe.com/docs/intelligent-services.html)
-* [[!DNL Journey Orchestration]](https://docs.adobe.com/content/help/ko-KR/journeys/using/journey-orchestration-home.html)
+* [[!DNL Journey Orchestration]](https://docs.adobe.com/content/help/ko/journeys/using/journey-orchestration-home.html)
 * [[!DNL Offer Decisioning]](https://docs.adobe.com/content/help/en/offer-decisioning/using/offer-decisioning-home.html)
 * [[!DNL Real-time Customer Data Platform (Real-time CDP)]](../../rtcdp/overview.md)
 
 >[!VIDEO](https://video.tv.adobe.com/v/32554?quality=12&learn=on)
-
-
-
-
