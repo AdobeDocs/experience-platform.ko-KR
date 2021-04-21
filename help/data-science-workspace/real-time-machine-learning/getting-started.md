@@ -2,16 +2,16 @@
 keywords: Experience Platform;개발자 가이드;데이터 과학 작업 공간;인기 있는 주제;실시간 기계 학습;
 solution: Experience Platform
 title: 실시간 머신 러닝 시작하기
-topic: Getting started
+topic-legacy: Getting started
 description: 다음 문서에서는 Adobe Experience Platform에서 실시간 기계 학습 모델을 만드는 데 필요한 단계를 간략하게 설명합니다.
+exl-id: 90a1c580-f6e7-4517-aa1e-da5092fbc4a2
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '438'
 ht-degree: 0%
 
 ---
-
 
 # 실시간 기계 학습 시작(알파)
 
@@ -52,4 +52,3 @@ ht-degree: 0%
 ## 다음 단계 {#next-steps}
 
 실시간 머신 러닝을 위한 데이터를 준비했으면 [실시간 머신 러닝 노트북 사용자 가이드](./rtml-authoring-notebook.md)에서 ONNX 모델을 만들고 실시간 머신 러닝 모델 스토어에 업로드하는 방법을 학습합니다.
-
