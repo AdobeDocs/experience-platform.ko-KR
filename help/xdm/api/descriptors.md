@@ -3,15 +3,15 @@ keywords: Experience Platform;홈;인기 항목;API;XDM;XDM 시스템;경험 데
 solution: Experience Platform
 title: 설명자 API 끝점
 description: 스키마 레지스트리 API의 /descriptors 끝점을 사용하면 경험 응용 프로그램 내에서 XDM 설명자를 프로그래밍 방식으로 관리할 수 있습니다.
-topic: developer guide
+topic-legacy: developer guide
+exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1613'
+source-wordcount: '1611'
 ht-degree: 1%
 
 ---
-
 
 # 설명자 끝점
 
@@ -248,7 +248,7 @@ curl -X PUT \
 
 ## 설명자 {#delete} 삭제
 
-경우에 따라 [!DNL Schema Registry]에서 정의한 설명자를 제거해야 합니다. 제거하려는 설명자의 `@id`을 참조하는 DELETE 요청을 수행하면 됩니다.
+[!DNL Schema Registry]에서 정의한 설명자를 제거해야 하는 경우가 있습니다. 제거하려는 설명자의 `@id`을 참조하는 DELETE 요청을 수행하면 됩니다.
 
 **API 형식**
 
@@ -287,7 +287,7 @@ curl -X DELETE \
 
 #### ID 설명자
 
-ID 설명자는 &quot;[!UICONTROL sourceSchema]&quot;의 &quot;[!UICONTROL sourceProperty]&quot;이 [!DNL Identity] 필드임을 알립니다. 자세한 내용은 [Adobe Experience Platform Identity Service](../../identity-service/home.md)에서 설명합니다.
+ID 설명자는 &quot;[!UICONTROL sourceSchema]&quot;의 &quot;[!UICONTROL sourceProperty]&quot;이(가) [Adobe Experience Platform ID 서비스](../../identity-service/home.md)에서 설명한 대로 [!DNL Identity] 필드임을 알립니다.
 
 ```json
 {
