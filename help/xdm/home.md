@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;XDM;XDM;XDM 시스템;XDM 개별 프로필;XDM ExperienceEvent;XDM 경험 이벤트;경험 이벤트;경험 이벤트;믹싱;믹싱;혼합;경험 이벤트;XDM 경험 이벤트;XDM 경험 이벤트;XDM 경험 이벤트;경험 이벤트;경험;이벤트;XDM 경험;경험 XDM 경험 이벤트;경험 데이터 모델;경험 데이터 모델;경험 데이터 모델;데이터 모델;데이터 모델;스키마 레지스트리;스키마 라이브러리;스키마 라이브러리;스키마 라이브러리;스키마 데이터;기록 데이터;시간 시리즈;시간 시리즈
 solution: Experience Platform
 title: XDM 시스템 개요
-topic: overview
-description: '표준화 및 상호 운용성은 Adobe Experience Platform의 핵심 개념입니다. Adobe을 기반으로 하는 XDM(Experience Data Model)은 고객 경험 데이터를 표준화하고 고객 경험 관리를 위한 스키마를 정의하려는 노력의 일환입니다. '
+topic-legacy: overview
+description: 표준화 및 상호 운용성은 Adobe Experience Platform의 핵심 개념입니다. Adobe을 기반으로 하는 XDM(Experience Data Model)은 고객 경험 데이터를 표준화하고 고객 경험 관리를 위한 스키마를 정의하려는 노력의 일환입니다.
+exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1642'
 ht-degree: 1%
 
 ---
-
 
 # XDM 시스템 개요
 
@@ -119,4 +119,3 @@ Adobe Experience Platform [!DNL Data Science Workspace]은(는) 기계 학습과
 [!DNL Experience Platform]의 [!DNL XDM System]에 대한 이해를 강화하려면 다음 비디오를 시청하십시오.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27105?quality=12&learn=on)
-
