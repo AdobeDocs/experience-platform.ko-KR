@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;스키마;스키마;XDM;ExperienceEvent;필드;스키마;스키마;스키마 디자인;혼합;최종 사용자;id;업데이트
 solution: Experience Platform
 title: 혼합 이름 업데이트
-topic: overview
+topic-legacy: overview
 description: 최근 XDM 혼합 이름 변경 사항 목록입니다.
+exl-id: 2c775b86-7262-4f05-b421-c626867de0a4
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '273'
+source-wordcount: '115'
 ht-degree: 0%
 
 ---
-
 
 # Mixin 이름 업데이트
 
@@ -21,31 +21,31 @@ ht-degree: 0%
 
 | 이전 이름 | 업데이트된 이름 |
 | --- | --- |
-| [!UICONTROL 이벤트 개인화 경험] | [!UICONTROL 개인 정보 세부 사항] |
-| [!UICONTROL ExperienceEvent 응용 프로그램 세부 사항] | [!UICONTROL 응용 프로그램 세부 사항] |
-| [!UICONTROL ExperienceEvent 채널 세부 사항] | [!UICONTROL 채널 세부 사항] |
-| [!UICONTROL ExperienceEvent 상거래 세부 사항] | [!UICONTROL 상거래 세부 사항] |
-| [!UICONTROL 광고를 위한 ExperienceEvent 세부 사항] | [!UICONTROL 광고 세부 사항] |
-| [!UICONTROL 마케팅에 대한 ExperienceEvent 세부 사항] | [!UICONTROL 캠페인 마케팅 세부 사항] |
-| [!UICONTROL 미디어에 대한 ExperienceEvent 세부 사항] | [!UICONTROL 미디어 상호 작용 세부 사항] |
-| [!UICONTROL 검색을 위한 ExperienceEvent 세부 사항] | [!UICONTROL 검색 세부 사항] |
-| [!UICONTROL ExperienceEvent 다이렉트 마케팅 세부 사항] | [!UICONTROL 다이렉트 마케팅 세부 사항] |
-| [!UICONTROL ExperienceEvent EndUserIDs] | [!UICONTROL 최종 사용자 ID 세부 사항] |
-| [!UICONTROL ExperienceEvent 환경 세부 사항] | [!UICONTROL 환경 세부 사항] |
-| [!UICONTROL ExperienceEvent 구현 세부 사항] | [!UICONTROL 구현 세부 정보] |
-| [!UICONTROL ExperienceEvent 프로필 스티치 세부 사항] | [!UICONTROL 프로필 스티치] |
-| [!UICONTROL ExperienceEvent 세그먼트 멤버십 세부 사항] | [!UICONTROL 세그먼트 멤버십 세부 사항] |
-| [!UICONTROL ExperienceEvent 기술 세부 사항] | [!UICONTROL 기술 정보] |
-| [!UICONTROL ExperienceEvent 웹 세부 사항] | [!UICONTROL 웹 세부 사항] |
-| [!UICONTROL 프로필 다이렉트 마케팅] | [!UICONTROL 다이렉트 마케팅 연락처 정보] |
-| [!UICONTROL 프로필 개인 정보] | [!UICONTROL 인구 통계 세부 사항] |
-| [!UICONTROL 프로필 개인 정보] | [!UICONTROL 개인 연락처 세부 사항] |
-| [!UICONTROL 프로필 전화] | [!UICONTROL 전화 번호 세부 정보] |
-| [!UICONTROL 프로필 환경 설정 세부 사항] | [!UICONTROL 환경 설정 세부 사항] |
-| [!UICONTROL 프로필 개인 정보] | [!UICONTROL 개인 정보 세부 사항] |
-| [!UICONTROL 프로필 푸시 세부 사항] | [!UICONTROL 푸시 알림 토큰 세부 사항] |
-| [!UICONTROL 프로필 세분화] | [!UICONTROL 세그먼트 멤버십 세부 사항] |
-| [!UICONTROL 프로필 구독] | [!UICONTROL 구독 세부 사항] |
-| [!UICONTROL 프로필 작업 세부 사항] | [!UICONTROL 작업 연락처 세부 사항] |
-| [!UICONTROL 푸시 알림 세부 정보] | [!UICONTROL 푸시 알림 세부 사항] |
-| [!UICONTROL 세그먼트 표현식] | [!UICONTROL 세그먼트 표현식 세부 사항] |
+| [!UICONTROL Experience event privacy mixin] | [!UICONTROL Privacy Details] |
+| [!UICONTROL ExperienceEvent application details] | [!UICONTROL Application Details] |
+| [!UICONTROL ExperienceEvent channel details] | [!UICONTROL Channel Details] |
+| [!UICONTROL ExperienceEvent commerce details] | [!UICONTROL Commerce Details] |
+| [!UICONTROL ExperienceEvent details for advertising] | [!UICONTROL Advertising Details] |
+| [!UICONTROL ExperienceEvent details for marketing] | [!UICONTROL Campaign Marketing Details] |
+| [!UICONTROL ExperienceEvent details for media] | [!UICONTROL Media Interaction Details] |
+| [!UICONTROL ExperienceEvent details for search] | [!UICONTROL Search Details] |
+| [!UICONTROL ExperienceEvent direct marketing details] | [!UICONTROL Direct Marketing Details] |
+| [!UICONTROL ExperienceEvent EndUserIDs] | [!UICONTROL End User ID Details] |
+| [!UICONTROL ExperienceEvent environment details] | [!UICONTROL Environment Details] |
+| [!UICONTROL ExperienceEvent implementation details] | [!UICONTROL Implementation Details] |
+| [!UICONTROL ExperienceEvent profile stitch details] | [!UICONTROL Profile Stitch] |
+| [!UICONTROL ExperienceEvent Segment Membership Details] | [!UICONTROL Segment Membership Details] |
+| [!UICONTROL ExperienceEvent technical details] | [!UICONTROL Technical Details] |
+| [!UICONTROL ExperienceEvent web details] | [!UICONTROL Web Details] |
+| [!UICONTROL Profile direct marketing] | [!UICONTROL Direct Marketing Contact Details] |
+| [!UICONTROL Profile person details] | [!UICONTROL Demographic Details] |
+| [!UICONTROL Profile personal details] | [!UICONTROL Personal Contact Details] |
+| [!UICONTROL Profile Phones] | [!UICONTROL Phone Number Details] |
+| [!UICONTROL Profile preferences details] | [!UICONTROL Preference Details] |
+| [!UICONTROL Profile privacy] | [!UICONTROL Privacy Details] |
+| [!UICONTROL Profile push details] | [!UICONTROL Push Notification Token Details] |
+| [!UICONTROL Profile segmentation] | [!UICONTROL Segment Membership Details] |
+| [!UICONTROL Profile subscriptions] | [!UICONTROL Subscription Details] |
+| [!UICONTROL Profile work details] | [!UICONTROL Work Contact Details] |
+| [!UICONTROL Push notification details] | [!UICONTROL Push Notification Details] |
+| [!UICONTROL Segment expression] | [!UICONTROL Segment Expression Details] |
