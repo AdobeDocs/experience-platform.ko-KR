@@ -2,17 +2,17 @@
 keywords: Experience Platform;홈;인기 항목
 solution: Experience Platform
 title: 실시간 고객 프로필의 개인 정보 요청 처리
-topic: overview
+topic-legacy: overview
 type: Documentation
 description: Adobe Experience Platform Privacy Service은 다양한 개인 정보 보호 규정에 따라 고객의 개인 데이터 액세스, 판매 거부 또는 삭제를 처리합니다. 이 문서에서는 실시간 고객 프로파일에 대한 개인정보 보호 요청 처리와 관련된 중요한 개념을 설명합니다.
+exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
 translation-type: tm+mt
-source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1102'
+source-wordcount: '1091'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL Real-time Customer Profile]의 개인 정보 요청 처리
 
@@ -42,7 +42,7 @@ Identity Service는 전역적으로 정의된(표준) ID 네임스페이스와 �
 
 >[!IMPORTANT]
 >
->Privacy Service은 ID 연결을 수행하지 않는 병합 정책을 사용하여 [!DNL Profile] 데이터만 처리할 수 있습니다. UI를 사용하여 개인 정보 요청의 처리 여부를 확인하는 경우 &quot;[!DNL None]&quot;이(가) 있는 정책을 [!UICONTROL ID 스티칭] 유형으로 사용하고 있는지 확인하십시오. 즉, [!UICONTROL ID 스티칭]이 &quot;[!UICONTROL 비공개 그래프]&quot;로 설정된 병합 정책은 사용할 수 없습니다.
+>Privacy Service은 ID 연결을 수행하지 않는 병합 정책을 사용하여 [!DNL Profile] 데이터만 처리할 수 있습니다. UI를 사용하여 개인 정보 요청의 처리 여부를 확인하는 경우 &quot;[!DNL None]&quot;이(가) 있는 정책을 [!UICONTROL ID stitching] 유형으로 사용하고 있는지 확인하십시오. 즉, [!UICONTROL ID stitching]이(가) &quot;[!UICONTROL Private graph]&quot;로 설정된 병합 정책을 사용할 수 없습니다.
 >
 >![](./images/privacy/no-id-stitch.png)
 >
@@ -103,7 +103,7 @@ curl -X POST \
 
 ### UI 사용
 
-UI에서 작업 요청을 만들 때는 각각 [!DNL Data Lake] 또는 [!DNL Real-time Customer Profile]에 저장된 데이터의 작업을 처리하기 위해 **[!UICONTROL Products]** 아래의 **[!UICONTROL AEP 데이터 레이크]** 및/또는 **[!UICONTROL 프로필]**&#x200B;을 선택해야 합니다.
+UI에서 작업 요청을 만들 때는 [!DNL Data Lake] 또는 [!DNL Real-time Customer Profile]에 저장된 데이터의 작업을 각각 처리하려면 **[!UICONTROL AEP Data Lake]** 및/또는 **[!UICONTROL Profile]** 아래에서 **[!UICONTROL Products]**&#x200B;을 선택해야 합니다.
 
 <img src="images/privacy/product-value.png" width="450"><br>
 
