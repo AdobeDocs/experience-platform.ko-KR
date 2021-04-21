@@ -2,12 +2,12 @@
 keywords: Experience Platform;home;popular topics;data prep;api guide;sample data
 solution: Experience Platform
 title: 샘플 데이터 API 끝점
-topic: sample data
+topic-legacy: sample data
 description: 'Adobe Experience Platform API의 ''/samples'' 끝점을 사용하여 매핑 샘플 데이터를 프로그래밍 방식으로 검색, 만들기, 업데이트 및 확인할 수 있습니다. '
 translation-type: tm+mt
-source-git-commit: a2c966ae2401faa572cbba974ce6f572d5280a8f
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '403'
+source-wordcount: '401'
 ht-degree: 4%
 
 ---
