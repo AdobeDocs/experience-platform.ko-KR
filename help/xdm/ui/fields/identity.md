@@ -3,15 +3,15 @@ keywords: Experience Platform;홈;인기 항목;api;XDM;XDM 시스템;경험 데
 solution: Experience Platform
 title: UI에서 ID 필드 정의
 description: Experience Platform 사용자 인터페이스에서 ID 필드를 정의하는 방법을 알아봅니다.
-topic: user guide
+topic-legacy: user guide
+exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '573'
+source-wordcount: '565'
 ht-degree: 0%
 
 ---
-
 
 # UI에서 ID 필드 정의
 
@@ -27,25 +27,25 @@ ID 필드는 고객 ID 그래프가 플랫폼에서 구성되는 방식을 결�
 
 ## ID 필드 정의
 
-UI에서 [새 필드](./overview.md#define)를 정의할 때 오른쪽 레일에서 **[!UICONTROL ID]** 확인란을 선택하여 ID 필드로 설정할 수 있습니다.
+UI에서 [새 필드](./overview.md#define)를 정의할 때 오른쪽 레일의 **[!UICONTROL Identity]** 확인란을 선택하여 이 필드를 ID 필드로 설정할 수 있습니다.
 
 ![](../../images/ui/fields/special/identity.png)
 
-확인란을 선택하면 추가 컨트롤이 표시됩니다. 이 필드를 스키마의 기본 ID로 지정하려면 **[!UICONTROL 기본 ID]** 확인란을 선택합니다.
+확인란을 선택하면 추가 컨트롤이 표시됩니다. 이 필드를 스키마의 기본 ID로 지정하려면 **[!UICONTROL Primary identity]** 확인란을 선택합니다.
 
 >[!NOTE]
 >
 >단일 스키마에는 ID 필드가 많이 정의되어 있지만 주 ID는 하나만 가질 수 있습니다. 모든 ID 필드(기본 또는 기타 항목)는 개별 고객의 ID 그래프에 기여하지만 실시간 고객 프로필은 데이터 조각을 함께 병합할 때 기본 ID만 진실의 소스로 사용합니다. 프로필에서 사용할 스키마를 활성화하려면 스키마에 기본 ID가 정의되어 있어야 합니다.
 
-**[!UICONTROL ID 네임스페이스]**&#x200B;에서 드롭다운 메뉴를 사용하여 ID 필드에 적합한 네임스페이스를 선택합니다. Adobe에서 제공하는 표준 네임스페이스와 조직에서 정의한 사용자 정의 네임스페이스가 함께 나열됩니다.
+**[!UICONTROL Identity namespace]**&#x200B;에서 드롭다운 메뉴를 사용하여 ID 필드에 적합한 네임스페이스를 선택합니다. Adobe에서 제공하는 표준 네임스페이스와 조직에서 정의한 사용자 정의 네임스페이스가 함께 나열됩니다.
 
-완료되면 **[!UICONTROL 적용]**&#x200B;을 선택하여 스키마에 변경 내용을 적용합니다.
+완료되면 **[!UICONTROL Apply]**&#x200B;을 선택하여 스키마에 변경 내용을 적용합니다.
 
 ![](../../images/ui/fields/special/identity-config.png)
 
 캔버스는 변경 사항을 반영하도록 업데이트되며, 선택한 필드는 지문 기호(![](../../images/ui/fields/special/identity-symbol.png))를 획득하여 ID로 지정합니다. 왼쪽 레일에서 이제 ID 필드가 스키마에 필드를 제공하는 클래스 또는 mixin 이름 아래에 나열됩니다.
 
-모든 ID 필드는 기본적으로 필요하므로 이제 왼쪽 레일의 **[!UICONTROL 필수 필드]** 아래에 필드가 나열됩니다. ID 필드가 스키마 구조 내에 중첩되면 모든 상위 필드도 필요에 따라 나열됩니다.
+모든 ID 필드는 기본적으로 필요하므로 이제 왼쪽 레일의 **[!UICONTROL Required fields]** 아래에 필드가 나열됩니다. ID 필드가 스키마 구조 내에 중첩되면 모든 상위 필드도 필요에 따라 나열됩니다.
 
 ![](../../images/ui/fields/special/identity-applied.png)
 
