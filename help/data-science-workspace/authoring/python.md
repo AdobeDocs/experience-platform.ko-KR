@@ -2,17 +2,17 @@
 keywords: Experience Platform;홈;인기 항목;데이터 액세스;Python sdk;데이터 액세스 api;읽기 python;쓰기
 solution: Experience Platform
 title: 데이터 과학 작업 공간에서 Python을 사용하여 데이터 액세스
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: 다음 문서에는 데이터 과학 작업 공간에서 사용하기 위해 Python의 데이터에 액세스하는 방법에 대한 예가 포함되어 있습니다.
+exl-id: 75aafd58-634a-4df3-a2f0-9311f93deae4
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '420'
 ht-degree: 0%
 
 ---
-
 
 # 데이터 과학 작업 공간에서 Python을 사용하여 데이터 액세스
 
