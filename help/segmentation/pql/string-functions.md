@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;세그멘테이션;세그멘테이션 서비스;pql;PQL;프로필 쿼리 언어;문자열 함수;문자열
 solution: Experience Platform
 title: PQL 문자열 함수
-topic: developer guide
+topic-legacy: developer guide
 description: PQL(프로필 쿼리 언어)은 문자열과 상호 작용을 단순화하는 기능을 제공합니다.
+exl-id: 9fd79d86-0802-4312-abce-f6ef5ba5bb34
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '784'
 ht-degree: 6%
 
 ---
-
 
 # 문자열 함수
 
@@ -269,4 +269,3 @@ emailAddress.regexGroup("@(\w+)", 1)
 ## 다음 단계
 
 이제 문자열 함수에 대해 배웠으므로 PQL 쿼리 내에서 사용할 수 있습니다. 다른 PQL 기능에 대한 자세한 내용은 [프로필 쿼리 언어 개요](./overview.md)를 참조하십시오.
-
