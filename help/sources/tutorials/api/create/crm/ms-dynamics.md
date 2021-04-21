@@ -2,17 +2,17 @@
 keywords: Experience Platform;홈;인기 항목;Microsoft Dynamics;microsoft dynamics;dynamics;Dynamics
 solution: Experience Platform
 title: Flow Service API를 사용하여 Microsoft Dynamics 소스 연결 만들기
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Flow Service API를 사용하여 플랫폼을 Microsoft Dynamics 계정에 연결하는 방법을 알아봅니다.
+exl-id: 423c6047-f183-4d92-8d2f-cc8cc26647ef
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '739'
 ht-degree: 2%
 
 ---
-
 
 # [!DNL Flow Service] API를 사용하여 [!DNL Microsoft Dynamics] 소스 연결 만들기
 
