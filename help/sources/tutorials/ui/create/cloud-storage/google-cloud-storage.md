@@ -2,17 +2,17 @@
 keywords: Experience Platform;홈;인기 항목;Google 클라우드 스토리지;google 클라우드 스토리지;GCS;gcs
 solution: Experience Platform
 title: UI에서 Google 클라우드 스토리지 소스 연결 만들기
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Adobe Experience Platform UI를 사용하여 Google 클라우드 스토리지 소스 연결을 만드는 방법을 알아봅니다.
+exl-id: 3258ccd7-757c-4c4a-b7bb-0e8c9de3b50a
 translation-type: tm+mt
-source-git-commit: f6a63ca1e21b3c3f6a55574f31fdf04038b7e5c4
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '577'
+source-wordcount: '575'
 ht-degree: 1%
 
 ---
-
 
 # UI에 [!DNL Google Cloud Storage] 소스 연결 만들기
 
