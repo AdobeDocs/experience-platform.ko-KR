@@ -1,16 +1,16 @@
 ---
 keywords: Experience Platform;홈;인기 항목;세그멘테이션;세그멘테이션 서비스;API;home;popular topmentation;segmentation Service;api
 title: 세그멘테이션 서비스 API 안내서
-topic: guide
+topic-legacy: guide
 description: 개발자는 세그멘테이션 서비스 API를 사용하여 Adobe Experience Platform에서 세그멘테이션 작업을 프로그래밍 방식으로 관리할 수 있습니다. API를 사용하여 주요 작업을 수행하는 방법에 대해 알아보려면 이 안내서를 따르십시오.
+exl-id: cebecaf3-9746-4b0b-9c50-11789fba66c3
 translation-type: tm+mt
-source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '501'
 ht-degree: 0%
 
 ---
-
 
 # 세그멘테이션 서비스 API 안내서
 
