@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;세그멘테이션;세그멘테이션 서비스;pql;PQL;프로파일 쿼리 언어;배열 함수;배열
 solution: Experience Platform
 title: 배열, 목록 및 PQL 함수 설정
-topic: developer guide
+topic-legacy: developer guide
 description: PQL(프로파일 쿼리 언어)은 배열, 목록 및 문자열과 쉽게 상호 작용할 수 있는 기능을 제공합니다.
+exl-id: 5ff2b066-8857-4cde-9932-c8bf09e273d3
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '767'
 ht-degree: 5%
 
 ---
-
 
 # 배열, 목록 및 설정 함수
 
