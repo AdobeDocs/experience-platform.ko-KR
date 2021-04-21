@@ -2,17 +2,17 @@
 keywords: Experience Platform;패키지화된 레서피 가져오기;데이터 과학 작업 공간;인기 항목;레서피;api;sensei 기계 학습;엔진 만들기
 solution: Experience Platform
 title: Sensei Machine Learning API를 사용하여 패키징된 레서피 가져오기
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
-description: '이 자습서는 Sensei 기계 학습 API를 사용하여 사용자 인터페이스에서 레서피라고도 하는 엔진을 만듭니다. '
+description: 이 자습서는 Sensei 기계 학습 API를 사용하여 사용자 인터페이스에서 레서피라고도 하는 엔진을 만듭니다.
+exl-id: c8dde30b-5234-448d-a597-f1c8d32f23d4
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1007'
 ht-degree: 2%
 
 ---
-
 
 # Sensei Machine Learning API를 사용하여 패키징된 레서피 가져오기
 
