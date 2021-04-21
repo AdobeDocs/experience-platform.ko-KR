@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;popular topics;query service;Query service;scheduled queries;scheduled query query
 solution: Experience Platform
 title: 예약된 쿼리 API 끝점
-topic: scheduled queries
+topic-legacy: scheduled queries
 description: 다음 섹션에서는 쿼리 서비스 API를 사용하여 예약된 쿼리에 대해 수행할 수 있는 다양한 API 호출을 안내합니다.
+exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '977'
 ht-degree: 3%
 
 ---
-
 
 # 예약된 쿼리 끝점
 
