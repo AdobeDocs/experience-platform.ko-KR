@@ -2,14 +2,14 @@
 title: Adobe Experience Platform 릴리스 정보
 description: 2021년 4월 21일자 Experience Platform 릴리스 노트
 doc-type: release notes
-last-update: March 31, 2021
-author: ens70167
+last-update: April 21, 2021
+author: ens72741
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
 translation-type: tm+mt
-source-git-commit: 0c9b60fe0777286819841c520a41007634622578
+source-git-commit: 9b63a47a8da07830313c0a8e690c7247dc3fbe6b
 workflow-type: tm+mt
-source-wordcount: '729'
-ht-degree: 12%
+source-wordcount: '868'
+ht-degree: 10%
 
 ---
 
@@ -21,6 +21,7 @@ ht-degree: 12%
 Adobe Experience Platform의 기존 기능 업데이트:
 
 - [[!DNL Data Prep]](#data-prep)
+- [[!DNL Experience Data Model (XDM)]](#xdm)
 - [[!DNL Intelligent Services]](#intelligent-services)
 - [[!DNL Segmentation Service]](#segmentation)
 - [[!DNL Sources]](#sources)
@@ -37,6 +38,14 @@ Adobe Experience Platform의 기존 기능 업데이트:
 | 스트리밍 통합 지원 | 이제 스트리밍 소스 연결을 만들 때 데이터 준비 기능을 사용할 수 있습니다. 자세한 내용은 UI](../../sources/tutorials/ui/create/streaming/http.md)에서 스트리밍 소스 연결 만들기에 대한 자습서를 참조하십시오.[ |
 
 자세한 내용은 [[!DNL Data Prep] 개요](../../data-prep/home.md)를 참조하십시오.
+
+## [!DNL Experience Data Model (XDM)] {#xdm}
+
+XDM(Experience Data Model)은 디지털 경험의 성능을 개선하기 위해 설계된 오픈 소스 사양입니다. Adobe Experience Platform의 서비스와 통신할 수 있도록 모든 응용 프로그램에 대한 공통 구조와 정의를 제공합니다. XDM 표준을 준수함으로써 모든 고객 경험 데이터를 하나의 공통 표현으로 통합하여 보다 빠르고 통합된 방식으로 통찰력을 전달할 수 있습니다. 고객 행동을 통해 유용한 인사이트를 얻고, 세그먼트를 통해 고객 고객을 정의하고, 고객 속성을 개인화를 위해 사용할 수 있습니다.
+
+| 기능 | 설명 |
+| --- | --- |
+| 업계별 스키마 권장 사항 | 스키마 편집기 UI에서 클래스와 믹스를 선택할 때 새 필터를 사용하여 특정 업계를 기반으로 권장 표준 구성 요소를 볼 수 있습니다. 이러한 구성 요소가 서로 다른 업계 사용 사례에서 서로 연관되는 방법에 대한 자세한 내용은 [업계 데이터 모델](https://www.adobe.com/go/xdm-industry-erds-en)의 설명서를 참조하십시오. |
 
 ## [!DNL Intelligent Services] {#intelligent-services}
 
