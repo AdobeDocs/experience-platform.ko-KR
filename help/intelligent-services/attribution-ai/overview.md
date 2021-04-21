@@ -2,14 +2,14 @@
 keywords: Experience Platform;기여도 분석 개요;인기 항목;속성 ai;속성 ai
 solution: Experience Platform, Intelligent Services
 title: Attribution AI 개요
-topic: Attribution AI
+topic-legacy: Attribution AI
 description: Attribution AI는 전환 이벤트로 연결되는 터치포인트에 크레딧을 적용하는 데 사용됩니다. 이를 통해 마케터는 고객 여정 전반에서 각 개별 마케팅 터치포인트의 마케팅 효과를 수량화할 수 있습니다. 터치포인트의 예로는 디스플레이 광고 노출, 이메일 전송, 이메일 열기, 유료 검색 클릭 수가 있습니다.
 landing-page-description: Attribution AI는 전환 이벤트로 연결되는 터치포인트에 크레딧을 적용하는 데 사용됩니다. 이를 통해 마케터는 고객 여정 전반에서 각 개별 마케팅 터치포인트의 마케팅 효과를 수량화할 수 있습니다.
 exl-id: a5991b08-217a-4b39-9948-d28eadea7ded
 translation-type: tm+mt
-source-git-commit: 0085306a2f5172eb19590cc12bc9645278bd2b42
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '501'
+source-wordcount: '499'
 ht-degree: 32%
 
 ---
