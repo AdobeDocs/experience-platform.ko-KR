@@ -2,17 +2,17 @@
 keywords: Experience Platform;홈;인기 항목;쿼리 서비스;쿼리 서비스;쿼리 쓰기;쿼리 쓰기;;home;popular topics service;query;
 solution: Experience Platform
 title: 쿼리 서비스에서 쿼리 실행에 대한 일반 지침
-topic: queries
+topic-legacy: queries
 type: Tutorial
 description: 이 문서에서는 Adobe Experience Platform 쿼리 서비스에서 쿼리를 작성할 때 알아야 할 중요한 세부 사항을 자세히 설명합니다.
+exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
 translation-type: tm+mt
-source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '976'
 ht-degree: 3%
 
 ---
-
 
 # [!DNL Query Service]에서 쿼리 실행에 대한 일반 지침
 
@@ -158,7 +158,7 @@ FROM
 
 >[!NOTE]
 >
->도트 표기법 필드 액세스에는 **을(를) 사용할 수 없습니다.**
+>이중 따옴표(**은(는) 도트 표기법 필드 액세스에는 사용할 수 없습니다.**)
 
 ### 인용 부호
 
