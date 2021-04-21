@@ -1,11 +1,10 @@
 ---
-product: experience-platform
 audience: user
 user-guide-title: Real-time Customer Profile 안내서
 user-guide-description: 고객 데이터를 통합하여 다양한 채널에서 고객과의 상호 작용을 종합적으로 파악합니다.
-feature: Profiles
+feature: 프로필
 translation-type: tm+mt
-source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '123'
 ht-degree: 20%
@@ -40,7 +39,7 @@ ht-degree: 20%
    * [계산된 특성 API](computed-attributes/ca-api.md)
    * [계산된 속성 필드 구성](computed-attributes/configure-api.md)
    * [샘플 표현식](computed-attributes/expressions.md)
-* 자습서 {#tutorials}
+* 튜토리얼 {#tutorials}
    * [데이터 추가 위치 [!DNL Profile]](tutorials/add-profile-data.md)
    * [서비스용 데이터 세트  [!DNL Profile] & [!DNL Identity] 구성](tutorials/dataset-configuration.md)
    * [추가 자습서](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
