@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;데이터 레이크 개인 정보;ID 네임스페이스;개인 정보 보호;데이터 레이크
 solution: Experience Platform
 title: Data Lake의 개인 정보 요청 처리
-topic: overview
+topic-legacy: overview
 description: Adobe Experience Platform Privacy Service은 법률 및 조직 개인 정보 보호 규정에 따라 고객의 개인 데이터 액세스, 판매 거부 또는 삭제를 처리합니다. 이 문서에서는 Data Lake에 저장된 고객 데이터의 개인 정보 요청 처리와 관련된 중요한 개념을 다룹니다.
+exl-id: c06b0a44-be1a-4938-9c3e-f5491a3dfc19
 translation-type: tm+mt
-source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1285'
+source-wordcount: '1279'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL Data Lake]의 개인 정보 요청 처리
 
@@ -57,7 +57,7 @@ Adobe Experience Platform [!DNL Identity Service]은(는) 시스템 및 장치 �
 
 ### UI 사용 {#identity-ui}
 
-[!DNL Experience Platform ]사용자 인터페이스에서 **[!UICONTROL 스키마]** 작업 영역에서 기존 XDM 스키마를 편집할 수 있습니다. 스키마에 ID 설명자를 추가하려면 목록에서 스키마를 선택하고 [!DNL Schema Editor] 자습서의 ID 필드](../xdm/tutorials/create-schema-ui.md#identity-field)로 스키마 필드를 설정하는 단계를 따릅니다.[
+[!DNL Experience Platform ]사용자 인터페이스에서 **[!UICONTROL Schemas]** 작업 공간을 사용하여 기존 XDM 스키마를 편집할 수 있습니다. 스키마에 ID 설명자를 추가하려면 목록에서 스키마를 선택하고 [!DNL Schema Editor] 자습서의 ID 필드](../xdm/tutorials/create-schema-ui.md#identity-field)로 스키마 필드를 설정하는 단계를 따릅니다.[
 
 스키마 내의 적절한 필드를 ID 필드로 설정한 경우 [개인 정보 요청 제출](#submit)의 다음 섹션으로 진행할 수 있습니다.
 
@@ -143,7 +143,7 @@ curl -X POST \
 
 ### UI 사용
 
-UI에서 작업 요청을 만들 때는 각각 [!DNL Data Lake] 또는 [!DNL Real-time Customer Profile]에 저장된 데이터의 작업을 처리하기 위해 **[!UICONTROL Products]** 아래의 **[!UICONTROL AEP 데이터 레이크]** 및/또는 **[!UICONTROL 프로필]**&#x200B;을 선택해야 합니다.
+UI에서 작업 요청을 만들 때는 [!DNL Data Lake] 또는 [!DNL Real-time Customer Profile]에 저장된 데이터의 작업을 각각 처리하려면 **[!UICONTROL AEP Data Lake]** 및/또는 **[!UICONTROL Profile]** 아래에서 **[!UICONTROL Products]**&#x200B;을 선택해야 합니다.
 
 <img src="images/privacy/product-value.png" width="450"><br>
 
