@@ -2,20 +2,20 @@
 keywords: Experience Platform;홈;인기 항목;스키마;스키마;XDM;필드;스키마;측정;데이터 유형;데이터 유형;데이터 유형;a;
 solution: Experience Platform
 title: 측정 데이터 유형
-topic: overview
+topic-legacy: overview
 description: 이 문서에서는 XDM(Measure Experience Data Model) 데이터 유형에 대한 개요를 제공합니다.
+exl-id: 5d6cc15d-63cf-4af5-9ae9-12c886dd6735
 translation-type: tm+mt
-source-git-commit: d282ea5526a05b28c6a82470eabf23e44d1fb420
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '227'
+source-wordcount: '225'
 ht-degree: 1%
 
 ---
 
+# [!UICONTROL Measure] 데이터 유형
 
-# [!UICONTROL 측정 ] 데이터 유형
-
-[!UICONTROL 측정] 은 특정 지표의 구체적인 수량화 가능한 데이터 포인트를 포함하는 표준 XDM(Experience Data Model) 데이터 유형입니다. 측정값은 고유 식별자와 값으로 구성됩니다.
+[!UICONTROL Measure] 은 특정 지표의 구체적인 수량화 가능한 데이터 포인트를 포함하는 표준 XDM(Experience Data Model) 데이터 유형입니다. 측정값은 고유 식별자와 값으로 구성됩니다.
 
 <img src="../images/data-types/measure.PNG" width="500" /><br />
 
