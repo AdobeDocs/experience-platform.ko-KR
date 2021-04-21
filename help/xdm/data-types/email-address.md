@@ -2,20 +2,20 @@
 keywords: Experience Platform;홈;인기 항목;스키마;스키마;XDM;필드;스키마;emailAddress;xdm:emailAddress;email;email 주소;data-type;data-type;data type
 solution: Experience Platform
 title: 이메일 주소 데이터 유형
-topic: overview
+topic-legacy: overview
 description: 이 문서에서는 이메일 주소 XDM 데이터 유형에 대한 개요를 제공합니다.
+exl-id: 1364df42-f89f-4f48-bcda-5332f3828326
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '187'
+source-wordcount: '183'
 ht-degree: 1%
 
 ---
 
+# [!UICONTROL Email address] 데이터 유형
 
-# [!UICONTROL 이메일 ] 주소 데이터 유형
-
-[!UICONTROL 이메일 ] 주소는 이메일 주소의 세부 사항을 설명하는 표준 XDM 데이터 유형입니다.
+[!UICONTROL Email address] 은 이메일 주소의 세부 사항을 설명하는 표준 XDM 데이터 유형입니다.
 
 <img src="../images/data-types/email-address.png" width="450" /><br />
 
