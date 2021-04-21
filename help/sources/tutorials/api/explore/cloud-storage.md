@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;클라우드 저장소;Cloud storage;home;popular topics;cloud storage
 solution: Experience Platform
 title: Flow Service API를 사용하여 클라우드 스토리지 시스템 탐색
-topic: overview
+topic-legacy: overview
 description: 이 자습서에서는 Flow Service API를 사용하여 타사 클라우드 스토리지 시스템을 탐색합니다.
+exl-id: ba1a9bff-43a6-44fb-a4e7-e6a45b7eeebd
 translation-type: tm+mt
-source-git-commit: 457fc9e1b0c445233f0f574fefd31bc1fc3bafc8
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '821'
-ht-degree: 2%
+source-wordcount: '820'
+ht-degree: 1%
 
 ---
-
 
 # [!DNL Flow Service] API를 사용하여 클라우드 스토리지 시스템 탐색
 
