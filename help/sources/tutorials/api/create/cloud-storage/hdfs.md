@@ -2,17 +2,17 @@
 keywords: Experience Platform;홈;인기 항목;Apache Hadoop 분산 파일 시스템;Apache hadoop;hdfs;HDFS
 solution: Experience Platform
 title: Flow Service API를 사용하여 Apache HDFS 소스 연결 만들기
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Flow Service API를 사용하여 Apache Hadoop 배포 파일 시스템을 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
+exl-id: 04fa65db-073c-48e1-b981-425185ae08aa
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '565'
 ht-degree: 2%
 
 ---
-
 
 # [!DNL Flow Service] API를 사용하여 [!DNL Apache] HDFS 소스 연결 만들기
 
@@ -22,7 +22,7 @@ ht-degree: 2%
 
 [!DNL Flow Service] 는 다양한 소스의 고객 데이터를 수집 및 중앙화하여 Adobe Experience Platform으로 가져오는 데 사용됩니다. 이 서비스는 지원되는 모든 소스가 연결되어 있는 사용자 인터페이스와 RESTful API를 제공합니다.
 
-이 자습서는 [!DNL Flow Service] API를 사용하여 Apache Hadoop 배포 파일 시스템(이하 &quot;HDFS&quot;라 한다)을 [!DNL Experience Platform]에 연결하는 단계를 안내합니다.
+이 자습서에서는 [!DNL Flow Service] API를 사용하여 Apache Hadoop 분산 파일 시스템(이하 &quot;HDFS&quot;라 한다)을 [!DNL Experience Platform]에 연결하는 단계를 안내합니다.
 
 ## 시작하기
 
