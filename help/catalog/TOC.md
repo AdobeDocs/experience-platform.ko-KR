@@ -1,11 +1,10 @@
 ---
-product: experience-platform
 audience: user
 user-guide-title: Catalog and Datasets 안내서
-user-guide-description: 데이터 레이크 내에서 데이터 계보, 메타데이터, 파일 설명, 디렉토리 및 데이터 세트를 탐색합니다.
-feature: Data Management
+user-guide-description: 데이터 레이크 내에서 데이터 계보, 메타데이터, 파일 설명, 디렉터리 및 데이터 세트를 탐색합니다.
+feature: 데이터 관리
 translation-type: tm+mt
-source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '108'
 ht-degree: 21%
@@ -17,7 +16,7 @@ ht-degree: 21%
 
 * [카탈로그 서비스 개요](home.md)
 * 카탈로그 서비스 API {#api}
-   * [시작하기](api/getting-started.md)
+   * [시작](api/getting-started.md)
    * [쿼리 매개 변수를 사용하여 카탈로그 데이터 필터링](api/filter-data.md)
    * [목록 객체](api/list-objects.md)
    * [개체 찾기](api/look-up-object.md)
