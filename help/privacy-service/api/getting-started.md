@@ -3,15 +3,15 @@ keywords: Experience Platform;홈;인기 항목
 solution: Experience Platform
 title: Privacy Service API 안내서
 description: 개발자는 Privacy Service API를 사용하여 법적 개인 정보 보호 규정을 준수하여 Experience Cloud 애플리케이션에서 고객 개인 데이터를 액세스하거나 삭제할 수 있는 고객 요청을 작성하고 관리할 수 있습니다. API를 사용하여 주요 작업을 수행하는 방법에 대해 알아보려면 이 안내서를 따르십시오.
-topic: developer guide
+topic-legacy: developer guide
+exl-id: c1d05e30-ef8f-4adf-87e0-1d6e3e9e9f9e
 translation-type: tm+mt
-source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '795'
+source-wordcount: '761'
 ht-degree: 1%
 
 ---
-
 
 # [!DNL Privacy Service] API 안내서
 
@@ -61,26 +61,26 @@ Adobe 개발자 콘솔을 사용하여 다음 3개의 액세스 자격 증명을
 
 [Adobe 개발자 콘솔](https://www.adobe.com/go/devs_console_ui)로 이동하여 Adobe ID으로 로그인합니다. 그런 다음 Adobe 개발자 콘솔 문서에서 [빈 프로젝트](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md)를 만드는 자습서에 설명된 단계를 따릅니다.
 
-새 프로젝트를 만들었으면 **[!UICONTROL 프로젝트 개요]** 화면에서 **[!UICONTROL API]** 추가를 선택합니다.
+새 프로젝트를 만들었으면 **[!UICONTROL Project Overview]** 화면에서 **[!UICONTROL Add API]**&#x200B;을 선택합니다.
 
 ![](../images/api/getting-started/add-api-button.png)
 
-**[!UICONTROL API 추가]** 화면이 나타납니다. **[!UICONTROL 다음]**&#x200B;을 선택하기 전에 사용 가능한 API 목록에서 **[!UICONTROL Privacy Service API]**&#x200B;을 선택합니다.
+**[!UICONTROL Add an API]** 화면이 나타납니다. **[!UICONTROL Next]**&#x200B;을 선택하기 전에 사용 가능한 API 목록에서 **[!UICONTROL Privacy Service API]**&#x200B;을 선택합니다.
 
 ![](../images/api/getting-started/add-privacy-service-api.png)
 
-**[!UICONTROL API 구성]** 화면이 나타납니다. **[!UICONTROL 키 쌍 생성]** 옵션을 선택한 다음 오른쪽 아래 모서리에서 **[!UICONTROL 키 쌍 생성]**&#x200B;을 선택합니다.
+**[!UICONTROL Configure API]** 화면이 나타납니다. **[!UICONTROL Generate a key pair]** 옵션을 선택한 다음 오른쪽 아래 모서리에서 **[!UICONTROL Generate keypair]** 을 선택합니다.
 
 ![](../images/api/getting-started/generate-key-pair.png)
 
-키 쌍이 자동으로 생성되고 개인 키 및 공개 인증서가 포함된 ZIP 파일이 로컬 컴퓨터에 다운로드됩니다(다음 단계에서 사용). **[!UICONTROL 구성된 API]**&#x200B;를 선택하여 구성을 완료합니다.
+키 쌍이 자동으로 생성되고 개인 키 및 공개 인증서가 포함된 ZIP 파일이 로컬 컴퓨터에 다운로드됩니다(다음 단계에서 사용). **[!UICONTROL Save configured API]**&#x200B;을 선택하여 구성을 완료합니다.
 
 ![](../images/api/getting-started/key-pair-generated.png)
 
-API가 프로젝트에 추가되면 프로젝트 페이지가 **Privacy Service API 개요** 페이지에 다시 나타납니다. 여기에서 아래로 스크롤하여 [!DNL Privacy Service] API에 대한 모든 호출에 필요한 다음 액세스 자격 증명을 제공하는 **[!UICONTROL 서비스 계정(JWT)]** 섹션으로 이동합니다.
+API가 프로젝트에 추가되면 프로젝트 페이지가 **Privacy Service API 개요** 페이지에 다시 나타납니다. 여기서 [!DNL Privacy Service] API에 대한 모든 호출에 필요한 다음 액세스 자격 증명을 제공하는 **[!UICONTROL Service Account (JWT)]** 섹션으로 스크롤합니다.
 
-* **[!UICONTROL 클라이언트 ID]**:클라이언트 ID는 x-api-key 헤더 `{API_KEY}` 에 제공해야 하는 경우 필요합니다.
-* **[!UICONTROL 조직 ID]**:조직 ID는  `{IMS_ORG}` x-gw-ims-org-id 헤더에서 사용해야 하는 값입니다.
+* **[!UICONTROL CLIENT ID]**:클라이언트 ID는 x-api-key 헤더 `{API_KEY}` 에 제공해야 하는 경우 필요합니다.
+* **[!UICONTROL ORGANIZATION ID]**:조직 ID는  `{IMS_ORG}` x-gw-ims-org-id 헤더에서 사용해야 하는 값입니다.
 
 ![](../images/api/getting-started/jwt-credentials.png)
 
@@ -88,7 +88,7 @@ API가 프로젝트에 추가되면 프로젝트 페이지가 **Privacy Service 
 
 수집해야 하는 최종 필수 자격 증명은 인증 헤더에서 사용되는 `{ACCESS_TOKEN}`입니다. `{API_KEY}` 및 `{IMS_ORG}`에 대한 값과 달리 [!DNL Platform] API를 계속 사용하려면 24시간마다 새 토큰을 생성해야 합니다.
 
-새 `{ACCESS_TOKEN}`을(를) 생성하려면 **[!UICONTROL 토큰 생성]**&#x200B;을 선택하기 전에 이전에 다운로드한 개인 키를 열고 해당 내용을 **[!UICONTROL 액세스 토큰 생성]** 옆의 텍스트 상자에 붙여 넣습니다.
+새 `{ACCESS_TOKEN}`을(를) 생성하려면 **[!UICONTROL Generate Token]**&#x200B;를 선택하기 전에 이전에 다운로드한 개인 키를 열고 **[!UICONTROL Generate access token]** 옆의 텍스트 상자에 내용을 붙여 넣습니다.
 
 ![](../images/api/getting-started/paste-private-key.png)
 
