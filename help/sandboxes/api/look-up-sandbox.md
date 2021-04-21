@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 있는 주제;샌드박스 찾기;샌드박스 찾기
 solution: Experience Platform
 title: API에서 샌드박스 찾기
-topic: developer guide
+topic-legacy: developer guide
 description: 요청 경로에서 샌드박스의 이름 속성을 포함하는 GET 요청을 수행하여 개별 샌드박스를 찾을 수 있습니다.
+exl-id: de8d965c-ca58-436e-b5b1-05a492de70f5
 translation-type: tm+mt
-source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '245'
+source-wordcount: '243'
 ht-degree: 2%
 
 ---
-
 
 # API에서 샌드박스 찾기
 
