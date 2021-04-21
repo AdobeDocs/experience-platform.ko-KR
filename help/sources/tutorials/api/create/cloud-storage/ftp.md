@@ -2,17 +2,17 @@
 keywords: Experience Platform;home;popular topics파일 전송 프로토콜;파일 전송 프로토콜
 solution: Experience Platform
 title: Flow Service API를 사용하여 FTP 소스 연결 만들기
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Flow Service API를 사용하여 Adobe Experience Platform을 FTP(File Transfer Protocol) 서버에 연결하는 방법을 알아봅니다.
+exl-id: a7bef346-b357-49bc-ac54-ac8b42adac50
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '577'
 ht-degree: 2%
 
 ---
-
 
 # [!DNL Flow Service] API를 사용하여 FTP 소스 연결 만들기
 
