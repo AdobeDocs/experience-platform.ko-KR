@@ -3,15 +3,15 @@ keywords: Experience Platform;홈;인기 항목
 solution: Experience Platform
 title: 외부 대상 가져오기 및 사용
 description: Adobe Experience Platform에서 외부 대상을 사용하는 방법에 대해 알아보려면 이 자습서를 따르십시오.
-topic: tutorial
+topic-legacy: tutorial
+exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
 translation-type: tm+mt
-source-git-commit: 400e4d9007212ed2693d031ae912a4f1cca97c57
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '630'
+source-wordcount: '629'
 ht-degree: 0%
 
 ---
-
 
 # 외부 대상 가져오기 및 사용
 
