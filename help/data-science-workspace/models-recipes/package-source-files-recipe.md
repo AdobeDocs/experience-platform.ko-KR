@@ -2,17 +2,17 @@
 keywords: Experience Platform;패키지 소스 파일;데이터 과학 작업 공간;인기 항목;문서;문서 이미지
 solution: Experience Platform
 title: 소스 파일을 레서피로 패키지화
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: 이 자습서에서는 제공된 소매 판매 샘플 소스 파일을 보관 파일로 패키지하는 방법에 대한 지침을 제공합니다. 이 파일은 UI에서 또는 API를 사용하여 레서피 가져오기 워크플로우에 따라 Adobe Experience Platform Data Science Workspace에서 레서피를 만드는 데 사용할 수 있습니다.
+exl-id: 199b8127-4f1b-43a4-82e6-58cb70fcdc08
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1159'
+source-wordcount: '1146'
 ht-degree: 0%
 
 ---
-
 
 # 소스 파일을 레서피에 패키지화
 
@@ -40,15 +40,15 @@ ht-degree: 0%
 
 레서피 만들기 작업 과정 중에 제공된 자격 증명을 사용하여 빌드된 Docker 이미지가 Azure 컨테이너 레지스트리에 푸시됩니다.
 
-Azure 컨테이너 레지스트리 자격 증명을 얻으려면 [Adobe Experience Platform](https://platform.adobe.com)에 로그인하십시오. 왼쪽 탐색 열에서 **[!UICONTROL 워크플로]**&#x200B;로 이동합니다. **[!UICONTROL 레서피 가져오기]**&#x200B;를 선택하고 **[!UICONTROL 시작]**&#x200B;을 선택합니다. 자세한 내용은 아래 스크린샷을 참조하십시오.
+Azure 컨테이너 레지스트리 자격 증명을 얻으려면 [Adobe Experience Platform](https://platform.adobe.com)에 로그인하십시오. 왼쪽 탐색 열에서 **[!UICONTROL Workflows]**&#x200B;으로 이동합니다. **[!UICONTROL Import Recipe]**&#x200B;을 선택하고 **[!UICONTROL Launch]**&#x200B;을 선택합니다. 자세한 내용은 아래 스크린샷을 참조하십시오.
 
 ![](../images/models-recipes/package-source-files/import.png)
 
-**[!UICONTROL 구성]** 페이지가 열립니다. 적절한 **[!UICONTROL 레서피 이름]**(예: &quot;소매 판매 레서피&quot;)을 입력하고 선택적으로 설명 또는 문서 URL을 제공합니다. 완료되면 **[!UICONTROL 다음]**&#x200B;을 클릭합니다.
+**[!UICONTROL Configure]** 페이지가 열립니다. 적절한 **[!UICONTROL Recipe Name]**(예: &quot;소매 판매 레서피&quot;)을 제공하고 선택적으로 설명 또는 문서 URL을 제공합니다. 완료되면 **[!UICONTROL Next]**&#x200B;을 클릭합니다.
 
 ![](../images/models-recipes/package-source-files/configure.png)
 
-적절한 *Runtime*&#x200B;을 선택한 다음 *유형*&#x200B;에 대해 **[!UICONTROL 분류]**&#x200B;를 선택합니다. Azure 컨테이너 레지스트리 자격 증명이 완료되면 생성됩니다.
+적절한 *Runtime*&#x200B;을 선택한 다음 *유형*&#x200B;에 대해 **[!UICONTROL Classification]**&#x200B;를 선택합니다. Azure 컨테이너 레지스트리 자격 증명이 완료되면 생성됩니다.
 
 >[!NOTE]
 >
