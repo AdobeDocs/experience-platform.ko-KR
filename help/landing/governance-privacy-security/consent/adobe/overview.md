@@ -2,13 +2,13 @@
 keywords: Experience Platform;홈;인기 항목
 solution: Experience Platform
 title: Adobe Experience Platform의 동의 처리
-topic: getting started
+topic-legacy: getting started
 description: Adobe 2.0 표준을 사용하여 Adobe Experience Platform에서 고객 동의 신호를 처리하는 방법을 알아봅니다.
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
 translation-type: tm+mt
-source-git-commit: a0f585e4aaeecb968a9fc9f408630946e1c30b2b
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1565'
+source-wordcount: '1563'
 ht-degree: 0%
 
 ---
