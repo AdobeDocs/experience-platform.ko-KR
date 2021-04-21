@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;세그멘테이션 서비스;세그멘테이션 서비스;사용자 안내서;사용자 안내서;세그멘테이션 ui 안내서;세그먼트 빌더;실현됨;기존;종료
 solution: Experience Platform
 title: 세그멘테이션 서비스 UI 안내서
-topic: ui guide
+topic-legacy: ui guide
 description: Adobe Experience Platform 세그멘테이션 서비스는 세그먼트 정의를 만들고 관리하기 위한 사용자 인터페이스를 제공합니다.
+exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
 translation-type: tm+mt
-source-git-commit: 1634466d3a1d8eadc4c98bb93214d8772b6a47a3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1481'
+source-wordcount: '1479'
 ht-degree: 0%
 
 ---
-
 
 # 세그멘테이션 서비스 UI 안내서
 
