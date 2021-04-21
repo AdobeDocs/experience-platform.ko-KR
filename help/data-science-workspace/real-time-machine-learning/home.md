@@ -2,16 +2,16 @@
 keywords: Experience Platform;개발자 가이드;데이터 과학 작업 공간;인기 있는 주제;실시간 기계 학습;
 solution: Experience Platform
 title: 실시간 기계 학습 개요
-topic: Overview
+topic-legacy: Overview
 description: 실시간 머신 러닝을 사용하면 최종 사용자에게 디지털 경험 컨텐츠의 연관성을 크게 향상시킬 수 있습니다. 이는 Experience Edge의 실시간 컨퍼런싱과 지속적인 학습을 통해 가능합니다.
+exl-id: 23eb1877-1bdf-4982-b58c-cfb58467035a
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '550'
-ht-degree: 2%
+source-wordcount: '547'
+ht-degree: 1%
 
 ---
-
 
 # 실시간 기계 학습 개요(알파)
 
@@ -45,7 +45,7 @@ Adobe Experience Platform의 [!DNL Experience Data Model](XDM)을 사용하여 �
 
 ### 배포
 
-예측 API 끝점을 사용하여 [!UICONTROL 서비스 갤러리]에서 실시간 기계 학습 서비스를 만들려면 모델을 [!DNL Experience Edge]에 배포합니다.
+예측 API 끝점을 사용하여 [!UICONTROL Service Gallery]에서 실시간 기계 학습 서비스를 만들려면 모델을 [!DNL Experience Edge]에 배포합니다.
 
 ### 추론
 
@@ -81,4 +81,3 @@ Adobe Experience Platform의 [!DNL Experience Data Model](XDM)을 사용하여 �
 ## 다음 단계
 
 [시작하기](./getting-started.md) 가이드를 따라 시작할 수 있습니다. 이 안내서에서는 실시간 기계 학습 모델을 만드는 데 필요한 모든 사전 요구 사항을 설정하는 과정을 안내합니다.
-
