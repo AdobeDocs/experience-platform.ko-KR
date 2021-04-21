@@ -2,17 +2,17 @@
 keywords: Experience Platform;홈;인기 항목;그린플럼;Greenplum;home;popular topics;built
 solution: Experience Platform
 title: 흐름 서비스 API를 사용하여 GreenPlum 소스 연결 만들기
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Flow Service API를 사용하여 GreenPlum을 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
+exl-id: c4ce452a-b4c5-46ab-83ab-61b296c271d0
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '549'
 ht-degree: 2%
 
 ---
-
 
 # [!DNL Flow Service] API를 사용하여 [!DNL GreenPlum] 소스 연결 만들기
 
