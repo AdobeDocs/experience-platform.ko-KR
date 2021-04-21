@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;ETL;ETL;ETL 변형;ETL 변환
 solution: Experience Platform
 title: 샘플 ETL 변형
-topic: overview
+topic-legacy: overview
 description: 이 문서에서는 ETL(Extract, Transform, Load) 개발자가 사용할 수 있는 다음과 같은 변형에 대해 설명합니다.
+exl-id: 8084f5fd-b621-4515-a329-5a06c137d11c
 translation-type: tm+mt
-source-git-commit: f8186e467dc982003c6feb01886ed16d23572955
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '493'
 ht-degree: 1%
 
 ---
-
 
 # 샘플 ETL 변형
 
@@ -251,7 +251,7 @@ CRM 데이터에 대한 매핑 요구 사항은 다음 표에 요약되어 있�
 ]
 ```
 
-Adobe Experience Platform에서 사용할 데이터 프레임을 구성할 때 해당 계층 구조가 기존 XDM 스키마와 정확하게 일치하는지 확인하여 필드를 올바르게 매핑해야 합니다.
+Adobe Experience Platform에서 사용할 데이터 프레임을 구성할 때 해당 계층 구조가 기존 XDM 스키마와 정확하게 일치하는지 확인하여 필드를 제대로 매핑해야 합니다.
 
 ## ID 맵에 대한 ID
 
@@ -307,4 +307,3 @@ ID 배열에 대한 매핑 요구 사항은 다음 표에 요약되어 있습니
       }]
    }
 ```
-
