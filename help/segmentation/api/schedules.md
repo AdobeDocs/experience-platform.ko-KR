@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;세그멘테이션;세그멘테이션 서비스;일정;일정;api;Segmentation;home;popular topmentation;segmentation;service;schedule;api;API
 solution: Experience Platform
 title: API 끝점 예약
-topic: developer guide
+topic-legacy: developer guide
 description: 예약은 하루에 한 번 일괄 세그먼테이션 작업을 자동으로 실행하는 데 사용할 수 있는 도구입니다.
+exl-id: 92477add-2e7d-4d7b-bd81-47d340998ff1
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1203'
 ht-degree: 3%
 
 ---
-
 
 # 일정 끝점
 
