@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;샌드박스;샌드박스;테스트;테스트
 solution: Experience Platform
 title: 샌드박스 개요
-topic: overview
+topic-legacy: overview
 description: 샌드박스는 Experience Platform의 단일 인스턴스 내에서 가상 파티션으로, 디지털 경험 애플리케이션의 개발 프로세스와 매끄럽게 통합됩니다.
+exl-id: b760a979-8134-4a44-8433-ec6fb49bc508
 translation-type: tm+mt
-source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '755'
+source-wordcount: '754'
 ht-degree: 0%
 
 ---
-
 
 # 샌드박스 개요
 
