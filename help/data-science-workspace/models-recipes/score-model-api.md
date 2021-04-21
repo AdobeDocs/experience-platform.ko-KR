@@ -2,17 +2,17 @@
 keywords: Experience Platform;모델 점수;데이터 과학 작업 공간;인기 항목;sensei 기계 학습 api
 solution: Experience Platform
 title: Sensei Machine Learning API를 사용하여 모델 점수 지정
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: 이 자습서에서는 Sensei 기계 학습 API를 활용하여 실험 및 실험 실행을 만드는 방법을 보여줍니다.
+exl-id: 202c63b0-86d8-4a82-8ec8-d144a8911d08
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '549'
 ht-degree: 1%
 
 ---
-
 
 # [!DNL Sensei Machine Learning API]을 사용하여 모델 점수 지정
 
