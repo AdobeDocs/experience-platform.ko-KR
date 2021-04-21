@@ -3,16 +3,16 @@ keywords: Experience Platform;홈;인기 항목
 solution: Experience Platform
 title: 이메일 마케팅 대상에 연결하고 Flow Service API를 사용하여 데이터를 활성화합니다
 description: 이 문서에서는 Adobe Experience Platform API를 사용하여 이메일 마케팅 대상을 만드는 방법에 대해 설명합니다
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
+exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
 translation-type: tm+mt
-source-git-commit: 32cb198bcf2c142b50c4b7a60282f0c923be06b1
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1707'
+source-wordcount: '1700'
 ht-degree: 1%
 
 ---
-
 
 # 이메일 마케팅 대상에 연결하고 Flow Service API를 사용하여 데이터를 활성화합니다
 
@@ -24,7 +24,7 @@ ht-degree: 1%
 
 플랫폼의 사용자 인터페이스를 사용하여 대상을 연결하고 데이터를 활성화하려면 [대상 연결](../ui/connect-destination.md) 및 [프로필 및 세그먼트를 대상](../ui/activate-destinations.md) 튜토리얼로 활성화를 참조하십시오.
 
-## 시작하기
+## 시작
 
 이 가이드를 사용하려면 다음과 같은 Adobe Experience Platform 구성 요소에 대해 작업해야 합니다.
 
@@ -593,7 +593,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 * `{DATAFLOW_ID}`:이전 단계에서 얻은 데이터 흐름을 사용합니다.
 * `{ETAG}`:이전 단계에서 얻은 태그를 사용합니다.
-* `{SEGMENT_ID}`:이 대상으로 내보낼 세그먼트 ID를 제공합니다. 활성화할 세그먼트에 대한 세그먼트 ID를 검색하려면 **https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/**&#x200B;으로 이동하여 왼쪽 탐색 메뉴에서 **[!UICONTROL 세그멘테이션 서비스 API]**&#x200B;를 선택하고 **[!UICONTROL 세그먼트 정의]**&#x200B;에서 `GET /segment/definitions` 작업을 찾습니다.
+* `{SEGMENT_ID}`:이 대상으로 내보낼 세그먼트 ID를 제공합니다. 활성화할 세그먼트에 대한 세그먼트 ID를 검색하려면 **https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/**&#x200B;으로 이동하여 왼쪽 탐색 메뉴에서 **[!UICONTROL Segmentation Service API]**&#x200B;를 선택하고 **[!UICONTROL Segment Definitions]**&#x200B;에서 `GET /segment/definitions` 작업을 찾습니다.
 * `{PROFILE_ATTRIBUTE}`: 예, `"person.lastName"`
 
 **응답**
