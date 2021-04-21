@@ -3,15 +3,15 @@ keywords: Experience Platform;홈;인기 항목;api;XDM;XDM 시스템;경험 데
 solution: Experience Platform
 title: UI에서 XDM 필드 정의
 description: Experience Platform 사용자 인터페이스에서 XDM 필드를 정의하는 방법을 알아봅니다.
-topic: user guide
+topic-legacy: user guide
+exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1311'
-ht-degree: 4%
+source-wordcount: '1236'
+ht-degree: 3%
 
 ---
-
 
 # UI에서 XDM 필드 정의
 
@@ -41,19 +41,19 @@ UI에서 새 XDM 필드를 정의하려면 먼저 [!DNL Schema Editor] 내에 �
 
 ## 리소스 {#define}에 대한 필드 정의
 
-**plus (+)** 아이콘을 선택하면 고유한 테넌트 ID에 이름이 지정된 루트 수준 개체(아래 예제의 `_tenantId`로 표시됨) 내에 있는 캔버스에 **[!UICONTROL 새 필드]**&#x200B;가 나타납니다. 사용자 정의 클래스 및 혼합을 통해 스키마에 추가되는 모든 필드는 Adobe에서 제공하는 클래스 및 혼합에서 다른 필드와의 충돌을 방지하기 위해 이 네임스페이스 내에 자동으로 배치됩니다.
+**plus (+)** 아이콘을 선택하면 고유한 테넌트 ID에 이름이 지정된 루트 수준 개체(아래 예에서 `_tenantId`로 표시됨) 내에 있는 캔버스에 **[!UICONTROL New field]**&#x200B;가 나타납니다. 사용자 정의 클래스 및 혼합을 통해 스키마에 추가되는 모든 필드는 Adobe에서 제공하는 클래스 및 혼합에서 다른 필드와의 충돌을 방지하기 위해 이 네임스페이스 내에 자동으로 배치됩니다.
 
 ![](../../images/ui/fields/overview/new-field.png)
 
-**[!UICONTROL 필드 속성]** 아래의 오른쪽 레일에서 새 필드의 세부 정보를 구성할 수 있습니다. 각 필드에 다음 정보가 필요합니다.
+**[!UICONTROL Field properties]** 오른쪽 레일에서 새 필드의 세부 정보를 구성할 수 있습니다. 각 필드에 다음 정보가 필요합니다.
 
 | 필드 속성 | 설명 |
 | --- | --- |
-| [!UICONTROL 필드 이름] | 필드의 고유한 수사적 이름입니다. 스키마를 저장한 후에는 필드 이름을 변경할 수 없습니다.<br><br>그 이름은 낙타케이스로 쓰는 것이 이상적이다. 여기에는 영숫자, 대시 또는 밑줄 문자가 포함될 수 있지만 **은 밑줄로 시작할 수 없습니다.**<ul><li>**정답**:  `fieldName`</li><li>**허용 가능:** `field_name2`,  `Field-Name`,  `field-name_3`</li><li>**오답**:  `_fieldName`</li></ul> |
-| [!UICONTROL 표시 이름] | 그 필드의 인간적인 이름. |
-| [!UICONTROL 유형] | 필드에 포함할 데이터의 유형입니다. 이 드롭다운 메뉴에서 XDM에서 지원하는 [표준 스칼라 형식](../../schema/field-constraints.md) 또는 이전에 [!DNL Schema Registry]에 정의된 다중 필드 [데이터 유형](../resources/data-types.md) 중 하나를 선택할 수 있습니다.<br><br>고급 유형 검색을 선택하여  **[!UICONTROL 기존 데이터]** 유형을 검색 및 필터링하고 원하는 유형을 더 쉽게 찾을 수도 있습니다. |
+| [!UICONTROL Field name] | 필드의 고유한 수사적 이름입니다. 스키마를 저장한 후에는 필드 이름을 변경할 수 없습니다.<br><br>그 이름은 낙타케이스로 쓰는 것이 이상적이다. 여기에는 영숫자, 대시 또는 밑줄 문자가 포함될 수 있지만 **은 밑줄로 시작할 수 없습니다.**<ul><li>**정답**:  `fieldName`</li><li>**허용 가능:** `field_name2`,  `Field-Name`,  `field-name_3`</li><li>**오답**:  `_fieldName`</li></ul> |
+| [!UICONTROL Display name] | 그 필드의 인간적인 이름. |
+| [!UICONTROL Type] | 필드에 포함할 데이터의 유형입니다. 이 드롭다운 메뉴에서 XDM에서 지원하는 [표준 스칼라 형식](../../schema/field-constraints.md) 또는 이전에 [!DNL Schema Registry]에 정의된 다중 필드 [데이터 유형](../resources/data-types.md) 중 하나를 선택할 수 있습니다.<br><br>기존 데이터 유형 **[!UICONTROL Advanced type search]** 을 검색 및 필터링하고 원하는 유형을 더 쉽게 찾을 수도 있습니다. |
 
-필드의 의도한 사용 사례에 대해 더 많은 컨텍스트를 제공하기 위해 선택적 사람이 읽을 수 있는 **[!UICONTROL 설명]**&#x200B;을 필드에 제공할 수도 있습니다.
+필드의 의도한 사용 사례에 대해 더 많은 컨텍스트를 제공하기 위해 선택적 사람이 읽을 수 있는 **[!UICONTROL Description]**&#x200B;을 필드에 제공할 수도 있습니다.
 
 >[!NOTE]
 >
@@ -61,7 +61,7 @@ UI에서 새 XDM 필드를 정의하려면 먼저 [!DNL Schema Editor] 내에 �
 >
 >오른쪽 레일에는 특수 필드 유형을 지정하는 확인란도 제공됩니다. 자세한 내용은 [특수 필드 유형](#special)의 섹션을 참조하십시오.
 
-필드 구성이 완료되면 **[!UICONTROL 적용]**&#x200B;을 선택합니다.
+필드 구성이 완료되면 **[!UICONTROL Apply]**&#x200B;을 선택합니다.
 
 ![](../../images/ui/fields/overview/field-details.png)
 
@@ -77,19 +77,19 @@ UI에서 새 XDM 필드를 정의하려면 먼저 [!DNL Schema Editor] 내에 �
 
 ## 유형별 필드 속성 {#type-specific-properties}
 
-새 필드를 정의할 때 필드에 대해 선택한 **[!UICONTROL 유형]**&#x200B;에 따라 오른쪽 레일에 추가 구성 옵션이 나타날 수 있습니다. 다음 표에서는 이러한 추가 필드 속성에 대해 호환 가능한 유형과 함께 설명합니다.
+새 필드를 정의할 때 필드에 대해 선택하는 **[!UICONTROL Type]**&#x200B;에 따라 오른쪽 레일에 추가 구성 옵션이 나타날 수 있습니다. 다음 표에서는 이러한 추가 필드 속성에 대해 호환 가능한 유형과 함께 설명합니다.
 
 | 필드 속성 | 호환 가능한 유형 | 설명 |
 | --- | --- | --- |
-| [!UICONTROL 기본값] | [!UICONTROL String],  [!UICONTROL Double],  [!UICONTROL Long],  [!UICONTROL 정수]      [!UICONTROL , ShortShort,Byte,Boolean] | 수집 중에 다른 값이 제공되지 않을 경우 이 필드에 할당되는 기본값입니다. 이 값은 필드의 선택한 유형을 준수해야 합니다. |
-| [!UICONTROL 패턴] | [!UICONTROL 문자열] | 통합 중에 수락하려면 이 필드의 값이 일치해야 하는 [정규 표현식](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)입니다. |
-| [!UICONTROL 형식] | [!UICONTROL 문자열] | 값이 준수해야 하는 문자열에 대해 사전 정의된 형식 목록에서 선택합니다. 사용 가능한 포맷은 다음과 같습니다. <ul><li>[[!UICONTROL date-time]](https://tools.ietf.org/html/rfc3339)</li><li>[[!UICONTROL 이메일]](https://tools.ietf.org/html/rfc2822)</li><li>[[!UICONTROL hostname]](https://tools.ietf.org/html/rfc1123#page-13)</li><li>[[!UICONTROL ipv4]](https://tools.ietf.org/html/rfc791)</li><li>[[!UICONTROL ipv6]](https://tools.ietf.org/html/rfc2460)</li><li>[[!UICONTROL uri]](https://tools.ietf.org/html/rfc3986)</li><li>[[!UICONTROL uri-reference]](https://tools.ietf.org/html/rfc3986#section-4.1)</li><li>[[!UICONTROL url-template]](https://tools.ietf.org/html/rfc6570)</li><li>[[!UICONTROL json 포인터]](https://tools.ietf.org/html/rfc6901)</li></ul> |
-| [!UICONTROL 최소 길이] | [!UICONTROL 문자열] | 통합 중에 값을 수락하려면 문자열에 포함해야 하는 최소 문자 수입니다. |
-| [!UICONTROL 최대 길이] | [!UICONTROL 문자열] | 통합 중에 값을 수락하려면 문자열에 포함해야 하는 최대 문자 수입니다. |
-| [!UICONTROL 최소 값] | [!UICONTROL 이중] | 섭취 중 수락할 Double에 대한 최소값입니다. 인제스트된 값이 여기에 입력한 값과 정확히 일치하는 경우 값이 허용됩니다. 이 제약 조건을 사용할 때는 &quot;[!UICONTROL 배타적 최소값]&quot; 제약 조건을 비워두어야 합니다. |
-| [!UICONTROL 최대 값] | [!UICONTROL 이중] | 섭취 중 수락할 Double의 최대값입니다. 인제스트된 값이 여기에 입력한 값과 정확히 일치하는 경우 값이 허용됩니다. 이 제약 조건을 사용할 때는 &quot;[!UICONTROL 배타적 최대값]&quot; 제약 조건을 비워두어야 합니다. |
-| [!UICONTROL 독점적 최소값] | [!UICONTROL 이중] | 섭취 중 수락할 Double의 최대값입니다. 인제스트된 값이 여기에 입력한 값과 정확히 일치하는 경우 값이 거부됩니다. 이 제약 조건을 사용할 때는 &quot;[!UICONTROL 최소 값]&quot;(비배타적) 제약 조건을 비워두어야 합니다. |
-| [!UICONTROL 독점적 최대값] | [!UICONTROL 이중] | 섭취 중 수락할 Double의 최대값입니다. 인제스트된 값이 여기에 입력한 값과 정확히 일치하는 경우 값이 거부됩니다. 이 제약 조건을 사용할 때는 &quot;[!UICONTROL 최대값]&quot;(비배타적) 제약 조건을 비워두어야 합니다. |
+| [!UICONTROL Default value] | [!UICONTROL String], [!UICONTROL Double], [!UICONTROL Long], [!UICONTROL Integer], [!UICONTROL Short], [!UICONTROL Byte], [!UICONTROL Boolean] | 수집 중에 다른 값이 제공되지 않을 경우 이 필드에 할당되는 기본값입니다. 이 값은 필드의 선택한 유형을 준수해야 합니다. |
+| [!UICONTROL Pattern] | [!UICONTROL String] | 통합 중에 수락하려면 이 필드의 값이 일치해야 하는 [정규 표현식](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)입니다. |
+| [!UICONTROL Format] | [!UICONTROL String] | 값이 준수해야 하는 문자열에 대해 사전 정의된 형식 목록에서 선택합니다. 사용 가능한 포맷은 다음과 같습니다. <ul><li>[[!UICONTROL date-time]](https://tools.ietf.org/html/rfc3339)</li><li>[[!UICONTROL email]](https://tools.ietf.org/html/rfc2822)</li><li>[[!UICONTROL hostname]](https://tools.ietf.org/html/rfc1123#page-13)</li><li>[[!UICONTROL ipv4]](https://tools.ietf.org/html/rfc791)</li><li>[[!UICONTROL ipv6]](https://tools.ietf.org/html/rfc2460)</li><li>[[!UICONTROL uri]](https://tools.ietf.org/html/rfc3986)</li><li>[[!UICONTROL uri-reference]](https://tools.ietf.org/html/rfc3986#section-4.1)</li><li>[[!UICONTROL url-template]](https://tools.ietf.org/html/rfc6570)</li><li>[[!UICONTROL json-pointer]](https://tools.ietf.org/html/rfc6901)</li></ul> |
+| [!UICONTROL Minimum length] | [!UICONTROL String] | 통합 중에 값을 수락하려면 문자열에 포함해야 하는 최소 문자 수입니다. |
+| [!UICONTROL Maximum length] | [!UICONTROL String] | 통합 중에 값을 수락하려면 문자열에 포함해야 하는 최대 문자 수입니다. |
+| [!UICONTROL Minimum value] | [!UICONTROL Double] | 섭취 중 수락할 Double에 대한 최소값입니다. 인제스트된 값이 여기에 입력한 값과 정확히 일치하는 경우 값이 허용됩니다. 이 제약 조건을 사용할 때는 &quot;[!UICONTROL Exclusive minimum value]&quot; 제약 조건을 비워두어야 합니다. |
+| [!UICONTROL Maximum value] | [!UICONTROL Double] | 섭취 중 수락할 Double의 최대값입니다. 인제스트된 값이 여기에 입력한 값과 정확히 일치하는 경우 값이 허용됩니다. 이 제약 조건을 사용할 때는 &quot;[!UICONTROL Exclusive maximum value]&quot; 제약 조건을 비워두어야 합니다. |
+| [!UICONTROL Exclusive minimum value] | [!UICONTROL Double] | 섭취 중 수락할 Double의 최대값입니다. 인제스트된 값이 여기에 입력한 값과 정확히 일치하는 경우 값이 거부됩니다. 이 제약 조건을 사용할 때는 &quot;[!UICONTROL Minimum value]&quot;(비배타적) 제약 조건을 비워두어야 합니다. |
+| [!UICONTROL Exclusive maximum value] | [!UICONTROL Double] | 섭취 중 수락할 Double의 최대값입니다. 인제스트된 값이 여기에 입력한 값과 정확히 일치하는 경우 값이 거부됩니다. 이 제약 조건을 사용할 때는 &quot;[!UICONTROL Maximum value]&quot;(비배타적) 제약 조건을 비워두어야 합니다. |
 
 ## 특수 필드 유형 {#special}
 
@@ -97,11 +97,11 @@ UI에서 새 XDM 필드를 정의하려면 먼저 [!DNL Schema Editor] 내에 �
 
 이러한 특수 유형에 대한 자세한 내용은 다음 설명서를 참조하십시오.
 
-* [[!UICONTROL 필수 여부]](./required.md)
-* [[!UICONTROL 배열]](./array.md)
-* [[!UICONTROL 열거형]](./enum.md)
-* [[!UICONTROL ID]](./identity.md) (문자열 필드에만 사용 가능)
-* [[!UICONTROL 관계]](./relationship.md) (문자열 필드에만 사용 가능)
+* [[!UICONTROL Required]](./required.md)
+* [[!UICONTROL Array]](./array.md)
+* [[!UICONTROL Enum]](./enum.md)
+* [[!UICONTROL Identity]](./identity.md) (문자열 필드에만 사용 가능)
+* [[!UICONTROL Relationship]](./relationship.md) (문자열 필드에만 사용 가능)
 
 기술적으로 특수 필드 유형은 아니지만 스키마 구조가 중첩된 하위 필드 정의에 대한 자세한 내용을 살펴보려면 [개체 유형 필드 정의](./object.md)의 안내서를 방문하는 것이 좋습니다.
 
@@ -109,4 +109,4 @@ UI에서 새 XDM 필드를 정의하려면 먼저 [!DNL Schema Editor] 내에 �
 
 이 안내서에서는 UI에서 XDM 필드를 정의하는 방법에 대한 개요를 제공했습니다. 클래스와 믹스를 사용하여 스키마에만 필드를 추가할 수 있습니다. UI에서 이러한 리소스를 관리하는 방법에 대한 자세한 내용은 [classes](../resources/classes.md) 및 [mixins](../resources/mixins.md)을(를) 만들고 편집하는 방법에 대한 가이드를 참조하십시오.
 
-[!UICONTROL 스키마] 작업 영역의 기능에 대한 자세한 내용은 [[!UICONTROL 스키마] 작업 영역 개요](../overview.md)를 참조하십시오.
+[!UICONTROL Schemas] 작업 영역의 기능에 대한 자세한 내용은 [[!UICONTROL Schemas] 작업 영역 개요](../overview.md)를 참조하십시오.
