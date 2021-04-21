@@ -2,14 +2,14 @@
 keywords: Experience Platform;홈;인기 항목;crm;CRM
 solution: Experience Platform
 title: 소스 커넥터 및 API를 통해 CRM 데이터 수집
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: 이 자습서에서는 소스 커넥터 및 API를 사용하여 제3자 CRM 시스템에서 데이터를 검색하고 플랫폼에 가져오는 절차를 다룹니다.
 exl-id: b07dd640-bce6-4699-9d2b-b7096746934a
 translation-type: tm+mt
-source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1592'
+source-wordcount: '1590'
 ht-degree: 1%
 
 ---
