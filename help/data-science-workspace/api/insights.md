@@ -2,16 +2,16 @@
 keywords: Experience Platform;개발자 가이드;끝점;데이터 과학 작업 공간;인기 항목;인사이트;sensei 기계 학습 api
 solution: Experience Platform
 title: 인사이트 API 끝점
-topic: Developer guide
+topic-legacy: Developer guide
 description: 인사이트에는 관련 평가 지표를 표시하여 데이터 과학자가 최적의 ML 모델을 평가하고 선택할 수 있도록 하는 데 사용되는 지표가 포함되어 있습니다.
+exl-id: 603546d6-5686-4b59-99a7-90ecc0db8de3
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '515'
 ht-degree: 3%
 
 ---
-
 
 # 인사이트 끝점
 
