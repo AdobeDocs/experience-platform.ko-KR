@@ -5,9 +5,9 @@ breadcrumb-title: Source Connectors 안내서
 user-guide-description: 다양한 소스 또는 구조에서 데이터를 수집하고 레이블을 지정하며 기존에 수집한 데이터를 향상시킬 수 있습니다.
 feature: 데이터 통합, 소스
 translation-type: tm+mt
-source-git-commit: fb24f7cf82038a38c2861bd84404531062e47485
+source-git-commit: 121e2f410acdcd6de3953c6063a15901c853dd07
 workflow-type: tm+mt
-source-wordcount: '606'
+source-wordcount: '610'
 ht-degree: 12%
 
 ---
@@ -79,6 +79,8 @@ ht-degree: 12%
       - [PayPal 커넥터](connectors/payments/paypal.md)
    - 프로토콜 {#protocols}
       - [범용 OData 커넥터](connectors/protocols/odata.md)
+   - 스트리밍 {#streaming}
+      - [HTTP API 커넥터](connectors/streaming/http.md)
 - API 자습서 {#api-tutorials}
    - 소스 연결 {#create} 만들기
       - 광고 {#advertising}
