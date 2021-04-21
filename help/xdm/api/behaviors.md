@@ -3,22 +3,22 @@ keywords: Experience Platform;홈;인기 항목;api;XDM;XDM 시스템;경험 데
 solution: Experience Platform
 title: 비헤이비어 API 끝점
 description: 스키마 레지스트리 API의 /behaviors 종단점을 사용하면 전역 컨테이너에서 사용 가능한 모든 동작을 검색할 수 있습니다.
-topic: developer guide
+topic-legacy: developer guide
+exl-id: 3b45431f-1d55-4279-8b62-9b27863885ec
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '425'
+source-wordcount: '423'
 ht-degree: 2%
 
 ---
-
 
 # 비헤이비어 끝점
 
 XDM(경험 데이터 모델)에서 비헤이비어는 스키마에서 설명하는 데이터의 특성을 정의합니다. 각 XDM 클래스는 특정 비헤이비어를 참조해야 하며, 이 클래스를 사용하는 모든 스키마는 상속됩니다. Platform(플랫폼)에서 거의 모든 사용 사례에는 두 가지 사용 가능한 비헤이비어가 있습니다.
 
-* **[!UICONTROL 기록]**:제목 속성에 대한 정보를 제공합니다. 대상은 조직 또는 개인일 수 있습니다.
-* **[!UICONTROL 시계열]**:작업 수행 시 기록 제목에 의해 직접 또는 간접적으로 작업이 수행될 때 시스템의 스냅샷을 제공합니다.
+* **[!UICONTROL Record]**:제목 속성에 대한 정보를 제공합니다. 대상은 조직 또는 개인일 수 있습니다.
+* **[!UICONTROL Time-series]**:작업 수행 시 기록 제목에 의해 직접 또는 간접적으로 작업이 수행될 때 시스템의 스냅샷을 제공합니다.
 
 >[!NOTE]
 >
