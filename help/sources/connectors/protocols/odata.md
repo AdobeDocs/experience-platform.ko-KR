@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;popular topics;OData;odata;oData;범용 OData;범용 데이터
 solution: Experience Platform
 title: 범용 OData 소스 커넥터 개요
-topic: overview
+topic-legacy: overview
 description: API 또는 사용자 인터페이스를 사용하여 범용 OData를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
+exl-id: ff50f883-d4fd-4f32-a9d6-fe4624a32e24
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '238'
 ht-degree: 0%
 
 ---
-
 
 # (베타) [!DNL Generic OData] 커넥터
 
