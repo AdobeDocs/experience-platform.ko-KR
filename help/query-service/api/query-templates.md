@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;popular topics;query service;query templates;api guide;templates;query service;
 solution: Experience Platform
 title: 쿼리 템플릿 API 끝점
-topic: query templates
+topic-legacy: query templates
 description: 다음 설명서는 쿼리 서비스 API에 대한 쿼리 템플릿을 사용하여 수행할 수 있는 다양한 API 호출을 안내합니다.
+exl-id: 14cd7907-73d2-478f-8992-da3bdf08eacc
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '674'
 ht-degree: 3%
 
 ---
-
 
 # 쿼리 템플릿 끝점
 
