@@ -1,12 +1,11 @@
 ---
-product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform 도움말의 샌드박스
 breadcrumb-title: Sandoxes 안내서
-user-guide-description: 개발, 테스트 및 응용 프로그램 배포를 위해 플랫폼 인스턴스를 가상 환경으로 분할합니다.
-feature: Data Management
+user-guide-description: 개발, 테스트 및 애플리케이션 배포를 위해 플랫폼 인스턴스를 가상 환경으로 분할합니다.
+feature: 데이터 관리
 translation-type: tm+mt
-source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '88'
 ht-degree: 29%
@@ -21,7 +20,7 @@ ht-degree: 29%
    * [샌드박스 UI 개요](ui/overview.md)
    * [샌드박스 사용 안내서](ui/user-guide.md)
 * 샌드박스 API {#api}
-   * [시작하기](api/getting-started.md)
+   * [시작](api/getting-started.md)
    * [지원되는 샌드박스 유형 목록](api/list-sandbox-types.md)
    * [모든 샌드박스 나열](api/list-all-sandboxes.md)
    * [현재 사용자의 활성 샌드박스 나열](api/list-active-sandboxes.md)
