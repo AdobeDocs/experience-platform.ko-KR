@@ -2,18 +2,18 @@
 keywords: Experience Platform;홈;인기 항목;쿼리 서비스;쿼리 서비스;;home;popular topics;query service;query
 solution: Experience Platform
 title: 쿼리 서비스 개요
-topic: overview
+topic-legacy: overview
 description: 이 문서에서는 Experience Platform 내 쿼리 서비스 역할에 대한 개요를 제공합니다.
+exl-id: fdaefc12-a97d-4e4e-9aed-d3dbd0f43ea0
 translation-type: tm+mt
-source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '635'
 ht-degree: 0%
 
 ---
 
-
-# [!DNL Query Service]개요
+# [!DNL Query Service] 개요
 
 Adobe Experience Platform은 다양한 소스의 데이터를 인제스트합니다. 마케터는 이러한 데이터를 활용하여 고객에 대한 통찰력을 얻는 것이 가장 큰 과제입니다. Adobe Experience Platform [!DNL Query Service]은 표준 SQL을 사용하여 [!DNL Platform]의 데이터를 쿼리할 수 있도록 함으로써 이러한 기능을 용이하게 합니다. [!DNL Query Service]을 사용하여 [!DNL Data Lake]의 모든 데이터 세트에 참여하고 쿼리 결과를 보고, 머신 러닝 또는 [!DNL Real-time Customer Profile]에 수집하기 위한 새로운 데이터 세트로 캡처할 수 있습니다. 이 문서에서는 [!DNL Experience Platform] 내 [!DNL Query Service] 역할에 대한 개요를 제공합니다.
 
