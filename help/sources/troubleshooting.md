@@ -2,13 +2,13 @@
 keywords: Experience Platform;홈;인기 항목;소스;섭취;문제 해결;소스 문제 해결;소스 faq;소스 커넥터;소스 커넥터;소스 커넥터 faq;소스 커넥터 faq;소스 커넥터 문제 해결
 solution: Experience Platform
 title: 소스 문제 해결
-topic: troubleshooting
+topic-legacy: troubleshooting
 description: 이 문서에서는 Adobe Experience Platform 관련 출처에 대한 질문과 답변을 제공합니다.
 exl-id: 94875121-7d4d-4eb2-8760-aa795933dd7e
 translation-type: tm+mt
-source-git-commit: 827a593c046530edba701edf26d9a47918cfd8f8
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '663'
+source-wordcount: '662'
 ht-degree: 0%
 
 ---
