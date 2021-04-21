@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;CRM;crm;crm 흐름 서비스
 solution: Experience Platform
 title: Flow Service API를 사용하여 CRM 시스템 탐색
-topic: overview
+topic-legacy: overview
 description: 이 자습서는 Flow Service API를 사용하여 CRM 시스템을 탐색합니다.
+exl-id: 9a8c553a-a93d-4539-a9d2-5f76a3927d92
 translation-type: tm+mt
-source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '589'
 ht-degree: 2%
 
 ---
-
 
 # [!DNL Flow Service] API를 사용하여 CRM 시스템 탐색
 
