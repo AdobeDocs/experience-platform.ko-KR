@@ -2,17 +2,17 @@
 keywords: Experience Platform;홈;인기 항목;쿼리 서비스;쿼리 서비스;경험 이벤트 쿼리;경험 이벤트 쿼리;경험 이벤트 쿼리;경험 이벤트 쿼리
 solution: Experience Platform
 title: 경험 이벤트에 대한 샘플 쿼리
-topic: queries
+topic-legacy: queries
 type: Tutorial
 description: 다음 문서에서는 Adobe Experience Platform 쿼리 서비스의 경험 이벤트와 관련된 쿼리의 예를 제공합니다.
+exl-id: e6793a03-e474-4ae4-acb2-a052ff1c6d68
 translation-type: tm+mt
-source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '320'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL Experience Events]에 대한 샘플 쿼리
 
@@ -190,4 +190,3 @@ ORDER BY pageViews DESC;
 ## 다음 단계
 
 ADF(Adobe Defined Functions)를 사용하는 샘플 쿼리에 대한 자세한 내용은 Adobe 정의 함수 안내서를 참조하십시오. 쿼리 실행에 대한 일반적인 지침은 쿼리 서비스](./writing-queries.md)에서 쿼리 실행에 대한 [안내서를 참조하십시오.
-
