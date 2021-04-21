@@ -2,20 +2,20 @@
 keywords: Experience Platform;홈;인기 항목;스키마;스키마;XDM;필드;스키마;전체 이름;xdm:fullName;person name;name;data-type;data-type;data type
 solution: Experience Platform
 title: 개인 이름 데이터 유형
-topic: overview
+topic-legacy: overview
 description: 이 문서에서는 사람 이름 XDM 데이터 유형에 대한 개요를 제공합니다.
+exl-id: 5cf55fb1-b6b0-4d1c-93c3-7e2b7766599e
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '251'
+source-wordcount: '247'
 ht-degree: 0%
 
 ---
 
+# [!UICONTROL Person name] 데이터 유형
 
-# [!UICONTROL 사람 ] 이름 데이터 유형
-
-[!UICONTROL 사람 ] 이름은 사람의 전체 이름을 설명하는 표준 XDM 데이터 유형입니다. 이름 구조에 대한 규칙은 언어와 문화에서 크게 다르므로 이름은 항상 이 데이터 유형을 사용하여 모델링해야 합니다.
+[!UICONTROL Person name] 사람의 전체 이름을 설명하는 표준 XDM 데이터 유형입니다. 이름 구조에 대한 규칙은 언어와 문화에서 크게 다르므로 이름은 항상 이 데이터 유형을 사용하여 모델링해야 합니다.
 
 또한 데이터 유형은 공식 또는 비공식 연하와 같은 전체 이름의 일부만 사용해야 하는 상황에서 사용할 수 있는 여러 선택적 속성을 제공합니다.
 
