@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;업데이트 샌드박스
 solution: Experience Platform
 title: API에서 샌드박스 업데이트
-topic: developer guide
+topic-legacy: developer guide
 description: 요청 경로에 샌드박스의 이름을 포함하는 PATCH 요청과 요청 페이로드에서 업데이트할 속성을 만들어 샌드박스에서 하나 이상의 필드를 업데이트할 수 있습니다.
+exl-id: a8ef4305-5e0c-4d8f-8663-1933c957f122
 translation-type: tm+mt
-source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '135'
-ht-degree: 2%
+source-wordcount: '133'
+ht-degree: 3%
 
 ---
-
 
 # API의 샌드박스 업데이트
 
