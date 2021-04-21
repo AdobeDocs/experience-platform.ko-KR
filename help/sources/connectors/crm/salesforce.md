@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;crm 스키마;crm;CRM;salesforce;Salesforce
 solution: Experience Platform
 title: Salesforce 소스 커넥터 개요
-topic: overview
+topic-legacy: overview
 description: API 또는 유저 인터페이스를 사용하여 Salesforce를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
+exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '213'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL Salesforce] 커넥터
 
