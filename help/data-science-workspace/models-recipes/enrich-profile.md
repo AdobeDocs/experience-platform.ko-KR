@@ -2,17 +2,17 @@
 keywords: Experience Platform;기계 학습 모델;데이터 과학 작업 공간;실시간 고객 프로필;인기 항목;기계 학습 통찰력
 solution: Experience Platform
 title: 머신 러닝 인사이트를 통해 실시간 고객 프로파일 강화
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: 이 문서에서는 머신 러닝 인사이트를 활용하여 실시간 고객 프로필을 향상시키는 방법에 대한 가이드를 제공합니다.
+exl-id: 397023c9-383d-4a21-b58a-0f920631ac56
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '640'
 ht-degree: 0%
 
 ---
-
 
 # 머신 러닝 인사이트를 통해 [!DNL Real-time Customer Profile] 강화
 
