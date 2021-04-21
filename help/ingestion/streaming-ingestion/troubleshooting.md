@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform;홈;인기 항목;스트리밍;스트리밍 통합;문제 해결;스트리밍 통합 문제 해결;스트리밍 통합 관련 faq;faq
+keywords: Experience Platform;홈;인기 항목;스트리밍;스트리밍 통합;문제 해결;스트리밍 통합 문제 해결;스트리밍 통합 faq;faq
 solution: Experience Platform
 title: 스트리밍 통합 문제 해결 안내서
-topic: troubleshooting
+topic-legacy: troubleshooting
 description: 이 문서에서는 Adobe Experience Platform에서의 스트리밍 회수에 대한 질문과 답변을 제공합니다.
+exl-id: 5d5deccf-25b8-44c9-ae27-9a4713ced274
 translation-type: tm+mt
-source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1025'
+source-wordcount: '1019'
 ht-degree: 0%
 
 ---
-
 
 # 스트리밍 통합 문제 해결 가이드
 
@@ -59,7 +59,7 @@ Adobe Experience Platform [!DNL Data Ingestion]은 데이터를 [!DNL Experience
 
 [!DNL Platform](성공 또는 기타)으로 전송된 모든 데이터는 데이터 세트에서 유지하기 전에 일괄 처리 파일로 저장됩니다. 배치의 처리 상태는 보낸 데이터 세트 내에 표시됩니다.
 
-[Experience Platform 사용자 인터페이스](https://platform.adobe.com)을(를) 사용하여 데이터 세트 작업을 확인하여 데이터를 성공적으로 인제스트했는지 확인할 수 있습니다. 왼쪽 탐색에서 **[!UICONTROL 데이터 집합]**&#x200B;을 클릭하여 데이터 집합 목록을 표시합니다. 표시된 목록에서 스트리밍할 데이터 세트를 선택하여 **[!UICONTROL 데이터 세트 활동]** 페이지를 열고 선택한 기간 동안 보낸 모든 배치를 표시합니다. [!DNL Experience Platform]을 사용하여 데이터 스트림을 모니터링하는 방법에 대한 자세한 내용은 [스트리밍 데이터 흐름 모니터링](../quality/monitor-data-ingestion.md)의 안내서를 참조하십시오.
+[Experience Platform 사용자 인터페이스](https://platform.adobe.com)을(를) 사용하여 데이터 세트 작업을 확인하여 데이터를 성공적으로 인제스트했는지 확인할 수 있습니다. 왼쪽 탐색에서 **[!UICONTROL Datasets]**&#x200B;을 클릭하여 데이터 집합 목록을 표시합니다. 표시된 목록에서 스트리밍할 데이터 세트를 선택하여 **[!UICONTROL Dataset activity]** 페이지를 열고 선택한 기간 동안 보낸 모든 배치를 표시합니다. [!DNL Experience Platform]을 사용하여 데이터 스트림을 모니터링하는 방법에 대한 자세한 내용은 [스트리밍 데이터 흐름 모니터링](../quality/monitor-data-ingestion.md)의 안내서를 참조하십시오.
 
 데이터를 인제스트하지 못하고 [!DNL Platform]에서 복구하려는 경우 해당 ID를 [!DNL Data Access API]로 전송하여 실패한 배치를 검색할 수 있습니다. 자세한 내용은 [실패한 배치 검색](../quality/retrieve-failed-batches.md)의 안내서를 참조하십시오.
 
@@ -101,4 +101,4 @@ Adobe Experience Platform [!DNL Data Ingestion]은 데이터를 [!DNL Experience
 
 ID 네임스페이스에는 다음과 같은 두 가지 유형이 있습니다.기본 및 사용자 지정. 사용자 정의 네임스페이스를 사용할 때는 네임스페이스가 [!DNL Identity Service] 내에 등록되어 있는지 확인합니다. 기본 및 사용자 정의 네임스페이스 사용에 대한 자세한 내용은 [ID 네임스페이스 개요](../../identity-service/namespaces.md)를 참조하십시오.
 
-메시지를 수집하지 못한 이유에 대한 자세한 내용을 보려면 [[!DNL Experience Platform UI]](https://platform.adobe.com)을 사용할 수 있습니다. 왼쪽 탐색 창에서 **[!UICONTROL 모니터링]**&#x200B;을 클릭한 다음 **[!UICONTROL 스트리밍 종단간]** 탭을 확인하여 선택한 기간 동안 스트리밍된 메시지 배치를 확인합니다.
+메시지를 수집하지 못한 이유에 대한 자세한 내용을 보려면 [[!DNL Experience Platform UI]](https://platform.adobe.com)을 사용할 수 있습니다. 왼쪽 탐색 메뉴에서 **[!UICONTROL Monitoring]**&#x200B;을 클릭한 다음 **[!UICONTROL Streaming end-to-end]** 탭을 확인하여 선택한 기간 동안 스트리밍된 메시지 배치를 확인합니다.
