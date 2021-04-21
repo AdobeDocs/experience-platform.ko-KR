@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;Azure 파일 저장소;azure 파일 저장소
 solution: Experience Platform
 title: Azure 파일 저장소 원본 커넥터 개요
-topic: overview
+topic-legacy: overview
 description: API 또는 사용자 인터페이스를 사용하여 Azure 파일 저장소를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
+exl-id: 0a5e9df6-9760-4eeb-86d5-d92d77df3d2b
 translation-type: tm+mt
-source-git-commit: 7fc99214272d2ce743b3666826c66f5d65e4d2ca
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '470'
+source-wordcount: '469'
 ht-degree: 0%
 
 ---
-
 
 # (베타) Azure 파일 저장소 커넥터
 
