@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;쿼리 서비스;쿼리 서비스;;home;popular topics;query service;query
 solution: Experience Platform
 title: Adobe Experience Platform 쿼리 서비스 빠른 시작 안내서
-topic: quickstart
+topic-legacy: quickstart
 description: Adobe Experience Platform 쿼리 서비스에 대한 빠른 시작 가이드.
+exl-id: 77941755-8292-43ee-8ae3-09065f39ace7
 translation-type: tm+mt
-source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '138'
 ht-degree: 0%
 
 ---
-
 
 # 빠른 시작 가이드
 
@@ -21,4 +21,3 @@ ht-degree: 0%
 
 
 [!DNL Query Service] 또한 외부 도구를 연결하여 쿼리를 발행할 수도 있습니다. Business Intelligence 도구 또는 명령줄 인터페이스와 같은 도구를 연결하는 방법에 대한 지침은 [도구](clients/overview.md)연결을 참조하십시오.
-
