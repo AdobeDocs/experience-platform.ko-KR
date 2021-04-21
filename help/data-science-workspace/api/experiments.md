@@ -2,16 +2,16 @@
 keywords: Experience Platform;개발자 가이드;끝점;데이터 과학 작업 공간;인기 항목;실험;sensei 기계 학습 api
 solution: Experience Platform
 title: 실험 API 끝점
-topic: Developer guide
+topic-legacy: Developer guide
 description: 모델 개발 및 트레이닝은 실험 수준에서 수행되며, 실험 단계는 MLInstance, 트레이닝 실행 및 점수 지정 실행으로 구성됩니다.
+exl-id: 6ca5106e-896d-4c03-aecc-344632d5307d
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '783'
 ht-degree: 4%
 
 ---
-
 
 # 실험 끝점
 
