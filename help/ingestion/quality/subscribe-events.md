@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;데이터 통합 알림;알림;가입 이벤트;데이터 통합 상태 이벤트;상태 이벤트;구독;상태 알림;;home;popular topics;data ingnotifications;subscribe;status notifications;
 solution: Experience Platform
 title: 데이터 통합 알림
-topic: overview
+topic-legacy: overview
 description: 수집 프로세스 모니터링을 지원하기 위해 Adobe Experience Platform을 사용하면 프로세스의 각 단계에 의해 게시된 이벤트 세트에 가입할 수 있으므로 인제스트된 데이터의 상태 및 가능한 오류를 사용자에게 알릴 수 있습니다.
+exl-id: fd34e1ab-f6f6-44f0-88ee-7020e9322c39
 translation-type: tm+mt
-source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '681'
+source-wordcount: '672'
 ht-degree: 2%
 
 ---
-
 
 # 데이터 통합 알림
 
@@ -29,11 +29,11 @@ Adobe Experience Platform에 데이터를 수집하는 프로세스는 여러 �
 
 >[!IMPORTANT]
 >
->구독 프로세스 중에 **[!UICONTROL 플랫폼 알림]**&#x200B;을 이벤트 공급자로 선택하고 메시지가 표시되면 **[!UICONTROL 데이터 통합 알림]** 이벤트 구독을 선택합니다.
+>구독 프로세스 중에 이벤트 공급자로 **[!UICONTROL Platform notifications]**&#x200B;을 선택하고 메시지가 표시되면 **[!UICONTROL Data ingestion notification]** 이벤트 구독을 선택합니다.
 
 ## 데이터 통합 알림 받기
 
-웹 후크를 등록했고 새 데이터를 인제스트한 후에는 이벤트 알림 수신을 시작할 수 있습니다. 이러한 이벤트는 웹 후크 자체를 사용하거나 Adobe 개발자 콘솔에서 프로젝트의 이벤트 등록 개요에서 **[!UICONTROL 추적 디버그]** 탭을 선택하여 볼 수 있습니다.
+웹 후크를 등록했고 새 데이터를 인제스트한 후에는 이벤트 알림 수신을 시작할 수 있습니다. 이러한 이벤트는 웹 후크 자체를 사용하거나 Adobe 개발자 콘솔에서 프로젝트의 이벤트 등록 개요에서 **[!UICONTROL Debug Tracing]** 탭을 선택하여 볼 수 있습니다.
 
 다음 JSON은 실패한 일괄 처리 통합 이벤트의 경우 웹 후크에 전송되는 알림 페이로드의 예입니다.
 
@@ -73,7 +73,7 @@ Adobe Experience Platform에 데이터를 수집하는 프로세스는 여러 �
 
 ## 다음 단계
 
-프로젝트에 [!DNL Platform] 알림을 등록하면 [!UICONTROL 프로젝트 개요]에서 받은 이벤트를 볼 수 있습니다. 이벤트를 추적하는 방법에 대한 자세한 지침은 [추적 Adobe I/O 이벤트](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md)의 안내서를 참조하십시오.
+프로젝트에 [!DNL Platform] 알림을 등록하면 [!UICONTROL Project overview]에서 받은 이벤트를 볼 수 있습니다. 이벤트를 추적하는 방법에 대한 자세한 지침은 [추적 Adobe I/O 이벤트](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md)의 안내서를 참조하십시오.
 
 ## 부록
 
