@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;PQL;프로필 쿼리 언어
 solution: Experience Platform
 title: PQL(프로파일 쿼리 언어) 개요
-topic: developer guide
+topic-legacy: developer guide
 description: 이 안내서에서는 서식 지침을 다루는 PQL에 대한 일반적인 개요와 PQL 표현식 예를 제공합니다.
+exl-id: 4f7ab50e-89a3-42db-b74a-c6f2d86c9bcb
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '715'
 ht-degree: 2%
 
 ---
-
 
 # [!DNL Profile Query Language] (PQL) 개요
 
@@ -65,7 +65,7 @@ PQL은 다음과 같은 문자 유형을 지원합니다.
 | 부울 | true 또는 false인 데이터 유형입니다. | `true`, `false` |
 | 정수 | 정수를 나타내는 데이터 유형입니다. 양수, 음수 또는 0일 수 있습니다. | `-201`,  `0`  `412` |
 | 이중 | 실수를 나타내는 데이터 유형입니다. 양수, 음수 또는 0일 수 있습니다. | `-51.24`,  `3.14`  `0.6942058` |
-| 날짜 | 연도, 월 및 일을 정수 매개 변수로 기준으로 날짜를 만드는 데 사용할 수 있는 데이터 유형입니다. 이 형식은 `date(year, month, day)`로 지정됩니다. | `date(2020, 3, 14)` |
+| Date | 연도, 월 및 일을 정수 매개 변수로 기준으로 날짜를 만드는 데 사용할 수 있는 데이터 유형입니다. 이 형식은 `date(year, month, day)`로 지정됩니다. | `date(2020, 3, 14)` |
 | 배열 | 다른 리터럴 값의 그룹으로 구성되는 데이터 유형입니다. 여러 값을 구분하기 위해 대괄호를 그룹화하고 쉼표를 사용합니다.<br> **참고: 배열** 내의 항목의 속성에 직접 액세스할 수는 없습니다. 따라서 배열 내에서 속성에 액세스해야 하는 경우 지원되는 메서드는 `select X from array where X.item = ...`입니다. <br> PQL은 프로필 `xEvent` 에 연결된 경험 이벤트 배열을 참조하기 위해 단어를 예약합니다. | `[1, 4, 7]`,  `["US", "CA"]` |
 | 상대 시간 참조 | 타임스탬프 및 시간 간격 참조를 구성하는 데 사용할 수 있는 예약된 단어 <ul><li>이제, 오늘, 어제, 내일</li><li>마지막, 다음</li><li>이전, 이후,</li><li>밀리초, 초, 분, 시간, 일, 주, 월, 연도, 년, 10년, 세기/세기, 밀레니엄/밀레니아</li></ul> | `X.timestamp occurs before today`,  `X.timestamp occurs last month`  `X.timestamp occurs <= 3 days before now` |
 
