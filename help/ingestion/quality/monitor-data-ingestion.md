@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;모니터링;모니터;데이터 흐름;모니터 통합;데이터 통합;데이터 통합;보기 레코드;보기 배치
 solution: Experience Platform
 title: 데이터 수집 모니터링
-topic: overview
+topic-legacy: overview
 description: 이 사용자 안내서는 Adobe Experience Platform 사용자 인터페이스 내에서 데이터를 모니터링하는 방법에 대한 단계를 제공합니다. 이 가이드를 사용하려면 Adobe ID을 보유하고 Adobe Experience Platform에 액세스해야 합니다.
+exl-id: 85711a06-2756-46f9-83ba-1568310c9f73
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '573'
+source-wordcount: '564'
 ht-degree: 0%
 
 ---
-
 
 # 데이터 수집 모니터링
 
@@ -21,11 +21,11 @@ ht-degree: 0%
 
 ## 스트리밍 엔드 투 엔드 데이터 통합 모니터링
 
-[Experience Platform UI](https://platform.adobe.com)에서 왼쪽 탐색 메뉴에서 **[!UICONTROL 모니터링]**&#x200B;을 클릭한 다음 **[!UICONTROL 스트리밍 종단간]**&#x200B;을 클릭합니다.
+[Experience Platform UI](https://platform.adobe.com)에서 왼쪽 탐색 메뉴에서 **[!UICONTROL Monitoring]**&#x200B;을 클릭한 다음 **[!UICONTROL Streaming end-to-end]**&#x200B;을 클릭합니다.
 
 ![](../images/quality/monitor-data-flows/click-streaming-end-to-end.png)
 
-**[!UICONTROL 종단간 스트리밍]** 모니터링 페이지가 나타납니다. 이 작업 공간은 [!DNL Platform]이(가) 수신한 스트리밍 이벤트 수, [[!DNL Real-time Customer Profile]](../../profile/home.md)에서 성공적으로 처리된 스트리밍 이벤트 수와 수신 데이터의 세부 목록을 표시하는 그래프 그래프를 제공합니다.
+**[!UICONTROL Streaming end-to-end]** 모니터링 페이지가 나타납니다. 이 작업 공간은 [!DNL Platform]이(가) 수신한 스트리밍 이벤트 수, [[!DNL Real-time Customer Profile]](../../profile/home.md)에서 성공적으로 처리된 스트리밍 이벤트 수와 수신 데이터의 세부 목록을 표시하는 그래프 그래프를 제공합니다.
 
 ![](../images/quality/monitor-data-flows/list-streams.png)
 
@@ -61,11 +61,11 @@ ht-degree: 0%
 
 ## 일괄적으로 엔드 투 엔드 데이터 통합 모니터링
 
-왼쪽 탐색 메뉴에서 [[!DNL Experience Platform UI]](https://platform.adobe.com)Monitoring ]**을 클릭합니다.**[!UICONTROL 
+[[!DNL Experience Platform UI]](https://platform.adobe.com)에서 왼쪽 탐색 메뉴에서 **[!UICONTROL Monitoring]**&#x200B;를 클릭합니다.
 
 ![](../images/quality/monitor-data-flows/click-monitoring.png)
 
-이전에 인제스트한 일괄 처리 목록을 표시하는 **[!UICONTROL 일괄 처리 종료]** 모니터링 페이지가 나타납니다. 해당 레코드에 대한 자세한 정보를 보려면 배치를 클릭하면 됩니다.
+이전에 인제스트한 일괄 처리 목록을 표시하는 **[!UICONTROL Batch end-to-end]** 모니터링 페이지가 나타납니다. 해당 레코드에 대한 자세한 정보를 보려면 배치를 클릭하면 됩니다.
 
 ![](../images/quality/monitor-data-flows/list-batches.png)
 
