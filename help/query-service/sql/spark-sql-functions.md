@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;쿼리 서비스;Spark sql;spark sql;spark sql functions;functions;
 solution: Experience Platform
 title: 쿼리 서비스의 Spark SQL 함수
-topic: spark sql functions
+topic-legacy: spark sql functions
 description: 이 설명서에는 SQL 기능을 확장하는 Spark SQL 함수에 대한 정보가 포함되어 있습니다.
+exl-id: 59e6d82b-3317-456d-8c56-3efd5978433a
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '3893'
 ht-degree: 1%
 
 ---
-
 
 # [!DNL Spark] SQL 함수
 
