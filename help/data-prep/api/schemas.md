@@ -2,12 +2,12 @@
 keywords: Experience Platform;홈;인기 항목;데이터 준비;api 안내서;스키마;home;popular topics;data prepare;api guide;schemas;
 solution: Experience Platform
 title: 스키마 API 끝점
-topic: schemas
+topic-legacy: schemas
 description: 'Adobe Experience Platform API의 ''/schemas'' 끝점을 사용하여 프로그래밍 방식으로 Mapper에서 사용할 스키마를 검색, 생성 및 업데이트할 수 있습니다. '
 translation-type: tm+mt
-source-git-commit: 435d27f7187074c78209948c0e57b610b63d2055
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '614'
+source-wordcount: '613'
 ht-degree: 3%
 
 ---
