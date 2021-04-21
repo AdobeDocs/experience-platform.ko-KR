@@ -2,17 +2,17 @@
 keywords: Experience Platform;홈;인기 항목;세그먼트;세그먼트;세그먼트 만들기;세그먼트 만들기;세그먼트 만들기;세그멘테이션 서비스
 solution: Experience Platform
 title: 세그멘테이션 서비스 API를 사용하여 세그먼트 만들기
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Adobe Experience Platform 세그멘테이션 서비스 API를 사용하여 세그먼트 정의를 개발, 테스트, 미리 보기 및 저장하는 방법을 알아보려면 이 자습서를 따르십시오.
+exl-id: 78684ae0-3721-4736-99f1-a7d1660dc849
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '924'
 ht-degree: 0%
 
 ---
-
 
 # 세그멘테이션 서비스 API를 사용하여 세그먼트 만들기
 
