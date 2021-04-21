@@ -2,21 +2,21 @@
 keywords: Experience Platform;홈;인기 항목
 solution: Experience Platform
 title: 데이터 통합 자습서
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: 데이터 통합에는 소스 커넥터를 사용한 일괄 처리, 스트리밍 통합 및 수집이 포함됩니다.
+exl-id: 51627acf-e90b-4911-aa54-4a59f3b6a8f9
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '497'
-ht-degree: 0%
+ht-degree: 4%
 
 ---
 
-
 # 데이터를 [!DNL Experience Platform]에 인제스트
 
-Adobe Experience Platform은 마케터가 고객의 행동을 더 잘 이해할 수 있도록 다양한 소스의 데이터를 통합합니다. Adobe [!DNL Experience Platform Data Ingestion]은 [!DNL Platform]이(가) 이러한 소스의 데이터를 수집하는 여러 메서드와 다운스트림 [!DNL Platform services]에서 사용하기 위해 Data Lake 내에서 데이터가 지속되는 방식을 나타냅니다. [!DNL Data Ingestion] 소스 커넥터를 사용한 일괄 통합, 스트리밍 통합 및 섭취 포함 자세한 내용을 보려면 [데이터 통합 개요](../ingestion/home.md)를 읽거나 [소스 설명서](../sources/home.md)로 직접 이동하십시오.
+Adobe Experience Platform은 마케터가 고객의 행동을 더 잘 이해할 수 있도록 여러 소스의 데이터를 함께 가져옵니다. Adobe [!DNL Experience Platform Data Ingestion]은 [!DNL Platform]이(가) 이러한 소스의 데이터를 수집하는 여러 메서드와 다운스트림 [!DNL Platform services]에서 사용하기 위해 Data Lake 내에서 데이터가 지속되는 방식을 나타냅니다. [!DNL Data Ingestion] 소스 커넥터를 사용한 일괄 통합, 스트리밍 통합 및 섭취 포함 자세한 내용을 보려면 [데이터 통합 개요](../ingestion/home.md)를 읽거나 [소스 설명서](../sources/home.md)로 직접 이동하십시오.
 
 ## UI 및 API에서 소스 연결 만들기
 
@@ -45,6 +45,3 @@ CSV 데이터를 Adobe Experience Platform으로 인제스트하려면 데이터
 ## 하나의 HTTP 요청으로 여러 메시지 스트리밍
 
 Adobe Experience Platform으로 데이터를 스트리밍할 때 많은 HTTP 호출을 하는 것은 비용이 많이 들 수 있습니다. 예를 들어 1KB 페이로드로 200개의 HTTP 요청을 만드는 대신 200KB의 단일 페이로드를 사용하여 1KB의 200개 메시지를 포함하는 1개의 HTTP 요청을 만드는 것이 훨씬 효율적입니다. 올바르게 사용할 경우 단일 요청 내에서 여러 메시지를 그룹화하는 것은 [!DNL Experience Platform]으로 전송되는 데이터를 최적화하는 좋은 방법입니다. 스트리밍 통합 기능을 사용하여 단일 HTTP 요청 내에서 여러 메시지를 [!DNL Experience Platform]으로 보내는 방법에 대해 알려면 [여러 메시지 전송 자습서](../ingestion/tutorials/streaming-multiple-messages.md)를 따르십시오.
-
-
-
