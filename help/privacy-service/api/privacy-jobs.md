@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목
 solution: Experience Platform
 title: 개인 정보 작업 API 끝점
-topic: developer guide
+topic-legacy: developer guide
 description: Privacy Service API를 사용하여 Experience Cloud 응용 프로그램의 개인 정보 작업을 관리하는 방법에 대해 알아보십시오.
+exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1344'
 ht-degree: 1%
 
 ---
-
 
 # 개인 정보 작업 끝점
 
@@ -56,7 +56,7 @@ curl -X GET \
 
 **응답**
 
-성공적인 응답은 작업 목록을 반환하고 각 작업에는 `jobId`과 같은 세부 정보가 포함됩니다. 이 예에서 응답에는 결과의 세 번째 페이지에서 시작하는 50개 작업 목록이 포함됩니다.
+성공적인 응답은 작업 목록을 반환하고 각 작업에는 `jobId`과 같은 세부 정보가 포함됩니다. 이 예에서 응답에는 결과의 세 번째 페이지에서 시작하는 50개의 작업 목록이 포함됩니다.
 
 ### 다음 페이지 액세스
 
