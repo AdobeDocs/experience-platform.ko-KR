@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목
 solution: Experience Platform
 title: Privacy Service 릴리스 노트
-topic: release notes
+topic-legacy: release notes
 description: Adobe Experience Platform Privacy Service의 최신 릴리스 노트입니다.
+exl-id: 66ee38f1-f0d5-44ff-823d-d1b8a9765c6d
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '553'
 ht-degree: 6%
 
 ---
-
 
 # [!DNL Privacy Service] 릴리스 노트
 
@@ -64,7 +64,7 @@ ht-degree: 6%
 | --- | --- |
 | 요청 지표 대시보드 | [!DNL Privacy Service] UI의 새 지표 대시보드는 제출, 오류 발생 및 완료된 GDPR 요청에 대한 가시성을 제공합니다. |
 | 요청 빌더 | GDPR 요청을 제출하는 기술 사용자와 기술 지식이 없는 사용자를 모두 보유한 서비스 조직에 &quot;요청 만들기&quot; 기능이 UI에 추가되었습니다. JSON 파일 제출 기능은 계속 사용하길 원하는 조직의 경우 [!DNL Privacy Service] UI에서 계속 사용할 수 있습니다. |
-| GDPR 작업 이벤트 알림 | GDPR 작업 상태에 대한 이벤트 알림은 많은 워크플로우에서 중요한 요소입니다. 개별 이메일 알림을 사용하여 이전에 알림을 제공했지만 GDPR 이벤트 알림은 Adobe I/O 이벤트를 활용하는 메시지입니다. 이 알림은 작업 요청 자동화를 위해 구성된 웹 후크에 전송됩니다. [!DNL Privacy Service] UI 사용자는 Adobe I/O GDPR 이벤트를 구독하여 제품 또는 GDPR 작업이 완료되면 업데이트를 받을 수 있습니다. |
+| GDPR 작업 이벤트 알림 | GDPR 작업 상태에 대한 이벤트 알림은 많은 워크플로우에서 중요한 요소입니다. 개별 이메일 알림을 사용하여 이전에 알림을 제공했지만 GDPR 이벤트 알림은 Adobe I/O 이벤트를 활용하는 메시지입니다. 이 알림은 이벤트를 구성된 웹후크로 전송되어 작업 요청 자동화를 촉진합니다. [!DNL Privacy Service] UI 사용자는 Adobe I/O GDPR 이벤트를 구독하여 제품 또는 GDPR 작업이 완료되면 업데이트를 받을 수 있습니다. |
 
 ## 2019년 4월 18일
 
@@ -85,7 +85,7 @@ ht-degree: 6%
 * 베타 고객을 위한 새로운 기능을 지원하도록 UI 업데이트
 * 베타에서 UI 2.0 기능을 지원하기 위한 새로운 지표 API
 
-## 2019년 9월 4일
+## 2019년 4월 9일
 
 ### 개선 사항
 
