@@ -2,17 +2,17 @@
 keywords: Experience Platform;홈;인기 항목;인바운드 데이터 활성화;프로필 채우기;rtcp 채우기;채워진 통합 프로필
 solution: Experience Platform
 title: 인바운드 소스 데이터를 활성화하여 UI에서 고객 프로필 채우기
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: 소스 커넥터의 인바운드 데이터를 사용하여 실시간 고객 프로필 데이터를 풍부하게 만들고 채울 수 있습니다.
+exl-id: ddd3766a-3f55-4bbc-8358-c578eae2c629
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '507'
+source-wordcount: '482'
 ht-degree: 0%
 
 ---
-
 
 # 인바운드 소스 데이터를 활성화하여 고객 프로필 채우기
 
@@ -37,27 +37,27 @@ ht-degree: 0%
 - 스키마에 기본 ID로 정의된 ID 속성이 있습니다.
 - 기본 ID가 대상 속성인 데이터 흐름 내의 매핑이 있습니다.
 
-소스 작업 영역에서 **[!UICONTROL 찾아보기]** 탭을 클릭하여 기본 연결을 나열합니다. 표시된 목록에서 프로필을 채울 데이터 흐름을 포함하는 연결을 찾습니다. 연결 이름을 클릭하여 세부 정보에 액세스합니다.
+소스 작업 영역에서 **[!UICONTROL Browse]** 탭을 클릭하여 기본 연결을 나열합니다. 표시된 목록에서 프로필을 채울 데이터 흐름을 포함하는 연결을 찾습니다. 연결 이름을 클릭하여 세부 정보에 액세스합니다.
 
 ![](../../images/tutorials/dataflow/cloud-storage/batch/browse.png)
 
-연결의 **[!UICONTROL 소스 활동]** 화면이 나타나 연결이 소스 데이터를 수집하는 데이터 집합을 표시합니다. [!DNL Profile]에 대해 활성화할 데이터 세트 이름을 클릭합니다.
+연결의 **[!UICONTROL Source activity]** 화면이 나타나 연결이 소스 데이터를 수집하는 데이터 집합을 표시합니다. [!DNL Profile]에 대해 활성화할 데이터 세트 이름을 클릭합니다.
 
 ![](../../images/tutorials/dataflow/cloud-storage/batch/dataset-dataflow.png)
 
-**[!UICONTROL 데이터 집합 활동]** 화면이 나타납니다. 화면 오른쪽의 **[!UICONTROL 속성]** 열에는 데이터 세트에 대한 세부 정보가 표시되며, **[!UICONTROL 프로필]** 스위치 및 데이터 세트에서 준수하는 스키마에 대한 링크가 포함됩니다. 스키마 이름을 클릭하여 해당 컴포지션을 봅니다.
+**[!UICONTROL Dataset activity]** 화면이 나타납니다. 화면 오른쪽의 **[!UICONTROL Properties]** 열에는 데이터 세트에 대한 세부 정보가 표시되며, 데이터 세트에 적용되는 **[!UICONTROL Profile]** 스위치 및 스키마에 대한 링크가 포함됩니다. 스키마 이름을 클릭하여 해당 컴포지션을 봅니다.
 
 ![](../../images/tutorials/dataflow/cloud-storage/batch/select-dataset-schema.png)
 
-가운데 캔버스에 스키마 구조를 표시하는 **[!UICONTROL 스키마 편집기]**&#x200B;가 나타납니다. 캔버스 내에서 기본 ID로 설정할 필드를 선택합니다. 나타나는 **[!UICONTROL 필드 속성]** 탭에서 **[!UICONTROL ID]** 확인란을 선택한 다음 **[!UICONTROL 기본 ID]**&#x200B;를 선택합니다. 마지막으로 적절한 **[!UICONTROL ID 네임스페이스]**&#x200B;를 선택한 다음 **[!UICONTROL 적용]**&#x200B;을 클릭합니다.
+가운데 캔버스에 스키마 구조를 표시하는 **[!UICONTROL Schema Editor]**&#x200B;이 나타납니다. 캔버스 내에서 기본 ID로 설정할 필드를 선택합니다. 나타나는 **[!UICONTROL Field properties]** 탭에서 **[!UICONTROL Identity]** 확인란을 선택한 다음 **[!UICONTROL Primary identity]** 를 선택합니다. 마지막으로 적절한 **[!UICONTROL Identity namespace]**&#x200B;을 선택한 다음 **[!UICONTROL Apply]**&#x200B;을 클릭합니다.
 
 ![](../../images/tutorials/dataflow/cloud-storage/batch/set-schema-identity.png)
 
-스키마 구조의 최상위 객체를 클릭하면 **[!UICONTROL 스키마 속성]** 열이 나타납니다. **[!UICONTROL 프로필]** 스위치를 전환하여 [!DNL Profile]에 대한 스키마를 활성화합니다. **[!UICONTROL 저장]**&#x200B;을 클릭하여 변경 내용을 완료합니다.
+스키마 구조의 최상위 객체를 클릭하면 **[!UICONTROL Schema properties]** 열이 나타납니다. **[!UICONTROL Profile]** 스위치를 전환하여 [!DNL Profile]에 대한 스키마를 활성화합니다. **[!UICONTROL Save]**&#x200B;을 클릭하여 변경 내용을 완료합니다.
 
 ![](../../images/tutorials/dataflow/cloud-storage/batch/enable-profile.png)
 
-스키마가 [!DNL Profile]에 대해 활성화되어 있으므로 **[!UICONTROL 데이터 세트 활동]** 화면으로 돌아가서 **[!UICONTROL 프로필]** 전환(**[!UICONTROL 속성]** 열 내)을 클릭하여 [!DNL Profile]에 대한 데이터 세트를 활성화합니다.
+스키마가 [!DNL Profile]에 대해 활성화되어 있으므로 **[!UICONTROL Dataset activity]** 화면으로 돌아가 **[!UICONTROL Properties]** 열 내에서 **[!UICONTROL Profile]** 전환을 클릭하여 [!DNL Profile]에 대한 데이터 세트를 활성화합니다.
 
 ![](../../images/tutorials/dataflow/cloud-storage/batch/enable-dataset-profile.png)
 
