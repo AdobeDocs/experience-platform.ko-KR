@@ -2,16 +2,16 @@
 keywords: Experience Platform;개발자 가이드;SDK;데이터 액세스 SDK;데이터 과학 작업 공간;인기 있는 주제
 solution: Experience Platform
 title: Adobe Experience Platform Platform SDK를 사용한 모델 작성
-topic: SDK authoring
+topic-legacy: SDK authoring
 description: 이 자습서에서는 data_access_sdk_python을 Python 및 R의 새로운 Python platform_sdk로 변환하는 방법에 대한 정보를 제공합니다.
+exl-id: 20909cae-5cd2-422b-8dbb-35bc63e69b2a
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '495'
 ht-degree: 5%
 
 ---
-
 
 # Adobe Experience Platform [!DNL Platform] SDK를 사용한 모델 작성
 
