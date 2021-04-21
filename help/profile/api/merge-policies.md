@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform;프로필;실시간 고객 프로필;문제 해결;API
 title: 병합 정책 API 끝점
-topic: guide
+topic-legacy: guide
 type: Documentation
-description: 'Adobe Experience Platform을 사용하면 여러 소스에서 수집한 데이터 조각을 결합하여 개별 고객을 전체적으로 확인할 수 있습니다. 이러한 데이터를 취합할 때 병합 정책은 Platform에서 데이터의 우선 순위를 정하는 방법과 데이터를 결합하여 통합 뷰를 생성하는 데 사용하는 규칙입니다. '
+description: Adobe Experience Platform을 사용하면 여러 소스에서 수집한 데이터 조각을 결합하여 개별 고객을 전체적으로 확인할 수 있습니다. 이러한 데이터를 취합할 때 병합 정책은 Platform에서 데이터의 우선 순위를 정하는 방법과 데이터를 결합하여 통합 뷰를 생성하는 데 사용하는 규칙입니다.
+exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
 translation-type: tm+mt
-source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '2560'
 ht-degree: 1%
 
 ---
-
 
 # 정책 병합 끝점
 
@@ -70,7 +70,7 @@ UI를 사용하여 병합 정책을 사용하려면 [병합 정책 UI 안내서]
 | `imsOrgId` | 이 병합 정책이 속하는 조직 ID |
 | `identityGraph` | [관련 ](#identity-graph) ID를 받을 ID 그래프를 나타내는 ID 그래픽 프로젝트입니다. 모든 관련 ID에 대해 찾은 프로필 조각이 병합됩니다. |
 | `attributeMerge` | [데이터 ](#attribute-merge) 충돌 시 병합 정책이 프로필 속성의 우선 순위를 지정하는 방법을 나타내는 속성 병합 객체입니다. |
-| `schema.name` | [`schema`](#schema) 개체의 일부인 `name` 필드에는 병합 정책이 관련된 XDM 스키마 클래스가 포함되어 있습니다. 스키마 및 클래스에 대한 자세한 내용은 [XDM 설명서](../../xdm/home.md)를 참조하십시오. |
+| `schema.name` | [`schema`](#schema) 개체의 일부, `name` 필드에는 병합 정책이 관련된 XDM 스키마 클래스가 포함되어 있습니다. 스키마 및 클래스에 대한 자세한 내용은 [XDM 설명서](../../xdm/home.md)를 참조하십시오. |
 | `default` | 이 병합 정책이 지정된 스키마의 기본값인지 여부를 나타내는 부울 값입니다. |
 | `version` | [!DNL Platform] 병합 정책의 유지 관리 버전. 이 읽기 전용 값은 병합 정책이 업데이트될 때마다 증가합니다. |
 | `updateEpoch` | 병합 정책의 마지막 업데이트 날짜. |
@@ -777,7 +777,3 @@ UI를 사용하여 사용자 지정 타임스탬프를 사용하려면 [병합 �
   "xdm:lastViewedDate": "2018-01-02T15:52:25+00:00"
  }
 ```
-
-
-
-
