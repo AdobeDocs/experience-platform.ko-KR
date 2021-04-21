@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform;프로필;실시간 고객 프로필;문제 해결;API
 title: 계산된 속성에 대한 샘플 PQL 표현식
-topic: guide
+topic-legacy: guide
 type: Documentation
 description: 계산된 속성은 이벤트 수준 데이터를 프로필 수준 속성으로 집계하는 데 사용되는 함수입니다. 이 함수에는 유효한 PQL(Profile Query Language) 표현식을 사용해야 합니다. 이 안내서에서는 계산된 속성에 가장 일반적으로 사용되는 PQL 표현식의 일부를 설명합니다.
+exl-id: 7c80e2d3-919a-47f9-a59f-833a70f02a8f
 translation-type: tm+mt
-source-git-commit: 92533f732cc14b57d2a0a34ce9afe99554f9af04
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '967'
+source-wordcount: '965'
 ht-degree: 1%
 
 ---
-
 
 # (알파) 계산된 속성에 대한 샘플 PQL 표현식
 
