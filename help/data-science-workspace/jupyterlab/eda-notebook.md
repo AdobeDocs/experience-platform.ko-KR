@@ -2,17 +2,17 @@
 keywords: Experience Platform;JupiterLab;노트북;데이터 과학 작업 공간;인기 있는 주제;데이터 노트북 분석;데이터 데이터 분석;탐색 데이터 분석;데이터 과학
 solution: Experience Platform
 title: 탐구적 데이터 분석(EDA) 노트북
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: 이 안내서는 EDA(Transactional Data Analysis) 노트북을 사용하여 웹 데이터의 패턴을 발견하고 예측 목표를 사용하여 이벤트를 집계하고 집계한 데이터를 정리하며 예측자와 목표 간의 관계를 이해하는 방법에 중점을 둡니다.
+exl-id: 48209326-0a07-4b5c-8b49-a2082a78fa47
 translation-type: tm+mt
-source-git-commit: 1d1a19c75d2972a6fce0d39aa508cca91fb4becd
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '2762'
+source-wordcount: '2760'
 ht-degree: 0%
 
 ---
-
 
 # 예비 데이터 분석(EDA) 노트북을 사용하여 예측 모델을 위한 웹 기반 데이터 탐색
 
@@ -36,7 +36,7 @@ EDA 노트북 예는 웹 기반 데이터를 고려하여 최적화되었으며 
 
 ### 라이브러리 구성
 
-JupiterLab은 여러 라이브러리를 지원합니다. 다음 코드를 복사하여 코드 셀에 실행하여 이 예제에서 사용되는 모든 필수 패키지를 수집 및 설치할 수 있습니다. 이 예제 외부의 추가 또는 대체 패키지를 사용하여 데이터 분석을 수행할 수 있습니다. 지원되는 패키지 목록을 보려면 새 셀에 `!pip list --format=columns`을(를) 복사하여 붙여 넣습니다.
+JupiterLab은 여러 라이브러리를 지원합니다. 다음 코드를 복사하여 코드 셀에서 실행하여 이 예제에서 사용되는 모든 필수 패키지를 수집 및 설치할 수 있습니다. 이 예제 외부의 추가 또는 대체 패키지를 사용하여 데이터 분석을 수행할 수 있습니다. 지원되는 패키지 목록을 보려면 새 셀에 `!pip list --format=columns`을(를) 복사하여 붙여 넣습니다.
 
 ```python
 !pip install colorama
