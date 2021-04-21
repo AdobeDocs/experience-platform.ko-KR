@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform;프로필;실시간 고객 프로필;문제 해결;API
 title: 실시간 고객 프로필 문제 해결 안내서
-topic: guide
+topic-legacy: guide
 type: Documentation
 description: 이 문서에서는 실시간 고객 프로필과 관련하여 자주 묻는 질문에 대한 답변과 Adobe Experience Platform을 사용하여 프로필 데이터를 작업할 때 발생하는 오류에 대한 문제 해결 안내서를 제공합니다.
+exl-id: 0b340025-093b-41e4-8053-969a8e80e889
 translation-type: tm+mt
-source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1007'
+source-wordcount: '1003'
 ht-degree: 0%
 
 ---
-
 
 # 실시간 고객 프로필 문제 해결 가이드
 
@@ -53,9 +53,9 @@ Adobe Experience Platform 세그멘테이션 서비스 API를 사용하여 세�
 
 #### UI 사용
 
-Experience Platform UI에서 **[!UICONTROL 프로필]** 작업 영역의 **[!UICONTROL 찾아보기]** 탭을 사용하여 총 프로필 수를 보고 ID 값으로 개별 프로필을 검색할 수 있습니다. 자세한 내용은 [프로필 사용 안내서](./ui/user-guide.md)를 참조하십시오.
+Experience Platform UI에서 **[!UICONTROL Profiles]** 작업 영역의 **[!UICONTROL Browse]** 탭을 사용하여 총 프로필 수를 보고 ID 값으로 개별 프로필을 검색할 수 있습니다. 자세한 내용은 [프로필 사용 안내서](./ui/user-guide.md)를 참조하십시오.
 
-**[!UICONTROL 세그먼트]** 작업 영역의 **[!UICONTROL 찾아보기]** 탭 아래에 세그먼트 목록을 볼 수도 있습니다. 세그먼트를 선택하면 해당 세그먼트에 자격이 있는 프로필 샘플이 표시됩니다. 그런 다음 이러한 프로파일 중 하나를 선택하여 해당 프로파일을 세부적으로 볼 수 있습니다. 자세한 내용은 [세그멘테이션 UI 개요](../segmentation/ui/overview.md)를 참조하십시오.
+**[!UICONTROL Segments]** 작업 영역의 **[!UICONTROL Browse]** 탭 아래에 세그먼트 목록을 볼 수도 있습니다. 세그먼트를 선택하면 해당 세그먼트에 자격이 있는 프로필 샘플이 표시됩니다. 그런 다음 이러한 프로파일 중 하나를 선택하여 해당 프로파일을 세부적으로 볼 수 있습니다. 자세한 내용은 [세그멘테이션 UI 개요](../segmentation/ui/overview.md)를 참조하십시오.
 
 ## 오류 코드
 
@@ -151,7 +151,7 @@ Experience Platform UI에서 **[!UICONTROL 프로필]** 작업 영역의 **[!UIC
 
 대부분의 프로필 끝점은 다음 예외를 제외하고 자신의 콘텐츠 형식 헤더에 대해 &quot;application/json&quot;을 허용합니다.
 
-| 끝점 | 컨텐츠 유형 |
+| 끝점 | Content-Type |
 | --- | --- |
 | `/config/projections` | application/vnd.adobe.platform.projectionConfig+json;version=1 |
 | `/config/destinations` | application/vnd.adobe.platform.projectionDestination+json;version=1 |
