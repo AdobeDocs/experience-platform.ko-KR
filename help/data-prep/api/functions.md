@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;데이터 준비;api 안내서;스키마;home;popular topics;data prepare;api guide;schemas;
 solution: Experience Platform
 title: 스키마 API 끝점
-topic: schemas
-description: 'Adobe Experience Platform API의 ''/functions'' 끝점을 사용하여 매핑 표현식과 사용 가능한 매핑 집합 함수를 확인할 수 있습니다. '
+topic-legacy: schemas
+description: Adobe Experience Platform API의 '/functions' 끝점을 사용하여 매핑 표현식과 사용 가능한 매핑 집합 함수를 확인할 수 있습니다.
+exl-id: dc24bfb4-2d96-4757-a610-0c2ee960d41d
 translation-type: tm+mt
-source-git-commit: 60c80a73deb8c77f19d5963cc3319d46143fb4c3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '211'
+source-wordcount: '210'
 ht-degree: 2%
 
 ---
-
 
 # 함수 끝점
 
