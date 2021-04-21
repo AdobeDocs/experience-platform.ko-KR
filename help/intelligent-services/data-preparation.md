@@ -2,14 +2,14 @@
 keywords: Experience Platform;홈;지능형 서비스;인기 항목;지능형 서비스;지능형 서비스;Intelligent service;home;intelligent Services;popular topics;intelligent service;Intelligent service
 solution: Experience Platform, Intelligent Services
 title: 지능형 서비스에서 사용할 데이터 준비
-topic: Intelligent Services
+topic-legacy: Intelligent Services
 description: Intelligent Services가 마케팅 이벤트 데이터에서 통찰력을 얻으려면 데이터가 세밀하게 농축되어 표준 구조로 유지되어야 합니다. 지능형 서비스는 이를 위해 XDM(Experience Data Model) 스키마를 사용합니다.
 exl-id: 17bd7cc0-da86-4600-8290-cd07bdd5d262
 translation-type: tm+mt
-source-git-commit: 867c97d58f3496cb9e9e437712f81bd8929ba99f
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '2387'
-ht-degree: 1%
+source-wordcount: '2385'
+ht-degree: 0%
 
 ---
 
