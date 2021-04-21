@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;카탈로그;데이터 보호;암호화 데이터 레이크
 solution: Experience Platform
 title: Adobe Experience Platform의 데이터 보호
-topic: data protection
+topic-legacy: data protection
 description: Data Lake에 지속되는 모든 데이터는 조직의 고유한 격리된 Microsoft Azure Data Lake 저장소 계정에서 암호화, 저장 및 관리됩니다. 다음 프로세스 흐름 다이어그램은 데이터를 Experience Platform에 의해 수집, 처리, 암호화 및 지속되는 방법을 보여줍니다.
+exl-id: 184b2b2d-8cd7-4299-83f8-f992f585c336
 translation-type: tm+mt
-source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '187'
 ht-degree: 0%
 
 ---
-
 
 # Adobe Experience Platform의 데이터 보호
 
