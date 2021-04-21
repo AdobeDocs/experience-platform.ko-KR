@@ -2,17 +2,17 @@
 keywords: Experience Platform;소매 영업 레서피;데이터 과학 작업 공간;인기 항목;레서피
 solution: Experience Platform
 title: 소매 판매 스키마 및 데이터 세트 만들기
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: 이 자습서에서는 다른 모든 Adobe Experience Platform Data Science Workspace 튜토리얼에 필요한 사전 요구 사항과 에셋을 제공합니다. 완료되면 소매 판매 스키마 및 데이터 세트를 Experience Platform에 있는 사용자 및 IMS 조직 구성원이 사용할 수 있습니다.
+exl-id: 1b868c8c-7c92-4f99-8486-54fd7aa1af48
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '554'
 ht-degree: 0%
 
 ---
-
 
 # 소매 판매 스키마 및 데이터 세트 만들기
 
@@ -23,7 +23,7 @@ ht-degree: 0%
 이 자습서를 시작하기 전에 다음 사전 요구 사항을 충족해야 합니다.
 - [!DNL Adobe Experience Platform]에 액세스합니다. [!DNL Experience Platform]에서 IMS 조직에 액세스할 수 없는 경우 계속하기 전에 시스템 관리자에게 문의하십시오.
 - [!DNL Experience Platform] API 호출을 수행하는 인증. 이 자습서를 성공적으로 완료하려면 [Adobe Experience Platform API 인증 및 액세스](https://www.adobe.com/go/platform-api-authentication-en) 튜토리얼을 완료하십시오.
-   - 인증:`{ACCESS_TOKEN}`
+   - Authorization: `{ACCESS_TOKEN}`
    - x-api-key:`{API_KEY}`
    - x-gw-ims-org-id:`{IMS_ORG}`
    - 클라이언트 암호:`{CLIENT_SECRET}`
