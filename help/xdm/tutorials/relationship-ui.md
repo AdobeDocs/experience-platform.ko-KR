@@ -3,16 +3,16 @@ keywords: Experience Platform;홈;인기 항목;UI;XDM;XDM 시스템;경험 데�
 solution: Experience Platform
 title: 스키마 편집기를 사용하여 두 스키마 간의 관계 정의
 description: 이 문서에서는 Experience Platform 사용자 인터페이스에서 스키마 편집기를 사용하여 두 스키마 간의 관계를 정의하는 자습서를 제공합니다.
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
+exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '945'
-ht-degree: 0%
+source-wordcount: '915'
+ht-degree: 1%
 
 ---
-
 
 # [!DNL Schema Editor]을(를) 사용하여 두 스키마 간의 관계를 정의합니다.
 
@@ -44,7 +44,7 @@ ht-degree: 0%
 
 ### [!DNL Loyalty Members] 스키마
 
-소스 스키마 &quot;[!DNL Loyalty Members]&quot;은 [!DNL XDM Individual Profile] 클래스를 기반으로 하며, [UI](create-schema-ui.md)에서 스키마를 만들기 위해 자습서에서 생성된 스키마입니다. 여기에는 몇 개의 충성도별 필드가 포함된 `_tenantId` 네임스페이스 아래에 `loyalty` 개체가 포함됩니다. 이러한 필드 중 하나인 `loyaltyId`은 [!UICONTROL 이메일] 네임스페이스 아래의 스키마의 기본 ID로 사용됩니다. **[!UICONTROL 스키마 속성]**&#x200B;에서 보듯이 이 스키마는 [!DNL Real-time Customer Profile]에서 사용하도록 설정되었습니다.
+소스 스키마 &quot;[!DNL Loyalty Members]&quot;은 [!DNL XDM Individual Profile] 클래스를 기반으로 하며, [UI](create-schema-ui.md)에서 스키마를 만들기 위해 자습서에서 생성된 스키마입니다. 여기에는 몇 개의 충성도별 필드가 포함된 `_tenantId` 네임스페이스 아래에 `loyalty` 개체가 포함됩니다. 이러한 필드 중 하나인 `loyaltyId` 은 [!UICONTROL Email] 네임스페이스 아래의 스키마의 기본 ID로 사용됩니다. **[!UICONTROL Schema Properties]** 아래에서 보듯이 이 스키마는 [!DNL Real-time Customer Profile]에서 사용할 수 있게 설정되었습니다.
 
 ![](../images/tutorials/relationship/loyalty-members.png)
 
@@ -62,27 +62,27 @@ ht-degree: 0%
 
 두 스키마 간의 관계를 정의하려면 소스 스키마에 대상 스키마에 대한 참조로 사용할 전용 필드가 있어야 합니다. 새 믹싱을 만들어 이 필드를 소스 스키마에 추가할 수 있습니다.
 
-**[!UICONTROL 혼합]** 섹션에서 **[!UICONTROL 추가]**&#x200B;를 선택하여 시작합니다.
+**[!UICONTROL Mixins]** 섹션에서 **[!UICONTROL Add]**&#x200B;을 선택하여 시작합니다.
 
 ![](../images/tutorials/relationship/loyalty-add-mixin.png)
 
-[!UICONTROL 혼합 추가] 대화 상자가 나타납니다. 여기서 **[!UICONTROL 새 믹신 만들기]**&#x200B;를 선택합니다. 나타나는 텍스트 필드에 새 혼합에 대한 표시 이름과 설명을 입력합니다. 완료되면 **[!UICONTROL 혼합 추가]**&#x200B;를 선택합니다.
+[!UICONTROL Add Mixin] 대화 상자가 나타납니다. 여기서 **[!UICONTROL Create new mixin]**&#x200B;을 선택합니다. 나타나는 텍스트 필드에 새 혼합에 대한 표시 이름과 설명을 입력합니다. 완료되면 **[!UICONTROL Add mixin]**&#x200B;을 선택합니다.
 
 <img src="../images/tutorials/relationship/loyalty-create-new-mixin.png" width="750"><br>
 
-&quot;[!DNL Favorite Hotel]&quot;이(가) **[!UICONTROL Mixin]** 섹션에 나타나고 캔버스가 다시 나타납니다. 혼합 이름을 선택한 다음 루트 수준 `Loyalty Members` 필드 옆에 있는 **[!UICONTROL 필드 추가]**&#x200B;를 선택합니다.
+캔버스가 다시 나타나고 &quot;[!DNL Favorite Hotel]&quot;이(가) **[!UICONTROL Mixins]** 섹션에 표시됩니다. 혼합 이름을 선택한 다음 루트 수준 `Loyalty Members` 필드 옆에 있는 **[!UICONTROL Add field]**&#x200B;을 선택합니다.
 
 ![](../images/tutorials/relationship/loyalty-add-field.png)
 
-새 필드가 캔버스에 `_tenantId` 네임스페이스 아래에 나타납니다. **[!UICONTROL 필드 속성]**&#x200B;에서 필드에 대한 필드 이름과 표시 이름을 입력하고 해당 유형을 &quot;[!UICONTROL String]&quot;으로 설정합니다.
+새 필드가 캔버스에 `_tenantId` 네임스페이스 아래에 나타납니다. **[!UICONTROL Field properties]** 아래에서 필드에 대한 필드 이름과 표시 이름을 입력하고 해당 유형을 &quot;[!UICONTROL String]&quot;로 설정합니다.
 
 ![](../images/tutorials/relationship/relationship-field-details.png)
 
-완료되면 **[!UICONTROL 적용]**&#x200B;을 선택합니다.
+완료되면 **[!UICONTROL Apply]**&#x200B;을 선택합니다.
 
 ![](../images/tutorials/relationship/relationship-field-apply.png)
 
-업데이트된 `favoriteHotel` 필드가 캔버스에 표시됩니다. **[!UICONTROL 저장]**&#x200B;을 선택하여 스키마에 대한 변경 내용을 완료합니다.
+업데이트된 `favoriteHotel` 필드가 캔버스에 표시됩니다. **[!UICONTROL Save]**&#x200B;을 선택하여 스키마에 대한 변경 내용을 완료합니다.
 
 ![](../images/tutorials/relationship/relationship-field-save.png)
 
@@ -90,15 +90,15 @@ ht-degree: 0%
 
 소스 스키마에 전용 참조 필드가 정의된 경우 관계 필드로 지정할 수 있습니다.
 
-캔버스에서 `favoriteHotel` 필드를 선택한 다음 **[!UICONTROL 관계]** 확인란이 나타날 때까지 **[!UICONTROL 필드 속성]** 아래로 스크롤합니다. 관계 필드를 구성하는 데 필요한 매개 변수를 표시하려면 이 확인란을 선택합니다.
+캔버스에서 `favoriteHotel` 필드를 선택한 다음 **[!UICONTROL Relationship]** 확인란이 나타날 때까지 **[!UICONTROL Field properties]** 아래로 스크롤합니다. 관계 필드를 구성하는 데 필요한 매개 변수를 표시하려면 이 확인란을 선택합니다.
 
 ![](../images/tutorials/relationship/relationship-checkbox.png)
 
-**[!UICONTROL 참조 스키마]**&#x200B;에 대한 드롭다운을 선택하고 관계의 대상 스키마( 이 예제의 &quot;[!DNL Hotels]&quot;)를 선택합니다. 대상 스키마가 [!DNL Profile]에 대해 활성화되어 있으면 **[!UICONTROL 참조 ID 네임스페이스]** 필드가 대상 스키마의 기본 ID의 네임스페이스로 자동으로 설정됩니다. 스키마에 기본 ID가 정의되지 않은 경우 드롭다운 메뉴에서 사용할 네임스페이스를 수동으로 선택해야 합니다. 완료되면 **[!UICONTROL 적용]**&#x200B;을 선택합니다.
+**[!UICONTROL Reference schema]**&#x200B;에 대한 드롭다운을 선택하고 관계의 대상 스키마( 이 예제의 &quot;[!DNL Hotels]&quot;)를 선택합니다. 대상 스키마가 [!DNL Profile]에 대해 활성화된 경우 **[!UICONTROL Reference identity namespace]** 필드는 대상 스키마의 기본 ID의 네임스페이스로 자동으로 설정됩니다. 스키마에 기본 ID가 정의되지 않은 경우 드롭다운 메뉴에서 사용할 네임스페이스를 수동으로 선택해야 합니다. 완료되면 **[!UICONTROL Apply]**&#x200B;을 선택합니다.
 
 ![](../images/tutorials/relationship/reference-schema-id-namespace.png)
 
-이제 대상 스키마의 이름 및 참조 ID 네임스페이스를 표시하여 캔버스에서 `favoriteHotel` 필드가 관계로 강조 표시됩니다. **[!UICONTROL 저장]**&#x200B;을 선택하여 변경 내용을 저장하고 워크플로우를 완료합니다.
+이제 대상 스키마의 이름 및 참조 ID 네임스페이스를 표시하여 캔버스에서 `favoriteHotel` 필드가 관계로 강조 표시됩니다. **[!UICONTROL Save]**&#x200B;을 선택하여 변경 내용을 저장하고 워크플로우를 완료합니다.
 
 ![](../images/tutorials/relationship/relationship-save.png)
 
