@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;네임스페이스;네임스페이스;네임스페이스;네임스페이스;네임스페이스;네임스페이스;ID 네임스페이스;ID 네임스페이스;ID 네임스페이스;ID;ID
 solution: Experience Platform
 title: ID 서비스 API에서 사용자 정의 네임스페이스 만들기
-topic: API guide
+topic-legacy: API guide
 description: ID 네임스페이스 API를 사용하여 조직에서만 사용할 수 있는 사용자 지정 ID 네임스페이스를 만들 수 있습니다.
+exl-id: 6015a225-4508-49cc-9dda-fb9f73a8746c
 translation-type: tm+mt
-source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '120'
 ht-degree: 3%
 
 ---
-
 
 # ID 서비스 API에서 사용자 정의 네임스페이스 만들기
 
