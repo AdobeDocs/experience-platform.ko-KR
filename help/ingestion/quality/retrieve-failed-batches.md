@@ -2,17 +2,17 @@
 keywords: Experience Platform;홈;인기 항목;실패한 일괄 처리 가져오기;일괄 처리;일괄 처리 통합;실패한 일괄 처리;실패한 일괄 처리 가져오기;실패한 일괄 처리 가져오기;실패한 일괄 처리 다운로드;다운로드 실패 일괄 처리;다운로드 실패 일괄 처리
 solution: Experience Platform
 title: 데이터 액세스 API를 사용하여 실패한 배치 검색
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: 이 자습서에서는 데이터 통합 API를 사용하여 실패한 일괄 처리에 대한 정보를 검색하는 절차를 다룹니다.
+exl-id: 5fb9f28d-091e-4124-8d8e-b8a675938d3a
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '655'
+source-wordcount: '653'
 ht-degree: 2%
 
 ---
-
 
 # 데이터 액세스 API를 사용하여 실패한 배치 검색
 
