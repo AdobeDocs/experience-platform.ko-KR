@@ -1,12 +1,13 @@
 ---
 keywords: Experience Platform;데이터 준비;데이터 준비 api;문제 해결;API
 title: 데이터 준비 API 시작하기
-topic: guide
+topic-legacy: guide
 description: Data Prep API 끝점을 사용하여 매퍼에서 사용할 기본 CRUD 작업을 수행하려면 알아야 하는 주요 개념 및 기본 기능에 대해 알아봅니다.
+exl-id: 027e6fbe-9a0d-420b-8d67-659ca7f5ec22
 translation-type: tm+mt
-source-git-commit: a3ea7a6b68c81ee91a338735009ae0fa63884ded
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '187'
+source-wordcount: '186'
 ht-degree: 1%
 
 ---
