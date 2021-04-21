@@ -1,16 +1,16 @@
 ---
 keywords: Experience Platform;데이터 준비;데이터 준비 api;문제 해결;API
 title: 데이터 준비 API 개요
-topic: guide
+topic-legacy: guide
 description: 데이터 준비 API를 사용하면 매핑 세트와 함수를 프로그래밍 방식으로 만들 수 있으므로 소스 스키마와 대상 스키마 간에 데이터를 변환할 수 있습니다.
+exl-id: 740944ae-93ba-4099-a65e-18d6b384c307
 translation-type: tm+mt
-source-git-commit: cae6dc80d0394db51dc97478b92459be64c64498
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '259'
+source-wordcount: '258'
 ht-degree: 1%
 
 ---
-
 
 # 매핑 서비스 API 안내서
 
