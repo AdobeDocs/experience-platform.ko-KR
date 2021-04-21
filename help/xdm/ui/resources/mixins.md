@@ -3,15 +3,15 @@ keywords: Experience Platform;홈;인기 항목;api;XDM;XDM 시스템;경험 데
 solution: Experience Platform
 title: UI에서 혼합 만들기 및 편집
 description: Experience Platform 사용자 인터페이스에서 믹스를 만들고 편집하는 방법을 알아봅니다.
-topic: user guide
+topic-legacy: user guide
+exl-id: 240b857d-75ad-42fd-9249-050cbc5306a9
 translation-type: tm+mt
-source-git-commit: aa2088d30716f56ac2909214badbb39c0ae97855
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '704'
+source-wordcount: '689'
 ht-degree: 0%
 
 ---
-
 
 # UI에서 믹싱 만들기 및 편집
 
@@ -31,11 +31,11 @@ Adobe Experience Platform은 다양한 마케팅 사례를 포함하는 다양�
 
 새 믹싱을 만들려면 먼저 믹싱을 추가할 스키마를 선택해야 합니다. [새 스키마 만들기](./schemas.md#create) 또는 [편집할 기존 스키마를 선택하도록 선택할 수 있습니다](./schemas.md#edit).
 
-[!DNL Schema Editor]에 스키마가 열리면 왼쪽 레일의 [!UICONTROL Mixin] 섹션 옆에 있는 **[!UICONTROL 추가]**&#x200B;를 선택합니다.
+[!DNL Schema Editor]에 스키마가 열리면 왼쪽 레일의 [!UICONTROL Mixins] 섹션 옆에 있는 **[!UICONTROL Add]**&#x200B;을 선택합니다.
 
 ![](../../images/ui/resources/mixins/add-mixin-button.png)
 
-조직에 대한 기존 믹싱 목록이 표시된 대화 상자가 나타납니다. 대화 상자의 위쪽 근처에 있는 **[!UICONTROL 새 혼합 만들기]**&#x200B;를 선택합니다. 여기에서 혼합에 대해 **[!UICONTROL 표시 이름]** 및 **[!UICONTROL 설명]**&#x200B;을 제공할 수 있습니다. 완료되면 **[!UICONTROL 혼합 추가]**&#x200B;를 선택합니다.
+조직에 대한 기존 믹싱 목록이 표시된 대화 상자가 나타납니다. 대화 상자의 맨 위에서 **[!UICONTROL Create new mixin]**&#x200B;을 선택합니다. 여기에서 혼합에 대해 **[!UICONTROL Display name]** 및 **[!UICONTROL Description]**&#x200B;을 제공할 수 있습니다. 완료되면 **[!UICONTROL Add mixin]**&#x200B;을 선택합니다.
 
 ![](../../images/ui/resources/mixins/create-mixin.png)
 
@@ -59,9 +59,9 @@ Adobe Experience Platform은 다양한 마케팅 사례를 포함하는 다양�
 
 ![](../../images/ui/resources/mixins/add-field-button.png)
 
-**[!UICONTROL 새 필드]**&#x200B;가 캔버스에 표시되고 오른쪽 레일이 업데이트되어 필드의 속성을 구성하는 컨트롤이 표시됩니다. 믹싱을 구성하고 필드에 추가하는 방법에 대한 특정 단계는 [UI](../fields/overview.md#define)에서 필드 정의 가이드를 참조하십시오.
+**[!UICONTROL New field]**&#x200B;이 캔버스에 표시되고 필드의 속성을 구성하기 위한 컨트롤을 표시하는 오른쪽 레일이 업데이트됩니다. 믹싱을 구성하고 필드에 추가하는 방법에 대한 특정 단계는 [UI](../fields/overview.md#define)에서 필드 정의 가이드를 참조하십시오.
 
-혼합에 필요한 만큼 필드를 계속 추가합니다. 완료되면 **[!UICONTROL 저장]**&#x200B;을 선택하여 스키마와 믹싱을 모두 저장합니다.
+혼합에 필요한 만큼 필드를 계속 추가합니다. 완료되면 **[!UICONTROL Save]**&#x200B;을 선택하여 스키마와 믹싱을 모두 저장합니다.
 
 ![](../../images/ui/resources/mixins/complete-mixin.png)
 
@@ -69,6 +69,6 @@ Adobe Experience Platform은 다양한 마케팅 사례를 포함하는 다양�
 
 ## 다음 단계
 
-이 안내서에서는 플랫폼 UI를 사용하여 믹스를 만들고 편집하는 방법에 대해 설명합니다. [!UICONTROL 스키마] 작업 영역의 기능에 대한 자세한 내용은 [[!UICONTROL 스키마] 작업 영역 개요](../overview.md)를 참조하십시오.
+이 안내서에서는 플랫폼 UI를 사용하여 믹스를 만들고 편집하는 방법에 대해 설명합니다. [!UICONTROL Schemas] 작업 영역의 기능에 대한 자세한 내용은 [[!UICONTROL Schemas] 작업 영역 개요](../overview.md)를 참조하십시오.
 
 [!DNL Schema Registry] API를 사용하여 믹스를 관리하는 방법에 대한 자세한 내용은 [믹싱 끝점 안내서](../../api/mixins.md)를 참조하십시오.
