@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;세그멘테이션;세그멘테이션 서비스;pql;PQL;프로필 쿼리 언어;논리 한정 기호;논리 한정 기호
 solution: Experience Platform
 title: PQL 논리 수량
-topic: developer guide
+topic-legacy: developer guide
 description: PQL(프로필 쿼리 언어)에서 배열이 있는 조건을 표시하는 데 논리 정량자를 사용할 수 있습니다.
+exl-id: 8b1c9560-02e2-46e0-9646-c64dd4a15df1
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '219'
 ht-degree: 4%
 
 ---
-
 
 # 논리적 한정 함수
 
