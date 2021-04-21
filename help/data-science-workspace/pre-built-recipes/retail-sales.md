@@ -2,16 +2,16 @@
 keywords: Experience Platform;소매 영업 레서피;데이터 과학 작업 공간;인기 항목;레서피;사전 작성 레서피;retail sales recipe;Data Science Workspace;popular topics;recipe
 solution: Experience Platform
 title: 소매 판매 레서피
-topic: overview
+topic-legacy: overview
 description: 소매 판매 레서피를 사용하면 특정 기간 동안 초기 설정된 모든 스토어에 대한 판매 예측을 예측할 수 있습니다. 정확한 예측 모델을 사용하면 소매업체는 수요와 가격 정책 간의 관계를 파악할 수 있고 매출과 매출을 극대화하기 위해 최적화된 가격 결정을 내릴 수 있습니다.
+exl-id: ff01fcd1-fca6-4957-8470-a974fd1520aa
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '585'
 ht-degree: 2%
 
 ---
-
 
 # 소매 영업 방법
 
