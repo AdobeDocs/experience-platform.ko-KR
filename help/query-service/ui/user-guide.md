@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;쿼리 편집기;쿼리 서비스;쿼리 서비스;쿼리 서비스;;home;popular topics;query editor;Query service;query service;
 solution: Experience Platform
 title: 쿼리 편집기 UI 안내서
-topic: query editor
+topic-legacy: query editor
 description: 쿼리 편집기는 Experience Platform 사용자 인터페이스 내에서 고객 경험 데이터에 대한 쿼리를 작성하고 유효성을 확인하고 실행할 수 있는 Adobe Experience Platform 쿼리 서비스에서 제공하는 대화형 도구입니다. 쿼리 편집기는 분석 및 데이터 탐색을 위한 쿼리 개발을 지원하며, Experience Platform에 데이터 세트를 채우는 비대화형 쿼리뿐만 아니라 개발 목적으로 대화형 쿼리를 실행할 수 있습니다.
+exl-id: d7732244-0372-467d-84e2-5308f42c5d51
 translation-type: tm+mt
-source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1082'
+source-wordcount: '1055'
 ht-degree: 1%
 
 ---
-
 
 # [!DNL Query Editor] UI 가이드
 
@@ -39,13 +39,13 @@ ht-degree: 1%
 
 ### [!DNL Query Editor]에 액세스 
 
-[!DNL Experience Platform] UI에서 왼쪽 탐색 메뉴에서 **[!UICONTROL 쿼리]**&#x200B;를 클릭하여 [!DNL Query Service] 작업 영역을 엽니다. 그런 다음 화면 오른쪽 상단에 있는 **[!UICONTROL 쿼리 만들기]**&#x200B;를 클릭하여 쿼리 작성을 시작합니다. 이 링크는 [!DNL Query Service] 작업 영역의 모든 페이지에서 사용할 수 있습니다.
+[!DNL Experience Platform] UI에서 왼쪽 탐색 메뉴에서 **[!UICONTROL Queries]**&#x200B;을 클릭하여 [!DNL Query Service] 작업 영역을 엽니다. 그런 다음 화면 오른쪽 상단에 있는 **[!UICONTROL Create Query]**&#x200B;을 클릭하여 쿼리 작성을 시작합니다. 이 링크는 [!DNL Query Service] 작업 영역의 모든 페이지에서 사용할 수 있습니다.
 
 ![이미지](../images/queries/query-editor-overview/create-query.png)
 
 ### 쿼리 쓰기
 
-[!UICONTROL 쿼리 ] 편집기는 쿼리를 가능한 한 쉽게 작성하기 위해 구성됩니다. 아래 스크린샷은 **재생** 버튼 및 SQL 입력 필드가 강조 표시된 상태에서 편집기가 UI에 어떻게 표시되는지를 보여줍니다.
+[!UICONTROL Query Editor] 은 가능한 쉽게 쿼리를 작성하기 위해 구성됩니다. 아래 스크린샷은 **재생** 버튼 및 SQL 입력 필드가 강조 표시된 상태에서 편집기가 UI에 어떻게 표시되는지를 보여줍니다.
 
 ![이미지](../images/queries/query-editor-overview/editor.png)
 
@@ -77,19 +77,19 @@ ht-degree: 1%
 
 ### 쿼리 세부 사항
 
-[!DNL Query Editor]에서 쿼리를 보는 동안 **[!UICONTROL 쿼리 세부 정보]** 패널은 선택한 쿼리를 관리하는 도구를 제공합니다.
+[!DNL Query Editor]에서 쿼리를 보는 동안 **[!UICONTROL Query Details]** 패널은 선택한 쿼리를 관리하는 도구를 제공합니다.
 
 ![이미지](../images/queries/query-editor-overview/query-details.png)
 
-이 패널에서는 UI에서 직접 출력 데이터 세트를 생성하고, 표시된 쿼리를 삭제하거나 이름을 지정할 수 있으며, **[!UICONTROL SQL 쿼리]** 탭에서 복사 가능한 형식으로 SQL 코드를 볼 수 있습니다. 또한 이 패널에는 마지막으로 쿼리를 수정한 시간과 쿼리를 수정한 사람(해당하는 경우)과 같은 유용한 메타데이터도 표시됩니다. 데이터 세트를 생성하려면 **[!UICONTROL 출력 데이터 세트]**&#x200B;를 클릭합니다. **[!UICONTROL 출력 데이터 세트]** 대화 상자가 나타납니다. 이름과 설명을 입력한 다음 **[!UICONTROL 쿼리 실행]**&#x200B;을 클릭합니다. 새 데이터 집합은 [!DNL Platform]의 [!DNL Query Service] 사용자 인터페이스의 **[!UICONTROL 데이터 집합]** 탭에 표시됩니다.
+이 패널에서는 UI에서 직접 출력 데이터 세트를 생성하고, 표시된 쿼리를 삭제하거나 이름을 지정하고, **[!UICONTROL SQL Query]** 탭의 복사 쉬운 형식으로 SQL 코드를 볼 수 있습니다. 또한 이 패널에는 마지막으로 쿼리를 수정한 시간과 쿼리를 수정한 사람(해당하는 경우)과 같은 유용한 메타데이터도 표시됩니다. 데이터 세트를 생성하려면 **[!UICONTROL Output Dataset]**&#x200B;을 클릭합니다. **[!UICONTROL Output Dataset]** 대화 상자가 나타납니다. 이름과 설명을 입력한 다음 **[!UICONTROL Run Query]**&#x200B;을 클릭합니다. 새 데이터 집합은 [!DNL Platform]의 [!DNL Query Service] 사용자 인터페이스의 **[!UICONTROL Datasets]** 탭에 표시됩니다.
 
 ### 쿼리 저장
 
-[!DNL Query Editor] 쿼리를 저장하고 나중에 작업할 수 있도록 해주는 저장 함수를 제공합니다. 쿼리를 저장하려면 [!DNL Query Editor]의 오른쪽 위 모서리에 있는 **[!UICONTROL 저장]**&#x200B;을 클릭합니다. 쿼리를 저장하려면 먼저 **[!UICONTROL 쿼리 세부 사항]** 패널을 사용하여 쿼리에 사용할 이름을 제공해야 합니다.
+[!DNL Query Editor] 쿼리를 저장하고 나중에 작업할 수 있도록 해주는 저장 함수를 제공합니다. 쿼리를 저장하려면 [!DNL Query Editor] 오른쪽 위 모서리에서 **[!UICONTROL Save]**&#x200B;을 클릭합니다. 쿼리를 저장하려면 먼저 **[!UICONTROL Query Details]** 패널을 사용하여 쿼리에 사용할 이름을 제공해야 합니다.
 
 ### 이전 쿼리를 찾는 방법
 
-[!DNL Query Editor]에서 실행된 모든 쿼리는 로그 테이블에서 캡처됩니다. **[!UICONTROL 로그]** 탭에서 검색 기능을 사용하여 쿼리 실행을 찾을 수 있습니다. 저장된 쿼리는 **[!UICONTROL 찾아보기]** 탭에 나열됩니다.
+[!DNL Query Editor]에서 실행된 모든 쿼리는 로그 테이블에서 캡처됩니다. **[!UICONTROL Log]** 탭에서 검색 기능을 사용하여 쿼리 실행을 찾을 수 있습니다. 저장된 쿼리는 **[!UICONTROL Browse]** 탭에 나열됩니다.
 
 자세한 내용은 [쿼리 서비스 UI 개요][query-service-ui]를 참조하십시오.
 
@@ -99,7 +99,7 @@ ht-degree: 1%
 
 ## 쿼리 편집기를 사용하여 쿼리 실행
 
-[!DNL Query Editor]에서 쿼리를 실행하려면 편집기에서 SQL을 입력하거나 **[!UICONTROL 로그]** 또는 **[!UICONTROL 찾아보기]** 탭에서 이전 쿼리를 로드한 다음 **재생**&#x200B;을 클릭합니다. 쿼리 실행 상태는 아래의 **[!UICONTROL 콘솔]** 탭에 표시되며 출력 데이터는 **[!UICONTROL 결과]** 탭에 표시됩니다.
+[!DNL Query Editor]에서 쿼리를 실행하려면 편집기에서 SQL을 입력하거나 **[!UICONTROL Log]** 또는 **[!UICONTROL Browse]** 탭에서 이전 쿼리를 로드한 다음 **재생**&#x200B;을 클릭합니다. 쿼리 실행 상태는 아래의 **[!UICONTROL Console]** 탭에 표시되며 출력 데이터는 **[!UICONTROL Results]** 탭에 표시됩니다.
 
 ### 콘솔
 
@@ -113,7 +113,7 @@ ht-degree: 1%
 
 ### 쿼리 결과
 
-쿼리가 완료되면 결과는 **[!UICONTROL 콘솔]** 탭 옆의 **[!UICONTROL 결과]** 탭에 표시됩니다. 이 보기는 최대 100개의 행을 표시하는 쿼리의 테이블 형식 출력을 보여줍니다. 이 보기에서는 쿼리가 예상 출력을 생성하는지 확인할 수 있습니다. 쿼리를 사용하여 데이터 세트를 생성하려면 반환된 행의 제한을 제거하고 `CREATE TABLE tablename AS SELECT`으로 쿼리를 실행하여 출력이 있는 데이터 세트를 생성합니다. [!DNL Query Editor]의 쿼리 결과에서 데이터 세트를 생성하는 방법에 대한 지침은 [데이터 집합 생성 자습서][query-service-create-datasets]를 참조하십시오.
+쿼리가 완료되면 결과는 **[!UICONTROL Console]** 탭 옆의 **[!UICONTROL Results]** 탭에 표시됩니다. 이 보기는 최대 100개의 행을 표시하는 쿼리의 테이블 형식 출력을 보여줍니다. 이 보기에서는 쿼리가 예상 출력을 생성하는지 확인할 수 있습니다. 쿼리를 사용하여 데이터 세트를 생성하려면 반환된 행의 제한을 제거하고 `CREATE TABLE tablename AS SELECT`으로 쿼리를 실행하여 출력이 있는 데이터 세트를 생성합니다. [!DNL Query Editor]의 쿼리 결과에서 데이터 세트를 생성하는 방법에 대한 지침은 [데이터 집합 생성 자습서][query-service-create-datasets]를 참조하십시오.
 
 ![이미지](../images/queries/query-editor-overview/query-results.png)
 
