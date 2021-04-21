@@ -2,17 +2,17 @@
 keywords: Experience Platform;홈;인기 항목;Apache Spark;apache spark;Azure HDInsights
 solution: Experience Platform
 title: Flow Service API를 사용하여 Azure HDInsights 소스 연결에서 Apache Spark 만들기
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Flow Service API를 사용하여 Azure HDInsights의 Apache Spark를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
+exl-id: 1f7ca86e-32f4-45f7-92c2-f87c5c0c4ea4
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '591'
 ht-degree: 2%
 
 ---
-
 
 # [!DNL Flow Service] API를 사용하여 [!DNL Azure] HDInsights 소스 연결에 [!DNL Apache Spark]을 만듭니다.
 
