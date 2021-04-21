@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;액세스 제어 권한;액세스 제어 리소스 유형;액세스 제어 API
 solution: Experience Platform
 title: 참조 API 끝점
-topic: developer guide
+topic-legacy: developer guide
 description: Adobe Experience Platform의 액세스 제어를 사용하면 Adobe Admin Console을 사용하여 다양한 플랫폼 기능에 대한 역할 및 권한을 관리할 수 있습니다. 액세스 제어 API에서 /acl/reference 끝점에 GET 요청을 하여 모든 권한 및 리소스 유형의 이름을 나열할 수 있습니다. 그런 다음 API 호출에서 이러한 이름을 사용하여 현재 사용자에 대한 효과적인 정책을 볼 수 있습니다.
+exl-id: 18d84d54-9258-4451-9aa8-7c647b45a8da
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '195'
 ht-degree: 1%
 
 ---
-
 
 # 참조 끝점
 
