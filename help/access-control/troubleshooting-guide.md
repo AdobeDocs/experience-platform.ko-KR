@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;문제 해결;액세스 제어
 solution: Experience Platform
 title: 액세스 제어 문제 해결 안내서
-topic: troubleshooting guide
+topic-legacy: troubleshooting guide
 description: 이 문서에서는 Adobe Experience Platform의 액세스 제어에 대해 자주 묻는 질문에 대한 답변을 제공합니다.
+exl-id: c299c0c4-dbee-4e6d-8af4-2446444bed69
 translation-type: tm+mt
-source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '321'
+source-wordcount: '316'
 ht-degree: 0%
 
 ---
-
 
 # 액세스 제어 문제 해결 가이드
 
@@ -27,7 +27,7 @@ IMS 조직의 시스템 관리자, 제품 관리자 또는 제품 프로필 관�
 
 ## [!DNL Platform] UI의 일부 기능을 사용할 수 없습니다. 이러한 기능에 대한 액세스는 권한을 통해 어떻게 제어됩니까?
 
-특정 [!DNL Platform] 기능에 대한 액세스 권한이 없는 경우 해당 기능은 [!DNL Experience Platform] UI에서 숨겨지거나 흐리게 표시됩니다. 예를 들어 &quot;[!UICONTROL 프로필]&quot; 탭을 보려면 &quot;[!UICONTROL 프로필 보기]&quot; 또는 &quot;[!UICONTROL 프로필 관리]&quot; 권한이 있어야 합니다. [!DNL Experience Platform] 기능에 대한 추가 권한이 필요한 경우 관리자에게 문의하십시오.
+특정 [!DNL Platform] 기능에 대한 액세스 권한이 없는 경우 해당 기능은 [!DNL Experience Platform] UI에서 숨겨지거나 흐리게 표시됩니다. 예를 들어 &quot;[!UICONTROL Profiles]&quot; 탭을 보려면 &quot;[!UICONTROL View Profiles]&quot; 또는 &quot;[!UICONTROL Manage Profiles]&quot; 권한이 있어야 합니다. [!DNL Experience Platform] 기능에 대한 추가 권한이 필요한 경우 관리자에게 문의하십시오.
 
 ## 권한은 어떻게 그룹화되며 사용 권한을 포함하는 그룹은 무엇입니까?
 
