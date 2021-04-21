@@ -2,17 +2,17 @@
 keywords: Experience Platform;홈;인기 항목;대상 자습서
 solution: Experience Platform
 title: 대상을 만들고 API를 사용하여 데이터 활성화
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: 다양한 유형의 대상을 만들고 데이터를 활성화하는 방법에 대해 학습합니다.
+exl-id: f9c421e5-7e07-4587-8cf7-dc14b716865c
 translation-type: tm+mt
-source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '77'
 ht-degree: 0%
 
 ---
-
 
 # 대상을 만들고 API를 사용하여 데이터 활성화
 
