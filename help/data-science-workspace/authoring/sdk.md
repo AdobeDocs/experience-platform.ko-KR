@@ -2,16 +2,16 @@
 keywords: Experience Platform;개발자 가이드;SDK;모델 작성;데이터 과학 작업 공간;인기 있는 주제;테스트
 solution: Experience Platform
 title: 모델 작성 SDK
-topic: Overview
+topic-legacy: Overview
 description: 모델 제작 SDK를 사용하면 Adobe Experience Platform Data Science Workspace에서 사용할 수 있는 맞춤형 머신 러닝 레서피 및 기능 파이프라인을 개발할 수 있으며 PySpark 및 Spark(Scala)에서 구현 가능한 템플릿을 제공할 수 있습니다.
+exl-id: c7577f93-a64f-49b7-a76d-71f21d619052
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '977'
 ht-degree: 1%
 
 ---
-
 
 # 모델 작성 SDK
 
