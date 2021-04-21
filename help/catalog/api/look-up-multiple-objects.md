@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;카탈로그;다중 개체 조회;api
 solution: Experience Platform
 title: 여러 카탈로그 개체 찾기
-topic: developer guide
+topic-legacy: developer guide
 description: 개체당 하나의 요청을 하는 대신 몇 개의 특정 개체를 보려는 경우 카탈로그는 동일한 유형의 여러 개체를 요청하는 간단한 단축키를 제공합니다. 단일 GET 요청을 사용하여 쉼표로 구분된 ID 목록을 포함하여 여러 특정 개체를 반환할 수 있습니다.
+exl-id: b2329b32-6139-4557-aff3-a584e03b09f3
 translation-type: tm+mt
-source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '237'
 ht-degree: 1%
 
 ---
-
 
 # 여러 카탈로그 개체 찾기
 
