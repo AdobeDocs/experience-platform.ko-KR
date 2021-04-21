@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;스키마;스키마;믹신;믹싱;데이터 유형;데이터 유형;데이터 유형;데이터 유형;데이터 유형;스키마 디자인;데이터 유형;데이터 유형;데이터 유형;데이터 유형;스키마;스키마;스키마 디자인;맵;맵;맵;스키마;home;publicin;mixin;mixin;data types;data;
 solution: Experience Platform
 title: XDM 필드 유형 제한
-topic: overview
+topic-legacy: overview
 description: 매핑할 수 있는 다른 직렬화 형식 및 API에서 고유한 필드 유형을 정의하는 방법을 포함하여, XDM(경험 데이터 모델)의 필드 유형 제약 조건에 대한 참조입니다.
+exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
 translation-type: tm+mt
-source-git-commit: 456e595e66436c35c7d081ddf4699263e9c87234
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1055'
+source-wordcount: '1054'
 ht-degree: 1%
 
 ---
-
 
 # XDM 필드 유형 제약 조건
 
