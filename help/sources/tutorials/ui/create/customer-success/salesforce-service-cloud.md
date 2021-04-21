@@ -2,17 +2,17 @@
 keywords: Experience Platform;홈;인기 항목;Salesforce 서비스 클라우드;salesforce 서비스 클라우드
 solution: Experience Platform
 title: UI에서 Salesforce 서비스 클라우드 소스 연결 만들기
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Adobe Experience Platform UI를 사용하여 Salesforce Service Cloud 소스 연결을 만드는 방법을 알아봅니다.
+exl-id: 38480a29-7852-46c6-bcea-5dc6bffdbd15
 translation-type: tm+mt
-source-git-commit: a0b016e8adc519bc79701f9fd850b6ddf7d46127
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '464'
+source-wordcount: '462'
 ht-degree: 1%
 
 ---
-
 
 # UI에 [!DNL Salesforce Service Cloud] 소스 연결 만들기
 
