@@ -2,24 +2,24 @@
 keywords: Experience Platform;홈;인기 항목;스키마;스키마;XDM;개별 프로필;필드;스키마;개인 세부 사항;스키마 디자인;혼합;Mixin
 solution: Experience Platform
 title: 개인 연락처 세부 정보 혼합
-topic: overview
+topic-legacy: overview
 description: 이 문서에서는 개인 연락처 세부 사항 믹싱에 대한 개요를 제공합니다.
+exl-id: a78d9aee-ecf6-45a9-b270-cdad5b800a86
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '152'
+source-wordcount: '146'
 ht-degree: 6%
 
 ---
 
-
-# [!UICONTROL 개인 연락처 ] 세부 정보
+# [!UICONTROL Personal Contact Details] 믹싱
 
 >[!NOTE]
 >
 >여러 혼합물의 이름이 변경되었습니다. 자세한 내용은 [혼합 이름 업데이트](../name-updates.md)에 있는 문서를 참조하십시오.
 
-[!UICONTROL 개인 연락처 ] 세부 사항은 개인 [[!DNL XDM Individual Profile] ](../../classes/individual-profile.md) 의 연락처 정보를 설명하는 클래스에 대한 표준 혼합입니다.
+[!UICONTROL Personal Contact Details] 는 개인 연락처 정보를 설명하는  [[!DNL XDM Individual Profile] ](../../classes/individual-profile.md) 클래스의 표준 혼합입니다.
 
 <img src="../../images/mixins/profile-personal-details.png" width="700" /><br />
 
