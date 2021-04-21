@@ -2,12 +2,12 @@
 keywords: Experience Platform;홈;인기 항목;Marketo 소스 커넥터;네임스페이스;스키마
 solution: Experience Platform
 title: 'Marketo 네임스페이스 '
-topic: 개요
+topic-legacy: overview
 description: 이 문서에서는 Marketo Engage 소스 커넥터를 만들 때 필요한 사용자 정의 네임스페이스에 대한 개요를 제공합니다.
 translation-type: tm+mt
-source-git-commit: 2563b413ec35cb4c5f05a54bce6f7271917e51f3
+source-git-commit: f12baaa9d4b37f1101792a4ae479b5a62893eb68
 workflow-type: tm+mt
-source-wordcount: '1177'
+source-wordcount: '1176'
 ht-degree: 6%
 
 ---
