@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목
 solution: Experience Platform
 title: Adobe Experience Platform 용어집
-topic: getting started
+topic-legacy: getting started
 description: Experience Platform의 중요한 용어에 대한 용어집입니다.
+exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 translation-type: tm+mt
-source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '7139'
+source-wordcount: '7131'
 ht-degree: 1%
 
 ---
-
 
 # Adobe Experience Platform 용어 {#adobe-experience-platform-glossary}
 
@@ -57,7 +57,7 @@ ht-degree: 1%
 
 **속성**:속성은 프로파일을 나타내는 지정된 특성입니다.
 
-**속성 병합**:실시간 고객 프로필 API를 사용하여 병합 정책을 정의할 때 개체는  `attributeMerge` 데이터 충돌 시 병합 정책이 프로필 속성의 우선 순위를 지정하는 방법을 나타냅니다. 플랫폼 UI에서 병합 정책을 정의할 때 [!UICONTROL 병합 메서드]을 선택하는 것과 같습니다.
+**속성 병합**:실시간 고객 프로필 API를 사용하여 병합 정책을 정의할 때 개체는  `attributeMerge` 데이터 충돌 시 병합 정책이 프로필 속성의 우선 순위를 지정하는 방법을 나타냅니다. 플랫폼 UI에서 병합 정책을 정의할 때 [!UICONTROL Merge method]을 선택하는 것과 같습니다.
 
 **Attribution AI**: [!DNL Attribution AI] 은 고객 라이프사이클에서 알고리즘 방식의 멀티채널 기여도 분석 기능을 제공하는 Adobe Sensei 기반의 지능형 서비스입니다.
 
@@ -263,7 +263,7 @@ ht-degree: 1%
 
 **ID(&quot;I&quot;) 레이블**:ID(&quot;I&quot;) 데이터 사용 레이블은 특정 개인을 식별하거나 연락할 수 있는 데이터를 분류하는 데 사용됩니다.
 
-**ID 그래프**:ID 그래프는 개별 고객에 대해 존재하는 연결된 ID 간의 관계 맵입니다. 각 ID 그래프는 고객 활동을 통해 거의 실시간으로 업데이트됩니다. 데이터의 ID 관계의 공통 구조는 각 개별 ID 그래프에 대한 구조 청사진 역할을 하는 [!UICONTROL Private Graph]로 표시됩니다.
+**ID 그래프**:ID 그래프는 개별 고객에 대해 존재하는 연결된 ID 간의 관계 맵입니다. 각 ID 그래프는 고객 활동을 통해 거의 실시간으로 업데이트됩니다. 데이터에서 ID 관계의 공통 구조는 각 개별 ID 그래프에 대한 구조 청사진 역할을 하는 [!UICONTROL Private Graph]로 표시됩니다.
 
 **ID 네임스페이스**:ID 네임스페이스는 이메일 주소 또는 CRM ID와 같은 식별자 컨텍스트를 정의합니다.
 
@@ -349,7 +349,7 @@ ht-degree: 1%
 
 ## P
 
-**부분 통합**:부분 섭취 기능을 사용하면 지정된 오류 임계값 내에서 배치 데이터의 유효한 레코드를 수집할 수 있습니다. 실패한 레코드에 대한 오류 진단은 [!UICONTROL 모니터링] 또는 [!UICONTROL 소스] 데이터 흐름 실행 개요에서 다운로드하거나 액세스할 수 있습니다.
+**부분 통합**:부분 섭취 기능을 사용하면 지정된 오류 임계값 내에서 배치 데이터의 유효한 레코드를 수집할 수 있습니다. 실패한 레코드에 대한 오류 진단은 [!UICONTROL Monitoring] 또는 [!UICONTROL Sources] 데이터 흐름 실행 개요에서 다운로드하거나 액세스할 수 있습니다.
 
 **쪽모이 세공 파일**:Portable 파일은 복잡한 중첩 데이터 구조를 갖는 열 저장소 파일 형식입니다. 스키마 데이터 세트를 채우기 위해 데이터를 추가하는 데 쪽모이 세공 마룻바닥으로 필요합니다.
 
