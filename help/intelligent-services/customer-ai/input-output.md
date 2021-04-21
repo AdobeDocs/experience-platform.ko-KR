@@ -2,13 +2,13 @@
 keywords: Experience Platform;시작하기;고객 아이디;인기 항목;고객 아이에이 입력;고객 아이에이 출력
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: 고객 AI의 입력 및 출력
-topic: Getting started
+topic-legacy: Getting started
 description: 고객 AI에서 활용하는 필수 이벤트, 입력 및 결과물에 대한 자세한 내용을 살펴보십시오.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
 translation-type: tm+mt
-source-git-commit: 2ef2a6431865e8ffdc2abd6cf527249e8b5ca4d0
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '2867'
+source-wordcount: '2865'
 ht-degree: 1%
 
 ---
