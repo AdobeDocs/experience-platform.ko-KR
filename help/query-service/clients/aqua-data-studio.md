@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;쿼리 서비스;쿼리 서비스;아쿠아 데이터 스튜디오;쿼리 서비스에 연결;;home;popular topics service;query service;
 solution: Experience Platform
 title: Aqua Data Studio를 쿼리 서비스에 연결
-topic: connect
+topic-legacy: connect
 description: 이 문서에서는 Aqua Data Studio와 Adobe Experience Platform 쿼리 서비스를 연결하는 단계를 안내합니다.
+exl-id: 4770e221-48a7-45d8-80a4-60b5cbc0ec33
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '300'
+source-wordcount: '298'
 ht-degree: 1%
 
 ---
-
 
 # 쿼리 서비스에 [!DNL Aqua Data Studio] 연결
 
@@ -34,7 +34,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->로그인 자격 증명, 호스트, 포트 및 데이터베이스 이름을 찾는 방법에 대한 자세한 내용은 플랫폼](https://platform.adobe.com/query/configuration)의 [자격 증명 페이지를 참조하십시오. 자격 증명을 찾으려면 [!DNL Platform]에 로그인한 다음 **[!UICONTROL 쿼리]**&#x200B;를 선택하고 **[!UICONTROL 자격 증명]**&#x200B;을 선택합니다.
+>로그인 자격 증명, 호스트, 포트 및 데이터베이스 이름을 찾는 방법에 대한 자세한 내용은 플랫폼](https://platform.adobe.com/query/configuration)의 [자격 증명 페이지를 참조하십시오. 자격 증명을 찾으려면 [!DNL Platform]에 로그인한 다음 **[!UICONTROL Queries]** 뒤에 **[!UICONTROL Credentials]**&#x200B;를 선택합니다.
 
 ![](../images/clients/aqua-data-studio/register-server-general-tab.png)
 
