@@ -2,16 +2,16 @@
 keywords: Experience Platform;제품 구입 레서피;데이터 과학 작업 공간;인기 있는 주제;레서피;사전 작성 레서피;;product purchase recipe;Data Science Workspace;popular topics;recipes;pre build recipe
 solution: Experience Platform
 title: 제품 구매 예측 레서피
-topic: overview
+topic-legacy: overview
 description: '제품 구매 예측 레서피를 사용하면 특정 유형의 고객 구매 이벤트(예: 제품 구매)를 예측할 수 있습니다.'
+exl-id: 66a45629-33a3-4081-8dbd-b864983b8f57
 translation-type: tm+mt
-source-git-commit: f4095a90ff70e8d054bae4f3b0f884552ffd30df
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '397'
 ht-degree: 6%
 
 ---
-
 
 # 제품 구매 예측 레서피
 
@@ -25,7 +25,7 @@ ht-degree: 6%
 
 ## 이 레시피는 누구를 위해 만들어졌는가?
 
-브랜드는 고객에게 효과적이고 타깃팅된 프로모션을 통해 제품 라인의 분기별 매출을 높이고자 합니다. 그러나 모든 고객이 동일하지는 않으며 여러분은 돈의 가치를 원한다. 누구를 타깃팅하니? 프로모션 관련 정보를 파악하지 않고 응답하는 고객 중 가장 많은 고객은 누구입니까? 각 고객에 대한 프로모션을 어떻게 맞춤화할 수 있습니까? 어떤 채널을 이용해야 하며 언제 프로모션을 보내야 합니까?
+브랜드는 고객에게 효과적이고 타깃팅된 프로모션을 통해 제품 라인의 분기별 매출을 높이고자 합니다. 그러나 모든 고객들은 다 똑같지 않고 여러분은 돈의 가치를 원한다. 누구를 타깃팅하니? 프로모션 관련 정보를 파악하지 않고 응답하는 고객 중 가장 많은 고객은 누구입니까? 각 고객에 대한 프로모션을 어떻게 맞춤화할 수 있습니까? 어떤 채널을 이용해야 하며 언제 프로모션을 보내야 합니까?
 
 ## 이 조리법은 어떤 역할을 합니까?
 
