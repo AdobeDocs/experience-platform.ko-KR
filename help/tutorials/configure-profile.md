@@ -2,17 +2,17 @@
 keywords: Experience Platform;홈;인기 항목;실시간 고객 프로필;ID 서비스
 solution: Experience Platform
 title: 실시간 고객 프로필 자습서
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: 이 문서에서는 관련 단계에 대해 간략히 설명하고 각 개별 워크플로우를 완료하기 위한 자습서에 대한 링크를 제공합니다.
+exl-id: cda6e7a7-9498-454c-94df-c6271a5a4fd4
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '796'
+source-wordcount: '793'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL Real-time Customer Profile] 구성
 
@@ -25,7 +25,7 @@ ht-degree: 0%
 실시간 고객 프로파일은 온라인, 오프라인, CRM 및 제3자 데이터를 비롯한 여러 채널의 데이터를 취합하여 각 개별 고객을 전체적으로 파악할 수 있도록 지원합니다.
 
 **이 가이드는 다음과 같은 도움을 줍니다.**
-- [!UICONTROL 프로필] UI 및 사용 가능한 기능을 이해합니다.
+- [!UICONTROL Profiles] UI 및 사용 가능한 기능에 대해 이해합니다.
 - 프로필 데이터를 보고 관리합니다.
 
 자세한 내용은 [실시간 고객 프로필 사용 안내서](../profile/ui/user-guide.md)를 참조하십시오.
