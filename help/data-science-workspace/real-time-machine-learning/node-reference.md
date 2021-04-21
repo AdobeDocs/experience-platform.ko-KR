@@ -2,16 +2,16 @@
 keywords: Experience Platform;개발자 가이드;데이터 과학 작업 공간;인기 항목;실시간 기계 학습;노드 참조;
 solution: Experience Platform
 title: 실시간 기계 학습 노드 참조
-topic: Nodes reference
+topic-legacy: Nodes reference
 description: 노드는 그래프가 형성되는 기본 단위입니다. 각 노드는 특정 작업을 수행하고 ML 파이프라인을 나타내는 그래프를 형성하는 링크를 사용하여 함께 연결할 수 있습니다. 노드에서 수행하는 작업은 데이터 또는 스키마 변형 또는 기계 학습 유추와 같은 입력 데이터에 대한 작업을 나타냅니다. 이 노드는 변형되거나 유추된 값을 다음 노드로 출력합니다.
+exl-id: 67fe26b5-ce03-4a9a-ad45-783b2acf8d92
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '678'
 ht-degree: 1%
 
 ---
-
 
 # 실시간 기계 학습 노드 참조(알파)
 
