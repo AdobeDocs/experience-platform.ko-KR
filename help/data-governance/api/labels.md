@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목
 solution: Experience Platform
 title: 레이블 API 끝점
-topic: developer guide
+topic-legacy: developer guide
 description: 정책 서비스 API를 사용하여 Experience Platform에서 데이터 사용 레이블을 관리하는 방법을 알아봅니다.
+exl-id: 9a01f65c-01f1-4298-bdcf-b7e00ccfe9f2
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '510'
 ht-degree: 3%
 
 ---
-
 
 # 레이블 끝점
 
