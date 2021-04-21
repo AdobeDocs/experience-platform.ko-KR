@@ -2,17 +2,17 @@
 keywords: Experience Platform;홈;인기 항목;스트리밍 연결;스트리밍 연결 만들기;ui 안내서;자습서;스트리밍 연결 만들기;스트리밍 통합;통합;;home;popular topics;streaming connection;tutorial;streaming connection;streaming ingestion;
 solution: Experience Platform
 title: UI를 사용하여 스트리밍 연결 만들기
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: 이 UI 가이드는 Adobe Experience Platform을 사용하여 스트리밍 연결을 만드는 데 도움이 됩니다.
+exl-id: af485890-61b1-4c83-8af9-a55e8ed6d69a
 translation-type: tm+mt
-source-git-commit: 17eb7b9cb715d7d8d0d7bce930ddec43259149cc
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '134'
 ht-degree: 0%
 
 ---
-
 
 # UI를 사용하여 스트리밍 연결 만들기
 
