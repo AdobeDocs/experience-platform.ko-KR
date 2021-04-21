@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;날짜 범위
 solution: Experience Platform
 title: 통찰력 통찰력 API 안내서
-topic: developer guide
+topic-legacy: developer guide
 description: Observability Insights는 개발자가 Adobe Experience Platform에서 주요 관측 가능성 지표를 노출할 수 있는 RESTful API입니다. 이러한 지표는 플랫폼 사용 통계, 플랫폼 서비스에 대한 상태 점검, 이전 동향 및 다양한 플랫폼 기능에 대한 성능 지표에 대한 통찰력을 제공합니다.
+exl-id: 3dee20e2-0551-43db-ba89-bc049b56af08
 translation-type: tm+mt
-source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '159'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL Observability Insights] API 안내서
 
