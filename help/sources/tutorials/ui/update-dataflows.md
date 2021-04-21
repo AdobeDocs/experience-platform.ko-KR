@@ -3,13 +3,13 @@ keywords: Experience Platform;홈;인기 있는 항목;데이터 흐름 업데�
 description: 이 자습서에서는 소스 작업 영역을 사용하여 데이터 흐름 빈도 및 간격 속도를 포함하여 데이터 흐름 예약을 업데이트하는 단계를 설명합니다.
 solution: Experience Platform
 title: UI에서 소스 연결 데이터 흐름 업데이트
-topic: overview
+topic-legacy: overview
 type: Tutorial
 exl-id: 0499a2a3-5a22-47b1-ac0e-76a432bd26c0
 translation-type: tm+mt
-source-git-commit: 3a36996b43760bc9161b8d4750a1121e9ada8d30
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '718'
+source-wordcount: '717'
 ht-degree: 1%
 
 ---
