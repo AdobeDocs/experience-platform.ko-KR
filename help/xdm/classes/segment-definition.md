@@ -1,16 +1,16 @@
 ---
 solution: Experience Platform
 title: 세그먼트 정의 클래스
-topic: overview
+topic-legacy: overview
 description: 이 문서에서는 XDM(경험 데이터 모델)의 세그먼트 정의 클래스에 대한 개요를 제공합니다.
+exl-id: c0f7b04c-2266-4d08-89a1-67ba758a51a7
 translation-type: tm+mt
-source-git-commit: f4e80cc6a5e5e135bedb77b2d56ae5cb2c8d8c53
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '379'
+source-wordcount: '378'
 ht-degree: 0%
 
 ---
-
 
 # [!UICONTROL Segment definition] class
 
