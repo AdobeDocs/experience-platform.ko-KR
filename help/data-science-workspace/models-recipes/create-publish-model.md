@@ -2,17 +2,17 @@
 keywords: Experience Platform;기계 학습 모델;데이터 과학 작업 공간;인기 있는 주제;모델 만들기 및 게시
 solution: Experience Platform
 title: 기계 학습 모델 만들기 및 게시
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Adobe Experience Platform Data Science Workspace는 미리 작성된 제품 Recommendations 레서피를 사용하여 목표를 달성할 수 있는 방법을 제공합니다. 이 튜토리얼을 따라 리테일 데이터에 액세스하고 이를 이해하며 기계 학습 모델을 생성 및 최적화하고 데이터 과학 작업 공간에서 통찰력을 생성하는 방법을 확인하십시오.
+exl-id: f71e5a17-9952-411e-8e6a-aab46bc4c006
 translation-type: tm+mt
-source-git-commit: b5d42c6a38a50d39e1ca46e18623dde59c33833b
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1580'
+source-wordcount: '1531'
 ht-degree: 0%
 
 ---
-
 
 # 기계 학습 모델 만들기 및 게시
 
@@ -58,11 +58,11 @@ ht-degree: 0%
 
 ### 데이터 탐색 및 스키마 이해
 
-[Adobe Experience Platform](https://platform.adobe.com/)에 로그인하고 **[!UICONTROL 데이터 집합]**&#x200B;을 선택하여 기존의 모든 데이터 집합을 나열하고 탐색할 데이터 집합을 선택합니다. 이 경우 [!DNL Analytics] 데이터 세트 **골든 데이터 세트 postValues**&#x200B;입니다.
+[Adobe Experience Platform](https://platform.adobe.com/)에 로그인하고 **[!UICONTROL Datasets]**&#x200B;를 선택하여 기존 데이터 세트를 모두 나열하고 탐색할 데이터 세트를 선택합니다. 이 경우 [!DNL Analytics] 데이터 세트 **골든 데이터 세트 postValues**&#x200B;입니다.
 
 ![](../images/models-recipes/model-walkthrough/dataset-browse.png)
 
-데이터 집합 활동 페이지가 열리고 데이터 집합에 대한 정보가 나열됩니다. 오른쪽 위 근처에 있는 **[!UICONTROL 데이터 세트 미리 보기]**&#x200B;를 선택하여 샘플 레코드를 검사할 수 있습니다. 선택한 데이터 세트에 대한 스키마를 볼 수도 있습니다. 오른쪽 레일에서 스키마 링크를 선택합니다. 팝업 창이 나타나고 **[!UICONTROL 스키마 이름]** 아래의 링크를 선택하면 새 탭에서 스키마가 열립니다.
+데이터 집합 활동 페이지가 열리고 데이터 집합에 대한 정보가 나열됩니다. 샘플 레코드를 검사하려면 오른쪽 위 근처에 있는 **[!UICONTROL Preview Dataset]**&#x200B;을 선택할 수 있습니다. 선택한 데이터 세트에 대한 스키마를 볼 수도 있습니다. 오른쪽 레일에서 스키마 링크를 선택합니다. 팝업 창이 나타나고 **[!UICONTROL schema name]** 아래의 링크를 선택하면 새 탭에 스키마가 열립니다.
 
 ![](../images/models-recipes/model-walkthrough/dataset-activity.png)
 
@@ -85,15 +85,15 @@ ht-degree: 0%
 
 ### 제품 Recommendations 레서피 살펴보기
 
-Experience Platform의 왼쪽 탐색 열에서 **[!UICONTROL 모델]**&#x200B;으로 이동한 다음 위쪽 탐색에서 **[!UICONTROL 레서피]**&#x200B;를 선택하여 조직에 대해 사용 가능한 레서피 목록을 봅니다.
+Experience Platform에서 왼쪽 탐색 열의 **[!UICONTROL Models]**&#x200B;으로 이동한 다음 위쪽 탐색에서 **[!UICONTROL Recipes]**&#x200B;을 선택하여 조직에 대해 사용 가능한 레서피 목록을 봅니다.
 
 ![](../images/models-recipes/model-walkthrough/recipe-tab.png)
 
-그런 다음 해당 이름을 선택하여 제공된 **[!UICONTROL Recommendations 레서피]**&#x200B;를 찾아 엽니다. 레서피 개요 페이지가 나타납니다.
+그런 다음 해당 이름을 선택하여 제공된 **[!UICONTROL Recommendations Recipe]**&#x200B;을 찾아 엽니다. 레서피 개요 페이지가 나타납니다.
 
 ![](../images/models-recipes/model-walkthrough/Recipe-view.png)
 
-그런 다음 오른쪽 레일에서 **[!UICONTROL Recommendations 입력 스키마]**&#x200B;를 선택하여 레서피를 강력하게 하는 스키마를 봅니다. 스키마 필드 &quot;[!UICONTROL itemId]&quot; 및 &quot;[!UICONTROL userId]&quot;는 특정 시간에 해당 고객이 구매한 제품([!UICONTROL interactionType])에 해당합니다([!UICONTROL timestamp]). 동일한 단계에 따라 **[!UICONTROL Recommendations 출력 스키마]**&#x200B;에 대한 필드를 검토하십시오.
+그런 다음 오른쪽 레일에서 **[!UICONTROL Recommendations Input Schema]**&#x200B;을 선택하여 레서피를 향상시키는 스키마를 봅니다. 스키마 필드 &quot;[!UICONTROL itemId]&quot; 및 &quot;[!UICONTROL userId]&quot;은 특정 시간([!UICONTROL timestamp])에 해당 고객이 구매한 제품([!UICONTROL interactionType])에 해당합니다. 동일한 단계에 따라 **[!UICONTROL Recommendations Output Schema]** 필드를 검토하십시오.
 
 ![](../images/models-recipes/model-walkthrough/input-output.png)
 
@@ -107,19 +107,19 @@ Experience Platform의 왼쪽 탐색 열에서 **[!UICONTROL 모델]**&#x200B;�
 
 모델은 레서피 인스턴스로, 규모에 따라 데이터를 트레이닝하고 점수를 매길 수 있습니다.
 
-Experience Platform의 왼쪽 탐색 열에서 **[!UICONTROL 모델]**&#x200B;으로 이동한 다음 위쪽 탐색에서 **[!UICONTROL 레서피]**&#x200B;를 선택합니다. 조직에 사용할 수 있는 레서피 목록이 표시됩니다.제품 권장 레서피를 선택합니다.
+Experience Platform의 왼쪽 탐색 열에서 **[!UICONTROL Models]**&#x200B;으로 이동한 다음 위쪽 탐색에서 **[!UICONTROL Recipes]**&#x200B;을 선택합니다. 조직에 사용할 수 있는 레서피 목록이 표시됩니다.제품 권장 레서피를 선택합니다.
 
 ![](../images/models-recipes/model-walkthrough/recipe-tab.png)
 
-레서피 페이지에서 **[!UICONTROL 모델 만들기]**&#x200B;를 선택합니다.
+레서피 페이지에서 **[!UICONTROL Create Model]**&#x200B;을 선택합니다.
 
 ![모델 만들기](../images/models-recipes/model-walkthrough/create-model-recipe.png)
 
-모델 생성 워크플로우는 레서피를 선택하여 시작합니다. **[!UICONTROL Recommendations 레서피]**&#x200B;를 선택한 다음 오른쪽 위 모서리에서 **[!UICONTROL 다음]**&#x200B;을 선택합니다.
+모델 생성 워크플로우는 레서피를 선택하여 시작합니다. **[!UICONTROL Recommendations Recipe]** 을 선택하고 오른쪽 위 모서리에서 **[!UICONTROL Next]**&#x200B;을 선택합니다.
 
 ![](../images/models-recipes/model-walkthrough/create-model.png)
 
-다음으로 모델 이름을 입력합니다. 모델의 사용 가능한 구성은 모델의 기본 교육 및 점수 지정 동작에 대한 설정이 포함되어 있습니다. 구성을 검토하고 **[!UICONTROL 완료]**&#x200B;를 선택합니다.
+다음으로 모델 이름을 입력합니다. 모델의 사용 가능한 구성은 모델의 기본 교육 및 점수 지정 동작에 대한 설정이 포함되어 있습니다. 구성을 검토하고 **[!UICONTROL Finish]**&#x200B;을 선택합니다.
 
 ![](../images/models-recipes/model-walkthrough/configure-model.png)
 
@@ -131,11 +131,11 @@ Experience Platform의 왼쪽 탐색 열에서 **[!UICONTROL 모델]**&#x200B;�
 
 ### 사용자 정의 하이퍼매개 변수를 사용하여 모델 트레이닝
 
-**모델 개요** 페이지에서 오른쪽 상단 근처에 있는 **[!UICONTROL 기차]**&#x200B;를 선택하여 새 교육 실행을 만듭니다. 모델을 만들 때 사용한 것과 동일한 입력 데이터 세트를 선택하고 **[!UICONTROL 다음]**&#x200B;을 선택합니다.
+**모델 개요** 페이지에서 오른쪽 상단 근처에 있는 **[!UICONTROL Train]**&#x200B;를 선택하여 새 교육 실행을 만듭니다. 모델을 만들 때 사용한 것과 동일한 입력 데이터 세트를 선택하고 **[!UICONTROL Next]**&#x200B;을 선택합니다.
 
 ![](../images/models-recipes/model-walkthrough/select-train.png)
 
-**[!UICONTROL 구성]** 페이지가 나타납니다. 여기서는 하이퍼매개 변수라고도 하는 `num_recommendations` 값을 실행하는 교육을 구성할 수 있습니다. 훈련되고 최적화된 모델은 트레이닝 실행 결과를 기반으로 가장 성과가 좋은 하이퍼매개 변수를 활용합니다.
+**[!UICONTROL Configuration]** 페이지가 나타납니다. 여기서는 하이퍼매개 변수라고도 하는 `num_recommendations` 값을 실행하는 교육을 구성할 수 있습니다. 훈련되고 최적화된 모델은 트레이닝 실행 결과를 기반으로 가장 성과가 좋은 하이퍼매개 변수를 활용합니다.
 
 하이퍼매개 변수는 알 수 없으므로, 훈련을 실행하기 전에 매개 변수를 할당해야 합니다. 하이퍼매개 변수를 조정하면 훈련된 모델의 정확도가 변경될 수 있습니다. 모델을 최적화하는 것은 반복적인 프로세스이므로 만족할만한 평가를 얻기 전에 여러 개의 교육 실행이 필요할 수 있습니다.
 
@@ -173,19 +173,19 @@ Experience Platform의 왼쪽 탐색 열에서 **[!UICONTROL 모델]**&#x200B;�
 
 ![최고 실행 점수](../images/models-recipes/model-walkthrough/select-training-run.png)
 
-그런 다음 교육 실행 세부 정보 페이지의 오른쪽 상단에서 **[!UICONTROL 점수]**&#x200B;를 선택합니다.
+그런 다음 교육 실행 세부 정보 페이지의 오른쪽 상단에서 **[!UICONTROL Score]**&#x200B;을 선택합니다.
 
 ![점수 선택](../images/models-recipes/model-walkthrough/select-score.png)
 
-그런 다음 **[!UICONTROL Recommendations 입력 데이터 세트]**&#x200B;를 모델을 만들고 해당 교육 실행을 실행할 때 사용한 데이터 세트와 동일한 점수 입력 데이터 세트로 선택합니다. 그런 다음 **[!UICONTROL 다음]**&#x200B;을 선택합니다.
+그런 다음 **[!UICONTROL Recommendations Input Dataset]**&#x200B;을(를) 모델을 만들고 해당 교육 실행을 실행할 때 사용한 데이터 세트와 동일한 점수 입력 데이터 세트로 선택합니다. 그런 다음 **[!UICONTROL Next]**&#x200B;을 선택합니다.
 
 ![](../images/models-recipes/model-walkthrough/score-input.png)
 
-입력 데이터 세트가 있는 경우 **[!UICONTROL Recommendations 출력 데이터 세트]**&#x200B;를 점수 출력 데이터 세트로 선택합니다. 점수 지정 결과는 이 데이터 세트에 일괄 보관됩니다.
+입력 데이터 세트가 있는 경우 점수 출력 데이터 집합으로 **[!UICONTROL Recommendations Output Dataset]**&#x200B;을 선택합니다. 점수 지정 결과는 이 데이터 세트에 일괄 보관됩니다.
 
 ![](../images/models-recipes/model-walkthrough/score-output.png)
 
-마지막으로 점수 지정 구성을 검토합니다. 이러한 매개 변수에는 적절한 스키마와 함께 이전에 선택한 입력 및 출력 데이터 세트가 포함됩니다. 점수 실행을 시작하려면 **[!UICONTROL 완료]**&#x200B;를 선택합니다. 실행을 완료하는 데 몇 분 정도 걸릴 수 있습니다.
+마지막으로 점수 지정 구성을 검토합니다. 이러한 매개 변수에는 적절한 스키마와 함께 이전에 선택한 입력 및 출력 데이터 세트가 포함됩니다. 점수 실행을 시작하려면 **[!UICONTROL Finish]**&#x200B;을 선택합니다. 실행을 완료하는 데 몇 분 정도 걸릴 수 있습니다.
 
 ![](../images/models-recipes/model-walkthrough/score-finish.png)
 
@@ -193,11 +193,11 @@ Experience Platform의 왼쪽 탐색 열에서 **[!UICONTROL 모델]**&#x200B;�
 
 점수부여 실행이 성공적으로 완료되면 결과를 미리 보고 생성된 통찰력을 볼 수 있습니다.
 
-점수 지정 실행 페이지에서 완료된 점수 실행을 선택한 다음 오른쪽 레일에서 **[!UICONTROL 채점 결과 미리 보기]**&#x200B;를 선택합니다.
+점수 지정 실행 페이지에서 완료된 점수 실행을 선택한 다음 오른쪽 레일에서 **[!UICONTROL Preview Scoring Results Dataset]**&#x200B;을 선택합니다.
 
 ![](../images/models-recipes/model-walkthrough/preview-scores.png)
 
-미리 보기 테이블에서 각 행은 각각 [!UICONTROL recommendations] 및 [!UICONTROL userId]로 레이블이 지정된 특정 고객에 대한 제품 권장 사항을 포함합니다. 샘플 스크린샷에서 [!UICONTROL num_recommendations] 하이퍼매개 변수가 10으로 설정되었으므로 권장 사항의 각 행은 숫자 기호(#)로 구분된 최대 10개의 제품 ID를 포함할 수 있습니다.
+미리 보기 테이블에서 각 행은 각각 [!UICONTROL recommendations] 및 [!UICONTROL userId]로 레이블이 지정된 특정 고객에 대한 제품 권장 사항을 포함합니다. 샘플 스크린샷에서 [!UICONTROL num_recommendations] hyperparameter가 10으로 설정되었으므로 권장 사항의 각 행은 숫자 기호(#)로 구분된 최대 10개의 제품 ID를 포함할 수 있습니다.
 
 ![](../images/models-recipes/model-walkthrough/preview_score_results.png)
 
