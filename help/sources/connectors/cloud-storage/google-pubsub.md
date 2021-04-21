@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;Google PubSub;google pubsub
 solution: Experience Platform
 title: Google Pub하위 소스 커넥터 개요
-topic: overview
+topic-legacy: overview
 description: API 또는 사용자 인터페이스를 사용하여 Google PubSub를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
+exl-id: 7c78173d-2639-47cb-8935-77fb7841a121
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '244'
+source-wordcount: '243'
 ht-degree: 0%
 
 ---
-
 
 # (베타) [!DNL Google PubSub] 커넥터
 
