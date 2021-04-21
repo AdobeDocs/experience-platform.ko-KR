@@ -2,17 +2,17 @@
 keywords: Experience Platform;홈;인기 항목;인증된 스트리밍 연결;스트리밍 연결;스트리밍 연결;스트리밍 연결 만들기;인증된 스트리밍 연결 만들기;스트리밍 통합;통합;;home;popular topics;austation;streaming ingestion;
 solution: Experience Platform
 title: 인증된 스트리밍 연결 만들기
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: 인증된 데이터 수집을 사용하면 실시간 고객 프로필 및 ID와 같은 Adobe Experience Platform 서비스를 통해 신뢰할 수 있는 출처의 레코드와 신뢰할 수 없는 출처의 레코드를 구별할 수 있습니다.
+exl-id: 14228cd9-4508-4605-8f50-04a74f1c6236
 translation-type: tm+mt
-source-git-commit: 17eb7b9cb715d7d8d0d7bce930ddec43259149cc
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '117'
 ht-degree: 0%
 
 ---
-
 
 # 인증된 스트리밍 연결 만들기
 
