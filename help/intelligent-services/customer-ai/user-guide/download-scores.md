@@ -2,16 +2,16 @@
 keywords: Experience Platform;다운로드 스코어;고객 아이디;인기 항목;내보내기;고객 아이디 다운로드;고객 아이에이 점수
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: 고객 AI에서 점수 다운로드
-topic: Downloading scores
+topic-legacy: Downloading scores
 description: 고객 AI를 통해 점수를 Portable 파일 형식으로 다운로드할 수 있습니다.
+exl-id: 08f05565-3fd4-4089-9c41-32467f0be751
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '961'
+source-wordcount: '959'
 ht-degree: 2%
 
 ---
-
 
 # 고객 AI에서 점수 다운로드
 
@@ -30,13 +30,13 @@ ht-degree: 2%
 
 ## 데이터 집합 ID {#dataset-id} 찾기
 
-고객 AI 인사이트의 서비스 인스턴스 내에서 오른쪽 상단 탐색에서 *추가 작업* 드롭다운을 클릭한 다음 **[!UICONTROL 액세스 점수]**&#x200B;를 선택합니다.
+고객 AI 인사이트의 서비스 인스턴스 내에서 오른쪽 상단 탐색에서 *추가 작업* 드롭다운을 클릭한 다음 **[!UICONTROL Access scores]**&#x200B;를 선택합니다.
 
 ![추가 작업](../images/insights/more-actions.png)
 
 다운로드 점수 설명서 및 현재 인스턴스의 데이터 세트 ID에 대한 링크가 포함된 새 대화 상자가 나타납니다. 데이터 세트 ID를 클립보드에 복사하고 다음 단계로 진행합니다.
 
-![데이터 집합 ID](../images/download-scores/access-scores.png)
+![데이터 세트 ID](../images/download-scores/access-scores.png)
 
 ## 배치 ID {#retrieve-your-batch-id} 검색
 
