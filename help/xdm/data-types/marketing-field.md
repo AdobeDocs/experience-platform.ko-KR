@@ -1,16 +1,16 @@
 ---
 solution: Experience Platform
 title: 범용 마케팅 기본 설정 필드 데이터 유형
-topic: overview
+topic-legacy: overview
 description: 이 문서에서는 범용 마케팅 기본 설정 필드 XDM 데이터 유형에 대한 개요를 제공합니다.
+exl-id: d4c53885-f34f-4721-aa34-1fe02dc7006f
 translation-type: tm+mt
-source-git-commit: f5ec59e609fda66d379847dca068d19d4cce8228
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '522'
-ht-degree: 2%
+source-wordcount: '521'
+ht-degree: 1%
 
 ---
-
 
 # [!UICONTROL Generic Marketing Preference Field] 데이터 유형
 
