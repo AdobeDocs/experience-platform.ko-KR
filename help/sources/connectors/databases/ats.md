@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;Azure 테이블 저장소;azure 테이블 저장소;ATS;ats
 solution: Experience Platform
 title: Azure 테이블 저장소 원본 커넥터 개요
-topic: overview
+topic-legacy: overview
 description: API 또는 사용자 인터페이스를 사용하여 Azure 테이블 저장소를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
+exl-id: 096e01b1-7e95-4e30-87de-d0976f8b438a
 translation-type: tm+mt
-source-git-commit: 0fb97fcf5d3f8230ff86906aeef245e4a7f44f30
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '306'
+source-wordcount: '305'
 ht-degree: 0%
 
 ---
-
 
 # (베타) [!DNL Azure Table Storage] 커넥터
 
