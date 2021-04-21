@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목
 solution: Experience Platform
 title: Privacy Service 문제 해결 안내서
-topic: troubleshooting
+topic-legacy: troubleshooting
 description: 이 문서에서는 Privacy Service과 관련하여 자주 묻는 질문에 대한 답변과 API에서 자주 발생하는 오류에 대한 정보를 제공합니다.
+exl-id: 8afbb065-0f41-4048-9003-a22c0c839717
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '884'
+source-wordcount: '881'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL Privacy Service] 문제 해결 안내서
 
@@ -81,7 +81,7 @@ PII 또는 데이터 문제를 제거하기 위한 노력을 조정하고 제공
 
 ### UI 사용
 
-모든 활성 작업 요청은 [!DNL Privacy Service] UI 대시보드의 **[!UICONTROL 작업 요청]** 위젯에 나열됩니다. 각 작업 요청의 상태는 **[!UICONTROL 상태]** 열 아래에 표시됩니다. UI에서 작업 요청을 보는 방법에 대한 자세한 내용은 [Privacy Service 사용자 안내서](ui/user-guide.md)를 참조하십시오.
+모든 활성 작업 요청은 [!DNL Privacy Service] UI 대시보드의 **[!UICONTROL Job Requests]** 위젯에 나열됩니다. 각 작업 요청의 상태는 **[!UICONTROL Status]** 열 아래에 표시됩니다. UI에서 작업 요청을 보는 방법에 대한 자세한 내용은 [Privacy Service 사용자 안내서](ui/user-guide.md)를 참조하십시오.
 
 ## 완료된 개인 정보 보호 작업의 결과를 어떻게 다운로드합니까?
 
