@@ -1,5 +1,5 @@
 ---
-keywords: 활성화 편집;대상 편집;
+keywords: 활성화 편집, 대상 편집, 대상 편집
 title: 활성화 흐름 편집
 type: Tutorial
 seo-title: 활성화 흐름 편집
@@ -7,9 +7,9 @@ description: 이 문서의 단계에 따라 Adobe Experience Platform의 기존 
 seo-description: 이 문서의 단계에 따라 Adobe Experience Platform의 기존 활성화 과정을 편집합니다.
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
 translation-type: tm+mt
-source-git-commit: e436d7147c613dad5b2ff596a412759fd60d228c
+source-git-commit: 5b72433fcf2318f98538278c6d2650b366e391a2
 workflow-type: tm+mt
-source-wordcount: '192'
+source-wordcount: '193'
 ht-degree: 0%
 
 ---
