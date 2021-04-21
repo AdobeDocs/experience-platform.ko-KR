@@ -2,20 +2,20 @@
 keywords: Experience Platform;홈;인기 항목;스키마;스키마;XDM;필드;스키마;스키마;ID;데이터 유형;데이터 유형;데이터 유형;a home;popular topics;schema;XDM;fields;schemas;identity;datatype;data-type;data-type;
 solution: Experience Platform
 title: ID 데이터 유형
-topic: overview
+topic-legacy: overview
 description: 이 문서에서는 ID XDM 데이터 유형에 대한 개요를 제공합니다.
+exl-id: fb02b6b4-255b-442f-895c-600022231a1c
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '283'
+source-wordcount: '280'
 ht-degree: 3%
 
 ---
 
+# [!UICONTROL Identity] 데이터 유형
 
-# [!UICONTROL ID ] 데이터 유형
-
-[!UICONTROL ID] 는 디지털 경험과 상호 작용하는 사람을 명확하게 구분하는 데 사용되는 표준 XDM 데이터 유형입니다. ID는 ID 공급자가 설정하며, 이 ID 자체는 `namespace` 속성에서 참조됩니다. 각 `namespace` 내에서 ID는 고유합니다.
+[!UICONTROL Identity] 는 디지털 경험과 상호 작용하는 사람을 명확하게 구분하는 데 사용되는 표준 XDM 데이터 유형입니다. ID는 ID 공급자가 설정하며, 이 ID 자체는 `namespace` 속성에서 참조됩니다. 각 `namespace` 내에서 ID는 고유합니다.
 
 <img src="../images/data-types/identity.png" width="550" /><br />
 
