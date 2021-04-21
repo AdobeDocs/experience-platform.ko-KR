@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;CJA;여정 분석;고객 여정 분석;캠페인 통합 운영;고객 여정;여정;여정 통합 운영;기능;지역
 solution: Experience Platform
 title: Experience Platform UI에 대한 브라우저 및 언어 지원
-topic: getting started
+topic-legacy: getting started
 description: Adobe Experience Platform은 고객 경험을 향상시키는 완벽한 솔루션을 구축하고 관리하기 위해 시장에서 가장 강력하고 유연하며 개방적인 시스템입니다. Experience Platform을 사용하면 조직 내 모든 시스템의 고객 데이터와 컨텐츠를 중앙 집중화 및 표준화하고 데이터 과학 및 시스템 학습을 적용하여 풍부한 개인별 경험을 더 잘 설계하고 전달할 수 있습니다.
+exl-id: 1b74aede-55df-4e81-8360-e49d1932b373
 translation-type: tm+mt
-source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '248'
+source-wordcount: '246'
 ht-degree: 17%
 
 ---
-
 
 # Experience Platform UI에 대한 브라우저 및 언어 지원
 
@@ -49,7 +49,7 @@ Adobe Experience Platform 유저 인터페이스(UI)는 다양한 브라우저�
 언어를 변경하려면:
 
 1. [!DNL Experience Platform] 사용자 인터페이스의 바닥글에 있는 현재 언어를 선택합니다.
-2. 프로필 설정에서 **[!UICONTROL 지역 변경]**&#x200B;을 선택합니다.
+2. 프로필 설정에서 **[!UICONTROL Change Region]**&#x200B;을 선택합니다.
 3. 지역을 선택합니다.
 
 >[!NOTE]
