@@ -2,16 +2,16 @@
 keywords: Experience Platform;시작;내용 ai;커머스 ai;컨텐트 및 상거래 ai;;시작하기;content ai;getting started;content ai;commerce ai;content and commerce ai
 solution: Experience Platform, Intelligent Services
 title: Content and Commerce AI 시작하기
-topic: Getting started 
+topic-legacy: Getting started
 description: Content and Commerce AI는 Adobe I/O API를 활용합니다. Adobe I/O API 및 I/O 콘솔 통합을 호출하려면 먼저 인증 자습서를 완료해야 합니다.
+exl-id: e7b0e9bb-a1f1-479c-9e9b-46991f2942e2
 translation-type: tm+mt
-source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '596'
+source-wordcount: '591'
 ht-degree: 0%
 
 ---
-
 
 # Content and Commerce AI 시작하기
 
@@ -19,7 +19,7 @@ ht-degree: 0%
 >
 >콘텐츠 및 상거래 AI가 베타 버전입니다. 설명서는 변경될 수 있습니다.
 
-[!DNL Content and Commerce AI] adobe i/o API를 활용합니다. Adobe I/O API와 I/O 콘솔 통합을 호출하려면 먼저 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 완료해야 합니다.
+[!DNL Content and Commerce AI] Adobe I/O API를 활용합니다. Adobe I/O API 및 I/O 콘솔 통합을 호출하려면 먼저 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 완료해야 합니다.
 
 그러나 **API 추가** 단계에 도달하면 다음 스크린샷과 같이 API는 Adobe Experience Platform 대신 Experience Cloud 아래에 있습니다.
 
@@ -33,7 +33,7 @@ ht-degree: 0%
 
 ## 포스트만 환경 만들기(선택 사항)
 
-Adobe 개발자 콘솔에서 프로젝트 및 API를 설정한 경우 Postman용 환경 파일을 다운로드할 수 있습니다. 프로젝트의 왼쪽 레일에서 **[!UICONTROL 컨텐트 및 상거래 AI]**&#x200B;를 **[!UICONTROL APIs]** 아래에서 선택합니다. &quot;[!DNL Try it out]&quot; 카드가 포함된 새 탭이 열립니다. 포스트만 환경을 구성하는 데 사용되는 JSON 파일을 다운로드하려면 **포스트맨용 다운로드**&#x200B;를 선택합니다.
+Adobe 개발자 콘솔에서 프로젝트 및 API를 설정한 경우 Postman용 환경 파일을 다운로드할 수 있습니다. 프로젝트의 왼쪽 레일에서 **[!UICONTROL APIs]** 아래에서 **[!UICONTROL Content and Commerce AI]**&#x200B;을 선택합니다. &quot;[!DNL Try it out]&quot; 카드가 포함된 새 탭이 열립니다. 포스트만 환경을 구성하는 데 사용되는 JSON 파일을 다운로드하려면 **포스트맨용 다운로드**&#x200B;를 선택합니다.
 
 ![postman 다운로드](./images/add-to-postman.png)
 
@@ -63,7 +63,7 @@ Adobe 개발자 콘솔에서 프로젝트 및 API를 설정한 경우 Postman용
 
 ![example](./images/select-environment.png)
 
-Postman을 사용하여 Adobe I/O API를 사용하는 작업에 대한 자세한 내용은 Adobe I/O](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f)에서 JWT 인증을 위해 Postman을 사용하는 [의 중간 게시물을 참조하십시오.
+Postman을 사용하여 Adobe I/O API를 사용하는 작업에 대한 자세한 내용은 Adobe I/O](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f)의 JWT 인증에 Postman을 사용하여 [의 중간 게시물을 참조하십시오.
 
 ## 샘플 API 호출 읽기
 
