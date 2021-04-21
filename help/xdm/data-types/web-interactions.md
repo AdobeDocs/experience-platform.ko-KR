@@ -2,26 +2,26 @@
 keywords: Experience Platform;홈;인기 항목;스키마;스키마;XDM;필드;스키마;스키마;웹 상호 작용;데이터 유형;데이터 유형;data-type;data type
 solution: Experience Platform
 title: 웹 상호 작용 데이터 유형
-topic: overview
+topic-legacy: overview
 description: 이 문서에서는 XDM(웹 상호 작용 경험 데이터 모델) 데이터 유형에 대한 개요를 제공합니다.
+exl-id: 772d96c5-9fa3-4fed-8b38-16b8e7101743
 translation-type: tm+mt
-source-git-commit: d282ea5526a05b28c6a82470eabf23e44d1fb420
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '187'
+source-wordcount: '182'
 ht-degree: 2%
 
 ---
 
+# [!UICONTROL Web interaction] 데이터 유형
 
-# [!UICONTROL 웹 ] 상호 작용 데이터 유형
-
-[!UICONTROL 웹 ] 상호 작용은 초기 페이지 로드가 완료된 후 웹 페이지에서 발생한 상호 작용에 대한 정보를 설명하는 표준 XDM(Experience Data Model) 데이터 유형입니다. 단일 페이지 웹 앱(SPA)과 같은 새 페이지 로드를 트리거하지 않는 리치 웹 애플리케이션의 상호 작용을 기록하기 위한 것입니다.
+[!UICONTROL Web interaction] 는 초기 페이지 로드가 완료된 후 웹 페이지에서 발생한 상호 작용에 대한 정보를 설명하는 표준 XDM(Experience Data Model) 데이터 유형입니다. 단일 페이지 웹 앱(SPA)과 같은 새 페이지 로드를 트리거하지 않는 리치 웹 애플리케이션의 상호 작용을 기록하기 위한 것입니다.
 
 <img src="../images/data-types/web-interaction.PNG" width="500" /><br />
 
 | 속성 | 데이터 유형 | 설명 |
 | --- | --- | --- |
-| `linkClicks` | [[!UICONTROL 측정]](./measure.md) | 웹 링크의 클릭을 추적하는 측정입니다. |
+| `linkClicks` | [[!UICONTROL Measure]](./measure.md) | 웹 링크의 클릭을 추적하는 측정입니다. |
 | `URL` | 문자열 | 이 웹 상호 작용에 사용되는 실제 링크 또는 URL. |
 | `name` | 문자열 | 이 웹 링크에 사용되는 표준 이름입니다. 분류를 위해 사용됩니다. |
 | `type` | 문자열 | 링크 유형입니다. 이 속성은 다음 열거형 값 중 하나와 같아야 합니다. <li> `download` </li> <li> `exit` </li> <li> `other` </li> |
