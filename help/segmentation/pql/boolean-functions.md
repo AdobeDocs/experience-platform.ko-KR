@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;세그멘테이션;세그멘테이션 서비스;pql;PQL;프로필 쿼리 언어;부울 함수;Boolean
 solution: Experience Platform
 title: PQL 부울 함수
-topic: developer guide
+topic-legacy: developer guide
 description: 부울 함수는 PQL(프로파일 쿼리 언어)의 다른 요소에 대해 부울 논리를 수행하는 데 사용됩니다.
+exl-id: 68a4a8cc-88ad-41b1-b9fc-c2b4ab7d0122
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '254'
 ht-degree: 5%
 
 ---
-
 
 # 부울 함수
 
