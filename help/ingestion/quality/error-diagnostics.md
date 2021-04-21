@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;popular topics;batch ingestion;batch ingestion;partial ingestion;retrieve error;부분 일괄 처리;부분 일괄 처리 통합;부분 일괄 처리;통합;통합;오류 진단;오류 진단 검색;오류 진단 가져오기;오류 가져오기;오류 오류 가져오기;오류 오류 가져오기;오류 가져오기;오류 오류 가져오기;오류 가져오기;오류 가져오기;오류 가져오기;오류 검색
 solution: Experience Platform
 title: 데이터 통합 오류 진단 검색 중
-topic: overview
+topic-legacy: overview
 description: 이 문서에서는 일괄 처리 통합 모니터링, 부분 배치 처리 오류 관리 및 부분 일괄 처리 통합 유형에 대한 참조를 제공합니다.
+exl-id: b885fb00-b66d-453b-80b7-8821117c2041
 translation-type: tm+mt
-source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '936'
 ht-degree: 2%
 
 ---
-
 
 # 데이터 통합 오류 진단 검색 중
 
