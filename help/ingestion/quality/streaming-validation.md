@@ -2,17 +2,17 @@
 keywords: Experience Platform;홈;인기 항목;스트리밍;스트리밍 통합;스트리밍 통합 유효성 검사;유효성 검사;스트리밍 통합 유효성 검사;유효성 검사;동기 유효성 검사;비동기 유효성 검사;비동기 유효성 검사;Asynchronous validation;Asynchronous validation;
 solution: Experience Platform
 title: 스트리밍 통합 유효성 검사
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: 스트리밍 통합 기능을 사용하면 스트리밍 끝점을 사용하여 실시간으로 Adobe Experience Platform에 데이터를 업로드할 수 있습니다. 스트리밍 통합 API는 동기 및 비동기 방식으로 두 가지 인증 모드를 지원합니다.
+exl-id: 6e9ac943-6d73-44de-a13b-bef6041d3834
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '900'
+source-wordcount: '898'
 ht-degree: 3%
 
 ---
-
 
 # 스트리밍 통합 유효성 검사
 
