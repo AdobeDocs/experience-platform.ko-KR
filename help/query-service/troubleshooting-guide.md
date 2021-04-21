@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;쿼리 서비스;쿼리 서비스;문제 해결 안내서;faq;문제 해결
 solution: Experience Platform
 title: 쿼리 서비스 문제 해결 안내서
-topic: troubleshooting
+topic-legacy: troubleshooting
 description: 이 문서에는 자주 발생하는 오류 코드와 가능한 원인에 대한 정보가 포함되어 있습니다.
+exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
 translation-type: tm+mt
-source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '177'
 ht-degree: 3%
 
 ---
-
 
 # [!DNL Query Service] 문제 해결 가이드
 
