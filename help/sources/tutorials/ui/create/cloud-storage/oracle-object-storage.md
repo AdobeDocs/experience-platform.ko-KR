@@ -2,17 +2,17 @@
 keywords: Experience Platform;홈;인기 항목;Oracle 개체 저장소;oracle 개체 저장소
 solution: Experience Platform
 title: UI에서 Oracle 개체 저장소 소스 연결 만들기
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Adobe Experience Platform UI를 사용하여 Oracle 개체 저장소 소스 연결을 만드는 방법을 알아봅니다.
+exl-id: 32284163-5dde-4171-8977-f76ceeebcef2
 translation-type: tm+mt
-source-git-commit: c1453a9f0be42f834d35af871051324df8dadf80
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '464'
+source-wordcount: '446'
 ht-degree: 1%
 
 ---
-
 
 # UI에 [!DNL Oracle Object Storage] 소스 연결 만들기
 
@@ -41,25 +41,25 @@ ht-degree: 1%
 
 필요한 자격 증명을 수집했으면 아래 단계에 따라 플랫폼에 연결할 새 Oracle 개체 저장소 계정을 만들 수 있습니다.
 
-## Oracle 개체 저장소에 연결
+## oracle 개체 저장소에 연결
 
-플랫폼 UI의 왼쪽 탐색 메뉴에서 **[!UICONTROL 소스]**&#x200B;를 선택하여 [!UICONTROL 소스] 작업 영역에 액세스합니다. [!UICONTROL 카탈로그] 화면에는 계정을 만들 수 있는 다양한 소스가 표시됩니다.
+플랫폼 UI의 왼쪽 탐색 메뉴에서 **[!UICONTROL Sources]**&#x200B;을 선택하여 [!UICONTROL Sources] 작업 영역에 액세스합니다. [!UICONTROL Catalog] 화면에는 계정을 만들 수 있는 다양한 소스가 표시됩니다.
 
 화면의 왼쪽에 있는 카탈로그에서 적절한 범주를 선택할 수 있습니다. 또는 검색 막대를 사용하여 작업할 특정 소스를 찾을 수 있습니다.
 
-[!UICONTROL 클라우드 스토리지] 범주에서 **[!UICONTROL Oracle 개체 스토리지]**&#x200B;를 선택한 다음 **[!UICONTROL 데이터 추가]**&#x200B;를 선택합니다.
+[!UICONTROL Cloud storage] 범주에서 **[!UICONTROL Oracle Object Storage]**&#x200B;을 선택한 다음 **[!UICONTROL Add data]**&#x200B;를 선택합니다.
 
 ![카탈로그](../../../../images/tutorials/create/oracle-object-storage/catalog.png)
 
 ### 기존 계정
 
-기존 계정을 사용하려면 새 데이터 흐름을 만들 [!DNL Oracle Object Storage] 계정을 선택한 다음 **[!UICONTROL 다음]**&#x200B;을 선택하여 계속 진행합니다.
+기존 계정을 사용하려면 새 데이터 흐름을 만들 [!DNL Oracle Object Storage] 계정을 선택한 다음 **[!UICONTROL Next]**&#x200B;을 선택하여 계속 진행합니다.
 
 ![기존](../../../../images/tutorials/create/oracle-object-storage/existing.png)
 
 ### 새 계정
 
-새 계정을 만드는 경우 **[!UICONTROL 새 계정]**&#x200B;을 선택한 다음 이름, 선택적 설명 및 [!DNL Oracle Object Storage] 자격 증명을 입력합니다. 완료되면 **[!UICONTROL 소스에 연결]**&#x200B;을 선택한 다음 새 연결이 설정될 때까지 잠시 기다려 주십시오.
+새 계정을 만드는 경우 **[!UICONTROL New account]**&#x200B;을 선택한 다음 이름, 선택적 설명 및 [!DNL Oracle Object Storage] 자격 증명을 입력합니다. 완료되면 **[!UICONTROL Connect to source]**&#x200B;을 선택한 다음 새 연결이 설정될 때까지 잠시 기다려 주십시오.
 
 ![new](../../../../images/tutorials/create/oracle-object-storage/new.png)
 
