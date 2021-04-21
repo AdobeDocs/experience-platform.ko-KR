@@ -2,14 +2,14 @@
 keywords: Experience Platform;홈;인기 항목;csv;맵 csv;csv 파일;csv 파일을 xdm에 매핑;csv를 xdm;ui 안내서;매퍼;매핑;데이터 준비;데이터 준비;데이터 준비;데이터 준비;매핑;csv
 solution: Experience Platform
 title: 데이터 준비 개요
-topic: overview
+topic-legacy: overview
 description: 이 문서에서는 Adobe Experience Platform 내의 데이터 준비를 소개합니다.
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
 translation-type: tm+mt
-source-git-commit: 827a593c046530edba701edf26d9a47918cfd8f8
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '389'
-ht-degree: 1%
+source-wordcount: '388'
+ht-degree: 0%
 
 ---
 
