@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;ECID;ecid
 solution: Experience Platform
 title: 개인 정보 요청에 대한 ID 데이터
-topic: overview
+topic-legacy: overview
 description: 이 문서는 데이터 작업을 구성하고 Adobe 기술을 활용하여 고객 개인 정보 요청에 대한 적절한 ID 정보를 효과적으로 검색하는 방법에 대한 일반적인 지침을 제공합니다.
+exl-id: 43b0292a-ea4d-4858-b584-ba71029724f6
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '650'
 ht-degree: 3%
 
 ---
-
 
 # 개인 정보 요청에 대한 ID 데이터
 
