@@ -2,20 +2,20 @@
 keywords: Experience Platform;홈;인기 항목;스키마;스키마;XDM;필드;스키마;phoneNumber;xdm:phoneNumber;data-type;data-type;data type
 solution: Experience Platform
 title: 전화 번호 데이터 유형
-topic: overview
+topic-legacy: overview
 description: 이 문서에서는 전화 번호 XDM 데이터 유형에 대한 개요를 제공합니다.
+exl-id: b84e48f9-bbb4-4b8b-9476-4bc1c455ecfd
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '208'
+source-wordcount: '204'
 ht-degree: 0%
 
 ---
 
+# [!UICONTROL Phone number] 데이터 유형
 
-# [!UICONTROL 전화 ] 번호 데이터 유형
-
-[!UICONTROL 전화 ] 번호는 전화 번호의 세부 사항을 설명하는 표준 XDM 데이터 유형입니다.
+[!UICONTROL Phone number] 은 전화 번호의 세부 사항을 설명하는 표준 XDM 데이터 유형입니다.
 
 <img src="../images/data-types/phone-number.png" width="600" /><br />
 
