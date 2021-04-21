@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;데이터 흐름;데이터 흐름;데이터 흐름;모니터링;데이터 흐름 모니터링;모니터 데이터 흐름;데이터 흐름 모니터링;데이터 흐름 모니터링;데이터 흐름;흐름;흐름 서비스
 solution: Experience Platform
 title: 데이터 흐름 개요
-topic: overview
+topic-legacy: overview
 description: 이 문서에서는 데이터 흐름(Adobe Experience Platform에서 데이터 흐름 사용 방법 표시)을 소개합니다.
+exl-id: 8fe08ffa-f095-4e9f-8bab-d060985f0236
 translation-type: tm+mt
-source-git-commit: 185c9c953a6ce923359e221d6f0f91b0f6614f05
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '238'
 ht-degree: 5%
 
 ---
-
 
 # 데이터 흐름 개요
 
@@ -32,4 +32,3 @@ Adobe Experience Platform에서 데이터는 다양한 소스에서 수집되어
 ## 데이터 흐름 모니터링
 
 데이터 흐름 모니터링은 플랫폼 API 또는 플랫폼 UI를 사용하여 수행할 수 있습니다. API를 사용하여 데이터 흐름을 모니터링하는 방법에 대해 알려면 [데이터 흐름 API 자습서](./api/monitor.md)를 참조하십시오. 플랫폼 UI 내에서 데이터 흐름을 모니터링하는 방법에 대해 알려면 [소스](./ui/monitor-sources.md) 데이터 흐름 모니터링과 [대상 데이터 흐름 모니터링](./ui/monitor-destinations.md)에 대한 자습서를 참조하십시오.
-
