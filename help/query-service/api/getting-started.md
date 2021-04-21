@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;쿼리 서비스;쿼리 서비스;;home;popular topics;query service;query
 solution: Experience Platform
 title: 쿼리 서비스 API 안내서
-topic: query templates
+topic-legacy: query templates
 description: 쿼리 서비스 API를 사용하면 개발자는 표준 SQL을 사용하여 Adobe Experience Platform 데이터를 쿼리할 수 있습니다. API를 사용하여 주요 작업을 수행하는 방법에 대해 알아보려면 이 안내서를 따르십시오.
+exl-id: 2f4a156b-5623-419a-a9b2-72310f755708
 translation-type: tm+mt
-source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '395'
 ht-degree: 1%
 
 ---
-
 
 # [!DNL Query Service] API 안내서
 
@@ -35,7 +35,7 @@ ht-degree: 1%
 
 [!DNL Experience Platform] API를 호출하려면 먼저 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 완료해야 합니다. 인증 자습서를 완료하면 아래와 같이 모든 [!DNL Platform] API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
 
-- 인증:`Bearer {ACCESS_TOKEN}`
+- Authorization: `Bearer {ACCESS_TOKEN}`
 - x-api-key:`{API_KEY}`
 - x-gw-ims-org-id:`{IMS_ORG}`
 
