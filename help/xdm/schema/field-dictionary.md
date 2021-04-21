@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;스키마;스키마;필드;표준 필드;표준 필드;사전;맵;InDesignInDesign
 solution: Experience Platform
 title: 경험 데이터 모델(XDM) 필드 사전
-topic: overviews
+topic-legacy: overviews
 description: XDM(경험 데이터 모델)은 Adobe Experience Platform 스키마를 작성할 때 사용할 수 있는 표준 필드 세트를 정의합니다. 이러한 필드를 사용하면 XDM을 사용하는 모든 서비스가 이러한 필드에서 제공하는 특정 정의를 명시적으로 이해하므로 플랫폼 서비스 간에 일관된 비헤이비어가 생성됩니다.
+exl-id: 9e183305-cd6c-444d-bd0b-f0cba3bcbe4d
 translation-type: tm+mt
-source-git-commit: cc1fa21df0bb2d49106775c75a0cb3c4f4d73941
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '25239'
+source-wordcount: '25238'
 ht-degree: 3%
 
 ---
-
 
 # XDM 필드 사전
 
@@ -466,7 +466,7 @@ ht-degree: 3%
 | xdm:subscriptionDate | 구독 날짜 | 최종 사용자가 알림 항목에 가입한 날짜 및 시간입니다. 최종 사용자가 가입 날짜가 있고 `unsubscriptiondetails/unsubscriptionDate`이(가) 비어 있는 경우 가입됩니다. | 문자열 | date-time | date-time | https://ns.adobe.com/experience/campaign/notificationsubscription, https://ns.adobe.com/experience/campaign/profile-all |
 | xdm:구독 | 구독 | 이 프로필에서 종료되거나 만료되거나 고갈된 구독을 포함할 수 있는 구독. | array |  | array | https://ns.adobe.com/experience/campaign/experienceevent-profile-subscriptions, https://ns.adobe.com/xdm/context/profile-subscriptions |
 | xdm:supplierName | 공급자 이름 | 제품의 배포자. | 문자열 |  | 문자열 | https://ns.adobe.com/xdm/context/product |
-| xdm:동기화된 리마케팅 대상 | 동기화된 세그먼트 | [!DNL Google]에 대한 RLSA 또는 Facebook용 WCA와 같이 플랫폼에서 고객을 빌드하기 위해 [!DNL adCloud] 파트너와 동기화된 검색 리타팅 엔티티 목록 | array |  | array | https://ns.adobe.com/experience/adcloud-profile, https://ns.adobe.com/experience/adcloud/profile-all |
+| xdm:동기화된 리마케팅 대상 | 동기화된 세그먼트 | [!DNL adCloud] 파트너와 동기화하여 플랫폼에서 고객을 빌드한 검색 리타팅 엔티티 목록(예: [!DNL Google]에 대한 RLSA 또는 Facebook에 대한 WCA) | array |  | array | https://ns.adobe.com/experience/adcloud-profile, https://ns.adobe.com/experience/adcloud/profile-all |
 | xdm:태그 | 태그 | 태그는 주어진 데이터 소스에서 해당 별칭을 사용하는 응용 프로그램에서 해당 별칭을 해석하는 방법을 나타내기 위해 사용됩니다.예:* `isAVID`:[!DNL Analytics] 방문자 ID를 나타내는 데이터 소스.* `isCRSKey`:CRS에서 키로 사용해야 하는 별칭을 나타내는 데이터 소스입니다.태그는 데이터 소스가 생성될 때 설정되지만 지정된 데이터 소스를 참조할 때 파이프라인 메시지에도 포함됩니다. | array |  | array | https://ns.adobe.com/experience/adcloud-experienceevent, https://ns.adobe.com/experience/analytics-experienceevent, https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/campaign/experienceevent-all, https://ns.adobe.com/experience/campaign/offer-detail, https://ns.adobe.com/experience/target-experienceevent, https://ns.adobe.com/xdm/context/experienceevent-technical-details |
 | xdm:templateID | 템플릿의 식별자 | 이 배달을 초기화하는 데 사용된 배달 템플릿의 ID입니다.Adobe Campaign에 사용된 템플릿 유형은 `messageClass`을(를) 사용하여 식별할 수 있습니다.* `messageClass` = `oneTime`:템플릿은 표준 배달 템플릿입니다.* `messageClass` = `continuous`:템플릿은 반복 배달입니다.* `messageClass` = `transactional`:템플릿은 트랜잭션 메시지 템플릿입니다. | 정수 |  | int | https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/campaign/experienceevent-all |
 | xdm:templateName | 배달 템플릿의 내부 이름 | 이 메시지가 시작된 캠페인 활동의 상위 엔티티(event_based 또는 continuous message Class의 경우)의 인적 친화적 식별자입니다. | 문자열 |  | 문자열 | https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/campaign/experienceevent-all |
