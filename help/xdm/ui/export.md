@@ -2,22 +2,22 @@
 solution: Experience Platform
 title: UI에서 XDM 스키마 내보내기
 description: Adobe Experience Platform 사용자 인터페이스에서 기존 스키마를 다른 샌드박스 또는 IMS 조직에 내보내는 방법을 알아봅니다.
-topic: user guide
+topic-legacy: user guide
 type: Tutorial
+exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
 translation-type: tm+mt
-source-git-commit: 8d6916890a94300dc68d018d56579df9616c177c
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '502'
+source-wordcount: '495'
 ht-degree: 0%
 
 ---
-
 
 # UI에서 XDM 스키마 내보내기
 
 스키마 라이브러리 내의 모든 리소스는 IMS 조직 내의 특정 샌드박스에 포함됩니다. 샌드박스와 IMS 조직 간에 경험 데이터 모델(XDM) 리소스를 공유하는 경우도 있습니다.
 
-이 요구 사항을 해결하기 위해 Adobe Experience Platform UI의 [!UICONTROL 스키마] 작업 영역을 사용하면 스키마 라이브러리 내의 모든 스키마에 대한 내보내기 페이로드를 생성할 수 있습니다. 그러면 이 페이로드를 스키마 레지스트리 API 호출에서 사용하여 스키마(및 모든 종속 리소스)를 대상 샌드박스 및 IMS 조직에 가져올 수 있습니다.
+이 요구 사항을 해결하기 위해 Adobe Experience Platform UI의 [!UICONTROL Schemas] 작업 영역에서 스키마 라이브러리 내의 모든 스키마에 대한 내보내기 페이로드를 생성할 수 있습니다. 그러면 이 페이로드를 스키마 레지스트리 API 호출에서 사용하여 스키마(및 모든 종속 리소스)를 대상 샌드박스 및 IMS 조직에 가져올 수 있습니다.
 
 >[!NOTE]
 >
@@ -29,13 +29,13 @@ ht-degree: 0%
 
 ## 내보내기 페이로드 생성
 
-플랫폼 UI의 왼쪽 탐색 영역에서 **[!UICONTROL 스키마]**&#x200B;를 선택합니다. [!UICONTROL 스키마] 작업 공간 내에서 내보낼 스키마를 찾아 [!DNL Schema Editor]에서 엽니다.
+플랫폼 UI의 왼쪽 탐색 영역에서 **[!UICONTROL Schemas]**&#x200B;을 선택합니다. [!UICONTROL Schemas] 작업 영역에서 내보낼 스키마를 찾아 [!DNL Schema Editor]에서 엽니다.
 
 >[!TIP]
 >
 >원하는 XDM 리소스를 찾는 방법에 대한 자세한 내용은 [XDM 리소스](./explore.md)에 대한 가이드를 참조하십시오.
 
-스키마를 연 후에는 캔버스 오른쪽 상단에 있는 **[!UICONTROL JSON 복사]** 아이콘(![아이콘 복사](../images/ui/export/icon.png))을 선택합니다.
+스키마를 연 후에는 캔버스 오른쪽 상단에 있는 **[!UICONTROL Copy JSON]** 아이콘(![복사 아이콘](../images/ui/export/icon.png))을 선택합니다.
 
 ![](../images/ui/export/copy-json.png)
 
@@ -213,4 +213,4 @@ ht-degree: 0%
 
 ## 다음 단계
 
-이 안내서를 따라 XDM 스키마를 다른 IMS 조직 또는 샌드박스로 성공적으로 내보냈습니다. [!UICONTROL 스키마] UI의 기능에 대한 자세한 내용은 [[!UICONTROL 스키마] UI 개요](./overview.md)를 참조하십시오.
+이 안내서를 따라 XDM 스키마를 다른 IMS 조직 또는 샌드박스로 성공적으로 내보냈습니다. [!UICONTROL Schemas] UI의 기능에 대한 자세한 내용은 [[!UICONTROL Schemas] UI 개요](./overview.md)를 참조하십시오.
