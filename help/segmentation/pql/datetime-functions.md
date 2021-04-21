@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;세그멘테이션;세그멘테이션 서비스;pql;PQL;프로필 쿼리 언어;날짜 및 시간 함수;datetime 함수;date;time
 solution: Experience Platform
 title: PQL 날짜 및 시간 함수
-topic: developer guide
+topic-legacy: developer guide
 description: 날짜 및 시간 함수는 PQL(프로필 쿼리 언어) 내의 값에 대한 날짜 및 시간 작업을 수행하는 데 사용됩니다.
+exl-id: 8cbffcb6-1c25-454f-8f02-eca602318e5e
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '508'
 ht-degree: 4%
 
 ---
-
 
 # 날짜 및 시간 함수
 
