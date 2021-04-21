@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;쿼리 서비스;쿼리 서비스;adobe defined functions;sql
 solution: Experience Platform
 title: 쿼리 서비스의 Adobe 정의 SQL 함수
-topic: functions
+topic-legacy: functions
 description: 이 문서에서는 Adobe Experience Platform 쿼리 서비스에서 사용할 수 있는 Adobe 정의 기능에 대한 정보를 제공합니다.
+exl-id: 275aa14e-f555-4365-bcd6-0dd6df2456b3
 translation-type: tm+mt
-source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '2913'
 ht-degree: 2%
 
 ---
-
 
 # 쿼리 서비스의 Adobe 정의 SQL 함수
 
@@ -883,7 +883,7 @@ LIMIT 10
 
 여기에 설명된 기능을 사용하여 [!DNL Query Service]을(를) 사용하여 자신의 [!DNL Experience Event] 데이터 세트에 액세스하는 쿼리를 작성할 수 있습니다. [!DNL Query Service]에서의 쿼리 작성에 대한 자세한 내용은 [쿼리 만들기](../best-practices/writing-queries.md)에 대한 설명서를 참조하십시오.
 
-## Journey Orchestration용
+## 추가 리소스
 
 다음 비디오에서는 Adobe Experience Platform 인터페이스와 PSQL 클라이언트에서 쿼리를 실행하는 방법을 보여 줍니다. 또한 이 비디오에서는 XDM 개체의 개별 속성과 관련된 예제와 Adobe 정의 함수를 사용하고 CREATE TABLE AS SELECT(CTAS SELECT) 를 사용합니다.
 
