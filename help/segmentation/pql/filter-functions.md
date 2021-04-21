@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;세그멘테이션;세그멘테이션 서비스;pql;PQL;프로필 쿼리 언어;필터 기능;필터
 solution: Experience Platform
 title: PQL 필터 함수
-topic: developer guide
+topic-legacy: developer guide
 description: 필터 함수는 PQL(프로필 쿼리 언어)의 배열 내에서 데이터를 필터링하는 데 사용됩니다.
+exl-id: 09d66be3-30dc-4488-84a1-cfd09c44470d
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '220'
 ht-degree: 4%
 
 ---
-
 
 # 필터 함수
 
