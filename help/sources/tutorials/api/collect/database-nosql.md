@@ -2,14 +2,14 @@
 keywords: Experience Platform;홈;인기 항목;데이터베이스 데이터베이스;타사 데이터베이스
 solution: Experience Platform
 title: 소스 커넥터 및 API를 사용하여 데이터베이스에서 데이터 수집
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: 이 자습서에서는 소스 커넥터 및 API를 사용하여 데이터베이스에서 데이터를 검색하고 이를 플랫폼에 인제스트하는 절차를 다룹니다.
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
 translation-type: tm+mt
-source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1651'
+source-wordcount: '1649'
 ht-degree: 1%
 
 ---
