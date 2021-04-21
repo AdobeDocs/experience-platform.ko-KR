@@ -6,18 +6,15 @@ topic-legacy: overview
 description: API 또는 사용자 인터페이스를 사용하여 Azure 이벤트 허브를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: b4d4bc7f-2241-482d-a5c2-4422c31705bf
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 6dac267be93241bffb4eb5092a6e8da5093c63a6
 workflow-type: tm+mt
-source-wordcount: '249'
+source-wordcount: '226'
 ht-degree: 0%
 
 ---
 
-# (베타) Azure 이벤트 허브 커넥터
 
->[!NOTE]
->
->Azure 이벤트 허브 커넥터가 베타에 있습니다. 베타 레이블이 지정된 커넥터 사용에 대한 자세한 내용은 [소스 개요](../../home.md#terms-and-conditions)를 참조하십시오.
+# [!DNL Azure Event Hubs] 커넥터
 
 Adobe Experience Platform은 AWS, [!DNL Google Cloud Platform] 및 [!DNL Azure] 같은 클라우드 공급자에 대한 기본 연결을 제공합니다. 이러한 시스템의 데이터를 [!DNL Platform]으로 가져올 수 있습니다.
 
