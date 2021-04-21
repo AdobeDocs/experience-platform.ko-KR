@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform;프로필;실시간 고객 프로필;문제 해결;API
 title: 프로필 시스템 작업 API 끝점
-topic: guide
+topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platform을 사용하면 더 이상 필요하지 않거나 실수로 추가된 실시간 고객 프로필 데이터를 제거하기 위해 프로필 저장소에서 데이터 세트 또는 일괄 처리를 삭제할 수 있습니다. 이를 위해서는 프로필 API를 사용하여 프로필 시스템 작업을 만들거나 요청을 삭제해야 합니다.
+exl-id: 75ddbf2f-9a54-424d-8569-d6737e9a590e
 translation-type: tm+mt
-source-git-commit: d2ace7cadb06f77bdf14b6a4ef83e879c4ca88fd
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1321'
 ht-degree: 2%
 
 ---
-
 
 # 프로필 시스템 작업 끝점(요청 삭제)
 
