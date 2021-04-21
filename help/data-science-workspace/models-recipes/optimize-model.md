@@ -2,17 +2,17 @@
 keywords: Experience Platform;최적화;모델;데이터 과학 작업 공간;인기 있는 주제;모델 통찰력
 solution: Experience Platform
 title: 모델 인사이트 프레임워크를 사용하여 모델 최적화
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Model Insights Framework는 데이터 과학자에게 실험을 기반으로 최적의 기계 학습 모델을 위한 신속하고 정확한 선택을 할 수 있는 데이터 과학 작업 공간의 툴을 제공합니다.
+exl-id: f989a3f1-6322-47c6-b7d6-6a828766053f
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1265'
 ht-degree: 0%
 
 ---
-
 
 # Model Insights 프레임워크를 사용하여 모델 최적화
 
@@ -89,7 +89,7 @@ evaluation.metrics=com.adobe.platform.ml.impl.Constants.FSCORE
 
 >[!IMPORTANT]
 >
->`MLMetric` 클래스의 경우 새 `MLMetric`을(를) 만들 때 `"measures"`을 사용하지 마십시오. 그렇지 않으면 지표가 사용자 지정 평가 지표 테이블에 채워지지 않습니다.`valueType`
+>`MLMetric` 클래스의 경우 새 `MLMetric`을 만들 때 `valueType`에 `"measures"`을 사용하지 마십시오. 그렇지 않으면 지표가 사용자 지정 평가 지표 테이블에 채워지지 않습니다.
 >  
 > 방법: `metrics.add(new MLMetric("MAPE", mape, "double"))`\
 > 그렇지 않음:`metrics.add(new MLMetric("MAPE", mape, "measures"))`
