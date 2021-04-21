@@ -2,17 +2,17 @@
 keywords: Experience Platform;홈;인기 항목;PostgreSQL;postgresql;PSQL;psql
 solution: Experience Platform
 title: Flow 서비스 API를 사용하여 PostgreSQL 소스 연결 만들기
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Flow Service API를 사용하여 Adobe Experience Platform을 PostgreSQL에 연결하는 방법을 알아봅니다.
+exl-id: 5225368a-08c1-421d-aec2-d50ad09ae454
 translation-type: tm+mt
-source-git-commit: 8851e11e956b393e56714d4d48870b7f68947c18
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '562'
+source-wordcount: '560'
 ht-degree: 2%
 
 ---
-
 
 # [!DNL Flow Service] API를 사용하여 [!DNL PostgreSQL] 소스 연결 만들기
 
