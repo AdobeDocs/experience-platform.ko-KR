@@ -2,13 +2,13 @@
 keywords: Experience Platform;홈;인기 항목;세그멘테이션 서비스;세그멘테이션 서비스;사용 안내서;세그멘테이션 ui 안내서;세그먼트 빌더;세그먼트 빌더;Segmentation Service;segmentation Service;segmentation-service;segmentation builder;segmentation builder;
 solution: Experience Platform
 title: 세그먼트 빌더 UI 안내서
-topic: ui guide
+topic-legacy: ui guide
 description: Adobe Experience Platform UI의 세그먼트 빌더는 프로필 데이터 요소와 상호 작용할 수 있는 풍부한 작업 공간을 제공합니다. 작업 영역은 데이터 속성을 나타내는 데 사용되는 드래그 앤 드롭 타일과 같이 규칙을 작성하고 편집하기 위한 직관적인 컨트롤을 제공합니다.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 translation-type: tm+mt
-source-git-commit: bad293cf25b955496897d895169ec494416e9787
+source-git-commit: 875d3838e16a3b79fa9ab3ec61e4ffb15ea1cf20
 workflow-type: tm+mt
-source-wordcount: '1942'
+source-wordcount: '1940'
 ht-degree: 0%
 
 ---
@@ -117,7 +117,7 @@ ht-degree: 0%
 
 ![](../images/ui/segment-builder/filled-aggregation.png)
 
-### 카운트 함수
+### 카운트 함수 {#count-functions}
 
 세그먼트 빌더의 카운트 함수는 지정된 이벤트를 찾고 완료한 횟수를 계산하는 데 사용됩니다. 세그먼트 빌더에서 지원되는 개수 함수는 &quot;최소&quot;, &quot;최대&quot;, &quot;정확히&quot;, &quot;사이&quot; 및 &quot;모두&quot;입니다.
 
