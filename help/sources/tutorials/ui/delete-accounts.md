@@ -3,20 +3,20 @@ keywords: Experience Platform;home;popular topics계정 삭제
 description: Adobe Experience Platform의 소스 커넥터는 예약된 기준에 따라 외부 소스 데이터를 인제스트하는 기능을 제공합니다. 이 자습서에서는 소스 작업 영역에서 계정을 삭제하는 절차를 제공합니다.
 solution: Experience Platform
 title: UI에서 소스 연결 계정 삭제
-topic: overview
+topic-legacy: overview
 type: Tutorial
+exl-id: 7cb65d17-d99d-46ff-b28f-7469d0b57d07
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '455'
+source-wordcount: '439'
 ht-degree: 0%
 
 ---
 
-
 # 원본 연결 계정 삭제
 
-Adobe Experience Platform의 소스 커넥터는 예약된 기준에 따라 외부 소스 데이터를 인제스트하는 기능을 제공합니다. 이 자습서에서는 **[!UICONTROL 소스]** 작업 영역에서 계정을 삭제하는 절차를 제공합니다.
+Adobe Experience Platform의 소스 커넥터는 예약된 기준에 따라 외부 소스 데이터를 인제스트하는 기능을 제공합니다. 이 자습서에서는 **[!UICONTROL Sources]** 작업 영역에서 계정을 삭제하는 절차를 제공합니다.
 
 ## 시작하기
 
@@ -29,9 +29,9 @@ Adobe Experience Platform의 소스 커넥터는 예약된 기준에 따라 외�
 
 ## UI를 사용하여 계정 삭제
 
-[Adobe Experience Platform](https://platform.adobe.com)에 로그인한 다음 왼쪽 탐색 막대에서 **[!UICONTROL 소스]**&#x200B;를 선택하여 **[!UICONTROL 소스]** 작업 영역에 액세스합니다. **[!UICONTROL 카탈로그]** 화면에는 계정 및 데이터 흐름을 만들 수 있는 다양한 소스가 표시됩니다. 각 소스에는 연관된 기존 계정 및 데이터 흐름 수가 표시됩니다.
+[Adobe Experience Platform](https://platform.adobe.com)에 로그인한 다음 왼쪽 탐색 막대에서 **[!UICONTROL Sources]**&#x200B;를 선택하여 **[!UICONTROL Sources]** 작업 영역에 액세스합니다. **[!UICONTROL Catalog]** 화면에는 계정 및 데이터 흐름을 만들 수 있는 다양한 소스가 표시됩니다. 각 소스에는 연관된 기존 계정 및 데이터 흐름 수가 표시됩니다.
 
-**[!UICONTROL 계정]**&#x200B;을 선택하여 **[!UICONTROL 계정]** 페이지에 액세스합니다.
+**[!UICONTROL Accounts]** 페이지에 액세스하려면 **[!UICONTROL Accounts]**&#x200B;을 선택합니다.
 
 ![카탈로그 계정](../../images/tutorials/delete-accounts/catalog.png)
 
@@ -47,18 +47,18 @@ Adobe Experience Platform의 소스 커넥터는 예약된 기준에 따라 외�
 
 ![데이터 흐름 정렬](../../images/tutorials/delete-accounts/sort.png)
 
-선택한 계정에 대한 정보가 포함된 **[!UICONTROL 속성]** 패널이 화면의 오른쪽에 나타납니다.
+선택한 계정에 대한 정보가 포함된 **[!UICONTROL Properties]** 패널이 화면의 오른쪽에 나타납니다.
 
-삭제할 계정의 이름 옆에 줄임표(`...`)를 선택합니다. **[!UICONTROL 데이터 추가]**, **[!UICONTROL 세부 사항 편집]** 및 **[!UICONTROL 삭제]**&#x200B;에 대한 옵션을 제공하는 팝업 패널이 나타납니다. **[!UICONTROL 삭제]**&#x200B;를 선택하여 계정을 삭제합니다.
+삭제할 계정의 이름 옆에 줄임표(`...`)를 선택합니다. **[!UICONTROL Add data]**, **[!UICONTROL Edit details]** 및 **[!UICONTROL Delete]**&#x200B;에 대한 옵션을 제공하는 팝업 패널이 나타납니다. 계정을 삭제하려면 **[!UICONTROL Delete]**&#x200B;을(를) 선택합니다.
 
 ![데이터 흐름 정렬](../../images/tutorials/delete-accounts/delete.png)
 
-최종 확인 대화 상자가 나타나면 **[!UICONTROL 삭제]**&#x200B;를 선택하여 프로세스를 완료합니다.
+최종 확인 대화 상자가 나타나면 **[!UICONTROL Delete]**&#x200B;을 선택하여 프로세스를 완료합니다.
 
 ![delete](../../images/tutorials/delete-accounts/confirm.png)
 
 ## 다음 단계
 
-이 자습서를 따라 **[!UICONTROL 소스]** 작업 영역을 사용하여 기존 계정을 성공적으로 삭제합니다.
+이 튜토리얼을 따라 **[!UICONTROL Sources]** 작업 영역을 사용하여 기존 계정을 성공적으로 삭제했습니다.
 
 [!DNL Flow Service] API를 사용하여 프로그래밍 방식으로 이러한 작업을 수행하는 방법에 대한 단계는 [Flow Service API](../../tutorials/api/delete.md)를 사용하여 연결을 삭제하는 튜토리얼을 참조하십시오.
