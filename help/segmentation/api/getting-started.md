@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;세그멘테이션;세그멘테이션 서비스;api;
 solution: Experience Platform
 title: 세그멘테이션 서비스 API 시작하기
-topic: developer guide
+topic-legacy: developer guide
 description: 다음 설명서는 세그멘테이션 API를 성공적으로 사용하기 위해 알아야 하는 추가 정보를 제공합니다.
+exl-id: 41c0e50b-afed-45b8-85d7-a0c84ae090f5
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '329'
 ht-degree: 0%
 
 ---
-
 
 # 세그멘테이션 서비스 API 시작 {#getting-started}
 
@@ -34,7 +34,7 @@ Adobe Experience Platform [!DNL Segmentation Service]을(를) 사용하면 [!DNL
 
 또한 API 설명서는 [!DNL Platform] 끝점을 성공적으로 호출하려면 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 완료해야 합니다. 인증 자습서를 완료하면 아래와 같이 [!DNL Experience Platform] API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
 
-- 인증:`Bearer {ACCESS_TOKEN}`
+- Authorization: `Bearer {ACCESS_TOKEN}`
 - x-api-key:`{API_KEY}`
 - x-gw-ims-org-id:`{IMS_ORG}`
 
