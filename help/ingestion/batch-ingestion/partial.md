@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;popular topics;batch ingestion;batch ingestion;partial ingestion;Retrieve error;부분 일괄 처리 통합;부분 일괄 처리 통합;일부분;통합;통합;통합
 solution: Experience Platform
 title: 부분 일괄 처리 통합 개요
-topic: overview
+topic-legacy: overview
 description: 이 문서에서는 부분 일괄 처리를 관리하는 자습서를 제공합니다.
+exl-id: 25a34da6-5b7c-4747-8ebd-52ba516b9dc3
 translation-type: tm+mt
-source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '945'
+source-wordcount: '886'
 ht-degree: 0%
 
 ---
-
 
 # 부분 일괄 처리
 
@@ -56,7 +56,7 @@ ht-degree: 0%
 
 부분 처리가 활성화된 새 배치를 만들 수 있습니다.
 
-새 배치를 만들려면 [일괄 처리 통합 개발자 안내서](./api-overview.md)의 단계를 따릅니다. **[!UICONTROL 일괄 처리 만들기]** 단계에 도달하면 요청 본문 내에 다음 필드를 추가합니다.
+새 배치를 만들려면 [일괄 처리 통합 개발자 안내서](./api-overview.md)의 단계를 따릅니다. **[!UICONTROL Create batch]** 단계에 도달하면 요청 본문 내에 다음 필드를 추가합니다.
 
 ```json
 {
@@ -77,21 +77,21 @@ ht-degree: 0%
 >
 >이 섹션에서는 UI를 사용하여 부분 일괄 처리를 활성화하는 방법에 대해 설명합니다. API를 사용하여 부분 일괄 처리를 이미 활성화한 경우 다음 섹션으로 건너뛸 수 있습니다.
 
-[!DNL Platform] UI를 통해 부분 소집에 대한 일괄 처리를 활성화하려면 소스 연결을 통해 새 일괄 처리를 만들거나, 기존 데이터 세트에 새 일괄 처리를 만들거나, &quot;[!UICONTROL CSV를 XDM 흐름]&quot;을 통해 새 일괄 처리를 만들 수 있습니다.
+[!DNL Platform] UI를 통해 부분 소집에 대한 일괄 처리를 활성화하려면 소스 연결을 통해 새 일괄 처리를 만들거나 기존 데이터 세트에 새 일괄 처리를 만들거나 &quot;[!UICONTROL Map CSV to XDM flow]&quot;을(를) 통해 새 일괄 처리를 만들 수 있습니다.
 
 ### 새 소스 연결 {#new-source} 만들기
 
-새 소스 연결을 만들려면 [소스 개요](../../sources/home.md)에 나열된 단계를 수행합니다. **[!UICONTROL 데이터 흐름 세부 정보]** 단계에 도달하면 **[!UICONTROL 부분 통합]** 및 **[!UICONTROL 오류 진단]** 필드를 참고합니다.
+새 소스 연결을 만들려면 [소스 개요](../../sources/home.md)에 나열된 단계를 수행합니다. **[!UICONTROL Dataflow detail]** 단계에 도달하면 **[!UICONTROL Partial ingestion]** 및 **[!UICONTROL Error diagnostics]** 필드를 기록해 두십시오.
 
 ![](../images/batch-ingestion/partial-ingestion/configure-batch.png)
 
-**[!UICONTROL 부분 통합]** 토글을 사용하면 부분 일괄 처리 통합 사용을 활성화 또는 비활성화할 수 있습니다.
+**[!UICONTROL Partial ingestion]** 토글을 사용하면 부분 일괄 처리 통합 사용을 활성화 또는 비활성화할 수 있습니다.
 
-**[!UICONTROL 오류 진단]** 토글은 **[!UICONTROL 부분 통합]** 토글이 꺼져 있을 때만 나타납니다. 이 기능을 사용하면 [!DNL Platform]에서 인제스트된 배치에 대한 자세한 오류 메시지를 생성할 수 있습니다. **[!UICONTROL 부분 통합]** 토글이 켜져 있으면 향상된 오류 진단이 자동으로 적용됩니다.
+**[!UICONTROL Error diagnostics]** 토글은 **[!UICONTROL Partial ingestion]** 토글이 꺼져 있을 때만 표시됩니다. 이 기능을 사용하면 [!DNL Platform]에서 인제스트된 배치에 대한 자세한 오류 메시지를 생성할 수 있습니다. **[!UICONTROL Partial ingestion]** 토글이 켜져 있으면 향상된 오류 진단이 자동으로 적용됩니다.
 
 ![](../images/batch-ingestion/partial-ingestion/configure-batch-partial-ingestion-focus.png)
 
-**[!UICONTROL 오류 임계값]**&#x200B;을 사용하면 전체 일괄 처리가 실패하기 전에 허용되는 오류 백분율을 설정할 수 있습니다. 기본적으로 이 값은 5%로 설정됩니다.
+**[!UICONTROL Error threshold]**&#x200B;을 사용하면 전체 배치가 실패하기 전에 허용되는 오류 백분율을 설정할 수 있습니다. 기본적으로 이 값은 5%로 설정됩니다.
 
 ### 기존 데이터 집합 {#existing-dataset} 사용
 
@@ -99,29 +99,29 @@ ht-degree: 0%
 
 ![](../images/batch-ingestion/partial-ingestion/monitor-dataset.png)
 
-**[!UICONTROL 부분 통합]** 토글을 사용하면 부분 일괄 처리 통합 사용을 활성화 또는 비활성화할 수 있습니다.
+**[!UICONTROL Partial ingestion]** 토글을 사용하면 부분 일괄 처리 통합 사용을 활성화 또는 비활성화할 수 있습니다.
 
-**[!UICONTROL 오류 진단]** 토글은 **[!UICONTROL 부분 통합]** 토글이 꺼져 있을 때만 나타납니다. 이 기능을 사용하면 [!DNL Platform]에서 인제스트된 배치에 대한 자세한 오류 메시지를 생성할 수 있습니다. **[!UICONTROL 부분 통합]** 토글이 켜져 있으면 향상된 오류 진단이 자동으로 적용됩니다.
+**[!UICONTROL Error diagnostics]** 토글은 **[!UICONTROL Partial ingestion]** 토글이 꺼져 있을 때만 표시됩니다. 이 기능을 사용하면 [!DNL Platform]에서 인제스트된 배치에 대한 자세한 오류 메시지를 생성할 수 있습니다. **[!UICONTROL Partial ingestion]** 토글이 켜져 있으면 향상된 오류 진단이 자동으로 적용됩니다.
 
 ![](../images/batch-ingestion/partial-ingestion/monitor-dataset-partial-ingestion-focus.png)
 
-**[!UICONTROL 오류 임계값]**&#x200B;을 사용하면 전체 일괄 처리가 실패하기 전에 허용되는 오류 백분율을 설정할 수 있습니다. 기본적으로 이 값은 5%로 설정됩니다.
+**[!UICONTROL Error threshold]**&#x200B;을 사용하면 전체 배치가 실패하기 전에 허용되는 오류 백분율을 설정할 수 있습니다. 기본적으로 이 값은 5%로 설정됩니다.
 
 이제 **데이터 추가** 단추를 사용하여 데이터를 업로드할 수 있으며 부분 섭취를 사용하여 인제스트됩니다.
 
-### &quot;[!UICONTROL CSV를 XDM 스키마]&quot; 흐름 {#map-flow} 사용
+### &quot;[!UICONTROL Map CSV to XDM schema]&quot; 흐름 {#map-flow} 사용
 
-&quot;[!UICONTROL CSV를 XDM 스키마]&quot; 흐름을 사용하려면 [CSV 파일 매핑 자습서](../tutorials/map-a-csv-file.md)에 나열된 단계를 따르십시오. **[!UICONTROL 데이터 추가]** 단계에 도달하면 **[!UICONTROL 부분 통합]** 및 **[!UICONTROL 오류 진단]** 필드에 주의하십시오.
+&quot;[!UICONTROL Map CSV to XDM schema]&quot; 흐름을 사용하려면 [CSV 파일 매핑 자습서](../tutorials/map-a-csv-file.md)에 나열된 단계를 따르십시오. **[!UICONTROL Add data]** 단계에 도달하면 **[!UICONTROL Partial ingestion]** 및 **[!UICONTROL Error diagnostics]** 필드를 기록해 두십시오.
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow.png)
 
-**[!UICONTROL 부분 통합]** 토글을 사용하면 부분 일괄 처리 통합 사용을 활성화 또는 비활성화할 수 있습니다.
+**[!UICONTROL Partial ingestion]** 토글을 사용하면 부분 일괄 처리 통합 사용을 활성화 또는 비활성화할 수 있습니다.
 
-**[!UICONTROL 오류 진단]** 토글은 **[!UICONTROL 부분 통합]** 토글이 꺼져 있을 때만 나타납니다. 이 기능을 사용하면 [!DNL Platform]에서 인제스트된 배치에 대한 자세한 오류 메시지를 생성할 수 있습니다. **[!UICONTROL 부분 통합]** 토글이 켜져 있으면 향상된 오류 진단이 자동으로 적용됩니다.
+**[!UICONTROL Error diagnostics]** 토글은 **[!UICONTROL Partial ingestion]** 토글이 꺼져 있을 때만 표시됩니다. 이 기능을 사용하면 [!DNL Platform]에서 인제스트된 배치에 대한 자세한 오류 메시지를 생성할 수 있습니다. **[!UICONTROL Partial ingestion]** 토글이 켜져 있으면 향상된 오류 진단이 자동으로 적용됩니다.
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow-partial-ingestion-focus.png)
 
-**[!UICONTROL 오류]** 임계값을 사용하면 전체 배치가 실패하기 전에 허용되는 오류 비율을 설정할 수 있습니다. 기본적으로 이 값은 5%로 설정됩니다.
+**[!UICONTROL Error threshold]** 전체 배치가 실패하기 전에 허용되는 오류 백분율을 설정할 수 있습니다. 기본적으로 이 값은 5%로 설정됩니다.
 
 ## 다음 단계 {#next-steps}
 
