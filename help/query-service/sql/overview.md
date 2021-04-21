@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;쿼리 서비스;sql;sql;reference;home;popular topics;query service;sql;reference;
 solution: Experience Platform
 title: 쿼리 서비스 SQL 참조
-topic: reference
+topic-legacy: reference
 description: Adobe Experience Platform 쿼리 서비스는 SELECT 문 및 기타 제한된 명령에 표준 ANSI SQL을 사용하는 기능을 제공합니다.
+exl-id: 81d7d440-c51b-46a8-8690-0c0637826077
 translation-type: tm+mt
-source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '78'
 ht-degree: 0%
 
 ---
-
 
 # 쿼리 서비스 SQL 참조
 
