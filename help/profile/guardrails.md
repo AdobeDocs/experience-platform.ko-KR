@@ -3,17 +3,17 @@ keywords: Experience Platform;프로필;실시간 고객 프로필;문제 해결
 title: 실시간 고객 프로필 데이터 보증
 solution: Experience Platform
 product: experience platform
-topic: guide
+topic-legacy: guide
 type: Documentation
-description: 'Adobe Experience Platform은 실시간 고객 프로필에서 지원할 수 없는 데이터 모델을 만들지 않도록 하기 위해 일련의 지침을 제공합니다. 이 문서에서는 프로필 데이터를 모델링할 때 잊지 않도록 하기 위한 모범 사례 및 제한 사항에 대해 간략히 설명합니다. '
+description: Adobe Experience Platform은 실시간 고객 프로필에서 지원할 수 없는 데이터 모델을 만들지 않도록 하기 위해 일련의 지침을 제공합니다. 이 문서에서는 프로필 데이터를 모델링할 때 잊지 않도록 하기 위한 모범 사례 및 제한 사항에 대해 간략히 설명합니다.
+exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
 translation-type: tm+mt
-source-git-commit: ba1cbed3b5e3f3a8879b3882856a03ef4be9b96a
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1456'
 ht-degree: 1%
 
 ---
-
 
 # [!DNL Real-time Customer Profile] 데이터의 가드레일
 
@@ -78,7 +78,7 @@ Adobe Experience Platform은 [!DNL Real-time Customer Profile]에서 지원할 �
 | --- | --- | --- | --- |
 | [!DNL XDM Individual Profile] 개체가 아닌 개체에 대해 시간 시리즈 데이터가 허용되지 않음 | 0 | 하드 | **프로필 서비스의 비엔티티에 대해서는 시간 시리즈 데이터[!DNL XDM Individual Profile] 를 사용할 수 없습니다.** 시간 시리즈 데이터 세트가 비[!DNL XDM Individual Profile] ID와 연결된 경우 데이터 세트를 사용할 수 없습니다 [!DNL Profile]. |
 | 중첩 관계 없음 | 0 | 소프트 | **두 개의 비스키마 간에 관계를 만들면 [!DNL XDM Individual Profile] 안 됩니다.** 관계 생성 기능은  [!DNL Profile] 조합 스키마의 일부가 아닌 스키마에 대해서는 권장되지 않습니다. |
-| 기본 ID 필드에 대한 최대 JSON 깊이 | 4 | 소프트 | **기본 ID 필드에 대한 권장 최대 JSON 깊이는 4입니다.** 즉, 중첩된 스키마에서는 필드가 깊이 4개 이상 중첩된 경우 기본 ID로 선택하지 않아야 합니다. 4번째 중첩 수준에 있는 필드는 기본 ID로 사용할 수 있습니다. |
+| 기본 ID 필드의 최대 JSON 깊이 | 4 | 소프트 | **기본 ID 필드에 대한 권장 최대 JSON 깊이는 4입니다.** 즉, 중첩된 스키마에서는 필드가 깊이 4개 이상 중첩된 경우 기본 ID로 선택하지 않아야 합니다. 4번째 중첩 수준에 있는 필드는 기본 ID로 사용할 수 있습니다. |
 
 ## 데이터 크기 가설
 
