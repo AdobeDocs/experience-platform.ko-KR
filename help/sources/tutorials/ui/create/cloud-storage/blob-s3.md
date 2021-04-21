@@ -2,17 +2,17 @@
 keywords: Experience Platform;홈;인기 항목;Amazon S3;Azure Blob
 solution: Experience Platform
 title: UI에서 Azure Blob 또는 Amazon S3 소스 연결 만들기
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Adobe Experience Platform UI를 사용하여 Azure Blob 또는 Amazon S3 소스 연결을 만드는 방법을 알아봅니다.
+exl-id: de2db0cb-3ce4-46d1-96c4-00f779f81670
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '144'
 ht-degree: 0%
 
 ---
-
 
 # UI에 [!DNL Azure Blob] 또는 [!DNL Amazon] S3 소스 연결 만들기
 
