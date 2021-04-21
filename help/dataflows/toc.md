@@ -1,11 +1,10 @@
 ---
-product: experience-platform
 audience: user
 user-guide-title: 데이터 흐름 안내서
 user-guide-description: 데이터 흐름은 플랫폼 간에 데이터를 이동하는 데이터 작업을 나타냅니다.
-feature: Data Management, Data Ingestion
+feature: 데이터 관리, 데이터 통합
 translation-type: tm+mt
-source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '47'
 ht-degree: 31%
