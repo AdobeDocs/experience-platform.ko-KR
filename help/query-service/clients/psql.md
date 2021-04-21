@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;popular topics;PSQL;쿼리 서비스에 대한 psqlconnect;쿼리 서비스;쿼리 서비스;
 solution: Experience Platform
 title: 쿼리 서비스에 PSQL 연결
-topic: connect
-description: 'PSQL은 컴퓨터에 PostgreSQL을 설치할 때 제공되는 명령줄 인터페이스입니다. 다음 지침에 따라 설치할 수 있습니다. '
+topic-legacy: connect
+description: PSQL은 컴퓨터에 PostgreSQL을 설치할 때 제공되는 명령줄 인터페이스입니다. 다음 지침에 따라 설치할 수 있습니다.
+exl-id: ceb07128-409e-42be-8143-0cf681d435de
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '247'
+source-wordcount: '243'
 ht-degree: 1%
 
 ---
-
 
 # 쿼리 서비스에 PSQL 연결
 
@@ -21,11 +21,11 @@ PSQL은 컴퓨터에 [!DNL PostgreSQL]을(를) 설치할 때 설치되는 명령
 >
 > 이 안내서에서는 사용자가 이미 [!DNL PSQL]에 액세스할 수 있으며 이 기능을 사용하는 방법에 익숙하다고 가정합니다. [!DNL PSQL]에 대한 자세한 내용은 [공식 [!DNL PSQL] 설명서](https://www.postgresql.org/docs/current/app-psql.html)을 참조하십시오.
 
-컴퓨터에 PSQL을 설치한 후 쿼리 서비스에 PSQL을 연결할 준비가 되었습니다. [!DNL Platform] UI로 돌아간 다음 **[!UICONTROL 쿼리]**&#x200B;를 선택하고 **[!UICONTROL 자격 증명]**&#x200B;을 차례로 선택합니다.
+컴퓨터에 PSQL을 설치한 후 쿼리 서비스에 PSQL을 연결할 준비가 되었습니다. [!DNL Platform] UI로 돌아간 다음 **[!UICONTROL Queries]**, **[!UICONTROL Credentials]** 순으로 선택합니다.
 
 ![이미지](../images/clients/psql/connect-bi.png)
 
-**[!UICONTROL PSQL 명령]** 섹션을 복사할 아이콘을 선택한 다음 Enter 키를 누르기 전에 명령 문자열을 터미널 또는 명령줄 창에 붙여넣습니다.
+**[!UICONTROL PSQL Command]** 레이블이 있는 섹션을 복사할 아이콘을 선택한 다음 Enter 키를 누르기 전에 명령 문자열을 터미널 또는 명령줄 창에 붙여넣습니다.
 
 >[!IMPORTANT]
 >
