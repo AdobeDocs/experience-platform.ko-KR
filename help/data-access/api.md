@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;데이터 액세스;Python sdk;spark sdk;데이터 액세스 api;내보내기;Export;home;popular topics;data access;spark sdk;data access api;export;export
 solution: Experience Platform
 title: 데이터 액세스 API 안내서
-topic: developer guide
+topic-legacy: developer guide
 description: 데이터 액세스 API는 Experience Platform 내에서 인제스트된 데이터 세트의 검색 기능과 액세스 가능성에 초점을 맞춘 RESTful 인터페이스를 개발자에게 제공하여 Adobe Experience Platform을 지원합니다.
+exl-id: 278ec322-dafa-4e3f-ae45-2d20459c5653
 translation-type: tm+mt
-source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '528'
 ht-degree: 5%
 
 ---
-
 
 # 데이터 액세스 API 안내서
 
@@ -29,7 +29,7 @@ Swagger API 참조 설명서는 [여기](https://www.adobe.io/apis/experiencepla
 
 | 용어 | 설명 |
 | ----- | ------------ |
-| 데이터 집합 | 스키마 및 필드를 포함하는 데이터 컬렉션입니다. |
+| 데이터 세트 | 스키마 및 필드를 포함하는 데이터 컬렉션입니다. |
 | 일괄 처리 | 일정 기간 동안 수집되어 하나의 단위로 함께 처리된 데이터 집합. |
 
 ## 일괄 처리 내의 파일 목록 검색
