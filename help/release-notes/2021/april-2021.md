@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: April 21, 2021
 author: ens72741
 translation-type: tm+mt
-source-git-commit: 875d3838e16a3b79fa9ab3ec61e4ffb15ea1cf20
+source-git-commit: 0c9b60fe0777286819841c520a41007634622578
 workflow-type: tm+mt
-source-wordcount: '728'
+source-wordcount: '729'
 ht-degree: 12%
 
 ---
@@ -65,7 +65,7 @@ Attribution AI는 전환 이벤트로 연결되는 터치포인트에 크레딧�
 
 ## 세분화 서비스 {#segmentation}
 
-Adobe Experience Platform 세그멘테이션 서비스는 세그먼트를 작성하고 [!DNL Real-time Customer Profile] 데이터에서 대상을 생성할 수 있는 사용자 인터페이스와 RESTful API를 제공합니다. 이러한 세그먼트는 Adobe 응용 프로그램에서 쉽게 액세스할 수 있도록 [!DNL Platform]에 중앙에서 구성 및 유지 관리됩니다.
+Adobe Experience Platform 세그멘테이션 서비스는 세그먼트를 작성하고 [!DNL Real-time Customer Profile] 데이터에서 대상을 생성할 수 있는 사용자 인터페이스와 RESTful API를 제공합니다. 이러한 세그먼트는 중앙에 구성되고 플랫폼에 유지 관리되므로 모든 Adobe 애플리케이션에서 쉽게 액세스할 수 있습니다.
 
 [!DNL Segmentation Service] 고객 기반 내에서 마케팅 가능한 사용자 그룹을 구분하는 기준을 설명하여 특정 프로필 하위 집합을 정의합니다. 세그먼트는 브랜드 고객과의 상호 작용을 나타내는 레코드 데이터(인구 통계 정보 등) 또는 시간 시리즈 이벤트를 기반으로 할 수 있습니다.
 
@@ -76,7 +76,6 @@ Adobe Experience Platform 세그멘테이션 서비스는 세그먼트를 작성
 | 추가 집계 함수 | 세그먼트 빌더에 카운트 함수가 추가되었습니다. 카운트 함수를 사용하면 지정된 이벤트가 수행된 횟수를 카운트할 수 있습니다. 카운트 함수에 대한 자세한 내용은 [세그먼트 빌더 안내서](../../segmentation/ui/segment-builder.md#count-functions)의 카운트 함수 섹션에 있습니다. |
 
 [!DNL Segmentation Service]에 대한 자세한 내용은 [세그멘테이션 개요](../../segmentation/home.md)를 참조하십시오.
-
 
 ## [!DNL Sources] {#sources}
 
