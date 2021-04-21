@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;e커머스;e커머스;home;popular topics;eCommerce;
 solution: Experience Platform
 title: Flow Service API를 사용하여 e커머스 연결 탐색
-topic: overview
+topic-legacy: overview
 description: 이 자습서는 Flow Service API를 사용하여 eCommerce 연결을 탐색합니다.
+exl-id: 832ce399-6c9f-40da-8e7c-5434503c16b6
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '573'
+source-wordcount: '562'
 ht-degree: 2%
 
 ---
-
 
 # [!DNL Flow Service] API를 사용하여 전자 상거래 연결 살펴보기
 
@@ -66,7 +66,7 @@ GET /connections/{CONNECTION_ID}/explore?objectType=root
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{CONNECTION_ID}` | **[!UICONTROL eCommerce]** 연결 ID입니다. |
+| `{CONNECTION_ID}` | **[!UICONTROL eCommerce]** 연결 ID. |
 
 **요청**
 
@@ -81,7 +81,7 @@ curl -X GET \
 
 **응답**
 
-성공적인 응답은 **[!UICONTROL eCommerce]** 연결에서 테이블 배열을 반환합니다. [!DNL Platform]에 가져올 테이블을 찾고 해당 `path` 속성을 적어 구조를 검사하기 위해 다음 단계에서 제공해야 합니다.
+성공적인 응답은 **[!UICONTROL eCommerce]** 연결에서 표 배열을 반환합니다. [!DNL Platform]에 가져올 테이블을 찾고 해당 `path` 속성을 적어 구조를 검사하기 위해 다음 단계에서 제공해야 합니다.
 
 ```json
 [
@@ -198,4 +198,4 @@ curl -X GET \
 
 ## 다음 단계
 
-이 튜토리얼을 따라 **[!UICONTROL eCommerce]** 연결을 살펴보고, [!DNL Platform]에 인제스트할 테이블의 경로를 발견했으며, 해당 구조에 대한 정보를 얻었습니다. 다음 자습서에서는 이 정보를 사용하여 [eCommerce 데이터를 수집하고 플랫폼](../collect/ecommerce.md)에 가져올 수 있습니다.
+이 튜토리얼을 따라 **[!UICONTROL eCommerce]** 연결을 살펴보고, [!DNL Platform]에 인제스트할 테이블의 경로를 찾았으며, 해당 구조에 대한 정보를 얻었습니다. 다음 자습서에서는 이 정보를 사용하여 [eCommerce 데이터를 수집하고 플랫폼](../collect/ecommerce.md)에 가져올 수 있습니다.
