@@ -2,20 +2,20 @@
 keywords: Experience Platform;홈;인기 항목;데이터 액세스;python sdk;spark sdk;data access api
 solution: Experience Platform
 title: 데이터 액세스 개요
-topic: overview
+topic-legacy: overview
 description: 데이터 액세스는 데이터 인제스트된 플랫폼 데이터 집합의 검색 기능과 액세스 가능성에 초점을 맞춘 툴을 사용자에게 제공하여 Adobe Experience Platform을 지원합니다.
+exl-id: 76e3585b-44df-412e-9ac3-aeca5f85d403
 translation-type: tm+mt
-source-git-commit: 37c1c98ccba50fa917acc5e93763294f4dde5c36
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '185'
 ht-degree: 4%
 
 ---
 
+# [!DNL Data Access] 개요
 
-# [!DNL Data Access]개요
-
-[!DNL Data Access] adobe experience platform은 인제스트된 데이터 세트의 검색 기능과 액세스 가능성에 초점을 둔 툴을 사용자에게 제공하여를 지원합니다 [!DNL Experience Platform].
+[!DNL Data Access] Adobe Experience Platform은 인제스트된 데이터 세트의 검색 기능과 액세스 가능성에 초점을 둔 툴을 사용자에게 제공하여를 지원합니다 [!DNL Experience Platform].
 
 ![Experience Platform의 데이터 액세스](images/Data_Access_Experience_Platform.png)
 
