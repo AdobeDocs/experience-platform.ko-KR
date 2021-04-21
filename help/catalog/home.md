@@ -2,18 +2,18 @@
 keywords: Experience Platform;홈;인기 항목;카탈로그 서비스;카탈로그 서비스;카탈로그 서비스;데이터 위치;데이터 관리;리니지;리니지;카탈로그;데이터 집합 사용
 solution: Experience Platform
 title: 카탈로그 서비스 개요
-topic: overview
-description: Catalog Service는 Adobe Experience Platform 내의 데이터 위치 및 리니지에 대한 레코드 시스템입니다. Experience Platform에 인제스트된 모든 데이터는 파일과 디렉터리로 데이터 레이크에 저장되지만 카탈로그는 조회 및 모니터링을 위해 해당 파일 및 디렉토리에 대한 메타데이터와 설명을 보관합니다.
+topic-legacy: overview
+description: Catalog Service는 Adobe Experience Platform 내의 데이터 위치 및 리니지에 대한 레코드 시스템입니다. Experience Platform에 인제스트된 모든 데이터가 파일 및 디렉터리로 Data Lake에 저장되지만 카탈로그는 조회 및 모니터링을 위해 해당 파일 및 디렉토리에 대한 메타데이터와 설명을 보관합니다.
+exl-id: ef0c173b-607b-41b8-8676-c54ae9472e23
 translation-type: tm+mt
-source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '805'
 ht-degree: 5%
 
 ---
 
-
-# [!DNL Catalog Service]개요
+# [!DNL Catalog Service] 개요
 
 [!DNL Catalog Service] 는 Adobe Experience Platform 내의 데이터 위치 및 리니지에 대한 기록 시스템입니다. [!DNL Experience Platform]에 인제스트된 모든 데이터가 [!DNL Data Lake]에 파일 및 디렉터리로 저장되지만 [!DNL Catalog]에는 조회 및 모니터링을 위해 해당 파일 및 디렉토리의 메타데이터와 설명이 들어 있습니다.
 
@@ -57,9 +57,9 @@ XDM 시스템에 대한 자세한 내용은 [XDM 시스템 개요](../xdm/home.m
 |---|---|---|
 | 계정 | `/accounts` | 소스 연결을 만들 때 인증 자격 증명을 제공해야 합니다. 계정은 특정 유형의 연결을 만드는 데 사용된 인증 자격 증명 모음을 나타냅니다. 각 연결에는 [!DNL Catalog]에 의해 지속되고 [!DNL Azure Key Vault]에 보안되는 고유한 매개 변수 집합이 있습니다. |
 | 일괄 처리 | `/batches` | 배치는 단일 단위로 수집할 하나 이상의 파일로 구성된 데이터 단위입니다. [!DNL Catalog]의 일괄 처리 개체는 일괄 처리의 통합 지표(예: 처리된 레코드 수 또는 디스크의 크기 등)에 대한 개요를 설명하고, 일괄 처리 작업으로 인해 영향을 받은 데이터 세트, 보기 및 기타 리소스에 대한 링크도 포함할 수 있습니다. |
-| 연결 | `/connections` | 연결은 조직 고유의 소스 커넥터의 단일 인스턴스이며 커넥터 유형에 대한 적절한 인증 자격 증명을 사용하여 구성됩니다. |
+| Connection | `/connections` | 연결은 조직 고유의 소스 커넥터의 단일 인스턴스이며 커넥터 유형에 대한 적절한 인증 자격 증명을 사용하여 구성됩니다. |
 | 커넥터 | `/connectors` | 커넥터는 소스 연결이 다른 Adobe 응용 프로그램(예: Adobe Analytics 및 Adobe Audience Manager), 타사 클라우드 스토리지 소스(예: [!DNL Azure Blob], [!DNL Amazon S3], FTP 서버 및 SFTP 서버) 및 타사 CRM 시스템(예: [!DNL Microsoft Dynamics] 및 [!DNL Salesforce])에서 데이터를 수집하는 방법을 정의합니다. |
-| 데이터 집합 | `/dataSets` | 데이터 집합은 스키마(열) 및 필드(행)를 포함하는 데이터 컬렉션에 사용되는 저장소 및 관리 구조입니다. 자세한 내용은 [데이터 집합 개요](./datasets/overview.md)를 참조하십시오. |
+| 데이터 세트 | `/dataSets` | 데이터 집합은 스키마(열) 및 필드(행)를 포함하는 데이터 컬렉션에 사용되는 저장소 및 관리 구조입니다. 자세한 내용은 [데이터 집합 개요](./datasets/overview.md)를 참조하십시오. |
 | 데이터 세트 파일 | `/datasetFiles` | 데이터 세트 파일은 [!DNL Platform]에 저장된 데이터 블록을 나타냅니다. 리터럴 파일의 레코드로서 파일의 크기, 파일에 포함된 레코드 수 및 파일을 인제스트한 일괄 처리에 대한 참조를 찾을 수 있는 곳입니다. |
 
 ## 다음 단계
