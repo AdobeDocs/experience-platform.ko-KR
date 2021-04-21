@@ -2,17 +2,17 @@
 keywords: Experience Platform;home;popular topics;dsw;DSW
 solution: Experience Platform
 title: 데이터 과학 작업 공간 자습서
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Adobe Experience Platform Data Science Workspace는 머신 러닝과 인공 지능을 사용하여 데이터를 통해 인사이트를 도출합니다. Adobe Experience Platform에 통합된 Data Science Workspace를 사용하면 Adobe 솔루션에서 콘텐츠와 데이터 자산을 사용하여 예측할 수 있습니다.
+exl-id: 7cfd71b1-584f-4588-bbcd-bc42a08a0bc0
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1304'
+source-wordcount: '1302'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL Data Science Workspace] 자습서
 
@@ -119,7 +119,7 @@ Adobe Experience Platform [!DNL Data Science Workspace]을 사용하면 모델�
 
 **이 자습서는 다음과 같은 이점을 제공합니다.**
 - 모델을 서비스로 게시합니다.
-- [!DNL Platform] [!UICONTROL 서비스 갤러리]를 통해 서비스를 사용하여 데이터를 점화합니다.
+- [!DNL Platform] [!UICONTROL Service Gallery]을 통해 서비스를 사용하여 데이터를 점화합니다.
 
 시작하려면 모델을 서비스 [API 자습서](../data-science-workspace/models-recipes/publish-model-service-api.md) 또는 [UI 자습서](../data-science-workspace/models-recipes/publish-model-service-ui.md)로 게시하십시오.
 
