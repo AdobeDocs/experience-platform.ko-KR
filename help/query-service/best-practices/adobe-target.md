@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;popular topics;query service;Query Service;sample queries;sample query;adobe target
 solution: Experience Platform
 title: Adobe Target 데이터에 대한 샘플 쿼리
-topic: queries
+topic-legacy: queries
 description: Adobe Target의 데이터는 Experience Event XDM 스키마로 변환되고 데이터 세트로 Experience Platform으로 수집됩니다. 이 문서에는 Adobe Target 데이터 집합에 쿼리 서비스를 사용하기 위한 샘플 쿼리가 포함되어 있습니다.
+exl-id: 0ab3cd6e-25ed-43dc-b8f0-a2b71621ae50
 translation-type: tm+mt
-source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '328'
 ht-degree: 1%
 
 ---
-
 
 # Adobe Target 데이터에 대한 샘플 쿼리
 
