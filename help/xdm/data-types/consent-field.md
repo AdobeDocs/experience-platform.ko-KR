@@ -1,16 +1,16 @@
 ---
 solution: Experience Platform
 title: 범용 동의 필드 데이터 유형
-topic: overview
+topic-legacy: overview
 description: 이 문서에서는 범용 동의 필드 XDM 데이터 유형에 대한 개요를 제공합니다.
+exl-id: f1f14eb7-21dd-45ca-8fb4-68f397cfa697
 translation-type: tm+mt
-source-git-commit: ebcd8900687b6e91d3f06690a9db0e118bbc3b58
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '463'
-ht-degree: 2%
+source-wordcount: '462'
+ht-degree: 1%
 
 ---
-
 
 # [!UICONTROL Generic Consent Field] 데이터 유형
 
