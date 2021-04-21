@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;ID 그래프 뷰어;ID 그래프 뷰어;그래프 뷰어;그래프 뷰어;ID 네임스페이스;ID;ID;Service;ID 서비스;Identity Service;Identity Service
 solution: Experience Platform
 title: ID 그래프 뷰어 개요
-topic: tutorial
+topic-legacy: tutorial
 description: ID 그래프는 특정 고객에 대해 서로 다른 ID 간의 관계를 보여주는 지도로, 고객이 다양한 채널에서 브랜드와 상호 작용하는 방식을 시각적으로 보여줍니다.
+exl-id: ccd5f8d8-595b-4636-9191-553214e426bd
 translation-type: tm+mt
-source-git-commit: f4326c7a8bb8af90c092d3790e51c133744d498f
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1038'
+source-wordcount: '995'
 ht-degree: 1%
 
 ---
-
 
 # ID 그래프 뷰어 개요
 
@@ -39,23 +39,23 @@ ID 그래프 뷰어를 사용하려면 관련 다양한 Adobe Experience Platfor
 
 ## ID 그래프 뷰어에 액세스
 
-UI에서 ID 그래프 뷰어를 사용하려면 왼쪽 탐색에서 **[!UICONTROL ID]**&#x200B;를 선택한 다음 **[!UICONTROL ID 그래프]** 탭을 선택합니다. **[!UICONTROL ID 네임스페이스]** 화면에서 **[!UICONTROL ID 네임스페이스 선택]** 아이콘을 클릭하여 사용할 네임스페이스를 검색합니다.
+UI에서 ID 그래프 뷰어를 사용하려면 왼쪽 탐색에서 **[!UICONTROL Identities]**&#x200B;을 선택한 다음 **[!UICONTROL Identity graph]** 탭을 선택합니다. **[!UICONTROL Identity Namespace]** 화면에서 **[!UICONTROL Select identity namespace]** 아이콘을 클릭하여 사용할 네임스페이스를 검색합니다.
 
 ![namespace-screen](../images/identity-graph-viewer/identity-namespace.png)
 
-**[!UICONTROL ID 네임스페이스 선택]** 패널이 나타납니다. 이 화면은 네임스페이스의 **[!UICONTROL 표시 이름]**, **[!UICONTROL ID 기호]**, **[!UICONTROL 소유자]**, **[!UICONTROL 마지막으로 업데이트된]** 날짜 및 **[!UICONTROL 설명]**&#x200B;에 대한 정보를 포함하여 조직에서 사용할 수 있는 네임스페이스 목록을 포함합니다. 유효한 ID 값이 연결되어 있는 한 제공된 네임스페이스를 사용할 수 있습니다.
+**[!UICONTROL Select identity namespace]** 패널이 나타납니다. 이 화면에는 네임스페이스의 **[!UICONTROL Display name]**, **[!UICONTROL Identity symbol]**, **[!UICONTROL Owner]**, **[!UICONTROL Last updated]** 날짜 및 **[!UICONTROL Description]**&#x200B;에 대한 정보를 포함하여 조직에서 사용할 수 있는 네임스페이스 목록이 포함되어 있습니다. 유효한 ID 값이 연결되어 있는 한 제공된 네임스페이스를 사용할 수 있습니다.
 
-사용할 네임스페이스를 선택하고 **[!UICONTROL 선택]**&#x200B;을 클릭하여 계속 진행합니다.
+사용할 네임스페이스를 선택하고 **[!UICONTROL Select]**&#x200B;을 클릭하여 계속 진행합니다.
 
 ![select-identity-namespace](../images/identity-graph-viewer/select-identity-namespace.png)
 
-네임스페이스를 선택하고 나면 **[!UICONTROL ID 값]** 텍스트 상자에 특정 고객에 해당하는 값을 입력하고 **[!UICONTROL 보기]**&#x200B;를 선택합니다.
+네임스페이스를 선택하고 나면 **[!UICONTROL Identity value]** 텍스트 상자에 특정 고객에 해당하는 값을 입력하고 **[!UICONTROL View]**&#x200B;을 선택합니다.
 
 ![add-identity-value](../images/identity-graph-viewer/identity-value-filled.png)
 
 ### 데이터 세트에서 ID 그래프 뷰어에 액세스
 
-데이터 집합 인터페이스를 사용하여 ID 그래프 뷰어에 액세스할 수도 있습니다. 데이터 집합 [!UICONTROL 찾아보기] 페이지에서 상호 작용할 데이터 집합을 선택한 다음 **[!UICONTROL 데이터 집합 미리 보기]**
+데이터 집합 인터페이스를 사용하여 ID 그래프 뷰어에 액세스할 수도 있습니다. 데이터 집합 [!UICONTROL Browse] 페이지에서 상호 작용할 데이터 집합을 선택한 다음 **[!UICONTROL Preview dataset]**
 
 ![미리 보기 데이터 세트](../images/identity-graph-viewer/preview-dataset.png)
 
@@ -75,15 +75,15 @@ ID 그래프 뷰어가 나타납니다. 화면의 왼쪽에는 선택한 네임�
 
 ![identity-graph](../images/identity-graph-viewer/graph-viewer.png)
 
-**[!UICONTROL Identity]** 테이블에서 강조 표시된 행을 업데이트하고 오른쪽 레일에 제공된 정보를 업데이트하려면 ID의 **[!UICONTROL Value]**, **[!UICONTROL Batch ID]** 및 **[!UICONTROL 최종 업데이트]** 날짜를 포함합니다.
+**[!UICONTROL Identities]** 테이블에서 강조 표시된 행을 업데이트하고 ID의 **[!UICONTROL Value]**, **[!UICONTROL Batch ID]** 및 그 **[!UICONTROL Last updated]** 날짜를 포함하는 오른쪽 레일에 제공된 정보를 업데이트하려면 ID를 선택합니다.
 
 ![select-identity](../images/identity-graph-viewer/select-identity.png)
 
-그래프를 통해 필터링하고 **[!UICONTROL Identity]** 테이블 위에 있는 정렬 옵션을 사용하여 특정 네임스페이스를 분리할 수 있습니다. 드롭다운 메뉴에서 강조 표시할 네임스페이스를 선택합니다.
+그래프를 통해 필터링하고 **[!UICONTROL Identities]** 테이블 위에 있는 정렬 옵션을 사용하여 특정 네임스페이스를 분리할 수 있습니다. 드롭다운 메뉴에서 강조 표시할 네임스페이스를 선택합니다.
 
 ![filter by-namespace](../images/identity-graph-viewer/filter-namespace.png)
 
-그래프 뷰어가 돌아와서 선택한 네임스페이스를 강조 표시합니다. 필터 옵션은 선택한 네임스페이스에 대한 정보만 반환하도록 **[!UICONTROL Identity]** 테이블도 업데이트합니다.
+그래프 뷰어가 돌아와서 선택한 네임스페이스를 강조 표시합니다. 필터 옵션은 선택한 네임스페이스에 대한 정보만 반환하도록 **[!UICONTROL Identities]** 테이블도 업데이트합니다.
 
 ![필터링됨](../images/identity-graph-viewer/filtered.png)
 
@@ -91,7 +91,7 @@ ID 그래프 뷰어가 나타납니다. 화면의 왼쪽에는 선택한 네임�
 
 ![확대/축소](../images/identity-graph-viewer/zoom.png)
 
-헤더에서 **[!UICONTROL 데이터 소스]**&#x200B;를 선택하여 배치에 대한 자세한 정보를 볼 수 있습니다. **[!UICONTROL 데이터 소스]** 표에는 그래프와 연결된 **[!UICONTROL 일괄 처리 ID]** 목록과 **[!UICONTROL 연결된 ID]**, 소스 스키마 및 통합 날짜가 표시됩니다.
+헤더에서 **[!UICONTROL Data source]**&#x200B;을 선택하여 배치에 대한 자세한 정보를 볼 수 있습니다. **[!UICONTROL Data source]** 테이블에는 그래프와 연결된 **[!UICONTROL Batch IDs]** 목록과 해당 **[!UICONTROL Linked IDs]**, 소스 스키마 및 통합 날짜가 표시됩니다.
 
 ![데이터 소스](../images/identity-graph-viewer/data-source-table.png)
 
