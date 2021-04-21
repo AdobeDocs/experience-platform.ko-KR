@@ -2,16 +2,16 @@
 keywords: OCR;텍스트 존재;광학 문자 인식
 solution: Experience Platform, Intelligent Services
 title: 텍스트 존재 및 광학 문자 인식
-topic: Developer guide
+topic-legacy: Developer guide
 description: Content and Commerce AI API에서 OCR(Text Presence/Optical Character Recognition) 서비스는 텍스트가 지정된 이미지에 있는지 여부를 나타낼 수 있습니다. 텍스트가 있는 경우 OCR에서 텍스트를 반환할 수 있습니다.
+exl-id: 85b976a7-0229-43e9-b166-cdbd213b867f
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '525'
 ht-degree: 3%
 
 ---
-
 
 # 텍스트 존재 및 광학 문자 인식
 
