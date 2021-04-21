@@ -2,13 +2,13 @@
 keywords: Experience Platform;홈;인기 항목;csv;맵 csv;csv 파일;csv 파일을 xdm에 매핑;csv를 xdm;ui 안내서;매퍼;매핑;매핑 필드;매핑 기능;매핑 함수
 solution: Experience Platform
 title: 데이터 준비 매핑 함수
-topic: overview
+topic-legacy: overview
 description: 이 문서에서는 데이터 준비와 함께 사용되는 매핑 함수를 소개합니다.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
 translation-type: tm+mt
-source-git-commit: c3939d4ce30bf12748b898f461a166f28f010abf
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '3798'
+source-wordcount: '3797'
 ht-degree: 3%
 
 ---
