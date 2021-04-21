@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform;프로필;실시간 고객 프로필;문제 해결;API
 title: 엔터티(프로필 액세스) API 끝점
-topic: guide
+topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platform을 사용하면 RESTful API 또는 사용자 인터페이스를 사용하여 실시간 고객 프로필 데이터에 액세스할 수 있습니다. 이 안내서에서는 프로필 API를 사용하여 일반적으로 "프로필"이라고 하는 엔터티에 액세스하는 방법을 설명합니다.
+exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
 translation-type: tm+mt
-source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1737'
 ht-degree: 1%
 
 ---
-
 
 # 엔터티 끝점(프로필 액세스)
 
