@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform;홈;인기 항목;스키마;스키마;스키마;XDM;개별 프로필;필드;스키마;ID맵;ID 맵;스키마 디자인;맵;결합 스키마;공용 스키마;Identity Map;Map;Union schema
+keywords: Experience Platform;홈;인기 항목;스키마;스키마;스키마;XDM;개별 프로필;필드;스키마;ID맵;ID 맵;스키마 디자인;맵;결합 스키마;공용 스키마
 solution: Experience Platform
 title: XDM 개별 프로필 클래스
-topic: overview
+topic-legacy: overview
 description: 이 문서에서는 XDM 개별 프로필 클래스에 대한 개요를 제공합니다.
+exl-id: 83b22462-79ce-4024-aa50-a9bd800c0f81
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '388'
+source-wordcount: '375'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL XDM Individual Profile] class
 
@@ -41,7 +41,7 @@ ht-degree: 0%
 Adobe은 [!DNL XDM Individual Profile] 클래스에 사용할 수 있도록 여러 가지 표준 믹스를 제공합니다. 다음은 클래스에 가장 일반적으로 사용되는 믹싱 목록입니다.
 
 * [[!UICONTROL IdentityMap]](../mixins/profile/identitymap.md)
-* [[!UICONTROL 인구 통계 세부 사항]](../mixins/profile/person-details.md)
-* [[!UICONTROL 개인 연락처 세부 사항]](../mixins/profile/personal-details.md)
-* [[!UICONTROL 작업 연락처 세부 사항]](../mixins/profile/work-details.md)
-* [[!UICONTROL 세그먼트 멤버십 세부 사항]](../mixins/profile/segmentation.md)
+* [[!UICONTROL Demographic Details]](../mixins/profile/person-details.md)
+* [[!UICONTROL Personal Contact Details]](../mixins/profile/personal-details.md)
+* [[!UICONTROL Work Contact Details]](../mixins/profile/work-details.md)
+* [[!UICONTROL Segment Membership Details]](../mixins/profile/segmentation.md)
