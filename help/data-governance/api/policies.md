@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;정책 적용;API 기반 적용;데이터 거버넌스
 solution: Experience Platform
 title: 정책 API 끝점
-topic: developer guide
+topic-legacy: developer guide
 description: 데이터 사용 정책은 Experience Platform 내에서 데이터에 대해 수행하도록 허용되거나 제한된 마케팅 활동의 종류를 설명하는 조직에서 선택하는 규칙입니다. /policies 종단점은 데이터 사용 정책 보기, 만들기, 업데이트 또는 삭제와 관련된 모든 API 호출에 사용됩니다.
+exl-id: 62a6f15b-4c12-4269-bf90-aaa04c147053
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1817'
 ht-degree: 2%
 
 ---
-
 
 # 정책 끝점
 
