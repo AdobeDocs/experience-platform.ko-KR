@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;ID;Identity
 solution: Experience Platform
 title: 목록 ID 매핑
-topic: API guide
+topic-legacy: API guide
 description: 매핑은 지정된 네임스페이스에 대한 클러스터의 모든 ID 컬렉션입니다.
+exl-id: db80c783-620b-4ba3-b55c-75c1fd6e90b1
 translation-type: tm+mt
-source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '270'
 ht-degree: 1%
 
 ---
-
 
 # 목록 ID 매핑
 
