@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;ID xid;XID
 solution: Experience Platform
 title: ID에 대한 기본 ID 가져오기
-topic: API guide
+topic-legacy: API guide
 description: ID 데이터는 일반적으로 인제스트된 XDM 데이터에서 ID 문자열 값 및 ID 네임스페이스로 제공되며 API 호출에서 사용할 ID를 제공할 때 제공됩니다. ID가 Identity Service에 유지되면 ID가 생성되어 기본 XID라고 하는 ID에 할당됩니다. 집계된 ID 및 네임스페이스에 대해 이 보다 간단한 양식을 사용하여 ID 데이터 지원이 필요한 플랫폼 API. XID는 base64 인코딩 문자열입니다.
+exl-id: e734f5d8-e00b-43fa-b06c-97c73e1f7c71
 translation-type: tm+mt
-source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '231'
 ht-degree: 0%
 
 ---
-
 
 # ID에 대한 기본 ID 가져오기
 
