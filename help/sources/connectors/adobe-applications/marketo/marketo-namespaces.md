@@ -5,9 +5,9 @@ title: 'Marketo 네임스페이스 '
 topic-legacy: overview
 description: 이 문서에서는 Marketo Engage 소스 커넥터를 만들 때 필요한 사용자 정의 네임스페이스에 대한 개요를 제공합니다.
 translation-type: tm+mt
-source-git-commit: f12baaa9d4b37f1101792a4ae479b5a62893eb68
+source-git-commit: bea6b35627b0e913c894c38ba9553085ba0aa26f
 workflow-type: tm+mt
-source-wordcount: '1176'
+source-wordcount: '1215'
 ht-degree: 6%
 
 ---
@@ -50,6 +50,10 @@ ID 네임스페이스는 ID와 관련된 컨텍스트의 표시기 역할을 하
 
 다음 표는 [!DNL Marketo] 네임스페이스에 대해 설정된 기본 설정에 대한 정보를 포함합니다.
 
+>[!NOTE]
+>
+>표의 전체 내용을 보려면 왼쪽/오른쪽으로 스크롤하십시오.
+
 | 디스플레이 이름 | ID 기호 | ID 유형 | 발급자 유형 | 발급자 엔티티 유형 | Munchkin ID 예 |
 | --- | --- | --- | --- | --- | --- |
 | `marketo_person_{MUNCHKIN_ID}` | 자동 생성 | `CROSS_DEVICE` | [!DNL Marketo] | `person` | `123-ABC-789` |
@@ -70,6 +74,10 @@ ID 네임스페이스는 ID와 관련된 컨텍스트의 표시기 역할을 하
 
 다음 표는 [!DNL Salesforce] 네임스페이스에 대해 설정된 기본 설정에 대한 정보를 포함합니다.
 
+>[!NOTE]
+>
+>표의 전체 내용을 보려면 왼쪽/오른쪽으로 스크롤하십시오.
+
 | 디스플레이 이름 | ID 기호 | ID 유형 | 발급자 유형 | 발급자 엔티티 유형 | [!DNL Salesforce] 구독 조직 ID 예 |
 | --- | --- | --- | --- | --- | --- |
 | `salesforce_person_{SALESFORCE_ORGANIZATION_ID}` | 자동 생성 | `CROSS_DEVICE` | [!DNL Salesforce] | `person` | `00DA0000000Hz79` |
@@ -87,6 +95,10 @@ ID 네임스페이스는 ID와 관련된 컨텍스트의 표시기 역할을 하
 
 다음 표는 [!DNL Dynamics] 네임스페이스에 대해 설정된 기본 설정에 대한 정보를 포함합니다.
 
+>[!NOTE]
+>
+>표의 전체 내용을 보려면 왼쪽/오른쪽으로 스크롤하십시오.
+
 | 디스플레이 이름 | ID 기호 | ID 유형 | 발급자 유형 | 발급자 엔티티 유형 | [!DNL Salesforce] 구독 조직 ID 예 |
 | --- | --- | --- | --- | --- | --- |
 | `microsoft_person_{DYNAMICS_ID}` | 자동 생성 | `CROSS_DEVICE` | [!DNL Microsoft] | `person` | `94cahe38-e51h-3d57-a9c6-2edklb7184mh` |
@@ -95,6 +107,8 @@ ID 네임스페이스는 ID와 관련된 컨텍스트의 표시기 역할을 하
 | `microsoft_opportunity_contact_connection_{DYNAMICS_ID}` | 자동 생성 | `B2B_OPPORTUNITY_PERSON` | [!DNL Microsoft] | `opportunity relationship` | `94cahe38-e51h-3d57-a9c6-2edklb7184mh` |
 | `microsoft_campaign_{DYNAMICS_ID}` | 자동 생성 | `B2B_CAMPAIGN` | [!DNL Microsoft] | `campaign` | `94cahe38-e51h-3d57-a9c6-2edklb7184mh` |
 | `microsoft_campaign_member_{DYNAMICS_ID}` | 자동 생성 | `B2B_CAMPAIGN_MEMBER` | [!DNL Microsoft] | `campaign member` | `94cahe38-e51h-3d57-a9c6-2edklb7184mh` |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## [!DNL Marketo] 스키마
 
