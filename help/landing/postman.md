@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;Adobe Experience Platform;api 안내서;플랫폼 api 안내서;플랫폼 소개;개발자 안내서
 solution: Experience Platform
 title: Adobe Experience Platform 포스트맨
-topic: api guide
+topic-legacy: api guide
 description: 이 문서에는 Postman 환경을 설정하는 방법, Postman 컬렉션 가져오기 방법 및 각 Platform 서비스에 대한 사용 가능한 컬렉션 목록이 나와 있습니다.
+exl-id: a09b3875-97f5-47f1-a562-52decbce67b1
 translation-type: tm+mt
-source-git-commit: effc8fef666ffbf62c2e0874d048245f19c12111
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '552'
+source-wordcount: '550'
 ht-degree: 0%
 
 ---
-
 
 # Adobe Experience Platform 포스트맨
 
