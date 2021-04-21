@@ -2,17 +2,17 @@
 keywords: Experience Platform;홈;인기 항목;MySQL;mysql
 solution: Experience Platform
 title: Flow Service API를 사용하여 MySQL 소스 연결 만들기
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Flow Service API를 사용하여 MySQL에 Adobe Experience Platform을 연결하는 방법을 알아봅니다.
+exl-id: 273da568-84ed-4a3d-bfea-0f5b33f1551a
 translation-type: tm+mt
-source-git-commit: 8851e11e956b393e56714d4d48870b7f68947c18
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '565'
+source-wordcount: '563'
 ht-degree: 2%
 
 ---
-
 
 # [!DNL Flow Service] API를 사용하여 MySQL 소스 연결 만들기
 
