@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;목록 샌드박스
 solution: Experience Platform
 title: API의 샌드박스 목록
-topic: developer guide
+topic-legacy: developer guide
 description: IMS 조직에 속한 모든 샌드박스를 나열하려면 /sandbox 종단점에 GET 요청을 하십시오.
+exl-id: 5e7dc6e7-cb9c-41e0-a3ad-025b625f14ec
 translation-type: tm+mt
-source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '322'
+source-wordcount: '320'
 ht-degree: 2%
 
 ---
-
 
 # API의 샌드박스 목록
 
