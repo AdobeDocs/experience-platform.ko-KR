@@ -2,13 +2,13 @@
 keywords: Experience Platform;홈;인기 항목
 solution: Experience Platform
 title: 거버넌스, 개인정보 보호 및 보안 개요
-topic: overview
+topic-legacy: overview
 description: Adobe Experience Platform은 비즈니스 방침, 법적 책임 및 개발 프로세스를 준수하기 위해 수집한 경험 데이터를 안전하게 제어할 수 있는 다양한 서비스와 툴을 제공합니다.
 exl-id: 1ab5a436-c5dd-4e7a-aba1-549f0613f224
 translation-type: tm+mt
-source-git-commit: 3f7808a08d033c5940d2115006c269b8c4079822
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '833'
+source-wordcount: '832'
 ht-degree: 1%
 
 ---
