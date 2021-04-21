@@ -2,17 +2,17 @@
 keywords: Experience Platform;홈;인기 항목;SFTP;sftp
 solution: Experience Platform
 title: UI에서 SFTP 소스 연결 만들기
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Adobe Experience Platform UI를 사용하여 SFTP 소스 연결을 만드는 방법을 알아봅니다.
+exl-id: 1a00ed27-3c95-4e57-9f94-45ff256bf75c
 translation-type: tm+mt
-source-git-commit: 0e11acc4a599d360cb3048445003f61848ad23d3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '678'
-ht-degree: 1%
+source-wordcount: '676'
+ht-degree: 0%
 
 ---
-
 
 # UI에서 SFTP 소스 연결 만들기
 
