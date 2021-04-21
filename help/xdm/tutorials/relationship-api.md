@@ -3,16 +3,16 @@ keywords: Experience Platform;홈;인기 항목;API;XDM;XDM 시스템;경험 데
 solution: Experience Platform
 title: 스키마 레지스트리 API를 사용하여 두 스키마 간의 관계를 정의합니다.
 description: 이 문서에서는 스키마 레지스트리 API를 사용하여 조직에서 정의한 2개의 스키마 간에 1대1 관계를 정의하는 자습서를 제공합니다.
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
+exl-id: ef9910b5-2777-4d8b-a6fe-aee51d809ad5
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1337'
 ht-degree: 1%
 
 ---
-
 
 # [!DNL Schema Registry] API를 사용하여 두 스키마 간의 관계를 정의합니다.
 
