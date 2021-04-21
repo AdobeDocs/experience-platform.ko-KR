@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;정책 적용;마케팅 작업 api;API 기반 적용;데이터 거버넌스
 solution: Experience Platform
 title: 마케팅 작업 API 끝점
-topic: developer guide
+topic-legacy: developer guide
 description: Adobe Experience Platform 데이터 거버넌스 컨텍스트에서 마케팅 작업은 Experience Platform 데이터 소비자가 취하는 동작으로, 데이터 사용 정책 위반을 확인해야 합니다.
+exl-id: bc16b318-d89c-4fe6-bf5a-1a4255312f54
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '734'
 ht-degree: 2%
 
 ---
-
 
 # 마케팅 작업 끝점
 
@@ -103,7 +103,7 @@ curl -X GET \
 | --- | --- |
 | `_page.count` | 반환된 총 마케팅 작업 수입니다. |
 | `children` | 검색된 마케팅 작업의 세부 사항이 포함된 개체 배열입니다. |
-| `name` | 특정 마케팅 작업](#lookup)을(를) 조회할 때 고유한 식별자로 작동하는 마케팅 작업의 이름.[ |
+| `name` | 특정 마케팅 작업](#lookup)을(를) 조회할 때 고유한 식별자로 작동하는 마케팅 작업의 이름입니다.[ |
 | `_links.self.href` | [데이터 사용 정책](policies.md#create-policy)을 만들 때 `marketingActionsRefs` 배열을 완료하는 데 사용할 수 있는 마케팅 작업에 대한 URI 참조입니다. |
 
 ## 특정 마케팅 작업 {#lookup} 조회
