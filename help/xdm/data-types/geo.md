@@ -2,26 +2,26 @@
 keywords: Experience Platform;홈;인기 항목;스키마;스키마;XDM;필드;스키마;지역;데이터 유형;데이터 유형;데이터 유형;;home;popular topics;schema;XDM;fields;schemas;geo;datatype;data-type;data-type;
 solution: Experience Platform
 title: 지역 데이터 유형
-topic: overview
+topic-legacy: overview
 description: 이 문서에서는 지역 XDM 데이터 유형에 대한 개요를 제공합니다.
+exl-id: d0eef943-ef86-4abd-8a51-dc45f2ed782d
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '196'
+source-wordcount: '192'
 ht-degree: 4%
 
 ---
 
+# [!UICONTROL Geo] 데이터 유형
 
-# [!UICONTROL 지리 ] 데이터 유형
-
-[!UICONTROL 지리] 는 이벤트가 관측된 지리적 영역을 설명하는 표준 XDM 데이터 유형입니다.
+[!UICONTROL Geo] 는 이벤트가 관찰된 지리적 영역을 설명하는 표준 XDM 데이터 유형입니다.
 
 <img src="../images/data-types/geo.png" width="400" /><br />
 
 | 속성 | 데이터 유형 | 설명 |
 | --- | --- | --- |
-| `_schema` | [[!UICONTROL 지역 좌표]](./geo-coordinates.md) | 장소의 지리적 좌표를 설명합니다. |
+| `_schema` | [[!UICONTROL Geo Coordinates]](./geo-coordinates.md) | 장소의 지리적 좌표를 설명합니다. |
 | `_id` | 문자열 | 좌표에 대한 고유한 시스템 생성 ID. |
 | `city` | 문자열 | 시의 이름입니다. |
 | `countryCode` | 문자열 | 해당 국가의 두 문자 <a href="https://datahub.io/core/country-list">ISO 3166-1 alpha-2</a> 코드입니다. |
