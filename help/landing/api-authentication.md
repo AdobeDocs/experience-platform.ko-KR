@@ -2,17 +2,17 @@
 keywords: Experience Platform;홈;인기 항목;인증;액세스
 solution: Experience Platform
 title: Experience Platform API 인증 및 액세스
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
-description: '이 문서에서는 Experience Platform API를 호출하기 위해 Adobe Experience Platform 개발자 계정에 액세스할 수 있는 단계별 자습서를 제공합니다. '
+description: 이 문서에서는 Experience Platform API를 호출하기 위해 Adobe Experience Platform 개발자 계정에 액세스할 수 있는 단계별 자습서를 제공합니다.
+exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
 translation-type: tm+mt
-source-git-commit: ca5c8527b1b54856aa1e762a06ddbe404f30ec42
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '908'
-ht-degree: 5%
+source-wordcount: '896'
+ht-degree: 6%
 
 ---
-
 
 # 인증 및 [!DNL Experience Platform] API 액세스
 
@@ -40,7 +40,7 @@ ht-degree: 5%
 Adobe ID이 없는 경우 다음 단계를 사용하여를 만들 수 있습니다.
 
 1. [Adobe 개발자 콘솔](https://console.adobe.io)로 이동
-2. **[!UICONTROL 새 계정 만들기]**
+2. 선택 **[!UICONTROL create a new account]**
 3. 등록 프로세스 완료
 
 ## 조직의 [!DNL Experience Platform]에 대한 개발자 및 사용자 되기
@@ -89,11 +89,11 @@ Adobe 개발자 콘솔을 사용하여 다음 3개의 액세스 자격 증명을
 
 [Adobe 개발자 콘솔](https://www.adobe.com/go/devs_console_ui)로 이동하여 Adobe ID으로 로그인합니다. 그런 다음 Adobe 개발자 콘솔 문서에서 [빈 프로젝트](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md)를 만드는 자습서에 설명된 단계를 따릅니다.
 
-새 프로젝트를 만들었으면 **프로젝트 개요** 화면에서 **[!UICONTROL API]** 추가를 선택합니다.
+새 프로젝트를 만들었으면 **프로젝트 개요** 화면에서 **[!UICONTROL Add API]**&#x200B;을 선택합니다.
 
 ![](images/api-authentication/add-api-button.png)
 
-**API 추가** 화면이 나타납니다. Adobe Experience Platform의 제품 아이콘을 선택한 다음 **[!UICONTROL 다음]**&#x200B;을 선택하기 전에 **[!UICONTROL Experience Platform API]**&#x200B;을 선택합니다.
+**API 추가** 화면이 나타납니다. Adobe Experience Platform의 제품 아이콘을 선택한 다음 **[!UICONTROL Next]**&#x200B;을 선택하기 전에 **[!UICONTROL Experience Platform API]**&#x200B;을 선택합니다.
 
 ![](images/api-authentication/add-platform-api.png)
 
