@@ -6,7 +6,7 @@ topic-legacy: overview
 description: 제품 Recommendations 레서피를 사용하면 고객의 요구 사항과 관심사에 맞는 맞춤형 제품 추천을 제공할 수 있습니다. 정확한 예측 모델을 통해 고객의 구매 내역을 통해 고객의 관심 있는 제품에 대한 통찰력을 얻을 수 있습니다.
 exl-id: 508d55af-c33b-4f1d-b1b6-f00ed5d12bf9
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
 workflow-type: tm+mt
 source-wordcount: '477'
 ht-degree: 2%
@@ -39,7 +39,7 @@ Adobe Experience Platform Lab 자습서를 따라 시작할 수 있습니다(아
 ### 입력 데이터 스키마
 
 | 필드 이름 | 유형 |
---- | ---
+| --- | --- |
 | itemId | 문자열 |
 | interactionType | 문자열 |
 | timestamp | 문자열 |
@@ -48,7 +48,7 @@ Adobe Experience Platform Lab 자습서를 따라 시작할 수 있습니다(아
 ### 출력 데이터 스키마
 
 | 필드 이름 | 유형 |
---- | ---
+| --- | --- |
 | recommendations | 문자열 |
 | userId | 정수 |
 
