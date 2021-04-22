@@ -6,7 +6,7 @@ topic-legacy: developer guide
 description: 이 문서에는 Privacy Service API 작업에 대한 추가 정보가 포함되어 있습니다.
 exl-id: 7099e002-b802-486e-8863-0630d66e330f
 translation-type: tm+mt
-source-git-commit: 545ac984d9f9f540fc9121214d40719f9a254379
+source-git-commit: e226990fc84926587308077b32b128bfe334e812
 workflow-type: tm+mt
 source-wordcount: '0'
 ht-degree: 0%
@@ -25,15 +25,17 @@ ht-degree: 0%
 
 | ID 유형 | `namespace` | `namespaceId` |
 | --- | --- | --- |
-| 이메일 | 이메일 | 6 |
-| 전화 | 전화 | 7 |
-| Adobe Advertising Cloud ID | AdCloud | 411년 |
-| Adobe Audience Manager UUID | CORE | 0 |
-| Adobe Experience Cloud ID | ECID | 4 |
-| Adobe Target ID | TNTID | 9 |
-| [!DNL Apple] 광고주 ID | IDFA | 20915년 |
-| [!DNL Google] 광고 ID | GAID | 20914년 |
-| [!DNL Windows] AID | WAID | 8 |
+| 이메일 | `Email` | `6` |
+| 전화 | `Phone` | `7` |
+| Adobe Advertising Cloud ID | `AdCloud` | `411` |
+| Adobe Audience Manager UUID | `CORE` | `0` |
+| Adobe Experience Cloud ID | `ECID` | `4` |
+| Adobe Target ID | `TNTID` | `9` |
+| [!DNL Apple] 광고주 ID | `IDFA` | `20915` |
+| [!DNL Google] 광고 ID | `GAID` | `20914` |
+| [!DNL Windows] AID | `WAID` | `8` |
+
+{style=&quot;table-layout:auto&quot;}
 
 >[!NOTE]
 >
@@ -47,13 +49,15 @@ ht-degree: 0%
 
 | 한정자 | 정의 |
 | --------- | ---------- |
-| standard | 개별 조직 데이터 세트(예: 이메일, 전화 번호 등)와 연결되지 않고 전체적으로 정의된 표준 네임스페이스 중 하나입니다. 네임스페이스 ID가 제공됩니다. |
-| 사용자 지정 | [!DNL Experience Cloud]에서 공유되지 않고 조직의 컨텍스트에서 만들어진 고유한 네임스페이스입니다. 값은 검색할 친숙한 이름(&quot;이름&quot; 필드)을 나타냅니다. 네임스페이스 ID가 제공됩니다. |
-| integrationCode | 통합 코드 - &quot;사용자 지정&quot;과 유사하지만, 특히 검색할 데이터 소스의 통합 코드로 정의됩니다. 네임스페이스 ID가 제공됩니다. |
-| namespaceId | 네임스페이스 서비스를 통해 만들거나 매핑한 네임스페이스의 실제 ID임을 나타냅니다. |
-| 미등록 | 네임스페이스 서비스에 정의되지 않고 &quot;있는 그대로&quot; 취하는 자유 형식 문자열입니다. 이러한 종류의 네임스페이스를 처리하는 모든 응용 프로그램은 이러한 네임스페이스와 비교하여 회사 컨텍스트와 데이터 세트에 적합한지 확인하고 처리합니다. 네임스페이스 ID가 제공되지 않습니다. |
-| analytics | 네임스페이스 서비스가 아닌 [!DNL Analytics]에 내부적으로 매핑되는 사용자 지정 네임스페이스입니다. 네임스페이스 ID 없이 원래 요청에 지정된 대로 직접 전달됩니다. |
-| target | 네임스페이스 서비스가 아니라 [!DNL Target]이 내부적으로 이해하는 사용자 정의 네임스페이스입니다. 네임스페이스 ID 없이 원래 요청에 지정된 대로 직접 전달됩니다. |
+| `standard` | 개별 조직 데이터 세트(예: 이메일, 전화 번호 등)와 연결되지 않고 전체적으로 정의된 표준 네임스페이스 중 하나입니다. 네임스페이스 ID가 제공됩니다. |
+| `custom` | [!DNL Experience Cloud]에서 공유되지 않고 조직의 컨텍스트에서 만들어진 고유한 네임스페이스입니다. 값은 검색할 친숙한 이름(&quot;이름&quot; 필드)을 나타냅니다. 네임스페이스 ID가 제공됩니다. |
+| `integrationCode` | 통합 코드 - &quot;사용자 지정&quot;과 유사하지만, 특히 검색할 데이터 소스의 통합 코드로 정의됩니다. 네임스페이스 ID가 제공됩니다. |
+| `namespaceId` | 네임스페이스 서비스를 통해 만들거나 매핑한 네임스페이스의 실제 ID임을 나타냅니다. |
+| `unregistered` | 네임스페이스 서비스에 정의되지 않고 &quot;있는 그대로&quot; 취하는 자유 형식 문자열입니다. 이러한 종류의 네임스페이스를 처리하는 모든 응용 프로그램은 이러한 네임스페이스와 비교하여 회사 컨텍스트와 데이터 세트에 적합한지 확인하고 처리합니다. 네임스페이스 ID가 제공되지 않습니다. |
+| `analytics` | 네임스페이스 서비스가 아닌 [!DNL Analytics]에 내부적으로 매핑되는 사용자 지정 네임스페이스입니다. 네임스페이스 ID 없이 원래 요청에 지정된 대로 직접 전달됩니다. |
+| `target` | 네임스페이스 서비스가 아니라 [!DNL Target]이 내부적으로 이해하는 사용자 정의 네임스페이스입니다. 네임스페이스 ID 없이 원래 요청에 지정된 대로 직접 전달됩니다. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## 허용된 제품 값
 
@@ -70,3 +74,5 @@ ht-degree: 0%
 | Adobe Target | `Target` |
 | 고객 레코드 서비스 | `CRS` |
 | 실시간 고객 프로필 | `ProfileService` |
+
+{style=&quot;table-layout:auto&quot;}
