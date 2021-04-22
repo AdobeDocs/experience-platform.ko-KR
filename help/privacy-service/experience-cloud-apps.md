@@ -6,10 +6,10 @@ topic-legacy: overview
 description: 이 문서에서는 개인 정보 관련 작업에 대해 서로 다른 Experience Cloud 응용 프로그램을 구성하는 방법에 대한 참조를 제공합니다.
 exl-id: da21c15f-0b99-4eb7-ac9a-f0fe5e3ba842
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e226990fc84926587308077b32b128bfe334e812
 workflow-type: tm+mt
-source-wordcount: '576'
-ht-degree: 21%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -29,7 +29,7 @@ Adobe Experience Platform [!DNL Privacy Service]은(는) 여러 Adobe Experience
 다음은 호환 가능한 [!DNL Privacy Service] 기능을 비롯하여 [!DNL Privacy Service]과(와) 통합된 [!DNL Experience Cloud] 응용 프로그램 목록과 자세한 내용은 설명서 링크를 참조하십시오.
 
 | 애플리케이션 | 액세스/삭제 | 판매 거부 | 설명서 및 고려 사항 |
---- | :---: | :---: | ---
+| --- | :---: | :---: | --- |
 | Adobe Advertising Cloud | ✓ | ✓ | <ul><li>[GDPR 문서 액세스/삭제](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-gdpr.html)</li><li>[CPA용 문서 액세스/삭제](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-ccpa-access-delete.html)</li><li>[CPA에 대한 판매 거부 설명서](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-ccpa-opt-out-of-sale.html)</li></ul> |
 | Adobe Analytics | ✓ | ✓ | <ul><li>[설명서 액세스/삭제](https://docs.adobe.com/content/help/ko-KR/analytics/admin/data-governance/an-gdpr-overview.html)</li><li>[!DNL Analytics] 개인 정보 보고 변수를 사용하여  [옵트아웃 요청을 처리합니다.](https://docs.adobe.com/content/help/ko-KR/analytics/admin/data-governance/consent-variables.html)</li></ul> |
 | Adobe Audience Manager | ✓ | ✓ | <ul><li>[설명서 액세스/삭제](https://docs.adobe.com/content/help/ko-KR/audience-manager/user-guide/overview/data-privacy/data-privacy-requests.html)</li><li>[옵트아웃 설명서](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/declared-ids.html)</li></ul> |
@@ -39,6 +39,7 @@ Adobe Experience Platform [!DNL Privacy Service]은(는) 여러 Adobe Experience
 | Adobe Primetime 인증 | ✓ | 해당 없음 | <ul><li>[설명서 액세스/삭제](http://tve.helpdocsonline.com/how-to-make-a-privacy-request)</li><li>[!DNL Primetime] 은 데이터를 전송할 수 없으므로 판매 거부 요청을 적용할 수 없습니다.</li></ul> |
 | Adobe Target | ✓ | 해당 없음 | <ul><li>[설명서 액세스/삭제](https://docs.adobe.com/content/help/ko-KR/target/using/implement-target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.html)</li><li>[!DNL Target] 은 데이터를 전송할 수 없으므로 판매 거부 요청을 적용할 수 없습니다.</li></ul> |
 
+{style=&quot;table-layout:auto&quot;}
 
 ## 셀프 서비스 응용 프로그램 {#self-serve}
 
@@ -51,3 +52,5 @@ Adobe Experience Platform [!DNL Privacy Service]은(는) 여러 Adobe Experience
 | [Adobe Experience Manager](https://helpx.adobe.com/experience-manager/6-4/managing/using/gdpr-compliance.html) | 고객 개인 정보 관리자 또는 AEM 관리자가 GDPR 요청을 처리하는 방법에 대한 개요입니다. |
 | [Adobe Experience Manager Livefyre](https://docs.adobe.com/content/help/en/livefyre/using/settings-other/privacy-requests/c-gdpr-compliance.html) | Livefyre를 사용하여 GDPR에 액세스하고 요청을 삭제하는 절차 |
 | [Adobe Experience Platform Launch](https://docs.adobelaunch.com/client-side-information/deploy-javascript-tags-to-opt-in-to-launch) | 개발자가 확장 프로그램 및 규칙 작성기를 사용하여 옵트인 및 옵트아웃 솔루션을 정의할 수 있는 방법입니다. |
+
+{style=&quot;table-layout:auto&quot;}
