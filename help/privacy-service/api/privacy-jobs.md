@@ -6,10 +6,10 @@ topic-legacy: developer guide
 description: Privacy Service API를 사용하여 Experience Cloud 응용 프로그램의 개인 정보 작업을 관리하는 방법에 대해 알아보십시오.
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e226990fc84926587308077b32b128bfe334e812
 workflow-type: tm+mt
-source-wordcount: '1344'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -41,6 +41,8 @@ GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
 | `{REGULATION}` | 쿼리할 규칙 유형입니다. 허용되는 값은 다음과 같습니다. <ul><li>`gdpr` (유럽 연합)</li><li>`ccpa` (캘리포니아)</li><li>`lgpd_bra` (브라질)</li><li>`nzpa_nzl` (뉴질랜드)</li><li>`pdpa_tha` (태국)</li></ul> |
 | `{PAGE}` | 0 기반 번호 매기기를 사용하여 표시할 데이터 페이지입니다. 기본값은 `0`입니다. |
 | `{SIZE}` | 각 페이지에 표시할 결과 수입니다. 기본값은 `1`이고 최대값은 `100`입니다. 최대값을 초과하면 API가 400-코드 오류를 반환합니다. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **요청**
 
@@ -160,6 +162,8 @@ curl -X POST \
 | `analyticsDeleteMethod` | Adobe Analytics이 개인 데이터를 처리하는 방법을 지정하는 선택적 속성입니다. 이 속성에 사용할 수 있는 2개의 값이 있습니다. <ul><li>`anonymize`:지정된 사용자 ID 컬렉션에서 참조하는 모든 데이터는 익명으로 처리됩니다. `analyticsDeleteMethod`을(를) 생략하면 기본 동작입니다.</li><li>`purge`:모든 데이터가 완전히 제거됩니다.</li></ul> |
 | `regulation` **(필수 여부)** | 개인 정보 보호 업무에 대한 규정. 다음 값이 허용됩니다. <ul><li>`gdpr` (유럽 연합)</li><li>`ccpa` (캘리포니아)</li><li>`lgpd_bra` (브라질)</li><li>`nzpa_nzl` (뉴질랜드)</li><li>`pdpa_tha` (태국)</li></ul> |
 
+{style=&quot;table-layout:auto&quot;}
+
 **응답**
 
 성공적인 응답은 새로 만든 작업의 세부 정보를 반환합니다.
@@ -210,6 +214,8 @@ curl -X POST \
 | --- | --- |
 | `jobId` | 작업에 대한 읽기 전용, 고유한 시스템 생성 ID. 이 값은 특정 작업을 조회하는 다음 단계에서 사용됩니다. |
 
+{style=&quot;table-layout:auto&quot;}
+
 작업 요청을 성공적으로 제출하면 작업의 상태](#check-status)을 확인하는 다음 단계로 진행할 수 있습니다.[
 
 ## 작업 상태 확인 {#check-status}
@@ -229,6 +235,8 @@ GET /jobs/{JOB_ID}
 | 매개 변수 | 설명 |
 | --- | --- |
 | `{JOB_ID}` | 조회할 작업의 ID입니다. 이 ID는 [작업](#create-job) 만들기 및 [모든 작업](#list)을 나열하는 동안 성공한 API 응답에서 `jobId` 아래에 반환됩니다. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **요청**
 
@@ -326,6 +334,8 @@ curl -X GET \
 | `productStatusResponse.results` | 특정 상태에 대해 일부 제품은 `responseMsgDetail`에서 다루지 않는 추가 정보를 제공하는 `results` 개체를 반환할 수 있습니다. |
 | `downloadURL` | 작업 상태가 `complete`인 경우 이 속성은 작업 결과를 ZIP 파일로 다운로드할 수 있는 URL을 제공합니다. 작업이 완료된 후 60일 동안 이 파일을 다운로드할 수 있습니다. |
 
+{style=&quot;table-layout:auto&quot;}
+
 ### 작업 상태 범주 {#status-categories}
 
 다음 표에는 가능한 다양한 작업 상태 카테고리와 해당 의미가 나열됩니다.
@@ -336,6 +346,8 @@ curl -X GET \
 | `processing` | 응용 프로그램에서 작업을 승인했으며 현재 처리 중입니다. |
 | `submitted` | 작업이 모든 해당 애플리케이션에 제출됩니다. |
 | `error` | 작업 처리에 오류가 발생했습니다. 개별 작업 세부 정보를 검색하여 자세한 정보를 얻을 수 있습니다. |
+
+{style=&quot;table-layout:auto&quot;}
 
 >[!NOTE]
 >
