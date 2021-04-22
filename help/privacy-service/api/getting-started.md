@@ -6,10 +6,10 @@ description: 개발자는 Privacy Service API를 사용하여 법적 개인 정�
 topic-legacy: developer guide
 exl-id: c1d05e30-ef8f-4adf-87e0-1d6e3e9e9f9e
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e226990fc84926587308077b32b128bfe334e812
 workflow-type: tm+mt
-source-wordcount: '761'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -35,9 +35,9 @@ Adobe Experience Platform [!DNL Privacy Service]은 Adobe Experience Cloud 응�
 
 [!DNL Privacy Service] API를 호출하려면 먼저 필요한 헤더에 사용할 액세스 자격 증명을 수집해야 합니다.
 
-* 인증:Bearer `{ACCESS_TOKEN}`
-* x-api-key:`{API_KEY}`
-* x-gw-ims-org-id:`{IMS_ORG}`
+* `Authorization: Bearer {ACCESS_TOKEN}`
+* `x-api-key: {API_KEY}`
+* `x-gw-ims-org-id: {IMS_ORG}`
 
 이 작업에는 Adobe Admin Console에서 [!DNL Experience Platform]에 대한 개발자 권한을 취득한 다음 Adobe 개발자 콘솔에서 자격 증명을 생성하는 작업이 포함됩니다.
 
