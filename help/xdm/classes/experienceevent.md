@@ -6,9 +6,9 @@ topic-legacy: overview
 description: 이 문서에서는 XDM ExperienceEvent 클래스의 개요를 제공합니다.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 9b63b38e664e5776ca638f8ed407896f185bcab0
 workflow-type: tm+mt
-source-wordcount: '812'
+source-wordcount: '861'
 ht-degree: 1%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 1%
 | `eventMergeId` | 레코드를 만든 인제스트된 일괄 처리의 ID. 이 필드는 데이터 수집 시 시스템에 의해 자동으로 채워집니다. |
 | `eventType` | 레코드에 대한 기본 이벤트 유형을 나타내는 문자열. 허용된 값과 그 정의는 [부록 섹션](#eventType)에 제공됩니다. |
 | `identityMap` | 이벤트가 적용되는 개별 ID 세트를 포함하는 맵 필드입니다. 이 필드는 ID 데이터를 수집할 때 시스템에 의해 자동으로 업데이트됩니다. [실시간 고객 프로필](../../profile/home.md)에 이 필드를 제대로 활용하려면 데이터 작업에서 필드의 내용을 수동으로 업데이트하지 마십시오.<br /><br />사용 사례에 대한 자세한 내용은 스키마 구성 [의 기본 사항](../schema/composition.md#identityMap) 에서 ID 맵에 대한 섹션을 참조하십시오. |
-| `timestamp` | [RFC 3339 Section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6)에 따라 지정된 이벤트 또는 관찰이 발생한 시간입니다. |
+| `timestamp` | [RFC 3339 섹션 5.6](https://tools.ietf.org/html/rfc3339#section-5.6)에 따라 형식이 지정된 이벤트가 발생한 ISO 8601 타임스탬프.<br><br>이 타임스탬프는  **** 이벤트 자체의 관찰만을 나타낼 수 있으며, 과거에만 발생해야 합니다. 세그멘테이션 사용 사례를 사용하려면 나중에 발생할 수 있는 타임스탬프(예: 출발 날짜)를 사용해야 하는 경우 이러한 값은 경험 이벤트 스키마의 다른 부분에 제한되어야 합니다. |
 
 ## 호환 가능한 믹싱 {#mixins}
 
