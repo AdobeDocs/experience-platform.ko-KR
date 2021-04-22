@@ -7,9 +7,9 @@ type: Tutorial
 description: 이 자습서에서는 Sensei 기계 학습 API 호출을 사용하여 모델을 생성, 교육 및 평가하는 방법을 보여줍니다.
 exl-id: 8107221f-184c-426c-a33e-0ef55ed7796e
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
 workflow-type: tm+mt
-source-wordcount: '1237'
+source-wordcount: '1235'
 ht-degree: 1%
 
 ---
@@ -41,16 +41,14 @@ API를 사용하여 트레이닝을 위한 실험 실행을 만듭니다. 이 �
 
 >[!NOTE]
 >
->&quot;Engine&quot;, &quot;MLInstance&quot;, &quot;MLService&quot;, &quot;Experience&quot; 및 &quot;Model&quot;은 UI에서 다른 용어로 언급됩니다. UI에서 오는 경우 다음 표에 차이가 매핑됩니다.
-> 
-> | UI 용어 | API 용어 |
-> --- | ---
-> | 레서피 | 엔진 |
-> | 모델 | MLInstance |
-> | 교육 실행 | 실험 |
-> | 서비스 | MLService |
+>&quot;Engine&quot;, &quot;MLInstance&quot;, &quot;MLService&quot;, &quot;Experience&quot; 및 &quot;Model&quot;은 UI에서 다른 용어로 언급됩니다. UI에서 오는 경우 다음 표에서는 차이점을 매핑합니다.
 
-
+| UI 용어 | API 용어 |
+| --- | --- |
+| 레서피 | 엔진 |
+| 모델 | MLInstance |
+| 교육 실행 | 실험 |
+| 서비스 | MLService |
 
 ### MLInstance 만들기
 
