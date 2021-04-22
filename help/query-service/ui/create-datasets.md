@@ -7,7 +7,7 @@ type: Tutorial
 description: Adobe Experience Platform 쿼리 서비스를 사용하면 UI에서 데이터 세트를 만들 수 있습니다. 데이터 세트를 만든 후 Data Lake의 다른 데이터세트처럼 액세스하여 다양한 사용 사례에 사용할 수 있습니다.
 exl-id: 6f6c049d-f19f-4161-aeb4-3a01eca7dc75
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d2f19cc97082f75e66cf38e54b5bdb89482930ed
 workflow-type: tm+mt
 source-wordcount: '323'
 ht-degree: 0%
@@ -23,9 +23,9 @@ ht-degree: 0%
 1. 연결된 클라이언트를 사용하여 쿼리를 작성하고 출력물의 유효성을 확인합니다.
 2. [!DNL Platform] UI에 로그인하고 [쿼리]로 이동합니다.
 3. 목록에서 쿼리를 찾아 행 위에 마우스를 놓습니다.
-4. **[!UICONTROL Create Dataset]**&#x200B;을 클릭합니다. ![이미지](../images/ui/output-dataset.png)
+4. **[!UICONTROL Create Dataset]**&#x200B;를 선택합니다. ![이미지](../images/ui/create-datasets/output-dataset.png)
 5. LDAP ID 앞에 데이터 세트 이름을 입력합니다(고유 또는 SQL 안전일 필요는 없음).시스템은 여기에 지정된 이름을 기반으로 &quot;테이블 이름&quot;을 생성합니다.
-6. 데이터 세트 설명을 입력하고 **[!UICONTROL Run Query]**&#x200B;을 클릭합니다.![이미지](../images/ui/run-query.png)
+6. 데이터 세트 설명을 입력하고 **[!UICONTROL Run Query]**&#x200B;을 선택합니다.![이미지](../images/ui/create-datasets/run-query.png)
 7. 전체 쿼리를 확인한 다음 데이터 세트 목록 페이지로 이동하여 방금 만든 데이터 세트를 확인합니다.
 
 데이터 세트를 만든 후 [!DNL Data Lake]의 다른 데이터세트처럼 액세스할 수 있으며 다양한 사용 사례에 사용할 수 있습니다.
