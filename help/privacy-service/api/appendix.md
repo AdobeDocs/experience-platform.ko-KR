@@ -6,10 +6,10 @@ topic-legacy: developer guide
 description: 이 문서에는 Privacy Service API 작업에 대한 추가 정보가 포함되어 있습니다.
 exl-id: 7099e002-b802-486e-8863-0630d66e330f
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 545ac984d9f9f540fc9121214d40719f9a254379
 workflow-type: tm+mt
-source-wordcount: '501'
-ht-degree: 9%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -60,13 +60,13 @@ ht-degree: 9%
 다음 표에서는 작업 생성 요청의 `include` 속성에서 Adobe 제품을 지정하기 위해 허용된 값에 대해 설명합니다.
 
 | 제품 | `include` 속성에 사용할 값 |
---- | ---
-| Adobe Advertising Cloud | &quot;AdCloud&quot; |
-| Adobe Analytics | &quot;Analytics&quot; |
-| Adobe Audience Manager | &quot;AudienceManager&quot; |
-| Adobe Campaign | &quot;Campaign&quot; |
-| Adobe Experience Platform | &quot;aepDataLake&quot; |
-| Adobe Primetime 인증 | &quot;primetimeAuthentication&quot; |
-| Adobe Target | &quot;Target&quot; |
-| 고객 레코드 서비스 | &quot;CRS&quot; |
-| 실시간 고객 프로필 | &quot;ProfileService&quot; |
+| --- | --- |
+| Adobe Advertising Cloud | `AdCloud` |
+| Adobe Analytics | `Analytics` |
+| Adobe Audience Manager | `AudienceManager` |
+| Adobe Campaign | `Campaign` |
+| Adobe Experience Platform | `aepDataLake` |
+| Adobe Primetime 인증 | `primetimeAuthentication` |
+| Adobe Target | `Target` |
+| 고객 레코드 서비스 | `CRS` |
+| 실시간 고객 프로필 | `ProfileService` |
