@@ -7,7 +7,7 @@ type: Tutorial
 description: 이 자습서에서는 Sensei Machine Learning API를 사용하여 모델을 서비스로 게시하는 프로세스를 다룹니다.
 exl-id: f78b1220-0595-492d-9f8b-c3a312f17253
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: a6d047d52dad085ba662bd684c896bdffe3eef2e
 workflow-type: tm+mt
 source-wordcount: '1516'
 ht-degree: 1%
@@ -39,7 +39,7 @@ ht-degree: 1%
 다음 표에서는 이 자습서에서 사용되는 몇 가지 일반적인 용어에 대해 설명합니다.
 
 | 용어 | 정의 |
---- | ---
+| --- | --- |
 | **기계 학습 인스턴스(ML 인스턴스)** | 특정 데이터, 매개 변수 및 [!DNL Sensei] 코드를 포함하는 특정 테넌트에 대한 [!DNL Sensei] 엔진 인스턴스입니다. |
 | **실험** | 교육 실험 실행, 채점 실험 실행 또는 둘 다를 실행하기 위한 우산 엔티티. |
 | **예약된 실험** | 사용자 정의 일정에 따라 제어되는 교육 또는 점수 실험 실행의 자동화를 설명하는 용어입니다. |
@@ -83,7 +83,7 @@ curl -X POST
 ```
 
 | 속성 | 설명 |
---- | ---
+| --- | --- |
 | `mlInstanceId` | 기존 ML 인스턴스 ID인 ML 서비스를 만드는 데 사용되는 교육 실험 실행은 이 특정 ML 인스턴스와 일치해야 합니다. |
 | `trainingExperimentId` | ML 인스턴스 ID에 해당하는 ID를 실험해 봅니다. |
 | `trainingExperimentRunId` | ML 서비스를 게시하는 데 사용할 특정 교육 실험 실행 |
