@@ -6,9 +6,9 @@ topic-legacy: ui guide
 description: Edge Segmentation은 Platform에서 세그먼트를 즉시 평가하여 동일한 페이지와 다음 페이지 개인화 사용 사례를 활성화하는 기능입니다.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5256c2a13fc75f7d46911f2ad368188d9e818921
 workflow-type: tm+mt
-source-wordcount: '346'
+source-wordcount: '349'
 ht-degree: 4%
 
 ---
@@ -41,7 +41,7 @@ Edge Segmentation은 Adobe Experience Platform에서 세그먼트를 바로 에�
 | 쿼리 유형 | 세부 사항 |
 | ---------- | ------- |
 | 상대 시간 창 | 쿼리가 시간 창을 참조하면 가장자리 세그멘테이션을 사용하여 평가할 수 없습니다. |
-| 부정 | 쿼리에 부정적인 부분이 있으면 가장자리 세그멘테이션을 사용하여 평가할 수 없습니다. |
+| 부정 | 쿼리에 부정 또는 `not` 이벤트가 포함된 경우 가장자리 세그멘테이션을 사용하여 평가할 수 없습니다. |
 | 여러 이벤트 | 쿼리에 이벤트가 두 개 이상 있으면 에지 세그멘테이션을 사용하여 평가할 수 없습니다. |
 
 ## 다음 단계
