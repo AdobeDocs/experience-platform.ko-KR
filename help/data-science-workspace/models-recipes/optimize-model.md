@@ -7,7 +7,7 @@ type: Tutorial
 description: Model Insights Framework는 데이터 과학자에게 실험을 기반으로 최적의 기계 학습 모델을 위한 신속하고 정확한 선택을 할 수 있는 데이터 과학 작업 공간의 툴을 제공합니다.
 exl-id: f989a3f1-6322-47c6-b7d6-6a828766053f
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
 workflow-type: tm+mt
 source-wordcount: '1265'
 ht-degree: 0%
@@ -77,7 +77,7 @@ evaluation.metrics=com.adobe.platform.ml.impl.Constants.FSCORE
 다음 표에는 각 클래스에 대한 기본 지표가 나와 있습니다. 사용자는 `evaluation.metric` 열의 값을 사용하여 특정 지표를 활성화할 수도 있습니다.
 
 | `evaluator.class` | 기본 지표 | `evaluation.metric` |
---- | --- | ---
+| --- | --- | --- |
 | `DefaultBinaryClassificationEvaluator` | -Precision <br>-Recall <br>-Incomputed Matrix <br>-F-Score <br>-정확도 <br>-수신기 운영 특성 <br> - 받는 사람 운영 특성 | -`PRECISION` <br>`RECALL`-<br>-`CONFUSION_MATRIX`<br>-`FSCORE`<br>-`ACCURACY`<br>`ROC`<br>-`AUROC`> |
 | `DefaultMultiClassificationEvaluator` | -Precision <br>-Recall <br>-Incomputed Matrix <br>-F-Score <br>-정확도 <br>-수신기 운영 특성 <br> - 받는 사람 운영 특성 | -`PRECISION` <br>`RECALL`-<br>-`CONFUSION_MATRIX`<br>-`FSCORE`<br>-`ACCURACY`<br>`ROC`<br>-`AUROC`> |
 | `RecommendationsEvaluator` | -평균 평균 정밀도(MAP) <br>-표준화된 할인된 누적 게인 <br>-평균 상호 등급 <br>-지표 K | -`MEAN_AVERAGE_PRECISION` <br>-`NDCG` <br>-`MRR` <br>-`METRIC_K` |
@@ -161,7 +161,7 @@ class Evaluator(AbstractEvaluator):
 [!DNL Sensei Model Insights Framework]은 각 유형의 기계 학습 알고리즘에 대해 하나의 기본 템플릿을 지원합니다. 아래 표는 일반적인 고급 기계 학습 알고리즘 클래스와 해당 평가 지표 및 시각화를 보여줍니다.
 
 | ML 알고리즘 유형 | 평가 지표 | 시각화 |
---- | --- | ---
+| --- | --- | --- |
 | 회귀 | - RMSE<br>- MAPE<br>- MASE<br>- MAE | 예측된 값과 실제 값 오버레이 곡선 비교 |
 | 이진 분류 | - 혼동 매트릭스<br>- Precision-recover<br>- Accuracy<br>- F-점수(특히 F1,F2)<br>- AUC<br>- ROC | ROC 곡선 및 혼동 매트릭스 |
 | 다중 클래스 분류 | -혼동 행렬 <br>- 각 클래스에 대해:<br>- precision-recover 정확도 <br>- F-점수(특히 F1, F2) | ROC 곡선 및 혼동 매트릭스 |
