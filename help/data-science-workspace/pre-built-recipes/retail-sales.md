@@ -6,7 +6,7 @@ topic-legacy: overview
 description: 소매 판매 레서피를 사용하면 특정 기간 동안 초기 설정된 모든 스토어에 대한 판매 예측을 예측할 수 있습니다. 정확한 예측 모델을 사용하면 소매업체는 수요와 가격 정책 간의 관계를 파악할 수 있고 매출과 매출을 극대화하기 위해 최적화된 가격 결정을 내릴 수 있습니다.
 exl-id: ff01fcd1-fca6-4957-8470-a974fd1520aa
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
 workflow-type: tm+mt
 source-wordcount: '585'
 ht-degree: 2%
@@ -41,7 +41,7 @@ ht-degree: 2%
 이 레시피는 [XDM 스키마](../../xdm/schema/field-dictionary.md)를 사용하여 데이터를 모델링합니다. 이 레서피에 사용된 스키마는 다음과 같습니다.
 
 | 필드 이름 | 유형 |
---- | ---
+| --- | --- |
 | 날짜 | 문자열 |
 | 스토어 | 정수 |
 | storeType | 문자열 |
