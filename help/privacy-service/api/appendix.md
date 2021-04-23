@@ -6,10 +6,10 @@ topic-legacy: developer guide
 description: 이 문서에는 Privacy Service API 작업에 대한 추가 정보가 포함되어 있습니다.
 exl-id: 7099e002-b802-486e-8863-0630d66e330f
 translation-type: tm+mt
-source-git-commit: e226990fc84926587308077b32b128bfe334e812
+source-git-commit: a4f6801cc85624274716889bdda0146fa38eb4b7
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '478'
+ht-degree: 5%
 
 ---
 
@@ -65,14 +65,15 @@ ht-degree: 0%
 
 | 제품 | `include` 속성에 사용할 값 |
 | --- | --- |
-| Adobe Advertising Cloud | `AdCloud` |
-| Adobe Analytics | `Analytics` |
+| Adobe Advertising Cloud | `adCloud` |
+| Adobe Analytics | `analytics` |
 | Adobe Audience Manager | `AudienceManager` |
-| Adobe Campaign | `Campaign` |
-| Adobe Experience Platform | `aepDataLake` |
+| Adobe Campaign | `campaign` |
+| Adobe Experience Platform | `AdobeCloudPlatform` |
 | Adobe Primetime 인증 | `primetimeAuthentication` |
-| Adobe Target | `Target` |
-| 고객 레코드 서비스 | `CRS` |
-| 실시간 고객 프로필 | `ProfileService` |
+| Adobe Target | `target` |
+| 자동화 제품 | `automationProduct` |
+| 고객 속성(CRS) | `CRS` |
+| 실시간 고객 프로필 | `profileService` |
 
 {style=&quot;table-layout:auto&quot;}
