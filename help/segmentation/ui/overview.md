@@ -6,7 +6,7 @@ topic-legacy: ui guide
 description: Adobe Experience Platform 세그멘테이션 서비스는 세그먼트 정의를 만들고 관리하기 위한 사용자 인터페이스를 제공합니다.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: fa2f4e046c6210137aa3e98d9f18010c1058275a
 workflow-type: tm+mt
 source-wordcount: '1479'
 ht-degree: 0%
@@ -32,7 +32,7 @@ ht-degree: 0%
 
 ## 개요
 
-[[!DNL Experience Platform] UI](http://platform.adobe.com/)에서 왼쪽 탐색 영역에서 **[!UICONTROL Segments]**&#x200B;을 선택하여 **[!UICONTROL Overview]** 탭을 엽니다. 이 탭에서는 세그먼트를 이해하고 작업을 시작하는 데 도움이 되는 설명서 및 비디오에 대한 링크를 제공합니다.
+[[!DNL Experience Platform] UI](https://platform.adobe.com/)에서 왼쪽 탐색 영역에서 **[!UICONTROL Segments]**&#x200B;을 선택하여 **[!UICONTROL Overview]** 탭을 엽니다. 이 탭에서는 세그먼트를 이해하고 작업을 시작하는 데 도움이 되는 설명서 및 비디오에 대한 링크를 제공합니다.
 
 ![](../images/ui/overview/segment-overview.png)
 
@@ -44,14 +44,14 @@ IMS 조직에 대한 모든 세그먼트 정의 목록을 보려면 **[!UICONTRO
 
 이 보기는 분류, 이탈, 프로필 수, 평가 방법, 만든 날짜 및 마지막으로 수정한 날짜를 포함한 세그먼트 정의에 대한 정보를 나열합니다.
 
-분류에는 다음 각 상태에 속하는 프로파일의 백분율을 나타내는 막대 그래프가 표시됩니다.[!UICONTROL Entered], [!UICONTROL Realized] 및 [!UICONTROL Exiting].
+분류에는 다음 각 상태에 속하는 프로파일의 백분율을 나타내는 막대 그래프가 표시됩니다.[!UICONTROL Realized], [!UICONTROL Existing] 및 [!UICONTROL Exiting].
 
 ![](../images/ui/overview/segment-browse-breakdown.png)
 
 | 상태 | 설명 |
 | ------ | ----------- |
-| 입력됨 | 세그먼트 내의 새 프로필. |
-| 실현 | 세그먼트 내에 남아 있는 기존 프로필. |
+| 실현 | 세그먼트 내의 새 프로필. |
+| 기존 | 세그먼트 내에 남아 있는 기존 프로필. |
 | 종료 중 | 세그먼트를 떠나는 기존 프로필. |
 
 이탈(churn)은 세그먼트 작업이 마지막으로 실행된 시간에 비해 세그먼트 정의 내에서 변경되는 프로필의 백분율을 나타내며 프로필 수는 세그먼트에 자격을 갖춘 총 프로필 수를 나타냅니다.
