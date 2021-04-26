@@ -7,7 +7,7 @@ type: Tutorial
 description: 이 자습서에서는 Adobe Experience Platform 사용자 인터페이스를 사용하여 CSV 파일을 XDM 스키마에 매핑하는 방법을 설명합니다.
 exl-id: 15f55562-269d-421d-ad3a-5c10fb8f109c
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 0e79d339ddc0301486ea3e53a3fd52877ff6a2c8
 workflow-type: tm+mt
 source-wordcount: '828'
 ht-degree: 1%
@@ -85,7 +85,7 @@ CSV 데이터를 새 데이터 세트에 인제스트하려면 **[!UICONTROL Cre
 
 매핑 중 하나를 제거하려면 해당 매핑 위로 마우스를 가져간 다음 빼기 아이콘을 선택합니다.
 
-### 계산된 필드 추가
+### 계산된 필드 {#add-calculated-field} 추가
 
 계산된 필드를 사용하면 입력 스키마의 특성에 따라 값을 만들 수 있습니다. 그런 다음 이러한 값을 대상 스키마의 속성에 할당할 수 있으며 쉽게 참조할 수 있도록 이름과 설명을 제공합니다.
 
