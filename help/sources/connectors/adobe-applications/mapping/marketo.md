@@ -4,14 +4,14 @@ solution: Experience Platform
 title: Marketo Engage 소스의 매핑 필드
 topic-legacy: overview
 description: 아래 표에는 Marketo 데이터 집합의 필드와 해당 XDM 필드 간의 매핑이 포함되어 있습니다.
+exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
 translation-type: tm+mt
-source-git-commit: f12baaa9d4b37f1101792a4ae479b5a62893eb68
+source-git-commit: 8f03b2e8a10d57fcae77dedecdce0e0176ba04fd
 workflow-type: tm+mt
-source-wordcount: '425'
+source-wordcount: '453'
 ht-degree: 3%
 
 ---
-
 
 # (베타) [!DNL Marketo Engage] 필드 매핑
 
@@ -158,6 +158,7 @@ ht-degree: 3%
 | `company` | `accountName` |
 | `companyNotes` | `accountDescription` |
 | `site` | `accountSite` |
+| `mktoCdpParentOrgId` | `accountParentID` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -177,8 +178,8 @@ ht-degree: 3%
 
 | 소스 데이터 세트 | XDM 대상 필드 | 참고 |
 | -------------- | ---------------- | ----- |
-| `marketingListMemberID` | `staticListMemberID` | 기본 ID |
-| `marketingListID` | `staticListID` | 관계 |
+| `staticListMemberID` | `marketingListMemberID` | 기본 ID |
+| `staticListID` | `marketingListID` | 관계 |
 | `personID` | `personID` | 관계 |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 
@@ -234,7 +235,7 @@ ht-degree: 3%
 | `isWon` | `isWon` |
 | `quantity` | `opportunityQuantity` |
 | `probability` | `probabilityPercentage` |
-| `Campaign-ID` | `campaignID` | Salesforce 통합을 사용하는 경우에만 권장됩니다. |
+| `mktoCdpSourceCampaignId` | `campaignID` | Salesforce 통합을 사용하는 경우에만 권장됩니다. |
 | `lastActivityDate` | `lastActivityDate` |
 | `leadSource` | `leadSource` |
 | `nextStep` | `nextStep` |
@@ -279,7 +280,7 @@ ht-degree: 3%
 | `mktoCdpCnvContactPersonId` | `b2b.convertedContactID` |
 | `mktoCdpIsConverted` | `b2b.isConverted` |
 | `mktoCdpConvertedDate` | `b2b.convertedDate` |
-| `sfdcId` | `extSourceSystemAudit.externalID` | 보조 ID |
+| `sfdcLeadId` | `extSourceSystemAudit.externalID` | 보조 ID |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `title` | `extendedWorkDetails.jobTitle` |
@@ -308,8 +309,13 @@ ht-degree: 3%
 | `id` | `personComponents.sourcePersonID` |
 | `email` | `personComponents.workEmail.address` |
 | `email` | `workEmail.address` |
+| `to_object('ECID',arrays_to_objects('id',explode(ecids)))` | `identityMap` |
 
 {style=&quot;table-layout:auto&quot;}
+
+>[!TIP]
+>
+>`to_object('ECID',arrays_to_objects('id',explode(ecids)))` 소스 필드는 플랫폼 UI에서 [!UICONTROL Add calculated field] 옵션을 사용하여 추가해야 하는 계산된 필드입니다. 자세한 내용은 [계산된 필드 추가](../../../../ingestion/tutorials/map-a-csv-file.md)에 대한 자습서를 참조하십시오.
 
 ## 다음 단계
 
