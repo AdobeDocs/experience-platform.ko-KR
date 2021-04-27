@@ -8,10 +8,10 @@ topic-legacy: getting started
 type: Documentation
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: a03d851f3e0037b8241ca1f1de890903b08feac4
 workflow-type: tm+mt
-source-wordcount: '1715'
-ht-degree: 5%
+source-wordcount: '1768'
+ht-degree: 4%
 
 ---
 
@@ -179,6 +179,16 @@ API 요청에서 API 키 헤더(`x-api-key`)가 누락되었을 때 이 오류 �
 
 이 오류 메시지는 POST, PUT 또는 PATCH 요청에 잘못된 헤더가 있거나 누락된 `Content-Type` 헤더가 있을 때 표시됩니다. 헤더가 요청에 포함되고 해당 값이 `application/json`인지 확인합니다.
 
+### 사용자 영역이 없습니다.
+
+```json
+{
+    "error_code": "403027",
+    "message": "User region is missing"
+}
+```
+
+이 오류 메시지는 제공된 인증 자격 증명으로 표시된 계정이 Experience Platform에 대한 제품 프로필과 연결되어 있지 않을 때 표시됩니다. 플랫폼 API 인증 자습서에서 [액세스 자격 증명](./api-authentication.md#authentication-for-each-session)에 대한 단계를 따라 플랫폼에 플랫폼을 추가하고 그에 따라 인증 자격 증명을 업데이트합니다.
 
 ## 서비스 문제 해결 디렉터리 {#service-troubleshooting-directory}
 
