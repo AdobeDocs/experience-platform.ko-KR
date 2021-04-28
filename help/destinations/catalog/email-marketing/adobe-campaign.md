@@ -2,14 +2,14 @@
 keywords: 이메일;이메일;이메일;이메일 대상;adobe campaign;campaign;email;email;e-mail;email destinations;adobe campaign;campaign
 title: Adobe Campaign 연결
 description: Adobe Campaign은 온라인과 오프라인 등 모든 채널에서 캠페인을 개인화하고 전달할 수 있는 솔루션 집합입니다.
+exl-id: 0de91738-8f56-41f5-8745-9b14b15db76a
 translation-type: tm+mt
-source-git-commit: 02754055e2be8a45a0699386cb559dad8f25717c
+source-git-commit: 29b4eaca06e2f1032584a0b4720490934a6e1fa7
 workflow-type: tm+mt
-source-wordcount: '762'
+source-wordcount: '808'
 ht-degree: 0%
 
 ---
-
 
 # Adobe Campaign 연결
 
@@ -22,6 +22,12 @@ Adobe Campaign은 온라인과 오프라인 등 모든 채널에서 캠페인을
 ## 내보내기 유형 {#export-type}
 
 **프로필 기반**  - 원하는 스키마 필드와 함께 세그먼트의 모든 구성원을 내보냅니다(예:이메일 주소, 전화 번호, 성)을  **[!UICONTROL Select attributes]** 대상 활성화  [작업 과정](../../ui/activate-destinations.md#select-attributes) 단계에서 선택한 대로 설정합니다.
+
+## IP 주소 허용 목록 {#allow-list}
+
+SFTP 저장소를 사용하여 이메일 마케팅 대상을 설정할 때 Adobe에서는 특정 IP 범위를 허용 목록에 추가하는 것이 좋습니다.
+
+Adobe IP를 허용 목록에 추가해야 하는 경우 클라우드 스토리지 대상 [IP 주소 허용 목록을 참조하십시오.](../cloud-storage/ip-address-allow-list.md)
 
 ## 연결 대상 {#connect-destination}
 
