@@ -5,9 +5,9 @@ type: Documentation
 description: 이 페이지는 Experience Platform에서 SFTP 서버, Amazon S3 또는 Azure Blob 저장소로 데이터를 안전하게 내보낼 수 있도록 허용 목록에 추가할 수 있는 IP 범위를 제공합니다.
 exl-id: 0b8086aa-786e-4244-b2a5-a3f57ad59a8b
 translation-type: tm+mt
-source-git-commit: ac62ebcc7b00a96f718a3c39725bcf21ce3d56cf
+source-git-commit: 4cc7fb2714f6df8065a0531f7e507983940d662c
 workflow-type: tm+mt
-source-wordcount: '212'
+source-wordcount: '206'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 ## 개요 {#overview}
 
-이 페이지는 Experience Platform에서 [SFTP 서버](./sftp.md), [Amazon S3](./amazon-s3.md) 또는 [Azure Blob](./azure-blob.md) 스토리지로 데이터를 안전하게 내보낼 수 있도록 허용 목록에 추가할 수 있는 IP 범위를 제공합니다.
+이 페이지에서는 Experience Platform에서 [SFTP 서버](./sftp.md)로 데이터를 안전하게 내보낼 수 있도록 허용 목록에 추가할 수 있는 IP 범위를 제공합니다.
 
 네트워크 방화벽을 통해 네트워크 액세스 제어를 정의할 수 있습니다. 적절한 IP 범위를 지정하여 데이터 전송 서비스에 대한 트래픽을 허용할 수 있습니다.
 
