@@ -2,14 +2,14 @@
 keywords: 전자 메일;전자 메일;전자 메일 대상;oracle 응답 대상
 title: Oracle Responsys 연결
 description: Responsys는 Oracle이 이메일, 모바일, 디스플레이 및 소셜 상호 작용을 개인화하기 위해 제공하는 크로스채널 마케팅 캠페인을 위한 기업 이메일 마케팅 툴입니다.
+exl-id: 70f2f601-afee-4315-bf7a-ed2c92397ebe
 translation-type: tm+mt
-source-git-commit: 02754055e2be8a45a0699386cb559dad8f25717c
+source-git-commit: 29b4eaca06e2f1032584a0b4720490934a6e1fa7
 workflow-type: tm+mt
-source-wordcount: '524'
+source-wordcount: '570'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL Oracle Responsys] 연결
 
@@ -22,6 +22,12 @@ ht-degree: 0%
 ## 내보내기 유형 {#export-type}
 
 **프로필 기반**  - 원하는 스키마 필드와 함께 세그먼트의 모든 구성원을 내보냅니다(예:이메일 주소, 전화 번호, 성)을  [대상 활성화 워크플로의 속성 선택 화면에서 선택합니다](../../ui/activate-destinations.md#select-attributes).
+
+## IP 주소 허용 목록 {#allow-list}
+
+SFTP 저장소를 사용하여 이메일 마케팅 대상을 설정할 때 Adobe에서는 특정 IP 범위를 허용 목록에 추가하는 것이 좋습니다.
+
+Adobe IP를 허용 목록에 추가해야 하는 경우 클라우드 스토리지 대상 [IP 주소 허용 목록을 참조하십시오.](../cloud-storage/ip-address-allow-list.md)
 
 ## 연결 대상 {#connect-destination}
 
