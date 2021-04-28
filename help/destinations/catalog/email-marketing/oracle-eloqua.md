@@ -2,14 +2,14 @@
 keywords: 전자 메일;전자 메일;전자 메일 대상;oracle 언변;oracle
 title: Oracle 언변 연결
 description: Oracle Fura는 B2B 마케터 및 조직이 마케팅 캠페인과 영업 리드 생성을 관리하는 데 도움이 되는 Oracle이 제공하는 마케팅 자동화를 위한 서비스(SaaS) 플랫폼입니다.
+exl-id: 6eaa79ff-8874-423b-bdff-aa04f6101a53
 translation-type: tm+mt
-source-git-commit: 02754055e2be8a45a0699386cb559dad8f25717c
+source-git-commit: 29b4eaca06e2f1032584a0b4720490934a6e1fa7
 workflow-type: tm+mt
-source-wordcount: '576'
+source-wordcount: '622'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL Oracle Eloqua] 연결
 
@@ -20,6 +20,12 @@ ht-degree: 0%
 ## 내보내기 유형 {#export-type}
 
 **프로필 기반**  - 원하는 스키마 필드와 함께 세그먼트의 모든 구성원을 내보냅니다(예:이메일 주소, 전화 번호, 성)을  [대상 활성화 워크플로의 속성 선택 화면에서 선택합니다](../../ui/activate-destinations.md#select-attributes).
+
+## IP 주소 허용 목록 {#allow-list}
+
+SFTP 저장소를 사용하여 이메일 마케팅 대상을 설정할 때 Adobe에서는 특정 IP 범위를 허용 목록에 추가하는 것이 좋습니다.
+
+Adobe IP를 허용 목록에 추가해야 하는 경우 클라우드 스토리지 대상 [IP 주소 허용 목록을 참조하십시오.](../cloud-storage/ip-address-allow-list.md)
 
 ## 대상 {#connect-destination}에 연결
 
