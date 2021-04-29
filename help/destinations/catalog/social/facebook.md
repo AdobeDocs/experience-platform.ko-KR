@@ -4,9 +4,9 @@ title: Facebook 연결
 description: 해시 처리된 이메일을 기반으로 고객 타깃팅, 개인화 및 억제를 위해 Facebook 캠페인에 대한 프로파일을 활성화합니다.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
 translation-type: tm+mt
-source-git-commit: 805cb72e91e6446f74cc3461d39841740eb576c7
+source-git-commit: 1e9e5831b19738285affeb0337985c7cb0d45ebf
 workflow-type: tm+mt
-source-wordcount: '1133'
+source-wordcount: '1089'
 ht-degree: 2%
 
 ---
@@ -36,12 +36,6 @@ ht-degree: 2%
 소셜 미디어에서 이들을 타깃팅하기 위해 이메일 주소를 식별자로 사용하여 CRM의 고객 데이터를 Adobe Experience Platform으로 가져올 수 있습니다.
 
 다음으로, 연결된 멤버십 ID 및 고객 계층을 비롯한 오프라인 데이터를 사용하여 [!DNL Facebook] 대상을 통해 타깃팅할 수 있는 새 대상 세그먼트를 만들 수 있습니다.
-
-## [!DNL Facebook] 대상 {#data-governance}에 대한 데이터 거버넌스
-
->[!IMPORTANT]
->
->[!DNL Facebook]으로 전송된 데이터에는 연결된 ID가 포함될 수 없습니다. 귀하는 이러한 의무를 지킬 책임이 있으며, 활성화를 위해 선택한 세그먼트가 병합 정책에 봉합 옵션을 사용하지 않도록 하여 이를 수행할 수 있습니다. [병합 정책](/help/profile/ui/merge-policies.md)에 대해 자세히 알아보십시오.
 
 ## 지원되는 ID {#supported-identities}
 
