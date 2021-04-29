@@ -1,15 +1,15 @@
 ---
 keywords: Azure 이벤트 허브 대상;azure 이벤트 허브;azure 이벤트 하위 그룹
-title: (베타) Azure 이벤트 허브 연결
-description: Experience Platform의 데이터를 스트리밍하기 위해 Azure 이벤트 허브 저장소에 대한 실시간 아웃바운드 연결을 만듭니다.
+title: (베타)!DNL Azure 이벤트 허브] 연결
+description: Experience Platform의 데이터를 스트리밍하기 위해 내!DNL Azure 이벤트 허브] 저장소에 대한 실시간 아웃바운드 연결을 만듭니다.
+exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: ce5001d0a1c95901089915ae9836fdd436f12297
 workflow-type: tm+mt
-source-wordcount: '532'
+source-wordcount: '534'
 ht-degree: 2%
 
 ---
-
 
 # (베타) [!DNL Azure Event Hubs] 연결
 
@@ -113,3 +113,4 @@ Adobe Experience Platform의 데이터를 스트리밍하기 위해 [!DNL Azure 
 >* [Azure 이벤트 허브에 연결하고 흐름 서비스 API를 사용하여 데이터를 활성화합니다.](../../api/streaming-destinations.md)
 >* [AWS Kinesis 대상](./amazon-kinesis.md)
 >* [대상 유형 및 카테고리](../../destination-types.md)
+
