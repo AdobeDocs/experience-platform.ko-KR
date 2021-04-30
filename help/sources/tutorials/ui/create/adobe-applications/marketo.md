@@ -5,14 +5,14 @@ title: UI에서 Marketo Engage 소스 커넥터 만들기
 topic-legacy: overview
 type: Tutorial
 description: 이 자습서에서는 B2B 데이터를 Adobe Experience Platform으로 가져오기 위해 UI에서 Marketo Engage 소스 커넥터를 만드는 단계를 제공합니다.
+exl-id: a6aa596b-9cfa-491e-86cb-bd948fb561a8
 translation-type: tm+mt
-source-git-commit: f12baaa9d4b37f1101792a4ae479b5a62893eb68
+source-git-commit: 5322adb4b3a244de92300e7ce9d942ad4b968454
 workflow-type: tm+mt
-source-wordcount: '1317'
+source-wordcount: '1324'
 ht-degree: 0%
 
 ---
-
 
 # (베타) UI에서 [!DNL Marketo Engage] 소스 커넥터를 만듭니다.
 
@@ -75,25 +75,25 @@ ht-degree: 0%
 
 [!DNL Marketo] 계정을 만든 후 다음 단계에서는 [!DNL Marketo] 데이터 세트를 탐색할 수 있는 인터페이스를 제공합니다.
 
-인터페이스의 왼쪽 절반은 디렉토리 브라우저로, 10개의 [!DNL Marketo] 데이터 세트를 표시합니다. 완벽하게 작동하는 [!DNL Marketo] 소스 연결을 사용하려면 9개의 다른 데이터 세트를 수집해야 합니다. [!DNL Marketo's] 계정 기반 마케팅(ABM) 기능도 사용하는 경우 10번째 데이터 흐름을 만들어 [!UICONTROL Named Accounts] 데이터 세트를 인제스트해야 합니다.
+인터페이스의 왼쪽 절반은 디렉토리 브라우저로, 10개의 [!DNL Marketo] 데이터 세트를 표시합니다. 완벽하게 작동하는 [!DNL Marketo] 소스 연결을 사용하려면 9개의 다른 데이터 세트를 수집해야 합니다. [!DNL Marketo] 계정 기반 마케팅(ABM) 기능도 사용하는 경우 10번째 데이터 흐름을 만들어 [!UICONTROL Named Accounts] 데이터 세트를 인제스트해야 합니다.
 
 >[!NOTE]
 >
->간결성을 위해 다음 자습서에서는 [!UICONTROL Named Acccounts]을 예로 사용하지만 아래 설명된 단계는 10개의 [!DNL Marketo] 데이터 세트에 적용됩니다.
+>간결성을 위해 다음 자습서에서는 [!UICONTROL Named Accounts]을 예로 사용하지만 아래 설명된 단계는 10개의 [!DNL Marketo] 데이터 세트에 적용됩니다.
 
 먼저 인제스트할 데이터 세트를 선택한 다음 **[!UICONTROL Next]**&#x200B;을 선택합니다.
 
 ![select-data](../../../../images/tutorials/create/marketo/select-data.png)
 
-## 데이터 필드를 XDM 스키마에 매핑
+## [!DNL Marketo] 스키마를 플랫폼에 매핑
 
-[!UICONTROL Mapping] 단계가 나타나 [!DNL Marketo] 데이터 집합을 플랫폼 데이터 집합에 매핑하는 인터페이스를 제공합니다.
+[!UICONTROL Mapping] 단계가 나타나 [!DNL Marketo] 스키마를 플랫폼에 매핑하는 인터페이스를 제공합니다.
 
 수집할 인바운드 데이터의 데이터 세트를 선택합니다. 기존 데이터 집합을 사용하거나 새 데이터 집합을 만들 수 있습니다.
 
 ### 기존 데이터 세트 사용
 
-데이터를 기존 데이터 세트에 인제스트하려면 **[!UICONTROL Use existing dataset]**&#x200B;을 선택한 다음 데이터 세트 아이콘을 선택합니다.
+데이터를 기존 데이터 세트에 인제스트하려면 **[!UICONTROL Existing dataset]**&#x200B;을 선택한 다음 데이터 세트 아이콘을 선택합니다.
 
 ![기존 데이터 세트](../../../../images/tutorials/create/marketo/existing-dataset.png)
 
@@ -103,7 +103,7 @@ ht-degree: 0%
 
 ### 새 데이터 세트 사용
 
-데이터를 새 데이터 세트에 인제스트하려면 **[!UICONTROL Create new dataset]**&#x200B;을 선택하고 제공된 필드에 데이터 세트에 대한 이름과 설명을 입력합니다.
+데이터를 새 데이터 세트에 인제스트하려면 **[!UICONTROL New dataset]**&#x200B;을 선택하고 제공된 필드에 데이터 세트에 대한 이름과 설명을 입력합니다.
 
 **[!UICONTROL Select schema]** 검색 표시줄에 스키마 이름을 입력하여 스키마를 검색할 수 있습니다. 드롭다운 아이콘을 선택하여 기존 스키마 목록을 볼 수도 있습니다. 또는 **[!UICONTROL Advanced search]**&#x200B;을 선택하여 해당 세부 정보를 포함한 기존 스키마의 페이지에 액세스할 수 있습니다.
 
@@ -144,7 +144,7 @@ ht-degree: 0%
 
 ![데이터 흐름 세부 정보](../../../../images/tutorials/create/marketo/dataflow-detail.png)
 
-API를 사용하여 다운로드할 수 있는 새로 인제스트된 배치에 대한 자세한 오류 메시지 생성을 허용하려면 **[!UICONTROL Error diagnostics]** 전환을 활성화합니다.
+API를 사용하여 다운로드할 수 있는 새로 인제스트된 배치에 대한 자세한 오류 메시지 생성을 허용하려면 **[!UICONTROL Error diagnostics]** 전환을 활성화합니다. 자세한 내용은 [데이터 통합 오류 진단](../../../../../ingestion/quality/error-diagnostics.md)에 대한 자습서를 참조하십시오.
 
 ![오류](../../../../images/tutorials/create/marketo/errors.png)
 
@@ -160,7 +160,7 @@ API를 사용하여 다운로드할 수 있는 새로 인제스트된 배치에 
 
 **[!UICONTROL Review]** 단계가 나타나 새 데이터 흐름을 만들기 전에 검토할 수 있습니다. 세부 사항은 다음 카테고리 내에서 그룹화됩니다.
 
-* **[!UICONTROL Connection]**:소스 유형, 선택한 소스 파일의 관련 경로 및 해당 소스 파일 내의 열 양을 표시합니다.
+* **[!UICONTROL Connection]**:소스 유형, 선택한 소스 엔티티의 관련 경로 및 해당 소스 엔티티 내의 열 양을 표시합니다.
 * **[!UICONTROL Assign dataset & map fields]**:데이터 세트가 준수하는 스키마를 포함하여 원본 데이터를 수집할 데이터 집합을 표시합니다.
 
 데이터 흐름을 검토했으면 **[!UICONTROL Finish]**&#x200B;을 선택하고 데이터 흐름을 만드는 데 약간의 시간이 소요됩니다.
