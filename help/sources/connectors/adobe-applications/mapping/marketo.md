@@ -6,10 +6,10 @@ topic-legacy: overview
 description: 아래 표에는 Marketo 데이터 집합의 필드와 해당 XDM 필드 간의 매핑이 포함되어 있습니다.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
 translation-type: tm+mt
-source-git-commit: 8f03b2e8a10d57fcae77dedecdce0e0176ba04fd
+source-git-commit: 5d37c9664f60e9d962e866c6d480d2ef2e0bfff3
 workflow-type: tm+mt
-source-wordcount: '453'
-ht-degree: 3%
+source-wordcount: '330'
+ht-degree: 4%
 
 ---
 
@@ -259,10 +259,6 @@ ht-degree: 3%
 
 ## 사용자 {#persons}
 
-플랫폼 UI의 [!DNL Profiles] 대시보드에서, 검색하는 데 사용한 병합 정책에 있는 ID 스티칭의 값이 `None`으로 설정된 경우 연결된 ID 창에는 기본 ID 속성만 표시됩니다.
-
-해결 방법은 [!DNL Profile]에 연결된 모든 ID를 보려면 ID 연결 필드를 `None`에서 `Private graph`으로 업데이트할 수 있습니다. 또는 새 병합 정책을 만들거나 ID 연결 값이 `Private graph`으로 설정된 다른 병합 정책을 사용할 수 있습니다. 새 병합 정책을 만들거나 다른 병합 정책을 사용하도록 선택하는 경우 정책에 [!DNL Marketo] 개인 매핑 집합에 사용되는 것과 동일한 스키마 유형이 포함되어 있는지 확인해야 합니다. 자세한 내용은 [정책 병합 UI 안내서](../../../../profile/ui/merge-policies.md)를 참조하십시오.
-
 | 소스 데이터 세트 | XDM 대상 필드 | 참고 |
 | -------------- | ---------------- | ----- |
 | `id` | `personID` | 기본 ID |
@@ -313,7 +309,7 @@ ht-degree: 3%
 
 {style=&quot;table-layout:auto&quot;}
 
->[!TIP]
+>[!NOTE]
 >
 >`to_object('ECID',arrays_to_objects('id',explode(ecids)))` 소스 필드는 플랫폼 UI에서 [!UICONTROL Add calculated field] 옵션을 사용하여 추가해야 하는 계산된 필드입니다. 자세한 내용은 [계산된 필드 추가](../../../../ingestion/tutorials/map-a-csv-file.md)에 대한 자습서를 참조하십시오.
 
