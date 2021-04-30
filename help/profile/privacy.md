@@ -2,12 +2,11 @@
 keywords: Experience Platform;홈;인기 항목
 solution: Experience Platform
 title: 실시간 고객 프로필의 개인 정보 요청 처리
-topic-legacy: overview
 type: Documentation
 description: Adobe Experience Platform Privacy Service은 다양한 개인 정보 보호 규정에 따라 고객의 개인 데이터 액세스, 판매 거부 또는 삭제를 처리합니다. 이 문서에서는 실시간 고객 프로파일에 대한 개인정보 보호 요청 처리와 관련된 중요한 개념을 설명합니다.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 8d16a3030c663d40daed6c5105af07b2d2d5c7bf
 workflow-type: tm+mt
 source-wordcount: '1091'
 ht-degree: 0%
@@ -24,9 +23,9 @@ Adobe Experience Platform [!DNL Privacy Service]은(는) GDPR(General Data Prote
 
 이 안내서를 읽기 전에 다음 [!DNL Experience Platform] 서비스에 대한 작업 이해를 구하는 것이 좋습니다.
 
-* [[!DNL Privacy Service]](home.md):Adobe Experience Cloud 애플리케이션에서 개인 데이터를 액세스, 판매 거부 또는 삭제하기 위한 고객 요청을 관리합니다.
+* [[!DNL Privacy Service]](../privacy-service/home.md):Adobe Experience Cloud 애플리케이션에서 개인 데이터를 액세스, 판매 거부 또는 삭제하기 위한 고객 요청을 관리합니다.
 * [[!DNL Identity Service]](../identity-service/home.md):디바이스 및 시스템 간의 ID를 결합함으로써 고객 경험 데이터의 세분화로 인해 발생하는 기본적인 문제를 해결합니다.
-* [[!DNL Real-time Customer Profile]](../profile/home.md):여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
+* [[!DNL Real-time Customer Profile]](home.md):여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
 
 ## ID 네임스페이스 {#namespaces} 이해
 
