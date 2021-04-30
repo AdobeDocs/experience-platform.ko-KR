@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform;홈;인기 항목;Marketo 소스 커넥터;네임스페이스;스키마
 solution: Experience Platform
-title: 'Marketo 네임스페이스 '
+title: Marketo 네임스페이스
 topic-legacy: overview
 description: 이 문서에서는 Marketo Engage 소스 커넥터를 만들 때 필요한 사용자 정의 네임스페이스에 대한 개요를 제공합니다.
+exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
 translation-type: tm+mt
-source-git-commit: bea6b35627b0e913c894c38ba9553085ba0aa26f
+source-git-commit: 5322adb4b3a244de92300e7ce9d942ad4b968454
 workflow-type: tm+mt
-source-wordcount: '1215'
-ht-degree: 6%
+source-wordcount: '1161'
+ht-degree: 7%
 
 ---
-
 
 # (베타) [!DNL Marketo Engage] 네임스페이스 및 스키마
 
@@ -80,7 +80,7 @@ ID 네임스페이스는 ID와 관련된 컨텍스트의 표시기 역할을 하
 
 | 디스플레이 이름 | ID 기호 | ID 유형 | 발급자 유형 | 발급자 엔티티 유형 | [!DNL Salesforce] 구독 조직 ID 예 |
 | --- | --- | --- | --- | --- | --- |
-| `salesforce_person_{SALESFORCE_ORGANIZATION_ID}` | 자동 생성 | `CROSS_DEVICE` | [!DNL Salesforce] | `person` | `00DA0000000Hz79` |
+| `salesforce_lead_{SALESFORCE_ORGANIZATION_ID}` | 자동 생성 | `CROSS_DEVICE` | [!DNL Salesforce] | `lead` | `00DA0000000Hz79` |
 | `salesforce_account_{SALESFORCE_ORGANIZATION_ID}` | 자동 생성 | `B2B_ACCOUNT` | [!DNL Salesforce] | `account` | `00DA0000000Hz79` |
 | `salesforce_opportunity_{SALESFORCE_ORGANIZATION_ID}` | 자동 생성 | `B2B_OPPORTUNITY` | [!DNL Salesforce] | `opportunity` | `00DA0000000Hz79` |
 | `salesforce_opportunity_contact_role_{SALESFORCE_ORGANIZATION_ID}` | 자동 생성 | `B2B_OPPORTUNITY_PERSON` | [!DNL Salesforce] | `opportunity contact role` | `00DA0000000Hz79` |
@@ -124,24 +124,20 @@ Experience Platform은 스키마를 사용하여 데이터의 구조를 일관�
 >
 >표의 전체 내용을 보려면 왼쪽/오른쪽으로 스크롤하십시오.
 
-| 스키마 이름 | 기본 클래스 | 혼합 | 기본 ID | 기본 ID 네임스페이스 | 보조 ID | 보조 ID 네임스페이스 | 관계 | 참고 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| [!DNL Marketo] 회사 {MUNCHKIN_ID} | XDM 비즈니스 계정 | XDM 비즈니스 계정 세부 정보 | `accountID` 기본 클래스에서 | `marketo_company_{MUNCHKIN_ID}` | `extSourceSystemAudit.externalID` 기본 클래스에서 | `salesforce_account_{SALESFORCE_ORGANIZATION_ID}` | <ul><li>`accountParentID` XDM 비즈니스 계정 세부 정보 혼합에서</li><li>유형:1대1</li><li>참조 스키마:Marketo 회사 {MUNCHKIN_ID}</li><li>네임스페이스: `marketo_company_{MUNCHKIN_ID}`</li></ul> |
-| [!DNL Marketo] 사람 {MUNCHKIN_ID} | XDM 개별 프로필 | <ul><li>XDM 비즈니스 담당자 세부 정보</li><li>XDM 비즈니스 담당자 구성 요소</li></ul> | `personID` 기본 클래스에서 | `marketo_person_{MUNCHKIN_ID}` | <ol><li>`extSourceSystemAudit.externalID` XDM 비즈니스 담당자 세부 정보 혼합</li><li>`workEmail.address` XDM 비즈니스 담당자 세부 정보 혼합</li><li>`identityMap` ID 맵 혼합</ol></li> | <ol><li>`salesforce_person_{SALESFORCE_ORGANIZATION_ID}`</li><li>이메일</li><li>ECID</li></ol> | <ul><li>`personComponents.sourceAccountID` XDM 비즈니스 담당자 구성 요소 믹싱</li><li>유형:다대다</li><li>참조 스키마:Marketo 회사 {MUNCHKIN_ID}</li><li>네임스페이스: `marketo_company_{MUNCHKIN_ID}`</li><li>대상 속성:`accountID`</li><li>현재 스키마의 관계 이름:계정</li><li>참조 스키마의 관계 이름:People</li></ul> |
-| [!DNL Marketo] 기회 {MUNCHKIN_ID} | XDM 비즈니스 기회 | XDM 비즈니스 기회 세부 정보 | `opportunityID` 기본 클래스에서 | `marketo_opportunity_{MUNCHKIN_ID}` | `extSourceSystemAudit.externalID` 기본 클래스에서 | `salesforce_opportunity_{SALESFORCE_ORGANIZATION_ID}` | <ul><li>`accountID` 기본 클래스에서</li><li>유형:다대다</li><li>참조 스키마:Marketo 회사 {MUNCHKIN_ID}</li><li>네임스페이스: `marketo_company_{MUNCHKIN_ID}`</li><li>대상 속성:`accountID`</li><li>현재 스키마의 관계 이름:계정</li><li>참조 스키마의 관계 이름:기회</li></ul> |
-| [!DNL Marketo] 기회 연락처 역할 {MUNCHKIN_ID} | XDM 사업 기회 담당자 관계 | None | `opportunityPersonID` 기본 클래스에서 | `marketo_opportunity_contact_role_{MUNCHKIN_ID}` | `extSourceSystemAudit.externalID` 기본 클래스에서 | `salesforce_opportunity_contact_role_{SALESFORCE_ORGANIZATION_ID}` | 첫 번째 관계<ul><li>`personID` 기본 클래스에서</li><li>유형:다대다</li><li>참조 스키마:Marketo Person {MUNCHKIN_ID}</li><li>네임스페이스: `marketo_person_{MUNCHKIN_ID}`</li><li>대상 속성:`personID`</li><li>현재 스키마의 관계 이름:Person</li><li>참조 스키마의 관계 이름:기회</li></ul>두 번째 관계<ul><li>`opportunityID` 기본 클래스에서</li><li>유형:다대다</li><li>참조 스키마:Marketo 기회 {MUNCHKIN_ID}</li><li>네임스페이스: `marketo_opportunity_{MUNCHKIN_ID}`</li><li>대상 속성:`opportunityID`</li><li>현재 스키마의 관계 이름:기회</li><li>참조 스키마의 관계 이름:People</li></ul> |
-| [!DNL Marketo] 프로그램 {MUNCHKIN_ID} | XDM 비즈니스 캠페인 | XDM 비즈니스 캠페인 세부 사항 | `campaignID` 기본 클래스에서 | `marketo_program_{MUNCHKIN_ID}` | `extSourceSystemAudit.externalID` 기본 클래스에서 | `salesforce_campaign_SALESFORCE_ORGANIZATION_ID}` |
-| [!DNL Marketo] 프로그램 구성원 {MUNCHKIN_ID} | XDM 비즈니스 캠페인 구성원 | XDM 비즈니스 캠페인 멤버 세부 사항 | `campaignMemberID` 기본 클래스에서 | `marketo_program_member_{MUNCHKIN_ID}` | 없음 | 없음 | 첫 번째 관계<ul><li>`personID` 기본 클래스에서</li><li>유형:다대다</li><li>참조 스키마:Marketo Person {MUNCHKIN_ID}</li><li>네임스페이스: `marketo_person_{MUNCHKIN_ID}`</li><li>대상 속성:`personID`</li><li>현재 스키마의 관계 이름:Person</li><li>참조 스키마의 관계 이름:프로그램</li></ul>두 번째 관계<ul><li>`campaignID` 기본 클래스에서</li><li>유형:다대다</li><li>참조 스키마:Marketo 프로그램 {MUNCHKIN_ID}</li><li>네임스페이스: `marketo_program_{MUNCHKIN_ID}`</li><li>대상 속성:campaignID</li><li>현재 스키마의 관계 이름:프로그램</li><li>참조 스키마의 관계 이름:People</li></ul> |
-| [!DNL Marketo] 정적 목록 {MUNCHKIN_ID} | XDM 비즈니스 마케팅 목록 | 없음 | `marketingListID` 기본 클래스에서 | `marketo_static_list_{MUNCHKIN_ID}` | 없음 | 없음 | 없음 | 정적 목록은 [!DNL Salesforce]에서 동기화되지 않으므로 보조 ID가 없습니다. |
-| [!DNL Marketo] 정적 목록 멤버 {MUNCHKIN_ID} | XDM 비즈니스 마케팅 목록 구성원 | 없음 | `marketingListMemberID` 기본 클래스에서 | `marketo_static_list_member_{MUNCHKIN_ID}` | 없음 | 없음 | 첫 번째 관계<ul><li>`personID` 기본 클래스에서</li><li>유형:다대다</li><li>참조 스키마:Marketo Person {MUNCHKIN_ID}</li><li>네임스페이스: `marketo_person_{MUNCHKIN_ID}`</li><li>대상 속성:`personID`</li><li>현재 스키마의 관계 이름:Person</li><li>참조 스키마의 관계 이름:목록</li></ul>두 번째 관계<ul><li>`marketingListID` 기본 클래스에서</li><li>유형:다대다</li><li>참조 스키마:Marketo 정적 목록 {MUNCHKIN_ID}</li><li>네임스페이스: `marketo_static_list_{MUNCHKIN_ID}`</li><li>대상 속성:`marketingListID`</li><li>현재 스키마의 관계 이름:목록</li><li>참조 스키마의 관계 이름:People</li></ul> |
-| [!DNL Marketo] 지정된 계정 {MUNCHKIN_ID} | XDM 비즈니스 계정 | XDM 비즈니스 계정 세부 정보 | `accountID` 기본 클래스에서 | `marketo_named_account_{MUNCHKIN_ID}` | `extSourceSystemAudit.externalID` 기본 클래스에서 | `salesforce_account_{SALESFORCE_ORGANIZATION_ID}` | <ul><li>`accountParentID` XDM 비즈니스 계정 세부 정보 혼합에서</li><li>유형:1대1</li><li>참조 스키마:Marketo 명명된 계정 {MUNCHKIN_ID}</li><li>네임스페이스: `marketo_named_account_{MUNCHKIN_ID}` |
-| [!DNL Marketo] 활동 {MUNCHKIN ID} | XDM 경험 이벤트 | <ul><li>웹 페이지 방문</li><li>새 리드</li><li>리드 변환</li><li>목록에 추가</li><li>목록에서 제거</li><li>기회에 추가</li><li>기회에서 제거</li><li>양식 작성됨</li><li>링크 클릭 수</li><li>배달된 이메일</li><li>연 이메일</li><li>클릭한 이메일</li><li>바운스된 이메일</li><li>바운스된 이메일 소프트</li><li>구독 취소된 이메일</li><li>점수 변경됨</li><li>기회 업데이트됨</li><li>캠페인 진행 상태의 상태가 변경됨</li><li>개인 식별자</li><li>Marketo 웹 URL | `personID` 사람 식별자 혼합 | marketing_person_{MUNCHKIN_ID} | 없음 | 없음 | 첫 번째 관계<ul><li>`listOperations.listID` 필드</li><li>유형:1대1</li><li>참조 스키마:Marketo 정적 목록 {MUNCHKIN_ID}</li><li>네임스페이스: `marketo_static_list_{MUNCHKIN_ID}`</li></ul>두 번째 관계<ul><li>`opportunityEvent.opportunityID` 필드</li><li>유형:1대1</li><li>참조 스키마:Marketo 기회 {MUNCHKIN_ID}</li><li>네임스페이스: `marketo_opportunity_{MUNCHKIN_ID}`</li></ul>제3의 관계<ul><li>`leadOperation.campaignProgression.campaignID` 필드</li><li>유형:1대1</li><li>참조 스키마:Marketo 프로그램 {MUNCHKIN_ID}</li><li>네임스페이스: `marketo_program_{MUNCHKIN_ID}`</li></ul> |
+| 스키마 이름 | 기본 클래스 | 혼합 | [!DNL Profile] 스키마에서 | 기본 ID | 기본 ID 네임스페이스 | 보조 ID | 보조 ID 네임스페이스 | 관계 | 참고 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `[!DNL Marketo] Company {MUNCHKIN_ID}` | XDM 비즈니스 계정 | XDM 비즈니스 계정 세부 정보 | 활성화됨 | `accountID` 기본 클래스에서 | `marketo_company_{MUNCHKIN_ID}` | `extSourceSystemAudit.externalID` 기본 클래스에서 | `salesforce_account_{SALESFORCE_ORGANIZATION_ID}` | <ul><li>`accountParentID` XDM 비즈니스 계정 세부 정보 혼합에서</li><li>유형:1대1</li><li>참조 스키마:`[!DNL Marketo] Company {MUNCHKIN_ID}`</li><li>네임스페이스: `marketo_company_{MUNCHKIN_ID}`</li></ul> |
+| `[!DNL Marketo] Person {MUNCHKIN_ID}` | XDM 개별 프로필 | <ul><li>XDM 비즈니스 담당자 세부 정보</li><li>XDM 비즈니스 담당자 구성 요소</li><li>IdentityMap</li></ul> | 활성화됨 | `personID` 기본 클래스에서 | `marketo_person_{MUNCHKIN_ID}` | <ol><li>`extSourceSystemAudit.externalID` XDM 비즈니스 담당자 세부 정보 혼합</li><li>`workEmail.address` XDM 비즈니스 담당자 세부 정보 혼합</li><li>`identityMap` ID 맵 혼합</ol></li> | <ol><li>`salesforce_lead_{SALESFORCE_ORGANIZATION_ID}`</li><li>이메일</li><li>ECID</li></ol> | <ul><li>`personComponents.sourceAccountID` XDM 비즈니스 담당자 구성 요소 믹싱</li><li>유형:다대다</li><li>참조 스키마:`[!DNL Marketo] Company {MUNCHKIN_ID}`</li><li>네임스페이스: `marketo_company_{MUNCHKIN_ID}`</li><li>대상 속성:`accountID`</li><li>현재 스키마의 관계 이름:계정</li><li>참조 스키마의 관계 이름:People</li></ul> |
+| `[!DNL Marketo] Opportunity {MUNCHKIN_ID}` | XDM 비즈니스 기회 | XDM 비즈니스 기회 세부 정보 | 활성화됨 | `opportunityID` 기본 클래스에서 | `marketo_opportunity_{MUNCHKIN_ID}` | `extSourceSystemAudit.externalID` 기본 클래스에서 | `salesforce_opportunity_{SALESFORCE_ORGANIZATION_ID}` | <ul><li>`accountID` 기본 클래스에서</li><li>유형:다대다</li><li>참조 스키마:`[!DNL Marketo] Company {MUNCHKIN_ID}`</li><li>네임스페이스: `marketo_company_{MUNCHKIN_ID}`</li><li>대상 속성:`accountID`</li><li>현재 스키마의 관계 이름:계정</li><li>참조 스키마의 관계 이름:기회</li></ul> |
+| `[!DNL Marketo] Opportunity Contact Role {MUNCHKIN_ID}` | XDM 사업 기회 담당자 관계 | None | 활성화됨 | `opportunityPersonID` 기본 클래스에서 | `marketo_opportunity_contact_role_{MUNCHKIN_ID}` | `extSourceSystemAudit.externalID` 기본 클래스에서 | `salesforce_opportunity_contact_role_{SALESFORCE_ORGANIZATION_ID}` | 첫 번째 관계<ul><li>`personID` 기본 클래스에서</li><li>유형:다대다</li><li>참조 스키마:`[!DNL Marketo] Person {MUNCHKIN_ID}`</li><li>네임스페이스: `marketo_person_{MUNCHKIN_ID}`</li><li>대상 속성:`personID`</li><li>현재 스키마의 관계 이름:Person</li><li>참조 스키마의 관계 이름:기회</li></ul>두 번째 관계<ul><li>`opportunityID` 기본 클래스에서</li><li>유형:다대다</li><li>참조 스키마:`[!DNL Marketo] Opportunity {MUNCHKIN_ID}`</li><li>네임스페이스: `marketo_opportunity_{MUNCHKIN_ID}`</li><li>대상 속성:`opportunityID`</li><li>현재 스키마의 관계 이름:기회</li><li>참조 스키마의 관계 이름:People</li></ul> |
+| `[!DNL Marketo] Program {MUNCHKIN_ID}` | XDM 비즈니스 캠페인 | XDM 비즈니스 캠페인 세부 사항 | 활성화됨 | `campaignID` 기본 클래스에서 | `marketo_program_{MUNCHKIN_ID}` | `extSourceSystemAudit.externalID` 기본 클래스에서 | `salesforce_campaign_{SALESFORCE_ORGANIZATION_ID}` |
+| `[!DNL Marketo] Program Member {MUNCHKIN_ID}` | XDM 비즈니스 캠페인 구성원 | XDM 비즈니스 캠페인 멤버 세부 사항 | 활성화됨 | `campaignMemberID` 기본 클래스에서 | `marketo_program_member_{MUNCHKIN_ID}` | 없음 | 없음 | 첫 번째 관계<ul><li>`personID` 기본 클래스에서</li><li>유형:다대다</li><li>참조 스키마:Marketo Person {MUNCHKIN_ID}</li><li>네임스페이스: `marketo_person_{MUNCHKIN_ID}`</li><li>대상 속성:`personID`</li><li>현재 스키마의 관계 이름:Person</li><li>참조 스키마의 관계 이름:프로그램</li></ul>두 번째 관계<ul><li>`campaignID` 기본 클래스에서</li><li>유형:다대다</li><li>참조 스키마:`[!DNL Marketo] Program {MUNCHKIN_ID}`</li><li>네임스페이스: `marketo_program_{MUNCHKIN_ID}`</li><li>대상 속성:`campaignID`</li><li>현재 스키마의 관계 이름:프로그램</li><li>참조 스키마의 관계 이름:People</li></ul> |
+| `[!DNL Marketo] Static List {MUNCHKIN_ID}` | XDM 비즈니스 마케팅 목록 | 없음 | 활성화됨 | `marketingListID` 기본 클래스에서 | `marketo_static_list_{MUNCHKIN_ID}` | 없음 | 없음 | 없음 | 정적 목록은 [!DNL Salesforce]에서 동기화되지 않으므로 보조 ID가 없습니다. |
+| `[!DNL Marketo] Static List Member {MUNCHKIN_ID}` | XDM 비즈니스 마케팅 목록 구성원 | 없음 | 활성화됨 | `marketingListMemberID` 기본 클래스에서 | `marketo_static_list_member_{MUNCHKIN_ID}` | 없음 | 없음 | 첫 번째 관계<ul><li>`personID` 기본 클래스에서</li><li>유형:다대다</li><li>참조 스키마:`[!DNL Marketo] Person {MUNCHKIN_ID}`</li><li>네임스페이스: `marketo_person_{MUNCHKIN_ID}`</li><li>대상 속성:`personID`</li><li>현재 스키마의 관계 이름:Person</li><li>참조 스키마의 관계 이름:목록</li></ul>두 번째 관계<ul><li>`marketingListID` 기본 클래스에서</li><li>유형:다대다</li><li>참조 스키마:`[!DNL Marketo] Static List {MUNCHKIN_ID}`</li><li>네임스페이스: `marketo_static_list_{MUNCHKIN_ID}`</li><li>대상 속성:`marketingListID`</li><li>현재 스키마의 관계 이름:목록</li><li>참조 스키마의 관계 이름:People</li></ul> | 정적 목록 멤버는 [!DNL Salesforce]에서 동기화되지 않으므로 보조 ID가 없습니다. |
+| `[!DNL Marketo] Named Account {MUNCHKIN_ID}` | XDM 비즈니스 계정 | XDM 비즈니스 계정 세부 정보 | 활성화됨 | `accountID` 기본 클래스에서 | `marketo_named_account_{MUNCHKIN_ID}` | `extSourceSystemAudit.externalID` 기본 클래스에서 | `salesforce_account_{SALESFORCE_ORGANIZATION_ID}` | <ul><li>`accountParentID` XDM 비즈니스 계정 세부 정보 혼합에서</li><li>유형:1대1</li><li>참조 스키마:`[!DNL Marketo] Named Account {MUNCHKIN_ID}`</li><li>네임스페이스: `marketo_named_account_{MUNCHKIN_ID}` |
+| [!DNL Marketo] 활동 `{MUNCHKIN ID}` | XDM ExperienceEvent | <ul><li>웹 페이지 방문</li><li>새 리드</li><li>리드 변환</li><li>목록에 추가</li><li>목록에서 제거</li><li>기회에 추가</li><li>기회에서 제거</li><li>양식 작성됨</li><li>링크 클릭 수</li><li>배달된 이메일</li><li>연 이메일</li><li>클릭한 이메일</li><li>바운스된 이메일</li><li>바운스된 이메일 소프트</li><li>구독 취소된 이메일</li><li>점수 변경됨</li><li>기회 업데이트됨</li><li>캠페인 진행 상태의 상태가 변경됨</li><li>개인 식별자</li><li>Marketo 웹 URL | 활성화됨 | `personID` 사람 식별자 혼합 | `marketo_person_{MUNCHKIN_ID}` | 없음 | 없음 | 첫 번째 관계<ul><li>`listOperations.listID` 필드</li><li>유형:1대1</li><li>참조 스키마:`[!DNL Marketo] Static List {MUNCHKIN_ID}`</li><li>네임스페이스: `marketo_static_list_{MUNCHKIN_ID}`</li></ul>두 번째 관계<ul><li>`opportunityEvent.opportunityID` 필드</li><li>유형:1대1</li><li>참조 스키마:`[!DNL Marketo] Opportunity {MUNCHKIN_ID}`</li><li>네임스페이스: `marketo_opportunity_{MUNCHKIN_ID}`</li></ul>제3의 관계<ul><li>`leadOperation.campaignProgression.campaignID` 필드</li><li>유형:1대1</li><li>참조 스키마:`[!DNL Marketo] Program {MUNCHKIN_ID}`</li><li>네임스페이스: `marketo_program_{MUNCHKIN_ID}`</li></ul> | `[!DNL Marketo] Activity {MUNCHKIN_ID}` 스키마의 기본 ID는 `personID`이며 `[!DNL Marketo] Person {MUNCHKIN_ID}` 스키마의 기본 ID와 같습니다. |
 
 {style=&quot;table-layout:auto&quot;}
-
->[!NOTE]
->
->모든 스키마는 [!DNL Real-time Customer Profile]에 대해 사용할 수 있습니다.
 
 ## 다음 단계
 
