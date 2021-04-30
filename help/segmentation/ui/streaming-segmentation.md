@@ -6,9 +6,9 @@ topic-legacy: ui guide
 description: Adobe Experience Platform의 스트리밍 세분화를 통해 거의 실시간으로 세분화를 수행하고 데이터 풍부함에 초점을 맞출 수 있습니다. 스트리밍 세분화를 통해 데이터가 Platform(플랫폼)으로 유입되므로 세분화 작업을 예약하고 실행할 필요가 없습니다. 이 기능을 사용하면 이제 데이터가 플랫폼에 전달되면 대부분의 세그먼트 규칙을 평가할 수 있으므로 세그먼트 멤버십은 예약된 세그멘테이션 작업을 실행하지 않고 최신 상태로 유지됩니다.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: b4a04b52ff9a2b7a36fda58d70a2286fea600ff1
 workflow-type: tm+mt
-source-wordcount: '796'
+source-wordcount: '810'
 ht-degree: 0%
 
 ---
@@ -43,7 +43,7 @@ ht-degree: 0%
 | 프로필 전용 | 프로필 속성만 참조하는 모든 세그먼트 정의 |  |
 | 프로필을 참조하는 들어오는 히트 | 시간 제한 없이 단일 들어오는 이벤트를 참조하고 하나 이상의 프로필 속성을 참조하는 세그먼트 정의입니다. | ![](../images/ui/streaming-segmentation/profile-hit.png) |
 | 상대 시간 창 내의 프로파일을 참조하는 들어오는 히트 | 단일 들어오는 이벤트와 하나 이상의 프로필 속성을 참조하는 모든 세그먼트 정의입니다. | ![](../images/ui/streaming-segmentation/profile-relative-success.png) |
-| 세그먼트 | 하나 이상의 일괄 처리 또는 스트리밍 세그먼트를 포함하는 모든 세그먼트 정의 | ![](../images/ui/streaming-segmentation/two-batches.png) |
+| 세그먼트 | 하나 이상의 일괄 처리 또는 스트리밍 세그먼트를 포함하는 모든 세그먼트 정의 **참고:** 세그먼트 세그먼트를 사용하는 경우, 프로필 결격자는  **24시간마다** 발생합니다. | ![](../images/ui/streaming-segmentation/two-batches.png) |
 | 프로파일을 참조하는 여러 이벤트 | 지난 24시간 이내에 여러 이벤트 **을 참조하고 (선택 사항) 하나 이상의 프로필 특성이 있는 세그먼트 정의입니다.** | ![](../images/ui/streaming-segmentation/event-history-success.png) |
 
 세그먼트 정의는 다음 시나리오에서 스트리밍 세그먼테이션에 대해 **활성화되지 않습니다.**.
