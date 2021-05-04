@@ -7,9 +7,9 @@ type: Tutorial
 description: 이 자습서에서는 소스 커넥터 및 API를 사용하여 스트리밍 데이터를 검색하고 플랫폼에 가져오는 절차를 다룹니다.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: f35c59843451267d0a054cfd594aea3e5d5ea8c6
 workflow-type: tm+mt
-source-wordcount: '1498'
+source-wordcount: '1526'
 ht-degree: 2%
 
 ---
@@ -202,7 +202,6 @@ curl -X GET https://platform.adobe.io/data/foundation/flowservice/sourceConnecti
 }
 ```
 
-
 ## 대상 XDM 스키마 {#target-schema} 만들기
 
 소스 데이터를 [!DNL Platform]에서 사용하려면 필요에 따라 소스 데이터를 구조화하기 위해 대상 스키마를 만들어야 합니다. 그런 다음 대상 스키마를 사용하여 소스 데이터가 포함된 [!DNL Platform] 데이터 집합을 만듭니다. 이 대상 XDM 스키마도 XDM [!DNL Individual Profile] 클래스를 확장합니다.
@@ -334,6 +333,7 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
+        "name": "Test streaming dataset",
         "schemaRef": {
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/e45dd983026ce0daec5185cfddd48cbc0509015d880d6186",
             "contentType": "application/vnd.adobe.xed-full-notext+json; version=1"
@@ -345,15 +345,15 @@ curl -X POST \
             "profile": [
             "enabled:true"
             ]
-        },
-        "name": "Test streaming dataset"
+        }
     }'
 ```
 
 | 속성 | 설명 |
 | --- | --- |
-| `schemaRef.id` | 대상 XDM 스키마의 ID입니다. |
-| `schemaRef.contentType` | 스키마의 버전입니다. 이 값은 스키마의 최신 부 버전을 반환하는 `application/vnd.adobe.xed-full-notext+json;version=1`으로 설정해야 합니다. |
+| `name` | 만들 데이터 세트의 이름입니다. |
+| `schemaRef.id` | 데이터 세트에 기반이 되는 XDM 스키마의 URI `$id` |
+| `schemaRef.contentType` | 스키마의 버전입니다. 이 값은 스키마의 최신 부 버전을 반환하는 `application/vnd.adobe.xed-full-notext+json;version=1`으로 설정해야 합니다. 자세한 내용은 XDM API 안내서의 [스키마 버전 관리](../../../../xdm/api/getting-started.md#versioning)에 대한 섹션을 참조하십시오. |
 
 **응답**
 
