@@ -6,9 +6,9 @@ topic-legacy: overview
 description: 이 문서에서는 인구 통계 세부 사항 혼합에 대한 개요를 제공합니다.
 exl-id: 588c044c-b80d-4cb9-9f97-92f040d54bb4
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 87b638df8a3b27fb6df5dee60b57d817d5e34a80
 workflow-type: tm+mt
-source-wordcount: '261'
+source-wordcount: '260'
 ht-degree: 3%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 3%
 | 속성 | 데이터 유형 | 설명 |
 | --- | --- | --- |
 | `person.name` | [사람 이름](../../data-types/person-name.md) | 하위 필드에서 사람 이름의 다양한 요소를 설명하는 객체입니다. |
-| `person.birthDate` | Date | ISO 8601 타임스탬프 형식의 개인 출생일 |
+| `person.birthDate` | 날짜 | ISO 8601 타임스탬프 형식의 개인 출생일 |
 | `person.birthDayAndMonth` | 문자열 | MM-DD 형식으로 사람이 태어난 날과 달. 이 필드는 출생일 및 월을 알고 있을 때는 사용해야 하지만, 해는 그렇지 않다. |
 | `person.birthYear` | 정수 | 세기(예: 1989년)를 포함하여 사람이 태어난 연도. 이 필드는 전체 생년월일이 아닌 사용자의 연령만을 알 때 사용해야 합니다. |
 | `person.gender` | 문자열 | 사람의 성 ID. |
@@ -37,5 +37,4 @@ ht-degree: 3%
 혼합에 대한 자세한 내용은 공개 XDM 저장소를 참조하십시오.
 
 * [채워진 예제](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-person-details.example.1.json)
-* [풀 ](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-person-details.schema.json)
-샤카오
+* [전체 스키마](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-person-details.schema.json)
