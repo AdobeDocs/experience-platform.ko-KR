@@ -5,7 +5,7 @@ description: 대상 작업 공간은 4개의 섹션인 카탈로그, 찾아보�
 seo-description: Adobe Experience Platform의 왼쪽 탐색 막대에서 대상을 선택하여 대상 작업 영역에 액세스합니다.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
 translation-type: tm+mt
-source-git-commit: cc432f7c07f0f82deec653864154016638ec8138
+source-git-commit: eaa4a7efc248104d823267eca574f2eca16edc3f
 workflow-type: tm+mt
 source-wordcount: '742'
 ht-degree: 1%
@@ -38,7 +38,7 @@ Adobe Experience Platform의 왼쪽 탐색 막대에서 **[!UICONTROL Destinatio
 대상 카드에는 **[!UICONTROL Configure]** 또는 **[!UICONTROL Activate]** 컨트롤과 더 많은 옵션을 표시하는 보조 컨트롤이 포함되어 있습니다. 이러한 컨트롤은 아래에 설명되어 있습니다.
 
 | 제어 | 설명 |
----------|----------
+|---------|----------|
 | [!UICONTROL Configure] | 대상에 대한 연결을 만들 수 있습니다. |
 | [!UICONTROL Activate] | 대상에 대한 연결을 설정했으면 세그먼트를 활성화할 수 있습니다. |
 | [!UICONTROL View account] | 대상에 대해 연결한 계정을 봅니다. |
@@ -72,7 +72,7 @@ Adobe Experience Platform의 왼쪽 탐색 막대에서 **[!UICONTROL Destinatio
 ![검색 탭](../assets/ui/workspace/browse-tab.png)
 
 | 요소 | 설명 |
----------|----------
+|---------|----------|
 | 이름 | 활성화 과정을 위해 입력한 이름이 이 대상으로 전송됩니다. 동일한 열에는 2개의 컨트롤이 있습니다.[!UICONTROL Activate ] 및 [!UICONTROL Delete destination]. |
 | [!UICONTROL Last Flow Run Status] | 마지막 데이터 흐름 실행의 상태입니다. 데이터 흐름 실행에 대한 자세한 내용은 [대상 세부 사항 보기](destination-details-page.md)를 참조하십시오. |
 | [!UICONTROL Last Flow Run Date] | 마지막 데이터 흐름 실행이 발생한 시간 및 날짜입니다. 데이터 흐름 실행에 대한 자세한 내용은 [대상 세부 사항 보기](destination-details-page.md)를 참조하십시오. |
