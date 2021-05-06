@@ -6,9 +6,9 @@ topic-legacy: overview
 description: 이 문서에서는 Adobe Experience Platform 내의 데이터 준비를 소개합니다.
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: daefd977cd09bd9cd7f8d6101b45be98f30d24ae
 workflow-type: tm+mt
-source-wordcount: '388'
+source-wordcount: '437'
 ht-degree: 0%
 
 ---
@@ -35,6 +35,8 @@ ht-degree: 0%
 ## 매핑 집합
 
 한 스키마를 다른 스키마로 변환하는 매핑 세트를 통칭하여 매핑 집합이라고 합니다. 단일 매핑 세트가 각 데이터 흐름의 일부로 생성됩니다. 매핑 세트는 데이터 플로우의 필수 부분이며 데이터 플로우의 일부로 생성, 편집 및 모니터링됩니다.
+
+매핑 집합 내의 필드를 사용하는 방법을 비롯하여 매핑 집합에 대한 자세한 내용을 보려면 [매핑 집합 안내서](./mapping-set.md)를 참조하십시오. 매핑 세트를 만들고 매핑 세트와 관련된 다른 API 호출을 사용하는 방법에 대해 알아보려면 [개발자 안내서](./api/mapping-set.md)에서 매핑 세트 섹션을 참조하십시오.
 
 ## 데이터 형식 처리
 
