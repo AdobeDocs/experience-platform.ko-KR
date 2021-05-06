@@ -5,9 +5,9 @@ user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페�
 description: 이 문서에서는 Adobe Experience Platform 대상에 대한 목차 목록
 feature: 대상
 translation-type: tm+mt
-source-git-commit: 020192469127e8f25f0d61e33b4b5dc60da6b57d
+source-git-commit: 9b383f09a3a73f785b0e3a415deda126b9ef6b39
 workflow-type: tm+mt
-source-wordcount: '471'
+source-wordcount: '474'
 ht-degree: 10%
 
 ---
@@ -104,9 +104,9 @@ ht-degree: 10%
       * [Adobe Experience Platform Launch 확장 개요](./catalog/launch-extensions/overview.md)
    * 모바일 참여 대상 {#mobile-engagement}
       * [모바일 참여 대상 개요](./catalog/mobile-engagement/overview.md)
-      * [Airship 속성 연결](./catalog/mobile-engagement/airship-attributes.md)
-      * [Airship 태그 연결](./catalog/mobile-engagement/airship-tags.md)
-      * [브라즈 연결](./catalog/mobile-engagement/braze.md)
+      * [(베타) Airship Attributes 연결](./catalog/mobile-engagement/airship-attributes.md)
+      * [(베타) Airship Tags 연결](./catalog/mobile-engagement/airship-tags.md)
+      * [(베타) 브라즈 연결](./catalog/mobile-engagement/braze.md)
    * 개인화 대상 {#personalization}
       * [개인화 대상 개요](./catalog/personalization/overview.md)
       * [Adobe Target 확장](./catalog/personalization/adobe-target.md)
