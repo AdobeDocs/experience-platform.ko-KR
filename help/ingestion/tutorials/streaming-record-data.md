@@ -7,12 +7,13 @@ type: Tutorial
 description: 이 자습서는 Adobe Experience Platform 데이터 통합 서비스 API의 일부인 스트리밍 통합 API를 사용하는 데 도움이 됩니다.
 exl-id: 097dfd5a-4e74-430d-8a12-cac11b1603aa
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 544eeb3a27d0b218885e3000deb214f21c8e9fcd
 workflow-type: tm+mt
-source-wordcount: '1164'
+source-wordcount: '1168'
 ht-degree: 2%
 
 ---
+
 
 # 스트리밍 통합 API를 사용하여 데이터 스트리밍
 
@@ -23,10 +24,8 @@ ht-degree: 2%
 이 자습서에서는 다양한 Adobe Experience Platform 서비스에 대한 작업 지식이 필요합니다. 이 자습서를 시작하기 전에 다음 서비스에 대한 설명서를 검토하십시오.
 
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):경험 데이터를  [!DNL Platform] 구성하는 표준화된 프레임워크.
+   - [스키마 레지스트리 개발자 안내서](../../xdm/api/getting-started.md):API의 사용 가능한 각 끝점과  [!DNL Schema Registry] API를 호출하는 방법을 다루는 포괄적인 안내서입니다. 여기에는 이 자습서 전체의 호출에 표시되는 `{TENANT_ID}`에 대해 알고 있을 뿐만 아니라 수집에 대한 데이터 세트를 만드는 데 사용되는 스키마를 만드는 방법에 대해서도 알고 있는 것이 포함됩니다.
 - [[!DNL Real-time Customer Profile]](../../profile/home.md):여러 소스에서 집계된 데이터를 기반으로 통합된 소비자 프로필을 실시간으로 제공합니다.
-- [스키마 레지스트리 개발자 안내서](../../xdm/api/getting-started.md):API의 사용 가능한 각 끝점과  [!DNL Schema Registry] API를 호출하는 방법을 다루는 포괄적인 안내서입니다. 여기에는 이 자습서 전체의 호출에 표시되는 `{TENANT_ID}`에 대해 알고 있을 뿐만 아니라 수집에 대한 데이터 세트를 만드는 데 사용되는 스키마를 만드는 방법에 대해서도 알고 있는 것이 포함됩니다.
-
-또한 이 자습서에서는 스트리밍 연결을 이미 만들어야 합니다. 스트리밍 연결 만들기에 대한 자세한 내용은 [스트리밍 연결 자습서 만들기](./create-streaming-connection.md)를 참조하십시오.
 
 다음 섹션에서는 스트리밍 통합 API를 성공적으로 호출하기 위해 알아야 할 추가 정보를 제공합니다.
 
@@ -264,6 +263,12 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
 ]
 ```
 
+## 스트리밍 연결 만들기
+
+스키마 및 데이터 집합을 만든 후 스트리밍 연결을 만들 수 있습니다
+
+스트리밍 연결 만들기에 대한 자세한 내용은 [스트리밍 연결 자습서 만들기](./create-streaming-connection.md)를 참조하십시오.
+
 ## 스트리밍 연결 {#ingest-data}에 레코드 데이터를 인제스트합니다.
 
 데이터 세트 및 스트리밍 연결을 적절히 사용하여 XDM 형식의 JSON 레코드를 인제스트하여 레코드 데이터를 [!DNL Platform]에 인제스트할 수 있습니다.
@@ -276,7 +281,7 @@ POST /collection/{CONNECTION_ID}?synchronousValidation=true
 
 | 매개 변수 | 설명 |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | 이전에 만든 스트리밍 연결의 `id` 값입니다. |
+| `{CONNECTION_ID}` | 이전에 만든 스트리밍 연결의 `inletId` 값입니다. |
 | `synchronousValidation` | 개발 목적으로 사용하기 위한 선택적 쿼리 매개 변수입니다. `true`으로 설정된 경우 즉시 피드백에 사용하여 요청이 성공적으로 전송되었는지 확인할 수 있습니다. 기본적으로 이 값은 `false`으로 설정됩니다. |
 
 **요청**
