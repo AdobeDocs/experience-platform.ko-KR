@@ -7,9 +7,9 @@ type: Tutorial
 description: 이 자습서는 Adobe Experience Platform 데이터 통합 서비스 API의 일부인 스트리밍 통합 API를 사용하는 데 도움이 됩니다.
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 96f400466366d8a79babc194bc2ba8bf19ede6bb
 workflow-type: tm+mt
-source-wordcount: '883'
+source-wordcount: '1090'
 ht-degree: 2%
 
 ---
@@ -27,6 +27,8 @@ Flow Service는 Adobe Experience Platform 내의 다양한 소스에서 수집�
 
 - [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md):경험 데이터를  [!DNL Platform] 구성하는 표준화된 프레임워크.
 - [[!DNL Real-time Customer Profile]](../../../../../profile/home.md):여러 소스에서 집계된 데이터를 기반으로 통합된 소비자 프로필을 실시간으로 제공합니다.
+
+또한 스트리밍 연결을 만들려면 대상 XDM 스키마와 데이터 세트를 사용해야 합니다. 이러한 데이터 생성 방법에 대한 자세한 내용은 [스트리밍 레코드 데이터](../../../../../ingestion/tutorials/streaming-record-data.md)의 자습서 또는 [스트리밍 시간 시리즈 데이터](../../../../../ingestion/tutorials/streaming-time-series-data.md)의 자습서를 참조하십시오.
 
 다음 섹션에서는 스트리밍 통합 API를 성공적으로 호출하기 위해 알아야 할 추가 정보를 제공합니다.
 
@@ -54,9 +56,9 @@ Flow Service는 Adobe Experience Platform 내의 다양한 소스에서 수집�
 
 - 컨텐츠 유형:application/json
 
-## 연결 만들기
+## 기본 연결 만들기
 
-연결은 소스를 지정하며 스트리밍 통합 API와 호환되는 흐름을 만드는 데 필요한 정보를 포함합니다. 연결을 만들 때 인증되지 않은 연결 및 인증된 연결을 만들 수 있습니다.
+기본 연결은 소스를 지정하며 스트리밍 통합 API와 호환되는 흐름을 만드는 데 필요한 정보를 포함합니다. 기본 연결을 만들 때 인증되지 않은 연결 및 인증된 연결을 만들 수 있습니다.
 
 ### 인증되지 않은 연결
 
@@ -95,7 +97,7 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
              "name": "Sample connection"
          }
      }
- }
+ }'
 ```
 
 | 속성 | 설명 |
@@ -189,7 +191,7 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 
 ## 스트리밍 끝점 URL 가져오기
 
-이제 연결이 만들어지면 스트리밍 끝점 URL을 검색할 수 있습니다.
+기본 연결이 만들어지면 이제 스트리밍 끝점 URL을 검색할 수 있습니다.
 
 **API 형식**
 
@@ -247,6 +249,142 @@ curl -X GET https://platform.adobe.io/data/foundation/flowservice/connections/{C
             "etag": "\"56008aee-0000-0200-0000-5e697e150000\""
         }
     ]
+}
+```
+
+## 소스 연결 만들기
+
+기본 연결을 만든 후 소스 연결을 만들어야 합니다. 소스 연결을 만들 때 만들어진 기본 연결의 `id` 값이 필요합니다.
+
+**API 형식**
+
+```http
+POST /flowservice/sourceConnections
+```
+
+**요청**
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+    "name": "Sample source connection",
+    "description": "Sample source connection description",
+    "baseConnectionId": "{BASE_CONNECTION_ID}",
+    "connectionSpec": {
+        "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
+        "version": "1.0"
+    }
+}'
+```
+
+**응답**
+
+성공적인 응답은 고유 식별자(`id`)를 포함하여 새로 만든 소스 연결에 대한 세부 사항과 함께 HTTP 상태 201을 반환합니다.
+
+```json
+{
+    "id": "63070871-ec3f-4cb5-af47-cf7abb25e8bb",
+    "etag": "\"28000b90-0000-0200-0000-6091b0150000\""
+}
+```
+
+## 대상 연결 만들기
+
+소스 연결을 만든 후 대상 연결을 만들 수 있습니다. 대상 연결을 만들 때 이전에 만든 데이터 세트의 `id` 값이 필요합니다.
+
+**API 형식**
+
+```http
+POST /flowservice/targetConnections
+```
+
+**요청**
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+    "name": "Sample target connection",
+    "description": "Sample target connection description",
+    "connectionSpec": {
+        "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
+        "version": "1.0"
+    },
+    "data": {
+        "format": "parquet_xdm"
+    },
+    "params": {
+        "dataSetId": "{DATASET_ID}"
+    }
+}'
+```
+
+**응답**
+
+성공적인 응답은 고유 식별자(`id`)를 포함하여 새로 만든 대상 연결의 세부 사항과 함께 HTTP 상태 201을 반환합니다.
+
+```json
+{
+    "id": "98a2a72e-a80f-49ae-aaa3-4783cc9404c2",
+    "etag": "\"0500b73f-0000-0200-0000-6091b0b90000\""
+}
+```
+
+## 데이터 흐름 만들기
+
+소스 및 대상 연결이 만들어지면 이제 데이터 흐름을 만들 수 있습니다. 데이터 플로우는 소스에서 데이터를 예약하고 수집하는 작업을 수행합니다. `/flows` 끝점에 대한 POST 요청을 수행하여 데이터 흐름을 만들 수 있습니다.
+
+**API 형식**
+
+```http
+POST /flows
+```
+
+**요청**
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/flows' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+    "name": "Sample flow",
+    "description": "Sample flow description",
+    "flowSpec": {
+        "id": "d8a6f005-7eaf-4153-983e-e8574508b877",
+        "version": "1.0"
+    },
+    "sourceConnectionIds": [
+        "{SOURCE_CONNECTION_ID}"
+    ],
+    "targetConnectionIds": [
+        "{TARGET_CONNECTION_ID}"
+    ]
+}'
+```
+
+**응답**
+
+성공적인 응답은 고유 식별자(`id`)를 포함하여 새로 만든 데이터 플로의 세부 사항과 함께 HTTP 상태 201을 반환합니다.
+
+```json
+{
+    "id": "ab03bde0-86f2-45c7-b6a5-ad8374f7db1f",
+    "etag": "\"1200c123-0000-0200-0000-6091b1730000\""
 }
 ```
 
