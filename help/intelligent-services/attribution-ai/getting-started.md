@@ -6,7 +6,7 @@ topic-legacy: Getting started
 description: 다음 가이드를 사용하려면 Attribution AI 사용과 관련된 다양한 Adobe Experience Platform 서비스에 대해 이해해야 합니다. 자습서를 시작하기 전에 다음 문서를 검토하십시오.
 exl-id: ab269c24-97ac-4da9-9b6c-7d2dde61f0dc
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 - [스키마 컴포지션의 기본 사항](../../xdm/schema/composition.md):이 문서에서는 XDM(Experience Data Model) 스키마 및 사용할 스키마를 작성하기 위한 기본 블록, 원칙 및 모범 사례에 대해 설명합니다 [!DNL Adobe Experience Platform].
 - [스키마 작성](../../xdm/tutorials/create-schema-ui.md):이 자습서에서는 Experience Platform 내에서 스키마 편집기를 사용하여 스키마를 만드는 단계를 설명합니다.
 
-Attribution AI은 [경험 데이터 모델](../../xdm/home.md)(XDM)의 혼합인 CEE(Consumer Experience Events) 스키마를 따르는 데이터 세트가 필요합니다. 이 데이터를 구현하거나 변경하려면 Adobe 지원 센터(attributionai-support@adobe.com)에 문의하십시오. 미디어 비용 데이터가 있는 경우 매출 증가 및 ROI와 같은 추가 분석을 수행할 수 있습니다. 고객 프로파일 데이터를 사용할 수 있는 경우, 크레딧을 고객 프로파일 레벨에 추가로 적용할 수 있습니다.
+Attribution AI에는 CEE(Consumer Experience Events) 스키마를 따르기 위해 데이터 세트가 필요합니다. XDM(Experience Data Model)](../../xdm/home.md) 스키마 필드 그룹입니다. [ 이 데이터를 구현하거나 변경하려면 Adobe 지원 센터(attributionai-support@adobe.com)에 문의하십시오. 미디어 비용 데이터가 있는 경우 매출 증가 및 ROI와 같은 추가 분석을 수행할 수 있습니다. 고객 프로파일 데이터를 사용할 수 있는 경우, 크레딧을 고객 프로파일 레벨에 추가로 적용할 수 있습니다.
 
 ## 용어
 
