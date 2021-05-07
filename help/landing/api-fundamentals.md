@@ -6,9 +6,9 @@ topic-legacy: getting started
 description: 이 문서에서는 Experience Platform API와 관련된 일부 기본 기술 및 구문에 대한 간단한 개요를 제공합니다.
 exl-id: cd69ba48-f78c-4da5-80d1-efab5f508756
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '511'
+source-wordcount: '516'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ JSON 포인터는 JSON 문서 내의 특정 값을 식별하기 위한 표준 �
 
 ### JSON 스키마 개체 예
 
-다음 JSON은 JSON 포인터 문자열을 사용하여 필드를 참조할 수 있는 간소화된 XDM 스키마를 나타냅니다. 사용자 정의 믹싱(예: `loyaltyLevel`)을 사용하여 추가된 모든 필드는 `_{TENANT_ID}` 개체 아래에 이름이 지정되지만, 핵심 믹싱(예: `fullName`)을 사용하여 추가된 필드는 지정되지 않습니다.
+다음 JSON은 JSON 포인터 문자열을 사용하여 필드를 참조할 수 있는 간소화된 XDM 스키마를 나타냅니다. 사용자 정의 스키마 필드 그룹(예: `loyaltyLevel`)을 사용하여 추가된 모든 필드는 `_{TENANT_ID}` 개체 아래에 지정되어 있지만, 핵심 필드 그룹(예: `fullName`)을 사용하여 추가된 필드는 지정되지 않습니다.
 
 ```json
 {
@@ -87,8 +87,8 @@ JSON 포인터는 JSON 문서 내의 특정 값을 식별하기 위한 표준 �
 | JSON 포인터 | 해결 대상 |
 | --- | --- |
 | `"/title"` | `"Example schema"` |
-| `"/properties/person/properties/name/properties/fullName"` | 코어 믹싱에서 제공하는 `fullName` 필드에 대한 참조를 반환합니다. |
-| `"/properties/_{TENANT_ID}/properties/loyaltyLevel"` | 사용자 정의 믹싱에서 제공하는 `loyaltyLevel` 필드에 대한 참조를 반환합니다. |
+| `"/properties/person/properties/name/properties/fullName"` | 핵심 필드 그룹에서 제공하는 `fullName` 필드에 대한 참조를 반환합니다. |
+| `"/properties/_{TENANT_ID}/properties/loyaltyLevel"` | (사용자 지정 필드 그룹에서 제공하는 `loyaltyLevel` 필드에 대한 참조를 반환합니다.) |
 | `"/properties/_{TENANT_ID}/properties/loyaltyLevel/enum"` | `["platinum", "gold", "silver", "bronze"]` |
 | `"/properties/_{TENANT_ID}/properties/loyaltyLevel/enum/0"` | `"platinum"` |
 
