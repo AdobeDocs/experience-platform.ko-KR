@@ -7,9 +7,9 @@ topic-legacy: tutorial
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '915'
+source-wordcount: '921'
 ht-degree: 1%
 
 ---
@@ -54,23 +54,23 @@ ht-degree: 1%
 
 ![](../images/tutorials/relationship/hotels.png)
 
-## 관계 혼합 만들기
+## 관계 스키마 필드 그룹 만들기
 
 >[!NOTE]
 >
 >이 단계는 소스 스키마에 대상 스키마에 대한 참조로 사용할 전용 문자열 유형 필드가 없는 경우에만 필요합니다. 이 필드가 소스 스키마에 이미 정의된 경우 [관계 필드 정의](#relationship-field)의 다음 단계로 건너뜁니다.
 
-두 스키마 간의 관계를 정의하려면 소스 스키마에 대상 스키마에 대한 참조로 사용할 전용 필드가 있어야 합니다. 새 믹싱을 만들어 이 필드를 소스 스키마에 추가할 수 있습니다.
+두 스키마 간의 관계를 정의하려면 소스 스키마에 대상 스키마에 대한 참조로 사용할 전용 필드가 있어야 합니다. 새 스키마 필드 그룹을 만들어 이 필드를 소스 스키마에 추가할 수 있습니다.
 
-**[!UICONTROL Mixins]** 섹션에서 **[!UICONTROL Add]**&#x200B;을 선택하여 시작합니다.
+**[!UICONTROL Field groups]** 섹션에서 **[!UICONTROL Add]**&#x200B;을 선택하여 시작합니다.
 
-![](../images/tutorials/relationship/loyalty-add-mixin.png)
+![](../images/tutorials/relationship/loyalty-add-field-group.png)
 
-[!UICONTROL Add Mixin] 대화 상자가 나타납니다. 여기서 **[!UICONTROL Create new mixin]**&#x200B;을 선택합니다. 나타나는 텍스트 필드에 새 혼합에 대한 표시 이름과 설명을 입력합니다. 완료되면 **[!UICONTROL Add mixin]**&#x200B;을 선택합니다.
+[!UICONTROL Add field group] 대화 상자가 나타납니다. 여기서 **[!UICONTROL Create new field group]**&#x200B;을 선택합니다. 나타나는 텍스트 필드에 새 필드 그룹의 표시 이름과 설명을 입력합니다. 완료되면 **[!UICONTROL Add field groups]**&#x200B;을 선택합니다.
 
-<img src="../images/tutorials/relationship/loyalty-create-new-mixin.png" width="750"><br>
+![](../images/tutorials/relationship/create-field-group.png)
 
-캔버스가 다시 나타나고 &quot;[!DNL Favorite Hotel]&quot;이(가) **[!UICONTROL Mixins]** 섹션에 표시됩니다. 혼합 이름을 선택한 다음 루트 수준 `Loyalty Members` 필드 옆에 있는 **[!UICONTROL Add field]**&#x200B;을 선택합니다.
+캔버스가 다시 나타나고 &quot;[!DNL Favorite Hotel]&quot;이(가) **[!UICONTROL Field groups]** 섹션에 표시됩니다. 필드 그룹 이름을 선택한 다음 루트 수준 `Loyalty Members` 필드 옆에 있는 **[!UICONTROL Add field]**&#x200B;을 선택합니다.
 
 ![](../images/tutorials/relationship/loyalty-add-field.png)
 
