@@ -7,9 +7,9 @@ type: Tutorial
 description: 이 튜토리얼에서는 Experience Platform 내의 스키마 편집기를 사용하여 스키마를 만드는 단계를 설명합니다.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '3532'
+source-wordcount: '3588'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Adobe Experience Platform 사용자 인터페이스를 사용하면 [!DNL Schema
 이 자습서에서는 스키마 만들기와 관련된 Adobe Experience Platform의 다양한 측면을 파악해야 합니다. 이 자습서를 시작하기 전에 다음 개념에 대한 설명서를 검토하십시오.
 
 * [[!DNL Experience Data Model (XDM)]](../home.md):고객 경험 데이터를  [!DNL Platform] 구성하는 표준화된 프레임워크
-   * [스키마 컴포지션의 기본 사항](../schema/composition.md):클래스, 믹싱, 데이터 유형 및 필드를 비롯한 XDM 스키마 및 해당 구성 요소에 대한 개요입니다.
+   * [스키마 컴포지션의 기본 사항](../schema/composition.md):클래스, 스키마 필드 그룹, 데이터 유형 및 개별 필드를 비롯한 XDM 스키마 및 구성 요소에 대한 개요입니다.
 * [[!DNL Real-time Customer Profile]](../../profile/home.md):여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
 
 ## [!UICONTROL Schemas] 작업 영역 {#browse} 열기
@@ -48,9 +48,9 @@ Adobe Experience Platform 사용자 인터페이스를 사용하면 [!DNL Schema
 
 ![](../images/tutorials/create-schema/create_schema_button.png)
 
-스키마를 기준으로 하는 표준 XDM 클래스를 선택했으므로 **[!UICONTROL Add mixin]** 대화 상자가 표시되므로 스키마에 필드를 바로 추가할 수 있습니다. 지금은 **[!UICONTROL Cancel]**&#x200B;을 선택하여 대화 상자를 종료합니다.
+스키마를 기준으로 하는 표준 XDM 클래스를 선택했으므로 **[!UICONTROL Add field group]** 대화 상자가 표시되므로 스키마에 필드를 바로 추가할 수 있습니다. 지금은 **[!UICONTROL Cancel]**&#x200B;을 선택하여 대화 상자를 종료합니다.
 
-![](../images/tutorials/create-schema/cancel-mixin.png)
+![](../images/tutorials/create-schema/cancel-field-group.png)
 
 [!DNL Schema Editor]이(가) 나타납니다. 스키마를 작성할 캔버스입니다. 제목이 없는 스키마는 편집기에 도착할 때 해당 클래스를 기반으로 하는 모든 스키마에 포함된 표준 필드와 함께 캔버스의 **[!UICONTROL Structure]** 섹션에 자동으로 생성됩니다. 스키마에 대해 할당된 클래스는 **[!UICONTROL Composition]** 섹션의 **[!UICONTROL Class]** 아래에도 나열됩니다.
 
@@ -58,7 +58,7 @@ Adobe Experience Platform 사용자 인터페이스를 사용하면 [!DNL Schema
 
 >[!NOTE]
 >
->[스키마가 저장되기 전에 초기 작성 프로세스 중에 언제든지 스키마](#change-class)의 클래스를 변경할 수 있지만, 이 작업은 매우 주의해야 합니다. 믹스는 특정 클래스와 호환되므로 클래스를 변경하면 캔버스 및 추가한 모든 필드가 재설정됩니다.
+>[스키마가 저장되기 전에 초기 작성 프로세스 중에 언제든지 스키마](#change-class)의 클래스를 변경할 수 있지만, 이 작업은 매우 주의해야 합니다. 필드 그룹은 특정 클래스와 호환되므로 클래스를 변경하면 캔버스 및 추가한 모든 필드가 재설정됩니다.
 
 편집기의 오른쪽에 있는 필드를 사용하여 스키마에 대한 표시 이름 및 선택적 설명을 제공합니다. 이름을 입력하면 캔버스가 스키마의 새 이름을 반영하도록 업데이트됩니다.
 
@@ -72,35 +72,35 @@ Adobe Experience Platform 사용자 인터페이스를 사용하면 [!DNL Schema
 
 이 자습서는 충성도 프로그램 구성원과 관련된 데이터를 인제스트하는 스키마를 구성하므로 스키마의 이름은 &quot;충성도 구성원&quot;입니다.
 
-## 믹신 {#mixin} 추가
+## 필드 그룹 {#field-group} 추가
 
-이제 믹스를 추가하여 스키마에 필드를 추가할 수 있습니다. 혼합은 특정 개념을 묘사하는 데 주로 함께 사용되는 하나 이상의 필드 그룹입니다. 이 자습서에서는 혼합을 사용하여 로열티 프로그램의 구성원을 설명하고 이름, 생일, 전화번호, 주소 등 주요 정보를 수집합니다.
+이제 필드 그룹을 추가하여 스키마에 필드를 추가할 수 있습니다. 필드 그룹은 특정 개념을 설명하는 데 주로 함께 사용되는 하나 이상의 필드 그룹입니다. 이 자습서에서는 필드 그룹을 사용하여 충성도 프로그램의 구성원을 설명하고 이름, 생일, 전화번호, 주소 등 주요 정보를 수집합니다.
 
-믹스를 추가하려면 **[!UICONTROL Mixins]** 하위 섹션에서 **[!UICONTROL Add]**&#x200B;을 선택합니다.
+필드 그룹을 추가하려면 **[!UICONTROL Field groups]** 하위 섹션에서 **[!UICONTROL Add]**&#x200B;을 선택합니다.
 
-![](../images/tutorials/create-schema/add_mixin_button.png)
+![](../images/tutorials/create-schema/add-field-group-button.png)
 
-사용 가능한 믹스의 목록을 표시하는 새 대화 상자가 나타납니다. 각 믹스는 특정 클래스와 함께 사용하기 위한 것이므로 대화 상자에는 선택한 클래스(이 경우 [!DNL XDM Individual Profile] 클래스)와 호환되는 믹스만 나열됩니다. 표준 XDM 클래스를 사용하는 경우 혼합 목록이 사용 인기도에 따라 지능적으로 정렬됩니다.
+사용 가능한 필드 그룹 목록이 표시된 새 대화 상자가 나타납니다. 각 필드 그룹은 특정 클래스와 함께 사용하기 위한 것이므로 대화 상자에는 선택한 클래스(이 경우 [!DNL XDM Individual Profile] 클래스)와 호환되는 필드 그룹만 나열됩니다. 표준 XDM 클래스를 사용하는 경우 필드 그룹 목록이 사용 인기도에 따라 지능적으로 정렬됩니다.
 
-![](../images/tutorials/create-schema/mixin-popularity.png)
+![](../images/tutorials/create-schema/field-group-popularity.png)
 
-목록에서 혼합을 선택하면 오른쪽 레일에 나타납니다. 원할 경우 여러 믹스를 선택하고 확인하기 전에 오른쪽 레일의 목록에 각 믹스를 추가할 수 있습니다. 또한 현재 선택된 믹스의 오른쪽에 아이콘이 표시되어 해당 믹스에서 제공하는 필드의 구조를 미리 볼 수 있습니다.
+목록에서 필드 그룹을 선택하면 오른쪽 레일에 표시됩니다. 원할 경우 여러 필드 그룹을 선택하고 각 필드 그룹을 오른쪽 레일의 목록에 추가하여 확인할 수 있습니다. 또한 현재 선택된 필드 그룹의 오른쪽에 아이콘이 표시되어 해당 필드 구조를 미리 볼 수 있습니다.
 
-![](../images/tutorials/create-schema/preview-mixin-button.png)
+![](../images/tutorials/create-schema/preview-field-group-button.png)
 
-믹싱을 미리 볼 때 오른쪽 레일에 믹스의 스키마에 대한 자세한 설명이 제공됩니다. 제공된 캔버스에서 믹스의 필드를 탐색할 수도 있습니다. 다른 필드를 선택하면 오른쪽 레일이 업데이트되어 해당 필드에 대한 세부 정보가 표시됩니다. 미리 보기를 마치면 **[!UICONTROL Back]**&#x200B;을 선택하여 혼합 선택 대화 상자로 돌아갑니다.
+필드 그룹을 미리 볼 때 오른쪽 레일에 필드 그룹의 스키마에 대한 자세한 설명이 제공됩니다. 제공된 캔버스에서 필드 그룹의 필드를 탐색할 수도 있습니다. 다른 필드를 선택하면 오른쪽 레일이 업데이트되어 해당 필드에 대한 세부 정보가 표시됩니다. 필드 그룹 선택 대화 상자로 돌아가려면 미리 보기를 마치면 **[!UICONTROL Back]**&#x200B;을 선택합니다.
 
-![](../images/tutorials/create-schema/preview-mixin.png)
+![](../images/tutorials/create-schema/preview-field-group.png)
 
-이 자습서의 경우 **[!UICONTROL Demographic Details]** 믹싱을 선택한 다음 **[!UICONTROL Add mixin]**&#x200B;을 선택합니다.
+이 자습서의 경우 **[!UICONTROL Demographic Details]** 필드 그룹을 선택한 다음 **[!UICONTROL Add field group]**&#x200B;을 선택합니다.
 
-![](../images/tutorials/create-schema/add_mixin_person_details.png)
+![](../images/tutorials/create-schema/demographic-details.png)
 
-스키마 캔버스가 다시 나타납니다. 이제 **[!UICONTROL Mixins]** 섹션에는 &quot;[!UICONTROL Demographic Details]&quot;이 표시되고 **[!UICONTROL Structure]** 섹션에는 믹싱에 의해 기여 되는 필드가 포함됩니다. **[!UICONTROL Mixins]** 섹션 아래에서 믹스의 이름을 선택하여 캔버스 내에서 제공하는 특정 필드를 강조 표시할 수 있습니다.
+스키마 캔버스가 다시 나타납니다. 이제 **[!UICONTROL Field groups]** 섹션에 &quot;[!UICONTROL Demographic Details]&quot;이 나열되고 **[!UICONTROL Structure]** 섹션에는 필드 그룹이 기여한 필드가 포함됩니다. **[!UICONTROL Field groups]** 섹션 아래에서 필드 그룹의 이름을 선택하여 캔버스 내에서 제공하는 특정 필드를 강조 표시할 수 있습니다.
 
-![](../images/tutorials/create-schema/person_details_structure.png)
+![](../images/tutorials/create-schema/demographic-details-structure.png)
 
-이 혼합은 데이터 유형이 &quot;[!UICONTROL Person]&quot;인 최상위 수준 이름 `person` 아래의 여러 필드에 기여합니다. 이 필드 그룹은 이름, 생년월일, 성별 등 개인에 대한 정보를 설명합니다.
+이 필드 그룹은 최상위 수준 이름 `person` 아래의 데이터 유형이 &quot;[!UICONTROL Person]&quot;인 여러 필드에 기여합니다. 이 필드 그룹은 이름, 생년월일, 성별 등 개인에 대한 정보를 설명합니다.
 
 >[!NOTE]
 >
@@ -110,49 +110,49 @@ Adobe Experience Platform 사용자 인터페이스를 사용하면 [!DNL Schema
 
 캔버스 내의 다른 필드를 선택하여 스키마 구조에 기여하는 추가 필드를 표시합니다.
 
-## 다른 믹스인 {#mixin-2} 추가
+## 다른 필드 그룹 {#field-group-2} 추가
 
-이제 동일한 단계를 반복하여 다른 믹싱을 추가할 수 있습니다. 이번에 **[!UICONTROL Add mixin]** 대화 상자를 보면 &quot;[!UICONTROL Demographic Details]&quot; 믹스가 회색으로 표시되었고 그 옆에 있는 확인란을 선택할 수 없습니다. 이렇게 하면 현재 스키마에 이미 포함된 믹스를 실수로 복제할 수 없습니다.
+이제 동일한 단계를 반복하여 다른 필드 그룹을 추가할 수 있습니다. 이번에 **[!UICONTROL Add field group]** 대화 상자를 보면 &quot;[!UICONTROL Demographic Details]&quot; 필드 그룹이 회색으로 표시되었고 그 옆의 확인란을 선택할 수 없습니다. 이로 인해 이미 현재 스키마에 포함된 필드 그룹을 실수로 복제할 수 없습니다.
 
-이 자습서의 경우 대화 상자에서 &quot;[!DNL Personal Contact Details]&quot; 믹스를 선택한 다음 **[!UICONTROL Add mixin]**&#x200B;을 선택하여 스키마에 추가합니다.
+이 자습서의 경우 대화 상자에서 &quot;[!DNL Personal Contact Details]&quot; 필드 그룹을 선택한 다음 **[!UICONTROL Add field group]**&#x200B;을 선택하여 스키마에 추가합니다.
 
-![](../images/tutorials/create-schema/add_mixin_personal_details.png)
+![](../images/tutorials/create-schema/personal-contact-details.png)
 
-일단 추가되면 캔버스가 다시 나타납니다. &quot;[!UICONTROL Personal Contact Details]&quot;이(가) 이제 **[!UICONTROL Composition]** 섹션의 **[!UICONTROL Mixins]** 아래에 나열되고, 홈 주소, 휴대폰 등의 필드가 **[!UICONTROL Structure]** 아래에 추가되었습니다.
+일단 추가되면 캔버스가 다시 나타납니다. &quot;[!UICONTROL Personal Contact Details]&quot;이(가) 이제 **[!UICONTROL Composition]** 섹션의 **[!UICONTROL Field groups]** 아래에 나열되고, 홈 주소, 휴대폰 등의 필드가 **[!UICONTROL Structure]** 아래에 추가되었습니다.
 
 `name` 필드와 유사하게 방금 추가한 필드는 다중 필드 개념을 나타냅니다. 예를 들어 `homeAddress`의 데이터 유형은 &quot;[!UICONTROL Postal address]&quot;이고 `mobilePhone`의 데이터 유형은 &quot;[!UICONTROL Phone number]&quot;입니다. 이러한 필드를 선택하여 확장할 수 있으며 데이터 유형에 포함된 추가 필드를 확인할 수 있습니다.
 
-![](../images/tutorials/create-schema/personal_details_structure.png)
+![](../images/tutorials/create-schema/personal-contact-details-structure.png)
 
-## {#define-mixin} 사용자 정의 믹싱 정의
+## 사용자 정의 필드 그룹 {#define-field-group} 정의
 
 &quot;[!UICONTROL Loyalty Members]&quot; 스키마는 충성도 프로그램 구성원과 관련된 데이터를 캡처하기 위한 것으로, 특정 충성도 관련 필드가 필요합니다.
 
-로열티 프로그램과 관련된 공통 필드를 캡처하기 위해 스키마에 추가할 수 있는 표준 [!UICONTROL Loyalty Details] 혼합이 있습니다. 스키마에 의해 캡처된 개념을 나타내기 위해 표준 혼합을 사용하는 것이 적극 권장되지만 표준 충성도 혼합의 구조는 특정 충성도 프로그램에 대한 모든 관련 데이터를 캡처하지 못할 수 있습니다. 이 시나리오에서는 새 사용자 정의 믹싱을 정의하여 이 필드를 대신 캡처할 수 있습니다.
+로열티 프로그램과 관련된 공통 필드를 캡처하기 위해 스키마에 추가할 수 있는 표준 [!UICONTROL Loyalty Details] 필드 그룹이 있습니다. 스키마에 의해 캡처된 개념을 나타내기 위해 표준 필드 그룹을 사용하는 것이 적극 권장되지만 표준 충성도 필드 그룹의 구조는 특정 충성도 프로그램에 대한 모든 관련 데이터를 캡처하지 못할 수 있습니다. 이 시나리오에서 새 사용자 지정 필드 그룹을 정의하여 이러한 필드를 대신 캡처할 수 있습니다.
 
-**[!UICONTROL Add Mixin]** 대화 상자를 다시 열었지만 이번에는 맨 위 근처에 있는 **[!UICONTROL Create New Mixin]**&#x200B;을 선택합니다. 그런 다음 혼합에 대한 표시 이름과 설명을 제공하도록 요청을 받습니다.
+**[!UICONTROL Add Field group]** 대화 상자를 다시 열었지만 이번에는 맨 위 근처에 있는 **[!UICONTROL Create New Field group]**&#x200B;을 선택합니다. 그런 다음 필드 그룹에 대한 표시 이름과 설명을 제공하도록 요청을 받습니다.
 
-![](../images/tutorials/create-schema/mixin_create_new.png)
+![](../images/tutorials/create-schema/create-new-field-group.png)
 
-클래스 이름과 마찬가지로 혼합기 이름은 짧고 단순해야 스키마에 어떤 내용이 기여하는지 설명합니다. 이러한 구성 요소도 고유하므로 이름을 다시 사용할 수 없으므로 해당 이름이 적절한지 확인해야 합니다.
+클래스 이름과 마찬가지로 필드 그룹 이름은 짧고 간단해야 필드 그룹이 스키마에 기여할 수 있습니다. 이러한 구성 요소도 고유하므로 이름을 다시 사용할 수 없으므로 해당 이름이 적절한지 확인해야 합니다.
 
-이 튜토리얼의 경우 새로운 믹스의 이름을 &quot;충성도 세부 사항&quot;으로 지정합니다.
+이 자습서에 대해 새 필드 그룹 이름을 &quot;충성도 세부 사항&quot;으로 지정합니다.
 
-[!DNL Schema Editor]으로 돌아가려면 **[!UICONTROL Add mixin]**&#x200B;을 선택합니다. &quot;[!UICONTROL Loyalty Details]&quot;은 이제 캔버스의 왼쪽에 있는 **[!UICONTROL Mixins]** 아래에 표시되어야 하지만 아직 연결된 필드가 없으므로 **[!UICONTROL Structure]** 아래에 새 필드가 나타나지 않습니다.
+[!DNL Schema Editor]으로 돌아가려면 **[!UICONTROL Add field group]**&#x200B;을 선택합니다. &quot;[!UICONTROL Loyalty Details]&quot;은 이제 캔버스의 왼쪽에 있는 **[!UICONTROL Field groups]** 아래에 표시되어야 하지만 아직 연결된 필드가 없으므로 **[!UICONTROL Structure]** 아래에 새 필드가 나타나지 않습니다.
 
-## {#mixin-fields} 믹스에 필드 추가
+## 필드 그룹 {#field-group-fields}에 필드 추가
 
-이제 &quot;충성도 세부 사항&quot; 믹싱을 만들었으므로 믹싱이 스키마에 기여할 필드를 정의할 때가 되었습니다.
+이제 &quot;충성도 세부 사항&quot; 필드 그룹을 만들었으므로 필드 그룹이 스키마에 기여할 필드를 정의할 때입니다.
 
-시작하려면 **[!UICONTROL Mixins]** 섹션에서 혼합기 이름을 선택합니다. 이렇게 하면 믹스의 속성이 편집기의 오른쪽에 나타나고 **[!UICONTROL Structure]** 아래의 스키마 이름 옆에 **더하기(+)** 아이콘이 나타납니다.
+시작하려면 **[!UICONTROL Field groups]** 섹션에서 필드 그룹 이름을 선택합니다. 이렇게 하면 필드 그룹의 속성이 편집기의 오른쪽에 나타나고 **[!UICONTROL Structure]** 아래에 있는 스키마 이름 옆에 **plus (+)** 아이콘이 나타납니다.
 
 ![](../images/tutorials/create-schema/loyalty_details_structure.png)
 
 &quot;[!DNL Loyalty Members]&quot; 옆에 있는 **더하기(+)** 아이콘을 선택하여 구조에 새 노드를 만듭니다. 이 노드(이 예에서 `_tenantId`이라고 함)는 IMS 조직의 테넌트 ID 앞에 밑줄이 있는 것을 나타냅니다. 테넌트 ID가 존재하면 추가할 필드가 조직의 네임스페이스에 포함되어 있음을 나타냅니다.
 
-즉, 추가하려는 필드는 조직에 고유하며 조직만 액세스할 수 있는 특정 영역의 [!DNL Schema Registry]에 저장됩니다. 정의한 필드는 다른 표준 클래스, 혼합, 데이터 유형 및 필드의 이름과 충돌하지 않도록 항상 테넌트 네임스페이스에 추가해야 합니다.
+즉, 추가하려는 필드는 조직에 고유하며 조직만 액세스할 수 있는 특정 영역의 [!DNL Schema Registry]에 저장됩니다. 정의한 필드는 다른 표준 클래스, 필드 그룹, 데이터 유형 및 필드의 이름과 충돌하지 않도록 항상 테넌트 네임스페이스에 추가해야 합니다.
 
-해당 이름 지정 노드 안은 &quot;[!UICONTROL New Field]&quot;입니다. &quot;[!UICONTROL Loyalty Details]&quot; 믹스의 시작입니다.
+해당 이름 지정 노드 안은 &quot;[!UICONTROL New Field]&quot;입니다. &quot;[!UICONTROL Loyalty Details]&quot; 필드 그룹의 시작입니다.
 
 ![](../images/tutorials/create-schema/new_field_loyalty.png)
 
@@ -179,7 +179,7 @@ Adobe Experience Platform 사용자 인터페이스를 사용하면 [!DNL Schema
 
 ![](../images/tutorials/create-schema/loyaltyId_field.png)
 
-## {#mixin-fields-2} 믹스에 필드 추가
+## 필드 그룹 {#field-group-fields-2}에 필드 추가
 
 이제 `loyaltyId` 필드를 추가했으므로 추가 필드를 추가하여 다음과 같은 충성도 관련 정보를 캡처할 수 있습니다.
 
@@ -192,7 +192,7 @@ Adobe Experience Platform 사용자 인터페이스를 사용하면 [!DNL Schema
 
 ![](../images/tutorials/create-schema/loyalty_object_fields.png)
 
-## 믹스인 {#enum}에 열거형 필드 추가
+## 필드 그룹 {#enum}에 열거형 필드 추가
 
 [!DNL Schema Editor]에서 필드를 정의할 때 필드에 포함할 수 있는 데이터에 대한 추가 제한을 제공하기 위해 기본 필드 유형에 적용할 수 있는 몇 가지 추가 옵션이 있습니다. 이러한 제한 사항에 대한 사용 사례는 다음 표에 설명되어 있습니다.
 
@@ -226,7 +226,7 @@ Adobe Experience Platform 사용자 인터페이스를 사용하면 [!DNL Schema
 
 이제 `loyalty` 개체에 몇 개의 충성도별 필드가 있으며 다른 스키마에서 유용할 수 있는 일반적인 데이터 구조를 나타냅니다. [!DNL Schema Editor]을 사용하면 해당 객체의 구조를 데이터 유형으로 변환하여 재사용 가능한 다중 필드 객체를 쉽게 적용할 수 있습니다.
 
-데이터 유형을 사용하면 여러 필드 구조를 일관되게 사용할 수 있으며 스키마 내의 어느 곳에서든 사용할 수 있으므로 혼합보다 더 유연하게 사용할 수 있습니다. 이 작업은 필드의 **[!UICONTROL Type]** 값을 [!DNL Schema Registry]에 정의된 데이터 유형의 값으로 설정하여 수행합니다.
+데이터 유형을 사용하면 여러 필드 구조를 일관되게 사용할 수 있으며 스키마 내의 어느 위치에나 사용할 수 있으므로 필드 그룹보다 더 유연하게 사용할 수 있습니다. 이 작업은 필드의 **[!UICONTROL Type]** 값을 [!DNL Schema Registry]에 정의된 데이터 유형의 값으로 설정하여 수행합니다.
 
 `loyalty` 개체를 데이터 유형으로 변환하려면 **[!UICONTROL Structure]** 아래의 `loyalty` 필드를 선택한 다음 **[!UICONTROL Field properties]** 편집기 오른쪽의 **[!UICONTROL Convert to new data type]**&#x200B;을 선택합니다. 개체가 성공적으로 변환되었음을 확인하는 녹색 팝업 창이 나타납니다.
 
@@ -244,17 +244,17 @@ Adobe Experience Platform 사용자 인터페이스를 사용하면 [!DNL Schema
 
 ## 스키마 필드 검색 및 필터링
 
-이제 스키마에는 기본 클래스에서 제공하는 필드 외에 여러 혼합이 포함됩니다. 큰 스키마를 사용하여 작업하는 경우 왼쪽 레일의 혼합 이름 옆에 있는 확인란을 선택하여 표시되는 필드를 관심 있는 믹스에서 제공하는 필드에 대해서만 필터링할 수 있습니다.
+이제 스키마에는 기본 클래스에서 제공하는 필드 외에도 여러 필드 그룹이 포함됩니다. 큰 스키마를 사용하여 작업할 때 왼쪽 레일의 필드 그룹 이름 옆에 있는 확인란을 선택하여 표시되는 필드를 관심 있는 필드 그룹이 제공하는 필드에만 필터링할 수 있습니다.
 
-![](../images/tutorials/create-schema/filter-by-mixin.png)
+![](../images/tutorials/create-schema/filter-by-field-group.png)
 
-스키마에서 특정 필드를 찾고 있는 경우 검색 막대를 사용하여 표시되는 필드의 믹싱과 관계없이 이름을 기준으로 필드를 필터링할 수도 있습니다.
+스키마에서 특정 필드를 찾는 경우 검색 막대를 사용하여 표시되는 필드를 제공된 필드 그룹에 상관없이 이름별로 필터링할 수도 있습니다.
 
 ![](../images/tutorials/create-schema/search.png)
 
 >[!IMPORTANT]
 >
->검색 함수는 일치하는 필드를 표시할 때 선택한 혼합 필터를 고려합니다. 검색 쿼리가 원하는 결과를 표시하지 않는 경우 관련 혼합을 필터링하지 않는지 다시 확인해야 합니다.
+>검색 함수는 일치하는 필드를 표시할 때 선택된 필드 그룹 필터를 고려합니다. 검색 쿼리에 원하는 결과가 표시되지 않으면 관련 필드 그룹을 필터링하지 않고 있는지 다시 확인해야 합니다.
 
 ## 스키마 필드를 ID 필드 {#identity-field}로 설정합니다.
 
@@ -334,7 +334,7 @@ Adobe Experience Platform 사용자 인터페이스를 사용하면 [!DNL Schema
 
 >[!VIDEO](https://video.tv.adobe.com/v/27012?quality=12&learn=on)
 
-다음 비디오는 혼합기 및 클래스 작업에 대한 이해를 높이기 위한 것입니다.
+다음 비디오는 필드 그룹 및 클래스 작업에 대한 이해를 높이기 위한 것입니다.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27013?quality=12&learn=on)
 
@@ -352,6 +352,6 @@ Adobe Experience Platform 사용자 인터페이스를 사용하면 [!DNL Schema
 
 >[!WARNING]
 >
->스키마에 대한 클래스 재지정은 매우 주의해야 합니다. 믹스는 특정 클래스와 호환되므로 클래스를 변경하면 캔버스 및 추가한 모든 필드가 재설정됩니다.
+>스키마에 대한 클래스 재지정은 매우 주의해야 합니다. 필드 그룹은 특정 클래스와 호환되므로 클래스를 변경하면 캔버스 및 추가한 모든 필드가 재설정됩니다.
 
 스키마의 클래스를 변경하는 방법에 대해 알아보려면 UI](../ui/resources/schemas.md)의 스키마 관리에 대한 안내서를 참조하십시오.[
