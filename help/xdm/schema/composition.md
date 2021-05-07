@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;홈;인기 항목;스키마;스키마;스키마;믹신;믹신;데이터 유형;데이터 유형;데이터 유형;데이터 유형;데이터 유형;데이터 유형;기본 ID;기본 ID;XDM 개별 프로필;XDM 필드;데이터 유형;경험 이벤트;XDM 경험 이벤트;XDM ExperienceEvent;experienceEvent;experienceEvent;experience XDM Experienceevent;스키마 디자인;클래스;클래스;클래스;데이터 유형;데이터 유형;데이터 유형;스키마;ID맵;ID 맵;스키마 디자인;맵;맵;결합 스키마;클래스;클래스;클래스;데이터 유형;데이터 유형;스키마;스키마;ID 맵;스키마 디자인;매핑;조합 스키마;공용
+keywords: Experience Platform;홈;인기 항목;스키마;스키마;스키마;열거형;필드 그룹;필드 그룹;데이터 유형;데이터 유형;데이터 유형;데이터 유형;데이터 유형;기본 ID;기본 ID;기본 ID;XDM 개별 프로필;XDM 필드;데이터 유형;경험 이벤트;XDM 경험 이벤트;XDM 경험 이벤트;경험 이벤트;경험 이벤트;경험 XDM Experienceevent;스키마 디자인;클래스;클래스;클래스;데이터 유형;데이터 유형;데이터 유형;스키마;ID맵;ID 맵;스키마 디자인;맵;맵;결합 스키마;클래스;클래스;클래스;데이터 유형;데이터 유형;스키마;스키마;ID 맵;스키마 디자인;매핑;조합 스키마;공용
 solution: Experience Platform
 title: 스키마 구성 기초
 topic-legacy: overview
 description: 이 문서에서는 XDM(Experience Data Model) 스키마 및 Adobe Experience Platform에서 사용할 스키마를 작성하기 위한 기본 블록, 원칙 및 모범 사례에 대해 설명합니다.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '3460'
+source-wordcount: '3497'
 ht-degree: 0%
 
 ---
@@ -123,49 +123,49 @@ XDM 스키마는 방대한 양의 복잡한 데이터를 자체 포함된 형식
 
 스키마는 다음 공식을 사용하여 구성됩니다.
 
-**클래스 + 혼합(&amp;T);= XDM 스키마**
+**클래스 + 스키마 필드 그룹(&amp;A);= XDM 스키마**
 
-&amp;ast;스키마는 클래스와 0개 이상의 혼합으로 구성됩니다. 즉, 믹싱을 사용하지 않고 데이터 세트 스키마를 구성할 수 있습니다.
+&amp;ast;스키마는 클래스와 0개 이상의 스키마 필드 그룹으로 구성됩니다. 즉, 필드 그룹을 전혀 사용하지 않고 데이터 집합 스키마를 구성할 수 있습니다.
 
 ### 클래스 {#class}
 
 스키마 작성은 클래스를 할당하여 시작됩니다. 클래스는 스키마에 포함할 데이터의 행동 측면(레코드 또는 시간 시리즈)을 정의합니다. 이 외에도 클래스는 해당 클래스를 기반으로 하는 모든 스키마에는 호환이 가능한 여러 데이터 집합을 병합하는 방법을 포함하는 데 필요한 가장 작은 수의 공용 속성을 설명합니다.
 
-스키마의 클래스는 해당 스키마에 사용할 수 있는 혼합을 결정합니다. 자세한 내용은 [다음 섹션](#mixin)에서 설명합니다.
+스키마의 클래스는 해당 스키마에 사용할 수 있는 필드 그룹을 결정합니다. 자세한 내용은 [다음 섹션](#field-group)에서 설명합니다.
 
 Adobe은 몇 가지 표준(&quot;코어&quot;) XDM 클래스를 제공합니다. 이러한 클래스 중 [!DNL XDM Individual Profile] 및 [!DNL XDM ExperienceEvent]은 거의 모든 다운스트림 플랫폼 프로세스에 필요합니다. 또한 이러한 핵심 클래스를 직접 만들어 조직의 구체적인 사용 사례를 설명할 수도 있습니다. 사용자 지정 클래스는 고유한 사용 사례를 설명하는 데 사용할 수 있는 Adobe 정의 코어 클래스가 없을 때 조직에 의해 정의됩니다.
 
-다음 스크린샷은 플랫폼 UI에서 클래스가 어떻게 표시되는지 보여줍니다. 표시된 예제 스키마에는 믹싱이 포함되어 있지 않으므로 표시된 모든 필드는 스키마의 클래스([!UICONTROL XDM Individual Profile])에서 제공됩니다.
+다음 스크린샷은 플랫폼 UI에서 클래스가 어떻게 표시되는지 보여줍니다. 표시된 예제 스키마는 필드 그룹을 포함하지 않으므로 표시된 모든 필드는 스키마의 클래스([!UICONTROL XDM Individual Profile])에서 제공합니다.
 
 ![](../images/schema-composition/class.png)
 
 사용 가능한 표준 XDM 클래스의 최신 목록은 [공식 XDM 리포지토리](https://github.com/adobe/xdm/tree/master/components/classes)를 참조하십시오. 또는 UI에서 리소스를 보려면 [XDM 구성 요소](../ui/explore.md) 살펴보기 가이드를 참조하십시오.
 
-### 믹신 {#mixin}
+### 필드 그룹 {#field-group}
 
-혼합은 개인 세부 사항, 호텔 환경 설정 또는 주소와 같은 특정 기능을 구현하는 하나 이상의 필드를 정의하는 재사용 가능한 구성 요소입니다. 믹스는 호환 클래스를 구현하는 스키마의 일부로 포함되도록 되어 있습니다.
+필드 그룹은 개인 세부 사항, 호텔 환경 설정 또는 주소와 같은 특정 기능을 구현하는 하나 이상의 필드를 정의하는 재사용 가능한 구성 요소입니다. 필드 그룹은 호환 클래스를 구현하는 스키마의 일부로 포함되도록 되어 있습니다.
 
-Mixins는 해당 클래스가 나타내는 데이터(기록 또는 시간 시리즈)의 비헤이비어를 기반으로 호환되는 클래스를 정의합니다. 즉, 모든 클래스에서 일부 믹싱을 사용할 수 없습니다.
+필드 그룹은 표시되는 데이터(레코드 또는 시간 시리즈)의 비헤이비어를 기반으로 호환되는 클래스를 정의합니다. 즉, 모든 클래스에서 일부 필드 그룹을 사용할 수 없습니다.
 
-[!DNL Experience Platform] 다양한 표준 Adobe 혼합을 포함하며 공급업체가 사용자를 위한 믹스를 정의하고 개별 사용자가 고유한 개념으로 믹싱을 정의할 수 있도록 합니다.
+[!DNL Experience Platform] 여기에는 많은 표준 Adobe 필드 그룹이 포함되어 있으며 공급업체가 사용자에 대해 필드 그룹을 정의할 수 있고 개별 사용자가 고유한 개념에 대해 필드 그룹을 정의할 수 있습니다.
 
-예를 들어 &quot;[!UICONTROL Loyalty Members]&quot; 스키마에 대해 &quot;[!UICONTROL First Name]&quot; 및 &quot;[!UICONTROL Home Address]&quot;과 같은 세부 정보를 캡처하려면 이러한 일반적인 개념을 정의하는 표준 믹스를 사용할 수 있습니다. 그러나 일반적이지 않은 사용 사례(예: &quot;[!UICONTROL Loyalty Program Level]&quot;)에만 해당하는 개념이 사전 정의된 믹신이 없는 경우가 많습니다. 이 경우 이 정보를 캡처하려면 자신의 믹싱을 정의해야 합니다.
+예를 들어 &quot;[!UICONTROL Loyalty Members]&quot; 스키마에 대해 &quot;[!UICONTROL First Name]&quot; 및 &quot;[!UICONTROL Home Address]&quot;과 같은 세부 정보를 캡처하려면 이러한 일반적인 개념을 정의하는 표준 필드 그룹을 사용할 수 있습니다. 그러나 일반적이지 않은 사용 사례(예: &quot;[!UICONTROL Loyalty Program Level]&quot;)에만 해당하는 개념에는 사전 정의된 필드 그룹이 없는 경우가 많습니다. 이 경우 이 정보를 캡처하려면 고유한 필드 그룹을 정의해야 합니다.
 
-스키마는 &quot;0개 이상&quot; 혼합으로 구성되므로 믹스를 전혀 사용하지 않고 유효한 스키마를 구성할 수 있습니다.
+스키마는 &quot;0 이상&quot; 필드 그룹으로 구성되므로 필드 그룹을 전혀 사용하지 않고 유효한 스키마를 구성할 수 있습니다.
 
-다음 스크린샷은 플랫폼 UI에서 믹스가 어떻게 표시되는지 보여줍니다. 스키마 구조에 필드를 그룹화하는 이 예제의 스키마에 단일 믹신([!UICONTROL Demographic Details])이 추가됩니다.
+다음 스크린샷은 플랫폼 UI에서 필드 그룹이 어떻게 표시되는지 보여줍니다. 스키마 구조에 필드를 그룹화하는 이 예제의 스키마에 단일 필드 그룹([!UICONTROL Demographic Details])이 추가됩니다.
 
-![](../images/schema-composition/mixin.png)
+![](../images/schema-composition/field-group.png)
 
-사용 가능한 표준 XDM 혼합에 대한 최신 목록은 [공식 XDM 리포지토리](https://github.com/adobe/xdm/tree/master/components/mixins)를 참조하십시오. 또는 UI에서 리소스를 보려면 [XDM 구성 요소](../ui/explore.md) 살펴보기 가이드를 참조하십시오.
+사용 가능한 표준 XDM 필드 그룹의 최신 목록은 [공식 XDM 저장소](https://github.com/adobe/xdm/tree/master/components/mixins)를 참조하십시오. 또는 UI에서 리소스를 보려면 [XDM 구성 요소](../ui/explore.md) 살펴보기 가이드를 참조하십시오.
 
 ### 데이터 유형 {#data-type}
 
-데이터 유형은 기본 리터럴 필드와 같은 방식으로 클래스 또는 스키마의 참조 필드 유형으로 사용됩니다. 중요한 차이점은 데이터 유형이 여러 하위 필드를 정의할 수 있다는 것입니다. 혼합과 마찬가지로 데이터 유형은 여러 필드 구조를 일관되게 사용할 수 있지만 필드의 &quot;데이터 유형&quot;으로 추가하여 데이터 유형을 스키마에서 어디에나 포함할 수 있으므로 혼합보다 유연성이 높습니다.
+데이터 유형은 기본 리터럴 필드와 같은 방식으로 클래스 또는 스키마의 참조 필드 유형으로 사용됩니다. 중요한 차이점은 데이터 유형이 여러 하위 필드를 정의할 수 있다는 것입니다. 필드 그룹과 마찬가지로 데이터 유형은 여러 필드 구조를 일관되게 사용할 수 있지만 필드의 &quot;데이터 유형&quot;으로 추가하여 데이터 유형을 스키마에서 어느 곳에나 포함할 수 있으므로 필드 그룹보다 유연성이 높습니다.
 
 [!DNL Experience Platform] 일반적인 데이터 구조를 설명하는 표준 패턴 사용을 지원하기  [!DNL Schema Registry] 위해 의 일부로 다양한 일반 데이터 유형을 제공합니다. 이 내용은 데이터 유형을 정의하는 단계를 거치면 더 분명해지는 [!DNL Schema Registry] 튜토리얼에서 자세히 설명합니다.
 
-다음 스크린샷은 플랫폼 UI에서 데이터 유형이 표시되는 방법을 보여줍니다. [!UICONTROL Demographic Details] 혼합에서 제공하는 필드 중 하나는 필드 이름 옆에 있는 파이프 문자(`|`) 다음에 나오는 텍스트로 표시된 &quot;[!UICONTROL Person name]&quot; 데이터 유형을 사용합니다. 이 특정 데이터 유형은 개인 이름과 관련된 여러 하위 필드, 이름을 캡처해야 하는 다른 필드에 대해 다시 사용할 수 있는 구문을 제공합니다.
+다음 스크린샷은 플랫폼 UI에서 데이터 유형이 표시되는 방법을 보여줍니다. [!UICONTROL Demographic Details] 필드 그룹에서 제공하는 필드 중 하나는 필드 이름 옆에 있는 파이프 문자(`|`) 다음에 나오는 텍스트로 지정된 &quot;[!UICONTROL Person name]&quot; 데이터 유형을 사용합니다. 이 특정 데이터 유형은 개인 이름과 관련된 여러 하위 필드, 이름을 캡처해야 하는 다른 필드에 대해 다시 사용할 수 있는 구문을 제공합니다.
 
 ![](../images/schema-composition/data-type.png)
 
@@ -192,7 +192,7 @@ Mixins는 해당 클래스가 나타내는 데이터(기록 또는 시간 시리
 * Long
 * Short
 * 바이트
-* Date
+* 날짜
 * 날짜-시간
 * 맵
 
@@ -220,13 +220,13 @@ XDM은 기본 필드와 고유한 데이터 유형을 정의할 수 있는 기�
 
 ## 컴포지션 예
 
-스키마는 [!DNL Platform]에 인제스트될 데이터의 형식 및 구조를 나타내며 컴포지션 모델을 사용하여 빌드됩니다. 이전에 언급했듯이 이러한 스키마는 해당 클래스와 호환되는 클래스 및 0개 이상의 혼합으로 구성됩니다.
+스키마는 [!DNL Platform]에 인제스트될 데이터의 형식 및 구조를 나타내며 컴포지션 모델을 사용하여 빌드됩니다. 이전에 언급했듯이 이러한 스키마는 해당 클래스와 호환되는 클래스 및 0개 이상의 필드 그룹으로 구성됩니다.
 
-예를 들어 소매 저장소에서 구매를 설명하는 스키마를 &quot;[!UICONTROL Store Transactions]&quot;이라고 할 수 있습니다. 스키마는 표준 [!UICONTROL Commerce] 믹싱 및 사용자 정의 [!UICONTROL Product Info] 믹싱과 결합된 [!DNL XDM ExperienceEvent] 클래스를 구현합니다.
+예를 들어 소매 저장소에서 구매를 설명하는 스키마를 &quot;[!UICONTROL Store Transactions]&quot;이라고 할 수 있습니다. 스키마는 표준 [!UICONTROL Commerce] 필드 그룹 및 사용자 정의 [!UICONTROL Product Info] 필드 그룹과 결합된 [!DNL XDM ExperienceEvent] 클래스를 구현합니다.
 
-웹 사이트 트래픽을 추적하는 다른 스키마를 &quot;[!UICONTROL Web Visits]&quot;이라고 할 수 있습니다. 또한 [!DNL XDM ExperienceEvent] 클래스를 구현하지만 이번에는 표준 [!UICONTROL Web] 믹싱을 결합합니다.
+웹 사이트 트래픽을 추적하는 다른 스키마를 &quot;[!UICONTROL Web Visits]&quot;이라고 할 수 있습니다. 또한 [!DNL XDM ExperienceEvent] 클래스를 구현하지만 이번에는 표준 [!UICONTROL Web] 필드 그룹을 결합합니다.
 
-아래 다이어그램은 이러한 스키마와 각 믹싱에 의해 기고한 필드를 보여줍니다. 또한 이 안내서에 앞서 언급한 &quot;[!UICONTROL Loyalty Members]&quot; 스키마를 포함하여 [!DNL XDM Individual Profile] 클래스를 기반으로 하는 2개의 스키마가 포함되어 있습니다.
+아래 다이어그램은 이러한 스키마와 각 필드 그룹이 기고한 필드를 보여줍니다. 또한 이 안내서에 앞서 언급한 &quot;[!UICONTROL Loyalty Members]&quot; 스키마를 포함하여 [!DNL XDM Individual Profile] 클래스를 기반으로 하는 2개의 스키마가 포함되어 있습니다.
 
 ![](../images/schema-composition/composition.png)
 
@@ -249,18 +249,18 @@ XDM은 기본 필드와 고유한 데이터 유형을 정의할 수 있는 기�
 외부 시스템의 세그먼트를 Platform으로 가져오는 경우 다음 구성 요소를 사용하여 스키마에서 캡처해야 합니다.
 
 * [[!UICONTROL Segment definition] 클래스](../classes/segment-definition.md):이 표준 클래스를 사용하여 외부 세그먼트 정의의 주요 속성을 캡처합니다.
-* [[!UICONTROL Segment Membership Details] 혼합](../mixins/profile/segmentation.md):고객 프로파일을 특정 세그먼트와  [!UICONTROL XDM Individual Profile] 연결하려면 이 혼합을 스키마에 추가합니다.
+* [[!UICONTROL Segment Membership Details] 필드 그룹](../field-groups/profile/segmentation.md):고객 프로파일을 특정 세그먼트와  [!UICONTROL XDM Individual Profile] 연결하려면 이 필드 그룹을 스키마에 추가합니다.
 
 ## 다음 단계
 
 스키마 컴포지션의 기본 사항을 이해했으므로 [!DNL Schema Registry]을(를) 사용하여 스키마 탐색을 시작하고 작성을 시작할 준비가 되었습니다.
 
-두 개의 핵심 XDM 클래스 구조와 일반적으로 사용되는 호환 믹스를 검토하려면 다음 참조 설명서를 참조하십시오.
+두 개의 핵심 XDM 클래스 구조와 일반적으로 사용되는 호환 필드 그룹을 검토하려면 다음 참조 설명서를 참조하십시오.
 
 * [[!DNL XDM Individual Profile]](../classes/individual-profile.md)
 * [[!DNL XDM ExperienceEvent]](../classes/experienceevent.md)
 
-[!DNL Schema Registry]은 Adobe Experience Platform 내의 [!DNL Schema Library]에 액세스하는 데 사용되며, 사용 가능한 모든 라이브러리 리소스에 액세스할 수 있는 사용자 인터페이스와 RESTful API를 제공합니다. [!DNL Schema Library]에는 Adobe에 의해 정의된 산업 리소스, [!DNL Experience Platform] 파트너가 정의한 공급업체 리소스 및 조직의 구성원이 구성한 클래스, 믹싱, 데이터 유형 및 스키마가 포함되어 있습니다.
+[!DNL Schema Registry]은 Adobe Experience Platform 내의 [!DNL Schema Library]에 액세스하는 데 사용되며, 사용 가능한 모든 라이브러리 리소스에 액세스할 수 있는 사용자 인터페이스와 RESTful API를 제공합니다. [!DNL Schema Library]에는 Adobe에 의해 정의된 산업 리소스, [!DNL Experience Platform] 파트너가 정의한 공급업체 리소스 및 조직의 구성원이 구성한 클래스, 필드 그룹, 데이터 유형 및 스키마가 포함되어 있습니다.
 
 UI를 사용하여 스키마 작성을 시작하려면 이 문서 전체에 언급된 &quot;충성도 구성원&quot; 스키마를 빌드하려면 [스키마 편집기 자습서](../tutorials/create-schema-ui.md)와 함께 하십시오.
 
