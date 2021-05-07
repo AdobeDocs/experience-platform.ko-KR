@@ -6,9 +6,9 @@ description: 이 문서에서는 스키마 레지스트리 API를 호출하기 �
 topic-legacy: developer guide
 exl-id: 7daebb7d-72d2-4967-b4f7-1886736db69f
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '1363'
+source-wordcount: '1367'
 ht-degree: 0%
 
 ---
@@ -85,16 +85,16 @@ curl -X GET \
   "tenantId":"{TENANT_ID}",
   "counts": {
     "schemas": 4,
-    "mixins": 3,
+    "fieldgroups": 3,
     "datatypes": 1,
     "classes": 2,
     "unions": 0,
   },
   "recentlyCreatedResources": [ 
     {
-      "title": "Sample Mixin",
-      "description": "New Sample Mixin.",
-      "meta:resourceType": "mixins",
+      "title": "Sample Field Group",
+      "description": "New Sample Field Group.",
+      "meta:resourceType": "fieldgroups",
       "meta:created": "Sat Feb 02 2019 00:24:30 GMT+0000 (UTC)",
       "version": "1.1"
     },
@@ -109,9 +109,9 @@ curl -X GET \
   ],
   "recentlyUpdatedResources": [
     {
-      "title": "Sample Mixin",
-      "description": "New Sample Mixin.",
-      "meta:resourceType": "mixins",
+      "title": "Sample Field Group",
+      "description": "New Sample Field Group.",
+      "meta:resourceType": "fieldgroups",
       "meta:updated": "Sat Feb 02 2019 00:34:06 GMT+0000 (UTC)",
       "version": "1.1"
     },
@@ -160,7 +160,7 @@ curl -X GET \
 
 ### 전역 컨테이너
 
-`global` 컨테이너에는 모든 표준 Adobe이 들어 있으며 제공된 클래스, 믹싱, 데이터 유형 및 스키마가 [!DNL Experience Platform] 파트너에 포함되어 있습니다. `global` 컨테이너에 대해서만 목록 및 조회(GET) 요청만 수행할 수 있습니다.
+`global` 컨테이너에는 모든 표준 Adobe이 들어 있으며 제공된 클래스, 스키마 필드 그룹, 데이터 유형 및 스키마가 [!DNL Experience Platform] 포함되어 있습니다. `global` 컨테이너에 대해서만 목록 및 조회(GET) 요청만 수행할 수 있습니다.
 
 `global` 컨테이너를 사용하는 호출의 예는 다음과 같습니다.
 
@@ -170,15 +170,15 @@ GET /global/classes
 
 ### 테넌트 컨테이너
 
-고유한 `TENANT_ID`과 혼동하지 않도록 `tenant` 컨테이너는 IMS 조직에서 정의한 모든 클래스, 믹싱, 데이터 유형, 스키마 및 설명자를 보유합니다. 이러한 구성 요소는 각 조직에 고유하며, 이는 다른 IMS Orgs에서 보거나 관리할 수 없음을 의미합니다. `tenant` 컨테이너에 만든 리소스에 대해 모든 CRUD 작업(GET, POST, PUT, PATCH, DELETE)을 수행할 수 있습니다.
+고유한 `TENANT_ID`과 혼동하지 않도록 `tenant` 컨테이너는 IMS 조직에서 정의한 모든 클래스, 필드 그룹, 데이터 유형, 스키마 및 설명자를 보유합니다. 이러한 구성 요소는 각 조직에 고유하며, 이는 다른 IMS Orgs에서 보거나 관리할 수 없음을 의미합니다. `tenant` 컨테이너에 만든 리소스에 대해 모든 CRUD 작업(GET, POST, PUT, PATCH, DELETE)을 수행할 수 있습니다.
 
 `tenant` 컨테이너를 사용하는 호출의 예는 다음과 같습니다.
 
 ```http
-POST /tenant/mixins
+POST /tenant/fieldgroups
 ```
 
-`tenant` 컨테이너에서 클래스, 혼합, 스키마 또는 데이터 유형을 만들 때 [!DNL Schema Registry]에 저장되고 `TENANT_ID`이 포함된 `$id` URI가 할당됩니다. 이 `$id`는 API 전체에서 특정 리소스를 참조하기 위해 사용됩니다. `$id` 값의 예는 다음 섹션에 제공됩니다.
+`tenant` 컨테이너에 클래스, 필드 그룹, 스키마 또는 데이터 유형을 만들면 [!DNL Schema Registry]에 저장되고 `TENANT_ID`를 포함하는 `$id` URI가 할당됩니다. 이 `$id`는 API 전체에서 특정 리소스를 참조하기 위해 사용됩니다. `$id` 값의 예는 다음 섹션에 제공됩니다.
 
 ## 리소스 ID {#resource-identification}
 
