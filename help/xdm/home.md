@@ -6,7 +6,7 @@ topic-legacy: overview
 description: 표준화 및 상호 운용성은 Adobe Experience Platform의 핵심 개념입니다. Adobe을 기반으로 하는 XDM(Experience Data Model)은 고객 경험 데이터를 표준화하고 고객 경험 관리를 위한 스키마를 정의하려는 노력의 일환입니다.
 exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
 translation-type: tm+mt
-source-git-commit: 58f6c5e3ac77070807f7486bf429493d14fdda9e
+source-git-commit: b70e693b4ffeda561de4d4c8dd8fd1adeec489f7
 workflow-type: tm+mt
 source-wordcount: '1694'
 ht-degree: 1%
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->&quot;mixin&quot;이라는 용어가 이해를 촉진하기 위해 &quot;스키마 필드 그룹&quot;으로 업데이트되었습니다. 필드 그룹은 비즈니스 사용 사례를 지원하는 재사용 가능한 필드 세트입니다. 이제 이 변경 사항은 스키마 레지스트리 API, Adobe Experience Platform UI 및 모든 플랫폼 문서에 반영됩니다.
+>&quot;mixin&quot;이라는 용어가 이해를 촉진하기 위해 스키마 &quot;field group&quot;으로 업데이트되었습니다. 필드 그룹은 비즈니스 사용 사례를 지원하는 재사용 가능한 필드 세트입니다. 이제 이 변경 사항은 스키마 레지스트리 API, Adobe Experience Platform UI 및 모든 플랫폼 문서에 반영됩니다.
 
 표준화 및 상호 운용성은 Adobe Experience Platform의 핵심 개념입니다. [!DNL Experience Data Model] (XDM)은 Adobe을 기반으로 고객 경험 데이터를 표준화하고 고객 경험 관리를 위한 스키마를 정의하는 것입니다.
 
