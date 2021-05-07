@@ -6,9 +6,9 @@ last-update: April 21, 2021
 author: ens72741
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
 translation-type: tm+mt
-source-git-commit: f0350be580394516016373b1754a49951b58e846
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '883'
+source-wordcount: '885'
 ht-degree: 10%
 
 ---
@@ -45,7 +45,7 @@ XDM(Experience Data Model)은 디지털 경험의 성능을 개선하기 위해 
 
 | 기능 | 설명 |
 | --- | --- |
-| 업계별 스키마 권장 사항 | 스키마 편집기 UI에서 클래스와 믹스를 선택할 때 새 필터를 사용하여 특정 업계를 기반으로 권장 표준 구성 요소를 볼 수 있습니다. 이러한 구성 요소가 서로 다른 업계 사용 사례에서 서로 연관되는 방법에 대한 자세한 내용은 [업계 데이터 모델](https://www.adobe.com/go/xdm-industry-erds-en)의 설명서를 참조하십시오. |
+| 업계별 스키마 권장 사항 | 스키마 편집기 UI에서 클래스 및 스키마 필드 그룹을 선택할 때 새 필터를 사용하여 특정 업계를 기반으로 권장 표준 구성 요소를 볼 수 있습니다. 이러한 구성 요소가 서로 다른 업계 사용 사례에서 서로 연관되는 방법에 대한 자세한 내용은 [업계 데이터 모델](https://www.adobe.com/go/xdm-industry-erds-en)의 설명서를 참조하십시오. |
 
 ## [!DNL Intelligent Services] {#intelligent-services}
 
