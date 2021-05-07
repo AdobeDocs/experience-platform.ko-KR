@@ -6,9 +6,9 @@ topic-legacy: Getting started
 description: 고객 AI에서 활용하는 필수 이벤트, 입력 및 결과물에 대한 자세한 내용을 살펴보십시오.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '2865'
+source-wordcount: '2878'
 ht-degree: 1%
 
 ---
@@ -36,10 +36,10 @@ ht-degree: 1%
 | 용어 | 정의 |
 | --- | --- |
 | [경험 데이터 모델(XDM)](../../xdm/home.md) | XDM은 Adobe Experience Platform을 기반으로 하는 Adobe Experience Cloud이 올바른 고객에게 올바른 메시지를 적시에 적합한 채널에 전달할 수 있는 기본 프레임워크입니다. Experience Platform이 구축되는 방법론, XDM 시스템은 플랫폼 서비스에서 사용하기 위해 경험 데이터 모델 스키마를 운영합니다. |
-| XDM 스키마 | Experience Platform은 스키마를 사용하여 데이터의 구조를 일관되고 재사용 가능한 방식으로 설명합니다. 여러 시스템에서 데이터를 일관되게 정의하면 의미를 쉽게 유지할 수 있으므로 데이터의 가치를 얻을 수 있습니다. 데이터를 플랫폼에 인제스트하려면 데이터 구조를 설명하고 각 필드에 포함할 수 있는 데이터 유형에 제약 조건을 제공하도록 스키마를 구성해야 합니다. 스키마는 기본 XDM 클래스와 0개 이상의 혼합으로 구성됩니다. |
+| XDM 스키마 | Experience Platform은 스키마를 사용하여 데이터의 구조를 일관되고 재사용 가능한 방식으로 설명합니다. 여러 시스템에서 데이터를 일관되게 정의하면 의미를 쉽게 유지할 수 있으므로 데이터의 가치를 얻을 수 있습니다. 데이터를 플랫폼에 인제스트하려면 데이터 구조를 설명하고 각 필드에 포함할 수 있는 데이터 유형에 제약 조건을 제공하도록 스키마를 구성해야 합니다. 스키마는 기본 XDM 클래스와 0개 이상의 스키마 필드 그룹으로 구성됩니다. |
 | XDM 클래스 | 모든 XDM 스키마는 레코드 또는 시간 시리즈로 분류할 수 있는 데이터를 설명합니다. 스키마의 데이터 동작은 스키마의 클래스에 의해 정의됩니다. 이 클래스는 스키마를 처음 만들 때 스키마에 할당됩니다. XDM 클래스는 특정 데이터 비헤이비어를 나타내기 위해 스키마에서 포함해야 하는 속성의 최소 수를 설명합니다. |
-| [혼합](../../xdm/schema/composition.md) | 스키마에서 하나 이상의 필드를 정의하는 구성 요소입니다. 혼합은 해당 필드가 스키마의 계층에서 표시되는 방식을 적용하므로 해당 필드가 포함된 모든 스키마에서 동일한 구조를 표시합니다. 믹스는 `meta:intendedToExtend` 특성으로 식별되는 특정 클래스와 호환됩니다. |
-| [데이터 유형](../../xdm/schema/composition.md) | 스키마에 대해 하나 이상의 필드를 제공할 수도 있는 구성 요소입니다. 그러나 믹스와는 달리 데이터 유형은 특정 클래스로 제한되지 않습니다. 따라서 데이터 유형을 보다 유연하게 설명하여 서로 다른 클래스가 있는 여러 스키마에서 다시 사용할 수 있는 일반적인 데이터 구조를 설명합니다. 이 문서에 설명된 데이터 유형은 CEE와 Adobe Analytics 스키마 모두에서 지원됩니다. |
+| [필드 그룹](../../xdm/schema/composition.md) | 스키마에서 하나 이상의 필드를 정의하는 구성 요소입니다. 필드 그룹은 해당 필드가 스키마의 계층에서 표시되는 방식을 적용하므로 해당 필드가 포함된 모든 스키마에서 동일한 구조를 표시합니다. 필드 그룹은 `meta:intendedToExtend` 특성으로 식별되는 특정 클래스와만 호환됩니다. |
+| [데이터 유형](../../xdm/schema/composition.md) | 스키마에 대해 하나 이상의 필드를 제공할 수도 있는 구성 요소입니다. 하지만 필드 그룹과 달리 데이터 유형은 특정 클래스로 제한되지 않습니다. 따라서 데이터 유형을 보다 유연하게 설명하여 서로 다른 클래스가 있는 여러 스키마에서 다시 사용할 수 있는 일반적인 데이터 구조를 설명합니다. 이 문서에 설명된 데이터 유형은 CEE와 Adobe Analytics 스키마 모두에서 지원됩니다. |
 | 가입/해지 전환 | 구독을 취소하거나 갱신하지 않기로 선택한 계정의 백분율을 측정합니다. 가입자 이탈률이 높으면 MRR(Monthly Recognition Revenue)에 부정적인 영향을 줄 수 있으며 제품 또는 서비스에 대한 불만을 나타낼 수도 있습니다. |
 | [실시간 고객 프로필](../../profile/home.md) | 실시간 고객 프로필은 타깃팅되고 개인화된 경험 관리를 위한 중앙 집중식 소비자 프로필을 제공합니다. 각 프로필에는 모든 시스템에서 집계된 데이터는 물론 Experience Platform과 함께 사용하는 시스템에서 발생한 개별 이벤트에 대해 실행 가능한 타임스탬프가 지정된 계정에 대한 데이터도 포함되어 있습니다. |
 
@@ -49,7 +49,7 @@ ht-degree: 1%
 >
 > 고객 AI는 예측에 유용한 이벤트를 자동으로 결정하고 사용 가능한 데이터가 품질 예측을 생성하는 데 충분하지 않을 경우 경고를 표시합니다.
 
-고객 AI는 CEE, Adobe Analytics 및 Adobe Audience Manager 데이터 세트를 지원합니다. CEE 스키마는 스키마 생성 프로세스 중에 혼합을 추가해야 합니다. Adobe Analytics 또는 Adobe Audience Manager 데이터 세트를 사용하는 경우 소스 커넥터는 연결 프로세스 동안 아래에 나열된 표준 이벤트(커머스, 웹 페이지 세부 사항, 응용 프로그램 및 검색)를 직접 매핑합니다.
+고객 AI는 CEE, Adobe Analytics 및 Adobe Audience Manager 데이터 세트를 지원합니다. CEE 스키마는 스키마 생성 프로세스 동안 필드 그룹을 추가해야 합니다. Adobe Analytics 또는 Adobe Audience Manager 데이터 세트를 사용하는 경우 소스 커넥터는 연결 프로세스 동안 아래에 나열된 표준 이벤트(커머스, 웹 페이지 세부 사항, 응용 프로그램 및 검색)를 직접 매핑합니다.
 
 Adobe Analytics 데이터 또는 Audience Manager 데이터 매핑에 대한 자세한 내용은 [분석 필드 매핑](../../sources/connectors/adobe-applications/analytics.md) 또는 [Audience Manager 필드 매핑](../../sources/connectors/adobe-applications/mapping/audience-manager.md) 안내서를 참조하십시오.
 
@@ -57,18 +57,17 @@ Adobe Analytics 데이터 또는 Audience Manager 데이터 매핑에 대한 자
 
 XDM 경험 이벤트는 다양한 고객 행동을 결정하는 데 사용됩니다. 데이터 구성 방식에 따라 아래 나열된 이벤트 유형에 고객의 모든 행동이 포함되지 않을 수 있습니다. 웹 사용자 활동을 명확하고 모호하게 식별하기 위해 필요한 데이터가 있는 필드를 파악하는 것은 전적으로 개인의 책임입니다. 예측 목표에 따라 필요한 필수 필드가 변경될 수 있습니다.
 
-고객 AI는 모델 기능을 구축하기 위해 다양한 이벤트 유형을 사용합니다. 이러한 이벤트 유형은 여러 XDM 믹싱을 사용하여 스키마에 자동으로 추가됩니다.
+고객 AI는 모델 기능을 구축하기 위해 다양한 이벤트 유형을 사용합니다. 이러한 이벤트 유형은 여러 XDM 필드 그룹을 사용하여 스키마에 자동으로 추가됩니다.
 
 >[!NOTE]
 >
->Adobe Analytics 또는 Adobe Audience Manager 데이터를 사용하는 경우 데이터 캡처에 필요한 표준 이벤트를 사용하여 스키마가 자동으로 생성됩니다. 데이터를 캡처하기 위해 고유한 사용자 정의 CEE 스키마를 만드는 경우 데이터를 캡처하는 데 필요한 혼합을 고려해야 합니다.
+>Adobe Analytics 또는 Adobe Audience Manager 데이터를 사용하는 경우 데이터 캡처에 필요한 표준 이벤트를 사용하여 스키마가 자동으로 생성됩니다. 데이터를 캡처하기 위해 고유한 사용자 정의 CEE 스키마를 만드는 경우 데이터를 캡처하는 데 필요한 필드 그룹을 고려해야 합니다.
 
 아래 나열된 각 표준 이벤트에 대한 데이터는 필요하지 않지만 특정 시나리오에 특정 이벤트는 필요합니다. 사용 가능한 표준 이벤트 데이터가 있으면 스키마에 포함하는 것이 좋습니다. 예를 들어 구매 이벤트 예측을 위해 고객 AI 응용 프로그램을 만들려면 `Commerce` 및 `Web page details` 데이터 유형의 데이터를 가져오는 것이 유용합니다.
 
-플랫폼 UI에서 혼합을 보려면 왼쪽 레일의 **[!UICONTROL Schemas]** 탭을 선택하고 **[!UICONTROL Mixins]** 탭을 선택합니다.
+플랫폼 UI에서 필드 그룹을 보려면 왼쪽 레일의 **[!UICONTROL Schemas]** 탭을 선택하고 **[!UICONTROL Field groups]** 탭을 선택합니다.
 
-
-| 믹신 | 이벤트 유형 | XDM 필드 경로 |
+| 필드 그룹 | 이벤트 유형 | XDM 필드 경로 |
 | --- | --- | --- |
 | [!UICONTROL Commerce Details] | 주문 | <li> commerce.order.purchaseID </li> <li> productListItems.SKU </li> |
 |  | productListViews | <li> commerce.productListViews.value </li> <li> productListItems.SKU </li> |
@@ -118,7 +117,7 @@ XDM 경험 이벤트는 다양한 고객 행동을 결정하는 데 사용됩니
 
 ### 예제 시나리오
 
-이 섹션에서는 고객 AI 인스턴스에 대한 다양한 시나리오와 필수 및 권장 이벤트 유형에 대해 설명합니다. 혼합과 해당 필드 경로에 대한 자세한 내용은 위의 [표준 이벤트 테이블](#standard-events)을 참조하십시오.
+이 섹션에서는 고객 AI 인스턴스에 대한 다양한 시나리오와 필수 및 권장 이벤트 유형에 대해 설명합니다. 필드 그룹 및 해당 필드 경로에 대한 자세한 내용은 위의 [표준 이벤트 테이블](#standard-events)을 참조하십시오.
 
 >[!NOTE]
 >
@@ -249,7 +248,7 @@ XDM 경험 이벤트는 다양한 고객 행동을 결정하는 데 사용됩니
 
 **필수 표준 이벤트 유형:**
 
-Adobe Audience Manager의 트레이트를 사용하려면 [Audience Manager 소스 커넥터](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md)를 사용하여 소스 연결을 만들어야 합니다. 소스 커넥터는 적절한 믹싱을 사용하여 스키마를 자동으로 만듭니다. 고객 AI에서 사용할 수 있도록 스키마에 대한 이벤트 유형을 수동으로 추가할 필요는 없습니다.
+Adobe Audience Manager의 트레이트를 사용하려면 [Audience Manager 소스 커넥터](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md)를 사용하여 소스 연결을 만들어야 합니다. 소스 커넥터는 올바른 필드 그룹으로 스키마를 자동으로 만듭니다. 고객 AI에서 사용할 수 있도록 스키마에 대한 이벤트 유형을 수동으로 추가할 필요는 없습니다.
 
 새 고객 AI 인스턴스를 구성할 때 목표를 정의하는 동안 점수를 매길 특정 트레이트를 선택하는 데 `audienceName` 및 `audienceID`을 사용할 수 있습니다.
 
