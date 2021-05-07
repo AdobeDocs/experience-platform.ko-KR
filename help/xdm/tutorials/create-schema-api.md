@@ -7,9 +7,9 @@ type: Tutorial
 description: 이 자습서에서는 스키마 레지스트리 API를 사용하여 표준 클래스를 사용하여 스키마를 구성하는 단계를 안내합니다.
 exl-id: fa487a5f-d914-48f6-8d1b-001a60303f3d
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '2373'
+source-wordcount: '2426'
 ht-degree: 1%
 
 ---
@@ -35,7 +35,7 @@ ht-degree: 1%
 
 ## 표준 클래스로 스키마 작성
 
-스키마는 [!DNL Experience Platform]에 인제스트할 데이터의 청사진으로 생각할 수 있습니다. 각 스키마는 클래스와 0개 이상의 혼합으로 구성됩니다. 즉, 스키마를 정의하기 위해 혼합을 추가할 필요는 없지만 대부분의 경우 혼합을 하나 이상 사용합니다.
+스키마는 [!DNL Experience Platform]에 인제스트할 데이터의 청사진으로 생각할 수 있습니다. 각 스키마는 클래스와 스키마 필드 그룹이 0개 이상 있는 그룹으로 구성됩니다. 즉, 스키마를 정의하기 위해 필드 그룹을 추가할 필요는 없지만 대부분의 경우 필드 그룹이 하나 이상 사용됩니다.
 
 ### 클래스 할당
 
@@ -177,13 +177,13 @@ curl -X GET \
 }
 ```
 
-### 믹신 {#add-a-mixin} 추가
+### 필드 그룹 {#add-a-field-group} 추가
 
-충성도 멤버 스키마가 생성 및 확인되었으므로 혼합을 추가할 수 있습니다.
+충성도 멤버 스키마가 생성 및 확인되었으므로 필드 그룹을 여기에 추가할 수 있습니다.
 
-선택한 스키마 클래스에 따라 사용할 수 있는 표준 혼합이 다릅니다. 각 믹스에는 믹싱과 호환되는 클래스를 정의하는 `intendedToExtend` 필드가 포함되어 있습니다.
+선택한 스키마 클래스에 따라 사용할 수 있는 표준 필드 그룹이 다릅니다. 각 필드 그룹에는 해당 필드 그룹이 호환되는 클래스를 정의하는 `intendedToExtend` 필드가 포함되어 있습니다.
 
-믹스는 동일한 정보를 캡처해야 하는 모든 스키마에서 다시 사용할 수 있는 &quot;이름&quot; 또는 &quot;주소&quot;와 같은 개념을 정의합니다.
+필드 그룹은 동일한 정보를 캡처해야 하는 모든 스키마에서 다시 사용할 수 있는 &quot;이름&quot; 또는 &quot;주소&quot;와 같은 개념을 정의합니다.
 
 **API 형식**
 
@@ -193,9 +193,9 @@ PATCH /tenant/schemas/{schema meta:altId or url encoded $id URI}
 
 **요청**
 
-이 요청에서는 충성도 멤버 스키마를 업데이트하여 &quot;프로필-person-details&quot; 믹스인 내의 필드를 포함합니다.
+이 요청은 &quot;프로필-person-details&quot; 필드 그룹 내의 필드를 포함하도록 충성도 멤버 스키마를 업데이트(PATCH)합니다.
 
-&quot;프로필-person-details&quot; 믹싱을 추가하여 충성도 멤버 스키마는 이제 이름, 성 및 생일과 같은 충성도 프로그램 멤버에 대한 정보를 캡처합니다.
+이제 &quot;profile-person-details&quot; 필드 그룹을 추가하면 충성도 멤버 스키마는 이름, 성 및 생일과 같은 충성도 프로그램 멤버에 대한 정보를 캡처합니다.
 
 ```SHELL
 curl -X PATCH \
@@ -212,7 +212,7 @@ curl -X PATCH \
 
 **응답**
 
-이 응답에는 `meta:extends` 배열에 새로 추가된 믹싱이 표시되고 `allOf` 특성의 혼합에 `$ref`이 포함됩니다.
+이 응답에는 `meta:extends` 배열에 새로 추가된 필드 그룹이 표시되고 `allOf` 특성의 필드 그룹에 `$ref`이(가) 포함됩니다.
 
 ```JSON
 {
@@ -254,17 +254,17 @@ curl -X PATCH \
 }
 ```
 
-### 다른 믹싱 추가
+### 다른 필드 그룹 추가
 
-이제 다른 믹싱을 사용하여 단계를 반복하여 다른 표준 믹싱을 추가할 수 있습니다.
+이제 다른 필드 그룹을 사용하여 단계를 반복하여 다른 표준 필드 그룹을 추가할 수 있습니다.
 
 >[!TIP]
 >
->각 영역에 대해 숙지하기 위해 사용 가능한 모든 혼합을 검토하는 것이 좋다. &quot;global&quot; 및 &quot;tenant&quot; 컨테이너에 대한 요청을 수행하여 특정 클래스에 사용할 수 있는 모든 믹스를 목록(GET)으로 표시하고 &quot;meta:intendedToExtend&quot; 필드가 사용 중인 클래스와 일치하는 믹스만 반환합니다. 이 경우 [!DNL XDM Individual Profile] 클래스이므로 [!DNL XDM Individual Profile] `$id`가 사용됩니다.
+>각 필드에 포함된 필드를 숙지하기 위해 사용 가능한 모든 필드 그룹을 검토할 가치가 있습니다. 각 &quot;global&quot; 및 &quot;tenant&quot; 컨테이너에 대한 요청을 수행하여 특정 클래스에 사용할 수 있는 모든 필드 그룹을 목록(GET)으로 표시하고 &quot;meta:intendedToExtend&quot; 필드가 사용 중인 클래스와 일치하는 해당 필드 그룹만 반환할 수 있습니다. 이 경우 [!DNL XDM Individual Profile] 클래스이므로 [!DNL XDM Individual Profile] `$id`가 사용됩니다.
 
 ```http
-GET /global/mixins?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
-GET /tenant/mixins?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
+GET /global/fieldgroups?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
+GET /tenant/fieldgroups?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
 ```
 
 **API 형식**
@@ -275,7 +275,7 @@ PATCH /tenant/schemas/{schema meta:altId or url encoded $id URI}
 
 **요청**
 
-이 요청에서는 스키마에 &quot;home address&quot;, &quot;email address&quot; 및 &quot;home phone&quot; 필드를 추가하여 &quot;profile-personal-details&quot; 믹스인 내의 필드를 포함하도록 충성도 멤버 스키마를 업데이트(PATCH)합니다.
+이 요청은 스키마에 &quot;프로필-개인 정보&quot; 필드 그룹 내의 필드를 포함하도록 충성도 멤버 스키마를 업데이트(PATCH)하고 &quot;홈 주소&quot;, &quot;이메일 주소&quot; 및 &quot;홈 전화&quot; 필드를 추가합니다.
 
 ```SHELL
 curl -X PATCH \
@@ -292,7 +292,7 @@ curl -X PATCH \
 
 **응답**
 
-이 응답에는 `meta:extends` 배열에 새로 추가된 믹싱이 표시되고 `allOf` 특성의 혼합에 `$ref`이 포함됩니다.
+이 응답에는 `meta:extends` 배열에 새로 추가된 필드 그룹이 표시되고 `allOf` 특성의 필드 그룹에 `$ref`이(가) 포함됩니다.
 
 충성도 멤버 스키마는 `allOf` 배열에 세 개의 `$ref` 값을 포함해야 합니다.&quot;profile&quot;, &quot;profile-person-details&quot; 및 &quot;profile-personal-details&quot;를 참조하십시오.
 
@@ -340,29 +340,29 @@ curl -X PATCH \
 }
 ```
 
-### 새 믹싱 정의
+### 새 필드 그룹 정의
 
-충성도 구성원 스키마는 충성도 프로그램에 고유한 정보를 캡처해야 합니다. 이 정보는 표준 믹스에 포함되지 않습니다.
+충성도 구성원 스키마는 충성도 프로그램에 고유한 정보를 캡처해야 합니다. 이 정보는 표준 필드 그룹에 포함되지 않습니다.
 
-테넌트 컨테이너 내에 자신의 믹스를 정의할 수 있도록 허용하여 이에 대한 [!DNL Schema Registry] 계정을 지정합니다. 이러한 혼합은 조직에 고유하며 IMS 조직 외부의 다른 사용자가 보거나 편집할 수 없습니다.
+테넌트 컨테이너 내에 자신의 필드 그룹을 정의할 수 있도록 허용하여 이에 대한 [!DNL Schema Registry] 계정을 지정합니다. 이러한 필드 그룹은 조직에 고유하며 IMS 조직 외부의 다른 사용자가 보거나 편집할 수 없습니다.
 
-새 믹싱을 만들기(POST)하려면 믹싱에 포함할 속성과 함께 믹싱이 호환되는 기본 클래스의 `$id`이(가) 포함된 `meta:intendedToExtend` 필드를 포함해야 합니다.
+새 필드 그룹을 만들기(POST)하려면 필드 그룹이 포함될 속성과 함께 필드 그룹이 호환되는 기본 클래스에 대해 `$id`가 포함된 `meta:intendedToExtend` 필드를 요청에 포함해야 합니다.
 
-모든 사용자 지정 속성은 `TENANT_ID` 아래에 중첩되어야 다른 믹스인 또는 필드와 충돌하지 않습니다.
+사용자 지정 속성은 `TENANT_ID` 아래에 중첩되어야 다른 필드 그룹 또는 필드와 충돌하지 않습니다.
 
 **API 형식**
 
 ```http
-POST /tenant/mixins
+POST /tenant/fieldgroups
 ```
 
 **요청**
 
-이 요청은 4개의 로열티 프로그램 관련 필드가 포함된 &quot;충성도&quot; 개체가 있는 새 믹스를 만듭니다.&quot;충성도 ID&quot;, &quot;충성도 수준&quot;, &quot;충성도 포인트&quot; 및 &quot;memberSince&quot;
+이 요청은 4개의 로열티 프로그램 관련 필드가 포함된 &quot;충성도&quot; 개체가 있는 새 필드 그룹을 만듭니다.&quot;충성도 ID&quot;, &quot;충성도 수준&quot;, &quot;충성도 포인트&quot; 및 &quot;memberSince&quot;
 
 ```SHELL
 curl -X POST\
-  https://platform.adobe.io/data/foundation/schemaregistry/tenant/mixins\
+  https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups\
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -372,7 +372,7 @@ curl -X POST\
         "type": "object",
         "title": "Loyalty Member Details",
         "meta:intendedToExtend": ["https://ns.adobe.com/xdm/context/profile"],
-        "description": "Loyalty Program Mixin.",
+        "description": "Loyalty Program Field Group.",
         "definitions": {
             "loyalty": {
               "properties": {
@@ -419,7 +419,7 @@ curl -X POST\
 
 **응답**
 
-요청이 성공하면 `$id`, `meta:altIt` 및 `version` 등 새로 만든 믹싱의 세부 정보가 포함된 응답 본문이 있는 HTTP 응답 상태 201(생성됨)이 반환됩니다. 이러한 값은 읽기 전용이며 [!DNL Schema Registry]에 의해 할당됩니다.
+요청이 성공하면 `$id`, `meta:altIt` 및 `version` 등 새로 만든 필드 그룹의 세부 정보가 포함된 응답 본문이 있는 HTTP 응답 상태 201(생성됨)이 반환됩니다. 이러한 값은 읽기 전용이며 [!DNL Schema Registry]에 의해 할당됩니다.
 
 ```JSON
 {
@@ -428,7 +428,7 @@ curl -X POST\
     "meta:intendedToExtend": [
         "https://ns.adobe.com/xdm/context/profile"
     ],
-    "description": "Loyalty Program Mixin.",
+    "description": "Loyalty Program Field Group.",
     "definitions": {
         "loyalty": {
             "properties": {
@@ -482,11 +482,11 @@ curl -X POST\
     "meta:extensible": true,
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
-    "meta:altId": "_{TENANT_ID}.mixins.bb118e507bb848fd85df68fedea70c62",
+    "meta:altId": "_{TENANT_ID}.fieldgroups.bb118e507bb848fd85df68fedea70c62",
     "meta:xdmType": "object",
-    "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62",
+    "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62",
     "version": "1.1",
-    "meta:resourceType": "mixins",
+    "meta:resourceType": "fieldgroups",
     "meta:registryMetadata": {
         "repo:createDate": 1551838135803,
         "repo:lastModifiedDate": 1552078296885,
@@ -496,9 +496,9 @@ curl -X POST\
 }
 ```
 
-### 스키마에 사용자 정의 믹싱 추가
+### 스키마에 사용자 정의 필드 그룹 추가
 
-이제 [표준 믹서](#add-a-mixin)에 대해 동일한 단계를 수행하여 새로 만든 믹싱을 스키마에 추가할 수 있습니다.
+이제 [표준 필드 그룹](#add-a-field-group)에 대해 동일한 단계를 수행하여 새로 만든 필드 그룹을 스키마에 추가할 수 있습니다.
 
 **API 형식**
 
@@ -508,7 +508,7 @@ PATCH /tenant/schemas/{schema meta:altId or url encoded $id URI}
 
 **요청**
 
-이 요청에서는 충성도 멤버 스키마를 업데이트하여 새로운 &quot;충성도 멤버 세부 사항&quot; 믹싱에 있는 필드를 포함합니다.
+이 요청은 충성도 구성원 스키마를 업데이트하여 새 &quot;충성도 구성원 세부 사항&quot; 필드 그룹 내의 필드를 포함합니다.
 
 ```SHELL
 curl -X PATCH \
@@ -519,13 +519,13 @@ curl -X PATCH \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '[
-        { "op": "add", "path": "/allOf/-", "value":  {"$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"}}
+        { "op": "add", "path": "/allOf/-", "value":  {"$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62"}}
       ]'
 ```
 
 **응답**
 
-이제 응답에 새로 추가된 믹신이 `meta:extends` 배열에 표시되고 `$ref` 특성의 혼합에 `allOf`이(가) 포함되므로 믹신이 성공적으로 추가되었음을 확인할 수 있습니다.
+이제 응답에 `meta:extends` 배열에 새로 추가된 필드 그룹이 표시되고 `$ref` 특성의 필드 그룹에 `allOf`이(가) 포함되므로 필드 그룹이 성공적으로 추가되었음을 확인할 수 있습니다.
 
 ```JSON
 {
@@ -543,7 +543,7 @@ curl -X PATCH \
             "$ref": "https://ns.adobe.com/xdm/context/profile-personal-details"
         },
         {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62"
         }
     ],
     "meta:class": "https://ns.adobe.com/xdm/context/profile",
@@ -557,7 +557,7 @@ curl -X PATCH \
         "https://ns.adobe.com/xdm/common/auditable",
         "https://ns.adobe.com/xdm/context/profile-person-details",
         "https://ns.adobe.com/xdm/context/profile-personal-details",
-        "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"
+        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62"
     ],
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
@@ -577,7 +577,7 @@ curl -X PATCH \
 
 ### 현재 스키마 보기
 
-이제 GET 요청을 수행하여 현재 스키마를 보고 추가된 혼합이 스키마의 전체 구조에 어떻게 기여했는지 확인할 수 있습니다.
+이제 GET 요청을 수행하여 현재 스키마를 보고 추가된 필드 그룹이 스키마의 전체 구조에 어떻게 기여했는지 확인할 수 있습니다.
 
 **API 형식**
 
@@ -599,9 +599,9 @@ curl -X GET \
 
 **응답**
 
-`application/vnd.adobe.xed-full+json; version=1` 승인 헤더를 사용하면 모든 속성을 표시하는 전체 스키마를 볼 수 있습니다. 이러한 속성은 스키마를 구성하는 데 사용된 클래스와 믹싱에서 만든 필드입니다. 이 예에서 개별 속성 속성은 공간에 대해 최소화되었습니다. 이 문서의 끝 부분에 있는 [부록](#appendix)에서 모든 속성과 해당 속성을 포함한 전체 스키마를 볼 수 있습니다.
+`application/vnd.adobe.xed-full+json; version=1` 승인 헤더를 사용하면 모든 속성을 표시하는 전체 스키마를 볼 수 있습니다. 이러한 속성은 스키마를 구성하는 데 사용된 클래스 및 필드 그룹에서 제공하는 필드입니다. 이 예에서 개별 속성 속성은 공간에 대해 최소화되었습니다. 이 문서의 끝 부분에 있는 [부록](#appendix)에서 모든 속성과 해당 속성을 포함한 전체 스키마를 볼 수 있습니다.
 
-`"properties"` 아래에서 사용자 정의 믹싱을 추가할 때 만든 `_{TENANT_ID}` 네임스페이스를 볼 수 있습니다. 이 네임스페이스 안에는 &quot;충성도&quot; 개체와 혼합이 생성될 때 정의된 필드가 있습니다.
+`"properties"` 아래에서 사용자 지정 필드 그룹을 추가할 때 만들어진 `_{TENANT_ID}` 네임스페이스를 볼 수 있습니다. 해당 네임스페이스 안에는 &quot;충성도&quot; 개체와 필드 그룹을 만들 때 정의된 필드가 있습니다.
 
 ```JSON
 {
@@ -619,7 +619,7 @@ curl -X GET \
         "https://ns.adobe.com/xdm/common/auditable",
         "https://ns.adobe.com/xdm/context/profile-person-details",
         "https://ns.adobe.com/xdm/context/profile-personal-details",
-        "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"
+        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62"
     ],
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
@@ -691,11 +691,11 @@ curl -X GET \
 
 ### 데이터 유형 만들기
 
-만든 충성도 혼합에는 다른 스키마에서 유용할 수 있는 특정 충성도 속성이 포함되어 있습니다. 예를 들어, 데이터는 경험 이벤트의 일부로 인제스트되거나 다른 클래스를 구현하는 스키마에서 사용될 수 있습니다. 이 경우 객체 계층을 데이터 유형으로 저장하여 다른 곳에서 정의를 쉽게 재사용할 수 있습니다.
+만든 충성도 필드 그룹에는 다른 스키마에서 유용할 수 있는 특정 충성도 속성이 포함되어 있습니다. 예를 들어, 데이터는 경험 이벤트의 일부로 인제스트되거나 다른 클래스를 구현하는 스키마에서 사용될 수 있습니다. 이 경우 객체 계층을 데이터 유형으로 저장하여 다른 곳에서 정의를 쉽게 재사용할 수 있습니다.
 
 데이터 유형을 사용하면 객체 계층을 한 번 정의할 수 있으며 다른 스칼라 유형에서와 마찬가지로 필드에서 이를 참조할 수 있습니다.
 
-즉, 데이터 유형은 필드의 &quot;유형&quot;으로 추가하여 스키마에서 어느 곳에나 포함할 수 있으므로 혼합보다 유연하게 다중 필드 구조를 일관되게 사용할 수 있습니다.
+즉, 데이터 유형은 필드의 &quot;유형&quot;으로 추가함으로써 스키마에서 어느 위치에나 포함할 수 있으므로 필드 그룹보다 유연하므로 다중 필드 구조를 일관되게 사용할 수 있습니다.
 
 **API 형식**
 
@@ -822,19 +822,19 @@ URL 인코딩 `$id` URI를 사용하여 조회(GET) 요청을 수행하여 새 �
 
 ### 스키마에 데이터 유형 사용
 
-충성도 세부 정보 데이터 유형이 만들어졌으므로 이전에 있던 필드 대신 데이터 유형을 참조하도록 만든 믹싱의 &quot;충성도&quot; 필드를 업데이트(PATCH)할 수 있습니다.
+충성도 세부 정보 데이터 유형이 만들어졌으므로 이전에 있던 필드 대신 데이터 유형을 참조하도록 만든 필드 그룹의 &quot;충성도&quot; 필드를 업데이트(PATCH)할 수 있습니다.
 
 **API 형식**
 
 ```http
-PATCH /tenant/mixins/{mixin meta:altId or URL encoded $id URI}
+PATCH /tenant/fieldgroups/{field group meta:altId or URL encoded $id URI}
 ```
 
 **요청**
 
 ```SHELL
 curl -X PATCH \
-  https://platform.adobe.io/data/foundation/schemaregistry/tenant/mixins/_{TENANT_ID}.mixins.bb118e507bb848fd85df68fedea70c62 \
+  https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups/_{TENANT_ID}.fieldgroups.bb118e507bb848fd85df68fedea70c62 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
@@ -867,7 +867,7 @@ curl -X PATCH \
     "meta:intendedToExtend": [
         "https://ns.adobe.com/xdm/context/profile"
     ],
-    "description": "Loyalty Program Mixin.",
+    "description": "Loyalty Program Field Group.",
     "definitions": {
         "loyalty": {
             "properties": {
@@ -896,11 +896,11 @@ curl -X PATCH \
     "meta:extensible": true,
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
-    "meta:altId": "_{TENANT_ID}.mixins.bb118e507bb848fd85df68fedea70c62",
+    "meta:altId": "_{TENANT_ID}.fieldgroups.bb118e507bb848fd85df68fedea70c62",
     "meta:xdmType": "object",
-    "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62",
+    "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62",
     "version": "1.2",
-    "meta:resourceType": "mixins",
+    "meta:resourceType": "fieldgroups",
     "meta:registryMetadata": {
         "repo:createDate": 1551838135803,
         "repo:lastModifiedDate": 1552080570051,
@@ -1068,7 +1068,7 @@ curl -X PATCH \
             "$ref": "https://ns.adobe.com/xdm/context/profile-personal-details"
         },
         {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62"
         }
     ],
     "meta:class": "https://ns.adobe.com/xdm/context/profile",
@@ -1082,7 +1082,7 @@ curl -X PATCH \
         "https://ns.adobe.com/xdm/common/auditable",
         "https://ns.adobe.com/xdm/context/profile-person-details",
         "https://ns.adobe.com/xdm/context/profile-personal-details",
-        "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"
+        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62"
     ],
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
@@ -1171,9 +1171,9 @@ curl -X GET \
 
 ## 다음 단계
 
-이 튜토리얼을 따라 사용자가 정의한 표준 믹스와 믹스를 사용하여 스키마를 성공적으로 구성했습니다. 이제 이 스키마를 사용하여 데이터 세트를 만들고 레코드 데이터를 Adobe Experience Platform에 인제스트할 수 있습니다.
+이 자습서를 따라 표준 필드 그룹과 정의한 필드 그룹을 모두 사용하여 스키마를 구성했습니다. 이제 이 스키마를 사용하여 데이터 세트를 만들고 레코드 데이터를 Adobe Experience Platform에 인제스트할 수 있습니다.
 
-이 자습서 전체에서 만든 전체 충성도 멤버 스키마는 다음과 같은 부록에서 사용할 수 있습니다. 스키마를 살펴보면 믹싱이 전체 구조에 기여하는 방법과 데이터 수집에 사용할 수 있는 필드를 확인할 수 있습니다.
+이 자습서 전체에서 만든 전체 충성도 멤버 스키마는 다음과 같은 부록에서 사용할 수 있습니다. 스키마를 볼 때 필드 그룹이 전체 구조에 기여하는 방법과 데이터 수집에 사용할 수 있는 필드를 확인할 수 있습니다.
 
 둘 이상의 스키마를 생성한 후에는 관계 설명자의 사용을 통해 둘 사이의 관계를 정의할 수 있습니다. 자세한 내용은 [두 스키마 간의 관계 정의에 대한 자습서](relationship-api.md)를 참조하십시오. 레지스트리에서 모든 작업(GET, POST, PUT, PATCH, 및 DELETE)을 수행하는 방법에 대한 자세한 예는 API를 사용하여 작업하는 동안 [스키마 레지스트리 개발자 가이드](../api/getting-started.md)를 참조하십시오.
 
@@ -1185,7 +1185,7 @@ curl -X GET \
 
 이 자습서 전체에서 소매 충성도 프로그램의 구성원을 설명하기 위해 스키마가 구성됩니다.
 
-스키마는 [!DNL XDM Individual Profile] 클래스를 구현하고 여러 혼합을 결합합니다.튜토리얼 중에 정의된 &quot;충성도 세부 사항&quot; 믹스뿐만 아니라 표준 &quot;개인 세부 사항&quot; 및 &quot;개인 세부 사항&quot; 혼합을 사용하여 충성도 멤버에 대한 정보를 제공합니다.
+스키마는 [!DNL XDM Individual Profile] 클래스를 구현하고 여러 필드 그룹을 결합합니다.자습서 중에 정의된 &quot;충성도 세부 사항&quot; 필드 그룹뿐만 아니라 표준 &quot;개인 세부 사항&quot; 및 &quot;개인 세부 사항&quot; 필드 그룹을 사용하여 충성도 멤버에 대한 정보를 가져옵니다.
 
 다음은 완료된 충성도 멤버 스키마를 JSON 형식으로 보여 줍니다.
 
@@ -1205,7 +1205,7 @@ curl -X GET \
         "https://ns.adobe.com/xdm/common/auditable",
         "https://ns.adobe.com/xdm/context/profile-person-details",
         "https://ns.adobe.com/xdm/context/profile-personal-details",
-        "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"
+        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62"
     ],
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
