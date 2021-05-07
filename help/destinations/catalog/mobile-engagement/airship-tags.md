@@ -2,14 +2,14 @@
 keywords: 항공 선박 태그;항공 수송 대상
 title: Airship 태그 연결
 description: Airship 내에서 타깃팅할 대상 태그로 Adobe 고객 데이터를 Airship으로 원활하게 전달할 수 있습니다.
+exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
 translation-type: tm+mt
-source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '1134'
+source-wordcount: '1123'
 ht-degree: 1%
 
 ---
-
 
 # (베타) [!DNL Airship Tags] 연결 {#airship-tags-destination}
 
@@ -43,7 +43,7 @@ Adobe Experience Platform 세그먼트를 [!DNL Airship]에 보내려면 먼저 
 
 ## 태그 그룹
 
-Adobe Experience Platform의 세그먼트 개념은 Airship의 [Tags](https://docs.airship.com/guides/audience/tags/)과(와) 비슷하며 구현 시 약간의 차이가 있습니다. 이 통합은 Experience Platform 세그먼트](https://experienceleague.adobe.com/docs/experience-platform/xdm/mixins/profile/segmentation.html?lang=en#mixins)의 사용자 [멤버십의 상태를 [!DNL Airship] 태그가 없거나 존재하지 않는 상태로 매핑합니다. 예를 들어, `xdm:status`이 `realized`로 변경되는 플랫폼 세그먼트에서 태그가 [!DNL Airship] 채널에 추가되거나 이 프로필이 매핑된 명명된 사용자에게 추가됩니다. `xdm:status`이 `exited`로 변경되면 태그가 제거됩니다.
+Adobe Experience Platform의 세그먼트 개념은 Airship의 [Tags](https://docs.airship.com/guides/audience/tags/)과(와) 비슷하며 구현 시 약간의 차이가 있습니다. 이 통합은 Experience Platform 세그먼트](../../../xdm/field-groups/profile/segmentation.md)의 사용자 [멤버십의 상태를 [!DNL Airship] 태그가 없거나 존재하지 않는 상태로 매핑합니다. 예를 들어, `xdm:status`이 `realized`로 변경되는 플랫폼 세그먼트에서 태그가 [!DNL Airship] 채널에 추가되거나 이 프로필이 매핑된 명명된 사용자에게 추가됩니다. `xdm:status`이 `exited`로 변경되면 태그가 제거됩니다.
 
 이 통합을 사용하려면 `adobe-segments`라는 [!DNL Airship]에 *태그 그룹*&#x200B;을 만드십시오.
 
@@ -157,4 +157,3 @@ Adobe Experience Platform의 세그먼트 개념은 Airship의 [Tags](https://do
 ## 데이터 사용 및 거버넌스 {#data-usage-governance}
 
 모든 [!DNL Adobe Experience Platform] 대상은 데이터를 처리할 때 데이터 사용 정책을 준수합니다. [!DNL Adobe Experience Platform]이(가) 데이터 거버넌스를 적용하는 방법에 대한 자세한 내용은 [데이터 거버넌스 개요](../../../data-governance/home.md)를 참조하십시오.
-
