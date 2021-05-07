@@ -1,15 +1,15 @@
 ---
 title: Adobe Experience Platform 웹 SDK를 사용하여 고객 동의 기본 설정 지원
 description: Adobe Experience Platform 웹 SDK를 사용하여 동의 기본 설정을 지원하는 방법을 알아봅니다.
-keywords: 동의;defaultConsent;default consent;setConsent;프로필 개인 정보 혼합;경험 이벤트 개인 정보 혼합;개인 정보 혼합
+keywords: 동의;defaultConsent;default consent;setConsent;프로필 개인 정보 필드 그룹;경험 이벤트 개인 정보 필드 그룹;개인 정보 필드 그룹;
+exl-id: 647e4a84-4a66-45d6-8b05-d78786bca63a
 translation-type: tm+mt
-source-git-commit: dd9101079a1093c109f43b268a78c07770221156
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '977'
+source-wordcount: '986'
 ht-degree: 0%
 
 ---
-
 
 # 고객 동의 환경 설정 지원
 
@@ -54,7 +54,7 @@ SDK는 Adobe Experience Platform 동의 표준의 버전 1.0 및 2.0을 지원�
 
 ### Adobe 표준 버전 2.0 사용
 
-Adobe Experience Platform을 사용하는 경우 프로필 스키마에 개인 정보 혼합을 포함해야 합니다. Adobe 표준 버전 2.0에 대한 자세한 내용은 Adobe Experience Platform](../../landing/governance-privacy-security/overview.md)의 [거버넌스, 개인 정보 및 보안을 참조하십시오. 동의 및 기본 설정 프로필 혼합의 `consents` 필드의 스키마에 해당하는 아래 값 개체 내에 데이터를 추가할 수 있습니다.
+Adobe Experience Platform을 사용하는 경우 프로필 스키마에 개인 정보 스키마 필드 그룹을 포함해야 합니다. Adobe 표준 버전 2.0에 대한 자세한 내용은 Adobe Experience Platform](../../landing/governance-privacy-security/overview.md)의 [거버넌스, 개인 정보 및 보안을 참조하십시오. 동의 및 기본 설정 프로필 필드 그룹의 `consents` 필드의 스키마에 해당하는 아래 값 개체 내에 데이터를 추가할 수 있습니다.
 
 사용자가 옵션을 선택하는 경우 다음과 같이 컬렉션 환경 설정이 `y`으로 설정된 `setConsent` 명령을 실행합니다.
 
@@ -147,7 +147,7 @@ alloy("setConsent", {
 });
 ```
 
-이러한 방식으로 동의가 설정되면, 실시간 고객 프로필은 동의 정보로 업데이트됩니다. 이 작업을 수행하려면 프로필 XDM 스키마에는 [프로필 개인 정보 혼합](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/profile/profile-privacy.schema.md)이 포함되어야 합니다. 이벤트를 전송할 때 IAB 동의 정보를 이벤트 XDM 개체에 수동으로 추가해야 합니다. SDK는 이벤트에 동의 정보를 자동으로 포함하지 않습니다. 이벤트에서 동의 정보를 보내려면 [경험 이벤트 개인 정보 혼합](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/experience-event/experienceevent-privacy.schema.md)을 경험 이벤트 스키마에 추가해야 합니다.
+이러한 방식으로 동의가 설정되면, 실시간 고객 프로필은 동의 정보로 업데이트됩니다. 이 작업을 수행하려면 프로필 XDM 스키마에 [프로필 개인 정보 스키마 필드 그룹](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/profile/profile-privacy.schema.md)이(가) 포함되어야 합니다. 이벤트를 전송할 때 IAB 동의 정보를 이벤트 XDM 개체에 수동으로 추가해야 합니다. SDK는 이벤트에 동의 정보를 자동으로 포함하지 않습니다. 이벤트에서 동의 정보를 보내려면 [경험 이벤트 개인 정보 필드 그룹](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/experience-event/experienceevent-privacy.schema.md)을(를) 경험 이벤트 스키마에 추가해야 합니다.
 
 ## 하나의 요청에서 여러 표준 전송
 
@@ -184,4 +184,3 @@ alloy("setConsent", {
 ## 동의를 설정하는 동안 ID 동기화
 
 기본 동의가 보류 중이거나 종료될 때, `setConsent`은 외부로 이동하여 ID를 설정하는 첫 번째 요청일 수 있습니다. 따라서 첫 번째 요청에서 ID를 동기화하는 것이 중요할 수 있습니다. ID 맵은 `sendEvent` 명령에서처럼 `setConsent` 명령에 추가할 수 있습니다. [Experience Cloud ID 검색](../identity/overview.md) 참조
-
