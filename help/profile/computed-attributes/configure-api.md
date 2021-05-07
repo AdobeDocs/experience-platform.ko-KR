@@ -3,12 +3,12 @@ keywords: Experience Platform;프로필;실시간 고객 프로필;문제 해결
 title: 계산된 속성 필드를 구성하는 방법
 topic-legacy: guide
 type: Documentation
-description: 계산된 속성은 이벤트 수준 데이터를 프로필 수준 속성으로 집계하는 데 사용되는 함수입니다. 계산된 속성을 구성하려면 먼저 계산된 속성 값이 있을 필드를 식별해야 합니다. 이 필드는 스키마 레지스트리 API를 사용하여 계산된 속성 필드를 포함할 스키마 및 사용자 정의 믹싱을 정의할 수 있습니다.
+description: 계산된 속성은 이벤트 수준 데이터를 프로필 수준 속성으로 집계하는 데 사용되는 함수입니다. 계산된 속성을 구성하려면 먼저 계산된 속성 값이 있을 필드를 식별해야 합니다. 이 필드는 스키마 레지스트리 API를 사용하여 계산된 속성 필드를 포함할 스키마 및 사용자 지정 필드 그룹을 정의할 수 있습니다.
 exl-id: 91c5d125-8ab5-4291-a974-48dd44c68a13
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 3985ba8f46a62e8d9ea8b1f084198b245318a24f
 workflow-type: tm+mt
-source-wordcount: '713'
+source-wordcount: '736'
 ht-degree: 2%
 
 ---
@@ -19,33 +19,33 @@ ht-degree: 2%
 >
 >계산된 속성 기능은 현재 알파에 있으며 일부 사용자는 사용할 수 없습니다. 설명서 및 기능은 변경될 수 있습니다.
 
-계산된 속성을 구성하려면 먼저 계산된 속성 값이 있을 필드를 식별해야 합니다. 이 필드는 스키마 레지스트리 API를 사용하여 계산된 속성 필드를 포함할 스키마 및 사용자 정의 믹싱을 정의할 수 있습니다. 계산된 특성으로 사용할 속성을 추가할 수 있는 별도의 &quot;계산된 특성&quot; 스키마 및 혼합을 만드는 것이 좋습니다. 이렇게 하면 조직에서 계산된 속성 스키마를 데이터 수집에 사용되는 다른 스키마와 깔끔하게 분리할 수 있습니다.
+계산된 속성을 구성하려면 먼저 계산된 속성 값이 있을 필드를 식별해야 합니다. 이 필드는 스키마 레지스트리 API를 사용하여 계산된 속성 필드를 포함할 스키마 및 사용자 정의 스키마 필드 그룹을 정의할 수 있습니다. 계산된 속성으로 사용할 속성을 추가할 수 있는 별도의 &quot;계산된 특성&quot; 스키마 및 필드 그룹을 만드는 것이 좋습니다. 이렇게 하면 조직에서 계산된 속성 스키마를 데이터 수집에 사용되는 다른 스키마와 깔끔하게 분리할 수 있습니다.
 
-이 문서의 작업 과정은 스키마 레지스트리 API를 사용하여 사용자 정의 믹싱을 참조하는 프로필 사용 &quot;계산된 특성&quot; 스키마를 만드는 방법에 대해 설명합니다. 이 문서에는 계산된 속성과 관련된 샘플 코드가 포함되어 있지만 API를 사용하여 혼합과 스키마를 정의하는 방법에 대한 자세한 내용은 [스키마 레지스트리 API 안내서](../../xdm/api/overview.md)를 참조하십시오.
+이 문서의 워크플로우는 스키마 레지스트리 API를 사용하여 사용자 정의 필드 그룹을 참조하는 프로필 사용 &quot;계산된 특성&quot; 스키마를 만드는 방법에 대해 설명합니다. 이 문서에는 계산된 속성과 관련된 샘플 코드가 포함되어 있지만 API를 사용하는 필드 그룹 및 스키마 정의에 대한 자세한 내용은 [스키마 레지스트리 API 안내서](../../xdm/api/overview.md)를 참조하십시오.
 
-## 계산된 특성 혼합 만들기
+## 계산된 속성 필드 그룹 만들기
 
-스키마 레지스트리 API를 사용하여 믹싱을 만들려면 먼저 `/tenant/mixins` 끝점에 POST 요청을 하고 요청 본문에 혼합에 대한 세부 정보를 제공하는 방식으로 시작합니다. 스키마 레지스트리 API를 사용한 믹싱 작업에 대한 자세한 내용은 [믹싱 API 끝점 안내서](../../xdm/api/mixins.md)를 참조하십시오.
+스키마 레지스트리 API를 사용하여 필드 그룹을 만들려면 먼저 `/tenant/fieldgroups` 끝점에 POST 요청을 하고 요청 본문에 필드 그룹의 세부 정보를 제공하는 방식으로 시작합니다. 스키마 레지스트리 API를 사용하는 필드 그룹을 사용한 작업에 대한 자세한 내용은 [필드 그룹 API 끝점 안내서](../../xdm/api/field-groups.md)를 참조하십시오.
 
 **API 형식**
 
 ```http
-POST /tenant/mixins
+POST /tenant/fieldgroups
 ```
 
 **요청**
 
 ```shell
 curl -X POST \
-  https://platform.adobe.io/data/foundation/schemaregistry/tenant/mixins\
+  https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups\
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'content-type: application/json' \
   -d '{
-        "title":"Computed Attributes Mixin",
-        "description":"Description of the mixin.",
+        "title":"Computed Attributes Field Group",
+        "description":"Description of the field group.",
         "type":"object",
         "meta:extensible": true,
         "meta:abstract": true,
@@ -53,7 +53,7 @@ curl -X POST \
           "https://ns.adobe.com/xdm/context/profile"
         ],
         "definitions": {
-          "computedAttributesMixin": {
+          "computedAttributesFieldGroup": {
             "type": "object",
             "meta:xdmType": "object",
             "properties": {
@@ -72,7 +72,7 @@ curl -X POST \
         },
         "allOf": [
           {
-            "$ref": "#/definitions/computedAttributesMixin"
+            "$ref": "#/definitions/computedAttributesFieldGroup"
           }
         ]
       }'
@@ -80,24 +80,24 @@ curl -X POST \
 
 | 속성 | 설명 |
 |---|---|
-| `title` | 만들고 있는 믹싱의 이름입니다. |
-| `meta:intendedToExtend` | 혼합을 사용할 수 있는 XDM 클래스입니다. |
+| `title` | 만들려는 필드 그룹의 이름입니다. |
+| `meta:intendedToExtend` | 필드 그룹을 사용할 수 있는 XDM 클래스입니다. |
 
 **응답**
 
-요청이 성공하면 `$id`, `meta:altIt` 및 `version` 등 새로 만든 믹싱의 세부 정보가 포함된 응답 본문이 있는 HTTP 응답 상태 201(생성됨)이 반환됩니다. 이러한 값은 읽기 전용이며 스키마 레지스트리에 할당됩니다.
+요청이 성공하면 `$id`, `meta:altIt` 및 `version` 등 새로 만든 필드 그룹의 세부 정보가 포함된 응답 본문이 있는 HTTP 응답 상태 201(생성됨)이 반환됩니다. 이러한 값은 읽기 전용이며 스키마 레지스트리에 할당됩니다.
 
 ```json
 {
-  "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352",
-  "meta:altId": "_{TENANT_ID}.mixins.860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352",
-  "meta:resourceType": "mixins",
+  "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352",
+  "meta:altId": "_{TENANT_ID}.fieldgroups.860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352",
+  "meta:resourceType": "fieldgroups",
   "version": "1.0",
-  "title": "Computed Attributes Mixin",
+  "title": "Computed Attributes Field Group",
   "type": "object",
-  "description": "Description of the mixin.",
+  "description": "Description of the field group.",
   "definitions": {
-    "computedAttributesMixin": {
+    "computedAttributesFieldGroup": {
       "type": "object",
       "meta:xdmType": "object",
       "properties": {
@@ -116,7 +116,7 @@ curl -X POST \
   },
   "allOf": [
     {
-      "$ref": "#/definitions/computedAttributesMixin",
+      "$ref": "#/definitions/computedAttributesFieldGroup",
       "type": "object",
       "meta:xdmType": "object"
     }
@@ -145,16 +145,16 @@ curl -X POST \
 }
 ```
 
-## 추가 계산된 특성을 사용하여 믹신 업데이트
+## 추가 계산된 특성을 사용하여 필드 그룹 업데이트
 
-계산된 특성이 더 필요하므로, `/tenant/mixins` 끝점에 PUT 요청을 수행하여 계산된 특성 혼합을 추가 특성으로 업데이트할 수 있습니다. 이 요청을 수행하려면 경로에 만든 믹싱의 고유한 ID와 본문에 추가할 모든 새 필드를 포함해야 합니다.
+계산된 속성이 더 필요하므로 `/tenant/fieldgroups` 종단점에 PUT 요청을 함으로써 계산된 속성 필드 그룹을 추가 특성으로 업데이트할 수 있습니다. 이 요청을 수행하려면 경로에 만든 필드 그룹의 고유한 ID와 본문에 추가할 모든 새 필드를 포함해야 합니다.
 
-스키마 레지스트리 API를 사용하여 믹스를 업데이트하는 방법에 대한 자세한 내용은 [믹싱 API 끝점 안내서](../../xdm/api/mixins.md)를 참조하십시오.
+스키마 레지스트리 API를 사용하여 필드 그룹을 업데이트하는 방법에 대한 자세한 내용은 [필드 그룹 API 끝점 안내서](../../xdm/api/field-groups.md)를 참조하십시오.
 
 **API 형식**
 
 ```http
-PUT /tenant/mixins/{MIXIN_ID}
+PUT /tenant/fieldgroups/{FIELD_GROUP_ID}
 ```
 
 **요청**
@@ -163,11 +163,11 @@ PUT /tenant/mixins/{MIXIN_ID}
 
 >[!NOTE]
 >
->PUT 요청을 통해 믹싱을 업데이트할 때 본문에는 POST 요청에 새 믹싱을 만들 때 필요한 모든 필드가 포함되어야 합니다.
+>PUT 요청을 통해 필드 그룹을 업데이트할 때 본문에는 POST 요청에서 새 필드 그룹을 만들 때 필요한 모든 필드가 포함되어야 합니다.
 
 ```shell
 curl -X PUT \
-  https://platform.adobe.io/data/foundation/schemaregistry/tenant/mixins/_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a \
+  https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups/_{TENANT_ID}.fieldgroups.8779fd45d6e4eb074300023a439862bbba359b60d451627a \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
@@ -175,15 +175,15 @@ curl -X PUT \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "type": "object",
-        "title": "Computed Attributes Mixin",
+        "title": "Computed Attributes Field Group",
         "meta:extensible": true,
         "meta:abstract": true,
         "meta:intendedToExtend": [
           "https://ns.adobe.com/xdm/context/profile"
         ],
-        "description": "Description of mixin.",
+        "description": "Description of field group.",
         "definitions": {
-          "computedAttributesMixin": {
+          "computedAttributesFieldGroup": {
             "type": "object",
             "meta:xdmType": "object",
             "properties": {
@@ -222,7 +222,7 @@ curl -X PUT \
         },
         "allOf": [
           {
-            "$ref": "#/definitions/computedAttributesMixin"
+            "$ref": "#/definitions/computedAttributesFieldGroup"
           }
         ]
       }'
@@ -230,19 +230,19 @@ curl -X PUT \
 
 **응답**
 
-성공적인 응답은 업데이트된 믹싱의 세부 정보를 반환합니다.
+성공적인 응답은 업데이트된 필드 그룹의 세부 정보를 반환합니다.
 
 ```json
 {
-  "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352",
-  "meta:altId": "_{TENANT_ID}.mixins.860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352",
-  "meta:resourceType": "mixins",
+  "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352",
+  "meta:altId": "_{TENANT_ID}.fieldgroups.860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352",
+  "meta:resourceType": "fieldgroups",
   "version": "1.0",
-  "title": "Computed Attributes Mixin",
+  "title": "Computed Attributes Field Group",
   "type": "object",
-  "description": "Description of mixin.",
+  "description": "Description of field group.",
   "definitions": {
-    "computedAttributesMixin": {
+    "computedAttributesFieldGroup": {
       "type": "object",
       "meta:xdmType": "object",
       "properties": {
@@ -281,7 +281,7 @@ curl -X PUT \
   },
   "allOf": [
     {
-      "$ref": "#/definitions/computedAttributesMixin",
+      "$ref": "#/definitions/computedAttributesFieldGroup",
       "type": "object",
       "meta:xdmType": "object"
     }
@@ -324,7 +324,7 @@ POST /tenants/schemas
 
 **요청**
 
-다음 요청은 이 문서에서 이전에 만든 `computedAttributesMixin`을(를) 참조하고(고유 ID 사용) `meta:immutableTags` 배열을 사용하여 프로필 조합 스키마에 대해 활성화되는 새 스키마를 만듭니다. 스키마 레지스트리 API를 사용하여 스키마를 만드는 방법에 대한 자세한 지침은 [스키마 API 끝점 안내서](../../xdm/api/schemas.md)를 참조하십시오.
+다음 요청은 이 문서에서 이전에 만든 `computedAttributesFieldGroup`을(를) 참조하고(고유 ID 사용) `meta:immutableTags` 배열을 사용하여 프로필 조합 스키마에 대해 활성화되는 새 스키마를 만듭니다. 스키마 레지스트리 API를 사용하여 스키마를 만드는 방법에 대한 자세한 지침은 [스키마 API 끝점 안내서](../../xdm/api/schemas.md)를 참조하십시오.
 
 ```shell
 curl -X POST \
@@ -345,7 +345,7 @@ curl -X POST \
         "meta:extends": [
           "https://ns.adobe.com/xdm/context/profile",
           "https://ns.adobe.com/xdm/context/identitymap",
-          "https://ns.adobe.com/{TENANT_ID}/mixins/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352"
+          "https://ns.adobe.com/{TENANT_ID}/fieldgroups/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352"
         ],
         "description": "Description of schema.",
         "definitions": {
@@ -358,7 +358,7 @@ curl -X POST \
             "$ref": "https://ns.adobe.com/xdm/context/identitymap"
           },
           {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352"
           }
         ],
         "meta:class": "https://ns.adobe.com/xdm/context/profile"
@@ -391,7 +391,7 @@ curl -X POST \
       "meta:xdmType": "object"
     },
     {
-      "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352",
+      "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352",
       "type": "object",
       "meta:xdmType": "object"
     }
@@ -399,7 +399,7 @@ curl -X POST \
   "refs": [
     "https://ns.adobe.com/xdm/context/profile",
     "https://ns.adobe.com/xdm/context/identitymap",
-    "https://ns.adobe.com/{TENANT_ID}/mixins/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352"
+    "https://ns.adobe.com/{TENANT_ID}/fieldgroups/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352"
   ],
   "imsOrg": "{IMS_ORG}",
   "meta:extensible": false,
@@ -409,7 +409,7 @@ curl -X POST \
     "https://ns.adobe.com/xdm/data/record",
     "https://ns.adobe.com/xdm/context/profile",
     "https://ns.adobe.com/xdm/context/identitymap",
-    "https://ns.adobe.com/{TENANT_ID}/mixins/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352"
+    "https://ns.adobe.com/{TENANT_ID}/fieldgroups/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352"
   ],
   "meta:xdmType": "object",
   "meta:registryMetadata": {
@@ -435,4 +435,4 @@ curl -X POST \
 
 ## 다음 단계
 
-계산된 특성이 저장될 스키마와 혼합을 만들었으므로 이제 `/computedattributes` API 끝점을 사용하여 계산된 특성을 만들 수 있습니다. API에서 계산된 속성을 만드는 자세한 단계를 보려면 [계산된 특성 API 끝점 안내서](ca-api.md)에서 제공하는 단계를 따르십시오.
+계산된 속성이 저장될 스키마 및 필드 그룹을 만들었으므로 이제 `/computedattributes` API 끝점을 사용하여 계산된 속성을 만들 수 있습니다. API에서 계산된 속성을 만드는 자세한 단계를 보려면 [계산된 특성 API 끝점 안내서](ca-api.md)에서 제공하는 단계를 따르십시오.
