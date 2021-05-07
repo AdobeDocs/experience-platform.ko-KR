@@ -1,28 +1,28 @@
 ---
-keywords: Experience Platform;홈;인기 항목;UI;XDM;XDM 시스템;경험 데이터 모델;경험 데이터 모델;경험 데이터 모델;데이터 모델;탐색;클래스;믹스;데이터 유형;스키마;;home;popular topics;ui;XDM;experience data model;data model;explore;explore;sin;data type;schema
+keywords: Experience Platform;홈;인기 항목;UI;XDM;XDM 시스템;경험 데이터 모델;경험 데이터 모델;경험 데이터 모델;데이터 모델;탐색;클래스;필드 그룹;데이터 유형;스키마
 solution: Experience Platform
 title: UI에서 XDM 리소스 살펴보기
-description: Experience Platform 사용자 인터페이스에서 기존 스키마, 클래스, 혼합 및 데이터 유형을 탐색하는 방법을 알아봅니다.
+description: Experience Platform 사용자 인터페이스에서 기존 스키마, 클래스, 스키마 필드 그룹 및 데이터 유형을 탐색하는 방법을 알아봅니다.
 topic-legacy: tutorial
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '912'
+source-wordcount: '919'
 ht-degree: 0%
 
 ---
 
 # UI에서 XDM 리소스 살펴보기
 
-Adobe Experience Platform에서 모든 XDM(경험 데이터 모델) 리소스는 Adobe에서 제공하는 표준 리소스와 조직에서 정의한 사용자 지정 리소스를 포함하여 [!DNL Schema Library]에 저장됩니다. Experience Platform UI에서는 [!DNL Schema Library]에 있는 모든 기존 스키마, 클래스, 혼합 또는 데이터 유형의 구조와 필드를 볼 수 있습니다. 이 기능은 UI가 이러한 XDM 리소스에서 제공하는 각 필드의 예상 데이터 유형 및 사용 사례에 대한 정보를 제공하므로 데이터 수집에 대한 계획 및 준비를 할 때 특히 유용합니다.
+Adobe Experience Platform에서 모든 XDM(경험 데이터 모델) 리소스는 Adobe에서 제공하는 표준 리소스와 조직에서 정의한 사용자 지정 리소스를 포함하여 [!DNL Schema Library]에 저장됩니다. Experience Platform UI에서는 [!DNL Schema Library]에서 기존 스키마, 클래스, 스키마 필드 그룹 또는 데이터 유형의 구조와 필드를 볼 수 있습니다. 이 기능은 UI가 이러한 XDM 리소스에서 제공하는 각 필드의 예상 데이터 유형 및 사용 사례에 대한 정보를 제공하므로 데이터 수집에 대한 계획 및 준비를 할 때 특히 유용합니다.
 
-이 자습서에서는 Experience Platform UI에서 기존 스키마, 클래스, 혼합 및 데이터 유형을 탐색하는 단계를 설명합니다.
+이 자습서에서는 Experience Platform UI에서 기존 스키마, 클래스, 필드 그룹 및 데이터 유형을 탐색하는 단계를 설명합니다.
 
 ## XDM 리소스 {#lookup} 조회
 
-플랫폼 UI의 왼쪽 탐색 영역에서 **[!UICONTROL Schemas]**&#x200B;을 선택합니다. [!UICONTROL Schemas] 작업 영역에는 **[!UICONTROL Browse]** 탭과 **[!UICONTROL Classes]**, **[!UICONTROL Mixins]** 및 **[!UICONTROL Data types]**&#x200B;을(를) 자세히 살펴보기 위한 추가 전용 탭이 포함되어 있으므로 조직의 모든 기존 XDM 리소스를 검색할 수 있습니다.
+플랫폼 UI의 왼쪽 탐색 영역에서 **[!UICONTROL Schemas]**&#x200B;을 선택합니다. [!UICONTROL Schemas] 작업 영역에는 **[!UICONTROL Browse]** 탭과 **[!UICONTROL Classes]**, **[!UICONTROL Field groups]** 및 **[!UICONTROL Data types]**&#x200B;을(를) 자세히 살펴보기 위한 추가 전용 탭이 포함되어 있으므로 조직의 모든 기존 XDM 리소스를 검색할 수 있습니다.
 
 ![](../images/ui/explore/tabs.png)
 
@@ -80,7 +80,7 @@ Adobe Experience Platform에서 모든 XDM(경험 데이터 모델) 리소스는
 
 ### ID 필드 {#identity}
 
-ID 필드를 포함하는 스키마를 검사할 때 이러한 필드는 스키마에 대해 제공하는 클래스 또는 믹스인 아래의 왼쪽 레일에 나열됩니다. 왼쪽 레일에서 ID 필드 이름을 선택하여 깊이 중첩에 상관없이 캔버스의 필드를 표시합니다.
+ID 필드를 포함하는 스키마를 검사할 때 이러한 필드는 스키마에 해당 필드를 제공하는 클래스 또는 필드 그룹 아래의 왼쪽 레일에 나열됩니다. 왼쪽 레일에서 ID 필드 이름을 선택하여 깊이 중첩에 상관없이 캔버스의 필드를 표시합니다.
 
 ID 필드는 지문 아이콘(![지문 아이콘 이미지](../images/ui/explore/identity-symbol.png))으로 캔버스에서 강조 표시됩니다. ID 필드의 이름을 선택하면 [identity namespace](../../identity-service/namespaces.md) 및 해당 필드가 스키마의 기본 ID인지 여부와 같은 추가 정보를 볼 수 있습니다.
 
