@@ -2,14 +2,14 @@
 title: Platform Web SDK와 함께 Adobe Target 사용
 description: Adobe Target을 사용하여 Experience Platform 웹 SDK로 개인화된 컨텐츠를 렌더링하는 방법 학습
 keywords: 대상;adobe target;activity.id;experience.id;renderDecisions;decisionScopes;prehing snippet;vec;Form-Based Experience Composer;xdm;audiences;decision;scope;schema
+exl-id: 021171ab-0490-4b27-b350-c37d2a569245
 translation-type: tm+mt
-source-git-commit: 98db5b92ea0f51c8641651eb14e3fe6cecf7027c
+source-git-commit: e12b1337c44095ee8731f99c5829ab83bba14889
 workflow-type: tm+mt
-source-wordcount: '657'
-ht-degree: 3%
+source-wordcount: '659'
+ht-degree: 4%
 
 ---
-
 
 # Platform Web SDK와 함께 Adobe Target 사용
 
@@ -117,7 +117,7 @@ alloy("sendEvent", {
 
 ## XDM 대상
 
-Adobe Experience Platform 웹 SDK를 통해 전달되는 Target 활동에 대해 대상을 정의할 때 [XDM](https://docs.adobe.com/content/help/ko-KR/experience-platform/xdm/home.html)을 정의하고 사용해야 합니다. XDM 스키마, 클래스 및 믹스를 정의한 후 타깃팅을 위해 XDM 데이터로 정의된 Target 대상 규칙을 만들 수 있습니다. Target 내에서 XDM 데이터는 Audience Builder에 사용자 지정 매개 변수로 표시됩니다. XDM은 점 표기법(예: `web.webPageDetails.name`)을 사용하여 직렬화됩니다.
+Adobe Experience Platform 웹 SDK를 통해 전달되는 Target 활동에 대해 대상을 정의할 때 [XDM](https://docs.adobe.com/content/help/ko-KR/experience-platform/xdm/home.html)을 정의하고 사용해야 합니다. XDM 스키마, 클래스 및 스키마 필드 그룹을 정의한 후 타깃팅을 위해 XDM 데이터로 정의된 Target 대상 규칙을 만들 수 있습니다. Target 내에서 XDM 데이터는 Audience Builder에 사용자 지정 매개 변수로 표시됩니다. XDM은 점 표기법(예: `web.webPageDetails.name`)을 사용하여 직렬화됩니다.
 
 사용자 지정 매개 변수 또는 사용자 프로필을 사용하는 사전 정의된 대상이 있는 Target 활동이 있는 경우 SDK를 통해 올바로 제공되지 않습니다. 사용자 지정 매개 변수 또는 사용자 프로필을 사용하는 대신 XDM을 사용해야 합니다. 그러나 Adobe Experience Platform Web SDK를 통해 XDM이 필요하지 않은 즉시 사용 가능한 대상 타깃팅 필드가 지원됩니다. 다음 필드는 XDM이 필요하지 않은 Target UI에서 사용할 수 있습니다.
 
