@@ -7,9 +7,9 @@ type: Tutorial
 description: 이 문서에서는 관련 단계에 대해 간략히 설명하고 각 개별 워크플로우를 완료하기 위한 자습서에 대한 링크를 제공합니다.
 exl-id: cda6e7a7-9498-454c-94df-c6271a5a4fd4
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '793'
+source-wordcount: '795'
 ht-degree: 0%
 
 ---
@@ -43,7 +43,7 @@ ht-degree: 0%
 **이 가이드는 다음과 같은 도움을 줍니다.**
 - 기존 스키마를 찾아봅니다.
 - 스키마를 만들고 이름을 지정합니다.
-- XDM 믹스를 추가하고 정의합니다.
+- XDM 스키마 필드 그룹을 추가하고 정의합니다.
 - 스키마 필드를 ID 필드로 설정합니다.
 - 스키마에 대한 프로필 사용을 참조하십시오.
 
