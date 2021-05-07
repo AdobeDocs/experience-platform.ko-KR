@@ -6,9 +6,9 @@ topic-legacy: overviews
 description: XDM(경험 데이터 모델)은 Adobe Experience Platform 스키마를 작성할 때 사용할 수 있는 표준 필드 세트를 정의합니다. 이러한 필드를 사용하면 XDM을 사용하는 모든 서비스가 이러한 필드에서 제공하는 특정 정의를 명시적으로 이해하므로 플랫폼 서비스 간에 일관된 비헤이비어가 생성됩니다.
 exl-id: 9e183305-cd6c-444d-bd0b-f0cba3bcbe4d
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '25238'
+source-wordcount: '25240'
 ht-degree: 3%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 3%
 
 [!DNL Experience Platform]에 대한 스키마 정의에 대한 원칙 및 모범 사례 등 스키마 구성 블록에 대한 자세한 내용은 [의 기본 사항](composition.md)을 참조하십시오.
 
-아래 표에는 &quot;xdm&quot;을 사용하여 이름이 지정된 필드 이름(일부 XDM 필드는 아님)과 제목 및 설명, 유형, 형식, 필요한 경우 형식, 그리고 해당 XDM 유형 및 해당 필드를 찾을 수 있는 리소스(믹싱, 데이터 유형 및 스키마)가 포함되어 있습니다.
+아래 표에는 &quot;xdm&quot;을 사용하여 이름이 지정된 필드 이름(일부 XDM 필드는 아님)과 해당 제목 및 설명, 유형, 형식, 필요한 경우 형식, 그리고 해당 XDM 유형과 해당 필드를 찾을 수 있는 리소스(스키마, 스키마 필드 그룹 및 데이터 유형)가 포함되어 있습니다.
 
 [스키마 편집기 자습서](../tutorials/create-schema-ui.md#browse)에 표시된 대로 [!DNL Schema Editor]의 검색 기능을 사용하여 이러한 리소스의 세부 정보를 볼 수 있습니다.
 
@@ -349,7 +349,7 @@ ht-degree: 3%
 | xdm:배치 | 오퍼 배치 | 오퍼 배치 인스턴스에 대한 참조입니다. 오퍼 배치는 오퍼 배치 제한을 준수하는 표현이 있는 오퍼로 오퍼 선택을 제한하는 오퍼 활동에 의해 사용됩니다. 값은 참조되는 오퍼 위치의 URI(@id)입니다. 스키마 https://ns.adobe.com/experience/offer-management/offer-placement을 참조하십시오. | 문자열 | uri-reference | 문자열 | https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/campaign/experienceevent-all, https://ns.adobe.com/experience/campaign/offer-proposition-detail |
 | xdm:placementId | 게재위치 ID | 이 이벤트가 연관된 배치에 대한 고유 식별자입니다. | 문자열 |  | 문자열 | https://ns.adobe.com/experience/adcloud-experienceevent, https://ns.adobe.com/experience/adcloud/campaign, https://ns.adobe.com/experience/adcloud/experienceevent-all |
 | xdm:planName | 계획 이름 | 구독의 사람이 읽을 수 있는 이름입니다. | 문자열 |  | 문자열 | https://ns.adobe.com/experience/campaign/experienceevent-profile-subscriptions, https://ns.adobe.com/xdm/context/profile-subscriptions, https://ns.adobe.com/xdm/context/subscription |
-| xdm:playerName | 컨텐츠 플레이어 이름 | 플레이어의 이름입니다. | 문자열 |  | 문자열 | https://ns.adobe.com/experience/adcloud-experienceevent, https://ns.adobe.com/experience/analytics-experienceevent, https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/target-experienceevent, https://ns.adobe.com/xdm/context/advertising-timed-asset-view-details, https://ns.adobe.com/xdm/context/experienceevent-advertising, https://ns.adobe.com/xdm/context/experienceevent-media |
+| xdm:playerName | 콘텐츠 플레이어 이름 | 플레이어의 이름입니다. | 문자열 |  | 문자열 | https://ns.adobe.com/experience/adcloud-experienceevent, https://ns.adobe.com/experience/analytics-experienceevent, https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/target-experienceevent, https://ns.adobe.com/xdm/context/advertising-timed-asset-view-details, https://ns.adobe.com/xdm/context/experienceevent-advertising, https://ns.adobe.com/xdm/context/experienceevent-media |
 | xdm:playerSDKVersion | 플레이어 SDK 버전 | 플레이어에서 사용하는 SDK 버전. | 개체 |  | 개체 | https://ns.adobe.com/experience/adcloud-experienceevent, https://ns.adobe.com/experience/analytics-experienceevent, https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/target-experienceevent, https://ns.adobe.com/xdm/context/experienceevent-media, https://ns.adobe.com/xdm/context/media-timed-asset-view-details |
 | xdm:playerVolume | 플레이어 볼륨 백분율 | 0이 음소거되고 100이 최대 볼륨인 런타임에서 측정되는 플레이어 볼륨 백분율입니다. | 정수 |  | byte | https://ns.adobe.com/experience/adcloud-experienceevent, https://ns.adobe.com/experience/analytics-experienceevent, https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/target-experienceevent, https://ns.adobe.com/xdm/context/advertising, https://ns.adobe.com/xdm/context/experienceevent-advertising |
 | xdm:POIDetail | POI 세부 정보 | 이벤트를 발생시키는 POI의 세부 정보입니다. | 개체 |  | 개체 | https://ns.adobe.com/experience/aam-experienceevent, https://ns.adobe.com/experience/adcloud-experienceevent, https://ns.adobe.com/experience/analytics-experienceevent, https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/target-experienceevent, https://ns.adobe.com/xdm/context/experienceevent-environment-details, https://ns.adobe.com/xdm/context/placecontext |
