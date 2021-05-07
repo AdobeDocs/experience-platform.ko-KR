@@ -6,9 +6,9 @@ description: 이 문서에서는 스키마 레지스트리 API 작업과 관련�
 topic-legacy: developer guide
 exl-id: 2ddc7fe8-dd0b-4cf9-8561-e89fcdadbfce
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '772'
+source-wordcount: '775'
 ht-degree: 0%
 
 ---
@@ -52,7 +52,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->`property` 매개 변수를 사용하여 호환되는 클래스로 믹스를 필터링할 수 있습니다. 예를 들어 `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile`은 [!DNL XDM Individual Profile] 클래스와 호환되는 혼합만 반환합니다.
+>`property` 매개 변수를 사용하여 호환 클래스로 스키마 필드 그룹을 필터링할 수 있습니다. 예를 들어 `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile`은 [!DNL XDM Individual Profile] 클래스와 호환되는 필드 그룹만 반환합니다.
 
 ## 호환성 모드
 
