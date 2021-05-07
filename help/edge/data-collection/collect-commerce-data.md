@@ -2,20 +2,20 @@
 title: Adobe Experience Platform 웹 SDK를 사용하여 상거래 및 제품 정보 수집
 description: Adobe Experience Platform Web SDK를 사용하여 제품 또는 장바구니와 관련된 데이터를 추가하는 방법을 알아봅니다.
 keywords: 제품;커머스;measurement;measure;order;checkouts;productListAdds;productListUpdates;productListReopens;productListReopens;productListViews;productViews;purchase;saveForLaters;currencyCode;paymentAmount;transactionID priceID price;priceID price;priceID price Total;purchaseID;purchaseOrderNumber;
+exl-id: 3c79e776-89ef-494b-a2ea-3c23efce09ae
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 7d7502b238f96eda1a15b622ba10bbccc289b725
 workflow-type: tm+mt
-source-wordcount: '1321'
+source-wordcount: '1324'
 ht-degree: 6%
 
 ---
-
 
 # 상거래 및 제품 정보 수집
 
 사이트에 제품이 있는 경우 Adobe에서 가장 많은 기능을 사용하도록 전송하려는 기본 집합입니다. 비록 이것이 제안이지만, 그것은 처음부터 매우 강력한 데이터 세트를 제공합니다.
 
-이 문서에서는 [ExperienceEvent 상거래 세부 사항](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/experienceevent-commerce.schema.md) 믹싱을 사용합니다. `commerce` 혼합은 두 부분으로 나뉘어집니다.`commerce` 개체와 `productListItems` 배열로 이동합니다. `commerce` 객체를 사용하면 `productListItems` 배열에 발생하는 작업을 표시할 수 있습니다.
+이 문서에서는 [ExperienceEvent 상거래 세부 사항](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/experienceevent-commerce.schema.md) 스키마 필드 그룹을 사용합니다. `commerce` 필드 그룹은 두 부분으로 나뉘어집니다.`commerce` 개체와 `productListItems` 배열로 이동합니다. `commerce` 객체를 사용하면 `productListItems` 배열에 발생하는 작업을 표시할 수 있습니다.
 
 >[!TIP]
 >
