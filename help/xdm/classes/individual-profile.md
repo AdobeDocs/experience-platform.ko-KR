@@ -6,9 +6,9 @@ topic-legacy: overview
 description: 이 문서에서는 XDM 개별 프로필 클래스에 대한 개요를 제공합니다.
 exl-id: 83b22462-79ce-4024-aa50-a9bd800c0f81
 translation-type: tm+mt
-source-git-commit: 81d96b629ce628f663a86701d8f076eb771fdf77
+source-git-commit: 612917b23d1841556a71f6378497e1d033bc3b62
 workflow-type: tm+mt
-source-wordcount: '412'
+source-wordcount: '420'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 프로필은 익명의 행동 신호(예: 브라우저 쿠키)부터 이름, 생년월일, 위치 및 이메일 주소와 같은 세부 정보가 포함된 식별된 프로필까지 다양합니다. 프로파일이 성장함에 따라 개인 정보, ID, 연락처 정보 및 커뮤니케이션 환경 설정이 포함된 강력한 저장소가 됩니다. 플랫폼 생태계에서 이 클래스를 사용하는 방법에 대한 자세한 내용은 [XDM 개요](../home.md#data-behaviors)를 참조하십시오.
 
-[!DNL XDM Individual Profile] 클래스 자체에서는 데이터를 인제스트할 때 자동으로 채워지는 여러 개의 시스템 생성 값을 제공하는 반면, 다른 모든 필드는 [호환 믹싱](#mixins)의 사용을 통해 추가해야 합니다.
+[!DNL XDM Individual Profile] 클래스 자체에서는 데이터를 인제스트할 때 자동으로 채워지는 여러 개의 시스템 생성 값을 제공하는 반면 다른 모든 필드는 [호환되는 스키마 필드 그룹](#field-groups)의 사용을 통해 추가해야 합니다.
 
 ![](../images/classes/individual-profile.png)
 
@@ -33,18 +33,18 @@ ht-degree: 0%
 | `repositoryCreatedBy` | 레코드를 만든 사용자의 ID. |
 | `repositoryLastModifiedBy` | 레코드를 마지막으로 수정한 사용자의 ID. |
 
-## 호환 가능한 믹싱 {#mixins}
+## 호환 가능한 필드 그룹 {#field-groups}
 
 >[!NOTE]
 >
->여러 혼합물의 이름이 변경되었습니다. 자세한 내용은 [혼합 이름 업데이트](../mixins/name-updates.md)에 있는 문서를 참조하십시오.
+>여러 필드 그룹의 이름이 변경되었습니다. 자세한 내용은 [필드 그룹 이름 업데이트](../field-groups/name-updates.md)의 문서를 참조하십시오.
 
-Adobe은 [!DNL XDM Individual Profile] 클래스에 사용할 수 있도록 여러 가지 표준 믹스를 제공합니다. 다음은 클래스에 일반적으로 사용되는 일부 믹싱 목록입니다.
+Adobe은 [!DNL XDM Individual Profile] 클래스에 사용할 수 있도록 여러 개의 표준 필드 그룹을 제공합니다. 다음은 클래스에 일반적으로 사용되는 일부 필드 그룹 목록입니다.
 
-* [[!UICONTROL IdentityMap]](../mixins/profile/identitymap.md)
-* [[!UICONTROL Demographic Details]](../mixins/profile/person-details.md)
-* [[!UICONTROL Personal Contact Details]](../mixins/profile/personal-details.md)
-* [[!UICONTROL Work Contact Details]](../mixins/profile/work-details.md)
-* [[!UICONTROL Segment Membership Details]](../mixins/profile/segmentation.md)
+* [[!UICONTROL IdentityMap]](../field-groups/profile/identitymap.md)
+* [[!UICONTROL Demographic Details]](../field-groups/profile/demographic-details.md)
+* [[!UICONTROL Personal Contact Details]](../field-groups/profile/personal-contact-details.md)
+* [[!UICONTROL Work Contact Details]](../field-groups/profile/work-contact-details.md)
+* [[!UICONTROL Segment Membership Details]](../field-groups/profile/segmentation.md)
 
-[!DNL XDM Individual Profile]에 대한 모든 호환 믹싱의 전체 목록은 [XDM GitHub 보고서](https://github.com/adobe/xdm/tree/master/components/mixins/profile)를 참조하십시오.
+[!DNL XDM Individual Profile]에 대한 호환되는 모든 필드 그룹의 전체 목록은 [XDM GitHub 보고서](https://github.com/adobe/xdm/tree/master/components/mixins/profile)를 참조하십시오.
