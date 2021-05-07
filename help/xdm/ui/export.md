@@ -6,9 +6,9 @@ topic-legacy: user guide
 type: Tutorial
 exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '495'
+source-wordcount: '498'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->또한 스키마 레지스트리 API를 사용하여 클래스, 믹싱 및 데이터 유형을 비롯한 스키마 외에도 다른 리소스를 내보낼 수 있습니다. 자세한 내용은 [내보내기/가져오기 끝점](../api/export-import.md)의 안내서를 참조하십시오.
+>또한 스키마 레지스트리 API를 사용하여 클래스, 스키마 필드 그룹 및 데이터 유형을 비롯한 스키마 외에도 다른 리소스를 내보낼 수 있습니다. 자세한 내용은 [내보내기/가져오기 끝점](../api/export-import.md)의 안내서를 참조하십시오.
 
 ## 전제 조건
 
@@ -44,9 +44,9 @@ ht-degree: 0%
 ```json
 [
   {
-    "$id": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/mixins/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
-    "meta:altId": "_<XDM_TENANTID_PLACEHOLDER>.mixins.9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
-    "meta:resourceType": "mixins",
+    "$id": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/fieldgroups/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
+    "meta:altId": "_<XDM_TENANTID_PLACEHOLDER>.fieldgroups.9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
+    "meta:resourceType": "fieldgroups",
     "version": "1.0",
     "title": "Loyalty details",
     "type": "object",
@@ -171,12 +171,12 @@ ht-degree: 0%
         "meta:xdmType": "object"
       },
       {
-        "$ref": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/mixins/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
+        "$ref": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/fieldgroups/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
         "type": "object",
         "meta:xdmType": "object"
       },
       {
-        "$ref": "https://ns.adobe.com/xdm/mixins/profile-consents",
+        "$ref": "https://ns.adobe.com/xdm/fieldgroups/profile-consents",
         "type": "object",
         "meta:xdmType": "object"
       }
@@ -189,8 +189,8 @@ ht-degree: 0%
       "https://ns.adobe.com/xdm/common/auditable",
       "https://ns.adobe.com/xdm/data/record",
       "https://ns.adobe.com/xdm/context/profile",
-      "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/mixins/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
-      "https://ns.adobe.com/xdm/mixins/profile-consents"
+      "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/fieldgroups/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
+      "https://ns.adobe.com/xdm/fieldgroups/profile-consents"
     ],
     "meta:xdmType": "object",
     "meta:class": "https://ns.adobe.com/xdm/context/profile",
@@ -203,7 +203,7 @@ ht-degree: 0%
 ]
 ```
 
-페이로드는 내보낼 사용자 지정 XDM 리소스를 나타내는 개체로서 각 배열 항목이 포함된 배열 형태를 취합니다. 위의 예에서 &quot;[!DNL Loyalty details]&quot; 사용자 정의 믹스인과 &quot;[!DNL Loyalty Members]&quot; 스키마가 포함됩니다. 스키마에서 사용되는 모든 핵심 리소스는 모든 샌드박스 및 IMS 조직에서 사용할 수 있으므로 내보내기에 포함되지 않습니다.
+페이로드는 내보낼 사용자 지정 XDM 리소스를 나타내는 개체로서 각 배열 항목이 포함된 배열 형태를 취합니다. 위의 예에서 &quot;[!DNL Loyalty details]&quot; 사용자 정의 필드 그룹과 &quot;[!DNL Loyalty Members]&quot; 스키마가 포함됩니다. 스키마에서 사용되는 모든 핵심 리소스는 모든 샌드박스 및 IMS 조직에서 사용할 수 있으므로 내보내기에 포함되지 않습니다.
 
 조직의 테넌트 ID의 각 인스턴스는 페이로드에서 `<XDM_TENANTID_PLACEHOLDER>`으로 나타납니다. 다음 단계에서 스키마를 가져오는 위치에 따라 이러한 자리 표시자는 해당 테넌트 ID 값으로 자동 대체됩니다.
 
