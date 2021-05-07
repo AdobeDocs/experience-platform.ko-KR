@@ -6,16 +6,16 @@ description: 스키마 레지스트리 API의 /export 및/import 끝점을 사�
 topic-legacy: developer guide
 exl-id: 33b62f75-2670-42f4-9aac-fa1540cd7d4a
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '500'
+source-wordcount: '507'
 ht-degree: 1%
 
 ---
 
 # 끝점 내보내기/가져오기
 
-[!DNL Schema Library] 내의 모든 리소스는 IMS 조직 내의 특정 샌드박스에 포함됩니다. 샌드박스와 IMS 조직 간에 경험 데이터 모델(XDM) 리소스를 공유하는 경우도 있습니다. [!DNL Schema Registry] API는 [!DNL  Schema Library]에서 모든 스키마, 혼합 또는 데이터 유형에 대한 내보내기 페이로드를 생성할 수 있는 2개의 끝점을 제공하며, 이 페이로드를 사용하여 해당 리소스(및 모든 종속 리소스)를 대상 샌드박스 및 IMS 조직에 가져옵니다.
+[!DNL Schema Library] 내의 모든 리소스는 IMS 조직 내의 특정 샌드박스에 포함됩니다. 샌드박스와 IMS 조직 간에 경험 데이터 모델(XDM) 리소스를 공유하는 경우도 있습니다. [!DNL Schema Registry] API는 [!DNL  Schema Library]에서 스키마, 스키마 필드 그룹 또는 데이터 유형에 대한 내보내기 페이로드를 생성할 수 있는 2개의 끝점을 제공하며, 이 페이로드를 사용하여 해당 리소스(및 모든 종속 리소스)를 대상 샌드박스 및 IMS 조직에 가져옵니다.
 
 ## 시작하기
 
@@ -25,7 +25,7 @@ ht-degree: 1%
 
 ## 리소스 {#export}에 대한 내보내기 페이로드 검색
 
-[!DNL Schema Library]의 기존 스키마, 혼합 또는 데이터 유형의 경우 경로에 있는 리소스의 ID를 제공하여 `/export` 끝점에 GET 요청을 수행하여 내보내기 페이로드를 생성할 수 있습니다.
+[!DNL Schema Library]의 기존 스키마, 필드 그룹 또는 데이터 유형에 대해 `/export` 끝점에 GET 요청을 하여 경로에 있는 리소스의 ID를 제공하여 내보내기 페이로드를 생성할 수 있습니다.
 
 **API 형식**
 
@@ -39,11 +39,11 @@ GET /rpc/export/{RESOURCE_ID}
 
 **요청**
 
-다음 요청은 `Restaurant` 믹싱에 대한 내보내기 페이로드를 검색합니다.
+다음 요청은 `Restaurant` 필드 그룹에 대한 내보내기 페이로드를 검색합니다.
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/foundation/schemaregistry/rpc/export/_{TENANT_ID}.mixins.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9 \
+  https://platform.adobe.io/data/foundation/schemaregistry/rpc/export/_{TENANT_ID}.fieldgroups.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -53,7 +53,7 @@ curl -X GET \
 
 **응답**
 
-성공적으로 응답하면 대상 XDM 리소스 및 모든 종속 리소스를 나타내는 개체 배열을 반환합니다. 이 예제에서 배열의 첫 번째 개체는 `Restaurant` 믹싱이 사용하는 테넌트로 만든 `Property` 데이터 유형이고 두 번째 개체는 `Restaurant` 믹스입니다. 그런 다음 이 페이로드를 사용하여 [리소스](#import)를 다른 샌드박스 또는 IMS 조직에 가져올 수 있습니다.
+성공적으로 응답하면 대상 XDM 리소스 및 모든 종속 리소스를 나타내는 개체 배열을 반환합니다. 이 예에서 배열의 첫 번째 개체는 `Restaurant` 필드 그룹이 사용하는 임차인 생성 `Property` 데이터 유형이고 두 번째 개체는 `Restaurant` 필드 그룹 자체입니다. 그런 다음 이 페이로드를 사용하여 [리소스](#import)를 다른 샌드박스 또는 IMS 조직에 가져올 수 있습니다.
 
 리소스 테넌트 ID의 모든 인스턴스는 `<XDM_TENANTID_PLACEHOLDER>`으로 대체됩니다. 이를 통해 스키마 레지스트리가 후속 가져오기 호출에서 전송되는 위치에 따라 리소스에 올바른 테넌트 ID를 자동으로 적용할 수 있습니다.
 
@@ -129,9 +129,9 @@ curl -X GET \
         "meta:sandboxType": "production"
     },
     {
-        "$id": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/mixins/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-        "meta:altId": "_<XDM_TENANTID_PLACEHOLDER>.mixins.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-        "meta:resourceType": "mixins",
+        "$id": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/fieldgroups/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+        "meta:altId": "_<XDM_TENANTID_PLACEHOLDER>.fieldgroups.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+        "meta:resourceType": "fieldgroups",
         "version": "1.0",
         "title": "Restaurant",
         "type": "object",
@@ -288,9 +288,9 @@ curl -X POST \
           "meta:sandboxType": "production"
         },
         {
-          "$id": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/mixins/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-          "meta:altId": "_<XDM_TENANTID_PLACEHOLDER>.mixins.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-          "meta:resourceType": "mixins",
+          "$id": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/fieldgroups/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+          "meta:altId": "_<XDM_TENANTID_PLACEHOLDER>.fieldgroups.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+          "meta:resourceType": "fieldgroups",
           "version": "1.0",
           "title": "Restaurant",
           "type": "object",
@@ -446,9 +446,9 @@ curl -X POST \
         "meta:tenantNamespace": "_{TENANT_ID}"
     },
     {
-        "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-        "meta:altId": "_{TENANT_ID}.mixins.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-        "meta:resourceType": "mixins",
+        "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+        "meta:altId": "_{TENANT_ID}.fieldgroups.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+        "meta:resourceType": "fieldgroups",
         "version": "1.0",
         "title": "Restaurant",
         "type": "object",
