@@ -6,9 +6,9 @@ topic-legacy: getting started
 description: Adobe Experience Platform에서 동의 및 기본 설정 데이터를 캡처하기 위해 XDM(Experience Data Model) 스키마 및 데이터 집합을 구성하는 방법에 대해 알아보십시오.
 exl-id: 61ceaa2a-c5ac-43f5-b118-502bdc432234
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 30a2ddb875b035b4509b4be3692b95d0d3ef50b3
 workflow-type: tm+mt
-source-wordcount: '1403'
+source-wordcount: '1424'
 ht-degree: 0%
 
 ---
@@ -23,11 +23,11 @@ Adobe Experience Platform에서 고객 동의/기본 설정 데이터를 처리�
 >
 >이 안내서의 예는 표준 필드 세트를 사용하여 [동의 및 기본 설정 XDM 데이터 유형](../../../../xdm/data-types/consents.md)에 의해 정의된 대로 고객 동의 값을 나타냅니다. 이러한 필드의 구조는 여러 일반적인 동의 수집 사용 사례를 처리하기 위해 효율적인 데이터 모델을 제공하기 위한 것입니다.
 >
->그러나 고유한 데이터 모델에 따라 자신의 동의를 나타내기 위해 고유한 혼합을 정의할 수도 있습니다. 다음 옵션에 따라 비즈니스 요구에 맞는 동의 데이터 모델의 승인을 받으려면 법률 팀과 상의하십시오.
+>그러나 고유한 데이터 모델에 따라 자신의 필드 그룹을 정의하여 동의를 나타낼 수도 있습니다. 다음 옵션에 따라 비즈니스 요구에 맞는 동의 데이터 모델의 승인을 받으려면 법률 팀과 상의하십시오.
 >
->* 표준화된 동의 혼합
->* 조직에서 만든 사용자 지정 동의 혼합
->* 사용자 정의 동의 혼합에 의해 제공되는 표준화된 동의 혼합과 추가 영역의 조합
+>* 표준 동의 필드 그룹
+>* 조직에서 만든 사용자 지정 동의 필드 그룹
+>* 사용자 지정 동의 필드 그룹에서 제공하는 표준 동의 필드 그룹과 추가 필드의 조합
 
 
 ## 전제 조건
@@ -42,11 +42,11 @@ Adobe Experience Platform에서 고객 동의/기본 설정 데이터를 처리�
 >
 >이 자습서에서는 고객 속성 정보를 캡처하는 데 사용하려는 플랫폼의 [!DNL Profile] 스키마를 알고 있다고 가정합니다. 동의 데이터를 수집하는 데 사용하는 방법에 관계없이 이 스키마는 실시간 고객 프로필](../../../../xdm/ui/resources/schemas.md#profile)에 대해 [활성화되어야 합니다. 또한 스키마의 기본 ID는 이메일 주소와 같은 관심 기반 광고에 사용할 수 없는 직접 식별 가능한 필드가 될 수 없습니다. 어떤 분야가 제한되어 있는지 잘 모르는 경우 법률 자문을 구할 수 있습니다.
 
-## 동의 및 환경 설정 혼합 구조 {#structure}
+## 동의 및 기본 설정 필드 그룹 구조 {#structure}
 
-[!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)] 혼합(이하 &quot;동의 및 기본 설정 혼합&quot;이라 한다)은 스키마에 대한 표준 동의 필드를 제공합니다. 현재 이 믹스는 [!DNL XDM Individual Profile] 클래스를 기반으로 하는 스키마와만 호환합니다.
+[!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)] 필드 그룹(이하 &quot;동의 및 기본 설정 필드 그룹&quot;이라 한다)은 스키마에 대한 표준 동의 필드를 제공합니다. 현재 이 필드 그룹은 [!DNL XDM Individual Profile] 클래스를 기반으로 하는 스키마와만 호환합니다.
 
-혼합은 표준 동의 필드 집합을 캡처하는 하위 속성의 단일 개체 유형 필드 `consents`를 제공합니다. 다음 JSON은 데이터 수집에 대해 `consents`이 예상하는 데이터 종류의 예입니다.
+필드 그룹은 표준 동의 필드 집합을 캡처하는 하위 속성의 단일 개체 유형 필드 `consents`를 제공합니다. 다음 JSON은 데이터 수집에 대해 `consents`이 예상하는 데이터 종류의 예입니다.
 
 ```json
 {
@@ -95,7 +95,7 @@ Adobe Experience Platform에서 고객 동의/기본 설정 데이터를 처리�
 >
 >`consents`의 하위 속성의 구조와 의미에 대한 자세한 내용은 [동의 및 기본 설정 데이터 유형](../../../../xdm/data-types/consents.md)의 개요를 참조하십시오.
 
-## 동의 및 환경 설정 믹스를 [!DNL Profile] 스키마 {#add-mixin}에 추가
+## 동의 및 기본 설정 필드 그룹을 [!DNL Profile] 스키마 {#add-field-group}에 추가합니다.
 
 플랫폼 UI의 왼쪽 탐색 영역에서 **[!UICONTROL Schemas]**&#x200B;을 선택한 다음 **[!UICONTROL Browse]** 탭을 선택하여 기존 스키마 목록을 표시합니다. 여기에서 동의 필드를 추가할 [!DNL Profile] 사용 스키마의 이름을 선택합니다. 이 섹션의 스크린샷은 [스키마 만들기 자습서](../../../../xdm/tutorials/create-schema-ui.md)에 내장된 &quot;충성도 구성원&quot; 스키마를 예로 사용합니다.
 
@@ -105,15 +105,15 @@ Adobe Experience Platform에서 고객 동의/기본 설정 데이터를 처리�
 >
 >작업 공간의 검색 및 필터링 기능을 사용하여 스키마를 쉽게 찾을 수 있습니다. 자세한 내용은 [XDM 리소스](../../../../xdm/ui/explore.md)에 대한 가이드를 참조하십시오.
 
-캔버스에서 스키마의 구조를 표시하는 [!DNL Schema Editor]이 나타납니다. 캔버스의 왼쪽에서 **[!UICONTROL Mixins]** 섹션 아래의 **[!UICONTROL Add]**&#x200B;을 선택합니다.
+캔버스에서 스키마의 구조를 표시하는 [!DNL Schema Editor]이 나타납니다. 캔버스의 왼쪽에서 **[!UICONTROL Field groups]** 섹션 아래의 **[!UICONTROL Add]**&#x200B;을 선택합니다.
 
-![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/add-mixin.png)
+![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/add-field-group.png)
 
-**[!UICONTROL Add mixin]** 대화 상자가 나타납니다. 여기서 목록에서 **[!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)]**&#x200B;을 선택합니다. 선택적으로 검색 막대를 사용하여 결과의 범위를 좁혀 믹싱을 더 쉽게 찾을 수 있습니다. 믹스를 선택하고 나면 **[!UICONTROL Add mixin]**&#x200B;을 선택합니다.
+**[!UICONTROL Add field group]** 대화 상자가 나타납니다. 여기서 목록에서 **[!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)]**&#x200B;을 선택합니다. 선택적으로 검색 막대를 사용하여 검색 결과의 범위를 좁혀 필드 그룹을 더 쉽게 찾을 수 있습니다. 필드 그룹을 선택한 후 **[!UICONTROL Add field group]**&#x200B;을 선택합니다.
 
-![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/mixin-dialog.png)
+![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/field-group-dialog.png)
 
-`consents` 객체가 스키마 구조에 추가되었음을 보여 주는 캔버스가 다시 나타납니다. 표준 혼합에서 캡처하지 않은 추가 동의 및 환경 설정 필드가 필요한 경우 [사용자 정의 동의 및 환경 설정 필드를 스키마](#custom-consent)에 추가하는 것을 참조하십시오. 그렇지 않은 경우 **[!UICONTROL Save]**&#x200B;을 선택하여 스키마 변경 내용을 완료합니다.
+`consents` 객체가 스키마 구조에 추가되었음을 보여 주는 캔버스가 다시 나타납니다. 표준 필드 그룹에서 캡처한 추가 동의 및 환경 설정 필드가 필요한 경우 [사용자 정의 동의 및 환경 설정 필드를 스키마](#custom-consent)에 추가하는 부록 섹션을 참조하십시오. 그렇지 않은 경우 **[!UICONTROL Save]**&#x200B;을 선택하여 스키마 변경 내용을 완료합니다.
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/save-schema.png)
 
@@ -165,17 +165,17 @@ Adobe Experience Platform에서 고객 동의/기본 설정 데이터를 처리�
 
 ### 사용자 정의 동의 및 환경 설정 필드를 {#custom-consent} 스키마에 추가합니다.
 
-표준 [!DNL Consents & Preferences] 혼합으로 표시되는 것과 다른 별도의 동의 신호를 캡처해야 하는 경우 사용자 지정 XDM 구성 요소를 사용하여 특정 비즈니스 요구에 맞게 동의 스키마를 향상시킬 수 있습니다. 이 섹션에서는 Adobe Experience Platform Mobile 및 웹 SDK에서 수행한 동의 변경 명령과 호환되는 방식으로 동의 스키마를 사용자 지정하는 방법에 대한 기본 원칙을 설명합니다.
+표준 [!DNL Consents & Preferences] 필드 그룹으로 표시된 항목 이외의 다른 동의 신호를 추가로 캡처해야 하는 경우 사용자 지정 XDM 구성 요소를 사용하여 특정 비즈니스 요구에 맞게 동의 스키마를 향상시킬 수 있습니다. 이 섹션에서는 Adobe Experience Platform Mobile 및 웹 SDK에서 수행한 동의 변경 명령과 호환되는 방식으로 동의 스키마를 사용자 지정하는 방법에 대한 기본 원칙을 설명합니다.
 
 >[!IMPORTANT]
 >
->전체 구조를 처음부터 만드는 대신 [!DNL Consents & Preferences] 믹싱을 동의 데이터 구조의 기준선으로 사용하고 필요에 따라 추가 필드를 추가해야 합니다.
+>전체 구조를 처음부터 만드는 대신 [!DNL Consents & Preferences] 필드 그룹을 동의 데이터 구조의 기준선으로 사용하고 필요한 경우 필드를 추가해야 합니다.
 
-표준 믹스의 구조에 사용자 정의 필드를 추가하려면 먼저 사용자 정의 믹싱을 만들어야 합니다. 스키마에 [!DNL Consents & Preferences] 혼합을 추가한 후 **[!UICONTROL Mixins]** 섹션에서 **더하기(+)** 아이콘을 선택한 다음 **[!UICONTROL Create new mixin]**&#x200B;를 선택합니다. 혼합에 대한 이름 및 선택적 설명을 입력한 다음 **[!UICONTROL Add mixin]**&#x200B;을 선택합니다.
+표준 필드 그룹의 구조에 사용자 정의 필드를 추가하려면 먼저 사용자 정의 필드 그룹을 만들어야 합니다. [!DNL Consents & Preferences] 필드 그룹을 스키마에 추가한 후 **[!UICONTROL Field groups]** 섹션에서 **더하기(+)** 아이콘을 선택한 다음 **[!UICONTROL Create new field group]**&#x200B;를 선택합니다. 필드 그룹의 이름과 선택적 설명을 입력한 다음 **[!UICONTROL Add field group]**&#x200B;을 선택합니다.
 
-![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/add-custom-mixin.png)
+![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/add-custom-field-group.png)
 
-왼쪽 레일에서 새 사용자 정의 믹서가 선택된 상태로 [!DNL Schema Editor]이 다시 나타납니다. 캔버스에서 사용자 정의 필드를 스키마 구조에 추가할 수 있는 컨트롤이 표시됩니다. 새 동의 또는 환경 설정 필드를 추가하려면 `consents` 개체 옆에 있는 **더하기(+)** 아이콘을 선택합니다.
+왼쪽 레일에서 새 사용자 지정 필드 그룹이 선택된 상태로 [!DNL Schema Editor]이 다시 나타납니다. 캔버스에서 사용자 정의 필드를 스키마 구조에 추가할 수 있는 컨트롤이 표시됩니다. 새 동의 또는 환경 설정 필드를 추가하려면 `consents` 개체 옆에 있는 **더하기(+)** 아이콘을 선택합니다.
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/add-custom-field.png)
 
