@@ -6,9 +6,9 @@ topic-legacy: overview
 description: 이 문서에서는 ID XDM 데이터 유형에 대한 개요를 제공합니다.
 exl-id: fb02b6b4-255b-442f-895c-600022231a1c
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '280'
+source-wordcount: '281'
 ht-degree: 3%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 3%
 | `primary` | 부울 | 이것이 개인의 기본 ID인지 여부를 나타냅니다. 각 개인은 하나의 기본 ID만 가질 수 있습니다. |
 | `xid` | 문자열 | 이 값이 있는 경우 이 값은 모든 네임스페이스의 모든 네임스페이스 범위 식별자에 대해 고유한 네임스페이스 간 식별자를 나타냅니다. |
 
-혼합에 대한 자세한 내용은 공개 XDM 저장소를 참조하십시오.
+데이터 유형에 대한 자세한 내용은 공개 XDM 저장소를 참조하십시오.
 
 * [채워진 예제](https://github.com/adobe/xdm/blob/master/components/datatypes/identity.example.1.json)
 * [전체 스키마](https://github.com/adobe/xdm/blob/master/components/datatypes/identity.schema.json)
