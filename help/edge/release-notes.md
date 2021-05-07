@@ -4,9 +4,9 @@ description: Adobe Experience Platform Web SDK에 대한 최신 릴리스 정보
 keywords: Adobe Experience Platform 웹 SDK;플랫폼 웹 SDK;웹 SDK;릴리스 노트;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
 translation-type: tm+mt
-source-git-commit: d4ed6c8fa9c86eb2beec829ab24c381b665c2f03
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '500'
+source-wordcount: '502'
 ht-degree: 5%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 5%
 * 이제 SDK는 npm 패키지](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/installing-the-sdk.html)로 [설치할 수 있습니다.
 * 동의를 받을 때까지 모든 이벤트를 반환하는 기본 동의](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#default-consent)를 구성하는 경우 `out` 옵션에 대한 지원을 추가했습니다(기존 `pending` 옵션은 이벤트를 대기열에 넣고 동의를 받으면 전송합니다).[
 * 이제 [onBeforeEventSend 콜백](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#onbeforeeventsend)을(를) 사용하여 이벤트가 전송되지 않도록 할 수 있습니다.
-* 이제 렌더링되거나 클릭되는 맞춤형 콘텐츠에 대한 이벤트를 전송할 때 `meta.personalization` 대신 XDM 믹싱을 사용합니다.
+* 이제 렌더링되거나 클릭되는 개인화된 콘텐츠에 대한 이벤트를 보낼 때 `meta.personalization` 대신 XDM 스키마 필드 그룹을 사용합니다.
 * 이제 [getIdentity 명령](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html#retrieving-the-visitor-id)은 ID와 함께 가장자리 영역 ID를 반환합니다.
 * 서버에서 받은 경고 및 오류가 개선되었으며 보다 적절한 방식으로 처리됩니다.
 * [Adobe의 동의 2.0 표준](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html?communicating-consent-preferences-via-the-adobe-standard)에 대한 지원을 추가했습니다.
