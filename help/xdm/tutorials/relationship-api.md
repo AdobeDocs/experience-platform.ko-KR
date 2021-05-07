@@ -7,9 +7,9 @@ topic-legacy: tutorial
 type: Tutorial
 exl-id: ef9910b5-2777-4d8b-a6fe-aee51d809ad5
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '1337'
+source-wordcount: '1354'
 ht-degree: 1%
 
 ---
@@ -111,35 +111,35 @@ curl -X GET \
 
 ## 소스 스키마에 대한 참조 필드 정의
 
-[!DNL Schema Registry] 내에서 관계 설명자는 관계형 데이터베이스 테이블의 외래 키와 비슷하게 작동합니다.소스 스키마의 필드는 대상 스키마의 기본 ID 필드에 대한 참조로 사용됩니다. 소스 스키마에 이 용도로 사용할 필드가 없으면 새 필드로 믹싱을 만들어 스키마에 추가해야 할 수 있습니다. 이 새 필드에는 &quot;[!DNL string]&quot;의 `type` 값이 있어야 합니다.
+[!DNL Schema Registry] 내에서 관계 설명자는 관계형 데이터베이스 테이블의 외래 키와 비슷하게 작동합니다.소스 스키마의 필드는 대상 스키마의 기본 ID 필드에 대한 참조로 사용됩니다. 소스 스키마에 이 용도로 사용할 수 있는 필드가 없으면 새 필드로 스키마 필드 그룹을 만들고 스키마에 추가해야 할 수 있습니다. 이 새 필드에는 &quot;[!DNL string]&quot;의 `type` 값이 있어야 합니다.
 
 >[!IMPORTANT]
 >
 >대상 스키마와 달리 소스 스키마는 기본 ID를 참조 필드로 사용할 수 없습니다.
 
-이 자습서에서는 대상 스키마 &quot;[!DNL Hotels]&quot;에 스키마의 기본 ID로 사용되는 `hotelId` 필드가 포함되어 있으므로 참조 필드로도 작동합니다. 그러나 소스 스키마 &quot;[!DNL Loyalty Members]&quot;에 참조로 사용할 전용 필드가 없으므로 새 필드를 스키마에 추가하는 새 믹신이 주어져야 합니다.`favoriteHotel`.
+이 자습서에서는 대상 스키마 &quot;[!DNL Hotels]&quot;에 스키마의 기본 ID로 사용되는 `hotelId` 필드가 포함되어 있으므로 참조 필드로도 작동합니다. 그러나 소스 스키마 &quot;[!DNL Loyalty Members]&quot;에 참조로 사용할 전용 필드가 없으므로 새 필드를 스키마에 추가하는 새 필드 그룹이 주어져야 합니다.`favoriteHotel`.
 
 >[!NOTE]
 >
 >소스 스키마에 참조 필드로 사용할 전용 필드가 이미 있는 경우 [참조 설명자](#reference-identity)를 만드는 단계를 건너뛸 수 있습니다.
 
-### 새 믹서 만들기
+### 새 필드 그룹 만들기
 
-스키마에 새 필드를 추가하려면 먼저 혼합에서 정의해야 합니다. `/tenant/mixins` 끝점에 POST 요청을 하여 새 믹싱을 만들 수 있습니다.
+스키마에 새 필드를 추가하려면 먼저 필드 그룹에 정의해야 합니다. `/tenant/fieldgroups` 끝점에 POST 요청을 하여 새 필드 그룹을 만들 수 있습니다.
 
 **API 형식**
 
 ```http
-POST /tenant/mixins
+POST /tenant/fieldgroups
 ```
 
 **요청**
 
-다음 요청은 새로 추가되는 스키마의 `_{TENANT_ID}` 네임스페이스 아래에 `favoriteHotel` 필드를 추가하는 새 믹스를 만듭니다.
+다음 요청은 추가할 스키마의 `_{TENANT_ID}` 네임스페이스 아래에 `favoriteHotel` 필드를 추가하는 새 필드 그룹을 만듭니다.
 
 ```shell
 curl -X POST\
-  https://platform.adobe.io/data/foundation/schemaregistry/tenant/mixins \
+  https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -149,7 +149,7 @@ curl -X POST\
         "type": "object",
         "title": "Favorite Hotel",
         "meta:intendedToExtend": ["https://ns.adobe.com/xdm/context/profile"],
-        "description": "Favorite hotel mixin for the Loyalty Members schema.",
+        "description": "Favorite hotel field group for the Loyalty Members schema.",
         "definitions": {
             "favoriteHotel": {
               "properties": {
@@ -176,20 +176,20 @@ curl -X POST\
 
 **응답**
 
-성공적인 응답은 새로 만든 믹싱의 세부 정보를 반환합니다.
+성공적인 응답은 새로 만든 필드 그룹의 세부 사항을 반환합니다.
 
 ```json
 {
-    "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/3387945212ad76ee59b6d2b964afb220",
-    "meta:altId": "_{TENANT_ID}.mixins.3387945212ad76ee59b6d2b964afb220",
-    "meta:resourceType": "mixins",
+    "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/3387945212ad76ee59b6d2b964afb220",
+    "meta:altId": "_{TENANT_ID}.fieldgroups.3387945212ad76ee59b6d2b964afb220",
+    "meta:resourceType": "fieldgroups",
     "version": "1.0",
     "type": "object",
     "title": "Favorite Hotel",
     "meta:intendedToExtend": [
         "https://ns.adobe.com/xdm/context/profile"
     ],
-    "description": "Favorite hotel mixin for the Loyalty Members schema.",
+    "description": "Favorite hotel field group for the Loyalty Members schema.",
     "definitions": {
         "favoriteHotel": {
             "properties": {
@@ -229,13 +229,13 @@ curl -X POST\
 
 | 속성 | 설명 |
 | --- | --- |
-| `$id` | 읽기 전용 시스템에서 새 혼합의 고유 식별자를 생성했습니다. URI 형식을 사용합니다. |
+| `$id` | 시스템이 새 필드 그룹의 읽기 전용 고유 식별자를 생성했습니다. URI 형식을 사용합니다. |
 
-소스 스키마에 혼합을 추가하는 다음 단계에서 사용할 믹신의 `$id` URI를 기록합니다.
+소스 스키마에 필드 그룹을 추가하는 다음 단계에서 사용할 필드 그룹의 `$id` URI를 기록합니다.
 
-### 소스 스키마에 믹싱 추가
+### 소스 스키마에 필드 그룹 추가
 
-믹싱을 만든 후에는 `/tenant/schemas/{SCHEMA_ID}` 끝점에 PATCH 요청을 하여 소스 스키마에 추가할 수 있습니다.
+필드 그룹을 만든 후에는 `/tenant/schemas/{SCHEMA_ID}` 끝점에 PATCH 요청을 하여 소스 스키마에 추가할 수 있습니다.
 
 **API 형식**
 
@@ -249,7 +249,7 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 **요청**
 
-다음 요청은 &quot;[!DNL Favorite Hotel]&quot; 믹싱을 &quot;[!DNL Loyalty Members]&quot; 스키마에 추가합니다.
+다음 요청은 &quot;[!DNL Favorite Hotel]&quot; 필드 그룹을 &quot;[!DNL Loyalty Members]&quot; 스키마에 추가합니다.
 
 ```shell
 curl -X PATCH \
@@ -264,7 +264,7 @@ curl -X PATCH \
       "op": "add", 
       "path": "/allOf/-", 
       "value":  {
-        "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/3387945212ad76ee59b6d2b964afb220"
+        "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/3387945212ad76ee59b6d2b964afb220"
       }
     }
   ]'
@@ -273,12 +273,12 @@ curl -X PATCH \
 | 속성 | 설명 |
 | --- | --- |
 | `op` | 수행할 PATCH 작업입니다. 이 요청은 `add` 작업을 사용합니다. |
-| `path` | 새 리소스를 추가할 스키마 필드의 경로입니다. 스키마에 혼합을 추가할 때 값은 &quot;/allOf/-&quot;여야 합니다. |
-| `value.$ref` | 추가할 혼합의 `$id`. |
+| `path` | 새 리소스를 추가할 스키마 필드의 경로입니다. 필드 그룹을 스키마에 추가할 때 값은 &quot;/allOf/-&quot;여야 합니다. |
+| `value.$ref` | 추가할 필드 그룹의 `$id` |
 
 **응답**
 
-성공적인 응답은 업데이트된 스키마의 세부 정보를 반환합니다. 이 세부 정보에는 이제 `allOf` 배열 아래에 추가된 믹스의 `$ref` 값이 포함됩니다.
+성공적인 응답은 업데이트된 스키마의 세부 정보를 반환합니다. 이 세부 정보에는 이제 `allOf` 배열 아래에 추가된 필드 그룹의 `$ref` 값이 포함됩니다.
 
 ```json
 {
@@ -300,13 +300,13 @@ curl -X PATCH \
             "$ref": "https://ns.adobe.com/xdm/context/profile-personal-details"
         },
         {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/ec16dfa484358f80478b75cde8c430d3"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/ec16dfa484358f80478b75cde8c430d3"
         },
         {
             "$ref": "https://ns.adobe.com/xdm/context/identitymap"
         },
         {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/3387945212ad76ee59b6d2b964afb220"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/3387945212ad76ee59b6d2b964afb220"
         }
     ],
     "meta:containerId": "tenant",
@@ -323,8 +323,8 @@ curl -X PATCH \
         "https://ns.adobe.com/xdm/common/auditable",
         "https://ns.adobe.com/xdm/context/profile-person-details",
         "https://ns.adobe.com/xdm/context/profile-personal-details",
-        "https://ns.adobe.com/{TENANT_ID}/mixins/ec16dfa484358f80478b75cde8c430d3",
-        "https://ns.adobe.com/{TENANT_ID}/mixins/61969bc646b66a6230a7e8840f4a4d33"
+        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/ec16dfa484358f80478b75cde8c430d3",
+        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/61969bc646b66a6230a7e8840f4a4d33"
     ],
     "meta:xdmType": "object",
     "meta:registryMetadata": {
