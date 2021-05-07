@@ -6,10 +6,10 @@ topic-legacy: overview
 description: Adobe 개인 정보 JavaScript 라이브러리를 사용하면 Privacy Service에서 사용할 데이터 주체 ID를 검색할 수 있습니다.
 exl-id: 757bf69e-25bf-4ef9-9787-3e74b213908a
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: b70e693b4ffeda561de4d4c8dd8fd1adeec489f7
 workflow-type: tm+mt
-source-wordcount: '944'
-ht-degree: 6%
+source-wordcount: '953'
+ht-degree: 5%
 
 ---
 
@@ -47,7 +47,7 @@ ht-degree: 6%
 [!DNL Privacy JS Library] 사용을 시작하려면 다음 방법 중 하나를 사용하여 컴퓨터에 설치해야 합니다.
 
 * 다음 명령을 실행하여 npm을 사용하여 설치합니다.`npm install @adobe/adobe-privacy`
-* `AdobePrivacy` 이름 아래에 있는 Adobe 시작 확장 사용
+* `AdobePrivacy` 이름 아래에 [Adobe Experience Platform Launch](https://adobe.com/go/launch_help_en)을(를) 사용하여 Adobe 개인 정보 보호 확장을 설치합니다.
 * [Experience Cloud GitHub 저장소에서 다운로드](https://github.com/Adobe-Marketing-Cloud/adobe-privacy)
 
 ## [!DNL Privacy JS Library] 인스턴스화
@@ -67,7 +67,7 @@ var adobePrivacy = new AdobePrivacy({
 
 ## 코드 샘플
 
-다음 코드 샘플은 [!DNL Launch] 또는 DTM을 사용하지 않는 경우에 몇 가지 일반적인 시나리오에 대해 [!DNL Privacy JS Library]을 사용하는 방법을 보여줍니다.
+다음 코드 샘플은 [!DNL Platform Launch]을(를) 사용하고 있지 않을 경우 몇 가지 일반적인 시나리오에 [!DNL Privacy JS Library]을 사용하는 방법을 보여 줍니다.
 
 ### ID 검색
 
