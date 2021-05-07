@@ -6,9 +6,9 @@ topic-legacy: overview
 description: 이 문서에서는 XDM(Experience Data Model) 스키마 및 Adobe Experience Platform에서 사용할 스키마를 작성하기 위한 기본 블록, 원칙 및 모범 사례에 대해 설명합니다.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '2502'
+source-wordcount: '2511'
 ht-degree: 1%
 
 ---
@@ -193,26 +193,26 @@ Experience Platform에서 ID로 표시된 XDM 필드는 여러 데이터 소스�
 
 스키마를 디자인할 때 관계형 데이터베이스 테이블의 모든 기본 키는 기본 ID에 대해 가능성이 높습니다. 해당 ID 필드의 다른 예로는 고객 이메일 주소, 전화번호, 계정 ID 및 [ECID](../../identity-service/ecid.md)가 있습니다.
 
-### Adobe 응용 프로그램 혼합
+### Adobe 응용 프로그램 스키마 필드 그룹
 
-Experience Platform은 다음 Adobe 응용 프로그램과 관련된 데이터를 캡처하기 위해 즉시 사용 가능한 여러 XDM 믹스를 제공합니다.
+Experience Platform은 다음 Adobe 응용 프로그램과 관련된 데이터를 캡처하기 위해 즉시 사용 가능한 여러 XDM 스키마 필드 그룹을 제공합니다.
 
 * Adobe Analytics
 * Adobe Audience Manager
 * Adobe Campaign
 * Adobe Target
 
-예를 들어 [[!UICONTROL Adobe Analytics ExperienceEvent Template Mixin]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json)에서는 [!DNL Analytics] 관련 필드를 XDM 스키마에 매핑할 수 있습니다. 작업 중인 Adobe 응용 프로그램에 따라 스키마에 Adobe 제공 믹스를 사용해야 합니다.
+예를 들어 [[!UICONTROL Adobe Analytics ExperienceEvent Template] 필드 그룹](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json)에서는 [!DNL Analytics] 특정 필드를 XDM 스키마에 매핑할 수 있습니다. 작업 중인 Adobe 응용 프로그램에 따라 스키마에 Adobe 제공 필드 그룹을 사용해야 합니다.
 
-<img src="../images/best-practices/analytics-mixin.png" width="700"><br>
+<img src="../images/best-practices/analytics-field-group.png" width="700"><br>
 
-Adobe 응용 프로그램 믹스는 개별 고객에 대한 표준 ID 값을 매핑하는 시스템 생성 읽기 전용 개체인 `identityMap` 필드를 사용하여 기본 ID를 자동으로 할당합니다.
+Adobe 응용 프로그램 필드 그룹은 `identityMap` 필드를 사용하여 기본 기본 ID를 자동으로 할당합니다. 이 필드는 개별 고객에 대한 표준 ID 값을 매핑하는 시스템에서 생성된 읽기 전용 개체입니다.
 
 Adobe Analytics의 경우 ECID가 기본 기본 ID입니다. 고객이 ECID 값을 제공하지 않으면 기본 ID가 대신 AAID로 기본 설정됩니다.
 
 >[!IMPORTANT]
 >
->Adobe 응용 프로그램 혼합을 사용할 때는 다른 필드를 기본 ID로 표시하지 않아야 합니다. ID로 표시해야 하는 추가 속성이 있는 경우 이 필드를 보조 ID로 할당해야 합니다.
+>Adobe 응용 프로그램 필드 그룹을 사용할 때는 다른 필드를 기본 ID로 표시하지 않아야 합니다. ID로 표시해야 하는 추가 속성이 있는 경우 이 필드를 보조 ID로 할당해야 합니다.
 
 ## 다음 단계
 
