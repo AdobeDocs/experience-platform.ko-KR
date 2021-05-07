@@ -6,9 +6,9 @@ type: Documentation
 description: 계산된 속성은 이벤트 수준 데이터를 프로필 수준 속성으로 집계하는 함수입니다. 이러한 함수는 세분화, 활성화 및 개인화 간에 사용할 수 있도록 자동으로 계산됩니다.
 exl-id: 13878363-589d-4a3c-811c-21d014a5f3c2
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '723'
+source-wordcount: '725'
 ht-degree: 1%
 
 ---
@@ -55,4 +55,4 @@ Adobe Experience Platform을 사용하면 [!DNL Real-time Customer Profiles]을 
 
 종속성이 감지되지 않았기 때문에 세그먼트 정의가 평가될 때마다 Experience Platform은 연결된 계산된 속성을 자동으로 평가하지 않습니다.
 
-또는 계산된 속성 만들기는 기존 속성과 충돌하지 않는 새 계산된 속성을 추가하는 특정 믹싱을 통해 관리할 수 있습니다. 또 다른 방법은 새 계산된 속성에 대한 올바른 종속성 추적을 사용하여 세그먼트를 다시 만드는 것입니다.
+또는 계산된 속성 만들기는 기존 속성과 충돌하지 않는 새 계산된 속성을 추가하는 특정 스키마 필드 그룹을 통해 관리할 수 있습니다. 또 다른 방법은 새 계산된 속성에 대한 올바른 종속성 추적을 사용하여 세그먼트를 다시 만드는 것입니다.
