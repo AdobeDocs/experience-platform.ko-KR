@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Adobe Experience Platform을 사용하면 고객은 실시간 고객 프로필] 내에서 데이터의 사용 및 저장과 관련된 옵트아웃 요청을 보낼 수 있습니다. 이러한 수신 거부 요청은 캘리포니아 주민들에게 개인 데이터를 액세스 및 삭제할 권리, 그리고 개인 데이터가 판매 또는 공개(및 누구에게)되었는지 알 수 있는 권리를 제공하는 CPA(California Consumer Privacy Act)의 일부입니다.
 exl-id: fe851ce3-60db-4984-a73c-f9c5964bfbad
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '1013'
+source-wordcount: '1030'
 ht-degree: 0%
 
 ---
@@ -28,33 +28,33 @@ Adobe Experience Platform을 사용하면 고객이 [!DNL Real-time Customer Pro
 - [[!DNL Experience Data Model (XDM)]](../xdm/home.md):Platform(플랫폼)이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
 - [[!DNL Adobe Experience Platform Privacy Service]](../privacy-service/home.md):조직에서 내부 고객 데이터와 관련된 데이터 개인 정보 보호 규정 준수를 자동화할 수  [!DNL Platform]있습니다.
 
-## 옵트아웃 믹싱
+## 옵트아웃 스키마 필드 그룹
 
-CPA 옵트아웃 요청을 승인하려면 조합 스키마의 일부인 스키마 중 하나에 필요한 [!DNL Experience Data Model](XDM) 옵트아웃 필드를 포함해야 합니다. 스키마에 옵트아웃 필드를 추가하는 데 사용할 수 있는 2개의 혼합이 있으며, 각 믹스는 다음 섹션에서 보다 자세히 다룹니다.
+CPA 옵트아웃 요청을 승인하려면 조합 스키마의 일부인 스키마 중 하나에 필요한 [!DNL Experience Data Model](XDM) 옵트아웃 필드를 포함해야 합니다. 스키마에 옵트아웃 필드를 추가하는 데 사용할 수 있는 2개의 스키마 필드 그룹이 있습니다. 각 스키마는 다음 섹션에서 더 자세히 다룹니다.
 
 - [프로필 개인 정보](#profile-privacy):다양한 옵트아웃 유형(일반 또는 영업/공유)을 캡처하는 데 사용됩니다.
 - [프로필 환경 설정 세부 정보](#profile-preferences-details):특정 XDM 채널에 대한 옵트아웃 요청을 캡처하는 데 사용됩니다.
 
-스키마에 혼합을 추가하는 방법에 대한 단계별 지침은 다음 XDM 설명서의 &quot;믹서 추가&quot; 섹션을 참조하십시오.
+스키마에 필드 그룹을 추가하는 방법에 대한 단계별 지침은 다음 XDM 설명서의 &quot;필드 그룹 추가&quot; 섹션을 참조하십시오.
 - [스키마 레지스트리 API 자습서입니다](../xdm/api/getting-started.md).:스키마 레지스트리 API를 사용하여 스키마 빌드.
 - [스키마 편집기 자습서](../xdm/tutorials/create-schema-ui.md):플랫폼 사용자 인터페이스를 사용하여 스키마 작성
 
-다음은 사용자 인터페이스에서 스키마에 추가된 옵트아웃 믹스를 보여주는 예제 이미지입니다.
+다음은 사용자 인터페이스에서 스키마에 추가된 옵트아웃 필드 그룹을 보여주는 예제 이미지입니다.
 
-![](images/opt-outs/opt-out-mixins-user-interface.png)
+![](images/opt-outs/opt-out-field-groups-user-interface.png)
 
-각 혼합의 구조와 스키마에 기여하는 필드에 대한 설명은 다음 섹션에 자세히 설명되어 있습니다.
+각 필드 그룹의 구조와 스키마에 기여하는 필드에 대한 설명은 다음 섹션에 자세히 설명되어 있습니다.
 
 ### [!DNL Profile Privacy] {#profile-privacy}
 
-[!DNL Profile Privacy] 믹싱을 사용하면 고객으로부터 2가지 유형의 CPA 옵트아웃 요청을 캡처할 수 있습니다.
+[!DNL Profile Privacy] 필드 그룹을 사용하면 고객으로부터 2가지 유형의 CPA 옵트아웃 요청을 캡처할 수 있습니다.
 
 1. 일반 옵트아웃
 2. 판매/공유 옵트아웃
 
 ![](images/opt-outs/profile-privacy.png)
 
-[!DNL Profile Privacy] 믹스에는 다음 필드가 포함되어 있습니다.
+[!DNL Profile Privacy] 필드 그룹에는 다음 필드가 포함되어 있습니다.
 
 - 개인 정보 옵트아웃(`privacyOptOuts`):옵트아웃 개체 목록이 포함된 배열입니다.
 - 옵트아웃 유형(`optOutType`):옵트아웃 유형입니다. 이 필드는 두 개의 가능한 값을 가진 열거형입니다.
@@ -67,15 +67,15 @@ CPA 옵트아웃 요청을 승인하려면 조합 스키마의 일부인 스키�
    - 옵트인(`in`):고객이 선택한 상태입니다.
 - 옵트아웃 타임스탬프(`timestamp`):수신된 옵트아웃 신호의 타임스탬프.
 
-[!DNL Profile Privacy] 혼합의 전체 구조를 보려면 [XDM 공개 GitHub 리포지토리](https://github.com/adobe/xdm/blob/master/schemas/context/profile-privacy.schema.json)를 참조하거나 플랫폼 UI를 사용하여 믹싱을 미리 보십시오.
+[!DNL Profile Privacy] 필드 그룹의 전체 구조를 보려면 [XDM 공개 GitHub 리포지토리](https://github.com/adobe/xdm/blob/master/schemas/context/profile-privacy.schema.json)를 참조하거나 플랫폼 UI를 사용하여 필드 그룹을 미리 보십시오.
 
 ### [!DNL Profile Preferences Details] {#profile-preferences-details}
 
-[!DNL Profile Preferences Details] 믹스인은 고객 프로파일에 대한 환경 설정(예: 이메일 형식, 기본 언어 및 표준 시간대)을 나타내는 여러 필드를 제공합니다. 이 믹스에 포함된 필드 중 하나인 OptInOut(`optInOut`)은 개별 채널에 대해 옵트아웃 값을 설정할 수 있도록 허용합니다.
+[!DNL Profile Preferences Details] 필드 그룹은 고객 프로파일에 대한 환경 설정(예: 이메일 형식, 기본 언어 및 표준 시간대)을 나타내는 여러 필드를 제공합니다. 이 필드 그룹에 포함된 필드 중 하나인 OptInOut(`optInOut`)은 개별 채널에 대해 옵트아웃 값을 설정할 수 있도록 허용합니다.
 
 ![](images/opt-outs/profile-preferences-details.png)
 
-[!DNL Profile Preferences Details] 믹스에는 옵트아웃과 관련된 다음 필드가 포함되어 있습니다.
+[!DNL Profile Preferences Details] 필드 그룹에는 옵트아웃과 관련된 다음 필드가 포함되어 있습니다.
 
 - OptInOut(`optInOut`):각 키가 통신 채널에 대해 유효하고 알려진 URI와 각 채널에 대한 옵트아웃의 활성 상태를 나타내는 객체입니다. 각 채널에는 다음 4가지 값 중 하나를 사용할 수 있습니다.
    - 제공되지 않음(`not_provided`):이 채널에 대해 옵트아웃 요청이 제공되지 않았습니다.
@@ -100,7 +100,7 @@ CPA 옵트아웃 요청을 승인하려면 조합 스키마의 일부인 스키�
 }
 ```
 
-프로필 환경 설정 세부 정보 믹싱의 전체 구조를 보려면 [XDM 공개 GitHub 리포지토리](https://github.com/adobe/xdm/blob/master/schemas/context/profile-preferences-details.schema.json)을 방문하거나 [!DNL Platform] UI를 사용하여 믹싱을 미리 보십시오.
+프로필 환경 설정 세부 사항 필드 그룹의 전체 구조를 보려면 [XDM 공개 GitHub 리포지토리](https://github.com/adobe/xdm/blob/master/schemas/context/profile-preferences-details.schema.json)을 방문하거나 [!DNL Platform] UI를 사용하여 필드 그룹을 미리 보십시오.
 
 ## 세그멘테이션에서 옵트아웃 처리
 
