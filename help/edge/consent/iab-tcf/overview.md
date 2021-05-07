@@ -1,15 +1,15 @@
 ---
 title: Adobe Experience Platform 웹 SDK에서 IAB TCF 2.0 지원
 description: Adobe Experience Platform 웹 SDK를 사용하여 IAB TCF 2.0 동의 환경 설정을 지원하는 방법에 대해 알아봅니다.
-keywords: 동의;setConsent;프로필 개인 정보 혼합;경험 이벤트 개인 정보 혼합;개인 정보 혼합;IAB TCF 2.0;실시간 CDP;실시간 고객 데이터 프로필
+keywords: 동의;setConsent;프로필 개인 정보 필드 그룹;경험 이벤트 개인 정보 필드 그룹;개인 정보 필드 그룹;IAB TCF 2.0;실시간 CDP;실시간 고객 데이터 프로필
+exl-id: 78e728f4-1604-40bf-9e21-a056024bbc98
 translation-type: tm+mt
-source-git-commit: 1c6238a0cf72230e019fd10d9a72f30444bd9fb9
+source-git-commit: 7d7502b238f96eda1a15b622ba10bbccc289b725
 workflow-type: tm+mt
-source-wordcount: '878'
+source-wordcount: '883'
 ht-degree: 0%
 
 ---
-
 
 # Adobe Experience Platform 웹 SDK에서 IAB TCF 2.0 지원
 
@@ -31,7 +31,7 @@ IAB TCF 2.0을 사용하여 웹 SDK를 구현하려면 XDM(Experience Data Model
 SDK를 사용하여 Adobe Experience Platform에 동의 데이터를 전송하려면 다음이 필요합니다.
 
 - [!DNL XDM Individual Profile] 클래스를 기반으로 하며 [!DNL Real-time Customer Profile]에서 사용할 수 있도록 TCF 2.0 동의 필드를 포함하는 스키마가 있는 데이터 집합입니다.
-- Platform(플랫폼)과 위에 언급된 프로필 사용 데이터 세트에 대해 설정된 에지 구성
+- Platform(플랫폼) 및 위에 언급된 프로필 사용 데이터 세트에 대해 설정된 Edge 구성
 
 필요한 데이터 세트 및 가장자리 구성을 만드는 방법에 대한 지침은 [TCF 2.0 준수](../../../landing/governance-privacy-security/consent/iab/overview.md)에 대한 안내서를 참조하십시오.
 
@@ -49,7 +49,7 @@ Adobe Audience Manager(AAM)에는 다운스트림 파트너에게 고객 개인 
 
 이벤트에 대한 동의 정보를 수집하려면 다음이 필요합니다.
 
-- [!DNL Experience Event] 개인 정보 혼합이 포함된 [!DNL XDM Experience Event] 클래스를 기반으로 하는 데이터 집합입니다.
+- [!DNL Experience Event] 개인 정보 스키마 필드 그룹이 있는 [!DNL XDM Experience Event] 클래스를 기반으로 하는 데이터 집합입니다.
 - 위의 [!DNL XDM Experience Event] 데이터 집합으로 설정된 에지 구성
 
 XDM 경험 이벤트를 분석 히트로 변환하는 방법에 대한 자세한 내용은 [분석 개요](../../data-collection/adobe-analytics/analytics-overview.md) 설명서를 읽으십시오.
