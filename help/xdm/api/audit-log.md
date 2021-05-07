@@ -6,16 +6,16 @@ description: 스키마 레지스트리 API의 /audition 끝점을 사용하면 �
 topic-legacy: developer guide
 exl-id: 8d33ae7c-0aa4-4f38-a183-a2ff1801e291
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '396'
+source-wordcount: '400'
 ht-degree: 2%
 
 ---
 
 # 감사 로그 끝점
 
-각 XDM(경험 데이터 모델) 리소스에 대해 [!DNL Schema Registry]은 다른 업데이트 사이에 발생한 모든 변경 내용의 로그를 유지 관리합니다. [!DNL Schema Registry] API의 `/auditlog` 끝점을 사용하면 ID로 지정한 클래스, 믹싱, 데이터 유형 또는 스키마에 대한 감사 로그를 검색할 수 있습니다.
+각 XDM(경험 데이터 모델) 리소스에 대해 [!DNL Schema Registry]은 다른 업데이트 사이에 발생한 모든 변경 내용의 로그를 유지 관리합니다. [!DNL Schema Registry] API의 `/auditlog` 끝점을 사용하면 ID로 지정한 클래스, 스키마 필드 그룹, 데이터 유형 또는 스키마에 대한 감사 로그를 검색할 수 있습니다.
 
 ## 시작하기
 
@@ -25,7 +25,7 @@ ht-degree: 2%
 
 ## 리소스에 대한 감사 로그 검색
 
-`/auditlog` 끝점에 대한 GET 요청 경로에 리소스 ID를 지정하여 스키마 라이브러리 내의 모든 클래스, 믹싱, 데이터 유형 또는 스키마에 대한 감사 로그를 검색할 수 있습니다.
+`/auditlog` 끝점에 대한 GET 요청 경로에 리소스 ID를 지정하여 스키마 라이브러리 내의 모든 클래스, 필드 그룹, 데이터 유형 또는 스키마에 대한 감사 로그를 검색할 수 있습니다.
 
 **API 형식**
 
@@ -39,11 +39,11 @@ GET /rpc/auditlog/{RESOURCE_ID}
 
 **요청**
 
-다음 요청은 `Restaurant` 믹싱에 대한 감사 로그를 검색합니다.
+다음 요청은 `Restaurant` 필드 그룹에 대한 감사 로그를 검색합니다.
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/foundation/schemaregistry/rpc/auditlog/_{TENANT_ID}.mixins.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9 \
+  https://platform.adobe.io/data/foundation/schemaregistry/rpc/auditlog/_{TENANT_ID}.fieldgroups.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -57,11 +57,11 @@ curl -X GET \
 ```json
 [
   {
-    "id": "https://ns.adobe.com/{TENANT_ID}/mixins/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+    "id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
     "auditTrails": [
       {
-        "id": "https://ns.adobe.com/{TENANT_ID}/mixins/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-        "xdmType": "mixins",
+        "id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+        "xdmType": "fieldgroups",
         "action": "add",
         "path": "/definitions/customFields/properties/_{TENANT_ID}/properties/brand",
         "value": {
@@ -73,8 +73,8 @@ curl -X GET \
         }
       },
       {
-        "id": "https://ns.adobe.com/{TENANT_ID}/mixins/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-        "xdmType": "mixins",
+        "id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+        "xdmType": "fieldgroups",
         "action": "add",
         "path": "/meta:usageCount",
         "value": 0
