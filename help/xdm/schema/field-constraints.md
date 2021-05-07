@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;홈;인기 항목;스키마;스키마;믹신;믹싱;데이터 유형;데이터 유형;데이터 유형;데이터 유형;데이터 유형;스키마 디자인;데이터 유형;데이터 유형;데이터 유형;데이터 유형;스키마;스키마;스키마 디자인;맵;맵;맵;스키마;home;publicin;mixin;mixin;data types;data;
+keywords: Experience Platform;홈;인기 항목;스키마;필드 그룹;필드 그룹;필드 그룹;필드 그룹;데이터 유형;데이터 유형;데이터 유형;데이터 유형;데이터 유형;스키마 디자인;데이터 유형;데이터 유형;데이터 유형;스키마;스키마;스키마 디자인;맵;맵;맵;Field;
 solution: Experience Platform
 title: XDM 필드 유형 제한
 topic-legacy: overview
 description: 매핑할 수 있는 다른 직렬화 형식 및 API에서 고유한 필드 유형을 정의하는 방법을 포함하여, XDM(경험 데이터 모델)의 필드 유형 제약 조건에 대한 참조입니다.
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 3985ba8f46a62e8d9ea8b1f084198b245318a24f
 workflow-type: tm+mt
-source-wordcount: '1054'
+source-wordcount: '1063'
 ht-degree: 1%
 
 ---
@@ -19,9 +19,9 @@ XDM(Experience Data Model) 스키마에서 필드의 유형은 필드에 포함�
 
 ## 시작하기
 
-이 안내서를 사용하기 전에 스키마 컴포지션](./composition.md)의 [기본 사항을 검토하여 XDM 스키마, 클래스 및 혼합에 대한 소개를 확인하십시오.
+이 안내서를 사용하기 전에 스키마 구성](./composition.md)의 [기본 사항을 검토하여 XDM 스키마, 클래스 및 스키마 필드 그룹에 대한 소개를 확인하십시오.
 
-API에서 고유한 필드 유형을 정의할 계획인 경우 사용자 정의 필드를 포함할 믹싱 및 데이터 유형을 만드는 방법을 알려면 [스키마 레지스트리 개발자 가이드](../api/getting-started.md)로 시작하는 것이 좋습니다. Experience Platform UI를 사용하여 스키마를 만드는 경우, 사용자 정의 믹싱 및 데이터 유형 내에서 정의하는 필드에 제한을 구현하는 방법을 알아보려면 [UI](../ui/fields/overview.md)의 필드 정의 가이드를 참조하십시오.
+API에서 고유한 필드 유형을 정의할 계획이라면 사용자 정의 필드를 포함할 필드 그룹 및 데이터 유형을 만드는 방법을 알아보려면 [스키마 레지스트리 개발자 가이드](../api/getting-started.md)로 시작하는 것이 좋습니다. Experience Platform UI를 사용하여 스키마를 만드는 경우, 사용자 정의 필드 그룹 및 데이터 유형 내에서 정의하는 필드에 대한 제한 사항을 구현하는 방법을 알아보려면 [UI](../ui/fields/overview.md)의 필드 정의 가이드를 참조하십시오.
 
 ## 기본 구조 및 예
 
@@ -214,7 +214,7 @@ XDM은 JSON 스키마 상단에 구축되므로 XDM 필드는 유형을 정의�
 
 다음 표에서는 선택적 속성이 있는 필드 유형을 포함하여 다양한 필드 유형을 정의하는 데 적합한 서식에 대해 대략적으로 설명합니다. 선택적 속성 및 유형별 키워드에 대한 자세한 내용은 [JSON 스키마 설명서](https://json-schema.org/understanding-json-schema/reference/type.html)를 통해 확인할 수 있습니다.
 
-시작하려면 원하는 필드 유형을 찾아 [mixin](../api/mixins.md#create) 또는 [데이터 유형 만들기 API 요청을 작성하기 위해 제공된 샘플 코드를 사용하십시오](../api/data-types.md#create).
+시작하려면 원하는 필드 유형을 찾고 [필드 그룹](../api/field-groups.md#create) 또는 [데이터 유형 만들기](../api/data-types.md#create)에 대한 API 요청을 작성하기 위해 제공된 샘플 코드를 사용하십시오.
 
 <table style="table-layout:auto">
   <tr>
