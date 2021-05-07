@@ -1,19 +1,23 @@
 ---
-keywords: Experience Platform;홈;인기 항목;XDM;XDM;XDM 시스템;XDM 개별 프로필;XDM ExperienceEvent;XDM 경험 이벤트;경험 이벤트;경험 이벤트;믹싱;믹싱;혼합;경험 이벤트;XDM 경험 이벤트;XDM 경험 이벤트;XDM 경험 이벤트;경험 이벤트;경험;이벤트;XDM 경험;경험 XDM 경험 이벤트;경험 데이터 모델;경험 데이터 모델;경험 데이터 모델;데이터 모델;데이터 모델;스키마 레지스트리;스키마 라이브러리;스키마 라이브러리;스키마 라이브러리;스키마 데이터;기록 데이터;시간 시리즈;시간 시리즈
+keywords: Experience Platform;홈;인기 항목;XDM;XDM;XDM 시스템;XDM 개별 프로필;XDM ExperienceEvent;XDM 경험 이벤트;경험 이벤트;경험 이벤트;필드 그룹;필드 그룹;필드 그룹;필드 그룹;필드 그룹;경험 이벤트;XDM 경험 이벤트;XDM 경험 이벤트;경험 이벤트;경험 이벤트;경험;experienceEvent;experienceEvent;experienceExperienceEvent;experienceExperienceEvent;experienceEvent;experienceEvent;experienceEvent;experienceEvent;experienceExperienceExperienceEvent;experienceEvent;experienceEvent;experienceEvent;experience XDM 경험 이벤트;경험 데이터 모델;경험 데이터 모델;경험 데이터 모델;데이터 모델;데이터 모델;스키마 레지스트리;스키마 라이브러리;스키마 라이브러리;스키마 라이브러리;스키마 데이터;기록 데이터;시간 시리즈;시간 시리즈
 solution: Experience Platform
 title: XDM 시스템 개요
 topic-legacy: overview
 description: 표준화 및 상호 운용성은 Adobe Experience Platform의 핵심 개념입니다. Adobe을 기반으로 하는 XDM(Experience Data Model)은 고객 경험 데이터를 표준화하고 고객 경험 관리를 위한 스키마를 정의하려는 노력의 일환입니다.
 exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 58f6c5e3ac77070807f7486bf429493d14fdda9e
 workflow-type: tm+mt
-source-wordcount: '1642'
+source-wordcount: '1694'
 ht-degree: 1%
 
 ---
 
 # XDM 시스템 개요
+
+>[!NOTE]
+>
+>&quot;mixin&quot;이라는 용어가 이해를 촉진하기 위해 &quot;스키마 필드 그룹&quot;으로 업데이트되었습니다. 필드 그룹은 비즈니스 사용 사례를 지원하는 재사용 가능한 필드 세트입니다. 이제 이 변경 사항은 스키마 레지스트리 API, Adobe Experience Platform UI 및 모든 플랫폼 문서에 반영됩니다.
 
 표준화 및 상호 운용성은 Adobe Experience Platform의 핵심 개념입니다. [!DNL Experience Data Model] (XDM)은 Adobe을 기반으로 고객 경험 데이터를 표준화하고 고객 경험 관리를 위한 스키마를 정의하는 것입니다.
 
@@ -27,7 +31,7 @@ XDM은 [!DNL Experience Platform] 제공 Adobe Experience Cloud이 올바른 고
 
 [!DNL Experience Platform] 스키마를 사용하여 데이터의 구조를 일관되고 재사용 가능한 방식으로 설명합니다. 여러 시스템에서 데이터를 일관되게 정의하면 의미를 쉽게 유지할 수 있으므로 데이터의 가치를 얻을 수 있습니다.
 
-데이터를 [!DNL Platform]으로 인제스트하려면 데이터 구조를 설명하고 각 필드에 포함할 수 있는 데이터 유형에 대한 제약 조건을 제공하도록 스키마를 구성해야 합니다. 스키마는 기본 클래스와 0개 이상의 혼합으로 구성됩니다.
+데이터를 [!DNL Platform]으로 인제스트하려면 데이터 구조를 설명하고 각 필드에 포함할 수 있는 데이터 유형에 대한 제약 조건을 제공하도록 스키마를 구성해야 합니다. 스키마는 기본 클래스와 0개 이상의 스키마 필드 그룹으로 구성됩니다.
 
 디자인 원칙 및 우수 사례를 포함하여 스키마 구성 모델에 대한 자세한 내용은 스키마 컴포지션](schema/composition.md)의 [기본 사항을 참조하십시오.
 
