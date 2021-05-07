@@ -6,20 +6,20 @@ description: Experience Platform 사용자 인터페이스에서 XDM 필드를 �
 topic-legacy: user guide
 exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '1236'
+source-wordcount: '1250'
 ht-degree: 3%
 
 ---
 
 # UI에서 XDM 필드 정의
 
-Adobe Experience Platform 사용자 인터페이스의 [!DNL Schema Editor]을 사용하면 XDM(사용자 지정 경험 데이터 모델) 클래스 및 혼합에서 자신의 필드를 정의할 수 있습니다. 이 안내서에서는 각 필드 유형에 대해 사용 가능한 구성 옵션을 포함하여 UI에서 XDM 필드를 정의하는 단계를 설명합니다.
+Adobe Experience Platform 사용자 인터페이스의 [!DNL Schema Editor]을 사용하면 XDM(사용자 지정 경험 데이터 모델) 클래스 및 스키마 필드 그룹 내에서 자신의 필드를 정의할 수 있습니다. 이 안내서에서는 각 필드 유형에 대해 사용 가능한 구성 옵션을 포함하여 UI에서 XDM 필드를 정의하는 단계를 설명합니다.
 
 ## 전제 조건
 
-이 가이드를 사용하려면 XDM 시스템에 대한 작업 이해가 필요합니다. Experience Platform 에코시스템 내의 XDM 역할에 대한 소개를 보려면 [XDM 개요](../../home.md), 클래스 및 혼합이 XDM 스키마에 필드를 기여하는 방법에 대해 알아보려면 [스키마 작성 기본 사항](../../schema/composition.md)을 참조하십시오.
+이 가이드를 사용하려면 XDM 시스템에 대한 작업 이해가 필요합니다. Experience Platform 에코시스템 내의 XDM 역할에 대한 소개를 보려면 [XDM 개요](../../home.md), 클래스 및 필드 그룹이 XDM 스키마에 필드를 기여하는 방법에 대해 알아보려면 [스키마 구성](../../schema/composition.md)의 기본 사항을 참조하십시오.
 
 이 안내서는 필요하지 않지만 [!DNL Schema Editor]의 다양한 기능에 익숙해지려면 [UI](../../tutorials/create-schema-ui.md)에서 스키마 작성의 자습서를 따르는 것이 좋습니다.
 
@@ -27,13 +27,13 @@ Adobe Experience Platform 사용자 인터페이스의 [!DNL Schema Editor]을 �
 
 UI에서 새 XDM 필드를 정의하려면 먼저 [!DNL Schema Editor] 내에 스키마를 열어야 합니다. [!DNL Schema Library]에서 현재 사용할 수 있는 스키마에 따라 [새 스키마](../resources/schemas.md#create) 또는 [편집할 기존 스키마를 선택할 수 있습니다](../resources/schemas.md#edit).
 
-[!DNL Schema Editor]이(가) 열려 있으면 왼쪽 레일을 사용하여 필드를 정의할 클래스나 믹싱을 선택합니다. 리소스가 조직에서 정의한 사용자 지정 리소스인 경우 필드를 추가하거나 편집할 수 있는 컨트롤이 캔버스에 표시됩니다. 이러한 컨트롤은 스키마 이름 옆에 나타나고 선택한 클래스 또는 mixin 아래에 정의된 모든 개체 유형 필드도 나타납니다.
+[!DNL Schema Editor]이(가) 열려 있으면 왼쪽 레일을 사용하여 필드를 정의할 클래스 또는 필드 그룹을 선택합니다. 리소스가 조직에서 정의한 사용자 지정 리소스인 경우 필드를 추가하거나 편집할 수 있는 컨트롤이 캔버스에 표시됩니다. 이러한 컨트롤은 스키마 이름 옆에 나타나고 선택한 클래스 또는 필드 그룹 아래에 정의된 개체 유형 필드도 나타납니다.
 
 ![](../../images/ui/fields/overview/select-resource.png)
 
 >[!NOTE]
 >
->선택한 클래스 또는 혼합이 Adobe에서 제공하는 핵심 리소스이면 편집할 수 없으므로 위에 표시된 컨트롤이 나타나지 않습니다. 필드를 추가하려는 스키마가 핵심 XDM 클래스를 기반으로 하고 사용자 정의 믹스를 포함하지 않는 경우 [새 믹신](../resources/mixins.md#create)을 만들어 대신 스키마에 추가할 수 있습니다.
+>선택하는 클래스 또는 필드 그룹이 Adobe에서 제공하는 핵심 리소스이면 편집할 수 없으므로 위에 표시된 컨트롤이 나타나지 않습니다. 필드를 추가하려는 스키마가 핵심 XDM 클래스를 기반으로 하고 사용자 정의 필드 그룹을 포함하지 않는 경우 [새 필드 그룹](../resources/field-groups.md#create)을 만들어 대신 스키마에 추가할 수 있습니다.
 
 리소스에 새 필드를 추가하려면 캔버스에서 스키마의 이름 옆에 있는 **더하기(+)** 아이콘을 선택하거나 아래의 필드를 정의할 객체 유형 필드 옆에 있는 아이콘을 선택합니다.
 
@@ -41,7 +41,7 @@ UI에서 새 XDM 필드를 정의하려면 먼저 [!DNL Schema Editor] 내에 �
 
 ## 리소스 {#define}에 대한 필드 정의
 
-**plus (+)** 아이콘을 선택하면 고유한 테넌트 ID에 이름이 지정된 루트 수준 개체(아래 예에서 `_tenantId`로 표시됨) 내에 있는 캔버스에 **[!UICONTROL New field]**&#x200B;가 나타납니다. 사용자 정의 클래스 및 혼합을 통해 스키마에 추가되는 모든 필드는 Adobe에서 제공하는 클래스 및 혼합에서 다른 필드와의 충돌을 방지하기 위해 이 네임스페이스 내에 자동으로 배치됩니다.
+**plus (+)** 아이콘을 선택하면 고유한 테넌트 ID에 이름이 지정된 루트 수준 개체(아래 예에서 `_tenantId`로 표시됨) 내에 있는 캔버스에 **[!UICONTROL New field]**&#x200B;가 나타납니다. 사용자 정의 클래스 및 필드 그룹을 통해 스키마에 추가되는 모든 필드는 Adobe에서 제공하는 클래스 및 필드 그룹에서 다른 필드와 충돌을 방지하기 위해 이 네임스페이스 내에 자동으로 배치됩니다.
 
 ![](../../images/ui/fields/overview/new-field.png)
 
@@ -69,11 +69,11 @@ UI에서 새 XDM 필드를 정의하려면 먼저 [!DNL Schema Editor] 내에 �
 
 ![](../../images/ui/fields/overview/field-added.png)
 
-위 단계를 계속 수행하여 스키마에 필드를 더 추가할 수 있습니다. 스키마가 저장되면 기본 클래스와 믹스도 변경 내용이 있는 경우 저장됩니다.
+위 단계를 계속 수행하여 스키마에 필드를 더 추가할 수 있습니다. 스키마가 저장되면 기본 클래스와 필드 그룹도 변경 사항이 있는 경우 저장됩니다.
 
 >[!NOTE]
 >
->한 스키마의 mixins 또는 클래스에 대한 모든 변경 사항은 해당 스키마를 사용하는 다른 모든 스키마에 반영됩니다.
+>필드 그룹 또는 하나의 스키마의 클래스에 대한 모든 변경 사항은 해당 스키마를 사용하는 다른 모든 스키마에 반영됩니다.
 
 ## 유형별 필드 속성 {#type-specific-properties}
 
@@ -107,6 +107,6 @@ UI에서 새 XDM 필드를 정의하려면 먼저 [!DNL Schema Editor] 내에 �
 
 ## 다음 단계
 
-이 안내서에서는 UI에서 XDM 필드를 정의하는 방법에 대한 개요를 제공했습니다. 클래스와 믹스를 사용하여 스키마에만 필드를 추가할 수 있습니다. UI에서 이러한 리소스를 관리하는 방법에 대한 자세한 내용은 [classes](../resources/classes.md) 및 [mixins](../resources/mixins.md)을(를) 만들고 편집하는 방법에 대한 가이드를 참조하십시오.
+이 안내서에서는 UI에서 XDM 필드를 정의하는 방법에 대한 개요를 제공했습니다. 클래스 및 필드 그룹을 사용하여 스키마에만 필드를 추가할 수 있습니다. UI에서 이러한 리소스를 관리하는 방법에 대한 자세한 내용은 [classes](../resources/classes.md) 및 [필드 그룹](../resources/field-groups.md)을(를) 만들고 편집하는 방법에 대한 가이드를 참조하십시오.
 
 [!UICONTROL Schemas] 작업 영역의 기능에 대한 자세한 내용은 [[!UICONTROL Schemas] 작업 영역 개요](../overview.md)를 참조하십시오.
