@@ -5,9 +5,9 @@ topic-legacy: overview
 description: 이 문서에서는 XDM(경험 데이터 모델)의 세그먼트 정의 클래스에 대한 개요를 제공합니다.
 exl-id: c0f7b04c-2266-4d08-89a1-67ba758a51a7
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '378'
+source-wordcount: '379'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->이 클래스는 세그먼트 정의 자체에 대한 정보를 캡처하는 데에만 사용해야 합니다. 프로필 데이터 내에서 세그먼트 멤버십 정보를 캡처하려면 [!UICONTROL XDM Individual Profile] 스키마에 [세그먼트 멤버십 세부 정보 혼합을 사용해야 합니다.](../mixins/profile/segmentation.md)
+>이 클래스는 세그먼트 정의 자체에 대한 정보를 캡처하는 데에만 사용해야 합니다. 프로필 데이터 내에서 세그먼트 멤버십 정보를 캡처하려면 [!UICONTROL XDM Individual Profile] 스키마에 [세그먼트 멤버십 세부 정보 필드 그룹](../field-groups/profile/segmentation.md)을 사용해야 합니다.
 
 ![](../images/classes/segment-definition.png)
 
