@@ -6,9 +6,9 @@ type: Documentation
 description: Adobe Experience Platform을 사용하면 여러 소스에서 수집한 데이터 조각을 결합하여 개별 고객을 전체적으로 확인할 수 있습니다. 이러한 데이터를 취합할 때 병합 정책은 Platform에서 데이터의 우선 순위를 정하는 방법과 데이터를 결합하여 통합 뷰를 생성하는 데 사용하는 규칙입니다.
 exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '2560'
+source-wordcount: '2569'
 ht-degree: 1%
 
 ---
@@ -752,19 +752,19 @@ curl -X DELETE \
 
 때때로 레코드를 주문하지 않으면 데이터를 채우거나 올바른 이벤트 순서를 유지하는 등 사용자 지정 타임스탬프를 제공하고 병합 정책이 시스템 타임스탬프가 아닌 사용자 지정 타임스탬프를 준수하도록 하는 등의 사용 사례가 있을 수 있습니다.
 
-사용자 지정 타임스탬프를 사용하려면 [[!DNL External Source System Audit Details Mixin]](#mixin-details)을(를) 프로필 스키마에 추가해야 합니다. 사용자 지정 타임스탬프가 추가되면 `xdm:lastUpdatedDate` 필드를 사용하여 채울 수 있습니다. 레코드를 `xdm:lastUpdatedDate` 필드가 채워진 상태로 인제스트할 때 Experience Platform은 해당 필드를 사용하여 데이터 집합 내 및 데이터 집합 간에 레코드 또는 프로필 조각을 병합합니다. `xdm:lastUpdatedDate`이(가) 없거나 채워지지 않으면 플랫폼에서는 시스템 타임스탬프를 계속 사용합니다.
+사용자 지정 타임스탬프를 사용하려면 [[!DNL External Source System Audit Details] 스키마 필드 그룹](#field-group-details)을 프로필 스키마에 추가해야 합니다. 사용자 지정 타임스탬프가 추가되면 `xdm:lastUpdatedDate` 필드를 사용하여 채울 수 있습니다. 레코드를 `xdm:lastUpdatedDate` 필드가 채워진 상태로 인제스트할 때 Experience Platform은 해당 필드를 사용하여 데이터 집합 내 및 데이터 집합 간에 레코드 또는 프로필 조각을 병합합니다. `xdm:lastUpdatedDate`이(가) 없거나 채워지지 않으면 플랫폼에서는 시스템 타임스탬프를 계속 사용합니다.
 
 >[!NOTE]
 >
 >동일한 레코드에 PATCH을 보낼 때 `xdm:lastUpdatedDate` 타임스탬프가 채워졌는지 확인해야 합니다.
 
-스키마에 믹스를 추가하는 방법을 비롯하여 스키마 레지스트리 API를 사용하여 스키마 작업에 대한 단계별 지침을 보려면 [튜토리얼에서 API](../../xdm/tutorials/create-schema-api.md)을 사용하여 스키마를 만드는 방법을 참조하십시오.
+스키마 레지스트리 API를 사용하여 스키마 작업에 대한 단계별 지침을 보려면 [튜토리얼에서 API](../../xdm/tutorials/create-schema-api.md)를 사용하여 스키마를 만드는 방법을 참조하십시오.
 
 UI를 사용하여 사용자 지정 타임스탬프를 사용하려면 [병합 정책 사용자 안내서](../ui/merge-policies.md)의 [사용자 지정 타임스탬프](../ui/merge-policies.md#custom-timestamps)에 있는 섹션을 참조하십시오.
 
-#### [!DNL External Source System Audit Details Mixin] 세부 정보  {#mixin-details}
+#### [!DNL External Source System Audit Details] 필드 그룹 세부 사항  {#field-group-details}
 
-다음 예제는 [!DNL External Source System Audit Details Mixin]에서 채워진 필드를 보여줍니다. 전체 믹싱 JSON은 GitHub의 [공개 경험 데이터 모델(XDM) 보고서](https://github.com/adobe/xdm/blob/master/components/mixins/shared/external-source-system-audit-details.schema.json)에서도 볼 수 있습니다.
+다음 예제는 [!DNL External Source System Audit Details] 필드 그룹의 채워진 필드를 보여줍니다. 전체 필드 그룹 JSON은 GitHub의 [공개 경험 데이터 모델(XDM) 보고서](https://github.com/adobe/xdm/blob/master/components/mixins/shared/external-source-system-audit-details.schema.json)에서도 볼 수 있습니다.
 
 ```json
 {
