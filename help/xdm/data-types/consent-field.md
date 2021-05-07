@@ -5,9 +5,9 @@ topic-legacy: overview
 description: 이 문서에서는 범용 동의 필드 XDM 데이터 유형에 대한 개요를 제공합니다.
 exl-id: f1f14eb7-21dd-45ca-8fb4-68f397cfa697
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '462'
+source-wordcount: '463'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->이 데이터 유형은 [[!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)] mixin](../mixins/profile/consents.md)을 기준선으로 사용하여 조직의 동의 스키마 구조를 사용자 지정하는 데 사용됩니다.
+>이 데이터 유형은 [[!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)] 필드 그룹](../field-groups/profile/consents.md)을 기준선으로 사용하여 조직의 동의 스키마 구조를 사용자 지정하는 데 사용됩니다.
 
 ![](../images/data-types/consent-field.png)
 
