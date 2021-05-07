@@ -6,9 +6,9 @@ topic-legacy: overview
 description: 이 문서에서는 장치 XDM 데이터 유형에 대한 개요를 제공합니다.
 exl-id: 049a2ca1-6bc3-4b9c-832a-77102e8a0ed2
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '322'
+source-wordcount: '323'
 ht-degree: 4%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 4%
 | `typeID` | 문자열 | 장치의 식별자입니다. 사용 중인 하드웨어를 식별하는 DeviceAtlas 또는 다른 서비스의 ID일 수 있습니다. |
 | `typeIDService` | 문자열 | 장치 유형을 식별하는 데 사용되는 서비스의 네임스페이스입니다. 허용된 값에 대한 자세한 내용은 [부록](#typeIDService)을 참조하십시오. |
 
-혼합에 대한 자세한 내용은 공개 XDM 저장소를 참조하십시오.
+필드 그룹에 대한 자세한 내용은 공개 XDM 저장소를 참조하십시오.
 
 * [채워진 예제](https://github.com/adobe/xdm/blob/master/components/datatypes/device.example.1.json)
 * [전체 스키마](https://github.com/adobe/xdm/blob/master/components/datatypes/device.schema.json)
