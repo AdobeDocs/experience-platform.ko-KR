@@ -6,9 +6,9 @@ topic-legacy: overview
 description: 이 문서에서는 브라우저 세부 정보 XDM 데이터 유형에 대한 개요를 제공합니다.
 exl-id: c67ff8bc-0614-4422-9bb7-689b98d7086d
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '258'
+source-wordcount: '259'
 ht-degree: 6%
 
 ---
@@ -36,7 +36,7 @@ ht-degree: 6%
 | `viewportHeight` | 정수 | 이벤트가 내부에 표시되는 창의 세로 크기(픽셀)입니다. 웹 보기 이벤트의 경우 브라우저 뷰포트 높이입니다. |
 | `viewportWidth` | 정수 | 이벤트가 내부에 표시되는 창의 가로 크기(픽셀)입니다. 웹 보기 이벤트의 경우 브라우저 뷰포트 너비입니다. |
 
-혼합에 대한 자세한 내용은 공개 XDM 저장소를 참조하십시오.
+데이터 유형에 대한 자세한 내용은 공개 XDM 저장소를 참조하십시오.
 
 * [채워진 예제](https://github.com/adobe/xdm/blob/master/components/datatypes/browserdetails.example.1.json)
 * [전체 스키마](https://github.com/adobe/xdm/blob/master/components/datatypes/browserdetails.schema.json)
