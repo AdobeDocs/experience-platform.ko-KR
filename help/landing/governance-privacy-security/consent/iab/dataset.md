@@ -6,9 +6,9 @@ topic-legacy: privacy events
 description: 이 문서에서는 IAB TCF 2.0 동의 데이터를 수집하기 위해 필요한 데이터 세트를 2개 설정하는 절차를 제공합니다.
 exl-id: 36b2924d-7893-4c55-bc33-2c0234f1120e
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '1564'
+source-wordcount: '1582'
 ht-degree: 0%
 
 ---
@@ -34,15 +34,15 @@ Adobe Experience Platform이 IAB [!DNL Transparency & Consent Framework](TCF) 2.
    * [ID 네임스페이스](../../../../identity-service/namespaces.md):고객 ID 데이터는 ID 서비스에서 인식한 특정 ID 네임스페이스로 제공해야 합니다.
 * [실시간 고객 프로필](../../../../profile/home.md):데이터 세트 [!DNL Identity Service] 에서 실시간으로 상세한 고객 프로파일을 만들 수 있습니다. [!DNL Real-time Customer Profile] 데이터 레이크에서 데이터를 가져와 별도의 데이터 저장소에 있는 고객 프로파일을 유지합니다.
 
-## [!UICONTROL Privacy Details] 믹스구조  {#structure}
+## [!UICONTROL Privacy Details] 필드 그룹 구조  {#structure}
 
-[!UICONTROL Privacy Details] 혼합은 TCF 2.0 지원에 필요한 고객 동의 필드를 제공합니다. 이 혼합에는 두 가지 버전이 있습니다.하나는 [!DNL XDM Individual Profile] 클래스와 호환되고 다른 하나는 [!DNL XDM ExperienceEvent] 클래스와 호환됩니다.
+[!UICONTROL Privacy Details] 스키마 필드 그룹은 TCF 2.0 지원에 필요한 고객 동의 필드를 제공합니다. 이 필드 그룹에는 두 가지 버전이 있습니다.하나는 [!DNL XDM Individual Profile] 클래스와 호환되고 다른 하나는 [!DNL XDM ExperienceEvent] 클래스와 호환됩니다.
 
-아래 섹션에서는 섭취 중에 예상하는 데이터를 비롯하여 이러한 각 믹스의 구조에 대해 설명합니다.
+아래 섹션에서는 섭취 중에 예상하는 데이터를 비롯하여 이러한 각 필드 그룹의 구조에 대해 설명합니다.
 
-### 프로필 혼합 {#profile-mixin}
+### 프로필 필드 그룹 {#profile-field-group}
 
-[!DNL XDM Individual Profile]을 기반으로 하는 스키마의 경우 [!UICONTROL Privacy Details] 믹싱은 고객 ID를 TCF 동의 환경 설정에 매핑하는 단일 맵 유형 필드 `xdm:identityPrivacyInfo`을 제공합니다. 다음 JSON은 데이터 수집에 대해 `xdm:identityPrivacyInfo`이 예상하는 데이터 종류의 예입니다.
+[!DNL XDM Individual Profile]을 기반으로 하는 스키마의 경우, [!UICONTROL Privacy Details] 필드 그룹은 고객 ID를 TCF 동의 환경 설정에 매핑하는 단일 맵 유형 필드 `xdm:identityPrivacyInfo`를 제공합니다. 다음 JSON은 데이터 수집에 대해 `xdm:identityPrivacyInfo`이 예상하는 데이터 종류의 예입니다.
 
 ```json
 {
@@ -78,9 +78,9 @@ ID 값 개체 내에 단일 필드인 `xdm:identityIABConsent`이(가) 있습니
 | `xdm:consentTimestamp` | TCF 동의 값이 변경된 시점의 [ISO 8601](https://www.ietf.org/rfc/rfc3339.txt) 타임스탬프 |
 | `xdm:consentString` | 고객의 업데이트된 동의 데이터와 기타 컨텍스트 정보가 포함된 객체입니다. 이 개체의 필수 하위 속성에 대해 알려면 [동의 문자열 속성](#consent-string)의 섹션을 참조하십시오. |
 
-### 이벤트 믹싱 {#event-mixin}
+### 이벤트 필드 그룹 {#event-field-group}
 
-[!DNL XDM ExperienceEvent]을 기반으로 하는 스키마의 경우 [!UICONTROL Privacy Details] 믹싱은 단일 배열 유형 필드를 제공합니다.`xdm:consentStrings`. 이 배열의 각 항목은 프로필 혼합의 `xdm:consentString` 필드와 유사하게 TCF 동의 문자열에 필요한 속성이 포함된 객체여야 합니다. 이러한 하위 속성에 대한 자세한 내용은 [다음 섹션](#consent-string)을 참조하십시오.
+[!DNL XDM ExperienceEvent]을 기반으로 하는 스키마의 경우 [!UICONTROL Privacy Details] 필드 그룹은 단일 배열 유형 필드를 제공합니다.`xdm:consentStrings`. 이 배열의 각 항목은 프로필 필드 그룹의 `xdm:consentString` 필드와 마찬가지로 TCF 동의 문자열에 필요한 속성이 포함된 객체여야 합니다. 이러한 하위 속성에 대한 자세한 내용은 [다음 섹션](#consent-string)을 참조하십시오.
 
 ```json
 {
@@ -98,7 +98,7 @@ ID 값 개체 내에 단일 필드인 `xdm:identityIABConsent`이(가) 있습니
 
 ### 동의 문자열 속성 {#consent-string}
 
-두 버전의 [!UICONTROL Privacy Details] 믹싱에는 고객의 TCF 동의 문자열을 설명하는 필수 필드를 캡처하는 개체가 하나 이상 필요합니다. 이러한 속성에 대해서는 아래에 설명되어 있습니다.
+[!UICONTROL Privacy Details] 필드 그룹의 두 버전 모두 고객의 TCF 동의 문자열을 설명하는 필수 필드를 캡처하는 객체를 하나 이상 필요로 합니다. 이러한 속성에 대해서는 아래에 설명되어 있습니다.
 
 | 속성 | 설명 |
 | --- | --- |
@@ -126,11 +126,11 @@ ID 값 개체 내에 단일 필드인 `xdm:identityIABConsent`이(가) 있습니
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/create-schema-profile.png)
 
-캔버스에서 스키마의 구조를 표시하는 [!DNL Schema Editor]이 나타납니다. 오른쪽 레일을 사용하여 스키마의 이름과 설명을 입력한 다음 캔버스 왼쪽의 **[!UICONTROL Mixins]** 섹션에서 **[!UICONTROL Add]**&#x200B;을 선택합니다.
+캔버스에서 스키마의 구조를 표시하는 [!DNL Schema Editor]이 나타납니다. 오른쪽 레일을 사용하여 스키마의 이름과 설명을 입력한 다음 캔버스 왼쪽의 **[!UICONTROL Field groups]** 섹션에서 **[!UICONTROL Add]**&#x200B;을 선택합니다.
 
-![](../../../images/governance-privacy-security/consent/iab/dataset/add-mixin-profile.png)
+![](../../../images/governance-privacy-security/consent/iab/dataset/add-field-group-profile.png)
 
-**[!UICONTROL Add mixin]** 대화 상자가 나타납니다. 여기서 목록에서 **[!UICONTROL Privacy Details]**&#x200B;을 선택합니다. 선택적으로 검색 막대를 사용하여 결과의 범위를 좁혀 믹싱을 더 쉽게 찾을 수 있습니다. 믹스를 선택하고 나면 **[!UICONTROL Add mixin]**&#x200B;을 선택합니다.
+**[!UICONTROL Add field groups]** 대화 상자가 나타납니다. 여기서 목록에서 **[!UICONTROL Privacy Details]**&#x200B;을 선택합니다. 선택적으로 검색 막대를 사용하여 검색 결과의 범위를 좁혀 필드 그룹을 더 쉽게 찾을 수 있습니다. 필드 그룹을 선택한 후 **[!UICONTROL Add field groups]**&#x200B;을 선택합니다.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/add-profile-privacy.png)
 
@@ -138,14 +138,14 @@ ID 값 개체 내에 단일 필드인 `xdm:identityIABConsent`이(가) 있습니
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/profile-privacy-structure.png)
 
-여기에서 위의 단계를 반복하여 스키마에 다음과 같은 추가 믹스를 추가합니다.
+여기에서 위의 단계를 반복하여 스키마에 다음과 같은 추가 필드 그룹을 추가합니다.
 
 * [!UICONTROL IdentityMap]
 * [!UICONTROL Data capture region for Profile]
 * [!UICONTROL Demographic Details]
 * [!UICONTROL Personal Contact Details]
 
-![](../../../images/governance-privacy-security/consent/iab/dataset/profile-all-mixins.png)
+![](../../../images/governance-privacy-security/consent/iab/dataset/profile-all-field-groups.png)
 
 [!DNL Real-time Customer Profile]에서 이미 사용할 수 있도록 활성화된 기존 스키마를 편집하는 경우 **[!UICONTROL Save]**&#x200B;을 선택하여 [의 섹션에 앞서 자신의 동의 스키마](#dataset)에 따라 데이터 세트를 만들기 전에 변경 내용을 확인합니다. 새 스키마를 생성하는 경우에는 아래 하위 섹션에 설명된 단계를 계속 따르십시오.
 
@@ -177,11 +177,11 @@ ID 값 개체 내에 단일 필드인 `xdm:identityIABConsent`이(가) 있습니
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/create-schema-event.png)
 
-캔버스에서 스키마의 구조를 표시하는 [!DNL Schema Editor]이 나타납니다. 오른쪽 레일을 사용하여 스키마의 이름과 설명을 입력한 다음 캔버스 왼쪽의 **[!UICONTROL Mixins]** 섹션에서 **[!UICONTROL Add]**&#x200B;을 선택합니다.
+캔버스에서 스키마의 구조를 표시하는 [!DNL Schema Editor]이 나타납니다. 오른쪽 레일을 사용하여 스키마의 이름과 설명을 입력한 다음 캔버스 왼쪽의 **[!UICONTROL Field groups]** 섹션에서 **[!UICONTROL Add]**&#x200B;을 선택합니다.
 
-![](../../../images/governance-privacy-security/consent/iab/dataset/add-mixin-event.png)
+![](../../../images/governance-privacy-security/consent/iab/dataset/add-field-group-event.png)
 
-**[!UICONTROL Add mixin]** 대화 상자가 나타납니다. 여기서 목록에서 **[!UICONTROL Privacy Details]**&#x200B;을 선택합니다. 선택적으로 검색 막대를 사용하여 결과의 범위를 좁혀 믹싱을 더 쉽게 찾을 수 있습니다. 믹스를 선택하고 나면 **[!UICONTROL Add mixin]**&#x200B;을 선택합니다.
+**[!UICONTROL Add field groups]** 대화 상자가 나타납니다. 여기서 목록에서 **[!UICONTROL Privacy Details]**&#x200B;을 선택합니다. 선택적으로 검색 막대를 사용하여 검색 결과의 범위를 좁혀 필드 그룹을 더 쉽게 찾을 수 있습니다. 필드 그룹을 선택한 후 **[!UICONTROL Add field groups]**&#x200B;을 선택합니다.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/add-event-privacy.png)
 
@@ -189,16 +189,16 @@ ID 값 개체 내에 단일 필드인 `xdm:identityIABConsent`이(가) 있습니
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/event-privacy-structure.png)
 
-여기에서 위의 단계를 반복하여 스키마에 다음과 같은 추가 믹스를 추가합니다.
+여기에서 위의 단계를 반복하여 스키마에 다음과 같은 추가 필드 그룹을 추가합니다.
 
 * [!UICONTROL IdentityMap]
 * [!UICONTROL Environment Details]
 * [!UICONTROL Web Details]
 * [!UICONTROL Implementation Details]
 
-믹스가 추가되면 **[!UICONTROL Save]**&#x200B;을 선택하여 마칩니다.
+필드 그룹이 추가되면 **[!UICONTROL Save]**&#x200B;을 선택하여 마칩니다.
 
-![](../../../images/governance-privacy-security/consent/iab/dataset/event-all-mixins.png)
+![](../../../images/governance-privacy-security/consent/iab/dataset/event-all-field-groups.png)
 
 ## 동의 스키마 {#datasets}를 기반으로 데이터 집합 만들기
 
