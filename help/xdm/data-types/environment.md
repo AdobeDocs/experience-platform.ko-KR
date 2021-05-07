@@ -6,9 +6,9 @@ topic-legacy: overview
 description: 이 문서에서는 환경 XDM 데이터 유형에 대한 개요를 제공합니다.
 exl-id: ec806ee5-ed65-4148-9dbe-e297d9e8cd73
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '461'
+source-wordcount: '462'
 ht-degree: 4%
 
 ---
@@ -41,7 +41,7 @@ ht-degree: 4%
 | `viewportHeight` | 정수 | 경험이 내부에 표시된 창의 세로 크기(픽셀)입니다. 웹 보기 이벤트의 경우 브라우저 뷰포트 높이입니다. |
 | `viewPortWidth` | 정수 | 경험이 내부에 표시된 창의 가로 크기(픽셀)입니다. 웹 보기 이벤트의 경우 브라우저 뷰포트 너비입니다. |
 
-혼합에 대한 자세한 내용은 공개 XDM 저장소를 참조하십시오.
+데이터 유형에 대한 자세한 내용은 공개 XDM 저장소를 참조하십시오.
 
 * [채워진 예제](https://github.com/adobe/xdm/blob/master/components/datatypes/environment.example.1.json)
 * [전체 스키마](https://github.com/adobe/xdm/blob/master/components/datatypes/environment.schema.json)
