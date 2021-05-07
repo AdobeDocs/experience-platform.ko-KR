@@ -6,9 +6,9 @@ topic-legacy: overview
 description: 이 문서에서는 지역 XDM 데이터 유형에 대한 개요를 제공합니다.
 exl-id: d0eef943-ef86-4abd-8a51-dc45f2ed782d
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '192'
+source-wordcount: '193'
 ht-degree: 4%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 4%
 | `postalCode` | 문자열 | 위치의 우편 번호입니다. 모든 국가에서 우편 번호를 사용할 수 없습니다. 일부 국가에서는 우편 번호의 일부만을 포함합니다. |
 | `stateProvince` | 문자열 | 관찰의 주 또는 도 부분. 형식은 [ISO 3166-2(국가 및 하위 분)](http://www.unece.org/cefact/locode/subdivisions.html) 표준을 따릅니다. |
 
-혼합에 대한 자세한 내용은 공개 XDM 저장소를 참조하십시오.
+데이터 유형에 대한 자세한 내용은 공개 XDM 저장소를 참조하십시오.
 
 * [채워진 예제](https://github.com/adobe/xdm/blob/master/components/datatypes/geo.example.1.json)
 * [전체 스키마](https://github.com/adobe/xdm/blob/master/components/datatypes/geo.schema.json)
