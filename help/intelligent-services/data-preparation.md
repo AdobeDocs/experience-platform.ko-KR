@@ -6,9 +6,9 @@ topic-legacy: Intelligent Services
 description: Intelligent Services가 마케팅 이벤트 데이터에서 통찰력을 얻으려면 데이터가 세밀하게 농축되어 표준 구조로 유지되어야 합니다. 지능형 서비스는 이를 위해 XDM(Experience Data Model) 스키마를 사용합니다.
 exl-id: 17bd7cc0-da86-4600-8290-cd07bdd5d262
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '2385'
+source-wordcount: '2397'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ ht-degree: 0%
 
 고객 AI와 Attribution AI은 기본적으로 Adobe Analytics 데이터를 지원합니다. Adobe Analytics 데이터를 사용하려면 설명서에 설명된 단계에 따라 [Analytics 소스 커넥터](../sources/tutorials/ui/create/adobe-applications/analytics.md)를 설정합니다.
 
-소스 커넥터가 데이터를 Experience Platform으로 스트리밍한 후 인스턴스 구성 중에 데이터 소스로 Adobe Analytics을 선택하고 데이터 세트를 선택할 수 있습니다. 연결을 설정하는 동안 모든 필수 스키마 필드 및 믹싱이 자동으로 생성됩니다. 데이터 세트를 CEE 형식으로 ETL(추출, 변환, 로드)할 필요가 없습니다.
+소스 커넥터가 데이터를 Experience Platform으로 스트리밍한 후 인스턴스 구성 중에 데이터 소스로 Adobe Analytics을 선택하고 데이터 세트를 선택할 수 있습니다. 모든 필수 스키마 필드 그룹 및 개별 필드는 연결을 설정하는 동안 자동으로 생성됩니다. 데이터 세트를 CEE 형식으로 ETL(추출, 변환, 로드)할 필요가 없습니다.
 
 >[!IMPORTANT]
 >
@@ -45,7 +45,7 @@ ht-degree: 0%
 
 고객 AI는 기본적으로 Adobe Audience Manager 데이터를 지원합니다. Audience Manager 데이터를 사용하려면 설명서에 설명된 단계에 따라 [Audience Manager 소스 커넥터](../sources/tutorials/ui/create/adobe-applications/audience-manager.md)를 설정합니다.
 
-소스 커넥터에서 데이터를 Experience Platform으로 스트리밍하면 고객 AI 구성 중에 데이터 소스로 Adobe Audience Manager을 선택하고 데이터 세트를 선택할 수 있습니다. 연결을 설정하는 동안 모든 필수 스키마 필드 및 믹싱이 자동으로 생성됩니다. 데이터 세트를 CEE 형식으로 ETL(추출, 변환, 로드)할 필요가 없습니다.
+소스 커넥터에서 데이터를 Experience Platform으로 스트리밍하면 고객 AI 구성 중에 데이터 소스로 Adobe Audience Manager을 선택하고 데이터 세트를 선택할 수 있습니다. 연결을 설정하는 동안 모든 스키마 필드 그룹 및 개별 필드가 자동으로 생성됩니다. 데이터 세트를 CEE 형식으로 ETL(추출, 변환, 로드)할 필요가 없습니다.
 
 >[!IMPORTANT]
 >
@@ -68,13 +68,13 @@ ht-degree: 0%
 
 ![](./images/data-preparation/schema-expansion.gif)
 
-모든 XDM 스키마와 마찬가지로 CEE 믹스도 확장할 수 있습니다. 즉, CEE 믹싱에 추가 필드를 추가할 수 있으며 필요한 경우 다양한 변형을 여러 스키마에 포함시킬 수 있습니다.
+모든 XDM 스키마와 마찬가지로 CEE 스키마 필드 그룹은 확장할 수 있습니다. 즉, CEE 필드 그룹에 추가 필드를 추가할 수 있으며 필요한 경우 여러 스키마에 다른 변형을 포함시킬 수 있습니다.
 
-혼합의 전체 예는 [공개 XDM 리포지토리](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md)에서 찾을 수 있습니다. 또한 CEE 스키마를 준수하도록 데이터를 구조화할 수 있는 방법의 예를 보려면 다음 [JSON 파일](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json)을 보고 복사할 수 있습니다. 사용자 자신의 데이터를 스키마에 매핑할 수 있는 방법을 결정하려면 아래 섹션에 설명된 키 필드에 대해 알고 있는 이러한 두 예제를 참조하십시오.
+필드 그룹의 전체 예는 [공개 XDM 저장소](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md)에서 찾을 수 있습니다. 또한 CEE 스키마를 준수하도록 데이터를 구조화할 수 있는 방법의 예를 보려면 다음 [JSON 파일](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json)을 보고 복사할 수 있습니다. 사용자 자신의 데이터를 스키마에 매핑할 수 있는 방법을 결정하려면 아래 섹션에 설명된 키 필드에 대해 알고 있는 이러한 두 예제를 참조하십시오.
 
 ## 키 필드
 
-CEE 믹싱에는 유용한 인사이트를 생성하기 위해 [!DNL Intelligent Services]에 사용해야 하는 몇 가지 주요 필드가 있습니다. 이 섹션에서는 이러한 필드의 사용 사례와 예상 데이터에 대해 설명하고 추가 예제에 대한 참조 설명서에 대한 링크를 제공합니다.
+CEE 필드 그룹에는 유용한 인사이트를 생성하기 위해 [!DNL Intelligent Services]에 사용해야 하는 몇 가지 주요 필드가 있습니다. 이 섹션에서는 이러한 필드의 사용 사례와 예상 데이터에 대해 설명하고 추가 예제에 대한 참조 설명서에 대한 링크를 제공합니다.
 
 ### 필수 필드
 
@@ -297,16 +297,16 @@ CEE 믹싱에는 유용한 인사이트를 생성하기 위해 [!DNL Intelligent
 
 #### CEE 스키마 및 데이터 세트 만들기
 
-데이터 수집에 대한 준비를 시작할 준비가 되면 첫 번째 단계는 CEE 믹싱을 사용하는 새 XDM 스키마를 만드는 것입니다. 다음 자습서에서는 UI 또는 API에서 새 스키마를 만드는 프로세스를 안내합니다.
+데이터 수집에 대한 준비를 시작할 준비가 되면 첫 번째 단계는 CEE 필드 그룹을 사용하는 새 XDM 스키마를 만드는 것입니다. 다음 자습서에서는 UI 또는 API에서 새 스키마를 만드는 프로세스를 안내합니다.
 
 * [UI에서 스키마 만들기](../xdm/tutorials/create-schema-ui.md)
 * [API에서 스키마 만들기](../xdm/tutorials/create-schema-api.md)
 
 >[!IMPORTANT]
 >
->위의 자습서는 스키마를 만들기 위한 일반 작업 과정을 따릅니다. 스키마에 대한 클래스를 선택할 때는 **XDM ExperienceEvent 클래스**&#x200B;를 사용해야 합니다. 이 클래스를 선택한 후 CEE 믹싱을 스키마에 추가할 수 있습니다.
+>위의 자습서는 스키마를 만들기 위한 일반 작업 과정을 따릅니다. 스키마에 대한 클래스를 선택할 때는 **XDM ExperienceEvent 클래스**&#x200B;를 사용해야 합니다. 이 클래스를 선택한 후 CEE 필드 그룹을 스키마에 추가할 수 있습니다.
 
-스키마에 CEE 믹싱을 추가한 후 데이터 내의 추가 필드에 대해 필요에 따라 다른 믹스를 추가할 수 있습니다.
+스키마에 CEE 필드 그룹을 추가한 후 데이터 내의 추가 필드에 대해 필요에 따라 다른 필드 그룹을 추가할 수 있습니다.
 
 스키마를 만들고 저장하면 해당 스키마를 기반으로 새 데이터 세트를 만들 수 있습니다. 다음 자습서에서는 UI 또는 API에서 새 데이터 세트를 만드는 프로세스를 안내합니다.
 
