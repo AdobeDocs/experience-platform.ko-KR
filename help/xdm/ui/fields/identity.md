@@ -6,9 +6,9 @@ description: Experience Platform 사용자 인터페이스에서 ID 필드를 �
 topic-legacy: user guide
 exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '565'
+source-wordcount: '567'
 ht-degree: 0%
 
 ---
@@ -43,7 +43,7 @@ UI에서 [새 필드](./overview.md#define)를 정의할 때 오른쪽 레일의
 
 ![](../../images/ui/fields/special/identity-config.png)
 
-캔버스는 변경 사항을 반영하도록 업데이트되며, 선택한 필드는 지문 기호(![](../../images/ui/fields/special/identity-symbol.png))를 획득하여 ID로 지정합니다. 왼쪽 레일에서 이제 ID 필드가 스키마에 필드를 제공하는 클래스 또는 mixin 이름 아래에 나열됩니다.
+캔버스는 변경 사항을 반영하도록 업데이트되며, 선택한 필드는 지문 기호(![](../../images/ui/fields/special/identity-symbol.png))를 획득하여 ID로 지정합니다. 왼쪽 레일에서 이제 ID 필드가 스키마에 필드를 제공하는 클래스 또는 스키마 필드 그룹의 이름 아래에 나열됩니다.
 
 모든 ID 필드는 기본적으로 필요하므로 이제 왼쪽 레일의 **[!UICONTROL Required fields]** 아래에 필드가 나열됩니다. ID 필드가 스키마 구조 내에 중첩되면 모든 상위 필드도 필요에 따라 나열됩니다.
 
