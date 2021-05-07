@@ -2,13 +2,13 @@
 audience: user
 user-guide-title: XDM(경험 데이터 모델) 시스템 도움말
 breadcrumb-title: Experience Data Model(XDM) 안내서
-user-guide-description: XDM(경험 데이터 모델) 클래스와 믹스인을 사용하여 경험 데이터를 표준화합니다.
+user-guide-description: XDM(Experience Data Model) 클래스 및 스키마 필드 그룹을 사용하여 경험 데이터를 표준화합니다.
 feature: 스키마
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: a19a89d347b9197ab2766bd8a57018f5ac4f058d
 workflow-type: tm+mt
-source-wordcount: '279'
-ht-degree: 21%
+source-wordcount: '291'
+ht-degree: 17%
 
 ---
 
@@ -30,18 +30,18 @@ ht-degree: 21%
    * [XDM 개별 프로필](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
    * [세그먼트 정의](./classes/segment-definition.md)
-* 믹싱 {#mixins}
-   * 프로필 혼합 {#profile}
-      * [IdentityMap](./mixins/profile/identitymap.md)
-      * [인구 통계 세부 사항](./mixins/profile/person-details.md)
-      * [개인 연락처 세부 사항](./mixins/profile/personal-details.md)
-      * [개인 정보/개인화/마케팅 기본 설정(동의)](./mixins/profile/consents.md)
-      * [세그먼트 멤버십 세부 사항](./mixins/profile/segmentation.md)
-      * [작업 연락처 세부 사항](./mixins/profile/work-details.md)
-   * 이벤트 믹싱 {#event}
-      * [최종 사용자 ID 세부 사항](./mixins/event/enduserids.md)
-      * [환경 세부 사항](./mixins/event/environment-details.md)
-   * [Mixin 이름 업데이트](./mixins/name-updates.md)
+* 스키마 필드 그룹 {#field-groups}
+   * 프로필 필드 그룹 {#profile}
+      * [IdentityMap](./field-groups/profile/identitymap.md)
+      * [인구 통계 세부 사항](./field-groups/profile/demographic-details.md)
+      * [개인 연락처 세부 사항](./field-groups/profile/personal-contact-details.md)
+      * [세그먼트 멤버십 세부 사항](./field-groups/profile/segmentation.md)
+      * [작업 연락처 세부 사항](./field-groups/profile/work-contact-details.md)
+      * [개인 정보/개인화/마케팅 기본 설정(동의)](./field-groups/profile/consents.md)
+   * 이벤트 필드 그룹 {#event}
+      * [최종 사용자 ID 세부 사항](./field-groups/event/enduserids.md)
+      * [환경 세부 사항](./field-groups/event/environment-details.md)
+   * [필드 그룹 이름 업데이트](./field-groups/name-updates.md)
 * 데이터 유형 {#data-types}
    * [애플리케이션](./data-types/application.md)
    * [비콘](./data-types/beacon.md)
@@ -81,7 +81,7 @@ ht-degree: 21%
    * 리소스 {#resources} 만들기 및 편집
       * [스키마](./ui/resources/schemas.md)
       * [클래스](./ui/resources/classes.md)
-      * [혼합](./ui/resources/mixins.md)
+      * [필드 그룹](./ui/resources/field-groups.md)
       * [데이터 유형](./ui/resources/data-types.md)
    * 필드 정의 {#fields}
       * [개요](./ui/fields/overview.md)
@@ -99,7 +99,7 @@ ht-degree: 21%
    * [스키마](api/schemas.md)
    * [비헤이비어](api/behaviors.md)
    * [클래스](api/classes.md)
-   * [혼합](api/mixins.md)
+   * [스키마 필드 그룹](api/field-groups.md)
    * [데이터 유형](api/data-types.md)
    * [설명자](api/descriptors.md)
    * [조합](api/unions.md)
@@ -107,6 +107,7 @@ ht-degree: 21%
    * [샘플 데이터](api/sample-data.md)
    * [감사 로그](api/audit-log.md)
    * [임시 스키마](api/ad-hoc.md)
+   * [혼합(더 이상 사용되지 않음)](api/mixins.md)
    * [부록](api/appendix.md)
 * 튜토리얼 {#tutorials}
    * [스키마 만들기(UI)](tutorials/create-schema-ui.md)
