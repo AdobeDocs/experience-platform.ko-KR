@@ -7,7 +7,7 @@ type: Tutorial
 description: UI에서 소비자 데이터를 Adobe Experience Platform으로 가져오는 Adobe Analytics 소스 연결을 만드는 방법을 알아봅니다.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 32a6d0311169486b1273129c0ee87c242bee1e47
 workflow-type: tm+mt
 source-wordcount: '777'
 ht-degree: 2%
