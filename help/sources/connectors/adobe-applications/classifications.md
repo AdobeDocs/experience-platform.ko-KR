@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;홈;인기 항목;Adobe Analytics 분류 데이터 커넥터
+keywords: Experience Platform;홈;인기 항목;Adobe Analytics 분류 소스 커넥터
 solution: Experience Platform
 title: 분류 데이터를 위한 Adobe Analytics 소스 커넥터
 topic-legacy: overview
 description: 사용자 인터페이스를 사용하여 Analytics 분류를 플랫폼에 연결하는 방법을 알아봅니다.
 exl-id: c26002df-dce4-415e-93e9-268e0efebc9f
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 32a6d0311169486b1273129c0ee87c242bee1e47
 workflow-type: tm+mt
 source-wordcount: '181'
 ht-degree: 0%
