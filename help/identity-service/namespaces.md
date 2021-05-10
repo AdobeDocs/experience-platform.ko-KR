@@ -6,9 +6,9 @@ topic-legacy: overview
 description: ID 네임스페이스는 ID 서비스의 구성 요소이며 ID가 연관되는 컨텍스트의 지표 역할을 합니다. 예를 들어, "name@email.com" 값을 이메일 주소로 구분하거나 "443522" 값을 숫자 CRM ID로 구분할 수 있습니다.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ca092af61ac26fcfb6839b7ba0887178c899f89f
 workflow-type: tm+mt
-source-wordcount: '1450'
+source-wordcount: '1526'
 ht-degree: 2%
 
 ---
@@ -35,7 +35,7 @@ ID 네임스페이스를 사용하여 작업하려면 관련 다양한 Adobe Exp
 
 ### ID 유형
 
-여러 가지 ID 유형으로 데이터를 식별할 수 있습니다. ID 유형은 ID 네임스페이스가 만들어질 때 지정되며 데이터가 ID 그래프로 유지되는지 여부와 데이터를 처리하는 방법에 대한 특별 지침을 제어합니다.
+여러 가지 ID 유형으로 데이터를 식별할 수 있습니다. ID 유형은 ID 네임스페이스가 만들어질 때 지정되며 데이터가 ID 그래프로 유지되는지 여부와 데이터를 처리하는 방법에 대한 특별 지침을 제어합니다. **사람이 아닌 식별자**&#x200B;를 제외한 모든 ID 유형은 네임스페이스와 해당 ID 값을 ID 그래프 클러스터에 연결하는 동일한 비헤이비어를 따릅니다. **사람이 아닌 식별자**&#x200B;를 사용할 때 데이터가 함께 결합되지 않습니다.
 
 다음 ID 유형은 [!DNL Platform] 내에서 사용할 수 있습니다.
 
@@ -92,7 +92,9 @@ UI를 사용하여 사용자 정의 네임스페이스를 만들려면 **[!UICON
 
 ![](./images/create.png)
 
-**[!UICONTROL Create identity namespace]** 대화 상자가 나타납니다. 고유한 **[!UICONTROL Display name]** 및 **[!UICONTROL Identity symbol]**&#x200B;을 제공한 다음 만들려는 ID 유형을 선택합니다. 네임스페이스에 대한 추가 정보에 선택적 설명을 추가할 수도 있습니다. 완료되면 **[!UICONTROL Create]**&#x200B;을 선택합니다.
+**[!UICONTROL Create identity namespace]** 대화 상자가 나타납니다. 고유한 **[!UICONTROL Display name]** 및 **[!UICONTROL Identity symbol]**&#x200B;을 제공한 다음 만들려는 ID 유형을 선택합니다. 네임스페이스에 대한 추가 정보에 선택적 설명을 추가할 수도 있습니다. **사람이 아닌 식별자**&#x200B;를 제외한 모든 ID 유형은 스티칭의 동일한 비헤이비어를 따릅니다. 네임스페이스를 만들 때 ID 유형으로 **사람이 아닌 식별자**&#x200B;를 선택하면 스티칭이 발생하지 않습니다. 각 ID 유형에 대한 자세한 내용은 [ID 유형](#identity-types)의 표를 참조하십시오.
+
+완료되면 **[!UICONTROL Create]**&#x200B;을 선택합니다.
 
 >[!IMPORTANT]
 >
