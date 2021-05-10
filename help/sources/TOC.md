@@ -5,9 +5,9 @@ breadcrumb-title: Source Connectors 안내서
 user-guide-description: 다양한 소스 또는 구조에서 데이터를 수집하고 레이블을 지정하며 기존에 수집한 데이터를 향상시킬 수 있습니다.
 feature: 데이터 통합, 소스
 translation-type: tm+mt
-source-git-commit: 121e2f410acdcd6de3953c6063a15901c853dd07
+source-git-commit: 32a6d0311169486b1273129c0ee87c242bee1e47
 workflow-type: tm+mt
-source-wordcount: '610'
+source-wordcount: '612'
 ht-degree: 12%
 
 ---
@@ -18,10 +18,10 @@ ht-degree: 12%
 - [소스 커넥터 개요](home.md)
 - 사용 가능한 소스 커넥터 {#connectors}
    - Adobe 응용 프로그램 {#adobe-applications}
-      - [Analytics 분류 데이터 커넥터](connectors/adobe-applications/classifications.md)
-      - [분석 데이터 커넥터](connectors/adobe-applications/analytics.md)
-      - [Audience Manager 커넥터](connectors/adobe-applications/audience-manager.md)
-      - [고객 속성 커넥터](connectors/adobe-applications/customer-attributes.md)
+      - [Analytics 분류 소스 커넥터](connectors/adobe-applications/classifications.md)
+      - [Analytics 소스 커넥터](connectors/adobe-applications/analytics.md)
+      - [Audience Manager 원본 커넥터](connectors/adobe-applications/audience-manager.md)
+      - [고객 속성 소스 커넥터](connectors/adobe-applications/customer-attributes.md)
       - Adobe 응용 프로그램 필드 매핑 {#mapping}
          - [분석 필드 매핑](connectors/adobe-applications/mapping/analytics.md)
          - [Audience Manager 필드 매핑](connectors/adobe-applications/mapping/audience-manager.md)
