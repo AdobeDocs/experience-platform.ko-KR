@@ -7,9 +7,9 @@ topic-legacy: tutorial
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
 translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: ddf66ab277e5882afe7ffbdd87ee5df958c3e7b0
 workflow-type: tm+mt
-source-wordcount: '919'
+source-wordcount: '992'
 ht-degree: 0%
 
 ---
@@ -37,6 +37,12 @@ Adobe Experience Platform에서 모든 XDM(경험 데이터 모델) 리소스는
 검색 막대를 사용하여 검색 결과의 범위를 더 좁힐 수도 있습니다. 검색어를 검색할 때 상위 항목은 이름이 검색 쿼리와 일치하는 리소스를 나타냅니다. 이 항목 아래의 **[!UICONTROL Standard Fields]** 아래에 쿼리와 일치하는 필드를 포함하는 리소스가 나열됩니다. 따라서 사전에 리소스의 이름을 알지 않아도 포함된 데이터 유형을 기준으로 XDM 리소스를 검색할 수 있습니다.
 
 ![](../images/ui/explore/search.png)
+
+검색 결과에 표시된 리소스는 제목과 일치하여 먼저 정렬한 다음 설명별로 정렬됩니다. 이러한 카테고리 중 하나에서 일치하는 단어가 더 많을수록 리소스가 목록에 더 많이 나타납니다.
+
+>[!NOTE]
+>
+>표준 XDM 리소스의 경우 검색 기능은 `xdm` 네임스페이스를 포함하는 개별 필드만 반환합니다. 다른 네임스페이스(예: 테넌트 ID)에 있는 필드는 사용자 지정 리소스에 포함된 경우에만 반환됩니다.
 
 탐색할 리소스를 찾은 경우 목록에서 해당 이름을 선택하여 캔버스에서 해당 구조를 봅니다.
 
@@ -100,7 +106,7 @@ ID 필드는 지문 아이콘(![지문 아이콘 이미지](../images/ui/explore
 
 >[!NOTE]
 >
->XDM 스키마에서 관계 사용에 대한 자세한 내용은 [UI](../tutorials/create-schema-ui.md)에서 관계 만들기에 대한 자습서를 참조하십시오.
+>XDM 스키마에서 관계 사용에 대한 자세한 내용은 [UI](../tutorials/relationship-ui.md)에서 관계 만들기에 대한 자습서를 참조하십시오.
 
 ## 다음 단계
 
