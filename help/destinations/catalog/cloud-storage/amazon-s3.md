@@ -4,7 +4,7 @@ title: Amazon S3 연결
 description: Amazon 웹 서비스(AWS) S3 스토리지에 대한 라이브 아웃바운드 연결을 생성하여 Adobe Experience Platform에서 탭으로 구분된 데이터 또는 CSV 데이터 파일을 S3 버킷으로 주기적으로 내보냅니다.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
 translation-type: tm+mt
-source-git-commit: d77cd063e61118631b757d9821267b2fd6ab0148
+source-git-commit: 7780a2b3b518ab976ec14531892e0734a6342e4c
 workflow-type: tm+mt
 source-wordcount: '233'
 ht-degree: 0%
@@ -36,16 +36,11 @@ ht-degree: 0%
 데이터를 [!DNL Amazon S3] 스토리지 위치에 성공적으로 연결하고 내보내려면 [!DNL Amazon S3]에 [!DNL Platform]에 대한 IAM 사용자를 만들고 다음 작업에 대한 권한을 할당합니다.
 
 * `s3:DeleteObject`
-* `s3:DeleteObjectVersion`
 * `s3:GetBucketLocation`
 * `s3:GetObject`
-* `s3:GetObjectVersion`
 * `s3:ListBucket`
-* `s3:ListBuckets`
-* `s3:PutBucketVersioning`
 * `s3:PutObject`
-* `s3:ReplicateObject`
-* `s3:RestoreObject`
+* `s3:ListMultipartUploadParts`
 
 
 <!--
