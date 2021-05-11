@@ -2,14 +2,14 @@
 title: 플랫폼 웹 SDK에서 Offer decisioning 사용
 description: Adobe Experience Platform 웹 SDK는 Offer decisioning에서 관리되는 개인화된 오퍼를 제공하고 렌더링할 수 있습니다. offer decisioning UI 또는 API를 사용하여 오퍼 및 기타 관련 개체를 만들 수 있습니다.
 keywords: offer decisioning;의사 결정;웹 SDK;플랫폼 웹 SDK;개인화된 제안;제공 제안;오퍼 전달;제안 개인화;Marketing Cloud;
+exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
 translation-type: tm+mt
-source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
+source-git-commit: 2113eb265020b1d1c2e73dba95554c8bf97acf13
 workflow-type: tm+mt
 source-wordcount: '849'
 ht-degree: 9%
 
 ---
-
 
 # 플랫폼 웹 SDK에서 Offer decisioning 사용
 
@@ -78,8 +78,9 @@ offer decisioning을 활성화하려면 다음 단계를 수행해야 합니다.
           ]
       })
       ```
+
    * platform launch 설치 SDK
-      1. [platform launch 속성 만들기](https://docs.adobe.com/content/help/ko-KR/launch/using/reference/admin/companies-and-properties.html)
+      1. [platform launch 속성 만들기](https://docs.adobe.com/content/help/ko/launch/using/reference/admin/companies-and-properties.html)
       2. [platform launch 포함 코드 추가](https://docs.adobe.com/content/help/en/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
       3. &quot;에지 구성&quot; 드롭다운에서 구성을 선택하여 방금 만든 에지 구성으로 플랫폼 웹 SDK 확장을 설치하고 구성합니다. [extensions](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html)에 대한 유용한 설명서입니다.
          ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
@@ -92,7 +93,8 @@ offer decisioning을 활성화하려면 다음 단계를 수행해야 합니다.
       5. [규칙](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/rules.html)을(를) 만듭니다.
          * 플랫폼 웹 SDK 이벤트 보내기 작업을 추가하고 관련 `decisionScopes`을 해당 작업의 구성에 추가합니다.
             ![send-event-action-decisionScopes](./assets/send-event-action-decisionScopes.png)
-      6. [구성한 모든 관련 ](https://docs.adobe.com/content/help/ko-KR/launch/using/reference/publish/libraries.html) 규칙, 데이터 요소 및 익스텐션이 포함된 라이브러리 만들기 및 게시
+      6. [구성한 모든 관련 ](https://docs.adobe.com/content/help/ko/launch/using/reference/publish/libraries.html) 규칙, 데이터 요소 및 익스텐션이 포함된 라이브러리 만들기 및 게시
+
 
 
 ## 요청 및 응답 샘플
