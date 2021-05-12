@@ -6,10 +6,10 @@ topic-legacy: overview
 description: 이 문서에서는 Marketo Engage 소스 커넥터를 만들 때 필요한 사용자 정의 네임스페이스에 대한 개요를 제공합니다.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
 translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: 8dd7b1724f3de12bf6a3a1b77ee8050fd1a9eaf3
 workflow-type: tm+mt
-source-wordcount: '1171'
-ht-degree: 7%
+source-wordcount: '1602'
+ht-degree: 5%
 
 ---
 
@@ -21,22 +21,39 @@ ht-degree: 7%
 
 이 문서에서는 [!DNL Marketo Engage](이하 &quot;[!DNL Marketo]&quot;이라 함)에 사용되는 B2B 네임스페이스 및 스키마(이하 &quot;기본 설정&quot;이라 함)에 대한 정보를 제공합니다. 또한 이 문서에서는 [!DNL Marketo] B2B 네임스페이스 및 스키마를 생성하는 데 필요한 Postman 자동화 유틸리티 설정에 대한 세부 정보를 제공합니다.
 
-## 전제 조건
+## [!DNL Marketo] 네임스페이스 및 스키마 자동 생성 유틸리티를 설정합니다.
 
-B2B 네임스페이스 및 스키마를 생성하려면 먼저 플랫폼 개발자 콘솔 및 [!DNL Postman] 환경을 설정해야 합니다. 자세한 내용은 [개발자 콘솔 설정 및 [!DNL Postman]](../../../../landing/postman.md)에 대한 자습서를 참조하십시오.
+[!DNL Marketo] 네임스페이스 및 스키마 자동 생성 유틸리티 사용의 첫 번째 단계는 플랫폼 개발자 콘솔 및 [!DNL Postman] 환경을 설정하는 것입니다.
 
-플랫폼 개발자 콘솔 및 [!DNL Postman]이(가) 설정되면 다음 변수를 [!DNL Marketo] 환경에 적용합니다.
+- 이 [GitHub 리포지토리](https://git.corp.adobe.com/marketo-engineering/namespace_schema_utility)에서 네임스페이스 및 스키마 자동 생성 유틸리티 컬렉션 및 환경을 다운로드할 수 있습니다.
+- 필수 헤더에 대한 값을 모으고 샘플 API 호출을 읽는 방법에 대한 자세한 내용을 포함한 플랫폼 API 사용에 대한 자세한 내용은 [플랫폼 API 시작](../../../../landing/api-guide.md)에 대한 안내서를 참조하십시오.
+- 플랫폼 API에 대한 자격 증명을 생성하는 방법에 대한 자세한 내용은 [Experience Platform API 인증 및 액세스](../../../../landing/api-authentication.md)에 대한 자습서를 참조하십시오.
+- 플랫폼 API에 대해 [!DNL Postman]을 설정하는 방법에 대한 자세한 내용은 [개발자 콘솔 설정 및 [!DNL Postman]](../../../../landing/postman.md)에 있는 자습서를 참조하십시오.
 
-| 환경 변수 | 값 예 | 참고 |
+이제 플랫폼 개발자 콘솔과 [!DNL Postman] 설정을 통해 [!DNL Postman] 환경에 적절한 환경 값을 적용할 수 있습니다.
+
+다음 표에는 [!DNL Postman] 환경 채우기에 대한 추가 정보와 예제 값이 포함되어 있습니다.
+
+| 변수 | 설명 | 예 |
 | --- | --- | --- |
-| `PRIVATE_KEY` | `{PRIVATE_KEY}` |
-| `SANDBOX_NAME` | `prod` |
-| `TENANT_ID` | `b2bcdpproductiontest` |
-| `munchkinId` | `123-ABC-456 ` | 자세한 내용은 [인스턴스 [!DNL Marketo] 인스턴스](./marketo-auth.md)를 인증하는 자습서를 참조하십시오. |
-| `sfdc_org_id` | `00D4W000000FgYJUA0` | 조직 ID 취득에 대한 자세한 내용은 다음 [[!DNL Salesforce] guide](https://help.salesforce.com/articleView?id=000325251&amp;type=1&amp;mode=1)를 참조하십시오. |
-| `msd_org_id` | `f6438fab-67e8-4814-a6b5-8c8dcdf7a98f` | 조직 ID 취득에 대한 자세한 내용은 다음 [[!DNL Microsoft Dynamics] guide](https://docs.microsoft.com/en-us/power-platform/admin/determine-org-id-name)를 참조하십시오. |
-| `has_abm` | `false` | 계정 기반 마케팅을 구독하는 경우 이 값은 `true`으로 설정됩니다. |
-| `has_msi` | `false` | [!DNL Marketo Sales Insight]에 가입한 경우 이 값은 `true`으로 설정됩니다. |
+| `CLIENT_SECRET` | `{ACCESS_TOKEN}`을(를) 생성하는 데 사용되는 고유 식별자입니다. `{CLIENT_SECRET}`의 검색 방법에 대한 자세한 내용은 [Experience Platform API](../../../../landing/api-authentication.md)를 인증하고 액세스하는 방법에 대한 자습서를 참조하십시오. | `{CLIENT_SECRET}` |
+| `JWT_TOKEN` | JWT(JSON 웹 토큰)는 {ACCESS_TOKEN}을 생성하는 데 사용되는 인증 자격 증명입니다. `{JWT_TOKEN}`을(를) 생성하는 방법에 대한 자세한 내용은 [Experience Platform API](../../../../landing/api-authentication.md)를 인증하고 액세스하는 방법에 대한 자습서를 참조하십시오. | `{JWT_TOKEN}` |
+| `API_KEY` | Experience Platform API에 대한 호출을 인증하는 데 사용되는 고유 식별자입니다. `{API_KEY}`의 검색 방법에 대한 자세한 내용은 [Experience Platform API](../../../../landing/api-authentication.md)를 인증하고 액세스하는 방법에 대한 자습서를 참조하십시오. | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
+| `ACCESS_TOKEN` | Experience Platform API 호출을 완료하는 데 필요한 인증 토큰입니다. `{ACCESS_TOKEN}`의 검색 방법에 대한 자세한 내용은 [Experience Platform API](../../../../landing/api-authentication.md)를 인증하고 액세스하는 방법에 대한 자습서를 참조하십시오. | `Bearer {ACCESS_TOKEN}` |
+| `META_SCOPE` | [!DNL Marketo]과 관련하여 이 값은 고정되고 항상 다음으로 설정됩니다.`ent_dataservices_sdk`. | `ent_dataservices_sdk` |
+| `CONTAINER_ID` | `global` 컨테이너는 제공된 클래스, 스키마 필드 그룹, 데이터 유형 및 스키마를 모두 포함한 모든 표준 Adobe 및 Experience Platform 파트너를 보유합니다. [!DNL Marketo]과 관련하여 이 값은 고정되고 항상 `global`로 설정됩니다. | `global` |
+| `PRIVATE_KEY` | Experience Platform API에 대해 [!DNL Postman] 인스턴스를 인증하는 데 사용되는 자격 증명입니다. {PRIVATE_KEY}를 검색하는 방법에 대한 자세한 내용은 개발자 콘솔 설정에 대한 자습서 및 [개발자 콘솔 설정 및 [!DNL Postman]](../../../../landing/postman.md)을 참조하십시오. | `{PRIVATE_KEY}` |
+| `TECHNICAL_ACCOUNT_ID` | Adobe I/O에 통합하는 데 사용되는 자격 증명입니다. | `D42AEVJZTTJC6LZADUBVPA15@techacct.adobe.com` |
+| `IMS` | IMS(Identity Management System)는 Adobe 서비스에 대한 인증을 위한 프레임워크를 제공합니다. [!DNL Marketo]과 관련하여 이 값은 고정되고 항상 다음 값으로 설정됩니다.`ims-na1.adobelogin.com`. | `ims-na1.adobelogin.com` |
+| `IMS_ORG` | 제품 및 서비스를 소유 또는 라이센스하고 해당 구성원에 대한 액세스를 허용할 수 있는 법인. `{IMS_ORG}` 정보를 검색하는 방법에 대한 지침은 [개발자 콘솔 설정 및 [!DNL Postman]](../../../../landing/postman.md)에 대한 자습서를 참조하십시오. | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
+| `SANDBOX_NAME` | 사용 중인 가상 샌드박스 파티션의 이름입니다. | `prod` |
+| `TENANT_ID` | 만든 리소스가 적절하게 지정되어 IMS 조직 내에 들어 있는지 확인하는 데 사용되는 ID입니다. | `b2bcdpproductiontest` |
+| `PLATFORM_URL` | API 호출을 수행하는 URL 끝점입니다. 이 값은 고정되고 항상 다음과 같이 설정됩니다.`http://platform.adobe.io/`. | `http://platform.adobe.io/` |
+| `munchkinId` | [!DNL Marketo] 계정에 대한 고유 ID. `munchkinId`을(를) 검색하는 방법에 대한 자세한 내용은 [인스턴스 [!DNL Marketo] 인스턴스](./marketo-auth.md)를 인증하는 방법에 대한 자습서를 참조하십시오. | `123-ABC-456` |
+| `sfdc_org_id` | [!DNL Salesforce] 계정의 조직 ID. [!DNL Salesforce] 조직 ID를 취득하는 방법에 대한 자세한 내용은 다음 [[!DNL Salesforce] 안내서](https://help.salesforce.com/articleView?id=000325251&amp;type=1&amp;mode=1)를 참조하십시오. | `00D4W000000FgYJUA0` |
+| `msd_org_id` | [!DNL Dynamics] 계정의 조직 ID. [!DNL Dynamics] 조직 ID를 취득하는 방법에 대한 자세한 내용은 다음 [[!DNL Microsoft Dynamics] 안내서](https://docs.microsoft.com/en-us/power-platform/admin/determine-org-id-name)를 참조하십시오. | `f6438fab-67e8-4814-a6b5-8c8dcdf7a98f` |
+| `has_abm` | [!DNL Marketo Account-Based Marketing]에 가입했는지 여부를 나타내는 부울 값입니다. | `false` |
+| `has_msi` | [!DNL Marketo Sales Insight]에 속하는지 여부를 나타내는 부울 값입니다. | `false` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -99,7 +116,7 @@ ID 네임스페이스는 ID와 관련된 컨텍스트의 표시기 역할을 하
 >
 >표의 전체 내용을 보려면 왼쪽/오른쪽으로 스크롤하십시오.
 
-| 디스플레이 이름 | ID 기호 | ID 유형 | 발급자 유형 | 발급자 엔티티 유형 | [!DNL Salesforce] 구독 조직 ID 예 |
+| 디스플레이 이름 | ID 기호 | ID 유형 | 발급자 유형 | 발급자 엔티티 유형 | [!DNL Dynamics] 구독 조직 ID 예 |
 | --- | --- | --- | --- | --- | --- |
 | `microsoft_person_{DYNAMICS_ID}` | 자동 생성 | `CROSS_DEVICE` | [!DNL Microsoft] | `person` | `94cahe38-e51h-3d57-a9c6-2edklb7184mh` |
 | `microsoft_account_{DYNAMICS_ID}` | 자동 생성 | `B2B_ACCOUNT` | [!DNL Microsoft] | `account` | `94cahe38-e51h-3d57-a9c6-2edklb7184mh` |
