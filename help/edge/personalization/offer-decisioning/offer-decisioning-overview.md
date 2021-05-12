@@ -3,10 +3,9 @@ title: 플랫폼 웹 SDK에서 Offer decisioning 사용
 description: Adobe Experience Platform 웹 SDK는 Offer decisioning에서 관리되는 개인화된 오퍼를 제공하고 렌더링할 수 있습니다. offer decisioning UI 또는 API를 사용하여 오퍼 및 기타 관련 개체를 만들 수 있습니다.
 keywords: offer decisioning;의사 결정;웹 SDK;플랫폼 웹 SDK;개인화된 제안;제공 제안;오퍼 전달;제안 개인화;Marketing Cloud;
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-translation-type: tm+mt
-source-git-commit: 2113eb265020b1d1c2e73dba95554c8bf97acf13
+source-git-commit: 20adb26fbd55302ac8005978968a0d69bdda8755
 workflow-type: tm+mt
-source-wordcount: '849'
+source-wordcount: '842'
 ht-degree: 9%
 
 ---
@@ -23,7 +22,7 @@ Adobe Experience Platform [!DNL Web SDK]은 Offer decisioning에서 관리되는
 
 * IMS 조직이 에지 의사 결정을 위해 활성화되어 있습니다.
 * 오퍼, 생성된 활동
-* 에지 구성이 게시됨
+* 데이터 스트림이 게시됨
 
 ## 용어
 
@@ -54,7 +53,7 @@ offer decisioning 작업 시 다음 용어를 이해하는 것이 중요합니�
 
    ![](assets/decision-scope-copy.png)
 
-* **에지 구성:** 자세한 내용은  [에지 구성 설명서를 ](../../fundamentals/edge-configuration.md) 참조하십시오.
+* **데이터 저장소:** 자세한 내용은 데이터  [](../../fundamentals/datastreams.md) 저장소 설명서를 참조하십시오.
 
 * **ID**:자세한 내용은 Platform Web SDK가 Identity Service를 활용하는 방법에 대한  [개요를 설명하는 문서를 참조하십시오](../../identity/overview.md).
 
@@ -62,7 +61,7 @@ offer decisioning 작업 시 다음 용어를 이해하는 것이 중요합니�
 
 offer decisioning을 활성화하려면 다음 단계를 수행해야 합니다.
 
-1. [edge 구성](../../fundamentals/edge-configuration.md)에서 Adobe Experience Platform을 활성화한 후 &quot;Offer decisioning&quot; 상자를 선택합니다.
+1. [데이터 스트림](../../fundamentals/datastreams.md)에서 Adobe Experience Platform을 활성화하고 &quot;Offer decisioning&quot; 상자를 선택합니다.
    ![offer-decision-edge-config](./assets/offer-decisioning-edge-config.png)
 2. [SDK](../../fundamentals/installing-the-sdk.md) 설치(SDK는 독립 실행형 또는 [Adobe Experience Platform Launch](http://launch.adobe.com/)을 통해 설치할 수 있습니다. 다음은 Platform launch](https://docs.adobe.com/content/help/ko-KR/launch/using/intro/get-started/quick-start.html)에 대한 [빠른 시작 안내서입니다.
 3. [offer decisioning](../../fundamentals/configuring-the-sdk.md) 용 SDK를 구성합니다. 추가적인 Offer decisioning 특정 단계는 아래에 제공됩니다.
@@ -82,7 +81,7 @@ offer decisioning을 활성화하려면 다음 단계를 수행해야 합니다.
    * platform launch 설치 SDK
       1. [platform launch 속성 만들기](https://docs.adobe.com/content/help/ko/launch/using/reference/admin/companies-and-properties.html)
       2. [platform launch 포함 코드 추가](https://docs.adobe.com/content/help/en/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
-      3. &quot;에지 구성&quot; 드롭다운에서 구성을 선택하여 방금 만든 에지 구성으로 플랫폼 웹 SDK 확장을 설치하고 구성합니다. [extensions](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html)에 대한 유용한 설명서입니다.
+      3. &quot;데이터 스트림&quot; 드롭다운에서 구성을 선택하여 방금 만든 데이터 스트림으로 플랫폼 웹 SDK 확장을 설치하고 구성합니다. [extension](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html)에 대한 설명서를 참조하십시오.
          ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
 
          ![configure-aep-web-sdk-extension](./assets/configure-aep-web-sdk-extension.png)
