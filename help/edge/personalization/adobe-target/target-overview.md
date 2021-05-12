@@ -3,10 +3,9 @@ title: Platform Web SDK와 함께 Adobe Target 사용
 description: Adobe Target을 사용하여 Experience Platform 웹 SDK로 개인화된 컨텐츠를 렌더링하는 방법 학습
 keywords: 대상;adobe target;activity.id;experience.id;renderDecisions;decisionScopes;prehing snippet;vec;Form-Based Experience Composer;xdm;audiences;decision;scope;schema
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-translation-type: tm+mt
-source-git-commit: e12b1337c44095ee8731f99c5829ab83bba14889
+source-git-commit: 20adb26fbd55302ac8005978968a0d69bdda8755
 workflow-type: tm+mt
-source-wordcount: '659'
+source-wordcount: '658'
 ht-degree: 4%
 
 ---
@@ -29,7 +28,7 @@ Adobe Experience Platform [!DNL Web SDK]은 Adobe Target에서 관리되는 개�
 
 [!DNL Target]을(를) 활성화하려면 다음을 수행합니다.
 
-1. 적절한 클라이언트 코드로 [edge 구성](../../fundamentals/edge-configuration.md)에서 대상을 활성화합니다.
+1. 적절한 클라이언트 코드로 [데이터 스트림](../../fundamentals/datastreams.md)에서 Target을 활성화합니다.
 1. 이벤트에 `renderDecisions` 옵션을 추가합니다.
 
 그런 다음 선택적으로 다음 옵션을 추가할 수도 있습니다.
