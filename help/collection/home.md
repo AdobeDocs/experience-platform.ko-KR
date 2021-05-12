@@ -5,8 +5,7 @@ title: 데이터 수집 개요
 topic-legacy: overview
 description: Adobe Experience Platform에서 고객 경험에 대한 데이터를 수집하는 것과 관련된 다양한 기술에 대해 알아봅니다.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: a150c23dffde9431953a019509e9554159052d21
 workflow-type: tm+mt
 source-wordcount: '320'
 ht-degree: 3%
@@ -38,7 +37,7 @@ Adobe Experience Platform 웹 및 모바일 SDK가 축소되어 모든 Adobe 제
 
 ## 전환 프로세스를 통한 Adobe 기술 배포
 
-Platform Edge Network는 광범위한 규모로 데이터를 수신하고 처리할 수 있는 전 세계적으로 배포되고 빠르고 안정적인 서버 네트워크로, platform launch을 사용하면 클라이언트측 코드를 변경하지 않고 서버측에서 이러한 제품을 활성화할 수 있도록 Adobe Target, Adobe Audience Manager 및 Adobe Analytics과 같은 제품에 대해 [edge 구성](../edge/fundamentals/edge-configuration.md)을 설정할 수 있습니다.
+Platform Edge Network는 광범위한 규모로 데이터를 수신하고 처리할 수 있는 전 세계적으로 배포되고 빠르고 안정적인 서버 네트워크로, platform launch을 사용하면 클라이언트측 코드를 변경하지 않고 서버측에서 이러한 제품을 활성화할 수 있도록 Adobe Target, Adobe Audience Manager 및 Adobe Analytics과 같은 제품에 대해 [edge 구성](../edge/fundamentals/datastreams.md)을 설정할 수 있습니다.
 
 ![](./images/deploy.png)
 
