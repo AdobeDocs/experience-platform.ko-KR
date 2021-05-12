@@ -1,14 +1,13 @@
 ---
 title: Adobe Experience Platform 웹 SDK FAQ
 description: Adobe Experience Platform 웹 SDK에 대한 질문과 답변을 확인할 수 있습니다.
-translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
+source-git-commit: 5ead9dc72b8b9fe89e0a1bc8365ceff8affd3c85
 workflow-type: tm+mt
-source-wordcount: '1804'
+source-wordcount: '1847'
 ht-degree: 2%
 
 ---
-
 
 # Experience Cloud 핵심 서비스에 대한
 
@@ -75,7 +74,7 @@ Adobe Experience Platform Launch을 사용하면 이러한 라이브러리를 �
 
 **미래 준비: 웹 SDK** 와 Experience Edge Network와의 연결을 통해 Adobe은 Adobe이 데이터 수집, 개인화, 동의 및 제3자 쿠키의 미래를 다루는 방법을 상당히 현대화할 수 있게 되었습니다. (Adobe에서 관리하는 퍼스트 파티 도메인을 활성화합니다.)
 
-**가치 실현 시간:** Adobe은 Experience Platform Launch을 통해 웹 SDK를 간편하게 배포하고 클라이언트측 데이터를 XDM에 매핑하기 위해 열심히(그리고 계속) 작업했습니다.  작업이 완료되면 다른 모든 Adobe 솔루션과 Adobe Experience Platform 서비스를 서버측에서 켜거나 끌 수 있습니다. 예를 들어 Adobe Analytics에 이 옵션을 사용하고 Target 또는 Experience Platform을 켜려는 경우 경험 에지 구성을 전환하여 이러한 사용 사례를 활성화하면 됩니다.
+**가치 실현 시간:** Adobe은 Experience Platform Launch을 통해 웹 SDK를 간편하게 배포하고 클라이언트측 데이터를 XDM에 매핑하기 위해 열심히(그리고 계속) 작업했습니다.  작업이 완료되면 다른 모든 Adobe 솔루션과 Adobe Experience Platform 서비스를 서버측에서 켜거나 끌 수 있습니다. 예를 들어 Adobe Analytics에 이 옵션을 사용하고 Target 또는 Experience Platform을 켜려는 경우 데이터 스트림 구성을 전환하여 이러한 사용 사례를 켜기만 하면 됩니다.
 
 ## 합금 소개
 
@@ -104,7 +103,7 @@ Adobe Experience Platform 웹 SDK는 다음 사용자를 위해 개발되었습�
 
 ## Adobe Experience Platform 웹 SDK를 사용하기 위해 어떻게 액세스할 수 있습니까?
 
-웹 SDK는 현재 일반 사용자가 사용할 수 있으며 Adobe Experience Cloud 제품으로 데이터를 전송하는 데 사용할 수 있습니다. 데이터를 제3자 솔루션으로 보내는 기능은 가까운 시일 내에 제공될 예정입니다. SDK는 무료로 Adobe에서 호스팅되며, 다운로드할 수 있으므로 원하는 경우 자체 서버에서 무료로 호스팅할 수 있습니다. Adobe 서버가 SDK에서 오는 인바운드 데이터를 제대로 처리하려면 플랫폼 에지 네트워크 구성 및 Adobe Experience Platform XDM 스키마 빌더에 대한 액세스 권한이 플랫폼 웹 SDK에서 필요합니다. 액세스 권한을 받으려면 CSM(Customer Success Manager)에 문의하여 요청 프로세스를 시작하십시오.
+웹 SDK는 현재 일반 사용자가 사용할 수 있으며 Adobe Experience Cloud 제품으로 데이터를 전송하는 데 사용할 수 있습니다. 데이터를 제3자 솔루션으로 보내는 기능은 가까운 시일 내에 제공될 예정입니다. SDK는 무료로 Adobe에서 호스팅되며, 다운로드할 수 있으므로 원하는 경우 자체 서버에서 무료로 호스팅할 수 있습니다. Adobe 서버가 SDK에서 오는 인바운드 데이터를 제대로 처리하려면 플랫폼 웹 SDK에서 데이터 스트림 구성 및 Adobe Experience Platform XDM 스키마 빌더에 대한 액세스 권한이 필요합니다. 액세스 권한을 받으려면 CSM(Customer Success Manager)에 문의하여 요청 프로세스를 시작하십시오.
 
 ## 웹 SDK에서 현재 지원되는 사용 사례는 무엇입니까?
 
@@ -138,7 +137,7 @@ Adobe Experience Platform 웹 SDK는 다음 사용자를 위해 개발되었습�
 
 그러나:
 
-* Adobe Experience Platform 웹 SDK에는 Experience Edge 구성 ID라는 것이 필요합니다. 따라서 Edge Network는 스트림을 식별하고 데이터를 사용하여 수행할 작업을 결정할 수 있습니다. 이 ID는 Experience Platform Launch 내에 만들어집니다. Experience Platform Launch을 사용하여 속성을 만들거나 JavaScript 코드를 배포해야 하는 것은 아니지만, Experience Platform Launch을 사용하여 구성 ID를 만들어야 합니다.
+* Adobe Experience Platform 웹 SDK를 사용하려면 Edge 네트워크가 스트림을 식별하고 데이터를 사용하여 수행할 작업을 결정할 수 있도록 데이터 스트림 ID라는 것이 필요합니다. 이 ID는 Experience Platform Launch 내에 만들어집니다. Experience Platform Launch을 사용하여 속성을 만들거나 JavaScript 코드를 배포해야 하는 것은 아니지만, Experience Platform Launch을 사용하여 구성 ID를 만들어야 합니다.
 
 * Adobe Experience Platform Launch은 사용 가능한 최상의 태그 및 SDK 관리자뿐만 아니라 `alloy.js`을(를) 배포하고 데이터를 XDM 스키마에 매핑하는 작업이 매우 쉽습니다. Experience Platform Launch을 사용하지 않기로 결정하면 데이터를 보내기 전에 `alloy.js` 배포, 이벤트 및 XDM에 데이터 매핑을 관리해야 합니다. Experience Platform Launch을 사용하는 것보다 _훨씬_&#x200B;더 어려운 프로세스입니다.
 
@@ -163,6 +162,10 @@ CNAME에 대한 자세한 내용은 [Adobe 설명서](https://docs.adobe.com/con
 **kndctr_orgid_personalization:** 이 쿠키에는 Adobe Target이 웹 페이지를 개인화하기 위해 사용하는 세션 정보가 포함되어 있습니다.
 
 **kndctr_orgid_consentecheck:** 이 세션 기반 쿠키는 서버가 동의 환경 설정 서버측 항목을 찾도록 알립니다.
+
+## Adobe Experience Platform 웹 SDK에서 지원하는 브라우저는 무엇입니까?
+
+Adobe Experience Platform 웹 SDK는 최신 버전의 Google Chrome, Safari, Firefox, Internet Explorer 11 및 Microsoft Edge Chromium에서 최적으로 작동하도록 설계되었습니다. 이전 버전의 브라우저에서 특정 기능을 사용하는 데 문제가 있을 수 있습니다.
 
 ## Adobe Experience Platform 웹 SDK에 대한 자세한 내용은 어디에서 확인할 수 있습니까?
 
