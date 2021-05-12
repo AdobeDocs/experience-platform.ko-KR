@@ -5,8 +5,7 @@ title: Experience Platform에서 IAB TCF 2.0 지원
 topic-legacy: privacy events
 description: 세그먼트를 Adobe Experience Platform의 대상에 활성화할 때 고객 동의 선택 사항을 전달하도록 데이터 작업 및 스키마를 구성하는 방법을 알아봅니다.
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
-translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: 20adb26fbd55302ac8005978968a0d69bdda8755
 workflow-type: tm+mt
 source-wordcount: '2466'
 ht-degree: 0%
@@ -96,7 +95,7 @@ TCF 사양에서 동의 문자열은 정책과 공급업체에서 정의한 특�
 
 동의 문자열은 IAB TCF에 등록된 CMP에서만 만들 수 있습니다. 특정 CMP를 사용하여 동의 문자열을 생성하는 방법에 대한 자세한 내용은 IAB TCF GitHub 보고서의 [동의 문자열 서식 지정 안내서](https://github.com/InteractiveAdvertisingBureau/GDPR-Transparency-and-Consent-Framework/blob/master/TCFv2/IAB%20Tech%20Lab%20-%20Consent%20string%20and%20vendor%20list%20formats%20v2.md)를 참조하십시오.
 
-## TCF 동의 필드가 {#datasets}인 데이터 집합 만들기
+## TCF 동의 필드가 있는 데이터 집합 만들기 {#datasets}
 
 고객 동의 데이터는 스키마에 TCF 동의 필드가 들어 있는 데이터 세트로 전송해야 합니다. 이 안내서를 계속하기 전에 TCF 2.0 동의](./dataset.md)을(를) 캡처하기 위한 데이터 세트 만들기에 대한 자습서를 참조하십시오.[
 
@@ -106,7 +105,7 @@ TCF 사양에서 동의 문자열은 정책과 공급업체에서 정의한 특�
 
 병합 정책을 사용하는 방법에 대한 자세한 내용은 [병합 정책 사용 안내서](../../../../profile/ui/merge-policies.md)를 참조하십시오. 병합 정책을 설정할 때 데이터 집합 준비에 대한 안내서에 설명된 대로, 세그먼트에 [XDM 개인 정보 스키마 필드 그룹](./dataset.md#privacy-field-group)에서 제공하는 모든 필수 동의 속성이 포함되도록 해야 합니다.
 
-## Experience Platform 웹 SDK를 통합하여 고객 동의 데이터 {#sdk} 수집
+## Experience Platform 웹 SDK를 통합하여 고객 동의 데이터 수집 {#sdk}
 
 >[!NOTE]
 >
@@ -120,7 +119,7 @@ TCF 사양에서 동의 문자열은 정책과 공급업체에서 정의한 특�
 
 ### 새 에지 구성 만들기
 
-SDK가 데이터를 Experience Platform으로 전송하려면 먼저 [!DNL Adobe Experience Platform Launch]에서 플랫폼에 대한 새 에지 구성을 만들어야 합니다. 새 구성을 만드는 방법에 대한 특정 단계는 [SDK 설명서](../../../../edge/fundamentals/edge-configuration.md)에서 제공됩니다.
+SDK가 데이터를 Experience Platform으로 전송하려면 먼저 [!DNL Adobe Experience Platform Launch]에서 플랫폼에 대한 새 에지 구성을 만들어야 합니다. 새 구성을 만드는 방법에 대한 특정 단계는 [SDK 설명서](../../../../edge/fundamentals/datastreams.md)에서 제공됩니다.
 
 구성에 대한 고유한 이름을 제공한 후 **[!UICONTROL Adobe Experience Platform]** 옆에 있는 전환 단추를 선택합니다. 그런 다음 다음 다음 값을 사용하여 나머지 양식을 완료합니다.
 
@@ -250,7 +249,7 @@ alloy("sendEvent", {
 
 TCF 2.0 구현을 구성하고 세그먼트를 대상으로 내보내면 동의 요구 사항을 충족하지 않는 데이터는 내보내지지 않습니다. 그러나 내보내기 중에 적절한 고객 프로필이 필터링되었는지 확인하려면 대상에 있는 데이터 저장소를 수동으로 확인하여 동의가 제대로 적용되었는지 확인해야 합니다.
 
-여러 ID가 클러스터를 구성하고 TCF 2.0이 적용되는 경우 단일 ID에도 올바른 목적과 공급업체 권한이 포함되어 있지 않더라도 전체 클러스터가 제외됩니다.
+여러 ID가 클러스터를 구성하고 TCF 2.0이 적용되는 경우 단일 ID에도 올바른 목적과 공급업체 권한이 없는 경우에도 전체 클러스터가 제외됩니다.
 
 ## 다음 단계
 
