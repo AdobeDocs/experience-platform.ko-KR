@@ -2,14 +2,13 @@
 title: Adobe Experience Platform 웹 SDK의 디버깅
 description: Experience Platform 웹 SDK의 디버깅 기능을 토글하는 방법을 알아봅니다.
 keywords: 웹 sdk 디버깅;디버깅;구성;구성 명령;디버그 명령;EdgeConfigId;setDebug;debugEnabled;debug;
-translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+exl-id: 4e893af8-a48e-48dc-9737-4c61b3355f03
+source-git-commit: 0f671a967a67761e0cfef6fa0d022e3c3790c2d8
 workflow-type: tm+mt
-source-wordcount: '392'
-ht-degree: 1%
+source-wordcount: '446'
+ht-degree: 0%
 
 ---
-
 
 # 디버깅
 
@@ -79,4 +78,4 @@ alloy("getLibraryInfo").then(function(result) {
 
 현재 제공된 `libraryInfo` 개체에는 다음 속성이 포함되어 있습니다.
 
-* `version` 로드된 라이브러리의 버전입니다. 예를 들어, 로드되는 라이브러리 버전이 1.0.0인 경우 값은 `1.0.0`입니다.
+* `version` 로드된 라이브러리의 버전입니다. 예를 들어, 로드되는 라이브러리 버전이 1.0.0인 경우 값은 `1.0.0`입니다. 라이브러리가 Adobe Experience Platform Launch 확장 프로그램(&quot;AEP Web SDK&quot;)에서 실행될 때 버전은 라이브러리 버전이고 Platform launch 확장 버전은 &quot;+&quot; 기호로 연결됩니다. 예를 들어 라이브러리 버전이 1.0.0이고 Platform launch 확장 버전이 1.2.0인 경우 값은 `1.0.0+1.2.0`입니다.
