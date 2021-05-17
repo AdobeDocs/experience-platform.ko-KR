@@ -2,14 +2,13 @@
 title: Adobe Experience Platform 웹 SDK에서 자동으로 수집된 정보
 description: Adobe Experience Platform SDK가 자동으로 수집하는 각 정보의 개요입니다.
 keywords: 정보 수집;컨텍스트;구성;장치;화면 높이;화면 높이;화면 방향;화면 너비;화면 너비;환경;뷰포트 높이;뷰포트 높이;뷰포트 너비;뷰포트 너비;뷰포트 너비;브라우저 세부 사항;구현 세부 사항;구현 세부 사항;버전;버전;위치;로컬 시간;로컬 시간;로컬 시간 오프셋;로컬 시간대 오프셋;타임스탬프;웹;url;webPageDetails;웹 페이지 세부 사항;webReferrer;웹 레퍼러;가로;세로;
-translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+exl-id: 901df786-df36-4986-9c74-a32d29c11b71
+source-git-commit: 0f671a967a67761e0cfef6fa0d022e3c3790c2d8
 workflow-type: tm+mt
-source-wordcount: '422'
-ht-degree: 8%
+source-wordcount: '515'
+ht-degree: 6%
 
 ---
-
 
 # 자동으로 수집된 정보
 
@@ -25,7 +24,7 @@ Adobe Experience Platform 웹 SDK는 특별한 구성 없이 다양한 정보를
 | ---------------------------------- | ------------ |
 | `events[].xdm.device.screenHeight` | `900` |
 
-화면의 높이(픽셀)입니다.
+화면의 높이(픽셀 단위)입니다.
 
 ### 화면 방향
 
@@ -83,7 +82,7 @@ Adobe Experience Platform 웹 SDK는 특별한 구성 없이 다양한 정보를
 | ----------------------------------------- | --------------------------------------- |
 | `events[].xdm.implementationDetails.name` | `https://ns.adobe.com/experience/alloy` |
 
-SDK(소프트웨어 개발 키트) 식별자.  이 필드는 다른 소프트웨어 라이브러리에서 제공하는 식별자 간의 고유성을 개선하기 위해 URI를 사용합니다.
+SDK(소프트웨어 개발 키트) 식별자.  이 필드는 다른 소프트웨어 라이브러리에서 제공하는 식별자 간의 고유성을 개선하기 위해 URI를 사용합니다. 독립 실행형 라이브러리를 사용하면 값이 `https://ns.adobe.com/experience/alloy`입니다. 라이브러리를 Platform launch 확장 프로그램의 일부로 사용할 경우 값은 `https://ns.adobe.com/experience/alloy+reactor`입니다.
 
 ### 버전
 
@@ -91,12 +90,15 @@ SDK(소프트웨어 개발 키트) 식별자.  이 필드는 다른 소프트웨
 | -------------------------------------------- | ------------ |
 | `events[].xdm.implementationDetails.version` | `0.11.0` |
 
+독립 실행형 라이브러리를 사용하면 이 값은 단순히 라이브러리 버전입니다. 라이브러리를 Platform launch 확장 프로그램의 일부로 사용할 때 이것은 라이브러리 버전이며 Platform launch 확장 버전이 &quot;+&quot;로 결합됩니다. 예를 들어 라이브러리 버전이 2.1.0이고 Platform launch 확장 버전이 2.1.3인 경우 값은 `2.1.0+2.1.3`입니다.
+
 ### 환경
 
 | **페이로드의 경로:** | **예:** |
 | ------------------------------------------------ | ------------ |
 | `events[].xdm.implementationDetails.environment` | `browser` |
 
+데이터가 수집되는 환경입니다. 이 값은 항상 `browser`으로 설정됩니다.
 
 ## 컨텍스트 가져오기(`placeContext`)
 
