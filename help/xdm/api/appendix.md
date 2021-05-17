@@ -5,8 +5,7 @@ title: 스키마 레지스트리 API 안내서 부록
 description: 이 문서에서는 스키마 레지스트리 API 작업과 관련된 추가 정보를 제공합니다.
 topic-legacy: developer guide
 exl-id: 2ddc7fe8-dd0b-4cf9-8561-e89fcdadbfce
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: dcfdc9c479e8a77296f7cb0bf9f5bb36e9261b75
 workflow-type: tm+mt
 source-wordcount: '775'
 ht-degree: 0%
@@ -17,7 +16,7 @@ ht-degree: 0%
 
 이 문서에서는 [!DNL Schema Registry] API 작업과 관련된 추가 정보를 제공합니다.
 
-## 쿼리 매개 변수 {#query} 사용
+## 쿼리 매개 변수 사용 {#query}
 
 [!DNL Schema Registry]은 리소스를 나열할 때 쿼리 매개 변수를 페이지에 사용하고 결과를 필터링하는 기능을 지원합니다.
 
@@ -25,7 +24,7 @@ ht-degree: 0%
 >
 >여러 쿼리 매개 변수를 결합할 때는 앰퍼샌드(`&`)로 구분해야 합니다.
 
-### {#paging} 호출
+### 페이징 {#paging}
 
 페이징 시 가장 일반적인 쿼리 매개 변수는 다음과 같습니다.
 
@@ -54,7 +53,7 @@ ht-degree: 0%
 >
 >`property` 매개 변수를 사용하여 호환 클래스로 스키마 필드 그룹을 필터링할 수 있습니다. 예를 들어 `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile`은 [!DNL XDM Individual Profile] 클래스와 호환되는 필드 그룹만 반환합니다.
 
-## 호환성 모드
+## 호환성 모드 {#compatibility}
 
 [!DNL Experience Data Model] (XDM)은 Adobe을 통해 디지털 경험의 상호 운용성, 풍부한 표현 능력 및 성능을 향상시킴으로써 공개적으로 문서화된 사양입니다. Adobe은 GitHub](https://github.com/adobe/xdm/)의 오픈 소스 프로젝트에 소스 코드와 공식 XDM 정의를 유지 관리합니다. [ 이러한 정의는 XDM 표준 표기법으로 작성되며, JSON-LD(연결된 데이터에 대한 JavaScript 개체 표기법) 및 JSON 스키마를 XDM 스키마를 정의하는 문법으로 사용합니다.
 
