@@ -2,14 +2,13 @@
 title: Adobe Experience Platform 웹 SDK 설치
 description: Experience Platform 웹 SDK를 설치하는 방법을 알아봅니다.
 keywords: 웹 sdk 설치;웹 sdk 설치;internet explorer;promise;npm 패키지
-translation-type: tm+mt
-source-git-commit: 63c0c5cae5ca2800b1f049b2b33e2a6f36ee7255
+exl-id: b1de7ca1-d0d2-4661-a273-a1acf29afcd5
+source-git-commit: 07f598a9fd7c0e5af7802fe979a44bbafa7afae4
 workflow-type: tm+mt
-source-wordcount: '901'
-ht-degree: 4%
+source-wordcount: '939'
+ht-degree: 3%
 
 ---
-
 
 # SDK {#installing-the-sdk} 설치
 
@@ -21,7 +20,7 @@ Adobe Experience Platform Web SDK를 사용하는 세 가지 지원 방법은 �
 
 ## 옵션 1:Adobe Experience Platform Launch 확장 설치
 
-Adobe Experience Platform Launch 익스텐션에 대한 설명서는 [시작 설명서](https://docs.adobe.com/content/help/ko-KR/launch/using/extensions-ref/adobe-extension/aep-extension/overview.html)를 참조하십시오.
+Adobe Experience Platform Launch 익스텐션에 대한 설명서는 [시작 설명서](https://docs.adobe.com/content/help/ko/launch/using/extensions-ref/adobe-extension/aep-extension/overview.html)를 참조하십시오.
 
 ## 옵션 2:미리 작성된 독립 실행형 버전 설치
 
@@ -130,6 +129,10 @@ const alloy = createInstance({ name: "alloy" });
 alloy("config", { ... });
 alloy("sendEvent", { ... });
 ```
+
+>[!NOTE]
+>
+>NPM 패키지는 CommonJS 모듈에 의존합니다.따라서 bundler를 사용할 때는 bundler가 CommonJS 모듈을 지원하는지 확인하십시오. [롤업](https://rollupjs.org)과 같은 일부 번들러는 CommonJS 지원을 제공하는 [plugin](https://www.npmjs.com/package/@rollup/plugin-commonjs)이 필요합니다.
 
 ### 패키지를 ECMAScript 5 모듈로 사용
 
