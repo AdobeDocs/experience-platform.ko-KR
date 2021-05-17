@@ -5,31 +5,55 @@ title: XDM ExperienceEvent 클래스
 topic-legacy: overview
 description: 이 문서에서는 XDM ExperienceEvent 클래스의 개요를 제공합니다.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: 9fbb40a401250496761dcce63a3f033a8746ae7e
 workflow-type: tm+mt
-source-wordcount: '867'
+source-wordcount: '1466'
 ht-degree: 1%
 
 ---
 
 # [!DNL XDM ExperienceEvent] class
 
-[!DNL XDM ExperienceEvent] 은 특정 이벤트가 발생하거나 특정 조건 세트에 도달할 때 타임스탬프가 지정된 시스템 스냅샷을 만들 수 있는 표준 XDM 클래스입니다.
+[!DNL XDM ExperienceEvent] 는 특정 이벤트가 발생하거나 특정 조건 세트에 도달할 때 타임스탬프가 지정된 시스템 스냅샷을 만들 수 있는 표준 XDM(Experience Data Model) 클래스입니다.
 
 경험 이벤트는 관련된 개인의 시점 및 ID를 비롯하여 발생한 사실에 대한 팩트 레코드입니다. 이벤트는 명시적(직접 관찰할 수 있는 인간 작업) 또는 암시적(직접 작업하지 않고 발생)일 수 있으며 집계 또는 해석 없이 기록됩니다. 플랫폼 생태계에서 이 클래스를 사용하는 방법에 대한 자세한 내용은 [XDM 개요](../home.md#data-behaviors)를 참조하십시오.
 
 [!DNL XDM ExperienceEvent] 클래스 자체는 스키마에 여러 시간 시리즈 관련 필드를 제공합니다. 이러한 필드 중 일부는 데이터를 인제스트할 때 자동으로 채워집니다.
 
-<img src="../images/classes/experienceevent.png" width="650" /><br />
+![](../images/classes/experienceevent/structure.png)
 
 | 속성 | 설명 |
 | --- | --- |
-| `_id` | 이벤트에 대한 고유한 시스템 생성 문자열 식별자. 이 필드는 개별 이벤트의 고유성을 추적하고 데이터 중복을 방지하고 다운스트림 서비스에서 해당 이벤트를 조회하는 데 사용됩니다. 이 필드는 시스템에서 생성되므로 데이터를 수집하는 동안 명시적 값을 제공해서는 안 됩니다.<br><br>이 필드는 개별 개인 **과 관련된 ID를** 제공하지 않고 데이터 자체의 레코드를 구별하는 것이 중요합니다. 사람과 관련된 ID 데이터는 대신 [ID 필드](../schema/composition.md#identity)로 분류해야 합니다. |
-| `eventMergeId` | 레코드를 만든 인제스트된 일괄 처리의 ID. 이 필드는 데이터 수집 시 시스템에 의해 자동으로 채워집니다. |
-| `eventType` | 레코드에 대한 기본 이벤트 유형을 나타내는 문자열. 허용된 값과 그 정의는 [부록 섹션](#eventType)에 제공됩니다. |
+| `_id` | 이벤트에 대한 고유 문자열 식별자입니다. 이 필드는 개별 이벤트의 고유성을 추적하고 데이터 중복을 방지하고 다운스트림 서비스에서 해당 이벤트를 찾는 데 사용됩니다.<br><br>경우에 따라 UUID( `_id` Universal Unique Identifier)  [또는 GUID(](https://tools.ietf.org/html/rfc4122) Globally Unique Identifier) [일 수 있습니다](https://docs.microsoft.com/en-us/dotnet/api/system.guid?view=net-5.0). Adobe Experience Platform 데이터 준비에서 이 값은 [`uuid` 또는 `guid` 매핑 함수](../../data-prep/functions.md#special-operations)를 사용하여 생성할 수 있습니다.<br><br>소스 연결에서 데이터를 스트리밍하거나 Componer 파일에서 직접 인제스트하는 경우 기본 ID, 타임스탬프, 이벤트 유형 등과 같이 고유한 특정 조합 필드를 연결하여 이 값을 생성해야 합니다.<br><br>이 필드는 개인 **과 관련된 ID를 나타내지 않고** 데이터 자체의 레코드를 구별하는 것이 중요합니다. 사람과 관련된 ID 데이터는 호환 가능한 믹스에서 대신 [ID 필드](../schema/composition.md#identity)로 분류해야 합니다. |
+| `eventMergeId` | [Adobe Experience Platform Web SDK](../../edge/home.md)를 사용하여 데이터를 인제스트하는 경우 이 값은 레코드를 만드는 인제스트된 일괄 처리의 ID를 나타냅니다. 이 필드는 데이터 수집 시 시스템에 의해 자동으로 채워집니다. 웹 SDK 구현 컨텍스트 외부에서 이 필드의 사용은 지원되지 않습니다. |
+| `eventType` | 이벤트의 유형 또는 범주를 나타내는 문자열. 이 필드는 제품 보기 이벤트와 소매 회사의 장바구니 추가/추가 이벤트를 구별하는 것과 같이 동일한 스키마 및 데이터 세트 내의 다른 이벤트 유형을 구별하려는 경우 사용할 수 있습니다.<br><br>이 속성에 대한 표준 값은 해당 사용 사례에 대한 설명을 포함하여  [부록 섹션에](#eventType) 제공됩니다. 이 필드는 확장 가능한 열거형입니다. 즉, 자체 이벤트 유형 문자열을 사용하여 추적 중인 이벤트를 분류할 수도 있습니다. |
+| `producedBy` | 이벤트의 프로듀서 또는 원본을 설명하는 문자열 값입니다. 세그멘테이션을 위해 필요한 경우 이 필드를 사용하여 특정 이벤트 프로듀서를 필터링할 수 있습니다.<br><br>이 속성에 대해 제안된 일부 값은  [부록 섹션에 제공됩니다](#producedBy). 이 필드는 확장 가능한 열거형입니다. 즉, 자체 문자열을 사용하여 다른 이벤트 프로듀서를 나타낼 수도 있습니다. |
 | `identityMap` | 이벤트가 적용되는 개별 ID 세트를 포함하는 맵 필드입니다. 이 필드는 ID 데이터를 수집할 때 시스템에 의해 자동으로 업데이트됩니다. [실시간 고객 프로필](../../profile/home.md)에 이 필드를 제대로 활용하려면 데이터 작업에서 필드의 내용을 수동으로 업데이트하지 마십시오.<br /><br />사용 사례에 대한 자세한 내용은 스키마 구성 [의 기본 사항](../schema/composition.md#identityMap) 에서 ID 맵에 대한 섹션을 참조하십시오. |
-| `timestamp` | [RFC 3339 섹션 5.6](https://tools.ietf.org/html/rfc3339#section-5.6)에 따라 형식이 지정된 이벤트가 발생한 ISO 8601 타임스탬프.<br><br>이 타임스탬프는  **** 이벤트 자체의 관찰만을 나타낼 수 있으며, 과거에만 발생해야 합니다. 세그멘테이션 사용 사례를 사용하려면 나중에 발생할 수 있는 타임스탬프(예: 출발 날짜)를 사용해야 하는 경우 이러한 값은 경험 이벤트 스키마의 다른 부분에 제한되어야 합니다. |
+| `timestamp` | [RFC 3339 섹션 5.6](https://tools.ietf.org/html/rfc3339#section-5.6)에 따라 형식이 지정된 이벤트가 발생한 ISO 8601 타임스탬프. 이 타임스탬프는 과거에 발생해야 합니다. 이 필드 사용에 대한 우수 사례가 필요하면 [타임스탬프](#timestamps)의 아래 섹션을 참조하십시오. |
+
+## 이벤트 모델링에 대한 우수 사례
+
+다음 섹션에서는 Adobe Experience Platform에서 이벤트 기반 XDM(Experience Data Model) 스키마를 디자인하기 위한 모범 사례를 설명합니다.
+
+### 타임스탬프 {#timestamps}
+
+이벤트 스키마의 루트 `timestamp` 필드는 **만**&#x200B;에 이벤트 자체의 관찰을 나타낼 수 있으며 과거에 발생해야 합니다. 세그멘테이션 사용 사례가 나중에 발생할 수 있는 타임스탬프를 사용해야 하는 경우 이러한 값은 경험 이벤트 스키마의 다른 부분에 제한되어야 합니다.
+
+예를 들어 여행 및 숙박 업계의 사업이 비행 예약 이벤트를 모델링하는 경우 클래스 수준 `timestamp` 필드는 예약 이벤트가 관찰된 시간을 나타냅니다. 여행 예약 시작 날짜 등 해당 이벤트와 관련된 다른 타임스탬프는 표준 또는 사용자 정의 믹싱으로 제공되는 별도의 필드에 캡처해야 합니다.
+
+![](../images/classes/experienceevent/timestamps.png)
+
+클래스 수준 타임스탬프를 이벤트 스키마의 다른 관련 datetime 값과 구분하도록 함으로써 경험 애플리케이션에서 고객 여정의 타임스탬프가 지정된 계정을 유지하면서 유연한 세그멘테이션 사용 사례를 구현할 수 있습니다.
+
+### 계산된 필드 사용
+
+경험 애플리케이션의 특정 상호 작용으로 인해 기술적으로 동일한 이벤트 타임스탬프를 공유하는 여러 관련 이벤트가 발생할 수 있으므로 단일 이벤트 레코드로 나타낼 수 있습니다. 예를 들어 고객이 웹 사이트에서 제품을 보는 경우 &quot;제품 보기&quot; 속성은 물론 일부 중복된 일반 &quot;페이지 보기&quot; 속성이 포함된 이벤트 레코드가 나타날 수 있습니다. 이러한 경우 여러 이벤트가 기록에서 캡처될 때 계산된 필드를 사용하여 가장 중요한 속성을 캡처할 수 있습니다.
+
+[Adobe Experience Platform Data ](../../data-prep/home.md) Preflight를 사용하면 XDM을 통해 데이터를 매핑, 변형 및 확인할 수 있습니다. 서비스에서 제공하는 사용 가능한 [매핑 함수](../../data-prep/functions.md)를 사용하여 Experience Platform으로 인제스트할 때 논리 연산자를 호출하여 다중 이벤트 레코드의 데이터를 우선 순위를 지정하고, 변형하고/또는 통합할 수 있습니다.
+
+UI를 통해 수동으로 데이터를 플랫폼에 인제스트하는 경우, 계산된 필드를 만드는 방법에 대한 특정 단계는 [CSV 파일을 XDM](../../ingestion/tutorials/map-a-csv-file.md)에 매핑하는 가이드를 참조하십시오.
+
+소스 연결을 사용하여 Platform으로 데이터를 스트리밍하는 경우 소스를 구성하여 계산된 필드를 대신 활용할 수 있습니다. 연결을 구성할 때 계산된 필드를 구현하는 방법에 대한 지침은 특정 소스](../../sources/home.md)에 대한 [설명서를 참조하십시오.
 
 ## 호환 가능한 스키마 필드 그룹 {#field-groups}
 
@@ -39,16 +63,16 @@ ht-degree: 1%
 
 Adobe은 [!DNL XDM ExperienceEvent] 클래스에 사용할 수 있도록 여러 개의 표준 필드 그룹을 제공합니다. 다음은 클래스에 일반적으로 사용되는 일부 필드 그룹 목록입니다.
 
-* [[!UICONTROL End User ID Details]](../field-groups/event/enduserids.md)
-* [[!UICONTROL Environment Details]](../field-groups/event/environment-details.md)
+* [[!UICONTROL 최종 사용자 ID 세부 사항]](../field-groups/event/enduserids.md)
+* [[!UICONTROL 환경 세부 사항]](../field-groups/event/environment-details.md)
 
 ## 부록
 
 다음 섹션에는 [!UICONTROL XDM ExperienceEvent] 클래스에 대한 추가 정보가 포함되어 있습니다.
 
-### xdm:eventType {#eventType}에 허용된 값
+### `eventType`에 허용된 값 {#eventType}
 
-다음 표에서는 `xdm:eventType`에 대해 허용된 값을 해당 정의와 함께 개괄합니다.
+다음 표에서는 `eventType`에 대해 허용된 값을 해당 정의와 함께 개괄합니다.
 
 | 값 | 정의 |
 | --- | --- |
@@ -76,3 +100,14 @@ Adobe은 [!DNL XDM ExperienceEvent] 클래스에 사용할 수 있도록 여러 
 | `delivery.feedback` | 이메일 배달과 같은 배달에 대한 피드백 이벤트입니다. |
 | `message.feedback` | 고객에게 보낸 메시지에 대한 전송/바운스/오류 등의 피드백 이벤트. |
 | `message.tracking` | 고객에게 전송된 메시지에 대해 열린/클릭/사용자 지정 동작과 같은 이벤트를 추적합니다. |
+
+### `producedBy`에 대해 제안된 값 {#producedBy}
+
+다음 표에서는 `producedBy`에 대해 허용되는 일부 값에 대해 대략적으로 설명합니다.
+
+| 값 | 정의 |
+| --- | --- |
+| `self` | 자체 |
+| `system` | 시스템 |
+| `salesRef` | 영업 담당자 |
+| `customerRep` | 고객 담당자 |
