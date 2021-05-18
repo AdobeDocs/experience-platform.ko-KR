@@ -5,10 +5,9 @@ title: Marketo Engage 소스의 매핑 필드
 topic-legacy: overview
 description: 아래 표에는 Marketo 데이터 집합의 필드와 해당 XDM 필드 간의 매핑이 포함되어 있습니다.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-translation-type: tm+mt
-source-git-commit: e4823a2b787667fc181f8a4d474c7d2eb73c8eec
+source-git-commit: db7fde343b3ebf4428020c8256df2b9cfa1486ad
 workflow-type: tm+mt
-source-wordcount: '330'
+source-wordcount: '333'
 ht-degree: 4%
 
 ---
@@ -256,14 +255,11 @@ ht-degree: 4%
 
 {style=&quot;table-layout:auto&quot;}
 
-## 사용자 {#persons}
+## 인물 {#persons}
 
 | 소스 데이터 세트 | XDM 대상 필드 | 참고 |
 | -------------- | ---------------- | ----- |
 | `id` | `personID` | 기본 ID |
-| `emailSuspended` | `b2b.personOptInOut._channels.email` |
-| `emailSuspendedAt` | `b2b.personOptInOut.optOutDetails.email.optOutDate` |
-| `emailSuspendedCause` | `b2b.personOptInOut.optOutDetails.email.optOutReason` |
 | `contactCompany` | `b2b.accountID` |
 | `marketingSuspended` | `b2b.isMarketingSuspended` |
 | `marketingSuspendedCause` | `b2b.marketingSuspendedCause` |
@@ -310,7 +306,7 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->`to_object('ECID',arrays_to_objects('id',explode(ecids)))` 소스 필드는 플랫폼 UI에서 [!UICONTROL Add calculated field] 옵션을 사용하여 추가해야 하는 계산된 필드입니다. 자세한 내용은 [계산된 필드 추가](../../../../ingestion/tutorials/map-a-csv-file.md)에 대한 자습서를 참조하십시오.
+>`to_object('ECID',arrays_to_objects('id',explode(ecids)))` 소스 필드는 플랫폼 UI에서 [!UICONTROL 계산된 필드 추가] 옵션을 사용하여 추가해야 하는 계산된 필드입니다. 자세한 내용은 [계산된 필드 추가](../../../../ingestion/tutorials/map-a-csv-file.md)에 대한 자습서를 참조하십시오.
 
 ## 다음 단계
 
