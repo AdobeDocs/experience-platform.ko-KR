@@ -6,10 +6,9 @@ seo-title: 대상에 프로필 및 세그먼트 활성화
 description: 세그먼트를 대상에 매핑하여 Adobe Experience Platform에 있는 데이터를 활성화합니다. 이를 수행하려면 아래 단계를 따르십시오.
 seo-description: 세그먼트를 대상에 매핑하여 Adobe Experience Platform에 있는 데이터를 활성화합니다. 이를 수행하려면 아래 단계를 따르십시오.
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
-translation-type: tm+mt
-source-git-commit: 805cb72e91e6446f74cc3461d39841740eb576c7
+source-git-commit: 70be44e919070df910d618af4507b600ad51123c
 workflow-type: tm+mt
-source-wordcount: '2023'
+source-wordcount: '2566'
 ht-degree: 0%
 
 ---
@@ -32,23 +31,23 @@ ht-degree: 0%
 
 적용 대상:모든 대상
 
-Adobe Experience Platform 사용자 인터페이스에서 **[!UICONTROL Destinations]** > **[!UICONTROL Browse]**&#x200B;으로 이동하고 아래 이미지에 표시된 것처럼 세그먼트를 활성화할 대상에 해당하는 **[!UICONTROL Activate]** 단추를 클릭합니다.
+Adobe Experience Platform 사용자 인터페이스에서 **[!UICONTROL 대상]** > **[!UICONTROL 찾아보기]**&#x200B;로 이동한 다음 아래 이미지와 같이 세그먼트를 활성화할 대상에 해당하는 **[!UICONTROL 활성화]** 단추를 클릭합니다.
 
 ![대상에 활성화](../assets/ui/activate-destinations/browse-tab-activate.png)
 
 다음 섹션의 단계를 따라 활성화할 세그먼트를 선택합니다.
 
-## [!UICONTROL Select Segments] 단계  {#select-segments}
+## [!UICONTROL 세그먼트 ] 선택 단계  {#select-segments}
 
 적용 대상:모든 대상
 
 ![세그먼트 선택 단계](../assets/ui/activate-destinations/select-segments-icon.png)
 
-**[!UICONTROL Activate destination]** 작업 과정의 **[!UICONTROL Select Segments]** 페이지에서 대상에 활성화할 세그먼트를 하나 이상 선택합니다. 다음 단계로 진행하려면 **[!UICONTROL Next]**&#x200B;을 선택합니다.
+**[!UICONTROL 대상 활성화]** 작업 과정의 **[!UICONTROL 세그먼트 선택]** 페이지에서 대상에 활성화할 세그먼트를 하나 이상 선택합니다. 다음 단계로 진행하려면 **[!UICONTROL 다음]**&#x200B;을 선택합니다.
 
 ![세그먼트-대상](../assets/ui/activate-destinations/email-select-segments.png)
 
-## [!UICONTROL Identity mapping] 단계  {#identity-mapping}
+## [!UICONTROL ID 매핑 ] 단계  {#identity-mapping}
 
 적용 대상:소셜 대상 및 Google 고객 일치 광고 대상
 
@@ -81,7 +80,7 @@ Adobe Experience Platform 사용자 인터페이스에서 **[!UICONTROL Destinat
 
 해시되지 않은 네임스페이스의 데이터는 활성화 시 [!DNL Platform]에 의해 자동으로 해시됩니다.
 
-속성 소스 데이터가 자동으로 해시되지 않습니다. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL Apply transformation]** 옵션을 선택하여 [!DNL Platform] 활성화 시 데이터를 자동으로 해시합니다.
+속성 소스 데이터가 자동으로 해시되지 않습니다. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL 변형 적용]** 옵션을 선택하여 [!DNL Platform]에서 활성화 시 데이터를 자동으로 해시하도록 하십시오.
 ![ID 매핑 변형](../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
  
@@ -111,16 +110,16 @@ Adobe Experience Platform 사용자 인터페이스에서 **[!UICONTROL Destinat
 
 해시되지 않은 네임스페이스의 데이터는 활성화 시 [!DNL Platform]에 의해 자동으로 해시됩니다.
 
-속성 소스 데이터가 자동으로 해시되지 않습니다. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL Apply transformation]** 옵션을 선택하여 [!DNL Platform] 활성화 시 데이터를 자동으로 해시합니다.
+속성 소스 데이터가 자동으로 해시되지 않습니다. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL 변형 적용]** 옵션을 선택하여 [!DNL Platform]에서 활성화 시 데이터를 자동으로 해시하도록 하십시오.
 ![ID 매핑 변형](../assets/ui/activate-destinations/identity-mapping-gcm-transformation.png)
 
-## **[!UICONTROL Configure]** 단계  {#configure}
+## **[!UICONTROL 단계]** 예약 {#scheduling}
 
 적용 대상:이메일 마케팅 대상 및 클라우드 스토리지 대상
 
-![단계 구성](../assets/ui/activate-destinations/configure-icon.png)
+![예약 단계](../assets/ui/activate-destinations/scheduling-icon.png)
 
-[!DNL Adobe Experience Platform] 이메일 마케팅 및 클라우드 스토리지 대상에 대한 데이터를  [!DNL CSV] 파일 형식으로 내보냅니다. **[!UICONTROL Configure]** 단계에서 내보내려는 각 세그먼트에 대한 일정 및 파일 이름을 구성할 수 있습니다. 일정을 구성하는 것은 필수이지만 파일 이름을 구성하는 것은 선택 사항입니다.
+[!DNL Adobe Experience Platform] 이메일 마케팅 및 클라우드 스토리지 대상에 대한 데이터를  [!DNL CSV] 파일 형식으로 내보냅니다. **[!UICONTROL 예약]** 단계에서 내보내려는 각 세그먼트에 대한 일정 및 파일 이름을 구성할 수 있습니다. 일정을 구성하는 것은 필수이지만 파일 이름을 구성하는 것은 선택 사항입니다.
 
 >[!IMPORTANT]
 > 
@@ -128,18 +127,53 @@ Adobe Experience Platform 사용자 인터페이스에서 **[!UICONTROL Destinat
 >
 >분할된 파일 이름에 파일이 더 큰 내보내기의 일부임을 나타내는 숫자가 추가됩니다.`filename.csv`, `filename_2.csv`, `filename_3.csv`.
 
+대상으로 보내려는 세그먼트에 해당하는 **[!UICONTROL 예약]** 만들기 단추를 선택합니다.
 
-세그먼트에 대한 일정을 추가하려면 **[!UICONTROL Create schedule]**&#x200B;을 선택합니다.
+![예약 만들기 단추](../assets/ui/activate-destinations/create-schedule-button.png)
 
-![](../assets/ui/activate-destinations/configure-destination-schedule.png)
+### 전체 파일 내보내기 {#export-full-files}
 
-세그먼트 일정을 만드는 옵션이 표시된 대화 상자가 나타납니다.
+**[!UICONTROL 전체 파일 내보내기]**&#x200B;를 선택하여 내보낸 파일에 해당 세그먼트에 적합한 모든 프로필의 전체 스냅숏이 포함되도록 합니다.
 
-* **파일 내보내기**:전체 파일 또는 증분 파일을 내보낼 수 있습니다. 전체 파일을 내보내면 해당 세그먼트에 해당하는 모든 프로파일의 전체 스냅샷이 게시됩니다. 증분 파일을 내보내면 마지막 내보내기 이후 해당 세그먼트를 자격을 갖춘 프로필 델타가 게시됩니다.
-* **빈도**:이  **[!UICONTROL Export full files]** 옵션을 선택하면 내보내거나 내보낼  **[!UICONTROL Once]** 수 있습니다 **[!UICONTROL Daily]**. **[!UICONTROL Export incremental files]**&#x200B;을(를) 선택한 경우 **[!UICONTROL Daily]**&#x200B;을(를) 내보낼 옵션만 있습니다. 파일 **[!UICONTROL Once]**&#x200B;을 내보내면 파일이 한 번 내보내집니다. 파일 **[!UICONTROL Daily]**&#x200B;을 내보내면 전체 파일을 선택한 경우 시작 날짜에서 종료 날짜의 UTC(오후 7:00 PM EST)를 기준으로 매일 파일을 내보냅니다. 증분 파일이 선택된 경우 오후 12:00 UTC(오전 7:00 EST)를 나타냅니다.
-* **날짜**:이 **[!UICONTROL Once]** 를 선택하면 한 번 내보낼 날짜를 선택할 수 있습니다. **[!UICONTROL Daily]**&#x200B;을(를) 선택한 경우 내보내기 시작 날짜와 종료 날짜를 선택할 수 있습니다.
+![전체 파일 내보내기](../assets/ui/activate-destinations/export-full-files.png)
 
-![](../assets/ui/activate-destinations/export-full-file.png)
+1. **[!UICONTROL 주파수]** 선택기를 사용하여 한 번(**[!UICONTROL 한 번]**) 또는 **[!UICONTROL 일별]** 내보내기 중에서 선택합니다. 전체 파일 **[!UICONTROL Daily]**&#x200B;을 내보내면 시작 날짜에서 종료 날짜까지 매일 파일을 오전 12:00 AM UTC(오후 7시 EST)에 내보냅니다.
+2. **[!UICONTROL 시간]** 선택기를 사용하여 내보내기가 필요한 시간을 [!DNL UTC] 형식으로 선택합니다. 파일 **[!UICONTROL 일별]**&#x200B;을 내보내면 시작 날짜에서 선택한 종료 날짜까지 매일 파일을 내보냅니다.
+
+   >[!IMPORTANT]
+   >
+   >특정 시간에 파일을 내보내는 옵션은 현재 베타 버전이며 일부 고객만 사용할 수 있습니다.
+
+3. **[!UICONTROL 날짜]** 선택기를 사용하여 내보내기가 발생하는 날짜 또는 간격을 선택합니다.
+4. **[!UICONTROL 만들기]**&#x200B;를 선택하여 일정을 저장합니다.
+
+### 증분 파일 내보내기 {#export-incremental-files}
+
+**[!UICONTROL 증분 파일 내보내기]**&#x200B;를 선택하여 내보낸 파일에 마지막 내보내기 이후 해당 세그먼트에 자격이 있는 프로필만 포함시킵니다.
+
+>[!IMPORTANT]
+>
+>첫 번째 내보낸 증분 파일에는 세그먼트를 사용할 수 있는 모든 프로필이 포함되어 있으며 채우기로 작동합니다.
+
+![증분 파일 내보내기](../assets/ui/activate-destinations/export-incremental-files.png)
+
+1. **[!UICONTROL 주파수]** 선택기를 사용하여 **[!UICONTROL 일별]** 또는 **[!UICONTROL 시간별]** 내보내기 중에서 선택합니다. 증분 파일 **[!UICONTROL 일별]**&#x200B;을 내보내면 시작 날짜에서 종료 날짜까지 매일 파일을 오후 12:00 PM UTC(오전 7:00 EST)에 내보냅니다.
+   * **[!UICONTROL 시간별]**&#x200B;을 선택할 때 **[!UICONTROL 매]** 선택기를 사용하여 **[!UICONTROL 3]**, **[!UICONTROL 6]**, **[!UICONTROL 8]** 및 **[!UICONTROL 12]** 시간 옵션 중에서 선택합니다.
+
+      >[!IMPORTANT]
+      >
+      >3, 6, 8 또는 12시간마다 증분 파일을 내보내는 옵션은 현재 베타 버전이며 선택한 수의 고객만 사용할 수 있습니다. 베타가 아닌 고객은 하루에 한 번 증분 파일을 내보낼 수 있습니다.
+
+2. **[!UICONTROL 시간]** 선택기를 사용하여 내보내기가 필요한 시간을 [!DNL UTC] 형식으로 선택합니다.
+
+   >[!IMPORTANT]
+   >
+   >내보낼 시간을 선택하는 옵션은 선택한 수의 고객만 사용할 수 있습니다. 베타가 아닌 고객은 하루 12:00 PM UTC(오전 7:00 EST)에 증분 파일을 내보낼 수 있습니다.
+
+3. **[!UICONTROL 날짜]** 선택기를 사용하여 내보내기가 발생하는 날짜 또는 간격을 선택합니다.
+4. **[!UICONTROL 만들기]**&#x200B;를 선택하여 일정을 저장합니다.
+
+### 파일 이름 {#file-names} 구성
 
 기본 파일 이름은 대상 이름, 세그먼트 ID, 날짜 및 시간 표시기로 구성됩니다. 예를 들어 내보낸 파일 이름을 편집하여 다른 캠페인을 구분하거나 데이터 내보내기 시간을 파일에 추가할 수 있습니다.
 
@@ -147,29 +181,31 @@ Adobe Experience Platform 사용자 인터페이스에서 **[!UICONTROL Destinat
 
 ![파일 이름 구성](../assets/ui/activate-destinations/configure-name.png)
 
-파일 이름 편집기에서 파일 이름에 추가할 여러 구성 요소를 선택할 수 있습니다. 대상 이름 및 세그먼트 ID는 파일 이름에서 제거할 수 없습니다. 이 외에 다음을 추가할 수 있습니다.
-
-* **[!UICONTROL Segment name]**:세그먼트 이름을 파일 이름에 추가할 수 있습니다.
-* **[!UICONTROL Date and time]**:파일이  `MMDDYYYY_HHMMSS` 생성되는 시간의 Unix 10자리 타임스탬프 또는 형식을 추가할 때 선택합니다. 각 증분 내보내기로 동적 파일 이름을 생성하려는 경우 다음 옵션 중 하나를 선택합니다.
-* **[!UICONTROL Custom text]**:파일 이름에 사용자 정의 텍스트를 추가합니다.
-
-**[!UICONTROL Apply changes]**&#x200B;을 선택하여 선택을 확인합니다.
-
->[!IMPORTANT]
-> 
->**[!UICONTROL Date and Time]** 구성 요소를 선택하지 않으면 파일 이름이 고정되고 새로 내보낸 파일이 내보낼 때마다 저장소 위치의 이전 파일을 덮어씁니다. 저장소 위치에서 이메일 마케팅 플랫폼으로 반복 가져오기 작업을 실행할 때 권장되는 옵션입니다.
+파일 이름 편집기에서 파일 이름에 추가할 여러 구성 요소를 선택할 수 있습니다.
 
 ![파일 이름 옵션 편집](../assets/ui/activate-destinations/activate-workflow-configure-step-2.png)
 
-모든 세그먼트 구성이 완료되면 **[!UICONTROL Next]**&#x200B;을 선택하여 계속합니다.
+대상 이름 및 세그먼트 ID는 파일 이름에서 제거할 수 없습니다. 이 외에 다음을 추가할 수 있습니다.
 
-## **[!UICONTROL Segment schedule]** 단계  {#segment-schedule}
+* **[!UICONTROL 세그먼트 이름]**:세그먼트 이름을 파일 이름에 추가할 수 있습니다.
+* **[!UICONTROL 날짜 및 시간]**:파일이  `MMDDYYYY_HHMMSS` 생성되는 시간의 Unix 10자리 타임스탬프 또는 형식을 추가할 때 선택합니다. 각 증분 내보내기로 동적 파일 이름을 생성하려는 경우 다음 옵션 중 하나를 선택합니다.
+* **[!UICONTROL 사용자 정의 텍스트]**:파일 이름에 사용자 정의 텍스트를 추가합니다.
+
+**[!UICONTROL 변경 내용 적용]**&#x200B;을 선택하여 선택을 확인합니다.
+
+>[!IMPORTANT]
+> 
+>**[!UICONTROL 날짜 및 시간]** 구성 요소를 선택하지 않으면 파일 이름이 고정되고 새로 내보낸 파일이 내보낼 때마다 저장소 위치의 이전 파일을 덮어씁니다. 저장소 위치에서 이메일 마케팅 플랫폼으로 반복 가져오기 작업을 실행할 때 권장되는 옵션입니다.
+
+모든 세그먼트 구성이 완료되면 **[!UICONTROL 다음]**&#x200B;을 선택하여 계속하십시오.
+
+## **[!UICONTROL 세그먼트]** 예약 단계  {#segment-schedule}
 
 적용 대상:광고 대상, 소셜 대상
 
 ![세그먼트 예약 단계](../assets/ui/activate-destinations/segment-schedule-icon.png)
 
-**[!UICONTROL Segment schedule]** 페이지에서 데이터를 대상에 보내기 위한 시작 날짜와 대상으로 데이터를 보내는 빈도를 설정할 수 있습니다.
+**[!UICONTROL 세그먼트 일정]** 페이지에서 데이터를 대상에 보내기 위한 시작 날짜와 대상으로 데이터를 보내는 빈도를 설정할 수 있습니다.
 
 >[!IMPORTANT]
 >
@@ -179,43 +215,174 @@ Adobe Experience Platform 사용자 인터페이스에서 **[!UICONTROL Destinat
 
 >[!IMPORTANT]
 >
->Google 고객 일치의 경우 [!DNL IDFA] 또는 [!DNL GAID] 세그먼트를 활성화할 때 이 단계에서 [!UICONTROL App ID]을 제공해야 합니다.
+>Google 고객 일치의 경우 [!DNL IDFA] 또는 [!DNL GAID] 세그먼트를 활성화할 때 이 단계에서 [!UICONTROL 앱 ID]을 제공해야 합니다.
 
 ![앱 id 입력](../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
 
-## **[!UICONTROL Scheduling]** 단계  {#scheduling}
-
-적용 대상:이메일 마케팅 대상 및 클라우드 스토리지 대상
-
-![세그먼트 예약 단계](../assets/ui/activate-destinations/scheduling-icon.png)
-
-**[!UICONTROL Scheduling]** 페이지에서는 대상으로 데이터를 전송하는 시작 날짜와 대상으로 데이터를 보내는 빈도를 확인할 수 있습니다. 이러한 값은 편집할 수 없습니다.
-
-## **[!UICONTROL Select attributes]** 단계  {#select-attributes}
+## **[!UICONTROL 속성]** 선택 단계  {#select-attributes}
 
 적용 대상:이메일 마케팅 대상 및 클라우드 스토리지 대상
 
 ![속성 단계 선택](../assets/ui/activate-destinations/select-attributes-icon.png)
 
-**[!UICONTROL Select attributes]** 페이지에서 **[!UICONTROL Add new field]**&#x200B;을 선택하고 대상에 보낼 속성을 선택합니다.
+**[!UICONTROL 특성 선택]** 페이지에서 **[!UICONTROL 새 필드 추가]**&#x200B;를 선택하고 대상에 보낼 특성을 선택합니다.
 
 >[!NOTE]
 >
 > Adobe Experience Platform에서는 스키마에서 일반적으로 사용되는 4가지 속성을 사용하여 선택 사항을 미리 정의합니다.`person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.status`.
 
 파일 내보내기 옵션은 `segmentMembership.status`의 선택 여부에 따라 다음과 같이 달라집니다.
-* `segmentMembership.status` 필드를 선택하면 내보낸 파일에는 초기 전체 스냅샷에 **[!UICONTROL Active]** 구성원과 후속 증분 내보내기에 **[!UICONTROL Active]** 및 **[!UICONTROL Expired]** 구성원이 포함됩니다.
+* `segmentMembership.status` 필드를 선택한 경우 내보낸 파일에는 초기 전체 스냅샷에 **[!UICONTROL Active]** 구성원과 후속 증분 내보내기에 있는 **[!UICONTROL Active]** 및 **[!UICONTROL Expired]** 구성원이 포함됩니다.
 * `segmentMembership.status` 필드를 선택하지 않으면 내보낸 파일에는 초기 전체 스냅샷과 후속 증분 내보내기에 **[!UICONTROL Active]** 멤버만 포함됩니다.
 
-![권장 특성](../assets/ui/activate-destinations/mark-mandatory.png)
+![권장 특성](../assets/ui/activate-destinations/mandatory-deduplication.png)
 
-또한 다른 속성을 필수로 표시할 수도 있습니다. 속성을 필수로 표시하면 내보낸 세그먼트에 해당 속성이 포함되어야 합니다. 따라서 추가 필터링 양식으로 사용할 수 있습니다. 속성을 필수로 표시하면 **필수가 아닙니다**.
+### 필수 특성 {#mandatory-attributes}
+
+속성을 필수로 표시하여 [!DNL Platform]이 특정 속성을 포함하는 프로파일만 내보내도록 할 수 있습니다. 따라서 추가 필터링 양식으로 사용할 수 있습니다. 속성을 필수로 표시하면 **필수가 아닙니다**.
+
+필수 속성을 선택하지 않으면 속성에 관계없이 자격이 있는 모든 프로파일이 내보내집니다.
 
 특성 중 하나가 스키마의 [고유 식별자](../../destinations/catalog/email-marketing/overview.md#identity)인 것이 좋습니다. 필수 속성에 대한 자세한 내용은 [이메일 마케팅 대상](../../destinations/catalog/email-marketing/overview.md#identity) 설명서의 ID 섹션을 참조하십시오.
+
+### 중복 제거 키 {#deduplication-keys}
+
+>[!IMPORTANT]
+>
+>중복 제거 키 사용 옵션은 현재 베타 버전이며 일부 고객만 사용할 수 있습니다.
+
+중복 제거 키를 사용하면 하나의 내보내기 파일에서 동일한 프로파일에 대한 여러 개의 기록을 보관할 수 있습니다.
+
+데이터 중복 제거 키를 사용할 수 있는 방법은 다음과 같습니다. [!DNL Platform]
+
+* 단일 ID 네임스페이스를 [!UICONTROL 데이터 중복 제거 키]로 사용
+* [!DNL XDM] 프로필의 단일 프로필 특성을 [!UICONTROL 중복 제거 키]로 사용
+* 합성 키로 [!DNL XDM] 프로필의 2개의 프로필 특성 조합 사용
+
+>[!IMPORTANT]
+>
+> 단일 ID 네임스페이스를 대상으로 내보낼 수 있으며 네임스페이스가 데이터 중복 제거 키로 자동으로 설정됩니다. 여러 네임스페이스를 대상으로 보내는 것은 지원되지 않습니다.
+> 
+> ID 네임스페이스와 프로필 특성을 조합하여 데이터 중복 제거 키로 사용할 수는 없습니다.
+
+### 데이터 중복 제거 예 {#deduplication-example}
+
+이 예에서는 선택한 데이터 중복 제거 키에 따라 데이터 중복 제거가 작동하는 방식을 보여줍니다.
+
+다음 두 가지 프로파일을 고려하겠습니다.
+
+**프로필 A**
+
+```json
+{
+  "identityMap": {
+    "Email": [
+      {
+        "id": "johndoe_1@example.com"
+      },
+      {
+        "id": "johndoe_2@example.com"
+      }
+    ]
+  },
+  "segmentMembership": {
+    "ups": {
+      "fa5c4622-6847-4199-8dd4-8b7c7c7ed1d6": {
+        "status": "existing",
+        "lastQualificationTime": "2021-03-10 10:03:08"
+      }
+    }
+  },
+  "person": {
+    "name": {
+      "lastName": "Doe",
+      "firstName": "John"
+    }
+  },
+  "personalEmail": {
+    "address": "johndoe@example.com"
+  }
+}
+```
+
+**프로필 B**
+
+```json
+{
+  "identityMap": {
+    "Email": [
+      {
+        "id": "johndoe_1@example.com"
+      },
+      {
+        "id": "johndoe_2@example.com"
+      }
+    ]
+  },
+  "segmentMembership": {
+    "ups": {
+      "fa5c4622-6847-4199-8dd4-8b7c7c7ed1d6": {
+        "status": "existing",
+        "lastQualificationTime": "2021-04-10 11:33:28"
+      }
+    }
+  },
+  "person": {
+    "name": {
+      "lastName": "D",
+      "firstName": "John"
+    }
+  },
+  "personalEmail": {
+    "address": "johndoe@example.com"
+  }
+}
+```
+
+### 데이터 중복 제거 사용 사례 1:중복 제거 없음
+
+중복 제거 기능을 사용하지 않으면 내보내기 파일에 다음 항목이 포함됩니다.
+
+| personalEmail | firstName | lastName |
+|---|---|---|
+| johndoe@example.com | 존 | Doe |
+| johndoe@example.com | 존 | D |
+
+
+### 데이터 중복 제거 사용 사례 2:id 네임스페이스를 기반으로 한 중복 제거
+
+[!DNL Email] 네임스페이스로 중복 제거를 가정할 경우 내보내기 파일에 다음 항목이 포함됩니다. 프로필 B는 세그먼트에 자격이 있는 최신 항목이므로 내보내기를 받는 유일한 프로필입니다.
+
+| 이메일* | personalEmail | firstName | lastName |
+|---|---|---|---|
+| johndoe_1@example.com | johndoe@example.com | 존 | D |
+| johndoe_2@example.com | johndoe@example.com | 존 | D |
+
+### 데이터 중복 제거 사용 사례 3:단일 프로필 속성을 기반으로 데이터 중복 제거
+
+`personal Email` 특성으로 중복 제거를 가정할 경우 내보내기 파일에 다음 항목이 포함됩니다. 프로필 B는 세그먼트에 자격이 있는 최신 항목이므로 내보내기를 받는 유일한 프로필입니다.
+
+| personalEmail* | firstName | lastName |
+|---|---|---|
+| johndoe@example.com | 존 | D |
+
+
+### 데이터 중복 제거 사용 사례 4:2개의 프로필 속성을 기반으로 한 중복 제거(합성 중복 제거 키)
+
+합성 키 `personalEmail + lastName`에 의한 중복 제거라고 가정할 경우 내보내기 파일에 다음 항목이 포함됩니다.
+
+| personalEmail* | lastName* | firstName |
+|---|---|---|
+| johndoe@example.com | D | 존 |
+| johndoe@example.com | Doe | 존 |
+
+
+Adobe은 모든 프로필 레코드가 고유하게 식별되도록 [!DNL CRM ID] 또는 이메일 주소와 같은 ID 네임스페이스를 중복 제거 키로 선택하는 것이 좋습니다.
 
 >[!NOTE]
 > 
 >데이터 세트 전체 데이터 세트가 아닌 데이터 세트 내의 특정 필드에 데이터 사용 레이블이 적용된 경우 활성화할 때 이러한 필드 수준 레이블을 적용하는 것은 다음 조건에 따릅니다.
+>
 >* 이 필드는 세그먼트 정의에 사용됩니다.
 >* 이 필드는 대상 대상에 대한 예상 속성으로 구성됩니다.
 
@@ -223,13 +390,13 @@ Adobe Experience Platform 사용자 인터페이스에서 **[!UICONTROL Destinat
 > 
 예를 들어 `person.name.firstName` 필드에 대상의 마케팅 작업과 충돌하는 특정 데이터 사용 레이블이 있는 경우 검토 단계에서 데이터 사용 정책 위반이 표시됩니다. 자세한 내용은 Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations)의 데이터 거버넌스를 참조하십시오.[
 
-## **[!UICONTROL Review]** 단계  {#review}
+## **[!UICONTROL 검토]** 단계 {#review}
 
 적용 대상:모든 대상
 
 ![검토 단계](../assets/ui/activate-destinations/review-icon.png)
 
-**[!UICONTROL Review]** 페이지에서 선택 사항의 요약을 볼 수 있습니다. 흐름을 구분하려면 **[!UICONTROL Cancel]**, 설정을 수정하려면 **[!UICONTROL Back]**, 선택을 확인하고 대상에 데이터를 보내기 시작하려면 **[!UICONTROL Finish]**&#x200B;를 선택합니다.
+**[!UICONTROL Review]** 페이지에서 선택 사항의 요약을 볼 수 있습니다. 흐름을 구분하려면 **[!UICONTROL 취소]**, 설정을 수정하려면 **[!UICONTROL 뒤로]**, 선택을 확인하고 대상에 데이터를 보내기 시작하려면 **[!UICONTROL 완료]**&#x200B;를 선택합니다.
 
 >[!IMPORTANT]
 >
@@ -237,7 +404,7 @@ Adobe Experience Platform 사용자 인터페이스에서 **[!UICONTROL Destinat
 
 ![데이터 정책 위반](../assets/common/data-policy-violation.png)
 
-정책 위반이 감지되지 않은 경우 **[!UICONTROL Finish]**&#x200B;을 선택하여 선택을 확인하고 대상으로 데이터 전송을 시작합니다.
+정책 위반이 감지되지 않은 경우 **[!UICONTROL 완료]**&#x200B;를 선택하여 선택한 내용을 확인하고 대상으로 데이터를 보내기 시작합니다.
 
 ![선택 확인](../assets/ui/activate-destinations/confirm-selection.png)
 
@@ -245,12 +412,10 @@ Adobe Experience Platform 사용자 인터페이스에서 **[!UICONTROL Destinat
 
 ### 이메일 마케팅 대상 및 클라우드 스토리지 대상 {#esp-and-cloud-storage}
 
-이메일 마케팅 대상 및 클라우드 스토리지 대상의 경우 Adobe Experience Platform은 사용자가 제공한 저장 위치에 탭으로 구분된 `.csv` 또는 `.txt` 파일을 만듭니다. 매일 저장 위치에 새 파일이 만들어집니다. 기본 파일 형식은 다음과 같습니다.
-`<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv|txt`
+이메일 마케팅 대상 및 클라우드 스토리지 대상의 경우 Adobe Experience Platform은 사용자가 제공한 저장 위치에 탭으로 구분된 `.csv` 파일을 만듭니다. 매일 저장 위치에 새 파일이 만들어집니다. 기본 파일 형식은 다음과 같습니다.
+`<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv`
 
-파일 형식을 편집할 수 있습니다. 자세한 내용은 클라우드 스토리지 대상 및 이메일 마케팅 대상을 위한 [구성](#configure) 단계로 이동하십시오.
-
-기본 파일 형식을 사용하면 3일 연속으로 받은 파일은 다음과 같습니다.
+3일 연속으로 받은 파일은 다음과 같습니다.
 
 ```console
 Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv
@@ -266,7 +431,7 @@ Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_202004100
 
 ## 소셜 대상
 
-[!DNL Facebook]의 경우 [!DNL Facebook] 사용자 지정 대상이 [[!UICONTROL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/)에서 프로그래밍 방식으로 만들어진다는 의미입니다. 활성화된 세그먼트에 대해 자격이 부여되거나 자격이 부여되지 않으면 대상의 세그먼트 멤버십이 추가 및 제거됩니다.
+[!DNL Facebook]의 경우 [!DNL Facebook] 사용자 지정 대상이 [[!UICONTROL Facebook 광고 관리자]](https://www.facebook.com/adsmanager/manage/)에서 프로그램 방식으로 작성됨을 의미합니다. 활성화된 세그먼트에 대해 자격이 부여되거나 자격이 부여되지 않으면 대상의 세그먼트 멤버십이 추가 및 제거됩니다.
 
 >[!TIP]
 >
@@ -276,6 +441,6 @@ Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_202004100
 
 기존 활성화 과정을 비활성화하려면 아래 단계를 따르십시오.
 
-1. 왼쪽 탐색 막대에서 **[!UICONTROL Destinations]**&#x200B;을 선택하고 **[!UICONTROL Browse]** 탭을 클릭한 다음 대상 이름을 클릭합니다.
-2. 오른쪽 레일의 **[!UICONTROL Enabled]** 컨트롤을 클릭하여 활성화 흐름 상태를 변경합니다.
+1. 왼쪽 탐색 막대에서 **[!UICONTROL 대상]**&#x200B;을 선택한 다음 **[!UICONTROL 찾아보기]** 탭을 클릭하고 대상 이름을 클릭합니다.
+2. 오른쪽 레일에서 **[!UICONTROL 활성화]** 컨트롤을 클릭하여 활성화 흐름 상태를 변경합니다.
 3. **데이터 흐름 상태 업데이트** 창에서 **확인**&#x200B;을 선택하여 활성화 흐름을 비활성화합니다.
