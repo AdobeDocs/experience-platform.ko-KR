@@ -3,14 +3,13 @@ keywords: 전자 메일;전자 메일;전자 메일;전자 메일 대상
 title: 이메일 마케팅 대상 개요
 type: Tutorial
 description: ESP(Email Service Providers)를 사용하면 이메일 캠페인을 전송하는 것과 같은 이메일 마케팅 활동을 관리할 수 있습니다.
-translation-type: tm+mt
-source-git-commit: 02754055e2be8a45a0699386cb559dad8f25717c
+exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
+source-git-commit: a21abb44bb9cbe6fefa0ff70a1ff19e31cc0c7de
 workflow-type: tm+mt
-source-wordcount: '770'
+source-wordcount: '790'
 ht-degree: 1%
 
 ---
-
 
 # 이메일 마케팅 대상 개요 {#email-marketing-destinations}
 
@@ -20,23 +19,23 @@ ESP(Email Service Providers)를 사용하면 이메일 캠페인을 전송하는
 
 이메일 마케팅 대상에 연결하는 것은 3단계 프로세스입니다([대상](#connect-destination) 구성, [세그먼트 활성화](#select-segments), [스토리지 위치의 데이터를 대상](#import-data-into-destination)으로 가져오기). 각 단계는 이 페이지의 아래에 자세히 설명되어 있습니다.
 
-아래 섹션에 설명된 연결 대상 플로우에서 Amazon S3 또는 SFTP에 연결합니다. Platform은 세그먼트를 `.csv` 또는 `.txt` 파일로 내보내고 원하는 위치로 전달합니다. 플랫폼에서 활성화된 저장 위치에서 이메일 마케팅 플랫폼에서 데이터를 가져오도록 예약합니다. 데이터를 가져오는 프로세스는 각 파트너마다 다릅니다. 자세한 내용은 개별 대상 아티클을 참조하십시오.
+아래 섹션에 설명된 연결 대상 플로우에서 [!DNL Amazon S3] 또는 [!DNL SFTP]에 연결합니다. Platform은 세그먼트를 `.csv` 파일로 내보내고 원하는 위치로 전달합니다. [!DNL Platform]에서 활성화된 저장소 위치에서 이메일 마케팅 플랫폼에서 데이터를 가져오도록 예약합니다. 데이터를 가져오는 프로세스는 각 파트너마다 다릅니다. 자세한 내용은 개별 대상 아티클을 참조하십시오.
 
 ## 대상 {#connect-destination} 구성
 
-**[!UICONTROL Connections]** > **[!UICONTROL Destinations]**&#x200B;에서 연결할 이메일 마케팅 대상을 선택한 다음 **[!UICONTROL Configure]**&#x200B;를 선택합니다.
+**[!UICONTROL 연결]** > **[!UICONTROL 대상]**&#x200B;에서 연결할 이메일 마케팅 대상을 선택한 다음 **[!UICONTROL 구성]**&#x200B;을 선택합니다.
 
 ![대상에 연결](../../assets/catalog/email-marketing/overview/connect-email-marketing.png)
 
-**[!UICONTROL Account]** 단계에서 이전에 이메일 마케팅 대상에 대한 연결을 설정한 경우 **[!UICONTROL Existing Account]**&#x200B;을 선택하고 기존 연결을 선택합니다. 또는 **[!UICONTROL New Account]**&#x200B;을 선택하여 이메일 마케팅 대상에 대한 새 연결을 설정할 수 있습니다. **[!UICONTROL Connection type]** 선택기에서 [!UICONTROL Amazon S3], [!UICONTROL Azure Blob], [!UICONTROL SFTP with Password] 또는 [!UICONTROL SFTP with SSH Key] 중에서 선택할 수 있습니다. 연결 유형에 따라 아래 정보를 입력한 다음 **[!UICONTROL Connect]**&#x200B;을 선택합니다.
+**[!UICONTROL 계정]** 단계에서 이전에 이메일 마케팅 대상에 대한 연결을 설정한 경우 **[!UICONTROL 기존 계정]**&#x200B;을 선택하고 기존 연결을 선택합니다. 또는 **[!UICONTROL 새 계정]**&#x200B;을 선택하여 이메일 마케팅 대상에 새 연결을 설정할 수 있습니다. **[!UICONTROL 연결 유형]** 선택기에서 [!UICONTROL Amazon S3], [!UICONTROL Azure Blob], [!UICONTROL SFTP(암호] 포함) 또는 [!UICONTROL SFTP(SSH 키]) 중에서 선택할 수 있습니다. 연결 유형에 따라 아래 정보를 입력한 다음 **[!UICONTROL Connect]**&#x200B;를 선택합니다.
 
 - **S3 연결**&#x200B;의 경우 Amazon 액세스 키 ID 및 비밀 액세스 키를 제공해야 합니다.
 - 암호&#x200B;**연결이 있는** SFTP의 경우 SFTP 서버에 대한 도메인, 포트, 사용자 이름 및 암호를 제공해야 합니다.
 - **SFTP에서 SSH 키** 연결을 사용하려면 SFTP 서버에 대해 도메인, 포트, 사용자 이름 및 SSH 키를 제공해야 합니다.
 
-원할 경우, **[!UICONTROL Key]** 섹션 아래의 내보낸 파일에 암호화를 추가하기 위해 RSA 형식 공개 키를 첨부할 수 있습니다. 공개 키는 [!DNL Base64] 인코딩 문자열로 작성해야 합니다.
+원할 경우, **[!UICONTROL 키]** 섹션 아래의 내보낸 파일에 암호화를 추가하기 위해 RSA 형식 공개 키를 첨부할 수 있습니다. 공개 키는 [!DNL Base64] 인코딩 문자열로 작성해야 합니다.
 
-**[!UICONTROL Authentication]** 단계에서 새 대상에 대한 이름 및 설명과 내보낸 파일의 파일 형식을 입력합니다.
+**[!UICONTROL 인증]** 단계에서 새 대상에 대한 이름 및 설명과 내보낸 파일의 파일 형식을 입력합니다.
 
 이전 단계에서 저장소 옵션으로 Amazon S3를 선택한 경우 파일이 배달될 클라우드 저장소 대상에 버킷 이름과 폴더 경로를 삽입합니다. [SFTP 저장소] 옵션의 경우 파일을 배달할 폴더 경로를 삽입합니다.
 
@@ -46,7 +45,7 @@ ESP(Email Service Providers)를 사용하면 이메일 캠페인을 전송하는
 
 ## 대상 내보내기에 포함할 세그먼트 구성원 선택 {#select-segments}
 
-**[!UICONTROL Select Segments]** 페이지에서 대상으로 전송할 세그먼트를 선택합니다. 아래 섹션에서 필드에 대한 자세한 내용을 살펴보십시오.
+**[!UICONTROL 세그먼트 선택]** 페이지에서 대상에 보낼 세그먼트를 선택합니다. 아래 섹션에서 필드에 대한 자세한 내용을 살펴보십시오.
 
 ![세그먼트 선택](../../assets/common/email-select-segments.png)
 
@@ -97,7 +96,7 @@ Adobe에서는 [union schema](../../../profile/home.md#profile-fragments-and-uni
 
 이메일 마케팅 대상에 세그먼트를 활성화하는 방법에 대한 지침은 [대상 프로파일 및 세그먼트를 활성화하기를 참조하십시오](../../ui/activate-destinations.md).
 
-## Journey Orchestration용
+## 추가 리소스
 
 - [대상에 데이터 활성화](../../ui/activate-destinations.md)
 - [이메일 마케팅 대상을 만들고 Flow Service API를 사용하여 데이터를 활성화합니다.](../../api/email-marketing.md)
