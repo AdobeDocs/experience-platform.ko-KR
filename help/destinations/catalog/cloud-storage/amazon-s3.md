@@ -3,9 +3,9 @@ keywords: Amazon S3;S3 대상;s3;amazon s3
 title: Amazon S3 연결
 description: Amazon 웹 서비스(AWS) S3 스토리지에 대한 라이브 아웃바운드 연결을 생성하여 Adobe Experience Platform에서 탭으로 구분된 데이터 또는 CSV 데이터 파일을 S3 버킷으로 주기적으로 내보냅니다.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: 49a59e5b081243679f5d94b03a63d30df22cdc6a
+source-git-commit: 70be44e919070df910d618af4507b600ad51123c
 workflow-type: tm+mt
-source-wordcount: '270'
+source-wordcount: '269'
 ht-degree: 0%
 
 ---
@@ -59,4 +59,4 @@ Commenting out this note, as write permissions are assigned through the s3:PutOb
 
 ## 내보낸 데이터 {#exported-data}
 
-[!DNL Amazon S3] 대상의 경우 [!DNL Platform]은 사용자가 제공한 저장 위치에 탭으로 구분된 `.txt` 또는 `.csv` 파일을 만듭니다. 파일에 대한 자세한 내용은 세그먼트 활성화 자습서에서 [이메일 마케팅 대상 및 클라우드 스토리지 대상](../../ui/activate-destinations.md#esp-and-cloud-storage)을 참조하십시오.
+[!DNL Amazon S3] 대상의 경우 [!DNL Platform]은 사용자가 제공한 저장 위치에 탭으로 구분된 `.csv` 파일을 만듭니다. 파일에 대한 자세한 내용은 세그먼트 활성화 자습서에서 [이메일 마케팅 대상 및 클라우드 스토리지 대상](../../ui/activate-destinations.md#esp-and-cloud-storage)을 참조하십시오.
