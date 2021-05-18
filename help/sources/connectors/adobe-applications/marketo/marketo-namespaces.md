@@ -5,10 +5,9 @@ title: Marketo 네임스페이스
 topic-legacy: overview
 description: 이 문서에서는 Marketo Engage 소스 커넥터를 만들 때 필요한 사용자 정의 네임스페이스에 대한 개요를 제공합니다.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-translation-type: tm+mt
-source-git-commit: 8dd7b1724f3de12bf6a3a1b77ee8050fd1a9eaf3
+source-git-commit: af728fb508c514db3d5871114f9a406c1ed428f2
 workflow-type: tm+mt
-source-wordcount: '1602'
+source-wordcount: '1670'
 ht-degree: 5%
 
 ---
@@ -56,6 +55,20 @@ ht-degree: 5%
 | `has_msi` | [!DNL Marketo Sales Insight]에 속하는지 여부를 나타내는 부울 값입니다. | `false` |
 
 {style=&quot;table-layout:auto&quot;}
+
+### 스크립트 실행
+
+[!DNL Postman] 컬렉션 및 환경이 설정되면 이제 [!DNL Postman] 인터페이스를 통해 스크립트를 실행할 수 있습니다.
+
+[!DNL Postman] 인터페이스에서 자동 생성기 유틸리티의 루트 폴더를 선택한 다음 상단 헤더에서 **[!DNL Run]**&#x200B;을 선택합니다.
+
+![루트 폴더](../images/marketo/root-folder.png)
+
+[!DNL Runner] 인터페이스가 나타납니다. 여기서 모든 확인란을 선택한 다음 **[!DNL Run Adobe I/O Access Token Generation + Automate Namespace creation]**&#x200B;을 선택합니다.
+
+![run-generator](../images/marketo/run-generator.png)
+
+요청이 성공하면 베타 사양에 따라 B2B 네임스페이스 및 스키마가 만들어집니다.
 
 ## [!DNL Marketo] 네임스페이스
 
