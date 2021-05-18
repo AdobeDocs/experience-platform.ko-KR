@@ -3,10 +3,9 @@ keywords: Azure 이벤트 허브 대상;azure 이벤트 허브;azure 이벤트 �
 title: (베타)!DNL Azure 이벤트 허브] 연결
 description: Experience Platform의 데이터를 스트리밍하기 위해 내!DNL Azure 이벤트 허브] 저장소에 대한 실시간 아웃바운드 연결을 만듭니다.
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-translation-type: tm+mt
-source-git-commit: ce5001d0a1c95901089915ae9836fdd436f12297
+source-git-commit: 7f15da092928ed09f898c9197c4679e834b11779
 workflow-type: tm+mt
-source-wordcount: '534'
+source-wordcount: '545'
 ht-degree: 2%
 
 ---
@@ -45,21 +44,21 @@ Adobe Experience Platform의 데이터를 스트리밍하기 위해 [!DNL Azure 
 
 [!DNL Azure Event Hubs] 대상의 경우 대상 만들기 작업 과정에 다음 정보를 입력합니다.
 
+## 계정 단계 {#account-step}
+
+* **[!UICONTROL SAS 키]** 이름 및  **[!UICONTROL SAS 키]**:SAS 키 이름과 키를 입력합니다. [Microsoft 설명서](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)에서 SAS 키를 사용하여 [!DNL Azure Event Hubs]에 인증하는 방법에 대해 학습합니다.
+* **[!UICONTROL 네임스페이스]**:네임스페이스를  [!DNL Azure Event Hubs] 입력합니다. [Microsoft 설명서](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace)의 [!DNL Azure Event Hubs] 네임스페이스에 대해 알아봅니다.
+
+![계정 단계에서 입력해야 하는 내용](../../assets/catalog/cloud-storage/event-hubs/account.png)
+
 ## 인증 단계 {#authentication-step}
 
-* **[!UICONTROL SAS Key Name]** 및:  **[!UICONTROL SAS Key]** SAS 키 이름과 키를 입력합니다. [Microsoft 설명서](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)에서 SAS 키를 사용하여 [!DNL Azure Event Hubs]에 인증하는 방법에 대해 학습합니다.
-* **[!UICONTROL Namespace]**:네임스페이스를  [!DNL Azure Event Hubs] 입력합니다. [Microsoft 설명서](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace)의 [!DNL Azure Event Hubs] 네임스페이스에 대해 알아봅니다.
-
-![인증 단계에서 입력 필요](../../assets/catalog/cloud-storage/event-hubs/authentication.png)
-
-## 설정 단계 {#setup-step}
-
-* **[!UICONTROL Name]**:연결 이름을 입력합니다 [!DNL Azure Event Hubs].
-* **[!UICONTROL Description]**:연결에 대한 설명을 제공합니다.  예:&quot;프리미엄 계층 고객&quot;, &quot;고양이에 관심 있는 남성&quot;
+* **[!UICONTROL 이름]**:연결 이름을 입력합니다 [!DNL Azure Event Hubs].
+* **[!UICONTROL 설명]**:연결에 대한 설명을 제공합니다.  예:&quot;프리미엄 계층 고객&quot;, &quot;고양이에 관심 있는 남성&quot;
 * **[!UICONTROL eventHubName]**:대상에 스트림의 이름을  [!DNL Azure Event Hubs] 지정합니다.
-* **[!UICONTROL Marketing actions]**:마케팅 작업은 데이터를 대상에 내보내려는 의도를 나타냅니다. Adobe 정의 마케팅 작업 중에서 선택하거나 자신의 마케팅 작업을 만들 수 있습니다. 마케팅 작업에 대한 자세한 내용은 Adobe Experience Platform](../../../data-governance/policies/overview.md) 페이지의 [데이터 거버넌스 페이지를 참조하십시오. 개별 Adobe 정의 마케팅 작업에 대한 자세한 내용은 [데이터 사용 정책 개요](../../../data-governance/policies/overview.md)를 참조하십시오.
+* **[!UICONTROL 마케팅 작업]**:마케팅 작업은 데이터를 대상에 내보내려는 의도를 나타냅니다. Adobe 정의 마케팅 작업 중에서 선택하거나 자신의 마케팅 작업을 만들 수 있습니다. 마케팅 작업에 대한 자세한 내용은 Adobe Experience Platform](../../../data-governance/policies/overview.md) 페이지의 [데이터 거버넌스 페이지를 참조하십시오. 개별 Adobe 정의 마케팅 작업에 대한 자세한 내용은 [데이터 사용 정책 개요](../../../data-governance/policies/overview.md)를 참조하십시오.
 
-![설정 단계에 필요한 데이터](../../assets/catalog/cloud-storage/event-hubs/setup.png)
+![인증 단계에서 필요한 데이터](../../assets/catalog/cloud-storage/event-hubs/authentication.png)
 
 ## 세그먼트 활성화 {#activate-segments}
 
@@ -111,6 +110,6 @@ Adobe Experience Platform의 데이터를 스트리밍하기 위해 [!DNL Azure 
 >[!MORELIKETHIS]
 >
 >* [Azure 이벤트 허브에 연결하고 흐름 서비스 API를 사용하여 데이터를 활성화합니다.](../../api/streaming-destinations.md)
->* [AWS Kinesis 대상](./amazon-kinesis.md)
->* [대상 유형 및 카테고리](../../destination-types.md)
+* [AWS Kinesis 대상](./amazon-kinesis.md)
+* [대상 유형 및 카테고리](../../destination-types.md)
 
