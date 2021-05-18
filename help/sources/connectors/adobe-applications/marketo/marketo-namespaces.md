@@ -5,9 +5,9 @@ title: Marketo 네임스페이스
 topic-legacy: overview
 description: 이 문서에서는 Marketo Engage 소스 커넥터를 만들 때 필요한 사용자 정의 네임스페이스에 대한 개요를 제공합니다.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: af728fb508c514db3d5871114f9a406c1ed428f2
+source-git-commit: 609b951cbde880a9f354b343adb1796def0a812c
 workflow-type: tm+mt
-source-wordcount: '1670'
+source-wordcount: '1677'
 ht-degree: 5%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 5%
 
 [!DNL Marketo] 네임스페이스 및 스키마 자동 생성 유틸리티 사용의 첫 번째 단계는 플랫폼 개발자 콘솔 및 [!DNL Postman] 환경을 설정하는 것입니다.
 
-- 이 [GitHub 리포지토리](https://git.corp.adobe.com/marketo-engineering/namespace_schema_utility)에서 네임스페이스 및 스키마 자동 생성 유틸리티 컬렉션 및 환경을 다운로드할 수 있습니다.
+- 이 [GitHub 리포지토리](https://github.com/adobe/experience-platform-postman-samples/tree/master/Postman%20Collections/CDP%20Namespaces%20and%20Schemas%20Utility)에서 네임스페이스 및 스키마 자동 생성 유틸리티 컬렉션 및 환경을 다운로드할 수 있습니다.
 - 필수 헤더에 대한 값을 모으고 샘플 API 호출을 읽는 방법에 대한 자세한 내용을 포함한 플랫폼 API 사용에 대한 자세한 내용은 [플랫폼 API 시작](../../../../landing/api-guide.md)에 대한 안내서를 참조하십시오.
 - 플랫폼 API에 대한 자격 증명을 생성하는 방법에 대한 자세한 내용은 [Experience Platform API 인증 및 액세스](../../../../landing/api-authentication.md)에 대한 자습서를 참조하십시오.
 - 플랫폼 API에 대해 [!DNL Postman]을 설정하는 방법에 대한 자세한 내용은 [개발자 콘솔 설정 및 [!DNL Postman]](../../../../landing/postman.md)에 있는 자습서를 참조하십시오.
