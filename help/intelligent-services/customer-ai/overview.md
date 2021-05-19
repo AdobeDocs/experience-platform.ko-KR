@@ -6,13 +6,13 @@ topic-legacy: Customer AI Overview
 description: 고객 AI는 규모에 따라 개별 프로필에 대한 이탈 및 전환과 같은 사용자 지정 성향 점수를 생성하는 데 사용됩니다. 비즈니스 요구 사항을 머신 러닝 문제로 변환하거나 알고리즘을 선택하거나 교육 또는 배포하지 않아도 됩니다.
 landing-page-description: 고객 AI는 규모에 따라 개별 프로필에 대한 이탈 및 전환과 같은 사용자 지정 성향 점수를 생성하는 데 사용됩니다.
 exl-id: 3e668103-e2a2-4ce6-a40a-8029a6aaa8dd
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 31b584d3e28a6f15254cf60fa673cd0c5c16ea73
 workflow-type: tm+mt
 source-wordcount: '554'
 ht-degree: 18%
 
 ---
+
 
 # Customer AI 개요
 
