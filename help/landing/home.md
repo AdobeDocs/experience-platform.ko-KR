@@ -5,19 +5,14 @@ title: Adobe Experience Platform 개요
 topic-legacy: getting started
 description: Adobe Experience Platform을 사용하면 데이터 과학 및 머신 러닝을 적용하기 전에 고객 데이터를 중앙에서 관리하고 표준화하여 개인화된 풍부한 경험을 디자인하고 전달할 수 있습니다.
 exl-id: edcce353-338a-440e-99eb-a64e2abca579
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5fae56fcfc395984d29c74e90cb56b3964d99767
 workflow-type: tm+mt
-source-wordcount: '459'
-ht-degree: 1%
+source-wordcount: '437'
+ht-degree: 2%
 
 ---
 
 # Adobe Experience Platform 개요
-
->[!NOTE]
->
->Adobe Experience Platform 설명서가 최근에 이동되었습니다. 잠시 시간을 내어 새 탐색 메뉴를 검토하고 기존 책갈피를 업데이트하십시오.
 
 Adobe Experience Platform은 고객 경험을 향상시키는 완벽한 솔루션을 구축하고 관리하기 위해 시장에서 가장 강력하고 유연하며 개방적인 시스템입니다. [!DNL Experience Platform] 기업은 모든 시스템의 고객 데이터와 콘텐츠를 통합 관리하고 표준화할 수 있으며 데이터 과학 및 머신 러닝을 적용하여 개인화된 풍부한 경험을 디자인하고 전달할 수 있습니다.
 
