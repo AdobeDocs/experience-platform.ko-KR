@@ -4,9 +4,9 @@ title: 대상 FAQ
 seo-title: 대상 FAQ
 description: Adobe Experience Platform 대상에 대해 자주 묻는 질문에 대한 답변
 seo-description: Adobe Experience Platform 대상에 대해 자주 묻는 질문에 대한 답변
-source-git-commit: 117f0f82adb764cedaa048e718cd72fa033845a0
+source-git-commit: 61678c5a62980cdb81714420016b7c4b2093f5c6
 workflow-type: tm+mt
-source-wordcount: '598'
+source-wordcount: '597'
 ht-degree: 5%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 5%
 
 # 대상 FAQ {#faq}
 
-## [!DNL Facebook Custom Audiences] (#facebook-faq)
+## [!DNL Facebook Custom Audiences] {#facebook-faq}
 
 **대상을 활성화하려면 어떻게 해야  [!DNL Facebook Custom Audiences]합니까?**
 
