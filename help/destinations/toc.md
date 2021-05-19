@@ -4,10 +4,9 @@ user-guide-title: 대상 안내서
 user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화합니다.
 description: 이 문서에서는 Adobe Experience Platform 대상에 대한 목차 목록
 feature: 대상
-translation-type: tm+mt
-source-git-commit: 9b383f09a3a73f785b0e3a415deda126b9ef6b39
+source-git-commit: d62b2df54357449f35894f9c8ab45f87d97363d2
 workflow-type: tm+mt
-source-wordcount: '474'
+source-wordcount: '476'
 ht-degree: 10%
 
 ---
@@ -17,6 +16,7 @@ ht-degree: 10%
 
 * [대상 개요](./home.md)
 * [대상 유형 및 카테고리](./destination-types.md)
+* [대상 FAQ](./destinations-faq.md)
 * API 자습서 {#api}
    * [Flow Service API를 사용하여 스트리밍 대상에 연결하고 데이터를 활성화합니다.](./api/streaming-destinations.md)
    * [이메일 마케팅 대상에 연결하고 Flow Service API를 사용하여 데이터를 활성화합니다](./api/email-marketing.md)
