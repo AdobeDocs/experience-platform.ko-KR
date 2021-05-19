@@ -3,11 +3,10 @@ audience: user
 user-guide-title: Real-time Customer Profile 안내서
 user-guide-description: 고객 데이터를 통합하여 다양한 채널에서 고객과의 상호 작용을 종합적으로 파악합니다.
 feature: 프로필
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 167407a8103acecb9846a6e0f8e38c66f3f3292d
 workflow-type: tm+mt
-source-wordcount: '123'
-ht-degree: 20%
+source-wordcount: '128'
+ht-degree: 19%
 
 ---
 
@@ -21,7 +20,7 @@ ht-degree: 20%
    * [개요](api/overview.md)
    * [시작하기](api/getting-started.md)
    * [가장자리 예상](api/edge-projections.md)
-   * [엔티티([!DNL Profile] 액세스)](api/entities.md)
+   * [엔터티([!DNL Profile] 액세스)](api/entities.md)
    * [내보내기 작업([!DNL Profile] 내보내기)](api/export-jobs.md)
    * [정책 병합](api/merge-policies.md)
    * [샘플 상태 미리 보기([!DNL Profile] 미리 보기)](api/preview-sample-status.md)
@@ -40,8 +39,9 @@ ht-degree: 20%
    * [계산된 속성 필드 구성](computed-attributes/configure-api.md)
    * [샘플 표현식](computed-attributes/expressions.md)
 * 튜토리얼 {#tutorials}
-   * [데이터 추가 위치 [!DNL Profile]](tutorials/add-profile-data.md)
-   * [서비스용 데이터 세트  [!DNL Profile] & [!DNL Identity] 구성](tutorials/dataset-configuration.md)
+   * [ [!DNL Profile]에 데이터 추가](tutorials/add-profile-data.md)
+   * [ [!DNL Profile] & [!DNL Identity] 서비스에 대한 데이터 집합 구성](tutorials/dataset-configuration.md)
+   * [데이터 세트 오버랩 보고서 생성](tutorials/dataset-overlap-report.md)
    * [추가 자습서](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
 * [개인 정보 요청 처리](privacy.md)
 * [[!DNL Profile] 문제 해결 안내서](troubleshooting.md)
