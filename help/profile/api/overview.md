@@ -1,11 +1,9 @@
 ---
 keywords: Experience Platform;프로파일;실시간 고객 프로파일;문제 해결;API;통합 프로파일;통합 프로파일;통합 프로파일;프로파일;프로파일 사용;프로파일 사용;프로파일 사용;프로파일 사용
 title: 실시간 고객 프로필 API 안내서
-topic-legacy: guide
 description: 개발자는 실시간 고객 프로필 API를 사용하여 프로필 보기, 병합 정책 만들기 및 업데이트, 프로필 데이터 내보내기 또는 샘플 데이터, 더 이상 필요하지 않거나 오류로 추가된 프로필 데이터를 포함하여 프로필 데이터를 탐색 및 작업할 수 있습니다. API를 사용하여 주요 작업을 수행하는 방법에 대해 알아보려면 이 안내서를 따르십시오.
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 77bf6f4634987900bea1280290e8049120bb8856
 workflow-type: tm+mt
 source-wordcount: '894'
 ht-degree: 0%
