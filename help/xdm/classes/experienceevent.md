@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;홈;인기 항목;스키마;스키마;스키마;XDM;개별 프로필;필드;스키마;ID맵;ID 맵;스키마 디자인;맵;결합 스키마;공용 스키마
+keywords: Experience Platform;홈;인기 항목;스키마;스키마;XDM;필드;스키마;IDMap;ID 맵;스키마 디자인;맵;이벤트 모델링;모범 사례;이벤트;이벤트;XDM;스키마;필드;스키마;스키마;스키마;스키마;ID 맵;스키마 디자인;맵;이벤트 모델링;우수 사례;이벤트;event;events
 solution: Experience Platform
 title: XDM ExperienceEvent 클래스
 topic-legacy: overview
-description: 이 문서에서는 XDM ExperienceEvent 클래스의 개요를 제공합니다.
+description: 이 문서에서는 XDM ExperienceEvent 클래스의 개요 및 이벤트 데이터 모델링에 대한 모범 사례를 제공합니다.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: 9fbb40a401250496761dcce63a3f033a8746ae7e
+source-git-commit: 4f1fe7ca5f09bb1e8e1b913d1dee1cff347d6a24
 workflow-type: tm+mt
-source-wordcount: '1466'
+source-wordcount: '1476'
 ht-degree: 1%
 
 ---
