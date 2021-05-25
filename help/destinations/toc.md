@@ -2,12 +2,12 @@
 audience: user
 user-guide-title: 대상 안내서
 user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화합니다.
-description: 이 문서에서는 Adobe Experience Platform 대상에 대한 목차 목록
+description: 이 문서에서는 Adobe Experience Platform 대상의 목차 목록을 설명합니다
 feature: 대상
-source-git-commit: d62b2df54357449f35894f9c8ab45f87d97363d2
+source-git-commit: 47b3ef28281e3480e8b194486845f4fb4326b7d4
 workflow-type: tm+mt
-source-wordcount: '476'
-ht-degree: 10%
+source-wordcount: '477'
+ht-degree: 11%
 
 ---
 
@@ -16,9 +16,8 @@ ht-degree: 10%
 
 * [대상 개요](./home.md)
 * [대상 유형 및 카테고리](./destination-types.md)
-* [대상 FAQ](./destinations-faq.md)
 * API 자습서 {#api}
-   * [Flow Service API를 사용하여 스트리밍 대상에 연결하고 데이터를 활성화합니다.](./api/streaming-destinations.md)
+   * [Flow Service API를 사용하여 스트리밍 대상에 연결하고 데이터를 활성화합니다](./api/streaming-destinations.md)
    * [이메일 마케팅 대상에 연결하고 Flow Service API를 사용하여 데이터를 활성화합니다](./api/email-marketing.md)
 * UI 안내서 {#ui}
    * [대상 작업 공간](./ui/destinations-workspace.md)
@@ -38,45 +37,45 @@ ht-degree: 10%
    * 광고 대상{#advertising}
       * [광고 대상 개요](./catalog/advertising/overview.md)
       * [Adobe Advertising Cloud 확장](./catalog/advertising/adobe-advertising-cloud.md)
-      * [Win 광고주 전환 태그 확장](./catalog/advertising/awin-conversiontag.md)
-      * [Awin 광고주 Mastertag 확장](./catalog/advertising/awin-mastertag.md)
-      * [Bing 광고 유니버설 이벤트 추적(UET) 확장](./catalog/advertising/bing-ads.md)
+      * [Win Advertiser 변환 태그 확장](./catalog/advertising/awin-conversiontag.md)
+      * [Awin Advertiser Master Tag 확장](./catalog/advertising/awin-mastertag.md)
+      * [Bing Ads Universal Event Tracking (UET) 확장](./catalog/advertising/bing-ads.md)
       * [분기 확장](./catalog/advertising/branch.md)
       * [DoubleClick Floodlight(베타) 확장](./catalog/advertising/doubleclick-floodlight.md)
       * [Facebook 픽셀 확장](./catalog/advertising/facebook-pixel.md)
-      * [Flashtaling OneTag 확장](./catalog/advertising/flashtalking.md)
+      * [Flashtalk OneTag 확장](./catalog/advertising/flashtalking.md)
       * [Google 광고 연결](./catalog/advertising/google-ads-destination.md)
       * [Google 광고 확장](./catalog/advertising/google-ads-extension.md)
-      * [Google 광고 관리자 연결](./catalog/advertising/google-ad-manager.md)
-      * [Google 고객 일치 연결](./catalog/advertising/google-customer-match.md)
-      * [Google 디스플레이 및 비디오 360 연결](./catalog/advertising/google-dv360.md)
+      * [Google Ad Manager 연결](./catalog/advertising/google-ad-manager.md)
+      * [Google Customer Match 연결](./catalog/advertising/google-customer-match.md)
+      * [Google Display &amp; Video 360 연결](./catalog/advertising/google-dv360.md)
       * [Google 태그 확장](./catalog/advertising/gtag-advertising.md)
-      * [linkedIn Insight 태그 확장](./catalog/advertising/linkedin.md)
+      * [linkedIn Insight Tag 확장](./catalog/advertising/linkedin.md)
       * [Microsoft Bing 연결](./catalog/advertising/bing.md)
       * [Pinterest 전환 추적 확장](./catalog/advertising/pinterest.md)
       * [무역센터 연결](./catalog/advertising/tradedesk.md)
       * [Twitter 범용 웹 사이트 태그 확장](./catalog/advertising/twitter-uwt.md)
-   * 분석 대상 {#analytics}
-      * [분석 대상 개요](./catalog/analytics/overview.md)
-      * [웹 사이트 추적 확장 기능 추가](./catalog/analytics/adform.md)
+   * Analytics 대상 {#analytics}
+      * [Analytics 대상 개요](./catalog/analytics/overview.md)
+      * [Adform 웹 사이트 추적 확장](./catalog/analytics/adform.md)
       * [Adobe Analytics 확장](./catalog/analytics/adobe-analytics.md)
       * [Adobe Media Analytics for Audio 및 Video 확장](./catalog/analytics/adobe-video-analytics.md)
       * [Clicktale 확장](./catalog/analytics/clicktale.md)
-      * [Contentsquare 확장](./catalog/analytics/contentsquare.md)
-      * [데시벨 확장](./catalog/analytics/decibel.md)
+      * [콘텐츠 사각형 확장](./catalog/analytics/contentsquare.md)
+      * [Decibel 확장](./catalog/analytics/decibel.md)
       * [Demandbase 확장](./catalog/analytics/demandbase.md)
       * [DialogTech 확장](./catalog/analytics/dialogtech.md)
       * [Google 글로벌 사이트 태그 확장](./catalog/analytics/gtag-analytics.md)
-      * [Google Universal Analytics 확장](./catalog/analytics/google-universal-analytics.md)
+      * [Google 유니버설 애널리틱스 확장](./catalog/analytics/google-universal-analytics.md)
       * [JW 플레이어 분석(베타) 확장](./catalog/analytics/jw-player-analytics.md)
       * [Nielsen BSDK 확장](./catalog/analytics/nielsen-bsdk.md)
       * [Nielsen IMA 처리기 확장](./catalog/analytics/nielsen-ima.md)
-      * [Nielsen VideoJS 플레이어 처리기 확장](./catalog/analytics/nielsen-videojs.md)
+      * [Nielsen VideoJS 플레이어 핸들러 확장](./catalog/analytics/nielsen-videojs.md)
       * [Parse.ly Analytics 확장](./catalog/analytics/parsely.md)
-      * [양자 지표 확장](./catalog/analytics/quantum-metric.md)
+      * [Quantum 지표 확장](./catalog/analytics/quantum-metric.md)
       * [SessionCam 확장](./catalog/analytics/sessioncam.md)
       * [TMMData 확장](./catalog/analytics/tmmdata.md)
-      * [텍스트 전환 추적 확장](./catalog/analytics/yext.md)
+      * [다음 전환 추적 확장](./catalog/analytics/yext.md)
    * 클라우드 스토리지 대상 {#cloud-storage}
       * [클라우드 스토리지 대상 개요](./catalog/cloud-storage/overview.md)
       * [클라우드 스토리지 대상 만들기](./catalog/cloud-storage/workflow.md)
@@ -89,30 +88,30 @@ ht-degree: 10%
    * 데이터 관리 플랫폼 대상 {#data-management}
       * [DMP(데이터 관리 플랫폼) 대상 개요](./catalog/data-management/overview.md)
       * [Audience Manager DIL 확장](./catalog/data-management/aam-dil-extension.md)
-   * 이메일 대상 {#email}
-      * [Biz가능 확장](./catalog/email/bizible.md)
+   * 전자 메일 대상 {#email}
+      * [Bizible 확장](./catalog/email/bizible.md)
       * [Marketo 확장](./catalog/email/marketo.md)
       * [Marketo Munchkin 확장 프로그램](./catalog/email/marketo-munchkin.md)
-      * [PebblePost 확장](./catalog/email/pebblepost.md)
+      * [페블포스트 연장](./catalog/email/pebblepost.md)
    * 이메일 마케팅 대상 {#email-marketing}
       * [이메일 마케팅 대상 개요](./catalog/email-marketing/overview.md)
       * [Adobe Campaign 연결](./catalog/email-marketing/adobe-campaign.md)
-      * [Oracle 언변 연결](./catalog/email-marketing/oracle-eloqua.md)
-      * [Oracle Responsys 연결](./catalog/email-marketing/oracle-responsys.md)
+      * [Oracle Eloqua 연결](./catalog/email-marketing/oracle-eloqua.md)
+      * [Responsys 연결 oracle](./catalog/email-marketing/oracle-responsys.md)
       * [Salesforce Marketing Cloud 연결](./catalog/email-marketing/salesforce-marketing-cloud.md)
    * Experience Platform Launch 확장 {#launch-extensions}
       * [Adobe Experience Platform Launch 확장 개요](./catalog/launch-extensions/overview.md)
    * 모바일 참여 대상 {#mobile-engagement}
       * [모바일 참여 대상 개요](./catalog/mobile-engagement/overview.md)
-      * [(베타) Airship Attributes 연결](./catalog/mobile-engagement/airship-attributes.md)
-      * [(베타) Airship Tags 연결](./catalog/mobile-engagement/airship-tags.md)
-      * [(베타) 브라즈 연결](./catalog/mobile-engagement/braze.md)
+      * [(베타) 비행기 속성 연결](./catalog/mobile-engagement/airship-attributes.md)
+      * [(베타) 항공 화물 태그 연결](./catalog/mobile-engagement/airship-tags.md)
+      * [(베타) 브레이즈 연결](./catalog/mobile-engagement/braze.md)
    * 개인화 대상 {#personalization}
       * [개인화 대상 개요](./catalog/personalization/overview.md)
       * [Adobe Target 확장](./catalog/personalization/adobe-target.md)
       * [Adobe Target v2 확장](./catalog/personalization/adobe-target-v2.md)
       * [Beemray 확장](./catalog/personalization/beemray.md)
-      * [D&amp;B 방문자 인텔리전스 확장](./catalog/personalization/dnb.md)
+      * [D&amp;B Visitor Intelligence 확장](./catalog/personalization/dnb.md)
       * [Experience Cloud ID 서비스 확장](./catalog/personalization/adobe-ecid.md)
       * [Gainsight 확장](./catalog/personalization/gainsight.md)
       * [KickFire 확장](./catalog/personalization/kickfire.md)
@@ -120,19 +119,20 @@ ht-degree: 10%
    * 소셜 대상{#social}
       * [소셜 대상 개요](./catalog/social/overview.md)
       * [소셜 대상 만들기](./catalog/social/workflow.md)
-      * [Adobe Livefyre 확장](./catalog/social/adobe-livefyre.md)
+      * [Livefyre 확장 Adobe](./catalog/social/adobe-livefyre.md)
       * [Facebook 연결](./catalog/social/facebook.md)
-      * [linkedIn 일치 대상 연결](./catalog/social/linkedin.md)
+      * [linkedIn Matched Audiences 연결](./catalog/social/linkedin.md)
    * 설문 조사 대상 {#survey}
       * [설문 조사 대상 개요](./catalog/survey/overview.md)
       * [Foresee 확장 대상](./catalog/survey/foresee.md)
       * [InMoment 확장](./catalog/survey/inmoment.md)
       * [Qualtrics 웹 사이트 피드백 확장](./catalog/survey/qualtrics.md)
-      * [QuestionPro 출구 설문 조사 확장](./catalog/survey/web-intercept-surveys.md)
+      * [Question Pro Intercept 설문 조사 확장](./catalog/survey/web-intercept-surveys.md)
    * 고객 대상 음성 {#voice}
-      * [고객 대상 개요](./catalog/voice/overview.md)
+      * [고객 대상 음성 개요](./catalog/voice/overview.md)
       * [디지털 피드백 확장 확인](./catalog/voice/confirmit-digital-feedback.md)
-      * [Invoca 태그 확장](./catalog/voice/invoca.md)
+      * [호출 태그 확장](./catalog/voice/invoca.md)
       * [메달리아 확장](./catalog/voice/medallia.md)
-      * [Talk URL 받은 편지함 확장](./catalog/voice/talkurl.md)
-* [플랫폼 릴리스 정보](https://www.adobe.com/go/platform-release-notes-en)
+      * [대화 URL 받은 편지함 확장](./catalog/voice/talkurl.md)
+* [Experience Cloud 핵심 서비스에 대한](./destinations-faq.md)
+* [플랫폼 릴리스 노트](https://www.adobe.com/go/platform-release-notes-en)
