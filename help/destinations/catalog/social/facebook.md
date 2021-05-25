@@ -3,7 +3,7 @@ keywords: facebook 연결;facebook 연결;facebook 대상;facebook;instagram;mes
 title: Facebook 연결
 description: 해시된 이메일을 기반으로 대상 타깃팅, 개인화 및 억제를 위해 Facebook 캠페인용 프로필을 활성화합니다.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: d82eb1a839518dbd9831808485d9d5029e3dcaf5
+source-git-commit: 41cfa5b30d8816baf55b8b4e1609ca724e9efe24
 workflow-type: tm+mt
 source-wordcount: '1160'
 ht-degree: 2%
