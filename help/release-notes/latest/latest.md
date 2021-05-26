@@ -1,101 +1,84 @@
 ---
 title: Adobe Experience Platform 릴리스 정보
-description: 2021년 4월 21일자 Experience Platform 릴리스 노트
+description: 2021년 5월 26일 Experience Platform 릴리스 노트.
 doc-type: release notes
-last-update: April 21, 2021
+last-update: May 26, 2021
 author: ens72741
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: 8508d213834bb21951df4fe118732b60465b6d73
 workflow-type: tm+mt
-source-wordcount: '885'
-ht-degree: 10%
+source-wordcount: '831'
+ht-degree: 4%
 
 ---
 
 
 # Adobe Experience Platform 릴리스 노트
 
-**릴리스 날짜: 2021년 4월 21일**
+**릴리스 날짜: 2021년 5월 26일**
+
+Adobe Experience Platform의 새로운 기능:
+
+- [대시보드](#dashboards)
 
 Adobe Experience Platform의 기존 기능 업데이트:
 
 - [[!DNL Data Prep]](#data-prep)
+- [[!DNL Destinations]](#destinations)
 - [[!DNL Experience Data Model (XDM)]](#xdm)
-- [[!DNL Intelligent Services]](#intelligent-services)
-- [[!DNL Segmentation Service]](#segmentation)
-- [[!DNL Sources]](#sources)
+- [실시간 고객 프로필](#profile)
 
-## [!DNL Data Prep] {#data-prep}
+## 대시보드 {#dashboards}
 
-[!DNL Data Prep] 데이터 엔지니어가 XDM(Experience Data Model)을 통해 데이터를 매핑, 변형 및 확인할 수 있습니다.
-
-**새로운 기능**
-
-| 기능 | 설명 |
-| ------- | ----------- |
-| 기존 데이터 파일에 대한 매핑 편집 지원 | 이제 기존 데이터 흐름 매핑 세트를 업데이트할 수 있습니다. 1회 수집으로 예약된 데이터 프롤에 대한 매핑 세트는 업데이트할 수 없습니다. 이 기능은 HTTP API, Adobe Analytics, Adobe Audience Manager 및 [!DNL Marketo Engage]에서 지원되지 않습니다. 자세한 내용은 UI](../../sources/tutorials/ui/update-dataflows.md)에서 소스 데이터 흐름 업데이트에 대한 자습서를 참조하십시오.[ |
-| 스트리밍 통합 지원 | 이제 스트리밍 소스 연결을 만들 때 데이터 준비 기능을 사용할 수 있습니다. 자세한 내용은 UI](../../sources/tutorials/ui/create/streaming/http.md)에서 스트리밍 소스 연결 만들기에 대한 자습서를 참조하십시오.[ |
-
-자세한 내용은 [[!DNL Data Prep] 개요](../../data-prep/home.md)를 참조하십시오.
-
-## [!DNL Experience Data Model (XDM)] {#xdm}
-
-XDM(Experience Data Model)은 디지털 경험의 성능을 개선하기 위해 설계된 오픈 소스 사양입니다. Adobe Experience Platform의 서비스와 통신할 수 있도록 모든 응용 프로그램에 대한 공통 구조와 정의를 제공합니다. XDM 표준을 준수함으로써 모든 고객 경험 데이터를 하나의 공통 표현으로 통합하여 보다 빠르고 통합된 방식으로 통찰력을 전달할 수 있습니다. 고객 행동을 통해 유용한 인사이트를 얻고, 세그먼트를 통해 고객 고객을 정의하고, 고객 속성을 개인화를 위해 사용할 수 있습니다.
+Adobe Experience Platform은 일별 스냅샷 중에 캡처된 대로 조직의 데이터에 대한 중요한 통찰력을 볼 수 있는 여러 개의 대시보드를 제공합니다.
 
 | 기능 | 설명 |
 | --- | --- |
-| 업계별 스키마 권장 사항 | 스키마 편집기 UI에서 클래스 및 스키마 필드 그룹을 선택할 때 새 필터를 사용하여 특정 업계를 기반으로 권장 표준 구성 요소를 볼 수 있습니다. 이러한 구성 요소가 서로 다른 업계 사용 사례에서 서로 연관되는 방법에 대한 자세한 내용은 [업계 데이터 모델](https://www.adobe.com/go/xdm-industry-erds-en)의 설명서를 참조하십시오. |
+| 프로필 통찰력 | 프로필 대시보드는 Experience Platform의 각 조직 병합 정책에 대한 실시간 고객 프로필 지표에 대한 일별 개요를 제공합니다. 이러한 프로필 인사이트는 Platform 내에서 프로필 데이터에 액세스하고 볼 수 있는 기능을 가진 모든 사용자가 사용할 수 있습니다. |
+| Audience Insights | 세그먼트 대시보드는 Platform 내의 세그먼트를 볼 수 있는 액세스 권한을 가진 모든 사용자에게 대상 관련 통찰력을 제공합니다. 이 대시보드는 세그먼트 빌더 UI로 만들거나 Adobe Audience Manager에서 가져온 대상에 대한 대상 지표에 대한 일별 개요를 제공합니다. |
+| 활성화 통찰력 | 대상 대시보드는 대상에 액세스하고 대상을 볼 수 있는 기능을 가진 모든 사용자가 사용할 수 있습니다. 이 대시보드는 모든 대상에 걸친 활성화에 대한 활성화 지표의 일별 개요를 제공합니다. |
+| 사용자별 통찰력 | 위젯을 추가, 제거, 크기 조정 및 다시 정렬하여 대시보드 레이아웃을 수정하는 기능을 포함하여 각 사용자가 대시보드의 모양과 느낌을 개인화할 수 있습니다. |
+| 위젯 생성 및 관리 | 통찰력 생성 및 공유를 민주화하기 위해 중앙 저장소에서 마케터가 모든 표준 및 사용자 지정 위젯에 액세스할 수 있습니다.<br/><ul><li>표준 탭에는 대시보드 컨텍스트 내에서 액세스할 수 있는 Adobe 제공 위젯이 포함되어 있습니다. </li><li>사용자 지정 탭에는 보기에서 위젯을 숨길 수 있는 옵션을 포함하여 조직에서 만든 사용자 지정 위젯이 포함되어 있습니다.</li><li>프로필 및 대상 인사이트 내에서 위젯 생성 워크플로우를 통해 사용자 지정 위젯을 편집, 선택, 미리 보기 및 게시할 수 있습니다.</li></ul> |
+| 사용자 지정 인사이트 | 액세스 권한을 통해 데이터 엔지니어와 마케팅 전문가가 위젯 작성에 사용할 수 있는 프로필 속성을 사용자 지정할 수 있습니다. |
 
-## [!DNL Intelligent Services] {#intelligent-services}
+액세스 권한을 부여하고 사용자 지정 위젯을 만드는 방법 등 대시보드에 대한 자세한 내용은 [대시보드 개요](../../dashboards/home.md)를 읽어서 시작하십시오.
 
-Intelligent Services를 통해 마케팅 분석가와 전문가는 인공 지능과 머신 러닝을 활용하여 고객 경험 사례를 활용할 수 있습니다. 이를 통해 마케팅 분석가는 데이터 과학 전문 지식 없이도 비즈니스 수준 구성을 사용하여 기업의 요구 사항에 맞는 예측을 설정할 수 있습니다.
+## [!DNL Data Prep] {#data-prep}
 
-### 고객 AI
-
-실시간 고객 데이터 플랫폼에서 제공되는 고객 AI는 개별 프로파일에 대한 이탈 및 전환과 같은 맞춤형 성향 점수를 규모에 맞게 생성하는 데 사용됩니다. 비즈니스 요구 사항을 머신 러닝 문제로 변환하거나 알고리즘을 선택하거나 교육 또는 배포하지 않아도 됩니다.
-
-| 기능 | 설명 |
-| ------- | ----------- |
-| Adobe Analytics 데이터 지원 | CEE(Consumer Experience Event) 스키마를 따르기 위해 데이터를 ETL할 필요 없이 Analytics 소스 커넥터를 통해 Adobe Analytics 데이터 세트를 지원하는 기능이 업데이트되었습니다. |
-| Adobe Audience Manager 데이터 지원 | CEE(Consumer Experience Event) 스키마를 따르기 위해 데이터를 ETL할 필요 없이 Audience Manager 소스 커넥터를 통해 Adobe Audience Manager 데이터 세트를 지원하는 기능이 업데이트되었습니다. |
-| 모델 성능 요약 | 이제 고객 AI에 서비스 인스턴스 인사이트 페이지 내에 [모델 성능 요약 탭](../../intelligent-services/customer-ai/user-guide/discover-insights.md#performance-metrics)이 있습니다. 모델 성능 탭에는 모든 실제 전환율과 이탈률이 표시됩니다. 이를 통해 각 성향 버킷에서 발생하는 상황을 해석하고 이해할 수 있습니다. |
-
-지원되는 데이터 집합에 대한 자세한 내용은 [[!DNL Intelligent Services] 데이터 준비 설명서](../../intelligent-services/data-preparation.md)를 참조하십시오.
-
-### Attribution AI
-
-Attribution AI는 전환 이벤트로 연결되는 터치포인트에 크레딧을 적용하는 데 사용됩니다. 이를 통해 마케터는 고객 여정 전반에서 각 개별 마케팅 터치포인트의 마케팅 효과를 수량화할 수 있습니다.
+[!DNL Data Prep] 데이터 엔지니어가 XDM(Experience Data Model) 을 통해 데이터를 매핑, 변환 및 확인할 수 있습니다.
 
 | 기능 | 설명 |
 | ------- | ----------- |
-| Adobe Analytics 데이터 지원 | CEE(Consumer Experience Event) 스키마를 따르기 위해 데이터를 ETL할 필요 없이 Analytics 소스 커넥터를 통해 Adobe Analytics 데이터 세트를 지원하는 기능이 업데이트되었습니다. |
+| 가벼운 오류 경고 | 이제 데이터 준비 매퍼 오류 메시지는 부분적으로 변형된 행과 함께 오류 대신 경고를 제공하여 보다 관대합니다. |
+| 새로운 함수 | 키를 가져오고, 요소를 기존 배열에 추가하며, 여러 배열의 요소를 기존 배열에 추가하고, 개체를 사용하여 배열을 빌드하고, JSON 개체 이름을 문자열 직역량으로 사용하는 함수가 추가되었습니다. |
 
-지원되는 데이터 집합에 대한 자세한 내용은 [[!DNL Intelligent Services] 데이터 준비 설명서](../../intelligent-services/data-preparation.md)를 참조하십시오.
+자세한 내용은 [[!DNL Data Prep] 개요](../../data-prep/home.md)를 참조하십시오.
 
-## 세분화 서비스 {#segmentation}
+## [!DNL Destinations] {#destinations}
 
-Adobe Experience Platform 세그멘테이션 서비스는 세그먼트를 작성하고 [!DNL Real-time Customer Profile] 데이터에서 대상을 생성할 수 있는 사용자 인터페이스와 RESTful API를 제공합니다. 이러한 세그먼트는 중앙에 구성되고 플랫폼에 유지 관리되므로 모든 Adobe 애플리케이션에서 쉽게 액세스할 수 있습니다.
-
-[!DNL Segmentation Service] 고객 기반 내에서 마케팅 가능한 사용자 그룹을 구분하는 기준을 설명하여 특정 프로필 하위 집합을 정의합니다. 세그먼트는 브랜드 고객과의 상호 작용을 나타내는 레코드 데이터(인구 통계 정보 등) 또는 시간 시리즈 이벤트를 기반으로 할 수 있습니다.
-
-**새로운 기능**
+[!DNL Destinations] 는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과의 사전 구축된 통합입니다. 대상을 사용하여 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례에 대해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 
 | 기능 | 설명 |
 | ------- | ----------- |
-| 추가 집계 함수 | 세그먼트 빌더에 카운트 함수가 추가되었습니다. 카운트 함수를 사용하면 지정된 이벤트가 수행된 횟수를 카운트할 수 있습니다. 카운트 함수에 대한 자세한 내용은 [세그먼트 빌더 안내서](../../segmentation/ui/segment-builder.md#count-functions)의 카운트 함수 섹션에 있습니다. |
+| 향상된 모니터링(베타) | 배치 및 스트리밍 대상에 대한 정보를 포함하여 대상에 대한 모니터링 기능이 향상되었습니다 |
 
-[!DNL Segmentation Service]에 대한 자세한 내용은 [세그멘테이션 개요](../../segmentation/home.md)를 참조하십시오.
+대상에 대한 일반적인 자세한 내용은 [대상 개요](../../destinations/home.md)를 참조하십시오.
 
-## [!DNL Sources] {#sources}
+## [!DNL Experience Data Model (XDM)] {#xdm}
 
-Adobe Experience Platform은 외부 소스에서 데이터를 인제스트할 수 있는 한편, 플랫폼 서비스를 사용하여 해당 데이터를 구조화, 레이블 지정 및 개선할 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 제3자 소프트웨어 및 CRM 시스템과 같은 다양한 소스의 데이터를 인제스트할 수 있습니다.
+XDM(Experience Data Model)은 디지털 경험의 성능을 향상하도록 설계된 오픈 소스 사양입니다. Adobe Experience Platform의 서비스와 통신할 수 있도록 모든 애플리케이션에 대한 공통 구조 및 정의를 제공합니다. XDM 표준을 준수함으로써 모든 고객 경험 데이터를 공통 표현으로 통합하여 보다 빠르고 통합된 방식으로 통찰력을 제공할 수 있습니다. 고객 작업을 통해 유용한 통찰력을 얻을 수 있고, 세그먼트를 통해 고객 대상을 정의하고, 개인화를 위해 고객 속성을 사용할 수 있습니다.
 
-Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 쉽게 설정할 수 있는 RESTful API와 대화형 UI를 제공합니다. 이러한 소스 연결을 통해 외부 스토리지 시스템 및 CRM 서비스에 인증 및 연결할 수 있고 통합 실행에 대한 시간을 설정할 수 있으며 데이터 통합 처리량을 관리할 수 있습니다.
+| 기능 | 설명 |
+| --- | --- |
+| 스키마 필드 그룹 | &quot;mixin&quot;이라는 용어가 &quot;필드 그룹&quot;으로 업데이트되었습니다. 이 변경 사항은 Adobe Experience Platform UI에 반영됩니다. 또한 스키마 레지스트리 API에는 새로운 [필드 그룹 종단점](../../xdm/api/field-groups.md)이(가) 있지만 mixin 종단점은 기존 종단점으로 더 이상 사용되지 않습니다. 자세한 내용은 [XDM 설명서](../../xdm/home.md)를 참조하십시오. |
+
+## 실시간 고객 프로필 {#profile}
+
+Adobe Experience Platform을 사용하면 고객이 브랜드와 상호 작용하는 위치와 시기에 관계없이 고객을 위해 조정되고 일관되며 적절한 경험을 제공할 수 있습니다. 실시간 고객 프로필을 사용하면 온라인, 오프라인, CRM 및 타사 데이터를 포함하여 여러 채널의 데이터를 결합하는 각 개별 고객을 전체적으로 확인할 수 있습니다. [!DNL Profile] 고객 데이터를 모든 고객 상호 작용을 실행 가능하고 타임스탬프가 지정된 계정을 제공하는 통합 보기에 통합할 수 있습니다.
 
 | 기능 | 설명 |
 | ------- | ----------- |
-| [!DNL Marketo Engage] (베타) | 이제 UI를 사용하여 [!DNL Marketo Engage] 소스 연결을 만들어 B2B 데이터를 플랫폼에 연결된 애플리케이션을 사용하여 최신 상태로 유지할 수 있습니다. 자세한 내용은 [[!DNL Marketo Engage] 소스 커넥터 설명서](../../sources/connectors/adobe-applications/marketo/marketo.md)를 참조하십시오. |
-| GA로 이동하는 베타 소스 | 다음 소스는 베타에서 GA로 승격되었습니다. <ul><li>[[!DNL Amazon Kinesis]](../../sources/connectors/cloud-storage/kinesis.md)</li><li>[[!DNL Azure EventHubs]](../../sources/connectors/cloud-storage/eventhub.md)</li><li>[[!DNL HTTP API]](../../sources/connectors/streaming/http.md)</li><li>[[!DNL MariaDB]](../../sources/connectors/databases/mariadb.md)</li><li>[[!DNL Microsoft SQL Server]](../../sources/connectors/databases/sql-server.md)</li><li>[[!DNL Oracle]](../../sources/connectors/databases/oracle.md)</li></ul> |
+| 병합 정책 워크플로 업데이트 | UI에서 병합 정책을 만들고 업데이트할 때 사용자는 이제 결합 스키마를 기반으로 20개의 샘플 프로필을 미리 볼 수 있습니다. 이를 통해 병합 정책 구성을 저장하기 전에 고객 프로필의 모양을 미리 볼 수 있습니다. 자세한 내용은 [병합 정책 UI 안내서](../../profile/merge-policies/ui-guide.md)를 참조하십시오. |
+| 데이터 집합 겹치기 보고서 | 데이터 집합 겹치기 보고서는 대응 가능 대상에 가장 많이 기여하는 데이터 세트를 노출하여 프로필 저장소의 구성을 보여줍니다. 이 보고서는 프로필 데이터에 대한 통찰력을 제공할 뿐만 아니라 사용자가 특정 데이터의 수명 제한 설정과 같은 라이선스 사용을 최적화하는 조치를 취할 수 있도록 합니다. 자세한 내용은 [데이터 집합 중복 보고서 생성](../../profile/tutorials/dataset-overlap-report.md)에서 자습서를 참조하십시오. |
 
-소스에 대한 자세한 내용은 [소스 개요](../../sources/home.md)를 참조하십시오.
+[!DNL Profile] 데이터 작업에 대한 자습서 및 우수 사례 등 실시간 고객 프로필에 대한 자세한 내용은 [실시간 고객 프로필 개요](../../profile/home.md)를 읽어서 시작하십시오.
