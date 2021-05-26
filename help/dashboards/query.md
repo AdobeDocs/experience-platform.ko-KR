@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 원시 데이터 세트 탐색 및 처리 Experience Platform 기반 대시보드
 type: Documentation
 description: Query Service를 사용하여 Experience Platform에서 프로필, 세그먼트 및 대상 대시보드에 적용되는 원시 데이터 세트를 탐색하고 처리하는 방법을 알아봅니다.
-source-git-commit: 743367431144e9714a967b0340c755bf2120559c
+source-git-commit: 1facf7079213918c2ef966b704319827eaa4a53d
 workflow-type: tm+mt
-source-wordcount: '592'
+source-wordcount: '614'
 ht-degree: 1%
 
 ---
@@ -29,27 +29,27 @@ Query Service를 사용하여 프로필, 세그먼트 및 대상 대시보드에
 
 실시간 고객 프로필의 모든 활성 병합 정책에 대해 데이터 레이크에서 사용할 수 있는 프로필 속성 데이터 세트가 있습니다.
 
-이 데이터 집합의 이름 지정 규칙은 **프로필 속성**&#x200B;에 영숫자 값이 옵니다. 예: `Profile Attribute 14adf268-2a20-4dee-bee6-a6b0e34616a9`
+이러한 데이터 세트의 이름 지정 규칙은 **프로필 속성** 뒤에 영숫자 값이 옵니다. 예: `Profile Attribute 14adf268-2a20-4dee-bee6-a6b0e34616a9`
 
-데이터 세트의 전체 스키마를 이해하려면 Experience Platform UI에서 데이터 세트 뷰어를 사용하여 스키마를 미리 보고 탐색할 수 있습니다.
+각 데이터 세트의 전체 스키마를 이해하려면 Experience Platform UI에서 데이터 세트 뷰어를 사용하여 데이터 세트를 미리 보고 탐색할 수 있습니다.
 
 ### 세그먼트 메타데이터 데이터 세트
 
-각 조직의 세그먼트에 대해 데이터 레이크에서 사용할 수 있는 세그먼트 메타데이터 데이터 세트가 있습니다.
+각 조직의 세그먼트에 대한 메타데이터가 포함된 데이터 레이크에서 사용할 수 있는 세그먼트 메타데이터 데이터 세트가 있습니다.
 
 이 데이터 집합의 이름 지정 규칙은 **프로필 세그먼트 정의**&#x200B;에 영숫자 값이 옵니다. 예: `Profile Segment Definition 6591ba8f-1422-499d-822a-543b2f7613a3`
 
-다음 이미지는 세그먼트 메타데이터 데이터 세트의 스키마를 보여줍니다.
+데이터 세트의 전체 스키마를 이해하려면 Experience Platform UI에서 데이터 세트 뷰어를 사용하여 스키마를 미리 보고 탐색할 수 있습니다.
 
 ![](images/query/segment-metadata.png)
 
 ### 대상 메타데이터 데이터 세트
 
-활성화된 대상에 대한 메타데이터는 데이터 레이크에서 원시 데이터 세트로 사용할 수 있습니다.
+조직의 활성화된 모든 대상에 대한 메타데이터는 데이터 레이크에서 원시 데이터 세트로 사용할 수 있습니다.
 
 이 데이터 집합의 이름 지정 규칙은 **DIM_Destination**&#x200B;입니다.
 
-다음 이미지는 대상 메타데이터 데이터 집합의 스키마를 보여줍니다.
+데이터 세트의 전체 스키마를 이해하려면 Experience Platform UI에서 데이터 세트 뷰어를 사용하여 스키마를 미리 보고 탐색할 수 있습니다.
 
 ![](images/query/destinations-metadata.png)
 
@@ -102,8 +102,6 @@ Select
       group by
       segment_id
 ```
-
-### 모든 대상에 대해 대상당 활성화된 세그먼트 수
 
 ## 다음 단계
 
