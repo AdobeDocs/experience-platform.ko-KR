@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: May 26, 2021
 author: ens72741
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: 8508d213834bb21951df4fe118732b60465b6d73
+source-git-commit: d78f2d0fc8d1117614b0d8add0cada21619d8357
 workflow-type: tm+mt
-source-wordcount: '831'
+source-wordcount: '978'
 ht-degree: 4%
 
 ---
@@ -27,6 +27,7 @@ Adobe Experience Platform의 기존 기능 업데이트:
 - [[!DNL Destinations]](#destinations)
 - [[!DNL Experience Data Model (XDM)]](#xdm)
 - [실시간 고객 프로필](#profile)
+- [소스](#sources)
 
 ## 대시보드 {#dashboards}
 
@@ -82,3 +83,15 @@ Adobe Experience Platform을 사용하면 고객이 브랜드와 상호 작용�
 | 데이터 집합 겹치기 보고서 | 데이터 집합 겹치기 보고서는 대응 가능 대상에 가장 많이 기여하는 데이터 세트를 노출하여 프로필 저장소의 구성을 보여줍니다. 이 보고서는 프로필 데이터에 대한 통찰력을 제공할 뿐만 아니라 사용자가 특정 데이터의 수명 제한 설정과 같은 라이선스 사용을 최적화하는 조치를 취할 수 있도록 합니다. 자세한 내용은 [데이터 집합 중복 보고서 생성](../../profile/tutorials/dataset-overlap-report.md)에서 자습서를 참조하십시오. |
 
 [!DNL Profile] 데이터 작업에 대한 자습서 및 우수 사례 등 실시간 고객 프로필에 대한 자세한 내용은 [실시간 고객 프로필 개요](../../profile/home.md)를 읽어서 시작하십시오.
+
+## [!DNL Sources] {#sources}
+
+Adobe Experience Platform은 외부 소스에서 데이터를 수집하면서도 Platform 서비스를 사용하여 해당 데이터를 구조화, 레이블 지정 및 향상시킬 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 타사 소프트웨어 및 CRM 시스템과 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
+
+Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 쉽게 설정할 수 있는 RESTful API 및 대화형 UI를 제공합니다. 이러한 소스 연결을 통해 외부 스토리지 시스템 및 CRM 서비스를 인증 및 연결하고, 수집 실행 시간을 설정하고, 데이터 수집 처리량을 관리할 수 있습니다.
+
+| 기능 | 설명 |
+| ------- | ----------- |
+| 압축 파일 통합에 대한 UI 지원 | 이제 UI에서 클라우드 스토리지 소스를 사용하여 압축된 JSON 또는 구분된 파일을 미리 보고 수집할 수 있습니다. 자세한 내용은 UI](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md)에서 클라우드 저장소 소스 연결을 위한 데이터 흐름 구성 자습서를 참조하십시오.[ |
+
+소스에 대해 자세히 알아보려면 [소스 개요](../../sources/home.md)를 참조하십시오.
