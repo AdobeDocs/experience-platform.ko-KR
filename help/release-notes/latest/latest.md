@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: May 26, 2021
 author: ens72741
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: d78f2d0fc8d1117614b0d8add0cada21619d8357
+source-git-commit: 91f75f5b6a8e5adb251455f65bc2b693934ef8e2
 workflow-type: tm+mt
-source-wordcount: '978'
-ht-degree: 4%
+source-wordcount: '1070'
+ht-degree: 3%
 
 ---
 
@@ -62,6 +62,8 @@ Adobe Experience Platform은 일별 스냅샷 중에 캡처된 대로 조직의 
 | 기능 | 설명 |
 | ------- | ----------- |
 | 향상된 모니터링(베타) | 배치 및 스트리밍 대상에 대한 정보를 포함하여 대상에 대한 모니터링 기능이 향상되었습니다 |
+| [빠른 증분 파일 내보내기(베타)](../../destinations/ui/activate-destinations.md#export-incremental-files) | 3, 6, 8 또는 12시간마다 대상으로 증분 파일을 내보내는 기능을 추가했습니다.<br> <br>이 기능은 현재 베타에 있으며 일부 고객만 사용할 수 있습니다. 베타가 아닌 고객은 하루에 한 번 증분 파일을 내보낼 수 있습니다. |
+| [중복 제거 키 지원(베타)](../../destinations/ui/activate-destinations.md#deduplication-keys) | ID 네임스페이스 또는 프로필 속성을 중복 제거 키로 설정하는 기능을 추가했습니다. 중복 제거 키를 사용하면 한 내보내기 파일에 동일한 프로필의 여러 레코드가 있을 수 없습니다.<br> <br>이 기능은 현재 베타에 있으며 일부 고객만 사용할 수 있습니다. |
 
 대상에 대한 일반적인 자세한 내용은 [대상 개요](../../destinations/home.md)를 참조하십시오.
 
