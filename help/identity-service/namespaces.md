@@ -5,9 +5,9 @@ title: ID 네임스페이스 개요
 topic-legacy: overview
 description: ID 네임스페이스는 ID 서비스의 구성 요소이며 ID가 연관되는 컨텍스트의 지표 역할을 합니다. 예를 들어 "name@email.com"이라는 값을 이메일 주소로 또는 "443522"이라는 값을 숫자 CRM ID로 구분합니다.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: c2db929a96883607ea99f08bffc92a5a9bafd01a
+source-git-commit: 700012988fd46e835dcbc441c39f08e4c172ef0f
 workflow-type: tm+mt
-source-wordcount: '1635'
+source-wordcount: '1638'
 ht-degree: 2%
 
 ---
@@ -72,6 +72,8 @@ Platform 내의 모든 조직에서 사용할 수 있도록 다음과 같은 표
 | 전화(SHA256_E.164) | SHA256과 E.164 형식을 모두 사용하여 해시해야 하는 원시 전화 번호를 나타내는 네임스페이스입니다. |
 | TNTID | Adobe Target을 나타내는 네임스페이스입니다. 자세한 내용은 [Target](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=en)에서 다음 문서를 참조하십시오. |
 | Windows AID | Windows 광고 ID를 나타내는 네임스페이스입니다. 자세한 내용은 [Windows Advertising ID](https://docs.microsoft.com/en-us/uwp/api/windows.system.userprofile.advertisingmanager.advertisingid?view=winrt-19041)에서 다음 문서를 참조하십시오. |
+
+### ID 네임스페이스 보기
 
 UI에서 ID 네임스페이스를 보려면 왼쪽 탐색에서 **[!UICONTROL ID]**&#x200B;을 선택한 다음 **[!UICONTROL 찾아보기]**&#x200B;를 선택하십시오.
 
