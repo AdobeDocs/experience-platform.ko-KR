@@ -1,58 +1,59 @@
 ---
-keywords: Experience Platform;홈;인기 항목;스키마;스키마;XDM;필드;스키마;스키마;환경;데이터 유형;데이터 유형;데이터 유형;data-type;
+keywords: Experience Platform;홈;인기 항목;스키마;스키마;XDM;필드;스키마;환경;데이터 유형;데이터 유형;데이터 유형;
 solution: Experience Platform
 title: 환경 데이터 유형
 topic-legacy: overview
 description: 이 문서에서는 환경 XDM 데이터 유형에 대한 개요를 제공합니다.
 exl-id: ec806ee5-ed65-4148-9dbe-e297d9e8cd73
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '462'
+source-wordcount: '468'
 ht-degree: 4%
 
 ---
 
-# [!UICONTROL Environment] 데이터 유형
+#  환경 데이터 유형
 
-[!UICONTROL Environment] 은 관찰된 이벤트의 주변 환경을 설명하는 표준 XDM 데이터 유형이며, 특히 네트워크 및 소프트웨어 버전과 같은 임시 정보를 자세히 설명합니다.
+ 환경은 관찰된 이벤트의 주변 환경을 설명하는 표준 XDM 데이터 유형이며, 특히 네트워크 및 소프트웨어 버전과 같은 임시 정보를 자세히 설명합니다.
 
 >[!IMPORTANT]
 >
->모든 값은 Adobe에 의해 라이선스가 부여된 [DeviceAtlas](https://deviceatlas.com) 데이터베이스와 정렬되어야 합니다.
+>모든 값은 Adobe에서 라이센스를 받은 [DeviceAtlas](https://deviceatlas.com) 데이터베이스와 정렬되어야 합니다.
 
 <img src="../images/data-types/environment.png" width="400" /><br />
 
 | 속성 | 데이터 유형 | 설명 |
 | --- | --- | --- |
-| `_dc` | 개체 | 데이터 프레젠테이션에 대한 사용자의 언어적, 지리적 또는 문화적 환경 설정을 나타내는 환경의 언어를 나타내는 단일 필드 `language`가 포함된 객체입니다. 언어는 [IETF RFC 3066](https://www.ietf.org/rfc/rfc3066.txt)에 정의된 언어 코드에 지정됩니다. |
+| `_dc` | 개체 | 사용자 언어적, 지리적 또는 데이터 프레젠테이션에 대한 문화적 환경 설정을 나타내는 단일 필드 `language` 가 포함된 객체입니다. 언어는 [IETF RFC 3066](https://www.ietf.org/rfc/rfc3066.txt)에 정의된 대로 언어 코드에 지정됩니다. |
 | `browserDetails` | [브라우저 세부 사항](./browser-details.md) | 브라우저 이름, 버전, JavaScript 버전, 사용자 에이전트 문자열, 수락 언어 등 환경에 대한 브라우저 특정 세부 사항을 설명합니다. |
 | `ISP` | 문자열 | 사용자의 인터넷 서비스 공급자의 이름입니다. |
-| `carrier` | 문자열 | 사용자에게 통신 서비스를 판매하고 전달하는 모바일 네트워크 통신사 또는 MNO(무선 서비스 제공자, 무선 통신사, 셀룰러 회사 또는 모바일 네트워크 통신사라고도 함)의 이름입니다. |
-| `colorDepth` | 정수 | 단일 픽셀의 각 색상 구성 요소에 사용된 비트 수입니다. |
+| `carrier` | 문자열 | 사용자에게 통신 서비스를 판매 및 전달하는 모바일 네트워크 통신사 또는 MNO(무선 서비스 제공자, 무선 통신사, 셀룰러 회사 또는 이동통신사라고도 함)의 이름입니다. |
+| `colorDepth` | 정수 | 단일 픽셀의 각 색상 구성 요소에 사용되는 비트 수입니다. |
 | `connectionType` | 문자열 | 인터넷 연결 유형입니다. 허용되는 값은 다음과 같습니다. <ul><li>`dialup`</li><li>`isdn`</li><li>`bisdn`</li><li>`dsl`</li><li>`cable`</li><li>`wireless_wifi`</li><li>`mobile`</li><li>`mobile_edge`</li><li>`mobile_2g`</li><li>`mobile_3g`</li><li>`mobile_lte`</li><li>`t1`</li><li>`t3`</li><li>`oc3`</li><li>`lan`</li><li>`modem`</li></ul> |
-| `domain` | 문자열 | 사용자 ISP의 도메인. |
-| `ipV4` | 문자열 | 통신(32비트)을 위해 인터넷 프로토콜을 사용하는 컴퓨터 네트워크에 참여하는 장치에 할당된 숫자 레이블입니다. |
-| `ipV6` | 문자열 | 통신용 인터넷 프로토콜(128비트)을 사용하는 컴퓨터 네트워크에 참여하는 장치에 할당된 숫자 레이블입니다. |
-| `operatingSystem` | 문자열 | 관찰이 수행되었을 때 사용된 운영 체제의 이름입니다. 속성에는 `10.5.3`과 같은 버전 정보가 포함되지 않아야 하지만 대신 `Ultimate` 또는 `Professional`와 같은 &quot;edition&quot; 디자인이 포함되어야 합니다. |
-| `operatingSystemVendor` | 문자열 | 관찰이 수행되었을 때 사용된 운영 체제 공급업체의 이름입니다. |
-| `operatingSystemVersion` | 문자열 | 관찰이 수행되었을 때 사용되는 운영 체제의 전체 버전 식별자입니다. 버전은 일반적으로 숫자로 구성되지만 공급업체가 정의한 형식일 수 있습니다. |
-| `type` | 문자열 | 응용 프로그램 환경의 유형입니다. 허용되는 값은 [부록](#type)을 참조하십시오. |
-| `viewportHeight` | 정수 | 경험이 내부에 표시된 창의 세로 크기(픽셀)입니다. 웹 보기 이벤트의 경우 브라우저 뷰포트 높이입니다. |
-| `viewPortWidth` | 정수 | 경험이 내부에 표시된 창의 가로 크기(픽셀)입니다. 웹 보기 이벤트의 경우 브라우저 뷰포트 너비입니다. |
+| `domain` | 문자열 | 사용자의 ISP의 도메인입니다. |
+| `ipV4` | 문자열 | 상기 통신용 인터넷 프로토콜(32비트)을 사용하는 컴퓨터 네트워크에 참여하는 장치에 할당되는 수치적 라벨. |
+| `ipV6` | 문자열 | 상기 통신용 인터넷 프로토콜(128비트)을 사용하는 컴퓨터 네트워크에 참여하는 장치에 할당되는 수치적 라벨. |
+| `operatingSystem` | 문자열 | 관찰이 수행될 때 사용되는 운영 체제의 이름입니다. 속성에는 `10.5.3` 등의 버전 정보를 포함해서는 안 되지만, 대신 `Ultimate` 또는 `Professional` 등의 &quot;edition&quot; 지정을 포함해야 합니다. |
+| `operatingSystemVendor` | 문자열 | 관찰이 수행될 때 사용되는 운영 체제 공급업체의 이름입니다. |
+| `operatingSystemVersion` | 문자열 | 관찰이 수행될 때 사용되는 운영 체제의 전체 버전 식별자입니다. 버전은 일반적으로 숫자로 구성되지만 공급업체에서 정의한 형식일 수 있습니다. |
+| `type` | 문자열 | 애플리케이션 환경의 유형입니다. 허용되는 값은 [부록](#type)을 참조하십시오. |
+| `viewportHeight` | 정수 | 경험이 내부에 표시된 창의 세로 크기(픽셀 단위)입니다. 웹 보기 이벤트의 경우 브라우저 뷰포트 높이입니다. |
+| `viewPortWidth` | 정수 | 경험이 내부에 표시된 창의 가로 크기(픽셀 단위)입니다. 웹 보기 이벤트의 경우 브라우저 뷰포트 너비입니다. |
 
-데이터 유형에 대한 자세한 내용은 공개 XDM 저장소를 참조하십시오.
+{style=&quot;table-layout:auto&quot;}
 
-* [채워진 예제](https://github.com/adobe/xdm/blob/master/components/datatypes/environment.example.1.json)
+데이터 유형에 대한 자세한 내용은 공용 XDM 저장소를 참조하십시오.
+
+* [채워진 예](https://github.com/adobe/xdm/blob/master/components/datatypes/environment.example.1.json)
 * [전체 스키마](https://github.com/adobe/xdm/blob/master/components/datatypes/environment.schema.json)
 
 ## 부록
 
-다음 섹션에는 [!UICONTROL Device] 데이터 유형에 대한 추가 정보가 포함되어 있습니다.
+다음 섹션에는 [!UICONTROL Device] 데이터 유형에 대한 추가 정보가 들어 있습니다.
 
-## {#type} 유형의 허용된 값
+## 유형에 대해 허용되는 값 {#type}
 
-다음 표는 `type`에 대해 허용된 값과 이와 관련된 의미를 대략적으로 설명합니다.
+다음 표에서는 `type`에 대해 허용되는 값과 관련된 의미에 대해 설명합니다.
 
 | 값 | 설명 |
 | --- | --- |
