@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: May 26, 2021
 author: ens72741
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: 0cef5f1a0033bed987799c26b99e71145a85c1a9
+source-git-commit: c608ee8360fd07d6f98b31eed3b4691dc7124e12
 workflow-type: tm+mt
-source-wordcount: '1070'
+source-wordcount: '1340'
 ht-degree: 3%
 
 ---
@@ -27,6 +27,7 @@ Adobe Experience Platform의 기존 기능 업데이트:
 - [[!DNL Destinations]](#destinations)
 - [[!DNL Experience Data Model (XDM)]](#xdm)
 - [실시간 고객 프로필](#profile)
+- [샌드박스](#sandboxes)
 - [소스](#sources)
 
 ## 대시보드 {#dashboards}
@@ -85,6 +86,22 @@ Adobe Experience Platform을 사용하면 고객이 브랜드와 상호 작용�
 | 데이터 집합 겹치기 보고서 | 데이터 집합 겹치기 보고서는 대응 가능 대상에 가장 많이 기여하는 데이터 세트를 노출하여 프로필 저장소의 구성을 보여줍니다. 이 보고서는 프로필 데이터에 대한 통찰력을 제공할 뿐만 아니라 사용자가 특정 데이터의 수명 제한 설정과 같은 라이선스 사용을 최적화하는 조치를 취할 수 있도록 합니다. 자세한 내용은 [데이터 집합 중복 보고서 생성](../../profile/tutorials/dataset-overlap-report.md)에서 자습서를 참조하십시오. |
 
 [!DNL Profile] 데이터 작업에 대한 자습서 및 우수 사례 등 실시간 고객 프로필에 대한 자세한 내용은 [실시간 고객 프로필 개요](../../profile/home.md)를 읽어서 시작하십시오.
+
+## [!DNL Sandboxes] {#sandboxes}
+
+Adobe Experience Platform은 디지털 경험 애플리케이션을 전 세계에 맞게 보강하기 위해 제작되었습니다. 기업은 여러 디지털 경험 애플리케이션을 동시에 운영하고 있으며 운영 규정을 준수하면서 이러한 애플리케이션의 개발, 테스트 및 배포를 충족해야 합니다. 이러한 요구 사항을 해결하기 위해 Experience Platform은 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 단일 플랫폼 인스턴스를 별도의 가상 환경으로 분할하는 샌드박스 를 제공합니다.
+
+| 기능 | 설명 |
+| ------- | ----------- |
+| 여러 프로덕션 샌드박스 | 이제 IMS 조직에서 여러 프로덕션 샌드박스를 만들고 관리하고 특정 프로덕션 샌드박스를 개별 비즈니스, 브랜드, 프로젝트 또는 영역에 제공할 수 있습니다. 자세한 내용은 UI](../../sandboxes/ui/user-guide.md) 또는 [에서 API](../../sandboxes/api/overview.md)를 사용하여 프로덕션 샌드박스 [를 만드는 방법에 대한 자습서를 참조하십시오. |
+
+### 알려진 제한 사항
+
+- 모든 Experience Cloud 조직에는 미리 만들어진 기본 프로덕션 샌드박스가 포함되어 있습니다. 이 샌드박스는 다른 Adobe 애플리케이션 또는 아직 샌드박스 호환하지 않는 비 Adobe 애플리케이션에서 Platform으로 전송되는 모든 요청에 대한 기본 대상 역할을 합니다. 내에 호스팅된 ID 그래프가 [Cross Device Analytics(CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) 기능에도 Adobe Analytics에서 사용되고 있거나 이 내에 호스팅된 ID 그래프가 [사람 기반 대상(PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html) 기능에도 Adobe Audience Manager에서 사용되고 있는 경우에는 기본 프로덕션 샌드박스를 재설정할 수 없습니다.
+- Adobe Audience Manager 또는 Audience Core Service와 양방향 세그먼트 공유에 사용되는 프로덕션 샌드박스는 재설정하거나 삭제할 수 없습니다.
+- 기본 프로덕션 샌드박스를 제외한 사용자가 만든 모든 프로덕션 및 개발 샌드박스를 삭제할 수 있습니다.
+
+샌드박스에 대한 자세한 내용은 [샌드박스 개요](../../sandboxes/home.md)를 참조하십시오.
 
 ## [!DNL Sources] {#sources}
 
