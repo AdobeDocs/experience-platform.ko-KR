@@ -5,9 +5,9 @@ title: 샌드박스 UI 안내서
 topic-legacy: user guide
 description: 이 문서에서는 Adobe Experience Platform 사용자 인터페이스의 샌드박스와 관련된 다양한 작업을 수행하는 방법에 대해 설명합니다.
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
-source-git-commit: 8c1c7b6b01b55bd15c492b0f62d280c1e9a98070
+source-git-commit: ba03ec805d29a95ee7d0d1a23a756feaadcea407
 workflow-type: tm+mt
-source-wordcount: '699'
+source-wordcount: '833'
 ht-degree: 0%
 
 ---
@@ -84,6 +84,28 @@ Experience Platform에서 샌드박스를 사용하는 방법에 대한 간단�
 
 ![reset-confirm](../images/ui/reset-confirm.png)
 
+잠시 후 화면 하단에 확인 상자가 표시되어 성공적으로 재설정을 확인합니다.
+
+![성공](../images/ui/success.png)
+
+### 오류 메시지
+
+CDA 데이터가 포함된 기본 프로덕션 샌드박스는 재설정할 수 없으며 다음 오류를 반환합니다.
+
+![cda](../images/ui/cda.png)
+
+PBD 데이터가 포함된 기본 프로덕션 샌드박스도 재설정할 수 없으며 다음 오류를 반환합니다.
+
+![pbd](../images/ui/pbd.png)
+
+CDA와 PBD 모두에 대한 데이터가 포함된 기본 프로덕션 샌드박스도 재설정할 수 없으며 다음 오류를 반환합니다.
+
+![둘 다](../images/ui/both.png)
+
+Adobe Audience Manager 또는 Audience Core Service와 양방향 세그먼트 공유에 사용되는 프로덕션 샌드박스도 재설정할 수 없으며 다음 오류를 반환합니다.
+
+![seg](../images/ui/seg.png)
+
 ## 샌드박스 삭제
 
 >[!IMPORTANT]
@@ -103,6 +125,10 @@ Experience Platform에서 샌드박스를 사용하는 방법에 대한 간단�
 최종 확인 창에서 대화 상자에 샌드박스 이름을 입력하고 **[!UICONTROL 계속]**&#x200B;을 선택합니다.
 
 ![delete-confirm](../images/ui/delete-confirm.png)
+
+Adobe Audience Manager 또는 Audience Core Service와 양방향 세그먼트 공유에 사용되는 프로덕션 샌드박스는 삭제할 수 없으며 다음 오류를 반환합니다.
+
+![seg](../images/ui/seg.png)
 
 ## 다음 단계
 
