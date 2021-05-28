@@ -2,7 +2,7 @@
 title: Adobe Experience Platform Web SDK에서 지원되는 사용 사례
 description: Adobe Experience Platform Web SDK에서 지원되는 사용 사례를 알아봅니다.
 keywords: 웹 sdk;사용 사례
-source-git-commit: 245983363571bdc63ead992771c01b405c067b8a
+source-git-commit: b630a00f3985769243bd42ecd3c49f0d0ce60b07
 workflow-type: tm+mt
 source-wordcount: '528'
 ht-degree: 11%
