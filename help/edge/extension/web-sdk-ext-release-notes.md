@@ -1,19 +1,18 @@
 ---
-title: Adobe Experience Platform Web SDK 확장 릴리스 노트
+title: Adobe Experience Platform Web SDK Extension 릴리스 노트
 description: Adobe Experience Platform Launch의 Adobe Experience Platform 웹 SDK 확장
 seo-description: Adobe Experience Platform Launch의 Adobe Experience Platform 웹 SDK 확장
-translation-type: tm+mt
-source-git-commit: 14cf62084c88956906cd9454176619ed08081a0e
+exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
+source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
 workflow-type: tm+mt
-source-wordcount: '1134'
-ht-degree: 79%
+source-wordcount: '1130'
+ht-degree: 78%
 
 ---
 
-
 # Adobe Experience Platform Web SDK 확장 릴리스 노트
 
-이 문서에서는 Adobe Experience Platform Launch용 Adobe Experience Platform Web SDK 익스텐션에 대한 릴리스 노트에 대해 다룹니다. SDK 자체에 대한 최신 릴리스 노트는 [플랫폼 웹 SDK 릴리스 노트](https://docs.adobe.com/content/help/ko-KR/experience-platform/edge/release-notes.html)를 참조하십시오.
+이 문서에서는 Adobe Experience Platform Launch용 Adobe Experience Platform 웹 SDK 확장에 대한 릴리스 노트를 다룹니다. SDK 자체에 대한 최신 릴리스 노트는 [Platform Web SDK 릴리스 노트](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html)를 참조하십시오.
 
 ## 2020년 3월 9일
 
@@ -21,12 +20,12 @@ ht-degree: 79%
 
 Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.4.0을 포함합니다.
 
-* 이벤트 작업 UI 보내기에 [&quot;문서 언로드&quot;](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#using-the-sendbeacon-api) 확인란을 추가했습니다.
-* 동의를 받을 때까지 모든 이벤트를 삭제하는 기본 동의](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#default-consent)구성 시 `out` 옵션에 대한 지원을 추가했습니다(기존 `pending` 옵션은 이벤트를 대기열에 넣고 동의를 받으면 전송합니다).[
-* 기본 동의 필드에 도구 설명을 추가했습니다.
-* [Adobe의 동의 2.0 표준](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html?communicating-consent-preferences-via-the-adobe-standard)에 대한 지원을 추가했습니다.
-* 이제 사용자의 액세스 토큰이 유효하지 않거나 잘못 제공된 경우 XDM 개체 데이터 요소 UI에 더 나은 오류가 표시됩니다.
-* XDM 개체 데이터 요소를 볼 때 브라우저 개발자 콘솔에 나타나는 교차 출처 오류(확장 작업에 영향을 주지 않음)를 수정했습니다.
+* 이벤트 보내기 작업 UI에 [&quot;document reloading&quot;](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#using-the-sendbeacon-api) 확인란이 추가되었습니다.
+* 동의를 받을 때까지 모든 이벤트를 삭제하는 [기본 동의](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#default-consent)를 구성할 때 `out` 옵션에 대한 지원이 추가되었습니다(기존 `pending` 옵션은 이벤트를 큐에 넣고 동의를 받으면 전송합니다.).
+* 기본 동의 필드에 도구 설명이 추가되었습니다.
+* [Adobe의 동의 2.0 표준](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html?communicating-consent-preferences-via-the-adobe-standard)에 대한 지원이 추가되었습니다.
+* 사용자의 액세스 토큰이 잘못되었거나 잘못 제공된 경우 이제 XDM 개체 데이터 요소 UI에 더 나은 오류가 표시됩니다.
+* XDM 개체 데이터 요소를 볼 때 브라우저 개발자 콘솔에 표시되는 원본 간 오류(확장의 작업에 영향을 주지 않음)를 수정했습니다.
 
 ## 2020년 11월 4일
 
@@ -46,7 +45,7 @@ Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.3.0을 포함합�
 
 #### 버그 수정
 
-* 고객이 샌드박스 스키마에서 XDM 개체를 만들려고 했을 때 인증 문제가 발생했습니다. 플랫폼을 호출하는 API는 이제 환경을 인식하므로 사용자는 편집에 액세스할 수 있는 스키마만 표시됩니다.
+* 고객이 샌드박스 스키마에서 XDM 개체를 만들려고 했을 때 인증 문제가 발생했습니다. Platform을 호출하는 API는 이제 환경을 인식하므로 사용자가 편집할 수 있는 액세스 권한이 있는 스키마만 표시됩니다.
 
 #### 기능
 
@@ -70,12 +69,12 @@ Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.3.0을 포함합�
 #### 기능
 
 * 변경 내용: `syncIdentity` 작업을 제거하고 대신 `sendEvent` 작업에서 이러한 ID를 전달할 수 있도록 지원합니다. 확장을 업그레이드하기 전에 이 작업을 사용하여 기존 규칙을 비활성화하십시오.
-* Alloy v. 2.1.0로 업데이트([릴리스 노트](https://docs.adobe.com/content/help/en/experience-platform/edge/release-notes.html))
+* Alloy v. 2.1.0로 업데이트([릴리스 노트](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html))
 * `setConsent` 작업에서 IAB 2.0 동의 표준을 지원합니다.
 * `sendEvent` 작업에서 데이터 세트 ID 재정의를 지원합니다.
 * 이제 활성화된 XDM 개체 데이터 요소와 `IdentityMap` 작업에 `identityMap` 항목을 채우는 데 사용할 수 있는 `setConsent` 유형의 새 데이터 요소를 추가합니다.
 * `setConsent` 작업에서 ID 맵 전달을 지원합니다.
-* XDM 개체 데이터 요소에서 플랫폼 샌드박스 선택을 지원합니다.
+* XDM 개체 데이터 요소에서 Platform 샌드박스 선택을 지원합니다.
 
 
 ## 2020년 5월 26일
@@ -105,7 +104,7 @@ Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.3.0을 포함합�
 * 데이터 요소가 참조될 때마다 재설정되는 이벤트 병합 ID의 문제가 해결되었습니다.
 * `setCustomerIds` 작업 이름이 `syncIdentity`로 변경되었습니다.
 * `getIdentity` 명령이 추가되었습니다. 현재는 사용자 지정 코드를 통해서만 사용할 수 있습니다.
-* 이제 `_satellite`을(를) 사용하여 디버깅을 활성화하면 Adobe Experience Platform 웹 SDK에서 디버깅이 활성화됩니다.
+* 이제 `_satellite`을 사용하여 디버그를 활성화하면 Adobe Experience Platform Web SDK에서 디버깅이 활성화됩니다.
 * XDM 개체에 입력 값(부울, 숫자 및 소수점)에 대한 지원이 추가되었습니다.
 
 ## 2020년 3월 16일
@@ -182,7 +181,7 @@ Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.3.0을 포함합�
 * 확장이 존재하게 됨
 * 추가 라이브러리 또는 네트워크 호출 없이 ECID 지원
 * 옵트인 지원
-* 플랫폼에 XDM 보내기 지원
+* XDM을 플랫폼으로 전송 지원
 * 자사 도메인 지원
 * 브라우저 컨텍스트 자동 수집
 * 전체 오픈 소스([확장](https://github.com/adobe/reactor-extension-alloy), [SDK](https://github.com/adobe/reactor-extension-alloy))
