@@ -3,7 +3,7 @@ title: Platform Web SDK에서 Offer decisioning 사용
 description: Adobe Experience Platform Web SDK는 Offer decisioning에서 관리되는 개인화된 오퍼를 제공하고 렌더링할 수 있습니다. offer decisioning UI 또는 API를 사용하여 오퍼 및 기타 관련 개체를 만들 수 있습니다.
 keywords: offer decisioning;의사 결정;웹 SDK;Platform Web SDK;개인화된 오퍼;오퍼 게재;오퍼 게재;오퍼 개인화;
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
+source-git-commit: 6b3548e2db596d56aeacec8f2d5cdd29ddc09bf2
 workflow-type: tm+mt
 source-wordcount: '828'
 ht-degree: 3%
@@ -62,37 +62,47 @@ offer decisioning 작업 시 다음 용어를 이해하는 것이 중요합니�
 offer decisioning을 활성화하려면 다음 단계를 수행해야 합니다.
 
 1. [데이터 스트림](../../fundamentals/datastreams.md)에서 Adobe Experience Platform을 활성화하고 &quot;Offer decisioning&quot; 상자를 선택합니다
+
    ![offer-decisioning-edge-config](./assets/offer-decisioning-edge-config.png)
-2. 지침에 따라 [SDK](../../fundamentals/installing-the-sdk.md) 설치(SDK는 독립 실행형 또는 [Adobe Experience Platform Launch](http://launch.adobe.com/)을 통해 설치할 수 있습니다.) 다음은 [Platform launch](https://experienceleague.adobe.com/docs/launch/using/intro/get-started/quick-start.html)에 대한 빠른 시작 안내서입니다.
-3. [offer decisioning용 ](../../fundamentals/configuring-the-sdk.md) SDK를 구성합니다. 추가적인 Offer decisioning 특정 단계는 아래에 제공됩니다.
+
+1. 지침에 따라 [SDK](../../fundamentals/installing-the-sdk.md) 설치(SDK는 독립 실행형 또는 [Adobe Experience Platform Launch](http://launch.adobe.com/)을 통해 설치할 수 있습니다.) 다음은 [Platform launch](https://experienceleague.adobe.com/docs/launch/using/intro/get-started/quick-start.html)에 대한 빠른 시작 안내서입니다.
+1. [offer decisioning용 ](../../fundamentals/configuring-the-sdk.md) SDK를 구성합니다. 추가적인 Offer decisioning 특정 단계는 아래에 제공됩니다.
+
    * 독립형 설치된 SDK
+
       1. `decisionScopes`으로 &quot;sendEvent&quot; 작업을 구성합니다
 
-      ```javascript
-      alloy("sendEvent", {
-          ...
-          "decisionScopes": [
-              "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTIxYWIwOWMxM2JkZDIyNCIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjEyMWFiMDZhODRkMDViMTEifQ==",
-              "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTIxYWIyNWI5NTUwNWIxZiIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjEyMWFiMjFmOTQzMDE0MmIifQ=="
-          ]
-      })
-      ```
-
+         ```javascript
+          alloy("sendEvent", {
+             ...
+             "decisionScopes": [
+                 "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTIxYWIwOWMxM2JkZDIyNCIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjEyMWFiMDZhODRkMDViMTEifQ==",
+                 "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTIxYWIyNWI5NTUwNWIxZiIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjEyMWFiMjFmOTQzMDE0MmIifQ=="
+             ]
+          })
+         ```
    * 설치된 SDK platform launch
+
       1. [platform launch 속성 만들기](https://experienceleague.adobe.com/docs/launch/using/reference/admin/companies-and-properties.html)
-      2. [platform launch 포함 코드 추가](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
-      3. &quot;데이터 스트림&quot; 드롭다운에서 구성을 선택하여 방금 만든 데이터 스트림으로 Platform Web SDK 확장을 설치하고 구성합니다. [확장](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/extensions/overview.html)에 대한 설명서를 참조하십시오.
+      1. [platform launch 포함 코드 추가](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
+      1. &quot;데이터 스트림&quot; 드롭다운에서 구성을 선택하여 방금 만든 데이터 스트림으로 Platform Web SDK 확장을 설치하고 구성합니다. [확장](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/extensions/overview.html)에 대한 설명서를 참조하십시오.
+
          ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
 
          ![configure-aep-web-sdk-extension](./assets/configure-aep-web-sdk-extension.png)
-      4. 필요한 [데이터 요소](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/data-elements.html)를 만듭니다. 최소한으로, Platform 웹 SDK ID 맵과 Platform 웹 SDK XDM 개체 데이터 요소를 만들어야 합니다.
+
+      1. 필요한 [데이터 요소](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/data-elements.html)를 만듭니다. 최소한으로, Platform 웹 SDK ID 맵과 Platform 웹 SDK XDM 개체 데이터 요소를 만들어야 합니다.
+
          ![identity-map-data-element](./assets/identity-map-data-element.png)
 
          ![xdm-object-data-element](./assets/xdm-object-data-element.png)
-      5. [규칙](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/rules.html)을 만듭니다.
+
+      1. [규칙](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/rules.html)을 만듭니다.
+
          * Platform Web SDK 이벤트 보내기 작업을 추가하고 해당 작업의 구성에 관련 `decisionScopes`을 추가합니다
+
             ![send-event-action-decisionScopes](./assets/send-event-action-decisionScopes.png)
-      6. [구성한 ](https://experienceleague.adobe.com/docs/launch/using/reference/publish/libraries.html) 관련 규칙, 데이터 요소 및 확장이 포함된 라이브러리를 만들고 게시합니다
+      1. [구성한 ](https://experienceleague.adobe.com/docs/launch/using/reference/publish/libraries.html) 관련 규칙, 데이터 요소 및 확장이 포함된 라이브러리를 만들고 게시합니다
 
 
 
