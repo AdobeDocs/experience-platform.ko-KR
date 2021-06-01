@@ -3,10 +3,10 @@ title: Adobe Experience Platform Web SDK Extension 릴리스 노트
 description: Adobe Experience Platform Launch의 Adobe Experience Platform 웹 SDK 확장
 seo-description: Adobe Experience Platform Launch의 Adobe Experience Platform 웹 SDK 확장
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
+source-git-commit: ec841a028d2a6acbdb1c1406026bbd4574cbc2ee
 workflow-type: tm+mt
-source-wordcount: '1130'
-ht-degree: 78%
+source-wordcount: '1232'
+ht-degree: 73%
 
 ---
 
@@ -14,7 +14,17 @@ ht-degree: 78%
 
 이 문서에서는 Adobe Experience Platform Launch용 Adobe Experience Platform 웹 SDK 확장에 대한 릴리스 노트를 다룹니다. SDK 자체에 대한 최신 릴리스 노트는 [Platform Web SDK 릴리스 노트](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html)를 참조하십시오.
 
-## 2020년 3월 9일
+## 2021년 6월 1일
+
+### Adobe Experience Platform 웹 SDK 2.5.0
+
+Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.5.0을 포함합니다.
+
+* 이벤트 보내기 작업에 `data` 필드를 추가했습니다. 향후 설명서에서는 특정 시나리오에서 이 기능을 사용하는 방법을 설명합니다.
+* XDM 개체 데이터 요소 보기에서 사용자가 Adobe Experience Platform 샌드박스에 액세스할 수 있지만 조직에 대해 기본값으로 구성된 샌드박스에 액세스할 수 없는 경우 오류가 발생하는 문제가 수정되었습니다.
+* XDM 개체 데이터 요소 보기에서 부모 개체에 값이 포함되어 있지 않더라도 필수 스키마 필드가 잘못된 것으로 간주되는 문제가 해결되었습니다.
+
+## 2021년 3월 9일
 
 ### Adobe Experience Platform 웹 SDK 2.4.0
 
