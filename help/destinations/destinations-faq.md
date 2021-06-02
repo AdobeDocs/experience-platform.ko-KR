@@ -4,10 +4,10 @@ title: Experience Cloud 핵심 서비스에 대한
 seo-title: Experience Cloud 핵심 서비스에 대한
 description: Adobe Experience Platform 대상에 대해 자주 묻는 질문과 대답(FAQ)입니다
 seo-description: Adobe Experience Platform 대상에 대해 자주 묻는 질문과 대답(FAQ)입니다
-source-git-commit: 47b3ef28281e3480e8b194486845f4fb4326b7d4
+source-git-commit: a01b53758f4ad42272c39f71a08021d30900e7af
 workflow-type: tm+mt
-source-wordcount: '636'
-ht-degree: 6%
+source-wordcount: '733'
+ht-degree: 5%
 
 ---
 
@@ -17,6 +17,18 @@ ht-degree: 6%
 ## 개요 {#overview}
 
 이 문서에서는 Adobe Experience Platform 대상에 대해 자주 묻는 질문에 대한 답변을 제공합니다. 모든 [!DNL Platform] API에서 발생한 서비스 등 다른 [!DNL Platform] 서비스와 관련된 질문 및 문제 해결에 대해서는 [Experience Platform 문제 해결 안내서](../landing/troubleshooting.md)를 참조하십시오.
+
+## 일반 대상 질문 {#general}
+
+**Experience Platform UI와 내보낸 CSV 파일에 다른 프로필 카운트가 표시되는 이유는 무엇입니까?**
+
+이는 Experience Platform이 세그먼테이션을 수행하는 방식에 따른 일반적인 동작입니다.
+
+스트리밍 세그먼테이션은 하루 종일 스트리밍 세그먼트에 대한 프로필 수를 업데이트하는 반면, 일괄 처리 세그먼테이션은 24시간마다 한 번 배치 세그먼트에 대한 프로필 수를 업데이트합니다.
+
+세그먼트 내보내기 일정이 세그먼테이션 일정과 다른 경우, UI와 내보낸 [!DNL CSV] 파일 간의 프로필 카운트는 특히 스트리밍 세그먼트 측면에서 서로 다릅니다.
+
+자세한 내용은 [세그멘테이션 서비스 설명서](../segmentation/home.md)를 참조하십시오.
 
 ## [!DNL Facebook Custom Audiences] {#facebook-faq}
 
