@@ -5,9 +5,9 @@ title: XDM ExperienceEvent 클래스
 topic-legacy: overview
 description: 이 문서에서는 XDM ExperienceEvent 클래스에 대한 개요와 이벤트 데이터 모델링에 대한 모범 사례를 제공합니다.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: c5b15cf23801457c3846499185d7dfd61cfa5291
+source-git-commit: ecb9c9a4158f3d2981ab60ee3bf419464ac7b8f1
 workflow-type: tm+mt
-source-wordcount: '1567'
+source-wordcount: '1576'
 ht-degree: 1%
 
 ---
@@ -65,8 +65,12 @@ UI를 통해 데이터를 Platform으로 수동으로 수집하는 경우, 계�
 
 Adobe은 [!DNL XDM ExperienceEvent] 클래스에서 사용할 여러 표준 필드 그룹을 제공합니다. 다음은 클래스에 일반적으로 사용되는 몇 가지 필드 그룹 목록입니다.
 
+* [[!UICONTROL 캠페인 마케팅 세부 사항]](../field-groups/event/campaign-marketing-details.md)
+* [[!UICONTROL 채널 세부 사항]](../field-groups/event/channel-details.md)
+* [[!UICONTROL 상거래 세부 사항]](../field-groups/event/commerce-details.md)
 * [[!UICONTROL 최종 사용자 ID 세부 정보]](../field-groups/event/enduserids.md)
 * [[!UICONTROL 환경 세부 사항]](../field-groups/event/environment-details.md)
+* [[!UICONTROL 웹 세부 사항]](../field-groups/event/web-details.md)
 
 ## 부록
 
