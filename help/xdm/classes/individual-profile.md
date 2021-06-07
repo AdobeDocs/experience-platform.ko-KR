@@ -5,9 +5,9 @@ title: XDM 개별 프로필 클래스
 topic-legacy: overview
 description: 이 문서에서는 XDM 개별 프로필 클래스에 대한 개요를 제공합니다.
 exl-id: 83b22462-79ce-4024-aa50-a9bd800c0f81
-source-git-commit: eddaa7090af2d2c947f154272bb219dc2e3bca08
+source-git-commit: ecb9c9a4158f3d2981ab60ee3bf419464ac7b8f1
 workflow-type: tm+mt
-source-wordcount: '561'
+source-wordcount: '568'
 ht-degree: 1%
 
 ---
@@ -42,10 +42,12 @@ ht-degree: 1%
 
 Adobe은 [!DNL XDM Individual Profile] 클래스에서 사용할 여러 표준 필드 그룹을 제공합니다. 다음은 클래스에 일반적으로 사용되는 몇 가지 필드 그룹 목록입니다.
 
-* [[!UICONTROL IdentityMap]](../field-groups/profile/identitymap.md)
 * [[!UICONTROL 인구 통계 세부 정보]](../field-groups/profile/demographic-details.md)
+* [[!UICONTROL IdentityMap]](../field-groups/profile/identitymap.md)
+* [[!UICONTROL 충성도 세부 사항]](../field-groups/profile/loyalty-details.md)
 * [[!UICONTROL 개인 연락처 세부 정보]](../field-groups/profile/personal-contact-details.md)
-* [[!UICONTROL 작업 연락처 세부 정보]](../field-groups/profile/work-contact-details.md)
+* [[!UICONTROL 개인 정보/개인화/마케팅 환경 설정(동의)]](../field-groups/profile/consents.md)
 * [[!UICONTROL 세그먼트 멤버십 세부 정보]](../field-groups/profile/segmentation.md)
+* [[!UICONTROL 작업 연락처 세부 정보]](../field-groups/profile/work-contact-details.md)
 
 [!DNL XDM Individual Profile]에 대한 모든 호환 필드 그룹의 전체 목록은 [XDM GitHub 리포지토리](https://github.com/adobe/xdm/tree/master/components/mixins/profile)를 참조하십시오.
