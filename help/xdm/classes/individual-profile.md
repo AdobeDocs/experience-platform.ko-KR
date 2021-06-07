@@ -5,10 +5,10 @@ title: XDM 개별 프로필 클래스
 topic-legacy: overview
 description: 이 문서에서는 XDM 개별 프로필 클래스에 대한 개요를 제공합니다.
 exl-id: 83b22462-79ce-4024-aa50-a9bd800c0f81
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: eddaa7090af2d2c947f154272bb219dc2e3bca08
 workflow-type: tm+mt
-source-wordcount: '455'
-ht-degree: 0%
+source-wordcount: '561'
+ht-degree: 1%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 0%
 | 속성 | 설명 |
 | --- | --- |
 | `_repo` | 다음 [!UICONTROL DateTime] 필드가 포함된 개체입니다. <ul><li>`createDate`:데이터를 처음 처리한 시기 등 데이터 저장소에서 리소스를 만든 날짜 및 시간입니다.</li><li>`modifyDate`:리소스를 마지막으로 수정한 날짜 및 시간입니다.</li></ul> |
-| `_id` | 레코드의 고유 식별자입니다. 이 필드는 개별 레코드의 고유성을 추적하고, 데이터의 중복을 방지하고, 다운스트림 서비스에서 해당 레코드를 조회하는 데 사용됩니다.<br><br>이 필드는 개인 **과 관련된 ID가** 아니라 데이터 자체의 기록임을 구별하는 것이 중요합니다. 개인에게 관련된 ID 데이터는 대신 [ID 필드](../schema/composition.md#identity)로 분류해야 합니다. |
+| `_id` | 레코드의 고유 문자열 식별자입니다. 이 필드는 개별 레코드의 고유성을 추적하고 데이터 중복을 방지하며 다운스트림 서비스에서 해당 레코드를 찾는 데 사용됩니다. 일부 경우 `_id`은 [UUID(Universally Unique Identifier)](https://tools.ietf.org/html/rfc4122) 또는 [GUID(Globally Unique Identifier)](https://docs.microsoft.com/en-us/dotnet/api/system.guid?view=net-5.0)일 수 있습니다.<br><br>소스 연결에서 데이터를 스트리밍하거나 Parquet 파일에서 직접 수집하는 경우 기본 ID, 타임스탬프, 레코드 유형 등과 같이 레코드가 고유한 특정 필드 조합을 연결하여 이 값을 생성해야 합니다. 연결된 값은 `uri-reference` 형식의 문자열이어야 합니다. 즉, 콜론 문자는 제거해야 합니다. 그런 다음 연결된 값을 SHA-256 또는 선택한 다른 알고리즘을 사용하여 해시해야 합니다.<br><br>이 필드가 개인 **과 관련된 ID를 나타내지 않고 데이터** 자체의 레코드를 나타내는지 구분하는 것이 중요합니다. 개인에게 관련된 ID 데이터는 대신 호환되는 필드 그룹에서 제공하는 [ID 필드](../schema/composition.md#identity)로 분류해야 합니다. |
 | `createdByBatchID` | 레코드를 만든 수집된 일괄 처리의 ID입니다. |
 | `modifiedByBatchID` | 레코드를 업데이트하도록 한 마지막으로 수집된 일괄 처리의 ID입니다. |
 | `personID` | 이 레코드와 관련된 개인의 고유 식별자입니다. 이 필드는 [ID 필드](../schema/composition.md#identity)로도 지정되지 않은 한 반드시 해당 사용자와 관련된 ID를 나타내지는 않습니다. |
