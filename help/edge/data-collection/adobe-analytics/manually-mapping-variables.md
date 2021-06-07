@@ -4,10 +4,10 @@ description: Experience Platform Web SDK에서 처리 규칙을 사용하여 변
 seo-description: Web SDK에서 처리 규칙을 사용하여 변수를 Adobe Analytics에 수동으로 매핑합니다
 keywords: adobe analytics;analytics;변수;매핑 변수;매핑 변수;컨텍스트 데이터;컨텍스트 데이터;처리 규칙;규칙;xdm;스키마;
 exl-id: 395050c1-8d39-4da8-acea-6e618ed662dd
-source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
+source-git-commit: d67c8c0ada6dc4bf07b73547f9e571a8a7386b75
 workflow-type: tm+mt
-source-wordcount: '391'
-ht-degree: 17%
+source-wordcount: '395'
+ht-degree: 16%
 
 ---
 
@@ -17,7 +17,7 @@ Adobe Experience Platform [!DNL Web SDK]은 특정 변수를 자동으로 매핑
 
 [!DNL Analytics]에 자동으로 매핑되지 않는 XDM 데이터의 경우 [컨텍스트 데이터](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/contextdata.html)를 사용하여 [스키마](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html)와 일치시킬 수 있습니다. 그런 다음 [처리 규칙](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules-configuration/t-processing-rules.html)을 사용하여 [!DNL Analytics]에 매핑하여 [!DNL Analytics] 변수를 채울 수 있습니다.
 
-또한 기본 작업 세트와 제품 목록을 사용하여 Adobe Experience Platform Web SDK로 데이터를 전송하거나 검색할 수 있습니다. 이렇게 하려면 [제품](https://experienceleague.adobe.com/docs/experience-platform/edge/implement/commerce.html)을 참조하십시오.
+또한 기본 작업 세트와 제품 목록을 사용하여 Adobe Experience Platform Web SDK로 데이터를 전송하거나 검색할 수 있습니다. 이렇게 하려면 [전자 상거래 및 제품 정보 수집](https://experienceleague.adobe.com/docs/experience-platform/edge/data-collection/collect-commerce-data.html)을 참조하십시오.
 
 ## 컨텍스트 데이터
 
