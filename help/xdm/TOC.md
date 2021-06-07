@@ -2,45 +2,50 @@
 audience: user
 user-guide-title: XDM(경험 데이터 모델) 시스템 도움말
 breadcrumb-title: Experience Data Model(XDM) 안내서
-user-guide-description: XDM(Experience Data Model) 클래스 및 스키마 필드 그룹을 사용하여 경험 데이터를 표준화합니다.
+user-guide-description: XDM(경험 데이터 모델) 클래스 및 스키마 필드 그룹을 사용하여 경험 데이터를 표준화합니다.
 feature: 스키마
-source-git-commit: dcfdc9c479e8a77296f7cb0bf9f5bb36e9261b75
+source-git-commit: 9b6352eec56cf32e58d49be4d72b2fb4cf933b89
 workflow-type: tm+mt
-source-wordcount: '295'
+source-wordcount: '305'
 ht-degree: 17%
 
 ---
 
 
-# 경험 데이터 모델(XDM) 시스템 {#xdm}
+# XDM(경험 데이터 모델) 시스템 {#xdm}
 
 * [XDM 시스템 개요](home.md)
 * 스키마 {#schema}
-   * [스키마 컴포지션의 기본 사항](schema/composition.md)
-   * [데이터 모델링을 위한 모범 사례](schema/best-practices.md)
-   * [XDM 필드 유형 제약 조건](schema/field-constraints.md)
-   * [XDM의 이름 지정](./schema/namespaces.md)
+   * [스키마 작성 기본 사항](schema/composition.md)
+   * [데이터 모델링 우수 사례](schema/best-practices.md)
+   * [XDM 필드 유형 제한](schema/field-constraints.md)
+   * [XDM에서의 네임스페이스](./schema/namespaces.md)
    * [XDM 필드 사전](schema/field-dictionary.md)
    * 업계 데이터 모델 {#industries}
       * [개요](./schema/industries/overview.md)
-      * [소매 데이터 모델 ERD](./schema/industries/retail.md)
-      * [금융 서비스 데이터 모델 ERD](./schema/industries/financial.md)
-      * [여행 및 숙박 데이터 모델 ERD](./schema/industries/travel-hospitality.md)
+      * [소매](./schema/industries/retail.md)
+      * [금융 서비스](./schema/industries/financial.md)
+      * [여행 및 숙박](./schema/industries/travel-hospitality.md)
 * 클래스 {#classes}
    * [XDM 개별 프로필](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
    * [세그먼트 정의](./classes/segment-definition.md)
 * 스키마 필드 그룹 {#field-groups}
    * 프로필 필드 그룹 {#profile}
+      * [인구 통계 세부 정보](./field-groups/profile/demographic-details.md)
       * [IdentityMap](./field-groups/profile/identitymap.md)
-      * [인구 통계 세부 사항](./field-groups/profile/demographic-details.md)
-      * [개인 연락처 세부 사항](./field-groups/profile/personal-contact-details.md)
-      * [세그먼트 멤버십 세부 사항](./field-groups/profile/segmentation.md)
-      * [작업 연락처 세부 사항](./field-groups/profile/work-contact-details.md)
-      * [개인 정보/개인화/마케팅 기본 설정(동의)](./field-groups/profile/consents.md)
+      * [충성도 세부 사항](./field-groups/profile/loyalty-details.md)
+      * [개인 연락처 세부 정보](./field-groups/profile/personal-contact-details.md)
+      * [개인 정보/개인화/마케팅 환경 설정(동의)](./field-groups/profile/consents.md)
+      * [세그먼트 멤버십 세부 정보](./field-groups/profile/segmentation.md)
+      * [작업 연락처 세부 정보](./field-groups/profile/work-contact-details.md)
    * 이벤트 필드 그룹 {#event}
-      * [최종 사용자 ID 세부 사항](./field-groups/event/enduserids.md)
+      * [캠페인 마케팅 세부 사항](./field-groups/event/campaign-marketing-details.md)
+      * [채널 세부 사항](./field-groups/event/channel-details.md)
+      * [상거래 세부 사항](./field-groups/event/commerce-details.md)
+      * [최종 사용자 ID 세부 정보](./field-groups/event/enduserids.md)
       * [환경 세부 사항](./field-groups/event/environment-details.md)
+      * [웹 세부 사항](./field-groups/event/web-details.md)
    * [필드 그룹 이름 업데이트](./field-groups/name-updates.md)
 * 데이터 유형 {#data-types}
    * [애플리케이션](./data-types/application.md)
@@ -51,31 +56,35 @@ ht-degree: 17%
    * [장치](./data-types/device.md)
    * [이메일 주소](./data-types/email-address.md)
    * [환경](./data-types/environment.md)
-   * [범용 동의 필드](./data-types/consent-field.md)
-   * [범용 마케팅 환경 설정 필드](./data-types/marketing-field.md)
-   * [구독이 있는 범용 마케팅 기본 설정 필드](./data-types/marketing-field-subscriptions.md)
-   * [범용 개인화 환경 설정 필드](./data-types/personalization-field.md)
+   * [경험 채널](./data-types/experience-channel.md)
+   * [일반 동의 필드](./data-types/consent-field.md)
+   * [일반 마케팅 기본 설정 필드](./data-types/marketing-field.md)
+   * [구독이 있는 일반 마케팅 기본 설정 필드](./data-types/marketing-field-subscriptions.md)
+   * [일반 개인화 기본 설정 필드](./data-types/personalization-field.md)
    * [지역](./data-types/geo.md)
-   * [지역 서클](./data-types/geo-circle.md)
+   * [지역 원](./data-types/geo-circle.md)
    * [지역 좌표](./data-types/geo-coordinates.md)
    * [지역 상호 작용 세부 사항](./data-types/geo-interaction-details.md)
    * [지역 모양](./data-types/geo-shape.md)
    * [ID](./data-types/identity.md)
+   * [마케팅](./data-types/marketing.md)
    * [측정](./data-types/measure.md)
    * [주문](./data-types/order.md)
    * [결제 항목](./data-types/payment-item.md)
    * [사람](./data-types/person.md)
-   * [사람 이름](./data-types/person-name.md)
+   * [개인 이름](./data-types/person-name.md)
    * [전화번호](./data-types/phone-number.md)
    * [컨텍스트 배치](./data-types/place-context.md)
-   * [POI 세부 정보](./data-types/poi-details.md)
+   * [POI 세부 사항](./data-types/poi-details.md)
    * [POI 상호 작용](./data-types/poi-interaction.md)
    * [우편 주소](./data-types/postal-address.md)
+   * [제품 목록 항목](./data-types/product-list-item.md)
    * [검색](./data-types/search.md)
    * [구독](./data-types/subscription.md)
-   * [웹 상호 작용](./data-types/web-interactions.md)
+   * [웹 정보](./data-types/web-information.md)
+   * [웹 상호 작용](./data-types/web-interaction.md)
    * [웹 페이지 세부 사항](./data-types/webpage-details.md)
-* [!UICONTROL 스키마 ] UI  {#ui}
+*  SchemaUI  {#ui}
    * [개요](./ui/overview.md)
    * [XDM 리소스 살펴보기](./ui/explore.md)
    * 리소스 {#resources} 만들기 및 편집
@@ -102,19 +111,19 @@ ht-degree: 17%
    * [스키마 필드 그룹](api/field-groups.md)
    * [데이터 유형](api/data-types.md)
    * [설명자](api/descriptors.md)
-   * [조합](api/unions.md)
+   * [노조](api/unions.md)
    * [내보내기/가져오기](api/export-import.md)
    * [샘플 데이터](api/sample-data.md)
    * [감사 로그](api/audit-log.md)
-   * [임시 스키마](api/ad-hoc.md)
-   * [혼합(더 이상 사용되지 않음)](api/mixins.md)
+   * [애드혹 스키마](api/ad-hoc.md)
+   * [Mixin(사용되지 않음)](api/mixins.md)
    * [부록](api/appendix.md)
 * 튜토리얼 {#tutorials}
    * [스키마 만들기(UI)](tutorials/create-schema-ui.md)
-   * [스키마 만들기(API)](tutorials/create-schema-api.md)
-   * [두 스키마 간의 관계 정의(UI)](tutorials/relationship-ui.md)
-   * [두 스키마(API) 간의 관계 정의](tutorials/relationship-api.md)
-   * [임시 스키마 만들기(API)](tutorials/ad-hoc.md)
-* [문제 해결 가이드](troubleshooting-guide.md)
+   * [스키마(API) 만들기](tutorials/create-schema-api.md)
+   * [두 스키마(UI) 간의 관계 정의](tutorials/relationship-ui.md)
+   * [두 스키마(API) 간의 관계를 정의합니다](tutorials/relationship-api.md)
+   * [임시 스키마(API) 만들기](tutorials/ad-hoc.md)
+* [문제 해결 안내서](troubleshooting-guide.md)
 * [API 참조](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)
-* [플랫폼 릴리스 정보](https://www.adobe.com/go/platform-release-notes-en)
+* [플랫폼 릴리스 노트](https://www.adobe.com/go/platform-release-notes-en)
