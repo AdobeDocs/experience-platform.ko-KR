@@ -5,7 +5,7 @@ title: 최종 사용자 ID 세부 정보 스키마 필드 그룹
 topic-legacy: overview
 description: 이 문서에서는 최종 사용자 ID 세부 사항 스키마 필드 그룹에 대한 개요를 제공합니다.
 exl-id: ff5b74f4-7700-4d10-821e-b50f80ea8c05
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: b22dce52563d5f3bbd1796c11d7c7b2a49fa6d5f
 workflow-type: tm+mt
 source-wordcount: '214'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 >
 >여러 스키마 필드 그룹의 이름이 변경되었습니다. 자세한 내용은 [필드 그룹 이름 업데이트](../name-updates.md)에 있는 문서를 참조하십시오.
 
-[!UICONTROL 최종 사용자 ID ] 여러 Adobe 애플리케이션에서 개인의 ID 정보를 설명하는 데 사용되는  [[!DNL XDM ExperienceEvent] 클래스 ](../../classes/individual-profile.md)에 대한 표준 스키마 필드 그룹을 자세히 설명합니다. 필드 그룹은 루트 수준 `endUserIDs` 개체를 제공하며, 이 개체는 데이터가 수집될 때 값이 자동으로 업데이트되는 읽기 전용 `_experience` 필드를 포함합니다.
+[!UICONTROL 최종 사용자 ID ] 여러 Adobe 애플리케이션에서 개인의 ID 정보를 설명하는 데 사용되는  [[!DNL XDM ExperienceEvent] 클래스 ](../../classes/experienceevent.md)에 대한 표준 스키마 필드 그룹을 자세히 설명합니다. 필드 그룹은 루트 수준 `endUserIDs` 개체를 제공하며, 이 개체는 데이터가 수집될 때 값이 자동으로 업데이트되는 읽기 전용 `_experience` 필드를 포함합니다.
 
 <img src="../../images/field-groups/enduserids.png" width="700" /><br />
 
