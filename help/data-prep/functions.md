@@ -5,9 +5,9 @@ title: 데이터 준비 매핑 함수
 topic-legacy: overview
 description: 이 문서에서는 데이터 준비에 사용되는 매핑 기능을 소개합니다.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 8193045079bbd8a61c4bc2aee0bf9412e4e2ae31
+source-git-commit: 1133580d6d4d8df352ab901d5106f0bb6c1f2a08
 workflow-type: tm+mt
-source-wordcount: '3934'
+source-wordcount: '3935'
 ht-degree: 3%
 
 ---
@@ -115,7 +115,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | now | 현재 시간을 검색합니다. |  | now() | now() | `2020-09-23T10:10:24.556-07:00[America/Los_Angeles]` |
 | timestamp | 현재 Unix 시간을 검색합니다. |  | timestamp() | timestamp() | 1571850624571 |
 | 포맷 | 입력 날짜를 지정된 형식에 따라 형식을 지정합니다. | <ul><li>날짜:**필수** 형식을 지정할 ZoneDateTime 개체로서 입력 날짜입니다.</li><li>형식:**필수** 날짜를 변경할 형식입니다.</li></ul> | format(날짜, 형식) | 형식(2019-10-23T11:24:00+00:00, &quot;yyyy-MM-dd HH:mm:ss&quot;) | &quot;2019-10-23 11:24:35&quot; |
-| dformat | 지정된 형식에 따라 타임스탬프를 날짜 문자열로 변환합니다. | <ul><li>타임스탬프:**필수** 형식을 지정할 타임스탬프입니다. 밀리초 단위로 기록됩니다.</li><li>형식:**필수** 타임스탬프를 변경할 형식입니다.</li></ul> | 형식(&#x200B;타임스탬프, 형식) | dformat(1571829875, &quot;dd-MMM-yyyy hh:mm&quot;) | &quot;2019년 10월 23일 11:24&quot; |
+| dformat | 지정된 형식에 따라 타임스탬프를 날짜 문자열로 변환합니다. | <ul><li>타임스탬프:**필수** 형식을 지정할 타임스탬프입니다. 밀리초 단위로 기록됩니다.</li><li>형식:**필수** 타임스탬프를 변경할 형식입니다.</li></ul> | 형식(&#x200B;타임스탬프, 형식) | dformat(1571829875000, &quot;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSX&quot;) | &quot;2019-10-23T11:24:35.000Z&quot; |
 | 날짜 | 날짜 문자열을 ZoneDateTime 개체(ISO 8601 형식)로 변환합니다. | <ul><li>날짜:**필수** 날짜를 나타내는 문자열입니다.</li><li>형식:**필수** 날짜 형식을 나타내는 문자열입니다.</li><li>DEFAULT_DATE:**필수** 제공된 날짜가 null인 경우 기본 날짜가 반환됩니다.</li></ul> | date(DATE, FORMAT, DEFAULT_DATE) | date(&quot;2019-10-23 11:24&quot;, &quot;yyyy-MM-dd HH:mm&quot;, now()) | &quot;2019-10-23T11:24Z&quot; |
 | 날짜 | 날짜 문자열을 ZoneDateTime 개체(ISO 8601 형식)로 변환합니다. | <ul><li>날짜:**필수** 날짜를 나타내는 문자열입니다.</li><li>형식:**필수** 날짜 형식을 나타내는 문자열입니다.</li></ul> | date(날짜, 형식) | date(&quot;2019-10-23 11:24&quot;, &quot;yyyy-MM-dd HH:mm&quot;) | &quot;2019-10-23T11:24Z&quot; |
 | 날짜 | 날짜 문자열을 ZoneDateTime 개체(ISO 8601 형식)로 변환합니다. | <ul><li>날짜:**필수** 날짜를 나타내는 문자열입니다.</li></ul> | date(날짜) | date(&quot;2019-10-23 11:24&quot;) | &quot;2019-10-23T11:24Z&quot; |
