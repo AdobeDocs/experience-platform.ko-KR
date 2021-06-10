@@ -3,10 +3,10 @@ title: Platform Web SDK에서 Adobe Target 사용
 description: Adobe Target을 사용하여 Experience Platform Web SDK로 개인화된 컨텐츠를 렌더링하는 방법을 알아봅니다
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisions;코드 조각 사전 숨김;vec;양식 기반 경험 작성기;xdm;대상;결정;범위;스키마;
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: 202a77e4f9e8c7d5515ea0a5004b1c339f1d58ba
+source-git-commit: e7f5074ef776fc6ccd4f9951722861d771a371de
 workflow-type: tm+mt
-source-wordcount: '822'
-ht-degree: 3%
+source-wordcount: '918'
+ht-degree: 5%
 
 ---
 
@@ -21,6 +21,7 @@ ht-degree: 3%
 * [Automated Personalization 활동](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
 * [경험 타깃팅 활동](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
 * [다변량 테스트(MVT)](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html)
+* [Recommendations 활동](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html)
 * [기본 Target 노출 및 전환 보고](https://experienceleague.adobe.com/docs/target/using/reports/reports.html)
 * [VEC 지원](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html)
 
@@ -176,13 +177,42 @@ alloy("sendEvent", {
     __adobe: {
       target: {
         "profile.gender": "female",
-        "profile.age": 30
+        "profile.age": 30,
+	"entity.id" : "123",
+	"entity.genre" : "Drama"
       }
     }
   }
 }) 
 .then(console.log);
 ```
+
+## 권장 사항 요청
+
+다음 표에는 [!DNL Recommendations] 속성과 [!DNL Platform Web SDK]을 통해 각 속성이 지원되는지 여부가 나열되어 있습니다.
+
+| 카테고리 | 특성 | 지원 상태 |
+| --- | --- | --- |
+| Recommendations - 기본 엔티티 속성 | entity.id | 지원됨 |
+|  | entity.name | 지원됨 |
+|  | entity.categoryId | 지원됨 |
+|  | entity.pageUrl | 지원됨 |
+|  | entity.thumbnailUrl | 지원됨 |
+|  | entity.message | 지원됨 |
+|  | entity.value | 지원됨 |
+|  | entity.inventory | 지원됨 |
+|  | entity.brand | 지원됨 |
+|  | entity.margin | 지원됨 |
+|  | entity.event.detailsOnly | 지원됨 |
+| Recommendations - 사용자 지정 엔티티 속성 | entity.yourCustomAttributeName | 지원됨 |
+| Recommendations - 예약된 mbox/페이지 매개 변수 | excludedIds | 지원됨 |
+|  | cartIds | 지원됨 |
+|  | productPurchasedId | 지원됨 |
+| 카테고리 친화성에 대한 페이지 또는 항목 카테고리 | user.categoryId | 지원됨 |
+
+## 디버깅
+
+mboxTrace 및 mboxDebug는 더 이상 사용되지 않습니다. [[!DNL Platform Web SDK] 디버깅](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/debugging.html)을 사용하십시오.
 
 ## 용어
 
