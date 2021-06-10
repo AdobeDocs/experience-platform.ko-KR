@@ -6,9 +6,9 @@ seo-title: 대상에 프로필 및 세그먼트 활성화
 description: 세그먼트를 대상에 매핑하여 Adobe Experience Platform에서 보유한 데이터를 활성화합니다. 이를 수행하려면 아래 단계를 수행하십시오.
 seo-description: 세그먼트를 대상에 매핑하여 Adobe Experience Platform에서 보유한 데이터를 활성화합니다. 이를 수행하려면 아래 단계를 수행하십시오.
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
-source-git-commit: 27aafcbfc8f52491387561514e3b34313cc5d943
+source-git-commit: a8822d66443cc4cda761e1f0963b0e0251427911
 workflow-type: tm+mt
-source-wordcount: '2565'
+source-wordcount: '2688'
 ht-degree: 0%
 
 ---
@@ -48,6 +48,11 @@ Adobe Experience Platform 사용자 인터페이스에서 **[!UICONTROL 대상]*
 ![세그먼트-대상](../assets/ui/activate-destinations/email-select-segments.png)
 
 ##  매핑 단계 {#mapping}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_applytransformation"
+>title="변형 적용"
+>abstract="해시되지 않은 소스 필드를 사용할 때 이 옵션을 선택하여 Adobe Experience Platform에서 활성화 시 자동으로 해시하도록 합니다."
 
 적용 대상:소셜 대상 및 Google Customer Match 광고 대상
 
@@ -239,6 +244,12 @@ Adobe Experience Platform 사용자 인터페이스에서 **[!UICONTROL 대상]*
 
 ### 필수 속성 {#mandatory-attributes}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_mandatorykey"
+>title="필수 속성 정보"
+>abstract="내보낸 모든 프로필에 포함해야 하는 XDM 스키마 속성을 선택합니다. 필수 키가 없는 프로필은 대상으로 내보내지지 않습니다. 필수 키를 선택하지 않으면 속성과 관계없이 자격이 있는 모든 프로필이 내보내집니다."
+>additional-url="http://www.adobe.com/go/destinations-mandatory-attributes-en" text="자세한 내용은 문서에서 알아보십시오"
+
 속성을 필수로 표시하여 [!DNL Platform] 특정 속성을 포함하는 프로필만 내보내도록 할 수 있습니다. 따라서 추가 필터링 양식으로 사용할 수 있습니다. 속성을 필수로 표시하는 것은 **필수가 아닙니다**.
 
 필수 속성을 선택하지 않으면 해당 속성과 관계없이 모든 자격이 있는 프로필이 내보내집니다.
@@ -246,6 +257,12 @@ Adobe Experience Platform 사용자 인터페이스에서 **[!UICONTROL 대상]*
 특성 중 하나는 스키마의 [고유 식별자](../../destinations/catalog/email-marketing/overview.md#identity)인 것이 좋습니다. 필수 속성에 대한 자세한 내용은 [이메일 마케팅 대상](../../destinations/catalog/email-marketing/overview.md#identity) 설명서에서 ID 섹션을 참조하십시오.
 
 ### 중복 제거 키 {#deduplication-keys}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_deduplicationkey"
+>title="중복 제거 키 기본 정보"
+>abstract="중복 제거 키를 선택하여 내보내기 파일에서 동일한 프로필의 여러 레코드를 제거합니다. 중복 제거 키로 단일 네임스페이스 또는 최대 2개의 XDM 스키마 속성을 선택합니다. 중복 제거 키를 선택하지 않으면 내보내기 파일에서 중복된 프로필 항목이 발생할 수 있습니다."
+>additional-url="http://www.adobe.com/go/destinations-deduplication-keys-en" text="자세한 내용은 문서에서 알아보십시오"
 
 >[!IMPORTANT]
 >
