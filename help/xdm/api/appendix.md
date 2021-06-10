@@ -5,10 +5,10 @@ title: 스키마 레지스트리 API 안내서 부록
 description: 이 문서에서는 스키마 레지스트리 API 작업과 관련된 추가 정보를 제공합니다.
 topic-legacy: developer guide
 exl-id: 2ddc7fe8-dd0b-4cf9-8561-e89fcdadbfce
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: d70f297130ec04dd799d60c70b95777ee79bbfef
 workflow-type: tm+mt
 source-wordcount: '781'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -76,7 +76,7 @@ ht-degree: 0%
   <th>호환성 모드</th>
   <tr>
   <td>
-  <pre class="JSON language-JSON hljs">
+  <pre class=" language-json">
         {
           "xdm:birthDate":{
               "title":"생년월일",
@@ -97,7 +97,7 @@ ht-degree: 0%
   </pre>
   </td>
   <td>
-  <pre class="JSON language-JSON hljs">
+  <pre class=" language-json">
         {
           "firstDate":{
               "title":"생년월일",
