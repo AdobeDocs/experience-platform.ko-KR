@@ -3,7 +3,7 @@ keywords: google 고객 일치;Google 고객 일치;Google Customer Match
 title: Google Customer Match 연결
 description: 'Google Customer Match를 사용하면 온라인 및 오프라인 데이터를 사용하여 Google이 소유하거나 운영하는 속성(예: Search, Shopping, Gmail, YouTube)에서 고객에게 도달하고 다시 참여하도록 할 수 있습니다.'
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: 6c4e68e2f347cadaf3bf36de73c74e1240ed975b
+source-git-commit: da069c6c931bfd2af38b40fc061d5eb633aba9ea
 workflow-type: tm+mt
 source-wordcount: '1521'
 ht-degree: 0%
@@ -34,7 +34,7 @@ ht-degree: 0%
 
 ## [!DNL Google Customer Match] 대상에 대한 데이터 거버넌스 {#data-governance}
 
-Experience Platform의 일부 대상에는 대상 플랫폼으로 전송되거나 대상 플랫폼에서 수신되는 데이터에 대한 특정 규칙과 의무가 있습니다. 귀하는 데이터의 제한 및 의무와 Adobe Experience Platform 및 대상 플랫폼에서 해당 데이터를 사용하는 방법을 이해할 책임이 있습니다. Adobe Experience Platform은 이러한 데이터 사용 의무 중 일부를 관리하는 데 도움이 되는 데이터 거버넌스 도구를 제공합니다. [데이터 ](../../..//data-governance/labels/overview.md) 거버넌스 도구 및 정책에 대해 자세히 알아보십시오.
+Experience Platform의 일부 대상에는 대상 플랫폼으로 전송되거나 대상 플랫폼에서 수신되는 데이터에 대한 특정 규칙과 의무가 있습니다. 귀하는 데이터의 제한 및 의무와 Adobe Experience Platform 및 대상 플랫폼에서 해당 데이터를 사용하는 방법을 이해할 책임이 있습니다. Adobe Experience Platform은 이러한 데이터 사용 의무 중 일부를 관리하는 데 도움이 되는 데이터 거버넌스 도구를 제공합니다. [데이터 ](../../../data-governance/labels/overview.md) 거버넌스 도구 및 정책에 대해 자세히 알아보십시오.
 
 ## 지원되는 ID {#supported-identities}
 
