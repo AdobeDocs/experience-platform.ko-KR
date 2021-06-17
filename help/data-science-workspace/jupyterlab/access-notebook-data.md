@@ -5,9 +5,9 @@ title: Jupiterlab Notebook의 데이터 액세스
 topic-legacy: Developer Guide
 description: 이 안내서에서는 Data Science Workspace 내에 구축된 Jupiter Notebook을 사용하여 데이터에 액세스하는 방법에 중점을 둡니다.
 exl-id: 2035a627-5afc-4b72-9119-158b95a35d32
-source-git-commit: c2c2b1684e2c2c3c76dc23ad1df720abd6c4356c
+source-git-commit: 9e41db60580146fa90542ed00ceedd4eecb88b47
 workflow-type: tm+mt
-source-wordcount: '3290'
+source-wordcount: '3294'
 ht-degree: 8%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 8%
 
 지원되는 각 커널에서는 노트북 내의 데이터 세트에서 플랫폼 데이터를 읽을 수 있는 내장 기능을 제공합니다. 현재 Adobe Experience Platform 데이터 과학 작업 공간의 JupiterLab은 [!DNL Python], R, PySpark 및 Scala용 노트북을 지원합니다. 그러나 데이터 페이지 매김 지원은 [!DNL Python] 및 R 노트북으로 제한됩니다. 이 안내서에서는 JupiterLab 노트북을 사용하여 데이터에 액세스하는 방법에 중점을 둡니다.
 
-## 시작하기
+## 시작
 
 이 안내서를 읽기 전에 [!DNL JupyterLab] 및 Data Science Workspace 내의 해당 역할에 대한 개요 정보는 [[!DNL JupyterLab] 사용 안내서](./overview.md)를 참조하십시오.
 
@@ -47,13 +47,13 @@ PySpark 및 Scala 노트북으로 데이터 세트를 읽을 때 대화형 모�
 | 행 수 | 1K | 10K | 100K | 1M | 2M |
 | ----------------------- | ------ | ------ | ----- | ----- | ----- |
 | 디스크 크기(MB) | 18.73 | 187.5 | 308년 | 3000년 | 6050년 |
-| SDK (초) | 20.3 | 86.8 | 63 | 659년 | 1315년 |
+| SDK (초) | 20.3 | 86.8 | 63 | 659년 | 1315 |
 
 **임시 스키마:** 임시(ad-hoc) XDM(ad-hoc) 이외의 데이터의 최대 500만 개의 행(~5.6GB 데이터의 디스크)을 14분 이내에 읽을 수 있어야 합니다. 행을 더 추가하면 오류가 발생할 수 있습니다.
 
 | 행 수 | 1K | 10켈빈 | 100켈빈 | 1M | 2M | 3M | 5M |
 | ----------------------- | ------- | ------- | ----- | ----- | ----- | ----- | ------ |
-| 디스크 크기(MB) | 1.21 | 11.72 | 115년 | 1120년 | 2250년 | 3380년 | 5630년 |
+| 디스크 크기(MB) | 1.21 | 11.72 | 115 | 1120년 | 2250년 | 3380년 | 5630년 |
 | SDK (초) | 7.27 | 9.04 | 27.3 | 180 | 346년 | 487년 | 819년 |
 
 ### 전자 필기장 데이터 제한
@@ -69,7 +69,7 @@ PySpark 및 Scala 노트북으로 데이터 세트를 읽을 때 대화형 모�
 
 | 행 수 | 1K | 10켈빈 | 100켈빈 | 1M | 2M | 3M |
 | ----------------------- | ------- | ------- | ----- | ----- | ----- | ----- |
-| 디스크 크기(MB) | 0.082 | 0.612 | 9.0 | 91 | 188년 | 293년 |
+| 디스크 크기(MB) | 0.082 | 0.612 | 9.0 | 91 | 188년 | 293 |
 | R SDK(초) | 7.7 | 4.58 | 35.9 | 233년 | 470.5 | 603년 |
 
 ### PySpark([!DNL Python] 커널) 노트북 데이터 제한:{#pyspark-data-limits}
@@ -362,7 +362,7 @@ spark = SparkSession.builder.getOrCreate()
 **사용**
 
 ```scala
-%dataset {action} --datasetId {id} --dataFrame {df}`
+%dataset {action} --datasetId {id} --dataFrame {df} --mode batch
 ```
 
 **설명**
@@ -373,8 +373,8 @@ spark = SparkSession.builder.getOrCreate()
 | --- | --- | --- |
 | `{action}` | 데이터 집합에 수행할 작업 유형입니다. 두 가지 작업을 &quot;읽기&quot; 또는 &quot;쓰기&quot;로 사용할 수 있습니다. | 예 |
 | `--datasetId {id}` | 읽거나 쓸 데이터 세트의 ID를 제공하는 데 사용됩니다. | 예 |
-| `--dataFrame {df}` | 팬더 데이터 프레임 <ul><li> 작업이 &quot;읽기&quot;이면 {df}은(는) 데이터 집합 읽기 작업의 결과를 사용할 수 있는 변수입니다. </li><li> 작업이 &quot;write&quot;이면 이 데이터 프레임 {df}이(가) 데이터 집합에 기록됩니다. </li></ul> | 예 |
-| `--mode` | 데이터 읽기 방식을 변경하는 추가 매개 변수입니다. 허용되는 매개 변수는 &quot;batch&quot; 및 &quot;interactive&quot;입니다. 기본적으로 모드는 &quot;대화형&quot;으로 설정됩니다. 대량의 데이터를 읽을 때 &quot;일괄 처리&quot; 모드를 사용하는 것이 좋습니다. | 아니요 |
+| `--dataFrame {df}` | 팬더 데이터 프레임 <ul><li> 작업이 &quot;읽기&quot;이면 {df}은(는) 데이터 집합 읽기 작업 결과를 사용할 수 있는 변수입니다(데이터 프레임 등). </li><li> 작업이 &quot;write&quot;이면 이 데이터 프레임 {df}이(가) 데이터 집합에 기록됩니다. </li></ul> | 예 |
+| `--mode` | 데이터 읽기 방식을 변경하는 추가 매개 변수입니다. 허용되는 매개 변수는 &quot;batch&quot; 및 &quot;interactive&quot;입니다. 기본적으로 모드는 &quot;batch&quot;로 설정됩니다.<br> 더 작은 데이터 세트에서 쿼리 성능을 향상시키기 위해 &quot;대화형&quot; 모드를 사용하는 것이 좋습니다. | 예 |
 
 >[!TIP]
 >
@@ -382,8 +382,8 @@ spark = SparkSession.builder.getOrCreate()
 
 **예**
 
-- **다음 참조**:  `%dataset read --datasetId 5e68141134492718af974841 --dataFrame pd0`
-- **쓰기 예**:  `%dataset write --datasetId 5e68141134492718af974842 --dataFrame pd0`
+- **다음 참조**:  `%dataset read --datasetId 5e68141134492718af974841 --dataFrame pd0 --mode batch`
+- **쓰기 예**:  `%dataset write --datasetId 5e68141134492718af974842 --dataFrame pd0 --mode batch`
 
 >[!IMPORTANT]
 >
@@ -449,7 +449,7 @@ PySpark 전자 필기장에서 [!DNL ExperienceEvent] 데이터 집합에 액세
 from pyspark.sql import SparkSession
 spark = SparkSession.builder.getOrCreate()
 
-%dataset read --datasetId {DATASET_ID} --dataFrame df
+%dataset read --datasetId {DATASET_ID} --dataFrame df --mode batch
 
 df.createOrReplaceTempView("event")
 timepd = spark.sql("""
@@ -511,7 +511,7 @@ val df1 = spark.read.format("com.adobe.platform.query")
   .option("api-key", clientContext.getApiKey())
   .option("service-token", clientContext.getServiceToken())
   .option("sandbox-name", clientContext.getSandboxName())
-  .option("mode", "interactive")
+  .option("mode", "batch")
   .option("dataset-id", "5e68141134492718af974844")
   .load()
 
@@ -568,7 +568,7 @@ df1.write.format("com.adobe.platform.query")
   .option("ims-org", clientContext.getOrgId())
   .option("api-key", clientContext.getApiKey())
   .option("sandbox-name", clientContext.getSandboxName())
-  .option("mode", "interactive")
+  .option("mode", "batch")
   .option("dataset-id", "5e68141134492718af974844")
   .save()
 ```
