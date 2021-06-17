@@ -5,9 +5,9 @@ title: 샌드박스 UI 안내서
 topic-legacy: user guide
 description: 이 문서에서는 Adobe Experience Platform 사용자 인터페이스의 샌드박스와 관련된 다양한 작업을 수행하는 방법에 대해 설명합니다.
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
-source-git-commit: ba03ec805d29a95ee7d0d1a23a756feaadcea407
+source-git-commit: 3b0f156d3d6a13fbad45a153749b81a0d6244283
 workflow-type: tm+mt
-source-wordcount: '833'
+source-wordcount: '779'
 ht-degree: 0%
 
 ---
@@ -68,7 +68,7 @@ Experience Platform에서 샌드박스를 사용하는 방법에 대한 간단�
 
 >[!IMPORTANT]
 >
->내에 호스팅된 ID 그래프가 [Cross Device Analytics(CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) 기능에도 Adobe Analytics에서 사용되고 있거나 이 내에 호스팅된 ID 그래프가 [사람 기반 대상(PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html) 기능에도 Adobe Audience Manager에서 사용되고 있는 경우에는 기본 프로덕션 샌드박스를 재설정할 수 없습니다. Adobe Audience Manager 또는 Audience Core Service와 양방향 세그먼트 공유에 사용되는 프로덕션 샌드박스도 재설정할 수 없습니다.
+>내에 호스팅된 ID 그래프가 [Cross Device Analytics(CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) 기능에도 Adobe Analytics에서 사용되고 있거나 이 내에 호스팅된 ID 그래프가 [사람 기반 대상(PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html) 기능에도 Adobe Audience Manager에서 사용되고 있는 경우에는 기본 프로덕션 샌드박스를 재설정할 수 없습니다.
 
 프로덕션 또는 개발 샌드박스를 재설정하면 샌드박스의 이름 및 관련 권한을 유지하면서 해당 샌드박스와 연결된 모든 리소스(스키마, 데이터 세트 등)가 삭제됩니다. 이 &quot;clean&quot; 샌드박스는 액세스 권한이 있는 사용자에 대해 동일한 이름으로 계속 사용할 수 있습니다.
 
@@ -88,29 +88,29 @@ Experience Platform에서 샌드박스를 사용하는 방법에 대한 간단�
 
 ![성공](../images/ui/success.png)
 
-### 오류 메시지
+### 경고
 
-CDA 데이터가 포함된 기본 프로덕션 샌드박스는 재설정할 수 없으며 다음 오류를 반환합니다.
+CDA 데이터가 포함된 기본 프로덕션 샌드박스는 재설정할 수 없으며 다음 경고를 반환합니다.
 
 ![cda](../images/ui/cda.png)
 
-PBD 데이터가 포함된 기본 프로덕션 샌드박스도 재설정할 수 없으며 다음 오류를 반환합니다.
+PBD 데이터가 포함된 기본 프로덕션 샌드박스도 재설정할 수 없으며 다음 경고를 반환합니다.
 
 ![pbd](../images/ui/pbd.png)
 
-CDA와 PBD 모두에 대한 데이터가 포함된 기본 프로덕션 샌드박스도 재설정할 수 없으며 다음 오류를 반환합니다.
+CDA와 PBD 모두에 대한 데이터가 포함된 기본 프로덕션 샌드박스도 재설정할 수 없으며 다음 경고를 반환합니다.
 
 ![둘 다](../images/ui/both.png)
 
-Adobe Audience Manager 또는 Audience Core Service와 양방향 세그먼트 공유에 사용되는 프로덕션 샌드박스도 재설정할 수 없으며 다음 오류를 반환합니다.
+[!DNL Audience Manager] 또는 [!DNL Audience Core Service]과 양방향 세그먼트 공유에 사용되는 프로덕션 샌드박스를 재설정할 수 있습니다. [!UICONTROL 계속]을 선택하여 재설정을 계속 진행합니다.
 
-![seg](../images/ui/seg.png)
+![둘 다](../images/ui/seg.png)
 
 ## 샌드박스 삭제
 
 >[!IMPORTANT]
 >
->기본 프로덕션 샌드박스는 삭제할 수 없으며 Adobe Audience Manager 또는 Audience Core Service와 양방향 세그먼트 공유에 사용되는 프로덕션 샌드박스도 삭제할 수 없습니다.
+>기본 프로덕션 샌드박스는 삭제할 수 없습니다.
 
 프로덕션 또는 개발 샌드박스를 삭제하면 권한을 포함하여 해당 샌드박스와 연결된 모든 리소스가 영구적으로 제거됩니다.
 
@@ -126,9 +126,9 @@ Adobe Audience Manager 또는 Audience Core Service와 양방향 세그먼트 �
 
 ![delete-confirm](../images/ui/delete-confirm.png)
 
-Adobe Audience Manager 또는 Audience Core Service와 양방향 세그먼트 공유에 사용되는 프로덕션 샌드박스는 삭제할 수 없으며 다음 오류를 반환합니다.
+다음 경고 후에도 [!DNL Audience Manager] 또는 [!DNL Audience Core Service]과(와) 양방향 세그먼트 공유에 사용되는 사용자가 생성한 프로덕션 샌드박스를 삭제할 수 있습니다.
 
-![seg](../images/ui/seg.png)
+![seg](../images/ui/delete-seg.png)
 
 ## 다음 단계
 
