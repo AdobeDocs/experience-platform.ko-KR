@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 샌드박스 관리 API 끝점
 topic-legacy: developer guide
 description: 샌드박스 API의 /sandboxes 종단점을 사용하면 Adobe Experience Platform에서 샌드박스를 프로그래밍 방식으로 관리할 수 있습니다.
-source-git-commit: f84898a87a8a86783220af7f74e17f464a780918
+source-git-commit: 1ec141fa5a13bb4ca6a4ec57f597f38802a92b3f
 workflow-type: tm+mt
-source-wordcount: '1323'
+source-wordcount: '1440'
 ht-degree: 2%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 2%
 
 Adobe Experience Platform의 샌드박스는 프로덕션 환경에 영향을 주지 않고 기능을 테스트하고, 실험을 실행하고, 사용자 지정 구성을 만들 수 있는 분리된 개발 환경을 제공합니다. [!DNL Sandbox] API의 `/sandboxes` 종단점을 사용하면 Platform의 샌드박스를 프로그래밍 방식으로 관리할 수 있습니다.
 
-## 시작하기
+## 시작
 
 이 안내서에 사용된 API 엔드포인트는 [[!DNL Sandbox] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml)의 일부입니다. 계속하기 전에 [시작 안내서](./getting-started.md)에서 관련 설명서에 대한 링크, 이 문서에서 샘플 API 호출을 읽는 방법에 대한 안내서, 모든 Experience Platform API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요한 정보를 검토하십시오.
 
@@ -348,11 +348,7 @@ curl -X PATCH \
 
 ## 샌드박스 재설정 {#reset}
 
->[!IMPORTANT]
->
->내에 호스팅된 ID 그래프가 [Cross Device Analytics(CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) 기능에도 Adobe Analytics에서 사용되고 있거나 이 내에 호스팅된 ID 그래프가 [사람 기반 대상(PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html) 기능에도 Adobe Audience Manager에서 사용되고 있는 경우에는 기본 프로덕션 샌드박스를 재설정할 수 없습니다.
-
-개발 샌드박스에는 샌드박스에서 기본이 아닌 모든 리소스를 삭제하는 &quot;공장 재설정&quot; 기능이 있습니다. 요청 경로에 샌드박스의 `name`을 포함하는 PUT 요청을 만들어 샌드박스를 재설정할 수 있습니다.
+샌드박스에는 샌드박스에서 기본이 아닌 모든 리소스를 삭제하는 &quot;공장 재설정&quot; 기능이 있습니다. 요청 경로에 샌드박스의 `name`을 포함하는 PUT 요청을 만들어 샌드박스를 재설정할 수 있습니다.
 
 **API 형식**
 
@@ -363,6 +359,7 @@ PUT /sandboxes/{SANDBOX_NAME}
 | 매개 변수 | 설명 |
 | --- | --- |
 | `{SANDBOX_NAME}` | 재설정할 샌드박스의 `name` 속성. |
+| `validationOnly` | 실제 요청을 만들지 않고 샌드박스 재설정 작업에서 미리 확인할 수 있는 선택적 매개 변수입니다. 재설정하려는 샌드박스에 Adobe Analytics, Adobe Audience Manager 또는 세그먼트 공유 데이터가 포함되어 있는지 확인하려면 이 매개 변수를 `validationOnly=true` 로 설정하십시오. |
 
 **요청**
 
@@ -370,7 +367,7 @@ PUT /sandboxes/{SANDBOX_NAME}
 
 ```shell
 curl -X PUT \
-  https://platform.adobe.io/data/foundation/sandbox-management/sandboxes/acme-dev \
+  https://platform.adobe.io/data/foundation/sandbox-management/sandboxes/acme-dev?validationOnly=true \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -386,6 +383,10 @@ curl -X PUT \
 
 **응답**
 
+>[!NOTE]
+>
+>샌드박스가 재설정되면 시스템이 프로비저닝하는 데 약 30초가 소요됩니다.
+
 성공적으로 응답하면 업데이트된 샌드박스의 세부 정보가 반환되고, 해당 `state`이 &quot;재설정&quot;임을 표시합니다.
 
 ```json
@@ -399,18 +400,76 @@ curl -X PUT \
 }
 ```
 
->[!NOTE]
->
->샌드박스가 재설정되면 시스템이 프로비저닝하는 데 약 30초가 소요됩니다. 제공된 경우 샌드박스의 `state`은 &quot;활성&quot; 또는 &quot;실패&quot;가 됩니다.
+내에서 호스팅되는 ID 그래프가 [Cross Device Analytics(CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) 기능에도 Adobe Analytics에서 사용되고 있거나 내부에 호스팅된 ID 그래프가 [PBD(People Based Destinations)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html) 기능에도 Adobe Audience Manager에서 사용하는 경우에는 기본 프로덕션 샌드박스 및 사용자가 만든 프로덕션 샌드박스를 재설정할 수 없습니다.
 
-다음 표에는 샌드박스가 재설정되지 않는 가능한 예외가 포함되어 있습니다.
+다음은 샌드박스가 재설정되지 않는 가능한 예외 목록입니다.
 
-| 오류 코드 | 설명 |
+```json
+{
+    "status": 400,
+    "title": "Sandbox `{SANDBOX_NAME}` cannot be reset. The identity graph hosted in this sandbox is also being used by Adobe Analytics for the Cross Device Analytics (CDA) feature.",
+    "type": "http://ns.adobe.com/aep/errors/SMS-2074-400"
+},
+{
+    "status": 400,
+    "title": "Sandbox `{SANDBOX_NAME}` cannot be reset. The identity graph hosted in this sandbox is also being used by Adobe Audience Manager for the People Based Destinations (PBD) feature.",
+    "type": "http://ns.adobe.com/aep/errors/SMS-2075-400"
+},
+{
+    "status": 400,
+    "title": "Sandbox `{SANDBOX_NAME}` cannot be reset. The identity graph hosted in this sandbox is also being used by Adobe Audience Manager for the People Based Destinations (PBD) feature, as well by Adobe Analytics for the Cross Device Analytics (CDA) feature.",
+    "type": "http://ns.adobe.com/aep/errors/SMS-2076-400"
+},
+{
+    "status": 400,
+    "title": "Warning: Sandbox `{SANDBOX_NAME}` is used for bi-directional segment sharing with Adobe Audience Manager or Audience Core Service.",
+    "type": "http://ns.adobe.com/aep/errors/SMS-2077-400"
+}
+```
+
+`ignoreWarnings` 매개 변수를 요청에 추가하여 [!DNL Audience Manager] 또는 [!DNL Audience Core Service]과 양방향 세그먼트 공유에 사용되는 프로덕션 샌드박스를 재설정할 수 있습니다.
+
+**API 형식**
+
+```http
+PUT /sandboxes/{SANDBOX_NAME}?ignoreWarnings=true
+```
+
+| 매개 변수 | 설명 |
 | --- | --- |
-| `2074-400` | 이 샌드박스에 호스팅된 ID 그래프도 CDA(Cross Device Analytics) 기능에 Adobe Analytics에서 사용되기 때문에 이 샌드박스를 재설정할 수 없습니다. |
-| `2075-400` | 이 샌드박스에서 호스팅된 ID 그래프도 Adobe Audience Manager에서 PBD(사람 기반 대상) 기능에 사용되고 있으므로 이 샌드박스를 재설정할 수 없습니다. |
-| `2076-400` | 이 샌드박스에 호스팅된 ID 그래프도 PBD(People Based Destinations) 기능에 Adobe Audience Manager에서 사용하고 CDA(Cross Device Analytics) 기능용 Adobe Analytics에서도 사용되기 때문에 이 샌드박스를 재설정할 수 없습니다. |
-| `2077-400` | 경고:샌드박스 `{SANDBOX_NAME}`는 Adobe Audience Manager 또는 Audience Core Service와 양방향 세그먼트 공유에 사용됩니다. |
+| `{SANDBOX_NAME}` | 재설정할 샌드박스의 `name` 속성. |
+| `ignoreWarnings` | 유효성 검사 검사를 건너뛰고 [!DNL Audience Manager] 또는 [!DNL Audience Core Service]과(와) 양방향 세그먼트 공유에 사용되는 프로덕션 샌드박스를 강제로 재설정할 수 있는 선택적 매개 변수입니다. 이 매개 변수는 기본 프로덕션 샌드박스에 적용할 수 없습니다. |
+
+**요청**
+
+다음 요청은 &quot;acme&quot;라는 프로덕션 샌드박스를 재설정합니다.
+
+```shell
+curl -X PUT \
+  https://platform.adobe.io/data/foundation/sandbox-management/sandboxes/acme?ignoreWarnings=true \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'Content-Type: application/json'
+  -d '{
+    "action": "reset"
+  }'
+```
+
+**응답**
+
+성공적으로 응답하면 업데이트된 샌드박스의 세부 정보가 반환되고, 해당 `state`이 &quot;재설정&quot;임을 표시합니다.
+
+```json
+{
+    "id": "d8184350-dbf5-11e9-875f-6bf1873fec16",
+    "name": "acme",
+    "title": "Acme Business Group prod",
+    "state": "resetting",
+    "type": "production",
+    "region": "VA7"
+}
+```
 
 ## 샌드박스 삭제 {#delete}
 
@@ -433,14 +492,16 @@ DELETE /sandboxes/{SANDBOX_NAME}
 | 매개 변수 | 설명 |
 | --- | --- |
 | `{SANDBOX_NAME}` | 삭제할 샌드박스의 `name` |
+| `validationOnly` | 실제 요청을 수행하지 않고 샌드박스 삭제 작업에서 미리 볼 수 있는 선택적 매개 변수입니다. 재설정하려는 샌드박스에 Adobe Analytics, Adobe Audience Manager 또는 세그먼트 공유 데이터가 포함되어 있는지 확인하려면 이 매개 변수를 `validationOnly=true` 로 설정하십시오. |
+| `ignoreWarnings` | 유효성 검사 검사를 건너뛰고 [!DNL Audience Manager] 또는 [!DNL Audience Core Service] 과 양방향 세그먼트 공유에 사용되는 사용자가 만든 프로덕션 샌드박스를 강제로 삭제할 수 있는 선택적 매개 변수입니다. 이 매개 변수는 기본 프로덕션 샌드박스에 적용할 수 없습니다. |
 
 **요청**
 
-다음 요청은 &quot;acme-dev&quot;라는 샌드박스를 삭제합니다.
+다음 요청은 &quot;acme&quot;라는 프로덕션 샌드박스를 삭제합니다.
 
 ```shell
 curl -X DELETE \
-  https://platform.adobe.io/data/foundation/sandbox-management/sandboxes/dev-2 \
+  https://platform.adobe.io/data/foundation/sandbox-management/sandboxes/acme?ignoreWarnings=true \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}'
@@ -452,8 +513,8 @@ curl -X DELETE \
 
 ```json
 {
-    "name": "acme-dev",
-    "title": "Acme Business Group dev",
+    "name": "acme",
+    "title": "Acme Business Group prod",
     "state": "deleted",
     "type": "development",
     "region": "VA7"
