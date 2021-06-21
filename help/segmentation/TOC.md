@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform Segmentation Service
 breadcrumb-title: Segmentation Service 안내서
 user-guide-description: 실시간 고객 프로필 데이터에서 세그먼트를 작성하고 대상을 생성합니다.
 feature: 세그먼트
-source-git-commit: 48ef54759ff62efa84aac493af3a7799e1b6d141
+source-git-commit: f193787ac27e30c69d25418656ae9c59c89622dc
 workflow-type: tm+mt
 source-wordcount: '164'
-ht-degree: 21%
+ht-degree: 27%
 
 ---
 
@@ -18,11 +18,11 @@ ht-degree: 21%
 - [세그먼테이션 데이터 유형](data-types.md)
 - 세그먼테이션 API {#api}
    - [개요](api/overview.md)
-   - [시작하기](api/getting-started.md)
+   - [시작](api/getting-started.md)
    - [에지 세그멘테이션](api/edge-segmentation.md)
    - [작업 내보내기](api/export-jobs.md)
    - [미리 보기 및 예상](api/previews-and-estimates.md)
-   - [스케줄러](api/schedules.md)
+   - [예약](api/schedules.md)
    - [세그먼트 정의](api/segment-definitions.md)
    - [세그먼트 작업](api/segment-jobs.md)
    - [세그먼트 검색](api/segment-search.md)
@@ -36,7 +36,7 @@ ht-degree: 21%
    - [스트리밍 세그멘테이션](ui/streaming-segmentation.md)
    - [스트리밍 세그멘테이션(비디오)](video/streaming-segmentation-overview.md)
    - [시간 제한 리팩터링](ui/segment-refactoring.md)
-- [옵트아웃 준수](honoring-opt-outs.md)
+- [동의 준수](consents.md)
 - [다중 엔티티 세그먼테이션](multi-entity-segmentation.md)
 - 프로필 쿼리 언어 {#pql}
    - [개요](pql/overview.md)
