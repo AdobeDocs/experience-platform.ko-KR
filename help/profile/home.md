@@ -4,7 +4,7 @@ title: 실시간 고객 프로필 개요
 topic-legacy: guide
 description: 실시간 고객 프로필은 다양한 엔터프라이즈 데이터 자산의 데이터를 병합한 다음 개별 고객 프로필 및 관련 시계열 이벤트 형태로 해당 데이터에 대한 액세스를 제공하는 범용 조회 엔티티 저장소입니다. 이 기능을 통해 마케터는 여러 채널에서 대상과 잘 조정되고 일관되며 적절한 경험을 제공할 수 있습니다.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: 598f86188bcd9bde22333ccafb85f3f566aaae44
+source-git-commit: f193787ac27e30c69d25418656ae9c59c89622dc
 workflow-type: tm+mt
 source-wordcount: '1813'
 ht-degree: 0%
@@ -120,7 +120,7 @@ Observability Insights를 사용하면 Adobe Experience Platform에서 주요 �
 
 ### 옵트아웃 및 데이터 개인 정보 보호 요청 처리
 
-[!DNL Experience Platform] 에서는 고객이 내에서 데이터의 사용 및 저장과 관련된 옵트아웃 요청을 보낼 수 있도록  [!DNL Real-time Customer Profile]합니다. 옵트아웃 요청을 처리하는 방법에 대한 자세한 내용은 [옵트아웃 요청 준수](../segmentation/honoring-opt-outs.md)에 대한 설명서를 참조하십시오.
+[!DNL Experience Platform] 에서는 고객이 내에서 데이터의 사용 및 저장과 관련된 옵트아웃 요청을 보낼 수 있도록  [!DNL Real-time Customer Profile]합니다. 옵트아웃 요청을 처리하는 방법에 대한 자세한 내용은 [옵트아웃 요청 준수](../segmentation/consents.md)에 대한 설명서를 참조하십시오.
 
 ## 다음 단계 및 추가 리소스
 
