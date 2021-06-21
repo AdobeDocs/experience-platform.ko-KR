@@ -4,20 +4,28 @@ description: Adobe Experience Platform Web SDK를 사용하여 ECID(Adobe Experi
 seo-description: Adobe Experience Cloud ID를 가져오는 방법을 알아봅니다.
 keywords: ID;자사 ID;ID 서비스;타사 ID;ID 마이그레이션;방문자 ID;타사 ID;타사 ID;MigrationEnabled;getIdentity;ID 동기화;syncIdentity;sendEvent;identityMap;기본;ecid;ID 네임스페이스;네임스페이스 ID;인증 상태;해시Enabled;
 exl-id: 03060cdb-becc-430a-b527-60c055c2a906
-source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
+source-git-commit: d753cfca6f518dfe2cafa1cb30ad26bd0b591c54
 workflow-type: tm+mt
-source-wordcount: '961'
-ht-degree: 3%
+source-wordcount: '1217'
+ht-degree: 6%
 
 ---
 
-# Adobe Experience Cloud ID 검색
+# Adobe Experience Cloud ID
 
 Adobe Experience Platform 웹 SDK는 [Adobe ID 서비스](../../identity-service/ecid.md)를 활용합니다. 이렇게 하면 각 장치에 페이지 간 활동을 함께 연결할 수 있도록 장치에서 지속되는 고유 식별자가 있습니다.
 
 ## 자사 ID
 
-[!DNL Identity Service]은(는) 자사 도메인의 쿠키에 ID를 저장합니다. [!DNL Identity Service] 은 도메인에서 HTTP 헤더를 사용하여 쿠키를 설정하려고 시도합니다. 실패하면 [!DNL Identity Service]은 Javascript를 통해 쿠키를 설정하는 것으로 폴백됩니다. Adobe은 쿠키가 클라이언트측 ITP 제한에 의해 제한되지 않도록 CNAME을 설정할 것을 권장합니다.
+[!DNL Identity Service]은(는) 자사 도메인의 쿠키에 ID를 저장합니다. [!DNL Identity Service] 은 도메인에서 HTTP 헤더를 사용하여 쿠키를 설정하려고 시도합니다. 실패하면 [!DNL Identity Service]이(가) JavaScript를 사용하여 쿠키를 설정하는 것으로 돌아갑니다. [Edge 도메인 구성](../fundamentals/configuring-the-sdk.md#edgeConfigId)에 대한 CNAME을 설정하는 것이 좋습니다.
+
+Platform Web SDK에서 오는 모든 히트에는 Edge 네트워크의 ID 서비스에 의해 추가된 ECID가 있습니다. 처음 방문하는 사용자의 경우 ECID가 생성되고 페이로드에 추가됩니다. 반복 방문자의 경우 ECID가 `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` 쿠키에서 검색되고 페이로드에 추가됩니다.
+
+ECID는 `xdm`의 `identityMap` 필드 아래에 추가됩니다. 브라우저의 개발 도구를 사용하여 유형이 있는 페이로드 아래의 응답에서 ECID를 볼 수 있습니다.`identity:result` 이지만 요청에 ECID가 표시되지 않습니다.
+
+CNAME 구현을 통해 내 도메인과 일치시킬 수 있도록 Adobe가 사용하는 컬렉션 도메인을 맞춤화할 수 있습니다. 이를 통해 Adobe는 JavaScript를 사용하는 클라이언트측 대신 서버측에서 자사 쿠키를 설정할 수 있습니다. 이전에는 이러한 서버측 자사 쿠키가 Safari 브라우저에서 Apple의 ITP(Intelligent Tracking Prevention) 정책에 따라 적용되는 제한을 받지 않았습니다. 그러나 2020년 11월에 Apple은 이러한 제한 사항이 CNAME을 통해 설정된 쿠키에도 적용되도록 정책을 업데이트했습니다. 현재, CNAME으로 서버 측에 설정된 쿠키와 JavaScript로 클라이언트측에 설정된 쿠키는 모두 ITP에서 7일 또는 24시간 만료로 제한됩니다. ITP 정책에 대한 자세한 내용은 [추적 방지](https://webkit.org/tracking-prevention/#intelligent-tracking-prevention-itp)에 있는 이 Apple 문서를 참조하십시오.
+
+CNAME 구현은 쿠키 수명 측면에서 이점이 없지만 광고 차단기 및 덜 일반적인 브라우저로 데이터가 추적기로 분류되는 도메인으로 전송되지 않도록 하는 다른 이점이 있습니다. 이러한 경우 CNAME을 사용하면 이러한 도구를 사용하는 사용자에게 데이터 수집이 중단되지 않을 수 있습니다.
 
 ## 타사 ID
 
