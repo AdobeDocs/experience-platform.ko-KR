@@ -5,10 +5,10 @@ title: Privacy Service 및 Experience Cloud 애플리케이션
 topic-legacy: overview
 description: 이 문서에서는 개인 정보 관련 작업을 위해 다양한 Experience Cloud 응용 프로그램을 구성하는 방법에 대한 참조를 제공합니다.
 exl-id: da21c15f-0b99-4eb7-ac9a-f0fe5e3ba842
-source-git-commit: d316c199c7e2d87d175015c1828af6fd0d57f32a
+source-git-commit: f193787ac27e30c69d25418656ae9c59c89622dc
 workflow-type: tm+mt
 source-wordcount: '542'
-ht-degree: 11%
+ht-degree: 12%
 
 ---
 
@@ -32,9 +32,9 @@ Adobe Experience Platform [!DNL Privacy Service]은(는) 여러 Adobe Experience
 | Adobe Advertising Cloud | ✓ | ✓ | <ul><li>[GDPR에 대한 액세스/삭제 설명서](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-gdpr.html)</li><li>[CCPA에 대한 설명서 액세스/삭제](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-ccpa-access-delete.html)</li><li>[CCPA용 판매 중지 설명서](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-ccpa-opt-out-of-sale.html)</li></ul> |
 | Adobe Analytics | ✓ | ✓ | <ul><li>[설명서 액세스/삭제](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/an-gdpr-overview.html?lang=ko-KR)</li><li>[!DNL Analytics] 개인 정보 보고 변수를 사용하여 옵트아웃  [요청을 처리합니다](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/consent-variables.html)</li></ul> |
 | Adobe Audience Manager | ✓ | ✓ | <ul><li>[설명서 액세스/삭제](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/data-privacy-requests.html)</li><li>[옵트아웃 설명서](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/declared-ids.html)</li></ul> |
-| Adobe Campaign Standard | ✓ | ✓ | <ul><li>[설명서 액세스/삭제](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/privacy/privacy-management.html?lang=ko#getting-started)</li><li>[옵트아웃 설명서](../segmentation/honoring-opt-outs.md)</li></ul> |
+| Adobe Campaign Standard | ✓ | ✓ | <ul><li>[설명서 액세스/삭제](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/privacy/privacy-management.html?lang=ko#getting-started)</li><li>[옵트아웃 설명서](../segmentation/consents.md)</li></ul> |
 | CRS(Adobe 고객 속성) | ✓ | N/A | <ul><li>[GDPR에 대한 액세스/삭제 설명서](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/gdpr.html)</li><li>[CCPA에 대한 설명서 액세스/삭제](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/ccpa.html)</li><li>고객 속성에는 데이터를 전송할 기능이 없으므로 판매 중지 요청을 적용할 수 없습니다.</li></ul> |
-| Adobe Experience Platform | ✓ | ✓ | <ul><li>[Data Lake에 대한 액세스/삭제 설명서](../catalog/privacy.md)</li><li>[실시간 고객 프로필에 대한 액세스/삭제 설명서](../profile/privacy.md)</li><li>[!DNL Experience Platform] 대상  [세그먼트에 대한 옵트아웃 요청을 수행합니다](../segmentation/honoring-opt-outs.md).</li></ul> |
+| Adobe Experience Platform | ✓ | ✓ | <ul><li>[Data Lake에 대한 액세스/삭제 설명서](../catalog/privacy.md)</li><li>[실시간 고객 프로필에 대한 액세스/삭제 설명서](../profile/privacy.md)</li><li>[!DNL Experience Platform] 대상  [세그먼트에 대한 옵트아웃 요청을 수행합니다](../segmentation/consents.md).</li></ul> |
 | Adobe Primetime 인증 | ✓ | 해당 없음 | <ul><li>[설명서 액세스/삭제](http://tve.helpdocsonline.com/how-to-make-a-privacy-request)</li><li>[!DNL Primetime] 에는 데이터를 전송할 기능이 없으므로 판매 중지 요청을 적용할 수 없습니다.</li></ul> |
 | Adobe Target | ✓ | 해당 없음 | <ul><li>[설명서 액세스/삭제](https://experienceleague.adobe.com/docs/target/using/implement-target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.html)</li><li>[!DNL Target] 에는 데이터를 전송할 기능이 없으므로 판매 중지 요청을 적용할 수 없습니다.</li></ul> |
 
