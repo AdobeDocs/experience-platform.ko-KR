@@ -2,10 +2,10 @@
 title: Adobe Experience Platform Web SDK에서 지원되는 사용 사례
 description: Adobe Experience Platform Web SDK에서 지원되는 사용 사례를 알아봅니다.
 keywords: 웹 sdk;사용 사례
-source-git-commit: b630a00f3985769243bd42ecd3c49f0d0ce60b07
+source-git-commit: da305a65a7d5fc3d8214f1d046181b463d324ee0
 workflow-type: tm+mt
-source-wordcount: '528'
-ht-degree: 11%
+source-wordcount: '574'
+ht-degree: 13%
 
 ---
 
@@ -40,7 +40,7 @@ ht-degree: 11%
 | --- | --- |
 | 경험 이벤트 보내기 |  |
 | Offer Decisioning | [설명서](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/offer-decisioning/offer-decisioning-overview.html?lang=en#personalization) |
-| 지연 시간이 짧은 실시간 고객 데이터 프로필로 데이터 보내기 |
+| 프로필에 데이터 세트가 활성화되어 있으면 실시간 고객 데이터 프로필에 실시간으로 데이터를 전송할 수 있습니다 |  |
 | 실시간으로 Customer Journey Analytics에 데이터 보내기 |  |
 | 프로필에 동의 쓰기 | [설명서](https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/consent/adobe/sdk.html?lang=en) |
 | 데이터 서버측을 실시간으로 타사에 전달 | [설명서](https://experienceleague.adobe.com/docs/launch/using/server-side-info/server-side-overview.html?lang=en) |
@@ -87,6 +87,10 @@ ht-degree: 11%
 | 방문자 특성 지원 |  |
 | 프로필 스크립트 |  |
 | XDM이 mbox 매개 변수가 됨 |  |
+| A4T 보고에서 지원되는 리디렉션 오퍼 | [설명서](https://experienceleague.adobe.com/docs/target/using/experiences/offers/offer-redirect.html?lang=en) |
+| Target 프로필 업데이트 | [설명서](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/target-overview.html?lang=en#single-profile-update) |
+| 추천 항목 |  |
+| mBox 타사 ID |  |
 
 {style=&quot;table-layout:auto&quot;}
 
