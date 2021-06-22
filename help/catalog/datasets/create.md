@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform;홈;인기 항목;데이터 집합;데이터 집합;데이터 집합 만들기;데이터 집합 만들기;데이터 집합 만들기
+keywords: Experience Platform;홈;인기 항목;데이터 세트;데이터 세트;데이터 세트 만들기;데이터 세트 만들기
 solution: Experience Platform
 title: API를 사용하여 데이터 세트 만들기
 topic-legacy: datasets
 description: 이 문서에서는 Adobe Experience Platform API를 사용하여 데이터 세트를 만들고 파일을 사용하여 데이터 세트를 채우는 일반적인 단계를 제공합니다.
 exl-id: 3a5f48cf-ad05-4b9e-be1d-ff213a26a477
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
 workflow-type: tm+mt
 source-wordcount: '1305'
 ht-degree: 1%
@@ -17,53 +16,53 @@ ht-degree: 1%
 
 이 문서에서는 Adobe Experience Platform API를 사용하여 데이터 세트를 만들고 파일을 사용하여 데이터 세트를 채우는 일반적인 단계를 제공합니다.
 
-## 시작하기
+## 시작
 
-이 가이드를 사용하려면 다음과 같은 Adobe Experience Platform 구성 요소에 대해 작업해야 합니다.
+이 안내서에서는 Adobe Experience Platform의 다음 구성 요소를 이해하고 있어야 합니다.
 
-* [일괄 처리](../../ingestion/batch-ingestion/overview.md): [!DNL Experience Platform] 데이터를 일괄 처리 파일로 인제스트할 수 있습니다.
-* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md):고객 경험 데이터를  [!DNL Experience Platform] 구성하는 표준화된 프레임워크
-* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] 디지털 경험 애플리케이션을 개발 및 발전시키는 데 도움이 되도록 단일  [!DNL Platform] 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
+* [일괄 수집](../../ingestion/batch-ingestion/overview.md): [!DNL Experience Platform] 데이터를 배치 파일로 수집할 수 있습니다.
+* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md):고객 경험 데이터를  [!DNL Experience Platform] 구성하는 표준화된 프레임워크입니다.
+* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] 에서는 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이  [!DNL Platform] 되는 단일 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
 
-다음 섹션에서는 [!DNL Platform] API를 성공적으로 호출하기 위해 알아야 할 추가 정보를 제공합니다.
+다음 섹션에서는 [!DNL Platform] API를 성공적으로 호출하기 위해 알고 있어야 하는 추가 정보를 제공합니다.
 
 ### 샘플 API 호출 읽기
 
-이 자습서에서는 요청의 서식을 지정하는 방법을 보여주는 API 호출 예를 제공합니다. 여기에는 경로, 필수 헤더 및 올바른 형식의 요청 페이로드가 포함됩니다. API 응답으로 반환된 샘플 JSON도 제공됩니다. 샘플 API 호출에 대한 설명서에 사용된 규칙에 대한 자세한 내용은 [!DNL Experience Platform] 문제 해결 안내서의 [API 호출 예](../../landing/troubleshooting.md#how-do-i-format-an-api-request)를 읽는 방법에 대한 섹션을 참조하십시오.
+이 자습서에서는 요청 형식을 지정하는 방법을 보여주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 올바른 형식의 요청 페이로드가 포함됩니다. API 응답으로 반환되는 샘플 JSON도 제공됩니다. 샘플 API 호출에 대한 설명서에 사용된 규칙에 대한 자세한 내용은 [!DNL Experience Platform] 문제 해결 안내서에서 [예제 API 호출](../../landing/troubleshooting.md#how-do-i-format-an-api-request)를 읽는 방법 섹션을 참조하십시오.
 
-### 필수 헤더에 대한 값 수집
+### 필수 헤더에 대한 값을 수집합니다
 
-[!DNL Platform] API를 호출하려면 먼저 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 완료해야 합니다. 인증 자습서를 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
+[!DNL Platform] API를 호출하려면 먼저 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 완료해야 합니다. 인증 자습서를 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출에 필요한 각 헤더에 대한 값을 제공합니다.
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {IMS_ORG}`
 
-[!DNL Experience Platform]의 모든 리소스는 특정 가상 샌드박스로 분리됩니다. [!DNL Platform] API에 대한 모든 요청에는 작업이 수행할 샌드박스의 이름을 지정하는 헤더가 필요합니다.
+[!DNL Experience Platform]의 모든 리소스는 특정 가상 샌드박스로 구분됩니다. [!DNL Platform] API에 대한 모든 요청에는 작업이 수행될 샌드박스의 이름을 지정하는 헤더가 필요합니다.
 
-* x-sandbox-name:`{SANDBOX_NAME}`
+* x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
 >[!DNL Platform]의 샌드박스에 대한 자세한 내용은 [샌드박스 개요 설명서](../../sandboxes/home.md)를 참조하십시오.
 
-페이로드(POST, PUT, PATCH)을 포함하는 모든 요청에는 추가 헤더가 필요합니다.
+페이로드(POST, PUT, PATCH)이 포함된 모든 요청에는 추가 헤더가 필요합니다.
 
 * 컨텐츠 유형:application/json
 
 ## 튜토리얼
 
-데이터 집합을 만들려면 먼저 스키마를 정의해야 합니다. 스키마는 데이터를 나타내는 데 도움이 되는 규칙 세트입니다. 스키마는 데이터 구조를 설명하는 것 외에도 시스템 간에 이동할 때 적용할 수 있고 데이터를 검증하는 데 사용할 수 있는 제한과 기대를 제공합니다.
+데이터 세트를 만들려면 먼저 스키마를 정의해야 합니다. 스키마는 데이터를 나타내는 데 도움이 되는 규칙 세트입니다. 스키마는 데이터 구조를 설명하는 것 외에도 시스템 간에 이동할 때 데이터를 확인하고 적용하는 데 사용할 수 있는 제한성과 기대를 제공합니다.
 
-이러한 표준 정의를 통해 원본 데이터에 상관없이 일관된 방식으로 데이터를 해석할 수 있고 애플리케이션 간에 번역에 대한 필요성을 제거할 수 있습니다. 스키마 구성에 대한 자세한 내용은 스키마 컴포지션](../../xdm/schema/composition.md)의 [기본 사항에 대한 안내서를 참조하십시오.
+이러한 표준 정의를 사용하면 출처에 관계없이 일관되게 데이터를 해석할 수 있으며 응용 프로그램 간에 번역이 필요하지 않습니다. 스키마 구성에 대한 자세한 내용은 스키마 구성](../../xdm/schema/composition.md)의 기본 사항에 대한 안내서를 참조하십시오[
 
-## 데이터 집합 스키마 찾기
+## 데이터 집합 스키마 조회
 
-이 자습서는 [스키마 레지스트리 API 자습서](../../xdm/tutorials/create-schema-api.md)가 끝나는 지점에서 시작하여 해당 자습서 중에 만든 충성도 멤버 스키마를 사용합니다.
+이 자습서는 [스키마 레지스트리 API 자습서](../../xdm/tutorials/create-schema-api.md)가 종료되는 부분에서 시작되며, 이 자습서 중에 만들어진 충성도 멤버 스키마를 사용합니다.
 
-[!DNL Schema Registry] 튜토리얼을 완료하지 않은 경우 여기에서 시작하여 필요한 스키마를 구성한 경우에만 이 데이터 집합 자습서를 계속 진행하십시오.
+[!DNL Schema Registry] 자습서를 완료하지 않았다면 거기에서 시작하여 필요한 스키마를 구성한 후에만 이 데이터 집합 자습서를 계속 진행하십시오.
 
-다음 호출을 사용하여 [!DNL Schema Registry] API 자습서 중에 만든 충성도 구성원 스키마를 볼 수 있습니다.
+다음 호출을 사용하여 [!DNL Schema Registry] API 자습서 중에 만든 충성도 멤버 스키마를 볼 수 있습니다.
 
 **API 형식**
 
@@ -85,7 +84,7 @@ curl -X GET \
 
 **응답**
 
-응답 개체의 형식은 요청에서 보낸 수락 헤더에 따라 달라집니다. 이 응답의 개별 속성은 공간에 대해 최소화되었습니다.
+응답 개체의 형식은 요청에서 보낸 Accept 헤더에 따라 다릅니다. 이 응답의 개별 속성이 공간에 대해 최소화되었습니다.
 
 ```JSON
 {
@@ -103,7 +102,7 @@ curl -X GET \
         "https://ns.adobe.com/xdm/common/auditable",
         "https://ns.adobe.com/xdm/context/profile-person-details",
         "https://ns.adobe.com/xdm/context/profile-personal-details",
-        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62"
+        "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"
     ],
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
@@ -179,9 +178,9 @@ curl -X GET \
 }
 ```
 
-## 데이터 세트 만들기
+## 데이터 집합 만들기
 
-충성도 구성원 스키마를 적절히 사용하여 이제 스키마를 참조하는 데이터 세트를 만들 수 있습니다.
+충성도 멤버 스키마가 있으면 이제 스키마를 참조하는 데이터 세트를 만들 수 있습니다.
 
 **API 형식**
 
@@ -210,16 +209,16 @@ curl -X POST \
 
 | 속성 | 설명 |
 | --- | --- |
-| `schemaRef.id` | 데이터 세트에 기반이 되는 XDM 스키마의 URI `$id` 값입니다. |
-| `schemaRef.contentType` | 스키마의 형식 및 버전을 나타냅니다. 자세한 내용은 XDM API 안내서의 [스키마 버전 관리](../../xdm/api/getting-started.md#versioning)에 대한 섹션을 참조하십시오. |
+| `schemaRef.id` | 데이터 세트가 기반으로 할 XDM 스키마의 URI `$id` 값입니다. |
+| `schemaRef.contentType` | 스키마의 형식 및 버전을 나타냅니다. 자세한 내용은 XDM API 안내서의 [스키마 버전 관리](../../xdm/api/getting-started.md#versioning)의 섹션을 참조하십시오. |
 
 >[!NOTE]
 >
->이 자습서에서는 모든 예에 대해 [Apache Parided](https://parquet.apache.org/documentation/latest/) 파일 형식을 사용합니다. JSON 파일 형식을 사용하는 예는 [일괄 처리 통합 개발자 가이드](../../ingestion/batch-ingestion/api-overview.md)에서 찾을 수 있습니다.
+>이 자습서에서는 모든 예제에 [Apache Parquet](https://parquet.apache.org/documentation/latest/) 파일 형식을 사용합니다. JSON 파일 형식을 사용하는 예는 [배치 수집 개발자 안내서](../../ingestion/batch-ingestion/api-overview.md)에서 찾을 수 있습니다
 
 **응답**
 
-성공적인 응답은 HTTP 상태 201(만들어짐)과 새로 만든 데이터 세트의 ID를 `"@/datasets/{DATASET_ID}"` 형식으로 포함하는 배열로 구성된 응답 개체를 반환합니다. 데이터 세트 ID는 API 호출에서 데이터 세트를 참조하는 데 사용되는 읽기 전용 시스템 생성 문자열입니다.
+성공적인 응답은 HTTP 상태 201(생성됨) 및 새로 생성된 데이터 세트의 ID가 `"@/datasets/{DATASET_ID}"` 형식으로 포함된 배열로 구성된 응답 개체를 반환합니다. 데이터 세트 ID는 API 호출에서 데이터 세트를 참조하는 데 사용되는 읽기 전용 시스템 생성 문자열입니다.
 
 ```JSON
 [
@@ -227,9 +226,9 @@ curl -X POST \
 ]
 ```
 
-## 일괄 처리 만들기
+## 배치 만들기
 
-데이터 세트에 데이터를 추가하려면 먼저 데이터 세트에 연결된 배치를 만들어야 합니다. 그런 다음 일괄 처리를 업로드에 사용합니다.
+데이터 세트에 데이터를 추가하려면 먼저 데이터 세트에 연결된 일괄 처리를 만들어야 합니다. 그런 다음 일괄 처리를 업로드에 사용합니다.
 
 **API 형식**
 
@@ -239,7 +238,7 @@ POST /batches
 
 **요청**
 
-요청 본문에는 &quot;datasetId&quot; 필드가 포함되어 있으며 이 필드의 값은 이전 단계에서 생성된 `{DATASET_ID}`입니다.
+요청 본문에 &quot;datasetId&quot; 필드가 포함되어 있으며 이 필드의 값은 이전 단계에서 생성된 `{DATASET_ID}`입니다.
 
 ```SHELL
 curl -X POST 'https://platform.adobe.io/data/foundation/import/batches' \
@@ -256,7 +255,7 @@ curl -X POST 'https://platform.adobe.io/data/foundation/import/batches' \
 
 **응답**
 
-성공적인 응답은 HTTP 상태 201(생성됨) 및 새로 만든 일괄 처리에 대한 세부 사항을 포함하는 응답 개체(예: `id`, 읽기 전용 시스템 생성 문자열)를 반환합니다.
+성공적인 응답은 HTTP 상태 201(생성됨) 및 읽기 전용 시스템 생성 문자열 `id` 을 포함하여 새로 생성된 일괄 처리의 세부 사항이 포함된 응답 개체를 반환합니다.
 
 ```JSON
 {
@@ -293,13 +292,13 @@ curl -X POST 'https://platform.adobe.io/data/foundation/import/batches' \
 }
 ```
 
-## 일괄 처리에 파일 업로드
+## 파일을 배치에 업로드
 
-업로드용 새 일괄 처리를 성공적으로 만든 후 이제 특정 데이터 세트에 파일을 업로드할 수 있습니다. 데이터 세트를 정의할 때 파일 형식을 Portailored로 지정해야 합니다. 따라서 업로드하는 파일은 해당 형식이어야 합니다.
+이제 업로드할 새 일괄 처리를 성공적으로 만든 후 파일을 특정 데이터 세트에 업로드할 수 있습니다. 데이터 세트를 정의할 때 파일 형식을 Parquet으로 지정했다는 것을 기억해야 합니다. 따라서 업로드하는 파일은 해당 형식이어야 합니다.
 
 >[!NOTE]
 >
->지원되는 최대 데이터 업로드 파일은 512MB입니다. 데이터 파일이 이보다 크면 한 번에 하나씩 업로드하려면 512MB 이하의 청크로 분할해야 합니다. 동일한 배치 ID를 사용하여 각 파일에 대해 이 단계를 반복하여 동일한 일괄 처리에 있는 각 파일을 업로드할 수 있습니다. 파일을 일괄 처리의 일부로 업로드할 수 있는 경우 수에 제한이 없습니다.
+>지원되는 최대 데이터 업로드 파일은 512MB입니다. 데이터 파일이 이보다 큰 경우 한 번에 하나씩 업로드하려면 512MB보다 큰 청크로 분할해야 합니다. 동일한 배치 ID를 사용하여 각 파일에 대해 이 단계를 반복하여 각 파일을 동일한 배치에 업로드할 수 있습니다. 파일을 일괄 처리의 일부로 업로드할 수 있는 경우에는 수에 제한이 없습니다.
 
 **API 형식**
 
@@ -309,9 +308,9 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{BATCH_ID}` | 업로드하고 있는 배치의 `id`. |
-| `{DATASET_ID}` | 일괄 처리가 지속되는 데이터 세트의 `id` |
-| `{FILE_NAME}` | 업로드하려는 파일의 이름입니다. |
+| `{BATCH_ID}` | 업로드 중인 일괄 처리의 `id` 입니다. |
+| `{DATASET_ID}` | 일괄 처리가 유지되는 데이터 집합의 `id` |
+| `{FILE_NAME}` | 업로드 중인 파일의 이름입니다. |
 
 **요청**
 
@@ -326,11 +325,11 @@ curl -X PUT 'https://platform.adobe.io/data/foundation/import/batches/5d01230fc7
 
 **응답**
 
-업로드된 파일이 빈 응답 본문과 HTTP 상태 200(확인)을 반환합니다.
+파일을 업로드하면 빈 응답 본문과 HTTP 상태 200(OK)이 반환됩니다.
 
-## 신호 일괄 완료
+## 신호 배치 완료
 
-모든 데이터 파일을 일괄 처리로 업로드한 후 일괄 처리를 완료하도록 신호를 보낼 수 있습니다. 신호 완료 시 서비스는 업로드된 파일에 대해 [!DNL Catalog] `DataSetFile` 항목을 만들고 이전에 생성된 일괄 처리에 연결합니다. [!DNL Catalog] 일괄 처리가 성공적으로 표시되어 현재 사용 가능한 데이터에서 작동할 수 있는 모든 다운스트림 흐름을 트리거합니다.
+모든 데이터 파일을 배치에 업로드한 후 배치에 완료 신호를 보낼 수 있습니다. 시그널링 완료 를 수행하면 서비스가 업로드된 파일에 대해 [!DNL Catalog] `DataSetFile` 항목을 만들고 이전에 생성한 일괄 처리에 연결합니다. [!DNL Catalog] 일괄 처리가 성공적으로 표시되어 현재 사용 가능한 데이터에서 작동할 수 있는 다운스트림 흐름을 트리거합니다.
 
 **API 형식**
 
@@ -340,7 +339,7 @@ POST /batches/{BATCH_ID}?action=COMPLETE
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{BATCH_ID}` | 완료 상태로 표시하려는 배치의 `id`. |
+| `{BATCH_ID}` | 완료된 것으로 표시하는 일괄 처리의 `id` 입니다. |
 
 **요청**
 
@@ -353,11 +352,11 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches/5d01230fc
 
 **응답**
 
-성공적으로 일괄 처리를 완료하면 빈 응답 본문과 HTTP 상태 200(확인)이 반환됩니다.
+성공적으로 완료된 일괄 처리는 빈 응답 본문과 HTTP 상태 200(OK)을 반환합니다.
 
-## 통합 모니터링
+## 수집 모니터링
 
-데이터 크기에 따라 일괄 처리에는 인제스트하는 데 시간이 다양하게 소요됩니다. `GET /batches` 요청에 배치의 ID가 포함된 `batch` 요청 매개 변수를 추가하여 일괄 처리의 상태를 모니터링할 수 있습니다. API는 응답의 `status`이 완료(&quot;성공&quot; 또는 &quot;실패&quot;)를 나타낼 때까지 일괄 처리 상태에 대한 데이터 세트를 폴링합니다.
+데이터 크기에 따라 배치는 수집하는 데 걸리는 시간이 다릅니다. 배치 ID가 포함된 `batch` 요청 매개 변수를 `GET /batches` 요청에 추가하여 일괄 처리의 상태를 모니터링할 수 있습니다. API는 응답의 `status`이 완료(&quot;성공&quot; 또는 &quot;실패&quot;)를 나타낼 때까지 일괄 처리의 상태에 대한 데이터 세트를 폴링합니다.
 
 **API 형식**
 
@@ -367,7 +366,7 @@ GET /batches?batch={BATCH_ID}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{BATCH_ID}` | 모니터링할 일괄 처리 `id`. |
+| `{BATCH_ID}` | 모니터링할 일괄 처리의 `id` |
 
 **요청**
 
@@ -382,7 +381,7 @@ curl -X GET \
 
 **응답**
 
-양의 응답은 `success` 값을 포함하는 `status` 특성이 있는 객체를 반환합니다.
+양의 응답은 `success` 값을 포함하는 `status` 특성이 있는 개체를 반환합니다.
 
 ```JSON
 {
@@ -414,7 +413,7 @@ curl -X GET \
 }
 ```
 
-음수 응답은 `"status"` 특성에서 `"failed"` 값을 가진 개체를 반환하고 관련 오류 메시지를 포함합니다.
+음수 응답은 해당 `"status"` 특성에서 `"failed"` 값을 갖는 개체를 반환하고, 관련된 오류 메시지를 포함합니다.
 
 ```JSON
 {
@@ -462,18 +461,18 @@ curl -X GET \
 
 ## 데이터 세트에서 데이터 읽기
 
-배치 ID를 사용하면 데이터 액세스 API를 사용하여 일괄 처리에 업로드된 모든 파일을 다시 읽고 확인할 수 있습니다. 응답에서는 파일 ID 목록이 포함된 배열을 반환하며, 각 ID는 일괄 처리에서 파일을 참조합니다.
+배치 ID를 사용하여 데이터 액세스 API를 사용하여 배치에 업로드된 모든 파일을 읽고 확인할 수 있습니다. 이 응답은 파일 ID 목록이 포함된 배열을 반환하며 각 시퀀스는 일괄 처리의 파일을 참조합니다.
 
 데이터 액세스 API를 사용하여 이름, 크기(바이트) 및 파일 또는 폴더를 다운로드할 수 있는 링크를 반환할 수도 있습니다.
 
-데이터 액세스 API 작업에 대한 자세한 단계는 [데이터 액세스 개발자 안내서](../../data-access/home.md)에서 확인할 수 있습니다.
+데이터 액세스 API 작업에 대한 자세한 단계는 [데이터 액세스 개발자 안내서](../../data-access/home.md)에 있습니다.
 
 ## 데이터 집합 스키마 업데이트
 
-만든 데이터 세트에 필드를 추가하고 추가 데이터를 인제스트할 수 있습니다. 이렇게 하려면 먼저 새 데이터를 정의하는 추가 속성을 추가하여 스키마를 업데이트해야 합니다. PATCH 및/또는 PUT 작업을 사용하여 기존 스키마를 업데이트할 수 있습니다.
+필드를 추가하고 생성한 데이터 세트에 추가 데이터를 수집할 수 있습니다. 이렇게 하려면 먼저 새 데이터를 정의하는 추가 속성을 추가하여 스키마를 업데이트해야 합니다. PATCH 및/또는 PUT 작업을 사용하여 기존 스키마를 업데이트할 수 있습니다.
 
 스키마 업데이트에 대한 자세한 내용은 [스키마 레지스트리 API 개발자 안내서](../../xdm/api/getting-started.md)를 참조하십시오.
 
-스키마를 업데이트한 후에는 이 튜토리얼의 단계를 다시 수행하여 수정된 스키마를 따르는 새 데이터를 인제스트할 수 있습니다.
+스키마를 업데이트했으면 이 자습서의 단계에 다시 따라 수정된 스키마를 준수하는 새 데이터를 수집할 수 있습니다.
 
-스키마 진화는 순전히 부가적임을 기억해야 합니다. 즉, 스키마 변경이 레지스트리에 저장되고 데이터 수집에 사용된 후 새로운 변경 사항을 적용할 수 없습니다. Adobe Experience Platform과 함께 사용하기 위해 스키마를 작성하기 위한 우수 사례에 대한 자세한 내용은 스키마 컴포지션](../../xdm/schema/composition.md)의 [기본 사항에 대한 안내서를 참조하십시오.
+스키마 진화는 순전히 첨가제라는 것을 기억해야 합니다. 즉, 스키마 진화가 레지스트리에 저장되고 데이터 섭취에 사용된 후에는 스키마를 변경해서는 안 됩니다. Adobe Experience Platform에서 사용할 스키마를 작성하기 위한 모범 사례에 대한 자세한 내용은 스키마 구성](../../xdm/schema/composition.md)의 [기본 사항에 대한 안내서를 참조하십시오.
