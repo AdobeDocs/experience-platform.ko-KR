@@ -5,10 +5,10 @@ title: 감사 로그 API 끝점
 description: 스키마 레지스트리 API의 /auditlog 종단점을 사용하면 기존 XDM 리소스에 대한 변경 사항을 시간 순서대로 가져올 수 있습니다.
 topic-legacy: developer guide
 exl-id: 8d33ae7c-0aa4-4f38-a183-a2ff1801e291
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
 workflow-type: tm+mt
 source-wordcount: '406'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 각 XDM(Experience Data Model) 리소스에 대해 [!DNL Schema Registry]은(는) 다른 업데이트 간에 발생한 모든 변경 사항의 로그를 유지합니다. [!DNL Schema Registry] API의 `/auditlog` 종단점을 사용하면 ID로 지정된 클래스, 스키마 필드 그룹, 데이터 유형 또는 스키마에 대한 감사 로그를 검색할 수 있습니다.
 
-## 시작하기
+## 시작
 
 이 안내서에 사용된 엔드포인트는 [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)의 일부입니다. 계속하기 전에 [시작 안내서](./getting-started.md)에서 관련 설명서에 대한 링크, 이 문서에서 샘플 API 호출을 읽는 방법에 대한 안내서, 모든 Experience Platform API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요한 정보를 검토하십시오.
 
@@ -44,7 +44,7 @@ GET /rpc/auditlog/{RESOURCE_ID}
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/foundation/schemaregistry/rpc/auditlog/_{TENANT_ID}.fieldgroups.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9 \
+  https://platform.adobe.io/data/foundation/schemaregistry/rpc/auditlog/_{TENANT_ID}.mixins.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -58,11 +58,11 @@ curl -X GET \
 ```json
 [
   {
-    "id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+    "id": "https://ns.adobe.com/{TENANT_ID}/mixins/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
     "auditTrails": [
       {
-        "id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-        "xdmType": "fieldgroups",
+        "id": "https://ns.adobe.com/{TENANT_ID}/mixins/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+        "xdmType": "mixins",
         "action": "add",
         "path": "/definitions/customFields/properties/_{TENANT_ID}/properties/brand",
         "value": {
@@ -74,8 +74,8 @@ curl -X GET \
         }
       },
       {
-        "id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-        "xdmType": "fieldgroups",
+        "id": "https://ns.adobe.com/{TENANT_ID}/mixins/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+        "xdmType": "mixins",
         "action": "add",
         "path": "/meta:usageCount",
         "value": 0
