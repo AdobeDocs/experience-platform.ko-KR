@@ -4,9 +4,9 @@ title: 실시간 고객 프로필 UI 안내서
 topic-legacy: guide
 description: 실시간 고객 프로필은 각 개별 고객에 대한 전체적인 보기를 만들어 온라인, 오프라인, CRM 및 타사 데이터를 포함하여 여러 채널의 데이터를 결합합니다. 이 문서는 Adobe Experience Platform 사용자 인터페이스에서 실시간 고객 프로필과 상호 작용하는 안내서의 역할을 합니다.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: db094aac82b1d0a6671c213f3e98824f828771ab
+source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
 workflow-type: tm+mt
-source-wordcount: '1303'
+source-wordcount: '1319'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 [!DNL Real-time Customer Profile] 에서는 온라인, 오프라인, CRM 및 타사 데이터를 포함하여 여러 채널의 데이터를 결합하여 각 개별 고객을 전체적으로 볼 수 있습니다. 이 문서는 Adobe Experience Platform UI(사용자 인터페이스)의 [!DNL Real-time Customer Profile] 데이터와 상호 작용하기 위한 안내서의 역할을 합니다.
 
-## 시작하기
+## 시작
 
 이 UI 안내서에서는 [!DNL Real-time Customer Profiles] 관리와 관련된 다양한 [!DNL Experience Platform] 서비스를 이해해야 합니다. 이 안내서를 읽거나 UI에서 작업하기 전에 다음 서비스에 대한 설명서를 검토하십시오.
 
@@ -25,15 +25,19 @@ ht-degree: 0%
 
 ## 개요
 
-Experience Platform UI의 왼쪽 탐색 영역에서 **[!UICONTROL 프로필]**&#x200B;을 선택하여 **[!UICONTROL 개요]** 탭을 엽니다. 이 탭에서는 프로필을 이해하고 작업할 수 있는 설명서 및 비디오에 대한 링크를 제공합니다.
+Experience Platform UI의 왼쪽 탐색 영역에서 **[!UICONTROL 프로필]**&#x200B;을 선택하여 **[!UICONTROL 개요]** 탭을 열고 [!UICONTROL 프로필] 대시보드를 표시합니다.
 
-![](../images/user-guide/profiles-overview.png)
+>[!NOTE]
+>
+>조직이 Platform을 처음 사용하고 아직 활성 프로필 데이터 세트 또는 병합 정책이 만들어지지 않은 경우 [!UICONTROL 프로필] 대시보드가 표시되지 않습니다. 대신 [!UICONTROL 개요] 탭에는 실시간 고객 프로필을 시작하는 데 도움이 되는 링크와 설명서가 표시됩니다.
 
-### 프로필 대시보드
+###  프로필 대시보드  {#profile-dashboard}
 
-일부 사용자의 경우 왼쪽 탐색에서 **[!UICONTROL 프로필]**&#x200B;을 선택하고 **[!UICONTROL 개요]** 탭을 열면 프로필 데이터와 관련된 주요 지표에 대한 개요를 제공하는 대시보드가 제공됩니다.
+**[!UICONTROL 프로필]** 대시보드는 조직의 프로필 데이터와 관련된 주요 지표에 대해 설명합니다.
 
-자세한 내용은 [프로필 대시보드 안내서](profile-dashboard.md)를 참조하십시오.
+자세한 내용은 [프로필 대시보드 안내서](../../dashboards/guides/profiles.md)를 참조하십시오.
+
+![](../../dashboards/images/profiles/dashboard-overview.png)
 
 ## 찾아보기
 
