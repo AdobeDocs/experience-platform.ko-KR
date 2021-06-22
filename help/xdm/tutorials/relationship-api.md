@@ -6,10 +6,10 @@ description: 이 문서에서는 스키마 레지스트리 API를 사용하여 �
 topic-legacy: tutorial
 type: Tutorial
 exl-id: ef9910b5-2777-4d8b-a6fe-aee51d809ad5
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
 workflow-type: tm+mt
 source-wordcount: '1369'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 이 문서에서는 [[!DNL Schema Registry API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)을 사용하여 조직에서 정의한 두 스키마 간의 일대일 관계를 정의하는 자습서를 제공합니다.
 
-## 시작하기
+## 시작
 
 이 자습서에서는 [!DNL Experience Data Model](XDM) 및 [!DNL XDM System]에 대한 작업 이해를 필요로 합니다. 이 자습서를 시작하기 전에 다음 설명서를 검토하십시오.
 
@@ -179,9 +179,9 @@ curl -X POST\
 
 ```json
 {
-    "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/3387945212ad76ee59b6d2b964afb220",
-    "meta:altId": "_{TENANT_ID}.fieldgroups.3387945212ad76ee59b6d2b964afb220",
-    "meta:resourceType": "fieldgroups",
+    "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/3387945212ad76ee59b6d2b964afb220",
+    "meta:altId": "_{TENANT_ID}.mixins.3387945212ad76ee59b6d2b964afb220",
+    "meta:resourceType": "mixins",
     "version": "1.0",
     "type": "object",
     "title": "Favorite Hotel",
@@ -267,7 +267,7 @@ curl -X PATCH \
       "op": "add", 
       "path": "/allOf/-", 
       "value":  {
-        "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/3387945212ad76ee59b6d2b964afb220"
+        "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/3387945212ad76ee59b6d2b964afb220"
       }
     }
   ]'
@@ -305,13 +305,13 @@ curl -X PATCH \
             "$ref": "https://ns.adobe.com/xdm/context/profile-personal-details"
         },
         {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/ec16dfa484358f80478b75cde8c430d3"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/ec16dfa484358f80478b75cde8c430d3"
         },
         {
             "$ref": "https://ns.adobe.com/xdm/context/identitymap"
         },
         {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/3387945212ad76ee59b6d2b964afb220"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/3387945212ad76ee59b6d2b964afb220"
         }
     ],
     "meta:containerId": "tenant",
@@ -328,8 +328,8 @@ curl -X PATCH \
         "https://ns.adobe.com/xdm/common/auditable",
         "https://ns.adobe.com/xdm/context/profile-person-details",
         "https://ns.adobe.com/xdm/context/profile-personal-details",
-        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/ec16dfa484358f80478b75cde8c430d3",
-        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/61969bc646b66a6230a7e8840f4a4d33"
+        "https://ns.adobe.com/{TENANT_ID}/mixins/ec16dfa484358f80478b75cde8c430d3",
+        "https://ns.adobe.com/{TENANT_ID}/mixins/61969bc646b66a6230a7e8840f4a4d33"
     ],
     "meta:xdmType": "object",
     "meta:registryMetadata": {
