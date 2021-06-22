@@ -4,9 +4,9 @@ title: 대상 대시보드
 description: Adobe Experience Platform은 조직의 활성 대상에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 8312d1523ab68dd0a4ba437dd826adde544838fe
+source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
 workflow-type: tm+mt
-source-wordcount: '744'
+source-wordcount: '792'
 ht-degree: 0%
 
 ---
@@ -28,6 +28,10 @@ Adobe Experience Platform UI(사용자 인터페이스)는 일별 스냅샷 중�
 ## 대상 대시보드 탐색
 
 Platform UI 내의 대상 대시보드로 이동하려면 왼쪽 레일에서 **[!UICONTROL 대상]**&#x200B;을 선택한 다음 **[!UICONTROL 개요]** 탭을 선택하여 대시보드를 표시합니다.
+
+>[!NOTE]
+>
+>조직이 Experience Platform을 처음 사용하고 아직 활성 대상이 없는 경우 [!UICONTROL 대상] 대시보드 및 [!UICONTROL 개요] 탭이 표시되지 않습니다. 대신 왼쪽 탐색에서 [!UICONTROL 대상]을 선택하면 [!UICONTROL 카탈로그] 탭이 표시됩니다. [!UICONTROL Catalog] 탭에 대한 자세한 내용은 [[!UICONTROL 대상] 작업 공간 안내서](../../destinations/ui/destinations-workspace.md)를 참조하십시오.
 
 ![](../images/destinations/dashboard-overview.png)
 
