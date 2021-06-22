@@ -1,9 +1,8 @@
 ---
-title: Adobe Experience Platform 웹 SDK 확장의 데이터 요소 유형
-description: Adobe Experience Platform Launch의 Adobe Experience Platform Web SDK 익스텐션에서 제공하는 다양한 데이터 요소 유형에 대해 알아보십시오.
+title: Adobe Experience Platform Web SDK Extension의 데이터 요소 유형
+description: Adobe Experience Platform Launch에서 Adobe Experience Platform Web SDK 확장에서 제공하는 다양한 데이터 요소 유형에 대해 알아봅니다.
 exl-id: 3c2c257f-1fbc-4722-8040-61ad19aa533f
-translation-type: tm+mt
-source-git-commit: 3f7808a08d033c5940d2115006c269b8c4079822
+source-git-commit: 5a295a1f6e64c33ac4a48e1d74253d0527f495f9
 workflow-type: tm+mt
 source-wordcount: '305'
 ht-degree: 47%
@@ -12,9 +11,9 @@ ht-degree: 47%
 
 # 데이터 요소 유형
 
-[Adobe Experience Platform Launch](https://experienceleague.adobe.com/docs/launch.html)용 [Adobe Experience Platform 웹 SDK 확장](web-sdk-extension.md)에서 [작업 유형](action-types.md)을 설정한 후 데이터 요소 유형을 구성합니다.
+[Adobe Experience Platform Web SDK 확장 프로그램](web-sdk-extension-configuration.md)에서 [작업 유형을 ](action-types.md)Adobe Experience Platform Launch](https://experienceleague.adobe.com/docs/launch.html)에 설정한 후 데이터 요소 유형을 구성합니다.[
 
-이 페이지에서는 사용 가능한 데이터 요소 유형에 대해 설명합니다.
+이 페이지에서는 사용 가능한 데이터 요소 유형을 설명합니다.
 
 ## 이벤트 병합 ID
 
@@ -22,13 +21,13 @@ ht-degree: 47%
 
 ## ID 맵
 
-이 ID 맵 데이터 요소를 사용하면 다른 데이터 요소 또는 지정한 다른 값에서 ID를 만들 수 있습니다. 만드는 모든 ID는 해당 네임스페이스에 다시 연결해야 합니다. 이 데이터 요소는 모든 기본 네임스페이스와 사용자가 만든 모든 네임스페이스를 보여주는 드롭다운을 제공합니다.
+이 ID 맵 데이터 요소를 사용하면 다른 데이터 요소 또는 지정한 다른 값에서 ID를 만들 수 있습니다. 만드는 모든 ID는 해당 네임스페이스에 다시 연결해야 합니다. 이 데이터 요소는 모든 기본 네임스페이스와 사용자가 만든 모든 네임스페이스를 표시하는 드롭다운을 제공합니다.
 
 ![](./assets/identity-map-data-element.png)
 
 ## XDM 개체 {#xdm-object}
 
-XDM 포맷을 사용하여 모든 데이터를 Adobe Experience Platform Web SDK로 전송할 수 있습니다. XDM 개체 데이터 요소를 사용하면 데이터 형식을 보다 손쉽게 지정할 수 있습니다. 이 데이터 요소를 처음 열면 올바른 Adobe Experience Platform 샌드박스 및 스키마를 선택합니다. 스키마를 선택한 후에는 스키마 구조를 볼 수 있으므로 손쉽게 작성할 수 있습니다.
+XDM 형식을 사용하여 데이터를 Adobe Experience Platform Web SDK에 보냅니다. XDM 개체 데이터 요소를 사용하면 데이터 형식을 보다 손쉽게 지정할 수 있습니다. 이 데이터 요소를 처음 열면 올바른 Adobe Experience Platform 샌드박스 및 스키마를 선택합니다. 스키마를 선택하면 쉽게 작성할 수 있는 스키마 구조가 표시됩니다.
 
 ![](./assets/XDM-object.png)
 
@@ -36,4 +35,4 @@ XDM 포맷을 사용하여 모든 데이터를 Adobe Experience Platform Web SDK
 
 >[!NOTE]
 >
->수집하고자 하는 정보만 작성하십시오. 채워지지 않은 모든 내용은 데이터를 솔루션으로 보낼 때 생략됩니다.
+>수집하고자 하는 사항만 작성하십시오. 이 채워지지 않은 모든 것은 데이터가 솔루션으로 전송될 때 생략됩니다.
