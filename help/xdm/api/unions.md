@@ -5,10 +5,10 @@ title: 결합 API 끝점
 description: 스키마 레지스트리 API의 /union 종단점을 사용하면 경험 애플리케이션에서 XDM 결합 스키마를 프로그래밍 방식으로 관리할 수 있습니다.
 topic-legacy: developer guide
 exl-id: d0ece235-72e8-49d9-856b-5dba44e16ee7
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
 workflow-type: tm+mt
 source-wordcount: '915'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -152,7 +152,7 @@ curl -X GET \
             "$ref": "https://ns.adobe.com/xdm/context/profile-person-details"
         },
         {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/477bb01d7125b015b4feba7bccc2e599"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/477bb01d7125b015b4feba7bccc2e599"
         },
         {
             "$ref": "https://ns.adobe.com/xdm/context/profile-personal-details"
@@ -165,7 +165,7 @@ curl -X GET \
         "https://ns.adobe.com/xdm/common/extensible",
         "https://ns.adobe.com/xdm/common/auditable",
         "https://ns.adobe.com/xdm/context/profile-person-details",
-        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/477bb01d7125b015b4feba7bccc2e599",
+        "https://ns.adobe.com/{TENANT_ID}/mixins/477bb01d7125b015b4feba7bccc2e599",
         "https://ns.adobe.com/xdm/context/profile-personal-details"
     ],
     "title": "Union object for https://ns.adobe.com/xdm/context/profile",
