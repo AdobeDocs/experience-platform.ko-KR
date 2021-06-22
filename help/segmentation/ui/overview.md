@@ -5,9 +5,9 @@ title: 세그멘테이션 서비스 UI 안내서
 topic-legacy: ui guide
 description: Adobe Experience Platform 세그멘테이션 서비스는 세그먼트 정의를 만들고 관리하기 위한 사용자 인터페이스를 제공합니다.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 998332007465c1f8457b5d8cf0e153d513505d39
+source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
 workflow-type: tm+mt
-source-wordcount: '1547'
+source-wordcount: '1561'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 [!DNL Adobe Experience Platform Segmentation Service] 세그먼트 정의를 만들고 관리하기 위한 사용자 인터페이스를 제공합니다.
 
-## 시작하기
+## 시작
 
 세그먼트 정의를 사용하려면 세그먼테이션과 관련된 다양한 [!DNL Experience Platform] 서비스를 이해해야 합니다. 이 사용 안내서를 읽기 전에 다음 서비스에 대한 설명서를 검토하십시오.
 
@@ -31,15 +31,19 @@ ht-degree: 0%
 
 ## 개요
 
-[[!DNL Experience Platform] UI](https://platform.adobe.com/)의 왼쪽 탐색에서 **[!UICONTROL 세그먼트]**&#x200B;를 선택하여 **[!UICONTROL 개요]** 탭을 엽니다. 이 탭에서는 세그먼트를 이해하고 세그먼트 작업을 시작하는 데 도움이 되는 설명서 및 비디오에 대한 링크를 제공합니다.
+Experience Platform UI의 왼쪽 탐색 영역에서 **[!UICONTROL 세그먼트]**&#x200B;를 선택하여 **[!UICONTROL 개요]** 탭을 열고 [!UICONTROL 세그먼트] 대시보드를 표시합니다.
 
-![](../images/ui/overview/segment-overview.png)
+>[!NOTE]
+>
+>조직이 Platform을 처음 사용하고 아직 활성 프로필 데이터 세트 또는 병합 정책이 만들어지지 않은 경우 [!UICONTROL 세그먼트] 대시보드가 표시되지 않습니다. 대신 [!UICONTROL 개요] 탭에는 세그먼트를 시작하는 데 도움이 되는 링크와 설명서가 표시됩니다.
 
-### 세그먼트 대시보드
+###  Segmentsdashboard  {#segments-dashboard}
 
-일부 사용자의 경우 왼쪽 탐색에서 **[!UICONTROL 세그먼트]**&#x200B;를 선택하고 **[!UICONTROL 개요]** 탭을 열면 세그먼트 데이터와 관련된 주요 지표에 대한 개요를 제공하는 대시보드가 제공됩니다.
+**[!UICONTROL 세그먼트]** 대시보드는 조직의 세그먼트 데이터와 관련된 주요 지표에 대해 설명합니다.
 
-자세한 내용은 [세그먼트 대시보드 안내서](segment-dashboard.md)를 참조하십시오.
+자세한 내용은 [세그먼트 대시보드 안내서](../../dashboards/guides/segments.md)를 참조하십시오.
+
+![](../../dashboards/images/segments/dashboard-overview.png)
 
 ## 찾아보기
 
