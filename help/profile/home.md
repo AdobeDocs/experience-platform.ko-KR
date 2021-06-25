@@ -2,11 +2,11 @@
 keywords: Experience Platform;프로필;실시간 고객 프로필;문제 해결;API;통합 프로필;통합 프로필;통합;프로필;rtcp;XDM 그래프
 title: 실시간 고객 프로필 개요
 topic-legacy: guide
-description: 실시간 고객 프로필은 다양한 엔터프라이즈 데이터 자산의 데이터를 병합한 다음 개별 고객 프로필 및 관련 시계열 이벤트 형태로 해당 데이터에 대한 액세스를 제공하는 범용 조회 엔티티 저장소입니다. 이 기능을 통해 마케터는 여러 채널에서 대상과 잘 조정되고 일관되며 적절한 경험을 제공할 수 있습니다.
+description: 실시간 고객 프로필은 다양한 소스의 데이터를 병합하고 개별 고객 프로필 및 관련 시계열 이벤트 형태로 해당 데이터에 대한 액세스 권한을 제공합니다. 이 기능을 통해 마케터는 여러 채널에서 대상과 잘 조정되고 일관되며 적절한 경험을 제공할 수 있습니다.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: f193787ac27e30c69d25418656ae9c59c89622dc
+source-git-commit: 7ebd84f31161b45c2904545a2310c8b1f7831593
 workflow-type: tm+mt
-source-wordcount: '1813'
+source-wordcount: '1779'
 ht-degree: 0%
 
 ---
@@ -35,15 +35,11 @@ Adobe Experience Platform을 사용하면 고객이 브랜드와 상호 작용�
 
 Experience Platform은 실시간 고객 프로필에서 지원할 수 없는 [XDM(Experience Data Model) 스키마](../xdm/home.md)를 만들지 않도록 하는 데 도움이 되는 일련의 보호 기능을 제공합니다. 여기에는 성능 저하를 초래할 수 있는 소프트 제한이 포함되며, 오류 및 시스템 중단으로 이어지는 하드 제한이 있습니다. 지침 및 예제 사용 사례 목록을 포함한 자세한 내용은 [프로필 보호 기능](guardrails.md) 설명서를 참조하십시오.
 
-### (베타) 프로필 대시보드 {#profile-dashboard}
-
->[!IMPORTANT]
->
->대시보드 기능은 현재 베타에 있으며 일부 사용자는 사용할 수 없습니다. 설명서 및 기능은 변경될 수 있습니다.
+### 프로필 대시보드 {#profile-dashboard}
 
 Experience Platform UI는 일별 스냅샷 중에 캡처된 실시간 고객 프로필 데이터에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다. UI에서 [!DNL Profile] 대시보드에 액세스 및 작업하는 방법과 대시보드에 표시된 지표에 대한 자세한 정보는 [프로필 대시보드 UI 안내서](ui/profile-dashboard.md)를 참조하십시오.
 
-### 프로필 조각과 병합된 프로필 {#profile-fragments-vs-merged-profiles}
+### 프로필 조각과 병합된 프로필 비교 {#profile-fragments-vs-merged-profiles}
 
 각 개별 고객 프로필은 병합되어 해당 고객의 단일 보기를 구성하는 여러 프로필 조각으로 구성됩니다. 예를 들어 고객이 여러 채널에서 브랜드와 상호 작용하는 경우 조직에는 여러 데이터 세트에 표시되는 해당 단일 고객과 관련된 여러 프로필 조각이 있습니다. 이러한 조각을 Platform에 수집하면 병합되어 해당 고객에 대한 단일 프로필을 만듭니다.
 
