@@ -3,12 +3,11 @@ audience: user
 user-guide-title: Adobe Experience Platform 소스 커넥터 도움말
 breadcrumb-title: Source Connectors 안내서
 user-guide-description: 다양한 소스 또는 구조에서 데이터를 수집하고 레이블을 지정하며 기존에 수집한 데이터를 향상시킬 수 있습니다.
-feature: 데이터 통합, 소스
-translation-type: tm+mt
-source-git-commit: 32a6d0311169486b1273129c0ee87c242bee1e47
+feature: 데이터 수집, 소스
+source-git-commit: 6c78549860e54748f43cf0b41540ee441a09331e
 workflow-type: tm+mt
-source-wordcount: '612'
-ht-degree: 12%
+source-wordcount: '616'
+ht-degree: 13%
 
 ---
 
@@ -21,15 +20,15 @@ ht-degree: 12%
       - [Analytics 분류 소스 커넥터](connectors/adobe-applications/classifications.md)
       - [Analytics 소스 커넥터](connectors/adobe-applications/analytics.md)
       - [Audience Manager 원본 커넥터](connectors/adobe-applications/audience-manager.md)
-      - [고객 속성 소스 커넥터](connectors/adobe-applications/customer-attributes.md)
+      - [고객 특성 소스 커넥터](connectors/adobe-applications/customer-attributes.md)
       - Adobe 응용 프로그램 필드 매핑 {#mapping}
-         - [분석 필드 매핑](connectors/adobe-applications/mapping/analytics.md)
+         - [Analytics 필드 매핑](connectors/adobe-applications/mapping/analytics.md)
          - [Audience Manager 필드 매핑](connectors/adobe-applications/mapping/audience-manager.md)
          - [Target 필드 매핑](connectors/adobe-applications/mapping/target.md)
          - [Marketo Engage 필드 매핑](connectors/adobe-applications/mapping/marketo.md)
       - Marketo Engage {#marketo}
          - [Marketo Engage 커넥터](connectors/adobe-applications/marketo/marketo.md)
-         - [Marketo Engage 인증 가이드](connectors/adobe-applications/marketo/marketo-auth.md)
+         - [Marketo Engage 인증 안내서](connectors/adobe-applications/marketo/marketo-auth.md)
          - [Marketo Engage 네임스페이스 및 스키마](connectors/adobe-applications/marketo/marketo-namespaces.md)
    - 광고 {#advertising}
       - [Google AdWords 커넥터](connectors/advertising/ads.md)
@@ -51,8 +50,8 @@ ht-degree: 12%
       - [Microsoft Dynamics 커넥터](connectors/crm/ms-dynamics.md)
       - [Salesforce 커넥터](connectors/crm/salesforce.md)
    - 고객 성공 {#customer-success}
-      - [Salesforce 서비스 클라우드 커넥터](connectors/customer-success/salesforce-service-cloud.md)
-      - [ServiceNow 커넥터](connectors/customer-success/servicenow.md)
+      - [Salesforce Service Cloud 커넥터](connectors/customer-success/salesforce-service-cloud.md)
+      - [ServiceNow Connector](connectors/customer-success/servicenow.md)
    - 데이터베이스 {#databases}
       - [Amazon Redshift 커넥터](connectors/databases/redshift.md)
       - [Azure HDInsights 커넥터의 Apache Hive](connectors/databases/hive.md)
@@ -75,14 +74,14 @@ ht-degree: 12%
       - [Shopify 커넥터](connectors/ecommerce/shopify.md)
    - 마케팅 자동화 {#marketing-automation}
       - [HubSpot 커넥터](connectors/marketing-automation/hubspot.md)
-   - 지불 {#payments}
+   - 지급 {#payments}
       - [PayPal 커넥터](connectors/payments/paypal.md)
    - 프로토콜 {#protocols}
-      - [범용 OData 커넥터](connectors/protocols/odata.md)
+      - [일반 OData 커넥터](connectors/protocols/odata.md)
    - 스트리밍 {#streaming}
       - [HTTP API 커넥터](connectors/streaming/http.md)
 - API 자습서 {#api-tutorials}
-   - 소스 연결 {#create} 만들기
+   - 소스 연결 만들기 {#create}
       - 광고 {#advertising}
          - [Google AdWords](tutorials/api/create/advertising/ads.md)
       - 클라우드 스토리지 {#cloud-storage}
@@ -94,7 +93,7 @@ ht-degree: 12%
          - [Azure 이벤트 허브](tutorials/api/create/cloud-storage/eventhub.md)
          - [Azure 파일 저장소](tutorials/api/create/cloud-storage/azure-file-storage.md)
          - [FTP](tutorials/api/create/cloud-storage/ftp.md)
-         - [Google 클라우드 스토리지](tutorials/api/create/cloud-storage/google.md)
+         - [Google Cloud 스토리지](tutorials/api/create/cloud-storage/google.md)
          - [Google PubSub](tutorials/api/create/cloud-storage/google-pubsub.md)
          - [Oracle 개체 저장소](tutorials/api/create/cloud-storage/oracle-object-storage.md)
          - [SFTP](tutorials/api/create/cloud-storage/sftp.md)
@@ -102,7 +101,7 @@ ht-degree: 12%
          - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
          - [Salesforce](tutorials/api/create/crm/salesforce.md)
       - 고객 성공 {#customer-success}
-         - [Salesforce 서비스 클라우드](tutorials/api/create/customer-success/salesforce-service-cloud.md)
+         - [Salesforce Service Cloud](tutorials/api/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/api/create/customer-success/servicenow.md)
       - 데이터베이스 {#databases}
          - [Amazon Redshift](tutorials/api/create/databases/redshift.md)
@@ -113,7 +112,7 @@ ht-degree: 12%
          - [Azure 테이블 저장소](tutorials/api/create/databases/ats.md)
          - [Couchbase](tutorials/api/create/databases/couchbase.md)
          - [Google BigQuery](tutorials/api/create/databases/bigquery.md)
-         - [GreenPlum](tutorials/api/create/databases/greenplum.md)
+         - [그린 플럼](tutorials/api/create/databases/greenplum.md)
          - [HP Vertica](tutorials/api/create/databases/hp-vertica.md)
          - [IBM DB2](tutorials/api/create/databases/ibm-db2.md)
          - [MariaDB](tutorials/api/create/databases/mariadb.md)
@@ -125,11 +124,11 @@ ht-degree: 12%
       - eCommerce {#ecommerce}
          - [Shopify](tutorials/api/create/ecommerce/shopify.md)
       - 마케팅 자동화 {#marketing-automation}
-         - [허브 스팟](tutorials/api/create/marketing-automation/hubspot.md)
-      - 지불 {#payments}
+         - [HubSpot](tutorials/api/create/marketing-automation/hubspot.md)
+      - 지급 {#payments}
          - [PayPal](tutorials/api/create/payments/paypal.md)
       - 프로토콜 {#protocols}
-         - [범용 OData](tutorials/api/create/protocols/odata.md)
+         - [일반 OData](tutorials/api/create/protocols/odata.md)
       - 스트리밍 {#streaming}
          - [HTTP API](tutorials/api/create/streaming/http.md)
    - 데이터 탐색 {#explore}
@@ -138,9 +137,9 @@ ht-degree: 12%
       - [CRM 데이터 탐색](tutorials/api/explore/crm.md)
       - [고객 성공 데이터 살펴보기](tutorials/api/explore/customer-success.md)
       - [데이터베이스 또는 NoSQL 데이터 탐색](tutorials/api/explore/database-nosql.md)
-      - [e커머스 데이터 살펴보기](tutorials/api/explore/ecommerce.md)
+      - [eCommerce 데이터 살펴보기](tutorials/api/explore/ecommerce.md)
       - [마케팅 자동화 데이터 살펴보기](tutorials/api/explore/marketing-automation.md)
-      - [결제 데이터 살펴보기](tutorials/api/explore/payments.md)
+      - [결제 데이터 탐색](tutorials/api/explore/payments.md)
       - [프로토콜 데이터 탐색](tutorials/api/explore/protocols.md)
    - 데이터 수집 {#collect}
       - [광고 데이터 수집](tutorials/api/collect/advertising.md)
@@ -148,12 +147,12 @@ ht-degree: 12%
       - [CRM 데이터 수집](tutorials/api/collect/crm.md)
       - [고객 성공 데이터 수집](tutorials/api/collect/customer-success.md)
       - [데이터베이스 또는 NoSQL 데이터 수집](tutorials/api/collect/database-nosql.md)
-      - [전자 상거래 데이터 수집](tutorials/api/collect/ecommerce.md)
+      - [eCommerce 데이터 수집](tutorials/api/collect/ecommerce.md)
       - [마케팅 자동화 데이터 수집](tutorials/api/collect/marketing-automation.md)
       - [결제 데이터 수집](tutorials/api/collect/payments.md)
       - [프로토콜 데이터 수집](tutorials/api/collect/protocols.md)
       - [스트리밍 데이터 수집](tutorials/api/collect/streaming.md)
-   - [제3자 클라우드 스토리지 시스템에서 Ingest Partional 데이터](tutorials/api/cloud-storage-parquet.md)
+   - [타사 클라우드 스토리지 시스템에서 Parquet 데이터를 수집](tutorials/api/cloud-storage-parquet.md)
    - [데이터 집합 연결 만들기](tutorials/api/create-dataset-base-connection.md)
    - [데이터 흐름 모니터링](tutorials/api/monitor.md)
    - [계정 업데이트](tutorials/api/update.md)
@@ -161,10 +160,10 @@ ht-degree: 12%
    - [계정 삭제](tutorials/api/delete.md)
    - [데이터 흐름 삭제](tutorials/api/delete-dataflows.md)
 - UI 자습서 {#ui-tutorials}
-   - 소스 연결 {#create} 만들기
+   - 소스 연결 만들기 {#create}
       - Adobe 응용 프로그램 {#adobe-applications}
-         - [Adobe Analytics(보고서 세트 데이터)](tutorials/ui/create/adobe-applications/analytics.md)
-         - [Adobe Analytics(분류 데이터)](tutorials/ui/create/adobe-applications/classifications.md)
+         - [Adobe Analytics (보고서 세트 데이터)](tutorials/ui/create/adobe-applications/analytics.md)
+         - [Adobe Analytics (분류 데이터)](tutorials/ui/create/adobe-applications/classifications.md)
          - [Adobe Audience Manager](tutorials/ui/create/adobe-applications/audience-manager.md)
          - [고객 속성](tutorials/ui/create/adobe-applications/customer-attributes.md)
          - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
@@ -179,7 +178,7 @@ ht-degree: 12%
          - [Azure 이벤트 허브](tutorials/ui/create/cloud-storage/eventhub.md)
          - [Azure 파일 저장소](tutorials/ui/create/cloud-storage/azure-file-storage.md)
          - [FTP](tutorials/ui/create/cloud-storage/ftp.md)
-         - [Google 클라우드 스토리지](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
+         - [Google Cloud 스토리지](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
          - [Google PubSub](tutorials/ui/create/cloud-storage/google-pubsub.md)
          - [Oracle 개체 저장소](tutorials/ui/create/cloud-storage/oracle-object-storage.md)
          - [SFTP](tutorials/ui/create/cloud-storage/sftp.md)
@@ -188,7 +187,7 @@ ht-degree: 12%
          - [Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
          - [Salesforce](tutorials/ui/create/crm/salesforce.md)
       - 고객 성공 {#customer-success}
-         - [Salesforce 서비스 클라우드](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
+         - [Salesforce Service Cloud](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/ui/create/customer-success/servicenow.md)
       - 데이터베이스 {#databases}
          - [Amazon Redshift](tutorials/ui/create/databases/redshift.md)
@@ -199,7 +198,7 @@ ht-degree: 12%
          - [Azure 테이블 저장소](tutorials/ui/create/databases/ats.md)
          - [Couchbase](tutorials/ui/create/databases/couchbase.md)
          - [Google Big Query](tutorials/ui/create/databases/bigquery.md)
-         - [GreenPlum](tutorials/ui/create/databases/greenplum.md)
+         - [그린 플럼](tutorials/ui/create/databases/greenplum.md)
          - [HP Vertica](tutorials/ui/create/databases/hp-vertica.md)
          - [IBM DB2](tutorials/ui/create/databases/ibm-db2.md)
          - [MariaDB](tutorials/ui/create/databases/mariadb.md)
@@ -211,11 +210,11 @@ ht-degree: 12%
       - eCommerce {#ecommerce}
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
       - 마케팅 자동화 {#marketing-automation}
-         - [허브 스팟](tutorials/ui/create/marketing-automation/hubspot.md)
-      - 지불 {#payments}
+         - [HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)
+      - 지급 {#payments}
          - [PayPal](tutorials/ui/create/payments/paypal.md)
       - 프로토콜 {#protocols}
-         - [범용 OData](tutorials/ui/create/protocols/odata.md)
+         - [일반 OData](tutorials/ui/create/protocols/odata.md)
       - 스트리밍 {#streaming}
          - [HTTP API](tutorials/ui/create/streaming/http.md)
    - 데이터 흐름 구성 {#dataflow}
@@ -225,17 +224,18 @@ ht-degree: 12%
       - [CRM 연결 데이터 흐름](tutorials/ui/dataflow/crm.md)
       - [고객 성공 연결 데이터 흐름](tutorials/ui/dataflow/customer-success.md)
       - [데이터베이스 연결 데이터 흐름](tutorials/ui/dataflow/databases.md)
-      - [전자 상거래 연결 데이터 흐름](tutorials/ui/dataflow/ecommerce.md)
+      - [Ecommerce 연결 데이터 흐름](tutorials/ui/dataflow/ecommerce.md)
       - [마케팅 자동화 연결 데이터 흐름](tutorials/ui/dataflow/marketing-automation.md)
-      - [지불 연결 데이터 흐름](tutorials/ui/dataflow/payments.md)
+      - [결제 연결 데이터 흐름](tutorials/ui/dataflow/payments.md)
       - [프로토콜 연결 데이터 흐름](tutorials/ui/dataflow/protocols.md)
    - [인바운드 데이터를 활성화하여 고객 프로필 채우기](tutorials/ui/profile.md)
-   - [데이터 흐름 모니터링](tutorials/ui/monitor.md)
+   - [일괄 데이터 흐름 모니터링](tutorials/ui/monitor.md)
+   - [스트리밍 데이터 흐름 모니터링](tutorials/ui/monitor-streaming.md)
    - [계정 업데이트](tutorials/ui/update.md)
    - [데이터 흐름 업데이트](tutorials/ui/update-dataflows.md)
    - [계정 삭제](tutorials/ui/delete-accounts.md)
    - [데이터 흐름 삭제](tutorials/ui/delete.md)
 - [흐름 실행 알림](notifications.md)
 - [IP 주소 허용 목록](ip-address-allow-list.md)
-- [FAQ](./troubleshooting.md)
-- [플랫폼 릴리스 정보](https://www.adobe.com/go/platform-release-notes-en)
+- [자주 묻는 질문](./troubleshooting.md)
+- [플랫폼 릴리스 노트](https://www.adobe.com/go/platform-release-notes-en)
