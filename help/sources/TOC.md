@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 소스 커넥터 도움말
 breadcrumb-title: Source Connectors 안내서
 user-guide-description: 다양한 소스 또는 구조에서 데이터를 수집하고 레이블을 지정하며 기존에 수집한 데이터를 향상시킬 수 있습니다.
 feature: 데이터 수집, 소스
-source-git-commit: 6c78549860e54748f43cf0b41540ee441a09331e
+source-git-commit: 2b2dcf51098f8263044d56bf65a00d1d48ceddd8
 workflow-type: tm+mt
-source-wordcount: '616'
+source-wordcount: '623'
 ht-degree: 13%
 
 ---
@@ -49,6 +49,7 @@ ht-degree: 13%
    - CRM {#crm}
       - [Microsoft Dynamics 커넥터](connectors/crm/ms-dynamics.md)
       - [Salesforce 커넥터](connectors/crm/salesforce.md)
+      - [Veva CRM 커넥터](connectors/crm/veeva.md)
    - 고객 성공 {#customer-success}
       - [Salesforce Service Cloud 커넥터](connectors/customer-success/salesforce-service-cloud.md)
       - [ServiceNow Connector](connectors/customer-success/servicenow.md)
@@ -100,6 +101,7 @@ ht-degree: 13%
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
          - [Salesforce](tutorials/api/create/crm/salesforce.md)
+         - [Veva CRM](tutorials/api/create/crm/veeva.md)
       - 고객 성공 {#customer-success}
          - [Salesforce Service Cloud](tutorials/api/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/api/create/customer-success/servicenow.md)
@@ -186,6 +188,7 @@ ht-degree: 13%
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
          - [Salesforce](tutorials/ui/create/crm/salesforce.md)
+         - [Veva CRM](tutorials/ui/create/crm/veeva.md)
       - 고객 성공 {#customer-success}
          - [Salesforce Service Cloud](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/ui/create/customer-success/servicenow.md)
