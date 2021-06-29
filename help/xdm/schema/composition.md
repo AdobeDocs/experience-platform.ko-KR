@@ -5,9 +5,9 @@ title: 스키마 구성 기본 사항
 topic-legacy: overview
 description: 이 문서에서는 Adobe Experience Platform에서 사용할 스키마를 구성하기 위한 XDM(Experience Data Model) 스키마와 빌딩 블록, 원칙 및 모범 사례를 소개합니다.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 9786b810d7b203300db49637039dc034a70f95a7
+source-git-commit: 7158ae97d0260111b76edddbd447e6b302ddeb77
 workflow-type: tm+mt
-source-wordcount: '3657'
+source-wordcount: '3708'
 ht-degree: 0%
 
 ---
@@ -55,17 +55,22 @@ XDM 스키마는 방대한 양의 복잡한 데이터를 자체 포함된 형식
 
 이 프로세스를 지원하기 위해 스키마 내의 키 필드를 ID로 표시할 수 있습니다. 데이터 섭취 시 해당 필드의 데이터는 해당 개인의 &quot;[!UICONTROL Identity Graph]&quot;에 삽입됩니다. 그런 다음 [[!DNL Real-time Customer Profile]](../../profile/home.md) 및 다른 [!DNL Experience Platform] 서비스에서 그래프 데이터에 액세스하여 각 개별 고객에 대한 결합 보기를 제공할 수 있습니다.
 
-일반적으로 &quot;[!UICONTROL Identity]&quot;로 표시된 필드는 다음과 같습니다.이메일 주소, 전화번호, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html), CRM ID 또는 기타 고유한 ID 필드. 또한 &quot;[!UICONTROL Identity]&quot; 필드도 적합할 수 있으므로 조직에 고유한 식별자를 고려해야 합니다.
+일반적으로 &quot;[!UICONTROL Identity]&quot;로 표시된 필드는 다음과 같습니다.이메일 주소, 전화번호, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=ko-KR), CRM ID 또는 기타 고유한 ID 필드. 또한 &quot;[!UICONTROL Identity]&quot; 필드도 적합할 수 있으므로 조직에 고유한 식별자를 고려해야 합니다.
 
 가장 강력한 프로필을 만들기 위해 데이터를 함께 가져올 수 있도록 하려면 스키마 계획 단계 동안 고객 ID를 고려하는 것이 중요합니다. ID 정보를 통해 고객에게 디지털 경험을 전달하는 데 도움이 되는 방법에 대한 자세한 내용은 [Adobe Experience Platform Identity 서비스](../../identity-service/home.md)의 개요를 참조하십시오.
+
+ID 데이터를 Platform으로 전송하는 방법에는 두 가지가 있습니다.
+
+1. [스키마 편집기 UI](../ui/fields/identity.md)를 통해 또는 [스키마 레지스트리 API](../api/descriptors.md#create)를 사용하여 개별 필드에 ID 설명자를 추가합니다
+1. [`identityMap` 필드 사용](#identityMap)
 
 #### `identityMap` {#identityMap}
 
 `identityMap` 는 연관된 네임스페이스와 함께 개인의 다양한 ID 값을 설명하는 맵 유형 필드입니다. 이 필드는 스키마 자체의 구조 내에서 ID 값을 정의하는 대신 스키마에 대한 ID 정보를 제공하는 데 사용할 수 있습니다.
 
-`identityMap`을 사용하는 주요 단점은 ID가 데이터에 포함되고 그 결과 볼 수 없게 된다는 것입니다. 원시 데이터를 수집하는 경우 실제 스키마 구조 내에서 개별 ID 필드를 대신 정의해야 합니다.
+`identityMap`을 사용하는 주요 단점은 ID가 데이터에 포함되고 그 결과 볼 수 없게 된다는 것입니다. 원시 데이터를 수집하는 경우 실제 스키마 구조 내에서 개별 ID 필드를 대신 정의해야 합니다. `identityMap`을 활용하는 스키마도 관계에 참여할 수 없습니다.
 
-그러나 ID 맵은 [!DNL Airship] 또는 Adobe Audience Manager과 같이 ID를 함께 저장하는 소스에서 데이터를 가져오는 경우에 특히 유용합니다. 또한 [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/)를 사용하는 경우 ID 맵이 필요합니다.
+그러나 ID 맵은 ID를 함께 저장하는 소스(예: [!DNL Airship] 또는 Adobe Audience Manager)에서 데이터를 가져오는 경우나 스키마에 대한 ID가 여러 개 있는 경우 특히 유용합니다. 또한 [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/)를 사용하는 경우 ID 맵이 필요합니다.
 
 간단한 ID 맵의 예는 다음과 같습니다.
 
