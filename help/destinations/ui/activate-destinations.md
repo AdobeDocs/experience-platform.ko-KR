@@ -6,9 +6,9 @@ seo-title: 대상에 프로필 및 세그먼트 활성화
 description: 세그먼트를 대상에 매핑하여 Adobe Experience Platform에서 보유한 데이터를 활성화합니다. 이를 수행하려면 아래 단계를 수행하십시오.
 seo-description: 세그먼트를 대상에 매핑하여 Adobe Experience Platform에서 보유한 데이터를 활성화합니다. 이를 수행하려면 아래 단계를 수행하십시오.
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
-source-git-commit: a8822d66443cc4cda761e1f0963b0e0251427911
+source-git-commit: 694a647b9f268b84d55a960b360ce28527c6c652
 workflow-type: tm+mt
-source-wordcount: '2688'
+source-wordcount: '2826'
 ht-degree: 0%
 
 ---
@@ -23,11 +23,11 @@ ht-degree: 0%
 
 대상에 데이터를 활성화하려면 [이(가) 대상](./connect-destination.md)에 연결되어야 합니다. 아직 수행하지 않았다면 [대상 카탈로그](../catalog/overview.md)로 이동하여 지원되는 대상을 탐색하고 하나 이상의 대상을 설정합니다.
 
-## 데이터 {#activate-data} 활성화
+## 데이터 활성화 {#activate-data}
 
 활성화 워크플로우의 단계는 대상 유형에 따라 약간 다릅니다. 모든 대상 유형에 대한 전체 워크플로우는 아래에 요약되어 있습니다.
 
-## 데이터를 {#select-destination}(으)로 활성화할 대상을 선택합니다.
+## 데이터를 활성화할 대상을 선택합니다 {#select-destination}
 
 적용 대상:모든 대상
 
@@ -37,7 +37,7 @@ Adobe Experience Platform 사용자 인터페이스에서 **[!UICONTROL 대상]*
 
 다음 섹션의 단계에 따라 활성화할 세그먼트를 선택합니다.
 
-## [!UICONTROL 세그먼트 ] 선택 단계  {#select-segments}
+## [!UICONTROL 세그먼트 ] 선택 단계 {#select-segments}
 
 적용 대상:모든 대상
 
@@ -60,7 +60,7 @@ Adobe Experience Platform 사용자 인터페이스에서 **[!UICONTROL 대상]*
 
 소셜 대상의 경우, 대상에서 타겟 ID로 매핑하려면 소스 특성 또는 ID 네임스페이스를 선택해야 합니다.
 
-## 예:[!DNL Facebook Custom Audience] {#example-facebook}에서 대상 데이터 활성화
+## 예:[!DNL Facebook Custom Audience]에서 대상 데이터 활성화 {#example-facebook}
 
 다음은 [!DNL Facebook]에서 대상 데이터를 활성화할 때 올바른 ID 매핑의 예입니다.
 
@@ -90,7 +90,7 @@ Adobe Experience Platform 사용자 인터페이스에서 **[!UICONTROL 대상]*
 
  
 
-## 예:[!DNL Google Customer Match] {#example-gcm}에서 대상 데이터 활성화
+## 예:[!DNL Google Customer Match]에서 대상 데이터 활성화 {#example-gcm}
 
 이는 [!DNL Google Customer Match]에서 대상 데이터를 활성화할 때 올바른 ID 매핑의 예입니다.
 
@@ -149,8 +149,13 @@ Adobe Experience Platform 사용자 인터페이스에서 **[!UICONTROL 대상]*
    >
    >특정 시간에 파일을 내보내는 옵션은 현재 베타 버전이며 일부 고객만 사용할 수 있습니다.
 
+   >[!IMPORTANT]
+   >
+   >프로필 내보내기 작업 실행이 완료된 시간과 대상 서비스가 세그먼트 활성화 작업을 시작하는 시기에 따라, 첫 번째 증분 또는 전체 파일 내보내기에 필요한 채우기 데이터가 모두 포함되지 않을 수 있습니다. 전체 파일과 증분 파일 모두에 대해 최신의 전체 채우기 데이터를 내보내려면 다음 날 오후 12시 이후에 첫 번째 파일 내보내기 시간을 설정하는 것이 좋습니다. 이는 향후 릴리스에서 해결될 수 있는 제한 사항입니다.
+
 3. **[!UICONTROL 날짜]** 선택기를 사용하여 내보내기가 발생할 날짜 또는 간격을 선택합니다.
 4. **[!UICONTROL 만들기]**&#x200B;를 선택하여 일정을 저장합니다.
+
 
 ### 증분 파일 내보내기 {#export-incremental-files}
 
@@ -173,7 +178,11 @@ Adobe Experience Platform 사용자 인터페이스에서 **[!UICONTROL 대상]*
 
    >[!IMPORTANT]
    >
-   >내보낼 시간을 선택하는 옵션은 선택한 고객 수만 사용할 수 있습니다. 베타 이외의 고객은 하루에 한 번, 오후 12:00 UTC(오전 7:00 EST)에 증분 파일을 내보낼 수 있습니다.
+   >내보낼 시간을 선택하는 옵션은 선택한 고객 수만 사용할 수 있습니다.
+
+   >[!IMPORTANT]
+   >
+   >프로필 내보내기 작업 실행이 완료된 시간과 대상 서비스가 세그먼트 활성화 작업을 시작하는 시기에 따라, 첫 번째 증분 또는 전체 파일 내보내기에 필요한 채우기 데이터가 모두 포함되지 않을 수 있습니다. 전체 파일과 증분 파일 모두에 대해 최신의 전체 채우기 데이터를 내보내려면 다음 날 오후 12시 이후에 첫 번째 파일 내보내기 시간을 설정하는 것이 좋습니다. 이는 향후 릴리스에서 해결될 수 있는 제한 사항입니다.
 
 3. **[!UICONTROL 날짜]** 선택기를 사용하여 내보내기가 발생할 날짜 또는 간격을 선택합니다.
 4. **[!UICONTROL 만들기]**&#x200B;를 선택하여 일정을 저장합니다.
@@ -204,7 +213,7 @@ Adobe Experience Platform 사용자 인터페이스에서 **[!UICONTROL 대상]*
 
 모든 세그먼트 구성을 마치면 **[!UICONTROL 다음]**&#x200B;을 선택하여 계속하십시오.
 
-## **[!UICONTROL 세그먼트]** 예약 단계  {#segment-schedule}
+## **[!UICONTROL 세그먼트]** 예약 단계 {#segment-schedule}
 
 적용 대상:광고 대상, 소셜 대상
 
@@ -224,7 +233,7 @@ Adobe Experience Platform 사용자 인터페이스에서 **[!UICONTROL 대상]*
 
 ![앱 id 입력](../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
 
-## **[!UICONTROL 속성]** 선택 단계  {#select-attributes}
+## **[!UICONTROL 속성]** 선택 단계 {#select-attributes}
 
 적용 대상:이메일 마케팅 대상 및 클라우드 스토리지 대상
 
