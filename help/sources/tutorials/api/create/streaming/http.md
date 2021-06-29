@@ -6,10 +6,10 @@ topic-legacy: tutorial
 type: Tutorial
 description: 이 자습서는 Adobe Experience Platform 데이터 수집 서비스 API의 일부인 스트리밍 수집 API를 사용하는 데 도움이 됩니다.
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: b672eab481a8286f92741a971991c7f83102acf7
+source-git-commit: 42b8710cf6c04fabf7df1f005fae6b3828eeee49
 workflow-type: tm+mt
 source-wordcount: '1206'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -20,7 +20,7 @@ Flow Service는 Adobe Experience Platform 내의 다양한 종류의 소스로�
 
 이 자습서에서는 [!DNL Flow Service] API를 사용하여 Flow Service API를 사용하여 스트리밍 연결을 만드는 단계를 안내합니다.
 
-## 시작하기
+## 시작
 
 이 안내서에서는 Adobe Experience Platform의 다음 구성 요소를 이해하고 있어야 합니다.
 
@@ -40,12 +40,12 @@ Flow Service는 Adobe Experience Platform 내의 다양한 종류의 소스로�
 [!DNL Platform] API를 호출하려면 먼저 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 완료해야 합니다. 인증 자습서를 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출에 필요한 각 헤더에 대한 값을 제공합니다.
 
 - 권한 부여:Bearer `{ACCESS_TOKEN}`
-- x-api-key:`{API_KEY}`
-- x-gw-ims-org-id:`{IMS_ORG}`
+- x-api-key: `{API_KEY}`
+- x-gw-ims-org-id: `{IMS_ORG}`
 
 [!DNL Flow Service]에 속하는 리소스를 포함하여 [!DNL Experience Platform]의 모든 리소스는 특정 가상 샌드박스로 구분됩니다. [!DNL Platform] API에 대한 모든 요청에는 작업이 수행될 샌드박스의 이름을 지정하는 헤더가 필요합니다.
 
-- x-sandbox-name:`{SANDBOX_NAME}`
+- x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
@@ -416,7 +416,7 @@ curl -X POST \
 }
 ```
 
-### 플랫폼에 수집할 원시 데이터 게시 {#ingest-data}
+### Platform에 수집할 원시 데이터 게시 {#ingest-data}
 
 이제 플로우를 만들었으므로 이전에 만든 스트리밍 엔드포인트로 JSON 메시지를 보낼 수 있습니다.
 
@@ -445,10 +445,10 @@ curl -X POST https://dcs.adobedc.net/collection/2301a1f761f6d7bf62c5312c535e1076
           "country": "United State of America",
           "address": "3692 Main Street"
       },
-      "gender": "Male"
+      "gender": "Male",
       "birthday": {
-          "year": 1984
-          "month": 6
+          "year": 1984,
+          "month": 6,
           "day": 9
       }
   }'
