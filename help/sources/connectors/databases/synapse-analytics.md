@@ -5,9 +5,9 @@ title: azure synapse 분석 소스 커넥터 개요
 topic-legacy: overview
 description: API 또는 사용자 인터페이스를 사용하여 Analytics를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: 5b94ae74-e5a7-40e9-a952-41eddf06dcde
-source-git-commit: e150f05df2107d7b3a2e95a55dc4ad072294279e
+source-git-commit: 5821f9304a37c1a03d17f0113d09548799662a2e
 workflow-type: tm+mt
-source-wordcount: '288'
+source-wordcount: '297'
 ht-degree: 0%
 
 ---
@@ -30,11 +30,11 @@ Adobe Experience Platform을 사용하면 [!DNL Platform] 서비스를 사용하
 
 ## API를 사용하여 [!DNL Azure Synapse Analytics]을 [!DNL Platform]에 연결
 
-- [Flow Service API를 사용하여 Azure synapse Analytics 소스 연결을 만듭니다](../../tutorials/api/create/databases/synapse-analytics.md)
-- [Flow Service API를 사용하여 데이터베이스 시스템 탐색](../../tutorials/api/explore/database-nosql.md)
-- [Flow Service API를 사용하여 데이터베이스에서 데이터를 수집합니다](../../tutorials/api/collect/database-nosql.md)
+- [Flow Service API를 사용하여 Azure synapse Analytics 기본 연결을 만듭니다](../../tutorials/api/create/databases/synapse-analytics.md)
+- [Flow Service API를 사용하여 데이터베이스 소스의 데이터 구조 및 컨텐츠를 탐색합니다](../../tutorials/api/explore/database-nosql.md)
+- [Flow Service API를 사용하여 데이터베이스 소스에 대한 데이터 흐름 만들기](../../tutorials/api/collect/database-nosql.md)
 
 ## UI를 사용하여 [!DNL Azure Synapse Analytics]을 [!DNL Platform]에 연결
 
 - [UI에서 Azure synapse Analytics 소스 연결 만들기](../../tutorials/ui/create/databases/synapse-analytics.md)
-- [UI에서 데이터베이스 연결에 대한 데이터 흐름 구성](../../tutorials/ui/dataflow/databases.md)
+- [UI에서 데이터베이스 소스 연결을 위한 데이터 흐름 만들기](../../tutorials/ui/dataflow/databases.md)
