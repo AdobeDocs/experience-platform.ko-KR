@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 소스 커넥터 도움말
 breadcrumb-title: Source Connectors 안내서
 user-guide-description: 다양한 소스 또는 구조에서 데이터를 수집하고 레이블을 지정하며 기존에 수집한 데이터를 향상시킬 수 있습니다.
 feature: 데이터 수집, 소스
-source-git-commit: 2b2dcf51098f8263044d56bf65a00d1d48ceddd8
+source-git-commit: e04df6e2ffabac6e70164dfccbad8440976b2755
 workflow-type: tm+mt
-source-wordcount: '623'
+source-wordcount: '619'
 ht-degree: 13%
 
 ---
@@ -82,7 +82,7 @@ ht-degree: 13%
    - 스트리밍 {#streaming}
       - [HTTP API 커넥터](connectors/streaming/http.md)
 - API 자습서 {#api-tutorials}
-   - 소스 연결 만들기 {#create}
+   - 기본 연결 만들기 {#create}
       - 광고 {#advertising}
          - [Google AdWords](tutorials/api/create/advertising/ads.md)
       - 클라우드 스토리지 {#cloud-storage}
@@ -138,7 +138,7 @@ ht-degree: 13%
       - [클라우드 스토리지 데이터 살펴보기](tutorials/api/explore/cloud-storage.md)
       - [CRM 데이터 탐색](tutorials/api/explore/crm.md)
       - [고객 성공 데이터 살펴보기](tutorials/api/explore/customer-success.md)
-      - [데이터베이스 또는 NoSQL 데이터 탐색](tutorials/api/explore/database-nosql.md)
+      - [데이터베이스 데이터 탐색](tutorials/api/explore/database-nosql.md)
       - [eCommerce 데이터 살펴보기](tutorials/api/explore/ecommerce.md)
       - [마케팅 자동화 데이터 살펴보기](tutorials/api/explore/marketing-automation.md)
       - [결제 데이터 탐색](tutorials/api/explore/payments.md)
@@ -148,7 +148,7 @@ ht-degree: 13%
       - [클라우드 스토리지 데이터 수집](tutorials/api/collect/cloud-storage.md)
       - [CRM 데이터 수집](tutorials/api/collect/crm.md)
       - [고객 성공 데이터 수집](tutorials/api/collect/customer-success.md)
-      - [데이터베이스 또는 NoSQL 데이터 수집](tutorials/api/collect/database-nosql.md)
+      - [데이터베이스 데이터 수집](tutorials/api/collect/database-nosql.md)
       - [eCommerce 데이터 수집](tutorials/api/collect/ecommerce.md)
       - [마케팅 자동화 데이터 수집](tutorials/api/collect/marketing-automation.md)
       - [결제 데이터 수집](tutorials/api/collect/payments.md)
