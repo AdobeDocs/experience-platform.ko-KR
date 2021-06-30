@@ -1,25 +1,25 @@
 ---
 keywords: Experience Platform;홈;인기 항목;Azure;Azure 파일 저장소;Azure 파일 저장소
 solution: Experience Platform
-title: Flow Service API를 사용하여 Azure 파일 저장소 소스 연결 만들기
+title: Flow Service API를 사용하여 Azure 파일 저장소 기본 연결 만들기
 topic-legacy: overview
 type: Tutorial
 description: Flow Service API를 사용하여 Azure 파일 저장소를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: 0c585ae2-be2d-4167-b04b-836f7e2c04a9
-source-git-commit: e150f05df2107d7b3a2e95a55dc4ad072294279e
+source-git-commit: 59a8e2aa86508e53f181ac796f7c03f9fcd76158
 workflow-type: tm+mt
-source-wordcount: '571'
-ht-degree: 2%
+source-wordcount: '477'
+ht-degree: 1%
 
 ---
 
-# [!DNL Flow Service] API를 사용하여 [!DNL Azure File Storage] 소스 연결을 만듭니다
+# [!DNL Flow Service] API를 사용하여 [!DNL Azure File Storage] 기본 연결을 만듭니다
 
-[!DNL Flow Service] Adobe Experience Platform 내의 다양한 소스에서 고객 데이터를 수집하고 중앙 집중화하는 데 사용됩니다. 이 서비스는 지원되는 모든 소스를 연결할 수 있는 사용자 인터페이스 및 RESTful API를 제공합니다.
+기본 연결은 소스와 Adobe Experience Platform 간의 인증된 연결을 나타냅니다.
 
-이 자습서에서는 [!DNL Flow Service] API를 사용하여 [!DNL Azure File Storage]을 [!DNL Experience Platform]에 연결하는 단계를 안내합니다.
+이 자습서에서는 [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)를 사용하여 [!DNL Azure File Storage]에 대한 기본 연결을 만드는 단계를 안내합니다.
 
-## 시작하기
+## 시작
 
 이 안내서에서는 Adobe Experience Platform의 다음 구성 요소를 이해하고 있어야 합니다.
 
@@ -37,33 +37,19 @@ ht-degree: 2%
 | `host` | 액세스 중인 [!DNL Azure File Storag]e 인스턴스의 끝점입니다. |
 | `userId` | [!DNL Azure File Storage] 끝점에 대한 충분한 액세스 권한이 있는 사용자입니다. |
 | `password` | [!DNL Azure File Storage] 인스턴스의 암호입니다. |
-| 연결 사양 ID | 연결을 만드는 데 필요한 고유 식별자입니다. [!DNL Azure File Storage]에 대한 연결 사양 ID는 다음과 같습니다.`be5ec48c-5b78-49d5-b8fa-7c89ec4569b8` |
+| `connectionSpec.id` | 연결 사양은 기본 및 소스 연결 생성과 관련된 인증 사양이 포함된 소스의 커넥터 등록 정보를 반환합니다. [!DNL Azure File Storage]에 대한 연결 사양 ID는 다음과 같습니다.`be5ec48c-5b78-49d5-b8fa-7c89ec4569b8`. |
 
 시작하는 방법에 대한 자세한 내용은 [이 Azure 파일 저장소 문서](https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-windows)를 참조하십시오.
 
-### 샘플 API 호출 읽기
+### 플랫폼 API 사용
 
-이 자습서에서는 요청 형식을 지정하는 방법을 보여주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 올바른 형식의 요청 페이로드가 포함됩니다. API 응답으로 반환되는 샘플 JSON도 제공됩니다. 샘플 API 호출에 대한 설명서에 사용된 규칙에 대한 자세한 내용은 [!DNL Experience Platform] 문제 해결 안내서에서 [예제 API 호출](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)를 읽는 방법 섹션을 참조하십시오.
+플랫폼 API를 성공적으로 호출하는 방법에 대한 자세한 내용은 [플랫폼 API 시작](../../../../../landing/api-guide.md)의 안내서를 참조하십시오.
 
-### 필수 헤더에 대한 값을 수집합니다
+## 기본 연결 만들기
 
-[!DNL Platform] API를 호출하려면 먼저 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 완료해야 합니다. 인증 자습서를 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출에 필요한 각 헤더에 대한 값을 제공합니다.
+기본 연결은 소스의 인증 자격 증명, 현재 연결 상태 및 고유한 기본 연결 ID를 포함하여 소스와 플랫폼 간의 정보를 유지합니다. 기본 연결 ID를 사용하면 소스 내에서 파일을 탐색 및 탐색하고 해당 데이터 유형 및 형식에 대한 정보를 포함하여 수집할 특정 항목을 식별할 수 있습니다.
 
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
-
-[!DNL Flow Service]에 속하는 리소스를 포함하여 [!DNL Experience Platform]의 모든 리소스는 특정 가상 샌드박스로 구분됩니다. [!DNL Platform] API에 대한 모든 요청에는 작업이 수행될 샌드박스의 이름을 지정하는 헤더가 필요합니다.
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-페이로드(POST, PUT, PATCH)이 포함된 모든 요청에는 추가 미디어 유형 헤더가 필요합니다.
-
-* `Content-Type: application/json`
-
-## 연결 만들기
-
-연결은 소스를 지정하고 해당 소스에 대한 자격 증명을 포함합니다. 다른 데이터를 가져오기 위해 여러 소스 커넥터를 만드는 데 사용할 수 있으므로 [!DNL Azure File Storage] 계정당 하나의 연결만 필요합니다.
+기본 연결 ID를 만들려면 요청 매개 변수의 일부로 [!DNL Azure File Storage] 인증 자격 증명을 제공하는 동안 `/connections` 끝점에 POST 요청을 하십시오.
 
 **API 형식**
 
@@ -73,7 +59,7 @@ POST /connections
 
 **요청**
 
-[!DNL Azure File Storage] 연결을 만들려면 고유한 연결 사양 ID를 POST 요청의 일부로 제공해야 합니다. [!DNL Azure File Storage]에 대한 연결 사양 ID는 `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8`입니다.
+다음 요청은 [!DNL Azure File Storage]에 대한 기본 연결을 만듭니다.
 
 ```shell
 curl -X POST \
@@ -110,7 +96,7 @@ curl -X POST \
 
 **응답**
 
-성공적인 응답은 해당 고유 식별자(`id`)를 포함하여 새로 생성된 연결의 세부 정보를 반환합니다. 이 ID는 다음 자습서에서 데이터를 탐색하는 데 필요합니다.
+성공적인 응답은 고유 식별자(`id`)를 포함하여 새로 생성된 기본 연결의 세부 정보를 반환합니다. 이 ID는 소스 연결을 만들려면 다음 단계에서 필요합니다.
 
 ```json
 {
