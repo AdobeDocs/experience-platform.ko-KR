@@ -1,80 +1,27 @@
 ---
 title: Adobe Experience Platform 릴리스 정보
-description: 2021년 5월 26일 Experience Platform 릴리스 노트.
+description: 2021년 6월 30일 Experience Platform 릴리스 노트.
 doc-type: release notes
-last-update: May 26, 2021
-author: ens72741
+last-update: June 30, 2021
+author: ens60013
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: 487d6dbef21459a7ce78cdc70215ad46e06ba892
+source-git-commit: fc916f87bf07e5eabf7d1681059406e2fea362e0
 workflow-type: tm+mt
-source-wordcount: '1306'
-ht-degree: 3%
+source-wordcount: '530'
+ht-degree: 6%
 
 ---
 
 
 # Adobe Experience Platform 릴리스 노트
 
-**릴리스 날짜: 2021년 5월 26일**
-
-Adobe Experience Platform의 새로운 기능:
-
-- [대시보드](#dashboards)
+**릴리스 날짜: 2021년 6월 30일**
 
 Adobe Experience Platform의 기존 기능 업데이트:
 
-- [[!DNL Data Prep]](#data-prep)
-- [[!DNL Destinations]](#destinations)
-- [[!DNL Experience Data Model (XDM)]](#xdm)
 - [실시간 고객 프로필](#profile)
 - [샌드박스](#sandboxes)
 - [소스](#sources)
-
-## 대시보드 {#dashboards}
-
-Adobe Experience Platform은 일별 스냅샷 중에 캡처된 대로 조직의 데이터에 대한 중요한 통찰력을 볼 수 있는 여러 개의 대시보드를 제공합니다.
-
-| 기능 | 설명 |
-| --- | --- |
-| 프로필 통찰력 | 프로필 대시보드는 Experience Platform의 각 조직 병합 정책에 대한 실시간 고객 프로필 지표에 대한 일별 개요를 제공합니다. 이러한 프로필 인사이트는 Platform 내에서 프로필 데이터에 액세스하고 볼 수 있는 기능을 가진 모든 사용자가 사용할 수 있습니다. |
-| Audience Insights | 세그먼트 대시보드는 Platform 내의 세그먼트를 볼 수 있는 액세스 권한을 가진 모든 사용자에게 대상 관련 통찰력을 제공합니다. 이 대시보드는 세그먼트 빌더 UI로 만들거나 Adobe Audience Manager에서 가져온 대상에 대한 대상 지표에 대한 일별 개요를 제공합니다. |
-| 활성화 통찰력 | 대상 대시보드는 대상에 액세스하고 대상을 볼 수 있는 기능을 가진 모든 사용자가 사용할 수 있습니다. 이 대시보드는 모든 대상에 걸친 활성화에 대한 활성화 지표의 일별 개요를 제공합니다. |
-| 사용자별 통찰력 | 위젯을 추가, 제거, 크기 조정 및 다시 정렬하여 대시보드 레이아웃을 수정하는 기능을 포함하여 각 사용자가 대시보드의 모양과 느낌을 개인화할 수 있습니다. |
-| 위젯 생성 및 관리 | 통찰력 생성 및 공유를 민주화하기 위해 중앙 저장소에서 마케터가 모든 표준 및 사용자 지정 위젯에 액세스할 수 있습니다.<br/><ul><li>표준 탭에는 대시보드 컨텍스트 내에서 액세스할 수 있는 Adobe 제공 위젯이 포함되어 있습니다. </li><li>사용자 지정 탭에는 보기에서 위젯을 숨길 수 있는 옵션을 포함하여 조직에서 만든 사용자 지정 위젯이 포함되어 있습니다.</li><li>프로필 및 대상 인사이트 내에서 위젯 생성 워크플로우를 통해 사용자 지정 위젯을 편집, 선택, 미리 보기 및 게시할 수 있습니다.</li></ul> |
-| 사용자 지정 인사이트 | 액세스 권한을 통해 데이터 엔지니어와 마케팅 전문가가 위젯 작성에 사용할 수 있는 프로필 속성을 사용자 지정할 수 있습니다. |
-
-액세스 권한을 부여하고 사용자 지정 위젯을 만드는 방법 등 대시보드에 대한 자세한 내용은 [대시보드 개요](../../dashboards/home.md)를 읽어서 시작하십시오.
-
-## [!DNL Data Prep] {#data-prep}
-
-[!DNL Data Prep] 데이터 엔지니어가 XDM(Experience Data Model) 을 통해 데이터를 매핑, 변환 및 확인할 수 있습니다.
-
-| 기능 | 설명 |
-| ------- | ----------- |
-| 가벼운 오류 경고 | 이제 데이터 준비 매퍼 오류 메시지는 부분적으로 변형된 행과 함께 오류 대신 경고를 제공하여 보다 관대합니다. |
-| 새로운 함수 | 키를 가져오고, 요소를 기존 배열에 추가하며, 여러 배열의 요소를 기존 배열에 추가하고, 개체를 사용하여 배열을 빌드하고, JSON 개체 이름을 문자열 직역량으로 사용하는 함수가 추가되었습니다. |
-
-자세한 내용은 [[!DNL Data Prep] 개요](../../data-prep/home.md)를 참조하십시오.
-
-## [!DNL Destinations] {#destinations}
-
-[!DNL Destinations] 는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과의 사전 구축된 통합입니다. 대상을 사용하여 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례에 대해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
-
-| 기능 | 설명 |
-| ------- | ----------- |
-| 향상된 모니터링(베타) | 배치 및 스트리밍 대상에 대한 정보를 포함하여 대상에 대한 모니터링 기능이 향상되었습니다 |
-| [빠른 증분 파일 내보내기(베타)](../../destinations/ui/activate-destinations.md#export-incremental-files) | 3, 6, 8 또는 12시간마다 대상으로 증분 파일을 내보내는 기능을 추가했습니다.<br> <br>이 기능은 현재 베타에 있으며 일부 고객만 사용할 수 있습니다. 베타가 아닌 고객은 하루에 한 번 증분 파일을 내보낼 수 있습니다. |
-| [중복 제거 키 지원(베타)](../../destinations/ui/activate-destinations.md#deduplication-keys) | ID 네임스페이스 또는 프로필 속성을 중복 제거 키로 설정하는 기능을 추가했습니다. 중복 제거 키를 사용하면 한 내보내기 파일에 동일한 프로필의 여러 레코드가 있을 수 없습니다.<br> <br>이 기능은 현재 베타에 있으며 일부 고객만 사용할 수 있습니다. |
-
-대상에 대한 일반적인 자세한 내용은 [대상 개요](../../destinations/home.md)를 참조하십시오.
-
-## [!DNL Experience Data Model (XDM)] {#xdm}
-
-XDM(Experience Data Model)은 디지털 경험의 성능을 향상하도록 설계된 오픈 소스 사양입니다. Adobe Experience Platform의 서비스와 통신할 수 있도록 모든 애플리케이션에 대한 공통 구조 및 정의를 제공합니다. XDM 표준을 준수함으로써 모든 고객 경험 데이터를 공통 표현으로 통합하여 보다 빠르고 통합된 방식으로 통찰력을 제공할 수 있습니다. 고객 작업을 통해 유용한 통찰력을 얻을 수 있고, 세그먼트를 통해 고객 대상을 정의하고, 개인화를 위해 고객 속성을 사용할 수 있습니다.
-
-| 기능 | 설명 |
-| --- | --- |
-| 스키마 필드 그룹 | &quot;mixin&quot;이라는 용어가 &quot;필드 그룹&quot;으로 업데이트되었습니다. 이 변경 사항은 Adobe Experience Platform UI에 반영됩니다. 또한 스키마 레지스트리 API에는 새로운 [필드 그룹 종단점](../../xdm/api/field-groups.md)이(가) 있지만 mixin 종단점은 기존 종단점으로 더 이상 사용되지 않습니다. 자세한 내용은 [XDM 설명서](../../xdm/home.md)를 참조하십시오. |
 
 ## 실시간 고객 프로필 {#profile}
 
@@ -82,27 +29,20 @@ Adobe Experience Platform을 사용하면 고객이 브랜드와 상호 작용�
 
 | 기능 | 설명 |
 | ------- | ----------- |
-| 데이터 집합 겹치기 보고서 | 데이터 집합 겹치기 보고서는 대응 가능 대상에 가장 많이 기여하는 데이터 세트를 노출하여 프로필 저장소의 구성을 보여줍니다. 이 보고서는 프로필 데이터에 대한 통찰력을 제공할 뿐만 아니라 사용자가 특정 데이터의 수명 제한 설정과 같은 라이선스 사용을 최적화하는 조치를 취할 수 있도록 합니다. 자세한 내용은 [데이터 집합 중복 보고서 생성](../../profile/tutorials/dataset-overlap-report.md)에서 자습서를 참조하십시오. |
+| 병합 정책 워크플로 업데이트 | UI에서 병합 정책을 만들고 업데이트할 때 사용자는 이제 결합 스키마를 기반으로 20개의 샘플 프로필을 미리 볼 수 있습니다. 이를 통해 병합 정책 구성을 저장하기 전에 고객 프로필의 모양을 미리 볼 수 있습니다. 자세한 내용은 [병합 정책 UI 안내서](../../profile/merge-policies/ui-guide.md)를 참조하십시오. |
+| ID 겹치기 보고서 | ID 겹치기 보고서는 실시간 고객 프로필 API의 일부이며, 프로필 저장소의 구성에 대한 가시성을 제공합니다. `/previewsamplestatus` 종단점을 사용하는 경우 ID 중복 보고서는 주소 지정 가능한 대상에 가장 많이 기여하는 ID를 표시합니다. 자세한 내용은 [샘플 상태 API 엔드포인트 가이드](../../profile/api/preview-sample-status.md)를 참조하십시오. |
 
 [!DNL Profile] 데이터 작업에 대한 자습서 및 우수 사례 등 실시간 고객 프로필에 대한 자세한 내용은 [실시간 고객 프로필 개요](../../profile/home.md)를 읽어서 시작하십시오.
 
-## [!DNL Sandboxes] {#sandboxes}
+## 샌드박스 {#sandboxes}
 
 Adobe Experience Platform은 디지털 경험 애플리케이션을 전 세계에 맞게 보강하기 위해 제작되었습니다. 기업은 여러 디지털 경험 애플리케이션을 동시에 운영하고 있으며 운영 규정을 준수하면서 이러한 애플리케이션의 개발, 테스트 및 배포를 충족해야 합니다. 이러한 요구 사항을 해결하기 위해 Experience Platform은 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 단일 플랫폼 인스턴스를 별도의 가상 환경으로 분할하는 샌드박스 를 제공합니다.
 
 | 기능 | 설명 |
 | ------- | ----------- |
-| 여러 프로덕션 샌드박스 | 이제 IMS 조직에서 여러 프로덕션 샌드박스를 만들고 관리하고 특정 프로덕션 샌드박스를 개별 비즈니스, 브랜드, 프로젝트 또는 영역에 제공할 수 있습니다. 자세한 내용은 UI](../../sandboxes/ui/user-guide.md) 또는 [에서 API](../../sandboxes/api/overview.md)를 사용하여 프로덕션 샌드박스 [를 만드는 방법에 대한 자습서를 참조하십시오. |
+| 프로덕션 샌드박스 재설정 개선 사항 | 이제 Adobe Audience Manager 또는 Audience Core Service와 양방향 세그먼트 공유에 사용되는 프로덕션 샌드박스를 재설정할 수 있습니다. 이 작업은 UI에서 수행하거나 API에서 새 `validationOnly` 및 `ignoreWarnings` 매개 변수를 사용하여 수행할 수 있습니다. 자세한 내용은 UI](../../sandboxes/ui/user-guide.md) 및 [API](../../sandboxes/api/sandboxes.md)에서 샌드박스 재설정 [에서 자습서를 참조하십시오. |
 
-### 알려진 제한 사항
-
-- 모든 Experience Cloud 조직에는 미리 만들어진 기본 프로덕션 샌드박스가 포함되어 있습니다. 이 샌드박스는 다른 Adobe 애플리케이션 또는 아직 샌드박스 호환하지 않는 비 Adobe 애플리케이션에서 Platform으로 전송되는 모든 요청에 대한 기본 대상 역할을 합니다. 내에 호스팅된 ID 그래프가 [Cross Device Analytics(CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) 기능에도 Adobe Analytics에서 사용되고 있거나 이 내에 호스팅된 ID 그래프가 [사람 기반 대상(PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html) 기능에도 Adobe Audience Manager에서 사용되고 있는 경우에는 기본 프로덕션 샌드박스를 재설정할 수 없습니다.
-- Adobe Audience Manager 또는 Audience Core Service와 양방향 세그먼트 공유에 사용되는 프로덕션 샌드박스는 재설정하거나 삭제할 수 없습니다.
-- 기본 프로덕션 샌드박스를 제외한 사용자가 만든 모든 프로덕션 및 개발 샌드박스를 삭제할 수 있습니다.
-
-샌드박스에 대한 자세한 내용은 [샌드박스 개요](../../sandboxes/home.md)를 참조하십시오.
-
-## [!DNL Sources] {#sources}
+## 소스 {#sources}
 
 Adobe Experience Platform은 외부 소스에서 데이터를 수집하면서도 Platform 서비스를 사용하여 해당 데이터를 구조화, 레이블 지정 및 향상시킬 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 타사 소프트웨어 및 CRM 시스템과 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 
@@ -110,7 +50,7 @@ Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 
 
 | 기능 | 설명 |
 | ------- | ----------- |
-| 압축 파일 통합에 대한 UI 지원 | 이제 UI에서 클라우드 스토리지 소스를 사용하여 압축된 JSON 또는 구분된 파일을 미리 보고 수집할 수 있습니다. 자세한 내용은 UI](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md)에서 클라우드 저장소 소스 연결을 위한 데이터 흐름 구성 자습서를 참조하십시오.[ |
-| GA로 이동하는 베타 소스 | 다음 소스가 Beta에서 GA로 승격되었습니다. <ul><li>[[!DNL Azure File Storage]](../../sources/connectors/cloud-storage/azure-file-storage.md)</li><li>[[!DNL Azure Synapse Analytics]](../../sources/connectors/databases/synapse-analytics.md)</li><li>[[!DNL Greenplum]](../../sources/connectors/databases/greenplum.md)</li><li>[[!DNL HubSpot]](../../sources/connectors/marketing-automation/hubspot.md)</li><li>[[!DNL ServiceNow]](../../sources/connectors/customer-success/servicenow.md)</li></ul> |
+| [!DNL Veeva CRM] (베타) | 이제 [!DNL Flow Service] API 또는 UI를 사용하여 [!DNL Veeva CRM]을 Experience Platform에 연결할 수 있습니다. 자세한 내용은 [[!DNL Veeva CRM] 커넥터 개요](../../sources/connectors/crm/veeva.md)를 참조하십시오. |
+| 스트리밍 데이터 흐름 모니터링 지원 | 이제 소스 UI 작업 공간을 사용하여 해당 지표 및 상태로 스트리밍 소스의 데이터 수집 활동을 모니터링할 수 있습니다. 자세한 내용은 [스트리밍 데이터 흐름 모니터링](../../sources/tutorials/ui/monitor-streaming.md)의 자습서를 참조하십시오. |
 
 소스에 대해 자세히 알아보려면 [소스 개요](../../sources/home.md)를 참조하십시오.
