@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;홈;인기 항목;Vevar CRM;vevar crm;vevar;crm
 solution: Experience Platform
-title: 소스 커넥터 개요
+title: Veva CRM 소스 커넥터 개요
 topic-legacy: overview
 description: API 또는 사용자 인터페이스를 사용하여 Veva CRM을 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
-source-git-commit: 5b8c6ae7c45048e026b018b6c91478648fdbea85
+source-git-commit: 5821f9304a37c1a03d17f0113d09548799662a2e
 workflow-type: tm+mt
-source-wordcount: '234'
+source-wordcount: '247'
 ht-degree: 0%
 
 ---
@@ -29,11 +29,11 @@ Experience Platform은 타사 CRM 시스템에서 데이터 섭취를 지원합�
 
 ## API를 사용하여 [!DNL Veeva CRM]을 [!DNL Platform]에 연결
 
-- [Flow Service API를 사용하여 Vec CRM 소스 연결 만들기](../../tutorials/api/create/crm/veeva.md)
-- [Flow Service API를 사용하여 CRM 시스템 탐색](../../tutorials/api/explore/crm.md)
-- [Flow Service API를 사용하여 CRM 데이터 수집](../../tutorials/api/collect/crm.md)
+- [Flow Service API를 사용하여 Vec CRM 기본 연결 만들기](../../tutorials/api/create/crm/veeva.md)
+- [Flow Service API를 사용하여 CRM 소스의 데이터 구조 및 컨텐츠를 탐색합니다](../../tutorials/api/explore/crm.md)
+- [Flow Service API를 사용하여 CRM 소스에 대한 데이터 흐름 만들기](../../tutorials/api/collect/crm.md)
 
 ## UI를 사용하여 [!DNL Veeva CRM]을 [!DNL Platform]에 연결
 
 - [UI에서 Microsoft Dynamics 소스 연결 만들기](../../tutorials/ui/create/crm/veeva.md)
-- [UI에서 CRM 연결에 대한 데이터 흐름 구성](../../tutorials/ui/dataflow/crm.md)
+- [UI에서 CRM 소스 연결을 위한 데이터 흐름 만들기](../../tutorials/ui/dataflow/crm.md)
