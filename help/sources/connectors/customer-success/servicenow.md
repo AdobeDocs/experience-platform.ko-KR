@@ -5,9 +5,9 @@ title: ServiceNow Source Connector 개요
 topic-legacy: overview
 description: API 또는 사용자 인터페이스를 사용하여 ServiceNow를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: f491b367-ec6d-4fb8-8eeb-3178673c0085
-source-git-commit: e150f05df2107d7b3a2e95a55dc4ad072294279e
+source-git-commit: 4aed960fb3873e604efb36268887ac36a7331064
 workflow-type: tm+mt
-source-wordcount: '216'
+source-wordcount: '224'
 ht-degree: 0%
 
 ---
@@ -26,11 +26,11 @@ Adobe Experience Platform을 사용하면 [!DNL Platform] 서비스를 사용하
 
 ## API를 사용하여 [!DNL ServiceNow]을 [!DNL Platform]에 연결
 
-- [Flow Service API를 사용하여 ServiceNow 소스 연결 만들기](../../tutorials/api/create/customer-success/servicenow.md)
-- [Flow Service API를 사용하여 고객 성공 시스템을 탐색합니다.](../../tutorials/api/explore/customer-success.md)
-- [Flow Service API를 사용하여 고객 성공 시스템에서 데이터를 수집합니다](../../tutorials/api/collect/customer-success.md)
+- [Flow Service API를 사용하여 ServiceNow 기본 연결을 만듭니다](../../tutorials/api/create/customer-success/servicenow.md)
+- [Flow Service API를 사용하여 고객 성공 소스의 데이터 구조 및 컨텐츠를 탐색합니다](../../tutorials/api/explore/customer-success.md)
+- [Flow Service API를 사용하여 고객 성공 소스에 대한 데이터 흐름 만들기](../../tutorials/api/collect/customer-success.md)
 
 ## UI를 사용하여 [!DNL ServiceNow]을 [!DNL Platform]에 연결
 
 - [UI에서 ServiceNow 소스 연결 만들기](../../tutorials/ui/create/customer-success/servicenow.md)
-- [UI에서 고객 성공 연결에 대한 데이터 흐름 구성](../../tutorials/ui/dataflow/customer-success.md)
+- [UI에서 고객 성공 소스 연결을 위한 데이터 흐름 만들기](../../tutorials/ui/dataflow/customer-success.md)
