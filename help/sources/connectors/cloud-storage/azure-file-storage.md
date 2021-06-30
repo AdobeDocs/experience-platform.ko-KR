@@ -5,9 +5,9 @@ title: Azure 파일 저장소 원본 커넥터 개요
 topic-legacy: overview
 description: API 또는 사용자 인터페이스를 사용하여 Azure 파일 저장소를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: 0a5e9df6-9760-4eeb-86d5-d92d77df3d2b
-source-git-commit: e150f05df2107d7b3a2e95a55dc4ad072294279e
+source-git-commit: 1f9948d6e419ee5d6a021a589378f7aa990b7291
 workflow-type: tm+mt
-source-wordcount: '449'
+source-wordcount: '459'
 ht-degree: 0%
 
 ---
@@ -43,11 +43,11 @@ Adobe Experience Platform은 AWS, [!DNL Google Cloud Platform] 및 [!DNL Azure]�
 
 ### API 사용
 
-- [Flow Service API를 사용하여 Azure 파일 저장소 원본 연결을 만듭니다](../../tutorials/api/create/cloud-storage/azure-file-storage.md)
-- [Flow Service API를 사용하여 클라우드 스토리지 시스템 탐색](../../tutorials/api/explore/cloud-storage.md)
-- [Flow Service API를 사용하여 클라우드 스토리지 데이터 수집](../../tutorials/api/collect/cloud-storage.md)
+- [Flow Service API를 사용하여 Azure 파일 저장소 기본 연결을 만듭니다](../../tutorials/api/create/cloud-storage/azure-file-storage.md)
+- [Flow Service API를 사용하여 클라우드 스토리지 소스의 데이터 구조 및 컨텐츠를 탐색합니다](../../tutorials/api/explore/cloud-storage.md)
+- [Flow Service API를 사용하여 클라우드 스토리지 소스에 대한 데이터 흐름 만들기](../../tutorials/api/collect/cloud-storage.md)
 
 ### UI 사용
 
 - [UI에서 Azure 파일 저장소 소스 연결 만들기](../../tutorials/ui/create/cloud-storage/azure-file-storage.md)
-- [UI에서 클라우드 스토리지 연결에 대한 데이터 흐름 구성](../../tutorials/ui/dataflow/batch/cloud-storage.md)
+- [UI에서 클라우드 스토리지 연결을 위한 데이터 흐름 만들기](../../tutorials/ui/dataflow/batch/cloud-storage.md)
