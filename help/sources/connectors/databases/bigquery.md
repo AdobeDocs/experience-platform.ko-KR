@@ -5,9 +5,9 @@ title: Google BigQuery 소스 커넥터 개요
 topic-legacy: overview
 description: API 또는 사용자 인터페이스를 사용하여 Google BigQuery를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: 35c61382-a909-47f4-a937-15cb725ecbe3
-source-git-commit: 9d68e54baa894ebeff4603c7df01a1fe42aa217f
+source-git-commit: 5821f9304a37c1a03d17f0113d09548799662a2e
 workflow-type: tm+mt
-source-wordcount: '386'
+source-wordcount: '395'
 ht-degree: 0%
 
 ---
@@ -49,11 +49,11 @@ Platform에 [!DNL Google BigQuery]을 연결하려면 다음 자격 증명에 �
 
 ### API 사용
 
-- [Flow Service API를 사용하여 Google BigQuery 소스 연결을 만듭니다](../../tutorials/api/create/databases/bigquery.md)
-- [Flow Service API를 사용하여 데이터베이스 시스템 탐색](../../tutorials/api/explore/database-nosql.md)
-- [Flow Service API를 사용하여 데이터베이스에서 데이터를 수집합니다](../../tutorials/api/collect/database-nosql.md)
+- [Flow Service API를 사용하여 Google BigQuery 기본 연결을 만듭니다](../../tutorials/api/create/databases/bigquery.md)
+- [Flow Service API를 사용하여 데이터베이스 소스의 데이터 구조 및 컨텐츠를 탐색합니다](../../tutorials/api/explore/database-nosql.md)
+- [Flow Service API를 사용하여 데이터베이스 소스에 대한 데이터 흐름 만들기](../../tutorials/api/collect/database-nosql.md)
 
 ### UI 사용
 
 - [UI에서 Google BigQuery 소스 연결 만들기](../../tutorials/ui/create/databases/bigquery.md)
-- [UI에서 데이터베이스 연결에 대한 데이터 흐름 구성](../../tutorials/ui/dataflow/databases.md)
+- [UI에서 데이터베이스 소스 연결을 위한 데이터 흐름 만들기](../../tutorials/ui/dataflow/databases.md)
