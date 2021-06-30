@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;프로필;실시간 고객 프로필;문제 해결;API;통합 프로필;통합 프로필;통합;프로필;rtcp;XDM 그래프
 title: Platform의 일반 액세스 가능성 기능
-topic: 안내서
+topic-legacy: guide
 type: Documentation
 description: 키보드 탐색, 색상 팔레트 및 대비, 보조 기술 지원 등 Adobe Experience Platform에서 지원하는 일반적인 접근성 기능에 대해 자세히 알아보십시오.
-source-git-commit: 81db01c3e8d332e1fc8127d779c3a584bb498858
+source-git-commit: 97f803f649b2c42b0449a2f8f0cff370ed1aba93
 workflow-type: tm+mt
-source-wordcount: '485'
+source-wordcount: '484'
 ht-degree: 2%
 
 ---
