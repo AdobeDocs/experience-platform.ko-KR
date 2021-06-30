@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;프로필;실시간 고객 프로필;문제 해결;API;통합 프로필;통합 프로필;통합;프로필;rtcp;XDM 그래프
 title: Experience Platform을 위한 사용자 지정 액세스 가능성 솔루션
-topic: 안내서
+topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platform 사용자 인터페이스 내의 사용자 지정 액세스 가능성 솔루션에 대해 자세히 알아보십시오.
-source-git-commit: 81db01c3e8d332e1fc8127d779c3a584bb498858
+source-git-commit: 97f803f649b2c42b0449a2f8f0cff370ed1aba93
 workflow-type: tm+mt
-source-wordcount: '1532'
+source-wordcount: '1531'
 ht-degree: 0%
 
 ---
