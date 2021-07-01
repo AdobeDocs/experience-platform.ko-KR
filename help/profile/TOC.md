@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Real-time Customer Profile 안내서
 user-guide-description: 고객 데이터를 통합하여 다양한 채널에서 고객과의 상호 작용을 종합적으로 파악합니다.
 feature: 프로필
-source-git-commit: 1c2e4cd2b4070f3844a9848b5574e9d5b1688926
+source-git-commit: e56898542bc9cd305173fc2d7f3b6dd53dca7eb2
 workflow-type: tm+mt
-source-wordcount: '135'
-ht-degree: 19%
+source-wordcount: '139'
+ht-degree: 18%
 
 ---
 
@@ -17,9 +17,10 @@ ht-degree: 19%
 * [프로필 개요(비디오)](video/profile-overview.md)
 * [[!DNL Profile] 및 세그먼테이션 보호 기능](guardrails.md)
 * [[!DNL Profile] 대시보드](ui/profile-dashboard.md)
+* [데이터 세트에 대한 TTL(time-to-live)](apply-ttl.md)
 * [!DNL Profile] API {#api}
    * [개요](api/overview.md)
-   * [시작하기](api/getting-started.md)
+   * [시작](api/getting-started.md)
    * [에지 예측](api/edge-projections.md)
    * [엔터티([!DNL Profile] 액세스)](api/entities.md)
    * [작업 내보내기([!DNL Profile] 내보내기)](api/export-jobs.md)
