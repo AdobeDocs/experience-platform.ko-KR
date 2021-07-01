@@ -4,9 +4,9 @@ description: Adobe Experience Platform Launch에서 Adobe Experience Platform �
 solution: Experience Platform
 feature: 웹 SDK
 exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
-source-git-commit: 27b26605cd03ff6d83a9a5bd308e55fcdc955da6
+source-git-commit: 17ebf50965136f2c075f21eb3ecdcb1ce6da0b7d
 workflow-type: tm+mt
-source-wordcount: '547'
+source-wordcount: '595'
 ht-degree: 4%
 
 ---
@@ -24,6 +24,7 @@ ht-degree: 4%
 이벤트 보내기 작업 유형에는 구현에 따라 유용할 수 있는 몇 가지 다른 필드가 있습니다. 이러한 필드는 모두 선택 사항입니다.
 
 - **유형:** 이 필드에서는 XDM 스키마에 기록할 이벤트 유형을 지정할 수 있습니다. 기본 이벤트 유형에 대한 자세한 내용은 [설명서](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#using-the-sendbeacon-api)를 참조하십시오.
+- **데이터:** XDM 스키마와 일치하지 않는 데이터는 이 필드를 사용하여 전송할 수 있습니다. 이 필드는 Adobe Target 프로필을 업데이트하거나 Target Recommendations 속성을 전송하려고 하는 경우 유용합니다. 예를 보려면 [설명서](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en)를 참조하십시오.
 - **병합 ID:** 이벤트에 대한  [병합 ](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/merging-event-data.html?lang=en#fundamentals) ID를 지정하려면 이 필드에서 그렇게 할 수 있습니다. 현재 다운스트림 솔루션은 이벤트 데이터를 병합할 수 없습니다.
 - **데이터 세트 ID:**  데이터 스트림에 지정한 데이터 세트 이외의 데이터 세트에 데이터를 보내야 하는 경우 여기에서 해당 데이터 세트 ID를 지정할 수 있습니다.
 - **문서가 언로드됨:**  사용자가 페이지에서 멀리 탐색하더라도 이벤트가 서버에 도달하는지 확인하려면 문서  **[!UICONTROL 언로드 확인란을]** 선택합니다. 이를 통해 이벤트가 서버에 도달할 수 있지만 응답은 무시됩니다.
