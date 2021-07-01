@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK를 사용하여 이벤트 추적
 description: Adobe Experience Platform Web SDK 이벤트를 추적하는 방법을 알아봅니다.
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
 exl-id: 8b221cae-3490-44cb-af06-85be4f8d280a
-source-git-commit: 3f5f17275e28ba35a302a42d66b151c4234bc79c
+source-git-commit: a6fca344e6b307e503e29ca7dda3534cdea62f53
 workflow-type: tm+mt
-source-wordcount: '1462'
+source-wordcount: '1460'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 Adobe Experience Cloud에 전송된 데이터는 두 가지 카테고리로 분류됩니다.
 
 * XDM 데이터
-* 비XDM 데이터(현재 지원되지 않음)
+* 비XDM 데이터
 
 ## XDM 데이터 보내기
 
@@ -75,7 +75,7 @@ dataLayer.commerce = null;
 >XDM 필드의 각 이벤트에서 전송할 수 있는 데이터에는 32KB 제한이 있습니다.
 
 
-### 비 XDM 데이터 보내기
+## 비 XDM 데이터 보내기
 
 XDM 스키마와 일치하지 않는 데이터는 `sendEvent` 명령의 `data` 옵션을 사용하여 전송해야 합니다. 이 기능은 Web SDK 버전 2.5.0 이상에서 지원됩니다.
 
@@ -85,7 +85,7 @@ XDM 스키마와 일치하지 않는 데이터는 `sendEvent` 명령의 `data` �
 
 **Adobe Target에 프로필 및 Recommendations 속성을 보내는 방법:**
 
-```
+```javascript
 alloy("sendEvent", {
   data: {
     __adobe: {
@@ -231,7 +231,7 @@ alloy("sendEvent", {
   });
 ```
 
-## 전역 {#modifying-events-globally} 이벤트 수정
+## 이벤트 전역 수정 {#modifying-events-globally}
 
 이벤트에서 전체적으로 필드를 추가, 제거 또는 수정하려면 `onBeforeEventSend` 콜백을 구성할 수 있습니다.  이 콜백은 이벤트가 전송될 때마다 호출됩니다.  이 콜백은 `xdm` 필드를 사용하여 이벤트 개체에 전달됩니다.  이벤트를 사용하여 전송되는 데이터를 변경하려면 `content.xdm` 을 수정합니다.
 
