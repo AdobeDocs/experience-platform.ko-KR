@@ -4,10 +4,10 @@ description: Experience Platform Web SDK에서 처리 규칙을 사용하여 변
 seo-description: Web SDK에서 처리 규칙을 사용하여 변수를 Adobe Analytics에 수동으로 매핑합니다
 keywords: adobe analytics;analytics;변수;매핑 변수;매핑 변수;컨텍스트 데이터;컨텍스트 데이터;처리 규칙;규칙;xdm;스키마;
 exl-id: 395050c1-8d39-4da8-acea-6e618ed662dd
-source-git-commit: d67c8c0ada6dc4bf07b73547f9e571a8a7386b75
+source-git-commit: 9392a90b70699b79949095e178ea77dd34d313a3
 workflow-type: tm+mt
-source-wordcount: '395'
-ht-degree: 16%
+source-wordcount: '403'
+ht-degree: 25%
 
 ---
 
@@ -15,13 +15,13 @@ ht-degree: 16%
 
 Adobe Experience Platform [!DNL Web SDK]은 특정 변수를 자동으로 매핑할 수 있지만 사용자 지정 변수를 수동으로 매핑해야 합니다.
 
-[!DNL Analytics]에 자동으로 매핑되지 않는 XDM 데이터의 경우 [컨텍스트 데이터](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/contextdata.html)를 사용하여 [스키마](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html)와 일치시킬 수 있습니다. 그런 다음 [처리 규칙](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules-configuration/t-processing-rules.html)을 사용하여 [!DNL Analytics]에 매핑하여 [!DNL Analytics] 변수를 채울 수 있습니다.
+[!DNL Analytics]에 자동으로 매핑되지 않는 XDM 데이터의 경우 [컨텍스트 데이터](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/contextdata.html?lang=ko-KR)를 사용하여 [스키마](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=ko-KR)와 일치시킬 수 있습니다. 그런 다음 [처리 규칙](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules-configuration/t-processing-rules.html?lang=ko-KR)을 사용하여 [!DNL Analytics]에 매핑하여 [!DNL Analytics] 변수를 채울 수 있습니다.
 
 또한 기본 작업 세트와 제품 목록을 사용하여 Adobe Experience Platform Web SDK로 데이터를 전송하거나 검색할 수 있습니다. 이렇게 하려면 [전자 상거래 및 제품 정보 수집](https://experienceleague.adobe.com/docs/experience-platform/edge/data-collection/collect-commerce-data.html)을 참조하십시오.
 
 ## 컨텍스트 데이터
 
-[!DNL Analytics]에서 사용하기 위해 XDM 데이터는 점 표기법을 사용하여 변환되고 `contextData`로 사용할 수 있게 됩니다. 다음 값 쌍 목록은 `context data`의 예를 보여줍니다.
+[!DNL Analytics]에서 사용하기 위해 XDM 데이터는 점 표기법을 사용하여 변환되고 `contextData`로 사용할 수 있게 됩니다. 다음 값 쌍 목록은 `context data`이 평면화될 때 어떤 모습인지에 대한 예를 보여줍니다.
 
 ```json
 {
@@ -59,7 +59,7 @@ Adobe Experience Platform [!DNL Web SDK]은 특정 변수를 자동으로 매핑
 
 Adobe Experience Platform은 스키마를 사용하여 데이터의 구조를 일관되고 재사용 가능한 방식으로 설명합니다. 여러 시스템에서 데이터를 일관되게 정의하면 의미를 쉽게 유지할 수 있으므로 데이터의 가치를 얻을 수 있습니다. [!DNL Analytics] 컨텍스트 데이터는 스키마에 의해 정의된 구조와 함께 작동합니다.
 
-다음 예는 [`event` 명령](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html)을 `xdm` 옵션과 함께 사용하여 Adobe Experience Platform Web SDK를 사용하여 데이터를 전송하고 검색할 수 있는 방법을 보여줍니다. 이 예에서 `event` 명령은 productListItems `name` 및 `SKU` 값을 추적하도록 [ExperienceEvent Commerce Details 스키마](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/experienceevent-commerce.schema.md)와 일치합니다.
+다음 예는 [`event` 명령](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=ko-KR)을 `xdm` 옵션과 함께 사용하여 Adobe Experience Platform Web SDK를 사용하여 데이터를 전송하고 검색할 수 있는 방법을 보여줍니다. 이 예에서 `event` 명령은 productListItems `name` 및 `SKU` 값을 추적하도록 [ExperienceEvent Commerce Details 스키마](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/experienceevent-commerce.schema.md)와 일치합니다.
 
 
 ```javascript
