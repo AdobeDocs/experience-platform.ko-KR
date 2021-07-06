@@ -3,9 +3,9 @@ keywords: google 고객 일치;Google 고객 일치;Google Customer Match
 title: Google Customer Match 연결
 description: 'Google Customer Match를 사용하면 온라인 및 오프라인 데이터를 사용하여 Google이 소유하거나 운영하는 속성(예: Search, Shopping, Gmail, YouTube)에서 고객에게 도달하고 다시 참여하도록 할 수 있습니다.'
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: da069c6c931bfd2af38b40fc061d5eb633aba9ea
+source-git-commit: 4fed44edb3e201422f765493c9019be1cddffccc
 workflow-type: tm+mt
-source-wordcount: '1521'
+source-wordcount: '1548'
 ht-degree: 0%
 
 ---
@@ -52,9 +52,11 @@ Experience Platform의 일부 대상에는 대상 플랫폼으로 전송되거�
 
 **세그먼트 내보내기**  - 대상에 사용된 식별자(이름, 전화 번호 및 기타)로 세그먼트(대상)의 모든 멤버를  [!DNL Google Customer Match] 내보냅니다.
 
-## [!DNL Google Customer Match] 계정 사전 요구 사항  {#google-account-prerequisites}
+## [!DNL Google Customer Match] 계정 사전 요구 사항 {#google-account-prerequisites}
 
 Experience Platform에서 [!DNL Google Customer Match] 대상을 설정하기 전에 [Google 지원 설명서](https://support.google.com/google-ads/answer/6299717)에 설명된 [!DNL Customer Match] 사용에 대한 Google의 정책을 읽고 준수하도록 하십시오.
+
+그런 다음 [!DNL Google] 계정이 [!DNL Standard] 이상의 액세스 수준에 대해 구성되어 있는지 확인합니다. 자세한 내용은 [Google 광고 설명서](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1)를 참조하십시오.
 
 ### 허용 목록 {#allowlist}
 
@@ -79,7 +81,7 @@ Adobe Experience Platform에 수집하는 ID 유형에 따라 해당 요구 사�
 >
 >`Phone` 네임스페이스에 수집된 전화 번호는 [!DNL Google Customer Match]에서 활성화할 수 없습니다.
 
-## 전자 메일 해싱 요구 사항 {#hashing-requirements}
+## 이메일 해싱 요구 사항 {#hashing-requirements}
 
 전자 메일 주소를 Adobe Experience Platform에 수집하기 전에 해시하거나 Experience Platform에서 명확히 전자 메일 주소를 사용할 수 있으며 [!DNL Platform] 해시 처리할 수 있습니다.
 
@@ -110,7 +112,7 @@ Attribute source data is not automatically hashed. When your source field contai
 
 >[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
-## 대상 {#connect-destination}에 연결
+## 대상에 연결 {#connect-destination}
 
 **[!UICONTROL 대상]** > **[!UICONTROL 카탈로그]**&#x200B;에서 **[!UICONTROL 광고]** 카테고리로 스크롤합니다. [!DNL Google Customer Match]을 선택한 다음 **[!UICONTROL 구성]**&#x200B;을 선택합니다.
 
@@ -148,7 +150,7 @@ Attribute source data is not automatically hashed. When your source field contai
 
 이제 대상이 생성되었습니다. 세그먼트를 나중에 활성화하려면 **[!UICONTROL 저장 및 종료]**&#x200B;를 선택하거나 **[!UICONTROL 다음]**&#x200B;을 선택하여 워크플로우를 계속하고 활성화할 세그먼트를 선택할 수 있습니다. 어느 경우든 나머지 워크플로우에서 다음 섹션, [세그먼트를 [!DNL Google Customer Match]](#activate-segments)에 활성화 를 참조하십시오.
 
-## 세그먼트를 [!DNL Google Customer Match] {#activate-segments}로 활성화
+## 세그먼트를 [!DNL Google Customer Match]에 활성화 {#activate-segments}
 
 세그먼트를 [!DNL Google Customer Match]에 활성화하는 방법에 대한 지침은 [대상에 데이터 활성화](../../ui/activate-destinations.md)를 참조하십시오.
 
