@@ -5,16 +5,16 @@ title: XDM 개별 프로필 클래스
 topic-legacy: overview
 description: 이 문서에서는 XDM 개별 프로필 클래스에 대한 개요를 제공합니다.
 exl-id: 83b22462-79ce-4024-aa50-a9bd800c0f81
-source-git-commit: ecb9c9a4158f3d2981ab60ee3bf419464ac7b8f1
+source-git-commit: 79fcc44ec5e08f63bfd5eed6e90d7538273f4dab
 workflow-type: tm+mt
-source-wordcount: '568'
+source-wordcount: '569'
 ht-degree: 1%
 
 ---
 
 # [!DNL XDM Individual Profile] 클래스
 
-[!DNL XDM Individual Profile] 는 개별 개인의 단일 표현(또는 &quot;프로필&quot;)을 구성하는 표준 XDM(Experience Data Model) 클래스입니다. 특히, 클래스(및 그 호환 가능한 mixin)는 브랜드와 상호 작용하는 식별된 개인과 부분적으로 식별된 개인의 속성 및 관심사를 캡처합니다.
+[!DNL XDM Individual Profile] 는 개별 개인의 단일 표현(또는 &quot;프로필&quot;)을 구성하는 표준 XDM(Experience Data Model) 클래스입니다. 특히, 클래스(및 그 호환 필드 그룹)는 브랜드와 상호 작용하는 식별된 개인과 부분적으로 식별된 개인의 속성 및 관심사를 캡처합니다.
 
 프로필은 익명 행동 신호(예: 브라우저 쿠키)부터 이름, 생년월일, 위치 및 이메일 주소와 같은 세부 정보가 포함된 식별이 높은 프로필까지 다양할 수 있습니다. 프로필의 규모가 커지면 개인 정보, ID, 연락처 세부 사항 및 커뮤니케이션 환경 설정이 풍부한 저장소가 되어 개인별로 제공됩니다. 플랫폼 생태계에서 이 클래스를 사용하는 방법에 대한 자세한 내용은 [XDM 개요](../home.md#data-behaviors)를 참조하십시오.
 
@@ -50,4 +50,4 @@ Adobe은 [!DNL XDM Individual Profile] 클래스에서 사용할 여러 표준 �
 * [[!UICONTROL 세그먼트 멤버십 세부 정보]](../field-groups/profile/segmentation.md)
 * [[!UICONTROL 작업 연락처 세부 정보]](../field-groups/profile/work-contact-details.md)
 
-[!DNL XDM Individual Profile]에 대한 모든 호환 필드 그룹의 전체 목록은 [XDM GitHub 리포지토리](https://github.com/adobe/xdm/tree/master/components/mixins/profile)를 참조하십시오.
+[!DNL XDM Individual Profile]에 대한 모든 호환 필드 그룹의 전체 목록은 [XDM GitHub 리포지토리](https://github.com/adobe/xdm/tree/master/components/fieldgroups/profile)를 참조하십시오.
