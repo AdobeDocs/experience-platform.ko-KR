@@ -5,9 +5,9 @@ title: 스키마 구성 기본 사항
 topic-legacy: overview
 description: 이 문서에서는 Adobe Experience Platform에서 사용할 스키마를 구성하기 위한 XDM(Experience Data Model) 스키마와 빌딩 블록, 원칙 및 모범 사례를 소개합니다.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
+source-git-commit: 7d05b5d57ec4597b168be0261e75da5f243cb660
 workflow-type: tm+mt
-source-wordcount: '3726'
+source-wordcount: '3629'
 ht-degree: 0%
 
 ---
@@ -161,6 +161,12 @@ Adobe은 몇 가지 표준(&quot;core&quot;) XDM 클래스를 제공합니다. �
 
 예를 들어 &quot;[!UICONTROL 충성도 멤버]&quot; 스키마에 대한 &quot;[!UICONTROL 이름]&quot; 및 &quot;[!UICONTROL 홈 주소]&quot;와 같은 세부 정보를 캡처하려면 이러한 일반적인 개념을 정의하는 표준 필드 그룹을 사용할 수 있습니다. 그러나 덜 일반적인 사용 사례(예: &quot;[!UICONTROL 로열티 프로그램 수준]&quot;)에만 해당하는 개념에는 사전 정의된 필드 그룹이 없는 경우가 많습니다. 이 경우 이 정보를 캡처하려면 고유한 필드 그룹을 정의해야 합니다.
 
+>[!NOTE]
+>
+>이러한 필드는 [!DNL Experience Platform] 서비스에서 암묵적으로 이해하며 [!DNL Platform] 구성 요소에서 사용할 때 더 높은 일관성을 제공하므로 스키마에서 가능한 한 표준 필드 그룹을 사용하는 것이 좋습니다.
+>
+>표준 구성 요소에서 제공하는 필드(예: &quot;이름&quot; 및 &quot;이메일 주소&quot;)에는 기본 스칼라 필드 형식을 벗어나는 추가된 의미가 들어, [!DNL Platform]에서 동일한 데이터 유형을 공유하는 필드는 동일한 방식으로 동작한다고 알려줍니다. 이 동작은 데이터가 어디에서 오거나 데이터를 사용 중인 [!DNL Platform] 서비스에 관계없이 일관되도록 신뢰할 수 있습니다.
+
 스키마는 &quot;0 이상&quot; 필드 그룹으로 구성되므로 필드 그룹을 전혀 사용하지 않고 유효한 스키마를 구성할 수 있습니다.
 
 다음 스크린샷에서는 Platform UI에서 필드 그룹이 표시되는 방식을 보여줍니다. 스키마 구조에 필드를 그룹화하는 기능을 제공하는 단일 필드 그룹([!UICONTROL 인구 통계 세부 정보])이 이 예제의 스키마에 추가됩니다.
@@ -209,24 +215,6 @@ Adobe은 몇 가지 표준(&quot;core&quot;) XDM 클래스를 제공합니다. �
 >[!NOTE]
 >
 >맵 필드 유형을 사용하면 단일 키에 대한 여러 값을 포함하여 키-값 쌍 데이터를 사용할 수 있습니다. 맵은 시스템 수준에서만 정의할 수 있습니다. 즉, 업계 또는 공급업체 정의 스키마에서 맵이 표시될 수 있지만 사용자가 정의한 필드에서는 사용할 수 없습니다. 필드 유형 정의에 대한 자세한 내용은 [스키마 레지스트리 API 개발자 안내서](../api/getting-started.md)를 참조하십시오.
-
-다운스트림 서비스 및 애플리케이션에서 사용하는 일부 데이터 작업은 특정 필드 유형에 제한을 적용합니다. 영향을 받는 서비스에는 다음이 포함되지만 이에 국한되지 않습니다.
-
-* [[!DNL Real-time Customer Profile]](../../profile/home.md)
-* [[!DNL Identity Service]](../../identity-service/home.md)
-* [[!DNL Segmentation]](../../segmentation/home.md)
-* [[!DNL Query Service]](../../query-service/home.md)
-* [[!DNL Data Science Workspace]](../../data-science-workspace/home.md)
-
-다운스트림 서비스에서 사용할 스키마를 만들기 전에 해당 서비스에 대한 적절한 설명서를 검토하여 스키마가 의도한 데이터 작업에 대한 필드 요구 사항과 제한을 더 잘 이해하십시오.
-
-### XDM 필드
-
-XDM은 기본 필드 및 고유한 데이터 유형을 정의할 수 있는 기능 외에도 [!DNL Experience Platform] 서비스에서 암묵적으로 이해되는 표준 필드 및 데이터 유형 세트를 제공하며 [!DNL Platform] 구성 요소에서 사용할 때 더 높은 일관성을 제공합니다.
-
-&quot;이름&quot; 및 &quot;전자 메일 주소&quot;와 같은 이러한 필드는 기본 스칼라 필드 형식을 벗어나는 추가된 의미를 포함하며, [!DNL Platform] 에서는 동일한 XDM 데이터 유형을 공유하는 모든 필드가 동일한 방식으로 동작한다고 알려줍니다. 이 동작은 데이터가 어디에서 오거나 데이터를 사용 중인 [!DNL Platform] 서비스에 관계없이 일관되도록 신뢰할 수 있습니다.
-
-사용 가능한 XDM 필드의 전체 목록은 [XDM 필드 사전](field-dictionary.md) 을 참조하십시오. 가능하면 XDM 필드 및 데이터 유형을 사용하여 [!DNL Experience Platform] 간의 일관성 및 표준화를 지원하는 것이 좋습니다.
 
 ## 컴포지션 예
 
