@@ -5,7 +5,7 @@ title: 스키마 구성 기본 사항
 topic-legacy: overview
 description: 이 문서에서는 Adobe Experience Platform에서 사용할 스키마를 구성하기 위한 XDM(Experience Data Model) 스키마와 빌딩 블록, 원칙 및 모범 사례를 소개합니다.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 2781825bf48940d0aa0a38485006263bfc8ac474
+source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
 workflow-type: tm+mt
 source-wordcount: '3726'
 ht-degree: 0%
@@ -167,7 +167,7 @@ Adobe은 몇 가지 표준(&quot;core&quot;) XDM 클래스를 제공합니다. �
 
 ![](../images/schema-composition/field-group.png)
 
-사용 가능한 표준 XDM 필드 그룹의 최신 목록을 보려면 [공식 XDM 저장소](https://github.com/adobe/xdm/tree/master/components/mixins)를 참조하십시오. 또는 UI에서 리소스를 보려면 [XDM 구성 요소 탐색](../ui/explore.md) 의 안내서를 참조할 수 있습니다.
+사용 가능한 표준 XDM 필드 그룹의 최신 목록을 보려면 [공식 XDM 저장소](https://github.com/adobe/xdm/tree/master/components/fieldgroups)를 참조하십시오. 또는 UI에서 리소스를 보려면 [XDM 구성 요소 탐색](../ui/explore.md) 의 안내서를 참조할 수 있습니다.
 
 ### 데이터 유형 {#data-type}
 
