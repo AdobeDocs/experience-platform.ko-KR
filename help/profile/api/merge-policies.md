@@ -5,7 +5,7 @@ topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platform을 사용하면 여러 소스에서 데이터 조각을 함께 가져와서 결합하여 각 개별 고객에 대한 전체 보기를 볼 수 있습니다. 이 데이터를 함께 가져올 때 병합 정책은 Platform이 데이터 우선 순위가 지정되는 방법과 통합 보기를 만들기 위해 결합할 데이터를 결정하는 데 사용하는 규칙입니다.
 exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
-source-git-commit: 6864e4518b17dc843b3e74c0f9b03ab756d9c581
+source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
 workflow-type: tm+mt
 source-wordcount: '2590'
 ht-degree: 1%
@@ -22,7 +22,7 @@ RESTful API 또는 사용자 인터페이스를 사용하여 새 병합 정책�
 
 UI를 사용하여 병합 정책을 작업하려면 [병합 정책 UI 안내서](../merge-policies/ui-guide.md)를 참조하십시오. 일반적으로 병합 정책 및 Experience Platform 내에서 해당 역할에 대해 자세히 알아보려면 [병합 정책 개요](../merge-policies/overview.md)를 읽어 보십시오.
 
-## 시작하기
+## 시작
 
 이 안내서에 사용된 API 엔드포인트는 [[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)의 일부입니다. 계속하기 전에 [시작 안내서](getting-started.md)에서 관련 설명서에 대한 링크, 이 문서에서 샘플 API 호출을 읽는 방법에 대한 안내서 및 [!DNL Experience Platform] API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요한 정보를 검토하십시오.
 
@@ -121,7 +121,7 @@ UI를 사용하여 병합 정책을 작업하려면 [병합 정책 UI 안내서]
     }
 ```
 
-### 특성 병합 {#attribute-merge}
+### 속성 병합 {#attribute-merge}
 
 프로필 조각은 특정 사용자에 대해 존재하는 ID 목록 중 하나의 ID에 대한 프로필 정보입니다. ID 그래프 유형을 사용하면 두 개 이상의 ID가 발생할 수 있는 경우 프로필 속성이 충돌할 가능성이 있고 우선 순위를 지정해야 합니다. `attributeMerge` 을 사용하여 키 값(레코드 데이터) 유형 데이터 세트 간 병합 충돌이 발생하는 경우 우선 순위를 지정할 프로필 속성을 지정할 수 있습니다.
 
@@ -761,9 +761,9 @@ curl -X DELETE \
 
 UI를 사용하여 사용자 지정 타임스탬프를 작업하려면 [병합 정책 개요](../merge-policies/overview.md)에서 사용자 지정 타임스탬프](../merge-policies/overview.md#custom-timestamps)를 사용하는 의 섹션을 참조하십시오.[
 
-#### [!DNL External Source System Audit Details] 필드 그룹 세부 정보  {#field-group-details}
+#### [!DNL External Source System Audit Details] 필드 그룹 세부 정보 {#field-group-details}
 
-다음 예제에서는 [!DNL External Source System Audit Details] 필드 그룹에서 올바르게 채워진 필드를 보여줍니다. 전체 필드 그룹 JSON은 GitHub의 [공용 XDM(Experience Data Model) 보고서](https://github.com/adobe/xdm/blob/master/components/mixins/shared/external-source-system-audit-details.schema.json)에서도 볼 수 있습니다.
+다음 예제에서는 [!DNL External Source System Audit Details] 필드 그룹에서 올바르게 채워진 필드를 보여줍니다. 전체 필드 그룹 JSON은 GitHub의 [공용 XDM(Experience Data Model) 보고서](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/external-source-system-audit-details.schema.json)에서도 볼 수 있습니다.
 
 ```json
 {
