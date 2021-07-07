@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 캠페인 마케팅 세부 사항 스키마 필드 그룹
 topic-legacy: overview
 description: 이 문서에서는 캠페인 마케팅 세부 사항 스키마 필드 그룹에 대한 개요를 제공합니다.
-source-git-commit: cb4afb0979bd65a9a82a6018323fa7beacdbf605
+source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
 workflow-type: tm+mt
 source-wordcount: '150'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -30,5 +30,5 @@ ht-degree: 1%
 
 필드 그룹에 대한 자세한 내용은 공용 XDM 저장소를 참조하십시오.
 
-* [채워진 예](https://github.com/adobe/xdm/blob/master/components/mixins/experience-event/experienceevent-marketing.example.1.json)
-* [전체 스키마](https://github.com/adobe/xdm/blob/master/components/mixins/experience-event/experienceevent-marketing.schema.json)
+* [채워진 예](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-marketing.example.1.json)
+* [전체 스키마](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-marketing.schema.json)
