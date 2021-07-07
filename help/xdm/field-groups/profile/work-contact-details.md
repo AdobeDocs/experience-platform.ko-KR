@@ -5,10 +5,10 @@ title: 작업 연락처 세부 정보 스키마 필드 그룹
 topic-legacy: overview
 description: 이 문서에서는 작업 연락처 세부 정보 스키마 필드 그룹에 대한 개요를 제공합니다.
 exl-id: 0133622c-e95f-4833-b2f8-3694d41751b4
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
 workflow-type: tm+mt
 source-wordcount: '193'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -34,5 +34,5 @@ ht-degree: 3%
 
 필드 그룹에 대한 자세한 내용은 공용 XDM 저장소를 참조하십시오.
 
-* [채워진 예](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-work-details.example.1.json)
-* [전체 스키마](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-work-details.schema.json)
+* [채워진 예](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-work-details.example.1.json)
+* [전체 스키마](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-work-details.schema.json)
