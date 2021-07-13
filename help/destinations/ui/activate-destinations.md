@@ -6,9 +6,9 @@ seo-title: 대상에 프로필 및 세그먼트 활성화
 description: 세그먼트를 대상에 매핑하여 Adobe Experience Platform에서 보유한 데이터를 활성화합니다. 이를 수행하려면 아래 단계를 수행하십시오.
 seo-description: 세그먼트를 대상에 매핑하여 Adobe Experience Platform에서 보유한 데이터를 활성화합니다. 이를 수행하려면 아래 단계를 수행하십시오.
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
-source-git-commit: 73a8d65255359de6cff6a9410310554ca419fe1c
+source-git-commit: a451e462ac38d157335568310e26cf6375699c6b
 workflow-type: tm+mt
-source-wordcount: '2806'
+source-wordcount: '2928'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 0%
 
 ## 데이터를 활성화할 대상을 선택합니다 {#select-destination}
 
-적용 대상:모든 대상
+적용 대상: 모든 대상
 
 Adobe Experience Platform 사용자 인터페이스에서 **[!UICONTROL 대상]** > **[!UICONTROL 찾아보기]**&#x200B;로 이동한 다음 아래 이미지와 같이 세그먼트를 활성화할 대상에 해당하는 **[!UICONTROL 활성화]** 단추를 클릭하십시오.
 
@@ -39,7 +39,7 @@ Adobe Experience Platform 사용자 인터페이스에서 **[!UICONTROL 대상]*
 
 ## [!UICONTROL 세그먼트 ] 선택 단계 {#select-segments}
 
-적용 대상:모든 대상
+적용 대상: 모든 대상
 
 ![세그먼트 단계 선택](../assets/ui/activate-destinations/select-segments-icon.png)
 
@@ -54,13 +54,13 @@ Adobe Experience Platform 사용자 인터페이스에서 **[!UICONTROL 대상]*
 >title="변형 적용"
 >abstract="해시되지 않은 소스 필드를 사용할 때 이 옵션을 선택하여 Adobe Experience Platform에서 활성화 시 자동으로 해시하도록 합니다."
 
-적용 대상:소셜 대상 및 Google Customer Match 광고 대상
+적용 대상: 소셜 대상 및 Google Customer Match 광고 대상
 
 ![ID 매핑 단계](../assets/ui/activate-destinations/identity-mapping-icon.png)
 
 소셜 대상의 경우, 대상에서 타겟 ID로 매핑하려면 소스 특성 또는 ID 네임스페이스를 선택해야 합니다.
 
-## 예:[!DNL Facebook Custom Audience]에서 대상 데이터 활성화 {#example-facebook}
+## 예: [!DNL Facebook Custom Audience]에서 대상 데이터 활성화 {#example-facebook}
 
 다음은 [!DNL Facebook]에서 대상 데이터를 활성화할 때 올바른 ID 매핑의 예입니다.
 
@@ -90,7 +90,7 @@ Adobe Experience Platform 사용자 인터페이스에서 **[!UICONTROL 대상]*
 
  
 
-## 예:[!DNL Google Customer Match]에서 대상 데이터 활성화 {#example-gcm}
+## 예: [!DNL Google Customer Match]에서 대상 데이터 활성화 {#example-gcm}
 
 이는 [!DNL Google Customer Match]에서 대상 데이터를 활성화할 때 올바른 ID 매핑의 예입니다.
 
@@ -120,7 +120,7 @@ Adobe Experience Platform 사용자 인터페이스에서 **[!UICONTROL 대상]*
 
 ## **** 예약 단계 {#scheduling}
 
-적용 대상:이메일 마케팅 대상 및 클라우드 스토리지 대상
+적용 대상: 이메일 마케팅 대상 및 클라우드 스토리지 대상
 
 ![단계 예약](../assets/ui/activate-destinations/scheduling-icon.png)
 
@@ -130,7 +130,7 @@ Adobe Experience Platform 사용자 인터페이스에서 **[!UICONTROL 대상]*
 > 
 >[!DNL Adobe Experience Platform] 에서는 내보내기 파일을 파일당 500만 개의 레코드(행)로 자동 분할합니다. 각 행은 하나의 프로필을 나타냅니다.
 >
->파일 이름을 분할하면 파일이 더 큰 내보내기의 일부임을 나타내는 숫자가 추가됩니다.`filename.csv`, `filename_2.csv`, `filename_3.csv`.
+>파일 이름을 분할하면 파일이 더 큰 내보내기의 일부임을 나타내는 숫자가 추가됩니다. `filename.csv`, `filename_2.csv`, `filename_3.csv`.
 
 대상으로 전송할 세그먼트에 해당하는 **[!UICONTROL 예약 만들기]** 단추를 선택합니다.
 
@@ -152,6 +152,9 @@ Adobe Experience Platform 사용자 인터페이스에서 **[!UICONTROL 대상]*
 3. **[!UICONTROL 날짜]** 선택기를 사용하여 내보내기가 발생할 날짜 또는 간격을 선택합니다.
 4. **[!UICONTROL 만들기]**&#x200B;를 선택하여 일정을 저장합니다.
 
+>[!IMPORTANT]
+>
+>이미 내보낸 세그먼트의 경우, 일정 구성에서 전체 파일 내보내기로 파일 내보내기 일정을 변경하고, **[!UICONTROL 빈도]**&#x200B;를 **[!UICONTROL Once]**&#x200B;로 설정하면 새 채우기 파일을 내보내지 않습니다. 다른 일정으로 새 채우기 파일을 내보내려면 새 대상 인스턴스를 만들어야 합니다. 이는 향후 릴리스에서 해결될 수 있는 제한 사항입니다.
 
 ### 증분 파일 내보내기 {#export-incremental-files}
 
@@ -174,10 +177,14 @@ Adobe Experience Platform 사용자 인터페이스에서 **[!UICONTROL 대상]*
 
    >[!IMPORTANT]
    >
-   >내보낼 시간을 선택하는 옵션은 선택한 고객 수만 사용할 수 있습니다.<br> <br> 내부 Experience Platform 프로세스가 구성되는 방식 때문에 첫 번째 증분 또는 전체 파일 내보내기에 모든 채우기 데이터가 포함되지 않을 수 있습니다.  <br> <br> 전체 파일과 증분 파일 모두에 대해 가장 최신의 채우기 데이터를 전체적으로 내보내려면 다음 날 오후 12시 GMT 이후에 첫 번째 파일 내보내기 시간을 설정하는 것이 좋습니다. 이는 향후 릴리스에서 해결될 수 있는 제한 사항입니다.
+   >내보낼 시간을 선택하는 옵션은 선택한 고객 수만 사용할 수 있습니다. <br> <br> 내부 Experience Platform 프로세스가 구성되는 방식 때문에 첫 번째 증분 또는 전체 파일 내보내기에 모든 채우기 데이터가 포함되지 않을 수 있습니다.  <br> <br> 전체 파일과 증분 파일 모두에 대해 가장 최신의 채우기 데이터를 전체적으로 내보내려면 다음 날 오후 12시 GMT 이후에 첫 번째 파일 내보내기 시간을 설정하는 것이 좋습니다. 이는 향후 릴리스에서 해결될 수 있는 제한 사항입니다.
 
 3. **[!UICONTROL 날짜]** 선택기를 사용하여 내보내기가 발생할 날짜 또는 간격을 선택합니다.
 4. **[!UICONTROL 만들기]**&#x200B;를 선택하여 일정을 저장합니다.
+
+>[!IMPORTANT]
+>
+>이미 내보낸 세그먼트의 경우, 일정 구성에서 전체 파일 내보내기로 파일 내보내기 일정을 변경하고, **[!UICONTROL 빈도]**&#x200B;를 **[!UICONTROL Once]**&#x200B;로 설정하면 새 채우기 파일을 내보내지 않습니다. 다른 일정으로 새 채우기 파일을 내보내려면 새 대상 인스턴스를 만들어야 합니다. 이는 향후 릴리스에서 해결될 수 있는 제한 사항입니다.
 
 ### 파일 이름 구성 {#file-names}
 
@@ -193,9 +200,9 @@ Adobe Experience Platform 사용자 인터페이스에서 **[!UICONTROL 대상]*
 
 대상 이름 및 세그먼트 ID는 파일 이름에서 제거할 수 없습니다. 이 외에도 다음을 추가할 수 있습니다.
 
-* **[!UICONTROL 세그먼트 이름]**:세그먼트 이름을 파일 이름에 추가할 수 있습니다.
-* **[!UICONTROL 날짜 및 시간]**:파일이  `MMDDYYYY_HHMMSS` 생성되는 시간의 형식 또는 Unix 10자리 타임스탬프를 추가하는 중 선택합니다. 각 증분 내보내기로 생성된 동적 파일 이름을 파일에 포함하려면 다음 옵션 중 하나를 선택합니다.
-* **[!UICONTROL 사용자 지정 텍스트]**:파일 이름에 사용자 지정 텍스트를 추가합니다.
+* **[!UICONTROL 세그먼트 이름]**: 세그먼트 이름을 파일 이름에 추가할 수 있습니다.
+* **[!UICONTROL 날짜 및 시간]**: 파일이  `MMDDYYYY_HHMMSS` 생성되는 시간의 형식 또는 Unix 10자리 타임스탬프를 추가하는 중 선택합니다. 각 증분 내보내기로 생성된 동적 파일 이름을 파일에 포함하려면 다음 옵션 중 하나를 선택합니다.
+* **[!UICONTROL 사용자 지정 텍스트]**: 파일 이름에 사용자 지정 텍스트를 추가합니다.
 
 **[!UICONTROL 변경 내용 적용]**&#x200B;을 선택하여 선택 내용을 확인합니다.
 
@@ -207,7 +214,7 @@ Adobe Experience Platform 사용자 인터페이스에서 **[!UICONTROL 대상]*
 
 ## **[!UICONTROL 세그먼트]** 예약 단계 {#segment-schedule}
 
-적용 대상:광고 대상, 소셜 대상
+적용 대상: 광고 대상, 소셜 대상
 
 ![세그먼트 예약 단계](../assets/ui/activate-destinations/segment-schedule-icon.png)
 
@@ -227,7 +234,7 @@ Adobe Experience Platform 사용자 인터페이스에서 **[!UICONTROL 대상]*
 
 ## **[!UICONTROL 속성]** 선택 단계 {#select-attributes}
 
-적용 대상:이메일 마케팅 대상 및 클라우드 스토리지 대상
+적용 대상: 이메일 마케팅 대상 및 클라우드 스토리지 대상
 
 ![속성 선택 단계](../assets/ui/activate-destinations/select-attributes-icon.png)
 
@@ -235,7 +242,7 @@ Adobe Experience Platform 사용자 인터페이스에서 **[!UICONTROL 대상]*
 
 >[!NOTE]
 >
-> Adobe Experience Platform은 스키마에서 일반적으로 사용되는 4가지 권장 속성으로 선택 사항을 미리 채웁니다.`person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.status`.
+> Adobe Experience Platform은 스키마에서 일반적으로 사용되는 4가지 권장 속성으로 선택 사항을 미리 채웁니다. `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.status`.
 
 파일 내보내기는 `segmentMembership.status` 선택 여부에 따라 다음과 같은 방식으로 달라집니다.
 * `segmentMembership.status` 필드를 선택하면 내보낸 파일에는 초기 전체 스냅샷의 **[!UICONTROL Active]** 멤버와 후속 증분 내보내기의 **[!UICONTROL Active]** 및 **[!UICONTROL Expired]** 멤버가 포함됩니다.
@@ -357,7 +364,7 @@ Adobe Experience Platform 사용자 인터페이스에서 **[!UICONTROL 대상]*
 }
 ```
 
-### 중복 제거 사용 사례 1:중복 제거 없음
+### 중복 제거 사용 사례 1: 중복 제거 없음
 
 중복 제거를 사용하지 않는 경우 내보내기 파일에 다음 항목이 포함됩니다.
 
@@ -367,7 +374,7 @@ Adobe Experience Platform 사용자 인터페이스에서 **[!UICONTROL 대상]*
 | johndoe@example.com | 존 | D |
 
 
-### 중복 제거 사용 사례 2:id 네임스페이스를 기반으로 데이터 중복 제거
+### 중복 제거 사용 사례 2: id 네임스페이스를 기반으로 데이터 중복 제거
 
 중복 제거를 [!DNL Email] 네임스페이스로 가정하면 내보내기 파일에 다음 항목이 포함됩니다. 프로필 B는 세그먼트에 대한 자격이 있는 최신 프로필이므로 내보낼 수 있는 유일한 프로필입니다.
 
@@ -376,7 +383,7 @@ Adobe Experience Platform 사용자 인터페이스에서 **[!UICONTROL 대상]*
 | johndoe_1@example.com | johndoe@example.com | 존 | D |
 | johndoe_2@example.com | johndoe@example.com | 존 | D |
 
-### 중복 제거 사용 사례 3:단일 프로필 속성을 기반으로 한 중복 제거
+### 중복 제거 사용 사례 3: 단일 프로필 속성을 기반으로 한 중복 제거
 
 `personal Email` 속성으로 중복 제거를 가정하면 내보내기 파일에 다음 항목이 포함됩니다. 프로필 B는 세그먼트에 대한 자격이 있는 최신 프로필이므로 내보낼 수 있는 유일한 프로필입니다.
 
@@ -385,7 +392,7 @@ Adobe Experience Platform 사용자 인터페이스에서 **[!UICONTROL 대상]*
 | johndoe@example.com | 존 | D |
 
 
-### 중복 제거 사용 사례 4:두 개의 프로필 속성을 기반으로 한 중복 제거(복합 중복 제거 키)
+### 중복 제거 사용 사례 4: 두 개의 프로필 속성을 기반으로 한 중복 제거(복합 중복 제거 키)
 
 복합 키 `personalEmail + lastName`에 의해 중복 제거된다고 가정하면 내보내기 파일에 다음 항목이 포함됩니다.
 
@@ -410,7 +417,7 @@ Adobe은 모든 프로필 레코드가 고유하게 식별되도록 [!DNL CRM ID
 
 ## **** 검토 단계 {#review}
 
-적용 대상:모든 대상
+적용 대상: 모든 대상
 
 ![검토 단계](../assets/ui/activate-destinations/review-icon.png)
 
