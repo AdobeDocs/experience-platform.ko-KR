@@ -6,9 +6,9 @@ seo-title: 대상에 프로필 및 세그먼트 활성화
 description: 세그먼트를 대상에 매핑하여 Adobe Experience Platform에서 보유한 데이터를 활성화합니다. 이를 수행하려면 아래 단계를 수행하십시오.
 seo-description: 세그먼트를 대상에 매핑하여 Adobe Experience Platform에서 보유한 데이터를 활성화합니다. 이를 수행하려면 아래 단계를 수행하십시오.
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
-source-git-commit: a451e462ac38d157335568310e26cf6375699c6b
+source-git-commit: 4ad261c4ca5878f7ef5abb2c2957b5714cf3101a
 workflow-type: tm+mt
-source-wordcount: '2928'
+source-wordcount: '2888'
 ht-degree: 0%
 
 ---
@@ -154,7 +154,7 @@ Adobe Experience Platform 사용자 인터페이스에서 **[!UICONTROL 대상]*
 
 >[!IMPORTANT]
 >
->이미 내보낸 세그먼트의 경우, 일정 구성에서 전체 파일 내보내기로 파일 내보내기 일정을 변경하고, **[!UICONTROL 빈도]**&#x200B;를 **[!UICONTROL Once]**&#x200B;로 설정하면 새 채우기 파일을 내보내지 않습니다. 다른 일정으로 새 채우기 파일을 내보내려면 새 대상 인스턴스를 만들어야 합니다. 이는 향후 릴리스에서 해결될 수 있는 제한 사항입니다.
+>이미 내보낸 세그먼트에 대한 파일 내보내기 일정을 변경하는 것은 현재 지원되지 않습니다. 다른 일정으로 세그먼트를 다시 내보내려면 새 대상 인스턴스를 만들어야 합니다. 이는 향후 릴리스에서 해결될 수 있는 제한 사항입니다.
 
 ### 증분 파일 내보내기 {#export-incremental-files}
 
@@ -184,7 +184,7 @@ Adobe Experience Platform 사용자 인터페이스에서 **[!UICONTROL 대상]*
 
 >[!IMPORTANT]
 >
->이미 내보낸 세그먼트의 경우, 일정 구성에서 전체 파일 내보내기로 파일 내보내기 일정을 변경하고, **[!UICONTROL 빈도]**&#x200B;를 **[!UICONTROL Once]**&#x200B;로 설정하면 새 채우기 파일을 내보내지 않습니다. 다른 일정으로 새 채우기 파일을 내보내려면 새 대상 인스턴스를 만들어야 합니다. 이는 향후 릴리스에서 해결될 수 있는 제한 사항입니다.
+>이미 내보낸 세그먼트에 대한 파일 내보내기 일정을 변경하는 것은 현재 지원되지 않습니다. 다른 일정으로 세그먼트를 다시 내보내려면 새 대상 인스턴스를 만들어야 합니다. 이는 향후 릴리스에서 해결될 수 있는 제한 사항입니다.
 
 ### 파일 이름 구성 {#file-names}
 
