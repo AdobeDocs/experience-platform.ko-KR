@@ -5,7 +5,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: 이 자습서에서는 Adobe Experience Platform API를 사용하여 실시간 고객 프로필 및 ID 서비스에 사용할 데이터 세트를 활성화하는 방법을 보여줍니다.
 exl-id: 142cb7df-072a-4f3a-8a9c-9a78afb35312
-source-git-commit: bcca4d6212ee3f0d661549eca359ab8c8aaf905c
+source-git-commit: 453e120fa20232533289ee5ff34821ce8c0c310b
 workflow-type: tm+mt
 source-wordcount: '1061'
 ht-degree: 1%
@@ -27,10 +27,10 @@ ht-degree: 1%
 
 이 자습서에서는 [!DNL Profile] 사용 가능한 데이터 세트 관리와 관련된 다양한 Adobe Experience Platform 서비스를 이해하고 있어야 합니다. 이 자습서를 시작하기 전에 다음 관련 [!DNL Platform] 서비스에 대한 설명서를 검토하십시오.
 
-- [[!DNL Real-time Customer Profile]](../home.md):여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
-- [[!DNL Identity Service]](../../identity-service/home.md):로  [!DNL Real-time Customer Profile] 수집되는 다양한 데이터 소스의 ID를 브리징하여  [!DNL Platform]활성화합니다.
-- [[!DNL Catalog Service]](../../catalog/home.md):및 에 대한 데이터 세트를 만들고 구성할 수 있는 RESTful API [!DNL Real-time Customer Profile] 입니다  [!DNL Identity Service].
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):고객 경험 데이터를  [!DNL Platform] 구성하는 표준화된 프레임워크입니다.
+- [[!DNL Real-time Customer Profile]](../home.md): 여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
+- [[!DNL Identity Service]](../../identity-service/home.md): 로  [!DNL Real-time Customer Profile] 수집되는 다양한 데이터 소스의 ID를 브리징하여  [!DNL Platform]활성화합니다.
+- [[!DNL Catalog Service]](../../catalog/home.md): 및 에 대한 데이터 세트를 만들고 구성할 수 있는 RESTful API [!DNL Real-time Customer Profile] 입니다  [!DNL Identity Service].
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): 고객 경험 데이터를  [!DNL Platform] 구성하는 표준화된 프레임워크입니다.
 
 다음 섹션에서는 플랫폼 API를 성공적으로 호출하기 위해 알고 있어야 하는 추가 정보를 제공합니다.
 
@@ -73,9 +73,6 @@ curl -X POST \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
-    "fileDescription" : {
-        "persisted": true
-    },
     "fields":[],
     "schemaRef" : {
         "id": "https://ns.adobe.com/{TENANT_ID}/schemas/31670881463308a46f7d2cb09762715",
@@ -167,9 +164,6 @@ curl -X GET \
         "updatedUser": "{CREATED_BY}",
         "viewId": "5b020a27e7040801dedbf46f",
         "status": "enabled",
-        "fileDescription": {
-            "persisted": true
-        },
         "transforms": "@/dataSets/5b020a27e7040801dedbf46e/views/5b020a27e7040801dedbf46f/transforms",
         "files": "@/dataSets/5b020a27e7040801dedbf46e/views/5b020a27e7040801dedbf46f/files",
         "schema": "@/xdms/context/experienceevent",
