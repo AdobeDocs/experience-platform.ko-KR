@@ -4,18 +4,18 @@ title: 동의 및 기본 설정 데이터 유형
 description: 개인 정보, 개인화 및 마케팅 환경 설정에 대한 동의 데이터 유형은 CMP(동의 관리 플랫폼) 및 데이터 작업에서 생성된 고객 권한 및 환경 설정 컬렉션을 지원하기 위한 것입니다.
 topic-legacy: guide
 exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
 workflow-type: tm+mt
-source-wordcount: '1868'
-ht-degree: 1%
+source-wordcount: '1904'
+ht-degree: 2%
 
 ---
 
-# [!DNL Consents & Preferences] 데이터 유형
+# [!UICONTROL 동의 및 ] 기본 설정 데이터 유형
 
-[!UICONTROL 개인 정보, 개인화 및 마케팅 환경 설정에 대한 동의] 데이터 유형(이하 &quot;[!DNL Consents & Preferences] 데이터 유형&quot;이라 함)은 CMP(동의 관리 플랫폼) 및 데이터 작업에서 생성된 고객 권한 및 환경 설정의 수집을 지원하기 위한 XDM(Customer Permissions) 데이터 유형입니다.[!DNL Experience Data Model]
+[!UICONTROL 개인 정보, 개인화 및 마케팅 환경 설정에 대한 동의] 데이터 유형(이하 &quot;[!UICONTROL 동의 및 환경 설정] 데이터 유형&quot;이라 함)은 CMP(동의 관리 플랫폼) 및 데이터 작업의 다른 소스에서 생성된 고객 권한 및 환경 설정의 수집을 지원하기 위한 XDM(Customer Permissions and Preferences[!DNL Experience Data Model]) 데이터 유형입니다.
 
-이 문서에서는 [!DNL Consents & Preferences] 데이터 형식에서 제공하는 필드의 구조 및 용도를 다룹니다.
+이 문서에서는 [!UICONTROL 동의 및 기본 설정] 데이터 유형에서 제공하는 필드의 구조 및 의도된 용도에 대해 설명합니다.
 
 ## 전제 조건 {#prerequisites}
 
@@ -28,16 +28,16 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->[!DNL Consents & Preferences] 데이터 유형은 동의 및 기본 설정 관리 사용 사례 범위를 포함하도록 설계되었습니다. 따라서 이 문서에서는 데이터 유형의 필드를 일반적인 용어로 사용하는 방법에 대해 설명하고 이러한 필드의 사용을 해석하는 방법에 대한 제안만 제공합니다. 데이터 유형의 구조를 조직에서 해석하고 고객에게 이러한 동의 및 기본 설정 선택 사항을 제공하는 방법에 맞게 정렬하려면 개인 정보 보호 법팀에 문의하십시오.
+>[!UICONTROL 동의 및 환경 설정] 데이터 유형은 다양한 동의 및 기본 설정 관리 사용 사례를 포함하도록 설계되었습니다. 따라서 이 문서에서는 데이터 유형의 필드를 일반적인 용어로 사용하는 방법에 대해 설명하고 이러한 필드의 사용을 해석하는 방법에 대한 제안만 제공합니다. 데이터 유형의 구조를 조직에서 해석하고 고객에게 이러한 동의 및 기본 설정 선택 사항을 제공하는 방법에 맞게 정렬하려면 개인 정보 보호 법팀에 문의하십시오.
 
-[!DNL Consents & Preferences] 데이터 유형은 **동의** 및 **기본 설정** 정보를 캡처하는 데 사용되는 여러 필드를 제공합니다.
+[!UICONTROL 동의 및 환경 설정] 데이터 유형은 **동의** 및 **기본 설정** 정보를 캡처하는 데 사용되는 여러 필드를 제공합니다.
 
 동의는 고객이 데이터를 사용할 수 있는 방법을 지정할 수 있는 옵션입니다. 대부분의 동의는 법적 측면을 가지며, 일부 관할권에서 데이터를 특정 방식으로 사용하기 전에 권한을 받아야 하거나, 긍정적 동의가 필요하지 않은 경우 해당 사용(옵트아웃)을 중지할 수 있는 옵션이 고객에게 있어야 한다는 점에서 법적 측면을 갖습니다.
 
 환경 설정은 고객이 브랜드에 대한 경험의 다양한 측면을 처리하는 방식을 지정할 수 있는 옵션입니다. 속성은 다음 두 가지 범주 내에 있습니다.
 
-* **개인화 환경 설정**:브랜드가 고객에게 전달된 경험을 개인화하는 방법에 대한 기본 설정입니다.
-* **마케팅 환경 설정**:브랜드가 다양한 채널을 통해 고객에게 연락할 수 있는지 여부에 대한 기본 설정입니다.
+* **개인화 환경 설정**: 브랜드가 고객에게 전달된 경험을 개인화하는 방법에 대한 기본 설정입니다.
+* **마케팅 환경 설정**: 브랜드가 다양한 채널을 통해 고객에게 연락할 수 있는지 여부에 대한 기본 설정입니다.
 
 다음 스크린샷은 플랫폼 UI에서 데이터 유형의 구조가 표시되는 방식을 보여줍니다.
 
@@ -47,7 +47,7 @@ ht-degree: 1%
 >
 >XDM 리소스를 검색하고 Platform UI에서 해당 구조를 검사하는 방법에 대한 단계는 [XDM 리소스](../ui/explore.md) 탐색 의 안내서를 참조하십시오.
 
-다음 JSON은 [!DNL Consents & Preferences] 데이터 유형이 처리할 수 있는 데이터 유형의 예를 보여줍니다. 이러한 각 필드의 특정 사용에 대한 정보는 다음에 나오는 섹션에서 제공됩니다.
+다음 JSON은 [!UICONTROL 동의 및 Preferences] 데이터 유형이 처리할 수 있는 데이터 유형의 예를 보여줍니다. 이러한 각 필드의 특정 사용에 대한 정보는 다음에 나오는 섹션에서 제공됩니다.
 
 ```json
 {
@@ -251,12 +251,12 @@ ht-degree: 1%
 
 ## 데이터 유형을 사용하여 데이터 수집 {#ingest}
 
-[!DNL Consents & Preferences] 데이터 유형을 사용하여 고객으로부터 동의 데이터를 수집하려면 해당 데이터 유형이 포함된 스키마를 기반으로 데이터 세트를 만들어야 합니다.
+[!UICONTROL 동의 및 환경 설정] 데이터 유형을 사용하여 고객으로부터 동의 데이터를 수집하려면 해당 데이터 유형이 포함된 스키마를 기반으로 데이터 세트를 만들어야 합니다.
 
-데이터 유형을 필드에 할당하는 방법에 대한 단계는 [UI에서 스키마 만들기](http://www.adobe.com/go/xdm-schema-editor-tutorial-en)의 자습서를 참조하십시오. [!DNL Consents & Preferences] 데이터 유형을 사용하는 필드가 포함된 스키마를 만들었으면 데이터 세트 사용 안내서에서 데이터 세트 만들기](../../catalog/datasets/user-guide.md#create)의 섹션을 참조하여 기존 스키마로 데이터 세트를 만드는 단계를 따르십시오.[
+데이터 유형을 필드에 할당하는 방법에 대한 단계는 [UI에서 스키마 만들기](http://www.adobe.com/go/xdm-schema-editor-tutorial-en)의 자습서를 참조하십시오. [!UICONTROL 동의 및 환경 설정] 데이터 유형이 있는 필드가 포함된 스키마를 만들었으면 데이터 세트 사용 안내서에서 [데이터 집합 만들기](../../catalog/datasets/user-guide.md#create)에 대한 섹션을 참조하여 기존 스키마로 데이터 집합을 만드는 단계를 따르십시오.
 
 >[!IMPORTANT]
-동의 데이터를 [!DNL Real-time Customer Profile]에 보내려면 [!DNL Consents & Preferences] 데이터 유형이 포함된 [!DNL XDM Individual Profile] 클래스를 기반으로 [!DNL Profile] 사용 스키마를 만들어야 합니다. 해당 스키마를 기반으로 만드는 데이터 집합도 [!DNL Profile]에 대해 활성화해야 합니다. 스키마 및 데이터 세트에 대한 [!DNL Real-time Customer Profile] 요구 사항과 관련된 특정 단계는 위에 링크된 자습서를 참조하십시오.
+동의 데이터를 [!DNL Real-time Customer Profile]에 보내려면 [!UICONTROL 동의 및 기본 설정] 데이터 유형을 포함하는 [!DNL XDM Individual Profile] 클래스를 기반으로 [!DNL Profile] 사용 스키마를 만들어야 합니다. 해당 스키마를 기반으로 만드는 데이터 집합도 [!DNL Profile]에 대해 활성화해야 합니다. 스키마 및 데이터 세트에 대한 [!DNL Real-time Customer Profile] 요구 사항과 관련된 특정 단계는 위에 링크된 자습서를 참조하십시오.
 또한 고객 프로필을 올바르게 업데이트하려면 병합 정책이 최신 동의 및 기본 설정 데이터가 포함된 데이터 세트에 우선 순위를 지정하도록 구성되어 있는지 확인해야 합니다. 자세한 내용은 [병합 정책](../../rtcdp/profile/merge-policies.md)의 개요를 참조하십시오.
 
 ## 동의 및 기본 설정 변경 처리
@@ -265,9 +265,9 @@ ht-degree: 1%
 
 ## 부록 {#appendix}
 
-아래 섹션에서는 [!DNL Consents & Preferences] 데이터 유형에 대한 추가 참조 정보를 제공합니다.
+아래 섹션에서는 [!UICONTROL 동의 및 환경 설정] 데이터 유형에 대한 추가 참조 정보를 제공합니다.
 
-### `val` {#choice-values}에 대해 허용되는 값
+### `val`에 대해 허용되는 값 {#choice-values}
 
 다음 표에서는 `val`에 대해 허용되는 값에 대해 설명합니다.
 
@@ -285,7 +285,7 @@ ht-degree: 1%
 
 {style=&quot;table-layout:auto&quot;}
 
-### `preferred` {#preferred-values}에 대해 허용되는 값
+### `preferred`에 대해 허용되는 값 {#preferred-values}
 
 다음 표에서는 `preferred`에 대해 허용되는 값에 대해 설명합니다.
 
@@ -307,6 +307,6 @@ ht-degree: 1%
 
 {style=&quot;table-layout:auto&quot;}
 
-### 전체 [!DNL Consents & Preferences] 스키마 {#full-schema}
+### 전체 [!UICONTROL 동의 및 환경 설정] 스키마 {#full-schema}
 
-[!DNL Consents & Preferences] 데이터 유형에 대한 전체 스키마를 보려면 [공식 XDM 저장소](https://github.com/adobe/xdm/blob/master/components/datatypes/consent-preferences.schema.json)를 참조하십시오.
+[!UICONTROL 동의 및 환경 설정] 데이터 유형에 대한 전체 스키마를 보려면 [공식 XDM 저장소](https://github.com/adobe/xdm/blob/master/components/datatypes/consent-preferences.schema.json)를 참조하십시오.
