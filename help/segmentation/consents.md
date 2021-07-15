@@ -5,9 +5,9 @@ title: 세그먼트에서 동의 준수
 topic-legacy: overview
 description: 개인 데이터 수집 및 세그먼트 작업에서 공유에 대한 고객 동의 환경 설정을 적용하는 방법을 알아봅니다.
 exl-id: fe851ce3-60db-4984-a73c-f9c5964bfbad
-source-git-commit: 6d11a94d45b4a089ca6960aaf1ce78ae654ebc3f
+source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
 workflow-type: tm+mt
-source-wordcount: '677'
+source-wordcount: '675'
 ht-degree: 0%
 
 ---
@@ -22,13 +22,13 @@ ht-degree: 0%
 
 고객 동의 값을 준수하려면 관련된 다양한 [!DNL Adobe Experience Platform] 서비스를 이해해야 합니다. 이 자습서를 시작하기 전에 다음 서비스를 숙지해야 합니다.
 
-* [[!DNL Experience Data Model (XDM)]](../xdm/home.md):플랫폼이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
-* [[!DNL Real-time Customer Profile]](../profile/home.md):여러 소스에서 집계된 데이터를 기반으로 통합된 고객 프로필을 실시간으로 제공합니다.
-* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md):데이터에서 대상 세그먼트를 작성할 수  [!DNL Real-time Customer Profile] 있습니다.
+* [[!DNL Experience Data Model (XDM)]](../xdm/home.md): 플랫폼이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
+* [[!DNL Real-time Customer Profile]](../profile/home.md): 여러 소스에서 집계된 데이터를 기반으로 통합된 고객 프로필을 실시간으로 제공합니다.
+* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): 데이터에서 대상 세그먼트를 작성할 수  [!DNL Real-time Customer Profile] 있습니다.
 
 ## 동의 스키마 필드
 
-고객 동의 및 환경 설정을 준수하려면 [!UICONTROL XDM 개별 프로필] 결합 스키마에 속하는 스키마 중 하나에 표준 필드 그룹 **[!UICONTROL 개인 정보/개인화/마케팅 환경 설정(동의)]**&#x200B;이 포함되어야 합니다.
+고객 동의 및 환경 설정을 준수하려면 [!UICONTROL XDM 개별 프로필] 결합 스키마의 일부인 스키마 중 하나에 표준 필드 그룹 **[!UICONTROL 동의 및 환경 설정]**&#x200B;이 포함되어야 합니다.
 
 필드 그룹에서 제공하는 각 속성의 구조 및 의도된 사용 사례에 대한 자세한 내용은 [동의 및 기본 설정 참조 안내서](../xdm/field-groups/profile/consents.md)를 참조하십시오. 스키마에 필드 그룹을 추가하는 방법에 대한 단계별 지침은 [XDM UI 안내서](../xdm/ui/resources/schemas.md#add-field-groups)를 참조하십시오.
 
