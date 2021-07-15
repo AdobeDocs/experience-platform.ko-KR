@@ -4,10 +4,10 @@ title: 일반 마케팅 기본 설정 필드 데이터 유형
 topic-legacy: overview
 description: 이 문서에서는 일반 마케팅 기본 설정 필드 XDM 데이터 유형에 대한 개요를 제공합니다.
 exl-id: d4c53885-f34f-4721-aa34-1fe02dc7006f
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
 workflow-type: tm+mt
-source-wordcount: '541'
-ht-degree: 1%
+source-wordcount: '539'
+ht-degree: 2%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->이 데이터 유형은 [[!UICONTROL 개인 정보/개인화/마케팅 환경 설정(동의)] 필드 그룹](../field-groups/profile/consents.md)을 기준으로 사용하여 조직의 동의 스키마 구조를 사용자 지정하는 데 사용됩니다.
+>이 데이터 유형은 [[!UICONTROL 동의 및 기본 설정] 필드 그룹](../field-groups/profile/consents.md)을 기준으로 사용하여 조직의 동의 스키마 구조를 사용자 지정하는 데 사용됩니다.
 >
 >특정 마케팅 기본 설정 필드에 `subscriptions` 맵이 필요한 경우 대신 [마케팅 필드를 구독 데이터 유형](./marketing-field-subscriptions.md)과 함께 사용해야 합니다.
 
