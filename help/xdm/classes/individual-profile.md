@@ -5,9 +5,9 @@ title: XDM 개별 프로필 클래스
 topic-legacy: overview
 description: 이 문서에서는 XDM 개별 프로필 클래스에 대한 개요를 제공합니다.
 exl-id: 83b22462-79ce-4024-aa50-a9bd800c0f81
-source-git-commit: 79fcc44ec5e08f63bfd5eed6e90d7538273f4dab
+source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
 workflow-type: tm+mt
-source-wordcount: '569'
+source-wordcount: '567'
 ht-degree: 1%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 1%
 
 | 속성 | 설명 |
 | --- | --- |
-| `_repo` | 다음 [!UICONTROL DateTime] 필드가 포함된 개체입니다. <ul><li>`createDate`:데이터를 처음 처리한 시기 등 데이터 저장소에서 리소스를 만든 날짜 및 시간입니다.</li><li>`modifyDate`:리소스를 마지막으로 수정한 날짜 및 시간입니다.</li></ul> |
+| `_repo` | 다음 [!UICONTROL DateTime] 필드가 포함된 개체입니다. <ul><li>`createDate`: 데이터를 처음 처리한 시기 등 데이터 저장소에서 리소스를 만든 날짜 및 시간입니다.</li><li>`modifyDate`: 리소스를 마지막으로 수정한 날짜 및 시간입니다.</li></ul> |
 | `_id` | 레코드의 고유 문자열 식별자입니다. 이 필드는 개별 레코드의 고유성을 추적하고 데이터 중복을 방지하며 다운스트림 서비스에서 해당 레코드를 찾는 데 사용됩니다. 일부 경우 `_id`은 [UUID(Universally Unique Identifier)](https://tools.ietf.org/html/rfc4122) 또는 [GUID(Globally Unique Identifier)](https://docs.microsoft.com/en-us/dotnet/api/system.guid?view=net-5.0)일 수 있습니다.<br><br>소스 연결에서 데이터를 스트리밍하거나 Parquet 파일에서 직접 수집하는 경우 기본 ID, 타임스탬프, 레코드 유형 등과 같이 레코드가 고유한 특정 필드 조합을 연결하여 이 값을 생성해야 합니다. 연결된 값은 `uri-reference` 형식의 문자열이어야 합니다. 즉, 콜론 문자는 제거해야 합니다. 그런 다음 연결된 값을 SHA-256 또는 선택한 다른 알고리즘을 사용하여 해시해야 합니다.<br><br>이 필드가 개인 **과 관련된 ID를 나타내지 않고 데이터** 자체의 레코드를 나타내는지 구분하는 것이 중요합니다. 개인에게 관련된 ID 데이터는 대신 호환되는 필드 그룹에서 제공하는 [ID 필드](../schema/composition.md#identity)로 분류해야 합니다. |
 | `createdByBatchID` | 레코드를 만든 수집된 일괄 처리의 ID입니다. |
 | `modifiedByBatchID` | 레코드를 업데이트하도록 한 마지막으로 수집된 일괄 처리의 ID입니다. |
@@ -46,7 +46,7 @@ Adobe은 [!DNL XDM Individual Profile] 클래스에서 사용할 여러 표준 �
 * [[!UICONTROL IdentityMap]](../field-groups/profile/identitymap.md)
 * [[!UICONTROL 충성도 세부 사항]](../field-groups/profile/loyalty-details.md)
 * [[!UICONTROL 개인 연락처 세부 정보]](../field-groups/profile/personal-contact-details.md)
-* [[!UICONTROL 개인 정보/개인화/마케팅 환경 설정(동의)]](../field-groups/profile/consents.md)
+* [[!UICONTROL 동의 및 기본 설정]](../field-groups/profile/consents.md)
 * [[!UICONTROL 세그먼트 멤버십 세부 정보]](../field-groups/profile/segmentation.md)
 * [[!UICONTROL 작업 연락처 세부 정보]](../field-groups/profile/work-contact-details.md)
 
