@@ -4,9 +4,9 @@ user-guide-title: XDM(경험 데이터 모델) 시스템 도움말
 breadcrumb-title: Experience Data Model(XDM) 안내서
 user-guide-description: XDM(경험 데이터 모델) 클래스 및 스키마 필드 그룹을 사용하여 경험 데이터를 표준화합니다.
 feature: 스키마
-source-git-commit: 9b6352eec56cf32e58d49be4d72b2fb4cf933b89
+source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
 workflow-type: tm+mt
-source-wordcount: '305'
+source-wordcount: '311'
 ht-degree: 17%
 
 ---
@@ -33,10 +33,11 @@ ht-degree: 17%
 * 스키마 필드 그룹 {#field-groups}
    * 프로필 필드 그룹 {#profile}
       * [인구 통계 세부 정보](./field-groups/profile/demographic-details.md)
+      * [IAB TCF 2.0 동의](./field-groups/profile/iab.md)
       * [IdentityMap](./field-groups/profile/identitymap.md)
       * [충성도 세부 사항](./field-groups/profile/loyalty-details.md)
       * [개인 연락처 세부 정보](./field-groups/profile/personal-contact-details.md)
-      * [개인 정보/개인화/마케팅 환경 설정(동의)](./field-groups/profile/consents.md)
+      * [동의 및 기본 설정](./field-groups/profile/consents.md)
       * [세그먼트 멤버십 세부 정보](./field-groups/profile/segmentation.md)
       * [작업 연락처 세부 정보](./field-groups/profile/work-contact-details.md)
    * 이벤트 필드 그룹 {#event}
@@ -45,6 +46,7 @@ ht-degree: 17%
       * [상거래 세부 사항](./field-groups/event/commerce-details.md)
       * [최종 사용자 ID 세부 정보](./field-groups/event/enduserids.md)
       * [환경 세부 사항](./field-groups/event/environment-details.md)
+      * [IAB TCF 2.0 동의](./field-groups/event/iab.md)
       * [웹 세부 사항](./field-groups/event/web-details.md)
    * [필드 그룹 이름 업데이트](./field-groups/name-updates.md)
 * 데이터 유형 {#data-types}
@@ -52,8 +54,9 @@ ht-degree: 17%
    * [비콘](./data-types/beacon.md)
    * [브라우저 세부 사항](./data-types/browser-details.md)
    * [Commerce](./data-types/commerce.md)
+   * [동의 문자열](./data-types/consent-string.md)
    * [동의 및 기본 설정](./data-types/consents.md)
-   * [장치](./data-types/device.md)
+   * [디바이스](./data-types/device.md)
    * [이메일 주소](./data-types/email-address.md)
    * [환경](./data-types/environment.md)
    * [경험 채널](./data-types/experience-channel.md)
@@ -104,7 +107,7 @@ ht-degree: 17%
    * [XDM 스키마 내보내기](./ui/export.md)
 * 스키마 레지스트리 API {#api}
    * [개요](api/overview.md)
-   * [시작하기](api/getting-started.md)
+   * [시작](api/getting-started.md)
    * [스키마](api/schemas.md)
    * [비헤이비어](api/behaviors.md)
    * [클래스](api/classes.md)
