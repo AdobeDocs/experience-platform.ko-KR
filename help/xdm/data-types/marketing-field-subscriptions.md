@@ -4,10 +4,10 @@ title: 구독 데이터 유형이 있는 일반 마케팅 기본 설정 필드
 topic-legacy: overview
 description: 이 문서에서는 구독 XDM 데이터 유형을 사용하는 일반 마케팅 기본 설정 필드에 대한 개요를 제공합니다.
 exl-id: 170ea6ca-77fc-4b0a-87f9-6d4b6f32d953
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
 workflow-type: tm+mt
-source-wordcount: '738'
-ht-degree: 2%
+source-wordcount: '736'
+ht-degree: 3%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->이 데이터 유형은 [[!UICONTROL 개인 정보/개인화/마케팅 환경 설정(동의)] 필드 그룹](../field-groups/profile/consents.md)을 기준으로 사용하여 조직의 동의 스키마 구조를 사용자 지정하는 데 사용됩니다.
+>이 데이터 유형은 [[!UICONTROL 동의 및 기본 설정] 필드 그룹](../field-groups/profile/consents.md)을 기준으로 사용하여 조직의 동의 스키마 구조를 사용자 지정하는 데 사용됩니다.
 >
 >특정 마케팅 기본 설정 필드에 `subscriptions` 맵이 필요하지 않으면 대신 [기본 마케팅 필드 데이터 유형](./marketing-field.md)을 사용할 수 있습니다.
 
@@ -92,7 +92,7 @@ ht-degree: 2%
 | 속성 | 설명 |
 | --- | --- |
 | `type` | 구독 유형입니다. 15자 이내인 경우 어떤 수사적 문자열일 수 있습니다. |
-| `subscribers` | 특정 구독을 구독한 식별자 세트(예: 이메일 주소 또는 전화 번호)를 나타내는 선택적 맵 유형 필드입니다. 이 개체의 각 키는 해당 식별자를 나타내며 두 개의 하위 속성을 포함합니다. <ul><li>`time`:ID가 구독한 시간의 ISO 8601 타임스탬프입니다(해당하는 경우).</li><li>`source`:구독자가 시작한 원본입니다. 15자 이내인 경우 어떤 수사적 문자열일 수 있습니다.</li></ul> |
+| `subscribers` | 특정 구독을 구독한 식별자 세트(예: 이메일 주소 또는 전화 번호)를 나타내는 선택적 맵 유형 필드입니다. 이 개체의 각 키는 해당 식별자를 나타내며 두 개의 하위 속성을 포함합니다. <ul><li>`time`: ID가 구독한 시간의 ISO 8601 타임스탬프입니다(해당하는 경우).</li><li>`source`: 구독자가 시작한 원본입니다. 15자 이내인 경우 어떤 수사적 문자열일 수 있습니다.</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
