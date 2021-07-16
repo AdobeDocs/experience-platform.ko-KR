@@ -5,10 +5,10 @@ title: Privacy Service 및 Experience Cloud 애플리케이션
 topic-legacy: overview
 description: 이 문서에서는 개인 정보 관련 작업을 위해 다양한 Experience Cloud 응용 프로그램을 구성하는 방법에 대한 참조를 제공합니다.
 exl-id: da21c15f-0b99-4eb7-ac9a-f0fe5e3ba842
-source-git-commit: 55d6d8ad7b0fc5457dc0fdc981aaa92717adbe68
+source-git-commit: 892bb4fa5302d63923c1a2e4759f0253955576e2
 workflow-type: tm+mt
-source-wordcount: '600'
-ht-degree: 12%
+source-wordcount: '594'
+ht-degree: 11%
 
 ---
 
@@ -49,9 +49,9 @@ Adobe Experience Platform [!DNL Privacy Service]은(는) 여러 Adobe Experience
 | [Adobe Campaign Classic](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/privacy/privacy-management.html) | Adobe Campaign Classic의 GDPR 기능에 대한 개요입니다. |
 | [Adobe Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-64/managing/data-protection/data-protection-and-privacy.html) | 고객 개인 정보 보호 관리자 또는 AEM 관리자가 GDPR 요청을 처리하는 방법에 대한 개요입니다. |
 | [Adobe Experience Manager Livefyre](https://experienceleague.adobe.com/docs/livefyre/using/settings-other/privacy-requests/c-gdpr-compliance.html) | Livefyre를 사용하여 GDPR 액세스 및 삭제 요청을 만드는 절차. |
-| [Adobe Experience Platform Launch](https://experienceleague.adobe.com/docs/launch/using/client-side-info/deploy-javascript-tags-to-opt-in-to-launch.html) | 개발자가 확장 프로그램 및 규칙 작성기를 사용하여 옵트인 및 옵트아웃 솔루션을 정의할 수 있는 방법입니다. |
 | [Magento](https://devdocs.magento.com/compliance/industry-compliance.html) | Magento Commerce 설치가 특정 개인 정보 보호 법규 요구 사항을 준수하도록 하십시오. |
 | [Marketo](https://www.marketo.com/company/trust/gdpr/) | Marketo에 개인 정보 보호 규정이 적용되는 방법을 알아봅니다. |
+| [Adobe Experience Platform의 태그](../tags/ui/client-side/consent.md) | 개발자가 확장 프로그램 및 규칙 작성기를 사용하여 옵트인 및 옵트아웃 솔루션을 정의할 수 있는 방법입니다. |
 | [Workfront](https://www.workfront.com/privacy-notice) | Workfront에서 개인 데이터를 수집하는 방법과 데이터 주체가 양식을 통해 개인 정보 보호 요청을 제출하는 방법을 알아봅니다. |
 
 {style=&quot;table-layout:auto&quot;}
