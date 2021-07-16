@@ -2,10 +2,10 @@
 title: Adobe Experience Platform Web SDK에서 지원되는 사용 사례
 description: Adobe Experience Platform Web SDK에서 지원되는 사용 사례를 알아봅니다.
 keywords: 웹 sdk;사용 사례
-source-git-commit: da305a65a7d5fc3d8214f1d046181b463d324ee0
+source-git-commit: 7a6bec77895458cf1735bc7a00d16b78df9776a5
 workflow-type: tm+mt
-source-wordcount: '574'
-ht-degree: 13%
+source-wordcount: '565'
+ht-degree: 14%
 
 ---
 
@@ -43,7 +43,7 @@ ht-degree: 13%
 | 프로필에 데이터 세트가 활성화되어 있으면 실시간 고객 데이터 프로필에 실시간으로 데이터를 전송할 수 있습니다 |  |
 | 실시간으로 Customer Journey Analytics에 데이터 보내기 |  |
 | 프로필에 동의 쓰기 | [설명서](https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/consent/adobe/sdk.html?lang=en) |
-| 데이터 서버측을 실시간으로 타사에 전달 | [설명서](https://experienceleague.adobe.com/docs/launch/using/server-side-info/server-side-overview.html?lang=en) |
+| 데이터 서버측을 실시간으로 타사에 전달 | [설명서](../../tags/ui/event-forwarding/overview.md) |
 | ID 네임스페이스 지원 |  |
 
 {style=&quot;table-layout:auto&quot;}
