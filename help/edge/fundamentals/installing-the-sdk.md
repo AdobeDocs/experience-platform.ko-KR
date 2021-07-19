@@ -3,14 +3,14 @@ title: Adobe Experience Platform Web SDK 설치
 description: Experience Platform 웹 SDK를 설치하는 방법을 알아봅니다.
 keywords: 웹 sdk 설치;웹 sdk 설치;internet explorer;약속;npm 패키지
 exl-id: b1de7ca1-d0d2-4661-a273-a1acf29afcd5
-source-git-commit: fccad34ad4ad028c7b34356dec7bb34892396317
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '937'
+source-wordcount: '928'
 ht-degree: 2%
 
 ---
 
-# SDK {#installing-the-sdk} 설치
+# SDK 설치 {#installing-the-sdk}
 
 Adobe Experience Platform Web SDK를 사용하는 세 가지 지원 방법이 있습니다.
 
@@ -18,24 +18,24 @@ Adobe Experience Platform Web SDK를 사용하는 세 가지 지원 방법이 �
 1. Adobe Experience Platform Web SDK는 CDN(Content Delivery Network)에서도 사용할 수 있습니다.
 1. EcmaScript 5 및 EcmaScript 2015(ES6) 모듈을 내보내는 NPM 라이브러리를 사용합니다.
 
-## 옵션 1:Adobe Experience Platform Launch 확장 설치
+## 옵션 1: Adobe Experience Platform Launch 확장 설치
 
-Adobe Experience Platform Launch 확장에 대한 설명서는 [launch 설명서](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/aep-extension/overview.html)를 참조하십시오
+Adobe Experience Platform Launch 확장에 대한 설명서는 [launch 설명서](../../tags/extensions/web/sdk/overview.md)를 참조하십시오
 
-## 옵션 2:사전 빌드된 독립형 버전 설치
+## 옵션 2: 사전 빌드된 독립형 버전 설치
 
 사전 빌드된 버전은 CDN에서 사용할 수 있습니다. 페이지에서 직접 CDN의 라이브러리를 참조하거나 자체 인프라에서 다운로드하여 호스팅할 수 있습니다. 축소된 및 축소 해제된 형식으로 사용할 수 있습니다. 축소 해제된 버전은 디버깅 목적에 유용합니다.
 
-URL 구조:https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.js 또는 축소되지 않은 버전의 alloy.js입니다.
+URL 구조: https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.js 또는 축소되지 않은 버전의 alloy.js입니다.
 
 예:
 
 
-* 축소:[https://cdn1.adoberesources.net/alloy/2.5.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/2.5.0/alloy.min.js)
-* 축소 해제:[https://cdn1.adoberesources.net/alloy/2.5.0/alloy.js](https://cdn1.adoberesources.net/alloy/2.5.0/alloy.js)
+* 축소: [https://cdn1.adoberesources.net/alloy/2.5.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/2.5.0/alloy.min.js)
+* 축소 해제: [https://cdn1.adoberesources.net/alloy/2.5.0/alloy.js](https://cdn1.adoberesources.net/alloy/2.5.0/alloy.js)
 
 
-### 코드 {#adding-the-code} 추가
+### 코드 추가 {#adding-the-code}
 
 사전 빌드된 독립형 버전은 페이지에 직접 추가된 &quot;기본 코드&quot;가 필요합니다. 다음 &quot;기본 코드&quot;를 복사하여 HTML의 `<head>` 태그에 가능한 높게 붙여넣습니다.
 
@@ -111,7 +111,7 @@ URL 구조:https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.js 또는 �
 <script src="https://cdn1.adoberesources.net/alloy/2.5.0/alloy.min.js"></script>
 ```
 
-## 옵션 3:NPM 패키지 사용
+## 옵션 3: NPM 패키지 사용
 
 Adobe Experience Platform Web SDK는 NPM 패키지도 사용할 수 있습니다. [](https://www.npmjs.com) NPM은 JavaScript용 패키지 관리자입니다. NPM 패키지를 설치하면 Adobe Experience Platform Web SDK JavaScript에 대한 빌드 프로세스를 제어할 수 있습니다. NPM 패키지는 브라우저에서 실행되어야 하는 EcmaScript 버전 5 모듈 또는 EcmaScript 버전 2015(ES6) 모듈을 표시합니다.
 
@@ -132,7 +132,7 @@ alloy("sendEvent", { ... });
 
 >[!NOTE]
 >
->NPM 패키지는 CommonJS 모듈을 사용합니다.따라서 bundler를 사용할 때는 번들러가 CommonJS 모듈을 지원하는지 확인합니다. [롤업](https://rollupjs.org)과 같은 일부 번들러는 CommonJS 지원을 제공하는 [플러그인](https://www.npmjs.com/package/@rollup/plugin-commonjs)이 필요합니다.
+>NPM 패키지는 CommonJS 모듈을 사용합니다. 따라서 bundler를 사용할 때는 번들러가 CommonJS 모듈을 지원하는지 확인합니다. [롤업](https://rollupjs.org)과 같은 일부 번들러는 CommonJS 지원을 제공하는 [플러그인](https://www.npmjs.com/package/@rollup/plugin-commonjs)이 필요합니다.
 
 ### 패키지를 ECMAScript 5 모듈로 사용
 
