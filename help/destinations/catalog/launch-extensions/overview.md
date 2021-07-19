@@ -1,11 +1,11 @@
 ---
-keywords: launch 확장;launch 확장;launch 대상platform launch 확장;platform launch 확장;platform launch 대상
+keywords: launch 확장;launch 확장;launch 대상 platform launch 확장;platform launch 확장;platform launch 대상
 title: Adobe Experience Platform Launch 확장
 description: Adobe Experience Platform Launch은 Adobe의 차세대 태그 관리 기능입니다. Platform Launch는 관련 고객 환경을 향상하는 데 필요한 모든 분석, 마케팅 및 광고 태그를 배포하고 관리하는 간단한 방법을 고객에게 제공합니다.
 exl-id: 54fca635-0e37-460e-abb3-5da294d4e0cf
-source-git-commit: 20a9103dd96116f3099bccc9eeb678be5ac2bb79
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '616'
+source-wordcount: '600'
 ht-degree: 12%
 
 ---
@@ -16,8 +16,8 @@ Adobe Experience Platform Launch은 Adobe의 차세대 태그 관리 기능입�
 
 Experience Platform Launch 기능에 대한 소개는 아래 리소스를 참조하십시오.
 
-- Adobe Experience Platform Launch [설명서](https://experienceleague.adobe.com/docs/launch/using/home.html)
-- Adobe Experience Platform Launch [빠른 시작 비디오](https://experienceleague.adobe.com/docs/launch/using/intro/get-started/videos.html?) [Adobe Experience Platform Launch 소개](https://www.youtube.com/embed/rwqqkG1SERU) 및 [게시 프로세스 개요](https://helpx.adobe.com/kr/analytics/how-to/adobe-launch-publishing-process.html)로 시작한 다음 다음 개념으로 이동합니다.
+- Adobe Experience Platform Launch [설명서](https://experienceleague.adobe.com/docs/launch/using/home.html?lang=ko-KR)
+- Adobe Experience Platform Launch [빠른 시작 비디오](../../../tags/quick-start/videos.md) [Adobe Experience Platform Launch 소개](https://www.youtube.com/embed/rwqqkG1SERU) 및 [게시 프로세스 개요](https://helpx.adobe.com/kr/analytics/how-to/adobe-launch-publishing-process.html)로 시작한 다음 다음 개념으로 이동합니다.
 
 ## 플랫폼 인터페이스에서 Platform launch 확장을 찾는 방법 {#how-to-find-extensions-in-interface}
 
@@ -33,7 +33,7 @@ platform launch 확장은 원시 이벤트 데이터를 여러 유형의 대상�
 
 ![다른 대상과 비교 Experience Platform Launch 확장](../../assets/common/launch-and-other-destinations.png)
 
-## platform launch 확장 {#extensions-benefits} 을 사용하면 얻을 수 있는 이점
+## platform launch 확장 사용의 이점 {#extensions-benefits}
 
 Adobe Experience Platform Launch은 기존 Experience Cloud 고객에게 무료로 제공됩니다. platform launch은 설치, 구성, 업데이트 및 삭제할 수 있는 사용하기 쉬운 확장을 통해 웹 사이트에서 태그 배포를 단순화합니다. platform launch은 웹 사이트에서 적은 사용 공간을 가지며 페이지를 빠르게 로드할 수 있도록 해줍니다.
 
@@ -41,9 +41,9 @@ Adobe Experience Platform Launch은 기존 Experience Cloud 고객에게 무료�
 >
 >세그먼트를 Platform launch 확장에 활성화할 수는 없지만, 특정 상황에서 이벤트 데이터를 전달하는 규칙을 설정할 수 있습니다. 아래 내용을 참조하십시오.
 
-이벤트 데이터를 확장에 전달할 시기를 결정하는 *규칙*&#x200B;을 만들 수 있습니다. 이 강력한 기능을 사용하면 모든 상호 작용에서 이벤트 데이터를 전송하는 것과 대조적으로 특정 상황에서 이벤트 데이터만 전달할 수 있습니다. 자세한 내용은 [Adobe Experience Platform Launch 설명서](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/rules.html)에서 규칙에 대해 읽어보십시오.
+이벤트 데이터를 확장에 전달할 시기를 결정하는 *규칙*&#x200B;을 만들 수 있습니다. 이 강력한 기능을 사용하면 모든 상호 작용에서 이벤트 데이터를 전송하는 것과 대조적으로 특정 상황에서 이벤트 데이터만 전달할 수 있습니다. 자세한 내용은 [Adobe Experience Platform Launch 설명서](../../../tags/ui/managing-resources/rules.md)에서 규칙에 대해 읽어보십시오.
 
-## platform launch 확장 {#extensions-use-cases} 의 사용 사례 예
+## platform launch 확장에 대한 사용 사례 예 {#extensions-use-cases}
 
 platform launch 확장을 사용하면 다양한 고객 활용 사례를 충족할 수 있습니다. platform launch 확장 사용에 대한 일부 사용 사례는 다음과 같습니다.
 
