@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 세그먼트 일치 개요
 topic-legacy: overview
 description: 세그먼트 일치 는 두 명 이상의 플랫폼 사용자가 안전하고 제어되며 개인 정보에 친숙한 방식으로 세그먼트 데이터를 교환할 수 있도록 해주는 Adobe Experience Platform의 세그먼트 공유 서비스입니다.
-source-git-commit: 97f803f649b2c42b0449a2f8f0cff370ed1aba93
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '1900'
+source-wordcount: '1901'
 ht-degree: 1%
 
 ---
@@ -51,7 +51,7 @@ ID 네임스페이스는 [Adobe Experience Platform Identity 서비스](../../id
 | --------- | ----------- |
 | 이메일(SHA256, 소문자로) | 미리 해시된 이메일 주소를 위한 네임스페이스. 이 네임스페이스에 제공된 값은 SHA256으로 해싱하기 전에 소문자로 변환됩니다. 전자 메일 주소가 표준화되기 전에 선행 및 후행 공백을 트림해야 합니다. 이 설정은 소급하여 변경할 수 없습니다. 자세한 내용은 [SHA256 해시 지원](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=en#hashing-support)에 대한 다음 문서를 참조하십시오. |
 | 전화(SHA256_E.164) | SHA256과 E.164 형식을 모두 사용하여 해시해야 하는 원시 전화 번호를 나타내는 네임스페이스입니다. |
-| ECID | ECID(Experience Cloud ID) 값을 나타내는 네임스페이스입니다. 이 네임스페이스를 다음 별칭으로 참조할 수도 있습니다.&quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. 자세한 내용은 [ECID 개요](../../identity-service/ecid.md)를 참조하십시오. |
+| ECID | ECID(Experience Cloud ID) 값을 나타내는 네임스페이스입니다. 이 네임스페이스를 다음 별칭으로 참조할 수도 있습니다. &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. 자세한 내용은 [ECID 개요](../../identity-service/ecid.md)를 참조하십시오. |
 | Apple IDFA(광고주의 ID) | 광고주용 Apple ID를 나타내는 네임스페이스입니다. 자세한 내용은 [관심 기반 광고](https://support.apple.com/en-us/HT202074)에 있는 다음 문서를 참조하십시오. |
 | Google 광고 ID | Google 광고 ID를 나타내는 네임스페이스입니다. 자세한 내용은 [Google 광고 ID](https://support.google.com/googleplay/android-developer/answer/6048248?hl=en)에서 다음 문서를 참조하십시오. |
 
@@ -63,7 +63,7 @@ ID 네임스페이스는 [Adobe Experience Platform Identity 서비스](../../id
 
 [!DNL Segment Match]에 대한 기본 동의 구성이 `opt-out`(으)로 설정되어 있습니다. 데이터에 옵트인 모델을 적용하려면 Adobe 계정 관리자에게 이메일 요청을 보내십시오.
 
-데이터 공유 동의 값을 설정하는 데 사용되는 `share` 속성에 대한 자세한 내용은 [개인 정보 및 동의 필드 그룹](../../xdm/field-groups/profile/consents.md)에 있는 다음 설명서를 참조하십시오. 개인 정보, 개인화 및 마케팅 환경 설정과 관련된 데이터의 수집 및 사용에 대한 소비자 동의를 캡처하는 데 사용되는 특정 필드 그룹에 대한 자세한 내용은 다음 [개인 정보, 개인화 및 마케팅 환경 설정에 대한 동의 GitHub 예제](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/consent-preferences.schema.md)를 참조하십시오.
+데이터 공유 동의 값을 설정하는 데 사용되는 `share` 속성에 대한 자세한 내용은 [개인 정보 및 동의 필드 그룹](../../xdm/field-groups/profile/consents.md)에 있는 다음 설명서를 참조하십시오. 개인 정보, 개인화 및 마케팅 환경 설정과 관련된 데이터의 수집 및 사용에 대한 소비자 동의를 캡처하는 데 사용되는 특정 필드 그룹에 대한 자세한 내용은 다음 [개인 정보, 개인화 및 마케팅 환경 설정에 대한 동의 GitHub 예제](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/consent/consent-preferences.schema.md)를 참조하십시오.
 
 ### 데이터 사용 레이블 구성
 
