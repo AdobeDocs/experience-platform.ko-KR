@@ -1,14 +1,22 @@
 ---
 title: 일반 Analytics 플러그인 확장 프로그램에 대한 릴리스 노트
 description: Adobe Experience Platform의 일반 Analytics 플러그인 태그 확장에 대한 최신 릴리스 노트입니다.
-source-git-commit: 5f810ada57eeb12a56de603d974a091b888dc9d2
+source-git-commit: cce218d984bae92428c7d48aefcd0f57dab837ea
 workflow-type: tm+mt
-source-wordcount: '297'
-ht-degree: 58%
+source-wordcount: '314'
+ht-degree: 57%
 
 ---
 
 # 일반 Analytics 플러그인 릴리스 노트
+
+## 2021년 6월 23일
+
+### 일반 Analytics 플러그인 확장 프로그램 3.0.6
+
+#### 버그 수정
+
+* 특수 문자를 사용할 때 getPercentPageViewed가 중단되는 문제가 해결되었습니다.
 
 ## 2021년 5월 20일
 
