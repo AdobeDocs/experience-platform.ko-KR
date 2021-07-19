@@ -1,9 +1,9 @@
 ---
 title: Adobe Medium Analytics for Audio 및 Video 확장 개요
 description: Adobe Experience Platform의 Analytics for Audio 및 Video 태그 확장에 대해 알아봅니다.
-source-git-commit: 573c13f5136a4efc3accf2838783a91ea914e949
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '1015'
+source-wordcount: '991'
 ht-degree: 80%
 
 ---
@@ -52,7 +52,7 @@ MA(Media Analytics) 확장은 Core JavaScript Media SDK(Media 2.x SDK)를 추가
 | Export APIs to Window Object | 글로벌 범위로 Media Analytics API 내보내기 활성화 또는 비활성화 |
 | Variable Name | `window` 개체 아래로 Media Analytics API를 내보내는 데 사용하는 변수 |
 
-**미리 알림:** MA 확장 프로그램을 사용하려면 [Analytics](../analytics/overview.md) 및 [Experience Cloud ID](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/id-service-extension/overview.html?lang=ko-KR) 확장 프로그램이 필요합니다. 확장 속성에 이러한 확장을 추가하고 구성해야 합니다.
+**미리 알림:** MA 확장 프로그램을 사용하려면 [Analytics](../analytics/overview.md) 및 [Experience Cloud ID](../id-service/overview.md) 확장 프로그램이 필요합니다. 확장 속성에 이러한 확장을 추가하고 구성해야 합니다.
 
 ## MA 확장 사용
 
@@ -176,7 +176,7 @@ MA 확장은 `get-instance` 및 `media-heartbeat` 공유 모듈을 다른 확장
 
 >[!NOTE]
 >
->**테스트:** 이 릴리스에서 확장을 테스트하려면 모든 종속 확장에 대한 액세스 권한이 있는 [ Platform ](https://github.com/Adobe-Marketing-Cloud/reactor-user-docs/tree/73a73bd5ff53162339ce5ded3f4bba4712146d20/extension-reference/launch.adobe.com)에 업로드해야 합니다.
+>**테스트:** 이 릴리스에서 확장을 테스트하려면 모든 종속 확장에 대한 액세스 권한이 있는 [ Platform ](../../../extension-dev/submit/upload-and-test.md)에 업로드해야 합니다.
 
 
 <!--
