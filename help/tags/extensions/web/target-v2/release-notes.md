@@ -1,10 +1,10 @@
 ---
 title: Adobe Target v2 확장에 대한 릴리스 노트
 description: Adobe Experience Platform의 Adobe Target v2 태그 확장에 대한 최신 릴리스 노트입니다.
-source-git-commit: 573c13f5136a4efc3accf2838783a91ea914e949
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '452'
-ht-degree: 53%
+source-wordcount: '438'
+ht-degree: 55%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 53%
 
 ### Adobe Target v2 확장 0.14
 
-- On-Device Decisioning 기능이 있는 at.js 2.5를 로드하는 [On-Device Decisioning](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/targetv2-extension/adobe-target-extension-v2.html?lang=en#load-target-with-on-device-decisioning)을 사용하여 새 작업 로드 Target이 추가되었습니다
+- On-Device Decisioning 기능이 있는 at.js 2.5를 로드하는 [On-Device Decisioning](./overview.md#load-target-with-on-device-decisioning)을 사용하여 새 작업 로드 Target이 추가되었습니다
 - at.js가 2.5로 업데이트되었습니다.
 
 
