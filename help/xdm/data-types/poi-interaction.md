@@ -5,10 +5,10 @@ title: 관심 영역 상호 작용 데이터 유형
 topic-legacy: overview
 description: 이 문서에서는 관심 영역 상호 작용 XDM 데이터 유형에 대한 개요를 제공합니다.
 exl-id: 398f56d9-1802-458d-b565-4096beb5b014
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '186'
-ht-degree: 2%
+source-wordcount: '188'
+ht-degree: 3%
 
 ---
 
@@ -21,12 +21,12 @@ ht-degree: 2%
 | 속성 | 데이터 유형 | 설명 |
 | --- | --- | --- |
 | `poiDetail` | [[!UICONTROL 관심 영역 세부 정보]](./poi-details.md) | 이벤트를 발생시킨 POI의 세부 사항을 설명합니다. |
-| `poiEntries` | 개체 | 개인이 POI를 입력한 횟수를 설명합니다. 다음 두 가지 속성을 포함합니다. <ul><li>`id`:측정에 대한 고유 식별자입니다.</li><li>`value`:측정값의 수량화 가능한 값입니다.</li></ul> |
-| `poiExits` | 개체 | 사람이 POI를 종료한 횟수를 설명합니다. 다음 두 가지 속성을 포함합니다. <ul><li>`id`:측정에 대한 고유 식별자입니다.</li><li>`value`:측정값의 수량화 가능한 값입니다.</li></ul> |
+| `poiEntries` | 개체 | 개인이 POI를 입력한 횟수를 설명합니다. 다음 두 가지 속성을 포함합니다. <ul><li>`id`: 측정에 대한 고유 식별자입니다.</li><li>`value`: 측정값의 수량화 가능한 값입니다.</li></ul> |
+| `poiExits` | 개체 | 사람이 POI를 종료한 횟수를 설명합니다. 다음 두 가지 속성을 포함합니다. <ul><li>`id`: 측정에 대한 고유 식별자입니다.</li><li>`value`: 측정값의 수량화 가능한 값입니다.</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
 데이터 유형에 대한 자세한 내용은 공용 XDM 저장소를 참조하십시오.
 
-* [채워진 예](https://github.com/adobe/xdm/blob/master/components/datatypes/poi-interaction.example.1.json)
-* [전체 스키마](https://github.com/adobe/xdm/blob/master/components/datatypes/poi-interaction.schema.json)
+* [채워진 예](https://github.com/adobe/xdm/blob/master/components/datatypes/deprecated/poi-interaction.example.1.json)
+* [전체 스키마](https://github.com/adobe/xdm/blob/master/components/datatypes/deprecated/poi-interaction.schema.json)
