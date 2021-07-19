@@ -1,9 +1,9 @@
 ---
 title: Adobe Analytics 제품 문자열 확장 개요
 description: Adobe Experience Platform의 Adobe Analytics 제품 문자열 태그 확장에 대해 알아봅니다.
-source-git-commit: 8dfb7bdc16d0654ee1d76dc5f5af50938b122d33
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '533'
+source-wordcount: '524'
 ht-degree: 84%
 
 ---
@@ -93,4 +93,4 @@ digitalData.transaction.item.productInfo.productName
 ### 요구 사항
 
 * 모든 제품 관련 데이터(예: 제품 ID, 수량, 가격)에 대한 변수와 함께 개체를 기반으로 한 [데이터 계층](https://theblog.adobe.com/data-layers-buzzword-best-practice/)입니다. 이 확장 프로그램은 어레이 기반 데이터 레이어에서 작동하지 않습니다.
-* [Adobe Analytics](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/analytics-extension/overview.html?lang=ko-KR) 확장 프로그램을 설치해야 합니다.
+* [Adobe Analytics](../analytics/overview.md) 확장 프로그램을 설치해야 합니다.
