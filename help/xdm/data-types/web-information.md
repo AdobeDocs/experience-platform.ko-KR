@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 웹 정보 데이터 유형
 topic-legacy: overview
 description: 이 문서에서는 웹 정보 XDM(Experience Data Model) 데이터 유형에 대한 개요를 제공합니다.
-source-git-commit: b22dce52563d5f3bbd1796c11d7c7b2a49fa6d5f
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '192'
-ht-degree: 1%
+source-wordcount: '190'
+ht-degree: 3%
 
 ---
 
@@ -21,11 +21,11 @@ ht-degree: 1%
 | --- | --- | --- |
 | `webInteraction` | [[!UICONTROL 웹 상호 작용]](./web-interaction.md) | 상호 작용에 해당하는 웹 링크 또는 URL에 대한 세부 사항을 설명합니다. |
 | `webPageDetails` | [[!UICONTROL 웹 페이지 세부 사항]](./webpage-details.md) | 웹 상호 작용이 발생한 웹 페이지에 대한 세부 사항을 설명합니다. |
-| `webReferrer` | [!UICONTROL 개체] | 현재 웹 상호 작용이 기록되기 바로 전에 방문자가 도달한 URL인 웹 상호 작용의 레퍼러를 설명합니다. 다음 하위 속성을 포함합니다. <ul><li>`URL`:레퍼러 URL입니다.</li><li>`type`:레퍼러 유형입니다.</li></ul> |
+| `webReferrer` | [!UICONTROL 개체] | 현재 웹 상호 작용이 기록되기 바로 전에 방문자가 도달한 URL인 웹 상호 작용의 레퍼러를 설명합니다. 다음 하위 속성을 포함합니다. <ul><li>`URL`: 레퍼러 URL입니다.</li><li>`type`: 레퍼러 유형입니다.</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
 데이터 유형에 대한 자세한 내용은 공용 XDM 저장소를 참조하십시오.
 
-* [채워진 예](https://github.com/adobe/xdm/blob/master/components/datatypes/web/webinfo.example.1.json)
-* [전체 스키마](https://github.com/adobe/xdm/blob/master/components/datatypes/web/webinfo.schema.json)
+* [채워진 예](https://github.com/adobe/xdm/blob/master/components/datatypes/webinfo.example.1.json)
+* [전체 스키마](https://github.com/adobe/xdm/blob/master/components/datatypes/webinfo.schema.json)
