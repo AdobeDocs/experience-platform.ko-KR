@@ -1,10 +1,10 @@
 ---
 title: 이벤트 전달 시작
 description: Adobe Experience Platform에서 이벤트 전달을 사용하여 시작하려면 이 단계별 자습서를 따르십시오.
-source-git-commit: 1d3415146335d3011963c969d5b6aeea1f1a51d0
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '915'
-ht-degree: 28%
+source-wordcount: '906'
+ht-degree: 27%
 
 ---
 
@@ -110,7 +110,7 @@ Adobe Experience Platform에서 데이터 스트림을 만들려면 이벤트 �
 
 1. Edge 도메인을 선택합니다.
 
-구성 옵션에 대한 자세한 내용은 [웹 SDK 확장 설명서](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/aep-extension/overview.html?lang=ko-KR)를 참조하십시오.
+구성 옵션에 대한 자세한 내용은 [웹 SDK 확장 설명서](../../extensions/web/sdk/overview.md)를 참조하십시오.
 
 ## Platform Web SDK로 데이터를 전송하는 태그 규칙 만들기
 
