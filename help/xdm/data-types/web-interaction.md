@@ -5,10 +5,10 @@ title: 웹 상호 작용 데이터 유형
 topic-legacy: overview
 description: 이 문서에서는 웹 상호 작용 XDM(Experience Data Model) 데이터 유형에 대한 개요를 제공합니다.
 exl-id: 772d96c5-9fa3-4fed-8b38-16b8e7101743
-source-git-commit: e31f92146deade8132965667e7d09e01f627be7a
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
 source-wordcount: '190'
-ht-degree: 2%
+ht-degree: 4%
 
 ---
 
@@ -29,5 +29,5 @@ ht-degree: 2%
 
 데이터 유형에 대한 자세한 내용은 공용 XDM 저장소를 참조하십시오.
 
-* [채워진 예](https://github.com/adobe/xdm/blob/master/components/datatypes/web/webinteraction.example.1.json)
-* [전체 스키마](https://github.com/adobe/xdm/blob/master/components/datatypes/web/webinteraction.schema.json)
+* [채워진 예](https://github.com/adobe/xdm/blob/master/components/datatypes/deprecated/webinteraction.example.1.json)
+* [전체 스키마](https://github.com/adobe/xdm/blob/master/components/datatypes/deprecated/webinteraction.schema.json)
