@@ -1,7 +1,7 @@
 ---
 title: 확장에 대한 엔드 투 엔드 테스트 업로드 및 구현
 description: Adobe Experience Platform에서 확장의 유효성을 검사, 업로드 및 테스트하는 방법을 알아봅니다.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
 source-wordcount: '2391'
 ht-degree: 33%
@@ -228,9 +228,3 @@ facebook 확장 예제를 사용하여 테스트 사이트에서 페이지가 �
 1. 리소스 수정 - 확장 구성 요소에 대한 구성이 변경된 경우 데이터 수집 UI에서 해당 리소스를 업데이트해야 합니다.
 1. 라이브러리에 최신 변경 사항을 추가하고 다시 빌드합니다.
 1. 다른 테스트 라운드를 완료합니다.
-
-<!--
-## Document {#document}
-
-Your [exchange listing](./create-listing.md) is a great place for marketing and support information for your extension, but our tags [Help Docs](https://experienceleague.adobe.com/docs/launch/using/overview.html) are used every day by our customers. We encourage you to submit a pull request to [add your extension documentation](https://github.com/AdobeDocs/launch.en/blob/master/help/extension-reference/3rd-party-extensions.md) into the tags user docs. Open source docs for the win! 🚀
--->
