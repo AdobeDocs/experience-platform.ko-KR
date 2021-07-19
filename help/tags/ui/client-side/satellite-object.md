@@ -1,9 +1,9 @@
 ---
 title: 태그 위성 개체 참조
 description: 클라이언트측 _satellite 개체 및 Adobe Experience Platform에서 수행할 수 있는 다양한 기능에 대해 알아봅니다.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '1131'
+source-wordcount: '1123'
 ht-degree: 48%
 
 ---
@@ -86,7 +86,7 @@ _satellite.getVisitorId() => Object
 var visitorIdInstance = _satellite.getVisitorId();
 ```
 
-[!DNL Adobe Experience Cloud ID] 확장이 속성에 설치된 경우 이 메서드는 방문자 ID 인스턴스를 반환합니다. 자세한 내용은 [Experience Cloud ID 서비스 설명서](https://forums.adobe.com/external-link.jspa?url=https%3A%2F%2Fmarketing.adobe.com%2Fresources%2Fhelp%2Fko_KR%2Fmcvid%2F)를 참조하십시오.
+[!DNL Adobe Experience Cloud ID] 확장이 속성에 설치된 경우 이 메서드는 방문자 ID 인스턴스를 반환합니다. 자세한 내용은 [Experience Cloud ID 서비스 설명서](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=ko-KR)를 참조하십시오.
 
 ## `logger`
 
