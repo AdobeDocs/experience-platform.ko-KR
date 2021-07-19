@@ -1,9 +1,9 @@
 ---
 title: CSP(콘텐츠 보안 정책) 지원
 description: Adobe Experience Platform에서 태그와 웹 사이트를 통합할 때 CSP(콘텐츠 보안 정책) 제한을 처리하는 방법을 알아봅니다.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '1087'
+source-wordcount: '1079'
 ht-degree: 54%
 
 ---
@@ -64,7 +64,7 @@ Content-Security-Policy: script-src 'self' assets.adobedtm.com
 **HTML `<meta>` 태그**
 
 
-중요한 전제 조건이 있습니다. 태그 라이브러리 [를 비동기식으로 로드해야 합니다](https://experienceleague.adobe.com/docs/launch/using/reference/client-side-info/asynchronous-deployment.html). 이는 태그 라이브러리의 동기식 로드와 작동하지 않습니다(결과: 제대로 실행되지 않는 콘솔 오류 및 규칙).
+중요한 전제 조건이 있습니다. 태그 라이브러리 [를 비동기식으로 로드해야 합니다](./asynchronous-deployment.md). 이는 태그 라이브러리의 동기식 로드와 작동하지 않습니다(결과: 제대로 실행되지 않는 콘솔 오류 및 규칙).
 
 ```html
 <meta http-equiv="Content-Security-Policy" content="script-src 'self' assets.adobedtm.com">
