@@ -1,10 +1,10 @@
 ---
 title: Quickstart 안내서
 description: Adobe Experience Platform에서 태그를 신속하게 설정하고 실행하는 방법을 배웁니다.
-source-git-commit: 5f810ada57eeb12a56de603d974a091b888dc9d2
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '1562'
-ht-degree: 42%
+source-wordcount: '1533'
+ht-degree: 41%
 
 ---
 
@@ -134,8 +134,6 @@ Platform에서 태그를 고유하게 만드는 것은 이러한 확장을 누�
 ## 추가 리소스
 
 태그에 대해 자세히 알아보려면 다음 리소스를 참조하십시오.
-
-[https://forums.adobe.com/community/experience-cloud/platform/launchAsk](https://forums.adobe.com/community/experience-cloud/platform/launchAsk)질문 및 답변하고, 아이디어를 제출하고, 다른 사람의 아이디어를 투표할 수 있습니다. Adobe ID으로 로그인합니다.
 
 * **[데이터 수집 커뮤니티](https://forums.adobe.com/community/experience-cloud/platform/launch)**: 질문 및 답변하고, 아이디어를 제출하고, 다른 사람의 아이디어를 투표할 수 있습니다. Adobe ID으로 로그인합니다.
 * **[개발자 문서](https://developer.adobelaunch.com/)**: 태그 개발자 커뮤니티에 참여하여 확장을 빌드하거나 태그 API를 사용합니다
