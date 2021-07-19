@@ -5,10 +5,10 @@ title: 우편 주소 데이터 유형
 topic-legacy: overview
 description: 이 문서에서는 우편 주소 XDM 데이터 유형에 대한 개요를 제공합니다.
 exl-id: 94457fe5-80bc-4822-9f6c-48f77d56c89b
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '339'
-ht-degree: 0%
+source-wordcount: '341'
+ht-degree: 1%
 
 ---
 
@@ -44,5 +44,5 @@ ht-degree: 0%
 
 우편 주소 데이터 유형에 대한 자세한 내용은 공용 XDM 저장소를 참조하십시오.
 
-* [채워진 예](https://github.com/adobe/xdm/blob/master/components/datatypes/address.example.1.json)
-* [전체 스키마](https://github.com/adobe/xdm/blob/master/components/datatypes/address.schema.json)
+* [채워진 예](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/address.example.1.json)
+* [전체 스키마](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/address.schema.json)
