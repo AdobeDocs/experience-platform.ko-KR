@@ -3,9 +3,9 @@ title: Experience Platform Web SDK에 대한 데이터 스트림 구성
 description: '데이터 스트림을 구성하는 방법을 알아봅니다. '
 keywords: 구성;데이터 스트림;데이터 스트림 ID;edge;edge 구성 ID;환경 설정;edgeConfigId;id;ID 동기화 사용;ID 동기화 컨테이너 ID;샌드박스;스트리밍 입력;이벤트 데이터 세트;target;클라이언트 코드;속성 토큰;Target 환경 ID;쿠키 대상;URL 대상;Analytics 설정 차단 보고서 세트 ID;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '904'
+source-wordcount: '896'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Adobe Experience Platform Web SDK에 대한 구성은 두 위치 간에 분할�
 
 >[!NOTE]
 >
->허용 목록의 고객이 [!DNL Experience Platform Launch] 을 태그 관리자로 사용하는지 여부에 관계없이 데이터 스트림 구성 도구를 사용할 수 있습니다. 또한 사용자는 [!DNL Experience Platform Launch]에서 개발 권한이 필요합니다. 자세한 내용은 [!DNL Experience Platform Launch] 설명서의 [사용자 권한](https://experienceleague.adobe.com/docs/launch/using/reference/admin/user-permissions.html) 문서를 참조하십시오.
+>허용 목록의 고객이 [!DNL Experience Platform Launch] 을 태그 관리자로 사용하는지 여부에 관계없이 데이터 스트림 구성 도구를 사용할 수 있습니다. 또한 사용자는 [!DNL Experience Platform Launch]에서 개발 권한이 필요합니다. 자세한 내용은 [!DNL Experience Platform Launch] 설명서의 [사용자 권한](../../tags/ui/administration/user-permissions.md) 문서를 참조하십시오.
 
 화면의 오른쪽 상단 영역에서 **[!UICONTROL 새 데이터 스트림]**&#x200B;을 클릭하여 데이터 스트림을 만듭니다. 이름과 설명을 입력하면 각 환경에 대한 기본 설정을 묻는 메시지가 표시됩니다. 사용 가능한 설정은 아래에 자세히 설명되어 있습니다.
 
@@ -37,7 +37,7 @@ SDK에서 `edgeConfigId` 로 사용되는 ID는 구성과 환경을 지정하는
 
 ## [!UICONTROL 타사 ID ] 설정
 
-타사 ID 섹션은 항상 켜져 있는 유일한 섹션입니다. 사용 가능한 설정은 두 가지입니다.&quot;[!UICONTROL 타사 ID 동기화 Enabled]&quot; 및 &quot;[!UICONTROL 타사 ID 동기화 컨테이너 ID]&quot;.
+타사 ID 섹션은 항상 켜져 있는 유일한 섹션입니다. 사용 가능한 설정은 두 가지입니다. &quot;[!UICONTROL 타사 ID 동기화 Enabled]&quot; 및 &quot;[!UICONTROL 타사 ID 동기화 컨테이너 ID]&quot;.
 
 ![구성 UI의 ID 섹션](../../assets/edge_configuration_identity.png)
 
