@@ -4,9 +4,9 @@ user-guide-title: 대상 안내서
 user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화합니다.
 description: 이 문서에서는 Adobe Experience Platform 대상의 목차 목록을 설명합니다
 feature: 대상
-source-git-commit: 47b3ef28281e3480e8b194486845f4fb4326b7d4
+source-git-commit: 3ab15ceaf33a33f8bbda80cbf09228d16ce5a374
 workflow-type: tm+mt
-source-wordcount: '477'
+source-wordcount: '481'
 ht-degree: 11%
 
 ---
@@ -33,6 +33,7 @@ ht-degree: 11%
    * [ (알파) HTTP 연결](./catalog/http-destination.md)
    * Adobe 대상{#adobe}
       * [Adobe 대상 개요](./catalog/adobe/overview.md)
+      * [(베타) Marketo Engage 연결](./catalog/adobe/marketo-engage.md)
       * [Experience Platform 세그먼트 공유](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
    * 광고 대상{#advertising}
       * [광고 대상 개요](./catalog/advertising/overview.md)
@@ -134,5 +135,5 @@ ht-degree: 11%
       * [호출 태그 확장](./catalog/voice/invoca.md)
       * [메달리아 확장](./catalog/voice/medallia.md)
       * [대화 URL 받은 편지함 확장](./catalog/voice/talkurl.md)
-* [Experience Cloud 핵심 서비스에 대한](./destinations-faq.md)
+* [자주 묻는 질문](./destinations-faq.md)
 * [플랫폼 릴리스 노트](https://www.adobe.com/go/platform-release-notes-en)
