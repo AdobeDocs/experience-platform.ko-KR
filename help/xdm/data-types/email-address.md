@@ -5,10 +5,10 @@ title: 이메일 주소 데이터 유형
 topic-legacy: overview
 description: 이 문서에서는 이메일 주소 XDM 데이터 유형에 대한 개요를 제공합니다.
 exl-id: 1364df42-f89f-4f48-bcda-5332f3828326
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '190'
-ht-degree: 1%
+source-wordcount: '192'
+ht-degree: 2%
 
 ---
 
@@ -32,5 +32,5 @@ ht-degree: 1%
 
 이메일 주소 데이터 유형에 대한 자세한 내용은 공용 XDM 저장소를 참조하십시오.
 
-* [채워진 예](https://github.com/adobe/xdm/blob/master/components/datatypes/emailaddress.example.1.json)
-* [전체 스키마](https://github.com/adobe/xdm/blob/master/components/datatypes/emailaddress.schema.json)
+* [채워진 예](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/emailaddress.example.1.json)
+* [전체 스키마](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/emailaddress.schema.json)
