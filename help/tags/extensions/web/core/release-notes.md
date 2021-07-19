@@ -1,9 +1,9 @@
 ---
 title: 코어 확장에 대한 릴리스 노트
 description: Adobe Experience Platform의 코어 확장에 대한 최신 릴리스 노트입니다.
-source-git-commit: 5f810ada57eeb12a56de603d974a091b888dc9d2
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '1219'
+source-wordcount: '1211'
 ht-degree: 74%
 
 ---
@@ -103,7 +103,7 @@ v1.6.2
 
 v1.6.1
 
-* **CSP 임시 항목 지원** - 코어 확장에는 이제 선택적 구성 매개 변수가 있습니다. 임시 항목을 참조하는 데이터 요소를 추가할 수 있습니다. 구성된 경우, 태그가 페이지에 추가하는 모든 인라인 스크립트는 사용자가 구성한 임시 항목을 사용합니다. 이 변경 사항은 Platform Launch 스크립트가 CSP 환경에서 로드될 수 있도록 컨텐츠 보안 정책을 임시로 사용할 수 있도록 지원합니다.  CSP에서 Platform Launch 사용에 대한 자세한 내용은 [여기](https://experienceleague.adobe.com/docs/launch/using/reference/client-side-info/content-security-policy.html)에서 확인할 수 있습니다.
+* **CSP 임시 항목 지원** - 코어 확장에는 이제 선택적 구성 매개 변수가 있습니다. 임시 항목을 참조하는 데이터 요소를 추가할 수 있습니다. 구성된 경우, 태그가 페이지에 추가하는 모든 인라인 스크립트는 사용자가 구성한 임시 항목을 사용합니다. 이 변경 사항은 Platform Launch 스크립트가 CSP 환경에서 로드될 수 있도록 컨텐츠 보안 정책을 임시로 사용할 수 있도록 지원합니다.  CSP에서 Platform Launch 사용에 대한 자세한 내용은 [여기](../../../ui/client-side/content-security-policy.md)에서 확인할 수 있습니다.
 
 ## 2019년 6월 18일
 
