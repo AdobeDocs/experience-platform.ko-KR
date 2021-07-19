@@ -4,9 +4,9 @@ title: 동의 및 기본 설정 데이터 유형
 description: 개인 정보, 개인화 및 마케팅 환경 설정에 대한 동의 데이터 유형은 CMP(동의 관리 플랫폼) 및 데이터 작업에서 생성된 고객 권한 및 환경 설정 컬렉션을 지원하기 위한 것입니다.
 topic-legacy: guide
 exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
-source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '1904'
+source-wordcount: '1905'
 ht-degree: 2%
 
 ---
@@ -309,4 +309,4 @@ ht-degree: 2%
 
 ### 전체 [!UICONTROL 동의 및 환경 설정] 스키마 {#full-schema}
 
-[!UICONTROL 동의 및 환경 설정] 데이터 유형에 대한 전체 스키마를 보려면 [공식 XDM 저장소](https://github.com/adobe/xdm/blob/master/components/datatypes/consent-preferences.schema.json)를 참조하십시오.
+[!UICONTROL 동의 및 환경 설정] 데이터 유형에 대한 전체 스키마를 보려면 [공식 XDM 저장소](https://github.com/adobe/xdm/blob/master/components/datatypes/consent/consent-preferences.schema.json)를 참조하십시오.
