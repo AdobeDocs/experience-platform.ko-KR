@@ -4,9 +4,9 @@ title: 동의 및 기본 설정 스키마 필드 그룹
 topic-legacy: overview
 description: 이 문서에서는 동의 및 기본 설정 스키마 필드 그룹에 대한 개요를 제공합니다.
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '2316'
+source-wordcount: '2317'
 ht-degree: 2%
 
 ---
@@ -401,4 +401,4 @@ Adobe Experience Platform Mobile SDK는 적절할 때 자동으로 설정하므�
 
 ### 전체 [!UICONTROL 동의 및 환경 설정] 스키마 {#full-schema}
 
-[!UICONTROL 동의 및 환경 설정] 필드 그룹에 대한 전체 스키마를 보려면 [공식 XDM 저장소](https://github.com/adobe/xdm/blob/master/components/datatypes/consent-preferences.schema.json)를 참조하십시오.
+[!UICONTROL 동의 및 환경 설정] 필드 그룹에 대한 전체 스키마를 보려면 [공식 XDM 저장소](https://github.com/adobe/xdm/blob/master/components/datatypes/consent/consent-preferences.schema.json)를 참조하십시오.
