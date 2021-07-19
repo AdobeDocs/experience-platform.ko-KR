@@ -1,9 +1,9 @@
 ---
 title: 릴리스 정보
 description: Adobe Experience Platform의 태그에 대한 최신 릴리스 노트입니다.
-source-git-commit: 7a6bec77895458cf1735bc7a00d16b78df9776a5
+source-git-commit: f1e6741de9aa00652e9af290a89f73788e0f1d83
 workflow-type: tm+mt
-source-wordcount: '400'
+source-wordcount: '498'
 ht-degree: 2%
 
 ---
@@ -13,6 +13,14 @@ ht-degree: 2%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch은 Experience Platform에서 데이터 수집 기술 세트로 브랜드 재지정되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../term-updates.md)을 참조하십시오.
+
+## 2021년 7월 19일
+
+**속성 관리 권한에 대한 조정**  - 속성 관리 권한이 사용자에게 새 속성을 만들 수 있는 권한이 있지만 속성 생성 후( [여기](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/technical-advisory-adjustments-to-the-manage-properties/ba-p/399176) 커뮤니티 스레드에 요약됨)을 볼 수 없는 문제가 발생했습니다. 이제 문서에 설명된 대로 강제 적용되는 권한을 통해 수정 사항이 적용됩니다.
+
+>[!NOTE]
+>
+>사용자 그룹에 새 &quot;속성 편집&quot; 권한을 지정하는 경우 속성 구성 화면의 필드를 사용하도록 UI가 업데이트되지 않습니다. 이 문제에 대한 수정 사항은 향후 릴리스에서 구현될 예정입니다.
 
 ## 2021년 5월 17일
 
