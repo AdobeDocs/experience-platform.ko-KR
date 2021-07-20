@@ -6,9 +6,9 @@ seo-title: 대상에 프로필 및 세그먼트 활성화
 description: 세그먼트를 대상에 매핑하여 Adobe Experience Platform에서 보유한 데이터를 활성화합니다. 이를 수행하려면 아래 단계를 수행하십시오.
 seo-description: 세그먼트를 대상에 매핑하여 Adobe Experience Platform에서 보유한 데이터를 활성화합니다. 이를 수행하려면 아래 단계를 수행하십시오.
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
-source-git-commit: 7a1cd379eb002f92c19fbe0e569d5fac90ab5334
+source-git-commit: 0162ec101c820c4870dea0f2c2bc09523eca862a
 workflow-type: tm+mt
-source-wordcount: '2888'
+source-wordcount: '3054'
 ht-degree: 0%
 
 ---
@@ -143,6 +143,21 @@ Adobe Experience Platform 사용자 인터페이스에서 **[!UICONTROL 대상]*
 ![전체 파일 내보내기](../assets/ui/activate-destinations/export-full-files.png)
 
 1. **[!UICONTROL 빈도]** 선택기를 사용하여 한 번(**[!UICONTROL Once]**) 또는 **[!UICONTROL 일별]** 내보내기 중에서 선택합니다. 전체 파일 **[!UICONTROL Daily]**&#x200B;을 내보내면 시작 날짜에서 종료 날짜까지 매일 파일을 오전 12:00 AM UTC(오후 7:00 EST)에 내보냅니다.
+
+   >[!IMPORTANT]
+   >
+   >시작 및 종료 날짜를 설정할 때 **[!UICONTROL 시작 날짜]**&#x200B;는 파일 내보내기가 시작되도록 예약된 시점을 나타내고 **[!UICONTROL 종료 날짜]**&#x200B;는 파일 내보내기가 중지되도록 예약된 시기를 나타냅니다. 파일 내보내기는 **[!UICONTROL 시작 날짜]**&#x200B;에서 시작되지만 **[!UICONTROL 종료 날짜]**&#x200B;는 포함하지 않습니다.
+   >
+   >예를 들어 다음 일정을 설정하는 경우
+   >
+   >* 내보내기: 3시간마다 증분
+   >* 시작 날짜: 7/19
+   >* 종료 날짜: 7/21
+
+   >
+   >파일은 7/19 시 내보내기를 시작하고 7/20 시 23:59:59 UTC에 내보내기를 중지합니다. 7/21.
+
+
 2. **[!UICONTROL 시간]** 선택기를 사용하여 내보내기가 발생할 때 [!DNL UTC] 형식으로 하루 중 시간을 선택합니다. 파일 **[!UICONTROL Daily]**&#x200B;을 내보내면 파일을 시작 날짜에서 선택한 종료 날짜까지 매일 내보냅니다.
 
    >[!IMPORTANT]
@@ -167,11 +182,27 @@ Adobe Experience Platform 사용자 인터페이스에서 **[!UICONTROL 대상]*
 ![증분 파일 내보내기](../assets/ui/activate-destinations/export-incremental-files.png)
 
 1. **[!UICONTROL 빈도]** 선택기를 사용하여 **[!UICONTROL 일별]** 또는 **[!UICONTROL 시간별]** 내보내기 중에서 선택합니다. 증분 파일 **[!UICONTROL Daily]**&#x200B;을 내보내면 시작 날짜에서 종료 날짜까지 매일 파일을 오후 12:00 PM UTC(오전 7:00 EST)에 내보냅니다.
+
+
+   >[!IMPORTANT]
+   >
+   >시작 및 종료 날짜를 설정할 때 **[!UICONTROL 시작 날짜]**&#x200B;는 파일 내보내기가 시작되도록 예약된 시점을 나타내고 **[!UICONTROL 종료 날짜]**&#x200B;는 파일 내보내기가 중지되도록 예약된 시기를 나타냅니다. 파일 내보내기는 **[!UICONTROL 시작 날짜]**&#x200B;에서 시작되지만 **[!UICONTROL 종료 날짜]**&#x200B;는 포함하지 않습니다.
+   >
+   >예를 들어 다음 일정을 설정하는 경우
+   >
+   >* 내보내기: 3시간마다 증분
+   >* 시작 날짜: 7/19
+   >* 종료 날짜: 7/21
+
+   >
+   >파일은 7/19 시 내보내기를 시작하고 7/20 시 23:59:59 UTC에 내보내기를 중지합니다. 7/21.
+
    * **[!UICONTROL 시간별]**&#x200B;을 선택하는 경우 **[!UICONTROL Every]** 선택기를 사용하여 **[!UICONTROL 3]**, **[!UICONTROL 6]**, **[!UICONTROL 8]** 및 **[!UICONTROL 12]** 시간 옵션 중에서 선택합니다.
 
       >[!IMPORTANT]
       >
       >3시간, 6시간, 8시간 또는 12시간마다 증분 파일을 내보내는 옵션은 현재 베타 버전이며 일부 고객만 사용할 수 있습니다. 베타가 아닌 고객은 하루에 한 번 증분 파일을 내보낼 수 있습니다.
+
 
 2. **[!UICONTROL 시간]** 선택기를 사용하여 내보내기가 발생할 때 [!DNL UTC] 형식으로 하루 중 시간을 선택합니다.
 
