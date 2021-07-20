@@ -1,7 +1,7 @@
 ---
 title: 이벤트 전달 시작
 description: Adobe Experience Platform에서 이벤트 전달을 사용하여 시작하려면 이 단계별 자습서를 따르십시오.
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: da7696d288543abd21ff8a1402e81dcea32efbc2
 workflow-type: tm+mt
 source-wordcount: '906'
 ht-degree: 27%
