@@ -5,9 +5,9 @@ title: Experience Platform에서 IAB TCF 2.0 지원
 topic-legacy: privacy events
 description: 세그먼트를 Adobe Experience Platform의 대상으로 활성화할 때 고객 동의 선택 사항을 전달하도록 데이터 작업 및 스키마를 구성하는 방법을 알아보십시오.
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
-source-git-commit: a3468d55d95b89c075abf91391bd7dfaa974742c
+source-git-commit: da7696d288543abd21ff8a1402e81dcea32efbc2
 workflow-type: tm+mt
-source-wordcount: '2564'
+source-wordcount: '2559'
 ht-degree: 1%
 
 ---
@@ -117,15 +117,15 @@ TCF 사양에서 동의 문자열은 정책 및 공급업체에서 정의한 특
 
 **SDK는 즉시 사용 가능한 CMP와 인터페이스하지 않습니다**. SDK를 웹 사이트에 통합하고 CMP에서 동의 변경 사항을 수신하고 적절한 명령을 호출하는 방법은 사용자가 결정합니다.
 
-### 새 에지 구성 만들기
+### 새 데이터 스트림 만들기
 
-SDK에서 Experience Platform으로 데이터를 전송하려면 먼저 [!DNL Adobe Experience Platform Launch]에서 플랫폼에 대한 새 에지 구성을 만들어야 합니다. 새 구성을 만드는 방법에 대한 특정 단계는 [SDK 설명서](../../../../edge/fundamentals/datastreams.md)에 제공됩니다.
+SDK에서 데이터를 Experience Platform에 보내려면 먼저 [!DNL Adobe Experience Platform Launch]에서 플랫폼에 대한 새 데이터 스트림을 만들어야 합니다. 새 구성을 만드는 방법에 대한 특정 단계는 [SDK 설명서](../../../../edge/fundamentals/datastreams.md)에 제공됩니다.
 
 구성에 대한 고유 이름을 제공한 후 **[!UICONTROL Adobe Experience Platform]** 옆에 있는 전환 단추를 선택합니다. 그런 다음 다음 다음 값을 사용하여 양식의 나머지 부분을 완료합니다.
 
-| Edge 구성 필드 | 값 |
+| 데이터 스트림 필드 | 값 |
 | --- | --- |
-| [!UICONTROL 샌드박스] | 에지 구성을 설정하는 데 필요한 스트리밍 연결 및 데이터 세트가 포함된 플랫폼 [sandbox](../../../../sandboxes/home.md)의 이름입니다. |
+| [!UICONTROL 샌드박스] | 데이터 스트림을 설정하는 데 필요한 스트리밍 연결 및 데이터 세트가 포함된 플랫폼 [sandbox](../../../../sandboxes/home.md)의 이름입니다. |
 | [!UICONTROL 스트리밍 인렛] | Experience Platform에 유효한 스트리밍 연결입니다. 기존 스트리밍 유입구가 없는 경우 [스트리밍 연결 만들기](../../../../ingestion/tutorials/create-streaming-connection-ui.md)에서 자습서를 참조하십시오. |
 | [!UICONTROL 이벤트 데이터 세트] | [이전 단계](#datasets)에서 만든 [!DNL XDM ExperienceEvent] 데이터 세트를 선택합니다. 이 데이터 집합의 스키마에 [[!UICONTROL IAB TCF 2.0 동의] 필드 그룹](../../../../xdm/field-groups/event/iab.md)을 포함하는 경우, [`sendEvent`](#sendEvent) 명령을 사용하여 시간 경과에 따라 해당 데이터를 이 데이터 집합에 저장할 수 있습니다. 이 데이터 세트에 저장된 동의 값은 자동 적용 워크플로우에 사용되지 않는 **입니다.** |
 | [!UICONTROL 프로필 데이터 세트] | [이전 단계](#datasets)에서 만든 [!DNL XDM Individual Profile] 데이터 세트를 선택합니다. [`setConsent`](#setConsent) 명령을 사용하여 CMP 동의 변경 후크에 응답할 때 수집된 데이터는 이 데이터 세트에 저장됩니다. 이 데이터 세트는 프로필이 활성화되어 있으므로, 자동 적용 워크플로우 동안 이 데이터 세트에 저장된 동의 값이 적용됩니다. |
@@ -136,7 +136,7 @@ SDK에서 Experience Platform으로 데이터를 전송하려면 먼저 [!DNL Ad
 
 ### 동의 변경 명령
 
-이전 섹션에 설명된 Edge 구성을 만들면 SDK 명령을 사용하여 동의 데이터를 Platform에 보낼 수 있습니다. 아래 섹션에서는 다양한 시나리오에서 각 SDK 명령을 사용할 수 있는 방법에 대한 예를 제공합니다.
+이전 섹션에 설명된 데이터 스트림을 만들었으면 SDK 명령을 사용하여 동의 데이터를 Platform에 보낼 수 있습니다. 아래 섹션에서는 다양한 시나리오에서 각 SDK 명령을 사용할 수 있는 방법에 대한 예를 제공합니다.
 
 >[!NOTE]
 >
