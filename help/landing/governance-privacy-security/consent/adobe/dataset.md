@@ -5,9 +5,9 @@ title: 동의 및 기본 설정 데이터를 캡처하도록 데이터 집합 �
 topic-legacy: getting started
 description: Adobe Experience Platform에서 동의 및 기본 설정 데이터를 캡처하도록 XDM(Experience Data Model) 스키마 및 데이터 세트를 구성하는 방법을 알아봅니다.
 exl-id: 61ceaa2a-c5ac-43f5-b118-502bdc432234
-source-git-commit: ff793c207a181ca6d2486e7fd6ef5c4f57744fba
+source-git-commit: da7696d288543abd21ff8a1402e81dcea32efbc2
 workflow-type: tm+mt
-source-wordcount: '1482'
+source-wordcount: '1480'
 ht-degree: 0%
 
 ---
@@ -116,7 +116,7 @@ Platform UI의 왼쪽 탐색에서 **[!UICONTROL 스키마]**&#x200B;를 선택�
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/save-schema.png)
 
-편집한 스키마를 Platform Web SDK Edge 구성에 지정된 [!UICONTROL 프로필 데이터 세트]에서 사용하는 경우 해당 데이터 세트에 이제 새 동의 필드가 포함됩니다. 이제 [동의 처리 안내서](./overview.md#merge-policies)로 돌아가 동의 데이터를 처리하기 위해 Experience Platform을 구성하는 프로세스를 계속할 수 있습니다.
+편집한 스키마가 Platform Web SDK 데이터 스트림에 지정된 [!UICONTROL 프로필 데이터 세트]에서 사용되는 경우 이제 해당 데이터 세트에 새 동의 필드가 포함됩니다. 이제 [동의 처리 안내서](./overview.md#merge-policies)로 돌아가 동의 데이터를 처리하기 위해 Experience Platform을 구성하는 프로세스를 계속할 수 있습니다.
 
 이 스키마에 대한 데이터 세트를 만들지 않은 경우 다음 섹션의 단계를 수행합니다.
 
@@ -150,7 +150,7 @@ Platform UI의 왼쪽 탐색에서 **[!UICONTROL 스키마]**&#x200B;를 선택�
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/enable-dataset.png)
 
-이제 데이터 세트가 저장되고 [!DNL Profile]에서 사용할 수 있게 활성화됩니다. Platform Web SDK를 사용하여 프로필에 동의 데이터를 전송하려는 경우 [Edge 구성](../../../../edge/fundamentals/datastreams.md)을 설정할 때 이 데이터 세트를 [!UICONTROL 프로필 데이터 세트]로 선택해야 합니다.
+이제 데이터 세트가 저장되고 [!DNL Profile]에서 사용할 수 있게 활성화됩니다. Platform Web SDK를 사용하여 프로필에 동의 데이터를 전송하려는 경우 [데이터 스트림](../../../../edge/fundamentals/datastreams.md)을 설정할 때 이 데이터 세트를 [!UICONTROL 프로필 데이터 세트]로 선택해야 합니다.
 
 ## 다음 단계
 
