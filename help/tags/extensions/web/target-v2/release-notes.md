@@ -1,10 +1,10 @@
 ---
 title: Adobe Target v2 확장에 대한 릴리스 노트
 description: Adobe Experience Platform의 Adobe Target v2 태그 확장에 대한 최신 릴리스 노트입니다.
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: ae6b69ecea54942c1bbf8a2765768bac50a8b930
 workflow-type: tm+mt
-source-wordcount: '438'
-ht-degree: 55%
+source-wordcount: '572'
+ht-degree: 44%
 
 ---
 
@@ -13,6 +13,30 @@ ht-degree: 55%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch은 Experience Platform에서 데이터 수집 기술 세트로 브랜드 재지정되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../../term-updates.md)을 참조하십시오.
+
+## 2021년 7월 20일
+
+### Adobe Target v2 확장 0.15.1
+
+- `stringify` 함수 이름 충돌이 발생하여 `sessionId`, `requestId` 등에 대해 잘못된 UUID 값이 생성되던 문제를 수정했습니다.
+
+## 2021년 7월 16일
+
+### Adobe Target v2 확장 0.15.0
+
+- at.js 설정 secureOnly 가 true로 설정될 때마다 쿠키에 보안 속성을 추가합니다
+- 이제 `triggerView()` 을 사용할 때 응답 토큰을 사용할 수 있습니다
+- `CONTENT_RENDERING_NO_OFFERS` 이벤트와 관련된 버그가 수정되었습니다. 이제 Target에서 반환된 컨텐츠가 없을 때마다 올바르게 트리거됩니다
+- 미리 가져오기 요청을 사용할 때 A4T 클릭 지표 세부 사항이 올바르게 반환됩니다
+- UUID 생성은 더 이상 `Math.random()`을 사용하지 않지만 `window.crypto`에 의존합니다.
+- `sessionId` 쿠키 만료는 모든 네트워크 호출에서 올바르게 확장됩니다
+- 이제 SPA 보기 캐시 초기화가 올바르게 처리되었으며 `viewsEnable` 설정을 적용합니다.
+
+## 2021년 6월 2일
+
+### Adobe Target v2 확장 0.14.2
+
+- 최종 Launch 번들에 at.js 버전 2개가 포함되어 있는 버그를 수정합니다. 이 단계에서 On-Device Decisioning이 수행되고, 그렇지 않은 버전이 각각 있습니다.
 
 ## 2021년 5월 19일
 
