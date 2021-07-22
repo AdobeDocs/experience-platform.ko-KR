@@ -1,9 +1,9 @@
 ---
 title: 확장 매니페스트
 description: 확장을 제대로 사용하는 방법을 Adobe Experience Platform에 알려주는 JSON 매니페스트 파일을 구성하는 방법을 알아봅니다.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 421d1d0660c4c9c7280974f8a812a8f0e4f7cbea
 workflow-type: tm+mt
-source-wordcount: '2647'
+source-wordcount: '2646'
 ht-degree: 68%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 68%
 
 | 속성 | 설명 |
 | --- | --- |
-| `name` | 확장의 이름. 다른 모든 Reactor 확장과는 다른 고유한 이름을 사용하고 [명명 규칙](#naming-rules)을 준수해야 합니다. **이 이름은 태그에서 식별자로 사용되며 확장을 게시한 후에는 변경할 수 없습니다.** |
+| `name` | 확장의 이름. 다른 모든 확장과는 다른 고유한 이름을 사용하고 [명명 규칙](#naming-rules)을 준수해야 합니다. **이 이름은 태그에서 식별자로 사용되며 확장을 게시한 후에는 변경할 수 없습니다.** |
 | `platform` | 확장을 위한 플랫폼. 현재 허용되는 유일한 값은 `web`입니다. |
 | `version` | 확장의 버전. 버전은 [semver](http://semver.org/) 버전 관리 형식을 준수해야 합니다. 그리고 [npm 버전 필드](https://docs.npmjs.com/files/package.json#version)와 일치합니다. |
 | `displayName` | 사용자가 읽을 수 있는 확장의 이름. Platform 사용자에게 표시됩니다. &quot;태그&quot; 또는 &quot;확장&quot;을 언급할 필요가 없습니다. 사용자는 이미 태그 확장을 보고 있음을 알 수 있습니다. |
