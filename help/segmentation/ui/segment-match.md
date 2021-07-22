@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 세그먼트 일치 개요
 topic-legacy: overview
 description: 세그먼트 일치 는 두 명 이상의 플랫폼 사용자가 안전하고 제어되며 개인 정보에 친숙한 방식으로 세그먼트 데이터를 교환할 수 있도록 해주는 Adobe Experience Platform의 세그먼트 공유 서비스입니다.
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: d6eefc8c10a44fd31eaed00f22d09ee8a300db83
 workflow-type: tm+mt
 source-wordcount: '1901'
 ht-degree: 1%
@@ -12,11 +12,11 @@ ht-degree: 1%
 ---
 
 
-# (알파) [!DNL Segment Match] 개요
+# (베타) [!DNL Segment Match] 개요
 
 >[!IMPORTANT]
 >
->[!DNL Segment Match] 현재 알파 상태입니다. 설명서 및 기능은 변경될 수 있습니다.
+>[!DNL Segment Match] 은 현재 베타 버전입니다. 설명서 및 기능은 변경될 수 있습니다.
 
 Adobe Experience Platform 세그먼트 일치 는 두 명 이상의 플랫폼 사용자가 안전하고 제어되며 개인 정보에 친숙한 방식으로 세그먼트 데이터를 교환할 수 있도록 해주는 세그먼트 공유 서비스입니다. [!DNL Segment Match] 은 해시된 이메일, 해시된 전화번호 및 IDFA 및 GAID와 같은 장치 식별자 등의 플랫폼 개인 정보 표준 및 개인 식별자를 사용합니다.
 
