@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform 대시보드 도움말
 breadcrumb-title: 대시보드 안내서
 user-guide-description: 맞춤형 대시보드에서 Experience Platform 데이터를 시각화합니다.
 feature: 데이터 관리
-source-git-commit: a07658709f28783612cf9d53b2be65bc127c866e
+source-git-commit: bf09332681d309b41a924c4c29ee8f66078816f9
 workflow-type: tm+mt
-source-wordcount: '46'
-ht-degree: 36%
+source-wordcount: '56'
+ht-degree: 37%
 
 ---
 
@@ -21,7 +21,12 @@ ht-degree: 36%
    * [세그먼트](guides/segments.md)
    * [대상](guides/destinations.md)
    * [라이선스 사용](guides/license-usage.md)
-* [대시보드 수정](modify.md)
-* [위젯 라이브러리](widget-library.md)
+* 대시보드 사용자 지정 {#customize}
+   * [사용자 지정 개요](customize/overview.md)
+   * [대시보드 수정](customize/modify.md)
+   * [위젯 라이브러리](customize/widget-library.md)
+   * [표준 위젯](customize/standard-widgets.md)
+   * [사용자 지정 위젯](customize/custom-widgets.md)
+   * [스키마 편집](customize/edit-schema.md)
 * [쿼리 대시보드 데이터 세트](query.md)
 * [플랫폼 릴리스 노트](https://www.adobe.com/go/platform-release-notes-en)
