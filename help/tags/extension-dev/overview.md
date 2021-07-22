@@ -1,7 +1,7 @@
 ---
 title: 확장 개발 개요
 description: Adobe Experience Platform의 다양한 태그 확장 유형 및 확장 개발 프로세스의 기본 구성 요소에 대해 알아봅니다.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 421d1d0660c4c9c7280974f8a812a8f0e4f7cbea
 workflow-type: tm+mt
 source-wordcount: '1888'
 ht-degree: 67%
@@ -14,7 +14,7 @@ ht-degree: 67%
 >
 >Adobe Experience Platform Launch은 Experience Platform에서 데이터 수집 기술 세트로 브랜드 재지정되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../term-updates.md)을 참조하십시오.
 
-Adobe Experience Platform의 주요 목표 중 하나는 핵심 엔지니어링 팀 외부의 엔지니어가 태그를 통해 추가 기능을 노출할 수 있는 개방형 에코시스템을 구축하는 것입니다. 이는 Reactor 확장을 통해 수행됩니다. 사용자가 태그 속성에 확장을 설치하면 해당 확장의 기능을 해당 속성의 모든 사용자가 사용할 수 있게 됩니다.
+Adobe Experience Platform의 주요 목표 중 하나는 핵심 엔지니어링 팀 외부의 엔지니어가 태그를 통해 추가 기능을 노출할 수 있는 개방형 에코시스템을 구축하는 것입니다. 이 작업은 태그 확장을 통해 수행됩니다. 사용자가 태그 속성에 확장을 설치하면 해당 확장의 기능을 해당 속성의 모든 사용자가 사용할 수 있게 됩니다.
 
 이 문서에서는 다양한 확장 유형의 기본 구성 요소에 대해 간략하게 설명하고 확장 개발 프로세스를 안내하는 추가 설명용 링크를 제공합니다.
 
