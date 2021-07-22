@@ -6,7 +6,7 @@ seo-title: 대상에 프로필 및 세그먼트 활성화
 description: 세그먼트를 대상에 매핑하여 Adobe Experience Platform에서 보유한 데이터를 활성화합니다. 이를 수행하려면 아래 단계를 수행하십시오.
 seo-description: 세그먼트를 대상에 매핑하여 Adobe Experience Platform에서 보유한 데이터를 활성화합니다. 이를 수행하려면 아래 단계를 수행하십시오.
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
-source-git-commit: 0162ec101c820c4870dea0f2c2bc09523eca862a
+source-git-commit: a28dc64cfe7f352a023aa2a5bd1156307bbad39f
 workflow-type: tm+mt
 source-wordcount: '3054'
 ht-degree: 0%
@@ -169,7 +169,7 @@ Adobe Experience Platform 사용자 인터페이스에서 **[!UICONTROL 대상]*
 
 >[!IMPORTANT]
 >
->이미 내보낸 세그먼트에 대한 파일 내보내기 일정을 변경하는 것은 현재 지원되지 않습니다. 다른 일정으로 세그먼트를 다시 내보내려면 새 대상 인스턴스를 만들어야 합니다. 이는 향후 릴리스에서 해결될 수 있는 제한 사항입니다.
+>이미 저장된 세그먼트의 파일 내보내기 일정을 변경하는 것은 현재 지원되지 않습니다. 다른 일정으로 세그먼트를 다시 내보내려면 새 대상 인스턴스를 만들어야 합니다. 이는 향후 릴리스에서 해결될 수 있는 제한 사항입니다.
 
 ### 증분 파일 내보내기 {#export-incremental-files}
 
@@ -215,7 +215,7 @@ Adobe Experience Platform 사용자 인터페이스에서 **[!UICONTROL 대상]*
 
 >[!IMPORTANT]
 >
->이미 내보낸 세그먼트에 대한 파일 내보내기 일정을 변경하는 것은 현재 지원되지 않습니다. 다른 일정으로 세그먼트를 다시 내보내려면 새 대상 인스턴스를 만들어야 합니다. 이는 향후 릴리스에서 해결될 수 있는 제한 사항입니다.
+>이미 저장된 세그먼트의 파일 내보내기 일정을 변경하는 것은 현재 지원되지 않습니다. 다른 일정으로 세그먼트를 다시 내보내려면 새 대상 인스턴스를 만들어야 합니다. 이는 향후 릴리스에서 해결될 수 있는 제한 사항입니다.
 
 ### 파일 이름 구성 {#file-names}
 
