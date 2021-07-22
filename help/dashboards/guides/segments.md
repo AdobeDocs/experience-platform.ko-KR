@@ -4,9 +4,9 @@ title: 세그먼트 대시보드
 description: 'Adobe Experience Platform은 조직이 만든 세그먼트에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다. '
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
+source-git-commit: 41ef7a6e6d3b0ee9afe762b19c8c286ceb361dbb
 workflow-type: tm+mt
-source-wordcount: '940'
+source-wordcount: '982'
 ht-degree: 0%
 
 ---
@@ -39,9 +39,9 @@ Platform UI 내의 [!UICONTROL 세그먼트] 대시보드로 이동하려면 왼
 
 ### [!UICONTROL 세그먼트] 대시보드 수정
 
-**[!UICONTROL 대시보드 수정]**&#x200B;을 선택하여 [!UICONTROL 세그먼트] 대시보드의 모양을 수정할 수 있습니다. 이를 통해 대시보드에서 위젯을 이동, 추가 및 제거할 수 있을 뿐만 아니라 [!UICONTROL 위젯 라이브러리]에 액세스하여 사용 가능한 위젯을 탐색하고 조직에 대한 사용자 지정 위젯을 만들 수 있습니다.
+**[!UICONTROL 대시보드 수정]**&#x200B;을 선택하여 [!UICONTROL 세그먼트] 대시보드의 모양을 수정할 수 있습니다. 이를 통해 대시보드에서 위젯을 이동, 추가 및 제거할 수 있을 뿐만 아니라 **[!UICONTROL 위젯 라이브러리]**&#x200B;에 액세스하여 사용 가능한 위젯을 탐색하고 조직에 대한 사용자 지정 위젯을 만들 수 있습니다.
 
-자세한 내용은 [대시보드](../modify.md) 및 [위젯 라이브러리](../widget-library.md) 설명서 를 참조하십시오.
+자세한 내용은 [대시보드](../customize/modify.md) 및 [위젯 라이브러리 개요](../customize/widget-library.md) 설명서를 참조하십시오.
 
 ## 세그먼트 선택
 
@@ -57,13 +57,15 @@ Platform UI 내의 [!UICONTROL 세그먼트] 대시보드로 이동하려면 왼
 
 세그먼트 대시보드는 위젯으로 구성되며, 위젯은 선택한 세그먼트에 대한 중요한 정보를 제공하는 읽기 전용 지표입니다.
 
-위젯의 &quot;최근 업데이트&quot; 날짜 및 시간은 데이터의 마지막 스냅숏을 만든 시기를 보여줍니다. 스냅샷의 날짜 및 시간은 UTC로 제공됩니다.개별 사용자 또는 IMS 조직의 시간대에 있지 않습니다.
+위젯의 &quot;최근 업데이트&quot; 날짜 및 시간은 데이터의 마지막 스냅숏을 만든 시기를 보여줍니다. 스냅샷의 날짜 및 시간은 UTC로 제공됩니다. 개별 사용자 또는 IMS 조직의 시간대에 있지 않습니다.
 
 ![](../images/segments/widget-timestamp.png)
 
-## 사용 가능한 위젯
+## 표준 위젯
 
-Experience Platform은 세그먼트와 관련된 다양한 지표를 시각화하는 데 사용할 수 있는 여러 위젯을 제공합니다. 자세한 내용을 보려면 아래 위젯의 이름을 선택하십시오.
+Adobe은 세그먼트와 관련된 다양한 지표를 시각화하는 데 사용할 수 있는 여러 표준 위젯을 제공합니다. [!UICONTROL 위젯 라이브러리]를 사용하여 조직과 공유할 사용자 지정 위젯을 만들 수도 있습니다. 사용자 지정 위젯을 만드는 방법에 대한 자세한 내용은 [위젯 라이브러리 개요](../customize/widget-library.md)를 읽어 보십시오.
+
+사용 가능한 각 표준 위젯에 대해 자세히 알아보려면 다음 목록에서 위젯 이름을 선택하십시오.
 
 * [[!UICONTROL 대상 크기]](#audience-size)
 * [[!UICONTROL 대상 크기 트렌드]](#audience-size-trend)
