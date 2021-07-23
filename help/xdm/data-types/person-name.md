@@ -5,10 +5,10 @@ title: 개인 이름 데이터 유형
 topic-legacy: overview
 description: 이 문서에서는 개인 이름 XDM 데이터 유형에 대한 개요를 제공합니다.
 exl-id: 5cf55fb1-b6b0-4d1c-93c3-7e2b7766599e
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 7f694310b17ab257eae459003bb820f7221bb55e
 workflow-type: tm+mt
-source-wordcount: '254'
-ht-degree: 0%
+source-wordcount: '256'
+ht-degree: 1%
 
 ---
 
@@ -33,5 +33,5 @@ ht-degree: 0%
 
 개인 이름 데이터 유형에 대한 자세한 내용은 공용 XDM 저장소를 참조하십시오.
 
-* [채워진 예](https://github.com/adobe/xdm/blob/master/components/datatypes/person-name.example.1.json)
-* [전체 스키마](https://github.com/adobe/xdm/blob/master/components/datatypes/person-name.schema.json)
+* [채워진 예](https://github.com/adobe/xdm/blob/master/components/datatypes/person/person-name.example.1.json)
+* [전체 스키마](https://github.com/adobe/xdm/blob/master/components/datatypes/person/person-name.schema.json)
