@@ -4,9 +4,9 @@ title: 업계 데이터 모델 개요
 topic-legacy: overview
 description: 표준 XDM(Experience Data Model) 구성 요소를 사용하여 구축할 수 있는 다양한 업계 표준 모두를 위한 표준화된 데이터 모델에 대해 알아봅니다.
 exl-id: 8fa9a610-36b5-470f-ad63-f2a4a060e0f1
-source-git-commit: 4ff97408659559174110a2234b24e9433007c9dc
+source-git-commit: e44da39dcdd4af4ab883b3ff8f61ca2fd44adb0b
 workflow-type: tm+mt
-source-wordcount: '353'
+source-wordcount: '354'
 ht-degree: 1%
 
 ---
@@ -27,8 +27,8 @@ XDM(Experience Data Model) 을 통해 사용자 정의 가능한 스키마를 �
 
 이 안내서에서 참조되는 ERD를 읽으려면 XDM 구성 요소가 스키마 양식에 대해 상호 작용하는 방법 및 XDM 스키마가 전체적으로 Experience Platform에서 작동하는 방식에 대한 작업 이해를 가져야 합니다. 계속하기 전에 다음 개요 설명서를 읽었는지 확인하십시오.
 
-* [XDM 시스템 개요](../../home.md):Platform 에코시스템에서 XDM이 작동하는 방식을 알아봅니다.
-* [스키마 작성 기본 사항](../../schema/composition.md):XDM 구성 요소(예: 스키마 필드 그룹, 클래스 및 데이터 유형)가 스키마 구조와 ID 필드의 역할에 어떻게 기여하는지 알아봅니다.
+* [XDM 시스템 개요](../../home.md): Platform 에코시스템에서 XDM이 작동하는 방식을 알아봅니다.
+* [스키마 작성 기본 사항](../../schema/composition.md): XDM 구성 요소(예: 스키마 필드 그룹, 클래스 및 데이터 유형)가 스키마 구조와 ID 필드의 역할에 어떻게 기여하는지 알아봅니다.
 
 데이터를 XDM에 매핑하는 방법에 대한 일반 지침은 [데이터 모델링 우수 사례 가이드](../../schema/best-practices.md)를 검토하는 것이 좋습니다.
 
@@ -38,6 +38,7 @@ ERD는 다음과 같은 산업 유형에 대해 제공됩니다.
 
 * [[!UICONTROL 소매]](./retail.md)
 * [[!UICONTROL 금융 서비스]](./financial.md)
+* [[!UICONTROL 통신]](./telecom.md)
 * [[!UICONTROL 여행 및 숙박]](./travel-hospitality.md)
 
 ## 다음 단계
