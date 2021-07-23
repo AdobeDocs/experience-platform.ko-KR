@@ -3,7 +3,7 @@ title: Experience Platform Web SDK에 대한 데이터 스트림 구성
 description: '데이터 스트림을 구성하는 방법을 알아봅니다. '
 keywords: 구성;데이터 스트림;데이터 스트림 ID;에지;데이터 스트림 ID;환경 설정;edgeConfigId;id;ID 동기화 사용;ID 동기화 컨테이너 ID;샌드박스;스트리밍 입력;이벤트 데이터 세트;target;클라이언트 코드;속성 토큰;Target 환경 ID;쿠키 대상;URL 대상;Analytics 설정 차단 보고서 세트 ID;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: da7696d288543abd21ff8a1402e81dcea32efbc2
+source-git-commit: 3a1d08a4ea87ee3db7a2a8b048d5721fa679c372
 workflow-type: tm+mt
 source-wordcount: '895'
 ht-degree: 0%
@@ -21,7 +21,7 @@ Adobe Experience Platform Web SDK에 대한 구성은 두 위치 간에 분할�
 
 데이터 저장소는 데이터 스트림 구성 도구를 사용하여 Adobe [!DNL Experience Platform Launch]에 만들 수 있습니다.
 
-![데이터 세트 도구 탐색](../../assets/datastreams_config.png)
+![데이터 세트 도구 탐색](../images/datastreams/config.png)
 
 >[!NOTE]
 >
@@ -39,7 +39,7 @@ SDK에서 `edgeConfigId` 로 사용되는 ID는 구성과 환경을 지정하는
 
 타사 ID 섹션은 항상 켜져 있는 유일한 섹션입니다. 사용 가능한 설정은 두 가지입니다. &quot;[!UICONTROL 타사 ID 동기화 Enabled]&quot; 및 &quot;[!UICONTROL 타사 ID 동기화 컨테이너 ID]&quot;.
 
-![구성 UI의 ID 섹션](../../assets/edge_configuration_identity.png)
+![구성 UI의 ID 섹션](../images/datastreams/edge_configuration_identity.png)
 
 ### [!UICONTROL 타사 ID 동기화가 활성화됨]
 
@@ -53,7 +53,7 @@ ID 동기화를 컨테이너로 그룹화하여 다른 시간에 다른 ID 동�
 
 여기에 나열된 설정을 사용하면 Adobe Experience Platform에 데이터를 보낼 수 있습니다. Adobe Experience Platform을 구입한 경우에만 이 섹션을 활성화해야 합니다.
 
-![Adobe Experience Platform 설정 블록](../../assets/edge_configuration_aep.png)
+![Adobe Experience Platform 설정 블록](../images/datastreams/edge_configuration_aep.png)
 
 ### [!UICONTROL 샌드박스]
 
@@ -71,7 +71,7 @@ ID 동기화를 컨테이너로 그룹화하여 다른 시간에 다른 ID 동�
 
 Adobe Target을 구성하려면 클라이언트 코드를 제공해야 합니다. 다른 필드는 선택 사항입니다.
 
-![Adobe Target 설정 블록](../../assets/edge_configuration_target.png)
+![Adobe Target 설정 블록](../images/datastreams/edge_configuration_target.png)
 
 >[!NOTE]
 >
@@ -97,7 +97,7 @@ Adobe은 이러한 설정을 각 `dev`, `stage` 및 `prod` 데이터 스트림 �
 
 Adobe Audience Manager으로 데이터를 전송하는 데 필요한 모든 것은 이 섹션을 활성화하는 것입니다. 다른 설정은 선택 사항이지만 권장됩니다.
 
-![Adobe 대상 관리 설정 블록](../../assets/edge_configuration_aam.png)
+![Adobe 대상 관리 설정 블록](../images/datastreams/edge_configuration_aam.png)
 
 ### [!UICONTROL 쿠키 대상 활성화]
 
@@ -111,7 +111,7 @@ SDK가 [URL 대상](https://experienceleague.adobe.com/docs/audience-manager/use
 
 데이터를 Adobe Analytics으로 전송할지 여부를 제어합니다. 추가 세부 사항은 [Analytics 개요](../data-collection/adobe-analytics/analytics-overview.md)에 있습니다.
 
-![Adobe Analytics 설정 블록](../../assets/edge_configuration_aa.png)
+![Adobe Analytics 설정 블록](../images/datastreams/edge_configuration_aa.png)
 
 ### [!UICONTROL 보고서 세트 ID]
 
