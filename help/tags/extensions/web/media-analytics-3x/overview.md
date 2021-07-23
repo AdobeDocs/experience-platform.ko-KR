@@ -1,9 +1,9 @@
 ---
 title: 오디오 및 비디오 확장 프로그램용 Adobe Medium Analytics(3.x SDK) 개요
 description: Adobe Experience Platform의 오디오 및 비디오 태그 확장용 Adobe Medium Analytics(3.x SDK)에 대해 알아봅니다.
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: 7f694310b17ab257eae459003bb820f7221bb55e
 workflow-type: tm+mt
-source-wordcount: '768'
+source-wordcount: '763'
 ht-degree: 73%
 
 ---
@@ -84,7 +84,7 @@ MA 확장은 [!UICONTROL Configuration] 페이지의 &quot;Export APIs to Window
 
 ### 다른 확장에서 사용
 
-MA 확장은 공유 모듈로 `media`를 다른 확장에 노출합니다. 공유 모듈에 대한 자세한 내용은 [공유 모듈 설명서](https://developer.adobelaunch.com/extensions/shared_modules/)를 참조하십시오.
+MA 확장은 공유 모듈로 `media`를 다른 확장에 노출합니다. 공유 모듈에 대한 자세한 내용은 [공유 모듈 설명서](../../../extension-dev/web/shared.md)를 참조하십시오.
 
 >[!IMPORTANT]
 >
