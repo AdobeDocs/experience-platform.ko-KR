@@ -1,11 +1,11 @@
 ---
 title: Platform Web SDK에서 Adobe Target 사용
 description: Adobe Target을 사용하여 Experience Platform Web SDK로 개인화된 컨텐츠를 렌더링하는 방법을 알아봅니다
-keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisions;코드 조각 사전 숨김;vec;양식 기반 경험 작성기;xdm;대상;결정;범위;스키마;
+keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisions;코드 조각 사전 숨김;vec;양식 기반 경험 작성기;xdm;대상;결정;범위;스키마;시스템 다이어그램;다이어그램
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: c83b6ea336cfe5d6d340a2dbbfb663b6bec84312
+source-git-commit: c99bc94226b296463e92340723d1318e0775f6a7
 workflow-type: tm+mt
-source-wordcount: '1220'
+source-wordcount: '1223'
 ht-degree: 5%
 
 ---
