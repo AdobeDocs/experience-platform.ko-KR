@@ -4,9 +4,9 @@ user-guide-title: XDM(경험 데이터 모델) 시스템 도움말
 breadcrumb-title: Experience Data Model(XDM) 안내서
 user-guide-description: XDM(경험 데이터 모델) 클래스 및 스키마 필드 그룹을 사용하여 경험 데이터를 표준화합니다.
 feature: 스키마
-source-git-commit: e44da39dcdd4af4ab883b3ff8f61ca2fd44adb0b
+source-git-commit: 2592d4f494d4d3dcfba63eb539498416fbdf6707
 workflow-type: tm+mt
-source-wordcount: '312'
+source-wordcount: '320'
 ht-degree: 17%
 
 ---
@@ -40,11 +40,13 @@ ht-degree: 17%
       * [개인 연락처 세부 정보](./field-groups/profile/personal-contact-details.md)
       * [동의 및 기본 설정](./field-groups/profile/consents.md)
       * [세그먼트 멤버십 세부 정보](./field-groups/profile/segmentation.md)
+      * [통신 구독](./field-groups/profile/telecom-subscription.md)
       * [작업 연락처 세부 정보](./field-groups/profile/work-contact-details.md)
    * 이벤트 필드 그룹 {#event}
       * [캠페인 마케팅 세부 사항](./field-groups/event/campaign-marketing-details.md)
       * [채널 세부 사항](./field-groups/event/channel-details.md)
       * [상거래 세부 사항](./field-groups/event/commerce-details.md)
+      * [장치 거래 세부 사항](./field-groups/event/device-trade-in-details.md)
       * [최종 사용자 ID 세부 정보](./field-groups/event/enduserids.md)
       * [환경 세부 사항](./field-groups/event/environment-details.md)
       * [IAB TCF 2.0 동의](./field-groups/event/iab.md)
@@ -57,6 +59,7 @@ ht-degree: 17%
    * [Commerce](./data-types/commerce.md)
    * [동의 문자열](./data-types/consent-string.md)
    * [동의 및 기본 설정](./data-types/consents.md)
+   * [통화](./data-types/currency.md)
    * [디바이스](./data-types/device.md)
    * [이메일 주소](./data-types/email-address.md)
    * [환경](./data-types/environment.md)
@@ -85,6 +88,7 @@ ht-degree: 17%
    * [제품 목록 항목](./data-types/product-list-item.md)
    * [검색](./data-types/search.md)
    * [구독](./data-types/subscription.md)
+   * [통신 구독](./data-types/telecom-subscription.md)
    * [웹 정보](./data-types/web-information.md)
    * [웹 상호 작용](./data-types/web-interaction.md)
    * [웹 페이지 세부 사항](./data-types/webpage-details.md)
