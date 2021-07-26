@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Flow Service API를 사용하여 HP Vertica를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: 37f831c1-7c82-462a-8338-a0bcaaf08cd1
-source-git-commit: 5fb5f0ce8bd03ba037c6901305ba17f8939eb9ce
+source-git-commit: 3506e8307d5f6dbdb11a04911ddbd6dc81b8278f
 workflow-type: tm+mt
-source-wordcount: '484'
-ht-degree: 3%
+source-wordcount: '476'
+ht-degree: 1%
 
 ---
 
@@ -23,12 +23,12 @@ ht-degree: 3%
 
 이 자습서에서는 [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)를 사용하여 [!DNL HP Vertica]에 대한 기본 연결을 만드는 단계를 안내합니다.
 
-## 시작
+## 시작하기
 
 이 안내서에서는 Adobe Experience Platform의 다음 구성 요소를 이해하고 있어야 합니다.
 
-* [소스](https://experienceleague.adobe.com/docs/experience-platform/source-connectors/home.html): [!DNL Experience Platform] 서비스를 사용하여 들어오는 데이터를 구성, 매핑 및 향상시키는 기능을 제공하면서 다양한 소스에서 데이터를 수집할 수  [!DNL Platform] 있습니다.
-* [샌드박스](https://experienceleague.adobe.com/docs/experience-platform/sandbox/home.html): [!DNL Experience Platform] 에서는 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이  [!DNL Platform] 되는 단일 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
+* [소스](../../../../home.md): Experience Platform을 사용하면 서비스를 사용하여 들어오는 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 다양한 소스에서 데이터를 수집할 수  [!DNL Platform] 있습니다.
+* [샌드박스](../../../../../sandboxes/home.md): Experience Platform은 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이  [!DNL Platform] 되는 단일 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
 
 다음 섹션에서는 [!DNL Flow Service] API를 사용하여 [!DNL HP Vertica]에 성공적으로 연결하기 위해 알고 있어야 하는 추가 정보를 제공합니다.
 
@@ -39,7 +39,7 @@ ht-degree: 3%
 | 자격 증명 | 설명 |
 | ---------- | ----------- |
 | `connectionString` | [!DNL HP Vertica] 인스턴스에 연결하는 데 사용되는 연결 문자열입니다. [!DNL HP Vertica]에 대한 연결 문자열 패턴은 `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`입니다. |
-| `connectionSpec.id` | 연결 사양은 기본 및 소스 연결 생성과 관련된 인증 사양이 포함된 소스의 커넥터 등록 정보를 반환합니다. [!DNL HP Vertica]에 대한 연결 사양 ID는 다음과 같습니다.`a8b6a1a4-5735-42b4-952c-85dce0ac38b5` |
+| `connectionSpec.id` | 연결 사양은 기본 및 소스 연결 생성과 관련된 인증 사양이 포함된 소스의 커넥터 등록 정보를 반환합니다. [!DNL HP Vertica]에 대한 연결 사양 ID는 다음과 같습니다. `a8b6a1a4-5735-42b4-952c-85dce0ac38b5` |
 
 연결 문자열 가져오기에 대한 자세한 내용은 이 HP Vertica 문서](https://www.vertica.com/docs/9.2.x/HTML/Content/Authoring/ConnectingToVertica/ClientJDBC/CreatingAndConfiguringAConnection.htm)를 참조하십시오.[
 
@@ -90,8 +90,8 @@ curl -X POST \
 
 | 매개 변수 | 설명 |
 | --------- | ----------- |
-| `auth.params.connectionString` | [!DNL HP Vertica] 계정과 연결된 연결 문자열입니다. [!DNL HP Vertica]에 대한 연결 문자열 패턴은 다음과 같습니다.`Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
-| `connectionSpec.id` | [!DNL HP Vertica] 연결 사양 ID:`a8b6a1a4-5735-42b4-952c-85dce0ac38b5`. |
+| `auth.params.connectionString` | [!DNL HP Vertica] 계정과 연결된 연결 문자열입니다. [!DNL HP Vertica]에 대한 연결 문자열 패턴은 다음과 같습니다. `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
+| `connectionSpec.id` | [!DNL HP Vertica] 연결 사양 ID: `a8b6a1a4-5735-42b4-952c-85dce0ac38b5`. |
 
 **응답**
 
