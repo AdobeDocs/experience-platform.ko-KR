@@ -4,9 +4,9 @@ title: 여행 및 숙박 업계 데이터 모델 ERD
 topic-legacy: overview
 description: Adobe Experience Platform에서 사용할 XDM(Experience Data Model)과 호환되는 여행 및 숙박 산업에 대한 표준화된 데이터 모델을 설명하는 ERD(엔티티 관계 다이어그램)를 봅니다.
 exl-id: 4d454160-9066-4702-815b-9509942f709e
-source-git-commit: 88c17992a391b24a76c3e387d3033df4c75a6aa6
+source-git-commit: 38fa2345cb87e50bd4c8788996f03939fb199cf9
 workflow-type: tm+mt
-source-wordcount: '226'
+source-wordcount: '278'
 ht-degree: 0%
 
 ---
@@ -14,6 +14,10 @@ ht-degree: 0%
 # [!UICONTROL 여행 및 ] 입원 업계 데이터 모델 ERD
 
 다음 엔티티 관계 다이어그램(ERD)은 여행 및 숙박 산업에 대한 표준화된 데이터 모델을 나타냅니다. ERD는 Adobe Experience Platform에 데이터가 저장되는 방식을 고려하여 의도적으로 표준화된 방식으로 제공됩니다.
+
+>[!NOTE]
+>
+>설명된 ERD는 이 업계 사용 사례에 대해 데이터를 모델링하는 방법에 대한 권장 사항입니다. Platform에서 이 데이터 모델을 사용하려면 권장 스키마와 관계를 직접 구성해야 합니다. 자세한 내용은 UI에서 [스키마](../../ui/resources/schemas.md) 및 [관계](../../tutorials/relationship-ui.md) 관리에 대한 안내서를 참조하십시오.
 
 이 ERD를 해석하려면 다음 범례를 사용하십시오.
 
