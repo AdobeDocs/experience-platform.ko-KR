@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 소스 커넥터 도움말
 breadcrumb-title: Source Connectors 안내서
 user-guide-description: 다양한 소스 또는 구조에서 데이터를 수집하고 레이블을 지정하며 기존에 수집한 데이터를 향상시킬 수 있습니다.
 feature: 데이터 수집, 소스
-source-git-commit: e04df6e2ffabac6e70164dfccbad8440976b2755
+source-git-commit: 031849fcc351794e7eb1da691bd4015368a043b6
 workflow-type: tm+mt
-source-wordcount: '619'
+source-wordcount: '628'
 ht-degree: 13%
 
 ---
@@ -75,6 +75,7 @@ ht-degree: 13%
       - [Shopify 커넥터](connectors/ecommerce/shopify.md)
    - 마케팅 자동화 {#marketing-automation}
       - [HubSpot 커넥터](connectors/marketing-automation/hubspot.md)
+      - [Salesforce Marketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
    - 지급 {#payments}
       - [PayPal 커넥터](connectors/payments/paypal.md)
    - 프로토콜 {#protocols}
@@ -127,6 +128,7 @@ ht-degree: 13%
          - [Shopify](tutorials/api/create/ecommerce/shopify.md)
       - 마케팅 자동화 {#marketing-automation}
          - [HubSpot](tutorials/api/create/marketing-automation/hubspot.md)
+         - [Salesforce Marketing Cloud](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
       - 지급 {#payments}
          - [PayPal](tutorials/api/create/payments/paypal.md)
       - 프로토콜 {#protocols}
@@ -200,7 +202,7 @@ ht-degree: 13%
          - [azure synapse 분석](tutorials/ui/create/databases/synapse-analytics.md)
          - [Azure 테이블 저장소](tutorials/ui/create/databases/ats.md)
          - [Couchbase](tutorials/ui/create/databases/couchbase.md)
-         - [Google Big Query](tutorials/ui/create/databases/bigquery.md)
+         - [Google BigQuery](tutorials/ui/create/databases/bigquery.md)
          - [그린 플럼](tutorials/ui/create/databases/greenplum.md)
          - [HP Vertica](tutorials/ui/create/databases/hp-vertica.md)
          - [IBM DB2](tutorials/ui/create/databases/ibm-db2.md)
@@ -214,6 +216,7 @@ ht-degree: 13%
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
       - 마케팅 자동화 {#marketing-automation}
          - [HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)
+         - [Salesforce Marketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
       - 지급 {#payments}
          - [PayPal](tutorials/ui/create/payments/paypal.md)
       - 프로토콜 {#protocols}
