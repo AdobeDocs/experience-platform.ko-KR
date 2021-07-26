@@ -5,10 +5,10 @@ title: 구독 데이터 유형
 topic-legacy: overview
 description: 이 문서에서는 XDM(구독 경험 데이터 모델) 데이터 유형에 대한 개요를 제공합니다.
 exl-id: 6fd1e073-441b-45f0-bb4f-54f51ab18694
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: d99ddc65849a88350bf61977b399b07989554426
 workflow-type: tm+mt
-source-wordcount: '419'
-ht-degree: 9%
+source-wordcount: '420'
+ht-degree: 10%
 
 ---
 
@@ -20,14 +20,14 @@ ht-degree: 9%
 
 | 속성 | 데이터 유형 | 설명 |
 | --- | --- | --- |
-| `device` | [[!UICONTROL 장치]](./device.md) | 구독에 연결된 장치에 대한 세부 사항을 설명합니다. |
+| `device` | [[!UICONTROL 디바이스]](./device.md) | 구독에 연결된 장치에 대한 세부 사항을 설명합니다. |
 | `environment` | [[!UICONTROL 환경]](./environment.md) | 이벤트 관찰이 발생한 주변 상황에 대한 정보를 포함하며, 특히 네트워크 또는 소프트웨어 버전과 같은 임시 정보를 자세히 설명합니다. |
 | `subscriber` | [[!UICONTROL 사람]](./person.md) | 개별 개인을 설명합니다. 고객, 연락처 또는 소유자와 같은 다양한 역할을 수행하는 사람도 나타낼 수 있습니다. |
 | `SKU` | 문자열 | 제품의 고유 식별자인 SKU(재고 관리 단위)입니다. |
 | `billingPeriod` | 문자열 | 청구 사이의 기간입니다. |
 | `billingStartDate` | 날짜 | 첫 번째 어음의 만기 일자입니다. 날짜 형식(시간 없이)은 [RFC 339, 섹션 5.6](https://tools.ietf.org/html/rfc3339#section-5.6) 표준을 따라야 합니다. |
 | `category` | 문자열 | 이 유형의 구독에 대한 기본 최상위 분류입니다. |
-| `chargeMethod` | 문자열 | 대금 청구가 고객에게 부과되는 방식 |
+| `chargeMethod` | 문자열 | 대금 청구가 고객에게 부과되도록 설정된 방식입니다. |
 | `contractID` | 문자열 | 이 구독을 제어하는 계약에 대한 고유 ID입니다. |
 | `country` | 문자열 | 구독 계약 및 계약 조건이 속한 국가입니다. |
 | `endDate` | 날짜 | 현재 구독 기간이 끝나는 날짜입니다. 날짜 형식(시간 없이)은 [RFC 339, 섹션 5.6](https://tools.ietf.org/html/rfc3339#section-5.6) 표준을 따라야 합니다. |
