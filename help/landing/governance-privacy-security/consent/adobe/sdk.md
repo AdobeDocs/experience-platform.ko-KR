@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK를 사용하여 고객 동의 데이터
 topic-legacy: getting started
 description: Adobe 2.0 표준을 사용하여 Adobe Experience Platform Web SDK를 통합하여 Adobe Experience Platform에서 고객 동의 데이터를 처리하는 방법을 알아봅니다.
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
-source-git-commit: da7696d288543abd21ff8a1402e81dcea32efbc2
+source-git-commit: 8b58bb60ae40f224433f3513060f4ae7ddc7d5b3
 workflow-type: tm+mt
-source-wordcount: '1237'
+source-wordcount: '1285'
 ht-degree: 2%
 
 ---
@@ -15,6 +15,15 @@ ht-degree: 2%
 Adobe Experience Platform Web SDK를 사용하면 CMP(동의 관리 플랫폼)에서 생성한 고객 동의 신호를 검색하고 동의 변경 이벤트가 발생할 때마다 Adobe Experience Platform으로 보낼 수 있습니다.
 
 **SDK는 즉시 사용 가능한 CMP와 인터페이스하지 않습니다**. SDK를 웹 사이트에 통합하고 CMP에서 동의 변경 사항을 수신하고 적절한 명령을 호출하는 방법은 사용자가 결정합니다. 이 문서에서는 CMP를 Platform Web SDK와 통합하는 방법에 대한 일반적인 지침을 제공합니다.
+
+>[!NOTE]
+>
+>이 안내서는 데이터 수집 UI에서 태그 확장을 통해 SDK를 통합하는 단계를 안내합니다. 대신 독립형 SDK 버전을 사용하려면 다음 문서를 참조하십시오.
+>
+>* [데이터 스트림 구성](../../../../edge/fundamentals/datastreams.md)
+* [SDK 설치](../../../../edge/fundamentals/installing-the-sdk.md)
+* [동의 명령에 대한 SDK 구성](../../../../edge/consent/supporting-consent.md)
+
 
 ## 전제 조건
 
@@ -44,7 +53,7 @@ SDK에서 데이터를 Experience Platform으로 전송하려면 Adobe Experienc
 완료되면 화면 맨 아래에서 **[!UICONTROL 저장]** 을 선택하고 추가 프롬프트를 따라 구성을 완료합니다.
 
 
-## Platform Web SDK 확장 설치 및 구성
+## Platform Web SDK 설치 및 구성
 
 이전 섹션에 설명된 대로 데이터 스트림을 만든 후에는 최종적으로 사이트에 배포할 Platform Web SDK 확장을 구성해야 합니다. platform launch 속성에 SDK 확장이 설치되어 있지 않은 경우 왼쪽 탐색에서 **[!UICONTROL 확장]**&#x200B;을 선택하고 **[!UICONTROL 카탈로그]** 탭을 선택합니다. 그런 다음 사용 가능한 확장 목록 내에서 Platform SDK 확장 아래의 **[!UICONTROL 설치]**&#x200B;를 선택합니다.
 
@@ -86,7 +95,7 @@ platform launch UI에서 데이터 요소를 만들려면 왼쪽 탐색에서 **
 
 확장 구성을 마치면 웹 사이트에 통합할 수 있습니다. 업데이트된 라이브러리 빌드를 배포하는 방법에 대한 자세한 내용은 Platform launch 설명서의 [게시 안내서](https://experienceleague.adobe.com/docs/launch/using/publish/overview.html)를 참조하십시오.
 
-## 동의 변경 명령
+## 동의 변경 명령 {#commands}
 
 SDK 확장을 웹 사이트에 통합하면 Platform Web SDK `setConsent` 명령을 사용하여 동의 데이터를 Platform에 보낼 수 있습니다.
 
@@ -96,8 +105,7 @@ SDK 확장을 웹 사이트에 통합하면 Platform Web SDK `setConsent` 명령
 1. 동의 설정의 변경 사항을 감지하는 CMP 후크 또는 이벤트 리스너의 일부로
 
 >[!NOTE]
->
->Platform SDK 명령의 일반적인 구문에 대한 소개는 [명령 실행](../../../../edge/fundamentals/executing-commands.md)에 있는 문서를 참조하십시오.
+Platform SDK 명령의 일반적인 구문에 대한 소개는 [명령 실행](../../../../edge/fundamentals/executing-commands.md)에 있는 문서를 참조하십시오.
 
 `setConsent` 명령에는 두 개의 인수가 필요합니다.
 
@@ -138,8 +146,7 @@ alloy("setConsent", {
 | `value` | 고객이 프로필 사용 데이터 집합의 동의 필드의 구조를 준수하는 XDM 개체로 제공하는 고객의 업데이트된 동의 정보입니다. |
 
 >[!NOTE]
->
->`Adobe`(예: `IAB TCF`)과 함께 다른 동의 표준을 사용하는 경우 각 표준에 대해 `consent` 배열에 개체를 추가할 수 있습니다. 각 개체에는 해당 개체가 나타내는 동의 표준에 대해 `standard`, `version` 및 `value`에 대한 적절한 값이 있어야 합니다.
+`Adobe`(예: `IAB TCF`)과 함께 다른 동의 표준을 사용하는 경우 각 표준에 대해 `consent` 배열에 개체를 추가할 수 있습니다. 각 개체에는 해당 개체가 나타내는 동의 표준에 대해 `standard`, `version` 및 `value`에 대한 적절한 값이 있어야 합니다.
 
 다음 JavaScript는 이벤트 리스너 또는 CMP 후크에서 콜백으로 사용할 수 있는 웹 사이트의 동의 기본 설정 변경을 처리하는 함수의 예를 제공합니다.
 
