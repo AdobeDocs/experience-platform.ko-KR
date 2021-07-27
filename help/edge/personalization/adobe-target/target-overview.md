@@ -3,9 +3,9 @@ title: Platform Web SDK에서 Adobe Target 사용
 description: Adobe Target을 사용하여 Experience Platform Web SDK로 개인화된 컨텐츠를 렌더링하는 방법을 알아봅니다
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisions;코드 조각 사전 숨김;vec;양식 기반 경험 작성기;xdm;대상;결정;범위;스키마;시스템 다이어그램;다이어그램
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: c99bc94226b296463e92340723d1318e0775f6a7
+source-git-commit: 1d2f1651dc9d9ab41507e65fd4b2bb84e9660187
 workflow-type: tm+mt
-source-wordcount: '1223'
+source-wordcount: '1256'
 ht-degree: 5%
 
 ---
@@ -13,6 +13,10 @@ ht-degree: 5%
 # [!DNL Platform Web SDK]에서 [!DNL Adobe Target] 사용
 
 [!DNL Adobe Experience Platform] [!DNL Web SDK] 은 에서 관리하는 개인화된 경험을 웹 채널 [!DNL Adobe Target] 에 제공하고 렌더링할 수 있습니다. [시각적 경험 작성기](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) (VEC)라고 하는 WYSIWYG 편집기 또는 [양식 기반 경험 작성기](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html)라는 비시각적 인터페이스를 사용하여 활동 및 개인화 경험을 만들고, 활성화하고 전달할 수 있습니다.
+
+>[!IMPORTANT]
+>
+>[Adobe Target 설명서](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/aep-implementation/aep-web-sdk.html?lang=en)에는 Target 기능 및 기능과 관련된 Platform Web SDK와 관련된 정보가 포함된 항목이 포함되어 있습니다.
 
 다음 기능은 테스트되었으며 현재 [!DNL Target]에서 지원됩니다.
 
