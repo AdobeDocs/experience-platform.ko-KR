@@ -3,10 +3,10 @@ title: Adobe Experience Platform Web SDK Extension 릴리스 노트
 description: Adobe Experience Platform Launch의 Adobe Experience Platform 웹 SDK 확장
 seo-description: Adobe Experience Platform Launch의 Adobe Experience Platform 웹 SDK 확장
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: ec841a028d2a6acbdb1c1406026bbd4574cbc2ee
+source-git-commit: dfcfdf90ae857e6a6ff0ddc7810cb6a6939c9758
 workflow-type: tm+mt
-source-wordcount: '1232'
-ht-degree: 73%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -14,9 +14,16 @@ ht-degree: 73%
 
 이 문서에서는 Adobe Experience Platform Launch용 Adobe Experience Platform 웹 SDK 확장에 대한 릴리스 노트를 다룹니다. SDK 자체에 대한 최신 릴리스 노트는 [Platform Web SDK 릴리스 노트](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html)를 참조하십시오.
 
-## 2021년 6월 1일
+## 버전 2.6.0 - 2021년 7월 27일
 
-### Adobe Experience Platform 웹 SDK 2.5.0
+* 최신 Adobe Experience Platform 용어와 일치하도록 &quot;에지 구성&quot;이라는 용어를 사용하는 레이블, 설명 및 오류 메시지가 &quot;데이터 스트림&quot;이라는 용어를 사용하여 변경되었습니다.
+* 확장 구성 보기에서 많은 데이터 스트림 및 데이터 스트림 환경을 처리하는 데 대한 지원이 추가되었습니다.
+* XDM 개체 데이터 요소 보기에서 많은 스키마를 처리할 수 있도록 지원이 추가되었습니다.
+* 이벤트 보내기 완료 이벤트 유형이 추가되었습니다. 이 이벤트 유형은 이벤트가 서버로 전송되고 응답이 수신된 후 규칙을 실행하는 데 사용할 수 있습니다. 더 많은 설명서가 곧 제공될 예정입니다.
+* 결정 Received 이벤트 유형은 더 이상 사용되지 않습니다. 대신 이벤트 완료 이벤트 전송 유형을 사용하십시오.
+* 사용자 인터페이스 및 오류 처리가 일반적으로 개선되었습니다.
+
+## 버전 2.5.0 - 2021년 6월 1일
 
 Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.5.0을 포함합니다.
 
@@ -24,9 +31,7 @@ Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.5.0을 포함합�
 * XDM 개체 데이터 요소 보기에서 사용자가 Adobe Experience Platform 샌드박스에 액세스할 수 있지만 조직에 대해 기본값으로 구성된 샌드박스에 액세스할 수 없는 경우 오류가 발생하는 문제가 수정되었습니다.
 * XDM 개체 데이터 요소 보기에서 부모 개체에 값이 포함되어 있지 않더라도 필수 스키마 필드가 잘못된 것으로 간주되는 문제가 해결되었습니다.
 
-## 2021년 3월 9일
-
-### Adobe Experience Platform 웹 SDK 2.4.0
+## 버전 2.4.0 - 2021년 3월 9일
 
 Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.4.0을 포함합니다.
 
@@ -37,46 +42,25 @@ Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.4.0을 포함합�
 * 사용자의 액세스 토큰이 잘못되었거나 잘못 제공된 경우 이제 XDM 개체 데이터 요소 UI에 더 나은 오류가 표시됩니다.
 * XDM 개체 데이터 요소를 볼 때 브라우저 개발자 콘솔에 표시되는 원본 간 오류(확장의 작업에 영향을 주지 않음)를 수정했습니다.
 
-## 2020년 11월 4일
-
-### Adobe Experience Platform 웹 SDK 2.3.0
+## 버전 2.3.0 - 2020년 11월 4일
 
 Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.3.0을 포함합니다.
-
-#### 기능
 
 * 기본 동의를 구성할 때 데이터 요소 사용에 대한 지원이 추가되었습니다.
 * XDM 개체 데이터 요소 유형으로 XDM 스키마를 검색하는 기능이 추가되었습니다.
 * XDM 데이터 개체의 후속 변경 내용이 요청에 반영되지 않도록 이벤트 보내기 작업 유형 내에 XDM 데이터 복제가 추가되었습니다.
 
-## 2020년 10월 1일
-
-### Adobe Experience Platform 웹 SDK 2.2.0
-
-#### 버그 수정
+## 버전 2.2.0 - 2020년 10월 1일
 
 * 고객이 샌드박스 스키마에서 XDM 개체를 만들려고 했을 때 인증 문제가 발생했습니다. Platform을 호출하는 API는 이제 환경을 인식하므로 사용자가 편집할 수 있는 액세스 권한이 있는 스키마만 표시됩니다.
-
-#### 기능
-
 * `identityMap` 데이터 요소를 사용할 때 이제 네임스페이스가 드롭다운에서 미리 채워지므로 수동으로 일일이 채우지 않아도 됩니다.
 * `xdmObject` 데이터 요소의 UI를 개선했습니다. 새 UI에서는 개체의 각 항목을 입력하지 않고도 채운 필드를 확인할 수 있습니다.
 
-
-## 2020년 8월 26일
-
-### Adobe Experience Platform 웹 SDK 2.1.1
-
-#### 기능
+## 버전 2.1.1 - 2020년 8월 26일
 
 * XDM 개체 보기의 Adobe Experience Platform 샌드박스가 잘못 표시되는 문제를 수정했습니다. 이 버전의 확장 프로그램을 사용할 때 예상 샌드박스가 목록에 표시되지 않으면 사용자는 Adobe Experience Platform 관리자에게 문의하여 액세스 권한이 올바르게 설정되었는지 확인해야 합니다.
 
-
-## 2020년 8월 5일
-
-### Adobe Experience Platform 웹 SDK 2.1.0
-
-#### 기능
+## 버전 2.1.0 - 2020년 8월 5일
 
 * 변경 내용: `syncIdentity` 작업을 제거하고 대신 `sendEvent` 작업에서 이러한 ID를 전달할 수 있도록 지원합니다. 확장을 업그레이드하기 전에 이 작업을 사용하여 기존 규칙을 비활성화하십시오.
 * Alloy v. 2.1.0로 업데이트([릴리스 노트](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html))
@@ -86,21 +70,11 @@ Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.3.0을 포함합�
 * `setConsent` 작업에서 ID 맵 전달을 지원합니다.
 * XDM 개체 데이터 요소에서 Platform 샌드박스 선택을 지원합니다.
 
-
-## 2020년 5월 26일
-
-### Adobe Experience Platform 웹 SDK 1.0.0
-
-#### 기능
+## 버전 1.0.0 - 2020년 5월 26일
 
 * 구성 서비스에서 환경 선택을 지원합니다.
 
-
-## 2020년 5월 4일
-
-### Adobe Experience Platform 웹 SDK 0.1.2
-
-#### 기능
+## 버전 0.1.2 - 2020년 5월 4일
 
 * `configId`가 `edgeConfigId`로 이름이 변경되었습니다.
 * `viewStart`가 `renderDecisions`로 이름이 변경된 경우 기본적으로 false로 설정됩니다. true로 설정하면 개인화 오퍼를 가져와서 자동으로 렌더링됩니다.
@@ -117,20 +91,12 @@ Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.3.0을 포함합�
 * 이제 `_satellite`을 사용하여 디버그를 활성화하면 Adobe Experience Platform Web SDK에서 디버깅이 활성화됩니다.
 * XDM 개체에 입력 값(부울, 숫자 및 소수점)에 대한 지원이 추가되었습니다.
 
-## 2020년 3월 16일
-
-### Adobe Experience Platform 웹 SDK 0.0.10
-
-#### 기능
+## 버전 0.0.10 - 2020년 3월 16일
 
 * `Consent` 아래에 옵트인 및 옵트아웃의 개념을 결합하고 새 `setConsent` 명령을 추가했습니다.
 * JavaScript/JSON에서 XDM으로 매핑을 허용하는 새로운 데이터 요소 유형 `XDM Object`가 추가되었습니다.
 
-## 2020년 2월 18일
-
-### Adobe Experience Platform 웹 SDK 0.0.7
-
-#### 기능
+## 버전 0.0.7 - 2020년 2월 18일
 
 * idSyncContainerId, datasetId, schemaId, urlDestinationsEnabled 및 cookieDestinationsEnabled 옵션이 제거됨
 * edgeDomain 옵션값에 하이픈 지원이 추가됨
@@ -139,61 +105,17 @@ Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.3.0을 포함합�
 * 잘못된 명령을 실행하면 콘솔에 유효한 명령 이름 목록이 기록됨
 * 타사 쿠키 지원을 Adobe Experience Platform Launch 확장으로 전환하는 확인란이 추가되었습니다. 이 확인란을 선택하면 demdex.net 호출이 비활성화됨
 
-## 2019년 12월 20일
-
-### Adobe Experience Platform 웹 SDK 0.0.5
-
-#### 기능
+## 버전 0.0.5 - 2019년 12월 20일
 
 * Platform Launch 확장에 Activity Tracker 구성 추가
 * 이벤트 명령에 EventType 및 EventMergeId 표시
 * Platform Launch 확장에 onBeforeEventSend 구성 추가
 * Platform Launch 확장에 edgeBasePath 구성 추가
 
-#### 다음 변경 사항이 포함된 Alloy v. 0.0.10으로 업데이트하십시오.
-
-* 클라이언트 스토리지 구현: 서버로 이동한 상태 및 쿠키 논리
-* 이벤트 명령에 EventType 및 EventMergeId 표시
-* 종료 링크 이외의 링크 추적에는 sendBeacon 사용
-* ID 동기화 마이너스 만료 확인 가져오기
-* SSL(http)이 아닌 페이지에서 id를 해싱하지 않은 setCustomerIds 명령
-* 상태/쿠키를 설정할 때 사용할 서버에 APEX 도메인을 전달
-* 새로운 핸들 유형을 사용하여 응답에서 ECID 선택
-* 활성화 및 ID 구성의 기본값 제거
-* 이름 바꾸기 + 메타로 쿼리 옵션 이동
-* 기존 ECID 마이그레이션
-
-#### 버그 수정
-
-* 예기치 않은 상태 코드에서 오류 메시지에 대한 응답을 분석하고 형식을 지정
-* 디버그 명령 실행 또는 comply_debug 사용은 구성에 의해 덮어쓰기
-
-## 2019년 11월 25일
-
-### Adobe Experience Platform 웹 SDK 0.0.3
-
-#### 기능
+## 버전 0.0.3 - 2019년 11월 25일
 
 * 이벤트 보내기 작업의 새 병합 ID 및 유형 필드입니다. 병합 ID는 XDM 스키마에서 `xdm.eventMergeID`에 매핑되고 유형은 XDM 스키마에서 `xdm.eventType`에 매핑됩니다.
-* 향상된 오류 처리 및 보고
-* 이제 모든 링크에 `sendBeacon` 사용
 
-#### 버그 수정
+## 버전 0.0.2 - 2019년 11월 18일
 
-* 쿼리 문자열 매개 변수를 통해 디버깅을 전환하거나 `debug` 명령이 세션을 통해 지속되지 않는 문제를 해결했습니다.
-
-## 2019년 11월 18일
-
-### Adobe Experience Platform 웹 SDK 0.0.2
-
-#### 기능
-
-* 확장이 존재하게 됨
-* 추가 라이브러리 또는 네트워크 호출 없이 ECID 지원
-* 옵트인 지원
-* XDM을 플랫폼으로 전송 지원
-* 자사 도메인 지원
-* 브라우저 컨텍스트 자동 수집
-* 전체 오픈 소스([확장](https://github.com/adobe/reactor-extension-alloy), [SDK](https://github.com/adobe/reactor-extension-alloy))
-* 자세한 로깅
-* 프로덕션 단계에서 오류 숨기기 기능
+* 초기 릴리스
