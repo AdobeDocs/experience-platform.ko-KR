@@ -1,9 +1,9 @@
 ---
 title: Edge Extensions에 대한 작업 유형
 description: Edge 속성에서 태그 확장에 대한 작업 유형 라이브러리 모듈을 정의하는 방법을 알아봅니다.
-source-git-commit: 99780f64c8f09acea06e47ebf5cabc762e05cab2
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '381'
+source-wordcount: '382'
 ht-degree: 36%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 36%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Experience Platform에서 데이터 수집 기술 세트로 브랜드 재지정되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../term-updates.md)을 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../term-updates.md)을 참조하십시오.
 
 태그 규칙에서 작업은 규칙 조건이 평가를 통과한 후에 수행되는 작업입니다. 작업 유형은 확장에 의해 제공되며, 해당 효과는 완전히 확장 작성자에 의해 정의됩니다.
 
