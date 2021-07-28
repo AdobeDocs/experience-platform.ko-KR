@@ -1,9 +1,9 @@
 ---
 title: Experience Cloud 조직 설정
 description: Adobe Experience Platform용 확장 개발을 시작하기 위해 Adobe Experience Cloud 조직을 등록하는 방법을 알아봅니다.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '607'
+source-wordcount: '608'
 ht-degree: 45%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 45%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Experience Platform에서 데이터 수집 기술 세트로 브랜드 재지정되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../term-updates.md)을 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../term-updates.md)을 참조하십시오.
 
 Adobe Experience Platform에서 태그 확장을 개발하려면 Adobe Experience Cloud 조직을 등록해야 합니다.
 
