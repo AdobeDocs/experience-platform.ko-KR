@@ -3,10 +3,10 @@ title: Adobe Experience Platform Web SDK를 사용하여 고객 동의 데이터
 topic-legacy: getting started
 description: Adobe 2.0 표준을 사용하여 Adobe Experience Platform Web SDK를 통합하여 Adobe Experience Platform에서 고객 동의 데이터를 처리하는 방법을 알아봅니다.
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
-source-git-commit: 8b58bb60ae40f224433f3513060f4ae7ddc7d5b3
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1285'
-ht-degree: 2%
+source-wordcount: '1254'
+ht-degree: 1%
 
 ---
 
@@ -29,15 +29,15 @@ Adobe Experience Platform Web SDK를 사용하면 CMP(동의 관리 플랫폼)�
 
 이 자습서에서는 사용자가 CMP 내에서 동의 데이터를 생성하는 방법을 이미 결정했으며, 실시간 고객 프로필에 대해 활성화된 동의 필드가 포함된 데이터 세트를 만들었음을 가정합니다. 이러한 단계에 대한 자세한 내용은 이 안내서로 돌아가기 전에 Experience Platform](./overview.md)의 [동의 처리에 대한 개요를 참조하십시오.
 
-또한 이 안내서에서는 Adobe Experience Platform Launch 확장의 작동 방식과 웹 애플리케이션에 설치하는 방식을 제대로 이해할 필요가 있습니다. 자세한 내용은 다음 설명서를 참조하십시오.
+또한 이 안내서에서는 태그 확장 및 웹 애플리케이션에 어떻게 설치되는지를 제대로 이해해야 합니다. 자세한 내용은 다음 설명서를 참조하십시오.
 
-* [platform launch 개요](https://experienceleague.adobe.com/docs/launch/using/home.html?lang=ko-KR)
-* [빠른 시작 안내서](https://experienceleague.adobe.com/docs/launch/using/get-started/quick-start.html?lang=ko-KR)
-* [게시 개요](https://experienceleague.adobe.com/docs/launch/using/publish/overview.html?lang=ko-KR)
+* [태그 개요](../../../../tags/home.md)
+* [빠른 시작 안내서](../../../../tags/quick-start/quick-start.md)
+* [게시 개요](../../../../tags/ui/publishing/overview.md)
 
 ## 데이터 스트림 설정
 
-SDK에서 데이터를 Experience Platform으로 전송하려면 Adobe Experience Platform Launch에 Platform용 기존 데이터 스트림이 설정되어 있어야 합니다. 또한 구성에 대해 선택하는 [!UICONTROL 프로필 데이터 세트]에는 표준화된 동의 필드가 포함되어야 합니다.
+SDK에서 데이터를 Experience Platform으로 전송하려면 데이터 수집 UI에서 플랫폼에 대한 기존 데이터 스트림이 설정되어 있어야 합니다. 또한 구성에 대해 선택하는 [!UICONTROL 프로필 데이터 세트]에는 표준화된 동의 필드가 포함되어야 합니다.
 
 새 구성을 만들거나 편집할 기존 구성을 선택한 후 **[!UICONTROL Adobe Experience Platform]** 옆에 있는 전환 단추를 선택합니다. 그런 다음 아래 나열된 값을 사용하여 양식을 완료합니다.
 
@@ -55,7 +55,7 @@ SDK에서 데이터를 Experience Platform으로 전송하려면 Adobe Experienc
 
 ## Platform Web SDK 설치 및 구성
 
-이전 섹션에 설명된 대로 데이터 스트림을 만든 후에는 최종적으로 사이트에 배포할 Platform Web SDK 확장을 구성해야 합니다. platform launch 속성에 SDK 확장이 설치되어 있지 않은 경우 왼쪽 탐색에서 **[!UICONTROL 확장]**&#x200B;을 선택하고 **[!UICONTROL 카탈로그]** 탭을 선택합니다. 그런 다음 사용 가능한 확장 목록 내에서 Platform SDK 확장 아래의 **[!UICONTROL 설치]**&#x200B;를 선택합니다.
+이전 섹션에 설명된 대로 데이터 스트림을 만든 후에는 최종적으로 사이트에 배포할 Platform Web SDK 확장을 구성해야 합니다. 태그 속성에 SDK 확장이 설치되어 있지 않은 경우 왼쪽 탐색에서 **[!UICONTROL 확장]**&#x200B;을 선택하고 **[!UICONTROL 카탈로그]** 탭을 선택합니다. 그런 다음 사용 가능한 확장 목록 내에서 Platform SDK 확장 아래의 **[!UICONTROL 설치]**&#x200B;를 선택합니다.
 
 ![](../../../images/governance-privacy-security/consent/adobe/sdk/install.png)
 
@@ -72,16 +72,16 @@ SDK 확장이 설치되어 있으면 사용자에 대한 기본 데이터 수집
 이 사용 사례에서는 다음을 구현하여 사용자의 지역에 따라 기본 동의를 설정할 수 있습니다.
 
 1. 웹 서버에서 사용자의 지역을 결정합니다.
-1. 웹 페이지의 Platform launch 스크립트 태그(포함 코드) 앞에 사용자의 영역을 기반으로 `adobeDefaultConsent` 변수를 설정하는 별도의 스크립트 태그를 렌더링합니다.
+1. 웹 페이지의 `script` 태그(포함 코드) 앞에 사용자의 영역을 기반으로 `adobeDefaultConsent` 변수를 설정하는 별도의 `script` 태그를 렌더링합니다.
 1. `adobeDefaultConsent` JavaScript 변수를 사용하는 데이터 요소를 설정하고 이 데이터 요소를 사용자의 기본 동의 값으로 사용합니다.
 
 사용자의 영역이 CMP로 결정된 경우, 대신 다음 단계를 사용할 수 있습니다.
 
 1. 페이지에서 &quot;CMP loaded&quot; 이벤트를 처리합니다.
-1. 이벤트 처리기에서 사용자의 영역에 따라 `adobeDefaultConsent` 변수를 설정한 다음 JavaScript를 사용하여 Platform launch 라이브러리 스크립트를 로드합니다.
+1. 이벤트 처리기에서 사용자의 영역에 따라 `adobeDefaultConsent` 변수를 설정한 다음 JavaScript를 사용하여 태그 라이브러리 스크립트를 로드합니다.
 1. `adobeDefaultConsent` JavaScript 변수를 사용하는 데이터 요소를 설정하고 이 데이터 요소를 사용자의 기본 동의 값으로 사용합니다.
 
-platform launch UI에서 데이터 요소를 만들려면 왼쪽 탐색에서 **[!UICONTROL 데이터 요소]**&#x200B;를 선택한 다음 **[!UICONTROL 데이터 요소 추가]**&#x200B;를 선택하여 데이터 요소 만들기 대화 상자로 이동합니다.
+데이터 수집 UI에서 데이터 요소를 만들려면 왼쪽 탐색에서 **[!UICONTROL 데이터 요소]**&#x200B;를 선택한 다음 **[!UICONTROL 데이터 요소 추가]**&#x200B;를 선택하여 데이터 요소 생성 대화 상자로 이동합니다.
 
 여기에서 `adobeDefaultConsent`를 기반으로 [!UICONTROL JavaScript 변수] 데이터 요소를 만들어야 합니다. 완료되면 **[!UICONTROL 저장]**&#x200B;을 선택합니다.
 
@@ -93,7 +93,7 @@ platform launch UI에서 데이터 요소를 만들려면 왼쪽 탐색에서 **
 
 ### 웹 사이트에 확장 배포
 
-확장 구성을 마치면 웹 사이트에 통합할 수 있습니다. 업데이트된 라이브러리 빌드를 배포하는 방법에 대한 자세한 내용은 Platform launch 설명서의 [게시 안내서](https://experienceleague.adobe.com/docs/launch/using/publish/overview.html)를 참조하십시오.
+확장 구성을 마치면 웹 사이트에 통합할 수 있습니다. 업데이트된 라이브러리 빌드를 배포하는 방법에 대한 자세한 내용은 태그 설명서의 [게시 안내서](https://experienceleague.adobe.com/docs/launch/using/publish/overview.html?lang=ko-KR)를 참조하십시오.
 
 ## 동의 변경 명령 {#commands}
 
