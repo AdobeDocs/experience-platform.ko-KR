@@ -1,10 +1,10 @@
 ---
 title: Adobe 관리 호스트 개요
 description: Adobe Experience Platform에서 태그 라이브러리 빌드를 배포하기 위한 기본 호스팅 옵션에 대해 알아봅니다.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1173'
-ht-degree: 57%
+source-wordcount: '1175'
+ht-degree: 56%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 57%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Experience Platform에서 데이터 수집 기술 세트로 브랜드 재지정되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../../term-updates.md)을 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../../term-updates.md)을 참조하십시오.
 
 Adobe 관리 호스트는 Adobe Experience Platform에서 태그 라이브러리 빌드를 배포하기 위한 기본 호스트 설정입니다. 데이터 수집 사용자 인터페이스를 통해 새 속성을 만들면 기본 Adobe 관리 호스트가 만들어집니다.
 
@@ -89,7 +89,7 @@ Akamai에는 여러 원본 서버가 있어 서로 간에 파일을 복제하고
 
 ## 데이터 수집 UI에서 Adobe 관리 호스팅 사용
 
-처음으로 [데이터 수집 UI](http://launch.adobe.com/)에서 속성을 만들면 Adobe 관리 호스트가 자동으로 생성됩니다. 사용 가능한 속성이 즉시 있는 사용 가능한 모든 환경도 기본적으로 Adobe 관리 호스트에 할당됩니다.
+처음으로 [데이터 수집 UI](https://experience.adobe.com/#/data-collection/)에서 속성을 만들면 Adobe 관리 호스트가 자동으로 생성됩니다. 사용 가능한 속성이 즉시 있는 사용 가능한 모든 환경도 기본적으로 Adobe 관리 호스트에 할당됩니다.
 
 >[!NOTE]
 >
