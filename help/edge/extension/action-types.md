@@ -1,19 +1,19 @@
 ---
 title: Adobe Experience Platform Web SDK 확장의 작업 유형
-description: Adobe Experience Platform Launch에서 Adobe Experience Platform 웹 SDK 확장에서 제공하는 다양한 작업 유형에 대해 알아봅니다.
+description: Adobe Experience Platform 웹 SDK 태그 확장에서 제공하는 다양한 작업 유형에 대해 알아봅니다.
 solution: Experience Platform
 feature: 웹 SDK
 exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
-source-git-commit: 53864097af7d3278f56a3f23186de4eb405bcb51
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '585'
+source-wordcount: '573'
 ht-degree: 4%
 
 ---
 
 # 작업 유형
 
-[Adobe Experience Platform Launch](https://experienceleague.adobe.com/docs/launch.html)에 대해 [Adobe Experience Platform 웹 SDK 확장 프로그램](web-sdk-extension-configuration.md)을 구성한 후 작업 유형을 구성합니다.
+[Adobe Experience Platform 웹 SDK 태그 확장 프로그램](web-sdk-extension-configuration.md)을 구성한 후 작업 유형을 구성합니다.
 
 이 페이지에서는 사용 가능한 작업 유형을 설명합니다.
 
