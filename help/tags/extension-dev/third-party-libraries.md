@@ -1,9 +1,9 @@
 ---
 title: 타사 라이브러리 구현
 description: Adobe Experience Platform 태그 확장 내에서 타사 라이브러리를 호스팅하는 다양한 방법에 대해 알아봅니다.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1329'
+source-wordcount: '1330'
 ht-degree: 66%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 66%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Experience Platform에서 데이터 수집 기술 세트로 브랜드 재지정되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../term-updates.md)을 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../term-updates.md)을 참조하십시오.
 
 Adobe Experience Platform에서 태그 확장의 주요 목적 중 하나는 기존 마케팅 기술(라이브러리)을 웹 사이트에 쉽게 구현할 수 있도록 하는 것입니다. 확장을 사용하면 웹 사이트의 HTML을 수동으로 편집하지 않고도 타사 컨텐츠 전달 네트워크(CDN)에서 제공하는 라이브러리를 구현할 수 있습니다.
 
