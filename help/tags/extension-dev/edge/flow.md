@@ -1,9 +1,9 @@
 ---
 title: Edge 확장 흐름
 description: Adobe Experience Platform의 Edge 확장의 구성 요소가 런타임 시 상호 작용하는 방법을 알아봅니다.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '276'
+source-wordcount: '277'
 ht-degree: 41%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 41%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Experience Platform에서 데이터 수집 기술 세트로 브랜드 재지정되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../term-updates.md)을 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../term-updates.md)을 참조하십시오.
 
 Edge 확장에서는 각 조건, 작업 및 데이터 요소 유형에 사용자가 설정을 수정하는 보기와 라이브러리 모듈이 사용자 정의 설정에 따라 작동하는 보기가 모두 포함됩니다.
 
