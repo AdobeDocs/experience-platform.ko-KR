@@ -1,9 +1,9 @@
 ---
 title: Reactor API 시작하기
 description: 필요한 액세스 자격 증명을 생성하는 단계를 포함하여 Reactor API를 시작하는 방법을 알아봅니다.
-source-git-commit: 6a1728bd995137a7cd6dc79313762ae6e665d416
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1070'
+source-wordcount: '1064'
 ht-degree: 1%
 
 ---
@@ -60,7 +60,7 @@ IMS 조직의 ID(`{IMS_ORG}`) 및 API 키(`{API_KEY}`)는 처음 생성된 후�
 
 >[!NOTE]
 >
->제품 프로필은 Adobe Admin Console을 통해 조직에서 관리하며 Adobe Experience Platform Launch의 세부 기능에 대한 특정 권한 세트를 포함합니다. 제품 프로필 및 권한은 조직 내에서 관리자 권한을 가진 사용자만 관리할 수 있습니다. API용으로 선택할 제품 프로필을 잘 모르는 경우 관리자에게 문의하십시오.
+>제품 프로필은 Adobe Admin Console을 통해 조직에서 관리하며 세분화된 기능에 대한 특정 권한 세트를 포함합니다. 제품 프로필 및 권한은 조직 내에서 관리자 권한을 가진 사용자만 관리할 수 있습니다. API용으로 선택할 제품 프로필을 잘 모르는 경우 관리자에게 문의하십시오.
 
 목록에서 원하는 제품 프로필을 선택한 다음 **구성된 API 저장**&#x200B;을 선택하여 API 등록을 완료합니다.
 
@@ -98,7 +98,7 @@ IMS 조직의 ID(`{IMS_ORG}`) 및 API 키(`{API_KEY}`)는 처음 생성된 후�
 
 #### 프로그래밍 방식으로 액세스 토큰 생성 {#program}
 
-애플리케이션에 Launch 통합을 사용하는 경우 API 요청을 통해 프로그래밍 방식으로 액세스 토큰을 생성할 수 있습니다. 이를 수행하려면 다음 값을 가져와야 합니다.
+애플리케이션에 통합을 사용하는 경우 API 요청을 통해 프로그래밍 방식으로 액세스 토큰을 생성할 수 있습니다. 이를 수행하려면 다음 값을 가져와야 합니다.
 
 * 클라이언트 ID(`{API_KEY}`)
 * 클라이언트 암호(`{SECRET}`)
@@ -162,7 +162,7 @@ curl -X POST \
 
 액세스 자격 증명이 작동하는지 확인했으면 다른 API 참조 설명서를 계속 탐색하여 API의 다양한 기능을 학습합니다.
 
-## 추가 리소스
+## 기타 리소스
 
 JWT 라이브러리 및 SDK: [https://jwt.io/](https://jwt.io/)
 
