@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform Web SDK 구성
-description: Adobe Experience Platform Launch용 Adobe Experience Platform 웹 SDK 확장에 대해 알아보기
+description: Adobe Experience Platform 웹 SDK 태그 확장에 대해 알아봅니다.
 exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
-source-git-commit: e5b43a65bb9907f333f1ffedfbeed00f02f8ef39
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1043'
+source-wordcount: '1034'
 ht-degree: 7%
 
 ---
@@ -13,11 +13,11 @@ ht-degree: 7%
 
 Adobe Experience Platform Web SDK 확장은 Adobe Experience Platform Edge 네트워크를 통해 웹 속성에서 Adobe Experience Cloud으로 데이터를 전송합니다. 확장을 사용하면 데이터를 플랫폼으로 스트리밍하고 ID를 동기화하고 고객 동의 신호를 처리하며 컨텍스트 데이터를 자동으로 수집할 수 있습니다.
 
-이 문서에서는 Adobe Experience Platform Launch 사용자 인터페이스에서 확장을 구성하는 방법에 대해 설명합니다.
+이 문서에서는 데이터 수집 UI에서 확장을 구성하는 방법을 설명합니다.
 
 ## 확장 프로그램 구성
 
-속성에 대해 Platform Web SDK 확장이 이미 설치되어 있는 경우 Platform launch UI에서 속성을 열고 **[!UICONTROL 확장]** 탭을 선택합니다. Platform 웹 SDK에서 **[!UICONTROL 구성]**&#x200B;을 선택합니다.
+속성에 대해 Platform Web SDK 확장이 이미 설치되어 있는 경우 데이터 수집 UI에서 속성을 열고 **[!UICONTROL 확장]** 탭을 선택합니다. Platform 웹 SDK에서 **[!UICONTROL 구성]**&#x200B;을 선택합니다.
 
 ![](../images/extension/overview/configure.png)
 
@@ -35,7 +35,7 @@ Adobe Experience Platform Web SDK 확장은 Adobe Experience Platform Edge 네�
 
 ### [!UICONTROL 이름]
 
-Adobe Experience Platform Web SDK 확장은 페이지에서 여러 인스턴스를 지원합니다. 이름은 단일 Platform launch 구성을 사용하여 여러 조직에 데이터를 전송하는 데 사용됩니다.
+Adobe Experience Platform Web SDK 확장은 페이지에서 여러 인스턴스를 지원합니다. 이름은 태그 구성을 사용하여 여러 조직에 데이터를 전송하는 데 사용됩니다.
 
 확장의 이름은 기본적으로 &quot;[!DNL alloy]&quot;입니다. 그러나 인스턴스 이름을 유효한 JavaScript 개체 이름으로 변경할 수 있습니다.
 
@@ -45,7 +45,7 @@ Adobe Experience Platform Web SDK 확장은 페이지에서 여러 인스턴스�
 
 ### **[!UICONTROL Edge 도메인]**
 
-[!UICONTROL 에지 도메인]은 Adobe Experience Platform 확장에서 데이터를 보내고 받는 도메인입니다. 기본 타사 도메인은 프로덕션 트래픽에 자사 CNAME을 사용해야 합니다. 기본 타사 도메인은 개발 환경에서 작동하지만, 프로덕션 환경에는 적합하지 않습니다. 자사 CNAME을 설정하는 방법에 대한 지침은 [여기](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html)에 나와 있습니다.
+[!UICONTROL 에지 도메인]은 Adobe Experience Platform 확장에서 데이터를 보내고 받는 도메인입니다. 기본 타사 도메인은 프로덕션 트래픽에 자사 CNAME을 사용해야 합니다. 기본 타사 도메인은 개발 환경에서 작동하지만, 프로덕션 환경에는 적합하지 않습니다. 자사 CNAME을 설정하는 방법에 대한 지침은 [여기](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=ko-KR)에 나와 있습니다.
 
 ## [!UICONTROL 데이터 스트림]
 
