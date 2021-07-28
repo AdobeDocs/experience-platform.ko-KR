@@ -3,22 +3,22 @@ title: Adobe Experience Platform Web SDK 개요
 description: Adobe Experience Platform Web SDK를 사용하여 플랫폼 기능을 웹 사이트에 통합하는 방법을 알아봅니다.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;Edge;Visitor.js;AppMeasurement.js;AT.js;DIL.js;웹 SDK;SDK;웹 SDK;Launch;실행
 exl-id: 1348144a-7d25-4c27-bc40-3daee2f043a6
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '665'
+source-wordcount: '664'
 ht-degree: 1%
 
 ---
 
 # Adobe Experience Platform Web SDK 개요
 
-Adobe Experience Platform Web SDK는 Adobe Experience Cloud 고객이 Adobe Experience Platform Edge 네트워크를 통해 [!DNL Experience Cloud]에 있는 다양한 서비스와 상호 작용할 수 있는 클라이언트측 JavaScript 라이브러리입니다. JavaScript 라이브러리 외에 웹 SDK 구성에 도움이 되는 [Experience Platform Launch 확장](../tags/extensions/web/sdk/overview.md)이 있습니다.
+Adobe Experience Platform Web SDK는 Adobe Experience Cloud 고객이 Adobe Experience Platform Edge 네트워크를 통해 [!DNL Experience Cloud]에 있는 다양한 서비스와 상호 작용할 수 있는 클라이언트측 JavaScript 라이브러리입니다. JavaScript 라이브러리 외에 웹 SDK 구성에 도움이 되는 [태그 확장](../tags/extensions/web/sdk/overview.md)이 있습니다.
 
 ## Experience Edge
 
 [!DNL Adobe Experience Platform Web SDK] 은 Experience Edge를 구성하는 컬렉션의 일부입니다. Experience Edge는 다음 세 가지 기술로 구성됩니다.
 
-* **[!DNL Adobe Experience Platform Web SDK]:** JavaScript SDK 및  [!DNL Experience Platform Launch] 확장을 사용하여 기술 배포를 획기적으로  [!DNL Adobe] 단순화합니다
+* **[!DNL Adobe Experience Platform Web SDK]:** JavaScript SDK 및 태그 확장을 사용하여  [!DNL Adobe] 기술 배포를 획기적으로 단순화합니다
 * **Adobe Experience Platform Mobile SDK:** 고객이 새로운 배포 방법을 사용할 수 있도록 v5 Mobile SDK에 대한 확장
 * **[!DNL Adobe Experience Platform Edge Network]:** 제품을 배포하는 새로운 방법을 가능하게 하는 글로벌 분산 서버  [!DNL Adobe] 네트워크
 
