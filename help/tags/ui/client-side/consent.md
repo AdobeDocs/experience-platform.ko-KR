@@ -1,9 +1,9 @@
 ---
 title: JavaScript 태그를 배포하여 고객 동의 관리
 description: Adobe Experience Platform에서 다양한 Adobe 솔루션에 대한 고객 옵트인 및 옵트아웃 신호를 관리하는 방법을 알아봅니다.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '650'
+source-wordcount: '651'
 ht-degree: 77%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 77%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Experience Platform에서 데이터 수집 기술 세트로 브랜드 재지정되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../term-updates.md)을 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../term-updates.md)을 참조하십시오.
 
 유럽 연합 [GDPR(일반 데이터 보호 규정)](https://gdpr-info.eu/art-7-gdpr/)과 [ePrivacy](https://medium.com/mydata/consent-lost-gdpr-and-found-eprivacy-e85cf881ffb) 법률을 조합하려면 회사에서 사용자에 대한 동의를 관리할 수 있어야 합니다. 지정된 방문자에 대해 Adobe 솔루션을 실행하려면 Adobe 고객이 방문자에게 옵트인하도록 요청할 수 있습니다. 방문자는 자신의 옵트인 및 옵트아웃 상태를 관리할 수 있어야 합니다.
 
