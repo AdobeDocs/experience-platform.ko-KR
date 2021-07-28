@@ -1,9 +1,9 @@
 ---
 title: 코어 이벤트 전달 확장 개요
 description: Adobe Experience Platform의 코어 이벤트 전달 확장에 대해 알아봅니다.
-source-git-commit: 5f810ada57eeb12a56de603d974a091b888dc9d2
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1725'
+source-wordcount: '1724'
 ht-degree: 90%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 90%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Experience Platform에서 데이터 수집 기술 세트로 브랜드 재지정되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../../term-updates.md)을 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../../term-updates.md)을 참조하십시오.
 
 코어 이벤트 전달 확장은 Adobe Experience Platform에서 이벤트 전달을 위한 기본 이벤트, 조건 및 데이터 유형을 제공합니다.
 
@@ -165,7 +165,7 @@ module.exports = (context) => {
 getDataElementValue('productName') 
 ```
 
-Platform Launch Server Side 작업은 순차적으로 실행됩니다. 한 작업의 사용자 지정 코드에서 후속 작업에서 사용할 수 있는 값을 반환할 수도 있습니다. 반환된 값은 해당 작업 내의 코드나 외부 소스에 대한 호출의 응답 본문에서 가져올 수 있습니다. 코어 확장이 사용되는 단일 규칙 내에서 이전에 실행된 작업의 데이터를 참조하려면 `Path` 유형의 데이터 요소를 만들고 다음 경로를 사용하여 코어 확장 내의 사용자 지정 코드에 정의된 `productCategory` 변수의 값을 참조합니다.
+이벤트 전달 작업은 순차적으로 실행됩니다. 한 작업의 사용자 지정 코드에서 후속 작업에서 사용할 수 있는 값을 반환할 수도 있습니다. 반환된 값은 해당 작업 내의 코드나 외부 소스에 대한 호출의 응답 본문에서 가져올 수 있습니다. 코어 확장이 사용되는 단일 규칙 내에서 이전에 실행된 작업의 데이터를 참조하려면 `Path` 유형의 데이터 요소를 만들고 다음 경로를 사용하여 코어 확장 내의 사용자 지정 코드에 정의된 `productCategory` 변수의 값을 참조합니다.
 
 ```javascript
 arc.ruleStash.[Extension-Name].[key-as-defined-by-action] 
