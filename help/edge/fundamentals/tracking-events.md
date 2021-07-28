@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK를 사용하여 이벤트 추적
 description: Adobe Experience Platform Web SDK 이벤트를 추적하는 방법을 알아봅니다.
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
 exl-id: 8b221cae-3490-44cb-af06-85be4f8d280a
-source-git-commit: a6fca344e6b307e503e29ca7dda3534cdea62f53
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1460'
+source-wordcount: '1451'
 ht-degree: 0%
 
 ---
@@ -68,7 +68,7 @@ alloy("sendEvent", {
 dataLayer.commerce = null;
 ```
 
-이 예에서 데이터 계층은 JSON으로 직렬화한 다음 역직렬화하여 복제됩니다. 그런 다음 복제된 결과가 `sendEvent` 명령에 전달됩니다. 이렇게 하면 `sendEvent` 명령에 `sendEvent` 명령이 실행될 때 데이터 계층의 스냅샷이 있으므로 나중에 원래 데이터 계층 객체에 대한 수정 사항이 서버로 전송된 데이터에 반영되지 않습니다. 이벤트 기반 데이터 레이어를 사용하는 경우 데이터 복제가 이미 자동으로 처리될 수 있습니다. 예를 들어 [클라이언트 데이터 레이어 Adobe](https://github.com/adobe/adobe-client-data-layer/wiki)를 사용하는 경우 `getState()` 메서드는 모든 이전 변경 사항에 대한 계산된 복제된 스냅샷을 제공합니다. Adobe Experience Platform Launch에서 Adobe Experience Platform 웹 SDK 확장을 사용하는 경우에도 자동으로 처리됩니다.
+이 예에서 데이터 계층은 JSON으로 직렬화한 다음 역직렬화하여 복제됩니다. 그런 다음 복제된 결과가 `sendEvent` 명령에 전달됩니다. 이렇게 하면 `sendEvent` 명령에 `sendEvent` 명령이 실행될 때 데이터 계층의 스냅샷이 있으므로 나중에 원래 데이터 계층 객체에 대한 수정 사항이 서버로 전송된 데이터에 반영되지 않습니다. 이벤트 기반 데이터 레이어를 사용하는 경우 데이터 복제가 이미 자동으로 처리될 수 있습니다. 예를 들어 [클라이언트 데이터 레이어 Adobe](https://github.com/adobe/adobe-client-data-layer/wiki)를 사용하는 경우 `getState()` 메서드는 모든 이전 변경 사항에 대한 계산된 복제된 스냅샷을 제공합니다. Adobe Experience Platform 웹 SDK 태그 확장을 사용하는 경우에도 자동으로 처리됩니다.
 
 >[!NOTE]
 >
@@ -108,7 +108,7 @@ XDM 경험 이벤트에는 선택적 `eventType` 필드가 있습니다. 여기�
 
 | **이벤트 유형:** | **정의:** |
 | ---------------------------------- | ------------ |
-| advertising.completes | 시간 미디어 자산을 끝까지 감시했는지 여부를 나타냅니다. 시청자가 반드시 전체 비디오를 시청했음을 의미하지는 않습니다.뷰어가 건너뛸 수 있음 |
+| advertising.completes | 시간 미디어 자산을 끝까지 감시했는지 여부를 나타냅니다. 시청자가 반드시 전체 비디오를 시청했음을 의미하지는 않습니다. 뷰어가 건너뛸 수 있음 |
 | advertising.timePlayed | 특정 시간 미디어 자산에서 사용자가 사용한 시간을 설명합니다 |
 | advertising.federated | 데이터 페더레이션(고객 간의 데이터 공유)를 통해 경험 이벤트가 생성되었는지 여부를 나타냅니다 |
 | advertising.clicks | 광고에서 작업을 클릭합니다 |
@@ -132,7 +132,7 @@ XDM 경험 이벤트에는 선택적 `eventType` 필드가 있습니다. 여기�
 | delivery.feedback | 게재에 대한 피드백 이벤트. 이메일 게재에 대한 피드백 이벤트 예 |
 
 
-이러한 이벤트 유형은 Adobe Experience Platform Launch 확장을 사용하는 경우 드롭다운에 표시되거나 Experience Platform Launch 없이 항상 전달할 수 있습니다. `xdm` 옵션의 일부로 전달될 수 있습니다.
+이러한 이벤트 유형은 태그 확장을 사용하는 경우 드롭다운에 표시되거나 태그 없이 항상 전달할 수 있습니다. `xdm` 옵션의 일부로 전달될 수 있습니다.
 
 
 ```javascript
