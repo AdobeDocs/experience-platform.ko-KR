@@ -1,18 +1,17 @@
 ---
 title: Adobe Experience Platform Web SDK Extension 릴리스 노트
-description: Adobe Experience Platform Launch의 Adobe Experience Platform 웹 SDK 확장
-seo-description: Adobe Experience Platform Launch의 Adobe Experience Platform 웹 SDK 확장
+description: Adobe Experience Platform 웹 SDK 태그 확장
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: dfcfdf90ae857e6a6ff0ddc7810cb6a6939c9758
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1071'
+ht-degree: 52%
 
 ---
 
 # Adobe Experience Platform Web SDK 확장 릴리스 노트
 
-이 문서에서는 Adobe Experience Platform Launch용 Adobe Experience Platform 웹 SDK 확장에 대한 릴리스 노트를 다룹니다. SDK 자체에 대한 최신 릴리스 노트는 [Platform Web SDK 릴리스 노트](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html)를 참조하십시오.
+이 문서에서는 Adobe Experience Platform 웹 SDK 태그 확장에 대한 릴리스 노트를 다룹니다. SDK 자체에 대한 최신 릴리스 노트는 [Platform Web SDK 릴리스 노트](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html)를 참조하십시오.
 
 ## 버전 2.6.0 - 2021년 7월 27일
 
@@ -103,14 +102,14 @@ Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.3.0을 포함합�
 * demdex 쿠키가 설정되지 않은 경우 ID 마이그레이션 중에 이루어진 요청은 도메인 간 식별을 개선하기 위해 demdex 종단점으로 전송됨
 * ID 마이그레이션 중에 이루어진 요청은 항상 ID 쿠키를 설정하기 위해 응답이 필요함
 * 잘못된 명령을 실행하면 콘솔에 유효한 명령 이름 목록이 기록됨
-* 타사 쿠키 지원을 Adobe Experience Platform Launch 확장으로 전환하는 확인란이 추가되었습니다. 이 확인란을 선택하면 demdex.net 호출이 비활성화됨
+* 타사 쿠키 지원을 태그 확장으로 전환하는 확인란이 추가되었습니다. 이 확인란을 선택하면 demdex.net 호출이 비활성화됨
 
 ## 버전 0.0.5 - 2019년 12월 20일
 
-* Platform Launch 확장에 Activity Tracker 구성 추가
+* 확장에 Activity Tracker 구성 추가
 * 이벤트 명령에 EventType 및 EventMergeId 표시
-* Platform Launch 확장에 onBeforeEventSend 구성 추가
-* Platform Launch 확장에 edgeBasePath 구성 추가
+* 태그 확장에 onBeforeEventSend 구성 추가
+* 태그 확장에 edgeBasePath 구성 추가
 
 ## 버전 0.0.3 - 2019년 11월 25일
 
