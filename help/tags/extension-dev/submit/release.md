@@ -1,9 +1,9 @@
 ---
 title: 확장 릴리스
 description: Adobe Experience Platform에서 태그 확장을 비공개 또는 공개적으로 릴리스하는 방법을 알아봅니다.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '320'
+source-wordcount: '321'
 ht-degree: 39%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 39%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Experience Platform에서 데이터 수집 기술 세트로 브랜드 재지정되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../term-updates.md)을 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../term-updates.md)을 참조하십시오.
 
 테스트 및 문서화가 완료되면 확장을 릴리스할 수 있습니다. 현재 수행할 수 있는 릴리스 유형은 다음의 두 가지입니다.
 
