@@ -1,10 +1,10 @@
 ---
 title: 확장
 description: Adobe Experience Platform에서 태그 확장이 작동하는 방식을 알아봅니다.
-source-git-commit: 5b8ef30b1d0e6d682c94453117677c806eba1e02
+source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
 workflow-type: tm+mt
-source-wordcount: '496'
-ht-degree: 61%
+source-wordcount: '497'
+ht-degree: 57%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 61%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Experience Platform에서 데이터 수집 기술 세트로 브랜드 재지정되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../../term-updates.md)을 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../../term-updates.md)을 참조하십시오.
 
 확장은 태그 또는 이벤트 전달에서 제공하는 기능을 확장하는 패키지화된 코드 세트입니다.
 
@@ -26,15 +26,13 @@ ht-degree: 61%
 
 확장 목록 상단에 있는 링크를 사용하여 설치된 확장, 확장 카탈로그 또는 업데이트를 볼 수 있습니다.
 
-확장을 선택한 다음 [!UICONTROL 구성]을 선택하여 확장의 설정을 보고 변경합니다. 확장 옵션에 대한 자세한 내용은 [새 확장 추가](#add-a-new-extension)를 참조하십시오.
+확장을 선택한 다음 [!UICONTROL 구성]을 선택하여 확장의 설정을 보고 변경합니다. 자세한 내용은 확장 옵션에 대한 자세한 내용은 [새 확장 추가](#add-a-new-extension)의 섹션을 참조하십시오.
 
 >[!IMPORTANT]
 >
 >변경 사항은 [게시](../../publishing/overview.md)될 때까지 적용되지 않습니다.
 
 기본적으로 Adobe은 일반 통합을 지원하는 확장을 제공합니다. 확장은 사용자 지정 구성으로 수정할 수 있습니다. 구성은 확장을 통해 제공됩니다. 구성을 만들려면 확장 카드를 선택한 다음 **[!UICONTROL 새 구성 추가]**&#x200B;를 선택합니다.
-
-비디오 소개에 대해서는 [확장](../../../quick-start/videos.md)을 참조하십시오.
 
 ## 확장 카탈로그
 
