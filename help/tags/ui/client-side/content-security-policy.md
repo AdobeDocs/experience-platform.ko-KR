@@ -1,9 +1,9 @@
 ---
 title: CSP(콘텐츠 보안 정책) 지원
 description: Adobe Experience Platform에서 태그와 웹 사이트를 통합할 때 CSP(콘텐츠 보안 정책) 제한을 처리하는 방법을 알아봅니다.
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1079'
+source-wordcount: '1080'
 ht-degree: 54%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 54%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Experience Platform에서 데이터 수집 기술 세트로 브랜드 재지정되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../term-updates.md)을 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../term-updates.md)을 참조하십시오.
 
 CSP(콘텐츠 보안 정책)는 XSS(교차 사이트 스크립팅) 공격을 방지하는 보안 기능입니다. 이는 실제로는 알 수 없는 곳에서 가져온 것이지만 출처를 신뢰할 수 있는 것처럼 브라우저를 속여 악의적인 콘텐츠를 실행하게 할 때 발생합니다. CSP를 사용하면 사용자를 대신하여 브라우저가 스크립트가 실제로 신뢰할 수 있는 소스에서 오고 있는지 확인할 수 있습니다.
 
