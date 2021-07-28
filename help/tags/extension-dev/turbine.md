@@ -1,10 +1,10 @@
 ---
 title: Turbine 자유 변수
 description: Adobe Experience Platform 태그 런타임과 관련된 정보 및 유틸리티를 제공하는 무료 변수인 turbine 객체에 대해 알아봅니다.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '590'
-ht-degree: 52%
+source-wordcount: '577'
+ht-degree: 48%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 52%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Experience Platform에서 데이터 수집 기술 세트로 브랜드 재지정되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../term-updates.md)을 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../term-updates.md)을 참조하십시오.
 
 `turbine` 객체는 확장의 라이브러리 모듈 범위 내에 있는 &quot;자유 변수&quot;입니다. Adobe Experience Platform 태그 런타임과 관련된 정보 및 유틸리티를 제공하며 `require()` 을 사용하지 않고도 라이브러리 모듈에서 항상 사용할 수 있습니다.
 
@@ -90,7 +90,7 @@ var mcidInstance = turbine.getSharedModule('adobe-mcid', 'mcid-instance');
 turbine.logger.error('Error!');
 ```
 
-로깅 유틸리티는 콘솔에 메시지를 기록하는 데 사용됩니다. 사용자가 디버깅을 사용하는 경우에만 콘솔에 메시지가 표시됩니다. 디버깅을 설정하는 데 권장되는 방법은 [Adobe Experience Cloud Debugger](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj?src=propaganda) 또는 [ Launch 및 DTM Switch](https://chrome.google.com/webstore/detail/adobe-dtm-switch/nlgdemkdapolikbjimjajpmonpbpmipk) Chrome 확장을 사용하는 것입니다. 다른 방법으로는 브라우저 개발자 콘솔 내에서 다음 명령 `_satellite.setDebug(true)`을 실행할 수도 있습니다. 로거는 다음 메서드를 사용합니다.
+로깅 유틸리티는 콘솔에 메시지를 기록하는 데 사용됩니다. 사용자가 디버깅을 사용하는 경우에만 콘솔에 메시지가 표시됩니다. 디버깅을 설정하는 데 권장되는 방법은 [Adobe Experience Cloud Debugger](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj?src=propaganda)를 사용하는 것입니다. 다른 방법으로는 브라우저 개발자 콘솔 내에서 다음 명령 `_satellite.setDebug(true)`을 실행할 수도 있습니다. 로거는 다음 메서드를 사용합니다.
 
 * `logger.log(message: string)`: 콘솔에 메시지를 기록합니다.
 * `logger.info(message: string)`: 콘솔에 정보 메시지를 기록합니다.
