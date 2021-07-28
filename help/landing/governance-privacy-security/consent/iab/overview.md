@@ -5,9 +5,9 @@ title: Experience Platform에서 IAB TCF 2.0 지원
 topic-legacy: privacy events
 description: 세그먼트를 Adobe Experience Platform의 대상으로 활성화할 때 고객 동의 선택 사항을 전달하도록 데이터 작업 및 스키마를 구성하는 방법을 알아보십시오.
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
-source-git-commit: da7696d288543abd21ff8a1402e81dcea32efbc2
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '2559'
+source-wordcount: '2563'
 ht-degree: 1%
 
 ---
@@ -119,9 +119,9 @@ TCF 사양에서 동의 문자열은 정책 및 공급업체에서 정의한 특
 
 ### 새 데이터 스트림 만들기
 
-SDK에서 데이터를 Experience Platform에 보내려면 먼저 [!DNL Adobe Experience Platform Launch]에서 플랫폼에 대한 새 데이터 스트림을 만들어야 합니다. 새 구성을 만드는 방법에 대한 특정 단계는 [SDK 설명서](../../../../edge/fundamentals/datastreams.md)에 제공됩니다.
+SDK에서 데이터를 Experience Platform에 보내려면 먼저 데이터 수집 UI에서 플랫폼에 대한 새 데이터 스트림을 만들어야 합니다. 새 데이터 스트림을 만드는 방법에 대한 특정 단계는 [SDK 설명서](../../../../edge/fundamentals/datastreams.md)에 나와 있습니다.
 
-구성에 대한 고유 이름을 제공한 후 **[!UICONTROL Adobe Experience Platform]** 옆에 있는 전환 단추를 선택합니다. 그런 다음 다음 다음 값을 사용하여 양식의 나머지 부분을 완료합니다.
+데이터 스트림에 고유한 이름을 제공한 후 **[!UICONTROL Adobe Experience Platform]** 옆에 있는 전환 단추를 선택합니다. 그런 다음 다음 다음 값을 사용하여 양식의 나머지 부분을 완료합니다.
 
 | 데이터 스트림 필드 | 값 |
 | --- | --- |
