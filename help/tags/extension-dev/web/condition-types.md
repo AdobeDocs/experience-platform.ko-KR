@@ -1,9 +1,9 @@
 ---
 title: 웹 확장에 대한 조건 유형
 description: 웹 속성에서 태그 확장에 대한 조건 유형 라이브러리 모듈을 정의하는 방법을 알아봅니다.
-source-git-commit: 99780f64c8f09acea06e47ebf5cabc762e05cab2
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '497'
+source-wordcount: '498'
 ht-degree: 60%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 60%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Experience Platform에서 데이터 수집 기술 세트로 브랜드 재지정되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../term-updates.md)을 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../term-updates.md)을 참조하십시오.
 
 규칙 컨텍스트에서 조건은 이벤트가 발생한 후 평가됩니다. 규칙이 계속 처리되려면 모든 조건이 true를 반환해야 합니다. 예외 사항은 사용자가 명시적으로 &quot;예외&quot; 버킷에 조건을 배치하는 경우로, 이때는 버킷 내의 모든 조건이 처리를 계속하기 위해서는 false를 반환해야 합니다.
 
