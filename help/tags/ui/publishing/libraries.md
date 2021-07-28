@@ -1,9 +1,9 @@
 ---
 title: 라이브러리
 description: 태그 라이브러리의 개념과 Adobe Experience Platform 내에서 작동하는 방법에 대해 알아봅니다.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '790'
+source-wordcount: '791'
 ht-degree: 59%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 59%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Experience Platform에서 데이터 수집 기술 세트로 브랜드 재지정되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../term-updates.md)을 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../term-updates.md)을 참조하십시오.
 
 라이브러리는 확장, 데이터 요소 및 규칙이 배포된 후 서로 상호 작용하는 방식에 대한 지침 세트입니다. 라이브러리를 만들 때 라이브러리에 적용할 변경 사항을 지정합니다. 빌드 시 이러한 변경 사항은 이전 라이브러리에 제출, 승인 또는 게시된 모든 변경 사항과 결합됩니다.
 
