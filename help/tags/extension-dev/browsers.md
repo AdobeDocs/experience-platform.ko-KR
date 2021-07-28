@@ -1,9 +1,9 @@
 ---
 title: 지원되는 브라우저
 description: Adobe Experience Platform 태그 런타임과 호환되는 여러 브라우저 목록입니다.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '144'
+source-wordcount: '145'
 ht-degree: 29%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 29%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Experience Platform에서 데이터 수집 기술 세트로 브랜드 재지정되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../term-updates.md)을 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../term-updates.md)을 참조하십시오.
 
 Adobe Experience Platform(클라이언트의 웹 사이트에 제공됨)의 태그 런타임은 여러 브라우저와 호환됩니다.
 
