@@ -1,10 +1,10 @@
 ---
 title: Adobe Analytics 확장을 위한 공유 모듈
 description: Adobe Experience Platform에서 Adobe Analytics 태그 확장에서 제공하는 공유 라이브러리 모듈에 대해 알아봅니다.
-source-git-commit: 8dfb7bdc16d0654ee1d76dc5f5af50938b122d33
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '430'
-ht-degree: 71%
+source-wordcount: '431'
+ht-degree: 70%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 71%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Experience Platform에서 데이터 수집 기술 세트로 브랜드 재지정되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../../term-updates.md)을 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../../term-updates.md)을 참조하십시오.
 
 [Adobe Analytics 확장](./overview.md)은 Experience 애플리케이션에 통합할 수 있는 서로 다른 두 개의 [공유 모듈](../../../extension-dev/web/shared.md)을 제공합니다. 이러한 모듈은 다음 섹션에 설명되어 있습니다.
 
