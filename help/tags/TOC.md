@@ -4,10 +4,10 @@ user-guide-title: 태그 도움말
 breadcrumb-title: 태그
 user-guide-description: 고객 경험을 향상시키기 위해 분석, 마케팅 및 광고 태그를 배포 및 관리하는 방법을 살펴볼 수 있습니다.
 feature: 데이터 수집
-source-git-commit: 5da1fd18e0032c5e3d6695639f98a7ee683819f1
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '379'
-ht-degree: 66%
+source-wordcount: '378'
+ht-degree: 67%
 
 ---
 
@@ -18,7 +18,6 @@ ht-degree: 66%
 * 시작하기 {#get-started}
    * [빠른 시작 안내서](./quick-start/quick-start.md)
    * [구현 안내서](./quick-start/implementation-guides.md)
-   * [비디오](./quick-start/videos.md)
 * 데이터 수집 UI {#ui}
    * [개요](./ui/managing-resources/overview.md)
    * 확장 {#extensions}
@@ -54,7 +53,7 @@ ht-degree: 66%
    * [SRI(Subresource Integrity) 지원](./ui/client-side/sri.md)
 * 이벤트 전달 {#event-forwarding}
    * [개요](./ui/event-forwarding/overview.md)
-   * [시작](./ui/event-forwarding/getting-started.md)
+   * [시작하기](./ui/event-forwarding/getting-started.md)
 * 관리 {#admin}
    * [개요](./ui/administration/overview.md)
    * [회사 및 속성](./ui/administration/companies-and-properties.md)
@@ -122,7 +121,7 @@ ht-degree: 66%
    * [타사 확장](./extensions/3rd-party-extensions.md)
 * 확장 개발 {#extension-dev}
    * [개요](./extension-dev/overview.md)
-   * [시작](./extension-dev/getting-started.md)
+   * [시작하기](./extension-dev/getting-started.md)
    * [지원되는 브라우저](./extension-dev/browsers.md)
    * 제출 프로세스 {#submit}
       * [개요](./extension-dev/submit/overview.md)
@@ -156,7 +155,7 @@ ht-degree: 66%
    * [이전 버전과의 호환성 표준](./extension-dev/backwards-compatibility.md)
 * Reactor API {#api}
    * [개요](./api/overview.md)
-   * [시작](./api/getting-started.md)
+   * [시작하기](./api/getting-started.md)
    * 엔드포인트 {#endpoints}
       * [회사](./api/endpoints/companies.md)
       * [속성](./api/endpoints/properties.md)
