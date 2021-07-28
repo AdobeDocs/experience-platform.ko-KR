@@ -1,9 +1,9 @@
 ---
 title: Edge 확장 모듈의 컨텍스트
 description: 컨텍스트 개체 및 컨텍스트 속성의 태그 확장에서 라이브러리 모듈과 상호 작용할 때 수행하는 역할에 대해 알아봅니다.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '746'
+source-wordcount: '747'
 ht-degree: 74%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 74%
 
 >[!NOTE]
 >
-> Adobe Experience Platform Launch은 Experience Platform에서 데이터 수집 기술 세트로 브랜드 재지정되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../term-updates.md)을 참조하십시오.
+> Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../term-updates.md)을 참조하십시오.
 
 Edge 확장의 모든 라이브러리 모듈은 실행될 때 `context` 개체가 제공됩니다. 이 문서에서는 `context` 개체에서 제공하는 속성과 라이브러리 모듈에서 수행하는 역할에 대해 설명합니다.
 
