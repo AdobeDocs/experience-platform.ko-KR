@@ -1,10 +1,10 @@
 ---
 title: 호스트 개요
 description: Adobe Experience Platform에서 사용할 수 있는 다양한 호스팅 옵션에 대해 알아봅니다.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '165'
-ht-degree: 64%
+source-wordcount: '166'
+ht-degree: 63%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 64%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Experience Platform에서 데이터 수집 기술 세트로 브랜드 재지정되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../../term-updates.md)을 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../../term-updates.md)을 참조하십시오.
 
 확장, 규칙 및 데이터 요소는 기본 구성단위입니다. 애플리케이션에서 작업을 수행하게 하려고 할 때 이 기본 구성단위가 라이브러리에 추가된 다음 &quot;빌드&quot;됩니다. 이러한 빌드는 호스팅된 위치에 전달됩니다.
 
