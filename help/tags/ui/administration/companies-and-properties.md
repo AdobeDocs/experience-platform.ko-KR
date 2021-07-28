@@ -1,9 +1,9 @@
 ---
 title: 속성
 description: Adobe Experience Platform에서 확장, 환경 및 라이브러리를 조직에 맞게 구성하고 그룹화하는 방법을 알아봅니다.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
 workflow-type: tm+mt
-source-wordcount: '1186'
+source-wordcount: '1178'
 ht-degree: 56%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 56%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Experience Platform에서 데이터 수집 기술 세트로 브랜드 재지정되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../term-updates.md)을 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../term-updates.md)을 참조하십시오.
 
 ## 웹 속성
 
@@ -21,8 +21,6 @@ ht-degree: 56%
 ## 모바일 속성
 
 모바일 속성 유형에는 여러 개의 애플리케이션이 포함될 수 있습니다. 예를 들어 모바일 속성에서 여러 iOS와 Android 애플리케이션 간에 동일한 규칙 및 확장 세트를 관리할 수 있습니다.
-
-비디오 자습서에 대해서는 [첫 번째 속성 만들기](../../quick-start/videos.md)를 참조하십시오.
 
 ## 속성 계획에 대한 모범 사례 {#best-practices-for-planning-properties}
 
