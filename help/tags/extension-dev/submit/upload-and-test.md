@@ -1,9 +1,9 @@
 ---
 title: 확장에 대한 엔드 투 엔드 테스트 업로드 및 구현
 description: Adobe Experience Platform에서 확장의 유효성을 검사, 업로드 및 테스트하는 방법을 알아봅니다.
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '2391'
+source-wordcount: '2392'
 ht-degree: 33%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 33%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Experience Platform에서 데이터 수집 기술 세트로 브랜드 재지정되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../term-updates.md)을 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../term-updates.md)을 참조하십시오.
 
 Adobe Experience Platform에서 태그 확장을 테스트하려면 태그 API 및/또는 명령줄 도구를 사용하여 확장 패키지를 업로드합니다. 다음으로, 데이터 수집 UI를 사용하여 확장 패키지를 속성에 설치하고 태그 라이브러리 및 빌드에서 해당 기능을 수행합니다.
 
