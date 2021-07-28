@@ -1,9 +1,9 @@
 ---
 title: 확장 매니페스트
 description: 확장을 제대로 사용하는 방법을 Adobe Experience Platform에 알려주는 JSON 매니페스트 파일을 구성하는 방법을 알아봅니다.
-source-git-commit: 421d1d0660c4c9c7280974f8a812a8f0e4f7cbea
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '2646'
+source-wordcount: '2647'
 ht-degree: 68%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 68%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Experience Platform에서 데이터 수집 기술 세트로 브랜드 재지정되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../term-updates.md)을 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../term-updates.md)을 참조하십시오.
 
 확장의 기본 디렉터리에 이름이 `extension.json`인 파일을 생성해야 합니다. 여기에는 Adobe Experience Platform에서 해당 확장을 적절히 사용할 수 있도록 해 주는 중요한 세부 정보가 포함되어 있습니다. 일부 컨텐츠는 [npm의 `package.json`](https://docs.npmjs.com/files/package.json) 방식을 따라 형성됩니다.
 
