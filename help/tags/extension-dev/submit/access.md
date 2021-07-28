@@ -1,9 +1,9 @@
 ---
 title: 사용자 액세스 권한 부여
 description: Adobe Experience Platform에서 팀 구성원의 태그 사용자 계정 및 권한을 설정합니다.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '737'
+source-wordcount: '738'
 ht-degree: 20%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 20%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Experience Platform에서 데이터 수집 기술 세트로 브랜드 재지정되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../term-updates.md)을 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../term-updates.md)을 참조하십시오.
 
 extension_package를 시작하기 전에 사용자 계정 및 권한을 사용하여 팀 구성원을 설정해야 합니다.  이 작업은 [Adobe Admin Console](https://adminconsole.adobe.com/)에서 수행됩니다.
 
@@ -39,7 +39,7 @@ Adobe Experience Cloud 조직 관리자는 [Admin Console](https://adminconsole.
 
 제품 프로필은 그룹입니다. 개별 권한은 제품 프로필에 할당되고 프로필에 있는 모든 사용자는 이러한 권한을 상속받게 됩니다.
 
-맨 위에 있는 **[!UICONTROL 제품]** 링크를 선택하고 왼쪽에 있는 **[!UICONTROL Experience Cloud]**&#x200B;을 선택합니다. Adobe Experience Platform Launch이 목록에 없는 경우, 고객은 계정 팀에 연락하여 <ExchangeTechEC@adobe.com>으로 이메일을 보내야 합니다.
+맨 위에 있는 **[!UICONTROL 제품]** 링크를 선택하고 왼쪽에 있는 **[!UICONTROL Experience Cloud]**&#x200B;을 선택합니다. Data Collection UI가 나열되지 않은 경우 고객이 계정 팀에 연락하여 <ExchangeTechEC@adobe.com>으로 이메일을 보내야 합니다.
 
 ![Admin Console 제품 탭](../images/getting-started/admin-console-products-launch.png)
 
