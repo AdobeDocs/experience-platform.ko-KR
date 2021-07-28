@@ -6,7 +6,7 @@ title: UI에서 대상에 대한 데이터 흐름 모니터링
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 029e990f5b30713ceea5da80ace8002368ac5652
+source-git-commit: 96855ec4e42e7adb17dc36a734561f63f926693b
 workflow-type: tm+mt
 source-wordcount: '1733'
 ht-degree: 0%
@@ -117,7 +117,7 @@ ID는 프로필의 다른 패싯을 나타냅니다. 예를 들어 프로필에 
 
 ![](../assets/ui/monitor-destinations/dataflow-records-batch.png)
 
-## 대상 대시보드 모니터링
+## 대상 대시보드 모니터링 {#monitoring-destinations-dashboard}
 
 [!UICONTROL 모니터링] 대시보드에 액세스하려면 **[!UICONTROL 모니터링]**(![모니터링 아이콘](../assets/ui/monitor-destinations/monitoring-icon.png))을 선택합니다
 )을 클릭하여 제품에서 사용할 수 있습니다. [!UICONTROL 모니터링] 페이지에서 [!UICONTROL 대상]을 선택합니다. [!UICONTROL 모니터링] 대시보드에는 대상 실행 작업에 대한 지표와 정보가 포함되어 있습니다.
