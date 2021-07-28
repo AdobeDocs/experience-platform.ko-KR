@@ -1,7 +1,7 @@
 ---
 title: 확장 끝점
 description: Reactor API에서 /extensions 종단점을 호출하는 방법을 알아봅니다.
-source-git-commit: 6a1728bd995137a7cd6dc79313762ae6e665d416
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '981'
 ht-degree: 8%
@@ -14,7 +14,7 @@ Reactor API에서 확장은 [확장 패키지](./extension-packages.md)의 설�
 
 확장은 정확히 하나의 속성에 속합니다. 속성에는 여러 개의 확장이 있을 수 있지만 주어진 확장 패키지의 설치된 인스턴스를 두 개 이하로 포함할 수 없습니다.
 
-## 시작
+## 시작하기
 
 이 안내서에 사용된 끝점은 [Reactor API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml)의 일부입니다. 계속하기 전에 API 인증 방법에 대한 중요한 정보가 필요하면 [시작 안내서](../getting-started.md)를 검토하십시오.
 
@@ -1092,7 +1092,7 @@ curl -X GET \
           "displayName": "Cookie"
         }
       ],
-      "description": "Provides default event, condition, and data element types available to all Launch users.",
+      "description": "Provides default event, condition, and data element types available to all tags users.",
       "discontinued": false,
       "display_name": "Kessel Test",
       "events": [
