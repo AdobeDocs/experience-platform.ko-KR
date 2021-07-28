@@ -1,7 +1,7 @@
 ---
 title: Adobe Target v2 확장에 대한 릴리스 노트
 description: Adobe Experience Platform의 Adobe Target v2 태그 확장에 대한 최신 릴리스 노트입니다.
-source-git-commit: ae6b69ecea54942c1bbf8a2765768bac50a8b930
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '572'
 ht-degree: 44%
@@ -12,7 +12,7 @@ ht-degree: 44%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Experience Platform에서 데이터 수집 기술 세트로 브랜드 재지정되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../../term-updates.md)을 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../../term-updates.md)을 참조하십시오.
 
 ## 2021년 7월 20일
 
@@ -36,7 +36,7 @@ ht-degree: 44%
 
 ### Adobe Target v2 확장 0.14.2
 
-- 최종 Launch 번들에 at.js 버전 2개가 포함되어 있는 버그를 수정합니다. 이 단계에서 On-Device Decisioning이 수행되고, 그렇지 않은 버전이 각각 있습니다.
+- 최종 번들에 at.js 버전 2개가 포함되어 있는 버그를 수정합니다. 이 버전에는 On-Device Decisioning이 있고, 나머지 버전에는 없는 버전이 있습니다.
 
 ## 2021년 5월 19일
 
