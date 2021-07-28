@@ -1,10 +1,10 @@
 ---
 title: 코어 확장에 대한 릴리스 노트
 description: Adobe Experience Platform의 코어 확장에 대한 최신 릴리스 노트입니다.
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1211'
-ht-degree: 74%
+source-wordcount: '1210'
+ht-degree: 71%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 74%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Experience Platform에서 데이터 수집 기술 세트로 브랜드 재지정되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../../term-updates.md)을 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../../term-updates.md)을 참조하십시오.
 
 ## 2021년 5월 20일
 
@@ -103,7 +103,7 @@ v1.6.2
 
 v1.6.1
 
-* **CSP 임시 항목 지원** - 코어 확장에는 이제 선택적 구성 매개 변수가 있습니다. 임시 항목을 참조하는 데이터 요소를 추가할 수 있습니다. 구성된 경우, 태그가 페이지에 추가하는 모든 인라인 스크립트는 사용자가 구성한 임시 항목을 사용합니다. 이 변경 사항은 Platform Launch 스크립트가 CSP 환경에서 로드될 수 있도록 컨텐츠 보안 정책을 임시로 사용할 수 있도록 지원합니다.  CSP에서 Platform Launch 사용에 대한 자세한 내용은 [여기](../../../ui/client-side/content-security-policy.md)에서 확인할 수 있습니다.
+* **CSP 임시 항목 지원** - 코어 확장에는 이제 선택적 구성 매개 변수가 있습니다. 임시 항목을 참조하는 데이터 요소를 추가할 수 있습니다. 구성된 경우, 태그가 페이지에 추가하는 모든 인라인 스크립트는 사용자가 구성한 임시 항목을 사용합니다. 이 변경 사항은 태그 스크립트가 CSP 환경에서 로드될 수 있도록 컨텐츠 보안 정책을 임시로 사용할 수 있도록 지원합니다. CSP [여기](../../../ui/client-side/content-security-policy.md)에서 태그 사용에 대한 자세한 내용을 읽을 수 있습니다.
 
 ## 2019년 6월 18일
 
