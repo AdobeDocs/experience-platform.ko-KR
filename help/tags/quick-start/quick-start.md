@@ -1,9 +1,9 @@
 ---
 title: Quickstart 안내서
 description: Adobe Experience Platform에서 태그를 신속하게 설정하고 실행하는 방법을 배웁니다.
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
 workflow-type: tm+mt
-source-wordcount: '1533'
+source-wordcount: '1532'
 ht-degree: 41%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 41%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Experience Platform에서 데이터 수집 기술 세트로 브랜드 재지정되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../term-updates.md)을 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../term-updates.md)을 참조하십시오.
 
 태그는 Adobe Experience Platform의 차세대 태그 관리 기술입니다. Adobe 고객이 자신의 사이트에 배포할 수 있는 자체 통합을 빌드할 수 있는 개방적이고 지속 가능한 에코시스템을 지원하도록 완전히 새로 빌드되었습니다. UI를 통해 수행할 수 있는 것은 무엇이든 API를 통해 프로그래밍 방식으로 수행할 수도 있는 API 최초 애플리케이션입니다.
 
@@ -26,8 +26,6 @@ ht-degree: 41%
 6. 개발 환경에서 테스트합니다.
 7. 프로덕션으로 승격.
 
-소개 비디오를 보려면 [소개 비디오](videos.md) 설명서를 참조하십시오.
-
 ## 1. 그룹 및 사용자 설정
 
 태그는 Adobe ID과 완전히 통합되었습니다. 사용자 권한은 [!DNL Creative Cloud], [!DNL Document Cloud] 및 Experience Cloud의 다른 Adobe 제품 및 솔루션과 함께 Admin Console을 통해 관리됩니다.
@@ -38,7 +36,7 @@ ht-degree: 41%
 
 ## 2. 로그인
 
-태그 권한이 Adobe ID에 추가되면 데이터 수집 UI에 로그인해야 합니다. 이렇게 하려면 [Experience Cloud 로그인 화면](https://experiencecloud.adobe.com)으로 직접 이동하고 빠른 액세스 탭에서 **[!UICONTROL Launch / Data Collection]**&#x200B;을 선택하면 됩니다.
+태그 권한이 Adobe ID에 추가되면 데이터 수집 UI에 로그인해야 합니다. 이렇게 하려면 [Experience Cloud 로그인 화면](https://experiencecloud.adobe.com)으로 직접 이동하고 빠른 액세스 탭에서 데이터 수집 UI를 선택하면 됩니다.
 
 >[!NOTE]
 >
@@ -56,7 +54,7 @@ ht-degree: 41%
 
 새 속성은 모두 [코어 확장](../extensions/web/core/overview.md)을 설치하면 제공됩니다. 모바일 속성은 추가 확장으로 제공됩니다. 코어 확장은 데이터 계층에 강력한 기본 데이터 요소 유형 세트를 제공하고 규칙에 이벤트 유형을 제공하기 위해 Adobe에서 빌드합니다. 수행하려는 대부분의 작업(ECID 가져오기, [!DNL Adobe Analytics] 비콘 보내기, [!DNL Target] 글로벌 mbox 로드 등)은 카탈로그에서 설치하는 확장에서 가져옵니다.
 
-Platform에서 태그를 고유하게 만드는 것은 이러한 확장을 누구나 구축할 수 있다는 것입니다. 사이트에서 Facebook 리마케팅 픽셀을 삭제해야 합니까? Facebook에서 작성한 확장을 확인합니다. Twitter나 LinkedIn에 대해 동일하게 하시겠습니까? 그러한 확장을 사용합니다. 설문 조사를 실행해야 합니까? Question Pro 또는 Foresee를 참조하십시오. [!DNL GDPR] 사용에 도움이 되도록 최종 사용자의 개인 정보를 관리하고 동의를 받아야 합니까? Evidon 및 Trust Arc를 살펴보십시오. 사이트에서 개별 사용자의 행동을 세부적으로 살펴보시겠습니까? Clicktale을 살펴보십시오. 자세한 내용은 [새 확장 추가](../ui/managing-resources/extensions/overview.md#add-a-new-extension)를 참조하십시오.
+Platform에서 태그를 고유하게 만드는 것은 이러한 확장을 누구나 구축할 수 있다는 것입니다. 사이트에서 Facebook 리마케팅 픽셀을 삭제해야 합니까? Facebook에서 작성한 확장을 확인합니다. Twitter나 LinkedIn에 대해 동일하게 하시겠습니까? 그러한 확장을 사용합니다. 설문 조사를 실행해야 합니까? Question Pro 또는 Foresee를 참조하십시오. [!DNL GDPR] 사용에 도움이 되도록 최종 사용자의 개인 정보를 관리하고 동의를 받아야 합니까? Evidon 및 Trust Arc를 살펴보십시오. 사이트에서 개별 사용자의 행동을 세부적으로 살펴보시겠습니까? Clicktale을 살펴보십시오. 자세한 내용은 [새 확장 추가](../ui/managing-resources/extensions/overview.md#add-a-new-extension)에서 섹션을 참조하십시오.
 
 ## 5. 데이터 요소 및 규칙 만들기
 
