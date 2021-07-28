@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform Debugger를 사용하여 포함 코드 테스트
 description: Platform Debugger를 사용하여 웹 사이트에서 Adobe Experience Platform에 대한 다양한 포함 코드를 로컬에서 테스트하는 방법을 알아봅니다.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '516'
 ht-degree: 57%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 57%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Experience Platform에서 데이터 수집 기술 세트로 브랜드 재지정되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../term-updates.md)을 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../term-updates.md)을 참조하십시오.
 
 Adobe Experience Platform에서 태그 라이브러리 빌드를 변경할 때 빌드를 프로덕션 환경에 배포하기 전에 이러한 변경 사항을 테스트해야 합니다. 웹 사이트에 대한 전용 스테이징 또는 개발 환경이 없는 경우 Adobe Experience Platform Debugger를 사용하여 사이트 내에서 다른 포함 코드를 로컬에서 테스트할 수 있습니다.
 
