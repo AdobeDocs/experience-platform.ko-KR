@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK의 IAB TCF 2.0 지원
 description: Adobe Experience Platform Web SDK를 사용하여 IAB TCF 2.0 동의 환경 설정을 지원하는 방법을 알아봅니다
 keywords: 동의;설정 동의;프로필 개인 정보 필드 그룹;경험 이벤트 개인 정보 필드 그룹;개인 정보 필드 그룹;IAB TCF 2.0;실시간 CDP;실시간 고객 데이터 프로필
 exl-id: 78e728f4-1604-40bf-9e21-a056024bbc98
-source-git-commit: da7696d288543abd21ff8a1402e81dcea32efbc2
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '879'
+source-wordcount: '864'
 ht-degree: 0%
 
 ---
@@ -14,12 +14,12 @@ ht-degree: 0%
 
 Adobe Experience Platform Web SDK는 Interactive Advertising Bureau Transparency &amp; Consent Framework 버전 2.0(IAB TCF 2.0)을 지원합니다. 이 안내서에서는 실시간 고객 데이터 플랫폼, Audience Manager, 경험 이벤트, Adobe Analytics 및 Experience Edge와 통합된 Adobe Experience Platform Web SDK를 통해 IAB TCF 2.0을 지원하는 요구 사항을 보여줍니다.
 
-또한 다음 가이드를 사용하여 Adobe Experience Platform Launch과 IAB TCF 2.0을 통합하는 방법을 학습할 수 있습니다.
+또한 IAB TCF 2.0을 태그 및 없이 통합하는 방법을 학습하기 위해 다음 지침을 사용할 수 있습니다.
 
-- [Adobe Experience Platform Launch 사용](./with-launch.md)
-- [Adobe Experience Platform Launch 제외](./without-launch.md)
+- [태그 사용](./with-launch.md)
+- [태그 제외](./without-launch.md)
 
-## 시작
+## 시작하기
 
 IAB TCF 2.0을 사용하여 웹 SDK를 구현하려면 XDM(Experience Data Model) 및 Experience Event에 대한 작업 이해를 가져야 합니다. 시작하기 전에 다음 문서를 검토하십시오.
 
@@ -90,4 +90,4 @@ Adobe Experience Platform Web SDK에는 Experience Event를 수집하는 `sendEv
 
 ## 다음 단계
 
-IAB Transparency &amp; Consent Framework 2.0에 대한 기본적인 이해가 있으므로 Adobe Experience Platform Launch](./with-launch.md) 사용 시 IAB TCF 2.0 [Adobe Experience Platform Launch](./without-launch.md) 사용 안 함 또는 [없이 사용하는 방법에 대한 안내서를 참조하십시오.
+IAB Transparency &amp; Consent Framework 2.0에 대한 기본적인 이해가 있으므로 태그](./with-launch.md) 또는 태그 없이 [IAB TCF 2.0 [을 사용하는 방법에 대한 안내서를 참조하십시오.](./without-launch.md)
