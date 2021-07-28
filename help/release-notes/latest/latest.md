@@ -1,46 +1,51 @@
 ---
 title: Adobe Experience Platform 릴리스 정보
-description: 2021년 6월 30일 Experience Platform 릴리스 노트.
+description: 2021년 7월 28일 Experience Platform 릴리스 노트.
 doc-type: release notes
-last-update: June 30, 2021
+last-update: July 28, 2021
 author: ens60013
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: fc916f87bf07e5eabf7d1681059406e2fea362e0
+source-git-commit: dc01e03975fdda375b31f44edc8459fa32b5a61b
 workflow-type: tm+mt
-source-wordcount: '530'
-ht-degree: 6%
+source-wordcount: '387'
+ht-degree: 10%
 
 ---
 
 
 # Adobe Experience Platform 릴리스 노트
 
-**릴리스 날짜: 2021년 6월 30일**
+**릴리스 날짜: 2021년 7월 28일**
 
 Adobe Experience Platform의 기존 기능 업데이트:
 
-- [실시간 고객 프로필](#profile)
-- [샌드박스](#sandboxes)
+- [데이터 과학 작업 영역](#dsw)
+- [XDM(경험 데이터 모델)](#xdm)
 - [소스](#sources)
 
-## 실시간 고객 프로필 {#profile}
+## 데이터 과학 작업 영역 {#dsw}
 
-Adobe Experience Platform을 사용하면 고객이 브랜드와 상호 작용하는 위치와 시기에 관계없이 고객을 위해 조정되고 일관되며 적절한 경험을 제공할 수 있습니다. 실시간 고객 프로필을 사용하면 온라인, 오프라인, CRM 및 타사 데이터를 포함하여 여러 채널의 데이터를 결합하는 각 개별 고객을 전체적으로 확인할 수 있습니다. [!DNL Profile] 고객 데이터를 모든 고객 상호 작용을 실행 가능하고 타임스탬프가 지정된 계정을 제공하는 통합 보기에 통합할 수 있습니다.
+Data Science Workspace는 기계 학습 및 인공 지능을 사용하여 데이터를 통해 통찰력을 생성합니다. Adobe Experience Platform에 통합된 Data Science Workspace을 사용하면 Adobe 솔루션에서 컨텐츠 및 데이터 자산을 사용하여 예측을 할 수 있습니다.
 
-| 기능 | 설명 |
-| ------- | ----------- |
-| 병합 정책 워크플로 업데이트 | UI에서 병합 정책을 만들고 업데이트할 때 사용자는 이제 결합 스키마를 기반으로 20개의 샘플 프로필을 미리 볼 수 있습니다. 이를 통해 병합 정책 구성을 저장하기 전에 고객 프로필의 모양을 미리 볼 수 있습니다. 자세한 내용은 [병합 정책 UI 안내서](../../profile/merge-policies/ui-guide.md)를 참조하십시오. |
-| ID 겹치기 보고서 | ID 겹치기 보고서는 실시간 고객 프로필 API의 일부이며, 프로필 저장소의 구성에 대한 가시성을 제공합니다. `/previewsamplestatus` 종단점을 사용하는 경우 ID 중복 보고서는 주소 지정 가능한 대상에 가장 많이 기여하는 ID를 표시합니다. 자세한 내용은 [샘플 상태 API 엔드포인트 가이드](../../profile/api/preview-sample-status.md)를 참조하십시오. |
-
-[!DNL Profile] 데이터 작업에 대한 자습서 및 우수 사례 등 실시간 고객 프로필에 대한 자세한 내용은 [실시간 고객 프로필 개요](../../profile/home.md)를 읽어서 시작하십시오.
-
-## 샌드박스 {#sandboxes}
-
-Adobe Experience Platform은 디지털 경험 애플리케이션을 전 세계에 맞게 보강하기 위해 제작되었습니다. 기업은 여러 디지털 경험 애플리케이션을 동시에 운영하고 있으며 운영 규정을 준수하면서 이러한 애플리케이션의 개발, 테스트 및 배포를 충족해야 합니다. 이러한 요구 사항을 해결하기 위해 Experience Platform은 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 단일 플랫폼 인스턴스를 별도의 가상 환경으로 분할하는 샌드박스 를 제공합니다.
+**새로운 기능**
 
 | 기능 | 설명 |
-| ------- | ----------- |
-| 프로덕션 샌드박스 재설정 개선 사항 | 이제 Adobe Audience Manager 또는 Audience Core Service와 양방향 세그먼트 공유에 사용되는 프로덕션 샌드박스를 재설정할 수 있습니다. 이 작업은 UI에서 수행하거나 API에서 새 `validationOnly` 및 `ignoreWarnings` 매개 변수를 사용하여 수행할 수 있습니다. 자세한 내용은 UI](../../sandboxes/ui/user-guide.md) 및 [API](../../sandboxes/api/sandboxes.md)에서 샌드박스 재설정 [에서 자습서를 참조하십시오. |
+| --- | --- |
+| 라이브러리 및 OS 업데이트 | Data Science Workspace는 기능과 유용성을 개선하기 위해 중요한 라이브러리 및 OS 업데이트를 만들었습니다. 여기에는 JupiterLab 1.2.20, Python 3.7, Penders 1.2.4, Tensorflow 2.4, CUDA 11 및 CUNN 8 지원 등이 포함됩니다. JupiterLab 내에서 사용 가능한 라이브러리를 보는 방법에 대해 알아보려면 JupiterLab 노트북 개요 설명서의 [지원되는 라이브러리](../../data-science-workspace/jupyterlab/overview.md#supported-libraries) 섹션을 참조하십시오. |
+
+데이터 과학 작업 공간에 대한 일반적인 정보는 [데이터 과학 작업 공간 개요](../../data-science-workspace/home.md)를 참조하십시오.
+
+## XDM(경험 데이터 모델) {#xdm}
+
+XDM(Experience Data Model)은 디지털 경험의 성능을 향상하도록 설계된 오픈 소스 사양입니다. 모든 응용 프로그램이 Platform 서비스와 통신할 수 있도록 하는 스키마 형식의 데이터에 대한 공통 구조 및 정의를 제공합니다.
+
+**새로운 기능**
+
+| 기능 | 설명 |
+| --- | --- |
+| 통신 산업 필터 | UI에서 스키마에 필드 그룹을 추가할 때 이제 통신 산업별로 필터링할 수 있습니다. 통신 사용 사례에 대한 권장 데이터 모델을 보려면 [통신 업계 엔티티 관계 다이어그램(ERD)](../../xdm/schema/industries/telecom.md)을 참조하십시오. |
+
+플랫폼의 XDM에 대한 일반적인 정보는 [XDM 시스템 개요](../../xdm/home.md)를 참조하십시오.
 
 ## 소스 {#sources}
 
@@ -50,7 +55,7 @@ Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 
 
 | 기능 | 설명 |
 | ------- | ----------- |
-| [!DNL Veeva CRM] (베타) | 이제 [!DNL Flow Service] API 또는 UI를 사용하여 [!DNL Veeva CRM]을 Experience Platform에 연결할 수 있습니다. 자세한 내용은 [[!DNL Veeva CRM] 커넥터 개요](../../sources/connectors/crm/veeva.md)를 참조하십시오. |
-| 스트리밍 데이터 흐름 모니터링 지원 | 이제 소스 UI 작업 공간을 사용하여 해당 지표 및 상태로 스트리밍 소스의 데이터 수집 활동을 모니터링할 수 있습니다. 자세한 내용은 [스트리밍 데이터 흐름 모니터링](../../sources/tutorials/ui/monitor-streaming.md)의 자습서를 참조하십시오. |
+| GA로 이동하는 베타 소스 | 다음 소스가 Beta에서 GA로 승격되었습니다. <ul><li>[[!DNL Amazon Redshift]](../../sources/connectors/databases/redshift.md)</li><li>[[!DNL Azure Table Storage]](../../sources/connectors/databases/ats.md)</li><li>[[!DNL PayPal]](../../sources/connectors/payments/paypal.md)</li></ul> |
+| [!DNL Salesforce Marketing Cloud] (베타) | 이제 [!DNL Flow Service] API 또는 UI를 사용하여 [!DNL Salesforce Marketing Cloud]을 Experience Platform에 연결할 수 있습니다. 자세한 내용은 [[!DNL Salesforce Marketing Cloud] 커넥터 개요](../../sources/connectors/marketing-automation/salesforce-marketing-cloud.md)를 참조하십시오. |
 
 소스에 대해 자세히 알아보려면 [소스 개요](../../sources/home.md)를 참조하십시오.
