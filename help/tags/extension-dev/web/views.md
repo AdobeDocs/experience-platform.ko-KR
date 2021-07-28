@@ -1,9 +1,9 @@
 ---
 title: 보기 횟수 in Web Extensions
 description: Adobe Experience Platform 웹 확장에서 라이브러리 모듈에 대한 보기를 정의하는 방법을 알아봅니다.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '2062'
+source-wordcount: '2063'
 ht-degree: 74%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 74%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Experience Platform에서 데이터 수집 기술 세트로 브랜드 재지정되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../term-updates.md)을 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../term-updates.md)을 참조하십시오.
 
 각 이벤트, 조건, 작업 또는 데이터 요소 유형마다 사용자가 설정을 제공할 수 있는 보기를 제공할 수 있습니다. 또한 확장에는 사용자가 전체 확장에 대한 전역 설정을 제공할 수 있는 최상위 [확장 구성 보기](../configuration.md)가 있을 수 있습니다. 뷰 개발 프로세스는 모든 유형의 뷰에서 동일합니다.
 
