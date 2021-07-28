@@ -1,7 +1,7 @@
 ---
 title: 확장에 대한 Exchange 목록 만들기
 description: Adobe Experience Platform의 공개 카탈로그에 확장을 추가하는 방법을 알아봅니다.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '1162'
 ht-degree: 28%
@@ -12,7 +12,7 @@ ht-degree: 28%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Experience Platform에서 데이터 수집 기술 세트로 브랜드 재지정되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../term-updates.md)을 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../term-updates.md)을 참조하십시오.
 
 Adobe Experience Platform에는 사용자가 설치를 위해 사용할 수 있는 태그 확장을 볼 수 있는 단일 통합 카탈로그가 있습니다. 이 카탈로그는 제품 내에서 사용할 수 있으며 다음 세 가지 유형의 확장을 포함합니다.
 
@@ -44,7 +44,6 @@ Adobe Experience Platform에는 사용자가 설치를 위해 사용할 수 있�
    >[!NOTE]
    >
    >확장 코드에서 사용되는 것과 다른 파일 형식입니다. 확장 자체에는 svg 파일이 [아이콘](../manifest.md)으로 포함됩니다.
-   
    - **주요 이미지**  - 독립 실행형 이미지를 사용하여 브랜드를 표시하고 애플리케이션을 강조할 수 있습니다. 주요 이미지는 Exchange 목록에 대한 링크 또는 소셜 미디어에서 게시물에 대한 링크를 공유할 때 표시되는 이미지입니다. 따라서 브랜드를 대표할 수 있어야 합니다.
    - **앱 게시자의 로고** - 회사의 로고이며, 아이콘 크기가 1280 x 720 또는 2560 x 1440(16:9)인 png 또는 jpg 포맷인지 확인하십시오.
    - **구성 지침**  - Adobe Experience Platform 확장을 구성하는 방법을 고객에게 설명합니다. 속성에 확장을 설치한 직후에 [구성 보기](../configuration.md)가 나타날 때 필요한 설정과 다음 단계를 이해하는지 확인합니다. 
@@ -69,4 +68,4 @@ Exchange 사이트에 로그인하지 않은 경우 [프로그램 등록 안내�
 
 ## 목록에 확장 패키지를 연결합니다
 
-목록이 승인되고 공개적으로 사용 가능한 경우, 확장 패키지 내의 `extension.json` 파일의 `exchange_url` 필드에 공개 목록에 대한 링크를 제공하는 것이 좋습니다.  이렇게 하면 Platform launch 확장 카탈로그 내에 &quot;추가 정보&quot; 링크가 생성되므로 제품 내의 사용자가 목록을 찾을 수 있고 추가 정보가 있습니다.
+목록이 승인되고 공개적으로 사용 가능한 경우, 확장 패키지 내의 `extension.json` 파일의 `exchange_url` 필드에 공개 목록에 대한 링크를 제공하는 것이 좋습니다.  이렇게 하면 태그 확장 카탈로그 내에 &quot;추가 정보&quot; 링크가 생성되므로 제품 내의 사용자가 목록을 찾을 수 있고 추가 정보가 있습니다.
