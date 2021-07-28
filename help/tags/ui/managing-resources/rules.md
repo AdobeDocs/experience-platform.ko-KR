@@ -1,9 +1,9 @@
 ---
 title: 규칙
 description: Adobe Experience Platform에서 태그 확장이 작동하는 방식을 알아봅니다.
-source-git-commit: 5f810ada57eeb12a56de603d974a091b888dc9d2
+source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
 workflow-type: tm+mt
-source-wordcount: '1983'
+source-wordcount: '1977'
 ht-degree: 77%
 
 ---
@@ -12,13 +12,11 @@ ht-degree: 77%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Experience Platform에서 데이터 수집 기술 세트로 브랜드 재지정되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../term-updates.md)을 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../term-updates.md)을 참조하십시오.
 
 Adobe Experience Platform의 태그는 규칙 기반 시스템을 따릅니다. 사용자 상호 작용 및 관련 데이터를 찾습니다. 규칙에 요약된 기준이 충족되면, 규칙이 정의한 확장, 스크립트 또는 클라이언트측 코드를 트리거합니다.
 
 서로 다른 제품을 하나의 솔루션으로 통합하는 마케팅 및 광고 기술에 대한 데이터와 기능을 통합하는 규칙을 빌드합니다.
-
-소개 비디오를 보려면 [규칙 빌더](../../quick-start/videos.md)를 참조하십시오.
 
 ## 규칙 구조
 
