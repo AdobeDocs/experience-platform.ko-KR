@@ -1,17 +1,17 @@
 ---
 title: Adobe Experience Platform Web SDK Extension의 데이터 요소 유형
-description: Adobe Experience Platform Launch에서 Adobe Experience Platform Web SDK 확장에서 제공하는 다양한 데이터 요소 유형에 대해 알아봅니다.
+description: Adobe Experience Platform Web SDK 태그 확장에서 제공하는 다양한 데이터 요소 유형에 대해 알아봅니다.
 exl-id: 3c2c257f-1fbc-4722-8040-61ad19aa533f
-source-git-commit: 5a295a1f6e64c33ac4a48e1d74253d0527f495f9
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '305'
-ht-degree: 47%
+source-wordcount: '293'
+ht-degree: 49%
 
 ---
 
 # 데이터 요소 유형
 
-[Adobe Experience Platform Web SDK 확장 프로그램](web-sdk-extension-configuration.md)에서 [작업 유형을 ](action-types.md)Adobe Experience Platform Launch](https://experienceleague.adobe.com/docs/launch.html)에 설정한 후 데이터 요소 유형을 구성합니다.[
+[Adobe Experience Platform Web SDK 태그 확장](web-sdk-extension-configuration.md)에서 [작업 유형](action-types.md)을 설정한 후 데이터 요소 유형을 구성합니다.
 
 이 페이지에서는 사용 가능한 데이터 요소 유형을 설명합니다.
 
