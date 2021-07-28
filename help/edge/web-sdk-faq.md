@@ -2,14 +2,14 @@
 title: Adobe Experience Platform 웹 SDK FAQ
 description: Adobe Experience Platform Web SDK에 대해 자주 묻는 질문에 대한 답변을 얻을 수 있습니다.
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1843'
+source-wordcount: '1802'
 ht-degree: 1%
 
 ---
 
-# Experience Cloud 핵심 서비스에 대한
+# 자주 묻는 질문
 
 이 안내서에서는 Adobe Experience Platform Web SDK에 대해 자주 묻는 질문에 대한 답변을 제공합니다.
 
@@ -32,7 +32,7 @@ Adobe Experience Platform Web SDK는 Adobe Experience Cloud 고객이 Experience
 * 이러한 라이브러리 중 어느 것도 서로 작동하도록 빌드되지 않았습니다.
 * 솔루션 간 및 Adobe Experience Platform 사용 사례에서는 이러한 서로 다른 라이브러리를 상호 종속적으로 사용해야 하므로 배포 마찰이 발생합니다.
 
-Adobe Experience Platform Launch을 통해 이러한 라이브러리를 가능한 한 쉽게 배포하고 관리할 수 있지만, 다음과 같은 문제는 아직 있습니다.
+Platform의 태그를 사용하면 이러한 라이브러리를 가능한 한 쉽게 배포하고 관리할 수 있지만, 다음과 같은 문제가 여전히 있습니다.
 
 * 라이브러리 크기(페이지에 너무 많은 Adobe 코드)
 * 성능(사이트를 로드하는 데 시간이 너무 오래 걸립니다.)
@@ -62,11 +62,11 @@ Adobe Experience Platform Web SDK는 데이터를 Adobe Experience Platform으�
 
 **성능:** 웹 SDK는 현재 모든 Adobe 라이브러리를 사용하는 것보다 작으며, 페이지 로드 속도가 훨씬 빠릅니다.
 
-**단순성:** XDM, Web SDK, Experience Platform Launch, Experience Edge, Adobe Experience Cloud 솔루션 및 Adobe Experience Platform의 조합을 통해 이해하기 쉽고 이해하기 쉬운 데이터 수집 스토리를 만들 수 있습니다.
+**단순성:** XDM, 웹 SDK, 태그, Experience Edge, Adobe Experience Cloud 솔루션 및 Adobe Experience Platform의 조합을 통해 이해하기 쉽고 이해하기 쉬운 데이터 수집 스토리를 만들 수 있습니다.
 
 * **XDM:** 데이터를 Adobe으로 전송하는 데 사용하는 솔루션과 관계없는 스키마입니다. evar 또는 mbox에 대한 태깅이 더 이상 없습니다.
 * **Adobe Experience Platform Web SDK:** Adobe Experience Platform Edge 네트워크에 데이터를 쉽게 보내고 받을 수 있도록 해줍니다.
-* **Experience Platform Launch:** 사이트에서 웹 SDK(및 기타 JavaScript 태그)를 배포하고 구성을 단순화합니다.
+* **태그:** 사이트에서 웹 SDK(및 기타 JavaScript 태그)를 배포하고 구성을 단순화합니다.
 * **Experience Edge:** 필요한 형식으로 데이터를 Adobe Experience Platform 및 솔루션에 쉽게 라우팅할 수 있습니다.
 * **Adobe Experience Platform 및 Adobe 솔루션:** 해당 가치 제안을 활성화합니다.
 
@@ -74,7 +74,7 @@ Adobe Experience Platform Web SDK는 데이터를 Adobe Experience Platform으�
 
 **최신 상태로 향후 준비:** Experience Edge Network에 대한 웹 SDK 및 Experience Edge Network와의 연결을 통해 Adobe이 데이터 수집, 개인화, 동의 및 타사 쿠키의 미래를 처리하는 방법을 크게 현대화할 수 있습니다. (Adobe에서 관리하는 자사 도메인을 활성화합니다.)
 
-**가치 실현 시간:** Adobe은 Experience Platform Launch을 통해 웹 SDK를 쉽게 배포하고 클라이언트측 데이터를 XDM에 매핑할 수 있도록 열심히(그리고 계속) 작업했습니다.  작업이 완료되면 다른 모든 Adobe 솔루션 및 Adobe Experience Platform 서비스를 서버측에서 모두 켜거나 끌 수 있습니다. 예를 들어, Adobe Analytics에 이 기능을 사용하고 Target 또는 Experience Platform을 켜려면 데이터 스트림 구성에서 토글을 뒤집고 해당 사용 사례를 켜면 됩니다.
+**가치 실현 시간:** Adobe은 태그를 통해 웹 SDK를 쉽게 배포하고 클라이언트측 데이터를 XDM에 매핑할 수 있도록 열심히(계속) 작업했습니다.  작업이 완료되면 다른 모든 Adobe 솔루션 및 Adobe Experience Platform 서비스를 서버측에서 모두 켜거나 끌 수 있습니다. 예를 들어, Adobe Analytics에 이 기능을 사용하고 Target 또는 Experience Platform을 켜려면 데이터 스트림 구성에서 토글을 뒤집고 해당 사용 사례를 켜면 됩니다.
 
 ## 합금이란?
 
@@ -113,7 +113,7 @@ Adobe Experience Platform Web SDK는 다음 사용자를 위해 개발되었습�
 
 상황에 따라 다릅니다. Adobe Experience Platform Web SDK는 두 가지 다른 스타일로 배포할 수 있습니다. 향후 마이그레이션 문서는 추가 세부 정보를 제공합니다.
 
-* **그저 다른 태그입니다.**  사이트에 솔루션에 대해 이미 태그가 지정되어 있고 다시 태그를 지정할 수 없지만 Experience Platform 사용 사례 또는 예정된 Experience Platform Launch 서버측 기능을 위해 Adobe Experience Platform Edge Network에 데이터를 전송하려는 경우(아래 참조) 사이트에 태그를 추가할 수 있습니다. 이  `alloy.js` 태그는 사이트에서 &quot;그저 다른 태그&quot;로 작동합니다.
+* **그저 다른 태그입니다.**  사이트에 솔루션에 대해 이미 태그가 지정되어 있고 다시 태그를 지정할 수 없지만 Experience Platform 사용 사례 또는 예정된 이벤트 전달 기능을 위해 Adobe Experience Platform Edge Network에 데이터를 전송하려는 경우(아래 참조) 사이트에  `alloy.js` 태그를 추가할 수 있습니다. 여기서 &quot;다른 태그&quot;로 작동합니다.
 
 * **유일한 태그:**  Experience Cloud 솔루션에 웹 SDK를 사용하려면 해당 페이지의  __ 모든 솔루션에 사용해야 합니다. 예를 들어 사이트에 Adobe Analytics에 대해 이미 태그가 지정되어 있고 Target에 사용하려는 경우 향후 다른 사이트뿐만 아니라 둘 다에 사용해야 합니다.
 
@@ -123,29 +123,29 @@ Adobe Experience Platform Web SDK는 다음 사용자를 위해 개발되었습�
 
 예. Adobe Experience Platform Web SDK는 ID 마이그레이션 기능을 제공합니다. 자세한 내용은 [Platform 웹 SDK ID 설명서](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html?lang=en#id-migration)의 ID 마이그레이션 지침을 따르십시오.
 
-## 웹 SDK는 Adobe Experience Platform Launch과 어떻게 다릅니까?
+## 웹 SDK는 태그와 어떻게 다릅니까?
 
-* **Experience Platform** 실행 은 장치 코드 관리자입니다. 이 코드를 사용하여 코드를 보다 쉽게 배포할 수 있습니다. 그것은 자유롭고 강력하다.
+* **Experience Platform의** 태그는 장치 코드를 관리합니다. 이러한 코드를 사용하여 코드를 보다 쉽게 배포할 수 있습니다. 그들은 자유롭고 강력하다.
 
-* **Adobe Experience Platform 웹** SDK는 Adobe 사용 사례에 대해 Experience Platform Launch이 배포할 새 코드의 공식 이름입니다. 그것은 또한 자유롭고 강력합니다.
+* **Adobe Experience Platform 웹** SDK는 Adobe 사용 사례에 대해 태그로 배포되는 새 코드의 공식 이름입니다. 그것은 또한 자유롭고 강력합니다.
 
 * **`alloy.js`** 는 Adobe Experience Platform 웹 SDK 코드의 파일 이름입니다.
 
-## 웹 SDK를 배포하려면 Adobe Experience Platform Launch을 사용해야 합니까?
+## 웹 SDK를 배포하려면 태그를 사용해야 합니까?
 
 아니요. `alloy.js` 파일을 직접 다운로드할 수 있습니다.
 
 그러나,
 
-* Adobe Experience Platform Web SDK를 사용하려면 Edge 네트워크가 스트림을 식별하고 데이터를 사용하여 수행할 작업을 결정할 수 있도록 데이터 스트림 ID라고 하는 것이 필요합니다. 이 ID는 Experience Platform Launch 내에 만들어집니다. 이는 Experience Platform Launch을 사용하여 속성을 만들거나 JavaScript 코드를 배포해야 하는 것은 아니지만, 구성 ID를 만들려면 Experience Platform Launch을 사용해야 합니다.
+* Adobe Experience Platform Web SDK를 사용하려면 Edge 네트워크가 스트림을 식별하고 데이터를 사용하여 수행할 작업을 결정할 수 있도록 데이터 스트림 ID라고 하는 것이 필요합니다. 이 ID는 Experience Platform 내에 만들어집니다. 이는 Data Collection UI를 사용하여 속성을 만들거나 JavaScript 코드를 배포해야 함을 의미하지는 않지만, 태그를 사용하여 구성 ID를 만들어야 합니다.
 
-* Adobe Experience Platform Launch은 사용 가능한 최상의 태그 및 SDK 관리자뿐만 아니라, `alloy.js` 을 배포하고 데이터를 XDM 스키마에 매핑하는 것도 매우 쉽습니다. Experience Platform Launch을 사용하지 않기로 결정한 경우 데이터를 보내기 전에 `alloy.js` 배포, 이벤트 및 XDM에 매핑하는 작업을 관리해야 합니다. 이것은 Experience Platform Launch을 사용하는 것보다 _훨씬 더 어려운 프로세스입니다._
+* 태그는 사용 가능한 최상의 태그 및 SDK 관리자일 뿐만 아니라, `alloy.js` 을 배포하고 데이터를 XDM 스키마에 매핑하는 것도 매우 쉽습니다. 태그를 사용하지 않기로 결정한 경우 `alloy.js` 배포, 이벤트 및 데이터를 XDM에 매핑하고 전송하기 전에 관리해야 합니다. 이것은 _태그를 사용하는 것보다 훨씬 더 어려운 프로세스입니다._
 
-* Experience Platform Launch을 사용하는 유일한 태그인 경우에도 `alloy.js` 을 배포할 때 를 사용하는 것이 좋습니다.
+* 태그를 사용하는 유일한 태그인 경우에도 `alloy.js` 을 배포하는 데 태그를 사용하는 것이 좋습니다.
 
-## Adobe Experience Platform Launch Server Side란 무엇입니까?
+## 이벤트 전달이란 무엇입니까?
 
-2020년 말, Experience Platform Launch은 서버측 전달 기능을 릴리스할 예정입니다. SDK를 사용하고 XDM을 Experience Edge로 전송하는 경우 이러한 새로운 기능을 통해 새로운 서버측 확장을 설치하고 해당 데이터를 Adobe Edge Network에서 아무데나 매핑하고 전송할 수 있습니다. 이를 &quot;서비스로서의 데이터 수집&quot;이라고 생각합니다.  이 서비스는 Adobe Experience Platform의 일부로 번들로 제공될 뿐만 아니라, 비용에 대해서도 사용할 수 있습니다.
+SDK를 사용하고 XDM을 Experience Edge로 전송하는 경우 이러한 새로운 기능 이벤트 전달을 통해 새로운 서버측 확장을 설치하고 해당 데이터를 Adobe Edge Network에서 아무데나 매핑하고 전송할 수 있습니다. 이를 &quot;서비스로서의 데이터 수집&quot;이라고 생각합니다.  이 서비스는 Adobe Experience Platform의 일부로 번들로 제공될 뿐만 아니라, 비용에 대해서도 사용할 수 있습니다.
 
 ## CNAME 또는 퍼스트 파티 도메인이란 무엇이며, 이 도메인이 중요한 이유는 무엇입니까?
 
