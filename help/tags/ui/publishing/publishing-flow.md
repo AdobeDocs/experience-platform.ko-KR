@@ -1,9 +1,9 @@
 ---
 title: 게시 흐름
 description: Adobe Experience Platform에서 라이브러리를 만들고, 빌드를 테스트하고, 프로덕션에 대해 승인하는 프로세스에 대해 알아봅니다.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1498'
+source-wordcount: '1499'
 ht-degree: 7%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 7%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Experience Platform에서 데이터 수집 기술 세트로 브랜드 재지정되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../term-updates.md)을 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../term-updates.md)을 참조하십시오.
 
 Adobe Experience Platform에서 태그 게시 흐름은 라이브러리를 만들고, 빌드를 테스트하고, 프로덕션에 대해 승인하는 프로세스를 말합니다.
 
@@ -63,7 +63,7 @@ Adobe Experience Platform에서 태그 게시 흐름은 라이브러리를 만�
 | [!UICONTROL 스테이징에 제출 및 빌드] | 이 작업은 개발 및 승인 권한이 모두 있는 사용자만 수행할 수 있습니다. 이 작업은 개발 환경에서 라이브러리 할당을 취소하고, 라이브러리를 [!UICONTROL Submitted] 상태로 이동하고, 라이브러리를 스테이징 환경으로 빌드합니다. 이 옵션을 사용하려면 라이브러리에 대한 최신 빌드가 성공해야 합니다. |
 | [!UICONTROL Approve for Publishing] | 이 작업은 개발 및 승인 권한이 모두 있는 사용자만 수행할 수 있습니다. 이 작업은 개발 환경에서 라이브러리 할당을 취소하고 [!UICONTROL Approved] 상태로 이동합니다. 스테이징 환경을 건너뛰고 [!UICONTROL Submitted] 상태를 완전히 건너뜁니다. 이 옵션을 사용하려면 라이브러리에 대한 최신 빌드가 성공해야 합니다. |
 | [!UICONTROL 승인 및 프로덕션에 게시] | 이 작업은 개발, 승인 및 게시 권한이 있는 사용자만 수행할 수 있습니다. 이 작업은 개발 환경에서 라이브러리 할당을 취소하고, [!UICONTROL Approved] 상태로 이동한 후 프로덕션에 게시합니다. 프로덕션 빌드가 완료되면 라이브러리가 [!UICONTROL Published] 상태로 이동합니다. 이 옵션을 사용하려면 라이브러리에 대한 최신 빌드가 성공해야 합니다. |
-| [!UICONTROL 삭제] | platform launch에서 라이브러리를 제거합니다. 이렇게 해도 환경에서 빌드가 제거되지는 않습니다. |
+| [!UICONTROL 삭제] | 시스템에서 라이브러리를 제거합니다. 이렇게 해도 환경에서 빌드가 제거되지는 않습니다. |
 
 ### [!UICONTROL 제출됨] {#submitted}
 
