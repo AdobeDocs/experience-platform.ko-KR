@@ -1,9 +1,9 @@
 ---
 title: 비동기 배포
 description: 웹 사이트에서 Adobe Experience Platform 태그 라이브러리를 비동기식으로 배포하는 방법을 알아봅니다.
-source-git-commit: 5f810ada57eeb12a56de603d974a091b888dc9d2
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1009'
+source-wordcount: '1010'
 ht-degree: 56%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 56%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Experience Platform에서 데이터 수집 기술 세트로 브랜드 재지정되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../term-updates.md)을 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../term-updates.md)을 참조하십시오.
 
 Adobe 제품에 필요한 JavaScript 라이브러리의 성능 및 비차단 배포는 Adobe Experience Cloud 사용자에게 점점 더 중요해지고 있습니다. [[!DNL Google PageSpeed]](https://developers.google.com/speed/pagespeed/insights/) 같은 도구는 사용자가 자신의 사이트에 Adobe 라이브러리를 배포하는 방식을 변경할 것을 권장합니다. 이 문서에서는 비동기 방식으로 Adobe JavaScript 라이브러리를 사용하는 방법을 설명합니다.
 
