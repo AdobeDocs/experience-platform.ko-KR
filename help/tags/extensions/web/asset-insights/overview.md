@@ -1,9 +1,9 @@
 ---
 title: AEM 자산 통찰력 확장 개요
 description: Adobe Experience Platform의 AEM 자산 통찰력 태그 확장에 대해 알아봅니다.
-source-git-commit: 1d3415146335d3011963c969d5b6aeea1f1a51d0
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1117'
+source-wordcount: '1118'
 ht-degree: 75%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 75%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Experience Platform에서 데이터 수집 기술 세트로 브랜드 재지정되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../../term-updates.md)을 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../../term-updates.md)을 참조하십시오.
 
 이 확장은 [AEM 자산 통찰력](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html)과 함께 사용됩니다. 보다 구체적으로 설명하면 &quot;pageTracker&quot; 프로세스 및 포함 코드를 대체합니다. 구성된 경우, 이 확장은 자산 *노출* 및 *클릭* 지표를 Adobe Analytics로 전송하며 해당 지표는 이후 AEM 자산 통찰력 보고서로 가져옵니다. 그런 다음 AEM 자산 통찰력 또는 Adobe Analytics Project Workspaces를 사용하여 자산 지표를 보고할 수 있습니다.
 
