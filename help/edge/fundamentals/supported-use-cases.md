@@ -2,9 +2,9 @@
 title: Adobe Experience Platform Web SDK에서 지원되는 사용 사례
 description: Adobe Experience Platform Web SDK에서 지원되는 사용 사례를 알아봅니다.
 keywords: 웹 sdk;사용 사례
-source-git-commit: 7f694310b17ab257eae459003bb820f7221bb55e
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '555'
+source-wordcount: '552'
 ht-degree: 14%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 14%
 | 페이지의 여러 조직에 데이터 보내기 | [설명서](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/interacting-with-multiple-properties.html?lang=en#fundamentals) |
 | 자세한 오류 보고 및 로그 |  |
 | 추적 요청 클라이언트 측 및 서버 측 |  |
-| Adobe Experience Platform Launch 확장 | [웹 SDK 확장 문서](../../tags/extensions/web/sdk/overview.md) |
+| 태그 확장 | [웹 SDK 확장 문서](../../tags/extensions/web/sdk/overview.md) |
 | 디버깅 도구 사용 가능 | [디버거 ](https://experienceleague.adobe.com/docs/debugger-learn/tutorials/experience-platform-debugger/introduction-to-the-experience-platform-debugger.html?lang=en) 확장 및  [Griffon](https://aep-sdks.gitbook.io/docs/beta/project-griffon) |
 
 {style=&quot;table-layout:auto&quot;}
