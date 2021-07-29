@@ -3,14 +3,18 @@ title: Adobe Experience Platform Web SDK 릴리스 노트
 description: Adobe Experience Platform Web SDK에 대한 최신 릴리스 정보입니다.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;릴리스 노트;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: e158b8129fe5afe71af48b7c64ca34b00e79965c
+source-git-commit: c6feab3c9cda479c7dabdbf0533145fdcaa36ab1
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '670'
+ht-degree: 5%
 
 ---
 
 # 릴리스 정보
+
+## 버전 2.6.1 - 2021년 7월 29일
+
+* 개인화 콘텐츠가 없는 단일 페이지 앱 보기에 대한 개인화를 렌더링하면 오류가 발생하고 `sendEvent` 명령에서 반환된 약속이 거부되는 문제가 해결되었습니다.
 
 ## 버전 2.6.0 - 2021년 7월 27일
 
