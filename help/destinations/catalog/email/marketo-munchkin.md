@@ -3,10 +3,10 @@ keywords: Marketo Munchkin;marketo munchkin;Marketo Munchkin 확장 프로그램
 title: Marketo Munchkin 확장 프로그램
 description: Marketo Munchkin 확장은 Adobe Experience Platform의 개인화 대상입니다. 확장 기능에 대한 자세한 내용은 Exchange Adobe의 확장 페이지를 참조하십시오.
 exl-id: 0639ff74-5450-456e-b030-8118814ed705
-source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
+source-git-commit: 967a287852ce4f479f658900593aed1f1f2bc0ad
 workflow-type: tm+mt
-source-wordcount: '504'
-ht-degree: 8%
+source-wordcount: '481'
+ht-degree: 9%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 8%
 
 [!DNL Marketo’s Munchkin][!DNL Marketo] JavaScript를 사용하면 랜딩 페이지 및 외부 웹 페이지에 대한 최종 사용자 페이지 방문 수 및 클릭 수를 추적할 수 있습니다.
 
-[!DNL Marketo Munchkin] 는 Adobe Experience Platform의 이메일 확장입니다. 확장 기능에 대한 자세한 내용은 [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101054.marketo-munchkin.html)에서 확장 페이지를 참조하십시오.
+[!DNL Marketo Munchkin] 는 Adobe Experience Platform의 이메일 확장입니다. Marketo Munchkin에 대한 자세한 내용은 Marketo 설명서에서 [리드 추적](https://developers.marketo.com/javascript-api/lead-tracking/)을 참조하십시오.
 
 이 대상은 태그 확장입니다. Platform에서 태그 확장이 작동하는 방법에 대한 자세한 내용은 [태그 확장 개요](../launch-extensions/overview.md)를 참조하십시오.
 
@@ -43,8 +43,6 @@ ht-degree: 8%
 확장을 설치할 속성을 선택합니다. 새 속성을 만들 수도 있습니다. 속성은 규칙, 데이터 요소, 구성된 확장, 환경 및 라이브러리의 컬렉션입니다. 태그 설명서에서 의 [속성 페이지 섹션](../../../tags/ui/administration/companies-and-properties.md#properties-page)에 있는 속성에 대해 알아봅니다.
 
 워크플로우는 설치를 완료하는 단계를 안내합니다.
-
-확장 구성 옵션 및 설치 지원에 대한 자세한 내용은 Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101054.marketo-munchkin.html)의 [Marketo Munchkin 페이지를 참조하십시오.
 
 확장 프로그램은 [데이터 수집 UI](https://experience.adobe.com/#/data-collection/)에 직접 설치할 수도 있습니다. 자세한 내용은 태그 설명서에서 [새 확장 추가](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension)의 섹션을 참조하십시오.
 
