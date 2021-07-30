@@ -3,9 +3,9 @@ keywords: bizible;bizible 확장;bizible 대상
 title: Bizible 확장
 description: Bizible 확장은 Adobe Experience Platform의 이메일 대상입니다. 확장 기능에 대한 자세한 내용은 Exchange Adobe의 확장 페이지를 참조하십시오.
 exl-id: 9e45416d-b951-411c-a59f-34f84529f721
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 967a287852ce4f479f658900593aed1f1f2bc0ad
 workflow-type: tm+mt
-source-wordcount: '462'
+source-wordcount: '446'
 ht-degree: 3%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 3%
 
 ## 개요 {#overview}
 
-[!DNL Bizible] 는 데이터에 대한 평행적이지 않은 가시성을 제공하므로 데이터 증가에 대한 현명한 결정을 내릴 수 있는 업계 선도적인 B2B 속성 솔루션입니다.
+[!DNL Bizible] 는 데이터에 대한 탁월한 가시성을 제공하므로 데이터 증가에 따른 현명한 결정을 내릴 수 있는 업계 선도적인 B2B 속성 솔루션입니다.
 
-[!DNL Bizible] 는 Adobe Experience Platform의 이메일 확장입니다. 확장 기능에 대한 자세한 내용은 [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101055.bizible-analytics.html)에서 확장 페이지를 참조하십시오.
+[!DNL Bizible] 는 Adobe Experience Platform의 이메일 확장입니다. Bizible에 대한 자세한 내용은 Bizible 개요 리소스의 [마케팅 속성](https://experienceleague.adobe.com/docs/bizible/using/introduction-to-bizible/overview-resources/marketing-attribution.html?lang=en)을 참조하십시오.
 
 이 대상은 태그 확장입니다. Platform에서 태그 확장이 작동하는 방식에 대한 자세한 내용은 [태그 확장 개요](../launch-extensions/overview.md)를 참조하십시오.
 
@@ -41,8 +41,6 @@ ht-degree: 3%
 확장을 설치할 태그 속성을 선택합니다. 새 속성을 만들 수도 있습니다. 속성은 규칙, 데이터 요소, 구성된 확장, 환경 및 라이브러리의 컬렉션입니다. [태그 설명서](../../../tags/ui/administration/companies-and-properties.md)의 속성에 대해 알아봅니다.
 
 워크플로우를 통해 데이터 수집 UI로 이동하여 설치를 완료합니다.
-
-확장 구성 옵션 및 설치 지원에 대한 자세한 내용은 Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101055.bizible-analytics.html)의 [Bizible 페이지를 참조하십시오.
 
 확장 프로그램은 [데이터 수집 UI](https://experience.adobe.com/#/data-collection/)에 직접 설치할 수도 있습니다. 자세한 내용은 [새 확장 추가](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension)에 대한 안내서를 참조하십시오.
 
