@@ -1,7 +1,7 @@
 ---
 title: 사용자 권한
 description: Adobe Experience Platform 사용자가 사용할 수 있는 다양한 태그 권한에 대해 알아봅니다.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: e93cb075dc8c8d01fcda3edf0014f86a47b5b710
 workflow-type: tm+mt
 source-wordcount: '2397'
 ht-degree: 66%
@@ -75,7 +75,6 @@ Enterprise 조직 관리자는 Platform의 태그에 대한 권한을 상속하�
 회사 권한은 여러 속성에 걸쳐 있는 권한에 적용됩니다. 현재 세 가지가 있습니다.
 
 * **속성 관리:**  데이터 수집 UI에서 새 속성을 만들고 속성 수준에서 메타데이터 및 설정을 수정할 수 있습니다. 속성을 삭제할 수도 있습니다. 자세한 내용은 [속성 설명서](companies-and-properties.md)를 참조하십시오. 관리자는 일반적으로 이 역할을 수행합니다.
-* 
 * 새 속성을 만들고 속성 수준에서 메타데이터 및 설정을 수정하는 권한을 부여합니다. 속성을 삭제할 수도 있습니다. [여기](companies-and-properties.md)서 속성에 대해 자세히 알아보십시오. 관리자는 일반적으로 이 역할을 수행합니다.
 * **확장 개발:** 비공개 릴리스 및 공개 릴리스 요청을 포함하여 회사가 소유한 확장 패키지를 만들고 수정하는 권한을 부여합니다.
 * **앱 구성 관리:**  이 기능은 Adobe Journey Optimizer에 라이선스가 있는 고객 또는 모바일 인앱 및 푸시 메시지에 액세스할 수 있는 기타 솔루션에서만 사용할 수 있습니다.  이를 통해 Firebase 클라우드 메시징 서비스 및 Apple 푸시 알림 서비스와 통신하는 데 필요한 푸시 자격 증명과 함께 Experience Cloud이 알고 있는 앱을 관리할 수 있습니다.
