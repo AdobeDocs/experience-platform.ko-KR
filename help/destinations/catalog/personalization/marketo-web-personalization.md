@@ -3,9 +3,9 @@ keywords: Marketo 웹 개인화;marketo 웹 개인화;Marketo 웹 개인화 확�
 title: Marketo 웹 개인화 확장
 description: Marketo 웹 개인화 확장은 Adobe Experience Platform의 개인화 대상입니다. 확장 기능에 대한 자세한 내용은 Exchange Adobe의 확장 페이지를 참조하십시오.
 exl-id: 2f194a5e-13b7-460a-a968-29131771efca
-source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
+source-git-commit: 967a287852ce4f479f658900593aed1f1f2bc0ad
 workflow-type: tm+mt
-source-wordcount: '532'
+source-wordcount: '516'
 ht-degree: 3%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 3%
 
 이 확장은 [!DNL Marketo’s] 웹 개인화 및 ContentAI 응용 프로그램에 대한 스크립트를 배포합니다. [!DNL Marketo] 웹 개인화는 익명의 방문자를 위한 첫 번째 그래픽 및 알려진 방문자를 위한  [!DNL Marketo] 참여 플랫폼 내의 다양한 행동 속성 등 컨텐츠를 웹 방문자 특성에 고유하게 식별하고 개인화합니다. [!DNL Marketo] ContentAI에는 B2B 고객을 위해 고유한 웹 및 이메일 캠페인을 위한 AI 기반 권장 사항 및 개인화를 위한 기능이 포함되어 있습니다.
 
-[!DNL Marketo Web Personalization] 는 Adobe Experience Platform의 개인화 확장입니다. 확장 기능에 대한 자세한 내용은 [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101232.marketo-web-personalization.html)에서 확장 페이지를 참조하십시오.
+[!DNL Marketo Web Personalization] 는 Adobe Experience Platform의 개인화 확장입니다. Marketo의 웹 개인화 및 ContentAI에 대한 자세한 내용은 [웹 개인화 개요](https://experienceleague.adobe.com/docs/marketo/using/product-docs/web-personalization/understanding-web-personalization/web-personalization-overview.html?lang=en)를 참조하십시오.
 
 이 대상은 태그 확장입니다. Platform에서 태그 확장이 작동하는 방법에 대한 자세한 내용은 [태그 확장 개요](../launch-extensions/overview.md)를 참조하십시오.
 
@@ -41,8 +41,6 @@ ht-degree: 3%
 확장을 설치할 속성을 선택합니다. 새 속성을 만들 수도 있습니다. 속성은 규칙, 데이터 요소, 구성된 확장, 환경 및 라이브러리의 컬렉션입니다. 태그 설명서에서 의 [속성 페이지 섹션](../../../tags/ui/administration/companies-and-properties.md#properties-page)에 있는 속성에 대해 알아봅니다.
 
 워크플로우는 설치를 완료하는 단계를 안내합니다.
-
-확장 구성 옵션 및 설치 지원에 대한 자세한 내용은 Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101232.marketo-web-personalization.html)의 [Marketo 웹 개인화 페이지를 참조하십시오.
 
 확장 프로그램은 [데이터 수집 UI](https://experience.adobe.com/#/data-collection/)에 직접 설치할 수도 있습니다. 자세한 내용은 태그 설명서에서 [새 확장 추가](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension)의 섹션을 참조하십시오.
 
