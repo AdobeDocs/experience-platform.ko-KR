@@ -3,10 +3,10 @@ keywords: livefyre;livefyre 확장
 title: Livefyre 확장 Adobe
 description: Livefyre Adobe 확장은 Adobe Experience Platform의 소셜 대상입니다. 확장 기능에 대한 자세한 내용은 Exchange Adobe의 확장 페이지를 참조하십시오.
 exl-id: a134c144-e7b8-4d48-8c90-5999e5ceb8a0
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 967a287852ce4f479f658900593aed1f1f2bc0ad
 workflow-type: tm+mt
-source-wordcount: '472'
-ht-degree: 5%
+source-wordcount: '452'
+ht-degree: 3%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 5%
 
 Livefyre Adobe을 사용하면 사용자가 생성한 컨텐츠를 지속적으로 웹 사이트에 게시하여 인증되고 개인화된 경험을 만들 수 있습니다.
 
-Livefyre Adobe은 Adobe Experience Platform의 소셜 확장입니다. 확장 기능에 대한 자세한 내용은 [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100464.html)에서 확장 페이지를 참조하십시오.
+Livefyre Adobe은 Adobe Experience Platform의 소셜 확장입니다. Livefyre Adobe에 대한 자세한 내용은 [Livefyre 구현 안내서](https://experienceleague.adobe.com/docs/livefyre/implementation/home.html?lang=en)를 참조하십시오.
 
 이 대상은 태그 확장입니다. Platform에서 태그 확장이 작동하는 방식에 대한 자세한 내용은 [태그 확장 개요](../launch-extensions/overview.md)를 참조하십시오.
 
@@ -42,10 +42,7 @@ Livefyre Adobe 확장을 설치하려면 다음을 수행하십시오.
 
 워크플로우를 통해 데이터 수집 UI로 이동하여 설치를 완료합니다.
 
-확장 구성 옵션 및 설치 지원에 대한 자세한 내용은 Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100464.html)의 [Livefyre Adobe 페이지를 참조하십시오.
-
 확장 프로그램은 [데이터 수집 UI](https://experience.adobe.com/#/data-collection/)에 직접 설치할 수도 있습니다. 자세한 내용은 [새 확장 추가](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension)에 대한 안내서를 참조하십시오.
-
 
 ## 확장 사용 방법 {#how-to-use}
 
