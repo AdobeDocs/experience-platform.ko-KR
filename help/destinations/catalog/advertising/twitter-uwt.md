@@ -3,9 +3,9 @@ keywords: twitter;Twitter;twitter 범용 웹 사이트 태그;Twitter 범용 웹
 title: Twitter 범용 웹 사이트 태그 확장
 description: twitter 범용 웹 사이트 태그 확장은 Adobe Experience Platform의 광고 대상입니다. 확장 기능에 대한 자세한 내용은 Exchange Adobe의 확장 페이지를 참조하십시오.
 exl-id: 51ee94f7-e44a-4192-b684-3d7838af4359
-source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
+source-git-commit: 967a287852ce4f479f658900593aed1f1f2bc0ad
 workflow-type: tm+mt
-source-wordcount: '460'
+source-wordcount: '462'
 ht-degree: 3%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 3%
 
 [!DNL Twitter Universal Website Tag] 은 Twitter UWT 태그에 비콘을 전송하는 작업을 제공합니다.
 
-[!DNL Twitter Universal Website Tag] 는 Adobe Experience Platform의 광고 확장입니다. 확장 기능에 대한 자세한 내용은 [고급 전환 추적](https://business.twitter.com/en/solutions/twitter-ads/website-clicks/advanced-conversion-tracking.html)을 참조하십시오.
+[!DNL Twitter Universal Website Tag] 는 Adobe Experience Platform의 광고 확장입니다. 확장 기능에 대한 자세한 내용은 Twitter 설명서에서 [전환 추적](https://business.twitter.com/en/help/campaign-measurement-and-analytics/conversion-tracking-for-websites.html) 을 참조하십시오.
 
 이 대상은 태그 확장입니다. Platform에서 태그 확장이 작동하는 방법에 대한 자세한 내용은 [태그 확장 개요](../launch-extensions/overview.md)를 참조하십시오.
 
