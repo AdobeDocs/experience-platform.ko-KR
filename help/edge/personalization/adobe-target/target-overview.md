@@ -3,9 +3,9 @@ title: Platform Web SDK에서 Adobe Target 사용
 description: Adobe Target을 사용하여 Experience Platform Web SDK로 개인화된 컨텐츠를 렌더링하는 방법을 알아봅니다
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisions;코드 조각 사전 숨김;vec;양식 기반 경험 작성기;xdm;대상;결정;범위;스키마;시스템 다이어그램;다이어그램
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: 1d2f1651dc9d9ab41507e65fd4b2bb84e9660187
+source-git-commit: 930756b4e10c42edf2d58be16c51d71df207d1af
 workflow-type: tm+mt
-source-wordcount: '1256'
+source-wordcount: '1273'
 ht-degree: 5%
 
 ---
@@ -42,8 +42,8 @@ ht-degree: 5%
 | 3 | 에지 네트워크는 방문자 ID 및 전달된 매개 변수와 함께 [!DNL Target] 에지에 보강된 개인화 요청을 보냅니다. |
 | 4 | 프로필 스크립트가 실행된 다음 [!DNL Target] 프로필 저장소에 반영됩니다. 프로필 저장소는 [!UICONTROL 대상 라이브러리]에서 세그먼트를 가져옵니다(예: [!DNL Adobe Analytics], [!DNL Adobe Audience Manager], [!DNL Adobe Experience Platform]에서 공유된 세그먼트). |
 | 5 | [!DNL Target] 은 URL 요청 매개 변수 및 프로필 데이터를 기반으로 현재 페이지 보기 및 향후 미리 가져온 보기에 대해 방문자에 대해 표시할 활동 및 경험을 결정합니다. [!DNL Target] 그런 다음 이 파일을 다시 에지 네트워크로 보냅니다. |
-| 6 | a. 에지 네트워크는 개인화 응답을 다시 페이지로 보냅니다. 원할 경우 추가적인 개인화를 위한 프로필 값을 포함할 수 있습니다. 현재 페이지의 개인화된 콘텐츠는 기본 콘텐츠의 플리커 없이 가능한 한 빨리 나타납니다.<br>나. SPA(단일 페이지 애플리케이션)의 사용자 동작으로 표시되는 보기에 대한 개인화된 콘텐츠는 캐시되므로, 보기가 트리거될 때 추가적인 서버 호출 없이 즉시 적용할 수 있습니다&#x200B;.<br>c. 에지 네트워크가 동의, 세션 ID, ID, 쿠키 확인, 개인화 등의 쿠키에 방문자 ID 및 기타 값을 보냅니다. |
-| 7 | 에지 네트워크는 [!UICONTROL Target 분석] (A4T) 세부 사항(활동, 경험 및 변환 메타데이터)을 [!DNL Analytics] 에지로 &#x200B; 전달합니다. |
+| 6 | a. 에지 네트워크는 개인화 응답을 다시 페이지로 보냅니다. 원할 경우 추가적인 개인화를 위한 프로필 값을 포함할 수 있습니다. 현재 페이지의 개인화된 콘텐츠는 기본 콘텐츠의 플리커 없이 가능한 한 빨리 나타납니다.<br>나. SPA(단일 페이지 애플리케이션)에서 사용자 작업의 결과로 표시되는 보기에 대한 개인화된 콘텐츠는 캐시되므로, 보기가 트리거될 때 추가 서버 호출 없이 즉시 적용할 수 있습니다. <br>c. 에지 네트워크가 동의, 세션 ID, ID, 쿠키 확인, 개인화 등의 쿠키에 방문자 ID 및 기타 값을 보냅니다. |
+| 7 | 에지 네트워크는 [!UICONTROL Target 분석] (A4T) 세부 사항(활동, 경험 및 변환 메타데이터)을 [!DNL Analytics] 에지에 전달합니다. |
 
 ## [!DNL Adobe Target] 활성화
 
@@ -63,79 +63,9 @@ ht-degree: 5%
 
 자세한 내용은 *Adobe Target 안내서*&#x200B;에서 [시각적 경험 작성기 Helper 확장 프로그램](https://experienceleague.adobe.com/docs/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html)을 참조하십시오.
 
-## VEC 활동 자동 렌더링
+## 개인화된 콘텐츠 렌더링
 
-[!DNL Adobe Experience Platform Web SDK]은(는) 사용자를 위해 웹에서 [!DNL Adobe Target]의 VEC를 통해 정의된 경험을 자동으로 렌더링할 수 있는 권한이 있습니다. VEC 활동을 자동으로 렌더링하도록 [!DNL Experience Platform Web SDK]에 나타내려면 `renderDecisions = true` 를 사용하여 이벤트를 보내십시오.
-
-```javascript
-alloy
-("sendEvent", 
-  { 
-  "renderDecisions": true, 
-  "xdm": {
-    "commerce": { 
-      "order": {
-        "purchaseID": "a8g784hjq1mnp3", 
-         "purchaseOrderNumber": "VAU3123", 
-         "currencyCode": "USD", 
-         "priceTotal": 999.98 
-         } 
-      } 
-    }
-  }
-);
-```
-
-## 양식 기반 작성기 사용
-
-[양식 기반 경험 작성기](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html)는 [!UICONTROL A/B 테스트], [!UICONTROL 경험 타깃팅], [!UICONTROL Automated Personalization] 및 JSON, HTML, 이미지 등과 같은 다른 응답 유형을 갖는 [!UICONTROL Recommendations] 활동을 구성하는 데 유용한 시각적이지 않은 인터페이스입니다. [!DNL Target]에서 반환된 응답 유형 또는 결정에 따라 핵심 비즈니스 로직을 실행할 수 있습니다. 양식 기반 작성기 활동에 대한 결정을 검색하려면 결정을 검색할 모든 &#39;decisionScopes&#39;가 있는 이벤트를 보내십시오.
-
-```javascript
-alloy
-  ("sendEvent", { 
-    decisionScopes: [
-      "foo", "bar"], 
-      "xdm": {
-        "commerce": { 
-          "order": { 
-            "purchaseID": "a8g784hjq1mnp3", 
-            "purchaseOrderNumber": "VAU3123", 
-            "currencyCode": "USD", 
-            "priceTotal": 999.98 
-          } 
-        } 
-      } 
-    }
-  );
-```
-
-## 결정 범위
-
-`decisionScopes` 개인화된 경험을 렌더링할 페이지의 섹션, 위치 또는 부분을 정의합니다. 이러한 `decisionScopes`은 사용자 정의 가능하고 사용자가 정의합니다. 현재 [!DNL Target] 고객의 경우 `decisionScopes`을 &quot;mbox&quot;라고도 합니다. [!DNL Target] UI에서 `decisionScopes`이 &quot;위치&quot;로 표시됩니다.
-
-## `__view__` 범위
-
-[!DNL Experience Platform Web SDK]은 VEC 작업을 렌더링하기 위해 SDK에 의존하지 않고 VEC 작업을 검색하는 기능을 제공합니다. `__view__`이 `decisionScopes`로 정의된 이벤트를 보냅니다.
-
-```javascript
-alloy("sendEvent", {
-      "decisionScopes": ["__view__", "foo", "bar"], 
-      "xdm": { 
-        "web": { 
-          "webPageDetails": { 
-            "name": "Home Page"
-          }
-        } 
-      }
-    }
-  ).then(function(results) {
-    for (decision of results.decisions) {
-      if (decision.decisionScope === "__view__") {
-        console.log(decision.content)
-      }
-    }
-  });
-```
+자세한 내용은 [개인화 콘텐츠 렌더링](../rendering-personalization-content.md)을 참조하십시오.
 
 ## XDM의 대상
 
@@ -153,6 +83,86 @@ alloy("sendEvent", {
 * 시간대
 
 자세한 내용은 *Adobe Target 안내서*&#x200B;에서 [대상 카테고리](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/target-rules.html?lang=en)를 참조하십시오.
+
+### 응답 토큰
+
+응답 토큰은 주로 Google, Facebook 등과 같은 타사에 메타데이터를 전송하는 데 사용됩니다. 응답 토큰이 반환됩니다
+`propositions` -> `items` 내의 `meta` 필드에서 다음을 수행합니다. 다음은 샘플입니다.
+
+```
+{
+  "id": "AT:eyJhY3Rpdml0eUlkIjoiMTI2NzM2IiwiZXhwZXJpZW5jZUlkIjoiMCJ9",
+  "scope": "__view__",
+  "scopeDetails": ...,
+  "renderAttempted": true,
+  "items": [
+    {
+      "id": "0",
+      "schema": "https://ns.adobe.com/personalization/dom-action",
+      "meta": {
+        "experience.id": "0",
+        "activity.id": "126736",
+        "offer.name": "Default Content",
+        "offer.id": "0"
+      }
+    }
+  ]
+}
+```
+
+응답 토큰을 수집하려면 `alloy.sendEvent` 약속에 가입하고 `propositions` 를 반복합니다
+및 `items` -> `meta`에서 세부 정보를 추출합니다. 모든 `proposition`에는 `renderAttempted` 부울 필드가 있습니다
+`proposition` 렌더링되었는지 여부를 나타냅니다. 아래 샘플을 참조하십시오.
+
+```
+alloy("sendEvent",
+  {
+    renderDecisions: true,
+    decisionScopes: [
+      "hero-container"
+    ]
+  }).then(result => {
+    const { propositions } = result;
+
+    // filter rendered propositions
+    const renderedPropositions = propositions.filter(proposition => proposition.renderAttempted === true);
+
+    // collect the item metadata that represents the response tokens
+    const collectMetaData = (items) => {
+      return items.filter(item => item.meta !== undefined).map(item => item.meta);
+    }
+
+    const pageLoadResponseTokens = renderedPropositions
+      .map(proposition => collectMetaData(proposition.items))
+      .filter(e => e.length > 0)
+      .flatMap(e => e);
+  });
+  
+```
+
+자동 렌더링 이 활성화되면 Proposition 배열에 다음이 포함됩니다.
+
+#### 페이지 로드 시:
+
+* `renderAttempted` 플래그가 `false`로 설정된 양식 기반 작성기 `propositions`
+* `renderAttempted` 플래그가 `true`로 설정된 시각적 경험 작성기 기반 제안
+* `renderAttempted` 플래그가 `true`로 설정된 단일 페이지 애플리케이션 보기에 대한 시각적 경험 작성기 기반 제안
+
+#### 보기 시 - 변경(캐시된 보기의 경우):
+
+* `renderAttempted` 플래그가 `true`로 설정된 단일 페이지 애플리케이션 보기에 대한 시각적 경험 작성기 기반 제안
+
+자동 렌더링 이 비활성화되면 Proposition 배열에 다음이 포함됩니다.
+
+#### 페이지 로드 시:
+
+* `renderAttempted` 플래그가 `false`로 설정된 양식 기반 작성기 `propositions`
+* `renderAttempted` 플래그가 `false`로 설정된 시각적 경험 작성기 기반 제안
+* `renderAttempted` 플래그가 `false`로 설정된 단일 페이지 애플리케이션 보기에 대한 시각적 경험 작성기 기반 제안
+
+#### 보기 시 - 변경(캐시된 보기의 경우):
+
+* `renderAttempted` 플래그가 `false`로 설정된 단일 페이지 애플리케이션 보기에 대한 시각적 경험 작성기 기반 제안
 
 ### 단일 프로필 업데이트
 
@@ -244,7 +254,7 @@ mboxTrace 및 mboxDebug는 더 이상 사용되지 않습니다. [[!DNL Platform
 
 ## 용어
 
-__결정:__ 에서  [!DNL Target]결정은 활동에서 선택한 경험과 상호 연결됩니다.
+__제안:__ 에서  [!DNL Target]proposition은 활동에서 선택한 경험과 상호 연결됩니다.
 
 __스키마:__ 결정 스키마는 의 오퍼 유형입니다 [!DNL Target].
 
