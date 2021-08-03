@@ -2,10 +2,10 @@
 title: Adobe Experience Platform Web SDK Extension의 데이터 요소 유형
 description: Adobe Experience Platform Web SDK 태그 확장에서 제공하는 다양한 데이터 요소 유형에 대해 알아봅니다.
 exl-id: 3c2c257f-1fbc-4722-8040-61ad19aa533f
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 2f9ff95529c907cfc28bc98198eca9fcfc21e9b9
 workflow-type: tm+mt
-source-wordcount: '293'
-ht-degree: 49%
+source-wordcount: '292'
+ht-degree: 43%
 
 ---
 
@@ -14,6 +14,7 @@ ht-degree: 49%
 [Adobe Experience Platform Web SDK 태그 확장](web-sdk-extension-configuration.md)에서 [작업 유형](action-types.md)을 설정한 후 데이터 요소 유형을 구성합니다.
 
 이 페이지에서는 사용 가능한 데이터 요소 유형을 설명합니다.
+
 
 ## 이벤트 병합 ID
 
@@ -31,7 +32,7 @@ XDM 형식을 사용하여 데이터를 Adobe Experience Platform Web SDK에 보
 
 ![](./assets/XDM-object.png)
 
-`web.webPageDetails.URL`과 같은 스키마의 특정 필드를 열면 일부 항목이 자동으로 수집됩니다. 여러 항목이 자동으로 수집되지만 필요한 경우 덮어쓸 수 있습니다. 모든 값은 수동으로 채우거나 다른 데이터 요소를 사용할 수 있습니다.
+`web.webPageDetails.URL` 과 같은 스키마의 특정 필드를 열면 일부 항목이 자동으로 수집됩니다. 여러 항목이 자동으로 수집되지만 필요한 경우 덮어쓸 수 있습니다. 모든 값은 수동으로 채우거나 다른 데이터 요소를 사용할 수 있습니다.
 
 >[!NOTE]
 >
