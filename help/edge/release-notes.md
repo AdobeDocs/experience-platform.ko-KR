@@ -3,14 +3,18 @@ title: Adobe Experience Platform Web SDK 릴리스 노트
 description: Adobe Experience Platform Web SDK에 대한 최신 릴리스 정보입니다.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;릴리스 노트;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: c6feab3c9cda479c7dabdbf0533145fdcaa36ab1
+source-git-commit: 165c9bce5dabce9704202ebab6b97a4a30e4ca00
 workflow-type: tm+mt
-source-wordcount: '670'
-ht-degree: 5%
+source-wordcount: '714'
+ht-degree: 4%
 
 ---
 
 # 릴리스 정보
+
+## 버전 2.6.2 - 2021년 8월 4일
+
+* `result.decisions` 속성에 액세스할 수 없는 경우에도 `sendEvent` 명령으로 제공되는 `result.decisions` 사용 중단 경고가 콘솔에 기록되는 문제가 해결되었습니다. `result.decisions` 속성에 액세스할 때 경고가 기록되지 않지만 속성은 계속 사용되지 않습니다.
 
 ## 버전 2.6.1 - 2021년 7월 29일
 
