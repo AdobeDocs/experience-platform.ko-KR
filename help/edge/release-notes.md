@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK 릴리스 노트
 description: Adobe Experience Platform Web SDK에 대한 최신 릴리스 정보입니다.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;릴리스 노트;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 165c9bce5dabce9704202ebab6b97a4a30e4ca00
+source-git-commit: f3821176b0cbc4ad07fbd2e0e20caa1205324a44
 workflow-type: tm+mt
-source-wordcount: '714'
+source-wordcount: '717'
 ht-degree: 4%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 4%
 
 ## 버전 2.6.0 - 2021년 7월 27일
 
-* Adobe Target 응답 토큰을 포함하여 `sendEvent` 확인된 약속에서 더 많은 개인화 콘텐츠를 제공합니다. `sendEvent` 명령이 실행되면 약속이 반환되고, 이 작업은 서버에서 받은 정보가 포함된 `result` 개체로 해결됩니다. 이 결과 개체에는 `decisions` 속성이 포함되어 있습니다. 이 `decisions` 속성은 더 이상 사용되지 않습니다. 새 속성 `propositions`이 추가되었습니다. 이 새 속성은 고객에게 응답 토큰을 포함하여 더 많은 개인화 컨텐츠에 대한 액세스 권한을 제공합니다. 더 많은 설명서가 곧 제공될 예정입니다.
+* Adobe Target 응답 토큰을 포함하여 `sendEvent` 확인된 약속에서 더 많은 개인화 콘텐츠를 제공합니다. `sendEvent` 명령이 실행되면 약속이 반환되고, 이 작업은 서버에서 받은 정보가 포함된 `result` 개체로 해결됩니다. 이전에는 이 결과 개체에 `decisions` 속성이 포함되었습니다. 이 `decisions` 속성은 더 이상 사용되지 않습니다. 새 속성 `propositions`이 추가되었습니다. 이 새 속성은 고객에게 [응답 토큰](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/accessing-response-tokens.html)을 포함하여 더 많은 개인화 컨텐츠에 대한 액세스 권한을 제공합니다.
 
 ## 버전 2.5.0 - 2021년 6월
 
