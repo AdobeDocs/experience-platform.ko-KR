@@ -3,9 +3,9 @@ keywords: facebook 연결;facebook 연결;facebook 대상;facebook;instagram;mes
 title: Facebook 연결
 description: 해시된 이메일을 기반으로 대상 타깃팅, 개인화 및 억제를 위해 Facebook 캠페인용 프로필을 활성화합니다.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 41cfa5b30d8816baf55b8b4e1609ca724e9efe24
+source-git-commit: 32da733eda61049738e87bce48978196a1fea96d
 workflow-type: tm+mt
-source-wordcount: '1160'
+source-wordcount: '1176'
 ht-degree: 2%
 
 ---
@@ -73,15 +73,15 @@ Adobe Experience Platform에 수집하는 ID 유형에 따라 해당 요구 사�
 
 [!DNL Facebook]에서 전화 번호를 활성화하는 방법에는 두 가지가 있습니다.
 
-- **원시 전화 번호 수집**:원시 전화 번호를 형식으로  [!DNL E.164] 수집할 수  [!DNL Platform]있습니다. 활성화 시 자동으로 해시됩니다. 이 옵션을 선택하는 경우 반드시 원시 전화 번호를 항상 `Phone_E.164` 네임스페이스에 수집하십시오.
-- **해시된 전화 번호 수집**:에 수집하기 전에 전화 번호를 미리 해시할 수 있습니다 [!DNL Platform]. 이 옵션을 선택하는 경우 해시된 전화 번호를 항상 `Phone_SHA256` 네임스페이스에 수집해야 합니다.
+- **원시 전화 번호 수집**: 원시 전화 번호를 형식으로  [!DNL E.164] 수집할 수  [!DNL Platform]있습니다. 활성화 시 자동으로 해시됩니다. 이 옵션을 선택하는 경우 반드시 원시 전화 번호를 항상 `Phone_E.164` 네임스페이스에 수집하십시오.
+- **해시된 전화 번호 수집**: 에 수집하기 전에 전화 번호를 미리 해시할 수 있습니다 [!DNL Platform]. 이 옵션을 선택하는 경우 해시된 전화 번호를 항상 `Phone_SHA256` 네임스페이스에 수집해야 합니다.
 
 >[!NOTE]
 >
 >`Phone` 네임스페이스에 수집된 전화 번호는 [!DNL Facebook]에서 활성화할 수 없습니다.
 
 
-## 전자 메일 해싱 요구 사항 {#email-hashing-requirements}
+## 이메일 해싱 요구 사항 {#email-hashing-requirements}
 
 전자 메일 주소를 Adobe Experience Platform에 수집하기 전에 해시하거나 Experience Platform에서 명확히 전자 메일 주소를 사용할 수 있으며 [!DNL Platform] 해시 처리할 수 있습니다.
 
@@ -89,11 +89,11 @@ Experience Platform에서 이메일 주소를 수집하는 방법에 대한 자�
 
 이메일 주소를 직접 해시하도록 선택하는 경우 다음 요구 사항을 충족하는지 확인하십시오.
 
-- 전자 메일 문자열에서 선행 및 후행 공백을 모두 잘라냅니다.예:`<space>johndoe@example.com<space>`;이 아닌 `johndoe@example.com`
+- 전자 메일 문자열에서 선행 및 후행 공백을 모두 잘라냅니다. 예: `<space>johndoe@example.com<space>`;이 아닌 `johndoe@example.com`
 - 이메일 문자열을 해시할 때는 소문자 문자열을 해시해야 합니다.
-   - 예:`EXAMPLE@EMAIL.COM`;이 아닌 `example@email.com`
+   - 예: `EXAMPLE@EMAIL.COM`;이 아닌 `example@email.com`
 - 해시된 문자열이 모두 소문자로 되어 있는지 확인하십시오
-   - 예:`55E79200C1635B37AD31A378C39FEB12F120F116625093A19bC32FFF15041149`;이 아닌 `55e79200c1635b37ad31a378c39feb12f120f116625093a19bc32fff15041149`
+   - 예: `55E79200C1635B37AD31A378C39FEB12F120F116625093A19bC32FFF15041149`;이 아닌 `55e79200c1635b37ad31a378c39feb12f120f116625093a19bc32fff15041149`
 - 문자열의 소금을 치지 마십시오.
 
 >[!NOTE]
@@ -108,15 +108,15 @@ Experience Platform에서 이메일 주소를 수집하는 방법에 대한 자�
 
 `Extern_ID` 네임스페이스를 사용하여 데이터를 [!DNL Facebook]에 보내려면 먼저 [!DNL Facebook Pixel]를 사용하여 자체 식별자를 동기화해야 합니다. 자세한 내용은 [Facebook 공식 설명서](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences/#external_identifiers)를 참조하십시오.
 
-## 대상 {#connect-destination}에 연결
+## 대상에 연결 {#connect-destination}
 
 [!DNL Facebook] 대상에 연결하려면 [소셜 대상 인증 워크플로우](./workflow.md)를 참조하십시오.
 
-아래 비디오에서는 [!DNL Facebook] 대상을 구성하고 세그먼트를 활성화하는 단계를 보여줍니다.
+아래 비디오에서는 소셜 대상을 구성하고 세그먼트를 활성화하는 단계를 보여줍니다. 비디오에서 LinkedIn을 예로 사용하지만 단계는 소셜 대상 간에 유사합니다.
 
 >[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
-## 세그먼트를 [!DNL Facebook] {#activate-segments}로 활성화
+## 세그먼트를 [!DNL Facebook]에 활성화 {#activate-segments}
 
 세그먼트를 [!DNL Facebook]에 활성화하는 방법에 대한 지침은 [대상에 데이터 활성화](../../ui/activate-destinations.md)를 참조하십시오.
 
