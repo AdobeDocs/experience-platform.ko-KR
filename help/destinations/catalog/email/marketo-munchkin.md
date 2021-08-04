@@ -3,7 +3,7 @@ keywords: Marketo Munchkin;marketo munchkin;Marketo Munchkin 확장 프로그램
 title: Marketo Munchkin 확장 프로그램
 description: Marketo Munchkin 확장은 Adobe Experience Platform의 개인화 대상입니다. 확장 기능에 대한 자세한 내용은 Exchange Adobe의 확장 페이지를 참조하십시오.
 exl-id: 0639ff74-5450-456e-b030-8118814ed705
-source-git-commit: 967a287852ce4f479f658900593aed1f1f2bc0ad
+source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
 workflow-type: tm+mt
 source-wordcount: '481'
 ht-degree: 9%
@@ -34,7 +34,7 @@ ht-degree: 9%
 
 [!DNL Marketo Munchkin] 확장을 설치하려면 다음을 수행하십시오.
 
-[플랫폼 인터페이스](http://platform.adobe.com/)에서 **[!UICONTROL 대상]** > **[!UICONTROL 카탈로그]**&#x200B;로 이동합니다.
+[플랫폼 인터페이스](https://platform.adobe.com/)에서 **[!UICONTROL 대상]** > **[!UICONTROL 카탈로그]**&#x200B;로 이동합니다.
 
 카탈로그에서 확장을 선택하거나 검색 창을 사용합니다.
 
