@@ -3,7 +3,7 @@ keywords: Nielsen BSDK;nielsen bsdk;nielsen BSDK
 title: Nielsen BSDK 확장
 description: Nielsen BSDK 확장은 Adobe Experience Platform의 분석 대상입니다. 확장 기능에 대한 자세한 내용은 Exchange Adobe의 확장 페이지를 참조하십시오.
 exl-id: e1c10673-e3f4-474d-98d7-960124b2bfc7
-source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
+source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
 workflow-type: tm+mt
 source-wordcount: '543'
 ht-degree: 4%
@@ -36,7 +36,7 @@ DTVR: 이는 프로그래밍 소스에 참여하는 데스크탑 및 모바일 �
 
 [!DNL Nielsen BSDK] 확장을 설치하려면 다음을 수행하십시오.
 
-[플랫폼 인터페이스](http://platform.adobe.com/)에서 **[!UICONTROL 대상]** > **[!UICONTROL 카탈로그]**&#x200B;로 이동합니다.
+[플랫폼 인터페이스](https://platform.adobe.com/)에서 **[!UICONTROL 대상]** > **[!UICONTROL 카탈로그]**&#x200B;로 이동합니다.
 
 카탈로그에서 확장을 선택하거나 검색 창을 사용합니다.
 
