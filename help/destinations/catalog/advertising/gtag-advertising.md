@@ -3,7 +3,7 @@ keywords: gtag;google gtag;google 확장;google gtag 확장;GTAG
 title: Google 태그 확장
 description: Google 태그 확장은 Adobe Experience Platform의 광고 대상입니다. 확장 기능에 대한 자세한 내용은 Exchange Adobe의 확장 페이지를 참조하십시오.
 exl-id: 14a466f2-78a0-4493-93cd-3dcdae048042
-source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
+source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
 workflow-type: tm+mt
 source-wordcount: '505'
 ht-degree: 3%
@@ -32,7 +32,7 @@ Google Tag는 Adobe Experience Platform의 광고 확장입니다. 확장 기능
 
 Google 태그 확장을 설치하려면 다음을 수행하십시오.
 
-[플랫폼 인터페이스](http://platform.adobe.com/)에서 **[!UICONTROL 대상]** > **[!UICONTROL 카탈로그]**&#x200B;로 이동합니다.
+[플랫폼 인터페이스](https://platform.adobe.com/)에서 **[!UICONTROL 대상]** > **[!UICONTROL 카탈로그]**&#x200B;로 이동합니다.
 
 카탈로그에서 확장을 선택하거나 검색 창을 사용합니다.
 
