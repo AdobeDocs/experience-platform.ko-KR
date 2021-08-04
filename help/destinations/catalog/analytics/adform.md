@@ -3,7 +3,7 @@ keywords: adform 확장;adform
 title: Adform 웹 사이트 추적 확장
 description: Adform 확장은 Adobe Experience Platform의 분석 대상입니다. 확장 기능에 대한 자세한 내용은 Exchange Adobe의 확장 페이지를 참조하십시오.
 exl-id: f616ecbf-6833-40cd-86be-7c13afe31180
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
 workflow-type: tm+mt
 source-wordcount: '455'
 ht-degree: 3%
@@ -32,7 +32,7 @@ Adform 웹 사이트 추적 확장을 사용하면 광고주가 사이트 간에
 
 Adform 확장을 설치하려면 다음을 수행하십시오.
 
-[플랫폼 인터페이스](http://platform.adobe.com/)에서 **[!UICONTROL 대상]** > **[!UICONTROL 카탈로그]**&#x200B;로 이동합니다.
+[플랫폼 인터페이스](https://platform.adobe.com/)에서 **[!UICONTROL 대상]** > **[!UICONTROL 카탈로그]**&#x200B;로 이동합니다.
 
 카탈로그에서 확장을 선택하거나 검색 창을 사용합니다.
 
