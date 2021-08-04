@@ -3,9 +3,9 @@ keywords: TMMData;tmm 데이터;tmdata;TMM 데이터
 title: TMMData 확장
 description: TMMData 확장은 Adobe Experience Platform의 분석 대상입니다. 확장 기능에 대한 자세한 내용은 Exchange Adobe의 확장 페이지를 참조하십시오.
 exl-id: 9f4ad50e-d964-41b0-b58e-71611bff3ead
-source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
+source-git-commit: b90428845412613d59f3c5091ad7c1398ead9f6a
 workflow-type: tm+mt
-source-wordcount: '496'
+source-wordcount: '500'
 ht-degree: 3%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 3%
 
 [!DNL TMMData's] Adobe Marketing Cloud용 기초 플랫폼은 자동화된 캠페인 설정을 통해 마케팅 팀에 Adobe 및 기타 분석 및 BI 도구에 직접 임포트하여 안전하고 포괄적인 교차 채널 분석을 위해 내부/외부 및 온라인/오프라인 데이터를 비롯한 모든 주요 데이터 소스에 액세스하고 혼합하는 도구를 마케팅 팀에 제공합니다.
 
-[!DNL TMMData] 는 Adobe Experience Platform의 analytics 확장입니다. 확장 기능에 대한 자세한 내용은 [Adobe Exchange](hhttps://exchange.adobe.com/experiencecloud.details.100148.tmmdata-foundation-platform.html)에서 확장 페이지를 참조하십시오.
+[!DNL TMMData] 는 Adobe Experience Platform의 analytics 확장입니다. 확장 기능에 대한 자세한 내용은 [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100148.tmmdata-foundation-platform.html)에서 확장 페이지를 참조하십시오.
 
 이 대상은 태그 확장입니다. Platform에서 태그 확장이 작동하는 방법에 대한 자세한 내용은 [태그 확장 개요](../launch-extensions/overview.md)를 참조하십시오.
 
