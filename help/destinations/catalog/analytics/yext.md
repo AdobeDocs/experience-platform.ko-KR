@@ -3,7 +3,7 @@ keywords: 다음 전환 추적;텍스트;텍스트;다음 전환 추적
 title: 다음 전환 추적 확장
 description: 다음 전환 추적 확장은 Adobe Experience Platform의 분석 대상입니다. 확장 기능에 대한 자세한 내용은 Exchange Adobe의 확장 페이지를 참조하십시오.
 exl-id: 786ea14c-25a3-40ac-906d-6a8f7de04f41
-source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
+source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
 workflow-type: tm+mt
 source-wordcount: '479'
 ht-degree: 3%
@@ -32,7 +32,7 @@ ht-degree: 3%
 
 [!DNL Yext Conversion Tracking] 확장을 설치하려면 다음을 수행하십시오.
 
-[플랫폼 인터페이스](http://platform.adobe.com/)에서 **[!UICONTROL 대상]** > **[!UICONTROL 카탈로그]**&#x200B;로 이동합니다.
+[플랫폼 인터페이스](https://platform.adobe.com/)에서 **[!UICONTROL 대상]** > **[!UICONTROL 카탈로그]**&#x200B;로 이동합니다.
 
 카탈로그에서 확장을 선택하거나 검색 창을 사용합니다.
 
