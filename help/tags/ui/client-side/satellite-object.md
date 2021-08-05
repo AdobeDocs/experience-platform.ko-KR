@@ -1,10 +1,10 @@
 ---
 title: 태그 위성 개체 참조
 description: 클라이언트측 _satellite 개체 및 Adobe Experience Platform에서 수행할 수 있는 다양한 기능에 대해 알아봅니다.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 309a2f4de25eeb174f6ac50996bd735ccdc2393d
 workflow-type: tm+mt
-source-wordcount: '1124'
-ht-degree: 48%
+source-wordcount: '1258'
+ht-degree: 42%
 
 ---
 
@@ -130,7 +130,13 @@ _satellite.logger.deprecation('This method is no longer supported, please use [n
 
 이렇게 하면 브라우저 콘솔에 경고가 기록됩니다. 사용자가 태그 디버깅을 활성화하는지 여부를 나타내는 메시지가 표시됩니다.
 
-## `cookie`
+## `cookie` {#cookie}
+
+`_satellite.cookie` 는 쿠키를 읽고 쓰는 함수를 포함합니다. 타사 라이브러리 js-쿠키의 노출된 사본입니다. 이 라이브러리의 고급 사용에 대한 자세한 내용은 [js-cookie 설명서](https://www.npmjs.com/package/js-cookie#basic-usage)를 검토하십시오.
+
+### 쿠키 설정 {#cookie-set}
+
+쿠키를 설정하려면 `_satellite.cookie.set()` 을 사용합니다.
 
 **코드**
 
@@ -138,9 +144,41 @@ _satellite.logger.deprecation('This method is no longer supported, please use [n
 _satellite.cookie.set(name: string, value: string[, attributes: Object])
 ```
 
+>[!NOTE]
+>
+>쿠키를 설정하는 이전 [`setCookie`](#setCookie) 메서드에서 이 함수 호출에 대한 세 번째(선택 사항) 인수는 쿠키의 TTL(time-to-live)을 나타내는 정수입니다. 이 새 메서드에서는 &quot;attributes&quot; 개체가 대신 세 번째 인수로 수락됩니다. 새 메서드를 사용하여 쿠키에 대한 TTL을 설정하려면 속성 개체에 `expires` 속성을 제공하고 원하는 값으로 설정해야 합니다. 이것은 아래 예제에 나와 있습니다.
+
+**예**
+
+다음 함수 호출은 1주 후에 만료되는 쿠키를 기록합니다.
+
+```javascript
+_satellite.cookie.set('product', 'Circuit Pro', { expires: 7 });
+```
+
+### 쿠키 검색 {#cookie-get}
+
+쿠키를 검색하려면 `_satellite.cookie.get()` 을 사용합니다.
+
+**코드**
+
 ```javascript
 _satellite.cookie.get(name: string) => string
 ```
+
+**예**
+
+다음 함수 호출은 이전에 설정된 쿠키를 읽습니다.
+
+```javascript
+var product = _satellite.cookie.get('product');
+```
+
+### 쿠키 제거 {#cookie-remove}
+
+쿠키를 제거하려면 `_satellite.cookie.remove()` 을 사용합니다.
+
+**코드**
 
 ```javascript
 _satellite.cookie.remove(name: string)
@@ -148,22 +186,11 @@ _satellite.cookie.remove(name: string)
 
 **예**
 
-```javascript
-// Writing a cookie that expires in one week.
-_satellite.cookie.set('product', 'Circuit Pro', { expires: 7 });
-```
+다음 함수 호출은 이전에 설정한 쿠키를 제거합니다.
 
 ```javascript
-// Reading a previously set cookie.
-var product = _satellite.cookie.get('product');
-```
-
-```javascript
-// Removing a previously set cookie.
 _satellite.cookie.remove('product');
 ```
-
-이것은 쿠키를 읽고 쓰는 유틸리티입니다. 타사 라이브러리 js-쿠키의 노출된 사본입니다. 고급 사용법은 [js-cookie 사용 설명서](https://www.npmjs.com/package/js-cookie#basic-usage)(외부 링크)를 참조하십시오.
 
 ## `buildInfo`
 
@@ -236,11 +263,11 @@ _satellite.notify('Hello world!');
 
 로깅 수준을 제공하지 않거나 다른 수준 값을 전달하지 않으면 메시지가 일반 메시지로 기록됩니다.
 
-## `setCookie`
+## `setCookie` {#setCookie}
 
->[!NOTE]
+>[!IMPORTANT]
 >
->이 메서드는 더 이상 사용되지 않습니다. 대신 `_satellite.cookie.set()`를 사용하십시오.
+>이 메서드는 더 이상 사용되지 않습니다. 대신 [`_satellite.cookie.set()`](#cookie-set)를 사용하십시오.
 
 **코드**
 
@@ -258,9 +285,9 @@ _satellite.setCookie('product', 'Circuit Pro', 3);
 
 ## `readCookie`
 
->[!NOTE]
+>[!IMPORTANT]
 >
->이 메서드는 더 이상 사용되지 않습니다. 대신 `_satellite.cookie.get()`를 사용하십시오.
+>이 메서드는 더 이상 사용되지 않습니다. 대신 [`_satellite.cookie.get()`](#cookie-get)를 사용하십시오.
 
 **코드**
 
@@ -280,7 +307,7 @@ var product = _satellite.readCookie('product');
 
 >[!NOTE]
 >
->이 메서드는 더 이상 사용되지 않습니다. 대신 `_satellite.cookie.remove()`를 사용하십시오.
+>이 메서드는 더 이상 사용되지 않습니다. 대신 [`_satellite.cookie.remove()`](#cookie-remove)를 사용하십시오.
 
 **코드**
 
