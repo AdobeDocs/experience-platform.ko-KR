@@ -1,14 +1,14 @@
 ---
-title: 태그 위성 개체 참조
-description: 클라이언트측 _satellite 개체 및 Adobe Experience Platform에서 수행할 수 있는 다양한 기능에 대해 알아봅니다.
-source-git-commit: 309a2f4de25eeb174f6ac50996bd735ccdc2393d
+title: 위성 개체 참조
+description: 클라이언트측 _satellite 개체 및 태그를 사용하여 수행할 수 있는 다양한 기능에 대해 알아봅니다.
+source-git-commit: 5adb3ed403bddd3b985d0a790eca117fb2f39288
 workflow-type: tm+mt
-source-wordcount: '1258'
+source-wordcount: '1251'
 ht-degree: 42%
 
 ---
 
-# Adobe Experience Platform 태그 위성 개체 참조
+# 위성 개체 참조
 
 >[!NOTE]
 >
