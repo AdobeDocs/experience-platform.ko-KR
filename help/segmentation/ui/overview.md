@@ -5,9 +5,9 @@ title: 세그멘테이션 서비스 UI 안내서
 topic-legacy: ui guide
 description: Adobe Experience Platform 세그멘테이션 서비스는 세그먼트 정의를 만들고 관리하기 위한 사용자 인터페이스를 제공합니다.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
+source-git-commit: 265607b3b21fda48a92899ec3d750058ca48868a
 workflow-type: tm+mt
-source-wordcount: '1561'
+source-wordcount: '1577'
 ht-degree: 0%
 
 ---
@@ -16,18 +16,18 @@ ht-degree: 0%
 
 [!DNL Adobe Experience Platform Segmentation Service] 세그먼트 정의를 만들고 관리하기 위한 사용자 인터페이스를 제공합니다.
 
-## 시작
+## 시작하기
 
 세그먼트 정의를 사용하려면 세그먼테이션과 관련된 다양한 [!DNL Experience Platform] 서비스를 이해해야 합니다. 이 사용 안내서를 읽기 전에 다음 서비스에 대한 설명서를 검토하십시오.
 
-- [[!DNL Segmentation Service]](../home.md): [!DNL Segmentation Service] 에 저장된 데이터 [!DNL Experience Platform] 를 개인(예: 고객, 잠재 고객, 사용자 또는 조직)과 관련된 작은 그룹으로 나눌 수 있습니다.
-- [[!DNL Real-time Customer Profile]](../../profile/home.md):여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
-- [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md):수집할 여러 데이터 소스의 ID를 결합하여 고객 프로필을 만들 수  [!DNL Platform]있습니다.
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):고객 경험 데이터를  [!DNL Platform] 구성하는 표준화된 프레임워크입니다.
+- [[!DNL Segmentation Service]](../home.md):  [!DNL Segmentation Service] 에 저장된 데이터 [!DNL Experience Platform] 를 개인(예: 고객, 잠재 고객, 사용자 또는 조직)과 관련된 작은 그룹으로 나눌 수 있습니다.
+- [[!DNL Real-time Customer Profile]](../../profile/home.md): 여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
+- [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md): 수집할 여러 데이터 소스의 ID를 결합하여 고객 프로필을 만들 수  [!DNL Platform]있습니다.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): 고객 경험 데이터를  [!DNL Platform] 구성하는 표준화된 프레임워크입니다.
 
 또한 이 문서를 통해 사용되는 두 가지 주요 용어를 알고 이 용어 간의 차이점을 이해하는 것이 중요합니다.
-- **세그먼트 정의**:대상 대상의 주요 특성이나 동작을 설명하는 데 사용되는 규칙 세트입니다.
-- **대상**:세그먼트 정의 기준을 충족하는 결과 프로필 집합입니다.
+- **세그먼트 정의**: 대상 대상의 주요 특성이나 동작을 설명하는 데 사용되는 규칙 세트입니다.
+- **대상**: 세그먼트 정의 기준을 충족하는 결과 프로필 집합입니다.
 
 ## 개요
 
@@ -37,7 +37,7 @@ Experience Platform UI의 왼쪽 탐색 영역에서 **[!UICONTROL 세그먼트]
 >
 >조직이 Platform을 처음 사용하고 아직 활성 프로필 데이터 세트 또는 병합 정책이 만들어지지 않은 경우 [!UICONTROL 세그먼트] 대시보드가 표시되지 않습니다. 대신 [!UICONTROL 개요] 탭에는 세그먼트를 시작하는 데 도움이 되는 링크와 설명서가 표시됩니다.
 
-###  Segmentsdashboard  {#segments-dashboard}
+###  Segmentsdashboard {#segments-dashboard}
 
 **[!UICONTROL 세그먼트]** 대시보드는 조직의 세그먼트 데이터와 관련된 주요 지표에 대해 설명합니다.
 
@@ -53,7 +53,7 @@ Experience Platform UI의 왼쪽 탐색 영역에서 **[!UICONTROL 세그먼트]
 
 이 보기는 분류, 이탈, 프로필 수, 평가 방법, 만든 날짜 및 마지막 수정 날짜를 포함하여 세그먼트 정의에 대한 정보를 나열합니다.
 
-분류 에는 다음 각 상태에 속하는 프로필의 비율을 알려주는 막대 그래프가 표시됩니다.[!UICONTROL Acquisition], [!UICONTROL 기존] 및 [!UICONTROL 종료].
+분류 에는 다음 각 상태에 속하는 프로필의 비율을 알려주는 막대 그래프가 표시됩니다. [!UICONTROL Acquisition], [!UICONTROL 기존] 및 [!UICONTROL 종료].
 
 ![](../images/ui/overview/segment-browse-breakdown.png)
 
@@ -83,9 +83,13 @@ Experience Platform UI의 왼쪽 탐색 영역에서 **[!UICONTROL 세그먼트]
 
 세그먼트 정의의 행을 선택하면 세그먼트의 이름, 설명, 평가 방법, 만든 날짜 및 마지막 수정 날짜 외에 세그먼트를 편집하거나 삭제하는 옵션, 세그먼트의 적합한 대상, 총 대상 크기 등의 세그먼트 정의의 요약이 제공됩니다.
 
+>[!NOTE]
+>
+> **은(는) 대상 활성화에서 사용되는 세그먼트를 삭제할 수 없습니다.**
+
 ![](../images/ui/overview/segment-browse-details.png)
 
-## 세그먼트 정의 세부 정보 {#segment-details}
+## 세그먼트 정의 세부 사항 {#segment-details}
 
 특정 세그먼트 정의에 대한 자세한 내용을 보려면 **[!UICONTROL 찾아보기]** 탭 내에서 세그먼트 이름을 선택하십시오.
 
@@ -103,7 +107,7 @@ Experience Platform UI의 왼쪽 탐색 영역에서 **[!UICONTROL 세그먼트]
 
 세그먼트&#x200B;]**섹션의**[!UICONTROL &#x200B;총 대상 은 세그먼트에 적합한 총 프로필 수를 보여줍니다.
 
-추정은 해당 날의 샘플 데이터의 샘플 크기를 사용하여 생성됩니다. 프로필 저장소에 100만 개 미만의 엔티티가 있는 경우 전체 데이터 세트가 사용됩니다.100만~2000만 개 업체가 이용한다.그리고 2천만 개 이상의 개체들에 대해서, 전체 개체 중 5%가 사용됩니다. 세그먼트 예상 생성에 대한 자세한 내용은 세그먼트 생성 자습서의 [예측 생성 섹션](../tutorials/create-a-segment.md#estimate-and-preview-an-audience)에 있습니다.
+추정은 해당 날의 샘플 데이터의 샘플 크기를 사용하여 생성됩니다. 프로필 저장소에 100만 개 미만의 엔티티가 있는 경우 전체 데이터 세트가 사용됩니다. 100만~2000만 개 업체가 이용한다. 그리고 2천만 개 이상의 개체들에 대해서, 전체 개체 중 5%가 사용됩니다. 세그먼트 예상 생성에 대한 자세한 내용은 세그먼트 생성 자습서의 [예측 생성 섹션](../tutorials/create-a-segment.md#estimate-and-preview-an-audience)에 있습니다.
 
 ### 활성화된 대상
 
@@ -155,7 +159,7 @@ Experience Platform UI의 왼쪽 탐색 영역에서 **[!UICONTROL 세그먼트]
 
 주문형 평가에는 API를 사용하여 평가를 수행하고 필요에 따라 대상을 빌드하는 작업이 포함되지만, 예약된 평가(&#39;예약된 세그먼테이션&#39;이라고도 함)를 사용하면 특정 시간(최대, 일별)에 세그먼트 정의를 평가하는 반복 일정을 만들 수 있습니다.
 
-### 예약된 세그먼테이션 {#enable-scheduled-segmentation} 사용
+### 예약된 세그먼테이션 활성화 {#enable-scheduled-segmentation}
 
 예약된 평가를 위한 세그먼트 정의 활성화는 UI 또는 API를 사용하여 수행할 수 있습니다. UI에서 **[!UICONTROL 세그먼트]** 내의 **[!UICONTROL 찾아보기]** 탭으로 돌아가서 **[!UICONTROL 모든 세그먼트를 추가하여 예약]**&#x200B;을 전환합니다. 이렇게 하면 조직에서 설정한 일정을 기반으로 모든 세그먼트를 평가하게 됩니다.
 
@@ -167,7 +171,7 @@ Experience Platform UI의 왼쪽 탐색 영역에서 **[!UICONTROL 세그먼트]
 
 ![](../images/ui/overview/segment-browse-scheduled.png)
 
-## 스트리밍 세그먼테이션 {#streaming-segmentation}
+## 스트리밍 세그멘테이션 {#streaming-segmentation}
 
 스트리밍 세그멘테이션은 데이터 장점에 집중하면서 거의 실시간으로 [!DNL Platform]에 세그먼테이션을 수행하는 기능입니다. 스트리밍 세그먼테이션을 사용하면 이제 데이터가 [!DNL Platform]에 도달하면 세그먼트 자격이 발생하므로 세그먼테이션 작업을 예약하고 실행할 필요가 없습니다.
 
@@ -177,7 +181,7 @@ Experience Platform UI의 왼쪽 탐색 영역에서 **[!UICONTROL 세그먼트]
 >
 >스트리밍 세그먼테이션이 작동하려면 조직에 대해 예약된 세그먼테이션을 활성화해야 합니다. 예약된 세그먼테이션 활성화에 대한 자세한 내용은 이 사용 안내서](#scheduled-segmentation)의 [스트리밍 세그멘테이션 섹션을 참조하십시오.
 
-## 에지 세그먼테이션 {#edge-segmentation}
+## 에지 세그멘테이션 {#edge-segmentation}
 
 Edge Segmentation은 Platform의 세그먼트를 즉시 평가하여 동일한 페이지와 다음 페이지 개인화 사용 사례를 가능하게 하는 기능입니다.
 
