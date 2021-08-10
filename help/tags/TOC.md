@@ -4,9 +4,9 @@ user-guide-title: 태그 도움말
 breadcrumb-title: 태그
 user-guide-description: 고객 경험을 향상시키기 위해 분석, 마케팅 및 광고 태그를 배포 및 관리하는 방법을 살펴볼 수 있습니다.
 feature: 데이터 수집
-source-git-commit: bddad4476d6943c7549028e93c84c8ca29059dc0
+source-git-commit: 3658384ec39226f457fd9cea86d1838613a9508c
 workflow-type: tm+mt
-source-wordcount: '385'
+source-wordcount: '378'
 ht-degree: 67%
 
 ---
@@ -88,9 +88,6 @@ ht-degree: 67%
       * Adobe Experience Manager 자산 통찰력 {#asset-insights}
          * [개요](./extensions/web/asset-insights/overview.md)
          * [릴리스 정보](./extensions/web/asset-insights/release-notes.md)
-      * Adobe Experience Manager Forms {#forms}
-         * [개요](./extensions/web/forms/overview.md)
-         * [릴리스 정보](./extensions/web/forms/release-notes.md)
       * 오디오 및 비디오용 Adobe Medium 분석 {#media-analytics}
          * [개요](./extensions/web/media-analytics/overview.md)
          * [릴리스 정보](./extensions/web/media-analytics/release-notes.md)
