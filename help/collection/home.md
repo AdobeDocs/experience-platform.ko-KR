@@ -5,9 +5,9 @@ title: 데이터 수집 개요
 topic-legacy: overview
 description: Adobe Experience Platform의 고객 경험에 대한 데이터 수집과 관련된 다양한 기술에 대해 알아봅니다.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: f61a845b915df3d803085fbf528e014c8acd9dbd
 workflow-type: tm+mt
-source-wordcount: '304'
+source-wordcount: '332'
 ht-degree: 2%
 
 ---
@@ -36,11 +36,15 @@ Experience Platform이 제공하는 데이터 수집 기술은 수집된 데이�
 
 Adobe Experience Platform Web 및 Mobile SDK는 모든 Adobe 제품 라이브러리를 웹 또는 모바일 플랫폼용 단일 개발 키트로 축소하고 압축합니다. 이러한 라이브러리를 압축하면 데이터 수집이 빨라지고 작업을 클라이언트 측 장치에서 Adobe Experience Platform Edge Network로 단일 스트림으로 통합할 수 있습니다.
 
-## Adobe 기술을 배포하기 위한 스위치 프로세스 전환
+## Adobe 기술을 배포하기 위한 스위치 프로세스 전환 {#edge}
 
 Platform Edge Network는 광범위한 규모로 데이터를 수신하고 처리할 수 있는 전 세계적으로 분산된 빠르고 안정적인 서버 네트워크입니다. 태그를 사용하여 Adobe Target, Adobe Audience Manager 및 Adobe Analytics과 같은 제품에 대해 [데이터 세트](../edge/fundamentals/datastreams.md)를 설정할 수 있습니다. 이 경우 클라이언트측 코드를 변경하지 않고 서버 측에서 이러한 제품을 활성화할 수 있습니다.
 
 ![](./images/deploy.png)
+
+>[!NOTE]
+>
+>Platform Edge 네트워크에 대한 높은 수준의 소개는 다음 [대화형 제품 둘러보기](https://adobe-ideacloud.forgedx.com/adobe-adobe-edge-collection/adobe-experience-edge/public/mx?SUID=hgb1a48ICSCpbM6MzBYHbxnsh9DgjUy1)를 참조하십시오.
 
 ## 데이터를 빠르고 안전하게 변환, 품질 향상 및 전송
 
