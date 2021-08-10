@@ -1,12 +1,12 @@
 ---
-keywords: google ad manager;google ad;doubleclick;DoubleClick AdX;DoubleClick;Google Ad Manager;Google 광고 관리자;DFP
+keywords: google ad manager;google ad;doubleclick;DoubleClick AdX;DoubleClick;Google Ad Manager;Google 광고 관리자; DFP
 title: Google Ad Manager 연결
 description: 이전에 DoubleClick for Publishers 또는 DoubleClick AdX라고 알려진 Google Ad Manager는 게시자가 비디오 및 모바일 앱을 통해 웹 사이트에서 광고 표시를 관리할 수 있는 수단을 제공하는 Google의 광고 서비스 플랫폼입니다.
 exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
-source-git-commit: 4df2e7ce9c7e94da4ea0be50ba21232c639e2587
+source-git-commit: 7e2f6f54e754c52c8de7f98372d041b2a6520d46
 workflow-type: tm+mt
-source-wordcount: '754'
-ht-degree: 0%
+source-wordcount: '732'
+ht-degree: 2%
 
 ---
 
@@ -53,10 +53,10 @@ ht-degree: 0%
 
 Platform에서 [!DNL Google Ad Manager] 대상을 만들려면 먼저 [!DNL Google]에 연락하여 Adobe이 허용된 데이터 공급자 목록에 배치되고 허용 목록에 계정이 추가되도록 해야 합니다. [!DNL Google]에 문의하여 다음 정보를 제공하십시오.
 
-* **계정 ID** :Adobe의 계정 ID입니다 [!DNL Google]. 이 ID를 얻으려면 Adobe 고객 지원 센터 또는 Adobe 담당자에게 문의하십시오.
-* **고객 ID** :Adobe의 고객 계정 ID입니다 [!DNL Google]. 이 ID를 얻으려면 Adobe 고객 지원 센터 또는 Adobe 담당자에게 문의하십시오.
-* **네트워크 ID** :이 계정은  [!DNL Google Ad Manager]
-* **대상 링크 ID** :이 계정은  [!DNL Google Ad Manager]
+* **계정 ID**: Google을 사용하는 Adobe 계정 ID입니다. 계정 ID: 87933855.
+* **고객 ID**: Google을 사용하는 Adobe의 고객 계정 ID입니다. 고객 ID: 89690775.
+* **네트워크 ID** : 이 계정은  [!DNL Google Ad Manager]
+* **대상 링크 ID** : 이 계정은  [!DNL Google Ad Manager]
 * 계정 유형입니다. Google 또는 AdX 구매자의 DFP.
 
 ## 대상 구성
@@ -73,13 +73,13 @@ Platform에서 [!DNL Google Ad Manager] 대상을 만들려면 먼저 [!DNL Goog
 
 ![Google Ad Manager 기본 정보](../../assets/catalog/advertising/google-ad-manager/setup.png)
 
-* **[!UICONTROL 이름]**:이 대상의 기본 이름을 입력합니다.
-* **[!UICONTROL 설명]**:선택 사항입니다. 예를 들어 이 대상을 사용하는 캠페인을 언급할 수 있습니다.
-* **[!UICONTROL 계정 유형]**:Google을 사용하는 계정에 따라 옵션을 선택합니다.
+* **[!UICONTROL 이름]**: 이 대상의 기본 이름을 입력합니다.
+* **[!UICONTROL 설명]**: 선택 사항입니다. 예를 들어 이 대상을 사용하는 캠페인을 언급할 수 있습니다.
+* **[!UICONTROL 계정 유형]**: Google을 사용하는 계정에 따라 옵션을 선택합니다.
    * 게시자용 [!DNL DoubleClick]에 `DFP by Google` 사용
    * [!DNL Google AdX]에 `AdX buyer` 사용
-* **[!UICONTROL 계정 ID]**:계정 ID를  [!DNL Google]. 네트워크 ID 또는 대상 링크 ID일 수 있습니다. 일반적으로 8자리 ID입니다.
-* **[!UICONTROL 마케팅 작업]**:마케팅 작업은 대상으로 데이터를 내보낼 의도를 나타냅니다. Adobe 정의 마케팅 작업에서 선택하거나 고유한 마케팅 작업을 만들 수 있습니다. 마케팅 작업에 대한 자세한 내용은 [데이터 사용 정책 개요](../../../data-governance/policies/overview.md)를 참조하십시오.
+* **[!UICONTROL 계정 ID]**: 계정 ID를  [!DNL Google]. 네트워크 ID 또는 대상 링크 ID일 수 있습니다. 일반적으로 8자리 ID입니다.
+* **[!UICONTROL 마케팅 작업]**: 마케팅 작업은 대상으로 데이터를 내보낼 의도를 나타냅니다. Adobe 정의 마케팅 작업에서 선택하거나 고유한 마케팅 작업을 만들 수 있습니다. 마케팅 작업에 대한 자세한 내용은 [데이터 사용 정책 개요](../../../data-governance/policies/overview.md)를 참조하십시오.
 
 >[!NOTE]
 >
