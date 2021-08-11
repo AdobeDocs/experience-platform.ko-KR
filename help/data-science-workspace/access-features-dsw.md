@@ -5,9 +5,9 @@ title: 데이터 과학 작업 공간 액세스 및 기능
 topic-legacy: Access and features for data science workspace
 description: 다음 문서에서는 Data Science Workspace 권한 및 기능에 대한 액세스를 간략하게 설명합니다.
 exl-id: 6759fea4-adb9-4e4e-9f3d-e0e8c885b1dd
-source-git-commit: 319cdb13c965010062aa9179b197d6f5b6a20287
+source-git-commit: 2ff2721f5420483ddc5caffd1eb0532df729e01b
 workflow-type: tm+mt
-source-wordcount: '685'
+source-wordcount: '684'
 ht-degree: 2%
 
 ---
@@ -63,7 +63,7 @@ Data Science Workspace를 사용하려면 &quot;데이터 과학 작업 공간 �
 
 ## 샌드박스 지원
 
-샌드박스는 단일 Experience Platform 인스턴스 내의 가상 파티션입니다. 각 Platform 인스턴스는 여러 프로덕션 샌드박스 및 비프로덕션 샌드박스를 지원하며, 각 샌드박스는 자체 Platform 리소스 라이브러리를 유지합니다. 비프로덕션 샌드박스를 사용하면 프로덕션 샌드박스에 영향을 주지 않고 기능을 테스트하고, 실험을 실행하고, 사용자 지정 구성을 만들 수 있습니다. 샌드박스에 대한 자세한 내용은 [샌드박스 개요](../sandboxes/home.md)를 참조하십시오.
+샌드박스는 단일 Experience Platform 인스턴스 내의 가상 파티션입니다. 각 Platform 인스턴스는 여러 프로덕션 및 비프로덕션 샌드박스를 지원하며, 각 샌드박스는 자체 플랫폼 리소스 라이브러리를 유지합니다. 비프로덕션 샌드박스를 사용하면 프로덕션 샌드박스에 영향을 주지 않고 기능을 테스트하고, 실험을 실행하고, 사용자 지정 구성을 만들 수 있습니다. 샌드박스에 대한 자세한 내용은 [샌드박스 개요](../sandboxes/home.md)를 참조하십시오.
 
 현재 Data Science Workspace 에는 다음과 같은 샌드박스 제한이 있습니다.
 
