@@ -6,9 +6,9 @@ seo-title: 대상에 프로필 및 세그먼트 활성화
 description: 세그먼트를 대상에 매핑하여 Adobe Experience Platform에서 보유한 데이터를 활성화합니다. 이를 수행하려면 아래 단계를 수행하십시오.
 seo-description: 세그먼트를 대상에 매핑하여 Adobe Experience Platform에서 보유한 데이터를 활성화합니다. 이를 수행하려면 아래 단계를 수행하십시오.
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
-source-git-commit: bbb33287b82d348811852f4ad17a9c7b24a33b44
+source-git-commit: dd9e822fd485d26d5101e12e241465c354db5ad3
 workflow-type: tm+mt
-source-wordcount: '2960'
+source-wordcount: '2957'
 ht-degree: 0%
 
 ---
@@ -52,7 +52,7 @@ Adobe Experience Platform 사용자 인터페이스에서 **[!UICONTROL 대상]*
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_applytransformation"
 >title="변형 적용"
->abstract="해시되지 않은 소스 필드(예: *personalEmail.address* **personalEmail.address** `personalEmail.address`)를 사용할 때 Adobe Experience Platform에서 자동으로 해시하도록 하려면 이 옵션을 선택합니다."
+>abstract="해시되지 않은 소스 필드를 사용할 때 이 옵션을 선택하여 Adobe Experience Platform에서 활성화 시 자동으로 해시하도록 합니다."
 
 적용 대상: 소셜 대상 및 Google Customer Match 광고 대상
 
