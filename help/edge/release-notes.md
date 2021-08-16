@@ -3,14 +3,18 @@ title: Adobe Experience Platform Web SDK 릴리스 노트
 description: Adobe Experience Platform Web SDK에 대한 최신 릴리스 정보입니다.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;릴리스 노트;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: f3821176b0cbc4ad07fbd2e0e20caa1205324a44
+source-git-commit: 2be9d262a699861c01011c59358751e6406f3770
 workflow-type: tm+mt
-source-wordcount: '717'
+source-wordcount: '738'
 ht-degree: 4%
 
 ---
 
 # 릴리스 정보
+
+## 버전 2.6.3 - 2021년 8월 16일
+
+* 공용 개체가 `configure` 명령에서 확인된 약속을 통해 노출되는 문제가 해결되었습니다.
 
 ## 버전 2.6.2 - 2021년 8월 4일
 
