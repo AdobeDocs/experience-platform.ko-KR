@@ -2,16 +2,24 @@
 title: Adobe Experience Platform Web SDK Extension 릴리스 노트
 description: Adobe Experience Platform 웹 SDK 태그 확장
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 7c30df7ea126ec7c7c794b8daaf3d2b813873b98
+source-git-commit: 40d280eb1d9810d679428ffd42c88035459f2b7d
 workflow-type: tm+mt
-source-wordcount: '1105'
-ht-degree: 53%
+source-wordcount: '1173'
+ht-degree: 51%
 
 ---
 
 # Adobe Experience Platform Web SDK 확장 릴리스 노트
 
 이 문서에서는 Adobe Experience Platform 웹 SDK 태그 확장에 대한 릴리스 노트를 다룹니다. SDK 자체에 대한 최신 릴리스 노트는 [Platform Web SDK 릴리스 노트](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html)를 참조하십시오.
+
+## 버전 2.7.0 - 2021년 8월 16일
+
+Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.6.3을 포함합니다.
+
+* ID 맵 데이터 요소 유형을 사용할 때 ID가 채워지지 않은 값으로 확인되는 식별자가 이제 ID 맵에서 자동으로 제거됩니다.
+* XDM 개체 데이터 요소 유형을 사용하여 데이터 요소를 저장하려고 할 때 선택한 스키마가 없는 오류를 수정했습니다.
+* 사용자 인터페이스 타이포그래피를 개선했습니다.
 
 ## 버전 2.6.2 - 2021년 8월 4일
 
