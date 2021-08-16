@@ -1,7 +1,7 @@
 ---
 title: 메모 끝점
 description: Reactor API에서 /notes 종단점을 호출하는 방법을 알아봅니다.
-source-git-commit: 6a1728bd995137a7cd6dc79313762ae6e665d416
+source-git-commit: 59592154eeb8592fa171b5488ecb0385e0e59f39
 workflow-type: tm+mt
 source-wordcount: '530'
 ht-degree: 7%
@@ -37,7 +37,7 @@ Reactor API의 `/notes` 종단점을 사용하면 이러한 메모를 프로그�
 >
 >그러나 참고 사항은 여전히 개정 버전에서 읽힐 수 있습니다. 이러한 경우 API는 개정을 만들기 전에 존재했던 참고만 반환합니다. 수정 사항이 삭제되었을 때 주석에 대한 스냅샷을 제공합니다. 반면에 현재(헤드) 개정에서 노트를 읽으면 해당 메모가 모두 반환됩니다.
 
-## 시작
+## 시작하기
 
 이 안내서에 사용된 끝점은 [Reactor API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml)의 일부입니다. 계속하기 전에 API 인증 방법에 대한 중요한 정보가 필요하면 [시작 안내서](../getting-started.md)를 검토하십시오.
 
@@ -68,6 +68,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
@@ -140,6 +141,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
