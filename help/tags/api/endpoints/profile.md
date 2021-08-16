@@ -1,7 +1,7 @@
 ---
 title: 프로필 끝점
 description: Reactor API에서 /profiles 종단점을 호출하는 방법을 알아봅니다.
-source-git-commit: 6a1728bd995137a7cd6dc79313762ae6e665d416
+source-git-commit: 59592154eeb8592fa171b5488ecb0385e0e59f39
 workflow-type: tm+mt
 source-wordcount: '174'
 ht-degree: 5%
@@ -14,7 +14,7 @@ Reactor API에서 프로필은 Adobe Experience Platform 사용자를 나타냅�
 
 프로필에는 해당 조직이 속한 모든 IMS 조직, 각 조직 내에 속한 제품 프로필 및 각 제품 프로필에서 가지고 있는 권한을 포함하여 로그인한 사용자에 대한 모든 정보가 포함됩니다.
 
-## 시작
+## 시작하기
 
 이 안내서에 사용된 끝점은 [Reactor API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml)의 일부입니다. 계속하기 전에 API 인증 방법에 대한 중요한 정보가 필요하면 [시작 안내서](../getting-started.md)를 검토하십시오.
 
@@ -36,6 +36,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
