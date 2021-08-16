@@ -1,10 +1,10 @@
 ---
 title: 검색 끝점
 description: Reactor API에서 /search 종단점을 호출하는 방법을 알아봅니다.
-source-git-commit: 6a1728bd995137a7cd6dc79313762ae6e665d416
+source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
 workflow-type: tm+mt
-source-wordcount: '709'
-ht-degree: 2%
+source-wordcount: '662'
+ht-degree: 1%
 
 ---
 
@@ -39,29 +39,19 @@ Reactor API의 `/search` 종단점은 쿼리로 표현되는 원하는 기준과
 
 이 기능을 사용하는 방법에 대한 자세한 내용은 [검색 안내서](../guides/search.md)를 참조하십시오.
 
-## 시작
+## 시작하기
 
 이 안내서에 사용된 끝점은 [Reactor API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml)의 일부입니다. 계속하기 전에 API 인증 방법에 대한 중요한 정보가 필요하면 [시작 안내서](../getting-started.md)를 검토하십시오.
 
-## 규칙 목록 검색 {#list}
+## 검색 수행 {#perform}
 
-GET 요청을 작성하여 를 포함하여 속성에 속하는 규칙 목록을 검색할 수 있습니다.
+POST 요청을 만들어 검색을 수행할 수 있습니다.
 
 **API 형식**
 
 ```http
-GET /properties/{PROPERTY_ID}/rules
+POST /search
 ```
-
-| 매개 변수 | 설명 |
-| --- | --- |
-| `PROPERTY_ID` | 구성 요소를 나열할 속성의 `id` |
-
-{style=&quot;table-layout:auto&quot;}
-
->[!NOTE]
->
->쿼리 매개 변수를 사용하여 나열된 규칙을 다음 속성에 따라 필터링할 수 있습니다.<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>자세한 내용은 [응답 필터링](../guides/filtering.md)에 대한 안내서를 참조하십시오.
 
 **요청**
 
@@ -71,6 +61,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1' \
   -d '{
         "data" : {
