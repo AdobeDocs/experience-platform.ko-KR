@@ -1,10 +1,10 @@
 ---
 title: 코어 확장에 대한 릴리스 노트
 description: Adobe Experience Platform의 코어 확장에 대한 최신 릴리스 노트입니다.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: cef9f9e403328418d26935bf3ee45e9068b7177e
 workflow-type: tm+mt
-source-wordcount: '1210'
-ht-degree: 71%
+source-wordcount: '1293'
+ht-degree: 67%
 
 ---
 
@@ -13,6 +13,16 @@ ht-degree: 71%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../../term-updates.md)을 참조하십시오.
+
+## 2021년 8월 11일
+
+v3.0.0
+
+* PDCL-6153: 캐시된 사용자 지정 코드 작업에 대한 정규화된 URL을 안정적으로 가져올 수 있도록 지원을 추가합니다.
+
+Core 확장의 v3.0.0은 Turbine web runtime](https://github.com/adobe/reactor-turbine/releases/tag/v27.2.0)v27.2.0의 변경 사항과 결합되며, 사용자의 회사에서 Premium CDN을 지원하는 경우 사용자가 여러 Adobe 관리 호스팅 영역 간에 라이브러리를 로드할 수 있습니다.[
+
+이 업그레이드는 Premium CDN이 없는 사용자에게 선택 사항이고 이전 버전과 호환되며, 회사에서 Premium CDN이 활성화되어 있는 고객에게 필수입니다.
 
 ## 2021년 5월 20일
 
