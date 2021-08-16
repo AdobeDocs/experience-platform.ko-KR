@@ -1,10 +1,10 @@
 ---
 title: 확장 패키지 끝점
 description: Reactor API에서 /extension_packages 종단점을 호출하는 방법을 알아봅니다.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
 workflow-type: tm+mt
-source-wordcount: '741'
-ht-degree: 6%
+source-wordcount: '955'
+ht-degree: 5%
 
 ---
 
@@ -23,6 +23,32 @@ ht-degree: 6%
 ## 시작하기
 
 이 안내서에 사용된 끝점은 [Reactor API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml)의 일부입니다. 계속하기 전에 API 인증 방법에 대한 중요한 정보가 필요하면 [시작 안내서](../getting-started.md)를 검토하십시오.
+
+Reactor API를 호출하는 방법을 이해하는 것 외에도 확장 패키지의 `status` 및 `availability` 속성이 수행할 수 있는 작업에 어떻게 영향을 주는지를 이해하는 것이 중요합니다. 이러한 내용은 아래 섹션에 설명되어 있습니다.
+
+### 상태
+
+확장 패키지에는 다음 세 가지 잠재적인 상태가 있습니다. `pending`, `succeeded` 및 `failed`
+
+| 상태 | 설명 |
+| --- | --- |
+| `pending` | 확장 패키지가 만들어지면 해당 `status`이 `pending`(으)로 설정됩니다. 시스템이 확장 패키지에 대한 정보를 수신하고 처리를 시작함을 나타냅니다. 상태가 `pending`인 확장 패키지를 사용할 수 없습니다. |
+| `succeeded` | 확장 패키지의 상태가 처리가 성공적으로 완료되면 `succeeded`으로 업데이트됩니다. |
+| `failed` | 확장 패키지의 상태는 처리가 실패한 경우 `failed`로 업데이트됩니다. 처리가 완료될 때까지 상태가 `failed`인 확장 패키지를 업데이트할 수 있습니다. 상태가 `failed`인 확장 패키지를 사용할 수 없습니다. |
+
+### 사용 가능
+
+확장 패키지에 대한 가용성 수준은 다음과 같습니다. `development`, `private` 및 `public`
+
+| 사용 가능 | 설명 |
+| --- | --- |
+| `development` | `development`의 확장 패키지는 이 패키지를 소유한 회사에서만 표시되며 내에서 사용할 수 있습니다. 또한 확장 개발을 위해 구성된 속성에서만 사용할 수 있습니다. |
+| `private` | `private` 확장 패키지는 이 패키지를 소유한 회사에서만 표시되며 회사가 소유하는 속성에만 설치할 수 있습니다. |
+| `public` | 모든 회사 및 속성에서 `public` 확장 패키지를 볼 수 있습니다. |
+
+>[!NOTE]
+>
+>확장 패키지를 만들 때 `availability`이 `development`(으)로 설정됩니다. 테스트가 완료되면 확장 패키지를 `private` 또는 `public` 로 전환할 수 있습니다.
 
 ## 확장 패키지 목록 검색 {#list}
 
@@ -46,6 +72,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
@@ -231,6 +258,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
@@ -441,11 +469,11 @@ curl -X GET \
 }
 ```
 
-## 확장 패키지 만들기 또는 업데이트 {#create}
+## 확장 패키지 만들기 {#create}
 
 확장 패키지는 Node.js 스캐폴딩 도구를 사용하여 만들고 Reactor API에 제출되기 전에 로컬 시스템에 저장됩니다. 확장 패키지 구성에 대한 자세한 내용은 [확장 개발 시작](../../extension-dev/getting-started.md)의 안내서를 참조하십시오.
 
-확장 패키지 파일을 만들면 POST 요청을 통해 Reactor API에 제출할 수 있습니다. 확장 패키지가 API에 이미 존재하는 경우 이 호출은 패키지를 새 버전으로 업데이트합니다.
+확장 패키지 파일을 만들면 POST 요청을 통해 Reactor API에 제출할 수 있습니다.
 
 **API 형식**
 
@@ -676,12 +704,12 @@ curl -X POST \
 
 ## 확장 패키지 업데이트 {#update}
 
-POST 요청 경로에 해당 ID를 포함하여 확장 패키지를 업데이트할 수 있습니다.
+PATCH 요청 경로에 해당 ID를 포함하여 확장 패키지를 업데이트할 수 있습니다.
 
 **API 형식**
 
 ```http
-POST /extension_packages/{EXTENSION_PACKAGE_ID}
+PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
 ```
 
 | 매개 변수 | 설명 |
@@ -695,7 +723,7 @@ POST /extension_packages/{EXTENSION_PACKAGE_ID}
 [확장 패키지 생성](#create)과 마찬가지로 업데이트된 패키지의 로컬 버전을 양식 데이터를 통해 업로드해야 합니다.
 
 ```shell
-curl -X POST \
+curl -X PATCH \
   https://reactor.adobe.io/extension_packages/EP10bb503178694d73bc0cd84387b82172 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
@@ -934,7 +962,7 @@ PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
 비공개 릴리스는 요청 데이터의 `meta`에서 `release_private` 값을 포함하는 `action`을 제공하여 달성합니다.
 
 ```shell
-curl -X POST \
+curl -X PATCH \
   https://reactor.adobe.io/extension_packages/EP10bb503178694d73bc0cd84387b82172 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
@@ -1179,7 +1207,7 @@ PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
 비공개 릴리스는 요청 데이터의 `meta`에서 `release_private` 값을 포함하는 `action`을 제공하여 달성합니다.
 
 ```shell
-curl -X POST \
+curl -X PATCH \
   https://reactor.adobe.io/extension_packages/EP10bb503178694d73bc0cd84387b82172 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
@@ -1275,6 +1303,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
