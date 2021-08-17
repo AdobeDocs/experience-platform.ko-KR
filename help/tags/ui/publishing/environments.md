@@ -1,9 +1,9 @@
 ---
 title: 환경
 description: 태그 환경의 개념 및 Adobe Experience Platform 내에서 작동하는 방법에 대해 알아봅니다.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 272cf2906b44ccfeca041d9620ac0780e24ad1ae
 workflow-type: tm+mt
-source-wordcount: '1483'
+source-wordcount: '1468'
 ht-degree: 71%
 
 ---
@@ -128,7 +128,7 @@ ht-degree: 71%
 
 #### 동기식 배포
 
-브라우저에서 동기식 배포를 사용하여 포함 코드를 읽으면 태그 라이브러리를 검색하여 실행한 후 페이지 로드를 계속합니다. 또한 [DTM(Dynamic Tag Management)](https://experienceleague.adobe.com/docs/dtm/using/dtm-home.html?lang=ko-KR)이 작동하는 방식입니다. 
+브라우저에서 동기식 배포를 사용하여 포함 코드를 읽으면 태그 라이브러리를 검색하여 실행한 후 페이지 로드를 계속합니다.
 
 동기 포함 코드는 웹 사이트의 HTML 내에 배치해야 하는 두 개의 `<script>` 태그로 구성됩니다. 한 개의 `<script>` 태그는 문서 `<head>`에 배치해야 하지만 다른 태그는 닫는 `</body>` 태그 바로 앞에 넣어야 합니다.
 
