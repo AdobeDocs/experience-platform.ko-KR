@@ -3,9 +3,9 @@ keywords: google ad manager;google ad;doubleclick;DoubleClick AdX;DoubleClick;Go
 title: Google Ad Manager 연결
 description: 이전에 DoubleClick for Publishers 또는 DoubleClick AdX라고 알려진 Google Ad Manager는 게시자가 비디오 및 모바일 앱을 통해 웹 사이트에서 광고 표시를 관리할 수 있는 수단을 제공하는 Google의 광고 서비스 플랫폼입니다.
 exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
-source-git-commit: 7e2f6f54e754c52c8de7f98372d041b2a6520d46
+source-git-commit: 802b1844bec1e577e978da5d5a69de87278c04b9
 workflow-type: tm+mt
-source-wordcount: '732'
+source-wordcount: '651'
 ht-degree: 2%
 
 ---
@@ -59,19 +59,13 @@ Platform에서 [!DNL Google Ad Manager] 대상을 만들려면 먼저 [!DNL Goog
 * **대상 링크 ID** : 이 계정은  [!DNL Google Ad Manager]
 * 계정 유형입니다. Google 또는 AdX 구매자의 DFP.
 
-## 대상 구성
+## 대상에 연결 {#connect}
 
-**[!UICONTROL 연결]** > **[!UICONTROL 대상]**&#x200B;에서 **[!DNL Google Ad Manager]**&#x200B;을 선택하고 **[!UICONTROL 구성]**&#x200B;을 선택합니다.
+이 대상에 연결하려면 [대상 구성 자습서](../../ui/connect-destination.md)에 설명된 단계를 따르십시오.
 
-![Google Ad Manager 대상 연결](../../assets/catalog/advertising/google-ad-manager/catalog.png)
+### 연결 매개 변수 {#parameters}
 
->[!NOTE]
->
->이 대상과의 연결이 이미 있으면 대상 카드에 **[!UICONTROL 활성화]** 단추가 표시됩니다. **[!UICONTROL Activate]** 및 **[!UICONTROL Configure]**&#x200B;의 차이에 대한 자세한 내용은 대상 작업 공간 설명서의 [카탈로그](../../ui/destinations-workspace.md#catalog) 섹션을 참조하십시오.
-
-대상 만들기 워크플로우의 **설정** 단계에서 대상에 대한 [!UICONTROL 기본 정보]를 입력합니다.
-
-![Google Ad Manager 기본 정보](../../assets/catalog/advertising/google-ad-manager/setup.png)
+[이 대상을 설정할 때 다음 정보를 제공해야 합니다.](../../ui/connect-destination.md)
 
 * **[!UICONTROL 이름]**: 이 대상의 기본 이름을 입력합니다.
 * **[!UICONTROL 설명]**: 선택 사항입니다. 예를 들어 이 대상을 사용하는 캠페인을 언급할 수 있습니다.
@@ -79,15 +73,14 @@ Platform에서 [!DNL Google Ad Manager] 대상을 만들려면 먼저 [!DNL Goog
    * 게시자용 [!DNL DoubleClick]에 `DFP by Google` 사용
    * [!DNL Google AdX]에 `AdX buyer` 사용
 * **[!UICONTROL 계정 ID]**: 계정 ID를  [!DNL Google]. 네트워크 ID 또는 대상 링크 ID일 수 있습니다. 일반적으로 8자리 ID입니다.
-* **[!UICONTROL 마케팅 작업]**: 마케팅 작업은 대상으로 데이터를 내보낼 의도를 나타냅니다. Adobe 정의 마케팅 작업에서 선택하거나 고유한 마케팅 작업을 만들 수 있습니다. 마케팅 작업에 대한 자세한 내용은 [데이터 사용 정책 개요](../../../data-governance/policies/overview.md)를 참조하십시오.
 
 >[!NOTE]
 >
 >[!DNL Google Ad Manager] 대상을 설정할 때 보유하고 있는 계정 유형을 이해하려면 [!DNL Google Account Manager] 또는 Adobe 담당자에게 문의하십시오.
 
-## 세그먼트를 [!DNL Google Ad Manager]에 활성화
+## 세그먼트를 이 대상에 활성화 {#activate}
 
-세그먼트를 [!DNL Google Ad Manager]에 활성화하는 방법에 대한 지침은 [대상에 데이터 활성화](../../ui/activate-destinations.md)를 참조하십시오.
+대상으로 대상 세그먼트를 활성화하는 방법에 대한 지침은 [대상 세그먼트 활성화](../../ui/activate-destinations.md)를 참조하십시오.
 
 ## 내보낸 데이터
 
