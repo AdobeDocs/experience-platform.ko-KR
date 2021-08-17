@@ -5,9 +5,9 @@ title: 세그멘테이션 서비스 UI 안내서
 topic-legacy: ui guide
 description: Adobe Experience Platform 세그멘테이션 서비스는 세그먼트 정의를 만들고 관리하기 위한 사용자 인터페이스를 제공합니다.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 265607b3b21fda48a92899ec3d750058ca48868a
+source-git-commit: b7392596c7ed96032dc8ad6bb8e423640f562394
 workflow-type: tm+mt
-source-wordcount: '1577'
+source-wordcount: '1570'
 ht-degree: 0%
 
 ---
@@ -115,7 +115,7 @@ Experience Platform UI의 왼쪽 탐색 영역에서 **[!UICONTROL 세그먼트]
 
 >[!NOTE]
 >
-> 대상은 [!DNL Real-time Customer Data Platform]에서 사용할 수 있는 기능이며, 외부 플랫폼으로 데이터를 내보낼 수 있습니다. 대상에 대한 자세한 내용은 [대상 개요](../../destinations/home.md)를 참조하십시오. 대상에 세그먼트를 활성화하는 방법에 대해 알아보려면 세그먼트를 대상](../../destinations/ui/activate-destinations.md)에 활성화하는 방법에 대한 [안내서를 참조하십시오.
+> 대상은 [!DNL Real-time Customer Data Platform]에서 사용할 수 있는 기능이며, 외부 플랫폼으로 데이터를 내보낼 수 있습니다. 대상에 대한 자세한 내용은 [대상 개요](../../destinations/home.md)를 참조하십시오. 대상에 세그먼트를 활성화하는 방법을 알려면 [활성화 개요](../../destinations/ui/activation-overview.md)를 참조하십시오.
 
 ### 프로필 샘플
 
