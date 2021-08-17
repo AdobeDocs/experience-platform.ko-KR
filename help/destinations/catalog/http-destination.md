@@ -3,9 +3,9 @@ keywords: 스트리밍;
 title: HTTP 연결
 description: Adobe Experience Platform의 HTTP 대상을 사용하면 프로필 데이터를 타사 HTTP 종단점으로 보낼 수 있습니다.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 802b1844bec1e577e978da5d5a69de87278c04b9
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
-source-wordcount: '361'
+source-wordcount: '357'
 ht-degree: 3%
 
 ---
@@ -56,11 +56,11 @@ ht-degree: 3%
 
 ## 세그먼트를 이 대상에 활성화 {#activate}
 
-대상으로 대상 세그먼트를 활성화하는 방법에 대한 지침은 [대상 세그먼트 활성화](../ui/activate-destinations.md#select-attributes)를 참조하십시오.
+대상 세그먼트를 이 대상으로 활성화하는 방법에 대한 지침은 [스트리밍 프로필 내보내기 대상으로 대상 활성화](../ui/activate-streaming-profile-destinations.md)를 참조하십시오.
 
-## 대상 속성 {#attributes}
+### 대상 속성 {#attributes}
 
-[[!UICONTROL 속성 선택]](../ui/activate-destinations.md#select-attributes) 단계에서 [세그먼트](../ui/activate-destinations.md)를 [!DNL HTTP] 대상에 활성화할 때 [결합 스키마](../../profile/home.md#profile-fragments-and-union-schemas)에서 고유 식별자를 선택하는 것이 좋습니다. 대상으로 내보낼 고유 식별자 및 기타 모든 XDM 필드를 선택합니다.
+[[!UICONTROL 속성 선택]](../ui/activate-streaming-profile-destinations.md#select-attributes) 단계의 Adobe에서 [결합 스키마](../../profile/home.md#profile-fragments-and-union-schemas)에서 고유 식별자를 선택하는 것이 좋습니다. 대상으로 내보낼 고유 식별자 및 기타 모든 XDM 필드를 선택합니다.
 
 ## 내보낸 데이터 {#exported-data}
 
