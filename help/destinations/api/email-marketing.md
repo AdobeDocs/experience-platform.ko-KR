@@ -6,9 +6,9 @@ description: 이 문서에서는 Adobe Experience Platform API를 사용하여 �
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: 0bc85d79bab690d433dc29d558a4d9caf086586d
+source-git-commit: 02c22453470d55236d4235c479742997e8407ef3
 workflow-type: tm+mt
-source-wordcount: '1704'
+source-wordcount: '1705'
 ht-degree: 1%
 
 ---
@@ -21,15 +21,15 @@ ht-degree: 1%
 
 ![개요 - 대상을 만들고 세그먼트를 활성화하는 절차](../assets/api/email-marketing/overview.png)
 
-Platform에서 사용자 인터페이스를 사용하여 대상을 연결하고 데이터를 활성화하려면 [대상 연결](../ui/connect-destination.md) 및 [프로필 및 세그먼트를 대상](../ui/activate-destinations.md) 자습서에 활성화 를 참조하십시오.
+Platform에서 사용자 인터페이스를 사용하여 대상을 연결하고 데이터를 활성화하려면 [대상 연결](../ui/connect-destination.md) 및 [대상 데이터를 배치 프로필 내보내기 대상으로 활성화](../ui/activate-batch-profile-destinations.md) 자습서를 참조하십시오.
 
 ## 시작
 
 이 안내서에서는 Adobe Experience Platform의 다음 구성 요소를 이해하고 있어야 합니다.
 
-* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md):고객 경험 데이터를  [!DNL Experience Platform] 구성하는 표준화된 프레임워크입니다.
-* [[!DNL Catalog Service]](../../catalog/home.md): [!DNL Catalog] 는 내의 데이터 위치 및 계열에 대한 레코드 시스템입니다 [!DNL Experience Platform].
-* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] 에서는 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이  [!DNL Platform] 되는 단일 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
+* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): 고객 경험 데이터를  [!DNL Experience Platform] 구성하는 표준화된 프레임워크입니다.
+* [[!DNL Catalog Service]](../../catalog/home.md):  [!DNL Catalog] 는 내의 데이터 위치 및 계열에 대한 레코드 시스템입니다 [!DNL Experience Platform].
+* [[!DNL Sandboxes]](../../sandboxes/home.md):  [!DNL Experience Platform] 에서는 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이  [!DNL Platform] 되는 단일 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
 
 다음 섹션에서는 Platform에서 이메일 마케팅 대상으로 데이터를 활성화하기 위해 알아야 하는 추가 정보를 제공합니다.
 
@@ -37,8 +37,8 @@ Platform에서 사용자 인터페이스를 사용하여 대상을 연결하고 
 
 이 자습서의 단계를 완료하려면 세그먼트를 연결하고 활성화할 대상 유형에 따라 다음 자격 증명이 준비되어야 합니다.
 
-* 이메일 마케팅 플랫폼에 대한 [!DNL Amazon] S3 연결의 경우:`accessId`, `secretKey`
-* 이메일 마케팅 플랫폼에 대한 SFTP 연결의 경우:`domain`, `port`, `username`, `password` 또는 `ssh key`(FTP 위치에 대한 연결 메서드에 따라 다름)
+* 이메일 마케팅 플랫폼에 대한 [!DNL Amazon] S3 연결의 경우: `accessId`, `secretKey`
+* 이메일 마케팅 플랫폼에 대한 SFTP 연결의 경우: `domain`, `port`, `username`, `password` 또는 `ssh key`(FTP 위치에 대한 연결 메서드에 따라 다름)
 
 ### 샘플 API 호출 읽기
 
@@ -48,7 +48,7 @@ Platform에서 사용자 인터페이스를 사용하여 대상을 연결하고 
 
 [!DNL Platform] API를 호출하려면 먼저 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 완료해야 합니다. 인증 자습서를 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출에 필요한 각 헤더에 대한 값을 제공합니다.
 
-* 권한 부여:Bearer `{ACCESS_TOKEN}`
+* 권한 부여: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
@@ -182,7 +182,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```
 
 
-* `{CONNECTION_SPEC_ID}`:프로필 서비스에 대한 연결 사양 ID 사용 -  `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
+* `{CONNECTION_SPEC_ID}`: 프로필 서비스에 대한 연결 사양 ID 사용 -  `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
 
 **응답**
 
@@ -255,8 +255,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-* `{BASE_CONNECTION_ID}`:이전 단계에서 얻은 ID를 사용합니다.
-* `{CONNECTION_SPEC_ID}`:연결 사양 ID를  [!DNL Profile Service] -  `8a9c3494-9708-43d7-ae3f-cda01e5030e1`에 사용합니다.
+* `{BASE_CONNECTION_ID}`: 이전 단계에서 얻은 ID를 사용합니다.
+* `{CONNECTION_SPEC_ID}`: 연결 사양 ID를  [!DNL Profile Service] -  `8a9c3494-9708-43d7-ae3f-cda01e5030e1`에 사용합니다.
 
 **응답**
 
@@ -343,10 +343,10 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-* `{CONNECTION_SPEC_ID}`:사용 가능한 대상 목록  [가져오기 단계에서 얻은 연결 사양 ID를 사용합니다](#get-the-list-of-available-destinations).
-* `{S3 or SFTP}`:이 대상에 대해 원하는 연결 유형을 입력합니다. [대상 카탈로그](../catalog/overview.md)에서 기본 대상으로 스크롤하여 S3 및/또는 SFTP 연결 유형이 지원되는지 확인합니다.
-* `{ACCESS_ID}`: [!DNL Amazon] S3 저장소 위치에 대한 액세스 ID입니다.
-* `{SECRET_KEY}`: [!DNL Amazon] S3 저장소 위치의 암호 키입니다.
+* `{CONNECTION_SPEC_ID}`: 사용 가능한 대상 목록  [가져오기 단계에서 얻은 연결 사양 ID를 사용합니다](#get-the-list-of-available-destinations).
+* `{S3 or SFTP}`: 이 대상에 대해 원하는 연결 유형을 입력합니다. [대상 카탈로그](../catalog/overview.md)에서 기본 대상으로 스크롤하여 S3 및/또는 SFTP 연결 유형이 지원되는지 확인합니다.
+* `{ACCESS_ID}`:  [!DNL Amazon] S3 저장소 위치에 대한 액세스 ID입니다.
+* `{SECRET_KEY}`:  [!DNL Amazon] S3 저장소 위치의 암호 키입니다.
 
 **응답**
 
@@ -366,7 +366,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 > 
 >[!DNL Adobe Experience Platform] 에서는 내보내기 파일을 파일당 500만 개의 레코드(행)로 자동 분할합니다. 각 행은 하나의 프로필을 나타냅니다.
 >
->파일 이름을 분할하면 파일이 더 큰 내보내기의 일부임을 나타내는 숫자가 추가됩니다.`filename.csv`, `filename_2.csv`, `filename_3.csv`.
+>파일 이름을 분할하면 파일이 더 큰 내보내기의 일부임을 나타내는 숫자가 추가됩니다. `filename.csv`, `filename_2.csv`, `filename_3.csv`.
 
 **API 형식**
 
@@ -440,10 +440,10 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-* `{BASE_CONNECTION_ID}`:위의 단계에서 얻은 기본 연결 ID를 사용합니다.
-* `{CONNECTION_SPEC_ID}`:사용 가능한 대상 목록  [가져오기 단계에서 얻은 연결 사양을 사용합니다](#get-the-list-of-available-destinations).
-* `{BUCKETNAME}`:S3  [!DNL Amazon] 버킷. 여기서 Platform은 데이터 내보내기를 예약합니다.
-* `{FILEPATH}`:Platform이 데이터 내보내기를  [!DNL Amazon] 예치할 S3 버킷 디렉토리의 경로입니다.
+* `{BASE_CONNECTION_ID}`: 위의 단계에서 얻은 기본 연결 ID를 사용합니다.
+* `{CONNECTION_SPEC_ID}`: 사용 가능한 대상 목록  [가져오기 단계에서 얻은 연결 사양을 사용합니다](#get-the-list-of-available-destinations).
+* `{BUCKETNAME}`: S3  [!DNL Amazon] 버킷. 여기서 Platform은 데이터 내보내기를 예약합니다.
+* `{FILEPATH}`: Platform이 데이터 내보내기를  [!DNL Amazon] 예치할 S3 버킷 디렉토리의 경로입니다.
 
 **응답**
 
@@ -511,9 +511,9 @@ curl -X POST \
     }
 ```
 
-* `{FLOW_SPEC_ID}`:연결할 이메일 마케팅 대상에 대한 흐름을 사용합니다. 흐름 사양을 가져오려면 `flowspecs` 종단점에서 GET 작업을 수행합니다. 다음 위치에서 Swagger 설명서 를 참조하십시오.https://platform.adobe.io/data/foundation/flowservice/swagger#/Flow%20Specs%20API/getFlowSpecs 응답에서 `upsTo`을(를) 찾고 연결할 이메일 마케팅 대상의 해당 ID를 복사합니다. 예를 들어 Adobe Campaign의 경우 `upsToCampaign`을 찾고 `id` 매개 변수를 복사합니다.
-* `{SOURCE_CONNECTION_ID}`:Experience Platform에  [연결 단계에서 얻은 소스 연결 ID를 사용합니다](#connect-to-your-experience-platform-data).
-* `{TARGET_CONNECTION_ID}`:이메일 마케팅 대상에  [연결 단계에서 얻은 타겟 연결 ID를 사용합니다](#connect-to-email-marketing-destination).
+* `{FLOW_SPEC_ID}`: 연결할 이메일 마케팅 대상에 대한 흐름을 사용합니다. 흐름 사양을 가져오려면 `flowspecs` 종단점에서 GET 작업을 수행합니다. 다음 위치에서 Swagger 설명서 를 참조하십시오. https://platform.adobe.io/data/foundation/flowservice/swagger#/Flow%20Specs%20API/getFlowSpecs 응답에서 `upsTo`을(를) 찾고 연결할 이메일 마케팅 대상의 해당 ID를 복사합니다. 예를 들어 Adobe Campaign의 경우 `upsToCampaign`을 찾고 `id` 매개 변수를 복사합니다.
+* `{SOURCE_CONNECTION_ID}`: Experience Platform에  [연결 단계에서 얻은 소스 연결 ID를 사용합니다](#connect-to-your-experience-platform-data).
+* `{TARGET_CONNECTION_ID}`: 이메일 마케팅 대상에  [연결 단계에서 얻은 타겟 연결 ID를 사용합니다](#connect-to-email-marketing-destination).
 
 **응답**
 
@@ -590,9 +590,9 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 ]
 ```
 
-* `{DATAFLOW_ID}`:이전 단계에서 얻은 데이터 흐름을 사용합니다.
-* `{ETAG}`:이전 단계에서 얻은 태그를 사용합니다.
-* `{SEGMENT_ID}`:이 대상으로 내보낼 세그먼트 ID를 제공합니다. 활성화하려는 세그먼트의 세그먼트 ID를 검색하려면 **https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/** 로 이동한 다음, 왼쪽 탐색 메뉴에서 **[!UICONTROL 세그멘테이션 서비스 API]**&#x200B;를 선택하고 **[!UICONTROL 세그먼트 정의]**&#x200B;에서 `GET /segment/definitions` 작업을 찾으십시오.
+* `{DATAFLOW_ID}`: 이전 단계에서 얻은 데이터 흐름을 사용합니다.
+* `{ETAG}`: 이전 단계에서 얻은 태그를 사용합니다.
+* `{SEGMENT_ID}`: 이 대상으로 내보낼 세그먼트 ID를 제공합니다. 활성화하려는 세그먼트의 세그먼트 ID를 검색하려면 **https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/** 로 이동한 다음, 왼쪽 탐색 메뉴에서 **[!UICONTROL 세그멘테이션 서비스 API]**&#x200B;를 선택하고 **[!UICONTROL 세그먼트 정의]**&#x200B;에서 `GET /segment/definitions` 작업을 찾으십시오.
 * `{PROFILE_ATTRIBUTE}`: 예, `"person.lastName"`
 
 **응답**
@@ -625,8 +625,8 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 --header 'If-Match: "{ETAG}"' 
 ```
 
-* `{DATAFLOW_ID}`:이전 단계의 데이터 흐름을 사용합니다.
-* `{ETAG}`:이전 단계의 태그를 사용합니다.
+* `{DATAFLOW_ID}`: 이전 단계의 데이터 흐름을 사용합니다.
+* `{ETAG}`: 이전 단계의 태그를 사용합니다.
 
 **응답**
 
