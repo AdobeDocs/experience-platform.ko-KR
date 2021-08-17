@@ -3,9 +3,9 @@ keywords: facebook 연결;facebook 연결;facebook 대상;facebook;instagram;mes
 title: Facebook 연결
 description: 해시된 이메일을 기반으로 대상 타깃팅, 개인화 및 억제를 위해 Facebook 캠페인용 프로필을 활성화합니다.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 32da733eda61049738e87bce48978196a1fea96d
+source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
 workflow-type: tm+mt
-source-wordcount: '1176'
+source-wordcount: '1257'
 ht-degree: 2%
 
 ---
@@ -56,12 +56,12 @@ ht-degree: 2%
 
 대상 세그먼트를 [!DNL Facebook]에 보내려면 먼저 다음 요구 사항을 충족하는지 확인하십시오.
 
-- 사용하려는 광고 계정에 대해 **[!DNL Manage campaigns]** 사용 권한이 활성화되어 있어야 합니다.[!DNL Facebook]
-- **Adobe Experience Cloud** 비즈니스 계정은 [!DNL Facebook Ad Account]에서 광고 파트너로서 추가해야 합니다.  `business ID=206617933627973`. 자세한 내용은 Facebook 설명서의 [비즈니스 관리자에 파트너 추가](https://www.facebook.com/business/help/1717412048538897)를 참조하십시오.
+* 사용하려는 광고 계정에 대해 **[!DNL Manage campaigns]** 사용 권한이 활성화되어 있어야 합니다.[!DNL Facebook]
+* **Adobe Experience Cloud** 비즈니스 계정은 [!DNL Facebook Ad Account]에서 광고 파트너로서 추가해야 합니다.  `business ID=206617933627973`. 자세한 내용은 Facebook 설명서의 [비즈니스 관리자에 파트너 추가](https://www.facebook.com/business/help/1717412048538897)를 참조하십시오.
    >[!IMPORTANT]
    >
    > Adobe Experience Cloud에 대한 권한을 구성할 때 **캠페인 관리** 권한을 활성화해야 합니다. [!DNL Adobe Experience Platform] 통합에 대한 권한이 필요합니다.
-- [!DNL Facebook Custom Audiences] 서비스 약관을 읽고 서명하십시오. 이렇게 하려면 `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]` 로 이동하십시오. 여기서 `accountID`는 [!DNL Facebook Ad Account ID]입니다.
+* [!DNL Facebook Custom Audiences] 서비스 약관을 읽고 서명하십시오. 이렇게 하려면 `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]` 로 이동하십시오. 여기서 `accountID`는 [!DNL Facebook Ad Account ID]입니다.
 
 ## ID 일치 요구 사항 {#id-matching-requirements}
 
@@ -73,8 +73,8 @@ Adobe Experience Platform에 수집하는 ID 유형에 따라 해당 요구 사�
 
 [!DNL Facebook]에서 전화 번호를 활성화하는 방법에는 두 가지가 있습니다.
 
-- **원시 전화 번호 수집**: 원시 전화 번호를 형식으로  [!DNL E.164] 수집할 수  [!DNL Platform]있습니다. 활성화 시 자동으로 해시됩니다. 이 옵션을 선택하는 경우 반드시 원시 전화 번호를 항상 `Phone_E.164` 네임스페이스에 수집하십시오.
-- **해시된 전화 번호 수집**: 에 수집하기 전에 전화 번호를 미리 해시할 수 있습니다 [!DNL Platform]. 이 옵션을 선택하는 경우 해시된 전화 번호를 항상 `Phone_SHA256` 네임스페이스에 수집해야 합니다.
+* **원시 전화 번호 수집**: 원시 전화 번호를 형식으로  [!DNL E.164] 수집할 수  [!DNL Platform]있습니다. 활성화 시 자동으로 해시됩니다. 이 옵션을 선택하는 경우 반드시 원시 전화 번호를 항상 `Phone_E.164` 네임스페이스에 수집하십시오.
+* **해시된 전화 번호 수집**: 에 수집하기 전에 전화 번호를 미리 해시할 수 있습니다 [!DNL Platform]. 이 옵션을 선택하는 경우 해시된 전화 번호를 항상 `Phone_SHA256` 네임스페이스에 수집해야 합니다.
 
 >[!NOTE]
 >
@@ -89,12 +89,12 @@ Experience Platform에서 이메일 주소를 수집하는 방법에 대한 자�
 
 이메일 주소를 직접 해시하도록 선택하는 경우 다음 요구 사항을 충족하는지 확인하십시오.
 
-- 전자 메일 문자열에서 선행 및 후행 공백을 모두 잘라냅니다. 예: `<space>johndoe@example.com<space>`;이 아닌 `johndoe@example.com`
-- 이메일 문자열을 해시할 때는 소문자 문자열을 해시해야 합니다.
-   - 예: `EXAMPLE@EMAIL.COM`;이 아닌 `example@email.com`
-- 해시된 문자열이 모두 소문자로 되어 있는지 확인하십시오
-   - 예: `55E79200C1635B37AD31A378C39FEB12F120F116625093A19bC32FFF15041149`;이 아닌 `55e79200c1635b37ad31a378c39feb12f120f116625093a19bc32fff15041149`
-- 문자열의 소금을 치지 마십시오.
+* 전자 메일 문자열에서 선행 및 후행 공백을 모두 잘라냅니다. 예: `<space>johndoe@example.com<space>`;이 아닌 `johndoe@example.com`
+* 이메일 문자열을 해시할 때는 소문자 문자열을 해시해야 합니다.
+   * 예: `EXAMPLE@EMAIL.COM`;이 아닌 `example@email.com`
+* 해시된 문자열이 모두 소문자로 되어 있는지 확인하십시오
+   * 예: `55E79200C1635B37AD31A378C39FEB12F120F116625093A19bC32FFF15041149`;이 아닌 `55e79200c1635b37ad31a378c39feb12f120f116625093a19bc32fff15041149`
+* 문자열의 소금을 치지 마십시오.
 
 >[!NOTE]
 >
@@ -108,17 +108,29 @@ Experience Platform에서 이메일 주소를 수집하는 방법에 대한 자�
 
 `Extern_ID` 네임스페이스를 사용하여 데이터를 [!DNL Facebook]에 보내려면 먼저 [!DNL Facebook Pixel]를 사용하여 자체 식별자를 동기화해야 합니다. 자세한 내용은 [Facebook 공식 설명서](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences/#external_identifiers)를 참조하십시오.
 
-## 대상에 연결 {#connect-destination}
+## 대상에 연결 {#connect}
 
-[!DNL Facebook] 대상에 연결하려면 [소셜 대상 인증 워크플로우](./workflow.md)를 참조하십시오.
+이 대상에 연결하려면 [대상 구성 자습서](../../ui/connect-destination.md)에 설명된 단계를 따르십시오.
 
-아래 비디오에서는 소셜 대상을 구성하고 세그먼트를 활성화하는 단계를 보여줍니다. 비디오에서 LinkedIn을 예로 사용하지만 단계는 소셜 대상 간에 유사합니다.
+아래 비디오에서는 [!DNL Facebook] 대상을 구성하고 세그먼트를 활성화하는 단계를 보여줍니다.
 
 >[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
-## 세그먼트를 [!DNL Facebook]에 활성화 {#activate-segments}
+>[!NOTE]
+>
+>Experience Platform 사용자 인터페이스는 자주 업데이트되며 이 비디오를 기록한 후 변경되었을 수 있습니다. 최신 정보는 [대상 구성 자습서](../../ui/connect-destination.md)를 참조하십시오.
 
-세그먼트를 [!DNL Facebook]에 활성화하는 방법에 대한 지침은 [대상에 데이터 활성화](../../ui/activate-destinations.md)를 참조하십시오.
+### 연결 매개 변수 {#parameters}
+
+[이 대상을 설정할 때 다음 정보를 제공해야 합니다.](../../ui/connect-destination.md)
+
+* **[!UICONTROL 이름]**: 나중에 이 대상을 인식하는 이름입니다.
+* **[!UICONTROL 설명]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
+* **[!UICONTROL 계정 ID]**: 사용자  [!DNL Facebook Ad Account ID]. 이 ID는 [!DNL Facebook Ads Manager] 계정에서 찾을 수 있습니다. 이 ID를 입력할 때 항상 `act_` 접두사로 붙입니다.
+
+## 세그먼트를 이 대상에 활성화 {#activate}
+
+대상으로 대상 세그먼트를 활성화하는 방법에 대한 지침은 [대상 세그먼트 활성화](../../ui/activate-destinations.md)를 참조하십시오.
 
 **[!UICONTROL 세그먼트 일정]** 단계에서 세그먼트를 [!DNL Facebook Custom Audiences]에 보낼 때 [!UICONTROL 대상]의 출처를 제공해야 합니다.
 
