@@ -2,50 +2,55 @@
 keywords: 광고 대상;대상;플랫폼 대상
 title: 광고 대상 개요
 seo-title: 광고 대상 개요
-description: 'Adobe Experience Platform을 타사 광고 플랫폼(예: DSP, 광고 네트워크, SSP)에 연결하고 익명의 사용자를 이러한 플랫폼에 공유합니다.'
-seo-description: 'Adobe Experience Platform을 타사 광고 플랫폼(예: DSP, 광고 네트워크, SSP)에 연결하고 익명의 사용자를 이러한 플랫폼에 공유합니다.'
-translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+description: 'Adobe Experience Platform을 타사 광고 플랫폼(예: DSP, 광고 네트워크, SSP)에 연결하고 익명의 대상을 이러한 플랫폼에 공유합니다.'
+seo-description: 'Adobe Experience Platform을 타사 광고 플랫폼(예: DSP, 광고 네트워크, SSP)에 연결하고 익명의 대상을 이러한 플랫폼에 공유합니다.'
+exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
+source-git-commit: 802b1844bec1e577e978da5d5a69de87278c04b9
 workflow-type: tm+mt
-source-wordcount: '233'
-ht-degree: 0%
+source-wordcount: '248'
+ht-degree: 1%
 
 ---
 
-
 # 광고 대상 개요 {#advertising-destinations}
 
-Adobe Experience Platform을 타사 광고 플랫폼(예: DSP, 광고 네트워크, SSP)에 연결하고 익명의 사용자를 이러한 플랫폼에 공유합니다.
+## 개요 {#overview}
 
-광고 대상에 연결할 때 대상은 대상 플랫폼에 의해 알려진 ID에 매핑되는 대상 플랫폼에 ID로 전송됩니다.
+DSP(수요 측 플랫폼), SSP(공급측 플랫폼), 광고 네트워크 등 타사 광고 플랫폼에 Adobe Experience Platform을 연결하고 익명의 대상을 이러한 플랫폼에 공유합니다.
 
-현재, 플랫폼은 아래 나열된 광고 대상을 지원합니다. 이러한 대상에 연결하는 방법에 대한 자세한 내용은 개별 링크를 참조하십시오.
+광고 대상에 연결할 때 대상은 대상 플랫폼에 ID로 전송되며 대상 플랫폼에서는 대상 플랫폼에 의해 알려진 ID에 매핑됩니다.
 
-## 연결
+## 지원되는 광고 대상 {#supported-destinations}
 
-연결과 확장 간의 차이를 이해하려면 대상 유형 및 카테고리 페이지에서 [연결](../../destination-types.md#connections)을 참조하십시오.
+현재, Experience Platform은 아래에 나열된 광고 대상을 지원합니다.
 
-- [Google 디스플레이 및 비디오 360 연결](./google-dv360.md)
-- [Google 광고 연결](./google-ads-destination.md)
-- [Google 광고 관리자 연결](./google-ad-manager.md)
-- [Google 고객 일치 연결](./google-customer-match.md)
-- [Microsoft Bing 연결](./bing.md)
-- [무역센터 연결](./tradedesk.md)
+연결 및 확장 간의 차이점을 이해하려면 대상 유형 및 카테고리 페이지에서 [연결](../../destination-types.md#connections)을 참조하십시오.
 
-## 확장
+### 연결
 
-연결과 확장 간의 차이를 이해하려면 대상 유형 및 카테고리 페이지에서 [확장](../../destination-types.md#extensions)을 참조하십시오.
+* [Google Display &amp; Video 360 연결](google-dv360.md)
+* [Google 광고 연결](google-ads-destination.md)
+* [Google Ad Manager 연결](google-ad-manager.md)
+* [Google Customer Match 연결](google-customer-match.md)
+* [Microsoft Bing 연결](bing.md)
+* [무역센터 연결](tradedesk.md)
 
-- [Adobe Advertising Cloud 확장](./adobe-advertising-cloud.md)
-- [Awin 광고 전환 태그 확장](./awin-conversiontag.md)
-- [Awin 광고 마스터태그 확장](./awin-mastertag.md)
-- [Bing 광고 유니버설 이벤트 추적 확장](./bing-ads.md)
-- [분기 확장](./branch.md)
-- [DoubleClick Floodlight 확장](./doubleclick-floodlight.md)
-- [Facebook 픽셀 확장](./facebook-pixel.md)
-- [Flashtaling OneTag 확장](./flashtalking.md)
-- [Google 광고 확장](./google-ads-extension.md)
-- [Google 태그 확장](./gtag-advertising.md)
-- [LinkedIn 인사이트 태그 확장](./linkedin.md)
-- [Pinterest 전환 추적 확장](./pinterest.md)
-- [Twitter 범용 웹 사이트 태그 확장](./twitter-uwt.md)
+### 확장
+
+* [Adobe Advertising Cloud 확장](adobe-advertising-cloud.md)
+* [Win 광고 변환 태그 확장](awin-conversiontag.md)
+* [Awin Advertising Master Tag Extension](awin-mastertag.md)
+* [Bing Ads 범용 이벤트 추적 확장](bing-ads.md)
+* [분기 확장](branch.md)
+* [DoubleClick Floodlight 확장](doubleclick-floodlight.md)
+* [Facebook 픽셀 확장](facebook-pixel.md)
+* [Flashtalk OneTag 확장](flashtalking.md)
+* [Google 광고 확장](google-ads-extension.md)
+* [Google 태그 확장](gtag-advertising.md)
+* [linkedIn Insight Tag 확장](linkedin.md)
+* [Pinterest 전환 추적 확장](pinterest.md)
+* [Twitter 범용 웹 사이트 태그 확장](twitter-uwt.md)
+
+## 새 광고 대상에 연결 {#connect-destination}
+
+캠페인을 위해 세그먼트를 광고 대상에 보내려면 먼저 대상에 연결해야 합니다. 새 대상 설정에 대한 자세한 내용은 [대상 만들기 자습서](../../ui/connect-destination.md)를 참조하십시오.
