@@ -3,10 +3,10 @@ keywords: 태그 확장;태그 확장;launch 대상 platform 태그 확장;platf
 title: Adobe Experience Platform의 태그 확장
 description: Adobe Experience Platform은 Adobe의 차세대 태그 관리 기능을 제공합니다. 플랫폼 은 관련 고객 환경을 향상하는 데 필요한 모든 분석, 마케팅 및 광고 태그를 배포하고 관리하는 간단한 방법을 제공합니다.
 exl-id: 54fca635-0e37-460e-abb3-5da294d4e0cf
-source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
+source-git-commit: 272cf2906b44ccfeca041d9620ac0780e24ad1ae
 workflow-type: tm+mt
-source-wordcount: '514'
-ht-degree: 1%
+source-wordcount: '508'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +16,7 @@ Adobe Experience Platform은 Adobe의 차세대 태그 관리 기능을 제공�
 
 태그에 대한 소개는 아래 리소스를 참조하십시오.
 
-- [태그 개요](https://experienceleague.adobe.com/docs/launch/using/home.html?lang=ko-KR)
+- [태그 개요](../../../tags/home.md)
 - [빠른 시작 안내서](../../../tags/quick-start/quick-start.md)
 
 ## Platform 인터페이스에서 태그 확장을 찾는 방법 {#how-to-find-extensions-in-interface}
