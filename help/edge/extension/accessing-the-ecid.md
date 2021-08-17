@@ -1,9 +1,9 @@
 ---
 title: 'ECID 액세스 '
 description: 태그에서 ECID를 활용하는 Adobe Experience Platform Web SDK 확장
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: befe1efa884706165b8d65803d06f6370a8a60f2
 workflow-type: tm+mt
-source-wordcount: '134'
+source-wordcount: '124'
 ht-degree: 5%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 5%
 
 태그 내의 ECID에 액세스하려면 Adobe에서 다음을 권장합니다.
 
-1. 속성이 [규칙 구성 요소 시퀀싱](https://experienceleague.adobe.com/docs/launch/using/ui/rules.html?lang=en#rule-component-sequencing)이 활성화된 상태에서 구성되었는지 확인합니다.
+1. 속성이 [규칙 구성 요소 시퀀싱](../../tags/ui/managing-resources/rules.md#sequencing)이 활성화된 상태에서 구성되었는지 확인합니다.
 1. 새 규칙을 만듭니다.
 1. [!UICONTROL Library Loaded] 이벤트를 규칙에 추가합니다.
 1. 다음 코드를 사용하여 [!UICONTROL 사용자 지정 조건] 작업을 규칙에 추가합니다(SDK 인스턴스에 대해 구성한 이름이 `alloy`라고 가정).
