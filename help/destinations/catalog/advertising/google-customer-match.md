@@ -3,9 +3,9 @@ keywords: google 고객 일치;Google 고객 일치;Google Customer Match
 title: Google Customer Match 연결
 description: 'Google Customer Match를 사용하면 온라인 및 오프라인 데이터를 사용하여 Google이 소유하거나 운영하는 속성(예: Search, Shopping, Gmail, YouTube)에서 고객에게 도달하고 다시 참여하도록 할 수 있습니다.'
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: 8a521b2b846c953b74b8e48fb76b94966a652318
+source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
 workflow-type: tm+mt
-source-wordcount: '1568'
+source-wordcount: '1250'
 ht-degree: 0%
 
 ---
@@ -106,54 +106,32 @@ Experience Platform에서 이메일 주소를 수집하는 방법에 대한 자�
 Attribute source data is not automatically hashed. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.
 ![Identity mapping transformation](../../assets/ui/activate-destinations/identity-mapping-transformation.png) -->
 
-## 대상 구성 - 비디오 연습 {#video}
+<!-- ## Configure destination - video walkthrough {#video}
 
-아래 비디오에서는 소셜 대상을 구성하고 세그먼트를 활성화하는 단계를 보여줍니다. 비디오에서 LinkedIn을 예로 사용하지만 단계는 [!DNL Google Customer Match] 을 포함하는 소셜 대상 전체에서 유사합니다. 비디오의 단계도 다음 섹션에서 순차적으로 수행됩니다.
+The video below demonstrates the steps to configure a [!DNL Google Customer Match] destination and activate segments. The steps are also laid out sequentially in the next sections.
 
->[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng) -->
 
-## 대상에 연결 {#connect-destination}
+## 대상에 연결 {#connect}
 
-**[!UICONTROL 대상]** > **[!UICONTROL 카탈로그]**&#x200B;에서 **[!UICONTROL 광고]** 카테고리로 스크롤합니다. [!DNL Google Customer Match]을 선택한 다음 **[!UICONTROL 구성]**&#x200B;을 선택합니다.
+이 대상에 연결하려면 [대상 구성 자습서](../../ui/connect-destination.md)에 설명된 단계를 따르십시오.
 
-![Google Customer Match 대상에 연결](../../assets/catalog/advertising/google-customer-match/connect.png)
+### 연결 매개 변수 {#parameters}
 
->[!NOTE]
->
->이 대상과의 연결이 있으면 대상 카드에 **[!UICONTROL 활성화]** 단추가 표시됩니다. **[!UICONTROL Activate]** 및 **[!UICONTROL Configure]**&#x200B;의 차이에 대한 자세한 내용은 대상 작업 공간 설명서의 [카탈로그](../../ui/destinations-workspace.md#catalog) 섹션을 참조하십시오.
+[이 대상을 설정할 때 다음 정보를 제공해야 합니다.](../../ui/connect-destination.md)
 
-**계정** 단계에서 이전에 [!DNL Google Customer Match] 대상에 연결을 설정한 경우 **[!UICONTROL 기존 계정]**&#x200B;을 선택하고 기존 연결을 선택합니다. 또는 **[!UICONTROL 새 계정]**&#x200B;을 선택하여 [!DNL Google Customer Match]에 대한 새 연결을 설정할 수 있습니다. Adobe Experience Cloud에 로그인하고 [!DNL Google Ad] 계정에 연결하려면 **[!UICONTROL 대상에 연결]**&#x200B;을 선택합니다.
-
->[!NOTE]
->
->Experience Platform은 인증 프로세스에서 자격 증명 유효성 검사를 지원합니다. 잘못된 자격 증명으로 워크플로우를 완료하지 않도록 [!DNL Google Ad] 계정에 잘못된 자격 증명을 입력하는 경우 오류 메시지가 표시됩니다.
-
-![Google Customer Match 대상에 연결 - 인증 단계](../../assets/catalog/advertising/google-customer-match/connection.png)
-
-자격 증명이 확인되고 Adobe Experience Cloud이 Google 계정에 연결되면 **[!UICONTROL 다음]**&#x200B;을 선택하여 **[!UICONTROL 인증]** 단계로 진행할 수 있습니다.
-
-![자격 증명 확인됨](../../assets/catalog/advertising/google-customer-match/connection-success.png)
-
-**[!UICONTROL 인증]** 단계에서 활성화 플로우에 대한 **[!UICONTROL 이름]** 및 **[!UICONTROL 설명]**&#x200B;을 입력하고 Google **[!UICONTROL 계정 ID]**&#x200B;을 입력합니다.
-
-이 단계에서는 이 대상에 적용되는 **[!UICONTROL 마케팅 작업]**&#x200B;을 선택할 수도 있습니다. 마케팅 작업은 데이터를 대상으로 내보내는 의도를 나타냅니다. Adobe 정의 마케팅 작업에서 선택하거나 고유한 마케팅 작업을 만들 수 있습니다. 마케팅 작업에 대한 자세한 내용은 [데이터 사용 정책 개요](../../../data-governance/policies/overview.md)를 참조하십시오.
-
-위의 필드를 입력한 후 **[!UICONTROL 대상 만들기]**&#x200B;를 선택합니다.
+* **[!UICONTROL 이름]**: 이 대상 연결의 이름을 입력하십시오.
+* **[!UICONTROL 설명]**: 이 대상 연결에 대한 설명을 제공합니다.
+* **[!UICONTROL 계정 ID]**: Google 고객 클라이언트 ID입니다. ID의 형식은 xxx-xxx-xxxx입니다.
 
 >[!IMPORTANT]
 >
 > * **[!UICONTROL PII와 결합]** 마케팅 작업은 기본적으로 [!DNL Google Customer Match] 대상에 대해 선택되므로 제거할 수 없습니다.
-> * [!DNL Google Customer Match] 대상의 경우. **[!UICONTROL 계정]** ID는 Google의 고객 클라이언트 ID입니다. ID의 형식은 xxx-xxx-xxxx입니다.
 
 
-![Google Customer Match 연결 - 인증 단계](../../assets/catalog/advertising/google-customer-match/authentication.png)
+## 세그먼트를 이 대상에 활성화 {#activate}
 
-이제 대상이 생성되었습니다. 세그먼트를 나중에 활성화하려면 **[!UICONTROL 저장 및 종료]**&#x200B;를 선택하거나 **[!UICONTROL 다음]**&#x200B;을 선택하여 워크플로우를 계속하고 활성화할 세그먼트를 선택할 수 있습니다. 어느 경우든 나머지 워크플로우에서 다음 섹션, [세그먼트를 [!DNL Google Customer Match]](#activate-segments)에 활성화 를 참조하십시오.
-
-## 세그먼트를 [!DNL Google Customer Match]에 활성화 {#activate-segments}
-
-세그먼트를 [!DNL Google Customer Match]에 활성화하는 방법에 대한 지침은 [대상에 데이터 활성화](../../ui/activate-destinations.md)를 참조하십시오.
-
+대상으로 대상 세그먼트를 활성화하는 방법에 대한 지침은 [대상 세그먼트 활성화](../../ui/activate-destinations.md)를 참조하십시오.
 
 **[!UICONTROL 세그먼트 예약]** 단계에서 [!DNL IDFA] 또는 [!DNL GAID] 세그먼트를 [!DNL Google Customer Match]에 보낼 때 [!UICONTROL 앱 ID]를 제공해야 합니다.
 
