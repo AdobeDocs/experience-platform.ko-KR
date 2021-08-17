@@ -4,7 +4,7 @@ title: 새 대상 연결 만들기
 type: Tutorial
 description: 이 자습서에서는 Adobe Experience Platform에서 대상에 연결하는 단계를 보여줍니다
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: 1c67d9eb1b7762ecfcad5b0b7db5c317621f144e
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
 source-wordcount: '430'
 ht-degree: 0%
@@ -65,4 +65,4 @@ ht-degree: 0%
 
    ![대상에 연결](../assets/ui/connect-destinations/connect-destination.png)
 
-1. **[!UICONTROL 저장 및 종료]**&#x200B;를 선택하여 대상 구성을 저장하거나 **[!UICONTROL 다음]**&#x200B;을 선택하여 대상 데이터 [활성화 흐름](activate-destinations.md)으로 진행합니다.
+1. **[!UICONTROL 저장 및 종료]**&#x200B;를 선택하여 대상 구성을 저장하거나 **[!UICONTROL 다음]**&#x200B;을 선택하여 대상 데이터 [활성화 흐름](activation-overview.md)으로 진행합니다.
