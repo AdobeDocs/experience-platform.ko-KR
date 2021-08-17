@@ -5,10 +5,10 @@ seo-title: 대상 개요
 description: 크로스 채널 마케팅 캠페인, 이메일, 타겟팅 광고 등을 위해 Adobe Experience Platform 데이터를 대상으로 활성화하는 방법을 알아봅니다.
 seo-description: 대상은 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과의 사전 구축된 통합입니다. Adobe Experience Platform에서 대상 을 사용하여 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: f73598224d527535aaf9ecb2aa1c26786cae2d82
+source-git-commit: b7392596c7ed96032dc8ad6bb8e423640f562394
 workflow-type: tm+mt
-source-wordcount: '488'
-ht-degree: 1%
+source-wordcount: '507'
+ht-degree: 0%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 1%
 ## 대상 단계 {#steps}
 
 * Platform에서 사용할 수 있는 모든 대상 중 [셀프 서비스 카탈로그](./catalog/overview.md) 중에서 선택합니다.
-* 대상을 [활성화](./ui/activate-destinations.md)하고 프로필 또는 세그먼트를 마케팅 자동화 플랫폼, 디지털 광고 플랫폼 등으로 보냅니다.
+* 대상을 사용하여 프로필 또는 세그먼트를 마케팅 자동화 플랫폼, 디지털 광고 플랫폼 등으로 보내고 보낼 수 있습니다.
 * 정기적으로 기본 대상으로 데이터 내보내기를 예약합니다.
 
 ## 컨트롤 {#controls}
@@ -66,4 +66,8 @@ Platform의 대상 기능은 Adobe Experience Platform 액세스 제어 권한�
 * [이메일 마케팅 대상](./catalog/email-marketing/overview.md)
 * [소셜 대상](./catalog/social/overview.md)
 
-세그먼트 활성화 워크플로우의 데이터 정책 위반에 대한 자세한 내용은 [프로필 및 세그먼트를 대상으로 활성화](./ui/activate-destinations.md#review)의 검토 단계를 참조하십시오.
+세그먼트 활성화 워크플로우의 데이터 정책 위반에 대한 자세한 내용은 다음 안내서의 검토 단계를 참조하십시오.
+
+* [스트리밍 세그먼트 내보내기 대상으로 대상 데이터 활성화](./ui/activate-segment-streaming-destinations.md#review)
+* [스트리밍 프로필 내보내기 대상으로 대상 데이터 활성화](./ui/activate-streaming-profile-destinations.md#review)
+* [대상자 데이터를 활성화하여 묶음 프로필 내보내기 대상 활성화](./ui/activate-batch-profile-destinations.md#review)
