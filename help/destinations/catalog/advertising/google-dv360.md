@@ -3,9 +3,9 @@ keywords: DoubleClick 입찰 관리자;DoubleClick 입찰 관리자;DoubleClick;
 title: Google Display & Video 360 연결
 description: 이전에 DoubleClick Bid Manager라고 알려진 Display & Video 360은 디스플레이, 비디오 및 모바일 인벤토리 소스에서 재타겟팅하고 대상 지정 디지털 캠페인을 실행하는 데 사용되는 도구입니다.
 exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
-source-git-commit: 802b1844bec1e577e978da5d5a69de87278c04b9
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
-source-wordcount: '671'
+source-wordcount: '673'
 ht-degree: 2%
 
 ---
@@ -80,7 +80,7 @@ Platform에서 [!DNL Google Display & Video 360] 대상을 만들려면 먼저 G
 
 ## 세그먼트를 이 대상에 활성화 {#activate}
 
-대상으로 대상 세그먼트를 활성화하는 방법에 대한 지침은 [대상 세그먼트 활성화](../../ui/activate-destinations.md)를 참조하십시오.
+대상 세그먼트를 이 대상으로 활성화하는 방법에 대한 지침은 [스트리밍 세그먼트 내보내기 대상으로 대상 활성화](../../ui/activate-segment-streaming-destinations.md)를 참조하십시오.
 
 ## 내보낸 데이터
 
