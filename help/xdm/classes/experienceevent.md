@@ -5,9 +5,9 @@ title: XDM ExperienceEvent 클래스
 topic-legacy: overview
 description: 이 문서에서는 XDM ExperienceEvent 클래스에 대한 개요와 이벤트 데이터 모델링에 대한 모범 사례를 제공합니다.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: ecb9c9a4158f3d2981ab60ee3bf419464ac7b8f1
+source-git-commit: 0af9290a3143b85311fbbd8d194f4799b0c9a873
 workflow-type: tm+mt
-source-wordcount: '1576'
+source-wordcount: '1573'
 ht-degree: 1%
 
 ---
@@ -49,11 +49,11 @@ ht-degree: 1%
 
 ### 계산된 필드 사용 {#calculated}
 
-경험 애플리케이션에서 특정 상호 작용으로 인해 기술적으로 동일한 이벤트 타임스탬프를 공유하는 여러 관련 이벤트가 발생할 수 있으므로 단일 이벤트 레코드로 나타낼 수 있습니다. 예를 들어 고객이 웹 사이트에서 제품을 보는 경우 두 개의 잠재적 `eventType` 값이 있는 이벤트 레코드가 발생할 수 있습니다.&quot;product view&quot; 이벤트(`commerce.productViews`) 또는 일반 &quot;page view&quot; 이벤트(`web.webpagedetails.pageViews`)입니다. 이러한 경우 하나의 히트에서 여러 이벤트가 캡처될 때 계산된 필드를 사용하여 가장 중요한 속성을 캡처할 수 있습니다.
+경험 애플리케이션에서 특정 상호 작용으로 인해 기술적으로 동일한 이벤트 타임스탬프를 공유하는 여러 관련 이벤트가 발생할 수 있으므로 단일 이벤트 레코드로 나타낼 수 있습니다. 예를 들어 고객이 웹 사이트에서 제품을 보는 경우 두 개의 잠재적 `eventType` 값이 있는 이벤트 레코드가 발생할 수 있습니다. &quot;product view&quot; 이벤트(`commerce.productViews`) 또는 일반 &quot;page view&quot; 이벤트(`web.webpagedetails.pageViews`)입니다. 이러한 경우 하나의 히트에서 여러 이벤트가 캡처될 때 계산된 필드를 사용하여 가장 중요한 속성을 캡처할 수 있습니다.
 
 [Adobe Experience Platform 데이터 ](../../data-prep/home.md) 미리 보기를 사용하여 XDM과 데이터를 매핑, 변환 및 XDM에서 확인할 수 있습니다. 서비스에서 제공하는 사용 가능한 [매핑 함수](../../data-prep/functions.md)를 사용하여 Experience Platform으로 수집할 때 논리 연산자를 호출하여 다중 이벤트 레코드의 데이터를 우선 순위 지정, 변환 및/또는 통합할 수 있습니다. 위의 예에서, `eventType`을 둘 다 발생할 때마다 &quot;페이지 보기&quot;보다 &quot;제품 보기&quot;를 우선시하는 계산된 필드로 지정할 수 있습니다.
 
-UI를 통해 데이터를 Platform으로 수동으로 수집하는 경우, 계산된 필드를 만드는 방법에 대한 특정 단계는 [XDM](../../ingestion/tutorials/map-a-csv-file.md)CSV 파일 매핑에 대한 안내서를 참조하십시오.
+UI를 통해 데이터를 Platform으로 수동으로 수집하는 경우, 계산된 필드를 만드는 방법에 대한 특정 단계는 [계산된 필드 안내서](../../data-prep/calculated-fields.md)의 안내서를 참조하십시오.
 
 소스 연결을 사용하여 Platform으로 데이터를 스트리밍하는 경우 계산된 필드를 대신 사용하도록 소스를 구성할 수 있습니다. 연결을 구성할 때 계산된 필드를 구현하는 방법에 대한 지침은 특정 소스](../../sources/home.md)에 대한 [설명서를 참조하십시오.
 
