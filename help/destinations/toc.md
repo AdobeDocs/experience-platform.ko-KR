@@ -4,9 +4,9 @@ user-guide-title: 대상 안내서
 user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화합니다.
 description: 이 문서에서는 Adobe Experience Platform 대상의 목차 목록을 설명합니다
 feature: 대상
-source-git-commit: f73598224d527535aaf9ecb2aa1c26786cae2d82
+source-git-commit: 0fef443c1979fec0c0d239a0b630cb3a0a134402
 workflow-type: tm+mt
-source-wordcount: '467'
+source-wordcount: '492'
 ht-degree: 11%
 
 ---
@@ -21,9 +21,13 @@ ht-degree: 11%
    * [이메일 마케팅 대상에 연결하고 Flow Service API를 사용하여 데이터를 활성화합니다](./api/email-marketing.md)
 * UI 안내서 {#ui}
    * [대상 작업 공간](./ui/destinations-workspace.md)
-   * [대상에 연결](./ui/connect-destination.md)
+   * [새 대상 연결 만들기](./ui/connect-destination.md)
+   * 대상 데이터 활성화{#activate}
+      * [활성화 개요](./ui/activation-overview.md)
+      * [스트리밍 세그먼트 내보내기 대상으로 대상 데이터 활성화](./ui/activate-segment-streaming-destinations.md)
+      * [스트리밍 프로필 내보내기 대상으로 대상 데이터 활성화](./ui/activate-streaming-profile-destinations.md)
+      * [대상자 데이터를 활성화하여 묶음 프로필 내보내기 대상 활성화](./ui/activate-batch-profile-destinations.md)
    * [대상 세부 사항 보기](./ui/destination-details-page.md)
-   * [대상에 프로필 및 세그먼트 활성화](./ui/activate-destinations.md)
    * [대상 계정 업데이트](./ui/update-accounts.md)
    * [활성화 흐름 편집](./ui/edit-activation.md)
    * [대상 삭제](./ui/delete-destinations.md)
