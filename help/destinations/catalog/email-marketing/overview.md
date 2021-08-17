@@ -4,9 +4,9 @@ title: 이메일 마케팅 대상 개요
 type: Tutorial
 description: ESP(이메일 서비스 공급자)를 사용하면 프로모션 이메일 캠페인 전송과 같은 이메일 마케팅 활동을 관리할 수 있습니다.
 exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
-source-git-commit: 802b1844bec1e577e978da5d5a69de87278c04b9
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
-source-wordcount: '382'
+source-wordcount: '387'
 ht-degree: 4%
 
 ---
@@ -70,9 +70,9 @@ Adobe은 [결합 스키마](../../../profile/home.md#profile-fragments-and-union
 
 ## 이메일 마케팅 대상에 세그먼트 활성화 {#activate}
 
-세그먼트를 이메일 마케팅 대상에 활성화하는 방법에 대한 지침은 [프로필 및 세그먼트를 대상에 활성화](../../ui/activate-destinations.md)를 참조하십시오.
+세그먼트를 이메일 마케팅 대상에 활성화하는 방법에 대한 지침은 [대상 데이터를 배치 프로필 내보내기 대상으로 활성화](../../ui/activate-batch-profile-destinations.md)를 참조하십시오.
 
 ## 추가 리소스
 
-* [대상에 데이터 활성화](../../ui/activate-destinations.md)
+* [대상자 데이터를 활성화하여 묶음 프로필 내보내기 대상 활성화](../../ui/activate-batch-profile-destinations.md)
 * [Flow Service API를 사용하여 이메일 마케팅 대상을 만들고 데이터를 활성화합니다](../../api/email-marketing.md)
