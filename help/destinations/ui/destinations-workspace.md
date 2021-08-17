@@ -4,9 +4,9 @@ title: 대상 작업 공간
 description: 대상 작업 영역은 카탈로그, 찾아보기, 계정 및 시스템 보기의 네 섹션으로 구성됩니다. 이러한 내용은 아래 섹션에 설명되어 있습니다.
 seo-description: Adobe Experience Platform의 왼쪽 탐색 막대에서 대상 을 선택하여 대상 작업 공간에 액세스합니다.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
+source-git-commit: a619227de30513bb06a22ce7b4f2fc13847c1ab6
 workflow-type: tm+mt
-source-wordcount: '869'
+source-wordcount: '861'
 ht-degree: 2%
 
 ---
@@ -72,7 +72,7 @@ Adobe Experience Platform의 왼쪽 탐색 막대에서 **[!UICONTROL 대상]**&
 
 >[!TIP]
 >
-> * **[!UICONTROL 이름]** 열의 ![세그먼트 추가 단추](../assets/ui/workspace/add-data-symbol.png) 단추를 사용하여 [추가 세그먼트를 해당 대상에 활성화합니다.](activate-destinations.md)
+> * **[!UICONTROL 이름]** 열의 ![세그먼트 추가 단추](../assets/ui/workspace/add-data-symbol.png) 단추를 사용하여 세그먼트를 해당 대상에 보냅니다.
 > * **[!UICONTROL 이름]** 열의 ![대상 삭제 단추](../assets/ui/workspace/delete-destination-symbol.png) 단추를 사용하여 대상에 대한 기존 연결을 [삭제](delete-destinations.md)합니다.
 
 
@@ -80,15 +80,15 @@ Adobe Experience Platform의 왼쪽 탐색 막대에서 **[!UICONTROL 대상]**&
 
 | 요소 | 설명 |
 |---------|----------|
-| 이름 | 활성화 플로우에 대해 제공한 이름을 이 대상으로 합니다. 동일한 열에는 두 개의 컨트롤이 있습니다. 및 [!UICONTROL 대상 삭제]. |
+| 이름 | 활성화 플로우에 대해 제공한 이름을 이 대상으로 합니다. 동일한 열에는 두 개의 컨트롤이 있습니다.  및 [!UICONTROL 대상 삭제]. |
 | [!UICONTROL 마지막 흐름 실행 상태] | 마지막 데이터 흐름 실행의 상태입니다. 데이터 흐름 실행에 대한 자세한 내용은 [대상 세부 정보 보기](destination-details-page.md)를 참조하십시오. |
 | [!UICONTROL 마지막 흐름 실행 날짜] | 마지막 데이터 흐름 실행이 발생한 시간 및 날짜입니다. 데이터 흐름 실행에 대한 자세한 내용은 [대상 세부 정보 보기](destination-details-page.md)를 참조하십시오. |
 | [!UICONTROL 대상] | 활성화 플로우에 대해 선택한 대상 플랫폼입니다. |
-| [!UICONTROL 연결 유형] | 저장소 버킷 또는 대상에 대한 연결 유형을 나타냅니다. <ul><li>이메일 마케팅 대상:S3, FTP 또는 [!DNL Azure Blob]일 수 있습니다.</li><li>실시간 광고 대상의 경우:서버 간.</li><li>스트리밍 대상의 경우:[!DNL Azure Event Hubs] 또는 [!DNL Amazon Kinesis]일 수 있습니다.</li></ul> |
+| [!UICONTROL 연결 유형] | 저장소 버킷 또는 대상에 대한 연결 유형을 나타냅니다. <ul><li>이메일 마케팅 대상: S3, FTP 또는 [!DNL Azure Blob]일 수 있습니다.</li><li>실시간 광고 대상의 경우: 서버 간.</li><li>스트리밍 대상의 경우: [!DNL Azure Event Hubs] 또는 [!DNL Amazon Kinesis]일 수 있습니다.</li></ul> |
 | [!UICONTROL 사용자 이름] | 대상 플로우에 대해 선택한 계정 자격 증명입니다. |
 | [!UICONTROL 활성화 데이터] | 이 대상에 활성화된 세그먼트 수를 나타냅니다. 활성화된 세그먼트에 대한 자세한 내용을 보려면 이 컨트롤을 선택하십시오. 활성화된 세그먼트에 대한 자세한 내용은 대상 세부 정보 페이지의 [활성화 데이터](/help/destinations/ui/destination-details-page.md#activation-data) 를 참조하십시오. |
 | [!UICONTROL 생성됨] | 대상으로 활성화 흐름이 만들어진 날짜 및 UTC 시간입니다. |
-| [!UICONTROL 상태] | `Active` 또는 `Inactive`. 데이터를 이 대상에 활성화할지 여부를 나타냅니다. 상태를 편집하려면 [활성화 비활성화](./activate-destinations.md#disable-activation)를 참조하십시오. |
+| [!UICONTROL 상태] | `Active` 또는 `Inactive`. 데이터를 이 대상에 활성화할지 여부를 나타냅니다. |
 
 오른쪽 레일에서 대상에 대한 자세한 정보를 표시하려면 대상 행을 클릭합니다.
 
