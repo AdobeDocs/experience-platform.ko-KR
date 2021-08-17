@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: UI에서 Adobe Analytics 소스 연결을 만들어 소비자 데이터를 Adobe Experience Platform으로 가져오는 방법을 알아봅니다.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 952b2caa6983b331c046618aff255131a6480e67
+source-git-commit: 0af9290a3143b85311fbbd8d194f4799b0c9a873
 workflow-type: tm+mt
-source-wordcount: '1450'
+source-wordcount: '1441'
 ht-degree: 1%
 
 ---
@@ -134,7 +134,7 @@ Platform은 친숙한 이름 충돌에 대한 매핑 세트를 자동으로 감�
 
 * [데이터 준비 개요](../../../../../data-prep/home.md)
 * [데이터 준비 매핑 함수](../../../../../data-prep/functions.md)
-* [XDM 스키마에 CSV 파일 매핑 및 계산된 필드 추가](../../../../../ingestion/tutorials/map-a-csv-file.md#add-calculated-field)
+* [계산된 필드 추가](../../../../../data-prep/calculated-fields.md)
 
 ### 데이터 흐름 세부 정보 제공
 
