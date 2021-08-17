@@ -4,9 +4,9 @@ user-guide-title: 대상 안내서
 user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화합니다.
 description: 이 문서에서는 Adobe Experience Platform 대상의 목차 목록을 설명합니다
 feature: 대상
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: f73598224d527535aaf9ecb2aa1c26786cae2d82
 workflow-type: tm+mt
-source-wordcount: '476'
+source-wordcount: '467'
 ht-degree: 11%
 
 ---
@@ -79,7 +79,6 @@ ht-degree: 11%
       * [다음 전환 추적 확장](./catalog/analytics/yext.md)
    * 클라우드 스토리지 대상 {#cloud-storage}
       * [클라우드 스토리지 대상 개요](./catalog/cloud-storage/overview.md)
-      * [클라우드 스토리지 대상 만들기](./catalog/cloud-storage/workflow.md)
       * [(베타) Amazon Kinesis 연결](./catalog/cloud-storage/amazon-kinesis.md)
       * [Amazon S3 연결](./catalog/cloud-storage/amazon-s3.md)
       * [Azure Blob 연결](./catalog/cloud-storage/azure-blob.md)
@@ -119,7 +118,6 @@ ht-degree: 11%
       * [Marketo 웹 개인화 확장](./catalog/personalization/marketo-web-personalization.md)
    * 소셜 대상{#social}
       * [소셜 대상 개요](./catalog/social/overview.md)
-      * [소셜 대상 만들기](./catalog/social/workflow.md)
       * [Livefyre 확장 Adobe](./catalog/social/adobe-livefyre.md)
       * [Facebook 연결](./catalog/social/facebook.md)
       * [linkedIn Matched Audiences 연결](./catalog/social/linkedin.md)
