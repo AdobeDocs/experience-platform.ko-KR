@@ -5,9 +5,9 @@ topic-legacy: overview
 title: 액세스 제어 개요
 description: Adobe Experience Platform에 대한 액세스 제어는 Adobe Admin Console을 통해 제공됩니다. 이 기능은 사용 권한 및 샌드박스를 사용자와 연결하는 Admin Console의 제품 프로필을 활용합니다.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: 36aaccddeb207e22a22d5124ec8592ac8dddf8bc
+source-git-commit: f340ecfb850ef50504938a5db136e70b8bede61a
 workflow-type: tm+mt
-source-wordcount: '1307'
+source-wordcount: '1320'
 ht-degree: 2%
 
 ---
@@ -109,6 +109,7 @@ Adobe Admin Console은 조직에 대한 Adobe 제품 권한 및 액세스를 관
 | [!DNL Data Governance] | [!UICONTROL 데이터 사용 레이블 적용] | 사용 레이블을 읽고, 만들고, 삭제할 수 있는 액세스 권한. |
 | [!DNL Data Governance] | [!UICONTROL 데이터 사용 정책 관리] | 데이터 사용 정책을 읽고, 만들고, 편집하고, 삭제할 수 있는 액세스 권한. |
 | [!DNL Data Governance] | [!UICONTROL 데이터 사용 정책 보기] | 조직에 속하는 데이터 사용 정책에 대한 읽기 전용 액세스 권한입니다. |
+| [!DNL Data Governance] | [!UICONTROL 감사 로그 보기] | 플랫폼 활동의 기록된 [감사 로그](../landing/governance-privacy-security/audit-logs/overview.md)를 보는 읽기 전용 액세스 권한. |
 | [!DNL Dashboards] | [!UICONTROL 라이선스 사용 대시보드 보기] | 라이센스 사용 대시보드를 보려면 읽기 전용 액세스 권한이 있어야 합니다. |
 | [!DNL Dashboards] | [!UICONTROL 표준 대시보드 관리] | 데이터 웨어하우스에 아직 있지 않은 사용자 지정 특성을 추가합니다. |
 | [!DNL Query Service] | [!UICONTROL 쿼리 관리] | 플랫폼 데이터에 대한 구조화된 SQL 쿼리를 읽고, 만들고, 편집하고, 삭제할 수 있는 액세스 권한. |
