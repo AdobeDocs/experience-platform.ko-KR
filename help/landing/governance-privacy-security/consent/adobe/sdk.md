@@ -3,10 +3,10 @@ title: Adobe Experience Platform Web SDK를 사용하여 고객 동의 데이터
 topic-legacy: getting started
 description: Adobe 2.0 표준을 사용하여 Adobe Experience Platform Web SDK를 통합하여 Adobe Experience Platform에서 고객 동의 데이터를 처리하는 방법을 알아봅니다.
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 272cf2906b44ccfeca041d9620ac0780e24ad1ae
 workflow-type: tm+mt
-source-wordcount: '1254'
-ht-degree: 1%
+source-wordcount: '1247'
+ht-degree: 0%
 
 ---
 
@@ -93,7 +93,7 @@ SDK 확장이 설치되어 있으면 사용자에 대한 기본 데이터 수집
 
 ### 웹 사이트에 확장 배포
 
-확장 구성을 마치면 웹 사이트에 통합할 수 있습니다. 업데이트된 라이브러리 빌드를 배포하는 방법에 대한 자세한 내용은 태그 설명서의 [게시 안내서](https://experienceleague.adobe.com/docs/launch/using/publish/overview.html?lang=ko-KR)를 참조하십시오.
+확장 구성을 마치면 웹 사이트에 통합할 수 있습니다. 업데이트된 라이브러리 빌드를 배포하는 방법에 대한 자세한 내용은 태그 설명서의 [게시 안내서](../../../../tags/ui/publishing/overview.md)를 참조하십시오.
 
 ## 동의 변경 명령 {#commands}
 
