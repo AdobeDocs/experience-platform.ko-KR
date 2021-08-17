@@ -3,9 +3,9 @@ keywords: google 고객 일치;Google 고객 일치;Google Customer Match
 title: Google Customer Match 연결
 description: 'Google Customer Match를 사용하면 온라인 및 오프라인 데이터를 사용하여 Google이 소유하거나 운영하는 속성(예: Search, Shopping, Gmail, YouTube)에서 고객에게 도달하고 다시 참여하도록 할 수 있습니다.'
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
-source-wordcount: '1250'
+source-wordcount: '1252'
 ht-degree: 0%
 
 ---
@@ -131,7 +131,7 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 
 ## 세그먼트를 이 대상에 활성화 {#activate}
 
-대상으로 대상 세그먼트를 활성화하는 방법에 대한 지침은 [대상 세그먼트 활성화](../../ui/activate-destinations.md)를 참조하십시오.
+대상 세그먼트를 이 대상으로 활성화하는 방법에 대한 지침은 [스트리밍 세그먼트 내보내기 대상으로 대상 활성화](../../ui/activate-segment-streaming-destinations.md)를 참조하십시오.
 
 **[!UICONTROL 세그먼트 예약]** 단계에서 [!DNL IDFA] 또는 [!DNL GAID] 세그먼트를 [!DNL Google Customer Match]에 보낼 때 [!UICONTROL 앱 ID]를 제공해야 합니다.
 
