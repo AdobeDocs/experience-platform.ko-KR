@@ -3,9 +3,9 @@ keywords: linkedin 연결;linkedin 연결;linkedin 대상;linkedin
 title: Linkedin 일치하는 대상 연결
 description: 해시된 이메일을 기반으로 대상 타깃팅, 개인화 및 억제를 위해 LinkedIn 캠페인용 프로필을 활성화합니다.
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
-source-wordcount: '766'
+source-wordcount: '768'
 ht-degree: 0%
 
 ---
@@ -71,7 +71,7 @@ Experience Platform에서 이메일 주소를 수집하는 방법에 대한 자�
 >해시되지 않은 네임스페이스의 데이터는 활성화 시 [!DNL Platform]에 의해 자동으로 해시됩니다.
 > 속성 소스 데이터는 자동으로 해시되지 않습니다.
 > 
-> [ID 매핑](../../ui/activate-destinations.md#mapping) 단계에서 소스 필드에 해시되지 않은 속성이 포함되어 있으면 **[!UICONTROL 변환]** 적용 옵션을 선택하여 [!DNL Platform]에서 활성화 시 데이터를 자동으로 해시하도록 하십시오.
+> [ID 매핑](../../ui/activate-segment-streaming-destinations.md#mapping) 단계에서 소스 필드에 해시되지 않은 속성이 포함되어 있으면 **[!UICONTROL 변환]** 적용 옵션을 선택하여 [!DNL Platform]에서 활성화 시 데이터를 자동으로 해시하도록 하십시오.
 > 
 > **[!UICONTROL 변환 적용]** 옵션은 속성을 소스 필드로 선택한 경우에만 표시됩니다. 네임스페이스를 선택하면 표시되지 않습니다.
 
@@ -99,7 +99,7 @@ Experience Platform에서 이메일 주소를 수집하는 방법에 대한 자�
 
 ## 세그먼트를 이 대상에 활성화 {#activate}
 
-대상으로 대상 세그먼트를 활성화하는 방법에 대한 지침은 [대상 세그먼트 활성화](../../ui/activate-destinations.md)를 참조하십시오.
+대상 세그먼트를 이 대상으로 활성화하는 방법에 대한 지침은 [스트리밍 세그먼트 내보내기 대상으로 대상 활성화](../../ui/activate-segment-streaming-destinations.md)를 참조하십시오.
 
 ## 내보낸 데이터 {#exported-data}
 
