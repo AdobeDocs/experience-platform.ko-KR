@@ -3,9 +3,9 @@ keywords: 광고; 영업 데스크 광고 회사
 title: 무역센터 연결
 description: Trade Desk는 광고 구매자가 디스플레이, 비디오 및 모바일 인벤토리 소스에서 타겟팅된 디지털 캠페인을 실행하고 재타겟팅할 수 있는 셀프서비스 플랫폼입니다.
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: 802b1844bec1e577e978da5d5a69de87278c04b9
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
-source-wordcount: '482'
+source-wordcount: '484'
 ht-degree: 2%
 
 ---
@@ -63,9 +63,9 @@ ht-degree: 2%
 
 ## 세그먼트를 이 대상에 활성화 {#activate}
 
-대상으로 대상 세그먼트를 활성화하는 방법에 대한 지침은 [대상 세그먼트 활성화](../../ui/activate-destinations.md)를 참조하십시오.
+대상 세그먼트를 이 대상으로 활성화하는 방법에 대한 지침은 [스트리밍 세그먼트 내보내기 대상으로 대상 활성화](../../ui/activate-segment-streaming-destinations.md)를 참조하십시오.
 
-[세그먼트 예약](../../ui/activate-destinations.md#segment-schedule) 단계에서는 세그먼트를 수동으로 대상 플랫폼의 해당 ID 또는 친숙한 이름에 매핑해야 합니다.
+[세그먼트 예약](../../ui/activate-segment-streaming-destinations.md#scheduling) 단계에서는 세그먼트를 수동으로 대상 플랫폼의 해당 ID 또는 친숙한 이름에 매핑해야 합니다.
 
 세그먼트를 매핑할 때 세그먼트를 쉽게 사용할 수 있도록 Platform 세그먼트 이름 또는 더 짧은 형식을 사용하는 것이 좋습니다. 하지만 대상에 있는 세그먼트 ID 또는 이름이 Platform 계정의 세그먼트 ID와 일치하지 않아도 됩니다. 매핑 필드에 삽입한 모든 값은 대상에 의해 반영됩니다.
 
