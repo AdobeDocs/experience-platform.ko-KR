@@ -3,9 +3,9 @@ keywords: Azure 이벤트 허브 대상;azure 이벤트 허브;azure 이벤트 �
 title: (베타)!DNL Azure 이벤트 허브] 연결
 description: Experience Platform에서 데이터를 스트리밍하려면 사용자의!DNL Azure 이벤트 허브] 스토리지에 대한 실시간 아웃바운드 연결을 만듭니다.
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
-source-wordcount: '474'
+source-wordcount: '476'
 ht-degree: 2%
 
 ---
@@ -36,7 +36,7 @@ ht-degree: 2%
 
 ## 내보내기 유형 {#export-type}
 
-**프로필 기반**  - 원하는 스키마 필드와 함께 세그먼트의 모든 구성원을 내보냅니다(예: 대상 활성화 워크플로우의 속성 선택 화면에서 선택한 대로 이메일 주소,  [전화 번호, 성)](../../ui/activate-destinations.md#select-attributes).
+**프로필 기반**  - 원하는 스키마 필드와 함께 세그먼트의 모든 구성원을 내보냅니다(예: 대상 활성화 워크플로우의 속성 선택 화면에서 선택한 대로 이메일 주소,  [전화 번호, 성)](../../ui/activate-streaming-profile-destinations.md#select-attributes).
 
 ## 대상에 연결 {#connect}
 
@@ -54,7 +54,7 @@ ht-degree: 2%
 
 ## 세그먼트를 이 대상에 활성화 {#activate}
 
-대상으로 대상 세그먼트를 활성화하는 방법에 대한 지침은 [대상 세그먼트 활성화](../../ui/activate-destinations.md)를 참조하십시오.
+대상 세그먼트를 이 대상으로 활성화하는 방법에 대한 지침은 [스트리밍 프로필 내보내기 대상으로 대상 활성화](../../ui/activate-streaming-profile-destinations.md)를 참조하십시오.
 
 ## 내보낸 데이터 {#exported-data}
 
