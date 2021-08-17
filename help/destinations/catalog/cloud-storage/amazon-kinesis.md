@@ -3,9 +3,9 @@ keywords: Amazon Kinesis;kinesis 대상;kinesis
 title: Amazon Kinesis 연결
 description: Amazon Kinesis 스토리지에 대한 실시간 아웃바운드 연결을 만들어 Adobe Experience Platform에서 데이터를 스트리밍합니다.
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: 4febcef82c6da4534051cbe68820984814786224
+source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
 workflow-type: tm+mt
-source-wordcount: '624'
+source-wordcount: '550'
 ht-degree: 2%
 
 ---
@@ -36,9 +36,9 @@ ht-degree: 2%
 
 ## 내보내기 유형 {#export-type}
 
-**프로필 기반**  - 원하는 스키마 필드와 함께 세그먼트의 모든 구성원을 내보냅니다(예:대상 활성화 워크플로우의 속성 선택 화면에서 선택한 대로 이메일 주소,  [전화 번호, 성)](../../ui/activate-destinations.md#select-attributes).
+**프로필 기반**  - 원하는 스키마 필드와 함께 세그먼트의 모든 구성원을 내보냅니다(예: 대상 활성화 워크플로우의 속성 선택 화면에서 선택한 대로 이메일 주소,  [전화 번호, 성)](../../ui/activate-destinations.md#select-attributes).
 
-## 필수 [!DNL Amazon Kinesis] 권한 {#required-kinesis-permission}
+## 필요한 [!DNL Amazon Kinesis] 권한 {#required-kinesis-permission}
 
 데이터를 [!DNL Amazon Kinesis] 스트림에 성공적으로 연결하고 내보내려면 Experience Platform에 다음 작업에 대한 권한이 있어야 합니다.
 
@@ -77,27 +77,19 @@ ht-degree: 2%
 
 [!DNL Kinesis] 데이터 스트림에 대한 액세스 제어에 대한 자세한 내용은 다음 [[!DNL Kinesis] document](https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html)를 참조하십시오.
 
-## 대상 연결 {#connect-destination}
+## 대상에 연결 {#connect}
 
-[!DNL Amazon]에서 지원하는 클라우드 스토리지 대상에 연결하는 방법에 대한 지침은 [클라우드 스토리지 대상 워크플로우 ](./workflow.md)를 참조하십시오.
+이 대상에 연결하려면 [대상 구성 자습서](../../ui/connect-destination.md)에 설명된 단계를 따르십시오.
 
-[!DNL Amazon Kinesis] 대상의 경우 대상 만들기 워크플로우에 다음 정보를 입력합니다.
+### 연결 매개 변수 {#parameters}
 
-## 계정 단계 {#account-step}
+[이 대상을 설정할 때 다음 정보를 제공해야 합니다.](../../ui/connect-destination.md)
 
-* **[!DNL Amazon Web Services]액세스 키 및 암호 키**:에서  [!DNL Amazon Web Services]쌍을  `access key - secret access key` 생성하여 계정에 대한 플랫폼 액세스 권한을  [!DNL Amazon Kinesis] 부여합니다. 자세한 내용은 [Amazon 웹 서비스 설명서](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)를 참조하십시오.
-* **지역**:데이터를 스트리밍할  [!DNL Amazon Web Services] 지역을 지정합니다.
-
-![계정 단계의 입력 필드](../../assets/catalog/cloud-storage/amazon-kinesis/account.png)
-
-## 인증 단계 {#authentication-step}
-
-* **이름**:연결할 이름을 입력합니다  [!DNL Amazon Kinesis]
-* **설명**:연결에 대한 설명을 제공합니다  [!DNL Amazon Kinesis].
-* **스트림**:계정에 기존 데이터 스트림의 이름을  [!DNL Amazon Kinesis] 제공합니다. Platform에서 데이터를 이 스트림으로 내보냅니다.
-* **[!UICONTROL 마케팅 작업]**:마케팅 작업은 대상으로 데이터를 내보낼 의도를 나타냅니다. Adobe 정의 마케팅 작업에서 선택하거나 고유한 마케팅 작업을 만들 수 있습니다. 마케팅 작업에 대한 자세한 내용은 [Adobe Experience Platform의 데이터 거버넌스](../../../data-governance/policies/overview.md) 페이지를 참조하십시오. 개별 Adobe 정의 마케팅 작업에 대한 자세한 내용은 [데이터 사용 정책 개요](../../../data-governance/policies/overview.md)를 참조하십시오.
-
-![인증 단계의 입력 필드](../../assets/catalog/cloud-storage/amazon-kinesis/authentication.png)
+* **[!DNL Amazon Web Services]액세스 키 및 암호 키**: 에서  [!DNL Amazon Web Services]쌍을  `access key - secret access key` 생성하여 계정에 대한 플랫폼 액세스 권한을  [!DNL Amazon Kinesis] 부여합니다. 자세한 내용은 [Amazon 웹 서비스 설명서](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)를 참조하십시오.
+* **지역**: 데이터를 스트리밍할  [!DNL Amazon Web Services] 지역을 지정합니다.
+* **이름**: 연결할 이름을 입력합니다  [!DNL Amazon Kinesis]
+* **설명**: 연결에 대한 설명을 제공합니다  [!DNL Amazon Kinesis].
+* **스트림**: 계정에 기존 데이터 스트림의 이름을  [!DNL Amazon Kinesis] 제공합니다. Platform에서 데이터를 이 스트림으로 내보냅니다.
 
 <!--
 
@@ -107,9 +99,9 @@ ht-degree: 2%
 
 -->
 
-## 세그먼트 활성화 {#activate-segments}
+## 세그먼트를 이 대상에 활성화 {#activate}
 
-세그먼트 활성화 워크플로우에 대한 자세한 내용은 [대상에 프로필 및 세그먼트 활성화](../../ui/activate-destinations.md)를 참조하십시오.
+대상으로 대상 세그먼트를 활성화하는 방법에 대한 지침은 [대상 세그먼트 활성화](../../ui/activate-destinations.md)를 참조하십시오.
 
 ## 내보낸 데이터 {#exported-data}
 
