@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;홈;인기 있는 주제API 자습서스트리밍 대상 API;플랫폼
+keywords: Experience Platform;홈;인기 있는 주제 API 자습서 스트리밍 대상 API; 플랫폼
 solution: Experience Platform
 title: Adobe Experience Platform에서 Flow Service API를 사용하여 스트리밍 대상에 연결하고 데이터를 활성화합니다
 description: 이 문서에서는 Adobe Experience Platform API를 사용하여 스트리밍 대상 만들기에 대해 설명합니다
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
-source-git-commit: 0bc85d79bab690d433dc29d558a4d9caf086586d
+source-git-commit: 02c22453470d55236d4235c479742997e8407ef3
 workflow-type: tm+mt
-source-wordcount: '2024'
+source-wordcount: '2025'
 ht-degree: 1%
 
 ---
@@ -25,15 +25,15 @@ ht-degree: 1%
 
 ![개요 - 스트리밍 대상을 만들고 세그먼트를 활성화하는 절차](../assets/api/streaming-destination/overview.png)
 
-Platform의 사용자 인터페이스를 사용하여 대상에 연결하고 데이터를 활성화하려면 [대상 연결](../ui/connect-destination.md) 및 [프로필 및 세그먼트를 대상](../ui/activate-destinations.md) 자습서에 활성화 를 참조하십시오.
+Platform의 사용자 인터페이스를 사용하여 대상에 연결하고 데이터를 활성화하려면 [대상 연결](../ui/connect-destination.md) 및 [세그먼트 내보내기 대상으로 대상 활성화](../ui/activate-segment-streaming-destinations.md) 자습서를 참조하십시오.
 
 ## 시작
 
 이 안내서에서는 Adobe Experience Platform의 다음 구성 요소를 이해하고 있어야 합니다.
 
-* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md):Experience Platform이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
-* [[!DNL Catalog Service]](../../catalog/home.md): [!DNL Catalog] 는 Experience Platform 내의 데이터 위치 및 계열에 대한 레코드 시스템입니다.
-* [샌드박스](../../sandboxes/home.md):Experience Platform은 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 단일 플랫폼 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
+* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Experience Platform이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
+* [[!DNL Catalog Service]](../../catalog/home.md):  [!DNL Catalog] 는 Experience Platform 내의 데이터 위치 및 계열에 대한 레코드 시스템입니다.
+* [샌드박스](../../sandboxes/home.md): Experience Platform은 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 단일 플랫폼 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
 
 다음 섹션에서는 Platform에서 데이터를 스트리밍 대상으로 활성화하기 위해 알고 있어야 하는 추가 정보를 제공합니다.
 
@@ -41,8 +41,8 @@ Platform의 사용자 인터페이스를 사용하여 대상에 연결하고 데
 
 이 자습서의 단계를 완료하려면 세그먼트를 연결하고 활성화할 대상 유형에 따라 다음 자격 증명이 준비되어야 합니다.
 
-* [!DNL Amazon Kinesis] 연결의 경우:`accessKeyId`, `secretKey`, `region` 또는 `connectionUrl`
-* [!DNL Azure Event Hubs] 연결의 경우:`sasKeyName`, `sasKey`, `namespace`
+* [!DNL Amazon Kinesis] 연결의 경우: `accessKeyId`, `secretKey`, `region` 또는 `connectionUrl`
+* [!DNL Azure Event Hubs] 연결의 경우: `sasKeyName`, `sasKey`, `namespace`
 
 ### 샘플 API 호출 읽기 {#reading-sample-api-calls}
 
@@ -52,7 +52,7 @@ Platform의 사용자 인터페이스를 사용하여 대상에 연결하고 데
 
 플랫폼 API를 호출하려면 먼저 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 완료해야 합니다. 인증 자습서를 완료하면 아래와 같이 모든 Experience Platform API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
 
-* 권한 부여:Bearer `{ACCESS_TOKEN}`
+* 권한 부여: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
@@ -154,7 +154,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```
 
 
-* `{CONNECTION_SPEC_ID}`:프로필 서비스에 대한 연결 사양 ID 사용 -  `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
+* `{CONNECTION_SPEC_ID}`: 프로필 서비스에 대한 연결 사양 ID 사용 -  `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
 
 **응답**
 
@@ -198,8 +198,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-* `{BASE_CONNECTION_ID}`:이전 단계에서 얻은 ID를 사용합니다.
-* `{CONNECTION_SPEC_ID}`:프로필 서비스에 대한 연결 사양 ID 사용 -  `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
+* `{BASE_CONNECTION_ID}`: 이전 단계에서 얻은 ID를 사용합니다.
+* `{CONNECTION_SPEC_ID}`: 프로필 서비스에 대한 연결 사양 ID 사용 -  `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
 
 **응답**
 
@@ -265,14 +265,14 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-* `{CONNECTION_SPEC_ID}`:사용 가능한 대상 목록  [가져오기 단계에서 얻은 연결 사양 ID를 사용합니다](#get-the-list-of-available-destinations).
-* `{AUTHENTICATION_CREDENTIALS}`:스트리밍 대상의 이름을 입력합니다. `Aws Kinesis authentication credentials` 또는  `Azure EventHub authentication credentials`.
-* `{ACCESS_ID}`: *연결 [!DNL Amazon Kinesis] 에 대해* Amazon Kinesis 저장소 위치에 대한 액세스 ID입니다.
-* `{SECRET_KEY}`: *연결 [!DNL Amazon Kinesis] 에 대해* Amazon Kinesis 저장소 위치의 암호 키입니다.
-* `{REGION}`: *연결 [!DNL Amazon Kinesis] 에 대해* Platform이  [!DNL Amazon Kinesis] 데이터를 스트리밍할 계정의 영역입니다.
-* `{SAS_KEY_NAME}`: *연결 [!DNL Azure Event Hubs] 에 대해* SAS 키 이름을 입력합니다. [Microsoft 설명서](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)에서 SAS 키를 사용하여 [!DNL Azure Event Hubs]에 인증하는 방법에 대해 알아봅니다.
-* `{SAS_KEY}`: *연결 [!DNL Azure Event Hubs] 에 대해* SAS 키를 입력합니다. [Microsoft 설명서](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)에서 SAS 키를 사용하여 [!DNL Azure Event Hubs]에 인증하는 방법에 대해 알아봅니다.
-* `{EVENT_HUB_NAMESPACE}`: *연결 [!DNL Azure Event Hubs] 에 대해* Platform에서  [!DNL Azure Event Hubs] 데이터를 스트리밍할 네임스페이스를 입력합니다. 자세한 내용은 [!DNL Microsoft] 설명서에서 [이벤트 허브 네임스페이스 만들기](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace)를 참조하십시오.
+* `{CONNECTION_SPEC_ID}`: 사용 가능한 대상 목록  [가져오기 단계에서 얻은 연결 사양 ID를 사용합니다](#get-the-list-of-available-destinations).
+* `{AUTHENTICATION_CREDENTIALS}`: 스트리밍 대상의 이름을 입력합니다.  `Aws Kinesis authentication credentials` 또는  `Azure EventHub authentication credentials`.
+* `{ACCESS_ID}`:  *연결 [!DNL Amazon Kinesis] 에 대해* Amazon Kinesis 저장소 위치에 대한 액세스 ID입니다.
+* `{SECRET_KEY}`:  *연결 [!DNL Amazon Kinesis] 에 대해* Amazon Kinesis 저장소 위치의 암호 키입니다.
+* `{REGION}`:  *연결 [!DNL Amazon Kinesis] 에 대해* Platform이  [!DNL Amazon Kinesis] 데이터를 스트리밍할 계정의 영역입니다.
+* `{SAS_KEY_NAME}`:  *연결 [!DNL Azure Event Hubs] 에 대해* SAS 키 이름을 입력합니다. [Microsoft 설명서](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)에서 SAS 키를 사용하여 [!DNL Azure Event Hubs]에 인증하는 방법에 대해 알아봅니다.
+* `{SAS_KEY}`:  *연결 [!DNL Azure Event Hubs] 에 대해* SAS 키를 입력합니다. [Microsoft 설명서](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)에서 SAS 키를 사용하여 [!DNL Azure Event Hubs]에 인증하는 방법에 대해 알아봅니다.
+* `{EVENT_HUB_NAMESPACE}`:  *연결 [!DNL Azure Event Hubs] 에 대해* Platform에서  [!DNL Azure Event Hubs] 데이터를 스트리밍할 네임스페이스를 입력합니다. 자세한 내용은 [!DNL Microsoft] 설명서에서 [이벤트 허브 네임스페이스 만들기](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace)를 참조하십시오.
 
 **응답**
 
@@ -325,11 +325,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-* `{BASE_CONNECTION_ID}`:위의 단계에서 얻은 기본 연결 ID를 사용합니다.
-* `{CONNECTION_SPEC_ID}`:사용 가능한 대상 목록  [가져오기 단계에서 얻은 연결 사양을 사용합니다](#get-the-list-of-available-destinations).
-* `{NAME_OF_DATA_STREAM}`: *연결 [!DNL Amazon Kinesis] 에 대해* 계정에 기존 데이터 스트림의 이름을  [!DNL Amazon Kinesis] 입력합니다. Platform에서 데이터를 이 스트림으로 내보냅니다.
-* `{REGION}`: *연결 [!DNL Amazon Kinesis] 에 대해* Platform이 데이터를 스트리밍할 Amazon Kinesis 계정의 영역입니다.
-* `{EVENT_HUB_NAME}`: *연결 [!DNL Azure Event Hubs] 에 대해* Platform에서  [!DNL Azure Event Hub] 데이터를 스트리밍할 이름을 입력합니다. 자세한 내용은 [!DNL Microsoft] 설명서에서 [이벤트 허브 만들기](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub)를 참조하십시오.
+* `{BASE_CONNECTION_ID}`: 위의 단계에서 얻은 기본 연결 ID를 사용합니다.
+* `{CONNECTION_SPEC_ID}`: 사용 가능한 대상 목록  [가져오기 단계에서 얻은 연결 사양을 사용합니다](#get-the-list-of-available-destinations).
+* `{NAME_OF_DATA_STREAM}`:  *연결 [!DNL Amazon Kinesis] 에 대해* 계정에 기존 데이터 스트림의 이름을  [!DNL Amazon Kinesis] 입력합니다. Platform에서 데이터를 이 스트림으로 내보냅니다.
+* `{REGION}`:  *연결 [!DNL Amazon Kinesis] 에 대해* Platform이 데이터를 스트리밍할 Amazon Kinesis 계정의 영역입니다.
+* `{EVENT_HUB_NAME}`:  *연결 [!DNL Azure Event Hubs] 에 대해* Platform에서  [!DNL Azure Event Hub] 데이터를 스트리밍할 이름을 입력합니다. 자세한 내용은 [!DNL Microsoft] 설명서에서 [이벤트 허브 만들기](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub)를 참조하십시오.
 
 **응답**
 
@@ -400,9 +400,9 @@ curl -X POST \
 }
 ```
 
-* `{FLOW_SPEC_ID}`:프로필 기반 대상의 흐름 사양 ID는  `71471eba-b620-49e4-90fd-23f1fa0174d8`입니다. 호출에서 이 값을 사용합니다.
-* `{SOURCE_CONNECTION_ID}`:Experience Platform에  [연결 단계에서 얻은 소스 연결 ID를 사용합니다](#connect-to-your-experience-platform-data).
-* `{TARGET_CONNECTION_ID}`:스트리밍 대상에  [연결 단계에서 얻은 대상 연결 ID를 사용합니다](#connect-to-streaming-destination).
+* `{FLOW_SPEC_ID}`: 프로필 기반 대상의 흐름 사양 ID는  `71471eba-b620-49e4-90fd-23f1fa0174d8`입니다. 호출에서 이 값을 사용합니다.
+* `{SOURCE_CONNECTION_ID}`: Experience Platform에  [연결 단계에서 얻은 소스 연결 ID를 사용합니다](#connect-to-your-experience-platform-data).
+* `{TARGET_CONNECTION_ID}`: 스트리밍 대상에  [연결 단계에서 얻은 대상 연결 ID를 사용합니다](#connect-to-streaming-destination).
 
 **응답**
 
@@ -467,10 +467,10 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 ]
 ```
 
-* `{DATAFLOW_ID}`:이전 단계에서 얻은 데이터 흐름을 사용합니다.
-* `{ETAG}`:이전 단계에서 얻은 태그를 사용합니다.
-* `{SEGMENT_ID}`:이 대상으로 내보낼 세그먼트 ID를 제공합니다. 활성화하려는 세그먼트의 세그먼트 ID를 검색하려면 **https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/** 로 이동한 다음, 왼쪽 탐색 메뉴에서 **[!UICONTROL 세그멘테이션 서비스 API]**&#x200B;를 선택하고 **[!UICONTROL 세그먼트 정의]**&#x200B;에서 `GET /segment/definitions` 작업을 찾으십시오.
-* `{PROFILE_ATTRIBUTE}`:예,  `personalEmail.address` 또는  `person.lastName`
+* `{DATAFLOW_ID}`: 이전 단계에서 얻은 데이터 흐름을 사용합니다.
+* `{ETAG}`: 이전 단계에서 얻은 태그를 사용합니다.
+* `{SEGMENT_ID}`: 이 대상으로 내보낼 세그먼트 ID를 제공합니다. 활성화하려는 세그먼트의 세그먼트 ID를 검색하려면 **https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/** 로 이동한 다음, 왼쪽 탐색 메뉴에서 **[!UICONTROL 세그멘테이션 서비스 API]**&#x200B;를 선택하고 **[!UICONTROL 세그먼트 정의]**&#x200B;에서 `GET /segment/definitions` 작업을 찾으십시오.
+* `{PROFILE_ATTRIBUTE}`: 예,  `personalEmail.address` 또는  `person.lastName`
 
 **응답**
 
@@ -502,8 +502,8 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 --header 'If-Match: "{ETAG}"' 
 ```
 
-* `{DATAFLOW_ID}`:이전 단계의 데이터 흐름을 사용합니다.
-* `{ETAG}`:이전 단계의 태그를 사용합니다.
+* `{DATAFLOW_ID}`: 이전 단계의 데이터 흐름을 사용합니다.
+* `{ETAG}`: 이전 단계의 태그를 사용합니다.
 
 **응답**
 
