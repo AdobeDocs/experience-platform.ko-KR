@@ -3,9 +3,9 @@ keywords: '광고; bing; '
 title: Microsoft Bing 연결
 description: Microsoft Bing 연결 대상을 사용하면 Microsoft Display Advertising에서 리타겟팅 및 대상 타깃팅된 디지털 캠페인을 실행할 수 있습니다.
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
-source-wordcount: '382'
+source-wordcount: '384'
 ht-degree: 1%
 
 ---
@@ -56,9 +56,9 @@ ht-degree: 1%
 
 ## 세그먼트를 이 대상에 활성화 {#activate}
 
-대상으로 대상 세그먼트를 활성화하는 방법에 대한 지침은 [대상 세그먼트 활성화](../../ui/activate-destinations.md)를 참조하십시오.
+대상 세그먼트를 이 대상으로 활성화하는 방법에 대한 지침은 [스트리밍 세그먼트 내보내기 대상으로 대상 활성화](../../ui/activate-segment-streaming-destinations.md)를 참조하십시오.
 
-[세그먼트 예약](../../ui/activate-destinations.md#segment-schedule) 단계에서 세그먼트를 대상의 해당 ID 또는 친숙한 이름에 수동으로 매핑해야 합니다.
+[세그먼트 예약](../../ui/activate-segment-streaming-destinations.md#scheduling) 단계에서 세그먼트를 대상의 해당 ID 또는 친숙한 이름에 수동으로 매핑해야 합니다.
 
 세그먼트를 매핑할 때는 쉽게 사용할 수 있도록 [!DNL Platform] 세그먼트 이름 또는 더 짧은 형식의 세그먼트를 사용하는 것이 좋습니다. 그러나 대상의 세그먼트 ID나 이름은 [!DNL Platform] 계정의 세그먼트 ID와 일치하지 않아도 됩니다. 매핑 필드에 삽입한 모든 값은 대상에 의해 반영됩니다.
 
