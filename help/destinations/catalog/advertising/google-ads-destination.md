@@ -3,9 +3,9 @@ keywords: Google 광고;google 광고;google adwords;Google AdWords;Google Adwor
 title: Google 광고 연결
 description: 이전에 Google AdWords라고 알려진 Google Ads는 텍스트 기반 검색, 그래픽 디스플레이, YouTube 비디오 및 인앱 모바일 디스플레이에서 클릭당 과금광고를 할 수 있도록 하는 온라인 광고 서비스입니다.
 exl-id: 7143f476-49a8-42aa-bfb4-b11fc2b8f5c3
-source-git-commit: 7e2f6f54e754c52c8de7f98372d041b2a6520d46
+source-git-commit: ca388912d6634f72cab15a6bfb3e9f92264e52db
 workflow-type: tm+mt
-source-wordcount: '716'
+source-wordcount: '637'
 ht-degree: 2%
 
 ---
@@ -66,29 +66,22 @@ Platform에서 [!DNL Google Ads] 대상을 만들려면 먼저 [!DNL Google]에 
 * 계정 유형: **AdWords**
 * **Google AdWords ID**: 사용할 ID입니다  [!DNL Google]. ID 형식은 일반적으로 123-456-7890.
 
-## 대상 구성
+## 대상에 연결 {#connect}
 
-**[!UICONTROL 연결]** > **[!UICONTROL 대상]**&#x200B;에서 [!DNL Google Ads]을 선택하고 **[!UICONTROL 구성]**&#x200B;을 선택합니다.
+이 대상에 연결하려면 [대상 구성 자습서](../../ui/connect-destination.md)에 설명된 단계를 따르십시오.
 
-![Google 광고 대상 연결](../../assets/catalog/advertising/google-ads-destination/catalog.png)
+### 연결 매개 변수 {#parameters}
 
->[!NOTE]
->
->이 대상과의 연결이 이미 있으면 대상 카드에 **[!UICONTROL 활성화]** 단추가 표시됩니다. **[!UICONTROL Activate]** 및 **[!UICONTROL Configure]**&#x200B;의 차이에 대한 자세한 내용은 대상 작업 공간 설명서의 [카탈로그](../../ui/destinations-workspace.md#catalog) 섹션을 참조하십시오.
-
-대상 만들기 워크플로우의 **설정** 단계에서 대상에 대한 [!UICONTROL 기본 정보]를 입력합니다.
-
-![Google Ads의 기본 정보](../../assets/catalog/advertising/google-ads-destination/setup.png)
+[이 대상을 설정할 때 다음 정보를 제공해야 합니다.](../../ui/connect-destination.md)
 
 * **[!UICONTROL 이름]**: 이 대상의 기본 이름을 입력합니다.
 * **[!UICONTROL 설명]**: 선택 사항입니다. 예를 들어 이 대상을 사용하는 캠페인을 언급할 수 있습니다.
 * **[!UICONTROL 계정 유형]**: AdWords만 사용할 수 있습니다.
 * **[!UICONTROL 계정 ID]**: 계정 ID를  [!DNL Google Ads]. ID 형식은 일반적으로 123-456-7890.
-* **[!UICONTROL 마케팅 작업]**: 마케팅 작업은 대상으로 데이터를 내보낼 의도를 나타냅니다. Adobe 정의 마케팅 작업에서 선택하거나 고유한 마케팅 작업을 만들 수 있습니다. 마케팅 작업에 대한 자세한 내용은 [데이터 사용 정책 개요](../../../data-governance/policies/overview.md)를 참조하십시오.
 
-## 세그먼트를 [!DNL Google Ads]에 활성화
+## 세그먼트를 이 대상에 활성화 {#activate}
 
-세그먼트를 [!DNL Google Ads]에 활성화하는 방법에 대한 지침은 [대상에 데이터 활성화](../../ui/activate-destinations.md)를 참조하십시오.
+대상으로 대상 세그먼트를 활성화하는 방법에 대한 지침은 [대상 세그먼트 활성화](../../ui/activate-destinations.md)를 참조하십시오.
 
 ## 내보낸 데이터
 
