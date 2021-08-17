@@ -3,9 +3,9 @@ keywords: Google 광고;google 광고;google adwords;Google AdWords;Google Adwor
 title: Google 광고 연결
 description: 이전에 Google AdWords라고 알려진 Google Ads는 텍스트 기반 검색, 그래픽 디스플레이, YouTube 비디오 및 인앱 모바일 디스플레이에서 클릭당 과금광고를 할 수 있도록 하는 온라인 광고 서비스입니다.
 exl-id: 7143f476-49a8-42aa-bfb4-b11fc2b8f5c3
-source-git-commit: ca388912d6634f72cab15a6bfb3e9f92264e52db
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
-source-wordcount: '637'
+source-wordcount: '639'
 ht-degree: 2%
 
 ---
@@ -81,7 +81,8 @@ Platform에서 [!DNL Google Ads] 대상을 만들려면 먼저 [!DNL Google]에 
 
 ## 세그먼트를 이 대상에 활성화 {#activate}
 
-대상으로 대상 세그먼트를 활성화하는 방법에 대한 지침은 [대상 세그먼트 활성화](../../ui/activate-destinations.md)를 참조하십시오.
+대상 세그먼트를 이 대상으로 활성화하는 방법에 대한 지침은 [스트리밍 세그먼트 내보내기 대상으로 대상 활성화](../../ui/activate-segment-streaming-destinations.md)를 참조하십시오.
+
 
 ## 내보낸 데이터
 
