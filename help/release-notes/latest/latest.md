@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: July 28, 2021
 author: ens60013
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: c06e7b5c70613dc560fb5c0dcc28590206fc1734
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
 source-wordcount: '802'
 ht-degree: 7%
@@ -60,8 +60,8 @@ Platform에서 데이터는 다양한 소스에서 수집되고 시스템 내에
 
 | 기능 | 설명 |
 | --- | --- |
-| [증가분 파일 내보내기 속도 향상](../../destinations/ui/activate-destinations.md#export-incremental-files) | 이제 3, 6, 8 및 12시간마다 파일 기반 대상에 대한 증분 파일 내보내기를 예약할 수 있습니다. 이미 저장된 세그먼트의 파일 내보내기 일정을 변경하는 것은 현재 지원되지 않습니다. 다른 일정으로 세그먼트를 다시 내보내려면 새 대상 인스턴스를 만들어야 합니다. 이는 향후 릴리스에서 해결될 수 있는 제한 사항입니다. |
-| [중복 제거 키 지원](../../destinations/ui/activate-destinations.md#deduplication-keys) | 중복 제거 키를 선택하여 내보내기 파일에서 동일한 프로필의 여러 레코드를 제거합니다. 중복 제거 키로 단일 네임스페이스 또는 최대 2개의 XDM 스키마 속성을 선택할 수 있습니다. |
+| [증가분 파일 내보내기 속도 향상](../../destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) | 이제 3, 6, 8 및 12시간마다 파일 기반 대상에 대한 증분 파일 내보내기를 예약할 수 있습니다. 이미 저장된 세그먼트의 파일 내보내기 일정을 변경하는 것은 현재 지원되지 않습니다. 다른 일정으로 세그먼트를 다시 내보내려면 새 대상 인스턴스를 만들어야 합니다. 이는 향후 릴리스에서 해결될 수 있는 제한 사항입니다. |
+| [중복 제거 키 지원](../../destinations/ui/activate-batch-profile-destinations.md#deduplication-keys) | 중복 제거 키를 선택하여 내보내기 파일에서 동일한 프로필의 여러 레코드를 제거합니다. 중복 제거 키로 단일 네임스페이스 또는 최대 2개의 XDM 스키마 속성을 선택할 수 있습니다. |
 
 ## XDM(경험 데이터 모델) {#xdm}
 
