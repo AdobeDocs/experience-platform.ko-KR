@@ -1,7 +1,7 @@
 ---
 title: 규칙
 description: Adobe Experience Platform에서 태그 확장이 작동하는 방식을 알아봅니다.
-source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
+source-git-commit: 272cf2906b44ccfeca041d9620ac0780e24ad1ae
 workflow-type: tm+mt
 source-wordcount: '1977'
 ht-degree: 77%
@@ -168,7 +168,7 @@ Adobe는 다른 규칙이 실제로 트리거되고 해당 작업 코드가 필�
 * **JavaScript:** JavaScript는 서버에서 일반 텍스트로 로드되고, 스크립트 태그에 래핑되고, Postscribe를 사용하여 문서에 추가됩니다. 규칙에 Javascript 사용자 지정 스크립트가 여러 개 있는 경우 서버에서 동시에 로드되지만 규칙에 구성된 순서와 동일한 순서로 실행됩니다.
 * **HTML:** HTML은 서버에서 로드되고 Postscribe를 사용하여 문서에 추가됩니다. 규칙에 사용자 지정 HTML 스크립트가 여러 개 있는 경우 서버에서 동시에 로드되지만 규칙에 구성된 순서와 동일한 순서로 실행됩니다.
 
-## 규칙 구성 요소 순서
+## 규칙 구성 요소 순서 {#sequencing}
 
 태그 런타임 환경의 동작은 **[!UICONTROL 시퀀스에서 규칙 구성 요소 실행]**&#x200B;이 속성에 대해 설정되었는지 여부에 따라 다릅니다.
 
