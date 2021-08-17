@@ -3,10 +3,10 @@ keywords: linkedin 연결;linkedin 연결;linkedin 대상;linkedin
 title: Linkedin 일치하는 대상 연결
 description: 해시된 이메일을 기반으로 대상 타깃팅, 개인화 및 억제를 위해 LinkedIn 캠페인용 프로필을 활성화합니다.
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: 8ec6f1eb38f4865daaa4fe4cd749a9014742dce6
+source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
 workflow-type: tm+mt
-source-wordcount: '677'
-ht-degree: 1%
+source-wordcount: '766'
+ht-degree: 0%
 
 ---
 
@@ -51,7 +51,7 @@ ht-degree: 1%
 
 Adobe Experience Platform에 수집하는 ID 유형에 따라 해당 요구 사항을 준수해야 합니다.
 
-## 전자 메일 해싱 요구 사항 {#email-hashing-requirements}
+## 이메일 해싱 요구 사항 {#email-hashing-requirements}
 
 전자 메일 주소를 Adobe Experience Platform에 수집하기 전에 해시하거나 Experience Platform에서 명확히 전자 메일 주소를 사용할 수 있으며 [!DNL Platform] 해시 처리할 수 있습니다.
 
@@ -59,12 +59,12 @@ Experience Platform에서 이메일 주소를 수집하는 방법에 대한 자�
 
 이메일 주소를 직접 해시하도록 선택하는 경우 다음 요구 사항을 충족하는지 확인하십시오.
 
-- 전자 메일 문자열에서 선행 및 후행 공백을 모두 잘라냅니다. 예:`<space>johndoe@example.com<space>`;이 아닌 `johndoe@example.com`
-- 이메일 문자열을 해시할 때는 소문자 문자열을 해시해야 합니다.
-   - 예:`EXAMPLE@EMAIL.COM`;이 아닌 `example@email.com`
-- 해시된 문자열이 모두 소문자로 되어 있는지 확인하십시오
-   - 예:`55E79200C1635B37AD31A378C39FEB12F120F116625093A19bC32FFF15041149`;이 아닌 `55e79200c1635b37ad31a378c39feb12f120f116625093a19bc32fff15041149`
-- 문자열의 소금을 치지 마십시오.
+* 전자 메일 문자열에서 선행 및 후행 공백을 모두 잘라냅니다. 예: `<space>johndoe@example.com<space>`;이 아닌 `johndoe@example.com`
+* 이메일 문자열을 해시할 때는 소문자 문자열을 해시해야 합니다.
+   * 예: `EXAMPLE@EMAIL.COM`;이 아닌 `example@email.com`
+* 해시된 문자열이 모두 소문자로 되어 있는지 확인하십시오
+   * 예: `55E79200C1635B37AD31A378C39FEB12F120F116625093A19bC32FFF15041149`;이 아닌 `55e79200c1635b37ad31a378c39feb12f120f116625093a19bc32fff15041149`
+* 문자열의 소금을 치지 마십시오.
 
 >[!NOTE]
 >
@@ -77,17 +77,29 @@ Experience Platform에서 이메일 주소를 수집하는 방법에 대한 자�
 
 ![ID 매핑 변환](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
-## 대상 {#connect-destination}에 연결
+## 대상에 연결 {#connect}
 
-[!DNL LinkedIn Matched Audiences] 대상에 연결하려면 [소셜 대상 인증 워크플로우](./workflow.md)를 참조하십시오.
+이 대상에 연결하려면 [대상 구성 자습서](../../ui/connect-destination.md)에 설명된 단계를 따르십시오.
 
 아래 비디오에서는 [!DNL LinkedIn Matched Audiences] 대상을 구성하고 세그먼트를 활성화하는 단계를 보여줍니다.
 
 >[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
-## 세그먼트를 [!DNL LinkedIn Matched Audiences] {#activate-segments}로 활성화
+>[!NOTE]
+>
+>Experience Platform 사용자 인터페이스는 자주 업데이트되며 이 비디오를 기록한 후 변경되었을 수 있습니다. 최신 정보는 [대상 구성 자습서](../../ui/connect-destination.md)를 참조하십시오.
 
-세그먼트를 [!DNL LinkedIn Matched Audiences]에 활성화하는 방법에 대한 지침은 [대상에 데이터 활성화](../../ui/activate-destinations.md)를 참조하십시오.
+### 연결 매개 변수 {#parameters}
+
+[이 대상을 설정할 때 다음 정보를 제공해야 합니다.](../../ui/connect-destination.md)
+
+* **[!UICONTROL 이름]**: 나중에 이 대상을 인식할 이름.
+* **[!UICONTROL 설명]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
+* **[!UICONTROL 계정 ID]**: 사용자  [!DNL LinkedIn Campaign Manager Account ID]. 이 ID는 [!DNL LinkedIn Campaign Manager] 계정에서 찾을 수 있습니다.
+
+## 세그먼트를 이 대상에 활성화 {#activate}
+
+대상으로 대상 세그먼트를 활성화하는 방법에 대한 지침은 [대상 세그먼트 활성화](../../ui/activate-destinations.md)를 참조하십시오.
 
 ## 내보낸 데이터 {#exported-data}
 
