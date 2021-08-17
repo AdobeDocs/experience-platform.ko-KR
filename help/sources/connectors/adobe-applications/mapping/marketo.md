@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;홈;인기 항목;Marketo Engage;마케팅;참여;Marketo;매핑
+keywords: Experience Platform;홈;인기 항목;Marketo Engage;marketo engage;Marketo;매핑
 solution: Experience Platform
-title: Marketo Engage 소스의 매핑 필드
+title: Marketo Engage 소스에 대한 매핑 필드
 topic-legacy: overview
-description: 아래 표에는 Marketo 데이터 집합의 필드와 해당 XDM 필드 간의 매핑이 포함되어 있습니다.
+description: 아래 표에는 Marketo 데이터 세트의 필드와 해당 XDM 필드 간의 매핑이 포함되어 있습니다.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: 178c0c4079d620b9a8380fcfcdd90cb74eb24bbb
+source-git-commit: 0af9290a3143b85311fbbd8d194f4799b0c9a873
 workflow-type: tm+mt
 source-wordcount: '333'
-ht-degree: 4%
+ht-degree: 13%
 
 ---
 
@@ -16,9 +16,9 @@ ht-degree: 4%
 
 >[!IMPORTANT]
 >
->[!DNL Marketo Engage] 소스는 현재 베타 상태입니다. 기능 및 설명서는 변경될 수 있습니다.
+>[!DNL Marketo Engage] 소스가 현재 베타 버전입니다. 해당 기능과 설명서는 변경될 수 있습니다.
 
-아래 표에는 9개의 [!DNL Marketo] 데이터 집합에 있는 필드와 해당 XDM(Experience Data Model) 필드 간의 매핑이 포함되어 있습니다.
+아래 표에는 9개의 [!DNL Marketo] 데이터 세트에 있는 필드와 해당 XDM(Experience Data Model) 필드 간의 매핑이 포함되어 있습니다.
 
 ## 활동 {#activities}
 
@@ -176,7 +176,7 @@ ht-degree: 4%
 
 {style=&quot;table-layout:auto&quot;}
 
-## 정적 목록 구성원 자격 {#static-list-memnberships}
+## 정적 목록 구성원 {#static-list-memnberships}
 
 | 소스 데이터 세트 | XDM 대상 필드 | 참고 |
 | -------------- | ---------------- | ----- |
@@ -191,7 +191,7 @@ ht-degree: 4%
 
 >[!IMPORTANT]
 >
->명명된 계정 데이터 세트는 Marketo의 ABM(계정 기반 마케팅) 기능에만 필요합니다. ABM을 사용하지 않는 경우 지정된 계정에 대한 매핑을 설정할 필요가 없습니다.
+>명명된 계정 데이터 세트는 Marketo의 ABM(계정 기반 마케팅) 기능에서만 필요합니다. ABM을 사용하지 않는 경우 명명된 계정에 대한 매핑을 설정할 필요가 없습니다.
 
 | 소스 데이터 세트 | XDM 대상 필드 | 참고 |
 | -------------- | ---------------- | ----- |
@@ -259,7 +259,7 @@ ht-degree: 4%
 
 {style=&quot;table-layout:auto&quot;}
 
-## 인물 {#persons}
+## 사람 {#persons}
 
 | 소스 데이터 세트 | XDM 대상 필드 | 참고 |
 | -------------- | ---------------- | ----- |
@@ -310,8 +310,8 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->`to_object('ECID',arrays_to_objects('id',explode(ecids)))` 소스 필드는 플랫폼 UI에서 [!UICONTROL 계산된 필드 추가] 옵션을 사용하여 추가해야 하는 계산된 필드입니다. 자세한 내용은 [계산된 필드 추가](../../../../ingestion/tutorials/map-a-csv-file.md)에 대한 자습서를 참조하십시오.
+>`to_object('ECID',arrays_to_objects('id',explode(ecids)))` 소스 필드는 Platform UI에서 [!UICONTROL 계산된 필드 추가] 옵션을 사용하여 추가해야 하는 계산된 필드입니다. 자세한 내용은 [계산된 필드 추가](../../../../data-prep/calculated-fields.md)의 자습서를 참조하십시오.
 
 ## 다음 단계
 
-이 문서를 읽으면 [!DNL Marketo] 데이터 세트와 해당 XDM 필드 간의 매핑 관계에 대한 통찰력을 얻을 수 있습니다. [!DNL Marketo] 데이터 흐름을 완료하려면 [소스 연결](../../../tutorials/ui/create/adobe-applications/marketo.md)을 만드는 방법에 대한 자습서를 참조하십시오. [!DNL Marketo] 
+이 문서를 읽은 후에는 [!DNL Marketo] 데이터 세트와 해당 XDM 필드 간의 매핑 관계에 대한 통찰력을 얻을 수 있었습니다. [!DNL Marketo] 데이터 흐름을 완료하려면 [소스 연결](../../../tutorials/ui/create/adobe-applications/marketo.md)을 만드는 방법에 대한 자습서를 참조하십시오. [!DNL Marketo] 
