@@ -3,9 +3,9 @@ keywords: 비행선 속성;비행선 목적지
 title: Airship 속성 연결
 description: Airship 내에서 타깃팅할 대상 속성으로 Adobe 대상 데이터를 Airship에 원활하게 전달합니다.
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
-source-wordcount: '720'
+source-wordcount: '726'
 ht-degree: 1%
 
 ---
@@ -69,7 +69,7 @@ Adobe Experience Platform의 속성을 활용하여 [!DNL Airship] 프로필을 
 
 ## 대상에 연결 {#connect}
 
-이 대상에 연결하려면 [대상 구성 자습서](../../ui/connect-destination.md)에 설명된 단계를 따르십시오.
+대상 세그먼트를 이 대상으로 활성화하는 방법에 대한 지침은 [스트리밍 세그먼트 내보내기 대상으로 대상 활성화](../../ui/activate-segment-streaming-destinations.md)를 참조하십시오.
 
 ### 연결 매개 변수 {#parameters}
 
@@ -82,7 +82,7 @@ Adobe Experience Platform의 속성을 활용하여 [!DNL Airship] 프로필을 
 
 ## 세그먼트를 이 대상에 활성화 {#activate}
 
-대상으로 대상 세그먼트를 활성화하는 방법에 대한 지침은 [대상 세그먼트 활성화](../../ui/activate-destinations.md)를 참조하십시오.
+대상 세그먼트를 이 대상으로 활성화하는 방법에 대한 지침은 [스트리밍 세그먼트 내보내기 대상으로 대상 활성화](../../ui/activate-segment-streaming-destinations.md)를 참조하십시오.
 
 ## 매핑 고려 사항 {#mapping-considerations}
 
