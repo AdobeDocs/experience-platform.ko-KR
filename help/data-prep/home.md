@@ -5,9 +5,9 @@ title: 데이터 준비 개요
 topic-legacy: overview
 description: 이 문서에서는 Adobe Experience Platform 내의 데이터 준비를 소개합니다.
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
-source-git-commit: 764b8e8a120ab53e7d39202b47d7c6f0195193a2
+source-git-commit: f8ad7ce2ed5a45fa0200715a2b961d75f17d192c
 workflow-type: tm+mt
-source-wordcount: '492'
+source-wordcount: '547'
 ht-degree: 0%
 
 ---
@@ -34,6 +34,12 @@ ht-degree: 0%
 매핑은 입력 속성이나 계산된 필드의 연결이 하나의 XDM 속성에 대한 것입니다. 개별 매핑을 만들어 단일 속성을 여러 XDM 속성에 매핑할 수 있습니다.
 
 다른 매핑 기능에 대한 자세한 내용은 [매핑 함수 안내서](./functions.md)를 참조하십시오.
+
+### 계산된 필드
+
+계산된 필드를 사용하면 입력 스키마의 속성을 기반으로 값을 만들 수 있습니다. 그런 다음 이러한 값을 대상 스키마의 속성에 지정하고 쉽게 참조할 수 있도록 이름 및 설명을 제공할 수 있습니다.
+
+계산된 필드에 대한 자세한 내용은 [계산된 필드 안내서](./functions.md#calculated-fields)를 참조하십시오.
 
 ## 매핑 세트
 
