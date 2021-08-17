@@ -1,12 +1,12 @@
 ---
-keywords: 모바일;brize;메시징;
+keywords: 모바일; brize; 메시징;
 title: 연결 브레이즈
 description: Braze는 고객과 고객이 좋아하는 브랜드 간 연관성 있고 기억에 남을 경험을 제공하는 포괄적인 고객 참여 플랫폼입니다.
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: 66c3e81dfdbf6f6c3ff9a127fbca8943c0e32279
+source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
 workflow-type: tm+mt
-source-wordcount: '953'
-ht-degree: 1%
+source-wordcount: '789'
+ht-degree: 2%
 
 ---
 
@@ -48,40 +48,27 @@ ht-degree: 1%
 
 ## 내보내기 유형 {#export-type}
 
-**[!DNL Profile-based]** - 원하는 스키마 필드와 함께 세그먼트의 모든 멤버를 내보냅니다(예:필드 매핑에 따라 이메일 주소, 전화번호, 성) 및/또는 id를 지정합니다.
+**[!DNL Profile-based]** - 원하는 스키마 필드와 함께 세그먼트의 모든 멤버를 내보냅니다(예: 필드 매핑에 따라 이메일 주소, 전화번호, 성) 및/또는 id를 지정합니다.
 [!DNL Adobe Experience Platform] 세그먼트는 속성  [!DNL Braze] 아래에 로  `AdobeExperiencePlatformSegments` 내보내집니다.
 
-## 대상 {#connect-destination}에 연결
+## 대상에 연결 {#connect}
 
-**[!UICONTROL 연결]** > **[!UICONTROL 대상]**&#x200B;에서 [!DNL Braze]을 선택하고 **[!UICONTROL 구성]**&#x200B;을 선택합니다.
+이 대상에 연결하려면 [대상 구성 자습서](../../ui/connect-destination.md)에 설명된 단계를 따르십시오.
 
-![브레이징 대상 구성](../../assets/catalog/mobile-engagement/braze/configure.png)
+### 연결 매개 변수 {#parameters}
 
->[!NOTE]
->
->이 대상과의 연결이 이미 있으면 대상 카드에 **[!UICONTROL 활성화]** 단추가 표시됩니다. **[!UICONTROL Activate]** 및 **[!UICONTROL Configure]**&#x200B;의 차이에 대한 자세한 내용은 대상 작업 공간 설명서의 [카탈로그](../../ui/destinations-workspace.md#catalog) 섹션을 참조하십시오.
->
->![브레이징 대상 활성화](../../assets/catalog/mobile-engagement/braze/activate.png)
+[이 대상을 설정할 때 다음 정보를 제공해야 합니다.](../../ui/connect-destination.md)
 
-[!UICONTROL 계정] 단계에서 [!DNL Braze] 계정 토큰을 제공해야 합니다. [!DNL Braze] [!DNL API] 키입니다. 여기서 [!DNL API] 키를 가져오는 방법에 대한 자세한 지침은 다음과 같습니다.[REST API 키 개요](https://www.braze.com/docs/api/api_key/). 토큰을 입력하고 **[!UICONTROL 대상에 연결]**&#x200B;을 클릭합니다.
+* **[!UICONTROL 계정 토큰]** 브레이징: 이게 당신  [!DNL Braze] [!DNL API] 키예요 여기서 [!DNL API] 키를 가져오는 방법에 대한 자세한 지침은 다음과 같습니다. [REST API 키 개요](https://www.braze.com/docs/api/api_key/).
+* **[!UICONTROL 이름]**: 나중에 이 대상을 인식할 이름을 입력합니다.
+* **[!UICONTROL 설명]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명을 입력합니다.
+* **[!UICONTROL 끝점 인스턴스]**: 사용해야  [!DNL Braze] 하는 엔드포인트 인스턴스를 담당자에게 문의하십시오.
 
-![대상 계정 브레이징 단계](../../assets/catalog/mobile-engagement/braze/account.png)
+## 세그먼트를 이 대상에 활성화 {#activate}
 
-**[!UICONTROL 다음]**&#x200B;을 클릭합니다. [!UICONTROL 인증] 단계에서 [!DNL Braze] 연결 세부 정보를 입력해야 합니다.
-* **[!UICONTROL 이름]**:나중에 이 대상을 인식할 이름을 입력합니다.
-* **[!UICONTROL 설명]**:나중에 이 대상을 식별하는 데 도움이 되는 설명을 입력합니다.
-* **[!UICONTROL 끝점 인스턴스]**:사용해야  [!DNL Braze] 하는 엔드포인트 인스턴스를 담당자에게 문의하십시오.
-* **[!UICONTROL 마케팅 작업]**:마케팅 작업은 대상으로 데이터를 내보낼 의도를 나타냅니다. Adobe 정의 마케팅 작업에서 선택하거나 고유한 마케팅 작업을 만들 수 있습니다. 마케팅 작업에 대한 자세한 내용은 [Adobe Experience Platform의 데이터 거버넌스](../../../data-governance/policies/overview.md) 페이지를 참조하십시오. 개별 Adobe 정의 마케팅 작업에 대한 자세한 내용은 [데이터 사용 정책 개요](../../../data-governance/policies/overview.md)를 참조하십시오.
+대상으로 대상 세그먼트를 활성화하는 방법에 대한 지침은 [대상 세그먼트 활성화](../../ui/activate-destinations.md)를 참조하십시오.
 
-![브레이징 인증 단계](../../assets/catalog/mobile-engagement/braze/authentication.png)
-
-**[!UICONTROL 대상 만들기]**&#x200B;를 클릭합니다. 이제 대상이 생성되었습니다. 세그먼트를 나중에 활성화하려면 **[!UICONTROL 저장 및 종료]**&#x200B;를 클릭하거나 **[!UICONTROL 다음]**&#x200B;을 선택하여 워크플로우를 계속하고 활성화할 세그먼트를 선택할 수 있습니다. 어느 경우든 나머지 워크플로우에는 다음 섹션인 [세그먼트 활성화](#activate-segments)를 참조하십시오.
-
-## 세그먼트 활성화 {#activate-segments}
-
-세그먼트 활성화 워크플로우에 대한 자세한 내용은 [대상에 프로필 및 세그먼트 활성화](../../ui/activate-destinations.md#select-attributes)를 참조하십시오.
-
-## 필드 매핑 {#field-mapping}
+## 매핑 고려 사항 {#mapping-considerations}
 
 대상 데이터를 [!DNL Adobe Experience Platform]에서 [!DNL Braze] 대상으로 올바르게 전송하려면 필드 매핑 단계를 진행해야 합니다.
 
@@ -98,11 +85,11 @@ XDM 필드를 [!DNL Braze] 대상 필드에 올바르게 매핑하려면 다음 
 ![대상 소스 매핑 브레이징](../../assets/catalog/mobile-engagement/braze/mapping-source.png)
 
 [!UICONTROL 소스 필드 선택] 창에서 두 가지 XDM 필드 범주 중에서 선택할 수 있습니다.
-* [!UICONTROL 속성 선택]:XDM 스키마의 특정 필드를 속성에 매핑하려면 이 옵션을  [!DNL Braze] 사용합니다.
+* [!UICONTROL 속성 선택]: XDM 스키마의 특정 필드를 속성에 매핑하려면 이 옵션을  [!DNL Braze] 사용합니다.
 
 ![대상 매핑 소스 특성 브레이징](../../assets/catalog/mobile-engagement/braze/mapping-attributes.png)
 
-* [!UICONTROL ID 네임스페이스를 선택합니다].이 옵션을 사용하여  [!DNL Platform] ID 네임스페이스를 네임스페이스에  [!DNL Braze] 매핑합니다.
+* [!UICONTROL ID 네임스페이스를 선택합니다]. 이 옵션을 사용하여  [!DNL Platform] ID 네임스페이스를 네임스페이스에  [!DNL Braze] 매핑합니다.
 
 ![대상 매핑 소스 네임스페이스 브레이징](../../assets/catalog/mobile-engagement/braze/mapping-namespaces.png)
 
@@ -113,9 +100,9 @@ XDM 필드를 [!DNL Braze] 대상 필드에 올바르게 매핑하려면 다음 
 ![대상 대상 매핑 브레이징](../../assets/catalog/mobile-engagement/braze/mapping-target.png)
 
 [!UICONTROL 대상 필드 선택] 창에서 다음 세 가지 대상 필드 범주 중에서 선택할 수 있습니다.
-* [!UICONTROL 속성 선택]:이 옵션을 사용하여 XDM 속성을 표준 속성에  [!DNL Braze] 매핑합니다.
-* [!UICONTROL ID 네임스페이스를 선택합니다].이 옵션을 사용하여 ID 네임스페이스 [!DNL Platform] 를 ID 네임스페이스에  [!DNL Braze] 매핑합니다.
-* [!UICONTROL 사용자 지정 속성] 선택:이 옵션을 사용하여 XDM 속성을  [!DNL Braze] 계정에서 정의한 사용자 지정 속성에  [!DNL Braze] 매핑합니다.
+* [!UICONTROL 속성 선택]: 이 옵션을 사용하여 XDM 속성을 표준 속성에  [!DNL Braze] 매핑합니다.
+* [!UICONTROL ID 네임스페이스를 선택합니다]. 이 옵션을 사용하여 ID 네임스페이스 [!DNL Platform] 를 ID 네임스페이스에  [!DNL Braze] 매핑합니다.
+* [!UICONTROL 사용자 지정 속성] 선택: 이 옵션을 사용하여 XDM 속성을  [!DNL Braze] 계정에서 정의한 사용자 지정 속성에  [!DNL Braze] 매핑합니다.
 * 이 옵션을 사용하여 기존 XDM 속성의 이름을 [!DNL Braze]으로 바꿀 수도 있습니다. 예를 들어 `lastName` XDM 속성을 [!DNL Braze]의 사용자 지정 `Last_Name` 속성에 매핑하면 [!DNL Braze]에 `Last_Name` 속성이 아직 없는 경우 만들고 `lastName` XDM 속성을 이 속성에 매핑합니다.
 
 ![대상 대상 매핑 필드 이해](../../assets/catalog/mobile-engagement/braze/mapping-target-fields.png)
