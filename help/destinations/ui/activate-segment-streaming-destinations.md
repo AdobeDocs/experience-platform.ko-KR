@@ -5,9 +5,9 @@ type: Tutorial
 seo-title: 스트리밍 세그먼트 내보내기 대상으로 대상 데이터 활성화
 description: 세그먼트를 세그먼트 스트리밍 대상에 매핑하여 Adobe Experience Platform에서 보유한 대상 데이터를 활성화하는 방법을 알아봅니다.
 seo-description: 세그먼트를 세그먼트 스트리밍 대상에 매핑하여 Adobe Experience Platform에서 보유한 대상 데이터를 활성화하는 방법을 알아봅니다.
-source-git-commit: 02c22453470d55236d4235c479742997e8407ef3
+source-git-commit: 65e74041aeb285cb80c67e47ccdaca18de9889fa
 workflow-type: tm+mt
-source-wordcount: '1145'
+source-wordcount: '1165'
 ht-degree: 0%
 
 ---
@@ -42,6 +42,11 @@ ht-degree: 0%
 ![세그먼트 선택](../assets/ui/activate-segment-streaming-destinations/select-segments.png)
 
 ## 특성 및 ID 매핑 {#mapping}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_applytransformation"
+>title="변형 적용"
+>abstract="해시되지 않은 소스 필드를 사용할 때 이 옵션을 선택하여 Adobe Experience Platform에서 활성화 시 자동으로 해시하도록 합니다."
 
 >[!IMPORTANT]
 >
