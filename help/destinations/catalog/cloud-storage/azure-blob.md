@@ -3,9 +3,9 @@ keywords: Azure Blob;Blob 대상;s3;azure Blob 대상
 title: Azure Blob 연결
 description: Azure Blob 저장 공간에 대한 라이브 아웃바운드 연결을 만들어 Adobe Experience Platform에서 주기적으로 탭으로 구분된 또는 CSV 데이터 파일을 내보냅니다.
 exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
-source-git-commit: 8d1594aeb1d6671eec187643245d940ed3ff74cd
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
-source-wordcount: '416'
+source-wordcount: '400'
 ht-degree: 1%
 
 ---
@@ -25,13 +25,13 @@ ht-degree: 1%
    * [스키마 편집기 자습서](../../../xdm/tutorials/create-schema-ui.md): 스키마 편집기 UI를 사용하여 사용자 지정 스키마를 만드는 방법을 알아보십시오.
 * [[!DNL Real-time Customer Profile]](../../../profile/home.md): 여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
 
-이미 유효한 [!DNL Blob] 대상이 있는 경우 이 문서의 나머지 부분을 건너뛰고 세그먼트를 대상](../../ui/activate-destinations.md)으로 활성화하는 [에서 자습서를 진행할 수 있습니다.
+이미 유효한 [!DNL Blob] 대상이 있는 경우 이 문서의 나머지 부분을 건너뛰고 세그먼트를 대상](../../ui/activate-batch-profile-destinations.md)으로 활성화하는 [에서 자습서를 진행할 수 있습니다.
 
 ## 지원되는 파일 형식 {#file-formats}
 
 [!DNL Experience Platform] 에서는 내보낼 다음 파일 형식을  [!DNL Blob]지원합니다.
 
-* 구분 기호로 구분된 값(DSV): DSV 형식 데이터 파일에 대한 지원은 현재 쉼표로 구분된 값으로 제한됩니다. 일반적인 DSV 파일에 대한 지원은 향후에 제공됩니다. 지원되는 파일에 대한 자세한 내용은 [대상 활성화](../../ui/activate-destinations.md#esp-and-cloud-storage)에 있는 자습서에서 클라우드 스토리지 섹션을 참조하십시오.
+* 구분 기호로 구분된 값(DSV): DSV 형식 데이터 파일에 대한 지원은 현재 쉼표로 구분된 값으로 제한됩니다. 일반적인 DSV 파일에 대한 지원은 향후에 제공됩니다.
 
 ## 대상에 연결 {#connect}
 
@@ -54,4 +54,4 @@ ht-degree: 1%
 
 ## 세그먼트를 이 대상에 활성화 {#activate}
 
-대상으로 대상 세그먼트를 활성화하는 방법에 대한 지침은 [대상 세그먼트 활성화](../../ui/activate-destinations.md)를 참조하십시오.
+대상 세그먼트를 이 대상으로 활성화하는 방법에 대한 지침은 [대상 데이터를 일괄 프로필 내보내기 대상으로 활성화](../../ui/activate-batch-profile-destinations.md)를 참조하십시오.
