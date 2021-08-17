@@ -3,9 +3,9 @@ keywords: 전자 메일;전자 메일;전자 메일 대상;oracle oqua;oracle
 title: Oracle Eloqua 연결
 description: Oracle Eloqua는 B2B 마케터와 조직이 마케팅 캠페인 및 판매 리드 생성을 관리하는 데 도움이 되도록 Oracle이 제공하는 마케팅 자동화를 위한 SaaS(Software as a Service) 플랫폼입니다.
 exl-id: 6eaa79ff-8874-423b-bdff-aa04f6101a53
-source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
-source-wordcount: '500'
+source-wordcount: '494'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 ## 내보내기 유형 {#export-type}
 
-**프로필 기반**  - 원하는 스키마 필드와 함께 세그먼트의 모든 구성원을 내보냅니다(예: 대상 활성화 워크플로우의 속성 선택 화면에서 선택한 대로 이메일 주소,  [전화 번호, 성)](../../ui/activate-destinations.md#select-attributes).
+**프로필 기반**  - 원하는 스키마 필드와 함께 세그먼트의 모든 구성원을 내보냅니다(예: 대상 활성화 워크플로우의 속성 선택 화면에서 선택한 대로 이메일 주소,  [전화 번호, 성)](../../ui/activate-batch-profile-destinations.md#select-attributes).
 
 ## IP 주소 허용 목록 {#allow-list}
 
@@ -66,15 +66,15 @@ Commenting out Amazon S3 bucket part for now until support is clarified
 
 ## 세그먼트를 이 대상에 활성화 {#activate}
 
-대상으로 대상 세그먼트를 활성화하는 방법에 대한 지침은 [대상 세그먼트 활성화](../../ui/activate-destinations.md)를 참조하십시오.
+대상 세그먼트를 이 대상으로 활성화하는 방법에 대한 지침은 [대상 데이터를 일괄 프로필 내보내기 대상으로 활성화](../../ui/activate-batch-profile-destinations.md)를 참조하십시오.
 
-## 대상 속성 {#destination-attributes}
+### 대상 속성 {#destination-attributes}
 
-[Adobe이 이 대상에 세그먼트](../../ui/activate-destinations.md)를 활성화하면 [결합 스키마](../../../profile/home.md#profile-fragments-and-union-schemas)에서 고유 식별자를 선택하는 것이 좋습니다. 대상으로 내보낼 고유 식별자 및 기타 모든 XDM 필드를 선택합니다. 자세한 내용은 내보낸 파일에서 대상 특성으로 사용할 스키마 필드 선택](./overview.md#destination-attributes)을 참조하십시오.[
+세그먼트를 이 대상에 활성화할 때 [결합 스키마](../../../profile/home.md#profile-fragments-and-union-schemas)에서 고유 식별자를 선택하는 것이 좋습니다. 대상으로 내보낼 고유 식별자 및 기타 모든 XDM 필드를 선택합니다. 자세한 내용은 [이메일을 마케팅 대상으로 대상을 활성화할 때 모범 사례를 참조하십시오](overview.md#best-practices).
 
 ## 내보낸 데이터 {#exported-data}
 
-[!DNL Oracle Eloqua] 대상의 경우 Platform은 사용자가 제공한 저장소 위치에 탭으로 구분된 `.csv` 파일을 만듭니다. 파일에 대한 자세한 내용은 세그먼트 활성화 자습서에서 [이메일 마케팅 대상 및 클라우드 스토리지 대상](../../ui/activate-destinations.md#esp-and-cloud-storage)을 참조하십시오.
+[!DNL Oracle Eloqua] 대상의 경우 Platform은 사용자가 제공한 저장소 위치에 탭으로 구분된 `.csv` 파일을 만듭니다. 파일에 대한 자세한 내용은 세그먼트 활성화 자습서에서 [세그먼트 활성화 확인](../../ui/activate-batch-profile-destinations.md#verify) 을 참조하십시오.
 
 ## 데이터 가져오기를 [!DNL Oracle Eloqua]에 설정 {#import-data-into-eloqua}
 
