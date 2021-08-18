@@ -5,7 +5,7 @@ seo-title: 광고 대상 개요
 description: 'Adobe Experience Platform을 타사 광고 플랫폼(예: DSP, 광고 네트워크, SSP)에 연결하고 익명의 대상을 이러한 플랫폼에 공유합니다.'
 seo-description: 'Adobe Experience Platform을 타사 광고 플랫폼(예: DSP, 광고 네트워크, SSP)에 연결하고 익명의 대상을 이러한 플랫폼에 공유합니다.'
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: 802b1844bec1e577e978da5d5a69de87278c04b9
+source-git-commit: 9c9ea0d9e8247dbc4a1a4078dbdba2ae80ed70ef
 workflow-type: tm+mt
 source-wordcount: '248'
 ht-degree: 1%
@@ -48,7 +48,7 @@ DSP(수요 측 플랫폼), SSP(공급측 플랫폼), 광고 네트워크 등 타
 * [Google 광고 확장](google-ads-extension.md)
 * [Google 태그 확장](gtag-advertising.md)
 * [linkedIn Insight Tag 확장](linkedin.md)
-* [Pinterest 전환 추적 확장](pinterest.md)
+* [Pinterest 전환 추적 확장](pinterest-extension.md)
 * [Twitter 범용 웹 사이트 태그 확장](twitter-uwt.md)
 
 ## 새 광고 대상에 연결 {#connect-destination}
