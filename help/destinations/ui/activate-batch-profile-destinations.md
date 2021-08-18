@@ -5,9 +5,9 @@ type: Tutorial
 seo-title: 대상자 데이터를 활성화하여 묶음 프로필 내보내기 대상 활성화
 description: 세그먼트를 배치 프로필 기반 대상으로 보내 Adobe Experience Platform에서 보유한 대상 데이터를 활성화하는 방법을 알아봅니다.
 seo-description: 세그먼트를 배치 프로필 기반 대상으로 보내 Adobe Experience Platform에서 보유한 대상 데이터를 활성화하는 방법을 알아봅니다.
-source-git-commit: 02c22453470d55236d4235c479742997e8407ef3
+source-git-commit: f814f11db0a258d1c5265206d6ec61c27ad2ee7d
 workflow-type: tm+mt
-source-wordcount: '2011'
+source-wordcount: '2008'
 ht-degree: 0%
 
 ---
@@ -270,7 +270,7 @@ ht-degree: 0%
 }
 ```
 
-### 중복 제거 사용 사례 1: 중복 제거 없음
+### 중복 제거 사용 사례 1: 중복 제거 없음 {#deduplication-use-case-1}
 
 중복 제거를 사용하지 않는 경우 내보내기 파일에 다음 항목이 포함됩니다.
 
@@ -280,7 +280,7 @@ ht-degree: 0%
 | johndoe@example.com | 존 | D |
 
 
-### 중복 제거 사용 사례 2: id 네임스페이스를 기반으로 데이터 중복 제거
+### 중복 제거 사용 사례 2: id 네임스페이스를 기반으로 데이터 중복 제거 {#deduplication-use-case-2}
 
 중복 제거를 [!DNL Email] 네임스페이스로 가정하면 내보내기 파일에 다음 항목이 포함됩니다. 프로필 B는 세그먼트에 대한 자격이 있는 최신 프로필이므로 내보낼 수 있는 유일한 프로필입니다.
 
@@ -289,7 +289,7 @@ ht-degree: 0%
 | johndoe_1@example.com | johndoe@example.com | 존 | D |
 | johndoe_2@example.com | johndoe@example.com | 존 | D |
 
-### 중복 제거 사용 사례 3: 단일 프로필 속성을 기반으로 한 중복 제거
+### 중복 제거 사용 사례 3: 단일 프로필 속성을 기반으로 한 중복 제거 {#deduplication-use-case-3}
 
 `personal Email` 속성으로 중복 제거를 가정하면 내보내기 파일에 다음 항목이 포함됩니다. 프로필 B는 세그먼트에 대한 자격이 있는 최신 프로필이므로 내보낼 수 있는 유일한 프로필입니다.
 
@@ -298,7 +298,7 @@ ht-degree: 0%
 | johndoe@example.com | 존 | D |
 
 
-### 중복 제거 사용 사례 4: 두 개의 프로필 속성을 기반으로 한 중복 제거(복합 중복 제거 키)
+### 중복 제거 사용 사례 4: 두 개의 프로필 속성을 기반으로 한 중복 제거 {#deduplication-use-case-4}
 
 복합 키 `personalEmail + lastName`에 의해 중복 제거된다고 가정하면 내보내기 파일에 다음 항목이 포함됩니다.
 
