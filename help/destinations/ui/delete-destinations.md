@@ -4,9 +4,9 @@ title: 대상 삭제
 type: Tutorial
 description: 이 자습서에서는 Adobe Experience Platform UI에서 기존 대상을 삭제하는 단계를 나열합니다
 exl-id: 7b672859-e61a-4b3c-9db9-62048258f0aa
-source-git-commit: 84deb9d1eecee8ec4369915a0b3c1eb810fd7c9b
+source-git-commit: a97b235e2d8834f6be002923be9cdbca5f08495b
 workflow-type: tm+mt
-source-wordcount: '430'
+source-wordcount: '437'
 ht-degree: 0%
 
 ---
@@ -40,10 +40,10 @@ Adobe Experience Platform 사용자 인터페이스에서 대상에 대한 기�
 
    ![필터 대상](../assets/ui/delete-destinations/filter-destinations.png)
 
-3. **[!UICONTROL Platform]** 열에서 ![삭제 단추](../assets/ui/delete-destinations/delete-icon.png) **[!UICONTROL 삭제]** 단추를 선택하여 기존 대상을 제거합니다.
+3. 이름 열에서 ![추가 단추](../assets/ui/delete-destinations/more-icon.png) 단추를 선택한 다음 ![삭제 단추](../assets/ui/delete-destinations/delete-icon.png) **[!UICONTROL 삭제]**를 선택하여 기존 대상 연결을 제거합니다.
    ![대상 삭제](../assets/ui/delete-destinations/delete-destinations.png)
 
-4. **[!UICONTROL 삭제]**&#x200B;를 선택하여 대상 제거를 확인합니다.
+4. **[!UICONTROL 삭제]**&#x200B;를 선택하여 대상 연결 제거를 확인합니다.
 
    ![대상 삭제 확인](../assets/ui/delete-destinations/delete-destinations-confirm.png)
 
