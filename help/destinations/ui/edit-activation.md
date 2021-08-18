@@ -6,9 +6,9 @@ seo-title: 활성화 흐름 편집
 description: 이 문서의 단계에 따라 Adobe Experience Platform에서 기존 활성화 흐름을 편집합니다.
 seo-description: 이 문서의 단계에 따라 Adobe Experience Platform에서 기존 활성화 흐름을 편집합니다.
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
-source-git-commit: a619227de30513bb06a22ce7b4f2fc13847c1ab6
+source-git-commit: a97b235e2d8834f6be002923be9cdbca5f08495b
 workflow-type: tm+mt
-source-wordcount: '191'
+source-wordcount: '204'
 ht-degree: 0%
 
 ---
@@ -29,8 +29,10 @@ Adobe Experience Platform에서 기존 활성화 흐름을 편집하려면 아�
 
    ![대상 선택](../assets/ui/edit-activation/destination-select.png)
 
-4. 대상에 대한 세부 정보 페이지가 나타나고 사용 가능한 컨트롤이 표시됩니다. 오른쪽 레일에서 **[!UICONTROL 활성화]**&#x200B;를 선택하여 대상에 전송할 세그먼트를 변경합니다.
+4. 대상에 대한 **[!UICONTROL 데이터 흐름]** 페이지가 나타나고 사용 가능한 컨트롤이 표시됩니다. 오른쪽 레일에서 **[!UICONTROL 활성화]**&#x200B;를 선택하여 대상에 전송할 세그먼트를 변경합니다.
+
+   대상 이름과 설명을 편집할 수도 있습니다.
 
    ![대상 세부 사항](../assets/ui/edit-activation/destination-details.png)
 
-5. 새 세그먼트를 활성화하는 방법에 대한 자세한 내용은 [활성화 개요](activation-overview.md) 를 참조하십시오.
+5. 대상에 새 세그먼트를 활성화하는 방법에 대한 자세한 내용은 [활성화 개요](activation-overview.md) 를 참조하십시오.
