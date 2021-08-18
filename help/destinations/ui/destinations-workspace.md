@@ -4,9 +4,9 @@ title: 대상 작업 공간
 description: 대상 작업 영역은 카탈로그, 찾아보기, 계정 및 시스템 보기의 네 섹션으로 구성됩니다. 이러한 내용은 아래 섹션에 설명되어 있습니다.
 seo-description: Adobe Experience Platform의 왼쪽 탐색 막대에서 대상 을 선택하여 대상 작업 공간에 액세스합니다.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: a619227de30513bb06a22ce7b4f2fc13847c1ab6
+source-git-commit: a97b235e2d8834f6be002923be9cdbca5f08495b
 workflow-type: tm+mt
-source-wordcount: '861'
+source-wordcount: '873'
 ht-degree: 2%
 
 ---
@@ -72,8 +72,8 @@ Adobe Experience Platform의 왼쪽 탐색 막대에서 **[!UICONTROL 대상]**&
 
 >[!TIP]
 >
-> * **[!UICONTROL 이름]** 열의 ![세그먼트 추가 단추](../assets/ui/workspace/add-data-symbol.png) 단추를 사용하여 세그먼트를 해당 대상에 보냅니다.
-> * **[!UICONTROL 이름]** 열의 ![대상 삭제 단추](../assets/ui/workspace/delete-destination-symbol.png) 단추를 사용하여 대상에 대한 기존 연결을 [삭제](delete-destinations.md)합니다.
+> * [!UICONTROL 이름] 열에서 세 점을 선택하고 ![세그먼트 추가 단추](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL 활성화&#x200B;]**단추를 사용하여 세그먼트를 해당 대상에 보냅니다.
+> * [!UICONTROL 이름] 열에서 세 점을 선택하고 ![대상 삭제 단추](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL 삭제&#x200B;]**단추를 사용하여 대상에 대한 기존 연결을 [제거](delete-destinations.md)합니다.
 
 
 ![찾아보기 탭](../assets/ui/workspace/browse-tab.png)
@@ -102,6 +102,6 @@ Adobe Experience Platform의 왼쪽 탐색 막대에서 **[!UICONTROL 대상]**&
 
 ![데이터 흐름1](../assets/ui/workspace/data-flows1.png)
 
-페이지에 표시되는 대상을 선택하고 **[!UICONTROL 흐름 보기]**&#x200B;를 클릭하여 각 대상에 대해 설정한 모든 연결에 대한 정보를 확인합니다.
+페이지에 표시되는 대상을 선택하고 **[!UICONTROL 데이터 흐름 보기]**&#x200B;를 클릭하여 각 대상에 대해 설정한 모든 연결에 대한 정보를 확인합니다.
 
 ![Data-flow2](../assets/ui/workspace/data-flows2.png)
