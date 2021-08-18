@@ -3,10 +3,10 @@ keywords: 소셜;소셜 대상;Livefyre;facebook;Facebook
 title: 소셜 대상 개요
 description: 소셜 대상을 사용하면 해시된 이메일을 기반으로 대상 타겟팅, 개인화 및 억제를 위해 캠페인용 프로필을 활성화할 수 있습니다.
 exl-id: c5da8dae-c1ff-45a8-b769-037d7bb7947a
-source-git-commit: 802b1844bec1e577e978da5d5a69de87278c04b9
+source-git-commit: 9c9ea0d9e8247dbc4a1a4078dbdba2ae80ed70ef
 workflow-type: tm+mt
-source-wordcount: '109'
-ht-degree: 1%
+source-wordcount: '105'
+ht-degree: 0%
 
 ---
 
@@ -20,9 +20,9 @@ ht-degree: 1%
 
 Adobe Experience Platform은 현재 다음 소셜 대상을 지원합니다.
 
-* [Livefyre 확장 Adobe](adobe-livefyre.md)
-* [[!DNL Facebook] 확장](facebook.md)
-* [Linkedin 일치하는 대상 연결](linkedin.md)
+* [Adobe [!DNL Livefyre] 확장](adobe-livefyre.md)
+* [[!DNL Facebook] 연결](facebook.md)
+* [[!DNL LinkedIn Matched Audiences] 연결](linkedin.md)
 
 ## 새 소셜 대상에 연결 {#connect-destination}
 
