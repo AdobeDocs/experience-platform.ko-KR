@@ -1,7 +1,7 @@
 ---
 title: 확장에 대한 엔드 투 엔드 테스트 업로드 및 구현
 description: Adobe Experience Platform에서 확장의 유효성을 검사, 업로드 및 테스트하는 방법을 알아봅니다.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 41a394974153883dc300bdd8a00fc3106c4f0ac6
 workflow-type: tm+mt
 source-wordcount: '2392'
 ht-degree: 33%
