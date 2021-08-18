@@ -3,10 +3,10 @@ keywords: facebook 연결;facebook 연결;facebook 대상;facebook;instagram;mes
 title: Facebook 연결
 description: 해시된 이메일을 기반으로 대상 타깃팅, 개인화 및 억제를 위해 Facebook 캠페인용 프로필을 활성화합니다.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
+source-git-commit: 183aff5a3b6bcc1635ae7b4b0e503a9d4b6d4d31
 workflow-type: tm+mt
-source-wordcount: '1259'
-ht-degree: 2%
+source-wordcount: '1498'
+ht-degree: 1%
 
 ---
 
@@ -135,6 +135,35 @@ Experience Platform에서 이메일 주소를 수집하는 방법에 대한 자�
 **[!UICONTROL 세그먼트 일정]** 단계에서 세그먼트를 [!DNL Facebook Custom Audiences]에 보낼 때 [!UICONTROL 대상]의 출처를 제공해야 합니다.
 
 ![대상의 facebook 기원](../../assets/catalog/social/facebook/facebook-origin-audience.png)
+
+### 매핑 예: [!DNL Facebook Custom Audience]에서 대상 데이터 활성화 {#example-facebook}
+
+다음은 [!DNL Facebook Custom Audience]에서 대상 데이터를 활성화할 때 올바른 ID 매핑의 예입니다.
+
+소스 필드 선택:
+
+* 사용 중인 전자 메일 주소가 해시되지 않은 경우 `Email` 네임스페이스를 소스 ID로 선택합니다.
+* [!DNL Facebook] [이메일 해싱 요구 사항](#email-hashing-requirements)에 따라 [!DNL Platform]로 데이터 처리에 대한 고객 이메일 주소를 해시한 경우 `Email_LC_SHA256` 네임스페이스를 소스 ID로 선택합니다.
+* 데이터가 해시되지 않은 전화 번호로 구성된 경우 `PHONE_E.164` 네임스페이스를 소스 ID로 선택합니다. [!DNL Platform] 은 요구 사항을 준수하도록 전화 번호를 해시합니다 [!DNL Facebook] .
+* [!DNL Facebook] [전화 번호 해싱 요구 사항](#phone-number-hashing-requirements)에 따라 데이터 처리에 대한 전화 번호를 해시하면 `Phone_SHA256` 네임스페이스를 소스 ID로 선택합니다.[!DNL Platform]
+* 데이터가 [!DNL Apple] 장치 ID로 구성된 경우 `IDFA` 네임스페이스를 소스 ID로 선택합니다.
+* 데이터가 [!DNL Android] 장치 ID로 구성된 경우 `GAID` 네임스페이스를 소스 ID로 선택합니다.
+* 데이터가 다른 유형의 식별자로 구성된 경우 `Custom` 네임스페이스를 소스 ID로 선택합니다.
+
+대상 필드 선택:
+
+* 소스 네임스페이스가 `Email` 또는 `Email_LC_SHA256`인 경우 `Email_LC_SHA256` 네임스페이스를 대상 ID로 선택합니다.
+* 소스 네임스페이스가 `PHONE_E.164` 또는 `Phone_SHA256`인 경우 `Phone_SHA256` 네임스페이스를 대상 ID로 선택합니다.
+* 소스 네임스페이스가 `IDFA` 또는 `GAID`인 경우 `IDFA` 또는 `GAID` 네임스페이스를 대상 ID로 선택합니다.
+* 소스 네임스페이스가 사용자 지정 네임스페이스일 때 `Extern_ID` 네임스페이스를 대상 ID로 선택합니다.
+
+>[!IMPORTANT]
+>
+>해시되지 않은 네임스페이스의 데이터는 활성화 시 [!DNL Platform]에 의해 자동으로 해시됩니다.
+> 
+>속성 소스 데이터는 자동으로 해시되지 않습니다. 소스 필드에 해시되지 않은 특성이 들어 있는 경우 **[!UICONTROL 변환]** 적용 옵션을 선택하여 [!DNL Platform]에서 활성화 시 데이터를 자동으로 해시하도록 하십시오.
+
+![ID 매핑](../../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
 
 ## 내보낸 데이터 {#exported-data}
 
