@@ -1,7 +1,7 @@
 ---
 title: 코어 확장 개요
 description: Adobe Experience Platform의 코어 태그 확장에 대해 알아봅니다.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 41a394974153883dc300bdd8a00fc3106c4f0ac6
 workflow-type: tm+mt
 source-wordcount: '4905'
 ht-degree: 70%
