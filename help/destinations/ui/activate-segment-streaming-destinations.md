@@ -5,9 +5,9 @@ type: Tutorial
 seo-title: 스트리밍 세그먼트 내보내기 대상으로 대상 데이터 활성화
 description: 세그먼트를 세그먼트 스트리밍 대상에 매핑하여 Adobe Experience Platform에서 보유한 대상 데이터를 활성화하는 방법을 알아봅니다.
 seo-description: 세그먼트를 세그먼트 스트리밍 대상에 매핑하여 Adobe Experience Platform에서 보유한 대상 데이터를 활성화하는 방법을 알아봅니다.
-source-git-commit: 0d5e0d57d209e4cf9a832531676e836add4256d0
+source-git-commit: c3e273c66ffe0542258e5418104e0bcf154f5235
 workflow-type: tm+mt
-source-wordcount: '684'
+source-wordcount: '740'
 ht-degree: 0%
 
 ---
@@ -43,11 +43,6 @@ ht-degree: 0%
 
 ## 특성 및 ID 매핑 {#mapping}
 
->[!CONTEXTUALHELP]
->id="platform_destinations_activate_applytransformation"
->title="변형 적용"
->abstract="해시되지 않은 소스 필드를 사용할 때 이 옵션을 선택하여 Adobe Experience Platform에서 활성화 시 자동으로 해시하도록 합니다."
-
 >[!IMPORTANT]
 >
 >이 단계는 일부 세그먼트 스트리밍 대상에만 적용됩니다. 대상에 **[!UICONTROL 매핑]** 단계가 없는 경우 [세그먼트 내보내기 예약](#scheduling)으로 건너뜁니다.
@@ -76,8 +71,17 @@ ht-degree: 0%
 
 1. 매핑을 더 추가하려면 1~5단계를 반복합니다.
 
+### 변형 적용 {#apply-transformation}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_applytransformation"
+>title="변형 적용"
+>abstract="해시되지 않은 소스 필드를 사용할 때 이 옵션을 선택하여 Adobe Experience Platform에서 활성화 시 자동으로 해시하도록 합니다."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en#apply-transformation" text="자세한 내용은 문서에서 알아보십시오"
 
+해시되지 않은 소스 속성을 대상이 해시될 대상 속성에 매핑하는 경우(예: `email_lc_sha256` 또는 `phone_sha256`)에서 **변환 적용** 옵션을 선택하여 Adobe Experience Platform에서 활성화 시 소스 속성을 자동으로 해시하도록 합니다.
+
+![ID 매핑](/help/destinations/assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
 
 
 ## 세그먼트 내보내기 예약 {#scheduling}
