@@ -1,10 +1,10 @@
 ---
-title: FAQ
+title: 태그 문제 해결 안내서
 description: Adobe Experience Platform에서 태그에 대해 자주 묻는 질문에 대한 답변을 얻을 수 있습니다.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: dc957372e5e8c6f034f2e0cd0283e0e997501ba8
 workflow-type: tm+mt
-source-wordcount: '904'
-ht-degree: 29%
+source-wordcount: '1055'
+ht-degree: 25%
 
 ---
 
@@ -92,6 +92,16 @@ Adobe에는 동일한 확장 프로그램 개발 방법을 사용하여 자체 �
 ## 태그는 기본 모바일 앱에서 작동합니까?
 
 예! 이제 태그는 모바일 속성 및 새로운 Adobe Experience Platform [Mobile SDK](https://sdkdocs.com)에 대한 구성을 지원하여 기본 모바일 앱 환경에서 데이터 수집 및 제공을 구현합니다. 자세한 내용은 [설명서](https://sdkdocs.com)를 참조하십시오.
+
+## UI에서 내 계정을 로드하는 동안 오류가 발생했습니다.
+
+계정을 로드하는 동안 오류가 발생했다는 메시지가 표시되는 경우, 계정이 태그의 제품 프로필에 속해 있지 않은 것입니다. 데이터 수집 UI에 대한 액세스 권한을 부여하기 위해 Adobe Admin Console에서 제품 프로필을 구성하는 방법을 알아보려면 [관리 권한](./ui/administration/manage-permissions.md)에 대한 안내서를 참조하십시오.
+
+## UI에 속성을 추가할 수 없는 이유는 무엇입니까?
+
+데이터 수집 UI에 로그인할 때 새 속성을 만들 수 없다면, 계정이 속성 관리 권한이 있는 제품 프로필에 속해 있지 않은 것입니다.
+
+속성 관리 권한을 부여하기 위해 Adobe Admin Console에서 제품 프로필을 구성하는 방법을 알려면 [권한 관리](./ui/administration/manage-permissions.md)에 대한 안내서를 참조하십시오. 태그의 다른 권한에 대한 자세한 내용은 [태그](./ui/administration/user-permissions.md)에 대한 사용자 권한에 대한 개요를 참조하십시오.
 
 ## 다른 질문이 있을 경우 어떻게 합니까?
 
