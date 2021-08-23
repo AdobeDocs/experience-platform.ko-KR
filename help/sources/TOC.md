@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 소스 커넥터 도움말
 breadcrumb-title: Source Connectors 안내서
 user-guide-description: 다양한 소스 또는 구조에서 데이터를 수집하고 레이블을 지정하며 기존에 수집한 데이터를 향상시킬 수 있습니다.
 feature: 데이터 수집, 소스
-source-git-commit: 031849fcc351794e7eb1da691bd4015368a043b6
+source-git-commit: 5f5e4f91862fe4ec8840224a9bdb5dc6d7338288
 workflow-type: tm+mt
-source-wordcount: '628'
+source-wordcount: '639'
 ht-degree: 13%
 
 ---
@@ -73,6 +73,8 @@ ht-degree: 13%
       - [PostgreSQL 커넥터](connectors/databases/postgres.md)
    - eCommerce {#ecommerce}
       - [Shopify 커넥터](connectors/ecommerce/shopify.md)
+   - 로컬 시스템 {#local-system}
+      - [로컬 파일 업로드 커넥터](connectors/local-system/local-file-upload.md)
    - 마케팅 자동화 {#marketing-automation}
       - [HubSpot 커넥터](connectors/marketing-automation/hubspot.md)
       - [Salesforce Marketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
@@ -214,6 +216,8 @@ ht-degree: 13%
          - [PostgreSQL](tutorials/ui/create/databases/postgres.md)
       - eCommerce {#ecommerce}
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
+      - 로컬 시스템 {#local-system}
+         - [로컬 파일 업로드](tutorials/ui/create/local-system/local-file-upload.md)
       - 마케팅 자동화 {#marketing-automation}
          - [HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)
          - [Salesforce Marketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
