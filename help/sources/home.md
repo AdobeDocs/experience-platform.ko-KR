@@ -5,9 +5,9 @@ title: 소스 커넥터 개요
 topic-legacy: overview
 description: Adobe Experience Platform을 사용하면 Platform 서비스를 사용하여 들어오는 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 외부 소스에서 데이터를 수집할 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 등과 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 5f5e4f91862fe4ec8840224a9bdb5dc6d7338288
 workflow-type: tm+mt
-source-wordcount: '979'
+source-wordcount: '1007'
 ht-degree: 0%
 
 ---
@@ -104,6 +104,12 @@ Experience Platform은 타사 eCommerce 시스템에서 데이터를 수집하�
 
 - [[!DNL Shopify]](connectors/ecommerce/shopify.md)
 
+### 로컬 시스템
+
+Experience Platform은 로컬 시스템에서 데이터를 수집하기 위한 지원을 제공합니다. 특정 소스 커넥터에 대한 자세한 내용은 다음 관련 문서를 참조하십시오.
+
+- [로컬 파일 업로드](connectors/local-system/local-file-upload.md)
+
 ### 마케팅 자동화
 
 Experience Platform은 타사 마케팅 자동화 시스템에서 데이터 섭취를 지원합니다. 특정 소스 커넥터에 대한 자세한 내용은 다음 관련 문서를 참조하십시오.
@@ -122,7 +128,6 @@ Experience Platform은 타사 결제 시스템에서 데이터 섭취를 지원�
 Experience Platform은 스트리밍 소스에서 데이터를 수집하도록 지원합니다. 특정 소스 커넥터에 대한 자세한 내용은 다음 관련 문서를 참조하십시오.
 
 - [[!DNL HTTP API]](connectors/streaming/http.md)
-
 
 ### 프로토콜
 
