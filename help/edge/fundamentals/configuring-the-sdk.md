@@ -4,9 +4,9 @@ description: Adobe Experience Platform Web SDK를 구성하는 방법을 알아�
 seo-description: Experience Platform 웹 SDK를 구성하는 방법 알아보기
 keywords: 구성;구성;SDK;Edge;Web SDK;구성;EdgeConfigId;컨텍스트;웹;장치;환경;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;웹 sdk 설정;사전 숨김Style;불투명도;쿠키DestinationsEnabled;urlDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 exl-id: d1e95afc-0b8a-49c0-a20e-e2ab3d657e45
-source-git-commit: 4b04f02a7a8843e667ea05b000bc93ebb065babd
+source-git-commit: 549203c8ddc94e00cf4e4ba432f367ddc371cb27
 workflow-type: tm+mt
-source-wordcount: '839'
+source-wordcount: '856'
 ht-degree: 14%
 
 ---
@@ -31,6 +31,10 @@ alloy("configure", {
 ## 일반 옵션
 
 ### `edgeConfigId`
+
+>[!NOTE]
+>
+>**Edge Configurations의 브랜드가 데이터 세트로 다시 지정되었습니다. 데이터 스트림 ID는 구성 ID와 같습니다.**
 
 | **유형** | **필수 여부** | **기본값** |
 | -------- | ------------ | ----------------- |
@@ -62,14 +66,14 @@ SDK를 적절한 계정 및 구성에 연결하는 할당된 구성 ID입니다.
 
 | **기능** | **함수** |
 | ---------------------- | ------------------ |
-| 동기 유효성 검사 | 스키마에 대해 수집 중인 데이터의 유효성을 확인하고 다음 레이블 아래의 응답에서 오류를 반환합니다.`collect:error OR success` |
+| 동기 유효성 검사 | 스키마에 대해 수집 중인 데이터의 유효성을 확인하고 다음 레이블 아래의 응답에서 오류를 반환합니다. `collect:error OR success` |
 | 콘솔 로깅 | 브라우저의 JavaScript 콘솔에 디버깅 메시지가 표시되도록 합니다 |
 
 {style=&quot;table-layout:auto&quot;}
 
 ### `edgeDomain` {#edge-domain}
 
-이 필드를 자사 도메인으로 채웁니다. 자세한 내용은 [설명서](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html)를 참조하십시오.
+이 필드를 자사 도메인으로 채웁니다. 자세한 내용은 [설명서](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=ko-KR)를 참조하십시오.
 
 도메인은 www의 웹 사이트에 대한 `data.{customerdomain.com}`과 유사합니다.{customerdomain.com}.
 
@@ -116,9 +120,9 @@ SDK를 적절한 계정 및 구성에 연결하는 할당된 구성 ID입니다.
 {style=&quot;table-layout:auto&quot;}
 
 사용자의 기본 동의를 설정합니다. 사용자에 대해 이미 저장된 동의 기본 설정이 없는 경우 이 설정을 사용합니다. 다른 유효한 값은 `"pending"` 및 `"out"`입니다. 이 기본값은 사용자 프로필에 지속되지 않습니다. 사용자의 프로필은 `setConsent`이 호출될 때만 업데이트됩니다.
-* `"in"`:이 설정을 지정하거나 값을 제공하지 않으면 사용자 동의 환경 설정 없이 작업을 계속 진행합니다.
-* `"pending"`:이 설정을 사용하면 사용자가 동의 환경 설정을 제공할 때까지 작업을 큐에 올릴 수 있습니다.
-* `"out"`:이 설정을 지정하면 사용자가 동의 환경 설정을 제공할 때까지 작업이 삭제됩니다.
+* `"in"`: 이 설정을 지정하거나 값을 제공하지 않으면 사용자 동의 환경 설정 없이 작업을 계속 진행합니다.
+* `"pending"`: 이 설정을 사용하면 사용자가 동의 환경 설정을 제공할 때까지 작업을 큐에 올릴 수 있습니다.
+* `"out"`: 이 설정을 지정하면 사용자가 동의 환경 설정을 제공할 때까지 작업이 삭제됩니다.
 사용자의 환경 설정이 제공되면 사용자의 환경 설정에 따라 작업이 진행되거나 중단됩니다. 자세한 내용은 [지원 동의](../consent/supporting-consent.md)를 참조하십시오.
 
 ## 개인화 옵션
@@ -181,4 +185,4 @@ true인 경우 SDK는 이전 AMCV 쿠키를 읽고 설정합니다. 이 옵션�
 
 {style=&quot;table-layout:auto&quot;}
 
-타사 쿠키 Adobe 설정을 활성화합니다. SDK는 타사 컨텍스트에서 방문자 ID를 유지하여 여러 사이트에서 동일한 방문자 ID를 사용할 수 있습니다. 여러 사이트가 있거나 파트너와 데이터를 공유하려는 경우 이 옵션을 사용합니다.그러나 경우에 따라 이 옵션은 개인 정보용으로 필요하지 않습니다.
+타사 쿠키 Adobe 설정을 활성화합니다. SDK는 타사 컨텍스트에서 방문자 ID를 유지하여 여러 사이트에서 동일한 방문자 ID를 사용할 수 있습니다. 여러 사이트가 있거나 파트너와 데이터를 공유하려는 경우 이 옵션을 사용합니다. 그러나 경우에 따라 이 옵션은 개인 정보용으로 필요하지 않습니다.
