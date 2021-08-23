@@ -2,9 +2,9 @@
 title: Adobe Experience Platform Web SDK에서 지원되는 사용 사례
 description: Adobe Experience Platform Web SDK에서 지원되는 사용 사례를 알아봅니다.
 keywords: 웹 sdk;사용 사례
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: e012e12a8cadb8c13781b0380d84652c23567180
 workflow-type: tm+mt
-source-wordcount: '552'
+source-wordcount: '565'
 ht-degree: 14%
 
 ---
@@ -91,6 +91,7 @@ ht-degree: 14%
 | Target 프로필 업데이트 | [설명서](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/target-overview.html?lang=en#single-profile-update) |
 | 추천 항목 |  |
 | mBox 타사 ID |  |
+| 응답 토큰 | [설명서](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/accessing-response-tokens.html?lang=en) |
 
 {style=&quot;table-layout:auto&quot;}
 
