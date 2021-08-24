@@ -4,9 +4,9 @@ title: 대상 유형 및 카테고리
 seo-title: 대상 유형 및 카테고리
 description: Adobe Experience Platform의 다양한 대상 유형 및 카테고리에 대해 알아봅니다.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 5a6f14ba65584a6bd61d62c4fb0b46e8f9e8e96d
 workflow-type: tm+mt
-source-wordcount: '504'
+source-wordcount: '534'
 ht-degree: 0%
 
 ---
@@ -23,15 +23,26 @@ Adobe Experience Platform에서는 연결과 확장의 두 대상 유형을 구�
 
 ## 연결 {#connections}
 
-**[!UICONTROL Adobe Experience Platform]** 의 프로필  **[!UICONTROL 내보내기 및]** 세그먼트 내보내기 대상: 이벤트 데이터를 캡처하고, 다른 데이터 소스와 결합하여  [실시간 고객 프로필을 만들고, 세그멘테이션을 적용하고, 세그먼트와 자격이 있는 프로필을 대상으로 내보냅니다.](../profile/home.md)
+**[!UICONTROL Adobe Experience Platform]** 의 프로필 내보내기 및  **[!UICONTROL 스트리밍 세그먼트 내보내기 대상]** 은 이벤트 데이터를 캡처하고, 다른 데이터 소스와 결합하여  [실시간 고객 프로필을 만들고, 세그멘테이션을 적용하고, 세그먼트와 자격이 있는 프로필을 대상으로 내보냅니다. ](../profile/home.md)
 
 ## 프로필 내보내기 대상
 
-프로필 내보내기 대상은 프로필 및/또는 속성이 포함된 파일을 생성합니다. 이러한 대상은 원시 데이터를 사용하며, 종종 이메일 주소가 기본 키로 사용됩니다. [Amazon S3 클라우드 스토리지 대상](./catalog/cloud-storage/amazon-s3.md)은 프로필 내보내기가 포함된 파일을 저장할 수 있는 대상의 예입니다.
+프로필 내보내기 대상은 원시 데이터를 받게 되며, 종종 이메일 주소를 기본 키로 사용합니다. Experience Platform은 현재 두 가지 유형의 프로필 내보내기 대상을 지원합니다.
 
-## 세그먼트 내보내기 대상
+* [스트리밍 프로필 내보내기 대상](#streaming-profile-export)
+* [파일 기반 대상](#file-based)
 
-세그먼트 내보내기 대상은 대상 플랫폼에 대한 자격이 있는 프로필 및 세그먼트를 보냅니다. 이러한 대상은 세그먼트 ID 또는 사용자 ID를 사용합니다. 이러한 유형의 대상은 [[!DNL Google Display & Video 360]](./catalog/advertising/google-dv360.md) 또는 [[!DNL Google Ads]](./catalog/advertising/google-ads-destination.md) 과 같은 광고 대상입니다.
+### 스트리밍 프로필 내보내기 대상 {#streaming-profile-export}
+
+스트리밍 프로필 내보내기 대상은 세그먼트 및 프로필 데이터를 Experience Platform 데이터 스트림으로 받습니다. [Amazon ](catalog/cloud-storage/amazon-kinesis.md) Kinesisis 및  [Azure Event ](catalog/cloud-storage/azure-event-hubs.md) Hubsis가 이러한 대상의 예입니다.
+
+### 파일 기반 대상 {#file-based}
+
+파일 기반 대상은 프로필 및/또는 속성이 포함된 `.csv` 파일을 받습니다. [Amazon S3](catalog/cloud-storage/amazon-s3.md) 은 프로필 내보내기가 포함된 파일을 저장할 수 있는 대상의 예입니다.
+
+## 스트리밍 세그먼트 내보내기 대상
+
+세그먼트 내보내기 대상이 Experience Platform 세그먼트 데이터를 받습니다. 이러한 대상은 세그먼트 ID 또는 사용자 ID를 사용합니다. [[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md) 및 [[!DNL Google Ads]](catalog/advertising/google-ads-destination.md) 는 그러한 대상의 예입니다.
 
 ## 프로필 내보내기 및 세그먼트 내보내기 대상 - 비디오 개요
 
