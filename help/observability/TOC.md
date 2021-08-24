@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Observability Insights 안내서
 user-guide-description: 통계 지표 및 이벤트 알림을 사용하여 플랫폼 활동을 모니터링합니다.
 feature: 데이터 관리
-source-git-commit: 39fc8712cdaf64ee15a4e1bf65b74846d77f5477
+source-git-commit: 905d364796911f35111d42c46c91744bc18304f2
 workflow-type: tm+mt
-source-wordcount: '57'
-ht-degree: 47%
+source-wordcount: '60'
+ht-degree: 45%
 
 ---
 
@@ -20,7 +20,8 @@ ht-degree: 47%
    * [지표](./api/metrics.md)
 * 경고 {#alerts}
    * [개요](./alerts/overview.md)
-   * [I/O 이벤트 알림 구독](./alerts/subscribe.md)
+   * [표준 경고 규칙](./alerts/rules.md)
    * [UI 안내서](./alerts/ui.md)
+   * [I/O 이벤트 알림 구독](./alerts/subscribe.md)
 * [API 참조](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/observability-insights.yaml)
 * [플랫폼 릴리스 노트](https://www.adobe.com/go/platform-release-notes-en)
