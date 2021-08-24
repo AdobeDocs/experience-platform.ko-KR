@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 세그먼트 일치 개요
 topic-legacy: overview
 description: 세그먼트 일치 는 두 명 이상의 플랫폼 사용자가 안전하고 제어되며 개인 정보에 친숙한 방식으로 세그먼트 데이터를 교환할 수 있도록 해주는 Adobe Experience Platform의 세그먼트 공유 서비스입니다.
-source-git-commit: d6eefc8c10a44fd31eaed00f22d09ee8a300db83
+source-git-commit: ee59da6c075573af366403e1059b5318fb924d21
 workflow-type: tm+mt
-source-wordcount: '1901'
+source-wordcount: '1982'
 ht-degree: 1%
 
 ---
@@ -74,6 +74,17 @@ ID 네임스페이스는 [Adobe Experience Platform Identity 서비스](../../id
 [!DNL Segment Match] 는 데이터 세트 또는 속성에 수동 [!DNL Segment Match] 으로 추가하여  [!DNL Segment Match] 파트너 공유 프로세스에서 제외되도록 하는 특정 계약 레이블인 C11 레이블을 사용합니다. C11 레이블은 [!DNL Segment Match] 프로세스에서 사용하지 않아야 하는 데이터를 나타냅니다. [!DNL Segment Match]에서 제외할 데이터 세트 및/또는 필드를 결정하고 그에 따라 C11 레이블을 추가한 후에는 [!DNL Segment Match] 워크플로우에 의해 레이블이 자동으로 적용됩니다. [!DNL Segment Match] 데이터 공유 핵심  [!UICONTROL 제한 정책을 ] 자동으로 활성화합니다. 데이터 사용 레이블을 데이터 세트에 적용하는 방법에 대한 특정 지침은 UI](../../data-governance/labels/user-guide.md)에서 데이터 사용 레이블 관리에서 자습서를 참조하십시오.[
 
 데이터 사용 레이블 및 해당 정의 목록을 보려면 [데이터 사용 레이블 용어집](../../data-governance/labels/reference.md)을 참조하십시오. 데이터 사용 정책에 대한 자세한 내용은 [데이터 사용 정책 개요](../../data-governance/policies/overview.md)를 참조하십시오.
+
+### [!DNL Segment Match] 권한 이해
+
+[!DNL Segment Match]에 연결된 두 가지 권한이 있습니다.
+
+| 사용 권한 | 설명 |
+| --- | --- |
+| 대상 공유 연결 관리 | 이 권한을 사용하면 두 IMS 조직을 연결하여 [!DNL Segment Match] 흐름을 활성화하는 파트너 핸드셰이크 프로세스를 완료할 수 있습니다. |
+| 대상 공유 관리 | 이 권한을 사용하면 활성 파트너(**[!UICONTROL 대상 공유 연결]** 액세스 권한이 있는 관리자 사용자가 연결한 파트너)가 있는 피드([!DNL Segment Match]에 사용되는 데이터 패키지)를 만들고 편집하고 게시할 수 있습니다. |
+
+액세스 제어 및 권한에 대한 자세한 내용은 [액세스 제어 개요](../../access-control/home.md)를 참조하십시오.
 
 ## [!DNL Segment Match] 종단 간 워크플로우
 
