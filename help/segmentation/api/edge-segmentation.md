@@ -5,10 +5,10 @@ title: 'API를 사용한 Edge Segmentation '
 topic-legacy: developer guide
 description: 이 문서에는 Adobe Experience Platform 세그멘테이션 서비스 API와 함께 에지 세그멘테이션을 사용하는 방법에 대한 예가 나와 있습니다.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: 3de00fb9ae5348b129a499cfd81d8db6dbac2d46
+source-git-commit: af1eee8787d7fa2ae2d56e541823100d2620dd2d
 workflow-type: tm+mt
-source-wordcount: '616'
-ht-degree: 4%
+source-wordcount: '633'
+ht-degree: 3%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 4%
 
 Edge Segmentation은 Adobe Experience Platform의 세그먼트를 즉시 평가하여 동일한 페이지와 다음 페이지 개인화 사용 사례를 가능하게 하는 기능입니다.
 
-## 시작
+## 시작하기
 
 이 개발자 안내서를 사용하려면 Edge Segmentation과 관련된 다양한 [!DNL Adobe Experience Platform] 서비스에 대한 작업 이해를 필요로 합니다. 이 자습서를 시작하기 전에 다음 서비스에 대한 설명서를 검토하십시오.
 
@@ -38,8 +38,8 @@ Edge Segmentation은 Adobe Experience Platform의 세그먼트를 즉시 평가�
 | ---------- | ------- |
 | 수신 히트 | 시간 제한 없이 단일 수신 이벤트를 참조하는 모든 세그먼트 정의입니다. |
 | 프로필을 참조하는 수신 히트 | 시간 제한 없이 단일 수신 이벤트를 참조하는 모든 세그먼트 정의와 하나 이상의 프로필 속성을 참조합니다. |
-| 빈도 쿼리 | 특정 횟수 이상 발생하는 이벤트를 참조하는 모든 세그먼트 정의입니다. |
-| 프로필을 참조하는 빈도 쿼리 | 특정 횟수 이상 발생하는 이벤트를 참조하며 하나 이상의 프로필 속성을 갖는 모든 세그먼트 정의입니다. |
+| 24시간의 시간 창이 있는 수신 히트 | 24시간 이내에 단일 수신 이벤트를 참조하는 모든 세그먼트 정의 |
+| 24시간의 시간 창이 있는 프로필을 참조하는 수신 히트 | 24시간 이내에 단일 수신 이벤트와 하나 이상의 프로필 속성을 참조하는 모든 세그먼트 정의 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -47,9 +47,9 @@ Edge Segmentation은 Adobe Experience Platform의 세그먼트를 즉시 평가�
 
 | 쿼리 유형 | 세부 사항 |
 | ---------- | ------- |
-| 상대적 시간 창 | 쿼리가 시간 창을 참조하는 경우 에지 세그먼테이션을 사용하여 평가할 수 없습니다. |
-| 부정 | 쿼리에 부정 또는 `not` 이벤트가 포함된 경우 에지 세그멘테이션을 사용하여 평가할 수 없습니다. |
 | 여러 이벤트 | 쿼리에 두 개 이상의 이벤트가 포함된 경우 에지 세그멘테이션을 사용하여 평가할 수 없습니다. |
+| 빈도 쿼리 | 특정 횟수 이상 발생하는 이벤트를 참조하는 모든 세그먼트 정의입니다. |
+| 프로필을 참조하는 빈도 쿼리 | 특정 횟수 이상 발생하는 이벤트를 참조하며 하나 이상의 프로필 속성을 갖는 모든 세그먼트 정의입니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
