@@ -1,13 +1,13 @@
 ---
 title: Adobe Experience Platform Web SDK 구성
 description: Adobe Experience Platform Web SDK를 구성하는 방법을 알아봅니다.
-seo-description: Experience Platform 웹 SDK를 구성하는 방법 알아보기
+seo-description: Learn how to configure the Experience Platform Web SDK
 keywords: 구성;구성;SDK;Edge;Web SDK;구성;EdgeConfigId;컨텍스트;웹;장치;환경;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;웹 sdk 설정;사전 숨김Style;불투명도;쿠키DestinationsEnabled;urlDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 exl-id: d1e95afc-0b8a-49c0-a20e-e2ab3d657e45
-source-git-commit: 549203c8ddc94e00cf4e4ba432f367ddc371cb27
+source-git-commit: c0e2d01bd21405f07f4857e1ccf45dd0e4d0f414
 workflow-type: tm+mt
-source-wordcount: '856'
-ht-degree: 14%
+source-wordcount: '826'
+ht-degree: 15%
 
 ---
 
@@ -66,7 +66,6 @@ SDK를 적절한 계정 및 구성에 연결하는 할당된 구성 ID입니다.
 
 | **기능** | **함수** |
 | ---------------------- | ------------------ |
-| 동기 유효성 검사 | 스키마에 대해 수집 중인 데이터의 유효성을 확인하고 다음 레이블 아래의 응답에서 오류를 반환합니다. `collect:error OR success` |
 | 콘솔 로깅 | 브라우저의 JavaScript 콘솔에 디버깅 메시지가 표시되도록 합니다 |
 
 {style=&quot;table-layout:auto&quot;}
