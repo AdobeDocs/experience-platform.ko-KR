@@ -1,91 +1,46 @@
 ---
 title: Adobe Experience Platform 릴리스 정보
-description: 2021년 7월 28일 Experience Platform 릴리스 노트.
-doc-type: release notes
-last-update: July 28, 2021
-author: ens60013
+description: Adobe Experience Platform에 대한 최신 릴리스 노트입니다.
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
+source-git-commit: 3d6402a35e1813b94af866d7aaea975d4f103906
 workflow-type: tm+mt
-source-wordcount: '802'
-ht-degree: 7%
+source-wordcount: '459'
+ht-degree: 9%
 
 ---
 
 
 # Adobe Experience Platform 릴리스 노트
 
-**릴리스 날짜: 2021년 7월 28일**
+**릴리스 날짜: 2021년 25월 8일**
 
 Adobe Experience Platform의 기존 기능 업데이트:
 
-- [데이터 과학 작업 영역](#dsw)
-- [데이터 흐름](#destinations)
-- [대상](#destinations)
-- [XDM(경험 데이터 모델)](#xdm)
-- [쿼리 서비스](#query)
+- [가시성 통찰력](#observability)
+- [실시간 고객 프로필](#profile)
 - [소스](#sources)
 
-## 데이터 과학 작업 영역 {#dsw}
+## 가시성 통찰력 {#observability}
 
-Data Science Workspace는 기계 학습 및 인공 지능을 사용하여 데이터를 통해 통찰력을 생성합니다. Adobe Experience Platform에 통합된 Data Science Workspace을 사용하면 Adobe 솔루션에서 컨텐츠 및 데이터 자산을 사용하여 예측을 할 수 있습니다.
+가시성 통찰력을 사용하면 통계 지표 및 이벤트 알림을 사용하여 플랫폼 활동을 모니터링할 수 있습니다.
 
 **새로운 기능**
 
 | 기능 | 설명 |
 | --- | --- |
-| 라이브러리 및 OS 업데이트 | Data Science Workspace는 기능과 유용성을 개선하기 위해 중요한 라이브러리 및 OS 업데이트를 만들었습니다. 여기에는 JupiterLab 1.2.20, Python 3.7, Penders 1.2.4, Tensorflow 2.4, CUDA 11 및 CUNN 8 지원 등이 포함됩니다. JupiterLab 내에서 사용 가능한 라이브러리를 보는 방법에 대해 알아보려면 JupiterLab 노트북 개요 설명서의 [지원되는 라이브러리](../../data-science-workspace/jupyterlab/overview.md#supported-libraries) 섹션을 참조하십시오. |
+| 경고 | 이제 Platform에서 실행되는 워크플로우와 관련된 중요한 경고를 구독할 수 있습니다. 특정 경고 규칙을 구독하면 중요한 라이프사이클 이벤트가 발생할 때(예: 성공적인 데이터 섭취) 또는 주의가 필요한 문제(예: 수집 흐름 실패 또는 세그먼트 작업 예상 보다 오래 걸리는 경우)가 발생하면 UI 내 알림 및 이메일을 받게 됩니다. 자세한 내용은 [경고 개요](../../observability/alerts/overview.md)를 참조하십시오. |
 
-데이터 과학 작업 공간에 대한 일반적인 정보는 [데이터 과학 작업 공간 개요](../../data-science-workspace/home.md)를 참조하십시오.
+서비스에 대한 자세한 내용은 [가시성 통찰력 개요](../../observability/home.md)를 참조하십시오.
 
-## 데이터 흐름 {#dataflows}
+## 실시간 고객 프로필 {#profile}
 
-Platform에서 데이터는 다양한 소스에서 수집되고 시스템 내에서 분석되며 다양한 대상으로 활성화됩니다. 플랫폼 을 사용하면 데이터 흐름에 투명성을 제공하여 비선형 이외의 데이터 흐름을 쉽게 추적할 수 있습니다.
-
-데이터 흐름은 플랫폼 간에 데이터를 이동하는 작업을 나타냅니다. 이러한 데이터 흐름은 서로 다른 서비스에 걸쳐 구성되어, 데이터를 소스 커넥터에서 타겟 데이터 세트로 이동하는 데 도움이 되며, 이 데이터 흐름은 최종적으로 대상으로 활성화하기 전에 Identity 서비스 및 실시간 고객 프로필에서 활용합니다.
-
-**새로운 기능**
+Adobe Experience Platform을 사용하면 고객이 브랜드와 상호 작용하는 위치와 시기에 관계없이 고객을 위해 조정되고 일관되며 적절한 경험을 제공할 수 있습니다. 실시간 고객 프로필을 사용하면 온라인, 오프라인, CRM 및 타사 데이터를 포함하여 여러 채널의 데이터를 결합하는 각 개별 고객을 전체적으로 확인할 수 있습니다. 프로필을 사용하면 모든 고객 상호 작용을 실행 가능하고 타임스탬프가 지정된 계정을 제공하는 통합 보기에 고객 데이터를 통합할 수 있습니다.
 
 | 기능 | 설명 |
 | ------- | ----------- |
-| 대상 대시보드 | 이제 모니터링 대시보드를 사용하여 대상에 대한 데이터 흐름을 모니터링할 수 있습니다. 자세한 내용은 UI](../../dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard)에서 [대상 모니터링에서 자습서를 참조하십시오 |
+| 병합 정책 또는 ID로 프로필 찾아보기 | 이제 Experience Platform에서 프로필을 검색할 때 병합 정책별로 검색하여 선택한 병합 정책을 기반으로 20개의 샘플 프로필을 미리 볼 수 있습니다. ID 네임스페이스와 관련 ID 값을 사용하여 특정 프로필을 검색하기 위해 ID별로 검색할 수도 있습니다. 자세한 내용은 [실시간 고객 프로필 UI 안내서](../../profile/ui/user-guide.md)를 참조하십시오. |
 
-데이터 흐름에 대한 자세한 내용은 [데이터 흐름 개요](../../dataflows/home.md)를 참조하십시오. 대상에 대한 자세한 내용은 [대상 개요](../../destinations/home.md)를 참조하십시오.
-
-## 대상 {#destinations}
-
-대상은 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과의 사전 구축된 통합입니다. 대상을 사용하여 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례에 대해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
-
-**새로운 기능**
-
-| 기능 | 설명 |
-| --- | --- |
-| [증가분 파일 내보내기 속도 향상](../../destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) | 이제 3, 6, 8 및 12시간마다 파일 기반 대상에 대한 증분 파일 내보내기를 예약할 수 있습니다. 이미 저장된 세그먼트의 파일 내보내기 일정을 변경하는 것은 현재 지원되지 않습니다. 다른 일정으로 세그먼트를 다시 내보내려면 새 대상 인스턴스를 만들어야 합니다. 이는 향후 릴리스에서 해결될 수 있는 제한 사항입니다. |
-| [중복 제거 키 지원](../../destinations/ui/activate-batch-profile-destinations.md#deduplication-keys) | 중복 제거 키를 선택하여 내보내기 파일에서 동일한 프로필의 여러 레코드를 제거합니다. 중복 제거 키로 단일 네임스페이스 또는 최대 2개의 XDM 스키마 속성을 선택할 수 있습니다. |
-
-## XDM(경험 데이터 모델) {#xdm}
-
-XDM(Experience Data Model)은 디지털 경험의 성능을 향상하도록 설계된 오픈 소스 사양입니다. 모든 응용 프로그램이 Platform 서비스와 통신할 수 있도록 하는 스키마 형식의 데이터에 대한 공통 구조 및 정의를 제공합니다.
-
-| 기능 | 설명 |
-| --- | --- |
-| 통신 산업 필터 | UI에서 스키마에 필드 그룹을 추가할 때 이제 통신 산업별로 필터링할 수 있습니다. 통신 사용 사례에 대한 권장 데이터 모델을 보려면 [통신 업계 엔티티 관계 다이어그램(ERD)](../../xdm/schema/industries/telecom.md)을 참조하십시오. |
-
-플랫폼의 XDM에 대한 일반적인 정보는 [XDM 시스템 개요](../../xdm/home.md)를 참조하십시오.
-
-## 쿼리 서비스 {#query}
-
-Query Service는 표준 SQL을 사용하여 Adobe Experience Platform에서 데이터를 쿼리할 수 있는 기능을 제공하며 다양한 분석 및 데이터 관리 사용 사례를 지원합니다. Data Lake의 데이터 세트에 참여하고 쿼리 결과를 보고 또는 Data Science Workspace에 사용하거나 실시간 고객 프로필에 수집하기 위한 새 데이터 세트로 캡처할 수 있는 서버를 사용하지 않는 도구입니다.
-
-Query Service를 사용하여 데이터 분석 에코시스템을 구축하고 다양한 상호 작용 채널에서 고객의 그림을 그릴 수 있습니다. 이러한 채널에는 판매 지점, 웹, 모바일 또는 CRM 시스템이 포함될 수 있습니다.
-
-**새로운 기능**
-
-| 기능 | 설명 |
-| ------- | ----------- |
-| 예약된 쿼리 | 이제 쿼리 편집기를 사용하여 Platform에서 쿼리를 예약할 수 있습니다. 자세한 내용은 [쿼리 편집기](../../query-service/ui/user-guide.md#scheduled-queries)에 있는 설명서를 참조하십시오. |
-
-자세한 내용은 [쿼리 서비스 설명서](../../query-service/home.md)를 참조하십시오.
+프로필 데이터 작업에 대한 자습서 및 모범 사례를 포함한 실시간 고객 프로필에 대해 자세히 알려면 [실시간 고객 프로필 개요](../../profile/home.md)를 읽어 보십시오.
 
 ## 소스 {#sources}
 
@@ -95,7 +50,6 @@ Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 
 
 | 기능 | 설명 |
 | ------- | ----------- |
-| GA로 이동하는 베타 소스 | 다음 소스가 Beta에서 GA로 승격되었습니다. <ul><li>[[!DNL Amazon Redshift]](../../sources/connectors/databases/redshift.md)</li><li>[[!DNL Azure Table Storage]](../../sources/connectors/databases/ats.md)</li><li>[[!DNL PayPal]](../../sources/connectors/payments/paypal.md)</li></ul> |
-| [!DNL Salesforce Marketing Cloud] (베타) | 이제 [!DNL Flow Service] API 또는 UI를 사용하여 [!DNL Salesforce Marketing Cloud]을 Experience Platform에 연결할 수 있습니다. 자세한 내용은 [[!DNL Salesforce Marketing Cloud] 커넥터 개요](../../sources/connectors/marketing-automation/salesforce-marketing-cloud.md)를 참조하십시오. |
+| 로컬 파일 업로드 소스 커넥터 | 파일 수집 범주의 이름이 로컬 시스템으로 변경되었으므로 로컬 파일 업로드 커넥터를 사용하여 로컬 파일을 Platform으로 직접 가져올 수 있습니다. 이 커넥터를 통해 수집된 데이터는 모니터링 대시보드를 통해 모니터링할 수 있습니다. 자세한 내용은 [로컬 파일 업로드 소스 개요](../../sources/connectors/local-system/local-file-upload.md)를 참조하십시오. |
 
 소스에 대해 자세히 알아보려면 [소스 개요](../../sources/home.md)를 참조하십시오.
