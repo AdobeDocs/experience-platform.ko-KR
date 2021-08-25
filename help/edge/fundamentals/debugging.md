@@ -3,16 +3,16 @@ title: Adobe Experience Platform Web SDK에서 디버깅
 description: Experience Platform 웹 SDK에서 디버깅 기능을 전환하는 방법을 알아봅니다.
 keywords: 웹 sdk 디버깅;디버깅;구성;명령 구성;디버그 명령;edgeConfigId;setDebug;debugEnabled;debug;
 exl-id: 4e893af8-a48e-48dc-9737-4c61b3355f03
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: c0e2d01bd21405f07f4857e1ccf45dd0e4d0f414
 workflow-type: tm+mt
-source-wordcount: '441'
+source-wordcount: '422'
 ht-degree: 0%
 
 ---
 
 # 디버깅
 
-디버깅이 활성화되면 SDK는 메시지를 브라우저 콘솔에 출력하며 구현을 디버깅하고 SDK가 작동하는 방식을 이해하는 데 도움이 됩니다. 또한 디버깅을 수행하면 사용자가 구성한 스키마에 대해 데이터가 서버 측에서 동기식으로 수집됩니다.
+디버깅이 활성화되면 SDK는 메시지를 브라우저 콘솔에 출력하며 구현을 디버깅하고 SDK가 작동하는 방식을 이해하는 데 도움이 됩니다.
 
 디버깅은 기본적으로 비활성화되지만 다음 세 가지 방법으로 전환할 수 있습니다.
 
