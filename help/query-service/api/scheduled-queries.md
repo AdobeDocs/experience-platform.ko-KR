@@ -5,7 +5,7 @@ title: 예약된 쿼리 API 끝점
 topic-legacy: scheduled queries
 description: 다음 섹션에서는 Query Service API를 사용하는 예약된 쿼리에 사용할 수 있는 다양한 API 호출을 안내합니다.
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
-source-git-commit: 0b1afcb23e070209006383d27eb68edcf92d02cd
+source-git-commit: 34a3b71ace2f9ece02e4368b6bd7eab716330ee1
 workflow-type: tm+mt
 source-wordcount: '1113'
 ht-degree: 2%
@@ -161,7 +161,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/schedules
 | `query.dbName` | 예약된 쿼리를 만들 데이터베이스의 이름입니다. |
 | `query.sql` | 만들 SQL 쿼리 |
 | `query.name` | 예약된 쿼리의 이름입니다. |
-| `schedule.schedule` | 쿼리의 크론 일정입니다. cron 예약에 대한 자세한 내용은 [cron 표현식 형식](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) 설명서를 참조하십시오. 이 예에서 &quot;30 * * * *&quot;는 쿼리가 30분 표시에서 매시간마다 실행됨을 의미합니다.<br><br>또는 다음 축약식을 사용할 수 있습니다.<ul><li>`@once`: 쿼리는 한 번만 실행됩니다.</li><li>`@hourly`: 쿼리는 매시간 시작 시 실행됩니다. 이는 cron 표현식 `0 * * * *`에 해당합니다.</li><li>`@daily`: 쿼리는 하루에 한 번 자정에 실행됩니다. 이는 cron 표현식 `0 0 * * *`에 해당합니다.</li><li>`@weekly`: 이 쿼리는 매주 한 번, 일요일, 자정에 실행됩니다. 이는 cron 표현식 `0 0 * * 0`에 해당합니다.</li><li>`@monthly`: 쿼리는 한 달에 한 번, 그 달의 첫 번째 날, 자정에 실행됩니다. 이는 cron 표현식 `0 0 1 * *`에 해당합니다.</li><li>`@yearly`: 이 쿼리는 1월 1일 자정, 1년에 한 번 실행됩니다. 이는 cron 표현식 `1 0 0 1 1 *`에 해당합니다. |
+| `schedule.schedule` | 쿼리의 크론 일정입니다. cron 예약에 대한 자세한 내용은 [cron 표현식 형식](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) 설명서를 참조하십시오. 이 예에서 &quot;30 * * * *&quot;는 쿼리가 30분 표시에서 매시간마다 실행됨을 의미합니다.<br><br>또는 다음 축약식을 사용할 수 있습니다.<ul><li>`@once`: 쿼리는 한 번만 실행됩니다.</li><li>`@hourly`: 쿼리는 매시간 시작 시 실행됩니다. 이는 cron 표현식 `0 * * * *`에 해당합니다.</li><li>`@daily`: 쿼리는 하루에 한 번 자정에 실행됩니다. 이는 cron 표현식 `0 0 * * *`에 해당합니다.</li><li>`@weekly`: 이 쿼리는 매주 한 번, 일요일, 자정에 실행됩니다. 이는 cron 표현식 `0 0 * * 0`에 해당합니다.</li><li>`@monthly`: 쿼리는 한 달에 한 번, 그 달의 첫 번째 날, 자정에 실행됩니다. 이는 cron 표현식 `0 0 1 * *`에 해당합니다.</li><li>`@yearly`: 이 쿼리는 1월 1일 자정, 1년에 한 번 실행됩니다. 이는 cron 표현식 `1 0 0 1 1 *`에 해당합니다. |
 | `schedule.startDate` | UTC 타임스탬프로 작성된 예약된 쿼리의 시작 날짜입니다. |
 
 **응답**
@@ -364,7 +364,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 
 ### 예약된 쿼리 일정 업데이트
 
-`/schedule/schedule` 을 사용하여 예약된 쿼리의 cron 일정을 업데이트할 수 있습니다. cron 예약에 대한 자세한 내용은 [cron 표현식 형식](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) 설명서를 참조하십시오.
+`/schedule/schedule` 을 사용하여 예약된 쿼리의 cron 일정을 업데이트할 수 있습니다. cron 예약에 대한 자세한 내용은 [cron 표현식 형식](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) 설명서를 참조하십시오.
 
 **API 형식**
 
