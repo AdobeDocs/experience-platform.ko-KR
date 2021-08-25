@@ -5,9 +5,9 @@ title: 세그멘테이션 서비스 UI 안내서
 topic-legacy: ui guide
 description: Adobe Experience Platform 세그멘테이션 서비스는 세그먼트 정의를 만들고 관리하기 위한 사용자 인터페이스를 제공합니다.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: b7392596c7ed96032dc8ad6bb8e423640f562394
+source-git-commit: fc59ad026a746bc75192fc6b314989894f8f6c45
 workflow-type: tm+mt
-source-wordcount: '1570'
+source-wordcount: '1613'
 ht-degree: 0%
 
 ---
@@ -81,7 +81,7 @@ Experience Platform UI의 왼쪽 탐색 영역에서 **[!UICONTROL 세그먼트]
 
 ![](../images/ui/overview/segment-browse-segment-info.png)
 
-세그먼트 정의의 행을 선택하면 세그먼트의 이름, 설명, 평가 방법, 만든 날짜 및 마지막 수정 날짜 외에 세그먼트를 편집하거나 삭제하는 옵션, 세그먼트의 적합한 대상, 총 대상 크기 등의 세그먼트 정의의 요약이 제공됩니다.
+세그먼트 정의의 행을 선택하면 세그먼트를 편집 또는 삭제하고, 세그먼트를 대상으로 활성화, 세그먼트의 적절한 대상, 세그먼트의 총 대상 크기, 세그먼트의 이름, 설명, 평가 방법, 만든 날짜 및 마지막 수정 날짜 외에 세그먼트 정의의 요약이 제공됩니다.
 
 >[!NOTE]
 >
@@ -101,7 +101,13 @@ Experience Platform UI의 왼쪽 탐색 영역에서 **[!UICONTROL 세그먼트]
 
 **[!UICONTROL 세그먼트 요약]** 섹션에서는 ID, 이름, 설명 및 속성의 세부 사항과 같은 정보를 제공합니다.
 
-또한 세그먼트를 편집할 수 있는 옵션이 제공됩니다. **[!UICONTROL 세그먼트 편집]**&#x200B;을 선택하면 [!DNL Segment Builder]로 이동합니다. [!DNL Segment Builder] 작업 공간 사용에 대한 자세한 내용은 [[!DNL Segment Builder] 사용 안내서](./segment-builder.md)를 참조하십시오.
+또한 세그먼트를 대상으로 활성화하거나 세그먼트를 편집할 수 있는 옵션이 제공됩니다. **[!UICONTROL 대상에 활성화]**&#x200B;를 선택하면 세그먼트를 대상에 활성화할 수 있습니다. 대상에 세그먼트 활성화에 대한 자세한 내용은 [활성화 개요](../../destinations/ui/activation-overview.md)를 참조하십시오.
+
+![](../images/ui/overview/segment-details-activate.png)
+
+**[!UICONTROL 세그먼트 편집]**&#x200B;을 선택하면 [!DNL Segment Builder]로 이동합니다. [!DNL Segment Builder] 작업 공간 사용에 대한 자세한 내용은 [[!DNL Segment Builder] 사용 안내서](./segment-builder.md)를 참조하십시오.
+
+![](../images/ui/overview/segment-details-edit-segment.png)
 
 ### 세그먼트의 총 대상
 
