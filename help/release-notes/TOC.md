@@ -3,9 +3,9 @@ audience: user
 user-guide-title: Adobe Experience Platform 릴리스 정보
 breadcrumb-title: Platform 릴리스 정보
 user-guide-description: Adobe Experience Platform의 월별 릴리스 정보입니다.
-source-git-commit: dc01e03975fdda375b31f44edc8459fa32b5a61b
+source-git-commit: 3d6402a35e1813b94af866d7aaea975d4f103906
 workflow-type: tm+mt
-source-wordcount: '52'
+source-wordcount: '53'
 ht-degree: 92%
 
 ---
@@ -15,6 +15,7 @@ ht-degree: 92%
 
 * [현재 플랫폼 릴리스 노트](latest/latest.md)
 * 2021 {#2021}
+   * [2021년 8월](2021/august-2021.md)
    * [2021년 7월](2021/july-2021.md)
    * [2021년 6월](2021/june-2021.md)
    * [2021년 5월](2021/may-2021.md)
