@@ -5,7 +5,7 @@ title: Adobe Experience Platform 용어
 topic-legacy: getting started
 description: Experience Platform의 중요한 용어에 대한 용어집입니다.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: 83efc9f3c203cf4743514dc4b7a480715dadb19a
+source-git-commit: bd93c21ae439a8802218b8d664b7109467f8a013
 workflow-type: tm+mt
 source-wordcount: '7386'
 ht-degree: 1%
@@ -262,7 +262,7 @@ ht-degree: 1%
 
 **호스트**: 태그 컨텍스트에서 호스트는 시스템이 빌드를 전달하는 데 필요한 위치, 도메인 및 사용자 자격 증명을 지정합니다.
 
-**시간별**: 예약된 파일 내보내기 컨텍스트에서 는 3, 6, 7 또는 12시간마다 증분 파일 내보내기를 예약합니다.
+**시간별**: 예약된 파일 내보내기 컨텍스트에서 는 3, 6, 8 또는 12시간마다 증분 파일 내보내기를 예약합니다.
 
 ## I
 
