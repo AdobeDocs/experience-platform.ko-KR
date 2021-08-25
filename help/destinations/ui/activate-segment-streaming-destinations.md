@@ -2,12 +2,12 @@
 keywords: 세그먼트 스트리밍 대상 활성화;세그먼트 스트리밍 대상 활성화;데이터 활성화
 title: 스트리밍 세그먼트 내보내기 대상으로 대상 데이터 활성화
 type: Tutorial
-seo-title: 스트리밍 세그먼트 내보내기 대상으로 대상 데이터 활성화
+seo-title: Activate audience data to streaming segment export destinations
 description: 세그먼트를 세그먼트 스트리밍 대상에 매핑하여 Adobe Experience Platform에서 보유한 대상 데이터를 활성화하는 방법을 알아봅니다.
-seo-description: 세그먼트를 세그먼트 스트리밍 대상에 매핑하여 Adobe Experience Platform에서 보유한 대상 데이터를 활성화하는 방법을 알아봅니다.
-source-git-commit: c3e273c66ffe0542258e5418104e0bcf154f5235
+seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by mapping segments to segment streaming destinations.
+source-git-commit: f4721d3f114357b25517e4e66f1f626f82621c34
 workflow-type: tm+mt
-source-wordcount: '740'
+source-wordcount: '781'
 ht-degree: 0%
 
 ---
@@ -25,13 +25,17 @@ ht-degree: 0%
 
 ## 대상을 선택합니다 {#select-destination}
 
-1. **[!UICONTROL 연결 > 대상]**&#x200B;으로 이동하고 **[!UICONTROL 찾아보기]** 탭을 선택합니다.
+1. **[!UICONTROL 연결 > 대상]**&#x200B;으로 이동하고 **[!UICONTROL 카탈로그]** 탭을 선택합니다.
 
-   ![대상 찾아보기 탭](../assets/ui/activate-segment-streaming-destinations/browse-tab.png)
+   ![대상 카탈로그 탭](../assets/ui/activate-segment-streaming-destinations/catalog-tab.png)
 
-1. 아래 그림과 같이 세그먼트를 활성화할 대상에 해당하는 **[!UICONTROL 세그먼트 추가]** 단추를 선택하십시오.
+1. 아래 그림과 같이 세그먼트를 활성화할 대상에 해당하는 카드에서 **[!UICONTROL 세그먼트 활성화]** 를 선택합니다.
 
-   ![단추 활성화](../assets/ui/activate-segment-streaming-destinations/activate-buttons-browse.png)
+   ![단추 활성화](../assets/ui/activate-segment-streaming-destinations/activate-segments-button.png)
+
+1. 세그먼트를 활성화하는 데 사용할 대상 연결을 선택한 다음 **[!UICONTROL 다음]**&#x200B;을 선택합니다.
+
+   ![대상 선택](../assets/ui/activate-segment-streaming-destinations/select-destination.png)
 
 1. 다음 섹션으로 이동하여 [세그먼트 선택](#select-segments).
 
@@ -81,10 +85,17 @@ ht-degree: 0%
 
 해시되지 않은 소스 속성을 대상이 해시될 대상 속성에 매핑하는 경우(예: `email_lc_sha256` 또는 `phone_sha256`)에서 **변환 적용** 옵션을 선택하여 Adobe Experience Platform에서 활성화 시 소스 속성을 자동으로 해시하도록 합니다.
 
-![ID 매핑](/help/destinations/assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
-
+![ID 매핑](../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
 
 ## 세그먼트 내보내기 예약 {#scheduling}
+
+기본적으로 [!UICONTROL 세그먼트 예약] 페이지에는 현재 활성화 플로우에서 선택한 새로 선택한 세그먼트만 표시됩니다.
+
+![새 세그먼트](../assets/ui/activate-segment-streaming-destinations/new-segments.png)
+
+대상에 활성화된 모든 세그먼트를 보려면 필터링 옵션을 사용하고 **[!UICONTROL 새 세그먼트만 표시]** 필터를 비활성화하십시오.
+
+![모든 세그먼트](../assets/ui/activate-segment-streaming-destinations/all-segments.png)
 
 1. **[!UICONTROL 세그먼트 일정]** 페이지에서 각 세그먼트를 선택한 다음 **[!UICONTROL 시작 날짜]** 및 **[!UICONTROL 종료 날짜]** 선택기를 사용하여 데이터를 대상에 전송할 시간 간격을 구성합니다.
 
@@ -120,7 +131,7 @@ ht-degree: 0%
 
 ## 세그먼트 활성화 확인 {#verify}
 
-대상 계정을 확인합니다. 활성화가 성공하면 대상이 대상 플랫폼에서 채워집니다.
+대상으로 데이터 흐름을 모니터링하는 방법에 대한 자세한 내용은 [대상 모니터링 설명서](../../dataflows/ui/monitor-destinations.md)를 참조하십시오.
 
 <!-- 
 For [!DNL Facebook Custom Audience], a successful activation means that a [!DNL Facebook] custom audience would be created programmatically in [[!UICONTROL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/). Segment membership in the audience would be added and removed as users are qualified or disqualified for the activated segments.
