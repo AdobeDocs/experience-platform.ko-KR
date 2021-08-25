@@ -2,12 +2,12 @@
 keywords: 프로필 대상 활성화;대상 활성화;데이터 활성화 이메일 마케팅 대상 활성화 클라우드 스토리지 대상 활성화
 title: 대상자 데이터를 활성화하여 묶음 프로필 내보내기 대상 활성화
 type: Tutorial
-seo-title: 대상자 데이터를 활성화하여 묶음 프로필 내보내기 대상 활성화
+seo-title: Activate audience data to batch profile export destinations
 description: 세그먼트를 배치 프로필 기반 대상으로 보내 Adobe Experience Platform에서 보유한 대상 데이터를 활성화하는 방법을 알아봅니다.
-seo-description: 세그먼트를 배치 프로필 기반 대상으로 보내 Adobe Experience Platform에서 보유한 대상 데이터를 활성화하는 방법을 알아봅니다.
-source-git-commit: eebebcdc5e5f94d90eceb291dfe487fcd0f8c254
+seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
+source-git-commit: bd93c21ae439a8802218b8d664b7109467f8a013
 workflow-type: tm+mt
-source-wordcount: '1933'
+source-wordcount: '1905'
 ht-degree: 0%
 
 ---
@@ -90,7 +90,7 @@ ht-degree: 0%
 1. **[!UICONTROL 빈도]** 선택기를 사용하여 내보내기 빈도를 선택합니다.
 
    * **[!UICONTROL 일별]**: 증분 파일 내보내기를 지정하는 시간에 매일 예약합니다.
-   * **[!UICONTROL 시간별]**: 3,6,7 또는 12시간마다 증분 파일 내보내기 예약
+   * **[!UICONTROL 시간별]**: 3, 6, 8 또는 12시간마다 증분 파일 내보내기 예약
 
 2. **[!UICONTROL 시간]** 선택기를 사용하여 내보내기가 발생할 때 [!DNL UTC] 형식으로 하루 중 시간을 선택합니다.
 
@@ -320,8 +320,7 @@ Adobe은 모든 프로필 레코드가 고유하게 식별되도록 [!DNL CRM ID
 >* 필드는 대상 대상에 대한 예상 속성으로 구성됩니다.
 
 >
-> 
-예를 들어 필드 `person.name.firstName`에 대상의 마케팅 작업과 충돌하는 특정 데이터 사용 레이블이 있는 경우 검토 단계에서 데이터 사용 정책 위반이 표시됩니다. 자세한 내용은 [Adobe Experience Platform의 데이터 거버넌스](../../rtcdp/privacy/data-governance-overview.md#destinations)를 참조하십시오.
+> 예를 들어 필드 `person.name.firstName`에 대상의 마케팅 작업과 충돌하는 특정 데이터 사용 레이블이 있는 경우 검토 단계에서 데이터 사용 정책 위반이 표시됩니다. 자세한 내용은 [Adobe Experience Platform의 데이터 거버넌스](../../rtcdp/privacy/data-governance-overview.md#destinations)를 참조하십시오.
 
 ## 검토 {#review}
 
