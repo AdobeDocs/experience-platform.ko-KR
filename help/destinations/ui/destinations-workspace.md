@@ -2,11 +2,11 @@
 keywords: 플랫폼;대상;대상 작업 공간;작업 공간;ui;대상 ui;카탈로그;대상 카탈로그
 title: 대상 작업 공간
 description: 대상 작업 영역은 카탈로그, 찾아보기, 계정 및 시스템 보기의 네 섹션으로 구성됩니다. 이러한 내용은 아래 섹션에 설명되어 있습니다.
-seo-description: Adobe Experience Platform의 왼쪽 탐색 막대에서 대상 을 선택하여 대상 작업 공간에 액세스합니다.
+seo-description: In Adobe Experience Platform, select Destinations from the left navigation bar to access the destinations workspace.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: a97b235e2d8834f6be002923be9cdbca5f08495b
+source-git-commit: f4721d3f114357b25517e4e66f1f626f82621c34
 workflow-type: tm+mt
-source-wordcount: '873'
+source-wordcount: '858'
 ht-degree: 2%
 
 ---
@@ -40,14 +40,14 @@ Adobe Experience Platform의 왼쪽 탐색 막대에서 **[!UICONTROL 대상]**&
 * [!UICONTROL 모든 대상] 및 [!UICONTROL 내 대상] 간을 전환합니다. **[!UICONTROL 모든 대상]**&#x200B;을 선택하면 사용 가능한 모든 [!DNL Platform] 대상이 표시됩니다. **[!UICONTROL 내 대상]**&#x200B;을 선택하면 연결을 설정한 대상만 볼 수 있습니다.
 * **[!UICONTROL 연결]** 및/또는 **[!UICONTROL 확장]**&#x200B;을 보려면 선택하십시오. 두 범주 간의 차이를 이해하려면 [대상 유형과 카테고리](../destination-types.md)를 참조하십시오.
 
-![대상 필터링 및 검색 데모](../assets/ui/workspace/destinations-search-and-filter.gif)
+![카탈로그](../assets/ui/workspace/catalog.png)
 
-대상 카드에 **[!UICONTROL Configure]** 또는 **[!UICONTROL Activate]** 컨트롤과 추가 옵션을 표시하는 보조 컨트롤이 있습니다. 이러한 컨트롤은 아래에 설명되어 있습니다.
+대상 카드에 **[!UICONTROL 설정]** 또는 **[!UICONTROL 세그먼트 활성화]** 컨트롤과 더 많은 옵션을 표시하는 보조 컨트롤이 있습니다. 이러한 컨트롤은 아래에 설명되어 있습니다.
 
 | 제어 | 설명 |
 |---------|----------|
-|  구성 | 대상에 대한 연결을 만들 수 있습니다. |
-| [!UICONTROL 활성화] | 대상에 대한 연결을 설정한 후에는 세그먼트를 활성화할 수 있습니다. |
+| [!UICONTROL 설정] | 대상에 대한 연결을 만들 수 있습니다. |
+| [!UICONTROL 세그먼트 활성화] | 대상에 대한 연결을 설정한 후에는 세그먼트를 활성화할 수 있습니다. |
 | [!UICONTROL 계정 보기] | 대상에 대해 연결한 계정을 봅니다. |
 | [!UICONTROL 데이터 흐름 보기] | 대상에 대해 존재하는 데이터 활성화 흐름을 봅니다. |
 | [!UICONTROL 설명서 보기] | 자세한 내용을 알고 설정하는 데 도움이 되도록 특정 대상에 대한 설명서 페이지에 대한 링크를 엽니다. |
@@ -72,7 +72,7 @@ Adobe Experience Platform의 왼쪽 탐색 막대에서 **[!UICONTROL 대상]**&
 
 >[!TIP]
 >
-> * [!UICONTROL 이름] 열에서 세 점을 선택하고 ![세그먼트 추가 단추](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL 활성화&#x200B;]**단추를 사용하여 세그먼트를 해당 대상에 보냅니다.
+> * [!UICONTROL 이름] 열에서 세 점을 선택하고 ![세그먼트 추가 단추](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL 세그먼트 활성화&#x200B;]**단추를 사용하여 세그먼트를 해당 대상에 보냅니다.
 > * [!UICONTROL 이름] 열에서 세 점을 선택하고 ![대상 삭제 단추](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL 삭제&#x200B;]**단추를 사용하여 대상에 대한 기존 연결을 [제거](delete-destinations.md)합니다.
 
 
