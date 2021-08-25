@@ -2,12 +2,12 @@
 keywords: 프로필 대상 활성화;대상 활성화;데이터 활성화 이메일 마케팅 대상 활성화 클라우드 스토리지 대상 활성화
 title: 스트리밍 프로필 내보내기 대상으로 대상 데이터 활성화
 type: Tutorial
-seo-title: 스트리밍 프로필 내보내기 대상으로 대상 데이터 활성화
+seo-title: Activate audience data to streaming profile export destinations
 description: 세그먼트를 스트리밍 프로필 기반 대상으로 보내 Adobe Experience Platform에서 보유한 대상 데이터를 활성화하는 방법을 알아봅니다.
-seo-description: 세그먼트를 스트리밍 프로필 기반 대상으로 보내 Adobe Experience Platform에서 보유한 대상 데이터를 활성화하는 방법을 알아봅니다.
-source-git-commit: f0c854e1b6b89d499c720328fa5054611147772f
+seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to streaming profile-based destinations.
+source-git-commit: d13920250fafd2ba4ff37dd5d4a45d417ed3ecc7
 workflow-type: tm+mt
-source-wordcount: '532'
+source-wordcount: '524'
 ht-degree: 0%
 
 ---
@@ -25,13 +25,17 @@ ht-degree: 0%
 
 ## 대상을 선택합니다 {#select-destination}
 
-1. **[!UICONTROL 연결 > 대상]**&#x200B;으로 이동하고 **[!UICONTROL 찾아보기]** 탭을 선택합니다.
+1. **[!UICONTROL 연결 > 대상]**&#x200B;으로 이동하고 **[!UICONTROL 카탈로그]** 탭을 선택합니다.
 
-   ![대상 찾아보기 탭](../assets/ui/activate-streaming-profile-destinations/browse-tab.png)
+   ![대상 카탈로그 탭](../assets/ui/activate-streaming-profile-destinations/catalog-tab.png)
 
-1. 아래 그림과 같이 세그먼트를 활성화할 대상에 해당하는 **[!UICONTROL 세그먼트 추가]** 단추를 선택하십시오.
+1. 아래 그림과 같이 세그먼트를 활성화할 대상에 해당하는 카드에서 **[!UICONTROL 세그먼트 활성화]** 를 선택합니다.
 
-   ![단추 활성화](../assets/ui/activate-streaming-profile-destinations/activate-buttons-browse.png)
+   ![세그먼트 활성화 단추](../assets/ui/activate-streaming-profile-destinations/activate-segments-button.png)
+
+1. 세그먼트를 활성화하는 데 사용할 대상 연결을 선택한 다음 **[!UICONTROL 다음]**&#x200B;을 선택합니다.
+
+   ![대상 선택](../assets/ui/activate-streaming-profile-destinations/select-destination.png)
 
 1. 다음 섹션으로 이동하여 [세그먼트 선택](#select-segments).
 
