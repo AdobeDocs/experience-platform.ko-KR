@@ -1,12 +1,12 @@
 ---
 title: Adobe Experience Platform Web SDK에서 자동으로 매핑된 Adobe Analytics 변수
 description: Experience Platform Web SDK를 사용하여 Adobe Analytics에서 자동으로 매핑되는 변수를 알아봅니다
-seo-description: Adobe Experience Platform Web SDK를 사용하여 Adobe Analytics에서 자동으로 매핑되는 변수를 알아봅니다
+seo-description: Learn which variables are automatically mapped in Adobe Analytics with the Adobe Experience Platform Web SDK
 keywords: adobe analytics;변수;analytics;자동 맵;자동 매핑
 exl-id: 856fada7-b62c-4fd2-9372-a19ae1cdec33
-source-git-commit: 2e004fdd87c8a74eb161ef7af93c7102953ea85c
+source-git-commit: 09c6986fcd3682377725ded389496d5076e9e1e2
 workflow-type: tm+mt
-source-wordcount: '708'
+source-wordcount: '698'
 ht-degree: 0%
 
 ---
@@ -89,7 +89,8 @@ ht-degree: 0%
 | `placeContext.geo.postalCode` | `zip` | AppMeasurement 쿼리 매개 변수 ZIP 매핑. |
 | `placeContext.geo.stateProvince` | `state` | AppMeasurement 쿼리 매개 변수 STATE 매핑입니다. |
 | `productlistitems.[N]._[NAME_SPACE].*` | `products` | AppMeasurement 쿼리 매개 변수 제품 상품 이벤트/Evar 매핑 . |
-| `productlistitems.[N].name` | `products` | AppMeasurement 쿼리 매개 변수 제품 이름 매핑입니다. |
+| `productListItems[N].lineItemId` | `products` | AppMeasurement 쿼리 매개 변수 제품 이름 매핑입니다. |
+| `productlistitems.[N].name` | `products` | AppMeasurement 쿼리 매개 변수 제품 카테고리 매핑입니다. |
 | `productlistitems.[N].priceTotal` | `products` | AppMeasurement 쿼리 매개 변수 제품 가격 매핑입니다. |
 | `productlistitems.[N].quantity` | `products` | AppMeasurement 쿼리 매개 변수 제품 수량 매핑입니다. |
 | `web.webInteraction.URL` | `pev1` | AppMeasurement 쿼리 매개 변수 PAGE_EVENT_VAR1 매핑입니다. |
