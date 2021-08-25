@@ -4,10 +4,10 @@ description: 2021년 8월 25일 Experience Platform 릴리스 노트
 doc-type: release notes
 last-update: August 25, 2021
 author: ens28527
-source-git-commit: bd3d60e1960b1f4c32ade8c4070d7c1b01e5ba07
+source-git-commit: b1dca51264582788ccbde005b063c57e2f3edc8f
 workflow-type: tm+mt
-source-wordcount: '457'
-ht-degree: 9%
+source-wordcount: '534'
+ht-degree: 8%
 
 ---
 
@@ -18,9 +18,22 @@ ht-degree: 9%
 
 Adobe Experience Platform의 기존 기능 업데이트:
 
+- [대상](#destinations)
 - [가시성 통찰력](#observability)
 - [실시간 고객 프로필](#profile)
 - [소스](#sources)
+
+## 대상 {#destinations}
+
+대상은 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과의 사전 구축된 통합입니다. 대상을 사용하여 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례에 대해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
+
+**새로운 기능**
+
+| 기능 | 설명 |
+| --- | --- |
+| [대상에 대한 유용성 개선](../../destinations/ui/activation-overview.md) | 대상에 대한 유용성 개선 사항을 통해 마케터는 세그먼트를 기존 대상에 원활하게 활성화할 수 있습니다. |
+
+대상에 대한 일반적인 자세한 내용은 [대상 개요](../../destinations/home.md)를 참조하십시오.
 
 ## 가시성 통찰력 {#observability}
 
