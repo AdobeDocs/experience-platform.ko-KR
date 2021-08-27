@@ -3,9 +3,9 @@ keywords: Experience Platform;프로필;실시간 고객 프로필;문제 해결
 title: 실시간 고객 프로필 API 안내서
 description: 개발자는 실시간 고객 프로필 API를 사용하여 보기 프로필, 병합 정책 만들기 및 업데이트, 프로필 데이터 내보내기 또는 샘플 데이터 내보내기, 더 이상 필요하지 않거나 오류가 추가된 프로필 데이터 삭제 등 프로필 데이터를 탐색 및 작업할 수 있습니다. API를 사용하여 주요 작업을 수행하는 방법을 알아보려면 이 안내서를 따르십시오.
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-source-git-commit: 1c2e4cd2b4070f3844a9848b5574e9d5b1688926
+source-git-commit: 4c544170636040b8ab58780022a4c357cfa447de
 workflow-type: tm+mt
-source-wordcount: '891'
+source-wordcount: '886'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 [!DNL Real-time Customer Profile] API에는 아래에 요약된 여러 종단점이 포함되어 있습니다. 자세한 내용은 개별 종단점 안내서를 방문하여 필수 헤더, 샘플 API 호출 읽기 등에 대한 중요한 정보를 보려면 [시작 안내서](getting-started.md)를 참조하십시오.
 
-사용 가능한 모든 엔드포인트 및 CRUD 작업을 보려면 [실시간 고객 프로필 API 참조 swagger](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)를 방문하십시오.
+사용 가능한 모든 엔드포인트 및 CRUD 작업을 보려면 [실시간 고객 프로필 API 참조 swagger](https://www.adobe.com/go/profile-apis-en)를 방문하십시오.
 
 [!DNL Experience Platform] UI에서 [!DNL Real-time Customer Profile] 데이터를 사용하는 방법에 대한 안내서는 [프로필 사용 안내서](../ui/user-guide.md)를 참조하십시오.
 
@@ -44,7 +44,7 @@ Adobe Experience Platform을 통해 RESTful API 또는 사용자 인터페이스
 
 [!DNL Real-time Customer Profile] 활성화를 위해 대상 세그먼트 내보내기 또는 보고를 위한 프로필 속성 내보내기와 같은 추가 처리를 위해 데이터 세트에 데이터를 내보낼 수 있습니다. 대상 세그먼트에 대한 내보내기 작업은 [!DNL Adobe Experience Platform Segmentation Service] API의 일부입니다. 자세한 내용은 [세그멘테이션 내보내기 작업 끝점 안내서](../../profile/api/export-jobs.md)를 참조하십시오. 프로필 특성에 대한 내보내기 작업을 만들고 관리하는 방법에 대한 단계별 지침은 [작업 내보내기 끝점 안내서](export-jobs.md)를 참조하십시오.
 
-## 정책 병합 {#merge-policies}
+## 병합 정책 {#merge-policies}
 
 [!DNL Experience Platform]에서 여러 소스의 데이터를 함께 가져올 때 병합 정책은 [!DNL Platform]에서 데이터의 우선 순위가 매겨지는 방식과 개별 고객 프로필을 만들기 위해 결합할 데이터를 결정하는 규칙입니다. [!DNL Real-time Customer Profile] API를 사용하여 새 병합 정책을 만들고, 기존 정책을 관리하고, 조직에 대한 기본 병합 정책을 설정할 수 있습니다. API를 사용하여 병합 정책으로 작업하려면 [병합 정책 엔드포인트 가이드](merge-policies.md)를 방문하십시오.
 

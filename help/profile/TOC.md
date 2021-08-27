@@ -2,10 +2,10 @@
 audience: user
 user-guide-title: Real-time Customer Profile 안내서
 user-guide-description: 고객 데이터를 통합하여 다양한 채널에서 고객과의 상호 작용을 종합적으로 파악합니다.
-feature: 프로필
-source-git-commit: e56898542bc9cd305173fc2d7f3b6dd53dca7eb2
+feature: Profiles
+source-git-commit: 4c544170636040b8ab58780022a4c357cfa447de
 workflow-type: tm+mt
-source-wordcount: '139'
+source-wordcount: '133'
 ht-degree: 18%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 18%
 * [데이터 세트에 대한 TTL(time-to-live)](apply-ttl.md)
 * [!DNL Profile] API {#api}
    * [개요](api/overview.md)
-   * [시작](api/getting-started.md)
+   * [시작하기](api/getting-started.md)
    * [에지 예측](api/edge-projections.md)
    * [엔터티([!DNL Profile] 액세스)](api/entities.md)
    * [작업 내보내기([!DNL Profile] 내보내기)](api/export-jobs.md)
@@ -49,5 +49,5 @@ ht-degree: 18%
    * [추가 자습서](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
 * [개인 정보 보호 요청 처리](privacy.md)
 * [[!DNL Profile] 문제 해결 안내서](troubleshooting.md)
-* [프로필 API 참조](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)
+* [프로필 API 참조](https://www.adobe.com/go/profile-apis-en)
 * [플랫폼 릴리스 노트](https://www.adobe.com/go/platform-release-notes-en)

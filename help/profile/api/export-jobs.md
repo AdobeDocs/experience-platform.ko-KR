@@ -5,9 +5,9 @@ topic-legacy: guide
 type: Documentation
 description: 실시간 고객 프로필을 사용하면 특성 데이터와 행동 데이터를 모두 포함하여 여러 소스에서 데이터를 결합하여 Adobe Experience Platform 내에서 개별 고객에 대한 단일 보기를 작성할 수 있습니다. 그런 다음 추가적인 처리를 위해 프로필 데이터를 데이터 세트에 내보낼 수 있습니다.
 exl-id: d51b1d1c-ae17-4945-b045-4001e4942b67
-source-git-commit: 453e120fa20232533289ee5ff34821ce8c0c310b
+source-git-commit: 4c544170636040b8ab58780022a4c357cfa447de
 workflow-type: tm+mt
-source-wordcount: '1526'
+source-wordcount: '1521'
 ht-degree: 2%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 [!DNL Real-time Customer Profile] 속성 데이터와 동작 데이터를 모두 포함하여 여러 소스에서 데이터를 결합하여 개별 고객에 대한 단일 뷰를 작성할 수 있습니다. 그런 다음 추가적인 처리를 위해 프로필 데이터를 데이터 세트에 내보낼 수 있습니다. 예를 들어 [!DNL Profile] 데이터의 대상 세그먼트를 활성화하도록 내보낼 수 있으며, 프로필 속성을 내보내서 보고할 수 있습니다.
 
-이 문서에서는 [프로필 API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)를 사용하여 내보내기 작업을 만들고 관리하는 단계별 지침을 제공합니다.
+이 문서에서는 [프로필 API](https://www.adobe.com/go/profile-apis-en)를 사용하여 내보내기 작업을 만들고 관리하는 단계별 지침을 제공합니다.
 
 >[!NOTE]
 >
@@ -24,7 +24,7 @@ ht-degree: 2%
 
 내보내기 작업을 만드는 것 외에도 &quot;[!DNL Profile Access]&quot;라고도 하는 `/entities` 종단점을 사용하여 [!DNL Profile] 데이터에 액세스할 수도 있습니다. 자세한 내용은 [엔티티 엔드포인트 가이드](./entities.md)를 참조하십시오. UI를 사용하여 [!DNL Profile] 데이터에 액세스하는 방법에 대한 단계는 [사용 안내서](../ui/user-guide.md)를 참조하십시오.
 
-## 시작
+## 시작하기
 
 이 안내서에 사용된 API 엔드포인트는 [!DNL Real-time Customer Profile] API의 일부입니다. 계속하기 전에 [시작 안내서](getting-started.md)에서 관련 설명서에 대한 링크, 이 문서에서 샘플 API 호출을 읽는 방법에 대한 안내서 및 [!DNL Experience Platform] API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요한 정보를 검토하십시오.
 
