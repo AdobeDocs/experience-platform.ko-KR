@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: 이 자습서에서는 스트리밍 데이터를 검색하고 소스 커넥터 및 API를 사용하여 Platform으로 가져오는 단계를 설명합니다.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-source-git-commit: b672eab481a8286f92741a971991c7f83102acf7
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '1111'
+source-wordcount: '1107'
 ht-degree: 2%
 
 ---
@@ -21,12 +21,12 @@ ht-degree: 2%
 
 이 자습서에서는 Adobe Experience Platform의 다음 구성 요소를 이해하고 있어야 합니다.
 
-- [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md):Experience Platform이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
-   - [스키마 작성 기본 사항](../../../../xdm/schema/composition.md):스키마 컴포지션의 주요 원칙 및 모범 사례를 포함하여 XDM 스키마의 기본 빌딩 블록에 대해 알아봅니다.
-   - [스키마 레지스트리 개발자 안내서](../../../../xdm/api/getting-started.md):스키마 레지스트리 API 호출을 성공적으로 수행하기 위해 알아야 하는 중요한 정보를 포함합니다. 여기에는 `{TENANT_ID}`, &quot;컨테이너&quot;의 개념 및 요청을 수행하는 데 필요한 헤더가 포함됩니다(Accept 헤더 및 가능한 값에 특별히 주의).
-- [[!DNL Catalog Service]](../../../../catalog/home.md):카탈로그는 Experience Platform 내의 데이터 위치 및 계열에 대한 레코드 시스템입니다.
-- [[!DNL Streaming ingestion]](../../../../ingestion/streaming-ingestion/overview.md):플랫폼에 대한 스트리밍 수집은 사용자에게 클라이언트 및 서버측 장치에서 실시간으로 Experience Platform으로 데이터를 전송하는 방법을 제공합니다.
-- [샌드박스](../../../../sandboxes/home.md):Experience Platform은 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 단일 플랫폼 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
+- [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): Experience Platform이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
+   - [스키마 작성 기본 사항](../../../../xdm/schema/composition.md): 스키마 컴포지션의 주요 원칙 및 모범 사례를 포함하여 XDM 스키마의 기본 빌딩 블록에 대해 알아봅니다.
+   - [스키마 레지스트리 개발자 안내서](../../../../xdm/api/getting-started.md): 스키마 레지스트리 API 호출을 성공적으로 수행하기 위해 알아야 하는 중요한 정보를 포함합니다. 여기에는 `{TENANT_ID}`, &quot;컨테이너&quot;의 개념 및 요청을 수행하는 데 필요한 헤더가 포함됩니다(Accept 헤더 및 가능한 값에 특별히 주의).
+- [[!DNL Catalog Service]](../../../../catalog/home.md): 카탈로그는 Experience Platform 내의 데이터 위치 및 계열에 대한 레코드 시스템입니다.
+- [[!DNL Streaming ingestion]](../../../../ingestion/streaming-ingestion/overview.md): 플랫폼에 대한 스트리밍 수집은 사용자에게 클라이언트 및 서버측 장치에서 실시간으로 Experience Platform으로 데이터를 전송하는 방법을 제공합니다.
+- [샌드박스](../../../../sandboxes/home.md): Experience Platform은 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 단일 플랫폼 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
 
 ### 플랫폼 API 사용
 
@@ -40,7 +40,7 @@ ht-degree: 2%
 - [[!DNL Azure Event Hubs]](../create/cloud-storage/eventhub.md)
 - [[!DNL Google PubSub]](../create/cloud-storage/google-pubsub.md)
 
-## 대상 XDM 스키마 {#target-schema} 만들기
+## 대상 XDM 스키마 만들기 {#target-schema}
 
 Platform에서 소스 데이터를 사용하려면 필요에 따라 소스 데이터를 구조화하기 위해 대상 스키마를 만들어야 합니다. 그런 다음 대상 스키마를 사용하여 소스 데이터가 포함된 Platform 데이터 세트를 만듭니다. 이 대상 XDM 스키마도 XDM [!DNL Individual Profile] 클래스를 확장합니다.
 
@@ -152,7 +152,7 @@ curl -X POST \
 
 ## 대상 데이터 세트 만들기
 
-이제 대상 XDM 스키마가 만들어지고 고유한 `$id`을(를) 사용하여 소스 데이터를 포함할 대상 데이터 세트를 만들 수 있습니다. 대상 데이터 세트를 만들려면 페이로드 내에서 대상 스키마의 ID를 제공하는 동안 [카탈로그 서비스 API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)의 `dataSets` 종단점에 대해 POST 요청을 하십시오.
+이제 대상 XDM 스키마가 만들어지고 고유한 `$id`을(를) 사용하여 소스 데이터를 포함할 대상 데이터 세트를 만들 수 있습니다. 대상 데이터 세트를 만들려면 페이로드 내에서 대상 스키마의 ID를 제공하는 동안 [카탈로그 서비스 API](https://www.adobe.io/experience-platform-apis/references/catalog/)의 `dataSets` 종단점에 대해 POST 요청을 하십시오.
 
 **API 형식**
 
@@ -247,7 +247,7 @@ curl -X POST \
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `connectionSpec.id` | [!DNL Data Lake]에 연결하는 데 사용되는 연결 사양 ID입니다. 이 ID는 다음과 같습니다.`c604ff05-7f1a-43c0-8e18-33bf874cb11c` |
+| `connectionSpec.id` | [!DNL Data Lake]에 연결하는 데 사용되는 연결 사양 ID입니다. 이 ID는 다음과 같습니다. `c604ff05-7f1a-43c0-8e18-33bf874cb11c` |
 | `data.format` | [!DNL Data Lake]에 가져오는 데이터의 지정된 형식입니다. |
 | `params.dataSetId` | 이전 단계에서 검색한 대상 데이터 세트의 ID입니다. |
 

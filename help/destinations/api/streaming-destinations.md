@@ -6,9 +6,9 @@ description: 이 문서에서는 Adobe Experience Platform API를 사용하여 �
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
-source-git-commit: 02c22453470d55236d4235c479742997e8407ef3
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '2025'
+source-wordcount: '2021'
 ht-degree: 1%
 
 ---
@@ -70,7 +70,7 @@ Experience Platform의 리소스는 특정 가상 샌드박스로 분리할 수 
 
 ### Swagger 설명서 {#swagger-docs}
 
-Swagger에서 이 자습서에서 모든 API 호출에 대한 추가 참조 설명서를 찾을 수 있습니다. Adobe I/O](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)에서 [Flow Service API 설명서 를 참조하십시오. 이 자습서와 Swagger 설명서 페이지를 동시에 사용하는 것이 좋습니다.
+Swagger에서 이 자습서에서 모든 API 호출에 대한 추가 참조 설명서를 찾을 수 있습니다. Adobe I/O](https://www.adobe.io/experience-platform-apis/references/flow-service/)에서 [Flow Service API 설명서 를 참조하십시오. 이 자습서와 Swagger 설명서 페이지를 동시에 사용하는 것이 좋습니다.
 
 ## 사용 가능한 스트리밍 대상 목록 가져오기 {#get-the-list-of-available-streaming-destinations}
 

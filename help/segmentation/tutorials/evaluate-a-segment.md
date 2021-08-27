@@ -6,9 +6,9 @@ topic-legacy: tutorial
 type: Tutorial
 description: Adobe Experience Platform 세그멘테이션 서비스 API를 사용하여 세그먼트를 평가하고 세그먼트 결과에 액세스하는 방법을 알려면 이 자습서를 따르십시오.
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-source-git-commit: 453e120fa20232533289ee5ff34821ce8c0c310b
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '1552'
+source-wordcount: '1548'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 이 문서에서는 [[!DNL Segmentation API]](../api/getting-started.md) 을 사용하여 세그먼트를 평가하고 세그먼트 결과에 액세스하는 자습서를 제공합니다.
 
-## 시작
+## 시작하기
 
 이 자습서에서는 대상 세그먼트 만들기와 관련된 다양한 [!DNL Adobe Experience Platform] 서비스를 이해하고 있어야 합니다. 이 자습서를 시작하기 전에 다음 서비스에 대한 설명서를 검토하십시오.
 
@@ -223,7 +223,7 @@ curl -X POST \
 
 ## 다음 단계
 
-내보내기가 완료되면 [!DNL Experience Platform]의 [!DNL Data Lake] 내에서 데이터를 사용할 수 있습니다. 그런 다음 [[!DNL Data Access API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) 를 사용하여 내보내기와 연결된 `batchId`를 사용하여 데이터에 액세스할 수 있습니다. 세그먼트의 크기에 따라 데이터는 청크 단위일 수 있으며 배치는 여러 파일로 구성될 수 있습니다.
+내보내기가 완료되면 [!DNL Experience Platform]의 [!DNL Data Lake] 내에서 데이터를 사용할 수 있습니다. 그런 다음 [[!DNL Data Access API]](https://www.adobe.io/experience-platform-apis/references/data-access/) 를 사용하여 내보내기와 연결된 `batchId`를 사용하여 데이터에 액세스할 수 있습니다. 세그먼트의 크기에 따라 데이터는 청크 단위일 수 있으며 배치는 여러 파일로 구성될 수 있습니다.
 
 [!DNL Data Access] API를 사용하여 배치 파일에 액세스하고 다운로드하는 방법에 대한 단계별 지침은 [데이터 액세스 자습서](../../data-access/tutorials/dataset-data.md)를 따르십시오.
 

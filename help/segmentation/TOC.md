@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Adobe Experience Platform Segmentation Service
 breadcrumb-title: Segmentation Service 안내서
 user-guide-description: 실시간 고객 프로필 데이터에서 세그먼트를 작성하고 대상을 생성합니다.
-feature: 세그먼트
-source-git-commit: f193787ac27e30c69d25418656ae9c59c89622dc
+feature: Segments
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '164'
+source-wordcount: '159'
 ht-degree: 27%
 
 ---
@@ -18,11 +18,11 @@ ht-degree: 27%
 - [세그먼테이션 데이터 유형](data-types.md)
 - 세그먼테이션 API {#api}
    - [개요](api/overview.md)
-   - [시작](api/getting-started.md)
+   - [시작하기](api/getting-started.md)
    - [에지 세그멘테이션](api/edge-segmentation.md)
    - [작업 내보내기](api/export-jobs.md)
    - [미리 보기 및 예상](api/previews-and-estimates.md)
-   - [예약](api/schedules.md)
+   - [스케줄러](api/schedules.md)
    - [세그먼트 정의](api/segment-definitions.md)
    - [세그먼트 작업](api/segment-jobs.md)
    - [세그먼트 검색](api/segment-search.md)
@@ -61,5 +61,5 @@ ht-degree: 27%
    - [외부 대상 가져오기 및 사용](tutorials/using-external-audiences.md)
    - [데이터를 내보낼 데이터 세트 만들기](tutorials/create-dataset-export-segment.md)
    - [세그먼트에 대한 데이터 사용 규정 준수 적용](tutorials/governance.md)
-- [API 참조](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)
+- [API 참조](https://www.adobe.io/experience-platform-apis/references/segmentation/)
 - [플랫폼 릴리스 노트](https://www.adobe.com/go/platform-release-notes-en)

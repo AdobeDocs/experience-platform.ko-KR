@@ -5,16 +5,16 @@ title: 데이터 수집 알림
 topic-legacy: overview
 description: 수집 프로세스 모니터링을 지원하기 위해 Adobe Experience Platform에서는 프로세스의 각 단계에서 게시되는 이벤트 세트에 가입할 수 있으므로 수집된 데이터의 상태와 가능한 오류를 알려줍니다.
 exl-id: fd34e1ab-f6f6-44f0-88ee-7020e9322c39
-source-git-commit: a455134a45137b171636d6525ce9124bc95f4335
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '681'
+source-wordcount: '677'
 ht-degree: 2%
 
 ---
 
 # 데이터 수집 알림
 
-데이터를 Adobe Experience Platform에 수집하는 프로세스는 여러 단계로 구성됩니다. [!DNL Platform]에 수집해야 하는 데이터 파일을 식별하면 수집 프로세스가 시작되고 데이터가 성공적으로 수집되거나 실패할 때까지 각 단계가 연속적으로 발생합니다. 수집 프로세스는 [Adobe Experience Platform 데이터 수집 API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) 또는 [!DNL Experience Platform] 사용자 인터페이스를 사용하여 시작할 수 있습니다.
+데이터를 Adobe Experience Platform에 수집하는 프로세스는 여러 단계로 구성됩니다. [!DNL Platform]에 수집해야 하는 데이터 파일을 식별하면 수집 프로세스가 시작되고 데이터가 성공적으로 수집되거나 실패할 때까지 각 단계가 연속적으로 발생합니다. 수집 프로세스는 [Adobe Experience Platform 데이터 수집 API](https://www.adobe.io/experience-platform-apis/references/data-ingestion/) 또는 [!DNL Experience Platform] 사용자 인터페이스를 사용하여 시작할 수 있습니다.
 
 [!DNL Platform]에 로드된 데이터는 대상, [!DNL Data Lake] 또는 [!DNL Real-time Customer Profile] 데이터 저장소에 도달하기 위해 여러 단계를 거쳐야 합니다. 각 단계에는 데이터를 처리하고, 데이터를 확인한 다음, 다음 단계로 전달하기 전에 데이터를 저장하는 작업이 포함됩니다. 수집되는 데이터의 양에 따라 시간이 많이 소요되는 프로세스가 될 수 있으며 유효성 검사, 의미 체계 또는 처리 오류로 인해 프로세스가 실패할 가능성이 항상 있습니다. 오류가 발생하는 경우 데이터 문제를 수정한 후 수정된 데이터 파일을 사용하여 전체 수집 프로세스를 다시 시작해야 합니다.
 

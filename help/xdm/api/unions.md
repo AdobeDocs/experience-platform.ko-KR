@@ -5,9 +5,9 @@ title: 결합 API 끝점
 description: 스키마 레지스트리 API의 /union 종단점을 사용하면 경험 애플리케이션에서 XDM 결합 스키마를 프로그래밍 방식으로 관리할 수 있습니다.
 topic-legacy: developer guide
 exl-id: d0ece235-72e8-49d9-856b-5dba44e16ee7
-source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '915'
+source-wordcount: '911'
 ht-degree: 3%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 3%
 
 ## 결합 스키마 필드
 
-[!DNL Schema Registry]은(는) 결합 스키마 내에 세 개의 키 필드를 자동으로 포함합니다.`identityMap`, `timeSeriesEvents` 및 `segmentMembership`.
+[!DNL Schema Registry]은(는) 결합 스키마 내에 세 개의 키 필드를 자동으로 포함합니다. `identityMap`, `timeSeriesEvents` 및 `segmentMembership`.
 
 ### ID 맵
 
@@ -32,7 +32,7 @@ ht-degree: 3%
 
 ### 세그먼트 멤버십 맵
 
-`segmentMembership` 맵은 세그먼트 평가 결과를 저장합니다. [세그먼테이션 API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)를 사용하여 세그먼트 작업을 성공적으로 실행하면 맵이 업데이트됩니다. `segmentMembership` 또한 Platform에 수집되는 사전 평가된 대상 세그먼트를 저장하여 Adobe Audience Manager과 같은 다른 솔루션과 통합할 수 있습니다. 자세한 내용은 [API](../../segmentation/tutorials/create-a-segment.md)를 사용하여 세그먼트 만들기에 대한 자습서를 참조하십시오.
+`segmentMembership` 맵은 세그먼트 평가 결과를 저장합니다. [세그먼테이션 API](https://www.adobe.io/experience-platform-apis/references/segmentation/)를 사용하여 세그먼트 작업을 성공적으로 실행하면 맵이 업데이트됩니다. `segmentMembership` 또한 Platform에 수집되는 사전 평가된 대상 세그먼트를 저장하여 Adobe Audience Manager과 같은 다른 솔루션과 통합할 수 있습니다. 자세한 내용은 [API](../../segmentation/tutorials/create-a-segment.md)를 사용하여 세그먼트 만들기에 대한 자습서를 참조하십시오.
 
 ## 조합 목록 검색 {#list}
 
@@ -62,8 +62,8 @@ curl -X GET \
 
 | `Accept` 헤더 | 설명 |
 | --- | --- |
-| `application/vnd.adobe.xed-id+json` | 각 리소스에 대한 간단한 요약을 반환합니다. 리소스를 나열하는 데 권장되는 헤더입니다. (제한:300) |
-| `application/vnd.adobe.xed+json` | 원래 `$ref` 및 `allOf`이 포함된 각 리소스에 대한 전체 JSON 클래스를 반환합니다. (제한:300) |
+| `application/vnd.adobe.xed-id+json` | 각 리소스에 대한 간단한 요약을 반환합니다. 리소스를 나열하는 데 권장되는 헤더입니다. (제한: 300) |
+| `application/vnd.adobe.xed+json` | 원래 `$ref` 및 `allOf`이 포함된 각 리소스에 대한 전체 JSON 클래스를 반환합니다. (제한: 300) |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -183,7 +183,7 @@ curl -X GET \
 
 스키마를 해당 클래스의 조합에 포함하려면 `union` 태그를 스키마의 `meta:immutableTags` 속성에 추가해야 합니다. 해당 스키마에 `union` 단일 문자열 값이 있는 `meta:immutableTags` 배열을 추가하도록 PATCH 요청을 수행하면 이 작업을 수행할 수 있습니다. 자세한 예는 [스키마 엔드포인트 안내서](./schemas.md#union)를 참조하십시오.
 
-## 결합 {#list-schemas} 의 스키마 나열
+## 결합 스키마 나열 {#list-schemas}
 
 특정 합성의 일부인 스키마를 확인하려면 `/tenant/schemas` 종단점에 대한 GET 요청을 수행할 수 있습니다. `property` 쿼리 매개 변수를 사용하면 `meta:immutableTags` 필드 및 `meta:class`가 액세스 중인 공용 구조체와 동일한 스키마를 반환하도록 응답을 구성할 수 있습니다.
 
@@ -217,8 +217,8 @@ curl -X GET \
 
 | `Accept` 헤더 | 설명 |
 | --- | --- |
-| `application/vnd.adobe.xed-id+json` | 각 리소스에 대한 간단한 요약을 반환합니다. 리소스를 나열하는 데 권장되는 헤더입니다. (제한:300) |
-| `application/vnd.adobe.xed+json` | 원래 `$ref` 및 `allOf`이 포함된 각 리소스에 대한 전체 JSON 스키마를 반환합니다. (제한:300) |
+| `application/vnd.adobe.xed-id+json` | 각 리소스에 대한 간단한 요약을 반환합니다. 리소스를 나열하는 데 권장되는 헤더입니다. (제한: 300) |
+| `application/vnd.adobe.xed+json` | 원래 `$ref` 및 `allOf`이 포함된 각 리소스에 대한 전체 JSON 스키마를 반환합니다. (제한: 300) |
 
 {style=&quot;table-layout:auto&quot;}
 
