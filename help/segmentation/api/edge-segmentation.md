@@ -5,7 +5,7 @@ title: 'API를 사용한 Edge Segmentation '
 topic-legacy: developer guide
 description: 이 문서에는 Adobe Experience Platform 세그멘테이션 서비스 API와 함께 에지 세그멘테이션을 사용하는 방법에 대한 예가 나와 있습니다.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: af1eee8787d7fa2ae2d56e541823100d2620dd2d
+source-git-commit: f92b12d343584f33870dd42288977e7b6e446b0f
 workflow-type: tm+mt
 source-wordcount: '633'
 ht-degree: 3%
@@ -227,7 +227,7 @@ curl -X POST \
     "expression": {
         "type": "PQL",
         "format": "pql/text",
-        "value": "select var1 from xEvent where var1._experience.analytics.endUser.firstWeb.webPageDetails.isHomePage = true"
+        "value": "chain(xEvent, timestamp, [X: WHAT(var1._experience.analytics.endUser.firstWeb.webPageDetails.isHomePage = "true")])"
     },
     "evaluationInfo": {
         "batch": {
