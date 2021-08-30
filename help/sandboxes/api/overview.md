@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 샌드박스 API 안내서
 topic-legacy: developer guide
 description: Adobe Experience Platform의 샌드박스는 프로덕션 환경에 영향을 주지 않고 기능을 테스트하고, 실험을 실행하고, 사용자 지정 구성을 만들 수 있는 분리된 개발 환경을 제공합니다.
-source-git-commit: f00e6161d82f1fd7ba442be9f06283f3c866573f
+source-git-commit: f5ce7b7f09c624c53065757bb8a9b09f989dce0a
 workflow-type: tm+mt
-source-wordcount: '334'
+source-wordcount: '330'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 [!DNL Sandbox] API는 IMS 조직 내에서 사용할 수 있는 모든 샌드박스를 프로그래밍 방식으로 관리할 수 있도록 해주는 몇 가지 엔드포인트를 제공합니다. 이러한 엔드포인트는 아래에 요약되어 있습니다. 자세한 내용은 개별 종단점 안내서를 방문하여 필수 헤더, 샘플 API 호출 읽기 등에 대한 중요한 정보를 보려면 [시작 안내서](./getting-started.md)를 참조하십시오.
 
-사용 가능한 모든 엔드포인트 및 CRUD 작업을 보려면 [[!DNL Sandbox] API 참조](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml)를 방문하십시오.
+사용 가능한 모든 엔드포인트 및 CRUD 작업을 보려면 [[!DNL Sandbox] API 참조](https://www.adobe.io/experience-platform-apis/references/sandbox)를 방문하십시오.
 
 ## 사용 가능한 샌드박스
 

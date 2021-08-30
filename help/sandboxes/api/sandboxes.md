@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 샌드박스 관리 API 끝점
 topic-legacy: developer guide
 description: 샌드박스 API의 /sandboxes 종단점을 사용하면 Adobe Experience Platform에서 샌드박스를 프로그래밍 방식으로 관리할 수 있습니다.
-source-git-commit: 1ec141fa5a13bb4ca6a4ec57f597f38802a92b3f
+source-git-commit: f5ce7b7f09c624c53065757bb8a9b09f989dce0a
 workflow-type: tm+mt
-source-wordcount: '1440'
+source-wordcount: '1436'
 ht-degree: 2%
 
 ---
@@ -15,9 +15,9 @@ ht-degree: 2%
 
 Adobe Experience Platform의 샌드박스는 프로덕션 환경에 영향을 주지 않고 기능을 테스트하고, 실험을 실행하고, 사용자 지정 구성을 만들 수 있는 분리된 개발 환경을 제공합니다. [!DNL Sandbox] API의 `/sandboxes` 종단점을 사용하면 Platform의 샌드박스를 프로그래밍 방식으로 관리할 수 있습니다.
 
-## 시작
+## 시작하기
 
-이 안내서에 사용된 API 엔드포인트는 [[!DNL Sandbox] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml)의 일부입니다. 계속하기 전에 [시작 안내서](./getting-started.md)에서 관련 설명서에 대한 링크, 이 문서에서 샘플 API 호출을 읽는 방법에 대한 안내서, 모든 Experience Platform API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요한 정보를 검토하십시오.
+이 안내서에 사용된 API 엔드포인트는 [[!DNL Sandbox] API](https://www.adobe.io/experience-platform-apis/references/sandbox)의 일부입니다. 계속하기 전에 [시작 안내서](./getting-started.md)에서 관련 설명서에 대한 링크, 이 문서에서 샘플 API 호출을 읽는 방법에 대한 안내서, 모든 Experience Platform API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요한 정보를 검토하십시오.
 
 ## 샌드박스 목록 검색 {#list}
 
@@ -129,7 +129,7 @@ curl -X GET \
 | --- | --- |
 | `name` | 샌드박스의 이름입니다. 이 속성은 API 호출에서 조회 용도로 사용됩니다. |
 | `title` | 샌드박스의 표시 이름입니다. |
-| `state` | 샌드박스의 현재 처리 상태입니다. 샌드박스의 상태는 다음 중 하나일 수 있습니다.<br/><ul><li>`creating`:샌드박스가 생성되었지만 시스템에서 계속 프로비저닝되고 있습니다.</li><li>`active`:샌드박스가 만들어지고 활성 상태가 됩니다.</li><li>`failed`:오류로 인해 샌드박스를 시스템에서 프로비저닝할 수 없으며 비활성화되어 있습니다.</li><li>`deleted`:샌드박스를 수동으로 비활성화했습니다.</li></ul> |
+| `state` | 샌드박스의 현재 처리 상태입니다. 샌드박스의 상태는 다음 중 하나일 수 있습니다. <br/><ul><li>`creating`: 샌드박스가 생성되었지만 시스템에서 계속 프로비저닝되고 있습니다.</li><li>`active`: 샌드박스가 만들어지고 활성 상태가 됩니다.</li><li>`failed`: 오류로 인해 샌드박스를 시스템에서 프로비저닝할 수 없으며 비활성화되어 있습니다.</li><li>`deleted`: 샌드박스를 수동으로 비활성화했습니다.</li></ul> |
 | `type` | 샌드박스 유형입니다. 현재 지원되는 샌드박스 유형은 `development` 및 `production`입니다. |
 | `isDefault` | 이 샌드박스가 조직의 기본 프로덕션 샌드박스인지 여부를 나타내는 부울 속성입니다. |
 | `eTag` | 샌드박스의 특정 버전에 대한 식별자입니다. 버전 제어 및 캐싱 효율에 사용되는 경우 샌드박스를 변경할 때마다 이 값이 업데이트됩니다. |
@@ -184,8 +184,8 @@ curl -X GET \
 | --- | --- |
 | `name` | 샌드박스의 이름입니다. 이 속성은 API 호출에서 조회 용도로 사용됩니다. |
 | `title` | 샌드박스의 표시 이름입니다. |
-| `state` | 샌드박스의 현재 처리 상태입니다. 샌드박스의 상태는 다음 중 하나일 수 있습니다. <ul><li>**만들기**:샌드박스가 생성되었지만 시스템에서 계속 프로비저닝되고 있습니다.</li><li>**활성**:샌드박스가 만들어지고 활성 상태가 됩니다.</li><li>**실패**:오류로 인해 샌드박스를 시스템에서 프로비저닝할 수 없으며 비활성화되어 있습니다.</li><li>**삭제됨**:샌드박스를 수동으로 비활성화했습니다.</li></ul> |
-| `type` | 샌드박스 유형입니다. 현재 지원되는 샌드박스 유형은 다음과 같습니다.`development` 및 `production` |
+| `state` | 샌드박스의 현재 처리 상태입니다. 샌드박스의 상태는 다음 중 하나일 수 있습니다. <ul><li>**만들기**: 샌드박스가 생성되었지만 시스템에서 계속 프로비저닝되고 있습니다.</li><li>**활성**: 샌드박스가 만들어지고 활성 상태가 됩니다.</li><li>**실패**: 오류로 인해 샌드박스를 시스템에서 프로비저닝할 수 없으며 비활성화되어 있습니다.</li><li>**삭제됨**: 샌드박스를 수동으로 비활성화했습니다.</li></ul> |
+| `type` | 샌드박스 유형입니다. 현재 지원되는 샌드박스 유형은 다음과 같습니다. `development` 및 `production` |
 | `isDefault` | 이 샌드박스가 조직의 기본 샌드박스인지 여부를 나타내는 부울 속성입니다. 일반적으로 프로덕션 샌드박스입니다. |
 | `eTag` | 샌드박스의 특정 버전에 대한 식별자입니다. 버전 제어 및 캐싱 효율에 사용되는 경우 샌드박스를 변경할 때마다 이 값이 업데이트됩니다. |
 

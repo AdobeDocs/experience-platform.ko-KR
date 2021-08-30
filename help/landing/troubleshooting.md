@@ -7,9 +7,9 @@ landing-page-description: 자주 묻는 질문에 대한 답변과 Experience Pl
 topic-legacy: getting started
 type: Documentation
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
-source-git-commit: f269a7b1584a6e4a0e1820a0c587a647c0c8f7b5
+source-git-commit: f5ce7b7f09c624c53065757bb8a9b09f989dce0a
 workflow-type: tm+mt
-source-wordcount: '1735'
+source-wordcount: '1731'
 ht-degree: 5%
 
 ---
@@ -206,4 +206,4 @@ UI를 사용하는지 또는 API를 사용하는지에 따라 다음 시스템 �
 | [!DNL Experience Data Model] (XDM) | [[!DNL Schema Registry API]](https://www.adobe.io/experience-platform-apis/references/schema-registry/) | [[!DNL XDM System] FAQ 및 문제 해결 안내서](../xdm/troubleshooting-guide.md) |
 | [!DNL Flow Service] ([!DNL Sources] 및 [!DNL Destinations]) | [[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) |  |
 | [!DNL Real-time Customer Profile] | [[!DNL Real-time Customer Profile API]](https://www.adobe.com/go/profile-apis-en) | [[!DNL Profile] 문제 해결 안내서](../profile/troubleshooting.md) |
-| 샌드박스 | [샌드박스 API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) | [샌드박스 문제 해결 안내서](../sandboxes/troubleshooting-guide.md) |
+| 샌드박스 | [샌드박스 API](https://www.adobe.io/experience-platform-apis/references/sandbox) | [샌드박스 문제 해결 안내서](../sandboxes/troubleshooting-guide.md) |
