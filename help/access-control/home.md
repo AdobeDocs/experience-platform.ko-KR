@@ -5,9 +5,9 @@ topic-legacy: overview
 title: 액세스 제어 개요
 description: Adobe Experience Platform에 대한 액세스 제어는 Adobe Admin Console을 통해 제공됩니다. 이 기능은 사용 권한 및 샌드박스를 사용자와 연결하는 Admin Console의 제품 프로필을 활용합니다.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: 4425f7d61aa5ff357c7ba25cf986201fefeacd67
+source-git-commit: 6ecfad588f97474988b86199c008953714a3bed8
 workflow-type: tm+mt
-source-wordcount: '1347'
+source-wordcount: '1363'
 ht-degree: 2%
 
 ---
@@ -115,6 +115,7 @@ Adobe Admin Console은 조직에 대한 Adobe 제품 권한 및 액세스를 관
 | [!DNL Dashboards] | [!UICONTROL 라이선스 사용 대시보드 보기] | 라이센스 사용 대시보드를 보려면 읽기 전용 액세스 권한이 있어야 합니다. |
 | [!DNL Dashboards] | [!UICONTROL 표준 대시보드 관리] | 데이터 웨어하우스에 아직 있지 않은 사용자 지정 특성을 추가합니다. |
 | [!DNL Query Service] | [!UICONTROL 쿼리 관리] | 플랫폼 데이터에 대한 구조화된 SQL 쿼리를 읽고, 만들고, 편집하고, 삭제할 수 있는 액세스 권한. |
+| [!DNL Query Service] | [!UICONTROL Query Service 통합 관리] | Query Service 액세스를 위해 만료되지 않은 자격 증명을 만들고, 업데이트하고, 삭제할 수 있는 액세스 권한입니다. |
 
 ## 다음 단계
 

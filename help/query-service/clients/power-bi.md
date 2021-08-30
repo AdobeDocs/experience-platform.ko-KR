@@ -5,9 +5,9 @@ title: 쿼리 서비스에 Power BI 연결
 topic-legacy: connect
 description: 이 문서에서는 Adobe Experience Platform Query Service와 Power BI을 연결하는 단계를 안내합니다.
 exl-id: 8fcd3056-aac7-4226-a354-ed7fb8fe9ad7
-source-git-commit: 2109abd02b9c6c321c21a8fe3826509d22b1c2e2
+source-git-commit: 910a38ccb556ec427584d9b522e29f6877d1c987
 workflow-type: tm+mt
-source-wordcount: '468'
+source-wordcount: '463'
 ht-degree: 1%
 
 ---
@@ -42,7 +42,7 @@ npgsql이 제대로 설치되어 있는지 확인하려면 다음 단계로 진�
 
 ![](../images/clients/power-bi/get-data.png)
 
-이제 서버와 데이터베이스의 값을 입력할 수 있습니다. 데이터베이스 이름, 호스트, 포트 및 로그인 자격 증명을 찾는 방법에 대한 자세한 내용은 Platform](https://platform.adobe.com/query/configuration)의 [자격 증명 페이지를 참조하십시오. 자격 증명을 찾으려면 [!DNL Platform]에 로그인한 다음 **[!UICONTROL 쿼리]**, 자격 증명&#x200B;]**을 차례로 선택하십시오.**[!UICONTROL 
+이제 서버와 데이터베이스의 값을 입력할 수 있습니다. 데이터베이스 이름, 호스트, 포트 및 로그인 자격 증명을 찾는 방법에 대한 자세한 내용은 [자격 증명 안내서](../ui/credentials.md)를 참조하십시오. 자격 증명을 찾으려면 [!DNL Platform]에 로그인한 다음 **[!UICONTROL 쿼리]**, 자격 증명&#x200B;]**을 차례로 선택하십시오.**[!UICONTROL 
 
 **[!DNL Server]** 은 연결 세부 정보에서 찾은 호스트입니다. 프로덕션의 경우 호스트 문자열 끝에 포트 `:80`을 추가합니다. **[!DNL Database]** &quot;모두&quot; 또는 데이터 집합 테이블 이름일 수 있습니다.
 
