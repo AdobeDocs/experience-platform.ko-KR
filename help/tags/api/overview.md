@@ -1,9 +1,9 @@
 ---
 title: Reactor API 안내서
 description: Reactor API를 사용하여 개발자가 Adobe Experience Platform에서 태그에 대한 모든 리소스를 프로그래밍 방식으로 관리할 수 있습니다. API를 사용하여 주요 작업을 수행하는 방법을 알아보려면 이 안내서를 따르십시오.
-source-git-commit: 6a1728bd995137a7cd6dc79313762ae6e665d416
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1039'
+source-wordcount: '1035'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ Reactor API는 Adobe Experience Platform에 있는 태그의 모든 리소스를
 
 이러한 엔드포인트는 아래에 요약되어 있습니다. 자세한 내용은 개별 엔드포인트 안내서를 방문하여 [시작 안내서](./getting-started.md)를 참조하십시오.
 
-사용 가능한 모든 엔드포인트 및 CRUD 작업을 보려면 [Reactor API 참조](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml)를 방문하십시오.
+사용 가능한 모든 엔드포인트 및 CRUD 작업을 보려면 [Reactor API 참조](https://www.adobe.io/experience-platform-apis/references/reactor/)를 방문하십시오.
 
 ## 회사
 

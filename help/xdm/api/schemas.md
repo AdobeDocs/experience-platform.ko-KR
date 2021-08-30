@@ -5,9 +5,9 @@ title: 스키마 API 끝점
 description: 스키마 레지스트리 API의 /schema 종단점을 사용하면 경험 애플리케이션 내에서 XDM 스키마를 프로그래밍 방식으로 관리할 수 있습니다.
 topic-legacy: developer guide
 exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
-source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1458'
+source-wordcount: '1454'
 ht-degree: 4%
 
 ---
@@ -16,9 +16,9 @@ ht-degree: 4%
 
 스키마는 Adobe Experience Platform에 수집하려는 데이터의 블루프린트로 생각할 수 있습니다. 각 스키마는 클래스와 0개 이상의 스키마 필드 그룹으로 구성됩니다. [!DNL Schema Registry] API의 `/schemas` 종단점을 사용하면 경험 애플리케이션 내의 스키마를 프로그래밍 방식으로 관리할 수 있습니다.
 
-## 시작
+## 시작하기
 
-이 안내서에 사용된 API 엔드포인트는 [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)의 일부입니다. 계속하기 전에 [시작 안내서](./getting-started.md)에서 관련 설명서에 대한 링크, 이 문서에서 샘플 API 호출을 읽는 방법에 대한 안내서, 모든 Experience Platform API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요한 정보를 검토하십시오.
+이 안내서에 사용된 API 엔드포인트는 [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/)의 일부입니다. 계속하기 전에 [시작 안내서](./getting-started.md)에서 관련 설명서에 대한 링크, 이 문서에서 샘플 API 호출을 읽는 방법에 대한 안내서, 모든 Experience Platform API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요한 정보를 검토하십시오.
 
 ## 스키마 목록 검색 {#list}
 
@@ -36,7 +36,7 @@ GET /{CONTAINER_ID}/schemas?{QUERY_PARAMS}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{CONTAINER_ID}` | 검색할 스키마를 포함하는 컨테이너:Adobe 생성 스키마의 경우 `global`, 조직이 소유한 스키마의 경우 `tenant`. |
+| `{CONTAINER_ID}` | 검색할 스키마를 포함하는 컨테이너: Adobe 생성 스키마의 경우 `global`, 조직이 소유한 스키마의 경우 `tenant`. |
 | `{QUERY_PARAMS}` | 결과를 기준으로 필터링할 선택적 쿼리 매개 변수입니다. 사용 가능한 매개 변수 목록에 대해서는 [부록 document](./appendix.md#query) 를 참조하십시오. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -59,8 +59,8 @@ curl -X GET \
 
 | `Accept` 헤더 | 설명 |
 | --- | --- |
-| `application/vnd.adobe.xed-id+json` | 각 리소스에 대한 간단한 요약을 반환합니다. 리소스를 나열하는 데 권장되는 헤더입니다. (제한:300) |
-| `application/vnd.adobe.xed+json` | 원래 `$ref` 및 `allOf`이 포함된 각 리소스에 대한 전체 JSON 스키마를 반환합니다. (제한:300) |
+| `application/vnd.adobe.xed-id+json` | 각 리소스에 대한 간단한 요약을 반환합니다. 리소스를 나열하는 데 권장되는 헤더입니다. (제한: 300) |
+| `application/vnd.adobe.xed+json` | 원래 `$ref` 및 `allOf`이 포함된 각 리소스에 대한 전체 JSON 스키마를 반환합니다. (제한: 300) |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -110,7 +110,7 @@ GET /{CONTAINER_ID}/schemas/{SCHEMA_ID}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{CONTAINER_ID}` | 검색할 스키마가 들어 있는 컨테이너입니다.Adobe이 만든 스키마의 경우 `global` 또는 조직이 소유한 스키마의 `tenant`. |
+| `{CONTAINER_ID}` | 검색할 스키마가 들어 있는 컨테이너입니다. Adobe이 만든 스키마의 경우 `global` 또는 조직이 소유한 스키마의 `tenant`. |
 | `{SCHEMA_ID}` | 조회하려는 스키마의 `meta:altId` 또는 URL로 인코딩된 `$id`. |
 
 {style=&quot;table-layout:auto&quot;}

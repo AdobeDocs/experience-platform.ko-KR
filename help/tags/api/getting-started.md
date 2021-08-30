@@ -1,16 +1,16 @@
 ---
 title: Reactor API 시작하기
 description: 필요한 액세스 자격 증명을 생성하는 단계를 포함하여 Reactor API를 시작하는 방법을 알아봅니다.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1064'
+source-wordcount: '1060'
 ht-degree: 1%
 
 ---
 
 # Reactor API 시작하기
 
-[Reactor API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml)를 사용하려면 각 요청에 다음 인증 헤더가 포함되어야 합니다.
+[Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/)를 사용하려면 각 요청에 다음 인증 헤더가 포함되어야 합니다.
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`

@@ -1,9 +1,9 @@
 ---
 title: 라이브러리 끝점
 description: Reactor API에서 /libraries 종단점을 호출하는 방법을 알아봅니다.
-source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1588'
+source-wordcount: '1584'
 ht-degree: 8%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 8%
 
 ## 시작하기
 
-이 안내서에 사용된 끝점은 [Reactor API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml)의 일부입니다. 계속하기 전에 API 인증 방법에 대한 중요한 정보가 필요하면 [시작 안내서](../getting-started.md)를 검토하십시오.
+이 안내서에 사용된 끝점은 [Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/)의 일부입니다. 계속하기 전에 API 인증 방법에 대한 중요한 정보가 필요하면 [시작 안내서](../getting-started.md)를 검토하십시오.
 
 Reactor API에서 라이브러리를 사용하기 전에 라이브러리 상태와 환경이 특정 라이브러리에서 수행할 수 있는 작업을 결정할 때 수행하는 역할을 이해하는 것이 중요합니다. 자세한 내용은 [라이브러리 게시 흐름](../../ui/publishing/publishing-flow.md)의 안내서를 참조하십시오.
 

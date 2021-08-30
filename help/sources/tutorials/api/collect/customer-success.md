@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: 이 자습서에서는 고객 성공 시스템에서 데이터를 검색하고 소스 커넥터 및 API를 사용하여 플랫폼으로 수집하는 단계를 설명합니다.
 exl-id: 0fae04d0-164b-4113-a274-09677f4bbde5
-source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1575'
+source-wordcount: '1571'
 ht-degree: 1%
 
 ---
@@ -154,7 +154,7 @@ curl -X POST \
 
 Platform에서 소스 데이터를 사용하려면 필요에 따라 소스 데이터를 구조화하기 위해 대상 스키마를 만들어야 합니다. 그런 다음 대상 스키마를 사용하여 소스 데이터가 포함된 Platform 데이터 세트를 만듭니다.
 
-대상 XDM 스키마는 [스키마 레지스트리 API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)에 대한 POST 요청을 수행하여 만들 수 있습니다.
+대상 XDM 스키마는 [스키마 레지스트리 API](https://www.adobe.io/experience-platform-apis/references/schema-registry/)에 대한 POST 요청을 수행하여 만들 수 있습니다.
 
 **API 형식**
 

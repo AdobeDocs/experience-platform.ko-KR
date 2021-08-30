@@ -1,9 +1,9 @@
 ---
 title: 확장 패키지 끝점
 description: Reactor API에서 /extension_packages 종단점을 호출하는 방법을 알아봅니다.
-source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '955'
+source-wordcount: '951'
 ht-degree: 5%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 5%
 
 ## 시작하기
 
-이 안내서에 사용된 끝점은 [Reactor API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml)의 일부입니다. 계속하기 전에 API 인증 방법에 대한 중요한 정보가 필요하면 [시작 안내서](../getting-started.md)를 검토하십시오.
+이 안내서에 사용된 끝점은 [Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/)의 일부입니다. 계속하기 전에 API 인증 방법에 대한 중요한 정보가 필요하면 [시작 안내서](../getting-started.md)를 검토하십시오.
 
 Reactor API를 호출하는 방법을 이해하는 것 외에도 확장 패키지의 `status` 및 `availability` 속성이 수행할 수 있는 작업에 어떻게 영향을 주는지를 이해하는 것이 중요합니다. 이러한 내용은 아래 섹션에 설명되어 있습니다.
 

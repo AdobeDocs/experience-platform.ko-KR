@@ -3,11 +3,10 @@ audience: user
 user-guide-title: Adobe Experience Platform 데이터 거버넌스 도움말
 breadcrumb-title: Data Governance 안내서
 user-guide-description: 레이블, 마케팅 활동 및 정책 사용을 통해 데이터 사용 제한을 적용합니다.
-feature: 데이터 거버넌스
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+feature: Data Governance
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '100'
+source-wordcount: '94'
 ht-degree: 35%
 
 ---
@@ -25,9 +24,9 @@ ht-degree: 35%
    * [개요](policies/overview.md)
    * [UI에서 정책 관리](policies/user-guide.md)
    * [API에서 정책 만들기](policies/create.md)
-* 정책 실행 {#enforcement}
+* 정책 적용 {#enforcement}
    * [개요](enforcement/overview.md)
-   * [자동 실행](enforcement/auto-enforcement.md)
+   * [자동 적용](enforcement/auto-enforcement.md)
    * [API 기반 적용](enforcement/api-enforcement.md)
 * 정책 서비스 API {#api}
    * [개요](api/overview.md)
@@ -36,5 +35,5 @@ ht-degree: 35%
    * [정책](api/policies.md)
    * [마케팅 작업](api/marketing-actions.md)
    * [평가](api/evaluation.md)
-* [API 참조](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml)
-* [플랫폼 릴리스 정보](https://www.adobe.com/go/platform-release-notes-en)
+* [API 참조](https://www.adobe.io/experience-platform-apis/references/policy-service/)
+* [플랫폼 릴리스 노트](https://www.adobe.com/go/platform-release-notes-en)

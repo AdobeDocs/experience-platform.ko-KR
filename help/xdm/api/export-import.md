@@ -5,9 +5,9 @@ title: API 엔드포인트 내보내기/가져오기
 description: 스키마 레지스트리 API의 /export 및 /import 끝점을 사용하면 IMS 조직과 샌드박스 간에 XDM 리소스를 공유할 수 있습니다.
 topic-legacy: developer guide
 exl-id: 33b62f75-2670-42f4-9aac-fa1540cd7d4a
-source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '510'
+source-wordcount: '506'
 ht-degree: 2%
 
 ---
@@ -16,9 +16,9 @@ ht-degree: 2%
 
 [!DNL Schema Library] 내의 모든 리소스는 IMS 조직 내의 특정 샌드박스에 포함되어 있습니다. 샌드박스와 IMS 조직 간에 XDM(Experience Data Model) 리소스를 공유할 수 있습니다. [!DNL Schema Registry] API는[!DNL  Schema Library]에 있는 모든 스키마, 스키마 필드 그룹 또는 데이터 유형에 대한 내보내기 페이로드를 생성한 다음 해당 페이로드를 사용하여 해당 리소스(및 모든 종속 리소스)를 타겟 샌드박스 및 IMS 조직에 가져올 수 있는 두 가지 엔드포인트를 제공합니다.
 
-## 시작
+## 시작하기
 
-이 안내서에서 사용되는 끝점은 [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)의 일부입니다. 계속하기 전에 [시작 안내서](./getting-started.md)에서 관련 설명서에 대한 링크, 이 문서에서 샘플 API 호출을 읽는 방법에 대한 안내서, 모든 Experience Platform API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요한 정보를 검토하십시오.
+이 안내서에서 사용되는 끝점은 [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/)의 일부입니다. 계속하기 전에 [시작 안내서](./getting-started.md)에서 관련 설명서에 대한 링크, 이 문서에서 샘플 API 호출을 읽는 방법에 대한 안내서, 모든 Experience Platform API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요한 정보를 검토하십시오.
 
 내보내기/가져오기 끝점은 [!DNL Schema Registry]에서 지원하는 원격 프로시저 호출(RPC)의 일부입니다. [!DNL Schema Registry] API의 다른 끝점과 달리 RPC 끝점은 `Accept` 또는 `Content-Type` 같은 추가 헤더가 필요하지 않으며 `CONTAINER_ID`를 사용하지 않습니다. 대신, 아래 API 호출에 설명된 대로 `/rpc` 네임스페이스를 사용해야 합니다.
 

@@ -5,9 +5,9 @@ title: 스키마 레지스트리 API 안내서
 description: 스키마 레지스트리 API를 사용하여 개발자는 Adobe Experience Platform 내의 모든 스키마 및 관련 XDM(Experience Data Model) 리소스를 프로그래밍 방식으로 관리할 수 있습니다. API를 사용하여 주요 작업을 수행하는 방법을 알아보려면 이 안내서를 따르십시오.
 topic-legacy: developer guide
 exl-id: 9e693d29-303e-462a-a1e2-93c0d517b8e3
-source-git-commit: c2ca679e046f59d05e2d12ca83bc1b2496b2288f
+source-git-commit: 6ba8da07a4fb36c6e8bd2ede8ac415edaabe0ef6
 workflow-type: tm+mt
-source-wordcount: '987'
+source-wordcount: '983'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 0%
 >
 >XDM은 JSON 스키마 형식을 사용하여 수집된 고객 경험 데이터의 구조를 설명하고 확인합니다. 스키마 레지스트리 API를 사용하기 전에 [공식 JSON 스키마 설명서](https://json-schema.org/)를 검토하여 이 기본 기술을 보다 잘 이해하는 것이 좋습니다.
 
-사용 가능한 모든 끝점 및 CRUD 작업을 보려면 [스키마 레지스트리 API 참조](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)를 방문하십시오.
+사용 가능한 모든 끝점 및 CRUD 작업을 보려면 [스키마 레지스트리 API 참조](https://www.adobe.io/experience-platform-apis/references/schema-registry/)를 방문하십시오.
 
 ## 스키마
 

@@ -5,9 +5,9 @@ title: Adobe Experience Platform용 ETL 통합 개발
 topic-legacy: overview
 description: ETL 통합 가이드는 Experience Platform 및 플랫폼으로 데이터를 수집하기 위한 고성능 보안 커넥터를 제작하는 일반적인 단계를 간략하게 설명합니다.
 exl-id: 7d29b61c-a061-46f8-a31f-f20e4d725655
-source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '4083'
+source-wordcount: '4075'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ ETL 통합 안내서에서는 [!DNL Experience Platform]에 대한 고성능 보
 - [[!DNL Data Access]](https://www.adobe.io/experience-platform-apis/references/data-access/)
 - [[!DNL Data Ingestion]](https://www.adobe.io/experience-platform-apis/references/data-ingestion/)
 - [Experience Platform API에 대한 인증 및 인증](https://www.adobe.com/go/platform-api-authentication-en)
-- [[!DNL Schema Registry]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)
+- [[!DNL Schema Registry]](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
 
 또한 이 안내서에는 ETL 커넥터를 디자인할 때 사용할 샘플 API 호출 및 각 [!DNL Experience Platform] 서비스를 개략적으로 보여주는 설명서 링크, API의 사용에 대한 자세한 설명이 포함되어 있습니다.
 
@@ -257,7 +257,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/xdms/context/pers
 
 >[!NOTE]
 >
->&quot;schema&quot; 필드가 비어 있거나 완전히 누락된 경우 커넥터가 &quot;schemaRef&quot; 필드를 읽고 이전 단계에 표시된 대로 [스키마 레지스트리 API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) 를 사용하여 데이터 세트 스키마](#view-dataset-schema)를 확인해야 합니다.[
+>&quot;schema&quot; 필드가 비어 있거나 완전히 누락된 경우 커넥터가 &quot;schemaRef&quot; 필드를 읽고 이전 단계에 표시된 대로 [스키마 레지스트리 API](https://www.adobe.io/experience-platform-apis/references/schema-registry/) 를 사용하여 데이터 세트 스키마](#view-dataset-schema)를 확인해야 합니다.[
 
 ### &quot;observableSchema&quot; 속성
 

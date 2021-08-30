@@ -1,9 +1,9 @@
 ---
 title: 프로필 끝점
 description: Reactor API에서 /profiles 종단점을 호출하는 방법을 알아봅니다.
-source-git-commit: 59592154eeb8592fa171b5488ecb0385e0e59f39
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '174'
+source-wordcount: '170'
 ht-degree: 5%
 
 ---
@@ -16,7 +16,7 @@ Reactor API에서 프로필은 Adobe Experience Platform 사용자를 나타냅�
 
 ## 시작하기
 
-이 안내서에 사용된 끝점은 [Reactor API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml)의 일부입니다. 계속하기 전에 API 인증 방법에 대한 중요한 정보가 필요하면 [시작 안내서](../getting-started.md)를 검토하십시오.
+이 안내서에 사용된 끝점은 [Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/)의 일부입니다. 계속하기 전에 API 인증 방법에 대한 중요한 정보가 필요하면 [시작 안내서](../getting-started.md)를 검토하십시오.
 
 ## 현재 프로필 검색 {#lookup}
 

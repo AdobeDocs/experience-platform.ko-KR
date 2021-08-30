@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 필드 그룹 API 끝점
 description: 스키마 레지스트리 API의 /fieldgroups 종단점을 사용하면 경험 애플리케이션 내에서 XDM 스키마 필드 그룹을 프로그래밍 방식으로 관리할 수 있습니다.
 topic-legacy: developer guide
-source-git-commit: 97f803f649b2c42b0449a2f8f0cff370ed1aba93
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1215'
+source-wordcount: '1211'
 ht-degree: 3%
 
 ---
@@ -16,9 +16,9 @@ ht-degree: 3%
 
 스키마 필드 그룹은 개인, 우편 주소 또는 웹 브라우저 환경과 같은 특정 개념을 나타내는 필드를 하나 이상 정의하는 재사용 가능한 구성 요소입니다. 필드 그룹은 필드 그룹이 나타내는 데이터(레코드 또는 시계열)의 동작에 따라 호환 클래스를 구현하는 스키마의 일부로 포함되도록 합니다. [!DNL Schema Registry] API의 `/fieldgroups` 종단점을 사용하면 경험 애플리케이션 내의 필드 그룹을 프로그래밍 방식으로 관리할 수 있습니다.
 
-## 시작
+## 시작하기
 
-이 안내서에 사용된 엔드포인트는 [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)의 일부입니다. 계속하기 전에 [시작 안내서](./getting-started.md)에서 관련 설명서에 대한 링크, 이 문서에서 샘플 API 호출을 읽는 방법에 대한 안내서, 모든 Experience Platform API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요한 정보를 검토하십시오.
+이 안내서에 사용된 엔드포인트는 [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/)의 일부입니다. 계속하기 전에 [시작 안내서](./getting-started.md)에서 관련 설명서에 대한 링크, 이 문서에서 샘플 API 호출을 읽는 방법에 대한 안내서, 모든 Experience Platform API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요한 정보를 검토하십시오.
 
 ## 필드 그룹 목록 검색 {#list}
 
@@ -36,7 +36,7 @@ GET /{CONTAINER_ID}/fieldgroups?{QUERY_PARAMS}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{CONTAINER_ID}` | 필드 그룹을 검색할 컨테이너:Adobe이 생성한 필드 그룹의 경우 `global`, 조직이 소유한 필드 그룹의 경우 `tenant` 입니다. |
+| `{CONTAINER_ID}` | 필드 그룹을 검색할 컨테이너: Adobe이 생성한 필드 그룹의 경우 `global`, 조직이 소유한 필드 그룹의 경우 `tenant` 입니다. |
 | `{QUERY_PARAMS}` | 결과를 기준으로 필터링할 선택적 쿼리 매개 변수입니다. 사용 가능한 매개 변수 목록에 대해서는 [부록 document](./appendix.md#query) 를 참조하십시오. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -59,8 +59,8 @@ curl -X GET \
 
 | `Accept` 헤더 | 설명 |
 | --- | --- |
-| `application/vnd.adobe.xed-id+json` | 각 리소스에 대한 간단한 요약을 반환합니다. 리소스를 나열하는 데 권장되는 헤더입니다. (제한:300) |
-| `application/vnd.adobe.xed+json` | 원래 `$ref` 및 `allOf`이 포함된 각 리소스에 대한 전체 JSON 필드 그룹을 반환합니다. (제한:300) |
+| `application/vnd.adobe.xed-id+json` | 각 리소스에 대한 간단한 요약을 반환합니다. 리소스를 나열하는 데 권장되는 헤더입니다. (제한: 300) |
+| `application/vnd.adobe.xed+json` | 원래 `$ref` 및 `allOf`이 포함된 각 리소스에 대한 전체 JSON 필드 그룹을 반환합니다. (제한: 300) |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -122,7 +122,7 @@ GET /{CONTAINER_ID}/fieldgroups/{FIELD_GROUP_ID}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{CONTAINER_ID}` | 검색할 필드 그룹이 들어 있는 컨테이너입니다.Adobe이 만든 필드 그룹의 경우 `global`, 조직이 소유한 필드 그룹의 경우 `tenant` 입니다. |
+| `{CONTAINER_ID}` | 검색할 필드 그룹이 들어 있는 컨테이너입니다. Adobe이 만든 필드 그룹의 경우 `global`, 조직이 소유한 필드 그룹의 경우 `tenant` 입니다. |
 | `{FIELD_GROUP_ID}` | 조회하려는 필드 그룹의 `meta:altId` 또는 URL로 인코딩된 `$id` |
 
 {style=&quot;table-layout:auto&quot;}

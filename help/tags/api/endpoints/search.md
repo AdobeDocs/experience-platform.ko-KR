@@ -1,9 +1,9 @@
 ---
 title: 검색 끝점
 description: Reactor API에서 /search 종단점을 호출하는 방법을 알아봅니다.
-source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '662'
+source-wordcount: '658'
 ht-degree: 1%
 
 ---
@@ -41,7 +41,7 @@ Reactor API의 `/search` 종단점은 쿼리로 표현되는 원하는 기준과
 
 ## 시작하기
 
-이 안내서에 사용된 끝점은 [Reactor API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml)의 일부입니다. 계속하기 전에 API 인증 방법에 대한 중요한 정보가 필요하면 [시작 안내서](../getting-started.md)를 검토하십시오.
+이 안내서에 사용된 끝점은 [Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/)의 일부입니다. 계속하기 전에 API 인증 방법에 대한 중요한 정보가 필요하면 [시작 안내서](../getting-started.md)를 검토하십시오.
 
 ## 검색 수행 {#perform}
 

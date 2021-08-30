@@ -5,9 +5,9 @@ title: 감사 로그 API 끝점
 description: 스키마 레지스트리 API의 /auditlog 종단점을 사용하면 기존 XDM 리소스에 대한 변경 사항을 시간 순서대로 가져올 수 있습니다.
 topic-legacy: developer guide
 exl-id: 8d33ae7c-0aa4-4f38-a183-a2ff1801e291
-source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '406'
+source-wordcount: '402'
 ht-degree: 3%
 
 ---
@@ -16,9 +16,9 @@ ht-degree: 3%
 
 각 XDM(Experience Data Model) 리소스에 대해 [!DNL Schema Registry]은(는) 다른 업데이트 간에 발생한 모든 변경 사항의 로그를 유지합니다. [!DNL Schema Registry] API의 `/auditlog` 종단점을 사용하면 ID로 지정된 클래스, 스키마 필드 그룹, 데이터 유형 또는 스키마에 대한 감사 로그를 검색할 수 있습니다.
 
-## 시작
+## 시작하기
 
-이 안내서에 사용된 엔드포인트는 [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)의 일부입니다. 계속하기 전에 [시작 안내서](./getting-started.md)에서 관련 설명서에 대한 링크, 이 문서에서 샘플 API 호출을 읽는 방법에 대한 안내서, 모든 Experience Platform API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요한 정보를 검토하십시오.
+이 안내서에 사용된 엔드포인트는 [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/)의 일부입니다. 계속하기 전에 [시작 안내서](./getting-started.md)에서 관련 설명서에 대한 링크, 이 문서에서 샘플 API 호출을 읽는 방법에 대한 안내서, 모든 Experience Platform API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요한 정보를 검토하십시오.
 
 `/auditlog` 끝점은 [!DNL Schema Registry]에서 지원하는 원격 프로시저 호출(RPC)의 일부입니다. [!DNL Schema Registry] API의 다른 끝점과 달리 RPC 끝점은 `Accept` 또는 `Content-Type` 같은 추가 헤더가 필요하지 않으며 `CONTAINER_ID`를 사용하지 않습니다. 대신 아래 API 호출에 설명된 대로 `/rpc` 네임스페이스를 사용해야 합니다.
 

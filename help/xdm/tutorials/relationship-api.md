@@ -6,9 +6,9 @@ description: 이 문서에서는 스키마 레지스트리 API를 사용하여 �
 topic-legacy: tutorial
 type: Tutorial
 exl-id: ef9910b5-2777-4d8b-a6fe-aee51d809ad5
-source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1369'
+source-wordcount: '1365'
 ht-degree: 2%
 
 ---
@@ -19,16 +19,16 @@ ht-degree: 2%
 
 스키마 관계는 결합 스키마와 [!DNL Real-time Customer Profile]을 사용하여 유추할 수 있지만 동일한 클래스를 공유하는 스키마에만 적용됩니다. 다른 클래스에 속하는 두 스키마 간의 관계를 설정하려면 대상 스키마의 ID를 참조하는 소스 스키마에 전용 관계 필드를 추가해야 합니다.
 
-이 문서에서는 [[!DNL Schema Registry API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)을 사용하여 조직에서 정의한 두 스키마 간의 일대일 관계를 정의하는 자습서를 제공합니다.
+이 문서에서는 [[!DNL Schema Registry API]](https://www.adobe.io/experience-platform-apis/references/schema-registry/)을 사용하여 조직에서 정의한 두 스키마 간의 일대일 관계를 정의하는 자습서를 제공합니다.
 
-## 시작
+## 시작하기
 
 이 자습서에서는 [!DNL Experience Data Model](XDM) 및 [!DNL XDM System]에 대한 작업 이해를 필요로 합니다. 이 자습서를 시작하기 전에 다음 설명서를 검토하십시오.
 
-* [Experience Platform의 XDM 시스템](../home.md):XDM 및 의 구현에 대한 개요입니다 [!DNL Experience Platform].
-   * [스키마 작성 기본 사항](../schema/composition.md):XDM 스키마의 기본 구성 요소 소개.
-* [[!DNL Real-time Customer Profile]](../../profile/home.md):여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
-* [샌드박스](../../sandboxes/home.md): [!DNL Experience Platform] 에서는 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이  [!DNL Platform] 되는 단일 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
+* [Experience Platform의 XDM 시스템](../home.md): XDM 및 의 구현에 대한 개요입니다 [!DNL Experience Platform].
+   * [스키마 작성 기본 사항](../schema/composition.md): XDM 스키마의 기본 구성 요소 소개.
+* [[!DNL Real-time Customer Profile]](../../profile/home.md): 여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
+* [샌드박스](../../sandboxes/home.md):  [!DNL Experience Platform] 에서는 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이  [!DNL Platform] 되는 단일 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
 
 이 자습서를 시작하기 전에 [!DNL Schema Registry] API를 성공적으로 호출하기 위해 알고 있어야 하는 중요한 정보가 필요하면 [개발자 안내서](../api/getting-started.md)를 검토하십시오. 여기에는 `{TENANT_ID}`, &quot;containers&quot;의 개념 및 요청을 수행하는 데 필요한 헤더가 포함됩니다( [!DNL Accept] 헤더 및 가능한 값에 특별히 주의).
 
@@ -110,13 +110,13 @@ curl -X GET \
 
 ## 소스 스키마에 대한 참조 필드 정의
 
-[!DNL Schema Registry] 내에서 관계 설명자는 관계형 데이터베이스 테이블의 외래 키와 유사하게 작동합니다.소스 스키마의 필드는 대상 스키마의 기본 id 필드에 대한 참조 역할을 합니다. 소스 스키마에 이러한 용도로 사용할 필드가 없는 경우, 새 필드로 스키마 필드 그룹을 만들어 스키마에 추가해야 할 수 있습니다. 이 새 필드에는 &quot;[!DNL string]&quot;의 `type` 값이 있어야 합니다.
+[!DNL Schema Registry] 내에서 관계 설명자는 관계형 데이터베이스 테이블의 외래 키와 유사하게 작동합니다. 소스 스키마의 필드는 대상 스키마의 기본 id 필드에 대한 참조 역할을 합니다. 소스 스키마에 이러한 용도로 사용할 필드가 없는 경우, 새 필드로 스키마 필드 그룹을 만들어 스키마에 추가해야 할 수 있습니다. 이 새 필드에는 &quot;[!DNL string]&quot;의 `type` 값이 있어야 합니다.
 
 >[!IMPORTANT]
 >
 >대상 스키마와 달리 소스 스키마는 기본 ID를 참조 필드로 사용할 수 없습니다.
 
-이 자습서에서는 대상 스키마 &quot;[!DNL Hotels]&quot;에 스키마의 기본 ID로 사용되는 `hotelId` 필드가 포함되어 있으므로 참조 필드로도 작동합니다. 그러나 소스 스키마 &quot;[!DNL Loyalty Members]&quot;에는 참조로 사용할 전용 필드가 없으므로 스키마에 새 필드를 추가하는 새 필드 그룹이 부여되어야 합니다.`favoriteHotel`.
+이 자습서에서는 대상 스키마 &quot;[!DNL Hotels]&quot;에 스키마의 기본 ID로 사용되는 `hotelId` 필드가 포함되어 있으므로 참조 필드로도 작동합니다. 그러나 소스 스키마 &quot;[!DNL Loyalty Members]&quot;에는 참조로 사용할 전용 필드가 없으므로 스키마에 새 필드를 추가하는 새 필드 그룹이 부여되어야 합니다. `favoriteHotel`.
 
 >[!NOTE]
 >
@@ -342,7 +342,7 @@ curl -X PATCH \
 }
 ```
 
-## 참조 ID 설명자 {#reference-identity} 만들기
+## 참조 ID 설명자 만들기 {#reference-identity}
 
 관계의 다른 스키마에서 참조로 사용 중인 경우 스키마 필드에 적용된 참조 ID 설명자가 있어야 합니다. &quot;[!DNL Loyalty Members]&quot;의 `favoriteHotel` 필드는 &quot;[!DNL Hotels]&quot;의 `hotelId` 필드를 참조하므로 `hotelId`에 참조 ID 설명자가 부여되어야 합니다.
 
@@ -401,7 +401,7 @@ curl -X POST \
 }
 ```
 
-## 관계 설명자 {#create-descriptor} 만들기
+## 관계 설명자 만들기 {#create-descriptor}
 
 관계 설명자는 소스 스키마와 대상 스키마 간에 일대일 관계를 설정합니다. 대상 스키마에 대한 참조 설명자를 정의한 후에는 `/tenant/descriptors` 종단점에 대한 POST 요청을 수행하여 새 관계 설명자를 생성할 수 있습니다.
 

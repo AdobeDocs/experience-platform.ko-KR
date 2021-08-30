@@ -5,9 +5,9 @@ title: 데이터 사용 정책 개요
 topic-legacy: policies
 description: 데이터 사용 레이블이 데이터 규정 준수를 효과적으로 지원하려면 데이터 사용 정책을 구현해야 합니다. 데이터 사용 정책은 Experience Platform 내에서 데이터를 수행할 수 있도록 허용되거나 제한된 마케팅 작업 종류를 설명하는 규칙입니다.
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
-source-git-commit: 4aeb12aec026ab2dc29133dd44e54b453fb71fe3
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1077'
+source-wordcount: '1073'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 0%
 >
 >마케팅 작업 자체는 데이터 사용을 제한하지 않습니다. 이러한 작업을 정책 위반에 대해 평가하려면 활성화된 데이터 사용 정책에 포함해야 합니다.
 
-조직의 서비스에서 데이터 사용이 발생하는 경우 정책 위반을 식별할 수 있도록 관련 마케팅 작업을 표시해야 합니다. 그런 다음 [정책 서비스 API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml)를 사용하여 통합에서 정책 위반을 확인할 수 있습니다.
+조직의 서비스에서 데이터 사용이 발생하는 경우 정책 위반을 식별할 수 있도록 관련 마케팅 작업을 표시해야 합니다. 그런 다음 [정책 서비스 API](https://www.adobe.io/experience-platform-apis/references/policy-service/)를 사용하여 통합에서 정책 위반을 확인할 수 있습니다.
 
 >[!NOTE]
 >

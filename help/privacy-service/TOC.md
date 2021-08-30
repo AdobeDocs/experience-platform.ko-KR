@@ -3,12 +3,11 @@ audience: user
 user-guide-title: Adobe Experience Platform Privacy Service 도움말
 breadcrumb-title: Privacy Service 안내서
 user-guide-description: GDPR 및 CPA와 같은 법적 개인정보 보호 규정을 준수하도록 고객 데이터 요청을 관리합니다.
-feature: 개인 정보
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+feature: Privacy
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '87'
-ht-degree: 48%
+source-wordcount: '82'
+ht-degree: 50%
 
 ---
 
@@ -20,18 +19,18 @@ ht-degree: 48%
 * [개인 정보 요청에 대한 ID 데이터](identity-data.md)
 * [개인 정보 JS 라이브러리 개요](js-library.md)
 * Privacy Service API {#api}
-   * [시작](api/getting-started.md)
-   * [개인 정보 보호 작업](api/privacy-jobs.md)
+   * [시작하기](api/getting-started.md)
+   * [개인 정보 작업](api/privacy-jobs.md)
    * [동의](api/consent.md)
    * [부록](api/appendix.md)
 * Privacy Service UI {#ui}
    * [개요](ui/overview.md)
    * [개인 정보 작업 관리](ui/user-guide.md)
-* [개인 정보 보호 이벤트 구독](privacy-events.md)
+* [개인 정보 보호 이벤트에 가입](privacy-events.md)
 * 개인 정보 보호 규정 {#regulations}
    * [개요](regulations/overview.md)
    * [FAQ](regulations/faq.md)
    * [용어](regulations/terminology.md)
-* [문제 해결 가이드](troubleshooting-guide.md)
-* [API 참조](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml)
+* [문제 해결 안내서](troubleshooting-guide.md)
+* [API 참조](https://www.adobe.io/experience-platform-apis/references/privacy-service/)
 * [릴리스 정보](release-notes.md)

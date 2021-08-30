@@ -6,10 +6,10 @@ description: 특정 상황에서 단일 데이터 세트에서만 사용하도�
 topic-legacy: tutorial
 type: Tutorial
 exl-id: bef01000-909a-4594-8cf4-b9dbe0b358d5
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '832'
-ht-degree: 2%
+source-wordcount: '828'
+ht-degree: 3%
 
 ---
 
@@ -17,14 +17,14 @@ ht-degree: 2%
 
 특정 상황에서 단일 데이터 집합에서만 사용하도록 지정된 필드가 있는 [!DNL Experience Data Model] (XDM) 스키마를 만들어야 할 수 있습니다. 이를 &quot;임시&quot; 스키마라고 합니다. 임시 스키마는 CSV 파일 섭취와 특정 종류의 소스 연결 만들기를 포함하여 [!DNL Experience Platform]에 대한 다양한 데이터 수집 워크플로우에서 사용됩니다.
 
-이 문서에서는 [스키마 레지스트리 API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)를 사용하여 임시 스키마를 만드는 일반적인 단계를 제공합니다. 워크플로우의 일부로 임시 스키마를 만들어야 하는 다른 [!DNL Experience Platform] 자습서와 함께 사용하기 위한 것입니다. 이러한 각 문서는 특정 사용 사례에 대해 임시 스키마를 적절히 구성하는 방법에 대한 자세한 정보를 제공합니다.
+이 문서에서는 [스키마 레지스트리 API](https://www.adobe.io/experience-platform-apis/references/schema-registry/)를 사용하여 임시 스키마를 만드는 일반적인 단계를 제공합니다. 워크플로우의 일부로 임시 스키마를 만들어야 하는 다른 [!DNL Experience Platform] 자습서와 함께 사용하기 위한 것입니다. 이러한 각 문서는 특정 사용 사례에 대해 임시 스키마를 적절히 구성하는 방법에 대한 자세한 정보를 제공합니다.
 
 ## 시작하기
 
 이 자습서에서는 [!DNL Experience Data Model] (XDM) 시스템을 작업해야 합니다. 이 자습서를 시작하기 전에 다음 XDM 설명서를 검토하십시오.
 
-- [XDM 시스템 개요](../home.md):XDM과 의 구현에 대한 개요  [!DNL Experience Platform].
-- [스키마 작성 기본 사항](../schema/composition.md):XDM 스키마의 기본 구성 요소에 대한 개요입니다.
+- [XDM 시스템 개요](../home.md): XDM과 의 구현에 대한 개요  [!DNL Experience Platform].
+- [스키마 작성 기본 사항](../schema/composition.md): XDM 스키마의 기본 구성 요소에 대한 개요입니다.
 
 이 자습서를 시작하기 전에 [!DNL Schema Registry] API를 성공적으로 호출하기 위해 알고 있어야 하는 중요한 정보가 필요하면 [개발자 안내서](../api/getting-started.md)를 검토하십시오. 여기에는 `{TENANT_ID}`, &quot;컨테이너&quot;의 개념 및 요청을 수행하는 데 필요한 헤더가 포함됩니다(Accept 헤더 및 가능한 값에 특별히 주의).
 

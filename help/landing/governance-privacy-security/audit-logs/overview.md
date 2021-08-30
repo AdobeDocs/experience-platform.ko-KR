@@ -1,9 +1,9 @@
 ---
 title: 감사 로그 개요
 description: 감사 로그를 사용하여 Adobe Experience Platform에서 작업을 수행한 사용자를 확인하는 방법을 알아봅니다.
-source-git-commit: eb8144ace087c68a159aab89195832860df431e2
+source-git-commit: 937225ff08e2e02c5840f86d6ed50644e05bdfe5
 workflow-type: tm+mt
-source-wordcount: '467'
+source-wordcount: '463'
 ht-degree: 4%
 
 ---
@@ -58,7 +58,7 @@ Select **[!UICONTROL Download log]** to export an audit log.
 
 ## API에서 감사 로그 관리
 
-UI에서 수행할 수 있는 모든 작업은 API 호출을 사용하여 수행할 수도 있습니다. 자세한 내용은 [API 참조 문서](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/audit-query.yaml)를 참조하십시오.
+UI에서 수행할 수 있는 모든 작업은 API 호출을 사용하여 수행할 수도 있습니다. 자세한 내용은 [API 참조 문서](https://www.adobe.io/experience-platform-apis/references/audit-query/)를 참조하십시오.
 
 ## Adobe Admin Console에 대한 감사 로그 관리
 
