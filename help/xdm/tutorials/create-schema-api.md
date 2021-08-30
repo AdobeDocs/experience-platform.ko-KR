@@ -6,9 +6,9 @@ topic-legacy: tutorial
 type: Tutorial
 description: 이 자습서에서는 스키마 레지스트리 API를 사용하여 표준 클래스를 사용하여 스키마를 구성하는 단계를 안내합니다.
 exl-id: fa487a5f-d914-48f6-8d1b-001a60303f3d
-source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
+source-git-commit: f269a7b1584a6e4a0e1820a0c587a647c0c8f7b5
 workflow-type: tm+mt
-source-wordcount: '2426'
+source-wordcount: '2422'
 ht-degree: 1%
 
 ---
@@ -19,14 +19,14 @@ ht-degree: 1%
 
 이 자습서에서는 [!DNL Schema Registry] API를 사용하여 표준 클래스를 사용하여 스키마를 구성하는 단계를 안내합니다. [!DNL Experience Platform]에서 사용자 인터페이스를 사용하려는 경우 [스키마 편집기 자습서](create-schema-ui.md)에서는 스키마 편집기에서 유사한 작업을 수행하는 단계별 지침을 제공합니다.
 
-## 시작
+## 시작하기
 
 이 안내서에서는 Adobe Experience Platform의 다음 구성 요소를 이해하고 있어야 합니다.
 
-* [[!DNL Experience Data Model (XDM) System]](../home.md):고객 경험 데이터를  [!DNL Experience Platform] 구성하는 표준화된 프레임워크입니다.
-   * [스키마 작성 기본 사항](../schema/composition.md):스키마 컴포지션의 주요 원칙 및 모범 사례를 포함하여 XDM 스키마의 기본 빌딩 블록에 대해 알아봅니다.
-* [[!DNL Real-time Customer Profile]](../../profile/home.md):여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
-* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] 에서는 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이  [!DNL Platform] 되는 단일 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
+* [[!DNL Experience Data Model (XDM) System]](../home.md): 고객 경험 데이터를  [!DNL Experience Platform] 구성하는 표준화된 프레임워크입니다.
+   * [스키마 작성 기본 사항](../schema/composition.md): 스키마 컴포지션의 주요 원칙 및 모범 사례를 포함하여 XDM 스키마의 기본 빌딩 블록에 대해 알아봅니다.
+* [[!DNL Real-time Customer Profile]](../../profile/home.md): 여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
+* [[!DNL Sandboxes]](../../sandboxes/home.md):  [!DNL Experience Platform] 에서는 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이  [!DNL Platform] 되는 단일 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
 
 이 자습서를 시작하기 전에 [!DNL Schema Registry] API를 성공적으로 호출하기 위해 알고 있어야 하는 중요한 정보가 필요하면 [개발자 안내서](../api/getting-started.md)를 검토하십시오. 여기에는 `{TENANT_ID}`, &quot;컨테이너&quot;의 개념 및 요청을 수행하는 데 필요한 헤더가 포함됩니다(Accept 헤더 및 가능한 값에 특별히 주의).
 
@@ -176,7 +176,7 @@ curl -X GET \
 }
 ```
 
-### 필드 그룹 {#add-a-field-group} 추가
+### 필드 그룹 추가 {#add-a-field-group}
 
 충성도 멤버 스키마가 만들어지고 확인되었으므로 필드 그룹을 추가할 수 있습니다.
 
@@ -293,7 +293,7 @@ curl -X PATCH \
 
 이 응답에는 `meta:extends` 배열에 새로 추가된 필드 그룹이 표시되고 `allOf` 특성의 필드 그룹에 `$ref` 가 포함됩니다.
 
-충성도 멤버 스키마에는 이제 `allOf` 배열에 세 개의 `$ref` 값이 포함되어야 합니다.아래에 표시된 대로 &quot;profile&quot;, &quot;profile-person-details&quot; 및 &quot;profile-personal-details&quot; 가 표시됩니다.
+충성도 멤버 스키마에는 이제 `allOf` 배열에 세 개의 `$ref` 값이 포함되어야 합니다. 아래에 표시된 대로 &quot;profile&quot;, &quot;profile-person-details&quot; 및 &quot;profile-personal-details&quot; 가 표시됩니다.
 
 ```JSON
 {
@@ -357,7 +357,7 @@ POST /tenant/fieldgroups
 
 **요청**
 
-이 요청은 네 개의 충성도 프로그램별 필드를 포함하는 &quot;충성도&quot; 개체가 있는 새 필드 그룹을 만듭니다.&quot;충성도Id&quot;, &quot;충성도Level&quot;, &quot;충성도Points&quot; 및 &quot;memberSince&quot;
+이 요청은 네 개의 충성도 프로그램별 필드를 포함하는 &quot;충성도&quot; 개체가 있는 새 필드 그룹을 만듭니다. &quot;충성도Id&quot;, &quot;충성도Level&quot;, &quot;충성도Points&quot; 및 &quot;memberSince&quot;
 
 ```SHELL
 curl -X POST\
@@ -957,7 +957,7 @@ curl -X PATCH \
 
 스키마는 [!DNL Experience Platform]에 데이터를 수집하는 데 사용됩니다. 이 데이터는 궁극적으로 여러 서비스에서 사용되어 한 개인을 하나의 통합된 보기로 만듭니다. 이 프로세스를 지원하기 위해 키 필드를 &quot;ID&quot;로 표시할 수 있으며, 데이터 섭취 시 해당 필드의 데이터가 해당 개인의 &quot;Identity Graph&quot;에 삽입됩니다. 그런 다음 [[!DNL Real-time Customer Profile]](../../profile/home.md) 및 다른 [!DNL Experience Platform] 서비스에서 그래프 데이터에 액세스하여 각 개별 고객에 대한 결합된 보기를 제공할 수 있습니다.
 
-일반적으로 &quot;ID&quot;로 표시된 필드는 다음과 같습니다.이메일 주소, 전화번호, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html), CRM ID 또는 기타 고유한 ID 필드.
+일반적으로 &quot;ID&quot;로 표시된 필드는 다음과 같습니다. 이메일 주소, 전화번호, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=ko-KR), CRM ID 또는 기타 고유한 ID 필드.
 
 적절한 ID 필드일 수 있으므로 조직에 고유한 식별자를 고려합니다.
 
@@ -996,7 +996,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->사용 가능한 &quot;xdm:namespace&quot; 값을 나열하거나 [[!DNL Identity Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)를 사용하여 새 값을 만들 수 있습니다. xdm:property의 값은 사용된 &quot;xdm:namespace&quot;에 따라 &quot;xdm:code&quot; 또는 &quot;xdm:id&quot;일 수 있습니다.
+>사용 가능한 &quot;xdm:namespace&quot; 값을 나열하거나 [[!DNL Identity Service API]](https://www.adobe.io/experience-platform-apis/references/identity-service)를 사용하여 새 값을 만들 수 있습니다. xdm:property의 값은 사용된 &quot;xdm:namespace&quot;에 따라 &quot;xdm:code&quot; 또는 &quot;xdm:id&quot;일 수 있습니다.
 
 **응답**
 
@@ -1184,7 +1184,7 @@ curl -X GET \
 
 이 자습서 전체에서 소매 충성도 프로그램의 구성원을 설명하기 위해 스키마가 작성됩니다.
 
-스키마는 [!DNL XDM Individual Profile] 클래스를 구현하고 여러 필드 그룹을 결합합니다.자습서 중에 정의된 &quot;충성도 세부 사항&quot; 필드 그룹을 통해 &quot;개인 세부 사항&quot; 및 &quot;개인 세부 사항&quot; 필드 그룹을 사용하여 충성도 멤버에 대한 정보를 제공합니다.
+스키마는 [!DNL XDM Individual Profile] 클래스를 구현하고 여러 필드 그룹을 결합합니다. 자습서 중에 정의된 &quot;충성도 세부 사항&quot; 필드 그룹을 통해 &quot;개인 세부 사항&quot; 및 &quot;개인 세부 사항&quot; 필드 그룹을 사용하여 충성도 멤버에 대한 정보를 제공합니다.
 
 다음은 완료된 충성도 멤버 스키마를 JSON 형식으로 보여 줍니다.
 

@@ -5,9 +5,9 @@ title: Identity Service 문제 해결 안내서
 topic-legacy: troubleshooting
 description: 이 문서에서는 Adobe Experience Platform Identity 서비스에 대해 자주 묻는 질문과 일반적인 오류에 대한 문제 해결 안내서를 제공합니다.
 exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
-source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+source-git-commit: f269a7b1584a6e4a0e1820a0c587a647c0c8f7b5
 workflow-type: tm+mt
-source-wordcount: '2185'
+source-wordcount: '2177'
 ht-degree: 0%
 
 ---
@@ -78,11 +78,11 @@ API를 사용하여 ID 설명자를 만들 때 네임스페이스를 정의하�
 
 ## 조직에서 사용할 수 있는 ID 네임스페이스 목록은 어디에서 찾을 수 있습니까?
 
-[ID 서비스 API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)를 사용하면 `/idnamespace/identities` 종단점에 GET 요청을 하여 조직에 대해 사용 가능한 모든 ID 네임스페이스를 나열할 수 있습니다. 자세한 내용은 ID 서비스 API 개요에서 [사용 가능한 네임스페이스](./api/list-namespaces.md)를 나열하는 섹션을 참조하십시오.
+[ID 서비스 API](https://www.adobe.io/experience-platform-apis/references/identity-service)를 사용하면 `/idnamespace/identities` 종단점에 GET 요청을 하여 조직에 대해 사용 가능한 모든 ID 네임스페이스를 나열할 수 있습니다. 자세한 내용은 ID 서비스 API 개요에서 [사용 가능한 네임스페이스](./api/list-namespaces.md)를 나열하는 섹션을 참조하십시오.
 
 ## 조직의 사용자 지정 네임스페이스를 만들려면 어떻게 합니까?
 
-[ID 서비스 API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)를 사용하여 `/idnamespace/identities` 종단점에 대한 POST 요청을 수행하여 조직에 대한 사용자 지정 ID 네임스페이스를 만들 수 있습니다. 자세한 내용은 ID 서비스 API 개요에서 [사용자 지정 네임스페이스 만들기](./api/create-custom-namespace.md)의 섹션을 참조하십시오.
+[ID 서비스 API](https://www.adobe.io/experience-platform-apis/references/identity-service)를 사용하여 `/idnamespace/identities` 종단점에 대한 POST 요청을 수행하여 조직에 대한 사용자 지정 ID 네임스페이스를 만들 수 있습니다. 자세한 내용은 ID 서비스 API 개요에서 [사용자 지정 네임스페이스 만들기](./api/create-custom-namespace.md)의 섹션을 참조하십시오.
 
 ## 복합 ID와 XID란 무엇입니까?
 

@@ -5,10 +5,10 @@ title: 설명자 API 끝점
 description: 스키마 레지스트리 API의 /descriptors 종단점을 사용하면 경험 애플리케이션 내의 XDM 설명자를 프로그래밍 방식으로 관리할 수 있습니다.
 topic-legacy: developer guide
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: f269a7b1584a6e4a0e1820a0c587a647c0c8f7b5
 workflow-type: tm+mt
-source-wordcount: '1634'
-ht-degree: 1%
+source-wordcount: '1630'
+ht-degree: 3%
 
 ---
 
@@ -315,7 +315,7 @@ ID 설명자는 &quot;[!UICONTROL sourceSchema]&quot;의 &quot;[!UICONTROL sourc
 | `xdm:sourceSchema` | 설명자가 정의된 스키마의 `$id` URI입니다. |
 | `xdm:sourceVersion` | 소스 스키마의 주 버전입니다. |
 | `xdm:sourceProperty` | ID가 될 특정 속성의 경로입니다. 경로는 &quot;/&quot;로 시작해야 하며 하나로 끝나지 않습니다. 경로에 &quot;속성&quot;을 포함하지 마십시오(예: &quot;/properties/personalEmail/properties/address&quot; 대신 &quot;/personalEmail/address&quot;를 사용) |
-| `xdm:namespace` | ID 네임스페이스의 `id` 또는 `code` 값. 네임스페이스 목록은 [[!DNL Identity Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)을 사용하여 찾을 수 있습니다. |
+| `xdm:namespace` | ID 네임스페이스의 `id` 또는 `code` 값. 네임스페이스 목록은 [[!DNL Identity Service API]](https://www.adobe.io/experience-platform-apis/references/identity-service)을 사용하여 찾을 수 있습니다. |
 | `xdm:property` | 사용된 `xdm:namespace`에 따라 `xdm:id` 또는 `xdm:code` 중 하나를 선택합니다. |
 | `xdm:isPrimary` | 선택적 부울 값입니다. true이면 는 필드를 기본 ID로 나타냅니다. 스키마에는 기본 ID가 하나만 포함될 수 있습니다. |
 
