@@ -5,9 +5,9 @@ title: Flow Service API를 사용하여 Salesforce Marketing Cloud 기본 연결
 topic-legacy: overview
 type: Tutorial
 description: Flow Service API를 사용하여 Adobe Experience Platform을 Salesforce Marketing Cloud에 연결하는 방법을 알아봅니다.
-source-git-commit: 56458ed6e74a76e2787ab3b9f1409b11556bdee2
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '483'
+source-wordcount: '479'
 ht-degree: 1%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 1%
 
 기본 연결은 소스와 Adobe Experience Platform 간의 인증된 연결을 나타냅니다.
 
-이 자습서에서는 [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)를 사용하여 [!DNL Salesforce Marketing Cloud]에 대한 기본 연결을 만드는 단계를 안내합니다.
+이 자습서에서는 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)를 사용하여 [!DNL Salesforce Marketing Cloud]에 대한 기본 연결을 만드는 단계를 안내합니다.
 
 ## 시작하기
 

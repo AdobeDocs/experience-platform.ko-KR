@@ -6,9 +6,9 @@ description: 이 문서에서는 Adobe Experience Platform API를 사용하여 �
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: 02c22453470d55236d4235c479742997e8407ef3
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '1705'
+source-wordcount: '1701'
 ht-degree: 1%
 
 ---
@@ -66,7 +66,7 @@ Platform에서 사용자 인터페이스를 사용하여 대상을 연결하고 
 
 ### Swagger 설명서
 
-Swagger에서 이 자습서에서 모든 API 호출에 대한 추가 참조 설명서를 찾을 수 있습니다. Adobe I/O](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)에서 [Flow Service API 설명서 를 참조하십시오. 이 자습서와 Swagger 설명서 페이지를 동시에 사용하는 것이 좋습니다.
+Swagger에서 이 자습서에서 모든 API 호출에 대한 추가 참조 설명서를 찾을 수 있습니다. Adobe I/O](https://www.adobe.io/experience-platform-apis/references/flow-service/)에서 [Flow Service API 설명서 를 참조하십시오. 이 자습서와 Swagger 설명서 페이지를 동시에 사용하는 것이 좋습니다.
 
 ## 사용 가능한 대상 목록 가져오기 {#get-the-list-of-available-destinations}
 

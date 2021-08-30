@@ -6,16 +6,16 @@ topic-legacy: overview
 type: Tutorial
 description: 이 자습서에서는 데이터베이스에서 데이터를 검색하고 소스 커넥터 및 API를 사용하여 데이터를 플랫폼으로 수집하는 단계를 설명합니다.
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '1641'
+source-wordcount: '1619'
 ht-degree: 1%
 
 ---
 
 # 소스 커넥터 및 API를 사용하여 데이터베이스에서 데이터 수집
 
-이 자습서에서는 소스 커넥터 및 [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)를 통해 타사 데이터베이스에서 데이터를 검색하고 플랫폼으로 수집하는 단계를 설명합니다.
+이 자습서에서는 소스 커넥터 및 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)를 통해 타사 데이터베이스에서 데이터를 검색하고 플랫폼으로 수집하는 단계를 설명합니다.
 
 ## 시작하기
 
@@ -30,7 +30,7 @@ ht-degree: 1%
 * [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md): 배치 수집 API를 사용하면 데이터를 배치 파일로 Experience Platform에 수집할 수 있습니다.
 * [샌드박스](../../../../sandboxes/home.md): Experience Platform은 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 단일 플랫폼 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
 
-다음 섹션에서는 [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API를 사용하여 서드파티 데이터베이스에 성공적으로 연결하기 위해 알고 있어야 하는 추가 정보를 제공합니다.
+다음 섹션에서는 [!DNL Flow Service] API를 사용하여 타사 데이터베이스에 성공적으로 연결하기 위해 알고 있어야 하는 추가 정보를 제공합니다.
 
 ### 샘플 API 호출 읽기
 
@@ -431,7 +431,7 @@ curl -X POST \
 
 ## 데이터 흐름 사양 검색 {#specs}
 
-데이터 흐름은 소스에서 데이터를 수집하여 플랫폼으로 가져와야 합니다. 데이터 흐름을 만들려면 먼저 [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API에 대한 GET 요청을 수행하여 데이터 흐름 사양을 가져와야 합니다. 데이터 흐름 사양은 외부 데이터베이스 또는 NoSQL 시스템에서 데이터를 수집해야 합니다.
+데이터 흐름은 소스에서 데이터를 수집하여 플랫폼으로 가져와야 합니다. 데이터 흐름을 만들려면 먼저 [!DNL Flow Service] API에 대한 GET 요청을 수행하여 데이터 흐름 사양을 가져와야 합니다. 데이터 흐름 사양은 외부 데이터베이스 또는 NoSQL 시스템에서 데이터를 수집해야 합니다.
 
 **API 형식**
 

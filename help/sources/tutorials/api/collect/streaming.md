@@ -6,16 +6,16 @@ topic-legacy: overview
 type: Tutorial
 description: 이 자습서에서는 스트리밍 데이터를 검색하고 소스 커넥터 및 API를 사용하여 Platform으로 가져오는 단계를 설명합니다.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '1103'
+source-wordcount: '1099'
 ht-degree: 2%
 
 ---
 
 # [!DNL Flow Service] API를 사용하여 원시 데이터에 대한 스트리밍 데이터 흐름을 만듭니다
 
-이 자습서에서는 스트리밍 소스 커넥터에서 원시 데이터를 검색하고 [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)를 사용하여 Experience Platform으로 가져오는 단계를 설명합니다.
+이 자습서에서는 스트리밍 소스 커넥터에서 원시 데이터를 검색하고 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)를 사용하여 Experience Platform으로 가져오는 단계를 설명합니다.
 
 ## 시작하기
 

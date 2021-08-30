@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Flow Service API를 사용하여 Adobe Experience Platform을 Salesforce 계정에 연결하는 방법을 알아봅니다.
 exl-id: 43dd9ee5-4b87-4c8a-ac76-01b83c1226f6
-source-git-commit: 8035539321f5016521208aa110a4ee2881cb5d1e
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '470'
+source-wordcount: '466'
 ht-degree: 1%
 
 ---
@@ -17,14 +17,14 @@ ht-degree: 1%
 
 기본 연결은 소스와 Adobe Experience Platform 간의 인증된 연결을 나타냅니다.
 
-이 자습서에서는 [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)를 사용하여 [!DNL Salesforce]에 대한 기본 연결을 만드는 단계를 안내합니다.
+이 자습서에서는 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)를 사용하여 [!DNL Salesforce]에 대한 기본 연결을 만드는 단계를 안내합니다.
 
-## 시작
+## 시작하기
 
 이 안내서에서는 Adobe Experience Platform의 다음 구성 요소를 이해하고 있어야 합니다.
 
-* [소스](../../../../home.md): [!DNL Experience Platform] 서비스를 사용하여 들어오는 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 다양한 소스에서 데이터를 수집할 수  [!DNL Platform] 있습니다.
-* [샌드박스](../../../../../sandboxes/home.md): [!DNL Experience Platform] 에서는 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이  [!DNL Platform] 되는 단일 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
+* [소스](../../../../home.md):  [!DNL Experience Platform] 서비스를 사용하여 들어오는 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 다양한 소스에서 데이터를 수집할 수  [!DNL Platform] 있습니다.
+* [샌드박스](../../../../../sandboxes/home.md):  [!DNL Experience Platform] 에서는 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이  [!DNL Platform] 되는 단일 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
 
 다음 섹션에서는 [!DNL Platform]을(를) [!DNL Flow Service] API를 사용하여 [!DNL Salesforce] 계정에 성공적으로 연결하기 위해 알고 있어야 하는 추가 정보를 제공합니다.
 
@@ -38,7 +38,7 @@ ht-degree: 1%
 | `username` | [!DNL Salesforce] 사용자 계정의 사용자 이름입니다. |
 | `password` | [!DNL Salesforce] 사용자 계정의 암호입니다. |
 | `securityToken` | [!DNL Salesforce] 사용자 계정에 대한 보안 토큰입니다. |
-| `connectionSpec.id` | 연결 사양은 기본 및 소스 연결 생성과 관련된 인증 사양이 포함된 소스의 커넥터 등록 정보를 반환합니다. [!DNL AdWords]에 대한 연결 사양 ID는 다음과 같습니다.`cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`. |
+| `connectionSpec.id` | 연결 사양은 기본 및 소스 연결 생성과 관련된 인증 사양이 포함된 소스의 커넥터 등록 정보를 반환합니다. [!DNL AdWords]에 대한 연결 사양 ID는 다음과 같습니다. `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`. |
 
 시작하는 방법에 대한 자세한 내용은 [이 Salesforce 문서](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_understanding_authentication.htm)를 참조하십시오.
 
@@ -94,7 +94,7 @@ curl -X POST \
 | `auth.params.username` | [!DNL Salesforce] 계정과 연결된 사용자 이름입니다. |
 | `auth.params.password` | [!DNL Salesforce] 계정에 연결된 암호입니다. |
 | `auth.params.securityToken` | [!DNL Salesforce] 계정과 연결된 보안 토큰입니다. |
-| `connectionSpec.id` | [!DNL Salesforce] 연결 사양 ID:`cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`. |
+| `connectionSpec.id` | [!DNL Salesforce] 연결 사양 ID: `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`. |
 
 **응답**
 

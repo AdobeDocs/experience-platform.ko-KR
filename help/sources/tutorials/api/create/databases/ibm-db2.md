@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Flow Service API를 사용하여 IBM [!DNL IBM DB2] 을 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: 83c1dbe6-975f-4e3b-a7bf-166eb5106dd2
-source-git-commit: 5fb5f0ce8bd03ba037c6901305ba17f8939eb9ce
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '466'
+source-wordcount: '462'
 ht-degree: 1%
 
 ---
@@ -21,20 +21,20 @@ ht-degree: 1%
 
 기본 연결은 소스와 Adobe Experience Platform 간의 인증된 연결을 나타냅니다.
 
-이 자습서에서는 [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)를 사용하여 [!DNL IBM DB2]에 대한 기본 연결을 만드는 단계를 안내합니다.
+이 자습서에서는 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)를 사용하여 [!DNL IBM DB2]에 대한 기본 연결을 만드는 단계를 안내합니다.
 
-## 시작
+## 시작하기
 
 이 안내서에서는 Adobe Experience Platform의 다음 구성 요소를 이해하고 있어야 합니다.
 
-* [소스](../../../../home.md): [!DNL Experience Platform] 플랫폼 서비스를 사용하여 들어오는 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 다양한 소스에서 데이터를 수집할 수 있습니다.
-* [샌드박스](../../../../../sandboxes/home.md): [!DNL Experience Platform] 에서는 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 단일 플랫폼 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
+* [소스](../../../../home.md):  [!DNL Experience Platform] 플랫폼 서비스를 사용하여 들어오는 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 다양한 소스에서 데이터를 수집할 수 있습니다.
+* [샌드박스](../../../../../sandboxes/home.md):  [!DNL Experience Platform] 에서는 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 단일 플랫폼 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
 
 다음 섹션에서는 [!DNL Flow Service] API를 사용하여 [!DNL IBM DB2]에 성공적으로 연결하기 위해 알고 있어야 하는 추가 정보를 제공합니다.
 
 | 자격 증명 | 설명 |
 | ---------- | ----------- |
-| `server` | [!DNL IBM DB2] 서버의 이름입니다. 콜론으로 구분된 서버 이름 다음에 포트 번호를 지정할 수 있습니다. 예:server:port |
+| `server` | [!DNL IBM DB2] 서버의 이름입니다. 콜론으로 구분된 서버 이름 다음에 포트 번호를 지정할 수 있습니다. 예: server:port |
 | `database` | [!DNL IBM DB2] 데이터베이스의 이름입니다. |
 | `username` | [!DNL IBM DB2] 데이터베이스에 연결하는 데 사용되는 사용자 이름입니다. |
 | `password` | 사용자 이름에 지정한 사용자 계정의 암호입니다. |
@@ -93,7 +93,7 @@ curl -X POST \
 | 매개 변수 | 설명 |
 | --------- | ----------- |
 | `auth.params.connectionString` | [!DNL IBM DB2] 계정과 연결된 연결 문자열입니다. |
-| `connectionSpec.id` | [!DNL IBM DB2] 연결 사양 ID:`09182899-b429-40c9-a15a-bf3ddbc8ced7`. |
+| `connectionSpec.id` | [!DNL IBM DB2] 연결 사양 ID: `09182899-b429-40c9-a15a-bf3ddbc8ced7`. |
 
 **응답**
 

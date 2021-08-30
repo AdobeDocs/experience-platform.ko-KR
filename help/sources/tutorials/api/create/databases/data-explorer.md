@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Flow Service API를 사용하여 Azure Azure Data Explorer을 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: 1b17bbb0-1f7b-4d89-a158-ad269e6edf30
-source-git-commit: 5fb5f0ce8bd03ba037c6901305ba17f8939eb9ce
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '535'
+source-wordcount: '531'
 ht-degree: 1%
 
 ---
@@ -21,15 +21,15 @@ ht-degree: 1%
 
 기본 연결은 소스와 Adobe Experience Platform 간의 인증된 연결을 나타냅니다.
 
-이 자습서에서는 [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)를 사용하여 [!DNL Azure Data Explore]에 대한 기본 연결을 만드는 단계를 안내합니다.
+이 자습서에서는 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)를 사용하여 [!DNL Azure Data Explore]에 대한 기본 연결을 만드는 단계를 안내합니다.
 
 
-## 시작
+## 시작하기
 
 이 안내서에서는 Adobe Experience Platform의 다음 구성 요소를 이해하고 있어야 합니다.
 
-* [소스](../../../../home.md): [!DNL Experience Platform] 서비스를 사용하여 들어오는 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 다양한 소스에서 데이터를 수집할 수  [!DNL Platform] 있습니다.
-* [샌드박스](../../../../../sandboxes/home.md): [!DNL Experience Platform] 에서는 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이  [!DNL Platform] 되는 단일 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
+* [소스](../../../../home.md):  [!DNL Experience Platform] 서비스를 사용하여 들어오는 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 다양한 소스에서 데이터를 수집할 수  [!DNL Platform] 있습니다.
+* [샌드박스](../../../../../sandboxes/home.md):  [!DNL Experience Platform] 에서는 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이  [!DNL Platform] 되는 단일 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
 
 다음 섹션에서는 [!DNL Flow Service] API를 사용하여 [!DNL Azure Data Explorer]에 성공적으로 연결하기 위해 알고 있어야 하는 추가 정보를 제공합니다.
 
@@ -103,7 +103,7 @@ curl -X POST \
 | `auth.params.tenant` | [!DNL Azure Data Explorer] 데이터베이스에 연결하는 데 사용되는 고유한 테넌트 ID입니다. |
 | `auth.params.servicePrincipalId` | [!DNL Azure Data Explorer] 데이터베이스에 연결하는 데 사용되는 고유한 서비스 주체 ID입니다. |
 | `auth.params.servicePrincipalKey` | [!DNL Azure Data Explorer] 데이터베이스에 연결하는 데 사용되는 고유한 서비스 주 키입니다. |
-| `connectionSpec.id` | [!DNL Azure Data Explorer] 연결 사양 ID:`0479cc14-7651-4354-b233-7480606c2ac3`. |
+| `connectionSpec.id` | [!DNL Azure Data Explorer] 연결 사양 ID: `0479cc14-7651-4354-b233-7480606c2ac3`. |
 
 **응답**
 

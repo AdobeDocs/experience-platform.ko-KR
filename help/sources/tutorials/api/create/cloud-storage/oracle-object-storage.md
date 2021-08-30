@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Flow Service API를 사용하여 Adobe Experience Platform을 Oracle 개체 저장소에 연결하는 방법을 알아봅니다.
 exl-id: a85faa44-7d5a-42a2-9052-af01744e13c9
-source-git-commit: 59a8e2aa86508e53f181ac796f7c03f9fcd76158
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '559'
+source-wordcount: '555'
 ht-degree: 1%
 
 ---
@@ -17,14 +17,14 @@ ht-degree: 1%
 
 기본 연결은 소스와 Adobe Experience Platform 간의 인증된 연결을 나타냅니다.
 
-이 자습서에서는 [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)를 사용하여 [!DNL Oracle Object Storage]에 대한 기본 연결을 만드는 단계를 안내합니다.
+이 자습서에서는 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)를 사용하여 [!DNL Oracle Object Storage]에 대한 기본 연결을 만드는 단계를 안내합니다.
 
-## 시작
+## 시작하기
 
 이 안내서에서는 Adobe Experience Platform의 다음 구성 요소를 이해하고 있어야 합니다.
 
-* [소스](../../../../home.md):Experience Platform을 사용하면 Platform 서비스를 사용하여 들어오는 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 다양한 소스에서 데이터를 수집할 수 있습니다.
-* [샌드박스](../../../../../sandboxes/home.md):Experience Platform은 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 단일 플랫폼 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
+* [소스](../../../../home.md): Experience Platform을 사용하면 Platform 서비스를 사용하여 들어오는 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 다양한 소스에서 데이터를 수집할 수 있습니다.
+* [샌드박스](../../../../../sandboxes/home.md): Experience Platform은 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 단일 플랫폼 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
 
 다음 섹션에서는 [!DNL Flow Service] API를 사용하여 [!DNL Oracle Object Storage]에 성공적으로 연결하기 위해 알고 있어야 하는 추가 정보를 제공합니다.
 
@@ -34,12 +34,12 @@ ht-degree: 1%
 
 | 자격 증명 | 설명 |
 | ---------- | ----------- |
-| `serviceUrl` | 인증에 필요한 [!DNL Oracle Object Storage] 끝점입니다. 끝점 형식은 다음과 같습니다.`https://{OBJECT_STORAGE_NAMESPACE}.compat.objectstorage.eu-frankfurt-1.oraclecloud.com` |
+| `serviceUrl` | 인증에 필요한 [!DNL Oracle Object Storage] 끝점입니다. 끝점 형식은 다음과 같습니다. `https://{OBJECT_STORAGE_NAMESPACE}.compat.objectstorage.eu-frankfurt-1.oraclecloud.com` |
 | `accessKey` | 인증에 필요한 [!DNL Oracle Object Storage] 액세스 키 ID입니다. |
 | `secretKey` | 인증에 필요한 [!DNL Oracle Object Storage] 암호입니다. |
 | `bucketName` | 사용자가 액세스를 제한한 경우 필요한 허용된 버킷 이름입니다. 버킷 이름은 3자에서 63자 사이여야 하며 문자 또는 숫자로 시작하고 끝나야 하며, 소문자, 숫자 또는 하이픈(`-`)만 포함할 수 있습니다. 버킷 이름은 IP 주소처럼 지정할 수 없습니다. |
 | `folderPath` | 사용자가 액세스를 제한한 경우 필요한 허용된 폴더 경로입니다. |
-| `connectionSpec.id` | 연결 사양은 기본 및 소스 연결 생성과 관련된 인증 사양이 포함된 소스의 커넥터 등록 정보를 반환합니다. [!DNL Oracle Object Storage]에 대한 연결 사양 ID는 다음과 같습니다.`c85f9425-fb21-426c-ad0b-405e9bd8a46c`. |
+| `connectionSpec.id` | 연결 사양은 기본 및 소스 연결 생성과 관련된 인증 사양이 포함된 소스의 커넥터 등록 정보를 반환합니다. [!DNL Oracle Object Storage]에 대한 연결 사양 ID는 다음과 같습니다. `c85f9425-fb21-426c-ad0b-405e9bd8a46c`. |
 
 이러한 값을 가져오는 방법에 대한 자세한 내용은 [Oracle 개체 저장소 인증 안내서](https://docs.oracle.com/en-us/iaas/Content/Identity/Concepts/usercredentials.htm#User_Credentials)를 참조하십시오.
 
@@ -98,7 +98,7 @@ curl -X POST \
 | `auth.params.secretKey` | 인증에 필요한 [!DNL Oracle Object Storage] 암호입니다. |
 | `auth.params.bucketName` | 사용자가 액세스를 제한한 경우 필요한 허용된 버킷 이름입니다. |
 | `auth.params.folderPath` | 사용자가 액세스를 제한한 경우 필요한 허용된 폴더 경로입니다. |
-| `connectionSpec.id` | [!DNL Oracle Object Storage] 연결 사양 ID:`c85f9425-fb21-426c-ad0b-405e9bd8a46c`. |
+| `connectionSpec.id` | [!DNL Oracle Object Storage] 연결 사양 ID: `c85f9425-fb21-426c-ad0b-405e9bd8a46c`. |
 
 **응답**
 

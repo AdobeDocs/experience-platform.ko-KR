@@ -6,16 +6,16 @@ topic-legacy: overview
 type: Tutorial
 description: 이 자습서에서는 프로토콜 애플리케이션에서 데이터를 검색하고 소스 커넥터 및 API를 사용하여 플랫폼으로 수집하는 단계를 설명합니다.
 exl-id: e14e75c2-2a93-45d8-8056-f06075bd4b8d
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '1539'
+source-wordcount: '1535'
 ht-degree: 1%
 
 ---
 
 # 소스 커넥터 및 API를 사용하여 프로토콜 데이터 수집
 
-이 자습서에서는 타사 프로토콜 애플리케이션에서 데이터를 검색하고 소스 커넥터 및 [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API를 통해 Adobe Experience Platform으로 수집하는 단계를 설명합니다.
+이 자습서에서는 타사 프로토콜 애플리케이션에서 데이터를 검색하고 소스 커넥터 및 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)를 통해 Adobe Experience Platform으로 수집하는 단계를 설명합니다.
 
 ## 시작하기
 

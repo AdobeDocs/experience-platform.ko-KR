@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Flow Service API를 사용하여 Adobe Experience Platform을 Azure Blob에 연결하는 방법을 알아봅니다.
 exl-id: 4ab8033f-697a-49b6-8d9c-1aadfef04a04
-source-git-commit: 59a8e2aa86508e53f181ac796f7c03f9fcd76158
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '705'
+source-wordcount: '701'
 ht-degree: 1%
 
 ---
@@ -17,14 +17,14 @@ ht-degree: 1%
 
 기본 연결은 소스와 Adobe Experience Platform 간의 인증된 연결을 나타냅니다.
 
-이 자습서에서는 [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)를 사용하여 [!DNL Azure Blob](이하 &quot;[!DNL Blob]&quot;라 함)에 대한 기본 연결을 만드는 단계를 안내합니다.
+이 자습서에서는 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)를 사용하여 [!DNL Azure Blob](이하 &quot;[!DNL Blob]&quot;라 함)에 대한 기본 연결을 만드는 단계를 안내합니다.
 
-## 시작
+## 시작하기
 
 이 안내서에서는 Adobe Experience Platform의 다음 구성 요소를 이해하고 있어야 합니다.
 
-* [소스](../../../../home.md):Experience Platform을 사용하면 Platform 서비스를 사용하여 들어오는 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 다양한 소스에서 데이터를 수집할 수 있습니다.
-* [샌드박스](../../../../../sandboxes/home.md):Experience Platform은 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 단일 플랫폼 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
+* [소스](../../../../home.md): Experience Platform을 사용하면 Platform 서비스를 사용하여 들어오는 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 다양한 소스에서 데이터를 수집할 수 있습니다.
+* [샌드박스](../../../../../sandboxes/home.md): Experience Platform은 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 단일 플랫폼 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
 
 다음 섹션에서는 [!DNL Flow Service] API를 사용하여 [!DNL Blob] 소스 연결을 성공적으로 만들기 위해 알고 있어야 하는 추가 정보를 제공합니다.
 
@@ -34,9 +34,9 @@ ht-degree: 1%
 
 | 자격 증명 | 설명 |
 | ---------- | ----------- |
-| `connectionString` | Experience Platform에 [!DNL Blob]을 인증하는 데 필요한 인증 정보가 포함된 문자열입니다. [!DNL Blob] 연결 문자열 패턴은 다음과 같습니다.`DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. 연결 문자열에 대한 자세한 내용은 [연결 문자열 구성](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string)에서 이 [!DNL Blob] 문서를 참조하십시오. |
-| `sasUri` | 대체 인증 유형으로 사용하여 [!DNL Blob] 계정을 연결할 수 있는 공유 액세스 서명 URI입니다. [!DNL Blob] SAS URI 패턴은 다음과 같습니다.`https://{ACCOUNT_NAME}.blob.core.windows.net/?sv=<storage version>&st={START_TIME}&se={EXPIRE_TIME}&sr={RESOURCE}&sp={PERMISSIONS}>&sip=<{IP_RANGE}>&spr={PROTOCOL}&sig={SIGNATURE}>` 자세한 내용은 [공유 액세스 서명 URI](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-blob-storage#shared-access-signature-authentication)에서 이 [!DNL Blob] 문서를 참조하십시오. |
-| `connectionSpec.id` | 연결 사양은 기본 및 소스 연결 생성과 관련된 인증 사양이 포함된 소스의 커넥터 등록 정보를 반환합니다. [!DNL Blob]에 대한 연결 사양 ID는 다음과 같습니다.`d771e9c1-4f26-40dc-8617-ce58c4b53702`. |
+| `connectionString` | Experience Platform에 [!DNL Blob]을 인증하는 데 필요한 인증 정보가 포함된 문자열입니다. [!DNL Blob] 연결 문자열 패턴은 다음과 같습니다. `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. 연결 문자열에 대한 자세한 내용은 [연결 문자열 구성](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string)에서 이 [!DNL Blob] 문서를 참조하십시오. |
+| `sasUri` | 대체 인증 유형으로 사용하여 [!DNL Blob] 계정을 연결할 수 있는 공유 액세스 서명 URI입니다. [!DNL Blob] SAS URI 패턴은 다음과 같습니다. `https://{ACCOUNT_NAME}.blob.core.windows.net/?sv=<storage version>&st={START_TIME}&se={EXPIRE_TIME}&sr={RESOURCE}&sp={PERMISSIONS}>&sip=<{IP_RANGE}>&spr={PROTOCOL}&sig={SIGNATURE}>` 자세한 내용은 [공유 액세스 서명 URI](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-blob-storage#shared-access-signature-authentication)에서 이 [!DNL Blob] 문서를 참조하십시오. |
+| `connectionSpec.id` | 연결 사양은 기본 및 소스 연결 생성과 관련된 인증 사양이 포함된 소스의 커넥터 등록 정보를 반환합니다. [!DNL Blob]에 대한 연결 사양 ID는 다음과 같습니다. `d771e9c1-4f26-40dc-8617-ce58c4b53702`. |
 
 ### 플랫폼 API 사용
 
@@ -88,8 +88,8 @@ curl -X POST \
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `auth.params.connectionString` | Blob 저장소의 데이터에 액세스하는 데 필요한 연결 문자열입니다. Blob 연결 문자열 패턴은 다음과 같습니다.`DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}` |
-| `connectionSpec.id` | Blob 저장소 연결 사양 ID는 다음과 같습니다.`4c10e202-c428-4796-9208-5f1f5732b1cf` |
+| `auth.params.connectionString` | Blob 저장소의 데이터에 액세스하는 데 필요한 연결 문자열입니다. Blob 연결 문자열 패턴은 다음과 같습니다. `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}` |
+| `connectionSpec.id` | Blob 저장소 연결 사양 ID는 다음과 같습니다. `4c10e202-c428-4796-9208-5f1f5732b1cf` |
 
 **응답**
 
@@ -144,8 +144,8 @@ curl -X POST \
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `auth.params.connectionString` | [!DNL Blob] 저장소의 데이터에 액세스하는 데 필요한 SAS URI입니다. [!DNL Blob] SAS URI 패턴은 다음과 같습니다.`https://{ACCOUNT_NAME}.blob.core.windows.net/?sv=<storage version>&st={START_TIME}&se={EXPIRE_TIME}&sr={RESOURCE}&sp={PERMISSIONS}>&sip=<{IP_RANGE}>&spr={PROTOCOL}&sig={SIGNATURE}>`. |
-| `connectionSpec.id` | [!DNL Blob] 스토리지 연결 사양 ID는 다음과 같습니다.`4c10e202-c428-4796-9208-5f1f5732b1cf` |
+| `auth.params.connectionString` | [!DNL Blob] 저장소의 데이터에 액세스하는 데 필요한 SAS URI입니다. [!DNL Blob] SAS URI 패턴은 다음과 같습니다. `https://{ACCOUNT_NAME}.blob.core.windows.net/?sv=<storage version>&st={START_TIME}&se={EXPIRE_TIME}&sr={RESOURCE}&sp={PERMISSIONS}>&sip=<{IP_RANGE}>&spr={PROTOCOL}&sig={SIGNATURE}>`. |
+| `connectionSpec.id` | [!DNL Blob] 스토리지 연결 사양 ID는 다음과 같습니다. `4c10e202-c428-4796-9208-5f1f5732b1cf` |
 
 **응답**
 

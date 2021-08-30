@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Flow Service API를 사용하여 일반 OData를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: 45b302cb-1a43-4fab-a8a2-cb4e1ee129f9
-source-git-commit: 3dd7266451eada02a2342bbba5f3cf6c327529d6
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '447'
+source-wordcount: '443'
 ht-degree: 2%
 
 ---
@@ -21,14 +21,14 @@ ht-degree: 2%
 
 기본 연결은 소스와 Adobe Experience Platform 간의 인증된 연결을 나타냅니다.
 
-이 자습서에서는 [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)를 사용하여 [!DNL Generic OData]에 대한 기본 연결을 만드는 단계를 안내합니다.
+이 자습서에서는 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)를 사용하여 [!DNL Generic OData]에 대한 기본 연결을 만드는 단계를 안내합니다.
 
-## 시작
+## 시작하기
 
 이 안내서에서는 Adobe Experience Platform의 다음 구성 요소를 이해하고 있어야 합니다.
 
-* [소스](../../../../home.md): [!DNL Experience Platform] 서비스를 사용하여 들어오는 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 다양한 소스에서 데이터를 수집할 수  [!DNL Platform] 있습니다.
-* [샌드박스](../../../../../sandboxes/home.md): [!DNL Experience Platform] 에서는 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이  [!DNL Platform] 되는 단일 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
+* [소스](../../../../home.md):  [!DNL Experience Platform] 서비스를 사용하여 들어오는 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 다양한 소스에서 데이터를 수집할 수  [!DNL Platform] 있습니다.
+* [샌드박스](../../../../../sandboxes/home.md):  [!DNL Experience Platform] 에서는 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이  [!DNL Platform] 되는 단일 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
 
 다음 섹션에서는 [!DNL Flow Service] API를 사용하여 [!DNL Generic OData]에 성공적으로 연결하기 위해 알고 있어야 하는 추가 정보를 제공합니다.
 
@@ -39,7 +39,7 @@ ht-degree: 2%
 | 자격 증명 | 설명 |
 | ---------- | ----------- |
 | `url` | [!DNL Generic OData] 서비스의 루트 URL입니다. |
-| `connectionSpec.id` | 연결 사양은 기본 및 소스 연결 생성과 관련된 인증 사양이 포함된 소스의 커넥터 등록 정보를 반환합니다. [!DNL Generic Generic OData]에 대한 연결 사양 ID는 다음과 같습니다.`8e6b41a8-d998-4545-ad7d-c6a9fff406c3`. |
+| `connectionSpec.id` | 연결 사양은 기본 및 소스 연결 생성과 관련된 인증 사양이 포함된 소스의 커넥터 등록 정보를 반환합니다. [!DNL Generic Generic OData]에 대한 연결 사양 ID는 다음과 같습니다. `8e6b41a8-d998-4545-ad7d-c6a9fff406c3`. |
 
 시작하는 방법에 대한 자세한 내용은 [이 [!DNL Generic OData] document](https://www.odata.org/getting-started/basic-tutorial/)를 참조하십시오.
 
@@ -90,7 +90,7 @@ curl -X POST \
 | 속성 | 설명 |
 | --------- | ----------- |
 | `auth.params.url` | [!DNL Generic OData] 서버의 호스트입니다. |
-| `connectionSpec.id` | [!DNL Generic OData] 연결 사양 ID:`8e6b41a8-d998-4545-ad7d-c6a9fff406c3`. |
+| `connectionSpec.id` | [!DNL Generic OData] 연결 사양 ID: `8e6b41a8-d998-4545-ad7d-c6a9fff406c3`. |
 
 **응답**
 

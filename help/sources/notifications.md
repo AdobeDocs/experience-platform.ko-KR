@@ -5,9 +5,9 @@ solution: Experience Platform
 title: 흐름 실행 알림
 topic-legacy: overview
 exl-id: 0f1cde97-3030-4b8e-be08-21f64e78b794
-source-git-commit: a455134a45137b171636d6525ce9124bc95f4335
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '785'
+source-wordcount: '782'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 Adobe Experience Platform을 사용하면 [!DNL Platform] 서비스를 사용하여 들어오는 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 외부 소스에서 데이터를 수집할 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 등과 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 
-[[!DNL Adobe Experience Platform Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) 는 내의 다양한 소스에서 고객 데이터를 수집하고 중앙 집중화하는 데 사용됩니다 [!DNL Platform]. 이 서비스는 지원되는 모든 소스를 연결할 수 있는 사용자 인터페이스 및 RESTful API를 제공합니다.
+[[!DNL Flow Service] ](https://www.adobe.io/experience-platform-apis/references/flow-service/) API는 내의 다양한 소스에서 고객 데이터를 수집하고 중앙 집중화하는 데  [!DNL Platform]사용됩니다. 이 서비스는 지원되는 모든 소스를 연결할 수 있는 사용자 인터페이스 및 RESTful API를 제공합니다.
 
 Adobe I/O 이벤트를 구독하고 웹 후크를 사용하여 흐름 실행 상태에 대한 알림을 받을 수 있습니다. 이러한 알림에는 흐름 실행의 성공 또는 실행 실패에 기여한 오류에 대한 정보가 포함되어 있습니다.
 

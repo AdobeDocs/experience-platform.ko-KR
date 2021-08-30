@@ -6,23 +6,23 @@ topic-legacy: overview
 type: Tutorial
 description: Flow Service API를 사용하여 Adobe Experience Platform을 Amazon Kinesis 소스에 연결하는 방법을 알아봅니다.
 exl-id: 64da8894-12ac-45a0-b03e-fe9b6aa435d3
-source-git-commit: fe7c498542cc0dd5f53bc3a434ab34d62e449048
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '734'
+source-wordcount: '730'
 ht-degree: 1%
 
 ---
 
 # Flow Service API를 사용하여 [!DNL Amazon Kinesis] 소스 연결을 만듭니다
 
-이 자습서에서는 [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)를 사용하여 [!DNL Amazon Kinesis](이하 &quot;[!DNL Kinesis]&quot;라 함)을 Experience Platform에 연결하는 단계를 안내합니다.
+이 자습서에서는 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)를 사용하여 [!DNL Amazon Kinesis](이하 &quot;[!DNL Kinesis]&quot;라 함)을 Experience Platform에 연결하는 단계를 안내합니다.
 
 ## 시작하기
 
 이 안내서에서는 Adobe Experience Platform의 다음 구성 요소를 이해하고 있어야 합니다.
 
-* [소스](../../../../home.md):Experience Platform을 사용하면 서비스를 사용하여 들어오는 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 다양한 소스에서 데이터를 수집할 수  [!DNL Platform] 있습니다.
-* [샌드박스](../../../../../sandboxes/home.md):Experience Platform은 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이  [!DNL Platform] 되는 단일 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
+* [소스](../../../../home.md): Experience Platform을 사용하면 서비스를 사용하여 들어오는 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 다양한 소스에서 데이터를 수집할 수  [!DNL Platform] 있습니다.
+* [샌드박스](../../../../../sandboxes/home.md): Experience Platform은 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이  [!DNL Platform] 되는 단일 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
 
 다음 섹션에서는 [!DNL Flow Service] API를 사용하여 [!DNL Kinesis]을 Platform에 성공적으로 연결하기 위해 알고 있어야 하는 추가 정보를 제공합니다.
 
@@ -35,7 +35,7 @@ ht-degree: 1%
 | `accessKeyId` | 액세스 키 ID는 Platform에 [!DNL Kinesis] 계정을 인증하는 데 사용되는 액세스 키 쌍의 절반입니다. |
 | `secretKey` | 비밀 액세스 키는 Platform에 [!DNL Kinesis] 계정을 인증하는 데 사용되는 액세스 키 쌍의 다른 절반입니다. |
 | `region` | [!DNL Kinesis] 계정에 대한 영역입니다. 영역에 대한 자세한 내용은 [허용 목록](../../../../ip-address-allow-list.md)에 IP 주소 추가에 대한 안내서를 참조하십시오. |
-| `connectionSpec.id` | 연결 사양은 기본 및 소스 연결 생성과 관련된 인증 사양이 포함된 소스의 커넥터 등록 정보를 반환합니다. [!DNL Kinesis] 연결 사양 ID는 다음과 같습니다.`86043421-563b-46ec-8e6c-e23184711bf6`. |
+| `connectionSpec.id` | 연결 사양은 기본 및 소스 연결 생성과 관련된 인증 사양이 포함된 소스의 커넥터 등록 정보를 반환합니다. [!DNL Kinesis] 연결 사양 ID는 다음과 같습니다. `86043421-563b-46ec-8e6c-e23184711bf6`. |
 
 [!DNL Kinesis] 액세스 키 및 생성 방법에 대한 자세한 내용은 IAM 사용자의 액세스 키 관리에 대한 이 [[!DNL AWS] 안내서를 참조하십시오](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 
@@ -89,7 +89,7 @@ curl -X POST \
 | `auth.params.accessKeyId` | [!DNL Kinesis] 계정에 대한 액세스 키 ID입니다. |
 | `auth.params.secretKey` | [!DNL Kinesis] 계정에 대한 비밀 액세스 키. |
 | `auth.params.region` | [!DNL Kinesis] 계정에 대한 영역입니다. |
-| `connectionSpec.id` | [!DNL Kinesis] 연결 사양 ID:`86043421-563b-46ec-8e6c-e23184711bf6` |
+| `connectionSpec.id` | [!DNL Kinesis] 연결 사양 ID: `86043421-563b-46ec-8e6c-e23184711bf6` |
 
 **응답**
 
@@ -148,10 +148,10 @@ curl -X POST \
 | `name` | 소스 연결의 이름입니다. 소스 연결에 대한 정보를 조회하는 데 사용할 수 있으므로 소스 연결의 이름이 설명적인지 확인합니다. |
 | `description` | 소스 연결에 대한 자세한 정보를 포함하도록 제공할 수 있는 선택적 값입니다. |
 | `baseConnectionId` | 이전 단계에서 생성된 [!DNL Kinesis] 소스의 기본 연결 ID입니다. |
-| `connectionSpec.id` | [!DNL Kinesis]에 대한 고정 연결 사양 ID입니다. 이 ID는 입니다.`86043421-563b-46ec-8e6c-e23184711bf6` |
+| `connectionSpec.id` | [!DNL Kinesis]에 대한 고정 연결 사양 ID입니다. 이 ID는 입니다. `86043421-563b-46ec-8e6c-e23184711bf6` |
 | `data.format` | 수집할 [!DNL Kinesis] 데이터의 형식입니다. 현재 지원되는 데이터 형식은 `json`뿐입니다. |
 | `params.stream` | 레코드를 가져올 데이터 스트림의 이름입니다. |
-| `params.dataType` | 이 매개 변수는 수집할 데이터의 유형을 정의합니다. 지원되는 데이터 유형은 다음과 같습니다.`raw` 및 `xdm` |
+| `params.dataType` | 이 매개 변수는 수집할 데이터의 유형을 정의합니다. 지원되는 데이터 유형은 다음과 같습니다. `raw` 및 `xdm` |
 | `params.reset` | 이 매개 변수는 데이터를 읽는 방법을 정의합니다. `latest` 을 사용하여 가장 최근 데이터에서 읽기를 시작하고 `earliest` 을 사용하여 스트림에서 사용 가능한 첫 번째 데이터에서 읽기를 시작합니다. |
 
 **응답**

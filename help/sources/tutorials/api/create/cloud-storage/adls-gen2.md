@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Flow Service API를 사용하여 Adobe Experience Platform을 Azure Data Lake Storage Gen2에 연결하는 방법을 알아봅니다.
 exl-id: cad5e2a0-e27c-4130-9ad8-888352c92f04
-source-git-commit: 59a8e2aa86508e53f181ac796f7c03f9fcd76158
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '524'
+source-wordcount: '520'
 ht-degree: 1%
 
 ---
@@ -17,14 +17,14 @@ ht-degree: 1%
 
 기본 연결은 소스와 Adobe Experience Platform 간의 인증된 연결을 나타냅니다.
 
-이 자습서에서는 [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)를 사용하여 [!DNL Azure Data Lake Storage Gen2](이하 &quot;ADLS Gen2&quot;라 함)에 대한 기본 연결을 만드는 단계를 안내합니다.
+이 자습서에서는 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)를 사용하여 [!DNL Azure Data Lake Storage Gen2](이하 &quot;ADLS Gen2&quot;라 함)에 대한 기본 연결을 만드는 단계를 안내합니다.
 
-## 시작
+## 시작하기
 
 이 안내서에서는 Adobe Experience Platform의 다음 구성 요소를 이해하고 있어야 합니다.
 
-* [소스](../../../../home.md): [!DNL Experience Platform] 서비스를 사용하여 들어오는 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 다양한 소스에서 데이터를 수집할 수  [!DNL Platform] 있습니다.
-* [샌드박스](../../../../../sandboxes/home.md): [!DNL Experience Platform] 에서는 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 단일 플랫폼 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
+* [소스](../../../../home.md):  [!DNL Experience Platform] 서비스를 사용하여 들어오는 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 다양한 소스에서 데이터를 수집할 수  [!DNL Platform] 있습니다.
+* [샌드박스](../../../../../sandboxes/home.md):  [!DNL Experience Platform] 에서는 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 단일 플랫폼 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
 
 다음 섹션에서는 [!DNL Flow Service] API를 사용하여 ADLS Gen2 소스 연결을 성공적으로 만들기 위해 알고 있어야 하는 추가 정보를 제공합니다.
 
@@ -34,11 +34,11 @@ ht-degree: 1%
 
 | 자격 증명 | 설명 |
 | ---------- | ----------- |
-| `url` | ADLS Gen2의 엔드포인트. 끝점 패턴은 다음과 같습니다.`https://<accountname>.dfs.core.windows.net` |
+| `url` | ADLS Gen2의 엔드포인트. 끝점 패턴은 다음과 같습니다. `https://<accountname>.dfs.core.windows.net` |
 | `servicePrincipalId` | 애플리케이션의 클라이언트 ID입니다. |
 | `servicePrincipalKey` | 응용 프로그램의 키입니다. |
 | `tenant` | 애플리케이션이 포함된 임차인 정보입니다. |
-| `connectionSpec.id` | 연결 사양은 기본 및 소스 연결 생성과 관련된 인증 사양이 포함된 소스의 커넥터 등록 정보를 반환합니다. ADLS Gen2의 연결 사양 ID는 다음과 같습니다.`0ed90a81-07f4-4586-8190-b40eccef1c5a` |
+| `connectionSpec.id` | 연결 사양은 기본 및 소스 연결 생성과 관련된 인증 사양이 포함된 소스의 커넥터 등록 정보를 반환합니다. ADLS Gen2의 연결 사양 ID는 다음과 같습니다. `0ed90a81-07f4-4586-8190-b40eccef1c5a` |
 
 이러한 값에 대한 자세한 내용은 [이 ADLS Gen2 문서](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-data-lake-storage)를 참조하십시오.
 
@@ -95,7 +95,7 @@ curl -X POST \
 | `auth.params.servicePrincipalId` | ADLS Gen2 계정의 서비스 주체 ID입니다. |
 | `auth.params.servicePrincipalKey` | ADLS Gen2 계정의 서비스 주요 키입니다. |
 | `auth.params.tenant` | ADLS Gen2 계정의 테넌트 정보입니다. |
-| `connectionSpec.id` | ADLS Gen2 연결 사양 ID:`0ed90a81-07f4-4586-8190-b40eccef1c5a1` |
+| `connectionSpec.id` | ADLS Gen2 연결 사양 ID: `0ed90a81-07f4-4586-8190-b40eccef1c5a1` |
 
 **응답**
 
