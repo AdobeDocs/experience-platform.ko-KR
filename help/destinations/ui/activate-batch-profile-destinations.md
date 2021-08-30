@@ -5,9 +5,9 @@ type: Tutorial
 seo-title: Activate audience data to batch profile export destinations
 description: 세그먼트를 배치 프로필 기반 대상으로 보내 Adobe Experience Platform에서 보유한 대상 데이터를 활성화하는 방법을 알아봅니다.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
-source-git-commit: 7c10f39e7452481a00fb4269925c80aab34a7319
+source-git-commit: 99835d0b3d8ab64422be7f878cf556ac8890b123
 workflow-type: tm+mt
-source-wordcount: '1925'
+source-wordcount: '1959'
 ht-degree: 0%
 
 ---
@@ -75,9 +75,12 @@ ht-degree: 0%
 
    >[!IMPORTANT]
    >
-   >내부 Experience Platform 프로세스가 구성되는 방식 때문에 첫 번째 증분 또는 전체 파일 내보내기에 모든 채우기 데이터가 포함되지 않을 수 있습니다. <br> <br> 전체 파일과 증분 파일 모두에 대해 가장 최신의 채우기 데이터를 전체적으로 내보내려면 다음 날 오후 12시 GMT 이후에 첫 번째 파일 내보내기 시간을 설정하는 것이 좋습니다. 이는 향후 릴리스에서 해결될 수 있는 제한 사항입니다.
+   >내부 Experience Platform 프로세스가 구성되는 방식 때문에 첫 번째 증분 또는 전체 파일 내보내기에 모든 채우기 데이터가 포함되지 않을 수 있습니다. <br> <br> 전체 파일과 증분 파일 모두에 대해 가장 최신의 채우기 데이터를 전체적으로 내보내려면 다음 날 오후 12시 GMT 이후에 첫 번째 파일 내보내기 시간을 설정하는 것이 좋습니다. 이 제한은 향후 릴리스에서 해결될 예정입니다.
 
 1. **[!UICONTROL 날짜]** 선택기를 사용하여 내보내기가 발생할 날짜 또는 간격을 선택합니다.
+   >[!TIP]
+   >
+   > 일별 내보내기의 경우 시작 및 종료 날짜를 설정하여 다운스트림 플랫폼에서 캠페인 지속 시간을 계획합니다.
 1. **[!UICONTROL 만들기]**&#x200B;를 선택하여 일정을 저장합니다.
 
 
@@ -96,14 +99,17 @@ ht-degree: 0%
    * **[!UICONTROL 일별]**: 증분 파일 내보내기를 지정하는 시간에 매일 예약합니다.
    * **[!UICONTROL 시간별]**: 3, 6, 8 또는 12시간마다 증분 파일 내보내기 예약
 
-2. **[!UICONTROL 시간]** 선택기를 사용하여 내보내기가 발생할 때 [!DNL UTC] 형식으로 하루 중 시간을 선택합니다.
+1. **[!UICONTROL 시간]** 선택기를 사용하여 내보내기가 발생할 때 [!DNL UTC] 형식으로 하루 중 시간을 선택합니다.
 
    >[!IMPORTANT]
    >
-   >내부 Experience Platform 프로세스가 구성되는 방식 때문에 첫 번째 증분 또는 전체 파일 내보내기에 모든 채우기 데이터가 포함되지 않을 수 있습니다. <br> <br> 전체 파일과 증분 파일 모두에 대해 가장 최신의 채우기 데이터를 전체적으로 내보내려면 다음 날 오후 12시 GMT 이후에 첫 번째 파일 내보내기 시간을 설정하는 것이 좋습니다. 이는 향후 릴리스에서 해결될 수 있는 제한 사항입니다.
+   >내부 Experience Platform 프로세스가 구성되는 방식 때문에 첫 번째 증분 또는 전체 파일 내보내기에 모든 채우기 데이터가 포함되지 않을 수 있습니다. <br> <br> 전체 파일과 증분 파일 모두에 대해 가장 최신의 채우기 데이터를 전체적으로 내보내려면 다음 날 오후 12시 GMT 이후에 첫 번째 파일 내보내기 시간을 설정하는 것이 좋습니다. 이 제한은 향후 릴리스에서 해결될 예정입니다.
 
-3. **[!UICONTROL 날짜]** 선택기를 사용하여 내보내기가 발생할 날짜 또는 간격을 선택합니다.
-4. **[!UICONTROL 만들기]**&#x200B;를 선택하여 일정을 저장합니다.
+1. **[!UICONTROL 날짜]** 선택기를 사용하여 내보내기가 발생할 날짜 또는 간격을 선택합니다.
+   >[!TIP]
+   >
+   >다운스트림 플랫폼에서 캠페인의 지속 시간에 따라 시작 및 종료 날짜를 설정합니다.
+1. **[!UICONTROL 만들기]**&#x200B;를 선택하여 일정을 저장합니다.
 
 ### 파일 이름 구성 {#file-names}
 
