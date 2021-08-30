@@ -1,10 +1,10 @@
 ---
 title: Adobe Analytics 확장 개요
 description: Adobe Experience Platform의 Adobe Analytics 태그 확장에 대해 알아봅니다.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 90dece1054cf54d40a62093990a034ee5f3bccaf
 workflow-type: tm+mt
 source-wordcount: '2202'
-ht-degree: 83%
+ht-degree: 84%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 83%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../../term-updates.md)을 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
 
 Adobe Analytics 확장 구성 및 이 확장을 사용하여 규칙을 작성할 때 사용할 수 있는 옵션에 대한 정보를 보려면 이 참조를 사용하십시오.
 
@@ -367,7 +367,7 @@ Analytics [계층](https://experienceleague.adobe.com/docs/analytics/implementat
 
 페이지 보기를 증가시키려는 경우 선택합니다.
 
-#### Do not increment a pageview - s.t()
+#### 페이지 보기 - s.tl() 증분 안 함
 
 페이지 보기를 증가시키지 않으려는 경우 선택합니다.
 
