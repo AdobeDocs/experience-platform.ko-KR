@@ -2,10 +2,10 @@
 keywords: Experience Platform;홈;인기 항목;날짜 범위
 title: 표준 경고 규칙
 description: '이 문서에서는 Experience Platform이 제공하는 사전 정의된 경고 규칙을 다룹니다. '
-source-git-commit: 8c00fb98a213b578f6970c1e1978f0159f8f38df
+source-git-commit: de8d8d92622abc75f2d09f4bb771dbe4268d0b38
 workflow-type: tm+mt
-source-wordcount: '359'
-ht-degree: 13%
+source-wordcount: '148'
+ht-degree: 12%
 
 ---
 
@@ -16,19 +16,22 @@ Adobe Experience Platform은 조직에 대해 활성화할 수 있는 사전 정
 
 | 규칙 | 설명 | 평가 빈도 | 반복 창 |
 | --- | --- | --- | --- |
-| 자격 임계값 초과 | 이 경고는 생성된 프로필 수가 조직 권한 중 80%를 초과할 때 트리거됩니다. | 30초 | N/A |
-| 지난 24시간 동안 수집 활동이 없음 | 이 경고는 지난 24시간 동안 새 데이터를 섭취하지 않은 경우 트리거됩니다. | 1일 | 1일 |
-| SFTP 소스가 데이터를 수집하지 않았습니다 | 이 경고는 [SFTP 소스](../../sources/connectors/cloud-storage/sftp.md)가 특정 기간 내에 데이터를 수집하지 않은 경우 트리거됩니다. | 1일 | 1일 |
-| 수집 오류 비율 초과 | 이 경고는 데이터 처리에 대한 오류율이 20%를 초과할 때 트리거됩니다. | 30초 | 30초 |
-| 피드 메시지 | 이 경고는 [세그먼트 일치](../../segmentation/ui/segment-match.md)를 사용하여 사용자에게 ID 공유 피드 메시지를 전송한 경우 발생합니다. | 해당 없음 | 해당 없음 |
-| 피드 액세스 취소됨 | 이 경고는 다른 Platform 사용자가 [세그먼트 일치](../../segmentation/ui/segment-match.md)를 사용하여 ID 공유 피드에 대한 액세스를 취소한 경우 트리거됩니다. | 해당 없음 | 해당 없음 |
-| 피드가 수정됨 | 이 경고는 [세그먼트 일치](../../segmentation/ui/segment-match.md)를 사용하여 사용자가 ID 공유 피드를 수정할 때 트리거됩니다. | 해당 없음 | 해당 없음 |
-| 피드 공유 | 이 경고는 사용자가 [세그먼트 일치](../../segmentation/ui/segment-match.md)에서 새 피드를 공유할 때 트리거됩니다. | 해당 없음 | 해당 없음 |
-| 링크 요청 | 이 경고는 사용자가 파트너 공유를 위해 연결을 요청할 때 트리거됩니다. | 해당 없음 | 해당 없음 |
-| 링크 작업 | 이 경고는 사용자가 파트너 공유에 대한 연결 요청을 수락하면 트리거됩니다. | 해당 없음 | 해당 없음 |
-| 세그먼트 정의 사용 안 함 | 이 경고는 세그먼트 정의가 비활성화될 때 트리거됩니다. | 해당 없음 | 해당 없음 |
-| 세그먼트 작업 지연 | 이 경고는 세그먼트 작업을 완료하는 데 150분 이상 걸리는 경우 트리거됩니다. | 30초 | 3시간 |
+| 소스 흐름 실행 성공 | 이 경고는 소스 연결에서 데이터를 성공적으로 수집할 때 트리거됩니다. | N/A | 해당 없음 |
 | 소스 흐름 실행 실패 | 이 경고는 소스 연결에서 데이터를 수집하는 동안 오류가 발생하면 트리거됩니다. | 해당 없음 | 해당 없음 |
-| 소스 흐름 실행 성공 | 이 경고는 소스 연결에서 데이터를 성공적으로 수집할 때 트리거됩니다. | 해당 없음 | 해당 없음 |
+| 세그먼트 작업 지연 | 이 경고는 세그먼트 작업을 완료하는 데 150분 이상 걸리는 경우 트리거됩니다. | 30초 | 3시간 |
+| 세그먼트 정의 사용 안 함 | 이 경고는 세그먼트 정의가 비활성화될 때 트리거됩니다. | 해당 없음 | 해당 없음 |
 
 {style=&quot;table-layout:auto&quot;}
+
+<!-- (Definitions to be added once available)
+| Entitlement Threshold Exceeded | This alert triggers when the number of created profiles exceeds 80% of your organization's entitlement. | 30 seconds | N/A |
+| No ingestion activity in past 24 hours | This alert triggers when no new data has been ingested in the last 24-hour period. | 1 day | 1 day |
+| SFTP source has not ingested data | This alert triggers when an [SFTP source](../../sources/connectors/cloud-storage/sftp.md) has not ingested any data within a certain time period. | 1 day | 1 day |
+| Ingestion error rate exceeded | This alert triggers when the error rate for data ingestion exceeds 20%. | 30 seconds | 30 seconds |
+| Feed Message | This alert when an identity sharing feed message has been sent to a user using [Segment Match](../../segmentation/ui/segment-match.md). | N/A | N/A |
+| Feed Access Revoked | This alert triggers when another Platform user revokes access to an identity sharing feed using [Segment Match](../../segmentation/ui/segment-match.md). | N/A | N/A |
+| Feed Modified | This alert triggers when an identity sharing feed is modified by a user using [Segment Match](../../segmentation/ui/segment-match.md). | N/A | N/A |
+| Feed Shared | This alert triggers when a user shares a new feed in [Segment Match](../../segmentation/ui/segment-match.md). | N/A | N/A |
+| Link Request | This alert triggers when a user requests to connect for partner sharing. | N/A | N/A |
+| Link Action | This alert triggers when a user accepts a request to connect for partner sharing. | N/A | N/A |
+-->
