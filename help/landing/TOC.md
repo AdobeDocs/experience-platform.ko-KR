@@ -3,7 +3,7 @@ audience: user
 user-guide-title: Adobe Experience Platform 개요
 breadcrumb-title: Experience Platform 개요
 user-guide-description: Experience Platform을 통해 개인화된 경험을 실시간으로 고객에게 전달하는 방법을 살펴볼 수 있습니다.
-source-git-commit: a0f4e49192a54075ce7c48620c9729e61ecdfdac
+source-git-commit: a154ff9dd2a2091a427f7e650a9cb6bc57cbdfb5
 workflow-type: tm+mt
 source-wordcount: '197'
 ht-degree: 23%
@@ -46,10 +46,10 @@ ht-degree: 23%
       * Adobe 표준 {#adobe}
          * [개요](./governance-privacy-security/consent/adobe/overview.md)
          * [동의 및 기본 설정 데이터를 캡처하도록 데이터 세트 구성](./governance-privacy-security/consent/adobe/dataset.md)
-         * [Platform Web SDK를 통합하여 동의 및 기본 설정 데이터를 처리합니다](./governance-privacy-security/consent/adobe/sdk.md)
       * IAB TCF 2.0 {#iab}
          * [개요](./governance-privacy-security/consent/iab/overview.md)
          * [동의 및 기본 설정 데이터를 캡처하도록 데이터 세트 구성](./governance-privacy-security/consent/iab/dataset.md)
+      * [Platform Web SDK를 통합하여 동의 및 기본 설정 데이터를 처리합니다](./governance-privacy-security/consent/sdk.md)
    * 감사 로그(베타) {#audit-logs}
       * [개요](./governance-privacy-security/audit-logs/overview.md)
 * [라이선스 사용 대시보드](license-usage-dashboard.md)

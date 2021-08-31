@@ -5,9 +5,9 @@ title: IAB TCF 2.0 동의 데이터 캡처 데이터 세트 만들기
 topic-legacy: privacy events
 description: 이 문서에서는 IAB TCF 2.0 동의 데이터를 수집하기 위해 필요한 데이터 세트 2개를 설정하는 단계를 제공합니다.
 exl-id: 36b2924d-7893-4c55-bc33-2c0234f1120e
-source-git-commit: 9b75a69cc6e31ea0ad77048a6ec1541df2026f27
+source-git-commit: 656d772335c2f5ae58b471b31bfbd6dfa82490cd
 workflow-type: tm+mt
-source-wordcount: '1576'
+source-wordcount: '1655'
 ht-degree: 0%
 
 ---
@@ -39,19 +39,19 @@ Adobe Experience Platform이 IAB [!DNL Transparency & Consent Framework] (TCF) 2
 
 ## TCF 2.0 필드 그룹 {#field-groups}
 
-[!UICONTROL IAB TCF 2.0 동의] 스키마 필드 그룹은 TCF 2.0 지원에 필요한 고객 동의 필드를 제공합니다. 이 필드 그룹에는 두 가지 버전이 있습니다. 하나는 [!DNL XDM Individual Profile] 클래스와 호환되고 다른 하나는 [!DNL XDM ExperienceEvent] 클래스와 호환됩니다.
+[!UICONTROL IAB TCF 2.0 동의 세부 사항] 스키마 필드 그룹은 TCF 2.0 지원에 필요한 고객 동의 필드를 제공합니다. 이 필드 그룹에는 두 가지 버전이 있습니다. 하나는 [!DNL XDM Individual Profile] 클래스와 호환되고 다른 하나는 [!DNL XDM ExperienceEvent] 클래스와 호환됩니다.
 
 아래 섹션에서는 섭취 중에 예상되는 데이터를 포함하여 이러한 각 필드 그룹의 구조를 설명합니다.
 
 ### 프로필 필드 그룹 {#profile-field-group}
 
-[!DNL XDM Individual Profile]IAB TCF 2.0 동의] 필드 그룹은 [!UICONTROL 를 기반으로 하는 스키마의 경우 고객 ID를 TCF 동의 환경 설정에 매핑하는 단일 맵 유형 필드 `identityPrivacyInfo`를 제공합니다. 자동 적용을 수행하려면 실시간 고객 프로필에 대해 활성화된 레코드 기반 스키마에 이 필드 그룹을 포함해야 합니다.
+[!DNL XDM Individual Profile]IAB TCF 2.0 동의 세부 사항] 필드 그룹은 고객 ID를 TCF 동의 기본 설정에 매핑하는 단일 맵 유형 필드 `identityPrivacyInfo`를 제공합니다. [!UICONTROL  자동 적용을 수행하려면 실시간 고객 프로필에 대해 활성화된 레코드 기반 스키마에 이 필드 그룹을 포함해야 합니다.
 
 구조 및 사용 사례에 대한 자세한 내용은 이 필드 그룹의 [참조 안내서](../../../../xdm/field-groups/profile/iab.md)를 참조하십시오.
 
 ### 이벤트 필드 그룹 {#event-field-group}
 
-시간에 따른 동의 변경 이벤트를 추적하려면 [!UICONTROL IAB TCF 2.0 Consent] 필드 그룹을 [!UICONTROL XDM ExperienceEvent] 스키마에 추가할 수 있습니다.
+시간에 따른 동의 변경 이벤트를 추적하려면 [!UICONTROL IAB TCF 2.0 동의 세부 사항] 필드 그룹을 [!UICONTROL XDM ExperienceEvent] 스키마에 추가할 수 있습니다.
 
 시간이 지남에 따라 동의 변경 이벤트를 추적할 계획이 없는 경우 이벤트 스키마에 이 필드 그룹을 포함할 필요가 없습니다. TCF 동의 값을 자동으로 적용할 때 Experience Platform은 [프로필 필드 그룹](#profile-field-group)에 수집된 최신 동의 정보만 사용합니다. 이벤트에서 캡처한 동의 값은 자동 적용 워크플로우에 참여하지 않습니다.
 
@@ -60,6 +60,8 @@ Adobe Experience Platform이 IAB [!DNL Transparency & Consent Framework] (TCF) 2
 ## 고객 동의 스키마 만들기 {#create-schemas}
 
 동의 데이터를 캡처하는 데이터 세트를 만들려면 먼저 해당 데이터 세트를 기반으로 XDM 스키마를 만들어야 합니다.
+
+이전 섹션에서 언급했듯이 다운스트림 Platform 워크플로우에서 동의를 집행하려면 [!UICONTROL XDM 개별 프로필] 클래스를 사용하는 스키마가 필요합니다. 시간에 따른 동의 변경을 추적하려는 경우 [!UICONTROL XDM ExperienceEvent]을 기반으로 별도의 스키마를 선택적으로 만들 수도 있습니다. 두 스키마에는 `identityMap` 필드와 적절한 TCF 2.0 필드 그룹이 있어야 합니다.
 
 Platform UI의 왼쪽 탐색 영역에서 **[!UICONTROL 스키마]**&#x200B;를 선택하여 [!UICONTROL 스키마] 작업 공간을 엽니다. 여기에서 아래 섹션의 단계에 따라 필요한 각 스키마를 만듭니다.
 
@@ -75,11 +77,15 @@ Platform UI의 왼쪽 탐색 영역에서 **[!UICONTROL 스키마]**&#x200B;를 
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/create-schema-profile.png)
 
-**[!UICONTROL 필드 그룹 추가]** 대화 상자가 나타나서 필드에 필드 그룹을 바로 추가할 수 있습니다. 여기에서 목록에서 **[!UICONTROL IAB TCF 2.0 동의]**&#x200B;를 선택합니다. 검색 창에서 검색 결과의 범위를 좁혀 필드 그룹을 더 쉽게 찾을 수 있습니다(선택 사항). 필드 그룹을 선택한 후 **[!UICONTROL 필드 그룹 추가]**&#x200B;를 선택합니다.
+**[!UICONTROL 필드 그룹 추가]** 대화 상자가 나타나서 필드에 필드 그룹을 바로 추가할 수 있습니다. 여기에서 목록에서 **[!UICONTROL IAB TCF 2.0 동의 세부 사항]**&#x200B;을 선택합니다. 검색 창에서 검색 결과의 범위를 좁혀 필드 그룹을 더 쉽게 찾을 수 있습니다(선택 사항).
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/add-profile-privacy.png)
 
-`identityPrivacyInfo` 필드가 스키마 구조에 추가되었음을 나타내는 캔버스가 다시 나타납니다.
+그런 다음 목록에서 **[!UICONTROL IdentityMap]** 필드 그룹을 찾아 선택합니다. 두 필드 그룹이 오른쪽 레일에 나열되면 **[!UICONTROL 필드 그룹 추가]**&#x200B;를 선택합니다.
+
+![](../../../images/governance-privacy-security/consent/iab/dataset/add-profile-identitymap.png)
+
+`identityPrivacyInfo` 및 `identityMap` 필드가 스키마 구조에 추가되었음을 나타내는 캔버스가 다시 나타납니다.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/profile-privacy-structure.png)
 
@@ -87,18 +93,9 @@ Platform UI의 왼쪽 탐색 영역에서 **[!UICONTROL 스키마]**&#x200B;를 
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/schema-details-profile.png)
 
-이름과 설명을 제공한 후 캔버스 왼쪽의 **[!UICONTROL 필드 그룹]** 섹션 아래에서 **[!UICONTROL 추가]**&#x200B;를 선택합니다.
+이름 및 설명을 제공한 후에는 캔버스 왼쪽의 **[!UICONTROL 필드 그룹]** 섹션 아래에서 **[!UICONTROL 추가]**&#x200B;를 선택하여 스키마에 필드를 추가할 수도 있습니다.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/add-field-group-profile.png)
-
-여기에서 대화 상자를 사용하여 스키마에 다음과 같은 추가 필드 그룹을 추가합니다.
-
-* [!UICONTROL IdentityMap]
-* [!UICONTROL 프로필에 대한 데이터 캡처 영역]
-* [!UICONTROL 인구 통계 세부 정보]
-* [!UICONTROL 개인 연락처 세부 정보]
-
-![](../../../images/governance-privacy-security/consent/iab/dataset/profile-all-field-groups.png)
 
 [!DNL Real-time Customer Profile]에서 이미 사용할 수 있도록 활성화된 기존 스키마를 편집하는 경우, **[!UICONTROL 저장]**&#x200B;을 선택하여 [동의 스키마](#dataset)를 기반으로 데이터 세트를 만드는 섹션으로 건너뛸 때까지 변경 내용을 확인합니다. 새 스키마를 만드는 경우 아래 하위 섹션에 설명된 단계를 계속 따르십시오.
 
@@ -110,7 +107,7 @@ Platform UI의 왼쪽 탐색 영역에서 **[!UICONTROL 스키마]**&#x200B;를 
 >
 >이 섹션에 표시된 예제 스키마는 해당 `identityMap` 필드를 기본 ID로 사용합니다. 다른 필드를 기본 ID로 설정하려면 쿠키 ID와 같은 간접 식별자를 사용하고 이메일 주소와 같은 관심사 기반 광고에서 사용할 수 없는 직접 식별 필드가 아닌지 확인하십시오. 어떤 분야가 제한되는지를 잘 모르는 경우 법률 자문을 구하십시오.
 >
->스키마의 기본 ID 필드를 설정하는 방법에 대한 단계는 [스키마 만들기 자습서](../../../../xdm/tutorials/create-schema-ui.md#identity-field)에 있습니다.
+>스키마의 기본 ID 필드를 설정하는 방법에 대한 단계는 [[!UICONTROL 스키마] UI 안내서](../../../../xdm/ui/fields/identity.md)에 있습니다.
 
 [!DNL Profile]에 대한 스키마를 활성화하려면 왼쪽 레일에서 스키마 이름을 선택하여 **[!UICONTROL 스키마 속성]** 섹션을 엽니다. 여기에서 **[!UICONTROL 프로필]** 전환 단추를 선택합니다.
 
@@ -126,19 +123,24 @@ Platform UI의 왼쪽 탐색 영역에서 **[!UICONTROL 스키마]**&#x200B;를 
 
 ### 이벤트 동의 스키마 만들기 {#event-schema}
 
+>[!NOTE]
+>
+>이벤트 동의 스키마는 시간 경과에 따른 동의 변경 이벤트를 추적하는 데만 사용되며 다운스트림 적용 워크플로우에는 참여하지 않습니다. 시간이 지나면서 동의 변경 사항을 추적하지 않으려면 [동의 데이터 세트 만들기](#datasets)에서 다음 섹션으로 건너뛸 수 있습니다.
+
 **[!UICONTROL 스키마]** 작업 영역에서 **[!UICONTROL 스키마 만들기]**&#x200B;를 선택한 다음 드롭다운에서 **[!UICONTROL XDM ExperienceEvent]**&#x200B;를 선택합니다.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/create-schema-event.png)
 
-**[!UICONTROL 필드 그룹 추가]** 대화 상자가 나타납니다. 여기에서 목록에서 **[!UICONTROL IAB TCF 2.0 동의]**&#x200B;를 선택합니다. 검색 창에서 검색 결과의 범위를 좁혀 필드 그룹을 더 쉽게 찾을 수 있습니다(선택 사항). 필드 그룹을 선택한 후 **[!UICONTROL 필드 그룹 추가]**&#x200B;를 선택합니다.
+**[!UICONTROL 필드 그룹 추가]** 대화 상자가 나타납니다. 여기에서 목록에서 **[!UICONTROL IAB TCF 2.0 동의 세부 사항]**&#x200B;을 선택합니다. 검색 창에서 검색 결과의 범위를 좁혀 필드 그룹을 더 쉽게 찾을 수 있습니다(선택 사항).
 
->[!NOTE]
->
->시간이 지남에 따라 동의 변경 이벤트를 추적할 예정인 경우에만 이벤트 스키마에 이 필드 그룹을 포함하는 것이 필요합니다. 이러한 이벤트를 추적하지 않으려면 웹 SDK를 설정할 때 대신 이러한 필드 없이 이벤트 스키마를 사용할 수 있습니다.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/add-event-privacy.png)
 
-`consentStrings` 필드가 스키마 구조에 추가되었음을 나타내는 캔버스가 다시 나타납니다.
+그런 다음 목록에서 **[!UICONTROL IdentityMap]** 필드 그룹을 찾아 선택합니다. 두 필드 그룹이 오른쪽 레일에 나열되면 **[!UICONTROL 필드 그룹 추가]**&#x200B;를 선택합니다.
+
+![](../../../images/governance-privacy-security/consent/iab/dataset/add-event-identitymap.png)
+
+`consentStrings` 및 `identityMap` 필드가 스키마 구조에 추가되었음을 나타내는 캔버스가 다시 나타납니다.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/event-privacy-structure.png)
 
@@ -146,18 +148,11 @@ Platform UI의 왼쪽 탐색 영역에서 **[!UICONTROL 스키마]**&#x200B;를 
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/schema-details-event.png)
 
-이름과 설명을 제공한 후 캔버스 왼쪽의 **[!UICONTROL 필드 그룹]** 섹션 아래에서 **[!UICONTROL 추가]**&#x200B;를 선택합니다.
+이름 및 설명을 제공한 후에는 캔버스 왼쪽의 **[!UICONTROL 필드 그룹]** 섹션 아래에서 **[!UICONTROL 추가]**&#x200B;를 선택하여 스키마에 필드를 추가할 수도 있습니다.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/add-field-group-event.png)
 
-여기에서 위의 단계를 반복하여 스키마에 다음과 같은 추가 필드 그룹을 추가합니다.
-
-* [!UICONTROL IdentityMap]
-* [!UICONTROL 환경 세부 사항]
-* [!UICONTROL 웹 세부 사항]
-* [!UICONTROL 구현 세부 정보]
-
-필드 그룹이 추가되면 **[!UICONTROL 저장]**&#x200B;을 선택하여 완료합니다.
+필요한 필드 그룹을 추가한 후에는 **[!UICONTROL 저장]**&#x200B;을 선택하여 완료합니다.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/event-all-field-groups.png)
 
@@ -187,13 +182,13 @@ Platform UI의 왼쪽 탐색 영역에서 **[!UICONTROL 스키마]**&#x200B;를 
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/dataset-enable-profile.png)
 
-위의 단계를 다시 수행하여 TCF 2.0 준수에 필요한 다른 데이터 세트를 만듭니다.
+스키마를 생성한 경우 이벤트 기반 데이터 세트를 만들려면 위의 단계를 다시 수행하십시오.
 
 ## 다음 단계
 
-이 자습서를 따라 고객 동의 데이터를 수집하는 데 사용할 수 있는 데이터 세트를 두 개 만들었습니다.
+이 자습서를 따라 이제 고객 동의 데이터를 수집하는 데 사용할 수 있는 데이터 세트를 한 개 이상 만들었습니다.
 
-* 실시간 고객 프로필에서 사용할 수 있도록 활성화된 레코드 기반 데이터 세트입니다.
-* [!DNL Profile]에 대해 활성화되지 않은 시계열 기반 데이터 세트입니다.
+* 실시간 고객 프로필에서 사용할 수 있도록 활성화된 레코드 기반 데이터 세트입니다. **(필수 여부)**
+* [!DNL Profile]에 대해 활성화되지 않은 시계열 기반 데이터 세트입니다. (선택 사항)
 
 이제 [IAB TCF 2.0 개요](./overview.md#merge-policies) 로 돌아가서 TCF 2.0 준수를 위해 플랫폼을 구성하는 프로세스를 계속 진행할 수 있습니다.
