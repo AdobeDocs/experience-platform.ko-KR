@@ -3,9 +3,9 @@ keywords: Google 광고;google 광고;google adwords;Google AdWords;Google Adwor
 title: Google 광고 연결
 description: 이전에 Google AdWords라고 알려진 Google Ads는 텍스트 기반 검색, 그래픽 디스플레이, YouTube 비디오 및 인앱 모바일 디스플레이에서 클릭당 과금광고를 할 수 있도록 하는 온라인 광고 서비스입니다.
 exl-id: 7143f476-49a8-42aa-bfb4-b11fc2b8f5c3
-source-git-commit: d0112cb26fcb85ad91ba403f81ee7f11d0889046
+source-git-commit: f04ea9aed586c8582286de82bfeee3f6f04cc360
 workflow-type: tm+mt
-source-wordcount: '698'
+source-wordcount: '708'
 ht-degree: 2%
 
 ---
@@ -45,7 +45,7 @@ ht-degree: 2%
 
 **세그먼트 내보내기**  - 세그먼트(대상)의 모든 구성원을 Google 대상으로 내보냅니다.
 
-## 전제 조건
+## 전제 조건 {#prerequisites}
 
 ### 기존 [!DNL Google Ads] 계정
 
@@ -95,7 +95,7 @@ Platform에서 [!DNL Google Ads] 대상을 만들려면 먼저 [!DNL Google]에 
 
 `{"message":"Google Error: AuthorizationError.USER_PERMISSION_DENIED","code":"400 BAD_REQUEST"}`
 
-이 오류는 고객이 기존 [!DNL Google Ads] 계정 없이 대상을 구성하려고 할 때 발생합니다.
+이 오류는 고객 계정이 [사전 요구 사항](#prerequisites)을 준수하지 않거나 고객이 기존 [!DNL Google Ads] 계정 없이 대상을 구성하려고 할 때 발생합니다.
 
 [!DNL Google] 에는 타사  [!DNL Google Ads] 공급업체와의 새 쿠키 통합 사용이 더 이상 사용되지 않습니다. [allow-list](#allow-listing) 단계를 수행하려면 [!DNL Google Ads]와 기존 통합이 있어야 합니다.
 
