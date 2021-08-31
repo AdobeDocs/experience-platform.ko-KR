@@ -3,9 +3,9 @@ keywords: DoubleClick 입찰 관리자;DoubleClick 입찰 관리자;DoubleClick;
 title: Google Display & Video 360 연결
 description: 이전에 DoubleClick Bid Manager라고 알려진 Display & Video 360은 디스플레이, 비디오 및 모바일 인벤토리 소스에서 재타겟팅하고 대상 지정 디지털 캠페인을 실행하는 데 사용되는 도구입니다.
 exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
-source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
+source-git-commit: d0112cb26fcb85ad91ba403f81ee7f11d0889046
 workflow-type: tm+mt
-source-wordcount: '673'
+source-wordcount: '709'
 ht-degree: 2%
 
 ---
@@ -45,13 +45,13 @@ ht-degree: 2%
 
 **세그먼트 내보내기**  - 세그먼트(대상)의 모든 구성원을 Google 대상으로 내보냅니다.
 
-## 전제 조건
+## 전제 조건 {#prerequisites}
 
 ### 허용 목록
 
 >[!NOTE]
 >
->Platform에서 첫 번째 [!DNL Google Display & Video 360] 대상을 설정하기 전에 허용 목록이 필수입니다. 대상을 만들기 전에 Google에서 아래 설명된 허용 목록 프로세스를 완료했는지 확인하십시오.
+>Platform에서 첫 번째 [!DNL Google Display & Video 360] 대상을 설정하기 전에 허용 목록이 필수입니다. 대상을 만들기 전에 Google에서 아래 설명된 허용 목록 프로세스가 완료되었는지 확인하십시오.
 
 Platform에서 [!DNL Google Display & Video 360] 대상을 만들려면 먼저 Google에 Adobe을 허용된 데이터 공급자 목록에 추가하고, 허용 목록에 계정을 추가하도록 요청해야 합니다. Google에 문의하여 다음 정보를 제공하십시오.
 
@@ -85,3 +85,13 @@ Platform에서 [!DNL Google Display & Video 360] 대상을 만들려면 먼저 G
 ## 내보낸 데이터
 
 데이터를 [!DNL Google Display & Video 360] 대상으로 성공적으로 내보냈는지 확인하려면 [!DNL Google Display & Video 360] 계정을 확인하십시오. 활성화가 성공하면 계정에 대상이 채워집니다.
+
+## 문제 해결 {#troubleshooting}
+
+### 400 잘못된 요청 오류 메시지 {#bad-request}
+
+이 대상을 구성할 때 다음 오류가 표시될 수 있습니다.
+
+`{"message":"Google Error: AuthorizationError.USER_PERMISSION_DENIED","code":"400 BAD_REQUEST"}`
+
+이 오류는 고객 계정이 [사전 요구 사항](#prerequisites)을 준수하지 않을 때 발생합니다. 이 문제를 해결하려면 Google에 문의하여 계정이 허용 목록에 추가되었는지 확인하십시오.

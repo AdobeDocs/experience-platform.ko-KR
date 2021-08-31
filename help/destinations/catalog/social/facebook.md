@@ -3,7 +3,7 @@ keywords: facebook 연결;facebook 연결;facebook 대상;facebook;instagram;mes
 title: Facebook 연결
 description: 해시된 이메일을 기반으로 대상 타깃팅, 개인화 및 억제를 위해 Facebook 캠페인용 프로필을 활성화합니다.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 183aff5a3b6bcc1635ae7b4b0e503a9d4b6d4d31
+source-git-commit: d0112cb26fcb85ad91ba403f81ee7f11d0889046
 workflow-type: tm+mt
 source-wordcount: '1498'
 ht-degree: 1%
@@ -177,7 +177,7 @@ Experience Platform에서 이메일 주소를 수집하는 방법에 대한 자�
 
 ### 400 잘못된 요청 오류 메시지 {#bad-request}
 
-세그먼트를 [!DNL Facebook]에 활성화할 때 다음 오류가 발생할 수 있습니다.
+이 대상을 구성할 때 다음 오류가 표시될 수 있습니다.
 
 `{"message":"Facebook Error: Permission error","code":"400 BAD_REQUEST"}`
 

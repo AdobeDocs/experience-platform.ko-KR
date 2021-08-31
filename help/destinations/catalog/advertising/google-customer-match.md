@@ -3,9 +3,9 @@ keywords: google 고객 일치;Google 고객 일치;Google Customer Match
 title: Google Customer Match 연결
 description: 'Google Customer Match를 사용하면 온라인 및 오프라인 데이터를 사용하여 Google이 소유하거나 운영하는 속성(예: Search, Shopping, Gmail, YouTube)에서 고객에게 도달하고 다시 참여하도록 할 수 있습니다.'
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: 183aff5a3b6bcc1635ae7b4b0e503a9d4b6d4d31
+source-git-commit: d0112cb26fcb85ad91ba403f81ee7f11d0889046
 workflow-type: tm+mt
-source-wordcount: '1494'
+source-wordcount: '1557'
 ht-degree: 0%
 
 ---
@@ -56,7 +56,7 @@ Experience Platform의 일부 대상에는 대상 플랫폼으로 전송되거�
 
 Experience Platform에서 [!DNL Google Customer Match] 대상을 설정하기 전에 [Google 지원 설명서](https://support.google.com/google-ads/answer/6299717)에 설명된 [!DNL Customer Match] 사용에 대한 Google의 정책을 읽고 준수하도록 하십시오.
 
-그런 다음 [!DNL Google] 계정이 [!DNL Standard] 이상의 액세스 수준에 대해 구성되어 있는지 확인합니다. 자세한 내용은 [Google 광고 설명서](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1)를 참조하십시오.
+그런 다음 [!DNL Google] 계정이 [!DNL Standard] 이상의 권한 수준에 대해 구성되어 있는지 확인합니다. 자세한 내용은 [Google 광고 설명서](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1)를 참조하십시오.
 
 ### 허용 목록 {#allowlist}
 
@@ -174,6 +174,17 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 
 세그먼트를 [!DNL IDFA] 및 [!DNL GAID] 모바일 ID에 모두 매핑하면 [!DNL Google Customer Match] 는 각 ID 매핑에 대해 별도의 세그먼트를 만듭니다. [!DNL Google Ads] 계정에는 [!DNL IDFA] 및 [!DNL GAID] 매핑에 대한 세그먼트와, 각각 다른 두 개의 세그먼트가 표시됩니다.
 
+## 문제 해결 {#troubleshooting}
+
+### 400 잘못된 요청 오류 메시지 {#bad-request}
+
+이 대상을 구성할 때 다음 오류가 표시될 수 있습니다.
+
+`{"message":"Google Customer Match Error: OperationAccessDenied.ACTION_NOT_PERMITTED","code":"400 BAD_REQUEST"}`
+
+이 오류는 고객 계정이 [사전 요구 사항](#google-account-prerequisites)을 준수하지 않을 때 발생합니다. 이 문제를 해결하려면 Google에 문의하여 계정이 허용 목록에 추가되고 [!DNL Standard] 이상의 권한 수준에 대해 구성되어 있는지 확인하십시오. 자세한 내용은 [Google 광고 설명서](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1)를 참조하십시오.
+
 ## 추가 리소스 {#additional-resources}
 
 * [Google Customer Match 통합 - 비디오 자습서](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/integrate-with-google-customer-match.html)
+

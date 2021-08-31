@@ -3,9 +3,9 @@ keywords: Google 광고;google 광고;google adwords;Google AdWords;Google Adwor
 title: Google 광고 연결
 description: 이전에 Google AdWords라고 알려진 Google Ads는 텍스트 기반 검색, 그래픽 디스플레이, YouTube 비디오 및 인앱 모바일 디스플레이에서 클릭당 과금광고를 할 수 있도록 하는 온라인 광고 서비스입니다.
 exl-id: 7143f476-49a8-42aa-bfb4-b11fc2b8f5c3
-source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
+source-git-commit: d0112cb26fcb85ad91ba403f81ee7f11d0889046
 workflow-type: tm+mt
-source-wordcount: '639'
+source-wordcount: '698'
 ht-degree: 2%
 
 ---
@@ -53,7 +53,7 @@ ht-degree: 2%
 >
 > [!DNL Google] 에는 타사  [!DNL Google Ads] 공급업체와의 새 쿠키 통합 사용이 더 이상 사용되지 않습니다. 다음 섹션에서 허용 목록 단계를 수행하려면 [!DNL Google Ads]과(와) 기존 통합이 있어야 합니다. 따라서 [!DNL Google Ads] 사용에 대한 권장 접근 방식은 [!DNL Google Customer Match] 통합을 설정하는 것입니다. [!DNL Google Customer Match] 통합 만들기에 대한 자세한 내용은 [[!DNL Google Customer Match]](./google-customer-match.md) 연결 만들기에 대한 자습서를 참조하십시오.
 
-### 허용 목록
+### 허용 목록 {#allow-listing}
 
 >[!NOTE]
 >
@@ -83,7 +83,20 @@ Platform에서 [!DNL Google Ads] 대상을 만들려면 먼저 [!DNL Google]에 
 
 대상 세그먼트를 이 대상으로 활성화하는 방법에 대한 지침은 [스트리밍 세그먼트 내보내기 대상으로 대상 활성화](../../ui/activate-segment-streaming-destinations.md)를 참조하십시오.
 
-
 ## 내보낸 데이터
 
 데이터를 [!DNL Google Ads] 대상으로 성공적으로 내보냈는지 확인하려면 [!DNL Google Ads] 계정을 확인하십시오. 활성화가 성공하면 계정에 대상이 채워집니다.
+
+## 문제 해결 {#troubleshooting}
+
+### 400 잘못된 요청 오류 메시지 {#bad-request}
+
+이 대상을 구성할 때 다음 오류가 표시될 수 있습니다.
+
+`{"message":"Google Error: AuthorizationError.USER_PERMISSION_DENIED","code":"400 BAD_REQUEST"}`
+
+이 오류는 고객이 기존 [!DNL Google Ads] 계정 없이 대상을 구성하려고 할 때 발생합니다.
+
+[!DNL Google] 에는 타사  [!DNL Google Ads] 공급업체와의 새 쿠키 통합 사용이 더 이상 사용되지 않습니다. [allow-list](#allow-listing) 단계를 수행하려면 [!DNL Google Ads]와 기존 통합이 있어야 합니다.
+
+[!DNL Google Ads] 사용에 대한 권장 접근 방식은 [[!DNL Google Customer Match]](google-customer-match.md) 통합을 설정하는 것입니다.
