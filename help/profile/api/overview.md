@@ -3,9 +3,9 @@ keywords: Experience Platform;프로필;실시간 고객 프로필;문제 해결
 title: 실시간 고객 프로필 API 안내서
 description: 개발자는 실시간 고객 프로필 API를 사용하여 보기 프로필, 병합 정책 만들기 및 업데이트, 프로필 데이터 내보내기 또는 샘플 데이터 내보내기, 더 이상 필요하지 않거나 오류가 추가된 프로필 데이터 삭제 등 프로필 데이터를 탐색 및 작업할 수 있습니다. API를 사용하여 주요 작업을 수행하는 방법을 알아보려면 이 안내서를 따르십시오.
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-source-git-commit: 4c544170636040b8ab58780022a4c357cfa447de
+source-git-commit: b2ae2b4ca2efe606aa148e06ca988a6285bedfee
 workflow-type: tm+mt
-source-wordcount: '886'
+source-wordcount: '890'
 ht-degree: 0%
 
 ---
@@ -52,7 +52,7 @@ Adobe Experience Platform을 통해 RESTful API 또는 사용자 인터페이스
 
 ## 샘플 상태 미리 보기([!DNL Profile] 미리 보기) {#profile-preview}
 
-프로필에 대해 활성화된 데이터를 Experience Platform에 수집하므로 프로필 데이터 저장소 내에 저장됩니다. 프로필 저장소의 레코드 수가 증가하거나 감소하면 데이터 저장소에 있는 프로필 조각 및 병합된 프로필의 수에 대한 정보를 포함하는 샘플 작업이 실행됩니다. 프로필 API를 사용하여 성공적인 최신 샘플과 데이터 집합 및 ID 네임스페이스별 프로필 배포 목록을 미리 볼 수 있습니다. `/profilepreviewstatus` 종단점을 사용하여 시작하려면 [샘플 상태 엔드포인트 미리 보기 안내서](preview-sample-status.md)를 참조하십시오.
+데이터를 Platform에 수집하면 샘플 작업이 실행하여 프로필 수 및 기타 실시간 고객 프로필 데이터 관련 지표를 업데이트합니다. 이 샘플 작업의 결과는 실시간 고객 프로필 API의 일부인 `/previewsamplestatus` 종단점을 사용하여 볼 수 있습니다. 이 종단점을 사용하여 데이터 세트와 ID 네임스페이스별로 프로필 배포를 나열할 수 있을 뿐만 아니라 조직의 프로필 저장소 구성을 표시하기 위해 여러 보고서를 생성할 수도 있습니다.  `/profilepreviewstatus` 종단점을 사용하여 시작하려면 [샘플 상태 엔드포인트 미리 보기 안내서](preview-sample-status.md)를 참조하십시오.
 
 ## 프로필 시스템 작업 {#profile-system-jobs}
 
