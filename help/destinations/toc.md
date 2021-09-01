@@ -3,10 +3,10 @@ audience: user
 user-guide-title: 대상 안내서
 user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화합니다.
 description: 이 문서에서는 Adobe Experience Platform 대상의 목차 목록을 설명합니다
-feature: 대상
-source-git-commit: 9c9ea0d9e8247dbc4a1a4078dbdba2ae80ed70ef
+feature: Destinations
+source-git-commit: 316bad8b7b33d212c7ec304c064edb9f2c17859a
 workflow-type: tm+mt
-source-wordcount: '492'
+source-wordcount: '494'
 ht-degree: 11%
 
 ---
@@ -60,6 +60,7 @@ ht-degree: 11%
       * [Pinterest 전환 추적 확장](./catalog/advertising/pinterest-extension.md)
       * [무역센터 연결](./catalog/advertising/tradedesk.md)
       * [Twitter 범용 웹 사이트 태그 확장](./catalog/advertising/twitter-uwt.md)
+      * [Yahoo/Verizon DataX](./catalog/advertising/datax.md)
    * Analytics 대상 {#analytics}
       * [Analytics 대상 개요](./catalog/analytics/overview.md)
       * [Adform 웹 사이트 추적 확장](./catalog/analytics/adform.md)
