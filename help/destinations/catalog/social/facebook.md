@@ -3,9 +3,9 @@ keywords: facebook 연결;facebook 연결;facebook 대상;facebook;instagram;mes
 title: Facebook 연결
 description: 해시된 이메일을 기반으로 대상 타깃팅, 개인화 및 억제를 위해 Facebook 캠페인용 프로필을 활성화합니다.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: d0112cb26fcb85ad91ba403f81ee7f11d0889046
+source-git-commit: 2faf27495c3785a27613db917c7416e1d7b08c4d
 workflow-type: tm+mt
-source-wordcount: '1498'
+source-wordcount: '1521'
 ht-degree: 1%
 
 ---
@@ -62,6 +62,9 @@ ht-degree: 1%
    >
    > Adobe Experience Cloud에 대한 권한을 구성할 때 **캠페인 관리** 권한을 활성화해야 합니다. [!DNL Adobe Experience Platform] 통합에 대한 권한이 필요합니다.
 * [!DNL Facebook Custom Audiences] 서비스 약관을 읽고 서명하십시오. 이렇게 하려면 `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]` 로 이동하십시오. 여기서 `accountID`는 [!DNL Facebook Ad Account ID]입니다.
+   >[!IMPORTANT]
+   >
+   >[!DNL Facebook Custom Audiences] 서비스 약관에 서명할 때는 Facebook API에서 인증하는 데 사용한 사용자 계정과 동일한 계정을 사용해야 합니다.
 
 ## ID 일치 요구 사항 {#id-matching-requirements}
 
