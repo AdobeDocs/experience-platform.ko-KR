@@ -5,9 +5,9 @@ title: 스키마 구성 기본 사항
 topic-legacy: overview
 description: 이 문서에서는 Adobe Experience Platform에서 사용할 스키마를 구성하기 위한 XDM(Experience Data Model) 스키마와 빌딩 블록, 원칙 및 모범 사례를 소개합니다.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 7d05b5d57ec4597b168be0261e75da5f243cb660
+source-git-commit: 2bd7c12209a1944aa954ba4490bb0c57f2a5ea61
 workflow-type: tm+mt
-source-wordcount: '3629'
+source-wordcount: '3684'
 ht-degree: 0%
 
 ---
@@ -42,8 +42,8 @@ XDM 스키마는 방대한 양의 복잡한 데이터를 자체 포함된 형식
 
 [!DNL Experience Platform]에 사용하기 위한 데이터는 두 가지 동작 유형으로 그룹화됩니다.
 
-* **데이터 기록**:주체의 특성에 대한 정보를 제공합니다. 주제는 조직 또는 개인일 수 있습니다.
-* **시계열 데이터**:작업 수행 시 레코드 주체가 직접 또는 간접적으로 시스템의 스냅샷을 제공합니다.
+* **데이터 기록**: 주체의 특성에 대한 정보를 제공합니다. 주제는 조직 또는 개인일 수 있습니다.
+* **시계열 데이터**: 작업 수행 시 레코드 주체가 직접 또는 간접적으로 시스템의 스냅샷을 제공합니다.
 
 모든 XDM 스키마에서는 레코드 또는 시계열로 분류할 수 있는 데이터를 설명합니다. 스키마의 데이터 동작은 처음 만들 때 스키마에 할당된 스키마 클래스에 의해 정의됩니다. XDM 클래스는 이 문서의 후반부에 자세히 설명되어 있습니다.
 
@@ -55,7 +55,7 @@ XDM 스키마는 방대한 양의 복잡한 데이터를 자체 포함된 형식
 
 이 프로세스를 지원하기 위해 스키마 내의 키 필드를 ID로 표시할 수 있습니다. 데이터 섭취 시 해당 필드의 데이터는 해당 개인의 &quot;[!UICONTROL Identity Graph]&quot;에 삽입됩니다. 그런 다음 [[!DNL Real-time Customer Profile]](../../profile/home.md) 및 다른 [!DNL Experience Platform] 서비스에서 그래프 데이터에 액세스하여 각 개별 고객에 대한 결합 보기를 제공할 수 있습니다.
 
-일반적으로 &quot;[!UICONTROL Identity]&quot;로 표시된 필드는 다음과 같습니다.이메일 주소, 전화번호, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=ko-KR), CRM ID 또는 기타 고유한 ID 필드. 또한 &quot;[!UICONTROL Identity]&quot; 필드도 적합할 수 있으므로 조직에 고유한 식별자를 고려해야 합니다.
+일반적으로 &quot;[!UICONTROL Identity]&quot;로 표시된 필드는 다음과 같습니다. 이메일 주소, 전화번호, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=ko-KR), CRM ID 또는 기타 고유한 ID 필드. 또한 &quot;[!UICONTROL Identity]&quot; 필드도 적합할 수 있으므로 조직에 고유한 식별자를 고려해야 합니다.
 
 가장 강력한 프로필을 만들기 위해 데이터를 함께 가져올 수 있도록 하려면 스키마 계획 단계 동안 고객 ID를 고려하는 것이 중요합니다. ID 정보를 통해 고객에게 디지털 경험을 전달하는 데 도움이 되는 방법에 대한 자세한 내용은 [Adobe Experience Platform Identity 서비스](../../identity-service/home.md)의 개요를 참조하십시오.
 
@@ -68,7 +68,11 @@ ID 데이터를 Platform으로 전송하는 방법에는 두 가지가 있습니
 
 `identityMap` 는 연관된 네임스페이스와 함께 개인의 다양한 ID 값을 설명하는 맵 유형 필드입니다. 이 필드는 스키마 자체의 구조 내에서 ID 값을 정의하는 대신 스키마에 대한 ID 정보를 제공하는 데 사용할 수 있습니다.
 
-`identityMap`을 사용하는 주요 단점은 ID가 데이터에 포함되고 그 결과 볼 수 없게 된다는 것입니다. 원시 데이터를 수집하는 경우 실제 스키마 구조 내에서 개별 ID 필드를 대신 정의해야 합니다. `identityMap`을 사용하는 스키마도 관계에 참여할 수 없습니다.
+`identityMap`을 사용하는 주요 단점은 ID가 데이터에 포함되고 그 결과 볼 수 없게 된다는 것입니다. 원시 데이터를 수집하는 경우 실제 스키마 구조 내에서 개별 ID 필드를 대신 정의해야 합니다.
+
+>[!NOTE]
+>
+>`identityMap`을 사용하는 스키마는 관계에서 소스 스키마로 사용할 수 있지만 대상 스키마로 사용할 수 없습니다. 모든 대상 스키마에는 소스 스키마 내의 참조 필드에 매핑할 수 있는 표시 ID가 있어야 하기 때문입니다. 소스 및 대상 스키마의 요구 사항에 대한 자세한 내용은 [관계](../tutorials/relationship-ui.md)의 UI 안내서를 참조하십시오.
 
 그러나 ID 맵은 ID를 함께 저장하는 소스(예: [!DNL Airship] 또는 Adobe Audience Manager)에서 데이터를 가져오는 경우나 스키마에 대한 ID가 여러 개 있는 경우 특히 유용합니다. 또한 [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/)를 사용하는 경우 ID 맵이 필요합니다.
 
@@ -133,7 +137,7 @@ ID 데이터를 Platform으로 전송하는 방법에는 두 가지가 있습니
 
 스키마는 다음 공식을 사용하여 작성됩니다.
 
-**클래스 + 스키마 필드 그룹(&amp;A);= XDM 스키마**
+**클래스 + 스키마 필드 그룹(&amp;A); = XDM 스키마**
 
 &amp;ast;스키마는 클래스와 0개 이상의 스키마 필드 그룹으로 구성됩니다. 즉, 필드 그룹을 전혀 사용하지 않고 데이터 세트 스키마를 작성할 수 있습니다.
 
@@ -246,8 +250,8 @@ Adobe은 몇 가지 표준(&quot;core&quot;) XDM 클래스를 제공합니다. �
 
 외부 시스템의 세그먼트를 Platform으로 가져오는 경우 다음 구성 요소를 사용하여 스키마에서 캡처해야 합니다.
 
-* [[!UICONTROL 세그먼트 ] 정의 클래스](../classes/segment-definition.md):이 표준 클래스를 사용하여 외부 세그먼트 정의의 주요 특성을 캡처합니다.
-* [[!UICONTROL 세그먼트 멤버십 세부 ] 정보 필드 그룹](../field-groups/profile/segmentation.md):고객 프로필을 특정 세그먼트와  [!UICONTROL 연결하려면 ] XDM 개별 프로필 스키마에 이 필드 그룹을 추가하십시오.
+* [[!UICONTROL 세그먼트 ] 정의 클래스](../classes/segment-definition.md): 이 표준 클래스를 사용하여 외부 세그먼트 정의의 주요 특성을 캡처합니다.
+* [[!UICONTROL 세그먼트 멤버십 세부 ] 정보 필드 그룹](../field-groups/profile/segmentation.md): 고객 프로필을 특정 세그먼트와  [!UICONTROL 연결하려면 ] XDM 개별 프로필 스키마에 이 필드 그룹을 추가하십시오.
 
 ## 다음 단계
 
