@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK를 사용하여 이벤트 추적
 description: Adobe Experience Platform Web SDK 이벤트를 추적하는 방법을 알아봅니다.
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
 exl-id: 8b221cae-3490-44cb-af06-85be4f8d280a
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 53a14b2b7d7ca8bdd278f2aeec2c2e8a30fdac7b
 workflow-type: tm+mt
-source-wordcount: '1451'
+source-wordcount: '1082'
 ht-degree: 0%
 
 ---
@@ -103,34 +103,7 @@ alloy("sendEvent", {
 
 ### 설정 `eventType` {#event-types}
 
-XDM 경험 이벤트에는 선택적 `eventType` 필드가 있습니다. 여기에는 레코드에 대한 기본 이벤트 유형이 포함됩니다. 이벤트 유형을 설정하면 전송할 다른 이벤트를 구별할 수 있습니다. XDM은 사용할 수 있거나 사용 사례에 대해 자신만의 사용자 지정 이벤트 유형을 만들 수 있는 사전 정의된 이벤트 유형을 제공합니다. 다음은 XDM에서 제공하는 모든 사전 정의된 이벤트 유형 목록입니다. [XDM 공개 보고서에서 자세히 알아보십시오](https://github.com/adobe/xdm/blob/master/docs/reference/behaviors/time-series.schema.md#xdmeventtype-known-values).
-
-
-| **이벤트 유형:** | **정의:** |
-| ---------------------------------- | ------------ |
-| advertising.completes | 시간 미디어 자산을 끝까지 감시했는지 여부를 나타냅니다. 시청자가 반드시 전체 비디오를 시청했음을 의미하지는 않습니다. 뷰어가 건너뛸 수 있음 |
-| advertising.timePlayed | 특정 시간 미디어 자산에서 사용자가 사용한 시간을 설명합니다 |
-| advertising.federated | 데이터 페더레이션(고객 간의 데이터 공유)를 통해 경험 이벤트가 생성되었는지 여부를 나타냅니다 |
-| advertising.clicks | 광고에서 작업을 클릭합니다 |
-| advertising.conversions | 성능 평가를 위한 이벤트를 트리거하는 고객 사전 정의된 작업 |
-| advertising.firstQuartiles | 디지털 비디오 광고는 그 지속 시간의 25%를 보통 속도로 재생했다 |
-| advertising.impressions | 최종 사용자에게 표시될 가능성이 있는 광고의 노출 횟수 |
-| advertising.midpoints | 디지털 비디오 광고는 그 지속 시간의 50%를 보통 속도로 재생했다 |
-| advertising.starts | 디지털 비디오 광고가 재생을 시작했습니다 |
-| advertising.thirdQuartiles | 디지털 비디오 광고는 전체 재생 시간의 75%를 일반 속도로 재생했습니다 |
-| web.webpagedetails.pageViews | 웹 페이지 보기가 발생했습니다. |
-| web.webinteraction.linkClicks | 웹 링크를 클릭했습니다 |
-| commerce.checkouts | 제품 목록의 체크아웃 프로세스 중에 체크아웃 프로세스에 여러 단계가 있는 경우 두 개 이상의 체크아웃 이벤트가 있을 수 있습니다. 여러 단계가 있는 경우 이벤트 시간 정보 및 참조된 페이지 또는 경험을 사용하여 개별 이벤트가 순서대로 나타내는 단계를 식별합니다 |
-| commerce.productListAdds | 제품 목록에 제품 추가. 장바구니에 추가된 제품 예 |
-| commerce.productListOpens | 새 제품 목록의 초기화. 장바구니가 만들어지는 예 |
-| commerce.productListRemovals | 제품 목록에서 제품 항목을 제거합니다. 장바구니에서 제품이 제거된 예 |
-| commerce.productListReopens | 사용자가 더 이상 액세스할 수 없는(포기) 제품 목록을 다시 활성화했습니다. 리마케팅 활동을 통한 예 |
-| commerce.productListViews | 제품 목록 보기가 발생했습니다. |
-| commerce.productViews | 제품 보기가 발생했습니다. |
-| commerce.purchases | 주문이 수락되었습니다. 구매는 상거래 전환에서 유일한 필수 작업입니다. Purchase에는 참조된 제품 목록이 있어야 합니다 |
-| commerce.saveForLaters | 제품 목록은 나중에 사용할 수 있도록 저장됩니다. 제품 위시 목록 예 |
-| delivery.feedback | 게재에 대한 피드백 이벤트. 이메일 게재에 대한 피드백 이벤트 예 |
-
+XDM ExperienceEvent 스키마에는 선택적 `eventType` 필드가 있습니다. 여기에는 레코드에 대한 기본 이벤트 유형이 포함됩니다. 이벤트 유형을 설정하면 전송할 다른 이벤트를 구별할 수 있습니다. XDM은 사용할 수 있거나 사용 사례에 대해 자신만의 사용자 지정 이벤트 유형을 만들 수 있는 사전 정의된 이벤트 유형을 제공합니다. 사전 정의된 모든 이벤트 유형 [목록에 대해서는 XDM 설명서](../../xdm/classes/experienceevent.md#eventType)를 참조하십시오.
 
 이러한 이벤트 유형은 태그 확장을 사용하는 경우 드롭다운에 표시되거나 태그 없이 항상 전달할 수 있습니다. `xdm` 옵션의 일부로 전달될 수 있습니다.
 

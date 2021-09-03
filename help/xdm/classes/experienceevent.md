@@ -5,9 +5,9 @@ title: XDM ExperienceEvent 클래스
 topic-legacy: overview
 description: 이 문서에서는 XDM ExperienceEvent 클래스에 대한 개요와 이벤트 데이터 모델링에 대한 모범 사례를 제공합니다.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: 0af9290a3143b85311fbbd8d194f4799b0c9a873
+source-git-commit: ff446e2b9a2573889bcd1a5ab0933f60e871c353
 workflow-type: tm+mt
-source-wordcount: '1573'
+source-wordcount: '1745'
 ht-degree: 1%
 
 ---
@@ -82,18 +82,18 @@ Adobe은 [!DNL XDM ExperienceEvent] 클래스에서 사용할 여러 표준 필�
 
 | 값 | 정의 |
 | --- | --- |
-| `advertising.completes` | 시간이 지정된 미디어 자산을 끝까지 시청했습니다. 이것은 뷰어가 건너뛸 수 있었으므로 뷰어가 반드시 전체 비디오를 시청했음을 의미하지는 않습니다. |
-| `advertising.timePlayed` | 특정 시간 미디어 자산에서 사용자가 사용한 시간을 설명합니다. |
-| `advertising.federated` | 데이터 페더레이션(고객 간의 데이터 공유)를 통해 경험 이벤트가 생성되었는지 여부를 나타냅니다. |
 | `advertising.clicks` | 광고에서 작업을 클릭합니다. |
+| `advertising.completes` | 시간이 지정된 미디어 자산을 끝까지 시청했습니다. 이것은 뷰어가 건너뛸 수 있었으므로 뷰어가 반드시 전체 비디오를 시청했음을 의미하지는 않습니다. |
 | `advertising.conversions` | 고객이 성능 평가를 위해 이벤트를 트리거하는 사전 정의된 작업입니다. |
+| `advertising.federated` | 데이터 페더레이션(고객 간의 데이터 공유)를 통해 경험 이벤트가 생성되었는지 여부를 나타냅니다. |
 | `advertising.firstQuartiles` | 디지털 비디오 광고는 그 지속 시간의 25%를 보통 속도로 재생했다. |
 | `advertising.impressions` | 잠재 고객이 볼 수 있는 광고에 대한 노출 수입니다. |
 | `advertising.midpoints` | 디지털 비디오 광고는 그 지속 시간의 50%를 보통 속도로 재생했다. |
 | `advertising.starts` | 디지털 비디오 광고 재생이 시작되었습니다. |
 | `advertising.thirdQuartiles` | 디지털 비디오 광고는 그 기간의 75%를 보통 속도로 재생했다. |
-| `web.webpagedetails.pageViews` | 웹 페이지가 하나 이상의 보기를 받았습니다. |
-| `web.webinteraction.linkClicks` | 링크가 하나 이상 선택되었습니다. |
+| `advertising.timePlayed` | 특정 시간 미디어 자산에서 사용자가 사용한 시간을 설명합니다. |
+| `application.close` | 응용 프로그램을 닫았거나 백그라운드로 보냈습니다. |
+| `application.launch` | 응용 프로그램을 시작하거나 전경으로 가져왔습니다. |
 | `commerce.checkouts` | 제품 목록에 대해 체크아웃 이벤트가 발생했습니다. 체크아웃 프로세스에 여러 단계가 있는 경우 두 개 이상의 체크아웃 이벤트가 있을 수 있습니다. 여러 단계가 있는 경우 각 이벤트에 대한 타임스탬프 및 참조된 페이지/경험이 순서대로 표시된 각 개별 이벤트(단계)를 식별하는 데 사용됩니다. |
 | `commerce.productListAdds` | 제품 목록 또는 장바구니에 제품이 추가되었습니다. |
 | `commerce.productListOpens` | 새 제품 목록(장바구니)이 초기화되거나 만들어졌습니다. |
@@ -103,9 +103,32 @@ Adobe은 [!DNL XDM ExperienceEvent] 클래스에서 사용할 여러 표준 필�
 | `commerce.productViews` | 제품이 하나 이상의 보기를 받았습니다. |
 | `commerce.purchases` | 주문이 수락되었습니다. 이는 상거래 전환에서 유일하게 필요한 작업입니다. 구매 이벤트에는 참조된 제품 목록이 있어야 합니다. |
 | `commerce.saveForLaters` | 제품 목록이 나중에 사용할 수 있도록 저장되었습니다(예: 제품 희망 목록). |
+| `decisioning.propositionDisplay` | 한 사람에게 의사 결정 제안이 표시되었습니다. |
+| `decisioning.propositionInteract` | 한 사람이 의사결정 제안과 상호 작용했다. |
 | `delivery.feedback` | 전자 메일 게재와 같은 게재에 대한 피드백 이벤트입니다. |
+| `directMarketing.emailBounced` | 바운스된 사람에게 이메일 보내기. |
+| `directMarketing.emailBouncedSoft` | 소프트 바운스된 사람에게 이메일 보내기. |
+| `directMarketing.emailClicked` | 마케팅 이메일의 링크를 클릭한 사람이 있습니다. |
+| `directMarketing.emailDelivered` | 전자 메일이 사용자의 전자 메일 서비스에 배달되었습니다. |
+| `directMarketing.emailOpened` | 마케팅 이메일을 열람한 사람이 있습니다. |
+| `directMarketing.emailUnsubscribed` | 마케팅 이메일의 구독을 취소한 사람. |
+| `leadOperation.convertLead` | 리드가 전환되었습니다. |
+| `leadOperation.interestingMoment` | 한 사람을 위한 흥미로운 순간이 기록되었다. |
+| `leadOperation.newLead` | 리드가 생성되었습니다. |
+| `leadOperation.scoreChanged` | 리드의 점수 속성 값이 변경되었습니다. |
+| `leadOperation.statusInCampaignProgressionChanged` | 캠페인에서 리드의 상태가 변경되었습니다. |
+| `listOperation.addToList` | 마케팅 목록에 사람이 추가되었습니다. |
+| `listOperation.removeFromList` | 마케팅 목록에서 사람이 제거되었습니다. |
 | `message.feedback` | 고객에게 전송되는 메시지에 대한 전송/반송/오류와 같은 피드백 이벤트입니다. |
 | `message.tracking` | 고객에게 전송된 메시지에 대한 열기/클릭/사용자 지정 작업과 같은 이벤트 추적. |
+| `opportunityEvent.addToOpportunity` | 한 사람이 기회에 추가되었다. |
+| `opportunityEvent.opportunityUpdated` | 기회가 업데이트되었습니다. |
+| `opportunityEvent.removeFromOpportunity` | 한 사람이 기회를 박탈당했다. |
+| `pushTracking.applicationOpened` | 푸시 알림에서 애플리케이션을 연 사람. |
+| `pushTracking.customAction` | 한 사람이 푸시 알림에서 사용자 지정 작업을 클릭했습니다. |
+| `web.formFilledOut` | 한 사람이 wep 페이지에서 양식을 입력했습니다. |
+| `web.webinteraction.linkClicks` | 링크가 하나 이상 선택되었습니다. |
+| `web.webpagedetails.pageViews` | 웹 페이지가 하나 이상의 보기를 받았습니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
