@@ -4,9 +4,9 @@ user-guide-title: 대상 안내서
 user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화합니다.
 description: 이 문서에서는 Adobe Experience Platform 대상의 목차 목록을 설명합니다
 feature: Destinations
-source-git-commit: 09bae0d24eead5f0b6533ba5b89e1fc87c8c71b5
+source-git-commit: 6b688b88dc111cfb638ae71d9b43276e93eff28b
 workflow-type: tm+mt
-source-wordcount: '495'
+source-wordcount: '496'
 ht-degree: 11%
 
 ---
@@ -58,6 +58,7 @@ ht-degree: 11%
       * [linkedIn Insight Tag 확장](./catalog/advertising/linkedin.md)
       * [Microsoft Bing 연결](./catalog/advertising/bing.md)
       * [Pinterest 전환 추적 확장](./catalog/advertising/pinterest-extension.md)
+      * [Pinterest 고객 목록 연결](./catalog/advertising/pinterest.md)
       * [무역센터 연결](./catalog/advertising/tradedesk.md)
       * [Twitter 범용 웹 사이트 태그 확장](./catalog/advertising/twitter-uwt.md)
       * [Yahoo/Verizon DataX 연결](./catalog/advertising/datax.md)
@@ -108,9 +109,9 @@ ht-degree: 11%
       * [태그 확장 개요](./catalog/launch-extensions/overview.md)
    * 모바일 참여 대상 {#mobile-engagement}
       * [모바일 참여 대상 개요](./catalog/mobile-engagement/overview.md)
-      * [(베타) 비행기 속성 연결](./catalog/mobile-engagement/airship-attributes.md)
-      * [(베타) 항공 화물 태그 연결](./catalog/mobile-engagement/airship-tags.md)
-      * [(베타) 브레이즈 연결](./catalog/mobile-engagement/braze.md)
+      * [Airship 속성 연결](./catalog/mobile-engagement/airship-attributes.md)
+      * [Airship 태그 연결](./catalog/mobile-engagement/airship-tags.md)
+      * [연결 브레이즈](./catalog/mobile-engagement/braze.md)
    * 개인화 대상 {#personalization}
       * [개인화 대상 개요](./catalog/personalization/overview.md)
       * [Adobe Target 확장](./catalog/personalization/adobe-target.md)

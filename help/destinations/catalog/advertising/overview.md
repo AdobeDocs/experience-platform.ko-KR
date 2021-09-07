@@ -5,9 +5,9 @@ seo-title: Advertising destinations overview
 description: 'Adobe Experience Platform을 타사 광고 플랫폼(예: DSP, 광고 네트워크, SSP)에 연결하고 익명의 대상을 이러한 플랫폼에 공유합니다.'
 seo-description: Connect Adobe Experience Platform to a 3rd-party advertising platform (e.g. DSP, ad network, SSP) and share pseudonymous audiences to these platforms.
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: 316bad8b7b33d212c7ec304c064edb9f2c17859a
+source-git-commit: 0911a0a08c5571161acdafa6857095e275a50600
 workflow-type: tm+mt
-source-wordcount: '227'
+source-wordcount: '231'
 ht-degree: 1%
 
 ---
@@ -33,6 +33,7 @@ DSP(수요 측 플랫폼), SSP(공급측 플랫폼), 광고 네트워크 등 타
 * [Google Ad Manager 연결](google-ad-manager.md)
 * [Google Customer Match 연결](google-customer-match.md)
 * [Microsoft Bing 연결](bing.md)
+* [Pinterest 고객 목록 연결](pinterest.md)
 * [무역센터 연결](tradedesk.md)
 * [Yahoo/Verizon DataX](datax.md)
 
