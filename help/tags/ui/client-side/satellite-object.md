@@ -1,10 +1,11 @@
 ---
 title: 위성 개체 참조
 description: 클라이언트측 _satellite 개체 및 태그를 사용하여 수행할 수 있는 다양한 기능에 대해 알아봅니다.
-source-git-commit: 5adb3ed403bddd3b985d0a790eca117fb2f39288
+exl-id: f8b31c23-409b-471e-bbbc-b8f24d254761
+source-git-commit: 57b4d11d0a7fd587dc45066737726a52533e33f0
 workflow-type: tm+mt
-source-wordcount: '1251'
-ht-degree: 42%
+source-wordcount: '1285'
+ht-degree: 44%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 42%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../term-updates.md)을 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
 
 이 문서는 클라이언트측 `_satellite` 개체 및 이 개체를 사용하여 수행할 수 있는 다양한 기능에 대한 참조 역할을 합니다.
 
@@ -214,7 +215,31 @@ _satellite.buildInfo
 
 현재 라이브러리가 빌드된 ISO 8601 날짜입니다.
 
-### `environment`
+다음 예에서는 개체 값을 보여 줍니다.
+
+```javascript
+{
+  turbineVersion: "14.0.0",
+  turbineBuildDate: "2016-07-01T18:10:34Z",
+  buildDate: "2016-03-30T16:27:10Z"
+}
+```
+
+## `environment`
+
+**코드**
+
+```javascript
+_satellite.environment
+```
+
+이 개체에는 현재 태그 런타임 라이브러리가 배포되는 환경에 대한 정보가 들어 있습니다. 개체에는 다음 속성이 포함되어 있습니다.
+
+### `id`
+
+환경의 ID입니다.
+
+### `stage`
 
 이 라이브러리가 빌드된 환경입니다. 가능한 값은 다음과 같습니다.
 
@@ -226,10 +251,8 @@ _satellite.buildInfo
 
 ```javascript
 {
-  turbineVersion: "14.0.0",
-  turbineBuildDate: "2016-07-01T18:10:34Z",
-  buildDate: "2016-03-30T16:27:10Z",
-  environment: "development"
+  id: "EN123456...",
+  stage: "development"
 }
 ```
 

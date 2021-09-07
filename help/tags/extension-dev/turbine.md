@@ -1,10 +1,11 @@
 ---
 title: Turbine 자유 변수
 description: Adobe Experience Platform 태그 런타임과 관련된 정보 및 유틸리티를 제공하는 무료 변수인 turbine 객체에 대해 알아봅니다.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: 1664ab2e-8704-4a56-8b6b-acb71534084e
+source-git-commit: 57b4d11d0a7fd587dc45066737726a52533e33f0
 workflow-type: tm+mt
-source-wordcount: '577'
-ht-degree: 48%
+source-wordcount: '598'
+ht-degree: 51%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 48%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../term-updates.md)을 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고자료는 다음 [문서](../term-updates.md)를 참조하십시오.
 
 `turbine` 객체는 확장의 라이브러리 모듈 범위 내에 있는 &quot;자유 변수&quot;입니다. Adobe Experience Platform 태그 런타임과 관련된 정보 및 유틸리티를 제공하며 `require()` 을 사용하지 않고도 라이브러리 모듈에서 항상 사용할 수 있습니다.
 
@@ -28,8 +29,7 @@ console.log(turbine.buildInfo.turbineBuildDate);
 {
     turbineVersion: "14.0.0",
     turbineBuildDate: "2016-07-01T18:10:34Z",
-    buildDate: "2016-03-30T16:27:10Z",
-    environment: "development"
+    buildDate: "2016-03-30T16:27:10Z"
 }
 ```
 
@@ -38,7 +38,27 @@ console.log(turbine.buildInfo.turbineBuildDate);
 | `turbineVersion` | 현재 라이브러리 내에서 사용되는 [Turbine](https://www.npmjs.com/package/@adobe/reactor-turbine) 버전입니다. |
 | `turbineBuildDate` | 컨테이너 내에 사용된 [Turbine](https://www.npmjs.com/package/@adobe/reactor-turbine) 버전이 빌드된 ISO 8601 날짜입니다. |
 | `buildDate` | 현재 라이브러리가 빌드된 ISO 8601 날짜입니다. |
-| `environment` | 이 라이브러리가 빌드된 환경입니다. 허용되는 값은 `development`, `staging` 및 `production`입니다. |
+
+
+## [!DNL environment]
+
+```js
+console.log(turbine.environment.stage);
+```
+
+`turbine.environment` 는 라이브러리가 배포되는 환경에 대한 정보가 포함된 객체입니다.
+
+```js
+{
+    id: "EN123456...",
+    stage: "development"
+}
+```
+
+| 속성 | 설명 |
+| --- | --- |
+| `id` | 환경의 ID입니다. |
+| `stage` | 이 라이브러리가 빌드된 환경입니다. 허용되는 값은 `development`, `staging` 및 `production`입니다. |
 
 
 ## [!DNL debugEnabled]
