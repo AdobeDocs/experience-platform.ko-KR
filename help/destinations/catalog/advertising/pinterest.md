@@ -1,7 +1,7 @@
 ---
 title: Pinterest 고객 목록 연결
 description: 고객 목록, 사이트를 방문한 사람 또는 Pinterest의 콘텐츠와 이미 상호 작용한 사람으로 대상을 만듭니다.
-source-git-commit: 9bd309ae9d9edf56de855422abd109af1a10cffc
+source-git-commit: dc7e43a16923cb17a39a8ddb4ba114c0e9c0cc39
 workflow-type: tm+mt
 source-wordcount: '532'
 ht-degree: 2%
@@ -21,8 +21,8 @@ ht-degree: 2%
 
 ## 전제 조건 {#prerequisites}
 
-* 사용자는 대상을 추가하려는 광고주 계정에 액세스할 수 있는 Pinterest 계정으로 인증해야 합니다. 광고주 계정 공유에 대한 자세한 내용은 다음 위치에서 확인할 수 있습니다. https://help.pinterest.com/en/business/article/share-and-manage-access-to-your-ad-accounts 특히 사용자에게 &quot;대상&quot; 액세스 수준이 필요합니다.
-* 고객 목록 ID 형식에 대한 자세한 내용은 다음을 참조하십시오. https://help.pinterest.com/en/business/article/audience-targeting
+* 사용자는 대상을 추가하려는 광고주 계정에 액세스할 수 있는 Pinterest 계정으로 인증해야 합니다. 광고주 계정 공유에 대한 세부 사항은 [여기](https://help.pinterest.com/en/business/article/share-and-manage-access-to-your-ad-accounts)에서 찾을 수 있습니다. 특히 사용자에게 &quot;대상&quot; 액세스 수준이 필요합니다.
+* 고객 목록 ID 형식에 대한 자세한 내용은 [여기](https://help.pinterest.com/en/business/article/audience-targeting)에서 확인할 수 있습니다.
 
 
 ## 지원되는 ID {#supported-identities}
@@ -76,4 +76,4 @@ pinterest 고객 목록 대상을 사용하는 방법과 시기를 더 잘 이�
 
 ## 추가 리소스 {#additional-resources}
 
-자세한 내용은 Pinterest 도움말 센터 페이지(https://help.pinterest.com/en/business/article/audience-targeting)을 참조하십시오.
+자세한 내용은 [Pinterest 도움말 센터 페이지](https://help.pinterest.com/en/business/article/audience-targeting)를 참조하십시오.
