@@ -5,9 +5,9 @@ topic-legacy: overview
 title: 액세스 제어 개요
 description: Adobe Experience Platform에 대한 액세스 제어는 Adobe Admin Console을 통해 제공됩니다. 이 기능은 사용 권한 및 샌드박스를 사용자와 연결하는 Admin Console의 제품 프로필을 활용합니다.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: 6ecfad588f97474988b86199c008953714a3bed8
+source-git-commit: 13055c9b569a67b5b44a90ac2b40776e271db008
 workflow-type: tm+mt
-source-wordcount: '1363'
+source-wordcount: '1375'
 ht-degree: 2%
 
 ---
@@ -103,6 +103,7 @@ Adobe Admin Console은 조직에 대한 Adobe 제품 권한 및 액세스를 관
 | [!DNL Destinations] | [!UICONTROL 대상 관리] | 대상을 읽기, 만들기, 편집 및 비활성화하기 위한 액세스 권한. |
 | [!DNL Destinations] | [!UICONTROL 대상 보기] | **[!UICONTROL 카탈로그]** 탭과 **[!UICONTROL 찾아보기]** 탭의 인증된 대상에 대한 읽기 전용 액세스 권한입니다. |
 | [!DNL Destinations] | [!UICONTROL 대상 활성화] | 생성된 활성 대상에 데이터를 활성화하는 기능. 이 권한을 사용하려면 대상을 활성화할 사용자에게 &quot;대상 보기&quot; 또는 &quot;대상 관리 [!UICONTROL 대상&quot;]을 부여해야 합니다. |
+| [!DNL Destinations] | [!UICONTROL 대상 작성] | [Adobe Experience Platform 대상 SDK](../destinations/destination-sdk/overview.md)를 사용하여 대상을 작성할 수 있습니다. |
 | [!DNL Data Ingestion] | [!UICONTROL 소스 관리] | 소스를 읽고, 만들고, 편집하고, 비활성화할 수 있는 액세스 권한. |
 | [!DNL Data Ingestion] | [!UICONTROL 소스 보기] | **[!UICONTROL 카탈로그]** 탭과 **[!UICONTROL 찾아보기]** 탭의 인증된 소스에 대한 읽기 전용 액세스 권한입니다. |
 | [!DNL Data Ingestion] | [!DNL Manage Audience Share Connections] | 두 IMS 조직을 연결하고 [!DNL Segment Match] 플로우를 활성화하기 위해 파트너 핸드셰이크를 생성, 수락 및 거부할 수 있습니다. |
