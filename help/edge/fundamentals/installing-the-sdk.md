@@ -3,7 +3,7 @@ title: Adobe Experience Platform Web SDK 설치
 description: Experience Platform 웹 SDK를 설치하는 방법을 알아봅니다.
 keywords: 웹 sdk 설치;웹 sdk 설치;internet explorer;약속;npm 패키지
 exl-id: b1de7ca1-d0d2-4661-a273-a1acf29afcd5
-source-git-commit: 2be9d262a699861c01011c59358751e6406f3770
+source-git-commit: f5d3c5911357d4b76e4d38564bf637e2549469d6
 workflow-type: tm+mt
 source-wordcount: '920'
 ht-degree: 2%
@@ -31,8 +31,8 @@ URL 구조: https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.js 또는 
 예:
 
 
-* 축소: [https://cdn1.adoberesources.net/alloy/2.6.3/alloy.min.js](https://cdn1.adoberesources.net/alloy/2.6.3/alloy.min.js)
-* 축소 해제: [https://cdn1.adoberesources.net/alloy/2.6.3/alloy.js](https://cdn1.adoberesources.net/alloy/2.6.3/alloy.js)
+* 축소: [https://cdn1.adoberesources.net/alloy/2.6.4/alloy.min.js](https://cdn1.adoberesources.net/alloy/2.6.4/alloy.min.js)
+* 축소 해제: [https://cdn1.adoberesources.net/alloy/2.6.4/alloy.js](https://cdn1.adoberesources.net/alloy/2.6.4/alloy.js)
 
 
 ### 코드 추가 {#adding-the-code}
@@ -46,7 +46,7 @@ URL 구조: https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.js 또는 
   function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
   (window,["alloy"]);
 </script>
-<script src="https://cdn1.adoberesources.net/alloy/2.6.3/alloy.min.js" async></script>
+<script src="https://cdn1.adoberesources.net/alloy/2.6.4/alloy.min.js" async></script>
 ```
 
 &quot;기본 코드&quot;는 `alloy`이라는 글로벌 함수를 만듭니다. 이 함수를 사용하여 SDK와 상호 작용합니다. 전역 함수에 다른 이름을 지정하려면 `alloy` 이름을 다음과 같이 변경합니다.
@@ -58,7 +58,7 @@ URL 구조: https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.js 또는 
   function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
   (window,["mycustomname"]);
 </script>
-<script src="https://cdn1.adoberesources.net/alloy/2.6.3/alloy.min.js" async></script>
+<script src="https://cdn1.adoberesources.net/alloy/2.6.4/alloy.min.js" async></script>
 ```
 
 이 예에서 전역 함수의 이름은 `alloy` 대신 `mycustomname` 로 변경됩니다.
@@ -108,7 +108,7 @@ URL 구조: https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.js 또는 
   function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
   (window,["alloy"]);
 </script>
-<script src="https://cdn1.adoberesources.net/alloy/2.6.3/alloy.min.js"></script>
+<script src="https://cdn1.adoberesources.net/alloy/2.6.4/alloy.min.js"></script>
 ```
 
 ## 옵션 3: NPM 패키지 사용

@@ -3,14 +3,18 @@ title: Adobe Experience Platform Web SDK 릴리스 노트
 description: Adobe Experience Platform Web SDK에 대한 최신 릴리스 정보입니다.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;릴리스 노트;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 2be9d262a699861c01011c59358751e6406f3770
+source-git-commit: f5d3c5911357d4b76e4d38564bf637e2549469d6
 workflow-type: tm+mt
-source-wordcount: '738'
+source-wordcount: '771'
 ht-degree: 4%
 
 ---
 
 # 릴리스 정보
+
+## 버전 2.6.4 - 2021년 9월 7일
+
+* `head` 요소에 적용된 HTML Adobe Target 작업 설정이 전체 `head` 컨텐츠를 바꾸는 문제가 해결되었습니다. 이제 `head` 요소에 적용된 HTML 작업 설정이 HTML 추가로 변경되었습니다.
 
 ## 버전 2.6.3 - 2021년 8월 16일
 
