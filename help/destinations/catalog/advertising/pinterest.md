@@ -1,15 +1,15 @@
 ---
 title: Pinterest 고객 목록 연결
 description: 고객 목록, 사이트를 방문한 사람 또는 Pinterest의 콘텐츠와 이미 상호 작용한 사람으로 대상을 만듭니다.
-source-git-commit: dc7e43a16923cb17a39a8ddb4ba114c0e9c0cc39
+exl-id: e601f75f-0d40-4cd0-93ca-54d7439f1db7
+source-git-commit: 3d7151645bc90a2dcbd6b31251ed459029ab77c9
 workflow-type: tm+mt
-source-wordcount: '532'
+source-wordcount: '516'
 ht-degree: 2%
 
 ---
 
-
-# Pinterest 고객 목록 연결
+# [!DNL Pinterest Customer List] 연결
 
 ## 개요 {#overview}
 
@@ -27,14 +27,14 @@ ht-degree: 2%
 
 ## 지원되는 ID {#supported-identities}
 
-pinterest 고객 목록 대상은 아래 표에 설명된 ID의 활성화를 지원합니다. [id](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#getting-started)에 대해 자세히 알아보십시오.
+[!DNL Pinterest Customer List] 대상은 아래 표에 설명된 ID의 활성화를 지원합니다. [id](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#getting-started)에 대해 자세히 알아보십시오.
 
 대상 활성화 워크플로우의 [매핑 단계에서 원하는 ID를 대상 필드 *pinterest_audience*&#x200B;에 매핑합니다. ](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) ID는 Pinterest에 데이터를 수집하면 구분되고 해결됩니다.
 
 | Target ID | 설명 | 고려 사항 |
 |---|---|---|
-| GAID | Google 광고 ID | *GAID* 소스 ID 네임스페이스를 대상 ID 필드 *pinterest_audience*&#x200B;에 매핑합니다. ID는 Pinterest에 데이터를 수집하면 구분되고 해결됩니다. |
-| IDFA | 광고주용 Apple ID | *IDFA* 소스 ID 네임스페이스를 대상 ID 필드 *pinterest_audience*&#x200B;에 매핑합니다. ID는 Pinterest에 데이터를 수집하면 구분되고 해결됩니다. |
+| GAID | [!DNL Google Advertising ID] | *GAID* 소스 ID 네임스페이스를 대상 ID 필드 *pinterest_audience*&#x200B;에 매핑합니다. ID는 Pinterest에 데이터를 수집하면 구분되고 해결됩니다. |
+| IDFA | [!DNL Apple ID for Advertisers] | *IDFA* 소스 ID 네임스페이스를 대상 ID 필드 *pinterest_audience*&#x200B;에 매핑합니다. ID는 Pinterest에 데이터를 수집하면 구분되고 해결됩니다. |
 | 이메일 | 이메일 주소(텍스트 지우기 또는 SHA256 알고리즘을 사용하여 해시됨) | 일반 텍스트와 SHA256 해시된 이메일 주소는 모두 Adobe Experience Platform에서 지원합니다. <br> Emailor  ** Email_ *LC_SHA256* 소스 ID 네임스페이스를 대상 ID 필드  *pinterest_audience*&#x200B;에 매핑합니다. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -45,7 +45,7 @@ pinterest 고객 목록 대상은 아래 표에 설명된 ID의 활성화를 지
 
 ## 사용 사례 {#use-cases}
 
-pinterest 고객 목록 대상을 사용하는 방법과 시기를 더 잘 이해할 수 있도록 Adobe Experience Platform 고객이 이 대상을 사용하여 해결할 수 있는 샘플 사용 사례가 여기에 있습니다.
+[!DNL Pinterest Customer List] 대상을 사용하는 방법과 시기를 더 잘 이해할 수 있도록 Adobe Experience Platform 고객이 이 대상을 사용하여 해결할 수 있는 샘플 사용 사례가 여기에 있습니다.
 
 
 ### 사용 사례 #1

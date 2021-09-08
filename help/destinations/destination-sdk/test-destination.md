@@ -1,9 +1,10 @@
 ---
-description: '대상 SDK의 일부로, Adobe은 대상을 구성하고 테스트하는 데 도움이 되는 개발자 도구를 제공합니다. 이 페이지에서는 대상 구성을 테스트하는 방법을 설명합니다. '
+description: 대상 SDK의 일부로, Adobe은 대상을 구성하고 테스트하는 데 도움이 되는 개발자 도구를 제공합니다. 이 페이지에서는 대상 구성을 테스트하는 방법을 설명합니다.
 title: 대상 구성 테스트
-source-git-commit: cf6c6adf128ec867cd67af609a40b04d2c632bf9
+exl-id: 21e4d647-1168-4cb4-a2f8-22d201e39bba
+source-git-commit: 3d7151645bc90a2dcbd6b31251ed459029ab77c9
 workflow-type: tm+mt
-source-wordcount: '482'
+source-wordcount: '484'
 ht-degree: 1%
 
 ---
@@ -228,4 +229,4 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 
 ## 다음 단계
 
-대상이 올바르게 구성되었는지 확인한 후 Adobe [셀프 서비스 설명서 프로세스](./docs-framework/documentation-instructions.md)를 사용하여 대상에 대한 설명서 페이지를 만듭니다.
+대상을 테스트하고 올바르게 구성되었는지 확인한 후 [대상 게시 API](./destination-publish-api.md)를 사용하여 구성을 Adobe에 제출하여 검토하십시오.

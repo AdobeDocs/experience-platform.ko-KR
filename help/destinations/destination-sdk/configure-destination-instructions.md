@@ -3,7 +3,8 @@ description: 이 페이지에서는 대상 SDK에 대한 구성 옵션에서 참
 seo-description: This page describes how to use the reference information in Configuration options for the Destinations SDK to configure your destination using Destination SDK.
 seo-title: How to use Destination SDK to configure your destination
 title: 대상 SDK를 사용하여 대상을 구성하는 방법
-source-git-commit: 2841adc0ce212a945c35ba38209d4c00c519ad7b
+exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
+source-git-commit: 3d7151645bc90a2dcbd6b31251ed459029ab77c9
 workflow-type: tm+mt
 source-wordcount: '568'
 ht-degree: 0%
@@ -161,7 +162,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 ## 7단계: 대상 게시 {#publish-destination}
 
-대상을 구성하고 테스트한 후. [대상 게시 API](./destination-publish-api.md)를 사용하여 구성을 검토를 위해 Adobe에 제출합니다.
+대상을 구성하고 테스트한 후 [대상 게시 API](./destination-publish-api.md)를 사용하여 구성을 Adobe에 제출하여 검토하십시오.
 
 ## 8단계: 대상을 문서화합니다. {#document-destination}
 

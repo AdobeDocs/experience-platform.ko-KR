@@ -3,18 +3,14 @@ keywords: 모바일; brize; 메시징;
 title: 연결 브레이즈
 description: Braze는 고객과 고객이 좋아하는 브랜드 간 연관성 있고 기억에 남을 경험을 제공하는 포괄적인 고객 참여 플랫폼입니다.
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
+source-git-commit: 3d7151645bc90a2dcbd6b31251ed459029ab77c9
 workflow-type: tm+mt
-source-wordcount: '791'
-ht-degree: 2%
+source-wordcount: '757'
+ht-degree: 1%
 
 ---
 
-# (베타) [!DNL Braze] 연결
-
->[!IMPORTANT]
->
->Adobe Experience Platform의 브레이징 대상은 현재 베타에 있습니다. 설명서 및 기능은 변경될 수 있습니다.
+# [!DNL Braze] 연결
 
 ## 개요 {#overview}
 
@@ -99,11 +95,9 @@ XDM 필드를 [!DNL Braze] 대상 필드에 올바르게 매핑하려면 다음 
 
 ![대상 대상 매핑 브레이징](../../assets/catalog/mobile-engagement/braze/mapping-target.png)
 
-[!UICONTROL 대상 필드 선택] 창에서 다음 세 가지 대상 필드 범주 중에서 선택할 수 있습니다.
-* [!UICONTROL 속성 선택]: 이 옵션을 사용하여 XDM 속성을 표준 속성에  [!DNL Braze] 매핑합니다.
+[!UICONTROL 대상 필드 선택] 창에서 다음 두 가지 대상 필드 범주 중에서 선택할 수 있습니다.
 * [!UICONTROL ID 네임스페이스를 선택합니다]. 이 옵션을 사용하여 ID 네임스페이스 [!DNL Platform] 를 ID 네임스페이스에  [!DNL Braze] 매핑합니다.
-* [!UICONTROL 사용자 지정 속성] 선택: 이 옵션을 사용하여 XDM 속성을  [!DNL Braze] 계정에서 정의한 사용자 지정 속성에  [!DNL Braze] 매핑합니다.
-* 이 옵션을 사용하여 기존 XDM 속성의 이름을 [!DNL Braze]으로 바꿀 수도 있습니다. 예를 들어 `lastName` XDM 속성을 [!DNL Braze]의 사용자 지정 `Last_Name` 속성에 매핑하면 [!DNL Braze]에 `Last_Name` 속성이 아직 없는 경우 만들고 `lastName` XDM 속성을 이 속성에 매핑합니다.
+* [!UICONTROL 사용자 지정 속성] 선택: 이 옵션을 사용하여 XDM 속성을  [!DNL Braze] 계정에서 정의한 사용자 지정 속성에  [!DNL Braze] 매핑합니다. <br> 이 옵션을 사용하여 기존 XDM 속성의 이름을 로 바꿀 수도 있습니다 [!DNL Braze]. 예를 들어 `lastName` XDM 속성을 [!DNL Braze]의 사용자 지정 `Last_Name` 속성에 매핑하면 [!DNL Braze]에 `Last_Name` 속성이 아직 없는 경우 만들고 `lastName` XDM 속성을 이 속성에 매핑합니다.
 
 ![대상 대상 매핑 필드 이해](../../assets/catalog/mobile-engagement/braze/mapping-target-fields.png)
 
