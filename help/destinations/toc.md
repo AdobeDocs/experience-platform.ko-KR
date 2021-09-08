@@ -4,10 +4,10 @@ user-guide-title: 대상 안내서
 user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화합니다.
 description: 이 문서에서는 Adobe Experience Platform 대상의 목차 목록을 설명합니다
 feature: Destinations
-source-git-commit: 6b688b88dc111cfb638ae71d9b43276e93eff28b
+source-git-commit: 834814cc2929c618b9f41c0fcf3ef79a831a969d
 workflow-type: tm+mt
-source-wordcount: '496'
-ht-degree: 11%
+source-wordcount: '627'
+ht-degree: 10%
 
 ---
 
@@ -139,5 +139,38 @@ ht-degree: 11%
       * [호출 태그 확장](./catalog/voice/invoca.md)
       * [메달리아 확장](./catalog/voice/medallia.md)
       * [대화 URL 받은 편지함 확장](./catalog/voice/talkurl.md)
+* 대상 SDK {#destination-sdk}
+   * [개요](./destination-sdk/overview.md)
+   * [통합 사전 요구 사항](./destination-sdk/integration-prerequisites.md)
+   * [시작하기](./destination-sdk/getting-started.md)
+   * 대상 SDK 기능 {#functionality}
+      * [구성 옵션](./destination-sdk/configuration-options.md)
+      * [대상 구성](./destination-sdk/destination-configuration.md)
+      * [서버 및 템플릿 사양](./destination-sdk/server-and-template-configuration.md)
+      * [메시지 포맷](./destination-sdk/message-format.md)
+      * [대상 메타데이터 관리](./destination-sdk/audience-metadata-management.md)
+      * [인증 구성](./destination-sdk/credentials-configuration.md)
+      * [OAuth 2 인증](./destination-sdk/oauth2-authentication.md)
+      * 개발자 도구 {#developer-tools}
+         * [메시지 변환 템플릿 만들기 및 테스트](./destination-sdk/create-template.md)
+         * [대상 구성 테스트](./destination-sdk/test-destination.md)
+   * API 참조 {#api-reference}
+      * [대상 끝점 API 작업](./destination-sdk/destination-configuration-api.md)
+      * [대상 서버 끝점 API 작업](./destination-sdk/destination-server-api.md)
+      * [대상 메타데이터 끝점 API 작업](./destination-sdk/audience-metadata-api.md)
+      * [자격 증명 끝점 API 작업](./destination-sdk/credentials-configuration-api.md)
+      * [게시 끝점 API 작업](./destination-sdk/destination-publish-api.md)
+      * 개발자 도구 참조 {#developer-tools-reference}
+         * [샘플 템플릿 API 작업 가져오기](./destination-sdk/sample-template-api.md)
+         * [템플릿 API 작업 렌더링](./destination-sdk/render-template-api.md)
+         * [대상 테스트 API 작업](./destination-sdk/destination-testing-api.md)
+         * [샘플 프로필 생성 API 작업](./destination-sdk/sample-profile-generation-api.md)
+   * 안내서 {#guides}
+      * [대상 SDK를 사용하여 대상을 구성합니다](./destination-sdk/configure-destination-instructions.md)
+   * 대상 {#document-destination} 문서화
+      * [Adobe Experience Platform에서 대상 문서화](./destination-sdk/docs-framework/documentation-instructions.md)
+      * [GitHub 웹 인터페이스를 사용하여 대상 설명서 페이지를 만듭니다](./destination-sdk/docs-framework/use-github-interface-to-create-documentation.md)
+      * [로컬 환경에서 텍스트 편집기를 사용하여 대상 설명서 페이지를 만듭니다](./destination-sdk/docs-framework/work-in-local-environment.md)
+      * [설명서 셀프 서비스 템플릿](./destination-sdk/docs-framework/self-service-template.md)
 * [자주 묻는 질문](./destinations-faq.md)
 * [플랫폼 릴리스 노트](https://www.adobe.com/go/platform-release-notes-en)

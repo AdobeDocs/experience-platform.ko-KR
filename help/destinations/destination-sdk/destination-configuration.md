@@ -1,0 +1,265 @@
+---
+description: 이 구성을 사용하면 대상 이름, 카테고리, 설명, 로고 등과 같은 기본 정보를 표시할 수 있습니다. 또한 이 구성의 설정은 Experience Platform 사용자가 대상을 인증하는 방법, Experience Platform 사용자 인터페이스에 표시되는 방법 및 대상으로 내보낼 수 있는 ID를 결정합니다.
+title: 대상 SDK에 대한 대상 구성 옵션
+source-git-commit: d2452bf0e59866d3deca57090001c4c5a0935525
+workflow-type: tm+mt
+source-wordcount: '1506'
+ht-degree: 4%
+
+---
+
+# 대상 구성 {#destination-configuration}
+
+## 개요 {#overview}
+
+이 구성을 사용하면 대상 이름, 카테고리, 설명, 로고 등과 같은 기본 정보를 표시할 수 있습니다. 또한 이 구성의 설정은 Experience Platform 사용자가 대상을 인증하는 방법, Experience Platform 사용자 인터페이스에 표시되는 방법 및 대상으로 내보낼 수 있는 ID를 결정합니다.
+
+`/authoring/destinations` API 엔드포인트를 사용하여 이 문서에 설명된 기능을 구성할 수 있습니다. 엔드포인트에서 수행할 수 있는 작업의 전체 목록은 [대상 API 엔드포인트 작업](./destination-configuration-api.md)을 참조하십시오.
+
+## 예제 구성 {#example-configuration}
+
+아래는 가상의 여행지 Moviestar에 대한 구성 예시이며, 전세계적으로 4개 위치에 종단점이 있습니다. 대상은 모바일 대상 카테고리에 속합니다. 아래 섹션에서는 이 구성을 구성하는 방법을 자세히 설명합니다.
+
+```json
+{
+   "name":"Moviestar",
+   "description":"Moviestar is a fictional destination, used for this example.",
+   "status":"TEST",
+   "customerAuthenticationConfigurations":[
+      {
+         "authType":"BEARER"
+      }
+   ],
+   "customerDataFields":[
+      {
+         "name":"endpointsInstance",
+         "type":"string",
+         "title":"Select Endpoint",
+         "description":"Moviestar manages several instances across the globe for REST endpoints that our customers are provisioned for. Select your endpoint in the dropdown list.",
+         "isRequired":true,
+         "enum":[
+            "US",
+            "EU",
+            "APAC",
+            "NZ"
+         ]
+      },
+      {
+         "name":"customerID",
+         "type":"string",
+         "title":"Moviestar Customer ID",
+         "description":"Your customer ID in the Moviestar destination (e.g. abcdef).",
+         "isRequired":true,
+         "pattern":"^[A-Za-z]+$"
+      }
+   ],
+   "uiAttributes":{
+      "documentationLink":"http://www.adobe.com/go/destinations-moviestar-en",
+      "category":"mobile",
+      "connectionType":"Server-to-server",
+      "frequency":"Streaming"
+   },
+   "identityNamespaces":{
+      "external_id":{
+         "acceptsAttributes":true,
+         "acceptsCustomNamespaces":true
+      },
+      "another_id":{
+         "acceptsAttributes":true,
+         "acceptsCustomNamespaces":true
+      }
+   },
+   "schemaConfig":{
+      "profileRequired":false,
+      "segmentRequired":true,
+      "identityRequired":true
+   },
+   "destinationDelivery":[
+      {
+         "authenticationRule":"CUSTOMER_AUTHENTICATION",
+         "destinationServerId":"9c77000a-4559-40ae-9119-a04324a3ecd4"
+      }
+   ],
+   "segmentMappingConfig":{
+      "mapExperiencePlatformSegmentName":false,
+      "mapExperiencePlatformSegmentId":false,
+      "mapUserInput":false,
+      "audienceTemplateId":"cbf90a70-96b4-437b-86be-522fbdaabe9c"
+   },
+   "inputSchemaId":"cc8621770a9243b98aba4df79898b1ed",
+   "aggregation":{
+      "aggregationType":"CONFIGURABLE_AGGREGATION",
+      "configurableAggregation":{
+         "splitUserById":true,
+         "maxBatchAgeInSecs":0,
+         "maxNumEventsInBatch":0,
+         "aggregationKey":{
+            "includeSegmentId":true,
+            "includeSegmentStatus":true,
+            "includeIdentity":true,
+            "oneIdentityPerGroup":false,
+            "groups":[
+               {
+                  "namespaces":[
+                     "IDFA",
+                     "GAID"
+                  ]
+               },
+               {
+                  "namespaces":[
+                     "EMAIL"
+                  ]
+               }
+            ]
+         }
+      }
+   }
+}
+```
+
+| 매개 변수 | 유형 | 설명 |
+|---------|----------|------|
+| `name` | 문자열 | Experience Platform 카탈로그에서 대상의 제목을 나타냅니다. |
+| `description` | 문자열 | Adobe이 대상 카드의 Experience Platform 대상 카탈로그에서 사용할 설명을 제공합니다. 4-5개 이하의 문장을 목표로 하라. |
+| `status` | 문자열 | 대상 카드의 라이프사이클 상태를 나타냅니다. 허용되는 값은 `TEST`, `PUBLISHED` 및 `DELETED`입니다. 대상을 처음 구성할 때 `TEST` 을 사용하십시오. |
+
+## 고객 인증 구성 {#customer-authentication-configurations}
+
+이 섹션에서는 Experience Platform 사용자 인터페이스에서 Experience Platform을 생성하여 사용자가 대상에 있는 계정에 연결합니다. `authType` 필드에 표시하는 인증 옵션에 따라 사용자에 대해 다음과 같이 Experience Platform 페이지가 생성됩니다.
+
+**베어러 인증**
+
+사용자는 대상에서 가져오는 bearer 토큰을 입력해야 합니다.
+
+![베어러 인증을 사용하여 UI 렌더링](./assets/bearer-authentication-ui.png)
+
+**OAuth 2 인증**
+
+사용자가 **[!UICONTROL 대상에 연결]**&#x200B;을 선택하여 대상에 OAuth 2 인증 흐름을 트리거합니다.
+
+![OAuth 2 인증을 사용하여 UI 렌더링](./assets/oauth2-authentication-ui.png)
+
+
+| 매개 변수 | 유형 | 설명 |
+|---------|----------|------|
+| `customerAuthenticationConfigurations` | 문자열 | 서버에 Experience Platform 고객을 인증하는 데 사용되는 구성을 나타냅니다. 허용되는 값은 아래 `authType`을 참조하십시오. |
+| `authType` | 문자열 | 허용되는 값은 `OAUTH2, BEARER`입니다. <br><ul><li> 대상이 OAuth 2 인증을 지원하는 경우 `OAUTH2` 값을 선택하고 대상 SDK OAuth 2 인증 페이지에 표시된 대로 OAuth 2에 대한 필수 필드를 추가합니다. 또한 [대상 배달 섹션](./destination-configuration.md)에서 `authenticationRule=CUSTOMER_AUTHENTICATION`을 선택해야 합니다. </li><li>베어러 인증의 경우 `BEARER` 을 선택하고 [대상 배달 섹션](./destination-configuration.md)에서 `authenticationRule=CUSTOMER_AUTHENTICATION` 을 선택합니다.</li></ul> |
+
+## 고객 데이터 필드 {#customer-data-fields}
+
+이 섹션에서는 사용자 정의 필드를 도입할 수 있습니다. 위의 예제 구성에서 `customerDataFields`을 사용하려면 사용자가 인증 흐름에서 종단점을 선택하고 대상이 있는 고객 ID를 표시해야 합니다. 구성은 아래와 같이 인증 흐름에 반영됩니다.
+
+![사용자 지정 필드 인증 흐름](./assets/custom-field-authentication-flow.png)
+
+| 매개 변수 | 유형 | 설명 |
+|---------|----------|------|
+| `name` | 문자열 | 도입하는 사용자 정의 필드의 이름을 입력합니다. |
+| `type` | 문자열 | 도입하는 사용자 지정 필드의 유형을 나타냅니다. 허용되는 값은 `string`, `object`, `integer`입니다. |
+| `title` | 문자열 | Experience Platform 사용자 인터페이스에서 고객이 볼 수 있는 필드의 이름을 나타냅니다. |
+| `description` | 문자열 | 사용자 지정 필드에 대한 설명을 입력합니다. |
+| `isRequired` | 부울 | 대상 설정 워크플로우에서 이 필드가 필요한지 여부를 나타냅니다. |
+| `enum` | 문자열 | 사용자 지정 필드를 드롭다운 메뉴로 렌더링하고 사용자가 사용할 수 있는 옵션을 나열합니다. |
+| `pattern` | 문자열 | 필요한 경우 사용자 지정 필드에 패턴을 적용합니다. 패턴을 적용하려면 정규 표현식을 사용합니다. 예를 들어 고객 ID에 숫자나 밑줄이 포함되지 않은 경우 이 필드에 `^[A-Za-z]+$` 을 입력합니다. |
+
+## UI 속성 {#ui-attributes}
+
+이 섹션은 Adobe Experience Platform 사용자 인터페이스에서 Adobe이 대상에 사용해야 하는 위의 구성의 UI 요소를 참조합니다. 아래를 참조하십시오.
+
+| 매개 변수 | 유형 | 설명 |
+|---------|----------|------|
+| `documentationLink` | 문자열 | 대상에 대한 [대상 카탈로그](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=en#catalog)의 설명서 페이지를 참조합니다. `http://www.adobe.com/go/destinations-YOURDESTINATION-en` 을 사용합니다. 여기서 `YOURDESTINATION`은 대상의 이름입니다. Moviestar라는 대상의 경우 `http://www.adobe.com/go/destinations-moviestar-en`을 사용합니다 |
+| `category` | 문자열 | Adobe Experience Platform에서 대상에 지정된 카테고리를 나타냅니다. 자세한 내용은 [대상 범주](https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-types.html)를 참조하십시오. 다음 값 중 하나를 사용합니다. `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments` |
+| `connectionType` | 문자열 | `Server-to-server` 은 현재 사용 가능한 유일한 옵션입니다. |
+| `frequency` | 문자열 | `Streaming` 은 현재 사용 가능한 유일한 옵션입니다. |
+
+## 매핑 단계의 스키마 구성 {#schema-configuration}
+
+![매핑 단계 활성화](./assets/enable-mapping-step.png)
+
+`schemaConfig`의 매개 변수를 사용하여 대상 활성화 워크플로우의 매핑 단계를 활성화합니다. 아래 설명된 매개 변수를 사용하여 Experience Platform 사용자가 프로필 속성 및/또는 ID를 대상 측에서 원하는 스키마에 매핑할 수 있는지 확인할 수 있습니다.
+
+| 매개 변수 | 유형 | 설명 |
+|---------|----------|------|
+| `profileFields` | 어레이 | *위의 구성 예는 표시되지 않습니다.* 사전 정의된 `profileFields`를 추가할 때 사용자는 Experience Platform 속성을 대상 측의 사전 정의된 속성에 매핑하는 옵션을 사용할 수 있습니다. |
+| `profileRequired` | 부울 | 위의 예제 구성에 표시된 대로 사용자가 Experience Platform의 프로필 속성을 대상 측의 사용자 지정 속성에 매핑할 수 있다면 `true` 를 사용하십시오. |
+| `segmentRequired` | 부울 | 항상 `segmentRequired:true`을 사용하십시오. |
+| `identityRequired` | 부울 | 사용자가 Experience Platform의 ID 네임스페이스를 원하는 스키마에 매핑할 수 있어야 하는 경우 `true` 을 사용합니다. |
+
+## ID 및 속성 {#identities-and-attributes}
+
+이 섹션의 매개 변수는 Experience Platform 사용자 인터페이스의 매핑 단계에서 대상 ID 및 속성이 채워지는 방식을 결정합니다. 여기서 사용자는 XDM 스키마를 대상의 스키마에 매핑합니다.
+
+Adobe은 고객이 대상으로 내보낼 수 있는 [!DNL Platform] id를 알고 있어야 합니다. 일부 예제는 [!DNL Experience Cloud ID], 해시된 이메일, 장치 ID([!DNL IDFA], [!DNL GAID])입니다. 이러한 값은 고객이 대상의 ID 네임스페이스에 매핑할 수 있는 [!DNL Platform] ID 네임스페이스입니다.
+
+ID 네임스페이스에 [!DNL Platform] 과(와) 대상 간의 1~1 응답이 필요하지 않습니다.
+예를 들어 고객은 [!DNL Platform] [!DNL IDFA] 네임스페이스를 대상의 [!DNL IDFA] 네임스페이스에 매핑하거나 동일한 [!DNL Platform] [!DNL IDFA] 네임스페이스를 대상의 [!DNL Customer ID] 네임스페이스에 매핑할 수 있습니다.
+
+[ID 네임스페이스 개요](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=ko)에서 자세히 알아보십시오.
+
+![UI에서 대상 ID 렌더링](./assets/target-identities-ui.png)
+
+| 매개 변수 | 유형 | 설명 |
+|---------|----------|------|
+| `acceptsAttributes` | 부울 | 대상이 표준 프로필 속성을 수락하는지 여부를 나타냅니다. 일반적으로 이러한 속성은 파트너의 설명서에 강조 표시됩니다. |
+| `acceptsCustomNamespaces` | 부울 | 고객이 대상에서 사용자 지정 네임스페이스를 설정할 수 있는지 여부를 나타냅니다. |
+| `allowedAttributesTransformation` | 문자열 | *구성 예는 표시되지 않습니다*. 예를 들어 [!DNL Platform] 고객이 일반 이메일 주소를 속성으로 가지고 있고 플랫폼이 해시된 이메일만 허용하는 경우 사용됩니다. 여기에서 적용해야 하는 변형을 제공합니다(예: 이메일을 소문자로 변환한 다음 해시). |
+| `acceptedGlobalNamespaces` | - | *구성 예는 표시되지 않습니다*. 플랫폼이 [표준 ID 네임스페이스](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces)(예: IDFA)를 허용하는 경우에 사용되므로 Platform 사용자가 이러한 ID 네임스페이스만 선택하도록 제한할 수 있습니다. |
+
+## 대상 게재 {#destination-delivery}
+
+| 매개 변수 | 유형 | 설명 |
+|---------|----------|------|
+| `authenticationRule` | 문자열 | [!DNL Platform] 고객이 대상에 연결하는 방법을 나타냅니다. 허용되는 값은 `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`입니다. <br> <ul><li>Platform 고객이 사용자 이름과 암호, 베어러 토큰 또는 다른 인증 방법을 통해 시스템에 로그인하는 경우 `CUSTOMER_AUTHENTICATION` 을 사용합니다. 예를 들어 `customerAuthenticationConfigurations`에서 `authType: OAUTH2` 또는 `authType:BEARER`도 선택한 경우 이 옵션을 선택합니다. </li><li> Adobe과 대상 사이에 글로벌 인증 시스템이 있고 [!DNL Platform] 고객이 대상에 연결하기 위해 인증 자격 증명을 제공할 필요가 없는 경우 `PLATFORM_AUTHENTICATION` 을 사용합니다. 이 경우 [자격 증명](./credentials-configuration.md) 구성을 사용하여 자격 증명 개체를 만들어야 합니다. </li><li>대상 플랫폼으로 데이터를 전송하는 데 인증이 필요하지 않으면 `NONE` 을 사용하십시오. </li></ul> |
+| `destinationServerId` | 문자열 | 이 대상에 사용되는 [대상 서버 구성](./destination-server-api.md)의 `instanceId` |
+| `backfillHistoricalProfileData` | 부울 | 세그먼트가 대상으로 활성화될 때 이전 프로필 데이터를 내보내지 여부를 제어합니다. <br> <ul><li> `true`:  [!DNL Platform] 세그먼트가 활성화되기 전에 세그먼트에 대해 자격이 있는 내역 사용자 프로필을 보냅니다. </li><li> `false`:  [!DNL Platform] 세그먼트가 활성화된 후에 세그먼트에 대한 자격이 되는 사용자 프로필만 포함합니다. </li></ul> |
+
+## 세그먼트 매핑 구성 {#segment-mapping}
+
+![세그먼트 매핑 구성 섹션](./assets/segment-mapping-configuration.png)
+
+대상 구성의 이 섹션에서는 세그먼트 이름 또는 ID와 같은 세그먼트 메타데이터를 Experience Platform과 대상 간에 공유하는 방법에 대해 설명합니다.
+
+`audienceTemplateId`을 통해 이 구성도 [대상 메타데이터 구성](./audience-metadata-management.md)과 함께 연결합니다.
+
+위의 구성에 표시된 매개 변수는 [대상 종단점 API 참조](./destination-configuration-api.md)에 설명되어 있습니다.
+
+## 집계 정책 {#aggregation}
+
+![구성 템플릿의 집계 정책](./assets/aggregation-configuration.png)
+
+이 섹션에서는 데이터를 대상으로 내보낼 때 Experience Platform이 사용할 집계 정책을 설정할 수 있습니다.
+
+집계 정책은 내보낸 프로필을 데이터 내보내기에서 함께 결합하는 방법을 결정합니다. 사용 가능한 옵션은 다음과 같습니다.
+* 최상의 노력 집계
+* 구성 가능한 합계(위의 구성에 표시)
+
+### 최상의 노력 집계 {#best-effort-aggregation}
+
+>[!TIP]
+>
+>API 엔드포인트가 API 호출당 100개 미만의 프로필을 허용하는 경우 이 옵션을 사용합니다.
+
+이 옵션은 요청당 프로필을 적게 선호하고, 데이터가 많은 요청이 적은 것보다 적은 데이터로 요청을 더 많이 받는 대상에 가장 적합합니다.
+
+`maxUsersPerRequest` 매개 변수를 사용하여 대상에서 요청에 사용할 수 있는 최대 프로필 수를 지정합니다.
+
+### 구성 가능한 집계 {#configurable-aggregation}
+
+이 옵션은 동일한 호출에서 수천 개의 프로필을 사용하여 일괄 처리를 수행하려는 경우에 가장 적합합니다. 또한 이 옵션을 사용하면 복잡한 집계 규칙을 기반으로 내보낸 프로필을 집계할 수 있습니다.
+
+이 옵션을 사용하면 다음 작업을 수행할 수 있습니다.
+* 대상에 API 호출이 수행되기 전에 집계할 최대 프로필 시간 및 수를 설정합니다.
+* 다음을 기반으로 대상에 매핑된 내보낸 프로필을 집계합니다.
+   * 세그먼트 ID
+   * 세그먼트 상태
+   * ID 또는 그룹
+
+합계 매개 변수에 대한 자세한 내용은 각 매개 변수에 대해 설명하는 [대상 API 엔드포인트 작업](./destination-configuration-api.md) 참조 페이지를 참조하십시오.
+
+<!--
+
+commenting out the `backfillHistoricalProfileData` parameter, which will only be used after an April release
+
+|`backfillHistoricalProfileData` | Boolean | Controls whether historical profile data is exported when segments are activated to the destination. <br> <ul><li> `true`: [!DNL Platform] sends the historical user profiles that qualified for the segment before the segment is activated. </li><li> `false`: [!DNL Platform] only includes user profiles that qualify for the segment after the segment is activated. </li></ul> |
+
+-->
