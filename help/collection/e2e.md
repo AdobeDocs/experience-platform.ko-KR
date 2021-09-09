@@ -1,16 +1,16 @@
 ---
-title: Adobe Experience Platform 데이터 수집 종단간 개요
-description: Adobe Experience Platform 데이터 수집을 사용하여 이벤트 데이터를 Adobe Experience Cloud 솔루션으로 보내는 방법에 대한 높은 수준의 개요입니다.
-source-git-commit: b14d592c8beb5fc545ae0682000e4e05b6dac3a0
+title: 데이터 수집 종단간 개요
+description: Adobe Experience Platform에서 제공하는 데이터 수집 기술을 사용하여 이벤트 데이터를 Adobe Experience Cloud 솔루션으로 보내는 방법에 대한 높은 수준의 개요입니다.
+source-git-commit: 2bcb42b83020a9ce620cb8162b7fc072b72ff23e
 workflow-type: tm+mt
-source-wordcount: '2569'
+source-wordcount: '2568'
 ht-degree: 0%
 
 ---
 
-# Adobe Experience Platform 데이터 수집 종단간 개요
+# 데이터 수집 종단간 개요
 
-Adobe Experience Platform 데이터 수집에서는 데이터를 수집하여 다른 Adobe 제품 또는 타사 대상으로 전송하는 몇 가지 기술을 제공합니다. 애플리케이션에서 Adobe Experience Platform Edge Network로 이벤트 데이터를 전송하려면 이러한 핵심 기술을 이해하고 필요한 경우 데이터를 필요한 대상에 제공하도록 구성하는 방법을 사용해야 합니다.
+Adobe Experience Platform에서 데이터 수집은 데이터를 수집하여 다른 Adobe 제품 또는 타사 대상으로 전송하는 몇 가지 기술을 말합니다. 애플리케이션에서 Adobe Experience Platform Edge Network로 이벤트 데이터를 전송하려면 이러한 핵심 기술을 이해하고 필요한 경우 데이터를 필요한 대상에 제공하도록 구성하는 방법을 사용해야 합니다.
 
 이 안내서에서는 데이터 수집 기술을 사용하여 Edge 네트워크를 통해 이벤트를 전송하는 방법에 대한 높은 수준의 자습서를 제공합니다. 특히 이 자습서에서는 데이터 수집 UI 내에서 Adobe Experience Platform Web SDK 태그 확장을 설치하고 구성하는 단계를 안내합니다.
 
