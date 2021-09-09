@@ -1,9 +1,10 @@
 ---
 title: 감사 로그 개요
 description: 감사 로그를 사용하여 Adobe Experience Platform에서 작업을 수행한 사용자를 확인하는 방법을 알아봅니다.
-source-git-commit: 937225ff08e2e02c5840f86d6ed50644e05bdfe5
+exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
+source-git-commit: df269a30251cb17e337ec25787d6a1eed41e9c0b
 workflow-type: tm+mt
-source-wordcount: '463'
+source-wordcount: '469'
 ht-degree: 4%
 
 ---
@@ -36,7 +37,7 @@ ht-degree: 4%
 
 조직에 대해 이 기능이 활성화되면 활동이 발생하면 감사 로그가 자동으로 수집됩니다. 수동으로 로그 수집을 활성화할 필요는 없습니다.
 
-감사 로그를 보고 내보내려면 &quot;감사 로그 보기&quot; 액세스 제어 권한이 부여되어야 합니다. 플랫폼 기능에 대한 개별 권한을 관리하는 방법에 대한 자세한 내용은 [액세스 제어 설명서](../../../access-control/home.md)를 참조하십시오.
+감사 로그를 보고 내보내려면 &quot;감사 로그 보기&quot; 액세스 제어 권한이 부여되어야 합니다(&quot;데이터 거버넌스&quot; 카테고리에 있음). 플랫폼 기능에 대한 개별 권한을 관리하는 방법에 대한 자세한 내용은 [액세스 제어 설명서](../../../access-control/home.md)를 참조하십시오.
 
 ## UI에서 감사 로그 관리
 
