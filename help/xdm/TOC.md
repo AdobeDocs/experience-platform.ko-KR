@@ -4,10 +4,10 @@ user-guide-title: XDM(경험 데이터 모델) 시스템 도움말
 breadcrumb-title: Experience Data Model(XDM) 안내서
 user-guide-description: XDM(경험 데이터 모델) 클래스 및 스키마 필드 그룹을 사용하여 경험 데이터를 표준화합니다.
 feature: Schemas
-source-git-commit: 6b3a1cc4cfba5475aba781a1d0511a59e399135f
+source-git-commit: 295dc040f3af7342226e3d78d0ae21e73db58d57
 workflow-type: tm+mt
-source-wordcount: '315'
-ht-degree: 17%
+source-wordcount: '324'
+ht-degree: 16%
 
 ---
 
@@ -47,9 +47,13 @@ ht-degree: 17%
       * [채널 세부 사항](./field-groups/event/channel-details.md)
       * [상거래 세부 사항](./field-groups/event/commerce-details.md)
       * [장치 거래 세부 사항](./field-groups/event/device-trade-in-details.md)
+      * [식사 예약](./field-groups/event/dining-reservation.md)
       * [최종 사용자 ID 세부 정보](./field-groups/event/enduserids.md)
       * [환경 세부 사항](./field-groups/event/environment-details.md)
+      * [비행 예약](./field-groups/event/flight-reservation.md)
       * [IAB TCF 2.0 동의](./field-groups/event/iab.md)
+      * [숙박예약](./field-groups/event/lodging-reservation.md)
+      * [예약 세부 정보](./field-groups/event/reservation-details.md)
       * [웹 세부 사항](./field-groups/event/web-details.md)
    * [필드 그룹 이름 업데이트](./field-groups/name-updates.md)
 * 데이터 유형 {#data-types}
@@ -89,6 +93,7 @@ ht-degree: 17%
    * [검색](./data-types/search.md)
    * [구독](./data-types/subscription.md)
    * [통신 구독](./data-types/telecom-subscription.md)
+   * [트랜잭션](./data-types/transaction.md)
    * [웹 정보](./data-types/web-information.md)
    * [웹 상호 작용](./data-types/web-interaction.md)
    * [웹 페이지 세부 사항](./data-types/webpage-details.md)

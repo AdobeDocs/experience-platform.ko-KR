@@ -4,10 +4,10 @@ title: 여행 및 숙박 업계 데이터 모델 ERD
 topic-legacy: overview
 description: Adobe Experience Platform에서 사용할 XDM(Experience Data Model)과 호환되는 여행 및 숙박 산업에 대한 표준화된 데이터 모델을 설명하는 ERD(엔티티 관계 다이어그램)를 봅니다.
 exl-id: 4d454160-9066-4702-815b-9509942f709e
-source-git-commit: 38fa2345cb87e50bd4c8788996f03939fb199cf9
+source-git-commit: 295dc040f3af7342226e3d78d0ae21e73db58d57
 workflow-type: tm+mt
-source-wordcount: '278'
-ht-degree: 0%
+source-wordcount: '451'
+ht-degree: 1%
 
 ---
 
@@ -32,3 +32,16 @@ ht-degree: 0%
 >[!NOTE]
 >
 >경험 이벤트 엔티티는 XDM ExperienceEvent 클래스에서 제공하는 고유 식별자(`_id`) 속성을 나타내는 &quot;_ID&quot; 필드를 포함합니다. 이 값에 대한 예상 값에 대한 자세한 내용은 [XDM ExperienceEvent](../../classes/experienceevent.md)의 참조 문서를 참조하십시오.
+
+## [!UICONTROL 여행 및 ] 입원 사용 사례
+
+다음 표에서는 여행 및 숙박 산업을 위한 몇 가지 공통 사용 사례에 대해 권장되는 클래스 및 스키마 필드 그룹에 대해 설명합니다.
+
+| 사용 사례 | 권장 클래스 및 필드 그룹 |
+| --- | --- |
+| 호텔 예약 시 시장 투숙객과 손님에게 크로스셀 식사 및 기타 지역 관광 명소를 제공합니다. | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)**:<ul><li>[예약 세부 정보](../../field-groups/event/reservation-details.md)</li><li>[숙박예약](../../field-groups/event/lodging-reservation.md)</li><li>[식사 예약](../../field-groups/event/dining-reservation.md)</li></ul></li><li>**[XDM 개별 프로필](../../classes/individual-profile.md)**:<ul><li>[인구 통계 세부 정보](../../field-groups/profile/demographic-details.md)</li><li>[개인 연락처 세부 정보](../../field-groups/profile/personal-contact-details.md)</li><li>[작업 연락처 세부 정보](../../field-groups/profile/work-contact-details.md)</li></ul></li></ul> |
+| 호텔 예약 시 시장 투숙객과 손님에게 업셀(Up-sell) 식사 및 기타 지역 관광 명소를 제공합니다. | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)**:<ul><li>[예약 세부 정보](../../field-groups/event/reservation-details.md)</li><li>[식사 예약](../../field-groups/event/dining-reservation.md)</li></ul></li><li>**[XDM 개별 프로필](../../classes/individual-profile.md)**:<ul><li>[인구 통계 세부 정보](../../field-groups/profile/demographic-details.md)</li><li>[개인 연락처 세부 정보](../../field-groups/profile/personal-contact-details.md)</li><li>[작업 연락처 세부 정보](../../field-groups/profile/work-contact-details.md)</li><li>[충성도 세부 사항](../../field-groups/profile/loyalty-details.md)</li></ul></li></ul> |
+| 호텔 예약 시 시장 투숙객과 손님에게 업셀 호텔 및 기타 지역 관광 명소를 제공합니다. | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)**:<ul><li>[예약 세부 정보](../../field-groups/event/reservation-details.md)</li><li>[숙박예약](../../field-groups/event/lodging-reservation.md)</li></ul></li><li>**[XDM 개별 프로필](../../classes/individual-profile.md)**:<ul><li>[인구 통계 세부 정보](../../field-groups/profile/demographic-details.md)</li><li>[개인 연락처 세부 정보](../../field-groups/profile/personal-contact-details.md)</li><li>[작업 연락처 세부 정보](../../field-groups/profile/work-contact-details.md)</li><li>[충성도 세부 사항](../../field-groups/profile/loyalty-details.md)</li></ul></li></ul> |
+| 호텔 예약 시 시장 투숙객과 손님에게 상향 판매 항공권 및 기타 지역 관광 정보를 제공해 드립니다. | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)**:<ul><li>[예약 세부 정보](../../field-groups/event/reservation-details.md)</li><li>[비행 예약](../../field-groups/event/flight-reservation.md)</li></ul></li><li>**[XDM 개별 프로필](../../classes/individual-profile.md)**:<ul><li>[인구 통계 세부 정보](../../field-groups/profile/demographic-details.md)</li><li>[개인 연락처 세부 정보](../../field-groups/profile/personal-contact-details.md)</li><li>[작업 연락처 세부 정보](../../field-groups/profile/work-contact-details.md)</li><li>[충성도 세부 사항](../../field-groups/profile/loyalty-details.md)</li></ul></li></ul> |
+
+{style=&quot;table-layout:auto&quot;}
