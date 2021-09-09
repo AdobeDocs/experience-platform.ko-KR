@@ -2,10 +2,10 @@
 title: Turbine 자유 변수
 description: Adobe Experience Platform 태그 런타임과 관련된 정보 및 유틸리티를 제공하는 무료 변수인 turbine 객체에 대해 알아봅니다.
 exl-id: 1664ab2e-8704-4a56-8b6b-acb71534084e
-source-git-commit: 814f853d16219021d9151458d93fc5bdc6c860fb
+source-git-commit: 86a009fd5c633ff45943d86b16c34a779d4141be
 workflow-type: tm+mt
-source-wordcount: '602'
-ht-degree: 50%
+source-wordcount: '619'
+ht-degree: 49%
 
 ---
 
@@ -117,6 +117,7 @@ turbine.logger.error('Error!');
 * `logger.warn(message: string)`: 콘솔에 경고 메시지를 기록합니다.
 * `logger.error(message: string)`: 콘솔에 오류 메시지를 기록합니다.
 * `logger.debug(message: string)`: 콘솔에 디버그 메시지를 기록합니다. (브라우저 콘솔 내에서 `verbose` 로깅이 활성화될 때만 표시됩니다.)
+* `logger.deprecation(message: string)`: 사용자가 태그 디버깅을 활성화하는지 여부를 콘솔에 경고 메시지를 기록합니다.
 
 ### `onDebugChanged`
 
