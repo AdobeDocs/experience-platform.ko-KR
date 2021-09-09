@@ -2,9 +2,9 @@
 title: 위성 개체 참조
 description: 클라이언트측 _satellite 개체 및 태그를 사용하여 수행할 수 있는 다양한 기능에 대해 알아봅니다.
 exl-id: f8b31c23-409b-471e-bbbc-b8f24d254761
-source-git-commit: 57b4d11d0a7fd587dc45066737726a52533e33f0
+source-git-commit: 814f853d16219021d9151458d93fc5bdc6c860fb
 workflow-type: tm+mt
-source-wordcount: '1285'
+source-wordcount: '1279'
 ht-degree: 44%
 
 ---
@@ -117,7 +117,7 @@ _satellite.logger.error('No product ID found.');
 
 `logger` 개체를 사용하면 메시지를 브라우저 콘솔에 기록할 수 있습니다. 이 메시지는 사용자가 태그 디버깅을 활성화한 경우( `_satellite.setDebug(true)` 호출 또는 적절한 브라우저 확장 사용)에만 표시됩니다.
 
-### 로깅 사용 중단 경고
+### 사용 중단 경고 로깅
 
 ```javascript
 _satellite.logger.deprecation(message: string)
@@ -227,34 +227,27 @@ _satellite.buildInfo
 
 ## `environment`
 
+이 개체에는 현재 태그 런타임 라이브러리가 배포되는 환경에 대한 정보가 들어 있습니다.
+
 **코드**
 
 ```javascript
 _satellite.environment
 ```
 
-이 개체에는 현재 태그 런타임 라이브러리가 배포되는 환경에 대한 정보가 들어 있습니다. 개체에는 다음 속성이 포함되어 있습니다.
-
-### `id`
-
-환경의 ID입니다.
-
-### `stage`
-
-이 라이브러리가 빌드된 환경입니다. 가능한 값은 다음과 같습니다.
-
-* development
-* staging
-* production
-
-다음 예에서는 개체 값을 보여 줍니다.
+개체에는 다음 속성이 포함되어 있습니다.
 
 ```javascript
 {
-  id: "EN123456...",
+  id: "ENbe322acb4fc64dfdb603254ffe98b5d3",
   stage: "development"
 }
 ```
+
+| 속성 | 설명 |
+| --- | --- |
+| `id` | 환경의 ID입니다. |
+| `stage` | 이 라이브러리가 빌드된 환경입니다. 가능한 값은 `development`, `staging` 및 `production`입니다. |
 
 ## `notify`
 

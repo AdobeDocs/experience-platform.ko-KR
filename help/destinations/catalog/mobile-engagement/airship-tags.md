@@ -3,18 +3,14 @@ keywords: 항공 태그;항공 운항 대상
 title: Airship 태그 연결
 description: Airship 내에서 타깃팅할 대상 태그로 Adobe 대상 데이터를 Airship에 원활하게 전달합니다.
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
-source-git-commit: e413933920028e3239f6044111d9cf215c865eba
+source-git-commit: a765f6829f08f36010e0e12a7186bf5552dfe843
 workflow-type: tm+mt
-source-wordcount: '705'
-ht-degree: 1%
+source-wordcount: '685'
+ht-degree: 0%
 
 ---
 
-# (베타) [!DNL Airship Tags] 연결 {#airship-tags-destination}
-
->[!IMPORTANT]
->
->Adobe Experience Platform의 [!DNL Airship Tags] 대상은 현재 베타에 있습니다. 설명서 및 기능은 변경될 수 있습니다.
+# [!DNL Airship Tags] 연결 {#airship-tags-destination}
 
 ## 개요
 

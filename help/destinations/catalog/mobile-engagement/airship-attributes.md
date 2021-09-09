@@ -3,18 +3,14 @@ keywords: 비행선 속성;비행선 목적지
 title: Airship 속성 연결
 description: Airship 내에서 타깃팅할 대상 속성으로 Adobe 대상 데이터를 Airship에 원활하게 전달합니다.
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
+source-git-commit: a765f6829f08f36010e0e12a7186bf5552dfe843
 workflow-type: tm+mt
-source-wordcount: '726'
-ht-degree: 1%
+source-wordcount: '706'
+ht-degree: 0%
 
 ---
 
-# (베타) [!DNL Airship Attributes] 연결 {#airship-attributes-destination}
-
->[!IMPORTANT]
->
->Adobe Experience Platform의 [!DNL Airship Attributes] 대상은 현재 베타에 있습니다. 설명서 및 기능은 변경될 수 있습니다.
+# [!DNL Airship Attributes] 연결 {#airship-attributes-destination}
 
 ## 개요 {#overview}
 

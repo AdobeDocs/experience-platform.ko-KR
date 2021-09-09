@@ -2,10 +2,10 @@
 title: Turbine 자유 변수
 description: Adobe Experience Platform 태그 런타임과 관련된 정보 및 유틸리티를 제공하는 무료 변수인 turbine 객체에 대해 알아봅니다.
 exl-id: 1664ab2e-8704-4a56-8b6b-acb71534084e
-source-git-commit: 57b4d11d0a7fd587dc45066737726a52533e33f0
+source-git-commit: 814f853d16219021d9151458d93fc5bdc6c860fb
 workflow-type: tm+mt
-source-wordcount: '598'
-ht-degree: 51%
+source-wordcount: '602'
+ht-degree: 50%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 51%
 
 `turbine` 객체는 확장의 라이브러리 모듈 범위 내에 있는 &quot;자유 변수&quot;입니다. Adobe Experience Platform 태그 런타임과 관련된 정보 및 유틸리티를 제공하며 `require()` 을 사용하지 않고도 라이브러리 모듈에서 항상 사용할 수 있습니다.
 
-## [!DNL buildInfo]
+## `buildInfo`
 
 ```js
 console.log(turbine.buildInfo.turbineBuildDate);
@@ -40,7 +40,7 @@ console.log(turbine.buildInfo.turbineBuildDate);
 | `buildDate` | 현재 라이브러리가 빌드된 ISO 8601 날짜입니다. |
 
 
-## [!DNL environment]
+## `environment`
 
 ```js
 console.log(turbine.environment.stage);
@@ -50,7 +50,7 @@ console.log(turbine.environment.stage);
 
 ```js
 {
-    id: "EN123456...",
+    id: "ENbe322acb4fc64dfdb603254ffe98b5d3",
     stage: "development"
 }
 ```
@@ -58,16 +58,16 @@ console.log(turbine.environment.stage);
 | 속성 | 설명 |
 | --- | --- |
 | `id` | 환경의 ID입니다. |
-| `stage` | 이 라이브러리가 빌드된 환경입니다. 허용되는 값은 `development`, `staging` 및 `production`입니다. |
+| `stage` | 이 라이브러리가 빌드된 환경입니다. 가능한 값은 `development`, `staging` 및 `production`입니다. |
 
 
-## [!DNL debugEnabled]
+## `debugEnabled`
 
-태그 디버깅이 현재 활성화되어 있는지 여부입니다.
+태그 디버깅이 현재 활성화되어 있는지 여부를 나타내는 부울 값입니다.
 
 단순히 메시지를 기록하려는 경우에는 이 기능을 사용할 필요가 없습니다. 대신, 항상 `turbine.logger` 을 사용하여 메시지를 기록하여 태그 디버깅이 활성화될 때만 메시지가 콘솔에 인쇄되도록 하십시오.
 
-### [!DNL getDataElementValue]
+### `getDataElementValue`
 
 ```js
 console.log(turbine.getDataElementValue(dataElementName));
@@ -75,7 +75,7 @@ console.log(turbine.getDataElementValue(dataElementName));
 
 데이터 요소의 값을 반환합니다.
 
-### [!DNL getExtensionSettings] {#get-extension-settings}
+### `getExtensionSettings` {#get-extension-settings}
 
 ```js
 var extensionSettings = turbine.getExtensionSettings();
@@ -85,7 +85,7 @@ var extensionSettings = turbine.getExtensionSettings();
 
 반환된 설정 객체 내의 값은 데이터 요소에서 제공될 수 있습니다. 따라서 데이터 요소의 값이 변경되면 다른 시간에 `getExtensionSettings()`를 호출하는 경우 다른 결과가 발생할 수 있습니다. 최신 값을 얻으려면 `getExtensionSettings()`을 호출하기 전에 가능한 한 오래 기다리십시오.
 
-### [!DNL getHostedLibFileUrl] {#get-hosted-lib-file}
+### `getHostedLibFileUrl` {#get-hosted-lib-file}
 
 ```js
 var loadScript = require('@adobe/reactor-load-script');
@@ -96,7 +96,7 @@ loadScript(turbine.getHostedLibFileUrl('AppMeasurement.js')).then(function() {
 
 태그 런타임 라이브러리와 함께 다양한 파일을 호스팅하기 위해 [hostedLibFiles](./manifest.md) 속성을 확장 매니페스트 내에서 정의할 수 있습니다. 이 모듈은 주어진 라이브러리 파일이 호스팅되는 URL을 반환합니다.
 
-### [!DNL getSharedModule] {#shared}
+### `getSharedModule` {#shared}
 
 ```js
 var mcidInstance = turbine.getSharedModule('adobe-mcid', 'mcid-instance');
@@ -104,7 +104,7 @@ var mcidInstance = turbine.getSharedModule('adobe-mcid', 'mcid-instance');
 
 다른 확장에서 공유된 모듈을 검색합니다. 일치하는 모듈이 없으면 `undefined`가 반환됩니다. 공유 모듈에 대한 자세한 내용은 [공유 모듈 구현](./web/shared.md)을 참조하십시오.
 
-### [!DNL logger]
+### `logger`
 
 ```js
 turbine.logger.error('Error!');
@@ -118,13 +118,13 @@ turbine.logger.error('Error!');
 * `logger.error(message: string)`: 콘솔에 오류 메시지를 기록합니다.
 * `logger.debug(message: string)`: 콘솔에 디버그 메시지를 기록합니다. (브라우저 콘솔 내에서 `verbose` 로깅이 활성화될 때만 표시됩니다.)
 
-### [!DNL onDebugChanged]
+### `onDebugChanged`
 
 콜백 함수를 `turbine.onDebugChanged`에 전달하면 디버깅이 전환될 때마다 태그가 콜백을 호출합니다. 태그는 디버깅이 활성화되면 true이고 디버깅이 비활성화된 경우 false인 콜백 함수에 부울을 전달합니다.
 
 단순히 메시지를 기록하려는 경우에는 이 기능을 사용할 필요가 없습니다. 대신 항상 `turbine.logger` 및 태그를 사용하여 메시지를 기록하면 태그 디버깅이 활성화될 때만 메시지가 콘솔에 인쇄됩니다.
 
-### [!DNL propertySettings] {#property-settings}
+### `propertySettings` {#property-settings}
 
 ```js
 console.log(turbine.propertySettings.domains);
