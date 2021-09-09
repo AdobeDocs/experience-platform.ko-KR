@@ -4,8 +4,7 @@ solution: Experience Platform
 title: 데이터 준비 개요
 topic-legacy: overview
 description: 이 문서에서는 Adobe Experience Platform 내의 데이터 준비를 소개합니다.
-exl-id: f15eeb50-a531-4560-a524-1a670fbda706
-source-git-commit: 2cc72708b77396e70d006ecd1e21fd2d495ddf61
+source-git-commit: 3235c48ec1f449e45b3f4b096585b67e14600407
 workflow-type: tm+mt
 source-wordcount: '241'
 ht-degree: 2%

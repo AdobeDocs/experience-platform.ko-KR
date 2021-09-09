@@ -5,8 +5,7 @@ title: UI에서 Veva CRM 소스 연결 만들기
 topic-legacy: overview
 type: Tutorial
 description: Adobe Experience Platform UI를 사용하여 Vec CRM 소스 연결을 만드는 방법을 알아봅니다.
-exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
-source-git-commit: 076e0880c9efd1fe1cbfb4c610c5e15093adf460
+source-git-commit: 3235c48ec1f449e45b3f4b096585b67e14600407
 workflow-type: tm+mt
 source-wordcount: '426'
 ht-degree: 1%
@@ -17,14 +16,14 @@ ht-degree: 1%
 
 Adobe Experience Platform의 소스 커넥터는 예약된 대로 외부에서 가져온 CRM 데이터를 수집하는 기능을 제공합니다. 이 자습서에서는 [!DNL Platform] 사용자 인터페이스를 사용하여 [!DNL Veeva CRM] 소스 커넥터를 만드는 단계를 제공합니다.
 
-## 시작
+## 시작하기
 
 이 자습서에서는 Adobe Experience Platform의 다음 구성 요소를 이해하고 있어야 합니다.
 
-* [[!DNL Experience Data Model (XDM)] 시스템](../../../../../xdm/home.md):고객 경험 데이터를  [!DNL Experience Platform] 구성하는 표준화된 프레임워크입니다.
-   * [스키마 작성 기본 사항](../../../../../xdm/schema/composition.md):스키마 컴포지션의 주요 원칙 및 모범 사례를 포함하여 XDM 스키마의 기본 빌딩 블록에 대해 알아봅니다.
-   * [스키마 편집기 자습서](../../../../../xdm/tutorials/create-schema-ui.md):스키마 편집기 UI를 사용하여 사용자 지정 스키마를 만드는 방법을 알아보십시오.
-* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md):여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
+* [[!DNL Experience Data Model (XDM)] 시스템](../../../../../xdm/home.md): 고객 경험 데이터를  [!DNL Experience Platform] 구성하는 표준화된 프레임워크입니다.
+   * [스키마 작성 기본 사항](../../../../../xdm/schema/composition.md): 스키마 컴포지션의 주요 원칙 및 모범 사례를 포함하여 XDM 스키마의 기본 빌딩 블록에 대해 알아봅니다.
+   * [스키마 편집기 자습서](../../../../../xdm/tutorials/create-schema-ui.md): 스키마 편집기 UI를 사용하여 사용자 지정 스키마를 만드는 방법을 알아보십시오.
+* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): 여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
 
 이미 유효한 [!DNL Veeva CRM] 계정이 있는 경우 이 문서의 나머지 부분을 건너뛰고 [데이터 흐름](../../dataflow/crm.md) 구성에서 자습서를 진행할 수 있습니다.
 

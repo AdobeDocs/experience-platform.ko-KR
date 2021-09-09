@@ -2,8 +2,7 @@
 keywords: Experience Platform;사용자 인터페이스;UI;대시보드;대시보드;프로필;세그먼트;대상;라이선스 사용
 title: 표준 대시보드 위젯
 description: '이 안내서에서는 Adobe Experience Platform 대시보드에 표준 위젯을 추가하는 단계별 지침을 제공합니다. '
-exl-id: 1d33e3ea-a8a8-4a09-8bd9-2e04ecedebdc
-source-git-commit: 16a8764fd27e6b1ae32bc37b3abcd521aaf88887
+source-git-commit: 3235c48ec1f449e45b3f4b096585b67e14600407
 workflow-type: tm+mt
 source-wordcount: '403'
 ht-degree: 0%
