@@ -4,7 +4,7 @@ user-guide-title: XDM(경험 데이터 모델) 시스템 도움말
 breadcrumb-title: Experience Data Model(XDM) 안내서
 user-guide-description: XDM(경험 데이터 모델) 클래스 및 스키마 필드 그룹을 사용하여 경험 데이터를 표준화합니다.
 feature: Schemas
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: 6b3a1cc4cfba5475aba781a1d0511a59e399135f
 workflow-type: tm+mt
 source-wordcount: '315'
 ht-degree: 17%
