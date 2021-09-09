@@ -1,10 +1,11 @@
 ---
 title: 태그의 사용자 권한
 description: 태그에 사용할 수 있는 다양한 권한 유형과 다양한 비즈니스 사용 사례를 위한 몇 가지 기본 구현 전략에 대해 알아봅니다.
-source-git-commit: acef25fe46f0ac0c45c18d4590be4af95ad5e0ab
+exl-id: 9b48847a-6133-4dbd-b17d-e7b88152ad7d
+source-git-commit: 88593d921d6ad97fc4dfb059f0272817caee06c7
 workflow-type: tm+mt
 source-wordcount: '1307'
-ht-degree: 15%
+ht-degree: 17%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 15%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../term-updates.md)을 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
 
 Adobe Experience Platform의 태그에 대한 사용자 권한은 Adobe Admin Console을 통해 사용자에게 할당됩니다. 개별 사용자에게 할당되지 않고 다양한 권한 세트가 제품 프로필로 별도로 구성됩니다. 그런 다음 사용자가 구성된 권한을 부여받기 위해 이러한 제품 프로필에 할당됩니다.
 
@@ -39,7 +40,7 @@ Adobe Experience Platform의 태그에 대한 사용자 권한은 Adobe Admin Co
 
 기본적으로 제품 프로필은 현재 및 향후에 회사 내에 있는 모든 속성에 대한 액세스 권한을 부여합니다. 이 권한 유형을 사용하여 이름별로 특정 기존 속성에 대한 액세스를 제한하거나 부여할 수 있습니다.
 
-### 속성 권한
+### 속성 권한 {#property-rights}
 
 데이터 수집 UI에서 만드는 모든 속성은 Admin Console에서 사용할 수 있게 되므로 동일한 제품 프로필에서 특정 속성 권한으로 속성을 그룹화할 수 있습니다.
 

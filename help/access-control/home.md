@@ -5,7 +5,7 @@ topic-legacy: overview
 title: 액세스 제어 개요
 description: Adobe Experience Platform에 대한 액세스 제어는 Adobe Admin Console을 통해 제공됩니다. 이 기능은 사용 권한 및 샌드박스를 사용자와 연결하는 Admin Console의 제품 프로필을 활용합니다.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: 13055c9b569a67b5b44a90ac2b40776e271db008
+source-git-commit: 88593d921d6ad97fc4dfb059f0272817caee06c7
 workflow-type: tm+mt
 source-wordcount: '1375'
 ht-degree: 2%
@@ -68,7 +68,7 @@ Adobe Admin Console은 조직에 대한 Adobe 제품 권한 및 액세스를 관
 
 샌드박스 관리 권한을 사용하면 샌드박스를 관리, 보기 또는 재설정할 수 있습니다.
 
-### 권한
+### 권한 {#permissions}
 
 제품 프로필 내의 권한 탭에는 해당 프로필에 대해 활성 상태인 샌드박스 및 권한이 표시됩니다.
 
