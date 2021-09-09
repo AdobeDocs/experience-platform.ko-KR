@@ -4,9 +4,10 @@ solution: Experience Platform
 title: 통화 데이터 유형
 topic-legacy: overview
 description: 이 문서에서는 통화 XDM 데이터 유형에 대한 개요를 제공합니다.
-source-git-commit: 2592d4f494d4d3dcfba63eb539498416fbdf6707
+exl-id: eaf4812e-32ec-4b07-82ef-60777f03623d
+source-git-commit: 5e92b288bb8c996cfcf343d8ac1ab1665b0d3ad0
 workflow-type: tm+mt
-source-wordcount: '130'
+source-wordcount: '127'
 ht-degree: 5%
 
 ---
@@ -19,9 +20,9 @@ ht-degree: 5%
 
 | 속성 | 데이터 유형 | 설명 |
 | --- | --- | --- |
-| `amount` | 이중 | 디스플레이에서 나타낼 수 있는 색상 수입니다. |
-| `conversionDate` | DateTime | 디스플레이에서 나타낼 수 있는 색상 수입니다. |
-| `currencyCode` | 문자열 | 디스플레이에서 나타낼 수 있는 색상 수입니다. |
+| `amount` | 이중 | `currencyCode`에 정의된 통화 금액입니다. |
+| `conversionDate` | DateTime | 통화 전환이 수행된 시간의 타임스탬프입니다. |
+| `currencyCode` | 문자열 | `amount`이 나타내는 통화 유형을 나타내는 ISO 4217 코드입니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
