@@ -1,10 +1,11 @@
 ---
 title: 확장
 description: Adobe Experience Platform에서 태그 확장이 작동하는 방식을 알아봅니다.
-source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
+exl-id: e911bedd-6c67-4339-91d7-839c8b00c153
+source-git-commit: f7edfa05e25c17f9ace34287c8a2d8426d0f36d4
 workflow-type: tm+mt
 source-wordcount: '497'
-ht-degree: 57%
+ht-degree: 63%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 57%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../../term-updates.md)을 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
 
 확장은 태그 또는 이벤트 전달에서 제공하는 기능을 확장하는 패키지화된 코드 세트입니다.
 
@@ -61,7 +62,7 @@ Adobe 소유 확장에 대한 자세한 내용은 [확장 참조](../../../exten
 1. 속성의 개요 페이지에서 **[!UICONTROL 확장]** 탭을 엽니다.
 1. 확장을 선택합니다.
 
-   ![]()../../../images/extensions.png)
+   ![코어 확장](../../../images/extensions.png)
 
    * 확장이 있는 경우 확장 카탈로그에서 선택합니다.
    * 목록에 있는 확장 위에 마우스를 올려 놓아 확장을 구성하거나 비활성화합니다.
