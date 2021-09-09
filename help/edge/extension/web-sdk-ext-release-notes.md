@@ -2,9 +2,9 @@
 title: Adobe Experience Platform Web SDK Extension 릴리스 노트
 description: Adobe Experience Platform 웹 SDK 태그 확장
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: a4a41a91429104b302e223034bf15f9839ddb5ad
+source-git-commit: 07a280f906c5bcc69a0bffc529e1d1c8280f771a
 workflow-type: tm+mt
-source-wordcount: '1185'
+source-wordcount: '1192'
 ht-degree: 49%
 
 ---
@@ -13,9 +13,11 @@ ht-degree: 49%
 
 이 문서에서는 Adobe Experience Platform 웹 SDK 태그 확장에 대한 릴리스 노트를 다룹니다. SDK 자체에 대한 최신 릴리스 노트는 [Platform Web SDK 릴리스 노트](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html)를 참조하십시오.
 
-## 버전 2.7.1 - 2021년 9월 7일
+## 버전 2.7.3 - 2021년 9월 7일
 
 Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.6.4을 포함합니다.
+
+* `container.buildInfo.environment.`에 대한 사용 중단 경고가 더 이상 없습니다.
 
 ## 버전 2.7.0 - 2021년 8월 16일
 
