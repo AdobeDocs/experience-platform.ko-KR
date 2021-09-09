@@ -2,13 +2,14 @@
 keywords: Experience Platform;홈;인기 항목;날짜 범위
 title: 경고 개요
 description: 경고 규칙 정의 구조를 포함하여 Adobe Experience Platform의 경고에 대해 알아봅니다.
-source-git-commit: 5fabf5fa12f0a117a50bf694dea5118e5ea03500
+feature: Alerts
+exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
+source-git-commit: d82487f34c0879ed27ac55e42d70346f45806131
 workflow-type: tm+mt
-source-wordcount: '718'
+source-wordcount: '740'
 ht-degree: 3%
 
 ---
-
 
 # 경고 개요
 
@@ -56,6 +57,10 @@ Adobe Experience Platform에서는 Adobe Experience Platform 활동에 대한 �
 작업 모니터링을 효율적으로 자동화할 수 있도록 구성된 웹 후크에 경고를 보낼 수 있습니다. Webhook를 통해 경고를 수신하려면 Adobe 개발자 콘솔에 Platform 경고에 대한 웹 후크를 등록해야 합니다. 특정 단계에 대해서는 [Adobe I/O 이벤트 알림 구독](./subscribe.md)에 대한 안내서를 참조하십시오.
 
 ### 플랫폼 UI {#ui}
+
+플랫폼 UI를 사용하여 수신한 경고를 보고 경고 규칙을 관리할 수 있습니다. 다음 비디오에서는 이러한 기능을 소개합니다.
+
+>[!VIDEO](https://video.tv.adobe.com/v/336218?quality=12&learn=on)
 
 Platform UI에서 경고를 사용하여 작업하려면 Adobe Admin Console을 통해 다음 액세스 제어 권한이 활성화되어 있어야 합니다.
 

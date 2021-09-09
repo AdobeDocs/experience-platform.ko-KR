@@ -5,9 +5,9 @@ title: XDM ExperienceEvent 클래스
 topic-legacy: overview
 description: 이 문서에서는 XDM ExperienceEvent 클래스에 대한 개요와 이벤트 데이터 모델링에 대한 모범 사례를 제공합니다.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: ff446e2b9a2573889bcd1a5ab0933f60e871c353
+source-git-commit: 5405a2e2312e81db210a97a759681f66faa8b1fa
 workflow-type: tm+mt
-source-wordcount: '1745'
+source-wordcount: '1759'
 ht-degree: 1%
 
 ---
@@ -68,8 +68,14 @@ Adobe은 [!DNL XDM ExperienceEvent] 클래스에서 사용할 여러 표준 필�
 * [[!UICONTROL 캠페인 마케팅 세부 사항]](../field-groups/event/campaign-marketing-details.md)
 * [[!UICONTROL 채널 세부 사항]](../field-groups/event/channel-details.md)
 * [[!UICONTROL 상거래 세부 사항]](../field-groups/event/commerce-details.md)
+* [[!UICONTROL 장치 거래 세부 사항]](../field-groups/event/device-trade-in-details.md)
+* [[!UICONTROL 식사 예약]](../field-groups/event/dining-reservation.md)
 * [[!UICONTROL 최종 사용자 ID 세부 정보]](../field-groups/event/enduserids.md)
 * [[!UICONTROL 환경 세부 사항]](../field-groups/event/environment-details.md)
+* [[!UICONTROL 비행 예약]](../field-groups/event/flight-reservation.md)
+* [[!UICONTROL IAB TCF 2.0 동의]](../field-groups/event/iab.md)
+* [[!UICONTROL 숙박예약]](../field-groups/event/lodging-reservation.md)
+* [[!UICONTROL 예약 세부 정보]](../field-groups/event/reservation-details.md)
 * [[!UICONTROL 웹 세부 사항]](../field-groups/event/web-details.md)
 
 ## 부록

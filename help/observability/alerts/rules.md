@@ -1,14 +1,15 @@
 ---
 keywords: Experience Platform;홈;인기 항목;날짜 범위
 title: 표준 경고 규칙
-description: '이 문서에서는 Experience Platform이 제공하는 사전 정의된 경고 규칙을 다룹니다. '
-source-git-commit: de8d8d92622abc75f2d09f4bb771dbe4268d0b38
+description: 이 문서에서는 Experience Platform이 제공하는 사전 정의된 경고 규칙을 다룹니다.
+feature: Alerts
+exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
+source-git-commit: d82487f34c0879ed27ac55e42d70346f45806131
 workflow-type: tm+mt
 source-wordcount: '148'
 ht-degree: 12%
 
 ---
-
 
 # 표준 경고 규칙
 

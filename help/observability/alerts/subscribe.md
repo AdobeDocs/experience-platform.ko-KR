@@ -2,8 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;날짜 범위
 title: Adobe I/O 이벤트 알림 구독
 description: 이 문서에서는 Adobe Experience Platform 서비스에 대한 Adobe I/O 이벤트 알림을 구독하는 방법에 대해 설명합니다. 사용 가능한 이벤트 유형에 대한 참조 정보도 제공되며, 해당 이벤트 유형에 대해 반환된 이벤트 데이터를 해석하는 방법에 대한 추가 설명서에 대한 링크도 제공됩니다 [!DNL Platform] 서비스.
+feature: Alerts
 exl-id: c0ad7217-ce84-47b0-abf6-76bcf280f026
-source-git-commit: 8c00fb98a213b578f6970c1e1978f0159f8f38df
+source-git-commit: d82487f34c0879ed27ac55e42d70346f45806131
 workflow-type: tm+mt
 source-wordcount: '773'
 ht-degree: 1%
@@ -58,8 +59,8 @@ ht-degree: 1%
 >작업 중인 서비스에 대해 구독할 이벤트를 모르는 경우 서비스별 알림 설명서를 참조하십시오.
 >
 >* [[!DNL Privacy Service] 알림](../../privacy-service/privacy-events.md)
-* [[!DNL Data Ingestion] 알림](../../ingestion/quality/subscribe-events.md)
-* [[!DNL Flow Service (sources)] 알림](../../sources/notifications.md)
+>* [[!DNL Data Ingestion] 알림](../../ingestion/quality/subscribe-events.md)
+>* [[!DNL Flow Service (sources)] 알림](../../sources/notifications.md)
 
 
 ![](../images/notifications/choose-event-subscriptions.png)

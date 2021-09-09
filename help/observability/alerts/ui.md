@@ -2,13 +2,14 @@
 keywords: Experience Platform;홈;인기 항목;날짜 범위
 title: 경고 UI 안내서
 description: Experience Platform 사용자 인터페이스에서 경고를 관리하는 방법을 알아봅니다.
-source-git-commit: 5fabf5fa12f0a117a50bf694dea5118e5ea03500
+feature: Alerts
+exl-id: 4ba3ef2b-7394-405e-979d-0e5e1fe676f3
+source-git-commit: d82487f34c0879ed27ac55e42d70346f45806131
 workflow-type: tm+mt
 source-wordcount: '240'
 ht-degree: 0%
 
 ---
-
 
 # 경고 UI 안내서
 
