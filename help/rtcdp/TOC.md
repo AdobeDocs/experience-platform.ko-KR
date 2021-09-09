@@ -3,12 +3,11 @@ product: adobe experience platform
 solution: Experience Platform, Real-time Customer Data Platform
 audience: user
 user-guide-title: 실시간 고객 데이터 플랫폼 안내서
-user-guide-description: 여러 엔터프라이즈 소스에서 알려진 데이터와 익명의 데이터를 결합하여 고객 프로필을 생성하고, 이러한 프로필에서 고객 세그먼트를 생성하며, 이러한 세그먼트를 제3자 대상으로 활성화할 수 있습니다.
-translation-type: tm+mt
-source-git-commit: 1305d789c68ac8f84d5a5f82d8f17035e56ef712
+user-guide-description: 여러 엔터프라이즈 소스에서 알려진 데이터와 익명의 데이터를 결합하여 고객 프로필을 생성하고, 이러한 프로필에서 고객 세그먼트를 생성하며, 이러한 세그먼트를 서드파티 대상으로 활성화할 수 있습니다.
+source-git-commit: 7dedc679ac4173ab3f782bc57517b2e66bc20844
 workflow-type: tm+mt
-source-wordcount: '103'
-ht-degree: 52%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -27,16 +26,16 @@ ht-degree: 52%
 * 대상 {#destinations}
    * [대상 개요](destinations/overview.md)
 * 개인 정보 및 데이터 거버넌스 {#privacy}
-   * [개인 정보 보호 개요](privacy/privacy-overview.md)
+   * [개인정보 보호 개요](privacy/privacy-overview.md)
    * [데이터 거버넌스 개요](privacy/data-governance-overview.md)
 * 프로필 {#profile}
    * [프로필 개요](profile/profile-overview.md)
    * [ID 및 ID 네임스페이스](profile/identities-overview.md)
-   * [정책 병합](profile/merge-policies.md)
+   * [병합 정책](profile/merge-policies.md)
    * [프로필 뷰어](profile/profile-viewer.md)
 * 세그먼트 {#segmentation}
-   * [세그멘테이션 개요](segmentation/segmentation-overview.md)
-   * [세그먼트 빌더 가이드](segmentation/segment-builder-guide.md)
+   * [세그먼테이션 개요](segmentation/segmentation-overview.md)
+   * [세그먼트 빌더 안내서](segmentation/segment-builder-guide.md)
    * [고객 AI](segmentation/customer-ai.md)
 * 소스 {#sources}
    * [소스 개요](sources/sources-overview.md)
