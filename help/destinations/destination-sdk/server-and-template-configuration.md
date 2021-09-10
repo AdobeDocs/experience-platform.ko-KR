@@ -1,7 +1,8 @@
 ---
 description: 서버 및 템플릿 사양은 일반적인 끝점 '/authoring/destination-server'를 통해 Adobe Experience Platform 대상 SDK에 구성할 수 있습니다.
 title: 대상 SDK의 서버 및 템플릿 사양에 대한 구성 옵션
-source-git-commit: d2452bf0e59866d3deca57090001c4c5a0935525
+exl-id: cf493ed5-0bdb-4b90-b84d-73926a566a2a
+source-git-commit: bd65cfa557fb42d23022578b98bc5482e8bd50b1
 workflow-type: tm+mt
 source-wordcount: '411'
 ht-degree: 7%
@@ -23,7 +24,7 @@ ht-degree: 7%
    "urlBasedDestination":{
       "url":{
          "templatingStrategy":"PEBBLE_V1",
-         "value":"https://api.moviestar.com/data/{{endpoint.region}}/items"
+         "value":"https://api.moviestar.com/data/{{customerData.region}}/items"
       }
    },
    "httpTemplate":{
@@ -49,7 +50,7 @@ ht-degree: 7%
 |---|---|---|
 | `name` | 문자열 | Adobe에만 표시되는 서버의 친숙한 이름을 나타냅니다. 파트너 또는 고객은 이 이름을 볼 수 없습니다. 예 `Moviestar destination server`. |
 | `destinationServerType` | 문자열 | `URL_BASED` 은 현재 사용 가능한 유일한 옵션입니다. |
-| `templatingStrategy` | 문자열 | <ul><li>Adobe이 아래 `value` 필드에서 URL을 변환해야 하는 경우 `PEBBLE_V1` 을 사용합니다. 다음과 같은 종단점이 있는 경우 이 옵션을 사용합니다. `https://api.moviestar.com/data/{{endpoint.region}}/items` </li><li> Adobe 측에 변환이 필요하지 않으면 `NONE` 을 사용하십시오. 예를 들어 다음과 같은 종단점이 있습니다. `https://api.moviestar.com/data/items` </li></ul> |
+| `templatingStrategy` | 문자열 | <ul><li>Adobe이 아래 `value` 필드에서 URL을 변환해야 하는 경우 `PEBBLE_V1` 을 사용합니다. 다음과 같은 종단점이 있는 경우 이 옵션을 사용합니다. `https://api.moviestar.com/data/{{customerData.region}}/items` </li><li> Adobe 측에 변환이 필요하지 않으면 `NONE` 을 사용하십시오. 예를 들어 다음과 같은 종단점이 있습니다. `https://api.moviestar.com/data/items` </li></ul> |
 | `value` | 문자열 | Experience Platform이 연결해야 하는 API 엔드포인트의 주소를 입력합니다. |
 
 {style=&quot;table-layout:auto&quot;}

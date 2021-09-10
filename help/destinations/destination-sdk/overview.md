@@ -2,9 +2,9 @@
 description: Adobe Experience Platform 대상 SDK는 선택한 데이터 및 인증 형식에 따라 Experience Platform이 대상 및 프로필 데이터를 종단점에 전달하도록 대상 통합 패턴을 구성할 수 있도록 해주는 구성 API 세트입니다. 구성은 Experience Platform에 저장되며, 추가 업데이트를 위해 API를 통해 검색할 수 있습니다.
 title: Adobe Experience Platform 대상 SDK
 exl-id: 7aca9f40-98c8-47c2-ba88-4308fc2b1798
-source-git-commit: 2841adc0ce212a945c35ba38209d4c00c519ad7b
+source-git-commit: bd65cfa557fb42d23022578b98bc5482e8bd50b1
 workflow-type: tm+mt
-source-wordcount: '691'
+source-wordcount: '702'
 ht-degree: 2%
 
 ---
@@ -63,8 +63,8 @@ This documentation set provides you with all the necessary information to add yo
 ---------|----------|
 | 독립 소프트웨어 공급업체(ISV) | [Adobe Exchange 프로그램](https://partners.adobe.com/exchangeprogram/experiencecloud.html)에 참여하고 대상 SDK에 액세스하기 위해 제공된 Experience Platform 샌드박스 를 가져오도록 요청합니다. |
 | 시스템 통합자(SI) | [Adobe 솔루션 파트너 프로그램](https://solutionpartners.adobe.com/home.html)에서 Gold 또는 Platinum 수준에 있어야 하며, Experience Platform 샌드박스가 프로비저닝되고 대상 SDK에 액세스할 수 있습니다. |
-| 활성화 패키지의 고객 Experience Platform | 기본적으로 Experience Platform 샌드박스 및 대상 SDK에 액세스할 수 있습니다. |
-| 실시간 CDP 패키지에서 고객 Experience Platform | 대상 SDK에 액세스할 수 없지만 대상 SDK를 사용하여 다른 회사가 구성하고 Experience Platform 조직 간에 게시된 모든 제품 대상 항목에 액세스할 수 있습니다. |
+| [활성화 패키지의 고객 Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html) | 기본적으로 Experience Platform 샌드박스 및 대상 SDK에 액세스할 수 있습니다. |
+| [실시간 CDP 패키지의 고객 Experience Platform](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) | 대상 SDK에 액세스할 수 없지만 대상 SDK를 사용하여 다른 회사가 구성하고 Experience Platform 조직 간에 게시된 모든 제품 대상 항목에 액세스할 수 있습니다. |
 
 {style=&quot;table-layout:auto&quot;}
 

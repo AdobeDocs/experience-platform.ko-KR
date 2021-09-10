@@ -1,7 +1,8 @@
 ---
 description: 이 페이지에서는 '/authoring/destination-server' API 종단점을 사용하여 수행할 수 있는 모든 API 작업을 나열하고 설명합니다. 대상에 대한 서버 및 템플릿 사양은 일반적인 끝점 '/authoring/destination-servers'를 통해 Adobe Experience Platform 대상 SDK에 구성할 수 있습니다.
 title: 대상 서버 끝점 API 작업
-source-git-commit: 19307fba8f722babe5b6d57e80735ffde00fc851
+exl-id: a144b0fb-d34f-42d1-912b-8576296e59d2
+source-git-commit: bd65cfa557fb42d23022578b98bc5482e8bd50b1
 workflow-type: tm+mt
 source-wordcount: '938'
 ht-degree: 4%
@@ -49,7 +50,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
    "urlBasedDestination":{
       "url":{
          "templatingStrategy":"PEBBLE_V1",
-         "value":"https://api.moviestar.com/data/{{endpoint.region}}/items"
+         "value":"https://api.moviestar.com/data/{{customerData.region}}/items"
       }
    },
    "httpTemplate":{
@@ -67,7 +68,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | -------- | ----------- | ----------- |
 | `name` | 문자열 | Adobe에만 표시되는 서버의 친숙한 이름을 나타냅니다. 파트너 또는 고객은 이 이름을 볼 수 없습니다. 예 `Moviestar destination server`. |
 | `destinationServerType` | 문자열 | `URL_BASED` 은 현재 사용 가능한 유일한 옵션입니다. |
-| `urlBasedDestination.url.templatingStrategy` | 문자열 | <ul><li>Adobe이 아래 `value` 필드에서 URL을 변환해야 하는 경우 `PEBBLE_V1` 을 사용합니다. 다음과 같은 종단점이 있는 경우 이 옵션을 사용합니다. `https://api.moviestar.com/data/{{endpoint.region}}/items` </li><li> Adobe 측에 변환이 필요하지 않으면 `NONE` 을 사용하십시오. 예를 들어 다음과 같은 종단점이 있습니다. `https://api.moviestar.com/data/items`.</li></ul> |
+| `urlBasedDestination.url.templatingStrategy` | 문자열 | <ul><li>Adobe이 아래 `value` 필드에서 URL을 변환해야 하는 경우 `PEBBLE_V1` 을 사용합니다. 다음과 같은 종단점이 있는 경우 이 옵션을 사용합니다. `https://api.moviestar.com/data/{{customerData.region}}/items` </li><li> Adobe 측에 변환이 필요하지 않으면 `NONE` 을 사용하십시오. 예를 들어 다음과 같은 종단점이 있습니다. `https://api.moviestar.com/data/items`.</li></ul> |
 | `urlBasedDestination.url.value` | 문자열 | Experience Platform이 연결해야 하는 API 엔드포인트의 주소를 입력합니다. |
 | `urlBasedDestination.maxUsersPerRequest` | 정수 | Adobe은 내보낸 여러 프로필을 단일 HTTP 호출로 집계할 수 있습니다. 하나의 HTTP 호출에서 엔드포인트가 수신할 최대 프로필 수를 지정합니다. 이는 최상의 노력 집계에 해당합니다. 예를 들어 값 100을 지정하는 경우 Adobe은 호출 시 100보다 작은 수의 프로필을 전송할 수 있습니다. <br> 서버가 요청당 여러 사용자를 허용하지 않는 경우 이 값을 1로 설정하십시오. |
 | `urlBasedDestination.splitUserById` | 부울 | 대상에 대한 호출이 ID로 분할되어야 하는 경우 이 플래그를 사용합니다. 서버가 특정 네임스페이스에 대해 호출당 하나의 ID만 수락하는 경우 이 플래그를 `true`로 설정하십시오. |
@@ -216,7 +217,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
    "urlBasedDestination":{
       "url":{
          "templatingStrategy":"PEBBLE_V1",
-         "value":"https://api.moviestar.com/data/{{endpoint.region}}/items"
+         "value":"https://api.moviestar.com/data/{{customerData.region}}/items"
       }
    },
    "httpTemplate":{
@@ -270,7 +271,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
    "urlBasedDestination":{
       "url":{
          "templatingStrategy":"PEBBLE_V1",
-         "value":"https://api.moviestar.com/data/{{endpoint.region}}/items"
+         "value":"https://api.moviestar.com/data/{{customerData.region}}/items"
       }
    },
    "httpTemplate":{
