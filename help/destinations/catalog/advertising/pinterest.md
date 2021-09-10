@@ -1,7 +1,7 @@
 ---
 title: Pinterest 고객 목록 연결
 description: 고객 목록, 사이트를 방문한 사람 또는 Pinterest의 콘텐츠와 이미 상호 작용한 사람으로 대상을 만듭니다.
-source-git-commit: 3235c48ec1f449e45b3f4b096585b67e14600407
+source-git-commit: 96086324e644d4e2b2b2a3d03dce393c49c2d52e
 workflow-type: tm+mt
 source-wordcount: '516'
 ht-degree: 2%
