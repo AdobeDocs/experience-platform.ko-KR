@@ -1,9 +1,10 @@
 ---
 title: 데이터 수집 종단간 개요
 description: Adobe Experience Platform에서 제공하는 데이터 수집 기술을 사용하여 이벤트 데이터를 Adobe Experience Cloud 솔루션으로 보내는 방법에 대한 높은 수준의 개요입니다.
-source-git-commit: 2bcb42b83020a9ce620cb8162b7fc072b72ff23e
+exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
+source-git-commit: 1b2c0c2e5b05e30b6cf0e284f15f28989c580efe
 workflow-type: tm+mt
-source-wordcount: '2568'
+source-wordcount: '2619'
 ht-degree: 0%
 
 ---
@@ -12,7 +13,7 @@ ht-degree: 0%
 
 Adobe Experience Platform에서 데이터 수집은 데이터를 수집하여 다른 Adobe 제품 또는 타사 대상으로 전송하는 몇 가지 기술을 말합니다. 애플리케이션에서 Adobe Experience Platform Edge Network로 이벤트 데이터를 전송하려면 이러한 핵심 기술을 이해하고 필요한 경우 데이터를 필요한 대상에 제공하도록 구성하는 방법을 사용해야 합니다.
 
-이 안내서에서는 데이터 수집 기술을 사용하여 Edge 네트워크를 통해 이벤트를 전송하는 방법에 대한 높은 수준의 자습서를 제공합니다. 특히 이 자습서에서는 데이터 수집 UI 내에서 Adobe Experience Platform Web SDK 태그 확장을 설치하고 구성하는 단계를 안내합니다.
+이 안내서에서는 데이터 수집 기술을 사용하여 Edge 네트워크를 통해 이벤트를 전송하는 방법에 대한 높은 수준의 자습서를 제공합니다. 특히 이 자습서에서는 데이터 수집 UI(이전 Adobe Experience Platform Launch) 내에서 Adobe Experience Platform Web SDK 태그 확장을 설치하고 구성하는 단계를 안내합니다.
 
 >[!NOTE]
 >
@@ -179,9 +180,26 @@ XDM 개체 유형에 대한 구성 대화 상자가 나타납니다. 이 대화 
 
 데이터 요소를 저장한 후 다음 단계는 웹 사이트에서 특정 이벤트가 발생할 때마다(예: 고객이 장바구니에 제품을 추가할 때) Edge Network에 전송하는 규칙을 만드는 것입니다.
 
-예를 들어 이 섹션에서는 고객이 장바구니에 항목을 추가할 때 트리거할 규칙을 만드는 방법을 보여줍니다. 그러나 웹 사이트에서 발생할 수 있는 거의 모든 이벤트에 대한 규칙을 설정할 수 있습니다.
+웹 사이트에서 발생할 수 있는 거의 모든 이벤트에 대한 규칙을 설정할 수 있습니다. 예를 들어 이 섹션에서는 고객이 양식을 제출할 때 트리거되는 규칙을 만드는 방법을 보여줍니다. 다음 HTML은 규칙의 주제가 되는 &quot;장바구니에 추가&quot; 양식이 있는 간단한 웹 페이지를 나타냅니다.
 
-왼쪽 탐색에서 **[!UICONTROL 규칙]**&#x200B;을 선택한 다음 **[!UICONTROL 새 규칙 만들기]**&#x200B;를 선택합니다.
+```html
+<!DOCTYPE html>
+<html>
+<body>
+
+  <form id="add-to-cart-form">
+    <label for="item">Product:</label><br>
+    <input type="text" id="item" name="item"><br>
+    <label for="amount">Amount:</label><br>
+    <input type="number" id="amount" name="amount" value="1"><br><br>
+    <input type="submit" value="Add to Cart">
+  </form> 
+
+</body>
+</html>
+```
+
+데이터 수집 UI의 왼쪽 탐색에서 **[!UICONTROL 규칙]**&#x200B;을 선택한 다음 **[!UICONTROL 새 규칙 만들기]**&#x200B;를 선택합니다.
 
 ![규칙](./images/e2e/rules.png)
 
@@ -189,13 +207,13 @@ XDM 개체 유형에 대한 구성 대화 상자가 나타납니다. 이 대화 
 
 ![이름 규칙](./images/e2e/name-rule.png)
 
-이벤트 구성 페이지가 나타납니다. 이벤트를 구성하려면 먼저 이벤트 유형을 선택해야 합니다. 이벤트 유형은 확장에 의해 제공됩니다. 예를 들어 &quot;양식 제출&quot; 이벤트를 설정하려면 **[!UICONTROL 코어]** 확장을 선택한 다음 **[!UICONTROL 양식]** 범주 아래에서 **[!UICONTROL 제출]** 이벤트 유형을 선택합니다. 표시되는 구성 대화 상자에서 이 규칙이 실행될 특정 양식에 대한 CSS 선택기를 제공할 수 있습니다.
+이벤트 구성 페이지가 나타납니다. 이벤트를 구성하려면 먼저 이벤트 유형을 선택해야 합니다. 이벤트 유형은 확장에 의해 제공됩니다. 예를 들어 &quot;양식 제출&quot; 이벤트를 설정하려면 **[!UICONTROL 코어]** 확장을 선택한 다음 **[!UICONTROL 양식]** 범주 아래에서 **[!UICONTROL 제출]** 이벤트 유형을 선택합니다.
 
 >[!NOTE]
 >
 >구성 방법을 포함하여 Adobe 웹 확장에서 제공하는 다양한 이벤트 유형에 대한 자세한 내용은 태그 설명서의 [Adobe 확장 참조](../tags/extensions/web/overview.md)를 참조하십시오.
 
-**[!UICONTROL 변경 내용 유지]** 를 선택하여 이벤트를 규칙에 추가합니다.
+양식 제출 이벤트를 사용하면 [CSS 선택기](https://www.w3schools.com/css/css_selectors.asp)를 사용하여 실행할 규칙에 대한 특정 요소를 참조할 수 있습니다. 아래 예에서는 이 규칙이 &quot;장바구니에 추가&quot; 양식에 대해서만 실행되도록 ID `add-to-cart-form`가 사용됩니다. **[!UICONTROL 변경 내용 유지]** 를 선택하여 이벤트를 규칙에 추가합니다.
 
 ![이벤트 구성](./images/e2e/event-config.png)
 
