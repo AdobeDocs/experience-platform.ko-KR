@@ -2,9 +2,9 @@
 title: 데이터 수집 종단간 개요
 description: Adobe Experience Platform에서 제공하는 데이터 수집 기술을 사용하여 이벤트 데이터를 Adobe Experience Cloud 솔루션으로 보내는 방법에 대한 높은 수준의 개요입니다.
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
-source-git-commit: 1b2c0c2e5b05e30b6cf0e284f15f28989c580efe
+source-git-commit: 3f5a05068a24432237a5241dd20680d2f8ed0b55
 workflow-type: tm+mt
-source-wordcount: '2619'
+source-wordcount: '2618'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ Adobe Experience Platform에서 데이터 수집은 데이터를 수집하여 �
 
 ## 프로세스 요약
 
-웹 사이트에 대해 에지 네트워크를 구성하는 프로세스는 다음과 같이 요약할 수 있습니다.
+웹 사이트에 대한 데이터 수집을 구성하는 프로세스는 다음과 같이 요약할 수 있습니다.
 
 1. [Edge ](#schema) Network로 전송될 때 데이터의 구조를 결정하는 스키마를 만듭니다.
 1. [데이터 ](#datastream) 세트를 만들어 데이터를 전송할 대상을 구성합니다.
