@@ -1,7 +1,8 @@
 ---
 description: 이 페이지에서는 대상 SDK에서 지원하는 다양한 OAuth 2 인증 흐름에 대해 설명하고 대상에 대한 OAuth 2 인증을 설정하는 지침을 제공합니다.
 title: OAuth 2 인증
-source-git-commit: d2452bf0e59866d3deca57090001c4c5a0935525
+exl-id: 280ecb63-5739-491c-b539-3c62bd74e433
+source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
 workflow-type: tm+mt
 source-wordcount: '2119'
 ht-degree: 5%

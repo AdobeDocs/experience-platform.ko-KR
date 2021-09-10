@@ -1,9 +1,10 @@
 ---
 description: 이 페이지에서는 '/authoring/testing/destinationInstance/' API 종단점을 사용하여 수행할 수 있는 모든 API 작업을 나열하고 설명하며, 대상이 올바르게 구성되었는지 테스트하고 구성된 대상에 데이터 흐름의 무결성을 확인합니다.
 title: 대상 테스트 API 작업
-source-git-commit: 19307fba8f722babe5b6d57e80735ffde00fc851
+exl-id: 2b54250d-ec30-4ad7-a8be-b86b14e4f074
+source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
 workflow-type: tm+mt
-source-wordcount: '654'
+source-wordcount: '657'
 ht-degree: 1%
 
 ---
@@ -158,6 +159,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 | `results.httpCalls.response` | 대상에서 Adobe이 받은 응답을 포함합니다. |
 | `inputProfiles` | 대상에 대한 호출 시 내보낸 프로필을 포함합니다. 프로필이 소스 스키마와 일치합니다. |
 
+{style=&quot;table-layout:auto&quot;}
 
 ## 호출에 추가된 프로필로 대상 구성을 테스트합니다 {#test-with-added-profiles}
 

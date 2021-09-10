@@ -1,9 +1,10 @@
 ---
 description: 이 페이지에서는 '/authoring/destinations/publish' API 종단점을 사용하여 수행할 수 있는 모든 API 작업을 나열하고 설명합니다.
 title: 게시 대상 API 끝점 작업
-source-git-commit: 19307fba8f722babe5b6d57e80735ffde00fc851
+exl-id: 0564a132-42f4-478c-9197-9b051acf093c
+source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
 workflow-type: tm+mt
-source-wordcount: '772'
+source-wordcount: '775'
 ht-degree: 4%
 
 ---
@@ -123,6 +124,8 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 | `publishDetailsList.allowedOrgs` | 문자열 | 대상을 사용할 수 있어야 하는 Experience Platform 조직을 반환합니다. |
 | `publishDetailsList.status` | 문자열 | 대상 게시 요청의 상태입니다. 가능한 값은 `TEST`, `REVIEW`, `APPROVED`, `PUBLISHED`, `DENIED`, `REVOKED`, `DEPRECATED`입니다. |
 | `publishDetailsList.publishedDate` | 문자열 | epoch 시간에 게시에 대해 대상이 제출된 날짜입니다. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## 기존 대상 게시 요청 업데이트 {#update}
 

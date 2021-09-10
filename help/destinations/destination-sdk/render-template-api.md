@@ -1,10 +1,11 @@
 ---
 description: 이 페이지에서는 메시지 변환 템플릿을 기반으로 대상에 대해 내보낸 데이터를 렌더링하기 위해 '/authoring/testing/template/render' API 종단점을 사용하여 수행할 수 있는 모든 API 작업을 나열하고 설명합니다.
 title: 템플릿 API 작업 렌더링
-source-git-commit: 19307fba8f722babe5b6d57e80735ffde00fc851
+exl-id: e64ea89e-6064-4a05-9730-e0f7d7a3e1db
+source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
 workflow-type: tm+mt
-source-wordcount: '520'
-ht-degree: 1%
+source-wordcount: '523'
+ht-degree: 2%
 
 ---
 
@@ -42,6 +43,8 @@ POST authoring/testing/template/render
 | `destinationId` | 내보낸 데이터를 렌더링하는 대상 구성의 ID입니다. |
 | `template` | 내보낸 데이터를 렌더링하고 있는 템플릿에 대한 문자 이스케이프 처리된 버전입니다. |
 | `profiles` | 호출 본문에 프로필을 추가하려면 [샘플 프로필 생성 API](./sample-profile-generation-api.md)를 사용하여 프로필을 생성할 수 있습니다. |
+
+{style=&quot;table-layout:auto&quot;}
 
 
 아래 예와 같이 내보낸 데이터를 렌더링할 수 있습니다.

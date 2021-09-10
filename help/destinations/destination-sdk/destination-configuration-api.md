@@ -1,9 +1,10 @@
 ---
 description: 이 페이지에서는 '/authoring/destinations' API 종단점을 사용하여 수행할 수 있는 모든 API 작업을 나열하고 설명합니다.
 title: 대상 API 끝점 작업
-source-git-commit: 19307fba8f722babe5b6d57e80735ffde00fc851
+exl-id: 96755e9d-be62-432f-b985-91330575b395
+source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
 workflow-type: tm+mt
-source-wordcount: '2360'
+source-wordcount: '2381'
 ht-degree: 4%
 
 ---
@@ -383,7 +384,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 | `uiAttributes.connectionType` | 문자열 | `Server-to-server` 은 현재 사용 가능한 유일한 옵션입니다. |
 | `uiAttributes.frequency` | 문자열 | `Streaming` 은 현재 사용 가능한 유일한 옵션입니다. |
 | `identityNamespaces.externalId.acceptsAttributes` | 부울 | 대상이 표준 프로필 속성을 수락하는지 여부를 나타냅니다. 일반적으로 이러한 속성은 파트너의 설명서에 강조 표시됩니다. |
-| `identityNamespaces.externalId.acceptsCustomNamespaces` | 부울 | 고객이 대상에서 사용자 지정 네임스페이스를 설정할 수 있는지 여부를 나타냅니다. |
+| `identityNamespaces.externalId.acceptsCustomNamespaces` | 부울 | 고객이 대상에서 사용자 지정 네임스페이스를 설정할 수 있는지 여부를 나타냅니다. Adobe Experience Platform의 [사용자 지정 네임스페이스](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#manage-namespaces)에 대해 자세히 알아보십시오. |
 | `identityNamespaces.externalId.allowedAttributesTransformation` | 문자열 | _구성 예는 표시되지 않습니다_. 예를 들어 [!DNL Platform] 고객이 일반 이메일 주소를 속성으로 가지고 있고 플랫폼이 해시된 이메일만 허용하는 경우 사용됩니다. 여기에서 적용해야 하는 변형을 제공합니다(예: 이메일을 소문자로 변환한 다음 해시). |
 | `identityNamespaces.externalId.acceptedGlobalNamespaces` | - | _구성 예는 표시되지 않습니다_. 플랫폼이 [표준 ID 네임스페이스](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces)(예: IDFA)를 허용하는 경우에 사용되므로 Platform 사용자가 이러한 ID 네임스페이스만 선택하도록 제한할 수 있습니다. |
 | `destinationDelivery.authenticationRule` | 문자열 | [!DNL Platform] 고객이 대상에 연결하는 방법을 나타냅니다. 허용되는 값은 `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`입니다. <br> <ul><li>Platform 고객이 사용자 이름과 암호, 베어러 토큰 또는 다른 인증 방법을 통해 시스템에 로그인하는 경우 `CUSTOMER_AUTHENTICATION` 을 사용합니다. 예를 들어 `customerAuthenticationConfigurations`에서 `authType: OAUTH2` 또는 `authType:BEARER`도 선택한 경우 이 옵션을 선택합니다. </li><li> Adobe과 대상 사이에 글로벌 인증 시스템이 있고 [!DNL Platform] 고객이 대상에 연결하기 위해 인증 자격 증명을 제공할 필요가 없는 경우 `PLATFORM_AUTHENTICATION` 을 사용합니다. 이 경우 [자격 증명](./credentials-configuration.md) 구성을 사용하여 자격 증명 개체를 만들어야 합니다. </li><li>대상 플랫폼으로 데이터를 전송하는 데 인증이 필요하지 않으면 `NONE` 을 사용하십시오. </li></ul> |
@@ -396,6 +397,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 | `segmentMappingConfig.mapExperiencePlatformSegmentName` | 부울 | 대상 활성화 워크플로우의 세그먼트 매핑 ID가 Experience Platform 세그먼트 이름인지 여부를 제어합니다. |
 | `segmentMappingConfig.audienceTemplateId` | 부울 | 이 대상에 사용되는 [대상 메타데이터 템플릿](./audience-metadata-management.md)의 `instanceId` 대상 메타데이터 템플릿을 설정하려면 [대상 메타데이터 API 참조](./audience-metadata-api.md)를 참조하십시오. |
 
+{style=&quot;table-layout:auto&quot;}
 
 ## 기존 대상 구성 업데이트 {#update}
 

@@ -1,10 +1,11 @@
 ---
 description: 이 페이지에서는 대상 테스트에 사용할 샘플 프로필을 생성하기 위해 '/authoring/sample-profiles' API 종단점을 사용하여 수행할 수 있는 모든 API 작업을 나열하고 설명합니다.
 title: 샘플 프로필 생성 API 작업
-source-git-commit: 19307fba8f722babe5b6d57e80735ffde00fc851
+exl-id: 5f1cd00a-8eee-4454-bcae-07b05afa54af
+source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
 workflow-type: tm+mt
-source-wordcount: '796'
-ht-degree: 1%
+source-wordcount: '805'
+ht-degree: 2%
 
 ---
 
@@ -47,6 +48,8 @@ GET authoring/sample-profiles?destinationInstanceId={DESTINATION_INSTANCE_ID}&co
 | -------- | ----------- |
 | `{DESTINATION_INSTANCE_ID}` | 샘플 프로필을 생성하는 대상 인스턴스의 ID입니다. |
 | `{COUNT}` | *선택 사항입니다*. 생성 중인 샘플 프로필 수입니다. 매개 변수는 `1 - 1000` 사이에 값을 사용할 수 있습니다. <br> count 매개 변수를 지정하지 않으면 생성된 프로필의 기본 수는 대상 서버 구성 `maxUsersPerRequest` 의 값 [으로 결정됩니다](./destination-server-api.md#create). 이 속성이 정의되지 않으면 Adobe이 하나의 샘플 프로필을 생성합니다. |
+
+{style=&quot;table-layout:auto&quot;}
 
 
 **요청**
@@ -170,6 +173,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 | `xdm:status` | 세그먼트 멤버십이 현재 요청의 일부로 실현되었는지 여부를 나타냅니다. 다음 값이 허용됩니다. <ul><li>`existing`: 프로필은 요청 전에 이미 세그먼트의 일부였으며 계속해서 멤버십을 유지합니다.</li><li>`realized`: 프로필이 현재 요청의 일부로 세그먼트를 입력하고 있습니다.</li><li>`exited`: 프로필이 현재 요청의 일부로 세그먼트를 종료하고 있습니다.</li></ul> |
 | `identityMap` | 연관된 네임스페이스와 함께 개인의 다양한 ID 값을 설명하는 맵 유형 필드입니다. `identityMap`에 대한 자세한 내용은 [스키마 컴포지션](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=en#identityMap)을 참조하십시오. |
 
+{style=&quot;table-layout:auto&quot;}
 
 ## 대상 스키마를 기반으로 샘플 프로필 생성 {#generate-sample-profiles-target-schema}
 
@@ -191,6 +195,8 @@ GET authoring/sample-profiles?destinationId={DESTINATION_ID}&count={COUNT}
 | -------- | ----------- |
 | `{DESTINATION_ID}` | 샘플 프로필을 생성하는 대상 구성의 ID입니다. |
 | `{COUNT}` | *선택 사항입니다*. 생성 중인 샘플 프로필 수입니다. 매개 변수는 `1 - 1000` 사이에 값을 사용할 수 있습니다. <br> count 매개 변수를 지정하지 않으면 생성된 프로필의 기본 수는 대상 서버 구성 `maxUsersPerRequest` 의 값 [으로 결정됩니다](./destination-server-api.md#create). 이 속성이 정의되지 않으면 Adobe이 하나의 샘플 프로필을 생성합니다. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **요청**
 
