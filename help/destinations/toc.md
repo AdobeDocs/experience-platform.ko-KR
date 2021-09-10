@@ -4,9 +4,9 @@ user-guide-title: 대상 안내서
 user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화합니다.
 description: 이 문서에서는 Adobe Experience Platform 대상의 목차 목록을 설명합니다
 feature: Destinations
-source-git-commit: 834814cc2929c618b9f41c0fcf3ef79a831a969d
+source-git-commit: 9ec7bd591af6c76a794f83d5a984017330328238
 workflow-type: tm+mt
-source-wordcount: '627'
+source-wordcount: '628'
 ht-degree: 10%
 
 ---
@@ -127,6 +127,7 @@ ht-degree: 10%
       * [Livefyre 확장 Adobe](./catalog/social/adobe-livefyre.md)
       * [Facebook 연결](./catalog/social/facebook.md)
       * [linkedIn Matched Audiences 연결](./catalog/social/linkedin.md)
+      * [[!DNL Twitter Custom Audiences] 연결](./catalog/social/twitter.md)
    * 설문 조사 대상 {#survey}
       * [설문 조사 대상 개요](./catalog/survey/overview.md)
       * [Foresee 확장 대상](./catalog/survey/foresee.md)
