@@ -1,11 +1,9 @@
 ---
-keywords: Pinterest;pinterest;Pinterest 전환 추적;핀트 전환 추적
 title: Pinterest 전환 추적 확장
 description: pinterest 전환 추적 확장은 Adobe Experience Platform의 광고 대상입니다. 확장 기능에 대한 자세한 내용은 Exchange Adobe의 확장 페이지를 참조하십시오.
-exl-id: e601f75f-0d40-4cd0-93ca-54d7439f1db7
-source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
+source-git-commit: e6fa353c74c652f82ff187692de8784463d0fd01
 workflow-type: tm+mt
-source-wordcount: '473'
+source-wordcount: '465'
 ht-degree: 4%
 
 ---
