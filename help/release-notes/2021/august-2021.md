@@ -4,13 +4,13 @@ description: 2021년 8월 25일 Experience Platform 릴리스 노트
 doc-type: release notes
 last-update: August 25, 2021
 author: ens28527
-source-git-commit: b1dca51264582788ccbde005b063c57e2f3edc8f
+exl-id: 0513b9dc-b16c-43b3-8e17-4be4499308d4
+source-git-commit: e9d5f24bec8cd2793ce30245b46c1d912bf17cc7
 workflow-type: tm+mt
-source-wordcount: '534'
-ht-degree: 8%
+source-wordcount: '709'
+ht-degree: 7%
 
 ---
-
 
 # Adobe Experience Platform 릴리스 노트
 
@@ -27,10 +27,22 @@ Adobe Experience Platform의 기존 기능 업데이트:
 
 대상은 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과의 사전 구축된 통합입니다. 대상을 사용하여 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례에 대해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 
+**새 대상**
+
+| 대상 | 설명 |
+| ----------- | ----------- |
+| [[!DNL Airship Attributes]](../../destinations/catalog/mobile-engagement/airship-attributes.md) | 이전에 베타 버전으로 제공되는 Airship Attributes 대상은 이제 일반적으로 사용할 수 있습니다. |
+| [[!DNL Airship Tags]](../../destinations/catalog/mobile-engagement/airship-tags.md) | 이전에 베타에 있는 Airship 태그 대상을 이제 일반적으로 사용할 수 있습니다. |
+| [[!DNL Braze]](../../destinations/catalog/mobile-engagement/braze.md) | 이전 베타에 있는 브레이즈 대상을 이제 일반적으로 사용할 수 있습니다. |
+| [[!DNL Pinterest Customer List]](../../destinations/catalog/advertising/pinterest.md) | pinterest 고객 목록 대상을 사용하면 고객 목록, 사이트를 방문한 사람 또는 Pinterest의 콘텐츠와 이미 상호 작용한 사람에서 대상을 만들 수 있습니다. |
+| [[!DNL Twitter Custom Audiences]](../../destinations/catalog/social/twitter.md) | Twitter에서 기존 팔로워와 고객을 Target하고 Adobe Experience Platform 내에 내장된 대상을 활성화하여 적절한 리마케팅 캠페인을 만듭니다. |
+| [[!DNL Verizon Media/Yahoo DataX]](../../destinations/catalog/advertising/datax.md) | DataX는 Verizon Media/Yahoo가 안전하고 자동화된 확장 가능한 방식으로 외부 파트너와 데이터를 교환할 수 있도록 하는 다양한 구성 요소를 호스팅하는 종합적인 Verizon Media/Yahoo 인프라입니다. |
+
 **새로운 기능**
 
 | 기능 | 설명 |
 | --- | --- |
+| [[!DNL Destination SDK]](../../destinations/destination-sdk/overview.md) | Adobe Experience Platform 대상 SDK는 선택한 데이터 및 인증 형식에 따라 Experience Platform이 대상 및 프로필 데이터를 종단점에 제공하기 위한 대상 통합 패턴을 구성할 수 있도록 해주는 구성 API 세트입니다. 구성은 Experience Platform에 저장되며, 추가 업데이트를 위해 API를 통해 검색할 수 있습니다. |
 | [대상에 대한 유용성 개선](../../destinations/ui/activation-overview.md) | 대상에 대한 유용성 개선 사항을 통해 마케터는 세그먼트를 기존 대상에 원활하게 활성화할 수 있습니다. |
 
 대상에 대한 일반적인 자세한 내용은 [대상 개요](../../destinations/home.md)를 참조하십시오.
