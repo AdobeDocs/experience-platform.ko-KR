@@ -3,9 +3,9 @@ keywords: Qualtrics;Qualtrics;Qualtrics 웹 사이트 피드백;qualtrics 웹 �
 title: Qualtrics 웹 사이트 피드백 확장
 description: Qualtrics 웹 사이트 피드백 확장 은 Adobe Experience Platform의 설문 조사 대상입니다. 확장 기능에 대한 자세한 내용은 Exchange Adobe의 확장 페이지를 참조하십시오.
 exl-id: 70cf315c-2c96-4c3a-bf80-511024964986
-source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
+source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '542'
+source-wordcount: '527'
 ht-degree: 3%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 3%
 
 이 확장은 Platform을 구입한 모든 고객의 [!DNL Destinations] 카탈로그에서 사용할 수 있습니다.
 
-이 확장을 사용하려면 Adobe Experience Platform의 태그에 액세스해야 합니다. 태그는 부가가치 기능으로 포함되어 Adobe Experience Cloud 고객에게 제공됩니다. 조직 관리자에게 문의하여 태그에 대한 액세스 권한을 얻고 **[!UICONTROL manage_properties]** 권한을 요청하십시오. 그러면 확장을 설치할 수 있습니다. 확장을 설치할 수 있도록 **[!UICONTROL manage_properties]** 권한을 부여하도록 이들에게 요청합니다.
+이 확장을 사용하려면 Adobe Experience Platform의 태그에 액세스해야 합니다. 태그는 부가가치 기능으로 포함되어 Adobe Experience Cloud 고객에게 제공됩니다. 조직 관리자에게 문의하여 태그에 대한 액세스 권한을 얻고 **[!UICONTROL manage_properties]** 권한을 요청하십시오. 그러면 확장을 설치할 수 있습니다.
 
 ## 확장 설치 {#install-extension}
 
