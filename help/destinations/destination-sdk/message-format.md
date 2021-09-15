@@ -4,9 +4,9 @@ seo-description: Use the content on this page together with the rest of the conf
 seo-title: Message format
 title: 메시지 포맷
 exl-id: 1212c1d0-0ada-4ab8-be64-1c62a1158483
-source-git-commit: 91228b5f2008e55b681053296e8b3ff4448c92db
+source-git-commit: add6c7c4f3a60bd9ee2c2b77a8a242c4df03377b
 workflow-type: tm+mt
-source-wordcount: '1972'
+source-wordcount: '2056'
 ht-degree: 2%
 
 ---
@@ -775,17 +775,22 @@ Experience Platform의 ID에 대한 자세한 내용은 [ID 네임스페이스 �
 }
 ```
 
-### 템플릿에 집계 키를 포함하여 내보낸 프로필을 다양한 기준으로 그룹화합니다 {#template-aggregation-key}
+### 템플릿에 집계 키를 포함하여 다양한 기준으로 그룹화된 내보낸 프로필에 액세스합니다 {#template-aggregation-key}
 
-대상 구성에서 [구성 가능한 집계](./destination-configuration.md#configurable-aggregation)를 사용하는 경우 아래 예에 표시된 것처럼 메시지 변환 템플릿을 편집하여 세그먼트 ID, 세그먼트 별칭, 세그먼트 멤버십 또는 ID 네임스페이스와 같은 기준에 따라 대상에 내보낸 프로필을 그룹화할 수 있습니다.
+대상 구성에서 [구성 가능한 집계](./destination-configuration.md#configurable-aggregation)를 사용하는 경우 세그먼트 ID, 세그먼트 별칭, 세그먼트 멤버십 또는 ID 네임스페이스와 같은 기준에 따라 대상에 내보낸 프로필을 그룹화할 수 있습니다.
+
+메시지 변환 템플릿에서 다음 섹션의 예제와 같이 위에 언급된 집계 키에 액세스할 수 있습니다. 이렇게 하면 Experience Platform에서 내보낸 HTTP 메시지의 형식을 대상에서 기대하는 형식과 일치하도록 만드는 데 도움이 됩니다.
 
 #### 템플릿에서 세그먼트 ID 집계 키 사용 {#aggregation-key-segment-id}
 
-[구성 가능한 집계](./destination-configuration.md#configurable-aggregation)를 사용하고 `includeSegmentId`를 true로 설정한 경우 템플릿에서 `segmentId`를 사용하여 대상에 내보낸 HTTP 메시지의 프로필을 그룹화할 수 있습니다.
+[구성 가능한 집계](./destination-configuration.md#configurable-aggregation)를 사용하고 `includeSegmentId`를 true로 설정하면 대상에 내보낸 HTTP 메시지의 프로필이 세그먼트 ID로 그룹화됩니다. 템플릿에서 세그먼트 ID에 액세스할 수 있는 방법은 아래를 참조하십시오.
 
 **입력**
 
-아래의 네 개의 프로필을 고려하십시오. 여기서 첫 번째 두 프로필은 세그먼트 ID `788d8874-8007-4253-92b7-ee6b6c20c6f3`가 있는 세그먼트의 일부이고 다른 두 프로필은 세그먼트 ID `8f812592-3f06-416b-bd50-e7831848a31a`가 있는 세그먼트의 일부입니다.
+아래의 네 가지 프로필을 고려해 보십시오. 여기서
+* 첫 번째 두 항목은 세그먼트 ID가 `788d8874-8007-4253-92b7-ee6b6c20c6f3`인 세그먼트의 일부입니다
+* 세 번째 프로필은 세그먼트 ID가 `8f812592-3f06-416b-bd50-e7831848a31a`인 세그먼트의 일부입니다
+* 네 번째 프로필은 위의 두 세그먼트 중 일부입니다.
 
 프로필 1:
 
@@ -873,6 +878,10 @@ Experience Platform의 ID에 대한 자세한 내용은 [ID 네임스페이스 �
          "8f812592-3f06-416b-bd50-e7831848a31a":{
             "lastQualificationTime":"2021-02-20T12:00:00Z",
             "status":"existing"
+         },
+         "788d8874-8007-4253-92b7-ee6b6c20c6f3":{
+            "lastQualificationTime":"2020-11-20T13:15:49Z",
+            "status":"existing"
          }
       }
    }
@@ -885,24 +894,18 @@ Experience Platform의 ID에 대한 자세한 내용은 [ID 네임스페이스 �
 >
 >사용하는 모든 템플릿의 경우 [대상 서버 구성](./server-and-template-configuration.md#template-specs)에 템플릿을 삽입하기 전에 큰따옴표 `""`와 같은 잘못된 문자를 이스케이프 처리해야 합니다. 큰따옴표 이스케이프에 대한 자세한 내용은 [JSON 표준](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf)의 9장을 참조하십시오.
 
+템플릿에서 `audienceId` 을 사용하여 세그먼트 ID에 액세스하는 방법은 아래에 나와 있습니다. 대상 분류에서 세그먼트 멤버십에 `audienceId`을 사용한다고 가정합니다. 고유한 분류에 따라 다른 모든 필드 이름을 대신 사용할 수 있습니다.
+
 ```python
 {
+    "audienceId": "{{ input.aggregationKey.segmentId }}",
     "profiles": [
         {% for profile in input.profiles %}
         {
-            {% for attribute in profile.attributes %}
-            "{{ attribute.key }}":
-                {% if attribute.value is empty %}
-                    null
-                {% else %}
-                    "{{ attribute.value.value }}"
-                {% endif %}
-            {% if not loop.last %},{% endif %}
-            {% endfor %}
+            "first_name": "{{ profile.attributes.firstName.value }}"
         }{% if not loop.last %},{% endif %}
         {% endfor %}
     ]
-    "audienceId": "{{input.aggregationKey.segmentId}}"
 }
 ```
 
@@ -912,49 +915,53 @@ Experience Platform의 ID에 대한 자세한 내용은 [ID 네임스페이스 �
 
 ```json
 {
-    "profiles": [
-        {
-            "firstName": "Hermione",
-            "birthDate": null
-        },
-        {
-            "firstName": "Harry",
-            "birthDate": "1980/07/31"
-        }
-    ],
-    "audienceId": "788d8874-8007-4253-92b7-ee6b6c20c6f3"
+   "audienceId":"788d8874-8007-4253-92b7-ee6b6c20c6f3",
+   "profiles":[
+      {
+         "firstName":"Hermione",
+         "birthDate":null
+      },
+      {
+         "firstName":"Harry",
+         "birthDate":"1980/07/31"
+      },
+      {
+         "firstName":"Jerry",
+         "birthDate":"1940/01/01"
+      }
+   ]
 }
 ```
 
 ```json
 {
-    "profiles": [
-        {
-            "firstName": "Tom",
-            "birthDate": null
-        },
-        {
-            "firstName": "Jerry",
-            "birthDate": "1940/01/01"
-        }
-    ],
-    "audienceId": "8f812592-3f06-416b-bd50-e7831848a31a"
+   "audienceId":"8f812592-3f06-416b-bd50-e7831848a31a",
+   "profiles":[
+      {
+         "firstName":"Tom",
+         "birthDate":null
+      },
+      {
+         "firstName":"Jerry",
+         "birthDate":"1940/01/01"
+      }
+   ]
 }
 ```
 
 #### 템플릿에서 세그먼트 별칭 집계 키 사용 {#aggregation-key-segment-alias}
 
-[구성 가능한 집계](./destination-configuration.md#configurable-aggregation)를 사용하고 `includeSegmentId`를 true로 설정한 경우 템플릿에 세그먼트 별칭을 사용하여 대상에 내보낸 HTTP 메시지의 프로필을 그룹화할 수 있습니다.
+[구성 가능한 집계](./destination-configuration.md#configurable-aggregation)를 사용하고 `includeSegmentId`를 true로 설정하면 템플릿의 세그먼트 별칭에 액세스할 수도 있습니다.
 
-템플릿 아래에 줄을 추가하여 세그먼트 별칭을 기반으로 내보낸 프로필을 그룹화합니다.
+아래 줄을 템플릿에 추가하여 세그먼트 별칭으로 그룹화된 내보낸 프로필에 액세스합니다.
 
 ```python
-"customerList={{input.aggregationKey.segmentAlias}}"
+customerList={{input.aggregationKey.segmentAlias}}
 ```
 
 #### 템플릿에서 세그먼트 상태 집계 키 사용 {#aggregation-key-segment-status}
 
-[구성 가능한 집계](./destination-configuration.md#configurable-aggregation) 를 사용하고 `includeSegmentId` 및 `includeSegmentStatus`를 true로 설정하는 경우, 템플릿의 세그먼트 상태를 사용하여 세그먼트에서 프로필을 추가 또는 제거할지 여부에 따라 대상으로 내보낸 HTTP 메시지의 프로필을 그룹화할 수 있습니다.
+[구성 가능한 집계](./destination-configuration.md#configurable-aggregation) 를 사용하고 `includeSegmentId` 및 `includeSegmentStatus`를 true로 설정하는 경우, 세그먼트의 세그먼트 상태에 액세스하여 세그먼트에서 프로필을 추가 또는 제거할지 여부에 따라 대상에 내보낸 HTTP 메시지의 프로필을 그룹화할 수 있습니다.
 
 가능한 값은 다음과 같습니다.
 
@@ -962,10 +969,10 @@ Experience Platform의 ID에 대한 자세한 내용은 [ID 네임스페이스 �
 * 기존
 * 종료한
 
-위의 값에 따라 템플릿에 아래 줄을 추가하여 세그먼트에서 프로필을 추가하거나 제거합니다.:
+위의 값에 따라 템플릿에 아래 줄을 추가하여 세그먼트에서 프로필을 추가하거나 제거합니다.
 
 ```python
-"action={% if input.aggregationKey.segmentStatus == "exited" %}REMOVE{% else %}ADD{% endif%}"
+action={% if input.aggregationKey.segmentStatus == "exited" %}REMOVE{% else %}ADD{% endif%}
 ```
 
 #### 템플릿에서 ID 네임스페이스 집계 키 사용 {#aggregation-key-identity}
@@ -1024,6 +1031,8 @@ Experience Platform의 ID에 대한 자세한 내용은 [ID 네임스페이스 �
 >
 >사용하는 모든 템플릿의 경우 [대상 서버 구성](./server-and-template-configuration.md#template-specs)에 템플릿을 삽입하기 전에 큰따옴표 `""`와 같은 잘못된 문자를 이스케이프 처리해야 합니다. 큰따옴표 이스케이프에 대한 자세한 내용은 [JSON 표준](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf)의 9장을 참조하십시오.
 
+`input.aggregationKey.identityNamespaces`은 아래 템플릿에서 사용됩니다
+
 ```python
 {
             "profiles": [
@@ -1071,7 +1080,7 @@ Experience Platform의 ID에 대한 자세한 내용은 [ID 네임스페이스 �
 }
 ```
 
-#### URL 템플릿에서 집계 키 사용
+#### URL 템플릿에서 집계 키 사용 {#aggregation-key-url-template}
 
 사용 사례에 따라 아래 표시된 대로 URL에 여기에 설명된 집계 키를 사용할 수도 있습니다.
 
