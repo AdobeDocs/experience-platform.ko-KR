@@ -2,9 +2,9 @@
 description: 이 구성을 사용하면 대상 이름, 카테고리, 설명, 로고 등과 같은 기본 정보를 표시할 수 있습니다. 또한 이 구성의 설정은 Experience Platform 사용자가 대상을 인증하는 방법, Experience Platform 사용자 인터페이스에 표시되는 방법 및 대상으로 내보낼 수 있는 ID를 결정합니다.
 title: 대상 SDK에 대한 대상 구성 옵션
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
+source-git-commit: 63fe3b7cc429a1c18cebe998bc82fdea99a6679b
 workflow-type: tm+mt
-source-wordcount: '1527'
+source-wordcount: '1557'
 ht-degree: 5%
 
 ---
@@ -247,6 +247,8 @@ ID 네임스페이스에 [!DNL Platform] 과(와) 대상 간의 1~1 응답이 �
 집계 정책은 내보낸 프로필을 데이터 내보내기에서 함께 결합하는 방법을 결정합니다. 사용 가능한 옵션은 다음과 같습니다.
 * 최상의 노력 집계
 * 구성 가능한 합계(위의 구성에 표시)
+
+선택한 집계 정책을 기반으로 메시지 변환 템플릿에 집계 정책을 포함하는 방법을 이해하려면 [템플릿](./message-format.md#using-templating) 및 [집계 키 예](./message-format.md#template-aggregation-key)에서 섹션을 참조하십시오.
 
 ### 최상의 노력 집계 {#best-effort-aggregation}
 

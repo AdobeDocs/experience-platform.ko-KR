@@ -3,10 +3,11 @@ description: 이 페이지의 콘텐츠와 파트너 대상에 대한 나머지 
 seo-description: Use the content on this page together with the rest of the configuration options for partner destinations. This page addresses the messaging format of data exported from Adobe Experience Platform to destinations, while the other page addresses specifics about connecting and authenticating to your destination.
 seo-title: Message format
 title: 메시지 포맷
-source-git-commit: d60933d2083b7befcfa8beba4b1630f372c08cfa
+exl-id: 1212c1d0-0ada-4ab8-be64-1c62a1158483
+source-git-commit: 63fe3b7cc429a1c18cebe998bc82fdea99a6679b
 workflow-type: tm+mt
-source-wordcount: '1505'
-ht-degree: 3%
+source-wordcount: '1982'
+ht-degree: 2%
 
 ---
 
@@ -93,17 +94,15 @@ Adobe은 [Jinja](https://jinja.palletsprojects.com/en/2.11.x/)와 유사한 템�
 
 1. 단순 변형 예 [프로필 속성](./message-format.md#attributes), [세그먼트 멤버십](./message-format.md#segment-membership) 및 [ID](./message-format.md#identities) 필드에 대한 간단한 변형에서 템플릿 작업이 작동하는 방식을 알아봅니다.
 2. 위의 필드를 결합하는 템플릿의 복잡성 증가 예: [세그먼트와 ID](./message-format.md#segments-and-identities) 및 [세그먼트, ID 및 프로필 속성을 보내는 템플릿을 만듭니다](./message-format.md#segments-identities-attributes).
-3. 업계 파트너로부터 제공되는 두 가지 템플릿을 보여주는 심층적인 자료입니다.
+3. 템플릿에는 집계 키가 포함됩니다. 대상 구성에서 [구성 가능한 집계](./destination-configuration.md#configurable-aggregation)를 사용하는 경우 Experience Platform은 세그먼트 ID, 세그먼트 상태 또는 ID 네임스페이스와 같은 기준에 따라 대상에 내보낸 프로필을 그룹화합니다.
 
 ### 프로필 속성 {#attributes}
 
 대상으로 내보낸 프로필 속성을 변형하려면 아래의 JSON 및 코드 샘플을 참조하십시오.
 
-
 >[!IMPORTANT]
 >
 >Adobe Experience Platform에서 사용 가능한 모든 프로필 속성 목록을 보려면 [XDM 필드 사전](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/field-dictionary.html?lang=en) 을 참조하십시오.
-
 
 
 **입력**
@@ -776,7 +775,311 @@ Experience Platform의 ID에 대한 자세한 내용은 [ID 네임스페이스 �
 }
 ```
 
-### 참조: 변환 템플릿에 사용되는 컨텍스트 및 함수
+### 템플릿에 집계 키를 포함하여 내보낸 프로필을 다양한 기준으로 그룹화합니다 {#template-aggregation-key}
+
+대상 구성에서 [구성 가능한 집계](./destination-configuration.md#configurable-aggregation)를 사용하는 경우 아래 예에 표시된 것처럼 메시지 변환 템플릿을 편집하여 세그먼트 ID, 세그먼트 별칭, 세그먼트 멤버십 또는 ID 네임스페이스와 같은 기준에 따라 대상에 내보낸 프로필을 그룹화할 수 있습니다.
+
+#### 템플릿에서 세그먼트 ID 집계 키를 사용하는 예 {#aggregation-key-segment-id}
+
+[구성 가능한 집계](./destination-configuration.md#configurable-aggregation)를 사용하고 `includeSegmentId`를 true로 설정한 경우 템플릿에서 `segmentId`를 사용하여 대상에 내보낸 HTTP 메시지의 프로필을 그룹화할 수 있습니다.
+
+**입력**
+
+아래의 네 개의 프로필을 고려하십시오. 여기서 첫 번째 두 프로필은 세그먼트 ID `788d8874-8007-4253-92b7-ee6b6c20c6f3`가 있는 세그먼트의 일부이고 다른 두 프로필은 세그먼트 ID `8f812592-3f06-416b-bd50-e7831848a31a`가 있는 세그먼트의 일부입니다.
+
+프로필 1:
+
+```json
+{
+   "attributes":{
+      "firstName":{
+         "value":"Hermione"
+      },
+      "birthDate":{
+         
+      }
+   },
+   "segmentMembership":{
+      "ups":{
+         "788d8874-8007-4253-92b7-ee6b6c20c6f3":{
+            "lastQualificationTime":"2020-11-20T13:15:49Z",
+            "status":"existing"
+         }
+      }
+   }
+}
+```
+
+프로필 2:
+
+```json
+{
+   "attributes":{
+      "firstName":{
+         "value":"Harry"
+      },
+      "birthDate":{
+         "value":"1980/07/31"
+      }
+   },
+   "segmentMembership":{
+      "ups":{
+         "788d8874-8007-4253-92b7-ee6b6c20c6f3":{
+            "lastQualificationTime":"2020-11-20T13:15:49Z",
+            "status":"existing"
+         }
+      }
+   }
+}
+```
+
+프로필 3:
+
+```json
+{
+   "attributes":{
+      "firstName":{
+         "value":"Tom"
+      },
+      "birthDate":{
+         
+      }
+   },
+   "segmentMembership":{
+      "ups":{
+         "8f812592-3f06-416b-bd50-e7831848a31a":{
+            "lastQualificationTime":"2021-02-20T12:00:00Z",
+            "status":"existing"
+         }
+      }
+   }
+}
+```
+
+프로필 4:
+
+```json
+{
+   "attributes":{
+      "firstName":{
+         "value":"Jerry"
+      },
+      "birthDate":{
+         "value":"1940/01/01"
+      }
+   },
+   "segmentMembership":{
+      "ups":{
+         "8f812592-3f06-416b-bd50-e7831848a31a":{
+            "lastQualificationTime":"2021-02-20T12:00:00Z",
+            "status":"existing"
+         }
+      }
+   }
+}
+```
+
+**템플릿**
+
+>[!IMPORTANT]
+>
+>사용하는 모든 템플릿의 경우 [대상 서버 구성](./server-and-template-configuration.md#template-specs)에 템플릿을 삽입하기 전에 큰따옴표 `""`와 같은 잘못된 문자를 이스케이프 처리해야 합니다. 큰따옴표 이스케이프에 대한 자세한 내용은 [JSON 표준](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf)의 9장을 참조하십시오.
+
+```python
+{
+    "profiles": [
+        {% for profile in input.profiles %}
+        {
+            {% for attribute in profile.attributes %}
+            "{{ attribute.key }}":
+                {% if attribute.value is empty %}
+                    null
+                {% else %}
+                    "{{ attribute.value.value }}"
+                {% endif %}
+            {% if not loop.last %},{% endif %}
+            {% endfor %}
+        }{% if not loop.last %},{% endif %}
+        {% endfor %}
+    ]
+    "audienceId": "{{input.aggregationKey.segmentId}}"
+}
+```
+
+**결과**
+
+대상으로 내보내면 프로필은 세그먼트 ID를 기반으로 두 그룹으로 분할됩니다.
+
+```json
+{
+    "profiles": [
+        {
+            "firstName": "Hermione",
+            "birthDate": null
+        },
+        {
+            "firstName": "Harry",
+            "birthDate": "1980/07/31"
+        }
+    ],
+    "audienceId": "788d8874-8007-4253-92b7-ee6b6c20c6f3"
+}
+```
+
+```json
+{
+    "profiles": [
+        {
+            "firstName": "Tom",
+            "birthDate": null
+        },
+        {
+            "firstName": "Jerry",
+            "birthDate": "1940/01/01"
+        }
+    ],
+    "audienceId": "8f812592-3f06-416b-bd50-e7831848a31a"
+}
+```
+
+#### 템플릿에서 세그먼트 별칭 집계 키를 사용하는 예 {#aggregation-key-segment-alias}
+
+[구성 가능한 집계](./destination-configuration.md#configurable-aggregation)를 사용하고 `includeSegmentId`를 true로 설정한 경우 템플릿에 세그먼트 별칭을 사용하여 대상에 내보낸 HTTP 메시지의 프로필을 그룹화할 수 있습니다.
+
+템플릿 아래에 줄을 추가하여 세그먼트 별칭을 기반으로 내보낸 프로필을 그룹화합니다.
+
+```python
+"customerList={{input.aggregationKey.segmentAlias}}"
+```
+
+#### 템플릿에서 세그먼트 상태 집계 키를 사용하는 예 {#aggregation-key-segment-status}
+
+[구성 가능한 집계](./destination-configuration.md#configurable-aggregation) 를 사용하고 `includeSegmentId` 및 `includeSegmentStatus`를 true로 설정하는 경우, 템플릿의 세그먼트 상태를 사용하여 세그먼트에서 프로필을 추가 또는 제거할지 여부에 따라 대상으로 내보낸 HTTP 메시지의 프로필을 그룹화할 수 있습니다.
+
+가능한 값은 다음과 같습니다.
+
+* 실현
+* 기존
+* 종료한
+
+위의 값에 따라 템플릿에 아래 줄을 추가하여 세그먼트에서 프로필을 추가하거나 제거합니다.:
+
+```python
+"action={% if input.aggregationKey.segmentStatus == "exited" %}REMOVE{% else %}ADD{% endif%}"
+```
+
+#### 템플릿에서 ID 네임스페이스 집계 키를 사용하는 예 {#aggregation-key-identity}
+
+다음은 대상 구성에서 [구성 가능한 집계](./destination-configuration.md#configurable-aggregation)가 ID 네임스페이스로 내보낸 프로필을 `"identityNamespaces": ["email", "phone"]` 형식으로 집계하도록 설정된 예입니다
+
+**입력**
+
+프로필 1:
+
+```json
+{
+   "identityMap":{
+      "email":[
+         {
+            "id":"e1@example.com"
+         },
+         {
+            "id":"e2@example.com"
+         }
+      ],
+      "phone":[
+         {
+            "id":"+40744111222"
+         }
+      ]
+   }
+}
+```
+
+프로필 2:
+
+```json
+{
+   "identityMap":{
+      "email":[
+         {
+            "id":"e3@example.com"
+         }
+      ],
+      "phone":[
+         {
+            "id":"+40744333444"
+         },
+         {
+            "id":"+40744555666"
+         }
+      ]
+   }
+}
+```
+
+**템플릿**
+
+>[!IMPORTANT]
+>
+>사용하는 모든 템플릿의 경우 [대상 서버 구성](./server-and-template-configuration.md#template-specs)에 템플릿을 삽입하기 전에 큰따옴표 `""`와 같은 잘못된 문자를 이스케이프 처리해야 합니다. 큰따옴표 이스케이프에 대한 자세한 내용은 [JSON 표준](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf)의 9장을 참조하십시오.
+
+```python
+{
+            "profiles": [
+            {% for profile in input.profiles %}
+            {
+                {% for ns in input.aggregationKey.identityNamespaces %}
+                "{{ns}}": [
+                    {% for id in profile.identityMap[ns] %}
+                    "{{id.id}}"{% if not loop.last %},{% endif %}
+                    {% endfor %}
+                ]{% if not loop.last %},{% endif %}
+                {% endfor %}
+            }{% if not loop.last %},{% endif %}
+            {% endfor %}
+        ]
+}
+```
+
+**결과**
+
+아래 `json`은 Adobe Experience Platform에서 내보낸 데이터를 나타냅니다.
+
+```json
+{
+   "profiles":[
+      {
+         "email":[
+            "e1@example.com",
+            "e2@example.com"
+         ],
+         "phone":[
+            "+40744111222"
+         ]
+      },
+      {
+         "email":[
+            "e3@example.com"
+         ],
+         "phone":[
+            "+40744333444",
+            "+40744555666"
+         ]
+      }
+   ]
+}
+```
+
+#### URL 템플릿에서 집계 키 사용 예
+
+사용 사례에 따라 아래 표시된 대로 URL에 여기에 설명된 집계 키를 사용할 수도 있습니다.
+
+```python
+https://api.example.com/audience/{{input.aggregationKey.segmentId}}
+```
+
+### 참조: 변환 템플릿에 사용되는 컨텍스트 및 함수 {#reference}
 
 템플릿에 제공된 컨텍스트에는 `input`(이 호출에서 내보낸 프로필/데이터) 및 `destination`(Adobe이 데이터를 보내는 대상에 대한 데이터, 모든 프로필에 유효)가 포함됩니다.
 
