@@ -2,13 +2,13 @@
 title: Adobe Experience Platform Web SDK에서 지원되는 사용 사례
 description: Adobe Experience Platform Web SDK에서 지원되는 사용 사례를 알아봅니다.
 keywords: 웹 sdk;사용 사례
-source-git-commit: e012e12a8cadb8c13781b0380d84652c23567180
+exl-id: e0643c2c-ceb3-4ea2-aafa-1e18e0c66453
+source-git-commit: ed092b85d74eaa0fdc29f3a8d28f84fe81ccca17
 workflow-type: tm+mt
-source-wordcount: '565'
-ht-degree: 14%
+source-wordcount: '445'
+ht-degree: 18%
 
 ---
-
 
 # 지원되는 사용 사례
 
@@ -21,12 +21,11 @@ ht-degree: 14%
 | 간소화된 단일 SDK |  |
 | 글로벌 데이터 수집 네트워크 |  |
 | 교육 과정 동의 |  |
-| IAB 2.0 동의 문자열 | [IAB TCF 2.0 지원](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/iab-tcf/overview.html?lang=en#consent) |
-| 세분화된 동의 수집 | [웹 SDK와 Adobe 2.0 동의 통합](https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/consent/adobe/sdk.html#prerequisites) |
+| 다양한 표준에 따라 고객 동의 수집 | <ul><li>[Adobe 동의 2.0 지원](../../landing/governance-privacy-security/consent/adobe/overview.md)</li><li>[IAB TCF 2.0 지원](../../landing/governance-privacy-security/consent/iab/overview.md)</li><li>[SDK를 통합하여 동의 신호를 Edge 네트워크에 전송합니다](../../landing/governance-privacy-security/consent/sdk.md)</li></ul> |
 | ECID 지원 | ECID 검색에 대한 자세한 내용은 설명서 [여기](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html?lang=en#first-party-identity) 및 [여기](https://experienceleague.adobe.com/docs/experience-platform/edge/extension/accessing-the-ecid.html?lang=en#extension)를 참조하십시오 |
 | 여러 엔티티 수집 |  |
 | 장치 그래프 지원(공개/개인) | [설명서](https://experienceleague.adobe.com/docs/analytics/components/cda/device-graph.html?lang=en) |
-| 페이지의 여러 조직에 데이터 보내기 | [설명서](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/interacting-with-multiple-properties.html?lang=en#fundamentals) |
+| 페이지의 여러 조직에 데이터 보내기 | [설명서](./interacting-with-multiple-properties.md) |
 | 자세한 오류 보고 및 로그 |  |
 | 추적 요청 클라이언트 측 및 서버 측 |  |
 | 태그 확장 | [웹 SDK 확장 문서](../../tags/extensions/web/sdk/overview.md) |
@@ -39,10 +38,10 @@ ht-degree: 14%
 | 사용 사례 | 추가 정보 |
 | --- | --- |
 | 경험 이벤트 보내기 |  |
-| Offer Decisioning | [설명서](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/offer-decisioning/offer-decisioning-overview.html?lang=en#personalization) |
+| Offer Decisioning | [설명서](../personalization/offer-decisioning/offer-decisioning-overview.md) |
 | 프로필에 데이터 세트가 활성화되어 있으면 실시간 고객 데이터 프로필에 실시간으로 데이터를 전송할 수 있습니다 |  |
 | 실시간으로 Customer Journey Analytics에 데이터 보내기 |  |
-| 프로필에 동의 쓰기 | [설명서](https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/consent/adobe/sdk.html?lang=en) |
+| 프로필에 동의 쓰기 | [설명서](../../landing/governance-privacy-security/consent/sdk.md) |
 | 데이터 서버측을 실시간으로 타사에 전달 | [설명서](../../tags/ui/event-forwarding/overview.md) |
 | ID 네임스페이스 지원 |  |
 
@@ -59,14 +58,14 @@ ht-degree: 14%
 | Prop, eVar 및 이벤트 |  |
 | Adobe Analytics에 대한 ListVar 지원 |  |
 | OS 및 브라우저 버전 |  |
-| 기본 변수 | [자동으로 매핑된 변수](https://experienceleague.adobe.com/docs/experience-platform/edge/data-collection/adobe-analytics/automatically-mapped-vars.html?lang=en#data-collection) |
+| 기본 변수 | [자동으로 매핑된 변수](../data-collection/adobe-analytics/automatically-mapped-vars.md) |
 | VISTA 규칙/처리 규칙 |  |
 | 방문자 특성 지원 |  |
 | 종료 링크 지원 |  |
 | 사용자 지정 링크/다운로드 링크 |  |
 | 상태 및 작업 추적 |  |
 | 표준 이벤트에 대한 이벤트 직렬화 |  |
-| Products 변수 | [설명서](https://experienceleague.adobe.com/docs/experience-platform/edge/data-collection/collect-commerce-data.html?lang=en#actions-related-to-products) |
+| Products 변수 | [설명서](../data-collection/collect-commerce-data.md#actions-related-to-products) |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -75,10 +74,10 @@ ht-degree: 14%
 | 사용 사례 | 추가 정보 |
 | --- | --- |
 | 모든 활동 유형 |  |
-| 기본 및 SPA 시각적 경험 작성기 지원 | [설명서](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/spa-implementation.html?lang=en#personalization) |
+| 기본 및 SPA 시각적 경험 작성기 지원 | [설명서](../personalization/adobe-target/spa-implementation.md) |
 | 양식 기반 작성기 |  |
-| 글로벌 mbox 지원 | [설명서](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/rendering-personalization-content.html?lang=en#automatically-rendering-content) |
-| 사용자 지정 mbox | [설명서](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/rendering-personalization-content.html?lang=en#manually-rendering-content) |
+| 글로벌 mbox 지원 | [설명서](../personalization/rendering-personalization-content.md#automatically-rendering-content) |
+| 사용자 지정 mbox | [설명서](../personalization/rendering-personalization-content.md#manually-rendering-content) |
 | Target 분석(A4T) |  |
 | 환경 지원 |  |
 | 작업 공간 지원 |  |
@@ -88,10 +87,10 @@ ht-degree: 14%
 | 프로필 스크립트 |  |
 | XDM이 mbox 매개 변수가 됨 |  |
 | A4T 보고에서 지원되는 리디렉션 오퍼 | [설명서](https://experienceleague.adobe.com/docs/target/using/experiences/offers/offer-redirect.html?lang=en) |
-| Target 프로필 업데이트 | [설명서](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/target-overview.html?lang=en#single-profile-update) |
+| Target 프로필 업데이트 | [설명서](../personalization/adobe-target/target-overview.md#single-profile-update) |
 | 추천 항목 |  |
 | mBox 타사 ID |  |
-| 응답 토큰 | [설명서](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/accessing-response-tokens.html?lang=en) |
+| 응답 토큰 | [설명서](../personalization/adobe-target/accessing-response-tokens.md) |
 
 {style=&quot;table-layout:auto&quot;}
 
