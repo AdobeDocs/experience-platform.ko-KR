@@ -4,9 +4,9 @@ seo-description: Use the content on this page together with the rest of the conf
 seo-title: Message format
 title: 메시지 포맷
 exl-id: 1212c1d0-0ada-4ab8-be64-1c62a1158483
-source-git-commit: 63fe3b7cc429a1c18cebe998bc82fdea99a6679b
+source-git-commit: 91228b5f2008e55b681053296e8b3ff4448c92db
 workflow-type: tm+mt
-source-wordcount: '1982'
+source-wordcount: '1972'
 ht-degree: 2%
 
 ---
@@ -779,7 +779,7 @@ Experience Platform의 ID에 대한 자세한 내용은 [ID 네임스페이스 �
 
 대상 구성에서 [구성 가능한 집계](./destination-configuration.md#configurable-aggregation)를 사용하는 경우 아래 예에 표시된 것처럼 메시지 변환 템플릿을 편집하여 세그먼트 ID, 세그먼트 별칭, 세그먼트 멤버십 또는 ID 네임스페이스와 같은 기준에 따라 대상에 내보낸 프로필을 그룹화할 수 있습니다.
 
-#### 템플릿에서 세그먼트 ID 집계 키를 사용하는 예 {#aggregation-key-segment-id}
+#### 템플릿에서 세그먼트 ID 집계 키 사용 {#aggregation-key-segment-id}
 
 [구성 가능한 집계](./destination-configuration.md#configurable-aggregation)를 사용하고 `includeSegmentId`를 true로 설정한 경우 템플릿에서 `segmentId`를 사용하여 대상에 내보낸 HTTP 메시지의 프로필을 그룹화할 수 있습니다.
 
@@ -942,7 +942,7 @@ Experience Platform의 ID에 대한 자세한 내용은 [ID 네임스페이스 �
 }
 ```
 
-#### 템플릿에서 세그먼트 별칭 집계 키를 사용하는 예 {#aggregation-key-segment-alias}
+#### 템플릿에서 세그먼트 별칭 집계 키 사용 {#aggregation-key-segment-alias}
 
 [구성 가능한 집계](./destination-configuration.md#configurable-aggregation)를 사용하고 `includeSegmentId`를 true로 설정한 경우 템플릿에 세그먼트 별칭을 사용하여 대상에 내보낸 HTTP 메시지의 프로필을 그룹화할 수 있습니다.
 
@@ -952,7 +952,7 @@ Experience Platform의 ID에 대한 자세한 내용은 [ID 네임스페이스 �
 "customerList={{input.aggregationKey.segmentAlias}}"
 ```
 
-#### 템플릿에서 세그먼트 상태 집계 키를 사용하는 예 {#aggregation-key-segment-status}
+#### 템플릿에서 세그먼트 상태 집계 키 사용 {#aggregation-key-segment-status}
 
 [구성 가능한 집계](./destination-configuration.md#configurable-aggregation) 를 사용하고 `includeSegmentId` 및 `includeSegmentStatus`를 true로 설정하는 경우, 템플릿의 세그먼트 상태를 사용하여 세그먼트에서 프로필을 추가 또는 제거할지 여부에 따라 대상으로 내보낸 HTTP 메시지의 프로필을 그룹화할 수 있습니다.
 
@@ -968,7 +968,7 @@ Experience Platform의 ID에 대한 자세한 내용은 [ID 네임스페이스 �
 "action={% if input.aggregationKey.segmentStatus == "exited" %}REMOVE{% else %}ADD{% endif%}"
 ```
 
-#### 템플릿에서 ID 네임스페이스 집계 키를 사용하는 예 {#aggregation-key-identity}
+#### 템플릿에서 ID 네임스페이스 집계 키 사용 {#aggregation-key-identity}
 
 다음은 대상 구성에서 [구성 가능한 집계](./destination-configuration.md#configurable-aggregation)가 ID 네임스페이스로 내보낸 프로필을 `"identityNamespaces": ["email", "phone"]` 형식으로 집계하도록 설정된 예입니다
 
@@ -1071,7 +1071,7 @@ Experience Platform의 ID에 대한 자세한 내용은 [ID 네임스페이스 �
 }
 ```
 
-#### URL 템플릿에서 집계 키 사용 예
+#### URL 템플릿에서 집계 키 사용
 
 사용 사례에 따라 아래 표시된 대로 URL에 여기에 설명된 집계 키를 사용할 수도 있습니다.
 
