@@ -2,10 +2,10 @@
 title: 감사 로그 개요
 description: 감사 로그를 사용하여 Adobe Experience Platform에서 작업을 수행한 사용자를 확인하는 방법을 알아봅니다.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: df269a30251cb17e337ec25787d6a1eed41e9c0b
+source-git-commit: 4dc49c7219ebb613c74e5960f1f8d477dc1b7605
 workflow-type: tm+mt
-source-wordcount: '469'
-ht-degree: 4%
+source-wordcount: '598'
+ht-degree: 5%
 
 ---
 
@@ -21,16 +21,18 @@ ht-degree: 4%
 
 이 문서에서는 UI 또는 API에서 감사 로그를 보고 관리하는 방법을 비롯하여 Platform의 감사 로그를 다룹니다.
 
-## 감사 로그로 캡처된 이벤트 유형
+## 감사 로그로 캡처된 이벤트 유형 {#category}
 
 다음 표에서는 감사 로그에서 리소스가 기록되는 작업을 설명합니다.
 
 | 리소스 | 작업 |
 | --- | --- |
-| [샌드박스](../../../sandboxes/home.md) | <ul><li>선택 사항에서</li><li>업데이트</li><li>재설정</li><li>삭제</li></ul> |
 | [데이터 세트](../../../catalog/datasets/overview.md) | <ul><li>선택 사항에서</li><li>업데이트</li><li>삭제</li><li>[실시간 고객 프로필 사용](../../../profile/home.md)</li></ul> |
 | [스키마](../../../xdm/schema/composition.md) | <ul><li>선택 사항에서</li><li>업데이트</li><li>삭제</li></ul> |
+| [클래스](../../../xdm/schema/composition.md#class) | <ul><li>선택 사항에서</li><li>업데이트</li><li>삭제</li></ul> |
 | [필드 그룹](../../../xdm/schema/composition.md#field-group) | <ul><li>선택 사항에서</li><li>업데이트</li><li>삭제</li></ul> |
+| [데이터 유형](../../../xdm/schema/composition.md#data-type) | <ul><li>선택 사항에서</li><li>업데이트</li><li>삭제</li></ul> |
+| [샌드박스](../../../sandboxes/home.md) | <ul><li>선택 사항에서</li><li>업데이트</li><li>재설정</li><li>삭제</li></ul> |
 | [대상](../../../destinations/home.md) | <ul><li>활성화</li></ul> |
 
 ## 감사 로그에 대한 액세스
@@ -50,6 +52,23 @@ ht-degree: 4%
 목록에서 이벤트를 선택하여 오른쪽 레일에서 해당 세부 사항을 확인합니다.
 
 ![이벤트 세부 사항](../../images/audit-logs/select-event.png)
+
+단계 아이콘(![필터 아이콘](../../images/audit-logs/icon.png))을 선택하여 결과 범위를 좁히는 데 도움이 되는 필터 컨트롤 목록을 표시합니다.
+
+![필터](../../images/audit-logs/filters.png)
+
+UI에서 감사 이벤트에 다음 필터를 사용할 수 있습니다.
+
+| 필터 | 설명 |
+| --- | --- |
+| [!UICONTROL 카테고리] | 드롭다운 메뉴를 사용하여 표시된 결과를 [category](#category)별로 필터링합니다. |
+| [!UICONTROL 작업] | 작업별로 필터링합니다. 현재 [!UICONTROL 만들기] 및 [!UICONTROL 삭제] 작업만 필터링할 수 있습니다. |
+| [!UICONTROL 액세스 제어 상태] | [액세스 제어](../../../access-control/home.md) 권한이 없어서 작업이 허용(완료) 또는 거부되었는지 여부를 필터링합니다. |
+| [!UICONTROL 날짜] | 결과를 필터링할 날짜 범위를 정의하려면 시작 날짜 및/또는 종료 날짜를 선택합니다. |
+
+필터를 제거하려면 해당 필터의 알약 아이콘에서 &quot;X&quot;를 선택하거나 **[!UICONTROL 모두 지우기]**&#x200B;를 선택하여 모든 필터를 제거합니다.
+
+![필터 지우기](../../images/audit-logs/clear-filters.png)
 
 <!-- (Planned for post-beta release)
 ### Export an audit log
