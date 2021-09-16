@@ -2,10 +2,10 @@
 title: 코어 확장 개요
 description: Adobe Experience Platform의 코어 태그 확장에 대해 알아봅니다.
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
-source-git-commit: 9624b42f58384c1b54a6ee55e272a97d6fff5fde
+source-git-commit: 3b023dde8189d3ca6f8525d1e3366874e4ea2c67
 workflow-type: tm+mt
-source-wordcount: '5130'
-ht-degree: 67%
+source-wordcount: '5257'
+ht-degree: 66%
 
 ---
 
@@ -708,6 +708,61 @@ Local Storage Item Name 필드에 로컬 저장소 항목의 이름을 입력합
 로컬 저장소는 브라우저에 페이지 간 정보를 저장하는 방법을 제공합니다([https://www.w3schools.com/html/html5_webstorage.asp](https://www.w3schools.com/html/html5_webstorage.asp)). 로컬 저장소는 쿠키와 거의 비슷하지만 훨씬 더 크고 유연합니다.
 
 제공된 필드를 사용하여 `lastProductViewed.`처럼 로컬 저장소 항목에 대해 만든 값을 지정합니다.
+
+### 병합된 개체
+
+각각 개체를 제공할 여러 데이터 요소를 선택합니다. 이러한 개체가 깊이(재귀) 병합되어 새 개체를 생성합니다. 원본 개체는 수정되지 않습니다. 여러 소스 객체의 동일한 위치에 속성이 있으면 후자 객체의 값이 사용됩니다. 소스 속성 값이 `undefined`이면 이전 소스 객체의 값을 재정의하지 않습니다. 여러 소스 객체의 동일한 위치에 배열이 있는 경우 배열이 연결됩니다.
+
+예를 들어, 다음 개체를 제공하는 데이터 요소를 선택한다고 가정합니다.
+
+```
+{
+  "sport": {
+    "name": "tennis"
+  },
+  "dessert": "ice cream",
+  "fruits": [
+    "apple",
+    "banana"
+  ]
+}
+```
+
+다음 개체를 제공하는 다른 데이터 요소도 선택한다고 가정합니다.
+
+```
+{
+  "sport": {
+    "name": "volleyball"
+  },
+  "dessert": undefined,
+  "pet": "dog",
+  "instrument": undefined,
+  "fruits": [
+    "cherry",
+    "duku"
+  ]
+}
+```
+
+병합된 개체 데이터 요소의 결과는 다음 개체가 됩니다.
+
+```
+{
+  "sport": {
+    "name": "volleyball"
+  },
+  "dessert": "ice cream",
+  "pet": "dog",
+  "instrument": undefined,
+  "fruits": [
+    "apple",
+    "banana",
+    "cherry",
+    "duku"
+  ]
+}
+```
 
 ### 페이지 정보
 
