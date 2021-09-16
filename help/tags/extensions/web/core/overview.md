@@ -1,10 +1,11 @@
 ---
 title: 코어 확장 개요
 description: Adobe Experience Platform의 코어 태그 확장에 대해 알아봅니다.
-source-git-commit: 41a394974153883dc300bdd8a00fc3106c4f0ac6
+exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
+source-git-commit: 9624b42f58384c1b54a6ee55e272a97d6fff5fde
 workflow-type: tm+mt
-source-wordcount: '4905'
-ht-degree: 70%
+source-wordcount: '5130'
+ht-degree: 67%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 70%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../../term-updates.md)을 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
 
 코어 태그 확장은 Adobe Experience Platform과 함께 릴리스된 기본 확장입니다.
 
@@ -774,3 +775,36 @@ Session Storage Item Name 필드에 세션 저장소 항목의 이름을 입력�
 * 방문을 위한 랜딩 페이지인 경우 Analytics 지표 채우기
 * 세션 수의 X 숫자 이후의 방문자에게 새 오퍼 표시
 * 처음 방문자인 경우 뉴스레터 등록 표시
+
+### 조건부 값
+
+[값 비교](#value-comparison-value-comparison) 조건의 래퍼입니다. 비교 결과를 기반으로 에서는 양식에서 사용할 수 있는 두 값 중 하나를 반환합니다. &quot;If.. 그럼.. 그렇지 않으면...&quot; 추가 규칙이 필요하지 않은 시나리오.
+
+### 런타임 환경
+
+다음 변수 중 하나를 선택할 수 있습니다.
+
+* 환경 단계 - 개발/스테이징/프로덕션 환경을 구분하기 위해 `_satellite.environment.stage`을 반환합니다.
+* 라이브러리 빌드 날짜 - `_satellite.buildInfo.buildDate` 와 동일한 값을 포함하는 `turbine.buildInfo.buildDate`을 반환합니다.
+* 속성 이름 - Launch 속성의 이름을 가져오려면 `_satellite.property.name` 을 반환합니다.
+* 속성 ID - Launch 속성의 ID를 가져오려면 `_satellite.property.id` 반환
+* 규칙 이름 - 실행된 규칙의 이름을 포함하는 `event.$rule.name`을 반환합니다.
+* 규칙 ID - 실행된 규칙의 ID를 포함하는 `event.$rule.id`을 반환합니다.
+* 이벤트 유형 - 규칙을 트리거한 이벤트 유형을 포함하는 `event.$type`을 반환합니다.
+* 이벤트 세부 사항 페이로드 - 사용자 지정 이벤트 또는 직접 호출 규칙의 페이로드를 포함하는 `event.detail`을 반환합니다.
+* 직접 호출 식별자 - 직접 호출 규칙의 식별자를 포함하는 `event.identifier`을 반환합니다.
+
+### 장치 속성
+
+다음 방문자 장치 속성 중 하나를 반환합니다.
+
+* 브라우저 창 크기
+* 화면 크기
+
+### JavaScript 도구
+
+일반적인 JavaScript 작업의 래퍼입니다. 데이터 요소를 입력으로 수신합니다. 다음 데이터 요소 값 변형 중 하나의 결과를 반환합니다.
+
+* 기본 문자열 조작(replace, substring, regex match, first 및 last index, split, slice)
+* 기본 배열 작업(슬라이스, 조인, 팝업, 이동)
+* 기본 범용 작업(슬라이스, 길이)

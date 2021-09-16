@@ -1,10 +1,11 @@
 ---
 title: 코어 확장에 대한 릴리스 노트
 description: Adobe Experience Platform의 코어 확장에 대한 최신 릴리스 노트입니다.
-source-git-commit: cef9f9e403328418d26935bf3ee45e9068b7177e
+exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
+source-git-commit: 9624b42f58384c1b54a6ee55e272a97d6fff5fde
 workflow-type: tm+mt
-source-wordcount: '1293'
-ht-degree: 67%
+source-wordcount: '1417'
+ht-degree: 63%
 
 ---
 
@@ -12,7 +13,19 @@ ht-degree: 67%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../../term-updates.md)을 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
+
+## 2021년 9월 16일
+
+v3.1.0
+
+새 데이터 요소가 추가되었습니다.
+
+* 병합된 개체 - 각각 개체를 제공할 여러 데이터 요소를 선택합니다. 이러한 개체가 깊이(재귀) 병합되어 새 개체를 생성합니다.
+* 조건부 값 - 비교 결과를 기반으로 두 값(conditionalValue 또는 fallbackValue) 중 하나를 반환합니다.
+* 런타임 환경 - 다음 Launch 환경 변수 중 하나를 반환합니다. 환경 스테이지, 라이브러리 빌드 날짜, 속성 이름, 속성 ID, 규칙 이름, 규칙 id, 이벤트 유형, 이벤트 세부 사항 페이로드, 직접 호출 식별자.
+* JavaScript 도구 - 일반적인 JavaScript 작업의 래퍼: 기본 문자열 조작(replace, substring, regex match, first 및 last index, split, slice), 기본 배열 작업(slice, join, pop, shift) 및 기본 범용 작업(slice, length)입니다.
+* 장치 속성 - 창 크기 또는 화면 크기와 같은 장치 속성을 반환합니다.
 
 ## 2021년 8월 11일
 
