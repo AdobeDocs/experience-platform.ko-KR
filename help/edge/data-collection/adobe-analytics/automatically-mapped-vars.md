@@ -4,9 +4,9 @@ description: Experience Platform Web SDK를 사용하여 Adobe Analytics에서 �
 seo-description: Learn which variables are automatically mapped in Adobe Analytics with the Adobe Experience Platform Web SDK
 keywords: adobe analytics;변수;analytics;자동 맵;자동 매핑
 exl-id: 856fada7-b62c-4fd2-9372-a19ae1cdec33
-source-git-commit: b2d949232674bb4c4ebcb7754726730b966a0e02
+source-git-commit: f5cd00c9639bde3b36b8ef9825148725ff9f89c1
 workflow-type: tm+mt
-source-wordcount: '920'
+source-wordcount: '907'
 ht-degree: 5%
 
 ---
@@ -19,21 +19,21 @@ ht-degree: 5%
 | ---------- | ------------------------- | ----------------------------------------- |
 | application.id | c.a.appid | AppMeasurement 컨텍스트 데이터 `c.a.appid` 매핑. |
 | application.launches.value | c.a.launches | AppMeasurement 컨텍스트 데이터 `c.a.launches` 매핑. |
-| commerce.checkouts.id | events | `scCheckout` 이벤트 직렬화. 이 필드가 제외되면(즉, 직렬화되지 않은 이벤트의 경우) 시스템에서 엔티티에 자체 ID 값을 생성하여 할당합니다. |
-| commerce.checkouts.value | events | 구분 기호 `,`을 사용하여 전환 COMMERCE_SC_CHECKOUT을 사용하는 AppMeasurement 쿼리 매개 변수 EVENT_LIST_FULL 매핑입니다. |
+| commerce.checkouts.id | 이벤트 | `scCheckout` 이벤트 직렬화. 이 필드가 제외되면(즉, 직렬화되지 않은 이벤트의 경우) 시스템에서 엔티티에 자체 ID 값을 생성하여 할당합니다. |
+| commerce.checkouts.value | 이벤트 | 구분 기호 `,`을 사용하여 전환 COMMERCE_SC_CHECKOUT을 사용하는 AppMeasurement 쿼리 매개 변수 EVENT_LIST_FULL 매핑입니다. |
 | commerce.order.currencyCode | cc | AppMeasurement 쿼리 매개 변수 CURRENCY 매핑. |
 | commerce.order.purchaseID | pi | AppMeasurement 쿼리 매개 변수 PURCHASEID 매핑입니다. |
-| commerce.productListAdds.id | events | `scAdd` 이벤트 직렬화. 이 필드가 제외되면(즉, 직렬화되지 않은 이벤트의 경우) 시스템에서 엔티티에 자체 ID 값을 생성하여 할당합니다. |
-| commerce.productListAdds.value | events | 구분 기호 `,`을 사용하여 전환 COMMERCE_SC_ADD를 사용하는 AppMeasurement 쿼리 매개 변수 EVENT_LIST_FULL 매핑입니다. |
-| commerce.productListOpens.id | events | `scOpen` 이벤트 직렬화. 이 필드가 제외되면(즉, 직렬화되지 않은 이벤트의 경우) 시스템에서 엔티티에 자체 ID 값을 생성하여 할당합니다. |
-| commerce.productListOpens.value | events | 구분 기호 `,`을 사용하여 전환 COMMERCE_SC_OPEN을 사용하는 AppMeasurement 쿼리 매개 변수 EVENT_LIST_FULL 매핑입니다. |
-| commerce.productListRemovals.id | events | `scRemove` 이벤트 직렬화. 이 필드가 제외되면(즉, 직렬화되지 않은 이벤트의 경우) 시스템에서 엔티티에 자체 ID 값을 생성하여 할당합니다. |
-| commerce.productListRemovals.value | events | 구분 기호 `,`을 사용하여 전환 COMMERCE_SC_REMOVE를 사용하는 AppMeasurement 쿼리 매개 변수 EVENT_LIST_FULL 매핑입니다. |
-| commerce.productListViews.id | events | `scView` 이벤트 직렬화. 이 필드가 제외되면(즉, 직렬화되지 않은 이벤트의 경우) 시스템에서 엔티티에 자체 ID 값을 생성하여 할당합니다. |
-| commerce.productListViews.value | events | 구분 기호 `,`을 사용하여 COMMERCE_SC_VIEW와 함께 AppMeasurement 쿼리 매개 변수 EVENT_LIST_FULL 매핑을 수행합니다. |
-| commerce.productViews.id | events | `prodView` 이벤트 직렬화. 이 필드가 제외되면(즉, 직렬화되지 않은 이벤트의 경우) 시스템에서 엔티티에 자체 ID 값을 생성하여 할당합니다. |
-| commerce.productViews.value | events | 구분 기호 `,`를 사용하여 COMMERCE_PROD_VIEW를 사용하여 AppMeasurement 쿼리 매개 변수 EVENT_LIST_FULL 매핑이 변환되는 AppMeasurement |
-| commerce.purchases.value | events | 구분 기호 `,`를 사용하여 COMMERCE_PURCHASE와 함께 AppMeasurement 쿼리 매개 변수 EVENT_LIST_FULL 매핑을 수행합니다. |
+| commerce.productListAdds.id | 이벤트 | `scAdd` 이벤트 직렬화. 이 필드가 제외되면(즉, 직렬화되지 않은 이벤트의 경우) 시스템에서 엔티티에 자체 ID 값을 생성하여 할당합니다. |
+| commerce.productListAdds.value | 이벤트 | 구분 기호 `,`을 사용하여 전환 COMMERCE_SC_ADD를 사용하는 AppMeasurement 쿼리 매개 변수 EVENT_LIST_FULL 매핑입니다. |
+| commerce.productListOpens.id | 이벤트 | `scOpen` 이벤트 직렬화. 이 필드가 제외되면(즉, 직렬화되지 않은 이벤트의 경우) 시스템에서 엔티티에 자체 ID 값을 생성하여 할당합니다. |
+| commerce.productListOpens.value | 이벤트 | 구분 기호 `,`을 사용하여 전환 COMMERCE_SC_OPEN을 사용하는 AppMeasurement 쿼리 매개 변수 EVENT_LIST_FULL 매핑입니다. |
+| commerce.productListRemovals.id | 이벤트 | `scRemove` 이벤트 직렬화. 이 필드가 제외되면(즉, 직렬화되지 않은 이벤트의 경우) 시스템에서 엔티티에 자체 ID 값을 생성하여 할당합니다. |
+| commerce.productListRemovals.value | 이벤트 | 구분 기호 `,`을 사용하여 전환 COMMERCE_SC_REMOVE를 사용하는 AppMeasurement 쿼리 매개 변수 EVENT_LIST_FULL 매핑입니다. |
+| commerce.productListViews.id | 이벤트 | `scView` 이벤트 직렬화. 이 필드가 제외되면(즉, 직렬화되지 않은 이벤트의 경우) 시스템에서 엔티티에 자체 ID 값을 생성하여 할당합니다. |
+| commerce.productListViews.value | 이벤트 | 구분 기호 `,`을 사용하여 COMMERCE_SC_VIEW와 함께 AppMeasurement 쿼리 매개 변수 EVENT_LIST_FULL 매핑을 수행합니다. |
+| commerce.productViews.id | 이벤트 | `prodView` 이벤트 직렬화. 이 필드가 제외되면(즉, 직렬화되지 않은 이벤트의 경우) 시스템에서 엔티티에 자체 ID 값을 생성하여 할당합니다. |
+| commerce.productViews.value | 이벤트 | 구분 기호 `,`를 사용하여 COMMERCE_PROD_VIEW를 사용하여 AppMeasurement 쿼리 매개 변수 EVENT_LIST_FULL 매핑이 변환되는 AppMeasurement |
+| commerce.purchases.value | 이벤트 | 구분 기호 `,`를 사용하여 COMMERCE_PURCHASE와 함께 AppMeasurement 쿼리 매개 변수 EVENT_LIST_FULL 매핑을 수행합니다. |
 | device.colorDepth | c | AppMeasurement 쿼리 매개 변수 C_COLOR 매핑입니다. |
 | device.screenHeight | s | AppMeasurement 쿼리 매개 변수 화면 해상도 매핑입니다. |
 | device.screenWidth | s | AppMeasurement 쿼리 매개 변수 화면 해상도 매핑입니다. |
@@ -88,9 +88,8 @@ ht-degree: 5%
 | placeContext.geo.longitude | lon | AppMeasurement 쿼리 매개 변수 LONGITUDE 매핑입니다. |
 | placeContext.geo.postalCode | zip | AppMeasurement 쿼리 매개 변수 ZIP 매핑. |
 | placeContext.geo.stateProvince | state | AppMeasurement 쿼리 매개 변수 STATE 매핑입니다. |
-| productlistitems[N]._[NAME_SPACE].* | products | AppMeasurement 쿼리 매개 변수 제품 상품 이벤트/Evar 매핑 . |
-| productListItems[N].lineItemId | products | AppMeasurement 쿼리 매개 변수 제품 이름 매핑입니다. |
-| productlistitems[N].name | products | AppMeasurement 쿼리 매개 변수 제품 카테고리 매핑입니다. |
+| productListItems[N].lineItemId | products | AppMeasurement 쿼리 매개 변수 제품 카테고리 매핑입니다. |
+| productlistitems[N].name | products | AppMeasurement 쿼리 매개 변수 제품 이름 매핑입니다. |
 | productlistitems[N].priceTotal | products | AppMeasurement 쿼리 매개 변수 제품 가격 매핑입니다. |
 | productlistitems[N].quantity | products | AppMeasurement 쿼리 매개 변수 제품 수량 매핑입니다. |
 | web.webInteraction.URL | pev1 | AppMeasurement 쿼리 매개 변수 PAGE_EVENT_VAR1 매핑입니다. |
