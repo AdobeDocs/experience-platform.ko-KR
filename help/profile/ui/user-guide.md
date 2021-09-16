@@ -4,9 +4,9 @@ title: 실시간 고객 프로필 UI 안내서
 topic-legacy: guide
 description: 실시간 고객 프로필은 각 개별 고객에 대한 전체적인 보기를 만들어 온라인, 오프라인, CRM 및 타사 데이터를 포함하여 여러 채널의 데이터를 결합합니다. 이 문서는 Adobe Experience Platform 사용자 인터페이스에서 실시간 고객 프로필과 상호 작용하는 안내서의 역할을 합니다.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: ad5690997b079dbc064775ef1c4fdbe3770ff424
+source-git-commit: b5e6376b54fe8b53fbabf85a2909293cebd93ccc
 workflow-type: tm+mt
-source-wordcount: '1553'
+source-wordcount: '1568'
 ht-degree: 0%
 
 ---
@@ -75,15 +75,21 @@ Experience Platform UI의 왼쪽 탐색 영역에서 **[!UICONTROL 프로필]**&
 
 **[!UICONTROL 찾아보기]** 탭에서 병합 정책을 사용하여 샘플 프로필을 보거나 ID 네임스페이스 및 값을 사용하여 특정 프로필을 찾을 수 있습니다.
 
-![](../images/user-guide/browse-by-dropdown.png)
+![](../images/user-guide/browse-by-none-selected.png)
 
 ### [!UICONTROL 병합 정책]으로 찾아보기
 
-**[!UICONTROL 찾아보기 by]** 선택기는 기본적으로 [!UICONTROL 병합 정책]으로 설정되며, 선택한 **[!UICONTROL 병합 정책]**&#x200B;이 조직의 기본 병합 정책입니다.
+**[!UICONTROL 찾아보기]** 탭은 기본적으로 조직의 기본 병합 정책으로 설정됩니다. 다른 병합 정책을 선택하려면 병합 정책 이름 옆에 있는 `X` 선택기를 사용하여 **[!UICONTROL 병합 정책 선택]** 대화 상자를 엽니다.
 
-플랫폼 내의 병합 정책 및 역할에 대한 자세한 내용은 [병합 정책 개요](../merge-policies/overview.md)를 참조하십시오.
+>[!NOTE]
+>
+>선택한 병합 정책이 없으면 **[!UICONTROL 병합 정책]** 필드 옆에 있는 선택기 단추를 사용하여 선택 대화 상자를 엽니다.
 
 ![](../images/user-guide/browse-by-merge-policy.png)
+
+**[!UICONTROL 병합 정책 선택]** 대화 상자에서 병합 정책을 선택하려면 정책 이름 옆의 라디오 단추를 선택한 다음 **[!UICONTROL 선택]**&#x200B;을 사용하여 [!UICONTROL 찾아보기] 탭으로 돌아갑니다. 그런 다음 **[!UICONTROL 보기]**&#x200B;를 선택하여 샘플 프로필을 새로 고침하고 새 병합 정책이 적용된 프로필의 샘플링을 볼 수 있습니다.
+
+![](../images/user-guide/select-merge-policy-dialog.png)
 
 선택한 병합 정책이 적용된 후 조직의 프로필 저장소에서 최대 20개의 프로필 샘플을 나타내는 프로필입니다. 선택한 병합 정책에 대한 샘플 프로필은 조직의 프로필 저장소에 새 데이터가 추가되면 새로 고쳐집니다.
 
@@ -91,21 +97,16 @@ Experience Platform UI의 왼쪽 탐색 영역에서 **[!UICONTROL 프로필]**&
 
 ![](../images/user-guide/sample-profiles.png)
 
-다른 병합 정책을 선택하려면 병합 정책 이름 옆에 있는 `X` 선택기를 사용하여 **[!UICONTROL 병합 정책 선택]** 대화 상자를 엽니다.
+플랫폼 내의 병합 정책 및 역할에 대한 자세한 내용은 [병합 정책 개요](../merge-policies/overview.md)를 참조하십시오.
 
-![](../images/user-guide/merge-policy-select.png)
-
-**[!UICONTROL 병합 정책 선택]** 대화 상자에서 병합 정책을 선택하려면 정책 이름 옆의 라디오 단추를 선택한 다음 **[!UICONTROL 선택]**&#x200B;을 사용하여 [!UICONTROL 찾아보기] 탭으로 돌아갑니다. 그런 다음 **[!UICONTROL 보기]**&#x200B;를 선택하여 샘플 프로필을 새로 고침하고 새 병합 정책이 적용된 프로필의 샘플링을 볼 수 있습니다.
-
-![](../images/user-guide/select-merge-policy-dialog.png)
 
 ### [!UICONTROL Identity]로 찾아보기
 
-**[!UICONTROL Browse by]** 선택기를 사용하여 [!UICONTROL Identity]를 선택하여 ID 값으로 특정 프로필을 조회할 수 있습니다. ID로 검색하려면 병합 정책, ID 네임스페이스 및 ID 값을 제공해야 합니다.
+**[!UICONTROL 찾아보기]** 탭에서 ID 네임스페이스를 사용하여 ID 값으로 특정 프로필을 조회할 수 있습니다. ID로 검색하려면 병합 정책, ID 네임스페이스 및 ID 값을 제공해야 합니다.
 
 ![](../images/user-guide/browse-by-identity.png)
 
-**[!UICONTROL 병합 정책]** 선택기를 사용하여 **[!UICONTROL 병합 정책 선택]** 대화 상자를 열고 사용할 병합 정책을 선택합니다.
+필요한 경우 **[!UICONTROL 병합 정책]** 선택기를 사용하여 **[!UICONTROL 병합 정책 선택]** 대화 상자를 열고 사용할 병합 정책을 선택합니다.
 
 ![](../images/user-guide/select-merge-policy-dialog.png)
 
