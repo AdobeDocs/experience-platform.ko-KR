@@ -2,9 +2,9 @@
 description: 이 페이지에서는 대상 SDK에서 지원하는 다양한 OAuth 2 인증 흐름에 대해 설명하고 대상에 대한 OAuth 2 인증을 설정하는 지침을 제공합니다.
 title: OAuth 2 인증
 exl-id: 280ecb63-5739-491c-b539-3c62bd74e433
-source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
+source-git-commit: e8625d6de7707b3a159f95d4471a73cbbed25d21
 workflow-type: tm+mt
-source-wordcount: '2119'
+source-wordcount: '2110'
 ht-degree: 5%
 
 ---
@@ -21,18 +21,15 @@ ht-degree: 5%
 
 ### 시스템의 사전 요구 사항 {#prerequisites}
 
-첫 번째 단계로, 시스템에서 Adobe Experience Platform용 앱을 만들거나 시스템에 Experience Platform을 등록해야 합니다. 목표는 대상에 대한 Experience Platform을 인증하는 데 필요한 클라이언트 ID와 클라이언트 암호를 생성하는 것입니다. 시스템에서 이 구성의 일부로 아래 표에서 가져올 수 있는 Adobe Experience Platform OAuth 2 리디렉션/콜백 URL이 필요합니다.
+첫 번째 단계로, 시스템에서 Adobe Experience Platform용 앱을 만들거나 시스템에 Experience Platform을 등록해야 합니다. 목표는 대상에 대한 Experience Platform을 인증하는 데 필요한 클라이언트 ID와 클라이언트 암호를 생성하는 것입니다. 시스템에서 이 구성의 일부로 아래 목록에서 가져올 수 있는 Adobe Experience Platform OAuth 2 리디렉션/콜백 URL이 필요합니다.
+
+* `https://platform-va7.adobe.io/data/core/activation/oauth/api/v1/callback`
+* `https://platform-nld2.adobe.io/data/core/activation/oauth/api/v1/callback`
+* `https://platform-aus5.adobe.io/data/core/activation/oauth/api/v1/callback`
 
 >[!IMPORTANT]
 >
 >시스템에서 Adobe Experience Platform에 대한 리디렉션/콜백 URL을 등록하는 단계는 인증 코드](./oauth2-authentication.md#authorization-code) 부여 유형이 있는 [OAuth 2에 대해서만 필요합니다. 지원되는 다른 두 가지 권한 부여 유형(암호 및 클라이언트 자격 증명)에 대해 이 단계를 건너뛸 수 있습니다.
-
-| 리디렉션/콜백 URL | 환경 |
-|---------|----------|
-| `https://platform.adobe.io/data/core/activation/oauth/api/v1/callback` | 프로덕션 |
-| `https://platform-stage.adobe.io/data/core/activation/oauth/api/v1/callback` | 스테이징 |
-
-{style=&quot;table-layout:auto&quot;}
 
 이 단계를 마치면 다음을 수행해야 합니다.
 * 클라이언트 ID;
@@ -466,7 +463,7 @@ Adobe은 사용자가 플랫폼에 다시 로그인하지 않고도 만료된 �
 | response.body | HTTP 응답 본문 | ``{{ response.body.access_token }}`` |
 | response.status | HTTP 응답 상태 | ``{{ response.status }}`` |
 | response.headers | HTTP 응답 헤더 | ``{{ response.headers.server[0] }}`` |
-| authContext | 현재 인증 시도에 대한 정보 액세스 | <ul><li>`{{ authContext.sandboxName }} `</li><li>`{{ authContext.sandboxId }} `</li><li>`{{ authContext.imsOrgId }} `</li><li>`{{ authContext.client }} // the client executing the authentication attempt `</li></ul> |
+| userContext | 현재 인증 시도에 대한 정보 액세스 | <ul><li>`{{ userContext.sandboxName }} `</li><li>`{{ userContext.sandboxId }} `</li><li>`{{ userContext.imsOrgId }} `</li><li>`{{ userContext.client }} // the client executing the authentication attempt `</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
