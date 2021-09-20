@@ -2,7 +2,7 @@
 title: 설명서 셀프 서비스 템플릿 // 대상 이름으로 바꾸기
 description: 이 템플릿을 사용하여 Adobe Experience Platform 카탈로그에서 대상에 대한 공개 설명서를 만듭니다. // 개요 섹션의 단락으로 대체합니다
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: d2452bf0e59866d3deca57090001c4c5a0935525
+source-git-commit: 396b9a9ec1509abedba96797f68ad3e5aa2e5988
 workflow-type: tm+mt
 source-wordcount: '904'
 ht-degree: 1%
@@ -58,7 +58,6 @@ ht-degree: 1%
 ## 사용 사례
 
 *YOURDESTINATION* 대상을 사용하는 방법과 시기를 더 잘 이해할 수 있도록 Adobe Experience Platform 고객이 이 대상을 사용하여 해결할 수 있는 샘플 사용 사례가 여기에 있습니다.
-
 
 ### 사용 사례 #1
 
