@@ -2,10 +2,10 @@
 title: 코어 확장에 대한 릴리스 노트
 description: Adobe Experience Platform의 코어 확장에 대한 최신 릴리스 노트입니다.
 exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
-source-git-commit: 9624b42f58384c1b54a6ee55e272a97d6fff5fde
+source-git-commit: 29a238c517b6bd5a95284b4d6954fd14a1668f0e
 workflow-type: tm+mt
-source-wordcount: '1417'
-ht-degree: 63%
+source-wordcount: '1434'
+ht-degree: 62%
 
 ---
 
@@ -14,6 +14,12 @@ ht-degree: 63%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
+
+## 2021년 9월 17일
+
+v3.1.1
+
+* 날짜 범위 조건 보기를 로드할 수 없는 JS 오류를 수정했습니다.
 
 ## 2021년 9월 16일
 
