@@ -1,13 +1,13 @@
 ---
 title: Marketo Engage 대상
 description: Marketo Engage은 마케팅, 광고, 분석 및 상거래를 위한 유일한 CXM(엔드 투 엔드 고객 경험 관리) 솔루션입니다. CRM 리드 관리 및 고객 참여에서 계정 기반 마케팅 및 매출 기여도에 이르는 활동을 자동화하고 관리할 수 있습니다.
-source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
+exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
+source-git-commit: 1f18e07af7ef0d90f882fa668c5659330bce5960
 workflow-type: tm+mt
-source-wordcount: '327'
+source-wordcount: '307'
 ht-degree: 1%
 
 ---
-
 
 # (베타) Marketo Engage 대상 {#beta-marketo-engage-destination}
 
@@ -32,18 +32,26 @@ Marketo Engage은 마케팅, 광고, 분석 및 상거래를 위한 유일한 CX
 
 세그먼트 내보내기 - Marketo Engage 대상에 사용되는 식별자(이름, 전화번호 또는 기타)로 세그먼트(대상)의 모든 구성원을 내보냅니다.
 
-## 설정 {#set-up}
+## 대상 설정 및 세그먼트 활성화 {#set-up}
 
-대상 [을 설정하는 방법에 대한 지침은 여기](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=en)에 있습니다.
+대상을 설정하고 세그먼트를 활성화하는 방법에 대한 자세한 지침은 Marketo 설명서에서 [Adobe Experience Platform 세그먼트를 Marketo 정적 목록](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=en)에 푸시하십시오.
 
-## 대상에 연결 {#connect}
+<!--
 
-이 대상에 연결하려면 [대상 구성 자습서](../../ui/connect-destination.md)에 설명된 단계를 따르십시오.
+## Connect to the destination {#connect}
+
+To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md).
+
+-->
 
 ## 데이터 사용 및 거버넌스 {#data-usage-governance}
 
 모든 [!DNL Adobe Experience Platform] 대상은 데이터를 처리할 때 데이터 사용 정책을 준수합니다. [!DNL Adobe Experience Platform]에서 데이터 거버넌스를 적용하는 방법에 대한 자세한 내용은 [데이터 거버넌스 개요](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html)를 참조하십시오.
 
-## 세그먼트를 이 대상에 활성화 {#activate}
+<!--
 
-대상 세그먼트를 이 대상으로 활성화하는 방법에 대한 지침은 [스트리밍 세그먼트 내보내기 대상으로 대상 활성화](../../ui/activate-segment-streaming-destinations.md)를 참조하십시오.
+## Activate segments to this destination {#activate}
+
+See [Activate audience data to streaming segment export destinations](../../ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
+
+-->
