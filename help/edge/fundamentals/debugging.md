@@ -3,10 +3,10 @@ title: Adobe Experience Platform Web SDK에서 디버깅
 description: Experience Platform 웹 SDK에서 디버깅 기능을 전환하는 방법을 알아봅니다.
 keywords: 웹 sdk 디버깅;디버깅;구성;명령 구성;디버그 명령;edgeConfigId;setDebug;debugEnabled;debug;
 exl-id: 4e893af8-a48e-48dc-9737-4c61b3355f03
-source-git-commit: c0e2d01bd21405f07f4857e1ccf45dd0e4d0f414
+source-git-commit: d0d7fe42827579c502be9de29d36f24c94259b5f
 workflow-type: tm+mt
-source-wordcount: '422'
-ht-degree: 0%
+source-wordcount: '492'
+ht-degree: 3%
 
 ---
 
@@ -14,11 +14,14 @@ ht-degree: 0%
 
 디버깅이 활성화되면 SDK는 메시지를 브라우저 콘솔에 출력하며 구현을 디버깅하고 SDK가 작동하는 방식을 이해하는 데 도움이 됩니다.
 
-디버깅은 기본적으로 비활성화되지만 다음 세 가지 방법으로 전환할 수 있습니다.
+디버깅은 기본적으로 비활성화되지만 다음 네 가지 방법으로 전환할 수 있습니다.
 
 * `configure` 명령
 * `setDebug` 명령
 * 쿼리 문자열 매개 변수가 포함된 랜딩 페이지 URL이 있는지 확인합니다
+* Adobe Experience Platform Debugger에서 디버깅 활성화 켜짐. Adobe Experience Platform은 웹 페이지를 검사하고 Experience Cloud 제품에 대한 구현 문제를 디버깅하는 데 도움이 되는 강력한 도구입니다. Adobe Experience Platform Debugger는 [Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) 및 [Firefox](https://addons.mozilla.org/ko-KR/firefox/addon/adobe-experience-platform-dbg/) 확장 프로그램으로 모두 사용할 수 있습니다. AEP 웹 SDK 섹션의 구성 탭에서 디버깅을 활성화할 수 있습니다.
+
+![](../images/enable-debugging.png)
 
 ## Configure 명령을 사용하여 디버깅 전환
 
