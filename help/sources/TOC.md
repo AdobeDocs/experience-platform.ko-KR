@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 소스 커넥터 도움말
 breadcrumb-title: Source Connectors 안내서
 user-guide-description: 다양한 소스 또는 구조에서 데이터를 수집하고 레이블을 지정하며 기존에 수집한 데이터를 향상시킬 수 있습니다.
 feature: Data Ingestion, Sources
-source-git-commit: ebe620b078096349c514420746902ce406a910d1
+source-git-commit: e85980565889dd66f7dbd93749e013f77e434b74
 workflow-type: tm+mt
-source-wordcount: '643'
+source-wordcount: '647'
 ht-degree: 13%
 
 ---
@@ -71,6 +71,7 @@ ht-degree: 13%
       - [Oracle 커넥터](connectors/databases/oracle.md)
       - [피닉스 커넥터](connectors/databases/phoenix.md)
       - [PostgreSQL 커넥터](connectors/databases/postgres.md)
+      - [Snowflake 커넥터](connectors/databases/snowflake.md)
    - eCommerce {#ecommerce}
       - [Shopify 커넥터](connectors/ecommerce/shopify.md)
    - 로컬 시스템 {#local-system}
@@ -125,6 +126,7 @@ ht-degree: 13%
          - [Oracle](tutorials/api/create/databases/oracle.md)
          - [피닉스](tutorials/api/create/databases/phoenix.md)
          - [PostgreSQL](tutorials/api/create/databases/postgres.md)
+         - [Snowflake](tutorials/api/create/databases/snowflake.md)
          - [SQL Server](tutorials/api/create/databases/sql-server.md)
       - eCommerce {#ecommerce}
          - [Shopify](tutorials/api/create/ecommerce/shopify.md)
@@ -214,6 +216,7 @@ ht-degree: 13%
          - [Oracle](tutorials/ui/create/databases/oracle.md)
          - [피닉스](tutorials/ui/create/databases/phoenix.md)
          - [PostgreSQL](tutorials/ui/create/databases/postgres.md)
+         - [Snowflake](tutorials/ui/create/databases/snowflake.md)
       - eCommerce {#ecommerce}
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
       - 로컬 시스템 {#local-system}
