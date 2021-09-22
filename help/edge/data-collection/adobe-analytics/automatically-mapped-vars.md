@@ -4,7 +4,7 @@ description: Experience Platform Web SDK를 사용하여 Adobe Analytics에서 �
 seo-description: Learn which variables are automatically mapped in Adobe Analytics with the Adobe Experience Platform Web SDK
 keywords: adobe analytics;변수;analytics;자동 맵;자동 매핑
 exl-id: 856fada7-b62c-4fd2-9372-a19ae1cdec33
-source-git-commit: f5cd00c9639bde3b36b8ef9825148725ff9f89c1
+source-git-commit: 7809e64abab80f72af979e685f268c0799e74eca
 workflow-type: tm+mt
 source-wordcount: '907'
 ht-degree: 5%
@@ -46,7 +46,7 @@ ht-degree: 5%
 | environment.browserDetails.viewportWidth | bw | AppMeasurement 쿼리 매개 변수 BROWSER_WIDTH 매핑. |
 | environment.connectionType | ct | AppMeasurement 쿼리 매개 변수 CT_CONNECT_TYPE 매핑. |
 | environment.ipV4 | X-Forwarded-For | HTTP 헤더 매핑이며, X-FORWARDED-FOR입니다. |
-| identityMap.ECID.[0].id | mid | AppMeasurement 쿼리 매개 변수 MID 매핑입니다. |
+| identityMap.ECID[0].id | mid | AppMeasurement 쿼리 매개 변수 MID 매핑입니다. |
 | marketing.trackingCode | v0 | AppMeasurement 쿼리 매개 변수 CAMPAIGN 매핑입니다. |
 | media.mediaTimed.completes.value | c.a.media.complete | AppMeasurement 컨텍스트 데이터. |
 | media.mediaTimed.dropBeforeStart.value | c.a.media.view, c.a.media.timePlayed, c.a.media.play | AppMeasurement 컨텍스트 데이터. |
@@ -58,10 +58,10 @@ ht-degree: 5%
 | media.mediaTimed.pauses.value | c.a.media.pauseCount | AppMeasurement 컨텍스트 데이터 `c.a.media.pauseCount` 매핑. |
 | media.mediaTimed.primaryAssetReference.@ID | c.a.media.asset | AppMeasurement 컨텍스트 데이터. |
 | media.mediaTimed.primaryAssetReference.dc:title | c.a.media.friendlyName | AppMeasurement 컨텍스트 데이터 `c.a.media.friendlyName` 매핑. |
-| media.mediaTimed.primaryAssetReference.iptc4xmpExt:Creator.[N].iptc4xmpExt:Name | c.a.media.originator | AppMeasurement 컨텍스트 데이터. |
+| media.mediaTimed.primaryAssetReference.iptc4xmpExt:Creator[N].iptc4xmpExt:Name | c.a.media.originator | AppMeasurement 컨텍스트 데이터. |
 | media.mediaTimed.primaryAssetReference.iptc4xmpExt:Episode.iptc4xmpExt:Number | c.a.media.episode | AppMeasurement 컨텍스트 데이터 `c.a.media.episode` 매핑. |
 | media.mediaTimed.primaryAssetReference.iptc4xmpExt:Genre | c.a.media.genre | AppMeasurement 컨텍스트 데이터. |
-| media.mediaTimed.primaryAssetReference.iptc4xmpExt:Rating.[N].iptc4xmpExt:RatingValue | c.a.media.rating | AppMeasurement 컨텍스트 데이터. |
+| media.mediaTimed.primaryAssetReference.iptc4xmpExt:Rating[N].iptc4xmpExt:RatingValue | c.a.media.rating | AppMeasurement 컨텍스트 데이터. |
 | media.mediaTimed.primaryAssetReference.iptc4xmpExt:Season.iptc4xmpExt:Number | c.a.media.season | AppMeasurement 컨텍스트 데이터 `c.a.media.season` 매핑. |
 | media.mediaTimed.primaryAssetReference.iptc4xmpExt:Series.iptc4xmpExt:Identifier | a.media.name | AppMeasurement 컨텍스트 데이터 `a.media.name` 매핑. |
 | media.mediaTimed.primaryAssetReference.iptc4xmpExt:Series.iptc4xmpExt:Name | c.a.media.show | AppMeasurement 컨텍스트 데이터 `c.a.media.show` 매핑. |
