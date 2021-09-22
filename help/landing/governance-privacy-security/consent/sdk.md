@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK를 사용하여 고객 동의 데이터
 topic-legacy: getting started
 description: Adobe Experience Platform Web SDK를 통합하여 Adobe Experience Platform에서 고객 동의 데이터를 처리하는 방법을 알아봅니다.
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
-source-git-commit: 1780e08a9e45fd87891bbb1727c464aadb0e9b31
+source-git-commit: 69e510c9a0f477ad7cab530128c6728f68dfdab1
 workflow-type: tm+mt
-source-wordcount: '1270'
+source-wordcount: '1330'
 ht-degree: 0%
 
 ---
@@ -97,6 +97,10 @@ SDK 확장이 설치되어 있으면 사용자에 대한 기본 데이터 수집
 ## 동의 변경 명령 {#commands}
 
 SDK 확장을 웹 사이트에 통합하면 Platform Web SDK `setConsent` 명령을 사용하여 동의 데이터를 Platform에 보낼 수 있습니다.
+
+>[!IMPORTANT]
+>
+>`setConsent` 명령은 프로필 저장소에서 직접 데이터만 업데이트하며 Data Lake로 데이터를 전송하지 않습니다.
 
 사이트에서 `setConsent`을 호출해야 하는 두 가지 시나리오가 있습니다.
 
@@ -194,6 +198,8 @@ var setConsent = function () {
 ## SDK 응답 처리
 
 모든 [!DNL Platform SDK] 명령은 호출 성공 또는 실패 여부를 나타내는 약속을 반환합니다. 그런 다음 이러한 응답을 사용하여 고객에게 확인 메시지 표시와 같은 추가 논리를 사용할 수 있습니다. 특정 예제에 대해서는 SDK 명령 실행 안내서의 [성공 또는 실패 처리](../../../edge/fundamentals/executing-commands.md#handling-success-or-failure)에 대한 섹션을 참조하십시오.
+
+SDK로 `setConsent` 호출을 성공적으로 수행한 후에는 플랫폼 UI의 프로필 뷰어를 사용하여 데이터가 프로필 저장소에 랜딩되는지 확인할 수 있습니다. 자세한 내용은 [ID로 프로필 검색](../../../profile/ui/user-guide.md#browse-identity)의 섹션을 참조하십시오.
 
 ## 다음 단계
 

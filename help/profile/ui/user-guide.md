@@ -4,7 +4,7 @@ title: 실시간 고객 프로필 UI 안내서
 topic-legacy: guide
 description: 실시간 고객 프로필은 각 개별 고객에 대한 전체적인 보기를 만들어 온라인, 오프라인, CRM 및 타사 데이터를 포함하여 여러 채널의 데이터를 결합합니다. 이 문서는 Adobe Experience Platform 사용자 인터페이스에서 실시간 고객 프로필과 상호 작용하는 안내서의 역할을 합니다.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: b5e6376b54fe8b53fbabf85a2909293cebd93ccc
+source-git-commit: 69e510c9a0f477ad7cab530128c6728f68dfdab1
 workflow-type: tm+mt
 source-wordcount: '1568'
 ht-degree: 0%
@@ -100,7 +100,7 @@ Experience Platform UI의 왼쪽 탐색 영역에서 **[!UICONTROL 프로필]**&
 플랫폼 내의 병합 정책 및 역할에 대한 자세한 내용은 [병합 정책 개요](../merge-policies/overview.md)를 참조하십시오.
 
 
-### [!UICONTROL Identity]로 찾아보기
+### [!UICONTROL Identity]로 찾아보기 {#browse-identity}
 
 **[!UICONTROL 찾아보기]** 탭에서 ID 네임스페이스를 사용하여 ID 값으로 특정 프로필을 조회할 수 있습니다. ID로 검색하려면 병합 정책, ID 네임스페이스 및 ID 값을 제공해야 합니다.
 
