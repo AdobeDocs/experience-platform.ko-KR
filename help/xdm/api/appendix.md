@@ -5,9 +5,9 @@ title: 스키마 레지스트리 API 안내서 부록
 description: 이 문서에서는 스키마 레지스트리 API 작업과 관련된 추가 정보를 제공합니다.
 topic-legacy: developer guide
 exl-id: 2ddc7fe8-dd0b-4cf9-8561-e89fcdadbfce
-source-git-commit: d70f297130ec04dd799d60c70b95777ee79bbfef
+source-git-commit: 403dcb75e43b5c7aa462495086e5a9e403ef6f5b
 workflow-type: tm+mt
-source-wordcount: '781'
+source-wordcount: '984'
 ht-degree: 1%
 
 ---
@@ -30,9 +30,9 @@ ht-degree: 1%
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `start` | 나열된 결과를 시작할 위치를 지정합니다. 이 값은 목록 응답의 `_page.next` 속성에서 가져와서 다음 결과 페이지에 액세스하는 데 사용할 수 있습니다. `_page.next` 값이 null이면 사용 가능한 추가 페이지가 없습니다. |
-| `limit` | 반환된 리소스 수를 제한합니다. 예:`limit=5`은 5개의 리소스 목록을 반환합니다. |
-| `orderby` | 특정 속성별로 결과를 정렬합니다. 예:`orderby=title`은(는) 제목별로 결과를 오름차순으로 정렬합니다(A-Z). 매개 변수 값(`orderby=-title`) 앞에 `-`을 추가하면 내림차순으로 제목을 기준으로 항목이 정렬됩니다(Z-A). |
+| `orderby` | 특정 속성별로 결과를 정렬합니다. 예: `orderby=title`은(는) 제목별로 결과를 오름차순으로 정렬합니다(A-Z). 매개 변수 값(`orderby=-title`) 앞에 `-`을 추가하면 내림차순으로 제목을 기준으로 항목이 정렬됩니다(Z-A). |
+| `limit` | `orderby` 매개 변수와 함께 사용하는 경우 `limit`은 지정된 요청에 대해 반환해야 하는 최대 항목 수를 제한합니다. 이 매개 변수는 `orderby` 매개 변수가 없으면 사용할 수 없습니다.<br><br>매개  `limit` 변수는 반환해야 하는 최대 항목 수 `0` 에 대한 정수로 양의 정수( `500`및  **  사이)를 지정합니다. 예를 들어 `limit=5` 은 목록에서 5개의 리소스만 반환합니다. 그러나 이 가치는 엄격히 존중되지는 않는다. 실제 응답 크기는 `start` 매개 변수가 제공되는 경우, 안정적인 작업을 제공할 필요가 있어 제한보다 작거나 더 클 수 있습니다. |
+| `start` | `orderby` 매개 변수와 함께 사용하는 경우 `start` 은 하위 설정 항목 목록이 시작되는 위치를 지정합니다. 이 매개 변수는 `orderby` 매개 변수가 없으면 사용할 수 없습니다. 이 값은 목록 응답의 `_page.next` 속성에서 가져와서 다음 결과 페이지에 액세스하는 데 사용할 수 있습니다. `_page.next` 값이 null이면 사용 가능한 추가 페이지가 없습니다.<br><br>일반적으로 이 매개 변수는 결과의 첫 번째 페이지를 가져오기 위해 생략됩니다. 그런 다음 `start`을 이전 페이지에서 받은 `orderby` 필드의 기본 정렬 속성의 최대값으로 설정해야 합니다. 그런 다음 API 응답이 기본 정렬 속성이 `orderby`보다 엄격한(오름차순) 또는 지정된 값보다 엄격한(내림차순) 작은 항목으로 시작하는 항목을 반환합니다.<br><br>예를 들어  `orderby` 매개 변수가  `orderby=name,firstname`로 설정되면  `start` 매개 변수에는 속성에 대한 값이  `name` 포함됩니다. 이 경우 &quot;Miller&quot;라는 이름 바로 뒤에 있는 리소스의 다음 20개 항목을 표시하려면 다음을 사용합니다. `?orderby=name,firstname&start=Miller&limit=20` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -78,48 +78,48 @@ ht-degree: 1%
   <td>
   <pre class=" language-json">
         {
-          "xdm:birthDate":{
-              "title":"생년월일",
-              "type":"string",
-              "format":"date",
+          "xdm:birthDate": {
+              "title": "생년월일",
+              "type": "string",
+              "format": "date",
           },
-          "xdm:birthDayAndMonth":{
-              "title":"생년월일",
-              "type":"string",
-              "pattern":"[0-1][0-9]-[0-9][0-9]",
+          "xdm:birthDayAndMonth": {
+              "title": "생년월일",
+              "type": "string",
+              "pattern": "[0-1][0-9]-[0-9][0-9]",
           },
-          "xdm:birthYear":{
-              "title":"출생 연도"
-              "type":"integer",
-              "minimum":1,
-              "maximum":32767
+          "xdm:birthYear": {
+              "title": "출생 연도"
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 32767
         }
   </pre>
   </td>
   <td>
   <pre class=" language-json">
         {
-          "firstDate":{
-              "title":"생년월일",
-              "type":"string",
-              "format":"date",
-              "meta:xdmField":"xdm:birthDate",
-              "meta:xdmType":"date"
+          "firstDate": {
+              "title": "생년월일",
+              "type": "string",
+              "format": "date",
+              "meta:xdmField": "xdm:birthDate",
+              "meta:xdmType": "date"
           },
-          "birthDayAndMonth":{
-              "title":"생년월일",
-              "type":"string",
-              "pattern":"[0-1][0-9]-[0-9][0-9]",
-              "meta:xdmField":"xdm:birthDayAndMonth",
-              "meta:xdmType":"string"
+          "birthDayAndMonth": {
+              "title": "생년월일",
+              "type": "string",
+              "pattern": "[0-1][0-9]-[0-9][0-9]",
+              "meta:xdmField": "xdm:birthDayAndMonth",
+              "meta:xdmType": "string"
           },
-          "birthYear":{
-              "title":"출생 연도"
-              "type":"integer",
-              "minimum":1,
-              "maximum":32767,
-              "meta:xdmField":"xdm:birthYear",
-              "meta:xdmType":"short"
+          "birthYear": {
+              "title": "출생 연도"
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 32767,
+              "meta:xdmField": "xdm:birthYear",
+              "meta:xdmType": "short"
         }
       </pre>
   </td>
