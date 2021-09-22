@@ -2,9 +2,9 @@
 description: 이 페이지에서는 대상 테스트에 사용할 샘플 프로필을 생성하기 위해 '/authoring/sample-profiles' API 종단점을 사용하여 수행할 수 있는 모든 API 작업을 나열하고 설명합니다.
 title: 샘플 프로필 생성 API 작업
 exl-id: 5f1cd00a-8eee-4454-bcae-07b05afa54af
-source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
+source-git-commit: 2ed132cd16db64b5921c5632445956f750fead56
 workflow-type: tm+mt
-source-wordcount: '805'
+source-wordcount: '833'
 ht-degree: 2%
 
 ---
@@ -28,6 +28,10 @@ Adobe XDM 소스 스키마 또는 대상에서 지원하는 대상 스키마를 
 계속하기 전에 필요한 대상 작성 권한 및 필수 헤더를 가져오는 방법을 포함하여 API를 성공적으로 호출하기 위해 알고 있어야 하는 중요한 정보가 필요하면 [시작 안내서](./getting-started.md)를 검토하십시오.
 
 ## 소스 스키마를 기반으로 샘플 프로필 생성 {#generate-sample-profiles-source-schema}
+
+>[!IMPORTANT]
+>
+>[대상](./test-destination.md)을 테스트할 때 여기에 생성된 샘플 프로필을 HTTP 호출에 추가합니다.
 
 `authoring/sample-profiles/` 종단점에 GET 요청을 하고 테스트할 대상 구성을 기반으로 만든 대상 인스턴스의 ID를 제공하여 소스 스키마를 기반으로 샘플 프로필을 생성할 수 있습니다.
 
@@ -176,6 +180,10 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 {style=&quot;table-layout:auto&quot;}
 
 ## 대상 스키마를 기반으로 샘플 프로필 생성 {#generate-sample-profiles-target-schema}
+
+>[!IMPORTANT]
+>
+>템플릿을 작성할 때 여기서 생성한 샘플 프로필을 [렌더링 템플릿 단계에서 사용합니다](./render-template-api.md#multiple-profiles-with-body).
 
 대상 스키마를 기반으로 하여 샘플 프로필을 생성하여 `authoring/sample-profiles/` 종단점에 GET을 요청하고 템플릿을 만드는 데 따라 대상 구성의 대상 ID를 제공할 수 있습니다.
 

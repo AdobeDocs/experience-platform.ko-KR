@@ -1,9 +1,10 @@
 ---
 description: 대상 SDK의 일부로, Adobe은 대상을 구성하고 테스트하는 데 도움이 되는 개발자 도구를 제공합니다. 이 페이지에서는 메시지 변환 템플릿을 만들고 테스트하는 방법을 설명합니다.
 title: 메시지 변환 템플릿 만들기 및 테스트
-source-git-commit: cf6c6adf128ec867cd67af609a40b04d2c632bf9
+exl-id: 15e7f436-4d33-4172-bd14-ad8dfbd5e4a8
+source-git-commit: 2ed132cd16db64b5921c5632445956f750fead56
 workflow-type: tm+mt
-source-wordcount: '895'
+source-wordcount: '909'
 ht-degree: 0%
 
 ---
@@ -68,7 +69,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
-제공한 대상 ID가 `maxUsersPerRequest=1`이 있는 대상 서버 템플릿에 해당하는 경우 요청은 이 템플릿과 유사한 샘플 템플릿을 반환합니다.
+제공하는 대상 ID가 집계 정책에서 [최상의 작업 집계](./destination-configuration.md#best-effort-aggregation) 및 `maxUsersPerRequest=1`를 사용하는 대상 구성에 해당하는 경우 요청은 이 설정과 유사한 샘플 템플릿을 반환합니다.
 
 ```python
 {#- THIS is an example template for a single profile -#}
@@ -101,7 +102,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 }
 ```
 
-제공한 대상 ID가 `maxUsersPerRequest` 보다 큰 대상 서버 템플릿에 해당하는 경우 요청은 이 템플릿과 유사한 샘플 템플릿을 반환합니다.
+제공하는 대상 ID가 [구성 가능한 집계](./destination-configuration.md#configurable-aggregation) 또는 [가장 많은 작업 집계](./destination-configuration.md#best-effort-aggregation)가 있는 대상 서버 템플릿에 해당하는 경우 요청은 이 템플릿과 유사한 샘플 템플릿을 반환합니다.`maxUsersPerRequest`
 
 ```python
 {#- THIS is an example template for multiple profiles -#}

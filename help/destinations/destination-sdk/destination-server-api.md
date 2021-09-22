@@ -2,10 +2,10 @@
 description: 이 페이지에서는 '/authoring/destination-server' API 종단점을 사용하여 수행할 수 있는 모든 API 작업을 나열하고 설명합니다. 대상에 대한 서버 및 템플릿 사양은 일반적인 끝점 '/authoring/destination-servers'를 통해 Adobe Experience Platform 대상 SDK에 구성할 수 있습니다.
 title: 대상 서버 끝점 API 작업
 exl-id: a144b0fb-d34f-42d1-912b-8576296e59d2
-source-git-commit: 3ab19995d9520c35701912087158bf63755c55c8
+source-git-commit: 2ed132cd16db64b5921c5632445956f750fead56
 workflow-type: tm+mt
-source-wordcount: '837'
-ht-degree: 4%
+source-wordcount: '845'
+ht-degree: 5%
 
 ---
 
@@ -66,14 +66,14 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 | 매개 변수 | 유형 | 설명 |
 | -------- | ----------- | ----------- |
-| `name` | 문자열 | Adobe에만 표시되는 서버의 친숙한 이름을 나타냅니다. 파트너 또는 고객은 이 이름을 볼 수 없습니다. 예 `Moviestar destination server`. |
-| `destinationServerType` | 문자열 | `URL_BASED` 은 현재 사용 가능한 유일한 옵션입니다. |
-| `urlBasedDestination.url.templatingStrategy` | 문자열 | <ul><li>Adobe이 아래 `value` 필드에서 URL을 변환해야 하는 경우 `PEBBLE_V1` 을 사용합니다. 다음과 같은 종단점이 있는 경우 이 옵션을 사용합니다. `https://api.moviestar.com/data/{{customerData.region}}/items` </li><li> Adobe 측에 변환이 필요하지 않으면 `NONE` 을 사용하십시오. 예를 들어 다음과 같은 종단점이 있습니다. `https://api.moviestar.com/data/items`.</li></ul> |
-| `urlBasedDestination.url.value` | 문자열 | Experience Platform이 연결해야 하는 API 엔드포인트의 주소를 입력합니다. |
-| `httpTemplate.httpMethod` | 문자열 | Adobe이 서버 호출에 사용할 메서드입니다. 옵션은 `GET`, `PUT`, `POST`, `DELETE`, `PATCH`입니다. |
-| `httpTemplate.requestBody.templatingStrategy` | 문자열 |  `PEBBLE_V1`. |
-| `httpTemplate.requestBody.value` | 문자열 | 이 문자열은 Platform 고객의 데이터를 서비스에 필요한 형식으로 변환하는 문자 이스케이프 처리 버전입니다. <br> <ul><li> 템플릿을 작성하는 방법에 대한 자세한 내용은 [템플릿 사용 섹션](./message-format.md#using-templating)을 참조하십시오. </li><li> 문자 이스케이프에 대한 자세한 내용은 [RFC JSON 표준, 7](https://tools.ietf.org/html/rfc8259#section-7) 섹션을 참조하십시오. </li><li> 단순 변환의 예는 [프로필 속성](./message-format.md#attributes) 변형을 참조하십시오. </li></ul> |
-| `httpTemplate.contentType` | 문자열 | 서버가 허용하는 컨텐츠 유형입니다. 이 값은 `application/json`일 가능성이 높습니다. |
+| `name` | 문자열 | *필수 여부.* Adobe에만 표시되는 서버의 친숙한 이름을 나타냅니다. 파트너 또는 고객은 이 이름을 볼 수 없습니다. 예 `Moviestar destination server`. |
+| `destinationServerType` | 문자열 | *필수 여부.* `URL_BASED` 은 현재 사용 가능한 유일한 옵션입니다. |
+| `urlBasedDestination.url.templatingStrategy` | 문자열 | *필수 여부.* <ul><li>Adobe이 아래 `value` 필드에서 URL을 변환해야 하는 경우 `PEBBLE_V1` 을 사용합니다. 다음과 같은 종단점이 있는 경우 이 옵션을 사용합니다. `https://api.moviestar.com/data/{{customerData.region}}/items` </li><li> Adobe 측에 변환이 필요하지 않으면 `NONE` 을 사용하십시오. 예를 들어 다음과 같은 종단점이 있습니다. `https://api.moviestar.com/data/items`.</li></ul> |
+| `urlBasedDestination.url.value` | 문자열 | *필수 여부.* Experience Platform이 연결해야 하는 API 엔드포인트의 주소를 입력합니다. |
+| `httpTemplate.httpMethod` | 문자열 | *필수 여부.* Adobe이 서버 호출에 사용할 메서드입니다. 옵션은 `GET`, `PUT`, `POST`, `DELETE`, `PATCH`입니다. |
+| `httpTemplate.requestBody.templatingStrategy` | 문자열 | *필수 여부.*  `PEBBLE_V1`. |
+| `httpTemplate.requestBody.value` | 문자열 | *필수 여부.* 이 문자열은 Platform 고객의 데이터를 서비스에 필요한 형식으로 변환하는 문자 이스케이프 처리 버전입니다.  <br> <ul><li> 템플릿을 작성하는 방법에 대한 자세한 내용은 [템플릿 사용 섹션](./message-format.md#using-templating)을 참조하십시오. </li><li> 문자 이스케이프에 대한 자세한 내용은 [RFC JSON 표준, 7](https://tools.ietf.org/html/rfc8259#section-7) 섹션을 참조하십시오. </li><li> 단순 변환의 예는 [프로필 속성](./message-format.md#attributes) 변형을 참조하십시오. </li></ul> |
+| `httpTemplate.contentType` | 문자열 | *필수 여부.* 서버가 허용하는 컨텐츠 유형입니다. 이 값은 `application/json`일 가능성이 높습니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
