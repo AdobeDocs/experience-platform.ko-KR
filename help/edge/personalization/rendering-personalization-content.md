@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK를 사용하여 개인화된 컨텐츠 
 description: Adobe Experience Platform Web SDK를 사용하여 개인화된 컨텐츠를 렌더링하는 방법을 알아봅니다.
 keywords: 개인화;renderDecisions;sendEvent;decisions;proposition;
 exl-id: 6a3252ca-cdec-48a0-a001-2944ad635805
-source-git-commit: 5ae7488e715ff97d2b667c40505b79433eb74f49
+source-git-commit: 0246de5810c632134288347ac7b35abddf2d4308
 workflow-type: tm+mt
-source-wordcount: '693'
+source-wordcount: '701'
 ht-degree: 1%
 
 ---
@@ -45,7 +45,7 @@ alloy("sendEvent", {
     xdm: {}
   }).then(function(result) {
     if (result.propositions) {
-      // Manually render propositions
+      // Manually render propositions and send "display" event
     }
   });
 ```
@@ -71,6 +71,9 @@ alloy("sendEvent", {
         "meta": {}
       }
     ],
+    "scopeDetails": {
+      ...
+    },
     "renderAttempted": false
   },
   {
@@ -88,6 +91,9 @@ alloy("sendEvent", {
         "meta": {}
       }
     ],
+    "scopeDetails": {
+      ...
+    },
     "renderAttempted": false
   }
 ]
@@ -107,7 +113,7 @@ alloy("sendEvent", {
     decisionScopes: ['salutation', 'discount']
   }).then(function(result) {
     if (result.propositions) {
-      // Manually render propositions
+      // Manually render propositions and send "display" event
     }
   });
 ```
@@ -131,6 +137,12 @@ alloy("sendEvent", {
         "meta": {}
       }
     ],
+    "scopeDetails": {
+      "id": "AT:cZJhY3Rpdml0eUlkIjoiMTI3MDE5IiwiZXhwZXJpZW5jZUlkIjoiMCJ2",
+      "activity": {
+        "id": "384456"
+      }
+    },  
     "renderAttempted": false
   },
   {
@@ -147,6 +159,12 @@ alloy("sendEvent", {
         "meta": {}
       }
     ],
+    "scopeDetails": {
+      "id": "AT:FZJhY3Rpdml0eUlkIjoiMTI3MDE5IiwiZXhwZXJpZW5jZUlkIjoiMCJ0",
+      "activity": {
+        "id": "384457"
+      }
+    },
     "renderAttempted": false
   },
   {
@@ -164,6 +182,12 @@ alloy("sendEvent", {
         "meta": {}
       }
     ],
+    "scopeDetails": {
+      "id": "AT:PyJhY3Rpdml0eUlkIjoiMTI3MDE5IiwiZXhwZXJpZW5jZUlkIjoiMCJ8",
+      "activity": {
+        "id": "384459"
+      }
+    },
     "renderAttempted": false
   },
   {
@@ -181,6 +205,12 @@ alloy("sendEvent", {
         "meta": {}
       }
     ],
+    "scopeDetails": {
+      "id": "AT:PyJhY3Rpdml0eUlkIjoiMTI3MDE5IiwiZXhwZXJpZW5jZUlkIjoiMCJ8",
+      "activity": {
+        "id": "384459"
+      }
+    },
     "renderAttempted": false
   }
 ]
@@ -192,6 +222,7 @@ alloy("sendEvent", {
 1. 각 제안을 반복하고 `discount` 범위가 있는 제안을 찾습니다.
 1. 제안을 찾으면 제안에 있는 각 항목을 반복하며 HTML 콘텐츠인 항목을 찾습니다. (가정하는 것보다 확인하는 것이 낫다.)
 1. HTML 콘텐츠가 들어 있는 항목을 찾으면 페이지에서 `daily-special` 요소를 찾아 해당 HTML을 개인화된 콘텐츠로 바꾸십시오.
+1. 컨텐츠가 렌더링되면 `display` 이벤트를 보냅니다.
 
 코드는 다음과 같습니다.
 
@@ -224,15 +255,31 @@ alloy("sendEvent", {
       var discountPropositionItem = discountProposition.items[i];
       if (discountPropositionItem.schema === "https://ns.adobe.com/personalization/html-content-item") {
         discountHtml = discountPropositionItem.data.content;
-        break;
+        // Render the content
+        var dailySpecialElement = document.getElementById("daily-special");
+        dailySpecialElement.innerHTML = discountHtml;
+        
+        // For this example, we assume there is only a signle place to update in the HTML.
+        break;  
       }
     }
-  }
-
-  if (discountHtml) {
-    // Discount HTML exists. Time to render it.
-    var dailySpecialElement = document.getElementById("daily-special");
-    dailySpecialElement.innerHTML = discountHtml;
+      // Send a "display" event 
+    alloy("sendEvent", {
+      xdm: {
+        eventType: "display",
+        _experience: {
+          decisioning: {
+            propositions: [
+              {
+                id: discountProposition.id,
+                scope: discountProposition.scope,
+                scopeDetails: discountProposition.scopeDetails
+              }
+            ]
+          }
+        }
+      }
+    });
   }
 });
 ```
