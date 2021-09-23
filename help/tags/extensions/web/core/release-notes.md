@@ -2,10 +2,10 @@
 title: 코어 확장에 대한 릴리스 노트
 description: Adobe Experience Platform의 코어 확장에 대한 최신 릴리스 노트입니다.
 exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
-source-git-commit: 29a238c517b6bd5a95284b4d6954fd14a1668f0e
+source-git-commit: 693da9aa012baa26dcff93f085dd6e763816e247
 workflow-type: tm+mt
-source-wordcount: '1434'
-ht-degree: 62%
+source-wordcount: '1522'
+ht-degree: 59%
 
 ---
 
@@ -14,6 +14,22 @@ ht-degree: 62%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
+
+## 2021년 9월 23일
+
+v3.2.1
+
+* 필드 값이 0일 때 조건부 값 데이터 요소 보기 초기화가 제대로 작동하지 않는 오류를 수정했습니다.
+
+## 2021년 9월 23일
+
+v3.2.0
+
+조건부 값 데이터 요소에 다음과 같은 변경 사항이 도입되었습니다.
+
+* 정의되지 않은 값이 반환되는 값이 되도록 선택할 수 있는 조건부 값과 대체 값에 대한 확인란을 추가합니다.
+* 숫자 값은 설정 개체에 숫자로 표시됩니다.
+* 대체 값과 동일한 방식으로 작동할 수 있도록 조건부 값은 더 이상 필요하지 않습니다.
 
 ## 2021년 9월 17일
 
