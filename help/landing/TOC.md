@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Adobe Experience Platform 개요
 breadcrumb-title: Experience Platform 개요
 user-guide-description: Experience Platform을 통해 개인화된 경험을 실시간으로 고객에게 전달하는 방법을 살펴볼 수 있습니다.
-source-git-commit: a154ff9dd2a2091a427f7e650a9cb6bc57cbdfb5
+source-git-commit: a0954c6134c532fbcecadd8b4b8775fdf28711da
 workflow-type: tm+mt
-source-wordcount: '197'
-ht-degree: 23%
+source-wordcount: '205'
+ht-degree: 22%
 
 ---
 
@@ -15,6 +15,7 @@ ht-degree: 23%
 
 * [플랫폼 개요](home.md)
 * [플랫폼 개요(비디오)](video/platform-overview.md)
+* [플랫폼 자습서](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
 * [플랫폼 기반의 고객 경험(비디오)](video/customer-experience.md)
 * [플랫폼(비디오)에서 제공하는 고객 경험의 배경](video/customer-experience-bts.md)
 * 시작하기 {#getting-started}
