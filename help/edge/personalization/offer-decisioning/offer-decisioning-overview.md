@@ -3,9 +3,9 @@ title: Platform Web SDK에서 Offer decisioning 사용
 description: Adobe Experience Platform Web SDK는 Offer decisioning에서 관리되는 개인화된 오퍼를 제공하고 렌더링할 수 있습니다. offer decisioning UI 또는 API를 사용하여 오퍼 및 기타 관련 개체를 만들 수 있습니다.
 keywords: offer decisioning;의사 결정;웹 SDK;Platform Web SDK;개인화된 오퍼;오퍼 게재;오퍼 게재;오퍼 개인화;
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 5a688fed26a8f641347ed1c625bfe448004f75b0
 workflow-type: tm+mt
-source-wordcount: '779'
+source-wordcount: '826'
 ht-degree: 3%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->Adobe Experience Platform Web SDK에서 Offer decisioning을 사용하면 현재 사용자를 선택하기 위해 일찍 액세스할 수 있습니다. 모든 IMS 조직에서는 이 기능을 사용할 수 없습니다.
+>Adobe Experience Platform Web SDK에서 Offer decisioning을 사용하면 사용자를 선택하기 위해 일찍 액세스할 수 있습니다. 모든 IMS 조직에서는 이 기능을 사용할 수 없습니다.
 
 Adobe Experience Platform [!DNL Web SDK]은 Offer decisioning에서 관리되는 개인화된 오퍼를 제공하고 렌더링할 수 있습니다. UI(Offer decisioning 사용자 인터페이스) 또는 API를 사용하여 오퍼 및 기타 관련 개체를 만들 수 있습니다.
 
@@ -30,7 +30,7 @@ offer decisioning 작업 시 다음 용어를 이해하는 것이 중요합니�
 
 * **컨테이너:** 컨테이너는 서로 다른 문제를 구분하기 위한 격리 메커니즘입니다. 컨테이너 ID는 모든 저장소 API의 첫 번째 경로 요소입니다. 모든 의사 결정 개체는 컨테이너 내에 있습니다.
 
-* **결정 범위:** Offer decisioning의 경우, offer decisioning 서비스에서 오퍼를 제안하는 데 사용할 활동 및 배치 ID가 포함된 JSON의 Base64 인코딩 문자열입니다.
+* **결정 범위:** Offer decisioning의 경우, 결정 범위는 offer decisioning 서비스가 오퍼를 제안하는 데 사용할 활동 및 배치 ID가 포함된 JSON의 Base64 인코딩 문자열입니다.
 
    *결정 범위 JSON:*
 
@@ -55,11 +55,11 @@ offer decisioning 작업 시 다음 용어를 이해하는 것이 중요합니�
 
 * **데이터 스트림:** 자세한 내용은 데이터  [](../../fundamentals/datastreams.md) 세트 설명서 를 참조하십시오.
 
-* **ID**: 자세한 내용은  [Platform Web SDK에서 ID 서비스를 활용하는 방법에 대한 개요를 제공하는 이 설명서를 참조하십시오](../../identity/overview.md).
+* **ID**: 자세한 내용은 Platform  [Web SDK에서 ID 서비스를 사용하는 방법에 대한 개요를 제공하는 이 설명서를 참조하십시오](../../identity/overview.md).
 
 ## offer decisioning 활성화
 
-offer decisioning을 활성화하려면 다음 단계를 수행해야 합니다.
+offer decisioning을 활성화하려면 다음 단계를 수행하십시오.
 
 1. [데이터 스트림](../../fundamentals/datastreams.md)에서 Adobe Experience Platform을 활성화하고 &quot;Offer decisioning&quot; 상자를 선택합니다
 
@@ -85,7 +85,7 @@ offer decisioning을 활성화하려면 다음 단계를 수행해야 합니다.
 
       1. [태그 속성 만들기](../../../tags/ui/administration/companies-and-properties.md)
       1. [포함 코드 추가](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
-      1. &quot;데이터 스트림&quot; 드롭다운에서 구성을 선택하여 방금 만든 데이터 스트림으로 Platform Web SDK 확장을 설치하고 구성합니다. [확장](../../../tags/ui/managing-resources/extensions/overview.md)에 대한 설명서를 참조하십시오.
+      1. &quot;데이터 스트림&quot; 드롭다운에서 구성을 선택하여 생성한 데이터 스트림으로 Platform Web SDK 확장을 설치하고 구성합니다. [확장](../../../tags/ui/managing-resources/extensions/overview.md)에 대한 설명서를 참조하십시오.
 
          ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
 
@@ -329,3 +329,7 @@ offer decisioning을 활성화하려면 다음 단계를 수행해야 합니다.
 | `content` | 문자열 형식의 제안된 오퍼와 연관된 컨텐츠. | `"content": "<p style="color:red;">20% Off on shipping</p>"` |
 | `deliveryUrl` | URL 형식으로 제안된 오퍼와 연결된 이미지 컨텐츠. | `"deliveryURL": "https://image.jpeg"` |
 | `characteristics` | JSON 개체 형식의 제안된 오퍼와 연관된 특성입니다. | `"characteristics": { "foo": "bar", "foo1": "bar1" }` |
+
+## 제한 사항
+
+일부 오퍼 제한 사항은 현재 모바일 Experience Edge 워크플로우에서 지원되지 않습니다(예: 최대 가용량). 최대 가용량 필드 값은 모든 사용자에게 오퍼를 제공할 수 있는 횟수를 지정합니다. 자세한 내용은 [오퍼 자격 규칙 및 제한 설명서](https://experienceleague.adobe.com/docs/offer-decisioning/using/managing-offers-in-the-offer-library/creating-personalized-offers.html#eligibility)를 참조하십시오.
