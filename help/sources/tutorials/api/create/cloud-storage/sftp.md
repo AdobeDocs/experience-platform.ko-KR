@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Flow Service API를 사용하여 SFTP(Secure File Transfer Protocol) 서버에 Adobe Experience Platform을 연결하는 방법을 알아봅니다.
 exl-id: b965b4bf-0b55-43df-bb79-c89609a9a488
-source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
+source-git-commit: 9ad09fba3119b631576f22574a2151c74f91e07b
 workflow-type: tm+mt
-source-wordcount: '794'
+source-wordcount: '809'
 ht-degree: 1%
 
 ---
@@ -39,6 +39,7 @@ ht-degree: 1%
 | 자격 증명 | 설명 |
 | ---------- | ----------- |
 | `host` | [!DNL SFTP] 서버와 연결된 이름 또는 IP 주소입니다. |
+| `port` | 연결하는 SFTP 서버 포트입니다. 지정하지 않으면 기본값은 `22`입니다. |
 | `username` | [!DNL SFTP] 서버에 액세스할 수 있는 사용자 이름입니다. |
 | `password` | [!DNL SFTP] 서버의 암호입니다. |
 | `privateKeyContent` | Base64로 인코딩된 SSH 개인 키 콘텐츠입니다. OpenSSH 키 유형은 RSA 또는 DSA로 분류해야 합니다. |
@@ -55,7 +56,7 @@ ht-degree: 1%
 
 기본 연결 ID를 만들려면 요청 매개 변수의 일부로 [!DNL SFTP] 인증 자격 증명을 제공하는 동안 `/connections` 끝점에 POST 요청을 하십시오.
 
-### 기본 인증을 사용하여 [!DNL SFTP] 연결 만들기
+### 기본 인증을 사용하여 [!DNL SFTP] 기본 연결 만들기
 
 기본 인증을 사용하여 [!DNL SFTP] 기본 연결을 만들려면 연결의 `host`, `userName` 및 `password` 값을 제공하는 동안 [!DNL Flow Service] API에 POST 요청을 수행하십시오.
 
@@ -113,7 +114,7 @@ curl -X POST \
 }
 ```
 
-### SSH 공개 키 인증을 사용하여 [!DNL SFTP] 연결을 만듭니다
+### SSH 공개 키 인증을 사용하여 [!DNL SFTP] 기본 연결을 만듭니다
 
 SSH 공개 키 인증을 사용하여 [!DNL SFTP] 기본 연결을 만들려면 연결의 `host`, `userName`, `privateKeyContent` 및 `passPhrase`에 대한 값을 제공하는 동안 [!DNL Flow Service] API에 POST 요청을 수행하십시오.
 
