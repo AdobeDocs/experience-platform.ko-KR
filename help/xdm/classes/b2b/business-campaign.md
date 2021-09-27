@@ -1,18 +1,18 @@
 ---
 title: XDM 비즈니스 캠페인 클래스
 description: 이 문서에서는 XDM(Experience Data Model)의 XDM 비즈니스 캠페인 클래스에 대한 개요를 제공합니다.
-source-git-commit: 5fd82b02eb25f3d575de695c2f2b14a5e5b18400
+source-git-commit: d83ad2870b6099d3c6359dcc7cd000ecad8a238f
 workflow-type: tm+mt
-source-wordcount: '181'
+source-wordcount: '191'
 ht-degree: 3%
 
 ---
 
-# [!UICONTROL XDM 비즈니스 ] 캠페인 클래스
+# [!UICONTROL XDM 비즈니스 ] 캠페인 클래스(베타)
 
->[!NOTE]
+>[!IMPORTANT]
 >
->이 클래스는 실시간 고객 데이터 플랫폼 B2B 버전에 액세스할 수 있는 조직에서만 사용할 수 있습니다.
+>이 클래스는 현재 베타에 있는 실시간 고객 데이터 플랫폼 B2B 에디션의 일부로 사용할 수 있습니다. 설명서 및 기능은 변경될 수 있습니다.
 
 [!UICONTROL XDM 비즈니스 ] 캠페인은 비즈니스 캠페인의 최소 필수 속성을 캡처하는 표준 XDM(Experience Data Model) 클래스입니다.
 

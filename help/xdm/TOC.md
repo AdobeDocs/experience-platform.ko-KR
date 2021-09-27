@@ -4,9 +4,9 @@ user-guide-title: XDM(경험 데이터 모델) 시스템 도움말
 breadcrumb-title: Experience Data Model(XDM) 안내서
 user-guide-description: XDM(경험 데이터 모델) 클래스 및 스키마 필드 그룹을 사용하여 경험 데이터를 표준화합니다.
 feature: Schemas
-source-git-commit: 50ca41ac5adba60e4abb484c8689372d0de77571
+source-git-commit: d83ad2870b6099d3c6359dcc7cd000ecad8a238f
 workflow-type: tm+mt
-source-wordcount: '383'
+source-wordcount: '391'
 ht-degree: 14%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 14%
    * [XDM 개별 프로필](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
    * [세그먼트 정의](./classes/segment-definition.md)
-   * B2B 클래스 {#b2b}
+   * B2B 클래스(베타) {#b2b}
       * [XDM 비즈니스 계정](./classes/b2b/business-account.md)
       * [XDM 비즈니스 계정 담당자 관계](./classes/b2b/business-account-person-relation.md)
       * [XDM 비즈니스 캠페인](./classes/b2b/business-campaign.md)
@@ -145,11 +145,11 @@ ht-degree: 14%
    * [Mixin(사용되지 않음)](api/mixins.md)
    * [부록](api/appendix.md)
 * 튜토리얼 {#tutorials}
-   * [스키마 만들기(UI)](tutorials/create-schema-ui.md)
-   * [스키마(API) 만들기](tutorials/create-schema-api.md)
-   * [두 스키마(UI) 간의 관계 정의](tutorials/relationship-ui.md)
-   * [두 스키마(API) 간의 관계를 정의합니다](tutorials/relationship-api.md)
-   * [두 스키마(B2B) 간의 관계 정의](tutorials/relationship-b2b.md)
+   * [UI에서 스키마 만들기](tutorials/create-schema-ui.md)
+   * [API에서 스키마 만들기](tutorials/create-schema-api.md)
+   * [UI에서 스키마 관계 정의](tutorials/relationship-ui.md)
+   * [API에서 스키마 관계 정의](tutorials/relationship-api.md)
+   * [실시간 CDP B2B Edition(베타)에서 스키마 관계 정의](tutorials/relationship-b2b.md)
    * [임시 스키마(API) 만들기](tutorials/ad-hoc.md)
 * [문제 해결 안내서](troubleshooting-guide.md)
 * [API 참조](https://www.adobe.io/experience-platform-apis/references/schema-registry/)

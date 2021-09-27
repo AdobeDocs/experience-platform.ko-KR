@@ -1,14 +1,18 @@
 ---
 title: 실시간 고객 데이터 플랫폼 B2B 에디션의 스키마
 description: 실시간 고객 데이터 플랫폼 B2B 에디션에서 XDM(Experience Data Model) 스키마의 역할에 대한 개요입니다.
-source-git-commit: a8c322cfe02c7a005275ec33e5dac92d2f76667a
+source-git-commit: d83ad2870b6099d3c6359dcc7cd000ecad8a238f
 workflow-type: tm+mt
-source-wordcount: '198'
+source-wordcount: '218'
 ht-degree: 0%
 
 ---
 
-# 실시간 고객 데이터 플랫폼 B2B 에디션의 스키마
+# 실시간 고객 데이터 플랫폼 B2B 에디션(베타)의 스키마
+
+>[!IMPORTANT]
+>
+>실시간 고객 데이터 플랫폼 B2B Edition은 현재 베타 버전입니다. 설명서 및 기능은 변경될 수 있습니다.
 
 실시간 고객 데이터 플랫폼 B2B Edition은 계정, 기회, 캠페인 등과 같은 필수 B2B 데이터 엔티티에 대한 세부 사항을 캡처하는 몇 가지 표준 [XDM(Experience Data Model) 클래스](../../xdm/schema/composition.md#class)를 제공합니다. 또한 실시간 CDP B2B Edition을 사용하면 이러한 스키마 간에 다대다 관계를 정의하여 고급 세그멘테이션 사용 사례에 참여할 수 있습니다.
 
