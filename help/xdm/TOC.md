@@ -4,10 +4,10 @@ user-guide-title: XDM(경험 데이터 모델) 시스템 도움말
 breadcrumb-title: Experience Data Model(XDM) 안내서
 user-guide-description: XDM(경험 데이터 모델) 클래스 및 스키마 필드 그룹을 사용하여 경험 데이터를 표준화합니다.
 feature: Schemas
-source-git-commit: 295dc040f3af7342226e3d78d0ae21e73db58d57
+source-git-commit: cf0f0a46cc337d21c47a9b3a2fc12f8a7a6cb828
 workflow-type: tm+mt
-source-wordcount: '324'
-ht-degree: 16%
+source-wordcount: '375'
+ht-degree: 14%
 
 ---
 
@@ -31,6 +31,15 @@ ht-degree: 16%
    * [XDM 개별 프로필](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
    * [세그먼트 정의](./classes/segment-definition.md)
+   * B2B 클래스 {#b2b}
+      * [XDM 비즈니스 계정](./classes/b2b/business-account.md)
+      * [XDM 비즈니스 계정 담당자 관계](./classes/b2b/business-account-person-relation.md)
+      * [XDM 비즈니스 캠페인](./classes/b2b/business-campaign.md)
+      * [XDM 비즈니스 캠페인 구성원](./classes/b2b/business-campaign-members.md)
+      * [XDM 비즈니스 기회](./classes/b2b/business-opportunity.md)
+      * [XDM 비즈니스 기회 개인 관계](./classes/b2b/business-opportunity-person-relation.md)
+      * [XDM 비즈니스 마케팅 목록](./classes/b2b/business-marketing-list.md)
+      * [XDM 비즈니스 마케팅 목록 구성원](./classes/b2b/business-marketing-list-members.md)
 * 스키마 필드 그룹 {#field-groups}
    * 프로필 필드 그룹 {#profile}
       * [인구 통계 세부 정보](./field-groups/profile/demographic-details.md)
@@ -42,6 +51,8 @@ ht-degree: 16%
       * [세그먼트 멤버십 세부 정보](./field-groups/profile/segmentation.md)
       * [통신 구독](./field-groups/profile/telecom-subscription.md)
       * [작업 연락처 세부 정보](./field-groups/profile/work-contact-details.md)
+      * [XDM 비즈니스 개인 구성 요소](./field-groups/profile/business-person-components.md)
+      * [XDM 비즈니스 개인 세부 정보](./field-groups/profile/business-person-details.md)
    * 이벤트 필드 그룹 {#event}
       * [캠페인 마케팅 세부 사항](./field-groups/event/campaign-marketing-details.md)
       * [채널 세부 사항](./field-groups/event/channel-details.md)
@@ -60,6 +71,7 @@ ht-degree: 16%
    * [애플리케이션](./data-types/application.md)
    * [비콘](./data-types/beacon.md)
    * [브라우저 세부 사항](./data-types/browser-details.md)
+   * [B2B 소스](./data-types/b2b-source.md)
    * [Commerce](./data-types/commerce.md)
    * [동의 문자열](./data-types/consent-string.md)
    * [동의 및 기본 설정](./data-types/consents.md)
@@ -68,6 +80,7 @@ ht-degree: 16%
    * [이메일 주소](./data-types/email-address.md)
    * [환경](./data-types/environment.md)
    * [경험 채널](./data-types/experience-channel.md)
+   * [외부 소스 시스템 감사 속성](./data-types/external-source-system-audit-attributes.md)
    * [일반 동의 필드](./data-types/consent-field.md)
    * [일반 마케팅 기본 설정 필드](./data-types/marketing-field.md)
    * [구독이 있는 일반 마케팅 기본 설정 필드](./data-types/marketing-field-subscriptions.md)
