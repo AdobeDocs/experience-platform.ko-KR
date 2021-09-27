@@ -6,14 +6,18 @@ description: 이 문서에서는 Experience Platform 사용자 인터페이스�
 topic-legacy: tutorial
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
-source-git-commit: 497a515a872efdeeda270d0aa90b1fc99898ad4d
+source-git-commit: 2118dc175b421e856c6b0a33a83a7238f01b7ee3
 workflow-type: tm+mt
-source-wordcount: '1000'
+source-wordcount: '1020'
 ht-degree: 0%
 
 ---
 
 # [!DNL Schema Editor] 을 사용하여 두 스키마 간의 관계를 정의합니다.
+
+>[!NOTE]
+>
+>실시간 고객 데이터 플랫폼 B2B 버전을 사용 중인 경우 [B2B 관계 만들기](./relationship-b2b.md)에 대한 안내서를 참조하십시오.
 
 다양한 채널에서 고객과의 관계와 브랜드와의 상호 작용을 파악하는 기능은 Adobe Experience Platform의 중요한 부분입니다. XDM([!DNL Experience Data Model]) 스키마 구조 내에서 이러한 관계를 정의하면 고객 데이터에 대한 복잡한 통찰력을 얻을 수 있습니다.
 
