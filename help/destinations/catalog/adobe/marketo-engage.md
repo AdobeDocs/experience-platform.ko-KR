@@ -2,9 +2,9 @@
 title: Marketo Engage 대상
 description: Marketo Engage은 마케팅, 광고, 분석 및 상거래를 위한 유일한 CXM(엔드 투 엔드 고객 경험 관리) 솔루션입니다. CRM 리드 관리 및 고객 참여에서 계정 기반 마케팅 및 매출 기여도에 이르는 활동을 자동화하고 관리할 수 있습니다.
 exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
-source-git-commit: 1f18e07af7ef0d90f882fa668c5659330bce5960
+source-git-commit: 6ea82e0589843f15b1486e1242aa68ef8e2fe9d3
 workflow-type: tm+mt
-source-wordcount: '307'
+source-wordcount: '303'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 Marketo Engage은 마케팅, 광고, 분석 및 상거래를 위한 유일한 CXM(엔드 투 엔드 고객 경험 관리) 솔루션입니다. CRM 리드 관리 및 고객 참여에서 계정 기반 마케팅 및 매출 기여도에 이르는 활동을 자동화하고 관리할 수 있습니다.
 
-세그먼트 커넥터를 사용하면 마케터가 Adobe Experience Platform에서 만든 세그먼트를 정적 목록으로 표시되는 Marketo에 푸시할 수 있습니다.
+대상을 사용하면 마케터가 Adobe Experience Platform에서 만든 세그먼트를 정적 목록으로 표시할 Marketo에 푸시할 수 있습니다.
 
 ## 지원되는 ID {#supported-identities}
 
@@ -30,7 +30,7 @@ Marketo Engage은 마케팅, 광고, 분석 및 상거래를 위한 유일한 CX
 
 ## 내보내기 유형 {#export-type}
 
-세그먼트 내보내기 - Marketo Engage 대상에 사용되는 식별자(이름, 전화번호 또는 기타)로 세그먼트(대상)의 모든 구성원을 내보냅니다.
+세그먼트 내보내기 - Marketo Engage 대상에 사용된 식별자(이메일, ECID)를 사용하여 세그먼트(대상)의 모든 구성원을 내보냅니다.
 
 ## 대상 설정 및 세그먼트 활성화 {#set-up}
 
