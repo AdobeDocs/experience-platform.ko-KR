@@ -1,7 +1,7 @@
 ---
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform에 대한 최신 릴리스 노트입니다.
-exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
+exl-id: 96375409-803f-45af-805e-900207d972e4
 source-git-commit: 4959b5227f777a2c8cab1317d67795678d1a6eea
 workflow-type: tm+mt
 source-wordcount: '381'
