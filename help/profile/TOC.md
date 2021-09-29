@@ -3,9 +3,9 @@ audience: user
 user-guide-title: Real-time Customer Profile 안내서
 user-guide-description: 고객 데이터를 통합하여 다양한 채널에서 고객과의 상호 작용을 종합적으로 파악합니다.
 feature: Profiles
-source-git-commit: 4c544170636040b8ab58780022a4c357cfa447de
+source-git-commit: 3eea0a1ecbe7db202f56f326e7b9b1300b37d236
 workflow-type: tm+mt
-source-wordcount: '133'
+source-wordcount: '136'
 ht-degree: 18%
 
 ---
@@ -43,8 +43,8 @@ ht-degree: 18%
    * [결합 스키마 UI 안내서](ui/union-schema.md)
    * [결합 스키마 개요(비디오)](video/union-schemas-overview.md)
 * 튜토리얼 {#tutorials}
-   * [ [!DNL Profile]에 데이터 추가](tutorials/add-profile-data.md)
-   * [ [!DNL Profile] & [!DNL Identity] 서비스에 대한 데이터 세트 구성](tutorials/dataset-configuration.md)
+   * [실시간 고객 프로필에 데이터 추가](tutorials/add-profile-data.md)
+   * [프로필에 대한 데이터 세트 구성](tutorials/dataset-configuration.md)
    * [데이터 집합 중복 보고서 생성](tutorials/dataset-overlap-report.md)
    * [추가 자습서](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
 * [개인 정보 보호 요청 처리](privacy.md)

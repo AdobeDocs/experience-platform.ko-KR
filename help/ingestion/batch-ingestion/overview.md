@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;홈;인기 항목;데이터 수집;배치;데이터 세트 활성화;배치 수집 개요;개요;배치 수집 개요;
 solution: Experience Platform
-title: 배치 수집 개요
+title: 배치 수집 API 개요
 topic-legacy: overview
 description: 'Adobe Experience Platform 데이터 수집 API를 사용하면 데이터를 배치 파일로 Platform에 수집할 수 있습니다. 수집되는 데이터는 CRM 시스템의 플랫 파일(예: Parquet 파일)의 프로필 데이터 또는 XDM(Experience Data Model) 레지스트리에서 알려진 스키마를 준수하는 데이터일 수 있습니다.'
 exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
-source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+source-git-commit: 3eea0a1ecbe7db202f56f326e7b9b1300b37d236
 workflow-type: tm+mt
-source-wordcount: '1218'
-ht-degree: 3%
+source-wordcount: '1388'
+ht-degree: 6%
 
 ---
 
-# 배치 수집 개요
+# 배치 수집 API 개요
 
-Adobe Experience Platform 데이터 수집 API를 사용하면 데이터를 배치 파일로 Platform에 수집할 수 있습니다. 수집되는 데이터는 CRM 시스템의 플랫 파일(예: Parquet 파일)의 프로필 데이터 또는 [!DNL Experience Data Model] (XDM) 레지스트리에서 알려진 스키마를 준수하는 데이터일 수 있습니다.
+Adobe Experience Platform 데이터 수집 API를 사용하면 데이터를 배치 파일로 Platform에 수집할 수 있습니다. 수집되는 데이터는 플랫 파일(예: Parquet 파일)의 프로필 데이터이거나 [!DNL Experience Data Model] (XDM) 레지스트리에서 알려진 스키마를 따르는 데이터일 수 있습니다.
 
 [데이터 수집 API 참조](https://www.adobe.io/experience-platform-apis/references/data-ingestion/)는 이러한 API 호출에 대한 추가 정보를 제공합니다.
 
@@ -22,14 +22,9 @@ Adobe Experience Platform 데이터 수집 API를 사용하면 데이터를 배�
 
 ![](../images/batch-ingestion/overview/batch_ingestion.png)
 
-## API 사용
+## 시작하기
 
-[!DNL Data Ingestion] API를 사용하면 3가지 기본 단계에서 데이터를 배치(단일 단위로 수집할 하나 이상의 파일로 구성된 데이터 단위)로 [!DNL Experience Platform]에 수집할 수 있습니다.
-
-1. 새 배치를 생성합니다.
-2. 데이터의 XDM 스키마와 일치하는 지정된 데이터 세트에 파일을 업로드합니다.
-3. 일괄 처리의 끝에 신호를 보냅니다.
-
+이 안내서에 사용된 API 엔드포인트는 [데이터 수집 API](https://www.adobe.io/experience-platform-apis/references/data-ingestion/)의 일부입니다. 계속하기 전에 [시작 안내서](getting-started.md)에서 관련 설명서에 대한 링크, 이 문서에서 샘플 API 호출을 읽는 방법에 대한 안내서, 모든 Experience Platform API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요한 정보를 검토하십시오.
 
 ### [!DNL Data Ingestion] 전제 조건
 
@@ -43,33 +38,55 @@ Adobe Experience Platform 데이터 수집 API를 사용하면 데이터를 배�
 - 권장되는 일괄 처리 크기는 256MB와 100GB 사이입니다.
 - 각 일괄 처리에는 최대 1,500개의 파일이 포함되어야 합니다.
 
-512MB보다 큰 파일을 업로드하려면 파일을 더 작은 청크로 나누어야 합니다. 큰 파일을 업로드하는 방법은 [여기](#large-file-upload---create-file)에서 찾을 수 있습니다.
+### 배치 수집 제한
 
-### 샘플 API 호출 읽기
+배치 데이터 섭취에는 다음과 같은 몇 가지 제한 사항이 있습니다.
 
-이 안내서에서는 요청의 형식을 지정하는 방법을 보여주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 올바른 형식의 요청 페이로드가 포함됩니다. API 응답으로 반환되는 샘플 JSON도 제공됩니다. 샘플 API 호출에 대한 설명서에 사용된 규칙에 대한 자세한 내용은 [!DNL Experience Platform] 문제 해결 안내서에서 [예제 API 호출](../../landing/troubleshooting.md#how-do-i-format-an-api-request)를 읽는 방법 섹션을 참조하십시오.
-
-### 필수 헤더에 대한 값을 수집합니다
-
-[!DNL Platform] API를 호출하려면 먼저 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 완료해야 합니다. 인증 자습서를 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출에 필요한 각 헤더에 대한 값을 제공합니다.
-
-- 권한 부여: Bearer `{ACCESS_TOKEN}`
-- x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
-
-[!DNL Experience Platform]의 모든 리소스는 특정 가상 샌드박스로 구분됩니다. [!DNL Platform] API에 대한 모든 요청에는 작업이 수행될 샌드박스의 이름을 지정하는 헤더가 필요합니다.
-
-- x-sandbox-name: `{SANDBOX_NAME}`
+- 일괄 처리당 최대 파일 수: 1500년
+- 최대 일괄 처리 크기: 100GB
+- 행당 최대 속성 또는 필드 수: 10000
+- 사용자당 최대 분당 배치 수: 138년
 
 >[!NOTE]
 >
->[!DNL Platform]의 샌드박스에 대한 자세한 내용은 [샌드박스 개요 설명서](../../sandboxes/home.md)를 참조하십시오.
+>512MB보다 큰 파일을 업로드하려면 파일을 더 작은 청크로 나누어야 합니다. 큰 파일을 업로드하는 방법은 이 문서의 [큰 파일 업로드 섹션에 있습니다](#large-file-upload---create-file).
 
-페이로드(POST, PUT, PATCH)이 포함된 모든 요청에는 추가 헤더가 필요합니다.
+### 유형
 
-- 컨텐츠 유형: application/json
+데이터를 섭취할 때 [!DNL Experience Data Model] (XDM) 스키마가 작동하는 방식을 이해하는 것이 중요합니다. XDM 필드 유형이 다른 형식에 매핑되는 방법에 대한 자세한 내용은 [스키마 레지스트리 개발자 안내서](../../xdm/api/getting-started.md)를 참조하십시오.
 
-### 배치 만들기
+데이터를 수집할 때 몇 가지 유연성이 있습니다. 유형이 대상 스키마에 있는 내용과 일치하지 않으면 데이터가 표현된 대상 유형으로 변환됩니다. 처리할 수 없으면 `TypeCompatibilityException`으로 일괄 처리가 실패합니다.
+
+예를 들어 JSON이나 CSV에는 `date` 또는 `date-time` 유형이 없습니다. 따라서 이러한 값은 [ISO 8061 형식 문자열](https://www.iso.org/iso-8601-date-and-time-format.html)(&quot;2018-07-10T15:05:59.000-08:00&quot;) 또는 Unix 시간(밀리초)을 사용하여 표시되며 수집 시 대상 XDM 유형으로 변환됩니다.
+
+아래 표는 데이터를 수집할 때 지원되는 전환을 보여줍니다.
+
+| 인바운드(행)과 Target(col) 비교 | 문자열 | 바이트 | Short | 정수 | Long | 이중 | 날짜 | 날짜-시간 | 개체 | 맵 |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| 문자열 | X | X | X | X | X | X | X | X |  |  |
+| 바이트 | X | X | X | X | X | X |  |  |  |  |
+| Short | X | X | X | X | X | X |  |  |  |  |
+| 정수 | X | X | X | X | X | X |  |  |  |  |
+| Long | X | X | X | X | X | X | X | X |  |  |
+| 이중 | X | X | X | X | X | X |  |  |  |  |
+| 날짜 |  |  |  |  |  |  | X |  |  |  |
+| 날짜-시간 |  |  |  |  |  |  |  | X |  |  |
+| 개체 |  |  |  |  |  |  |  |  | X | X |
+| 맵 |  |  |  |  |  |  |  |  | X | X |
+
+>[!NOTE]
+>
+>부울 및 배열은 다른 형식으로 변환할 수 없습니다.
+
+## API 사용
+
+[!DNL Data Ingestion] API를 사용하면 3가지 기본 단계에서 데이터를 배치(단일 단위로 수집할 하나 이상의 파일로 구성된 데이터 단위)로 [!DNL Experience Platform]에 수집할 수 있습니다.
+
+1. 새 배치를 생성합니다.
+2. 데이터의 XDM 스키마와 일치하는 지정된 데이터 세트에 파일을 업로드합니다.
+3. 일괄 처리의 끝에 신호를 보냅니다.
+
+## 배치 만들기
 
 데이터를 데이터 세트에 추가하려면 먼저 일괄 처리에 연결해야 하며 나중에 지정된 데이터 세트에 업로드됩니다.
 
@@ -130,7 +147,11 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 
 >[!NOTE]
 >
->아래 예제는 [Apache Parquet](https://parquet.apache.org/documentation/latest/) 파일 형식을 사용합니다. JSON 파일 형식을 사용하는 예는 [배치 수집 개발자 안내서](./api-overview.md)에서 찾을 수 있습니다.
+>일괄 처리는 프로필 저장소에서 데이터를 점진적으로 업데이트하는 데 사용할 수 있습니다. 자세한 내용은 [배치 수집 개발자 안내서](api-overview.md)에서 [배치](#patch-a-batch) 업데이트 섹션을 참조하십시오.
+
+>[!INFO]
+>
+>아래 예제는 [Apache Parquet](https://parquet.apache.org/documentation/latest/) 파일 형식을 사용합니다. JSON 파일 형식을 사용하는 예는 [배치 수집 개발자 안내서](api-overview.md)에서 찾을 수 있습니다.
 
 ### 작은 파일 업로드
 

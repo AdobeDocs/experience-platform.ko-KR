@@ -3,9 +3,9 @@ keywords: Experience Platform;프로필;실시간 고객 프로필;문제 해결
 title: 실시간 고객 프로필 API 안내서
 description: 개발자는 실시간 고객 프로필 API를 사용하여 보기 프로필, 병합 정책 만들기 및 업데이트, 프로필 데이터 내보내기 또는 샘플 데이터 내보내기, 더 이상 필요하지 않거나 오류가 추가된 프로필 데이터 삭제 등 프로필 데이터를 탐색 및 작업할 수 있습니다. API를 사용하여 주요 작업을 수행하는 방법을 알아보려면 이 안내서를 따르십시오.
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-source-git-commit: b2ae2b4ca2efe606aa148e06ca988a6285bedfee
+source-git-commit: 3b34cf37182ae98545651a7b54f586df7d811f34
 workflow-type: tm+mt
-source-wordcount: '890'
+source-wordcount: '963'
 ht-degree: 0%
 
 ---
@@ -57,6 +57,10 @@ Adobe Experience Platform을 통해 RESTful API 또는 사용자 인터페이스
 ## 프로필 시스템 작업 {#profile-system-jobs}
 
 [!DNL Platform]에 수집되는 프로필 사용 데이터는 [!DNL Data Lake] 및 [!DNL Real-time Customer Profile] 데이터 저장소에 저장됩니다. 더 이상 필요하지 않거나 오류가 추가된 데이터를 제거하려면 [!DNL Profile] 저장소에서 데이터 세트 또는 일괄 처리를 삭제해야 할 수 있습니다. 이를 위해서는 API를 사용하여 필요한 경우 수정, 모니터링 또는 삭제할 수 있는 [!DNL Profile System Job]&quot;를 만들어야 합니다. [!DNL delete request] [!DNL Real-time Customer Profile] API에서 `/system/jobs` 종단점을 사용하여 삭제 요청을 사용하는 방법을 알아보려면 [프로필 시스템 작업 종단점 안내서](profile-system-jobs.md)에 설명된 단계를 따르십시오.
+
+## 프로필 속성 업데이트 {#update-profile}
+
+간혹 조직의 프로필 저장소에서 데이터를 업데이트해야 할 수 있습니다. 예를 들어 레코드를 수정하거나 속성 값을 변경해야 할 수 있습니다. 이 작업은 일괄 처리 또는 스트리밍 처리를 통해 수행할 수 있으며, 업로드 태그로 구성된 프로필 지원 데이터 세트가 필요합니다. 특성 업데이트를 위한 데이터 집합을 구성하는 방법에 대한 자세한 내용은 [프로필 데이터 집합 활성화 및 업데이트](../../catalog/datasets/enable-upsert.md)에 대한 자습서를 참조하십시오.
 
 ## 다음 단계 {#next-steps}
 

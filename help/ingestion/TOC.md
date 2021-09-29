@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform 데이터 수집 도움말
 breadcrumb-title: Data Ingestion 안내서
 user-guide-description: 일괄 처리 또는 스트리밍 통합 기능을 통해 데이터를 플랫폼에 가져올 수 있습니다.
 feature: Data Ingestion
-source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+source-git-commit: 19837e820ab3abdaa0bc8569ad78ce51dec1d21e
 workflow-type: tm+mt
-source-wordcount: '117'
-ht-degree: 26%
+source-wordcount: '124'
+ht-degree: 25%
 
 ---
 
@@ -20,8 +20,9 @@ ht-degree: 26%
    - [Kafka 커넥터](streaming-ingestion/kafka.md)
    - [문제 해결](streaming-ingestion/troubleshooting.md)
 - 일괄 처리 수집{#batch}
-   - [개요](batch-ingestion/overview.md)
-   - [일괄 수집 API](batch-ingestion/api-overview.md)
+   - [배치 수집 API 시작](batch-ingestion/getting-started.md)
+   - [API 개요](batch-ingestion/overview.md)
+   - [API 개발자 안내서](batch-ingestion/api-overview.md)
    - [부분 배치 수집](batch-ingestion/partial.md)
    - [문제 해결](batch-ingestion/troubleshooting.md)
 - 튜토리얼 {#tutorials}

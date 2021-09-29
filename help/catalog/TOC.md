@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Catalog and Datasets 안내서
 user-guide-description: 데이터 레이크 내에서 데이터 계보, 메타데이터, 파일 설명, 디렉터리 및 데이터 세트를 탐색합니다.
 feature: Data Management
-source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+source-git-commit: 3eea0a1ecbe7db202f56f326e7b9b1300b37d236
 workflow-type: tm+mt
-source-wordcount: '102'
-ht-degree: 22%
+source-wordcount: '116'
+ht-degree: 19%
 
 ---
 
@@ -31,6 +31,8 @@ ht-degree: 22%
    * [데이터 세트 개요](datasets/overview.md)
    * [데이터 세트 사용 안내서](datasets/user-guide.md)
    * [API를 사용하여 데이터 세트 만들기 및 채우기](datasets/create.md)
+   * [프로필 및 ID에 대한 데이터 세트 활성화](datasets/enable-for-profile.md)
+   * [프로필 업데이트(업데이트)에 대한 데이터 세트 활성화](datasets/enable-upsert.md)
 * [Data Lake의 개인 정보 보호 요청 처리](privacy.md)
 * [Experience Platform의 데이터 보호](data-protection.md)
 * [API 참조](https://www.adobe.io/experience-platform-apis/references/catalog/)

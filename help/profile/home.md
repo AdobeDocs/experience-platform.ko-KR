@@ -4,9 +4,9 @@ title: 실시간 고객 프로필 개요
 topic-legacy: guide
 description: 실시간 고객 프로필은 다양한 소스의 데이터를 병합하고 개별 고객 프로필 및 관련 시계열 이벤트 형태로 해당 데이터에 대한 액세스 권한을 제공합니다. 이 기능을 통해 마케터는 여러 채널에서 대상과 잘 조정되고 일관되며 적절한 경험을 제공할 수 있습니다.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: 7ebd84f31161b45c2904545a2310c8b1f7831593
+source-git-commit: 2eac45cd4b053753f954bbaae999fc321c75bd9b
 workflow-type: tm+mt
-source-wordcount: '1779'
+source-wordcount: '1884'
 ht-degree: 0%
 
 ---
@@ -43,13 +43,15 @@ Experience Platform UI는 일별 스냅샷 중에 캡처된 실시간 고객 프
 
 각 개별 고객 프로필은 병합되어 해당 고객의 단일 보기를 구성하는 여러 프로필 조각으로 구성됩니다. 예를 들어 고객이 여러 채널에서 브랜드와 상호 작용하는 경우 조직에는 여러 데이터 세트에 표시되는 해당 단일 고객과 관련된 여러 프로필 조각이 있습니다. 이러한 조각을 Platform에 수집하면 병합되어 해당 고객에 대한 단일 프로필을 만듭니다.
 
-여러 소스의 데이터가 충돌하면(예: 한 조각은 고객을 &quot;단일&quot;로 나열하고 다른 조각은 고객을 &quot;기혼&quot;으로 나열함) [병합 정책](#merge-policies)은(는) 개인에게 대해 우선 순위를 지정하고 프로필에 포함할 정보를 결정합니다. 따라서 각 프로필은 여러 조각으로 구성되므로 Platform 내의 총 프로필 조각 수는 병합된 총 프로필 수보다 항상 높을 수 있습니다.
+즉, 프로필 조각은 고유한 기본 ID를 나타내고, 지정된 데이터 세트 내에서 해당 ID에 해당하는 [레코드](#record-data) 또는 [event](#time-series-events) 데이터를 나타냅니다.
 
-### 데이터 기록
+여러 데이터 세트의 데이터가 충돌하면(예: 한 조각은 고객을 &quot;단일&quot;로 나열하고 다른 조각은 고객을 &quot;기혼&quot;으로 나열함) [병합 정책](#merge-policies)은(는) 개인에게 대해 우선 순위를 지정하고 프로필에 포함할 정보를 결정합니다. 따라서 각 프로필은 일반적으로 여러 데이터 세트의 여러 조각으로 구성되므로 플랫폼 내 총 프로필 조각 수는 병합된 총 프로필 수보다 항상 클 수 있습니다.
+
+### 데이터 기록 {#record-data}
 
 프로필은 여러 속성(레코드 데이터라고도 함)으로 구성된 주체, 조직 또는 개인을 표현한 것입니다. 예를 들어 제품 프로필에 SKU 및 설명이 포함될 수 있지만, 사람의 프로필에 이름, 성 및 이메일 주소와 같은 정보가 포함되어 있습니다. [!DNL Experience Platform] 을 사용하여 프로필을 사용자 지정하여 사업과 관련된 특정 데이터를 사용할 수 있습니다. 표준 [!DNL Experience Data Model] (XDM) 클래스 [!DNL XDM Individual Profile]는 고객 레코드 데이터를 설명할 때 스키마를 구축하고 Platform 서비스 간의 많은 상호 작용에 데이터 필수 요소를 제공하는 기본 클래스입니다. [!DNL Experience Platform]에서 스키마 작업에 대한 자세한 내용은 [XDM 시스템 개요](../xdm/home.md)를 읽어 보십시오.
 
-### 시계열 이벤트
+### 시계열 이벤트 {#time-series-events}
 
 시계열 데이터는 작업이 직접 또는 간접적으로 수행될 때의 시스템 스냅샷과 이벤트 자체를 설명하는 데이터를 제공합니다. 표준 스키마 클래스 XDM ExperienceEvent로 표시되는 시계열 데이터는 장바구니에 추가되는 항목, 클릭되는 링크, 열람된 비디오와 같은 이벤트를 설명할 수 있습니다. 시계열 데이터를 사용하여 세그먼테이션 규칙을 기반으로 하고, 프로필의 컨텍스트에서 개별적으로 이벤트에 액세스할 수 있습니다.
 
@@ -103,11 +105,16 @@ Adobe Experience Platform [!DNL Segmentation Service]은(는) 개별 고객을 �
 
 Observability Insights를 사용하면 Adobe Experience Platform에서 주요 지표를 노출할 수 있습니다. 다양한 [!DNL Platform] 기능에 대한 [!DNL Experience Platform] 사용 통계 및 성능 지표 외에도 수신 요청율, 성공적인 수집 비율, 수집된 레코드 크기 등에 대한 통찰력을 얻을 수 있는 특정 프로필 관련 지표가 있습니다. 자세한 내용은 [가시성 통찰력 API 개요](../observability/api/overview.md)를 읽고 실시간 고객 프로필 지표의 전체 목록을 보려면 [사용 가능한 지표](../observability/api/metrics.md#available-metrics)에 있는 설명서를 참조하십시오.
 
+## 프로필 저장소 데이터 업데이트
+
+간혹 조직의 프로필 저장소에서 데이터를 업데이트해야 할 수 있습니다. 예를 들어 레코드를 수정하거나 속성 값을 변경해야 할 수 있습니다. 이 작업은 일괄 처리 또는 스트리밍 처리를 통해 수행할 수 있으며, 업로드 태그로 구성된 프로필 지원 데이터 세트가 필요합니다. 특성 업데이트를 위한 데이터 집합을 구성하는 방법에 대한 자세한 내용은 [프로필 데이터 집합 활성화 및 업데이트](../catalog/datasets/enable-upsert.md)에 대한 자습서를 참조하십시오.
+
 ## [!DNL Data governance] 및 [!DNL Privacy]
 
 [!DNL Data governance] 는 고객 데이터를 관리하고 데이터 사용에 적용되는 규정, 제한 및 정책을 준수하는 데 사용되는 일련의 전략 및 기술입니다.
 
 데이터 액세스와 관련된 데이터 거버넌스는 다양한 수준에서 [!DNL Experience Platform] 내에서 주요 역할을 수행합니다.
+
 * 데이터 사용 레이블 지정
 * 데이터 액세스 정책
 * 마케팅 작업을 위한 데이터에 대한 액세스 제어
@@ -120,4 +127,4 @@ Observability Insights를 사용하면 Adobe Experience Platform에서 주요 �
 
 ## 다음 단계 및 추가 리소스
 
-Experience Platform UI 또는 프로필 API를 사용하여 [!DNL Real-time Customer Profile] 데이터 작업에 대한 자세한 내용은 각각 [프로필 UI 안내서](ui/user-guide.md) 또는 [API 개발자 안내서](api/overview.md)를 읽어 보십시오.
+Experience Platform UI 또는 프로필 API를 사용하여 실시간 고객 프로필 데이터를 사용하는 방법에 대한 자세한 내용은 [프로필 UI 안내서](ui/user-guide.md) 또는 [API 개발자 안내서](api/overview.md)를 각각 읽어 보십시오.
