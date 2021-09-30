@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 소스 커넥터 도움말
 breadcrumb-title: Source Connectors 안내서
 user-guide-description: 다양한 소스 또는 구조에서 데이터를 수집하고 레이블을 지정하며 기존에 수집한 데이터를 향상시킬 수 있습니다.
 feature: Data Ingestion, Sources
-source-git-commit: bc94d85ecd2ae33d8ef18dd1dfa7fca39ccaefea
+source-git-commit: 8a2cca1fa10b145757c582237a5f9ab64105b6b5
 workflow-type: tm+mt
-source-wordcount: '656'
+source-wordcount: '654'
 ht-degree: 13%
 
 ---
@@ -21,15 +21,15 @@ ht-degree: 13%
       - [Analytics 소스 커넥터](connectors/adobe-applications/analytics.md)
       - [Audience Manager 원본 커넥터](connectors/adobe-applications/audience-manager.md)
       - [고객 특성 소스 커넥터](connectors/adobe-applications/customer-attributes.md)
-      - Adobe 응용 프로그램 필드 매핑 {#mapping}
+      - 필드 매핑 {#mapping}
          - [Analytics 필드 매핑](connectors/adobe-applications/mapping/analytics.md)
          - [Audience Manager 필드 매핑](connectors/adobe-applications/mapping/audience-manager.md)
          - [Target 필드 매핑](connectors/adobe-applications/mapping/target.md)
          - [Marketo Engage 필드 매핑](connectors/adobe-applications/mapping/marketo.md)
-      - Marketo Engage {#marketo}
+      - B2B {#b2b}
          - [Marketo Engage 커넥터](connectors/adobe-applications/marketo/marketo.md)
          - [Marketo Engage 인증 안내서](connectors/adobe-applications/marketo/marketo-auth.md)
-         - [Marketo Engage 네임스페이스 및 스키마](connectors/adobe-applications/marketo/marketo-namespaces.md)
+         - [B2B 네임스페이스 및 스키마](connectors/adobe-applications/marketo/marketo-namespaces.md)
    - 광고 {#advertising}
       - [Google AdWords 커넥터](connectors/advertising/ads.md)
    - 클라우드 스토리지 {#cloud-storage}

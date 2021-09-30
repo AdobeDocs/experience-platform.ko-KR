@@ -6,16 +6,16 @@ topic-legacy: overview
 type: Tutorial
 description: 데이터 흐름은 소스에서 플랫폼 데이터 집합으로 데이터를 검색하고 수집하는 예약된 작업입니다. 이 자습서에서는 CRM 계정을 사용하여 새 데이터 흐름을 구성하는 단계를 제공합니다.
 exl-id: e14eafa7-6594-48e6-ab7a-f6c928d1e5fb
-source-git-commit: 46fb08a10bc05dc758bdcb025693f819b980b41a
+source-git-commit: cd9b28c66f6cc841e46e797b39db838a83e727e3
 workflow-type: tm+mt
-source-wordcount: '1524'
+source-wordcount: '1387'
 ht-degree: 0%
 
 ---
 
 # UI에서 CRM 연결에 대한 데이터 흐름 구성
 
-데이터 흐름은 소스에서 [!DNL Platform] 데이터 집합으로 데이터를 검색하고 수집하는 예약된 작업입니다. 이 자습서에서는 CRM 계정을 사용하여 새 데이터 흐름을 구성하는 단계를 제공합니다.
+데이터 흐름은 소스에서 플랫폼 데이터 집합으로 데이터를 검색하고 수집하는 예약된 작업입니다. 이 자습서에서는 CRM 계정을 사용하여 새 데이터 흐름을 구성하는 단계를 제공합니다.
 
 ## 시작하기
 
@@ -30,9 +30,9 @@ ht-degree: 0%
 
 ## 데이터 선택
 
-CRM 계정을 만든 후 *데이터 선택* 단계가 나타나고 파일 계층 구조를 탐색할 수 있는 대화형 인터페이스를 제공합니다.
+CRM 계정을 만든 후 [!UICONTROL 데이터 선택] 단계가 나타나고 파일 계층 구조를 탐색할 수 있는 인터페이스를 제공합니다.
 
-* 인터페이스 왼쪽 절반 부분은 서버의 파일과 디렉토리를 표시하는 디렉토리 브라우저입니다.
+* 인터페이스 왼쪽 절반 이상은 디렉터리 브라우저로, CRM의 파일 및 디렉터리를 표시합니다.
 * 인터페이스의 오른쪽 절반을 사용하면 호환되는 파일에서 최대 100개의 데이터 행을 미리 볼 수 있습니다.
 
 페이지 상단에 있는 **[!UICONTROL 검색]** 옵션을 사용하여 사용할 소스 데이터를 신속하게 식별할 수 있습니다.
@@ -41,29 +41,29 @@ CRM 계정을 만든 후 *데이터 선택* 단계가 나타나고 파일 계층
 >
 >검색 소스 데이터 옵션은 Analytics, 분류, 이벤트 허브 및 Kinesis 커넥터를 제외한 모든 표 형식의 소스 커넥터에서 사용할 수 있습니다.
 
-소스 데이터를 찾으면 디렉토리를 선택한 다음 **[!UICONTROL 다음]**&#x200B;을 클릭합니다.
+소스 데이터를 찾으면 디렉토리를 선택한 다음 **[!UICONTROL 다음]**&#x200B;을 선택합니다.
 
 ![select-data](../../../images/tutorials/dataflow/all-tabular/select-data.png)
 
 ## XDM 스키마에 데이터 필드 매핑
 
-**[!UICONTROL 매핑]** 단계가 나타나고 소스 데이터를 [!DNL Platform] 데이터 세트에 매핑하기 위한 대화형 인터페이스를 제공합니다.
+소스 데이터를 Platform 데이터 세트에 매핑할 인터페이스를 제공하는 **[!UICONTROL 매핑]** 단계가 나타납니다.
 
 수집할 인바운드 데이터에 대한 데이터 세트를 선택합니다. 기존 데이터 세트를 사용하거나 새 데이터 세트를 만들 수 있습니다.
 
 ### 기존 데이터 세트 사용
 
-기존 데이터 세트에 데이터를 수집하려면 **[!UICONTROL 기존 데이터 세트 사용]**&#x200B;을 선택한 다음 데이터 세트 아이콘을 클릭합니다.
+기존 데이터 세트에 데이터를 수집하려면 **[!UICONTROL 기존 데이터 세트]**&#x200B;를 선택한 다음 입력 막대 옆에 있는 데이터 아이콘 ![데이터](../../../images/tutorials/dataflow/crm/data.png)를 선택합니다.
 
-![use-existing-dataset](../../../images/tutorials/dataflow/crm/use-existing-dataset.png)
+![기존 데이터 세트](../../../images/tutorials/dataflow/crm/existing-dataset.png)
 
 **[!UICONTROL 데이터 세트 선택]** 대화 상자가 나타납니다. 사용할 데이터 집합을 찾은 다음 선택한 다음 **[!UICONTROL 계속]**&#x200B;을 클릭합니다.
 
-![select-existing-dataset](../../../images/tutorials/dataflow/crm/select-existing-dataset.png)
+![select-dataset](../../../images/tutorials/dataflow/crm/select-dataset.png)
 
 ### 새 데이터 세트 사용
 
-데이터를 새 데이터 세트에 수집하려면 **[!UICONTROL 새 데이터 세트 만들기]**&#x200B;를 선택하고 제공된 필드에 데이터 세트에 대한 이름과 설명을 입력합니다.
+데이터를 새 데이터 세트에 수집하려면 **[!UICONTROL 새 데이터 세트]**&#x200B;를 선택하고 제공된 필드에 데이터 세트에 대한 이름과 설명을 입력합니다.
 
 **[!UICONTROL 스키마 선택]** 검색 막대에 스키마 이름을 입력하여 스키마 필드를 첨부할 수 있습니다. 드롭다운 아이콘을 선택하여 기존 스키마 목록을 볼 수도 있습니다. 또는 **[!UICONTROL 고급 검색]**&#x200B;을 선택하여 각각의 세부 정보를 포함하는 기존 스키마의 화면에 액세스할 수도 있습니다.
 
@@ -79,19 +79,27 @@ CRM 계정을 만든 후 *데이터 선택* 단계가 나타나고 파일 계층
 
 필요에 따라 필드를 직접 매핑하거나 데이터 준비 함수를 사용하여 소스 데이터를 변환하여 계산 또는 계산된 값을 도출할 수 있습니다. 매퍼 함수 및 계산된 필드에 대한 자세한 내용은 [데이터 준비 함수 안내서](../../../../data-prep/functions.md) 또는 [계산된 필드 안내서](../../../../data-prep/calculated-fields.md)를 참조하십시오.
 
+<!--
 >[!TIP]
 >
->[!DNL Platform] 선택한 대상 스키마나 데이터 세트를 기반으로 자동 매핑 필드에 대한 지능형 권장 사항을 제공합니다. 사용 사례에 맞게 매핑 규칙을 수동으로 조정할 수 있습니다.
+>If you are using the [!DNL Salesforce] source as part of B2B CDP, refer to the [[!DNL Salesforce] field mapping tables](../../../connectors/adobe-applications/mapping/salesforce.md) for a guide on the appropriate mapping sets between [!DNL Salesforce] source fields and XDM target fields.
+-->
 
-![](../../../images/tutorials/dataflow/all-tabular/mapping.png)
+플랫폼은 선택한 대상 스키마나 데이터 세트를 기반으로 자동 매핑 필드에 대한 지능형 권장 사항을 제공합니다. 사용 사례에 맞게 매핑 규칙을 수동으로 조정할 수 있습니다.
 
 선택한 데이터 집합에서 최대 100개의 샘플 데이터 행의 매핑 결과를 보려면 **[!UICONTROL 데이터 미리 보기]**&#x200B;를 선택하십시오.
 
+![](../../../images/tutorials/dataflow/crm/preview-data.png)
+
 미리 보기 중에 ID 열은 매핑 결과를 확인할 때 필요한 주요 정보이므로 첫 번째 필드로 우선 순위가 지정됩니다.
 
-![](../../../images/tutorials/dataflow/all-tabular/mapping-preview.png)
-
 소스 데이터가 매핑되면 **[!UICONTROL 닫기]**&#x200B;를 선택합니다.
+
+![](../../../images/tutorials/dataflow/crm/preview.png)
+
+그런 다음 [!UICONTROL 매핑] 화면에서 **[!UICONTROL 다음]**&#x200B;을 선택하여 진행하십시오.
+
+![](../../../images/tutorials/dataflow/crm/mapping.png)
 
 ## 수집 실행 예약
 
@@ -111,7 +119,7 @@ CRM 계정을 만든 후 *데이터 선택* 단계가 나타나고 파일 계층
 
 **[!UICONTROL 증분 데이터를]**&#x200B;에 의해 로드하여 델타 열을 할당합니다. 이 필드는 새 데이터와 기존 데이터를 구별합니다.
 
-![](../../../images/tutorials/dataflow/databases/schedule-interval-on.png)
+![](../../../images/tutorials/dataflow/crm/scheduling.png)
 
 ### 1회 수집 데이터 흐름 설정
 
@@ -123,7 +131,7 @@ CRM 계정을 만든 후 *데이터 선택* 단계가 나타나고 파일 계층
 
 예약에 적절한 값을 제공한 후 **[!UICONTROL 다음]**&#x200B;을 선택합니다.
 
-![예약-한 번](../../../images/tutorials/dataflow/databases/schedule-once.png)
+![예약-한 번](../../../images/tutorials/dataflow/crm/one-time-ingestion.png)
 
 ## 데이터 흐름 세부 정보 제공
 
@@ -133,15 +141,15 @@ CRM 계정을 만든 후 *데이터 선택* 단계가 나타나고 파일 계층
 
 데이터 흐름의 값을 제공하고 **[!UICONTROL 다음]**&#x200B;을 선택합니다.
 
-![데이터 흐름 세부 정보](../../../images/tutorials/dataflow/all-tabular/dataflow-detail.png)
+![데이터 흐름 세부 정보](../../../images/tutorials/dataflow/crm/dataflow-detail.png)
 
 ## 데이터 흐름 검토
 
 새 데이터 흐름을 작성하기 전에 검토할 수 있는 *검토* 단계가 나타납니다. 세부 사항은 다음 범주 내에 그룹화됩니다.
 
-* **[!UICONTROL 연결 세부 정보]**: 소스 유형, 선택한 소스 파일의 관련 경로 및 해당 소스 파일 내의 열 양을 표시합니다.
-* **[!UICONTROL 매핑 세부 정보]**: 데이터 세트가 준수하는 스키마를 포함하여 소스 데이터가 수집되는 데이터 세트를 표시합니다.
-* **[!UICONTROL 예약 세부 정보]**: 수집 예약의 활성 기간, 빈도 및 간격을 표시합니다.
+* **[!UICONTROL 연결]**: 소스 계정 이름, 소스 플랫폼, 선택한 소스 파일의 관련 경로 및 해당 소스 파일 내의 열 양을 표시합니다.
+* **[!UICONTROL 데이터 세트 및 맵 필드 할당]**: 데이터 세트가 준수하는 스키마를 포함하여 소스 데이터가 수집되는 대상 데이터 세트를 표시합니다.
+* **[!UICONTROL 예약]**: 데이터 흐름의 시작 시간 및 빈도 비율을 표시합니다.
 
 데이터 흐름을 검토한 후 **[!UICONTROL 완료]**&#x200B;를 클릭하고 데이터 흐름을 만들 시간을 잠시 허용합니다.
 
@@ -157,33 +165,13 @@ CRM 계정을 만든 후 *데이터 선택* 단계가 나타나고 파일 계층
 
 ## 다음 단계
 
-이 자습서를 따라 CRM에서 데이터를 가져올 데이터 흐름을 성공적으로 만들어 데이터 세트 모니터링에 대한 통찰력을 얻을 수 있습니다. 데이터 흐름 만들기에 대한 자세한 내용을 보려면 아래 비디오를 시청하여 학습 내용을 보완할 수 있습니다. 또한 이제 들어오는 데이터를 [!DNL Real-time Customer Profile] 및 [!DNL Data Science Workspace] 등의 다운스트림 [!DNL Platform] 서비스에서 사용할 수 있습니다. 자세한 내용은 다음 문서를 참조하십시오.
+이 자습서를 따라 CRM에서 데이터를 가져올 데이터 흐름을 성공적으로 만들어 데이터 세트 모니터링에 대한 통찰력을 얻을 수 있습니다. 데이터 흐름 만들기에 대한 자세한 내용을 보려면 아래 비디오를 시청하여 학습 내용을 보완할 수 있습니다. 또한 이제 들어오는 데이터를 [!DNL Real-time Customer Profile] 및 [!DNL Data Science Workspace] 등의 다운스트림 Platform 서비스에서 사용할 수 있습니다. 자세한 내용은 다음 문서를 참조하십시오.
 
 * [실시간 고객 프로필 개요](../../../../profile/home.md)
 * [Data Science Workspace 개요](../../../../data-science-workspace/home.md)
 
 >[!WARNING]
 >
-> 다음 비디오에 표시된 [!DNL Platform] UI가 오래되었습니다. 최신 UI 스크린샷 및 기능은 위의 설명서를 참조하십시오.
-
+> 다음 비디오에 표시된 플랫폼 UI가 오래되었습니다. 최신 UI 스크린샷 및 기능은 위의 설명서를 참조하십시오.
+>
 >[!VIDEO](https://video.tv.adobe.com/v/29711?quality=12&learn=on)
-
-## 부록
-
-다음 섹션에서는 소스 커넥터 작업에 대한 추가 정보를 제공합니다.
-
-### 데이터 흐름 비활성화
-
-데이터 흐름을 만들면 즉시 활성 상태가 되고 제공된 일정에 따라 데이터를 수집합니다. 아래 지침에 따라 언제든지 활성 데이터 흐름을 비활성화할 수 있습니다.
-
-**[!UICONTROL 인증]** 화면에서 비활성화하려는 데이터 흐름과 연결된 연결 이름을 선택합니다.
-
-![](../../../images/tutorials/dataflow/crm/monitor.png)
-
-**소스 활동** 페이지가 나타납니다. 목록에서 활성 데이터 흐름을 선택하여 화면 오른쪽의 **[!UICONTROL 속성]** 열을 엽니다. 이 열에는 **[!UICONTROL 활성화]** 전환 단추가 있습니다. 데이터 흐름을 비활성화하려면 전환을 클릭하십시오. 동일한 전환을 사용하여 데이터 흐름을 비활성화한 후 다시 활성화할 수 있습니다.
-
-![disable](../../../images/tutorials/dataflow/crm/disable.png)
-
-### [!DNL Profile] 모집단에 대한 인바운드 데이터 활성화
-
-소스 커넥터의 인바운드 데이터를 [!DNL Real-time Customer Profile] 데이터를 강화 및 채우는 데 사용할 수 있습니다. [!DNL Real-time Customer Profile] 데이터 채우기에 대한 자세한 내용은 [프로필 채우기](../profile.md)의 자습서를 참조하십시오.

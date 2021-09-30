@@ -5,18 +5,14 @@ title: Marketo Engage 소스에 대한 매핑 필드
 topic-legacy: overview
 description: 아래 표에는 Marketo 데이터 세트의 필드와 해당 XDM 필드 간의 매핑이 포함되어 있습니다.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: 0af9290a3143b85311fbbd8d194f4799b0c9a873
+source-git-commit: 8680f0f3f67548cbf18c1aa0f0c68c5810c40f90
 workflow-type: tm+mt
-source-wordcount: '333'
-ht-degree: 13%
+source-wordcount: '532'
+ht-degree: 8%
 
 ---
 
-# (베타) [!DNL Marketo Engage] 필드 매핑
-
->[!IMPORTANT]
->
->[!DNL Marketo Engage] 소스가 현재 베타 버전입니다. 해당 기능과 설명서는 변경될 수 있습니다.
+# [!DNL Marketo Engage] 필드 매핑
 
 아래 표에는 9개의 [!DNL Marketo] 데이터 세트에 있는 필드와 해당 XDM(Experience Data Model) 필드 간의 매핑이 포함되어 있습니다.
 
@@ -25,8 +21,12 @@ ht-degree: 13%
 | 소스 데이터 세트 | XDM 대상 필드 | 참고 |
 | -------------- | ---------------- | ----- |
 | `_id` | `_id` |
-| `personID` | `personID` | 기본 ID |
+| `"Marketo"` | `personKey.sourceType` |
+| `"${MUNCHKIN_ID}"` | `personKey.sourceInstanceID` | `"${MUNCHKIN_ID}"` 값이 자동으로 대체됩니다. |
+| `personID` | `personKey.sourceID` |
+| `concat(personID,"@${MUNCHKIN_ID}.Marketo")` | `personKey.sourceKey` | 기본 ID. `"${MUNCHKIN_ID}"` 값이 자동으로 대체됩니다. |
 | `eventType` | `eventType` |
+| `producedBy` | `producedBy` |
 | `timestamp` | `timestamp` |
 | `web.webPageDetails._marketo.URL` | `web.webPageDetails._marketo.URL` |
 | `environment.browserDetails.userAgent` | `environment.browserDetails.userAgent` |
@@ -38,9 +38,9 @@ ht-degree: 13%
 | `web.webPageDetails.isPersonalizedURL` | `web.webPageDetails.isPersonalizedURL` |
 | `web.webPageDetails.queryParameters` | `web.webPageDetails.queryParameters` |
 | `web.webReferrer.URL` | `web.webReferrer.URL` |
-| `listOperations.listID` | `listOperations.listID` |
+| `iif(${listOperations\.listID} != null && ${listOperations\.listID} != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", ${listOperations\.listID}, "sourceKey", concat(${listOperations\.listID},"@${MUNCHKIN_ID}.Marketo")), null)` | `listOperations.listKey` |
 | `opportunityEvent.isPrimary` | `opportunityEvent.isPrimary` |
-| `opportunityEvent.opportunityID` | `opportunityEvent.opportunityID` |
+| `iif(${opportunityEvent\.opportunityID} != null && ${opportunityEvent\.opportunityID} != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID",${opportunityEvent\.opportunityID}, "sourceKey", concat(${opportunityEvent\.opportunityID},"@${MUNCHKIN_ID}.Marketo")), null)` | `opportunityEvent.opportunityKey` |
 | `opportunityEvent.role` | `opportunityEvent.role` |
 | `leadOperation.newLead.createdDate` | `leadOperation.newLead.createdDate` |
 | `leadOperation.newLead.formName` | `leadOperation.newLead.formName` |
@@ -53,6 +53,7 @@ ht-degree: 13%
 | `leadOperation.convertLead.isSentNotificationEmail` | `leadOperation.convertLead.isSentNotificationEmail` |
 | `directMarketing.mailingID` | `directMarketing.mailingID` |
 | `directMarketing.mailingName` | `directMarketing.mailingName` |
+| `directMarketing.testVariantName` | `directMarketing.testVariantName` |
 | `directMarketing.testVariantID` | `directMarketing.testVariantID` |
 | `directMarketing.emailBouncedCode` | `directMarketing.emailBouncedCode` |
 | `directMarketing.emailBouncedDetails` | `directMarketing.emailBouncedDetails` |
@@ -75,10 +76,8 @@ ht-degree: 13%
 | `leadOperation.changeScore.scoreAttributeID` | `leadOperation.changeScore.scoreAttributeID` |
 | `leadOperation.changeScore.scoreAttributeName` | `leadOperation.changeScore.scoreAttributeName` |
 | `leadOperation.changeScore.urgency` | `leadOperation.changeScore.urgency` |
-| `opportunityEvent.dataValueChanges.attributeName` | `opportunityEvent.dataValueChanges.attributeName` |
-| `opportunityEvent.dataValueChanges.newValue` | `opportunityEvent.dataValueChanges.newValue` |
-| `opportunityEvent.dataValueChanges.oldValue` | `opportunityEvent.dataValueChanges.oldValue` |
-| `opportunityEvent.opportunityID` | `opportunityEvent.opportunityID` |
+| `json_to_object(${opportunityEvent\.dataValueChanges})` | `opportunityEvent.dataValueChanges` |
+| `iif(${leadOperation\.campaignProgression\.campaignID} != null && ${leadOperation\.campaignProgression\.campaignID} != "" , to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}", "sourceID", ${leadOperation\.campaignProgression\.campaignID}, "sourceKey", concat(${leadOperation\.campaignProgression\.campaignID},"@${MUNCHKIN_ID}.Marketo")), null)` | `leadOperation.campaignProgression.campaignKey` |
 | `leadOperation.campaignProgression.campaignID` | `leadOperation.campaignProgression.campaignID` |
 | `leadOperation.campaignProgression.isAcquiredBy` | `leadOperation.campaignProgression.isAcquiredBy` |
 | `leadOperation.campaignProgression.isSuccessful` | `leadOperation.campaignProgression.isSuccessful` |
@@ -87,6 +86,10 @@ ht-degree: 13%
 | `leadOperation.campaignProgression.oldStatusID` | `leadOperation.campaignProgression.oldStatusID` |
 | `leadOperation.campaignProgression.oldStatusName` | `leadOperation.campaignProgression.oldStatusName` |
 | `leadOperation.campaignProgression.reason` | `leadOperation.campaignProgression.reason` |
+| `leadOperation.interestingMoment.date` | `leadOperation.interestingMoment.date` |
+| `leadOperation.interestingMoment.description` | `leadOperation.interestingMoment.description` |
+| `leadOperation.interestingMoment.source` | `leadOperation.interestingMoment.source` |
+| `leadOperation.interestingMoment.type` | `leadOperation.interestingMoment.type` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -94,8 +97,11 @@ ht-degree: 13%
 
 | 소스 데이터 세트 | XDM 대상 필드 | 참고 |
 | -------------- | ---------------- | ----- |
-| `id` | `campaignID` | 기본 ID |
-| `sfdcId` | `extSourceSystemAudit.externalID` | 보조 ID |
+| `"Marketo"` | `campaignKey.sourceType` |
+| `"${MUNCHKIN_ID}"` | `campaignKey.sourceInstanceID` | `"${MUNCHKIN_ID}"` 값이 자동으로 대체됩니다. |
+| `id` | `campaignKey.sourceID` |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `campaignKey.sourceKey` | 기본 ID. `"${MUNCHKIN_ID}"` 값이 자동으로 대체됩니다. |
+| `iif(sfdcId != null && sfdcId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", sfdcId, "sourceKey", concat(sfdcId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey` | 보조 ID. `{CRM_ORG_ID}` 및 `{CRM_TYPE}` 값은 자동으로 대체됩니다. |
 | `name` | `campaignName` |
 | `description` | `campaignDescription` |
 | `type` | `campaignType` |
@@ -104,8 +110,12 @@ ht-degree: 13%
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `cost` | `actualCost.amount` |
-| `parentProgramId` | `parentCampaignID` |
+| `iif(parentProgramId != null && parentProgramId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", parentProgramId, "sourceKey", concat(parentProgramId,"@${MUNCHKIN_ID}.Marketo")), null)` | `parentCampaignKey` |
 | `integrationPartner` | `integrationPartnerName` |
+| `webinarSessionName` | `webinarSessionName` |
+| `webinarSessionDescription` | `webinarSessionDescription` |
+| `webinarHistorySyncStatus` | `webinarHistorySyncStatus` |
+| `webinarHistorySyncDate` | `webinarHistorySyncDate` |
 | `startDate` | `campaignStartDate` |
 | `endDate` | `campaignEndDate` |
 
@@ -115,10 +125,13 @@ ht-degree: 13%
 
 | 소스 데이터 세트 | XDM 대상 필드 | 참고 |
 | -------------- | ---------------- | ----- |
-| `id` | `campaignMemberID` | 기본 ID |
-| `programId` | `campaignID` | 관계 |
-| `leadId` | `personID` | 관계 |
-| `acquiredByCampaignID` | `acquiredByCampaignID` |
+| `"Marketo"` | `campaignMemberKey.sourceType` |
+| `"${MUNCHKIN_ID}"` | `campaignMemberKey.sourceInstanceID` | `"${MUNCHKIN_ID}"` 값이 자동으로 대체됩니다. |
+| `id` | `campaignMemberKey.sourceID` |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `campaignMemberKey.sourceKey` | 기본 ID. `"${MUNCHKIN_ID}"` 값이 자동으로 대체됩니다. |
+| `iif(programId != null && programId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", programId, "sourceKey", concat(programId,"@${MUNCHKIN_ID}.Marketo")), null)` | `campaignKey` | 관계 |
+| `iif(leadId != null && leadId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", leadId, "sourceKey", concat(leadId,"@${MUNCHKIN_ID}.Marketo")), null)` | `personKey` | 관계 |
+| `iif(acquiredByCampaignID != null && acquiredByCampaignID != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", acquiredByCampaignID, "sourceKey", concat(acquiredByCampaignID,"@${MUNCHKIN_ID}.Marketo")), null)` | `acquiredByCampaignKey` |
 | `reachedSuccess` | `hasReachedSuccess` |
 | `isExhausted` | `isExhausted` |
 | `statusName` | `memberStatus` |
@@ -129,7 +142,7 @@ ht-degree: 13%
 | `webinarUrl` | `webinarConfirmationUrl` |
 | `registrationCode` | `webinarRegistrationID` |
 | `reachedSuccessDate` | `reachedSuccessDate` |
-| `sfdc.crmId` | `extSourceSystemAudit.externalID` |
+| `iif(sfdc.crmId != null && sfdc.crmId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", sfdc.crmId, "sourceKey", concat(sfdc.crmId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey` | 보조 ID. `{CRM_ORG_ID}` 및 `{CRM_TYPE}` 값은 자동으로 대체됩니다. |
 | `sfdc.lastStatus` | `lastStatus` |
 | `sfdc.hasResponded` | `hasResponded` |
 | `sfdc.firstRespondedDate` | `firstRespondedDate` |
@@ -142,8 +155,11 @@ ht-degree: 13%
 
 | 소스 데이터 세트 | XDM 대상 필드 | 참고 |
 | -------------- | ---------------- | ----- |
-| `id` | `accountID` | 기본 ID |
-| `mktoCdpExternalId` | `extSourceSystemAudit.externalID` | 보조 ID |
+| `"Marketo"` | `accountKey.sourceType` |
+| `"${MUNCHKIN_ID}"` | `accountKey.sourceInstanceID` | `"${MUNCHKIN_ID}"` 값이 자동으로 대체됩니다. |
+| `concat(id, ".mkto_org")` | `accountKey.sourceID` |
+| `concat(id, ".mkto_org@${MUNCHKIN_ID}.Marketo")` | `accountKey.sourceKey` | 기본 ID. `"${MUNCHKIN_ID}"` 값이 자동으로 대체됩니다. |
+| <ul><li>`iif(mktoCdpExternalId != null && mktoCdpExternalId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", mktoCdpExternalId, "sourceKey", concat(mktoCdpExternalId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li><li>`iif(msftCdpExternalId != null && msftCdpExternalId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", msftCdpExternalId,"sourceKey", concat(msftCdpExternalId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li></ul> | `extSourceSystemAudit.externalKey` | 보조 ID. `{CRM_ORG_ID}` 및 `{CRM_TYPE}` 값은 자동으로 대체됩니다. |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `billingCity` | `accountBillingAddress.city` |
@@ -160,7 +176,7 @@ ht-degree: 13%
 | `company` | `accountName` |
 | `companyNotes` | `accountDescription` |
 | `site` | `accountSite` |
-| `mktoCdpParentOrgId` | `accountParentID` |
+| `iif(mktoCdpParentOrgId != null && mktoCdpParentOrgId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", concat(mktoCdpParentOrgId, ".mkto_org"), "sourceKey", concat(mktoCdpParentOrgId, ".mkto_org@${MUNCHKIN_ID}.Marketo")), null)` | `accountParentKey` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -168,7 +184,10 @@ ht-degree: 13%
 
 | 소스 데이터 세트 | XDM 대상 필드 | 참고 |
 | -------------- | ---------------- | ----- |
-| `id` | `marketingListID` | 기본 ID |
+| `"Marketo"` | `marketingListKey.sourceType` |
+| `"${MUNCHKIN_ID}"` | `marketingListKey.sourceInstanceID` | `"${MUNCHKIN_ID}"` 은 Explore API의 일부로 대체됩니다. |
+| `id` | `marketingListKey.sourceID` |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `marketingListKey.sourceKey` | 기본 ID. `"${MUNCHKIN_ID}"` 값이 자동으로 대체됩니다. |
 | `name` | `marketingListName` |
 | `description` | `marketingListDescription` |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
@@ -176,13 +195,16 @@ ht-degree: 13%
 
 {style=&quot;table-layout:auto&quot;}
 
-## 정적 목록 구성원 {#static-list-memnberships}
+## 정적 목록 구성원 {#static-list-memberships}
 
 | 소스 데이터 세트 | XDM 대상 필드 | 참고 |
 | -------------- | ---------------- | ----- |
-| `staticListMemberID` | `marketingListMemberID` | 기본 ID |
-| `staticListID` | `marketingListID` | 관계 |
-| `personID` | `personID` | 관계 |
+| `"Marketo"` | `marketingListMemberKey.sourceType` |
+| `"${MUNCHKIN_ID}"` | `marketingListMemberKey.sourceInstanceID` | `"${MUNCHKIN_ID}"` 값이 자동으로 대체됩니다. |
+| `staticListMemberID` | `marketingListMemberKey.sourceID` |
+| `concat(staticListMemberID,"@${MUNCHKIN_ID}.Marketo")` | `marketingListMemberKey.sourceKey` | 기본 ID. `"${MUNCHKIN_ID}"` 값이 자동으로 대체됩니다. |
+| `iif(staticListID != null && staticListID != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", staticListID, "sourceKey", concat(staticListID,"@${MUNCHKIN_ID}.Marketo")), null)` | `marketingListKey` | 관계 |
+| `iif(personID != null && personID != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", personID, "sourceKey", concat(personID,"@${MUNCHKIN_ID}.Marketo")), null)` | `personKey` | 관계 |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 
 {style=&quot;table-layout:auto&quot;}
@@ -195,8 +217,11 @@ ht-degree: 13%
 
 | 소스 데이터 세트 | XDM 대상 필드 | 참고 |
 | -------------- | ---------------- | ----- |
-| `id` | `accountID` | 기본 ID |
-| `crmGuid` | `extSourceSystemAudit.externalID` | 보조 ID |
+| `"Marketo"` | `accountKey.sourceType` |
+| `"${MUNCHKIN_ID}"` | `accountKey.sourceInstanceID` | `"${MUNCHKIN_ID}"` 값이 자동으로 대체됩니다. |
+| `concat(id, ".mkto_acct")` | `accountKey.sourceID` |
+| `concat(id, ".mkto_acct@${MUNCHKIN_ID}.Marketo")` | `accountKey.sourceKey` | 기본 ID. `"${MUNCHKIN_ID}"` 값이 자동으로 대체됩니다. |
+| `iif(crmGuid != null && crmGuid != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", crmGuid, "sourceKey", concat(crmGuid,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey` | 보조 ID. `{CRM_ORG_ID}` 및 `{CRM_TYPE}` 값은 자동으로 대체됩니다. |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `city` | `accountBillingAddress.city` |
@@ -208,7 +233,7 @@ ht-degree: 13%
 | `logoUrl` | `accountOrganization.logoUrl` |
 | `numberOfEmployees` | `accountOrganization.numberOfEmployees` |
 | `name` | `accountName` |
-| `parentAccountId` | `accountParentID` |
+| `iif(parentAccountId != null && parentAccountId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}", "sourceID", concat(parentAccountId, ".mkto_acct"), "sourceKey", concat(parentAccountId, ".mkto_acct@${MUNCHKIN_ID}.Marketo")), null)` | `accountParentKey` |
 | `sourceType` | `accountSourceType` |
 
 {style=&quot;table-layout:auto&quot;}
@@ -217,9 +242,11 @@ ht-degree: 13%
 
 | 소스 데이터 세트 | XDM 대상 필드 | 참고 |
 | -------------- | ---------------- | ----- |
-| `id` | `opportunityID` | 기본 ID |
-| `externalOpportunityId` | `extSourceSystemAudit.externalID` | 보조 ID |
-| `mktoCdpAccountOrgId` | `accountID` | 관계 |
+| `"Marketo"` | `opportunityKey.sourceType` |
+| `"${MUNCHKIN_ID}"` | `opportunityKey.sourceInstanceID` | `"${MUNCHKIN_ID}"` 값이 자동으로 대체됩니다. |
+| `id` | `opportunityKey.sourceID` |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `opportunityKey.sourceKey` | 기본 ID. `"${MUNCHKIN_ID}"` 값이 자동으로 대체됩니다. |
+| `iif(externalOpportunityId != null && externalOpportunityId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", externalOpportunityId, "sourceKey", concat(externalOpportunityId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey` | 보조 ID. `{CRM_ORG_ID}` 및 `{CRM_TYPE}` 값은 자동으로 대체됩니다. |
 | `description` | `opportunityDescription` |
 | `name` | `opportunityName` |
 | `stage` | `opportunityStage` |
@@ -237,7 +264,7 @@ ht-degree: 13%
 | `isWon` | `isWon` |
 | `quantity` | `opportunityQuantity` |
 | `probability` | `probabilityPercentage` |
-| `mktoCdpSourceCampaignId` | `campaignID` | Salesforce 통합을 사용하는 경우에만 권장됩니다. |
+| `iif(mktoCdpSourceCampaignId != null && mktoCdpSourceCampaignId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", mktoCdpSourceCampaignId, "sourceKey", concat(mktoCdpSourceCampaignId,"@${MUNCHKIN_ID}.Marketo")), null)` | `campaignKey` | 이 소스 데이터 세트는 [!DNL Salesforce] 통합을 사용하는 사용자만 사용할 수 있습니다. |
 | `lastActivityDate` | `lastActivityDate` |
 | `leadSource` | `leadSource` |
 | `nextStep` | `nextStep` |
@@ -248,10 +275,13 @@ ht-degree: 13%
 
 | 소스 데이터 세트 | XDM 대상 필드 | 참고 |
 | -------------- | ---------------- | ----- |
-| `id` | `opportunityPersonID` | 기본 ID |
-| `mktoCdpSfdcId` | `extSourceSystemAudit.externalID` | 보조 ID |
-| `mktoCdpOpptyId` | `opportunityID` | 관계 |
-| `leadId` | `personID` | 관계 |
+| `"Marketo"` | `opportunityPersonKey.sourceType` |
+| `"${MUNCHKIN_ID}"` | `opportunityPersonKey.sourceInstanceID` | `"${MUNCHKIN_ID}"` 값이 자동으로 대체됩니다. |
+| `id` | `opportunityPersonKey.sourceID` |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | 기본 ID. `"${MUNCHKIN_ID}"` 값은 Explore API의 일부로 대체됩니다. |
+| `iif(mktoCdpSfdcId != null && mktoCdpSfdcId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", mktoCdpSfdcId, "sourceKey", concat(mktoCdpSfdcId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey` | 보조 ID. `{CRM_ORG_ID}` 및 `{CRM_TYPE}` 값은 자동으로 대체됩니다. |
+| `iif(mktoCdpOpptyId != null && mktoCdpOpptyId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", mktoCdpOpptyId, "sourceKey", concat(mktoCdpOpptyId,"@${MUNCHKIN_ID}.Marketo")), null)` | `opportunityKey` | 관계 |
+| `iif(leadId != null && leadId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", leadId, "sourceKey", concat(leadId,"@${MUNCHKIN_ID}.Marketo")), null)` | `personKey` | 관계 |
 | `role` | `personRole` |
 | `isPrimary` | `isPrimary` |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
@@ -263,8 +293,13 @@ ht-degree: 13%
 
 | 소스 데이터 세트 | XDM 대상 필드 | 참고 |
 | -------------- | ---------------- | ----- |
-| `id` | `personID` | 기본 ID |
-| `contactCompany` | `b2b.accountID` |
+| `"Marketo"` | `b2b.personKey.sourceType` |
+| `"${MUNCHKIN_ID}"` | `b2b.personKey.sourceInstanceID` | `"${MUNCHKIN_ID}"` 값이 자동으로 대체됩니다. |
+| `id` | `b2b.personKey.sourceID` |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `b2b.personKey.sourceKey` | 기본 ID. `"${MUNCHKIN_ID}"` 값이 자동으로 대체됩니다. |
+| `iif(unsubscribed == 'true', 'n', 'y' ))` | `consents.marketing.email.val` | 구독을 취소한 항목이 `true`(예: 값 = `1`)이면 `consents.marketing.email.val`를 (`n`)로 설정하십시오. 구독을 취소한 항목이 `false`(예: 값 = `0`)이면 `consents.marketing.email.val`를 `null`(으)로 설정하십시오. |
+| `unsubscribedReason` | `consents.marketing.email.reason` |
+| `iif(contactCompany != null && contactCompany != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", concat(contactCompany, ".mkto_org"), "sourceKey", concat(contactCompany, ".mkto_org@${MUNCHKIN_ID}.Marketo")), null)` | `b2b.accountKey` |
 | `marketingSuspended` | `b2b.isMarketingSuspended` |
 | `marketingSuspendedCause` | `b2b.marketingSuspendedCause` |
 | `leadScore` | `b2b.personScore` |
@@ -272,10 +307,9 @@ ht-degree: 13%
 | `leadStatus` | `b2b.personStatus` |
 | `personType` | `b2b.personType` |
 | `leadPartitionId` | `b2b.personGroupID` |
-| `mktoCdpCnvContactPersonId` | `b2b.convertedContactID` |
 | `mktoCdpIsConverted` | `b2b.isConverted` |
 | `mktoCdpConvertedDate` | `b2b.convertedDate` |
-| `sfdcLeadId` | `extSourceSystemAudit.externalID` | 보조 ID |
+| <ul><li>`iif(decode(sfdcType, "Contact", sfdcContactId, "Lead", sfdcLeadId , null) != null, to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", decode(sfdcType, "Contact", sfdcContactId, "Lead", sfdcLeadId , null), "sourceKey", concat(decode(sfdcType, "Contact", sfdcContactId, "Lead", sfdcLeadId , null),"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li><li>`iif(decode(msftType, "Contact", msftContactId, "Lead", msftLeadId , null) != null, to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", decode(msftType, "Contact", msftContactId, "Lead", msftLeadId , null), "sourceKey", concat(decode(msftType, "Contact", msftContactId, "Lead", msftLeadId , null),"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li></ul> | `extSourceSystemAudit.externalKey` | `extSourceSystemAudit.externalKey`은 보조 ID입니다. |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `title` | `extendedWorkDetails.jobTitle` |
@@ -298,13 +332,12 @@ ht-degree: 13%
 | `leadStatus` | `personComponents.personStatus` |
 | `personType` | `personComponents.personType` |
 | `leadPartitionId` | `personComponents.personGroupID` |
-| `mktoCdpCnvContactPersonId` | `personComponents.sourceConvertedContactID` |
-| `contactCompany` | `personComponents.sourceAccountID` |
-| `sfdcContactId` | `personComponents.sourceExternalID` | Salesforce 통합을 사용하는 경우에만 권장됩니다. |
-| `id` | `personComponents.sourcePersonID` |
+| `iif(contactCompany != null && contactCompany != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}", "sourceID", concat(contactCompany, ".mkto_org"), "sourceKey", concat(contactCompany, ".mkto_org@${MUNCHKIN_ID}.Marketo")), null)` | `personComponents.sourceAccountKey` |
+| <ul><li>`iif(decode(sfdcType, "Contact", sfdcContactId, "Lead", sfdcLeadId , null) != null, to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", decode(sfdcType, "Contact", sfdcContactId, "Lead", sfdcLeadId , null), "sourceKey", concat(decode(sfdcType, "Contact", sfdcContactId, "Lead", sfdcLeadId , null),"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li><li>`iif(decode(msftType, "Contact", msftContactId, "Lead", msftLeadId , null) != null, to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", decode(msftType, "Contact", msftContactId, "Lead", msftLeadId , null), "sourceKey", concat(decode(msftType, "Contact", msftContactId, "Lead", msftLeadId , null),"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li></ul> | `personComponents.sourceExternalKey` |
+| `iif(id != null && id != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", id, "sourceKey", concat(id,"@${MUNCHKIN_ID}.Marketo")), null)` | `personComponents.sourcePersonKey` |
 | `email` | `personComponents.workEmail.address` |
 | `email` | `workEmail.address` |
-| `to_object('ECID',arrays_to_objects('id',explode(ecids)))` | `identityMap` |
+| `iif(ecids != null, to_object('ECID',arrays_to_objects('id',explode(ecids))), null)` | `identityMap` | 계산된 필드입니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
