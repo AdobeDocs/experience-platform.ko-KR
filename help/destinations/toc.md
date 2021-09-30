@@ -4,9 +4,9 @@ user-guide-title: 대상 안내서
 user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화합니다.
 description: 이 문서에서는 Adobe Experience Platform 대상의 목차 목록을 설명합니다
 feature: Destinations
-source-git-commit: 9ec7bd591af6c76a794f83d5a984017330328238
+source-git-commit: 6c21398a3f2fb26cc925ca1f5dcbe92b306a8325
 workflow-type: tm+mt
-source-wordcount: '628'
+source-wordcount: '644'
 ht-degree: 10%
 
 ---
@@ -27,6 +27,7 @@ ht-degree: 10%
       * [스트리밍 세그먼트 내보내기 대상으로 대상 데이터 활성화](./ui/activate-segment-streaming-destinations.md)
       * [스트리밍 프로필 내보내기 대상으로 대상 데이터 활성화](./ui/activate-streaming-profile-destinations.md)
       * [대상자 데이터를 활성화하여 묶음 프로필 내보내기 대상 활성화](./ui/activate-batch-profile-destinations.md)
+      * [프로필 요청 대상에 대상 데이터 활성화(베타)](./ui/activate-profile-request-destinations.md)
    * [대상 세부 사항 보기](./ui/destination-details-page.md)
    * [대상 계정 업데이트](./ui/update-accounts.md)
    * [활성화 흐름 편집](./ui/edit-activation.md)
@@ -114,9 +115,11 @@ ht-degree: 10%
       * [연결 브레이즈](./catalog/mobile-engagement/braze.md)
    * 개인화 대상 {#personalization}
       * [개인화 대상 개요](./catalog/personalization/overview.md)
+      * [Adobe Target 연결(베타)](./catalog/personalization/adobe-target-connection.md)
       * [Adobe Target 확장](./catalog/personalization/adobe-target.md)
       * [Adobe Target v2 확장](./catalog/personalization/adobe-target-v2.md)
       * [Beemray 확장](./catalog/personalization/beemray.md)
+      * [사용자 지정 개인화 연결(베타)](./catalog/personalization/custom-personalization.md)
       * [D&amp;B Visitor Intelligence 확장](./catalog/personalization/dnb.md)
       * [Experience Cloud ID 서비스 확장](./catalog/personalization/adobe-ecid.md)
       * [Gainsight 확장](./catalog/personalization/gainsight.md)
