@@ -2,9 +2,9 @@
 title: 'GitHub 웹 인터페이스를 사용하여 대상 설명서 페이지를 만듭니다 '
 description: 이 페이지의 지침은 GitHub 웹 인터페이스를 사용하여 Experience Platform 대상에 대한 설명서 페이지를 작성 및 검토를 위해 제출하는 방법을 보여줍니다.
 exl-id: 4780e05e-3d1d-4f1b-8441-df28d09c1a88
-source-git-commit: 83539a9aa2fddcae0c9a44302d8bfa9d9f56de0c
+source-git-commit: 1bbff0fa54f1b7ef1ee70efd2a85cd43b34b2f5a
 workflow-type: tm+mt
-source-wordcount: '768'
+source-wordcount: '780'
 ht-degree: 1%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 1%
 ## GitHub 작성 환경 설정 {#set-up-environment}
 
 1. 브라우저에서 `https://github.com/AdobeDocs/experience-platform.en`(으)로 이동합니다.
-2. 리포지토리를 [포크](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#fork-the-repository)하려면 아래 이미지에 표시된 대로 **포크**&#x200B;를 클릭하십시오.
+2. 리포지토리를 [포크](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#fork-the-repository)하려면 아래 표시된 대로 **포크**&#x200B;를 클릭하십시오. 이렇게 하면 고유한 GitHub 계정에 Experience Platform 리포지토리의 복사본이 만들어집니다.
 
    ![포크 Adobe 설명서 저장소](./assets/ssd-fork-repository.gif)
 
@@ -61,7 +61,7 @@ ht-degree: 1%
 >
 >여기서 벗어날 수 있는 것은 아무것도 없습니다. 이 섹션의 지침에 따라 설명서 업데이트를 제안하는 것입니다. 제안된 업데이트는 Adobe Experience Platform 설명서 팀이 승인하거나 편집합니다.
 
-1. 파일을 저장하고 원하는 이미지를 업로드한 후 끌어오기 요청(PR)을 열어 작업 분기를 Adobe 설명서 저장소의 마스터 분기에 병합할 수 있습니다. 작업한 분기가 선택되어 있는지 확인하고 **Contribute > 가져오기 요청**&#x200B;을 선택합니다.
+1. 파일을 저장하고 원하는 이미지를 업로드한 후 끌어오기 요청(PR)을 열어 작업 분기를 Adobe 설명서 저장소의 마스터 분기에 병합할 수 있습니다. 작업한 분기가 선택되어 있는지 확인하고 **Contribute > 열기 가져오기 요청**&#x200B;을 선택합니다.
 
 ![가져오기 요청 만들기](./assets/ssd-create-pull-request-1.gif)
 

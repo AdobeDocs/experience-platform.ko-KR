@@ -2,9 +2,9 @@
 title: 로컬 환경에서 텍스트 편집기를 사용하여 대상 설명서 페이지를 만듭니다
 description: 이 페이지의 지침은 로컬 환경에서 텍스트 편집기를 사용하여 Experience Platform 대상에 대한 설명서 페이지를 작성하여 검토를 위해 제출하는 방법을 보여줍니다.
 exl-id: 125f2d10-0190-4255-909c-5bd5bb59fcba
-source-git-commit: 83539a9aa2fddcae0c9a44302d8bfa9d9f56de0c
+source-git-commit: 1bbff0fa54f1b7ef1ee70efd2a85cd43b34b2f5a
 workflow-type: tm+mt
-source-wordcount: '871'
+source-wordcount: '885'
 ht-degree: 2%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 2%
 ## GitHub에 연결하고 로컬 작성 환경을 설정합니다 {#set-up-environment}
 
 1. 브라우저에서 `https://github.com/AdobeDocs/experience-platform.en`(으)로 이동합니다.
-2. 리포지토리를 [포크](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#fork-the-repository)하려면 스크린샷에 표시된 대로 **포크**&#x200B;를 클릭합니다.
+2. 리포지토리를 [포크](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#fork-the-repository)하려면 아래 표시된 대로 **포크**&#x200B;를 클릭하십시오. 이렇게 하면 고유한 GitHub 계정에 Experience Platform 리포지토리의 복사본이 만들어집니다.
 
    ![포크 Adobe 설명서 저장소](./assets/ssd-fork-repository.gif)
 
@@ -61,7 +61,7 @@ ht-degree: 2%
 
    ![커밋 푸시](./assets/push-local-to-remote.png)
 
-1. GitHub 웹 인터페이스에서 끌어오기 요청(PR)을 열어 작업 분기를 Adobe 설명서 저장소의 마스터 분기에 병합합니다. 작업한 분기가 선택되어 있는지 확인하고 **가져오기 요청**&#x200B;을 선택합니다.
+1. GitHub 웹 인터페이스에서 끌어오기 요청(PR)을 열어 작업 분기를 Adobe 설명서 저장소의 마스터 분기에 병합합니다. 작업한 분기가 선택되어 있는지 확인하고 **Contribute > 열기 가져오기 요청**&#x200B;을 선택합니다.
 
    ![가져오기 요청 만들기](./assets/ssd-create-pull-request-1.gif)
 
