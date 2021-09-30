@@ -1,14 +1,15 @@
 ---
 title: 실시간 고객 데이터 플랫폼 B2B 버전에서 두 스키마 간의 관계 정의
 description: 실시간 고객 데이터 플랫폼 B2B Edition에서 두 스키마 간에 일대일 관계를 정의하는 방법을 알아봅니다.
-source-git-commit: d83ad2870b6099d3c6359dcc7cd000ecad8a238f
+exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
+source-git-commit: 2ad20a4c7a9d1cc71fc4e589de90d7eabf8c87b7
 workflow-type: tm+mt
-source-wordcount: '1220'
+source-wordcount: '1221'
 ht-degree: 0%
 
 ---
 
-# 실시간 고객 데이터 플랫폼 B2B 버전에서 두 스키마 간의 관계를 정의합니다
+# 실시간 고객 데이터 플랫폼 B2B 버전(베타)에서 두 스키마 간의 관계를 정의합니다
 
 >[!IMPORTANT]
 >
