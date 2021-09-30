@@ -1,10 +1,10 @@
 ---
 keywords: 사용자 지정 개인화; 대상; experience platform 사용자 지정 대상
-title: 사용자 지정 개인화 대상
+title: 사용자 지정 개인화 연결(베타)
 description: 이 대상은 Adobe Experience Platform에서 세그먼트 정보를 검색하는 방법으로 사이트에서 실행 중인 외부 개인화, 콘텐츠 관리 시스템, 광고 서버 및 기타 애플리케이션을 제공합니다. 이 대상은 사용자 프로필의 세그먼트 멤버십을 기반으로 실시간 1:1 및 개인화를 제공합니다.
-source-git-commit: 6c21398a3f2fb26cc925ca1f5dcbe92b306a8325
+source-git-commit: 0635828cf3f637e67d2cabda860ca452e61892d4
 workflow-type: tm+mt
-source-wordcount: '573'
+source-wordcount: '578'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 ## 내보내기 유형 {#export-type}
 
-**프로필 요청**  - 단일 프로필에 대해 사용자 지정 개인화 대상에 매핑된 모든 세그먼트를 요청합니다. 다양한 Adobe 데이터 수집 데이터 세트에 대해 다양한 사용자 지정 개인화 대상을 설정할 수 있습니다.
+**프로필 요청**  - 단일 프로필에 대해 사용자 지정 개인화 대상에 매핑된 모든 세그먼트를 요청합니다. 다른 [Adobe 데이터 수집 데이터 세트에 대해 서로 다른 사용자 지정 개인화 대상을 설정할 수 있습니다](../../../edge/fundamentals/datastreams.md).
 
 ## 사용 사례 {#use-cases}
 
@@ -62,7 +62,7 @@ ht-degree: 0%
 
 [Adobe 태그](../../../tags/home.md)를 사용하여 Experience Platform 웹 SDK를 배포하는 경우 [이벤트 완료](../../../edge/extension/event-types.md) 기능을 사용하고 사용자 지정 코드 작업에는 내보낸 데이터를 보는 데 사용할 수 있는 `event.destinations` 변수가 있습니다.
 
-[Adobe 태그](../../../tags/home.md)를 사용하여 Experience Platform 웹 SDK를 배포하지 않는 경우, [events](../../../edge/fundamentals/tracking-events.md#handling-responses-from-events) 기능의 응답 처리 를 사용하십시오.
+[Adobe 태그](../../../tags/home.md)를 사용하여 Experience Platform 웹 SDK를 배포하지 않는 경우, [events](../../../edge/fundamentals/tracking-events.md#handling-responses-from-events) 기능의 응답 처리 를 사용하여 내보낸 데이터를 확인하십시오.
 
 Adobe Experience Platform의 JSON 응답을 구문 분석하여 Adobe Experience Platform과 통합하는 애플리케이션의 해당 통합 별칭을 찾을 수 있습니다. 세그먼트 ID를 타깃팅 매개 변수로 애플리케이션의 코드에 전달할 수 있습니다. 아래는 대상 응답에만 적용되는 샘플입니다.
 

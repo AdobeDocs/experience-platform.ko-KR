@@ -1,10 +1,10 @@
 ---
 keywords: target 개인화; 대상; experience platform target 대상;adobe target 대상
-title: Adobe Target 연결
+title: Adobe Target 연결(베타)
 description: Adobe Target은 웹 사이트, 모바일 앱 등에서 모든 인바운드 고객 상호 작용에서 실시간, 1:1 및 AI 기반의 개인화 및 실험을 제공하는 애플리케이션입니다.
-source-git-commit: caccd096c9165139d9b966bbfcb311456276192a
+source-git-commit: 0635828cf3f637e67d2cabda860ca452e61892d4
 workflow-type: tm+mt
-source-wordcount: '391'
+source-wordcount: '392'
 ht-degree: 1%
 
 ---

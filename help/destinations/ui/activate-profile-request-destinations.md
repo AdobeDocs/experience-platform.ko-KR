@@ -1,13 +1,13 @@
 ---
 keywords: 프로필 요청 대상 활성화;데이터 활성화;프로필 요청 대상 활성화
-title: 프로필 요청 대상에 대상 데이터 활성화
+title: 프로필 요청 대상에 대상 데이터 활성화(베타)
 type: Tutorial
 seo-title: Activate audience data to profile request destinations
 description: 세그먼트를 프로필 요청 대상에 매핑하여 Adobe Experience Platform에서 보유한 대상 데이터를 활성화하는 방법을 알아봅니다.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by mapping segments to profile request destinations.
-source-git-commit: caccd096c9165139d9b966bbfcb311456276192a
+source-git-commit: 0635828cf3f637e67d2cabda860ca452e61892d4
 workflow-type: tm+mt
-source-wordcount: '490'
+source-wordcount: '474'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 0%
 
 ### 세그먼트 병합 정책 {#merge-policy}
 
-프로필 요청 대상은 현재 기본 병합 정책을 사용하는 세그먼트의 활성화만 지원합니다. 다른 병합 정책으로 세그먼트를 활성화하려고 하면 [[!UICONTROL 검토]](#review) 페이지에 오류가 발생합니다.
+현재 프로필 요청 대상은 [기본 병합 정책](../../segmentation/ui/segment-builder.md#merge-policies)을 사용하는 세그먼트의 활성화만 지원합니다.
 
 ## 대상을 선택합니다 {#select-destination}
 
