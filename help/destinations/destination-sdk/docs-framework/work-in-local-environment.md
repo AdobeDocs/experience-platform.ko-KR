@@ -1,13 +1,11 @@
 ---
 title: 로컬 환경에서 텍스트 편집기를 사용하여 대상 설명서 페이지를 만듭니다
-seo-title: Use a text editor in your local environment to create a destination documentation page
-description: 이 페이지의 지침은 로컬 환경에서 텍스트 편집기를 사용하여 설명서를 작성하고 끌어오기 요청을 제출하는 방법을 보여줍니다.
-seo-description: The instructions on this page show you how to use a text editor to work in your local environment to author documentation and submit a pull request.
+description: 이 페이지의 지침은 로컬 환경에서 텍스트 편집기를 사용하여 Experience Platform 대상에 대한 설명서 페이지를 작성하여 검토를 위해 제출하는 방법을 보여줍니다.
 exl-id: 125f2d10-0190-4255-909c-5bd5bb59fcba
-source-git-commit: e1e7d2f70c032d02f96b3999e4fca736070c6ca9
+source-git-commit: 83539a9aa2fddcae0c9a44302d8bfa9d9f56de0c
 workflow-type: tm+mt
-source-wordcount: '826'
-ht-degree: 3%
+source-wordcount: '871'
+ht-degree: 2%
 
 ---
 
@@ -28,7 +26,7 @@ ht-degree: 3%
 1. 브라우저에서 `https://github.com/AdobeDocs/experience-platform.en`(으)로 이동합니다.
 2. 리포지토리를 [포크](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#fork-the-repository)하려면 스크린샷에 표시된 대로 **포크**&#x200B;를 클릭합니다.
 
-   ![포크 Adobe 설명서 저장소](./assets/ssd-fork-repo.png)
+   ![포크 Adobe 설명서 저장소](./assets/ssd-fork-repository.gif)
 
 3. 로컬 컴퓨터에 리포지토리 복제. 아래 표시된 대로 **코드 > HTTPS > GitHub Desktop에서 열기**&#x200B;를 선택합니다. [GitHub Desktop](https://desktop.github.com/)이 설치되어 있는지 확인합니다. 자세한 내용은 Adobe 기여자 안내서에서 [리포지토리의 로컬 복제 만들기](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#create-a-local-clone-of-the-repository)를 참조하십시오.
 
@@ -47,6 +45,10 @@ ht-degree: 3%
 
 ## 검토할 설명서 제출 {#submit-review}
 
+>[!TIP]
+>
+>여기서 벗어날 수 있는 것은 아무것도 없습니다. 이 섹션의 지침에 따라 설명서 업데이트를 제안하는 것입니다. 제안된 업데이트는 Adobe Experience Platform 설명서 팀이 승인하거나 편집합니다.
+
 1. GitHub Desktop에서 업데이트에 대한 작업 분기를 만들고 **분기 게시**&#x200B;를 선택하여 분기를 GitHub에 게시합니다.
 
 ![새 분기 로컬](./assets/new-branch-local.gif)
@@ -61,7 +63,7 @@ ht-degree: 3%
 
 1. GitHub 웹 인터페이스에서 끌어오기 요청(PR)을 열어 작업 분기를 Adobe 설명서 저장소의 마스터 분기에 병합합니다. 작업한 분기가 선택되어 있는지 확인하고 **가져오기 요청**&#x200B;을 선택합니다.
 
-   ![가져오기 요청 만들기](./assets/ssd-create-pull-request-1.png)
+   ![가져오기 요청 만들기](./assets/ssd-create-pull-request-1.gif)
 
 1. 기본 및 비교 분기가 올바른지 확인합니다. 업데이트를 설명하는 PR에 메모를 추가하고 **끌어오기 요청 만들기**&#x200B;를 선택합니다. 이렇게 하면 포크의 작업 분기를 Adobe 저장소의 마스터 분기에 병합하는 PR이 열립니다.
    >[!TIP]
