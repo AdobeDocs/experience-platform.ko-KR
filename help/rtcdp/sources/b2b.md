@@ -1,7 +1,8 @@
 ---
-title: 실시간 고객 데이터 플랫폼 B2B 에디션의 스키마
+title: 실시간 고객 데이터 플랫폼 B2B 에디션의 소스
 description: 실시간 고객 데이터 플랫폼 B2B 에디션에서 소스의 역할에 대한 개요입니다.
-source-git-commit: 457a5729e936582f30851a11375a904916871096
+exl-id: eeea4b2e-67c5-4491-9b8e-4b8987e44777
+source-git-commit: b8c14fc2e32a6a8f92309f4956cc5415d833a73f
 workflow-type: tm+mt
 source-wordcount: '160'
 ht-degree: 0%
