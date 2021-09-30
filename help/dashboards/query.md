@@ -1,15 +1,15 @@
 ---
 solution: Experience Platform
-title: 원시 데이터 세트 탐색 및 처리 Experience Platform 기반 대시보드
+title: Platform 대시보드를 제공하는 원시 데이터 세트 탐색 및 처리
 type: Documentation
 description: Query Service를 사용하여 Experience Platform에서 프로필, 세그먼트 및 대상 대시보드에 적용되는 원시 데이터 세트를 탐색하고 처리하는 방법을 알아봅니다.
-source-git-commit: 1facf7079213918c2ef966b704319827eaa4a53d
+exl-id: 0087dcab-d5fe-4a24-85f6-587e9ae74fb8
+source-git-commit: b9dd7584acc43b5946f8c0669d7a81001e44e702
 workflow-type: tm+mt
-source-wordcount: '614'
+source-wordcount: '738'
 ht-degree: 1%
 
 ---
-
 
 # Query Service를 사용하여 대시보드 데이터 세트를 탐색, 확인 및 처리합니다
 
@@ -27,19 +27,36 @@ Query Service를 사용하여 프로필, 세그먼트 및 대상 대시보드에
 
 ### 프로필 속성 데이터 세트
 
-실시간 고객 프로필의 모든 활성 병합 정책에 대해 데이터 레이크에서 사용할 수 있는 프로필 속성 데이터 세트가 있습니다.
+프로필 대시보드 인사이트는 조직에서 정의한 병합 정책에 연결됩니다. 모든 활성 병합 정책에 대해 데이터 레이크에서 사용할 수 있는 프로필 속성 데이터 세트가 있습니다.
 
-이러한 데이터 세트의 이름 지정 규칙은 **프로필 속성** 뒤에 영숫자 값이 옵니다. 예: `Profile Attribute 14adf268-2a20-4dee-bee6-a6b0e34616a9`
+이러한 데이터 세트의 이름 지정 규칙은 **Profile-Snapshot-Export** 뒤에 시스템이 생성한 임의의 영숫자 값이 옵니다. 예: `Profile-Snapshot-Export-abbc7093-80f4-4b49-b96e-e743397d763f`.
 
-각 데이터 세트의 전체 스키마를 이해하려면 Experience Platform UI에서 데이터 세트 뷰어를 사용하여 데이터 세트를 미리 보고 탐색할 수 있습니다.
+각 프로필 스냅샷 내보내기 데이터 세트의 전체 스키마를 이해하려면 Experience Platform UI에서 데이터 세트 뷰어](../catalog/datasets/user-guide.md)를 사용하여 데이터 세트 [을 미리 보고 탐색할 수 있습니다.
+
+![](images/query/profile-attribute.png)
+
+#### 프로필 속성 데이터 세트를 병합 정책 ID에 매핑
+
+각 프로필 속성 데이터 세트에는 **프로필 스냅샷 내보내기** 뒤에 시스템이 생성한 임의 영숫자 값이 옵니다. 예: `Profile-Snapshot-Export-abbc7093-80f4-4b49-b96e-e743397d763f`.
+
+이 영숫자 값은 조직에서 만든 병합 정책 중 하나의 병합 정책 ID에 매핑되는 시스템에서 생성된 임의의 문자열입니다. 각 병합 정책 ID를 해당 관련 프로필 속성 데이터 세트 문자열에 대한 매핑은 `adwh_dim_merge_policies` 데이터 세트에서 유지됩니다.
+
+`adwh_dim_merge_policies` 데이터 세트에 다음 필드가 포함되어 있습니다.
+
+* `merge_policy_name`
+* `merge_policy_id`
+* `merge_policy`
+* `dataset_id`
+
+이 데이터 집합은 Experience Platform의 쿼리 편집기 UI를 사용하여 탐색할 수 있습니다. 쿼리 편집기 사용에 대한 자세한 내용은 [쿼리 편집기 UI 안내서](../query-service/ui/user-guide.md)를 참조하십시오.
 
 ### 세그먼트 메타데이터 데이터 세트
 
 각 조직의 세그먼트에 대한 메타데이터가 포함된 데이터 레이크에서 사용할 수 있는 세그먼트 메타데이터 데이터 세트가 있습니다.
 
-이 데이터 집합의 이름 지정 규칙은 **프로필 세그먼트 정의**&#x200B;에 영숫자 값이 옵니다. 예: `Profile Segment Definition 6591ba8f-1422-499d-822a-543b2f7613a3`
+이 데이터 집합에 대한 이름 지정 규칙은 **Segmentdefinition-Snapshot-Export** 다음에 영숫자 값이 옵니다. 예: `Segmentdefinition-Snapshot-Export-acf28952-2b6c-47ed-8f7f-016ac3c6b4e7`
 
-데이터 세트의 전체 스키마를 이해하려면 Experience Platform UI에서 데이터 세트 뷰어를 사용하여 스키마를 미리 보고 탐색할 수 있습니다.
+각 세그먼트 정의 스냅샷 내보내기 데이터 세트의 전체 스키마를 이해하려면 Experience Platform UI에서 데이터 세트 뷰어](../catalog/datasets/user-guide.md)를 사용하여 데이터 세트 [을(를) 미리 보고 탐색할 수 있습니다.
 
 ![](images/query/segment-metadata.png)
 
@@ -49,7 +66,7 @@ Query Service를 사용하여 프로필, 세그먼트 및 대상 대시보드에
 
 이 데이터 집합의 이름 지정 규칙은 **DIM_Destination**&#x200B;입니다.
 
-데이터 세트의 전체 스키마를 이해하려면 Experience Platform UI에서 데이터 세트 뷰어를 사용하여 스키마를 미리 보고 탐색할 수 있습니다.
+DIM 대상 데이터 집합의 전체 스키마를 이해하려면 Experience Platform UI에서 데이터 집합 뷰어](../catalog/datasets/user-guide.md)를 사용하여 데이터 집합 [을(를) 미리 보고 탐색할 수 있습니다.
 
 ![](images/query/destinations-metadata.png)
 
@@ -59,7 +76,11 @@ Query Service를 사용하여 프로필, 세그먼트 및 대상 대시보드에
 
 ### ID별 프로필 수
 
-이 프로필 인사이트는 데이터 집합에 있는 모든 병합된 프로필에서 ID의 분류를 제공합니다. 한 프로필에는 여러 네임스페이스가 연결되어 있을 수 있으므로 ID별 총 프로필 수(즉, 각 네임스페이스에 대해 표시된 값을 함께 추가)는 병합된 총 프로필 수보다 높을 수 있습니다. 예를 들어 고객이 둘 이상의 채널에서 브랜드와 상호 작용하는 경우 여러 네임스페이스가 해당 개별 고객과 연결됩니다.
+이 프로필 인사이트는 데이터 집합에 있는 모든 병합된 프로필에서 ID의 분류를 제공합니다.
+
+>[!NOTE]
+>
+>한 프로필에는 여러 네임스페이스가 연결되어 있을 수 있으므로 ID별 총 프로필 수(즉, 각 네임스페이스에 대해 표시된 값을 함께 추가)는 병합된 총 프로필 수보다 높을 수 있습니다. 예를 들어 고객이 둘 이상의 채널에서 브랜드와 상호 작용하는 경우 여러 네임스페이스가 해당 개별 고객과 연결됩니다.
 
 **쿼리**
 
@@ -72,7 +93,7 @@ Select
            Select
                explode(identitymap)
            from
-              profile_attribute_14adf268-2a20-4dee-bee6-a6b0e34616a9
+              Profile-Snapshot-Export-abbc7093-80f4-4b49-b96e-e743397d763f
         )
      group by
         namespace;
@@ -96,7 +117,7 @@ Select
                   Select
                     explode(Segmentmembership)
                   from
-                    profile_attribute_14adf268-2a20-4dee-bee6-a6b0e34616a9
+                    Profile-Snapshot-Export-abbc7093-80f4-4b49-b96e-e743397d763f
               )
         )
       group by

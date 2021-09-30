@@ -4,9 +4,9 @@ title: 프로필 대시보드
 description: Adobe Experience Platform은 조직의 실시간 고객 프로필 데이터에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: a63969075215a8f9884d2f41485194bd732694f1
+source-git-commit: d5c69972426008809c3fd0ac03be995efcc2f541
 workflow-type: tm+mt
-source-wordcount: '1496'
+source-wordcount: '1513'
 ht-degree: 0%
 
 ---
@@ -95,7 +95,9 @@ Adobe은 프로필 데이터와 관련된 다양한 지표를 시각화하는 �
 
 >[!NOTE]
 >
->추가된 [!UICONTROL 프로필] 위젯은 조직의 초기 구성 이후 시스템에 추가된 프로필 수를 반영합니다. 예를 들어, 구성 중에 4백만 개의 프로필을 추가하고 지난 30일 동안 1백만 개의 프로필을 추가로 추가한 경우, [!UICONTROL 추가된 프로필] 위젯은 &quot;1,000,000&quot;을 표시하고 [!UICONTROL 프로필 수] 위젯은 &quot;5,000,000&quot;을 표시합니다.
+>추가된 [!UICONTROL 프로필] 위젯은 조직의 초기 구성 이후 시스템에 추가된 프로필 수를 반영합니다. 프로필 저장소에 프로필을 추가하는 방법에 대한 자세한 내용은 [실시간 고객 프로필 설명서](../../profile/home.md)를 참조하십시오.
+>
+>예를 들어, 구성 중에 4백만 개의 프로필을 추가하고 지난 30일 동안 1백만 개의 프로필을 추가로 추가한 경우, [!UICONTROL 추가된 프로필] 위젯은 &quot;1,000,000&quot;을 표시하고 [!UICONTROL 프로필 수] 위젯은 &quot;5,000,000&quot;을 표시합니다.
 
 ![](../images/profiles/profiles-added.png)
 
