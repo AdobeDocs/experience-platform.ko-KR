@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: Adobe Experience Platform에서는 실시간 고객 프로필에서 지원할 수 없는 데이터 모델을 만들지 않도록 하는 데 도움이 되는 일련의 보호 기능을 제공합니다. 이 문서에서는 프로필 데이터를 모델링할 때 기억해야 할 모범 사례 및 제한에 대해 설명합니다.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 441c2978b90a4703874787b3ed8b94c4a7779aa8
+source-git-commit: c351ee91367082cc5fbfc89da50aa2db5e415ea8
 workflow-type: tm+mt
-source-wordcount: '1666'
+source-wordcount: '1962'
 ht-degree: 1%
 
 ---
@@ -23,16 +23,16 @@ Adobe Experience Platform에서는 [!DNL Real-time Customer Profile]에서 지�
 >
 >이 문서에 설명된 보호 기능 및 제한 사항은 지속적으로 개선되고 있습니다. 업데이트를 정기적으로 확인하십시오.
 
-## 시작
+## 시작하기
 
 [!DNL Real-time Customer Profile]에서 사용할 데이터 모델을 만들기 전에 다음 Experience Platform 서비스 설명서를 읽어 보는 것이 좋습니다. 데이터 모델 및 이 문서에 설명된 보호 기능을 사용하려면 [!DNL Real-time Customer Profile] 엔티티 관리와 관련된 다양한 Experience Platform 서비스를 이해해야 합니다.
 
-* [[!DNL Real-time Customer Profile]](home.md):여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
-* [Adobe Experience Platform Identity 서비스](../identity-service/home.md):는 수집할 때 서로 다른 데이터 소스에서 ID를 브리징하여 &quot;고객에 대한 단일 뷰&quot;를 만들 수  [!DNL Platform]있습니다.
-* [[!DNL Experience Data Model (XDM)]](../xdm/home.md):플랫폼이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
-   * [스키마 작성 기본 사항](../xdm/schema/composition.md):Experience Platform 내에서 스키마 및 데이터 모델링을 소개합니다.
-* [Adobe Experience Platform 세그멘테이션 서비스](../segmentation/home.md):고객 행동 및 속성을  [!DNL Platform] 기반으로 고객 프로필에서 대상 세그먼트를 만드는 데 사용되는 내의 세그먼테이션 엔진입니다.
-   * [다중 엔티티 세그먼테이션](../segmentation/multi-entity-segmentation.md):차원 엔티티를 프로필 데이터와 통합하는 세그먼트를 만드는 안내서입니다.
+* [[!DNL Real-time Customer Profile]](home.md): 여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
+* [Adobe Experience Platform Identity 서비스](../identity-service/home.md): 는 수집할 때 서로 다른 데이터 소스에서 ID를 브리징하여 &quot;고객에 대한 단일 뷰&quot;를 만들 수  [!DNL Platform]있습니다.
+* [[!DNL Experience Data Model (XDM)]](../xdm/home.md): 플랫폼이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
+   * [스키마 작성 기본 사항](../xdm/schema/composition.md): Experience Platform 내에서 스키마 및 데이터 모델링을 소개합니다.
+* [Adobe Experience Platform 세그멘테이션 서비스](../segmentation/home.md): 고객 행동 및 속성을  [!DNL Platform] 기반으로 고객 프로필에서 대상 세그먼트를 만드는 데 사용되는 내의 세그먼테이션 엔진입니다.
+   * [다중 엔티티 세그먼테이션](../segmentation/multi-entity-segmentation.md): 차원 엔티티를 프로필 데이터와 통합하는 세그먼트를 만드는 안내서입니다.
 
 ## 엔티티 유형
 
@@ -48,10 +48,6 @@ Adobe Experience Platform에서는 [!DNL Real-time Customer Profile]에서 지�
 
    ![](images/guardrails/profile-and-dimension-entities.png)
 
-## 프로필 조각
-
-이 문서에는 &quot;프로필 조각&quot;을 참조하는 여러 보안 기능이 있습니다. 실시간 고객 프로필은 여러 프로필 조각으로 구성됩니다. 각 조각은 기본 ID인 데이터 세트의 ID에 대한 데이터를 나타냅니다. 즉, 조각은 XDM ExperienceEvent 데이터 세트에 기본 ID 및 이벤트 데이터(시계열)를 포함할 수 있고 기본 ID와 XDM 개별 프로필 데이터 세트에 데이터(시간과 독립적인 속성)로 구성될 수 있습니다.
-
 ## 제한 유형
 
 데이터 모델을 정의할 때는 적절한 성능을 유지하고 시스템 오류를 방지하기 위해 제공된 보호 기능 내에 있는 것이 좋습니다.
@@ -62,6 +58,10 @@ Adobe Experience Platform에서는 [!DNL Real-time Customer Profile]에서 지�
 
 * **하드 제한:** 하드 제한은 시스템에 대한 절대 최대값을 제공합니다. 하드 한도를 넘어서면 중단과 오류가 발생하여 시스템이 예상대로 작동하지 않습니다.
 
+## 프로필 조각
+
+이 문서에는 &quot;프로필 조각&quot;을 참조하는 몇 가지 보호 기능이 있습니다. Experience Platform에서 여러 프로필 조각이 병합되어 실시간 고객 프로필을 형성합니다. 각 조각은 고유한 기본 ID와 주어진 데이터 세트 내에서 해당 ID에 대한 해당 레코드 또는 이벤트 데이터를 나타냅니다. 프로필 조각에 대한 자세한 내용은 [프로필 개요](home.md#profile-fragments-vs-merged-profiles)를 참조하십시오.
+
 ## 데이터 모델 보호 기능
 
 [!DNL Real-time Customer Profile] 과 함께 사용할 데이터 모델을 만들 때에는 다음 보호 기능을 적용하는 것이 좋습니다.
@@ -70,11 +70,13 @@ Adobe Experience Platform에서는 [!DNL Real-time Customer Profile]에서 지�
 
 | 가드레일 | 제한 | 제한 유형 | 설명 |
 | --- | --- | --- | --- |
-| [!DNL Profile] 결합 스키마에 기여하는 데 권장되는 데이터 세트 수 | 20 | 소프트 | **최대 20 [!DNL Profile]개의 데이터 세트가 권장됩니다.** 에 대해 다른 데이터 세트 [!DNL Profile]를 활성화하려면 먼저 기존 데이터 세트를 제거하거나 비활성화해야 합니다. |
+| 프로필 사용 데이터 세트 수 | 20 | 소프트 | **최대 20개의 데이터 세트가  [!DNL Profile] 결합 스키마에 기여할 수 있습니다.** 에 대해 다른 데이터 세트 [!DNL Profile]를 활성화하려면 먼저 기존 데이터 세트를 제거하거나 비활성화해야 합니다. 20개의 데이터 세트 제한에는 다른 Adobe 솔루션(예: Adobe Analytics)의 데이터 세트가 포함됩니다. |
+| 프로필에 대해 활성화된 Adobe Analytics 보고서 세트 데이터 세트 수 | 1 | 소프트 | **프로필에 대해 최대 1개의 Analytics 보고서 세트 데이터 세트를 활성화해야 합니다.** 프로필에 대해 여러 Analytics 보고서 세트 데이터 세트를 활성화하려고 하면 데이터 품질에 의도하지 않은 결과가 발생할 수 있습니다. 자세한 내용은 이 문서 부록의 [Adobe Analytics 데이터 세트](#aa-datasets)에 있는 섹션을 참조하십시오. |
 | 권장되는 다중 엔티티 관계 수 | 5 | 소프트 | **기본 엔티티와 차원 엔티티 간에 정의된 최대 5개의 다중 엔티티 관계가 권장됩니다.** 기존 관계가 제거되거나 비활성화될 때까지 추가 관계 매핑을 수행하지 마십시오. |
 | 다중 엔티티 관계에 사용되는 ID 필드에 대한 최대 JSON 깊이 | 4 | 소프트 | **다중 엔티티 관계에 사용되는 ID 필드에 대해 권장되는 최대 JSON 깊이는 4입니다.** 즉, 중첩된 스키마에서 4개 수준 이상이 중첩된 필드를 관계에서 ID 필드로 사용하지 않아야 합니다. |
 | 프로필 조각의 배열 카디널리티 | &lt;=500 | 소프트 | **프로필 조각(시간에 독립적인 데이터)의 최적 배열 카디널리티는  &lt;>** |
 | ExperienceEvent의 배열 카디널리티 | &lt;=10 | 소프트 | **ExperienceEvent(시계열 데이터)의 최적 배열 카디널리티는 다음과 같습니다  &lt;>** |
+| 개별 프로필 ID 그래프의 ID 수 제한 | 50 | 하드 | **개별 프로필에 대한 ID 그래프의 최대 ID 수는 50개입니다.** ID가 50개가 넘는 모든 프로필은 세그멘테이션, 내보내기 및 조회에서 제외됩니다. |
 
 ### Dimension 엔티티 가드 레일
 
@@ -98,8 +100,8 @@ Adobe Experience Platform에서는 [!DNL Real-time Customer Profile]에서 지�
 | --- | --- | --- | --- |
 | 최대 ExperienceEvent 크기 | 10KB | 하드 | **이벤트의 최대 크기는 10KB입니다.** 수집은 계속되지만 10KB보다 큰 이벤트는 삭제됩니다. |
 | 최대 프로필 레코드 크기 | 100KB | 하드 | **프로필 레코드의 최대 크기는 100KB입니다.** 수집은 계속되지만 100KB보다 큰 프로필 레코드는 삭제됩니다. |
-| 최대 프로필 조각 크기 | 50MB | 하드 | **프로필 조각의 최대 크기는 50MB입니다.** 50MB보다 큰 모든  [프로필 ](#profile-fragments) 조각에 대해 세그먼테이션, 내보내기 및 조회가 실패할 수 있습니다. |
-| 최대 프로필 저장소 크기 | 50MB | 소프트 | **저장된 프로필의 최대 크기는 50MB입니다.** 50MB [보다 ](#profile-fragments) 큰 프로필에 새 프로필 조각을 추가하면 시스템 성능에 영향을 줍니다. |
+| 최대 프로필 조각 크기 | 50MB | 하드 | **단일 프로필 조각의 최대 크기는 50MB입니다.** 50MB보다 큰 모든  [프로필 ](#profile-fragments) 조각에 대해 세그먼테이션, 내보내기 및 조회가 실패할 수 있습니다. |
+| 최대 프로필 저장소 크기 | 50MB | 소프트 | **저장된 프로필의 최대 크기는 50MB입니다.** 50MB [보다 ](#profile-fragments) 큰 프로필에 새 프로필 조각을 추가하면 시스템 성능에 영향을 줍니다. 예를 들어, 프로필에 50MB의 단일 조각이 포함되어 있거나 총 크기가 50MB인 여러 데이터 세트에 걸쳐 여러 조각을 포함할 수 있습니다. 50MB보다 큰 단일 조각 또는 총 50MB를 초과하는 복합 조각으로 프로필을 저장하려고 하면 시스템 성능에 영향을 줍니다. |
 | 일별로 수집된 프로필 또는 ExperienceEvent 배치 수 | 90 | 소프트 | **일별 수집된 프로필 또는 ExperienceEvent 일괄 처리의 최대 수는 90개입니다.** 즉, 매일 수집된 프로필 및 ExperienceEvent 일괄 처리의 합계는 90을 초과할 수 없습니다. 추가 배치를 섭취하는 것은 시스템 성능에 영향을 줍니다. |
 
 ### Dimension 엔티티 가드 레일
@@ -119,3 +121,13 @@ Adobe Experience Platform에서는 [!DNL Real-time Customer Profile]에서 지�
 | 샌드박스당 최대 세그먼트 수 | 10K | 소프트 | **조직에서 만들 수 있는 최대 세그먼트 수는 샌드박스당 10K입니다.** 각 개별 샌드박스에 10,000개 미만의 세그먼트가 있는 한, 조직에는 총 1만 개 이상의 세그먼트가 있을 수 있습니다. 추가 세그먼트를 만들려고 하면 시스템 성능이 저하됩니다. |
 | 샌드박스당 최대 스트리밍 세그먼트 수 | 500 | 소프트 | **조직에서 만들 수 있는 최대 스트리밍 세그먼트 수는 샌드박스당 500개입니다.** 각 개별 샌드박스에 500개 미만의 스트리밍 세그먼트가 있는 한, 조직에는 총 500개 이상의 스트리밍 세그먼트가 있을 수 있습니다. 추가 스트리밍 세그먼트를 만들려고 하면 시스템 성능이 저하됩니다. |
 | 샌드박스당 최대 일괄 처리 세그먼트 수 | 10켈빈 | 소프트 | **조직에서 만들 수 있는 최대 일괄 처리 세그먼트 수는 샌드박스당 10K입니다.** 각 개별 샌드박스에 10,000개 미만의 배치 세그먼트가 있는 한, 조직에는 총 10,000개 이상의 배치 세그먼트가 있을 수 있습니다. 추가 배치 세그먼트를 만들려고 하면 시스템 성능이 저하됩니다. |
+
+## 부록
+
+이 섹션에서는 개별 보호 기능에 대한 추가 세부 정보를 제공합니다.
+
+### Platform의 Adobe Analytics 보고서 세트 데이터 세트 {#aa-datasets}
+
+프로필에 대해 최대 1개의 Adobe Analytics 보고서 세트 데이터 세트를 활성화해야 합니다. 이것은 소프트 제한입니다. 즉, 프로필에 두 개 이상의 Analytics 데이터 세트를 활성화할 수 있지만, 데이터에 의도하지 않은 결과가 발생할 수 있으므로 권장되지 않습니다. 이것은 Experience Platform의 데이터에 대한 의미 체계 구조를 제공하고 데이터 해석에서 일관성을 허용하는 XDM(Experience Data Model) 스키마, Adobe Analytics의 eVar 및 전환 변수의 사용자 지정 가능한 특성 간의 차이 때문입니다.
+
+예를 들어, Adobe Analytics에서 단일 조직에는 여러 보고서 세트가 있을 수 있습니다. 보고서 세트 A가 eVar 4을 &quot;내부 검색어&quot;로 지정하고 보고서 세트 B가 eVar 4을 &quot;참조 도메인&quot;으로 지정하는 경우 이 값이 모두 프로필의 동일한 필드에 수집되어 혼동 및 데이터 품질이 저하됩니다.

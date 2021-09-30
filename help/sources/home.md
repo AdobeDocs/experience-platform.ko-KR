@@ -5,7 +5,7 @@ title: 소스 커넥터 개요
 topic-legacy: overview
 description: Adobe Experience Platform을 사용하면 Platform 서비스를 사용하여 들어오는 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 외부 소스에서 데이터를 수집할 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 등과 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 048b3bbbe170a892eedc9f8ee0e130fcbfad6b86
+source-git-commit: bc94d85ecd2ae33d8ef18dd1dfa7fca39ccaefea
 workflow-type: tm+mt
 source-wordcount: '1008'
 ht-degree: 0%
@@ -55,6 +55,7 @@ Experience Platform은 타사 광고 시스템에서 데이터 섭취를 지원�
 - [[!DNL Apache HDFS] 커넥터](connectors/cloud-storage/hdfs.md)
 - [[!DNL Azure Event Hubs] 커넥터](connectors/cloud-storage/eventhub.md)
 - [[!DNL Azure File Storage] 커넥터](connectors/cloud-storage/azure-file-storage.md)
+- [[!DNL Data Landing Zone]](connectors/cloud-storage/data-landing-zone.md)
 - [[!DNL FTP] 커넥터](connectors/cloud-storage/ftp.md)
 - [[!DNL Google Cloud Storage] 커넥터](connectors/cloud-storage/google-cloud-storage.md)
 - [[!DNL Google PubSub] 커넥터](connectors/cloud-storage/google-pubsub.md)

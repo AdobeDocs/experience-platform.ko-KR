@@ -5,9 +5,9 @@ title: ID 서비스 개요
 topic-legacy: overview
 description: Adobe Experience Platform Identity Service를 사용하면 장치 및 시스템 전반에서 ID를 브리징하여 고객 및 해당 행동을 더 잘 볼 수 있으므로 효과적이고 개인화된 디지털 경험을 실시간으로 제공할 수 있습니다.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: 947d8803416cee584b35a8d480929e2684d0057f
+source-git-commit: 5373b8fcd84cee749a85bdb755a23eb7292cf352
 workflow-type: tm+mt
-source-wordcount: '1807'
+source-wordcount: '1792'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,6 @@ Adobe Experience Platform Identity 서비스는 장치 및 시스템 전반에�
 | ID 네임스페이스 | ID 네임스페이스는 ID의 컨텍스트 또는 유형을 구분하는 데 사용됩니다. 예를 들어 ID는 &quot;name<span>@email.com&quot;을 이메일 주소로 구분하거나 &quot;443522&quot;을 숫자 CRM ID로 구분합니다. ID 네임스페이스는 개별 ID를 조회하고 ID 값에 대한 컨텍스트를 제공하는 데 사용됩니다. 이렇게 하면 다른 기본 ID를 포함하지만 `email` ID 네임스페이스에 대해 동일한 값을 공유하는 두 개의 [!DNL Profile] 조각이 실제로 동일한 개인임을 확인할 수 있습니다. 자세한 내용은 [ID 네임스페이스 개요](./namespaces.md)를 참조하십시오. |
 | ID 그래프 | ID 그래프는 서로 다른 ID 간의 관계 맵으로, 함께 결합되는 고객 ID와 방법을 시각화하고 더 잘 이해할 수 있도록 해줍니다. 자세한 내용은 ID 그래프 뷰어](./ui/identity-graph-viewer.md)를 사용하여 [의 자습서를 참조하십시오. |
 | 개인 식별 정보(PII) | PII는 이메일 주소 또는 전화 번호와 같이 고객을 직접 식별할 수 있는 정보입니다. PII 값은 종종 일치하지 않습니다. 다양한 시스템에서 고객의 여러 ID입니다. |
-| 고유 ID | 고유 ID는 특정 샌드박스에만 있는 ID입니다. |
 | 알 수 없음 또는 익명 ID | 알 수 없음 또는 익명 ID는 장치를 사용하여 실제 사람을 식별하지 않고 장치를 분리하는 표시입니다. 알 수 없고 익명의 ID에는 방문자의 IP 주소 및 쿠키 ID와 같은 정보가 포함됩니다. 알 수 없고 익명의 ID가 행동 데이터를 제공할 수 있지만 고객이 PII를 제공할 때까지 제한됩니다. |
 
 ## [!DNL Identity Service]이란 ?

@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 소스 커넥터 도움말
 breadcrumb-title: Source Connectors 안내서
 user-guide-description: 다양한 소스 또는 구조에서 데이터를 수집하고 레이블을 지정하며 기존에 수집한 데이터를 향상시킬 수 있습니다.
 feature: Data Ingestion, Sources
-source-git-commit: e85980565889dd66f7dbd93749e013f77e434b74
+source-git-commit: bc94d85ecd2ae33d8ef18dd1dfa7fca39ccaefea
 workflow-type: tm+mt
-source-wordcount: '647'
+source-wordcount: '656'
 ht-degree: 13%
 
 ---
@@ -40,6 +40,7 @@ ht-degree: 13%
       - [Azure Blob 커넥터](connectors/cloud-storage/blob.md)
       - [Azure 이벤트 허브 커넥터](connectors/cloud-storage/eventhub.md)
       - [Azure 파일 저장소 커넥터](connectors/cloud-storage/azure-file-storage.md)
+      - [데이터 랜딩 영역](connectors/cloud-storage/data-landing-zone.md)
       - [FTP 커넥터](connectors/cloud-storage/ftp.md)
       - [Google 클라우드 스토리지 커넥터](connectors/cloud-storage/google-cloud-storage.md)
       - [Google PubSub](connectors/cloud-storage/google-pubsub.md)
@@ -97,6 +98,7 @@ ht-degree: 13%
          - [Azure Data Lake Storage Gen2](tutorials/api/create/cloud-storage/adls-gen2.md)
          - [Azure 이벤트 허브](tutorials/api/create/cloud-storage/eventhub.md)
          - [Azure 파일 저장소](tutorials/api/create/cloud-storage/azure-file-storage.md)
+         - [데이터 랜딩 영역](tutorials/api/create/cloud-storage/data-landing-zone.md)
          - [FTP](tutorials/api/create/cloud-storage/ftp.md)
          - [Google Cloud 스토리지](tutorials/api/create/cloud-storage/google.md)
          - [Google PubSub](tutorials/api/create/cloud-storage/google-pubsub.md)
@@ -185,6 +187,7 @@ ht-degree: 13%
          - [Azure Blob](tutorials/ui/create/cloud-storage/blob.md)
          - [Azure 이벤트 허브](tutorials/ui/create/cloud-storage/eventhub.md)
          - [Azure 파일 저장소](tutorials/ui/create/cloud-storage/azure-file-storage.md)
+         - [데이터 랜딩 영역](tutorials/ui/create/cloud-storage/data-landing-zone.md)
          - [FTP](tutorials/ui/create/cloud-storage/ftp.md)
          - [Google Cloud 스토리지](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
          - [Google PubSub](tutorials/ui/create/cloud-storage/google-pubsub.md)

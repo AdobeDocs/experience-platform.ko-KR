@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform에 대한 최신 릴리스 노트입니다.
 exl-id: 96375409-803f-45af-805e-900207d972e4
-source-git-commit: 4959b5227f777a2c8cab1317d67795678d1a6eea
+source-git-commit: b616a0c0d49d980644f82bc3af5995b3b17b4c80
 workflow-type: tm+mt
-source-wordcount: '381'
-ht-degree: 9%
+source-wordcount: '290'
+ht-degree: 10%
 
 ---
 
@@ -15,21 +15,8 @@ ht-degree: 9%
 
 Adobe Experience Platform의 기존 기능 업데이트:
 
-- [데이터 수집](#ingestion)
 - [[!DNL Data Prep]](#data-prep)
 - [소스](#sources)
-
-## 데이터 수집 {#ingestion}
-
-Adobe Experience Platform 데이터 섭취는 플랫폼이 다양한 소스에서 데이터를 수집하는 여러 메서드와 다운스트림 플랫폼 서비스에서 사용하기 위해 Data Lake 내에서 해당 데이터가 지속되는 방법을 나타냅니다.
-
-**새로운 기능**
-
-| 기능 | 설명 |
-|------- | -----------|
-| 배치 수집을 사용하여 프로필 레코드 업데이트 또는 패치 | 이제 실시간 고객 프로필을 사용하면 배치 섭취 를 통해 개별 프로필 레코드 데이터의 프로필 속성을 업데이트할 수 있습니다. 자세한 내용은 [배치 수집 개발자 안내서](../../ingestion/batch-ingestion/api-overview.md)를 참조하십시오. |
-
-데이터를 플랫폼으로 수집하는 방법에 대한 자세한 내용은 [데이터 수집 설명서](../../ingestion/home.md)를 참조하십시오.
 
 ## [!DNL Data Prep] {#data-prep}
 

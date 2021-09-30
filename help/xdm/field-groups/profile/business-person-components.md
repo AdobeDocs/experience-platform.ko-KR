@@ -1,19 +1,19 @@
 ---
 title: XDM 비즈니스 개인 구성 요소 스키마 필드 그룹
 description: 이 문서에서는 XDM 비즈니스 개인 구성 요소 스키마 필드 그룹에 대한 개요를 제공합니다.
-source-git-commit: 319d508925d22e76a3d75ae473f6ea000b5c655b
+exl-id: 965b89f4-59f5-43f4-8778-3549e15b44d4
+source-git-commit: b5cdd72238f7b4519de1c789f4294b9698415327
 workflow-type: tm+mt
-source-wordcount: '435'
+source-wordcount: '441'
 ht-degree: 3%
 
 ---
 
+# [!UICONTROL XDM 비즈니스 개인 구성 ] 요소스키마 필드 그룹(베타)
 
-# [!UICONTROL XDM 비즈니스 개인 구성 ] 요소스키마 필드 그룹
-
->[!NOTE]
+>[!IMPORTANT]
 >
->이 필드 그룹은 실시간 고객 데이터 플랫폼(실시간 CDP)의 B2B 버전에 액세스할 수 있는 조직에만 사용할 수 있습니다.
+>이 필드 그룹은 현재 베타에 있는 실시간 고객 데이터 플랫폼 B2B 에디션의 일부로 사용할 수 있습니다. 설명서 및 기능은 변경될 수 있습니다.
 
 [!UICONTROL XDM 비즈니스 개인 구성 ] 요소는 개인 세분화에 필요한 여러 소스 레코드 및 기타 속성을 캡처하는  [[!DNL XDM Individual Profile] ](../../classes/individual-profile.md) 클래스에 대한 표준 스키마 필드 그룹을 나타냅니다.
 

@@ -1,10 +1,11 @@
 ---
 title: XDM 비즈니스 기회 개인 관계 분류
 description: 이 문서에서는 XDM(Experience Data Model)의 XDM 비즈니스 기회 개인 관계 클래스에 대한 개요를 제공합니다.
-source-git-commit: d83ad2870b6099d3c6359dcc7cd000ecad8a238f
+exl-id: 7be193d2-52eb-4b28-953b-5e0fc21d8f93
+source-git-commit: b5cdd72238f7b4519de1c789f4294b9698415327
 workflow-type: tm+mt
-source-wordcount: '267'
-ht-degree: 2%
+source-wordcount: '270'
+ht-degree: 4%
 
 ---
 
@@ -30,5 +31,7 @@ ht-degree: 2%
 | `isPrimary` | 부울 | 개인이 이 기회에 대한 주요 담당자인지 여부를 나타냅니다. |
 | `personID` | 문자열 | 기회-개인 관계에 있는 사람에 대한 고유 식별자입니다. |
 | `personRole` | 문자열 | 기회-개인 관계에서 개인의 역할입니다. |
+
+{style=&quot;table-layout:auto&quot;}
 
 이 클래스가 다른 B2B 클래스와 개념적으로 관련되는 방법과 Adobe Experience Platform UI에서 이러한 관계를 설정할 수 있는 방법에 대해 알아보려면 실시간 CDP B2B Edition](../../tutorials/relationship-b2b.md)의 스키마 관계에 대한 안내서를 참조하십시오.[

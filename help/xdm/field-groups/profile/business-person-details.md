@@ -1,19 +1,19 @@
 ---
 title: XDM 비즈니스 개인 세부 정보 스키마 필드 그룹
 description: 이 문서에서는 XDM 비즈니스 개인 세부 정보 스키마 필드 그룹에 대한 개요를 제공합니다.
-source-git-commit: 319d508925d22e76a3d75ae473f6ea000b5c655b
+exl-id: e9da5c1c-5a30-4cbc-beb2-cc5efe57cab0
+source-git-commit: 57370e4ed0807bcebf30c73af629671b5390d90d
 workflow-type: tm+mt
-source-wordcount: '554'
-ht-degree: 7%
+source-wordcount: '562'
+ht-degree: 6%
 
 ---
 
+# [!UICONTROL XDM 비즈니스 개인 ] 세부 정보스키마 필드 그룹(베타)
 
-# [!UICONTROL XDM 비즈니스 개인 ] 세부 정보스키마 필드 그룹
-
->[!NOTE]
+>[!IMPORTANT]
 >
->이 필드 그룹은 실시간 고객 데이터 플랫폼의 B2B 버전에 액세스할 수 있는 조직에만 사용할 수 있습니다.
+>이 필드 그룹은 현재 베타에 있는 실시간 고객 데이터 플랫폼 B2B 에디션의 일부로 사용할 수 있습니다. 설명서 및 기능은 변경될 수 있습니다.
 
 [!UICONTROL XDM 비즈니스 ] 개인 세부 정보 는 B2B(비즈니스- [[!DNL XDM Individual Profile] ](../../classes/individual-profile.md) 비즈니스) 엔터프라이즈 컨텍스트에서 개인 개인에 대한 정보를 캡처하는 클래스에 대한 표준 스키마 필드 그룹입니다.
 

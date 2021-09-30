@@ -5,9 +5,9 @@ title: ID 네임스페이스 개요
 topic-legacy: overview
 description: ID 네임스페이스는 ID 서비스의 구성 요소이며 ID가 연관되는 컨텍스트의 지표 역할을 합니다. 예를 들어 "name@email.com"이라는 값을 이메일 주소로 또는 "443522"이라는 값을 숫자 CRM ID로 구분합니다.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 700012988fd46e835dcbc441c39f08e4c172ef0f
+source-git-commit: 5373b8fcd84cee749a85bdb755a23eb7292cf352
 workflow-type: tm+mt
-source-wordcount: '1638'
+source-wordcount: '1598'
 ht-degree: 2%
 
 ---
@@ -20,9 +20,9 @@ ID 네임스페이스는 [[!DNL Identity Service]](./home.md) 의 구성 요소�
 
 ID 네임스페이스로 작업하려면 관련된 다양한 Adobe Experience Platform 서비스를 이해해야 합니다. 네임스페이스로 작업을 시작하기 전에 다음 서비스에 대한 설명서를 검토하십시오.
 
-- [[!DNL Real-time Customer Profile]](../profile/home.md):여러 소스에서 집계된 데이터를 기반으로 통합된 고객 프로필을 실시간으로 제공합니다.
-- [[!DNL Identity Service]](./home.md):여러 장치와 시스템에서 ID를 브리징하여 개별 고객과 고객의 행동을 더 잘 파악할 수 있습니다.
-- [[!DNL Privacy Service]](../privacy-service/home.md):ID 네임스페이스는 GDPR(일반 데이터 보호 규정)을 준수하는 데 사용됩니다. 여기서 GDPR 요청은 네임스페이스에 대해 수행될 수 있습니다.
+- [[!DNL Real-time Customer Profile]](../profile/home.md): 여러 소스에서 집계된 데이터를 기반으로 통합된 고객 프로필을 실시간으로 제공합니다.
+- [[!DNL Identity Service]](./home.md): 여러 장치와 시스템에서 ID를 브리징하여 개별 고객과 고객의 행동을 더 잘 파악할 수 있습니다.
+- [[!DNL Privacy Service]](../privacy-service/home.md): ID 네임스페이스는 GDPR(일반 데이터 보호 규정)을 준수하는 데 사용됩니다. 여기서 GDPR 요청은 네임스페이스에 대해 수행될 수 있습니다.
 
 ## ID 네임스페이스 이해
 
@@ -59,8 +59,8 @@ Platform 내의 모든 조직에서 사용할 수 있도록 다음과 같은 표
 | Adobe Analytics (기존 ID) | Adobe Analytics을 나타내는 네임스페이스입니다. 자세한 내용은 [Adobe Analytics 네임스페이스](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-namespaces.html?lang=en#namespaces)에 대한 다음 문서를 참조하십시오. |
 | Apple IDFA(광고주의 ID) | 광고주용 Apple ID를 나타내는 네임스페이스입니다. 자세한 내용은 [관심 기반 광고](https://support.apple.com/en-us/HT202074)에 있는 다음 문서를 참조하십시오. |
 | Apple 푸시 알림 서비스 | Apple 푸시 알림 서비스를 사용하여 수집된 ID를 나타내는 네임스페이스입니다. 자세한 내용은 [Apple 푸시 알림 서비스](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1)에서 다음 문서를 참조하십시오. |
-| CORE | Adobe Audience Manager을 나타내는 네임스페이스입니다. 이 네임스페이스를 이전 이름으로 참조할 수도 있습니다.&quot;Adobe AudienceManager&quot;. 자세한 내용은 [Audience Manager ID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/data-privacy-reference/data-privacy-ids.html?lang=en#aam-ids)에서 다음 문서를 참조하십시오. |
-| ECID | ECID를 나타내는 네임스페이스입니다. 이 네임스페이스를 다음 별칭으로 참조할 수도 있습니다.&quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. 자세한 내용은 [ECID](./ecid.md)에서 다음 문서를 참조하십시오. |
+| CORE | Adobe Audience Manager을 나타내는 네임스페이스입니다. 이 네임스페이스를 이전 이름으로 참조할 수도 있습니다. &quot;Adobe AudienceManager&quot;. 자세한 내용은 [Audience Manager ID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/data-privacy-reference/data-privacy-ids.html?lang=en#aam-ids)에서 다음 문서를 참조하십시오. |
+| ECID | ECID를 나타내는 네임스페이스입니다. 이 네임스페이스를 다음 별칭으로 참조할 수도 있습니다. &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. 자세한 내용은 [ECID](./ecid.md)에서 다음 문서를 참조하십시오. |
 | 이메일 | 이메일 주소를 나타내는 네임스페이스입니다. 이러한 유형의 네임스페이스는 종종 한 사람에게 연결되므로 다른 채널에서 해당 사용자를 식별하는 데 사용할 수 있습니다. |
 | 이메일(SHA256, 소문자로) | 미리 해시된 이메일 주소를 위한 네임스페이스. 이 네임스페이스에 제공된 값은 SHA256으로 해싱하기 전에 소문자로 변환됩니다. 전자 메일 주소가 표준화되기 전에 선행 및 후행 공백을 트림해야 합니다. 이 설정은 소급하여 변경할 수 없습니다. 자세한 내용은 [SHA256 해시 지원](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=en#hashing-support)에 대한 다음 문서를 참조하십시오. |
 | Firebase Cloud Messaging | 푸시 알림에 Google Firebase Cloud Messaging을 사용하여 수집한 ID를 나타내는 네임스페이스입니다. 자세한 내용은 [Google Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging)에서 다음 문서를 참조하십시오. |
@@ -79,7 +79,7 @@ UI에서 ID 네임스페이스를 보려면 왼쪽 탐색에서 **[!UICONTROL ID
 
 ![찾아보기](./images/browse.png)
 
-ID 네임스페이스 목록은 페이지의 기본 인터페이스에 나타나며 해당 이름, ID 기호, 최근 업데이트 날짜 및 ID가 표준 네임스페이스인지 사용자 지정 네임스페이스인지에 대한 정보를 표시합니다. 오른쪽 레일에는 [!UICONTROL 고유 ID] 및 [!UICONTROL ID 그래프 강도]에 대한 정보가 포함되어 있습니다. [!UICONTROL 고유 ] ID는 사용 중인 특정 샌드박스에 있는 ID 수를 참조하고,  [!UICONTROL ID 그래프 강도는 샌드박스 내의 쿠키 ] 및 비쿠키 ID 수에 대한 정보를 표시합니다.
+ID 네임스페이스 목록은 페이지의 기본 인터페이스에 나타나며 해당 이름, ID 기호, 최근 업데이트 날짜 및 ID가 표준 네임스페이스인지 사용자 지정 네임스페이스인지에 대한 정보를 표시합니다. 오른쪽 레일에는 [!UICONTROL ID 그래프 강도]에 대한 정보가 포함되어 있습니다.
 
 ![id](./images/identities.png)
 
