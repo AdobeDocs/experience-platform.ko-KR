@@ -4,9 +4,9 @@ title: 실시간 고객 프로필 UI 안내서
 topic-legacy: guide
 description: 실시간 고객 프로필은 각 개별 고객에 대한 전체적인 보기를 만들어 온라인, 오프라인, CRM 및 타사 데이터를 포함하여 여러 채널의 데이터를 결합합니다. 이 문서는 Adobe Experience Platform 사용자 인터페이스에서 실시간 고객 프로필과 상호 작용하는 안내서의 역할을 합니다.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: 69e510c9a0f477ad7cab530128c6728f68dfdab1
+source-git-commit: 771be1f5939066295c01eb573a13dbb740e8c776
 workflow-type: tm+mt
-source-wordcount: '1568'
+source-wordcount: '1774'
 ht-degree: 0%
 
 ---
@@ -136,9 +136,33 @@ Experience Platform UI의 왼쪽 탐색 영역에서 **[!UICONTROL 프로필]**&
 
 ![](../images/user-guide/profiles-profile-detail.png)
 
-사용 가능한 다른 탭을 선택하여 개별 프로필과 관련된 추가 정보를 볼 수 있습니다. 이러한 탭에는 현재 프로필이 자격을 갖는 세그먼트를 보여주는 속성, 이벤트 및 세그먼트 멤버십 탭이 포함됩니다.
+사용 가능한 다른 탭을 선택하여 개별 고객 프로필과 관련된 추가 정보를 볼 수 있습니다. 이러한 탭에는 현재 프로필이 자격을 갖는 세그먼트를 보여주는 속성, 이벤트 및 세그먼트 멤버십 탭이 포함됩니다.
 
 ![](../images/user-guide/profiles-attributes-events-segments.png)
+
+### 속성 탭
+
+**[!UICONTROL 속성]** 탭은 지정된 병합 정책이 적용된 후 단일 프로필과 관련된 모든 속성을 요약하는 목록 보기를 제공합니다.
+
+이러한 속성은 **[!UICONTROL JSON 보기]**&#x200B;를 선택하여 JSON 개체로도 볼 수 있습니다. 이 기능은 프로필 속성을 Platform에 수집하는 방법을 이해하려는 모든 사용자에게 유용합니다.
+
+![](../images/user-guide/profiles-attributes.png)
+
+### 이벤트 탭
+
+**[!UICONTROL 이벤트]** 탭에는 고객과 연결된 ExperienceEvents와 관련된 데이터가 포함되어 있습니다. 여기에는 이메일 열기, 장바구니 활동, 페이지 보기 등이 포함될 수 있습니다. 개별 이벤트에 대해 **[!UICONTROL 모두 보기]**&#x200B;를 선택하면 이벤트의 일부로 캡처되는 추가 필드와 값이 제공됩니다.
+
+또한 **[!UICONTROL JSON 보기]**&#x200B;를 선택하여 이벤트를 JSON 개체로도 볼 수 있습니다. 이 기능은 플랫폼에서 이벤트가 캡처되는 방식을 이해하는 데 유용합니다.
+
+![](../images/user-guide/profiles-events.png)
+
+### 세그먼트 멤버십 탭
+
+**[!UICONTROL 세그먼트 멤버십]** 탭에는 개별 고객 프로필이 현재 속한 세그먼트의 이름과 설명이 있는 목록이 표시됩니다. 이 목록은 프로필이 세그먼트에서 자격을 얻거나 만료되면 자동으로 업데이트됩니다. 현재 프로필이 적격인 세그먼트의 총 개수가 탭의 오른쪽에 표시됩니다.
+
+Experience Platform의 세그멘테이션에 대한 자세한 내용은 [Adobe Experience Platform 세그멘테이션 서비스 설명서](../../segmentation/home.md)를 참조하십시오.
+
+![](../images/user-guide/profiles-segment-membership.png)
 
 ## 병합 정책
 
