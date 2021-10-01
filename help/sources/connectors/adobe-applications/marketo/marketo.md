@@ -5,9 +5,9 @@ title: Marketo Engage 커넥터
 topic-legacy: overview
 description: 이 문서에서는 인증, 매핑 및 데이터 지연에 대한 정보를 포함하여 Marketo Engage 소스 커넥터에 대한 개요를 제공합니다.
 exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
-source-git-commit: 50e92ac8c1eccc9ccfb6b078ad8b996817a6d693
+source-git-commit: 2844ffd7270ffcc2fba4da08dda1aea238cf6c9f
 workflow-type: tm+mt
-source-wordcount: '463'
+source-wordcount: '474'
 ht-degree: 1%
 
 ---
@@ -70,3 +70,4 @@ Platform의 XDM 및 역할에 대한 자세한 내용은 [XDM 시스템 개요](
 * [!DNL Marketo]과 함께 사용되는 B2B 네임스페이스 및 스키마에 대한 기본 설정에 대한 자세한 내용은 [B2B 네임스페이스 및 스키마](./marketo-namespaces.md)에 대한 설명서를 참조하십시오.
 * [!DNL Marketo] Munchkin ID를 찾고 자격 증명을 생성하는 방법에 대한 자세한 내용은 [[!DNL Marketo] 인증 안내서](./marketo-auth.md)를 참조하십시오.
 * [!DNL Marketo] 데이터 세트에 적용되는 특정 매핑 규칙에 대한 자세한 내용은 [[!DNL Marketo] 필드 매핑](../mapping/marketo.md)에 있는 설명서를 참조하십시오.
+* [!DNL Real-time Customer Data Platform B2B Edition] 및 해당 기능에 대한 일반적인 정보는 [[!DNL Real-time Customer Data Platform B2B Edition]](../../../../rtcdp/b2b-overview.md)의 설명서를 참조하십시오.

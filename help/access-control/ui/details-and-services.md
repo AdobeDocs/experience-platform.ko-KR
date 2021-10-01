@@ -5,9 +5,9 @@ title: 제품 프로필에 대한 세부 사항 및 추가 서비스 관리
 topic-legacy: user guide
 description: 이 문서에서는 Adobe Admin Console에서 제품 프로필에 대한 세부 사항 및 추가 서비스를 관리하는 데 필요한 단계를 다룹니다. 프로필 설정 메뉴에서 프로필의 세부 사항을 구성하고 추가 서비스에 액세스할 수 있습니다.
 exl-id: ac9c2213-f2fb-44be-9334-87fada8a4717
-source-git-commit: 6228f499a42e61583abd1f7ff1e1af1fb90640c6
+source-git-commit: 2844ffd7270ffcc2fba4da08dda1aea238cf6c9f
 workflow-type: tm+mt
-source-wordcount: '296'
+source-wordcount: '303'
 ht-degree: 0%
 
 ---
@@ -39,6 +39,6 @@ ht-degree: 0%
 
 B2B 또는 B2P Edition에 대한 자격이 있는 고객은 B2B UI에 액세스할 수 있습니다. [!UICONTROL 서비스 활성화 메뉴]를 통해 사용자에 대해 B2B UI를 제공할 수 있습니다. [!UICONTROL B2B UI] 옆의 전환을 선택하여 특정 제품 프로필에 대해 서비스를 활성화한 다음 **[!UICONTROL 저장]**&#x200B;을 선택합니다.
 
-B2B UI 토글을 사용하면 사용자는 계정 및 기회 관리와 관련된 B2B 워크플로우를 보고 B2B 관련 세그먼트를 만들 수 있습니다.
+B2B UI 토글을 사용하면 사용자는 계정 및 기회 관리와 관련된 B2B 워크플로우를 보고 B2B 관련 세그먼트를 만들 수 있습니다. 자세한 내용은 [[!DNL Real-time Customer Data Platform B2B Edition]](../../rtcdp/b2b-overview.md)의 설명서를 참조하십시오.
 
 ![enable-b2b](../images/enable-b2b.png)
