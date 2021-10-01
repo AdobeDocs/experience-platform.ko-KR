@@ -4,10 +4,10 @@ solution: Experience Platform, Real-time Customer Data Platform
 audience: user
 user-guide-title: 실시간 고객 데이터 플랫폼 안내서
 user-guide-description: 여러 엔터프라이즈 소스에서 알려진 데이터와 익명의 데이터를 결합하여 고객 프로필을 생성하고, 이러한 프로필에서 고객 세그먼트를 생성하며, 이러한 세그먼트를 서드파티 대상으로 활성화할 수 있습니다.
-source-git-commit: 8030eb8798ffe2bc9cb299203bafb6c53a9edebc
+source-git-commit: 213f6f1cad7ab2bec6f62f292f3492bd9aefc69c
 workflow-type: tm+mt
-source-wordcount: '126'
-ht-degree: 43%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -37,6 +37,7 @@ ht-degree: 43%
 * 세그먼트 {#segmentation}
    * [세그먼테이션 개요](segmentation/segmentation-overview.md)
    * [세그먼트 빌더 안내서](segmentation/segment-builder-guide.md)
+   * [B2B 세그먼테이션](segmentation/b2b.md)
    * [고객 AI](segmentation/customer-ai.md)
 * 스키마 {#schemas}
    * [스키마 개요](schemas/overview.md)
