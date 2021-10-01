@@ -1,16 +1,20 @@
 ---
-title: 스키마 편집기의 필드 기반 워크플로우
-description: Adobe 정의 필드 그룹의 표준 필드를 XDM(Experience Data Model) 스키마에 개별적으로 추가하는 방법을 알아봅니다.
+title: 스키마 편집기(베타)의 필드 기반 워크플로우
+description: 기존 필드 그룹의 필드를 XDM(Experience Data Model) 스키마에 개별적으로 추가하는 방법을 알아봅니다.
 hide: true
 hidefromtoc: true
-source-git-commit: 8947fbb815f3eda97fb218be6791cb67e6e66719
+source-git-commit: 139d453c3758f4f137cd1b31307b61dc777fc1c1
 workflow-type: tm+mt
-source-wordcount: '848'
+source-wordcount: '867'
 ht-degree: 0%
 
 ---
 
-# 스키마 편집기의 필드 기반 워크플로우
+# 스키마 편집기(베타)의 필드 기반 워크플로우
+
+>[!IMPORTANT]
+>
+>이 문서에 설명된 워크플로우는 현재 베타 버전입니다. 기능 및 설명서는 변경될 수 있습니다.
 
 Adobe Experience Platform은 XDM(Experience Data Model) 스키마에서 사용할 강력한 표준화된 [필드 그룹](../schema/composition.md#field-group) 세트를 제공합니다. 이러한 필드 그룹의 구조와 의미 체계는 Platform의 다양한 세그멘테이션 사용 사례 및 기타 다운스트림 애플리케이션을 충족하도록 신중하게 조정됩니다. 고유한 비즈니스 요구 사항을 해결하기 위해 고유한 사용자 지정 필드 그룹을 정의할 수도 있습니다.
 
