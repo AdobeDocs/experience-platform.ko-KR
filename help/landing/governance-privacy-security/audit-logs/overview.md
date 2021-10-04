@@ -2,9 +2,9 @@
 title: 감사 로그 개요
 description: 감사 로그를 사용하여 Adobe Experience Platform에서 작업을 수행한 사용자를 확인하는 방법을 알아봅니다.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: 4dc49c7219ebb613c74e5960f1f8d477dc1b7605
+source-git-commit: d4beb7691c8fb38359425509a40572ea9b09fd26
 workflow-type: tm+mt
-source-wordcount: '598'
+source-wordcount: '608'
 ht-degree: 5%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
->Adobe Experience Platform의 감사 로그 기능은 현재 베타 버전입니다. 이 설명서에 설명된 기능은 변경될 수 있습니다.
+>Adobe Experience Platform의 감사 로그 기능은 현재 베타 버전이며 조직에서 아직 액세스할 수 없을 수 있습니다. 이 설명서에 설명된 기능은 변경될 수 있습니다.
 
 시스템에서 수행되는 활동의 투명성과 가시성을 높이기 위해 Adobe Experience Platform을 사용하면 &quot;감사 로그&quot; 형태로 다양한 서비스 및 기능에 대한 사용자 활동을 감사할 수 있습니다. 이러한 로그는 플랫폼의 문제 해결에 도움이 될 수 있는 감사 추적을 형성하며 기업의 데이터 관리 정책 및 규정 요구 사항을 효과적으로 준수할 수 있도록 도와줍니다.
 
