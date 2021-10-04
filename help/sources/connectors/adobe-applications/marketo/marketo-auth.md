@@ -5,14 +5,18 @@ title: Marketo 소스 커넥터 인증
 topic-legacy: overview
 description: 이 문서에서는 Marketo 인증 자격 증명을 생성하는 방법에 대한 정보를 제공합니다.
 exl-id: 594dc8b6-cd6e-49ec-9084-b88b1fe8167a
-source-git-commit: 50e92ac8c1eccc9ccfb6b078ad8b996817a6d693
+source-git-commit: 0661d124ffe520697a1fc8e2cae7b0b61ef4edfc
 workflow-type: tm+mt
-source-wordcount: '603'
+source-wordcount: '622'
 ht-degree: 0%
 
 ---
 
-# [!DNL Marketo Engage] 소스 커넥터 인증
+# (베타) [!DNL Marketo Engage] 소스 커넥터 인증
+
+>[!IMPORTANT]
+>
+>Adobe Experience Platform의 [!DNL Marketo Engage] 소스는 현재 베타에 있습니다. 설명서 및 기능은 변경될 수 있습니다.
 
 [!DNL Marketo Engage](이하 &quot;[!DNL Marketo]&quot;라고도 함) 소스 커넥터를 만들려면 먼저 [!DNL Marketo] 인터페이스를 통해 사용자 지정 서비스를 설정하고 Munchkin ID, 클라이언트 ID 및 클라이언트 암호 값을 검색해야 합니다.
 

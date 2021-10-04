@@ -2,14 +2,18 @@
 title: 실시간 고객 데이터 플랫폼 B2B 에디션의 소스
 description: 실시간 고객 데이터 플랫폼 B2B 에디션에서 소스의 역할에 대한 개요입니다.
 exl-id: eeea4b2e-67c5-4491-9b8e-4b8987e44777
-source-git-commit: b8c14fc2e32a6a8f92309f4956cc5415d833a73f
+source-git-commit: 0661d124ffe520697a1fc8e2cae7b0b61ef4edfc
 workflow-type: tm+mt
-source-wordcount: '160'
+source-wordcount: '179'
 ht-degree: 0%
 
 ---
 
 # 실시간 고객 데이터 플랫폼 B2B 에디션의 소스
+
+>[!IMPORTANT]
+>
+>실시간 고객 데이터 플랫폼 B2B Edition은 현재 베타 버전입니다. 설명서 및 기능은 변경될 수 있습니다.
 
 실시간 고객 데이터 플랫폼 B2B Edition을 사용하면 서비스를 사용하여 들어오는 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 [[!DNL Marketo Engage]](../../sources/connectors/adobe-applications/marketo/marketo.md) 소스 커넥터를 통해 B2B 데이터를 가져올 수 있습니다.
 
