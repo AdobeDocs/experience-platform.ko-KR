@@ -2,9 +2,9 @@
 description: 이 구성을 사용하면 대상 이름, 카테고리, 설명, 로고 등과 같은 기본 정보를 표시할 수 있습니다. 또한 이 구성의 설정은 Experience Platform 사용자가 대상을 인증하는 방법, Experience Platform 사용자 인터페이스에 표시되는 방법 및 대상으로 내보낼 수 있는 ID를 결정합니다.
 title: 대상 SDK에 대한 대상 구성 옵션
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: 63fe3b7cc429a1c18cebe998bc82fdea99a6679b
+source-git-commit: 0d5cb5e47b3507cbbd5c34d1ae1fe99d81c67ffc
 workflow-type: tm+mt
-source-wordcount: '1557'
+source-wordcount: '1552'
 ht-degree: 5%
 
 ---
@@ -63,7 +63,12 @@ ht-degree: 5%
    "identityNamespaces":{
       "external_id":{
          "acceptsAttributes":true,
-         "acceptsCustomNamespaces":true
+         "acceptsCustomNamespaces":true,
+         "acceptedGlobalNamespaces":{
+            "Email":{
+               
+            }
+         }
       },
       "another_id":{
          "acceptsAttributes":true,
@@ -214,7 +219,7 @@ ID 네임스페이스에 [!DNL Platform] 과(와) 대상 간의 1~1 응답이 �
 | `acceptsAttributes` | 부울 | 대상이 표준 프로필 속성을 수락하는지 여부를 나타냅니다. 일반적으로 이러한 속성은 파트너의 설명서에 강조 표시됩니다. |
 | `acceptsCustomNamespaces` | 부울 | 고객이 대상에서 사용자 지정 네임스페이스를 설정할 수 있는지 여부를 나타냅니다. |
 | `allowedAttributesTransformation` | 문자열 | *구성 예는 표시되지 않습니다*. 예를 들어 [!DNL Platform] 고객이 일반 이메일 주소를 속성으로 가지고 있고 플랫폼이 해시된 이메일만 허용하는 경우 사용됩니다. 여기에서 적용해야 하는 변형을 제공합니다(예: 이메일을 소문자로 변환한 다음 해시). |
-| `acceptedGlobalNamespaces` | - | *구성 예는 표시되지 않습니다*. 플랫폼이 [표준 ID 네임스페이스](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces)(예: IDFA)를 허용하는 경우에 사용되므로 Platform 사용자가 이러한 ID 네임스페이스만 선택하도록 제한할 수 있습니다. |
+| `acceptedGlobalNamespaces` | - | 플랫폼이 [표준 ID 네임스페이스](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces)(예: IDFA)를 허용하는 경우에 사용되므로 Platform 사용자가 이러한 ID 네임스페이스만 선택하도록 제한할 수 있습니다. |
 
 {style=&quot;table-layout:auto&quot;}
 

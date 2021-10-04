@@ -2,9 +2,9 @@
 description: 이 페이지에서는 '/authoring/testing/destinationInstance/' API 종단점을 사용하여 수행할 수 있는 모든 API 작업을 나열하고 설명하며, 대상이 올바르게 구성되었는지 테스트하고 구성된 대상에 데이터 흐름의 무결성을 확인합니다.
 title: 대상 테스트 API 작업
 exl-id: 2b54250d-ec30-4ad7-a8be-b86b14e4f074
-source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
+source-git-commit: 45cff6f0c4d4fd63a17108087edec0184cbf9703
 workflow-type: tm+mt
-source-wordcount: '657'
+source-wordcount: '664'
 ht-degree: 1%
 
 ---
@@ -20,6 +20,8 @@ ht-degree: 1%
 호출에 프로필을 추가하지 않고 테스트 종단점에 요청을 합니다. 요청에 대해 프로필을 보내지 않는 경우 Adobe이 내부적으로 해당 프로필을 생성하여 요청에 추가합니다.
 
 [샘플 프로필 생성 API](./sample-profile-generation-api.md)를 사용하여 대상 테스트 API에 대한 요청에 사용할 프로필을 만들 수 있습니다.
+
+## 대상 인스턴스 ID를 가져오는 방법 {#get-destination-instance-id}
 
 >[!IMPORTANT]
 >
