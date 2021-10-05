@@ -2,9 +2,9 @@
 description: 이 페이지에서는 '/authoring/destinations' API 종단점을 사용하여 수행할 수 있는 모든 API 작업을 나열하고 설명합니다.
 title: 대상 API 끝점 작업
 exl-id: 96755e9d-be62-432f-b985-91330575b395
-source-git-commit: 32b61276f3fe81ffa82fec1debf335ea51020ccd
+source-git-commit: c334a11ff6a03b38883a5319bc41cbe3f93c0289
 workflow-type: tm+mt
-source-wordcount: '2340'
+source-wordcount: '2407'
 ht-degree: 4%
 
 ---
@@ -125,33 +125,6 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
          "splitUserById":false
       }
    },
-   "aggregation":{
-      "aggregationType":"CONFIGURABLE_AGGREGATION",
-      "configurableAggregation":{
-         "splitUserById":true,
-         "maxBatchAgeInSecs":0,
-         "maxNumEventsInBatch":0,
-         "aggregationKey":{
-            "includeSegmentId":true,
-            "includeSegmentStatus":true,
-            "includeIdentity":true,
-            "oneIdentityPerGroup":false,
-            "groups":[
-               {
-                  "namespaces":[
-                     "IDFA",
-                     "GAID"
-                  ]
-               },
-               {
-                  "namespaces":[
-                     "EMAIL"
-                  ]
-               }
-            ]
-         }
-      }
-   },
    "destinationDelivery":[
       {
          "authenticationRule":"CUSTOMER_AUTHENTICATION",
@@ -195,18 +168,18 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `schemaConfig.profileRequired` | 부울 | 위의 예제 구성에 표시된 대로 사용자가 Experience Platform의 프로필 속성을 대상 측의 사용자 지정 속성에 매핑할 수 있다면 `true` 를 사용하십시오. |
 | `schemaConfig.segmentRequired` | 부울 | 항상 `segmentRequired:true`을 사용하십시오. |
 | `schemaConfig.identityRequired` | 부울 | 사용자가 Experience Platform의 ID 네임스페이스를 원하는 스키마에 매핑할 수 있어야 하는 경우 `true` 을 사용합니다. |
-| `aggregation.aggregationType` | - | `BEST_EFFORT` 또는 `CONFIGURABLE_AGGREGATION` 중 하나를 선택합니다. 위의 예제 구성에는 집계 유형이 모두 포함되어 있지만 대상에 대해 집계 유형 중 하나를 선택하기만 하면 됩니다. |
+| `aggregation.aggregationType` | - | `BEST_EFFORT` 또는 `CONFIGURABLE_AGGREGATION` 중 하나를 선택합니다. 위의 예제 구성에는 `BEST_EFFORT` 집계가 포함되어 있습니다. `CONFIGURABLE_AGGREGATION` 예제는 [대상 구성](./destination-configuration.md#example-configuration) 문서에서 예제 구성을 참조하십시오. 구성 가능한 집합과 관련된 매개 변수는 이 표에 아래에 설명되어 있습니다. |
 | `aggregation.bestEffortAggregation.maxUsersPerRequest` | 정수 | Experience Platform은 내보낸 여러 프로필을 단일 HTTP 호출로 집계할 수 있습니다. 하나의 HTTP 호출에서 엔드포인트가 수신할 최대 프로필 수를 지정합니다. 이는 최상의 노력 집계에 해당합니다. 예를 들어 값 100을 지정하는 경우 Platform은 호출 시 100보다 작은 수의 프로필을 전송할 수 있습니다. <br> 서버가 요청당 여러 사용자를 허용하지 않는 경우 이 값을 1로 설정하십시오. |
 | `aggregation.bestEffortAggregation.splitUserById` | 부울 | 대상에 대한 호출이 ID로 분할되어야 하는 경우 이 플래그를 사용합니다. 서버가 특정 네임스페이스에 대해 호출당 하나의 ID만 수락하는 경우 이 플래그를 `true`로 설정하십시오. |
-| `aggregation.configurableAggregation.splitUserById` | 부울 | 대상에 대한 호출이 ID로 분할되어야 하는 경우 이 플래그를 사용합니다. 서버가 특정 네임스페이스에 대해 호출당 하나의 ID만 수락하는 경우 이 플래그를 `true`로 설정하십시오. |
-| `aggregation.configurableAggregation.maxBatchAgeInSecs` | 정수 | *최대값: 3600*. 이 API는 `maxNumEventsInBatch`과 함께 엔드포인트에 API 호출을 전송할 때까지 Experience Platform이 대기하는 시간을 결정합니다. <br> 예를 들어 두 매개 변수에 최대 값을 사용하는 경우 Experience Platform은 API 호출을 수행하기 전에 10.000개의 정규화된 프로필이 있을 때까지 3600초 또는 10.000개의 대기 중 가장 먼저 수행됩니다. |
-| `aggregation.configurableAggregation.maxNumEventsInBatch` | 정수 | *최대값: 1000*. 바로 위에 있는 `maxBatchAgeInSecs` 을 참조하십시오. |
-| `aggregation.configurableAggregation.aggregationKey` | 부울 | 아래 매개 변수를 기반으로 대상에 매핑된 내보낸 프로필을 집계할 수 있습니다. <br> <ul><li>세그먼트 ID</li><li> 세그먼트 상태 </li><li> id 네임스페이스 </li></ul> |
-| `aggregation.configurableAggregation.aggregationKey.includeSegmentId` | 부울 | 대상으로 내보낸 프로필을 세그먼트 ID로 대상에 그룹화하려면 이 옵션을 `true` 로 설정합니다. |
-| `aggregation.configurableAggregation.aggregationKey.includeSegmentStatus` | 부울 | 대상으로 내보낸 프로필을 세그먼트 ID 및 세그먼트 상태별로 그룹화하려면 `includeSegmentId:true` 과 `includeSegmentStatus:true` 모두를 설정해야 합니다. |
-| `aggregation.configurableAggregation.aggregationKey.includeIdentity` | 부울 | ID 네임스페이스로 대상에 내보낸 프로필을 그룹화하려면 `true`(으)로 설정합니다. |
-| `aggregation.configurableAggregation.aggregationKey.oneIdentityPerGroup` | 부울 | 이 매개 변수를 사용하여 내보낸 프로필을 단일 ID(GAID, IDFA, 전화번호, 이메일 등) 그룹으로 집계할지 여부를 지정합니다. |
-| `aggregation.configurableAggregation.aggregationKey.groups` | 문자열 | 대상에 내보낸 프로필을 ID 네임스페이스 그룹으로 그룹화하려면 ID 그룹 목록을 만듭니다. 예를 들어, 예제의 구성을 사용하여 IDFA 및 GAID 모바일 식별자를 포함하는 프로필을 대상에 대한 한 호출로 결합하고 이메일을 다른 호출로 결합할 수 있습니다. |
+| `aggregation.configurableAggregation.splitUserById` | 부울 | 예제 구성 [여기](./destination-configuration.md#example-configuration)에서 매개 변수를 참조하십시오. 대상에 대한 호출이 ID로 분할되어야 하는 경우 이 플래그를 사용합니다. 서버가 특정 네임스페이스에 대해 호출당 하나의 ID만 수락하는 경우 이 플래그를 `true`로 설정하십시오. |
+| `aggregation.configurableAggregation.maxBatchAgeInSecs` | 정수 | *최대값: 3600*. 예제 구성 [여기](./destination-configuration.md#example-configuration)에서 매개 변수를 참조하십시오. 이 API는 `maxNumEventsInBatch`과 함께 엔드포인트에 API 호출을 전송할 때까지 Experience Platform이 대기하는 시간을 결정합니다. <br> 예를 들어 두 매개 변수에 최대 값을 사용하는 경우 Experience Platform은 API 호출을 수행하기 전에 10.000개의 정규화된 프로필이 있을 때까지 3600초 또는 10.000개의 대기 중 가장 먼저 수행됩니다. |
+| `aggregation.configurableAggregation.maxNumEventsInBatch` | 정수 | *최대값: 1000*. 예제 구성 [여기](./destination-configuration.md#example-configuration)에서 매개 변수를 참조하십시오. 바로 위에 있는 `maxBatchAgeInSecs` 을 참조하십시오. |
+| `aggregation.configurableAggregation.aggregationKey` | 부울 | 예제 구성 [여기](./destination-configuration.md#example-configuration)에서 매개 변수를 참조하십시오. 아래 매개 변수를 기반으로 대상에 매핑된 내보낸 프로필을 집계할 수 있습니다. <br> <ul><li>세그먼트 ID</li><li> 세그먼트 상태 </li><li> id 네임스페이스 </li></ul> |
+| `aggregation.configurableAggregation.aggregationKey.includeSegmentId` | 부울 | 예제 구성 [여기](./destination-configuration.md#example-configuration)에서 매개 변수를 참조하십시오. 대상으로 내보낸 프로필을 세그먼트 ID로 대상에 그룹화하려면 이 옵션을 `true` 로 설정합니다. |
+| `aggregation.configurableAggregation.aggregationKey.includeSegmentStatus` | 부울 | 예제 구성 [여기](./destination-configuration.md#example-configuration)에서 매개 변수를 참조하십시오. 대상으로 내보낸 프로필을 세그먼트 ID 및 세그먼트 상태별로 그룹화하려면 `includeSegmentId:true` 과 `includeSegmentStatus:true` 모두를 설정해야 합니다. |
+| `aggregation.configurableAggregation.aggregationKey.includeIdentity` | 부울 | 예제 구성 [여기](./destination-configuration.md#example-configuration)에서 매개 변수를 참조하십시오. ID 네임스페이스로 대상에 내보낸 프로필을 그룹화하려면 `true`(으)로 설정합니다. |
+| `aggregation.configurableAggregation.aggregationKey.oneIdentityPerGroup` | 부울 | 예제 구성 [여기](./destination-configuration.md#example-configuration)에서 매개 변수를 참조하십시오. 이 매개 변수를 사용하여 내보낸 프로필을 단일 ID(GAID, IDFA, 전화번호, 이메일 등) 그룹으로 집계할지 여부를 지정합니다. |
+| `aggregation.configurableAggregation.aggregationKey.groups` | 문자열 | 예제 구성 [여기](./destination-configuration.md#example-configuration)에서 매개 변수를 참조하십시오. 대상에 내보낸 프로필을 ID 네임스페이스 그룹으로 그룹화하려면 ID 그룹 목록을 만듭니다. 예를 들어, 예제의 구성을 사용하여 IDFA 및 GAID 모바일 식별자를 포함하는 프로필을 대상에 대한 한 호출로 결합하고 이메일을 다른 호출로 결합할 수 있습니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -330,33 +303,6 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
             "bestEffortAggregation":{
                "maxUsersPerRequest":10,
                "splitUserById":false
-            }
-         },
-         "aggregation":{
-            "aggregationType":"CONFIGURABLE_AGGREGATION",
-            "configurableAggregation":{
-               "splitUserById":true,
-               "maxBatchAgeInSecs":0,
-               "maxNumEventsInBatch":0,
-               "aggregationKey":{
-                  "includeSegmentId":true,
-                  "includeSegmentStatus":true,
-                  "includeIdentity":true,
-                  "oneIdentityPerGroup":false,
-                  "groups":[
-                     {
-                        "namespaces":[
-                           "IDFA",
-                           "GAID"
-                        ]
-                     },
-                     {
-                        "namespaces":[
-                           "EMAIL"
-                        ]
-                     }
-                  ]
-               }
             }
          },
          "destinationDelivery":[
@@ -551,33 +497,6 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
          "splitUserById":false
       }
    },
-   "aggregation":{
-      "aggregationType":"CONFIGURABLE_AGGREGATION",
-      "configurableAggregation":{
-         "splitUserById":true,
-         "maxBatchAgeInSecs":0,
-         "maxNumEventsInBatch":0,
-         "aggregationKey":{
-            "includeSegmentId":true,
-            "includeSegmentStatus":true,
-            "includeIdentity":true,
-            "oneIdentityPerGroup":false,
-            "groups":[
-               {
-                  "namespaces":[
-                     "IDFA",
-                     "GAID"
-                  ]
-               },
-               {
-                  "namespaces":[
-                     "EMAIL"
-                  ]
-               }
-            ]
-         }
-      }
-   },
    "destinationDelivery":[
       {
          "authenticationRule":"CUSTOMER_AUTHENTICATION",
@@ -735,33 +654,6 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
       "bestEffortAggregation":{
          "maxUsersPerRequest":10,
          "splitUserById":false
-      }
-   },
-   "aggregation":{
-      "aggregationType":"CONFIGURABLE_AGGREGATION",
-      "configurableAggregation":{
-         "splitUserById":true,
-         "maxBatchAgeInSecs":0,
-         "maxNumEventsInBatch":0,
-         "aggregationKey":{
-            "includeSegmentId":true,
-            "includeSegmentStatus":true,
-            "includeIdentity":true,
-            "oneIdentityPerGroup":false,
-            "groups":[
-               {
-                  "namespaces":[
-                     "IDFA",
-                     "GAID"
-                  ]
-               },
-               {
-                  "namespaces":[
-                     "EMAIL"
-                  ]
-               }
-            ]
-         }
       }
    },
    "destinationDelivery":[
