@@ -3,11 +3,11 @@ audience: user
 user-guide-title: 태그 도움말
 breadcrumb-title: 태그
 user-guide-description: 고객 경험을 향상시키기 위해 분석, 마케팅 및 광고 태그를 배포 및 관리하는 방법을 살펴볼 수 있습니다.
-feature: 데이터 수집
-source-git-commit: d2df8ac5edca32ac9228cb7db1810763c57de0b3
+feature: Data Collection
+source-git-commit: 549124c4c10677cc3691706c804894956c7ef592
 workflow-type: tm+mt
-source-wordcount: '380'
-ht-degree: 67%
+source-wordcount: '378'
+ht-degree: 69%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 67%
    * [라이브러리에서 리소스 제거](./ui/managing-resources/remove-resources-from-library.md)
 * 게시 {#publish}
    * [개요](./ui/publishing/overview.md)
-   * [게시 흐름](./ui/publishing/publishing-flow.md)
+   * [게시 플로우](./ui/publishing/publishing-flow.md)
    * 호스트 {#hosts}
       * [개요](./ui/publishing/hosts/hosts-overview.md)
       * [Adobe 관리 호스트](./ui/publishing/hosts/managed-by-adobe-host.md)
@@ -72,7 +72,7 @@ ht-degree: 67%
          * [릴리스 정보](./extensions/web/product-string/release-notes.md)
       * Adobe Audience Manager {#audience-manager}
          * [개요](./extensions/web/audience-manager/overview.md)
-      * Adobe 클라이언트 데이터 계층 {#client-data-layer}
+      * Adobe 클라이언트 데이터 레이어 {#client-data-layer}
          * [개요](./extensions/web/client-data-layer/overview.md)
          * [릴리스 정보](./extensions/web/client-data-layer/release-notes.md)
       * Adobe ContextHub {#contexthub}
