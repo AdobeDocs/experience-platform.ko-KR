@@ -1,38 +1,45 @@
 ---
 keywords: rtcdp 프로필;프로필 rtcdp;rtcdp ID;rtcdp 병합 정책;실시간 고객 프로필
-title: 실시간 고객 프로필 개요
-seo-title: 실시간 고객 데이터 플랫폼의 실시간 고객 프로필
-description: 실시간 고객 데이터 플랫폼을 통해 실시간으로 고객 프로파일을 이용하여 고객에게 연관성 있고 일관성 있는 경험을 제공하는 방법을 살펴볼 수 있습니다.
-seo-description: 실시간 고객 데이터 플랫폼, 프로파일, 데이터, 경험, 채널
-translation-type: tm+mt
-source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
+title: 실시간 CDP에서 실시간 고객 프로필 이해하기
+description: Real-time Customer Data Platform을 통해 실시간 고객 프로필을 사용하여 고객에게 적절하고 일관된 적절한 경험을 제공하는 방법을 알아봅니다.
+exl-id: de70948c-ffc1-49d3-a57c-25ad415752ff
+source-git-commit: 6579e371a8729e926b7061418c786150a27d4876
 workflow-type: tm+mt
-source-wordcount: '404'
+source-wordcount: '475'
 ht-degree: 0%
 
 ---
 
+# 실시간 고객 프로필 개요
 
-# [!DNL Real-time Customer Profile]개요
-
-[!DNL Real-time Customer Profile] 온라인, 오프라인, CRM 및 제3자 데이터를 비롯한 다양한 채널의 데이터를 취합하여 각 개별 고객의 전체 상황을 파악할 수 있습니다. [!DNL Profile] 서로 다른 고객 데이터를 하나의 통합 뷰로 통합하여 고객 상호 작용에 대해 실행 가능하고 타임스탬프가 지정된 계정을 제공할 수 있습니다.
+실시간 고객 프로필을 사용하면 온라인, 오프라인, CRM 및 타사 데이터를 포함하여 여러 채널의 데이터를 결합하여 각 개별 고객을 전체적으로 볼 수 있습니다. 각 개별 고객 프로필을 사용하면 서로 다른 고객 데이터를 모든 고객 상호 작용에 대해 실행 가능하고 타임스탬프가 지정된 계정을 제공하는 통합 보기에 통합할 수 있습니다.
 
 ## [!DNL Real-time Customer Data Platform]의 프로필
 
-[!DNL Real-time Customer Data Platform] 고객이 브랜드와 상호 작용하는 장소 또는 시기와 상관없이 고객의 기대에 부응하는 일관된 경험을 제공할 수 있습니다. 이러한 개인화된 경험을 전달함으로써 고객의 기대에 부응하는 적시에 제공할 수 있지만 Adobe Experience Platform의 일부인 [!DNL Real-time Customer Profile]을 사용하여 달성할 수 있습니다. 실시간 CDP는 [!DNL Experience Platform]을 기반으로 구축되며 프로파일 생성을 비롯한 많은 [!DNL Experience Platform] 서비스 및 기능을 활용합니다. 이러한 각 고객 관점을 종합하여 다양한 마케팅 채널 및 조직에서 고객 데이터를 저장하는 데 사용하고 있는 다양한 시스템의 데이터를 취합할 수 있습니다.
+[!DNL Real-time Customer Data Platform] 은 고객이 브랜드와 상호 작용하는 위치와 시기에 관계없이 고객을 위해 체계적이고 일관된 경험을 제공할 수 있도록 해줍니다. 개인화된 이러한 경험을 통해 적시에 연관성 있고 전달할 수 있는 것은 사소한 이점이 없지만 Adobe Experience Platform의 일부인 실시간 고객 프로필을 사용하여 달성할 수 있습니다.
+
+실시간 CDP는 Experience Platform을 기반으로 구축되었으며 프로필 생성을 비롯한 많은 핵심 Experience Platform 기능과 기능을 사용합니다. 개별 고객의 이러한 집계된 보기는 고객 데이터를 저장하는 데 사용하는 다양한 시스템과 많은 마케팅 채널에서 가져온 데이터를 결합합니다.
+
+## 실시간 CDP, B2B Edition을 위한 프로필 개선 사항
+
+>[!IMPORTANT]
+>
+>Real-time Customer Data Platform B2B Edition은 현재 베타 버전입니다. 설명서 및 기능은 변경될 수 있습니다.
+
+실시간 CDP에서 지원하는 프로필 기능 외에도 실시간 CDP, B2B Edition을 사용하여 계정 및 기회와 같은 개인 관련 중요한 정보를 검색할 수 있습니다. 실시간 CDP에 대한 프로필 개선 사항에 대해 자세히 알려면 [프로필 찾아보기 안내서](profile-browse.md)를 읽어 보십시오.
 
 ## ID 및 ID 네임스페이스
 
-고객 데이터가 수집되면 ID를 사용하여 하나의 프로필로 병합되며 각 고객에 대해 더 많은 정보가 알려지면 이러한 ID를 서로 연결할 수 있습니다. ID 및 ID 네임스페이스에 대한 자세한 내용은 [ID 개요](/help/rtcdp/profile/identities-overview.md)를 참조하십시오.
+고객 데이터가 합쳐지면서 ID를 사용하여 단일 프로필로 병합되고 각 고객에 대해 더 많은 정보가 알려지면 이러한 ID를 함께 결합할 수 있습니다. ID 및 ID 네임스페이스에 대한 자세한 내용은 [ID 개요](identities-overview.md)를 참조하십시오.
 
-## 정책 병합
+## 병합 정책
 
-고객 데이터를 취합할 때 병합 정책은 데이터가 우선 순위를 매길 방법과 이러한 통합 보기를 만들기 위해 결합할 데이터를 결정하는 데 사용하는 규칙입니다. [!DNL Platform] 병합 정책에 대한 자세한 내용은 [병합 정책 개요](/help/rtcdp/profile/merge-policies.md)를 참조하십시오.
+고객 데이터를 함께 가져올 때 병합 정책은 Platform이 데이터 우선 순위가 지정되는 방식과 해당 통합 보기를 만들기 위해 결합할 데이터를 결정하는 데 사용하는 규칙입니다. 병합 정책에 대한 자세한 내용은 [병합 정책 개요](merge-policies.md)를 참조하십시오.
 
 ## 프로필 뷰어
 
-[!DNL Platform] 다양한 속성을 사용하여 고객 프로파일을 손쉽게 확인하고 특정 프로파일을 검색할 수 있습니다. [!DNL Platform] 내에서 프로파일을 보는 방법에 대한 자세한 내용은 [프로필 뷰어 개요](/help/rtcdp/profile/profile-viewer.md)를 참조하십시오.
+플랫폼 을 사용하면 고객 프로필을 쉽게 보고 다양한 속성을 사용하여 특정 프로필을 검색할 수 있습니다. 플랫폼 내에서 프로필을 보는 방법에 대한 자세한 내용은 [프로필 찾아보기 개요](profile-browse.md)를 참조하십시오.
 
 ## 다음 단계
 
-이 개요를 본 후에는 실시간 CDP가 [!DNL Real-time Customer Profile]을 활용하여 크로스채널 개인화를 규모에 맞게 향상시키는 방법을 이해해야 합니다. 서로 다른 소스에서 ID를 결합하면 각 개별 고객의 전체 상황을 확인할 수 있으므로 마케팅 캠페인을 전혀 새로운 수준으로 전개할 수 있습니다. 사용자 인터페이스와 API를 통해 [!DNL Real-time Customer Profile] 데이터를 사용하여 작업하는 모범 사례와 자습서를 비롯하여 자세한 내용은 [실시간 고객 프로필 설명서](../../profile/home.md)를 참조하십시오.
+다른 소스의 데이터를 함께 결합하면 각 개별 고객에 대한 전체 그림을 볼 수 있으므로 마케팅 캠페인을 새로운 수준으로 끌어올릴 수 있습니다. 사용자 인터페이스 및 API를 통해 실시간 고객 프로필 데이터를 사용하기 위한 모범 사례 및 자습서 등 자세한 내용은 [실시간 고객 프로필 설명서](../../profile/home.md)를 참조하십시오.
