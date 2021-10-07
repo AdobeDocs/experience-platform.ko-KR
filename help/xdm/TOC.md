@@ -4,9 +4,9 @@ user-guide-title: XDM(경험 데이터 모델) 시스템 도움말
 breadcrumb-title: Experience Data Model(XDM) 안내서
 user-guide-description: XDM(경험 데이터 모델) 클래스 및 스키마 필드 그룹을 사용하여 경험 데이터를 표준화합니다.
 feature: Schemas
-source-git-commit: 05d5a599b3ed101fab7ab96e4f218592f7e923ef
+source-git-commit: 4a74faad811d9b13f93799686df44f04a8d1b784
 workflow-type: tm+mt
-source-wordcount: '393'
+source-wordcount: '398'
 ht-degree: 14%
 
 ---
@@ -65,6 +65,8 @@ ht-degree: 14%
       * [IAB TCF 2.0 동의](./field-groups/event/iab.md)
       * [숙박예약](./field-groups/event/lodging-reservation.md)
       * [예약 세부 정보](./field-groups/event/reservation-details.md)
+      * [업그레이드 세부 정보](./field-groups/event/upgrade-details.md)
+      * [업셀 세부 정보](./field-groups/event/upsell-details.md)
       * [웹 세부 사항](./field-groups/event/web-details.md)
    * [필드 그룹 이름 업데이트](./field-groups/name-updates.md)
 * 데이터 유형 {#data-types}
@@ -91,6 +93,7 @@ ht-degree: 14%
    * [지역 상호 작용 세부 사항](./data-types/geo-interaction-details.md)
    * [지역 모양](./data-types/geo-shape.md)
    * [ID](./data-types/identity.md)
+   * [노출 횟수](./data-types/impressions.md)
    * [마케팅](./data-types/marketing.md)
    * [측정](./data-types/measure.md)
    * [주문](./data-types/order.md)
@@ -110,7 +113,7 @@ ht-degree: 14%
    * [웹 정보](./data-types/web-information.md)
    * [웹 상호 작용](./data-types/web-interaction.md)
    * [웹 페이지 세부 사항](./data-types/webpage-details.md)
-*  SchemaUI  {#ui}
+*  스키마 UI  {#ui}
    * [개요](./ui/overview.md)
    * [XDM 리소스 살펴보기](./ui/explore.md)
    * 리소스 {#resources} 만들기 및 편집
