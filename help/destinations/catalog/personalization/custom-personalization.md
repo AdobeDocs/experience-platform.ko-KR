@@ -2,9 +2,10 @@
 keywords: 사용자 지정 개인화; 대상; experience platform 사용자 지정 대상
 title: 사용자 지정 개인화 연결(베타)
 description: 이 대상은 Adobe Experience Platform에서 세그먼트 정보를 검색하는 방법으로 사이트에서 실행 중인 외부 개인화, 콘텐츠 관리 시스템, 광고 서버 및 기타 애플리케이션을 제공합니다. 이 대상은 사용자 프로필의 세그먼트 멤버십을 기반으로 실시간 1:1 및 개인화를 제공합니다.
-source-git-commit: 0635828cf3f637e67d2cabda860ca452e61892d4
+exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
+source-git-commit: 398d591d66f4b579f75ef2b5eb0c10da9d7a83f3
 workflow-type: tm+mt
-source-wordcount: '578'
+source-wordcount: '586'
 ht-degree: 0%
 
 ---
@@ -61,6 +62,28 @@ ht-degree: 0%
 ## 내보낸 데이터 {#exported-data}
 
 [Adobe 태그](../../../tags/home.md)를 사용하여 Experience Platform 웹 SDK를 배포하는 경우 [이벤트 완료](../../../edge/extension/event-types.md) 기능을 사용하고 사용자 지정 코드 작업에는 내보낸 데이터를 보는 데 사용할 수 있는 `event.destinations` 변수가 있습니다.
+
+다음은 `event.destinations` 변수에 대한 샘플 값입니다.
+
+```
+[
+   {
+      "type":"profileLookup",
+      "destinationId":"7bb4cb8d-8c2e-4450-871d-b7824f547111",
+      "alias":"personalizationAlias",
+      "segments":[
+         {
+            "id":"399eb3e7-3d50-47d3-ad30-a5ad99e8ab77",
+            "mergePolicyId":"69638c01-2099-4032-8b41-84bee8ebcfa4"
+         },
+         {
+            "id":"499eb3e7-3d50-47d3-ad30-a5ad99e8ab77",
+            "mergePolicyId":"69638c01-2099-4032-8b41-84bee8ebcfa4"
+         }
+      ]
+   }
+]
+```
 
 [Adobe 태그](../../../tags/home.md)를 사용하여 Experience Platform 웹 SDK를 배포하지 않는 경우, [events](../../../edge/fundamentals/tracking-events.md#handling-responses-from-events) 기능의 응답 처리 를 사용하여 내보낸 데이터를 확인하십시오.
 
