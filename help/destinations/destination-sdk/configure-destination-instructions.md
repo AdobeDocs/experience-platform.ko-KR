@@ -4,9 +4,9 @@ seo-description: This page describes how to use the reference information in Con
 seo-title: How to use Destination SDK to configure your destination
 title: 대상 SDK를 사용하여 대상을 구성하는 방법
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: 32b61276f3fe81ffa82fec1debf335ea51020ccd
+source-git-commit: 15626393bd69173195dd924c8817073b75df5a1e
 workflow-type: tm+mt
-source-wordcount: '568'
+source-wordcount: '655'
 ht-degree: 0%
 
 ---
@@ -57,6 +57,8 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 ## 2단계: 대상 구성 만들기 {#create-destination-configuration}
 
 아래에 표시된 것은 `/destinations` API 엔드포인트를 사용하여 생성된 대상 템플릿에 대한 구성 예시입니다. 이 템플릿에 대한 자세한 내용은 [대상 구성](./destination-configuration.md)을 참조하십시오.
+
+1단계의 서버 및 템플릿 구성을 이 대상 구성에 연결하려면 여기에 서버의 인스턴스 ID와 템플릿 구성을 `destinationServerId`(으)로 추가하십시오.
 
 ```json
 POST platform.adobe.io/data/core/activation/authoring/destinations
@@ -109,6 +111,12 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
          "acceptsCustomNamespaces":true
       }
    },
+   "segmentMappingConfig":{
+      "mapExperiencePlatformSegmentName":false,
+      "mapExperiencePlatformSegmentId":false,
+      "mapUserInput":false,
+      "audienceTemplateId":"cbf90a70-96b4-437b-86be-522fbdaabe9c"
+   },   
    "aggregation":{
       "aggregationType":"CONFIGURABLE_AGGREGATION",
       "configurableAggregation":{
@@ -138,20 +146,24 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 대상이 지원하는 페이로드를 기준으로 하여 내보낸 데이터의 형식을 Adobe XDM 포맷에서 대상에서 지원하는 형식으로 변환하는 템플릿을 만들어야 합니다. [ID, 특성 및 세그먼트 멤버 자격 변형에 템플릿 언어를 사용하는 섹션에서 템플릿 예를 보고 Adobe이 제공한 [템플릿 작성 도구](./create-template.md)를 사용하십시오.](./message-format.md#using-templating)
 
+적합한 메시지 변환 템플릿을 만들었으면 1단계에서 만든 서버 및 템플릿 구성에 추가하십시오.
+
 ## 4단계: 대상 메타데이터 구성 만들기 {#create-audience-metadata-configuration}
 
-일부 대상의 경우, 대상 SDK를 사용하려면 대상의 대상을 프로그래밍 방식으로 만들거나, 업데이트하거나, 삭제하도록 대상 메타데이터 템플릿을 구성해야 합니다. 이 구성을 설정해야 하는 시점 및 이 작업을 수행하는 방법에 대한 자세한 내용은 [대상 메타데이터 관리](./audience-metadata-management.md) 를 참조하십시오.
+일부 대상의 경우, 대상 SDK를 사용하려면 대상의 대상을 프로그래밍 방식으로 만들거나, 업데이트하거나, 삭제하도록 대상 메타데이터 구성을 구성해야 합니다. 이 구성을 설정해야 하는 시점 및 이 작업을 수행하는 방법에 대한 자세한 내용은 [대상 메타데이터 관리](./audience-metadata-management.md) 를 참조하십시오.
+
+대상 메타데이터 구성을 사용하는 경우 이 구성을 2단계에서 만든 대상 구성에 연결해야 합니다. 대상 메타데이터 구성의 인스턴스 ID를 `audienceTemplateId`(으)로 대상 구성에 추가합니다.
 
 ## 5단계: 자격 증명 구성 만들기 / 인증 설정 {#set-up-authentication}
 
 위의 대상 구성에서 `"authenticationRule": "CUSTOMER_AUTHENTICATION"` 또는 `"authenticationRule": "PLATFORM_AUTHENTICATION"`을 지정하는지에 따라 `/destination` 또는 `/credentials` 종단점을 사용하여 대상에 대한 인증을 설정할 수 있습니다.
 
-* **가장 일반적인 사례**: 을 선택하고 대상 `"authenticationRule": "CUSTOMER_AUTHENTICATION"` 이 OAuth 2 인증 방법을 지원하는 경우  [OAuth 2 인증을 읽으십시오](./oauth2-authentication.md).
+* **가장 일반적인 사례**: 대상 구성 `"authenticationRule": "CUSTOMER_AUTHENTICATION"` 에서 을 선택했으며 대상이 OAuth 2 인증 방법을 지원하는 경우  [OAuth 2 인증을 읽으십시오](./oauth2-authentication.md).
 * `"authenticationRule": "PLATFORM_AUTHENTICATION"`을 선택한 경우 참조 설명서의 [자격 증명 구성](./credentials-configuration.md)을 참조하십시오.
 
 ## 6단계: 대상 테스트 {#test-destination}
 
-이전 단계의 템플릿을 사용하여 대상을 설정한 후에는 [대상 테스트 도구](./create-template.md)를 사용하여 Adobe Experience Platform과 대상 간의 통합을 테스트할 수 있습니다.
+이전 단계의 구성 끝점을 사용하여 대상을 설정한 후에는 [대상 테스트 도구](./create-template.md)를 사용하여 Adobe Experience Platform과 대상 간의 통합을 테스트할 수 있습니다.
 
 대상을 테스트하는 프로세스의 일부로, Experience Platform UI를 사용하여 세그먼트를 만들어 대상에 대해 활성화해야 합니다. Experience Platform에서 세그먼트를 만드는 방법에 대한 지침은 아래 두 리소스를 참조하십시오.
 

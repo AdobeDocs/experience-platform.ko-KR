@@ -2,9 +2,9 @@
 description: 이 구성을 사용하면 대상 이름, 카테고리, 설명, 로고 등과 같은 기본 정보를 표시할 수 있습니다. 또한 이 구성의 설정은 Experience Platform 사용자가 대상을 인증하는 방법, Experience Platform 사용자 인터페이스에 표시되는 방법 및 대상으로 내보낼 수 있는 ID를 결정합니다.
 title: 대상 SDK에 대한 대상 구성 옵션
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: 32b61276f3fe81ffa82fec1debf335ea51020ccd
+source-git-commit: 76a596166edcdbf141b5ce5dc01557d2a0b4caf3
 workflow-type: tm+mt
-source-wordcount: '1552'
+source-wordcount: '1727'
 ht-degree: 5%
 
 ---
@@ -13,13 +13,15 @@ ht-degree: 5%
 
 ## 개요 {#overview}
 
-이 구성을 사용하면 대상 이름, 카테고리, 설명, 로고 등과 같은 기본 정보를 표시할 수 있습니다. 또한 이 구성의 설정은 Experience Platform 사용자가 대상을 인증하는 방법, Experience Platform 사용자 인터페이스에 표시되는 방법 및 대상으로 내보낼 수 있는 ID를 결정합니다.
+이 구성을 사용하면 대상 이름, 카테고리, 설명, 로고 등과 같은 필수 정보를 표시할 수 있습니다. 또한 이 구성의 설정은 Experience Platform 사용자가 대상을 인증하는 방법, Experience Platform 사용자 인터페이스에 표시되는 방법 및 대상으로 내보낼 수 있는 ID를 결정합니다.
+
+또한 이 구성에서는 대상이 작동하는 데 필요한 다른 구성(대상 서버 및 대상 메타데이터)도 이 구성에 연결합니다. [섹션 아래의 두 구성을 참조하는 방법을 읽어 보십시오](./destination-configuration.md#connecting-all-configurations).
 
 `/authoring/destinations` API 엔드포인트를 사용하여 이 문서에 설명된 기능을 구성할 수 있습니다. 엔드포인트에서 수행할 수 있는 작업의 전체 목록은 [대상 API 엔드포인트 작업](./destination-configuration-api.md)을 참조하십시오.
 
 ## 예제 구성 {#example-configuration}
 
-아래는 가상의 여행지 Moviestar에 대한 구성 예시이며, 전세계적으로 4개 위치에 종단점이 있습니다. 대상은 모바일 대상 카테고리에 속합니다. 아래 섹션에서는 이 구성을 구성하는 방법을 자세히 설명합니다.
+아래는 가공의 대상인 무비테르의 구성 예입니다. 무비스타르는 전세계적으로 4개 지역에 종단점이 있습니다. 대상은 모바일 대상 카테고리에 속합니다. 아래 섹션에서는 이 구성을 구성하는 방법을 자세히 설명합니다.
 
 ```json
 {
@@ -118,14 +120,15 @@ ht-degree: 5%
             ]
          }
       }
-   }
+   },
+   "backfillHistoricalProfileData":true
 }
 ```
 
 | 매개 변수 | 유형 | 설명 |
 |---------|----------|------|
 | `name` | 문자열 | Experience Platform 카탈로그에서 대상의 제목을 나타냅니다. |
-| `description` | 문자열 | Adobe이 대상 카드의 Experience Platform 대상 카탈로그에서 사용할 설명을 제공합니다. 4-5개 이하의 문장을 목표로 하라. |
+| `description` | 문자열 | Experience Platform 대상 카탈로그에서 대상 카드에 대한 설명을 제공합니다. 4-5개 이하의 문장을 목표로 하라. |
 | `status` | 문자열 | 대상 카드의 라이프사이클 상태를 나타냅니다. 허용되는 값은 `TEST`, `PUBLISHED` 및 `DELETED`입니다. 대상을 처음 구성할 때 `TEST` 을 사용하십시오. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -193,7 +196,7 @@ ht-degree: 5%
 
 | 매개 변수 | 유형 | 설명 |
 |---------|----------|------|
-| `profileFields` | 어레이 | *위의 구성 예는 표시되지 않습니다.* 사전 정의된 `profileFields`를 추가할 때 사용자는 Experience Platform 속성을 대상 측의 사전 정의된 속성에 매핑하는 옵션을 사용할 수 있습니다. |
+| `profileFields` | 어레이 | *위의 구성 예는 표시되지 않습니다.* 사전 정의된 `profileFields`를 추가할 때 Experience Platform 사용자는 플랫폼 속성을 대상 측의 사전 정의된 속성에 매핑할 수 있습니다. |
 | `profileRequired` | 부울 | 위의 예제 구성에 표시된 대로 사용자가 Experience Platform의 프로필 속성을 대상 측의 사용자 지정 속성에 매핑할 수 있다면 `true` 를 사용하십시오. |
 | `segmentRequired` | 부울 | 항상 `segmentRequired:true`을 사용하십시오. |
 | `identityRequired` | 부울 | 사용자가 Experience Platform의 ID 네임스페이스를 원하는 스키마에 매핑할 수 있어야 하는 경우 `true` 을 사용합니다. |
@@ -204,7 +207,7 @@ ht-degree: 5%
 
 이 섹션의 매개 변수는 Experience Platform 사용자 인터페이스의 매핑 단계에서 대상 ID 및 속성이 채워지는 방식을 결정합니다. 여기서 사용자는 XDM 스키마를 대상의 스키마에 매핑합니다.
 
-Adobe은 고객이 대상으로 내보낼 수 있는 [!DNL Platform] id를 알고 있어야 합니다. 일부 예제는 [!DNL Experience Cloud ID], 해시된 이메일, 장치 ID([!DNL IDFA], [!DNL GAID])입니다. 이러한 값은 고객이 대상의 ID 네임스페이스에 매핑할 수 있는 [!DNL Platform] ID 네임스페이스입니다.
+고객이 대상으로 내보낼 수 있는 [!DNL Platform] ID를 표시해야 합니다. 일부 예제는 [!DNL Experience Cloud ID], 해시된 이메일, 장치 ID([!DNL IDFA], [!DNL GAID])입니다. 이러한 값은 고객이 대상의 ID 네임스페이스에 매핑할 수 있는 [!DNL Platform] ID 네임스페이스입니다.
 
 ID 네임스페이스에 [!DNL Platform] 과(와) 대상 간의 1~1 응답이 필요하지 않습니다.
 예를 들어 고객은 [!DNL Platform] [!DNL IDFA] 네임스페이스를 대상의 [!DNL IDFA] 네임스페이스에 매핑하거나 동일한 [!DNL Platform] [!DNL IDFA] 네임스페이스를 대상의 [!DNL Customer ID] 네임스페이스에 매핑할 수 있습니다.
@@ -215,9 +218,9 @@ ID 네임스페이스에 [!DNL Platform] 과(와) 대상 간의 1~1 응답이 �
 
 | 매개 변수 | 유형 | 설명 |
 |---------|----------|------|
-| `acceptsAttributes` | 부울 | 대상이 표준 프로필 속성을 수락하는지 여부를 나타냅니다. 일반적으로 이러한 속성은 파트너의 설명서에 강조 표시됩니다. |
+| `acceptsAttributes` | 부울 | 대상이 표준 프로필 속성을 수락하는지 여부를 나타냅니다. 일반적으로 이러한 속성은 파트너의 설명서에서 강조 표시됩니다. |
 | `acceptsCustomNamespaces` | 부울 | 고객이 대상에서 사용자 지정 네임스페이스를 설정할 수 있는지 여부를 나타냅니다. |
-| `allowedAttributesTransformation` | 문자열 | *구성 예는 표시되지 않습니다*. 예를 들어 [!DNL Platform] 고객이 일반 이메일 주소를 속성으로 가지고 있고 플랫폼이 해시된 이메일만 허용하는 경우 사용됩니다. 여기에서 적용해야 하는 변형을 제공합니다(예: 이메일을 소문자로 변환한 다음 해시). |
+| `allowedAttributesTransformation` | 문자열 | *구성 예는 표시되지 않습니다*. 예를 들어 [!DNL Platform] 고객이 일반 이메일 주소를 속성으로 가지고 있고 플랫폼이 해시된 이메일만 허용하는 경우 사용됩니다. 이 개체에서는 적용해야 하는 변형을 적용할 수 있습니다(예: 이메일을 소문자로 변환한 다음 해시). 예를 들어 [대상 구성 API 참조](./destination-configuration-api.md#update)에서 `requiredTransformation` 을 참조하십시오. |
 | `acceptedGlobalNamespaces` | - | 플랫폼이 [표준 ID 네임스페이스](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces)(예: IDFA)를 허용하는 경우에 사용되므로 Platform 사용자가 이러한 ID 네임스페이스만 선택하도록 제한할 수 있습니다. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -242,13 +245,21 @@ ID 네임스페이스에 [!DNL Platform] 과(와) 대상 간의 1~1 응답이 �
 
 위의 구성에 표시된 매개 변수는 [대상 종단점 API 참조](./destination-configuration-api.md)에 설명되어 있습니다.
 
+## 이 구성이 대상에 필요한 모든 정보를 연결하는 방법 {#connecting-all-configurations}
+
+대상에 대한 일부 설정은 대상 서버 또는 대상 메타데이터 끝점을 통해 구성할 수 있습니다. 대상 구성 끝점은 다음과 같이 구성을 참조하여 이러한 모든 설정을 연결합니다.
+
+* 대상에 대해 설정된 대상 서버 및 템플릿 구성을 참조하려면 `destinationServerId` 을 사용하십시오.
+* 대상에 대해 설정된 대상 메타데이터 구성을 참조하려면 `audienceMetadataId` 을 사용하십시오.
+
+
 ## 집계 정책 {#aggregation}
 
 ![구성 템플릿의 집계 정책](./assets/aggregation-configuration.png)
 
-이 섹션에서는 데이터를 대상으로 내보낼 때 Experience Platform이 사용할 집계 정책을 설정할 수 있습니다.
+이 섹션에서는 데이터를 대상으로 내보낼 때 Experience Platform이 사용해야 하는 집계 정책을 설정할 수 있습니다.
 
-집계 정책은 내보낸 프로필을 데이터 내보내기에서 함께 결합하는 방법을 결정합니다. 사용 가능한 옵션은 다음과 같습니다.
+집계 정책은 내보낸 프로필이 데이터 내보내기에서 결합되는 방법을 결정합니다. 사용 가능한 옵션은 다음과 같습니다.
 * 최상의 노력 집계
 * 구성 가능한 합계(위의 구성에 표시)
 
@@ -260,7 +271,7 @@ ID 네임스페이스에 [!DNL Platform] 과(와) 대상 간의 1~1 응답이 �
 >
 >API 엔드포인트가 API 호출당 100개 미만의 프로필을 허용하는 경우 이 옵션을 사용합니다.
 
-이 옵션은 요청당 프로필을 적게 선호하고, 데이터가 많은 요청이 적은 것보다 적은 데이터로 요청을 더 많이 받는 대상에 가장 적합합니다.
+이 옵션은 요청당 프로필 수를 줄이고, 데이터가 많은 요청이 적은 것보다 적은 데이터로 더 많은 요청을 받는 대상에 가장 적합합니다.
 
 `maxUsersPerRequest` 매개 변수를 사용하여 대상에서 요청에 사용할 수 있는 최대 프로필 수를 지정합니다.
 
@@ -277,10 +288,10 @@ ID 네임스페이스에 [!DNL Platform] 과(와) 대상 간의 1~1 응답이 �
 
 합계 매개 변수에 대한 자세한 내용은 각 매개 변수에 대해 설명하는 [대상 API 엔드포인트 작업](./destination-configuration-api.md) 참조 페이지를 참조하십시오.
 
-<!--
+## 내역 프로필 자격
 
-commenting out the `backfillHistoricalProfileData` parameter, which will only be used after an April release
+대상 구성에서 `backfillHistoricalProfileData` 매개 변수를 사용하여 이전 프로필 자격을 대상으로 내보내야 하는지 확인할 수 있습니다.
 
-|`backfillHistoricalProfileData` | Boolean | Controls whether historical profile data is exported when segments are activated to the destination. <br> <ul><li> `true`: [!DNL Platform] sends the historical user profiles that qualified for the segment before the segment is activated. </li><li> `false`: [!DNL Platform] only includes user profiles that qualify for the segment after the segment is activated. </li></ul> |
-
--->
+| 매개 변수 | 유형 | 설명 |
+|---------|----------|------|
+| `backfillHistoricalProfileData` | 부울 | 세그먼트가 대상으로 활성화될 때 이전 프로필 데이터를 내보내지 여부를 제어합니다. <br> <ul><li> `true`:  [!DNL Platform] 세그먼트가 활성화되기 전에 세그먼트에 대해 자격이 있는 내역 사용자 프로필을 보냅니다. </li><li> `false`:  [!DNL Platform] 세그먼트가 활성화된 후에 세그먼트에 대한 자격이 되는 사용자 프로필만 포함합니다. </li></ul> |
