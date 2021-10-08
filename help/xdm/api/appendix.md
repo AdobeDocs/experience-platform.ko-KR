@@ -5,7 +5,7 @@ title: 스키마 레지스트리 API 안내서 부록
 description: 이 문서에서는 스키마 레지스트리 API 작업과 관련된 추가 정보를 제공합니다.
 topic-legacy: developer guide
 exl-id: 2ddc7fe8-dd0b-4cf9-8561-e89fcdadbfce
-source-git-commit: 403dcb75e43b5c7aa462495086e5a9e403ef6f5b
+source-git-commit: 2871108b67d3d84f1578e80e9c087444ff407820
 workflow-type: tm+mt
 source-wordcount: '984'
 ht-degree: 1%
@@ -77,50 +77,52 @@ ht-degree: 1%
   <tr>
   <td>
   <pre class=" language-json">
-        {
-          "xdm:birthDate": {
-              "title": "생년월일",
-              "type": "string",
-              "format": "date",
-          },
-          "xdm:birthDayAndMonth": {
-              "title": "생년월일",
-              "type": "string",
-              "pattern": "[0-1][0-9]-[0-9][0-9]",
-          },
-          "xdm:birthYear": {
-              "title": "출생 연도"
-              "type": "integer",
-              "minimum": 1,
-              "maximum": 32767
-        }
+{
+  "xdm:birthDate": {
+    "title": "생년월일",
+    "type": "string",
+    "format": "date"
+  },
+  "xdm:birthDayAndMonth": {
+    "title": "생년월일",
+    "type": "string",
+    "pattern": "[0-1][0-9]-[0-9][0-9][0-9]"
+  },
+  "xdm:birthYear": {
+    "title": "출생 연도"
+    "type": "integer",
+    "minimum": 1,
+    "maximum": 32767
+  }
+}
   </pre>
   </td>
   <td>
   <pre class=" language-json">
-        {
-          "firstDate": {
-              "title": "생년월일",
-              "type": "string",
-              "format": "date",
-              "meta:xdmField": "xdm:birthDate",
-              "meta:xdmType": "date"
-          },
-          "birthDayAndMonth": {
-              "title": "생년월일",
-              "type": "string",
-              "pattern": "[0-1][0-9]-[0-9][0-9]",
-              "meta:xdmField": "xdm:birthDayAndMonth",
-              "meta:xdmType": "string"
-          },
-          "birthYear": {
-              "title": "출생 연도"
-              "type": "integer",
-              "minimum": 1,
-              "maximum": 32767,
-              "meta:xdmField": "xdm:birthYear",
-              "meta:xdmType": "short"
-        }
+{
+  "firstDate": {
+    "title": "생년월일",
+    "type": "string",
+    "format": "date",
+    "meta:xdmField": "xdm:birthDate",
+    "meta:xdmType": "date"
+  },
+  "birthDayAndMonth": {
+    "title": "생년월일",
+    "type": "string",
+    "pattern": "[0-1][0-9]-[0-9][0-9]",
+    "meta:xdmField": "xdm:birthDayAndMonth",
+    "meta:xdmType": "string"
+  },
+  "birthYear": {
+    "title": "출생 연도"
+    "type": "integer",
+    "minimum": 1,
+    "maximum": 32767,
+    "meta:xdmField": "xdm:birthYear",
+    "meta:xdmType": "short"
+  }
+}
       </pre>
   </td>
   </tr>
