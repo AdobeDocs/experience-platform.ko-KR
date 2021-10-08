@@ -4,9 +4,9 @@ description: 기존 필드 그룹의 필드를 XDM(Experience Data Model) 스키
 hide: true
 hidefromtoc: true
 exl-id: 0499ff30-a602-419b-b9d3-2defdd4354a7
-source-git-commit: b7c6f37d3e6d824465713647b624473cff188378
+source-git-commit: 0bac76ce754468bd7e5396b6f68fbcfc3d6e4aed
 workflow-type: tm+mt
-source-wordcount: '1175'
+source-wordcount: '1199'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->이 문서에 설명된 워크플로우는 현재 베타 버전입니다. 기능 및 설명서는 변경될 수 있습니다.
+>이 문서에 설명된 워크플로우는 현재 베타 버전이며 조직에서 아직 액세스할 수 없습니다. 이 설명서에 설명된 기능은 변경될 수 있습니다.
 
 Adobe Experience Platform은 XDM(Experience Data Model) 스키마에서 사용할 강력한 표준화된 [필드 그룹](../schema/composition.md#field-group) 세트를 제공합니다. 이러한 필드 그룹의 구조와 의미 체계는 Platform의 다양한 세그멘테이션 사용 사례 및 기타 다운스트림 애플리케이션을 충족하도록 신중하게 조정됩니다. 고유한 비즈니스 요구 사항을 해결하기 위해 고유한 사용자 지정 필드 그룹을 정의할 수도 있습니다.
 
@@ -43,7 +43,7 @@ Adobe Experience Platform은 XDM(Experience Data Model) 스키마에서 사용�
 
 ![관련 필드 관리](../images/ui/field-based-workflows/manage-related-fields.png)
 
-해당 필드 그룹의 구조를 보여 주는 대화 상자가 나타납니다. 여기에서 제공된 확인란을 사용하여 필요한 필드를 선택하거나 선택 취소할 수 있습니다. 만족하면 **[!UICONTROL 필드 추가]**&#x200B;를 선택합니다.
+해당 필드 그룹의 구조를 보여 주는 대화 상자가 나타납니다. 여기에서 제공된 확인란을 사용하여 필요한 필드를 선택하거나 선택 취소할 수 있습니다. 만족하면 **[!UICONTROL Confirm]**&#x200B;을 선택합니다.
 
 ![필드 그룹에서 필드 선택](../images/ui/field-based-workflows/select-fields.png)
 
@@ -73,23 +73,23 @@ Adobe Experience Platform은 XDM(Experience Data Model) 스키마에서 사용�
 
 ## 스키마에 사용자 지정 필드 직접 추가
 
-이전에 [사용자 지정 필드 그룹](./resources/field-groups.md#create)을 만든 적이 있는 경우, 미리 사용자 지정 필드 그룹에 별도로 추가할 필요 없이 사용자 지정 필드를 스키마에 직접 추가할 수 있습니다.
-
->[!WARNING]
->
->스키마에 사용자 지정 필드를 추가할 때는 여전히 사용자 지정 필드 그룹을 선택하여 이 필드를 연결해야 합니다. 즉, 사용자 지정 필드를 스키마에 직접 추가하려면 작업 중인 샌드박스에서 이전에 정의된 사용자 지정 필드 그룹이 하나 이상 있어야 합니다. 또한 해당 사용자 지정 필드 그룹을 사용하는 다른 모든 스키마도 변경 사항을 저장한 후 새로 추가된 필드를 상속받게 됩니다.
+표준 필드의 워크플로우와 유사하게, 스키마에 직접 사용자 지정 필드를 추가할 수도 있습니다.
 
 스키마의 루트 수준에 필드를 추가하려면 캔버스에서 스키마 이름 옆에 있는 더하기(**+**) 아이콘을 선택합니다. **[!UICONTROL 제목 없는 필드]** 자리 표시자가 스키마 구조에 나타나고 오른쪽 레일이 업데이트되어 필드를 구성할 컨트롤을 표시합니다.
 
 ![루트 사용자 지정 필드](../images/ui/field-based-workflows/root-custom-field.png)
 
-추가할 사용자 지정 필드의 이름에 입력을 시작하면 시스템이 자동으로 일치하는 표준 필드 검색을 시작합니다. 대신 새 사용자 지정 필드를 만들려면 **([!UICONTROL 새 필드])**&#x200B;가 추가된 맨 위 옵션을 선택합니다.
+추가할 필드의 이름에 입력을 시작하면 시스템이 자동으로 일치하는 표준 필드 검색을 시작합니다. 대신 새 사용자 지정 필드를 만들려면 **([!UICONTROL 새 필드])**&#x200B;가 추가된 맨 위 옵션을 선택합니다.
 
 ![새 필드](../images/ui/field-based-workflows/custom-field-search.png)
 
-여기에서 필드의 표시 이름 및 데이터 유형을 제공합니다. **[!UICONTROL 필드 그룹 할당]**&#x200B;에서 새 필드를 연결할 사용자 지정 필드 그룹을 선택합니다.
+여기에서 필드의 표시 이름 및 데이터 유형을 제공합니다. **[!UICONTROL 필드 그룹 할당]**&#x200B;에서 연결할 새 필드에 대한 필드 그룹을 선택해야 합니다. 필드 그룹의 이름에 입력을 시작하면 이전에 [사용자 지정 필드 그룹](./resources/field-groups.md#create)을 만든 경우 드롭다운 목록에 표시됩니다. 또는 필드에 고유한 이름을 입력하여 대신 새 필드 그룹을 만들 수 있습니다.
 
 ![필드 그룹 선택](../images/ui/field-based-workflows/select-field-group.png)
+
+>[!WARNING]
+>
+>기존 사용자 지정 필드 그룹을 선택하는 경우, 해당 필드 그룹을 사용하는 다른 모든 스키마도 변경 사항을 저장한 후 새로 추가한 필드를 상속합니다. 이러한 이유로 이 유형의 전달을 원하는 경우에만 기존 필드 그룹을 선택합니다. 그렇지 않으면 대신 새 사용자 지정 필드 그룹을 만들도록 선택해야 합니다.
 
 완료되면 **[!UICONTROL 적용]**&#x200B;을 선택합니다.
 
@@ -110,6 +110,8 @@ Adobe Experience Platform은 XDM(Experience Data Model) 스키마에서 사용�
 ![표준 객체에 필드 추가](../images/ui/field-based-workflows/add-field-to-standard-object.png)
 
 변경 사항을 적용한 후 표준 개체 내의 테넌트 ID 네임스페이스 아래에 새 필드가 나타납니다. 이러한 중첩 네임스페이스는 동일한 필드 그룹을 사용하는 다른 스키마에서 변경 사항을 중단하지 않도록 필드 그룹 자체 내에서 필드 이름 충돌을 방지합니다.
+
+![표준 객체에 추가된 필드](../images/ui/field-based-workflows/added-to-standard-object.png)
 
 ## 다음 단계
 
