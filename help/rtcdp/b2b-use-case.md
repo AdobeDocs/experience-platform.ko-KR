@@ -1,25 +1,25 @@
 ---
-keywords: RTCDP;CDP;실시간 고객 데이터 플랫폼;실시간 고객 데이터 플랫폼;실시간 cdp;cdp;cdp;rtcdp
-title: 실시간 고객 데이터 플랫폼 B2B 에디션의 사용 사례 예
-description: 이 샘플 시나리오는 실시간 고객 데이터 플랫폼 B2B Edition 구현을 구성하는 예를 제공합니다.
-source-git-commit: 30a4d2b27092f4706bb4f3f986a190502b184034
+keywords: RTCDP;CDP;Real-time Customer Data Platform;실시간 고객 데이터 플랫폼;실시간 cdp;cdp;rtcdp
+title: Real-time Customer Data Platform B2B Edition의 사용 사례 예
+description: 이 샘플 시나리오는 Real-time Customer Data Platform B2B Edition 구현의 구성에 대한 예를 제공합니다.
+exl-id: 15505980-ac33-44b2-8989-c08cbabd212b
+source-git-commit: 4ebc3ef813c3c44aa2b8a7aab5ccabbcc3c332b2
 workflow-type: tm+mt
-source-wordcount: '1140'
+source-wordcount: '1144'
 ht-degree: 1%
 
 ---
 
-# 실시간 고객 데이터 플랫폼 B2B 에디션의 사용 사례 예
+# Real-time Customer Data Platform B2B Edition의 사용 사례 예
 
 >[!IMPORTANT]
 >
 >실시간 CDP Business to Business Edition은 현재 베타 버전입니다. 설명서 및 기능은 변경될 수 있습니다.
 
-실시간 고객 데이터 플랫폼 B2B Edition은 기존 실시간 CDP 및 Adobe Experience Platform 오퍼링을 확장하여 B2B 데이터 및 워크플로우를 지원합니다. 이 문서에서는 B2B Edition에서 제공하는 추가적인 이점을 보여주는 사용 사례를 제공합니다. 자동 프로필 변수에는 다음이 포함됩니다.
+Real-time Customer Data Platform B2B Edition은 기존 실시간 CDP 및 Adobe Experience Platform 오퍼링을 확장하여 B2B 데이터 및 워크플로우를 지원합니다. 이 문서에서는 B2B Edition에서 제공하는 추가적인 이점을 보여주는 사용 사례를 제공합니다. 자동 프로필 변수에는 다음이 포함됩니다.
 
 - 서로 다른 분산된 데이터 소스의 개인 및 계정 데이터를 통합하여 고객을 더 잘 이해하고 더 정확한 세그멘테이션을 가능하게 하는 포괄적인 보기를 생성합니다. 자세한 내용은 [XDM 스키마 관계 만들기](./schemas/b2b.md)에 대한 설명서를 참조하십시오.
-- 관련 엔티티의 속성을 기반으로 대상을 세그먼트화합니다. 여기에는 계정, 기회, 캠페인 및 마케팅 목록이 포함됩니다. 세그먼트는 더 이상 개인 속성 및 경험 이벤트로 제한되지 않습니다. B2B 특정 대상을 만드는 자세한 예는 B2B 세그먼테이션 설명서 를 참조하십시오.
-   <!-- PLACEHOLDER [B2B segmentation documentation]()  -->
+- 관련 엔티티의 속성을 기반으로 대상을 세그먼트화합니다. 여기에는 계정, 기회, 캠페인 및 마케팅 목록이 포함됩니다. 세그먼트는 더 이상 개인 속성 및 경험 이벤트로 제한되지 않습니다. B2B 특정 대상을 만드는 자세한 예는 [B2B 세그먼테이션 설명서](./segmentation/b2b.md) 를 참조하십시오.
 - 기본적으로 여러 계정과 관련된 한 사람의 사용 사례를 지원합니다.
 
 ## 사용 사례
@@ -97,12 +97,10 @@ Bodea는 Marketo Engage 및 LinkedIn 대상을 사용하여 마케팅 팀을 위
 
 다음 설명서는 B2B 특정 기능에 대한 이해를 개선하기 위해 권장됩니다.
 
-<!-- - [Marketo connector]() -->
-- [실시간 고객 데이터 플랫폼 B2B 에디션의 스키마](./schemas/b2b.md)
-- [Marketo Engage 대상 설명서](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/adobe/marketo-engage.html)
-- [LinkedIn 일치된 대상 대상 구성](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/social/linkedin.html#connect)
-
-<!-- PLACEHOLDER -->
-<!-- - [Account Profiles]() -->
-<!-- - [B2B Segmentation examples]() -->
-<!-- PLACEHOLDERS to tutorial / account profiles / B2B connectors / segmentation examples -->
+<!-- PLACEHOLDER Link to B2B tutorial required  -->
+- [Real-time Customer Data Platform B2B Edition의 소스](./sources/b2b.md)
+- [Real-time Customer Data Platform B2B Edition의 스키마](./schemas/b2b.md)
+- [B2B 세그먼테이션 예](./segmentation/b2b.md)
+- [계정 프로필 개요](./accounts/account-profile-overview.md)
+- [Real-time Customer Data Platform B2B Edition의 대상](./destinations/b2b.md)
+- [LinkedIn 일치된 대상 대상 구성](../destinations/catalog/social/linkedin.md)

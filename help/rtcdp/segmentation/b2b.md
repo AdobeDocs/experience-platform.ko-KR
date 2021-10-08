@@ -1,14 +1,15 @@
 ---
 title: 실시간 CDP B2B Edition을 위한 세그먼테이션 사용 사례 개요.
 description: 사용 가능한 다양한 실시간 CDP B2B Edition 사용 사례에 대한 개요입니다.
-source-git-commit: e85d4b108e2d4a6a88772c071d9281603b695ada
+exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
+source-git-commit: cc4bd6f3b70a90b53aaaf6a4c31d23fddd8a3f44
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1122'
+ht-degree: 1%
 
 ---
 
-# 실시간 고객 데이터 플랫폼 B2B 에디션(베타)에 대한 세그먼테이션 사용 사례 개요
+# Real-time Customer Data Platform B2B Edition(베타)용 세그먼테이션 사용 사례 개요
 
 <!-- This document relates to this [ticket](https://jira.corp.adobe.com/browse/PLAT-100468) -->
 
@@ -20,7 +21,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->이러한 세그멘테이션 사용 사례에 필요한 속성은 실시간 고객 데이터 플랫폼 B2B Edition 고객만 사용할 수 있습니다. 각 라이센스 유형에 사용할 수 있는 기능과 기능을 포함하여 실시간 CDP에 대한 자세한 내용은 [실시간 CDP 개요](../overview.md)를 읽어 보십시오.
+>이러한 세그멘테이션 사용 사례에 필요한 속성은 Real-time Customer Data Platform B2B Edition 고객만 사용할 수 있습니다. 각 라이센스 유형에 사용할 수 있는 기능과 기능을 포함하여 실시간 CDP에 대한 자세한 내용은 [실시간 CDP 개요](../overview.md)를 읽어 보십시오.
 
 ## 전제 조건
 
@@ -37,7 +38,7 @@ B2B 클래스에 대한 세그멘테이션 속성을 사용하려면 먼저 다�
 
 B2B 클래스에 대한 결합 스키마에 관계가 설정되고 데이터가 수집되는 데 사용되면 해당 속성은 세그먼트 빌더의 왼쪽 레일에서 사용할 수 있습니다.
 
-B2B 클래스 및 해당 속성은 실시간 고객 데이터 플랫폼 내에서 표준으로 사용할 수 있는 클래스와 구분하기 위해 세그먼테이션 작업 공간 내에 `B2B` 레이블이 추가됩니다.
+B2B 클래스 및 해당 속성은 Real-time Customer Data Platform 내에서 표준으로 사용 가능한 클래스와 구분하기 위해 세그먼테이션 작업 공간 내에 `B2B` 레이블이 추가됩니다.
 
 B2B 사용 사례에 대한 세그먼트를 효과적으로 만들려면 스키마에 대한 전문적인 지식을 가지고 데이터 모델이 어떤 모습인지 이해하는 것이 중요합니다. 또한 한 데이터 객체에서 다른 데이터 객체로 이동하는 경로를 인식하는 것이 유용합니다.
 
@@ -53,9 +54,9 @@ B2B 사용 사례에 대한 세그먼트를 효과적으로 만들려면 스키�
 
 이 관계는 아래 이미지에 표시된 대로 `Key` 폴더를 사용하여 세그먼트 빌더 내에 반영됩니다.
 
-![세그먼테이션 작업 영역에서 세그먼트 빌더를 사용하는 소스 키 예](../assets/segmentation/source-key-segmentation-example.png)
+![세그먼테이션 작업 공간에서 세그먼트 빌더를 사용하는 소스 키 예](../assets/segmentation/source-key-segmentation-example.png)
 
-사용 가능한 B2B 클래스에 대한 자세한 내용은 실시간 고객 데이터 플랫폼 B2B 에디션 설명서](../schemas/b2b.md)의 [스키마를 참조하십시오.
+사용 가능한 B2B 클래스에 대한 자세한 내용은 Real-time Customer Data Platform B2B Edition 설명서](../schemas/b2b.md)의 [스키마를 참조하십시오.
 
 아래 사용 사례에서는 이러한 결과를 얻기 위해 다른 스키마 간의 관계를 설정하는 데 사용되는 클래스에 대한 정보를 제공합니다. 이러한 예를 사용하여 세그먼트를 만드는 데 도움이 될 수 있습니다.
 
