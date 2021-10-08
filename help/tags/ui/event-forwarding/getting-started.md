@@ -1,10 +1,11 @@
 ---
 title: 이벤트 전달 시작
 description: Adobe Experience Platform에서 이벤트 전달을 사용하여 시작하려면 이 단계별 자습서를 따르십시오.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: f82bfac9-dc2d-44de-a308-651300f107df
+source-git-commit: 406c7e90c315c1807f5f3dd2b32462868b312197
 workflow-type: tm+mt
 source-wordcount: '907'
-ht-degree: 27%
+ht-degree: 30%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 27%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../term-updates.md)을 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
 
 Adobe Experience Platform에서 이벤트 전달을 사용하려면 다음 세 가지 옵션 중 하나 이상을 사용하여 데이터를 Adobe Experience Platform Edge Network에 전송해야 합니다.
 
@@ -98,7 +99,7 @@ Adobe Experience Platform에서 데이터 스트림을 만들려면 이벤트 �
 
 구성한 후 새 속성에 대한 환경 ID를 메모하십시오.
 
-## 이전에 만든 데이터 스트림으로 데이터를 보내도록 태그 Web SDK 확장을 구성합니다
+## 이전에 만든 데이터 스트림으로 데이터를 보내도록 Platform Web SDK 확장을 구성합니다
 
 데이터 수집 UI에서 속성을 만든 다음 Adobe Experience Platform 웹 SDK 확장을 사용하여 구성합니다.
 
