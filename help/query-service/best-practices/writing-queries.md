@@ -6,7 +6,7 @@ topic-legacy: queries
 type: Tutorial
 description: 이 문서에서는 Adobe Experience Platform Query Service에서 쿼리를 작성할 때 알아야 할 중요한 세부 정보에 대해 자세히 설명합니다.
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
-source-git-commit: c720b9e6f81ed4ad8bd3360a9b1a19bfcd21a0ef
+source-git-commit: b8306317bbbed58ab947753058129a75dfe64f19
 workflow-type: tm+mt
 source-wordcount: '976'
 ht-degree: 3%
@@ -53,6 +53,7 @@ Adobe Experience Platform [!DNL Query Service]에는 쿼리 실행 모델이 두
 SELECT endUserIds._experience.mcid
 FROM {ANALYTICS_TABLE_NAME}
 WHERE endUserIds._experience.mcid IS NOT NULL
+AND TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
 LIMIT 1
 ```
 
@@ -66,6 +67,7 @@ LIMIT 1
 SELECT endUserIds['_experience']['mcid']
 FROM {ANALYTICS_TABLE_NAME}
 WHERE endUserIds._experience.mcid IS NOT NULL
+AND TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
 LIMIT 1
 ```
 
@@ -98,6 +100,7 @@ LIMIT 1
 SELECT endUserIds._experience.mcid.id
 FROM {ANALYTICS_TABLE_NAME}
 WHERE endUserIds._experience.mcid IS NOT NULL
+AND TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
 LIMIT 1
 ```
 
@@ -124,6 +127,7 @@ SELECT
   timestamp,
   web.webPageDetails.name
 FROM {ANALYTICS_TABLE_NAME}
+WHERE TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
 LIMIT 10
 ```
 
@@ -135,6 +139,7 @@ SELECT
   endUserIds._experience.mcid.id
 FROM {ANALYTICS_TABLE_NAME}
 WHERE web.webPageDetails.name = 'homepage'
+AND TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
 LIMIT 10
 ```
 
@@ -153,6 +158,7 @@ FROM
     'column1' as no_space_column,
     'column2' as "space column"
 )
+WHERE TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
 ```
 
 >[!NOTE]
@@ -167,6 +173,7 @@ FROM
 SELECT 
   commerce.`order`
 FROM {ANALYTICS_TABLE_NAME}
+WHERE TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
 LIMIT 10
 ```
 
@@ -176,6 +183,7 @@ LIMIT 10
 SELECT
     commerce.`30_day_value`
 FROM {ANALYTICS_TABLE_NAME}
+WHERE TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
 LIMIT 10
 ```
 
@@ -185,6 +193,7 @@ LIMIT 10
  SELECT
   commerce['order']
  FROM {ANALYTICS_TABLE_NAME}
+ WHERE TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
  LIMIT 10
 ```
 
