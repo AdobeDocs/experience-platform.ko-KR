@@ -2,13 +2,13 @@
 keywords: rtcdp 프로필;프로필 rtcdp;rtcdp ID;rtcdp 병합 정책;실시간 고객 프로필
 title: 계정 프로필 UI 안내서
 description: Real-time Customer Data Platform B2B Edition에서는 계정 프로필을 사용하여 여러 소스에서 계정 정보를 통합할 수 있습니다. 이 안내서에서는 Adobe Experience Platform 사용자 인터페이스의 계정 프로필과 상호 작용하기 위한 세부 사항을 제공합니다.
-source-git-commit: 5301cf870052f537a34913beb0b814212bdaadaa
+exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
+source-git-commit: 5bd2afcc594d96878ee51af2e9e99d74b764009e
 workflow-type: tm+mt
-source-wordcount: '1153'
+source-wordcount: '1191'
 ht-degree: 0%
 
 ---
-
 
 # 계정 프로필 UI 안내서
 
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 ## 계정 프로필 찾아보기
 
-계정 프로필을 찾아보려면 왼쪽 탐색에서 계정 아래에서 **[!UICONTROL 프로필]**&#x200B;을 선택하여 시작합니다.
+계정 프로필을 찾아보려면 왼쪽 탐색에서 [!UICONTROL 계정] 아래에서 **[!UICONTROL 프로필]**&#x200B;을 선택하여 시작합니다.
 
 ![](images/b2b-account-browse.png)
 
@@ -34,7 +34,7 @@ ht-degree: 0%
 
 ### [!UICONTROL 연결된 엔터프라이즈 소스]로 찾아보기
 
-연결된 엔터프라이즈 소스별로 계정 프로필을 찾아보려면 먼저 **[!UICONTROL 소스]** 필드 옆에 있는 선택기 단추를 사용하여 연결된 소스를 선택해야 합니다.
+연결된 엔터프라이즈 소스별로 계정 프로필을 찾아보려면 **[!UICONTROL 찾아보기]** 드롭다운에서 **[!UICONTROL 연결된 엔터프라이즈 소스]**&#x200B;를 선택한 다음 **[!UICONTROL 소스]** 필드 옆에 있는 선택기 단추를 사용하여 연결된 소스를 선택합니다.
 
 ![](images/b2b-account-browse.png)
 
@@ -50,7 +50,7 @@ ht-degree: 0%
 
 연결 이름 옆에 있는 라디오 단추를 선택하여 소스를 선택한 다음 **[!UICONTROL 선택]**&#x200B;을 사용하여 [!UICONTROL 찾아보기] 탭으로 돌아갈 수 있습니다.
 
-소스를 선택한 경우 소스와 관련된 **[!UICONTROL 계정 id]**&#x200B;를 입력해야 합니다. 예를 들어, Salesforce 소스를 선택하면 Salesforce 인스턴스에서 계정 ID를 입력해야 해당 ID에 연결된 계정 프로필을 볼 수 있습니다.
+소스를 선택한 경우 소스와 관련된 **[!UICONTROL 계정 ID]**&#x200B;를 입력해야 합니다. 예를 들어, Salesforce 소스를 선택하면 Salesforce 인스턴스에서 계정 ID를 입력해야 해당 ID에 연결된 계정 프로필을 볼 수 있습니다.
 
 >[!NOTE]
 >
@@ -62,11 +62,13 @@ ht-degree: 0%
 
 ### [!UICONTROL 기타]로 찾아보기
 
-실시간 CDP인 B2B Edition은 보려는 계정에 대해 **[!UICONTROL 소스 이름]**, **[!UICONTROL 소스 인스턴스]** 및 **[!UICONTROL 계정 id]**&#x200B;를 입력할 수 있도록 하여 직접 조회를 수행하는 기능을 지원합니다. 소스 이름과 인스턴스를 직접 입력하여 Experience Platform이 올바른 계정 프로필 데이터를 검색하고 표시하는 데 필요한 컨텍스트를 제공합니다.
+실시간 CDP인 B2B Edition은 보려는 계정에 대해 **[!UICONTROL 소스 이름]**, **[!UICONTROL 소스 인스턴스]** 및 **[!UICONTROL 계정 ID]**&#x200B;를 입력할 수 있도록 하여 직접 조회를 수행하는 기능을 지원합니다. 소스 이름과 인스턴스를 직접 입력하여 Experience Platform이 올바른 계정 프로필 데이터를 검색하고 표시하는 데 필요한 컨텍스트를 제공합니다.
 
 직접 조회를 수행하는 기능은 데이터에 직접 연결할 수 없는 상황에서 유용합니다. 예를 들어 조직에 CRM에 직접 연결하지 못하는 데이터 거버넌스 정책이 있는 경우 해당 데이터를 클라우드 스토리지 시스템으로 내보내고 Experience Platform으로 수집할 수 있습니다.
 
 다른 예로 시스템을 종료하고 Platform에 들어가는 시간 사이에 데이터를 변환하는 작업이 있을 수 있습니다. 직접 조회 기능을 사용하여 데이터에 대한 컨텍스트(예: Amazon S3 버킷에서 오고 있다는 사실에도 불구하고 Marketo 데이터임을 지정하는 등)를 제공하여 시스템이 데이터를 찾을 위치와 제대로 렌더링하는 방법을 알 수 있도록 할 수 있습니다.
+
+직접 조회를 시작하려면 **[!UICONTROL 찾아보기]** 드롭다운에서 **[!UICONTROL 기타]**&#x200B;을 선택한 다음 보려는 계정에 대해 **[!UICONTROL 소스 이름]**, **[!UICONTROL 소스 인스턴스]** 및 **[!UICONTROL 계정 ID]**&#x200B;을 입력합니다.
 
 ![](images/b2b-account-browse-adhoc.png)
 
