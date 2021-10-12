@@ -2,10 +2,10 @@
 title: 코어 확장에 대한 릴리스 노트
 description: Adobe Experience Platform의 코어 확장에 대한 최신 릴리스 노트입니다.
 exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
-source-git-commit: 693da9aa012baa26dcff93f085dd6e763816e247
+source-git-commit: 317f134420666de23f0ee9c14938fffeda09d3de
 workflow-type: tm+mt
-source-wordcount: '1522'
-ht-degree: 59%
+source-wordcount: '1543'
+ht-degree: 58%
 
 ---
 
@@ -14,6 +14,13 @@ ht-degree: 59%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
+
+## 2021년 10월 8일
+
+v3.2.2
+
+* 사용 가능한 모든 연산자에 대해 조건부 값 데이터 요소 JSON 스키마를 수정합니다.
+* 수정 https://github.com/adobe/reactor-extension-core/issues/64.
 
 ## 2021년 9월 23일
 
