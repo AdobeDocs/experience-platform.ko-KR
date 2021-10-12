@@ -2,17 +2,18 @@
 title: Adobe Experience Platform Web SDK Extension의 이벤트 유형
 description: Adobe Experience Platform Launch에서 Adobe Experience Platform Web SDK 확장에서 제공하는 이벤트 유형을 사용하는 방법에 대해 알아봅니다.
 solution: Experience Platform
-feature: 웹 SDK
-source-git-commit: 4bddd9f23ae885468148d1592af219290d6fafd9
+feature: Web SDK
+exl-id: b3162406-c5ce-42ec-ab01-af8ac8c63560
+source-git-commit: 8f714933e23e281772cd8633d27096021de14c56
 workflow-type: tm+mt
-source-wordcount: '1026'
+source-wordcount: '1024'
 ht-degree: 1%
 
 ---
 
 # 이벤트 유형
 
-이 페이지에서는 Adobe Experience Platform Web SDK 태그 확장에서 제공하는 Adobe Experience Platform 이벤트 유형을 설명합니다. 이러한 매개 변수는 [빌드 규칙](https://experienceleague.adobe.com/docs/launch-learn/tutorials/fundamentals/building-rules-in-launch.html)에 사용되며 XDM](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=ko-KR)의 [`eventType` 필드와 혼동해서는 안 됩니다.
+이 페이지에서는 Adobe Experience Platform Web SDK 태그 확장에서 제공하는 Adobe Experience Platform 이벤트 유형을 설명합니다. 이러한 매개 변수는 [빌드 규칙](https://experienceleague.adobe.com/docs/platform-learn/data-collection/tags/build-rules.html)에 사용되며 XDM](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=ko-KR)의 [`eventType` 필드와 혼동해서는 안 됩니다.
 
 ## [!UICONTROL 이벤트 보내기 완료]
 
@@ -173,8 +174,8 @@ var propositions = event.propositions;
 
 1. `event` 개체에서 proposition을 추출합니다.
 1. 각 제안을 반복하고 `discount` 범위가 있는 제안을 찾습니다.
-1. 제안을 찾으면 제안에 있는 각 항목을 반복하며 HTML 콘텐츠인 항목을 찾습니다. (가정하는 것보다 확인하는 것이 낫다.)
-1. HTML 콘텐츠가 들어 있는 항목을 찾으면 페이지에서 `daily-special` 요소를 찾아 해당 HTML을 개인화된 콘텐츠로 바꾸십시오.
+1. 제안을 찾으면, 제안에 있는 각 항목을 반복하여 HTML 콘텐츠인 항목을 찾습니다. (가정하는 것보다 확인하는 것이 낫다.)
+1. HTML 컨텐츠가 들어 있는 항목을 찾으면 페이지에서 `daily-special` 요소를 찾아 해당 HTML을 개인화된 컨텐츠로 바꾸십시오.
 
 [!UICONTROL 사용자 지정 코드] 작업 내의 사용자 지정 코드는 다음과 같이 표시될 수 있습니다.
 
@@ -260,8 +261,3 @@ if (propositions) {
   // them in some other way.
 }
 ```
-
-
-
-
-

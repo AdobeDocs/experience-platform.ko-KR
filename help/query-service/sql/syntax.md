@@ -5,7 +5,7 @@ title: 쿼리 서비스의 SQL 구문
 topic-legacy: syntax
 description: 이 문서에서는 Adobe Experience Platform 쿼리 서비스에서 지원하는 SQL 구문을 보여줍니다.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 8dceab8cdba1ac6b4a649f0e01b2bbda5f025bef
+source-git-commit: 6f697bb249c50e58f9e8a5821fa71f2d4c9a7aac
 workflow-type: tm+mt
 source-wordcount: '2154'
 ht-degree: 1%

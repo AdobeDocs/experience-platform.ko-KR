@@ -3,7 +3,7 @@ keywords: Analytics 확장;analytics 확장;대상 분석
 title: Adobe Analytics 확장
 description: Adobe Analytics 확장은 Adobe Experience Platform의 분석 대상입니다. 확장 기능에 대한 자세한 내용은 Exchange Adobe의 확장 페이지를 참조하십시오.
 exl-id: 95b6e079-09a6-4262-bd01-11f155286aa9
-source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
+source-git-commit: 8f714933e23e281772cd8633d27096021de14c56
 workflow-type: tm+mt
 source-wordcount: '474'
 ht-degree: 10%
@@ -42,7 +42,7 @@ Adobe Analytics 확장을 설치하려면 다음을 수행하십시오.
 
 워크플로우를 통해 데이터 수집 UI로 이동하여 설치를 완료합니다.
 
-확장 구성 옵션에 대한 자세한 내용은 태그 설명서의 [Adobe Analytics 확장 페이지](https://experienceleague.adobe.com/docs/launch-learn/implementing-in-websites-with-launch/implement-solutions/analytics.html)를 참조하십시오.
+확장 구성 옵션에 대한 자세한 내용은 태그 설명서의 [Adobe Analytics 확장 페이지](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/implement-solutions/analytics.html)를 참조하십시오.
 
 확장 프로그램은 [데이터 수집 UI](https://experience.adobe.com/#/data-collection/)에 직접 설치할 수도 있습니다. 자세한 내용은 [새 확장 추가](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension)에 대한 안내서를 참조하십시오.
 
