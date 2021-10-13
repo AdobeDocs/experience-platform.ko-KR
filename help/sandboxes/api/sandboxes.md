@@ -4,10 +4,11 @@ solution: Experience Platform
 title: 샌드박스 관리 API 끝점
 topic-legacy: developer guide
 description: 샌드박스 API의 /sandboxes 종단점을 사용하면 Adobe Experience Platform에서 샌드박스를 프로그래밍 방식으로 관리할 수 있습니다.
-source-git-commit: f5ce7b7f09c624c53065757bb8a9b09f989dce0a
+exl-id: 0ff653b4-3e31-4ea5-a22e-07e18795f73e
+source-git-commit: a43dd851a5c7ec722e792a0f43d1bb42777f0c15
 workflow-type: tm+mt
-source-wordcount: '1436'
-ht-degree: 2%
+source-wordcount: '1489'
+ht-degree: 3%
 
 ---
 
@@ -190,6 +191,10 @@ curl -X GET \
 | `eTag` | 샌드박스의 특정 버전에 대한 식별자입니다. 버전 제어 및 캐싱 효율에 사용되는 경우 샌드박스를 변경할 때마다 이 값이 업데이트됩니다. |
 
 ## 샌드박스 만들기 {#create}
+
+>[!NOTE]
+>
+>새 샌드박스를 만들 때 새 샌드박스 사용을 시작하려면 먼저 [Adobe Admin Console](https://adminconsole.adobe.com/)에서 해당 새 샌드박스를 제품 프로필에 추가해야 합니다. 제품 프로필에 샌드박스를 프로비저닝하는 방법에 대한 자세한 내용은 [제품 프로필에 대한 권한 관리](../../access-control/ui/permissions.md)에 대한 설명서를 참조하십시오.
 
 `/sandboxes` 종단점에 POST 요청을 하여 새 개발 또는 프로덕션 샌드박스를 만들 수 있습니다.
 
