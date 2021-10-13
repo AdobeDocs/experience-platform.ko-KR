@@ -2,9 +2,9 @@
 title: Adobe Analytics 확장에 대한 릴리스 노트
 description: Adobe Experience Platform의 Adobe Analytics 태그 확장에 대한 최신 릴리스 노트입니다.
 exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
-source-git-commit: cf0f8022e0a9ea115b1312d9988b3abb804d9b80
+source-git-commit: 83e9ebf65e904c6343fe44932a2b7b1a72039187
 workflow-type: tm+mt
-source-wordcount: '1249'
+source-wordcount: '1262'
 ht-degree: 89%
 
 ---
@@ -14,6 +14,15 @@ ht-degree: 89%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
+
+## 2021년 9월 16일
+
+### Adobe Analytics Extension 1.8.7
+
+#### 버그 수정
+
+* AppMeasurement를 v2.22.2으로 업그레이드했습니다.
+* 사용되지 않는 buildInfo.environment가 제거됨
 
 ## 2021년 8월 24일
 
