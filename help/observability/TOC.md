@@ -2,8 +2,8 @@
 audience: user
 user-guide-title: Observability Insights 안내서
 user-guide-description: 통계 지표 및 이벤트 알림을 사용하여 플랫폼 활동을 모니터링합니다.
-feature: Data Management
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+feature: Observability
+source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
 workflow-type: tm+mt
 source-wordcount: '54'
 ht-degree: 46%
@@ -11,7 +11,7 @@ ht-degree: 46%
 ---
 
 
-# 가시성 통찰력 {#observability}
+# Observability Insights {#observability}
 
 * [가시성 통찰력 개요](./home.md)
 * 가시성 통찰력 API {#api}

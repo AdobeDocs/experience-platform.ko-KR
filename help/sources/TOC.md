@@ -3,8 +3,8 @@ audience: user
 user-guide-title: Adobe Experience Platform 소스 커넥터 도움말
 breadcrumb-title: Source Connectors 안내서
 user-guide-description: 다양한 소스 또는 구조에서 데이터를 수집하고 레이블을 지정하며 기존에 수집한 데이터를 향상시킬 수 있습니다.
-feature: Data Ingestion, Sources
-source-git-commit: fe024675e6337ebf9a401f65db939440f435053f
+feature: Sources
+source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
 workflow-type: tm+mt
 source-wordcount: '653'
 ht-degree: 13%
@@ -100,7 +100,7 @@ ht-degree: 13%
          - [Azure 파일 저장소](tutorials/api/create/cloud-storage/azure-file-storage.md)
          - [데이터 랜딩 영역](tutorials/api/create/cloud-storage/data-landing-zone.md)
          - [FTP](tutorials/api/create/cloud-storage/ftp.md)
-         - [Google Cloud 스토리지](tutorials/api/create/cloud-storage/google.md)
+         - [Google 클라우드 스토리지](tutorials/api/create/cloud-storage/google.md)
          - [Google PubSub](tutorials/api/create/cloud-storage/google-pubsub.md)
          - [Oracle 개체 저장소](tutorials/api/create/cloud-storage/oracle-object-storage.md)
          - [SFTP](tutorials/api/create/cloud-storage/sftp.md)
@@ -189,7 +189,7 @@ ht-degree: 13%
          - [Azure 파일 저장소](tutorials/ui/create/cloud-storage/azure-file-storage.md)
          - [데이터 랜딩 영역](tutorials/ui/create/cloud-storage/data-landing-zone.md)
          - [FTP](tutorials/ui/create/cloud-storage/ftp.md)
-         - [Google Cloud 스토리지](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
+         - [Google 클라우드 스토리지](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
          - [Google PubSub](tutorials/ui/create/cloud-storage/google-pubsub.md)
          - [Oracle 개체 저장소](tutorials/ui/create/cloud-storage/oracle-object-storage.md)
          - [SFTP](tutorials/ui/create/cloud-storage/sftp.md)

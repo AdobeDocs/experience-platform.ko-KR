@@ -1,10 +1,12 @@
 ---
 title: 이벤트 전달 개요
 description: 태그 구현을 변경하지 않고 Platform Edge Network를 사용하여 작업을 실행할 수 있는 Adobe Experience Platform의 이벤트 전달에 대해 알아보십시오.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+feature: Event Forwarding
+exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
+source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
 workflow-type: tm+mt
 source-wordcount: '547'
-ht-degree: 37%
+ht-degree: 42%
 
 ---
 
@@ -12,7 +14,7 @@ ht-degree: 37%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../term-updates.md)을 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
 
 Adobe Experience Platform의 이벤트 전달은 Adobe Experience Platform Edge Network를 사용하여 클라이언트에서 일반적으로 수행된 작업을 실행함으로써 웹 페이지 및 앱 가중치를 줄입니다. 이벤트 전달 규칙은 클라이언트측 구현을 변경하지 않고 데이터를 새로운 대상으로 변환하고 전송할 수 있습니다.
 
