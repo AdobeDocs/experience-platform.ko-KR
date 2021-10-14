@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;시작하기;속성 ai;인기 항목;속성 ai 입력;속성 ai 출력;
-solution: Experience Platform, Intelligent Services
+feature: Attribution AI
 title: Attribution AI의 입력 및 출력
 topic-legacy: Input and Output data for Attribution AI
 description: 다음 문서에서는 Attribution AI에서 사용되는 다양한 입력 및 출력에 대해 설명합니다.
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
-source-git-commit: a49218103669758404a4ddf3f9833b8b2d9b7fc6
+source-git-commit: c3320f040383980448135371ad9fae583cfca344
 workflow-type: tm+mt
 source-wordcount: '2230'
 ht-degree: 3%
@@ -39,7 +39,7 @@ Attribution AI은 다음 데이터 세트 중 하나를 분석하여 알고리�
 | --- | --- |
 | 기본 ID 필드 | 터치 포인트/전환 |
 | 타임스탬프 | 터치 포인트/전환 |
-| 채널._type | 터치 포인트 |
+| 채널._유형 | 터치 포인트 |
 | Channel.mediaAction | 터치 포인트 |
 | Channel.mediaType | 터치 포인트 |
 | Marketing.trackingCode | 터치 포인트 |

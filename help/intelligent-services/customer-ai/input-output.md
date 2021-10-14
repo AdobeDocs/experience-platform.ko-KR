@@ -1,11 +1,12 @@
 ---
 keywords: Experience Platform;시작하기;고객 ai;인기 항목;고객 ai 입력;고객 ai 출력
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
+feature: Customer AI
 title: 고객 AI의 입력 및 출력
 topic-legacy: Getting started
 description: Customer AI에서 활용하는 필수 이벤트, 입력 및 출력에 대해 자세히 알아보십시오.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: c534b66d7617023df8dbac57115036146c2cab01
+source-git-commit: c3320f040383980448135371ad9fae583cfca344
 workflow-type: tm+mt
 source-wordcount: '2971'
 ht-degree: 1%
@@ -110,7 +111,7 @@ Customer AI에서 사용하는 [표준 이벤트 필드](#standard-events) 외�
 >
 > 30은 적격 모집단에 필요한 최소 일 수입니다. 이 값을 제공하지 않으면 기본값은 120일입니다.
 
-예
+예시 :
 
 - 고객이 30일 이내에 시계를 구입할 가능성이 있는지 여부를 예측 해야 합니다. 지난 60일 동안 일부 웹 활동이 있는 사용자에게 점수를 매기고 싶을 수도 있습니다. 이 경우 필요한 최소 데이터 길이는 60일 + 30일입니다. 적용 가능한 인구는 60일이며 결과 기간은 30일 총 90일입니다.
 
