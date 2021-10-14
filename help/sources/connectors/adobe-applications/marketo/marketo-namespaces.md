@@ -5,9 +5,9 @@ title: B2B 네임스페이스 및 스키마
 topic-legacy: overview
 description: 이 문서에서는 B2B 소스 커넥터를 만들 때 필요한 사용자 지정 네임스페이스에 대한 개요를 제공합니다.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: 0661d124ffe520697a1fc8e2cae7b0b61ef4edfc
+source-git-commit: 15fd870565d50bd4e320a1acf61413f45c1f537c
 workflow-type: tm+mt
-source-wordcount: '1588'
+source-wordcount: '1679'
 ht-degree: 4%
 
 ---
@@ -87,6 +87,7 @@ B2B 네임스페이스는 엔터티의 기본 ID에서 사용됩니다.
 | B2B 캠페인 구성원 | `b2b_campaign_member` | `B2B_CAMPAIGN_MEMBER` |
 | B2B 마케팅 목록 | `b2b_marketing_list` | `B2B_MARKETING_LIST` |
 | B2B 마케팅 목록 구성원 | `b2b_marketing_list_member` | `B2B_MARKETING_LIST_MEMBER` |
+| B2B 계정 개인 관계 | `b2b_account_person_relation` | `B2B_ACCOUNT_PERSON` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -115,6 +116,7 @@ Experience Platform은 스키마를 사용하여 데이터의 구조를 일관�
 | B2B 마케팅 목록 | XDM 비즈니스 마케팅 목록 | 없음 | 활성화됨 | `marketingListKey.sourceKey` 기본 클래스에서 | B2B 마케팅 목록 | 없음 | 없음 | 없음 | 정적 목록이 [!DNL Salesforce]에서 동기화되지 않으므로 보조 ID가 없습니다. |
 | B2B 마케팅 목록 구성원 | XDM 비즈니스 마케팅 목록 구성원 | 없음 | 활성화됨 | `marketingListMemberKey.sourceKey` 기본 클래스에서 | B2B 마케팅 목록 구성원 | 없음 | 없음 | **첫 번째 관계**<ul><li>`PersonKey.sourceKey` 기본 클래스에서</li><li>유형: 다대다</li><li>참조 스키마: B2B 사람</li><li>네임스페이스: B2B 사람</li><li>대상 속성: `b2b.personKey.sourceKey`</li><li>현재 스키마의 관계 이름: 개인</li><li>참조 스키마의 관계 이름: 마케팅 목록</li></ul>**두 번째 관계**<ul><li>`marketingListKey.sourceKey` 기본 클래스에서</li><li>유형: 다대다</li><li>참조 스키마: B2B 마케팅 목록</li><li>네임스페이스: B2B 마케팅 목록</li><li>대상 속성: `marketingListKey.sourceKey`</li><li>현재 스키마의 관계 이름: 마케팅 목록</li><li>참조 스키마의 관계 이름: 사람</li></ul> | 정적 목록 멤버가 [!DNL Salesforce]에서 동기화되지 않으므로 보조 ID가 없습니다. |
 | B2B 활동 | XDM ExperienceEvent | <ul><li>웹 페이지 방문</li><li>새 리드</li><li>리드 변환</li><li>목록에 추가</li><li>목록에서 제거</li><li>Add To Opportunity</li><li>Opportunity에서 제거</li><li>채워진 양식</li><li>링크 클릭 수</li><li>배달된 이메일</li><li>전자 메일 열림</li><li>클릭한 이메일</li><li>이메일 바운스됨</li><li>이메일 바운스된 소프트</li><li>이메일 가입 해지됨</li><li>점수 변경됨</li><li>영업 기회 업데이트</li><li>캠페인 진행 상태가 변경됨</li><li>개인 식별자</li><li>Marketo 웹 URL</li><li>흥미로운 순간</li></ul> | 활성화됨 | `personKey.sourceKey` 개인 식별자 필드 그룹 | B2B 사람 | 없음 | 없음 | **첫 번째 관계**<ul><li>`listOperations.listKey.sourceKey` 필드</li><li>유형: 일대일</li><li>참조 스키마: B2B 마케팅 목록</li><li>네임스페이스: B2B 마케팅 목록</li></ul>**두 번째 관계**<ul><li>`opportunityEvent.opportunityKey.sourceKey` 필드</li><li>유형: 일대일</li><li>참조 스키마: B2B 기회</li><li>네임스페이스: B2B 기회</li></ul>**세 번째 관계**<ul><li>`leadOperation.campaignProgression.campaignKey.sourceKey` 필드</li><li>유형: 일대일</li><li>참조 스키마: B2B 캠페인</li><li>네임스페이스: B2B 캠페인</li></ul> | `ExperienceEvent` 은 엔티티와 다릅니다. 경험 이벤트의 ID는 활동을 수행한 사용자입니다. |
+| B2B 계정 개인 관계 | XDM 비즈니스 계정 담당자 관계 | ID 맵 | 활성화됨 | `accountPersonKey.sourceKey` 기본 클래스에서 | B2B 계정 개인 관계 | 없음 | 없음 | **첫 번째 관계**<ul><li>`personKey.sourceKey` 기본 클래스에서</li><li>유형: 다대다</li><li>참조 스키마: B2B 사람</li><li>네임스페이스: B2B 사람</li><li>대상 속성: `b2b.personKey.SourceKey`</li><li>현재 스키마의 관계 이름: 사람</li><li>참조 스키마의 관계 이름: 계정</li></ul>**두 번째 관계**<ul><li>`accountKey.sourceKey` 기본 클래스에서</li><li>유형: 다대다</li><li>참조 스키마: B2B 계정</li><li>네임스페이스: B2B 계정</li><li>대상 속성: `accountKey.sourceKey`</li><li>현재 스키마의 관계 이름: 계정</li><li>참조 스키마의 관계 이름: 사람</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
