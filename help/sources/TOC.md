@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 소스 커넥터 도움말
 breadcrumb-title: Source Connectors 안내서
 user-guide-description: 다양한 소스 또는 구조에서 데이터를 수집하고 레이블을 지정하며 기존에 수집한 데이터를 향상시킬 수 있습니다.
 feature: Sources
-source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
+source-git-commit: 333cca4ac451745ac457c8d66fa8b5fe14531c9e
 workflow-type: tm+mt
-source-wordcount: '653'
+source-wordcount: '657'
 ht-degree: 13%
 
 ---
@@ -134,6 +134,8 @@ ht-degree: 13%
          - [Shopify](tutorials/api/create/ecommerce/shopify.md)
       - 마케팅 자동화 {#marketing-automation}
          - [HubSpot](tutorials/api/create/marketing-automation/hubspot.md)
+         - [MailChimp 캠페인](tutorials/api/create/marketing-automation/mailchimp-campaign.md)
+         - [MailChimp 멤버](tutorials/api/create/marketing-automation/mailchimp-members.md)
          - [Salesforce Marketing Cloud](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
       - 지급 {#payments}
          - [PayPal](tutorials/api/create/payments/paypal.md)

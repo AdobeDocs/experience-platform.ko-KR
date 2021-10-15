@@ -5,7 +5,7 @@ title: 소스 커넥터 개요
 topic-legacy: overview
 description: Adobe Experience Platform을 사용하면 Platform 서비스를 사용하여 들어오는 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 외부 소스에서 데이터를 수집할 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 등과 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: bc94d85ecd2ae33d8ef18dd1dfa7fca39ccaefea
+source-git-commit: 333cca4ac451745ac457c8d66fa8b5fe14531c9e
 workflow-type: tm+mt
 source-wordcount: '1008'
 ht-degree: 0%
@@ -117,6 +117,8 @@ Experience Platform은 로컬 시스템에서 데이터를 수집하기 위한 �
 Experience Platform은 타사 마케팅 자동화 시스템에서 데이터 섭취를 지원합니다. 특정 소스 커넥터에 대한 자세한 내용은 다음 관련 문서를 참조하십시오.
 
 - [[!DNL HubSpot] 커넥터](connectors/marketing-automation/hubspot.md)
+- [[!DNL MailChimp Campaign]](./tutorials/api/create/marketing-automation/mailchimp-campaign.md)
+- [[!DNL MailChimp Members]](./tutorials/api/create/marketing-automation/mailchimp-members.md)
 - [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md)
 
 ### 결제
