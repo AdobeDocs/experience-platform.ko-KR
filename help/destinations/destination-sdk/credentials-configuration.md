@@ -1,9 +1,10 @@
 ---
-description: 이 구성은 Adobe Experience Platform 사용자가 대상 종단점에 대해 인증하여 데이터를 활성화하는 방법을 결정합니다.
-title: 대상 SDK의 자격 증명에 대한 구성 옵션
-source-git-commit: 11f6421665acc2041aa9483b1e0efb6fe48b6dfb
+description: Adobe Experience Platform 대상 SDK에서 지원되는 인증 구성을 사용하여 사용자를 인증하고 데이터를 대상 종단점으로 활성화합니다.
+title: 인증 구성
+exl-id: 33eaab24-f867-4744-b424-4ba71727373c
+source-git-commit: 485c1359f8ef5fef0c5aa324cd08de00b0b4bb2f
 workflow-type: tm+mt
-source-wordcount: '200'
+source-wordcount: '202'
 ht-degree: 0%
 
 ---
@@ -12,7 +13,7 @@ ht-degree: 0%
 
 ## 지원되는 인증 유형 {#supported-authentication-types}
 
-Adobe Experience Platform은 다음과 같은 몇 가지 인증 유형을 지원합니다.
+Adobe Experience Platform 대상 SDK는 다음과 같은 몇 가지 인증 유형을 지원합니다.
 
 * 베어러 인증
 * 인증 코드가 있는 OAuth 2

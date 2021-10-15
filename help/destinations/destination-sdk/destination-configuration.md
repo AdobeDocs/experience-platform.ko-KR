@@ -2,9 +2,9 @@
 description: 이 구성을 사용하면 대상 이름, 카테고리, 설명, 로고 등과 같은 기본 정보를 표시할 수 있습니다. 또한 이 구성의 설정은 Experience Platform 사용자가 대상을 인증하는 방법, Experience Platform 사용자 인터페이스에 표시되는 방법 및 대상으로 내보낼 수 있는 ID를 결정합니다.
 title: 대상 SDK에 대한 대상 구성 옵션
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: 76a596166edcdbf141b5ce5dc01557d2a0b4caf3
+source-git-commit: fd025932b9210d61e986b252e8d977ce4b83f6ff
 workflow-type: tm+mt
-source-wordcount: '1727'
+source-wordcount: '1757'
 ht-degree: 5%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 5%
 
 ## 개요 {#overview}
 
-이 구성을 사용하면 대상 이름, 카테고리, 설명, 로고 등과 같은 필수 정보를 표시할 수 있습니다. 또한 이 구성의 설정은 Experience Platform 사용자가 대상을 인증하는 방법, Experience Platform 사용자 인터페이스에 표시되는 방법 및 대상으로 내보낼 수 있는 ID를 결정합니다.
+이 구성을 사용하면 대상 이름, 카테고리, 설명 등과 같은 필수 정보를 표시할 수 있습니다. 또한 이 구성의 설정은 Experience Platform 사용자가 대상을 인증하는 방법, Experience Platform 사용자 인터페이스에 표시되는 방법 및 대상으로 내보낼 수 있는 ID를 결정합니다.
 
 또한 이 구성에서는 대상이 작동하는 데 필요한 다른 구성(대상 서버 및 대상 메타데이터)도 이 구성에 연결합니다. [섹션 아래의 두 구성을 참조하는 방법을 읽어 보십시오](./destination-configuration.md#connecting-all-configurations).
 
@@ -135,17 +135,17 @@ ht-degree: 5%
 
 ## 고객 인증 구성 {#customer-authentication-configurations}
 
-이 섹션에서는 Experience Platform 사용자 인터페이스에서 Experience Platform을 생성하여 사용자가 대상에 있는 계정에 연결합니다. `authType` 필드에 표시하는 인증 옵션에 따라 사용자에 대해 다음과 같이 Experience Platform 페이지가 생성됩니다.
+대상 구성의 이 섹션에서는 Experience Platform 사용자 인터페이스에서 [새 대상 구성](/help/destinations/ui/connect-destination.md) 페이지를 생성하며, 여기서 사용자는 Experience Platform을 대상에 있는 계정에 연결합니다. `authType` 필드에 표시하는 인증 옵션에 따라 사용자에 대해 다음과 같이 Experience Platform 페이지가 생성됩니다.
 
 **베어러 인증**
 
-사용자는 대상에서 가져오는 bearer 토큰을 입력해야 합니다.
+bearer 인증 유형을 구성할 때 사용자는 대상에서 가져오는 bearer 토큰을 입력해야 합니다.
 
 ![베어러 인증을 사용하여 UI 렌더링](./assets/bearer-authentication-ui.png)
 
 **OAuth 2 인증**
 
-사용자가 **[!UICONTROL 대상에 연결]**&#x200B;을 선택하여 대상에 OAuth 2 인증 흐름을 트리거합니다.
+twitter 맞춤 대상 아래 예와 같이, **[!UICONTROL 대상에 연결]**&#x200B;을 선택하여 대상에 OAuth 2 인증 흐름을 트리거합니다. 대상 종단점에 대한 OAuth 2 인증 구성에 대한 자세한 내용은 전용 [대상 SDK OAuth 2 인증 페이지](./oauth2-authentication.md)를 참조하십시오.
 
 ![OAuth 2 인증을 사용하여 UI 렌더링](./assets/oauth2-authentication-ui.png)
 
@@ -153,7 +153,7 @@ ht-degree: 5%
 | 매개 변수 | 유형 | 설명 |
 |---------|----------|------|
 | `customerAuthenticationConfigurations` | 문자열 | 서버에 Experience Platform 고객을 인증하는 데 사용되는 구성을 나타냅니다. 허용되는 값은 아래 `authType`을 참조하십시오. |
-| `authType` | 문자열 | 허용되는 값은 `OAUTH2, BEARER`입니다. <br><ul><li> 대상이 OAuth 2 인증을 지원하는 경우 `OAUTH2` 값을 선택하고 대상 SDK OAuth 2 인증 페이지에 표시된 대로 OAuth 2에 대한 필수 필드를 추가합니다. 또한 [대상 배달 섹션](./destination-configuration.md)에서 `authenticationRule=CUSTOMER_AUTHENTICATION`을 선택해야 합니다. </li><li>베어러 인증의 경우 `BEARER` 을 선택하고 [대상 배달 섹션](./destination-configuration.md)에서 `authenticationRule=CUSTOMER_AUTHENTICATION` 을 선택합니다.</li></ul> |
+| `authType` | 문자열 | 허용되는 값은 `OAUTH2, BEARER`입니다. <br><ul><li> 대상이 OAuth 2 인증을 지원하는 경우 `OAUTH2` 값을 선택하고 [대상 SDK OAuth 2 인증 페이지](./oauth2-authentication.md)에 표시된 대로 OAuth 2에 대한 필수 필드를 추가합니다. 또한 [대상 배달 섹션](./destination-configuration.md)에서 `authenticationRule=CUSTOMER_AUTHENTICATION`을 선택해야 합니다. </li><li>베어러 인증의 경우 `BEARER` 을 선택하고 [대상 배달 섹션](./destination-configuration.md)에서 `authenticationRule=CUSTOMER_AUTHENTICATION` 을 선택합니다.</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -205,9 +205,9 @@ ht-degree: 5%
 
 ## ID 및 속성 {#identities-and-attributes}
 
-이 섹션의 매개 변수는 Experience Platform 사용자 인터페이스의 매핑 단계에서 대상 ID 및 속성이 채워지는 방식을 결정합니다. 여기서 사용자는 XDM 스키마를 대상의 스키마에 매핑합니다.
+이 섹션의 매개 변수는 대상이 수락하는 ID를 결정합니다. 또한 이 구성은 Experience Platform 사용자 인터페이스의 [매핑 단계](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping)에서 타겟 ID와 속성을 채웁니다. 여기서 사용자는 자신의 XDM 스키마에서 대상의 스키마에 ID와 속성을 매핑합니다.
 
-고객이 대상으로 내보낼 수 있는 [!DNL Platform] ID를 표시해야 합니다. 일부 예제는 [!DNL Experience Cloud ID], 해시된 이메일, 장치 ID([!DNL IDFA], [!DNL GAID])입니다. 이러한 값은 고객이 대상의 ID 네임스페이스에 매핑할 수 있는 [!DNL Platform] ID 네임스페이스입니다.
+고객이 대상으로 내보낼 수 있는 [!DNL Platform] ID를 표시해야 합니다. 일부 예제는 [!DNL Experience Cloud ID], 해시된 이메일, 장치 ID([!DNL IDFA], [!DNL GAID])입니다. 이러한 값은 고객이 대상의 ID 네임스페이스에 매핑할 수 있는 [!DNL Platform] ID 네임스페이스입니다. 고객이 사용자 지정 네임스페이스를 대상이 지원하는 ID에 매핑할 수 있는지 여부를 나타낼 수도 있습니다.
 
 ID 네임스페이스에 [!DNL Platform] 과(와) 대상 간의 1~1 응답이 필요하지 않습니다.
 예를 들어 고객은 [!DNL Platform] [!DNL IDFA] 네임스페이스를 대상의 [!DNL IDFA] 네임스페이스에 매핑하거나 동일한 [!DNL Platform] [!DNL IDFA] 네임스페이스를 대상의 [!DNL Customer ID] 네임스페이스에 매핑할 수 있습니다.
@@ -231,7 +231,6 @@ ID 네임스페이스에 [!DNL Platform] 과(와) 대상 간의 1~1 응답이 �
 |---------|----------|------|
 | `authenticationRule` | 문자열 | [!DNL Platform] 고객이 대상에 연결하는 방법을 나타냅니다. 허용되는 값은 `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`입니다. <br> <ul><li>Platform 고객이 사용자 이름과 암호, 베어러 토큰 또는 다른 인증 방법을 통해 시스템에 로그인하는 경우 `CUSTOMER_AUTHENTICATION` 을 사용합니다. 예를 들어 `customerAuthenticationConfigurations`에서 `authType: OAUTH2` 또는 `authType:BEARER`도 선택한 경우 이 옵션을 선택합니다. </li><li> Adobe과 대상 사이에 글로벌 인증 시스템이 있고 [!DNL Platform] 고객이 대상에 연결하기 위해 인증 자격 증명을 제공할 필요가 없는 경우 `PLATFORM_AUTHENTICATION` 을 사용합니다. 이 경우 [자격 증명](./credentials-configuration.md) 구성을 사용하여 자격 증명 개체를 만들어야 합니다. </li><li>대상 플랫폼으로 데이터를 전송하는 데 인증이 필요하지 않으면 `NONE` 을 사용하십시오. </li></ul> |
 | `destinationServerId` | 문자열 | 이 대상에 사용되는 [대상 서버 구성](./destination-server-api.md)의 `instanceId` |
-| `backfillHistoricalProfileData` | 부울 | 세그먼트가 대상으로 활성화될 때 이전 프로필 데이터를 내보내지 여부를 제어합니다. <br> <ul><li> `true`:  [!DNL Platform] 세그먼트가 활성화되기 전에 세그먼트에 대해 자격이 있는 내역 사용자 프로필을 보냅니다. </li><li> `false`:  [!DNL Platform] 세그먼트가 활성화된 후에 세그먼트에 대한 자격이 되는 사용자 프로필만 포함합니다. </li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -244,14 +243,6 @@ ID 네임스페이스에 [!DNL Platform] 과(와) 대상 간의 1~1 응답이 �
 `audienceTemplateId`을 통해 이 구성도 [대상 메타데이터 구성](./audience-metadata-management.md)과 함께 연결합니다.
 
 위의 구성에 표시된 매개 변수는 [대상 종단점 API 참조](./destination-configuration-api.md)에 설명되어 있습니다.
-
-## 이 구성이 대상에 필요한 모든 정보를 연결하는 방법 {#connecting-all-configurations}
-
-대상에 대한 일부 설정은 대상 서버 또는 대상 메타데이터 끝점을 통해 구성할 수 있습니다. 대상 구성 끝점은 다음과 같이 구성을 참조하여 이러한 모든 설정을 연결합니다.
-
-* 대상에 대해 설정된 대상 서버 및 템플릿 구성을 참조하려면 `destinationServerId` 을 사용하십시오.
-* 대상에 대해 설정된 대상 메타데이터 구성을 참조하려면 `audienceMetadataId` 을 사용하십시오.
-
 
 ## 집계 정책 {#aggregation}
 
@@ -280,18 +271,25 @@ ID 네임스페이스에 [!DNL Platform] 과(와) 대상 간의 1~1 응답이 �
 이 옵션은 동일한 호출에서 수천 개의 프로필을 사용하여 일괄 처리를 수행하려는 경우에 가장 적합합니다. 또한 이 옵션을 사용하면 복잡한 집계 규칙을 기반으로 내보낸 프로필을 집계할 수 있습니다.
 
 이 옵션을 사용하면 다음 작업을 수행할 수 있습니다.
-* 대상에 API 호출이 수행되기 전에 집계할 최대 프로필 시간 및 수를 설정합니다.
+* 대상에 API 호출이 수행되기 전에 집계할 최대 프로필 수 및 최대 프로필 수를 설정합니다.
 * 다음을 기반으로 대상에 매핑된 내보낸 프로필을 집계합니다.
-   * 세그먼트 ID
-   * 세그먼트 상태
+   * 세그먼트 ID;
+   * 세그먼트 상태;
    * ID 또는 그룹
 
 합계 매개 변수에 대한 자세한 내용은 각 매개 변수에 대해 설명하는 [대상 API 엔드포인트 작업](./destination-configuration-api.md) 참조 페이지를 참조하십시오.
 
-## 내역 프로필 자격
+## 내역 프로필 자격 {#profile-backfill}
 
 대상 구성에서 `backfillHistoricalProfileData` 매개 변수를 사용하여 이전 프로필 자격을 대상으로 내보내야 하는지 확인할 수 있습니다.
 
 | 매개 변수 | 유형 | 설명 |
 |---------|----------|------|
 | `backfillHistoricalProfileData` | 부울 | 세그먼트가 대상으로 활성화될 때 이전 프로필 데이터를 내보내지 여부를 제어합니다. <br> <ul><li> `true`:  [!DNL Platform] 세그먼트가 활성화되기 전에 세그먼트에 대해 자격이 있는 내역 사용자 프로필을 보냅니다. </li><li> `false`:  [!DNL Platform] 세그먼트가 활성화된 후에 세그먼트에 대한 자격이 되는 사용자 프로필만 포함합니다. </li></ul> |
+
+## 이 구성이 대상에 필요한 모든 정보를 연결하는 방법 {#connecting-all-configurations}
+
+일부 대상 설정은 [대상 서버](./server-and-template-configuration.md) 또는 [대상 메타데이터 구성](./audience-metadata-management.md)을 통해 구성해야 합니다. 여기에 설명된 대상 구성은 다음과 같이 다른 두 구성을 참조하여 이러한 모든 설정을 연결합니다.
+
+* 대상에 대해 설정된 대상 서버 및 템플릿 구성을 참조하려면 `destinationServerId` 을 사용하십시오.
+* 대상에 대해 설정된 대상 메타데이터 구성을 참조하려면 `audienceMetadataId` 을 사용하십시오.

@@ -1,12 +1,10 @@
 ---
-description: 이 페이지의 콘텐츠와 파트너 대상에 대한 나머지 구성 옵션을 함께 사용하십시오. 이 페이지에서는 Adobe Experience Platform에서 대상으로 내보낸 데이터의 메시징 형식을 다룹니다. 반면 다른 페이지에서는 대상에 연결 및 인증에 대한 세부 사항을 다룹니다.
-seo-description: Use the content on this page together with the rest of the configuration options for partner destinations. This page addresses the messaging format of data exported from Adobe Experience Platform to destinations, while the other page addresses specifics about connecting and authenticating to your destination.
-seo-title: Message format
+description: 이 페이지에서는 Adobe Experience Platform에서 대상으로 내보낸 데이터의 메시지 포맷 및 프로필 변환에 대해 설명합니다.
 title: 메시지 포맷
 exl-id: 1212c1d0-0ada-4ab8-be64-1c62a1158483
-source-git-commit: c328293cf710ad8a2ddd2e52cb01c86d29c0b569
+source-git-commit: 485c1359f8ef5fef0c5aa324cd08de00b0b4bb2f
 workflow-type: tm+mt
-source-wordcount: '1995'
+source-wordcount: '1981'
 ht-degree: 1%
 
 ---
@@ -15,7 +13,7 @@ ht-degree: 1%
 
 ## 사전 요구 사항 - Adobe Experience Platform 개념 {#prerequisites}
 
-Adobe 측의 프로세스를 이해하려면 다음 Experience Platform 개념을 숙지하십시오.
+Adobe 측의 메시지 형식 및 프로필 구성 및 변환 프로세스를 이해하려면 다음 Experience Platform 개념을 숙지하십시오.
 
 * **XDM(경험 데이터 모델)**. [Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=ko) 에서 XDM 스키마  [를 만드는 방법 및 XDM 개요](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/create-schema-ui.html?lang=en).
 * **클래스**. [UI에서 클래스를 만들고 편집합니다](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/classes.html?lang=en).
@@ -24,11 +22,11 @@ Adobe 측의 프로세스를 이해하려면 다음 Experience Platform 개념�
 
 ## 개요 {#overview}
 
-이 페이지의 콘텐츠와 파트너 대상](./configuration-options.md)에 대한 나머지 [구성 옵션을 함께 사용하십시오. 이 페이지에서는 Adobe Experience Platform에서 대상으로 내보낸 데이터의 메시징 형식을 다룹니다. 반면 다른 페이지에서는 대상에 연결 및 인증에 대한 세부 사항을 다룹니다.
+이 페이지의 콘텐츠와 파트너 대상](./configuration-options.md)에 대한 나머지 [구성 옵션을 함께 사용하십시오. 이 페이지에서는 Adobe Experience Platform에서 대상으로 내보낸 데이터의 메시지 포맷 및 프로필 변환에 대해 설명합니다. 다른 페이지에서는 대상 연결 및 인증에 대한 세부 사항을 설명합니다.
 
-Adobe Experience Platform은 다양한 데이터 형식으로 데이터를 상당한 수의 대상으로 내보냅니다. 대상 유형의 예로는 광고 플랫폼(Google), 소셜 네트워크(Facebook), 클라우드 저장소 위치(Amazon S3, Azure 이벤트 허브)가 있습니다.
+Adobe Experience Platform은 다양한 데이터 형식으로 데이터를 상당한 수의 대상으로 내보냅니다. 대상 유형의 예로는 광고 플랫폼(Google), 소셜 네트워크(Facebook) 및 클라우드 저장소 위치(Amazon S3, Azure 이벤트 허브)가 있습니다.
 
-Experience Platform은 내보낸 메시지 형식을 측면에서 예상되는 형식과 일치하도록 조정할 수 있습니다. 이 사용자 지정을 이해하려면 다음 개념이 중요합니다.
+Experience Platform은 내보낸 프로필의 메시지 포맷을 측면에서 예상되는 형식과 일치하도록 조정할 수 있습니다. 이 사용자 지정을 이해하려면 다음 개념이 중요합니다.
 * Adobe Experience Platform의 소스(1) 및 대상(2) XDM 스키마
 * 파트너 측(3)에서 예상되는 메시지 형식 및
 * [메시지 변환 템플릿](./message-format.md#using-templating)을(를) 만들어 정의할 수 있는 XDM 스키마와 예상 메시지 형식 간의 변환 계층.
@@ -49,7 +47,7 @@ Users who want to activate data to your destination need to map the fields in th
 
 **대상 프로필 속성의 JSON 표준 스키마(3)**: 이 항목은 플랫폼이  [지원하는 모든 ](https://json-schema.org/learn/miscellaneous-examples.html) 프로필 속성 및 해당 유형의 JSON 스키마를 나타냅니다(예: 개체, 문자열, 배열). 대상이 지원할 수 있는 예제 필드는 `firstName`, `lastName`, `gender`, `email`, `phone`, `productId`, `productName` 등입니다. Experience Platform에서 내보낸 데이터를 예상 형식으로 조정하는 데 [메시지 변환 템플릿](./message-format.md#using-templating)이 필요합니다.
 
-위에서 설명한 스키마 변형을 기반으로 소스 XDM 스키마와 파트너 측의 샘플 스키마 간에 메시지 구조가 변경되는 방법을 설명합니다.
+위에 설명된 스키마 변형을 기반으로 다음은 소스 XDM 스키마와 파트너 측의 샘플 스키마 간의 프로필 구성 변경 방법입니다.
 
 ![변형 메시지 예](./assets/transformations-with-examples.png)
 
@@ -58,7 +56,7 @@ Users who want to activate data to your destination need to map the fields in th
 
 ## 시작하기 - 세 가지 기본 속성 변형 {#getting-started}
 
-변환 프로세스를 보여주기 위해 아래 예제는 Adobe Experience Platform에서 세 가지 공통 프로필 속성을 사용합니다. **이름**, **성** 및 **전자 메일 주소**
+프로필 변환 프로세스를 보여주기 위해 아래 예제는 Adobe Experience Platform에서 세 가지 공통 프로필 속성을 사용합니다. **이름**, **성** 및 **전자 메일 주소**
 
 >[!NOTE]
 >
@@ -93,7 +91,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 Adobe은 [Jinja](https://jinja.palletsprojects.com/en/2.11.x/)와 유사한 템플릿 언어를 사용하여 XDM 스키마에서 해당 필드를 대상에서 지원하는 형식으로 변환합니다.
 
-이 섹션에서는 입력 XDM 스키마에서 템플릿을 통해 이러한 변환이 수행되는 방식에 대한 몇 가지 예를 제공하고 대상에서 허용하는 페이로드 형식으로 출력합니다. 아래 예는 다음과 같이 복잡도를 증가시켜 정렬됩니다.
+이 섹션에서는 입력 XDM 스키마부터 템플릿을 통해 이러한 변환이 수행되는 방식에 대한 몇 가지 예를 제공하고 대상에서 허용하는 페이로드 형식으로 출력합니다. 아래 예는 다음과 같이 복잡성을 증가시켜 보여줍니다.
 
 1. 단순 변형 예 [프로필 속성](./message-format.md#attributes), [세그먼트 멤버십](./message-format.md#segment-membership) 및 [ID](./message-format.md#identities) 필드에 대한 간단한 변형에서 템플릿 작업이 작동하는 방식을 알아봅니다.
 2. 위의 필드를 결합하는 템플릿의 복잡성 증가 예: [세그먼트와 ID](./message-format.md#segments-and-identities) 및 [세그먼트, ID 및 프로필 속성을 보내는 템플릿을 만듭니다](./message-format.md#segments-identities-attributes).
