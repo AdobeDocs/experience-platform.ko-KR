@@ -6,16 +6,16 @@ topic-legacy: overview
 type: Tutorial
 description: 플랫폼 사용자 인터페이스를 사용하여 데이터 랜딩 영역 소스 커넥터를 만드는 방법을 알아봅니다.
 exl-id: 653c9958-5d89-4b0c-af3d-a3e74aa47a08
-source-git-commit: ca7197036283ee15dbf60c113d361a5ea34d65c1
+source-git-commit: 57089cc9aa9c586f5fae70e2a7154d48ebd62447
 workflow-type: tm+mt
-source-wordcount: '434'
+source-wordcount: '418'
 ht-degree: 0%
 
 ---
 
 # UI를 사용하여 [!DNL Data Landing Zone] 을 플랫폼에 연결
 
-[!DNL Data Landing Zone] 는 Adobe Experience Platform에 프로비저닝된 임시 파일 저장소를 위한 클라우드 기반 데이터 저장소 기능입니다. [!DNL Data Landing Zone] 는 플랫폼 내외부에서 데이터를 수신 및 받는 데만 사용됩니다. 데이터는 7일 후 [!DNL Data Landing Zone]에서 자동으로 삭제됩니다.
+[!DNL Data Landing Zone] 는 Adobe Experience Platform에 프로비저닝된 임시 파일 저장소를 위한 클라우드 기반 데이터 저장소 기능입니다. 데이터는 7일 후 [!DNL Data Landing Zone]에서 자동으로 삭제됩니다.
 
 이 자습서에서는 플랫폼 사용자 인터페이스를 사용하여 [!DNL Data Landing Zone] 소스 연결을 만드는 단계를 제공합니다.
 

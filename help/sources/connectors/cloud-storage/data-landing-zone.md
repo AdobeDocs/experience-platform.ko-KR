@@ -5,16 +5,16 @@ title: 데이터 랜딩 영역 소스
 topic-legacy: overview
 description: 데이터 랜딩 영역을 Adobe Experience Platform에 연결하는 방법 알아보기
 exl-id: bdc10095-7de4-4183-bfad-a7b5c89197e3
-source-git-commit: ca7197036283ee15dbf60c113d361a5ea34d65c1
+source-git-commit: 57089cc9aa9c586f5fae70e2a7154d48ebd62447
 workflow-type: tm+mt
-source-wordcount: '432'
+source-wordcount: '423'
 ht-degree: 0%
 
 ---
 
 # [!DNL Data Landing Zone]
 
-[!DNL Data Landing Zone] 는 Adobe Experience Platform에서 제공하는  [!DNL Azure Blob] 스토리지 인터페이스로서, 소스 및 대상을 통해 Platform에서 파일을 수집 및 내보내기 위해 안전한 클라우드 기반 파일 스토리지 기능에 액세스할 수 있도록 합니다. 샌드박스당 하나의 [!DNL Data Landing Zone] 컨테이너에 액세스할 수 있으며 모든 컨테이너의 총 데이터 볼륨은 플랫폼 프로덕션 및 서비스 라이센스와 함께 제공된 총 데이터로 제한됩니다. Platform 및 해당 애플리케이션 서비스(예: [!DNL Customer Journey Analytics], [!DNL Journey Orchestration], [!DNL Intelligent Services] 및 [!DNL Real-time Customer Data Platform])의 모든 고객은 샌드박스당 하나의 [!DNL Data Landing Zone] 컨테이너를 사용할 수 있습니다. [!DNL Azure Storage Explorer] 또는 명령줄 인터페이스를 통해 컨테이너에 파일을 읽고 쓸 수 있습니다.
+[!DNL Data Landing Zone] 는 Adobe Experience Platform에서 제공하는  [!DNL Azure Blob] 스토리지 인터페이스로, Platform으로 파일을 가져올 수 있도록 안전한 클라우드 기반 파일 스토리지 기능에 액세스할 수 있도록 합니다. 샌드박스당 하나의 [!DNL Data Landing Zone] 컨테이너에 액세스할 수 있으며 모든 컨테이너의 총 데이터 볼륨은 플랫폼 프로덕션 및 서비스 라이센스와 함께 제공된 총 데이터로 제한됩니다. Platform 및 해당 애플리케이션 서비스(예: [!DNL Customer Journey Analytics], [!DNL Journey Orchestration], [!DNL Intelligent Services] 및 [!DNL Real-time Customer Data Platform])의 모든 고객은 샌드박스당 하나의 [!DNL Data Landing Zone] 컨테이너를 사용할 수 있습니다. [!DNL Azure Storage Explorer] 또는 명령줄 인터페이스를 통해 컨테이너에 파일을 읽고 쓸 수 있습니다.
 
 [!DNL Data Landing Zone] 은 SAS 기반 인증을 지원하며, 데이터는  [!DNL Azure Blob] 저장 및 전송 중에 표준 스토리지 보안 메커니즘으로 보호됩니다. SAS 기반 인증을 사용하면 공용 인터넷 연결을 통해 [!DNL Data Landing Zone] 컨테이너에 안전하게 액세스할 수 있습니다. [!DNL Data Landing Zone] 컨테이너에 액세스하는 데 필요한 네트워크 변경 사항이 없습니다. 즉, 네트워크에 대한 허용 목록 또는 영역 간 설정을 구성할 필요가 없습니다. Platform에서는 [!DNL Data Landing Zone] 컨테이너에 업로드된 모든 파일에 대해 엄격한 7일 TTL(Time-to-Live)을 적용합니다. 7일 후 모든 파일이 삭제됩니다.
 
