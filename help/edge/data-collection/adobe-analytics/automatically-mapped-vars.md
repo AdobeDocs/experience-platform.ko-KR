@@ -4,36 +4,39 @@ description: Experience Platform Web SDK를 사용하여 Adobe Analytics에서 �
 seo-description: Learn which variables are automatically mapped in Adobe Analytics with the Adobe Experience Platform Web SDK
 keywords: adobe analytics;변수;analytics;자동 맵;자동 매핑
 exl-id: 856fada7-b62c-4fd2-9372-a19ae1cdec33
-source-git-commit: 7809e64abab80f72af979e685f268c0799e74eca
+source-git-commit: dcbe4c1b5a085878562990ed2db8e5cb27b93e28
 workflow-type: tm+mt
-source-wordcount: '907'
+source-wordcount: '918'
 ht-degree: 5%
 
 ---
 
-# 변수가 [!DNL Analytics]에 자동으로 매핑됨
+# 변수에 자동으로 매핑됨 [!DNL Analytics]
 
-다음은 Adobe Experience Platform Edge Network가 자동으로 Adobe Analytics에 매핑하는 변수 목록입니다. Adobe Analytics 데이터 수집 쿼리 매개 변수에 대한 자세한 내용은 [Analytics 구현 안내서](https://experienceleague.adobe.com/docs/analytics/implementation/validate/query-parameters.html)에서 확인할 수 있습니다.
+다음은 Adobe Experience Platform Edge Network가 자동으로 Adobe Analytics에 매핑하는 변수 목록입니다. Adobe Analytics 데이터 수집 쿼리 매개 변수에 대한 자세한 내용은 [Analytics 구현 안내서](https://experienceleague.adobe.com/docs/analytics/implementation/validate/query-parameters.html).
+
+>[!NOTE]
+>이 페이지의 정보는 Mobile SDK에도 적용됩니다.
 
 | XDM 필드 경로 | [!DNL Analytics Query String] / HTTP 헤더 | 설명 |
 | ---------- | ------------------------- | ----------------------------------------- |
 | application.id | c.a.appid | AppMeasurement 컨텍스트 데이터 `c.a.appid` 매핑. |
 | application.launches.value | c.a.launches | AppMeasurement 컨텍스트 데이터 `c.a.launches` 매핑. |
 | commerce.checkouts.id | 이벤트 | `scCheckout` 이벤트 직렬화. 이 필드가 제외되면(즉, 직렬화되지 않은 이벤트의 경우) 시스템에서 엔티티에 자체 ID 값을 생성하여 할당합니다. |
-| commerce.checkouts.value | 이벤트 | 구분 기호 `,`을 사용하여 전환 COMMERCE_SC_CHECKOUT을 사용하는 AppMeasurement 쿼리 매개 변수 EVENT_LIST_FULL 매핑입니다. |
+| commerce.checkouts.value | 이벤트 | 구분 기호를 사용하여 전환 COMMERCE_SC_CHECKOUT을 사용하는 AppMeasurement 쿼리 매개 변수 EVENT_LIST_FULL 매핑 `,`. |
 | commerce.order.currencyCode | cc | AppMeasurement 쿼리 매개 변수 CURRENCY 매핑. |
 | commerce.order.purchaseID | pi | AppMeasurement 쿼리 매개 변수 PURCHASEID 매핑입니다. |
 | commerce.productListAdds.id | 이벤트 | `scAdd` 이벤트 직렬화. 이 필드가 제외되면(즉, 직렬화되지 않은 이벤트의 경우) 시스템에서 엔티티에 자체 ID 값을 생성하여 할당합니다. |
-| commerce.productListAdds.value | 이벤트 | 구분 기호 `,`을 사용하여 전환 COMMERCE_SC_ADD를 사용하는 AppMeasurement 쿼리 매개 변수 EVENT_LIST_FULL 매핑입니다. |
+| commerce.productListAdds.value | 이벤트 | 구분 기호를 사용하여 전환 COMMERCE_SC_ADD를 사용하는 AppMeasurement 쿼리 매개 변수 EVENT_LIST_FULL 매핑 `,`. |
 | commerce.productListOpens.id | 이벤트 | `scOpen` 이벤트 직렬화. 이 필드가 제외되면(즉, 직렬화되지 않은 이벤트의 경우) 시스템에서 엔티티에 자체 ID 값을 생성하여 할당합니다. |
-| commerce.productListOpens.value | 이벤트 | 구분 기호 `,`을 사용하여 전환 COMMERCE_SC_OPEN을 사용하는 AppMeasurement 쿼리 매개 변수 EVENT_LIST_FULL 매핑입니다. |
+| commerce.productListOpens.value | 이벤트 | 구분 기호를 사용하여 전환 COMMERCE_SC_OPEN을 사용하는 AppMeasurement 쿼리 매개 변수 EVENT_LIST_FULL 매핑 `,`. |
 | commerce.productListRemovals.id | 이벤트 | `scRemove` 이벤트 직렬화. 이 필드가 제외되면(즉, 직렬화되지 않은 이벤트의 경우) 시스템에서 엔티티에 자체 ID 값을 생성하여 할당합니다. |
-| commerce.productListRemovals.value | 이벤트 | 구분 기호 `,`을 사용하여 전환 COMMERCE_SC_REMOVE를 사용하는 AppMeasurement 쿼리 매개 변수 EVENT_LIST_FULL 매핑입니다. |
+| commerce.productListRemovals.value | 이벤트 | 구분 기호를 사용하여 전환 COMMERCE_SC_REMOVE를 사용하는 AppMeasurement 쿼리 매개 변수 EVENT_LIST_FULL 매핑 `,`. |
 | commerce.productListViews.id | 이벤트 | `scView` 이벤트 직렬화. 이 필드가 제외되면(즉, 직렬화되지 않은 이벤트의 경우) 시스템에서 엔티티에 자체 ID 값을 생성하여 할당합니다. |
-| commerce.productListViews.value | 이벤트 | 구분 기호 `,`을 사용하여 COMMERCE_SC_VIEW와 함께 AppMeasurement 쿼리 매개 변수 EVENT_LIST_FULL 매핑을 수행합니다. |
+| commerce.productListViews.value | 이벤트 | 구분 기호를 사용하여 전환 COMMERCE_SC_VIEW를 사용하는 AppMeasurement 쿼리 매개 변수 EVENT_LIST_FULL 매핑 `,`. |
 | commerce.productViews.id | 이벤트 | `prodView` 이벤트 직렬화. 이 필드가 제외되면(즉, 직렬화되지 않은 이벤트의 경우) 시스템에서 엔티티에 자체 ID 값을 생성하여 할당합니다. |
-| commerce.productViews.value | 이벤트 | 구분 기호 `,`를 사용하여 COMMERCE_PROD_VIEW를 사용하여 AppMeasurement 쿼리 매개 변수 EVENT_LIST_FULL 매핑이 변환되는 AppMeasurement |
-| commerce.purchases.value | 이벤트 | 구분 기호 `,`를 사용하여 COMMERCE_PURCHASE와 함께 AppMeasurement 쿼리 매개 변수 EVENT_LIST_FULL 매핑을 수행합니다. |
+| commerce.productViews.value | 이벤트 | 구분 기호를 사용하여 변환 COMMERCE_PROD_VIEW를 사용하는 AppMeasurement 쿼리 매개 변수 EVENT_LIST_FULL 매핑 `,`. |
+| commerce.purchases.value | 이벤트 | 구분 기호를 사용하여 전환 COMMERCE_PURCHASE를 사용하는 AppMeasurement 쿼리 매개 변수 EVENT_LIST_FULL 매핑 `,`. |
 | device.colorDepth | c | AppMeasurement 쿼리 매개 변수 C_COLOR 매핑입니다. |
 | device.screenHeight | s | AppMeasurement 쿼리 매개 변수 화면 해상도 매핑입니다. |
 | device.screenWidth | s | AppMeasurement 쿼리 매개 변수 화면 해상도 매핑입니다. |
@@ -65,8 +68,8 @@ ht-degree: 5%
 | media.mediaTimed.primaryAssetReference.iptc4xmpExt:Season.iptc4xmpExt:Number | c.a.media.season | AppMeasurement 컨텍스트 데이터 `c.a.media.season` 매핑. |
 | media.mediaTimed.primaryAssetReference.iptc4xmpExt:Series.iptc4xmpExt:Identifier | a.media.name | AppMeasurement 컨텍스트 데이터 `a.media.name` 매핑. |
 | media.mediaTimed.primaryAssetReference.iptc4xmpExt:Series.iptc4xmpExt:Name | c.a.media.show | AppMeasurement 컨텍스트 데이터 `c.a.media.show` 매핑. |
-| media.mediaTimed.primaryAssetReference.showType | c.a.media.type | AppMeasurement 컨텍스트 데이터 `c.a.media.type` 매핑과 전환 STUDIO_SHOW_TYPE입니다. |
-| media.mediaTimed.primaryAssetReference.showType | c.a.media.type | AppMeasurement 컨텍스트 데이터 `c.a.media.type` 매핑과 전환 VIDEO_SHOW_TYPE입니다. |
+| media.mediaTimed.primaryAssetReference.showType | c.a.media.type | AppMeasurement 컨텍스트 데이터 `c.a.media.type` 변환 STUDIO_SHOW_TYPE을 사용한 매핑. |
+| media.mediaTimed.primaryAssetReference.showType | c.a.media.type | AppMeasurement 컨텍스트 데이터 `c.a.media.type` 변환 VIDEO_SHOW_TYPE과 매핑. |
 | media.mediaTimed.primaryAssetReference.xmpDM:duration | c.a.media.length | AppMeasurement 컨텍스트 데이터 `c.a.media.length` 매핑. |
 | media.mediaTimed.primaryAssetViewDetails.@ID | c.a.media.vsid | AppMeasurement 컨텍스트 데이터. |
 | media.mediaTimed.primaryAssetViewDetails.broadcastChannel | c.a.media.channel | AppMeasurement 컨텍스트 데이터 `c.a.media.channel` 매핑. |
@@ -94,7 +97,7 @@ ht-degree: 5%
 | productlistitems[N].quantity | products | AppMeasurement 쿼리 매개 변수 제품 수량 매핑입니다. |
 | web.webInteraction.URL | pev1 | AppMeasurement 쿼리 매개 변수 PAGE_EVENT_VAR1 매핑입니다. |
 | web.webInteraction.name | pev2 | AppMeasurement 쿼리 매개 변수 PAGE_EVENT_VAR2 매핑입니다. |
-| web.webInteraction.type | pe | `web.webInteraction.type=other` 대상:  `pe=lnk_o`  `web.webInteraction.type=download` 대상:  `pe=lnk_d`  `web.webInteraction.type=exit` to  `pe=lnk_e` |
+| web.webInteraction.type | pe | `web.webInteraction.type=other` to `pe=lnk_o`; `web.webInteraction.type=download` to `pe=lnk_d`; `web.webInteraction.type=exit` to `pe=lnk_e` |
 | web.webPageDetails.URL | g | AppMeasurement 쿼리 매개 변수 PAGE_URL 매핑. |
 | web.webPageDetails.errorPage | pageType | AppMeasurement 쿼리 매개 변수 PAGE_TYPE_FULL 매핑과 변환 ERROR_PAGE_TYPE입니다. |
 | web.webPageDetails.homePage | hp | AppMeasurement 쿼리 매개 변수 HOMEPAGE 매핑과 전환 BOOLEAN_TO_YN. |
