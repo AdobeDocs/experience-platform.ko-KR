@@ -4,9 +4,9 @@ user-guide-title: 대상 안내서
 user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화합니다.
 description: 이 문서에서는 Adobe Experience Platform 대상의 목차 목록을 설명합니다
 feature: Destinations
-source-git-commit: 6c21398a3f2fb26cc925ca1f5dcbe92b306a8325
+source-git-commit: a7c36f1a157b6020fede53e5c1074d966f26cf3d
 workflow-type: tm+mt
-source-wordcount: '644'
+source-wordcount: '645'
 ht-degree: 10%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 10%
 * UI 안내서 {#ui}
    * [대상 작업 공간](./ui/destinations-workspace.md)
    * [새 대상 연결 만들기](./ui/connect-destination.md)
-   * 대상 데이터 활성화{#activate}
+   * 대상에 대상 데이터 활성화{#activate}
       * [활성화 개요](./ui/activation-overview.md)
       * [스트리밍 세그먼트 내보내기 대상으로 대상 데이터 활성화](./ui/activate-segment-streaming-destinations.md)
       * [스트리밍 프로필 내보내기 대상으로 대상 데이터 활성화](./ui/activate-streaming-profile-destinations.md)
@@ -54,7 +54,7 @@ ht-degree: 10%
       * [Google 광고 확장](./catalog/advertising/google-ads-extension.md)
       * [Google Ad Manager 연결](./catalog/advertising/google-ad-manager.md)
       * [Google Customer Match 연결](./catalog/advertising/google-customer-match.md)
-      * [Google Display &amp; Video 360 연결](./catalog/advertising/google-dv360.md)
+      * [Google 디스플레이 및 비디오 360 연결](./catalog/advertising/google-dv360.md)
       * [Google 태그 확장](./catalog/advertising/gtag-advertising.md)
       * [linkedIn Insight Tag 확장](./catalog/advertising/linkedin.md)
       * [Microsoft Bing 연결](./catalog/advertising/bing.md)
@@ -74,7 +74,7 @@ ht-degree: 10%
       * [Demandbase 확장](./catalog/analytics/demandbase.md)
       * [DialogTech 확장](./catalog/analytics/dialogtech.md)
       * [Google 글로벌 사이트 태그 확장](./catalog/analytics/gtag-analytics.md)
-      * [Google 유니버설 애널리틱스 확장](./catalog/analytics/google-universal-analytics.md)
+      * [Google Universal Analytics 확장](./catalog/analytics/google-universal-analytics.md)
       * [JW 플레이어 분석(베타) 확장](./catalog/analytics/jw-player-analytics.md)
       * [Nielsen BSDK 확장](./catalog/analytics/nielsen-bsdk.md)
       * [Nielsen IMA 처리기 확장](./catalog/analytics/nielsen-ima.md)
@@ -95,7 +95,7 @@ ht-degree: 10%
    * 데이터 관리 플랫폼 대상 {#data-management}
       * [DMP(데이터 관리 플랫폼) 대상 개요](./catalog/data-management/overview.md)
       * [Audience Manager DIL 확장](./catalog/data-management/aam-dil-extension.md)
-   * 전자 메일 대상 {#email}
+   * 이메일 대상 {#email}
       * [Bizible 확장](./catalog/email/bizible.md)
       * [Marketo 확장](./catalog/email/marketo.md)
       * [Marketo Munchkin 확장 프로그램](./catalog/email/marketo-munchkin.md)
@@ -137,7 +137,7 @@ ht-degree: 10%
       * [InMoment 확장](./catalog/survey/inmoment.md)
       * [Qualtrics 웹 사이트 피드백 확장](./catalog/survey/qualtrics.md)
       * [Question Pro Intercept 설문 조사 확장](./catalog/survey/web-intercept-surveys.md)
-   * 고객 대상 음성 {#voice}
+   * 고객 대상의 음성 {#voice}
       * [고객 대상 음성 개요](./catalog/voice/overview.md)
       * [디지털 피드백 확장 확인](./catalog/voice/confirmit-digital-feedback.md)
       * [호출 태그 확장](./catalog/voice/invoca.md)
@@ -170,8 +170,8 @@ ht-degree: 10%
          * [대상 테스트 API 작업](./destination-sdk/destination-testing-api.md)
          * [샘플 프로필 생성 API 작업](./destination-sdk/sample-profile-generation-api.md)
    * 안내서 {#guides}
-      * [대상 SDK를 사용하여 대상을 구성합니다](./destination-sdk/configure-destination-instructions.md)
-   * 대상 {#document-destination} 문서화
+      * [대상 SDK를 사용하여 스트리밍 대상 구성](./destination-sdk/configure-destination-instructions.md)
+   * 대상을 문서화합니다. {#document-destination}
       * [Adobe Experience Platform에서 대상 문서화](./destination-sdk/docs-framework/documentation-instructions.md)
       * [GitHub 웹 인터페이스를 사용하여 대상 설명서 페이지를 만듭니다](./destination-sdk/docs-framework/use-github-interface-to-create-documentation.md)
       * [로컬 환경에서 텍스트 편집기를 사용하여 대상 설명서 페이지를 만듭니다](./destination-sdk/docs-framework/work-in-local-environment.md)
