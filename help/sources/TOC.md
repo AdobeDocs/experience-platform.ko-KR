@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 소스 커넥터 도움말
 breadcrumb-title: Source Connectors 안내서
 user-guide-description: 다양한 소스 또는 구조에서 데이터를 수집하고 레이블을 지정하며 기존에 수집한 데이터를 향상시킬 수 있습니다.
 feature: Sources
-source-git-commit: 333cca4ac451745ac457c8d66fa8b5fe14531c9e
+source-git-commit: 21a536d80f854a9e98452c78a8014df4cc43e125
 workflow-type: tm+mt
-source-wordcount: '657'
+source-wordcount: '644'
 ht-degree: 13%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 13%
 
 - [소스 커넥터 개요](home.md)
 - 사용 가능한 소스 커넥터 {#connectors}
-   - Adobe 응용 프로그램 {#adobe-applications}
+   - Adobe 애플리케이션 {#adobe-applications}
       - [Analytics 분류 소스 커넥터](connectors/adobe-applications/classifications.md)
       - [Analytics 소스 커넥터](connectors/adobe-applications/analytics.md)
       - [Audience Manager 원본 커넥터](connectors/adobe-applications/audience-manager.md)
@@ -80,7 +80,7 @@ ht-degree: 13%
    - 마케팅 자동화 {#marketing-automation}
       - [HubSpot 커넥터](connectors/marketing-automation/hubspot.md)
       - [Salesforce Marketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
-   - 지급 {#payments}
+   - 결제 {#payments}
       - [PayPal 커넥터](connectors/payments/paypal.md)
    - 프로토콜 {#protocols}
       - [일반 OData 커넥터](connectors/protocols/odata.md)
@@ -137,7 +137,7 @@ ht-degree: 13%
          - [MailChimp 캠페인](tutorials/api/create/marketing-automation/mailchimp-campaign.md)
          - [MailChimp 멤버](tutorials/api/create/marketing-automation/mailchimp-members.md)
          - [Salesforce Marketing Cloud](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
-      - 지급 {#payments}
+      - 결제 {#payments}
          - [PayPal](tutorials/api/create/payments/paypal.md)
       - 프로토콜 {#protocols}
          - [일반 OData](tutorials/api/create/protocols/odata.md)
@@ -164,8 +164,6 @@ ht-degree: 13%
       - [결제 데이터 수집](tutorials/api/collect/payments.md)
       - [프로토콜 데이터 수집](tutorials/api/collect/protocols.md)
       - [스트리밍 데이터 수집](tutorials/api/collect/streaming.md)
-   - [타사 클라우드 스토리지 시스템에서 Parquet 데이터를 수집](tutorials/api/cloud-storage-parquet.md)
-   - [데이터 집합 연결 만들기](tutorials/api/create-dataset-base-connection.md)
    - [데이터 흐름 모니터링](tutorials/api/monitor.md)
    - [계정 업데이트](tutorials/api/update.md)
    - [데이터 흐름 업데이트](tutorials/api/update-dataflows.md)
@@ -173,7 +171,7 @@ ht-degree: 13%
    - [데이터 흐름 삭제](tutorials/api/delete-dataflows.md)
 - UI 자습서 {#ui-tutorials}
    - 소스 연결 만들기 {#create}
-      - Adobe 응용 프로그램 {#adobe-applications}
+      - Adobe 애플리케이션 {#adobe-applications}
          - [Adobe Analytics (보고서 세트 데이터)](tutorials/ui/create/adobe-applications/analytics.md)
          - [Adobe Analytics (분류 데이터)](tutorials/ui/create/adobe-applications/classifications.md)
          - [Adobe Audience Manager](tutorials/ui/create/adobe-applications/audience-manager.md)
@@ -229,7 +227,7 @@ ht-degree: 13%
       - 마케팅 자동화 {#marketing-automation}
          - [HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)
          - [Salesforce Marketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
-      - 지급 {#payments}
+      - 결제 {#payments}
          - [PayPal](tutorials/ui/create/payments/paypal.md)
       - 프로토콜 {#protocols}
          - [일반 OData](tutorials/ui/create/protocols/odata.md)
