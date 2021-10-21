@@ -4,9 +4,9 @@ user-guide-title: 태그 도움말
 breadcrumb-title: 태그
 user-guide-description: 고객 경험을 향상시키기 위해 분석, 마케팅 및 광고 태그를 배포 및 관리하는 방법을 살펴볼 수 있습니다.
 feature: Tags
-source-git-commit: 7e4bc716e61b33563e0cb8059cb9f1332af7fd36
+source-git-commit: 7368b6e69522cce9343df78c31a712bfdbfedfe3
 workflow-type: tm+mt
-source-wordcount: '380'
+source-wordcount: '381'
 ht-degree: 68%
 
 ---
@@ -54,6 +54,7 @@ ht-degree: 68%
 * 이벤트 전달 {#event-forwarding}
    * [개요](./ui/event-forwarding/overview.md)
    * [시작하기](./ui/event-forwarding/getting-started.md)
+   * [비밀](./ui/event-forwarding/secrets.md)
 * 관리 {#admin}
    * [개요](./ui/administration/overview.md)
    * [회사 및 속성](./ui/administration/companies-and-properties.md)
