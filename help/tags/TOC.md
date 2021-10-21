@@ -4,10 +4,10 @@ user-guide-title: 태그 도움말
 breadcrumb-title: 태그
 user-guide-description: 고객 경험을 향상시키기 위해 분석, 마케팅 및 광고 태그를 배포 및 관리하는 방법을 살펴볼 수 있습니다.
 feature: Tags
-source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
+source-git-commit: 7e4bc716e61b33563e0cb8059cb9f1332af7fd36
 workflow-type: tm+mt
-source-wordcount: '378'
-ht-degree: 69%
+source-wordcount: '380'
+ht-degree: 68%
 
 ---
 
@@ -84,7 +84,7 @@ ht-degree: 69%
          * [개요](./extensions/web/platform-demo/overview.md)
       * Adobe Experience Platform 웹 SDK {#sdk}
          * [개요](./extensions/web/sdk/overview.md)
-      * Adobe Experience Platform 클라우드 커넥터 {#cloud-connector}
+      * Adobe Experience Platform Cloud 커넥터 {#cloud-connector}
          * [개요](./extensions/web/cloud-connector/overview.md)
       * Adobe Experience Manager 자산 통찰력 {#asset-insights}
          * [개요](./extensions/web/asset-insights/overview.md)
@@ -95,7 +95,7 @@ ht-degree: 69%
       * Adobe Medium Analytics(3.x SDK) {#media-analytics-3x}
          * [개요](./extensions/web/media-analytics-3x/overview.md)
          * [릴리스 정보](./extensions/web/media-analytics-3x/release-notes.md)
-      * Adobe 개인 정보 보호 {#privacy}
+      * Adobe 개인 정보 {#privacy}
          * [개요](./extensions/web/privacy/overview.md)
       * Adobe Target {#target}
          * [개요](./extensions/web/target/overview.md)
@@ -113,10 +113,10 @@ ht-degree: 69%
       * [!DNL Marketo Munchkin] {#marketo}
          * [개요](./extensions/web/marketo/overview.md)
          * [릴리스 정보](./extensions/web/marketo/release-notes.md)
-      * [!DNL BrightCove] 비디오 추적  {#brightcove}
+      * [!DNL BrightCove] 비디오 추적 {#brightcove}
          * [개요](./extensions/web/brightcove/overview.md)
          * [릴리스 정보](./extensions/web/brightcove/release-notes.md)
-      * [!DNL YouTube] 비디오 추적 확장  {#youtube}
+      * [!DNL YouTube] 비디오 추적 확장 {#youtube}
          * [개요](./extensions/web/youtube/overview.md)
          * [릴리스 정보](./extensions/web/youtube/release-notes.md)
    * [타사 확장](./extensions/3rd-party-extensions.md)
@@ -134,7 +134,7 @@ ht-degree: 69%
       * [확장 릴리스](./extension-dev/submit/release.md)
    * [확장 구성](./extension-dev/configuration.md)
    * [확장 매니페스트](./extension-dev/manifest.md)
-   * 웹 확장 프로그램 {#web}
+   * 웹 확장 {#web}
       * [확장 흐름](./extension-dev/web/flow.md)
       * [라이브러리 모듈 형식](./extension-dev/web/format.md)
       * [보기 횟수](./extension-dev/web/views.md)
@@ -144,7 +144,7 @@ ht-degree: 69%
       * [데이터 요소 유형](./extension-dev/web/data-element-types.md)
       * [핵심 모듈](./extension-dev/web/core.md)
       * [공유 모듈](./extension-dev/web/shared.md)
-   * 에지 확장 {#edge}
+   * Edge 확장 {#edge}
       * [확장 흐름](./extension-dev/edge/flow.md)
       * [라이브러리 모듈 형식](./extension-dev/edge/format.md)
       * [조건 유형](./extension-dev/edge/condition-types.md)
@@ -175,6 +175,7 @@ ht-degree: 69%
       * [참고](./api/endpoints/notes.md)
       * [프로필](./api/endpoints/profile.md)
       * [검색](./api/endpoints/search.md)
+      * [비밀](./api/endpoints/secrets.md)
    * 안내서 {#guides}
       * [위임 설명자 ID](./api/guides/delegate-descriptor-ids.md)
       * [값 암호화](./api/guides/encrypting-values.md)
@@ -184,6 +185,7 @@ ht-degree: 69%
       * [응답 정렬](./api/guides/sorting.md)
       * [관계](./api/guides/relationships.md)
       * [리소스 검색](./api/guides/search.md)
+      * [비밀](./api/guides/secrets.md)
 * [FAQ](./faq.md)
 * [용어 업데이트](./term-updates.md)
 * 릴리스 정보  {#release-notes}

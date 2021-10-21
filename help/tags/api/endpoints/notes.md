@@ -1,9 +1,10 @@
 ---
 title: 메모 끝점
 description: Reactor API에서 /notes 종단점을 호출하는 방법을 알아봅니다.
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+exl-id: fa3bebc0-215e-4515-87b9-d195c9ab76c1
+source-git-commit: 7e4bc716e61b33563e0cb8059cb9f1332af7fd36
 workflow-type: tm+mt
-source-wordcount: '526'
+source-wordcount: '527'
 ht-degree: 7%
 
 ---
@@ -18,7 +19,7 @@ Reactor API에서 참고는 특정 리소스에 추가할 수 있는 텍스트 �
 * 다른 팀 구성원에게 지침 제공
 * 기록 컨텍스트 기록
 
-Reactor API의 `/notes` 종단점을 사용하면 이러한 메모를 프로그래밍 방식으로 관리할 수 있습니다.
+다음 `/notes` reactor API의 종단점을 사용하면 이러한 메모를 프로그래밍 방식으로 관리할 수 있습니다.
 
 참고는 다음 리소스를 적용할 수 있습니다.
 
@@ -28,6 +29,7 @@ Reactor API의 `/notes` 종단점을 사용하면 이러한 메모를 프로그�
 * [속성](./properties.md)
 * [규칙 구성 요소](./rule-components.md)
 * [규칙](./rules.md)
+* [비밀](./secrets.md)
 
 이 여섯 가지 유형들은 전체적으로 &quot;주목할 만한&quot; 자원이라고 알려져 있습니다. 주목할 만한 리소스가 삭제되면 관련 참고 사항도 삭제됩니다.
 
@@ -39,11 +41,11 @@ Reactor API의 `/notes` 종단점을 사용하면 이러한 메모를 프로그�
 
 ## 시작하기
 
-이 안내서에 사용된 끝점은 [Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/)의 일부입니다. 계속하기 전에 API 인증 방법에 대한 중요한 정보가 필요하면 [시작 안내서](../getting-started.md)를 검토하십시오.
+이 안내서에 사용된 엔드포인트는 [Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/). 계속하기 전에 [시작 안내서](../getting-started.md) 를 참조하십시오.
 
 ## 메모 목록 검색 {#list}
 
-해당 리소스에 대한 GET 요청 경로에 `/notes`을 추가하여 리소스에 대한 메모 목록을 검색할 수 있습니다.
+리소스에 대한 메모 목록을 추가하여 검색할 수 있습니다 `/notes` 해당 리소스에 대한 GET 요청 경로로 전송됩니다.
 
 **API 형식**
 
@@ -54,7 +56,7 @@ GET /{RESOURCE_TYPE}/{RESOURCE_ID}/notes
 | 매개 변수 | 설명 |
 | --- | --- |
 | `RESOURCE_TYPE` | 메모를 가져오는 리소스 유형입니다. 다음 값 중 하나여야 합니다. <ul><li>`data_elements`</li><li>`extensions`</li><li>`libraries`</li><li>`properties`</li><li>`rule_components`</li><li>`rules`</li></ul> |
-| `RESOURCE_ID` | 메모를 나열할 특정 리소스의 `id` |
+| `RESOURCE_ID` | 다음 `id` 노트를 나열할 특정 리소스의 특정 리소스 수입니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -129,7 +131,7 @@ GET /notes/{NOTE_ID}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `NOTE_ID` | 조회할 메모의 `id` |
+| `NOTE_ID` | 다음 `id` 조회하려는 메모의 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -185,7 +187,7 @@ curl -X GET \
 >
 >새 메모를 만들려면 먼저 메모를 편집할 수 없으며 해당 리소스를 삭제하는 방법만 기억하십시오.
 
-해당 리소스에 대한 POST 요청 경로에 `/notes`을 추가하여 새 메모를 만들 수 있습니다.
+를 추가하여 새 메모를 만들 수 있습니다 `/notes` 해당 리소스에 대한 POST 요청 경로로 전송됩니다.
 
 **API 형식**
 
@@ -196,7 +198,7 @@ POST /{RESOURCE_TYPE}/{RESOURCE_ID}/notes
 | 매개 변수 | 설명 |
 | --- | --- |
 | `RESOURCE_TYPE` | 메모를 만드는 리소스 유형입니다. 다음 값 중 하나여야 합니다. <ul><li>`data_elements`</li><li>`extensions`</li><li>`libraries`</li><li>`properties`</li><li>`rule_components`</li><li>`rules`</li></ul> |
-| `RESOURCE_ID` | 메모를 만들 특정 리소스의 `id` |
+| `RESOURCE_ID` | 다음 `id` 메모를 만들 특정 리소스의 특정 리소스를 표시합니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -223,7 +225,7 @@ curl -X POST \
 
 | 속성 | 설명 |
 | --- | --- |
-| `type` | **(필수)** 업데이트할 리소스 유형입니다. 이 끝점의 경우 값은 `notes`이어야 합니다. |
+| `type` | **(필수)** 업데이트할 리소스 유형입니다. 이 끝점의 경우 값은 `notes`. |
 | `attributes.text` | **(필수)** 메모를 포함하는 텍스트입니다. 각 메모는 512개의 유니코드 문자로 제한됩니다. |
 
 {style=&quot;table-layout:auto&quot;}
