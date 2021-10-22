@@ -1,7 +1,7 @@
 ---
 title: Privacy Service API 안내서
 description: Privacy Service API를 사용하여 지원되는 Adobe Experience Cloud 애플리케이션에 대한 개인 정보 작업을 프로그래밍 방식으로 관리하는 방법을 알아봅니다.
-source-git-commit: 82dea48c732b3ddea957511c22f90bbd032ed9b7
+source-git-commit: 196147e7691010707953561c110a3934fec8ba1b
 workflow-type: tm+mt
 source-wordcount: '265'
 ht-degree: 0%
@@ -30,4 +30,4 @@ Privacy Service이 주체의 개인 데이터에 액세스하거나 삭제하라
 
 ## 다음 단계
 
-스키마 레지스트리 API를 사용하여 호출을 시작하려면 다음을 참조하십시오. [시작 안내서](./getting-started.md) 그런 다음 엔드포인트 가이드 중 하나를 선택하여 특정 엔드포인트를 사용하는 방법을 알아봅니다.
+Privacy Service API를 사용하여 호출을 시작하려면 다음을 참조하십시오. [시작 안내서](./getting-started.md) 그런 다음 엔드포인트 가이드 중 하나를 선택하여 특정 엔드포인트를 사용하는 방법을 알아봅니다.
