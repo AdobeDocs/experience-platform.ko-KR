@@ -2,7 +2,7 @@
 description: 이 페이지에서는 대상 SDK를 사용하여 스트리밍 대상을 구성하는 단계를 나열하고 설명합니다.
 title: 대상 SDK를 사용하여 스트리밍 대상을 구성하는 방법
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: a7c36f1a157b6020fede53e5c1074d966f26cf3d
+source-git-commit: 2b1cde9fc913be4d3bea71e7d56e0e5fe265a6be
 workflow-type: tm+mt
 source-wordcount: '670'
 ht-degree: 0%
@@ -178,4 +178,4 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 ## 8단계: 대상을 문서화합니다. {#document-destination}
 
-ISV(Independent Software Vendor) 또는 SI(System Integrator)가 [제품 통합](./overview.md#productized-custom-integrations)를 사용하려면 [셀프 서비스 설명서 프로세스](./docs-framework/documentation-instructions.md) 에서 대상에 대한 제품 설명서 페이지를 만들려면 [Experience League 대상 카탈로그](/help/destinations/catalog/overview.md).
+ISV(Independent Software Vendor) 또는 SI(System Integrator)가 [제품 통합](./overview.md#productized-custom-integrations)를 사용하려면 [셀프 서비스 설명서 프로세스](./docs-framework/documentation-instructions.md) 에서 대상에 대한 제품 설명서 페이지를 만들려면 [Experience Platform 대상 카탈로그](/help/destinations/catalog/overview.md).
