@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 소스 커넥터 도움말
 breadcrumb-title: Source Connectors 안내서
 user-guide-description: 다양한 소스 또는 구조에서 데이터를 수집하고 레이블을 지정하며 기존에 수집한 데이터를 향상시킬 수 있습니다.
 feature: Sources
-source-git-commit: f8cecdaaab3d98c7f6542b51dc764a019b04b0b1
+source-git-commit: 030789af0a049b54d6e271410836c08456a83441
 workflow-type: tm+mt
-source-wordcount: '651'
+source-wordcount: '661'
 ht-degree: 14%
 
 ---
@@ -85,6 +85,7 @@ ht-degree: 14%
       - [PayPal 커넥터](connectors/payments/paypal.md)
    - 프로토콜 {#protocols}
       - [일반 OData 커넥터](connectors/protocols/odata.md)
+      - [일반 REST API 커넥터](connectors/protocols/generic-rest.md)
    - 스트리밍 {#streaming}
       - [HTTP API 커넥터](connectors/streaming/http.md)
 - API 자습서 {#api-tutorials}
@@ -143,6 +144,7 @@ ht-degree: 14%
          - [PayPal](tutorials/api/create/payments/paypal.md)
       - 프로토콜 {#protocols}
          - [일반 OData](tutorials/api/create/protocols/odata.md)
+         - [일반 REST API](tutorials/api/create/protocols/generic-rest.md)
       - 스트리밍 {#streaming}
          - [HTTP API](tutorials/api/create/streaming/http.md)
    - 데이터 탐색 {#explore}
@@ -234,6 +236,7 @@ ht-degree: 14%
          - [PayPal](tutorials/ui/create/payments/paypal.md)
       - 프로토콜 {#protocols}
          - [일반 OData](tutorials/ui/create/protocols/odata.md)
+         - [일반 REST API](tutorials/ui/create/protocols/generic-rest.md)
       - 스트리밍 {#streaming}
          - [HTTP API](tutorials/ui/create/streaming/http.md)
    - 데이터 흐름 구성 {#dataflow}
