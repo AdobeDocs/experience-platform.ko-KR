@@ -5,9 +5,9 @@ title: XDM 시스템 개요
 topic-legacy: overview
 description: 표준화와 상호 운용성은 Adobe Experience Platform의 주요 개념입니다. Adobe 기반의 XDM(경험 데이터 모델)은 고객 경험 데이터를 표준화하고 고객 경험 관리를 위한 스키마를 정의하려는 노력입니다.
 exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
-source-git-commit: 196147e7691010707953561c110a3934fec8ba1b
+source-git-commit: 18d245574ba771aa42776d8755a2c6681c8c8532
 workflow-type: tm+mt
-source-wordcount: '1947'
+source-wordcount: '2015'
 ht-degree: 2%
 
 ---
@@ -51,14 +51,19 @@ Platform에서 스키마를 관리하고 상호 작용하는 방법에 대한 �
 
 ## XDM 시스템의 데이터 동작 {#data-behaviors}
 
-Experience Platform에 사용하기 위한 데이터는 두 가지 동작 유형으로 그룹화됩니다.
+Experience Platform에 사용하기 위한 데이터는 다음 세 가지 동작 유형으로 그룹화됩니다.
 
-* **데이터 기록**: 주체의 특성에 대한 정보를 제공합니다. 주제는 조직 또는 개인일 수 있습니다.
-* **시계열 데이터**: 작업 수행 시 레코드 주체가 직접 또는 간접적으로 시스템의 스냅샷을 제공합니다.
+* **레코드**: 주체의 특성에 대한 정보를 제공합니다. 주제는 조직 또는 개인일 수 있습니다.
+* **시계열**: 작업 수행 시 레코드 주체가 직접 또는 간접적으로 시스템의 스냅샷을 제공합니다.
+* **애드혹**: 단일 데이터 집합에서만 사용하도록 지정된 필드를 캡처합니다. 임시 스키마는 CSV 파일 섭취와 특정 종류의 소스 연결 만들기를 포함하여, Experience Platform을 위한 다양한 데이터 수집 워크플로우에서 사용됩니다.
 
 모든 XDM 스키마에서는 레코드 또는 시계열로 분류할 수 있는 데이터를 설명합니다. 스키마의 데이터 동작은 처음 만들 때 스키마에 할당된 스키마 클래스에 의해 정의됩니다. XDM 클래스는 특정 데이터 동작을 나타내려면 스키마에 포함해야 하는 가장 작은 수의 속성을 설명합니다.
 
-에서는 고유한 클래스를 정의할 수 있지만 [!DNL Schema Registry]를 설정하는 것이 좋습니다 **[!UICONTROL XDM 개별 프로필]** 및 **[!UICONTROL XDM ExperienceEvent]** 레코드 및 시계열 데이터의 경우 각각. 이러한 클래스는 아래에 자세히 설명되어 있습니다.
+에서는 고유한 클래스를 정의할 수 있지만 [!DNL Schema Registry]를 지정하는 경우에는 표준 클래스를 사용하는 것이 좋습니다 **[!UICONTROL XDM 개별 프로필]** 및 **[!UICONTROL XDM ExperienceEvent]** 레코드 및 시계열 데이터의 경우 각각. 이러한 클래스는 아래에 자세히 설명되어 있습니다.
+
+>[!NOTE]
+>
+>임시 동작을 기반으로 하는 표준 클래스는 없습니다. 임시 스키마는 활용하는 플랫폼 프로세스에 의해 자동으로 생성되지만, 다음과 같은 것일 수도 있습니다 [스키마 레지스트리 API를 사용하여 수동으로 만들기](./tutorials/ad-hoc.md).
 
 ### [!UICONTROL XDM 개별 프로필] {#xdm-individual-profile}
 

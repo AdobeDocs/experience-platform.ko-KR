@@ -5,10 +5,10 @@ title: 데이터 수집 개요
 topic-legacy: overview
 description: Adobe Experience Platform의 고객 경험에 대한 데이터 수집과 관련된 다양한 기술에 대해 알아봅니다.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: f61a845b915df3d803085fbf528e014c8acd9dbd
+source-git-commit: bbaf272313d5a8afe33178598063164792f4d8c0
 workflow-type: tm+mt
-source-wordcount: '332'
-ht-degree: 2%
+source-wordcount: '357'
+ht-degree: 4%
 
 ---
 
@@ -28,9 +28,14 @@ Experience Platform이 제공하는 데이터 수집 기술은 수집된 데이�
 * [태그](../tags/home.md)
 * [이벤트 전달](../tags/ui/event-forwarding/overview.md)
 * [Adobe Experience Platform 웹 SDK](../edge/home.md)
+* [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/)
+* [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob?hl=en)
 * [XDM(경험 데이터 모델)](../xdm/home.md)
+* [Adobe Experience Platform ID 서비스](../identity-service/home.md)
 
+<!-- (Outdated terminology)
 ![](./images/Collection.png)
+-->
 
 ## 구현이 간단하여 클라이언트측 성능이 향상됩니다.
 
@@ -38,16 +43,20 @@ Adobe Experience Platform Web 및 Mobile SDK는 모든 Adobe 제품 라이브러
 
 ## Adobe 기술을 배포하기 위한 스위치 프로세스 전환 {#edge}
 
-Platform Edge Network는 광범위한 규모로 데이터를 수신하고 처리할 수 있는 전 세계적으로 분산된 빠르고 안정적인 서버 네트워크입니다. 태그를 사용하여 Adobe Target, Adobe Audience Manager 및 Adobe Analytics과 같은 제품에 대해 [데이터 세트](../edge/fundamentals/datastreams.md)를 설정할 수 있습니다. 이 경우 클라이언트측 코드를 변경하지 않고 서버 측에서 이러한 제품을 활성화할 수 있습니다.
+Platform Edge Network는 광범위한 규모로 데이터를 수신하고 처리할 수 있는 전 세계적으로 분산된 빠르고 안정적인 서버 네트워크입니다. 태그를 사용하여 다음을 설정할 수 있습니다 [데이터 세트](../edge/fundamentals/datastreams.md) Adobe Target, Adobe Audience Manager, Adobe Analytics 등의 제품에 대해 클라이언트측 코드를 변경하지 않고 서버측에서 이러한 제품을 활성화할 수 있습니다.
 
+<!-- (Outdated terminology)
 ![](./images/deploy.png)
+-->
 
 >[!NOTE]
 >
->Platform Edge 네트워크에 대한 높은 수준의 소개는 다음 [대화형 제품 둘러보기](https://adobe-ideacloud.forgedx.com/adobe-adobe-edge-collection/adobe-experience-edge/public/mx?SUID=hgb1a48ICSCpbM6MzBYHbxnsh9DgjUy1)를 참조하십시오.
+>Platform Edge 네트워크에 대한 높은 수준의 소개는 다음을 참조하십시오 [인터랙티브 제품 투어](https://adobe-ideacloud.forgedx.com/adobe-adobe-edge-collection/adobe-experience-edge/public/mx?SUID=hgb1a48ICSCpbM6MzBYHbxnsh9DgjUy1).
 
 ## 데이터를 빠르고 안전하게 변환, 품질 향상 및 전송
 
-[Adobe Experience Platform의 이벤트 전달](../tags/ui/event-forwarding/overview.md) 은 모든 플랫폼 데이터 스트림에 탭할 수 있습니다. 보다 빠르고 안전한 데이터 수집 및 배포를 제공하는 클라이언트 장치에 타사 코드를 추가하지 않고도 매우 짧은 지연 시간으로 Adobe이 아닌 대상에 데이터를 변환, 보강 및 전송할 수 있습니다.
+[Adobe Experience Platform의 이벤트 전달](../tags/ui/event-forwarding/overview.md) 모든 플랫폼 데이터 스트림에 를 탭할 수 있습니다. 보다 빠르고 안전한 데이터 수집 및 배포를 제공하는 클라이언트 장치에 타사 코드를 추가하지 않고도 매우 짧은 지연 시간으로 Adobe이 아닌 대상에 데이터를 변환, 보강 및 전송할 수 있습니다.
 
+<!-- (Outdated terminology)
 ![](./images/launch.png)
+-->
