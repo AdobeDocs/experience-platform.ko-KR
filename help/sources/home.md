@@ -5,7 +5,7 @@ title: 소스 커넥터 개요
 topic-legacy: overview
 description: Adobe Experience Platform을 사용하면 Platform 서비스를 사용하여 들어오는 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 외부 소스에서 데이터를 수집할 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 등과 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 333cca4ac451745ac457c8d66fa8b5fe14531c9e
+source-git-commit: f8cecdaaab3d98c7f6542b51dc764a019b04b0b1
 workflow-type: tm+mt
 source-wordcount: '1008'
 ht-degree: 0%
@@ -36,7 +36,7 @@ Experience Platform을 사용하면 Adobe Analytics 및 Adobe Audience Manager�
 - [UI에서 Adobe Analytics 소스 연결 만들기](./tutorials/ui/create/adobe-applications/analytics.md)
 - [UI에서 고객 속성 소스 연결 만들기](./tutorials/ui/create/adobe-applications/customer-attributes.md)
 - [[!DNL Marketo Engage] 커넥터 개요](connectors/adobe-applications/marketo/marketo.md)
-- [UI에서 [!DNL Marketo Engage] 소스 연결 만들기](./tutorials/ui/create/adobe-applications/marketo.md)
+- [만들기 [!DNL Marketo Engage] UI의 소스 연결](./tutorials/ui/create/adobe-applications/marketo.md)
 
 ### 광고
 
@@ -64,11 +64,12 @@ Experience Platform은 타사 광고 시스템에서 데이터 섭취를 지원�
 
 ### CRM(고객 관계 관리)
 
-CRM 시스템은 고객 관계를 구축하는 데 도움이 되는 데이터를 제공하므로 충성도를 만들고 고객 유지 수준을 향상시킬 수 있습니다. Experience Platform은 [!DNL Microsoft Dynamics 365] 및 [!DNL Salesforce]에서 CRM 데이터 섭취를 지원합니다. 자세한 내용은 다음 관련 문서를 참조하십시오.
+CRM 시스템은 고객 관계를 구축하는 데 도움이 되는 데이터를 제공하므로 충성도를 만들고 고객 유지 수준을 향상시킬 수 있습니다. Experience Platform에서 CRM 데이터 섭취를 지원합니다 [!DNL Microsoft Dynamics 365] 및 [!DNL Salesforce]. 자세한 내용은 다음 관련 문서를 참조하십시오.
 
 - [[!DNL Microsoft Dynamics] 커넥터](connectors/crm/ms-dynamics.md)
 - [[!DNL Salesforce] 커넥터](connectors/crm/salesforce.md)
 - [[!DNL Veeva CRM]](connectors/crm/veeva.md)
+- [[!DNL Zoho CRM]](connectors/crm/zoho.md)
 
 ### 고객 성공
 
@@ -141,21 +142,21 @@ Experience Platform은 타사 프로토콜 시스템에서 데이터 섭취를 �
 
 ## 데이터 수집의 소스에 대한 액세스 제어
 
-데이터 수집 소스에 대한 권한은 Adobe Admin Console 내에서 관리할 수 있습니다. 특정 제품 프로필의 **[!UICONTROL 권한]** 탭을 통해 권한에 액세스할 수 있습니다. **[!UICONTROL 권한 편집]** 패널에서 **[!UICONTROL 데이터 수집]** 메뉴 항목을 통해 소스와 관련된 권한에 액세스할 수 있습니다. **[!UICONTROL 소스 보기]** 권한은 **[!UICONTROL 카탈로그]** 탭과 **[!UICONTROL 찾아보기]** 탭의 인증된 소스에 대한 읽기 전용 액세스 권한을 부여하는 반면, **[!UICONTROL 소스 관리]** 권한은 소스를 읽고, 만들고, 편집하고, 비활성화할 수 있는 전체 액세스 권한을 부여합니다.
+데이터 수집 소스에 대한 권한은 Adobe Admin Console 내에서 관리할 수 있습니다. 를 통해 권한에 액세스할 수 있습니다 **[!UICONTROL 권한]** 특정 제품 프로필의 탭입니다. 에서 **[!UICONTROL 권한 편집]** 패널에서는 **[!UICONTROL 데이터 수집]** 메뉴 항목. 다음 **[!UICONTROL 소스 보기]** 권한 은 의 사용 가능한 소스에 대한 읽기 전용 액세스 권한을 부여합니다 **[!UICONTROL 카탈로그]** 의 탭 및 인증된 소스 **[!UICONTROL 찾아보기]** 탭, **[!UICONTROL 소스 관리]** 권한을 통해 소스를 읽고, 만들고, 편집하고, 비활성화할 수 있는 전체 액세스 권한을 부여합니다.
 
 다음 표에서는 이러한 권한의 다양한 조합을 기반으로 UI가 어떻게 동작하는지에 대해 설명합니다.
 
 | 권한 수준 | 설명 |
 | ---- | ----|
-| **[!UICONTROL 소스]** 보기 | 카탈로그 탭의 각 소스 유형에 있는 소스와 찾아보기, 계정 및 데이터 흐름 탭의 소스에 대한 읽기 전용 액세스 권한을 부여합니다. |
-| **[!UICONTROL 소스]** 관리 | **[!UICONTROL 소스 보기]**&#x200B;에 포함된 함수 외에, **[!UICONTROL 카탈로그]**&#x200B;의 **[!UICONTROL 소스 연결]** 옵션과 **[!UICONTROL 찾아보기]**&#x200B;에서 **[!UICONTROL 데이터 선택]** 옵션에 대한 액세스 권한을 부여합니다. **[!UICONTROL 소스]** 관리를 사용하면 DataFlow를 활성화하거나 비활성화하고 해당 일정 **** 을 편집할 수도 있습니다. |
-| **[!UICONTROL 소스]** 보기 및  **[!UICONTROL 소스]** 관리 해제 | 소스에 대한 모든 액세스를 취소합니다. |
+| **[!UICONTROL 소스 보기]** 설정 | 카탈로그 탭의 각 소스 유형에 있는 소스와 찾아보기, 계정 및 데이터 흐름 탭의 소스에 대한 읽기 전용 액세스 권한을 부여합니다. |
+| **[!UICONTROL 소스 관리]** 설정 | 에 포함된 함수 외에 **[!UICONTROL 소스 보기]**, 액세스 권한을 부여합니다 **[!UICONTROL 연결 소스]** 옵션 **[!UICONTROL 카탈로그]** 및 **[!UICONTROL 데이터 선택]** 옵션 **[!UICONTROL 찾아보기]**. **[!UICONTROL 소스 관리]** 을 활성화하거나 비활성화할 수도 있습니다 **[!UICONTROL 데이터 흐름]** 일정을 편집합니다. |
+| **[!UICONTROL 소스 보기]** 해제 및 **[!UICONTROL 소스 관리]** 해제 | 소스에 대한 모든 액세스를 취소합니다. |
 
-이러한 네 개의 소스를 포함하여 Admin Console을 통해 부여된 사용 가능한 권한에 대한 자세한 내용은 [액세스 제어 개요](../access-control/home.md)를 참조하십시오.
+해당 4개의 소스를 포함하여 Admin Console을 통해 부여된 사용 가능한 권한에 대한 자세한 내용은 [액세스 제어 개요](../access-control/home.md).
 
 ## 약관 {#terms-and-conditions}
 
-베타(&quot;베타&quot;)로 레이블이 지정된 소스를 사용하면, 귀하는 베타가 어떠한 종류의&#x200B;***보증도 없이***&quot;as&quot;(있는 그대로) 제공된다는 것을 인정합니다.
+베타(&quot;베타&quot;)로 레이블이 지정된 소스를 사용하면 귀하는 베타가 제공된다는 것을 확인합니다 ***&quot;있는 그대로&quot; 어떤 종류의 보증도 없이***.
 
 Adobe은 베타를 유지, 수정, 업데이트, 변경, 수정 또는 지원할 의무가 없습니다. 따라서 이러한 베타 및/또는 추가 자료의 올바른 기능이나 성능에 의존하지 않도록 주의하십시오. 베타는 Adobe의 기밀 정보로 간주됩니다.
 
