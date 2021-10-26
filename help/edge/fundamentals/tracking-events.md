@@ -3,16 +3,16 @@ title: Adobe Experience Platform Web SDK를 사용하여 이벤트 추적
 description: Adobe Experience Platform Web SDK 이벤트를 추적하는 방법을 알아봅니다.
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
 exl-id: 8b221cae-3490-44cb-af06-85be4f8d280a
-source-git-commit: 53a14b2b7d7ca8bdd278f2aeec2c2e8a30fdac7b
+source-git-commit: ac167a205d2bc7e18d320bc1270da7e99bd05975
 workflow-type: tm+mt
-source-wordcount: '1082'
-ht-degree: 0%
+source-wordcount: '1209'
+ht-degree: 1%
 
 ---
 
 # 이벤트 추적
 
-이벤트 데이터를 Adobe Experience Cloud에 보내려면 `sendEvent` 명령을 사용합니다. `sendEvent` 명령은 [!DNL Experience Cloud]에 데이터를 보내고, 개인화된 콘텐츠, ID 및 대상자 대상을 검색하는 기본 방법입니다.
+이벤트 데이터를 Adobe Experience Cloud에 보내려면 `sendEvent` 명령. 다음 `sendEvent` 명령은 데이터를 [!DNL Experience Cloud], 및 을 사용하여 개인화된 콘텐츠, id 및 대상 대상을 검색할 수 있습니다.
 
 Adobe Experience Cloud에 전송된 데이터는 두 가지 카테고리로 분류됩니다.
 
@@ -23,7 +23,7 @@ Adobe Experience Cloud에 전송된 데이터는 두 가지 카테고리로 분�
 
 XDM 데이터는 컨텐츠 및 구조가 Adobe Experience Platform 내에서 만든 스키마와 일치하는 객체입니다. [스키마를 만드는 방법에 대해 자세히 알아보십시오 .](../../xdm/tutorials/create-schema-ui.md)
 
-분석, 개인화, 대상 또는 대상에 포함하려는 모든 XDM 데이터는 `xdm` 옵션을 사용하여 전송해야 합니다.
+분석, 개인화, 대상 또는 대상에 포함하려는 모든 XDM 데이터는 를 사용하여 전송해야 합니다 `xdm` 선택 사항입니다.
 
 
 ```javascript
@@ -41,7 +41,7 @@ alloy("sendEvent", {
 });
 ```
 
-`sendEvent` 명령이 실행될 때와 데이터가 서버에 전송될 때(예: 웹 SDK 라이브러리가 완전히 로드되지 않았거나 동의를 아직 받지 않은 경우) 사이에 시간이 경과할 수 있습니다. `sendEvent` 명령을 실행한 후 `xdm` 개체의 일부를 수정하려면 `sendEvent` 명령을 실행하기 전에 `xdm` 개체 _를 복제하는 것이 좋습니다._ 예:
+다음 시기 사이에 시간이 경과할 수 있습니다. `sendEvent` 명령이 실행되고 데이터가 서버에 전송될 때(예: 웹 SDK 라이브러리가 완전히 로드되지 않았거나 동의를 아직 받지 않은 경우) Analytics Mobile Apps 또는 Analytics Premium에서 `xdm` 객체 실행 후 `sendEvent` 명령을 실행하면 `xdm` 개체 _이전_ 실행 `sendEvent` 명령. 예:
 
 ```javascript
 var clone = function(value) {
@@ -68,7 +68,7 @@ alloy("sendEvent", {
 dataLayer.commerce = null;
 ```
 
-이 예에서 데이터 계층은 JSON으로 직렬화한 다음 역직렬화하여 복제됩니다. 그런 다음 복제된 결과가 `sendEvent` 명령에 전달됩니다. 이렇게 하면 `sendEvent` 명령에 `sendEvent` 명령이 실행될 때 데이터 계층의 스냅샷이 있으므로 나중에 원래 데이터 계층 객체에 대한 수정 사항이 서버로 전송된 데이터에 반영되지 않습니다. 이벤트 기반 데이터 레이어를 사용하는 경우 데이터 복제가 이미 자동으로 처리될 수 있습니다. 예를 들어 [클라이언트 데이터 레이어 Adobe](https://github.com/adobe/adobe-client-data-layer/wiki)를 사용하는 경우 `getState()` 메서드는 모든 이전 변경 사항에 대한 계산된 복제된 스냅샷을 제공합니다. Adobe Experience Platform 웹 SDK 태그 확장을 사용하는 경우에도 자동으로 처리됩니다.
+이 예에서 데이터 계층은 JSON으로 직렬화한 다음 역직렬화하여 복제됩니다. 그런 다음 복제된 결과가 `sendEvent` 명령. 이렇게 하면 `sendEvent` 명령에는 데이터 계층의 스냅샷이 있으며, `sendEvent` 이후에 원본 데이터 레이어 개체의 수정 내용이 서버로 전송된 데이터에 반영되지 않도록 명령이 실행되었습니다. 이벤트 기반 데이터 레이어를 사용하는 경우 데이터 복제가 이미 자동으로 처리될 수 있습니다. 예를 들어 [Adobe 클라이언트 데이터 레이어](https://github.com/adobe/adobe-client-data-layer/wiki), `getState()` 메서드는 모든 이전 변경 사항에 대한 계산된 복제된 스냅샷을 제공합니다. Adobe Experience Platform 웹 SDK 태그 확장을 사용하는 경우에도 자동으로 처리됩니다.
 
 >[!NOTE]
 >
@@ -77,11 +77,11 @@ dataLayer.commerce = null;
 
 ## 비 XDM 데이터 보내기
 
-XDM 스키마와 일치하지 않는 데이터는 `sendEvent` 명령의 `data` 옵션을 사용하여 전송해야 합니다. 이 기능은 Web SDK 버전 2.5.0 이상에서 지원됩니다.
+XDM 스키마와 일치하지 않는 데이터는 `data` 옵션 `sendEvent` 명령. 이 기능은 Web SDK 버전 2.5.0 이상에서 지원됩니다.
 
 이 기능은 Adobe Target 프로필을 업데이트하거나 Target Recommendations 특성을 보내야 하는 경우에 유용합니다. [이러한 Target 기능에 대해 자세히 알아보십시오.](../personalization/adobe-target/target-overview.md#single-profile-update)
 
-향후에는 `data` 옵션 아래에서 전체 데이터 계층을 전송하고 XDM 서버측에 매핑할 수 있습니다.
+앞으로는 전체 데이터 레이어를 `data` 옵션을 사용하여 XDM 서버측에 매핑합니다.
 
 **Adobe Target에 프로필 및 Recommendations 속성을 보내는 방법:**
 
@@ -103,9 +103,9 @@ alloy("sendEvent", {
 
 ### 설정 `eventType` {#event-types}
 
-XDM ExperienceEvent 스키마에는 선택적 `eventType` 필드가 있습니다. 여기에는 레코드에 대한 기본 이벤트 유형이 포함됩니다. 이벤트 유형을 설정하면 전송할 다른 이벤트를 구별할 수 있습니다. XDM은 사용할 수 있거나 사용 사례에 대해 자신만의 사용자 지정 이벤트 유형을 만들 수 있는 사전 정의된 이벤트 유형을 제공합니다. 사전 정의된 모든 이벤트 유형 [목록에 대해서는 XDM 설명서](../../xdm/classes/experienceevent.md#eventType)를 참조하십시오.
+XDM ExperienceEvent 스키마에는 선택 사항이 있습니다 `eventType` 필드. 여기에는 레코드에 대한 기본 이벤트 유형이 포함됩니다. 이벤트 유형을 설정하면 전송할 다른 이벤트를 구별할 수 있습니다. XDM은 사용할 수 있거나 사용 사례에 대해 자신만의 사용자 지정 이벤트 유형을 만들 수 있는 사전 정의된 이벤트 유형을 제공합니다. 자세한 내용은 XDM 설명서 를 참조하십시오. [사전 정의된 모든 이벤트 유형 목록](../../xdm/classes/experienceevent.md#eventType).
 
-이러한 이벤트 유형은 태그 확장을 사용하는 경우 드롭다운에 표시되거나 태그 없이 항상 전달할 수 있습니다. `xdm` 옵션의 일부로 전달될 수 있습니다.
+이러한 이벤트 유형은 태그 확장을 사용하는 경우 드롭다운에 표시되거나 태그 없이 항상 전달할 수 있습니다. 의 일부로 전달될 수 있습니다 `xdm` 선택 사항입니다.
 
 
 ```javascript
@@ -124,7 +124,7 @@ alloy("sendEvent", {
 });
 ```
 
-또는 `type` 옵션을 사용하여 `eventType`을 이벤트 명령에 전달할 수 있습니다. 백그라운드에서 XDM 데이터에 추가됩니다. `type` 을 옵션으로 사용하면 XDM 페이로드를 수정하지 않고 `eventType` 을(를) 보다 쉽게 설정할 수 있습니다.
+또는, `eventType` 는 `type` 선택 사항입니다. 백그라운드에서 XDM 데이터에 추가됩니다. 사용 `type` 옵션을 사용하면 `eventType` XDM 페이로드를 수정할 필요가 없습니다.
 
 
 ```javascript
@@ -138,7 +138,7 @@ alloy("sendEvent", {
 
 ### 데이터 세트 ID 재정의
 
-일부 사용 사례에서는 구성 UI에 구성된 이벤트 이외의 데이터 세트에 이벤트를 보낼 수 있습니다. 이를 위해 `sendEvent` 명령에서 `datasetId` 옵션을 설정해야 합니다.
+일부 사용 사례에서는 구성 UI에 구성된 이벤트 이외의 데이터 세트에 이벤트를 보낼 수 있습니다. 이를 위해 `datasetId` 옵션 `sendEvent` 명령:
 
 
 ```javascript
@@ -153,11 +153,11 @@ alloy("sendEvent", {
 
 ### ID 정보 추가
 
-사용자 지정 ID 정보를 이벤트에 추가할 수도 있습니다. [Experience Cloud ID 검색](../identity/overview.md)을 참조하십시오.
+사용자 지정 ID 정보를 이벤트에 추가할 수도 있습니다. 자세한 내용은 [Experience Cloud ID 검색](../identity/overview.md).
 
 ## sendBeacon API 사용
 
-웹 페이지 사용자가 이동하기 전에 이벤트 데이터를 보내는 것은 까다로울 수 있습니다. 요청이 너무 오래 걸리는 경우 브라우저가 요청을 취소할 수 있습니다. 일부 브라우저는 이 시간 동안 데이터를 보다 쉽게 수집할 수 있도록 `sendBeacon`이라는 웹 표준 API를 구현했습니다. `sendBeacon`을 사용하는 경우 브라우저가 전역 탐색 컨텍스트에서 웹 요청을 수행합니다. 즉, 브라우저가 배경에서 비콘 요청을 수행하고 페이지 탐색을 유지하지 않습니다. Adobe Experience Platform [!DNL Web SDK]에 `sendBeacon`을 사용하도록 하려면 `"documentUnloading": true` 옵션을 이벤트 명령에 추가합니다.  다음은 한 예입니다.
+웹 페이지 사용자가 이동하기 전에 이벤트 데이터를 보내는 것은 까다로울 수 있습니다. 요청이 너무 오래 걸리는 경우 브라우저가 요청을 취소할 수 있습니다. 일부 브라우저는 `sendBeacon` 을 추가하여 이 시간 동안 데이터를 보다 쉽게 수집할 수 있습니다. 사용 시 `sendBeacon`를 입력하면 브라우저가 전역 탐색 컨텍스트에서 웹 요청을 수행합니다. 즉, 브라우저가 배경에서 비콘 요청을 수행하고 페이지 탐색을 유지하지 않습니다. Adobe Experience Platform에게 [!DNL Web SDK] 를 `sendBeacon`, 옵션을 추가합니다. `"documentUnloading": true` 를 이벤트 명령 아래에 추가합니다.  다음은 한 예입니다.
 
 
 ```javascript
@@ -176,7 +176,7 @@ alloy("sendEvent", {
 });
 ```
 
-브라우저에는 `sendBeacon`으로 한 번에 전송할 수 있는 데이터 양에 제한을 두었습니다. 많은 브라우저에서 제한은 64K입니다. 페이로드가 너무 커서 브라우저가 이벤트를 거부하는 경우 Adobe Experience Platform [!DNL Web SDK]은(는) 일반적인 전송 방법을 사용하여 다시 폴백됩니다(예: 가져오기).
+브라우저에는 과 함께 보낼 수 있는 데이터 양에 제한을 두었습니다 `sendBeacon` 한 번에 하나씩 많은 브라우저에서 제한은 64K입니다. 페이로드가 너무 커서 브라우저가 이벤트를 거부하는 경우 Adobe Experience Platform [!DNL Web SDK] 일반적인 전송 방법을 사용하여 폴백합니다(예: fetch).
 
 ## 이벤트의 응답 처리
 
@@ -196,7 +196,7 @@ alloy("sendEvent", {
       }
     }
   }
-}).then(function(results) {
+}).then(function(result) {
     // Tracking the event succeeded.
   })
   .catch(function(error) {
@@ -204,9 +204,32 @@ alloy("sendEvent", {
   });
 ```
 
+
+### 다음 `result` 개체
+
+다음 `sendEvent` 명령은 `result` 개체. 다음 `result` 객체에는 다음 속성이 포함됩니다.
+
+**포지션**: 개인화 는 방문자가 자격을 갖는 오퍼를 제공합니다. [제안에 대해 자세히 알아보십시오.](../personalization/rendering-personalization-content.md#manually-rendering-content)
+
+**결정**: 이 속성은 사용되지 않습니다. 대신 `propositions`를 사용하십시오.
+
+**대상**: 외부 개인화 플랫폼, 콘텐츠 관리 시스템, 광고 서버 및 고객 웹 사이트에서 실행 중인 기타 애플리케이션과 공유할 수 있는 Adobe Experience Platform의 세그먼트입니다. [대상에 대해 자세히 알아보십시오.](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/custom-personalization.html?lang=en)
+
+>[!WARNING]
+>
+>`destinations` 은 현재 베타 버전입니다. 설명서 및 기능은 변경될 수 있습니다.
+
+**추론**: 실시간 머신 러닝 인사이트 [실시간 머신 러닝에 대해 자세히 알아보십시오.](https://experienceleague.adobe.com/docs/experience-platform/data-science-workspace/real-time-machine-learning/home.html?lang=en)
+
+>[!WARNING]
+>
+>`inferences` 은 현재 베타 버전입니다. 설명서 및 기능은 변경될 수 있습니다.
+
+
+
 ## 이벤트 전역 수정 {#modifying-events-globally}
 
-이벤트에서 전체적으로 필드를 추가, 제거 또는 수정하려면 `onBeforeEventSend` 콜백을 구성할 수 있습니다.  이 콜백은 이벤트가 전송될 때마다 호출됩니다.  이 콜백은 `xdm` 필드를 사용하여 이벤트 개체에 전달됩니다.  이벤트를 사용하여 전송되는 데이터를 변경하려면 `content.xdm` 을 수정합니다.
+이벤트에서 필드를 전체적으로 추가, 제거 또는 수정하려면 다음을 구성할 수 있습니다 `onBeforeEventSend` 콜백입니다.  이 콜백은 이벤트가 전송될 때마다 호출됩니다.  이 콜백은 이벤트 개체에 `xdm` 필드.  수정 `content.xdm` 를 입력하여 이벤트와 함께 전송되는 데이터를 변경할 수 있습니다.
 
 
 ```javascript
@@ -226,14 +249,13 @@ alloy("configure", {
 
 `xdm` 필드는 다음 순서로 설정됩니다.
 
-1. 이벤트 명령 `alloy("sendEvent", { xdm: ... });`에 옵션으로 전달된 값
-2. 자동으로 수집된 값.  ([자동 정보](../data-collection/automatic-information.md) 참조)
-3. `onBeforeEventSend` 콜백에서 변경된 사항입니다.
+1. 이벤트 명령에 옵션으로 전달된 값 `alloy("sendEvent", { xdm: ... });`
+2. 자동으로 수집된 값.  (자세한 내용은 [자동 정보](../data-collection/automatic-information.md))
+3. 에서 변경한 내용 `onBeforeEventSend` 콜백입니다.
 
-`onBeforeEventSend` 콜백에 대한 몇 가지 참고 사항:
+에 대한 몇 가지 참고 사항 `onBeforeEventSend` 콜백:
 
-* 이벤트 XDM은 콜백 중에 수정할 수 있습니다. 콜백이 반환되면 다음과 같은 수정된 필드와 값이
-content.xdm 및 content.data 개체는 이벤트와 함께 전송됩니다.
+* 이벤트 XDM은 콜백 중에 수정할 수 있습니다. 콜백이 반환되면 content.xdm 및 content.data 개체의 수정된 필드와 값이 이벤트와 함께 전송됩니다.
 
    ```javascript
    onBeforeEventSend: function(content){
@@ -245,9 +267,7 @@ content.xdm 및 content.data 개체는 이벤트와 함께 전송됩니다.
    ```
 
 * 콜백에서 예외가 발생하면, 이벤트에 대한 처리가 중단되고 이벤트가 전송되지 않습니다.
-* 콜백이 `false` 부울 값을 반환하는 경우 이벤트 처리가 중단됩니다.
-오류가 없으면 이벤트가 전송되지 않습니다. 이 메커니즘을 사용하면 특정 이벤트를
-이벤트를 전송하지 않아야 하는 경우 이벤트 데이터를 검사하고 `false` 를 반환합니다.
+* 콜백이 부울 값을 반환하는 경우 `false`, 이벤트 처리가 오류로 인해 중단되고 이벤트가 전송되지 않습니다. 이 메커니즘을 사용하면 이벤트 데이터를 검토하고 를 반환하여 특정 이벤트를 쉽게 무시할 수 있습니다 `false` 이벤트를 전송하지 않아야 하는 경우.
 
    >[!NOTE]
    >페이지의 첫 번째 이벤트에서 false를 반환하지 않도록 주의해야 합니다. 첫 번째 이벤트에서 false를 반환하면 개인화에 부정적인 영향을 줄 수 있습니다.
@@ -261,9 +281,9 @@ content.xdm 및 content.data 개체는 이벤트와 함께 전송됩니다.
    }
 ```
 
-부울 `false` 이외의 모든 반환 값에서는 콜백 후에 이벤트가 처리되고 전송될 수 있습니다.
+부울 이외의 모든 반환 값 `false` 은(는) 콜백 이후에 이벤트가 처리 및 전송되도록 허용합니다.
 
-* 이벤트 유형을 검사하여 이벤트를 필터링할 수 있습니다( [이벤트 유형](#event-types) 참조).
+* 이벤트는 이벤트 유형을 검사하여 필터링할 수 있습니다. [이벤트 유형](#event-types)):
 
 ```javascript
     onBeforeEventSend: function(content) {  
