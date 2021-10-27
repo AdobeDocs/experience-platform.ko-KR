@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform에 대한 최신 릴리스 노트입니다.
-source-git-commit: 0c507a26f551af1eb17889e8e77a036e3c106240
+source-git-commit: 231ce8405a752bd3e7e4ae590bb6aaf98fc6527b
 workflow-type: tm+mt
-source-wordcount: '235'
-ht-degree: 10%
+source-wordcount: '315'
+ht-degree: 9%
 
 ---
 
@@ -14,7 +14,21 @@ ht-degree: 10%
 
 Adobe Experience Platform의 기존 기능 업데이트:
 
+- [[!DNL Data Prep]](#data-prep)
 - [소스](#sources)
+
+## [!DNL Data Prep] {#data-prep}
+
+[!DNL Data Prep] 데이터 엔지니어가 XDM(Experience Data Model) 을 통해 데이터를 매핑, 변환 및 확인할 수 있습니다.
+
+**업데이트된 기능**
+
+| 기능 | 설명 |
+| --- | --- |
+| `contains_key` 함수 위에 있어야 합니다 | 다음 `contains_key` 함수가 도입되어 개체가 소스 내에 있는지 확인할 수 있습니다. 이 함수는 `is_set` 함수 위에 있어야 합니다. |
+| 오류 메시지 | 에서 반환한 오류 메시지 `/mappingSets/preview` 이제 데이터 준비 API의 엔드포인트는 런타임 중에 생성된 오류 메시지와 일치합니다. |
+
+자세한 내용은 [[!DNL Data Prep] 개요](../../data-prep/home.md) 이 서비스에 대해 자세히 알아보십시오.
 
 ## 소스 {#sources}
 
