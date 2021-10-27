@@ -5,9 +5,9 @@ title: ID 서비스 개요
 topic-legacy: overview
 description: Adobe Experience Platform Identity Service를 사용하면 장치 및 시스템 전반에서 ID를 브리징하여 고객 및 해당 행동을 더 잘 볼 수 있으므로 효과적이고 개인화된 디지털 경험을 실시간으로 제공할 수 있습니다.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: 5373b8fcd84cee749a85bdb755a23eb7292cf352
+source-git-commit: eb0fe2267416c5053cb589cc6d147324cc31c985
 workflow-type: tm+mt
-source-wordcount: '1792'
+source-wordcount: '1747'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 Adobe Experience Platform Identity 서비스는 장치 및 시스템 전반에서 ID를 결합하여 고객 및 고객 행동에 대한 포괄적인 보기를 제공하여 효과적이고 개인화된 디지털 경험을 실시간으로 제공할 수 있도록 합니다.
 
-[!DNL Identity Service]을 사용하면 다음 작업을 수행할 수 있습니다.
+사용 [!DNL Identity Service]를 채울 수 있습니다.
 
 - 고객이 각 상호 작용을 통해 일관되고 개인화된 적절한 경험을 받을 수 있도록 합니다.
 - 서로 다른 소스에서 여러 ID를 결합하여 고객을 종합적으로 파악합니다.
@@ -26,14 +26,14 @@ Adobe Experience Platform Identity 서비스는 장치 및 시스템 전반에�
 
 ## 시작하기
 
-[!DNL Identity Service]의 세부 사항으로 이동하기 전에 주요 용어에 대한 간단한 요약 내용을 살펴보겠습니다.
+세부 사항으로 들어가기 전에 [!DNL Identity Service], 주요 용어에 대한 간단한 요약은 다음과 같습니다.
 
 | 용어 | 정의 |
 | --- | --- |
 | ID | ID는 엔티티에 고유한 데이터(일반적으로 개별 개인)입니다. 로그인 ID, ECID 또는 충성도 ID와 같은 ID를 &quot;알려진 ID&quot;라고도 합니다. |
-| ECID | ECID(Experience Cloud ID)는 Experience Platform 및 Adobe Experience Cloud 애플리케이션에서 사용되는 공유 ID 네임스페이스입니다. ECID는 고객 ID의 기반을 제공하며 장치의 기본 ID로 사용되고 ID 그래프의 기본 노드로 사용됩니다. 자세한 내용은 [ECID 개요](./ecid.md)를 참조하십시오. |
-| ID 네임스페이스 | ID 네임스페이스는 ID의 컨텍스트 또는 유형을 구분하는 데 사용됩니다. 예를 들어 ID는 &quot;name<span>@email.com&quot;을 이메일 주소로 구분하거나 &quot;443522&quot;을 숫자 CRM ID로 구분합니다. ID 네임스페이스는 개별 ID를 조회하고 ID 값에 대한 컨텍스트를 제공하는 데 사용됩니다. 이렇게 하면 다른 기본 ID를 포함하지만 `email` ID 네임스페이스에 대해 동일한 값을 공유하는 두 개의 [!DNL Profile] 조각이 실제로 동일한 개인임을 확인할 수 있습니다. 자세한 내용은 [ID 네임스페이스 개요](./namespaces.md)를 참조하십시오. |
-| ID 그래프 | ID 그래프는 서로 다른 ID 간의 관계 맵으로, 함께 결합되는 고객 ID와 방법을 시각화하고 더 잘 이해할 수 있도록 해줍니다. 자세한 내용은 ID 그래프 뷰어](./ui/identity-graph-viewer.md)를 사용하여 [의 자습서를 참조하십시오. |
+| ECID | ECID(Experience Cloud ID)는 Experience Platform 및 Adobe Experience Cloud 애플리케이션에서 사용되는 공유 ID 네임스페이스입니다. ECID는 고객 ID의 기반을 제공하며 장치의 기본 ID로 사용되고 ID 그래프의 기본 노드로 사용됩니다. 자세한 내용은 [ECID 개요](./ecid.md) 추가 정보. |
+| ID 네임스페이스 | ID 네임스페이스는 ID의 컨텍스트 또는 유형을 구분하는 데 사용됩니다. 예를 들어, ID는 &quot;name&quot;을 구분합니다<span>@email.com&quot; 을 이메일 주소로 보내거나 &quot;443522&quot;을 숫자 CRM ID로 사용합니다. ID 네임스페이스는 개별 ID를 조회하고 ID 값에 대한 컨텍스트를 제공하는 데 사용됩니다. 이를 통해 다음 두 가지 사항을 확인할 수 있습니다 [!DNL Profile] 다른 기본 ID를 포함하지만 동일한 값을 공유하는 조각. `email` id 네임스페이스는 사실상 동일한 개인입니다. 자세한 내용은 [id 네임스페이스 개요](./namespaces.md) 추가 정보. |
+| ID 그래프 | ID 그래프는 서로 다른 ID 간의 관계 맵으로, 함께 결합되는 고객 ID와 방법을 시각화하고 더 잘 이해할 수 있도록 해줍니다. 다음에서 자습서를 참조하십시오. [id 그래프 뷰어 사용](./ui/identity-graph-viewer.md) 추가 정보. |
 | 개인 식별 정보(PII) | PII는 이메일 주소 또는 전화 번호와 같이 고객을 직접 식별할 수 있는 정보입니다. PII 값은 종종 일치하지 않습니다. 다양한 시스템에서 고객의 여러 ID입니다. |
 | 알 수 없음 또는 익명 ID | 알 수 없음 또는 익명 ID는 장치를 사용하여 실제 사람을 식별하지 않고 장치를 분리하는 표시입니다. 알 수 없고 익명의 ID에는 방문자의 IP 주소 및 쿠키 ID와 같은 정보가 포함됩니다. 알 수 없고 익명의 ID가 행동 데이터를 제공할 수 있지만 고객이 PII를 제공할 때까지 제한됩니다. |
 
@@ -47,16 +47,16 @@ Adobe Experience Platform Identity 서비스는 장치 및 시스템 전반에�
 - 이때 Mary의 활동은 두 개의 개별 프로필로 표시됩니다.
    - 그녀의 전자 상거래 로그인
    - 장치 ID로 식별되는 그녀의 태블릿 장치
-- Mary는 나중에 태블릿 세션을 다시 시작하고 뉴스레터를 구독하는 동안 이메일 주소를 제공합니다. 스트리밍 수집은 새로운 ID를 프로필 내에 레코드 데이터로 추가합니다. 그 결과, [!DNL Identity Service]은(는) 이제 Mary의 태블릿 장치 활동과 전자 상거래 계정 기록이 있습니다.
+- Mary는 나중에 태블릿 세션을 다시 시작하고 뉴스레터를 구독하는 동안 이메일 주소를 제공합니다. 스트리밍 수집은 새로운 ID를 프로필 내에 레코드 데이터로 추가합니다. 결과적으로 [!DNL Identity Service] 이제 Mary의 태블릿 장치 활동과 전자 상거래 계정 기록이 있습니다.
 - 다음 번 태블릿에서 클릭하면 대상 콘텐츠가 알 수 없는 쇼핑객이 사용하는 태블릿이 아니라 Mary의 전체 프로필 및 내역을 반영할 수 있습니다.
 
 ![Platform에서 ID 결합](./images/identity-service-stitching.png)
 
-기본적으로 [!DNL Identity Service]을 사용하면 고객의 전체 그림을 조합하여 서로 다른 시스템에 분산될 수 있는 관련 데이터를 집계할 수 있습니다. [!DNL Identity Service] 이 정의하고 유지 관리하는 ID 관계는 실시간 고객 프로필에서 고객의 전체 사진과 브랜드와의 상호 작용을 작성하는 데 활용됩니다. 자세한 내용은 [실시간 고객 프로필 개요](../profile/home.md)를 참조하십시오.
+기본적으로 [!DNL Identity Service] 서로 다른 시스템에 분산되어 있을 수 있는 관련 데이터를 집계하여 고객의 전체 상황을 파악할 수 있습니다. ID는 [!DNL Identity Service] 실시간 고객 프로필에서 정의 및 유지 관리를 활용하여 고객과 브랜드와의 상호 작용을 완벽하게 파악할 수 있습니다. 자세한 내용은 [실시간 고객 프로필 개요](../profile/home.md).
 
 ### 사용 사례
 
-[!DNL Identity Service] 구현의 예는 다음과 같습니다.
+예 [!DNL Identity Service] 구현에는 다음이 포함됩니다.
 
 - 한 통신 회사는 &quot;전화 번호&quot; 값에 의존할 수 있는데, 여기서 전화 번호는 오프라인 데이터 세트와 온라인 데이터 세트 모두에서 동일한 개인 정보를 의미합니다.
 - 소매 업체는 익명의 방문자가 많기 때문에 오프라인 데이터 세트에서 &quot;이메일 주소&quot;를 사용하고 온라인 데이터 세트에서 ECID를 사용할 수 있습니다.
@@ -70,19 +70,19 @@ Adobe Experience Platform Identity 서비스는 장치 및 시스템 전반에�
 
 고객은 온라인 및 오프라인 채널의 조합을 통해 브랜드와 상호 작용할 수 있으므로 단편화된 상호 작용을 단일 고객 ID로 조정하는 방법에 대한 문제가 발생할 수 있습니다.
 
-여러 디바이스와 채널에서 고객을 이해하는 것은 각 채널에서 고객을 인식함으로써 시작됩니다. Platform은 ID 네임스페이스를 사용하여 이러한 작업을 수행합니다. ID 네임스페이스는 고객 ID에 추가 컨텍스트를 제공하는 데 사용되는 이메일 또는 전화와 같은 식별자입니다. ID 네임스페이스는 개별 ID를 조회하거나 연결하고 ID 값에 대한 컨텍스트를 제공하는 데 사용됩니다. 자세한 내용은 [ID 네임스페이스 개요](./namespaces.md)를 참조하십시오.
+여러 디바이스와 채널에서 고객을 이해하는 것은 각 채널에서 고객을 인식함으로써 시작됩니다. Platform은 ID 네임스페이스를 사용하여 이러한 작업을 수행합니다. ID 네임스페이스는 고객 ID에 추가 컨텍스트를 제공하는 데 사용되는 이메일 또는 전화와 같은 식별자입니다. ID 네임스페이스는 개별 ID를 조회하거나 연결하고 ID 값에 대한 컨텍스트를 제공하는 데 사용됩니다. 자세한 내용은 [id 네임스페이스 개요](./namespaces.md) 추가 정보.
 
 ## ID 그래프
 
-ID 그래프는 서로 다른 ID 네임스페이스 간의 관계 맵으로, 어떤 고객 ID가 함께 결합되는지 및 그 방법을 시각화하고 더 잘 이해할 수 있도록 해줍니다. 자세한 내용은 ID 그래프 뷰어](./ui/identity-graph-viewer.md)를 사용하여 [의 자습서를 참조하십시오.
+ID 그래프는 서로 다른 ID 네임스페이스 간의 관계 맵으로, 어떤 고객 ID가 함께 결합되는지 및 그 방법을 시각화하고 더 잘 이해할 수 있도록 해줍니다. 다음에서 자습서를 참조하십시오. [id 그래프 뷰어 사용](./ui/identity-graph-viewer.md) 추가 정보.
 
-다음 비디오는 ID 및 ID 그래프에 대한 이해를 지원하기 위한 것입니다. ID 수집, ID 그래프 및 API의 세 가지 기능에 대해 다룹니다. 또한 결정론적 및 확률론적 알고리즘이 개인 ID 그래프를 구성하는 데 사용되는 방법에 대해 설명하고 타사 그래프 및 Adobe Experience Platform Identity Service Co-Op 그래프와 함께 해당 역할에 대해 설명합니다.
+다음 비디오는 ID 및 ID 그래프에 대한 이해를 지원하기 위한 것입니다.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27841?quality=12&learn=on)
 
-## ID 데이터를 [!DNL Identity Service]에 제공
+## ID 데이터를에 제공 [!DNL Identity Service]
 
-이 섹션에서는 Adobe Experience Platform에 제공된 데이터를 [!DNL Identity Service]에서 각 고객에 대한 ID 그래프를 작성하기 전에 처리하는 방법을 다룹니다.
+이 섹션에서는 Adobe Experience Platform에 제공된 데이터가 [!DNL Identity Service] 각 고객에 대한 id 그래프를 작성하기 위해.
 
 ### ID 필드 결정
 
@@ -94,53 +94,53 @@ ID 그래프는 서로 다른 ID 네임스페이스 간의 관계 맵으로, 어
 
 ### 추가 ID 네임스페이스 만들기
 
-Experience Platform은 다양한 표준 네임스페이스를 제공하지만 ID를 올바로 분류하기 위해 추가 네임스페이스를 만들어야 할 수 있습니다. 자세한 내용은 ID 네임스페이스 개요에서 [조직의 네임스페이스 보기 및 만들기 섹션을 참조하십시오](./namespaces.md).
+Experience Platform은 다양한 표준 네임스페이스를 제공하지만 ID를 올바로 분류하기 위해 추가 네임스페이스를 만들어야 할 수 있습니다. 자세한 내용은 [조직의 네임스페이스 보기 및 만들기](./namespaces.md) 를 참조하십시오.
 
 >[!NOTE]
 >
 >ID 네임스페이스는 ID의 한정자입니다. 따라서 네임스페이스를 만들면 삭제할 수 없습니다.
 
-### [!DNL Experience Data Model]에 ID 데이터 포함(XDM)
+### 에 ID 데이터 포함 [!DNL Experience Data Model] (XDM)
 
-[!DNL Platform] 이 고객 데이터를 구성하는 표준화된 프레임워크로서, [!DNL Experience Data Model] (XDM)을 사용하면 [!DNL Platform]와 상호 작용하는 Experience Platform 및 기타 서비스에서 데이터를 공유 및 이해할 수 있습니다. 자세한 내용은 [XDM 시스템 개요](../xdm/home.md)를 참조하십시오.
+표준화된 프레임워크로서 [!DNL Platform] 고객 데이터를 정리하고 [!DNL Experience Data Model] (XDM) 을 사용하면 Experience Platform 및 상호 작용하는 기타 서비스 간에 데이터를 공유하고 이해할 수 있습니다 [!DNL Platform]. 자세한 내용은 [XDM 시스템 개요](../xdm/home.md).
 
 레코드와 시계열 스키마는 ID 데이터를 포함하는 방법을 제공합니다. 데이터를 수집하면 ID 그래프가 다른 네임스페이스의 데이터 조각 간에 공통 ID 데이터를 공유하는 것으로 확인되면 새로운 관계를 만듭니다.
 
 ### XDM 필드를 ID로 표시
 
-레코드 또는 시계열 XDM 클래스를 구현하는 스키마에서 `string` 유형의 필드는 ID 필드로 레이블이 지정될 수 있습니다. 따라서 해당 필드에 수집된 모든 데이터는 ID 데이터로 간주됩니다.
+유형의 모든 필드 `string` 레코드 또는 시계열 XDM 클래스를 구현하는 스키마에서는 ID 필드로 레이블이 지정될 수 있습니다. 따라서 해당 필드에 수집된 모든 데이터는 ID 데이터로 간주됩니다.
 
 >[!NOTE]
 >
 >배열 및 맵 유형 필드는 지원되지 않으며 ID 필드로 표시 및 레이블이 지정할 수 없습니다.
 
 또한 ID 필드가 일반적인 PII 데이터를 공유하는 경우 ID를 연결할 수도 있습니다.
-예를 들어, 전화 번호 필드에 ID 필드에 레이블을 지정하면, [!DNL Identity Service]은(는) 동일한 전화 번호를 사용하여 발견된 다른 개인과의 관계를 자동으로 그래프로 표시합니다.
+예를 들어, 전화 번호 필드에 ID 필드로 레이블을 지정하면, [!DNL Identity Service] 동일한 전화 번호를 사용하는 다른 사용자와 관계를 자동으로 그래프로 표시합니다.
 
 >[!NOTE]
 >
 >결과 ID의 네임스페이스는 필드가 레이블이 지정된 시점에 제공됩니다.
 
-### [!DNL Identity Service] 데이터 집합 구성
+### 데이터 집합 구성 [!DNL Identity Service]
 
-스트리밍 수집 프로세스 중에 [!DNL Identity Service ]은(는) 레코드 및 시계열 데이터에서 ID 데이터를 자동으로 추출합니다. 그러나 데이터를 수집하려면 [!DNL Identity Service]에 대해 활성화되어야 합니다. 자세한 내용은 [API를 사용하여 실시간 고객 프로필 및 ID 서비스를 위한 데이터 세트 구성](../profile/tutorials/dataset-configuration.md)에서 자습서를 참조하십시오.
+스트리밍 수집 프로세스 중에 [!DNL Identity Service ]레코드 및 시계열 데이터에서 id 데이터를 자동으로 추출합니다. 그러나 데이터를 수집하려면 먼저 데이터를 활성화해야 합니다 [!DNL Identity Service]. 다음에서 자습서를 참조하십시오.  [API를 사용하여 실시간 고객 프로필 및 ID 서비스를 위한 데이터 세트 구성](../profile/tutorials/dataset-configuration.md) 추가 정보.
 
-### 데이터를 [!DNL Identity Service]에 수집
+### 데이터를에 수집 [!DNL Identity Service]
 
-[!DNL Identity Service] 에서는  [일괄 처리 섭취 또는 ](../ingestion/batch-ingestion/overview.md) 스트리밍 수집 [을 통해 Experience Platform으로 전송되는 XDM 준수 ](../ingestion/streaming-ingestion/overview.md)데이터를 사용합니다.
+[!DNL Identity Service] 는 다음 방법 중 하나로 Experience Platform에 전송되는 XDM 준수 데이터를 사용합니다 [배치 수집](../ingestion/batch-ingestion/overview.md) 또는 [스트리밍 수집](../ingestion/streaming-ingestion/overview.md).
 
 다음 비디오는 ID 서비스에 대한 이해를 지원하기 위한 것입니다. 이 비디오에서는 데이터 필드에 ID로 레이블을 지정하고 ID 데이터를 수집한 다음 데이터가 Adobe Experience Platform Identity 서비스 개인 그래프로 작성되었는지 확인하는 방법을 보여줍니다.
 
 >[!WARNING]
 >
->다음 비디오에 표시된 [!DNL Platform] UI가 오래되었습니다. 최신 UI 스크린샷 및 기능은 설명서를 참조하십시오.
+>다음 [!DNL Platform] 다음 비디오에 표시된 UI가 오래되었습니다. 최신 UI 스크린샷 및 기능은 설명서를 참조하십시오.
 
 >[!VIDEO](https://video.tv.adobe.com/v/28167?quality=12&learn=on)
 
 ## 데이터 거버넌스
 
-Adobe Experience Platform은 개인 정보를 고려하여 구축되었으며 고객 PII 데이터를 보호하기 위한 데이터 거버넌스 프레임워크가 포함되어 있습니다. &quot;email&quot; 또는 &quot;phone&quot; 네임스페이스 아래의 ID 데이터는 기본적으로 암호화되지만, 중요한 데이터가 유지되기 전에 암호화되도록 하기 위해 데이터가 수집되거나 [!DNL Platform]에 도착하면 데이터 사용 레이블을 데이터에 적용할 수 있습니다. 자세한 내용은 [데이터 거버넌스 개요](../data-governance/home.md)를 참조하십시오.
+Adobe Experience Platform은 개인 정보를 고려하여 구축되었으며 고객 PII 데이터를 보호하기 위한 데이터 거버넌스 프레임워크가 포함되어 있습니다. &quot;email&quot; 또는 &quot;phone&quot; 네임스페이스 아래의 ID 데이터는 기본적으로 암호화되지만, 중요한 데이터가 유지되기 전에 암호화되어 있는지 확인하기 위해 수집되거나 도착하면 데이터 사용 레이블을 데이터에 적용할 수 있습니다 [!DNL Platform]. 자세한 내용은 [데이터 거버넌스 개요](../data-governance/home.md).
 
 ## 다음 단계
 
-이제 [!DNL Identity Service] 의 주요 개념과 Experience Platform 내의 해당 역할을 이해하므로 [[!DNL Identity Service API]](./api/getting-started.md) 을 사용하여 ID 그래프로 작업하는 방법을 배울 수 있습니다.
+이제 Adobe Analytics Mobile Apps 또는 Analytics Premium의 [!DNL Identity Service] 또한 Experience Platform 내에서 해당 역할을 사용하여 id 그래프로 작업하는 방법을 배울 수 있습니다 [[!DNL Identity Service API]](./api/getting-started.md).
