@@ -2,9 +2,9 @@
 description: 이 페이지에서는 대상 SDK를 사용하여 스트리밍 대상을 구성하는 단계를 나열하고 설명합니다.
 title: 대상 SDK를 사용하여 스트리밍 대상을 구성하는 방법
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: 2b1cde9fc913be4d3bea71e7d56e0e5fe265a6be
+source-git-commit: 0bd57e226155ee68758466146b5d873dc4fdca29
 workflow-type: tm+mt
-source-wordcount: '670'
+source-wordcount: '667'
 ht-degree: 0%
 
 ---
@@ -161,7 +161,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 지정 여부에 따라 `"authenticationRule": "CUSTOMER_AUTHENTICATION"` 또는 `"authenticationRule": "PLATFORM_AUTHENTICATION"` 위의 대상 구성에서는 `/destination` 또는 `/credentials` 엔드포인트.
 
 * **가장 일반적인 사례**: 선택한 경우 `"authenticationRule": "CUSTOMER_AUTHENTICATION"` 대상 구성에서 대상이 OAuth 2 인증 방법을 지원하고 있습니다. [OAuth 2 인증](./oauth2-authentication.md).
-* 선택한 경우 `"authenticationRule": "PLATFORM_AUTHENTICATION"`를 참조하려면 [자격 증명 구성](./credentials-configuration.md) 를 참조하십시오.
+* 선택한 경우 `"authenticationRule": "PLATFORM_AUTHENTICATION"`를 참조하려면 [인증 구성](./authentication-configuration.md#when-to-use).
 
 ## 6단계: 대상 테스트 {#test-destination}
 

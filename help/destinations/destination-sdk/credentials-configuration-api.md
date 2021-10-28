@@ -1,7 +1,8 @@
 ---
 description: 이 페이지에서는 '/authoring/credentials' API 종단점을 사용하여 수행할 수 있는 모든 API 작업을 설명합니다.
 title: 자격 증명 끝점 API 작업
-source-git-commit: 19307fba8f722babe5b6d57e80735ffde00fc851
+exl-id: 89957f38-e7f4-452d-abc0-0940472103fe
+source-git-commit: 0bd57e226155ee68758466146b5d873dc4fdca29
 workflow-type: tm+mt
 source-wordcount: '730'
 ht-degree: 4%
@@ -12,17 +13,17 @@ ht-degree: 4%
 
 >[!IMPORTANT]
 >
->**API 엔드포인트**:  `platform.adobe.io/data/core/activation/authoring/credentials`
+>**API 엔드포인트**: `platform.adobe.io/data/core/activation/authoring/credentials`
 
-이 페이지에서는 `/authoring/credentials` API 종단점을 사용하여 수행할 수 있는 모든 API 작업을 나열하고 설명합니다.
+이 페이지에서는 를 사용하여 수행할 수 있는 모든 API 작업을 나열하고 설명합니다. `/authoring/credentials` API 엔드포인트.
 
-## `/credentials` API 엔드포인트를 사용해야 하는 경우 {#when-to-use}
+## 를 사용해야 하는 경우 `/credentials` API 엔드포인트 {#when-to-use}
 
 >[!IMPORTANT]
 >
->대부분의 경우 *은 `/credentials` API 엔드포인트를 사용할 필요가 없습니다.* 대신 `/destinations` 종단점의 `customerAuthenticationConfigurations` 매개 변수를 통해 대상에 대한 인증 정보를 구성할 수 있습니다. 자세한 내용은 [자격 증명 구성](./credentials-configuration.md)을 참조하십시오.
+>대부분의 경우 *포함하지 않음* 를 사용해야 함 `/credentials` API 엔드포인트. 대신 를 통해 대상에 대한 인증 정보를 구성할 수 있습니다 `customerAuthenticationConfigurations` 의 매개 변수 `/destinations` 엔드포인트. 읽기 [인증 구성](./authentication-configuration.md#when-to-use) 추가 정보.
 
-이 API 종단점을 사용하고 Adobe과 대상 간에 글로벌 인증 시스템이 있고 [!DNL Platform] 고객이 대상에 연결하기 위해 인증 자격 증명을 제공할 필요가 없는 경우 [대상 구성](./destination-configuration.md#destination-delivery)에서 `PLATFORM_AUTHENTICATION`을(를) 선택합니다. 이 경우 `/credentials` API 엔드포인트를 사용하여 자격 증명 개체를 만들어야 합니다.
+이 API 엔드포인트를 사용하고 을 선택합니다. `PLATFORM_AUTHENTICATION` 에서 [대상 구성](./destination-configuration.md#destination-delivery) Adobe과 대상 및 대상 사이에 글로벌 인증 시스템이 있는 경우 [!DNL Platform] 고객은 대상에 연결하기 위해 인증 자격 증명을 제공할 필요가 없습니다. 이 경우 `/credentials` API 엔드포인트.
 
 <!--
 
@@ -145,11 +146,11 @@ The sections below list out the necessary parameters for each authentication typ
 
 ## 자격 증명 구성 API 작업 시작 {#get-started}
 
-계속하기 전에 필요한 대상 작성 권한 및 필수 헤더를 가져오는 방법을 포함하여 API를 성공적으로 호출하기 위해 알고 있어야 하는 중요한 정보가 필요하면 [시작 안내서](./getting-started.md)를 검토하십시오.
+계속하기 전에 [시작 안내서](./getting-started.md) api를 성공적으로 호출하기 위해 알고 있어야 하는 중요한 정보(필수 대상 작성 권한 및 필수 헤더를 가져오는 방법)입니다.
 
 ## 자격 증명 구성 만들기 {#create}
 
-`/authoring/credentials` 종단점에 대한 POST 요청을 수행하여 새 자격 증명 구성을 만들 수 있습니다.
+에 POST 요청을 수행하여 새 자격 증명 구성을 만들 수 있습니다 `/authoring/credentials` 엔드포인트.
 
 **API 형식**
 
@@ -160,7 +161,7 @@ POST /authoring/credentials
 
 **요청**
 
-다음 요청은 페이로드에 제공된 매개 변수로 구성된 새 자격 증명 구성을 만듭니다. 아래 페이로드에는 `/authoring/credentials` 종단점에서 허용하는 모든 매개 변수가 포함되어 있습니다. 호출에 모든 매개 변수를 추가할 필요는 없으며 API 요구 사항에 따라 템플릿을 사용자 지정할 수 있습니다.
+다음 요청은 페이로드에 제공된 매개 변수로 구성된 새 자격 증명 구성을 만듭니다. 아래 페이로드에는 `/authoring/credentials` 엔드포인트. 호출에 모든 매개 변수를 추가할 필요는 없으며 API 요구 사항에 따라 템플릿을 사용자 지정할 수 있습니다.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/credentials \
@@ -225,7 +226,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
 
 ## 자격 증명 구성 나열 {#retrieve-list}
 
-`/authoring/credentials` 종단점에 GET 요청을 수행하여 IMS 조직에 대한 모든 자격 증명 구성 목록을 검색할 수 있습니다.
+IMS 조직에 대한 모든 자격 증명 구성 목록을 검색하려면 `/authoring/credentials` 엔드포인트.
 
 **API 형식**
 
@@ -248,7 +249,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/credentials
 
 **응답**
 
-다음 응답은 사용한 IMS 조직 ID 및 샌드박스 이름을 기반으로 액세스 권한이 있는 자격 증명 구성 목록과 함께 HTTP 상태 200을 반환합니다. 하나의 `instanceId` 은 하나의 자격 증명 구성에 대한 템플릿에 해당합니다. 간결성을 위해 응답이 잘립니다.
+다음 응답은 사용한 IMS 조직 ID 및 샌드박스 이름을 기반으로 액세스 권한이 있는 자격 증명 구성 목록과 함께 HTTP 상태 200을 반환합니다. 1개 `instanceId` 은 하나의 자격 증명 구성에 대한 템플릿에 해당합니다. 간결성을 위해 응답이 잘립니다.
 
 ```json
 {
@@ -275,7 +276,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/credentials
 
 ## 기존 자격 증명 구성 업데이트 {#update}
 
-`/authoring/credentials` 종단점에 PUT 요청을 만들고 업데이트할 자격 증명 구성의 인스턴스 ID를 제공하여 기존 자격 증명 구성을 업데이트할 수 있습니다. 호출 본문에서 업데이트된 자격 증명 구성을 제공합니다.
+에 PUT 요청을 수행하여 기존 자격 증명 구성을 업데이트할 수 있습니다 `/authoring/credentials` 업데이트하려는 자격 증명 구성의 인스턴스 ID를 제공하는 끝점입니다. 호출 본문에서 업데이트된 자격 증명 구성을 제공합니다.
 
 **API 형식**
 
@@ -323,7 +324,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/credentials
 
 ## 특정 자격 증명 구성 검색 {#get}
 
-`/authoring/credentials` 종단점에 GET 요청을 하고 업데이트할 자격 증명 구성의 인스턴스 ID를 제공하여 특정 자격 증명 구성에 대한 자세한 정보를 검색할 수 있습니다.
+에 GET 요청을 수행하여 특정 자격 증명 구성에 대한 세부 정보를 검색할 수 있습니다 `/authoring/credentials` 업데이트하려는 자격 증명 구성의 인스턴스 ID를 제공하는 끝점입니다.
 
 **API 형식**
 
@@ -371,7 +372,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/credentials
 
 ## 특정 자격 증명 구성 삭제 {#delete}
 
-`/authoring/credentials` 종단점에 DELETE 요청을 만들고 요청 경로에서 삭제하려는 자격 증명 구성의 ID를 제공하여 지정된 자격 증명 구성을 삭제할 수 있습니다.
+에 DELETE 요청을 수행하여 지정된 자격 증명 구성을 삭제할 수 있습니다 `/authoring/credentials` 요청 경로에서 삭제할 자격 증명 구성의 ID를 제공하고 끝점입니다.
 
 **API 형식**
 
@@ -381,7 +382,7 @@ DELETE /authoring/credentials/{INSTANCE_ID}
 
 | 매개 변수 | 설명 |
 | --------- | ----------- |
-| `{INSTANCE_ID}` | 삭제할 자격 증명 구성의 `id` |
+| `{INSTANCE_ID}` | 다음 `id` 삭제할 자격 증명 구성 중에서 선택합니다. |
 
 **요청**
 
@@ -399,8 +400,8 @@ curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/credenti
 
 ## API 오류 처리
 
-대상 SDK API 엔드포인트는 일반 Experience Platform API 오류 메시지 원칙을 따릅니다. 플랫폼 문제 해결 안내서에서 [API 상태 코드](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) 및 [요청 헤더 오류](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors)를 참조하십시오.
+대상 SDK API 엔드포인트는 일반 Experience Platform API 오류 메시지 원칙을 따릅니다. 을(를) 참조하십시오. [API 상태 코드](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) 및 [요청 헤더 오류](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) 을 참조하십시오.
 
 ## 다음 단계
 
-이 문서를 읽은 후에는 자격 증명 종단점을 사용할 시점과 `/authoring/credentials` API 종단점 또는 `/authoring/destinations` 종단점을 사용하여 자격 증명 구성을 설정하는 방법을 알 수 있습니다. [대상 SDK를 사용하여 대상](./configure-destination-instructions.md)을 구성하는 방법을 읽어 이 단계가 대상 구성 프로세스에 맞는 위치를 파악합니다.
+이제 이 문서를 읽은 후에는 자격 증명 끝점을 사용할 시점과 을 사용하여 자격 증명 구성을 설정하는 방법을 알 수 있습니다 `/authoring/credentials` API 엔드포인트 또는 `/authoring/destinations` 엔드포인트. 읽기 [대상 SDK를 사용하여 대상을 구성하는 방법](./configure-destination-instructions.md) 대상 구성 프로세스에 이 단계가 어떤 영향을 주는지 이해하기 위해 노력합니다.

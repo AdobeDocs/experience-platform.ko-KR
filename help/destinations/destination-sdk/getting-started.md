@@ -1,9 +1,10 @@
 ---
 description: 이 페이지에서는 Adobe Experience Platform 대상 SDK를 인증하고 사용하는 방법을 설명합니다. 여기에는 Adobe I/O 인증 자격 증명, 샌드박스 이름 및 대상 작성 액세스 제어 권한을 가져오는 방법에 대한 지침이 포함되어 있습니다.
 title: 대상 SDK 시작하기
-source-git-commit: 19307fba8f722babe5b6d57e80735ffde00fc851
+exl-id: f22c37a8-202d-49ac-9af0-545dfa9af8fd
+source-git-commit: 0bd57e226155ee68758466146b5d873dc4fdca29
 workflow-type: tm+mt
-source-wordcount: '525'
+source-wordcount: '540'
 ht-degree: 2%
 
 ---
@@ -16,13 +17,13 @@ ht-degree: 2%
 
 ## 용어 {#terminology}
 
-이 안내서에서는 IMS 조직 및 샌드박스와 같은 플랫폼별 개념을 사용합니다. 이 용어와 다른 용어에 대한 정의는 [Experience Platform 용어집](https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html)을 참조하십시오.
+이 안내서에서는 IMS 조직 및 샌드박스와 같은 플랫폼별 개념을 사용합니다. 자세한 내용은 [Experience Platform 용어집](https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html) 를 참조하십시오.
 
 ## 필요한 인증 자격 증명 얻기 {#obtain-authentication-credentials}
 
-대상 SDK는 인증에 [Adobe I/O](https://www.adobe.io/) 게이트웨이를 사용합니다. 대상 SDK 종단점에 대한 API를 호출하려면 API 호출에 특정 헤더를 제공해야 합니다. Adobe Exchange 팀과 협력하여 [Adobe 개발자 콘솔](http://console.adobe.io/)에 대한 인증을 설정합니다.
+대상 SDK는 [Adobe I/O](https://www.adobe.io/) 인증을 위한 게이트웨이입니다. 대상 SDK 종단점에 대한 API를 호출하려면 API 호출에 특정 헤더를 제공해야 합니다. Adobe Exchange 팀과 협력하여 [Adobe 개발자 콘솔](http://console.adobe.io/).
 
-대상 SDK API 엔드포인트를 성공적으로 호출하려면 [Experience Platform 인증 자습서](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html)을 따르십시오. &quot;[API 키, IMS 조직 ID 및 클라이언트 암호](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html#api-ims-secret) 생성 단계에서 자습서를 시작합니다. Adobe 교환 팀이 이전 단계를 처리합니다. 인증 자습서를 완료하면 아래와 같이 대상 SDK API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
+대상 SDK API 엔드포인트를 성공적으로 호출하려면 다음을 수행하십시오. [Experience Platform 인증 자습서](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html). 자습서를 &quot;&quot;에서 시작합니다.[API 키, IMS 조직 ID 및 클라이언트 암호 생성](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html#api-ims-secret)&quot; 단계입니다. Adobe 교환 팀이 이전 단계를 처리합니다. 인증 자습서를 완료하면 아래와 같이 대상 SDK API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
 
 * `x-api-key: {API_KEY}`를 클라이언트 ID라고도 합니다
 * `x-gw-ims-org-id: {IMS_ORG}`를 조직 ID라고도 합니다
@@ -55,7 +56,7 @@ Adobe Exchange 팀에서는 대상 SDK API 엔드포인트 호출에 사용해�
 
 ## 역할 기반 액세스 제어(RBAC) {#rbac}
 
-[참조 설명서](./configuration-options.md)에 설명된 대상 SDK API 엔드포인트를 사용하려면 **[!UICONTROL 대상 작성]** 액세스 제어 권한이 필요합니다. Adobe Exchange 팀과 협력하여 [Adobe Admin Console](https://adminconsole.adobe.com/)에서 이 권한을 할당받으십시오.
+에 설명된 대상 SDK API 엔드포인트를 사용하려면 [참조 설명서](./configuration-options.md), 다음을 수행해야 합니다. **[!UICONTROL 대상 작성]** 액세스 제어 권한. Adobe Exchange 팀과 협력하여 이 권한을 할당받으십시오. [Adobe Admin Console](https://adminconsole.adobe.com/).
 
 ![대상 작성 권한](./assets/destination-authoring-permission.png)
 
@@ -72,4 +73,6 @@ Adobe Exchange 팀에서는 대상 SDK API 엔드포인트 호출에 사용해�
 
 ## 다음 단계 {#next-steps}
 
-이 문서의 절차에 따라 Adobe I/O, 샌드박스 이름 및 대상 작성 액세스 제어 권한에 대한 인증 자격 증명을 받았습니다. 다음으로, 대상 SDK를 사용하여 대상을 설정할 수 있습니다. 다음 단계에 대해 [대상 SDK를 사용하여 대상을 구성하십시오.](./configure-destination-instructions.md)
+이 문서의 절차에 따라 Adobe I/O, 샌드박스 이름 및 대상 작성 액세스 제어 권한에 대한 인증 자격 증명을 받았습니다. 다음으로, 대상 SDK를 사용하여 대상을 설정할 수 있습니다.
+* 읽기 [대상 SDK를 사용하여 대상을 구성합니다](./configure-destination-instructions.md) 을 참조하십시오.
+* 모든 작업에 대해서는 [대상 작성 API 설명서](https://www.adobe.io/experience-platform-apis/references/destination-authoring/).

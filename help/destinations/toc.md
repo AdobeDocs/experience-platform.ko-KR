@@ -4,9 +4,9 @@ user-guide-title: 대상 안내서
 user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화합니다.
 description: 이 문서에서는 Adobe Experience Platform 대상의 목차 목록을 설명합니다
 feature: Destinations
-source-git-commit: a7c36f1a157b6020fede53e5c1074d966f26cf3d
+source-git-commit: e6d922800c17312df8529061c56d8a2deac46662
 workflow-type: tm+mt
-source-wordcount: '645'
+source-wordcount: '657'
 ht-degree: 10%
 
 ---
@@ -153,12 +153,14 @@ ht-degree: 10%
       * [서버 및 템플릿 사양](./destination-sdk/server-and-template-configuration.md)
       * [메시지 포맷](./destination-sdk/message-format.md)
       * [대상 메타데이터 관리](./destination-sdk/audience-metadata-management.md)
-      * [인증 구성](./destination-sdk/credentials-configuration.md)
-      * [OAuth 2 인증](./destination-sdk/oauth2-authentication.md)
+      * 인증 {#authentication}
+         * [인증 구성](./destination-sdk/authentication-configuration.md)
+         * [OAuth 2 인증](./destination-sdk/oauth2-authentication.md)
       * 개발자 도구 {#developer-tools}
          * [메시지 변환 템플릿 만들기 및 테스트](./destination-sdk/create-template.md)
          * [대상 구성 테스트](./destination-sdk/test-destination.md)
-   * API 참조 {#api-reference}
+   * API 작업 {#api}
+      * [대상 SDK(대상 작성) API 참조](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
       * [대상 끝점 API 작업](./destination-sdk/destination-configuration-api.md)
       * [대상 서버 끝점 API 작업](./destination-sdk/destination-server-api.md)
       * [대상 메타데이터 끝점 API 작업](./destination-sdk/audience-metadata-api.md)
