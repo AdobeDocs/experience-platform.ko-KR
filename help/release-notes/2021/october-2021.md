@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform에 대한 최신 릴리스 노트입니다.
-source-git-commit: 231ce8405a752bd3e7e4ae590bb6aaf98fc6527b
+source-git-commit: 45c4486dc9860da13daa6984b23ef80038ea2f8d
 workflow-type: tm+mt
-source-wordcount: '315'
-ht-degree: 9%
+source-wordcount: '458'
+ht-degree: 7%
 
 ---
 
@@ -12,12 +12,30 @@ ht-degree: 9%
 
 **릴리스 날짜: 2021년 10월 27일**
 
+## Experience Platform 업데이트
+
+Experience Platform 업데이트.
+
+### [사용자 인터페이스] {#ui}
+
+사용자 인터페이스가 다음 변경 사항으로 업데이트되었습니다.
+
+| 기능 | 설명 |
+| --- | --- |
+| 어두운 테마 | Dark 테마 스위치를 사용하여 플랫폼 인터페이스의 밝은 테마와 어두운 테마 간을 전환합니다. 스위치는 사용자 이름과 전자 메일 아래의 사용자 프로필에 있습니다. |
+| 왼쪽 탐색 전환 | Experience Platform 기능을 표시하는 메뉴를 표시하거나 숨기려면 애플리케이션 헤더 상단의 향상된 탐색 전환을 사용합니다. 시스템은 마지막 선택 항목을 기억하며 사용자가 액세스할 수 있는 기능만 표시합니다. |
+| 액세스 가시성 | 왼쪽 탐색 모음에는 액세스할 수 있는 기능만 표시됩니다. 이전 버전의 Adobe Experience Platform에서는 액세스할 수 없었더라도 사용할 수 없는 항목이 표시되었습니다. |
+
+자세한 내용은 [플랫폼 UI 안내서](../../landing/ui-guide.md) 추가 정보
+
+## 기존 기능 업데이트
+
 Adobe Experience Platform의 기존 기능 업데이트:
 
 - [[!DNL Data Prep]](#data-prep)
 - [소스](#sources)
 
-## [!DNL Data Prep] {#data-prep}
+### [!DNL Data Prep] {#data-prep}
 
 [!DNL Data Prep] 데이터 엔지니어가 XDM(Experience Data Model) 을 통해 데이터를 매핑, 변환 및 확인할 수 있습니다.
 
@@ -30,7 +48,7 @@ Adobe Experience Platform의 기존 기능 업데이트:
 
 자세한 내용은 [[!DNL Data Prep] 개요](../../data-prep/home.md) 이 서비스에 대해 자세히 알아보십시오.
 
-## 소스 {#sources}
+### 소스 {#sources}
 
 Adobe Experience Platform은 외부 소스에서 데이터를 수집하면서도 Platform 서비스를 사용하여 해당 데이터를 구조화, 레이블 지정 및 향상시킬 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 타사 소프트웨어 및 CRM 시스템과 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 
