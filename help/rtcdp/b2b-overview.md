@@ -1,18 +1,18 @@
 ---
 keywords: RTCDP;CDP;B2B Edition;Real-time Customer Data Platform;실시간 고객 데이터 플랫폼;실시간 cdp;b2b;cdp;Customer AI
-title: 실시간 CDP B2B Edition 개요
+title: 실시간 CDP B2B Edition 개요(베타)
 seo-title: Real-time Customer Data Platform B2B Edition overview
 description: Real-time Customer Data Platform B2B Edition 계정 개요
 seo-description: Overview of Real-time Customer Data Platform B2B Edition Account
 exl-id: 9b45bba4-fc46-4d69-b36a-5cb91f316612
-source-git-commit: 4130528800a9219e0c9e12639f292a7f55f86d5e
+source-git-commit: fef18389f8e64bdf11fe93d4077eb0474abc4981
 workflow-type: tm+mt
-source-wordcount: '1079'
+source-wordcount: '1092'
 ht-degree: 1%
 
 ---
 
-# Real-time Customer Data Platform B2B Edition 개요
+# Real-time Customer Data Platform B2B 에디션 개요(베타)
 
 >[!IMPORTANT]
 >
@@ -83,4 +83,15 @@ Google Customer Match, Facebook, LinkedIn, Marketo Engage, Amazon S3, Google Dis
 
 이제 실시간 CDP B2B Edition에서 제공하는 마케터의 이점, B2B Edition과 Real-Time CDP의 차이점을 더 잘 이해하므로 사용자 자신의 IMS 조직에 이러한 기능을 적용하는 방법을 살펴볼 수 있습니다.
 
-실시간 CDP B2B Edition이 B2B B2B Edition을 통해 비즈니스-비즈니스 서비스 모델의 이점을 얻는 방법을 이해하려면 다음을 참조하십시오. [실시간 CDP B2B Edition에 대한 사용 사례 예](./b2b-use-case.md). 또는 [Real-time Customer Data Platform B2B Edition의 스키마](./schemas/b2b.md) 스키마 만들기 및 필수 B2B 데이터 엔티티에 대한 관계 정의에 대한 자세한 내용은 설명서 를 참조하십시오.
+실시간 CDP B2B Edition이 B2B Business Service 모델을 통해 어떤 이점을 얻을 수 있는지 알아보려면 다음 설명서를 참조하여 시작하십시오.
+
+* [실시간 CDP B2B Edition에 대한 사용 사례 예](./b2b-use-case.md)
+* [데이터를 수집하는 방법](./sources/b2b.md)
+* [프로필에 액세스하는 방법](./profile/profile-overview.md)
+* [Real-time Customer Data Platform B2B Edition의 스키마](./schemas/b2b.md)
+* [세그먼트를 만드는 방법](./segmentation/b2b.md)
+* [세그먼트를 대상에 활성화하는 방법](./destinations/b2b.md)
+* [데이터 거버넌스 정책을 정의하고 적용하는 방법](./privacy/data-governance-overview.md)
+
+<!-- PLACEHOLDER - page under construction -->
+<!-- * [Privacy in Real-time Customer Data Platform B2B Edition](./privacy/b2b.md) -->

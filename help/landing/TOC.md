@@ -3,9 +3,9 @@ audience: user
 user-guide-title: Adobe Experience Platform 개요
 breadcrumb-title: Experience Platform 개요
 user-guide-description: Experience Platform을 통해 개인화된 경험을 실시간으로 고객에게 전달하는 방법을 살펴볼 수 있습니다.
-source-git-commit: a0954c6134c532fbcecadd8b4b8775fdf28711da
+source-git-commit: 030d6761b36e5bc7e6e12b0524a810a13e060e55
 workflow-type: tm+mt
-source-wordcount: '205'
+source-wordcount: '233'
 ht-degree: 22%
 
 ---
@@ -37,8 +37,12 @@ ht-degree: 22%
 * 플랫폼 설명서 {#documentation}
    * [개요](documentation/overview.md)
    * [언어 지원](documentation/language-support.md)
-* Adobe 에코시스템의 플랫폼 {#ecosystem}
-   * [애플리케이션 서비스](application-services.md)
+* 플랫폼 기반 애플리케이션 서비스 {#ecosystem}
+   * [개요](application-services.md)
+   * [Customer Journey Analytics](https://experienceleague.adobe.com/docs/customer-journey-analytics.html)
+   * [Journey Orchestration](https://experienceleague.adobe.com/docs/journey-orchestration.html)
+   * [Offer Decisioning](https://experienceleague.adobe.com/docs/offer-decisioning.html)
+   * [Real-time Customer Data Platform(모든 버전)](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html)
    * [애플리케이션 및 지능형 서비스(비디오)](video/application-intelligent-services.md)
    * [Experience Cloud과 플랫폼 통합(비디오)](video/experience-cloud-integrations.md)
 * 거버넌스, 개인 정보 및 보안 {#governance-privacy-security}
