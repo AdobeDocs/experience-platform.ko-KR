@@ -3,32 +3,32 @@ keywords: 전자 메일;전자 메일;전자 메일 대상;oracle oqua;oracle
 title: Oracle Eloqua 연결
 description: Oracle Eloqua는 B2B 마케터와 조직이 마케팅 캠페인 및 판매 리드 생성을 관리하는 데 도움이 되도록 Oracle이 제공하는 마케팅 자동화를 위한 SaaS(Software as a Service) 플랫폼입니다.
 exl-id: 6eaa79ff-8874-423b-bdff-aa04f6101a53
-source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
+source-git-commit: b4810dfef7b0d437744ca14a32bd4f5746e8d002
 workflow-type: tm+mt
-source-wordcount: '494'
+source-wordcount: '491'
 ht-degree: 0%
 
 ---
 
 # [!DNL Oracle Eloqua] 연결
 
-[[!DNL Oracle Eloqua]](https://www.oracle.com/cx/marketing/automation/) 는 B2B 마케터와 조직이 마케팅 캠페인 및 영업 리드 생성을 관리하는 데  [!DNL Oracle] 도움이 되는 마케팅 자동화를 위한 SaaS(Software as a Service) 플랫폼입니다.
+[[!DNL Oracle Eloqua]](https://www.oracle.com/cx/marketing/automation/) 는 SaaS(Software as a Service) 플랫폼으로서 [!DNL Oracle] 이는 B2B 마케터와 조직이 마케팅 캠페인 및 판매 리드 생성을 관리하는 데 도움이 되는 것입니다.
 
-세그먼트 데이터를 [!DNL Oracle Eloqua]에 보내려면 먼저 [Adobe Experience Platform에서 대상](#connect-destination)을 연결한 다음, [저장소 위치에서 [!DNL Oracle Eloqua]로 데이터 가져오기](#import-data-into-eloqua)를 설정해야 합니다.
+세그먼트 데이터를에 보내려면 [!DNL Oracle Eloqua], 먼저 [대상 연결](#connect-destination) Adobe Experience Platform에서 [데이터 가져오기 설정](#import-data-into-eloqua) 스토리지 위치에서 로 [!DNL Oracle Eloqua].
 
 ## 내보내기 유형 {#export-type}
 
-**프로필 기반**  - 원하는 스키마 필드와 함께 세그먼트의 모든 구성원을 내보냅니다(예: 대상 활성화 워크플로우의 속성 선택 화면에서 선택한 대로 이메일 주소,  [전화 번호, 성)](../../ui/activate-batch-profile-destinations.md#select-attributes).
+**프로필 기반** - 원하는 스키마 필드와 함께 세그먼트의 모든 멤버를 내보냅니다(예: 전자 메일 주소, 전화 번호, 성) [대상자 활성화 워크플로우](../../ui/activate-batch-profile-destinations.md#select-attributes).
 
 ## IP 주소 허용 목록 {#allow-list}
 
 SFTP 저장소를 사용하여 이메일 마케팅 대상을 설정할 때 Adobe에서 특정 IP 범위를 허용 목록에 추가하는 것을 권장합니다.
 
-허용 목록에 Adobe IP를 추가해야 하는 경우 클라우드 저장소 대상에 대한 [IP 주소 허용 목록](../cloud-storage/ip-address-allow-list.md)을 참조하십시오.
+을(를) 참조하십시오. [클라우드 스토리지 대상에 대한 IP 주소 허용 목록](../cloud-storage/ip-address-allow-list.md) Adobe IP를 허용 목록에 추가해야 하는 경우
 
 ## 대상에 연결 {#connect}
 
-이 대상에 연결하려면 [대상 구성 자습서](../../ui/connect-destination.md)에 설명된 단계를 따르십시오.
+이 대상에 연결하려면 [대상 구성 자습서](../../ui/connect-destination.md).
 
 이 대상은 다음 연결 유형을 지원합니다.
 
@@ -37,24 +37,24 @@ SFTP 저장소를 사용하여 이메일 마케팅 대상을 설정할 때 Adobe
 
 ### 연결 매개 변수 {#parameters}
 
-[이 대상을 설정할 때 다음 정보를 제공해야 합니다.](../../ui/connect-destination.md)
+While [설정](../../ui/connect-destination.md) 이 대상을 사용하려면 다음 정보를 제공해야 합니다.
 
-* 암호&#x200B;]**연결이 있는**[!UICONTROL  SFTP의 경우 다음을 제공해야 합니다.
+* 대상 **[!UICONTROL SFTP와 암호]** 연결을 제공해야 합니다.
    * [!UICONTROL 도메인]
    * [!UICONTROL 포트]
    * [!UICONTROL 사용자 이름]
    * [!UICONTROL 암호]
-* SSH 키&#x200B;]**연결이 있는**[!UICONTROL  SFTP의 경우 다음을 제공해야 합니다.
+* 대상 **[!UICONTROL SSH 키가 있는 SFTP]** 연결을 제공해야 합니다.
    * [!UICONTROL 도메인]
    * [!UICONTROL 포트]
    * [!UICONTROL 사용자 이름]
    * [!UICONTROL SSH 키]
 
-* 원할 경우 RSA 형식의 공개 키를 첨부하여 **[!UICONTROL 키]** 섹션 아래의 내보낸 파일에 PGP/GPG를 사용한 암호화를 추가할 수 있습니다. 공개 키는 [!DNL Base64] 인코딩 문자열로 기록해야 합니다.
+* 원할 경우 RSA 형식의 공개 키를 연결하여 PGP/GPG를 사용하여 암호화를 내보낸 파일에 추가할 수 있습니다. **[!UICONTROL 키]** 섹션을 참조하십시오. 공개 키는 [!DNL Base64] 인코딩된 문자열입니다.
 * **[!UICONTROL 이름]**: 대상의 관련 이름을 선택합니다.
 * **[!UICONTROL 설명]**: 대상에 대한 설명을 입력합니다.
-* **[!UICONTROL 폴더 경로]**: Platform이 내보내기 데이터를 CSV 또는 탭으로 구분된 파일로 예치할 스토리지 위치의 경로를 제공합니다.
-* **[!UICONTROL 파일 형식]**:  **** CSV 또는  **TAB_DISTINGUISHED**. 저장소 위치로 내보낼 파일 형식을 선택합니다.
+* **[!UICONTROL 폴더 경로]**: Platform이 내보내기 데이터를 CSV 파일로 예치할 스토리지 위치의 경로를 제공합니다.
+* **[!UICONTROL 파일 형식]**: **CSV** 또는 **TAB_DISTINCLUDED**. 저장소 위치로 내보낼 파일 형식을 선택합니다.
 
 <!--
 
@@ -66,16 +66,16 @@ Commenting out Amazon S3 bucket part for now until support is clarified
 
 ## 세그먼트를 이 대상에 활성화 {#activate}
 
-대상 세그먼트를 이 대상으로 활성화하는 방법에 대한 지침은 [대상 데이터를 일괄 프로필 내보내기 대상으로 활성화](../../ui/activate-batch-profile-destinations.md)를 참조하십시오.
+자세한 내용은 [대상자 데이터를 활성화하여 묶음 프로필 내보내기 대상 활성화](../../ui/activate-batch-profile-destinations.md) 대상 세그먼트를 이 대상으로 활성화하는 방법에 대한 지침입니다.
 
 ### 대상 속성 {#destination-attributes}
 
-세그먼트를 이 대상에 활성화할 때 [결합 스키마](../../../profile/home.md#profile-fragments-and-union-schemas)에서 고유 식별자를 선택하는 것이 좋습니다. 대상으로 내보낼 고유 식별자 및 기타 모든 XDM 필드를 선택합니다. 자세한 내용은 [이메일을 마케팅 대상으로 대상을 활성화할 때 모범 사례를 참조하십시오](overview.md#best-practices).
+세그먼트를 이 대상에 활성화할 때, Adobe에서 고유 식별자를 선택할 것을 권장합니다 [조합 스키마](../../../profile/home.md#profile-fragments-and-union-schemas). 대상으로 내보낼 고유 식별자 및 기타 모든 XDM 필드를 선택합니다. 자세한 내용은 [이메일을 마케팅 대상으로 대상을 활성화할 때 모범 사례에 대한 우수 사례입니다](overview.md#best-practices).
 
 ## 내보낸 데이터 {#exported-data}
 
-[!DNL Oracle Eloqua] 대상의 경우 Platform은 사용자가 제공한 저장소 위치에 탭으로 구분된 `.csv` 파일을 만듭니다. 파일에 대한 자세한 내용은 세그먼트 활성화 자습서에서 [세그먼트 활성화 확인](../../ui/activate-batch-profile-destinations.md#verify) 을 참조하십시오.
+대상 [!DNL Oracle Eloqua] 대상, 플랫폼에서 `.csv` 파일을 입력한 저장 위치에 저장합니다. 파일에 대한 자세한 내용은 [세그먼트 활성화 확인](../../ui/activate-batch-profile-destinations.md#verify) 세그먼트 활성화 자습서에서 를 참조하십시오.
 
-## 데이터 가져오기를 [!DNL Oracle Eloqua]에 설정 {#import-data-into-eloqua}
+## 데이터 가져오기를에 설정 [!DNL Oracle Eloqua] {#import-data-into-eloqua}
 
-[!DNL Platform]을 [!DNL SFTP] 저장소에 연결한 후 저장소 위치에서 [!DNL Oracle Eloqua]로 데이터 가져오기를 설정해야 합니다. 이를 수행하는 방법에 대한 자세한 내용은 [!DNL Oracle Eloqua Help Center]에서 [연락처 또는 계정 가져오기](https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCAA/Help/DataImportExport/Tasks/ImportingContactsOrAccounts.htm)를 참조하십시오.
+연결 후 [!DNL Platform] 아래와 같이 [!DNL SFTP] 저장소 위치에서 로 데이터 가져오기를 설정해야 합니다 [!DNL Oracle Eloqua]. 이를 수행하는 방법에 대해 알아보려면 [연락처 또는 계정 가져오기](https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCAA/Help/DataImportExport/Tasks/ImportingContactsOrAccounts.htm) 에서 [!DNL Oracle Eloqua Help Center].
