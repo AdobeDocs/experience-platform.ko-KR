@@ -1,10 +1,11 @@
 ---
 title: Adobe Target v2 확장에 대한 릴리스 노트
 description: Adobe Experience Platform의 Adobe Target v2 태그 확장에 대한 최신 릴리스 노트입니다.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
+source-git-commit: 42a1ceac3de2244bef858bf03eabe4910ae597f8
 workflow-type: tm+mt
-source-wordcount: '572'
-ht-degree: 44%
+source-wordcount: '589'
+ht-degree: 48%
 
 ---
 
@@ -12,25 +13,31 @@ ht-degree: 44%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../../term-updates.md)을 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
+
+## 2021년 10월 28일
+
+### Adobe Target v2 확장 0.16.0
+
+- at.js v2.7.0을 지원하도록 업데이트되었으며, 현재 Adobe Target에서 다운로드할 수 있습니다.
 
 ## 2021년 7월 20일
 
 ### Adobe Target v2 확장 0.15.1
 
-- `stringify` 함수 이름 충돌이 발생하여 `sessionId`, `requestId` 등에 대해 잘못된 UUID 값이 생성되던 문제를 수정했습니다.
+- 다음 문제를 수정했습니다. `stringify` 함수 이름 충돌이 발생하여 UUID 값이 잘못 생성되었습니다. `sessionId`, `requestId`등
 
 ## 2021년 7월 16일
 
 ### Adobe Target v2 확장 0.15.0
 
 - at.js 설정 secureOnly 가 true로 설정될 때마다 쿠키에 보안 속성을 추가합니다
-- 이제 `triggerView()` 을 사용할 때 응답 토큰을 사용할 수 있습니다
-- `CONTENT_RENDERING_NO_OFFERS` 이벤트와 관련된 버그가 수정되었습니다. 이제 Target에서 반환된 컨텐츠가 없을 때마다 올바르게 트리거됩니다
+- 이제 응답 토큰을 사용할 수 있습니다 `triggerView()`
+- 와 관련된 버그가 수정되었습니다. `CONTENT_RENDERING_NO_OFFERS` 이벤트. 이제 Target에서 반환된 컨텐츠가 없을 때마다 올바르게 트리거됩니다
 - 미리 가져오기 요청을 사용할 때 A4T 클릭 지표 세부 사항이 올바르게 반환됩니다
-- UUID 생성은 더 이상 `Math.random()`을 사용하지 않지만 `window.crypto`에 의존합니다.
+- UUID 생성에서 더 이상 를 사용하지 않음 `Math.random()`, 그러나 는 `window.crypto`
 - `sessionId` 쿠키 만료는 모든 네트워크 호출에서 올바르게 확장됩니다
-- 이제 SPA 보기 캐시 초기화가 올바르게 처리되었으며 `viewsEnable` 설정을 적용합니다.
+- 이제 SPA 보기 캐시 초기화가 올바르게 처리되고 적용됩니다 `viewsEnable` 설정
 
 ## 2021년 6월 2일
 
@@ -48,7 +55,7 @@ ht-degree: 44%
 
 ### Adobe Target v2 확장 0.14
 
-- On-Device Decisioning 기능이 있는 at.js 2.5를 로드하는 [On-Device Decisioning](./overview.md#load-target-with-on-device-decisioning)을 사용하여 새 작업 로드 Target이 추가되었습니다
+- 을 사용하여 새 작업 로드 Target 추가 [On-Device Decisioning](./overview.md#load-target-with-on-device-decisioning)- On-Device Decisioning 기능과 함께 at.js 2.5를 로드합니다.
 - at.js가 2.5로 업데이트되었습니다.
 
 
@@ -56,7 +63,7 @@ ht-degree: 44%
 
 ### Adobe Target v2 확장 0.13.7
 
-- mbox 요청에 포함되는 `targetPageParams`에 관한 문제가 해결되었습니다. `targetPageParams` 는 요청에만 포함해야  `pageLoad` 합니다.
+- mbox 요청에 포함되는 `targetPageParams`에 관한 문제가 해결되었습니다. `targetPageParams` 는 `pageLoad` 요청.
 - 전역 개체 종속성을 직접 참조로 대체하여 태그 확장에서 문서 및 창 전역 개체 문제를 해결했습니다.
 - at.js가 2.4.1로 업데이트되었습니다.
 
