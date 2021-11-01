@@ -3,9 +3,9 @@ keywords: 이메일;이메일;이메일;이메일 대상;adobe campaign;campaign
 title: Adobe Campaign 연결
 description: Adobe Campaign은 온라인과 오프라인 채널에서 모두 캠페인을 개인화하고 전달할 수 있는 솔루션 집합입니다.
 exl-id: 0de91738-8f56-41f5-8745-9b14b15db76a
-source-git-commit: b4810dfef7b0d437744ca14a32bd4f5746e8d002
+source-git-commit: b0d6e02c67f2a62971332acb224c7422ea467e6c
 workflow-type: tm+mt
-source-wordcount: '717'
+source-wordcount: '713'
 ht-degree: 2%
 
 ---
@@ -55,7 +55,7 @@ While [설정](../../ui/connect-destination.md) 이 대상을 사용하려면 �
 * **[!UICONTROL 버킷 이름]**: *S3 연결의 경우*. S3 버킷의 위치를 입력합니다. [!DNL Platform] 은 내보내기 데이터를 CSV 파일로 저장합니다.
 * **[!UICONTROL 폴더 경로]**: 스토리지 위치에 경로를 입력합니다. [!DNL Platform] 은 내보내기 데이터를 CSV 파일로 저장합니다.
 * **[!UICONTROL 컨테이너]**: *Blob 연결의 경우*. 폴더 경로가 있는 Blob을 포함하는 컨테이너입니다.
-* **[!UICONTROL 파일 형식]**: **CSV** 또는 **TAB_DISTINCLUDED**. 저장소 위치로 내보낼 파일 형식을 선택합니다.
+* **[!UICONTROL 파일 형식]**: 선택 **CSV** csv 파일을 저장소 위치로 내보내려면 를 클릭합니다.
 
 ## 세그먼트를 이 대상에 활성화 {#activate}
 

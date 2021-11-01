@@ -3,9 +3,9 @@ keywords: 전자 메일;전자 메일;전자 메일 대상;oracle oqua;oracle
 title: Oracle Eloqua 연결
 description: Oracle Eloqua는 B2B 마케터와 조직이 마케팅 캠페인 및 판매 리드 생성을 관리하는 데 도움이 되도록 Oracle이 제공하는 마케팅 자동화를 위한 SaaS(Software as a Service) 플랫폼입니다.
 exl-id: 6eaa79ff-8874-423b-bdff-aa04f6101a53
-source-git-commit: b4810dfef7b0d437744ca14a32bd4f5746e8d002
+source-git-commit: b0d6e02c67f2a62971332acb224c7422ea467e6c
 workflow-type: tm+mt
-source-wordcount: '491'
+source-wordcount: '487'
 ht-degree: 0%
 
 ---
@@ -54,7 +54,7 @@ While [설정](../../ui/connect-destination.md) 이 대상을 사용하려면 �
 * **[!UICONTROL 이름]**: 대상의 관련 이름을 선택합니다.
 * **[!UICONTROL 설명]**: 대상에 대한 설명을 입력합니다.
 * **[!UICONTROL 폴더 경로]**: Platform이 내보내기 데이터를 CSV 파일로 예치할 스토리지 위치의 경로를 제공합니다.
-* **[!UICONTROL 파일 형식]**: **CSV** 또는 **TAB_DISTINCLUDED**. 저장소 위치로 내보낼 파일 형식을 선택합니다.
+* **[!UICONTROL 파일 형식]**: 선택 **CSV** csv 파일을 저장소 위치로 내보내려면 를 클릭합니다.
 
 <!--
 

@@ -3,9 +3,9 @@ keywords: 이메일;이메일;이메일;이메일 대상;Responsys 대상 oracle
 title: Responsys 연결 oracle
 description: Responsys는 Oracle이 이메일, 모바일, 디스플레이 및 소셜에서 상호 작용을 개인화하기 위해 제공하는 크로스 채널 마케팅 캠페인을 위한 엔터프라이즈 이메일 마케팅 도구입니다.
 exl-id: 70f2f601-afee-4315-bf7a-ed2c92397ebe
-source-git-commit: b4810dfef7b0d437744ca14a32bd4f5746e8d002
+source-git-commit: b0d6e02c67f2a62971332acb224c7422ea467e6c
 workflow-type: tm+mt
-source-wordcount: '475'
+source-wordcount: '471'
 ht-degree: 0%
 
 ---
@@ -55,7 +55,7 @@ While [설정](../../ui/connect-destination.md) 이 대상을 사용하려면 �
 * **[!UICONTROL 이름]**: 대상의 관련 이름을 선택합니다.
 * **[!UICONTROL 설명]**: 대상에 대한 설명을 입력합니다.
 * **[!UICONTROL 폴더 경로]**: Platform이 내보내기 데이터를 CSV 파일로 예치할 스토리지 위치의 경로를 제공합니다.
-* **[!UICONTROL 파일 형식]**: **CSV** 또는 **TAB_DISTINCLUDED**. 저장소 위치로 내보낼 파일 형식을 선택합니다.
+* **[!UICONTROL 파일 형식]**: 선택 **CSV** csv 파일을 저장소 위치로 내보내려면 를 클릭합니다.
 
 <!--
 
