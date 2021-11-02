@@ -5,9 +5,9 @@ title: 지표 API 엔드포인트
 topic-legacy: developer guide
 description: Observability Insights API를 사용하여 Experience Platform에서 가시성 지표를 검색하는 방법을 알아봅니다.
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
-source-git-commit: 6c10413adf033d09a49088951c127fc6e6c5552f
+source-git-commit: 5c893d7c8c455c86c94cd311a20ce774abcf65e0
 workflow-type: tm+mt
-source-wordcount: '1864'
+source-wordcount: '1866'
 ht-degree: 5%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 5%
 
 >[!NOTE]
 >
->이전 버전 지표 엔드포인트(V1)는 더 이상 사용되지 않습니다. 이 문서는 현재 버전(V2)에만 중점을 둡니다. 이전 구현에 대한 V1 종단점에 대한 자세한 내용은 [API 참조](https://www.adobe.io/experience-platform-apis/references/observability-insights/#operation/retrieveMetricsV1).
+>이전 버전의 지표 엔드포인트(V1)는 더 이상 사용되지 않습니다. 이 문서는 현재 버전(V2)에만 중점을 둡니다. 이전 구현에 대한 V1 종단점에 대한 자세한 내용은 [API 참조](https://www.adobe.io/experience-platform-apis/references/observability-insights/#operation/retrieveMetricsV1).
 
 ## 시작하기
 
@@ -178,8 +178,8 @@ curl -X POST \
 | `metric` | 요청에 제공된 지표 중 하나의 이름입니다. |
 | `filters` | 지정된 지표에 대한 필터 구성. |
 | `datapoints` | 개체가 지정된 지표 및 필터의 결과를 나타내는 배열입니다. 배열의 개체 수는 요청에 제공된 필터 옵션에 따라 다릅니다. 필터를 제공하지 않은 경우 배열에 모든 데이터 세트를 나타내는 단일 개체만 포함됩니다. |
-| `groupBy` | 에 데이터 세트가 여러 개 지정된 경우 `filter` 지표에 대한 속성 및 `groupBy` 옵션이 요청에 true로 설정되어 있으면 이 개체에는 해당 데이터 집합의 ID가 포함됩니다 `dps` 속성은 다음에 적용됩니다.<br><br>If this object appears empty in the response, the corresponding `dps` property applies to all datasets provided in the `filters` array (or all datasets in [!DNL Platform] if no filters were provided). |
-| `dps` | The returned data for the given metric, filter, and time range. 이 개체의 각 키는 지정된 지표에 대해 해당 값이 있는 타임스탬프를 나타냅니다. 각 데이터 포인트 사이의 기간은 `granularity` 요청에 지정된 값입니다. |
+| `groupBy` | 에 데이터 세트가 여러 개 지정된 경우 `filter` 지표에 대한 속성 및 `groupBy` 옵션이 요청에 true로 설정되어 있으면 이 개체에는 해당 데이터 집합의 ID가 포함됩니다 `dps` 속성은 다음에 적용됩니다.<br><br>이 개체가 응답에 비어 있으면 해당 개체가 표시됩니다 `dps` 속성은 `filters` 배열(또는 모든 데이터 세트) [!DNL Platform] 필터가 제공되지 않은 경우). |
+| `dps` | 주어진 지표, 필터 및 시간 범위에 대해 반환된 데이터입니다. 이 개체의 각 키는 지정된 지표에 대해 해당 값이 있는 타임스탬프를 나타냅니다. 각 데이터 포인트 사이의 기간은 `granularity` 요청에 지정된 값입니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -237,9 +237,9 @@ curl -X POST \
 | timeseries.identity.dataset.namespacecode.recordfailed.count | 네임스페이스에 의해 실패한 ID 레코드 수입니다. | 네임스페이스 ID(**필수 여부**) |
 | timeseries.identity.dataset.namespacecode.recordskipped.count | 네임스페이스에서 건너뛴 ID 레코드 수입니다. | 네임스페이스 ID(**필수 여부**) |
 | timeseries.identity.graph.imsorg.uniqueidentities.count | IMS 조직의 ID 그래프에 저장된 고유 ID 수. | 해당 없음 |
-| timeseries.identity.graph.imsorg.namespacecode.uniqueidentities.count | 네임스페이스에 대한 ID 그래프에 저장된 고유 ID의 수입니다. | Namespace ID (**Required**) |
+| timeseries.identity.graph.imsorg.namespacecode.uniqueidentities.count | 네임스페이스에 대한 ID 그래프에 저장된 고유 ID의 수입니다. | 네임스페이스 ID(**필수 여부**) |
 | timeseries.identity.graph.imsorg.numidgraphs.count | IMS 조직의 ID 그래프에 저장된 고유 그래프 ID의 수입니다. | 해당 없음 |
-| timeseries.identity.graph.imsorg.graphstrength.uniqueidentities.count | Number of unique identities stored in the identity graph for your IMS Organization for a particular graph strength (&quot;unknown&quot;, &quot;weak&quot;, or &quot;strong&quot;). | Graph strength (**Required**) |
+| timeseries.identity.graph.imsorg.graphstrength.uniqueidentities.count | 특정 그래프 강도(&quot;알 수 없음&quot;, &quot;약함&quot; 또는 &quot;strong&quot;)에 대한 IMS 조직의 ID 그래프에 저장된 고유 ID의 수입니다. | 그래프 강도(**필수 여부**) |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -282,7 +282,7 @@ curl -X POST \
 | timeseries.profiles.dataset.batchsuccess.count | 번호 [!DNL Profile] 데이터 세트 또는 모든 데이터 세트에 대해 수집된 일괄 처리. | 데이터 세트 ID |
 | timeseries.profiles.dataset.batchfailed.count | 번호 [!DNL Profile] 하나의 데이터 세트 또는 모든 데이터 세트에 대해 배치가 실패했습니다. | 데이터 세트 ID |
 | platform.ups.ingest.streaming.request.m1_rate | 수신 요청 비율입니다. | IMS 조직 (**필수 여부**) |
-| platform.ups.ingest.streaming.access.put.success.m1_rate | Ingestion success rate. | IMS 조직 (**필수 여부**) |
+| platform.ups.ingest.streaming.access.put.success.m1_rate | 수집 성공률. | IMS 조직 (**필수 여부**) |
 | platform.ups.ingest.streaming.records.created.m15_rate | 데이터 집합에 대해 수집된 새 레코드 비율입니다. | 데이터 세트 ID (**필수 여부**) |
 | platform.ups.ingest.streaming.request.error.created.outOfOrder.m1_rate | 데이터 집합에 대한 만들기 요청에 대해 잘못된 타임스탬프가 지정된 레코드의 비율입니다. | 데이터 세트 ID (**필수 여부**) |
 | platform.ups.profile-commons.ingest.streaming.dataSet.record.created.timestamp | 데이터 집합에 대한 마지막 작성 레코드 요청에 대한 타임스탬프입니다. | 데이터 세트 ID (**필수 여부**) |
@@ -333,7 +333,7 @@ curl -X POST \
 | 오류 코드 | Title | 설명 |
 | --- | --- | --- |
 | `INSGHT-1000-400` | 잘못된 요청 페이로드 | 요청 페이로드에 문제가 있습니다. 페이로드 형식을 표시된 대로 정확히 일치하는지 확인합니다 [위](#v2). 가능한 모든 이유가 이 오류를 트리거할 수 있습니다.<ul><li>필수 필드 누락(예: ) `aggregator`</li><li>잘못된 지표</li><li>요청에 잘못된 집계가 포함되어 있습니다.</li><li>종료 날짜 이후에 시작 날짜가 발생합니다</li></ul> |
-| `INSGHT-1001-400` | 지표 쿼리 실패 | There was an error when attempting to query the metrics database, due to a bad request or the query itself being unparsable. 다시 시도하기 전에 요청의 형식이 제대로 지정되었는지 확인하십시오. |
+| `INSGHT-1001-400` | 지표 쿼리 실패 | 잘못된 요청 또는 쿼리 자체를 구문 분석할 수 없어서 지표 데이터베이스를 쿼리하는 동안 오류가 발생했습니다. 다시 시도하기 전에 요청의 형식이 제대로 지정되었는지 확인하십시오. |
 | `INSGHT-1001-500` | 지표 쿼리 실패 | 서버 오류로 인해 지표 데이터베이스를 쿼리하는 동안 오류가 발생했습니다. 요청을 다시 시도하십시오. 문제가 계속되면 Adobe 지원에 문의하십시오. |
 | `INSGHT-1002-500` | 서비스 오류 | 내부 오류로 인해 요청을 처리할 수 없습니다. 요청을 다시 시도하십시오. 문제가 계속되면 Adobe 지원에 문의하십시오. |
 | `INSGHT-1003-401` | 샌드박스 유효성 검사 오류 | 샌드박스 유효성 검사 오류로 인해 요청을 처리할 수 없습니다. 에서 제공한 샌드박스 이름을 확인합니다. `x-sandbox-name` header는 요청을 다시 시도하기 전에 IMS 조직에 대해 유효한 활성화된 샌드박스를 나타냅니다. |
