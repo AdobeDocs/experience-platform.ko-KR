@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: Flow Service API를 사용하여 Adobe Experience Platform을 Azure Data Lake Storage Gen2에 연결하는 방법을 알아봅니다.
 exl-id: cad5e2a0-e27c-4130-9ad8-888352c92f04
-source-git-commit: 13bd1254dfe89004465174a7532b4f6aaef54c09
+source-git-commit: f0bb779961e9387eab6a424461e35eba9ab48fe2
 workflow-type: tm+mt
 source-wordcount: '511'
 ht-degree: 1%
@@ -38,7 +38,7 @@ ht-degree: 1%
 | `servicePrincipalId` | 애플리케이션의 클라이언트 ID입니다. |
 | `servicePrincipalKey` | 응용 프로그램의 키입니다. |
 | `tenant` | 애플리케이션이 포함된 임차인 정보입니다. |
-| `connectionSpec.id` | 연결 사양은 기본 및 소스 연결 생성과 관련된 인증 사양이 포함된 소스의 커넥터 등록 정보를 반환합니다. ADLS Gen2의 연결 사양 ID는 다음과 같습니다. `0ed90a81-07f4-4586-8190-b40eccef1c5a`. |
+| `connectionSpec.id` | 연결 사양은 기본 및 소스 연결 생성과 관련된 인증 사양이 포함된 소스의 커넥터 등록 정보를 반환합니다. ADLS Gen2의 연결 사양 ID는 다음과 같습니다. `b3ba5556-48be-44b7-8b85-ff2b69b46dc4`. |
 
 이러한 값에 대한 자세한 내용은 [이 ADLS Gen2 문서](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-data-lake-storage).
 
@@ -83,7 +83,7 @@ curl -X POST \
             }
         },
         "connectionSpec": {
-            "id": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
+            "id": "b3ba5556-48be-44b7-8b85-ff2b69b46dc4",
             "version": "1.0"
         }
     }'
@@ -95,7 +95,7 @@ curl -X POST \
 | `auth.params.servicePrincipalId` | ADLS Gen2 계정의 서비스 주체 ID입니다. |
 | `auth.params.servicePrincipalKey` | ADLS Gen2 계정의 서비스 주요 키입니다. |
 | `auth.params.tenant` | ADLS Gen2 계정의 테넌트 정보입니다. |
-| `connectionSpec.id` | ADLS Gen2 연결 사양 ID: `0ed90a81-07f4-4586-8190-b40eccef1c5a1`. |
+| `connectionSpec.id` | ADLS Gen2 연결 사양 ID: `b3ba5556-48be-44b7-8b85-ff2b69b46dc41`. |
 
 **응답**
 
