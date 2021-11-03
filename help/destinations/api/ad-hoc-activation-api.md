@@ -5,7 +5,7 @@ title: (베타) Experience Platform 애드혹 활성화 API를 통해 대상 세
 description: 이 문서에서는 활성화 전에 발생하는 세그먼테이션 작업을 포함하여 임시 활성화 API를 통해 세그먼트를 활성화하는 종단 간 워크플로우를 보여줍니다.
 topic-legacy: tutorial
 type: Tutorial
-source-git-commit: d5b383ec4e9f6e2f05a0e5834e3998789a67ce32
+source-git-commit: 0c8fbaec9a592c9d5c20c077f31279f732ec2a0d
 workflow-type: tm+mt
 source-wordcount: '1056'
 ht-degree: 2%
@@ -124,9 +124,9 @@ Adobe Experience Platform은 24시간마다 예약된 세그먼테이션 작업�
 
 세그먼트 내보내기 작업이 완료되면 활성화를 트리거할 수 있습니다.
 
->[!WARNING]
+>[!NOTE]
 >
->임시 활성화 작업당 최대 50개의 세그먼트를 활성화할 수 있습니다. 세그먼트를 더 활성화하려고 하면 작업이 실패합니다.
+>임시 활성화 작업당 최대 20개의 세그먼트를 활성화할 수 있습니다. 세그먼트를 더 활성화하려고 하면 작업이 실패합니다.
 
 ### 요청
 
