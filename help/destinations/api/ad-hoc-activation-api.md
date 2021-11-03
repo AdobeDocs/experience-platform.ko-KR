@@ -5,7 +5,7 @@ title: (베타) 임시 활성화 API를 통해 대상자 세그먼트를 배치 
 description: 이 문서에서는 활성화 전에 발생하는 세분화 작업을 포함하여 임시 활성화 API를 통해 대상 세그먼트를 활성화하는 종단 간 워크플로우를 보여줍니다.
 topic-legacy: tutorial
 type: Tutorial
-source-git-commit: 8cac961e1566c48bacc0ec2ab3414132f81232e2
+source-git-commit: 96b0a2445eb2fd64ac8291cea6879f88d9f690ec
 workflow-type: tm+mt
 source-wordcount: '1054'
 ht-degree: 2%
@@ -148,7 +148,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adho
          "segmentId3"
       ]
    },
-   "exportId":[
+   "exportIds":[
       "exportId1"
    ]
 }
