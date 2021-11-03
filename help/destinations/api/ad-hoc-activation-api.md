@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;대상 api;임시 활성화;임시 세그먼트 활성화
 solution: Experience Platform
-title: (베타) Experience Platform 애드혹 활성화 API를 통해 대상 세그먼트를 활성화합니다
-description: 이 문서에서는 활성화 전에 발생하는 세그먼테이션 작업을 포함하여 임시 활성화 API를 통해 세그먼트를 활성화하는 종단 간 워크플로우를 보여줍니다.
+title: (베타) 임시 활성화 API를 통해 대상자 세그먼트를 배치 대상에 활성화합니다
+description: 이 문서에서는 활성화 전에 발생하는 세분화 작업을 포함하여 임시 활성화 API를 통해 대상 세그먼트를 활성화하는 종단 간 워크플로우를 보여줍니다.
 topic-legacy: tutorial
 type: Tutorial
-source-git-commit: 0c8fbaec9a592c9d5c20c077f31279f732ec2a0d
+source-git-commit: 8cac961e1566c48bacc0ec2ab3414132f81232e2
 workflow-type: tm+mt
-source-wordcount: '1056'
+source-wordcount: '1054'
 ht-degree: 2%
 
 ---
 
 
-# (베타) Experience Platform 애드혹 활성화 API를 통해 대상 세그먼트를 활성화합니다
+# (베타) 임시 활성화 API를 통해 대상자 세그먼트를 배치 대상에 활성화합니다
 
 >[!IMPORTANT]
 >
@@ -35,16 +35,16 @@ Ad-hoc 활성화 API를 사용하면 즉시 활성화해야 하는 상황에서 
 
 ### Flash 판매 또는 프로모션
 
-한 온라인 소매업체에서 제한된 플래시 세일을 준비하고 있으며, 고객에게 단시간에 알릴 것을 원합니다. Experience Platform 애드혹 활성화 API를 통해 마케팅 팀은 요청 시 대상 세그먼트를 내보내고 고객 기반에 프로모션 이메일을 빠르게 보낼 수 있습니다.
+한 온라인 소매업체에서 제한된 플래시 세일을 준비하고 있으며, 고객에게 단시간에 알릴 것을 원합니다. 마케팅 팀은 Experience Platform Ad-hoc 활성화 API를 통해 세그먼트를 온디맨드(on-demand)로 내보내고 고객 기반에 홍보 이메일을 빠르게 보낼 수 있습니다.
 
 
 ### 현재 이벤트 또는 최신 뉴스
 
-한 호텔은 다음 날 날씨가 좋을 것으로 예상하고 있어서, 그 팀은 도착된 손님들에게 빨리 알려주기 때문에 그들은 그에 따라 계획을 세울 수 있게 되기를 원합니다. 마케팅 팀은 Experience Platform ad-hoc 활성화 API를 사용하여 요청 시 대상 세그먼트를 내보내고 게스트에게 알릴 수 있습니다.
+한 호텔은 다음 날 날씨가 좋을 것으로 예상하고 있어서, 그 팀은 도착된 손님들에게 빨리 알려주기 때문에 그들은 그에 따라 계획을 세울 수 있게 되기를 원합니다. 마케팅 팀은 Experience Platform ad-hoc 활성화 API를 사용하여 세그먼트를 온디맨드(on-demand)로 내보내고 게스트에게 알릴 수 있습니다.
 
 ### 통합 테스트
 
-IT 관리자는 Experience Platform Ad-Hoc 활성화 API를 사용하여 요청 시 대상 세그먼트를 내보낼 수 있으므로 Adobe Experience Platform와의 사용자 지정 통합을 테스트하고 모든 것이 제대로 작동하는지 확인할 수 있습니다.
+IT 관리자는 Experience Platform Ad-Hoc 활성화 API를 사용하여 세그먼트를 온디맨드(on-demand)로 내보낼 수 있으므로 Adobe Experience Platform와의 사용자 지정 통합을 테스트하고 모든 것이 올바르게 작동하는지 확인할 수 있습니다.
 
 
 ## 가드레일 {#guardrails}
@@ -156,8 +156,8 @@ curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adho
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | 대상 세그먼트를 활성화할 대상 인스턴스의 ID입니다. |
-| <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | 선택한 대상으로 활성화할 대상 세그먼트의 ID입니다. |
+| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | 세그먼트를 활성화할 대상 인스턴스의 ID입니다. |
+| <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | 선택한 대상으로 활성화할 세그먼트의 ID입니다. |
 | <ul><li>`exportId1`</li></ul> | 의 응답으로 반환된 ID입니다 [세그먼트 내보내기](../../segmentation/api/export-jobs.md#retrieve-list) 작업. 자세한 내용은 [4단계: 최신 세그먼트 내보내기 작업 ID 가져오기](#segment-export-id) 를 참조하십시오. |
 
 ### 응답
