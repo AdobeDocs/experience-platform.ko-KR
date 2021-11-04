@@ -5,9 +5,9 @@ title: 세그멘테이션 서비스 UI 안내서
 topic-legacy: ui guide
 description: Adobe Experience Platform 세그멘테이션 서비스는 세그먼트 정의를 만들고 관리하기 위한 사용자 인터페이스를 제공합니다.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 8325ae6fd7d0013979e80d56eccd05b6ed6f5108
+source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
 workflow-type: tm+mt
-source-wordcount: '1691'
+source-wordcount: '1693'
 ht-degree: 0%
 
 ---
@@ -199,7 +199,7 @@ Edge Segmentation은 Platform의 세그먼트를 즉시 평가하여 동일한 �
 >
 >대상에 지정된 세그먼트를 만드는 경우에만 정책 위반이 적용됩니다.
 
-세그먼트 만들기가 완료되면 세그먼트 내에 정책 위반이 없도록 Adobe Experience Platform 데이터 거버넌스에서 세그먼트를 분석합니다. 자세한 내용은 [[!DNL Data Governance] 개요](../../data-governance/home.md) 추가 정보.
+세그먼트 만들기가 완료되면 세그먼트 내에 정책 위반이 없도록 Adobe Experience Platform 데이터 거버넌스에서 세그먼트를 분석합니다. 자세한 내용은 [데이터 거버넌스 개요](../../data-governance/home.md) 추가 정보.
 
 ![](../images/ui/overview/segment-dule-policy-violations.png)
 

@@ -3,16 +3,15 @@ keywords: Experience Platform;홈;인기 항목;데이터 사용 레이블;카�
 solution: Experience Platform
 title: 데이터 세트 서비스 API의 데이터 사용 레이블
 topic-legacy: developer guide
-description: 데이터 집합 서비스 API는 데이터 집합에 대한 데이터 사용 레이블을 관리하는 끝점을 제공합니다.
+description: 데이터 세트 서비스 API는 데이터 세트에 대한 데이터 사용 레이블을 관리하는 끝점을 제공합니다.
 exl-id: 2451e5b0-b117-4465-8e58-70fc341c0748
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
 workflow-type: tm+mt
-source-wordcount: '85'
+source-wordcount: '87'
 ht-degree: 0%
 
 ---
 
-# 데이터 집합 서비스 API의 데이터 사용 레이블
+# 데이터 세트 서비스 API의 데이터 사용 레이블
 
-카탈로그 서비스 API와 별도로 [!DNL Dataset Service] API는 데이터 집합에 대한 데이터 사용 레이블을 관리하는 끝점을 제공합니다. 이러한 끝점에 대한 호출을 수행하는 방법에 대한 자세한 내용은 Adobe Experience Platform [!DNL Data Governance] 설명서의 API](../../data-governance/labels/dataset-api.md)을 사용하여 데이터 사용 레이블 관리에 대한 안내서를 참조하십시오.[
+카탈로그 서비스 API와 별도의 [!DNL Dataset Service] API는 데이터 세트에 대한 데이터 사용 레이블을 관리하는 엔드포인트를 제공합니다. 이러한 종단점을 호출하는 방법에 대한 단계는 [API를 사용하여 데이터 사용 레이블 관리](../../data-governance/labels/dataset-api.md) ( Adobe Experience Platform 데이터 거버넌스 설명서 )을 참조하십시오.
