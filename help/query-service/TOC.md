@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform 쿼리 서비스 도움말
 breadcrumb-title: Query Service 안내서
 user-guide-description: 표준 SQL을 사용하여 플랫폼 데이터 레이크에서 데이터를 쿼리합니다.
 feature: Queries
-source-git-commit: 6d1ece1e7920e8c182c84bf8b57bdb6c3f853a60
+source-git-commit: a41efa075d0fff5537eaf055635e346ac5ce677b
 workflow-type: tm+mt
-source-wordcount: '139'
-ht-degree: 17%
+source-wordcount: '141'
+ht-degree: 18%
 
 ---
 
@@ -35,6 +35,7 @@ ht-degree: 17%
    - [샘플 Adobe Analytics 쿼리](best-practices/adobe-analytics.md)
    - [샘플 Adobe Target 쿼리](best-practices/adobe-target.md)
    - [익명 블록 쿼리 샘플](best-practices/anonymous-block.md)
+   - [증분 로드](best-practices/incremental-load.md)
 - SQL 참조 {#sql}
    - [SQL 개요](sql/overview.md)
    - [SQL 구문](sql/syntax.md)
@@ -42,7 +43,7 @@ ht-degree: 17%
    - [스파크 SQL 함수](sql/spark-sql-functions.md)
    - [메타데이터 명령](sql/metadata.md)
    - [준비된 설명](sql/prepared-statements.md)
-- 클라이언트를 쿼리 서비스 {#clients}에 연결
+- 클라이언트를 Query Service에 연결 {#clients}
    - [클라이언트 연결 개요](clients/overview.md)
    - [아쿠아 데이터 스튜디오](clients/aqua-data-studio.md)
    - [조회](clients/looker.md)
