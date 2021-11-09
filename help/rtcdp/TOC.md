@@ -4,10 +4,10 @@ solution: Experience Platform, Real-time Customer Data Platform
 audience: user
 user-guide-title: 실시간 고객 데이터 플랫폼 안내서
 user-guide-description: 여러 엔터프라이즈 소스에서 알려진 데이터와 익명의 데이터를 결합하여 고객 프로필을 생성하고, 이러한 프로필에서 고객 세그먼트를 생성하며, 이러한 세그먼트를 서드파티 대상으로 활성화할 수 있습니다.
-source-git-commit: b77380b661f59363daeeefb186a94e3d62b47e27
+source-git-commit: d83e51a5d45c92c9999c0f9ef469f83ffcf35d6e
 workflow-type: tm+mt
-source-wordcount: '178'
-ht-degree: 30%
+source-wordcount: '184'
+ht-degree: 29%
 
 ---
 
@@ -22,6 +22,7 @@ ht-degree: 30%
       * [지표 개요](home-page-dashboards.md)
    * 실시간 CDP B2B Edition {#rtcdpb2b-intro}
       * [실시간 CDP B2B Edition 시작(베타)](./b2b-use-case.md)
+      * [실시간 CDP B2B Edition 보호 기능](b2b-guardrails.md)
 * 계정 프로필(베타) {#account}
    * [계정 프로필 개요](accounts/account-profile-overview.md)
    * [계정 프로필 UI 안내서](accounts/account-profile-ui-guide.md)
