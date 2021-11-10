@@ -5,9 +5,9 @@ title: Adobe 개인 정보 JavaScript 라이브러리 개요
 topic-legacy: overview
 description: Adobe 개인 정보 JavaScript 라이브러리를 사용하면 Privacy Service에서 사용할 데이터 주체 ID를 검색할 수 있습니다.
 exl-id: 757bf69e-25bf-4ef9-9787-3e74b213908a
-source-git-commit: 82dea48c732b3ddea957511c22f90bbd032ed9b7
+source-git-commit: 7f3a0594147a8cea292263f60aa45dc5ebb8484e
 workflow-type: tm+mt
-source-wordcount: '944'
+source-wordcount: '1012'
 ht-degree: 6%
 
 ---
@@ -46,8 +46,9 @@ Adobe은 데이터 처리자로서 귀사의 허가 및 지침에 따라 개인 
 를 사용하기 시작하려면 [!DNL Privacy JS Library]다음 방법 중 하나를 사용하여 컴퓨터에 설치해야 합니다.
 
 * 다음 명령을 실행하여 npm으로 설치합니다. `npm install @adobe/adobe-privacy`
-* 설치 [Adobe 개인 정보 태그 확장](../tags/extensions/web/privacy/overview.md) 이름 아래 `AdobePrivacy`
 * 에서 다운로드 [Experience Cloud GitHub 리포지토리](https://github.com/Adobe-Marketing-Cloud/adobe-privacy)
+
+데이터 수집 UI의 태그 확장을 통해 라이브러리를 설치할 수도 있습니다. 의 개요를 참조하십시오. [Adobe 개인 정보 태그 확장](../tags/extensions/web/privacy/overview.md) 추가 정보.
 
 ## 를 인스턴스화합니다. [!DNL Privacy JS Library]
 
@@ -64,7 +65,7 @@ var adobePrivacy = new AdobePrivacy({
 
 다른 Adobe 솔루션에 대해 지원되는 매개 변수의 전체 목록은 지원되는 의 부록 섹션을 참조하십시오 [Adobe 솔루션 구성 매개 변수](#adobe-solution-configuration-parameters).
 
-## 코드 샘플
+## 코드 샘플 {#samples}
 
 다음 코드 샘플은 [!DNL Privacy JS Library] 태그를 사용하지 않는 일반적인 몇 가지 시나리오의 경우
 
@@ -176,26 +177,26 @@ adobePrivacy.removeIdentities().then(handleRemovedIDs)…
 
 이 섹션에는 [!DNL Privacy JS Library].
 
-### Adobe 솔루션 구성 매개 변수
+### Adobe 솔루션 구성 매개 변수 {#config-params}
 
 다음은 지원되는 Adobe 솔루션에 대해 허용되는 구성 매개 변수 목록입니다. [adobePrivacy 개체 인스턴스화](#instantiate-the-privacy-js-library).
+
+**모든 솔루션**
+
+| 매개 변수 | 설명 |
+| --- | --- |
+| `key` | 사용자 또는 데이터 주체를 식별하는 고유 ID입니다. 이 속성은 고유한 내부 추적 용도로 사용되며 Adobe에서 사용하지 않습니다. |
 
 **Adobe Analytics**
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `cookieDomainPeriods` | 쿠키 추적을 위한 도메인의 기간 수(기본값은 2). |
-| `dataCenter` | Adobe 데이터 수집 데이터 센터. 이 값은 JavaScript 웹 비콘에 지정된 경우에만 포함해야 합니다. 잠재적 값은 다음과 같습니다. <ul><li>&quot;d1&quot;: San Jose 데이터 센터.</li><li>&quot;d2&quot;: 댈러스 데이터 센터.</li></ul> |
-| `reportSuite` | JavaScript 웹 비콘에 지정된 보고서 세트 ID(예: &quot;s_code.js&quot; 또는 &quot;dtm&quot;). |
-| `trackingServer` | 데이터 수집 도메인(SSL 아님). 이 값은 JavaScript 웹 비콘에 지정된 경우에만 포함해야 합니다. |
-| `trackingServerSecure` | 데이터 수집 도메인(SSL). 이 값은 JavaScript 웹 비콘에 지정된 경우에만 포함해야 합니다. |
+| `cookieDomainPeriods` | 쿠키 추적에 사용되는 도메인의 기간 수(기본값: `2`예: `.domain.com`). JavaScript 웹 비콘에 지정하지 않는 한 여기에서 정의하지 마십시오. |
+| `dataCenter` | Adobe 데이터 수집 데이터 센터. 이 값은 JavaScript 웹 비콘에 지정된 경우에만 포함해야 합니다. 잠재적 값은 다음과 같습니다. <ul><li>`d1`: San Jose 데이터 센터</li><li>`d2`: 댈러스 데이터 센터</li></ul> |
+| `reportSuite` | JavaScript 웹 비콘에 지정된 보고서 세트 ID(예: `s_code.js` 또는 `dtm`). |
+| `trackingServer` | 비 SSL 데이터 수집 도메인. 이 값은 JavaScript 웹 비콘에 지정된 경우에만 포함해야 합니다. |
+| `trackingServerSecure` | SSL 데이터 수집 도메인. 이 값은 JavaScript 웹 비콘에 지정된 경우에만 포함해야 합니다. |
 | `visitorNamespace` | 방문자를 그룹화하는 데 사용되는 네임스페이스입니다. 이 값은 JavaScript 웹 비콘에 지정된 경우에만 포함해야 합니다. |
-
-**Adobe Target**
-
-| 매개 변수 | 설명 |
-| --- | --- |
-| `clientCode` | Adobe Target 시스템에서 클라이언트를 식별하는 클라이언트 코드입니다. |
 
 **Adobe Audience Manager**
 
@@ -203,8 +204,14 @@ adobePrivacy.removeIdentities().then(handleRemovedIDs)…
 | --- | --- |
 | `aamUUIDCookieName` | Adobe Audience Manager에서 반환된 고유 사용자 ID를 포함하는 자사 쿠키의 이름입니다. |
 
-**Adobe ID 서비스(ECID)**
+**Adobe Experience Cloud ID 서비스(ECID)**
 
 | 매개 변수 | 설명 |
 | --- | --- |
 | `imsOrgID` | IMS 조직 ID입니다. |
+
+**Adobe Target**
+
+| 매개 변수 | 설명 |
+| --- | --- |
+| `clientCode` | Adobe Target 시스템에서 클라이언트를 식별하는 클라이언트 코드입니다. |
