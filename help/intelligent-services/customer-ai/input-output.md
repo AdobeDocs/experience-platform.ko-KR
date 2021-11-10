@@ -6,9 +6,9 @@ title: 고객 AI의 입력 및 출력
 topic-legacy: Getting started
 description: Customer AI에서 활용하는 필수 이벤트, 입력 및 출력에 대해 자세히 알아보십시오.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: c3320f040383980448135371ad9fae583cfca344
+source-git-commit: 6da41552811a458fc6cf66b54fc2e9ed448a859d
 workflow-type: tm+mt
-source-wordcount: '2971'
+source-wordcount: '3054'
 ht-degree: 1%
 
 ---
@@ -21,15 +21,18 @@ ht-degree: 1%
 
 고객 AI는 다음 데이터 세트 중 하나를 분석하여 이탈이나 전환 성향 점수를 예측합니다.
 
+- 를 사용하여 Adobe Analytics 데이터 [Analytics 소스 커넥터](../../sources/tutorials/ui/create/adobe-applications/analytics.md)
+- 를 사용하여 Adobe Audience Manager 데이터 [Audience Manager 원본 커넥터](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md)
+- 경험 이벤트(EE) 데이터 세트
 - CEE(소비자 경험 이벤트) 데이터 세트
-- [Analytics 소스 커넥터를 사용하는 Adobe Analytics 데이터](../../sources/tutorials/ui/create/adobe-applications/analytics.md)
-- [Audience Manager 소스 커넥터를 사용하는 Adobe Audience Manager 데이터](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md)
+
+각 데이터 세트가 ECID와 같은 동일한 ID 유형(네임스페이스)을 공유하는 경우 다른 소스에서 여러 데이터 세트를 추가할 수 있습니다. 여러 데이터 세트 추가에 대한 자세한 내용은 [Customer AI 사용 안내서](./user-guide/configure.md#select-data)
 
 >[!IMPORTANT]
 >
->소스 커넥터에서 데이터를 채우는 데 최대 4주가 소요됩니다. 최근에 커넥터를 설정하는 경우 데이터 세트에 고객 AI에 필요한 최소 데이터 길이가 있는지 확인해야 합니다. [내역 데이터](#data-requirements) 섹션을 검토하여 예측 목표에 충분한 데이터가 있는지 확인하십시오.
+>소스 커넥터에서 데이터를 채우는 데 최대 4주가 소요됩니다. 최근에 커넥터를 설정하는 경우 데이터 세트에 고객 AI에 필요한 최소 데이터 길이가 있는지 확인해야 합니다. 다음 문서를 검토하십시오 [내역 데이터](#data-requirements) 예측 목표에 충분한 데이터가 있는지 확인하는 섹션을 참조하십시오.
 
-이 문서는 CEE 스키마를 기본 이해해야 합니다. 계속하기 전에 [Intelligent Services 데이터 준비](../data-preparation.md) 설명서를 검토하십시오.
+이 문서는 CEE 스키마를 기본 이해해야 합니다. 다음 문서를 검토하십시오 [Intelligent Services 데이터 준비](../data-preparation.md) 설명서를 참조하십시오.
 
 다음 표에서는 이 문서에서 사용되는 몇 가지 일반적인 용어에 대해 설명합니다.
 
@@ -38,7 +41,7 @@ ht-degree: 1%
 | [XDM(경험 데이터 모델)](../../xdm/home.md) | XDM은 Adobe Experience Platform에서 제공하는 Adobe Experience Cloud이 올바른 사람에게 올바른 메시지를 적시에 적절한 채널에 전달할 수 있도록 하는 기본 프레임워크입니다. Experience Platform을 빌드하는 방법론인 XDM System은 Platform 서비스에서 사용하기 위해 Experience Data Model 스키마를 작동시킵니다. |
 | XDM 스키마 | Experience Platform은 스키마를 사용하여 데이터의 구조를 일관되고 재사용 가능한 방식으로 설명합니다. 여러 시스템에서 데이터를 일관되게 정의하면 의미를 쉽게 유지할 수 있으므로 데이터의 가치를 얻을 수 있습니다. 데이터를 Platform에 수집하려면 먼저 데이터 구조를 설명하고 각 필드 내에 포함할 수 있는 데이터 유형에 제한을 제공하도록 스키마를 구성해야 합니다. 스키마는 기본 XDM 클래스와 0개 이상의 스키마 필드 그룹으로 구성됩니다. |
 | XDM 클래스 | 모든 XDM 스키마에서는 레코드 또는 시계열로 분류할 수 있는 데이터를 설명합니다. 스키마의 데이터 동작은 처음 만들 때 스키마에 할당된 스키마 클래스에 의해 정의됩니다. XDM 클래스는 특정 데이터 동작을 나타내려면 스키마에 포함해야 하는 가장 작은 수의 속성을 설명합니다. |
-| [필드 그룹](../../xdm/schema/composition.md) | 스키마에 필드를 하나 이상 정의하는 구성 요소입니다. 필드 그룹은 해당 필드가 스키마 계층에 표시되는 방식을 적용하므로 포함된 모든 스키마에서 동일한 구조를 표시합니다. 필드 그룹은 `meta:intendedToExtend` 속성으로 식별되는 특정 클래스와 호환됩니다. |
+| [필드 그룹](../../xdm/schema/composition.md) | 스키마에 필드를 하나 이상 정의하는 구성 요소입니다. 필드 그룹은 해당 필드가 스키마 계층에 표시되는 방식을 적용하므로 포함된 모든 스키마에서 동일한 구조를 표시합니다. 필드 그룹은 해당 필드별로 식별되는 특정 클래스와 호환됩니다 `meta:intendedToExtend` 속성을 사용합니다. |
 | [데이터 유형](../../xdm/schema/composition.md) | 스키마에 대해 하나 이상의 필드를 제공할 수 있는 구성 요소입니다. 그러나 필드 그룹과 달리 데이터 형식은 특정 클래스에 한정되지 않습니다. 따라서 데이터 형식을 보다 유연하게 사용하여 여러 스키마에서 다시 사용할 수 있는 공통 데이터 구조를 설명하거나 다른 클래스를 사용할 수 있습니다. 이 문서에 설명된 데이터 유형은 CEE 및 Adobe Analytics 스키마에서 모두 지원됩니다. |
 | 이탈 | 구독을 취소하거나 갱신하지 않도록 선택하는 계정의 비율 측정입니다. 이탈률이 높으면 MRR(월별 반복 매출)에 부정적인 영향을 줄 수 있으며 제품 또는 서비스에 대한 불만을 나타낼 수도 있습니다. |
 | [실시간 고객 프로필](../../profile/home.md) | 실시간 고객 프로필은 타겟팅되고 개인화된 경험 관리를 위한 중앙 집중식 소비자 프로필을 제공합니다. 각 프로필에는 모든 시스템에서 집계되는 데이터와, Experience Platform에 사용하는 시스템에서 발생한 개별 이벤트와 관련된 실행 가능한 타임스탬프 계정이 포함되어 있습니다. |
@@ -49,9 +52,9 @@ ht-degree: 1%
 >
 > Customer AI는 예측에 유용한 이벤트를 자동으로 결정하고 사용 가능한 데이터가 품질 예측을 생성하기에 충분하지 않은 경우 경고를 표시합니다.
 
-고객 AI는 CEE, Adobe Analytics 및 Adobe Audience Manager 데이터 세트를 지원합니다. CEE 스키마를 사용하려면 스키마 생성 프로세스 중에 필드 그룹을 추가해야 합니다. Adobe Analytics 또는 Adobe Audience Manager 데이터 세트를 사용하는 경우 소스 커넥터는 연결 프로세스 중에 아래에 나열된 표준 이벤트(커머스, 웹 페이지 세부 사항, 애플리케이션 및 검색)를 직접 매핑합니다.
+고객 AI는 Adobe Analytics, Adobe Audience Manager, EE(Experience Event) 및 CEE(Consumer Experience Event) 데이터 세트를 지원합니다. CEE 스키마를 사용하려면 스키마 생성 프로세스 중에 필드 그룹을 추가해야 합니다. Adobe Analytics 또는 Adobe Audience Manager 데이터 세트를 사용하는 경우 소스 커넥터는 연결 프로세스 중에 아래에 나열된 표준 이벤트(커머스, 웹 페이지 세부 사항, 애플리케이션 및 검색)를 직접 매핑합니다. 각 데이터 세트가 ECID와 같은 동일한 ID 유형(네임스페이스)을 공유하는 경우 다른 소스에서 여러 데이터 세트를 추가할 수 있습니다.
 
-Adobe Analytics 데이터 또는 Audience Manager 데이터 매핑에 대한 자세한 내용은 [Analytics 필드 매핑](../../sources/connectors/adobe-applications/analytics.md) 또는 [Audience Manager 필드 매핑](../../sources/connectors/adobe-applications/mapping/audience-manager.md) 안내서를 참조하십시오.
+Adobe Analytics 데이터 또는 Audience Manager 데이터 매핑에 대한 자세한 내용은 [Analytics 필드 매핑](../../sources/connectors/adobe-applications/analytics.md) 또는 [Audience Manager 필드 매핑](../../sources/connectors/adobe-applications/mapping/audience-manager.md) 안내서.
 
 ### 고객 AI에서 사용하는 표준 이벤트 {#standard-events}
 
@@ -63,9 +66,9 @@ XDM 경험 이벤트는 다양한 고객 행동을 결정하는 데 사용됩니
 >
 >Adobe Analytics 또는 Adobe Audience Manager 데이터를 사용하는 경우 데이터를 캡처하는 데 필요한 표준 이벤트를 사용하여 스키마가 자동으로 생성됩니다. 데이터를 캡처하기 위해 고유한 사용자 지정 CEE 스키마를 생성하는 경우 데이터를 캡처하는 데 필요한 필드 그룹을 고려해야 합니다.
 
-아래에 나열된 각 표준 이벤트에 대한 데이터가 필요하지 않지만 특정 이벤트는 특정 시나리오에 필요합니다. 사용 가능한 표준 이벤트 데이터가 있는 경우 스키마에 포함하는 것이 좋습니다. 예를 들어 구매 이벤트 예측을 위해 Customer AI 애플리케이션을 만들려면 `Commerce` 및 `Web page details` 데이터 유형의 데이터를 포함하는 것이 유용합니다.
+아래에 나열된 각 표준 이벤트에 대한 데이터가 필요하지 않지만 특정 이벤트는 특정 시나리오에 필요합니다. 사용 가능한 표준 이벤트 데이터가 있는 경우 스키마에 포함하는 것이 좋습니다. 예를 들어 구매 이벤트 예측을 위해 Customer AI 애플리케이션을 만들어야 하는 경우 의 데이터를 가져오는 것이 유용합니다 `Commerce` 및 `Web page details` 데이터 유형.
 
-Platform UI에서 필드 그룹을 보려면 왼쪽 레일에서 **[!UICONTROL 스키마]** 탭을 선택하고 **[!UICONTROL 필드 그룹]** 탭을 선택합니다.
+플랫폼 UI에서 필드 그룹을 보려면 **[!UICONTROL 스키마]** 왼쪽 레일의 탭을 선택하고 **[!UICONTROL 필드 그룹]** 탭.
 
 | 필드 그룹 | 이벤트 유형 | XDM 필드 경로 |
 | --- | --- | --- |
@@ -87,13 +90,13 @@ Platform UI에서 필드 그룹을 보려면 왼쪽 레일에서 **[!UICONTROL �
 |  | applicationUpgrades | <li> application.upgrades.value </li> <li> application.name </li> |
 | [!UICONTROL 검색 세부 사항] | 검색 | search.keywords |
 
-또한 고객 AI는 구독 데이터를 사용하여 더 나은 이탈 모델을 구축할 수 있습니다. 구독 데이터는 [[!UICONTROL 구독]](../../xdm/data-types/subscription.md) 데이터 유형 형식을 사용하여 각 프로필에 필요합니다. 대부분의 필드는 선택 사항이지만 최적 이탈 모델의 경우, `startDate`, `endDate` 및 기타 관련 세부 정보와 같은 가능한 많은 필드에 대한 데이터를 제공하는 것이 좋습니다.
+또한 고객 AI는 구독 데이터를 사용하여 더 나은 이탈 모델을 구축할 수 있습니다. 구독 데이터는 [[!UICONTROL 구독]](../../xdm/data-types/subscription.md) 데이터 형식 형식입니다. 대부분의 필드는 선택 사항이지만 최적의 이탈 모델의 경우 다음과 같은 필드를 최대한 많은 필드에 데이터를 제공하는 것이 좋습니다. `startDate`, `endDate`, 및 기타 관련 세부 사항.
 
-### 사용자 지정 필드 그룹 추가
+### 사용자 지정 이벤트 및 프로필 속성 추가
 
-Customer AI에서 사용하는 [표준 이벤트 필드](#standard-events) 외에 추가 정보를 포함하려는 경우. 사용자 지정 이벤트 옵션은 [인스턴스 구성](./user-guide/configure.md#custom-events) 중에 제공됩니다.
+추가 정보 [표준 이벤트 필드](#standard-events) 고객 AI에서 사용하는 경우 사용자 지정 이벤트 및 사용자 지정 프로필 속성 옵션이 [인스턴스 구성](./user-guide/configure.md#custom-events).
 
-선택한 데이터 세트에 스키마에 정의된 호텔 또는 레스토랑 예약과 같은 사용자 지정 이벤트가 포함된 경우 해당 이벤트를 인스턴스에 추가할 수 있습니다. 이러한 추가 사용자 지정 이벤트는 Customer AI에서 모델의 품질을 향상시키고 보다 정확한 결과를 제공하기 위해 사용합니다.
+선택한 데이터 세트에 스키마에 정의된 &quot;호텔 예약&quot; 또는 &quot;X 회사의 직원&quot;과 같은 사용자 지정 이벤트 또는 프로필 속성이 포함된 경우 해당 이벤트를 인스턴스에 추가할 수 있습니다. 이러한 추가적인 사용자 지정 이벤트 및 프로필 속성은 Customer AI에서 모델의 품질을 향상시키고 보다 정확한 결과를 제공하기 위해 사용합니다.
 
 ### 이전 데이터 {#data-requirements}
 
@@ -123,7 +126,7 @@ Customer AI는 필요한 최소 데이터 외에도 최신 데이터에서 가�
 
 ### 예제 시나리오
 
-이 섹션에서는 고객 AI 인스턴스에 대한 다양한 시나리오와 필수 및 권장 이벤트 유형을 설명합니다. 필드 그룹 및 해당 필드 경로에 대한 자세한 내용은 위의 [표준 이벤트 테이블](#standard-events)을 참조하십시오.
+이 섹션에서는 고객 AI 인스턴스에 대한 다양한 시나리오와 필수 및 권장 이벤트 유형을 설명합니다. 자세한 내용은 [표준 이벤트 테이블](#standard-events) 필드 그룹 및 해당 필드 경로에 대한 자세한 내용은 위에서 확인하십시오.
 
 >[!NOTE]
 >
@@ -131,7 +134,7 @@ Customer AI는 필요한 최소 데이터 외에도 최신 데이터에서 가�
 
 ### 시나리오 1: e-commerce 소매 웹 사이트에서의 구매 전환
 
-**예측 목표:** 웹 사이트에서 특정 의류 품목을 구매하기 위해 자격 있는 프로필의 전환 성향을 예측합니다.
+**예측 목표:** 웹 사이트에서 특정 의류 제품을 구매하기 위해 자격 있는 프로필의 전환 성향을 예측합니다.
 
 **필수 표준 이벤트 유형:**
 
@@ -145,11 +148,11 @@ Customer AI는 필요한 최소 데이터 외에도 최신 데이터에서 가�
 
 **추가적인 권장 표준 이벤트 유형:**
 
-고객 AI 인스턴스를 구성하는 동안 목표 및 대상 모집단 복잡성에 따라 나머지 [이벤트 유형](#standard-events)이 필요할 수 있습니다. 특정 데이터 유형에 사용할 수 있는 경우 이 데이터가 스키마에 포함되는 것이 좋습니다.
+나머지 중 하나 [이벤트 유형](#standard-events) 고객 AI 인스턴스를 구성하는 동안 목표 및 적격 모집단 복잡성에 따라 가 필요할 수 있습니다. 특정 데이터 유형에 사용할 수 있는 경우 이 데이터가 스키마에 포함되는 것이 좋습니다.
 
 ### 시나리오 2: 미디어 스트리밍 서비스 웹 사이트에서의 구독 전환
 
-**예측 목표:** 표준 또는 프리미엄 계획과 같은 특정 구독 수준에 커밋할 자격 있는 프로필에 대한 구독 전환 성향을 예측합니다.
+**예측 목표:** 표준 또는 프리미엄 플랜과 같은 특정 수준의 구독을 커밋할 자격 있는 프로필에 대한 구독 전환 성향을 예측합니다.
 
 **필수 표준 이벤트 유형:**
 
@@ -161,13 +164,13 @@ Customer AI는 필요한 최소 데이터 외에도 최신 데이터에서 가�
 - webVisit
 - 검색
 
-이 예에서 `order`, `checkouts` 및 `purchases`는 구독을 구매하고 해당 유형을 나타내는 데 사용됩니다.
+이 예제에서는 `order`, `checkouts`, 및 `purchases` 구독을 구매하고 해당 유형을 나타내는 데 사용됩니다.
 
-또한 정확한 모델의 경우 [구독 데이터 유형](../../xdm/data-types/subscription.md)에서 사용 가능한 속성 중 일부를 사용하는 것이 좋습니다.
+또한 정확한 모델의 경우 [구독 데이터 유형](../../xdm/data-types/subscription.md).
 
 **추가적인 권장 표준 이벤트 유형:**
 
-고객 AI 인스턴스를 구성하는 동안 목표 및 대상 모집단 복잡성에 따라 나머지 [이벤트 유형](#standard-events)이 필요할 수 있습니다. 특정 데이터 유형에 사용할 수 있는 경우 이 데이터가 스키마에 포함되는 것이 좋습니다.
+나머지 중 하나 [이벤트 유형](#standard-events) 고객 AI 인스턴스를 구성하는 동안 목표 및 적격 모집단 복잡성에 따라 가 필요할 수 있습니다. 특정 데이터 유형에 사용할 수 있는 경우 이 데이터가 스키마에 포함되는 것이 좋습니다.
 
 ### 시나리오 3: 전자 상거래 소매 웹 사이트에서의 이탈
 
@@ -185,7 +188,7 @@ Customer AI는 필요한 최소 데이터 외에도 최신 데이터에서 가�
 
 **추가적인 권장 표준 이벤트 유형:**
 
-고객 AI 인스턴스를 구성하는 동안 목표 및 대상 모집단 복잡성에 따라 나머지 [이벤트 유형](#standard-events)이 필요할 수 있습니다. 특정 데이터 유형에 사용할 수 있는 경우 이 데이터가 스키마에 포함되는 것이 좋습니다.
+나머지 중 하나 [이벤트 유형](#standard-events) 고객 AI 인스턴스를 구성하는 동안 목표 및 적격 모집단 복잡성에 따라 가 필요할 수 있습니다. 특정 데이터 유형에 사용할 수 있는 경우 이 데이터가 스키마에 포함되는 것이 좋습니다.
 
 ### 시나리오 4: 전자 상거래 소매 웹 사이트에서 업셀 전환
 
@@ -203,11 +206,11 @@ Customer AI는 필요한 최소 데이터 외에도 최신 데이터에서 가�
 
 **추가적인 권장 표준 이벤트 유형:**
 
-고객 AI 인스턴스를 구성하는 동안 목표 및 대상 모집단 복잡성에 따라 나머지 [이벤트 유형](#standard-events)이 필요할 수 있습니다. 특정 데이터 유형에 사용할 수 있는 경우 이 데이터가 스키마에 포함되는 것이 좋습니다.
+나머지 중 하나 [이벤트 유형](#standard-events) 고객 AI 인스턴스를 구성하는 동안 목표 및 적격 모집단 복잡성에 따라 가 필요할 수 있습니다. 특정 데이터 유형에 사용할 수 있는 경우 이 데이터가 스키마에 포함되는 것이 좋습니다.
 
 ### 시나리오 5: 온라인 뉴스 콘센트 구독 취소(이탈)
 
-**예측 목표:** 다음 달 서비스에서 가입 해지할 자격이 있는 모집단 성향을 예측합니다.
+**예측 목표:** 다음 달 서비스에서 가입 해지할 대상 인구의 성향을 예측합니다.
 
 **필수 표준 이벤트 유형:**
 
@@ -216,11 +219,11 @@ Customer AI는 필요한 최소 데이터 외에도 최신 데이터에서 가�
 - webVisit
 - 검색
 
-또한 정확한 모델의 경우 [구독 데이터 유형](../../xdm/data-types/subscription.md)에서 사용 가능한 속성 중 일부를 사용하는 것이 좋습니다.
+또한 정확한 모델의 경우 [구독 데이터 유형](../../xdm/data-types/subscription.md).
 
 **추가적인 권장 표준 이벤트 유형:**
 
-고객 AI 인스턴스를 구성하는 동안 목표 및 대상 모집단 복잡성에 따라 나머지 [이벤트 유형](#standard-events)이 필요할 수 있습니다. 특정 데이터 유형에 사용할 수 있는 경우 이 데이터가 스키마에 포함되는 것이 좋습니다.
+나머지 중 하나 [이벤트 유형](#standard-events) 고객 AI 인스턴스를 구성하는 동안 목표 및 적격 모집단 복잡성에 따라 가 필요할 수 있습니다. 특정 데이터 유형에 사용할 수 있는 경우 이 데이터가 스키마에 포함되는 것이 좋습니다.
 
 ### 시나리오 6: 모바일 애플리케이션 시작
 
@@ -242,25 +245,25 @@ Customer AI는 필요한 최소 데이터 외에도 최신 데이터에서 가�
 - applicationLaunches
 - applicationUpgrades
 
-이 예에서 모바일 애플리케이션을 구매해야 할 때 `order`, `checkouts` 및 `purchases`가 사용됩니다.
+이 예제에서는 `order`, `checkouts`, 및 `purchases` 모바일 애플리케이션을 구매해야 할 때 사용됩니다.
 
 **추가적인 권장 표준 이벤트 유형:**
 
-고객 AI 인스턴스를 구성하는 동안 목표 및 대상 모집단 복잡성에 따라 나머지 [이벤트 유형](#standard-events)이 필요할 수 있습니다. 특정 데이터 유형에 사용할 수 있는 경우 이 데이터가 스키마에 포함되는 것이 좋습니다.
+나머지 중 하나 [이벤트 유형](#standard-events) 고객 AI 인스턴스를 구성하는 동안 목표 및 적격 모집단 복잡성에 따라 가 필요할 수 있습니다. 특정 데이터 유형에 사용할 수 있는 경우 이 데이터가 스키마에 포함되는 것이 좋습니다.
 
 ### 시나리오 7: 실현된 트레이트(Adobe Audience Manager)
 
-**예측 목표:** 실현될 일부 트레이트의 성향을 예측합니다.
+**예측 목표:** 실현될 몇 가지 트레이트의 성향을 예측합니다.
 
 **필수 표준 이벤트 유형:**
 
-Adobe Audience Manager의 트레이트를 사용하려면 [Audience Manager 소스 커넥터](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md)를 사용하여 소스 연결을 만들어야 합니다. 소스 커넥터는 적절한 필드 그룹이 있는 스키마를 자동으로 만듭니다. 고객 AI에서 사용할 수 있도록 스키마에 대한 추가 이벤트 유형을 수동으로 추가할 필요는 없습니다.
+Adobe Audience Manager의 트레이트를 사용하려면 [Audience Manager 원본 커넥터](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md). 소스 커넥터는 적절한 필드 그룹이 있는 스키마를 자동으로 만듭니다. 고객 AI에서 사용할 수 있도록 스키마에 대한 추가 이벤트 유형을 수동으로 추가할 필요는 없습니다.
 
-새 고객 AI 인스턴스를 구성할 때 `audienceName` 및 `audienceID` 을 사용하여 목표를 정의하는 동안 점수를 매길 특정 트레이트를 선택할 수 있습니다.
+새 고객 AI 인스턴스를 구성하는 경우 `audienceName` 및 `audienceID` 목표를 정의하는 동안 점수를 얻기 위해 특정 트레이트를 선택하는 데 사용할 수 있습니다.
 
 ## 고객 AI 출력 데이터
 
-Customer AI는 대상으로 간주되는 개별 프로필에 대해 몇 가지 속성을 생성합니다. 제공된 항목을 기반으로 점수(출력)를 사용하는 두 가지 방법이 있습니다. 실시간 고객 프로필 사용 데이터 세트가 있는 경우 [세그먼트 빌더](../../segmentation/ui/segment-builder.md)에서 실시간 고객 프로필의 인사이트를 사용할 수 있습니다. 프로필 사용 데이터 세트가 없는 경우 데이터 레이크에서 사용할 수 있는 고객 AI 출력](./user-guide/download-scores.md) 데이터 세트를 [다운로드할 수 있습니다.
+Customer AI는 대상으로 간주되는 개별 프로필에 대해 몇 가지 속성을 생성합니다. 제공된 항목을 기반으로 점수(출력)를 사용하는 두 가지 방법이 있습니다. 실시간 고객 프로필 사용 데이터 세트가 있는 경우 [세그먼트 빌더](../../segmentation/ui/segment-builder.md). 프로필 사용 데이터 세트가 없는 경우 다음을 수행할 수 있습니다 [고객 AI 출력 다운로드](./user-guide/download-scores.md) 데이터 레이크에서 사용할 수 있는 데이터 집합입니다.
 
 >[!NOTE]
 >
@@ -279,4 +282,4 @@ Customer AI는 대상으로 간주되는 개별 프로필에 대해 몇 가지 �
 
 ## 다음 단계 {#next-steps}
 
-데이터를 준비하고 모든 자격 증명과 스키마를 준비했으면 [Configure a Customer AI Instance](./user-guide/configure.md) 안내서를 따르십시오. 이 안내서에서는 Customer AI에 대한 인스턴스를 만드는 과정을 안내합니다.
+데이터를 준비하고 모든 자격 증명과 스키마를 준비했으면 다음을 수행하여 시작하십시오 [고객 AI 인스턴스 구성](./user-guide/configure.md) 안내서. 이 안내서에서는 Customer AI에 대한 인스턴스를 만드는 과정을 안내합니다.
