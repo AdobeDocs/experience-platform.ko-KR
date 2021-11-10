@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform에 대한 최신 릴리스 노트입니다.
-source-git-commit: 0209d7ef1c82915bc11f07518194e3dd68c63de9
+source-git-commit: b6f4c79df79ae20b8051b69ef34dd255df193454
 workflow-type: tm+mt
-source-wordcount: '458'
+source-wordcount: '454'
 ht-degree: 7%
 
 ---
@@ -57,7 +57,7 @@ Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 
 | 기능 | 설명 |
 | --- | --- |
 | [!DNL Amazon S3] 소스 개선 사항 | 이제 를 사용할 수 있습니다 `s3SessionToken` 연결할 매개 변수 [!DNL Amazon S3] 임시 보안 자격 증명을 사용하여 Platform에 계정을 설정합니다. 이 토큰을 사용하면 다음에 대한 단기 임시 액세스를 제공할 수 있습니다 [!DNL Amazon S3] 신뢰할 수 없는 환경의 사용자에게 리소스를 제공합니다. 자세한 내용은 [[!DNL Amazon S3] 설명서](../../sources/connectors/cloud-storage/s3.md#prerequisites) 추가 정보. |
-| [!DNL Generic REST API] (베타) | 이제 다음을 만들 수 있습니다 [!DNL Generic REST API] 소스 연결 [[!DNL Flow Service] API](../../sources/tutorials/api/create/protocols/generic-rest.md) 또는 [사용자 인터페이스](../../sources/tutorials/ui/create/protocols/generic-rest.md) 일반 REST 애플리케이션에서 플랫폼으로 데이터를 가져올 수 있습니다. 자세한 내용은 [[!DNL Generic REST API] 개요](../../sources/connectors/protocols/generic-rest.md) 추가 정보. |
+| [!DNL Generic REST API] (베타) | 이제 다음을 만들 수 있습니다 [!DNL Generic REST API] 소스 연결 [[!DNL Flow Service] API](../../sources/tutorials/api/create/protocols/generic-rest.md) 일반 REST 애플리케이션에서 플랫폼으로 데이터를 가져올 수 있습니다. 자세한 내용은 [[!DNL Generic REST API] 개요](../../sources/connectors/protocols/generic-rest.md) 추가 정보. |
 | [!DNL Zoho CRM] (베타) | 이제 다음을 만들 수 있습니다 [!DNL Zoho CRM] 소스 연결 [[!DNL Flow Service] API](../../sources/tutorials/api/create/crm/zoho.md) 또는 [사용자 인터페이스](../../sources/tutorials/ui/create/crm/zoho.md) 데이터를에서 [!DNL Zoho CRM] Platform에 계정을 설정합니다. 자세한 내용은 [[!DNL Zoho CRM] 개요](../../sources/connectors/crm/zoho.md) 추가 정보. |
 
 소스에 대해 자세히 알아보려면 [소스 개요](../../sources/home.md).
