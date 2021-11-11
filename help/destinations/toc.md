@@ -4,9 +4,9 @@ user-guide-title: 대상 안내서
 user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화합니다.
 description: 이 문서에서는 Adobe Experience Platform 대상의 목차 목록을 설명합니다
 feature: Destinations
-source-git-commit: 8cac961e1566c48bacc0ec2ab3414132f81232e2
+source-git-commit: 3e2382cf4b02ea4fd40e3638b52b4719938a2ea2
 workflow-type: tm+mt
-source-wordcount: '669'
+source-wordcount: '668'
 ht-degree: 9%
 
 ---
@@ -39,7 +39,7 @@ ht-degree: 9%
    * [ (알파) HTTP 연결](./catalog/http-destination.md)
    * Adobe 대상{#adobe}
       * [Adobe 대상 개요](./catalog/adobe/overview.md)
-      * [(베타) Marketo Engage 연결](./catalog/adobe/marketo-engage.md)
+      * [Marketo Engage 연결](./catalog/adobe/marketo-engage.md)
       * [Experience Platform 세그먼트 공유](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
    * 광고 대상{#advertising}
       * [광고 대상 개요](./catalog/advertising/overview.md)
@@ -148,7 +148,7 @@ ht-degree: 9%
    * [개요](./destination-sdk/overview.md)
    * [통합 사전 요구 사항](./destination-sdk/integration-prerequisites.md)
    * [시작하기](./destination-sdk/getting-started.md)
-   * 대상 SDK 기능 {#functionality}
+   * Destination SDK 기능 {#functionality}
       * [구성 옵션](./destination-sdk/configuration-options.md)
       * [대상 구성](./destination-sdk/destination-configuration.md)
       * [서버 및 템플릿 사양](./destination-sdk/server-and-template-configuration.md)
@@ -161,7 +161,7 @@ ht-degree: 9%
          * [메시지 변환 템플릿 만들기 및 테스트](./destination-sdk/create-template.md)
          * [대상 구성 테스트](./destination-sdk/test-destination.md)
    * API 작업 {#api}
-      * [대상 SDK(대상 작성) API 참조](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
+      * [Destination SDK(대상 작성) API 참조](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
       * [대상 끝점 API 작업](./destination-sdk/destination-configuration-api.md)
       * [대상 서버 끝점 API 작업](./destination-sdk/destination-server-api.md)
       * [대상 메타데이터 끝점 API 작업](./destination-sdk/audience-metadata-api.md)
@@ -173,7 +173,7 @@ ht-degree: 9%
          * [대상 테스트 API 작업](./destination-sdk/destination-testing-api.md)
          * [샘플 프로필 생성 API 작업](./destination-sdk/sample-profile-generation-api.md)
    * 안내서 {#guides}
-      * [대상 SDK를 사용하여 스트리밍 대상 구성](./destination-sdk/configure-destination-instructions.md)
+      * [Destination SDK을 사용하여 스트리밍 대상 구성](./destination-sdk/configure-destination-instructions.md)
    * 대상을 문서화합니다. {#document-destination}
       * [Adobe Experience Platform에서 대상 문서화](./destination-sdk/docs-framework/documentation-instructions.md)
       * [GitHub 웹 인터페이스를 사용하여 대상 설명서 페이지를 만듭니다](./destination-sdk/docs-framework/use-github-interface-to-create-documentation.md)

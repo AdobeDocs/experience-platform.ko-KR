@@ -2,18 +2,14 @@
 title: Marketo Engage 대상
 description: Marketo Engage은 마케팅, 광고, 분석 및 상거래를 위한 유일한 CXM(엔드 투 엔드 고객 경험 관리) 솔루션입니다. CRM 리드 관리 및 고객 참여에서 계정 기반 마케팅 및 매출 기여도에 이르는 활동을 자동화하고 관리할 수 있습니다.
 exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
-source-git-commit: 6ea82e0589843f15b1486e1242aa68ef8e2fe9d3
+source-git-commit: 3e2382cf4b02ea4fd40e3638b52b4719938a2ea2
 workflow-type: tm+mt
-source-wordcount: '303'
+source-wordcount: '282'
 ht-degree: 1%
 
 ---
 
-# (베타) Marketo Engage 대상 {#beta-marketo-engage-destination}
-
->[!IMPORTANT]
->
->Adobe Experience Platform의 Marketo Engage 대상은 현재 베타에 있습니다. 설명서 및 기능은 변경될 수 있습니다.
+# Marketo Engage 대상 {#beta-marketo-engage-destination}
 
 ## 개요 {#overview}
 
@@ -25,7 +21,7 @@ Marketo Engage은 마케팅, 광고, 분석 및 상거래를 위한 유일한 CX
 
 | Target ID | 설명 |
 |---|---|
-| ECID | ECID를 나타내는 네임스페이스입니다. 이 네임스페이스를 다음 별칭으로 참조할 수도 있습니다. &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. 자세한 내용은 [ECID](/help/identity-service/ecid.md)에서 다음 문서를 참조하십시오. |
+| ECID | ECID를 나타내는 네임스페이스입니다. 이 네임스페이스를 다음 별칭으로 참조할 수도 있습니다. &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. 다음 문서를 참조하십시오. [ECID](/help/identity-service/ecid.md) 추가 정보. |
 | 이메일 | 이메일 주소를 나타내는 네임스페이스입니다. 이러한 유형의 네임스페이스는 종종 한 사람에게 연결되므로 다른 채널에서 해당 사용자를 식별하는 데 사용할 수 있습니다. |
 
 ## 내보내기 유형 {#export-type}
@@ -34,7 +30,7 @@ Marketo Engage은 마케팅, 광고, 분석 및 상거래를 위한 유일한 CX
 
 ## 대상 설정 및 세그먼트 활성화 {#set-up}
 
-대상을 설정하고 세그먼트를 활성화하는 방법에 대한 자세한 지침은 Marketo 설명서에서 [Adobe Experience Platform 세그먼트를 Marketo 정적 목록](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=en)에 푸시하십시오.
+대상을 설정하고 세그먼트를 활성화하는 방법에 대한 자세한 내용은 [Marketo 정적 목록에 Adobe Experience Platform 세그먼트 푸시](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=en) ( Marketo 설명서)를 참조하십시오.
 
 <!--
 
@@ -46,7 +42,7 @@ To connect to this destination, follow the steps described in the [destination c
 
 ## 데이터 사용 및 거버넌스 {#data-usage-governance}
 
-모든 [!DNL Adobe Experience Platform] 대상은 데이터를 처리할 때 데이터 사용 정책을 준수합니다. [!DNL Adobe Experience Platform]에서 데이터 거버넌스를 적용하는 방법에 대한 자세한 내용은 [데이터 거버넌스 개요](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html)를 참조하십시오.
+모두 [!DNL Adobe Experience Platform] 대상은 데이터를 처리할 때 데이터 사용 정책을 준수합니다. 방법에 대한 자세한 정보 [!DNL Adobe Experience Platform] 데이터 거버넌스를 적용하는 경우 다음을 참조하십시오. [데이터 거버넌스 개요](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html).
 
 <!--
 
