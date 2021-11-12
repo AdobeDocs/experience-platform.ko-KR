@@ -1,21 +1,15 @@
 ---
-title: 실시간 CDP B2B Edition을 위한 세그먼테이션 사용 사례 개요(베타)
+title: 실시간 CDP B2B Edition을 위한 세그먼테이션 사용 사례 개요
 description: 사용 가능한 다양한 실시간 CDP B2B Edition 사용 사례에 대한 개요입니다.
 exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
-source-git-commit: b77380b661f59363daeeefb186a94e3d62b47e27
+source-git-commit: e6f71954d52e0a998955c3420307417cc011c24d
 workflow-type: tm+mt
-source-wordcount: '1116'
-ht-degree: 1%
+source-wordcount: '1096'
+ht-degree: 0%
 
 ---
 
-# Real-time Customer Data Platform B2B Edition(베타)용 세그먼테이션 사용 사례 개요
-
-<!-- This document relates to this [ticket](https://jira.corp.adobe.com/browse/PLAT-100468) -->
-
->[!IMPORTANT]
->
->실시간 CDP B2B Edition은 현재 베타 버전입니다. 설명서 및 기능은 변경될 수 있습니다.
+# Real-time Customer Data Platform B2B Edition용 세그먼테이션 사용 사례 개요
 
 이 문서에서는 실시간 CDP B2B Edition에 사용할 수 있는 세그멘테이션 및 일반적인 B2B 사용 사례를 위해 다양한 유형의 속성을 결합할 수 있는 방법에 대한 예를 제공합니다.
 

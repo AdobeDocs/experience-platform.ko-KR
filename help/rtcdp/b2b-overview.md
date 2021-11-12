@@ -5,9 +5,9 @@ seo-title: Real-time Customer Data Platform B2B Edition overview
 description: Real-time Customer Data Platform B2B Edition 계정 개요
 seo-description: Overview of Real-time Customer Data Platform B2B Edition Account
 exl-id: 9b45bba4-fc46-4d69-b36a-5cb91f316612
-source-git-commit: f4ca1efe9c728f50008d7fbaa17aa009dfc18393
+source-git-commit: e6f71954d52e0a998955c3420307417cc011c24d
 workflow-type: tm+mt
-source-wordcount: '1072'
+source-wordcount: '1083'
 ht-degree: 0%
 
 ---
@@ -82,12 +82,10 @@ Google Customer Match, Facebook, LinkedIn, Marketo Engage, Amazon S3, Google Dis
 실시간 CDP B2B Edition이 B2B Business Service 모델을 통해 어떤 이점을 얻을 수 있는지 알아보려면 다음 설명서를 참조하여 시작하십시오.
 
 * [실시간 CDP B2B Edition에 대한 사용 사례 예](./b2b-use-case.md)
+* [Real-time Customer Data Platform B2B Edition에 대한 종단 간 자습서](./b2b-tutorial.md)
 * [데이터를 수집하는 방법](./sources/b2b.md)
 * [프로필에 액세스하는 방법](./profile/profile-overview.md)
 * [Real-time Customer Data Platform B2B Edition의 스키마](./schemas/b2b.md)
 * [세그먼트를 만드는 방법](./segmentation/b2b.md)
 * [세그먼트를 대상에 활성화하는 방법](./destinations/b2b.md)
 * [데이터 거버넌스 정책을 정의하고 적용하는 방법](./privacy/data-governance-overview.md)
-
-<!-- PLACEHOLDER - page under construction -->
-<!-- * [Privacy in Real-time Customer Data Platform B2B Edition](./privacy/b2b.md) -->

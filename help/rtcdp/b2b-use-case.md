@@ -1,20 +1,16 @@
 ---
 keywords: RTCDP;CDP;Real-time Customer Data Platform;실시간 고객 데이터 플랫폼;실시간 cdp;cdp;rtcdp
-title: Real-time Customer Data Platform B2B Edition(베타)의 사용 사례 예
+title: Real-time Customer Data Platform B2B Edition의 사용 사례 예
 description: 이 샘플 시나리오는 Real-time Customer Data Platform B2B Edition 구현의 구성에 대한 예를 제공합니다.
 exl-id: 15505980-ac33-44b2-8989-c08cbabd212b
-source-git-commit: 6f421a8ae77318ca2598d640cf7e27ea485ec9db
+source-git-commit: e6f71954d52e0a998955c3420307417cc011c24d
 workflow-type: tm+mt
-source-wordcount: '1146'
-ht-degree: 1%
+source-wordcount: '1134'
+ht-degree: 0%
 
 ---
 
-# Real-time Customer Data Platform B2B Edition(베타)의 사용 사례 예
-
->[!IMPORTANT]
->
->실시간 CDP Business to Business Edition은 현재 베타 버전입니다. 설명서 및 기능은 변경될 수 있습니다.
+# Real-time Customer Data Platform B2B Edition의 사용 사례 예
 
 Real-time Customer Data Platform B2B Edition은 기존 실시간 CDP 및 Adobe Experience Platform 오퍼링을 확장하여 B2B 데이터 및 워크플로우를 지원합니다. 이 문서에서는 B2B Edition에서 제공하는 추가적인 이점을 보여주는 사용 사례를 제공합니다. 자동 프로필 변수에는 다음이 포함됩니다.
 
@@ -29,8 +25,6 @@ Real-time Customer Data Platform B2B Edition은 기존 실시간 CDP 및 Adobe E
 그러나, 보데아는 두 개의 사업분야를 가지고 있다. 보데아의 첫 번째 사업인 &quot;라인 1&quot;은 자동차 산업을 위한 소프트웨어를 만든다. 2호선은 자동차 부품을 만드는 3D 프린터를 판다. Bodea의 두 사업 라인의 결과로, Bodea의 고객 계정에서 생성된 수익 데이터는 단일 보기에서 통일되지 않습니다.
 
 각 사업부에는 자체 판매 시스템이 있습니다. &quot;CRM 1&quot; 및 &quot;CRM 2&quot;. 이러한 CRM 영업 시스템은 모두 고유한 마케팅 자동화 플랫폼 &quot;Marketo 1&quot; 및 &quot;Marketo 2&quot;에 연결됩니다. CRM 1의 데이터는 Marketo 1에만 동기화되고 CRM2의 데이터는 Marketo 2에만 동기화됩니다. 궁극적으로 데이터는 다양한 기업 정보 사일로에 유지됩니다.
-
-<!-- ![lines of business diagram](./assets/lines-of-business.png) -->
 
 ## 현재 데이터 상태
 
@@ -56,13 +50,13 @@ Line 1은 새로운 소프트웨어 제품을 출시했으며, Bodea의 기존 �
 
 지금까지, Townsend는 그들의 모든 계좌에서 보데아 제품에 누적적으로 백만 달러 이상을 소비했습니다. 그러나, 하나의 판매 시스템 내에서 총 지출액이 100만 달러 이상을 넘지 않는 한, 이전 시스템을 사용하여 만들어진 세그먼트에는 Townsend의 사람이 포함되지 않을 것입니다. 매출 데이터는 다른 판매 시스템에서 계정에 분산되기 때문입니다.
 
-Townsend의 지출은 서로 다른 판매 시스템으로 구분되고 개별적 합계가 100만 건을 넘지 않으므로 Marketo 1 또는 Marketo 2에 자격이 있는 사용자는 찾을 수 없습니다.
+Townsend의 지출은 서로 다른 판매 시스템으로 구분되고 개별적 합계가 100만 건을 넘지 않으므로 Marketo 1 또는 Marketo 2에 자격이 있는 사람은 찾지 못할 것입니다.
 
 ### 실시간 CDP B2B Edition이 문제를 해결하는 방법
 
 Bodea의 마케팅 팀은 실시간 CDP B2B Edition을 통해 다음을 수행할 수 있습니다.
 
-- 서로 다른 모든 소스(여러 Marketo 및 CRM 인스턴스, 기본 데이터 관리)의 데이터를 실시간 CDP B2B Edition으로 결합합니다.
+- Combine the data from all disparate sources (multiple Marketo and CRM instances, and the Master Data Management) into Real-time CDP B2B Edition.
 
 RT-CDP B2B Edition을 사용하는 Bodea는 Marketo Engage 소스 커넥터를 사용하여 Marketo 1 및 Marketo 2의 B2B 데이터를 Experience Platform으로 가져오고 플랫폼 연결 애플리케이션을 사용하여 이 데이터를 최신 상태로 유지할 수 있습니다. 자세한 내용은 [Marketo 소스 커넥터](../sources/connectors/adobe-applications/marketo/marketo.md) 설명서 를 참조하십시오.
 
@@ -97,7 +91,7 @@ Bodea는 Marketo Engage 및 LinkedIn 대상을 사용하여 마케팅 팀을 위
 
 다음 설명서는 B2B 특정 기능에 대한 이해를 개선하기 위해 권장됩니다.
 
-<!-- PLACEHOLDER Link to B2B tutorial required  -->
+- [Real-time Customer Data Platform B2B Edition 엔드투엔드 자습서](./b2b-tutorial.md)
 - [Real-time Customer Data Platform B2B Edition의 소스](./sources/b2b.md)
 - [Real-time Customer Data Platform B2B Edition의 스키마](./schemas/b2b.md)
 - [B2B 세그먼테이션 예](./segmentation/b2b.md)

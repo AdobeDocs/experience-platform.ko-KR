@@ -5,10 +5,10 @@ seo-title: Real-time Customer Data Platform Overview
 description: Real-time Customer Data Platform 개요
 seo-description: Overview of Real-time Customer Data Platform
 exl-id: 8be51bf0-b372-4a81-ba45-f4fe4b7e1718
-source-git-commit: b77380b661f59363daeeefb186a94e3d62b47e27
+source-git-commit: e6f71954d52e0a998955c3420307417cc011c24d
 workflow-type: tm+mt
-source-wordcount: '421'
-ht-degree: 0%
+source-wordcount: '420'
+ht-degree: 2%
 
 ---
 
@@ -27,7 +27,7 @@ Real-time Customer Data Platform을 사용하면 다음 작업을 수행할 수 
 * Adobe Sensei 기반의 머신 러닝을 통해 실용적인 인사이트를 생성하고 마케터를 위해 구축된 AI 및 머신 러닝을 통해 대상을 확장할 수 있습니다.
 * 모든 채널 및 대상에서 개인화된 경험을 실시간으로 제공합니다.
 
-## Real-time Customer Data Platform B2B Edition(베타)
+## Real-time Customer Data Platform B2B 에디션
 
 또한 비즈니스 및 비즈니스 조직의 요구 사항에 맞게 다양한 버전의 실시간 CDP를 사용할 수 있습니다. 실시간 CDP B2B Edition은 마케터를 위한 실시간 CDP의 기능을 확장하기 위해 특별히 빌드되었습니다. Adobe Experience Platform 에코시스템 내에는 비즈니스-비즈니스 서비스 모델 내에서 보다 원활하게 운영하기 위해 다양한 기능이 활성화되어 있습니다.
 
