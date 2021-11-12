@@ -5,18 +5,14 @@ title: Marketo Engage 커넥터
 topic-legacy: overview
 description: 이 문서에서는 인증, 매핑 및 데이터 지연에 대한 정보를 포함하여 Marketo Engage 소스 커넥터에 대한 개요를 제공합니다.
 exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
-source-git-commit: a36a4775c14e97df51f218cea3a083d29c7b69dc
+source-git-commit: 21617c6ec364fc05d7b8b6d00daa68608d1ed318
 workflow-type: tm+mt
-source-wordcount: '548'
+source-wordcount: '529'
 ht-degree: 0%
 
 ---
 
-# (베타) [!DNL Marketo Engage] 커넥터
-
->[!IMPORTANT]
->
->다음 [!DNL Marketo Engage] Adobe Experience Platform의 소스는 현재 베타 버전입니다. 설명서 및 기능은 변경될 수 있습니다.
+# [!DNL Marketo Engage] 커넥터
 
 Adobe Experience Platform을 사용하면 Platform 서비스를 사용하여 들어오는 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 외부 소스에서 데이터를 수집할 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 등과 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 

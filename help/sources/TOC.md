@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 소스 커넥터 도움말
 breadcrumb-title: Source Connectors 안내서
 user-guide-description: 다양한 소스 또는 구조에서 데이터를 수집하고 레이블을 지정하며 기존에 수집한 데이터를 향상시킬 수 있습니다.
 feature: Sources
-source-git-commit: 0c7bb3d6f0a1bc4154bff0e4d79cc4c3c0b0ab71
+source-git-commit: 92b2dc869a659a030e1f13c83a0c5e3d707685c6
 workflow-type: tm+mt
-source-wordcount: '658'
+source-wordcount: '661'
 ht-degree: 14%
 
 ---
@@ -26,6 +26,7 @@ ht-degree: 14%
          - [Audience Manager 필드 매핑](connectors/adobe-applications/mapping/audience-manager.md)
          - [Target 필드 매핑](connectors/adobe-applications/mapping/target.md)
          - [Marketo Engage 필드 매핑](connectors/adobe-applications/mapping/marketo.md)
+         - [Salesforce 필드 매핑](connectors/adobe-applications/mapping/salesforce.md)
       - Marketo {#marketo}
          - [Marketo Engage 커넥터](connectors/adobe-applications/marketo/marketo.md)
          - [Marketo Engage 인증 안내서](connectors/adobe-applications/marketo/marketo-auth.md)
