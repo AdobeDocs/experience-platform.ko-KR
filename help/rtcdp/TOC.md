@@ -4,10 +4,10 @@ solution: Experience Platform, Real-time Customer Data Platform
 audience: user
 user-guide-title: 실시간 고객 데이터 플랫폼 안내서
 user-guide-description: 여러 엔터프라이즈 소스에서 알려진 데이터와 익명의 데이터를 결합하여 고객 프로필을 생성하고, 이러한 프로필에서 고객 세그먼트를 생성하며, 이러한 세그먼트를 서드파티 대상으로 활성화할 수 있습니다.
-source-git-commit: d5c05d4ada15a9c6a2d8afbaa6cd5675a8271e25
+source-git-commit: dfdcfe8d9110195c7e88fbb5a644321c9c3dbee4
 workflow-type: tm+mt
-source-wordcount: '174'
-ht-degree: 31%
+source-wordcount: '182'
+ht-degree: 30%
 
 ---
 
@@ -57,4 +57,5 @@ ht-degree: 31%
    * [소스 개요](sources/sources-overview.md)
    * [실시간 CDP B2B Edition의 소스](sources/b2b.md)
 * [Experience Platform 릴리스 노트](https://www.adobe.com/go/platform-release-notes-en)
+* [실시간 CDP B2B Edition 개요 릴리스 노트](./b2b-release-notes.md)
 * [Experience Platform 용어](https://www.adobe.com/go/platform-glossary-en)
