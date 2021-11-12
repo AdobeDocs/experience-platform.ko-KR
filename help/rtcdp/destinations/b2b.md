@@ -1,19 +1,15 @@
 ---
-title: Real-time Customer Data Platform B2B Edition(베타)의 대상
+title: Real-time Customer Data Platform B2B Edition의 대상
 description: Real-time Customer Data Platform B2B Edition에서 대상의 역할에 대한 개요입니다.
 exl-id: 81b502dd-d1b2-409e-972c-652c0a01526c
-source-git-commit: fef18389f8e64bdf11fe93d4077eb0474abc4981
+source-git-commit: f4ca1efe9c728f50008d7fbaa17aa009dfc18393
 workflow-type: tm+mt
-source-wordcount: '244'
+source-wordcount: '223'
 ht-degree: 0%
 
 ---
 
-# Real-time Customer Data Platform B2B Edition(베타)의 대상
-
->[!IMPORTANT]
->
->Real-time Customer Data Platform B2B Edition은 현재 베타 버전입니다. 설명서 및 기능은 변경될 수 있습니다.
+# Real-time Customer Data Platform B2B Edition의 대상
 
 >[!NOTE]
 >

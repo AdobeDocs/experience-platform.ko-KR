@@ -1,22 +1,18 @@
 ---
 keywords: RTCDP;CDP;B2B Edition;Real-time Customer Data Platform;실시간 고객 데이터 플랫폼;실시간 cdp;b2b;cdp;Customer AI
-title: 실시간 CDP B2B Edition 개요(베타)
+title: 실시간 CDP B2B Edition 개요
 seo-title: Real-time Customer Data Platform B2B Edition overview
 description: Real-time Customer Data Platform B2B Edition 계정 개요
 seo-description: Overview of Real-time Customer Data Platform B2B Edition Account
 exl-id: 9b45bba4-fc46-4d69-b36a-5cb91f316612
-source-git-commit: fef18389f8e64bdf11fe93d4077eb0474abc4981
+source-git-commit: f4ca1efe9c728f50008d7fbaa17aa009dfc18393
 workflow-type: tm+mt
-source-wordcount: '1092'
-ht-degree: 1%
+source-wordcount: '1072'
+ht-degree: 0%
 
 ---
 
-# Real-time Customer Data Platform B2B 에디션 개요(베타)
-
->[!IMPORTANT]
->
->실시간 CDP B2B Edition은 현재 베타 버전입니다. 설명서 및 기능은 변경될 수 있습니다.
+# Real-time Customer Data Platform B2B Edition 개요
 
 Real-time Customer Data Platform(실시간 CDP)를 기반으로 구축된 실시간 CDP B2B Edition은 비즈니스-비즈니스 서비스 모델로 운영되는 마케터를 위해 특별히 빌드되었습니다. 여러 소스의 데이터를 가져와서 사람 및 계정 프로필에 대한 단일 보기로 결합합니다. 이러한 통합 데이터를 통해 마케터는 특정 대상을 정확하게 타겟팅하고 사용 가능한 모든 채널에서 그러한 대상을 선택할 수 있습니다.
 
@@ -51,7 +47,7 @@ ID 확인 시스템은 다음 기능을 제공합니다.
 
 신원 확인 시스템은 사람들의 다면적인 분류를 지원하기 위해 확장되었다. 이 시스템을 통해 고객은 물론 비즈니스 기회에 대한 리드로도 파악할 수 있습니다.
 
-소스 CRM에 의해 동기화되고 시스템 내의 여러 경로를 통해 연결된 계정 레코드는 Platform에 의해 병합됩니다. 이 시스템은 비즈니스 기회와 관련된 사람들과 고객으로 기록된 사람들을 한데 모읍니다. 또한, 식별이 가능한 경우 이들을 속성으로서 구분할 수도 있습니다.
+소스 CRM에 의해 동기화되고 시스템 내의 여러 경로를 통해 연결된 계정 레코드는 Platform에 의해 병합됩니다. 이 시스템은 비즈니스 기회와 관련된 사람들과 고객으로 기록된 사람들을 한데 모읍니다. 또한, 식별이 가능한 경우 이들을 속성으로서 구분도 유지할 수 있습니다.
 
 일치하는 식별자는 여러 시스템에서 계정 레코드를 함께 연결하고 병합하는 데 사용됩니다. 계정 계층은 이 프로세스 전체에서 유지됩니다. 차별화 요소는 고객이 계정과 관련이 있는지 여부를 면밀히 살펴보고 필요한 경우 해당 고객과 계정을 분리할 수 있는 기능을 제공합니다.
 

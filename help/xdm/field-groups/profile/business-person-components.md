@@ -2,24 +2,20 @@
 title: XDM 비즈니스 개인 구성 요소 스키마 필드 그룹
 description: 이 문서에서는 XDM 비즈니스 개인 구성 요소 스키마 필드 그룹에 대한 개요를 제공합니다.
 exl-id: 965b89f4-59f5-43f4-8778-3549e15b44d4
-source-git-commit: b5cdd72238f7b4519de1c789f4294b9698415327
+source-git-commit: edf7afc5db219430232a3226dc691570b50a32bd
 workflow-type: tm+mt
-source-wordcount: '441'
+source-wordcount: '412'
 ht-degree: 3%
 
 ---
 
-# [!UICONTROL XDM 비즈니스 개인 구성 ] 요소스키마 필드 그룹(베타)
+# [!UICONTROL XDM 비즈니스 개인 구성 요소] 스키마 필드 그룹
 
->[!IMPORTANT]
->
->이 필드 그룹은 현재 베타에 있는 실시간 고객 데이터 플랫폼 B2B 에디션의 일부로 사용할 수 있습니다. 설명서 및 기능은 변경될 수 있습니다.
+[!UICONTROL XDM 비즈니스 개인 구성 요소] 는 의 표준 스키마 필드 그룹입니다. [[!DNL XDM Individual Profile] 클래스](../../classes/individual-profile.md) 이 경우 한 사람에 대한 여러 소스 레코드 및 개인 세분화에 필요한 기타 속성을 캡처합니다.
 
-[!UICONTROL XDM 비즈니스 개인 구성 ] 요소는 개인 세분화에 필요한 여러 소스 레코드 및 기타 속성을 캡처하는  [[!DNL XDM Individual Profile] ](../../classes/individual-profile.md) 클래스에 대한 표준 스키마 필드 그룹을 나타냅니다.
+을(를) 통해 사용자에 대한 프로필을 만들 때 [실시간 고객 프로필](../../../profile/home.md) 실시간 CDP의 B2B 버전에서 해당 프로필을 만드는 데 사용되는 정보는 여러 소스 레코드에서 제공될 수 있습니다. 예를 들어, 한 사람이 서로 다른 두 회사에 근무하는 경우, 많은 CRM 시스템에서 의도적으로 해당 사람의 복제 사본을 만들어 한 복사본이 회사 A에 연결되고 다른 한 복사본은 회사 B에 연결됩니다. 해당 데이터를 Adobe Experience Platform으로 가져올 때 이 필드 그룹을 사용하여 서로 다른 소스 레코드를 하나의 표현으로 병합합니다.
 
-실시간 CDP의 B2B 버전에서 [실시간 고객 프로필](../../../profile/home.md)을 통해 한 사용자에 대해 프로필이 작성되면 해당 프로필을 만드는 데 사용되는 정보가 여러 소스 레코드에서 제공될 수 있습니다. 예를 들어, 한 사람이 서로 다른 두 회사에 근무하는 경우, 많은 CRM 시스템에서 의도적으로 해당 사람의 복제 사본을 만들어 한 복사본이 회사 A에 연결되고 다른 한 복사본은 회사 B에 연결됩니다. 해당 데이터를 Adobe Experience Platform으로 가져올 때 이 필드 그룹을 사용하여 서로 다른 소스 레코드를 하나의 표현으로 병합합니다.
-
-필드 그룹은 개체 배열인 루트 수준 `personComponents` 필드를 제공합니다. 배열에 있는 각 개체는 다른 소스 레코드를 나타냅니다.
+필드 그룹은 루트 수준을 제공합니다 `personComponents` 필드 - 객체 배열입니다. 배열에 있는 각 개체는 다른 소스 레코드를 나타냅니다.
 
 ![](../../images/field-groups/business-person-components.png)
 

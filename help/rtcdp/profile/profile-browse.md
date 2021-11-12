@@ -3,9 +3,9 @@ keywords: 프로필 rtcdp 보기;rtcdp 프로필 보기;rtcdp 프로필 보기
 title: Real-time Customer Data Platform에서 프로필 찾아보기
 description: Real-time Customer Data Platform에서는 Adobe Experience Platform 사용자 인터페이스를 사용하여 실시간 고객 프로필 데이터를 검색할 수 있습니다.
 exl-id: 8481e286-2ff0-484f-85d2-a8db9b08d8d3
-source-git-commit: c15f59de49c60f55b432a39f30fb5f1865fd4671
+source-git-commit: f4ca1efe9c728f50008d7fbaa17aa009dfc18393
 workflow-type: tm+mt
-source-wordcount: '553'
+source-wordcount: '533'
 ht-degree: 0%
 
 ---
@@ -19,11 +19,7 @@ Adobe Experience Platform 사용자 인터페이스 내에서는 이러한 읽�
 
 Real-time Customer Data Platform은 Adobe Experience Platform을 기반으로 구축되어 Experience Platform UI에서 프로필 보기 기능을 사용할 수 있습니다. 플랫폼 사용자 인터페이스 내에서 고객 프로필을 보는 방법에 대한 자세한 안내서는 [실시간 고객 프로필 사용 안내서](../../profile/ui/user-guide.md).
 
-## 실시간 CDP, B2B Edition(베타)을 위한 프로필 개선 사항
-
->[!IMPORTANT]
->
->Real-time Customer Data Platform B2B Edition은 현재 베타 버전입니다. 설명서 및 기능은 변경될 수 있습니다.
+## 실시간 CDP, B2B Edition을 위한 프로필 개선 사항
 
 B2B Edition 사용자는 Adobe Experience Platform에서 지원하는 프로필 찾아보기 기능 외에도 실시간 CDP와 [!UICONTROL 속성] 및 [!UICONTROL 이벤트] 탭들을 나타냅니다. B2B 데이터를 사용하여 세그먼테이션을 수행할 수도 있습니다. 이러한 세그먼트는 고객의 [!UICONTROL 세그먼트 멤버십] 비B2B 세그먼트와 함께 탭합니다.
 

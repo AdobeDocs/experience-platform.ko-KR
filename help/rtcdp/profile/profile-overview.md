@@ -3,9 +3,9 @@ keywords: rtcdp 프로필;프로필 rtcdp;rtcdp ID;rtcdp 병합 정책;실시간
 title: 실시간 CDP에서 실시간 고객 프로필 이해하기
 description: Real-time Customer Data Platform을 통해 실시간 고객 프로필을 사용하여 고객에게 적절하고 일관된 적절한 경험을 제공하는 방법을 알아봅니다.
 exl-id: de70948c-ffc1-49d3-a57c-25ad415752ff
-source-git-commit: c15f59de49c60f55b432a39f30fb5f1865fd4671
+source-git-commit: f4ca1efe9c728f50008d7fbaa17aa009dfc18393
 workflow-type: tm+mt
-source-wordcount: '476'
+source-wordcount: '456'
 ht-degree: 0%
 
 ---
@@ -20,11 +20,7 @@ ht-degree: 0%
 
 실시간 CDP는 Experience Platform을 기반으로 구축되었으며 프로필 생성을 비롯한 많은 핵심 Experience Platform 기능과 기능을 사용합니다. 개별 고객의 이러한 집계된 보기는 고객 데이터를 저장하는 데 사용하는 다양한 시스템과 많은 마케팅 채널에서 가져온 데이터를 결합합니다.
 
-## 실시간 CDP, B2B Edition(베타)을 위한 프로필 개선 사항
-
->[!IMPORTANT]
->
->Real-time Customer Data Platform B2B Edition은 현재 베타 버전입니다. 설명서 및 기능은 변경될 수 있습니다.
+## 실시간 CDP, B2B Edition을 위한 프로필 개선 사항
 
 실시간 CDP에서 지원하는 프로필 기능 외에도 실시간 CDP, B2B Edition을 사용하여 계정 및 기회와 같은 개인 관련 중요한 정보를 검색할 수 있습니다. 실시간 CDP에 대한 프로필 개선 사항에 대해 자세히 알아보려면 [프로필 찾아보기 안내서](profile-browse.md).
 

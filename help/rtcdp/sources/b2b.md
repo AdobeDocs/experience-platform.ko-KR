@@ -1,19 +1,15 @@
 ---
-title: Real-time Customer Data Platform B2B Edition(베타)의 소스
+title: Real-time Customer Data Platform B2B Edition의 소스
 description: Real-time Customer Data Platform B2B Edition에서 소스의 역할에 대한 개요입니다.
 exl-id: eeea4b2e-67c5-4491-9b8e-4b8987e44777
-source-git-commit: 8dfeeea7c13802723bdfff48eaa49ba3f2c43d20
+source-git-commit: f4ca1efe9c728f50008d7fbaa17aa009dfc18393
 workflow-type: tm+mt
-source-wordcount: '283'
+source-wordcount: '262'
 ht-degree: 0%
 
 ---
 
-# Real-time Customer Data Platform B2B Edition(베타)의 소스
-
->[!IMPORTANT]
->
->Real-time Customer Data Platform B2B Edition은 현재 베타 버전입니다. 설명서 및 기능은 변경될 수 있습니다.
+# Real-time Customer Data Platform B2B Edition의 소스
 
 >[!NOTE]
 >

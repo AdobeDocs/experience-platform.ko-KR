@@ -2,20 +2,16 @@
 title: XDM 비즈니스 개인 세부 정보 스키마 필드 그룹
 description: 이 문서에서는 XDM 비즈니스 개인 세부 정보 스키마 필드 그룹에 대한 개요를 제공합니다.
 exl-id: e9da5c1c-5a30-4cbc-beb2-cc5efe57cab0
-source-git-commit: 57370e4ed0807bcebf30c73af629671b5390d90d
+source-git-commit: edf7afc5db219430232a3226dc691570b50a32bd
 workflow-type: tm+mt
-source-wordcount: '562'
-ht-degree: 6%
+source-wordcount: '533'
+ht-degree: 7%
 
 ---
 
-# [!UICONTROL XDM 비즈니스 개인 ] 세부 정보스키마 필드 그룹(베타)
+# [!UICONTROL XDM 비즈니스 개인 세부 정보] 스키마 필드 그룹
 
->[!IMPORTANT]
->
->이 필드 그룹은 현재 베타에 있는 실시간 고객 데이터 플랫폼 B2B 에디션의 일부로 사용할 수 있습니다. 설명서 및 기능은 변경될 수 있습니다.
-
-[!UICONTROL XDM 비즈니스 ] 개인 세부 정보 는 B2B(비즈니스- [[!DNL XDM Individual Profile] ](../../classes/individual-profile.md) 비즈니스) 엔터프라이즈 컨텍스트에서 개인 개인에 대한 정보를 캡처하는 클래스에 대한 표준 스키마 필드 그룹입니다.
+[!UICONTROL XDM 비즈니스 개인 세부 정보] 는 의 표준 스키마 필드 그룹입니다. [[!DNL XDM Individual Profile] 클래스](../../classes/individual-profile.md) 는 B2B(Business-to-Business) 기업의 컨텍스트에서 개인의 정보를 캡처합니다.
 
 ![](../../images/field-groups/business-person-details.png)
 
@@ -40,7 +36,7 @@ ht-degree: 6%
 | `b2b.personType` | 문자열 | B2B 사람의 유형입니다. |
 | `extSourceSystemAudit` | [외부 소스 시스템 감사 속성](../../data-types/external-source-system-audit-attributes.md) | 업무 담당자 관계가 외부 소스 시스템에서 생성된 경우 이 객체는 해당 시스템에 대한 감사 속성을 캡처합니다. |
 | `extendedWorkDetails` | 개체 | 사람에 대한 추가 작업 관련 세부 정보를 캡처합니다. |
-| `extendedWorkDetails.assistantDetails` | 개체 | 개인 도우미와 관련된 다음 속성을 캡처합니다. <ul><li>`name`: ([개인 이름](../../data-types/person-name.md)) 도우미의 전체 이름입니다.</li><li>`phone`: ([전화 번호](../../data-types/phone-number.md)) 도우미의 전화 번호입니다.</li></ul> |
+| `extendedWorkDetails.assistantDetails` | 개체 | 개인 도우미와 관련된 다음 속성을 캡처합니다. <ul><li>`name`: ([개인 이름](../../data-types/person-name.md)) 도우미의 전체 이름입니다.</li><li>`phone`: ([전화 번호](../../data-types/phone-number.md)) 조수의 전화 번호입니다.</li></ul> |
 | `extendedWorkDetails.departments` | 문자열 배열 | 개인이 근무하는 부서 이름 목록. |
 | `extendedWorkDetails.jobTitle` | 문자열 | 개인의 직함입니다. |
 | `extendedWorkDetails.photoUrl` | 문자열 | 사진 URL입니다. |
@@ -56,7 +52,7 @@ ht-degree: 6%
 | `workAddress` | [우편 주소](../../data-types/postal-address.md) | 사람의 회사 주소입니다. |
 | `workEmail` | [이메일 주소](../../data-types/email-address.md) | 사람의 회사 전자 메일 주소입니다. |
 | `workPhone` | [전화번호](../../data-types/phone-number.md) | 사람의 직장 전화 번호입니다. |
-| `identityMap` | 맵 | 개인의 지정된 ID 세트가 포함된 맵 필드입니다. ID 데이터를 수집할 때 시스템에서 이 필드를 자동으로 업데이트합니다. [실시간 고객 프로필](../../../profile/home.md)에 이 필드를 올바르게 활용하려면 데이터 작업에서 필드의 내용을 수동으로 업데이트하려고 하지 마십시오.<br /><br />사용 사례에 대한 자세한 내용은 스키마  [구성](../../schema/composition.md#identityMap) 의 기본 사항에서 ID 맵에 대한 섹션을 참조하십시오. |
+| `identityMap` | 맵 | 개인의 지정된 ID 세트가 포함된 맵 필드입니다. ID 데이터를 수집할 때 시스템에서 이 필드를 자동으로 업데이트합니다. 에 이 필드를 적절히 활용하려면 [실시간 고객 프로필](../../../profile/home.md)에서는 데이터 작업에서 필드의 내용을 수동으로 업데이트하지 마십시오.<br /><br />의 ID 맵에 대한 섹션을 참조하십시오. [스키마 구성 기본 사항](../../schema/composition.md#identityMap) 를 참조하십시오. |
 | `organizations` | 문자열 배열 | 개인이 근무하는 조직명 목록입니다. |
 
 {style=&quot;table-layout:auto&quot;}

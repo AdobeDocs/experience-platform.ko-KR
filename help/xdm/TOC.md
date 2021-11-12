@@ -4,9 +4,9 @@ user-guide-title: XDM(경험 데이터 모델) 시스템 도움말
 breadcrumb-title: Experience Data Model(XDM) 안내서
 user-guide-description: XDM(경험 데이터 모델) 클래스 및 스키마 필드 그룹을 사용하여 경험 데이터를 표준화합니다.
 feature: Schemas
-source-git-commit: 4a74faad811d9b13f93799686df44f04a8d1b784
+source-git-commit: eea5cfe6111d25da4a7978d3924861250059cc7e
 workflow-type: tm+mt
-source-wordcount: '398'
+source-wordcount: '396'
 ht-degree: 14%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 14%
    * [XDM 개별 프로필](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
    * [세그먼트 정의](./classes/segment-definition.md)
-   * B2B 클래스(베타) {#b2b}
+   * B2B 클래스 {#b2b}
       * [XDM 비즈니스 계정](./classes/b2b/business-account.md)
       * [XDM 비즈니스 계정 담당자 관계](./classes/b2b/business-account-person-relation.md)
       * [XDM 비즈니스 캠페인](./classes/b2b/business-campaign.md)
@@ -113,10 +113,10 @@ ht-degree: 14%
    * [웹 정보](./data-types/web-information.md)
    * [웹 상호 작용](./data-types/web-interaction.md)
    * [웹 페이지 세부 사항](./data-types/webpage-details.md)
-*  스키마 UI  {#ui}
+* [!UICONTROL 스키마] UI {#ui}
    * [개요](./ui/overview.md)
    * [XDM 리소스 살펴보기](./ui/explore.md)
-   * 리소스 {#resources} 만들기 및 편집
+   * 리소스 만들기 및 편집 {#resources}
       * [스키마](./ui/resources/schemas.md)
       * [클래스](./ui/resources/classes.md)
       * [필드 그룹](./ui/resources/field-groups.md)
@@ -153,7 +153,7 @@ ht-degree: 14%
    * [API에서 스키마 만들기](tutorials/create-schema-api.md)
    * [UI에서 스키마 관계 정의](tutorials/relationship-ui.md)
    * [API에서 스키마 관계 정의](tutorials/relationship-api.md)
-   * [실시간 CDP B2B Edition(베타)에서 스키마 관계 정의](tutorials/relationship-b2b.md)
+   * [실시간 CDP B2B Edition에서 스키마 관계 정의](tutorials/relationship-b2b.md)
    * [임시 스키마(API) 만들기](tutorials/ad-hoc.md)
 * [문제 해결 안내서](troubleshooting-guide.md)
 * [API 참조](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
