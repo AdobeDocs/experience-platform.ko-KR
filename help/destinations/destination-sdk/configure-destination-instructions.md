@@ -1,15 +1,15 @@
 ---
-description: 이 페이지에서는 대상 SDK를 사용하여 스트리밍 대상을 구성하는 단계를 나열하고 설명합니다.
-title: 대상 SDK를 사용하여 스트리밍 대상을 구성하는 방법
+description: 이 페이지에서는 Destination SDK을 사용하여 스트리밍 대상을 구성하는 단계를 나열하고 설명합니다.
+title: Destination SDK을 사용하여 스트리밍 대상 구성
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: 0bd57e226155ee68758466146b5d873dc4fdca29
+source-git-commit: bc77614eee6cc50d2ce6b14c1b228ed87f88f340
 workflow-type: tm+mt
-source-wordcount: '667'
+source-wordcount: '663'
 ht-degree: 0%
 
 ---
 
-# 대상 SDK를 사용하여 스트리밍 대상을 구성하는 방법
+# Destination SDK을 사용하여 스트리밍 대상 구성
 
 ## 개요 {#overview}
 
@@ -17,15 +17,15 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->대상 SDK를 통한 배치 대상 구성은 현재 지원되지 않습니다.
+>현재 Destination SDK을 통한 배치 대상 구성은 지원되지 않습니다.
 
 ## 전제 조건 {#prerequisites}
 
-아래 표시된 단계로 이동하기 전에 다음을 참조하십시오. [대상 SDK 시작하기](./getting-started.md) 대상 SDK API에서 사용할 필수 Adobe I/O 인증 자격 증명 및 기타 사전 요구 사항을 가져오는 방법에 대한 자세한 내용은 페이지를 참조하십시오.
+아래 표시된 단계로 이동하기 전에 다음을 참조하십시오. [Destination SDK 시작하기](./getting-started.md) Destination SDK API에서 사용할 필요한 Adobe I/O 인증 자격 증명 및 기타 사전 요구 사항을 획득하는 방법에 대한 정보.
 
-## 대상 SDK의 구성 옵션을 사용하여 대상을 설정하는 절차 {#steps}
+## Destination SDK의 구성 옵션을 사용하여 대상을 설정하는 절차 {#steps}
 
-![대상 SDK 엔드포인트를 사용하는 단계 설명](./assets/destination-sdk-steps.png)
+![Destination SDK 종단점 사용 단계 설명](./assets/destination-sdk-steps.png)
 
 ## 1단계: 서버 및 템플릿 구성 만들기 {#create-server-template-configuration}
 
@@ -152,7 +152,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 ## 4단계: 대상 메타데이터 구성 만들기 {#create-audience-metadata-configuration}
 
-일부 대상의 경우, 대상 SDK를 사용하려면 대상의 대상을 프로그래밍 방식으로 만들거나, 업데이트하거나, 삭제하도록 대상 메타데이터 구성을 구성해야 합니다. 을(를) 참조하십시오. [대상 메타데이터 관리](./audience-metadata-management.md) 이 구성을 설정해야 하는 시점 및 이 작업을 수행하는 방법에 대한 자세한 정보를 제공합니다.
+일부 대상의 경우 Destination SDK에서는 대상의 대상을 프로그래밍 방식으로 만들거나, 업데이트하거나, 삭제하도록 대상 메타데이터 구성을 구성해야 합니다. 을(를) 참조하십시오. [대상 메타데이터 관리](./audience-metadata-management.md) 이 구성을 설정해야 하는 시점 및 이 작업을 수행하는 방법에 대한 자세한 정보를 제공합니다.
 
 대상 메타데이터 구성을 사용하는 경우 이 구성을 2단계에서 만든 대상 구성에 연결해야 합니다. 대상 메타데이터 구성의 인스턴스 ID를 대상 구성에 다음으로 추가합니다. `audienceTemplateId`.
 

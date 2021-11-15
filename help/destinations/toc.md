@@ -4,9 +4,9 @@ user-guide-title: 대상 안내서
 user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화합니다.
 description: 이 문서에서는 Adobe Experience Platform 대상의 목차 목록을 설명합니다
 feature: Destinations
-source-git-commit: 3e2382cf4b02ea4fd40e3638b52b4719938a2ea2
+source-git-commit: a01730fce4f7746389fc48e700c259567492d0ee
 workflow-type: tm+mt
-source-wordcount: '668'
+source-wordcount: '677'
 ht-degree: 9%
 
 ---
@@ -174,6 +174,7 @@ ht-degree: 9%
          * [샘플 프로필 생성 API 작업](./destination-sdk/sample-profile-generation-api.md)
    * 안내서 {#guides}
       * [Destination SDK을 사용하여 스트리밍 대상 구성](./destination-sdk/configure-destination-instructions.md)
+      * [Destination SDK에서 작성된 대상을 검토할 수 있도록 제출](./destination-sdk/submit-destination.md)
    * 대상을 문서화합니다. {#document-destination}
       * [Adobe Experience Platform에서 대상 문서화](./destination-sdk/docs-framework/documentation-instructions.md)
       * [GitHub 웹 인터페이스를 사용하여 대상 설명서 페이지를 만듭니다](./destination-sdk/docs-framework/use-github-interface-to-create-documentation.md)
