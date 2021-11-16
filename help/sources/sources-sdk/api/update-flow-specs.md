@@ -5,7 +5,7 @@ topic-legacy: developer guide
 description: 다음 문서에서는 Sources SDK용 Flow Service API를 사용하여 흐름 사양을 검색하고 업데이트하는 방법에 대해 설명합니다.
 hide: true
 hidefromtoc: true
-source-git-commit: d4b5b54be9fa2b430a3b45eded94a523b6bd4ef8
+source-git-commit: d98cf404fd1a4d150f202154aba87b0089418957
 workflow-type: tm+mt
 source-wordcount: '432'
 ht-degree: 1%
@@ -616,4 +616,4 @@ PUT -X GET \
 
 ## 다음 단계
 
-적절한 흐름 사양에 새로운 연결 사양이 추가되어 이제 새 소스의 테스트 및 제출을 진행할 수 있습니다. 다음 안내서를 참조하십시오. [새 소스 테스트 및 제출](./overview.md#submit) 추가 정보.
+적절한 흐름 사양에 새로운 연결 사양이 추가되어 이제 새 소스의 테스트 및 제출을 진행할 수 있습니다. 다음 안내서를 참조하십시오. [새 소스 테스트 및 제출](./submit.md) 추가 정보.
