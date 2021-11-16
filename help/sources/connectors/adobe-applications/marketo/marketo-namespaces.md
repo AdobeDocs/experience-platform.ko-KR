@@ -5,9 +5,9 @@ title: B2B 네임스페이스 및 스키마
 topic-legacy: overview
 description: 이 문서에서는 B2B 소스 커넥터를 만들 때 필요한 사용자 지정 네임스페이스에 대한 개요를 제공합니다.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: 21617c6ec364fc05d7b8b6d00daa68608d1ed318
+source-git-commit: 8718512a9768158183b9fb6b9e336081e47cd889
 workflow-type: tm+mt
-source-wordcount: '1664'
+source-wordcount: '1688'
 ht-degree: 4%
 
 ---
@@ -15,6 +15,10 @@ ht-degree: 4%
 # B2B 네임스페이스 및 스키마
 
 이 문서에서는 B2B 소스에서 사용할 네임스페이스 및 스키마에 대한 기본 설정에 대한 정보를 제공합니다. 또한 이 문서에서는 B2B 네임스페이스 및 스키마를 생성하는 데 필요한 Postman 자동화 유틸리티 설정에 대한 세부 사항을 제공합니다.
+
+>[!IMPORTANT]
+>
+>액세스 권한이 있어야 합니다. [Real-time Customer Data Platform B2B 에디션](../../../../rtcdp/b2b-overview.md) B2B 스키마가 [실시간 고객 프로필](../../../../profile/home.md).
 
 ## B2B 네임스페이스 및 스키마 자동 생성 유틸리티를 설정합니다
 

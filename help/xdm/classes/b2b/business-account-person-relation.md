@@ -2,14 +2,18 @@
 title: XDM 비즈니스 계정 개인 관계 분류
 description: 이 문서에서는 XDM(Experience Data Model)의 XDM 비즈니스 계정 개인 관계 클래스에 대한 개요를 제공합니다.
 exl-id: d51abe9b-d936-4c84-96e2-35a81ca6b67f
-source-git-commit: edf7afc5db219430232a3226dc691570b50a32bd
+source-git-commit: 8718512a9768158183b9fb6b9e336081e47cd889
 workflow-type: tm+mt
-source-wordcount: '309'
+source-wordcount: '349'
 ht-degree: 4%
 
 ---
 
 # [!UICONTROL XDM 비즈니스 계정 담당자 관계] 클래스
+
+>[!IMPORTANT]
+>
+>이 클래스는 [Real-time Customer Data Platform B2B 에디션](../../../rtcdp/b2b-overview.md). 이 클래스가 참여하려면 실시간 CDP B2B Edition에 액세스할 수 있어야 합니다 [실시간 고객 프로필](../../../profile/home.md).
 
 [!UICONTROL XDM 비즈니스 계정 담당자 관계] 는 비즈니스 계정과 연결된 사람의 최소 필수 속성을 캡처하는 표준 XDM(Experience Data Model) 클래스입니다.
 
