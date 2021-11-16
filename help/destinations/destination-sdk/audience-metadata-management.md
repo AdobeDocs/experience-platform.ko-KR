@@ -2,7 +2,7 @@
 description: 대상 메타데이터 템플릿을 사용하여 대상에서 대상을 프로그래밍 방식으로 만들기, 업데이트 또는 삭제합니다. Adobe은 마케팅 API의 사양에 따라 구성할 수 있는 확장 가능한 대상 메타데이터 템플릿을 제공합니다. 템플릿을 정의, 테스트 및 제출하면 Adobe이 이 템플릿을 사용하여 대상에 API 호출을 구조화합니다.
 title: 대상 메타데이터 관리
 exl-id: 795e8adb-c595-4ac5-8d1a-7940608d01cd
-source-git-commit: 397c49284c30c648695a7a186d3f3e76a2675807
+source-git-commit: cb4e399798a9521e6f3da89cbd88d19476ab070d
 workflow-type: tm+mt
 source-wordcount: '1012'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 대상 메타데이터 템플릿을 사용하여 대상에서 대상을 프로그래밍 방식으로 만들기, 업데이트 또는 삭제합니다. Adobe은 마케팅 API의 사양에 따라 구성할 수 있는 확장 가능한 대상 메타데이터 템플릿을 제공합니다. 구성을 정의, 테스트 및 제출하면 Adobe이 이 구성을 사용하여 대상에 API 호출을 구조화합니다.
 
-`/authoring/audience-templates` API 엔드포인트를 사용하여 이 문서에 설명된 기능을 구성할 수 있습니다. 엔드포인트에서 수행할 수 있는 작업의 전체 목록은 [대상 메타데이터 엔드포인트 API 작업](./audience-metadata-api.md)을 참조하십시오.
+이 문서에 설명된 기능을 `/authoring/audience-templates` API 엔드포인트. 읽기 [대상 메타데이터 끝점 API 작업](./audience-metadata-api.md) 전체 작업 목록을 보려면 종단점에서 수행할 수 있습니다.
 
 ## 대상 메타데이터 관리 엔드포인트를 사용해야 하는 경우 {#when-to-use}
 
@@ -25,11 +25,11 @@ API 구성에 따라 Experience Platform에서 대상을 구성할 때 대상 �
 
 ## 대상 메타데이터 관리에서 지원하는 사용 사례 {#use-cases}
 
-대상 SDK의 대상 메타데이터 지원을 사용하면 Experience Platform 대상을 구성할 때 Platform 사용자에게 세그먼트를 대상에 매핑하고 활성화할 때 몇 가지 옵션 중 하나를 지정할 수 있습니다. [대상 구성](./destination-configuration.md#segment-mapping)의 세그먼트 매핑 섹션에서 매개 변수를 통해 사용자가 사용할 수 있는 옵션을 제어할 수 있습니다.
+Destination SDK의 대상 메타데이터 지원을 통해 Experience Platform 대상을 구성할 때 Platform 사용자에게 세그먼트를 대상에 매핑하고 활성화할 때 여러 옵션 중 하나를 지정할 수 있습니다. 의 세그먼트 매핑 섹션에서 매개 변수를 통해 사용자가 사용할 수 있는 옵션을 제어할 수 있습니다 [대상 구성](./destination-configuration.md#segment-mapping).
 
 ### 사용 사례 1 - 타사 API가 있으며 사용자가 매핑 ID를 입력할 필요가 없습니다
 
-세그먼트 또는 대상을 생성/업데이트/삭제하는 API 종단점이 있는 경우 대상 메타데이터 템플릿을 사용하여 세그먼트 만들기/업데이트/삭제 종단점의 스펙과 일치하도록 대상 SDK를 구성할 수 있습니다. Experience Platform은 프로그래밍 방식으로 세그먼트를 생성/업데이트/삭제하고 메타데이터를 Experience Platform에 다시 동기화할 수 있습니다.
+세그먼트 또는 대상을 생성/업데이트/삭제하는 API 종단점이 있는 경우 대상 메타데이터 템플릿을 사용하여 세그먼트 만들기/업데이트/삭제 종단점의 사양과 일치하도록 Destination SDK을 구성할 수 있습니다. Experience Platform은 프로그래밍 방식으로 세그먼트를 생성/업데이트/삭제하고 메타데이터를 Experience Platform에 다시 동기화할 수 있습니다.
 
 UI(Experience Platform 사용자 인터페이스)에서 세그먼트를 대상에 활성화할 때 활성화 워크플로우의 세그먼트 매핑 ID 필드를 수동으로 채울 필요가 없습니다.
 
@@ -47,10 +47,10 @@ UI(Experience Platform 사용자 인터페이스)에서 세그먼트를 대상�
 
 위에 나열된 사용 사례를 지원하기 위해 Adobe은 API 사양에 맞게 사용자 지정할 수 있는 일반 템플릿을 제공합니다.
 
-API가 지원하는 경우 일반 템플릿을 사용하여 [새 대상 템플릿을 만들 수 있습니다.](./audience-metadata-api.md#create)
+일반 템플릿을 사용하여 다음을 수행할 수 있습니다 [새 대상 템플릿 만들기](./audience-metadata-api.md#create) api에서 를 지원하는 경우:
 
 * HTTP 메서드: POST, GET, PUT, DELETE, PATCH
-* 인증 유형: OAuth 1, OAuth 2(새로 고침 토큰), OAuth 2(베어러 토큰 포함)
+* 인증 유형: OAuth 1, OAuth 2(새로 고침 토큰 포함), OAuth 2(베어러 토큰 포함)
 * 함수는 대상자 만들기, 대상자 업데이트, 대상자 가져오기, 대상자 삭제, 자격 증명 확인
 
 사용 사례에 필요한 경우 Adobe 엔지니어링 팀은 사용자와 협력하여 사용자 지정 필드로 일반 템플릿을 확장할 수 있습니다.
@@ -59,14 +59,14 @@ API가 지원하는 경우 일반 템플릿을 사용하여 [새 대상 템플�
 
 이 섹션에는 구성에 대한 기본 섹션에 대한 설명과 함께 참조를 위한 일반 대상 메타데이터 구성의 세 가지 예가 포함되어 있습니다. URL, 헤더, 요청 및 응답 본문이 세 가지 예제 구성 간에 어떻게 다른지 확인합니다. 이는 세 샘플 플랫폼의 마케팅 API에 대한 서로 다른 사양 때문입니다.
 
-일부 예제의 경우 `{{authData.accessToken}}` 또는 `{{segment.name}}` 같은 매크로 필드가 URL에 사용되고, 다른 예제의 경우 이러한 필드가 머리글이나 요청 본문에 사용됩니다. 마케팅 API 사양에 따라 다릅니다.
+일부 예제의 경우 다음과 같은 매크로 필드가 `{{authData.accessToken}}` 또는 `{{segment.name}}` 는 URL에서 사용되고, 다른 예제는 헤더 또는 요청 본문에서 사용됩니다. 마케팅 API 사양에 따라 다릅니다.
 
 | 템플릿 섹션 | 설명 |
 |--- |--- |
 | `create` | 플랫폼에서 세그먼트/대상을 프로그래밍 방식으로 만들고 정보를 다시 Adobe Experience Platform에 동기화하기 위해 API에 HTTP를 호출하기 위한 모든 필수 구성 요소(URL, HTTP 메서드, 헤더, 요청 및 응답 본문)를 포함합니다. |
 | `update` | Api에 HTTP를 호출하고 플랫폼에서 세그먼트/대상을 프로그래밍 방식으로 업데이트하여 정보를 다시 Adobe Experience Platform에 동기화하기 위해 필요한 모든 구성 요소(URL, HTTP 메서드, 헤더, 요청 및 응답 본문)를 포함합니다. |
 | `delete` | API를 프로그래밍 방식으로 호출하여 플랫폼에서 세그먼트/대상을 삭제할 수 있는 모든 필수 구성 요소(URL, HTTP 메서드, 헤더, 요청 및 응답 본문)를 포함합니다. |
-| `validations` | 파트너 API를 호출하기 전에 템플릿 구성의 모든 필드에 대한 유효성 검사를 실행합니다. 예를 들어 사용자의 계정 ID가 올바르게 입력되었는지 확인할 수 있습니다. |
+| `validate` | 파트너 API를 호출하기 전에 템플릿 구성의 모든 필드에 대한 유효성 검사를 실행합니다. 예를 들어 사용자의 계정 ID가 올바르게 입력되었는지 확인할 수 있습니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -79,7 +79,7 @@ API가 지원하는 경우 일반 템플릿을 사용하여 [새 대상 템플�
    "lastModifiedDate":"2021-07-27T21:25:42.763478Z",
    "metadataTemplate":{
       "create":{
-         "url":"https://api.moviestar.com/v1/adaccounts/{{customerData.accountId}}/segments",
+         "url":"https://adsapi.moviestar.com/v1/adaccounts/{{customerData.accountId}}/segments",
          "httpMethod":"POST",
          "headers":[
             {
@@ -118,7 +118,7 @@ API가 지원하는 경우 일반 템플릿을 사용하여 [새 대상 템플�
          ]
       },
       "update":{
-         "url":"https://adsapi.moviestar.com/v1/adaccounts/{{customerData.accountId}}/segments",
+         "url":"https://adsapi.moviestar.com/v1/adaccounts/{{customerData.accountId}}/segments/{{segment.alias}}",
          "httpMethod":"PUT",
          "headers":[
             {
@@ -155,7 +155,7 @@ API가 지원하는 경우 일반 템플릿을 사용하여 [새 대상 템플�
          ]
       },
       "delete":{
-         "url":"https://adsapi.moviestar.com/v1/segments/{{segment.alias}}",
+         "url":"https://adsapi.moviestar.com/v1/adaccounts/{{customerData.accountId}}/segments/{{segment.alias}}",
          "httpMethod":"DELETE",
          "headers":[
             {
@@ -375,7 +375,7 @@ API가 지원하는 경우 일반 템플릿을 사용하여 [새 대상 템플�
 }
 ```
 
-참조 설명서 [대상 메타데이터 끝점 API 작업](./audience-metadata-api.md)에서 템플릿의 모든 매개 변수에 대한 설명을 찾습니다.
+참조 설명서에서 템플릿의 모든 매개 변수에 대한 설명을 찾습니다 [대상 메타데이터 끝점 API 작업](./audience-metadata-api.md).
 
 ## 대상 메타데이터 템플릿에 사용된 매크로
 
@@ -388,8 +388,8 @@ API가 지원하는 경우 일반 템플릿을 사용하여 [새 대상 템플�
 | `{{segment.id}}` | Experience Platform에서 세그먼트 ID에 액세스할 수 있습니다. |
 | `{{customerData.accountId}}` | 대상 구성에서 설정한 계정 ID 필드에 액세스할 수 있습니다. |
 | `{{oauth2ServiceAccessToken}}` | OAuth 2 구성을 기반으로 액세스 토큰을 동적으로 생성할 수 있습니다. |
-| `{{authData.accessToken}}` | 액세스 토큰을 API 엔드포인트에 전달할 수 있습니다. Experience Platform이 만료되지 않은 토큰을 사용하여 대상에 연결해야 하는 경우 `{{authData.accessToken}}` 을 사용하고, 그렇지 않으면 `{{oauth2ServiceAccessToken}}` 을 사용하여 액세스 토큰을 생성합니다. |
-| `{{body.segments[0].segment.id}}` | 생성된 대상자의 고유 식별자를 키 `externalAudienceId` 값으로 반환합니다. |
+| `{{authData.accessToken}}` | 액세스 토큰을 API 엔드포인트에 전달할 수 있습니다. 사용 `{{authData.accessToken}}` Experience Platform이 만료되지 않은 토큰을 사용하여 대상에 연결해야 하는 경우, 그렇지 않으면 `{{oauth2ServiceAccessToken}}` 액세스 토큰을 생성합니다. |
+| `{{body.segments[0].segment.id}}` | 생성된 대상자의 고유 식별자를 키 값으로 반환합니다 `externalAudienceId`. |
 | `{{error.message}}` | Experience Platform UI에서 사용자에게 표시될 오류 메시지를 반환합니다. |
 
 {style=&quot;table-layout:auto&quot;}
