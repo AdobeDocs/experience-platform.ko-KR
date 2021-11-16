@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 소스 커넥터 도움말
 breadcrumb-title: Source Connectors 안내서
 user-guide-description: 다양한 소스 또는 구조에서 데이터를 수집하고 레이블을 지정하며 기존에 수집한 데이터를 향상시킬 수 있습니다.
 feature: Sources
-source-git-commit: 4ce9eac605fb7c801852cd0e109448d314092603
+source-git-commit: ae1a1139c24fd80e9f689e4c637897c905004c5f
 workflow-type: tm+mt
-source-wordcount: '741'
+source-wordcount: '731'
 ht-degree: 13%
 
 ---
@@ -259,23 +259,20 @@ ht-degree: 13%
    - [데이터 흐름 삭제](tutorials/ui/delete.md)
 - 소스 SDK {#sdk}
    - [개요](sources-sdk/overview.md)
-   - 소스 SDK 구성 {#config}
-      - [구성 옵션](sources-sdk/config/config.md)
-      - [인증 사양 구성](sources-sdk/config/authspec.md)
-      - [소스 사양 구성](sources-sdk/config/sourcespec.md)
-      - [탐색 사양 구성](sources-sdk/config/explorespec.md)
-   - 소스 SDK API 자습서 {#sdk-api}
-      - [소스 SDK API 개요](sources-sdk/api/overview.md)
-      - [시작하기](sources-sdk/api/getting-started.md)
-      - [연결 사양 만들기](sources-sdk/api/create.md)
-      - [연결 사양 업데이트](sources-sdk/api/update-connection-specs.md)
-      - [흐름 사양 업데이트](sources-sdk/api/update-flow-specs.md)
-      - [소스 제출](sources-sdk/api/submit.md)
-   - 소스 문서 작성 {#document}
-      - [Adobe Experience Platform에서 소스 문서화](sources-sdk/documentation/overview.md)
-      - [GitHub 웹 인터페이스를 사용하여 소스 설명서 페이지를 만듭니다](sources-sdk/documentation/github.md)
-      - [로컬 환경에서 텍스트 편집기를 사용하여 소스 설명서 페이지를 만듭니다](sources-sdk/documentation/text-editor.md)
-      - [설명서 셀프 서비스 템플릿](sources-sdk/documentation/template.md)
+   - [구성 옵션](sources-sdk/config/config.md)
+   - [인증 사양 구성](sources-sdk/config/authspec.md)
+   - [소스 사양 구성](sources-sdk/config/sourcespec.md)
+   - [탐색 사양 구성](sources-sdk/config/explorespec.md)
+   - [소스 SDK API 개요](sources-sdk/api/api-overview.md)
+   - [시작하기](sources-sdk/api/getting-started.md)
+   - [연결 사양 만들기](sources-sdk/api/create.md)
+   - [연결 사양 업데이트](sources-sdk/api/update-connection-specs.md)
+   - [흐름 사양 업데이트](sources-sdk/api/update-flow-specs.md)
+   - [소스 제출](sources-sdk/api/submit.md)
+   - [Adobe Experience Platform에서 소스 문서화](sources-sdk/documentation/doc-overview.md)
+   - [GitHub 웹 인터페이스를 사용하여 소스 설명서 페이지를 만듭니다](sources-sdk/documentation/github.md)
+   - [로컬 환경에서 텍스트 편집기를 사용하여 소스 설명서 페이지를 만듭니다](sources-sdk/documentation/text-editor.md)
+   - [설명서 셀프 서비스 템플릿](sources-sdk/documentation/template.md)
 - [흐름 실행 알림](notifications.md)
 - [IP 주소 허용 목록](ip-address-allow-list.md)
 - [자주 묻는 질문](./troubleshooting.md)
