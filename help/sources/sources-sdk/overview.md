@@ -6,7 +6,7 @@ topic-legacy: overview
 description: Adobe Experience Platform Sources SDK는 Flow Service API를 사용하여 REST API 기반 소스를 통합하여 데이터를 Experience Platform으로 가져올 수 있는 구성 API 세트입니다.
 hide: true
 hidefromtoc: true
-source-git-commit: d98cf404fd1a4d150f202154aba87b0089418957
+source-git-commit: 4ce9eac605fb7c801852cd0e109448d314092603
 workflow-type: tm+mt
 source-wordcount: '529'
 ht-degree: 0%
@@ -41,17 +41,17 @@ Adobe Experience Platform 소스 SDK는 를 사용하여 REST API 기반 소스�
 
 Sources SDK를 통해 고유한 REST API 기반 소스를 통합하고 데이터를 Platform과 함께 가져올 수 있습니다. [!DNL Flow Service]. 소스 SDK를 사용하면 를 통해 새 연결 사양을 만들고 제출함으로써 새로운 소스를 Platform과 통합할 수 있습니다 [!DNL Flow Service] API.
 
-다음 안내서를 참조하십시오. [새 연결 사양 생성](./api/api-overview.md) 를 참조하십시오.
+다음 안내서를 참조하십시오. [새 연결 사양 생성](./api/overview.md) 를 참조하십시오.
 
 ## 소스 문서 작성
 
-소스가 생성되면 다음을 참조하십시오. [설명서 안내서](./documentation/doc-overview.md) 을 통해 소스를 문서화하는 방법에 대한 지침 [!DNL GitHub] 웹 인터페이스 또는 텍스트 편집기를 통해 사용할 수 있습니다.
+소스가 생성되면 다음을 참조하십시오. [설명서 안내서](./documentation/overview.md) 을 통해 소스를 문서화하는 방법에 대한 지침 [!DNL GitHub] 웹 인터페이스 또는 텍스트 편집기를 통해 사용할 수 있습니다.
 
 ## 높은 수준의 프로세스
 
 Experience Platform에서 소스를 구성하는 단계별 프로세스는 다음과 같습니다.
 
-* 다음 문서를 참조하십시오. [Sources SDK API 안내서](./api/api-overview.md);
+* 다음 문서를 참조하십시오. [Sources SDK API 안내서](./api/overview.md);
    * 다음 문서를 참조하십시오. [시작 안내서](./api/getting-started.md);
    * 다음의 자습서를 따르십시오 [새 연결 사양 생성](./api/create.md);
    * 다음의 자습서를 따르십시오 [연결 사양 업데이트](./api/update-connection-specs.md);
@@ -61,7 +61,7 @@ Experience Platform에서 소스를 구성하는 단계별 프로세스는 다�
    * 다음 안내서를 참조하십시오. [인증 사양 구성](./config/authspec.md);
    * 다음 안내서를 참조하십시오. [소스 사양 구성](./config/sourcespec.md);
    * 다음 안내서를 참조하십시오. [탐색 사양 구성](./config/explorespec.md);
-* 소스 문서화를 시작하려면 다음을 참조하십시오 [소스 SDK용 설명서 작성에 대한 개요](./documentation/doc-overview.md)
+* 소스 문서화를 시작하려면 다음을 참조하십시오 [소스 SDK용 설명서 작성에 대한 개요](./documentation/overview.md)
    * 이 기능을 사용할 수 있습니다 [소스 설명서 템플릿](./documentation/template.md) 설명서를 구조화하는 방법
    * 다음 안내서를 참조하십시오. [gitHub 웹 인터페이스 사용](./documentation/github.md) gitHub를 사용하여 설명서를 만드는 방법에 대한 절차를 설명합니다.
    * 다음 안내서를 참조하십시오. [텍스트 편집기 사용](./documentation/text-editor.md) 로컬 시스템을 사용하여 설명서를 만드는 방법에 대한 단계입니다.

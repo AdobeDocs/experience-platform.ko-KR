@@ -5,7 +5,7 @@ topic-legacy: overview
 description: 이 문서에서는 소스 SDK를 사용하기 위해 준비해야 하는 구성에 대한 개요를 제공합니다.
 hide: true
 hidefromtoc: true
-source-git-commit: d98cf404fd1a4d150f202154aba87b0089418957
+source-git-commit: 4ce9eac605fb7c801852cd0e109448d314092603
 workflow-type: tm+mt
 source-wordcount: '248'
 ht-degree: 2%
@@ -87,4 +87,4 @@ ht-degree: 2%
 
 ## 다음 단계
 
-탐색 세부 항목이 채워지면 을 사용하여 전체 연결 사양을 만들 수 있습니다. [!DNL Flow Service] API. 자세한 내용은 [[!DNL Sources SDK] API 안내서](../api/api-overview.md) 추가 정보.
+탐색 세부 항목이 채워지면 을 사용하여 전체 연결 사양을 만들 수 있습니다. [!DNL Flow Service] API. 자세한 내용은 [[!DNL Sources SDK] API 안내서](../api/overview.md) 추가 정보.
