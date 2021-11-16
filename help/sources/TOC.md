@@ -4,7 +4,7 @@ user-guide-title: Adobe Experience Platform 소스 커넥터 도움말
 breadcrumb-title: Source Connectors 안내서
 user-guide-description: 다양한 소스 또는 구조에서 데이터를 수집하고 레이블을 지정하며 기존에 수집한 데이터를 향상시킬 수 있습니다.
 feature: Sources
-source-git-commit: c178bf54bfdda54293cb4e06d452f82111690895
+source-git-commit: 83aefe6a0880b201e376f458279461888e531741
 workflow-type: tm+mt
 source-wordcount: '741'
 ht-degree: 13%
@@ -257,14 +257,14 @@ ht-degree: 13%
    - [데이터 흐름 업데이트](tutorials/ui/update-dataflows.md)
    - [계정 삭제](tutorials/ui/delete-accounts.md)
    - [데이터 흐름 삭제](tutorials/ui/delete.md)
-- [소스 SDK] {#sources-sdk}
+- [소스 SDK] {#sdk}
    - [개요](sources-sdk/overview.md)
-   - [소스 SDK 기능] {#functionality}
+   - [소스 SDK 구성] {#config}
       - [구성 옵션](sources-sdk/config/config.md)
       - [인증 사양 구성](sources-sdk/config/authspec.md)
       - [소스 사양 구성](sources-sdk/config/sourcespec.md)
       - [탐색 사양 구성](sources-sdk/config/explorespec.md)
-   - [소스 SDK API 자습서] {#sdk-tutorials}
+   - [소스 SDK API 자습서] {#sdk-api}
       - [소스 SDK API 개요](sources-sdk/api/overview.md)
       - [시작하기](sources-sdk/api/getting-started.md)
       - [연결 사양 만들기](sources-sdk/api/create.md)
