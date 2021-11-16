@@ -2,9 +2,9 @@
 title: 코어 확장 개요
 description: Adobe Experience Platform의 코어 태그 확장에 대해 알아봅니다.
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
-source-git-commit: 868239c84571ed4a274db6b2b49694489a17073e
+source-git-commit: f3c23665229a83d6c63c7d6026ebf463069d8ad9
 workflow-type: tm+mt
-source-wordcount: '5292'
+source-wordcount: '5362'
 ht-degree: 65%
 
 ---
@@ -542,6 +542,10 @@ URL에 있어야 하는 하위 도메인을 한 개 이상 지정합니다.
 
 ### 사용자 지정 코드
 
+>[!NOTE]
+>
+>이제 ES6+ JavaScript가 사용자 지정 코드에서 지원됩니다. 일부 이전 브라우저는 ES6+를 지원하지 않습니다. ES6+ 함수를 사용하는 것이 미치는 영향을 이해하려면 지원되어야 하는 모든 웹 브라우저에 대해 테스트하십시오.
+
 이벤트가 트리거되고 조건이 평가된 후 실행되는 코드를 제공합니다.
 
 1. 작업 코드에 이름을 지정합니다.
@@ -645,6 +649,10 @@ setTimeout(function() {
 `string`
 
 ### 사용자 지정 코드
+
+>[!NOTE]
+>
+>이제 ES6+ JavaScript가 사용자 지정 코드에서 지원됩니다. 일부 이전 브라우저는 ES6+를 지원하지 않습니다. ES6+ 함수를 사용하는 것이 미치는 영향을 이해하려면 지원되어야 하는 모든 웹 브라우저에 대해 테스트하십시오.
 
 사용자 지정 JavaScript는 편집기 열기를 선택하고 코드를 편집기 창에 삽입하여 UI에 입력할 수 있습니다.
 

@@ -1,9 +1,10 @@
 ---
 title: 오류 처리
 description: Reactor API에서 오류를 처리하는 방법을 알아봅니다.
-source-git-commit: 6a1728bd995137a7cd6dc79313762ae6e665d416
+exl-id: 336c0ced-1067-4519-94e1-85aea700fce6
+source-git-commit: f3c23665229a83d6c63c7d6026ebf463069d8ad9
 workflow-type: tm+mt
-source-wordcount: '1071'
+source-wordcount: '1068'
 ht-degree: 0%
 
 ---
@@ -12,12 +13,12 @@ ht-degree: 0%
 
 Reactor API를 호출하는 동안 문제가 발생하면 다음 방법 중 하나로 오류가 반환될 수 있습니다.
 
-* **즉시 오류**: 즉시 오류가 발생하는 요청을 수행할 때 발생한 일반적인 유형의 오류를 반영하는 HTTP 상태와 함께 API에서 오류 응답이 반환됩니다.
-* **지연된 오류**: API 요청을 수행하면 지연된 오류(예: 비동기 활동)가 발생하는 경우 관련 리소스의 API `meta.status_details` 에서 오류가 반환될 수 있습니다.
+* **즉시 오류 발생**: 즉시 오류가 발생하는 요청을 수행할 때 발생한 일반적인 유형의 오류를 반영하는 HTTP 상태와 함께 API에서 오류 응답이 반환됩니다.
+* **지연된 오류**: API 요청을 수행하면 지연된 오류(예: 비동기 활동)가 발생하는 경우 의 API에서 오류가 반환될 수 있습니다 `meta.status_details` 관련 리소스
 
 ## 오류 형식
 
-오류 응답은 [JSON:API 오류 사양](http://jsonapi.org/format/#errors)을 따르며, 일반적으로 다음 구조를 준수합니다.
+오류 응답은 [JSON:API 오류 사양](http://jsonapi.org/format/#errors), 일반적으로 다음 구조를 준수합니다.
 
 ```json
 {
@@ -43,9 +44,9 @@ Reactor API를 호출하는 동안 문제가 발생하면 다음 방법 중 하�
 | `id` | 문제의 특정 발생에 대한 고유 식별자입니다. |
 | `status` | 문자열 값으로 표시되는 이 문제에 적용할 수 있는 HTTP 상태 코드입니다. |
 | `code` | 문자열 값으로 표시되는 애플리케이션별 오류 코드입니다. |
-| `title` | 지역화를 위해 **은(는)**&#x200B;을(를) 발생 항목에서 발생 항목으로 변경해서는 안 된다는 문제에 대한 간략한 사람이 읽을 수 있는 요약입니다. |
-| `detail` | 이 문제 발생에 대한 사람이 읽을 수 있는 설명입니다. `title` 과 같이 이 필드의 값은 현지화할 수 있습니다. |
-| `source` | 오류 소스에 대한 참조를 포함하는 객체(선택적으로 다음 멤버 중 하나 포함):<ul><li>`pointer`: 요청 문서(기본 데이터  [개체 또는 특정 속성의 경우 등)에서 관련 엔터티를 참조하는 JSON 포인터(RFC6901)](https://datatracker.ietf.org/doc/html/rfc6901)   `/data`  `/data/attributes/title` 문자열.</li></ul> |
+| `title` | 사람이 읽을 수 있는 간단한 문제 요약 **변경하지 마십시오** 현지화를 위한 경우를 제외하고 발생 지점부터 발생 지점까지. |
+| `detail` | 이 문제 발생에 대한 사람이 읽을 수 있는 설명입니다. 좋아요 `title`로 지정하는 경우 이 필드의 값은 현지화할 수 있습니다. |
+| `source` | 오류 소스에 대한 참조를 포함하는 객체(선택적으로 다음 멤버 중 하나 포함):<ul><li>`pointer`: a [JSON 포인터(RFC6901)](https://datatracker.ietf.org/doc/html/rfc6901) 요청 문서에서 연결된 엔터티를 참조하는 문자열(예: `/data` 기본 데이터 개체의 경우 또는 `/data/attributes/title` 를 반환합니다.</li></ul> |
 | `meta` | 오류에 대한 비표준 메타데이터가 포함된 객체입니다. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -85,13 +86,13 @@ Reactor API를 호출하는 동안 문제가 발생하면 다음 방법 중 하�
 | `invalid-rule` | 라이브러리에 잘못된 규칙을 추가할 수 없습니다. |
 | `invalid-settings-syntax` | 설정 JSON을 구문 분석하는 동안 구문 오류가 발생했습니다. |
 | `library-file-not-found` | 확장.json에 정의된 필수 파일을 zip 패키지 내에서 찾을 수 없습니다. |
-| `minification-error` | 잘못된 코드 또는 ES6 코드로 인해 코드를 컴파일할 수 없습니다. |
+| `minification-error` | 잘못된 코드로 인해 코드를 컴파일할 수 없습니다. |
 | `multiple-revisions` | 라이브러리에 각 리소스의 버전은 하나만 포함할 수 있습니다. |
 | `no-available-orgs` | 이 사용자 계정은 태그에 액세스할 수 있는 제품 프로필에 속해 있지 않습니다. 태그 권한이 있는 제품 프로필에 이 사용자를 추가하려면 Admin Console을 사용하십시오. |
 | `not-authorized` | 이 사용자 계정에는 이 작업을 수행하는 데 필요한 권한이 없습니다. |
 | `not-found` | 레코드를 찾을 수 없습니다. 검색하려는 개체 ID를 확인합니다. |
 | `not-unique` | 사용하려는 이름이 이미 사용 중입니다. 이 리소스의 경우 &#39;name&#39; 속성은 고유해야 합니다. |
-| `public-release-not-authorized` | 확장의 공개 릴리스는 `launch-ext-dev@adobe.com`에 의해 조정됩니다. 자세한 내용은 [확장 릴리스](../../extension-dev/submit/release.md)에 있는 문서를 참조하십시오. |
+| `public-release-not-authorized` | 확장의 공개 릴리스는 `launch-ext-dev@adobe.com`. 다음 문서를 참조하십시오. [확장 릴리스](../../extension-dev/submit/release.md) 추가 정보. |
 | `read-only` | 이 리소스는 읽기 전용이므로 수정할 수 없습니다. |
 | `session-timeout` | 사용자 세션이 만료되었습니다. 로그아웃한 후 다시 로그인하십시오. |
 | `sftp-authentication-failed` | SFTP 연결에 대해 인증이 실패했습니다. |

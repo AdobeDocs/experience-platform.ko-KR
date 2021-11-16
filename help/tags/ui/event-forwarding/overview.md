@@ -3,9 +3,9 @@ title: 이벤트 전달 개요
 description: 태그 구현을 변경하지 않고 Platform Edge Network를 사용하여 작업을 실행할 수 있는 Adobe Experience Platform의 이벤트 전달에 대해 알아보십시오.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
+source-git-commit: f3c23665229a83d6c63c7d6026ebf463069d8ad9
 workflow-type: tm+mt
-source-wordcount: '547'
+source-wordcount: '533'
 ht-degree: 42%
 
 ---
@@ -41,9 +41,9 @@ Adobe Experience Platform Web 및 Mobile SDK와 결합된 이벤트 전달을 �
 
 * 데이터 요소 토큰화
 
-   * 태그: 규칙에서 데이터 요소는 데이터 요소 이름의 시작 및 끝에서 `%`로 토큰화됩니다. 예: `%viewportHeight%`.
+   * 태그: 규칙에서 데이터 요소는 `%` at the first and end of the data element name. 예: `%viewportHeight%`.
 
-   * 이벤트 전달: 규칙에서 데이터 요소는 시작 부분에 `{{` 과 데이터 요소 이름의 끝 부분에 `}}` 로 토큰화됩니다. 예: `{{viewportHeight}}`.
+   * 이벤트 전달: 규칙에서 데이터 요소는 `{{` 시작 및 `}}` at the end of the data element name. 예: `{{viewportHeight}}`.
 
 * 데이터 참조 방법
 
@@ -61,9 +61,5 @@ Adobe Experience Platform Web 및 Mobile SDK와 결합된 이벤트 전달을 �
 * 규칙 작업 순서
 
    규칙의 작업 섹션에서 이벤트 전달 규칙이 항상 순차적으로 실행됩니다. 규칙을 저장할 때 작업 순서가 올바른지 확인합니다. 이 실행 시퀀스는 태그를 사용할 때처럼 선택할 수 없습니다.
-
-* 사용자 지정 코드 JavaScript 버전
-
-   태그는 JavaScript 버전 es5를 사용합니다. 이벤트 전달에서는 버전 es6를 사용합니다.
 
 <!--doc Adobe Cloud Connector extension, get from Jon-->
