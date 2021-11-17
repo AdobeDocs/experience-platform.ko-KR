@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform에 대한 2021년 11월 릴리스 노트입니다.
-source-git-commit: 4618d8d73beeb7e525b5681aaa119125adaf7883
+source-git-commit: 90e2bb00575cc0b38367d792c75e2b656491c49f
 workflow-type: tm+mt
-source-wordcount: '323'
+source-wordcount: '325'
 ht-degree: 24%
 
 ---
