@@ -3,9 +3,9 @@ product: adobe experience platform
 solution: Experience Platform, Real-time Customer Data Platform
 title: Adobe Experience Platform Real-time Customer Data Platform B2B Edition 릴리스 노트
 description: Adobe Experience Platform Real-time Customer Data Platform B2B Edition에 대한 최신 릴리스 노트입니다.
-source-git-commit: f5d9252b25793bd9233b5bc8dcc83be464ce7fdd
+source-git-commit: 4417670d167d7390d0e82ac5c32a1a6b46a15226
 workflow-type: tm+mt
-source-wordcount: '452'
+source-wordcount: '445'
 ht-degree: 1%
 
 ---
@@ -36,7 +36,7 @@ Real-time Customer Data Platform(실시간 CDP)를 기반으로 구축된 실시
 
 | 기능 | 설명 |
 |---|---|
-| Marketo Engage 소스 커넥터 | Adobe Experience Platform을 사용하면 Platform 서비스를 사용하여 들어오는 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 외부 소스에서 데이터를 수집할 수 있습니다. Marketo Engage 소스 커넥터는 리드 관리 및 B2B 마케터를 위한 완전한 솔루션입니다. |
+| Marketo Engage 소스 커넥터 | Marketo Engage 소스 커넥터를 사용하면 마케터가 하나 이상의 Marketo 인스턴스에서 Adobe Experience Platform 인스턴스로 데이터를 원활하게 수집할 수 있고 리드 관리 및 B2B 마케터를 위한 완벽한 솔루션을 제공합니다. |
 | Marketo Engage 대상 | 다음 [Marketo 대상](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/adobe/marketo-engage.html) 마케터는 Adobe Experience Platform에서 만든 세그먼트를 정적 목록으로 표시되는 Marketo에 푸시할 수 있습니다. |
 
 Marketo 소스 커넥터에 대한 자세한 내용은 [개요](../sources/connectors/adobe-applications/marketo/marketo.md)
