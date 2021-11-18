@@ -4,9 +4,9 @@ title: 동의 및 기본 설정 스키마 필드 그룹
 topic-legacy: overview
 description: 이 문서에서는 동의 및 기본 설정 스키마 필드 그룹에 대한 개요를 제공합니다.
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: d2c71423165776bf7c106a7503514c5acc284f8e
+source-git-commit: 6caece867afe3e6f3fd323843b753cce2319623c
 workflow-type: tm+mt
-source-wordcount: '958'
+source-wordcount: '941'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 0%
 >
 >다음 안내서를 참조하십시오. [xdm 리소스 탐색](../../ui/explore.md) XDM 리소스를 검색하고 Platform UI에서 해당 구조를 검사하는 방법에 대한 단계를 설명합니다.
 
-다음 JSON은 [!UICONTROL 동의 및 기본 설정] 필드 그룹이 처리할 수 있습니다. 이러한 각 필드의 특정 사용에 대한 정보는 다음에 나오는 섹션에서 제공됩니다.
+다음 JSON은 [!UICONTROL 동의 및 기본 설정] 필드 그룹이 처리할 수 있습니다. 필드 그룹에서 제공하는 대부분의 필드를 사용하는 방법에 대한 자세한 내용은 [동의 및 환경 설정 데이터 유형](../../data-types/consents.md). 아래 하위 섹션에서는 필드 그룹이 데이터 유형에 추가하는 고유한 속성에 중점을 둡니다.
 
 ```json
 {
@@ -96,8 +96,6 @@ ht-degree: 0%
 >* [UI에서 샘플 데이터 생성](../../ui/sample.md)
 >* [API에서 샘플 데이터 생성](../../api/sample-data.md)
 
-
-필드 그룹에서 제공하는 대부분의 필드를 사용하는 방법에 대한 자세한 내용은 [동의 및 환경 설정 데이터 유형](../../data-types/consents.md). 아래 하위 섹션에서는 필드 그룹이 데이터 유형에 추가하는 고유한 속성에 중점을 둡니다.
 
 ### `idSpecific`
 
