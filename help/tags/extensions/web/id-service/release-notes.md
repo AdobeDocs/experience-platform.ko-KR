@@ -1,10 +1,11 @@
 ---
 title: Adobe Experience Cloud Identity 서비스 확장에 대한 릴리스 노트
 description: Adobe Experience Platform의 Adobe Experience Cloud Identity 서비스 태그 확장에 대한 최신 릴리스 노트입니다.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: f9bfbed7-1eec-4916-9235-a75b5e2efcf8
+source-git-commit: 1d3abede47c97c9a4f3b18ae25c890c309e942fd
 workflow-type: tm+mt
 source-wordcount: '521'
-ht-degree: 73%
+ht-degree: 78%
 
 ---
 
@@ -12,11 +13,11 @@ ht-degree: 73%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../../term-updates.md)을 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
 
 Adobe Experience Platform 태그 확장뿐만 아니라 Experience Cloud Identity 서비스 자체에 대한 릴리스 노트에 대해서는 다음을 참조하십시오. [https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html)
 
-## 2020년 11월 3일
+## 2021년 11월 3일
 
 ### Experience Cloud ID 확장 5.2.1
 
