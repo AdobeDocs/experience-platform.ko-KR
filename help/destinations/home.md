@@ -5,9 +5,9 @@ seo-title: Destinations overview
 description: 크로스 채널 마케팅 캠페인, 이메일, 타겟팅 광고 등을 위해 Adobe Experience Platform 데이터를 대상으로 활성화하는 방법을 알아봅니다.
 seo-description: Destinations are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use Destinations in the Adobe Experience Platform to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: c93e23d334ffe3cbee049f120a7b6c5e7e69d0ea
 workflow-type: tm+mt
-source-wordcount: '461'
+source-wordcount: '460'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 0%
 ## 대상 단계 {#steps}
 
 * 선택 [셀프 서비스 카탈로그](./catalog/overview.md) 구현합니다.
-* 대상을 사용하여 프로필 또는 세그먼트를 마케팅 자동화 플랫폼, 디지털 광고 플랫폼 등으로 보내고 보낼 수 있습니다.
+* 대상을 사용하여 프로필 또는 세그먼트를 마케팅 자동화 플랫폼, 디지털 광고 플랫폼 등으로 보냅니다.
 * 정기적으로 기본 대상으로 데이터 내보내기를 예약합니다.
 
 ## 컨트롤 {#controls}

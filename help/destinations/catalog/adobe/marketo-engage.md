@@ -2,9 +2,9 @@
 title: Marketo Engage 대상
 description: Marketo Engage은 마케팅, 광고, 분석 및 상거래를 위한 유일한 CXM(엔드 투 엔드 고객 경험 관리) 솔루션입니다. CRM 리드 관리 및 고객 참여에서 계정 기반 마케팅 및 매출 기여도에 이르는 활동을 자동화하고 관리할 수 있습니다.
 exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
-source-git-commit: 9c5a5a49385baa7377ebdc806fd22918c39ad0b2
+source-git-commit: 05b97e8bdeb4ffb81a4a671d282d0d8ebc7e870a
 workflow-type: tm+mt
-source-wordcount: '334'
+source-wordcount: '379'
 ht-degree: 1%
 
 ---
@@ -35,6 +35,14 @@ Marketo Engage은 마케팅, 광고, 분석 및 상거래를 위한 유일한 CX
 ## 대상 설정 및 세그먼트 활성화 {#set-up}
 
 대상을 설정하고 세그먼트를 활성화하는 방법에 대한 자세한 내용은 [Marketo 정적 목록에 Adobe Experience Platform 세그먼트 푸시](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=en) ( Marketo 설명서)를 참조하십시오.
+
+아래 비디오에서는 Marketo 대상을 구성하고 세그먼트를 활성화하는 방법을 보여줍니다.
+
+>[!NOTE]
+>
+>Experience Platform 사용자 인터페이스는 자주 업데이트되며 이 비디오를 기록한 후 변경되었을 수 있습니다. 최신 정보는 위에 링크된 안내서를 참조하십시오.
+
+>[!VIDEO](https://video.tv.adobe.com/v/338248?quality=12)
 
 <!--
 
