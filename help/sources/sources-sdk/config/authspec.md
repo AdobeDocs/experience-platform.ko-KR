@@ -5,13 +5,13 @@ topic-legacy: overview
 description: 이 문서에서는 소스 SDK를 사용하기 위해 준비해야 하는 구성에 대한 개요를 제공합니다.
 hide: true
 hidefromtoc: true
-source-git-commit: d4b5b54be9fa2b430a3b45eded94a523b6bd4ef8
+exl-id: 68ed22fe-1f22-46d2-9d58-72ad8a9e6b98
+source-git-commit: a3bfd3b87343ca1dd2d122f4f82926082965578c
 workflow-type: tm+mt
 source-wordcount: '526'
 ht-degree: 2%
 
 ---
-
 
 # 소스 SDK에 대한 인증 사양 구성
 
@@ -180,7 +180,7 @@ OAuth 2 새로 고침 코드는 임시 액세스 토큰 및 새로 고침 토큰
 | 속성 | 설명 | 예 |
 | --- | --- | --- |
 | `authSpec.name` | 지원되는 인증 유형의 이름을 표시합니다. | `Basic Authentication` |
-| `authSpec.type` | 소스에서 지원하는 인증 유형을 정의합니다. | `oAuth2-refresh-code` |
+| `authSpec.type` | 소스에서 지원하는 인증 유형을 정의합니다. | `BasicAuthentication` |
 | `authSpec.spec` | 인증의 스키마, 데이터 유형 및 속성에 대한 정보를 포함합니다. |
 | `authSpec.spec.$schema` | 인증에 사용되는 스키마를 정의합니다. | `http://json-schema.org/draft-07/schema#` |
 | `authSpec.spec.type` | 스키마의 데이터 유형을 정의합니다. | `object` |
