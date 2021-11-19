@@ -5,9 +5,9 @@ seo-title: Frequently asked questions
 description: Adobe Experience Platform 대상에 대해 자주 묻는 질문과 대답(FAQ)입니다
 seo-description: Answers to the most frequently asked questions about Adobe Experience Platform destinations
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: 8f9a601a833149c83d465f68d16ca362ed730b8a
+source-git-commit: 69fc8e8ec3211495056be73c2e49c6aecfc569ea
 workflow-type: tm+mt
-source-wordcount: '781'
+source-wordcount: '798'
 ht-degree: 4%
 
 ---
@@ -77,7 +77,7 @@ ID 일치 요구 사항에 대한 자세한 내용은 [ID 일치 요구 사항](
 
 **별도의 Facebook 계정에 대해 Platform UI에서 여러 Facebook 대상을 만들 수 있습니까?**
 
-Experience Platform의 Facebook 대상은 Facebook의 광고 계정에 1:1입니다. 회사의 각 Facebook 광고 계정에 대해 별도의 Facebook 대상을 만들 수 있습니다. 다음을 수행합니다 [대상 연결 자습서](/help/destinations/ui/connect-destination.md) 플랫폼 UI에서 새로운 각 Facebook 대상에 대해 별도의 Facebook 계정에 연결합니다.
+예. Experience Platform의 Facebook 대상은 Facebook의 광고 계정에 1:1입니다. 회사의 각 Facebook 광고 계정에 대해 별도의 Facebook 대상을 만들 수 있습니다. 다음을 수행합니다 [대상 연결 자습서](/help/destinations/ui/connect-destination.md) 플랫폼 UI에서 새로운 각 Facebook 대상에 대해 별도의 Facebook 계정에 연결합니다. 연결할 수 있는 Facebook 광고 계정 수에는 제한이 없습니다.
 
 ## linkedIn 일치하는 대상 {#linkedin}
 
