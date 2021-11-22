@@ -2,7 +2,7 @@
 description: 이 페이지에서는 Destination SDK을 사용하여 스트리밍 대상을 구성하는 단계를 나열하고 설명합니다.
 title: Destination SDK을 사용하여 스트리밍 대상 구성
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: bc77614eee6cc50d2ce6b14c1b228ed87f88f340
+source-git-commit: 3b320f253516f2c169330e1eed6ad870a583891a
 workflow-type: tm+mt
 source-wordcount: '663'
 ht-degree: 0%
@@ -165,7 +165,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 ## 6단계: 대상 테스트 {#test-destination}
 
-이전 단계의 구성 끝점을 사용하여 대상을 설정한 후에는 [대상 테스트 도구](./create-template.md) Adobe Experience Platform과 대상 간의 통합을 테스트하려면 다음을 수행하십시오.
+이전 단계의 구성 끝점을 사용하여 대상을 설정한 후에는 [대상 테스트 도구](./test-destination.md) Adobe Experience Platform과 대상 간의 통합을 테스트하려면 다음을 수행하십시오.
 
 대상을 테스트하는 프로세스의 일부로, Experience Platform UI를 사용하여 세그먼트를 만들어 대상에 대해 활성화해야 합니다. Experience Platform에서 세그먼트를 만드는 방법에 대한 지침은 아래 두 리소스를 참조하십시오.
 
