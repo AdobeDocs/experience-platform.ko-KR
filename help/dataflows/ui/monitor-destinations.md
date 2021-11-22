@@ -6,9 +6,9 @@ title: UI에서 대상에 대한 데이터 흐름 모니터링
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 9396f44aafc7d6e863d09b369440f507998dce2c
+source-git-commit: 822276890b6ebed922d359f8dece58d8c90dea24
 workflow-type: tm+mt
-source-wordcount: '1733'
+source-wordcount: '1785'
 ht-degree: 0%
 
 ---
@@ -46,6 +46,18 @@ ht-degree: 0%
 | 오류 | 다음 `Error` 상태는 데이터 흐름의 활성화 프로세스가 중단되었음을 나타냅니다. |
 
 ### 스트리밍 대상에 대해 데이터 흐름 실행
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_identitiesactivated"
+>title="ID가 활성화됨"
+>abstract="개별 프로필 ID의 수가 선택한 대상에 성공적으로 활성화되었습니다."
+>additional-url="https://adobe.com/go/destinations-monitor-dataflows-batch-en" text="자세한 내용은 문서에서 알아보십시오"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_identitiesexcluded"
+>title="제외된 ID"
+>abstract="누락된 속성 및 동의 위반을 기반으로 선택한 대상에 대한 활성화에서 제외된 개별 프로필 레코드 수입니다."
+>additional-url="https://adobe.com/go/destinations-monitor-dataflows-batch-en" text="자세한 내용은 문서에서 알아보십시오"
 
 스트리밍 대상의 경우, [!UICONTROL 데이터 흐름 실행] 탭은 데이터 흐름 실행에 대한 지표 데이터에 대한 시간별 업데이트를 제공합니다. 가장 눈에 띄는 통계들은 ID에 대한 것이다.
 

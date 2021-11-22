@@ -6,9 +6,9 @@ seo-title: Activate audience data to batch profile export destinations
 description: 세그먼트를 배치 프로필 기반 대상으로 보내 Adobe Experience Platform에서 보유한 대상 데이터를 활성화하는 방법을 알아봅니다.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: b4810dfef7b0d437744ca14a32bd4f5746e8d002
+source-git-commit: 822276890b6ebed922d359f8dece58d8c90dea24
 workflow-type: tm+mt
-source-wordcount: '1958'
+source-wordcount: '2114'
 ht-degree: 0%
 
 ---
@@ -48,6 +48,12 @@ ht-degree: 0%
 
 ## 세그먼트 내보내기 예약 {#scheduling}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_schedule"
+>title="예약"
+>abstract="세그먼트를 저장한 후에는 파일 내보내기 유형(전체 파일 또는 증분 파일)과 예약을 변경할 수 없습니다."
+>additional-url="https://www.adobe.com/go/destinations-profile-batch-en" text="자세한 내용은 문서에서 알아보십시오"
+
 [!DNL Adobe Experience Platform] 이메일 마케팅 및 클라우드 스토리지 대상의 데이터를 다음과 같은 형태로 내보냅니다. [!DNL CSV] 파일. 에서 **[!UICONTROL 예약]** 페이지에서 내보낼 각 세그먼트의 일정 및 파일 이름을 구성할 수 있습니다. 예약을 구성해야 하지만 파일 이름을 구성하는 것은 선택 사항입니다.
 
 >[!IMPORTANT]
@@ -61,6 +67,12 @@ ht-degree: 0%
 ![예약 만들기 단추](../assets/ui/activate-batch-profile-destinations/create-schedule-button.png)
 
 ### 전체 파일 내보내기 {#export-full-files}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_exportoptions"
+>title="파일 내보내기 옵션"
+>abstract="선택 **전체 파일 내보내기** 세그먼트를 사용할 수 있는 모든 프로필의 전체 스냅샷을 내보내려면 <br> 선택 **증분 파일 내보내기** 를 입력하여 마지막 내보내기 이후 세그먼트에 적합한 프로필만 내보냅니다. 첫 번째 증분 파일 내보내기에는 세그먼트에 적합한 모든 프로필이 포함되어 있으며 채우기 역할을 합니다. 향후 증분 파일에는 첫 번째 증분 파일 내보내기 이후 세그먼트에 적합한 프로필만 포함됩니다."
+>additional-url="https://www.adobe.com/go/destinations-profile-batch-en" text="자세한 내용은 문서에서 알아보십시오"
 
 선택 **[!UICONTROL 전체 파일 내보내기]** 을(를) 사용하여 선택한 세그먼트에 대한 모든 프로필 자격에 대한 전체 스냅숏이 포함된 파일 내보내기를 트리거합니다.
 
@@ -112,6 +124,12 @@ ht-degree: 0%
 1. 선택 **[!UICONTROL 만들기]** 일정을 저장합니다.
 
 ### 파일 이름 구성 {#file-names}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_filename"
+>title="파일 이름 구성"
+>abstract="파일 기반 대상의 경우 세그먼트별로 고유한 파일 이름이 생성됩니다. 파일 이름 편집기를 사용하여 고유한 파일 이름을 만들고 편집하거나 기본 이름을 유지합니다."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#file-names" text="자세한 내용은 문서에서 알아보십시오"
 
 기본 파일 이름은 대상 이름, 세그먼트 ID, 날짜 및 시간 표시기로 구성됩니다. 예를 들어 내보낸 파일 이름을 편집하여 서로 다른 캠페인을 구분하거나 데이터 내보내기 시간을 파일에 추가할 수 있습니다.
 
