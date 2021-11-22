@@ -1,10 +1,11 @@
 ---
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform에 대한 2021년 11월 릴리스 노트입니다.
-source-git-commit: aa8cafc9a40748eda3098b2af732a828d39204b2
+exl-id: f649b516-8ef8-49af-bb3e-0392337d0d86
+source-git-commit: 2c4b0d6dd0884fe81565356c31b18c0555bf973f
 workflow-type: tm+mt
-source-wordcount: '724'
-ht-degree: 14%
+source-wordcount: '798'
+ht-degree: 12%
 
 ---
 
@@ -17,6 +18,7 @@ ht-degree: 14%
 Adobe Experience Platform의 새로운 기능:
 
 - [Real-time Customer Data Platform B2B 에디션](#B2B)
+- [(베타) 임시 활성화 API를 통해 대상자 세그먼트를 배치 대상에 활성화합니다](#ad-hoc-activation)
 
 ## 기존 기능 업데이트
 
@@ -61,6 +63,10 @@ Real-time Customer Data Platform(실시간 CDP)를 기반으로 구축된 실시
 | 표준 B2B XDM 클래스 | Real-time Customer Data Platform B2B Edition은 계정, 기회, 캠페인 등과 같은 중요한 B2B 데이터 엔티티에 대한 세부 사항을 캡처하는 여러 표준 XDM을 제공합니다. |
 
 자세한 내용은 [Real-time Customer Data Platform B2B Edition의 스키마](../../rtcdp/schemas/b2b.md) B2B 데이터 엔티티 캡처에 대한 자세한 내용을 보려면 설명서를 참조하십시오.
+
+### (베타) 임시 활성화 API를 통해 대상자 세그먼트를 배치 대상에 활성화합니다 {#ad-hoc-activation}
+
+Ad-hoc 활성화 API를 사용하면 즉시 활성화해야 하는 상황에서 마케터는 빠르고 효율적인 방식으로 대상 세그먼트를 대상으로 프로그래밍 방식으로 활성화할 수 있습니다. 임시 대상 활성화는 [배치 파일 기반 대상](../../destinations/destination-types.md#file-based) 및 은 현재 베타 버전입니다. 자세한 내용은 [ad-hoc 활성화 API 설명서](../../destinations/api/ad-hoc-activation-api.md).
 
 ### Attribution AI {#attribution-ai}
 
