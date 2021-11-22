@@ -6,7 +6,7 @@ title: UI에서 대상에 대한 데이터 흐름 모니터링
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 822276890b6ebed922d359f8dece58d8c90dea24
+source-git-commit: 055338228608685a65bc79d9d9d0c07e3ddddfb2
 workflow-type: tm+mt
 source-wordcount: '1785'
 ht-degree: 0%
@@ -48,13 +48,13 @@ ht-degree: 0%
 ### 스트리밍 대상에 대해 데이터 흐름 실행
 
 >[!CONTEXTUALHELP]
->id="platform_destinations_activate_identitiesactivated"
+>id="platform_destinations_dataflow_identitiesactivated"
 >title="ID가 활성화됨"
 >abstract="개별 프로필 ID의 수가 선택한 대상에 성공적으로 활성화되었습니다."
 >additional-url="https://adobe.com/go/destinations-monitor-dataflows-batch-en" text="자세한 내용은 문서에서 알아보십시오"
 
 >[!CONTEXTUALHELP]
->id="platform_destinations_activate_identitiesexcluded"
+>id="platform_destinations_dataflow_identitiesexcluded"
 >title="제외된 ID"
 >abstract="누락된 속성 및 동의 위반을 기반으로 선택한 대상에 대한 활성화에서 제외된 개별 프로필 레코드 수입니다."
 >additional-url="https://adobe.com/go/destinations-monitor-dataflows-batch-en" text="자세한 내용은 문서에서 알아보십시오"
