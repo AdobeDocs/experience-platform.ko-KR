@@ -4,17 +4,17 @@ solution: Experience Platform, Real-time Customer Data Platform
 audience: user
 user-guide-title: 실시간 고객 데이터 플랫폼 안내서
 user-guide-description: 여러 엔터프라이즈 소스에서 알려진 데이터와 익명의 데이터를 결합하여 고객 프로필을 생성하고, 이러한 프로필에서 고객 세그먼트를 생성하며, 이러한 세그먼트를 서드파티 대상으로 활성화할 수 있습니다.
-source-git-commit: a63f0fc1b401009fbcc4def1fbdadab30c881c42
+source-git-commit: 69833137498fedd87e99ca4255b8f1ace0921ff9
 workflow-type: tm+mt
-source-wordcount: '181'
-ht-degree: 30%
+source-wordcount: '174'
+ht-degree: 31%
 
 ---
 
 
-# Real-time Customer Data Platform Help {#rtcdp}
+# Real-time Customer Data Platform 도움말 {#rtcdp}
 
-* [Real-time CDP overview](overview.md)
+* [실시간 CDP 개요](overview.md)
 * [실시간 CDP B2B Edition 개요](b2b-overview.md)
 * 시작하기 {#intro}
    * 실시간 CDP {#rtcdp-intro}
@@ -22,11 +22,11 @@ ht-degree: 30%
       * [지표 개요](home-page-dashboards.md)
    * 실시간 CDP B2B Edition {#rtcdpb2b-intro}
       * [사용 사례 예](./b2b-use-case.md)
-      * [End-to-end tutorial](./b2b-tutorial.md)
-      * [Real-time CDP B2B Edition guardrails](b2b-guardrails.md)
-* Account profiles {#account}
+      * [종단 간 자습서](./b2b-tutorial.md)
+      * [실시간 CDP B2B Edition 보호 기능](b2b-guardrails.md)
+* 계정 프로필 {#account}
    * [계정 프로필 개요](accounts/account-profile-overview.md)
-   * [Account profile UI guide](accounts/account-profile-ui-guide.md)
+   * [계정 프로필 UI 안내서](accounts/account-profile-ui-guide.md)
 * 관리 {#admin}
    * [관리 개요](administration/admin-overview.md)
 * 데이터 세트 {#datasets}
@@ -34,9 +34,9 @@ ht-degree: 30%
    * [플랫폼의 데이터 품질](datasets/data-quality.md)
 * 대상 {#destinations}
    * [대상 개요](destinations/overview.md)
-   * [Destinations in Real-time CDP B2B Edition](destinations/b2b.md)
-* Identities {#identity}
-   * [Identities &amp; identity namespaces](profile/identities-overview.md)
+   * [실시간 CDP B2B Edition의 대상](destinations/b2b.md)
+* ID {#identity}
+   * [ID 및 ID 네임스페이스](profile/identities-overview.md)
 * 병합 정책 {#merge-policies}
    * [병합 정책 개요](profile/merge-policies.md)
 * 개인 정보 및 데이터 거버넌스 {#privacy}
@@ -44,7 +44,7 @@ ht-degree: 30%
    * [데이터 거버넌스 개요](privacy/data-governance-overview.md)
 * 프로필 {#profile}
    * [프로필 개요](profile/profile-overview.md)
-   * [Profile browse](profile/profile-browse.md)
+   * [프로필 찾아보기](profile/profile-browse.md)
 * 스키마 {#schemas}
    * [스키마 개요](schemas/overview.md)
    * [실시간 CDP B2B Edition의 스키마](schemas/b2b.md)
@@ -55,7 +55,6 @@ ht-degree: 30%
    * [고객 AI](segmentation/customer-ai.md)
 * 소스 {#sources}
    * [소스 개요](sources/sources-overview.md)
-   * [Sources in Real-time CDP B2B Edition](sources/b2b.md)
+   * [실시간 CDP B2B Edition의 소스](sources/b2b.md)
 * [Experience Platform 릴리스 노트](https://www.adobe.com/go/platform-release-notes-en)
-* [실시간 CDP B2B Edition 릴리스 노트](./b2b-release-notes.md)
 * [Experience Platform 용어](https://www.adobe.com/go/platform-glossary-en)
