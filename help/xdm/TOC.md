@@ -4,9 +4,9 @@ user-guide-title: XDM(경험 데이터 모델) 시스템 도움말
 breadcrumb-title: Experience Data Model(XDM) 안내서
 user-guide-description: XDM(경험 데이터 모델) 클래스 및 스키마 필드 그룹을 사용하여 경험 데이터를 표준화합니다.
 feature: Schemas
-source-git-commit: a7f95dd5b0b84a8ca5c7a69b5a30e5c3dba16007
+source-git-commit: db7e8de8e2669fae7fdf21d10042b7a71c63a8f6
 workflow-type: tm+mt
-source-wordcount: '402'
+source-wordcount: '401'
 ht-degree: 14%
 
 ---
@@ -40,7 +40,7 @@ ht-degree: 14%
       * [XDM 비즈니스 기회 개인 관계](./classes/b2b/business-opportunity-person-relation.md)
       * [XDM 비즈니스 마케팅 목록](./classes/b2b/business-marketing-list.md)
       * [XDM 비즈니스 마케팅 목록 구성원](./classes/b2b/business-marketing-list-members.md)
-* 스키마 필드 그룹 {#field-groups}
+* 필드 그룹 {#field-groups}
    * 프로필 필드 그룹 {#profile}
       * [인구 통계 세부 정보](./field-groups/profile/demographic-details.md)
       * [IAB TCF 2.0 동의](./field-groups/profile/iab.md)
