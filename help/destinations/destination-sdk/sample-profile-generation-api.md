@@ -2,9 +2,9 @@
 description: 이 페이지에서는 대상 테스트에 사용할 샘플 프로필을 생성하기 위해 '/authoring/sample-profiles' API 종단점을 사용하여 수행할 수 있는 모든 API 작업을 나열하고 설명합니다.
 title: 샘플 프로필 생성 API 작업
 exl-id: 5f1cd00a-8eee-4454-bcae-07b05afa54af
-source-git-commit: 2ed132cd16db64b5921c5632445956f750fead56
+source-git-commit: 7f0dcc916b72145705ecd09b45aadd40eac99b23
 workflow-type: tm+mt
-source-wordcount: '833'
+source-wordcount: '989'
 ht-degree: 2%
 
 ---
@@ -13,27 +13,36 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->**API 엔드포인트**:  `https://platform.adobe.io/data/core/activation/authoring/sample-profiles`
+>**API 엔드포인트**: `https://platform.adobe.io/data/core/activation/authoring/sample-profiles`
 
-이 페이지에서는 `/authoring/sample-profiles` API 종단점을 사용하여 수행할 수 있는 모든 API 작업을 나열하고 설명합니다.
+이 페이지에서는 를 사용하여 수행할 수 있는 모든 API 작업을 나열하고 설명합니다. `/authoring/sample-profiles` API 엔드포인트.
 
-이 API 엔드포인트를 사용하면 사용할 샘플 프로필을 생성할 수 있습니다.
-* 메시지 변환 템플릿을 테스트할 때 [메시지 변환 템플릿을 만들고 테스트합니다](./create-template.md).
-* 대상이 올바르게 구성되었는지 테스트할 때 [대상 구성을 테스트합니다](./test-destination.md).
-
-Adobe XDM 소스 스키마 또는 대상에서 지원하는 대상 스키마를 기반으로 샘플 프로필을 생성할 수 있습니다. Adobe XDM 소스 스키마와 대상 스키마의 차이점을 이해하려면 [메시지 형식](./message-format.md) 문서를 참조하십시오.
-
-## 샘플 프로필 생성 API 작업 시작 {#get-started}
-
-계속하기 전에 필요한 대상 작성 권한 및 필수 헤더를 가져오는 방법을 포함하여 API를 성공적으로 호출하기 위해 알고 있어야 하는 중요한 정보가 필요하면 [시작 안내서](./getting-started.md)를 검토하십시오.
-
-## 소스 스키마를 기반으로 샘플 프로필 생성 {#generate-sample-profiles-source-schema}
+## 다양한 API에 대한 다양한 프로필 유형 생성 {#different-profiles-different-apis}
 
 >[!IMPORTANT]
 >
->[대상](./test-destination.md)을 테스트할 때 여기에 생성된 샘플 프로필을 HTTP 호출에 추가합니다.
+>이 API 엔드포인트를 사용하여 두 개의 별도 사용 사례에 대한 샘플 프로필을 생성합니다. 다음을 수행할 수 있습니다.
+>* 사용할 프로필 생성 [메시지 변환 템플릿 작성 및 테스트](./create-template.md) - 사용 *대상 ID* 을 쿼리 매개 변수로 사용합니다.
+>* 호출을 할 때 사용할 프로필 생성 [대상이 올바르게 구성되었는지 테스트](./test-destination.md) - 사용 *대상 인스턴스 ID* 을 쿼리 매개 변수로 사용합니다.
 
-`authoring/sample-profiles/` 종단점에 GET 요청을 하고 테스트할 대상 구성을 기반으로 만든 대상 인스턴스의 ID를 제공하여 소스 스키마를 기반으로 샘플 프로필을 생성할 수 있습니다.
+
+Adobe XDM 소스 스키마(대상을 테스트할 때 사용) 또는 대상이 지원하는 대상 스키마(템플릿을 작성할 때 사용)를 기반으로 샘플 프로필을 생성할 수 있습니다. Adobe XDM 소스 스키마와 대상 스키마의 차이점을 이해하려면 [메시지 포맷](./message-format.md) 문서.
+
+샘플 프로필을 사용할 수 있는 목적은 서로 바꿔서 사용할 수 없습니다. 를 기반으로 생성된 프로필 *대상 ID* 는 메시지 변환 템플릿과 을 기반으로 생성된 프로필을 만드는 데만 사용할 수 있습니다 *대상 인스턴스 ID* 는 대상 종단점을 테스트하는 데만 사용할 수 있습니다.
+
+## 샘플 프로필 생성 API 작업 시작 {#get-started}
+
+계속하기 전에 [시작 안내서](./getting-started.md) api를 성공적으로 호출하기 위해 알고 있어야 하는 중요한 정보(필수 대상 작성 권한 및 필수 헤더를 가져오는 방법)입니다.
+
+## 대상을 테스트할 때 사용할 소스 스키마를 기반으로 샘플 프로필을 생성합니다 {#generate-sample-profiles-source-schema}
+
+>[!IMPORTANT]
+>
+>다음의 경우에 여기서 생성된 샘플 프로필을 HTTP 호출에 추가합니다 [대상 테스트](./test-destination.md).
+
+에 GET 요청을 수행하여 소스 스키마를 기반으로 샘플 프로필을 생성할 수 있습니다 `authoring/sample-profiles/` 테스트할 대상 구성을 기반으로 만든 대상 인스턴스의 ID를 제공하는 종단점입니다.
+
+대상 인스턴스의 ID를 얻으려면 대상을 테스트하기 전에 먼저 Experience Platform UI에서 대상에 대한 연결을 만들어야 합니다. 다음 문서를 참조하십시오. [대상 활성화 자습서](/help/destinations/ui/activation-overview.md) 및 이 API에 사용할 대상 인스턴스 ID를 가져오는 방법에 대해서는 아래 팁을 참조하십시오.
 
 >[!TIP]
 >
@@ -51,14 +60,14 @@ GET authoring/sample-profiles?destinationInstanceId={DESTINATION_INSTANCE_ID}&co
 | 쿼리 매개 변수 | 설명 |
 | -------- | ----------- |
 | `{DESTINATION_INSTANCE_ID}` | 샘플 프로필을 생성하는 대상 인스턴스의 ID입니다. |
-| `{COUNT}` | *선택 사항입니다*. 생성 중인 샘플 프로필 수입니다. 매개 변수는 `1 - 1000` 사이에 값을 사용할 수 있습니다. <br> count 매개 변수를 지정하지 않으면 생성된 프로필의 기본 수는 대상 서버 구성 `maxUsersPerRequest` 의 값 [으로 결정됩니다](./destination-server-api.md#create). 이 속성이 정의되지 않으면 Adobe이 하나의 샘플 프로필을 생성합니다. |
+| `{COUNT}` | *선택 사항입니다*. 생성 중인 샘플 프로필 수입니다. 매개 변수는 다음 사이 값을 가져올 수 있습니다 `1 - 1000`. <br> count 매개 변수를 지정하지 않으면 생성된 프로필의 기본 수는 `maxUsersPerRequest` 값에서 [대상 서버 구성](./destination-server-api.md#create). 이 속성이 정의되지 않으면 Adobe이 하나의 샘플 프로필을 생성합니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
 
 **요청**
 
-다음 요청은 `{DESTINATION_INSTANCE_ID}` 및 `{COUNT}` 쿼리 매개 변수로 구성된 샘플 프로필을 생성합니다.
+다음 요청은 에 의해 구성된 샘플 프로필을 생성합니다 `{DESTINATION_INSTANCE_ID}` 및 `{COUNT}` 쿼리 매개 변수.
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/core/activation/authoring/sample-profiles?destinationInstanceId=49966037-32cd-4457-a105-2cbf9c01826a&count=3' \
@@ -172,24 +181,24 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `segmentMembership` | 개인의 세그먼트 멤버십을 설명하는 맵 개체입니다. `segmentMembership`에 대한 자세한 내용은 [세그먼트 멤버십 세부 정보](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html)를 참조하십시오. |
+| `segmentMembership` | 개인의 세그먼트 멤버십을 설명하는 맵 개체입니다. 자세한 내용은 `segmentMembership`, 읽기 [세그먼트 멤버십 세부 정보](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html). |
 | `lastQualificationTime` | 이 프로필이 세그먼트에 대해 자격이 있는 마지막 시간의 타임스탬프입니다. |
 | `xdm:status` | 세그먼트 멤버십이 현재 요청의 일부로 실현되었는지 여부를 나타냅니다. 다음 값이 허용됩니다. <ul><li>`existing`: 프로필은 요청 전에 이미 세그먼트의 일부였으며 계속해서 멤버십을 유지합니다.</li><li>`realized`: 프로필이 현재 요청의 일부로 세그먼트를 입력하고 있습니다.</li><li>`exited`: 프로필이 현재 요청의 일부로 세그먼트를 종료하고 있습니다.</li></ul> |
-| `identityMap` | 연관된 네임스페이스와 함께 개인의 다양한 ID 값을 설명하는 맵 유형 필드입니다. `identityMap`에 대한 자세한 내용은 [스키마 컴포지션](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=en#identityMap)을 참조하십시오. |
+| `identityMap` | 연관된 네임스페이스와 함께 개인의 다양한 ID 값을 설명하는 맵 유형 필드입니다. 자세한 내용은 `identityMap`, 읽기 [스키마 구성 기초](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=en#identityMap). |
 
 {style=&quot;table-layout:auto&quot;}
 
-## 대상 스키마를 기반으로 샘플 프로필 생성 {#generate-sample-profiles-target-schema}
+## 메시지 변환 템플릿을 작성할 때 사용할 대상 스키마를 기반으로 샘플 프로필을 생성합니다 {#generate-sample-profiles-target-schema}
 
 >[!IMPORTANT]
 >
->템플릿을 작성할 때 여기서 생성한 샘플 프로필을 [렌더링 템플릿 단계에서 사용합니다](./render-template-api.md#multiple-profiles-with-body).
+>템플릿을 작성할 때 여기에 생성된 샘플 프로필을 [템플릿 렌더링 단계](./render-template-api.md#multiple-profiles-with-body).
 
-대상 스키마를 기반으로 하여 샘플 프로필을 생성하여 `authoring/sample-profiles/` 종단점에 GET을 요청하고 템플릿을 만드는 데 따라 대상 구성의 대상 ID를 제공할 수 있습니다.
+대상 스키마를 기반으로 하여 샘플 프로필을 생성하여 `authoring/sample-profiles/` 템플릿을 만들고 있는 대상에 따라 대상 구성의 대상 ID를 제공하는 종단점입니다.
 
 >[!TIP]
 >
->* 여기서 사용해야 하는 대상 ID는 `/destinations` 종단점을 사용하여 만든 대상 구성에 해당하는 `instanceId` 입니다. [대상 구성 API 참조](./destination-configuration-api.md#retrieve-list)를 참조하십시오.
+>* 여기에서 사용해야 하는 대상 ID는 `instanceId` 대상 구성에 해당하며 `/destinations` 엔드포인트. 자세한 내용은 [대상 구성 API 참조](./destination-configuration-api.md#retrieve-list).
 
 
 **API 형식**
@@ -202,13 +211,13 @@ GET authoring/sample-profiles?destinationId={DESTINATION_ID}&count={COUNT}
 | 쿼리 매개 변수 | 설명 |
 | -------- | ----------- |
 | `{DESTINATION_ID}` | 샘플 프로필을 생성하는 대상 구성의 ID입니다. |
-| `{COUNT}` | *선택 사항입니다*. 생성 중인 샘플 프로필 수입니다. 매개 변수는 `1 - 1000` 사이에 값을 사용할 수 있습니다. <br> count 매개 변수를 지정하지 않으면 생성된 프로필의 기본 수는 대상 서버 구성 `maxUsersPerRequest` 의 값 [으로 결정됩니다](./destination-server-api.md#create). 이 속성이 정의되지 않으면 Adobe이 하나의 샘플 프로필을 생성합니다. |
+| `{COUNT}` | *선택 사항입니다*. 생성 중인 샘플 프로필 수입니다. 매개 변수는 다음 사이 값을 가져올 수 있습니다 `1 - 1000`. <br> count 매개 변수를 지정하지 않으면 생성된 프로필의 기본 수는 `maxUsersPerRequest` 값에서 [대상 서버 구성](./destination-server-api.md#create). 이 속성이 정의되지 않으면 Adobe이 하나의 샘플 프로필을 생성합니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **요청**
 
-다음 요청은 `{DESTINATION_ID}` 및 `{COUNT}` 쿼리 매개 변수로 구성된 샘플 프로필을 생성합니다.
+다음 요청은 에 의해 구성된 샘플 프로필을 생성합니다 `{DESTINATION_ID}` 및 `{COUNT}` 쿼리 매개 변수.
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/core/activation/authoring/sample-profiles?destinationId=49966037-32cd-4457-a105-2cbf9c01826a&count=3' \
@@ -366,8 +375,8 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 
 ## API 오류 처리 {#api-error-handling}
 
-대상 SDK API 엔드포인트는 일반 Experience Platform API 오류 메시지 원칙을 따릅니다. 플랫폼 문제 해결 안내서에서 [API 상태 코드](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) 및 [요청 헤더 오류](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors)를 참조하십시오.
+Destination SDK API 엔드포인트는 일반 Experience Platform API 오류 메시지 원칙을 따릅니다. 을(를) 참조하십시오. [API 상태 코드](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) 및 [요청 헤더 오류](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) 을 참조하십시오.
 
 ## 다음 단계
 
-이 문서를 읽은 후에는 이제 [메시지 변환 템플릿을 테스트하거나 ](./create-template.md) 대상이 올바르게 구성되어 있는지 테스트할 때 사용할 샘플 프로필을 생성하는 방법을 알 수 있습니다](./test-destination.md).[
+이제 이 문서를 읽은 후 사용할 샘플 프로필을 생성하는 방법을 알 수 있습니다 [메시지 변환 템플릿 테스트](./create-template.md) 또는 [대상이 올바르게 구성되었는지 테스트](./test-destination.md).
