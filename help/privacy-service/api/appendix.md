@@ -5,10 +5,10 @@ title: Privacy Service API 안내서 부록
 topic-legacy: developer guide
 description: 이 문서에는 Privacy Service API 작업을 위한 추가 정보가 포함되어 있습니다.
 exl-id: 7099e002-b802-486e-8863-0630d66e330f
-source-git-commit: 0d20da1264c20a5684c241a725041dd009f77b58
+source-git-commit: 445c8158dbf012defb32e9cd7aa4c27c6be1fb88
 workflow-type: tm+mt
-source-wordcount: '482'
-ht-degree: 8%
+source-wordcount: '484'
+ht-degree: 7%
 
 ---
 
@@ -52,7 +52,7 @@ ht-degree: 8%
 | `custom` | 조직 컨텍스트에서 생성된 고유한 네임스페이스이며, [!DNL Experience Cloud]. 값은 검색할 친숙한 이름(&quot;name&quot; 필드)을 나타냅니다. 네임스페이스 ID가 제공됩니다. |
 | `integrationCode` | 통합 코드 - &quot;사용자 지정&quot;과 유사하지만, 특히 검색할 데이터 소스의 통합 코드로 정의됩니다. 네임스페이스 ID가 제공됩니다. |
 | `namespaceId` | 값은 네임스페이스 서비스를 통해 만들어지거나 매핑된 네임스페이스의 실제 ID임을 나타냅니다. |
-| `unregistered` | 네임스페이스 서비스에 정의되어 있지 않고 &quot;있는 그대로&quot; 가져오는 자유 형식 문자열입니다. 이러한 종류의 네임스페이스를 처리하는 모든 애플리케이션은 회사의 컨텍스트 및 데이터 세트에 맞게 해당 네임스페이스와 비교하여 확인하고 처리합니다. 네임스페이스 ID가 제공되지 않습니다. |
+| `unregistered` | 네임스페이스 서비스에 정의되어 있지 않고 &quot;있는 그대로&quot; 가져오는 자유 형식 문자열입니다. 이러한 종류의 네임스페이스를 처리하는 모든 애플리케이션은 회사의 컨텍스트 및 데이터 세트에 맞게 해당 네임스페이스와 비교하여 확인하고 적절한 경우 처리합니다. 네임스페이스 ID가 제공되지 않습니다. |
 | `analytics` | 내부적으로 매핑된 사용자 지정 네임스페이스 [!DNL Analytics]네임스페이스 서비스가 아닙니다. 네임스페이스 ID 없이 원래 요청에 지정된 대로 직접 전달됩니다 |
 | `target` | 에서 내부적으로 인식하는 사용자 지정 네임스페이스 [!DNL Target]네임스페이스 서비스가 아닙니다. 네임스페이스 ID 없이 원래 요청에 지정된 대로 직접 전달됩니다 |
 
@@ -68,7 +68,7 @@ ht-degree: 8%
 | Adobe Analytics | `analytics` |
 | Adobe Audience Manager | `AudienceManager` |
 | Adobe Campaign | `campaign` |
-| Adobe Experience Platform | `AdobeCloudPlatform` |
+| Adobe Experience Platform (Data Lake) | `aepDataLake` |
 | Adobe Primetime 인증 | `primetimeAuthentication` |
 | Adobe Target | `target` |
 | 자동화 제품 | `automationProduct` |
