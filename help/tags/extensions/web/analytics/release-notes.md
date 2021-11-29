@@ -2,9 +2,9 @@
 title: Adobe Analytics 확장에 대한 릴리스 노트
 description: Adobe Experience Platform의 Adobe Analytics 태그 확장에 대한 최신 릴리스 노트입니다.
 exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
-source-git-commit: 83e9ebf65e904c6343fe44932a2b7b1a72039187
+source-git-commit: 73fe3c2e060dbdd7607ed3b54c5b8e9cca752d8f
 workflow-type: tm+mt
-source-wordcount: '1262'
+source-wordcount: '1272'
 ht-degree: 89%
 
 ---
@@ -14,6 +14,14 @@ ht-degree: 89%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
+
+## 2021년 11월 29일
+
+### Adobe Analytics Extension 1.8.8
+
+#### 버그 수정
+
+* AppMeasurement를 v2.22.3으로 업그레이드했습니다.
 
 ## 2021년 9월 16일
 
@@ -30,7 +38,7 @@ ht-degree: 89%
 
 #### 버그 수정
 
-* [AppMeasurement가 v2.22.1](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html)로 업그레이드되었습니다.
+* 업그레이드됨 [AppMeasurement에서 v2.22.1으로](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html).
 * innerHTML을 사용하는 대신 미러 Activity Map 로직에 대한 폴백 linkName 을 업데이트했습니다.
 
 ## 2020년 8월 6일
