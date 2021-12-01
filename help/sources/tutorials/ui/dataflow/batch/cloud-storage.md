@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: 데이터 흐름은 소스에서 플랫폼 데이터 집합으로 데이터를 검색하고 수집하는 예약된 작업입니다. 이 자습서에서는 클라우드 저장소 계정을 사용하여 새 데이터 흐름을 구성하는 단계를 제공합니다.
 exl-id: b327bbea-039d-4c04-afd3-f1d6a5f902a6
-source-git-commit: 82f02064477cc5336bf528a34284c9f4f7669c3d
+source-git-commit: db0c295777a98cc945d7c88f3e49eda3d2581f7b
 workflow-type: tm+mt
-source-wordcount: '2067'
+source-wordcount: '2045'
 ht-degree: 0%
 
 ---
@@ -187,13 +187,7 @@ JSON 파일의 경우 필드를 다른 필드에 직접 매핑하는 것 외에�
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/scheduling-once.png)
 
-## 데이터 흐름 세부 정보 제공 {#provide-dataflow-details}
-
->[!CONTEXTUALHELP]
->id="platform_sources_alerts_subscribe"
->title="소스 경고 구독"
->abstract="소스 데이터 흐름에 대한 알림 경고를 수신하려면 구독하려는 옵션을 선택합니다."
->text="Learn more in documentation"
+## 데이터 흐름 세부 정보 제공
 
 다음 **[!UICONTROL 데이터 흐름 세부 정보]** 새 데이터 흐름의 이름을 지정하고 간단한 설명을 제공할 수 있는 단계가 나타납니다.
 
