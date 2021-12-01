@@ -3,9 +3,9 @@ keywords: facebook 연결;facebook 연결;facebook 대상;facebook;instagram;mes
 title: Facebook 연결
 description: 해시된 이메일을 기반으로 대상 타깃팅, 개인화 및 억제를 위해 Facebook 캠페인용 프로필을 활성화합니다.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 822276890b6ebed922d359f8dece58d8c90dea24
+source-git-commit: 357916aa925c7b3ada4abe64a2bc6ad090d70cc0
 workflow-type: tm+mt
-source-wordcount: '1558'
+source-wordcount: '1589'
 ht-degree: 1%
 
 ---
@@ -138,6 +138,21 @@ While [설정](../../ui/connect-destination.md) 이 대상을 사용하려면 �
 >title="대상의 기원"
 >abstract="원래 세그먼트에서 고객 데이터를 수집한 방법을 선택합니다. 사용자가 세그먼트에 의해 타깃팅되면 데이터가 Facebook에 표시됩니다"
 >additional-url="http://www.adobe.com/go/destinations-facebook-activate-section-en" text="자세한 내용은 문서에서 알아보십시오"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_facebook_originofaudience_customers"
+>title="대상의 기원"
+>abstract="광고주는 고객으로부터 직접 데이터를 수집했습니다."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_facebook_originofaudience_partners"
+>title="대상의 기원"
+>abstract="광고주는 파트너로부터 직접 데이터를 수집합니다."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_facebook_originofaudience_customersandpartners"
+>title="대상의 기원"
+>abstract="광고주는 고객 및 파트너로부터 직접 데이터를 수집합니다."
 
 자세한 내용은 [스트리밍 세그먼트 내보내기 대상으로 대상 데이터 활성화](../../ui/activate-segment-streaming-destinations.md) 대상 세그먼트를 이 대상으로 활성화하는 방법에 대한 지침입니다.
 
