@@ -1,10 +1,11 @@
 ---
 title: 자체 호스팅 라이브러리
 description: Adobe Experience Platform에서 태그 라이브러리 빌드에 대한 자체 호스팅을 구현하는 방법을 알아봅니다.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: 8c3bf202-de7a-46e0-801f-0cede24865fd
+source-git-commit: 91b28fc284344b42020b0e49b64ac023e492d572
 workflow-type: tm+mt
-source-wordcount: '495'
-ht-degree: 64%
+source-wordcount: '489'
+ht-degree: 70%
 
 ---
 
@@ -12,9 +13,9 @@ ht-degree: 64%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../../term-updates.md)을 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
 
-Adobe Experience Platform의 태그를 사용하면 [build](../builds.md)라는 파일 세트를 만들 수 있습니다. 이 파일 집합은 런타임 시 애플리케이션의 동작을 제어합니다.
+Adobe Experience Platform의 태그를 사용하면 [빌드](../builds.md). 이 파일 집합은 런타임 시 애플리케이션의 동작을 제어합니다.
 
 빌드는 클라이언트 장치가 런타임 시 필요에 따라 검색할 수 있도록 임의의 위치에서 호스팅해야 합니다.
 
@@ -40,7 +41,6 @@ Adobe에서 호스팅된 파일을 관리하지 못하게 하려면 직접 호�
 
 * 일부 브라우저는 최종 사용자가 구성한 개인 정보 설정을 기반으로 하여 assets.adobedtm.com 도메인을 차단합니다.
 * 자체 호스팅은 필요한 DNS 조회 횟수를 줄입니다.
-* HTTP/2를 사용해야 합니다
 * 보안을 위해 설정해야 하는 특정 헤더가 있습니다.
 * 캐시 제어 요구 사항이 Adobe 기본 설정과 다릅니다
 * 에지 노드의 위치를 보다 세밀하게 제어할 수 있습니다.
