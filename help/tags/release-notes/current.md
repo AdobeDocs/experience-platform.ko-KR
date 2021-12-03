@@ -2,9 +2,9 @@
 title: 릴리스 정보
 description: Adobe Experience Platform의 태그에 대한 최신 릴리스 노트입니다.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: cda34c08a53d084a92a07caa9a2b166e27d9e28c
+source-git-commit: 2056f7f6e7372fa1dee2e975a75e7ba3b8dfe518
 workflow-type: tm+mt
-source-wordcount: '578'
+source-wordcount: '658'
 ht-degree: 6%
 
 ---
@@ -14,6 +14,12 @@ ht-degree: 6%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch은 Experience Platform에서 데이터 수집 기술 세트로 브랜드 재지정되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고자료는 다음 [문서](../term-updates.md)를 참조하십시오.
+
+## 2021년 11월 15일
+
+**태그의 ES6 코드 수락** - 이제 태그에서 ES6 코드를 포함하는 확장 및 사용자 지정 코드를 사용할 수 있습니다. 확장 카탈로그에는 ES6 코드가 포함된 각 확장의 카드 내에 ES6+ 레이블이 표시됩니다. IE10 및 IE11은 ES6 코드를 지원하지 않습니다. 태그 라이브러리에서 ES6 코드를 사용하기 전에 지능을 적절하게 사용하십시오.
+
+**Terser를 JavaScript 압축기로 사용** - Uglifier가 Terser로 대체되었습니다. 이 릴리스부터 모든 태그 라이브러리는 브라우저에서 축소됩니다.
 
 ## 2021년 10월 21일
 
