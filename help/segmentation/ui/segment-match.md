@@ -5,7 +5,7 @@ title: 세그먼트 일치 개요
 topic-legacy: overview
 description: 세그먼트 일치 는 두 명 이상의 플랫폼 사용자가 안전하고 제어되며 개인 정보에 친숙한 방식으로 세그먼트 데이터를 교환할 수 있도록 해주는 Adobe Experience Platform의 세그먼트 공유 서비스입니다.
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: ba215f20db3bfead8beba8f1dea98bfc37e4358c
+source-git-commit: 105ddf70aafe8c92b5a64959ba1c4cefa5eb6f12
 workflow-type: tm+mt
 source-wordcount: '1982'
 ht-degree: 1%
@@ -59,7 +59,7 @@ ID 네임스페이스는 [Adobe Experience Platform Identity 서비스](../../id
 
 동의 구성을 제공하고 기본값을 다음 중 하나로 설정해야 합니다 `opt-in` 또는 `opt-out` 동의 확인.
 
-옵트인 및 옵트아웃 동의 확인은 기본적으로 사용자 데이터를 공유하는 동의로 작동할 수 있는지 여부를 결정합니다. 동의 구성 기본값이 로 설정된 경우 `opt-in`로 설정되면 사용자가 명시적으로 옵트아웃하지 않는 한 사용자 데이터를 공유할 수 있습니다. 기본값이 로 설정된 경우 `opt-out`로 설정되면 사용자가 명시적으로 옵트인을 선택하지 않는 한 사용자 데이터를 공유할 수 없습니다.
+옵트인 및 옵트아웃 동의 확인은 기본적으로 사용자 데이터를 공유하는 동의로 작동할 수 있는지 여부를 결정합니다. 동의 구성 기본값이 로 설정된 경우 `opt-out`로 설정되면 사용자가 명시적으로 옵트아웃하지 않는 한 사용자 데이터를 공유할 수 있습니다. 기본값이 로 설정된 경우 `opt-in`로 설정되면 사용자가 명시적으로 옵트인을 선택하지 않는 한 사용자 데이터를 공유할 수 없습니다.
 
 에 대한 기본 동의 구성 [!DNL Segment Match] 가 로 설정되어 있습니다. `opt-out`. 데이터에 옵트인 모델을 적용하려면 Adobe 계정 관리자에게 이메일 요청을 보내십시오.
 
