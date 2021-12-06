@@ -2,9 +2,9 @@
 description: 이 페이지에서는 메시지 변환 템플릿을 기반으로 대상에 대해 내보낸 데이터를 렌더링하기 위해 '/authoring/testing/template/render' API 종단점을 사용하여 수행할 수 있는 모든 API 작업을 나열하고 설명합니다.
 title: 템플릿 API 작업 렌더링
 exl-id: e64ea89e-6064-4a05-9730-e0f7d7a3e1db
-source-git-commit: 5ecfd6e7f2f783d31642b7d81cc34b51eb0d6307
+source-git-commit: aa5898369d41ba48a1416a0b4ea82f6345333d18
 workflow-type: tm+mt
-source-wordcount: '786'
+source-wordcount: '824'
 ht-degree: 1%
 
 ---
@@ -24,6 +24,8 @@ ht-degree: 1%
 ## 메시지 변환 템플릿을 기반으로 내보낸 프로필 렌더링 {#render-exported-data}
 
 에 POST 요청을 수행하여 내보낸 프로필을 렌더링할 수 있습니다 `authoring/testing/template/render` 엔드포인트 및 대상 구성의 대상 ID와 을 사용하여 만든 템플릿 제공 [샘플 템플릿 API 엔드포인트](./sample-template-api.md).
+
+먼저 간단한 템플릿을 사용하여 변형을 적용하지 않고 원시 프로필을 내보낸 다음 보다 복잡한 템플릿으로 이동하여 프로파일에 변형을 적용할 수 있습니다. 단순 템플릿의 구문은 다음과 같습니다. <br> `"template": "{% for profile in input.profiles %}{{profile|raw}}{% endfor %}}"`
 
 >[!TIP]
 >
@@ -1065,7 +1067,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 
 ## API 오류 처리 {#api-error-handling}
 
-대상 SDK API 엔드포인트는 일반 Experience Platform API 오류 메시지 원칙을 따릅니다. 을(를) 참조하십시오. [API 상태 코드](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) 및 [요청 헤더 오류](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) 을 참조하십시오.
+Destination SDK API 엔드포인트는 일반 Experience Platform API 오류 메시지 원칙을 따릅니다. 을(를) 참조하십시오. [API 상태 코드](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) 및 [요청 헤더 오류](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) 을 참조하십시오.
 
 ## 다음 단계 {#next-steps}
 
