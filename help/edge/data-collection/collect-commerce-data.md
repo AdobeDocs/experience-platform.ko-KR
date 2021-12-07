@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK를 사용하여 상거래 및 제품 �
 description: Adobe Experience Platform Web SDK를 사용하여 제품 또는 장바구니와 관련된 데이터를 추가하는 방법을 알아봅니다.
 keywords: 제품;상거래;측정;측정값;주문;장바구니 포기;체크아웃;제품ListAdds;productListOpen;productListRemoval;productListReopenes;productListViews;productViews;구매;saveForLaters;currencyCode;payment;paymentAmount;transactionID;priceTotal;purchaseID;purchaseOrderNumber;
 exl-id: 3c79e776-89ef-494b-a2ea-3c23efce09ae
-source-git-commit: 22d15dde62f3113167684c7a76a2265e6f0e7bab
+source-git-commit: 51a18ca3a9d0817eafeecea328900eb2f4d1d9a4
 workflow-type: tm+mt
-source-wordcount: '1324'
+source-wordcount: '1326'
 ht-degree: 6%
 
 ---
@@ -114,7 +114,7 @@ alloy("sendEvent",{
 | **필드** | **권장 사항** | **설명** |
 |---|---|---|
 | [currencyCode](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmcurrencycode) | 선택 사항입니다 | 다음 [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 제품에 대한 통화. 이 기능은 다른 통화 코드가 있는 제품을 사용할 수 있고 적용되는 경우에만 유용합니다. 예를 들어 장바구니에 구매하거나 추가하는 경우가 있습니다. |
-| [priceTotal](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmpricetotal) | 매우 권장 | 해당되는 경우에만 설정해야 합니다. 예를 들어 `productView` 제품의 다른 변형이 가격마다 다를 수 있지만 `productListAdds`. |
+| [priceTotal](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmpricetotal) | 매우 권장 | 해당되는 경우에만 설정해야 합니다. 예를 들어 `productView` 이벤트의 다른 변형에는 가격이 다를 수 있지만 `productListAdds` 이벤트. |
 | [product](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmproduct) | 매우 권장 | 제품의 XDM ID입니다. |
 | [productAddMethod](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmproductaddmethod) | 매우 권장 | 방문자가 목록에 제품 항목을 추가하는 데 사용한 방법입니다. 설정 `productListAdds` 및 는 제품이 목록에 추가되는 경우에만 사용해야 합니다. 예로는 `add to cart button`, `quick add` 및 `upsell`가 있습니다. |
 | [productName](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmname) | 매우 권장 | 제품의 표시 이름 또는 사람이 읽을 수 있는 이름으로 설정됩니다. |
