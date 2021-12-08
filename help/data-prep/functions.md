@@ -5,9 +5,9 @@ title: 데이터 준비 매핑 함수
 topic-legacy: overview
 description: 이 문서에서는 데이터 준비에 사용되는 매핑 기능을 소개합니다.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 16484a5cf9f8ae7e4d0802cb8957c8627466db5f
+source-git-commit: c01f8d9f785bec5be712c0a64a8347557db0577e
 workflow-type: tm+mt
-source-wordcount: '3983'
+source-wordcount: '3971'
 ht-degree: 4%
 
 ---
@@ -82,7 +82,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | sha1 | 입력을 가져오고 SHA-1(보안 해시 알고리즘 1)을 사용하여 해시 값을 생성합니다. | <ul><li>입력: **필수 여부** 해시할 일반 텍스트입니다.</li><li>CHARSET: *선택 사항입니다* 문자 집합의 이름입니다. 가능한 값에는 UTF-8, UTF-16, ISO-8859-1 및 US-ASCII가 포함됩니다.</li></ul> | sha1(입력, CHARSET) | sha1(&quot;my text&quot;, &quot;UTF-8&quot;) | c3599c11e47719df18a24 48690840c5dfcce3c80 |
 | sha256 | 입력을 가져오고 보안 해시 알고리즘 256(SHA-256)을 사용하여 해시 값을 생성합니다. | <ul><li>입력: **필수 여부** 해시할 일반 텍스트입니다.</li><li>CHARSET: *선택 사항입니다* 문자 집합의 이름입니다. 가능한 값에는 UTF-8, UTF-16, ISO-8859-1 및 US-ASCII가 포함됩니다.</li></ul> | sha256(입력, CHARSET) | sha256(&quot;my text&quot;, &quot;UTF-8&quot;) | 7330d2b39ca35eaf4cb95fc846c21&#x200B; ee6a39af698154a83a586ee270a0d372104 |
-| sha512 | 입력을 가져오고 보안 해시 알고리즘 512(SHA-512)를 사용하여 해시 값을 생성합니다. | <ul><li>입력: **필수 여부** 해시할 일반 텍스트입니다.</li><li>CHARSET: *선택 사항입니다* 문자 집합의 이름입니다. 가능한 값에는 UTF-8, UTF-16, ISO-8859-1 및 US-ASCII가 포함됩니다.</li></ul> | sha512(입력, CHARSET) | sha512(&quot;my text&quot;, &quot;UTF-8&quot;) | a3d7e45a0d9be5fd4e4b9a3b8c9c2163c21ef708bf11b4232bb21d2a8704ada2cdcd7b367dd078a5c908cfe377aceb107a7f7f7a7f8f4f8a4f8f8f8a4f8f7f8a4f8f8f8a4f8a4f8f8f8f8f8a4f8a4f8a4f 68a8fd24d16 |
+| sha512 | 입력을 가져오고 보안 해시 알고리즘 512(SHA-512)를 사용하여 해시 값을 생성합니다. | <ul><li>입력: **필수 여부** 해시할 일반 텍스트입니다.</li><li>CHARSET: *선택 사항입니다* 문자 집합의 이름입니다. 가능한 값에는 UTF-8, UTF-16, ISO-8859-1 및 US-ASCII가 포함됩니다.</li></ul> | sha512(입력, CHARSET) | sha512(&quot;my text&quot;, &quot;UTF-8&quot;) | a3d7e45a0d9be5fd4e4b9a3b8c9c2163c21ef708bf11b4232bb21d2a8704ada2cdcd7b367dd078a5c908cfe377aceb107a7f7f7a7f8f4f8a4f8f8f8a4f8f8f8a4f8f8f8a4f8a4f8f 68a8fd24d16 |
 | md5 | 입력을 가져오고 MD5를 사용하여 해시 값을 생성합니다. | <ul><li>입력: **필수 여부** 해시할 일반 텍스트입니다.</li><li>CHARSET: *선택 사항입니다* 문자 집합의 이름입니다. 가능한 값에는 UTF-8, UTF-16, ISO-8859-1 및 US-ASCII가 포함됩니다. </li></ul> | md5(입력, CHARSET) | md5(&quot;my text&quot;, &quot;UTF-8&quot;) | d3b96ce8c9fb4&#x200B;e9bd0198d03ba6852c7 |
 | crc32 | 입력을 받으면 CRC(순환 중복 검사) 알고리즘을 사용하여 32비트 순환 코드를 생성합니다. | <ul><li>입력: **필수 여부** 해시할 일반 텍스트입니다.</li><li>CHARSET: *선택 사항입니다* 문자 집합의 이름입니다. 가능한 값에는 UTF-8, UTF-16, ISO-8859-1 및 US-ASCII가 포함됩니다.</li></ul> | crc32(입력, 문자) | crc32(&quot;my text&quot;, &quot;UTF-8&quot;) | 8df92e80 |
 
@@ -114,8 +114,8 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | now | 현재 시간을 검색합니다. |  | now() | now() | `2021-10-26T10:10:24Z` |
 | timestamp | 현재 Unix 시간을 검색합니다. |  | timestamp() | timestamp() | 1571850624571 |
-| date_to_string | 입력 날짜를 지정된 형식에 따라 형식을 지정합니다. | <ul><li>날짜: **필수 여부** 형식을 지정할 입력 날짜(ZoneDateTime 개체)입니다.</li><li>형식: **필수 여부** 날짜를 변경할 형식입니다.</li></ul> | date_to_string(DATE, FORMAT) | date_to_string(2019-10-23T11:24:00+00:00, &quot;yyyy-MM-dd HH:mm:ss&quot;) | &quot;2019-10-23 11:24:35인치 |
-| long_to_date | 지정된 형식에 따라 타임스탬프를 날짜 문자열로 변환합니다. | <ul><li>타임스탬프: **필수 여부** 포맷할 타임스탬프입니다. 밀리초 단위로 기록됩니다.</li><li>형식: **필수 여부** 타임스탬프를 만들려는 형식입니다.</li></ul> | long_to_date(TIMESTAMP, FORMAT) | long_to_date(1571829875000, &quot;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSX&quot;) | &quot;2019-10-23T11:24:35.000Z&quot; |
+| 포맷 | 입력 날짜를 지정된 형식에 따라 형식을 지정합니다. | <ul><li>날짜: **필수 여부** 형식을 지정할 입력 날짜(ZoneDateTime 개체)입니다.</li><li>형식: **필수 여부** 날짜를 변경할 형식입니다.</li></ul> | format(날짜, 형식) | 형식(2019-10-23T11:24:00+00:00, &quot;yyyy-MM-dd HH:mm:ss&quot;) | &quot;2019-10-23 11:24:35인치 |
+| dformat | 지정된 형식에 따라 타임스탬프를 날짜 문자열로 변환합니다. | <ul><li>타임스탬프: **필수 여부** 포맷할 타임스탬프입니다. 밀리초 단위로 기록됩니다.</li><li>형식: **필수 여부** 타임스탬프를 만들려는 형식입니다.</li></ul> | DFORMAT(TIMESTAMP, FORMAT) | dformat(1571829875000, &quot;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSX&quot;) | &quot;2019-10-23T11:24:35.000Z&quot; |
 | 날짜 | 날짜 문자열을 ZoneDateTime 개체(ISO 8601 형식)로 변환합니다. | <ul><li>날짜: **필수 여부** 날짜를 나타내는 문자열입니다.</li><li>형식: **필수 여부** 소스 날짜 형식을 나타내는 문자열입니다.**참고:** 이 기능은 **not** 날짜 문자열을 변환하려는 형식을 나타냅니다. </li><li>DEFAULT_DATE: **필수 여부** 제공된 날짜가 null인 경우 기본 날짜가 반환됩니다.</li></ul> | date(DATE, FORMAT, DEFAULT_DATE) | date(&quot;2019-10-23 11:24&quot;, &quot;yyyy-MM-dd HH:mm&quot;, now()) | &quot;2019-10-23T11:24:00Z&quot; |
 | 날짜 | 날짜 문자열을 ZoneDateTime 개체(ISO 8601 형식)로 변환합니다. | <ul><li>날짜: **필수 여부** 날짜를 나타내는 문자열입니다.</li><li>형식: **필수 여부** 소스 날짜 형식을 나타내는 문자열입니다.**참고:** 이 기능은 **not** 날짜 문자열을 변환하려는 형식을 나타냅니다. </li></ul> | date(날짜, 형식) | date(&quot;2019-10-23 11:24&quot;, &quot;yyyy-MM-dd HH:mm&quot;) | &quot;2019-10-23T11:24:00Z&quot; |
 | 날짜 | 날짜 문자열을 ZoneDateTime 개체(ISO 8601 형식)로 변환합니다. | <ul><li>날짜: **필수 여부** 날짜를 나타내는 문자열입니다.</li></ul> | date(날짜) | date(&quot;2019-10-23 11:24&quot;) | &quot;2019-10-23T11:24:00Z&quot; |
