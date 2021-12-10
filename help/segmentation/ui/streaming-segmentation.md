@@ -5,9 +5,9 @@ title: 스트리밍 세그멘테이션 UI 안내서
 topic-legacy: ui guide
 description: Adobe Experience Platform의 스트리밍 세그멘테이션을 사용하면 데이터 다양성에 중점을 두고 거의 실시간으로 세그멘테이션을 수행할 수 있습니다. 스트리밍 세그먼테이션을 사용하면 이제 데이터가 플랫폼에 도달하면 세그먼트 자격이 발생하므로 세그먼테이션 작업을 예약하고 실행해야 하는 필요성을 완화합니다. 이 기능을 사용하면 이제 데이터가 Platform으로 전달되므로 대부분의 세그먼트 규칙을 평가할 수 있습니다. 즉, 세그먼트 멤버십은 예약된 세그먼테이션 작업을 실행하지 않고 최신 상태로 유지됩니다.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 6db0aef66abe11b8ed9f4b8da56875aa296b1a10
+source-git-commit: 1fa7663cc8bebca98f284593e98163315acda478
 workflow-type: tm+mt
-source-wordcount: '1190'
+source-wordcount: '1245'
 ht-degree: 0%
 
 ---
@@ -69,6 +69,12 @@ ht-degree: 0%
 특히, **[!UICONTROL 총 적격 대상 크기]** 표시됩니다. 다음 **[!UICONTROL 총 정규화된 대상 크기]** 마지막으로 완료된 세그먼트 작업 실행의 총 적격 대상 수를 표시합니다. 지난 24시간 내에 세그먼트 작업이 완료되지 않으면 대신 예측에서 대상 수를 가져옵니다.
 
 아래에는 지난 24시간 동안 자격이 있고 자격이 없는 세그먼트의 수를 보여주는 선 그래프가 있습니다. 드롭다운을 조정하여 최근 24시간, 지난 주 또는 최근 30일을 표시할 수 있습니다.
+
+>[!NOTE]
+>
+>세그먼트는 상태가 실현되지 않거나 종료에서 실현되는 경우 자격이 있는 것으로 간주됩니다. 세그먼트는 실현되지 않았거나 종료되지 않은 경우 부적합하다고 간주됩니다.
+>
+>이러한 상태에 대한 자세한 내용은 [세분화 개요](./overview.md#browse).
 
 ![](../images/ui/streaming-segmentation/monitoring-streaming-segment-graph.png)
 

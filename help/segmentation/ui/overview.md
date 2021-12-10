@@ -5,7 +5,7 @@ title: 세그멘테이션 서비스 UI 안내서
 topic-legacy: ui guide
 description: Adobe Experience Platform 세그멘테이션 서비스는 세그먼트 정의를 만들고 관리하기 위한 사용자 인터페이스를 제공합니다.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: ce3d5e3db28d39b8d7d5a984700dd681c650ac94
 workflow-type: tm+mt
 source-wordcount: '1693'
 ht-degree: 0%
@@ -45,7 +45,7 @@ Experience Platform UI에서 **[!UICONTROL 세그먼트]** 왼쪽 탐색에서 �
 
 ![](../../dashboards/images/segments/dashboard-overview.png)
 
-## 찾아보기
+## 찾아보기 {#browse}
 
 을(를) 선택합니다 **[!UICONTROL 찾아보기]** IMS 조직에 대한 모든 세그먼트 정의 목록을 보려면 탭을 클릭하십시오.
 
