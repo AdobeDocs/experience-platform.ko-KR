@@ -2,9 +2,9 @@
 title: Real-time Customer Data Platform B2B Edition의 소스
 description: Real-time Customer Data Platform B2B Edition에서 소스의 역할에 대한 개요입니다.
 exl-id: eeea4b2e-67c5-4491-9b8e-4b8987e44777
-source-git-commit: ef3b9bb742b44aafc838b84a0076e7c8445ac84f
+source-git-commit: 1a104d26b920082ee73178dd0ad7234ad43dec1a
 workflow-type: tm+mt
-source-wordcount: '275'
+source-wordcount: '290'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,8 @@ Real-time Customer Data Platform B2B Edition을 사용하면 다음을 포함한
 >[!TIP]
 >
 >Real-time Customer Data Platform B2B Edition은 데이터를 수집할 수 있는 다양한 외부 소스를 제공하지만 Real-time Customer Data Platform에 사용할 수 있는 것만큼 많은 외부 소스가 없습니다. 조직에서 사용할 수 있는 소스 커넥터를 학습하기 위해 플랫폼 UI에서 소스 카탈로그를 볼 수 있습니다. 카탈로그에 액세스하려면 다음을 선택합니다 **소스** 왼쪽 탐색에서 를 선택하고 **카탈로그**.
+
+소스가 B2B 워크플로우에 맞는 방식을 이해하려면 다음을 참조하십시오. [엔드 투 엔드 자습서](../b2b-tutorial.md#ingest-your-data-into-experience-platform).
 
 자세한 내용은 [소스 커넥터 개요](../../sources/home.md) Adobe Experience Platform에서 사용할 수 있는 소스 유형에 대한 자세한 내용을 참조하십시오.
 

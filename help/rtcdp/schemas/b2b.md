@@ -2,9 +2,9 @@
 title: Real-time Customer Data Platform B2B Edition의 스키마
 description: Real-time Customer Data Platform B2B Edition에서 XDM(Experience Data Model) 스키마의 역할에 대한 개요입니다.
 exl-id: 3b18d377-108f-443f-86ae-dc7537cf9013
-source-git-commit: 8718512a9768158183b9fb6b9e336081e47cd889
+source-git-commit: 1a104d26b920082ee73178dd0ad7234ad43dec1a
 workflow-type: tm+mt
-source-wordcount: '220'
+source-wordcount: '235'
 ht-degree: 0%
 
 ---
@@ -27,6 +27,8 @@ Real-time Customer Data Platform B2B Edition은 몇 가지 표준을 제공합�
 * [XDM 비즈니스 기회 개인 관계](../../xdm/classes/b2b/business-opportunity-person-relation.md)
 * [XDM 비즈니스 마케팅 목록](../../xdm/classes/b2b/business-marketing-list.md)
 * [XDM 비즈니스 마케팅 목록 구성원](../../xdm/classes/b2b/business-marketing-list-members.md)
+
+스키마가 B2B 워크플로우에 맞는 방식을 이해하려면 [엔드 투 엔드 자습서](../b2b-tutorial.md).
 
 두 스키마 간에 다대다 관계를 만드는 방법에 대한 단계는 [B2B 스키마 관계 정의](../../xdm/tutorials/relationship-b2b.md).
 

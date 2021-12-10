@@ -1,17 +1,17 @@
 ---
-title: 실시간 CDP B2B Edition을 위한 세그먼테이션 사용 사례 개요
+title: 실시간 CDP B2B Edition에 대한 세그먼테이션 사용 사례
 description: 사용 가능한 다양한 실시간 CDP B2B Edition 사용 사례에 대한 개요입니다.
 exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
-source-git-commit: e6f71954d52e0a998955c3420307417cc011c24d
+source-git-commit: 9bd7434f2b224d76decac1e04d8491a6b3149a3a
 workflow-type: tm+mt
-source-wordcount: '1096'
-ht-degree: 0%
+source-wordcount: '1105'
+ht-degree: 1%
 
 ---
 
-# Real-time Customer Data Platform B2B Edition용 세그먼테이션 사용 사례 개요
+# Real-time Customer Data Platform B2B Edition에 대한 세그먼테이션 사용 사례
 
-이 문서에서는 실시간 CDP B2B Edition에 사용할 수 있는 세그멘테이션 및 일반적인 B2B 사용 사례를 위해 다양한 유형의 속성을 결합할 수 있는 방법에 대한 예를 제공합니다.
+이 문서에서는 실시간 CDP B2B Edition의 세그먼트 정의 예와 일반적인 B2B 사용 사례를 위해 다양한 유형의 속성을 결합할 수 있는 방법에 대해 설명합니다. 대상이 B2B 워크플로우에 어떻게 적합한지 이해하려면 다음을 참조하십시오. [엔드 투 엔드 자습서](../b2b-tutorial.md#create-a-segment-to-evaluate-your-data).
 
 >[!NOTE]
 >

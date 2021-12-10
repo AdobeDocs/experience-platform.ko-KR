@@ -3,9 +3,9 @@ keywords: rtcdp 프로필;프로필 rtcdp;rtcdp ID;rtcdp 병합 정책;실시간
 title: 계정 프로필 UI 안내서
 description: Real-time Customer Data Platform B2B Edition에서는 계정 프로필을 사용하여 여러 소스에서 계정 정보를 통합할 수 있습니다. 이 안내서에서는 Adobe Experience Platform 사용자 인터페이스의 계정 프로필과 상호 작용하기 위한 세부 사항을 제공합니다.
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: f4ca1efe9c728f50008d7fbaa17aa009dfc18393
+source-git-commit: 9bd7434f2b224d76decac1e04d8491a6b3149a3a
 workflow-type: tm+mt
-source-wordcount: '1172'
+source-wordcount: '1193'
 ht-degree: 0%
 
 ---
@@ -17,6 +17,8 @@ ht-degree: 0%
 >계정 프로필은 Real-time Customer Data Platform B2B Edition 고객만 사용할 수 있습니다. 각 라이센스 유형에 사용할 수 있는 기능 및 기능을 포함한 실시간 CDP에 대한 자세한 내용은 [실시간 CDP 개요](../overview.md).
 
 계정 프로필을 사용하면 여러 소스의 계정 정보를 통합할 수 있습니다. 이러한 계정 통합 보기는 다양한 마케팅 채널 및 조직에서 고객 계정 정보를 저장하는 데 현재 사용하는 다양한 시스템의 데이터를 통합합니다. 이 문서에서는 Adobe Experience Platform UI(사용자 인터페이스)에서 사용할 수 있는 실시간 CDP와 B2B Edition 기능을 사용하여 계정 프로필과 상호 작용하는 방법에 대한 안내서를 제공합니다.
+
+B2B 워크플로우의 일부로 계정 프로필을 만드는 방법에 대한 자세한 내용은 다음을 참조하십시오. [엔드 투 엔드 자습서](../b2b-tutorial.md).
 
 ## 계정 프로필 찾아보기
 

@@ -3,9 +3,9 @@ keywords: rtcdp b2b;b2b;계정;계정 프로필;계정 프로필 rtcdp;실시간
 title: 실시간 CDP B2B Edition의 계정 프로필
 description: Real-time Customer Data Platform B2B Edition을 사용하여 계정 프로필을 사용하여 여러 소스에서 계정 정보를 통합하는 방법을 알아봅니다.
 exl-id: 67515fe0-975e-4ee1-b172-60bc93ba1010
-source-git-commit: f4ca1efe9c728f50008d7fbaa17aa009dfc18393
+source-git-commit: 9bd7434f2b224d76decac1e04d8491a6b3149a3a
 workflow-type: tm+mt
-source-wordcount: '254'
+source-wordcount: '275'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 >
 >계정 프로필은 Real-time Customer Data Platform B2B Edition 고객만 사용할 수 있습니다. 실시간 CDP에 대한 자세한 내용을 보려면 [실시간 CDP, B2B Edition 개요](../b2b-overview.md).
 
-계정 프로필을 사용하면 여러 소스의 계정 정보를 통합할 수 있습니다. 이러한 계정 통합 보기는 고객의 다양한 마케팅 채널 및 조직에서 고객 계정 데이터를 저장하는 데 현재 사용하는 다양한 시스템의 데이터를 통합합니다.
+계정 프로필을 사용하면 여러 소스의 계정 정보를 통합할 수 있습니다. 이러한 계정 통합 보기는 고객의 다양한 마케팅 채널 및 조직에서 고객 계정 데이터를 저장하는 데 현재 사용하는 다양한 시스템의 데이터를 통합합니다. B2B 워크플로우의 일부로 계정 프로필을 만드는 방법에 대한 자세한 내용은 다음을 참조하십시오. [엔드 투 엔드 자습서](../b2b-tutorial.md).
 
 서로 다른 출처의 계정 데이터를 함께 결합하면 각 고객 계정과 관련된 영업 기회 및 연락처의 전체 그림을 볼 수 있습니다. 이를 통해 조직은 B2B 마케팅 캠페인을 새로운 수준으로 끌어올릴 수 있습니다. 실시간 CDP의 강력한 기능에 대해 자세히 알아보려면 다음 문서를 참조하십시오. [실시간 CDP, B2B Edition 예제 사용 사례](../b2b-use-case.md).
 
