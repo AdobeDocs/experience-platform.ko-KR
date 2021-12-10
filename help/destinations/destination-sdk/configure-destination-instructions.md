@@ -2,9 +2,9 @@
 description: 이 페이지에서는 Destination SDK을 사용하여 스트리밍 대상을 구성하는 단계를 나열하고 설명합니다.
 title: Destination SDK을 사용하여 스트리밍 대상 구성
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: 3b320f253516f2c169330e1eed6ad870a583891a
+source-git-commit: b3d0f0c43b60895961cee2ee54518c0450e2e2f7
 workflow-type: tm+mt
-source-wordcount: '663'
+source-wordcount: '702'
 ht-degree: 0%
 
 ---
@@ -61,6 +61,10 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 아래에 표시된 것은 를 사용하여 작성된 대상 템플릿에 대한 구성 예입니다. `/destinations` API 엔드포인트. 이 템플릿에 대한 자세한 내용은 [대상 구성](./destination-configuration.md).
 
 1단계의 서버 및 템플릿 구성을 이 대상 구성에 연결하려면 서버 및 템플릿 구성의 인스턴스 ID를 `destinationServerId` 여기 있습니다.
+
+>[!IMPORTANT]
+>
+>올바르게 구성된 대상을 만들려면 *반드시* 에서 하나 이상의 대상 id 추가 `identityNamespaces`아래에 표시된 대로, Target ID가 구성되어 있지 않으면 사용자가 [매핑 단계](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) 활성화 워크플로우에 대한 업데이트입니다.
 
 ```json
 POST platform.adobe.io/data/core/activation/authoring/destinations
