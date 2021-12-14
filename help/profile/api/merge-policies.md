@@ -5,7 +5,7 @@ topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platform을 사용하면 여러 소스에서 데이터 조각을 함께 가져와서 결합하여 각 개별 고객에 대한 전체 보기를 볼 수 있습니다. 이 데이터를 함께 가져올 때 병합 정책은 Platform이 데이터 우선 순위가 지정되는 방법과 통합 보기를 만들기 위해 결합할 데이터를 결정하는 데 사용하는 규칙입니다.
 exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
-source-git-commit: 9af59d5a4fda693a2aef8e590a7754f0e1c1ac8d
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '2469'
 ht-degree: 1%
@@ -143,7 +143,7 @@ UI를 사용하여 병합 정책을 작업하려면 [병합 정책 UI 안내서]
 위치 `{ATTRIBUTE_MERGE_TYPE}` 는 다음 중 하나입니다.
 
 * **`timestampOrdered`**: (기본값) 마지막으로 업데이트된 프로필에 우선 순위를 지정합니다. 이 병합 유형을 사용하면 `data` 속성이 필요하지 않습니다.
-* **`dataSetPrecedence`** : 제공된 데이터 세트를 기반으로 프로필 조각에 우선 순위를 지정합니다. 한 데이터 세트에 있는 정보가 다른 데이터 세트의 데이터보다 선호되거나 신뢰할 수 있는 경우 사용할 수 있습니다. 이 병합 유형을 사용하는 경우 `order` 우선 순위 순서로 데이터 세트를 나열하므로 특성이 필요합니다.
+* **`dataSetPrecedence`**: 제공된 데이터 세트를 기반으로 프로필 조각에 우선 순위를 지정합니다. 한 데이터 세트에 있는 정보가 다른 데이터 세트에 있는 데이터보다 선호되거나 신뢰할 수 있는 경우 사용할 수 있습니다. 이 병합 유형을 사용하는 경우 `order` 우선 순위 순서로 데이터 세트를 나열하므로 특성이 필요합니다.
    * **`order`**: &quot;dataSetPriority&quot;를 사용하면 `order` 데이터 세트 목록과 함께 배열을 제공해야 합니다. 목록에 포함되지 않은 데이터 세트는 병합되지 않습니다. 즉, 데이터 세트를 명시적으로 나열하여 프로필에 병합해야 합니다. 다음 `order` 배열에는 우선 순위 순서로 데이터 세트의 ID가 나열됩니다.
 
 #### 예 `attributeMerge` 개체 사용 `dataSetPrecedence` 유형
@@ -151,7 +151,7 @@ UI를 사용하여 병합 정책을 작업하려면 [병합 정책 UI 안내서]
 ```json
     "attributeMerge": {
         "type": "dataSetPrecedence",
-        "order" : [
+        "order": [
             "dataSetId_2", 
             "dataSetId_3", 
             "dataSetId_1", 
@@ -483,12 +483,12 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -d '{
     "name": "Loyalty members ordered by ID",
-    "identityGraph" : {
+    "identityGraph": {
         "type": "none"
     },
-    "attributeMerge" : {
+    "attributeMerge": {
         "type":"dataSetPrecedence",
-        "order" : [
+        "order": [
             "5b76f86b85d0e00000be5c8b",
             "5b76f8d787a6af01e2ceda18"
         ]

@@ -5,7 +5,7 @@ title: 배치 수집 API 개요
 topic-legacy: overview
 description: 'Adobe Experience Platform 데이터 수집 API를 사용하면 데이터를 배치 파일로 Platform에 수집할 수 있습니다. 수집되는 데이터는 CRM 시스템의 플랫 파일(예: Parquet 파일)의 프로필 데이터 또는 XDM(Experience Data Model) 레지스트리에서 알려진 스키마를 준수하는 데이터일 수 있습니다.'
 exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
-source-git-commit: 3eea0a1ecbe7db202f56f326e7b9b1300b37d236
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '1388'
 ht-degree: 6%
@@ -14,9 +14,9 @@ ht-degree: 6%
 
 # 배치 수집 API 개요
 
-Adobe Experience Platform 데이터 수집 API를 사용하면 데이터를 배치 파일로 Platform에 수집할 수 있습니다. 수집되는 데이터는 플랫 파일(예: Parquet 파일)의 프로필 데이터이거나 [!DNL Experience Data Model] (XDM) 레지스트리에서 알려진 스키마를 따르는 데이터일 수 있습니다.
+Adobe Experience Platform 데이터 수집 API를 사용하면 데이터를 배치 파일로 Platform에 수집할 수 있습니다. 수집되는 데이터는 플랫 파일(예: Parquet 파일)의 프로필 데이터 또는 의 알려진 스키마를 따르는 데이터일 수 있습니다 [!DNL Experience Data Model] (XDM) 레지스트리.
 
-[데이터 수집 API 참조](https://www.adobe.io/experience-platform-apis/references/data-ingestion/)는 이러한 API 호출에 대한 추가 정보를 제공합니다.
+다음 [데이터 수집 API 참조](https://www.adobe.io/experience-platform-apis/references/data-ingestion/) 는 이러한 API 호출에 대한 추가 정보를 제공합니다.
 
 다음 다이어그램은 배치 수집 프로세스에 대해 설명합니다.
 
@@ -24,12 +24,12 @@ Adobe Experience Platform 데이터 수집 API를 사용하면 데이터를 배�
 
 ## 시작하기
 
-이 안내서에 사용된 API 엔드포인트는 [데이터 수집 API](https://www.adobe.io/experience-platform-apis/references/data-ingestion/)의 일부입니다. 계속하기 전에 [시작 안내서](getting-started.md)에서 관련 설명서에 대한 링크, 이 문서에서 샘플 API 호출을 읽는 방법에 대한 안내서, 모든 Experience Platform API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요한 정보를 검토하십시오.
+이 안내서에서 사용되는 API 엔드포인트는 [데이터 수집 API](https://www.adobe.io/experience-platform-apis/references/data-ingestion/). 계속하기 전에 [시작 안내서](getting-started.md) 관련 설명서에 대한 링크의 경우, 이 문서에서 샘플 API 호출을 읽는 안내서와 Experience Platform API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요 정보를 제공합니다.
 
 ### [!DNL Data Ingestion] 전제 조건
 
 - 업로드할 데이터는 Parquet 또는 JSON 형식으로 되어 있어야 합니다.
-- [[!DNL Catalog services]](../../catalog/home.md)에서 생성된 데이터 집합입니다.
+- 에서 만든 데이터 세트 [[!DNL Catalog services]](../../catalog/home.md).
 - Parquet 파일의 컨텐츠는 업로드되는 데이터 집합의 스키마 하위 집합과 일치해야 합니다.
 - 인증 후 고유한 액세스 토큰을 가지십시오.
 
@@ -49,15 +49,15 @@ Adobe Experience Platform 데이터 수집 API를 사용하면 데이터를 배�
 
 >[!NOTE]
 >
->512MB보다 큰 파일을 업로드하려면 파일을 더 작은 청크로 나누어야 합니다. 큰 파일을 업로드하는 방법은 이 문서의 [큰 파일 업로드 섹션에 있습니다](#large-file-upload---create-file).
+>512MB보다 큰 파일을 업로드하려면 파일을 더 작은 청크로 나누어야 합니다. 큰 파일을 업로드하는 방법은 [이 문서의 대용량 파일 업로드 섹션](#large-file-upload---create-file).
 
 ### 유형
 
-데이터를 섭취할 때 [!DNL Experience Data Model] (XDM) 스키마가 작동하는 방식을 이해하는 것이 중요합니다. XDM 필드 유형이 다른 형식에 매핑되는 방법에 대한 자세한 내용은 [스키마 레지스트리 개발자 안내서](../../xdm/api/getting-started.md)를 참조하십시오.
+데이터를 수집할 때 방법을 이해하는 것이 중요합니다 [!DNL Experience Data Model] (XDM) 스키마가 작동합니다. XDM 필드 유형이 다른 형식으로 매핑되는 방법에 대한 자세한 내용은 [스키마 레지스트리 개발자 안내서](../../xdm/api/getting-started.md).
 
-데이터를 수집할 때 몇 가지 유연성이 있습니다. 유형이 대상 스키마에 있는 내용과 일치하지 않으면 데이터가 표현된 대상 유형으로 변환됩니다. 처리할 수 없으면 `TypeCompatibilityException`으로 일괄 처리가 실패합니다.
+데이터를 수집할 때 몇 가지 유연성이 있습니다. 유형이 대상 스키마에 있는 내용과 일치하지 않으면 데이터가 표현된 대상 유형으로 변환됩니다. 처리할 수 없으면 배치 실패 시 `TypeCompatibilityException`.
 
-예를 들어 JSON이나 CSV에는 `date` 또는 `date-time` 유형이 없습니다. 따라서 이러한 값은 [ISO 8061 형식 문자열](https://www.iso.org/iso-8601-date-and-time-format.html)(&quot;2018-07-10T15:05:59.000-08:00&quot;) 또는 Unix 시간(밀리초)을 사용하여 표시되며 수집 시 대상 XDM 유형으로 변환됩니다.
+예를 들어, JSON이나 CSV에는 가 없습니다 `date` 또는 `date-time` 유형. 따라서 이러한 값은 [ISO 8061 형식 문자열](https://www.iso.org/iso-8601-date-and-time-format.html) (&quot;2018-07-10T15&quot;:05:59.000-08:00&quot;) 또는 Unix 시간(밀리초)(1531263959000)으로 포맷되며 수집 시 대상 XDM 유형으로 변환됩니다.
 
 아래 표는 데이터를 수집할 때 지원되는 전환을 보여줍니다.
 
@@ -80,7 +80,7 @@ Adobe Experience Platform 데이터 수집 API를 사용하면 데이터를 배�
 
 ## API 사용
 
-[!DNL Data Ingestion] API를 사용하면 3가지 기본 단계에서 데이터를 배치(단일 단위로 수집할 하나 이상의 파일로 구성된 데이터 단위)로 [!DNL Experience Platform]에 수집할 수 있습니다.
+다음 [!DNL Data Ingestion] API를 사용하면 데이터를 배치(단일 단위로 수집할 하나 이상의 파일로 구성된 데이터 단위)로 수집할 수 있습니다. [!DNL Experience Platform] 다음 세 가지 기본 단계를 수행합니다.
 
 1. 새 배치를 생성합니다.
 2. 데이터의 XDM 스키마와 일치하는 지정된 데이터 세트에 파일을 업로드합니다.
@@ -102,7 +102,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
   -H "x-gw-ims-org-id: {IMS_ORG}" \
   -H "x-sandbox-name: {SANDBOX_NAME}" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
-  -H "x-api-key : {API_KEY}"
+  -H "x-api-key: {API_KEY}"
   -d '{ 
           "datasetId": "{DATASET_ID}" 
       }'
@@ -147,11 +147,11 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 
 >[!NOTE]
 >
->일괄 처리는 프로필 저장소에서 데이터를 점진적으로 업데이트하는 데 사용할 수 있습니다. 자세한 내용은 [배치 수집 개발자 안내서](api-overview.md)에서 [배치](#patch-a-batch) 업데이트 섹션을 참조하십시오.
+>일괄 처리는 프로필 저장소에서 데이터를 점진적으로 업데이트하는 데 사용할 수 있습니다. 자세한 내용은 [배치 갱신](#patch-a-batch) 에서 [배치 수집 개발자 안내서](api-overview.md).
 
 >[!INFO]
 >
->아래 예제는 [Apache Parquet](https://parquet.apache.org/documentation/latest/) 파일 형식을 사용합니다. JSON 파일 형식을 사용하는 예는 [배치 수집 개발자 안내서](api-overview.md)에서 찾을 수 있습니다.
+>아래 예제는 [아파치 쪽모이 세공](https://parquet.apache.org/documentation/latest/) 파일 형식입니다. JSON 파일 형식을 사용하는 예는 [배치 수집 개발자 안내서](api-overview.md).
 
 ### 작은 파일 업로드
 
@@ -175,7 +175,7 @@ curl -X PUT "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
   -H "x-gw-ims-org-id: {IMS_ORG}" \
   -H "x-sandbox-name: {SANDBOX_NAME}" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
-  -H "x-api-key : {API_KEY}" \
+  -H "x-api-key: {API_KEY}" \
   --data-binary "@{FILE_PATH_AND_NAME}.parquet"
 ```
 
@@ -258,7 +258,7 @@ curl -X PATCH "https://platform.adobe.io/data/foundation/import/batches/{BATCH_I
 
 ## 신호 배치 완료
 
-모든 파일이 배치에 업로드되면 배치에 대해 완료를 알리는 신호를 보낼 수 있습니다. 이렇게 하면 완료된 파일에 대해 [!DNL Catalog] DataSetFile 항목이 생성되고 위에서 생성된 배치와 연결됩니다. 그런 다음 [!DNL Catalog] 일괄 처리가 성공으로 표시되어 사용 가능한 데이터를 수집하기 위해 다운스트림 흐름을 트리거합니다.
+모든 파일이 배치에 업로드되면 배치에 대해 완료를 알리는 신호를 보낼 수 있습니다. 이렇게 하면 [!DNL Catalog] DataSetFile 항목은 완료된 파일에 대해 생성되고 위에서 생성된 배치와 연결됩니다. 다음 [!DNL Catalog] 그런 다음 일괄 처리가 성공으로 표시되어 사용 가능한 데이터를 수집하기 위해 다운스트림 흐름을 트리거합니다.
 
 **요청**
 
@@ -275,7 +275,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 -H "x-gw-ims-org-id: {IMS_ORG}" \
 -H "x-sandbox-name: {SANDBOX_NAME}" \
 -H "Authorization: Bearer {ACCESS_TOKEN}" \
--H "x-api-key : {API_KEY}"
+-H "x-api-key: {API_KEY}"
 ```
 
 **응답**
@@ -402,20 +402,20 @@ curl GET "https://platform.adobe.io/data/foundation/catalog/batch/{BATCH_ID}" \
 | -------- | ----------- |
 | `{USER_ID}` | 배치를 생성하거나 갱신한 사용자의 ID입니다. |
 
-`"status"` 필드는 요청한 배치의 현재 상태를 표시하는 필드입니다. 배치에는 다음 상태 중 하나가 있을 수 있습니다.
+다음 `"status"` 필드는 요청한 배치의 현재 상태를 표시하는 필드입니다. 배치에는 다음 상태 중 하나가 있을 수 있습니다.
 
 ## 배치 수집 상태
 
 | 상태 | 설명 |
 | ------ | ----------- |
 | 포기 | 일괄 처리가 예상 기간에 완료되지 않았습니다. |
-| 중단됨 | abort 작업에 지정된 일괄 처리에 대해 **명시적으로**&#x200B;이(가) 호출되었습니다. 일괄 처리가 &quot;로드됨&quot; 상태에 있으면 중단될 수 없습니다. |
+| 중단됨 | 중단 작업이 있습니다. **명시적으로** 지정된 배치에 대해 배치 수집 API를 통해 호출되었습니다. 일괄 처리가 &quot;로드됨&quot; 상태에 있으면 중단될 수 없습니다. |
 | 활성 | 일괄 처리가 성공적으로 홍보되었으며 다운스트림 소비에 사용할 수 있습니다. 이 상태는 &quot;성공&quot;과 교환하여 사용할 수 있습니다. |
 | 삭제됨 | 배치에 대한 데이터가 완전히 제거되었습니다. |
-| 실패 | 잘못된 구성 및/또는 잘못된 데이터에서 발생하는 터미널 상태입니다. 실패한 배치에 대한 데이터는 **표시되지 않습니다**. 이 상태는 &quot;실패&quot;와 서로 교환하여 사용할 수 있습니다. |
+| 실패 | 잘못된 구성 및/또는 잘못된 데이터에서 발생하는 터미널 상태입니다. 실패한 배치에 대한 데이터는 **not** 표시합니다. 이 상태는 &quot;실패&quot;와 서로 교환하여 사용할 수 있습니다. |
 | 비활성 | 일괄 처리가 성공적으로 승격되었지만 복귀되었거나 만료되었습니다. 일괄 처리는 더 이상 다운스트림 소비에 사용할 수 없습니다. |
 | 로드됨 | 배치에 대한 데이터가 완료되고 배치가 승격 준비가 되었습니다. |
-| 로드 중 | 이 일괄 처리에 대한 데이터가 업로드 중이며 일괄 처리가 현재 **승격할 준비가 되지 않았습니다.** |
+| 로드 중 | 이 일괄 처리에 대한 데이터가 업로드되고 일괄 처리가 현재 있습니다 **not** 승격할 준비가 되었습니다. |
 | 다시 시도 중 | 이 배치에 대한 데이터를 처리 중입니다. 그러나 시스템 오류 또는 일시적인 오류로 인해 배치에 실패하여 이 배치를 다시 시도합니다. |
 | 스테이징됨 | 배치에 대한 프로모션 프로세스의 스테이징 단계가 완료되고 수집 작업이 실행되었습니다. |
 | 스테이징 | 일괄 처리에 대한 데이터를 처리 중입니다. |

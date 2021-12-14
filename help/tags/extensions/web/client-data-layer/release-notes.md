@@ -1,7 +1,8 @@
 ---
 title: Adobe 클라이언트 데이터 레이어 확장에 대한 릴리스 노트
 description: Adobe Experience Platform의 Adobe 클라이언트 데이터 레이어 태그 확장에 대한 최신 릴리스 노트입니다.
-source-git-commit: 8dfb7bdc16d0654ee1d76dc5f5af50938b122d33
+exl-id: 8fa3a210-6c85-4162-84cf-15c6e3cfcb9e
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '164'
 ht-degree: 4%
@@ -31,7 +32,7 @@ ht-degree: 4%
    * 푸시된 특정 이벤트 수신
    * 모든 이벤트는 다른 범위에서 들을 수 있습니다
 * 데이터 요소:
-   * 계산된 상태 : 전역 또는 특정 상태
+   * 계산된 상태: 전역 또는 특정 상태
    * 데이터 레이어 크기
 * 작업:
    * 데이터 레이어 크기를 다시 설정합니다(최신 계산된 상태 유지).

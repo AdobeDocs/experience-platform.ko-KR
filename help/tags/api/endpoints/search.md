@@ -1,7 +1,8 @@
 ---
 title: 검색 끝점
 description: Reactor API에서 /search 종단점을 호출하는 방법을 알아봅니다.
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+exl-id: 14eb8d8a-3b42-42f3-be87-f39e16d616f4
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '658'
 ht-degree: 1%
@@ -10,7 +11,7 @@ ht-degree: 1%
 
 # 검색 끝점
 
-Reactor API의 `/search` 종단점은 쿼리로 표현되는 원하는 기준과 일치하는 리소스를 찾는 방법을 제공합니다.
+다음 `/search` reactor API의 종단점은 쿼리로 표현되는 원하는 기준에 일치하는 리소스를 찾는 방법을 제공합니다.
 
 다음 API 리소스 유형은 API에서 반환된 리소스 기반 문서와 동일한 데이터 구조를 사용하여 검색할 수 있습니다.
 
@@ -37,11 +38,11 @@ Reactor API의 `/search` 종단점은 쿼리로 표현되는 원하는 기준과
 >* 범위 쿼리는 현재 정수만 지원합니다.
 
 
-이 기능을 사용하는 방법에 대한 자세한 내용은 [검색 안내서](../guides/search.md)를 참조하십시오.
+이 기능을 사용하는 방법에 대한 자세한 내용은 [검색 안내서](../guides/search.md).
 
 ## 시작하기
 
-이 안내서에 사용된 끝점은 [Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/)의 일부입니다. 계속하기 전에 API 인증 방법에 대한 중요한 정보가 필요하면 [시작 안내서](../getting-started.md)를 검토하십시오.
+이 안내서에 사용된 엔드포인트는 [Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/). 계속하기 전에 [시작 안내서](../getting-started.md) 를 참조하십시오.
 
 ## 검색 수행 {#perform}
 
@@ -64,7 +65,7 @@ curl -X POST \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1' \
   -d '{
-        "data" : {
+        "data": {
           "from": 0,
           "size": 25,
           "query": {
@@ -95,15 +96,15 @@ curl -X POST \
 | --- | --- |
 | `from` | 응답을 오프셋할 결과 수입니다. |
 | `size` | 반환할 최대 결과 양입니다. 결과는 100개 항목을 초과할 수 없습니다. |
-| `query` | 검색 쿼리를 나타내는 개체입니다. 이 개체의 각 속성에 대해 키는 쿼리할 필드 경로를 나타내야 하며 값은 하위 속성이 쿼리할 내용을 결정하는 개체여야 합니다.<br><br>각 필드 경로에 대해 다음 하위 속성을 사용할 수 있습니다.<ul><li>`exists`: 리소스에 필드가 있으면 true를 반환합니다.</li><li>`value`: 필드의 값이 이 속성의 값과 일치하면 true를 반환합니다.</li><li>`value_operator`: 쿼리를 처리하는 방법을 결정하는  `value` 데 사용되는 부울 로직입니다. 허용되는 값은 `AND` 및 `OR`입니다. 제외되면 `AND` 논리가 가정됩니다. 자세한 내용은 [값 연산자 논리](#value-operator)의 섹션을 참조하십시오.</li><li>`range` 필드의 값이 특정 숫자 범위 내에 있으면 true를 반환합니다. 범위 자체는 다음 하위 속성에 의해 결정됩니다.<ul><li>`gt`: 제공된 값보다 크고, 비포함.</li><li>`gte`: 제공된 값보다 크거나 같음.</li><li>`lt`: 제공된 값보다 작음, 비포함.</li><li>`lte`: 제공된 값보다 작거나 같습니다.</li></ul></li></ul> |
-| `sort` | 결과를 정렬할 순서를 나타내는 객체의 배열입니다. 각 객체에는 단일 속성이 포함되어야 합니다. 키는 정렬할 필드 경로를 나타내고 값은 오름차순 정렬 순서(`asc`, 내림차순 `desc`)를 나타냅니다. |
+| `query` | 검색 쿼리를 나타내는 개체입니다. 이 개체의 각 속성에 대해 키는 쿼리할 필드 경로를 나타내야 하며 값은 하위 속성이 쿼리할 내용을 결정하는 개체여야 합니다.<br><br>각 필드 경로에 대해 다음 하위 속성을 사용할 수 있습니다.<ul><li>`exists`: 리소스에 필드가 있으면 true를 반환합니다.</li><li>`value`: 필드의 값이 이 속성의 값과 일치하면 true를 반환합니다.</li><li>`value_operator`: 를 결정하는 데 사용되는 부울 로직입니다 `value` 쿼리는 처리해야 합니다. 허용되는 값은 다음과 같습니다 `AND` 및 `OR`. 제외되면, `AND` 논리를 가정합니다. 의 섹션을 참조하십시오. [값 연산자 논리](#value-operator) 추가 정보.</li><li>`range` 필드의 값이 특정 숫자 범위 내에 있으면 true를 반환합니다. 범위 자체는 다음 하위 속성에 의해 결정됩니다.<ul><li>`gt`: 제공된 값보다 크고, 비포함.</li><li>`gte`: 제공된 값보다 크거나 같음.</li><li>`lt`: 제공된 값보다 작음, 비포함.</li><li>`lte`: 제공된 값보다 작거나 같습니다.</li></ul></li></ul> |
+| `sort` | 결과를 정렬할 순서를 나타내는 객체의 배열입니다. 각 객체에는 단일 속성이 포함되어야 합니다. 키는 정렬할 필드 경로를 나타내고 값은 정렬 순서(`asc` 오름차순 `desc` 내림차순). |
 | `resource_types` | 검색할 특정 리소스 유형을 나타내는 문자열 배열입니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **응답**
 
-성공적인 응답은 쿼리에 일치하는 리소스 목록을 반환합니다. API에서 특정 값에 대한 일치 여부를 결정하는 방법에 대한 자세한 내용은 [일치 규칙](#conventions)의 부록 섹션을 참조하십시오.
+성공적인 응답은 쿼리에 일치하는 리소스 목록을 반환합니다. API에서 특정 값에 대한 일치 여부를 결정하는 방법에 대한 자세한 내용은 부록 섹션을 참조하십시오. [일치 규칙](#conventions).
 
 ```json
 {
@@ -210,15 +211,15 @@ curl -X POST \
 
 ## 부록
 
-다음 섹션에는 `/search` 종단점 사용에 대한 추가 정보가 포함되어 있습니다.
+다음 섹션에는 `/search` 엔드포인트.
 
 ### 값 연산자 논리 {#value-operator}
 
 검색 쿼리 값은 인덱싱된 문서와 일치하도록 용어로 분할됩니다. 각 용어 사이에 `AND` 관계가 가정됩니다.
 
-`AND`을 `value_operator`으로 사용하는 경우 `My Rule Holiday Sale`의 쿼리 값이 `My AND Rule AND Holiday AND Sale`을 포함하는 필드가 있는 문서로 해석됩니다.
+사용 시 `AND` 로서의 `value_operator`, 의 쿼리 값 `My Rule Holiday Sale` 는 을 포함하는 필드가 있는 문서로 해석됩니다 `My AND Rule AND Holiday AND Sale`.
 
-`OR`을 `value_operator`으로 사용하는 경우 `My Rule Holiday Sale`의 쿼리 값이 `My OR Rule OR Holiday OR Sale`을 포함하는 필드가 있는 문서로 해석됩니다. 일치하는 용어가 많을수록 `match_score`이 높습니다. 부분 용어 일치의 특성으로 인해 원하는 값과 일치하는 항목이 없을 경우 텍스트 몇 문자와 같이, 매우 기본적인 수준에서만 값이 일치하는 결과 세트를 가져올 수 있습니다.
+사용 시 `OR` 로서의 `value_operator`, 의 쿼리 값 `My Rule Holiday Sale` 는 을 포함하는 필드가 있는 문서로 해석됩니다 `My OR Rule OR Holiday OR Sale`. 일치하는 용어가 많을수록 `match_score`. 부분 용어 일치의 특성으로 인해 원하는 값과 일치하는 항목이 없을 경우 텍스트 몇 문자와 같이, 매우 기본적인 수준에서만 값이 일치하는 결과 세트를 가져올 수 있습니다.
 
 ### 일치 규칙 {#conventions}
 
@@ -240,7 +241,7 @@ API에 표시되는 특정 필드에 대한 추가 규칙이 있습니다.
 | 필드 | 일치 규칙 |
 | --- | --- |
 | `id` | 정확히 일치, 대/소문자 구분 |
-| `delegate_descriptor_id` | 정확히 일치, 대/소문자 구분, `::`에서 분할된 용어 |
+| `delegate_descriptor_id` | 정확한 일치, 대/소문자 구분, 분할 사용 `::` |
 | `name` | 정확히 일치, 대/소문자 구분 |
 | `settings` | 부분 용어 분석, 대/소문자를 구분하지 않는 텍스트 |
 | `type` | 정확히 일치, 대/소문자 구분 |

@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: 이 자습서에서는 소스 커넥터 및 API를 사용하여 타사 클라우드 저장소에서 데이터를 검색하고 Platform으로 가져오는 단계를 설명합니다.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: 10f04044e970158131677e0c630edf761d4577bd
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '1835'
 ht-degree: 1%
@@ -160,7 +160,7 @@ curl -X POST \
         "data": {
             "format": "delimited",
             "properties": {
-                "compressionType" : "gzip"
+                "compressionType": "gzip"
             }
         },
         "params": {

@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: 이 자습서에서는 API를 사용하여 실시간 고객 프로필 대상 세그먼트에 대한 데이터 사용 규정을 적용하는 단계를 설명합니다.
 exl-id: 2299328c-d41a-4fdc-b7ed-72891569eaf2
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '1368'
 ht-degree: 1%
@@ -127,7 +127,7 @@ curl -X GET \
 
 ## 병합 정책에서 소스 데이터 세트 찾기 {#datasets}
 
-병합 정책에는 소스 데이터 세트에 대한 정보가 포함되어 있으며 이 정보에는 데이터 사용 레이블이 포함됩니다. GET 요청에 병합 정책 ID를 제공하여 병합 정책의 세부 사항을 조회할 수 있습니다 [!DNL Profile] API. 병합 정책에 대한 자세한 내용은 [정책 엔드포인트 가이드](../../profile/api/merge-policies.md).
+병합 정책에는 소스 데이터 세트에 대한 정보가 포함되어 있으며 여기에는 데이터 사용 레이블이 포함됩니다. GET 요청에 병합 정책 ID를 제공하여 병합 정책의 세부 사항을 조회할 수 있습니다 [!DNL Profile] API. 병합 정책에 대한 자세한 내용은 [정책 엔드포인트 가이드 병합](../../profile/api/merge-policies.md).
 
 **API 형식**
 
@@ -168,7 +168,7 @@ curl -X GET \
     "attributeMerge": {
         "type":"dataSetPrecedence", 
         "data": {
-            "order" : ["5b95b155419ec801e6eee780", "5b7c86968f7b6501e21ba9df"]
+            "order": ["5b95b155419ec801e6eee780", "5b7c86968f7b6501e21ba9df"]
         }
     },
     "default": false,

@@ -5,7 +5,7 @@ title: Attribution AI의 입력 및 출력
 topic-legacy: Input and Output data for Attribution AI
 description: 다음 문서에서는 Attribution AI에서 사용되는 다양한 입력 및 출력에 대해 설명합니다.
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
-source-git-commit: 9023019ed8a781f9ae3965adab875cf2244f55a9
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '2268'
 ht-degree: 3%
@@ -87,7 +87,7 @@ Attribution AI은 모델 교육을 위한 입력으로 이전 데이터가 필�
 >
 > 기본 구성이 있는 응용 프로그램에 필요한 최소 데이터 길이는 다음과 같습니다. 2분기(180일) + 56일 = 236일.
 
-예 :
+예:
 
 - 지난 90일(3개월) 내에 발생한 전환 이벤트를 추적하고 전환 이벤트 4주 전에 발생한 모든 터치포인트를 추적하려고 합니다. 입력 데이터 기간은 지난 90일 + 28일(4주)에 걸쳐 지속되어야 합니다. 교육 기간은 90일이며 전환 확인 기간은 총 118일입니다.
 
@@ -139,7 +139,7 @@ Attribution AI은 모든 점수 열로 점수를 나누고 분류할 수 있도�
 | skuId(문자열) | True | 공급업체에서 정의한 제품의 고유 식별자인 SKU(Stock Keeping Unit). <br> **예:** MJ-03-XS-블랙 |
 | timestamp(DateTime) | True | 전환 타임스탬프입니다. <br> **예:** 2020-06-09T00:01:51.00Z |
 | passThrough(개체) | True | 모델을 구성하는 동안 사용자가 지정한 추가 점수 데이터 세트 열입니다. |
-| commerce_order_purchaseCity(String) | True | 추가 점수 데이터 세트 열. <br> **예:** city : San Jose |
+| commerce_order_purchaseCity(String) | True | 추가 점수 데이터 세트 열. <br> **예:** city: San Jose |
 | customerProfile(Object) | False | 모델을 만드는 데 사용되는 사용자의 ID 세부 사항입니다. |
 | id(개체) | False | 다음과 같이 모델을 만드는 데 사용되는 사용자의 세부 정보를 포함합니다. `id` 및 `namespace`. |
 | id(문자열) | True | 쿠키 ID 또는 AAID 또는 MCID 등과 같은 사용자의 ID <br> **예:** 17348762725408656344688320891369597404 |

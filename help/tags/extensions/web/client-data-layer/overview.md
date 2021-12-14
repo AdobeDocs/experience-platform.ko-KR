@@ -1,7 +1,8 @@
 ---
 title: Adobe 클라이언트 데이터 레이어 확장
 description: Adobe Experience Platform의 Adobe 클라이언트 데이터 레이어 태그 확장에 대해 알아봅니다.
-source-git-commit: 8dfb7bdc16d0654ee1d76dc5f5af50938b122d33
+exl-id: c4d1b4d3-4b51-4701-be2e-31b08e109bf6
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '643'
 ht-degree: 0%
@@ -30,11 +31,11 @@ This installation will not be supported on our end.<br>
 
 ## 확장 보기
 
-기본적으로 ACDL 스크립트는 변수 이름이 `adobeDataLayer`인 새 데이터 계층을 만듭니다. 원할 경우 확장 보기에서 이 이름을 변경할 수 있습니다. 설정한 이름은 태그가 로드되면 인스턴스화됩니다.
+기본적으로 ACDL 스크립트는 변수 이름을 사용하여 새 데이터 계층을 만듭니다 `adobeDataLayer`. 원할 경우 확장 보기에서 이 이름을 변경할 수 있습니다. 설정한 이름은 태그가 로드되면 인스턴스화됩니다.
 
 >[!NOTE]
 >
->개체 이름을 변경할 때 원본 `adobeDataLayer` 개체가 여전히 인스턴스화되고 선택한 새 변수 이름에 복제되고 있습니다.
+>객체 이름을 변경하면 원래 `adobeDataLayer` 개체가 여전히 인스턴스화되고 선택한 새 변수 이름에 복제되고 있습니다.
 
 ## 이벤트
 
@@ -74,7 +75,7 @@ This installation will not be supported on our end.<br>
 
 이벤트를 지정하는 경우 이벤트 리스너는 특정 문자열과 일치하는 모든 이벤트를 추적합니다.
 
-예를 들어 이 구성을 사용할 때 `myEvent` 을 설정하면 리스너는 다음 푸시 이벤트만 추적합니다.
+예를 들어, `myEvent` 이 구성을 사용하는 경우 리스너는 다음 푸시 이벤트만 추적합니다.
 
 * `adobeDataLayer.push({"event":"myEvent"})`
 
@@ -94,7 +95,7 @@ This installation will not be supported on our end.<br>
 
 그러나 현재 푸시 메서드 중에 이전에 설정된 정보를 완전히 제거할 수 없습니다.
 
-**계산된 상태 재설정 및 설정** 작업은 마지막 계산된 상태를 복사하고 데이터 레이어 개체를 비우고 마지막 상태를 다시 푸시합니다.
+다음 **계산 상태 재설정 및 설정** 작업은 마지막 계산된 상태를 복사하고 데이터 레이어 개체를 비워 마지막으로 상태를 다시 푸시합니다.
 
 ### 데이터 계층에 푸시
 
@@ -118,14 +119,14 @@ This installation will not be supported on our end.<br>
 
 데이터 레이어 계산된 상태 데이터 요소는 구성 방식에 따라 두 가지 항목 중 하나를 반환할 수 있습니다.
 
-* 전체 데이터 레이어 상태 : 기본적으로 전체 데이터 계층 계산 상태가 반환됩니다.
-* 특정 경로 : 데이터 계층에서 반환할 경로를 지정할 수 있습니다. 경로는 점 표기법(예: `data.foo`)을 사용하여 지정됩니다.
+* 전체 데이터 레이어 상태: 기본적으로 전체 데이터 계층 계산 상태가 반환됩니다.
+* 특정 경로: 데이터 계층에서 반환할 경로를 지정할 수 있습니다. 경로는 점 표기법을 사용하여 지정됩니다(예: `data.foo`).
 
 ### 데이터 레이어 크기
 
 이 데이터 요소는 데이터 레이어의 크기를 반환합니다. 데이터 레이어의 크기는 이 객체에 푸시된 요소의 수로 표시됩니다.
 
-다음 푸시 이벤트 목록이 주어지면 이 데이터 요소는 정수 `2`을 반환합니다.
+다음 푸시 이벤트 목록이 주어지면 이 데이터 요소는 정수를 반환합니다 `2`:
 
 ```js
 adobeDataLayer.push({"event":"myEvent"})

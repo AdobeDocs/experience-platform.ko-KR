@@ -6,7 +6,7 @@ description: 이 문서에서는 Adobe Experience Platform API를 사용하여 �
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
-source-git-commit: 2b1cde9fc913be4d3bea71e7d56e0e5fe265a6be
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '2021'
 ht-degree: 2%
@@ -194,7 +194,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
             "data": {
                 "format": "json"
             },
-            "params" : {}
+            "params": {}
 }'
 ```
 
@@ -480,7 +480,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 ![대상 단계 개요 6단계](../assets/api/streaming-destination/step6.png)
 
-자습서의 마지막 단계에서는 세그먼트 및 프로필 속성이 데이터 플로우에 올바르게 매핑되었는지 확인해야 합니다.
+자습서의 마지막 단계에서는 세그먼트 및 프로필 속성이 데이터 흐름에 제대로 매핑되었는지 확인해야 합니다.
 
 유효성을 검사하려면 다음 GET 요청을 수행합니다.
 

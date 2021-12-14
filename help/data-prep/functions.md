@@ -5,9 +5,9 @@ title: 데이터 준비 매핑 함수
 topic-legacy: overview
 description: 이 문서에서는 데이터 준비에 사용되는 매핑 기능을 소개합니다.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: c01f8d9f785bec5be712c0a64a8347557db0577e
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
-source-wordcount: '3971'
+source-wordcount: '3964'
 ht-degree: 4%
 
 ---
@@ -114,10 +114,10 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | now | 현재 시간을 검색합니다. |  | now() | now() | `2021-10-26T10:10:24Z` |
 | timestamp | 현재 Unix 시간을 검색합니다. |  | timestamp() | timestamp() | 1571850624571 |
-| 포맷 | 입력 날짜를 지정된 형식에 따라 형식을 지정합니다. | <ul><li>날짜: **필수 여부** 형식을 지정할 입력 날짜(ZoneDateTime 개체)입니다.</li><li>형식: **필수 여부** 날짜를 변경할 형식입니다.</li></ul> | format(날짜, 형식) | 형식(2019-10-23T11:24:00+00:00, &quot;yyyy-MM-dd HH:mm:ss&quot;) | &quot;2019-10-23 11:24:35인치 |
-| dformat | 지정된 형식에 따라 타임스탬프를 날짜 문자열로 변환합니다. | <ul><li>타임스탬프: **필수 여부** 포맷할 타임스탬프입니다. 밀리초 단위로 기록됩니다.</li><li>형식: **필수 여부** 타임스탬프를 만들려는 형식입니다.</li></ul> | DFORMAT(TIMESTAMP, FORMAT) | dformat(1571829875000, &quot;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSX&quot;) | &quot;2019-10-23T11:24:35.000Z&quot; |
-| 날짜 | 날짜 문자열을 ZoneDateTime 개체(ISO 8601 형식)로 변환합니다. | <ul><li>날짜: **필수 여부** 날짜를 나타내는 문자열입니다.</li><li>형식: **필수 여부** 소스 날짜 형식을 나타내는 문자열입니다.**참고:** 이 기능은 **not** 날짜 문자열을 변환하려는 형식을 나타냅니다. </li><li>DEFAULT_DATE: **필수 여부** 제공된 날짜가 null인 경우 기본 날짜가 반환됩니다.</li></ul> | date(DATE, FORMAT, DEFAULT_DATE) | date(&quot;2019-10-23 11:24&quot;, &quot;yyyy-MM-dd HH:mm&quot;, now()) | &quot;2019-10-23T11:24:00Z&quot; |
-| 날짜 | 날짜 문자열을 ZoneDateTime 개체(ISO 8601 형식)로 변환합니다. | <ul><li>날짜: **필수 여부** 날짜를 나타내는 문자열입니다.</li><li>형식: **필수 여부** 소스 날짜 형식을 나타내는 문자열입니다.**참고:** 이 기능은 **not** 날짜 문자열을 변환하려는 형식을 나타냅니다. </li></ul> | date(날짜, 형식) | date(&quot;2019-10-23 11:24&quot;, &quot;yyyy-MM-dd HH:mm&quot;) | &quot;2019-10-23T11:24:00Z&quot; |
+| 포맷 | 입력 날짜를 지정된 형식에 따라 형식을 지정합니다. | <ul><li>날짜: **필수 여부** 형식을 지정할 입력 날짜(ZoneDateTime 개체)입니다.</li><li>형식: **필수 여부** 날짜를 변경할 형식입니다.</li></ul> | format(날짜, 형식) | 형식(2019-10-23T11:24:00+00:00, &quot;yyyy-MM-dd HH:mm:ss&quot;) | `2019-10-23 11:24:35` |
+| dformat | 지정된 형식에 따라 타임스탬프를 날짜 문자열로 변환합니다. | <ul><li>타임스탬프: **필수 여부** 포맷할 타임스탬프입니다. 밀리초 단위로 기록됩니다.</li><li>형식: **필수 여부** 타임스탬프를 만들려는 형식입니다.</li></ul> | DFORMAT(TIMESTAMP, FORMAT) | dformat(1571829875000, &quot;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSX&quot;) | `2019-10-23T11:24:35.000Z` |
+| 날짜 | 날짜 문자열을 ZoneDateTime 개체(ISO 8601 형식)로 변환합니다. | <ul><li>날짜: **필수 여부** 날짜를 나타내는 문자열입니다.</li><li>형식: **필수 여부** 소스 날짜 형식을 나타내는 문자열입니다.**참고:** 이 기능은 **not** 날짜 문자열을 변환하려는 형식을 나타냅니다. </li><li>DEFAULT_DATE: **필수 여부** 제공된 날짜가 null인 경우 기본 날짜가 반환됩니다.</li></ul> | date(DATE, FORMAT, DEFAULT_DATE) | date(&quot;2019-10-23 11:24&quot;, &quot;yyyy-MM-dd HH:mm&quot;, now()) | `2019-10-23T11:24:00Z` |
+| 날짜 | 날짜 문자열을 ZoneDateTime 개체(ISO 8601 형식)로 변환합니다. | <ul><li>날짜: **필수 여부** 날짜를 나타내는 문자열입니다.</li><li>형식: **필수 여부** 소스 날짜 형식을 나타내는 문자열입니다.**참고:** 이 기능은 **not** 날짜 문자열을 변환하려는 형식을 나타냅니다. </li></ul> | date(날짜, 형식) | date(&quot;2019-10-23 11:24&quot;, &quot;yyyy-MM-dd HH:mm&quot;) | `2019-10-23T11:24:00Z` |
 | 날짜 | 날짜 문자열을 ZoneDateTime 개체(ISO 8601 형식)로 변환합니다. | <ul><li>날짜: **필수 여부** 날짜를 나타내는 문자열입니다.</li></ul> | date(날짜) | date(&quot;2019-10-23 11:24&quot;) | &quot;2019-10-23T11:24:00Z&quot; |
 | date_part | 날짜의 부분을 검색합니다. 지원되는 구성 요소 값은 다음과 같습니다. <br><br>&quot;year&quot;<br>&quot;yyyy&quot;<br>&quot;yy&quot;<br><br>&quot;quarter&quot;<br>&quot;qq&quot;<br>&quot;q&quot;<br><br>&quot;month&quot;<br>&quot;mm&quot;<br>&quot;m&quot;<br><br>&quot;dayofyear&quot;<br>&quot;dy&quot;<br>&quot;y&quot;<br><br>&quot;day&quot;<br>&quot;dd&quot;<br>&quot;d&quot;<br><br>&quot;week&quot;<br>&quot;ww&quot;<br>&quot;w&quot;<br><br>&quot;weekday&quot;<br>&quot;dw&quot;<br>&quot;w&quot;<br><br>&quot;hour&quot;<br>&quot;hh&quot;<br>&quot;hh24&quot;<br>&quot;hh12&quot;<br><br>&quot;minute&quot;<br>&quot;mi&quot;<br>&quot;n&quot;<br><br>&quot;second&quot;<br>&quot;ss&quot;<br>&quot;s&quot;<br><br>&quot;ms&quot;<br>&quot;ms&quot; | <ul><li>구성 요소: **필수 여부** 날짜의 부분을 나타내는 문자열입니다. </li><li>날짜: **필수 여부** 표준 형식으로 된 날짜입니다.</li></ul> | date_&#x200B;part(COMPONENT, DATE) | date_part(&quot;MM&quot;, date(&quot;2019-10-17 11&quot;:55:12형) | 10 |
 | set_date_part | 지정된 날짜에서 구성 요소를 바꿉니다. 다음 구성 요소가 수락됩니다. <br><br>&quot;year&quot;<br>&quot;yyyy&quot;<br>&quot;yy&quot;<br><br>&quot;month&quot;<br>&quot;mm&quot;<br>&quot;m&quot;<br><br>&quot;day&quot;<br>&quot;dd&quot;<br>&quot;d&quot;<br><br>&quot;hour&quot;<br>&quot;hh&quot;<br><br>&quot;minute&quot;<br>&quot;mi&quot;<br>&quot;n&quot;<br><br>&quot;second&quot;<br>&quot;ss&quot;<br>&quot;s&quot; | <ul><li>구성 요소: **필수 여부** 날짜의 부분을 나타내는 문자열입니다. </li><li>값: **필수 여부** 지정된 날짜에 대한 구성 요소에 대해 설정할 값입니다.</li><li>날짜: **필수 여부** 표준 형식으로 된 날짜입니다.</li></ul> | set_date_&#x200B;part(COMPONENT, VALUE, DATE) | set_date_part(&quot;m&quot;, 4, date(&quot;2016-11-09T11:44:44.797형) | &quot;2016-04-09T11:44:44Z&quot; |
@@ -214,7 +214,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 | 함수 | 설명 | 매개 변수 | 구문 | 표현식 | 샘플 출력 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| json_to_object | 지정된 문자열에서 JSON 컨텐츠를 deserialize합니다. | <ul><li>문자열: **필수 여부** deserialize할 JSON 문자열입니다.</li></ul> | json_to_&#x200B;object(STRING) | json_to_object &#x200B;({&quot;info&quot;:{&quot;firstName&quot;:&quot;John&quot;,&quot;lastName&quot; : &quot;Doe&quot;}) | JSON을 나타내는 객체입니다. |
+| json_to_object | 지정된 문자열에서 JSON 컨텐츠를 deserialize합니다. | <ul><li>문자열: **필수 여부** deserialize할 JSON 문자열입니다.</li></ul> | json_to_&#x200B;object(STRING) | json_to_object &#x200B;({&quot;info&quot;:{&quot;firstName&quot;:&quot;John&quot;,&quot;lastName&quot;: &quot;Doe&quot;}) | JSON을 나타내는 객체입니다. |
 
 {style=&quot;table-layout:auto&quot;}
 

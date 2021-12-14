@@ -6,7 +6,8 @@ topic-legacy: tutorial
 description: Flow Service API를 사용하여 Adobe Experience Platform을 YOURSOURCE에 연결하는 방법을 알아봅니다.
 hide: true
 hidefromtoc: true
-source-git-commit: d4b5b54be9fa2b430a3b45eded94a523b6bd4ef8
+exl-id: c6927a71-3721-461e-9752-8ebc0b7b1cca
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '2300'
 ht-degree: 2%
@@ -54,7 +55,7 @@ POST /connections
 
 **요청**
 
-다음 요청은에 대한 기본 연결을 만듭니다. *YOURSOURCE* :
+다음 요청은에 대한 기본 연결을 만듭니다. *YOURSOURCE*:
 
 ```shell
 curl -X POST \
@@ -237,7 +238,7 @@ POST /sourceConnections
 
 **요청**
 
-다음 요청은에 대한 소스 연결을 만듭니다 *YOURSOURCE* :
+다음 요청은에 대한 소스 연결을 만듭니다 *YOURSOURCE*:
 
 ```shell
 curl -X POST \
@@ -312,7 +313,7 @@ POST /targetConnections
 
 **요청**
 
-다음 요청은에 대한 대상 연결을 만듭니다 *YOURSOURCE* :
+다음 요청은에 대한 대상 연결을 만듭니다 *YOURSOURCE*:
 
 ```shell
 curl -X POST \

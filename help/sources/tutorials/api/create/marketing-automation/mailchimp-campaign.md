@@ -4,32 +4,33 @@ solution: Experience Platform
 title: Flow Service API를 사용하여 MailChimp Campaign에 대한 데이터 흐름 만들기
 topic-legacy: tutorial
 description: Flow Service API를 사용하여 Adobe Experience Platform을 MailChimp Campaign에 연결하는 방법을 알아봅니다.
-source-git-commit: c8d94af6185785a0e4bfce9889c04405ed223b1f
+exl-id: fd4821c7-6fe1-4cad-8e13-3549dbe0ce98
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '2319'
 ht-degree: 2%
 
 ---
 
-# Flow Service API를 사용하여 [!DNL MailChimp Campaign]에 대한 데이터 흐름 만들기
+# 데이터 흐름 만들기 [!DNL MailChimp Campaign] 흐름 서비스 API 사용
 
-다음 자습서에서는 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)를 사용하여 [!DNL MailChimp Campaign] 데이터를 Platform으로 가져오도록 소스 연결 및 데이터 흐름을 만드는 단계를 안내합니다.
+다음 자습서에서는 가져올 소스 연결 및 데이터 흐름을 만드는 단계를 안내합니다 [!DNL MailChimp Campaign] 데이터를 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## 전제 조건
 
-OAuth 2 새로 고침 코드를 사용하여 [!DNL MailChimp]을 Adobe Experience Platform에 연결하려면 먼저 [!DNL MailChimp.]에 대한 액세스 토큰을 검색해야 합니다. 액세스 토큰 찾기에 대한 자세한 지침은 [[!DNL MailChimp] OAuth 2 안내서](https://mailchimp.com/developer/marketing/guides/access-user-data-oauth-2/)를 참조하십시오.
+연결하기 전에 [!DNL MailChimp] OAuth 2 새로 고침 코드를 사용하여 Adobe Experience Platform에 액세스하려면 먼저 액세스 토큰을 검색해야 합니다 [!DNL MailChimp.] 자세한 내용은 [[!DNL MailChimp] OAuth 2 안내서](https://mailchimp.com/developer/marketing/guides/access-user-data-oauth-2/) 액세스 토큰 찾기에 대한 자세한 지침
 
 ## 기본 연결 만들기 {#base-connection}
 
-이제 [!DNL MailChimp] 인증 자격 증명을 검색한 후 데이터 흐름을 만드는 프로세스를 시작하여 [!DNL MailChimp Campaign] 데이터를 플랫폼으로 가져올 수 있습니다. 데이터 흐름을 만드는 첫 번째 단계는 기본 연결을 만드는 것입니다.
+을 검색한 후 [!DNL MailChimp] 이제 데이터 흐름을 만드는 프로세스를 시작하여 다음을 가져올 수 있습니다 [!DNL MailChimp Campaign] Platform으로 데이터를 전송할 수 있습니다. 데이터 흐름을 만드는 첫 번째 단계는 기본 연결을 만드는 것입니다.
 
 기본 연결은 소스의 인증 자격 증명, 현재 연결 상태 및 고유한 기본 연결 ID를 포함하여 소스와 플랫폼 간의 정보를 유지합니다. 기본 연결 ID를 사용하면 소스 내에서 파일을 탐색 및 탐색하고 해당 데이터 유형 및 형식에 대한 정보를 포함하여 수집할 특정 항목을 식별할 수 있습니다.
 
 [!DNL MailChimp] 에서는 기본 인증 및 OAuth 2 새로 고침 코드를 모두 지원합니다. 두 인증 유형을 인증하는 방법에 대한 지침은 다음 예를 참조하십시오.
 
-### 기본 인증을 사용하여 [!DNL MailChimp] 기본 연결 만들기
+### 만들기 [!DNL MailChimp] 기본 인증을 사용한 기본 연결
 
-기본 인증을 사용하여 [!DNL MailChimp] 기본 연결을 만들려면 `host`, `authorizationTestUrl`, `username` 및 `password`에 대한 자격 증명을 제공하는 동안 [!DNL Flow Service] API의 `/connections` 종단점에 POST 요청을 수행하십시오.
+을(를) 만들려면 [!DNL MailChimp] 기본 인증을 사용하여 기본 연결에서 `/connections` 끝점 [!DNL Flow Service] 에 대한 자격 증명을 제공하는 동안 API `host`, `authorizationTestUrl`, `username`, 및 `password`.
 
 **API 형식**
 
@@ -39,7 +40,7 @@ POST /connections
 
 **요청**
 
-다음 요청은 [!DNL MailChimp]에 대한 기본 연결을 만듭니다.
+다음 요청은에 대한 기본 연결을 만듭니다. [!DNL MailChimp]:
 
 ```shell
 curl -X POST \
@@ -72,16 +73,16 @@ curl -X POST \
 | --- | --- |
 | `name` | 기본 연결의 이름입니다. 기본 연결에 대한 정보를 조회하는 데 사용할 수 있으므로 기본 연결의 이름이 설명적인지 확인합니다. |
 | `description` | (선택 사항) 기본 연결에 대한 자세한 정보를 제공하기 위해 포함할 수 있는 속성입니다. |
-| `connectionSpec.id` | 소스의 연결 사양 ID입니다. 이 ID는 [!DNL Flow Service] API를 통해 소스가 등록되고 승인되면 검색할 수 있습니다. |
+| `connectionSpec.id` | 소스의 연결 사양 ID입니다. 이 ID는 소스를 등록하고 [!DNL Flow Service] API. |
 | `auth.specName` | 소스를 Platform에 연결하는 데 사용하는 인증 유형입니다. |
-| `auth.params.host` | [!DNL MailChimp] API에 연결하는 데 사용되는 루트 URL입니다. 루트 URL의 형식은 `https://{DC}.api.mailchimp.com`입니다. 여기서 `{DC}`은 계정에 해당하는 데이터 센터를 나타냅니다. |
+| `auth.params.host` | 연결하는 데 사용되는 루트 URL입니다 [!DNL MailChimp] API. 루트 URL의 형식은 다음과 같습니다 `https://{DC}.api.mailchimp.com`, 위치 `{DC}` 계정에 해당하는 데이터 센터를 나타냅니다. |
 | `auth.params.authorizationTestUrl` | (선택 사항) 기본 연결을 만들 때 인증 테스트 URL을 사용하여 자격 증명을 확인합니다. 지정하지 않으면 소스 연결 생성 단계 동안 자격 증명이 자동으로 선택됩니다. |
-| `auth.params.username` | [!DNL MailChimp] 계정에 해당하는 사용자 이름입니다. 기본 인증에 필요합니다. |
-| `auth.params.password` | [!DNL MailChimp] 계정에 해당하는 암호입니다. 기본 인증에 필요합니다. |
+| `auth.params.username` | 사용자 이름과 일치하는 사용자 이름 [!DNL MailChimp] 계정이 필요합니다. 기본 인증에 필요합니다. |
+| `auth.params.password` | 사용자의 [!DNL MailChimp] 계정이 필요합니다. 기본 인증에 필요합니다. |
 
 **응답**
 
-성공적인 응답은 해당 고유 연결 식별자(`id`)를 포함하여 새로 생성된 기본 연결을 반환합니다. 이 ID는 다음 단계에서 소스의 파일 구조와 컨텐츠를 탐색하는 데 필요합니다.
+성공적인 응답은 해당 고유 연결 식별자(`id`). 이 ID는 다음 단계에서 소스의 파일 구조와 컨텐츠를 탐색하는 데 필요합니다.
 
 ```json
 {
@@ -90,9 +91,9 @@ curl -X POST \
 }
 ```
 
-### OAuth 2 새로 고침 코드를 사용하여 [!DNL MailChimp] 기본 연결을 만듭니다
+### 만들기 [!DNL MailChimp] OAuth 2 새로 고침 코드를 사용한 기본 연결
 
-OAuth 2 새로 고침 코드를 사용하여 [!DNL MailChimp] 기본 연결을 만들려면 `host`, `authorizationTestUrl` 및 `accessToken`에 대한 자격 증명을 제공하는 동안 `/connections` 종단점에 POST 요청을 수행하십시오.
+을(를) 만들려면 [!DNL MailChimp] OAuth 2 새로 고침 코드를 사용하여 기본 연결에 대해 POST 요청을 수행하십시오 `/connections` 에 대한 자격 증명을 제공하는 중 끝점입니다. `host`, `authorizationTestUrl`, 및 `accessToken`.
 
 **API 형식**
 
@@ -102,7 +103,7 @@ POST /connections
 
 **요청**
 
-다음 요청은 [!DNL MailChimp]에 대한 기본 연결을 만듭니다.
+다음 요청은에 대한 기본 연결을 만듭니다. [!DNL MailChimp]:
 
 ```shell
 curl -X POST \
@@ -134,15 +135,15 @@ curl -X POST \
 | --- | --- |
 | `name` | 기본 연결의 이름입니다. 기본 연결에 대한 정보를 조회하는 데 사용할 수 있으므로 기본 연결의 이름이 설명적인지 확인합니다. |
 | `description` | (선택 사항) 기본 연결에 대한 자세한 정보를 제공하기 위해 포함할 수 있는 속성입니다. |
-| `connectionSpec.id` | 소스의 연결 사양 ID입니다. 이 ID는 [!DNL Flow Service] API를 사용하여 소스를 등록한 후 검색할 수 있습니다. |
+| `connectionSpec.id` | 소스의 연결 사양 ID입니다. 이 ID는 [!DNL Flow Service] API. |
 | `auth.specName` | Platform에 소스를 인증하는 데 사용하는 인증 유형입니다. |
-| `auth.params.host` | [!DNL MailChimp] API에 연결하는 데 사용되는 루트 URL입니다. 루트 URL의 형식은 `https://{DC}.api.mailchimp.com`입니다. 여기서 `{DC}`은 계정에 해당하는 데이터 센터를 나타냅니다. |
+| `auth.params.host` | 연결하는 데 사용되는 루트 URL입니다 [!DNL MailChimp] API. 루트 URL의 형식은 다음과 같습니다 `https://{DC}.api.mailchimp.com`, 위치 `{DC}` 계정에 해당하는 데이터 센터를 나타냅니다. |
 | `auth.params.authorizationTestUrl` | (선택 사항) 기본 연결을 만들 때 인증 테스트 URL을 사용하여 자격 증명을 확인합니다. 지정하지 않으면 소스 연결 생성 단계 동안 자격 증명이 자동으로 선택됩니다. |
 | `auth.params.accessToken` | 소스를 인증하는 데 사용되는 해당 액세스 토큰. OAuth 기반 인증에 필요합니다. |
 
 **응답**
 
-성공적인 응답은 해당 고유 연결 식별자(`id`)를 포함하여 새로 생성된 기본 연결을 반환합니다. 이 ID는 다음 단계에서 소스의 파일 구조와 컨텐츠를 탐색하는 데 필요합니다.
+성공적인 응답은 해당 고유 연결 식별자(`id`). 이 ID는 다음 단계에서 소스의 파일 구조와 컨텐츠를 탐색하는 데 필요합니다.
 
 ```json
 {
@@ -158,15 +159,15 @@ curl -X POST \
 | 매개 변수 | 설명 |
 | --------- | ----------- |
 | `{BASE_CONNECTION_ID}` | 이전 단계에서 생성된 기본 연결 ID입니다. |
-| `{OBJECT_TYPE}` | 탐색할 객체의 유형입니다. REST 소스의 경우 이 값의 기본값은 `rest`입니다. |
+| `{OBJECT_TYPE}` | 탐색할 객체의 유형입니다. REST 소스의 경우 이 값의 기본값은 입니다. `rest`. |
 | `{OBJECT}` | 탐색할 객체입니다. |
 | `{FILE_TYPE}` | 이 매개 변수는 특정 디렉터리를 볼 때만 필요합니다. 이 값은 탐색할 디렉토리의 경로를 나타냅니다. |
 | `{PREVIEW}` | 연결의 내용이 미리 보기를 지원하는지 여부를 정의하는 부울 값입니다. |
-| `{SOURCE_PARAMS}` | `campaign_id`의 base64로 인코딩된 문자열입니다. |
+| `{SOURCE_PARAMS}` | 기본 64로 인코딩된 문자열의 `campaign_id`. |
 
 >[!TIP]
 >
->`{SOURCE_PARAMS}`에 대해 허용되는 형식 유형을 검색하려면 base64에서 전체 `campaignId` 문자열을 인코딩해야 합니다. 예를 들어 base64에서 인코딩된 `{"campaignId": "c66a200cda"}`은 `eyJjYW1wYWlnbklkIjoiYzY2YTIwMGNkYSJ9`과 같습니다.
+>에 대해 허용되는 형식 유형을 검색하려면 `{SOURCE_PARAMS}`를 인코딩해야 전체 `campaignId` base64의 문자열입니다. 예, `{"campaignId": "c66a200cda"}` base64에서 인코딩은 다음과 같습니다. `eyJjYW1wYWlnbklkIjoiYzY2YTIwMGNkYSJ9`.
 
 **API 형식**
 
@@ -256,7 +257,7 @@ curl -X GET \
 
 ## 소스 연결 만들기 {#source-connection}
 
-[!DNL Flow Service] API에 POST 요청을 하여 소스 연결을 만들 수 있습니다. 소스 연결은 연결 ID, 소스 데이터 파일의 경로 및 연결 사양 ID로 구성됩니다.
+에 POST 요청을 수행하여 소스 연결을 만들 수 있습니다 [!DNL Flow Service] API. 소스 연결은 연결 ID, 소스 데이터 파일의 경로 및 연결 사양 ID로 구성됩니다.
 
 소스 연결을 만들려면 데이터 형식 속성에 대한 열거형 값도 정의해야 합니다.
 
@@ -268,7 +269,7 @@ curl -X GET \
 | JSON | `json` |
 | 쪽모이 세공 | `parquet` |
 
-모든 테이블 기반 소스의 경우 값을 `tabular`(으)로 설정합니다.
+모든 테이블 기반 소스의 경우 값을 `tabular`.
 
 **API 형식**
 
@@ -278,7 +279,7 @@ POST /sourceConnections
 
 **요청**
 
-다음 요청은 [!DNL MailChimp]에 대한 소스 연결을 만듭니다.
+다음 요청은에 대한 소스 연결을 만듭니다 [!DNL MailChimp]:
 
 ```shell
 curl -X POST \
@@ -309,14 +310,14 @@ curl -X POST \
 | --- | --- |
 | `name` | 소스 연결의 이름입니다. 소스 연결에 대한 정보를 조회하는 데 사용할 수 있으므로 소스 연결의 이름이 설명적인지 확인합니다. |
 | `description` | 소스 연결에 대한 자세한 정보를 제공하기 위해 포함할 수 있는 선택적 값입니다. |
-| `baseConnectionId` | [!DNL MailChimp]의 기본 연결 ID입니다. 이 ID는 이전 단계에서 생성되었습니다. |
+| `baseConnectionId` | 의 기본 연결 ID입니다. [!DNL MailChimp]. 이 ID는 이전 단계에서 생성되었습니다. |
 | `connectionSpec.id` | 소스에 해당하는 연결 사양 ID입니다. |
-| `data.format` | 수집할 [!DNL MailChimp] 데이터의 형식입니다. |
-| `params.campaignId` | [!DNL MailChimp] 캠페인 ID는 특정 [!DNL MailChimp] 캠페인을 식별하며, 이를 통해 목록/대상자에게 이메일을 보낼 수 있습니다. |
+| `data.format` | 의 형식 [!DNL MailChimp] 수집할 데이터입니다. |
+| `params.campaignId` | 다음 [!DNL MailChimp] 캠페인 ID가 특정 [!DNL MailChimp] campaign을 통해 목록/대상자에게 이메일을 보낼 수 있습니다. |
 
 **응답**
 
-성공적으로 응답하면 새로 만든 소스 연결의 고유 식별자(`id`)가 반환됩니다. 이 ID는 이후 단계에서 데이터 흐름을 만드는 데 필요합니다.
+성공적인 응답은 고유 식별자(`id`) 내의 아무 곳에나 삽입할 수 있습니다. 이 ID는 이후 단계에서 데이터 흐름을 만드는 데 필요합니다.
 
 ```json
 {
@@ -329,21 +330,21 @@ curl -X POST \
 
 Platform에서 소스 데이터를 사용하려면 필요에 따라 소스 데이터를 구조화하기 위해 대상 스키마를 만들어야 합니다. 그런 다음 대상 스키마를 사용하여 소스 데이터가 포함된 Platform 데이터 세트를 만듭니다.
 
-대상 XDM 스키마는 [스키마 레지스트리 API](https://www.adobe.io/experience-platform-apis/references/schema-registry/)에 대한 POST 요청을 수행하여 만들 수 있습니다.
+대상 XDM 스키마는에 대한 POST 요청을 수행하여 만들 수 있습니다 [스키마 레지스트리 API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
-대상 XDM 스키마를 만드는 방법에 대한 자세한 단계는 [API](../../../../../xdm/api/schemas.md)를 사용하여 스키마를 만드는 자습서를 참조하십시오.
+대상 XDM 스키마를 만드는 방법에 대한 자세한 내용은 다음 문서를 참조하십시오 [api를 사용하여 스키마 만들기](../../../../../xdm/api/schemas.md).
 
 ### 대상 데이터 세트 만들기 {#target-dataset}
 
-대상 데이터 집합은 페이로드 내에 대상 스키마의 ID를 제공하는 [카탈로그 서비스 API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)에 POST 요청을 수행하여 만들 수 있습니다.
+에 대한 POST 요청을 수행하여 대상 데이터 세트를 만들 수 있습니다 [카탈로그 서비스 API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)페이로드 내에 대상 스키마의 ID를 제공하는 것이 좋습니다.
 
-대상 데이터 집합을 만드는 방법에 대한 자세한 단계는 [API](../../../../../catalog/api/create-dataset.md)를 사용하여 데이터 집합을 만드는 자습서를 참조하십시오.
+대상 데이터 세트를 만드는 방법에 대한 자세한 단계는 다음 사항에 대한 자습서를 참조하십시오. [api를 사용하여 데이터 세트 만들기](../../../../../catalog/api/create-dataset.md).
 
 ## 대상 연결 만들기 {#target-connection}
 
-대상 연결은 수집된 데이터가 들어오는 대상에 대한 연결을 나타냅니다. 대상 연결을 만들려면 [!DNL Data Lake]에 해당하는 고정 연결 사양 ID를 제공해야 합니다. 이 ID는 다음과 같습니다. `c604ff05-7f1a-43c0-8e18-33bf874cb11c`
+대상 연결은 수집된 데이터가 들어오는 대상에 대한 연결을 나타냅니다. 대상 연결을 만들려면 ID가 [!DNL Data Lake]. 이 ID는 다음과 같습니다. `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
-이제 대상 데이터 세트에 타겟 스키마에 대한 고유 식별자와 [!DNL Data Lake]에 대한 연결 사양 ID가 있습니다. 이러한 식별자를 사용하여 [!DNL Flow Service] API를 사용하여 대상 연결을 만들어 인바운드 소스 데이터가 포함될 데이터 세트를 지정할 수 있습니다.
+이제 대상 스키마에서 대상 데이터 세트와 연결 사양 ID에 대한 고유 식별자가 있습니다 [!DNL Data Lake]. 이러한 식별자를 사용하여 [!DNL Flow Service] 인바운드 소스 데이터를 포함할 데이터 세트를 지정하는 API입니다.
 
 **API 형식**
 
@@ -353,7 +354,7 @@ POST /targetConnections
 
 **요청**
 
-다음 요청은 [!DNL MailChimp]에 대한 대상 연결을 만듭니다.
+다음 요청은에 대한 대상 연결을 만듭니다 [!DNL MailChimp]:
 
 ```shell
 curl -X POST \
@@ -387,14 +388,14 @@ curl -X POST \
 | -------- | ----------- |
 | `name` | 대상 연결의 이름입니다. 대상 연결에 대한 정보를 조회하는 데 사용할 수 있으므로 대상 연결의 이름이 설명적인지 확인합니다. |
 | `description` | Target 연결에 대한 자세한 정보를 제공하기 위해 포함할 수 있는 선택적 값입니다. |
-| `connectionSpec.id` | [!DNL Data Lake]에 해당하는 연결 사양 ID입니다. 이 고정 ID는 다음과 같습니다. `c604ff05-7f1a-43c0-8e18-33bf874cb11c` |
-| `data.format` | Platform으로 가져올 [!DNL MailChimp] 데이터의 형식입니다. |
+| `connectionSpec.id` | 에 해당하는 연결 사양 ID [!DNL Data Lake]. 이 고정 ID는 다음과 같습니다. `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `data.format` | 의 형식 [!DNL MailChimp] Platform으로 가져올 데이터입니다. |
 | `params.dataSetId` | 이전 단계에서 검색된 대상 데이터 세트 ID입니다. |
 
 
 **응답**
 
-성공적인 응답은 새 대상 연결의 고유 식별자(`id`)를 반환합니다. 이 ID는 이후 단계에서 필요합니다.
+성공적인 응답은 새 대상 연결의 고유 식별자(`id`). 이 ID는 이후 단계에서 필요합니다.
 
 ```json
 {
@@ -405,7 +406,7 @@ curl -X POST \
 
 >[!IMPORTANT]
 >
->데이터 준비 함수는 현재 [!DNL MailChimp Campaign]에 대해 지원되지 않습니다.
+>데이터 준비 함수는 현재 지원되지 않습니다 [!DNL MailChimp Campaign].
 
 <!--
 ## Create a mapping {#mapping}
@@ -475,14 +476,14 @@ A successful response returns details of the newly created mapping including its
 
 ## 흐름 만들기 {#flow}
 
-Platform에 [!DNL MailChimp] 데이터를 가져오는 마지막 단계는 데이터 흐름을 만드는 것입니다. 현재까지는 다음 필수 값이 준비되었습니다.
+마지막 단계는 [!DNL MailChimp] Platform에 데이터를 보내는 것은 데이터 흐름을 만드는 것입니다. 현재까지는 다음 필수 값이 준비되었습니다.
 
 * [소스 연결 ID](#source-connection)
 * [Target 연결 ID](#target-connection)
 
 데이터 흐름은 소스에서 데이터를 예약하고 수집합니다. 페이로드 내에서 이전에 언급된 값을 제공하는 동안 POST 요청을 수행하여 데이터 흐름을 만들 수 있습니다.
 
-수집을 예약하려면 먼저 시작 시간 값을 초 단위로 설정해야 합니다. 그런 다음 빈도 값을 다섯 가지 옵션 중 하나로 설정해야 합니다. `once`, `minute`, `hour`, `day` 또는 `week`. 간격 값은 두 개의 연속 섭취 사이의 기간을 지정하고 1회 섭취(`once`)를 만들 때에는 간격을 설정할 필요가 없습니다. 다른 모든 주파수의 경우 간격 값을 `15`보다 크거나 같아야 합니다.
+수집을 예약하려면 먼저 시작 시간 값을 초 단위로 설정해야 합니다. 그런 다음 빈도 값을 다섯 가지 옵션 중 하나로 설정해야 합니다. `once`, `minute`, `hour`, `day`, 또는 `week`. 간격 값은 두 개의 연속 섭취 사이의 기간을 지정하고 1회 수집(`once`)에는 간격을 설정할 필요가 없습니다. 다른 모든 주파수의 경우 간격 값을 같거나 그 이상으로 설정해야 합니다 `15`.
 
 
 **API 형식**
@@ -526,17 +527,17 @@ curl -X POST \
 | --- | --- |
 | `name` | 데이터 흐름의 이름입니다. 데이터 흐름에서 정보를 조회하는 데 사용할 수 있으므로 데이터 흐름의 이름이 설명적인지 확인합니다. |
 | `description` | (선택 사항) 데이터 집합에 대한 자세한 정보를 제공하기 위해 포함할 수 있는 속성입니다. |
-| `flowSpec.id` | 데이터 흐름을 만드는 데 필요한 흐름 사양 ID입니다. 이 고정 ID는 다음과 같습니다. `6499120c-0b15-42dc-936e-847ea3c24d72` |
-| `flowSpec.version` | 흐름 사양 ID의 해당 버전입니다. 이 값의 기본값은 `1.0`입니다. |
-| `sourceConnectionIds` | 이전 단계에서 생성된 [소스 연결 ID](#source-connection)입니다. |
-| `targetConnectionIds` | 이전 단계에서 생성된 [타겟 연결 ID](#target-connection)입니다. |
+| `flowSpec.id` | 데이터 흐름을 만드는 데 필요한 흐름 사양 ID입니다. 이 고정 ID는 다음과 같습니다. `6499120c-0b15-42dc-936e-847ea3c24d72`. |
+| `flowSpec.version` | 흐름 사양 ID의 해당 버전입니다. 이 값의 기본값은 입니다. `1.0`. |
+| `sourceConnectionIds` | 다음 [소스 연결 ID](#source-connection) 이전 단계에서 생성된 . |
+| `targetConnectionIds` | 다음 [target 연결 ID](#target-connection) 이전 단계에서 생성된 . |
 | `scheduleParams.startTime` | 데이터의 첫 번째 수집이 시작되는 경우의 지정된 시작 시간입니다. |
-| `scheduleParams.frequency` | 데이터 흐름에서 데이터를 수집하는 빈도입니다. 허용되는 값은 다음과 같습니다. `once`, `minute`, `hour`, `day` 또는 `week`. |
-| `scheduleParams.interval` | 간격은 두 개의 연속 흐름 실행 사이의 기간을 지정합니다. 간격 값은 0이 아닌 정수여야 합니다. 빈도가 `once`으로 설정된 경우 간격이 필요하지 않으며, 다른 주파수 값의 경우 `15`보다 크거나 같아야 합니다. |
+| `scheduleParams.frequency` | 데이터 흐름에서 데이터를 수집하는 빈도입니다. 허용되는 값은 다음과 같습니다. `once`, `minute`, `hour`, `day`, 또는 `week`. |
+| `scheduleParams.interval` | 간격은 두 개의 연속 흐름 실행 사이의 기간을 지정합니다. 간격 값은 0이 아닌 정수여야 합니다. 빈도가 로 설정된 경우 간격이 필요하지 않습니다 `once` 및 보다 크거나 같아야 합니다. `15` 다른 주파수 값에 사용할 수 있습니다. |
 
 **응답**
 
-성공적으로 응답하면 새로 만든 데이터 흐름의 ID(`id`)가 반환됩니다. 이 ID를 사용하여 데이터 흐름을 모니터링, 업데이트 또는 삭제할 수 있습니다.
+성공적인 응답은 ID(`id`)을 만들 수 있습니다. 이 ID를 사용하여 데이터 흐름을 모니터링, 업데이트 또는 삭제할 수 있습니다.
 
 ```json
 {
@@ -570,7 +571,7 @@ curl -X GET \
 
 **응답**
 
-성공적으로 응답하면 생성 날짜, 소스 및 대상 연결에 대한 정보, 흐름 실행의 고유 식별자(`id`)에 대한 정보를 포함하여 흐름 실행에 대한 세부 사항이 반환됩니다.
+성공적인 응답은 생성 날짜, 소스 및 대상 연결에 대한 정보, 흐름 실행의 고유 식별자(`id`).
 
 ```json
 {
@@ -662,11 +663,11 @@ curl -X GET \
 
 ## 데이터 흐름 업데이트
 
-데이터 흐름의 실행 일정, 이름 및 설명을 업데이트하려면 흐름 ID, 버전 및 사용할 새 일정을 제공하는 동안 [!DNL Flow Service] API에 PATCH 요청을 수행하십시오.
+데이터 흐름의 실행 일정, 이름 및 설명을 업데이트하려면 [!DNL Flow Service] 플로우 ID, 버전 및 사용할 새 일정을 제공하는 API입니다.
 
 >[!IMPORTANT]
 >
->PATCH 요청을 만들 때 `If-Match` 헤더가 필요합니다. 이 헤더의 값은 업데이트할 연결의 고유한 버전입니다.
+>다음 `If-Match` PATCH 요청을 만들 때는 헤더가 필요합니다. 이 헤더의 값은 업데이트할 연결의 고유한 버전입니다.
 
 **API 형식**
 
@@ -707,13 +708,13 @@ curl -X PATCH \
 
 | 매개 변수 | 설명 |
 | --------- | ----------- |
-| `op` | 데이터 흐름을 업데이트하는 데 필요한 작업을 정의하는 데 사용되는 작업 호출입니다. 작업은 다음과 같습니다. `add`, `replace` 및 `remove` |
+| `op` | 데이터 흐름을 업데이트하는 데 필요한 작업을 정의하는 데 사용되는 작업 호출입니다. 작업은 다음과 같습니다. `add`, `replace`, 및 `remove`. |
 | `path` | 업데이트할 매개 변수의 경로입니다. |
 | `value` | 매개 변수를 업데이트할 새 값입니다. |
 
 **응답**
 
-성공적인 응답은 플로우 ID와 업데이트된 태그를 반환합니다. 흐름 ID를 제공하는 동안 [!DNL Flow Service] API에 GET 요청을 수행하여 업데이트를 확인할 수 있습니다.
+성공적인 응답은 플로우 ID와 업데이트된 태그를 반환합니다. 에 GET 요청을 수행하여 업데이트를 확인할 수 있습니다 [!DNL Flow Service] 흐름 ID를 제공하는 동안 API를 사용하여 규칙 세트를 단순화하는 것이 좋습니다.
 
 ```json
 {
@@ -724,7 +725,7 @@ curl -X PATCH \
 
 ## 데이터 흐름 삭제
 
-기존 흐름 ID를 사용하면 [!DNL Flow Service] API에 대한 DELETE 요청을 수행하여 데이터 흐름을 삭제할 수 있습니다.
+기존 흐름 ID를 사용하는 경우, [!DNL Flow Service] API.
 
 **API 형식**
 
@@ -734,7 +735,7 @@ DELETE /flows/{FLOW_ID}
 
 | 매개 변수 | 설명 |
 | --------- | ----------- |
-| `{FLOW_ID}` | 삭제할 데이터 흐름의 고유한 `id` 값. |
+| `{FLOW_ID}` | 고유 `id` 삭제할 데이터 흐름 값입니다. |
 
 **요청**
 
@@ -753,11 +754,11 @@ curl -X DELETE \
 
 ## 연결 업데이트
 
-연결의 이름, 설명 및 자격 증명을 업데이트하려면 기본 연결 ID, 버전 및 사용할 새 정보를 제공하는 동안 [!DNL Flow Service] API에 PATCH 요청을 수행하십시오.
+연결의 이름, 설명 및 자격 증명을 업데이트하려면 [!DNL Flow Service] 기본 연결 ID, 버전 및 사용할 새 정보를 제공하는 동안 API입니다.
 
 >[!IMPORTANT]
 >
->PATCH 요청을 만들 때 `If-Match` 헤더가 필요합니다. 이 헤더의 값은 업데이트할 연결의 고유한 버전입니다.
+>다음 `If-Match` PATCH 요청을 만들 때는 헤더가 필요합니다. 이 헤더의 값은 업데이트할 연결의 고유한 버전입니다.
 
 **API 형식**
 
@@ -767,7 +768,7 @@ PATCH /connections/{BASE_CONNECTION_ID}
 
 | 매개 변수 | 설명 |
 | --------- | ----------- |
-| `{BASE_CONNECTION_ID}` | 업데이트할 연결의 고유한 `id` 값입니다. |
+| `{BASE_CONNECTION_ID}` | 고유 `id` 업데이트할 연결의 값입니다. |
 
 **요청**
 
@@ -805,13 +806,13 @@ curl -X PATCH \
 
 | 매개 변수 | 설명 |
 | --------- | ----------- |
-| `op` | 연결을 업데이트하는 데 필요한 작업을 정의하는 데 사용되는 작업 호출입니다. 작업은 다음과 같습니다. `add`, `replace` 및 `remove` |
+| `op` | 연결을 업데이트하는 데 필요한 작업을 정의하는 데 사용되는 작업 호출입니다. 작업은 다음과 같습니다. `add`, `replace`, 및 `remove`. |
 | `path` | 업데이트할 매개 변수의 경로입니다. |
 | `value` | 매개 변수를 업데이트할 새 값입니다. |
 
 **응답**
 
-성공적인 응답은 기본 연결 ID와 업데이트된 태그를 반환합니다. 연결 ID를 제공하는 동안 [!DNL Flow Service] API에 GET 요청을 수행하여 업데이트를 확인할 수 있습니다.
+성공적인 응답은 기본 연결 ID와 업데이트된 태그를 반환합니다. 에 GET 요청을 수행하여 업데이트를 확인할 수 있습니다 [!DNL Flow Service] API, 연결 ID를 제공하는 동안
 
 ```json
 {
@@ -822,7 +823,7 @@ curl -X PATCH \
 
 ## 연결 삭제
 
-기존 기본 연결 ID가 있으면 [!DNL Flow Service] API에 DELETE 요청을 수행합니다.
+기존 기본 연결 ID가 있는 경우, 다음에 대한 DELETE 요청을 수행합니다 [!DNL Flow Service] API.
 
 **API 형식**
 
@@ -832,7 +833,7 @@ DELETE /connections/{CONNECTION_ID}
 
 | 매개 변수 | 설명 |
 | --------- | ----------- |
-| `{BASE_CONNECTION_ID}` | 삭제할 기본 연결에 대한 고유한 `id` 값입니다. |
+| `{BASE_CONNECTION_ID}` | 고유 `id` 삭제할 기본 연결 값입니다. |
 
 **요청**
 

@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: 이 자습서에서는 다른 모든 Adobe Experience Platform Data Science Workspace 자습서에 필요한 사전 요구 사항과 자산을 제공합니다. 완료되면 Experience Platform 시 사용자와 IMS 조직의 구성원이 소매 판매 스키마 및 데이터 세트를 사용할 수 있습니다.
 exl-id: 1b868c8c-7c92-4f99-8486-54fd7aa1af48
-source-git-commit: b30700fde3ce75cc4f66343c8d37d3e731775627
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '554'
 ht-degree: 1%
@@ -67,11 +67,11 @@ ht-degree: 1%
        kernel_type: Python
    ```
 
-   - `platform_gateway` : API 호출에 대한 기본 경로입니다. 이 값은 수정하지 마십시오.
-   - `ims_token` : 사용자 `{ACCESS_TOKEN}` 여기 와
-   - `ingest_data` : 이 자습서를 사용하려면 이 값을 로 설정하십시오. `"True"` 를 사용하여 소매 판매 스키마 및 데이터 세트를 만듭니다. 값 `"False"` 스키마만 만듭니다.
-   - `build_recipe_artifacts` : 이 자습서를 사용하려면 이 값을 로 설정하십시오. `"False"` 스크립트가 배합식 객체를 생성하지 않도록 합니다.
-   - `kernel_type` : 레서피 아티팩트의 실행 유형입니다. 이 값을 로 둡니다. `Python` if `build_recipe_artifacts` 는 로 설정되어 있습니다. `"False"`그렇지 않으면 올바른 실행 유형을 지정합니다.
+   - `platform_gateway`: API 호출에 대한 기본 경로입니다. 이 값은 수정하지 마십시오.
+   - `ims_token`: 사용자 `{ACCESS_TOKEN}` 여기 와
+   - `ingest_data`: 이 자습서를 사용하려면 이 값을 로 설정하십시오. `"True"` 를 사용하여 소매 판매 스키마 및 데이터 세트를 만듭니다. 값 `"False"` 스키마만 만듭니다.
+   - `build_recipe_artifacts`: 이 자습서를 사용하려면 이 값을 로 설정하십시오. `"False"` 스크립트가 배합식 객체를 생성하지 않도록 합니다.
+   - `kernel_type`: 레서피 아티팩트의 실행 유형입니다. 이 값을 로 둡니다. `Python` if `build_recipe_artifacts` 는 로 설정되어 있습니다. `"False"`그렇지 않으면 올바른 실행 유형을 지정합니다.
 
 4. 아래에 `Titles` 섹션에서 소매 판매 샘플 데이터에 대해 다음 정보를 적절히 제공하고 편집 후 파일을 저장하고 닫습니다. 아래 표시된 예:
 

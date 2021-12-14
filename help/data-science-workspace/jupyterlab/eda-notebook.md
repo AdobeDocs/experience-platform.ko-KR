@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: 이 안내서에서는 EDA(Survey Data Analysis) 전자 필기장을 사용하여 웹 데이터의 패턴을 찾고, 예측 목표를 사용하여 이벤트를 집계하고, 집계된 데이터를 정리하며, 예측자와 목표 간의 관계를 이해하는 방법에 중점을 둡니다.
 exl-id: 48209326-0a07-4b5c-8b49-a2082a78fa47
-source-git-commit: 38c493e6306e493f4ef5caf90509bda6f4d80023
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '2760'
 ht-degree: 0%
@@ -342,7 +342,7 @@ iplot(fig)
 - `COUNT_CHECK_OUTS`: 체크아웃 수입니다.
 - `COUNT_PURCHASES`: 구매 횟수입니다.
 - `COUNT_INSTANCE_PRODUCTADDS`: 제품 추가 인스턴스 수입니다.
-- `NUMBER_VISITS` : 방문 횟수.
+- `NUMBER_VISITS`: 방문 횟수.
 - `COUNT_PAID_SEARCHES`: 유료 검색 수입니다.
 - `DAYS_SINCE_VISIT`: 마지막 방문 이후의 일 수입니다.
 - `TOTAL_ORDER_REVENUE`: 총 주문 매출.
@@ -469,7 +469,7 @@ Data.head(5)
 이 셀은 고유한 프로필 수를 인쇄합니다.
 
 ```python
-print("Count of unique profiles :", (len(Data)))
+print("Count of unique profiles:", (len(Data)))
 ```
 
 ### 누락된 값 및 범위 탐지
@@ -621,11 +621,11 @@ for column in Data_categorical.columns[0:]:
 for col in Data.columns:
     if len(Data[col].unique()) == 1:
         if col == 'TARGET':
-            print(Fore.RED + '\033[1m' + 'WARNING : TARGET HAS A SINGLE UNIQUE VALUE, ANY BIVARIATE ANALYSIS (NEXT STEP IN THIS NOTEBOOK) OR PREDICTION WILL BE MEANINGLESS' + Fore.RESET + '\x1b[21m')
+            print(Fore.RED + '\033[1m' + 'WARNING: TARGET HAS A SINGLE UNIQUE VALUE, ANY BIVARIATE ANALYSIS (NEXT STEP IN THIS NOTEBOOK) OR PREDICTION WILL BE MEANINGLESS' + Fore.RESET + '\x1b[21m')
         elif col == 'ID':
-            print(Fore.RED + '\033[1m' + 'WARNING : THERE IS ONLY ONE PROFILE IN THE DATA, ANY BIVARIATE ANALYSIS (NEXT STEP IN THIS NOTEBOOK) OR PREDICTION WILL BE MEANINGLESS' + Fore.RESET + '\x1b[21m')
+            print(Fore.RED + '\033[1m' + 'WARNING: THERE IS ONLY ONE PROFILE IN THE DATA, ANY BIVARIATE ANALYSIS (NEXT STEP IN THIS NOTEBOOK) OR PREDICTION WILL BE MEANINGLESS' + Fore.RESET + '\x1b[21m')
         else:
-            print('Dropped column :',col)
+            print('Dropped column:',col)
             Data.drop(col,inplace=True,axis=1)
 ```
 

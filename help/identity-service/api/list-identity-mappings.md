@@ -1,25 +1,24 @@
 ---
-keywords: Experience Platform;홈;인기 항목;ID;Identity
+keywords: Experience Platform;홈;인기 항목;ID;ID
 solution: Experience Platform
 title: 목록 ID 매핑
 topic-legacy: API guide
-description: 매핑은 지정된 네임스페이스에 대한 클러스터의 모든 ID 컬렉션입니다.
+description: 매핑은 지정된 네임스페이스에 대한 클러스터의 모든 ID의 컬렉션입니다.
 exl-id: db80c783-620b-4ba3-b55c-75c1fd6e90b1
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '270'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
-# 목록 ID 매핑
+# ID 매핑 나열
 
-매핑은 지정된 네임스페이스에 대한 클러스터의 모든 ID 컬렉션입니다.
+매핑은 지정된 네임스페이스에 대한 클러스터의 모든 ID의 컬렉션입니다.
 
-## 단일 ID에 대한 ID 매핑 받기
+## 단일 ID에 대한 ID 매핑 가져오기
 
-ID가 주어지면 요청에서 ID로 표시되는 동일한 네임스페이스에서 모든 관련 ID를 검색합니다.
+ID가 주어지면 요청에서 ID로 표시되는 네임스페이스와 동일한 네임스페이스에서 모든 관련 ID를 검색합니다.
 
 **API 형식**
 
@@ -29,7 +28,7 @@ GET https://platform-{REGION}.adobe.io/data/core/identity/mapping
 
 **요청**
 
-옵션 1:ID를 네임스페이스(`nsId`, ID별) 및 ID 값(`id`)으로 제공합니다.
+옵션 1: ID를 네임스페이스(`nsId`, ID별) 및 ID 값(`id`).
 
 ```shell
 curl -X GET \
@@ -40,7 +39,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-옵션 2:ID를 네임스페이스(`ns`, 이름별) 및 ID 값(`id`)으로 제공합니다.
+옵션 2: ID를 네임스페이스(`ns`, 이름별) 및 ID 값(`id`).
 
 ```shell
 curl -X GET \
@@ -51,7 +50,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-옵션 3:ID를 XID(`xid`)로 제공합니다. ID의 XID를 얻는 방법에 대한 자세한 내용은 [ID](./list-native-id.md)에 대한 XID 가져오기를 포함하는 이 문서의 섹션을 참조하십시오.
+옵션 3: ID를 XID(`xid`). ID의 XID를 가져오는 방법에 대한 자세한 내용은 이 문서의 섹션을 참조하십시오 [id에 대한 XID 가져오기](./list-native-id.md).
 
 ```shell
 curl -X GET \
@@ -64,11 +63,11 @@ curl -X GET \
 
 ### 여러 ID에 대한 ID 매핑 가져오기
 
-`POST` 메서드를 위에서 설명한 `GET` 메서드와 동일한 일괄 처리로 사용하여 여러 ID에 대한 매핑을 검색합니다.
+를 사용하십시오 `POST` 와 같은 일괄 처리 방법 `GET` 위에 설명된 방법으로 여러 ID에 대한 매핑을 검색할 수 있습니다.
 
 >[!NOTE]
 >
->요청에는 최대 1000ID를 초과할 수 없습니다. ID가 1000개를 초과하는 요청은 400개의 상태 코드를 생성합니다.
+>요청은 최대 1000개의 ID를 넘지 않도록 해야 합니다. 1000개의 ID를 초과하는 요청은 400개의 상태 코드를 발생시킵니다.
 
 **API 형식**
 
@@ -78,7 +77,7 @@ POST https://platform.adobe.io/data/core/identity/mappings
 
 **요청 본문**
 
-옵션 1:매핑을 검색할 XID 목록을 제공합니다.
+옵션 1: 매핑을 검색할 XID 목록을 제공합니다.
 
 ```shell
 {
@@ -87,7 +86,7 @@ POST https://platform.adobe.io/data/core/identity/mappings
 }
 ```
 
-옵션 2:ID 목록을 조합 ID로 제공합니다. 여기서 각 ID 값과 네임스페이스의 이름은 네임스페이스 ID로 지정됩니다. 이 예제에서는 &quot;Private Graph&quot;의 기본 `graph-type`을 덮어쓰는 동안 이 메서드를 사용하는 방법을 보여 줍니다.
+옵션 2: ID 목록을 복합 ID로 제공합니다. 여기서 각 이름은 네임스페이스 ID별로 ID 값과 네임스페이스에 이름을 지정합니다. 이 예제에서는 기본값을 덮어쓰는 동안 이 메서드를 사용하는 방법을 보여 줍니다 `graph-type` Private Graph
 
 ```shell
 {
@@ -116,7 +115,7 @@ curl -X POST \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: 111111@AdobeOrg' \
   -d '{
-        "xids" : ["GesCQXX0CAESEE8wHpswUoLXXmrYy8KBTVgA"],
+        "xids": ["GesCQXX0CAESEE8wHpswUoLXXmrYy8KBTVgA"],
         "targetNs": "0",
         "graph-type": "Private Graph"
       }' | json_pp
@@ -146,7 +145,7 @@ curl -X POST \
       }' | json_pp
 ```
 
-제공된 입력과 함께 관련 ID가 없는 경우 `HTTP 204` 응답 코드가 아무 컨텐츠도 없이 반환됩니다.
+제공된 입력과 함께 관련 ID가 없는 경우 `HTTP 204` 응답 코드가 컨텐츠 없이 반환됩니다.
 
 **응답**
 
@@ -184,9 +183,9 @@ curl -X POST \
 }
 ```
 
-- `lastAssociationTime`:입력 ID가 이 ID와 마지막으로 연결된 타임스탬프입니다.
-- `regions`:ID `regionId` 가  `lastAssociationTime` 표시된 위치 및 를 제공합니다.
+- `lastAssociationTime`: 입력 ID가 이 ID와 마지막으로 연결된 타임스탬프입니다.
+- `regions`: 다음을 제공합니다. `regionId` 및 `lastAssociationTime` ID가 표시되는 곳
 
 ## 다음 단계
 
-사용 가능한 네임스페이스 목록](./list-namespaces.md)에 대한 다음 자습서로 진행합니다.[
+다음 자습서로 진행하여 [사용 가능한 네임스페이스 목록](./list-namespaces.md).
