@@ -1,48 +1,49 @@
 ---
-keywords: Experience Platform;홈;인기 항목;소스;커넥터;소스 커넥터;소스 sdk;sdk;SDK
+keywords: Experience Platform;home;popular topics;sources;connectors;source connectors;sources sdk;sdk;SDK
 solution: Experience Platform
-title: Flow Service API (Beta)를 사용하여 새로운 연결 사양을 만듭니다
+title: Create a new connection specification using the Flow Service API (Beta)
 topic-legacy: tutorial
-description: 다음 문서에서는 Flow Service API를 사용하여 연결 사양을 만들고 소스 SDK를 통해 새 소스를 통합하는 방법에 대해 설명합니다.
+description: The following document provides steps on how to create a connection specification using the Flow Service API and integrate a new source through Sources SDK.
 hide: true
 hidefromtoc: true
-source-git-commit: d4b5b54be9fa2b430a3b45eded94a523b6bd4ef8
+exl-id: 0b0278f5-c64d-4802-a6b4-37557f714a97
+source-git-commit: baa5f95fc8155c6a3f6c2faab99182046f33f49a
 workflow-type: tm+mt
 source-wordcount: '524'
 ht-degree: 2%
 
 ---
 
-# 를 사용하여 새 연결 사양을 만듭니다 [!DNL Flow Service] API(Beta)
+# [!DNL Flow Service]
 
 >[!IMPORTANT]
 >
->소스 SDK는 현재 베타 버전이며 조직에서 아직 액세스할 수 없습니다. 이 설명서에 설명된 기능은 변경될 수 있습니다.
+>Sources SDK is currently in beta and your organization may not have access to it yet. The functionality described in this documentation is subject to change.
 
-연결 사양은 소스의 구조를 나타냅니다. 소스 인증 요구 사항에 대한 정보를 포함하고, 소스 데이터를 탐색하고 검사할 수 있는 방법을 정의하며, 지정된 소스의 특성에 대한 정보를 제공합니다. 다음 `/connectionSpecs` 의 엔드포인트 [!DNL Flow Service] API를 사용하면 조직 내에서 연결 사양을 프로그래밍 방식으로 관리할 수 있습니다.
+A connection specification represents the structure of a source. It contains information on a source&#39;s authentication requirements, defines how source data can be explored and inspected, and provides information on the attributes of a given source. `/connectionSpecs`[!DNL Flow Service]
 
-다음 문서에서는 [!DNL Flow Service] API를 사용하고 소스 SDK를 통해 새 소스를 통합합니다.
+[!DNL Flow Service]
 
 ## 시작하기
 
-계속하기 전에 [시작 안내서](./getting-started.md) 관련 설명서에 대한 링크의 경우, 이 문서에서 샘플 API 호출을 읽는 안내서와 Experience Platform API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요 정보를 제공합니다.
+[](./getting-started.md)
 
-## 객체 수집
+## Collect artifacts
 
-을 통해 새 소스를 만드는 첫 번째 단계 [!DNL Sources SDK] Adobe 담당자와 조율하고 해당 출처의 값을 확인합니다 **아이콘**, **설명**, **레이블**, 및 **카테고리**.
+[!DNL Sources SDK]****************
 
-| 가공물 | 설명 | 예 |
+| Artifacts | 설명 | 예 |
 | --- | --- | --- |
-| 레이블 | 소스의 이름입니다. | [!DNL MailChimp Members] |
-| 설명 | 출처에 대한 간략한 설명. | 에 대한 라이브 인바운드 연결을 만듭니다 [!DNL Mailchimp Members] 예를 들어, 히스토리 데이터와 예약된 데이터를 모두 Experience Platform에 수집할 수 있습니다. |
-| 아이콘 | 소스를 나타내는 이미지 또는 로고. 소스 Platform UI 렌더링에 아이콘이 표시됩니다. | `mailchimp-members-icon.svg` |
-| 카테고리 | 소스의 카테고리입니다. | <ul><li>`advertising`</li><li>`cloud storage`</li><li>`crm`</li><li>`customer success`</li><li>`database`</li><li>`ecommerce`</li><li>`marketing automation`</li><li>`payments`</li><li>`protocols`</li><li>`streaming`</li></ul> |
+| 레이블 | The name of your source. | [!DNL MailChimp Members] |
+| 설명 | A brief description of your source. | [!DNL Mailchimp Members] |
+| 아이콘 | The image or logo that represents your source. The icon is displayed in the Platform UI rendering of your source. | `mailchimp-members-icon.svg` |
+| 카테고리 | The category of your source. | <ul><li>`advertising`</li><li>`cloud storage`</li><li>`crm`</li><li>`customer success`</li><li>`database`</li><li>`ecommerce`</li><li>`marketing automation`</li><li>`payments`</li><li>`protocols`</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
-## 연결 사양 템플릿 복사
+## Copy connection specification template
 
-필요한 가공물을 수집한 후에는 아래 연결 사양 템플릿을 복사하여 선택한 텍스트 편집기에 붙여넣은 다음 대괄호로 속성을 업데이트합니다 `{}` 을 참조하십시오.
+`{}`
 
 ```json
 {
@@ -284,21 +285,21 @@ ht-degree: 2%
 }
 ```
 
-## 연결 사양 만들기 {#create}
+## Create a connection specification {#create}
 
-연결 사양 템플릿을 획득하면 이제 소스에 해당하는 적절한 값을 입력하여 새 연결 사양 작성을 시작할 수 있습니다.
+Once you have acquired the connection specification template, you can now start authoring a new connection specification by filling in the appropriate values that corresponds to your source.
 
-연결 사양은 세 개의 개별 부분으로 나눌 수 있습니다. 인증 사양, 소스 사양 및 탐색 사양입니다.
+A connection specification can be divided into three distinct parts: the authentication specifications, the source specifications, and the explore specifications.
 
-연결 사양의 각 부분의 값을 채우는 방법에 대한 지침은 다음 문서를 참조하십시오.
+See the following documents for instructions on how to populate the values of each part of a connection specification:
 
-* [인증 사양 구성](../config/authspec.md)
-* [소스 사양 구성](../config/sourcespec.md)
-* [탐색 사양 구성](../config/explorespec.md)
+* [Configure your authentication specification](../config/authspec.md)
+* [Configure your source specification](../config/sourcespec.md)
+* [Configure your explore specification](../config/explorespec.md)
 
-사양명세 정보가 업데이트되면, POST 요청을 수행하여 새 연결 사양을 `/connectionSpecs` 의 끝점 [!DNL Flow Service] API.
+`/connectionSpecs`[!DNL Flow Service]
 
-**API 형식**
+****
 
 ```http
 POST /connectionSpecs
@@ -306,7 +307,7 @@ POST /connectionSpecs
 
 **요청**
 
-다음 요청은 페이지에 대해 완전히 작성된 연결 사양의 예입니다 [!DNL MailChimp] 소스:
+[!DNL MailChimp]
 
 ```shell
 curl -X POST \
@@ -481,7 +482,7 @@ curl -X POST \
 
 **응답**
 
-성공적인 응답은 해당 고유한 연결을 포함하여 새로 생성된 연결 사양을 반환합니다 `id`.
+`id`
 
 ```json
 {
@@ -666,6 +667,6 @@ curl -X POST \
 
 ## 다음 단계
 
-새 연결 사양을 만들었으므로 이제 해당 연결 사양 ID를 기존 흐름 사양에 추가해야 합니다. 다음에서 자습서를 참조하십시오. [흐름 사양 업데이트](./update-flow-specs.md) 추가 정보.
+Now that you have created a new connection specification, you must add its corresponding connection specification ID to an existing flow specification. [](./update-flow-specs.md)
 
-생성한 연결 사양을 수정하려면 다음을 참조하십시오. [연결 사양 업데이트](./update-connection-specs.md).
+[](./update-connection-specs.md)
