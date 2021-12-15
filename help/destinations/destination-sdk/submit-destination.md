@@ -1,9 +1,10 @@
 ---
 description: 이 페이지에서는 Destination SDK을 사용하여 작성된 대상을 검토하기 위해 제출하는 모든 정보를 제공합니다.
 title: Destination SDK에서 작성된 대상을 검토할 수 있도록 제출
-source-git-commit: bc77614eee6cc50d2ce6b14c1b228ed87f88f340
+exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
+source-git-commit: 468b9309c5184684c0b25c2656a9eef37715af53
 workflow-type: tm+mt
-source-wordcount: '593'
+source-wordcount: '568'
 ht-degree: 1%
 
 ---
@@ -211,10 +212,6 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 ## 프로덕션 통합을 위한 대상 설명서 PR(끌어오기 요청)
 
 ISV(Independent Software Vendor) 또는 SI(System Integrator)가 [제품 통합](./overview.md#productized-custom-integrations)를 사용하려면 [셀프 서비스 설명서 프로세스](./docs-framework/documentation-instructions.md) 를 클릭하여 대상에 대한 제품 설명서 페이지를 만듭니다. 제출 프로세스의 일부로 대상 설명서에 대한 PR(끌어오기 요청)을 제공합니다.
-
-기존 통합 파트너의 PR 예는 다음과 같습니다.
-* [Yahoo 대상 설명서 PR](https://github.com/AdobeDocs/experience-platform.en/pull/110);
-* [Airship 대상 설명서 PR](https://github.com/AdobeDocs/experience-platform.en/pull/54).
 
 ## 대상의 로고
 
