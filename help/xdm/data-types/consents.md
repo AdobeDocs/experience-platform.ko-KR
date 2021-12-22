@@ -4,7 +4,7 @@ title: 동의 및 기본 설정 데이터 유형
 description: 개인 정보, 개인화 및 마케팅 환경 설정에 대한 동의 데이터 유형은 CMP(동의 관리 플랫폼) 및 데이터 작업에서 생성된 고객 권한 및 환경 설정 컬렉션을 지원하기 위한 것입니다.
 topic-legacy: guide
 exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 04e778d3318d60733772c2042c8bb272f0c87d5c
 workflow-type: tm+mt
 source-wordcount: '2039'
 ht-degree: 2%
@@ -21,8 +21,8 @@ ht-degree: 2%
 
 이 문서를 사용하려면 XDM을 이해하고 스키마를 사용해야 합니다 [!DNL Experience Platform]. 계속하기 전에 다음 설명서를 검토하십시오.
 
-* [XDM 시스템 개요](http://www.adobe.com/go/xdm-home-en)
-* [스키마 작성 기본 사항](http://www.adobe.com/go/xdm-schema-best-practices-en)
+* [XDM 시스템 개요](https://www.adobe.com/go/xdm-home-en)
+* [스키마 작성 기본 사항](https://www.adobe.com/go/xdm-schema-best-practices-en)
 
 ## 데이터 유형 구조 {#structure}
 
@@ -255,7 +255,7 @@ ht-degree: 2%
 
 를 사용하려면 [!UICONTROL 동의 및 기본 설정] 고객의 동의 데이터를 수집하려면 해당 데이터 유형이 포함된 스키마를 기반으로 데이터 세트를 만들어야 합니다.
 
-다음에서 자습서를 참조하십시오. [UI에서 스키마 만들기](http://www.adobe.com/go/xdm-schema-editor-tutorial-en) 을 참조하십시오. 필드를 포함하는 스키마를 만들면 [!UICONTROL 동의 및 기본 설정] 데이터 유형에서 [데이터 집합 만들기](../../catalog/datasets/user-guide.md#create) 데이터 세트 사용 안내서에서 기존 스키마로 데이터 세트를 만드는 단계에 따릅니다.
+다음에서 자습서를 참조하십시오. [UI에서 스키마 만들기](https://www.adobe.com/go/xdm-schema-editor-tutorial-en) 을 참조하십시오. 필드를 포함하는 스키마를 만들면 [!UICONTROL 동의 및 기본 설정] 데이터 유형에서 [데이터 집합 만들기](../../catalog/datasets/user-guide.md#create) 데이터 세트 사용 안내서에서 기존 스키마로 데이터 세트를 만드는 단계에 따릅니다.
 
 >[!IMPORTANT]
 >

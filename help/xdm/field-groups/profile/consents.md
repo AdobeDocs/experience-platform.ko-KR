@@ -4,7 +4,7 @@ title: 동의 및 기본 설정 스키마 필드 그룹
 topic-legacy: overview
 description: 이 문서에서는 동의 및 기본 설정 스키마 필드 그룹에 대한 개요를 제공합니다.
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 04e778d3318d60733772c2042c8bb272f0c87d5c
 workflow-type: tm+mt
 source-wordcount: '941'
 ht-degree: 0%
@@ -178,7 +178,7 @@ ht-degree: 0%
 
 를 사용하려면 [!UICONTROL 동의 및 기본 설정] 고객으로부터 동의 데이터를 수집하려면 해당 필드 그룹을 포함하는 스키마를 기반으로 데이터 세트를 만들어야 합니다.
 
-다음에서 자습서를 참조하십시오. [UI에서 스키마 만들기](http://www.adobe.com/go/xdm-schema-editor-tutorial-en) 을 참조하십시오. 필드를 포함하는 스키마를 만들면 [!UICONTROL 동의 및 기본 설정] 필드 그룹에서는 [데이터 집합 만들기](../../../catalog/datasets/user-guide.md#create) 데이터 세트 사용 안내서에서 기존 스키마로 데이터 세트를 만드는 단계에 따릅니다.
+다음에서 자습서를 참조하십시오. [UI에서 스키마 만들기](https://www.adobe.com/go/xdm-schema-editor-tutorial-en) 을 참조하십시오. 필드를 포함하는 스키마를 만들면 [!UICONTROL 동의 및 기본 설정] 필드 그룹에서는 [데이터 집합 만들기](../../../catalog/datasets/user-guide.md#create) 데이터 세트 사용 안내서에서 기존 스키마로 데이터 세트를 만드는 단계에 따릅니다.
 
 >[!IMPORTANT]
 >
