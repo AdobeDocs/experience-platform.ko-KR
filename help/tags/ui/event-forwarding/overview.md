@@ -3,7 +3,7 @@ title: 이벤트 전달 개요
 description: Platform Edge Network를 사용하여 태그 구현을 변경하지 않고 작업을 실행할 수 있도록 Adobe Experience Platform의 이벤트 전달에 대해 알아봅니다.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: 82ce288d55e57f05910fd8290c38f44b1846f48e
+source-git-commit: 64e76c456ac5f59a2a1996e58eda405f1b27efa8
 workflow-type: tm+mt
 source-wordcount: '955'
 ht-degree: 8%
@@ -38,7 +38,7 @@ Adobe Experience Platform과 결합된 이벤트 전달 [웹 SDK](../../../edge/
 
 * 투명도를 높이고 모든 속성에서 어느 데이터가 전송되는지 제어합니다.
 
-## 이벤트 전달과 태그 간의 차이점
+## 이벤트 전달과 태그 간의 차이점 {#differences-from-tags}
 
 구성 측면에서 이벤트 전달에서는 태그와 같은 많은 동일한 개념을 사용합니다 [규칙](../managing-resources/rules.md), [데이터 요소](../managing-resources/data-elements.md), 및 [확장](../managing-resources/extensions/overview.md). 그 둘의 주요 차이점은 다음과 같이 요약할 수 있다.
 
@@ -47,7 +47,7 @@ Adobe Experience Platform과 결합된 이벤트 전달 [웹 SDK](../../../edge/
 
 태그는 Platform Web 및 Mobile SDK를 사용하여 사이트 또는 기본 모바일 애플리케이션에서 직접 이벤트 데이터를 수집하지만 이벤트 전달을 사용하려면 대상에 전달하기 위해 Platform Edge 네트워크를 통해 이미 이벤트 데이터를 전송해야 합니다. 즉, 이벤트 전달을 사용하려면 디지털 속성(태그를 통해 또는 원시 코드 사용)에서 Platform Web 또는 Mobile SDK를 구현해야 합니다.
 
-### 속성
+### 속성 {#properties}
 
 이벤트 전달은 태그와 별도로 고유한 속성 저장소를 유지 관리하며, 이 속성을 선택하여 데이터 수집 UI에서 볼 수 있습니다 **[!UICONTROL 이벤트 전달]** 을 클릭합니다.
 
@@ -61,13 +61,13 @@ Adobe Experience Platform과 결합된 이벤트 전달 [웹 SDK](../../../edge/
 
 ![데이터 수집 UI의 이벤트 전달 확장](../../images/ui/event-forwarding/overview/extensions.png)
 
-### 데이터 요소
+### 데이터 요소 {#data-elements}
 
 이벤트 전달에서 사용할 수 있는 데이터 요소 유형은 호환 가능한 카탈로그로 제한됩니다 [확장](#extensions) 그것이 그들을 제공합니다.
 
 데이터 요소 자체가 태그와 동일한 방식으로 이벤트 전달에서 만들어지고 구성되는 반면, Platform Edge Network에서 데이터를 참조하는 방법과 관련하여 몇 가지 중요한 구문 차이가 있습니다.
 
-#### Platform Edge Network의 데이터 참조
+#### Platform Edge Network의 데이터 참조 {#edge}
 
 Platform Edge Network에서 데이터를 참조하려면 해당 데이터에 올바른 경로를 제공하는 데이터 요소를 만들어야 합니다. UI에서 데이터 요소를 만들 때 **[!UICONTROL 코어]** 확장 및 **[!UICONTROL 경로]** 참조하십시오.
 
@@ -75,23 +75,23 @@ Platform Edge Network에서 데이터를 참조하려면 해당 데이터에 올
 
 ![이벤트 전달을 위한 경로 유형 데이터 요소의 예](../../images/ui/event-forwarding/overview/data-reference.png)
 
-### 규칙
+### 규칙 {#rules}
 
 이벤트 전달 속성에서 규칙을 만드는 것은 태그와 유사한 방식으로 작동하지만, 주요 차이점은 이벤트를 규칙 구성 요소로 선택할 수 없다는 것입니다. 대신, 이벤트 전달 규칙은 [데이터 스트림](../../../edge/fundamentals/datastreams.md) 및 은 특정 조건이 충족되는 경우 해당 이벤트를 대상에 전달합니다.
 
 ![데이터 수집 UI의 이벤트 전달 규칙](../../images/ui/event-forwarding/overview/rules.png)
 
-#### 데이터 요소 토큰화
+#### 데이터 요소 토큰화 {#tokenization}
 
 태그 규칙에서 데이터 요소는 `%` 데이터 요소 이름의 시작 및 끝(예: `%viewportHeight%`). 이벤트 전달 규칙에서 데이터 요소는 대신 `{{` 시작 및 `}}` 데이터 요소 이름의 끝(예: `{{viewportHeight}}`).
 
 ![이벤트 전달을 위한 경로 유형 데이터 요소의 예](../../images/ui/event-forwarding/overview/tokenization.png)
 
-#### 규칙 작업 순서
+#### 규칙 작업 순서 {#action-sequencing}
 
 다음 [!UICONTROL 작업] 이벤트 전달 규칙의 섹션은 항상 순차적으로 실행됩니다. 규칙을 저장할 때 작업 순서가 올바른지 확인합니다. 이 실행 시퀀스는 태그를 사용할 수 있는 것처럼 비동기식으로 실행할 수 없습니다.
 
-## 비밀
+## 비밀 {#secrets}
 
 이벤트 전달을 사용하면 데이터를 보내는 서버를 인증하는 데 사용할 수 있는 암호를 만들고, 관리하고 저장할 수 있습니다. 다음 안내서를 참조하십시오. [비밀](./secrets.md) 사용 가능한 여러 종류의 암호 유형과 UI에서 구현되는 방법에 대해 설명합니다.
 
