@@ -2,9 +2,9 @@
 title: 코어 확장에 대한 릴리스 노트
 description: Adobe Experience Platform의 코어 확장에 대한 최신 릴리스 노트입니다.
 exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
-source-git-commit: 317f134420666de23f0ee9c14938fffeda09d3de
+source-git-commit: 5441c6ca0c15996ee06afa2c795ec5ae6e030f35
 workflow-type: tm+mt
-source-wordcount: '1543'
+source-wordcount: '1565'
 ht-degree: 58%
 
 ---
@@ -13,7 +13,13 @@ ht-degree: 58%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
+
+## 2022년 1월 4일
+
+v3.3.0
+
+* 변경 [직접 호출 작업 트리거](./overview.md#direct-call-action) 직접 호출 규칙에 보낼 사용자 지정 이벤트 정보를 제공할 수 있습니다.
 
 ## 2021년 10월 8일
 
@@ -62,7 +68,7 @@ v3.0.0
 
 * PDCL-6153: 캐시된 사용자 지정 코드 작업에 대한 정규화된 URL을 안정적으로 가져올 수 있도록 지원을 추가합니다.
 
-Core 확장의 v3.0.0은 Turbine web runtime](https://github.com/adobe/reactor-turbine/releases/tag/v27.2.0)v27.2.0의 변경 사항과 결합되며, 사용자의 회사에서 Premium CDN을 지원하는 경우 사용자가 여러 Adobe 관리 호스팅 영역 간에 라이브러리를 로드할 수 있습니다.[
+코어 확장의 v3.0.0은 [Turbine 웹 런타임 v27.2.0](https://github.com/adobe/reactor-turbine/releases/tag/v27.2.0): 사용자의 회사에서 Premium CDN을 지원하는 경우 사용자가 여러 Adobe 관리 호스팅 영역 간에 라이브러리를 로드할 수 있도록 해줍니다.
 
 이 업그레이드는 Premium CDN이 없는 사용자에게 선택 사항이고 이전 버전과 호환되며, 회사에서 Premium CDN이 활성화되어 있는 고객에게 필수입니다.
 
@@ -91,7 +97,7 @@ v2.0.4
 
 * 다양한 필드에 대한 데이터 요소 지원이 추가되었습니다. 데이터 요소 지원이 다음 이벤트에 추가되었습니다. &#39;페이지 시간&#39;, &#39;뷰포트 입력&#39;, &#39;마우스로 가리키기&#39; 및 &#39;미디어 재생 시간&#39;. 및 다음 조건: &#39;사이트에서 보낸 시간&#39; 및 &#39;값 비교&#39;
 * 링크 지연을 사용할 때 ctrl/cmd + 클릭 및 마우스 가운데 클릭에 대한 기본 동작을 지원합니다
-* **클릭 이벤트에서 링크 지연을 &quot;더 이상 지원되지 않음&quot;으로 표시했습니다.** - Adobe Experience Platform용  [데이터 수집 로그에 ](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403) 자세한 내용이 있습니다.
+* **클릭 이벤트에서 링크 지연을 &quot;더 이상 지원되지 않음&quot;으로 표시했습니다.** - 자세한 내용은 [데이터 수집 블로그](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403) Adobe Experience Platform
 
 ## 2021년 1월 6일
 
@@ -155,7 +161,7 @@ v1.6.2
 
 v1.6.1
 
-* **CSP 임시 항목 지원** - 코어 확장에는 이제 선택적 구성 매개 변수가 있습니다. 임시 항목을 참조하는 데이터 요소를 추가할 수 있습니다. 구성된 경우, 태그가 페이지에 추가하는 모든 인라인 스크립트는 사용자가 구성한 임시 항목을 사용합니다. 이 변경 사항은 태그 스크립트가 CSP 환경에서 로드될 수 있도록 컨텐츠 보안 정책을 임시로 사용할 수 있도록 지원합니다. CSP [여기](../../../ui/client-side/content-security-policy.md)에서 태그 사용에 대한 자세한 내용을 읽을 수 있습니다.
+* **CSP 임시 항목 지원** - 코어 확장에는 이제 선택적 구성 매개 변수가 있습니다. 임시 항목을 참조하는 데이터 요소를 추가할 수 있습니다. 구성된 경우, 태그가 페이지에 추가하는 모든 인라인 스크립트는 사용자가 구성한 임시 항목을 사용합니다. 이 변경 사항은 태그 스크립트가 CSP 환경에서 로드될 수 있도록 컨텐츠 보안 정책을 임시로 사용할 수 있도록 지원합니다. CSP에서 태그 사용에 대한 자세한 내용을 읽을 수 있습니다 [여기](../../../ui/client-side/content-security-policy.md).
 
 ## 2019년 6월 18일
 
@@ -183,8 +189,8 @@ v1.4.2
 ## 2018년 11월 8일
 
 * **Persist Cohort 옵션** 집단 유지 옵션이 샘플링 조건에 추가되었습니다. 이 옵션은 세션 간 샘플 집단 내외에 사용자를 유지하는 효과가 있습니다. 예를 들어 &quot;persist cohort&quot; 확인란이 선택되어 있고 제공된 방문자에 대해 처음 실행된 조건이 true를 반환하는 경우, 동일한 방문자에 대해 이후에 실행되는 모든 조건은 true를 반환합니다. 예를 들어 &quot;persist cohort&quot; 확인란이 선택되어 있고 제공된 방문자에 대해 처음 실행된 조건이 false를 반환하는 경우, 동일한 방문자에 대해 이후에 실행되는 모든 조건은 false를 반환합니다.
-* **버그 수정**  - 태그가 동기적으로 로드되었지만 잘못 설치된( `_satellite.pageBottom()`에 대한 호출이 없음) 페이지에서 Page Bottom 이벤트와 사용자 지정 코드 작업을 사용하는 규칙이 웹 사이트 콘텐츠를 지우는 문제가 해결되었습니다.
-* **버그 수정**  브라우저의 DOMContentLoaded 이벤트가 실행된 후 태그 라이브러리가 비동기적으로 로드되고 로드를 마치면 뷰포트 입력이 작동하지 않는 문제가 해결되었습니다.
+* **버그 수정** - 태그가 동기적으로 로드되었지만 잘못 설치된(에 대한 호출이 없음) 페이지에서 Page Bottom 이벤트와 사용자 지정 코드 작업을 사용하는 규칙이 `_satellite.pageBottom()`)를 사용하면 웹 사이트 컨텐츠가 지워집니다.
+* **버그 수정** - 브라우저의 DOMContentLoaded 이벤트가 실행된 후 태그 라이브러리가 비동기적으로 로드되고 로드를 마치면 뷰포트 입력이 작동하지 않는 문제가 해결되었습니다.
 
 ## 2018년 5월 24일
 

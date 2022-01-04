@@ -2,10 +2,10 @@
 title: 코어 확장 개요
 description: Adobe Experience Platform의 코어 태그 확장에 대해 알아봅니다.
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
-source-git-commit: f3c23665229a83d6c63c7d6026ebf463069d8ad9
+source-git-commit: 04404ff9ab8d623214b96ec65342d2e8d11e85a6
 workflow-type: tm+mt
-source-wordcount: '5362'
-ht-degree: 65%
+source-wordcount: '5492'
+ht-degree: 63%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 65%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
 
 코어 태그 확장은 Adobe Experience Platform과 함께 릴리스된 기본 확장입니다.
 
@@ -128,9 +128,13 @@ Tab-focus 이벤트는 탭이 포커스를 얻으면 작업을 트리거합니�
 
 지정된 데이터 요소가 변경되면 이벤트가 트리거됩니다. 데이터 요소의 이름을 입력해야 합니다. 텍스트 필드에 해당 이름을 입력하거나 텍스트 필드의 오른쪽에 있는 데이터 요소 아이콘을 선택하고 대화 상자 내에 제공된 목록에서 선택하여 데이터 요소를 선택할 수 있습니다.
 
-#### 직접 호출
+#### 직접 호출 {#direct-call-event}
 
-직접 호출 이벤트는 이벤트 감지 및 조회 시스템을 건너뜁니다. 직접 호출 규칙은 발생한 사항을 Platform에 정확히 알려줘야 하는 상황에 이상적입니다. 또한, Adobe Flash과 같이, 플랫폼이 DOM에서 이벤트를 탐지할 수 없을 때에도 이상적입니다. 을(를) 지정합니다. `_satellite.track` 식별자 텍스트 필드의 문자열입니다.
+직접 호출 이벤트는 이벤트 감지 및 조회 시스템을 건너뜁니다. 직접 호출 규칙은 발생한 사항을 시스템에 정확히 알려줘야 하는 상황에 이상적입니다. 또한, 시스템에서 DOM에서 이벤트를 탐지할 수 없을 때에도 이상적입니다.
+
+직접 호출 이벤트를 정의할 때는 이 이벤트의 식별자로 작동할 문자열을 지정해야 합니다. 다음과 같은 경우 [직접 호출 작업 트리거](#direct-call-action) 동일한 식별자를 포함하는 경우 해당 식별자를 수신하는 모든 직접 호출 이벤트 규칙이 실행됩니다.
+
+![데이터 수집 UI의 직접 호출 이벤트 스크린샷](../../../images/extensions/core/direct-call-event.png)
 
 #### 요소가 존재함
 
@@ -625,6 +629,14 @@ setTimeout(function() {
 }, 1000);
 </script>
 ```
+
+### 직접 호출 트리거 {#direct-call-action}
+
+이 작업은 특정 규칙을 사용하는 모든 규칙을 트리거합니다 [직접 호출 이벤트](#direct-call-event). 작업을 구성할 때 트리거할 직접 호출 이벤트에 대한 식별자 문자열을 제공해야 합니다. 원할 경우, 를 통해 직접 호출 이벤트에 데이터를 전달할 수도 있습니다 `detail` 키-값 쌍의 사용자 지정 세트를 포함할 수 있는 객체입니다.
+
+![데이터 수집 UI에서 직접 호출 트리거 작업의 스크린샷](../../../images/extensions/core/direct-call-action.png)
+
+작업은 로 직접 매핑됩니다 [`track` 메서드](../../../ui/client-side/satellite-object.md?lang=en#track) 에서 `satellite` 클라이언트측 코드로 액세스할 수 있는 객체입니다.
 
 ## 코어 확장 데이터 요소 유형
 
