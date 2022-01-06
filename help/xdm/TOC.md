@@ -1,13 +1,13 @@
 ---
 audience: user
-user-guide-title: XDM(경험 데이터 모델) 시스템 도움말
+user-guide-title: Experience Data Model(XDM) 시스템 도움말
 breadcrumb-title: Experience Data Model(XDM) 안내서
-user-guide-description: XDM(경험 데이터 모델) 클래스 및 스키마 필드 그룹을 사용하여 경험 데이터를 표준화합니다.
+user-guide-description: Experience Data Model(XDM) 클래스와 스키마 필드 그룹을 사용하여 경험 데이터를 표준화합니다.
 feature: Schemas
-source-git-commit: db7e8de8e2669fae7fdf21d10042b7a71c63a8f6
+source-git-commit: 065f5ef9d3d3be0fcab84d7518d8a00e4cd551cf
 workflow-type: tm+mt
-source-wordcount: '401'
-ht-degree: 14%
+source-wordcount: '405'
+ht-degree: 18%
 
 ---
 
@@ -18,15 +18,16 @@ ht-degree: 14%
 * 스키마 {#schema}
    * [스키마 작성 기본 사항](schema/composition.md)
    * [데이터 모델링 우수 사례](schema/best-practices.md)
+   * [중요 및 개인 데이터](./schema/sensitive-and-personal-data.md)
    * [XDM 필드 유형 제한](schema/field-constraints.md)
    * [XDM에서의 네임스페이스](./schema/namespaces.md)
-   * [XDM 필드 사전](schema/field-dictionary.md)
    * 업계 데이터 모델 {#industries}
       * [개요](./schema/industries/overview.md)
       * [소매](./schema/industries/retail.md)
       * [금융 서비스](./schema/industries/financial.md)
       * [통신](./schema/industries/telecom.md)
       * [여행 및 숙박](./schema/industries/travel-hospitality.md)
+   * [XDM 필드 사전](schema/field-dictionary.md)
 * 클래스 {#classes}
    * [XDM 개별 프로필](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
@@ -92,7 +93,7 @@ ht-degree: 14%
    * [지역 좌표](./data-types/geo-coordinates.md)
    * [지역 상호 작용 세부 사항](./data-types/geo-interaction-details.md)
    * [지역 모양](./data-types/geo-shape.md)
-   * [ID](./data-types/identity.md)
+   * [신원](./data-types/identity.md)
    * [노출 횟수](./data-types/impressions.md)
    * [마케팅](./data-types/marketing.md)
    * [측정](./data-types/measure.md)
