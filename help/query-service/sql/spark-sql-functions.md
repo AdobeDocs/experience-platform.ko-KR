@@ -5,44 +5,32 @@ title: 쿼리 서비스의 스파크 SQL 함수
 topic-legacy: spark sql functions
 description: 이 설명서에는 SQL 기능을 확장하는 Spark SQL 기능에 대한 정보가 포함되어 있습니다.
 exl-id: 59e6d82b-3317-456d-8c56-3efd5978433a
-source-git-commit: 07b3483a3e8c666e769a0d00d08fa4784d10813d
+source-git-commit: f291c0db5b751227e979e70ea8f91a0c133ecf34
 workflow-type: tm+mt
-source-wordcount: '3909'
-ht-degree: 1%
+source-wordcount: '3866'
+ht-degree: 0%
 
 ---
 
 # [!DNL Spark] SQL 함수
 
-Adobe Experience Platform Query Service는 SQL 기능을 확장하기 위해 내장된 여러 Spark SQL 함수를 제공합니다. 이 문서에서는 Query Service에서 지원하는 Spark SQL 함수를 나열합니다.
+Adobe Experience Platform Query Service에서는 SQL 기능을 확장하기 위해 내장된 여러 Spark SQL 함수를 제공합니다. 이 문서에서는 Query Service에서 지원하는 Spark SQL 함수를 나열합니다.
 
-구문, 사용, 예제 등 함수에 대한 자세한 내용은 [Spark SQL 함수 설명서](https://spark.apache.org/docs/latest/api/sql/index.html)를 참조하십시오.
+구문, 사용 및 예제 등 함수에 대한 자세한 내용은 [Spark SQL 함수 설명서](https://spark.apache.org/docs/latest/api/sql/index.html).
 
 >[!NOTE]
 >
 >외부 설명서의 모든 기능이 지원되는 것은 아닙니다.
 
-## 카테고리
-
-- [수학 및 통계 연산자 및 함수](#math)
-- [논리 연산자](#logical-operators)
-- [날짜/시간 함수](#datetime-functions)
-- [배열](#arrays)
-- [데이터 형식 변환 함수](#datatype-casting)
-- [변환 및 서식 함수](#conversion)
-- [데이터 평가](#data-evaluation)
-- [현재 정보](#current-information)
-- [높은 순서 함수](#higher-order)
-
 ## 수학 및 통계 연산자 및 함수 {#math}
 
 | 연산자/함수 | 설명 |
 | ----------------- | ----------- |
-| [`%`](https://spark.apache.org/docs/latest/api/sql/index.html#_2) | 두 숫자 중 나머지 숫자 반환 |
-| [`*`](https://spark.apache.org/docs/latest/api/sql/index.html#_4) | 두 숫자를 곱합니다 |
-| [`+`](https://spark.apache.org/docs/latest/api/sql/index.html#_5) | 두 숫자를 추가합니다 |
-| [`-`](https://spark.apache.org/docs/latest/api/sql/index.html#_6) | 두 숫자 빼기 |
-| [`/`](https://spark.apache.org/docs/latest/api/sql/index.html#_7) | 두 숫자를 나눕니다 |
+| [`%`](https://spark.apache.org/docs/latest/api/sql/index.html#_3) | 두 숫자 중 나머지 숫자 반환 |
+| [`*`](https://spark.apache.org/docs/latest/api/sql/index.html#_5) | 두 숫자를 곱합니다 |
+| [`+`](https://spark.apache.org/docs/latest/api/sql/index.html#_6) | 두 숫자를 추가합니다 |
+| [`-`](https://spark.apache.org/docs/latest/api/sql/index.html#_7) | 두 숫자 빼기 |
+| [`/`](https://spark.apache.org/docs/latest/api/sql/index.html#_8) | 두 숫자를 나눕니다 |
 | [`abs`](https://spark.apache.org/docs/latest/api/sql/index.html#abs) | 입력의 절대값 반환 |
 | [`acos`](https://spark.apache.org/docs/latest/api/sql/index.html#acos) | 역 코사인 값 반환 |
 | [`approx_count_distinct`](https://spark.apache.org/docs/latest/api/sql/index.html#approx_count_distinct) | HyperLogLog++로 예상 카디널리티를 반환합니다. |
@@ -90,7 +78,7 @@ Adobe Experience Platform Query Service는 SQL 기능을 확장하기 위해 내
 | [`randn`](https://spark.apache.org/docs/latest/api/sql/index.html#randn) | 임의 값 반환 |
 | [`rint`](https://spark.apache.org/docs/latest/api/sql/index.html#rint) | 가장 가까운 이중 값 반환 |
 | [`round`](https://spark.apache.org/docs/latest/api/sql/index.html#round) | 가장 가까운 반올림된 값 반환 |
-| [`sign`](https://spark.apache.org/docs/latest/api/sql/index.html#sign),  [`signum`](https://spark.apache.org/docs/latest/api/sql/index.html#signum) | 숫자 기호 반환 |
+| [`sign`](https://spark.apache.org/docs/latest/api/sql/index.html#sign), [`signum`](https://spark.apache.org/docs/latest/api/sql/index.html#signum) | 숫자 기호 반환 |
 | [`sin`](https://spark.apache.org/docs/latest/api/sql/index.html#sin) | 값의 사인 반환 |
 | [`sinh`](https://spark.apache.org/docs/latest/api/sql/index.html#sinh) | 값의 쌍곡사인 반환 |
 | [`sqrt`](https://spark.apache.org/docs/latest/api/sql/index.html#sqrt) | 값의 제곱근 반환 |
@@ -101,22 +89,21 @@ Adobe Experience Platform Query Service는 SQL 기능을 확장하기 위해 내
 | [`tan`](https://spark.apache.org/docs/latest/api/sql/index.html#tan) | 값의 탄젠트 반환 |
 | [`tanh`](https://spark.apache.org/docs/latest/api/sql/index.html#tanh) | 값의 쌍곡탄젠트 반환 |
 | [`var_pop`](https://spark.apache.org/docs/latest/api/sql/index.html#var_pop) | 계산된 모집단 분산 반환 |
-| [`var_samp`](https://spark.apache.org/docs/latest/api/sql/index.html#var_samp),  [`variance`](https://spark.apache.org/docs/latest/api/sql/index.html#variance) | 계산된 샘플 분산 반환 |
+| [`var_samp`](https://spark.apache.org/docs/latest/api/sql/index.html#var_samp), [`variance`](https://spark.apache.org/docs/latest/api/sql/index.html#variance) | 계산된 샘플 분산 반환 |
 
 ### 논리 연산자 및 함수 {#logical-operators}
 
 | 연산자/함수 | 설명 |
 | ----------------- | ----------- |
 | [`!`](https://spark.apache.org/docs/latest/api/sql/index.html#_1) 또는 [`not`](https://spark.apache.org/docs/latest/api/sql/index.html#not) | 논리적이지 않음 |
-| [`<`](https://spark.apache.org/docs/latest/api/sql/index.html#_7) | 보다 작음 |
-| [`<=`](https://spark.apache.org/docs/latest/api/sql/index.html#_8) | 작거나 같음 |
-| [`=`](https://spark.apache.org/docs/latest/api/sql/index.html#_10) | 같음 |
-| [`>`](https://spark.apache.org/docs/latest/api/sql/index.html#_12) | 보다 큼 |
-| [`>=`](https://spark.apache.org/docs/latest/api/sql/index.html#_13) | 크거나 같음 |
-| [`^`](https://spark.apache.org/docs/latest/api/sql/index.html#_14) | 비트 전용 또는 |
-| [`>=`](https://spark.apache.org/docs/latest/api/sql/index.html#_13) | 크거나 같음 |
-| [`|`](https://spark.apache.org/docs/latest/api/sql/index.html#_15) | 비트 또는 |
-| [`~`](https://spark.apache.org/docs/latest/api/sql/index.html#_16) | 비트 아님 |
+| [`<`](https://spark.apache.org/docs/latest/api/sql/index.html#_8) | 미만 |
+| [`<=`](https://spark.apache.org/docs/latest/api/sql/index.html#_9) | 작거나 같음 |
+| [`=`](https://spark.apache.org/docs/latest/api/sql/index.html#_12) | 같음 |
+| [`>`](https://spark.apache.org/docs/latest/api/sql/index.html#_14) | 보다 큼 |
+| [`>=`](https://spark.apache.org/docs/latest/api/sql/index.html#_15) | 크거나 같음 |
+| [`^`](https://spark.apache.org/docs/latest/api/sql/index.html#_16) | 비트 전용 또는 |
+| [`\|`](https://spark.apache.org/docs/latest/api/sql/index.html#_17) | 비트 또는 |
+| [`~`](https://spark.apache.org/docs/latest/api/sql/index.html#_19) | 비트 아님 |
 | [`arrays_overlap`](https://spark.apache.org/docs/latest/api/sql/index.html#arrays_overlap) | 일반 요소 반환 |
 | [`assert_true`](https://spark.apache.org/docs/latest/api/sql/index.html#assert_true) | 표현식이 true이면 어설션 |
 | [`if`](https://spark.apache.org/docs/latest/api/sql/index.html#if) | 표현식이 true로 평가되면 두 번째 표현식을 반환합니다. 그렇지 않으면 세 번째 표현식을 반환합니다. |
@@ -140,7 +127,7 @@ Adobe Experience Platform Query Service는 SQL 기능을 확장하기 위해 내
 | [`date_sub`](https://spark.apache.org/docs/latest/api/sql/index.html#date_sub) | 날짜에서 일수 빼기 |
 | [`date_trunc`](https://spark.apache.org/docs/latest/api/sql/index.html#date_trunc) | 지정된 단위로 잘린 날짜 반환 |
 | [`datediff`](https://spark.apache.org/docs/latest/api/sql/index.html#datediff) | 날짜 간의 차이 반환(일 단위) |
-| [`day`](https://spark.apache.org/docs/latest/api/sql/index.html#day),  [`dayofmonth`](https://spark.apache.org/docs/latest/api/sql/index.html#dayofmonth) | 월의 날짜 반환 |
+| [`day`](https://spark.apache.org/docs/latest/api/sql/index.html#day), [`dayofmonth`](https://spark.apache.org/docs/latest/api/sql/index.html#dayofmonth) | 월의 날짜 반환 |
 | [`dayofweek`](https://spark.apache.org/docs/latest/api/sql/index.html#dayofweek) | 요일 반환(1-7) |
 | [`dayofyear`](https://spark.apache.org/docs/latest/api/sql/index.html#dayofyear) | 일(한 해 기준) 반환 |
 | [`from_unixtime`](https://spark.apache.org/docs/latest/api/sql/index.html#from_unixtime) | Unix 시간으로 날짜 반환 |
@@ -153,8 +140,8 @@ Adobe Experience Platform Query Service는 SQL 기능을 확장하기 위해 내
 | [`next_day`](https://spark.apache.org/docs/latest/api/sql/index.html#next_day) | 입력보다 첫 번째 날 후 반환 |
 | [`quarter`](https://spark.apache.org/docs/latest/api/sql/index.html#quarter) | 입력의 분기 반환 |
 | [`second`](https://spark.apache.org/docs/latest/api/sql/index.html#second) | 문자열의 두 번째 반환 |
-| [`to_date`](https://spark.apache.org/docs/latest/api/sql/index.html#to_date) | 문자열을 날짜로 변환합니다. **참고:** 문자열 **** 은 형식이어야  `yyyy-mm-ddTHH24:MM:SS`합니다. |
-| [`to_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_timestamp) | 문자열을 타임스탬프로 변환합니다. **참고:** 문자열 **** 은 형식이어야  `yyyy-mm-ddTHH24:MM:SS`합니다. |
+| [`to_date`](https://spark.apache.org/docs/latest/api/sql/index.html#to_date) | 문자열을 날짜로 변환합니다. **참고:** 문자열 **반드시** 형식을 사용해야 합니다. `yyyy-mm-ddTHH24:MM:SS`. |
+| [`to_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_timestamp) | 문자열을 타임스탬프로 변환합니다. **참고:** 문자열 **반드시** 형식을 사용해야 합니다. `yyyy-mm-ddTHH24:MM:SS`. |
 | [`to_unix_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_unix_timestamp) | 문자열을 Unix 타임스탬프로 변환 |
 | [`to_utc_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_utc_timestamp) | 문자열을 UTC 타임스탬프로 변환 |
 | [`trunc`](https://spark.apache.org/docs/latest/api/sql/index.html#trunc) | 날짜를 자릅니다 |
@@ -180,7 +167,7 @@ Adobe Experience Platform Query Service는 SQL 기능을 확장하기 위해 내
 | [`array_repeat`](https://spark.apache.org/docs/latest/api/sql/index.html#array_repeat) | 계산 시간 값이 포함된 배열을 만듭니다. |
 | [`array_sort`](https://spark.apache.org/docs/latest/api/sql/index.html#array_sort) | 배열을 정렬합니다. |
 | [`array_union`](https://spark.apache.org/docs/latest/api/sql/index.html#array_union) | 중복 없이 어레이를 함께 결합합니다. |
-| [`array_zip`](https://spark.apache.org/docs/latest/api/sql/index.html#array_zip) | Zip |
+| [`arrays_zip`](https://spark.apache.org/docs/latest/api/sql/index.html#array_zip) | 지정된 배열의 값과 지정된 인덱스의 원래 컬렉션 값을 결합합니다 |
 | [`cardinality`](https://spark.apache.org/docs/latest/api/sql/index.html#cardinality) | 배열 크기 반환 |
 | [`element_at`](https://spark.apache.org/docs/latest/api/sql/index.html#element_at) | 요소를 위치에 반환 |
 | [`explode`](https://spark.apache.org/docs/latest/api/sql/index.html#explode) | 배열 요소를 여러 행으로 구분하고 null 제외 |
@@ -189,8 +176,7 @@ Adobe Experience Platform Query Service는 SQL 기능을 확장하기 위해 내
 | [`flatten`](https://spark.apache.org/docs/latest/api/sql/index.html#flatten) | 어레이 배열 병합 |
 | [`inline`](https://spark.apache.org/docs/latest/api/sql/index.html#inline) | null을 제외하고 별도의 구조 배열을 테이블로 지정합니다. |
 | [`inline_outer`](https://spark.apache.org/docs/latest/api/sql/index.html#inline_outer) | null을 포함하여 별도의 구조 배열을 테이블로 지정합니다. |
-| [`posexplod`](https://spark.apache.org/docs/latest/api/sql/index.html#posexplod) | 배열 요소를 Null을 제외하고 Position이 있는 여러 행으로 분리 |
-| [`posexplod`](https://spark.apache.org/docs/latest/api/sql/index.html#posexplod) | 배열 요소를 null을 포함하여 위치가 있는 여러 행으로 분리 |
+| [`posexplode`](https://spark.apache.org/docs/latest/api/sql/index.html#posexplode) | 배열 요소를 Null을 제외하고 Position이 있는 여러 행으로 분리 |
 | [`reverse`](https://spark.apache.org/docs/latest/api/sql/index.html#reverse) | 배열의 역방향 요소 |
 | [`shuffle`](https://spark.apache.org/docs/latest/api/sql/index.html#shuffle) | 배열의 임의 순차 반환 |
 | [`slice`](https://spark.apache.org/docs/latest/api/sql/index.html#slice) | 배열을 하위 설정합니다. |
@@ -224,16 +210,16 @@ Adobe Experience Platform Query Service는 SQL 기능을 확장하기 위해 내
 | [`base64`](https://spark.apache.org/docs/latest/api/sql/index.html#base64) | 인수를 base64 문자열로 변경합니다. |
 | [`bin`](https://spark.apache.org/docs/latest/api/sql/index.html#bin) | 인수를 이진 값으로 변경합니다. |
 | [`bit_length`](https://spark.apache.org/docs/latest/api/sql/index.html#bit_length) | 비트 길이 반환 |
-| [`char`](https://spark.apache.org/docs/latest/api/sql/index.html#char),  [`chr`](https://spark.apache.org/docs/latest/api/sql/index.html#chr) | ASCII 문자 반환 |
-| [`char_length`](https://spark.apache.org/docs/latest/api/sql/index.html#char_length),  [`character_length`](https://spark.apache.org/docs/latest/api/sql/index.html#character_length) | 문자열 길이 반환 |
+| [`char`](https://spark.apache.org/docs/latest/api/sql/index.html#char), [`chr`](https://spark.apache.org/docs/latest/api/sql/index.html#chr) | ASCII 문자 반환 |
+| [`char_length`](https://spark.apache.org/docs/latest/api/sql/index.html#char_length), [`character_length`](https://spark.apache.org/docs/latest/api/sql/index.html#character_length) | 문자열 길이 반환 |
 | [`crc32`](https://spark.apache.org/docs/latest/api/sql/index.html#crc32) | 순환 중복 검사 값 반환 |
 | [`degrees`](https://spark.apache.org/docs/latest/api/sql/index.html#degrees) | 라디안을 도로 변환 |
 | [`format_number`](https://spark.apache.org/docs/latest/api/sql/index.html#format_number) | 숫자 형식 변경 |
-| [`from_json`](https://spark.apache.org/docs/latest/api/sql/index.html#from_json),  [`get_json_object`](https://spark.apache.org/docs/latest/api/sql/index.html#get_json_object) | JSON에서 데이터 가져오기 |
+| [`from_json`](https://spark.apache.org/docs/latest/api/sql/index.html#from_json), [`get_json_object`](https://spark.apache.org/docs/latest/api/sql/index.html#get_json_object) | JSON에서 데이터 가져오기 |
 | [`hash`](https://spark.apache.org/docs/latest/api/sql/index.html#hash) | 해시 값 반환 |
 | [`hex`](https://spark.apache.org/docs/latest/api/sql/index.html#hex) | 인수를 16진수 값으로 변환 |
 | [`initcap`](https://spark.apache.org/docs/latest/api/sql/index.html#initcap) | 문자열을 제목 대/소문자로 변경합니다. |
-| [`lcase`](https://spark.apache.org/docs/latest/api/sql/index.html#lcase),  [`lower`](https://spark.apache.org/docs/latest/api/sql/index.html#lower) | 문자열을 모두 소문자로 변경합니다. |
+| [`lcase`](https://spark.apache.org/docs/latest/api/sql/index.html#lcase), [`lower`](https://spark.apache.org/docs/latest/api/sql/index.html#lower) | 문자열을 모두 소문자로 변경합니다. |
 | [`lpad`](https://spark.apache.org/docs/latest/api/sql/index.html#lpad) | 문자열의 왼쪽에 패드합니다. |
 | [`map`](https://spark.apache.org/docs/latest/api/sql/index.html#map) | 맵 만들기 |
 | [`map_from_arrays`](https://spark.apache.org/docs/latest/api/sql/index.html#map_from_arrays) | 배열에서 맵 만들기 |
@@ -241,15 +227,15 @@ Adobe Experience Platform Query Service는 SQL 기능을 확장하기 위해 내
 | [`md5`](https://spark.apache.org/docs/latest/api/sql/index.html#md5) | md5 값 반환 |
 | [`rpad`](https://spark.apache.org/docs/latest/api/sql/index.html#rpad) | 문자열 오른쪽을 패드합니다. |
 | [`rtrim`](https://spark.apache.org/docs/latest/api/sql/index.html#rtrim) | 후행 공백 제거 |
-| [`sha`](https://spark.apache.org/docs/latest/api/sql/index.html#sha),  [`sha1`](https://spark.apache.org/docs/latest/api/sql/index.html#sha1) | SHA1 값 반환 |
+| [`sha`](https://spark.apache.org/docs/latest/api/sql/index.html#sha), [`sha1`](https://spark.apache.org/docs/latest/api/sql/index.html#sha1) | SHA1 값 반환 |
 | [`sha2`](https://spark.apache.org/docs/latest/api/sql/index.html#sha2) | SHA2 값 반환 |
 | [`soundex`](https://spark.apache.org/docs/latest/api/sql/index.html#soundex) | Soundex 코드 반환 |
 | [`stack`](https://spark.apache.org/docs/latest/api/sql/index.html#stack) | 값을 행으로 구분 |
-| [`substr`](https://spark.apache.org/docs/latest/api/sql/index.html#substr),  [`substring`](https://spark.apache.org/docs/latest/api/sql/index.html#substring) | 하위 문자열 반환 |
+| [`substr`](https://spark.apache.org/docs/latest/api/sql/index.html#substr), [`substring`](https://spark.apache.org/docs/latest/api/sql/index.html#substring) | 하위 문자열 반환 |
 | [`to_json`](https://spark.apache.org/docs/latest/api/sql/index.html#to_json) | JSON 문자열 반환 |
 | [`translate`](https://spark.apache.org/docs/latest/api/sql/index.html#translate) | 문자열 내 값 바꾸기 |
 | [`trim`](https://spark.apache.org/docs/latest/api/sql/index.html#trim) | 선행 및 후행 문자 제거 |
-| [`ucase`](https://spark.apache.org/docs/latest/api/sql/index.html#ucase),  [`upper`](https://spark.apache.org/docs/latest/api/sql/index.html#upper) | 문자열을 대문자로 변경합니다. |
+| [`ucase`](https://spark.apache.org/docs/latest/api/sql/index.html#ucase), [`upper`](https://spark.apache.org/docs/latest/api/sql/index.html#upper) | 문자열을 대문자로 변경합니다. |
 | [`unbase64`](https://spark.apache.org/docs/latest/api/sql/index.html#unbase64) | base64 문자열을 바이너리로 변환 |
 | [`unhex`](https://spark.apache.org/docs/latest/api/sql/index.html#unhex) | 16진수를 바이너리로 변환 |
 | [`uuid`](https://spark.apache.org/docs/latest/api/sql/index.html#uuid) | UUID 반환 |
@@ -265,19 +251,19 @@ Adobe Experience Platform Query Service는 SQL 기능을 확장하기 위해 내
 | [`concat_ws`](https://spark.apache.org/docs/latest/api/sql/index.html#concat_ws) | 구분자와 연결 |
 | [`count`](https://spark.apache.org/docs/latest/api/sql/index.html#count) | 행에 대한 총 개수 반환 |
 | [`decode`](https://spark.apache.org/docs/latest/api/sql/index.html#decode) | 문자 집합을 사용하여 디코딩 |
-| [`elt`](https://spark.apache.org/docs/latest/api/sql/index.html#elt) | [`n`](https://spark.apache.org/docs/latest/api/sql/index.html#n)입력 반환 |
+| [`elt`](https://spark.apache.org/docs/latest/api/sql/index.html#elt) | 반환 [`n`](https://spark.apache.org/docs/latest/api/sql/index.html#n)입력 |
 | [`encode`](https://spark.apache.org/docs/latest/api/sql/index.html#encode) | 문자 집합을 사용하여 인코딩 |
-| [`first`](https://spark.apache.org/docs/latest/api/sql/index.html#first),  [`first_value`](https://spark.apache.org/docs/latest/api/sql/index.html#first_value) | 첫 번째 값 반환 |
+| [`first`](https://spark.apache.org/docs/latest/api/sql/index.html#first), [`first_value`](https://spark.apache.org/docs/latest/api/sql/index.html#first_value) | 첫 번째 값 반환 |
 | [`grouping`](https://spark.apache.org/docs/latest/api/sql/index.html#grouping) | 열을 그룹화하는지 여부를 나타냅니다 |
 | [`grouping_id`](https://spark.apache.org/docs/latest/api/sql/index.html#grouping_id) | 그룹화 수준 반환 |
 | [`instr`](https://spark.apache.org/docs/latest/api/sql/index.html#instr) | 문자 발생 인덱스 1기반 반환 |
 | [`json_tuple`](https://spark.apache.org/docs/latest/api/sql/index.html#json_tuple) | JSON 입력에서 튜플 반환 |
-| [`lag`](https://spark.apache.org/docs/latest/api/sql/index.html#lag),  [`lead`](https://spark.apache.org/docs/latest/api/sql/index.html#lead) | 오프셋 앞에 있는 값 반환 |
-| [`last`](https://spark.apache.org/docs/latest/api/sql/index.html#last),  [`last_value`](https://spark.apache.org/docs/latest/api/sql/index.html#last_value) | 마지막 값 반환 |
-| [`left`](https://spark.apache.org/docs/latest/api/sql/index.html#left) | 첫 번째 [`n`](https://spark.apache.org/docs/latest/api/sql/index.html#n) 문자 반환 |
+| [`lag`](https://spark.apache.org/docs/latest/api/sql/index.html#lag), [`lead`](https://spark.apache.org/docs/latest/api/sql/index.html#lead) | 오프셋 앞에 있는 값 반환 |
+| [`last`](https://spark.apache.org/docs/latest/api/sql/index.html#last), [`last_value`](https://spark.apache.org/docs/latest/api/sql/index.html#last_value) | 마지막 값 반환 |
+| [`left`](https://spark.apache.org/docs/latest/api/sql/index.html#left) | 첫 번째 반환 [`n`](https://spark.apache.org/docs/latest/api/sql/index.html#n) 문자 |
 | [`length`](https://spark.apache.org/docs/latest/api/sql/index.html#length) | 문자열 길이 반환 |
 | [`levenshtein`](https://spark.apache.org/docs/latest/api/sql/index.html#levenshtein) | 문자열 사이의 간격 반환 |
-| [`locate`](https://spark.apache.org/docs/latest/api/sql/index.html#locate),  [`position`](https://spark.apache.org/docs/latest/api/sql/index.html#position) | 하위 문자열에서 첫 번째 항목의 위치를 반환합니다. |
+| [`locate`](https://spark.apache.org/docs/latest/api/sql/index.html#locate), [`position`](https://spark.apache.org/docs/latest/api/sql/index.html#position) | 하위 문자열에서 첫 번째 항목의 위치를 반환합니다. |
 | [`map_concat`](https://spark.apache.org/docs/latest/api/sql/index.html#map_concat) | 맵 연결 |
 | [`map_keys`](https://spark.apache.org/docs/latest/api/sql/index.html#map_keys) | 맵 키 반환 |
 | [`map_values`](https://spark.apache.org/docs/latest/api/sql/index.html#map_values) | 맵 값 반환 |
@@ -300,12 +286,12 @@ Adobe Experience Platform Query Service는 SQL 기능을 확장하기 위해 내
 | [`shiftright`](https://spark.apache.org/docs/latest/api/sql/index.html#shiftright) | 서명된 비트 시프트 오른쪽 |
 | [`shiftrightunsigned`](https://spark.apache.org/docs/latest/api/sql/index.html#shiftrightunsigned) | 부호 없는 비트 시프트 오른쪽 |
 | [`size`](https://spark.apache.org/docs/latest/api/sql/index.html#size) | 배열 크기 반환 |
-| [`space`](https://spark.apache.org/docs/latest/api/sql/index.html#space) | [`n`](https://spark.apache.org/docs/latest/api/sql/index.html#n) 공백이 있는 문자열 반환 |
+| [`space`](https://spark.apache.org/docs/latest/api/sql/index.html#space) | 를 사용하여 문자열 반환 [`n`](https://spark.apache.org/docs/latest/api/sql/index.html#n) spaces |
 | [`split`](https://spark.apache.org/docs/latest/api/sql/index.html#split) | 문자열 분할 |
 | [`substring_index`](https://spark.apache.org/docs/latest/api/sql/index.html#substring_index) | 하위 문자열의 인덱스 반환 |
 | [`window`](https://spark.apache.org/docs/latest/api/sql/index.html#window) | 창 |
 | [`xpath`](https://spark.apache.org/docs/latest/api/sql/index.html#xpath) | XML 노드 구문 분석 |
-| [`xpath_double`](https://spark.apache.org/docs/latest/api/sql/index.html#xpath_double),  [`xpath_number`](https://spark.apache.org/docs/latest/api/sql/index.html#xpath_number) | XML 노드를 더블로 구문 분석합니다. |
+| [`xpath_double`](https://spark.apache.org/docs/latest/api/sql/index.html#xpath_double), [`xpath_number`](https://spark.apache.org/docs/latest/api/sql/index.html#xpath_number) | XML 노드를 더블로 구문 분석합니다. |
 | [`xpath_float`](https://spark.apache.org/docs/latest/api/sql/index.html#xpath_float) | XML 노드를 부동 항목으로 구문 분석 |
 | [`xpath_int`](https://spark.apache.org/docs/latest/api/sql/index.html#xpath_int) | XML 노드를 정수로 구문 분석합니다. |
 | [`xpath_long`](https://spark.apache.org/docs/latest/api/sql/index.html#xpath_long) | XML 노드를 오랫동안 구문 분석합니다. |
@@ -318,7 +304,7 @@ Adobe Experience Platform Query Service는 SQL 기능을 확장하기 위해 내
 | -------- | ----------- |
 | [`current_database`](https://spark.apache.org/docs/latest/api/sql/index.html#current_database) | 현재 데이터베이스 반환 |
 | [`current_date`](https://spark.apache.org/docs/latest/api/sql/index.html#current_date) | 현재 날짜 반환 |
-| [`current_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#current_timestamp),  [`now`](https://spark.apache.org/docs/latest/api/sql/index.html#now) | 현재 타임스탬프 반환 |
+| [`current_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#current_timestamp), [`now`](https://spark.apache.org/docs/latest/api/sql/index.html#now) | 현재 타임스탬프 반환 |
 
 ### 높은 순서 함수 {#higher-order}
 
