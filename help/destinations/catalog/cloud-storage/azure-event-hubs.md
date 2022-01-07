@@ -1,11 +1,11 @@
 ---
 keywords: Azure 이벤트 허브 대상;azure 이벤트 허브;azure 이벤트 허브
-title: (베타)!DNL Azure 이벤트 허브] 연결
-description: Experience Platform에서 데이터를 스트리밍하려면 사용자의!DNL Azure 이벤트 허브] 스토리지에 대한 실시간 아웃바운드 연결을 만듭니다.
+title: (베타) [!DNL Azure Event Hubs] 연결
+description: 에 대한 실시간 아웃바운드 연결을 만듭니다. [!DNL Azure Event Hubs] Experience Platform에서 데이터를 스트리밍할 스토리지.
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: 8d2c5ef477d4707be4c0da43ba1f672fac797604
+source-git-commit: c93a054174bc68ecedf67599ef61ad0b41a56ada
 workflow-type: tm+mt
-source-wordcount: '749'
+source-wordcount: '741'
 ht-degree: 1%
 
 ---
@@ -58,7 +58,7 @@ While [설정](../../ui/connect-destination.md) 이 대상을 사용하려면 �
 
 ## 프로필 내보내기 동작 {#profile-export-behavior}
 
-Experience Platform optimizes the profile export behavior to your Azure Event Hubs destination, to only export data to your destination when relevant updates to a profile have occurred following segment qualification or other significant events. 프로필은 다음과 같은 상황에서 대상에 내보내집니다.
+Experience Platform은 세그먼트 자격 또는 기타 중요한 이벤트 후에 프로필에 대한 관련 업데이트가 발생한 경우에만 데이터를 대상으로 내보내도록 Azure 이벤트 허브 대상으로 프로필 내보내기 동작을 최적화합니다. 프로필은 다음과 같은 상황에서 대상에 내보내집니다.
 
 * 대상에 매핑된 세그먼트 중 하나 이상에 대한 세그먼트 멤버십 변경으로 프로필 업데이트가 트리거되었습니다. 예를 들어 프로필이 대상에 매핑된 세그먼트 중 하나에 적격이거나 대상에 매핑된 세그먼트 중 하나를 끝냈습니다.
 * 프로필 업데이트는 [id 맵](/help/xdm/field-groups/profile/identitymap.md). 예를 들어 대상에 매핑된 세그먼트 중 하나에 대해 이미 자격이 있는 프로필이 ID 맵 속성에 새 ID를 추가했습니다.

@@ -4,9 +4,10 @@ solution: Experience Platform
 title: Flow Service API를 사용하여 대상 데이터 흐름 삭제
 type: Tutorial
 description: Flow Service API를 사용하여 데이터 흐름을 일괄 처리 및 스트리밍 대상으로 삭제하는 방법을 알아봅니다.
-source-git-commit: df89f8ce8050b26068e0ab7aa01f1c964f5d2422
+exl-id: fa40cf97-46c6-4a10-b53c-30bed2dd1b2d
+source-git-commit: c93a054174bc68ecedf67599ef61ad0b41a56ada
 workflow-type: tm+mt
-source-wordcount: '553'
+source-wordcount: '565'
 ht-degree: 1%
 
 ---
@@ -90,3 +91,5 @@ curl -X DELETE \
 이 자습서를 따라 다음을 성공적으로 사용했습니다. [!DNL Flow Service] 기존 데이터 흐름을 대상으로 삭제할 API입니다.
 
 사용자 인터페이스를 사용하여 이러한 작업을 수행하는 방법에 대한 단계는 [UI에서 데이터 흐름 삭제](../ui/delete-destinations.md).
+
+이제 계속하셔도 되고 [대상 계정 삭제](/help/destinations/api/delete-destination-account.md) 사용 [!DNL Flow Service] API.
