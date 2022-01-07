@@ -2,9 +2,9 @@
 description: 이 페이지에서는 '/authoring/destinations' API 종단점을 사용하여 수행할 수 있는 모든 API 작업을 나열하고 설명합니다.
 title: 대상 API 끝점 작업
 exl-id: 96755e9d-be62-432f-b985-91330575b395
-source-git-commit: 0bd57e226155ee68758466146b5d873dc4fdca29
+source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
 workflow-type: tm+mt
-source-wordcount: '2405'
+source-wordcount: '2387'
 ht-degree: 4%
 
 ---
@@ -179,7 +179,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `aggregation.configurableAggregation.aggregationKey.includeSegmentStatus` | 부울 | 구성 예는 매개 변수 를 참조하십시오 [여기](./destination-configuration.md#example-configuration). 둘 다 설정해야 합니다 `includeSegmentId:true` 및 `includeSegmentStatus:true` 대상으로 내보낸 프로필을 세그먼트 ID 및 세그먼트 상태별로 그룹화하려면 |
 | `aggregation.configurableAggregation.aggregationKey.includeIdentity` | 부울 | 구성 예는 매개 변수 를 참조하십시오 [여기](./destination-configuration.md#example-configuration). 을(를) (으)로 설정합니다. `true` id 네임스페이스로 대상에 내보낸 프로필을 그룹화하려는 경우. |
 | `aggregation.configurableAggregation.aggregationKey.oneIdentityPerGroup` | 부울 | 구성 예는 매개 변수 를 참조하십시오 [여기](./destination-configuration.md#example-configuration). 이 매개 변수를 사용하여 내보낸 프로필을 단일 ID(GAID, IDFA, 전화번호, 이메일 등) 그룹으로 집계할지 여부를 지정합니다. |
-| `aggregation.configurableAggregation.aggregationKey.groups` | 문자열 | 구성 예는 매개 변수 를 참조하십시오 [여기](./destination-configuration.md#example-configuration). 대상에 내보낸 프로필을 ID 네임스페이스 그룹으로 그룹화하려면 ID 그룹 목록을 만듭니다. 예를 들어, 예제의 구성을 사용하여 IDFA 및 GAID 모바일 식별자를 포함하는 프로필을 대상에 대한 한 호출로 결합하고 이메일을 다른 호출로 결합할 수 있습니다. |
+| `aggregation.configurableAggregation.aggregationKey.groups` | 문자열 | 구성 예는 매개 변수 를 참조하십시오 [여기](./destination-configuration.md#example-configuration). 대상으로 내보낸 프로필을 ID 네임스페이스 그룹으로 그룹화하려면 ID 그룹 목록을 만듭니다. 예를 들어, 예제의 구성을 사용하여 IDFA 및 GAID 모바일 식별자를 포함하는 프로필을 대상에 대한 한 호출로 결합하고 이메일을 다른 호출로 결합할 수 있습니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -697,8 +697,8 @@ curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/destinat
 
 ## API 오류 처리
 
-대상 SDK API 엔드포인트는 일반 Experience Platform API 오류 메시지 원칙을 따릅니다. 을(를) 참조하십시오. [API 상태 코드](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) 및 [요청 헤더 오류](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) 을 참조하십시오.
+Destination SDK API 엔드포인트는 일반 Experience Platform API 오류 메시지 원칙을 따릅니다. 을(를) 참조하십시오. [API 상태 코드](../../landing/troubleshooting.md#api-status-codes) 및 [요청 헤더 오류](../../landing/troubleshooting.md#request-header-errors) 을 참조하십시오.
 
 ## 다음 단계
 
-이 문서를 읽은 후에는 `/authoring/destinations` API 엔드포인트. 읽기 [대상 SDK를 사용하여 대상을 구성하는 방법](./configure-destination-instructions.md) 대상 구성 프로세스에 이 단계가 어떤 영향을 주는지 이해하기 위해 노력합니다.
+이 문서를 읽은 후에는 `/authoring/destinations` API 엔드포인트. 읽기 [Destination SDK을 사용하여 대상을 구성하는 방법](./configure-destination-instructions.md) 대상 구성 프로세스에 이 단계가 어떤 영향을 주는지 이해하기 위해 노력합니다.

@@ -2,9 +2,9 @@
 description: 이 페이지에서는 '/authoring/credentials' API 종단점을 사용하여 수행할 수 있는 모든 API 작업을 설명합니다.
 title: 자격 증명 끝점 API 작업
 exl-id: 89957f38-e7f4-452d-abc0-0940472103fe
-source-git-commit: 0bd57e226155ee68758466146b5d873dc4fdca29
+source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
 workflow-type: tm+mt
-source-wordcount: '730'
+source-wordcount: '712'
 ht-degree: 4%
 
 ---
@@ -400,8 +400,8 @@ curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/credenti
 
 ## API 오류 처리
 
-대상 SDK API 엔드포인트는 일반 Experience Platform API 오류 메시지 원칙을 따릅니다. 을(를) 참조하십시오. [API 상태 코드](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) 및 [요청 헤더 오류](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) 을 참조하십시오.
+Destination SDK API 엔드포인트는 일반 Experience Platform API 오류 메시지 원칙을 따릅니다. 을(를) 참조하십시오. [API 상태 코드](../../landing/troubleshooting.md#api-status-codes) 및 [요청 헤더 오류](../../landing/troubleshooting.md#request-header-errors) 을 참조하십시오.
 
 ## 다음 단계
 
-이제 이 문서를 읽은 후에는 자격 증명 끝점을 사용할 시점과 을 사용하여 자격 증명 구성을 설정하는 방법을 알 수 있습니다 `/authoring/credentials` API 엔드포인트 또는 `/authoring/destinations` 엔드포인트. 읽기 [대상 SDK를 사용하여 대상을 구성하는 방법](./configure-destination-instructions.md) 대상 구성 프로세스에 이 단계가 어떤 영향을 주는지 이해하기 위해 노력합니다.
+이제 이 문서를 읽은 후에는 자격 증명 끝점을 사용할 시점과 을 사용하여 자격 증명 구성을 설정하는 방법을 알 수 있습니다 `/authoring/credentials` API 엔드포인트 또는 `/authoring/destinations` 엔드포인트. 읽기 [Destination SDK을 사용하여 대상을 구성하는 방법](./configure-destination-instructions.md) 대상 구성 프로세스에 이 단계가 어떤 영향을 주는지 이해하기 위해 노력합니다.

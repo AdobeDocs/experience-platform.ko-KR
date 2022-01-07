@@ -2,9 +2,9 @@
 description: 이 페이지에서는 대상에 대한 테스트 메시지 변환 템플릿을 가져오기 위해 '/authoring/testing/template/sample' API 종단점을 사용하여 수행할 수 있는 모든 API 작업을 나열하고 설명합니다.
 title: 샘플 템플릿 API 작업 가져오기
 exl-id: d18a06f7-0c3a-4b4d-a7d5-011690d00e2c
-source-git-commit: 2ed132cd16db64b5921c5632445956f750fead56
+source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
 workflow-type: tm+mt
-source-wordcount: '401'
+source-wordcount: '383'
 ht-degree: 1%
 
 ---
@@ -13,21 +13,21 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->**API 엔드포인트**:  `https://platform.adobe.io/data/core/activation/authoring/testing/template/sample`
+>**API 엔드포인트**: `https://platform.adobe.io/data/core/activation/authoring/testing/template/sample`
 
-이 페이지에서는 `/authoring/testing/template/sample` API 종단점을 사용하여 대상에 대한 [메시지 변환 템플릿](./message-format.md#using-templating)을 생성하기 위해 수행할 수 있는 모든 API 작업을 나열하고 설명합니다. 이 종단점에서 지원하는 기능에 대한 설명은 [템플릿 만들기](./create-template.md)를 참조하십시오.
+이 페이지에서는 를 사용하여 수행할 수 있는 모든 API 작업을 나열하고 설명합니다. `/authoring/testing/template/sample` API 엔드포인트 : [메시지 변환 템플릿](./message-format.md#using-templating) 목적지에 대해 지정합니다. 이 종단점에서 지원하는 기능에 대한 설명은 다음을 참조하십시오 [템플릿 만들기](./create-template.md).
 
 ## 샘플 템플릿 API 작업 시작 {#get-started}
 
-계속하기 전에 필요한 대상 작성 권한 및 필수 헤더를 가져오는 방법을 포함하여 API를 성공적으로 호출하기 위해 알고 있어야 하는 중요한 정보가 필요하면 [시작 안내서](./getting-started.md)를 검토하십시오.
+계속하기 전에 [시작 안내서](./getting-started.md) api를 성공적으로 호출하기 위해 알고 있어야 하는 중요한 정보(필수 대상 작성 권한 및 필수 헤더를 가져오는 방법)입니다.
 
 ## 샘플 템플릿 가져오기 {#generate-sample-template}
 
-`authoring/testing/template/sample/` 종단점에 GET 요청을 하고 템플릿을 만드는 데 따라 대상 구성의 대상 ID를 제공하여 샘플 템플릿을 가져올 수 있습니다.
+에 GET 요청을 작성하여 샘플 템플릿을 가져올 수 있습니다. `authoring/testing/template/sample/` 템플릿을 만들고 있는 대상에 따라 대상 구성의 대상 ID를 제공하는 종단점입니다.
 
 >[!TIP]
 >
->* 여기서 사용해야 하는 대상 ID는 `/destinations` 종단점을 사용하여 만든 대상 구성에 해당하는 `instanceId` 입니다. [대상 구성 API 참조](./destination-configuration-api.md#retrieve-list)를 참조하십시오.
+>* 여기에서 사용해야 하는 대상 ID는 `instanceId` 대상 구성에 해당하며 `/destinations` 엔드포인트. 자세한 내용은 [대상 구성 API 참조](./destination-configuration-api.md#retrieve-list).
 
 
 **API 형식**
@@ -59,7 +59,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 
 성공적인 응답은 예상 데이터 형식과 일치하도록 편집할 수 있는 샘플 템플릿과 함께 HTTP 상태 200을 반환합니다.
 
-제공하는 대상 ID가 집계 정책에서 [최상의 작업 집계](./destination-configuration.md#best-effort-aggregation) 및 `maxUsersPerRequest=1`를 사용하는 대상 구성에 해당하는 경우 요청은 이 설정과 유사한 샘플 템플릿을 반환합니다.
+제공하는 대상 ID가 [최상의 작업 집계](./destination-configuration.md#best-effort-aggregation) 및 `maxUsersPerRequest=1` 집계 정책에서 요청은 이 템플릿과 유사한 샘플 템플릿을 반환합니다.
 
 ```python
 {#- THIS is an example template for a single profile -#}
@@ -92,7 +92,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 }
 ```
 
-제공하는 대상 ID가 [구성 가능한 집계](./destination-configuration.md#configurable-aggregation) 또는 [가장 많은 작업 집계](./destination-configuration.md#best-effort-aggregation)가 있는 대상 서버 템플릿에 해당하는 경우 요청은 이 템플릿과 유사한 샘플 템플릿을 반환합니다.`maxUsersPerRequest`
+제공하는 대상 ID가 [구성 가능한 합계](./destination-configuration.md#configurable-aggregation) 또는 [최상의 작업 집계](./destination-configuration.md#best-effort-aggregation) with `maxUsersPerRequest` 요청이 두 개 이상이면 다음과 유사한 샘플 템플릿을 반환합니다.
 
 ```python
 {#- THIS is an example template for multiple profiles -#}
@@ -133,8 +133,8 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 
 ## API 오류 처리 {#api-error-handling}
 
-대상 SDK API 엔드포인트는 일반 Experience Platform API 오류 메시지 원칙을 따릅니다. 플랫폼 문제 해결 안내서에서 [API 상태 코드](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) 및 [요청 헤더 오류](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors)를 참조하십시오.
+Destination SDK API 엔드포인트는 일반 Experience Platform API 오류 메시지 원칙을 따릅니다. 을(를) 참조하십시오. [API 상태 코드](../../landing/troubleshooting.md#api-status-codes) 및 [요청 헤더 오류](../../landing/troubleshooting.md#request-header-errors) 을 참조하십시오.
 
 ## 다음 단계 {#next-steps}
 
-이 문서를 읽은 후에는 `/authoring/testing/template/sample` API 종단점을 사용하여 메시지 변환 템플릿을 생성하는 방법을 알 수 있습니다. 다음으로, [템플릿 API 엔드포인트 렌더링](./render-template-api.md) 을 사용하여 템플릿을 기반으로 내보낸 프로필을 생성하고 대상의 예상 데이터 형식과 비교할 수 있습니다.
+이 문서를 읽은 후에는 `/authoring/testing/template/sample` API 엔드포인트. 다음으로, [템플릿 API 엔드포인트 렌더링](./render-template-api.md) 템플릿을 기반으로 내보낸 프로필을 생성하여 대상의 예상 데이터 형식과 비교하려면 다음을 수행하십시오.

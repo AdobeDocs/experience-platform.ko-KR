@@ -5,13 +5,13 @@ title: (베타) 임시 활성화 API를 통해 대상자 세그먼트를 배치 
 description: 이 문서에서는 활성화 전에 발생하는 세분화 작업을 포함하여 임시 활성화 API를 통해 대상 세그먼트를 활성화하는 종단 간 워크플로우를 보여줍니다.
 topic-legacy: tutorial
 type: Tutorial
-source-git-commit: 749fa5dc1e8291382408d9b1a0391c4c7f2b2a46
+exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
+source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
 workflow-type: tm+mt
-source-wordcount: '1065'
+source-wordcount: '1047'
 ht-degree: 2%
 
 ---
-
 
 # (베타) 임시 활성화 API를 통해 대상자 세그먼트를 배치 대상에 활성화합니다
 
@@ -44,7 +44,7 @@ Ad-hoc 활성화 API를 사용하면 즉시 활성화해야 하는 상황에서 
 
 ### 통합 테스트
 
-IT 관리자는 Experience Platform Ad-Hoc 활성화 API를 사용하여 세그먼트를 온디맨드(on-demand)로 내보낼 수 있으므로 Adobe Experience Platform와의 사용자 지정 통합을 테스트하고 모든 것이 올바르게 작동하는지 확인할 수 있습니다.
+IT 관리자는 Experience Platform Ad-Hoc 활성화 API를 사용하여 세그먼트를 온디맨드(on-demand)로 내보낼 수 있으므로 Adobe Experience Platform와의 사용자 지정 통합을 테스트하고 모든 것이 제대로 작동하는지 확인할 수 있습니다.
 
 
 ## 가드레일 {#guardrails}
@@ -185,4 +185,4 @@ curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adho
 
 ## API 오류 처리
 
-대상 SDK API 엔드포인트는 일반 Experience Platform API 오류 메시지 원칙을 따릅니다. 을(를) 참조하십시오. [API 상태 코드](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) 및 [요청 헤더 오류](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) 을 참조하십시오.
+Destination SDK API 엔드포인트는 일반 Experience Platform API 오류 메시지 원칙을 따릅니다. 을(를) 참조하십시오. [API 상태 코드](../../landing/troubleshooting.md#api-status-codes) 및 [요청 헤더 오류](../../landing/troubleshooting.md#request-header-errors) 을 참조하십시오.
