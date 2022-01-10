@@ -3,9 +3,9 @@ keywords: Azure 이벤트 허브 대상;azure 이벤트 허브;azure 이벤트 �
 title: (베타) [!DNL Azure Event Hubs] 연결
 description: 에 대한 실시간 아웃바운드 연결을 만듭니다. [!DNL Azure Event Hubs] Experience Platform에서 데이터를 스트리밍할 스토리지.
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: b0c2c8313e05d1316f23dc15d99893e1887f8dcf
+source-git-commit: 0a45cb49f3eb2bbd6ac1b39962df88b2352eb121
 workflow-type: tm+mt
-source-wordcount: '741'
+source-wordcount: '752'
 ht-degree: 1%
 
 ---
@@ -70,7 +70,7 @@ Experience Platform은 세그먼트 자격 또는 기타 중요한 이벤트 후
 
 ## 내보낸 데이터 {#exported-data}
 
-내보낸 [!DNL Experience Platform] 데이터가 랜딩됨 [!DNL Azure Event Hubs] JSON 형식으로 표시합니다. 예를 들어, 아래 이벤트는 특정 세그먼트에 대해 자격이 있고 다른 세그먼트를 종료한 대상의 이메일 주소 프로필 속성을 포함합니다. 이 잠재 고객의 ID는 ECID 및 이메일입니다.
+내보낸 [!DNL Experience Platform] 데이터가 랜딩됨 [!DNL Azure Event Hubs] JSON 형식으로 표시합니다. 예를 들어 아래 내보내기에는 특정 세그먼트에 대해 자격이 있고 다른 세그먼트를 종료한 프로필이 포함되어 있으며, 프로필 속성 이름, 성, 생년월일 및 개인 이메일 주소가 포함됩니다. 이 프로필의 ID는 ECID 및 이메일입니다.
 
 ```json
 {

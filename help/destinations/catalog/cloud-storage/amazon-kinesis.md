@@ -3,9 +3,9 @@ keywords: Amazon Kinesis;kinesis 대상;kinesis
 title: Amazon Kinesis 연결
 description: Amazon Kinesis 스토리지에 대한 실시간 아웃바운드 연결을 만들어 Adobe Experience Platform에서 데이터를 스트리밍합니다.
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: f7f3bc229ddad046dca5ea8d2889942fc9cb2cab
+source-git-commit: ba338972be13c7afa6720bba3f0fc96d244b8f9f
 workflow-type: tm+mt
-source-wordcount: '824'
+source-wordcount: '835'
 ht-degree: 1%
 
 ---
@@ -117,7 +117,7 @@ Experience Platform은 세그먼트 자격 또는 기타 중요한 이벤트 후
 
 ## 내보낸 데이터 {#exported-data}
 
-내보낸 [!DNL Experience Platform] 데이터가 랜딩됨 [!DNL Amazon Kinesis] JSON 형식으로 표시합니다. 예를 들어, 아래 이벤트는 특정 세그먼트에 대해 자격이 있고 다른 세그먼트를 종료한 대상의 이메일 주소 프로필 속성을 포함합니다. 이 잠재 고객의 ID는 ECID 및 이메일입니다.
+내보낸 [!DNL Experience Platform] 데이터가 랜딩됨 [!DNL Amazon Kinesis] JSON 형식으로 표시합니다. 예를 들어 아래 내보내기에는 특정 세그먼트에 대해 자격이 있고 다른 세그먼트를 종료한 프로필이 포함되어 있으며, 프로필 속성 이름, 성, 생년월일 및 개인 이메일 주소가 포함됩니다. 이 프로필의 ID는 ECID 및 이메일입니다.
 
 ```json
 {
