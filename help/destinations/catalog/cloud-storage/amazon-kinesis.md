@@ -3,7 +3,7 @@ keywords: Amazon Kinesis;kinesis 대상;kinesis
 title: Amazon Kinesis 연결
 description: Amazon Kinesis 스토리지에 대한 실시간 아웃바운드 연결을 만들어 Adobe Experience Platform에서 데이터를 스트리밍합니다.
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: 8d2c5ef477d4707be4c0da43ba1f672fac797604
+source-git-commit: f7f3bc229ddad046dca5ea8d2889942fc9cb2cab
 workflow-type: tm+mt
 source-wordcount: '824'
 ht-degree: 1%
@@ -20,13 +20,13 @@ ht-degree: 1%
 
 다음 [!DNL Kinesis Data Streams] 서비스 기준 [!DNL Amazon Web Services] 에서는 대용량 데이터 레코드를 실시간으로 수집 및 처리할 수 있습니다.
 
-You can create a real-time outbound connection to your [!DNL Amazon Kinesis] storage to stream data from Adobe Experience Platform.
+에 대한 실시간 아웃바운드 연결을 만들 수 있습니다 [!DNL Amazon Kinesis] Adobe Experience Platform에서 데이터를 스트리밍할 수 있는 스토리지.
 
-* For more information about [!DNL Amazon Kinesis], see the [Amazon documentation](https://docs.aws.amazon.com/streams/latest/dev/introduction.html).
+* 에 대한 자세한 정보 [!DNL Amazon Kinesis]를 참조하고 [Amazon 설명서](https://docs.aws.amazon.com/streams/latest/dev/introduction.html).
 * 에 연결하려면 [!DNL Amazon Kinesis] 프로그래밍 방식으로 [스트리밍 대상 API 자습서](../../api/streaming-destinations.md).
 * 에 연결하려면 [!DNL Amazon Kinesis] platform 사용자 인터페이스를 사용하여 아래 섹션을 참조하십시오.
 
-![Amazon Kinesis in the UI](../../assets/catalog/cloud-storage/amazon-kinesis/catalog.png)
+![UI의 Amazon Kinesis](../../assets/catalog/cloud-storage/amazon-kinesis/catalog.png)
 
 ## 사용 사례 {#use-cases}
 
@@ -81,15 +81,15 @@ You can create a real-time outbound connection to your [!DNL Amazon Kinesis] sto
 
 이 대상에 연결하려면 [대상 구성 자습서](../../ui/connect-destination.md).
 
-### Connection parameters {#parameters}
+### 연결 매개 변수 {#parameters}
 
 While [설정](../../ui/connect-destination.md) 이 대상을 사용하려면 다음 정보를 제공해야 합니다.
 
-* **[!DNL Amazon Web Services]access key and secret key**: In [!DNL Amazon Web Services], generate an `access key - secret access key` pair to grant Platform access to your [!DNL Amazon Kinesis] account. Learn more in the [Amazon Web Services documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
-* **region**: Indicate which [!DNL Amazon Web Services] region to stream data to.
+* **[!DNL Amazon Web Services]액세스 키 및 비밀 키**: in [!DNL Amazon Web Services], 생성 `access key - secret access key` 플랫폼에 대한 액세스 권한을 부여하기 위한 쌍 [!DNL Amazon Kinesis] 계정이 필요합니다. 자세한 내용은 [Amazon Web Services 설명서](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
+* **지역**: 표시할 항목 [!DNL Amazon Web Services] 데이터를 스트리밍할 영역입니다.
 * **이름**: 연결할 이름을 입력합니다 [!DNL Amazon Kinesis]
-* **Description**: Provide a description for your connection to [!DNL Amazon Kinesis].
-* **stream**: Provide the name of an existing data stream in your [!DNL Amazon Kinesis] account. Platform에서 데이터를 이 스트림으로 내보냅니다.
+* **설명**: 연결에 대한 설명을 제공합니다 [!DNL Amazon Kinesis].
+* **스트림**: 에 기존 데이터 스트림의 이름을 입력합니다 [!DNL Amazon Kinesis] 계정이 필요합니다. Platform에서 데이터를 이 스트림으로 내보냅니다.
 
 <!--
 
@@ -101,7 +101,7 @@ While [설정](../../ui/connect-destination.md) 이 대상을 사용하려면 �
 
 ## 세그먼트를 이 대상에 활성화 {#activate}
 
-See [Activate audience data to streaming profile export destinations](../../ui/activate-streaming-profile-destinations.md) for instructions on activating audience segments to this destination.
+자세한 내용은 [스트리밍 프로필 내보내기 대상으로 대상 데이터 활성화](../../ui/activate-streaming-profile-destinations.md) 대상 세그먼트를 이 대상으로 활성화하는 방법에 대한 지침입니다.
 
 ## 프로필 내보내기 동작 {#profile-export-behavior}
 
@@ -113,16 +113,23 @@ Experience Platform은 세그먼트 자격 또는 기타 중요한 이벤트 후
 
 위에 설명된 모든 경우 관련 업데이트가 발생한 프로필만 대상으로 내보내집니다. 예를 들어 대상 플로우에 매핑된 세그먼트에 100개의 멤버가 있고 5개의 새 프로필이 세그먼트에 대한 자격이 있는 경우 대상에 내보내기는 증분 결과이며 5개의 새 프로필만 포함합니다.
 
-변경 사항이 있는 위치에 상관없이 모든 매핑된 속성이 프로필에 대해 내보내집니다. So, in the example above all the mapped attributes for those five new profiles will be exported even if the attributes themselves haven&#39;t changed.
+변경 사항이 있는 위치에 상관없이 모든 매핑된 속성이 프로필에 대해 내보내집니다. 따라서 위의 예에서 이러한 5개의 새 프로필에 대해 매핑된 속성은 속성 자체가 변경되지 않았더라도 내보내집니다.
 
 ## 내보낸 데이터 {#exported-data}
 
-내보낸 [!DNL Experience Platform] 데이터가 랜딩됨 [!DNL Amazon Kinesis] JSON 형식으로 표시합니다. For example, the event below contains the email address profile attribute of an audience that has qualified for a certain segment and exited another segment. 이 잠재 고객의 ID는 ECID 및 이메일입니다.
+내보낸 [!DNL Experience Platform] 데이터가 랜딩됨 [!DNL Amazon Kinesis] JSON 형식으로 표시합니다. 예를 들어, 아래 이벤트는 특정 세그먼트에 대해 자격이 있고 다른 세그먼트를 종료한 대상의 이메일 주소 프로필 속성을 포함합니다. 이 잠재 고객의 ID는 ECID 및 이메일입니다.
 
 ```json
 {
   "person": {
-    "email": "yourstruly@adobe.com"
+    "birthDate": "YYYY-MM-DD",
+    "name": {
+      "firstName": "John",
+      "lastName": "Doe"
+    }
+  },
+  "personalEmail": {
+    "address": "john.doe@acme.com"
   },
   "segmentMembership": {
     "ups": {
@@ -162,6 +169,6 @@ Experience Platform은 세그먼트 자격 또는 기타 중요한 이벤트 후
 >[!MORELIKETHIS]
 >
 >* [Amazon Kinesis에 연결하고 Flow Service API를 사용하여 데이터를 활성화합니다](../../api/streaming-destinations.md)
->* [Azure Event Hubs destination](./azure-event-hubs.md)
->* [Destination types and categories](../../destination-types.md)
+>* [Azure 이벤트 허브 대상](./azure-event-hubs.md)
+>* [대상 유형 및 카테고리](../../destination-types.md)
 
