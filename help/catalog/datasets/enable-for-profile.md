@@ -4,9 +4,9 @@ title: API를 사용하여 프로필 및 ID 서비스에 대한 데이터 세트
 type: Tutorial
 description: 이 자습서에서는 Adobe Experience Platform API를 사용하여 실시간 고객 프로필 및 ID 서비스에 사용할 데이터 세트를 활성화하는 방법을 보여줍니다.
 exl-id: a115e126-6775-466d-ad7e-ee36b0b8b49c
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: d463dabbb9dc099394081b803df619129c0cb416
 workflow-type: tm+mt
-source-wordcount: '1075'
+source-wordcount: '1073'
 ht-degree: 1%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 1%
 
 ## 시작하기
 
-이 자습서에서는 프로필 사용 데이터 세트 관리와 관련된 여러 Adobe Experience Platform 서비스를 이해하고 있어야 합니다. 이 자습서를 시작하기 전에 다음 관련 DNL 플랫폼 서비스에 대한 설명서를 검토하십시오.
+이 자습서에서는 프로필 사용 데이터 세트 관리와 관련된 여러 Adobe Experience Platform 서비스를 이해하고 있어야 합니다. 이 자습서를 시작하기 전에 이러한 관련 설명서에 대한 설명서를 검토하십시오 [!DNL Platform] 서비스:
 
 - [[!DNL Real-time Customer Profile]](../../profile/home.md): 여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
 - [[!DNL Identity Service]](../../identity-service/home.md): 사용 [!DNL Real-time Customer Profile] 수집되는 다양한 데이터 소스의 ID를 연결 [!DNL Platform].
