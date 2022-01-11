@@ -1,7 +1,8 @@
 ---
 title: 샘플 익명 블록 쿼리
-description: '익명 블록은 Adobe Experience Platform 쿼리 서비스에서 지원하는 SQL 구문이므로 쿼리 시퀀스를 효율적으로 실행할 수 있습니다 '
-source-git-commit: dffa03d9ab8e26e2c99a359ae000022d6d469572
+description: 익명 블록은 Adobe Experience Platform 쿼리 서비스에서 지원하는 SQL 구문이므로 쿼리 시퀀스를 효율적으로 실행할 수 있습니다
+exl-id: ec497475-9d2b-43aa-bcf4-75a430590496
+source-git-commit: 9f4e34edc47a333aa88153529d0af6a10f189a15
 workflow-type: tm+mt
 source-wordcount: '499'
 ht-degree: 0%
@@ -14,12 +15,12 @@ Adobe Experience Platform 쿼리 서비스는 익명 블록을 지원합니다. 
 
 익명 블록 기능은 작업 또는 쿼리 시퀀스를 수행하는 효율적인 방법입니다. 블록 내의 쿼리 체인은 템플릿으로 저장될 수 있으며 특정 시간 또는 간격으로 실행되도록 예약할 수 있습니다. 이러한 쿼리는 새 데이터 세트를 만들기 위해 데이터를 쓰고 추가하는 데 사용할 수 있으며, 일반적으로 종속성이 있는 곳에서 사용됩니다.
 
-이 표에서는 블록의 주 섹션을 설명합니다. 실행 및 예외 처리를 참조하십시오. 섹션은 `BEGIN`, `END` 및 `EXCEPTION` 키워드로 정의됩니다.
+이 표에서는 블록의 주 섹션을 설명합니다. 실행 및 예외 처리를 참조하십시오. 섹션은 키워드로 정의됩니다 `BEGIN`, `END`, 및 `EXCEPTION`.
 
 | 섹션에 있는 마지막 항목이 될 필요가 없습니다 | 설명 |
 |---|---|
-| 실행 | 실행 가능한 섹션은 `BEGIN` 키워드로 시작되고 `END` 키워드로 끝납니다. `BEGIN` 및 `END` 키워드 내에 포함된 모든 문 집합은 순서대로 실행되며, 시퀀스의 이전 쿼리가 완료될 때까지 후속 쿼리가 실행되지 않습니다. |
-| 예외 처리 | 선택적 예외 처리 섹션은 `EXCEPTION` 키워드로 시작됩니다. 실행 섹션의 SQL 문이 실패할 경우 예외를 catch 및 처리할 코드가 포함되어 있습니다. 쿼리가 실패하면 전체 블록이 중지됩니다. |
+| 실행 | 실행 가능한 섹션은 키워드로 시작됩니다 `BEGIN` 및 은 키워드로 끝납니다 `END`. 에 포함된 모든 문 집합 `BEGIN` 및 `END` 키워드는 순서대로 실행되며, 시퀀스의 이전 쿼리가 완료될 때까지 후속 쿼리가 실행되지 않습니다. |
+| 예외 처리 | 선택적 예외 처리 섹션은 키워드로 시작됩니다 `EXCEPTION`. 실행 섹션의 SQL 문이 실패할 경우 예외를 catch 및 처리할 코드가 포함되어 있습니다. 쿼리가 실패하면 전체 블록이 중지됩니다. |
 
 블록은 실행 가능한 문이므로 다른 블록 내에서 중첩될 수 있습니다.
 
@@ -29,10 +30,10 @@ Adobe Experience Platform 쿼리 서비스는 익명 블록을 지원합니다. 
 
 ## 익명 블록 쿼리 샘플
 
-다음 쿼리는 SQL 문 체인의 예를 보여줍니다. 사용된 SQL 구문에 대한 자세한 내용은 쿼리 서비스](../sql/syntax.md) 문서의 [SQL 구문을 참조하십시오.
+다음 쿼리는 SQL 문 체인의 예를 보여줍니다. 자세한 내용은 [쿼리 서비스의 SQL 구문](../sql/syntax.md) 사용된 SQL 구문에 대한 자세한 내용은 문서를 참조하십시오.
 
 ```SQL
-$$BEGIN
+BEGIN
      
     CREATE TABLE ADLS_TABLE_A AS SELECT * FROM ADLS_TABLE_1....;
     ....
@@ -40,26 +41,26 @@ $$BEGIN
      
     EXCEPTION WHEN OTHER THEN SET @ret = SELECT 'ERROR';
      
-END$$;
+END;
 ```
 
 <!-- The block below uses `SET` to persist the result of a select query with a variable. It is used in the anonymous block to store the response from a query as a local variable for use with the `SNAPSHOT` feature. -->
 
-아래 예에서 `SET`은 지정된 로컬 변수에서 `SELECT` 쿼리 결과를 유지합니다. 변수 범위가 익명 블록으로 지정됩니다.
+아래 예에서는 `SET` 의 결과를 유지합니다. `SELECT` 지정된 로컬 변수에 있는 쿼리입니다. 변수 범위가 익명 블록으로 지정됩니다.
 
-스냅샷 ID는 로컬 변수(`@current_sid`)로 저장됩니다. 그런 다음 다음 다음 다음 쿼리에서 동일한 데이터 세트/테이블의 스냅샷을 기반으로 결과를 반환합니다.
+스냅샷 ID는 로컬 변수(`@current_sid`). 그런 다음 다음 다음 다음 쿼리에서 동일한 데이터 세트/테이블의 스냅샷을 기반으로 결과를 반환합니다.
 
-데이터베이스 스냅숏은 SQL Server 데이터베이스의 읽기 전용 정적 보기입니다. snapshot 절](../sql/syntax.md#SNAPSHOT-clause)에 대한 자세한 내용은 SQL 구문 설명서를 참조하십시오.[
+데이터베이스 스냅숏은 SQL Server 데이터베이스의 읽기 전용 정적 보기입니다. 추가 정보 [스냅샷 절에 대한 정보](../sql/syntax.md#SNAPSHOT-clause) sql 구문 설명서를 참조하십시오.
 
 ```SQL
-$$BEGIN                                             
+BEGIN                                             
   SET @current_sid = SELECT parent_id  FROM (SELECT history_meta('your_table_name')) WHERE  is_current = true;
   CREATE temp table abcd_temp_table AS SELECT count(1) FROM your_table_name  SNAPSHOT SINCE @current_sid;                                                                                                     
-END$$;
+END;
 ```
 
 ## 다음 단계
 
-이 문서를 읽으면 이제 익명 블록과 블록의 구조를 명확하게 이해할 수 있습니다. [쿼리 실행에 대한 자세한](./writing-queries.md) 내용은 Query Service의 쿼리 실행에 대한 안내서를 참조하십시오.
+이 문서를 읽으면 이제 익명 블록과 블록의 구조를 명확하게 이해할 수 있습니다. [쿼리 실행에 대한 자세한 정보](./writing-queries.md)쿼리 서비스에서 쿼리 실행에 대한 안내서를 참조하십시오.
 
-Query Service에서 사용할 수 있는 쿼리 샘플에 대해서는 [Adobe Analytics 샘플 쿼리](./adobe-analytics.md), [Adobe Target 샘플 쿼리](./adobe-target.md) 또는 [ExperienceEvent 샘플 쿼리](./experience-event-queries.md)에 대한 안내서를 참조하십시오.
+Query Service에서 사용할 수 있는 쿼리 샘플을 더 보려면 [Adobe Analytics 샘플 쿼리](./adobe-analytics.md), [Adobe Target 샘플 쿼리](./adobe-target.md), 또는 [ExperienceEvent 샘플 쿼리](./experience-event-queries.md).

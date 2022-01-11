@@ -5,7 +5,7 @@ title: 쿼리 서비스의 SQL 구문
 topic-legacy: syntax
 description: 이 문서에서는 Adobe Experience Platform 쿼리 서비스에서 지원하는 SQL 구문을 보여줍니다.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: b0cd372589be1db3d7ae571edaac68df9a3c493f
+source-git-commit: c2c543e64a4f2aef0064abf5e4fb9d7f2738159b
 workflow-type: tm+mt
 source-wordcount: '2207'
 ht-degree: 1%
@@ -330,7 +330,6 @@ statementList:
 다음은 익명 블록을 사용하는 예입니다.
 
 ```sql
-$$
 BEGIN
    SET @v_snapshot_from = select parent_id  from (select history_meta('email_tracking_experience_event_dataset') ) tab where is_current;
    SET @v_snapshot_to = select snapshot_id from (select history_meta('email_tracking_experience_event_dataset') ) tab where is_current;
@@ -342,7 +341,7 @@ EXCEPTION
   WHEN OTHER THEN
     DROP TABLE IF EXISTS tracking_email_id_incrementally;
     SELECT 'ERROR';
-END$$;
+END;
 ```
 
 ## [!DNL Spark] SQL 명령
@@ -581,7 +580,7 @@ SHOW DateStyle;
 
 ### 복사
 
-다음 `COPY` 명령 `SELECT` 쿼리를 지정한 위치에 쿼리합니다. 이 명령을 성공하려면 이 위치에 액세스할 수 있어야 합니다.
+다음 `COPY` 명령은 `SELECT` 쿼리를 지정한 위치에 쿼리합니다. 이 명령을 성공하려면 이 위치에 액세스할 수 있어야 합니다.
 
 ```sql
 COPY query
