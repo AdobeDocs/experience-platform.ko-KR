@@ -6,9 +6,9 @@ title: UI에서 대상에 대한 데이터 흐름 모니터링
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 86981f2bf97c9f504c17d9531cd51a58ab994dd2
+source-git-commit: dc7de355284e2f1f52939ca7a80344345ce92c43
 workflow-type: tm+mt
-source-wordcount: '1797'
+source-wordcount: '1879'
 ht-degree: 0%
 
 ---
@@ -83,7 +83,7 @@ ID는 프로필의 다른 패싯을 나타냅니다. 예를 들어 프로필에 
 - **[!UICONTROL 처리 시간]**: 데이터 흐름을 처리하는 데 걸린 시간입니다.
 - **[!UICONTROL 받은 프로필]**: 데이터 플로우에서 받은 총 프로필 수
 - **[!UICONTROL ID가 활성화됨]**: 선택한 대상에 성공적으로 활성화된 총 프로필 ID 수입니다.
-- **[!UICONTROL 제외된 ID]**: 누락된 속성 및 동의 위반을 기반으로 활성화용으로 제외된 총 프로필 ID 수
+- **[!UICONTROL 제외된 ID]**: 누락된 속성 및 동의 위반으로 인해 활성화에서 제외된 총 프로필 ID 수입니다.
 - **[!UICONTROL ID 실패]** 오류로 인해 대상에 활성화되지 않은 총 프로필 ID 수입니다.
 - **[!UICONTROL 활성화 비율]**: 성공적으로 활성화되었거나 건너뛴 받은 ID의 백분율입니다. 다음 수식은 이 값을 계산하는 방법을 보여 줍니다.
    ![](../assets/ui/monitor-destinations/activation-rate-formula.png)
@@ -101,10 +101,21 @@ ID는 프로필의 다른 패싯을 나타냅니다. 예를 들어 프로필에 
 
 ### 데이터 흐름은 배치 대상에 대해 실행됩니다 {#dataflow-runs-for-batch-destinations}
 
+>[!CONTEXTUALHELP]
+>id="platform_monitoring_dataflow_run_details_activation"
+>title="데이터 흐름 실행 세부 정보"
+>abstract="대상 데이터 흐름 실행 세부 사항에는 실시간 고객 프로필에서 가져온 세그먼트의 활성화 상태 및 지표에 대한 정보가 포함되어 있으며 고유한 ID를 생성합니다. 자세한 내용은 지표 정의 안내서를 참조하십시오."
+
+>[!CONTEXTUALHELP]
+>id="platform_monitoring_profiles_received"
+>title="받은 프로필"
+>abstract="데이터 플로우에서 받은 총 프로필 수 이 값은 60분마다 업데이트됩니다."
+>additional-url="https://adobe.com/go/destinations-monitor-dataflows-batch-en" text="자세한 내용은 문서에서 알아보십시오"
+
 배치 대상의 경우, [!UICONTROL 데이터 흐름 실행] 탭은 데이터 흐름 실행에 대한 지표 데이터를 제공합니다. 개별 실행 및 해당 특정 지표 목록과 ID에 대한 다음 합계가 표시됩니다.
 
 - **[!UICONTROL ID가 활성화됨]**: 개별 프로필 ID의 수가 선택한 대상에 성공적으로 활성화되었습니다.
-- **[!UICONTROL 제외된 ID]**: 누락된 속성 및 동의 위반을 기반으로 선택한 대상에 대해 활성화를 위해 제외된 개별 프로필 ID의 수입니다.
+- **[!UICONTROL 제외된 ID]**: 누락된 속성 및 동의 위반을 기반으로 선택한 대상에 대한 활성화에서 제외된 개별 프로필 ID의 수입니다.
 
 ![](../assets/ui/monitor-destinations/dataflow-runs-batch.png)
 
@@ -114,7 +125,7 @@ ID는 프로필의 다른 패싯을 나타냅니다. 예를 들어 프로필에 
 - **[!UICONTROL 처리 시간]**: 데이터 흐름 실행을 처리하는 데 걸린 시간입니다.
 - **[!UICONTROL 받은 프로필]**: 데이터 플로우에서 받은 총 프로필 수 이 값은 60분마다 업데이트됩니다.
 - **[!UICONTROL ID가 활성화됨]**: 선택한 대상에 성공적으로 활성화된 총 프로필 ID 수입니다.
-- **[!UICONTROL 제외된 ID]**: 누락된 속성 및 동의 위반을 기반으로 활성화용으로 제외된 총 프로필 ID 수
+- **[!UICONTROL 제외된 ID]**: 누락된 속성 및 동의 위반으로 인해 활성화에서 제외된 총 프로필 ID 수입니다.
 - **[!UICONTROL 상태]**: 데이터 흐름의 상태를 나타냅니다. 다음 세 가지 상태 중 하나일 수 있습니다. [!UICONTROL 성공], [!UICONTROL 실패], 및 [!UICONTROL 처리 중]. [!UICONTROL 성공] 은(는) 데이터 흐름이 활성 상태이고 제공된 일정에 따라 데이터를 내보내고 있음을 의미합니다. [!UICONTROL 실패] 은(는) 오류로 인해 데이터 활성화가 일시 중단되었음을 의미합니다. [!UICONTROL 처리 중] 은(는) 데이터 흐름이 아직 활성 상태가 아니며 새 데이터 흐름을 만들 때 일반적으로 발생함을 의미합니다.
 
 특정 데이터 흐름 실행에 대한 세부 정보를 보려면 목록에서 실행 시작 시간을 선택합니다.
@@ -136,6 +147,11 @@ ID는 프로필의 다른 패싯을 나타냅니다. 예를 들어 프로필에 
 ![](../assets/ui/monitor-destinations/dataflow-records-batch.png)
 
 ## 대상 대시보드 모니터링 {#monitoring-destinations-dashboard}
+
+>[!CONTEXTUALHELP]
+>id="platform_monitoring_activation"
+>title="활성화"
+>abstract="대상 활성화에는 실시간 고객 프로필에서 가져온 세그먼트의 활성화 상태 및 지표에 대한 정보가 포함되어 있으며 고유한 ID를 생성합니다."
 
 에 액세스하려면 [!UICONTROL 모니터링] 대시보드, 선택 **[!UICONTROL 모니터링]** (![모니터링 아이콘](../assets/ui/monitor-destinations/monitoring-icon.png))을 클릭하여 제품에서 사용할 수 있습니다. 에 한 번 [!UICONTROL 모니터링] 페이지를 선택하고 [!UICONTROL 대상]. 다음 [!UICONTROL 모니터링] 대시보드에는 대상 실행 작업에 대한 지표와 정보가 포함되어 있습니다.
 
