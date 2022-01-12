@@ -1,10 +1,11 @@
 ---
 title: 보기 횟수 in Web Extensions
 description: Adobe Experience Platform 웹 확장에서 라이브러리 모듈에 대한 보기를 정의하는 방법을 알아봅니다.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: 4471df3e-75e2-4257-84c0-dd7b708be417
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
 source-wordcount: '2063'
-ht-degree: 74%
+ht-degree: 76%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 74%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../term-updates.md)을 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
 
 각 이벤트, 조건, 작업 또는 데이터 요소 유형마다 사용자가 설정을 제공할 수 있는 보기를 제공할 수 있습니다. 또한 확장에는 사용자가 전체 확장에 대한 전역 설정을 제공할 수 있는 최상위 [확장 구성 보기](../configuration.md)가 있을 수 있습니다. 뷰 개발 프로세스는 모든 유형의 뷰에서 동일합니다.
 
@@ -26,7 +27,7 @@ HTML 파일에 `doctype` 태그를 포함해야 합니다. 일반적으로 이�
 
 ## iframe 스크립트 태그 포함
 
-보기의 HTML에 태그 iframe 스크립트를 포함합니다.
+보기의 HTML 내에 태그 iframe 스크립트를 포함합니다.
 
 ```html
 <script src="https://assets.adobedtm.com/activation/reactor/extensionbridge/extensionbridge.min.js"></script>
@@ -64,22 +65,22 @@ window.extensionBridge.register({
 
 ### [!DNL init]
 
-`init` 메서드는 보기가 iframe에 로드되는 즉시 태그로 호출됩니다. 그러면 다음 속성을 포함하는 객체인 단일 인수(`info`)가 전달됩니다.
+다음 `init` 메서드는 보기가 iframe에 로드되는 즉시 태그로 호출됩니다. 그러면 다음 속성을 포함하는 객체인 단일 인수(`info`)가 전달됩니다.
 
 | 속성 | 설명 |
 | --- | --- |
 | `settings` | 이 보기에서 이전에 저장한 설정이 포함된 객체입니다. `settings`가 `null`인 경우 사용자가 저장된 버전을 로드하지 않고 초기 설정을 개발 중임을 나타냅니다. `settings`가 객체인 경우에는 사용자가 이전의 지속형 설정을 편집하도록 선택했으므로 이 객체를 사용하여 뷰를 채워야 합니다. |
-| `extensionSettings` | 확장 구성 보기에서 설정이 저장되었습니다. 확장 구성 보기가 아닌 보기의 확장 설정에 액세스하는 데 유용합니다. 현재 보기가 확장 구성 보기인 경우 `settings` 을 사용합니다. |
+| `extensionSettings` | 확장 구성 보기에서 설정이 저장되었습니다. 확장 구성 보기가 아닌 보기의 확장 설정에 액세스하는 데 유용합니다. 현재 보기가 확장 구성 보기인 경우 `settings`. |
 | `propertySettings` | 속성에 대한 설정이 포함된 객체입니다. 이 객체에 포함된 사항에 대한 자세한 내용은 [터빈 객체 안내서](../turbine.md#property-settings)를 참조하십시오. |
-| `tokens` | API 토큰이 포함된 객체입니다. 보기 내에서 Adobe API에 액세스하려면 일반적으로 `tokens.imsAccess` 아래의 IMS 토큰을 사용해야 합니다. 이 토큰은 Adobe에서 개발한 확장에만 사용할 수 있습니다. Adobe에서 개발한 확장을 제공하는 Adobe 직원의 경우 [데이터 수집 엔지니어링 팀에 이메일](mailto:reactor@adobe.com)을(를) 보내 허용 목록에 추가할 수 있도록 확장 이름을 제공하십시오. |
+| `tokens` | API 토큰이 포함된 객체입니다. 보기 내에서 Adobe API에 액세스하려면 일반적으로 `tokens.imsAccess` 아래의 IMS 토큰을 사용해야 합니다. 이 토큰은 Adobe에서 개발한 확장에만 사용할 수 있습니다. Adobe에서 개발한 확장을 제공하는 Adobe 직원의 경우 [데이터 수집 엔지니어링 팀에 이메일 보내기](mailto:reactor@adobe.com) 허용 목록에 추가할 수 있도록 확장 이름을 제공합니다. |
 | `company` | 단일 속성을 포함하는 객체인 `orgId`는 Adobe Experience Cloud ID(24자 영숫자 문자열)를 나타냅니다. |
-| `schema` | [JSON 스키마](http://json-schema.org/) 형식의 객체입니다. 이 객체는 [확장 매니페스트](../manifest.md)에서 가져오며 양식 유효성 검사에 도움이 될 수 있습니다. |
+| `schema` | [JSON 스키마](https://json-schema.org/) 형식의 객체입니다. 이 객체는 [확장 매니페스트](../manifest.md)에서 가져오며 양식 유효성 검사에 도움이 될 수 있습니다. |
 
 이 정보를 사용하여 양식을 렌더링하고 관리해야 합니다. `info.settings`만 처리하면 되지만, 필요한 경우 다른 정보가 제공됩니다.
 
 ### [!DNL validate]
 
-사용자가 &quot;저장&quot; 버튼을 누르면 `validate` 메서드가 호출됩니다. 다음 중 하나가 반환됩니다.
+다음 `validate` 사용자가 &quot;저장&quot; 버튼을 누르면 메서드가 호출됩니다. 다음 중 하나가 반환됩니다.
 
 * 사용자의 입력이 유효한지 여부를 나타내는 부울 값.
 * 사용자의 입력이 유효한지 여부를 나타내는 부울을 사용하여 나중에 해결할 약속.
@@ -90,7 +91,7 @@ window.extensionBridge.register({
 
 ### [!DNL getSettings]
 
-사용자가 &quot;저장&quot; 버튼을 누르고 보기의 유효성을 검사한 후에 `getSettings` 메서드가 호출됩니다. 함수는 다음 중 하나를 반환합니다.
+다음 `getSettings` 사용자가 &quot;저장&quot; 버튼을 누르고 보기의 유효성을 검사한 후에 메서드가 호출됩니다. 함수는 다음 중 하나를 반환합니다.
 
 * 사용자 입력에 따른 설정이 포함된 객체.
 * 사용자 입력에 따른 설정이 포함된 객체를 사용하여 나중에 해결할 약속.
@@ -99,7 +100,7 @@ window.extensionBridge.register({
 
 ## 공유 보기 활용
 
-`window.extensionBridge` 개체에는 태그를 통해 사용 가능한 기존 보기를 이용할 수 있는 여러 메서드가 있으므로 보기 내에서 해당 보기를 재현할 필요가 없습니다. 사용 가능한 메서드는 다음과 같습니다.
+다음 `window.extensionBridge` 객체에는 태그를 통해 사용 가능한 기존 보기를 이용할 수 있는 여러 메서드가 있으므로 보기 내에서 해당 보기를 재현할 필요가 없습니다. 사용 가능한 메서드는 다음과 같습니다.
 
 ### [!DNL openCodeEditor]
 
@@ -129,7 +130,7 @@ window.extensionBridge.openRegexTester().then(function(pattern) {
 | 속성 | 설명 |
 | --- | --- |
 | `pattern` | 테스터 내의 패턴 필드의 초기 값으로 사용해야 하는 정규 표현식 패턴입니다. 일반적으로 사용자가 기존 정규 표현식을 편집할 때 제공됩니다. 이 값이 제공되지 않으면 처음에는 패턴 필드가 비어 있게 됩니다. |
-| `flags` | 테스터가 사용해야 하는 일반 표현식 플래그입니다. 예를 들어, `gi`는 전역 일치 플래그와 대/소문자 무시 플래그를 지정합니다. 이러한 플래그는 테스터 내의 사용자가 수정할 수 없지만 일반 표현식을 실행할 때 확장에서 사용할 특정 플래그를 표시하는 데 사용됩니다. 제공되지 않으면 테스터에서 플래그가 사용되지 않습니다. 정규 표현식 플래그에 대한 자세한 내용은 [MDN의 RegExp 설명서](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp)를 참조하십시오.<br><br>일반적인 시나리오는 일반 표현식에 대한 대소문자 구분을 전환할 수 있는 확장입니다. 이 기능을 지원하기 위해 확장은 일반적으로 확장 보기 내에 확인란을 제공하며 이 확인란을 선택하면 대소문자 무시( `i` 플래그로 표시됨)가 활성화됩니다. 뷰로 저장된 설정 객체의 경우 일반 표현식을 실행하는 라이브러리 모듈에서 `i` 플래그를 사용할지 여부를 알 수 있도록 확인란을 선택했는지 여부를 표시해야 합니다. 또한, 확장 보기에서 일반 표현식 테스터를 열려면 대/소문자 구분 확인란이 선택되면 `i` 플래그를 전달해야 합니다. 그러면 사용자는 대/소문자 무시가 활성화된 일반 표현식을 올바르게 테스트할 수 있습니다. |
+| `flags` | 테스터가 사용해야 하는 일반 표현식 플래그입니다. 예를 들어, `gi`는 전역 일치 플래그와 대/소문자 무시 플래그를 지정합니다. 이러한 플래그는 테스터 내의 사용자가 수정할 수 없지만 일반 표현식을 실행할 때 확장에서 사용할 특정 플래그를 표시하는 데 사용됩니다. 제공되지 않으면 테스터에서 플래그가 사용되지 않습니다. 정규 표현식 플래그에 대한 자세한 내용은 [MDN의 RegExp 설명서](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp)를 참조하십시오.<br><br>일반적인 시나리오는 일반 표현식에 대한 대소문자 구분을 전환할 수 있는 확장입니다. 이 기능을 지원하기 위해 확장은 일반적으로 확장 보기 내에 확인란을 제공하며 이 확인란을 선택하면 대소문자 무시( `i` 플래그 참조). 뷰로 저장된 설정 객체의 경우 일반 표현식을 실행하는 라이브러리 모듈에서 `i` 플래그를 사용할지 여부를 알 수 있도록 확인란을 선택했는지 여부를 표시해야 합니다. 또한, 확장 보기에서 일반 표현식 테스터를 열려면 를 전달해야 합니다 `i` 대/소문자 구분 확인란이 선택되어 있는지 여부를 표시합니다. 그러면 사용자는 대/소문자 무시가 활성화된 일반 표현식을 올바르게 테스트할 수 있습니다. |
 
 ### [!DNL openDataElementSelector] {#open-data-element}
 
@@ -141,7 +142,7 @@ window.extensionBridge.openDataElementSelector().then(function(dataElement) {
 
 이 메서드를 호출하면 사용자가 데이터 요소를 선택할 수 있는 모달이 표시됩니다. 사용자가 데이터 요소 선택을 완료하면 선택한 데이터 요소의 이름으로 약속이 해결됩니다(기본적으로 이름의 앞 및 뒤에는 퍼센트 기호가 표시됨). 사용자가 변경 내용을 저장하지 않고 요소 선택기를 닫으면 약속이 해결되지 않습니다.
 
-`options` 개체에는 단일 부울 속성인 `tokenize`이 있어야 합니다. 이 속성은 약속을 해결하기 전에 선택한 데이터 요소의 이름을 퍼센트 기호로 둘러싸야 하는지 여부를 나타냅니다. 이 기능이 유용한 이유를 살펴보려면 [데이터 요소 지원](#supporting-data-elements) 섹션을 참조하십시오. 이 옵션은 기본적으로 `true`로 설정되어 있습니다.
+다음 `options` 객체에는 단일 부울 속성이 포함되어야 하며, `tokenize`. 이 속성은 약속을 해결하기 전에 선택한 데이터 요소의 이름을 퍼센트 기호로 둘러싸야 하는지 여부를 나타냅니다. 이 기능이 유용한 이유를 살펴보려면 [데이터 요소 지원](#supporting-data-elements) 섹션을 참조하십시오. 이 옵션은 기본적으로 `true`로 설정되어 있습니다.
 
 ## 데이터 요소 지원 {#supporting-data-elements}
 
@@ -157,7 +158,7 @@ window.extensionBridge.openDataElementSelector().then(function(dataElement) {
 }
 ```
 
-런타임 시 설정 객체를 라이브러리 모듈에 전달하기 전에 설정 객체가 검사되고 모든 데이터 요소 토큰이 해당 값으로 대체됩니다. 런타임 시 `productname` 데이터 요소의 값이 `Ceiling Medallion Pro 2000`인 경우 라이브러리 모듈에 전달되는 설정 객체는 다음과 같습니다.
+런타임 시 설정 객체를 라이브러리 모듈에 전달하기 전에 설정 객체가 검사되고 모든 데이터 요소 토큰이 해당 값으로 대체됩니다. 런타임 시에 값이 `productname` 데이터 요소 `Ceiling Medallion Pro 2000`: 라이브러리 모듈에 전달되는 설정 객체는 다음과 같습니다.
 
 ```js
 {
@@ -215,7 +216,7 @@ window.extensionBridge.openDataElementSelector().then(function(dataElement) {
 }
 ```
 
-이 경우 `productName`의 값이 단일 데이터 요소 토큰 을 초과하므로 결과는 항상 문자열입니다. 각 데이터 요소 토큰은 문자열로 캐스팅된 후 해당 값으로 대체됩니다. 런타임 시 `productname` 값이 `Ceiling Medallion Pro`(문자열)이고 `modelnumber` 값이 `2000`(숫자)인 경우 라이브러리 모듈에 전달되는 결과 설정 객체는 다음과 같습니다.
+이 경우 `productName`의 값이 단일 데이터 요소 토큰 을 초과하므로 결과는 항상 문자열입니다. 각 데이터 요소 토큰은 문자열로 캐스팅된 후 해당 값으로 대체됩니다. 런타임 시에 값이 `productname` is `Ceiling Medallion Pro` (문자열) 및 `modelnumber` is `2000` (숫자) 라이브러리 모듈에 전달되는 결과 설정 객체는 다음과 같습니다.
 
 ```js
 {

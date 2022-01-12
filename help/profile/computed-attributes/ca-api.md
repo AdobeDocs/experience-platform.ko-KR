@@ -5,9 +5,9 @@ topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platform에서 계산된 속성은 이벤트 수준 데이터를 프로필 수준 속성으로 집계하는 데 사용되는 함수입니다. 이러한 함수는 세그먼테이션, 활성화 및 개인화 간에 사용할 수 있도록 자동으로 계산됩니다. 이 안내서에서는 실시간 고객 프로필 API를 사용하여 계산된 속성을 생성, 보기, 업데이트 및 삭제하는 방법을 보여줍니다.
 exl-id: 6b35ff63-590b-4ef5-ab39-c36c39ab1d58
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
-source-wordcount: '2272'
+source-wordcount: '2275'
 ht-degree: 2%
 
 ---
@@ -508,7 +508,7 @@ PATCH /config/computedAttributes/{ATTRIBUTE_ID}
 
 **요청**
 
-이 요청에서는 [JSON 패치 형식](http://jsonpatch.com/) 를 눌러 &quot;expression&quot; 필드의 &quot;value&quot;를 업데이트합니다.
+이 요청에서는 [JSON 패치 형식](https://datatracker.ietf.org/doc/html/rfc6902) 를 눌러 &quot;expression&quot; 필드의 &quot;value&quot;를 업데이트합니다.
 
 ```shell
 curl -X PATCH \

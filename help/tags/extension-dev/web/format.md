@@ -1,10 +1,11 @@
 ---
 title: 웹 확장의 라이브러리 모듈
 description: Adobe Experience Platform에서 웹 확장용 라이브러리 모듈의 형식을 지정하는 방법을 알아봅니다.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: 08f2bb01-9071-49c5-a0ff-47d592cc34a5
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
-source-wordcount: '377'
-ht-degree: 64%
+source-wordcount: '378'
+ht-degree: 70%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 64%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../term-updates.md)을 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
 
 >[!IMPORTANT]
 >
@@ -20,7 +21,7 @@ ht-degree: 64%
 
 라이브러리 모듈은 확장이 제공하는 재사용 가능한 코드의 일부이며, Adobe Experience Platform의 태그 런타임 라이브러리 내에 전달됩니다. 그런 다음 이 라이브러리는 클라이언트의 웹 사이트에서 실행됩니다. 예를 들어, `gesture` 이벤트 유형에는 클라이언트의 웹 사이트에서 실행되고 사용자 제스처를 감지하는 라이브러리 모듈이 있습니다.
 
-라이브러리 모듈은 [CommonJS 모듈](http://wiki.commonjs.org/wiki/Modules/1.1.1)로 구성됩니다. CommonJS 모듈 내에서 사용할 수 있는 변수는 다음과 같습니다.
+라이브러리 모듈은 [CommonJS 모듈](https://nodejs.org/api/modules.html#modules-commonjs-modules)로 구성됩니다. CommonJS 모듈 내에서 사용할 수 있는 변수는 다음과 같습니다.
 
 ## [!DNL require]
 
@@ -70,4 +71,4 @@ module.exports = function(settings) {
 }
 ```
 
-`runs on startup` 은 즉시 기록되지만,  `runs when necessary` 는 내보낸 함수를 태그 엔진에서 호출한 이후에만 기록됩니다. 특정 모듈의 용도는 필요하지 않지만, 함수를 내보내기 전에 필요한 설정을 수행하여 이 기능을 활용할 수 있습니다.
+`runs on startup` 은 즉시 기록되지만, `runs when necessary` 은 내보낸 함수를 태그 엔진에서 호출한 이후에만 기록됩니다. 특정 모듈의 용도는 필요하지 않지만, 함수를 내보내기 전에 필요한 설정을 수행하여 이 기능을 활용할 수 있습니다.

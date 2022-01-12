@@ -1,10 +1,11 @@
 ---
 title: Edge 확장의 라이브러리 모듈
 description: Edge 속성에서 태그 확장에 대한 라이브러리 모듈의 형식을 지정합니다.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: 82b98972-6fa2-4143-bcf4-c5dac1ca0e7f
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
-source-wordcount: '306'
-ht-degree: 69%
+source-wordcount: '307'
+ht-degree: 76%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 69%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../term-updates.md)을 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
 
 >[!IMPORTANT]
 >
@@ -20,7 +21,7 @@ ht-degree: 69%
 
 라이브러리 모듈은 Adobe Experience Platform의 태그 런타임 라이브러리(에지 노드에서 실행되는 라이브러리)에서 전달되는 확장에서 제공하는 재사용 가능한 코드의 일부입니다. 예를 들어, `sendBeacon` 작업 유형에는 Edge 노드에서 실행하고 비콘을 전송하는 라이브러리 모듈이 있습니다.
 
-라이브러리 모듈은 [CommonJS 모듈](http://wiki.commonjs.org/wiki/Modules/1.1.1)로 구성됩니다. CommonJS 모듈 내에서 사용할 수 있는 변수는 다음과 같습니다.
+라이브러리 모듈은 [CommonJS 모듈](https://nodejs.org/api/modules.html#modules-commonjs-modules)로 구성됩니다. CommonJS 모듈 내에서 사용할 수 있는 변수는 다음과 같습니다.
 
 ## [!DNL require]
 

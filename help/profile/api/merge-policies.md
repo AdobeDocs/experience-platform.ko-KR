@@ -5,9 +5,9 @@ topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platform을 사용하면 여러 소스에서 데이터 조각을 함께 가져와서 결합하여 각 개별 고객에 대한 전체 보기를 볼 수 있습니다. 이 데이터를 함께 가져올 때 병합 정책은 Platform이 데이터 우선 순위가 지정되는 방법과 통합 보기를 만들기 위해 결합할 데이터를 결정하는 데 사용하는 규칙입니다.
 exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
-source-wordcount: '2469'
+source-wordcount: '2472'
 ht-degree: 1%
 
 ---
@@ -588,7 +588,7 @@ curl -X PATCH \
 
 | 속성 | 설명 |
 |---|---|
-| `op` | 수행할 작업을 지정합니다. 다른 PATCH 작업의 예는 [JSON 패치 설명서](http://jsonpatch.com) |
+| `op` | 수행할 작업을 지정합니다. 다른 PATCH 작업의 예는 [JSON 패치 설명서](https://datatracker.ietf.org/doc/html/rfc6902) |
 | `path` | 업데이트할 필드의 경로입니다. 허용되는 값은 다음과 같습니다. &quot;/name&quot;, &quot;/identityGraph.type&quot;, &quot;/attributeMerge.type&quot;, &quot;/schema.name&quot;, &quot;/version&quot;, &quot;/default&quot;, &quot;/isActiveOnEdge&quot; |
 | `value` | 지정된 필드를 로 설정할 값입니다. |
 

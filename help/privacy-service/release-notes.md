@@ -5,7 +5,7 @@ title: Privacy Service 릴리스 노트
 topic-legacy: release notes
 description: Adobe Experience Platform Privacy Service에 대한 최신 릴리스 노트입니다.
 exl-id: 66ee38f1-f0d5-44ff-823d-d1b8a9765c6d
-source-git-commit: 82dea48c732b3ddea957511c22f90bbd032ed9b7
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
 source-wordcount: '553'
 ht-degree: 6%
@@ -47,7 +47,7 @@ ht-degree: 6%
 | [!DNL Privacy Service] 리브랜딩 | 이전에 &quot;GDPR Service&quot;라고 이름이 변경된 사용자가 [!DNL Privacy Service] 서비스는 GDPR 외에도 다른 규정을 지원하도록 성장했습니다. |
 | 새 API 엔드포인트 | 의 기본 경로 [!DNL Privacy Service] API가 `/data/privacy/gdpr` to `/data/core/privacy/jobs` |
 | 새로운 필수 `regulation` 속성 | 에서 새 작업을 만들 때 [!DNL Privacy Service] API, a `regulation` 작업을 추적할 규칙을 나타내려면 요청 페이로드에서 속성을 제공해야 합니다. 허용되는 값은 다음과 같습니다 `gdpr` 및 `ccpa`. 다음 문서를 참조하십시오. [개인 정보 보호 작업](api/privacy-jobs.md) 에서 [!DNL Privacy Service] 자세한 내용은 API 안내서 를 참조하십시오. |
-| Adobe Primetime 인증 지원 | [!DNL Privacy Service] 이제 에서는 다음 방법으로 Adobe Primetime 인증에서 액세스/삭제 요청을 허용합니다 `primetimeAuthentication` 를 제품 값으로 채우는 방법을 설명합니다. 자세한 내용은 [Primetime 인증 설명서](http://tve.helpdocsonline.com/how-to-make-a-privacy-request) 추가 정보. |
+| Adobe Primetime 인증 지원 | [!DNL Privacy Service] 이제 에서는 다음 방법으로 Adobe Primetime 인증에서 액세스/삭제 요청을 허용합니다 `primetimeAuthentication` 를 제품 값으로 채우는 방법을 설명합니다. 자세한 내용은 [Primetime 인증 설명서](https://tve.helpdocsonline.com/how-to-make-a-privacy-request) 추가 정보. |
 
 ### 개선 사항
 

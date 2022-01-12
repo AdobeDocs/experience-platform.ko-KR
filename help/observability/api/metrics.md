@@ -5,9 +5,9 @@ title: 지표 API 엔드포인트
 topic-legacy: developer guide
 description: Observability Insights API를 사용하여 Experience Platform에서 가시성 지표를 검색하는 방법을 알아봅니다.
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
-source-git-commit: 5c893d7c8c455c86c94cd311a20ce774abcf65e0
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
-source-wordcount: '1866'
+source-wordcount: '1864'
 ht-degree: 5%
 
 ---
@@ -84,8 +84,8 @@ curl -X POST \
 | `metrics` | 검색할 각 지표에 대해 하나씩, 객체의 배열입니다. |
 | `name` | Observability Insights에서 인식하는 지표의 이름입니다. 자세한 내용은 [부록](#available-metrics) 수락된 지표 이름의 전체 목록입니다. |
 | `filters` | 특정 데이터 세트별로 지표를 필터링할 수 있는 선택적 필드입니다. 필드는 각 필터에 대해 하나씩 표시되는 객체 배열이며 다음 속성이 포함된 각 객체는 다음과 같습니다. <ul><li>`name`: 지표를 필터링할 엔티티 유형입니다. 현재, 전용 `dataSets` 가 지원됩니다.</li><li>`value`: 하나 이상의 데이터 세트의 ID입니다. 여러 데이터 세트 ID를 단일 문자열로 제공할 수 있으며 각 ID는 세로 막대 문자(`\|`).</li><li>`groupBy`: true로 설정하면 `value` 지표 결과를 별도로 반환해야 하는 여러 데이터 세트를 나타냅니다. false로 설정하면 해당 데이터 세트에 대한 지표 결과가 함께 그룹화됩니다.</li></ul> |
-| `aggregator` | 여러 시리즈 레코드를 단일 결과로 그룹화하는 데 사용해야 하는 집계 함수를 지정합니다. 사용 가능한 집계자에 대한 자세한 내용은 [OpenTSDB 설명서](http://opentsdb.net/docs/build/html/user_guide/query/aggregators.html). |
-| `downsample` | 필드를 간격(또는 &quot;버킷&quot;)으로 정렬하여 지표 데이터의 샘플링 속도를 줄이기 위해 집계 함수를 지정할 수 있는 선택적 필드입니다. 다운샘플링 간격은 `granularity` 속성을 사용합니다. 다운샘플링에 대한 자세한 내용은 [OpenTSDB 설명서](http://opentsdb.net/docs/build/html/user_guide/query/downsampling.html). |
+| `aggregator` | 여러 시리즈 레코드를 단일 결과로 그룹화하는 데 사용해야 하는 집계 함수를 지정합니다. 사용 가능한 집계자에 대한 자세한 내용은 [OpenTSDB 설명서](https://docs.w3cub.com/opentsdb/user_guide/query/aggregators). |
+| `downsample` | 필드를 간격(또는 &quot;버킷&quot;)으로 정렬하여 지표 데이터의 샘플링 속도를 줄이기 위해 집계 함수를 지정할 수 있는 선택적 필드입니다. 다운샘플링 간격은 `granularity` 속성을 사용합니다. 다운샘플링에 대한 자세한 내용은 [OpenTSDB 설명서](https://docs.w3cub.com/opentsdb/user_guide/query/aggregators). |
 
 {style=&quot;table-layout:auto&quot;}
 
