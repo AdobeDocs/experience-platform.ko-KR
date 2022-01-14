@@ -4,9 +4,9 @@ title: 세그먼트 대시보드
 description: 'Adobe Experience Platform은 조직이 만든 세그먼트에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다. '
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 41ef7a6e6d3b0ee9afe762b19c8c286ceb361dbb
+source-git-commit: 2842344f4b17d76bf1c3313500e691357df31ebc
 workflow-type: tm+mt
-source-wordcount: '982'
+source-wordcount: '1047'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Adobe Experience Platform UI(사용자 인터페이스)는 일별 스냅샷 중에 캡처된 대로 세그먼트에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다. 이 안내서에서는 UI에서 세그먼트 대시보드에 액세스하고 작업하는 방법을 간략하게 설명하고 대시보드에 표시되는 시각화에 대한 자세한 정보를 제공합니다.
 
-플랫폼 사용자 인터페이스 내의 모든 Adobe Experience Platform 세그멘테이션 서비스 기능에 대한 개요를 알려면 [세그멘테이션 서비스 UI 안내서](../../segmentation/ui/overview.md)를 방문하십시오.
+플랫폼 사용자 인터페이스 내의 모든 Adobe Experience Platform 세그멘테이션 서비스 기능에 대한 개요를 알려면 [세그멘테이션 서비스 UI 안내서](../../segmentation/ui/overview.md).
 
 ## 세그먼트 대시보드 데이터
 
@@ -29,19 +29,19 @@ Adobe Experience Platform UI(사용자 인터페이스)는 일별 스냅샷 중�
 
 ## 세그먼트 대시보드 탐색
 
-Platform UI 내의 [!UICONTROL 세그먼트] 대시보드로 이동하려면 왼쪽 레일에서 **[!UICONTROL 세그먼트]**&#x200B;를 선택한 다음 **[!UICONTROL 개요]** 탭을 선택하여 대시보드를 표시합니다.
+로 이동하려면 다음을 수행하십시오. [!UICONTROL 세그먼트] 플랫폼 UI 내의 대시보드에서 **[!UICONTROL 세그먼트]** 왼쪽 레일에서 **[!UICONTROL 개요]** 탭을 클릭하여 대시보드를 표시합니다.
 
 >[!NOTE]
 >
->조직이 Platform을 처음 사용하고 아직 활성 프로필 데이터 세트 또는 병합 정책이 만들어지지 않은 경우 [!UICONTROL 세그먼트] 대시보드가 표시되지 않습니다. 대신 [!UICONTROL 개요] 탭에는 세그먼테이션을 시작하는 데 도움이 되는 링크와 설명서가 표시됩니다.
+>조직이 Platform을 처음 사용하고 아직 활성 프로필 데이터 세트 또는 병합 정책이 만들어지지 않은 경우, [!UICONTROL 세그먼트] 대시보드가 표시되지 않습니다. 대신, [!UICONTROL 개요] 탭에는 세그먼테이션을 시작하는 데 도움이 되는 링크 및 설명서가 표시됩니다.
 
 ![](../images/segments/dashboard-overview.png)
 
-### [!UICONTROL 세그먼트] 대시보드 수정
+### 수정 [!UICONTROL 세그먼트] 대시보드
 
-**[!UICONTROL 대시보드 수정]**&#x200B;을 선택하여 [!UICONTROL 세그먼트] 대시보드의 모양을 수정할 수 있습니다. 이를 통해 대시보드에서 위젯을 이동, 추가 및 제거할 수 있을 뿐만 아니라 **[!UICONTROL 위젯 라이브러리]**&#x200B;에 액세스하여 사용 가능한 위젯을 탐색하고 조직에 대한 사용자 지정 위젯을 만들 수 있습니다.
+의 모양을 수정할 수 있습니다 [!UICONTROL 세그먼트] 선택하여 대시보드 **[!UICONTROL 대시보드 수정]**. 이를 통해 대시보드에서 위젯을 이동, 추가 및 제거할 수 있을 뿐만 아니라 **[!UICONTROL 위젯 라이브러리]** 사용 가능한 위젯을 살펴보고 조직에 대한 사용자 지정 위젯을 만들려면
 
-자세한 내용은 [대시보드](../customize/modify.md) 및 [위젯 라이브러리 개요](../customize/widget-library.md) 설명서를 참조하십시오.
+자세한 내용은 [대시보드 수정](../customize/modify.md) 및 [위젯 라이브러리 개요](../customize/widget-library.md) 설명서 를 참조하십시오.
 
 ## 세그먼트 선택
 
@@ -63,7 +63,7 @@ Platform UI 내의 [!UICONTROL 세그먼트] 대시보드로 이동하려면 왼
 
 ## 표준 위젯
 
-Adobe은 세그먼트와 관련된 다양한 지표를 시각화하는 데 사용할 수 있는 여러 표준 위젯을 제공합니다. [!UICONTROL 위젯 라이브러리]를 사용하여 조직과 공유할 사용자 지정 위젯을 만들 수도 있습니다. 사용자 지정 위젯을 만드는 방법에 대한 자세한 내용은 [위젯 라이브러리 개요](../customize/widget-library.md)를 읽어 보십시오.
+Adobe은 세그먼트와 관련된 다양한 지표를 시각화하는 데 사용할 수 있는 여러 표준 위젯을 제공합니다. 또한 [!UICONTROL 위젯 라이브러리]. 사용자 지정 위젯을 만드는 방법에 대해 자세히 알아보려면 [위젯 라이브러리 개요](../customize/widget-library.md).
 
 사용 가능한 각 표준 위젯에 대해 자세히 알아보려면 다음 목록에서 위젯 이름을 선택하십시오.
 
@@ -74,40 +74,44 @@ Adobe은 세그먼트와 관련된 다양한 지표를 시각화하는 데 사�
 
 ### [!UICONTROL 대상 크기] {#audience-size}
 
-**[!UICONTROL 대상 크기]** 위젯은 스냅숏을 만들 때 선택한 세그먼트 내에서 병합된 프로필의 총 수를 표시합니다. 이 숫자는 프로필 조각을 함께 병합하여 세그먼트의 각 개인을 위한 단일 프로필을 구성하기 위해 프로필 데이터에 세그먼트 병합 정책을 적용한 결과입니다.
+다음 **[!UICONTROL 대상 크기]** 위젯은 스냅숏을 만들 때 선택한 세그먼트 내의 병합된 총 프로필 수를 표시합니다. 이 숫자는 프로필 조각을 함께 병합하여 세그먼트의 각 개인을 위한 단일 프로필을 구성하기 위해 프로필 데이터에 세그먼트 병합 정책을 적용한 결과입니다.
 
-조각 및 병합된 프로필에 대한 자세한 내용은 [실시간 고객 프로필 개요](../../profile/home.md)를 읽어 보십시오.
+조각 및 병합된 프로필에 대한 자세한 내용은 [실시간 고객 프로필 개요](../../profile/home.md).
 
 ![](../images/segments/audience-size.png)
 
 ### [!UICONTROL 대상 크기 트렌드] {#audience-size-trend}
 
-**[!UICONTROL 대상 크기 트렌드]** 위젯은 지난 30일, 90일 또는 12개월 동안 일별 스냅샷 동안 캡처된 세그먼트의 총 프로필 수에 대한 정보를 제공합니다. 이 위젯은 새 프로필이 세그먼트에 대한 자격이 되거나 세그먼트에서 종료됨에 따라 세그먼트 크기가 시간에 따라 어떻게 변화했는지 표시합니다.
+다음 **[!UICONTROL 대상 크기 트렌드]** 위젯은 일별 스냅샷 동안 지난 30일, 90일 또는 12개월 동안 캡처된 세그먼트의 총 프로필 수에 대한 정보를 제공합니다. 이 위젯은 새 프로필이 세그먼트에 대한 자격이 되거나 세그먼트에서 종료됨에 따라 세그먼트 크기가 시간에 따라 어떻게 변화했는지 표시합니다.
 
-세그먼트 평가 및 프로필이 세그먼트에 대해 자격을 부여하고 종료하는 방법에 대한 자세한 내용은 [세그먼테이션 서비스 설명서](../../segmentation/home.md)를 참조하십시오.
+세그먼트 평가 및 프로필이 세그먼트의 자격을 받고 종료하는 방법에 대한 자세한 내용은 다음을 참조하십시오. [Segmentation Service 설명서](../../segmentation/home.md).
 
-![](../images/segments/audience-size-trend.png)
+![세그먼트 개요는 대상 크기 트렌드 위젯을 표시합니다.](../images/segments/audience-size-trend-captions.png)
+
+다음 **[!UICONTROL 대상 크기 트렌드]** 위젯은 [!UICONTROL 캡션] 위젯의 오른쪽 위에 있는 단추. 선택 **[!UICONTROL 캡션]** 자동 캡션 대화 상자를 열려면 다음을 수행하십시오. 기계 학습 모델은 차트 및 세그먼트 데이터를 분석하여 주요 추세 및 중요 이벤트를 설명하는 캡션을 자동으로 생성합니다.
+
+![대상 크기 트렌드 위젯에 대한 자동 캡션 대화 상자입니다.](../images/segments/audience-size-trend-automatic-captions-dialog.png)
 
 ### [!UICONTROL ID 겹치기] {#identity-overlap}
 
-**[!UICONTROL ID 겹치기]** 위젯에는 여러 ID가 포함된 세그먼트에서 프로필의 겹침을 보여주는 벤 다이어그램 또는 세트 다이어그램이 표시됩니다.
+다음 **[!UICONTROL ID 겹치기]** 위젯은 여러 ID가 포함된 세그먼트에서 프로필의 겹침을 보여주는 벤 다이어그램 또는 세트 다이어그램을 표시합니다.
 
 위젯의 드롭다운 메뉴를 사용하여 비교하려는 ID를 선택하면 원이 각 ID의 상대적 크기를 표시하는 반면 두 네임스페이스가 포함된 프로필의 수는 원 간 겹침 크기로 표시됩니다.
 
 고객이 두 개 이상의 채널에서 브랜드와 상호 작용하는 경우 여러 ID가 해당 개별 고객과 연결되므로 조직에서 두 개 이상의 ID의 조각을 포함하는 여러 프로필을 가질 수 있습니다.
 
-ID에 대한 자세한 내용은 [Adobe Experience Platform Identity 서비스 설명서](../../identity-service/home.md)를 참조하십시오.
+ID에 대해 자세히 알아보려면 [Adobe Experience Platform Identity Service 설명서](../../identity-service/home.md).
 
 ![](../images/segments/identity-overlap.png)
 
 ### [!UICONTROL ID별 프로필] {#profiles-by-identity}
 
-**[!UICONTROL ID별 프로필]** 위젯은 선택한 세그먼트에 있는 병합된 모든 프로필의 ID 분류를 표시합니다. 한 프로필에는 여러 개의 ID가 연결되어 있을 수 있으므로 ID별 총 프로필 수는 세그먼트의 총 프로필 수보다 높을 수 있습니다. 즉, 고객이 두 개 이상의 채널에서 브랜드와 상호 작용하는 경우 여러 ID가 해당 개별 고객과 연결될 수 있으므로 각 ID에 대해 표시된 값을 함께 추가하면 세그먼트에서 총 대상 크기보다 커질 수 있습니다.
+다음 **[!UICONTROL ID별 프로필]** 위젯은 선택한 세그먼트에 병합된 모든 프로필의 id 분류를 표시합니다. 한 프로필에는 여러 개의 ID가 연결되어 있을 수 있으므로 ID별 총 프로필 수는 세그먼트의 총 프로필 수보다 높을 수 있습니다. 즉, 고객이 두 개 이상의 채널에서 브랜드와 상호 작용하는 경우 여러 ID가 해당 개별 고객과 연결될 수 있으므로 각 ID에 대해 표시된 값을 함께 추가하면 세그먼트에서 총 대상 크기보다 커질 수 있습니다.
 
-ID에 대한 자세한 내용은 [Adobe Experience Platform Identity 서비스 설명서](../../identity-service/home.md)를 참조하십시오.
+ID에 대해 자세히 알아보려면 [Adobe Experience Platform Identity Service 설명서](../../identity-service/home.md).
 
 ![](../images/segments/profiles-by-identity.png)
 
 ## 다음 단계
 
-이 문서에 따라 세그먼트 대시보드를 찾고 보려는 세그먼트를 선택할 수 있습니다. 사용 가능한 위젯에 표시되는 지표도 이해해야 합니다. Experience Platform UI에서 세그먼트 작업에 대한 자세한 내용은 [세그멘테이션 서비스 UI 안내서](../../segmentation/ui/overview.md)를 참조하십시오.
+이 문서에 따라 세그먼트 대시보드를 찾고 보려는 세그먼트를 선택할 수 있습니다. 사용 가능한 위젯에 표시되는 지표도 이해해야 합니다. Experience Platform UI에서 세그먼트 작업에 대한 자세한 내용은 [세그멘테이션 서비스 UI 안내서](../../segmentation/ui/overview.md).
