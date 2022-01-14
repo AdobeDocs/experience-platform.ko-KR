@@ -5,9 +5,9 @@ title: Azure 이벤트 허브 소스 커넥터 개요
 topic-legacy: overview
 description: API 또는 사용자 인터페이스를 사용하여 Azure Event Hub를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: b4d4bc7f-2241-482d-a5c2-4422c31705bf
-source-git-commit: cda9ca9c560b1af2147c00ea4e89dff09b7428ba
+source-git-commit: 832e32c31be944fff1101fa409e56f5c3e27d325
 workflow-type: tm+mt
-source-wordcount: '326'
+source-wordcount: '506'
 ht-degree: 0%
 
 ---
@@ -19,11 +19,25 @@ Adobe Experience Platform은 AWS, [!DNL Google Cloud Platform], 및 [!DNL Azure]
 
 클라우드 스토리지 소스는 다운로드, 형식 지정 또는 업로드할 필요 없이 고유한 데이터를 플랫폼으로 가져올 수 있습니다. 수집된 데이터는 XDM JSON, XDM Parquet 또는 구분된 형식으로 지정할 수 있습니다. 프로세스의 모든 단계는 소스 워크플로우에 통합됩니다. Platform에서 데이터를 가져올 수 있습니다. [!DNL Event Hubs] 실시간으로
 
+## 크기 조절 [!DNL Event Hubs]
+
+스케일 팩터 [!DNL Event Hubs] 대용량 데이터를 처리하거나 병렬 처리를 증가하거나 수집 플랫폼의 속도를 높여야 하는 경우 인스턴스를 늘려야 합니다.
+
+### 더 높은 볼륨 데이터 처리
+
+현재 사용자에서 가져올 수 있는 최대 데이터 볼륨입니다 [!DNL Event Hubs] Platform에 대한 계정은 초당 2,000개의 레코드입니다. 더 높은 볼륨 데이터를 확장 및 수집하려면 Adobe 담당자에게 문의하십시오.
+
+### 병렬 처리 수 증가 [!DNL Event Hubs] 및 플랫폼
+
+병렬화는 속도와 성능을 향상시키기 위해 여러 처리 단위에 대해 동일한 작업을 동시에 실행하는 것을 의미합니다. 의 병렬 처리 수를 늘릴 수 있습니다 [!DNL Event Hubs] 파티션 증가 또는 추가 처리 단위 가져오기 [!DNL Event Hubs] 계정이 필요합니다. 다음 보기 [[!DNL Event Hubs] 크기 조절 문서](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-scalability) 추가 정보.
+
+플랫폼 쪽에서 수집 속도를 높이려면 플랫폼에서 소스 커넥터의 작업 수를 늘려 [!DNL Event Hubs] 분할 영역. 다음에 대한 병렬 처리 수가 증가하면 [!DNL Event Hubs] 새 파티션을 기반으로 플랫폼 작업을 확장하려면 Adobe 담당자에게 문의하십시오. 현재 이 프로세스는 자동화되지 않습니다.
+
 ## 가상 네트워크를 사용하여 연결 [!DNL Event Hubs] 플랫폼
 
 연결할 가상 네트워크를 설정할 수 있습니다 [!DNL Event Hubs] 방화벽 측정값을 사용하도록 설정하는 동안 플랫폼에 문의하십시오. 가상 네트워크를 설정하려면 다음 위치로 이동하십시오 [[!DNL Event Hubs] 네트워크 규칙 집합 문서](https://docs.microsoft.com/en-us/rest/api/eventhub/preview/namespaces-network-rule-set/create-or-update-network-rule-set#code-try-0) 그런 다음 **사용해 보기** 를 클릭합니다. 다음으로, [!DNL Azure] 자격 증명을 사용하여 계정을 만든 다음 [!DNL Event Hubs] Platform으로 가져올 네임스페이스, 리소스 그룹 및 구독입니다.
 
-설정한 후에는 **요청 본문** 네트워크 영역에 해당하는 JSON과 함께 아래 목록에서 해당 JSON을 사용할 수 있습니다.
+설정되면 를 업데이트합니다 **요청 본문** 네트워크 영역에 해당하는 JSON과 함께 아래 목록에서 해당 JSON을 사용할 수 있습니다.
 
 >[!TIP]
 >

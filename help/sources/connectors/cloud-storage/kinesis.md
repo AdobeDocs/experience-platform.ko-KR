@@ -5,35 +5,39 @@ title: Amazon Kinesis 소스 커넥터 개요
 topic-legacy: overview
 description: API 또는 사용자 인터페이스를 사용하여 Amazon Kinesis을 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: b71fc922-7722-4279-8fc6-e5d7735e1ebb
-source-git-commit: 481f72c5c630f6dbcbbfd3eee11c91787e780f3f
+source-git-commit: 5f4355a9d3ef39ee63581fc70dbf0f6e7d674814
 workflow-type: tm+mt
-source-wordcount: '445'
+source-wordcount: '491'
 ht-degree: 0%
 
 ---
 
 # [!DNL Amazon Kinesis] 커넥터
 
-Adobe Experience Platform은 AWS, [!DNL Google Cloud Platform] 및 [!DNL Azure]과 같은 클라우드 제공업체를 위한 기본 연결을 제공합니다. 이러한 시스템의 데이터를 [!DNL Platform]로 가져올 수 있습니다.
+Adobe Experience Platform은 AWS, [!DNL Google Cloud Platform], 및 [!DNL Azure]. 이러한 시스템의 데이터를 [!DNL Platform].
 
-클라우드 스토리지 소스는 다운로드, 형식 지정 또는 업로드할 필요 없이 고유한 데이터를 [!DNL Platform]로 가져올 수 있습니다. 수집된 데이터는 XDM JSON, XDM Parquet 또는 구분된 형식으로 지정할 수 있습니다. 프로세스의 모든 단계는 소스 워크플로우에 통합됩니다. [!DNL Platform] 을(를) 통해 실시간으로 데이터 [!DNL Amazon Kinesis] 를 가져올 수 있습니다.
+클라우드 스토리지 소스는 고유한 데이터를 [!DNL Platform] 를 다운로드하거나, 형식을 지정하거나, 업로드할 필요가 없습니다. 수집된 데이터는 XDM JSON, XDM Parquet 또는 구분된 형식으로 지정할 수 있습니다. 프로세스의 모든 단계는 소스 워크플로우에 통합됩니다. [!DNL Platform] 에서 데이터를 가져올 수 있습니다. [!DNL Amazon Kinesis] 실시간으로
+
+>[!NOTE]
+>
+>다음에 대한 배율 인수 [!DNL Kinesis] 대용량 데이터를 수집해야 하는 경우 증가해야 합니다. 현재 사용자에서 가져올 수 있는 최대 데이터 볼륨 [!DNL Kinesis] Platform에 대한 계정은 초당 4,000개의 레코드입니다. 더 높은 볼륨 데이터를 확장 및 수집하려면 Adobe 담당자에게 문의하십시오.
 
 ## 전제 조건
 
-다음 섹션에서는 [!DNL Kinesis] 소스 연결을 만들기 전에 필요한 사전 요구 사항 설정에 대해 자세히 설명합니다.
+다음 섹션에서는 생성 전에 필요한 전제 조건 설정에 대한 추가 정보를 제공합니다 [!DNL Kinesis] 소스 연결.
 
 ### 액세스 정책 설정
 
-[!DNL Kinesis] 스트림에는 소스 연결을 만들려면 다음 권한이 필요합니다.
+A [!DNL Kinesis] 스트림에는 소스 연결을 만들려면 다음 권한이 필요합니다.
 
 - `GetShardIterator`
 - `GetRecords`
 - `DescribeStream`
 - `ListStreams`
 
-이러한 권한은 [!DNL Kinesis] 콘솔을 통해 정렬되며, 자격 증명을 입력하고 데이터 스트림을 선택하면 Platform에서 확인합니다.
+이러한 권한은 [!DNL Kinesis] 자격 증명을 입력하고 데이터 스트림을 선택하면 Platform에서 콘솔 및 를 확인합니다.
 
-아래 예에는 [!DNL Kinesis] 소스 연결을 만드는 데 필요한 최소 액세스 권한이 표시됩니다.
+아래 예에는 [!DNL Kinesis] 소스 연결.
 
 ```json
 {
@@ -62,7 +66,7 @@ Adobe Experience Platform은 AWS, [!DNL Google Cloud Platform] 및 [!DNL Azure]�
 | `kinesis:DescribeStream` | 샤드 ID를 생성하는 데 필요한 샤드 맵을 포함하는 스트림에 대한 정보를 반환하는 작업입니다. |
 | `kinesis:ListStreams` | UI에서 선택할 수 있는 사용 가능한 스트림을 나열하는 데 필요한 작업입니다. |
 
-[!DNL Kinesis] 데이터 스트림에 대한 액세스 제어에 대한 자세한 내용은 다음 [[!DNL Kinesis] document](https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html)를 참조하십시오.
+액세스 제어에 대한 자세한 정보 [!DNL Kinesis] 데이터 스트림에 대해서는 다음을 참조하십시오 [[!DNL Kinesis] 문서](https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html).
 
 ### 반복자 유형 구성
 
@@ -76,13 +80,13 @@ Adobe Experience Platform은 AWS, [!DNL Google Cloud Platform] 및 [!DNL Azure]�
 | `TRIM_HORIZON` | 데이터는 가장 오래된 데이터 레코드부터 읽습니다. |
 | `LATEST` | 데이터는 최신 데이터 레코드에서 시작하여 읽습니다. |
 
-[!DNL Kinesis] UI 소스는 현재 `TRIM_HORIZON`만 지원하는 반면, API는 데이터를 가져오기 위한 모드로 `TRIM_HORIZON` 및 `LATEST`를 모두 지원합니다. Platform이 [!DNL Kinesis] 소스에 사용하는 기본 반복기 값은 `TRIM_HORIZON`입니다.
+A [!DNL Kinesis] 현재 UI 소스는 `TRIM_HORIZON`를 지원하는 반면 API는 두 가지 모두를 지원합니다 `TRIM_HORIZON` 및 `LATEST` 데이터를 가져오기 위한 모드입니다. Platform이 [!DNL Kinesis] 소스: `TRIM_HORIZON`.
 
-반복기 유형에 대한 자세한 내용은 다음 [[!DNL Kinesis] document](https://docs.aws.amazon.com/kinesis/latest/APIReference/API_GetShardIterator.html#API_GetShardIterator_RequestSyntax)를 참조하십시오.
+반복기 유형에 대한 자세한 내용은 다음을 참조하십시오 [[!DNL Kinesis] 문서](https://docs.aws.amazon.com/kinesis/latest/APIReference/API_GetShardIterator.html#API_GetShardIterator_RequestSyntax).
 
-## [!DNL Amazon Kinesis]을 [!DNL Platform]에 연결
+## Connect [!DNL Amazon Kinesis] to [!DNL Platform]
 
-아래 설명서에서는 API 또는 사용자 인터페이스를 사용하여 [!DNL Amazon Kinesis]을 [!DNL Platform]에 연결하는 방법에 대해 설명합니다.
+아래 설명서에서는 연결 방법에 대한 정보를 제공합니다 [!DNL Amazon Kinesis] to [!DNL Platform] api 또는 사용자 인터페이스 사용:
 
 ### API 사용
 
