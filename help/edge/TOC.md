@@ -5,10 +5,10 @@ user-guide-title: Adobe Experience Platform Web SDK 도움말
 breadcrumb-title: Web SDK 안내서
 user-guide-description: Edge 네트워크를 통해 Experience Cloud 서비스와 상호 작용할 수 있습니다.
 feature: Web SDK
-source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
+source-git-commit: ccda6d3e16fd6b9966c2f30491feed5fafec47f2
 workflow-type: tm+mt
-source-wordcount: '142'
-ht-degree: 35%
+source-wordcount: '141'
+ht-degree: 37%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 35%
    * [CSP 구성](fundamentals/configuring-a-csp.md)
    * [여러 속성과 상호 작용](fundamentals/interacting-with-multiple-properties.md)
    * [지원되는 사용 사례](fundamentals/supported-use-cases.md)
-* ID {#identity}
+* 신원 {#identity}
    * [개요](identity/overview.md)
 * 데이터 수집 {#data-collection}
    * [자동으로 수집된 정보](data-collection/automatic-information.md)
@@ -49,7 +49,7 @@ ht-degree: 35%
       * [개요](personalization/offer-decisioning/offer-decisioning-overview.md)
 * 동의 {#consent}
    * [동의 지원](consent/supporting-consent.md)
-   * IAB 투명성 및 동의 프레임워크 2.0 {#iab-tcf}
+   * IAB Transparency and Consent Framework 2.0 {#iab-tcf}
       * [개요](consent/iab-tcf/overview.md)
       * [태그와 통합](consent/iab-tcf/with-launch.md)
       * [태그 없이 통합](consent/iab-tcf/without-launch.md)
@@ -62,4 +62,4 @@ ht-degree: 35%
    * [웹 SDK 확장 릴리스 노트](extension/web-sdk-ext-release-notes.md)
 * [릴리스 정보](release-notes.md)
 * [자주 묻는 질문](web-sdk-faq.md)
-* [블로그 게시물](blog-posts.md)
+* [리소스](resources.md)
