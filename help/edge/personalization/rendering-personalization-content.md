@@ -3,7 +3,7 @@ title: Adobe Experience Platform Web SDK를 사용하여 개인화된 컨텐츠 
 description: Adobe Experience Platform Web SDK를 사용하여 개인화된 컨텐츠를 렌더링하는 방법을 알아봅니다.
 keywords: 개인화;renderDecisions;sendEvent;decisions;proposition;
 exl-id: 6a3252ca-cdec-48a0-a001-2944ad635805
-source-git-commit: 0246de5810c632134288347ac7b35abddf2d4308
+source-git-commit: 5d4214c1f9dc8476dd946559f602591c6e929cb1
 workflow-type: tm+mt
 source-wordcount: '701'
 ht-degree: 1%
@@ -12,11 +12,11 @@ ht-degree: 1%
 
 # 개인화된 콘텐츠 렌더링
 
-Adobe Experience Platform 웹 SDK는 [Adobe Target](https://business.adobe.com/products/target/adobe-target.html) 및 [Offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=ko)을 포함하여 Adobe의 개인화 솔루션에서 개인화된 콘텐츠를 검색할 수 있도록 지원합니다. Adobe Target의 [시각적 경험 작성기](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) 내에서 만들어진 컨텐츠는 SDK에 의해 자동으로 검색되고 렌더링될 수 있습니다. Adobe Target의 [양식 기반 경험 작성기](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) 또는 Offer decisioning 내에서 만들어진 컨텐츠는 SDK에서 자동으로 렌더링할 수 없습니다. 대신 SDK를 사용하여 이 콘텐츠를 요청한 다음, 직접 콘텐츠를 수동으로 렌더링해야 합니다.
+Adobe Experience Platform Web SDK는 다음을 포함하여 Adobe의 개인화 솔루션에서 개인화된 컨텐츠 검색을 지원합니다 [Adobe Target](https://business.adobe.com/products/target/adobe-target.html) 및 [offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=ko). Adobe Target 내에서 만들어진 컨텐츠 [시각적 경험 작성기](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) 는 SDK에서 자동으로 검색 및 렌더링할 수 있습니다. Adobe Target 내에서 만들어진 컨텐츠 [양식 기반 경험 작성기](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) 또는 SDK에서 자동으로 Offer decisioning을 렌더링할 수 없습니다. 대신 SDK를 사용하여 이 콘텐츠를 요청한 다음, 직접 콘텐츠를 수동으로 렌더링해야 합니다.
 
 ## 컨텐츠 자동 렌더링
 
-이벤트를 서버로 보낼 때 `renderDecisions` 옵션을 `true`(으)로 설정할 수 있습니다. 이렇게 하면 SDK가 자동 렌더링에 적합한 개인화된 콘텐츠를 자동으로 렌더링합니다.
+이벤트를 서버로 보낼 때 `renderDecisions` 옵션 `true`. 이렇게 하면 SDK가 자동 렌더링에 적합한 개인화된 콘텐츠를 자동으로 렌더링합니다.
 
 ```javascript
 alloy("sendEvent", {
@@ -38,7 +38,7 @@ alloy("sendEvent", {
 
 ## 수동으로 컨텐츠 렌더링
 
-개인화 컨텐츠에 액세스하기 위해 SDK가 서버로부터 성공적인 응답을 받은 후 호출되는 콜백 함수를 제공할 수 있습니다. 콜백은 반환된 개인화 콘텐츠를 포함하는 `propositions` 속성을 포함할 수 있는 `result` 개체를 제공합니다. 다음은 이벤트를 전송할 때 콜백 함수를 제공하는 방법의 예입니다.
+개인화 컨텐츠에 액세스하기 위해 SDK가 서버로부터 성공적인 응답을 받은 후 호출되는 콜백 함수를 제공할 수 있습니다. 콜백에서 `result` 개체를 포함할 수 있습니다. `propositions` 반환된 개인화 콘텐츠를 포함하는 속성입니다. 다음은 이벤트를 전송할 때 콜백 함수를 제공하는 방법의 예입니다.
 
 ```javascript
 alloy("sendEvent", {
@@ -50,9 +50,9 @@ alloy("sendEvent", {
   });
 ```
 
-이 예에서 `result.propositions`이 존재하면 은 이벤트와 관련된 개인화 proposition이 포함된 배열입니다. 기본적으로 자동 렌더링에 적합한 포지션만 포함됩니다.
+이 예제에서는 `result.propositions`인 경우 은 이벤트와 관련된 개인화 proposition이 포함된 배열입니다. 기본적으로 자동 렌더링에 적합한 포지션만 포함됩니다.
 
-`propositions` 배열은 다음 예제와 비슷합니다.
+다음 `propositions` 배열은 다음 예제와 비슷합니다.
 
 ```json
 [
@@ -99,11 +99,11 @@ alloy("sendEvent", {
 ]
 ```
 
-이 예제에서 `renderDecisions` 옵션이 `sendEvent` 명령이 실행될 때 `true` 로 설정되지 않았으므로 SDK가 콘텐츠를 자동으로 렌더링하려고 하지 않았습니다. 그러나 SDK는 자동 렌더링에 적합한 콘텐츠를 여전히 자동으로 검색하며, 원할 경우 수동으로 렌더링하도록 이 콘텐츠를 사용자에게 제공했습니다. 각 제안 객체에는 `renderAttempted` 속성이 `false`로 설정되어 있습니다.
+예제에서는 `renderDecisions` 옵션을 로 설정하지 않았습니다. `true` http 화이트보드 `sendEvent` 명령이 실행되었으므로 SDK는 컨텐츠를 자동으로 렌더링하지 않았습니다. 그러나 SDK는 자동 렌더링에 적합한 콘텐츠를 여전히 자동으로 검색하며, 원할 경우 수동으로 렌더링하도록 이 콘텐츠를 사용자에게 제공했습니다. 각 제안 객체에는 `renderAttempted` 속성 설정 `false`.
 
-이벤트를 전송할 때 대신 `renderDecisions` 옵션을 `true`(으)로 설정한 경우, SDK에서 이전에 설명한 대로 자동 렌더링에 적합한 모든 proposition을 렌더링하려고 했습니다. 따라서 각 제안 개체는 `renderAttempted` 속성이 `true`로 설정되었을 것입니다. 이 경우 이러한 제안을 수동으로 렌더링할 필요가 없습니다.
+대신 를 설정했다면 `renderDecisions` 옵션 `true` 이벤트를 전송할 때 SDK는 이전에 설명한 대로 자동 렌더링에 적합한 모든 제안을 렌더링하려고 했습니다. 따라서 각각의 제안 객체에는 `renderAttempted` 속성 설정 `true`. 이 경우 이러한 제안을 수동으로 렌더링할 필요가 없습니다.
 
-지금까지 자동 렌더링이 가능한 개인화 콘텐츠(즉, Adobe Target의 시각적 경험 작성기에서 만든 모든 콘텐츠)에만 대해 논의했습니다. 자동 렌더링에 적합하지 않은 _개인화 콘텐츠를 검색하려면 이벤트를 보낼 때 `decisionScopes` 옵션을 채워서 컨텐츠를 요청해야 합니다._ 범위는 서버에서 검색할 특정 제안을 식별하는 문자열입니다.
+지금까지 자동 렌더링이 가능한 개인화 콘텐츠(즉, Adobe Target의 시각적 경험 작성기에서 만든 모든 콘텐츠)에만 대해 논의했습니다. 개인화 콘텐츠를 검색하려면 _not_ 자동 렌더링에 적합한 경우 `decisionScopes` 옵션을 선택합니다. 범위는 서버에서 검색할 특정 제안을 식별하는 문자열입니다.
 
 다음은 한 예입니다.
 
@@ -118,7 +118,7 @@ alloy("sendEvent", {
   });
 ```
 
-이 예에서 `salutation` 또는 `discount` 범위와 일치하는 서버에 proposition이 있으면 반환되고 `result.propositions` 배열에 포함됩니다. 자동 렌더링을 위해 자격이 있는 Proposition은 `renderDecisions` 또는 `decisionScopes` 옵션을 구성하는 방법에 관계없이 `propositions` 배열에 계속 포함됩니다. 이 경우 `propositions` 배열은 다음 예제와 비슷합니다.
+이 예에서, `salutation` 또는 `discount` 범위, 반환 및 `result.propositions` 배열입니다. 자동 렌더링에 대한 Proposition은 `propositions` 구성 방식에 관계없이 `renderDecisions` 또는 `decisionScopes` 옵션. 다음 `propositions` 이 경우 array 는 다음 예제와 비슷합니다.
 
 ```json
 [
@@ -216,13 +216,13 @@ alloy("sendEvent", {
 ]
 ```
 
-이 시점에서 제안 콘텐츠를 적절히 렌더링할 수 있습니다. 이 예에서 `discount` 범위와 일치하는 제안은 Adobe Target의 양식 기반 경험 작성기를 사용하여 작성된 HTML 제안입니다. 페이지에 ID가 `daily-special`인 요소가 있고 `discount` 제안의 컨텐츠를 `daily-special` 요소로 렌더링하려는 경우 다음을 수행합니다.
+이 시점에서 제안 콘텐츠를 적절히 렌더링할 수 있습니다. 이 예에서 다음과 일치하는 제안 `discount` 범위는 Adobe Target의 양식 기반 경험 작성기를 사용하여 작성된 HTML 제안입니다. 페이지에 ID가 인 요소가 있다고 가정할 때 `daily-special` 에서 콘텐츠를 렌더링하려는 경우 `discount` 제안 `daily-special` 요소를 만들려면 다음을 수행하십시오.
 
-1. `result` 개체에서 proposition을 추출합니다.
-1. 각 제안을 반복하고 `discount` 범위가 있는 제안을 찾습니다.
-1. 제안을 찾으면 제안에 있는 각 항목을 반복하며 HTML 콘텐츠인 항목을 찾습니다. (가정하는 것보다 확인하는 것이 낫다.)
-1. HTML 콘텐츠가 들어 있는 항목을 찾으면 페이지에서 `daily-special` 요소를 찾아 해당 HTML을 개인화된 콘텐츠로 바꾸십시오.
-1. 컨텐츠가 렌더링되면 `display` 이벤트를 보냅니다.
+1. 에서 proposition 추출 `result` 개체.
+1. 각각의 제안을 반복하고, 다음 범위의 제안을 찾습니다. `discount`.
+1. 제안을 찾으면, 제안에 있는 각 항목을 반복하여 HTML 콘텐츠인 항목을 찾습니다. (가정하는 것보다 확인하는 것이 낫다.)
+1. HTML 컨텐츠가 들어 있는 항목을 찾으면 `daily-special` HTML을 페이지의 요소로 바꾸고 콘텐츠를 개인화합니다.
+1. 컨텐츠가 렌더링되면 `display` 이벤트.
 
 코드는 다음과 같습니다.
 
@@ -266,7 +266,7 @@ alloy("sendEvent", {
       // Send a "display" event 
     alloy("sendEvent", {
       xdm: {
-        eventType: "display",
+        eventType: "decisioning.propositionDisplay",
         _experience: {
           decisioning: {
             propositions: [
@@ -291,4 +291,4 @@ alloy("sendEvent", {
 
 ### 플리커 관리
 
-SDK는 개인화 프로세스 중에 [플리커 관리](../personalization/manage-flicker.md)에 기능을 제공합니다.
+SDK는 [플리커 관리](../personalization/manage-flicker.md) 개인화 프로세스 중에
