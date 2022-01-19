@@ -2,9 +2,9 @@
 title: Adobe Experience Platform Web SDK Extension 릴리스 노트
 description: Adobe Experience Platform 웹 SDK 태그 확장
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: e199553a2dcfd2d86d101f19d01e85556c90d05b
+source-git-commit: a768cde86215ed9aad19e45362c6185276456703
 workflow-type: tm+mt
-source-wordcount: '1244'
+source-wordcount: '1256'
 ht-degree: 48%
 
 ---
@@ -12,6 +12,10 @@ ht-degree: 48%
 # Adobe Experience Platform Web SDK 확장 릴리스 노트
 
 이 문서에서는 Adobe Experience Platform 웹 SDK 태그 확장에 대한 릴리스 노트를 다룹니다. SDK 자체에 대한 최신 릴리스 노트는 [Platform Web SDK 릴리스 노트](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
+
+## 버전 2.9.0 - 2022년 1월 19일
+
+Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.8.0을 포함합니다.
 
 ## 버전 2.8.0 - 2021년 10월 26일
 

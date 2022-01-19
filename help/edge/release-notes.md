@@ -3,14 +3,20 @@ title: Adobe Experience Platform Web SDK 릴리스 노트
 description: Adobe Experience Platform Web SDK에 대한 최신 릴리스 정보입니다.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;릴리스 노트;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 7d7a9357f17b941a8f7800be86f211bb1276698d
+source-git-commit: a768cde86215ed9aad19e45362c6185276456703
 workflow-type: tm+mt
-source-wordcount: '811'
+source-wordcount: '852'
 ht-degree: 4%
 
 ---
 
 # 릴리스 정보
+
+## 버전 2.8.0 - 2022년 1월 19일
+
+* 개인화를 위해 섀도 DOM 선택기를 지원합니다.
+* 개인화 이벤트 유형의 이름이 변경되었습니다. (`display` 및 `click` 다음과 같음 `decisioning.propositionDisplay` 및 `decisioning.propositionInteract`)
+* 스크립트가 한 번만 실행되어도 인라인 스크립트 태그가 있는 HTML 오퍼이 페이지에 스크립트 태그를 두 번 추가하는 문제가 해결되었습니다.
 
 ## 버전 2.7.0 - 2021년 10월 26일
 
