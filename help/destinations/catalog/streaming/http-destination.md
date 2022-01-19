@@ -3,32 +3,57 @@ keywords: 스트리밍;
 title: HTTP API 연결
 description: Adobe Experience Platform의 HTTP API 대상을 사용하면 프로필 데이터를 타사 HTTP 엔드포인트로 보낼 수 있습니다.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: ba338972be13c7afa6720bba3f0fc96d244b8f9f
+source-git-commit: f098df9df2baa971db44a6746949f021e212ae3e
 workflow-type: tm+mt
-source-wordcount: '646'
+source-wordcount: '833'
 ht-degree: 1%
 
 ---
 
-# (베타) [!DNL HTTP] API 연결
+# (베타) HTTP API 연결
 
 >[!IMPORTANT]
 >
->다음 [!DNL HTTP] 플랫폼의 대상은 현재 베타 버전입니다. 설명서 및 기능은 변경될 수 있습니다.
+>Platform의 HTTP API 대상은 현재 베타에 있습니다. 설명서 및 기능은 변경될 수 있습니다.
 
 ## 개요 {#overview}
 
-다음 [!DNL HTTP] API 대상은 [!DNL Adobe Experience Platform] 프로필 데이터를 타사 사용자에게 전송하는 데 도움이 되는 스트리밍 대상 [!DNL HTTP] 엔드포인트.
+HTTP API 대상은 [!DNL Adobe Experience Platform] 프로필 데이터를 타사 HTTP 종단점으로 보내는 데 도움이 되는 스트리밍 대상입니다.
 
-프로필 데이터를 로 보내려면 [!DNL HTTP] 끝점은 먼저 대상의 대상에 연결해야 합니다 [[!DNL Adobe Experience Platform]](#connect-destination).
+프로필 데이터를 HTTP 끝점으로 보내려면 먼저 해야 합니다 [대상에 연결](#connect-destination) in [!DNL Adobe Experience Platform].
 
 ## 사용 사례 {#use-cases}
 
-다음 [!DNL HTTP] 대상은 XDM 프로필 데이터 및 대상 세그먼트를 일반 세그먼트로 내보내야 하는 고객을 대상으로 합니다 [!DNL HTTP] 엔드포인트.
+HTTP 대상은 XDM 프로필 데이터 및 대상 세그먼트를 일반 HTTP 종단점으로 내보내야 하는 고객을 대상으로 합니다.
 
-[!DNL HTTP] 엔드포인트는 고객의 시스템 또는 타사 솔루션일 수 있습니다.
+HTTP 엔드포인트는 고객의 시스템 또는 타사 솔루션일 수 있습니다.
 
-## 대상에 연결 {#connect}
+## 전제 조건 {#prerequisites}
+
+>[!IMPORTANT]
+>
+>회사에 대해 HTTP API 대상 베타 기능을 활성화하려면 Adobe 담당자 또는 Adobe 고객 지원 팀에 문의하십시오.
+
+HTTP API 대상을 사용하여 Experience Platform에서 데이터를 내보내려면 다음 사전 요구 사항을 충족해야 합니다.
+
+* REST API를 지원하는 HTTP 엔드포인트가 있어야 합니다.
+* HTTP 종단점은 Experience Platform 프로필 스키마를 지원해야 합니다. HTTP API 대상에서 타사 페이로드 스키마에 대한 변환이 지원되지 않습니다. 자세한 내용은 [내보낸 데이터](#exported-data) Experience Platform 출력 스키마의 예를 보려면 섹션을 참조하십시오.
+* HTTP 끝점은 헤더를 지원해야 합니다.
+* HTTP 종단점은 을 지원해야 합니다 [OAuth 2.0 클라이언트 자격 증명](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) 인증. HTTP API 대상이 베타 단계에 있는 동안 이 요구 사항이 유효합니다.
+* 아래 예와 같이 클라이언트 자격 증명은 엔드포인트에 대한 POST 요청 본문에 포함해야 합니다.
+
+```shell
+curl --location --request POST '<YOUR_API_ENDPOINT>' \
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--data-urlencode 'grant_type=client_credentials' \
+--data-urlencode 'client_id=<CLIENT_ID>' \
+--data-urlencode 'client_secret=<CLIENT_SECRET>'
+```
+
+
+를 사용할 수도 있습니다 [Adobe Experience Platform Destination SDK](/help/destinations/destination-sdk/overview.md) 통합을 설정하고 Experience Platform 프로필 데이터를 HTTP 엔드포인트로 보냅니다.
+
+## 대상에 연결 {#connect-destination}
 
 이 대상에 연결하려면 [대상 구성 자습서](../../ui/connect-destination.md).
 
