@@ -6,48 +6,48 @@ topic-legacy: tutorial
 type: Tutorial
 description: 이 자습서는 Adobe Experience Platform 데이터 수집 서비스 API의 일부인 스트리밍 수집 API를 사용하는 데 도움이 됩니다.
 exl-id: 720b15ea-217c-4c13-b68f-41d17b54d500
-source-git-commit: beb5d615da6d825678f446eec609a2bb356bb310
+source-git-commit: d6b16f09dc4e97135f42ddadd8e34b0f7db93327
 workflow-type: tm+mt
-source-wordcount: '1371'
+source-wordcount: '1369'
 ht-degree: 2%
 
 ---
 
 # 스트리밍 수집 API를 사용한 스트림 시계열 데이터
 
-이 자습서는 Adobe Experience Platform [!DNL Data Ingestion Service] API의 일부인 스트리밍 수집 API를 사용하는 데 도움이 됩니다.
+이 자습서는 Adobe Experience Platform의 일부인 스트리밍 수집 API를 사용하는 데 도움이 됩니다 [!DNL Data Ingestion Service] API.
 
 ## 시작하기
 
 이 자습서에서는 다양한 Adobe Experience Platform 서비스에 대한 작업 지식이 필요합니다. 이 자습서를 시작하기 전에 다음 서비스에 대한 설명서를 검토하십시오.
 
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): 경험 데이터를  [!DNL Platform] 구성하는 표준화된 프레임워크입니다.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): 표준화된 프레임워크 [!DNL Platform] 경험 데이터를 구성합니다.
 - [[!DNL Real-time Customer Profile]](../../profile/home.md): 여러 소스에서 집계된 데이터를 기반으로 통합된 소비자 프로필을 실시간으로 제공합니다.
-- [스키마 레지스트리 개발자 안내서](../../xdm/api/getting-started.md): API의 사용 가능한 각 종단점 및  [!DNL Schema Registry] API를 호출하는 방법을 다루는 포괄적인 안내서입니다. 여기에는 이 자습서 전체에서 호출에 표시되는 `{TENANT_ID}`을 알고 있을 뿐만 아니라 수집을 위한 데이터 세트를 만드는 데 사용되는 스키마를 만드는 방법을 아는 것도 포함됩니다.
+- [스키마 레지스트리 개발자 안내서](../../xdm/api/getting-started.md): 사용 가능한 각 엔드포인트를 다루는 포괄적인 안내서 [!DNL Schema Registry] API 및 호출을 수행하는 방법입니다. 여기에는 `{TENANT_ID}`- 이 자습서 전체에서 호출에 표시되며, 수집을 위한 데이터 세트를 만드는 데 사용되는 스키마를 만드는 방법을 알고 있습니다.
 
-또한 이 자습서에서는 스트리밍 연결을 이미 만들어야 합니다. 스트리밍 연결 만들기에 대한 자세한 내용은 [스트리밍 연결 자습서 만들기](./create-streaming-connection.md)를 참조하십시오.
+또한 이 자습서에서는 스트리밍 연결을 이미 만들어야 합니다. 스트리밍 연결 만들기에 대한 자세한 내용은 [스트리밍 연결 만들기 자습서](./create-streaming-connection.md).
 
 다음 섹션에서는 스트리밍 수집 API를 성공적으로 호출하기 위해 알고 있어야 하는 추가 정보를 제공합니다.
 
 ### 샘플 API 호출 읽기
 
-이 안내서에서는 요청의 형식을 지정하는 방법을 보여주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 올바른 형식의 요청 페이로드가 포함됩니다. API 응답으로 반환되는 샘플 JSON도 제공됩니다. 샘플 API 호출에 대한 설명서에 사용된 규칙에 대한 자세한 내용은 [!DNL Experience Platform] 문제 해결 안내서에서 [예제 API 호출](../../landing/troubleshooting.md#how-do-i-format-an-api-request)를 읽는 방법 섹션을 참조하십시오.
+이 안내서에서는 요청의 형식을 지정하는 방법을 보여주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 올바른 형식의 요청 페이로드가 포함됩니다. API 응답으로 반환되는 샘플 JSON도 제공됩니다. 샘플 API 호출에 대한 설명서에 사용된 규칙에 대한 자세한 내용은 [예제 API 호출을 읽는 방법](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 에서 [!DNL Experience Platform] 문제 해결 가이드.
 
 ### 필수 헤더에 대한 값을 수집합니다
 
-[!DNL Platform] API를 호출하려면 먼저 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 완료해야 합니다. 인증 자습서를 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출에 필요한 각 헤더에 대한 값을 제공합니다.
+을 호출하려면 [!DNL Platform] API를 먼저 완료해야 합니다. [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en). 인증 자습서를 완료하면 모든 히트에 필요한 각 헤더에 대한 값이 제공됩니다 [!DNL Experience Platform] 아래에 표시된 대로 API 호출:
 
-- 권한 부여: Bearer `{ACCESS_TOKEN}`
+- 권한 부여: 베어러 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-[!DNL Experience Platform]의 모든 리소스는 특정 가상 샌드박스로 구분됩니다. [!DNL Platform] API에 대한 모든 요청에는 작업이 수행될 샌드박스의 이름을 지정하는 헤더가 필요합니다.
+의 모든 리소스 [!DNL Experience Platform] 특정 가상 샌드박스로 격리됩니다. 에 대한 모든 요청 [!DNL Platform] API에는 작업이 발생할 샌드박스의 이름을 지정하는 헤더가 필요합니다.
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->[!DNL Platform]의 샌드박스에 대한 자세한 내용은 [샌드박스 개요 설명서](../../sandboxes/home.md)를 참조하십시오.
+>샌드박스에 대한 자세한 내용은 [!DNL Platform]를 참조하고 [샌드박스 개요 설명서](../../sandboxes/home.md).
 
 페이로드(POST, PUT, PATCH)이 포함된 모든 요청에는 추가 헤더가 필요합니다.
 
@@ -55,7 +55,7 @@ ht-degree: 2%
 
 ## XDM ExperienceEvent 클래스를 기반으로 스키마를 작성합니다
 
-데이터 집합을 만들려면 먼저 [!DNL XDM ExperienceEvent] 클래스를 구현하는 새 스키마를 만들어야 합니다. 스키마를 만드는 방법에 대한 자세한 내용은 [스키마 레지스트리 API 개발자 안내서](../../xdm/api/getting-started.md)를 참조하십시오.
+데이터 세트를 만들려면 먼저 를 구현하는 새 스키마를 만들어야 합니다 [!DNL XDM ExperienceEvent] 클래스 이름을 지정합니다. 스키마를 만드는 방법에 대한 자세한 내용은 [스키마 레지스트리 API 개발자 안내서](../../xdm/api/getting-started.md).
 
 **API 형식**
 
@@ -100,7 +100,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/sch
 | -------- | ----------- |
 | `title` | 스키마에 사용할 이름입니다. 이 이름은 고유해야 합니다. |
 | `description` | 만드는 스키마에 대한 의미 있는 설명입니다. |
-| `meta:immutableTags` | 이 예에서 `union` 태그는 데이터를 [[!DNL Real-time Customer Profile]](../../profile/home.md)에 유지하는 데 사용됩니다. |
+| `meta:immutableTags` | 이 예에서 `union` 태그는 데이터를 [[!DNL Real-time Customer Profile]](../../profile/home.md). |
 
 **응답**
 
@@ -178,13 +178,13 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/sch
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `{TENANT_ID}` | 이 ID는 사용자가 만드는 리소스가 제대로 식별되고 IMS 조직 내에 포함되어 있는지 확인하는 데 사용됩니다. 테넌트 ID에 대한 자세한 내용은 [스키마 레지스트리 안내서](../../xdm/api/getting-started.md#know-your-tenant-id)를 참조하십시오. |
+| `{TENANT_ID}` | 이 ID는 사용자가 만드는 리소스가 제대로 식별되고 IMS 조직 내에 포함되어 있는지 확인하는 데 사용됩니다. 테넌트 ID에 대한 자세한 내용은 [스키마 레지스트리 안내서](../../xdm/api/getting-started.md#know-your-tenant-id). |
 
-데이터 세트를 만들 때 이 두 속성 모두 사용되므로 `$id` 및 `version` 속성을 적어 두십시오.
+다음 사항을 기록해 두십시오 `$id` 뿐만 아니라 `version` 속성은 다음 두 가지 모두 데이터 세트를 만들 때 사용됩니다.
 
 ## 스키마에 대한 기본 ID 설명자 설정
 
-그런 다음 작업 전자 메일 주소 속성을 기본 식별자로 사용하여 위에서 만든 스키마에 [ID 설명자](../../xdm/api/descriptors.md)를 추가합니다. 이렇게 하면 두 가지 변경 사항이 발생합니다.
+그런 다음 [id 설명자](../../xdm/api/descriptors.md) 위에서 만든 스키마에 대해, 작업 전자 메일 주소 속성을 기본 식별자로 사용합니다. 이렇게 하면 두 가지 변경 사항이 발생합니다.
 
 1. 작업 이메일 주소는 필수 필드가 됩니다. 즉, 이 필드 없이 전송된 메시지는 유효성 검사에 실패하며 수집되지 않습니다.
 
@@ -212,15 +212,15 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/des
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `{SCHEMA_REF_ID}` | 스키마를 작성할 때 이전에 받은 `$id` 다음과 같이 표시되어야 합니다. `"https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}"` |
+| `{SCHEMA_REF_ID}` | 다음 `$id` 스키마를 작성할 때 이전에 받은 데이터입니다. 다음과 같이 표시되어야 합니다. `"https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}"` |
 
 >[!NOTE]
 >
 >&#x200B;**ID 네임스페이스 코드**
 >
-> 코드가 유효한지 확인하십시오. 위의 예에서는 표준 ID 네임스페이스인 &quot;email&quot;을 사용합니다. 일반적으로 사용되는 다른 표준 ID 네임스페이스는 [ID 서비스 FAQ](../../identity-service/troubleshooting-guide.md#what-are-the-standard-identity-namespaces-provided-by-experience-platform)에서 찾을 수 있습니다.
+> 코드가 유효한지 확인하십시오. 위의 예에서는 표준 ID 네임스페이스인 &quot;email&quot;을 사용합니다. 일반적으로 사용되는 다른 표준 ID 네임스페이스는 [ID 서비스 FAQ](../../identity-service/troubleshooting-guide.md#what-are-the-standard-identity-namespaces-provided-by-experience-platform).
 >
-> 사용자 지정 네임스페이스를 만들려면 [ID 네임스페이스 개요](../../identity-service/home.md)에 설명된 단계를 따르십시오.
+> 사용자 지정 네임스페이스를 만들려면 [id 네임스페이스 개요](../../identity-service/home.md).
 
 **응답**
 
@@ -248,7 +248,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/des
 
 >[!NOTE]
 >
->이 데이터 집합은 적절한 태그를 설정하여 **[!DNL Real-time Customer Profile]** 및 **[!DNL Identity]**&#x200B;에 대해 활성화됩니다.
+>이 데이터 집합은에 대해 활성화됩니다. **[!DNL Real-time Customer Profile]** 및 **[!DNL Identity]** 적절한 태그를 설정하여
 
 **API 형식**
 
@@ -281,7 +281,7 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
 
 **응답**
 
-성공적인 응답은 HTTP 상태 201을 반환하고 새로 생성된 데이터 세트의 ID를 `@/dataSets/{DATASET_ID}` 형식으로 포함하는 배열을 반환합니다.
+성공적인 응답은 HTTP 상태 201을 반환하고 새로 생성된 데이터 세트의 ID를 형식으로 포함하는 배열을 반환합니다 `@/dataSets/{DATASET_ID}`.
 
 ```json
 [
@@ -294,11 +294,11 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
 
 스키마 및 데이터 세트를 만든 후 데이터를 수집하려면 스트리밍 연결을 만들어야 합니다.
 
-스트리밍 연결 만들기에 대한 자세한 내용은 [스트리밍 연결 자습서 만들기](./create-streaming-connection.md)를 참조하십시오.
+스트리밍 연결 만들기에 대한 자세한 내용은 [스트리밍 연결 만들기 자습서](./create-streaming-connection.md).
 
 ## 스트리밍 연결에 시계열 데이터 수집
 
-데이터 세트, 스트리밍 연결 및 데이터 흐름을 만들 때 XDM 형식 JSON 레코드를 수집하여 [!DNL Platform] 내에서 시계열 데이터를 수집할 수 있습니다.
+생성된 데이터 세트, 스트리밍 연결 및 데이터 흐름을 사용하여 XDM 형식 JSON 레코드를 수집하여 내에서 시계열 데이터를 수집할 수 있습니다 [!DNL Platform].
 
 **API 형식**
 
@@ -308,20 +308,22 @@ POST /collection/{CONNECTION_ID}?syncValidation=true
 
 | 매개 변수 | 설명 |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | 새로 만든 스트리밍 연결의 `id` 값입니다. |
-| `syncValidation` | 개발을 목적으로 하는 선택적 쿼리 매개 변수입니다. `true`으로 설정하면, 즉시 피드백에 사용하여 요청이 성공적으로 전송되었는지 확인할 수 있습니다. 기본적으로 이 값은 `false`(으)로 설정됩니다. 이 쿼리 매개 변수를 `true`로 설정하면 `CONNECTION_ID`당 분당 60회로 제한됩니다. |
+| `{CONNECTION_ID}` | 다음 `id` 새로 만든 스트리밍 연결의 값입니다. |
+| `syncValidation` | 개발을 목적으로 하는 선택적 쿼리 매개 변수입니다. 로 설정된 경우 `true`를 사용하여 요청이 성공적으로 전송되었는지 확인하는 즉시 피드백에 사용할 수 있습니다. 기본적으로 이 값은 로 설정됩니다 `false`. 이 쿼리 매개 변수를 `true` 요청에는 분당 60회로 제한됩니다 `CONNECTION_ID`. |
 
 **요청**
 
 스트리밍 연결에 시계열 데이터를 섭취하는 작업은 소스 이름을 사용하거나 사용하지 않고 수행할 수 있습니다.
 
-아래 예제 요청은 소스 이름이 누락된 시계열 데이터를 Platform에 수집합니다. 데이터에 소스 이름이 없으면 스트리밍 연결 정의에서 소스 ID를 추가합니다.
+아래 예제 요청은 소스 이름이 누락된 시계열 데이터를 Platform에 수집합니다. 데이터에 소스 이름이 없으면 스트리밍 연결 정의에서 소스 ID가 추가됩니다.
 
->[!IMPORTANT]
+둘 다 `xdmEntity._id` 및 `xdmEntity.timestamp` 시계열 데이터에 대한 필수 필드입니다. 다음 `xdmEntity._id` 속성은 레코드 자체에 대한 고유 식별자를 나타냅니다. **not** 레코드가 있는 개인 또는 장치의 고유 ID입니다.
+
+직접 생성해야 합니다 `xdmEntity._id` 및 `xdmEntity.timestamp` 레코드를 다시 수집해야 하는 경우 일관되게 유지되는 방식으로 레코드 소스 시스템에는 이러한 값이 포함되어 있을 것입니다. ID를 사용할 수 없는 경우 레코드에 있는 다른 필드의 값을 연결하여 재수집 시 레코드에서 일관되게 다시 생성할 수 있는 고유한 값을 만드는 것이 좋습니다.
+
+>[!NOTE]
 >
->고유한 `xdmEntity._id` 및 `xdmEntity.timestamp`을(를) 생성해야 합니다. ID를 생성하는 좋은 방법은 데이터 준비에서 UUID 함수를 사용하는 것입니다. UUID 함수에 대한 자세한 내용은 [데이터 준비 함수 안내서](../../data-prep/functions.md)에서 확인할 수 있습니다. `xdmEntity._id` 속성은 레코드 자체에 대한 고유 식별자를 나타냅니다.**이 아닌**&#x200B;레코드 자체의 고유 ID를 나타냅니다. 개인 또는 장치 ID는 스키마의 개인 또는 장치 식별자로 지정된 모든 속성에 한정됩니다.
->
->`xdmEntity._id` 및 `xdmEntity.timestamp` 모두 시계열 데이터에 필요한 유일한 필드입니다. 또한 다음 API 호출은 **에 인증 헤더가 필요하지 않습니다.**
+>다음 API 호출은 다음을 수행합니다 **not** 인증 헤더가 필요합니다.
 
 ```shell
 curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?syncValidation=true \
@@ -404,7 +406,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?syncValidation=t
 
 **응답**
 
-성공적으로 응답하면 새로 스트리밍된 [!DNL Profile]의 세부 정보가 포함된 HTTP 상태 200이 반환됩니다.
+성공적인 응답은 새로 스트리밍된 HTTP 상태 200을 반환하며 [!DNL Profile].
 
 ```json
 {
@@ -419,18 +421,18 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?syncValidation=t
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `{CONNECTION_ID}` | 이전에 만든 스트리밍 연결의 `inletId`. |
+| `{CONNECTION_ID}` | 다음 `inletId` 이전에 만든 스트리밍 연결 수입니다. |
 | `xactionId` | 방금 보낸 레코드에 대해 서버 측에서 생성된 고유 식별자입니다. 이 ID는 Adobe이 다양한 시스템과 디버깅을 통해 이 레코드의 라이프사이클을 추적하는 데 도움이 됩니다. |
 | `receivedTimeMs`: 요청을 받은 시간을 보여주는 타임스탬프(밀리초 단위)입니다. |
-| `syncValidation.status` | 쿼리 매개 변수 `syncValidation=true`이 추가되었으므로 이 값이 나타납니다. 유효성 검사에 성공하면 상태는 `pass`입니다. |
+| `syncValidation.status` | 쿼리 매개 변수 이후 `syncValidation=true` 이 추가되면 이 값이 나타납니다. 유효성 검사에 성공하면 상태는 `pass`. |
 
 ## 새로 수집된 시계열 데이터 검색
 
-이전에 수집된 레코드의 유효성을 검사하려면 [[!DNL Profile Access API]](../../profile/api/entities.md) 을 사용하여 시계열 데이터를 검색할 수 있습니다. 이 작업은 `/access/entities` 종단점에 대한 GET 요청을 사용하고 선택적 쿼리 매개 변수를 사용하여 수행할 수 있습니다. 여러 매개 변수를 앰퍼샌드(&amp;)로 구분하여 사용할 수 있습니다.&quot;
+이전에 수집된 레코드의 유효성을 검사하려면 [[!DNL Profile Access API]](../../profile/api/entities.md) 시계열 데이터를 검색하려면 에 대한 GET 요청을 사용하여 수행할 수 있습니다. `/access/entities` 엔드포인트 및 선택적 쿼리 매개 변수 사용. 여러 매개 변수를 앰퍼샌드(&amp;)로 구분하여 사용할 수 있습니다.&quot;
 
 >[!NOTE]
 >
->병합 정책 ID가 정의되지 않고 `schema.name` 또는 `relatedSchema.name`이 `_xdm.context.profile`인 경우, [!DNL Profile Access]은 **모든** 관련 ID를 가져옵니다.
+>병합 정책 ID가 정의되지 않고 `schema.name` 또는 `relatedSchema.name` is `_xdm.context.profile`, [!DNL Profile Access] 를 가져옵니다. **모두** 관련 ID입니다.
 
 **API 형식**
 
@@ -443,7 +445,7 @@ GET /access/entities?schema.name=_xdm.context.experienceevent&relatedSchema.name
 | 매개 변수 | 설명 |
 | --------- | ----------- |
 | `schema.name` | **필수 여부.** 액세스하는 스키마의 이름입니다. |
-| `relatedSchema.name` | **필수 여부.** 에 액세스할 수 있으므로  `_xdm.context.experienceevent`이 값은 시계열 이벤트와 관련된 프로필 엔티티의 스키마를 지정합니다. |
+| `relatedSchema.name` | **필수 여부.** 다음 항목에 액세스할 수 있으므로 `_xdm.context.experienceevent`, 이 값은 시계열 이벤트가 관련된 프로필 엔티티의 스키마를 지정합니다. |
 | `relatedEntityId` | 관련 엔티티의 ID입니다. 제공된 경우 엔티티 네임스페이스도 제공해야 합니다. |
 | `relatedEntityIdNS` | 검색하려는 ID의 네임스페이스입니다. |
 
@@ -528,6 +530,6 @@ curl -X GET \
 
 ## 다음 단계
 
-이 문서를 읽은 후에는 스트리밍 연결을 사용하여 레코드 데이터를 [!DNL Platform]에 수집하는 방법을 이해할 수 있습니다. 다른 값으로 더 많은 호출을 수행하고 업데이트된 값을 검색해 볼 수 있습니다. 또한 [!DNL Platform] UI를 통해 수집된 데이터 모니터링을 시작할 수 있습니다. 자세한 내용은 [데이터 수집 모니터링](../quality/monitor-data-ingestion.md) 안내서를 참조하십시오.
+이제 이 문서를 읽은 후에는 레코드 데이터를 [!DNL Platform] 스트리밍 연결 사용. 다른 값으로 더 많은 호출을 수행하고 업데이트된 값을 검색해 볼 수 있습니다. 또한 수집된 데이터를 모니터링하기 시작할 수 있습니다 [!DNL Platform] UI. 자세한 내용은 [데이터 수집 모니터링](../quality/monitor-data-ingestion.md) 안내서.
 
-일반적으로 스트리밍 수집에 대한 자세한 내용은 [스트리밍 수집 개요](../streaming-ingestion/overview.md)를 참조하십시오.
+일반적인 스트리밍 수집에 대한 자세한 내용은 [스트리밍 수집 개요](../streaming-ingestion/overview.md).
