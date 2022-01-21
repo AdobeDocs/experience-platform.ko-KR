@@ -6,7 +6,7 @@ title: UI에서 소스에 대한 데이터 흐름 모니터링
 topic-legacy: overview
 type: Tutorial
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
-source-git-commit: 507fa2981f99cad26b117eb576c9dc18080886c8
+source-git-commit: 241deb93b3500139b79425a4da79258670e044a8
 workflow-type: tm+mt
 source-wordcount: '1806'
 ht-degree: 0%
@@ -41,13 +41,13 @@ Adobe Experience Platform에서 데이터는 다양한 소스에서 수집되어
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_source_ingestion"
 >title="소스 수집"
->abstract="소스 처리에는 수집된 레코드 및 실패한 레코드를 포함하여, 데이터 레이크 서비스의 데이터 활동 상태 및 지표에 대한 정보가 포함되어 있습니다. <br> 지표 및 그래프에 대한 자세한 내용을 보려면 지표 정의 안내서를 검토하십시오."
+>abstract="소스 처리에는 수집된 레코드 및 실패한 레코드를 포함하여, 데이터 레이크 서비스의 데이터 활동 상태 및 지표에 대한 정보가 포함되어 있습니다. 지표 및 그래프에 대한 자세한 내용을 보려면 지표 정의 안내서를 검토하십시오."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_ingestion"
 >title="데이터 흐름 실행 세부 정보"
->abstract="소스 처리에는 수집된 레코드 및 실패한 레코드를 포함하여, 데이터 레이크 서비스의 데이터 활동 상태 및 지표에 대한 정보가 포함되어 있습니다. <br> 지표 및 그래프에 대한 자세한 내용을 보려면 지표 정의 안내서를 검토하십시오."
+>abstract="소스 처리에는 수집된 레코드 및 실패한 레코드를 포함하여, 데이터 레이크 서비스의 데이터 활동 상태 및 지표에 대한 정보가 포함되어 있습니다. 지표 및 그래프에 대한 자세한 내용을 보려면 지표 정의 안내서를 검토하십시오."
 >text="Learn more in documentation"
 
 에서 [플랫폼 UI](https://platform.adobe.com), 선택 **[!UICONTROL 모니터링]** 왼쪽 탐색에서 로 이동하여 [!UICONTROL 모니터링] 대시보드 . 다음 [!UICONTROL 모니터링] 대시보드에는 소스에서 로의 데이터 트래픽 상태에 대한 통찰력을 포함하여 모든 소스 데이터 흐름에 대한 지표와 정보가 포함되어 있습니다 [!DNL Identity Service], 및에 [!DNL Profile].
@@ -151,7 +151,7 @@ Adobe Experience Platform에서 데이터는 다양한 소스에서 수집되어
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_identity_processing"
 >title="ID 처리"
->abstract="ID 처리에는 추가된 ID 수, 생성된 그래프 및 업데이트된 그래프를 포함하여 ID 서비스에 수집된 레코드에 대한 정보가 포함되어 있습니다. <br> 지표 및 그래프에 대한 자세한 내용을 보려면 지표 정의 안내서를 검토하십시오."
+>abstract="ID 처리에는 추가된 ID 수, 생성된 그래프 및 업데이트된 그래프를 포함하여 ID 서비스에 수집된 레코드에 대한 정보가 포함되어 있습니다. 지표 및 그래프에 대한 자세한 내용을 보려면 지표 정의 안내서를 검토하십시오."
 >text="Learn more in documentation"
 
 다음 [!UICONTROL ID 처리] 페이지에 수집되는 레코드에 대한 정보가 포함되어 있습니다 [!DNL Identity Service]에는 추가된 ID 수, 생성된 그래프 및 업데이트된 그래프가 포함됩니다.
