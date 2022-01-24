@@ -6,9 +6,9 @@ title: UI에서 소스에 대한 데이터 흐름 모니터링
 topic-legacy: overview
 type: Tutorial
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
-source-git-commit: 241deb93b3500139b79425a4da79258670e044a8
+source-git-commit: 38e56beacd8857648abbbf20f4a5c4941ff779ee
 workflow-type: tm+mt
-source-wordcount: '1806'
+source-wordcount: '1856'
 ht-degree: 0%
 
 ---
@@ -154,6 +154,11 @@ Adobe Experience Platform에서 데이터는 다양한 소스에서 수집되어
 >abstract="ID 처리에는 추가된 ID 수, 생성된 그래프 및 업데이트된 그래프를 포함하여 ID 서비스에 수집된 레코드에 대한 정보가 포함되어 있습니다. 지표 및 그래프에 대한 자세한 내용을 보려면 지표 정의 안내서를 검토하십시오."
 >text="Learn more in documentation"
 
+>[!CONTEXTUALHELP]
+>id="platform_monitoring_dataflow_run_details_identity"
+>title="데이터 흐름 실행 세부 정보"
+>abstract="데이터 흐름 실행 세부 정보 페이지에는 IMS 조직 ID 및 데이터 흐름 실행 ID를 포함하여 ID 데이터 흐름 실행에 대한 자세한 정보가 표시됩니다."
+
 다음 [!UICONTROL ID 처리] 페이지에 수집되는 레코드에 대한 정보가 포함되어 있습니다 [!DNL Identity Service]에는 추가된 ID 수, 생성된 그래프 및 업데이트된 그래프가 포함됩니다.
 
 필터 아이콘을 선택합니다 ![필터](../assets/ui/monitor-sources/filter.png) 데이터 흐름 시작 시간 옆의 를 사용하여 [!DNL Identity] 데이터 흐름 실행.
@@ -191,6 +196,11 @@ Adobe Experience Platform에서 데이터는 다양한 소스에서 수집되어
 >title="프로필 처리"
 >abstract="프로필 처리에는 생성된 프로필 조각 수, 업데이트된 프로필 조각 및 총 프로필 조각 수를 포함하여 프로필 서비스에 수집된 레코드에 대한 정보가 포함되어 있습니다."
 >text="Learn more in documentation"
+
+>[!CONTEXTUALHELP]
+>id="platform_monitoring_dataflow_run_details_profile"
+>title="데이터 흐름 실행 세부 정보"
+>abstract="데이터 흐름 실행 세부 정보 페이지에는 IMS 조직 ID 및 데이터 흐름 실행 ID를 포함하여 프로필 데이터 흐름 실행에 대한 자세한 정보가 표시됩니다."
 
 다음 [!UICONTROL 프로필 처리] 페이지에 수집되는 레코드에 대한 정보가 포함되어 있습니다 [!DNL Profile]생성된 프로필 조각, 업데이트된 프로필 조각 및 총 프로필 조각 수를 포함합니다.
 
