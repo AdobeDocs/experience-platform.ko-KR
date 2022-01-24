@@ -5,54 +5,55 @@ title: Flow Service API를 사용하여 Salesforce Marketing Cloud 기본 연결
 topic-legacy: overview
 type: Tutorial
 description: Flow Service API를 사용하여 Adobe Experience Platform을 Salesforce Marketing Cloud에 연결하는 방법을 알아봅니다.
-source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
+exl-id: fbf68d3a-f8b1-4618-bd56-160cc6e3346d
+source-git-commit: 531d5619e0643b6195abaa53d1708e0368d45871
 workflow-type: tm+mt
-source-wordcount: '479'
+source-wordcount: '513'
 ht-degree: 1%
 
 ---
 
-# [!DNL Flow Service] API를 사용하여 [!DNL Salesforce Marketing Cloud] 기본 연결을 만듭니다
+# 만들기 [!DNL Salesforce Marketing Cloud] 기본 연결 [!DNL Flow Service] API
 
 >[!NOTE]
 >
->[!DNL Salesforce Marketing Cloud] 소스가 베타에 있습니다. 베타 레이블이 지정된 소스 사용에 대한 자세한 내용은 [소스 개요](../../../../home.md#terms-and-conditions) 를 참조하십시오.
+>다음 [!DNL Salesforce Marketing Cloud] 소스가 베타 버전입니다. 자세한 내용은 [소스 개요](../../../../home.md#terms-and-conditions) 베타 레이블이 지정된 소스 사용에 대한 자세한 정보.
 
 기본 연결은 소스와 Adobe Experience Platform 간의 인증된 연결을 나타냅니다.
 
-이 자습서에서는 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)를 사용하여 [!DNL Salesforce Marketing Cloud]에 대한 기본 연결을 만드는 단계를 안내합니다.
+이 자습서에서는 다음에 대한 기본 연결을 만드는 단계를 안내합니다 [!DNL Salesforce Marketing Cloud] 사용 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## 시작하기
 
 이 안내서에서는 Adobe Experience Platform의 다음 구성 요소를 이해하고 있어야 합니다.
 
-* [소스](../../../../home.md): Experience Platform을 사용하면 서비스를 사용하여 들어오는 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 다양한 소스에서 데이터를 수집할 수  [!DNL Platform] 있습니다.
-* [샌드박스](../../../../../sandboxes/home.md): Experience Platform은 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이  [!DNL Platform] 되는 단일 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
+* [소스](../../../../home.md): Experience Platform을 사용하면 데이터를 다양한 소스에서 수집할 수 있으며 를 사용하여 들어오는 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공할 수 있습니다 [!DNL Platform] 서비스.
+* [샌드박스](../../../../../sandboxes/home.md): Experience Platform은 단일 파티션으로 분할하는 가상 샌드박스 제공 [!DNL Platform] 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 별도의 가상 환경으로 인스턴스를 구축할 수 있습니다.
 
 ### 플랫폼 API 사용
 
-플랫폼 API를 성공적으로 호출하는 방법에 대한 자세한 내용은 [플랫폼 API 시작](../../../../../landing/api-guide.md)의 안내서를 참조하십시오.
+Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용은 [플랫폼 API 시작](../../../../../landing/api-guide.md).
 
-다음 섹션에서는 [!DNL Flow Service] API를 사용하여 [!DNL Salesforce Marketing Cloud]에 성공적으로 연결하기 위해 알고 있어야 하는 추가 정보를 제공합니다.
+다음 섹션에서는 다음에 성공적으로 연결하기 위해 알고 있어야 하는 추가 정보를 제공합니다 [!DNL Salesforce Marketing Cloud] 사용 [!DNL Flow Service] API.
 
 ### 필요한 자격 증명 수집
 
-[!DNL Flow Service]이 [!DNL Salesforce Marketing Cloud]에 연결하려면 다음 연결 속성을 제공해야 합니다.
+대상 [!DNL Flow Service] 연결 [!DNL Salesforce Marketing Cloud], 다음 연결 속성을 제공해야 합니다.
 
 | 자격 증명 | 설명 |
 | ---------- | ----------- |
-| `host` | 애플리케이션의 호스트 서버입니다. 종종 하위 도메인입니다. |
-| `clientId` | [!DNL Salesforce Marketing Cloud] 응용 프로그램과 연결된 클라이언트 ID입니다. |
-| `clientSecret` | [!DNL Salesforce Marketing Cloud] 응용 프로그램과 연결된 클라이언트 암호입니다. |
-| `connectionSpec.id` | 연결 사양은 기본 및 소스 연결 생성과 관련된 인증 사양이 포함된 소스의 커넥터 등록 정보를 반환합니다. [!DNL Salesforce Marketing Cloud]에 대한 연결 사양 ID는 다음과 같습니다. `cea1c2a08-b722-11eb-8529-0242ac130003`. |
+| `host` | 애플리케이션의 호스트 서버입니다. 종종 하위 도메인입니다. **참고:** 을 입력할 때 `host` 값은 전체 URL이 아니라 하위 도메인만 지정해야 합니다. 예를 들어 호스트 URL이 `https://abcd-ab12c3d4e5fg6hijk7lmnop8qrst.auth.marketingcloudapis.com/`를 입력한 다음 을(를) 입력하기만 하면 됩니다 `abcd-ab12c3d4e5fg6hijk7lmnop8qrst` 를 호스트 값으로 사용할 수 있습니다. |
+| `clientId` | 와 연결된 클라이언트 ID [!DNL Salesforce Marketing Cloud] 응용 프로그램. |
+| `clientSecret` | 와 연결된 클라이언트 암호입니다. [!DNL Salesforce Marketing Cloud] 응용 프로그램. |
+| `connectionSpec.id` | 연결 사양은 기본 및 소스 연결 생성과 관련된 인증 사양이 포함된 소스의 커넥터 등록 정보를 반환합니다. 에 대한 연결 사양 ID [!DNL Salesforce Marketing Cloud] is: `ea1c2a08-b722-11eb-8529-0242ac130003`. |
 
-시작하는 방법에 대한 자세한 내용은 이 [[!DNL Salesforce Marketing Cloud] document](https://developer.salesforce.com/docs/atlas.en-us.mc-apis.meta/mc-apis/authentication.htm)를 참조하십시오.
+시작하는 방법에 대한 자세한 내용은 다음을 참조하십시오 [[!DNL Salesforce Marketing Cloud] 문서](https://developer.salesforce.com/docs/atlas.en-us.mc-apis.meta/mc-apis/authentication.htm).
 
 ## 기본 연결 만들기
 
 기본 연결은 소스의 인증 자격 증명, 현재 연결 상태 및 고유한 기본 연결 ID를 포함하여 소스와 플랫폼 간의 정보를 유지합니다. 기본 연결 ID를 사용하면 소스 내에서 파일을 탐색 및 탐색하고 해당 데이터 유형 및 형식에 대한 정보를 포함하여 수집할 특정 항목을 식별할 수 있습니다.
 
-기본 연결 ID를 만들려면 요청 본문의 일부로 [!DNL Salesforce Marketing Cloud] 인증 자격 증명을 제공하는 동안 `/connections` 끝점에 POST 요청을 수행하십시오.
+기본 연결 ID를 만들려면 `/connections` 제공하는 동안 엔드포인트 [!DNL Salesforce Marketing Cloud] 요청 본문의 일부로 인증 자격 증명.
 
 **API 형식**
 
@@ -62,7 +63,7 @@ POST /connections
 
 **요청**
 
-다음 요청은 [!DNL Salesforce Marketing Cloud]에 대한 기본 연결을 만듭니다.
+다음 요청은에 대한 기본 연결을 만듭니다. [!DNL Salesforce Marketing Cloud]:
 
 ```shell
 curl -X POST \
@@ -84,7 +85,7 @@ curl -X POST \
             }
         },
         "connectionSpec": {
-            "id": "cea1c2a08-b722-11eb-8529-0242ac130003",
+            "id": "ea1c2a08-b722-11eb-8529-0242ac130003",
             "version": "1.0"
         }
     }'
@@ -92,13 +93,13 @@ curl -X POST \
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `auth.params.clientId` | [!DNL Salesforce Marketing Cloud] 응용 프로그램과 연결된 클라이언트 ID입니다. |
-| `auth.params.clientSecret` | [!DNL Salesforce Marketing Cloud] 응용 프로그램과 연결된 클라이언트 암호입니다. |
-| `connectionSpec.id` | [!DNL Salesforce Marketing Cloud] 연결 사양 ID: `cea1c2a08-b722-11eb-8529-0242ac130003`. |
+| `auth.params.clientId` | 와 연결된 클라이언트 ID [!DNL Salesforce Marketing Cloud] 응용 프로그램. |
+| `auth.params.clientSecret` | 와 연결된 클라이언트 암호입니다. [!DNL Salesforce Marketing Cloud] 응용 프로그램. |
+| `connectionSpec.id` | 다음 [!DNL Salesforce Marketing Cloud] 연결 사양 ID: `ea1c2a08-b722-11eb-8529-0242ac130003`. |
 
 **응답**
 
-성공적인 응답은 해당 고유 연결 식별자(`id`)를 포함하여 새로 생성된 연결을 반환합니다. 이 ID는 다음 자습서에서 데이터를 탐색하는 데 필요합니다.
+성공적인 응답은 해당 고유 연결 식별자(`id`). 이 ID는 다음 자습서에서 데이터를 탐색하는 데 필요합니다.
 
 ```json
 {
@@ -107,4 +108,4 @@ curl -X POST \
 }
 ```
 
-이 자습서에 따르면 [!DNL Flow Service] API를 사용하여 [!DNL Salesforce Marketing Cloud] 연결을 만들고 연결의 고유 ID 값을 받았습니다. 다음 자습서에서는 [흐름 서비스 API](../../explore/marketing-automation.md)를 사용하여 마케팅 자동화 시스템을 탐색하는 방법을 배울 때 이 연결 ID를 사용할 수 있습니다.
+이 자습서에 따라 다음을 만들었습니다 [!DNL Salesforce Marketing Cloud] 를 사용하여 연결 [!DNL Flow Service] API이고, 연결의 고유 ID 값을 받았습니다. 다음 자습서에서는 다음 방법을 배울 때 이 연결 ID를 사용할 수 있습니다 [흐름 서비스 API를 사용하여 마케팅 자동화 시스템 탐색](../../explore/marketing-automation.md).
