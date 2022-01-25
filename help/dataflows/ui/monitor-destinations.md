@@ -6,9 +6,9 @@ title: UI에서 대상에 대한 데이터 흐름 모니터링
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: b9f9e709fe51000a32eaea7a1a7c76488a36dd9b
+source-git-commit: b66c39016b2ccd4a4e24899f9e59f9a80cdc531b
 workflow-type: tm+mt
-source-wordcount: '2050'
+source-wordcount: '2085'
 ht-degree: 0%
 
 ---
@@ -25,12 +25,12 @@ ht-degree: 0%
 
 - [데이터 흐름](../home.md): 데이터 흐름은 플랫폼 간에 데이터를 이동하는 데이터 작업을 나타냅니다. 데이터 흐름은 서로 다른 서비스 간에 구성되므로 소스 커넥터에서 대상 데이터 세트로 데이터를 [!DNL Identity] 및 [!DNL Profile], 및에 [!DNL Destinations].
    - [데이터 흐름 실행](../../sources/notifications.md): 데이터 흐름 실행은 선택한 데이터 흐름의 빈도 구성에 따라 반복되는 예약된 작업입니다.
-- [대상](../../destinations/home.md): 대상은 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 플랫폼에서 데이터를 원활하게 활성화할 수 있도록 일반적으로 사용되는 애플리케이션과의 사전 구축된 통합입니다.
-- [샌드박스](../../sandboxes/home.md): [!DNL Experience Platform] 단일 파티션을 생성하는 가상 샌드박스 제공 [!DNL Platform] 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 별도의 가상 환경으로 인스턴스를 구축할 수 있습니다.
+- [Destinations](../../destinations/home.md): Destinations are pre-built integrations with commonly used applications that allow for the seamless activation of data from Platform for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
+- [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
 ## 대상 작업 공간에서 데이터 흐름 모니터링 {#monitor-dataflows-in-the-destinations-workspace}
 
-에서 **[!UICONTROL 대상]** 플랫폼 UI 내에서 **[!UICONTROL 찾아보기]** 탭하고 보려는 대상의 이름을 선택합니다.
+In the **[!UICONTROL Destinations]** workspace within the Platform UI, navigate to the **[!UICONTROL Browse]** tab and select the name of a destination that you want to view.
 
 ![](../assets/ui/monitor-destinations/select-destination.png)
 
@@ -124,7 +124,7 @@ ID는 프로필의 다른 패싯을 나타냅니다. 예를 들어 프로필에 
 
 ![](../assets/ui/monitor-destinations/dataflow-details-stream.png)
 
-세부 사항 페이지에는 실패한 ID 목록과 제외된 ID도 표시됩니다. 오류 코드, ID 수 및 설명을 포함하여 실패한 ID와 제외된 ID에 대한 정보가 표시됩니다. 기본적으로 목록에 실패한 ID가 표시됩니다. 건너뛴 ID를 표시하려면 **[!UICONTROL 제외된 ID]** 토글.
+세부 사항 페이지에는 실패한 ID 목록과 제외된 ID도 표시됩니다. 오류 코드, ID 수 및 설명을 포함하여 실패한 ID와 제외된 ID에 대한 정보가 표시됩니다. By default, the list displays the failed identities. 건너뛴 ID를 표시하려면 **[!UICONTROL 제외된 ID]** 토글.
 
 ![](../assets/ui/monitor-destinations/dataflow-records-stream.png)
 
@@ -132,9 +132,14 @@ ID는 프로필의 다른 패싯을 나타냅니다. 예를 들어 프로필에 
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profiles_received"
->title="받은 프로필"
->abstract="데이터 플로우에서 받은 총 프로필 수 이 값은 60분마다 업데이트됩니다."
+>title="Profiles received"
+>abstract="데이터 플로우에서 받은 총 프로필 수 This value is updated every 60 minutes."
 >text="Learn more in documentation"
+
+>[!CONTEXTUALHELP]
+>id="platform_monitoring_dataflow_run_details_activation"
+>title="데이터 흐름 실행 세부 정보"
+>abstract="대상 데이터 흐름 실행 세부 사항에는 실시간 고객 프로필에서 가져온 세그먼트의 활성화 상태 및 지표에 대한 정보가 포함되어 있으며 고유한 ID를 생성합니다. To learn more, please review the metric definitions guide."
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_activation_batch"
@@ -143,7 +148,7 @@ ID는 프로필의 다른 패싯을 나타냅니다. 예를 들어 프로필에 
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profiles_received_batch"
->title="받은 프로필"
+>title="Profiles received"
 >abstract="데이터 플로우에서 받은 총 프로필 수 이 값은 60분마다 업데이트됩니다."
 >text="Learn more in documentation"
 
@@ -251,10 +256,10 @@ ID는 프로필의 다른 패싯을 나타냅니다. 예를 들어 프로필에 
 - **[!UICONTROL IMS 조직 ID]**: 데이터 흐름이 속한 IMS 조직입니다.
 - **[!UICONTROL 마지막 업데이트 날짜]**: 데이터 흐름 실행이 마지막으로 업데이트된 시간입니다.
 
-세부 사항 페이지에는 실패한 ID 목록과 제외된 ID도 표시됩니다. 오류 코드, ID 수 및 설명을 포함하여 실패한 ID와 제외된 ID에 대한 정보가 표시됩니다. 기본적으로 목록에 실패한 ID가 표시됩니다. 건너뛴 ID를 표시하려면 **[!UICONTROL 제외된 ID]** 토글.
+세부 사항 페이지에는 실패한 ID 목록과 제외된 ID도 표시됩니다. Information for both the failed and excluded identities is displayed, including the error code, identity count, and description. By default, the list displays the failed identities. 건너뛴 ID를 표시하려면 **[!UICONTROL 제외된 ID]** 토글.
 
 ![](../assets/ui/monitor-destinations/identities-excluded.png)
 
 ## 다음 단계
 
-이제 이 안내서를 통해 처리 시간, 활성화 비율 및 상태와 같은 모든 관련 정보를 포함하여 일괄 처리 및 스트리밍 대상 모두에 대한 데이터 흐름을 모니터링하는 방법을 알 수 있습니다. Platform의 데이터 플로우에 대한 자세한 내용은 [데이터 흐름 개요](../home.md). 대상에 대한 자세한 내용은 [대상 개요](../../destinations/home.md).
+By following this guide, you now know how to monitor dataflows for both batch and streaming destinations, including all the relevant information such as processing time, activation rate, and status. Platform의 데이터 플로우에 대한 자세한 내용은 [데이터 흐름 개요](../home.md). 대상에 대한 자세한 내용은 [대상 개요](../../destinations/home.md).
