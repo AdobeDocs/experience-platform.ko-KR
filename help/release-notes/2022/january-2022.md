@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform에 대한 최신 릴리스 노트입니다.
 exl-id: bcd52989-ef62-4ab9-866e-1d9e57b76a0c
-source-git-commit: 78f9b8434d577909ccb1c62211a802e05c8291e1
+source-git-commit: 8a26a69e6a244fc8a0d347e2814f0406713b1c9b
 workflow-type: tm+mt
-source-wordcount: '959'
-ht-degree: 5%
+source-wordcount: '1253'
+ht-degree: 4%
 
 ---
 
@@ -18,6 +18,7 @@ Adobe Experience Platform의 기존 기능 업데이트:
 - [경고](#alerts)
 - [[!DNL Data Prep]](#data-prep)
 - [[!DNL Dashboards]](#dashboards)
+- [[!DNL Destinations]](#destinations)
 - [쿼리 서비스](#query-service)
 - [샌드박스](#sandboxes)
 - [세분화 서비스](#segmentation)
@@ -60,30 +61,34 @@ Adobe Experience Platform은 일별 스냅샷 중에 캡처된 대로 조직의 
 
 자세한 내용은 [!DNL Data Prep]를 보려면 [[!DNL Data Prep] 개요](../../data-prep/home.md).
 
-<!--
-
 ## [!DNL Destinations] {#destinations}
 
-[!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
+[!DNL Destinations] 는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과의 사전 구축된 통합입니다. 대상을 사용하여 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례에 대해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
+
+**새로운 기능 또는 업데이트된 기능**
+
+| 기능 | 설명 |
+| ----------- | ----------- |
+| 동일 페이지 및 다음 페이지 개인화 | 동일한 페이지 및 다음 페이지 개인화 기능은 마케팅 및 고객 채널 간의 일관성을 위해 Experience Edge에서 애플리케이션에 대한 공유 및 타깃팅할 수 있는 사용자 보기를 제공합니다. 이러한 개인화는 [Adobe Target 연결](../../destinations/catalog/personalization/adobe-target-connection.md) 그리고 [사용자 지정 개인화 연결](../../destinations/catalog/personalization/custom-personalization.md). 동일한 페이지 또는 다음 페이지 개인화 캠페인을 구성하려면 다음을 참조하십시오. [전용 자습서](../../destinations/ui/configure-personalization-destinations.md). |
+| Marketo 대상 개선 사항 | Marketo Engage을 사용하는 Experience Platform 고객은 Marketo 데이터베이스를 통해 를 통해 Experience Platform에서 Marketo Engage으로 net-new person 레코드를 푸시할 수 있는 새로운 기능으로 극대화할 수 있습니다 [Marketo 대상 커넥터](/help/destinations/catalog/adobe/marketo-engage.md). Experience Platform에서 Marketo Engage으로 대상 세그먼트를 보낼 때 Marketo Engage 데이터베이스에 아직 존재하지 않는 세그먼트 내의 사람을 자동으로 해당 세그먼트에 추가할 수 있습니다. 자세한 내용은 [Marketo 정적 목록에 Adobe Experience Platform 세그먼트 푸시](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-platform-segment-to-a-marketo-static-list.html?lang=en) (자습서의 9단계는 net-new person 레코드를 Marketo에 푸시하는 방법을 나타냅니다.) |
+
+<!--
 
 | Feature | Description |
 | ----------- | ----------- |
-| Placeholder for next-hit personalization | Description |
-| Placeholder for batch monitoring | Description |
-| Placeholder for re-introducing scheduling in the UI | Description |
-| Placeholder for Marketo destination update | Description |
-
-
-**New destinations**
-
-| Destination | Description |
-| ----------- | ----------- |
-| Placeholder for Target | Description |
-| Placeholder for Custom Personalization | Description |
-
-For more general information on destinations, refer to the [destinations overview](../../destinations/home.md).
+| Batch destination monitoring and segment-level metrics | The destination monitoring functionality is now expanded from streaming destinations to also include batch destinations and segment-level metrics for your activation dataflows. For more information, read monitoring destinations dashboard, monitoring segment jobs dashboard, and segment-level view. |
+| Schedule editing in the UI for existing batch activation dataflows | This release introduces the option to edit the schedule of your existing activation dataflows to batch destinations. For more information, read [activate profile data to batch profile destinations](/help/destinations/ui/activate-batch-profile-destinations.md).  |
 
 -->
+
+**새 대상**
+
+| 대상 | 설명 |
+| ----------- | ----------- |
+| [Adobe Target 연결](../../destinations/catalog/personalization/adobe-target-connection.md) | Adobe Target은 웹 사이트, 모바일 앱 등에서 모든 인바운드 고객 상호 작용에서 실시간 AI 기반의 개인화 및 실험을 제공하는 애플리케이션입니다. Adobe Target은 Adobe Experience Platform의 개인화 연결입니다. |
+| [사용자 지정 개인화 연결](../../destinations/catalog/personalization/custom-personalization.md) | 이 개인화 연결은 Adobe Experience Platform에서 외부 개인화 플랫폼, 콘텐츠 관리 시스템, 광고 서버 및 고객 웹 사이트에서 실행 중인 기타 응용 프로그램으로 세그먼트 정보를 검색하는 방법을 제공합니다. |
+
+대상에 대한 자세한 내용은 [대상 개요](../../destinations/home.md).
 
 ## 쿼리 서비스 {#query-service}
 
