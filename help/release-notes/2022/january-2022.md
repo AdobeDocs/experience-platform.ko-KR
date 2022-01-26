@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform에 대한 최신 릴리스 노트입니다.
 exl-id: bcd52989-ef62-4ab9-866e-1d9e57b76a0c
-source-git-commit: 8a26a69e6a244fc8a0d347e2814f0406713b1c9b
+source-git-commit: 703e49a20fae0fbf527275e1385f596d01642954
 workflow-type: tm+mt
-source-wordcount: '1253'
+source-wordcount: '1329'
 ht-degree: 4%
 
 ---
@@ -69,17 +69,10 @@ Adobe Experience Platform은 일별 스냅샷 중에 캡처된 대로 조직의 
 
 | 기능 | 설명 |
 | ----------- | ----------- |
-| 동일 페이지 및 다음 페이지 개인화 | 동일한 페이지 및 다음 페이지 개인화 기능은 마케팅 및 고객 채널 간의 일관성을 위해 Experience Edge에서 애플리케이션에 대한 공유 및 타깃팅할 수 있는 사용자 보기를 제공합니다. 이러한 개인화는 [Adobe Target 연결](../../destinations/catalog/personalization/adobe-target-connection.md) 그리고 [사용자 지정 개인화 연결](../../destinations/catalog/personalization/custom-personalization.md). 동일한 페이지 또는 다음 페이지 개인화 캠페인을 구성하려면 다음을 참조하십시오. [전용 자습서](../../destinations/ui/configure-personalization-destinations.md). |
-| Marketo 대상 개선 사항 | Marketo Engage을 사용하는 Experience Platform 고객은 Marketo 데이터베이스를 통해 를 통해 Experience Platform에서 Marketo Engage으로 net-new person 레코드를 푸시할 수 있는 새로운 기능으로 극대화할 수 있습니다 [Marketo 대상 커넥터](/help/destinations/catalog/adobe/marketo-engage.md). Experience Platform에서 Marketo Engage으로 대상 세그먼트를 보낼 때 Marketo Engage 데이터베이스에 아직 존재하지 않는 세그먼트 내의 사람을 자동으로 해당 세그먼트에 추가할 수 있습니다. 자세한 내용은 [Marketo 정적 목록에 Adobe Experience Platform 세그먼트 푸시](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-platform-segment-to-a-marketo-static-list.html?lang=en) (자습서의 9단계는 net-new person 레코드를 Marketo에 푸시하는 방법을 나타냅니다.) |
-
-<!--
-
-| Feature | Description |
-| ----------- | ----------- |
-| Batch destination monitoring and segment-level metrics | The destination monitoring functionality is now expanded from streaming destinations to also include batch destinations and segment-level metrics for your activation dataflows. For more information, read monitoring destinations dashboard, monitoring segment jobs dashboard, and segment-level view. |
-| Schedule editing in the UI for existing batch activation dataflows | This release introduces the option to edit the schedule of your existing activation dataflows to batch destinations. For more information, read [activate profile data to batch profile destinations](/help/destinations/ui/activate-batch-profile-destinations.md).  |
-
--->
+| 동일 페이지 및 다음 페이지 개인화 | 다음 [동일한 페이지 및 다음 페이지 개인화 기능](../../destinations/ui/configure-personalization-destinations.md) 마케팅 채널과 고객 채널 간의 일관성을 위해 Experience Edge에서 애플리케이션을 위한 공유 타겟팅할 수 있는 사용자 보기를 제공합니다. 이러한 개인화는 [Adobe Target 연결](../../destinations/catalog/personalization/adobe-target-connection.md) 그리고 [사용자 지정 개인화 연결](../../destinations/catalog/personalization/custom-personalization.md). 동일한 페이지 또는 다음 페이지 개인화 캠페인을 구성하려면 다음을 참조하십시오. [전용 자습서](../../destinations/ui/configure-personalization-destinations.md). |
+| 배치 대상 모니터링 및 세그먼트 수준 지표 | 이제 대상 모니터링 기능이 스트리밍 대상에서 활성화 데이터 흐름에 대한 배치 대상 및 세그먼트 수준 지표도 포함하도록 확장되었습니다. 자세한 내용은 [대상 대시보드 모니터링](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard) 및 [세그먼트 수준 보기](/help/dataflows/ui/monitor-destinations.md#segment-level-view). |
+| 기존 배치 활성화 데이터 흐름에 대한 UI에서 편집 예약 | 이 릴리스에서는 기존 활성화 데이터 흐름의 일정을 일괄 처리 대상으로 편집하는 옵션이 제공됩니다. 자세한 내용은 [프로필 데이터를 배치 프로필 대상에 활성화](/help/destinations/ui/activate-batch-profile-destinations.md). |
+| Marketo 대상 개선 사항 | Marketo Engage을 사용하는 Experience Platform 고객은 Marketo 데이터베이스를 통해 를 통해 Experience Platform에서 Marketo Engage으로 net-new person 레코드를 푸시할 수 있는 새로운 기능으로 극대화할 수 있습니다 [Marketo 대상 커넥터](/help/destinations/catalog/adobe/marketo-engage.md). <br> Experience Platform에서 Marketo Engage으로 대상 세그먼트를 보낼 때 Marketo Engage 데이터베이스에 아직 존재하지 않는 세그먼트 내의 사람을 자동으로 해당 세그먼트에 추가할 수 있습니다. 자세한 내용은 [Marketo 정적 목록에 Adobe Experience Platform 세그먼트 푸시](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-platform-segment-to-a-marketo-static-list.html?lang=en) (자습서의 9단계는 net-new person 레코드를 Marketo에 푸시하는 방법을 나타냅니다.) |
 
 **새 대상**
 
