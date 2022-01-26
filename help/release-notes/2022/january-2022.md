@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform에 대한 최신 릴리스 노트입니다.
-source-git-commit: 641fcab89b849d91a075fa5058421950bc7fecd7
+source-git-commit: 9cd9307d54d0950d4f67d5d8cee9c6412a558275
 workflow-type: tm+mt
-source-wordcount: '431'
-ht-degree: 9%
+source-wordcount: '708'
+ht-degree: 6%
 
 ---
 
@@ -14,10 +14,12 @@ ht-degree: 9%
 
 Adobe Experience Platform의 기존 기능 업데이트:
 
-- [경고](#alerts)
-- [데이터 준비](#data-prep)
-- [샌드박스](#sandboxes)
-- [세분화 서비스](#segmentation)
+- [경고 {#alerts}](#alerts-alerts)
+- [[!DNL Data Prep] {#data-prep}](#dnl-data-prep-data-prep)
+- [[!DNL Dashboards] {#dashboards}](#dnl-dashboards-dashboards)
+- [쿼리 서비스 {#query-service}](#query-service-query-service)
+- [샌드박스 {#sandboxes}](#sandboxes-sandboxes)
+- [세분화 서비스 {#segmentation}](#segmentation-service-segmentation)
 
 ## 경고 {#alerts}
 
@@ -42,6 +44,29 @@ Platform의 경고에 대한 자세한 내용은 [경고 개요](../../observabi
 | 통합 매핑 경험 | Platform UI의 새로운 매핑 인터페이스는 지능형 매핑 권장 사항을 활용하고, 매핑 규칙을 수동으로 구성하고, 매핑 세트에 발생하는 모든 오류를 디버깅하는 일관된 매핑 경험을 제공합니다. 자세한 내용은 [[!DNL Data Prep] UI 안내서](../../data-prep/home.md). |
 
 자세한 내용은 [!DNL Data Prep]를 보려면 [[!DNL Data Prep] 개요](../../data-prep/home.md).
+
+## [!DNL Dashboards] {#dashboards}
+
+[!DNL Dashboards] 예쁜 거 해
+
+| 기능 | 설명 |
+|---------|-------------|
+| 지능형 캡션 | 기계 학습 알고리즘은 프로필 및 대상 데이터에 대한 인사이트를 자동으로 제공하고 30~90일 또는 12개월 기간 동안의 패턴 및 트렌드를 보여줍니다. 캡션에는 다음 정보가 포함됩니다 <ul><li>전체 모양 및 통계</li><li>트렌드 및 갑작스러운 변경</li><li>계절별 패턴</li><li>예기치 않은 예외 항목</li></ul> 자세한 내용은 [프로필 대시보드](../../dashboards/guides/profiles.md#profiles-count-trend) 및 [세그먼트 대시보드](../../dashboards/guides/segments.md#audience-size-trend) 설명서. |
+| 대시보드 인벤토리 | 중앙 위치에서 PowerBI와 같은 설치된 통합을 포함하여 프로필, 세그먼트 및 대상 대시보드에 대해 사전 구성된 보고서에 액세스합니다. 자세한 내용은 [[!DNL Dashboards] 개요](../../dashboards/home.md). |
+| PowerBI 보고서 템플릿 | 새로운 PowerBI 차트를 사용하여 프로필, 세그먼트 및 대상 보고 데이터 모델에서 지표를 작성하고 사용자 지정하거나 확장합니다. 자동 설치 워크플로우를 사용하면 PowerBI 환경 내에서 조직 전체에서 마케팅 통찰력을 공유할 수 있습니다. 자세한 내용은 [[!DNL Dashboards] 개요](../../dashboards/home.md). |
+
+자세한 내용은 [!DNL Dashboards]를 보려면 [[!DNL Dashboards] 개요](../../dashboards/home.md).
+
+## 쿼리 서비스 {#query-service}
+
+[!DNL Query Service] 표준 SQL을 사용하여 Adobe Experience Platform에서 데이터를 쿼리할 수 있습니다. [!DNL Data Lake]. 에서 모든 데이터 세트에 가입할 수 있습니다 [!DNL Data Lake] 쿼리 결과를 보고 또는 Data Science Workspace에 사용하거나 실시간 고객 프로필에 수집하기 위한 새로운 데이터 세트로 캡처합니다.
+
+| 기능 | 설명 |
+|----------------------|-----------------------|
+| 익명 블록 | 익명 블록 SQL 구성을 사용하면 Query Service의 대규모 데이터 준비 작업을 작은 작업으로 분류한 다음 증분 데이터 로드를 위해 다시 사용하고 순서대로 실행할 수 있습니다. 자세한 내용은 [쿼리 서비스 개요](../../query-service/home.md). |
+| 데이터 집합 조직 | 샌드박스 내의 데이터 자산 양이 증가함에 따라 Query Service에서 사용할 데이터 자산을 정리하기 위한 일관된 논리 데이터 구조를 제공합니다. 자세한 내용은 [쿼리 서비스 개요](../../query-service/home.md). |
+
+자세한 내용은 [!DNL Query Service]를 보려면 [[!DNL Query Service] 개요](../../query-service/home.md).
 
 ## 샌드박스 {#sandboxes}
 
