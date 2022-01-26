@@ -1,24 +1,20 @@
 ---
 keywords: target 개인화; 대상; experience platform target 대상;adobe target 대상
-title: Adobe Target 연결(베타)
-description: Adobe Target은 웹 사이트, 모바일 앱 등에서 모든 인바운드 고객 상호 작용에서 실시간, 1:1 및 AI 기반의 개인화 및 실험을 제공하는 애플리케이션입니다.
+title: Adobe Target 연결
+description: Adobe Target은 웹 사이트, 모바일 앱 등에서 모든 인바운드 고객 상호 작용에 실시간 AI 기반의 개인화 및 실험 기능을 제공하는 애플리케이션입니다.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: fae3d9a5aff3e84354831026e9724e1c85d32b5c
+source-git-commit: 8845bb42fe1a47f1bcd6521f7886c1582d209993
 workflow-type: tm+mt
-source-wordcount: '453'
+source-wordcount: '432'
 ht-degree: 0%
 
 ---
 
-# Adobe Target 연결(베타) {#adobe-target-connection}
+# Adobe Target 연결 {#adobe-target-connection}
 
 ## 개요 {#overview}
 
->[!IMPORTANT]
->
->Adobe Experience Platform의 Adobe Target 연결은 현재 베타 버전입니다. 설명서 및 기능은 변경될 수 있습니다.
-
-Adobe Target은 웹 사이트, 모바일 앱 등에서 모든 인바운드 고객 상호 작용에서 실시간, 1:1 , AI 기반의 개인화 및 실험을 제공하는 애플리케이션입니다.
+Adobe Target은 웹 사이트, 모바일 앱 등에서 모든 인바운드 고객 상호 작용에 실시간 AI 기반의 개인화 및 실험 기능을 제공하는 애플리케이션입니다.
 
 Adobe Target은 Adobe Experience Platform의 개인화 연결입니다.
 

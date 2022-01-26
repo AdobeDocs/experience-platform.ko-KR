@@ -1,28 +1,24 @@
 ---
 keywords: 사용자 지정 개인화; 대상; experience platform 사용자 지정 대상
 title: 사용자 지정 개인화 연결(베타)
-description: 이 대상은 Adobe Experience Platform에서 세그먼트 정보를 검색하는 방법으로 사이트에서 실행 중인 외부 개인화, 콘텐츠 관리 시스템, 광고 서버 및 기타 애플리케이션을 제공합니다. 이 대상은 사용자 프로필의 세그먼트 멤버십을 기반으로 실시간 1:1 및 개인화를 제공합니다.
+description: 이 대상은 Adobe Experience Platform에서 세그먼트 정보를 검색하는 방법으로 사이트에서 실행 중인 외부 개인화, 콘텐츠 관리 시스템, 광고 서버 및 기타 애플리케이션을 제공합니다. 이 대상은 사용자 프로필 세그먼트 멤버십에 따라 실시간 개인화를 제공합니다.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 50ab34cb9147cf880e199afad88e718875fb591f
+source-git-commit: 8845bb42fe1a47f1bcd6521f7886c1582d209993
 workflow-type: tm+mt
-source-wordcount: '586'
-ht-degree: 0%
+source-wordcount: '575'
+ht-degree: 1%
 
 ---
 
-# 사용자 지정 개인화 연결(베타) {#custom-personalization-connection}
+# 사용자 지정 개인화 연결 {#custom-personalization-connection}
 
 ## 개요 {#overview}
-
->[!IMPORTANT]
->
->Adobe Experience Platform의 사용자 지정 개인화 연결은 현재 베타에 있습니다. 설명서 및 기능은 변경될 수 있습니다.
 
 이 대상은 Adobe Experience Platform에서 외부 개인화 플랫폼, 콘텐츠 관리 시스템, 광고 서버 및 고객 웹 사이트에서 실행 중인 기타 응용 프로그램으로 세그먼트 정보를 검색하는 방법을 제공합니다.
 
 ## 전제 조건 {#prerequisites}
 
-이 통합은 [Adobe Experience Platform Web SDK](../../../edge/home.md). 이 대상을 사용하려면 이 SDK를 사용해야 합니다.
+이 통합은 [Adobe Experience Platform Web SDK](../../../edge/home.md) 또는 [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/). 이 SDK 중 하나를 사용하여 이 대상을 사용해야 합니다.
 
 ## 내보내기 유형 {#export-type}
 
@@ -73,12 +69,10 @@ While [설정](../../ui/connect-destination.md) 이 대상을 사용하려면 �
       "alias":"personalizationAlias",
       "segments":[
          {
-            "id":"399eb3e7-3d50-47d3-ad30-a5ad99e8ab77",
-            "mergePolicyId":"69638c01-2099-4032-8b41-84bee8ebcfa4"
+            "id":"399eb3e7-3d50-47d3-ad30-a5ad99e8ab77"
          },
          {
-            "id":"499eb3e7-3d50-47d3-ad30-a5ad99e8ab77",
-            "mergePolicyId":"69638c01-2099-4032-8b41-84bee8ebcfa4"
+            "id":"499eb3e7-3d50-47d3-ad30-a5ad99e8ab77"
          }
       ]
    }
