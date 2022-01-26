@@ -5,9 +5,9 @@ title: Azure 이벤트 허브 소스 커넥터 개요
 topic-legacy: overview
 description: API 또는 사용자 인터페이스를 사용하여 Azure Event Hub를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: b4d4bc7f-2241-482d-a5c2-4422c31705bf
-source-git-commit: 832e32c31be944fff1101fa409e56f5c3e27d325
+source-git-commit: b64054859cbd88687dd05b0c65e51d0b2ef2a7b3
 workflow-type: tm+mt
-source-wordcount: '506'
+source-wordcount: '534'
 ht-degree: 0%
 
 ---
@@ -35,13 +35,29 @@ Adobe Experience Platform은 AWS, [!DNL Google Cloud Platform], 및 [!DNL Azure]
 
 ## 가상 네트워크를 사용하여 연결 [!DNL Event Hubs] 플랫폼
 
-연결할 가상 네트워크를 설정할 수 있습니다 [!DNL Event Hubs] 방화벽 측정값을 사용하도록 설정하는 동안 플랫폼에 문의하십시오. 가상 네트워크를 설정하려면 다음 위치로 이동하십시오 [[!DNL Event Hubs] 네트워크 규칙 집합 문서](https://docs.microsoft.com/en-us/rest/api/eventhub/preview/namespaces-network-rule-set/create-or-update-network-rule-set#code-try-0) 그런 다음 **사용해 보기** 를 클릭합니다. 다음으로, [!DNL Azure] 자격 증명을 사용하여 계정을 만든 다음 [!DNL Event Hubs] Platform으로 가져올 네임스페이스, 리소스 그룹 및 구독입니다.
+연결할 가상 네트워크를 설정할 수 있습니다 [!DNL Event Hubs] 방화벽 측정값을 사용하도록 설정하는 동안 플랫폼에 문의하십시오. 가상 네트워크를 설정하려면 다음 위치로 이동하십시오 [[!DNL Event Hubs] 네트워크 규칙 집합 문서](https://docs.microsoft.com/en-us/rest/api/eventhub/preview/namespaces-network-rule-set/create-or-update-network-rule-set#code-try-0) 및 아래 나열된 단계를 수행합니다.
 
-설정되면 를 업데이트합니다 **요청 본문** 네트워크 영역에 해당하는 JSON과 함께 아래 목록에서 해당 JSON을 사용할 수 있습니다.
+* 선택 **사용해 보기** REST API 패널에서
+* 인증 [!DNL Azure] 동일한 브라우저에서 자격 증명을 사용한 계정
+* 을(를) 선택합니다 [!DNL Event Hubs] Platform으로 가져올 네임스페이스, 리소스 그룹 및 구독을 선택한 다음 **실행**;
+* 표시되는 JSON 본문에서 다음 플랫폼 서브넷을 추가합니다 `virtualNetworkRules` 내부 `properties`:
 
->[!TIP]
+
+>[!IMPORTANT]
 >
->이 호출 후에 삭제되므로 기존 방화벽 IP 필터링 규칙을 백업해야 합니다.
+>업데이트하기 전에 받은 JSON 본문을 백업해야 합니다 `virtualNetworkRules` 기존 IP 필터링 규칙을 포함하고 있는 플랫폼 서브넷과 함께 제공됩니다. 그렇지 않으면 호출 후에 규칙이 삭제됩니다.
+
+
+```json
+{
+    "subnet": {
+        "id": "/subscriptions/93f21779-b1fd-49ee-8547-2cdbc979a44f/resourceGroups/ethos_12_prod_va7_network/providers/Microsoft.Network/virtualNetworks/ethos_12_prod_va7_network_10_19_144_0_22/subnets/ethos_12_prod_va7_network_10_19_144_0_22"
+    },
+    "ignoreMissingVnetServiceEndpoint": true
+}
+```
+
+플랫폼 서브넷의 다른 영역에 대해서는 아래 목록을 참조하십시오.
 
 ### VA7: 북미
 
@@ -108,10 +124,10 @@ Adobe Experience Platform은 AWS, [!DNL Google Cloud Platform], 및 [!DNL Azure]
 
 ### API 사용
 
-- [Flow Service API를 사용하여 이벤트 허브 소스 연결을 만듭니다](../../tutorials/api/create/cloud-storage/eventhub.md)
-- [Flow Service API를 사용하여 스트리밍 데이터를 수집합니다](../../tutorials/api/collect/streaming.md)
+* [Flow Service API를 사용하여 이벤트 허브 소스 연결을 만듭니다](../../tutorials/api/create/cloud-storage/eventhub.md)
+* [Flow Service API를 사용하여 스트리밍 데이터를 수집합니다](../../tutorials/api/collect/streaming.md)
 
 ### UI 사용
 
-- [UI에서 이벤트 허브 소스 연결 만들기](../../tutorials/ui/create/cloud-storage/eventhub.md)
-- [UI에서 클라우드 스토리지 연결에 대한 데이터 흐름 구성](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
+* [UI에서 이벤트 허브 소스 연결 만들기](../../tutorials/ui/create/cloud-storage/eventhub.md)
+* [UI에서 클라우드 스토리지 연결에 대한 데이터 흐름 구성](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
