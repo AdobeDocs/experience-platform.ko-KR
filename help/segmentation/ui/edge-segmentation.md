@@ -5,20 +5,24 @@ title: Edge Segmentation UI 안내서
 topic-legacy: ui guide
 description: Edge Segmentation은 Platform의 세그먼트를 즉시 평가하여 동일한 페이지와 다음 페이지 개인화 사용 사례를 가능하게 하는 기능입니다.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: bb5a56557ce162395511ca9a3a2b98726ce6c190
+source-git-commit: f168566d03485176b16b6d3833c37930b38b0149
 workflow-type: tm+mt
-source-wordcount: '696'
-ht-degree: 1%
+source-wordcount: '744'
+ht-degree: 0%
 
 ---
 
-# Edge segmentation UI 안내서(베타)
+# Edge Segmentation UI 안내서
+
+>[!NOTE]
+>
+>이제 모든 Platform 사용자가 Edge 세그멘테이션을 사용할 수 있습니다. 베타 동안 에지 세그먼트를 만든 경우 이러한 세그먼트가 계속 작동합니다.
+
+에지 세그먼테이션은 즉시 Adobe Experience Platform의 세그먼트를 평가하는 기능입니다 [끝](../../edge/home.md), 동일한 페이지 및 다음 페이지 개인화 사용 사례를 활성화합니다.
 
 >[!IMPORTANT]
 >
->Edge 세그먼테이션은 현재 베타 버전입니다. 설명서 및 기능은 변경될 수 있습니다.
-
-에지 세그먼테이션은 즉시 Adobe Experience Platform의 세그먼트를 평가하는 기능입니다 [끝](../../edge/home.md), 동일한 페이지 및 다음 페이지 개인화 사용 사례를 활성화합니다.
+> 에지 데이터는 수집된 위치와 가장 가까운 Edge Server 위치에 저장되며, 허브(또는 주체) Adobe Experience Platform 데이터 센터로 지정된 위치 이외의 위치에 저장할 수 있습니다.
 
 ## 에지 세그멘테이션 쿼리 유형
 

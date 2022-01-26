@@ -5,20 +5,26 @@ title: 'API를 사용한 Edge Segmentation '
 topic-legacy: developer guide
 description: 이 문서에는 Adobe Experience Platform 세그멘테이션 서비스 API와 함께 에지 세그멘테이션을 사용하는 방법에 대한 예가 나와 있습니다.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: 4d2c6385decd5b789a975165a87bc80f9b008cd7
+source-git-commit: f168566d03485176b16b6d3833c37930b38b0149
 workflow-type: tm+mt
-source-wordcount: '942'
-ht-degree: 2%
+source-wordcount: '989'
+ht-degree: 1%
 
 ---
 
-# 에지 세그먼테이션(베타)
+# 에지 세그멘테이션
 
 >[!NOTE]
 >
->다음 문서에서는 API를 사용하여 에지 세그멘테이션을 수행하는 방법을 설명합니다. UI를 사용하여 에지 세분화를 수행하는 방법에 대한 자세한 내용은 [edge segmentation UI 안내서](../ui/edge-segmentation.md). 또한 에지 세그먼테이션은 현재 베타에 있습니다. 설명서 및 기능은 변경될 수 있습니다.
+>다음 문서에서는 API를 사용하여 에지 세그멘테이션을 수행하는 방법을 설명합니다. UI를 사용하여 에지 세분화를 수행하는 방법에 대한 자세한 내용은 [edge segmentation UI 안내서](../ui/edge-segmentation.md).
+>
+>이제 모든 Platform 사용자가 Edge 세그멘테이션을 사용할 수 있습니다. 베타 동안 에지 세그먼트를 만든 경우 이러한 세그먼트가 계속 작동합니다.
 
 Edge Segmentation은 Adobe Experience Platform의 세그먼트를 즉시 평가하여 동일한 페이지와 다음 페이지 개인화 사용 사례를 가능하게 하는 기능입니다.
+
+>[!IMPORTANT]
+>
+> 에지 데이터는 수집된 위치와 가장 가까운 Edge Server 위치에 저장되며, 허브(또는 주체) Adobe Experience Platform 데이터 센터로 지정된 위치 이외의 위치에 저장할 수 있습니다.
 
 ## 시작하기
 
@@ -52,7 +58,7 @@ Experience Platform API 엔드포인트를 성공적으로 호출하려면 다�
 
 ## 에지 세그먼테이션에 대해 활성화된 모든 세그먼트 검색
 
-IMS 조직 내에서 Edge Segmentation에 사용할 수 있는 모든 세그먼트 목록은 `/segment/definitions` 엔드포인트.
+IMS 조직에 GET 요청을 수행하여 Edge Segmentation에 대해 활성화된 모든 세그먼트 목록을 검색할 수 있습니다 `/segment/definitions` 엔드포인트.
 
 **API 형식**
 
