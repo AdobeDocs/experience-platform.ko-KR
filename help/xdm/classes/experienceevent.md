@@ -5,7 +5,7 @@ title: XDM ExperienceEvent 클래스
 topic-legacy: overview
 description: 이 문서에서는 XDM ExperienceEvent 클래스에 대한 개요와 이벤트 데이터 모델링에 대한 모범 사례를 제공합니다.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: 64e76c456ac5f59a2a1996e58eda405f1b27efa8
+source-git-commit: f5d341daffd7d4d77ee816cc7537b0d0c52ca636
 workflow-type: tm+mt
 source-wordcount: '1758'
 ht-degree: 1%
@@ -53,7 +53,7 @@ ht-degree: 1%
 
 [Adobe Experience Platform 데이터 준비](../../data-prep/home.md) xdm을 통해 데이터를 매핑, 변환 및 XDM에서 확인할 수 있습니다. 사용 가능 [매핑 함수](../../data-prep/functions.md) 서비스에서 Experience Platform으로 수집할 때 논리 연산자를 호출하여 다중 이벤트 레코드의 데이터를 우선 순위 지정, 변환 및/또는 통합할 수 있습니다. 위의 예에서 `eventType` 둘 다 발생할 때마다 &quot;페이지 보기&quot;보다 &quot;제품 보기&quot;를 우선시하는 계산된 필드입니다.
 
-UI를 통해 Platform으로 데이터를 수동으로 수집하는 경우, [계산된 필드](../../data-prep/calculated-fields.md) 를 참조하십시오.
+UI를 통해 Platform으로 데이터를 수동으로 수집하는 경우, [계산된 필드](../../data-prep/ui/mapping.md#calculated-fields) 를 참조하십시오.
 
 소스 연결을 사용하여 Platform으로 데이터를 스트리밍하는 경우 계산된 필드를 대신 사용하도록 소스를 구성할 수 있습니다. 자세한 내용은 [특정 소스에 대한 설명서](../../sources/home.md) 를 참조하십시오.
 

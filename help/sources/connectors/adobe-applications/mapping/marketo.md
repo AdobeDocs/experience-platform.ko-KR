@@ -5,7 +5,7 @@ title: Marketo Engage 소스에 대한 매핑 필드
 topic-legacy: overview
 description: 아래 표에는 Marketo 데이터 세트의 필드와 해당 XDM 필드 간의 매핑이 포함되어 있습니다.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: 40e70903cd1a67f5012f6e7c8f09b6e91b3ae0ef
+source-git-commit: f5d341daffd7d4d77ee816cc7537b0d0c52ca636
 workflow-type: tm+mt
 source-wordcount: '532'
 ht-degree: 8%
@@ -343,7 +343,7 @@ ht-degree: 8%
 
 >[!NOTE]
 >
->다음 `to_object('ECID',arrays_to_objects('id',explode(ecids)))` 소스 필드는 를 사용하여 추가해야 하는 계산된 필드입니다 [!UICONTROL 계산된 필드 추가] 플랫폼 UI에 있는 옵션. 다음에서 자습서를 참조하십시오. [계산된 필드 추가](../../../../data-prep/calculated-fields.md) 추가 정보.
+>다음 `to_object('ECID',arrays_to_objects('id',explode(ecids)))` 소스 필드는 를 사용하여 추가해야 하는 계산된 필드입니다 [!UICONTROL 계산된 필드 추가] 플랫폼 UI에 있는 옵션. 다음에서 자습서를 참조하십시오. [계산된 필드 추가](../../../../data-prep/ui/mapping.md#calculated-fields) 추가 정보.
 
 ## 다음 단계
 
