@@ -5,9 +5,9 @@ title: 쿼리 서비스의 SQL 구문
 topic-legacy: syntax
 description: 이 문서에서는 Adobe Experience Platform 쿼리 서비스에서 지원하는 SQL 구문을 보여줍니다.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: c2c543e64a4f2aef0064abf5e4fb9d7f2738159b
+source-git-commit: 91fc4c50eb9a5ab64de3445b47465eec74a61736
 workflow-type: tm+mt
-source-wordcount: '2207'
+source-wordcount: '2301'
 ht-degree: 1%
 
 ---
@@ -343,6 +343,23 @@ EXCEPTION
     SELECT 'ERROR';
 END;
 ```
+
+## 데이터 자산 조직
+
+Adobe Experience Platform 데이터 레이크 내에서 데이터가 증가할 때 데이터 자산을 논리적으로 구성하는 것이 중요합니다. Query Service는 샌드박스 내의 데이터 자산을 논리적으로 그룹화할 수 있는 SQL 구문을 확장합니다. 이 조직 방법을 사용하면 물리적으로 이동할 필요 없이 스키마 간에 데이터 자산을 공유할 수 있습니다.
+
+데이터를 논리적으로 구성할 수 있도록 표준 SQL 구문을 사용하는 다음 SQL 구문이 지원됩니다.
+
+```SQL
+CREATE DATABASE dg1;
+CREATE SCHEMA dg1.schema1;
+CREATE table t1 ...;
+CREATE view v1 ...;
+ALTER TABLE t1 ADD PRIMARY KEY (c1) NOT ENFORCED;
+ALTER TABLE t2 ADD FOREIGN KEY (c1) REFERENCES t1(c1) NOT ENFORCED;
+```
+
+다음 안내서를 참조하십시오. [데이터 자산의 논리 조직](../best-practices/organize-data-assets.md) 쿼리 서비스 모범 사례에 대한 자세한 설명을 참조하십시오.
 
 ## [!DNL Spark] SQL 명령
 
