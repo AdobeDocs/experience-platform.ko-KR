@@ -6,9 +6,9 @@ seo-title: Activate audience data to batch profile export destinations
 description: 세그먼트를 배치 프로필 기반 대상으로 보내 Adobe Experience Platform에서 보유한 대상 데이터를 활성화하는 방법을 알아봅니다.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 7bafa87de874c6be90b80e4a899c02fd3868290e
+source-git-commit: 551b07eac95b560950fe2d70fd2a981ae3a29252
 workflow-type: tm+mt
-source-wordcount: '2193'
+source-wordcount: '2188'
 ht-degree: 0%
 
 ---
@@ -51,7 +51,7 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_schedule"
 >title="예약"
->abstract="세그먼트를 저장한 후에는 파일 내보내기 유형(전체 파일 또는 증분 파일)과 예약을 변경할 수 없습니다."
+>abstract="파일 내보내기 유형(전체 파일 또는 증분 파일)과 내보내기 빈도를 설정합니다."
 >additional-url="https://www.adobe.com/go/destinations-profile-batch-en" text="자세한 내용은 문서에서 알아보십시오"
 
 [!DNL Adobe Experience Platform] 이메일 마케팅 및 클라우드 스토리지 대상의 데이터를 다음과 같은 형태로 내보냅니다. [!DNL CSV] 파일. 에서 **[!UICONTROL 예약]** 페이지에서 내보낼 각 세그먼트의 일정 및 파일 이름을 구성할 수 있습니다. 예약을 구성해야 하지만 파일 이름을 구성하는 것은 선택 사항입니다.
