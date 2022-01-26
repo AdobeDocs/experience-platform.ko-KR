@@ -5,7 +5,7 @@ title: 샌드박스 UI 안내서
 topic-legacy: user guide
 description: 이 문서에서는 Adobe Experience Platform 사용자 인터페이스의 샌드박스와 관련된 다양한 작업을 수행하는 방법에 대해 설명합니다.
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
-source-git-commit: 59b608ba06028f7f345f6a59dab333a4fdf2d225
+source-git-commit: 2fb972b0ec8d1f679c6ce104a439265b5cc4d535
 workflow-type: tm+mt
 source-wordcount: '770'
 ht-degree: 1%
@@ -88,7 +88,7 @@ Experience Platform에서 샌드박스를 사용하는 방법에 대한 간단�
 
 >[!WARNING]
 >
->기본 프로덕션 샌드박스는 삭제할 수 없습니다. 그러나 사용자 제작 프로덕션 샌드박스는 [!DNL Audience Manager] 또는 [!DNL Audience Core Service] 경고 메시지 후에 삭제할 수 있습니다.
+>기본 프로덕션 샌드박스는 삭제할 수 없습니다. 그러나 다음 2방향 세그먼트 공유에 사용되는 사용자가 만든 모든 프로덕션 샌드박스 [!DNL Audience Manager] 또는 [!DNL Audience Core Service] 경고 메시지 후에 삭제할 수 있습니다.
 
 프로덕션 또는 개발 샌드박스를 삭제하면 권한을 포함하여 해당 샌드박스와 연결된 모든 리소스가 영구적으로 제거됩니다.
 
