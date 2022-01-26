@@ -4,9 +4,9 @@ title: Experience Platform 대시보드 소개
 type: Documentation
 description: Adobe Experience Platform에서 여러 대시보드를 탐색하여 일별 스냅샷 중에 캡처된 조직 데이터에 대한 중요한 정보를 봅니다.
 exl-id: d56cb139-392d-4bbc-97ec-202a0c8a2863
-source-git-commit: e927dbef8a3028155e907e0ca05c17c29fb74cf1
+source-git-commit: e7ff48d6aa7d7f70688081df45ae2d36da741eb4
 workflow-type: tm+mt
-source-wordcount: '252'
+source-wordcount: '309'
 ht-degree: 0%
 
 ---
@@ -22,13 +22,19 @@ Adobe Experience Platform은 일별 스냅샷 중에 캡처된 대로 조직의 
 
 ## 대시보드 시작
 
-대시보드에 액세스하려면 플랫폼 사용자 인터페이스(UI) 내에서 해당 섹션으로 이동합니다. 섹션에서 **[!UICONTROL 개요]** 탭이 자동으로 선택되어 있지 않으면 선택하여 대시보드를 봅니다.
+대시보드를 보고 관리하려면 **[!UICONTROL 대시보드]** Experience Platform 사용자 인터페이스(UI)에서 **[!UICONTROL 찾아보기]** 탭 을 클릭하여 대시보드 인벤토리에 액세스합니다.
+
+UI 내에서 보려는 대시보드에 대한 적절한 섹션으로 이동하여 대시보드에 액세스할 수도 있습니다. 예를 들어 프로필에 대한 대시보드를 보려면 **[!UICONTROL 프로필]** 작업 공간 및 선택 **[!UICONTROL 개요]** 탭.
 
 스냅샷의 데이터는 스냅샷을 가져온 특정 시점의 데이터와 동일하게 표시됩니다. 즉, 스냅샷은 대략적인 데이터 샘플이 아니며, 대시보드가 실시간으로 업데이트되지 않습니다.
 
 >[!NOTE]
 >
 >스냅샷을 생성하기 때문에 데이터가 변경된 사항이나 업데이트는 다음 스냅샷을 가져올 때까지 대시보드에 반영되지 않습니다.
+
+## 대시보드 인벤토리
+
+를 사용하는 방법에 대한 자세한 단계는 **[!UICONTROL 대시보드]** 작업 영역에서 사용 가능한 모든 대시보드를 보려면 [대시보드 인벤토리 안내서](./inventory.md).
 
 ## 사용 가능한 대시보드
 
