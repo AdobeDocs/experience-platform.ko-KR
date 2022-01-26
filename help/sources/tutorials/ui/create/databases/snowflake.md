@@ -5,7 +5,7 @@ topic-legacy: overview
 type: Tutorial
 description: Adobe Experience Platform UI를 사용하여 Snowflake 소스 연결을 만드는 방법을 알아봅니다.
 exl-id: fb2038b9-7f27-4818-b5de-cc8072122127
-source-git-commit: 76b3e3e9bcb27eb2bd6981ae6eb109410ae16336
+source-git-commit: 0928da0ad15ce23d3677fec7b9866d079f3db407
 workflow-type: tm+mt
 source-wordcount: '461'
 ht-degree: 1%
@@ -38,7 +38,7 @@ Snowflake 계정에 액세스하려면 [!DNL Platform], 다음 인증 값을 제
 | 데이터베이스 | 다음 [!DNL Snowflake] 데이터베이스에 Platform을 가져올 데이터가 포함되어 있습니다. |
 | 사용자 이름 | 사용자 이름 [!DNL Snowflake] 계정이 필요합니다. |
 | 암호 | 의 암호 [!DNL Snowflake] 사용자 계정. |
-| 연결 문자열 | 에 연결하는 데 사용되는 연결 문자열입니다 [!DNL Snowflake] 인스턴스. 에 대한 연결 문자열 패턴 [!DNL Snowflake] is `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}`. |
+| 연결 문자열 | 에 연결하는 데 사용되는 연결 문자열입니다 [!DNL Snowflake] 인스턴스. 에 대한 연결 문자열 패턴 [!DNL Snowflake] is `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}` |
 
 이러한 값에 대한 자세한 내용은 [이 Snowflake 문서](https://docs.snowflake.com/en/user-guide/oauth-custom.html).
 
