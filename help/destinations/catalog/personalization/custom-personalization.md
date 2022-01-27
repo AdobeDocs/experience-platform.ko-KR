@@ -3,7 +3,7 @@ keywords: 사용자 지정 개인화; 대상; experience platform 사용자 지�
 title: 사용자 지정 개인화 연결
 description: 이 대상은 Adobe Experience Platform에서 세그먼트 정보를 검색하는 방법으로 사이트에서 실행 중인 외부 개인화, 콘텐츠 관리 시스템, 광고 서버 및 기타 애플리케이션을 제공합니다. 이 대상은 사용자 프로필 세그먼트 멤버십에 따라 실시간 개인화를 제공합니다.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: dd9493077706b102467493e90b363ac202550eee
+source-git-commit: cfbf8fb29d15badd10bafe35c558d95e534d23e8
 workflow-type: tm+mt
 source-wordcount: '574'
 ht-degree: 1%
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 ## 전제 조건 {#prerequisites}
 
-이 통합은 [Adobe Experience Platform Web SDK](../../../edge/home.md) 또는 [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/). 이 SDK 중 하나를 사용하여 이 대상을 사용해야 합니다.
+이 통합은 [Adobe Experience Platform Web SDK](../../../edge/home.md) 또는 [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/). 이 대상을 사용하려면 이 SDK 중 하나를 사용해야 합니다.
 
 ## 내보내기 유형 {#export-type}
 
