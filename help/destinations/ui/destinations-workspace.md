@@ -4,45 +4,45 @@ title: 대상 작업 공간
 description: 대상 작업 영역은 카탈로그, 찾아보기, 계정 및 시스템 보기의 네 섹션으로 구성됩니다. 이러한 내용은 아래 섹션에 설명되어 있습니다.
 seo-description: In Adobe Experience Platform, select Destinations from the left navigation bar to access the destinations workspace.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: f4721d3f114357b25517e4e66f1f626f82621c34
+source-git-commit: 7356802ee5bb0c5c05b224d9aa5f0e32cf1de843
 workflow-type: tm+mt
-source-wordcount: '858'
+source-wordcount: '883'
 ht-degree: 2%
 
 ---
 
 # 대상 작업 공간 {#destinations-workspace}
 
-Adobe Experience Platform의 왼쪽 탐색 막대에서 **[!UICONTROL 대상]**&#x200B;을 선택하여 [!UICONTROL 대상] 작업 공간에 액세스합니다.
+Adobe Experience Platform에서 **[!UICONTROL 대상]** 왼쪽 탐색 모음에서 를 클릭하여 [!UICONTROL 대상] 작업 공간.
 
-[!UICONTROL 대상] 작업 공간은 아래 섹션에 설명된 5개 섹션, [!UICONTROL 개요], [!UICONTROL 카탈로그], [!UICONTROL 찾아보기], [!UICONTROL 계정] 및 [!UICONTROL 시스템 보기]로 구성됩니다.
+다음 [!UICONTROL 대상] 작업 공간은 다섯 개의 섹션으로 구성됩니다. [!UICONTROL 개요], [!UICONTROL 카탈로그], [!UICONTROL 찾아보기], [!UICONTROL 계정], 및 [!UICONTROL 시스템 보기]아래의 섹션에 설명되어 있습니다.
 
 ![대상 - 개요](../assets/ui/workspace/destinations-overview.png)
 
 ## [!UICONTROL 개요] {#overview}
 
-**[!UICONTROL 개요]** 탭에는 조직의 대상 데이터와 관련된 주요 지표를 제공하는 [!UICONTROL 대상] 대시보드가 표시됩니다. 자세한 내용은 [[!UICONTROL 대상] 대시보드 안내서](../../dashboards/guides/destinations.md)를 참조하십시오.
+다음 **[!UICONTROL 개요]** 탭이 표시됩니다 [!UICONTROL 대상] 대시보드, 조직의 대상 데이터와 관련된 주요 지표를 제공합니다. 자세한 내용은 [[!UICONTROL 대상] 대시보드 안내서](../../dashboards/guides/destinations.md).
 
 >[!NOTE]
 >
->조직이 Experience Platform을 처음 사용하고 아직 활성 대상이 없는 경우 [!UICONTROL 대상] 대시보드 및 [!UICONTROL 개요] 탭이 표시되지 않습니다. 대신 왼쪽 탐색에서 [!UICONTROL 대상]을 선택하면 [[!UICONTROL 카탈로그] 탭](#catalog)이 표시됩니다.
+>조직에서 Experience Platform을 처음 사용하고 아직 활성 대상이 없는 경우 [!UICONTROL 대상] 대시보드 및 [!UICONTROL 개요] 탭이 표시되지 않습니다. 대신, 선택 [!UICONTROL 대상] 왼쪽 탐색에서 는 [[!UICONTROL 카탈로그] 탭](#catalog).
 
 ![](../../dashboards/images/destinations/dashboard-overview.png)
 
 ## [!UICONTROL 카탈로그] {#catalog}
 
-**[!UICONTROL 카탈로그]** 탭에는 [!DNL Platform]에서 데이터를 보낼 수 있는 모든 대상 목록이 표시됩니다.
+다음 **[!UICONTROL 카탈로그]** 탭에는 [!DNL Platform]: 로 데이터를 보낼 수 있습니다.
 
-[!DNL Platform] 사용자 인터페이스는 대상 카탈로그 페이지에서 다음과 같은 몇 가지 검색 및 필터 옵션을 제공합니다.
+다음 [!DNL Platform] 사용자 인터페이스는 대상 카탈로그 페이지의 여러 검색 및 필터 옵션을 제공합니다.
 
 * 페이지에서 검색 기능을 사용하여 특정 대상을 찾습니다.
-* [!UICONTROL Categories] 컨트롤을 사용하여 대상을 필터링합니다.
-* [!UICONTROL 모든 대상] 및 [!UICONTROL 내 대상] 간을 전환합니다. **[!UICONTROL 모든 대상]**&#x200B;을 선택하면 사용 가능한 모든 [!DNL Platform] 대상이 표시됩니다. **[!UICONTROL 내 대상]**&#x200B;을 선택하면 연결을 설정한 대상만 볼 수 있습니다.
-* **[!UICONTROL 연결]** 및/또는 **[!UICONTROL 확장]**&#x200B;을 보려면 선택하십시오. 두 범주 간의 차이를 이해하려면 [대상 유형과 카테고리](../destination-types.md)를 참조하십시오.
+* 을 사용하여 대상 필터링 [!UICONTROL 카테고리] 제어.
+* 전환 [!UICONTROL 모든 대상] 및 [!UICONTROL 내 대상]. 선택 시 **[!UICONTROL 모든 대상]**, 모두 사용 가능 [!DNL Platform] 대상이 표시됩니다. 선택 시 **[!UICONTROL 내 대상]**&#x200B;를 입력하면 연결을 설정한 대상만 볼 수 있습니다.
+* 보려는 선택 **[!UICONTROL 연결]** 및/또는 **[!UICONTROL 확장]**. 두 범주 간의 차이를 이해하려면 다음을 참조하십시오 [대상 유형 및 카테고리](../destination-types.md).
 
 ![카탈로그](../assets/ui/workspace/catalog.png)
 
-대상 카드에 **[!UICONTROL 설정]** 또는 **[!UICONTROL 세그먼트 활성화]** 컨트롤과 더 많은 옵션을 표시하는 보조 컨트롤이 있습니다. 이러한 컨트롤은 아래에 설명되어 있습니다.
+대상 카드에 **[!UICONTROL 설정]** 또는 **[!UICONTROL 세그먼트 활성화]** 컨트롤 및 더 많은 옵션을 제공하는 보조 컨트롤 이러한 컨트롤은 아래에 설명되어 있습니다.
 
 | 제어 | 설명 |
 |---------|----------|
@@ -60,33 +60,34 @@ Adobe Experience Platform의 왼쪽 탐색 막대에서 **[!UICONTROL 대상]**&
 
 ![대상 카탈로그 옵션](../assets/ui/workspace/destination-right-rail.png)
 
-대상 카테고리 및 각 대상에 대한 정보에 대한 자세한 내용은 [대상 카탈로그](../catalog/overview.md) 및 [대상 유형 및 카테고리](../destination-types.md)를 참조하십시오.
+대상 카테고리 및 각 대상에 대한 정보에 대한 자세한 내용은 [대상 카탈로그](../catalog/overview.md) 및 [대상 유형 및 카테고리](../destination-types.md).
 
 ## [!UICONTROL 계정] {#accounts}
 
-**[!UICONTROL 계정]** 탭은 다양한 대상으로 설정한 연결에 대한 세부 정보를 보여주며 기존 연결 세부 정보를 업데이트할 수 있도록 해줍니다. 자세한 지침은 [계정 업데이트](update-accounts.md)를 참조하십시오.
+다음 **[!UICONTROL 계정]** 탭에는 다양한 대상으로 설정한 연결에 대한 세부 사항이 표시되며, 기존 연결 세부 사항을 업데이트할 수 있습니다. 자세한 내용은 [계정 업데이트](update-accounts.md) 자세한 지침
 
 ## [!UICONTROL 찾아보기] {#browse}
 
-**[!UICONTROL 찾아보기]** 탭에는 연결을 설정한 대상이 표시됩니다. **[!UICONTROL Enabled/Disabled]** 토글이 설정된 대상은 각각 활성 또는 비활성 상태로 설정합니다. 또한 **[!UICONTROL 세그먼트]** > **[!UICONTROL 찾아보기]**&#x200B;를 선택하고 검사할 세그먼트를 선택하여 데이터가 흐르는 대상을 볼 수도 있습니다. 찾아보기 탭에서 각 대상에 대해 제공되는 모든 정보는 아래 표를 참조하십시오.
+다음 **[!UICONTROL 찾아보기]** 탭에는 연결을 설정한 대상이 표시됩니다. 을 사용하는 대상 **[!UICONTROL 활성화/비활성화]** 대상을 각각 활성 또는 비활성으로 설정 켜기/끄기를 전환합니다. 을 선택하여 데이터가 흐름된 대상을 볼 수도 있습니다 **[!UICONTROL 세그먼트]** > **[!UICONTROL 찾아보기]** 검사할 세그먼트를 선택합니다. 찾아보기 탭에서 각 대상에 대해 제공되는 모든 정보는 아래 표를 참조하십시오.
 
 >[!TIP]
 >
-> * [!UICONTROL 이름] 열에서 세 점을 선택하고 ![세그먼트 추가 단추](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL 세그먼트 활성화&#x200B;]**단추를 사용하여 세그먼트를 해당 대상에 보냅니다.
-> * [!UICONTROL 이름] 열에서 세 점을 선택하고 ![대상 삭제 단추](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL 삭제&#x200B;]**단추를 사용하여 대상에 대한 기존 연결을 [제거](delete-destinations.md)합니다.
+> * 에서 세 점을 선택합니다 [!UICONTROL 이름] 열 및 ![세그먼트 활성화 단추](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL 세그먼트 활성화&#x200B;]**세그먼트를 해당 대상에 전송하는 단추.
+> * 에서 세 점을 선택합니다 [!UICONTROL 이름] 열 및 ![삭제 단추](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL 삭제&#x200B;]**버튼 대상 [제거](delete-destinations.md) 대상에 대한 기존 연결.
+> * 에서 세 점을 선택합니다 [!UICONTROL 이름] 열 및 ![모니터링 단추](../assets/ui/workspace/monitoring-icon.png)**[!UICONTROL 모니터링&#x200B;]**버튼을 클릭하여 이 대상에 대한 활성화 정보를 봅니다. [대시보드 모니터링](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
 
 
 ![찾아보기 탭](../assets/ui/workspace/browse-tab.png)
 
 | 요소 | 설명 |
 |---------|----------|
-| 이름 | 활성화 플로우에 대해 제공한 이름을 이 대상으로 합니다. 동일한 열에는 두 개의 컨트롤이 있습니다.  및 [!UICONTROL 대상 삭제]. |
-| [!UICONTROL 마지막 흐름 실행 상태] | 마지막 데이터 흐름 실행의 상태입니다. 데이터 흐름 실행에 대한 자세한 내용은 [대상 세부 정보 보기](destination-details-page.md)를 참조하십시오. |
-| [!UICONTROL 마지막 흐름 실행 날짜] | 마지막 데이터 흐름 실행이 발생한 시간 및 날짜입니다. 데이터 흐름 실행에 대한 자세한 내용은 [대상 세부 정보 보기](destination-details-page.md)를 참조하십시오. |
+| 이름 | 활성화 플로우에 대해 제공한 이름을 이 대상으로 합니다. 동일한 열에는 두 개의 컨트롤이 있습니다. [!UICONTROL 활성화 ] 및 [!UICONTROL 대상 삭제]. |
+| [!UICONTROL 마지막 흐름 실행 상태] | 마지막 데이터 흐름 실행의 상태입니다. 자세한 내용은 [대상 세부 사항 보기](destination-details-page.md) dataflow 실행에 대한 자세한 내용은 다음을 참조하십시오. |
+| [!UICONTROL 마지막 흐름 실행 날짜] | 마지막 데이터 흐름 실행이 발생한 시간 및 날짜입니다. 자세한 내용은 [대상 세부 사항 보기](destination-details-page.md) dataflow 실행에 대한 자세한 내용은 다음을 참조하십시오. |
 | [!UICONTROL 대상] | 활성화 플로우에 대해 선택한 대상 플랫폼입니다. |
-| [!UICONTROL 연결 유형] | 저장소 버킷 또는 대상에 대한 연결 유형을 나타냅니다. <ul><li>이메일 마케팅 대상: S3, FTP 또는 [!DNL Azure Blob]일 수 있습니다.</li><li>실시간 광고 대상의 경우: 서버 간.</li><li>스트리밍 대상의 경우: [!DNL Azure Event Hubs] 또는 [!DNL Amazon Kinesis]일 수 있습니다.</li></ul> |
+| [!UICONTROL 연결 유형] | 저장소 버킷 또는 대상에 대한 연결 유형을 나타냅니다. <ul><li>이메일 마케팅 대상: S3, FTP 또는 [!DNL Azure Blob].</li><li>실시간 광고 대상의 경우: 서버 간.</li><li>스트리밍 대상의 경우: 다음을 수행할 수 있습니다. [!DNL Azure Event Hubs] 또는 [!DNL Amazon Kinesis].</li></ul> |
 | [!UICONTROL 사용자 이름] | 대상 플로우에 대해 선택한 계정 자격 증명입니다. |
-| [!UICONTROL 활성화 데이터] | 이 대상에 활성화된 세그먼트 수를 나타냅니다. 활성화된 세그먼트에 대한 자세한 내용을 보려면 이 컨트롤을 선택하십시오. 활성화된 세그먼트에 대한 자세한 내용은 대상 세부 정보 페이지의 [활성화 데이터](/help/destinations/ui/destination-details-page.md#activation-data) 를 참조하십시오. |
+| [!UICONTROL 활성화 데이터] | 이 대상에 활성화된 세그먼트 수를 나타냅니다. 활성화된 세그먼트에 대한 자세한 내용을 보려면 이 컨트롤을 선택하십시오. 을(를) 참조하십시오. [활성화 데이터](/help/destinations/ui/destination-details-page.md#activation-data) 를 참조하십시오. |
 | [!UICONTROL 생성됨] | 대상으로 활성화 흐름이 만들어진 날짜 및 UTC 시간입니다. |
 | [!UICONTROL 상태] | `Active` 또는 `Inactive`. 데이터를 이 대상에 활성화할지 여부를 나타냅니다. |
 
@@ -94,14 +95,14 @@ Adobe Experience Platform의 왼쪽 탐색 막대에서 **[!UICONTROL 대상]**&
 
 ![대상 행 클릭](../assets/ui/workspace/click-destination-row.png)
 
-대상 이름을 선택하여 이 대상에 활성화된 세그먼트에 대한 정보를 확인합니다. **[!UICONTROL 활성화 편집]**&#x200B;을 클릭하여 이 대상으로 전송되는 세그먼트를 수정하거나 추가합니다.
+대상 이름을 선택하여 이 대상에 활성화된 세그먼트에 대한 정보를 확인합니다. 클릭 **[!UICONTROL 활성화 편집]** 을 추가하여 이 대상으로 전송되는 세그먼트를 수정하거나 추가합니다.
 
 ## [!UICONTROL 시스템 보기] {#system-view}
 
-**[!UICONTROL 시스템 보기]** 탭에는 Adobe Experience Platform에서 설정한 활성화 흐름의 그래픽 표현이 표시됩니다.
+다음 **[!UICONTROL 시스템 보기]** 탭에는 Adobe Experience Platform에서 설정한 활성화 흐름의 그래픽 표현이 표시됩니다.
 
 ![데이터 흐름1](../assets/ui/workspace/data-flows1.png)
 
-페이지에 표시되는 대상을 선택하고 **[!UICONTROL 데이터 흐름 보기]**&#x200B;를 클릭하여 각 대상에 대해 설정한 모든 연결에 대한 정보를 확인합니다.
+페이지에 표시되는 대상을 선택하고 를 클릭합니다 **[!UICONTROL 데이터 흐름 보기]** 를 클릭하여 각 대상에 대해 설정한 모든 연결에 대한 정보를 확인합니다.
 
 ![Data-flow2](../assets/ui/workspace/data-flows2.png)
