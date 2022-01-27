@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: 데이터 흐름은 소스에서 플랫폼 데이터 집합으로 데이터를 검색하고 수집하는 예약된 작업입니다. 이 자습서에서는 클라우드 저장소 계정을 사용하여 새 데이터 흐름을 구성하는 단계를 제공합니다.
 exl-id: b327bbea-039d-4c04-afd3-f1d6a5f902a6
-source-git-commit: 38f64f2ba0b40a20528aac6efff0e2fd6bc12ed2
+source-git-commit: 86d8313d7acea41e7b3bcea6554e91ea2190ae69
 workflow-type: tm+mt
-source-wordcount: '2040'
+source-wordcount: '2083'
 ht-degree: 0%
 
 ---
@@ -171,7 +171,7 @@ JSON 파일의 경우 필드를 다른 필드에 직접 매핑하는 것 외에�
 
 >[!NOTE]
 >
->다음의 모든 데이터 흐름에서는 일괄 처리를 위해 해당 파일을 기반으로 소스에서 수집할 파일을 선택합니다 **마지막 수정 날짜** timestamp. 즉, 일괄 처리 데이터 흐름은 마지막 데이터 흐름 실행 이후 새로 만들거나 수정한 소스에서 파일을 선택합니다.
+>다음의 모든 데이터 흐름에서는 일괄 처리를 위해 해당 파일을 기반으로 소스에서 수집할 파일을 선택합니다 **마지막 수정 날짜** timestamp. 즉, 일괄 처리 데이터 흐름은 마지막 흐름 실행 이후 새로 만들거나 수정된 소스에서 파일을 선택합니다. 또한 예약된 플로우 실행 시간이 수집되기 전에 클라우드 스토리지 계정에 완전히 업로드되지 않은 파일이 수집되지 않을 수 있으므로 파일 업로드와 예약된 플로우 실행 사이에 충분한 시간이 있는지 확인해야 합니다.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/scheduling-interval-on.png)
 
