@@ -1,11 +1,11 @@
 ---
 keywords: 사용자 지정 개인화; 대상; experience platform 사용자 지정 대상
-title: 사용자 지정 개인화 연결(베타)
+title: 사용자 지정 개인화 연결
 description: 이 대상은 Adobe Experience Platform에서 세그먼트 정보를 검색하는 방법으로 사이트에서 실행 중인 외부 개인화, 콘텐츠 관리 시스템, 광고 서버 및 기타 애플리케이션을 제공합니다. 이 대상은 사용자 프로필 세그먼트 멤버십에 따라 실시간 개인화를 제공합니다.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 8845bb42fe1a47f1bcd6521f7886c1582d209993
+source-git-commit: dd9493077706b102467493e90b363ac202550eee
 workflow-type: tm+mt
-source-wordcount: '575'
+source-wordcount: '574'
 ht-degree: 1%
 
 ---

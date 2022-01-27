@@ -5,13 +5,13 @@ type: Tutorial
 seo-title: Configure personalization destinations for same-page and next-page personalization.
 description: 동일 페이지 및 다음 페이지 개인화를 위한 개인화 대상을 구성하는 방법을 알아봅니다.
 seo-description: Configure personalization destinations for same-page and next-page personalization.
-source-git-commit: 24e8d088dd79304e0bf0335b7c3df2ef75baf81d
+exl-id: 7d7b6869-bd59-4766-a044-f449396f6524
+source-git-commit: dd9493077706b102467493e90b363ac202550eee
 workflow-type: tm+mt
 source-wordcount: '320'
 ht-degree: 1%
 
 ---
-
 
 # 동일 페이지 및 다음 페이지 개인화를 위한 개인화 대상 구성
 
