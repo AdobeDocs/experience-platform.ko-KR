@@ -2,13 +2,13 @@
 keywords: Experience Platform;홈;인기 있는 주제
 title: Identity 서비스에서 개인 정보 보호 요청 처리
 description: Adobe Experience Platform Privacy Service은 다양한 개인 정보 보호 규정에 따라 지정된 대로 고객 개인 데이터에 대한 액세스, 판매 거부 또는 삭제 요청을 처리합니다. 이 문서에서는 Identity 서비스의 개인 정보 보호 요청 처리와 관련된 필수 개념을 다룹니다.
-source-git-commit: 49f5de6c4711120306bfc3e6759ed4e83e8a19c2
+exl-id: ab84450b-1a4b-4fdd-b77d-508c86bbb073
+source-git-commit: f0fa8d77e6184314056f8e70205a9b42409d09d5
 workflow-type: tm+mt
-source-wordcount: '666'
-ht-degree: 1%
+source-wordcount: '722'
+ht-degree: 0%
 
 ---
-
 
 # 의 개인 정보 보호 요청 처리 [!DNL Identity Service]
 
@@ -50,6 +50,10 @@ API에서 작업 요청을 만들 때 내에 제공된 모든 ID입니다 `userI
 
 다음 요청은 의 단일 고객 데이터에 대한 GDPR 아래에 새 개인 정보 작업을 만듭니다 [!DNL Identity] 저장. 에서는 고객에 대해 두 개의 ID 값이 제공됩니다 `userIDs` 배열; 표준 `Email` id 네임스페이스 및 `ECID` 네임스페이스에 대한 제품 값도 포함됩니다 [!DNL Identity] (`Identity`)을 클릭하여 제품에서 사용할 수 있습니다. `include` 배열:
 
+>[!TIP]
+>
+>API를 사용하여 사용자 지정 네임스페이스를 삭제할 때는 표시 이름 대신 ID 기호를 네임스페이스로 지정해야 합니다.
+
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/core/privacy/jobs \
@@ -89,6 +93,10 @@ curl -X POST \
 ```
 
 ### UI 사용
+
+>[!TIP]
+>
+>UI를 사용하여 사용자 지정 네임스페이스를 삭제할 때는 표시 이름 대신 ID 기호를 네임스페이스로 지정해야 합니다. 또한 비프로덕션 샌드박스의 UI에서 사용자 지정 네임스페이스를 삭제할 수 없습니다.
 
 UI에서 작업 요청을 만들 때는 반드시 선택해야 합니다 **[!UICONTROL ID]** 아래에 **[!UICONTROL 제품]** 에 저장된 데이터의 작업을 처리하려면 [!DNL Identity Service].
 
