@@ -4,9 +4,9 @@ title: 대상 작업 공간
 description: 대상 작업 영역은 카탈로그, 찾아보기, 계정 및 시스템 보기의 네 섹션으로 구성됩니다. 이러한 내용은 아래 섹션에 설명되어 있습니다.
 seo-description: In Adobe Experience Platform, select Destinations from the left navigation bar to access the destinations workspace.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: 7356802ee5bb0c5c05b224d9aa5f0e32cf1de843
+source-git-commit: 60df79ce1d12bdce133bff54ffda1ed13307bfa4
 workflow-type: tm+mt
-source-wordcount: '883'
+source-wordcount: '887'
 ht-degree: 2%
 
 ---
@@ -74,7 +74,7 @@ Adobe Experience Platform에서 **[!UICONTROL 대상]** 왼쪽 탐색 모음에�
 >
 > * 에서 세 점을 선택합니다 [!UICONTROL 이름] 열 및 ![세그먼트 활성화 단추](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL 세그먼트 활성화&#x200B;]**세그먼트를 해당 대상에 전송하는 단추.
 > * 에서 세 점을 선택합니다 [!UICONTROL 이름] 열 및 ![삭제 단추](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL 삭제&#x200B;]**버튼 대상 [제거](delete-destinations.md) 대상에 대한 기존 연결.
-> * 에서 세 점을 선택합니다 [!UICONTROL 이름] 열 및 ![모니터링 단추](../assets/ui/workspace/monitoring-icon.png)**[!UICONTROL 모니터링&#x200B;]**버튼을 클릭하여 이 대상에 대한 활성화 정보를 봅니다. [대시보드 모니터링](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
+> * 에서 세 점을 선택합니다 [!UICONTROL 이름] 열 및 ![모니터링 단추에서 보기](../assets/ui/workspace/monitoring-icon.png)**[!UICONTROL 모니터링에서 보기&#x200B;]**단추를 클릭하여 이 대상에 대한 활성화 정보를 봅니다. [대시보드 모니터링](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
 
 
 ![찾아보기 탭](../assets/ui/workspace/browse-tab.png)
