@@ -5,10 +5,10 @@ title: 'API를 사용한 Edge Segmentation '
 topic-legacy: developer guide
 description: 이 문서에는 Adobe Experience Platform 세그멘테이션 서비스 API와 함께 에지 세그멘테이션을 사용하는 방법에 대한 예가 나와 있습니다.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: f168566d03485176b16b6d3833c37930b38b0149
+source-git-commit: e52aa55adde532d838d5417feba36913ed03ce29
 workflow-type: tm+mt
-source-wordcount: '989'
-ht-degree: 1%
+source-wordcount: '1015'
+ht-degree: 0%
 
 ---
 
@@ -25,6 +25,8 @@ Edge Segmentation은 Adobe Experience Platform의 세그먼트를 즉시 평가�
 >[!IMPORTANT]
 >
 > 에지 데이터는 수집된 위치와 가장 가까운 Edge Server 위치에 저장되며, 허브(또는 주체) Adobe Experience Platform 데이터 센터로 지정된 위치 이외의 위치에 저장할 수 있습니다.
+>
+> 또한 에지 세그먼테이션 엔진은 가 있는 에지만 요청을 처리합니다 **하나** 에지 기반 기본 ID와 일치하는 기본 표시 id입니다.
 
 ## 시작하기
 
