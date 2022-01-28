@@ -1,11 +1,11 @@
 ---
-title: 보기 횟수 in Web Extensions
+title: 웹 확장의 보기
 description: Adobe Experience Platform 웹 확장에서 라이브러리 모듈에 대한 보기를 정의하는 방법을 알아봅니다.
 exl-id: 4471df3e-75e2-4257-84c0-dd7b708be417
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
+source-git-commit: 41efcb14df44524b58be2293d2b943bd890c1621
 workflow-type: tm+mt
-source-wordcount: '2063'
-ht-degree: 76%
+source-wordcount: '2083'
+ht-degree: 75%
 
 ---
 
@@ -169,6 +169,10 @@ window.extensionBridge.openDataElementSelector().then(function(dataElement) {
 사용자가 데이터 요소를 사용하고 데이터 요소를 쉽게 입력할 수 있도록 하는 데 도움이 될 수 있는 위치를 나타내려면 다음과 같이 해당 필드 옆에 아이콘 버튼을 추가하는 것이 좋습니다.
 
 ![데이터 요소 필드](../images/data-element-field.png)
+
+>[!NOTE]
+>
+>해당 아이콘을 다운로드하려면 [Adobe 스펙트럼의 아이콘 페이지](https://spectrum.adobe.com/page/icons/) &quot;[!DNL Data]&quot;.
 
 텍스트 필드 옆에 있는 버튼을 사용자가 선택하면 `window.extensionBridge.openDataElementSelector`위의 설명[과 같이 ](#open-data-element)가 호출됩니다. 이름 및 유형 퍼센트 기호를 기억하도록 하는 대신 사용자가 선택할 수 있는 사용자 데이터 요소 목록이 표시됩니다. 사용자가 데이터 요소를 선택하면 퍼센트 기호로 둘러싸인 선택한 데이터 요소의 이름이 전달됩니다(`tokenize` 옵션을 `false`로 설정한 경우 제외). 그런 다음 텍스트 필드를 결과로 채우는 것이 좋습니다.
 
