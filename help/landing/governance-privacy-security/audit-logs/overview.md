@@ -2,9 +2,9 @@
 title: 감사 로그 개요
 description: 감사 로그를 사용하여 Adobe Experience Platform에서 작업을 수행한 사용자를 확인하는 방법을 알아봅니다.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: 2677d5f0c4369ab692f9e4b16710098a359402d7
+source-git-commit: 7e4853cee8a0fa937c82eb842cd73b675eb337a3
 workflow-type: tm+mt
-source-wordcount: '659'
+source-wordcount: '657'
 ht-degree: 5%
 
 ---
@@ -65,7 +65,7 @@ UI에서 감사 이벤트에 다음 필터를 사용할 수 있습니다.
 | --- | --- |
 | [!UICONTROL 카테고리] | 드롭다운 메뉴를 사용하여 표시된 결과를 [카테고리](#category). |
 | [!UICONTROL 작업] | 작업별로 필터링합니다. 현재 전용 [!UICONTROL 만들기] 및 [!UICONTROL 삭제] 작업을 필터링할 수 있습니다. |
-| [!UICONTROL 액세스 제어 상태] | 작업이 허용(완료) 또는 거부되었는지 여부 [액세스 제어](../../../access-control/home.md) 사용 권한. |
+| [!UICONTROL 상태] | 작업이 허용(완료) 또는 거부되었는지 여부 [액세스 제어](../../../access-control/home.md) 사용 권한. |
 | [!UICONTROL 날짜] | 결과를 필터링할 날짜 범위를 정의하려면 시작 날짜 및/또는 종료 날짜를 선택합니다. |
 
 필터를 제거하려면 해당 필터의 알약 아이콘에서 &quot;X&quot;를 선택하거나 을 선택합니다 **[!UICONTROL 모두 지우기]** 모든 필터를 제거하려면 다음을 수행하십시오.
