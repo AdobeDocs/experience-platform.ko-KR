@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform;홈;인기 항목;세그먼테이션;세그먼테이션;세그먼트 일치;세그먼트 일치
 solution: Experience Platform
-title: 세그먼트 일치 FAQ(베타)
+title: 세그먼트 일치 FAQ
 description: 세그먼트 일치 는 두 명 이상의 플랫폼 사용자가 안전하고 제어되며 개인 정보에 친숙한 방식으로 세그먼트 데이터를 교환할 수 있도록 해주는 Adobe Experience Platform의 세그먼트 공유 서비스입니다.
 exl-id: cfa9db16-0bc3-4d25-914d-0d923eccb5a3
-source-git-commit: 50795be308649052037be62153109eadab02c9a1
+source-git-commit: 823eb549e5514a3201ba68ed395c69e202cb747f
 workflow-type: tm+mt
-source-wordcount: '420'
+source-wordcount: '418'
 ht-degree: 0%
 
 ---
 
-# [!DNL Segment Match] 자주 묻는 질문(베타)
+# [!DNL Segment Match] 자주 묻는 질문
 
 이 안내서에서는 Adobe Experience Platform 세그먼트 일치에 대해 자주 묻는 개인 정보 및 법적 질문에 대한 답변을 제공합니다.
 
