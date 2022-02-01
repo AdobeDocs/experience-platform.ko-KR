@@ -5,18 +5,14 @@ topic-legacy: overview
 type: Tutorial
 description: Adobe Experience Platform UI를 사용하여 Snowflake 소스 연결을 만드는 방법을 알아봅니다.
 exl-id: fb2038b9-7f27-4818-b5de-cc8072122127
-source-git-commit: 0928da0ad15ce23d3677fec7b9866d079f3db407
+source-git-commit: 25cc0c5a1e6dcf01b82956ea1022663445315a27
 workflow-type: tm+mt
-source-wordcount: '461'
-ht-degree: 1%
+source-wordcount: '445'
+ht-degree: 2%
 
 ---
 
 # 만들기 [!DNL Snowflake] UI의 소스 연결
-
->[!NOTE]
->
-> 다음 [!DNL Snowflake] 커넥터가 베타 버전입니다. 자세한 내용은 [소스 개요](../../../../home.md#terms-and-conditions) 베타 레이블이 지정된 커넥터 사용에 대한 자세한 정보.
 
 이 자습서에서는 을(를) 만드는 단계를 제공합니다 [!DNL Snowflake] Adobe Experience Platform 사용자 인터페이스를 사용한 소스 커넥터.
 
