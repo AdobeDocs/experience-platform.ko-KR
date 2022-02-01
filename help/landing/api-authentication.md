@@ -6,10 +6,10 @@ topic-legacy: tutorial
 type: Tutorial
 description: 이 문서에서는 Experience Platform API를 호출하기 위해 Adobe Experience Platform 개발자 계정에 액세스할 수 있는 단계별 자습서를 제공합니다.
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
-source-git-commit: 82dea48c732b3ddea957511c22f90bbd032ed9b7
+source-git-commit: f5f4230c85a16aba00d0071b388e8305ccc654d5
 workflow-type: tm+mt
-source-wordcount: '1207'
-ht-degree: 7%
+source-wordcount: '1272'
+ht-degree: 6%
 
 ---
 
@@ -97,6 +97,12 @@ Adobe 개발자 콘솔에서 통합을 만들기 전에 계정에 Adobe Admin Co
 ## JSON 웹 토큰(JWT) 생성 {#jwt}
 
 다음 단계는 계정 자격 증명을 기반으로 JSON 웹 토큰(JWT)을 생성하는 것입니다. 이 값은 을 생성하는 데 사용됩니다 `{ACCESS_TOKEN}` 플랫폼 API 호출에서 사용할 자격 증명. 24시간마다 다시 생성해야 합니다.
+
+>[!IMPORTANT]
+>
+>이 자습서를 위해 아래 단계는 개발자 콘솔 내에서 JWT를 생성하는 방법에 대해 간략하게 설명합니다. 그러나 이 생성 방법은 테스트와 평가 목적으로만 사용해야 합니다.
+>
+>정기적으로 사용하려면 JWT를 자동으로 생성해야 합니다. 프로그래밍 방식으로 JWT를 생성하는 방법에 대한 자세한 내용은 [서비스 계정 인증 안내서](https://www.adobe.io/developer-console/docs/guides/authentication/JWT/) Adobe 개발자 참조.
 
 선택 **[!UICONTROL 서비스 계정(JWT)]** 왼쪽 탐색에서 를 선택하고 **[!UICONTROL JWT 생성]**.
 

@@ -4,9 +4,9 @@ title: 동의 및 기본 설정 데이터 유형
 description: 개인 정보, 개인화 및 마케팅 환경 설정에 대한 동의 데이터 유형은 CMP(동의 관리 플랫폼) 및 데이터 작업에서 생성된 고객 권한 및 환경 설정 컬렉션을 지원하기 위한 것입니다.
 topic-legacy: guide
 exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
-source-git-commit: 04e778d3318d60733772c2042c8bb272f0c87d5c
+source-git-commit: 65ad76bb4a5318b03d79d68d3c7e030d7878cf30
 workflow-type: tm+mt
-source-wordcount: '2039'
+source-wordcount: '2058'
 ht-degree: 2%
 
 ---
@@ -53,10 +53,11 @@ ht-degree: 2%
 {
   "consents": {
     "collect": {
-      "val": "y",
+      "val": "VI",
     },
     "adID": {
-      "val": "VI"
+      "idType": "IDFA",
+      "val": "y"
     },
     "share": {
       "val": "y",
@@ -99,10 +100,11 @@ ht-degree: 2%
 ```json
 "consents": {
   "collect": {
-    "val": "y",
+    "val": "VI",
   },
   "adID": {
-    "val": "VI"
+    "idType": "IDFA",
+    "val": "y"
   },
   "share": {
     "val": "y",
@@ -144,16 +146,18 @@ ht-degree: 2%
 
 ### `adID`
 
-`adID` 광고주 ID(IDFA 또는 GAID)를 사용하여 이 장치의 앱 간에 고객을 연결할 수 있는지 여부에 대한 고객의 동의를 나타냅니다.
+`adID` 는 광고주 ID를 사용하여 이 장치의 앱 간에 고객을 연결할 수 있는지 여부에 대한 고객의 동의를 나타냅니다.
 
 ```json
 "adID": {
+  "idType": "IDFA",
   "val": "y"
 }
 ```
 
 | 속성 | 설명 |
 | --- | --- |
+| `idType` | 광고 ID 유형 `IDFA` 광고주 또는 `GAID` Google의 Advertiser ID(Android Advertiser ID)용. |
 | `val` | 이 사용 사례에 대해 고객이 제공한 동의 선택. 자세한 내용은 [부록](#choice-values) 참조하십시오. |
 
 {style=&quot;table-layout:auto&quot;}
