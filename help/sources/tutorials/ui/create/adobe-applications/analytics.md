@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: UI에서 Adobe Analytics 소스 연결을 만들어 소비자 데이터를 Adobe Experience Platform으로 가져오는 방법을 알아봅니다.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: f5d341daffd7d4d77ee816cc7537b0d0c52ca636
+source-git-commit: 7bc706751a801a9a673590582cf57872c9c4ae95
 workflow-type: tm+mt
-source-wordcount: '1493'
+source-wordcount: '1571'
 ht-degree: 1%
 
 ---
@@ -61,6 +61,16 @@ ht-degree: 1%
 >[!IMPORTANT]
 >
 >에 대한 데이터 준비 지원 기능 [!DNL Analytics] 소스가 베타 버전입니다.
+
+매핑하기 전에 [!DNL Analytics] 데이터를 XDM 스키마를 타겟팅하려면 먼저 기본 스키마를 사용하는지 또는 사용자 지정 스키마를 사용하는지를 선택해야 합니다.
+
+기본 스키마는 를 포함하여 사용자를 대신하여 새 스키마를 만듭니다 [!DNL Analytics] 필드 그룹. 기본 스키마를 사용하려면 **[!UICONTROL 기본 스키마]**.
+
+![기본 스키마](../../../../images/tutorials/create/analytics/default-schema.png)
+
+사용자 지정 스키마를 사용하여 사용 가능한 스키마를 선택할 수 있습니다 [!DNL Analytics] 스키마에 있는 한 데이터 [!DNL Analytics] 필드 그룹. 사용자 지정 스키마를 사용하려면 **[!UICONTROL 사용자 지정 스키마]**.
+
+![사용자 정의 스키마](../../../../images/tutorials/create/analytics/custom-schema.png)
 
 다음 [!UICONTROL 매핑] 페이지는 소스 필드를 적절한 대상 스키마 필드에 매핑하는 인터페이스를 제공합니다. 여기에서 사용자 지정 변수를 새 스키마 필드 그룹에 매핑하고 데이터 준비에 지원되는 대로 계산을 적용할 수 있습니다. 대상 스키마를 선택하여 매핑 프로세스를 시작합니다.
 
