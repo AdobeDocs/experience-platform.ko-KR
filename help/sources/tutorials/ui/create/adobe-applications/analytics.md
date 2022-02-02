@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: UI에서 Adobe Analytics 소스 연결을 만들어 소비자 데이터를 Adobe Experience Platform으로 가져오는 방법을 알아봅니다.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 7bc706751a801a9a673590582cf57872c9c4ae95
+source-git-commit: d62d1ff9ebef58401911bab1232d1847d65e043f
 workflow-type: tm+mt
 source-wordcount: '1571'
 ht-degree: 1%
@@ -64,11 +64,11 @@ ht-degree: 1%
 
 매핑하기 전에 [!DNL Analytics] 데이터를 XDM 스키마를 타겟팅하려면 먼저 기본 스키마를 사용하는지 또는 사용자 지정 스키마를 사용하는지를 선택해야 합니다.
 
-기본 스키마는 를 포함하여 사용자를 대신하여 새 스키마를 만듭니다 [!DNL Analytics] 필드 그룹. 기본 스키마를 사용하려면 **[!UICONTROL 기본 스키마]**.
+기본 스키마는 를 포함하여 사용자를 대신하여 새 스키마를 만듭니다 [!DNL Adobe Analytics ExperienceEvent Template] 필드 그룹. 기본 스키마를 사용하려면 **[!UICONTROL 기본 스키마]**.
 
 ![기본 스키마](../../../../images/tutorials/create/analytics/default-schema.png)
 
-사용자 지정 스키마를 사용하여 사용 가능한 스키마를 선택할 수 있습니다 [!DNL Analytics] 스키마에 있는 한 데이터 [!DNL Analytics] 필드 그룹. 사용자 지정 스키마를 사용하려면 **[!UICONTROL 사용자 지정 스키마]**.
+사용자 지정 스키마를 사용하여 사용 가능한 스키마를 선택할 수 있습니다 [!DNL Analytics] 스키마에 가 있는 한 데이터 [!DNL Adobe Analytics ExperienceEvent Template] 필드 그룹. 사용자 지정 스키마를 사용하려면 **[!UICONTROL 사용자 지정 스키마]**.
 
 ![사용자 정의 스키마](../../../../images/tutorials/create/analytics/custom-schema.png)
 
@@ -76,7 +76,7 @@ ht-degree: 1%
 
 >[!TIP]
 >
->가 있는 스키마만 [!DNL Analytics] 템플릿 필드 그룹이 스키마 선택 메뉴에 표시됩니다. 다른 스키마는 생략됩니다. 보고서 세트 데이터에 사용할 수 있는 적절한 스키마가 없으면 새 스키마를 만들어야 합니다. 스키마를 만드는 방법에 대한 자세한 내용은 안내서를 참조하십시오 [UI에서 스키마 만들기 및 편집](../../../../../xdm/ui/resources/schemas.md).
+>가 있는 스키마만 [!DNL Adobe Analytics ExperienceEvent Template] 필드 그룹이 스키마 선택 메뉴에 표시됩니다. 다른 스키마는 생략됩니다. 보고서 세트 데이터에 사용할 수 있는 적절한 스키마가 없으면 새 스키마를 만들어야 합니다. 스키마를 만드는 방법에 대한 자세한 내용은 안내서를 참조하십시오 [UI에서 스키마 만들기 및 편집](../../../../../xdm/ui/resources/schemas.md).
 
 ![select-schema](../../../../images/tutorials/create/analytics/select-schema.png)
 
