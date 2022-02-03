@@ -6,16 +6,14 @@ seo-title: Configure personalization destinations for same-page and next-page pe
 description: 동일 페이지 및 다음 페이지 개인화를 위한 개인화 대상을 구성하는 방법을 알아봅니다.
 seo-description: Configure personalization destinations for same-page and next-page personalization.
 exl-id: 7d7b6869-bd59-4766-a044-f449396f6524
-source-git-commit: dd9493077706b102467493e90b363ac202550eee
+source-git-commit: 851a9598523d26ba52a367f6c03e3c9612f6678b
 workflow-type: tm+mt
-source-wordcount: '320'
-ht-degree: 1%
+source-wordcount: '367'
+ht-degree: 0%
 
 ---
 
 # 동일 페이지 및 다음 페이지 개인화를 위한 개인화 대상 구성
-
-## 개요 {#overview}
 
 Adobe Experience Platform 사용 [에지 세분화](../../segmentation/ui/edge-segmentation.md) 고객이 높은 규모로 대상 세그먼트를 실시간으로 만들고 타겟팅할 수 있도록 하는 것.
 
@@ -23,11 +21,15 @@ Adobe Experience Platform 사용 [에지 세분화](../../segmentation/ui/edge-s
 
 이 문서에서는 이러한 사용 사례에 대한 Experience Platform 및 개인화 대상을 구성하는 방법에 대한 단계별 지침을 제공합니다.
 
-## 1단계: Experience Platform Web SDK 데이터 스트림 구성 {#configure-datastream}
+## 1단계: Data Collection UI에서 데이터 스트림 구성 {#configure-datastream}
 
-개인화 사용 사례를 구성하는 첫 번째 단계는 [!DNL Web SDK datastream].
+개인화 대상을 설정하는 첫 번째 단계는 Experience Platform Web SDK에 대한 데이터 스트림을 구성하는 것입니다. 이 작업은 데이터 수집 UI에서 수행됩니다.
 
-다음 설명서에 설명된 지침을 따르십시오. [데이터 스트림 구성](../../edge/fundamentals/datastreams.md) 설명서.
+데이터 스트림을 구성할 때 아래의 **[!UICONTROL Adobe Experience Platform]** 둘 다 **[!UICONTROL 에지 세그멘테이션]** 및 **[!UICONTROL 개인화 대상]** 을 선택합니다.
+
+![데이터 스트림 구성](../assets/ui/configure-personalization-destinations/datastream-config.png)
+
+데이터 스트림을 설정하는 방법에 대한 자세한 내용은 [Platform 웹 SDK 설명서](../../edge/fundamentals/datastreams.md).
 
 ## 2단계: 개인화 대상 구성 {#configure-destination}
 
