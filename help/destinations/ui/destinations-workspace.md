@@ -4,9 +4,9 @@ title: 대상 작업 공간
 description: 대상 작업 영역은 카탈로그, 찾아보기, 계정 및 시스템 보기의 네 섹션으로 구성됩니다. 이러한 내용은 아래 섹션에 설명되어 있습니다.
 seo-description: In Adobe Experience Platform, select Destinations from the left navigation bar to access the destinations workspace.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: 60df79ce1d12bdce133bff54ffda1ed13307bfa4
+source-git-commit: 533f76891f47ba11e2a9de87aa8c249eb9249895
 workflow-type: tm+mt
-source-wordcount: '887'
+source-wordcount: '1084'
 ht-degree: 2%
 
 ---
@@ -64,11 +64,30 @@ Adobe Experience Platform에서 **[!UICONTROL 대상]** 왼쪽 탐색 모음에�
 
 ## [!UICONTROL 계정] {#accounts}
 
-다음 **[!UICONTROL 계정]** 탭에는 다양한 대상으로 설정한 연결에 대한 세부 사항이 표시되며, 기존 연결 세부 사항을 업데이트할 수 있습니다. 자세한 내용은 [계정 업데이트](update-accounts.md) 자세한 지침
+다음 **[!UICONTROL 계정]** 탭에는 다양한 대상으로 설정한 연결에 대한 세부 사항이 표시되며, 기존 계정 세부 사항을 업데이트하거나 삭제할 수 있습니다. 각 대상 계정에서 얻을 수 있는 모든 정보는 아래 표를 참조하십시오.
+
+>[!TIP]
+>
+> * 에서 세 점을 선택합니다 [!UICONTROL 플랫폼] 열 및 ![세그먼트 활성화 단추](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL 세그먼트 활성화&#x200B;]**세그먼트를 해당 대상에 전송하는 단추.
+> * 에서 세 점을 선택합니다 [!UICONTROL 플랫폼] 열 및 ![세부 사항 편집 단추](../assets/ui/workspace/pencil-icon.png)**[!UICONTROL 세부 사항 편집&#x200B;]**버튼 대상 [업데이트](update-accounts.md) 기존 대상 계정의 세부 정보입니다.
+> * 에서 세 점을 선택합니다 [!UICONTROL 플랫폼] 열 및 ![삭제 단추](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL 삭제&#x200B;]**버튼 대상 [delete](delete-destination-account.md) 기존 대상 계정.
+
+
+![계정 탭](../assets/ui/workspace/destination-account-options.png)
+
+| 요소 | 설명 |
+|---|---|
+| [!UICONTROL 플랫폼] | 연결을 설정한 대상입니다. |
+| [!UICONTROL 연결 유형] | 저장소 버킷 또는 대상에 대한 계정 연결 유형을 나타냅니다. 대상에 따라 인증 옵션은 다음과 같습니다. <ul><li>이메일 마케팅 대상: S3, FTP 또는 Azure Blob일 수 있습니다.</li><li>실시간 광고 대상의 경우: 서버 간</li><li>Amazon S3 클라우드 스토리지 대상의 경우: 액세스 키 </li><li>SFTP 클라우드 스토리지 대상: SFTP에 대한 기본 인증</li><li>OAuth 1 또는 OAuth 2 인증</li><li>베어러 토큰 인증</li></ul> |
+| [!UICONTROL 사용자 이름] | 에서 선택한 사용자 이름 [대상 마법사 연결](../catalog/email-marketing/overview.md#connect-destination). |
+| [!UICONTROL 대상] | 대상에 대해 생성된 기본 정보와 연결된 고유한 성공적인 대상 데이터 흐름의 수를 나타냅니다. |
+| [!UICONTROL 인증됨] | 이 대상에 대한 연결이 허용된 날짜입니다. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## [!UICONTROL 찾아보기] {#browse}
 
-다음 **[!UICONTROL 찾아보기]** 탭에는 연결을 설정한 대상이 표시됩니다. 을 사용하는 대상 **[!UICONTROL 활성화/비활성화]** 대상을 각각 활성 또는 비활성으로 설정 켜기/끄기를 전환합니다. 을 선택하여 데이터가 흐름된 대상을 볼 수도 있습니다 **[!UICONTROL 세그먼트]** > **[!UICONTROL 찾아보기]** 검사할 세그먼트를 선택합니다. 찾아보기 탭에서 각 대상에 대해 제공되는 모든 정보는 아래 표를 참조하십시오.
+다음 **[!UICONTROL 찾아보기]** 탭에는 연결을 설정한 대상이 표시됩니다. 을 사용하는 대상 **[!UICONTROL 활성화/비활성화]** 대상을 각각 활성 또는 비활성으로 설정 켜기/끄기를 전환합니다. 을 선택하여 데이터가 흐름된 대상을 볼 수도 있습니다 **[!UICONTROL 세그먼트]** > **[!UICONTROL 찾아보기]** 검사할 세그먼트를 선택합니다. 의 각 대상에 대해 제공된 모든 정보는 아래 표를 참조하십시오. [!UICONTROL 찾아보기] 탭:
 
 >[!TIP]
 >

@@ -4,9 +4,9 @@ user-guide-title: 대상 안내서
 user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화합니다.
 description: 이 문서에서는 Adobe Experience Platform 대상의 목차 목록을 설명합니다
 feature: Destinations
-source-git-commit: dd9493077706b102467493e90b363ac202550eee
+source-git-commit: c53deb0186797e718fbf633b8f5f92f97cdfeed9
 workflow-type: tm+mt
-source-wordcount: '694'
+source-wordcount: '697'
 ht-degree: 9%
 
 ---
@@ -35,6 +35,7 @@ ht-degree: 9%
       * [동일 페이지 및 다음 페이지 개인화를 위한 개인화 대상 구성](./ui/configure-personalization-destinations.md)
    * [대상 세부 사항 보기](./ui/destination-details-page.md)
    * [대상 계정 업데이트](./ui/update-accounts.md)
+   * [대상 계정 삭제](./ui/delete-destination-account.md)
    * [활성화 흐름 편집](./ui/edit-activation.md)
    * [대상 삭제](./ui/delete-destinations.md)
    * [데이터 흐름 모니터링](./ui/monitor-dataflows.md)
