@@ -1,10 +1,10 @@
 ---
-title: Configuring Secrets in Event Forwarding
+title: 이벤트 전달에서 암호 구성
 description: 이벤트 전달 속성에 사용되는 엔드포인트를 인증하도록 데이터 수집 UI에서 암호를 구성하는 방법을 알아봅니다.
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
-source-git-commit: 7cbf8cfa4ac7aeff9f1ed56777212f5203df2ce9
+source-git-commit: 737354ca3b286f6c39cb71bc09aa4d6141c4d9a4
 workflow-type: tm+mt
-source-wordcount: '1449'
+source-wordcount: '1447'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 1%
 | 암호 유형 | 설명 |
 | --- | --- |
 | [!UICONTROL 토큰] | 두 시스템에서 모두 알고 이해할 수 있는 인증 토큰 값을 나타내는 단일 문자열입니다. |
-| [!UICONTROL HTTP] | Contains two string attributes for a username and password, respectively. |
+| [!UICONTROL HTTP] | 사용자 이름과 암호로 각각 두 개의 문자열 속성을 포함합니다. |
 | [!UICONTROL OAuth2] | 을(를) 지원하는 여러 특성을 포함합니다 [OAuth2](https://datatracker.ietf.org/doc/html/rfc6749) 인증 사양입니다. 시스템에서 필요한 정보를 요청한 다음 지정된 간격에 따라 이러한 토큰의 갱신을 처리합니다. 현재 [클라이언트 자격 증명](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.4) OAuth2 버전이 지원됩니다. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -35,21 +35,21 @@ ht-degree: 1%
 
 또한 라이브러리에 리소스를 추가하고 테스트를 위해 웹 사이트에 빌드를 설치하는 방법 등 태그 및 이벤트 전달을 위한 게시 플로우에 대한 작업 이해를 해야 합니다. 자세한 내용은 [게시 개요](../publishing/overview.md) 자세한 내용
 
-## Create a secret {#create}
+## 암호 만들기 {#create}
 
-암호를 만들려면 데이터 수집 UI에 로그인하고 암호를 추가할 이벤트 전달 속성을 엽니다. Next, select **[!UICONTROL Secrets]** in the left navigation, followed by **[!UICONTROL Create New Secret]**.
+암호를 만들려면 데이터 수집 UI에 로그인하고 암호를 추가할 이벤트 전달 속성을 엽니다. 다음 을 선택합니다. **[!UICONTROL 비밀]** 왼쪽 탐색에서 를 차례로 클릭하거나 **[!UICONTROL 새 암호 만들기]**.
 
 ![새 암호 만들기](../../images/ui/event-forwarding/secrets/create-new-secret.png)
 
-The next screen allows you to configure the details of the secret. 이벤트 전달에서 암호를 사용할 수 있도록 하려면 기존 환경에 할당해야 합니다. If you do not have any environments created for your event forwarding property, see the guide on [environments](../publishing/environments.md) for guidance on how to configure them before continuing.
+다음 화면에서는 비밀의 세부 사항을 구성할 수 있습니다. 이벤트 전달에서 암호를 사용할 수 있도록 하려면 기존 환경에 할당해야 합니다. 이벤트 전달 속성을 위해 만든 환경이 없는 경우 의 안내서를 참조하십시오 [환경](../publishing/environments.md) 계속하기 전에 구성하는 방법에 대한 지침입니다.
 
 >[!NOTE]
 >
->암호를 환경에 추가하기 전에 만들고 저장하려면 **[!UICONTROL 환경에 암호 연결]** 나머지 정보를 입력하기 전에 전환합니다. Note that you will have to assign it to an environment later if you want to use the secret.
+>암호를 환경에 추가하기 전에 만들고 저장하려면 **[!UICONTROL 환경에 암호 연결]** 나머지 정보를 입력하기 전에 전환합니다. 암호를 사용하려면 나중에 환경에 할당해야 합니다.
 >
->![Disable environment](../../images/ui/event-forwarding/secrets/env-disabled.png)
+>![환경 비활성화](../../images/ui/event-forwarding/secrets/env-disabled.png)
 
-아래 **[!UICONTROL Target 환경]**&#x200B;를 누르고 드롭다운 메뉴를 사용하여 암호를 지정할 환경을 선택합니다. Under **[!UICONTROL Secret Name]**, provide a name for the secret in the context of the environment. This name must be unique across all secrets under the event forwarding property.
+아래 **[!UICONTROL Target 환경]**&#x200B;를 누르고 드롭다운 메뉴를 사용하여 암호를 지정할 환경을 선택합니다. 아래 **[!UICONTROL 비밀 이름]**&#x200B;를 채울 때는 환경 컨텍스트에서 암호 이름을 제공합니다. 이 이름은 이벤트 전달 속성 아래의 모든 비밀에서 고유해야 합니다.
 
 ![환경 및 이름](../../images/ui/event-forwarding/secrets/env-and-name.png)
 
@@ -57,9 +57,9 @@ The next screen allows you to configure the details of the secret. 이벤트 전
 
 ![환경 추가](../../images/ui/event-forwarding/secrets/add-env.png)
 
-For each environment you add, you must provide another unique name for the associated secret. If you exhaust all available environments, the **[!UICONTROL Add Environment]** button will be unavailable.
+추가하는 각 환경에 대해 연결된 비밀에 다른 고유한 이름을 제공해야 합니다. 사용 가능한 모든 환경을 배기하는 경우 **[!UICONTROL 환경 추가]** 단추를 사용할 수 없습니다.
 
-![Add environment unavailable](../../images/ui/event-forwarding/secrets/add-env-greyed.png)
+![환경 추가를 사용할 수 없습니다.](../../images/ui/event-forwarding/secrets/add-env-greyed.png)
 
 여기에서 암호를 만드는 단계는 만드는 비밀의 유형에 따라 다릅니다. 자세한 내용은 아래 하위 섹션을 참조하십시오.
 
@@ -69,13 +69,13 @@ For each environment you add, you must provide another unique name for the assoc
 
 ### [!UICONTROL 토큰] {#token}
 
-To create a token secret, select **[!UICONTROL Token]** from the **[!UICONTROL Type]** dropdown. 에서 **[!UICONTROL 토큰]** 표시되는 필드에 인증 중인 시스템에서 인식하는 자격 증명 문자열을 제공합니다. Select **[!UICONTROL Create Secret]** to save the secret.
+토큰 암호를 만들려면 **[!UICONTROL 토큰]** 에서 **[!UICONTROL 유형]** 드롭다운. 에서 **[!UICONTROL 토큰]** 표시되는 필드에 인증 중인 시스템에서 인식하는 자격 증명 문자열을 제공합니다. 선택 **[!UICONTROL 암호 만들기]** 비밀을 지키기 위해
 
-![Token secret](../../images/ui/event-forwarding/secrets/token-secret.png)
+![토큰 암호](../../images/ui/event-forwarding/secrets/token-secret.png)
 
 ### [!UICONTROL HTTP] {#http}
 
-To create an HTTP secret, select **[!UICONTROL Simple HTTP]** from the **[!UICONTROL Type]** dropdown. In the fields that appear below, provide a username and password for the credential before selecting **[!UICONTROL Create Secret]** to save the secret.
+HTTP 암호를 만들려면 **[!UICONTROL 단순 HTTP]** 에서 **[!UICONTROL 유형]** 드롭다운. 아래 표시되는 필드에서 선택하기 전에 자격 증명을 위한 사용자 이름과 암호를 입력합니다 **[!UICONTROL 암호 만들기]** 비밀을 지키기 위해
 
 >[!NOTE]
 >
@@ -101,11 +101,11 @@ OAuth2 암호를 만들려면 **[!UICONTROL OAuth2]** 에서 **[!UICONTROL 유�
 
 >[!IMPORTANT]
 >
->An OAuth secret requires at least four hours between refreshes and must also be valid for a minimum of eight hours. 이 제한 사항을 사용하면 생성된 토큰에 문제가 발생할 경우 최소 4시간을 개입할 수 있습니다.
+>OAuth 암호는 새로 고침 사이에 최소 4시간이 필요하며 최소 8시간 동안 유효해야 합니다. 이 제한 사항을 사용하면 생성된 토큰에 문제가 발생할 경우 최소 4시간을 개입할 수 있습니다.
 >
 >예를 들어, 오프셋이 `28800` (8시간) 및 액세스 토큰에 `expires_in` 의 `36000` (10시간) 차이가 4시간 미만이어서 교환이 실패합니다.
 
-When finished, select **[!UICONTROL Create Secret]** to save the secret.
+완료되면 을 선택합니다 **[!UICONTROL 암호 만들기]** 비밀을 지키기 위해
 
 ![OAuth2 오프셋 저장](../../images/ui/event-forwarding/secrets/oauth-secret-4.png)
 
@@ -121,21 +121,21 @@ When finished, select **[!UICONTROL Create Secret]** to save the secret.
 
 >[!NOTE]
 >
->If the secret is associated with an existing environment, you cannot reassign the secret to another environment. 다른 환경에서 동일한 자격 증명을 사용하려면 [새 암호 만들기](#create) 을 가리키도록 업데이트하는 것이 좋습니다. 이 화면에서 환경을 재할당하는 유일한 방법은 사전에 암호를 환경에 할당하지 않았거나 비밀번호가 첨부된 환경을 삭제한 경우에만 입니다.
+>암호가 기존 환경과 연결된 경우에는 다른 환경에 암호를 재할당할 수 없습니다. 다른 환경에서 동일한 자격 증명을 사용하려면 [새 암호 만들기](#create) 을 가리키도록 업데이트하는 것이 좋습니다. 이 화면에서 환경을 재할당하는 유일한 방법은 사전에 암호를 환경에 할당하지 않았거나 비밀번호가 첨부된 환경을 삭제한 경우에만 입니다.
 
 ### 암호 교환 다시 시도
 
-편집 화면에서 암호 교환을 다시 시도하거나 새로 고칠 수 있습니다. This process varies depending on the type of secret being edited:
+편집 화면에서 암호 교환을 다시 시도하거나 새로 고칠 수 있습니다. 이 프로세스는 편집 중인 비밀의 유형에 따라 다릅니다.
 
-| 암호 유형 | Retry protocol |
+| 암호 유형 | 다시 시도 프로토콜 |
 | --- | --- |
-| [!UICONTROL 토큰] | 선택 **[!UICONTROL Exchange 암호]** 암호 교환을 다시 시도합니다. This control is only available when there is an environment attached to the secret. |
-| [!UICONTROL HTTP] | 비밀에 첨부된 환경이 없는 경우 을 선택합니다 **[!UICONTROL Exchange 암호]** 자격 증명을 base64로 교환하려면 If an environment is attached, select elect **[!UICONTROL Exchange and Deploy Secret]** to exchange to base64 and deploy the secret to Cloudfare. |
-| [!UICONTROL OAuth2] | Select **[!UICONTROL Generate Token]** to exchange the credentials and return an access token from the authentication provider. |
+| [!UICONTROL 토큰] | 선택 **[!UICONTROL Exchange 암호]** 암호 교환을 다시 시도합니다. 이 컨트롤은 비밀에 연결된 환경이 있는 경우에만 사용할 수 있습니다. |
+| [!UICONTROL HTTP] | 비밀에 첨부된 환경이 없는 경우 을 선택합니다 **[!UICONTROL Exchange 암호]** 자격 증명을 base64로 교환하려면 환경이 연결된 경우 [선택]을 선택합니다 **[!UICONTROL 암호 교환 및 배포]** base64로 교환하고 암호를 배포합니다. |
+| [!UICONTROL OAuth2] | 선택 **[!UICONTROL 토큰 생성]** 자격 증명을 교환하고 인증 공급자로부터 액세스 토큰을 반환하려면 다음을 수행하십시오. |
 
-## Delete a secret
+## 암호 삭제
 
-To delete an existing secret in the  **[!UICONTROL Secrets]** workspace, select the checkbox next to its name before selecting **[!UICONTROL Delete]**.
+에서 기존 암호를 삭제하려면  **[!UICONTROL 비밀]** 작업 영역에서 해당 이름 옆의 확인란을 선택한 다음 **[!UICONTROL 삭제]**.
 
 ![암호 삭제](../../images/ui/event-forwarding/secrets/delete.png)
 
@@ -149,15 +149,15 @@ To delete an existing secret in the  **[!UICONTROL Secrets]** workspace, select 
 
 >[!NOTE]
 >
->Only secrets attached to the development, staging, and production environments appear for their respective dropdowns.
+>개발, 스테이징 및 프로덕션 환경에 첨부된 암호만 해당 드롭다운에 표시됩니다.
 
 여러 암호를 단일 데이터 요소에 할당하고 규칙에 포함함으로써, 포함된 라이브러리가 있는 위치에 따라 데이터 요소 변경 값을 가질 수 있습니다 [게시 흐름](../publishing/publishing-flow.md).
 
-![Data element with multiple secrets](../../images/ui/event-forwarding/secrets/multi-secret-data-element.png)
+![여러 비밀이 있는 데이터 요소](../../images/ui/event-forwarding/secrets/multi-secret-data-element.png)
 
 >[!NOTE]
 >
->When creating the data element, a development environment must be assigned. 스테이징 및 프로덕션 환경에 대한 암호는 필요하지 않지만, 비밀 유형 데이터 요소에 해당 환경에 대해 선택한 암호가 없으면 해당 환경으로 전환하려고 하는 빌드가 실패합니다.
+>데이터 요소를 만들 때 개발 환경을 할당해야 합니다. 스테이징 및 프로덕션 환경에 대한 암호는 필요하지 않지만, 비밀 유형 데이터 요소에 해당 환경에 대해 선택한 암호가 없으면 해당 환경으로 전환하려고 하는 빌드가 실패합니다.
 
 ## 다음 단계
 
