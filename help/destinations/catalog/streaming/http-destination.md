@@ -3,9 +3,9 @@ keywords: 스트리밍;
 title: HTTP API 연결
 description: Adobe Experience Platform의 HTTP API 대상을 사용하면 프로필 데이터를 타사 HTTP 엔드포인트로 보낼 수 있습니다.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: f098df9df2baa971db44a6746949f021e212ae3e
+source-git-commit: bf36592fe4ea7b9d9b6703f3aca8fd8344fe5c9f
 workflow-type: tm+mt
-source-wordcount: '833'
+source-wordcount: '1274'
 ht-degree: 1%
 
 ---
@@ -87,21 +87,51 @@ While [설정](../../ui/connect-destination.md) 이 대상을 사용하려면 �
 
 에서 [[!UICONTROL 속성 선택]](../../ui/activate-streaming-profile-destinations.md#select-attributes) Adobe은 사용자 지정 페이지에서 고유 식별자를 선택할 것을 권장합니다 [조합 스키마](../../../profile/home.md#profile-fragments-and-union-schemas). 대상으로 내보낼 고유 식별자 및 기타 모든 XDM 필드를 선택합니다.
 
+## 제품 고려 사항 {#product-considerations}
+
+Experience Platform은 고정된 정적 IP 세트를 통해 HTTP 종단점으로 데이터를 스트리밍하지 않습니다. 따라서 Adobe은 HTTP API 대상에 대해 검색할 수 허용 목록에 추가하다 있는 정적 IP 목록을 제공할 수 없습니다.
+
 ## 프로필 내보내기 동작 {#profile-export-behavior}
 
 Experience Platform은 세그먼트 자격 또는 기타 중요한 이벤트 후에 프로필에 대한 관련 업데이트가 발생한 경우에만 데이터를 API 종단점으로 내보내도록 프로필 내보내기 동작을 HTTP API 대상에 최적화합니다. 프로필은 다음과 같은 상황에서 대상에 내보내집니다.
 
-* 대상에 매핑된 세그먼트 중 하나 이상에 대한 세그먼트 멤버십 변경으로 프로필 업데이트가 트리거되었습니다. 예를 들어 프로필이 대상에 매핑된 세그먼트 중 하나에 적격이거나 대상에 매핑된 세그먼트 중 하나를 끝냈습니다.
+* 프로필 업데이트는 대상에 매핑된 세그먼트 중 하나 이상에 대한 세그먼트 멤버십 변경에 의해 결정됩니다. 예를 들어 프로필이 대상에 매핑된 세그먼트 중 하나에 적격이거나 대상에 매핑된 세그먼트 중 하나를 끝냈습니다.
 * 프로필 업데이트는 [id 맵](/help/xdm/field-groups/profile/identitymap.md). 예를 들어 대상에 매핑된 세그먼트 중 하나에 대해 이미 자격이 있는 프로필이 ID 맵 속성에 새 ID를 추가했습니다.
-* 대상에 매핑된 특성 중 하나 이상에 대한 특성 변경으로 프로필 업데이트가 트리거되었습니다. 예를 들어 매핑 단계에서 대상에 매핑된 속성 중 하나가 프로필에 추가됩니다.
+* 프로필 업데이트는 대상에 매핑된 특성 중 하나 이상에 대한 특성 변경에 의해 결정됩니다. 예를 들어 매핑 단계에서 대상에 매핑된 속성 중 하나가 프로필에 추가됩니다.
 
 위에 설명된 모든 경우 관련 업데이트가 발생한 프로필만 대상으로 내보내집니다. 예를 들어 대상 플로우에 매핑된 세그먼트에 100개의 멤버가 있고 5개의 새 프로필이 세그먼트에 대한 자격이 있는 경우 대상에 내보내기는 증분 결과이며 5개의 새 프로필만 포함합니다.
 
 변경 사항이 있는 위치에 상관없이 모든 매핑된 속성이 프로필에 대해 내보내집니다. 따라서 위의 예에서 이러한 5개의 새 프로필에 대해 매핑된 속성은 속성 자체가 변경되지 않았더라도 내보내집니다.
 
+### 업데이트에 포함되는 내용과 결정하는 것은 무엇입니까? {#what-determines-export-what-is-included}
+
+주어진 프로필에 대해 내보낸 데이터에 대해서는 의 두 가지 개념을 이해하는 것이 중요합니다 *http API 대상에 대한 데이터 내보내기를 결정하는 것은 무엇입니까?* 및 *내보내기에 포함된 데이터*.
+
+| 대상 내보내기를 결정하는 것은 무엇입니까? | 대상 내보내기에 포함된 항목 |
+|---------|----------|
+| <ul><li>매핑된 속성 및 세그먼트는 대상 업데이트의 단서로 사용됩니다. 즉, 매핑된 세그먼트가 상태(null에서 실현됨 또는 실현됨/존재에서 종료로)를 변경하거나 매핑된 속성을 업데이트하면 대상 내보내기가 해제됩니다.</li><li>현재 ID를 HTTP API 대상에 매핑할 수 없으므로 주어진 프로필의 ID를 변경하면 대상 내보내기도 결정됩니다.</li><li>속성 변경은 속성이 동일한 값이든 간에 속성에 대한 업데이트로 정의됩니다. 즉, 값 자체가 변경되지 않았더라도 속성에 대한 덮어쓰기는 변경 사항으로 간주됩니다.</li></ul> | <ul><li>데이터 플로우에 매핑되었는지 여부에 상관없이 모든 세그먼트(최신 멤버십 상태 포함)는 `segmentMembership` 개체.</li><li>의 모든 ID `identityMap` 개체도 포함됩니다(Experience Platform은 현재 HTTP API 대상에서 ID 매핑을 지원하지 않습니다).</li><li>매핑된 속성만 대상 내보내기에 포함됩니다.</li></ul> |
+
+{style=&quot;table-layout:fixed&quot;}
+
+예를 들어 이 데이터 흐름을 데이터 플로우에서 세 개의 세그먼트를 선택하고 네 개의 속성이 대상에 매핑되는 HTTP 대상으로 간주합니다.
+
+![HTTP API 대상 데이터 흐름](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png)
+
+<!--
+
+![HTTP API destination dataflow](/help/destinations/assets/catalog/http/dataflow-destination.png)
+
+![Mapped attributes](/help/destinations/assets/catalog/http/mapped-attributes.png)
+
+-->
+
+대상에 대한 프로필 내보내기는 하나 또는 둘 중 하나에 대해 자격이 있는 프로필로 결정할 수 있습니다 *3개의 매핑된 세그먼트*. 그러나 데이터 내보내기에서 `segmentMembership` 개체(참조 [내보낸 데이터](#exported-data) 아래 섹션)을 사용하면, 특정 프로필이 해당 세그먼트의 구성원일 경우 매핑되지 않은 다른 세그먼트가 나타날 수 있습니다. 프로가 DeLorinan Cars 세그먼트를 통해 고객 자격을 얻지만 또한 Viewed &quot;Back to the Future&quot; 영화 및 SF 팬의 멤버인 경우 다른 두 세그먼트도 함께 제공됩니다 `segmentMembership` 데이터가 데이터 플로우에 매핑되지 않더라도 데이터 내보내기의 객체입니다.
+
+프로필 속성 POV에서 위에 매핑된 4개의 속성에 대한 변경 사항이 대상 내보내기를 결정하며 프로필에 있는 4개의 매핑된 속성이 데이터 내보내기에 표시됩니다.
+
 ## 내보낸 데이터 {#exported-data}
 
-내보낸 [!DNL Experience Platform] 데이터가 [!DNL HTTP] JSON 형식으로 대상을 타깃팅합니다. 예를 들어 아래 내보내기에는 특정 세그먼트에 대해 자격이 있고 다른 세그먼트를 종료한 프로필이 포함되어 있으며, 프로필 속성 이름, 성, 생년월일 및 개인 이메일 주소가 포함됩니다. 이 프로필의 ID는 ECID 및 이메일입니다.
+내보낸 [!DNL Experience Platform] 데이터가 [!DNL HTTP] JSON 형식으로 대상을 타깃팅합니다. 예를 들어 아래 내보내기에는 특정 세그먼트에 대해 자격이 있고 다른 두 세그먼트의 구성원이며 다른 세그먼트를 종료한 프로필이 포함되어 있습니다. 내보내기에는 프로필 속성 이름, 성, 생년월일 및 개인 이메일 주소도 포함됩니다. 이 프로필의 ID는 ECID 및 이메일입니다.
 
 ```json
 {
@@ -116,17 +146,25 @@ Experience Platform은 세그먼트 자격 또는 기타 중요한 이벤트 후
     "address": "john.doe@acme.com"
   },
   "segmentMembership": {
-    "ups": {
-      "7841ba61-23c1-4bb3-a495-00d3g5fe1e93": {
-        "lastQualificationTime": "2020-05-25T21:24:39Z",
-        "status": "exited"
+   "ups":{
+      "7841ba61-23c1-4bb3-a495-00d3g5fe1e93":{
+         "lastQualificationTime":"2022-01-11T21:24:39Z",
+         "status":"exited"
       },
-      "59bd2fkd-3c48-4b18-bf56-4f5c5e6967ae": {
-        "lastQualificationTime": "2020-05-25T23:37:33Z",
-        "status": "existing"
+      "59bd2fkd-3c48-4b18-bf56-4f5c5e6967ae":{
+         "lastQualificationTime":"2022-01-02T23:37:33Z",
+         "status":"existing"
+      },
+      "947c1c46-008d-40b0-92ec-3af86eaf41c1":{
+         "lastQualificationTime":"2021-08-25T23:37:33Z",
+         "status":"existing"
+      },
+      "5114d758-ce71-43ba-b53e-e2a91d67b67f":{
+         "lastQualificationTime":"2022-01-11T23:37:33Z",
+         "status":"realized"
       }
-    }
-  },
+   }
+},
   "identityMap": {
     "ecid": [
       {
