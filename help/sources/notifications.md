@@ -5,18 +5,18 @@ solution: Experience Platform
 title: 흐름 실행 알림
 topic-legacy: overview
 exl-id: 0f1cde97-3030-4b8e-be08-21f64e78b794
-source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
+source-git-commit: a51c878bbfd3004cb597ce9244a9ed2f2318604b
 workflow-type: tm+mt
-source-wordcount: '782'
+source-wordcount: '786'
 ht-degree: 1%
 
 ---
 
 # 흐름 실행 알림
 
-Adobe Experience Platform을 사용하면 [!DNL Platform] 서비스를 사용하여 들어오는 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 외부 소스에서 데이터를 수집할 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 등과 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
+Adobe Experience Platform을 사용하면 를 사용하여 들어오는 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 외부 소스에서 데이터를 수집할 수 있습니다 [!DNL Platform] 서비스. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 등과 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 
-[[!DNL Flow Service] ](https://www.adobe.io/experience-platform-apis/references/flow-service/) API는 내의 다양한 소스에서 고객 데이터를 수집하고 중앙 집중화하는 데  [!DNL Platform]사용됩니다. 이 서비스는 지원되는 모든 소스를 연결할 수 있는 사용자 인터페이스 및 RESTful API를 제공합니다.
+[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) 내에서 서로 다른 다양한 소스에서 고객 데이터를 수집하고 중앙 집중화하는 데 사용됩니다 [!DNL Platform]. 이 서비스는 지원되는 모든 소스를 연결할 수 있는 사용자 인터페이스 및 RESTful API를 제공합니다.
 
 Adobe I/O 이벤트를 구독하고 웹 후크를 사용하여 흐름 실행 상태에 대한 알림을 받을 수 있습니다. 이러한 알림에는 흐름 실행의 성공 또는 실행 실패에 기여한 오류에 대한 정보가 포함되어 있습니다.
 
@@ -24,19 +24,19 @@ Adobe I/O 이벤트를 구독하고 웹 후크를 사용하여 흐름 실행 상
 
 ## 시작하기
 
-이 자습서에서는 플로우를 모니터링할 소스 연결이 이미 하나 이상 있다고 가정합니다. 소스 연결을 아직 구성하지 않은 경우 [소스 개요](./home.md)를 방문하여 이 안내서로 돌아가기 전에 원하는 소스를 구성하십시오.
+이 자습서에서는 플로우를 모니터링할 소스 연결이 이미 하나 이상 있다고 가정합니다. 소스 연결을 아직 구성하지 않은 경우 를 방문하여 시작하십시오 [소스 개요](./home.md) 이 안내서로 돌아가기 전에 원하는 소스를 구성하는 것이 좋습니다.
 
-또한 웹 후크에 대한 작업 이해를 필요로 하고 한 애플리케이션에서 다른 응용 프로그램으로 웹 후크를 연결하는 방법을 알고 있어야 합니다. Webhooks에 대한 소개는 [[!DNL I/O Events] 설명서](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/intro/webhook_docs_intro.md)를 참조하십시오.
+또한 웹 후크에 대한 작업 이해를 필요로 하고 한 애플리케이션에서 다른 응용 프로그램으로 웹 후크를 연결하는 방법을 알고 있어야 합니다. 자세한 내용은 [[!DNL I/O Events] 설명서](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/intro/webhook_docs_intro.md) webhooks를 소개합니다.
 
 ## 흐름 실행 알림에 웹 후크 등록
 
-흐름 실행 알림을 받으려면 Adobe 개발자 콘솔을 사용하여 [!DNL Experience Platform] 통합에 웹 후크를 등록해야 합니다.
+흐름 실행 알림을 수신하려면 Adobe 개발자 콘솔을 사용하여 웹 후크를 [!DNL Experience Platform] 통합.
 
-이 작업을 수행하는 방법에 대한 자세한 단계는  [!DNL I/O Event] notifications](../observability/alerts/subscribe.md)에 가입하는 [의 자습서를 따르십시오.
+다음의 자습서를 따르십시오 [[!DNL I/O Event] 알림 가입](../observability/alerts/subscribe.md) 를 참조하십시오.
 
 >[!IMPORTANT]
 >
->구독 프로세스 중에 **[!UICONTROL 플랫폼 알림]**&#x200B;을 이벤트 공급자로 선택하고 다음 이벤트 구독을 선택하십시오.
+>구독 프로세스 중에 **[!UICONTROL 플랫폼 알림]** 을 이벤트 공급자로 선택하고 다음 이벤트 구독을 선택합니다.
 >
 >* **[!UICONTROL Experience Platform 소스의 흐름 실행 성공]**
 >* **[!UICONTROL Experience Platform 소스의 흐름 실행 실패]**
@@ -46,15 +46,15 @@ Adobe I/O 이벤트를 구독하고 웹 후크를 사용하여 흐름 실행 상
 
 웹 후크가 연결되고 이벤트 구독이 완료되면 웹 후크 대시보드를 통해 흐름 실행 알림 수신을 시작할 수 있습니다.
 
-알림은 수집 작업 실행 수, 파일 크기 및 오류와 같은 정보를 반환합니다. 또한 알림은 JSON 형식으로 흐름 실행과 연결된 페이로드를 반환합니다. 응답 페이로드는 `sources_flow_run_success` 또는 `sources_flow_run_failure`로 분류할 수 있습니다.
+알림은 수집 작업 실행 수, 파일 크기 및 오류와 같은 정보를 반환합니다. 또한 알림은 JSON 형식으로 흐름 실행과 연결된 페이로드를 반환합니다. 응답 페이로드는 `sources_flow_run_success` 또는 `sources_flow_run_failure`.
 
 >[!IMPORTANT]
 >
->흐름 생성 프로세스 중에 부분 수집이 활성화되면 성공 및 실패한 입력을 모두 포함하는 흐름이 흐름 생성 프로세스 중에 설정된 오류 임계값 퍼센트 미만인 경우에만 `sources_flow_run_success` 로 표시됩니다. 성공적인 흐름 실행에 오류가 포함되어 있어도 이러한 오류는 반환 페이로드의 일부로 포함됩니다.
+>흐름 생성 프로세스 중에 부분 수집이 활성화되면 성공한 수집과 실패한 수집이 모두 포함된 흐름이 로 표시됩니다 `sources_flow_run_success` 오류 수가 흐름 생성 프로세스 중에 설정된 오류 임계값 비율보다 적은 경우에만 해당됩니다. 성공적인 흐름 실행에 오류가 포함되어 있어도 이러한 오류는 반환 페이로드의 일부로 포함됩니다.
 
 ### 성공
 
-성공적인 응답은 특정 흐름 실행의 특성을 정의하는 `metrics` 세트와 데이터 변환 방법을 요약한 `activities` 집합을 반환합니다.
+성공적인 응답은 일련의 `metrics` 특정 흐름 실행 및 `activities` 데이터가 어떻게 변환되는지에 대한 개요입니다.
 
 ```json
 {
@@ -147,7 +147,7 @@ Adobe I/O 이벤트를 구독하고 웹 후크를 사용하여 흐름 실행 상
           "outputFileCount": 10,
           "extensions": {
             "manifest": {
-              "fileInfo": "https://platform-int.adobe.io/data/foundation/export/batches/01E4TSJNM2H5M74J0XB8MFWDHK/meta?path=input_files"
+              "fileInfo": "https://platform.adobe.io/data/foundation/export/batches/01E4TSJNM2H5M74J0XB8MFWDHK/meta?path=input_files"
             }
           }
         },
@@ -313,11 +313,11 @@ Adobe I/O 이벤트를 구독하고 웹 후크를 사용하여 흐름 실행 상
 
 >[!NOTE]
 >
->오류 메시지에 대한 자세한 내용은 [부록](#errors)을 참조하십시오.
+>자세한 내용은 [부록](#errors) 오류 메시지에 대한 자세한 정보.
 
 ## 다음 단계
 
-이제 흐름 실행 상태에 대한 실시간 알림을 받을 수 있는 이벤트에 가입할 수 있습니다. 흐름 실행 및 소스에 대한 자세한 내용은 [소스 개요](./home.md)를 참조하십시오.
+이제 흐름 실행 상태에 대한 실시간 알림을 받을 수 있는 이벤트에 가입할 수 있습니다. 흐름 실행 및 소스에 대한 자세한 내용은 [소스 개요](./home.md).
 
 ## 부록
 
@@ -325,9 +325,9 @@ Adobe I/O 이벤트를 구독하고 웹 후크를 사용하여 흐름 실행 상
 
 ### 오류 메시지 이해 {#errors}
 
-소스에서 데이터를 복사하고 있거나 복사된 데이터가 [!DNL Platform]에 처리되는 경우 수집 오류가 발생할 수 있습니다. 특정 오류에 대한 자세한 내용은 아래 표를 참조하십시오.
+수집 오류는 소스에서 데이터를 복사하고 있거나 복사된 데이터가 처리되는 경우에 발생할 수 있습니다 [!DNL Platform]. 특정 오류에 대한 자세한 내용은 아래 표를 참조하십시오.
 
 | 오류 | 설명 |
 | ---------- | ----------- |
 | `CONNECTOR-1001-500` | 소스에서 데이터를 복사하는 동안 오류가 발생했습니다. |
-| `CONNECTOR-2001-500` | 복사된 데이터를 [!DNL Platform]에 처리하는 동안 오류가 발생했습니다. 구문 분석, 유효성 검사 또는 변환과 관련하여 이 오류가 발생할 수 있습니다. |
+| `CONNECTOR-2001-500` | 복사된 데이터를 처리하는 동안 오류가 발생했습니다. [!DNL Platform]. 구문 분석, 유효성 검사 또는 변환과 관련하여 이 오류가 발생할 수 있습니다. |
