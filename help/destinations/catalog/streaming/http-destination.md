@@ -3,9 +3,9 @@ keywords: 스트리밍;
 title: HTTP API 연결
 description: Adobe Experience Platform의 HTTP API 대상을 사용하면 프로필 데이터를 타사 HTTP 엔드포인트로 보낼 수 있습니다.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: bf36592fe4ea7b9d9b6703f3aca8fd8344fe5c9f
+source-git-commit: 577b42eef9d4b44b5b556ee31d22276d72c609ea
 workflow-type: tm+mt
-source-wordcount: '1274'
+source-wordcount: '1275'
 ht-degree: 1%
 
 ---
@@ -103,27 +103,19 @@ Experience Platform은 세그먼트 자격 또는 기타 중요한 이벤트 후
 
 변경 사항이 있는 위치에 상관없이 모든 매핑된 속성이 프로필에 대해 내보내집니다. 따라서 위의 예에서 이러한 5개의 새 프로필에 대해 매핑된 속성은 속성 자체가 변경되지 않았더라도 내보내집니다.
 
-### 업데이트에 포함되는 내용과 결정하는 것은 무엇입니까? {#what-determines-export-what-is-included}
+### 데이터 내보내기와 내보내기에 포함된 내용을 결정하는 것은 무엇입니까? {#what-determines-export-what-is-included}
 
 주어진 프로필에 대해 내보낸 데이터에 대해서는 의 두 가지 개념을 이해하는 것이 중요합니다 *http API 대상에 대한 데이터 내보내기를 결정하는 것은 무엇입니까?* 및 *내보내기에 포함된 데이터*.
 
 | 대상 내보내기를 결정하는 것은 무엇입니까? | 대상 내보내기에 포함된 항목 |
 |---------|----------|
-| <ul><li>매핑된 속성 및 세그먼트는 대상 업데이트의 단서로 사용됩니다. 즉, 매핑된 세그먼트가 상태(null에서 실현됨 또는 실현됨/존재에서 종료로)를 변경하거나 매핑된 속성을 업데이트하면 대상 내보내기가 해제됩니다.</li><li>현재 ID를 HTTP API 대상에 매핑할 수 없으므로 주어진 프로필의 ID를 변경하면 대상 내보내기도 결정됩니다.</li><li>속성 변경은 속성이 동일한 값이든 간에 속성에 대한 업데이트로 정의됩니다. 즉, 값 자체가 변경되지 않았더라도 속성에 대한 덮어쓰기는 변경 사항으로 간주됩니다.</li></ul> | <ul><li>데이터 플로우에 매핑되었는지 여부에 상관없이 모든 세그먼트(최신 멤버십 상태 포함)는 `segmentMembership` 개체.</li><li>의 모든 ID `identityMap` 개체도 포함됩니다(Experience Platform은 현재 HTTP API 대상에서 ID 매핑을 지원하지 않습니다).</li><li>매핑된 속성만 대상 내보내기에 포함됩니다.</li></ul> |
+| <ul><li>매핑된 속성 및 세그먼트는 대상 내보내기의 단서로 사용됩니다. 즉, 매핑된 세그먼트가 상태(null에서 실현됨 또는 실현됨/존재에서 종료로)를 변경하거나 매핑된 속성을 업데이트하면 대상 내보내기가 해제됩니다.</li><li>현재 ID를 HTTP API 대상에 매핑할 수 없으므로 주어진 프로필의 ID를 변경하면 대상 내보내기도 결정됩니다.</li><li>속성 변경은 속성이 동일한 값이든 간에 속성에 대한 업데이트로 정의됩니다. 즉, 값 자체가 변경되지 않았더라도 속성에 대한 덮어쓰기는 변경 사항으로 간주됩니다.</li></ul> | <ul><li>데이터 플로우에 매핑되었는지 여부에 상관없이 모든 세그먼트(최신 멤버십 상태 포함)는 `segmentMembership` 개체.</li><li>의 모든 ID `identityMap` 개체도 포함됩니다(Experience Platform은 현재 HTTP API 대상에서 ID 매핑을 지원하지 않습니다).</li><li>매핑된 속성만 대상 내보내기에 포함됩니다.</li></ul> |
 
 {style=&quot;table-layout:fixed&quot;}
 
 예를 들어 이 데이터 흐름을 데이터 플로우에서 세 개의 세그먼트를 선택하고 네 개의 속성이 대상에 매핑되는 HTTP 대상으로 간주합니다.
 
 ![HTTP API 대상 데이터 흐름](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png)
-
-<!--
-
-![HTTP API destination dataflow](/help/destinations/assets/catalog/http/dataflow-destination.png)
-
-![Mapped attributes](/help/destinations/assets/catalog/http/mapped-attributes.png)
-
--->
 
 대상에 대한 프로필 내보내기는 하나 또는 둘 중 하나에 대해 자격이 있는 프로필로 결정할 수 있습니다 *3개의 매핑된 세그먼트*. 그러나 데이터 내보내기에서 `segmentMembership` 개체(참조 [내보낸 데이터](#exported-data) 아래 섹션)을 사용하면, 특정 프로필이 해당 세그먼트의 구성원일 경우 매핑되지 않은 다른 세그먼트가 나타날 수 있습니다. 프로가 DeLorinan Cars 세그먼트를 통해 고객 자격을 얻지만 또한 Viewed &quot;Back to the Future&quot; 영화 및 SF 팬의 멤버인 경우 다른 두 세그먼트도 함께 제공됩니다 `segmentMembership` 데이터가 데이터 플로우에 매핑되지 않더라도 데이터 내보내기의 객체입니다.
 

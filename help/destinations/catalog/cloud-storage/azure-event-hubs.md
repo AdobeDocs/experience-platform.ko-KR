@@ -3,9 +3,9 @@ keywords: Azure 이벤트 허브 대상;azure 이벤트 허브;azure 이벤트 �
 title: (베타) [!DNL Azure Event Hubs] 연결
 description: 에 대한 실시간 아웃바운드 연결을 만듭니다. [!DNL Azure Event Hubs] Experience Platform에서 데이터를 스트리밍할 스토리지.
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: 0a45cb49f3eb2bbd6ac1b39962df88b2352eb121
+source-git-commit: 577b42eef9d4b44b5b556ee31d22276d72c609ea
 workflow-type: tm+mt
-source-wordcount: '752'
+source-wordcount: '1149'
 ht-degree: 1%
 
 ---
@@ -58,19 +58,37 @@ While [설정](../../ui/connect-destination.md) 이 대상을 사용하려면 �
 
 ## 프로필 내보내기 동작 {#profile-export-behavior}
 
-Experience Platform은 세그먼트 자격 또는 기타 중요한 이벤트 후에 프로필에 대한 관련 업데이트가 발생한 경우에만 데이터를 대상으로 내보내도록 Azure 이벤트 허브 대상으로 프로필 내보내기 동작을 최적화합니다. 프로필은 다음과 같은 상황에서 대상에 내보내집니다.
+Experience Platform은 프로필 내보내기 동작을 로 최적화합니다 [!DNL Azure Event Hubs] 대상: 세그먼트 자격 또는 기타 중요한 이벤트에 따라 프로필에 대한 관련 업데이트가 발생한 경우에만 데이터를 대상에 내보냅니다. 프로필은 다음과 같은 상황에서 대상에 내보내집니다.
 
-* 대상에 매핑된 세그먼트 중 하나 이상에 대한 세그먼트 멤버십 변경으로 프로필 업데이트가 트리거되었습니다. 예를 들어 프로필이 대상에 매핑된 세그먼트 중 하나에 적격이거나 대상에 매핑된 세그먼트 중 하나를 끝냈습니다.
+* 프로필 업데이트는 대상에 매핑된 세그먼트 중 하나 이상에 대한 세그먼트 멤버십 변경에 의해 결정됩니다. 예를 들어 프로필이 대상에 매핑된 세그먼트 중 하나에 적격이거나 대상에 매핑된 세그먼트 중 하나를 끝냈습니다.
 * 프로필 업데이트는 [id 맵](/help/xdm/field-groups/profile/identitymap.md). 예를 들어 대상에 매핑된 세그먼트 중 하나에 대해 이미 자격이 있는 프로필이 ID 맵 속성에 새 ID를 추가했습니다.
-* 대상에 매핑된 특성 중 하나 이상에 대한 특성 변경으로 프로필 업데이트가 트리거되었습니다. 예를 들어 매핑 단계에서 대상에 매핑된 속성 중 하나가 프로필에 추가됩니다.
+* 프로필 업데이트는 대상에 매핑된 특성 중 하나 이상에 대한 특성 변경에 의해 결정됩니다. 예를 들어 매핑 단계에서 대상에 매핑된 속성 중 하나가 프로필에 추가됩니다.
 
 위에 설명된 모든 경우 관련 업데이트가 발생한 프로필만 대상으로 내보내집니다. 예를 들어 대상 플로우에 매핑된 세그먼트에 100개의 멤버가 있고 5개의 새 프로필이 세그먼트에 대한 자격이 있는 경우 대상에 내보내기는 증분 결과이며 5개의 새 프로필만 포함합니다.
 
 변경 사항이 있는 위치에 상관없이 모든 매핑된 속성이 프로필에 대해 내보내집니다. 따라서 위의 예에서 이러한 5개의 새 프로필에 대해 매핑된 속성은 속성 자체가 변경되지 않았더라도 내보내집니다.
 
+### 데이터 내보내기와 내보내기에 포함된 내용을 결정하는 것은 무엇입니까? {#what-determines-export-what-is-included}
+
+주어진 프로필에 대해 내보낸 데이터에 대해서는 의 두 가지 개념을 이해하는 것이 중요합니다 *는 로 데이터 내보내기를 결정합니다 [!DNL Azure Event Hubs] 대상* 및 *내보내기에 포함된 데이터*.
+
+| 대상 내보내기를 결정하는 것은 무엇입니까? | 대상 내보내기에 포함된 항목 |
+|---------|----------|
+| <ul><li>매핑된 속성 및 세그먼트는 대상 내보내기의 단서로 사용됩니다. 즉, 매핑된 세그먼트가 상태(null에서 실현됨 또는 실현됨/존재에서 종료로)를 변경하거나 매핑된 속성을 업데이트하면 대상 내보내기가 해제됩니다.</li><li>현재 ID를 매핑할 수 없으므로 [!DNL Azure Event Hubs] 대상, 지정된 프로필의 모든 id의 변경 사항으로 대상 내보내기도 결정합니다.</li><li>속성 변경은 속성이 동일한 값이든 간에 속성에 대한 업데이트로 정의됩니다. 즉, 값 자체가 변경되지 않았더라도 속성에 대한 덮어쓰기는 변경 사항으로 간주됩니다.</li></ul> | <ul><li>데이터 플로우에 매핑되었는지 여부에 상관없이 모든 세그먼트(최신 멤버십 상태 포함)는 `segmentMembership` 개체.</li><li>의 모든 ID `identityMap` 개체도 포함됩니다(Experience Platform은 현재 [!DNL Azure Event Hubs] 대상).</li><li>매핑된 속성만 대상 내보내기에 포함됩니다.</li></ul> |
+
+{style=&quot;table-layout:fixed&quot;}
+
+예를 들어 이 데이터 흐름을 [!DNL Azure Event Hubs] 대상: 데이터 흐름에서 세 개의 세그먼트를 선택하고 네 개의 속성이 대상에 매핑됩니다.
+
+![Amazon Kinesis 대상 데이터 흐름](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png)
+
+대상에 대한 프로필 내보내기는 하나 또는 둘 중 하나에 대해 자격이 있는 프로필로 결정할 수 있습니다 *3개의 매핑된 세그먼트*. 그러나 데이터 내보내기에서 `segmentMembership` 개체(참조 [내보낸 데이터](#exported-data) 아래 섹션)을 사용하면, 특정 프로필이 해당 세그먼트의 구성원일 경우 매핑되지 않은 다른 세그먼트가 나타날 수 있습니다. 프로가 DeLorinan Cars 세그먼트를 통해 고객 자격을 얻지만 또한 Viewed &quot;Back to the Future&quot; 영화 및 SF 팬의 멤버인 경우 다른 두 세그먼트도 함께 제공됩니다 `segmentMembership` 데이터가 데이터 플로우에 매핑되지 않더라도 데이터 내보내기의 객체입니다.
+
+프로필 속성 POV에서 위에 매핑된 4개의 속성에 대한 변경 사항이 대상 내보내기를 결정하며 프로필에 있는 4개의 매핑된 속성이 데이터 내보내기에 표시됩니다.
+
 ## 내보낸 데이터 {#exported-data}
 
-내보낸 [!DNL Experience Platform] 데이터가 랜딩됨 [!DNL Azure Event Hubs] JSON 형식으로 표시합니다. 예를 들어 아래 내보내기에는 특정 세그먼트에 대해 자격이 있고 다른 세그먼트를 종료한 프로필이 포함되어 있으며, 프로필 속성 이름, 성, 생년월일 및 개인 이메일 주소가 포함됩니다. 이 프로필의 ID는 ECID 및 이메일입니다.
+내보낸 [!DNL Experience Platform] 데이터가 [!DNL Azure Event Hubs] JSON 형식으로 대상을 타깃팅합니다. 예를 들어 아래 내보내기에는 특정 세그먼트에 대해 자격이 있고 다른 두 세그먼트의 구성원이며 다른 세그먼트를 종료한 프로필이 포함되어 있습니다. 내보내기에는 프로필 속성 이름, 성, 생년월일 및 개인 이메일 주소도 포함됩니다. 이 프로필의 ID는 ECID 및 이메일입니다.
 
 ```json
 {
@@ -85,17 +103,25 @@ Experience Platform은 세그먼트 자격 또는 기타 중요한 이벤트 후
     "address": "john.doe@acme.com"
   },
   "segmentMembership": {
-    "ups": {
-      "7841ba61-23c1-4bb3-a495-00d3g5fe1e93": {
-        "lastQualificationTime": "2020-05-25T21:24:39Z",
-        "status": "exited"
+   "ups":{
+      "7841ba61-23c1-4bb3-a495-00d3g5fe1e93":{
+         "lastQualificationTime":"2022-01-11T21:24:39Z",
+         "status":"exited"
       },
-      "59bd2fkd-3c48-4b18-bf56-4f5c5e6967ae": {
-        "lastQualificationTime": "2020-05-25T23:37:33Z",
-        "status": "existing"
+      "59bd2fkd-3c48-4b18-bf56-4f5c5e6967ae":{
+         "lastQualificationTime":"2022-01-02T23:37:33Z",
+         "status":"existing"
+      },
+      "947c1c46-008d-40b0-92ec-3af86eaf41c1":{
+         "lastQualificationTime":"2021-08-25T23:37:33Z",
+         "status":"existing"
+      },
+      "5114d758-ce71-43ba-b53e-e2a91d67b67f":{
+         "lastQualificationTime":"2022-01-11T23:37:33Z",
+         "status":"realized"
       }
-    }
-  },
+   }
+},
   "identityMap": {
     "ecid": [
       {
