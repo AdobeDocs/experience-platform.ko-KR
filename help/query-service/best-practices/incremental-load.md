@@ -2,7 +2,7 @@
 title: 샘플 증분 로드 쿼리
 description: 증분 로드 기능은 익명 블록 및 스냅샷 기능을 모두 사용하여 일치하는 데이터를 무시하면서 데이터 레이크에서 데이터 웨어하우스로 데이터를 이동하는 거의 실시간 솔루션을 제공합니다.
 exl-id: 1418d041-29ce-4153-90bf-06bd8da8fb78
-source-git-commit: 943886078fe31a12542c297133ac6a0a0d551e08
+source-git-commit: e5a79db157524d014c9a07d2bf5907a5544e7b77
 workflow-type: tm+mt
 source-wordcount: '687'
 ht-degree: 0%
@@ -65,7 +65,7 @@ INSERT INTO
 >다음 `history_meta('source table name')` 는 데이터 집합에 있는 사용 가능한 스냅샷에 액세스하는 데 사용되는 편리한 방법입니다.
 
 ```SQL
-BEGIN
+$$ BEGIN
     SET @from_snapshot_id = SELECT coalesce(last_snapshot_id, 'HEAD') FROM checkpoint_log a JOIN
                             (SELECT MAX(process_timestamp)process_timestamp FROM checkpoint_log
                                 WHERE process_name = 'DIM_TABLE_ABC' AND process_status = 'SUCCESSFUL' )b
@@ -86,7 +86,8 @@ INSERT INTO
 EXCEPTION
   WHEN OTHER THEN
     SELECT 'ERROR';
- END;
+END 
+$$;
 ```
 
 4 아래 익명 블록 예제의 증분 데이터 로드 논리를 사용하여 소스 데이터 집합의 새 데이터(가장 최근 타임스탬프 이후)를 처리하여 일반 케이던스의 대상 테이블에 추가할 수 있습니다. 이 예제에서 데이터는 `DIM_TABLE_ABC` 처리 및 추가됨 `DIM_TABLE_ABC_incremental`.
@@ -96,7 +97,7 @@ EXCEPTION
 > `_ID` 는 두 가지 모두 `DIM_TABLE_ABC_Incremental` 및 `SELECT history_meta('DIM_TABLE_ABC')`.
 
 ```SQL
-BEGIN
+$$ BEGIN
     SET @from_snapshot_id = SELECT coalesce(last_snapshot_id, 'HEAD') FROM checkpoint_log a join
                             (SELECT MAX(process_timestamp)process_timestamp FROM checkpoint_log
                                 WHERE process_name = 'DIM_TABLE_ABC' AND process_status = 'SUCCESSFUL' )b
@@ -117,7 +118,8 @@ INSERT INTO
 EXCEPTION
   WHEN OTHER THEN
     SELECT 'ERROR';
- END;
+END
+$$;
 ```
 
 이 논리를 테이블에 적용하여 증분 로드를 수행할 수 있습니다.
@@ -137,7 +139,7 @@ SET resolve_fallback_snapshot_on_failure=true;
 전체 코드 블록은 다음과 같습니다.
 
 ```SQL
-BEGIN
+$$ BEGIN
     SET resolve_fallback_snapshot_on_failure=true;
     SET @from_snapshot_id = SELECT coalesce(last_snapshot_id, 'HEAD') FROM checkpoint_log a JOIN
                             (SELECT MAX(process_timestamp)process_timestamp FROM checkpoint_log
@@ -158,7 +160,8 @@ Insert Into
 EXCEPTION
   WHEN OTHER THEN
     SELECT 'ERROR';
- END;
+END
+$$;
 ```
 
 ## 다음 단계

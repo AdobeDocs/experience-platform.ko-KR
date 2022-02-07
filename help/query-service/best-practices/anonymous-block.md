@@ -2,7 +2,7 @@
 title: 샘플 익명 블록 쿼리
 description: 익명 블록은 Adobe Experience Platform 쿼리 서비스에서 지원하는 SQL 구문이므로 쿼리 시퀀스를 효율적으로 실행할 수 있습니다
 exl-id: ec497475-9d2b-43aa-bcf4-75a430590496
-source-git-commit: 9f4e34edc47a333aa88153529d0af6a10f189a15
+source-git-commit: 83b9aad78bcbf6e40d3059607a3779b6f1a2083f
 workflow-type: tm+mt
 source-wordcount: '499'
 ht-degree: 0%
@@ -33,18 +33,14 @@ Adobe Experience Platform 쿼리 서비스는 익명 블록을 지원합니다. 
 다음 쿼리는 SQL 문 체인의 예를 보여줍니다. 자세한 내용은 [쿼리 서비스의 SQL 구문](../sql/syntax.md) 사용된 SQL 구문에 대한 자세한 내용은 문서를 참조하십시오.
 
 ```SQL
-BEGIN
-     
+$$ BEGIN
     CREATE TABLE ADLS_TABLE_A AS SELECT * FROM ADLS_TABLE_1....;
     ....
-    CREATE TABLE ADLS_TABLE_D AS SELECT * FROM ADLS_TABLE_C....;
-     
+    CREATE TABLE ADLS_TABLE_D AS SELECT * FROM ADLS_TABLE_C....; 
     EXCEPTION WHEN OTHER THEN SET @ret = SELECT 'ERROR';
-     
-END;
+END
+$$;
 ```
-
-<!-- The block below uses `SET` to persist the result of a select query with a variable. It is used in the anonymous block to store the response from a query as a local variable for use with the `SNAPSHOT` feature. -->
 
 아래 예에서는 `SET` 의 결과를 유지합니다. `SELECT` 지정된 로컬 변수에 있는 쿼리입니다. 변수 범위가 익명 블록으로 지정됩니다.
 
@@ -53,10 +49,11 @@ END;
 데이터베이스 스냅숏은 SQL Server 데이터베이스의 읽기 전용 정적 보기입니다. 추가 정보 [스냅샷 절에 대한 정보](../sql/syntax.md#SNAPSHOT-clause) sql 구문 설명서를 참조하십시오.
 
 ```SQL
-BEGIN                                             
+$$ BEGIN                                             
   SET @current_sid = SELECT parent_id  FROM (SELECT history_meta('your_table_name')) WHERE  is_current = true;
-  CREATE temp table abcd_temp_table AS SELECT count(1) FROM your_table_name  SNAPSHOT SINCE @current_sid;                                                                                                     
-END;
+  CREATE temp table abcd_temp_table AS SELECT count(1) FROM your_table_name  SNAPSHOT SINCE @current_sid;                                                                                           
+END
+$$;
 ```
 
 ## 다음 단계
