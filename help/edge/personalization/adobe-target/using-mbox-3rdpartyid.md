@@ -2,9 +2,9 @@
 title: mbox3rdPartyId에 대한 실시간 프로필 동기화
 description: Adobe Experience Platform Web SDK에서 mbox3rdPartyID를 사용하는 방법을 알아봅니다.
 keywords: 개인화;target;adobe target;renderDecisions;sendEvent;mbox3rdPartyId;
-source-git-commit: 86acedc6813a14648848a25e08aa7e65f48d1a2a
+source-git-commit: 439f26177837e985ef95e972c3102cc2db37d539
 workflow-type: tm+mt
-source-wordcount: '163'
+source-wordcount: '161'
 ht-degree: 9%
 
 ---
@@ -21,7 +21,7 @@ Adobe Target의 mbox3rdPartyID는 회사의 충성도 프로그램을 위한 멤
 
 ### 1단계: 구성 `Target Third Party ID Namespace`
 
-구성 `Target Third Party ID Namespace` 다음 위치에서 [데이터 스트림](../../fundamentals/datastreams.md)를 사용( mbox 타사 ID로 사용할 ID 네임스페이스 사용)
+구성 `Target Third Party ID Namespace` 다음 위치에서 [데이터 스트림](../../fundamentals/datastreams.md)mbox 타사 ID로 사용할 ID 네임스페이스 를 사용하여 을 만들 수 있습니다.
 [ID 네임스페이스에 대해 자세히 알아보기](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=ko-KR)
 
 ![](assets/mbox3rdpartyid.png)
