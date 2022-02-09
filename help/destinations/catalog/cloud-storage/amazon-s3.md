@@ -3,9 +3,9 @@ keywords: Amazon S3;S3 대상;s3;amazon s3
 title: Amazon S3 연결
 description: Amazon Web Services(AWS) S3 저장소에 대한 라이브 아웃바운드 연결을 만들어 Adobe Experience Platform의 CSV 데이터 파일을 고유한 S3 버킷으로 주기적으로 내보냅니다.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: bf46f4e6549fcbd975a9f0a6034040ed2e9b34e6
+source-git-commit: e6dc0fb136a6f5199153630a20e8809c2c040107
 workflow-type: tm+mt
-source-wordcount: '390'
+source-wordcount: '503'
 ht-degree: 0%
 
 ---
@@ -27,6 +27,19 @@ ht-degree: 0%
 이 대상에 연결하려면 [대상 구성 자습서](../../ui/connect-destination.md).
 
 ### 연결 매개 변수 {#parameters}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_s3_bucket"
+>title="버킷 이름"
+>abstract="길이는 3자에서 63자 사이여야 합니다. 문자나 숫자로 시작하고 끝나야 합니다. 소문자, 숫자 또는 하이픈( - )만 포함해야 합니다. IP 주소 형식(예: 192.100.1.1)을 지정해서는 안 됩니다."
+>text="Learn more in documentation"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_s3_folderpath"
+>title="폴더 경로"
+>abstract="A-Z, a-z, 0-9 문자만 포함해야 하며 다음 특수 문자를 포함할 수 있습니다. `/!-_.'()"^[]+$%.*"`. 세그먼트 파일당 폴더를 만들려면 매크로 /%SEGMENT_NAME% 또는 /%SEGMENT_ID% 또는 /%SEGMENT_NAME%/%SEGMENT_ID%를 텍스트 필드에 삽입합니다. 매크로는 폴더 경로 끝에만 삽입할 수 있습니다. 설명서에서 매크로 예제를 봅니다."
+>text="Learn more in documentation"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/cloud-storage/overview.html?lang=en#use-macros" text="매크로를 사용하여 저장소 위치에 폴더를 만듭니다"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_s3_rsa"

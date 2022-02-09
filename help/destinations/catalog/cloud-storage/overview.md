@@ -3,7 +3,7 @@ keywords: 클라우드 스토리지 대상;클라우드 스토리지
 title: 클라우드 스토리지 대상 개요
 description: Adobe Experience Platform은 세그먼트를 Amazon S3, AWS Kinesis, Azure 이벤트 허브 또는 SFTP 클라우드 저장소 위치에 데이터 파일로 제공할 수 있습니다.
 exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
-source-git-commit: b4810dfef7b0d437744ca14a32bd4f5746e8d002
+source-git-commit: 818c9a6f5cd39db1405827b657872b99254ad1e5
 workflow-type: tm+mt
 source-wordcount: '295'
 ht-degree: 0%
