@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: Flow Service API를 사용하여 Adobe Experience Platform을 Snowflake에 연결하는 방법을 알아봅니다.
 exl-id: 0ef34d30-7b4c-43f5-8e2e-cde05da05aa5
-source-git-commit: 0928da0ad15ce23d3677fec7b9866d079f3db407
+source-git-commit: ac7910c971fbedf3afebd87633f814d597260cae
 workflow-type: tm+mt
 source-wordcount: '526'
 ht-degree: 1%
@@ -46,7 +46,7 @@ Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용�
 | `connectionString` | 에 연결하는 데 사용되는 연결 문자열입니다 [!DNL Snowflake] 인스턴스. 에 대한 연결 문자열 패턴 [!DNL Snowflake] is `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}` |
 | `connectionSpec.id` | 연결 사양은 기본 및 소스 연결 생성과 관련된 인증 사양이 포함된 소스의 커넥터 등록 정보를 반환합니다. 에 대한 연결 사양 ID [!DNL Snowflake] is `b2e08744-4f1a-40ce-af30-7abac3e23cf3`. |
 
-시작하는 방법에 대한 자세한 내용은 다음을 참조하십시오 [[!DNL Snowflake] 문서](https://docs.snowflake.com/en/user-guide/oauth-custom.html).
+시작하는 방법에 대한 자세한 내용은 다음을 참조하십시오 [[!DNL Snowflake] 문서](https://docs.snowflake.com/en/user-guide/key-pair-auth.html).
 
 ## 기본 연결 만들기
 
