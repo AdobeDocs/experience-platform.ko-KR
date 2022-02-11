@@ -3,10 +3,10 @@ keywords: 개인화;개인화
 title: 개인화 대상 개요
 description: 개인화 플랫폼은 개별 행동을 통해 데이터와 통찰력을 수집합니다. 이러한 플랫폼은 마케터가 익명의 데이터를 탐색하거나, 이전 활동을 기반으로 또는 유사한 습관을 갖는 대상 세그먼트의 일부로서 오퍼나 광고를 잠재 고객에게 제공하는 데 도움을 줄 수 있습니다.
 exl-id: 18a2b170-43d0-4d41-8afc-d2f0f9bfd7bb
-source-git-commit: 8f9a601a833149c83d465f68d16ca362ed730b8a
+source-git-commit: 7acb823b9cbfb4a7988235949c6d2fd0b9baa7c0
 workflow-type: tm+mt
-source-wordcount: '145'
-ht-degree: 10%
+source-wordcount: '143'
+ht-degree: 11%
 
 ---
 
@@ -22,8 +22,8 @@ ht-degree: 10%
 
 **연결**
 
-* [(베타) Adobe Target](adobe-target-connection.md)
-* [(베타) 사용자 지정 개인화 연결](custom-personalization.md)
+* [Adobe Target](adobe-target-connection.md)
+* [사용자 지정 개인화 연결](custom-personalization.md)
 
 **확장**
 
