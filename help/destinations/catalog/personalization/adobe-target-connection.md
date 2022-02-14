@@ -3,9 +3,9 @@ keywords: target 개인화; 대상; experience platform target 대상;adobe targ
 title: Adobe Target 연결
 description: Adobe Target은 웹 사이트, 모바일 앱 등에서 모든 인바운드 고객 상호 작용에 실시간 AI 기반의 개인화 및 실험 기능을 제공하는 애플리케이션입니다.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 8845bb42fe1a47f1bcd6521f7886c1582d209993
+source-git-commit: fb79d0697244518cc713efeada7d017d64ce6214
 workflow-type: tm+mt
-source-wordcount: '432'
+source-wordcount: '475'
 ht-degree: 0%
 
 ---
@@ -33,6 +33,10 @@ Adobe Target은 Adobe Experience Platform의 개인화 연결입니다.
 홈 대여 및 판매 회사는 Adobe Experience Platform의 고객 세그먼트 자격에 따라 배너를 사용하여 홈 페이지를 개인화하려고 합니다. 회사는 개인화된 경험을 제공해야 하는 대상을 선택하고, Target 오퍼에 대한 타깃팅 기준으로 Adobe Target에 보낼 수 있습니다.
 
 ## 대상에 연결 {#connect}
+
+>[!IMPORTANT]
+>
+>만들기 전 [!DNL Adobe Target] connection에 대한 안내서를 읽어 보는 것이 좋습니다 [동일한 페이지 및 다음 페이지 개인화를 위한 개인화 대상 구성](../../ui/configure-personalization-destinations.md). 이 안내서에서는 여러 Experience Platform 구성 요소에서 동일한 페이지 및 다음 페이지 개인화 사용 사례에 필요한 구성 단계를 안내합니다.
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_target_datastream"
