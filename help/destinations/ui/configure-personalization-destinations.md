@@ -6,9 +6,9 @@ seo-title: Configure personalization destinations for same-page and next-page pe
 description: 동일 페이지 및 다음 페이지 개인화를 위한 개인화 대상을 구성하는 방법을 알아봅니다.
 seo-description: Configure personalization destinations for same-page and next-page personalization.
 exl-id: 7d7b6869-bd59-4766-a044-f449396f6524
-source-git-commit: 851a9598523d26ba52a367f6c03e3c9612f6678b
+source-git-commit: 69db8dbc315f97a0133bcc761ebf850d587dd7d1
 workflow-type: tm+mt
-source-wordcount: '367'
+source-wordcount: '380'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,10 @@ Adobe Experience Platform 사용 [에지 세분화](../../segmentation/ui/edge-s
 이 기능은 동일한 페이지 및 다음 페이지 개인화 사용 사례를 구성하는 데 도움이 됩니다.
 
 이 문서에서는 이러한 사용 사례에 대한 Experience Platform 및 개인화 대상을 구성하는 방법에 대한 단계별 지침을 제공합니다.
+
+또한 종단 간 구성 프로세스에 대한 개요는 아래 비디오를 참조하십시오.
+
+>[!VIDEO](https://video.tv.adobe.com/v/340091/)
 
 ## 1단계: Data Collection UI에서 데이터 스트림 구성 {#configure-datastream}
 
