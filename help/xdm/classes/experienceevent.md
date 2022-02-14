@@ -5,9 +5,9 @@ title: XDM ExperienceEvent 클래스
 topic-legacy: overview
 description: 이 문서에서는 XDM ExperienceEvent 클래스에 대한 개요와 이벤트 데이터 모델링에 대한 모범 사례를 제공합니다.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: f5d341daffd7d4d77ee816cc7537b0d0c52ca636
+source-git-commit: 07fdbf467f3dde16f9216db47099b92cbbfd18d2
 workflow-type: tm+mt
-source-wordcount: '1758'
+source-wordcount: '1783'
 ht-degree: 1%
 
 ---
@@ -118,6 +118,10 @@ Adobe은 와 함께 사용할 여러 표준 필드 그룹을 제공합니다 [!D
 | `directMarketing.emailDelivered` | 전자 메일이 사용자의 전자 메일 서비스에 배달되었습니다. |
 | `directMarketing.emailOpened` | 마케팅 이메일을 열람한 사람이 있습니다. |
 | `directMarketing.emailUnsubscribed` | 마케팅 이메일의 구독을 취소한 사람. |
+| `inappmessageTracking.dismiss` | 인앱 메시지가 해제되었습니다. |
+| `inappmessageTracking.display` | 인앱 메시지가 표시되었습니다. |
+| `inappmessageTracking.interact` | 인앱 메시지가 와 상호 작용했습니다. |
+| `leadOperation.callWebhook` | 리드에 대한 응답으로 웹 후크가 호출되었습니다. |
 | `leadOperation.convertLead` | 리드가 전환되었습니다. |
 | `leadOperation.interestingMoment` | 한 사람을 위한 흥미로운 순간이 기록되었다. |
 | `leadOperation.newLead` | 리드가 생성되었습니다. |
