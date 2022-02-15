@@ -1,10 +1,10 @@
 ---
-title: at.js와 Platform Web SDK 비교
-description: at.js 기능을 웹 SDK와 비교하는 방법을 알아봅니다
+title: at.js와 Experience Platform 웹 SDK 비교
+description: at.js 기능을 Experience Platform 웹 SDK와 비교하는 방법을 알아봅니다
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisions;코드 조각 사전 숨김;vec;양식 기반 경험 작성기;xdm;대상;결정;범위;스키마;시스템 다이어그램;다이어그램
-source-git-commit: 95c6d0d20ee04affb4b67c3d9f90d80e655e2752
+source-git-commit: 6efb40e90cb8c29a0141bb0db6e20cec23f2be9a
 workflow-type: tm+mt
-source-wordcount: '2275'
+source-wordcount: '2277'
 ht-degree: 6%
 
 ---
@@ -129,7 +129,7 @@ alloy("sendEvent", {
 });
 ```
 
-AEP 웹 SDK는 웹 SDK에서 실행한 오퍼와 함께 알림을 자동으로 전송합니다. 알림 요청 페이로드가 표시되는 방법의 예입니다.
+Experience Platform Web SDK는 웹 SDK에서 실행한 오퍼와 함께 알림을 자동으로 보냅니다. 이것은 알림 요청 페이로드가 어떻게 표시되는지를 보여주는 예입니다.
 
 ```json
 {
@@ -638,7 +638,7 @@ adobe.target.triggerView("homeView")
 
 ### 웹 SDK 사용
 
-단일 페이지 애플리케이션 보기 변경을 트리거하거나 시그널링하려면 `web.webPageDetails.viewName` 아래의 속성 `xdm` 옵션 `sendEvent` 명령. 에 대한 오퍼가 있는 경우 AEP 웹 SDK가 보기 캐시를 확인합니다 `viewName` 지정됨 `sendEvent` 실행되어 디스플레이 알림 이벤트가 전송됩니다.
+단일 페이지 애플리케이션 보기 변경을 트리거하거나 시그널링하려면 `web.webPageDetails.viewName` 아래의 속성 `xdm` 옵션 `sendEvent` 명령. 웹 SDK는 `viewName` 지정됨 `sendEvent` 실행되어 디스플레이 알림 이벤트가 전송됩니다.
 
 **예**
 
