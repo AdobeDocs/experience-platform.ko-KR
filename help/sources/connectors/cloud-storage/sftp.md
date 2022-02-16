@@ -5,7 +5,7 @@ title: SFTP 소스 커넥터 개요
 topic-legacy: overview
 description: API 또는 사용자 인터페이스를 사용하여 SFTP 서버를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: d5bced3d-cd33-40ea-bce0-32c76ecd2790
-source-git-commit: 1abbe74c1005e1358b5388f580d309f0aec5f124
+source-git-commit: 2db458fa335d65642549773a35ddefe602102f7f
 workflow-type: tm+mt
 source-wordcount: '721'
 ht-degree: 0%
@@ -58,7 +58,7 @@ Adobe Experience Platform은 AWS, [!DNL Google Cloud Platform], 및 [!DNL Azure]
 설치하지 않은 경우 을 선택합니다. **설치** 그런 다음 엽니다. **[!DNL Powershell]** 다음 명령을 실행하여 개인 키를 생성합니다.
 
 ```shell
-PS C:\Users\lucy> ssh-keygen -t rsa
+PS C:\Users\lucy> ssh-keygen -t rsa -m pem
 Generating public/private rsa key pair.
 Enter file in which to save the key (C:\Users\lucy/.ssh/id_rsa):
 Enter passphrase (empty for no passphrase):
@@ -94,7 +94,7 @@ C:\Users\lucy> [convert]::ToBase64String((Get-Content -path "C:\Users\lucy\.ssh\
 를 사용 중인 경우 [!DNL Mac], 열기 **터미널** 다음 명령을 실행하여 개인 키를 생성합니다(이 경우 개인 키가 `/Documents/id_rsa`):
 
 ```shell
-ssh-keygen -t rsa -f ~/Documents/id_rsa
+ssh-keygen -t rsa -m pem -f ~/Documents/id_rsa
 Generating public/private rsa key pair.
 Enter passphrase (empty for no passphrase):
 Enter same passphrase again:
