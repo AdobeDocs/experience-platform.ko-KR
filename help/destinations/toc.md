@@ -4,9 +4,9 @@ user-guide-title: 대상 안내서
 user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화합니다.
 description: 이 문서에서는 Adobe Experience Platform 대상의 목차 목록을 설명합니다
 feature: Destinations
-source-git-commit: c53deb0186797e718fbf633b8f5f92f97cdfeed9
+source-git-commit: 9d2e98c834eddcacf67de7caafef4717e38d80f8
 workflow-type: tm+mt
-source-wordcount: '697'
+source-wordcount: '701'
 ht-degree: 9%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 9%
 * [대상 유형 및 카테고리](./destination-types.md)
 * API 자습서 {#api}
    * [Flow Service API를 사용하여 스트리밍 대상에 연결하고 데이터를 활성화합니다](./api/streaming-destinations.md)
-   * [이메일 마케팅 대상에 연결하고 Flow Service API를 사용하여 데이터를 활성화합니다](./api/email-marketing.md)
+   * [배치 클라우드 스토리지 및 이메일 마케팅 대상에 연결하고 플로우 서비스 API를 사용하여 데이터를 활성화합니다](./api/connect-activate-batch-destinations.md)
    * [(베타) 임시 활성화 API를 통해 대상자 세그먼트를 배치 대상에 활성화합니다](./api/ad-hoc-activation-api.md)
    * [대상 데이터 흐름 업데이트](./api/update-destination-dataflows.md)
    * [대상 계정 삭제](./api/delete-destination-account.md)

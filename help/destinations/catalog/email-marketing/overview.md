@@ -4,7 +4,7 @@ title: 이메일 마케팅 대상 개요
 type: Tutorial
 description: ESP(이메일 서비스 공급자)를 사용하면 프로모션 이메일 캠페인 전송과 같은 이메일 마케팅 활동을 관리할 수 있습니다.
 exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
-source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
+source-git-commit: 9d2e98c834eddcacf67de7caafef4717e38d80f8
 workflow-type: tm+mt
 source-wordcount: '387'
 ht-degree: 4%
@@ -17,7 +17,7 @@ ht-degree: 4%
 
 ESP(이메일 서비스 제공업체)를 사용하면 프로모션 이메일 캠페인 전송과 같은 이메일 마케팅 활동을 관리할 수 있습니다. Adobe Experience Platform은 세그먼트를 이메일 마케팅 대상에 활성화할 수 있으므로 ESP와 통합됩니다.
 
-플랫폼은 세그먼트를 `.csv` 파일로 내보내고 기본 위치로 전달합니다. [!DNL Platform]에 활성화된 저장 위치에서 이메일 마케팅 플랫폼에서 데이터 가져오기를 예약합니다. 데이터를 가져오는 프로세스는 파트너마다 다릅니다. 자세한 내용은 개별 대상 문서를 참조하십시오.
+Platform은 세그먼트를 `.csv` 파일을 가져와 원하는 위치로 전달합니다. 에서 활성화된 저장소 위치에서 이메일 마케팅 플랫폼에서 데이터 가져오기를 예약합니다. [!DNL Platform]. 데이터를 가져오는 프로세스는 파트너마다 다릅니다. 자세한 내용은 개별 대상 문서를 참조하십시오.
 
 ## 지원되는 이메일 마케팅 대상 {#supported-destinations}
 
@@ -30,13 +30,13 @@ Adobe Experience Platform은 다음과 같은 이메일 마케팅 대상을 지�
 
 ## 새 이메일 마케팅 대상에 연결 {#connect-destination}
 
-캠페인을 위해 이메일 마케팅 대상에 세그먼트를 보내려면 먼저 대상에 연결해야 합니다. 새 대상 설정에 대한 자세한 내용은 [대상 만들기 자습서](../../ui/connect-destination.md)를 참조하십시오.
+캠페인을 위해 이메일 마케팅 대상에 세그먼트를 보내려면 먼저 대상에 연결해야 합니다. 자세한 내용은 [대상 만들기 자습서](../../ui/connect-destination.md) 를 참조하십시오.
 
 ## 대상을 이메일 마케팅 대상으로 활성화할 때의 모범 사례 {#best-practices}
 
 ### ID 선택 {#identity}
 
-Adobe은 [결합 스키마](../../../profile/home.md#profile-fragments-and-union-schemas)에서 고유 식별자를 선택할 것을 권장합니다. 사용자 ID가 키로 사용하는 필드입니다. 가장 일반적으로 이 필드는 이메일 주소이지만 충성도 프로그램 ID 또는 전화 번호일 수도 있습니다. 스키마의 가장 일반적인 고유 식별자 및 XDM 필드에 대해서는 아래 표를 참조하십시오.
+Adobe은 ID를 [조합 스키마](../../../profile/home.md#profile-fragments-and-union-schemas). 사용자 ID가 키로 사용하는 필드입니다. 가장 일반적으로 이 필드는 이메일 주소이지만 충성도 프로그램 ID 또는 전화 번호일 수도 있습니다. 스키마의 가장 일반적인 고유 식별자 및 XDM 필드에 대해서는 아래 표를 참조하십시오.
 
 | 고유 식별자 | 통합 스키마의 XDM 필드 |
 |----------------- | ---------------------------|
@@ -70,9 +70,9 @@ Adobe은 [결합 스키마](../../../profile/home.md#profile-fragments-and-union
 
 ## 이메일 마케팅 대상에 세그먼트 활성화 {#activate}
 
-세그먼트를 이메일 마케팅 대상에 활성화하는 방법에 대한 지침은 [대상 데이터를 배치 프로필 내보내기 대상으로 활성화](../../ui/activate-batch-profile-destinations.md)를 참조하십시오.
+세그먼트를 이메일 마케팅 대상에 활성화하는 방법에 대한 지침은 [대상자 데이터를 활성화하여 묶음 프로필 내보내기 대상 활성화](../../ui/activate-batch-profile-destinations.md).
 
 ## 추가 리소스
 
 * [대상자 데이터를 활성화하여 묶음 프로필 내보내기 대상 활성화](../../ui/activate-batch-profile-destinations.md)
-* [Flow Service API를 사용하여 이메일 마케팅 대상을 만들고 데이터를 활성화합니다](../../api/email-marketing.md)
+* [Flow Service API를 사용하여 이메일 마케팅 대상을 만들고 데이터를 활성화합니다](../../api/connect-activate-batch-destinations.md)
