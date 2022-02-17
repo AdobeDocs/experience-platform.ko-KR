@@ -6,7 +6,7 @@ seo-title: Activate audience data to batch profile export destinations
 description: 세그먼트를 배치 프로필 기반 대상으로 보내 Adobe Experience Platform에서 보유한 대상 데이터를 활성화하는 방법을 알아봅니다.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 551b07eac95b560950fe2d70fd2a981ae3a29252
+source-git-commit: ee9ed1c17a566f37b4ad79df7c66f8b2ffb4b879
 workflow-type: tm+mt
 source-wordcount: '2188'
 ht-degree: 0%
@@ -71,7 +71,7 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_exportoptions"
 >title="파일 내보내기 옵션"
->abstract="세그먼트에 적합한 모든 프로필의 전체 스냅샷을 내보내려면 전체 파일 내보내기 를 선택합니다. 마지막 내보내기 이후 세그먼트에 적합한 프로필만 내보내려면 증분 파일 내보내기 를 선택합니다. 첫 번째 증분 파일 내보내기에는 세그먼트에 적합한 모든 프로필이 포함되어 있으며 채우기 역할을 합니다. 향후 증분 파일에는 첫 번째 증분 파일 내보내기 이후 세그먼트에 적합한 프로필만 포함됩니다."
+>abstract="선택 **전체 파일 내보내기** 세그먼트를 사용할 수 있는 모든 프로필의 전체 스냅샷을 내보내려면 선택 **증분 파일 내보내기** 를 입력하여 마지막 내보내기 이후 세그먼트에 적합한 프로필만 내보냅니다. <br> 첫 번째 증분 파일 내보내기에는 세그먼트에 적합한 모든 프로필이 포함되어 있으며 채우기 역할을 합니다. 향후 증분 파일에는 첫 번째 증분 파일 내보내기 이후 세그먼트에 적합한 프로필만 포함됩니다."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#export-incremental-files" text="증분 파일 내보내기"
 
 선택 **[!UICONTROL 전체 파일 내보내기]** 을(를) 사용하여 선택한 세그먼트에 대한 모든 프로필 자격에 대한 전체 스냅숏이 포함된 파일 내보내기를 트리거합니다.
@@ -348,7 +348,6 @@ Adobe은 다음과 같은 ID 네임스페이스를 선택할 것을 권장합니
 >
 >* 필드는 세그먼트 정의에 사용됩니다.
 >* 필드는 대상 대상에 대한 예상 속성으로 구성됩니다.
-
 >
 > 예를 들어, 필드가 `person.name.firstName` 에는 대상의 마케팅 작업과 충돌하는 특정 데이터 사용 레이블이 있으며, 검토 단계에서 데이터 사용 정책 위반이 표시됩니다. 자세한 내용은 [Adobe Experience Platform의 데이터 거버넌스](../../rtcdp/privacy/data-governance-overview.md#destinations).
 

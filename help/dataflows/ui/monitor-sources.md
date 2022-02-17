@@ -6,9 +6,9 @@ title: UI에서 소스에 대한 데이터 흐름 모니터링
 topic-legacy: overview
 type: Tutorial
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
-source-git-commit: 38e56beacd8857648abbbf20f4a5c4941ff779ee
+source-git-commit: ee9ed1c17a566f37b4ad79df7c66f8b2ffb4b879
 workflow-type: tm+mt
-source-wordcount: '1856'
+source-wordcount: '1862'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,7 @@ Adobe Experience Platform에서 데이터는 다양한 소스에서 수집되어
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_source_ingestion"
 >title="소스 수집"
->abstract="소스 처리에는 수집된 레코드 및 실패한 레코드를 포함하여, 데이터 레이크 서비스의 데이터 활동 상태 및 지표에 대한 정보가 포함되어 있습니다. 지표 및 그래프에 대한 자세한 내용을 보려면 지표 정의 안내서를 검토하십시오."
+>abstract="소스 수집 보기에는 수집된 레코드 및 실패한 레코드를 포함하여, 데이터 레이크 서비스의 데이터 활동 상태 및 지표에 대한 정보가 포함되어 있습니다. 지표 및 그래프에 대한 자세한 내용을 보려면 지표 정의 안내서를 검토하십시오."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
@@ -151,7 +151,7 @@ Adobe Experience Platform에서 데이터는 다양한 소스에서 수집되어
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_identity_processing"
 >title="ID 처리"
->abstract="ID 처리에는 추가된 ID 수, 생성된 그래프 및 업데이트된 그래프를 포함하여 ID 서비스에 수집된 레코드에 대한 정보가 포함되어 있습니다. 지표 및 그래프에 대한 자세한 내용을 보려면 지표 정의 안내서를 검토하십시오."
+>abstract="ID 처리 보기에는 추가된 ID 수, 생성된 그래프 및 업데이트된 그래프를 포함하여 ID 서비스에 수집된 레코드에 대한 정보가 포함되어 있습니다. 지표 및 그래프에 대한 자세한 내용을 보려면 지표 정의 안내서를 검토하십시오."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
@@ -194,7 +194,7 @@ Adobe Experience Platform에서 데이터는 다양한 소스에서 수집되어
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profile_processing"
 >title="프로필 처리"
->abstract="프로필 처리에는 생성된 프로필 조각 수, 업데이트된 프로필 조각 및 총 프로필 조각 수를 포함하여 프로필 서비스에 수집된 레코드에 대한 정보가 포함되어 있습니다."
+>abstract="프로필 처리 보기에는 생성된 프로필 조각 수, 업데이트된 프로필 조각 및 총 프로필 조각 수를 포함하여 프로필 서비스에 수집된 레코드에 대한 정보가 포함되어 있습니다."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
