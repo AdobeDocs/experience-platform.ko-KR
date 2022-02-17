@@ -5,9 +5,9 @@ title: 실시간 고객 프로필의 개인 정보 보호 요청 처리
 type: Documentation
 description: Adobe Experience Platform Privacy Service은 다양한 개인 정보 보호 규정에 따라 지정된 대로 고객 개인 데이터에 대한 액세스, 판매 거부 또는 삭제 요청을 처리합니다. 이 문서에서는 실시간 고객 프로필에 대한 개인 정보 보호 요청 처리와 관련된 필수 개념을 다룹니다.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: d8665a349c6f453d83b64317982f3544bbcde0f7
+source-git-commit: 6cb30dc9e7e76ff9ca060f83405196fa09ed0ebb
 workflow-type: tm+mt
-source-wordcount: '1170'
+source-wordcount: '1272'
 ht-degree: 0%
 
 ---
@@ -48,7 +48,7 @@ ID 서비스는 전역적으로 정의된(표준) 및 사용자 정의(사용자
 >
 >Privacy Service은 처리할 수만 있습니다 [!DNL Profile] ID 결합을 수행하지 않는 병합 정책을 사용하는 데이터. UI를 사용하여 개인 정보 보호 요청이 처리 중인지 확인하는 경우 &quot;[!DNL None]&quot; [!UICONTROL ID 결합] 유형. 즉, [!UICONTROL ID 결합] 가 &quot;(으)로 설정되어 있습니다.[!UICONTROL 비공개 그래프]&quot;.
 >
->![](./images/privacy/no-id-stitch.png)
+>![병합 정책의 ID 결합이 없음으로 설정되어 있습니다](./images/privacy/no-id-stitch.png)
 >
 >개인 정보 보호 요청을 완료하는 데 걸리는 시간은 보장할 수 없습니다. 에서 변경 사항이 발생하는 경우 [!DNL Profile] 요청이 여전히 처리 중인 동안 해당 레코드가 처리되는지 여부도 보장할 수 없습니다.
 
@@ -111,7 +111,7 @@ curl -X POST \
 
 UI에서 작업 요청을 만들 때는 반드시 선택해야 합니다 **[!UICONTROL AEP Data Lake]** 및/또는 **[!UICONTROL 프로필]** 아래에 **[!UICONTROL 제품]** 에 저장된 데이터의 작업을 처리하려면 [!DNL Data Lake] 또는 [!DNL Real-time Customer Profile]각각 입니다.
 
-<img src="images/privacy/product-value.png" width="450"><br>
+![제품 아래에 프로필 옵션이 선택된 상태로 UI에서 생성 중인 액세스 작업 요청](./images/privacy/product-value.png)
 
 ## 개인 정보 요청의 프로필 조각 {#fragments}
 
@@ -138,6 +138,10 @@ When [!DNL Experience Platform] 에서 삭제 요청을 받습니다. [!DNL Priv
 >삭제 요청이 성공하면 고객(또는 고객 세트)에 대해 수집된 속성 데이터를 제거하지만 ID 그래프에 설정된 연결은 요청에 제거되지 않습니다.
 >
 >예를 들어 고객의 `email_id` 및 `customer_id` 는 해당 ID에 저장된 모든 속성 데이터를 제거합니다. 그러나 이후에 수집된 모든 데이터는 동일한 위치에서 수집됩니다 `customer_id` 은 여전히 적절한 `email_id`: 연결이 아직 있으므로
+>
+>또한 Privacy Service은 [!DNL Profile] ID 결합을 수행하지 않는 병합 정책을 사용하는 데이터. UI를 사용하여 개인 정보 보호 요청이 처리 중인지 확인하는 경우 &quot;[!DNL None]&quot; [!UICONTROL ID 결합] 유형. 즉, [!UICONTROL ID 결합] 가 &quot;(으)로 설정되어 있습니다.[!UICONTROL 비공개 그래프]&quot;.
+>
+>![병합 정책의 ID 결합이 없음으로 설정되어 있습니다](./images/privacy/no-id-stitch.png)
 
 향후 릴리스에서 [!DNL Platform] 은(는) 확인을 [!DNL Privacy Service] 데이터가 물리적으로 삭제된 후
 
