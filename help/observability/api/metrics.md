@@ -5,7 +5,7 @@ title: 지표 API 엔드포인트
 topic-legacy: developer guide
 description: Observability Insights API를 사용하여 Experience Platform에서 가시성 지표를 검색하는 방법을 알아봅니다.
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
+source-git-commit: 365fb476fa80f665ddd43bf85ec22533ee0c8ad8
 workflow-type: tm+mt
 source-wordcount: '1864'
 ht-degree: 5%
@@ -201,7 +201,7 @@ curl -X POST \
 
 | 통찰력 지표 | 설명 | ID 쿼리 매개 변수 |
 | ---- | ---- | ---- |
-| timeseries.ingestion.dataset.new.count | 생성된 총 데이터 세트 수입니다. | N/A |
+| timeseries.ingestion.dataset.new.count | 생성된 총 데이터 세트 수입니다. | 해당 없음 |
 | timeseries.ingestion.dataset.size | 데이터 세트 하나 또는 모든 데이터 세트에 대해 수집된 모든 데이터의 누적 크기입니다. | 데이터 세트 ID |
 | timeseries.ingestion.dataset.dailysize | 한 데이터 세트 또는 모든 데이터 세트에 대해 일별 사용 기준으로 수집된 데이터의 크기입니다. | 데이터 세트 ID |
 | timeseries.ingestion.dataset.batchfailed.count | 하나의 데이터 세트 또는 모든 데이터 세트에 대해 실패한 일괄 처리 수입니다. | 데이터 세트 ID |
@@ -282,7 +282,7 @@ curl -X POST \
 | timeseries.profiles.dataset.batchsuccess.count | 번호 [!DNL Profile] 데이터 세트 또는 모든 데이터 세트에 대해 수집된 일괄 처리. | 데이터 세트 ID |
 | timeseries.profiles.dataset.batchfailed.count | 번호 [!DNL Profile] 하나의 데이터 세트 또는 모든 데이터 세트에 대해 배치가 실패했습니다. | 데이터 세트 ID |
 | platform.ups.ingest.streaming.request.m1_rate | 수신 요청 비율입니다. | IMS 조직 (**필수 여부**) |
-| platform.ups.ingest.streaming.access.put.success.m1_rate | 수집 성공률. | IMS 조직 (**필수 여부**) |
+| aep.core.unified-profile.psi.platform.ups.ingest.streaming.access.put.success.meter.m1_rate | 수집 성공률. | IMS 조직 (**필수 여부**) |
 | platform.ups.ingest.streaming.records.created.m15_rate | 데이터 집합에 대해 수집된 새 레코드 비율입니다. | 데이터 세트 ID (**필수 여부**) |
 | platform.ups.ingest.streaming.request.error.created.outOfOrder.m1_rate | 데이터 집합에 대한 만들기 요청에 대해 잘못된 타임스탬프가 지정된 레코드의 비율입니다. | 데이터 세트 ID (**필수 여부**) |
 | platform.ups.profile-commons.ingest.streaming.dataSet.record.created.timestamp | 데이터 집합에 대한 마지막 작성 레코드 요청에 대한 타임스탬프입니다. | 데이터 세트 ID (**필수 여부**) |
