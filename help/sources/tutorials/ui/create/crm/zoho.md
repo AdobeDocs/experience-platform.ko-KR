@@ -5,18 +5,15 @@ title: UI에서 Zoho CRM 소스 연결 만들기
 topic-legacy: overview
 type: Tutorial
 description: Adobe Experience Platform UI를 사용하여 Zoho CRM 소스 연결을 만드는 방법을 알아봅니다.
-source-git-commit: 030789af0a049b54d6e271410836c08456a83441
+exl-id: c648fc3e-beea-4030-8d36-dd8a7e2c281e
+source-git-commit: 46b2fd6bc715bf1d8ccfeed576a2a2d193f92edd
 workflow-type: tm+mt
-source-wordcount: '567'
+source-wordcount: '551'
 ht-degree: 0%
 
 ---
 
 # 만들기 [!DNL Zoho CRM] UI의 소스 연결
-
->[!NOTE]
->
-> 다음 [!DNL Zoho CRM] 소스가 베타 버전입니다. 자세한 내용은 [소스 개요](../../../../home.md#terms-and-conditions) 베타 레이블이 지정된 커넥터 사용에 대한 자세한 정보.
 
 Adobe Experience Platform의 소스 커넥터는 예약된 대로 외부에서 가져온 CRM 데이터를 수집하는 기능을 제공합니다. 이 자습서에서는 을(를) 만드는 단계를 제공합니다 [!DNL Zoho CRM] 소스 커넥터 [!DNL Platform] 사용자 인터페이스.
 

@@ -4,18 +4,15 @@ solution: Experience Platform
 title: Zoho CRM 소스 커넥터 개요
 topic-legacy: overview
 description: API 또는 사용자 인터페이스를 사용하여 Zoho CRM을 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
-source-git-commit: 030789af0a049b54d6e271410836c08456a83441
+exl-id: 4a010453-3d09-4a47-b04e-5789ae4af48c
+source-git-commit: 46b2fd6bc715bf1d8ccfeed576a2a2d193f92edd
 workflow-type: tm+mt
-source-wordcount: '549'
+source-wordcount: '532'
 ht-degree: 0%
 
 ---
 
-# (베타) [!DNL Zoho CRM]
-
->[!NOTE]
->
->다음 [!DNL Zoho CRM] 소스가 베타 버전입니다. 자세한 내용은 [소스 개요](../../home.md#terms-and-conditions) 베타 레이블이 지정된 커넥터 사용에 대한 자세한 정보.
+# [!DNL Zoho CRM]
 
 Adobe Experience Platform을 사용하면 를 사용하여 들어오는 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 외부 소스에서 데이터를 수집할 수 있습니다 [!DNL Platform] 서비스. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 등과 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 
