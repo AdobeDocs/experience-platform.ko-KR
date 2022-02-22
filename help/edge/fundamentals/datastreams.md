@@ -3,9 +3,9 @@ title: Experience Platform Web SDK에 대한 데이터 스트림 구성
 description: '데이터 스트림을 구성하는 방법을 알아봅니다. '
 keywords: 구성;데이터 스트림;데이터 스트림 ID;에지;데이터 스트림 ID;환경 설정;edgeConfigId;id;ID 동기화 사용;ID 동기화 컨테이너 ID;샌드박스;스트리밍 입력;이벤트 데이터 세트;target;클라이언트 코드;속성 토큰;Target 환경 ID;쿠키 대상;URL 대상;Analytics 설정 차단 보고서 세트 ID;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 012ebbadc7149747df1414360eca6451836d6bbc
+source-git-commit: 74c19bb0498002b81f93954d4d8e40f0df36c97d
 workflow-type: tm+mt
-source-wordcount: '1090'
+source-wordcount: '1127'
 ht-degree: 1%
 
 ---
@@ -57,7 +57,7 @@ ID 동기화를 컨테이너로 그룹화하여 다른 시간에 다른 ID 동�
 
 | 필드 | 설명 |
 | --- | --- |
-| [!UICONTROL 샌드박스] | **(필수)** 데이터를 보낼 Platform 샌드박스를 선택합니다. 샌드박스는 조직의 다른 샌드박스와 데이터 및 구현을 분리할 수 있는 Adobe Experience Platform의 가상 파티션입니다.<br><br>데이터 스트림을 만들면 해당 샌드박스를 변경할 수 없습니다. 다음 [!UICONTROL 샌드박스] 따라서 기존 데이터 스트림을 편집할 때는 선택 필드를 사용할 수 없습니다.<br><br>Experience Platform에서 샌드박스의 역할에 대한 자세한 내용은 [샌드박스 설명서](../../sandboxes/home.md). |
+| [!UICONTROL 샌드박스] | **(필수)** 데이터를 보낼 Platform 샌드박스를 선택합니다. 샌드박스는 조직의 다른 샌드박스와 데이터 및 구현을 분리할 수 있는 Adobe Experience Platform의 가상 파티션입니다.<br><br>샌드박스를 선택하지 않고 데이터 스트림을 만드는 경우 나중에 샌드박스를 선택할 수 있습니다.<br><br>데이터 스트림을 만들고 샌드박스를 선택하면 샌드박스를 변경할 수 없습니다. 다음 [!UICONTROL 샌드박스] 따라서 선택한 샌드박스로 기존 데이터 스트림을 편집할 때는 선택 필드를 사용할 수 없습니다.<br><br> 다음 [!UICONTROL 샌드박스] 따라서 기존 데이터 스트림을 편집할 때는 선택 필드를 사용할 수 없습니다.<br><br>Experience Platform에서 샌드박스의 역할에 대한 자세한 내용은 [샌드박스 설명서](../../sandboxes/home.md). |
 | [!UICONTROL 이벤트 데이터 세트] | **(필수)** 고객 이벤트 데이터를 스트리밍할 플랫폼 데이터 세트를 선택합니다. 이 스키마는 [XDM ExperienceEvent 클래스](../../xdm/classes/experienceevent.md). |
 | [!UICONTROL 프로필 데이터 세트] | 고객 특성 데이터를 전송할 Platform 데이터 세트를 선택합니다. 이 스키마는 [XDM 개별 프로필 클래스](../../xdm/classes/individual-profile.md). |
 | [!UICONTROL Offer Decisioning] | Platform Web SDK 구현에 Offer decisioning을 활성화하려면 이 확인란을 선택하십시오. 다음 안내서를 참조하십시오. [platform Web SDK에서 Offer decisioning 사용](../personalization/offer-decisioning/offer-decisioning-overview.md) 를 참조하십시오. offer decisioning 기능에 대한 자세한 내용은 [Adobe Journey Optimizer 설명서](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started/starting-offer-decisioning.html?lang=ko-KR). |
