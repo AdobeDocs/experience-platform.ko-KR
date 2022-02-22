@@ -6,10 +6,10 @@ description: Flow Service API를 사용하여 Experience Platform에서 배치 �
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: ae9c43b3a3cd59b0c0bcfd5034f5edc5ebb818d8
+source-git-commit: a8a8b3b9e4fdae11be95d2fa80abc0f356eff345
 workflow-type: tm+mt
-source-wordcount: '3179'
-ht-degree: 1%
+source-wordcount: '3083'
+ht-degree: 2%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 이 자습서에서는 Flow Service API를 사용하여 배치를 만드는 방법을 보여 줍니다 [클라우드 스토리지](../catalog/cloud-storage/overview.md) 또는 [이메일 마케팅 대상](../catalog/email-marketing/overview.md)를 채우기 위해 새로 만든 대상으로 데이터 흐름을 만들고 CSV 파일을 통해 새로 만든 대상으로 데이터를 내보냅니다.
 
-이 자습서에서는 모든 예에서 Adobe Campaign 대상을 사용하지만 모든 배치 클라우드 스토리지 및 이메일 마케팅 대상에 대해서는 단계가 동일합니다.
+이 자습서에서는 [!DNL Adobe Campaign] 대상에 포함되지만 단계는 모든 배치 클라우드 스토리지 및 이메일 마케팅 대상에 대해 동일합니다.
 
 ![개요 - 대상을 만들고 세그먼트를 활성화하는 절차](../assets/api/email-marketing/overview.png)
 
@@ -37,14 +37,14 @@ Platform 사용자 인터페이스를 사용하여 대상에 연결하고 데이
 
 이 자습서의 단계를 완료하려면 세그먼트를 연결하고 활성화할 대상 유형에 따라 다음 자격 증명이 준비되어야 합니다.
 
-* 대상 [!DNL Amazon] S3 연결: `accessId`, `secretKey`
-* 대상 [!DNL Amazon] 에 대한 S3 연결 [!DNL Adobe Campaign]: `accessId`, `secretKey`
+* 대상 [!DNL Amazon S3] 연결: `accessId`, `secretKey`
+* 대상 [!DNL Amazon S3] 연결 [!DNL Adobe Campaign]: `accessId`, `secretKey`
 * SFTP 연결의 경우: `domain`, `port`, `username`, `password` 또는 `sshKey` (FTP 위치에 대한 연결 방법에 따라 다름)
 * 대상 [!DNL Azure Blob] 연결: `connectionString`
 
 >[!NOTE]
 >
->자격 증명 `accessId`, `secretKey` Amazon S3 연결 및 `accessId`, `secretKey` Adobe Campaign에 대한 Amazon S3 연결의 경우 동일합니다.
+>자격 증명 `accessId`, `secretKey` 대상 [!DNL Amazon S3] 연결 및 `accessId`, `secretKey` 대상 [!DNL Amazon S3] 연결 [!DNL Adobe Campaign] 은 동일합니다.
 
 ### 샘플 API 호출 읽기 {#reading-sample-api-calls}
 
@@ -100,7 +100,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **응답**
 
-성공적인 응답에는 사용 가능한 대상 목록과 고유한 식별자(`id`). 추가 단계에서 필요하므로 사용할 대상의 값을 저장합니다. 예를 들어 세그먼트를 Adobe Campaign에 연결하고 전달하려면 응답에서 다음 코드 조각을 찾습니다.
+성공적인 응답에는 사용 가능한 대상 목록과 고유한 식별자(`id`). 추가 단계에서 필요하므로 사용할 대상의 값을 저장합니다. 예를 들어 세그먼트를 연결하고 [!DNL Adobe Campaign], 응답에서 다음 코드 조각을 찾습니다.
 
 ```json
 {
@@ -115,13 +115,13 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 | 대상 | 연결 사양 ID |
 ---------|----------|
-| [!DNL Adobe Campaign] | 0b23e41a-cb4a-4321-a78f-3b654f5d7d97 |
-| [!DNL Amazon S3] | 4890fc95-5a1f-4983-94bb-e060c08e3f81 |
-| [!DNL Azure Blob] | e258278b-a4cf-43ac-b158-4fa0ca0d948b |
-| [!DNL Oracle Eloqua] | c1e44b6b-e7c8-404b-9031-58f0ef760604 |
-| [!DNL Oracle Responsys] | a5e28ddf-e265-426e-83a1-9d03a3a6822b |
-| [!DNL Salesforce Marketing Cloud] | f599a5b3-60a7-4951-950a-cc4115c7ea27 |
-| SFTP | 64ef4b8b-a6e0-41b5-9677-3805d1ee5dd0 |
+| [!DNL Adobe Campaign] | `0b23e41a-cb4a-4321-a78f-3b654f5d7d97` |
+| [!DNL Amazon S3] | `4890fc95-5a1f-4983-94bb-e060c08e3f81` |
+| [!DNL Azure Blob] | `e258278b-a4cf-43ac-b158-4fa0ca0d948b` |
+| [!DNL Oracle Eloqua] | `c1e44b6b-e7c8-404b-9031-58f0ef760604` |
+| [!DNL Oracle Responsys] | `a5e28ddf-e265-426e-83a1-9d03a3a6822b` |
+| [!DNL Salesforce Marketing Cloud] | `f599a5b3-60a7-4951-950a-cc4115c7ea27` |
+| SFTP | `64ef4b8b-a6e0-41b5-9677-3805d1ee5dd0` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -163,9 +163,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 | 속성 | 설명 |
 | --------- | ----------- |
-| `name` | Experience Platform 프로필 저장소에 대한 기본 연결의 이름을 제공합니다. |
+| `name` | Experience Platform에 대한 기본 연결의 이름을 제공합니다 [!DNL Profile Store]. |
 | `description` | 기본 연결에 대한 설명을 제공할 수도 있습니다. |
 | `connectionSpec.id` | 연결 사양 ID를 사용하여 [Experience Platform 프로필 저장소](/help/profile/home.md#profile-data-store) - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **응답**
 
@@ -212,11 +214,13 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 | 속성 | 설명 |
 | --------- | ----------- |
-| `name` | Experience Platform 프로필 저장소에 대한 소스 연결의 이름을 제공합니다. |
+| `name` | Experience Platform에 대한 소스 연결의 이름을 제공합니다 [!DNL Profile Store]. |
 | `description` | 소스 연결에 대한 설명을 제공할 수 있습니다(선택적). |
 | `connectionSpec.id` | 연결 사양 ID를 사용하여 [Experience Platform 프로필 저장소](/help/profile/home.md#profile-data-store) - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`. |
 | `baseConnectionId` | 이전 단계에서 얻은 기본 연결 ID를 사용합니다. |
 | `data.format` | `CSV` 는 현재 유일하게 지원되는 파일 내보내기 형식입니다. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **응답**
 
@@ -247,7 +251,7 @@ POST /connections
 
 **요청**
 
-아래 요청은 Adobe Campaign 대상에 대한 기본 연결을 설정합니다. 파일을 내보낼 저장소 위치(Amazon S3, SFTP, Azure Blob)에 따라 적절한 공간을 유지합니다 `auth` 세부 항목을 지정하고 다른 항목은 삭제합니다.
+아래 요청은에 대한 기본 연결을 설정합니다. [!DNL Adobe Campaign] 대상. 파일을 내보낼 저장소 위치([!DNL Amazon S3], SFTP, [!DNL Azure Blob]), 적절하게 유지 `auth` 세부 항목을 지정하고 다른 항목은 삭제합니다.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -297,9 +301,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-+++ Amazon S3 대상에 연결하는 요청 예
+지원되는 다른 배치 클라우드 스토리지 및 이메일 마케팅 대상에 연결하려면 아래 요청 예 를 참조하십시오.
 
-아래 요청은 Amazon S3 대상에 대한 기본 연결을 설정합니다.
++++ 연결 요청 예 [!DNL Amazon S3] 대상
+
+아래 요청은에 대한 기본 연결을 설정합니다. [!DNL Amazon S3] 대상.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -327,9 +333,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-+++ Azure Blob 대상에 연결하는 요청 예
++++ 연결 요청 예 [!DNL Azure Blob] 대상
 
-아래 요청은 Azure Blob 대상에 대한 기본 연결을 설정합니다.
+아래 요청은에 대한 기본 연결을 설정합니다. [!DNL Azure Blob] 대상.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -356,9 +362,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-+++ oracle Eloqua 대상에 연결하는 요청 예
++++ 연결 요청 예 [!DNL Oracle Eloqua] 대상
 
-아래 요청은 Oracle Eloqua 대상에 대한 기본 연결을 설정합니다. 파일을 내보낼 저장소 위치에 따라 적절하게 유지합니다 `auth` 세부 항목을 지정하고 다른 항목은 삭제합니다.
+아래 요청은에 대한 기본 연결을 설정합니다. [!DNL Oracle Eloqua] 대상. 파일을 내보낼 저장소 위치에 따라 적절하게 유지합니다 `auth` 세부 항목을 지정하고 다른 항목은 삭제합니다.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -397,9 +403,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-+++ Responsys 대상 Oracle 연결에 대한 요청 예
++++ 연결 요청 예 [!DNL Oracle Responsys] 대상
 
-아래 요청은 Responsys 대상 Oracle에 대한 기본 연결을 설정합니다. 파일을 내보낼 저장소 위치에 따라 적절하게 유지합니다 `auth` 세부 항목을 지정하고 다른 항목은 삭제합니다.
+아래 요청은에 대한 기본 연결을 설정합니다. [!DNL Oracle Responsys] 대상. 파일을 내보낼 저장소 위치에 따라 적절하게 유지합니다 `auth` 세부 항목을 지정하고 다른 항목은 삭제합니다.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -438,9 +444,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-+++ Salesforce Marketing Cloud 대상에 연결하는 요청 예
++++ 연결 요청 예 [!DNL Salesforce Marketing Cloud] 대상
 
-아래 요청은 Salesforce Marketing Cloud 대상에 대한 기본 연결을 설정합니다. 파일을 내보낼 저장소 위치에 따라 적절하게 유지합니다 `auth` 세부 항목을 지정하고 다른 항목은 삭제합니다.
+아래 요청은에 대한 기본 연결을 설정합니다. [!DNL Salesforce Marketing Cloud] 대상. 파일을 내보낼 저장소 위치에 따라 적절하게 유지합니다 `auth` 세부 항목을 지정하고 다른 항목은 삭제합니다.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -518,6 +524,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 | `auth.specname` | 대상에 대한 인증 형식을 나타냅니다. 대상에 대한 specName을 확인하려면 [연결 사양 끝점에 대한 GET 호출](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec): 원하는 대상의 연결 사양을 제공합니다. 매개 변수를 찾습니다 `authSpec.name` 을 반환합니다. <br> 예를 들어 Adobe Campaign 대상의 경우 다음 중 하나를 사용할 수 있습니다 `S3`, `SFTP with Password`, 또는 `SFTP with SSH Key`. |
 | `params` | 연결하는 대상에 따라 다른 필수 인증 매개 변수를 제공해야 합니다. Amazon S3 연결의 경우 Amazon S3 저장소 위치에 액세스 ID 및 암호 키를 제공해야 합니다. <br> 대상에 필요한 매개 변수를 찾으려면 다음을 수행하십시오. [연결 사양 끝점에 대한 GET 호출](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec): 원하는 대상의 연결 사양을 제공합니다. 매개 변수를 찾습니다 `authSpec.spec.required` 을 반환합니다. |
 
+{style=&quot;table-layout:auto&quot;}
+
 **응답**
 
 성공적인 응답에는 기본 연결의 고유 식별자(`id`). 다음 단계에서 필요에 따라 이 값을 저장하여 대상 연결을 만듭니다.
@@ -546,7 +554,7 @@ POST /targetConnections
 
 **요청**
 
-아래 요청은 Adobe Campaign 대상에 대한 타겟 연결을 설정하여 내보낸 파일이 저장소 위치에 도착하는 위치를 결정합니다. 파일을 내보낼 저장소 위치에 따라 적절하게 유지합니다 `params` 세부 항목을 지정하고 다른 항목은 삭제합니다.
+아래 요청은 대상 연결을 설정합니다. [!DNL Adobe Campaign] 대상 - 내보낸 파일이 저장 위치에 도착하는 위치를 결정합니다. 파일을 내보낼 저장소 위치에 따라 적절하게 유지합니다 `params` 세부 항목을 지정하고 다른 항목은 삭제합니다.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -589,9 +597,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-+++ Amazon S3 대상에 대한 스토리지 위치 설정 요청 예
+지원되는 다른 배치 클라우드 스토리지 및 이메일 마케팅 대상에 대한 스토리지 위치를 설정하려면 아래 예제 요청 을 참조하십시오.
 
-아래 요청은 Amazon S3 대상에 대한 타겟 연결을 설정하여 내보낸 파일이 저장소 위치에 도착하는 위치를 결정합니다.
++++ 스토리지 위치 설정 요청 예 [!DNL Amazon S3] 대상
+
+아래 요청은 대상 연결을 설정합니다. [!DNL Amazon S3] 대상 - 내보낸 파일이 저장 위치에 도착하는 위치를 결정합니다.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -625,9 +635,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-+++ Azure Blob 대상에 대한 저장소 위치 설정 요청 예
++++ 스토리지 위치 설정 요청 예 [!DNL Azure Blob] 대상
 
-아래 요청은 내보낸 파일이 저장소 위치에 도착하는 위치를 확인하기 위해 Azure Blob 대상에 대한 대상 연결을 설정합니다.
+아래 요청은 대상 연결을 설정합니다. [!DNL Azure Blob] 대상 - 내보낸 파일이 저장 위치에 도착하는 위치를 결정합니다.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -661,9 +671,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-+++ oracle Eloqua 대상에 대한 스토리지 위치 설정 요청 예
++++ 스토리지 위치 설정 요청 예 [!DNL Oracle Eloqua] 대상
 
-아래 요청은 내보낸 파일이 저장 위치에 도착하는 위치를 확인하기 위해 Eloqua 대상에 대한 대상 연결을 설정합니다. 파일을 내보낼 저장소 위치에 따라 적절하게 유지합니다 `params` 세부 항목을 지정하고 다른 항목은 삭제합니다.
+아래 요청은 대상 연결을 설정합니다. [!DNL Oracle Eloqua] 대상 - 내보낸 파일이 저장 위치에 도착하는 위치를 결정합니다. 파일을 내보낼 저장소 위치에 따라 적절하게 유지합니다 `params` 세부 항목을 지정하고 다른 항목은 삭제합니다.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -702,9 +712,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-+++ Responsys 대상에 대한 저장소 위치 설정 요청 예
++++ 스토리지 위치 설정 요청 예 [!DNL Oracle Responsys] 대상
 
-아래 요청은 Responsys 대상 Oracle에 대한 타겟 연결을 설정하여 내보낸 파일이 저장소 위치에 도착하는 위치를 결정합니다. 파일을 내보낼 저장소 위치에 따라 적절하게 유지합니다 `params` 세부 항목을 지정하고 다른 항목은 삭제합니다.
+아래 요청은 대상 연결을 설정합니다. [!DNL Oracle Responsys] 대상 - 내보낸 파일이 저장 위치에 도착하는 위치를 결정합니다. 파일을 내보낼 저장소 위치에 따라 적절하게 유지합니다 `params` 세부 항목을 지정하고 다른 항목은 삭제합니다.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -743,9 +753,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-+++ Salesforce Marketing Cloud 대상에 대한 스토리지 위치 설정 요청 예
++++ 스토리지 위치 설정 요청 예 [!DNL Salesforce Marketing Cloud] 대상
 
-아래 요청은 Salesforce Marketing Cloud 대상에 대한 타겟 연결을 설정하여 내보낸 파일이 저장소 위치에 도착하는 위치를 결정합니다. 파일을 내보낼 저장소 위치에 따라 적절하게 유지합니다 `params` 세부 항목을 지정하고 다른 항목은 삭제합니다.
+아래 요청은 대상 연결을 설정합니다. [!DNL Salesforce Marketing Cloud] 대상 - 내보낸 파일이 저장 위치에 도착하는 위치를 결정합니다. 파일을 내보낼 저장소 위치에 따라 적절하게 유지합니다 `params` 세부 항목을 지정하고 다른 항목은 삭제합니다.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -784,7 +794,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-+++ SFTP 대상에 대한 저장소 위치 설정 요청 예
++++ SFTP 대상에 대한 저장소 위치 설정에 대한 요청 예
 
 아래 요청은 SFTP 대상에 대한 타겟 연결을 설정하여 내보낸 파일이 저장소 위치에 도착하는 위치를 결정합니다.
 
@@ -830,6 +840,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 | `params.bucketName` | S3 연결의 경우 파일을 내보낼 버킷의 이름을 제공합니다. |
 | `params.path` | S3 연결의 경우 파일을 내보낼 저장 위치에 파일 경로를 제공합니다. |
 | `params.format` | `CSV` 는 현재 유일하게 지원되는 파일 내보내기 형식입니다. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **응답**
 
@@ -908,9 +920,9 @@ curl -X POST \
 
 | 대상 | 흐름 사양 ID |
 ---------|----------|
-| 모든 클라우드 스토리지 대상(Amazon S3, SFTP, Azure Blob) 및 Oracle Eloqua | 71471eba-b620-49e4-90fd-23f1fa0174d8 |
-| Responsys oracle | 51d675ce-e270-408d-91fc-22717bdf2148 |
-| Salesforce Marketing Cloud | 493b2bd6-26e4-4167-ab3b-5e910bba44f0 |
+| 모든 클라우드 스토리지 대상([!DNL Amazon S3], SFTP, [!DNL Azure Blob]) 및 [!DNL Oracle Eloqua] | `71471eba-b620-49e4-90fd-23f1fa0174d8` |
+| [!DNL Oracle Responsys] | `51d675ce-e270-408d-91fc-22717bdf2148` |
+| [!DNL Salesforce Marketing Cloud] | `493b2bd6-26e4-4167-ab3b-5e910bba44f0` |
 
 **응답**
 
@@ -1019,6 +1031,8 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | `frequency` | 필수입니다. <br> <ul><li>대상 `"DAILY_FULL_EXPORT"` 내보내기 모드, `ONCE` 또는 `DAILY`.</li><li>대상 `"FIRST_FULL_THEN_INCREMENTAL"` 내보내기 모드, `"DAILY"`, `"EVERY_3_HOURS"`, `"EVERY_6_HOURS"`, `"EVERY_8_HOURS"`, `"EVERY_12_HOURS"`.</li></ul> |
 | `endDate` | 선택할 때 해당 사항 없음 `"exportMode":"DAILY_FULL_EXPORT"` 및 `"frequency":"ONCE"`. <br> 세그먼트 구성원이 대상으로 내보내기를 중지하는 날짜를 설정합니다. |
 | `startTime` | 필수입니다. 세그먼트의 구성원이 포함된 파일을 생성하여 대상으로 내보내는 시간을 선택합니다. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **응답**
 
