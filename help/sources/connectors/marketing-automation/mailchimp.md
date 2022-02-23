@@ -4,15 +4,15 @@ solution: Experience Platform
 title: Mailchimp 커넥터 개요
 topic-legacy: overview
 description: API 또는 사용자 인터페이스를 사용하여 Mailchimp를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
-source-git-commit: a67f9589346a117eb6f51dc9f908680d661e5d5b
+exl-id: eedb4fe0-3aae-4e93-bf13-c095171e2d11
+source-git-commit: f8951b5a0a0ca94679155bad9f4c4c2991740b1a
 workflow-type: tm+mt
-source-wordcount: '221'
+source-wordcount: '195'
 ht-degree: 0%
 
 ---
 
 # [!DNL Mailchimp] 커넥터
-
 
 Adobe Experience Platform을 사용하면 를 사용하여 들어오는 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 외부 소스에서 데이터를 수집할 수 있습니다 [!DNL Platform] 서비스. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 등과 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 
@@ -27,9 +27,15 @@ Experience Platform은 타사 마케팅 자동화 시스템에서 데이터 섭�
 ## Connect [!DNL Mailchimp Campaigns] 플랫폼
 
 * [가져올 소스 연결 만들기 [!DNL Mailchimp Campaigns] api를 사용하여 Platform에 데이터 보내기](../../tutorials/api/create/marketing-automation/mailchimp-campaign.md).
-* [가져올 소스 연결 만들기 [!DNL Mailchimp Campaigns] 사용자 인터페이스를 사용하여 Platform에 데이터 추가](../../tutorials/ui/create/marketing-automation/mailchimp-campaigns.md).
+
+<!--
+* [Create a source connection to bring [!DNL Mailchimp Campaigns] data to Platform using the user interface](../../tutorials/ui/create/marketing-automation/mailchimp-campaigns.md).
+-->
 
 ## Connect [!DNL Mailchimp Members] 플랫폼
 
 * [가져올 소스 연결 만들기 [!DNL Mailchimp Members] api를 사용하여 Platform에 데이터 보내기](../../tutorials/api/create/marketing-automation/mailchimp-members.md).
-* [가져올 소스 연결 만들기 [!DNL Mailchimp Members] 사용자 인터페이스를 사용하여 Platform에 데이터 추가](../../tutorials/ui/create/marketing-automation/mailchimp-members.md).
+
+<!--
+* [Create a source connection to bring [!DNL Mailchimp Members] data to Platform using the user interface](../../tutorials/ui/create/marketing-automation/mailchimp-members.md).
+-->

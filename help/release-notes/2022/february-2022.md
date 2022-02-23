@@ -1,10 +1,11 @@
 ---
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform에 대한 최신 릴리스 노트입니다.
-source-git-commit: 6d360721a598ff3fa82169aea608263a09c1f05f
+exl-id: ae453f7d-ac75-4cc3-8435-57d25f086cc3
+source-git-commit: 3ae4d0f0a92c96b15c605c6654693fd6d7e94ba8
 workflow-type: tm+mt
 source-wordcount: '575'
-ht-degree: 5%
+ht-degree: 6%
 
 ---
 
@@ -37,7 +38,7 @@ Platform의 데이터 수집에 대한 자세한 내용은 [데이터 수집 개
 
 [!DNL Data Prep] 데이터 엔지니어가 XDM(Experience Data Model) 을 통해 데이터를 매핑, 변환 및 확인할 수 있습니다.
 
-**업데이트된 기능**
+**새로운 기능**
 
 | 기능 | 설명 |
 | --- | --- |

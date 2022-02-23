@@ -4,15 +4,17 @@ solution: Experience Platform
 title: Platform UI를 사용하여 MailChimp 캠페인 소스 연결 만들기
 topic-legacy: tutorial
 description: 플랫폼 UI를 사용하여 Adobe Experience Platform을 MailChimp 캠페인에 연결하는 방법을 알아봅니다.
-source-git-commit: a67f9589346a117eb6f51dc9f908680d661e5d5b
+hide: true
+hidefromtoc: true
+exl-id: e8e1ed32-4277-44c9-aafc-6bb9e0a1fe0d
+source-git-commit: f8951b5a0a0ca94679155bad9f4c4c2991740b1a
 workflow-type: tm+mt
 source-wordcount: '682'
 ht-degree: 1%
 
 ---
 
-
-# 만들기 [!DNL MailChimp Campaigns] 플랫폼 UI를 사용한 소스 연결
+# 만들기 [!DNL Mailchimp Campaigns] 플랫폼 UI를 사용한 소스 연결
 
 이 자습서에서는 을(를) 만드는 단계를 제공합니다 [!DNL Mailchimp] 수집할 원본 커넥터 [!DNL Mailchimp Campaigns] 사용자 인터페이스를 사용하여 Adobe Experience Platform에 데이터를 추가합니다.
 
@@ -98,4 +100,3 @@ OAuth 2를 사용하려면 을(를) 선택합니다. [!UICONTROL OAuth 2 새로 
 ## 다음 단계
 
 사용 [!DNL Mailchimp] 계정 인증 및 [!DNL Mailchimp Campaigns] 데이터를 선택한 경우 이제 데이터 흐름 만들기를 시작하여 데이터를 Platform으로 가져올 수 있습니다. 데이터 흐름을 만드는 방법에 대한 자세한 단계는 [마케팅 자동화 데이터를 플랫폼으로 가져오기 위한 데이터 흐름 만들기](../../dataflow/marketing-automation.md).
-
