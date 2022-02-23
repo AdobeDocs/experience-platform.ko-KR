@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform에 대한 최신 릴리스 노트입니다.
-source-git-commit: 762a4b7336f1c26b79883db9484d8f5fc7bff53c
+source-git-commit: 07dc417cbeb5ac0a59d2405986e9bb771b0735f2
 workflow-type: tm+mt
-source-wordcount: '362'
-ht-degree: 8%
+source-wordcount: '573'
+ht-degree: 6%
 
 ---
 
@@ -14,9 +14,25 @@ ht-degree: 8%
 
 Adobe Experience Platform의 기존 기능 업데이트:
 
+- [데이터 수집](#data-collection)
 - [[!DNL Data Prep]](#data-prep)
 - [[!DNL Identity Service]](#identity)
 - [소스](#sources)
+
+## 데이터 수집 {#data-collection}
+
+Platform은 클라이언트측 고객 경험 데이터를 수집하고 Adobe Experience Platform Edge Network로 전송하여 Adobe 또는 비Adobe 대상으로 보강, 변환 및 배포할 수 있는 기술 세트를 제공합니다.
+
+**새로운 기능**
+
+| 기능 | 설명 |
+| --- | --- |
+| 데이터 스트림 구성을 위한 UI 워크플로우가 개선되었습니다 | 데이터 수집 UI에서 새 데이터 스트림을 만드는 워크플로우가 업데이트되었습니다. 데이터 스트림에 서비스를 추가할 때 액세스 권한이 있는 서비스만 옵션 목록에 포함됩니다. 다음 안내서를 참조하십시오. [데이터 스트림 구성](../../edge/fundamentals/datastreams.md) 추가 정보. |
+| 데이터 수집을 위한 데이터 준비 | 이제 Adobe Experience Platform Web SDK를 사용하는 경우 데이터 준비 기능을 활용하여 데이터를 서버 쪽의 XDM(Experience Data Model)에 매핑할 수 있습니다. 의 섹션을 참조하십시오. [데이터 수집을 위한 데이터 준비](../../edge/fundamentals/datastreams.md#data-prep) 자세한 내용은 데이터 스트림 안내서를 참조하십시오. |
+| 자사 장치 ID | 이제 Platform Web SDK를 사용하여 고객 데이터를 수집할 때 자체 장치 ID를 Adobe Experience Platform Edge 네트워크로 전송하여 타사 쿠키 수명 주기에 대한 최근 브라우저 제한 사항에 대한 해결 방법을 제공할 수 있습니다. 다음 안내서를 참조하십시오. [자사 장치 ID](../../edge/identity/first-party-device-ids.md) 추가 정보. |
+
+Platform의 데이터 수집에 대한 자세한 내용은 [데이터 수집 개요](../../collection/home.md).
+
 
 ## [!DNL Data Prep] {#data-prep}
 
