@@ -3,16 +3,20 @@ title: Adobe Experience Platform Web SDK를 사용하여 개인화된 컨텐츠 
 description: Adobe Experience Platform Web SDK를 사용하여 개인화된 컨텐츠를 렌더링하는 방법을 알아봅니다.
 keywords: 개인화;renderDecisions;sendEvent;decisions;proposition;
 exl-id: 6a3252ca-cdec-48a0-a001-2944ad635805
-source-git-commit: 5d4214c1f9dc8476dd946559f602591c6e929cb1
+source-git-commit: 6ba563db7fd31084813426ffbb0c35be9d7fe4bb
 workflow-type: tm+mt
-source-wordcount: '701'
+source-wordcount: '741'
 ht-degree: 1%
 
 ---
 
 # 개인화된 콘텐츠 렌더링
 
-Adobe Experience Platform Web SDK는 다음을 포함하여 Adobe의 개인화 솔루션에서 개인화된 컨텐츠 검색을 지원합니다 [Adobe Target](https://business.adobe.com/products/target/adobe-target.html) 및 [offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=ko). Adobe Target 내에서 만들어진 컨텐츠 [시각적 경험 작성기](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) 는 SDK에서 자동으로 검색 및 렌더링할 수 있습니다. Adobe Target 내에서 만들어진 컨텐츠 [양식 기반 경험 작성기](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) 또는 SDK에서 자동으로 Offer decisioning을 렌더링할 수 없습니다. 대신 SDK를 사용하여 이 콘텐츠를 요청한 다음, 직접 콘텐츠를 수동으로 렌더링해야 합니다.
+Adobe Experience Platform Web SDK는 다음을 포함한 Adobe 개인화 솔루션에서 개인화된 컨텐츠 검색을 지원합니다 [Adobe Target](https://business.adobe.com/products/target/adobe-target.html) 및 [offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=ko).
+
+또한 웹 SDK는 다음과 같은 Adobe Experience Platform 개인화 대상을 통한 동일한 페이지 및 다음 페이지 개인화 기능을 지원합니다 [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) 그리고 [사용자 지정 개인화 연결](../../destinations/catalog/personalization/custom-personalization.md). 동일한 페이지 및 다음 페이지 개인화에 대한 Experience Platform을 구성하는 방법에 대해 알아보려면 [전용 안내서](../../destinations/ui/configure-personalization-destinations.md).
+
+Adobe Target 내에서 만들어진 컨텐츠 [시각적 경험 작성기](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) 는 SDK에서 자동으로 검색 및 렌더링할 수 있습니다. Adobe Target 내에서 만들어진 컨텐츠 [양식 기반 경험 작성기](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) 또는 SDK에서 자동으로 Offer decisioning을 렌더링할 수 없습니다. 대신 SDK를 사용하여 이 콘텐츠를 요청한 다음, 직접 콘텐츠를 수동으로 렌더링해야 합니다.
 
 ## 컨텐츠 자동 렌더링
 
