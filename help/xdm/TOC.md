@@ -4,10 +4,10 @@ user-guide-title: Experience Data Model(XDM) 시스템 도움말
 breadcrumb-title: Experience Data Model(XDM) 안내서
 user-guide-description: Experience Data Model(XDM) 클래스와 스키마 필드 그룹을 사용하여 경험 데이터를 표준화합니다.
 feature: Schemas
-source-git-commit: 065f5ef9d3d3be0fcab84d7518d8a00e4cd551cf
+source-git-commit: fecea2040af6e6c666de8eb4f1b13b3beaa45486
 workflow-type: tm+mt
-source-wordcount: '405'
-ht-degree: 18%
+source-wordcount: '412'
+ht-degree: 17%
 
 ---
 
@@ -55,6 +55,7 @@ ht-degree: 18%
       * [XDM 비즈니스 개인 구성 요소](./field-groups/profile/business-person-components.md)
       * [XDM 비즈니스 개인 세부 정보](./field-groups/profile/business-person-details.md)
    * 이벤트 필드 그룹 {#event}
+      * [Adobe Analytics 전체 확장](./field-groups/event/analytics-full-extension.md)
       * [캠페인 마케팅 세부 사항](./field-groups/event/campaign-marketing-details.md)
       * [채널 세부 사항](./field-groups/event/channel-details.md)
       * [상거래 세부 사항](./field-groups/event/commerce-details.md)
@@ -95,6 +96,7 @@ ht-degree: 18%
    * [지역 모양](./data-types/geo-shape.md)
    * [신원](./data-types/identity.md)
    * [노출 횟수](./data-types/impressions.md)
+   * [키 값 쌍](./data-types/key-value-pair.md)
    * [마케팅](./data-types/marketing.md)
    * [측정](./data-types/measure.md)
    * [주문](./data-types/order.md)
