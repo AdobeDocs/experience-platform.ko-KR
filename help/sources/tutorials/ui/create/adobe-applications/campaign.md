@@ -4,10 +4,10 @@ title: Platform UI를 사용하여 Adobe Campaign Managed Services 소스 연결
 description: Platform UI를 사용하여 Adobe Experience Platform을 Adobe Campaign Managed Services에 연결하는 방법을 알아봅니다.
 hide: true
 hidefromtoc: true
-source-git-commit: 24d7a549e83245fc363bd76f26ba58130e980c6c
+source-git-commit: 1b1f25093db642b394c6e05f15f6d1071096eb36
 workflow-type: tm+mt
-source-wordcount: '314'
-ht-degree: 0%
+source-wordcount: '300'
+ht-degree: 1%
 
 ---
 
@@ -31,30 +31,24 @@ ht-degree: 0%
 
 아래에 **[!UICONTROL Adobe 애플리케이션]** 카테고리, 선택 **[!UICONTROL Adobe Campaign Managed Services]** 그런 다음 **[!UICONTROL 데이터 추가]**.
 
-### 데이터 선택
+### 데이터 선택 {#select-data}
 
 다음 [!UICONTROL 데이터 선택] 단계가 나타나고, 사용자 인터페이스에 대한 값을 구성할 수 있는 인터페이스가 제공됩니다 [!UICONTROL Adobe Campaign 인스턴스], [!UICONTROL 대상 매핑], 및 [!UICONTROL 스키마 이름].
 
-#### 캠페인 인스턴스 선택 {#select-campaign-instance}
-
 >[!CONTEXTUALHELP]
 >id="platform_sources_campaign_instance"
->title="캠페인 인스턴스 선택"
+>title="ACC 인스턴스"
 >abstract="사용할 Adobe Campaign Classic 환경의 이름입니다."
 >text="Learn more in documentation"
 
-#### 캠페인 매핑 선택 {#select-campaign-mapping}
-
 >[!CONTEXTUALHELP]
 >id="platform_sources_campaign_mapping"
->title="캠페인 대상 매핑 선택"
+>title="대상 매핑"
 >abstract="타겟 매핑은 메시지를 전달하기 위해 Campaign에서 사용하는 기술 개체이며 게재를 보내는 데 필요한 모든 기술 설정(주소, 전화 번호, 옵트인 지표, 추가 식별자...)을 포함합니다."
 >text="Learn more in documentation"
 
-#### 캠페인 스키마 선택 {#select-campaign-schema}
-
 >[!CONTEXTUALHELP]
 >id="platform_sources_campaign_schema"
->title="캠페인 스키마 이름 선택"
+>title="스키마 이름"
 >abstract="Adobe Campaign 데이터베이스에 정의된 엔터티의 이름입니다."
 >text="Learn more in documentation"
