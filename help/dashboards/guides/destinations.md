@@ -4,9 +4,9 @@ title: 대상 대시보드
 description: Adobe Experience Platform은 조직의 활성 대상에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 48ceeadda939ea14132fafb4275db9e855d238b6
+source-git-commit: 8571d86e1ce9dc894e54fe72dea75b9f8fe84f0b
 workflow-type: tm+mt
-source-wordcount: '1642'
+source-wordcount: '895'
 ht-degree: 0%
 
 ---
@@ -43,22 +43,17 @@ Platform UI 내에서 대상 대시보드로 이동하려면 다음을 선택합
 
 ## 표준 위젯
 
-Adobe은 대상과 관련된 다양한 지표를 시각화하고 데이터 분석에 사용할 수 있는 세그먼트의 완벽성을 평가하는 데 사용할 수 있는 여러 표준 위젯을 제공합니다. 또한 [!UICONTROL 위젯 라이브러리]. 사용자 지정 위젯을 만드는 방법에 대해 자세히 알아보려면 [위젯 라이브러리 개요](../customize/widget-library.md).
+Adobe은 대상과 관련된 다양한 지표를 시각화하는 데 사용할 수 있는 여러 표준 위젯을 제공합니다. 또한 [!UICONTROL 위젯 라이브러리]. 사용자 지정 위젯을 만드는 방법에 대해 자세히 알아보려면 [위젯 라이브러리 개요](../customize/widget-library.md).
 
 사용 가능한 각 표준 위젯에 대해 자세히 알아보려면 다음 목록에서 위젯 이름을 선택하십시오.
 
 * [[!UICONTROL 가장 많이 사용되는 대상]](#most-used-destinations)
 * [[!UICONTROL 최근에 만든 대상]](#recently-created-destinations)
 * [[!UICONTROL 최근에 활성화된 세그먼트]](#recently-activated-segments)
-* [[!UICONTROL 대상별로 최근에 활성화된 세그먼트]](#recently-activated-segments-by-destination)
-* [[!UICONTROL 대상 크기 트렌드]](#audience-size-trends)
-* [[!UICONTROL ID로 매핑되지 않은 세그먼트]](#unmapped-segments-by-identity)
-* [[!UICONTROL ID별로 매핑된 세그먼트]](#mapped-segments-by-identity)
-* [[!UICONTROL 일반적인 대상]](#common-audiences)
 
 ### [!UICONTROL 가장 많이 사용되는 대상] {#most-used-destinations}
 
-다음 **[!UICONTROL 가장 많이 사용되는 대상]** 위젯은 마지막 스냅샷을 기준으로 매핑된 세그먼트 수별로 조직의 최상위 대상을 표시합니다. 이 등급을 통해 사용 중인 대상을 파악할 수 있을 뿐만 아니라 활용도가 낮은 대상을 표시할 수도 있습니다.
+다음 **[!UICONTROL 가장 많이 사용되는 대상]** 위젯은 마지막 스냅숏을 기준으로 매핑된 세그먼트 수별로 조직의 최상위 대상을 표시합니다. 이 등급을 통해 사용 중인 대상을 파악할 수 있을 뿐만 아니라 활용도가 낮은 대상을 표시할 수도 있습니다.
 
 예를 들어 대상을 어제 구성했지만 세그먼트를 매핑하지 않은 경우 대상이 현재 제대로 활용되지 않고 있는지 확인할 수 있습니다.
 
@@ -91,66 +86,6 @@ Adobe은 대상과 관련된 다양한 지표를 시각화하고 데이터 분�
 Experience Platform에서 세그먼트 작업에 대한 자세한 내용은 [세그먼테이션 서비스 개요](../../segmentation/home.md).
 
 ![](../images/destinations/recently-activated-segments.png)
-
-### [!UICONTROL 대상별로 최근에 활성화된 세그먼트] {#recently-activated-segments-by-destination}
-
-다음 **[!UICONTROL 대상별로 최근에 활성화된 세그먼트]** 위젯은 개요 드롭다운에서 선택한 대상에 따라 가장 최근에 활성화된 상위 5개의 세그먼트를 내림차순으로 표시합니다. 비슷하지만 [!UICONTROL 최근에 활성화된 세그먼트] 위젯이지만 데이터가 표시됨 **전용** 선택한 대상에 적용됩니다.
-
-이 위젯에는 두 개의 지표가 포함되어 있습니다. 세그먼트 이름 및 세그먼트가 대상에 마지막으로 활성화된 날짜입니다. 표시된 데이터는 마지막 일별 스냅샷에서 정확합니다.
-
-표시된 목록에서 세그먼트 이름을 선택하여 세그먼트의 세부 사항을 볼 수 있습니다.
-
-![대상 위젯별로 최근에 활성화된 세그먼트입니다.](../images/destinations/recently-activated-segments-by-destination.png)
-
-### [!UICONTROL 대상 크기 트렌드] {#audience-size-trend}
-
-다음 **[!UICONTROL 대상 크기 트렌드]** 위젯은 해당 대상 계정에 매핑된 세그먼트의 기간 동안 프로필 수의 관계를 나타냅니다. 위젯은 선 그래프를 사용하여 매일 대상 계정으로 보내는 세그먼트에 포함된 프로필 수를 보여줍니다.
-
-지난 30일, 90일 또는 12개월 동안의 대상 트렌드의 기간은 첫 번째 드롭다운 메뉴를 사용하여 조정할 수 있습니다.
-
-두 번째 드롭다운 메뉴에는 대시보드 맨 위에서 선택한 대상 계정으로 전송할 수 있는 모든 사용 가능한 세그먼트가 나열됩니다.
-
-![대상 크기 트렌드 위젯.](../images/destinations/audience-size-trend.png)
-
-### [!UICONTROL ID로 매핑되지 않은 세그먼트] {#unmapped-segments-by-identity}
-
-다음 **[!UICONTROL ID로 매핑되지 않은 세그먼트]** 위젯은 상위 5개 위젯을 나열합니다 **매핑되지 않음** 지정된 대상 및 id에 대한 내림차순 ID 카운트로 정렬된 세그먼트입니다. 선택한 ID를 기반으로 선택한 대상 계정에 매핑하는 데 가장 유용한 세그먼트를 강조 표시합니다.
-
-대상 ID 드롭다운은 사용 가능한 세그먼트를 필터링합니다. 드롭다운에 나열된 필터 ID는 개요 페이지 맨 위에서 선택한 대상 계정에 따라 변경됩니다.
-
-id 열은 위젯 ID 드롭다운에서 선택한 ID에 매핑할 수 있는 세그먼트 내의 소스 ID 수를 계산합니다.
-
-![ID 위젯별로 매핑되지 않은 세그먼트.](../images/destinations/unmapped-segments-by-identity.png)
-
-### [!UICONTROL ID별로 매핑된 세그먼트] {#mapped-segments-by-identity}
-
-이 위젯은 **매핑된** 세그먼트 를 참조하십시오. 목록은 세그먼트 내에 포함된 소스 ID 수에 따라 높기에서 낮이로 정렬됩니다. 카운트할 대상 ID는 위젯 제목 아래의 드롭다운 메뉴에서 선택합니다. 위젯의 드롭다운에서 사용할 수 있는 대상 ID는 개요 대시보드 맨 위에서 선택한 대상 계정 필터에 따라 변경됩니다.
-
-![ID 위젯별 매핑된 세그먼트.](../images/destinations/mapped-segments-by-identity.png)
-
-다음 **[!UICONTROL ID별로 매핑된 세그먼트]** 위젯은 선택한 대상 내에서 캠페인에 대한 프로필 기회를 성공적으로 타깃팅할 가능성이 있는 한 눈에 강조 표시됩니다. 효율적인 타깃팅된 캠페인은 대상으로 전송된 프로필의 수가 아니라 유용하고 실행 가능한 데이터를 제공하기 위해 대상 ID와 일치할 수 있는 소스 ID 수에 따라 다릅니다.
-
-### 일반적인 대상
-
-다음 **[!UICONTROL 일반적인 대상]** 위젯은 페이지 맨 위에서 선택한 대상 계정과 위젯 드롭다운에서 선택한 대상 간에 활성화된 상위 5개 세그먼트 목록을 제공합니다. 세그먼트 목록은 최근에 활성화한 시기에 따라 정렬됩니다. 가장 최근에 활성화된 세그먼트가 맨 위에 표시됩니다.
-
-다음 [!UICONTROL 대상 크기] 열은 나열된 각 세그먼트의 총 프로필 수를 제공합니다.
-
-![공통 대상 위젯.](../images/destinations/common-audiences.png)
-
-### 매핑된 대상 상태
-
-위젯은 최대 20개의 매핑된 세그먼트 목록으로서, 마지막 일별 스냅샷에서 30일 평균 대상 크기보다 하나 이상의 표준 편차의 인자로 해당 대상에 매핑된 대상 크기를 벗어납니다.
-
-간단히 말해서, 지난 30일 동안 평균으로부터 대상 크기의 분산에 대한 계산된 지표를 제공합니다. 이는 현재 대상 크기가 지난 30일 동안 데이터에서 본 과거 표준 편차를 벗어나는지 여부를 비교합니다.
-
-시스템의 모든 대상 크기는 [!UICONTROL 최신 크기] 열.
-
-세그먼트 매핑 프로필 카운트가 지난 30일 동안 평균 매핑된 프로필 크기보다 하나의 표준 편차를 초과하는 경우, 이것은 시스템의 예외 항목을 나타내며 조사해야 합니다.
-
-세그먼트 내의 [!UICONTROL 매핑된 대상 상태] 위젯이 큰 여백에 의해 벗어납니다. 대상 크기 트렌드 차트를 참조하고 예외 항목 세그먼트를 찾아야 합니다. 트렌드는 세그먼트의 상태에 대한 더 많은 통찰력을 제공할 수 있습니다.
-
-![매핑된 대상 상태 위젯.](../images/destinations/mapped-audience-health.png)
 
 ## 다음 단계
 

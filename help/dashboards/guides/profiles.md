@@ -4,10 +4,10 @@ title: 프로필 대시보드
 description: Adobe Experience Platform은 조직의 실시간 고객 프로필 데이터에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: ab76292f569fa8c21dab736d6291891b717d026d
+source-git-commit: 8571d86e1ce9dc894e54fe72dea75b9f8fe84f0b
 workflow-type: tm+mt
-source-wordcount: '2324'
-ht-degree: 1%
+source-wordcount: '1618'
+ht-degree: 0%
 
 ---
 
@@ -43,26 +43,6 @@ Experience Platform 사용자 인터페이스 내의 모든 프로필 기능에 
 
 자세한 내용은 [대시보드 수정](../customize/modify.md) 및 [위젯 라이브러리 개요](../customize/widget-library.md) 설명서 를 참조하십시오.
 
-## (베타) 프로필 효율성 통찰력 {#profile-efficiency-insights}
-
->[!IMPORTANT]
->
->프로필 효율성 인사이트 기능은 현재 베타 버전으로 일부 사용자는 사용할 수 없습니다. 설명서 및 기능은 변경될 수 있습니다.
-
-다음 [!UICONTROL 효능] 탭에는 프로필 유효성 위젯의 사용에 대한 철저한 프로필 데이터의 품질 및 완전성에 대한 지표가 있습니다. 이러한 위젯은 프로필의 구성, 시간 경과에 따른 완벽성 추세 및 프로필 데이터 품질에 대한 평가를 한눈에 보여줍니다.
-
-[프로파일 효과 대시보드.](../images/profiles/attributes-quality-assessment.png)
-
-자세한 내용은 [프로필 효과 위젯 섹션](#profile-efficacy-widgets) 위젯에 대한 자세한 내용은 현재 사용 가능합니다.
-
-또한, 이 대시보드의 레이아웃은 [**[!UICONTROL 대시보드 수정]**](../customize/modify.md) 에서 [!UICONTROL 개요] 탭.
-
-## 프로필 찾아보기 {#browse-profiles}
-
-다음 [!UICONTROL 찾아보기] 탭에서 IMS 조직에 수집된 읽기 전용 프로필을 검색하고 볼 수 있습니다. 여기에서 기본 설정, 이전 이벤트, 상호 작용 및 세그먼트와 관련하여 프로필에 속하는 중요한 정보를 볼 수 있습니다
-
-Platform UI에 제공된 프로필 보기 기능에 대한 자세한 내용은 [Real-time Customer Data Platform에서 프로필 검색](../../rtcdp/profile/profile-browse.md).
-
 ## 병합 정책 {#merge-policies}
 
 에 표시되는 지표 [!UICONTROL 프로필] 대시보드는 실시간 고객 프로필 데이터에 적용되는 병합 정책을 기반으로 합니다. 여러 소스에서 데이터를 함께 가져와서 고객 프로필을 만드는 경우 데이터에 충돌하는 값이 포함될 수 있습니다(예: 한 데이터 세트에 고객이 &quot;단일&quot;로 나열되고 다른 데이터 세트에 고객이 &quot;기혼&quot;으로 나열될 수 있음). 프로필의 일부로 우선 순위를 지정하고 표시할 데이터를 결정하는 것은 병합 정책의 작업입니다.
@@ -76,14 +56,6 @@ Platform UI에 제공된 프로필 보기 기능에 대한 자세한 내용은 [
 >드롭다운 메뉴에는 XDM 개별 프로필 클래스와 관련된 병합 정책만 표시되지만, 조직에서 여러 개의 병합 정책을 만든 경우 사용 가능한 병합 정책의 전체 목록을 보려면 스크롤해야 할 수도 있습니다.
 
 ![](../images/profiles/select-merge-policy.png)
-
-## 결합 스키마
-
-다음 [!UICONTROL 결합 스키마] 대시보드는 특정 XDM 클래스에 대한 결합 스키마를 표시합니다. 을(를) 선택하여 [!UICONTROL **클래스**] 드롭다운에서 다른 XDM 클래스에 대한 결합 스키마를 볼 수 있습니다.
-
-결합 스키마는 동일한 클래스를 공유하고 프로필에 대해 활성화된 여러 스키마로 구성됩니다. 동일한 클래스를 공유하는 각 스키마 내에 포함된 모든 필드의 병합을 단일 보기에서 볼 수 있습니다.
-
-자세한 내용은 결합 스키마 UI 안내서 를 참조하십시오 [플랫폼 UI 내에서 결합 스키마 보기](../../profile/ui/union-schema.md#view-union-schemas).
 
 ## 위젯 및 지표
 
@@ -162,59 +134,6 @@ ID에 대해 자세히 알아보려면 [Adobe Experience Platform Identity Servi
 ID에 대해 자세히 알아보려면 [Adobe Experience Platform Identity Service 설명서](../../identity-service/home.md).
 
 ![](../images/profiles/identity-overlap.png)
-
-## (베타) 프로필 효율성 위젯 {#profile-efficacy-widgets}
-
->[!IMPORTANT]
->
->프로필 효율성 위젯은 현재 베타에 있으며 일부 사용자는 사용할 수 없습니다. 설명서 및 기능은 변경될 수 있습니다.
-
-Adobe은 데이터 분석에 사용할 수 있는 수집된 프로필의 완전성을 평가하는 여러 위젯을 제공합니다. 각각의 프로필 효과 위젯은 병합 정책에 의해 필터링할 수 있습니다. 병합 정책 필터를 변경하려면[!UICONTROL 병합 정책을 사용한 프로필] 드롭다운을 클릭하고 사용 가능한 목록에서 적절한 정책을 선택합니다.
-
-각 프로필 효과 위젯에 대해 자세히 알려면 다음 목록에서 위젯의 이름을 선택합니다.
-
-* [[!UICONTROL 속성 품질 평가]](#attribute-quality-assessment)
-* [[!UICONTROL 프로필 완결성]](#profile-completeness)
-* [[!UICONTROL 프로필 완결성 트렌드]](#profile-completeness-trend)
-
-### (베타) [!UICONTROL 속성 품질 평가] {#attribute-quality-assessment}
-
-이 위젯은 마지막 처리 날짜 이후 각 프로필 속성의 완전성과 카디널리티를 보여줍니다. 이 정보는 테이블의 각 행이 단일 속성을 나타내는 네 개의 열이 있는 테이블로 표시됩니다.
-
-| 열 | 설명 |
-|---|---|
-| 속성 | 속성의 이름입니다. |
-| 프로필 | 이 특성이 있고 null이 아닌 값으로 채워진 프로필 수입니다. |
-| 완전성 | 이 백분율은 이 속성을 가지고 있고 null이 아닌 값으로 채워진 총 프로필 수에 의해 결정됩니다. 이 숫자는 전체 프로필 수를 해당 속성의 프로필에서 비어 있지 않은 값의 총 수로 나누어 계산됩니다. |
-| 카디널리티 | 총 개수 **고유** 이 특성의 null이 아닌 값. 모든 프로필에서 측정됩니다. |
-
-![속성 품질 평가 위젯](../images/profiles/attributes-quality-assessment.png)
-
-### (베타) [!UICONTROL 완벽을 기한 프로필] {#profile-completeness}
-
-이 위젯은 마지막 처리 날짜 이후 프로필 완전성의 원 차트를 만듭니다. 프로필의 완전성은 관찰된 모든 속성 중에서 null이 아닌 값으로 채워진 속성의 백분율로 측정됩니다.
-
-이 위젯은 높은 프로필, 중간 또는 낮은 완전성을 나타내는 프로필의 비율을 표시합니다. 기본적으로 구성된 완결성 수준은 다음과 같습니다.
-
-* 높은 완전성: 프로필에 70% 이상의 속성이 입력되었습니다.
-* 미디어 완결성: 프로필에 70% 미만과 30% 이상의 속성이 입력되었습니다.
-* 낮은 완결성: 프로필에 30% 미만의 속성이 입력되었습니다.
-
-![완결성 위젯의 프로필](../images/profiles/profiles-by-completeness.png)
-
-### (베타) [!UICONTROL 프로필 완결성 트렌드] {#profile-completeness-trend}
-
-이 위젯은 시간 경과에 따른 프로필 완전성의 트렌드를 나타내는 누적 열 차트를 만듭니다. 완전성은 관찰된 모든 속성 중에서 null이 아닌 값으로 채워진 속성의 백분율로 측정됩니다. 마지막 처리 날짜 이후 프로필 완전성을 높음, 중간 또는 낮은 완전성으로 분류합니다.
-
-x축은 시간을 나타내고, y축은 프로필 수를 나타내고, 색상은 세 가지 프로필 완결성 수준을 나타냅니다.
-
-세 가지 완결성 수준은 다음과 같습니다.
-
-* 높은 완전성: 프로필에 70% 이상의 속성이 입력되었습니다.
-* 미디어 완결성: 프로필에 70% 미만과 30% 이상의 속성이 입력되었습니다.
-* 낮은 완결성: 프로필에 30% 미만의 속성이 입력되었습니다.
-
-![프로필 완결성 트렌드 위젯](../images/profiles/profiles-completeness-trend.png)
 
 ## 다음 단계
 
