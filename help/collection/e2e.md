@@ -2,7 +2,7 @@
 title: 데이터 수집 종단간 개요
 description: Adobe Experience Platform에서 제공하는 데이터 수집 기술을 사용하여 이벤트 데이터를 Adobe Experience Cloud 솔루션으로 보내는 방법에 대한 높은 수준의 개요입니다.
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
-source-git-commit: 1125907e02c23b89ea672f424d1bbf9e9de0ba04
+source-git-commit: d326267cacf8d678937e8c959de8acbfbbb88c93
 workflow-type: tm+mt
 source-wordcount: '2618'
 ht-degree: 0%
@@ -103,7 +103,7 @@ Edge Network에 데이터를 보낼 수 있게 되면 선택적으로 다음 작
 
 데이터 스트림에 대한 구성 요구 사항은 데이터를 전송하는 제품 및 기능에 따라 다릅니다. 각 제품의 구성 옵션에 대한 자세한 내용은 [데이터 세트 개요](../edge/fundamentals/datastreams.md).
 
-## 웹 SDK 설치 및 구성 {#install}
+## 웹 SDK 설치 및 구성
 
 스키마와 데이터 스트림을 만든 후 다음 단계는 Edge 네트워크에 데이터 전송을 시작하도록 Platform Web SDK를 설치 및 구성하는 것입니다.
 
