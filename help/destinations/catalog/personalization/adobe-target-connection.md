@@ -3,9 +3,9 @@ keywords: target 개인화; 대상; experience platform target 대상;adobe targ
 title: Adobe Target 연결
 description: Adobe Target은 웹 사이트, 모바일 앱 등에서 모든 인바운드 고객 상호 작용에 실시간 AI 기반의 개인화 및 실험 기능을 제공하는 애플리케이션입니다.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 61a3a05466eca30ba08fcaf32a3f00e0ca49f325
+source-git-commit: a990e829c8ba034f31b883360495513f3f5b4cfc
 workflow-type: tm+mt
-source-wordcount: '474'
+source-wordcount: '469'
 ht-degree: 0%
 
 ---
@@ -21,6 +21,10 @@ Adobe Target은 Adobe Experience Platform의 개인화 연결입니다.
 ## 전제 조건 {#prerequisites}
 
 이 통합은 [Adobe Experience Platform Web SDK](../../../edge/home.md). 이 대상을 사용하려면 이 SDK를 사용해야 합니다.
+
+>[!IMPORTANT]
+>
+>만들기 전 [!DNL Adobe Target] 연결, 방법에 대한 안내서를 참조하십시오. [동일한 페이지 및 다음 페이지 개인화를 위한 개인화 대상 구성](../../ui/configure-personalization-destinations.md). 이 안내서에서는 여러 Experience Platform 구성 요소에서 동일한 페이지 및 다음 페이지 개인화 사용 사례에 필요한 구성 단계를 안내합니다.
 
 ## 내보내기 유형 {#export-type}
 
@@ -39,10 +43,6 @@ Adobe Target은 Adobe Experience Platform의 개인화 연결입니다.
 >title="데이터 스트림 ID 기본 정보"
 >abstract="이 옵션은 페이지에 대한 응답에 세그먼트를 포함할 데이터 수집 데이터 스트림을 결정합니다. 드롭다운 메뉴에는 대상 구성이 활성화된 데이터 세트만 표시됩니다. 대상을 구성하려면 먼저 데이터 스트림을 구성해야 합니다."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html?lang=en" text="데이터 스트림을 구성하는 방법을 알아봅니다."
-
->[!IMPORTANT]
->
->만들기 전 [!DNL Adobe Target] connection에 대한 안내서를 읽어 보는 것이 좋습니다 [동일한 페이지 및 다음 페이지 개인화를 위한 개인화 대상 구성](../../ui/configure-personalization-destinations.md). 이 안내서에서는 여러 Experience Platform 구성 요소에서 동일한 페이지 및 다음 페이지 개인화 사용 사례에 필요한 구성 단계를 안내합니다.
 
 이 대상에 연결하려면 [대상 구성 자습서](../../ui/connect-destination.md).
 
