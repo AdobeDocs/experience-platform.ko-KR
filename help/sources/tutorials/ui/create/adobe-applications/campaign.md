@@ -4,7 +4,7 @@ title: Platform UI를 사용하여 Adobe Campaign Managed Services 소스 연결
 description: Platform UI를 사용하여 Adobe Experience Platform을 Adobe Campaign Managed Services에 연결하는 방법을 알아봅니다.
 hide: true
 hidefromtoc: true
-source-git-commit: 1b1f25093db642b394c6e05f15f6d1071096eb36
+source-git-commit: 57a34b10e40dee80638392477d49c21e107c491f
 workflow-type: tm+mt
 source-wordcount: '300'
 ht-degree: 1%
@@ -33,8 +33,6 @@ ht-degree: 1%
 
 ### 데이터 선택 {#select-data}
 
-다음 [!UICONTROL 데이터 선택] 단계가 나타나고, 사용자 인터페이스에 대한 값을 구성할 수 있는 인터페이스가 제공됩니다 [!UICONTROL Adobe Campaign 인스턴스], [!UICONTROL 대상 매핑], 및 [!UICONTROL 스키마 이름].
-
 >[!CONTEXTUALHELP]
 >id="platform_sources_campaign_instance"
 >title="ACC 인스턴스"
@@ -52,3 +50,5 @@ ht-degree: 1%
 >title="스키마 이름"
 >abstract="Adobe Campaign 데이터베이스에 정의된 엔터티의 이름입니다."
 >text="Learn more in documentation"
+
+다음 [!UICONTROL 데이터 선택] 단계가 나타나고, 사용자 인터페이스에 대한 값을 구성할 수 있는 인터페이스가 제공됩니다 [!UICONTROL Adobe Campaign 인스턴스], [!UICONTROL 대상 매핑], 및 [!UICONTROL 스키마 이름].
