@@ -2,7 +2,7 @@
 description: 이 페이지에서는 '/authoring/audience-templates' API 종단점을 사용하여 수행할 수 있는 모든 API 작업을 설명합니다.
 title: 대상 메타데이터 끝점 API 작업
 exl-id: 3444da8c-b2be-4254-980a-8cce7560134d
-source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
+source-git-commit: afdabdebe9b82d828cb1941edb99ca2518a941a2
 workflow-type: tm+mt
 source-wordcount: '879'
 ht-degree: 4%
@@ -26,7 +26,6 @@ ht-degree: 4%
 에 POST 요청을 만들어 새 대상 템플릿을 만들 수 있습니다 `/authoring/audience-templates` 엔드포인트.
 
 **API 형식**
-
 
 ```http
 POST /authoring/audience-templates
@@ -146,6 +145,31 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-t
                "value":"string"
             }
          ]
+      },
+      "notify":{
+         "url":"string",
+         "httpMethod":"string",
+         "headers":[
+            {
+               "header":"string",
+               "value":"string"
+            }
+         ],
+         "requestBody":{
+            
+         },
+         "responseFields":[
+            {
+               "name":"string",
+               "value":"string"
+            }
+         ],
+         "responseErrorFields":[
+            {
+               "name":"string",
+               "value":"string"
+            }
+         ]
       }
    },
    "validations":[
@@ -183,7 +207,6 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-t
 에 PUT 요청을 만들어 기존 대상 템플릿을 업데이트할 수 있습니다. `/authoring/audience-templates` 업데이트하려는 대상 템플릿의 인스턴스 ID를 제공하고 끝점입니다. 호출 본문에서 업데이트된 템플릿을 제공합니다.
 
 **API 형식**
-
 
 ```http
 PUT /authoring/audience-templates/{INSTANCE_ID}
@@ -292,7 +315,6 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/audience-te
    }
 }
 ```
-
 
 ## 대상 템플릿 목록 검색 {#retrieve-list}
 
@@ -430,7 +452,6 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/audience-te
 에 GET 요청을 수행하여 특정 대상 템플릿에 대한 세부 정보를 검색할 수 있습니다 `/authoring/audience-templates` 엔드포인트 및 검색할 대상 템플릿의 인스턴스 ID를 제공합니다.
 
 **API 형식**
-
 
 ```http
 GET /authoring/audience-templates/{INSTANCE_ID}

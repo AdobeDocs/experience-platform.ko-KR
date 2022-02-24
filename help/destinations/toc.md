@@ -4,9 +4,9 @@ user-guide-title: 대상 안내서
 user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화합니다.
 description: 이 문서에서는 Adobe Experience Platform 대상의 목차 목록을 설명합니다
 feature: Destinations
-source-git-commit: 9d2e98c834eddcacf67de7caafef4717e38d80f8
+source-git-commit: 2f8e31321345a14c098f795b50d33c700ac0faa8
 workflow-type: tm+mt
-source-wordcount: '701'
+source-wordcount: '722'
 ht-degree: 9%
 
 ---
@@ -156,8 +156,10 @@ ht-degree: 9%
    * [시작하기](./destination-sdk/getting-started.md)
    * Destination SDK 기능 {#functionality}
       * [구성 옵션](./destination-sdk/configuration-options.md)
-      * [대상 구성](./destination-sdk/destination-configuration.md)
-      * [서버 및 템플릿 사양](./destination-sdk/server-and-template-configuration.md)
+      * [스트리밍 대상 구성](./destination-sdk/destination-configuration.md)
+      * [파일 기반 대상 구성](./destination-sdk/file-based-destination-configuration.md)
+      * [스트리밍 대상 서버 및 템플릿 사양](./destination-sdk/server-and-template-configuration.md)
+      * [파일 기반 대상 서버 및 파일 사양](./destination-sdk/server-and-file-configuration.md)
       * [메시지 포맷](./destination-sdk/message-format.md)
       * [대상 메타데이터 관리](./destination-sdk/audience-metadata-management.md)
       * 인증 {#authentication}
@@ -180,6 +182,7 @@ ht-degree: 9%
          * [샘플 프로필 생성 API 작업](./destination-sdk/sample-profile-generation-api.md)
    * 안내서 {#guides}
       * [Destination SDK을 사용하여 스트리밍 대상 구성](./destination-sdk/configure-destination-instructions.md)
+      * [(베타) Destination SDK을 사용하여 파일 기반 대상 구성](./destination-sdk/configure-file-based-destination-instructions.md)
       * [Destination SDK에서 작성된 대상을 검토하도록 제출](./destination-sdk/submit-destination.md)
    * 대상을 문서화합니다. {#document-destination}
       * [Adobe Experience Platform에서 대상 문서화](./destination-sdk/docs-framework/documentation-instructions.md)

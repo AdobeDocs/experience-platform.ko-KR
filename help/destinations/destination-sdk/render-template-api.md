@@ -2,7 +2,7 @@
 description: 이 페이지에서는 메시지 변환 템플릿을 기반으로 대상에 대해 내보낸 데이터를 렌더링하기 위해 '/authoring/testing/template/render' API 종단점을 사용하여 수행할 수 있는 모든 API 작업을 나열하고 설명합니다.
 title: 템플릿 API 작업 렌더링
 exl-id: e64ea89e-6064-4a05-9730-e0f7d7a3e1db
-source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
+source-git-commit: b337d65bcdfbb65da1b751645ddc649d30440dc7
 workflow-type: tm+mt
 source-wordcount: '806'
 ht-degree: 1%
@@ -30,7 +30,6 @@ ht-degree: 1%
 >[!TIP]
 >
 >* 여기에서 사용해야 하는 대상 ID는 `instanceId` 대상 구성에 해당하며 `/destinations` 엔드포인트. 자세한 내용은 [대상 구성 API 작업](./destination-configuration-api.md#retrieve-list).
-
 
 
 **API 형식**

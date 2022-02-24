@@ -2,7 +2,7 @@
 description: 이 페이지에서는 '/authoring/destinations/publish' API 종단점을 사용하여 수행할 수 있는 모든 API 작업을 나열하고 설명합니다.
 title: 게시 대상 API 끝점 작업
 exl-id: 0564a132-42f4-478c-9197-9b051acf093c
-source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
+source-git-commit: 6ad556e3b7bf15f1d6ff522307ff232b8fd947d3
 workflow-type: tm+mt
 source-wordcount: '757'
 ht-degree: 4%
@@ -20,6 +20,7 @@ ht-degree: 4%
 대상을 구성하고 테스트한 후 검토 및 게시를 위해 Adobe에 제출할 수 있습니다.
 
 다음과 같은 경우 게시 대상 API 엔드포인트를 사용하여 게시 요청을 제출합니다.
+
 * Destination SDK 파트너인 경우 모든 Experience Platform 고객이 사용할 수 있도록 모든 Experience Platform 조직에서 생산화된 대상을 사용할 수 있도록 하려고 합니다.
 * 모든 샌드박스에서 고유한 Experience Platform 조직에서 사용자 지정 대상을 사용할 수 있도록 하려는 경우.
 
@@ -32,7 +33,6 @@ ht-degree: 4%
 에 POST 요청을 만들어 게시할 대상 구성을 제출할 수 있습니다 `/authoring/destinations/publish` 엔드포인트.
 
 **API 형식**
-
 
 ```http
 POST /authoring/destinations/publish
@@ -78,7 +78,6 @@ IMS 조직에 게시하기 위해 제출된 모든 대상 목록을 Adobe Media 
 
 **API 형식**
 
-
 ```http
 GET /authoring/destinations/publish
 ```
@@ -114,7 +113,6 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
       }
    ]
 }
-    
 ```
 
 | 매개 변수 | 유형 | 설명 |
@@ -132,7 +130,6 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 에 PUT 요청을 만들어 기존 대상 게시 요청에서 허용되는 조직을 업데이트할 수 있습니다 `/authoring/destinations/publish` 엔드포인트 및 허용된 조직을 업데이트할 대상의 ID를 제공합니다. 호출 본문에서 업데이트된 허용된 조직을 제공합니다.
 
 **API 형식**
-
 
 ```http
 PUT /authoring/destinations/publish/{DESTINATION_ID}
@@ -169,7 +166,6 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 에 GET 요청을 수행하여 특정 대상 게시 요청에 대한 세부 정보를 검색할 수 있습니다 `/authoring/destinations/publish` 게시 상태를 검색할 대상의 ID를 제공하고 끝점입니다.
 
 **API 형식**
-
 
 ```http
 GET /authoring/destinations/publish/{DESTINATION_ID}

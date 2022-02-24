@@ -1,15 +1,15 @@
 ---
 description: 이 페이지에서는 Destination SDK을 사용하여 작성된 대상을 검토하기 위해 제출하는 모든 정보를 제공합니다.
-title: Destination SDK에서 작성된 대상을 검토할 수 있도록 제출
+title: Destination SDK에서 작성된 대상을 검토하도록 제출
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: 468b9309c5184684c0b25c2656a9eef37715af53
+source-git-commit: 111da9ce3e38096d11a1910929ee892e5661722c
 workflow-type: tm+mt
 source-wordcount: '568'
 ht-degree: 1%
 
 ---
 
-# Destination SDK에서 작성된 대상을 검토할 수 있도록 제출
+# Destination SDK에서 작성된 대상을 검토하도록 제출
 
 ## 개요 {#overview}
 
@@ -37,6 +37,7 @@ ht-degree: 1%
 ## 테스트 대상 API 사용 후 결과 테스트
 
 를 사용한 후 테스트 결과 제공 [테스트 대상 API](./test-destination.md) 대상에 대한 HTTP 호출을 수행하는 끝점입니다. 여기에는 다음 항목이 포함되어 있습니다.
+
 * 테스트 API를 사용하여 대상 종단점에 대한 전체 API 요청(헤더 및 본문)입니다.
 * 대상 종단점에서 받은 API 응답입니다.
 

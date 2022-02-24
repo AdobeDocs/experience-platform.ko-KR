@@ -2,10 +2,10 @@
 description: 이 페이지에서는 '/authoring/destination-server' API 종단점을 사용하여 수행할 수 있는 모든 API 작업을 나열하고 설명합니다. 대상에 대한 서버 및 템플릿 사양은 일반 끝점 '/authoring/destination-servers'를 통해 Adobe Experience Platform Destination SDK에서 구성할 수 있습니다.
 title: 대상 서버 끝점 API 작업
 exl-id: a144b0fb-d34f-42d1-912b-8576296e59d2
-source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
+source-git-commit: 6bdb7a3ce6e9f37070dceff8b0226bd6cd53038b
 workflow-type: tm+mt
-source-wordcount: '827'
-ht-degree: 5%
+source-wordcount: '1454'
+ht-degree: 3%
 
 ---
 
@@ -21,12 +21,11 @@ ht-degree: 5%
 
 계속하기 전에 [시작 안내서](./getting-started.md) api를 성공적으로 호출하기 위해 알고 있어야 하는 중요한 정보(필수 대상 작성 권한 및 필수 헤더를 가져오는 방법)입니다.
 
-## 대상 서버에 대한 구성 만들기 {#create}
+## 스트리밍 대상 서버에 대한 구성 만들기 {#create}
 
-에 POST 요청을 수행하여 새 대상 서버 구성을 만들 수 있습니다 `/authoring/destination-servers` 엔드포인트.
+에 POST 요청을 수행하여 스트리밍 대상에 대한 새 대상 서버 구성을 만들 수 있습니다 `/authoring/destination-servers` 엔드포인트.
 
 **API 형식**
-
 
 ```http
 POST /authoring/destination-servers
@@ -67,7 +66,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | 매개 변수 | 유형 | 설명 |
 | -------- | ----------- | ----------- |
 | `name` | 문자열 | *필수 여부.* Adobe에만 표시되는 서버의 친숙한 이름을 나타냅니다. 파트너 또는 고객은 이 이름을 볼 수 없습니다. 예 `Moviestar destination server`. |
-| `destinationServerType` | 문자열 | *필수 여부.* `URL_BASED` 은 현재 사용 가능한 유일한 옵션입니다. |
+| `destinationServerType` | 문자열 | *필수 여부.* 을 로 설정합니다. `URL_BASED` 스트리밍 대상 |
 | `urlBasedDestination.url.templatingStrategy` | 문자열 | *필수 여부.* <ul><li>사용 `PEBBLE_V1` Adobe이 `value` 아래의 필드. 다음과 같은 종단점이 있는 경우 이 옵션을 사용합니다. `https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> 사용 `NONE` Adobe 측에 변환이 필요하지 않으면(예: 다음과 같은 엔드포인트가 있는 경우) `https://api.moviestar.com/data/items`.</li></ul> |
 | `urlBasedDestination.url.value` | 문자열 | *필수 여부.* Experience Platform이 연결해야 하는 API 엔드포인트의 주소를 입력합니다. |
 | `httpTemplate.httpMethod` | 문자열 | *필수 여부.* Adobe이 서버 호출에 사용할 메서드입니다. 옵션은 다음과 같습니다 `GET`, `PUT`, `POST`, `DELETE`, `PATCH`. |
@@ -80,6 +79,560 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 **응답**
 
 성공적인 응답은 새로 만든 대상 서버 구성에 대한 세부 정보와 함께 HTTP 상태 200을 반환합니다.
+
+## 파일 기반 대상 서버에 대한 구성 만들기 {#create-file-based}
+
+### 예: sftp 대상 서버에 대한 구성 만들기
+
+>[!IMPORTANT]
+>
+>Adobe Experience Platform Destination SDK의 파일 기반 대상 지원은 현재 베타에 있습니다. 설명서 및 기능은 변경될 수 있습니다.
+
+에 POST 요청을 작성하여 새 SFTP 대상 서버 구성을 만들 수 있습니다 `/authoring/destination-servers` 엔드포인트.
+
+**API 형식**
+
+```http
+POST /authoring/destination-servers
+```
+
+**요청**
+
+다음 요청은 페이로드에 제공된 매개 변수로 구성된 새 대상 서버 구성을 만듭니다. 아래 페이로드에는 `/authoring/destination-servers` 엔드포인트. 호출에 모든 매개 변수를 추가할 필요는 없으며 API 요구 사항에 따라 템플릿을 사용자 지정할 수 있습니다.
+
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-servers \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '
+{
+   "name":"File-based SFTP destination server",
+   "destinationServerType":"FILE_BASED_SFTP",
+   "fileBasedSftpDestination":{
+      "rootDirectory":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{{customerData.rootDirectory}}"
+      }, 
+      "port": 22,
+      "encryptionMode" : "PGP"
+   },
+    "fileConfigurations": {
+        "compression": {
+            "templatingStrategy": "PEBBLE_V1",
+            "value": "{{customerData.compression}}"
+        },
+        "fileType": {
+            "templatingStrategy": "PEBBLE_V1",
+            "value": "{{customerData.fileType}}"
+        },
+        "csvOptions": {
+            "quote": {
+                "templatingStrategy": "NONE",
+                "value": "\""
+            },
+            "quoteAll": {
+                "templatingStrategy": "NONE",
+                "value": "false"
+            },
+            "escape": {
+                "templatingStrategy": "NONE",
+                "value": "\\"
+            },
+            "escapeQuotes": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "header": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "ignoreLeadingWhiteSpace": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "ignoreTrailingWhiteSpace": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "nullValue": {
+                "templatingStrategy": "NONE",
+                "value": ""
+            },
+            "dateFormat": {
+                "templatingStrategy": "NONE",
+                "value": "yyyy-MM-dd"
+            },
+            "timestampFormat": {
+                "templatingStrategy": "NONE",
+                "value": "yyyy-MM-dd'T':mm:ss[.SSS][XXX]"
+            },
+            "charToEscapeQuoteEscaping": {
+                "templatingStrategy": "NONE",
+                "value": "\\"
+            },
+            "emptyValue": {
+                "templatingStrategy": "NONE",
+                "value": ""
+            },
+            "lineSep": {
+                "templatingStrategy": "NONE",
+                "value": "\n"
+            }
+        }
+    }
+}
+```
+
+**응답**
+
+성공적인 응답은 새로 만든 대상 서버 구성에 대한 세부 정보와 함께 HTTP 상태 200을 반환합니다.
++++
+
++++예: Amazon S3 대상 서버에 대한 구성 만들기
+
+>[!IMPORTANT]
+>
+>Adobe Experience Platform Destination SDK의 파일 기반 대상 지원은 현재 베타에 있습니다. 설명서 및 기능은 변경될 수 있습니다.
+
+에 POST 요청을 수행하여 새 Amazon S3 대상 서버 구성을 만들 수 있습니다 `/authoring/destination-servers` 엔드포인트.
+
+**API 형식**
+
+```http
+POST /authoring/destination-servers
+```
+
+**요청**
+
+다음 요청은 페이로드에 제공된 매개 변수로 구성된 새 대상 서버 구성을 만듭니다. 아래 페이로드에는 `/authoring/destination-servers` 엔드포인트. 호출에 모든 매개 변수를 추가할 필요는 없으며 API 요구 사항에 따라 템플릿을 사용자 지정할 수 있습니다.
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-servers \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '
+{
+    "name": "S3 destination",
+    "destinationServerType": "FILE_BASED_S3",
+    "fileBasedS3Destination": {
+        "bucket": {
+            "templatingStrategy": "PEBBLE_V1",
+            "value": "{{customerData.bucket}}"
+        },
+        "path": {
+            "templatingStrategy": "PEBBLE_V1",
+            "value": "{{customerData.path}}"
+        }
+    },
+    "fileConfigurations": {
+        "compression": {
+            "templatingStrategy": "PEBBLE_V1",
+            "value": "{{customerData.compression}}"
+        },
+        "fileType": {
+            "templatingStrategy": "PEBBLE_V1",
+            "value": "{{customerData.fileType}}"
+        },
+        "csvOptions": {
+            "quote": {
+                "templatingStrategy": "NONE",
+                "value": "\""
+            },
+            "quoteAll": {
+                "templatingStrategy": "NONE",
+                "value": "false"
+            },
+            "escape": {
+                "templatingStrategy": "NONE",
+                "value": "\\"
+            },
+            "escapeQuotes": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "header": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "ignoreLeadingWhiteSpace": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "ignoreTrailingWhiteSpace": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "nullValue": {
+                "templatingStrategy": "NONE",
+                "value": ""
+            },
+            "dateFormat": {
+                "templatingStrategy": "NONE",
+                "value": "yyyy-MM-dd"
+            },
+            "timestampFormat": {
+                "templatingStrategy": "NONE",
+                "value": "yyyy-MM-dd'T':mm:ss[.SSS][XXX]"
+            },
+            "charToEscapeQuoteEscaping": {
+                "templatingStrategy": "NONE",
+                "value": "\\"
+            },
+            "emptyValue": {
+                "templatingStrategy": "NONE",
+                "value": ""
+            },
+            "lineSep": {
+                "templatingStrategy": "NONE",
+                "value": "\n"
+            }
+        }
+    }
+}
+```
+
+**응답**
+
+성공적인 응답은 새로 만든 대상 서버 구성에 대한 세부 정보와 함께 HTTP 상태 200을 반환합니다.
++++
+
++++예: azure Blob 대상 서버에 대한 구성 만들기
+
+>[!IMPORTANT]
+>
+>Adobe Experience Platform Destination SDK의 파일 기반 대상 지원은 현재 베타에 있습니다. 설명서 및 기능은 변경될 수 있습니다.
+
+에 POST 요청을 만들어 새 Azure Blob 대상 서버 구성을 만들 수 있습니다 `/authoring/destination-servers` 엔드포인트.
+
+**API 형식**
+
+
+```http
+POST /authoring/destination-servers
+```
+
+**요청**
+
+다음 요청은 페이로드에 제공된 매개 변수로 구성된 새 대상 서버 구성을 만듭니다. 아래 페이로드에는 `/authoring/destination-servers` 엔드포인트. 호출에 모든 매개 변수를 추가할 필요는 없으며 API 요구 사항에 따라 템플릿을 사용자 지정할 수 있습니다.
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-servers \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '
+{
+   "name":"Blob destination server",
+   "destinationServerType":"FILE_BASED_AZURE_BLOB",
+   "fileBasedAzureBlobDestination":{
+      "path":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{{customerData.path}}"
+      },
+      "container":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{{customerData.container}}"
+      }
+   },
+  "fileConfigurations": {
+        "compression": {
+            "templatingStrategy": "PEBBLE_V1",
+            "value": "{{customerData.compression}}"
+        },
+        "fileType": {
+            "templatingStrategy": "PEBBLE_V1",
+            "value": "{{customerData.fileType}}"
+        },
+        "csvOptions": {
+            "quote": {
+                "templatingStrategy": "NONE",
+                "value": "\""
+            },
+            "quoteAll": {
+                "templatingStrategy": "NONE",
+                "value": "false"
+            },
+            "escape": {
+                "templatingStrategy": "NONE",
+                "value": "\\"
+            },
+            "escapeQuotes": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "header": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "ignoreLeadingWhiteSpace": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "ignoreTrailingWhiteSpace": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "nullValue": {
+                "templatingStrategy": "NONE",
+                "value": ""
+            },
+            "dateFormat": {
+                "templatingStrategy": "NONE",
+                "value": "yyyy-MM-dd"
+            },
+            "timestampFormat": {
+                "templatingStrategy": "NONE",
+                "value": "yyyy-MM-dd'T':mm:ss[.SSS][XXX]"
+            },
+            "charToEscapeQuoteEscaping": {
+                "templatingStrategy": "NONE",
+                "value": "\\"
+            },
+            "emptyValue": {
+                "templatingStrategy": "NONE",
+                "value": ""
+            },
+            "lineSep": {
+                "templatingStrategy": "NONE",
+                "value": "\n"
+            }
+        }
+    }
+}
+```
+
+**응답**
+
+성공적인 응답은 새로 만든 대상 서버 구성에 대한 세부 정보와 함께 HTTP 상태 200을 반환합니다.
++++
+
++++예: ADLS(Azure Data Lake Storage) 대상 서버에 대한 구성 만들기
+
+>[!IMPORTANT]
+>
+>Adobe Experience Platform Destination SDK의 파일 기반 대상 지원은 현재 베타에 있습니다. 설명서 및 기능은 변경될 수 있습니다.
+
+에 POST 요청을 수행하여 새 ADLS 대상 서버 구성을 만들 수 있습니다 `/authoring/destination-servers` 엔드포인트.
+
+**API 형식**
+
+
+```http
+POST /authoring/destination-servers
+```
+
+**요청**
+
+다음 요청은 페이로드에 제공된 매개 변수로 구성된 새 대상 서버 구성을 만듭니다. 아래 페이로드에는 `/authoring/destination-servers` 엔드포인트. 호출에 모든 매개 변수를 추가할 필요는 없으며 API 요구 사항에 따라 템플릿을 사용자 지정할 수 있습니다.
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-servers \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '
+{
+   "name":"ADLS destination server",
+   "destinationServerType":"FILE_BASED_ADLS_GEN2",
+   "fileBasedAdlsGen2Destination":{
+      "path":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{{customerData.path}}"
+      }
+   },
+  "fileConfigurations": {
+        "compression": {
+            "templatingStrategy": "PEBBLE_V1",
+            "value": "{{customerData.compression}}"
+        },
+        "fileType": {
+            "templatingStrategy": "PEBBLE_V1",
+            "value": "{{customerData.fileType}}"
+        },
+        "csvOptions": {
+            "quote": {
+                "templatingStrategy": "NONE",
+                "value": "\""
+            },
+            "quoteAll": {
+                "templatingStrategy": "NONE",
+                "value": "false"
+            },
+            "escape": {
+                "templatingStrategy": "NONE",
+                "value": "\\"
+            },
+            "escapeQuotes": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "header": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "ignoreLeadingWhiteSpace": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "ignoreTrailingWhiteSpace": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "nullValue": {
+                "templatingStrategy": "NONE",
+                "value": ""
+            },
+            "dateFormat": {
+                "templatingStrategy": "NONE",
+                "value": "yyyy-MM-dd"
+            },
+            "timestampFormat": {
+                "templatingStrategy": "NONE",
+                "value": "yyyy-MM-dd'T':mm:ss[.SSS][XXX]"
+            },
+            "charToEscapeQuoteEscaping": {
+                "templatingStrategy": "NONE",
+                "value": "\\"
+            },
+            "emptyValue": {
+                "templatingStrategy": "NONE",
+                "value": ""
+            },
+            "lineSep": {
+                "templatingStrategy": "NONE",
+                "value": "\n"
+            }
+        }
+    }
+}
+```
+
+**응답**
+
+성공적인 응답은 새로 만든 대상 서버 구성에 대한 세부 정보와 함께 HTTP 상태 200을 반환합니다.
++++
+
++++예: DLZ(데이터 랜딩 영역) 대상 서버에 대한 구성 만들기
+
+>[!IMPORTANT]
+>
+>Adobe Experience Platform Destination SDK의 파일 기반 대상 지원은 현재 베타에 있습니다. 설명서 및 기능은 변경될 수 있습니다.
+
+[!DNL Data Landing Zone] ([!DNL DLZ])은 [!DNL Azure Blob] Adobe Experience Platform에서 프로비저닝한 스토리지 인터페이스로, Platform으로 파일을 가져올 수 있는 안전한 클라우드 기반 파일 스토리지 설비에 액세스할 수 있도록 합니다. See
+
+에 POST 요청을 수행하여 새 DLZ 대상 서버 구성을 만들 수 있습니다 `/authoring/destination-servers` 엔드포인트.
+
+**API 형식**
+
+
+```http
+POST /authoring/destination-servers
+```
+
+**요청**
+
+다음 요청은 페이로드에 제공된 매개 변수로 구성된 새 대상 서버 구성을 만듭니다. 아래 페이로드에는 `/authoring/destination-servers` 엔드포인트. 호출에 모든 매개 변수를 추가할 필요는 없으며 API 요구 사항에 따라 템플릿을 사용자 지정할 수 있습니다.
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-servers \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '
+{
+   "name":"DLZ destination server",
+   "destinationServerType":"FILE_BASED_DLZ",
+   "fileBasedDlzDestination":{
+      "path":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{{customerData.path}}"
+      },
+      "useCase": "Your use case"
+   },
+   "fileConfigurations": {
+        "compression": {
+            "templatingStrategy": "PEBBLE_V1",
+            "value": "{{customerData.compression}}"
+        },
+        "fileType": {
+            "templatingStrategy": "PEBBLE_V1",
+            "value": "{{customerData.fileType}}"
+        },
+        "csvOptions": {
+            "quote": {
+                "templatingStrategy": "NONE",
+                "value": "\""
+            },
+            "quoteAll": {
+                "templatingStrategy": "NONE",
+                "value": "false"
+            },
+            "escape": {
+                "templatingStrategy": "NONE",
+                "value": "\\"
+            },
+            "escapeQuotes": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "header": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "ignoreLeadingWhiteSpace": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "ignoreTrailingWhiteSpace": {
+                "templatingStrategy": "NONE",
+                "value": "true"
+            },
+            "nullValue": {
+                "templatingStrategy": "NONE",
+                "value": ""
+            },
+            "dateFormat": {
+                "templatingStrategy": "NONE",
+                "value": "yyyy-MM-dd"
+            },
+            "timestampFormat": {
+                "templatingStrategy": "NONE",
+                "value": "yyyy-MM-dd'T':mm:ss[.SSS][XXX]"
+            },
+            "charToEscapeQuoteEscaping": {
+                "templatingStrategy": "NONE",
+                "value": "\\"
+            },
+            "emptyValue": {
+                "templatingStrategy": "NONE",
+                "value": ""
+            },
+            "lineSep": {
+                "templatingStrategy": "NONE",
+                "value": "\n"
+            }
+        }
+    }
+}
+```
+
+**응답**
+
+성공적인 응답은 새로 만든 대상 서버 구성에 대한 세부 정보와 함께 HTTP 상태 200을 반환합니다.
++++
 
 ## 대상 서버 구성 나열 {#retrieve-list}
 
@@ -228,10 +781,6 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
    }
 }
 ```
-
-
-
-
 
 ## 특정 대상 서버 구성 검색 {#get}
 

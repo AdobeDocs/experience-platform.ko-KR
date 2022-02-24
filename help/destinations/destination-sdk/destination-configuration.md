@@ -1,27 +1,27 @@
 ---
 description: 이 구성을 사용하면 대상 이름, 카테고리, 설명, 로고 등과 같은 기본 정보를 표시할 수 있습니다. 또한 이 구성의 설정은 Experience Platform 사용자가 대상을 인증하는 방법, Experience Platform 사용자 인터페이스에 표시되는 방법 및 대상으로 내보낼 수 있는 ID를 결정합니다.
-title: 대상 SDK에 대한 대상 구성 옵션
+title: Destination SDK 스트리밍 대상 구성 옵션
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: 0bd57e226155ee68758466146b5d873dc4fdca29
+source-git-commit: 92bca3600d854540fd2badd925e453fba41601a7
 workflow-type: tm+mt
-source-wordcount: '1757'
-ht-degree: 5%
+source-wordcount: '1756'
+ht-degree: 4%
 
 ---
 
-# 대상 구성 {#destination-configuration}
+# 스트리밍 대상 구성 {#destination-configuration}
 
 ## 개요 {#overview}
 
-이 구성을 사용하면 대상 이름, 카테고리, 설명 등과 같은 필수 정보를 표시할 수 있습니다. 또한 이 구성의 설정은 Experience Platform 사용자가 대상을 인증하는 방법, Experience Platform 사용자 인터페이스에 표시되는 방법 및 대상으로 내보낼 수 있는 ID를 결정합니다.
+이 구성을 사용하면 대상 이름, 카테고리, 설명 등과 같은 스트리밍 대상에 대한 필수 정보를 표시할 수 있습니다. 또한 이 구성의 설정은 Experience Platform 사용자가 대상을 인증하는 방법, Experience Platform 사용자 인터페이스에 표시되는 방법 및 대상으로 내보낼 수 있는 ID를 결정합니다.
 
 또한 이 구성에서는 대상이 작동하는 데 필요한 다른 구성(대상 서버 및 대상 메타데이터)도 이 구성에 연결합니다. 에서 두 구성을 참조할 수 있는 방법을 읽어 보십시오 [아래의 섹션](./destination-configuration.md#connecting-all-configurations).
 
 이 문서에 설명된 기능을 `/authoring/destinations` API 엔드포인트. 읽기 [대상 API 끝점 작업](./destination-configuration-api.md) 전체 작업 목록을 보려면 종단점에서 수행할 수 있습니다.
 
-## 예제 구성 {#example-configuration}
+## 스트리밍 구성 예 {#example-configuration}
 
-아래는 가공의 대상인 무비테르의 구성 예입니다. 무비스타르는 전세계적으로 4개 지역에 종단점이 있습니다. 대상은 모바일 대상 카테고리에 속합니다. 아래 섹션에서는 이 구성을 구성하는 방법을 자세히 설명합니다.
+이것은 가공의 스트리밍 대상, Moviestar의 예제 구성이며, 이 영화는 전 세계 4개 지역에 끝점이 있습니다. 대상은 모바일 대상 카테고리에 속합니다.
 
 ```json
 {
@@ -137,29 +137,28 @@ ht-degree: 5%
 
 대상 구성의 이 섹션에서는 [새 대상 구성](/help/destinations/ui/connect-destination.md) Experience Platform 사용자 인터페이스의 페이지입니다. 여기서 사용자는 대상에 있는 계정에 Experience Platform을 연결합니다. 에서 지정하는 인증 옵션에 따라 `authType` 필드에서는 다음과 같이 사용자에 대해 Experience Platform 페이지가 생성됩니다.
 
-**베어러 인증**
+### 베어러 인증
 
 bearer 인증 유형을 구성할 때 사용자는 대상에서 가져오는 bearer 토큰을 입력해야 합니다.
 
-![베어러 인증을 사용하여 UI 렌더링](./assets/bearer-authentication-ui.png)
+![베어러 인증을 사용하여 UI 렌더링](assets/bearer-authentication-ui.png)
 
-**OAuth 2 인증**
+### OAuth 2 인증
 
-사용자가 선택 **[!UICONTROL 대상에 연결]** twitter 맞춤형 대상 아래 예와 같이 OAuth 2 인증 흐름을 대상으로 트리거합니다. 대상 종단점에 대한 OAuth 2 인증 구성에 대한 자세한 내용은 전용 을 참조하십시오 [대상 SDK OAuth 2 인증 페이지](./oauth2-authentication.md).
+사용자가 선택 **[!UICONTROL 대상에 연결]** twitter 사용자 지정 대상 아래 예와 같이 OAuth 2 인증 흐름을 대상으로 트리거합니다. 대상 종단점에 대한 OAuth 2 인증 구성에 대한 자세한 내용은 전용 을 참조하십시오 [Destination SDK OAuth 2 인증 페이지](./oauth2-authentication.md).
 
-![OAuth 2 인증을 사용하여 UI 렌더링](./assets/oauth2-authentication-ui.png)
-
+![OAuth 2 인증을 사용하여 UI 렌더링](assets/oauth2-authentication-ui.png)
 
 | 매개 변수 | 유형 | 설명 |
 |---------|----------|------|
 | `customerAuthenticationConfigurations` | 문자열 | 서버에 Experience Platform 고객을 인증하는 데 사용되는 구성을 나타냅니다. 자세한 내용은 `authType` 아래에 나열된 값을 반환합니다. |
-| `authType` | 문자열 | 허용되는 값은 다음과 같습니다 `OAUTH2, BEARER`. <br><ul><li> 대상이 OAuth 2 인증을 지원하는 경우 `OAUTH2` 값과 함께 OAuth 2에 대한 필수 필드를 추가합니다. [대상 SDK OAuth 2 인증 페이지](./oauth2-authentication.md). 또한 `authenticationRule=CUSTOMER_AUTHENTICATION` 에서 [대상 배달 섹션](./destination-configuration.md). </li><li>베어러 인증의 경우 `BEARER` 을(를) 선택합니다. `authenticationRule=CUSTOMER_AUTHENTICATION` 에서 [대상 배달 섹션](./destination-configuration.md).</li></ul> |
+| `authType` | 문자열 | 스트리밍 대상에 대해 허용되는 값은 다음과 같습니다.<ul><li>`BEARER` 질문에 답합니다. 대상이 베어러 인증을 지원하는 경우 `"authType":"Bearer"` 및  `"authenticationRule":"CUSTOMER_AUTHENTICATION"` 에서 [대상 배달 섹션](./destination-configuration.md).</li><li>`OAUTH2` 질문에 답합니다. 대상이 OAuth 2 인증을 지원하는 경우 를 설정합니다. `"authType":"OAUTH2"` 및에 표시된 대로 OAuth 2에 대한 필수 필드를 추가합니다. [Destination SDK OAuth 2 인증 페이지](./oauth2-authentication.md). 또한 `"authenticationRule":"CUSTOMER_AUTHENTICATION"` 에서 [대상 배달 섹션](./destination-configuration.md).</li> |
 
 {style=&quot;table-layout:auto&quot;}
 
 ## 고객 데이터 필드 {#customer-data-fields}
 
-이 섹션에서는 사용자 정의 필드를 도입할 수 있습니다. 위의 예제 구성에서는 `customerDataFields` 를 사용하려면 사용자가 인증 흐름에서 종단점을 선택하고 대상이 있는 고객 ID를 표시해야 합니다. 구성은 아래와 같이 인증 흐름에 반영됩니다.
+Experience Platform UI에서 대상에 연결할 때 대상에 고유한 사용자 지정 필드를 작성하도록 사용자에게 요청하려면 이 섹션을 사용합니다. 구성은 아래와 같이 인증 흐름에 반영됩니다.
 
 ![사용자 지정 필드 인증 흐름](./assets/custom-field-authentication-flow.png)
 
@@ -184,7 +183,7 @@ bearer 인증 유형을 구성할 때 사용자는 대상에서 가져오는 bea
 | `documentationLink` | 문자열 | 에서 설명서 페이지를 참조합니다. [대상 카탈로그](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=en#catalog) 목적지에 대해 지정합니다. 사용 `http://www.adobe.com/go/destinations-YOURDESTINATION-en`, 위치 `YOURDESTINATION` 은 대상의 이름입니다. Moviestar라는 대상의 경우 `http://www.adobe.com/go/destinations-moviestar-en` |
 | `category` | 문자열 | Adobe Experience Platform에서 대상에 지정된 카테고리를 나타냅니다. 자세한 내용은 [대상 카테고리](https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-types.html). 다음 값 중 하나를 사용합니다. `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`. |
 | `connectionType` | 문자열 | `Server-to-server` 은 현재 사용 가능한 유일한 옵션입니다. |
-| `frequency` | 문자열 | `Streaming` 은 현재 사용 가능한 유일한 옵션입니다. |
+| `frequency` | 문자열 | 대상에서 지원하는 데이터 내보내기 유형을 나타냅니다. 지원되는 값: <ul><li>`Streaming`</li><li>`Batch`</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -202,6 +201,7 @@ bearer 인증 유형을 구성할 때 사용자는 대상에서 가져오는 bea
 | `identityRequired` | 부울 | 사용 `true` 사용자가 Experience Platform의 ID 네임스페이스를 원하는 스키마에 매핑할 수 있어야 합니다. |
 
 {style=&quot;table-layout:auto&quot;}
+
 
 ## ID 및 속성 {#identities-and-attributes}
 

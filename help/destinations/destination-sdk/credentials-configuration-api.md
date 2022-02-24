@@ -2,9 +2,9 @@
 description: 이 페이지에서는 '/authoring/credentials' API 종단점을 사용하여 수행할 수 있는 모든 API 작업을 설명합니다.
 title: 자격 증명 끝점 API 작업
 exl-id: 89957f38-e7f4-452d-abc0-0940472103fe
-source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
+source-git-commit: bc357e2e93b80edb5f7825bf2dee692f14bd7297
 workflow-type: tm+mt
-source-wordcount: '712'
+source-wordcount: '797'
 ht-degree: 4%
 
 ---
@@ -17,6 +17,11 @@ ht-degree: 4%
 
 이 페이지에서는 를 사용하여 수행할 수 있는 모든 API 작업을 나열하고 설명합니다. `/authoring/credentials` API 엔드포인트.
 
+이 종단점에서 지원하는 기능에 대한 설명은 다음을 참조하십시오.
+
+* [스트리밍 대상 구성](destination-configuration.md) 는 스트리밍 대상에 대해 구성할 수 있는 기능입니다.
+* [파일 기반 대상 구성](file-based-destination-configuration.md) 에서는 파일 기반 대상에 대해 구성할 수 있습니다.
+
 ## 를 사용해야 하는 경우 `/credentials` API 엔드포인트 {#when-to-use}
 
 >[!IMPORTANT]
@@ -24,125 +29,6 @@ ht-degree: 4%
 >대부분의 경우 *포함하지 않음* 를 사용해야 함 `/credentials` API 엔드포인트. 대신 를 통해 대상에 대한 인증 정보를 구성할 수 있습니다 `customerAuthenticationConfigurations` 의 매개 변수 `/destinations` 엔드포인트. 읽기 [인증 구성](./authentication-configuration.md#when-to-use) 추가 정보.
 
 이 API 엔드포인트를 사용하고 을 선택합니다. `PLATFORM_AUTHENTICATION` 에서 [대상 구성](./destination-configuration.md#destination-delivery) Adobe과 대상 및 대상 사이에 글로벌 인증 시스템이 있는 경우 [!DNL Platform] 고객은 대상에 연결하기 위해 인증 자격 증명을 제공할 필요가 없습니다. 이 경우 `/credentials` API 엔드포인트.
-
-<!--
-
-Commenting out the example configurations
-
-## Example configurations
-
-**Example configuration for a Basic authentication credential configuration with username and password**
-
-```json
-{
-  "type": "BASIC",
-  "name": "YOUR_DESTINATION_NAME",
-  "basicAuthentication": {
-    "username": "YOUR_DESTINATION_SERVER_USERNAME",
-    "password": "YOUR_DESTINATION_SERVER_PASSWORD"
-  }
-}
-
-```
-
-**Example configuration for an OAuth2 credential configuration**
-
-```json
-
-{
-  "oauth2AccessTokenAuthentication": {
-    "accessToken": "YOUR_DESTINATION_SERVER_ACCESS_TOKEN",
-    "expiration": "YOUR_TOKEN_TIME_TO_LIVE",
-    "username": "YOUR_DESTINATION_SERVER_USERNAME",
-    "userId": "YOUR_DESTINATION_USER_ID",
-    "url": "AUTHORIZATION_PROVIDER_URL",
-    "header": "YOUR_AUTHORIZATION_HEADER"
-  }
-}
-
-```
-
-The sections below list out the necessary parameters for each authentication type. Let us know which authentication type your server uses and provide us with the relevant information for your server type.
-
-## Basic authentication
-
-|Parameter | Type | Description|
-|---------|----------|------|
-|`username` | String | credentials configuration login username |
-|`password` | String | credentials configuration login password |
-
-
-
-// commenting out this part as these types of authentication methods are not supported in phase one
-
-### S3 authentication
-
-|Parameter | Type | Description|
-|---------|----------|------|
-|accessId | String | credentials configuration S3 credential Access key ID |
-|secretKey | String | credentials configuration S3 credential Secret key |
-
-### SSH 
-
-|Parameter | Type | Description|
-|---------|----------|------|
-|username | String | credentials configuration SSH username |
-|SSHKey | String | credentials configuration SSH key |
-
-
-
-## OAuth1
-
-|Parameter | Type | Description|
-|---------|----------|------|
-|`apiKey` | String | A value used by the Destinations Service to identify itself to the Service Provider. |
-|`apiSecret` | String | Secret used by the Destinations Service to establish ownership of the API key to the Service Provider. |
-|`acccessToken` | String | A value used by the Destinations Service to gain access to the Protected Resources on behalf of the User |
-|`tokenSecret` | String | A secret used by the Destinations Service to establish ownership of an access token. |
-
-## OAuth2 user credentials
-
-|Parameter | Type | Description|
-|---------|----------|------|
-|`clientId` | String | Client ID of Client/Application credential |
-|`clientSecret` | String | Client secret of Client/Application credential |
-|`username` | String | The user's username to log on to your platform. |
-|`password` | String | The user's password to log on to your platform. |
-|`url` | String | URL of authorization provider |
-|`header` | String | Any header required for authorization |
-
-## OAuth2 client credentials
-
-|Parameter | Type | Description|
-|---------|----------|------|
-|`clientId` | String | Client ID of Client/Application credential |
-|`clientSecret` | String | Client secret of Client/Application credential |
-|`username`| String | URL of authorization provider |
-|`password` | String | Any header required for authorization |
-
-## OAuth2 access token
-
-|Parameter | Type | Description|
-|---------|----------|------|
-|`accessToken` | String | Access token provided by the authorization provider |
-|`expiration` | String | The time-to-live for the access token |
-|`username` | String | The user's username to log on to your platform. |
-|`userId` | String | The user's ID with your platform. |
-|`url` | String | URL of authorization provider |
-|`header` | String | Any header required for authorization |
-
-## OAuth2 refresh token
-
-|Parameter | Type | Description|
-|---------|----------|------|
-|`clientId` | String | Client ID of Client/Application credential |
-|`clientSecret` | String | Client secret of Client/Application credential |
-|`refreshToken` | String | Refresh token provided by the authorization provider |
-|`url` | String | URL of authorization provider |
-|`expiration` | String | The time-to-live for the refresh token |
-|`header` | String | Any header required for authorization |
-
--->
 
 ## 자격 증명 구성 API 작업 시작 {#get-started}
 
@@ -153,7 +39,6 @@ The sections below list out the necessary parameters for each authentication typ
 에 POST 요청을 수행하여 새 자격 증명 구성을 만들 수 있습니다 `/authoring/credentials` 엔드포인트.
 
 **API 형식**
-
 
 ```http
 POST /authoring/credentials
@@ -202,6 +87,28 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
       "clientSecret":"string",
       "url":"string",
       "header":"string"
+   },
+   "s3Authentication":{
+      "accessId":"string",
+      "secretKey":"string"
+   },
+   "sshAuthentication":{
+      "username":"string",
+      "sshKey":"string"
+   },
+   "azureAuthentication":{
+      "url":"string",
+      "tenant":"string",
+      "servicePrincipalId":"string",
+      "servicePrincipalKey":"string"
+   },
+   "azureConnectionStringAuthentication":{
+      "connectionString":"string"
+   },
+   "basicAuthentication":{
+      "url":"string",
+      "username":"string",
+      "password":"string"
    }
 }
 ```
@@ -217,6 +124,13 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
 | `expiration` | 문자열 | 액세스 토큰에 대한 유지 시간 |
 | `refreshToken` | 문자열 | 인증 공급자가 제공한 토큰 새로 고침 |
 | `header` | 문자열 | 인증에 필요한 모든 헤더 |
+| `accessId` | 문자열 | Amazon S3 액세스 ID |
+| `secretKey` | 문자열 | Amazon S3 비밀 키 |
+| `sshKey` | 문자열 | SSH 인증이 있는 SFTP용 SSH 키 |
+| `tenant` | 문자열 | Azure Data Lake 저장소 테넌트 |
+| `servicePrincipalId` | 문자열 | Azure Data Lake 저장소에 대한 Azure 서비스 주체 ID |
+| `servicePrincipalKey` | 문자열 | Azure Data Lake 저장소에 대한 Azure 서비스 주요 키 |
+| `connectionString` | 문자열 | Azure Blob 저장소 연결 문자열 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -318,16 +232,11 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/credentials
 }
 ```
 
-
-
-
-
 ## 특정 자격 증명 구성 검색 {#get}
 
 에 GET 요청을 수행하여 특정 자격 증명 구성에 대한 세부 정보를 검색할 수 있습니다 `/authoring/credentials` 업데이트하려는 자격 증명 구성의 인스턴스 ID를 제공하는 끝점입니다.
 
 **API 형식**
-
 
 ```http
 GET /authoring/credentials/{INSTANCE_ID}
@@ -368,7 +277,6 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/credentials
    }
 }
 ```
-
 
 ## 특정 자격 증명 구성 삭제 {#delete}
 
