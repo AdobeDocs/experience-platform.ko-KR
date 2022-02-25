@@ -1,10 +1,11 @@
 ---
 title: Adobe Analytics 확장 개요
 description: Adobe Experience Platform의 Adobe Analytics 태그 확장에 대해 알아봅니다.
-source-git-commit: 90dece1054cf54d40a62093990a034ee5f3bccaf
+exl-id: 33ebdcb6-9bf0-44e6-b016-e93fe78af578
+source-git-commit: 4b0b4cf7c262940bd21965d928cc7d0cf12d15d1
 workflow-type: tm+mt
-source-wordcount: '2202'
-ht-degree: 84%
+source-wordcount: '2275'
+ht-degree: 81%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 84%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
 
 Adobe Analytics 확장 구성 및 이 확장을 사용하여 규칙을 작성할 때 사용할 수 있는 옵션에 대한 정보를 보려면 이 참조를 사용하십시오.
 
@@ -20,9 +21,9 @@ Adobe Analytics 확장 구성 및 이 확장을 사용하여 규칙을 작성할
 
 이 섹션에서는 Adobe Analytics 확장을 구성할 때 사용할 수 있는 옵션에 대한 참조를 제공합니다.
 
-Adobe Analytics 확장이 아직 설치되지 않은 경우 속성을 연 다음, **[!UICONTROL 확장 > 카탈로그]**&#x200B;를 선택하고, Adobe Analytics 확장을 마우스로 가리킨 다음 **[!UICONTROL 설치]**&#x200B;를 선택합니다.
+Adobe Analytics 확장이 아직 설치되지 않은 경우 속성을 연 다음, 를 선택합니다 **[!UICONTROL Extensions > Catalog]**&#x200B;를 클릭하고, Adobe Analytics 확장을 마우스로 가리킨 다음, **[!UICONTROL 설치]**.
 
-확장을 구성하려면 Extensions 탭을 열고 확장을 마우스로 가리킨 다음 **[!UICONTROL Configure]**&#x200B;을 선택합니다.
+확장을 구성하려면 Extensions 탭을 열고 확장을 마우스로 가리킨 다음 을 선택합니다 **[!UICONTROL 구성]**.
 
 ![](../../../images/ext-analytics-config.png)
 
@@ -84,7 +85,7 @@ Adobe Analytics 확장이 아직 설치되지 않은 경우 속성을 연 다음
 
 #### 편집기 열기
 
-코어 [AppMeasurement.js](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=ko-KR) 코드를 삽입할 수 있습니다. 이 코드는 자동 구성 메서드를 사용할 때 자동으로 입력됩니다.
+코어 삽입 [AppMeasurement.js](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=ko-KR) 코드가 있어야 합니다. 이 코드는 자동 구성 메서드를 사용할 때 자동으로 입력됩니다.
 
 >[!NOTE]
 >
@@ -110,7 +111,7 @@ Adobe Analytics 확장이 아직 설치되지 않은 경우 속성을 연 다음
 
 EU 개인 정보 쿠키를 기반으로 추적을 활성화 또는 비활성화합니다.
 
-EU Compliance 확인란을 선택하면 [!UICONTROL Tracking Cookie Name] 필드가 나타납니다. 추적 쿠키는 기본 추적 쿠키 이름을 무시합니다. 다른 쿠키를 받기 위해 태그가 옵트아웃 상태를 추적하는 데 사용하는 이름을 사용자 지정할 수 있습니다.
+EU Compliance 확인란을 선택하면 [!UICONTROL 추적 쿠키 이름] 필드가 나타납니다. 추적 쿠키는 기본 추적 쿠키 이름을 무시합니다. 다른 쿠키를 받기 위해 태그가 옵트아웃 상태를 추적하는 데 사용하는 이름을 사용자 지정할 수 있습니다.
 
 페이지가 로드될 때 시스템에서는 sat\_track이라는 쿠키가 설정되어 있는지(또는 속성 편집 페이지에 지정된 사용자 지정 쿠키 이름) 확인합니다. 다음 정보를 고찰하십시오.
 
@@ -172,7 +173,7 @@ SSL 추적 서버는 `s.trackingServerSecure` 변수를 사용하여 Analytics �
 
 ### ClickMap 활성화
 
-[ClickMap은 Internet Explorer와 Firefox용 플러그인이며 Reports &amp; Analytics의 한 모듈입니다.](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/activity-map.html?lang=ko-KR)
+[ClickMap은 Internet Explorer와 Firefox용 플러그인이며 Reports &amp; Analytics의 한 모듈입니다.](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/activity-map.html)
 
 ### 다운로드 링크 추적
 
@@ -270,7 +271,7 @@ Adobe Analytics 확장 배포에 사용되는 쿠키 글로벌 설정에 대한 
 
 Audience Manager 하위 도메인은 Adobe Audience Manager에 의해 지정됩니다. 경우에 따라 &quot;파트너 이름&quot; 또는 &quot;파트너 하위 도메인&quot;이라고도 합니다. 파트너 이름을 모르는 경우 Adobe 컨설턴트나 고객 지원에 문의하십시오.
 
-**고급 설정 표시**&#x200B;를 선택하고 기본 설정을 입력하여 고급 설정을 구성할 수 있습니다.
+을(를) 선택하여 고급 설정을 구성할 수 있습니다 **고급 설정 표시** 기본 설정을 입력합니다.
 
 ![](../../../images/an-ext-aam-adv.png)
 
@@ -298,7 +299,7 @@ Analytics 확장은 다음 작업을 제공합니다.
 1. eVar를 값으로 설정할지(Set As) 아니면 다른 eVar를 복사할지(Duplicate From) 지정합니다.
 1. Set As 값을 제공하거나 복제할 eVar를 선택합니다.
 1. (선택 사항) Add eVar를 선택하여 더 많은 eVar를 설정합니다.
-1. **[!UICONTROL 변경 내용 유지]**&#x200B;를 선택합니다.
+1. 선택 **[!UICONTROL 변경 내용 유지]**.
 
 #### Prop
 
@@ -307,8 +308,8 @@ Analytics 확장은 다음 작업을 제공합니다.
 1. 드롭다운에서 prop을 선택합니다.
 1. prop을 값으로 설정할지(Set As) 아니면 다른 eVar를 복사할지(Duplicate From) 지정합니다.
 1. Set As 값을 제공하거나 prop을 복제할 eVar를 선택합니다.
-1. (선택 사항) 더 많은 prop를 설정하려면 **[!UICONTROL prop]** 추가 를 선택합니다.
-1. **[!UICONTROL 변경 내용 유지]**&#x200B;를 선택합니다.
+1. (선택 사항) 선택 **[!UICONTROL Prop 추가]** 더 많은 prop을 설정하려면 다음을 수행하십시오.
+1. 선택 **[!UICONTROL 변경 내용 유지]**.
 
 #### 이벤트
 
@@ -316,8 +317,8 @@ Analytics 확장은 다음 작업을 제공합니다.
 
 1. 드롭다운에서 이벤트를 선택합니다.
 1. (선택 사항) [이벤트 일련화](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/events/event-serialization.html)에 사용되는 데이터 요소를 선택하거나 지정합니다.
-1. (선택 사항) 이벤트를 더 설정하려면 **[!UICONTROL 이벤트 추가]**&#x200B;를 선택합니다.
-1. **[!UICONTROL 변경 내용 유지]**&#x200B;를 선택합니다.
+1. (선택 사항) 선택 **[!UICONTROL 이벤트 추가]** 추가 이벤트를 설정하려면 다음을 수행하십시오.
+1. 선택 **[!UICONTROL 변경 내용 유지]**.
 
 #### 계층
 
@@ -327,13 +328,22 @@ Analytics [계층](https://experienceleague.adobe.com/docs/analytics/implementat
 
 원하는 경우 추가 계층을 구성합니다.
 
+#### 페이지 이름
+
+이 값은 지정된 페이지의 이름을 참조하며, [`pageName` 변수](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/pagename.html) 참조하십시오.
+
+>[!IMPORTANT]
+>
+>Adobe Experience Manager 구현에서 이 변수는 가져온 Analytics 보고서를 저장할 위치를 AEM에 알려줍니다. 보고서가 제대로 지속되도록 하려면 페이지 이름 문자열 형식을 사이트에 대해 콜론으로 구분된 경로로 지정해야 합니다.
+>
+>예를 들어 의 웹 페이지 `content/we-retail/language-masters/en/men.html` 페이지 이름 값 이 있어야 합니다. `content:we-retail:language-masters:en:men`.
+
 #### 기타 정보
 
 페이지에서 사용하는 기타 정보를 지정합니다.
 
 이러한 설정은 다음과 같습니다.
 
-* 페이지 이름
 * 페이지 URL
 * 서버
 * 채널
@@ -357,7 +367,7 @@ Analytics [계층](https://experienceleague.adobe.com/docs/analytics/implementat
 
 **설정**
 
-1. **[!UICONTROL 편집기 열기]**&#x200B;를 선택합니다.
+1. 선택 **[!UICONTROL 편집기 열기]**.
 1. 사용자 지정 코드를 입력합니다.
 1. **[!UICONTROL 저장]**&#x200B;을 선택합니다.
 
@@ -385,7 +395,7 @@ Analytics [계층](https://experienceleague.adobe.com/docs/analytics/implementat
    * Custom Link: 링크 이름을 지정합니다.
    * Download Link: 파일 이름을 지정합니다.
    * Exit Link: 대상 URL를 지정합니다.
-1. **[!UICONTROL 변경 내용 유지]**&#x200B;를 선택합니다.
+1. 선택 **[!UICONTROL 변경 내용 유지]**.
 
 ### 변수 지우기 {#clear-variables}
 
