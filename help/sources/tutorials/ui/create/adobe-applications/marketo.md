@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: 이 자습서에서는 UI에서 B2B 데이터를 Adobe Experience Platform으로 가져오기 위해 Marketo Engage 소스 커넥터를 만드는 단계를 제공합니다.
 exl-id: a6aa596b-9cfa-491e-86cb-bd948fb561a8
-source-git-commit: 21617c6ec364fc05d7b8b6d00daa68608d1ed318
+source-git-commit: cffa2edf5746f0412bf8366c32ea777ca1974334
 workflow-type: tm+mt
-source-wordcount: '1336'
+source-wordcount: '1369'
 ht-degree: 0%
 
 ---
@@ -52,19 +52,19 @@ ht-degree: 0%
 
 ![카탈로그](../../../../images/tutorials/create/marketo/catalog.png)
 
-다음 **[!UICONTROL Marketo Engage에 연결]** 페이지가 나타납니다. 이 페이지에서 새 계정을 사용하거나 기존 계정에 액세스할 수 있습니다.
-
-### 새 계정
-
-새 계정을 만드는 경우 **[!UICONTROL 새 계정]**. 표시되는 입력 양식에서 계정 이름, 선택적 설명 및 [!DNL Marketo] 인증 자격 증명. 완료되면 을 선택합니다 **[!UICONTROL 소스에 연결]** 그런 다음 새 연결이 설정될 시간을 허용합니다.
-
-![신규 계정](../../../../images/tutorials/create/marketo/new.png)
+다음 **[!UICONTROL Marketo Engage 계정 연결]** 페이지가 나타납니다. 이 페이지에서 새 계정을 사용하거나 기존 계정에 액세스할 수 있습니다.
 
 ### 기존 계정
 
 기존 계정으로 데이터 흐름을 만들려면 **[!UICONTROL 기존 계정]** 그런 다음 [!DNL Marketo] 사용할 계정입니다. 선택 **[!UICONTROL 다음]** 계속 진행합니다.
 
 ![기존](../../../../images/tutorials/create/marketo/existing.png)
+
+### 새 계정
+
+새 계정을 만드는 경우 **[!UICONTROL 새 계정]**. 표시되는 입력 양식에서 계정 이름, 선택적 설명 및 [!DNL Marketo] 인증 자격 증명. 완료되면 을 선택합니다 **[!UICONTROL 소스에 연결]** 그런 다음 새 연결이 설정될 시간을 허용합니다.
+
+![새](../../../../images/tutorials/create/marketo/new.png)
 
 ## 데이터 세트 선택
 
@@ -74,41 +74,53 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->간결성을 위해 다음 자습서에서는 을 사용합니다 [!UICONTROL 명명된 계정] 예를 들어, 아래에 설명된 단계는 10개 중 하나에 적용됩니다 [!DNL Marketo] 데이터 세트.
+>간결성을 위해 다음 자습서에서는 을 사용합니다 [!UICONTROL 기회] 예를 들어, 아래에 설명된 단계는 10개 중 하나에 적용됩니다 [!DNL Marketo] 데이터 세트.
 
 먼저 수집할 데이터 세트를 선택한 다음 을 선택합니다 **[!UICONTROL 다음]**.
 
 ![select-data](../../../../images/tutorials/create/marketo/select-data.png)
 
-## 맵 [!DNL Marketo] 플랫폼으로 스키마
+## 데이터 흐름 세부 정보 제공
 
-다음 [!UICONTROL 매핑] 단계가 나타나고 매핑할 인터페이스를 제공합니다. [!DNL Marketo] Platform으로 스키마를 전송할 수 있습니다.
+다음 [!UICONTROL 데이터 흐름 세부 정보] 페이지에서 기존 데이터 세트를 사용할지 새 데이터 세트를 사용할지 선택할 수 있습니다. 이 프로세스 중에 [!UICONTROL 프로필 데이터 세트], [!UICONTROL 오류 진단], [!UICONTROL 부분 수집], 및 [!UICONTROL 경고].
 
-수집할 인바운드 데이터에 대한 데이터 세트를 선택합니다. 기존 데이터 세트를 사용하거나 새 데이터 세트를 만들 수 있습니다.
+![데이터 흐름 세부 정보](../../../../images/tutorials/create/marketo/dataflow-details.png)
 
 ### 기존 데이터 세트 사용
 
-기존 데이터 세트에 데이터를 수집하려면 을 선택합니다 **[!UICONTROL 기존 데이터 세트]**&#x200B;그런 다음 데이터 세트 아이콘을 선택합니다.
+기존 데이터 세트에 데이터를 수집하려면 을 선택합니다 **[!UICONTROL 기존 데이터 세트]**. 를 사용하여 기존 데이터 세트를 검색할 수 있습니다 [!UICONTROL 고급 검색] 옵션을 선택하거나 드롭다운 메뉴에서 기존 데이터 세트 목록을 스크롤하여 선택합니다. 데이터 세트를 선택하면 데이터 집합에 대한 이름과 설명을 제공합니다.
 
 ![기존 데이터 세트](../../../../images/tutorials/create/marketo/existing-dataset.png)
 
-다음 **[!UICONTROL 데이터 세트 선택]** 대화 상자가 나타납니다. 사용할 적절한 스키마가 있는 데이터 세트를 찾고 선택한 다음 선택합니다 **[!UICONTROL 확인]**.
-
-![select-existing-dataset](../../../../images/tutorials/create/marketo/select-dataset.png)
-
 ### 새 데이터 세트 사용
 
-데이터를 새 데이터 세트에 수집하려면 을 선택합니다 **[!UICONTROL 새 데이터 세트]** 제공된 필드에 데이터 집합의 이름과 설명을 입력합니다.
+새 데이터 세트에 수집하려면 을 선택합니다 **[!UICONTROL 새 데이터 세트]** 그런 다음 출력 데이터 세트 이름과 선택적 설명을 제공합니다. 다음으로 를 사용하여 매핑할 스키마를 선택합니다 [!UICONTROL 고급 검색] 옵션을 선택하거나 드롭다운 메뉴에서 기존 스키마 목록을 스크롤하여 선택합니다. 스키마를 선택했으면 데이터 흐름의 이름과 설명을 입력합니다.
 
-에 스키마 이름을 입력하여 스키마를 검색할 수 있습니다 **[!UICONTROL 스키마 선택]** 검색 창. 드롭다운 아이콘을 선택하여 기존 스키마 목록을 볼 수도 있습니다. 또는 다음을 선택할 수 있습니다 **[!UICONTROL 고급 검색]** 각 세부 정보를 포함하여 기존 스키마의 페이지에 액세스합니다.
+![새로운 데이터 세트](../../../../images/tutorials/create/marketo/new-dataset.png)
 
-전환 **[!UICONTROL 프로필 데이터 세트]** target 데이터 세트에 대한 활성화 단추 [!DNL Profile]를 사용하면 엔티티의 속성 및 동작을 전체적으로 볼 수 있습니다. 모든 항목의 데이터 [!DNL Profile]-활성화된 데이터 세트가 [!DNL Profile] 및 변경 사항은 데이터 흐름을 저장할 때 적용됩니다.
+### 활성화 [!DNL Profile] 및 오류 진단
 
-![새로운 데이터 세트 만들기](../../../../images/tutorials/create/marketo/new-dataset-schema.png)
+다음으로, **[!UICONTROL 프로필 데이터 세트]** 에 대한 데이터 세트를 활성화하려면 토글 [!DNL Profile]. 이를 통해 엔티티의 속성 및 동작을 전체적으로 볼 수 있습니다. 모든 항목의 데이터 [!DNL Profile]-활성화된 데이터 세트가 [!DNL Profile] 및 변경 사항은 데이터 흐름을 저장할 때 적용됩니다.
 
-스키마를 선택하면 아래로 스크롤하여 매핑 대화 상자를 보고 매핑을 시작합니다 [!DNL Marketo] 데이터 집합 필드를 적절한 대상 XDM 필드에 추가합니다.
+[!UICONTROL 오류 진단] 에서는 데이터 플로우에서 발생하는 모든 잘못된 레코드에 대해 자세한 오류 메시지를 생성하는 반면, [!UICONTROL 부분 수집] 수동으로 정의하는 특정 임계값까지 오류가 포함된 데이터를 수집할 수 있습니다. 자세한 내용은 [부분 배치 수집 개요](../../../../../ingestion/batch-ingestion/partial.md) 추가 정보.
 
-### 맵 [!DNL Marketo] XDM 필드를 대상으로 하는 데이터 세트 소스 필드
+>[!IMPORTANT]
+>
+>다음 [!DNL Marketo] 커넥터는 일괄 처리를 사용하여 모든 기록 레코드를 수집하고 실시간 업데이트를 위해 스트리밍 수집 기능을 사용합니다. 이렇게 하면 커넥터가 잘못된 레코드를 수집하는 동안 스트리밍을 계속할 수 있습니다. 를 활성화합니다 **[!UICONTROL 부분 수집]** 전환 후 설정 [!UICONTROL 오류 임계값 %] 데이터 흐름이 실패하지 않도록 최대화하려면 다음을 수행하십시오.
+
+![프로필 및 오류](../../../../images/tutorials/create/marketo/profile-and-errors.png)
+
+### 경고 활성화
+
+경고를 활성화하여 데이터 흐름 상태에 대한 알림을 받을 수 있습니다. 목록에서 경고를 선택하여 데이터 흐름 상태에 대한 알림을 수신합니다. 경고에 대한 자세한 내용은 [UI를 사용하여 소스 경고 구독](../../alerts.md).
+
+데이터 집합에 세부 정보 제공을 마치면 를 선택합니다 **[!UICONTROL 다음]**.
+
+![경고](../../../../images/tutorials/create/marketo/alerts.png)
+
+## 맵 [!DNL Marketo] XDM 필드를 대상으로 하는 데이터 세트 소스 필드
+
+다음 [!UICONTROL 매핑] 소스 스키마의 소스 필드를 대상 스키마의 적절한 대상 XDM 필드에 매핑하는 인터페이스를 제공하는 단계가 나타납니다.
 
 각 [!DNL Marketo] 데이터 세트에는 따라야 할 고유한 매핑 규칙이 있습니다. 매핑 방법에 대한 자세한 내용은 다음을 참조하십시오 [!DNL Marketo] XDM에 데이터 세트:
 
@@ -123,33 +135,11 @@ ht-degree: 0%
 * [기회 연락처 역할](../../../../connectors/adobe-applications/mapping/marketo.md#opportunity-contact-roles)
 * [사람](../../../../connectors/adobe-applications/mapping/marketo.md#persons)
 
-선택 **[!UICONTROL 데이터 미리 보기]** 선택한 데이터 세트를 기반으로 매핑 결과를 확인하십시오.
+필요에 따라 필드를 직접 매핑하거나 데이터 준비 함수를 사용하여 소스 데이터를 변환하여 계산 또는 계산된 값을 도출할 수 있습니다. 매핑 인터페이스 사용에 대한 포괄적인 단계는 [데이터 준비 UI 안내서](../../../../../data-prep/ui/mapping.md).
 
 ![매핑](../../../../images/tutorials/create/marketo/mapping.png)
 
-다음 [!UICONTROL 미리 보기] popover는 선택한 데이터 세트에서 최대 100개의 샘플 데이터 행의 매핑 결과를 탐색할 수 있는 인터페이스를 제공합니다.
-
-![미리 보기](../../../../images/tutorials/create/marketo/mapping-preview.png)
-
-소스 필드가 적절한 대상 필드에 매핑되면 을 선택합니다 **[!UICONTROL 닫기]**.
-
-## 데이터 흐름 세부 정보 제공
-
-다음 [!UICONTROL 데이터 흐름 세부 정보] 새 데이터 로드에 대한 이름 및 간단한 설명을 제공할 수 있는 단계가 나타납니다.
-
-![데이터 흐름 세부 정보](../../../../images/tutorials/create/marketo/dataflow-detail.png)
-
-를 활성화합니다 **[!UICONTROL 오류 진단]** API를 사용하여 다운로드할 수 있는 새로 수집된 일괄 처리에 대한 자세한 오류 메시지 생성을 허용하려면 토글을 전환합니다. 자세한 내용은 [데이터 수집 오류 진단 검색](../../../../../ingestion/quality/error-diagnostics.md).
-
-![오류](../../../../images/tutorials/create/marketo/errors.png)
-
-다음 [!DNL Marketo] 커넥터는 일괄 처리를 사용하여 모든 기록 레코드를 수집하고 실시간 업데이트를 위해 스트리밍 수집 기능을 사용합니다. 이렇게 하면 커넥터가 잘못된 레코드를 수집하는 동안 스트리밍을 계속할 수 있습니다. 를 활성화합니다 **[!UICONTROL 부분 수집]** 전환 후 설정 [!UICONTROL 오류 임계값 %] 데이터 흐름이 실패하지 않도록 최대화하려면 다음을 수행하십시오.
-
-**[!UICONTROL 부분 수집]** 은 특정 임계값까지 오류가 포함된 데이터를 수집할 수 있는 기능을 제공합니다. 자세한 내용은 [부분 배치 수집 개요](../../../../../ingestion/batch-ingestion/partial.md).
-
-데이터 흐름 세부 정보를 제공하고 오류 임계값을 최대로 설정하면 **[!UICONTROL 다음]**.
-
-![부분 수집](../../../../images/tutorials/create/marketo/partial-ingestion.png)
+매핑 세트가 준비되면 을 선택합니다 **[!UICONTROL 다음]** 또한 새 데이터 흐름을 만들 잠시 동안 허용합니다.
 
 ## 데이터 흐름 검토
 
@@ -158,7 +148,7 @@ ht-degree: 0%
 * **[!UICONTROL 연결]**: 소스 유형, 선택한 소스 엔티티의 관련 경로 및 해당 소스 엔티티 내의 열 양을 표시합니다.
 * **[!UICONTROL 데이터 세트 및 맵 필드 할당]**: 데이터 세트가 준수하는 스키마를 포함하여 소스 데이터가 수집되는 데이터 세트를 표시합니다.
 
-데이터 흐름을 검토한 후 **[!UICONTROL 완료]** 데이터 흐름을 만들 시간을 허용합니다.
+데이터 흐름을 검토한 후 **[!UICONTROL 저장 및 수집]** 데이터 흐름을 만들 시간을 허용합니다.
 
 ![검토](../../../../images/tutorials/create/marketo/review.png)
 
