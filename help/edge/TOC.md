@@ -5,10 +5,10 @@ user-guide-title: Adobe Experience Platform Web SDK 도움말
 breadcrumb-title: Web SDK 안내서
 user-guide-description: Edge 네트워크를 통해 Experience Cloud 서비스와 상호 작용할 수 있습니다.
 feature: Web SDK
-source-git-commit: 6fb6d1579f888720b6af9617400d512a68d06264
+source-git-commit: ea2bd2ff025c2fbd898e58b171c24abf1dbe55b1
 workflow-type: tm+mt
-source-wordcount: '157'
-ht-degree: 28%
+source-wordcount: '163'
+ht-degree: 31%
 
 ---
 
@@ -35,7 +35,7 @@ ht-degree: 28%
    * [링크 추적](data-collection/track-links.md)
    * [상거래 및 제품 데이터 수집](data-collection/collect-commerce-data.md)
    * Adobe Analytics {#adobe-analytics}
-      * [개요](data-collection/adobe-analytics/analytics-overview.md)
+      * [Platform Web SDK에서 Adobe Analytics 사용](data-collection/adobe-analytics/analytics-overview.md)
       * [Analytics 변수 매핑](data-collection/adobe-analytics/manually-mapping-variables.md)
       * [자동으로 매핑된 변수](data-collection/adobe-analytics/automatically-mapped-vars.md)
       * [Analytics에 데이터 보내기](data-collection/adobe-analytics/sending-data-to-analytics.md)

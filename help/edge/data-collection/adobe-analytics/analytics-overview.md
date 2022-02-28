@@ -1,18 +1,18 @@
 ---
-title: Adobe Experience Platform Web SDK를 사용하여 Adobe Analytics에 데이터 보내기
+title: Platform Web SDK에서 Adobe Analytics 사용
 description: Adobe Experience Platform Web SDK를 사용하여 Adobe Analytics으로 데이터를 전송하는 방법을 알아봅니다.
 keywords: adobe analytics;analytics;매핑된 데이터;매핑된 vars;
 exl-id: b18d1163-9edf-4a9c-b247-cd1aa7dfca50
-source-git-commit: 3a1d08a4ea87ee3db7a2a8b048d5721fa679c372
+source-git-commit: 45becec3b198821e38afbc21fe42a8901e352888
 workflow-type: tm+mt
-source-wordcount: '192'
+source-wordcount: '189'
 ht-degree: 7%
 
 ---
 
-# Adobe Analytics에 데이터 보내기
+# Platform Web SDK에서 Adobe Analytics 사용
 
-Adobe Experience Platform [!DNL Web SDK]은(는) 데이터를 Adobe Analytics에 보낼 수 있습니다. 이 기능은 `xdm`을 Adobe Analytics에서 사용할 수 있는 형식으로 변환하여 작동합니다.
+Adobe Experience Platform [!DNL Web SDK] Adobe Analytics으로 데이터를 전송할 수 있습니다. 번역을 통해 작동됩니다 `xdm` 형식에서 Adobe Analytics에서 사용할 수 있습니다.
 
 ## 설정
 
@@ -20,7 +20,7 @@ Adobe Analytics에서는 고객 구성 UI에 매핑된 보고서 세트가 있�
 
 ## 자동으로 매핑된 데이터
 
-Adobe Experience Platform [!DNL Edge Network]은(는) 많은 XDM 변수를 자동으로 매핑합니다. 이러한 변수의 전체 목록이 [여기](automatically-mapped-vars.md)에 나열되어 있습니다.
+Adobe Experience Platform [!DNL Edge Network] 는 여러 XDM 변수를 자동으로 매핑합니다. 이러한 변수의 전체 목록이 표시됩니다 [여기](automatically-mapped-vars.md).
 
 ## 수동으로 매핑된 데이터
 
