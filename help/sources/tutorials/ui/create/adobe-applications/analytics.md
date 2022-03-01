@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: UI에서 Adobe Analytics 소스 연결을 만들어 소비자 데이터를 Adobe Experience Platform으로 가져오는 방법을 알아봅니다.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 96791e24c59734f82113972a8db9191ea1c0c557
+source-git-commit: 06232d4b567ba1d6bed55226aaa08147510c4498
 workflow-type: tm+mt
-source-wordcount: '1560'
+source-wordcount: '1578'
 ht-degree: 1%
 
 ---
@@ -57,6 +57,10 @@ ht-degree: 1%
 <!---Analytics Report Suites can be configured for one sandbox at a time. To import the same Report Suite into a different sandbox, the dataset flow will have to be deleted and instantiated again via configuration for a different sandbox.--->
 
 ### 매핑
+
+>[!IMPORTANT]
+>
+>에 대한 데이터 준비 지원 [!DNL Analytics] 소스가 현재 베타 버전입니다. 기능 및 설명서는 변경될 수 있습니다.
 
 매핑하기 전에 [!DNL Analytics] 데이터를 XDM 스키마를 타겟팅하려면 먼저 기본 스키마를 사용하는지 또는 사용자 지정 스키마를 사용하는지를 선택해야 합니다.
 
