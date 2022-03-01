@@ -1,36 +1,36 @@
 ---
 keywords: Experience Platform;홈;인기 항목;소스;커넥터;소스 커넥터;소스 sdk;sdk;SDK
 solution: Experience Platform
-title: Flow Service API를 사용하여 MailChimp 멤버에 대한 데이터 흐름 만들기
+title: Flow Service API를 사용하여 Mailchimp 멤버에 대한 데이터 흐름 만들기
 topic-legacy: tutorial
 description: Flow Service API를 사용하여 Adobe Experience Platform을 MailChimp 구성원에 연결하는 방법을 알아봅니다.
 exl-id: 900d4073-129c-47ba-b7df-5294d25a7219
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: fd851dea5623522e4706c6beb8bd086d466773b5
 workflow-type: tm+mt
 source-wordcount: '2500'
 ht-degree: 2%
 
 ---
 
-# 데이터 흐름 만들기 [!DNL MailChimp Members] 흐름 서비스 API 사용
+# 데이터 흐름 만들기 [!DNL Mailchimp Members] 흐름 서비스 API 사용
 
-다음 자습서에서는 가져올 소스 연결 및 데이터 흐름을 만드는 단계를 안내합니다 [!DNL MailChimp Members] 데이터를 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+다음 자습서에서는 가져올 소스 연결 및 데이터 흐름을 만드는 단계를 안내합니다 [!DNL Mailchimp Members] 데이터를 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## 전제 조건
 
-연결하기 전에 [!DNL MailChimp] OAuth 2 새로 고침 코드를 사용하여 Adobe Experience Platform에 액세스하려면 먼저 액세스 토큰을 검색해야 합니다 [!DNL MailChimp.] 자세한 내용은 [[!DNL MailChimp] OAuth 2 안내서](https://mailchimp.com/developer/marketing/guides/access-user-data-oauth-2/) 액세스 토큰 찾기에 대한 자세한 지침
+연결하기 전에 [!DNL Mailchimp] OAuth 2 새로 고침 코드를 사용하여 Adobe Experience Platform에 액세스하려면 먼저 액세스 토큰을 검색해야 합니다 [!DNL MailChimp.] 자세한 내용은 [[!DNL Mailchimp] OAuth 2 안내서](https://mailchimp.com/developer/marketing/guides/access-user-data-oauth-2/) 액세스 토큰 찾기에 대한 자세한 지침
 
 ## 기본 연결 만들기 {#base-connection}
 
-을 검색한 후 [!DNL MailChimp] 이제 데이터 흐름을 만드는 프로세스를 시작하여 다음을 가져올 수 있습니다 [!DNL MailChimp Members] Platform으로 데이터를 전송할 수 있습니다. 데이터 흐름을 만드는 첫 번째 단계는 기본 연결을 만드는 것입니다.
+을 검색한 후 [!DNL Mailchimp] 이제 데이터 흐름을 만드는 프로세스를 시작하여 다음을 가져올 수 있습니다 [!DNL Mailchimp Members] Platform으로 데이터를 전송할 수 있습니다. 데이터 흐름을 만드는 첫 번째 단계는 기본 연결을 만드는 것입니다.
 
 기본 연결은 소스의 인증 자격 증명, 현재 연결 상태 및 고유한 기본 연결 ID를 포함하여 소스와 플랫폼 간의 정보를 유지합니다. 기본 연결 ID를 사용하면 소스 내에서 파일을 탐색 및 탐색하고 해당 데이터 유형 및 형식에 대한 정보를 포함하여 수집할 특정 항목을 식별할 수 있습니다.
 
-[!DNL MailChimp] 에서는 기본 인증 및 OAuth 2 새로 고침 코드를 모두 지원합니다. 두 인증 유형을 인증하는 방법에 대한 지침은 다음 예를 참조하십시오.
+[!DNL Mailchimp] 에서는 기본 인증 및 OAuth 2 새로 고침 코드를 모두 지원합니다. 두 인증 유형을 인증하는 방법에 대한 지침은 다음 예를 참조하십시오.
 
-### 만들기 [!DNL MailChimp] 기본 인증을 사용한 기본 연결
+### 만들기 [!DNL Mailchimp] 기본 인증을 사용한 기본 연결
 
-을(를) 만들려면 [!DNL MailChimp] 기본 인증을 사용하여 기본 연결에서 `/connections` 끝점 [!DNL Flow Service] 에 대한 자격 증명을 제공하는 동안 API `host`, `authorizationTestUrl`, `username`, 및 `password`.
+을(를) 만들려면 [!DNL Mailchimp] 기본 인증을 사용하여 기본 연결에서 `/connections` 끝점 [!DNL Flow Service] 에 대한 자격 증명을 제공하는 동안 API `host`, `authorizationTestUrl`, `username`, 및 `password`.
 
 **API 형식**
 
@@ -40,7 +40,7 @@ POST /connections
 
 **요청**
 
-다음 요청은에 대한 기본 연결을 만듭니다. [!DNL MailChimp]:
+다음 요청은에 대한 기본 연결을 만듭니다. [!DNL Mailchimp]:
 
 ```shell
 curl -X POST \
@@ -51,8 +51,8 @@ curl -X POST \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
   -d '{
-      "name": "MailChimp base connection with basic authentication",
-      "description": "MailChimp Members base connection with basic authentication",
+      "name": "Mailchimp base connection with basic authentication",
+      "description": "Mailchimp Members base connection with basic authentication",
       "connectionSpec": {
           "id": "2e8580db-6489-4726-96de-e33f5f60295f",
           "version": "1.0"
@@ -75,10 +75,10 @@ curl -X POST \
 | `description` | (선택 사항) 기본 연결에 대한 자세한 정보를 제공하기 위해 포함할 수 있는 속성입니다. |
 | `connectionSpec.id` | 소스의 연결 사양 ID입니다. 이 ID는 소스를 등록하고 [!DNL Flow Service] API. |
 | `auth.specName` | 소스를 Platform에 연결하는 데 사용하는 인증 유형입니다. |
-| `auth.params.host` | 연결하는 데 사용되는 루트 URL입니다 [!DNL MailChimp] API. 루트 URL의 형식은 다음과 같습니다 `https://{DC}.api.mailchimp.com`, 위치 `{DC}` 계정에 해당하는 데이터 센터를 나타냅니다. |
+| `auth.params.host` | 연결하는 데 사용되는 루트 URL입니다 [!DNL Mailchimp] API. 루트 URL의 형식은 다음과 같습니다 `https://{DC}.api.mailchimp.com`, 위치 `{DC}` 계정에 해당하는 데이터 센터를 나타냅니다. |
 | `auth.params.authorizationTestUrl` | (선택 사항) 기본 연결을 만들 때 인증 테스트 URL을 사용하여 자격 증명을 확인합니다. 지정하지 않으면 소스 연결 생성 단계 동안 자격 증명이 자동으로 선택됩니다. |
-| `auth.params.username` | 사용자 이름과 일치하는 사용자 이름 [!DNL MailChimp] 계정이 필요합니다. 기본 인증에 필요합니다. |
-| `auth.params.password` | 사용자의 [!DNL MailChimp] 계정이 필요합니다. 기본 인증에 필요합니다. |
+| `auth.params.username` | 사용자 이름과 일치하는 사용자 이름 [!DNL Mailchimp] 계정이 필요합니다. 기본 인증에 필요합니다. |
+| `auth.params.password` | 사용자의 [!DNL Mailchimp] 계정이 필요합니다. 기본 인증에 필요합니다. |
 
 **응답**
 
@@ -91,9 +91,9 @@ curl -X POST \
 }
 ```
 
-### 만들기 [!DNL MailChimp] OAuth 2 새로 고침 코드를 사용한 기본 연결
+### 만들기 [!DNL Mailchimp] OAuth 2 새로 고침 코드를 사용한 기본 연결
 
-을(를) 만들려면 [!DNL MailChimp] OAuth 2 새로 고침 코드를 사용하여 기본 연결에 대해 POST 요청을 수행하십시오 `/connections` 에 대한 자격 증명을 제공하는 중 끝점입니다. `host`, `authorizationTestUrl`, 및 `accessToken`.
+을(를) 만들려면 [!DNL Mailchimp] OAuth 2 새로 고침 코드를 사용하여 기본 연결에 대해 POST 요청을 수행하십시오 `/connections` 에 대한 자격 증명을 제공하는 중 끝점입니다. `host`, `authorizationTestUrl`, 및 `accessToken`.
 
 **API 형식**
 
@@ -103,7 +103,7 @@ POST /connections
 
 **요청**
 
-다음 요청은에 대한 기본 연결을 만듭니다. [!DNL MailChimp]:
+다음 요청은에 대한 기본 연결을 만듭니다. [!DNL Mailchimp]:
 
 ```shell
 curl -X POST \
@@ -137,7 +137,7 @@ curl -X POST \
 | `description` | (선택 사항) 기본 연결에 대한 자세한 정보를 제공하기 위해 포함할 수 있는 속성입니다. |
 | `connectionSpec.id` | 소스의 연결 사양 ID입니다. 이 ID는 [!DNL Flow Service] API. |
 | `auth.specName` | Platform에 소스를 인증하는 데 사용하는 인증 유형입니다. |
-| `auth.params.host` | 연결하는 데 사용되는 루트 URL입니다 [!DNL MailChimp] API. 루트 URL의 형식은 다음과 같습니다 `https://{DC}.api.mailchimp.com`, 위치 `{DC}` 계정에 해당하는 데이터 센터를 나타냅니다. |
+| `auth.params.host` | 연결하는 데 사용되는 루트 URL입니다 [!DNL Mailchimp] API. 루트 URL의 형식은 다음과 같습니다 `https://{DC}.api.mailchimp.com`, 위치 `{DC}` 계정에 해당하는 데이터 센터를 나타냅니다. |
 | `auth.params.authorizationTestUrl` | (선택 사항) 기본 연결을 만들 때 인증 테스트 URL을 사용하여 자격 증명을 확인합니다. 지정하지 않으면 소스 연결 생성 단계 동안 자격 증명이 자동으로 선택됩니다. |
 | `auth.params.accessToken` | 소스를 인증하는 데 사용되는 해당 액세스 토큰. OAuth 기반 인증에 필요합니다. |
 
@@ -349,7 +349,7 @@ POST /sourceConnections
 
 **요청**
 
-다음 요청은에 대한 소스 연결을 만듭니다 [!DNL MailChimp]:
+다음 요청은에 대한 소스 연결을 만듭니다 [!DNL Mailchimp]:
 
 ```shell
 curl -X POST \
@@ -380,10 +380,10 @@ curl -X POST \
 | --- | --- |
 | `name` | 소스 연결의 이름입니다. 소스 연결에 대한 정보를 조회하는 데 사용할 수 있으므로 소스 연결의 이름이 설명적인지 확인합니다. |
 | `description` | (선택 사항) 소스 연결에 대한 자세한 정보를 제공하기 위해 포함할 수 있는 속성입니다. |
-| `baseConnectionId` | 의 기본 연결 ID입니다. [!DNL MailChimp]. 이 ID는 이전 단계에서 생성되었습니다. |
+| `baseConnectionId` | 의 기본 연결 ID입니다. [!DNL Mailchimp]. 이 ID는 이전 단계에서 생성되었습니다. |
 | `connectionSpec.id` | 소스에 해당하는 연결 사양 ID입니다. |
-| `data.format` | 의 형식 [!DNL MailChimp] 수집할 데이터입니다. |
-| `params.listId` | 대상 ID라고도 하는 [!DNL MailChimp] 목록 ID를 사용하면 대상 데이터를 다른 통합으로 전송할 수 있습니다. |
+| `data.format` | 의 형식 [!DNL Mailchimp] 수집할 데이터입니다. |
+| `params.listId` | 대상 ID라고도 하는 [!DNL Mailchimp] 목록 ID를 사용하면 대상 데이터를 다른 통합으로 전송할 수 있습니다. |
 
 **응답**
 
@@ -424,7 +424,7 @@ POST /targetConnections
 
 **요청**
 
-다음 요청은에 대한 대상 연결을 만듭니다 [!DNL MailChimp]:
+다음 요청은에 대한 대상 연결을 만듭니다 [!DNL Mailchimp]:
 
 ```shell
 curl -X POST \
@@ -459,7 +459,7 @@ curl -X POST \
 | `name` | 대상 연결의 이름입니다. 대상 연결에 대한 정보를 조회하는 데 사용할 수 있으므로 대상 연결의 이름이 설명적인지 확인합니다. |
 | `description` | (선택 사항) Target 연결에 대한 자세한 정보를 제공하기 위해 포함할 수 있는 속성입니다. |
 | `connectionSpec.id` | 에 해당하는 연결 사양 ID [!DNL Data Lake]. 이 고정 ID는 다음과 같습니다. `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
-| `data.format` | 의 형식 [!DNL MailChimp] Platform으로 가져올 데이터입니다. |
+| `data.format` | 의 형식 [!DNL Mailchimp] Platform으로 가져올 데이터입니다. |
 | `params.dataSetId` | 이전 단계에서 검색된 대상 데이터 세트 ID입니다. |
 
 
@@ -539,7 +539,7 @@ curl -X POST \
 
 ## 흐름 만들기 {#flow}
 
-마지막 단계는 [!DNL MailChimp] Platform에 데이터를 보내는 것은 데이터 흐름을 만드는 것입니다. 현재까지는 다음 필수 값이 준비되었습니다.
+마지막 단계는 [!DNL Mailchimp] Platform에 데이터를 보내는 것은 데이터 흐름을 만드는 것입니다. 현재까지는 다음 필수 값이 준비되었습니다.
 
 * [소스 연결 ID](#source-connection)
 * [Target 연결 ID](#target-connection)
