@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 웹 SDK 확장 구성
 description: 데이터 수집 UI에서 Adobe Experience Platform 웹 SDK 태그 확장을 구성하는 방법입니다.
 exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
-source-git-commit: 92344ca9c2daf603d866c8a3cc4e92b72a382fb1
+source-git-commit: 1f9454148ed4ee95f0d86f03c4bcf8c917d0aeea
 workflow-type: tm+mt
-source-wordcount: '1049'
-ht-degree: 7%
+source-wordcount: '1047'
+ht-degree: 6%
 
 ---
 
@@ -45,7 +45,7 @@ Adobe Experience Platform Web SDK 확장은 페이지에서 여러 인스턴스�
 
 ### **[!UICONTROL Edge 도메인]**
 
-다음 [!UICONTROL Edge 도메인] 은 Adobe Experience Platform 확장에서 데이터를 보내고 받는 도메인입니다. 기본 타사 도메인은 프로덕션 트래픽에 자사 CNAME을 사용해야 합니다. 기본 타사 도메인은 개발 환경에서 작동하지만, 프로덕션 환경에는 적합하지 않습니다. 자사 CNAME을 설정하는 방법에 대한 지침은 [여기](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=ko-KR)에 나와 있습니다.
+다음 [!UICONTROL Edge 도메인] 은 Adobe Experience Platform 확장에서 데이터를 보내고 받는 도메인입니다. 이 확장에는 자사 도메인(CNAME)을 사용하는 것이 좋습니다. 기본 타사 도메인은 개발 환경에서 작동하지만, 프로덕션 환경에는 적합하지 않습니다. 자사 CNAME을 설정하는 방법에 대한 지침은 [여기](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=ko-KR)에 나와 있습니다.
 
 ## [!UICONTROL 데이터 스트림]
 
@@ -69,7 +69,7 @@ Adobe Experience Platform Edge Network에 요청이 전송되면 서버측 구�
 
 비즈니스 운영에 대한 명시적 사용자 동의가 필요한 경우 종료 또는 보류 중 을 사용합니다.
 
-## [!UICONTROL ID]
+## [!UICONTROL 신원]
 
 ![](../images/extension/overview/identity.png)
 
