@@ -4,9 +4,9 @@ user-guide-title: Experience Data Model(XDM) 시스템 도움말
 breadcrumb-title: Experience Data Model(XDM) 안내서
 user-guide-description: Experience Data Model(XDM) 클래스와 스키마 필드 그룹을 사용하여 경험 데이터를 표준화합니다.
 feature: Schemas
-source-git-commit: fecea2040af6e6c666de8eb4f1b13b3beaa45486
+source-git-commit: 760b82c89730a74ca5f5dd331d543f43eec1e0d6
 workflow-type: tm+mt
-source-wordcount: '412'
+source-wordcount: '435'
 ht-degree: 17%
 
 ---
@@ -31,6 +31,8 @@ ht-degree: 17%
 * 클래스 {#classes}
    * [XDM 개별 프로필](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
+   * [정책](./classes/policy.md)
+   * [제품](./classes/product.md)
    * [세그먼트 정의](./classes/segment-definition.md)
    * B2B 클래스 {#b2b}
       * [XDM 비즈니스 계정](./classes/b2b/business-account.md)
@@ -42,7 +44,7 @@ ht-degree: 17%
       * [XDM 비즈니스 마케팅 목록](./classes/b2b/business-marketing-list.md)
       * [XDM 비즈니스 마케팅 목록 구성원](./classes/b2b/business-marketing-list-members.md)
 * 필드 그룹 {#field-groups}
-   * 프로필 필드 그룹 {#profile}
+   * XDM 개별 프로필 {#profile}
       * [인구 통계 세부 정보](./field-groups/profile/demographic-details.md)
       * [IAB TCF 2.0 동의](./field-groups/profile/iab.md)
       * [IdentityMap](./field-groups/profile/identitymap.md)
@@ -54,11 +56,14 @@ ht-degree: 17%
       * [작업 연락처 세부 정보](./field-groups/profile/work-contact-details.md)
       * [XDM 비즈니스 개인 구성 요소](./field-groups/profile/business-person-components.md)
       * [XDM 비즈니스 개인 세부 정보](./field-groups/profile/business-person-details.md)
-   * 이벤트 필드 그룹 {#event}
+   * XDM ExperienceEvent {#event}
       * [Adobe Analytics 전체 확장](./field-groups/event/analytics-full-extension.md)
+      * [잔액 이전](./field-groups/event/balance-transfers.md)
       * [캠페인 마케팅 세부 사항](./field-groups/event/campaign-marketing-details.md)
+      * [카드 작업](./field-groups/event/card-actions.md)
       * [채널 세부 사항](./field-groups/event/channel-details.md)
       * [상거래 세부 사항](./field-groups/event/commerce-details.md)
+      * [예금 상세내역](./field-groups/event/deposit-details.md)
       * [장치 거래 세부 사항](./field-groups/event/device-trade-in-details.md)
       * [식사 예약](./field-groups/event/dining-reservation.md)
       * [최종 사용자 ID 세부 정보](./field-groups/event/enduserids.md)
@@ -66,10 +71,15 @@ ht-degree: 17%
       * [비행 예약](./field-groups/event/flight-reservation.md)
       * [IAB TCF 2.0 동의](./field-groups/event/iab.md)
       * [숙박예약](./field-groups/event/lodging-reservation.md)
+      * [견적 요청 세부 정보](./field-groups/event/quote-request-details.md)
       * [예약 세부 정보](./field-groups/event/reservation-details.md)
+      * [사이트 검색 지원](./field-groups/event/support-site-search.md)
       * [업그레이드 세부 정보](./field-groups/event/upgrade-details.md)
       * [업셀 세부 정보](./field-groups/event/upsell-details.md)
       * [웹 세부 사항](./field-groups/event/web-details.md)
+   * 제품 {#product}
+      * [제품 카탈로그](./field-groups/product/product-catalog.md)
+      * [제품 카테고리](./field-groups/product/product-category.md)
    * [필드 그룹 이름 업데이트](./field-groups/name-updates.md)
 * 데이터 유형 {#data-types}
    * [애플리케이션](./data-types/application.md)
@@ -85,6 +95,7 @@ ht-degree: 17%
    * [환경](./data-types/environment.md)
    * [경험 채널](./data-types/experience-channel.md)
    * [외부 소스 시스템 감사 속성](./data-types/external-source-system-audit-attributes.md)
+   * [금융 계정](./data-types/financial-account.md)
    * [일반 동의 필드](./data-types/consent-field.md)
    * [일반 마케팅 기본 설정 필드](./data-types/marketing-field.md)
    * [구독이 있는 일반 마케팅 기본 설정 필드](./data-types/marketing-field-subscriptions.md)
@@ -96,6 +107,7 @@ ht-degree: 17%
    * [지역 모양](./data-types/geo-shape.md)
    * [신원](./data-types/identity.md)
    * [노출 횟수](./data-types/impressions.md)
+   * [내부 사이트 검색](./data-types/internal-site-search.md)
    * [키 값 쌍](./data-types/key-value-pair.md)
    * [마케팅](./data-types/marketing.md)
    * [측정](./data-types/measure.md)
