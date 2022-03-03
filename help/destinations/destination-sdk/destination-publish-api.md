@@ -2,9 +2,9 @@
 description: 이 페이지에서는 '/authoring/destinations/publish' API 종단점을 사용하여 수행할 수 있는 모든 API 작업을 나열하고 설명합니다.
 title: 게시 대상 API 끝점 작업
 exl-id: 0564a132-42f4-478c-9197-9b051acf093c
-source-git-commit: 6ad556e3b7bf15f1d6ff522307ff232b8fd947d3
+source-git-commit: 702a5b7154724faa9f5e6847b462e0ae90475571
 workflow-type: tm+mt
-source-wordcount: '757'
+source-wordcount: '718'
 ht-degree: 4%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 4%
 
 이 페이지에서는 를 사용하여 수행할 수 있는 모든 API 작업을 나열하고 설명합니다. `/authoring/destinations/publish` API 엔드포인트.
 
-대상을 구성하고 테스트한 후 검토 및 게시를 위해 Adobe에 제출할 수 있습니다.
+대상을 구성하고 테스트한 후 검토 및 게시를 위해 Adobe에 제출할 수 있습니다. 읽기 [Destination SDK에서 작성된 대상을 검토하도록 제출](./submit-destination.md) 기타 모든 단계에 대해 대상 제출 프로세스의 일부로 수행해야 합니다.
 
 다음과 같은 경우 게시 대상 API 엔드포인트를 사용하여 게시 요청을 제출합니다.
 
@@ -52,19 +52,14 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
  -d '
 {
    "destinationId":"1230e5e4-4ab8-4655-ae1e-a6296b30f2ec",
-   "destinationAccess":"LIMITED",
-   "allowedOrgs":[
-      "xyz@AdobeOrg",
-      "lmn@AdobeOrg"
-   ]
+   "destinationAccess":"ALL"
 }
 ```
 
 | 매개 변수 | 유형 | 설명 |
 |---------|----------|------|
 | `destinationId` | 문자열 | 게시를 위해 제출하는 대상 구성의 대상 ID입니다. 를 사용하여 대상 구성의 대상 ID를 가져옵니다 [대상 구성 API 참조](./destination-configuration-api.md#retrieve-list). |
-| `destinationAccess` | 문자열 | `ALL` 또는 `LIMITED`. 모든 Experience Platform 고객 또는 특정 조직에 대한 카탈로그에 대상을 표시할지 여부를 지정합니다. <br> **참고**: 만약 `LIMITED`인 경우 대상이 Experience Platform 조직에 대해서만 게시됩니다. 고객 테스트를 위해 대상을 Experience Platform 조직의 하위 세트에 게시하려면 Adobe 지원에 문의하십시오. |
-| `allowedOrgs` | 문자열 | 만약 `"destinationAccess":"LIMITED"`을(를) 설정하고 대상을 사용할 수 있는 Experience Platform 조직을 지정합니다. |
+| `destinationAccess` | 문자열 | 사용 `ALL` 대상이 모든 Experience Platform 고객을 위한 카탈로그에 표시되도록 합니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -84,7 +79,7 @@ GET /authoring/destinations/publish
 
 **요청**
 
-다음 요청은 IMS 조직 및 샌드박스 구성을 기반으로 액세스 권한이 있는 게시용으로 제출된 대상 목록을 검색합니다.
+다음 요청은 IMS 조직 및 샌드박스 구성을 기반으로 게시 권한이 있는 제출 대상 목록을 검색합니다.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/destinations/publish \
@@ -103,12 +98,12 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
    "destinationId":"1230e5e4-4ab8-4655-ae1e-a6296b30f2ec",
    "publishDetailsList":[
       {
-         "configId":"string",
-         "allowedOrgs":[
-            "xyz@AdobeOrg",
-            "lmn@AdobeOrg"
-         ],
-         "status":"TEST",
+         "configId":"123cs780-ce29-434f-921e-4ed6ec2a6c35",
+         "allowedOrgs": [
+            "*"
+         ],    
+         "status":"PUBLISHED",
+         "destinationType": "PUBLIC",
          "publishedDate":"1630617746"
       }
    ]
@@ -119,47 +114,12 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 |---------|----------|------|
 | `destinationId` | 문자열 | 게시용으로 제출한 대상 구성의 대상 ID입니다. |
 | `publishDetailsList.configId` | 문자열 | 제출된 대상에 대한 대상 게시 요청의 고유 ID입니다. |
-| `publishDetailsList.allowedOrgs` | 문자열 | 대상을 사용할 수 있어야 하는 Experience Platform 조직을 반환합니다. |
-| `publishDetailsList.status` | 문자열 | 대상 게시 요청의 상태입니다. 가능한 값은 다음과 같습니다 `TEST`, `REVIEW`, `APPROVED`, `PUBLISHED`, `DENIED`, `REVOKED`, `DEPRECATED`. |
+| `publishDetailsList.allowedOrgs` | 문자열 | 대상을 사용할 수 있는 Experience Platform 조직을 반환합니다. <br> <ul><li> 대상 `"destinationType": "PUBLIC"`, 이 매개 변수는 `"*"`: 모든 Experience Platform 조직에서 대상을 사용할 수 있음을 의미합니다.</li><li> 대상 `"destinationType": "DEV"`, 이 매개 변수는 대상을 작성 및 테스트하는 데 사용한 조직의 조직 ID를 반환합니다.</li></ul> |
+| `publishDetailsList.status` | 문자열 | 대상 게시 요청의 상태입니다. 가능한 값은 다음과 같습니다 `TEST`, `REVIEW`, `APPROVED`, `PUBLISHED`, `DENIED`, `REVOKED`, `DEPRECATED`. 값이 있는 대상 `PUBLISHED` 는 라이브이며 Experience Platform 고객이 사용할 수 있습니다. |
+| `publishDetailsList.destinationType` | 문자열 | 대상의 유형입니다. 값은 `DEV` 및 `PUBLIC`. `DEV` 는 Experience Platform 조직의 대상에 해당합니다. `PUBLIC` 은 게시를 위해 제출한 대상에 해당합니다. 이 두 옵션을 다음과 같은 Git 용어로 생각해 보십시오. `DEV` 버전은 로컬 작성 분기와 를 나타냅니다 `PUBLIC` version 은 원격 주 분기를 나타냅니다. |
 | `publishDetailsList.publishedDate` | 문자열 | epoch 시간에 게시에 대해 대상이 제출된 날짜입니다. |
 
 {style=&quot;table-layout:auto&quot;}
-
-## 기존 대상 게시 요청 업데이트 {#update}
-
-에 PUT 요청을 만들어 기존 대상 게시 요청에서 허용되는 조직을 업데이트할 수 있습니다 `/authoring/destinations/publish` 엔드포인트 및 허용된 조직을 업데이트할 대상의 ID를 제공합니다. 호출 본문에서 업데이트된 허용된 조직을 제공합니다.
-
-**API 형식**
-
-```http
-PUT /authoring/destinations/publish/{DESTINATION_ID}
-```
-
-| 매개 변수 | 설명 |
-| -------- | ----------- |
-| `{DESTINATION_ID}` | 게시 요청을 업데이트할 대상의 ID입니다. |
-
-**요청**
-
-다음 요청은 페이로드에 제공된 매개 변수로 구성된 기존 대상 게시 요청을 업데이트합니다. 아래 예제 호출에서 허용되는 조직을 업데이트할 예정입니다.
-
-```shell
-curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destinations/publish/1230e5e4-4ab8-4655-ae1e-a6296b30f2ec \
- -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
- -H 'x-api-key: {API_KEY}' \
- -H 'x-sandbox-name: {SANDBOX_NAME}' \
- -d '
-{
-   "destinationId":"1230e5e4-4ab8-4655-ae1e-a6296b30f2ec",
-   "destinationAccess":"LIMITED",
-   "allowedOrgs":[
-      "abc@AdobeOrg",
-      "def@AdobeOrg"
-   ]
-}
-```
 
 ## 특정 대상 게시 요청의 상태 가져오기 {#get}
 
@@ -194,13 +154,30 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
    "destinationId":"1230e5e4-4ab8-4655-ae1e-a6296b30f2ec",
    "publishDetailsList":[
       {
-         "configId":"string",
+         "configId":"ab41387c0-4772-4709-a3ce-6d5fee654520",
          "allowedOrgs":[
-            "xyz@AdobeOrg",
-            "lmn@AdobeOrg"
+            "716543205DB85F7F0A495E5B@AdobeOrg"
          ],
          "status":"TEST",
-         "publishedDate":"string"
+         "destinationType":"DEV"
+      },
+      {
+         "configId":"cd568c67-f25e-47e4-b9a2-d79297a20b27",
+         "allowedOrgs":[
+            "*"
+         ],
+         "status":"DEPRECATED",
+         "destinationType":"PUBLIC",
+         "publishedDate":1630525501009
+      },
+      {
+         "configId":"ef6f07154-09bc-4bee-8baf-828ea9c92fba",
+         "allowedOrgs":[
+            "*"
+         ],
+         "status":"PUBLISHED",
+         "destinationType":"PUBLIC",
+         "publishedDate":1630531586002
       }
    ]
 }
