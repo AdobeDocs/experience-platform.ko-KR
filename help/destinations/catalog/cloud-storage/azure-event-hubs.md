@@ -3,9 +3,9 @@ keywords: Azure 이벤트 허브 대상;azure 이벤트 허브;azure 이벤트 �
 title: (베타) [!DNL Azure Event Hubs] 연결
 description: 에 대한 실시간 아웃바운드 연결을 만듭니다. [!DNL Azure Event Hubs] Experience Platform에서 데이터를 스트리밍할 스토리지.
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: 577b42eef9d4b44b5b556ee31d22276d72c609ea
+source-git-commit: be09d794a4cbc3afc76df70d11f55b0cae6f2009
 workflow-type: tm+mt
-source-wordcount: '1149'
+source-wordcount: '1183'
 ht-degree: 1%
 
 ---
@@ -46,10 +46,11 @@ ht-degree: 1%
 
 While [설정](../../ui/connect-destination.md) 이 대상을 사용하려면 다음 정보를 제공해야 합니다.
 
-* **[!UICONTROL SAS 키 이름]** 및 **[!UICONTROL SAS 키]**: SAS 키 이름 및 키를 입력합니다. 인증 방법에 대해 알아보기 [!DNL Azure Event Hubs] SAS 키를 사용하여 [Microsoft 설명서](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
+* **[!UICONTROL SAS 키 이름]**: SAS 키 이름이라고도 하는 인증 규칙의 이름입니다.
+* **[!UICONTROL SAS 키]**: 이벤트 허브 네임스페이스의 기본 키입니다. 다음 `sasPolicy` 저것은 `sasKey` 에 해당해야 함 **관리** 이벤트 허브 목록을 채울 수 있도록 구성된 권한. 인증 방법에 대해 알아보기 [!DNL Azure Event Hubs] SAS 키를 사용하여 [Microsoft 설명서](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
 * **[!UICONTROL 네임스페이스]**: 을 입력합니다. [!DNL Azure Event Hubs] 네임스페이스. 알아보기 [!DNL Azure Event Hubs] 네임스페이스 [Microsoft 설명서](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace).
 * **[!UICONTROL 이름]**: 연결할 이름을 입력합니다 [!DNL Azure Event Hubs].
-* **[!UICONTROL 설명]**: 연결에 대한 설명을 제공합니다.  예: &quot;Premium Tier 고객&quot;, &quot;Guys 관심 있는 남&quot;.
+* **[!UICONTROL 설명]**: 연결에 대한 설명을 제공합니다.  예: &quot;Premium Tier 고객&quot;, &quot;고객 고객 키트서빙에 관심&quot;
 * **[!UICONTROL eventHubName]**: 스트림의 이름을 로 입력합니다 [!DNL Azure Event Hubs] 대상.
 
 ## 세그먼트를 이 대상에 활성화 {#activate}
