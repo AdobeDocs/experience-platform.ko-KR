@@ -5,10 +5,10 @@ title: 데이터 수집 개요
 topic-legacy: overview
 description: Adobe Experience Platform의 고객 경험에 대한 데이터 수집과 관련된 다양한 기술에 대해 알아봅니다.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: 0926f0a6dc005b1bf278e7a0fa0afe4296d8ad80
+source-git-commit: 1322ef78683e62130b56c5b6a22b8699e57a31cf
 workflow-type: tm+mt
-source-wordcount: '458'
-ht-degree: 4%
+source-wordcount: '478'
+ht-degree: 3%
 
 ---
 
@@ -59,6 +59,10 @@ Platform Edge Network는 광범위한 규모로 데이터를 수신하고 처리
 [이벤트 전달](../tags/ui/event-forwarding/overview.md) 은(는) 임의의 Experience Platform 데이터 스트림을 탭할 수 있으므로, 클라이언트 장치에 타사 코드를 추가하지 않고도 Adobe이 아닌 대상에 데이터를 변환, 보강 및 전송할 수 있습니다.
 
 ![이벤트 전달](./images/home/event-forwarding.png)
+
+>[!NOTE]
+>
+>이벤트 전달은 Real-time Customer Data Platform 연결 서비스의 일부로만 포함된 유료 기능입니다.
 
 ## 다음 단계
 
