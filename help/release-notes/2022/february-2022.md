@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform에 대한 최신 릴리스 노트입니다.
 exl-id: ae453f7d-ac75-4cc3-8435-57d25f086cc3
-source-git-commit: 3ae4d0f0a92c96b15c605c6654693fd6d7e94ba8
+source-git-commit: d407d6bedbe0eb9b4dde229d990160c114fad472
 workflow-type: tm+mt
-source-wordcount: '575'
+source-wordcount: '502'
 ht-degree: 6%
 
 ---
@@ -16,7 +16,6 @@ ht-degree: 6%
 Adobe Experience Platform의 기존 기능 업데이트:
 
 - [데이터 수집](#data-collection)
-- [[!DNL Data Prep]](#data-prep)
 - [[!DNL Identity Service]](#identity)
 - [소스](#sources)
 
@@ -33,18 +32,6 @@ Platform은 클라이언트측 고객 경험 데이터를 수집하고 Adobe Exp
 | 자사 장치 ID | 이제 Platform Web SDK를 사용하여 고객 데이터를 수집할 때 자체 장치 ID를 Adobe Experience Platform Edge 네트워크로 전송하여 타사 쿠키 수명 주기에 대한 최근 브라우저 제한 사항에 대한 해결 방법을 제공할 수 있습니다. 다음 안내서를 참조하십시오. [자사 장치 ID](../../edge/identity/first-party-device-ids.md) 추가 정보. |
 
 Platform의 데이터 수집에 대한 자세한 내용은 [데이터 수집 개요](../../collection/home.md).
-
-## [!DNL Data Prep] {#data-prep}
-
-[!DNL Data Prep] 데이터 엔지니어가 XDM(Experience Data Model) 을 통해 데이터를 매핑, 변환 및 확인할 수 있습니다.
-
-**새로운 기능**
-
-| 기능 | 설명 |
-| --- | --- |
-| [!DNL Data Prep] Adobe Analytics 소스 커넥터 지원 | 이제 Adobe Analytics 소스 커넥터에서 데이터 준비 기능을 지원하므로 데이터 스트림을 만들 때 Analytics 보고서 세트 데이터를 대상 XDM 스키마에 매핑할 수 있습니다. 다음에서 자습서를 참조하십시오. [analytics 소스 커넥터 만들기](../../sources/tutorials/ui/create/adobe-applications/analytics.md) 추가 정보. |
-
-자세한 내용은 [!DNL Data Prep]를 보려면 [[!DNL Data Prep] 개요](../../data-prep/home.md).
 
 ## [!DNL Identity Service] {#identity}
 
