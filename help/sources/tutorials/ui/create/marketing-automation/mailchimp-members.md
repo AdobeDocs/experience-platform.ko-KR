@@ -4,10 +4,8 @@ solution: Experience Platform
 title: 플랫폼 UI를 사용하여 MailChimp 멤버 원본 연결을 만듭니다.
 topic-legacy: tutorial
 description: 플랫폼 UI를 사용하여 Adobe Experience Platform을 MailChimp 구성원에 연결하는 방법을 알아봅니다.
-hide: true
-hidefromtoc: true
 exl-id: dc620ef9-624d-4fc9-8475-bb475ea86eb7
-source-git-commit: f8951b5a0a0ca94679155bad9f4c4c2991740b1a
+source-git-commit: ed185d0957c3cd84c33a6ff60c5ded2b17fbfe74
 workflow-type: tm+mt
 source-wordcount: '682'
 ht-degree: 1%

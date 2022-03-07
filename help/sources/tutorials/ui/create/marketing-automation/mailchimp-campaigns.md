@@ -4,10 +4,8 @@ solution: Experience Platform
 title: Platform UI를 사용하여 MailChimp 캠페인 소스 연결 만들기
 topic-legacy: tutorial
 description: 플랫폼 UI를 사용하여 Adobe Experience Platform을 MailChimp 캠페인에 연결하는 방법을 알아봅니다.
-hide: true
-hidefromtoc: true
 exl-id: e8e1ed32-4277-44c9-aafc-6bb9e0a1fe0d
-source-git-commit: f8951b5a0a0ca94679155bad9f4c4c2991740b1a
+source-git-commit: ed185d0957c3cd84c33a6ff60c5ded2b17fbfe74
 workflow-type: tm+mt
 source-wordcount: '682'
 ht-degree: 1%
