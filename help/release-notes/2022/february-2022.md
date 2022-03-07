@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform에 대한 최신 릴리스 노트입니다.
 exl-id: ae453f7d-ac75-4cc3-8435-57d25f086cc3
-source-git-commit: d407d6bedbe0eb9b4dde229d990160c114fad472
+source-git-commit: 534d87aed98359b979fe06d40f9b9a2daee5308c
 workflow-type: tm+mt
-source-wordcount: '502'
-ht-degree: 6%
+source-wordcount: '720'
+ht-degree: 4%
 
 ---
 
@@ -15,9 +15,22 @@ ht-degree: 6%
 
 Adobe Experience Platform의 기존 기능 업데이트:
 
+- [[!DNL Dashboards]](#dashboards)
 - [데이터 수집](#data-collection)
 - [[!DNL Identity Service]](#identity)
 - [소스](#sources)
+
+## [!DNL Dashboards] {#dashboards}
+
+Adobe Experience Platform은 여러 기능을 제공합니다 [!DNL dashboards] 을 통해 일일 스냅샷 동안 캡처된 조직 데이터에 대한 중요한 통찰력을 볼 수 있습니다.
+
+**업데이트된 기능**
+
+| 기능 | 설명 |
+| --- | --- |
+| 신규 표준 대상 위젯 | 다음 표준 위젯을 사용하면 대상과 관련된 다양한 지표를 시각화할 수 있습니다.<ul><li>대상별로 최근에 활성화된 세그먼트입니다. 이 위젯은 선택한 대상에 따라 가장 최근에 활성화된 상위 5개의 세그먼트를 내림차순으로 표시합니다.</li><li>대상 크기 트렌드입니다. 이 위젯은 해당 대상 계정에 매핑된 세그먼트의 일정 기간 동안 프로필 수 관계를 나타냅니다.</li><li>ID로 매핑되지 않은 세그먼트입니다. 이 위젯은 지정된 대상 및 ID에 대한 내림차순 ID 카운트로 순위가 지정된 상위 5개의 매핑되지 않은 세그먼트를 나열합니다.</li><li>ID별로 매핑된 세그먼트. 이 위젯은 상위 5개의 매핑된 세그먼트를 나열합니다. 세그먼트는 위젯의 드롭다운 메뉴에서 선택한 대상 ID와 일치하는 소스 ID의 각 수에 따라 높은 값에서 낮은 순서로 정렬됩니다.</li><li>일반적인 대상. 이 위젯은 페이지 맨 위에서 선택한 대상 계정에서 활성화된 상위 5개 세그먼트 목록과 위젯 드롭다운에서 선택한 대상을 제공합니다.</li></ul> 사용 가능한 표준 위젯에 대한 자세한 내용은 [대상 대시보드 설명서.](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html?lang=en#standard-widgets). |
+
+자세한 내용은 [!DNL Dashboards]를 보려면 [[!DNL Dashboards] 개요](../../dashboards/home.md).
 
 ## 데이터 수집 {#data-collection}
 
