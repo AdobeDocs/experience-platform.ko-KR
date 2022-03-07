@@ -2,11 +2,9 @@
 title: Platform Web SDK의 자사 장치 ID
 description: Adobe Experience Platform Web SDK에 대한 자사 장치 ID(FPID)를 구성하는 방법을 알아봅니다.
 exl-id: c3b17175-8a57-43c9-b8a0-b874fecca952
-hide: true
-hidefromtoc: true
-source-git-commit: c094e72232f9ac44d10a1919a00024e5faa27b2b
+source-git-commit: 700dea7ed7f35797b3a3fe4bf09f5e266577363b
 workflow-type: tm+mt
-source-wordcount: '1680'
+source-wordcount: '1776'
 ht-degree: 0%
 
 ---
@@ -27,36 +25,44 @@ Adobe Experience Platform Web SDK가 할당합니다 [Adobe Experience Cloud ID(
 
 ## FPID 사용
 
-자사 쿠키는 DNS CNAME과 달리 DNS A-record를 활용하는 고객이 소유한 서버를 사용하여 설정하는 경우 가장 효과적입니다. 자사 장치 ID를 사용하면 DNS A-record를 사용하여 쿠키에서 고유한 장치 ID를 설정할 수 있습니다. 그런 다음 이러한 ID를 Adobe으로 전송하고 시드로 사용하여 Adobe Experience Cloud 애플리케이션에서 계속 기본 식별자가 되는 ECID를 생성할 수 있습니다.
+FPID는 자사 쿠키를 사용하여 방문자를 추적합니다. 자사 쿠키는 DNS를 활용하는 서버를 사용하여 설정할 때 가장 효과적입니다 [레코드](https://datatracker.ietf.org/doc/html/rfc1035) (IPv4의 경우) 또는 [AAAA 레코드](https://datatracker.ietf.org/doc/html/rfc3596) (IPv6의 경우), DNS CNAME 또는 JavaScript 코드와 반대됩니다.
+
+>[!IMPORTANT]
+>
+>레코드 또는 AAAA 레코드는 쿠키를 설정하고 추적하는 경우에만 지원됩니다. 데이터 수집에 대한 기본 방법은 DNS CNAME을 통해 입니다. 즉, FPID는 A 레코드 또는 AAAA 레코드를 사용하여 설정되고 CNAME을 사용하여 Adobe으로 전송됩니다.
+>
+>다음 [Adobe 관리 인증서 프로그램](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html#adobe-managed-certificate-program) 은 여전히 자사 데이터 수집에 대해 지원됩니다.
+
+FPID 쿠키가 설정되면 이벤트 데이터를 수집하여 Adobe으로 전송할 수 있습니다. 수집된 FPID는 Adobe Experience Cloud 애플리케이션에서 계속 기본 식별자인 ECID를 생성하는 시드로 사용됩니다.
 
 웹 사이트 방문자에 대한 FPID를 Platform Edge Network에 보내려면 FPID를 `identityMap` 해당 방문자에 대한 방문 수입니다. 다음 문서의 뒷부분에서 섹션을 참조하십시오. [에서 FPID 사용 `identityMap`](#identityMap) 추가 정보.
 
-## ID 형식 요구 사항
+### ID 형식 요구 사항
 
 Platform Edge Network는 [UUIDv4 형식](https://datatracker.ietf.org/doc/html/rfc4122). UUIDv4 형식이 아닌 장치 ID는 거부됩니다.
 
 UUID를 생성하면 거의 항상 고유한 무작위 ID가 생성되며 충돌 발생 가능성이 무시할 수 있습니다. UUIDv4는 IP 주소 또는 기타 PII(개인 식별 정보)를 사용하여 초기 설정할 수 없습니다. UUID는 어디서나 사용할 수 있으며 거의 모든 프로그래밍 언어로 라이브러리를 찾아 생성할 수 있습니다.
 
-## DNS A-레코드를 사용하여 쿠키 설정
+## 자체 서버를 사용하여 쿠키 설정
 
-다양한 방법을 사용하여 쿠키가 브라우저 정책으로 인해 제한되지 않도록 할 수 있습니다.
+소유한 서버를 사용하여 쿠키를 설정할 때 브라우저 정책으로 인해 쿠키가 제한되지 않도록 하는 데 다양한 방법을 사용할 수 있습니다.
 
 * 서버측 스크립팅 언어를 사용하여 쿠키 생성
 * 사이트의 하위 도메인 또는 다른 종단점에 대한 API 요청에 응답으로 쿠키를 설정합니다
 * CMS를 사용하여 쿠키 생성
 * CDN을 사용하여 쿠키 생성
 
->[!NOTE]
+>[!IMPORTANT]
 >
 >JavaScript의 `document.cookie` 메서드는 쿠키 지속 시간을 제한하는 브라우저 정책으로부터 거의 보호되지 않습니다.
 
-## 쿠키를 설정하는 경우
+### 쿠키를 설정하는 경우
 
 FPID 쿠키는 Edge 네트워크에 대한 요청을 수행하기 전에 가장 먼저 설정해야 합니다. 그러나 이 작업이 불가능한 시나리오에서 ECID는 여전히 기존 메서드를 사용하여 생성되며 쿠키가 존재하는 한 기본 식별자로 작동합니다.
 
 ECID가 결국 브라우저 삭제 정책의 영향을 받지만 FPID가 그렇지 않다고 가정할 경우 FPID는 다음 방문의 기본 식별자가 되며 후속 방문마다 ECID를 시딩하는 데 사용됩니다.
 
-## 쿠키에 대한 만료 설정
+### 쿠키에 대한 만료 설정
 
 쿠키의 만료를 설정하는 것은 FPID 기능을 구현할 때 신중하게 고려해야 하는 것입니다. 이러한 결정을 내릴 때, 해당 각 지역의 법률 및 정책과 함께 조직이 운영되는 국가 또는 지역을 고려해야 합니다.
 
