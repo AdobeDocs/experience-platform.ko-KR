@@ -6,9 +6,9 @@ seo-title: Activate audience data to batch profile export destinations
 description: 세그먼트를 배치 프로필 기반 대상으로 보내 Adobe Experience Platform에서 보유한 대상 데이터를 활성화하는 방법을 알아봅니다.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: ee9ed1c17a566f37b4ad79df7c66f8b2ffb4b879
+source-git-commit: 6c64e8400c85865aab4e8cfb9e86850562ba97aa
 workflow-type: tm+mt
-source-wordcount: '2188'
+source-wordcount: '2178'
 ht-degree: 0%
 
 ---
@@ -51,7 +51,7 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_schedule"
 >title="예약"
->abstract="파일 내보내기 유형(전체 파일 또는 증분 파일)과 내보내기 빈도를 설정합니다."
+>abstract="연필 아이콘을 사용하여 파일 내보내기 유형(전체 파일 또는 증분 파일)과 내보내기 빈도를 설정합니다."
 >additional-url="https://www.adobe.com/go/destinations-profile-batch-en" text="자세한 내용은 문서에서 알아보십시오"
 
 [!DNL Adobe Experience Platform] 이메일 마케팅 및 클라우드 스토리지 대상의 데이터를 다음과 같은 형태로 내보냅니다. [!DNL CSV] 파일. 에서 **[!UICONTROL 예약]** 페이지에서 내보낼 각 세그먼트의 일정 및 파일 이름을 구성할 수 있습니다. 예약을 구성해야 하지만 파일 이름을 구성하는 것은 선택 사항입니다.
@@ -133,7 +133,6 @@ ht-degree: 0%
 >id="platform_destinations_activate_filename"
 >title="파일 이름 구성"
 >abstract="파일 기반 대상의 경우 세그먼트별로 고유한 파일 이름이 생성됩니다. 파일 이름 편집기를 사용하여 고유한 파일 이름을 만들고 편집하거나 기본 이름을 유지합니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#file-names" text="자세한 내용은 문서에서 알아보십시오"
 
 기본 파일 이름은 대상 이름, 세그먼트 ID, 날짜 및 시간 표시기로 구성됩니다. 예를 들어 내보낸 파일 이름을 편집하여 서로 다른 캠페인을 구분하거나 데이터 내보내기 시간을 파일에 추가할 수 있습니다.
 

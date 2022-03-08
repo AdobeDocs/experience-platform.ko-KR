@@ -6,9 +6,9 @@ title: UI에서 대상에 대한 데이터 흐름 모니터링
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 042a739593b291cdd7193437906a16dc889a3b4b
+source-git-commit: 0a6813d5d614d86940b042e03d2ab4f083644600
 workflow-type: tm+mt
-source-wordcount: '3358'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -56,25 +56,21 @@ ht-degree: 0%
 >id="platform_monitoring_profiles_received_streaming"
 >title="받은 프로필"
 >abstract="데이터 플로우에서 받은 총 프로필 수 이 값은 60분마다 업데이트됩니다."
->text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesactivated_streaming"
 >title="ID가 활성화됨"
 >abstract="개별 프로필 ID의 수가 선택한 대상에 성공적으로 활성화되었습니다. 이 지표에는 내보낸 세그먼트에서 생성, 업데이트 및 제거된 ID가 포함됩니다."
->text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesexcluded_streaming"
 >title="제외된 ID"
 >abstract="누락된 속성 및 동의 위반을 기반으로 선택한 대상에 대한 활성화에서 제외된 개별 프로필 레코드 수입니다."
->text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesfailed_streaming"
 >title="ID 실패"
 >abstract="선택한 대상에 대해 실패한 개별 프로필 ID의 수입니다. 자세한 내용은 오류 진단을 확인하십시오."
->text="Learn more in documentation"
 
 스트리밍 대상의 경우, [!UICONTROL 데이터 흐름 실행] 탭은 데이터 흐름 실행에 대한 지표 데이터에 대한 시간별 업데이트를 제공합니다. 가장 눈에 띄는 통계들은 ID에 대한 것이다.
 
@@ -118,29 +114,22 @@ ID는 프로필의 다른 패싯을 나타냅니다. 예를 들어 프로필에 
 >id="platform_monitoring_dataflow_run_details_activation"
 >title="데이터 흐름 실행 세부 정보"
 >abstract="대상 데이터 흐름 실행 세부 사항에는 실시간 고객 프로필에서 가져온 세그먼트의 활성화 상태 및 지표에 대한 정보가 포함되어 있으며 고유한 ID를 생성합니다. 자세한 내용은 지표 정의 안내서를 참조하십시오."
-
->[!CONTEXTUALHELP]
->id="platform_monitoring_dataflow_run_details_activation_batch"
->title="데이터 흐름 실행 세부 정보"
->abstract="대상 데이터 흐름 실행 세부 사항에는 실시간 고객 프로필에서 가져온 세그먼트의 활성화 상태 및 지표에 대한 정보가 포함되어 있으며 고유한 ID를 생성합니다. 자세한 내용은 지표 정의 안내서를 참조하십시오."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html?lang=en#dataflow-runs-for-streaming-destinations" text="스트리밍 대상에 대해 데이터 흐름 실행"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profiles_received_batch"
 >title="받은 프로필"
 >abstract="데이터 플로우에서 받은 총 프로필 수 이 값은 60분마다 업데이트됩니다."
->text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesactivated_batch"
 >title="ID가 활성화됨"
 >abstract="개별 프로필 ID의 수가 선택한 대상에 성공적으로 활성화되었습니다. 이 지표에는 내보낸 세그먼트에서 생성, 업데이트 및 제거된 ID가 포함됩니다."
->text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesexcluded_batch"
 >title="제외된 ID"
 >abstract="누락된 속성 및 동의 위반을 기반으로 선택한 대상에 대한 활성화에서 제외된 개별 프로필 레코드 수입니다."
->text="Learn more in documentation"
 
 배치 대상의 경우, [!UICONTROL 데이터 흐름 실행] 탭은 데이터 흐름 실행에 대한 지표 데이터를 제공합니다. 개별 실행 및 해당 특정 지표 목록과 ID에 대한 다음 합계가 표시됩니다.
 
