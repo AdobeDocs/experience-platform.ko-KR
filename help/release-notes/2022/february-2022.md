@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform에 대한 최신 릴리스 노트입니다.
 exl-id: ae453f7d-ac75-4cc3-8435-57d25f086cc3
-source-git-commit: b714a5cf0f4bdf2c0f010664bfef96c5b6641c22
+source-git-commit: 366656346c25cd5206b36c7ff2b9942c5027de17
 workflow-type: tm+mt
-source-wordcount: '732'
-ht-degree: 4%
+source-wordcount: '1018'
+ht-degree: 3%
 
 ---
 
@@ -20,9 +20,10 @@ ht-degree: 4%
 Adobe Experience Platform의 기존 기능 업데이트:
 
 - [[!DNL Dashboards]](#dashboards)
-- [데이터 수집](#data-collection)
+- [[!DNL Data collection]](#data-collection)
+- [[!DNL Destinations]](#destinations)
 - [[!DNL Identity Service]](#identity)
-- [소스](#sources)
+- [[!DNL Sources]](#sources)
 
 ## [!DNL Dashboards] {#dashboards}
 
@@ -49,6 +50,16 @@ Platform은 클라이언트측 고객 경험 데이터를 수집하고 Adobe Exp
 | 자사 장치 ID | 이제 Platform Web SDK를 사용하여 고객 데이터를 수집할 때 자체 장치 ID를 Adobe Experience Platform Edge 네트워크로 전송하여 타사 쿠키 수명 주기에 대한 최근 브라우저 제한 사항에 대한 해결 방법을 제공할 수 있습니다. 다음 안내서를 참조하십시오. [자사 장치 ID](../../edge/identity/first-party-device-ids.md) 추가 정보. |
 
 Platform의 데이터 수집에 대한 자세한 내용은 [데이터 수집 개요](../../collection/home.md).
+
+## [!DNL Destinations] {#destinations}
+
+[!DNL Destinations] 는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과의 사전 구축된 통합입니다. 대상을 사용하여 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례에 대해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
+
+**새로운 기능 또는 업데이트된 기능**
+
+| 기능 | 설명 |
+| ----------- | ----------- |
+| (베타) 파일 기반 대상에 대한 Destination SDK 지원 | [파일 기반 대상에 대한 Destination SDK 지원](../../destinations/destination-sdk/file-based-destination-configuration.md) 는 현재 비공개 베타에 있으며 일부 파트너 및 고객만 사용할 수 있습니다. GA 릴리스 전에 기능 및 관련 설명서가 변경될 수 있습니다.<br><br>기능에 액세스하는 방법에 대해 알려면 Adobe 계정 담당자에게 문의하십시오. Adobe 내부 계정 담당자는 Experience Platform 대상 제품 및 엔지니어링 팀에 연락하여 지원되는 사용 사례에 대해 논의해야 합니다. <br><br> 파일 기반 대상에 대한 Destination SDK 지원 베타 단계에서 베타 파트너 및 고객은 [Experience Platform Destination SDK](/help/destinations/destination-sdk/overview.md) 다음 기능을 통해 혜택을 받을 비공개 대상을 빌드하려면 다음을 수행하십시오. <ul><li>Amazon S3, SFTP 서버, Azure Blob, Azure Data Lake 저장소, 데이터 랜딩 영역 저장소를 통해 파일 기반(일괄 처리) 대상을 만듭니다.</li><li>기본 파일 내보내기 예약 및 빈도 옵션을 구성하고 설정합니다.</li><li>내보낸 CSV 파일(구분 기호, 이스케이프 문자 및 기타 옵션)의 형식을 지정하는 옵션을 구성하고 설정합니다.</li><li>사용자 지정 파일 헤더를 설정하고 편집하는 기능.</li><li>파일 및 세그먼트 내보내기에 대한 이벤트 알림을 받는 기능.</li><li>CSV, TSV, JSON, Parquet과 같은 추가 파일 유형을 내보내는 기능.</li></ul>  <br>새 기능을 시작하려면 다음을 참조하십시오. [(베타) Destination SDK을 사용하여 파일 기반 대상 구성](../../destinations/destination-sdk/file-based-destination-configuration.md). <br><br> 비공개 또는 제품을 만드는 기능 *스트리밍* 모든 Experience Platform 고객 및 파트너는 Destination SDK을 사용한 대상을 이미 사용할 수 있습니다. 방법에 대한 안내서를 참조하십시오. [Destination SDK을 사용하여 스트리밍 대상 구성](/help/destinations/destination-sdk/configure-destination-instructions.md) 자세한 내용 |
 
 ## [!DNL Identity Service] {#identity}
 
