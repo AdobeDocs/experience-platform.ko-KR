@@ -1,9 +1,10 @@
 ---
 title: 소프트 열거형 필드 확장
 description: 스키마 레지스트리 API에서 소프트 열거형 필드를 확장하는 방법을 알아봅니다.
-source-git-commit: 2d85db789e6e6a28402bb68122a3b5cfe9d0c5dc
+exl-id: 96897a5d-e00a-410f-a20e-f77e223bd8c4
+source-git-commit: a26c8d43ff7874bcedd2adb3d6da995986198c96
 workflow-type: tm+mt
-source-wordcount: '532'
+source-wordcount: '531'
 ht-degree: 0%
 
 ---
@@ -197,4 +198,4 @@ curl -X PATCH \
 
 ## 다음 단계
 
-이 안내서에서는 스키마 레지스트리 API에서 소프트 열거형을 확장하는 방법을 다룹니다. API에서 다른 필드 유형을 정의하는 방법에 대한 자세한 내용은 다음 안내서를 참조하십시오 [XDM 필드 유형 제한](../schema/field-constraints.md#define-fields).
+이 안내서에서는 스키마 레지스트리 API에서 소프트 열거형을 확장하는 방법을 다룹니다. 다음 안내서를 참조하십시오. [api에서 사용자 지정 필드 정의](./custom-fields-api.md) 를 참조하십시오.

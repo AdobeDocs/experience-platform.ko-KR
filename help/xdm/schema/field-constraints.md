@@ -5,10 +5,10 @@ title: XDM 필드 유형 제한
 topic-legacy: overview
 description: 매핑할 수 있는 다른 직렬화 형식 및 API에서 고유한 필드 유형을 정의하는 방법을 포함하여 XDM(Experience Data Model)의 필드 유형 제약 조건에 대한 참조입니다.
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
-source-git-commit: 684237122e7384f6c611e1c602c30af2518aba58
+source-git-commit: 279a1d90be82188ad6fd9d2bb9123354d0046b0d
 workflow-type: tm+mt
-source-wordcount: '1153'
-ht-degree: 3%
+source-wordcount: '668'
+ht-degree: 6%
 
 ---
 
@@ -162,7 +162,7 @@ XDM은 JSON 스키마 위에 구축되므로 XDM 필드는 해당 유형을 정�
 | [!UICONTROL 날짜] | `java.util.Date` | `System.DateTime` | `String` |
 | [!UICONTROL DateTime] | `java.util.Date` | `System.DateTime` | `String` |
 | [!UICONTROL 부울] | `Boolean` | `System.Boolean` | `Boolean` |
-| [!UICONTROL 맵] | `Map` | (N/A) | `object` |
+| [!UICONTROL 맵] | `Map` | (해당 없음) | `object` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -185,160 +185,4 @@ XDM은 JSON 스키마 위에 구축되므로 XDM 필드는 해당 유형을 정�
 
 ## API에서 XDM 필드 유형 정의 {#define-fields}
 
-모든 XDM 필드는 표준을 사용하여 정의됩니다 [JSON 스키마](https://json-schema.org/) 해당 필드 유형에 적용되는 제한 및 [!DNL Experience Platform]. 스키마 레지스트리 API를 사용하면 형식 및 선택적 제약 조건을 사용하여 추가 필드 유형을 정의할 수 있습니다. XDM 필드 유형은 필드 수준 특성에 의해 노출됩니다. `meta:xdmType`.
-
->[!NOTE]
->
->`meta:xdmType` 는 시스템에서 생성한 값이므로 API를 사용할 때 필드의 JSON에 이 속성을 추가할 필요가 없습니다. 가장 좋은 방법은 JSON 스키마 유형(예: `string` 및 `integer`)을 클릭하여 아래 표에 정의된 대로 적절한 최소/최대 제한을 지정합니다.
-
-다음 표에서는 선택적 속성이 있는 필드 유형을 포함하여 다른 필드 유형을 정의하는 데 적합한 형식에 대해 설명합니다. 선택적 속성 및 유형별 키워드에 대한 자세한 내용은 [JSON 스키마 설명서](https://json-schema.org/understanding-json-schema/reference/type.html).
-
-시작하려면 원하는 필드 유형을 찾아 제공된 샘플 코드를 사용하여 API 요청을 작성합니다 [필드 그룹 만들기](../api/field-groups.md#create) 또는 [데이터 유형 만들기](../api/data-types.md#create).
-
-<table style="table-layout:auto">
-  <tr>
-    <th>XDM 유형</th>
-    <th>선택적 속성</th>
-    <th>예</th>
-  </tr>
-  <tr>
-    <td>[!UICONTROL String]</td>
-    <td>
-      <ul>
-        <li><code>pattern</code></li>
-        <li><code>minLength</code></li>
-        <li><code>maxLength</code></li>
-      </ul>
-    </td>
-    <td>
-      <pre class="JSON language-JSON hljs">
-"sampleField": { "type": "string", "pattern": "^[A-Z]{2}$", "maxLength": 2 }</pre>
-    </td>
-  </tr>
-  <tr>
-    <td>[!UICONTROL URI]</td>
-    <td></td>
-    <td>
-      <pre class="JSON language-JSON hljs">
-"sampleField": { "type": "string", "format": "uri" }</pre>
-    </td>
-  </tr>
-  <tr>
-    <td>[!UICONTROL Enum]</td>
-    <td>
-      <ul>
-        <li><code>default</code></li>
-        <li><code>meta:enum</code></li>
-      </ul>
-    </td>
-    <td>제약 있는 열거형 값은 <code>enum</code> 배열이지만 각 값에 대한 선택적 고객 대상 레이블은 <code>meta:enum</code>:
-      <pre class="JSON language-JSON hljs">
-"sampleField": { "type": "string", "enum": ["value1", "value2", "value3" ], "meta:enum": { "value1": "값 1", "값2": "값 2", "value3": "Value 3" }, "default": "value1" }</pre>
-    <br>다음 사항에 유의하십시오. <code>meta:enum</code> 값은 <strong>not</strong> 열거형을 선언하거나 데이터 유효성 검사를 직접 구동합니다. 대부분의 경우 <code>meta:enum</code> 다음 항목에서도 제공됩니다. <code>enum</code> 가 있어야 합니다. 그러나 다음과 같은 몇 가지 사용 사례가 있습니다 <code>meta:enum</code> 이(가) 해당 없이 제공됩니다 <code>enum</code> 배열입니다. 다음에서 자습서를 참조하십시오. <a href="../tutorials/extend-soft-enum.md">소프트 열거형 확장</a> 추가 정보.
-    </td>
-  </tr>
-  <tr>
-    <td>[!UICONTROL Number]</td>
-    <td></td>
-    <td>
-      <pre class="JSON language-JSON hljs">
-"sampleField": { "type": "number" }</pre>
-    </td>
-  </tr>
-  <tr>
-    <td>[!UICONTROL Long]</td>
-    <td></td>
-    <td>
-      <pre class="JSON language-JSON hljs">
-"sampleField": { "type": "integer", "minimum": -9007199254740992, "최대값": 9007199254740992 }</pre>
-    </td>
-  </tr>
-  <tr>
-    <td>[!UICONTROL Integer]</td>
-    <td></td>
-    <td>
-      <pre class="JSON language-JSON hljs">
-"sampleField": { "type": "integer", "minimum": -2147483648, "최대값": 2147483648 }</pre>
-    </td>
-  </tr>
-  <tr>
-    <td>[!UICONTROL Short]</td>
-    <td></td>
-    <td>
-      <pre class="JSON language-JSON hljs">
-"sampleField": { "type": "integer", "minimum": -32768, "최대값": 32768 }</pre>
-    </td>
-  </tr>
-  <tr>
-    <td>[!UICONTROL Byte]</td>
-    <td></td>
-    <td>
-      <pre class="JSON language-JSON hljs">
-"sampleField": { "type": "integer", "minimum": -128, "최대값": 128 }</pre>
-    </td>
-  </tr>
-  <tr>
-    <td>[!UICONTROL Boolean]</td>
-    <td>
-      <ul>
-        <li><code>default</code></li>
-      </ul>
-    </td>
-    <td>
-      <pre class="JSON language-JSON hljs">
-"sampleField": { "type": "boolean", "default": false }</pre>
-    </td>
-  </tr>
-  <tr>
-    <td>[!UICONTROL 날짜]</td>
-    <td></td>
-    <td>
-      <pre class="JSON language-JSON hljs">
-"sampleField": { "type": "string", "format": "date", "example": ["2004-10-23"] }</pre>
-    </td>
-  </tr>
-  <tr>
-    <td>[!UICONTROL DateTime]</td>
-    <td></td>
-    <td>
-      <pre class="JSON language-JSON hljs">
-"sampleField": { "type": "string", "format": "date time", "example": ["2004-10-23T12:00:00-06:00"] }</pre>
-    </td>
-  </tr>
-  <tr>
-    <td>[!UICONTROL Array]</td>
-    <td></td>
-    <td>기본 스칼라 형식(예: 문자열)의 배열입니다.
-      <pre class="JSON language-JSON hljs">
-"sampleField": { "type": "array", "items": { "type": "string" }</pre>
-      다른 스키마에 의해 정의된 개체 배열:<br/>
-      <pre class="JSON language-JSON hljs">
-"sampleField": { "type": "array", "items": { "$ref": "https://ns.adobe.com/xdm/data/paymentitem" }</pre>
-    </td>
-  </tr>
-  <tr>
-    <td>[!UICONTROL Object]</td>
-    <td></td>
-    <td>다음 <code>type</code> 아래에 정의된 각 하위 필드의 속성 <code>properties</code> 스칼라 형식을 사용하여 정의할 수 있습니다.
-      <pre class="JSON language-JSON hljs">
-"sampleField": { "type": "object", "properties": { "field1": { "type": "string" }, "field2": { "type": "number" } }</pre>
-      개체 유형 필드는 <code>$id</code> 데이터 유형:
-      <pre class="JSON language-JSON hljs">
-"sampleField": { "type": "object", "$ref": "https://ns.adobe.com/xdm/common/phoneinteraction" }</pre>
-    </td>
-  </tr>
-  <tr>
-    <td>[!UICONTROL Map]</td>
-    <td></td>
-    <td>맵 <strong>필수가 아니어야 합니다.</strong> 속성을 정의합니다. It <strong>반드시</strong> 단일 정의 <code>additionalProperties</code> 맵 내에 포함된 값 유형을 설명하는 스키마입니다(각 맵에는 단일 데이터 유형만 포함할 수 있음). 값은 유효한 XDM일 수 있습니다 <code>type</code> 속성을 사용하거나 <code>$ref</code> 속성을 사용합니다.<br/><br/>문자열 유형 값이 있는 맵 필드:
-      <pre class="JSON language-JSON hljs">
-"sampleField": { "type": "object", "additionalProperties":{ "type": "string" }</pre>
-    값에 대한 문자열 배열이 있는 맵 필드:
-      <pre class="JSON language-JSON hljs">
-"sampleField": { "type": "object", "additionalProperties":{ "type": "array", "items": { "type": "string" } }</pre>
-    다른 데이터 유형을 참조하는 맵 필드:
-      <pre class="JSON language-JSON hljs">
-"sampleField": { "type": "object", "additionalProperties":{ "$ref": "https://ns.adobe.com/xdm/data/paymentitem" }</pre>
-    </td>
-  </tr>
-</table>
+스키마 레지스트리 API를 사용하면 형식 및 선택적 제약 조건을 사용하여 사용자 지정 필드를 정의할 수 있습니다. 다음 안내서를 참조하십시오. [스키마 레지스트리 API에서 사용자 지정 필드 정의](../tutorials/custom-fields-api.md) 추가 정보.
