@@ -4,7 +4,7 @@ title: 프로필 대시보드
 description: Adobe Experience Platform은 조직의 실시간 고객 프로필 데이터에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 7590c24baae669ebe3214985088a7135a69ff8bc
+source-git-commit: 77fb7efa90e03c42c036b267ee93547647dab41d
 workflow-type: tm+mt
 source-wordcount: '2324'
 ht-degree: 1%
@@ -51,7 +51,7 @@ Experience Platform 사용자 인터페이스 내의 모든 프로필 기능에 
 
 다음 [!UICONTROL 효능] 탭에는 프로필 유효성 위젯의 사용에 대한 철저한 프로필 데이터의 품질 및 완전성에 대한 지표가 있습니다. 이러한 위젯은 프로필의 구성, 시간 경과에 따른 완벽성 추세 및 프로필 데이터 품질에 대한 평가를 한눈에 보여줍니다.
 
-[프로파일 효과 대시보드.](../images/profiles/attributes-quality-assessment.png)
+![프로파일 효과 대시보드.](../images/profiles/attributes-quality-assessment.png)
 
 자세한 내용은 [프로필 효과 위젯 섹션](#profile-efficacy-widgets) 위젯에 대한 자세한 내용은 현재 사용 가능합니다.
 
