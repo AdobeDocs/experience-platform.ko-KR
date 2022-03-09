@@ -4,7 +4,7 @@ title: 프로필 대시보드
 description: Adobe Experience Platform은 조직의 실시간 고객 프로필 데이터에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 77fb7efa90e03c42c036b267ee93547647dab41d
+source-git-commit: 7dd7cccfe17d360b072783823517e847a50166e6
 workflow-type: tm+mt
 source-wordcount: '2324'
 ht-degree: 1%
@@ -43,11 +43,11 @@ Experience Platform 사용자 인터페이스 내의 모든 프로필 기능에 
 
 자세한 내용은 [대시보드 수정](../customize/modify.md) 및 [위젯 라이브러리 개요](../customize/widget-library.md) 설명서 를 참조하십시오.
 
-## (베타) 프로필 효율성 통찰력 {#profile-efficiency-insights}
+## (베타) 프로필 유효성 통찰력 {#profile-efficacy-insights}
 
 >[!IMPORTANT]
 >
->프로필 효율성 인사이트 기능은 현재 베타 버전으로 일부 사용자는 사용할 수 없습니다. 설명서 및 기능은 변경될 수 있습니다.
+>프로필 유효성 인사이트 기능은 현재 베타 버전으로 일부 사용자는 사용할 수 없습니다. 설명서 및 기능은 변경될 수 있습니다.
 
 다음 [!UICONTROL 효능] 탭에는 프로필 유효성 위젯의 사용에 대한 철저한 프로필 데이터의 품질 및 완전성에 대한 지표가 있습니다. 이러한 위젯은 프로필의 구성, 시간 경과에 따른 완벽성 추세 및 프로필 데이터 품질에 대한 평가를 한눈에 보여줍니다.
 
@@ -167,7 +167,7 @@ ID에 대해 자세히 알아보려면 [Adobe Experience Platform Identity Servi
 
 >[!IMPORTANT]
 >
->프로필 효율성 위젯은 현재 베타에 있으며 일부 사용자는 사용할 수 없습니다. 설명서 및 기능은 변경될 수 있습니다.
+>프로필 효과 위젯은 현재 베타 버전이며 모든 사용자가 사용할 수 없습니다. 설명서 및 기능은 변경될 수 있습니다.
 
 Adobe은 데이터 분석에 사용할 수 있는 수집된 프로필의 완전성을 평가하는 여러 위젯을 제공합니다. 각각의 프로필 효과 위젯은 병합 정책에 의해 필터링할 수 있습니다. 병합 정책 필터를 변경하려면[!UICONTROL 병합 정책을 사용한 프로필] 드롭다운을 클릭하고 사용 가능한 목록에서 적절한 정책을 선택합니다.
 
