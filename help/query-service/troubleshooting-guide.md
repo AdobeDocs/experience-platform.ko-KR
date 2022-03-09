@@ -5,9 +5,9 @@ title: Query Service 문제 해결 안내서
 topic-legacy: troubleshooting
 description: 이 문서에서는 사용자가 발생하는 일반적인 오류 코드 및 가능한 원인에 대한 정보를 제공합니다.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 7087991c7a3daad57c5acd92a20c7024a1152c7e
+source-git-commit: 38d0c34e7af2466fa005c8adaf3bd9e1d9fd78e1
 workflow-type: tm+mt
-source-wordcount: '3293'
+source-wordcount: '3292'
 ht-degree: 1%
 
 ---
@@ -489,8 +489,7 @@ FROM <table_name>
 
 ## 타사 도구 {#third-party-tools}
 
-+++답변 이 섹션에는 PSQL 및 Power BI과 같은 타사 도구 사용에 대한 정보가 포함되어 있습니다.
-+++
+이 섹션에는 PSQL 및 Power BI과 같은 타사 도구 사용에 대한 정보가 포함되어 있습니다.
 
 ### 쿼리 서비스를 타사 도구에 연결할 수 있습니까?
 
