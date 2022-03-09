@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 쿼리 서비스 도움말
 breadcrumb-title: Query Service 안내서
 user-guide-description: 표준 SQL을 사용하여 플랫폼 데이터 레이크에서 데이터를 쿼리합니다.
 feature: Queries
-source-git-commit: 7dd0f69b51ebda5e43fc0e832be249ed2a0eebe1
+source-git-commit: c3baf586f5e11e085114b1f26422d191b1067281
 workflow-type: tm+mt
-source-wordcount: '149'
+source-wordcount: '151'
 ht-degree: 18%
 
 ---
@@ -32,12 +32,13 @@ ht-degree: 18%
    - [쿼리 실행에 대한 일반 지침](best-practices/writing-queries.md)
    - [데이터 자산 조직에 대한 지침](./best-practices/organize-data-assets.md)
    - [중첩된 데이터 구조를 사용한 작업](best-practices/nested-data-structures.md)
-   - [데이터 중복 제거](best-practices/deduplication.md)
-   - [샘플 경험 이벤트 쿼리](best-practices/experience-event-queries.md)
-   - [샘플 Adobe Analytics 쿼리](best-practices/adobe-analytics.md)
-   - [샘플 Adobe Target 쿼리](best-practices/adobe-target.md)
    - [익명 블록 쿼리 샘플](best-practices/anonymous-block.md)
    - [증분 로드](best-practices/incremental-load.md)
+   - [데이터 중복 제거](best-practices/deduplication.md)
+- 샘플 쿼리 {#sample-queries}
+   - [샘플 경험 이벤트 쿼리](sample-queries/experience-event.md)
+   - [샘플 Adobe Analytics 쿼리](sample-queries/adobe-analytics.md)
+   - [샘플 Adobe Target 쿼리](sample-queries/adobe-target.md)
 - SQL 참조 {#sql}
    - [SQL 개요](sql/overview.md)
    - [SQL 구문](sql/syntax.md)

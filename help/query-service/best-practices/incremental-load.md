@@ -1,15 +1,15 @@
 ---
-title: 샘플 증분 로드 쿼리
+title: 쿼리 서비스의 증분 로드
 description: 증분 로드 기능은 익명 블록 및 스냅샷 기능을 모두 사용하여 일치하는 데이터를 무시하면서 데이터 레이크에서 데이터 웨어하우스로 데이터를 이동하는 거의 실시간 솔루션을 제공합니다.
 exl-id: 1418d041-29ce-4153-90bf-06bd8da8fb78
-source-git-commit: e5a79db157524d014c9a07d2bf5907a5544e7b77
+source-git-commit: 7087991c7a3daad57c5acd92a20c7024a1152c7e
 workflow-type: tm+mt
-source-wordcount: '687'
+source-wordcount: '688'
 ht-degree: 0%
 
 ---
 
-# 샘플 증분 데이터 로드 쿼리
+# 쿼리 서비스의 증분 로드
 
 증분 로드 디자인 패턴은 데이터를 관리하는 솔루션입니다. 이 패턴은 마지막 로드 실행 이후 생성 또는 수정된 데이터 집합에 있는 정보만 처리합니다.
 

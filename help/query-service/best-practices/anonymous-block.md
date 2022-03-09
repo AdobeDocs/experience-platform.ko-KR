@@ -1,15 +1,15 @@
 ---
-title: 샘플 익명 블록 쿼리
+title: 쿼리 서비스의 익명 블록
 description: 익명 블록은 Adobe Experience Platform 쿼리 서비스에서 지원하는 SQL 구문이므로 쿼리 시퀀스를 효율적으로 실행할 수 있습니다
 exl-id: ec497475-9d2b-43aa-bcf4-75a430590496
-source-git-commit: 83b9aad78bcbf6e40d3059607a3779b6f1a2083f
+source-git-commit: 7087991c7a3daad57c5acd92a20c7024a1152c7e
 workflow-type: tm+mt
-source-wordcount: '499'
+source-wordcount: '491'
 ht-degree: 0%
 
 ---
 
-# 익명 블록에 대한 샘플 쿼리
+# 쿼리 서비스의 익명 블록
 
 Adobe Experience Platform 쿼리 서비스는 익명 블록을 지원합니다. 익명 블록 기능을 사용하면 시퀀스로 실행되는 하나 이상의 SQL 문을 체인할 수 있습니다. 예외 처리 옵션도 허용합니다.
 
@@ -60,4 +60,4 @@ $$;
 
 이 문서를 읽으면 이제 익명 블록과 블록의 구조를 명확하게 이해할 수 있습니다. [쿼리 실행에 대한 자세한 정보](./writing-queries.md)쿼리 서비스에서 쿼리 실행에 대한 안내서를 참조하십시오.
 
-Query Service에서 사용할 수 있는 쿼리 샘플을 더 보려면 [Adobe Analytics 샘플 쿼리](./adobe-analytics.md), [Adobe Target 샘플 쿼리](./adobe-target.md), 또는 [ExperienceEvent 샘플 쿼리](./experience-event-queries.md).
+또한 다음 내용을 읽어야 합니다 [증분 로드 디자인 패턴에 익명 블록 사용 방법](./incremental-load.md) 쿼리 효율성을 높입니다.
