@@ -3,9 +3,9 @@ title: Experience Platform Web SDK에 대한 데이터 스트림 구성
 description: '데이터 저장소를 구성하는 방법을 알아봅니다. '
 keywords: 구성;데이터 스트림;데이터 스트림 ID;에지;데이터 스트림 ID;환경 설정;edgeConfigId;id;ID 동기화 사용;ID 동기화 컨테이너 ID;샌드박스;스트리밍 입력;이벤트 데이터 세트;target;클라이언트 코드;속성 토큰;Target 환경 ID;쿠키 대상;URL 대상;Analytics 설정 차단 보고서 세트 ID;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: c2378c5da73c36e5889d2c83b18194ff239fce96
+source-git-commit: 0d23576097b113fa3b24857467658bdf745be427
 workflow-type: tm+mt
-source-wordcount: '2045'
+source-wordcount: '1940'
 ht-degree: 1%
 
 ---
@@ -107,14 +107,6 @@ JSON이 유효하면 오른쪽 패널에 미리 보기 스키마가 표시됩니
 새 데이터 스트림을 구성하거나 기존 데이터 스트림을 선택하여 보면 해당 데이터 스트림에 대한 세부 정보 페이지가 나타납니다. 여기에서 해당 ID를 포함하여 데이터 스트림에 대한 추가 정보를 찾을 수 있습니다.
 
 ![생성된 데이터 스트림에 대한 세부 정보 페이지](../images/datastreams/view-details.png)
-
-데이터 스트림을 만들 때 세 개의 관련 환경이 동일한 설정으로 자동으로 생성됩니다. 이 세 가지 환경은 다음과 같습니다 `dev`, `stage`, 및 `prod`에 해당하는 [태그의 기본 환경](../../tags/ui/publishing/environments.md). 태그 라이브러리를 `dev` 환경에서 라이브러리는 자동으로 `dev` 데이터 스트림의 환경입니다. 개별 환경에서 필요에 맞게 설정을 자유롭게 편집할 수 있습니다.
-
-SDK 구현에서 `edgeConfigId` 는 해당 데이터 스트림 내의 특정 환경과 데이터 스트림을 지정하는 복합 ID입니다. 예를 들어 `stage` ID가 있는 데이터 스트림의 환경 `1c86778b-cdba-4684-9903-750e52912ad1`를 사용하려면 `edgeConfigId` `1c86778b-cdba-4684-9903-750e52912ad1:stage`.
-
->[!IMPORTANT]
->
->복합 ID에 환경이 없으면 프로덕션 환경(`prod`사용)
 
 데이터 스트림 세부 사항 화면에서 다음을 수행할 수 있습니다 [서비스 추가](#add-services) 액세스 권한이 있는 Adobe Experience Cloud 제품의 기능을 활성화하기 위한 것입니다.
 
