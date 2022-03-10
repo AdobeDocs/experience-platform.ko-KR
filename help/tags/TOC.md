@@ -4,10 +4,10 @@ user-guide-title: 태그 도움말
 breadcrumb-title: 태그
 user-guide-description: 고객 경험을 향상시키기 위해 분석, 마케팅 및 광고 태그를 배포 및 관리하는 방법을 살펴볼 수 있습니다.
 feature: Tags
-source-git-commit: 7cbf8cfa4ac7aeff9f1ed56777212f5203df2ce9
+source-git-commit: 66975d2352062e4abe1af35d7a7130a5c85188d0
 workflow-type: tm+mt
-source-wordcount: '382'
-ht-degree: 68%
+source-wordcount: '386'
+ht-degree: 69%
 
 ---
 
@@ -44,6 +44,7 @@ ht-degree: 68%
    * [라이브러리](./ui/publishing/libraries.md)
    * [자체 호스팅 라이브러리](./ui/publishing/hosts/self-hosting-libraries.md)
    * [라이브러리 다시 게시](./ui/publishing/republish.md)
+   * [Premium CDN 지원(베타)](./ui/publishing/premium-cdn.md)
 * 클라이언트측 정보 {#client-side}
    * [개요](./ui/client-side/overview.md)
    * [비동기 배포](./ui/client-side/asynchronous-deployment.md)
@@ -191,6 +192,6 @@ ht-degree: 68%
 * [용어 업데이트](./term-updates.md)
 * 릴리스 정보  {#release-notes}
    * [최신 항목](./release-notes/current.md)
-   * [2020 릴리스 노트](./release-notes/2020.md)
-   * [2019 릴리스 노트](./release-notes/2019.md)
+   * [2020 릴리스 정보](./release-notes/2020.md)
+   * [2019 릴리스 정보](./release-notes/2019.md)
    * [2018 릴리스 노트](./release-notes/2018.md)
