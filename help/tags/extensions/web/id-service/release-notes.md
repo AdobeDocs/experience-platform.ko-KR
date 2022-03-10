@@ -2,10 +2,10 @@
 title: Adobe Experience Cloud Identity 서비스 확장에 대한 릴리스 노트
 description: Adobe Experience Platform의 Adobe Experience Cloud Identity 서비스 태그 확장에 대한 최신 릴리스 노트입니다.
 exl-id: f9bfbed7-1eec-4916-9235-a75b5e2efcf8
-source-git-commit: 1d3abede47c97c9a4f3b18ae25c890c309e942fd
+source-git-commit: 04dfe55fec06d08a0caef7aee5bf8d85c6056149
 workflow-type: tm+mt
-source-wordcount: '521'
-ht-degree: 78%
+source-wordcount: '614'
+ht-degree: 68%
 
 ---
 
@@ -13,17 +13,32 @@ ht-degree: 78%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
 
 Adobe Experience Platform 태그 확장뿐만 아니라 Experience Cloud Identity 서비스 자체에 대한 릴리스 노트에 대해서는 다음을 참조하십시오. [https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html)
 
-## 2021년 11월 3일
+## 2022년 3월 9일
 
-### Experience Cloud ID 확장 5.2.1
+### Experience Cloud ID 확장 5.4.0
 
 #### **기능**
 
-* 이 패치에는 Google Chrome 브라우저의 `SameSite=None` 특성이 있는 iFrame에서 쿠키를 쓰는 수정 사항이 포함되어 있습니다.
+* 이 버전에는 다음 업데이트가 있는 최신 방문자 5.4.0이 포함되어 있습니다.
+
+   * 라이프타임 구성 기능 `s_ecid` cookieLifetime 구성을 사용하는 쿠키
+   * 하위 iFrame에 페이지가 로드될 때 발생하는 Firefox 브라우저 문제를 업데이트합니다
+
+## 2021년 10월 10일
+
+### Experience Cloud ID 확장 5.3.1
+
+#### **기능**
+
+* 이 버전에는 다음과 같은 새로운 업데이트가 있는 최신 방문자 5.3.0이 포함되어 있습니다.
+
+   * 로컬 ECID를 생성하도록 알고리즘을 업데이트했습니다
+   * 최신 옵트인 사용 `Secure` 및 `SameSite` 개인 정보 쿠키에 대한 플래그
+   * 하위 iFrame에 페이지가 로드될 때 Firefox 브라우저 문제가 해결되었습니다
 
 ## 2021년 1월 12일
 
@@ -32,6 +47,14 @@ Adobe Experience Platform 태그 확장뿐만 아니라 Experience Cloud Identit
 #### **기능**
 
 * ECID DataElement에 대한 수정 사항이 있는 VisitorJS 5.2.0 패치를 업데이트하면 동의를 받을 때 업데이트되지 못했습니다.
+
+## 2020년 11월 3일
+
+### Experience Cloud ID 확장 5.2.1
+
+#### **기능**
+
+* 이 패치에는 Google Chrome 브라우저의 `SameSite=None` 특성이 있는 iFrame에서 쿠키를 쓰는 수정 사항이 포함되어 있습니다.
 
 ## 2020년 10월 27일
 
