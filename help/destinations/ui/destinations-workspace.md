@@ -4,9 +4,9 @@ title: 대상 작업 공간
 description: 대상 작업 영역은 카탈로그, 찾아보기, 계정 및 시스템 보기의 네 섹션으로 구성됩니다. 이러한 내용은 아래 섹션에 설명되어 있습니다.
 seo-description: In Adobe Experience Platform, select Destinations from the left navigation bar to access the destinations workspace.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: 533f76891f47ba11e2a9de87aa8c249eb9249895
+source-git-commit: 2d944c7bd237efbbd4a770b3a6dd03c4133bc901
 workflow-type: tm+mt
-source-wordcount: '1084'
+source-wordcount: '1101'
 ht-degree: 2%
 
 ---
@@ -107,8 +107,8 @@ Adobe Experience Platform에서 **[!UICONTROL 대상]** 왼쪽 탐색 모음에�
 | [!UICONTROL 연결 유형] | 저장소 버킷 또는 대상에 대한 연결 유형을 나타냅니다. <ul><li>이메일 마케팅 대상: S3, FTP 또는 [!DNL Azure Blob].</li><li>실시간 광고 대상의 경우: 서버 간.</li><li>스트리밍 대상의 경우: 다음을 수행할 수 있습니다. [!DNL Azure Event Hubs] 또는 [!DNL Amazon Kinesis].</li></ul> |
 | [!UICONTROL 사용자 이름] | 대상 플로우에 대해 선택한 계정 자격 증명입니다. |
 | [!UICONTROL 활성화 데이터] | 이 대상에 활성화된 세그먼트 수를 나타냅니다. 활성화된 세그먼트에 대한 자세한 내용을 보려면 이 컨트롤을 선택하십시오. 을(를) 참조하십시오. [활성화 데이터](/help/destinations/ui/destination-details-page.md#activation-data) 를 참조하십시오. |
-| [!UICONTROL 생성됨] | 대상으로 활성화 흐름이 만들어진 날짜 및 UTC 시간입니다. |
-| [!UICONTROL 상태] | `Active` 또는 `Inactive`. 데이터를 이 대상에 활성화할지 여부를 나타냅니다. |
+| [!UICONTROL 생성됨] | 대상으로 활성화 흐름이 만들어진 날짜 및 UTC 시간입니다. 활성화 흐름을 가장 최근 첫 번째 또는 가장 오래된 순서로 정렬하려면 위쪽/아래쪽 화살표 기호를 선택합니다. |
+| [!UICONTROL 상태] | `Enabled` 또는 `Disabled`. 데이터를 이 대상에 활성화할지 여부를 나타냅니다. |
 
 오른쪽 레일에서 대상에 대한 자세한 정보를 표시하려면 대상 행을 클릭합니다.
 
