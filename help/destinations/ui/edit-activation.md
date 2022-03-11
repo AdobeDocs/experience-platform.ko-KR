@@ -6,9 +6,9 @@ seo-title: Edit activation dataflows
 description: Adobe Experience Platform의 기존 활성화 데이터 플로우를 편집하려면 이 문서의 단계를 따르십시오.
 seo-description: Follow the steps in this article to edit an existing activation dataflow in Adobe Experience Platform.
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
-source-git-commit: 2d944c7bd237efbbd4a770b3a6dd03c4133bc901
+source-git-commit: cf87db062f162f73a22c7085a25cc34e997597b1
 workflow-type: tm+mt
-source-wordcount: '313'
+source-wordcount: '328'
 ht-degree: 0%
 
 ---
@@ -16,6 +16,8 @@ ht-degree: 0%
 # 활성화 데이터 흐름 편집 {#edit-activation-flows}
 
 Adobe Experience Platform에서는 내보낸 세그먼트 및 프로필 속성, 내보내기 빈도, 활성화 데이터 데이터 흐름이 활성화 또는 비활성화되었는지 여부 등과 같은 기존 활성화 데이터 흐름의 다양한 구성 요소를 대상으로 편집할 수 있습니다.
+
+## 데이터 흐름 편집 {#edit-dataflows}
 
 기존 활성화 데이터 흐름을 편집하려면 아래 절차를 따르십시오.
 
@@ -29,7 +31,7 @@ Adobe Experience Platform에서는 내보낸 세그먼트 및 프로필 속성, 
 
 3. 편집할 대상 데이터 흐름의 이름을 선택합니다.
 
-   ![대상 선택](../assets/ui/edit-activation/destination-select.png)
+   ![Select destination](../assets/ui/edit-activation/destination-select.png)
 
 4. 다음 **[!UICONTROL 데이터 흐름 실행]** 사용 가능한 컨트롤을 보여주는 대상 페이지가 나타납니다. 이때 대상 데이터 흐름의 여러 구성 요소를 편집할 수 있습니다.
 
@@ -40,6 +42,10 @@ Adobe Experience Platform에서는 내보낸 세그먼트 및 프로필 속성, 
    * 또한 대상 데이터 흐름 이름 및 설명을 편집할 수 있습니다.
    * 를 사용할 수 있습니다 **[!UICONTROL 활성화됨]/[!UICONTROL 비활성화됨]** 모든 데이터 내보내기를 대상으로 시작 및 일시 중지로 전환합니다.
 
-   ![대상 세부 사항](../assets/ui/edit-activation/destination-details.png)
+   ![Destination details](../assets/ui/edit-activation/destination-details.png)
 
-5. 을(를) 참조하십시오. [활성화 개요](activation-overview.md) 대상에 새 세그먼트를 활성화하는 방법에 대한 자세한 정보.
+## 다음 단계 {#next-steps}
+
+이 자습서를 따라 다음을 성공적으로 사용했습니다. **[!UICONTROL 대상]** 기존 대상 데이터 흐름을 업데이트하는 작업 공간입니다.
+
+대상에 대한 자세한 내용은 [대상 개요](../catalog/overview.md).
