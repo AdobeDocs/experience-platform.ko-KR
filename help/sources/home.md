@@ -5,7 +5,7 @@ title: 소스 커넥터 개요
 topic-legacy: overview
 description: Adobe Experience Platform을 사용하면 Platform 서비스를 사용하여 들어오는 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 외부 소스에서 데이터를 수집할 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 등과 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 7254c84f1a7f4f45a0098e27515a7a01cae395db
+source-git-commit: 5be496cec28ab99c057834005aa1f014cea7406c
 workflow-type: tm+mt
 source-wordcount: '1006'
 ht-degree: 0%
@@ -24,7 +24,7 @@ Experience Platform을 사용하면 서로 다른 소스에서 수집한 데이�
 
 Experience Platform 소스는 다음 카테고리로 그룹화됩니다.
 
-### Adobe 애플리케이션
+### Adobe 애플리케이션 {#adobe-applications}
 
 Experience Platform을 사용하면 Adobe Analytics 및 Adobe Audience Manager을 포함한 다른 Adobe 애플리케이션에서 데이터를 수집할 수 있습니다. 자세한 내용은 다음 관련 문서를 참조하십시오.
 
@@ -38,13 +38,13 @@ Experience Platform을 사용하면 Adobe Analytics 및 Adobe Audience Manager�
 - [[!DNL Marketo Engage] 커넥터 개요](connectors/adobe-applications/marketo/marketo.md)
 - [만들기 [!DNL Marketo Engage] UI의 소스 연결](./tutorials/ui/create/adobe-applications/marketo.md)
 
-### 광고
+### 광고 {#advertising}
 
 Experience Platform은 타사 광고 시스템에서 데이터 섭취를 지원합니다. 특정 소스 커넥터에 대한 자세한 내용은 다음 관련 문서를 참조하십시오.
 
 - [[!DNL Google AdWords]](connectors/advertising/ads.md) 커넥터
 
-### 클라우드 스토리지
+### 클라우드 스토리지 {#cloud-storage}
 
 클라우드 스토리지 소스는 다운로드, 형식 지정 또는 업로드할 필요 없이 고유한 데이터를 플랫폼으로 가져올 수 있습니다. 수집된 데이터는 XDM JSON, XDM Parquet 또는 구분된 형식으로 지정할 수 있습니다. 프로세스의 모든 단계는 사용자 인터페이스를 사용하여 소스 워크플로우에 통합됩니다. 자세한 내용은 다음 관련 문서를 참조하십시오.
 
@@ -62,7 +62,7 @@ Experience Platform은 타사 광고 시스템에서 데이터 섭취를 지원�
 - [[!DNL Oracle Object Storage] 커넥터](connectors/cloud-storage/oracle-object-storage.md)
 - [[!DNL SFTP] 커넥터](connectors/cloud-storage/sftp.md)
 
-### CRM(고객 관계 관리)
+### CRM(고객 관계 관리) {#crm}
 
 CRM 시스템은 고객 관계를 구축하는 데 도움이 되는 데이터를 제공하므로 충성도를 만들고 고객 유지 수준을 향상시킬 수 있습니다. Experience Platform에서 CRM 데이터 섭취를 지원합니다 [!DNL Microsoft Dynamics 365] 및 [!DNL Salesforce]. 자세한 내용은 다음 관련 문서를 참조하십시오.
 
@@ -71,14 +71,14 @@ CRM 시스템은 고객 관계를 구축하는 데 도움이 되는 데이터를
 - [[!DNL Veeva CRM]](connectors/crm/veeva.md)
 - [[!DNL Zoho CRM]](connectors/crm/zoho.md)
 
-### 고객 성공
+### 고객 성공 {#customer-success}
 
 Experience Platform은 타사 고객 성공 애플리케이션에서 데이터를 수집하기 위한 지원을 제공합니다. 자세한 내용은 다음 관련 문서를 참조하십시오.
 
 - [[!DNL Salesforce Service Cloud] 커넥터](connectors/customer-success/salesforce-service-cloud.md)
 - [[!DNL ServiceNow] 커넥터](connectors/customer-success/servicenow.md)
 
-### 데이터베이스
+### 데이터베이스 {#database}
 
 Experience Platform은 타사 데이터베이스에서 데이터를 수집하기 위한 지원을 제공합니다. 특정 소스 커넥터에 대한 자세한 내용은 다음 관련 문서를 참조하십시오.
 
@@ -101,19 +101,19 @@ Experience Platform은 타사 데이터베이스에서 데이터를 수집하기
 - [[!DNL PostgreSQL] 커넥터](connectors/databases/postgres.md)
 - [[!DNL Snowflake] 커넥터](connectors/databases/snowflake.md)
 
-### eCommerce
+### eCommerce {#ecommerce}
 
 Experience Platform은 타사 eCommerce 시스템에서 데이터를 수집하기 위한 지원을 제공합니다. 특정 소스 커넥터에 대한 자세한 내용은 다음 관련 문서를 참조하십시오.
 
 - [[!DNL Shopify]](connectors/ecommerce/shopify.md)
 
-### 로컬 시스템
+### 로컬 시스템 {#local-system}
 
 Experience Platform은 로컬 시스템에서 데이터를 수집하기 위한 지원을 제공합니다. 특정 소스 커넥터에 대한 자세한 내용은 다음 관련 문서를 참조하십시오.
 
 - [로컬 파일 업로드](connectors/local-system/local-file-upload.md)
 
-### 마케팅 자동화
+### 마케팅 자동화 {#marketing-automation}
 
 Experience Platform은 타사 마케팅 자동화 시스템에서 데이터 섭취를 지원합니다. 특정 소스 커넥터에 대한 자세한 내용은 다음 관련 문서를 참조하십시오.
 
@@ -121,19 +121,19 @@ Experience Platform은 타사 마케팅 자동화 시스템에서 데이터 섭�
 - [[!DNL Mailchimp]](connectors/marketing-automation/mailchimp.md)
 - [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md)
 
-### 결제
+### 결제 {#payments}
 
 Experience Platform은 타사 결제 시스템에서 데이터 섭취를 지원합니다. 특정 소스 커넥터에 대한 자세한 내용은 다음 관련 문서를 참조하십시오.
 
 - [[!DNL PayPal] 커넥터](connectors/payments/paypal.md)
 
-### 스트리밍
+### 스트리밍 {#streaming}
 
 Experience Platform은 스트리밍 소스에서 데이터를 수집하도록 지원합니다. 특정 소스 커넥터에 대한 자세한 내용은 다음 관련 문서를 참조하십시오.
 
 - [[!DNL HTTP API]](connectors/streaming/http.md)
 
-### 프로토콜
+### 프로토콜 {#protocols}
 
 Experience Platform은 타사 프로토콜 시스템에서 데이터 섭취를 지원합니다. 특정 소스 커넥터에 대한 자세한 내용은 다음 관련 문서를 참조하십시오.
 
