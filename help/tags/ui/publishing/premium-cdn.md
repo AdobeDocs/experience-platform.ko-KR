@@ -1,9 +1,10 @@
 ---
 title: 태그에 대한 Premium CDN 지원
 description: 태그의 프리미엄 CDN 기능과 이 기능을 사용하여 여러 지리적 지역에서 콘텐츠를 전달하는 방법을 알아봅니다.
-source-git-commit: 530fc1ad3f389ffb5d77ddf6aa0b0b3208f1d532
+exl-id: 33e36d3b-9e21-44a8-8498-32a5fc20b46b
+source-git-commit: 3843b08a3a047200f02c1ceb17a64a196d4a0287
 workflow-type: tm+mt
-source-wordcount: '580'
+source-wordcount: '536'
 ht-degree: 0%
 
 ---
@@ -20,21 +21,13 @@ ht-degree: 0%
 
 Premium CDN 지원은 유료 기능이며, 활성화 및 사용하려면 조직에서 구매해야 합니다. 이 안내서에서는 이 기능을 구입한 후 데이터 수집 UI에서 구성하고 사용하는 방법을 설명합니다.
 
-## 회사에 대해 프리미엄 CDN 활성화
+## 조직에 프리미엄 CDN을 사용하도록 설정
 
-Premium CDN은 회사 수준에서 활성화되어 있습니다. 즉, 이 기능을 사용하려면 회사 편집 권한이 있어야 합니다.
-
-데이터 수집 UI에서 **[!UICONTROL 태그]** > **[!UICONTROL 회사]**. 여기에서 기능을 활성화할 회사를 선택한 다음 을 선택합니다 **[!UICONTROL 구성]** .
-
-![구성할 회사 선택](../../images/ui/publishing/premium-cdn/configure-property.png)
-
-표시되는 구성 대화 상자에서 **[!UICONTROL Premium CDN 활성화]** 선택하기 전에 **[!UICONTROL 저장]** 를 클릭하여 변경 사항을 확인합니다.
-
-![프리미엄 CDN 옵션 활성화](../../images/ui/publishing/premium-cdn/enable-premium-cdn.png)
+Premium CDN은 회사 수준에서 사용할 수 있습니다. 조직에서 프리미엄 CDN 기능을 구입하면 데이터 수집 UI에서 Adobe 관리자가 귀사에 대해 활성화합니다.
 
 ## 업데이트된 포함 코드로 태그 라이브러리를 다시 빌드하고 설치합니다
 
-프리미엄 CDN 기능을 사용한다고 해서 태그 자산이 즉시 복제되고 새 지역 내에서 사용할 준비가 되는 것은 아닙니다. 이 기능은 이제 이 기능을 선택할 시기를 선택할 수만 있습니다.
+프리미엄 CDN이 활성화되어 있다고 해서, 태그 자산이 즉시 복제되고 새 지역 내에서 사용할 준비가 되었음을 의미하지는 않습니다. 이 기능은 이제 이 기능을 선택할 시기를 선택할 수만 있습니다.
 
 >[!IMPORTANT]
 >
