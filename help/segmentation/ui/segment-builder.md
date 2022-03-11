@@ -5,9 +5,9 @@ title: 세그먼트 빌더 UI 안내서
 topic-legacy: ui guide
 description: Adobe Experience Platform UI의 세그먼트 빌더에서는 프로필 데이터 요소와 상호 작용할 수 있는 풍부한 작업 공간을 제공합니다. 작업 공간에서는 데이터 속성을 표시하는 데 사용되는 드래그 앤 드롭 타일과 같이 규칙을 만들고 편집하기 위한 직관적인 컨트롤을 제공합니다.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 6f4d250750d36c516a9a5730b5ced91e47d3bf05
+source-git-commit: 708103a52187ef17892de60ff8e562a05fc2f2db
 workflow-type: tm+mt
-source-wordcount: '2371'
+source-wordcount: '2457'
 ht-degree: 1%
 
 ---
@@ -81,7 +81,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->일반 eVar 값이 계속 채워지는 동안 다음을 수행해야 합니다 **not** 값은 원래 보고서에 있었던 것과 다른 것을 의미할 수 있으므로(가능한 경우) 세그먼트 정의에 사용하십시오.
+>일반 eVar 값이 계속 채워지는 동안에는 다음을 수행해야 합니다 **not** 값은 원래 보고서에 있었던 것과 다른 것을 의미할 수 있으므로 세그먼트 정의(가능한 경우)에서 사용하십시오.
 
 보고서 세트가 매핑되면 프로필 관련 워크플로우 및 세그멘테이션 내에서 이러한 새로 매핑된 필드를 사용할 수 있습니다.
 
@@ -113,6 +113,14 @@ ht-degree: 1%
 >[!IMPORTANT]
 >
 >Adobe Experience Platform에 대한 최신 변경 사항으로 `OR` 및 `AND` 이벤트 간 논리 연산자입니다. 이러한 업데이트는 기존 세그먼트에 영향을 주지 않습니다. 그러나 기존 세그먼트와 새 세그먼트 생성에 대한 모든 후속 업데이트는 이러한 변경 사항의 영향을 받습니다. 자세한 내용은 [시간 상수 업데이트](./segment-refactoring.md) 추가 정보.
+
+속성에 대한 값을 선택할 때 속성이 될 수 있는 열거형 값 목록이 표시됩니다.
+
+![](../images/ui/segment-builder/enum-list.png)
+
+이 열거형 목록에서 값을 선택하면 값에 솔리드 테두리가 표시됩니다. 그러나 `meta:enum` (소프트) 열거형을 사용하여 **not** 열거형 목록 고유한 값을 만드는 경우 이 값이 열거형 목록에 없다는 경고와 함께 점선 테두리가 표시됩니다.
+
+![](../images/ui/segment-builder/enum-warning.png)
 
 ### 대상자 추가
 
@@ -196,7 +204,7 @@ ht-degree: 1%
 
 [!DNL Experience Platform] 을(를) 사용하면 여러 소스에서 데이터를 결합하여 각 개별 고객에 대한 전체 보기를 볼 수 있습니다. 이 데이터를 함께 가져올 때 병합 정책이 [!DNL Platform] 은(는) 데이터의 우선 순위가 지정되는 방식과 프로필을 만들기 위해 결합할 데이터를 결정하는 데 사용됩니다.
 
-이 대상의 마케팅 목적과 일치하는 병합 정책을 선택하거나 [!DNL Platform]. 고유한 기본 병합 정책을 만드는 등 조직에 고유한 여러 병합 정책을 만들 수 있습니다. 조직을 위한 병합 정책 만들기에 대한 단계별 지침은 [정책 병합 개요](../../profile/merge-policies/overview.md).
+You can select a merge policy that matches your marketing purpose for this audience or use the default merge policy provided by [!DNL Platform]. 고유한 기본 병합 정책을 만드는 등 조직에 고유한 여러 병합 정책을 만들 수 있습니다. 조직을 위한 병합 정책 만들기에 대한 단계별 지침은 [정책 병합 개요](../../profile/merge-policies/overview.md).
 
 세그먼트 정의에 대한 병합 정책을 선택하려면 **[!UICONTROL 필드]** 탭을 클릭한 다음 **[!UICONTROL 병합 정책]** 드롭다운 메뉴에서 사용할 병합 정책을 선택합니다.
 
