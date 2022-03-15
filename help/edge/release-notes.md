@@ -3,14 +3,24 @@ title: Adobe Experience Platform Web SDK 릴리스 노트
 description: Adobe Experience Platform Web SDK에 대한 최신 릴리스 정보입니다.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;릴리스 노트;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: a768cde86215ed9aad19e45362c6185276456703
+source-git-commit: 3d8e21f76b23bac3ee88702c19cf6d6a6e25a3ae
 workflow-type: tm+mt
-source-wordcount: '852'
-ht-degree: 4%
+source-wordcount: '976'
+ht-degree: 3%
 
 ---
 
 # 릴리스 정보
+
+## 버전 2.9.0 - 2022년 3월 10일
+
+* 추적에 대한 지원이 추가되었습니다 [!DNL control (default)] Adobe Target 경험.
+* 단일 페이지 애플리케이션에 대해 보기 변경 이벤트를 최적화했습니다. 이제 개인화된 경험이 렌더링될 때 디스플레이 알림이 보기 변경 이벤트에 포함됩니다.
+* 없을 때 콘솔 경고가 제거됨 `eventType` 이 있습니다.
+* 이 `propositions` 속성은 `sendEvent` 캐시에서 경험을 요청하거나 검색할 때 명령 다음 `propositions` 이제 속성이 항상 배열로 정의됩니다.
+* Adobe Experience Edge에서 반환된 오류가 있을 때 숨겨진 컨테이너가 표시되지 않던 문제를 수정했습니다.
+* 상호 작용 이벤트가 Adobe Target에서 계산되지 않는 문제를 해결했습니다. 이 오류는 web.webPageDetails.viewName의 XDM에 보기 이름을 추가하여 수정되었습니다.
+* 콘솔 메시지의 끊어진 설명서 링크를 수정합니다.
 
 ## 버전 2.8.0 - 2022년 1월 19일
 

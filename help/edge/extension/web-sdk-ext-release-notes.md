@@ -2,9 +2,9 @@
 title: Adobe Experience Platform Web SDK Extension 릴리스 노트
 description: Adobe Experience Platform 웹 SDK 태그 확장
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: a768cde86215ed9aad19e45362c6185276456703
+source-git-commit: bb06dd63de1a36d3e3d065a986f3d34f63783895
 workflow-type: tm+mt
-source-wordcount: '1256'
+source-wordcount: '1290'
 ht-degree: 48%
 
 ---
@@ -12,6 +12,12 @@ ht-degree: 48%
 # Adobe Experience Platform Web SDK 확장 릴리스 노트
 
 이 문서에서는 Adobe Experience Platform 웹 SDK 태그 확장에 대한 릴리스 노트를 다룹니다. SDK 자체에 대한 최신 릴리스 노트는 [Platform Web SDK 릴리스 노트](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
+
+## 버전 2.10.0 - 2022년 3월 10일
+
+* 업데이트된 Adobe Target VEC 편집기에서 사용할 수 있도록 구성 페이지에서 복사할 수 있는 코드 조각 사전 숨김을 업데이트합니다.
+
+Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.9.0을 포함합니다.
 
 ## 버전 2.9.0 - 2022년 1월 19일
 
