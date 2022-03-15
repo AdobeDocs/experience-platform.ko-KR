@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: Adobe Experience Platform 세그멘테이션 서비스 API를 사용하여 세그먼트를 평가하고 세그먼트 결과에 액세스하는 방법을 알려면 이 자습서를 따르십시오.
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-source-git-commit: 9e73925b0842c3b67db8bfda4b984bfa3e98a2fe
+source-git-commit: 885ebbcae223229f4614acd5b50266ea11bcf906
 workflow-type: tm+mt
 source-wordcount: '1595'
 ht-degree: 0%
@@ -153,7 +153,7 @@ ht-degree: 0%
 - [내보내기 진행 모니터링](#monitor-export-progress) - 내보내기 프로세스의 현재 진행 상태를 확인합니다.
 - [대상 데이터 읽기](#next-steps) - 대상자의 구성원을 나타내는 결과 XDM 개별 프로필을 검색합니다.
 
-### 대상 데이터 세트 만들기
+### 대상 데이터 세트 만들기 {#create-dataset}
 
 대상을 내보낼 때 먼저 타겟 데이터 세트를 만들어야 합니다. 내보내기가 성공하도록 데이터 세트를 올바르게 구성해야 합니다.
 

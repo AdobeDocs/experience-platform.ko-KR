@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Adobe Experience Platform 개요
 breadcrumb-title: Experience Platform 개요
 user-guide-description: Experience Platform을 통해 개인화된 경험을 실시간으로 고객에게 전달하는 방법을 살펴볼 수 있습니다.
-source-git-commit: 030d6761b36e5bc7e6e12b0524a810a13e060e55
+source-git-commit: c53482763a98946543907ea96df1a1080ce78beb
 workflow-type: tm+mt
-source-wordcount: '233'
-ht-degree: 22%
+source-wordcount: '236'
+ht-degree: 27%
 
 ---
 
@@ -19,6 +19,7 @@ ht-degree: 22%
 * [플랫폼 기반의 고객 경험(비디오)](video/customer-experience.md)
 * [플랫폼(비디오)에서 제공하는 고객 경험의 배경](video/customer-experience-bts.md)
 * 시작하기 {#getting-started}
+   * [종단 간 예제 워크플로우](end-to-end-tutorial.md)
    * [주요 기능(비디오)](video/key-capabilities.md)
    * [주요 사용 사례(비디오)](video/platform-use-cases.md)
    * [플랫폼 아키텍처(비디오)](video/platform-architecture.md)
@@ -42,7 +43,7 @@ ht-degree: 22%
    * [Customer Journey Analytics](https://experienceleague.adobe.com/docs/customer-journey-analytics.html)
    * [Journey Orchestration](https://experienceleague.adobe.com/docs/journey-orchestration.html)
    * [Offer Decisioning](https://experienceleague.adobe.com/docs/offer-decisioning.html)
-   * [Real-time Customer Data Platform(모든 버전)](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html)
+   * [Real-time Customer Data Platform (모든 에디션)](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html)
    * [애플리케이션 및 지능형 서비스(비디오)](video/application-intelligent-services.md)
    * [Experience Cloud과 플랫폼 통합(비디오)](video/experience-cloud-integrations.md)
 * 거버넌스, 개인 정보 및 보안 {#governance-privacy-security}
