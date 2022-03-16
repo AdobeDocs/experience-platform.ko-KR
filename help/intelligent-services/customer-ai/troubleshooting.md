@@ -1,47 +1,59 @@
 ---
-keywords: Experience Platform;시작하기;고객 ai;인기 항목;고객 ai 입력;고객 ai 출력;고객 ai 문제 해결;고객 ai 오류
+keywords: Experience Platform;getting started;customer ai;popular topics;customer ai input;customer ai output;customer ai troubleshooting;customer ai errors
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 feature: Customer AI
-title: 고객 AI 오류 문제 해결
+title: Customer AI error troubleshooting
 topic-legacy: Getting started
-description: 고객 AI에서 발생하는 일반적인 오류에 대한 답변을 확인하십시오.
+description: Find answers to common errors in Customer AI.
 type: Documentation
 exl-id: 37ff4e85-da92-41ca-afd4-b7f3555ebd43
-source-git-commit: c3320f040383980448135371ad9fae583cfca344
+source-git-commit: 896dda631cd4182f278de0607bea442d8366fe8c
 workflow-type: tm+mt
-source-wordcount: '409'
+source-wordcount: '529'
 ht-degree: 0%
 
 ---
 
-# 고객 AI 오류 문제 해결
+# Customer AI error troubleshooting
 
-고객 AI에는 모델 교육, 점수 책정 및 구성이 실패하면 오류가 표시됩니다. **[!UICONTROL 서비스 인스턴스]** 섹션에서 **[!UICONTROL LAST RUN STATUS]**&#x200B;에 대한 열에 다음 메시지 중 하나가 표시됩니다. **[!UICONTROL 성공]**, **[!UICONTROL 교육 문제]** 및 **[!UICONTROL 실패]**.
+Customer AI displays errors when model training, scoring, and configuration fails. ********************
 
-![마지막 실행 상태](./images/errors/last-run-status.png)
+![](./images/errors/last-run-status.png)
 
-**[!UICONTROL Failed]** 또는 **[!UICONTROL 교육 문제]**&#x200B;가 표시되는 경우 실행 상태를 선택하여 사이드 패널을 열 수 있습니다. 사이드 패널에는 **[!UICONTROL 마지막 실행 상태]** 및 **[!UICONTROL 마지막 실행 세부 정보]**&#x200B;가 포함되어 있습니다. **[!UICONTROL 마지막 실행]** 세부 정보실행이 실패한 이유에 대한 정보가 들어 있습니다. 고객 AI가 오류에 대한 세부 정보를 제공할 수 없는 경우 제공된 오류 코드로 지원에 문의하십시오.
+******** ******** **** In the event that Customer AI is not able to provide details on your error, contact support with the error code thats provided.
 
 <img src="./images/errors/last-run-details.png" width="300" /><br />
 
-## 모델 품질이 좋지 않습니다
+## Unable to access Customer AI in Chrome incognito
 
-&quot;[!UICONTROL 모델 품질이 좋지 않습니다. 수정된 구성]&quot;을 사용하여 새 앱을 만드는 것이 좋습니다. 아래 권장 단계에 따라 문제를 해결하십시오.
+Loading errors in Google Chrome&#39;s incognito mode are present because of updates in Google Chrome’s incognito mode security settings. The issue is actively being worked on with Chrome to make experience.adobe.com a trusted domain.
+
+<img src="./images/errors/error.PNG" width="500" /><br />
+
+### Recommended fix
+
+To workaround this issue you need to add experience.adobe.com as a site that can always use cookies. **** ******** `[*.]experience.adobe.com`**** ****
+
+![](./images/errors/cookies2.gif)
+
+## Model quality is poor
+
+ Follow the recommended steps below to help troubleshoot.
 
 <img src="./images/errors/model-quality.png" width="300" /><br />
 
-### 권장 수정
+### Recommended fix
 
-&quot;모델 품질이 낮음&quot;은 모델 정확도가 허용 가능한 범위 내에 있지 않음을 의미합니다. Customer AI에서 교육 후 신뢰할 수 있는 모델 및 AUC(ROC 곡선 아래 영역)를 작성할 수 없습니다. 오류를 수정하려면 구성 매개변수 중 하나를 변경하고 교육을 다시 실행하는 것이 좋습니다.
+&quot;Model quality is poor&quot; means that the model accuracy is not within an acceptable range. Customer AI was unable to build a reliable model and AUC (Area under the ROC curve) &lt; 0.65 after training. To fix the error, it is recommended that you change one of the configuration parameters and rerun the training.
 
-먼저 데이터의 정확도를 확인합니다. 예측 결과에 필요한 필드가 데이터에 포함되어 있어야 합니다.
+Start by checking the accuracy of your data. It is important that your data contains the necessary fields needed for your predictive outcome.
 
-- 데이터 세트에 최신 날짜가 있는지 확인합니다. 고객 AI는 모델이 트리거될 때 데이터가 항상 최신 것이라고 가정합니다.
-- 정의된 예측 및 자격 조건 창에서 누락된 데이터를 확인합니다. 간격 없이 데이터를 완료해야 합니다. 또한 데이터 세트가 [Customer AI 이전 데이터 요구 사항](./input-output.md#data-requirements)을 충족하는지 확인합니다.
-- 스키마 필드 속성 내에서 상거래, 애플리케이션, 웹 및 검색에서 누락된 데이터를 확인합니다.
+- Check whether your dataset has the latest dates. Customer AI always assumes that the data is up-to-date when the model is triggered.
+- Check for missing data within your defined prediction and eligibility window. Your data needs to be complete with no gaps. [](./input-output.md#data-requirements)
+- Check for missing data in commerce, application, web, and search, within your schema field properties.
 
-데이터가 문제가 아닌 것 같은 경우 자격 조건 모집단 조건을 변경하여 모델을 특정 프로필로 제한합니다(예: `_experience.analytics.customDimensions.eVars.eVar142`이 최근 56일 동안 존재함). 교육 창에서 사용되는 데이터의 모집단 및 크기를 제한합니다.
+`_experience.analytics.customDimensions.eVars.eVar142` This restricts the population and size of the data used in the training window.
 
-자격 모집단 제한이 작동하지 않거나 불가능한 경우 예측 창을 변경합니다.
+If restricting the eligibility population did not work or is not possible, change your prediction window.
 
-- 예측 창을 7일로 변경하고 오류가 계속 발생하는지 확인하십시오. 오류가 더 이상 발생하지 않으면 정의된 예측 창에 충분한 데이터가 없을 수 있음을 나타냅니다.
+- Try changing your prediction window to 7 days and see if the error continues to occur. If the error no longer occurs, this indicates that you may not have enough data for your defined prediction window.
