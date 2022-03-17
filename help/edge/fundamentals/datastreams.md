@@ -3,9 +3,9 @@ title: Experience Platform Web SDK에 대한 데이터 스트림 구성
 description: '데이터 저장소를 구성하는 방법을 알아봅니다. '
 keywords: 구성;데이터 스트림;데이터 스트림 ID;에지;데이터 스트림 ID;환경 설정;edgeConfigId;id;ID 동기화 사용;ID 동기화 컨테이너 ID;샌드박스;스트리밍 입력;이벤트 데이터 세트;target;클라이언트 코드;속성 토큰;Target 환경 ID;쿠키 대상;URL 대상;Analytics 설정 차단 보고서 세트 ID;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 0d23576097b113fa3b24857467658bdf745be427
+source-git-commit: 9dbadcb65d4306702e5e4d7dae2614e86cbde332
 workflow-type: tm+mt
-source-wordcount: '1940'
+source-wordcount: '1944'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->UI에서 이 기능에 액세스하려면 조직에 이 기능이 제공되어야 합니다. 액세스 권한이 없는 경우 CSM(Customer Success Manager)에게 문의하여를 허용 목록에 추가하다 설정하십시오.
+>UI에서 이 기능에 액세스하려면 조직에 이 기능이 제공되어야 합니다. 액세스 권한이 없는 경우 다음 내용을 작성하십시오 [양식](http://adobe.ly/websdkaccess) 필요한 액세스 권한을 부여해 드리겠습니다.
 
 ## 액세스 권한 [!UICONTROL 데이터 스트림] 작업 영역
 
