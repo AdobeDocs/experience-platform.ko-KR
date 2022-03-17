@@ -3,9 +3,9 @@ keywords: Azure Blob;Blob 대상;s3;azure Blob 대상
 title: Azure Blob 연결
 description: Azure Blob 저장 공간에 대한 라이브 아웃바운드 연결을 만들어 Adobe Experience Platform에서 CSV 데이터 파일을 주기적으로 내보냅니다.
 exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
-source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
+source-git-commit: 691e3181e05a24b6bb0ebbe8e0f797a2b4c572d2
 workflow-type: tm+mt
-source-wordcount: '474'
+source-wordcount: '503'
 ht-degree: 2%
 
 ---
@@ -49,6 +49,11 @@ ht-degree: 2%
 이 대상에 연결하려면 [대상 구성 자습서](../../ui/connect-destination.md).
 
 ### 연결 매개 변수 {#parameters}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_blob_rsa"
+>title="RSA 공개 키"
+>abstract="선택적으로 RSA 형식의 공개 키를 첨부하여 내보낸 파일에 암호화를 추가할 수 있습니다. 공개 키는 Base64 인코딩 문자열로 작성해야 합니다."
 
 While [설정](../../ui/connect-destination.md) 이 대상을 사용하려면 다음 정보를 제공해야 합니다.
 
