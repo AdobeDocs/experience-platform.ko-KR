@@ -3,10 +3,10 @@ keywords: 광고; 영업 데스크 광고 회사
 title: 무역센터 연결
 description: Trade Desk는 광고 구매자가 디스플레이, 비디오 및 모바일 인벤토리 소스에서 타겟팅된 디지털 캠페인을 실행하고 재타겟팅할 수 있는 셀프서비스 플랫폼입니다.
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: 169a7ad1adfa3282bd0503ce277373b654ec57cd
+source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
 workflow-type: tm+mt
-source-wordcount: '484'
-ht-degree: 2%
+source-wordcount: '552'
+ht-degree: 3%
 
 ---
 
@@ -34,9 +34,18 @@ ht-degree: 2%
 | IDFA | [!DNL Apple ID for Advertisers] |
 | 거래 데스크 ID | Trade Desk 플랫폼의 광고주 ID |
 
-## 내보내기 유형 {#export-type}
+{style=&quot;table-layout:auto&quot;}
 
-**[!DNL Segment export]** - 세그먼트(대상)의 모든 구성원을 대상으로 내보냅니다.
+## 내보내기 유형 및 빈도 {#export-type-frequency}
+
+대상 내보내기 유형 및 빈도에 대한 자세한 내용은 아래 표를 참조하십시오.
+
+| 항목 | 유형 | 참고 |
+---------|----------|---------|
+| 내보내기 유형 | **[!UICONTROL 세그먼트 내보내기]** | 세그먼트(대상)의 모든 구성원을 대상으로 내보냅니다. |
+| 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 &quot;항상 설정&quot; API 기반 연결입니다. 세그먼트 평가를 기반으로 Experience Platform에서 프로필이 업데이트되는 즉시 커넥터는 업데이트 다운스트림을 대상 플랫폼으로 보냅니다. 자세한 내용 [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations). |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## 전제 조건 {#prerequisites}
 

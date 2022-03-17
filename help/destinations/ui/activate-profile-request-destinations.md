@@ -1,14 +1,14 @@
 ---
 keywords: 프로필 요청 대상 활성화;데이터 활성화;프로필 요청 대상 활성화
-title: 프로필 요청 대상에 대상 데이터 활성화(베타)
+title: 프로필 요청 대상에 대상 데이터 활성화
 type: Tutorial
 seo-title: Activate audience data to profile request destinations
 description: 세그먼트를 프로필 요청 대상에 매핑하여 Adobe Experience Platform에서 보유한 대상 데이터를 활성화하는 방법을 알아봅니다.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by mapping segments to profile request destinations.
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: d0660f29df93659990d80353f86dcbf856afb733
+source-git-commit: 388a061c87cfe9acda177ed71ed9f6017c8c2f4c
 workflow-type: tm+mt
-source-wordcount: '457'
+source-wordcount: '434'
 ht-degree: 0%
 
 ---
@@ -79,6 +79,12 @@ ht-degree: 0%
 
 ![검토](../assets/ui/activate-profile-request-destinations/review.png)
 
-## 세그먼트 활성화 확인 {#verify}
+<!--
 
-을(를) 확인합니다. [대상 모니터링 설명서](../../dataflows/ui/monitor-destinations.md) 를 참조하십시오.
+Commenting out this part since destination monitoring is not available currently for the Adobe Target and Custom Personalization destinations.
+
+## Verify segment activation {#verify}
+
+Check the [destination monitoring documentation](../../dataflows/ui/monitor-destinations.md) for detailed information on how to monitor the flow of data to your destinations.
+
+-->

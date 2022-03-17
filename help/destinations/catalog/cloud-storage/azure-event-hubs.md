@@ -3,9 +3,9 @@ keywords: Azure 이벤트 허브 대상;azure 이벤트 허브;azure 이벤트 �
 title: (베타) [!DNL Azure Event Hubs] 연결
 description: 에 대한 실시간 아웃바운드 연결을 만듭니다. [!DNL Azure Event Hubs] Experience Platform에서 데이터를 스트리밍할 스토리지.
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: be09d794a4cbc3afc76df70d11f55b0cae6f2009
+source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
 workflow-type: tm+mt
-source-wordcount: '1183'
+source-wordcount: '1247'
 ht-degree: 1%
 
 ---
@@ -34,9 +34,16 @@ ht-degree: 1%
 
 예를 들어 잠재 고객이 백서를 다운로드하여 &quot;전환율이 높은&quot; 세그먼트로 분류하는 경우 잠재 고객이 속한 세그먼트를 [!DNL Azure Event Hubs] 대상, 이 이벤트를 [!DNL Azure Event Hubs]. 이 환경에서는 엔터프라이즈 IT 시스템에 가장 적합한 방식으로 IT 방식을 사용하고 이벤트 이외에도 비즈니스 논리를 설명할 수 있습니다.
 
-## 내보내기 유형 {#export-type}
+## 내보내기 유형 및 빈도 {#export-type-frequency}
 
-**프로필 기반** - 원하는 스키마 필드와 함께 세그먼트의 모든 멤버를 내보냅니다(예: 전자 메일 주소, 전화 번호, 성) [대상자 활성화 워크플로우](../../ui/activate-streaming-profile-destinations.md#select-attributes).
+대상 내보내기 유형 및 빈도에 대한 자세한 내용은 아래 표를 참조하십시오.
+
+| 항목 | 유형 | 참고 |
+---------|----------|---------|
+| 내보내기 유형 | **[!UICONTROL 프로필 기반]** | 원하는 스키마 필드와 함께 세그먼트의 모든 구성원을 내보냅니다(예: 전자 메일 주소, 전화 번호, 성)을 선택한 대로 [대상 활성화 워크플로우](../../ui/activate-batch-profile-destinations.md#select-attributes). |
+| 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 &quot;항상 설정&quot; API 기반 연결입니다. 세그먼트 평가를 기반으로 Experience Platform에서 프로필이 업데이트되는 즉시 커넥터는 업데이트 다운스트림을 대상 플랫폼으로 보냅니다. 자세한 내용 [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations). |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## 대상에 연결 {#connect}
 

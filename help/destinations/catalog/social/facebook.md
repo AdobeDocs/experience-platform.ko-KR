@@ -3,10 +3,10 @@ keywords: facebook 연결;facebook 연결;facebook 대상;facebook;instagram;mes
 title: Facebook 연결
 description: 해시된 이메일을 기반으로 대상 타깃팅, 개인화 및 억제를 위해 Facebook 캠페인용 프로필을 활성화합니다.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 357916aa925c7b3ada4abe64a2bc6ad090d70cc0
+source-git-commit: c5d2427635d90f3a9551e2a395d01d664005e8bc
 workflow-type: tm+mt
-source-wordcount: '1589'
-ht-degree: 1%
+source-wordcount: '1652'
+ht-degree: 2%
 
 ---
 
@@ -48,9 +48,16 @@ ht-degree: 1%
 | email_lc_sha256 | SHA256 알고리즘을 사용하여 해시된 이메일 주소 | 일반 텍스트와 SHA256 해시된 이메일 주소는 모두 Adobe Experience Platform에서 지원합니다. 다음 [ID 일치 요구 사항](#id-matching-requirements-id-matching-requirements) 섹션에서 그리고 개별 텍스트 및 해시된 이메일 주소에 적절한 네임스페이스를 각각 사용합니다. 소스 필드에 해시되지 않은 속성이 포함되어 있으면 **[!UICONTROL 변형 적용]** 옵션, [!DNL Platform] 활성화 시 데이터를 자동으로 해시합니다. |
 | extern_id | 사용자 지정 사용자 ID | 소스 ID가 사용자 지정 네임스페이스이면 이 타겟 ID를 선택합니다. |
 
-## 내보내기 유형 {#export-type}
+## 내보내기 유형 및 빈도 {#export-type-frequency}
 
-**세그먼트 내보내기** - Facebook 대상에 사용되는 식별자(이름, 전화번호 또는 기타 식별자)로 세그먼트(대상)의 모든 구성원을 내보냅니다.
+대상 내보내기 유형 및 빈도에 대한 자세한 내용은 아래 표를 참조하십시오.
+
+| 항목 | 유형 | 참고 |
+---------|----------|---------|
+| 내보내기 유형 | **[!UICONTROL 세그먼트 내보내기]** | facebook 대상에 사용되는 식별자(이름, 전화 번호 또는 기타 식별자)로 세그먼트(대상)의 모든 구성원을 내보냅니다. |
+| 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 &quot;항상 설정&quot; API 기반 연결입니다. 세그먼트 평가를 기반으로 Experience Platform에서 프로필이 업데이트되는 즉시 커넥터는 업데이트 다운스트림을 대상 플랫폼으로 보냅니다. 자세한 내용 [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations). |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Facebook 계정 사전 요구 사항 {#facebook-account-prerequisites}
 

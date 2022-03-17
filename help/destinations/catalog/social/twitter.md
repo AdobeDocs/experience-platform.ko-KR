@@ -1,13 +1,13 @@
 ---
 title: Twitter 사용자 지정 대상 연결
 description: Twitter에서 기존 팔로워와 고객을 Target 하고 Adobe Experience Platform 내에 구축된 대상을 활성화하여 적절한 리마케팅 캠페인을 만듭니다
-source-git-commit: 3ea3f9ed156ba3a1fbc790153a4b8fa193d5e2da
+exl-id: fd244e58-cd94-4de7-81e4-c321eb673b65
+source-git-commit: c5d2427635d90f3a9551e2a395d01d664005e8bc
 workflow-type: tm+mt
-source-wordcount: '545'
-ht-degree: 3%
+source-wordcount: '608'
+ht-degree: 4%
 
 ---
-
 
 # [!DNL Twitter Custom Audiences] 연결
 
@@ -17,54 +17,61 @@ Twitter에서 기존 팔로워와 고객을 Target하고 Adobe Experience Platfo
 
 ## 전제 조건 {#prerequisites}
 
-[!DNL Twitter Custom Audiences] 대상을 구성하기 전에 충족해야 하는 다음 Twitter 사전 요구 사항을 검토하십시오.
+구성하기 전에 [!DNL Twitter Custom Audiences] 대상, 충족해야 하는 다음 Twitter 사전 요구 사항을 검토하십시오.
 
-1. [!DNL Twitter Ads] 계정을 광고할 수 있어야 합니다. 새 [!DNL Twitter Ads] 계정은 만든 후 처음 2주 내에 광고를 수행할 수 없습니다.
-2. [!DNL Twitter Audience Manager]에서 액세스를 인증한 Twitter 사용자 계정에는 *[!DNL Partner Audience Manager]* 권한이 활성화되어 있어야 합니다.
+1. 사용자 [!DNL Twitter Ads] 계정에 광고 자격이 있어야 합니다. 새로 만들기 [!DNL Twitter Ads] 계정이 생성된 후 처음 2주 동안은 광고를 수행할 수 없습니다.
+2. 에 대한 액세스 권한을 부여한 Twitter 사용자 계정입니다 [!DNL Twitter Audience Manager] 에는 *[!DNL Partner Audience Manager]* 사용 권한이 활성화되어 있습니다.
 
 
 ## 지원되는 ID {#supported-identities}
 
-[!DNL Twitter Custom Audiences] 은 아래 표에 설명된 id의 활성화를 지원합니다. [id](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#getting-started)에 대해 자세히 알아보십시오.
+[!DNL Twitter Custom Audiences] 은 아래 표에 설명된 id의 활성화를 지원합니다. 추가 정보 [id](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#getting-started).
 
 | Target ID | 설명 | 고려 사항 |
 |---|---|---|
-| device_id | IDFA/AdID/Android ID | Adobe Experience Platform에서는 GAID(Google Advertising ID) 및 Apple ID for Advertising (IDFA)가 지원됩니다. 대상 활성화 워크플로우의 [매핑 단계](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping)에 따라 소스 스키마에서 이러한 네임스페이스 및/또는 속성을 매핑하십시오. |
-| 이메일 | 사용자의 이메일 주소 | 일반 텍스트 이메일 주소와 SHA256 해시된 이메일 주소를 이 필드에 매핑하십시오. 소스 필드에 해시되지 않은 특성이 들어 있는 경우 **[!UICONTROL 변환]** 적용 옵션을 선택하여 [!DNL Platform]에서 활성화 시 데이터를 자동으로 해시하도록 하십시오. Adobe Experience Platform에 업로드하기 전에 고객 이메일 주소를 해시하는 경우, 소금 없이 SHA256을 사용하여 이러한 ID를 해시해야 합니다. |
+| device_id | IDFA/AdID/Android ID | Adobe Experience Platform에서는 GAID(Google Advertising ID) 및 IDFA(Advertising ID for Advertising)가 지원됩니다. 소스 스키마에서 이러한 네임스페이스 및/또는 속성을 [매핑 단계](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) 대상 활성화 워크플로우에 대한 업데이트입니다. |
+| 이메일 | 사용자의 이메일 주소 | 일반 텍스트 이메일 주소와 SHA256 해시된 이메일 주소를 이 필드에 매핑하십시오. 소스 필드에 해시되지 않은 속성이 포함되어 있으면 **[!UICONTROL 변형 적용]** 옵션, [!DNL Platform] 활성화 시 데이터를 자동으로 해시합니다. Adobe Experience Platform에 업로드하기 전에 고객 이메일 주소를 해시하는 경우, 소금 없이 SHA256을 사용하여 이러한 ID를 해시해야 합니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
-## 내보내기 유형 {#export-type}
+## 내보내기 유형 및 빈도 {#export-type-frequency}
 
-**세그먼트 내보내기**  - Twitter 사용자 지정 대상 대상에 사용된 식별자를 사용하여 세그먼트(대상)의 모든 구성원을 내보냅니다.
+대상 내보내기 유형 및 빈도에 대한 자세한 내용은 아래 표를 참조하십시오.
+
+| 항목 | 유형 | 참고 |
+---------|----------|---------|
+| 내보내기 유형 | **[!UICONTROL 세그먼트 내보내기]** | twitter 사용자 지정 대상 대상에 사용된 식별자를 사용하여 세그먼트(대상)의 모든 구성원을 내보냅니다. |
+| 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 &quot;항상 설정&quot; API 기반 연결입니다. 세그먼트 평가를 기반으로 Experience Platform에서 프로필이 업데이트되는 즉시 커넥터는 업데이트 다운스트림을 대상 플랫폼으로 보냅니다. 자세한 내용 [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations). |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## 사용 사례 {#use-cases}
 
-[!DNL Twitter Custom Audiences] 대상을 사용하는 방법과 시기를 더 잘 이해할 수 있도록 Adobe Experience Platform 고객이 이 대상을 사용하여 해결할 수 있는 샘플 사용 사례가 여기에 있습니다.
+를 사용하는 방법과 시기를 더 잘 이해할 수 있도록 하기 위해 [!DNL Twitter Custom Audiences] 대상, Adobe Experience Platform 고객이 이 대상을 사용하여 해결할 수 있는 샘플 사용 사례는 다음과 같습니다.
 
 ### 사용 사례 #1
 
-Twitter에서 기존 팔로워와 고객을 Target 하고 Twitter에서 [!DNL List Custom Audiences] 로 Adobe Experience Platform 내에 내장된 대상을 활성화하여 적절한 리마케팅 캠페인을 만듭니다.
+Twitter에서 기존 팔로워와 고객을 Target 하고 Adobe Experience Platform 내에서 만든 대상을 활성화하여 적절한 리마케팅 캠페인을 만듭니다 [!DNL List Custom Audiences] twitter에서 확인하십시오.
 
 ## 대상에 연결 {#connect}
 
-이 대상에 연결하려면 [대상 구성 자습서](../../ui/connect-destination.md)에 설명된 단계를 따르십시오.
+이 대상에 연결하려면 [대상 구성 자습서](../../ui/connect-destination.md).
 
 ### 연결 매개 변수 {#parameters}
 
-[이 대상을 설정할 때 다음 정보를 제공해야 합니다.](../../ui/connect-destination.md)
+While [설정](../../ui/connect-destination.md) 이 대상을 사용하려면 다음 정보를 제공해야 합니다.
 
 * **[!UICONTROL 이름]**: 나중에 이 대상을 인식하는 이름입니다.
 * **[!UICONTROL 설명]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
-* **[!UICONTROL 계정 ID]**: 계정  [!DNL Twitter Ads] ID입니다. 이는 [!DNL Twitter Ads] 설정에서 찾을 수 있습니다.
+* **[!UICONTROL 계정 ID]**: 사용자 [!DNL Twitter Ads] 계정 ID. 다음 위치에서 찾을 수 있습니다. [!DNL Twitter Ads] 설정.
 
 ## 세그먼트를 이 대상에 활성화 {#activate}
 
-대상 세그먼트를 이 대상으로 활성화하는 방법에 대한 지침은 [프로필 및 세그먼트를 스트리밍 세그먼트 내보내기 대상으로 활성화](/help/destinations/ui/activate-segment-streaming-destinations.md)를 참조하십시오.
+읽기 [스트리밍 세그먼트 내보내기 대상으로 프로필 및 세그먼트를 활성화합니다](/help/destinations/ui/activate-segment-streaming-destinations.md) 대상 세그먼트를 이 대상으로 활성화하는 방법에 대한 지침입니다.
 
 ## 데이터 사용 및 거버넌스 {#data-usage-governance}
 
-모든 [!DNL Adobe Experience Platform] 대상은 데이터를 처리할 때 데이터 사용 정책을 준수합니다. [!DNL Adobe Experience Platform]에서 데이터 거버넌스를 적용하는 방법에 대한 자세한 내용은 [데이터 거버넌스 개요](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html)를 참조하십시오.
+모두 [!DNL Adobe Experience Platform] 대상은 데이터를 처리할 때 데이터 사용 정책을 준수합니다. 방법에 대한 자세한 정보 [!DNL Adobe Experience Platform] 데이터 거버넌스를 적용하는 경우 다음을 참조하십시오. [데이터 거버넌스 개요](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html).
 
 ## 추가 리소스 {#additional-resources}
 
@@ -73,4 +80,4 @@ Twitter에서 기존 팔로워와 고객을 Target 하고 Twitter에서 [!DNL Li
 1. 사람이 읽을 수 있는 세그먼트 매핑 이름을 제공합니다. Experience Platform 세그먼트에 사용한 것과 동일한 이름을 사용하는 것이 좋습니다.
 2. 특수 문자는 사용하지 마십시오 (+ &amp; , % : ; @ / = ? $)를 사용할 수 있습니다. Experience Platform 세그먼트 이름에 이러한 문자가 포함되어 있는 경우 세그먼트를 Twitter 대상에 매핑하기 전에 제거하십시오.
 
-twitter의 [!DNL List Custom Audiences]에 대한 자세한 내용은 [Twitter 설명서](https://business.twitter.com/en/help/campaign-setup/campaign-targeting/custom-audiences/lists.html)에서 확인할 수 있습니다.
+에 대한 추가 정보 [!DNL List Custom Audiences] 에서 Twitter은 [Twitter 설명서](https://business.twitter.com/en/help/campaign-setup/campaign-targeting/custom-audiences/lists.html).

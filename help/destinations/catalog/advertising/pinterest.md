@@ -2,10 +2,10 @@
 title: Pinterest 고객 목록 연결
 description: 고객 목록, 사이트를 방문한 사람 또는 Pinterest의 콘텐츠와 이미 상호 작용한 사람으로 대상을 만듭니다.
 exl-id: e601f75f-0d40-4cd0-93ca-54d7439f1db7
-source-git-commit: 90aa0d16851443255dd4828e9f28330a89a12692
+source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
 workflow-type: tm+mt
-source-wordcount: '515'
-ht-degree: 2%
+source-wordcount: '578'
+ht-degree: 3%
 
 ---
 
@@ -39,9 +39,16 @@ ht-degree: 2%
 
 {style=&quot;table-layout:auto&quot;}
 
-## 내보내기 유형 {#export-type}
+## 내보내기 유형 및 빈도 {#export-type-frequency}
 
-**세그먼트 내보내기** - Pinterest 고객 목록 대상에서 사용되는 식별자(이름, 전화 번호 또는 기타)로 세그먼트(대상)의 모든 구성원을 내보냅니다.
+대상 내보내기 유형 및 빈도에 대한 자세한 내용은 아래 표를 참조하십시오.
+
+| 항목 | 유형 | 참고 |
+---------|----------|---------|
+| 내보내기 유형 | **[!UICONTROL 세그먼트 내보내기]** | pinterest 고객 목록 대상에서 사용되는 식별자(이름, 전화 번호 또는 기타)로 세그먼트(대상)의 모든 구성원을 내보냅니다. |
+| 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 &quot;항상 설정&quot; API 기반 연결입니다. 세그먼트 평가를 기반으로 Experience Platform에서 프로필이 업데이트되는 즉시 커넥터는 업데이트 다운스트림을 대상 플랫폼으로 보냅니다. 자세한 내용 [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations). |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## 사용 사례 {#use-cases}
 

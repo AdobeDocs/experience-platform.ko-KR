@@ -3,10 +3,10 @@ keywords: Amazon S3;S3 대상;s3;amazon s3
 title: Amazon S3 연결
 description: Amazon Web Services(AWS) S3 저장소에 대한 라이브 아웃바운드 연결을 만들어 Adobe Experience Platform의 CSV 데이터 파일을 고유한 S3 버킷으로 주기적으로 내보냅니다.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: e6dc0fb136a6f5199153630a20e8809c2c040107
+source-git-commit: c5d2427635d90f3a9551e2a395d01d664005e8bc
 workflow-type: tm+mt
-source-wordcount: '503'
-ht-degree: 0%
+source-wordcount: '554'
+ht-degree: 1%
 
 ---
 
@@ -16,9 +16,16 @@ ht-degree: 0%
 
 에 대한 라이브 아웃바운드 연결을 만듭니다. [!DNL Amazon Web Services] (AWS) S3 저장소를 사용하여 Adobe Experience Platform의 CSV 데이터 파일을 고유한 S3 버킷으로 주기적으로 내보냅니다.
 
-## 내보내기 유형 {#export-type}
+## 내보내기 유형 및 빈도 {#export-type-frequency}
 
-**프로필 기반** - 원하는 스키마 필드와 함께 세그먼트의 모든 멤버를 내보냅니다(예: 전자 메일 주소, 전화 번호, 성) [대상 활성화 워크플로우](../../ui/activate-segment-streaming-destinations.md#mapping).
+대상 내보내기 유형 및 빈도에 대한 자세한 내용은 아래 표를 참조하십시오.
+
+| 항목 | 유형 | 참고 |
+---------|----------|---------|
+| 내보내기 유형 | **[!UICONTROL 프로필 기반]** | 원하는 스키마 필드와 함께 세그먼트의 모든 구성원을 내보냅니다(예: 전자 메일 주소, 전화 번호, 성)을 선택한 대로 [대상 활성화 워크플로우](../../ui/activate-batch-profile-destinations.md#select-attributes). |
+| 내보내기 빈도 | **[!UICONTROL 일괄 처리]** | 배치 대상은 파일을 다운스트림 플랫폼으로 3, 6, 8, 12 또는 24시간 단위로 내보냅니다. 자세한 내용 [배치 파일 기반 대상](/help/destinations/destination-types.md#file-based). |
+
+{style=&quot;table-layout:auto&quot;}
 
 ![Amazon S3 프로필 기반 내보내기 유형](../../assets/catalog/cloud-storage/amazon-s3/catalog.png)
 

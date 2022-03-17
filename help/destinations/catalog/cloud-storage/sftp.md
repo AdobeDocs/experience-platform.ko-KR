@@ -3,10 +3,10 @@ keywords: SFTP;sftp
 title: SFTP 연결
 description: SFTP 서버에 대한 라이브 아웃바운드 연결을 만들어 Adobe Experience Platform에서 구분된 데이터 파일을 주기적으로 내보냅니다.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: bf46f4e6549fcbd975a9f0a6034040ed2e9b34e6
+source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
 workflow-type: tm+mt
-source-wordcount: '310'
-ht-degree: 0%
+source-wordcount: '361'
+ht-degree: 1%
 
 ---
 
@@ -20,9 +20,16 @@ SFTP 서버에 대한 라이브 아웃바운드 연결을 만들어 Adobe Experi
 >
 > Adobe은 SFTP 서버로 데이터 내보내기를 지원하지만 데이터를 내보내는 권장 클라우드 저장소 위치는 다음과 같습니다 [!DNL Amazon S3] 및 [!DNL Azure Blob].
 
-## 내보내기 유형 {#export-type}
+## 내보내기 유형 및 빈도 {#export-type-frequency}
 
-**프로필 기반** - 원하는 스키마 필드와 함께 세그먼트의 모든 멤버를 내보냅니다(예: 전자 메일 주소, 전화 번호, 성) [대상 활성화 워크플로우](../../ui/activate-batch-profile-destinations.md).
+대상 내보내기 유형 및 빈도에 대한 자세한 내용은 아래 표를 참조하십시오.
+
+| 항목 | 유형 | 참고 |
+---------|----------|---------|
+| 내보내기 유형 | **[!UICONTROL 프로필 기반]** | 원하는 스키마 필드와 함께 세그먼트의 모든 구성원을 내보냅니다(예: 전자 메일 주소, 전화 번호, 성)을 선택한 대로 [대상 활성화 워크플로우](../../ui/activate-batch-profile-destinations.md#select-attributes). |
+| 내보내기 빈도 | **[!UICONTROL 일괄 처리]** | 배치 대상은 파일을 다운스트림 플랫폼으로 3, 6, 8, 12 또는 24시간 단위로 내보냅니다. 자세한 내용 [배치 파일 기반 대상](/help/destinations/destination-types.md#file-based). |
+
+{style=&quot;table-layout:auto&quot;}
 
 ![SFTP 프로필 기반 내보내기 유형](../../assets/catalog/cloud-storage/sftp/catalog.png)
 

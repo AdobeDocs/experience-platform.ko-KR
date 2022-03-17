@@ -3,9 +3,9 @@ keywords: 스트리밍;
 title: HTTP API 연결
 description: Adobe Experience Platform의 HTTP API 대상을 사용하면 프로필 데이터를 타사 HTTP 엔드포인트로 보낼 수 있습니다.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 577b42eef9d4b44b5b556ee31d22276d72c609ea
+source-git-commit: c5d2427635d90f3a9551e2a395d01d664005e8bc
 workflow-type: tm+mt
-source-wordcount: '1275'
+source-wordcount: '1376'
 ht-degree: 1%
 
 ---
@@ -27,6 +27,17 @@ HTTP API 대상은 [!DNL Adobe Experience Platform] 프로필 데이터를 타�
 HTTP 대상은 XDM 프로필 데이터 및 대상 세그먼트를 일반 HTTP 종단점으로 내보내야 하는 고객을 대상으로 합니다.
 
 HTTP 엔드포인트는 고객의 시스템 또는 타사 솔루션일 수 있습니다.
+
+## 내보내기 유형 및 빈도 {#export-type-frequency}
+
+대상 내보내기 유형 및 빈도에 대한 자세한 내용은 아래 표를 참조하십시오.
+
+| 항목 | 유형 | 참고 |
+---------|----------|---------|
+| 내보내기 유형 | **[!UICONTROL 프로필 기반]** | 원하는 스키마 필드와 함께 세그먼트의 모든 구성원을 내보냅니다(예: 전자 메일 주소, 전화 번호, 성)을 선택한 대로 [대상 활성화 워크플로우](../../ui/activate-batch-profile-destinations.md#select-attributes). |
+| 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 &quot;항상 설정&quot; API 기반 연결입니다. 세그먼트 평가를 기반으로 Experience Platform에서 프로필이 업데이트되는 즉시 커넥터는 업데이트 다운스트림을 대상 플랫폼으로 보냅니다. 자세한 내용 [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations). |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## 전제 조건 {#prerequisites}
 

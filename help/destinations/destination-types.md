@@ -4,9 +4,9 @@ title: 대상 유형 및 카테고리
 seo-title: Destination types and categories
 description: Adobe Experience Platform의 다양한 대상 유형 및 카테고리에 대해 알아봅니다.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: a7c36f1a157b6020fede53e5c1074d966f26cf3d
+source-git-commit: 08c6c2716b88180b1eb290663117e6da2d8641f0
 workflow-type: tm+mt
-source-wordcount: '530'
+source-wordcount: '533'
 ht-degree: 0%
 
 ---
@@ -30,15 +30,15 @@ Adobe Experience Platform에서는 연결과 확장의 두 대상 유형을 구�
 프로필 내보내기 대상은 원시 데이터를 받게 되며, 종종 이메일 주소를 기본 키로 사용합니다. Experience Platform은 현재 두 가지 유형의 프로필 내보내기 대상을 지원합니다.
 
 * [스트리밍 프로필 내보내기 대상](#streaming-profile-export)
-* [파일 기반 대상](#file-based)
+* [배치(파일 기반) 대상](#file-based)
 
 ### 스트리밍 프로필 내보내기 대상 {#streaming-profile-export}
 
 스트리밍 프로필 내보내기 대상은 세그먼트 및 프로필 데이터를 Experience Platform 데이터 스트림으로 받습니다. [Amazon Kinesis](catalog/cloud-storage/amazon-kinesis.md) 및 [Azure 이벤트 허브](catalog/cloud-storage/azure-event-hubs.md) 은 그러한 대상의 예시입니다.
 
-### 파일 기반 대상 {#file-based}
+### 배치(파일 기반) 대상 {#file-based}
 
-파일 기반 대상 수신 `.csv` 프로필 및/또는 속성을 포함하는 파일. [Amazon S3](catalog/cloud-storage/amazon-s3.md) 은 프로필 내보내기가 포함된 파일을 저장할 수 있는 대상의 예입니다.
+파일 기반 대상 수신 `.csv` 프로필 및/또는 속성을 포함하는 파일. [Amazon S3](catalog/cloud-storage/amazon-s3.md) 은 프로필 내보내기가 포함된 파일을 내보낼 수 있는 대상의 예입니다.
 
 ## 스트리밍 세그먼트 내보내기 대상 {#streaming-destinations}
 

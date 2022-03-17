@@ -3,10 +3,10 @@ keywords: 전자 메일;전자 메일;전자 메일 대상;oracle oqua;oracle
 title: Oracle Eloqua 연결
 description: Oracle Eloqua는 B2B 마케터와 조직이 마케팅 캠페인 및 판매 리드 생성을 관리하는 데 도움이 되도록 Oracle이 제공하는 마케팅 자동화를 위한 SaaS(Software as a Service) 플랫폼입니다.
 exl-id: 6eaa79ff-8874-423b-bdff-aa04f6101a53
-source-git-commit: b0d6e02c67f2a62971332acb224c7422ea467e6c
+source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
 workflow-type: tm+mt
-source-wordcount: '487'
-ht-degree: 0%
+source-wordcount: '538'
+ht-degree: 2%
 
 ---
 
@@ -16,9 +16,16 @@ ht-degree: 0%
 
 세그먼트 데이터를에 보내려면 [!DNL Oracle Eloqua], 먼저 [대상 연결](#connect-destination) Adobe Experience Platform에서 [데이터 가져오기 설정](#import-data-into-eloqua) 스토리지 위치에서 로 [!DNL Oracle Eloqua].
 
-## 내보내기 유형 {#export-type}
+## 내보내기 유형 및 빈도 {#export-type-frequency}
 
-**프로필 기반** - 원하는 스키마 필드와 함께 세그먼트의 모든 멤버를 내보냅니다(예: 전자 메일 주소, 전화 번호, 성) [대상자 활성화 워크플로우](../../ui/activate-batch-profile-destinations.md#select-attributes).
+대상 내보내기 유형 및 빈도에 대한 자세한 내용은 아래 표를 참조하십시오.
+
+| 항목 | 유형 | 참고 |
+---------|----------|---------|
+| 내보내기 유형 | **[!UICONTROL 프로필 기반]** | 원하는 스키마 필드와 함께 세그먼트의 모든 구성원을 내보냅니다(예: 전자 메일 주소, 전화 번호, 성)을 선택한 대로 [대상 활성화 워크플로우](../../ui/activate-batch-profile-destinations.md#select-attributes). |
+| 내보내기 빈도 | **[!UICONTROL 일괄 처리]** | 배치 대상은 파일을 다운스트림 플랫폼으로 3, 6, 8, 12 또는 24시간 단위로 내보냅니다. 자세한 내용 [배치 파일 기반 대상](/help/destinations/destination-types.md#file-based). |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## IP 주소 허용 목록 {#allow-list}
 

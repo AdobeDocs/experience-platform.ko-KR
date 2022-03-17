@@ -3,10 +3,10 @@ keywords: '광고; bing; '
 title: Microsoft Bing 연결
 description: Microsoft Bing 연결 대상을 사용하면 Microsoft 디스플레이 광고에서 리타겟팅 및 대상 타깃팅된 디지털 캠페인을 실행할 수 있습니다.
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: 169a7ad1adfa3282bd0503ce277373b654ec57cd
+source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
 workflow-type: tm+mt
-source-wordcount: '384'
-ht-degree: 1%
+source-wordcount: '464'
+ht-degree: 3%
 
 ---
 
@@ -30,9 +30,20 @@ ht-degree: 1%
 |---|---|
 | 가정부 | Microsoft 광고 ID |
 
-## 내보내기 유형 {#export-type}
+{style=&quot;table-layout:auto&quot;}
+
+## 내보내기 유형 및 빈도 {#export-type-frequency}
 
 **[!DNL Segment Export]** - 세그먼트의 모든 멤버(대상)를 [!DNL Microsoft Bing] 대상.
+
+대상 내보내기 유형 및 빈도에 대한 자세한 내용은 아래 표를 참조하십시오.
+
+| 항목 | 유형 | 참고 |
+---------|----------|---------|
+| 내보내기 유형 | **[!UICONTROL 세그먼트 내보내기]** | 세그먼트(대상)의 모든 구성원을 [!DNL Microsoft Bing] 대상. |
+| 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 &quot;항상 설정&quot; API 기반 연결입니다. 세그먼트 평가를 기반으로 Experience Platform에서 프로필이 업데이트되는 즉시 커넥터는 업데이트 다운스트림을 대상 플랫폼으로 보냅니다. 자세한 내용 [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations). |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## 전제 조건 {#prerequisites}
 

@@ -3,10 +3,10 @@ keywords: google ad manager;google ad;doubleclick;DoubleClick AdX;DoubleClick;Go
 title: Google Ad Manager 연결
 description: 이전에 DoubleClick for Publishers 또는 DoubleClick AdX라고 알려진 Google Ad Manager는 비디오 및 모바일 앱을 통해 게시자가 웹 사이트에서 광고를 표시할 수 있는 방법을 제공하는 Google의 광고 서비스 플랫폼입니다.
 exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
 workflow-type: tm+mt
-source-wordcount: '653'
-ht-degree: 2%
+source-wordcount: '718'
+ht-degree: 3%
 
 ---
 
@@ -37,15 +37,24 @@ ht-degree: 2%
 | 가정부 | Microsoft 광고 ID. 이 ID는 Windows 10을 실행하는 장치를 고유하게 식별합니다. |  |
 | Amazon Fire TV ID | 이 ID는 Amazon Fire TV를 고유하게 식별합니다. |  |
 
-## 내보내기 유형 {#export-type}
+{style=&quot;table-layout:auto&quot;}
 
-**세그먼트 내보내기** - 세그먼트(대상)의 모든 구성원을 Google 대상으로 내보냅니다.
+## 내보내기 유형 및 빈도 {#export-type-frequency}
 
-## 전제 조건
+대상 내보내기 유형 및 빈도에 대한 자세한 내용은 아래 표를 참조하십시오.
+
+| 항목 | 유형 | 참고 |
+---------|----------|---------|
+| 내보내기 유형 | **[!UICONTROL 세그먼트 내보내기]** | 세그먼트(대상)의 모든 구성원을 Google 대상으로 내보냅니다. |
+| 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 &quot;항상 설정&quot; API 기반 연결입니다. 세그먼트 평가를 기반으로 Experience Platform에서 프로필이 업데이트되는 즉시 커넥터는 업데이트 다운스트림을 대상 플랫폼으로 보냅니다. 자세한 내용 [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations). |
+
+{style=&quot;table-layout:auto&quot;}
+
+## 전제 조건 {#prerequisites}
 
 을 사용하여 첫 번째 대상을 만들려면 [!DNL Google Ad Manager] 및 [ID 동기화 기능](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) 과거(Audience Manager 또는 기타 애플리케이션 포함)에 Experience Cloud ID 서비스에서 ID 동기화를 활성화하려면 Adobe 컨설팅 또는 고객 지원 센터에 문의하십시오. 이전에 설정한 경우 [!DNL Google] 통합에서 설정한 ID 동기화를 Platform으로 이월합니다.
 
-## 허용 목록
+### 허용 목록 {#allow-listing}
 
 >[!NOTE]
 >
@@ -82,6 +91,6 @@ While [설정](../../ui/connect-destination.md) 이 대상을 사용하려면 �
 
 자세한 내용은 [스트리밍 세그먼트 내보내기 대상으로 대상 데이터 활성화](../../ui/activate-segment-streaming-destinations.md) 대상 세그먼트를 이 대상으로 활성화하는 방법에 대한 지침입니다.
 
-## 내보낸 데이터
+## 내보낸 데이터 {#exported-data}
 
 데이터를 로 성공적으로 내보냈는지 확인하려면 [!DNL Google Ad Manager] 대상, [!DNL Google Ad Manager] 계정이 필요합니다. 활성화가 성공하면 계정에 대상이 채워집니다.

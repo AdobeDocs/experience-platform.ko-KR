@@ -3,10 +3,10 @@ keywords: Azure Blob;Blob 대상;s3;azure Blob 대상
 title: Azure Blob 연결
 description: Azure Blob 저장 공간에 대한 라이브 아웃바운드 연결을 만들어 Adobe Experience Platform에서 CSV 데이터 파일을 주기적으로 내보냅니다.
 exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
-source-git-commit: b4810dfef7b0d437744ca14a32bd4f5746e8d002
+source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
 workflow-type: tm+mt
-source-wordcount: '398'
-ht-degree: 1%
+source-wordcount: '474'
+ht-degree: 2%
 
 ---
 
@@ -27,11 +27,22 @@ ht-degree: 1%
 
 이미 유효한 [!DNL Blob] 대상, 이 문서의 나머지 부분을 건너뛰고 다음 의 자습서를 진행할 수 있습니다. [대상에 세그먼트 활성화](../../ui/activate-batch-profile-destinations.md).
 
+## 내보내기 유형 및 빈도 {#export-type-frequency}
+
+대상 내보내기 유형 및 빈도에 대한 자세한 내용은 아래 표를 참조하십시오.
+
+| 항목 | 유형 | 참고 |
+---------|----------|---------|
+| 내보내기 유형 | **[!UICONTROL 프로필 기반]** | 원하는 스키마 필드와 함께 세그먼트의 모든 구성원을 내보냅니다(예: 전자 메일 주소, 전화 번호, 성)을 선택한 대로 [대상 활성화 워크플로우](../../ui/activate-batch-profile-destinations.md#select-attributes). |
+| 내보내기 빈도 | **[!UICONTROL 일괄 처리]** | 배치 대상은 파일을 다운스트림 플랫폼으로 3, 6, 8, 12 또는 24시간 단위로 내보냅니다. 자세한 내용 [배치 파일 기반 대상](/help/destinations/destination-types.md#file-based). |
+
+{style=&quot;table-layout:auto&quot;}
+
 ## 지원되는 파일 형식 {#file-formats}
 
 [!DNL Experience Platform] 에서는 내보낼 다음 파일 형식을 지원합니다 [!DNL Blob]:
 
-* 구분 기호로 구분된 값(DSV): DSV 형식 데이터 파일에 대한 지원은 현재 쉼표로 구분된 값으로 제한됩니다. 일반적인 DSV 파일에 대한 지원은 향후에 제공됩니다.
+* 쉼표로 구분된 값(CSV): 내보낸 데이터 파일에 대한 지원은 현재 쉼표로 구분된 값으로 제한됩니다.
 
 ## 대상에 연결 {#connect}
 

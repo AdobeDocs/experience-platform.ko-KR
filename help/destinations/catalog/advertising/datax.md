@@ -2,10 +2,10 @@
 title: Verizon MediaYahoo DataX 연결
 description: DataX는 Verizon Media/Yahoo가 안전하고 자동화된 확장 가능한 방식으로 외부 파트너와 데이터를 교환할 수 있도록 하는 다양한 구성 요소를 호스팅하는 종합적인 Verizon Media/Yahoo 인프라입니다.
 exl-id: 7d02671d-8650-407d-9c9f-fad7da3156bc
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
 workflow-type: tm+mt
-source-wordcount: '586'
-ht-degree: 2%
+source-wordcount: '651'
+ht-degree: 3%
 
 ---
 
@@ -73,9 +73,16 @@ Verizon Media는 아래 표에 설명된 ID 활성화를 지원합니다. 추가
 
 {style=&quot;table-layout:auto&quot;}
 
-## 내보내기 유형 {#export-type}
+## 내보내기 유형 및 빈도 {#export-type-frequency}
 
-**세그먼트 내보내기** - Verizon Media 대상에 사용되는 식별자(이메일)로 세그먼트(대상)의 모든 구성원을 내보냅니다.
+대상 내보내기 유형 및 빈도에 대한 자세한 내용은 아래 표를 참조하십시오.
+
+| 항목 | 유형 | 참고 |
+---------|----------|---------|
+| 내보내기 유형 | **[!UICONTROL 세그먼트 내보내기]** | Verizon Media 대상에 사용되는 식별자(이메일, GAID, IDFA)를 사용하여 세그먼트(대상)의 모든 구성원을 내보냅니다. |
+| 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 &quot;항상 설정&quot; API 기반 연결입니다. 세그먼트 평가를 기반으로 Experience Platform에서 프로필이 업데이트되는 즉시 커넥터는 업데이트 다운스트림을 대상 플랫폼으로 보냅니다. 자세한 내용 [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations). |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## 사용 사례 {#use-cases}
 

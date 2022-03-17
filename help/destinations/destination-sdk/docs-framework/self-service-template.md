@@ -2,10 +2,10 @@
 title: 설명서 셀프 서비스 템플릿 // 대상 이름으로 바꾸기
 description: 이 템플릿을 사용하여 Adobe Experience Platform 카탈로그에서 대상에 대한 공개 설명서를 만듭니다. // 개요 섹션의 단락으로 대체합니다
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: 2b1cde9fc913be4d3bea71e7d56e0e5fe265a6be
+source-git-commit: c5d2427635d90f3a9551e2a395d01d664005e8bc
 workflow-type: tm+mt
-source-wordcount: '904'
-ht-degree: 1%
+source-wordcount: '1066'
+ht-degree: 2%
 
 ---
 
@@ -51,13 +51,24 @@ ht-degree: 1%
 
 {style=&quot;table-layout:auto&quot;}
 
-## 내보내기 유형 {#export-type}
+## 내보내기 유형 및 빈도 {#export-type-frequency}
 
-**세그먼트 내보내기** - 세그먼트(대상)의 모든 멤버를 *대상* 대상.
+*테이블에서 대상에 해당하는 행만 유지합니다. 내보내기 유형에 대해 한 라인과 내보내기 빈도에 대해 한 라인이 있어야 합니다. 대상에 적용되지 않는 값을 삭제합니다.*
 
-## 사용 사례
+대상 내보내기 유형 및 빈도에 대한 자세한 내용은 아래 표를 참조하십시오.
 
-를 사용하는 방법과 시기를 더 잘 이해할 수 있도록 하기 위해 *대상* 대상. Adobe Experience Platform 고객이 이 대상을 사용하여 해결할 수 있는 샘플 사용 사례는 다음과 같습니다.
+| 항목 | 유형 | 참고 |
+---------|----------|---------|
+| 내보내기 유형 | **[!UICONTROL 세그먼트 내보내기]** | 에서 사용되는 식별자(이름, 전화 번호 또는 기타 식별자)로 세그먼트의 모든 멤버(대상)를 내보내고 있습니다 *대상* 대상. |
+| 내보내기 유형 | **[!UICONTROL 프로필 기반]** | 원하는 스키마 필드와 함께 세그먼트의 모든 구성원을 내보냅니다(예: 전자 메일 주소, 전화 번호, 성)을 선택한 대로 [대상 활성화 워크플로우](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
+| 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 &quot;항상 설정&quot; API 기반 연결입니다. 세그먼트 평가를 기반으로 Experience Platform에서 프로필이 업데이트되는 즉시 커넥터는 업데이트 다운스트림을 대상 플랫폼으로 보냅니다. 자세한 내용 [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations). |
+| 내보내기 빈도 | **[!UICONTROL 일괄 처리]** | 배치 대상은 파일을 다운스트림 플랫폼으로 3, 6, 8, 12 또는 24시간 단위로 내보냅니다. 자세한 내용 [배치 파일 기반 대상](/help/destinations/destination-types.md#file-based). |
+
+{style=&quot;table-layout:auto&quot;}
+
+## 사용 사례 {#use-cases}
+
+를 사용하는 방법과 시기를 더 잘 이해할 수 있도록 하기 위해 *대상* 대상, Adobe Experience Platform 고객이 이 대상을 사용하여 해결할 수 있는 샘플 사용 사례는 다음과 같습니다.
 
 ### 사용 사례 #1
 
@@ -79,7 +90,7 @@ ht-degree: 1%
 
 While [설정](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) 이 대상을 사용하려면 다음 정보를 제공해야 합니다.
 
-*새 대상을 구성할 때 고객이 입력해야 하는 필드를 추가합니다. 이러한 필드는 대상별로 다르며 대상 SDK의 구성에 따라 다릅니다. 대상 필드가 아래 나열된 필드와 같을 수 없습니다.*
+*새 대상을 구성할 때 고객이 입력해야 하는 필드를 추가합니다. 이러한 필드는 대상별로 다르며 Destination SDK의 구성에 따라 다릅니다. 대상 필드가 아래 나열된 필드와 같을 수 없습니다.*
 
 * **[!UICONTROL 이름]**: 나중에 이 대상을 인식하는 이름입니다.
 * **[!UICONTROL 설명]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
