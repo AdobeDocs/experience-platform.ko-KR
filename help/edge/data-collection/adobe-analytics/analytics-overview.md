@@ -3,10 +3,10 @@ title: Platform Web SDK에서 Adobe Analytics 사용
 description: Adobe Experience Platform Web SDK를 사용하여 Adobe Analytics으로 데이터를 전송하는 방법을 알아봅니다.
 keywords: adobe analytics;analytics;매핑된 데이터;매핑된 vars;
 exl-id: b18d1163-9edf-4a9c-b247-cd1aa7dfca50
-source-git-commit: 45becec3b198821e38afbc21fe42a8901e352888
+source-git-commit: 921a3a32ee5f2daa04512a3f2c68935667ab3875
 workflow-type: tm+mt
-source-wordcount: '189'
-ht-degree: 7%
+source-wordcount: '233'
+ht-degree: 6%
 
 ---
 
@@ -17,6 +17,10 @@ Adobe Experience Platform [!DNL Web SDK] Adobe Analytics으로 데이터를 전�
 ## 설정
 
 Adobe Analytics에서는 고객 구성 UI에 매핑된 보고서 세트가 있는 경우 보내고 있는 데이터를 자동으로 선택합니다. 여기에서 하나 이상의 보고서를 주어진 구성에 매핑할 수 있습니다. 보고서 세트가 매핑되면 데이터 흐름이 자동으로 시작됩니다.
+
+## XDM 필드 그룹
+
+가장 일반적인 Adobe Analytics 지표를 더 쉽게 캡처할 수 있도록 하기 위해 Adobe에서는 사용할 수 있는 Analytics 필드 그룹을 제공합니다. 이 스키마에 대한 자세한 내용은 [Adobe Analytics ExperienceEvent 전체 확장 스키마 필드 그룹](../../../xdm/field-groups/event/analytics-full-extension.md)
 
 ## 자동으로 매핑된 데이터
 

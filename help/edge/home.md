@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK 개요
 description: Adobe Experience Platform Web SDK를 사용하여 플랫폼 기능을 웹 사이트에 통합하는 방법을 알아봅니다.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;Edge;Visitor.js;AppMeasurement.js;AT.js;DIL.js;웹 SDK;SDK;웹 SDK;Launch;실행
 exl-id: 1348144a-7d25-4c27-bc40-3daee2f043a6
-source-git-commit: 1048f19e2395f63fac8c4218ed92a546b8071a93
+source-git-commit: 71857ffc5e671f4d9a0502fb95d89d30fdec1f15
 workflow-type: tm+mt
-source-wordcount: '703'
+source-wordcount: '622'
 ht-degree: 1%
 
 ---
@@ -62,9 +62,4 @@ Adobe Experience Platform Web SDK는 다음 SDK를 대체합니다.
 
 >[!VIDEO](https://video.tv.adobe.com/v/34148?quality=12&learn=on)
 
-이 제품은 점점 더 많은 사용 사례를 지원하기 위해 지속적으로 진화하고 증가하고 있습니다. 최신 정보를 확인하려면 [지원되는 사용 사례 페이지](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/supported-use-cases.html). 이 페이지에는 현재 지원되는 사용 사례 목록이 있으며 사용 가능한 경우 추가 정보에 대한 링크가 있습니다.
-
-* **아직 지원되지 않는 사용 사례:** 향후 지원할 로드맵에 있는 사용 사례입니다.
-* **진행 중인 사용 사례:** 다음은 팀이 릴리스를 완료하기 위해 현재 작업 중인 사용 사례입니다.
-* **지원되는 사용 사례:** 지원되는 사용 사례와 현재 작동하는 예입니다.
-* **지원하지 않는 사용 사례:** 다음은 지원하지 않기로 결정한 사용 사례입니다.
+이 제품은 점점 더 많은 사용 사례를 지원하기 위해 지속적으로 진화하고 증가하고 있습니다. 최신 정보를 확인하고 현재 지원하는 내용을 확인하려면 [지원되는 사용 사례 페이지](https://github.com/orgs/adobe/projects/18/views/1).
