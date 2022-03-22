@@ -3,7 +3,7 @@ keywords: 사용자 지정 개인화; 대상; experience platform 사용자 지�
 title: 사용자 지정 개인화 연결
 description: 이 대상은 Adobe Experience Platform에서 세그먼트 정보를 검색하는 방법으로 사이트에서 실행 중인 외부 개인화, 콘텐츠 관리 시스템, 광고 서버 및 기타 애플리케이션을 제공합니다. 이 대상은 사용자 프로필 세그먼트 멤버십에 따라 실시간 개인화를 제공합니다.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 95d287f3eac08064da35aea7c4cb22ea901c7324
+source-git-commit: 05217dead7e1365d6dcc0cc7ae4078628514d1d5
 workflow-type: tm+mt
 source-wordcount: '678'
 ht-degree: 1%
@@ -48,7 +48,7 @@ ht-degree: 1%
 >id="platform_destinations_custom_personalization_datastream"
 >title="데이터 스트림 ID 기본 정보"
 >abstract="이 옵션은 페이지에 대한 응답에 세그먼트를 포함할 데이터 수집 데이터 스트림을 결정합니다. 드롭다운 메뉴에는 대상 구성이 활성화된 데이터 세트만 표시됩니다. 대상을 구성하려면 먼저 데이터 스트림을 구성해야 합니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html?lang=en" text="데이터 스트림을 구성하는 방법을 알아봅니다."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html?lang=en" text="데이터 스트림을 구성하는 방법 알아보기"
 
 이 대상에 연결하려면 [대상 구성 자습서](../../ui/connect-destination.md).
 
