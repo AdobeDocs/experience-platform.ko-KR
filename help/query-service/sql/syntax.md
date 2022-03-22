@@ -5,10 +5,10 @@ title: 쿼리 서비스의 SQL 구문
 topic-legacy: syntax
 description: 이 문서에서는 Adobe Experience Platform 쿼리 서비스에서 지원하는 SQL 구문을 보여줍니다.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: b291bcf4e0ce068b071adde489653b006f4e7fb2
+source-git-commit: 575352d8ee6da092fd0fc3a3033e481ee59bd7d3
 workflow-type: tm+mt
-source-wordcount: '2360'
-ht-degree: 1%
+source-wordcount: '2378'
+ht-degree: 2%
 
 ---
 
@@ -182,11 +182,11 @@ SELECT statement 2
 CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='false') ] AS (select_query)
 ```
 
-**매개 변수**
-
-- `schema`: XDM 스키마의 제목입니다. CTAS 쿼리에서 만든 새 데이터 세트에 기존 XDM 스키마를 사용하려는 경우에만 이 절을 사용합니다.
-- `rowvalidation`: (선택 사항) 새로 생성된 데이터 세트에 대해 수집된 모든 새 배치의 행 수준 유효성 검사를 사용자가 원하는지 여부를 지정합니다. 기본값은 `true`입니다.
-- `select_query`: A `SELECT` 문. 의 구문 `SELECT` 쿼리는 [쿼리 섹션 선택](#select-queries).
+| 매개 변수 | 설명 |
+| ----- | ----- |
+| `schema` | XDM 스키마의 제목입니다. CTAS 쿼리에서 만든 새 데이터 세트에 기존 XDM 스키마를 사용하려는 경우에만 이 절을 사용합니다. |
+| `rowvalidation` | (선택 사항) 새로 생성된 데이터 세트에 대해 수집된 모든 새 배치의 행 수준 유효성 검사를 사용자가 원하는지 여부를 지정합니다. 기본값은 `true`입니다. |
+| `select_query` | A `SELECT` 문. 의 구문 `SELECT` 쿼리는 [쿼리 섹션 선택](#select-queries). |
 
 **예**
 
@@ -210,10 +210,10 @@ CREATE TABLE Chairs AS (SELECT color FROM Inventory SNAPSHOT SINCE 123)
 INSERT INTO table_name select_query
 ```
 
-**매개 변수**
-
-- `table_name`: 쿼리를 삽입할 테이블의 이름입니다.
-- `select_query`: A `SELECT` 문. 의 구문 `SELECT` 쿼리는 [쿼리 섹션 선택](#select-queries).
+| 매개 변수 | 설명 |
+| ----- | ----- |
+| `table_name` | 쿼리를 삽입할 테이블의 이름입니다. |
+| `select_query` | A `SELECT` 문. 의 구문 `SELECT` 쿼리는 [쿼리 섹션 선택](#select-queries). |
 
 **예**
 
@@ -257,9 +257,9 @@ INSERT INTO Customers SELECT struct(SupplierName as Supplier, City as SupplierCi
 DROP TABLE [IF EXISTS] [db_name.]table_name
 ```
 
-**매개 변수**
-
-- `IF EXISTS`: 이 값을 지정하면 테이블이 지정된 경우 예외가 throw되지 않습니다 **not** 존재
+| 매개 변수 | 설명 |
+| ------ | ------ |
+| `IF EXISTS` | 이 값을 지정하면 테이블이 지정된 경우 예외가 throw되지 않습니다 **not** 존재 |
 
 ## 데이터베이스 삭제
 
@@ -269,9 +269,9 @@ DROP TABLE [IF EXISTS] [db_name.]table_name
 DROP DATABASE [IF EXISTS] db_name
 ```
 
-**매개 변수**
-
-- `IF EXISTS`: 이 값을 지정하면 데이터베이스가 지정하는 경우 예외가 발생하지 않습니다 **not** 존재
+| 매개 변수 | 설명 |
+| ------ | ------ |
+| `IF EXISTS` | 이 값을 지정하면 데이터베이스가 지정하는 경우 예외가 발생하지 않습니다 **not** 존재 |
 
 ## 스키마 삭제
 
@@ -281,13 +281,11 @@ DROP DATABASE [IF EXISTS] db_name
 DROP SCHEMA [IF EXISTS] db_name.schema_name [ RESTRICT | CASCADE]
 ```
 
-**매개 변수**
-
-- `IF EXISTS`: 이 값을 지정하면 스키마에 예외가 throw되지 않습니다 **not** 존재
-
-- `RESTRICT`: 모드에 대한 기본값입니다. 이 값을 지정하면 스키마가 지정된 경우에만 삭제됩니다 **does not** 표를 모두 포함합니다.
-
-- `CASCADE`: 이 값을 지정하면 스키마에 있는 모든 테이블과 함께 스키마가 삭제됩니다.
+| 매개 변수 | 설명 |
+| ------ | ------ |
+| `IF EXISTS` | 이 값을 지정하면 스키마에 예외가 throw되지 않습니다 **not** 존재 |
+| `RESTRICT` | 모드에 대한 기본값입니다. 이 값을 지정하면 스키마가 지정된 경우에만 삭제됩니다 **does not** 표를 모두 포함합니다. |
+| `CASCADE` | 이 값을 지정하면 스키마에 있는 모든 테이블과 함께 스키마가 삭제됩니다. |
 
 ## 보기 만들기
 
@@ -297,10 +295,10 @@ DROP SCHEMA [IF EXISTS] db_name.schema_name [ RESTRICT | CASCADE]
 CREATE VIEW view_name AS select_query
 ```
 
-**매개 변수**
-
-- `view_name`: 만들 보기의 이름입니다.
-- `select_query`: A `SELECT` 문. 의 구문 `SELECT` 쿼리는 [쿼리 섹션 선택](#select-queries).
+| 매개 변수 | 설명 |
+| ------ | ------ |
+| `view_name` | 만들 보기의 이름입니다. |
+| `select_query` | A `SELECT` 문. 의 구문 `SELECT` 쿼리는 [쿼리 섹션 선택](#select-queries). |
 
 **예**
 
@@ -318,10 +316,10 @@ CREATE OR REPLACE VIEW V1 AS SELECT model, version FROM Inventory
 DROP VIEW [IF EXISTS] view_name
 ```
 
-**매개 변수**
-
-- `IF EXISTS`: 이 값이 지정된 경우 보기가 실행되는 경우 예외가 발생하지 않습니다 **not** 존재
-- `view_name`: 삭제할 보기의 이름입니다.
+| 매개 변수 | 설명 |
+| ------ | ------ |
+| `IF EXISTS` | 이 값이 지정된 경우 보기가 실행되는 경우 예외가 발생하지 않습니다 **not** 존재 |
+| `view_name` | 삭제할 보기의 이름입니다. |
 
 **예**
 
@@ -396,10 +394,10 @@ ALTER TABLE t2 ADD FOREIGN KEY (c1) REFERENCES t1(c1) NOT ENFORCED;
 SET property_key = property_value
 ```
 
-**매개 변수**
-
-- `property_key`: 나열하거나 변경할 속성의 이름입니다.
-- `property_value`: 속성을 로 설정할 값입니다.
+| 매개 변수 | 설명 |
+| ------ | ------ |
+| `property_key` | 나열하거나 변경할 속성의 이름입니다. |
+| `property_value` | 속성을 로 설정할 값입니다. |
 
 설정에 대한 값을 반환하려면 `SET [property key]` 없이 `property_value`.
 
@@ -447,10 +445,10 @@ If `DEALLOCATE name` 이 사용됩니다. `name` 할당 취소해야 하는 준�
 DECLARE name CURSOR FOR query
 ```
 
-**매개 변수**
-
-- `name`: 만들 커서의 이름입니다.
-- `query`: A `SELECT` 또는 `VALUES` 커서에서 반환할 행을 제공하는 명령입니다.
+| 매개 변수 | 설명 |
+| ------ | ------ |
+| `name` | 만들 커서의 이름입니다. |
+| `query` | A `SELECT` 또는 `VALUES` 커서에서 반환할 행을 제공하는 명령입니다. |
 
 ### 실행
 
@@ -462,10 +460,10 @@ DECLARE name CURSOR FOR query
 EXECUTE name [ ( parameter ) ]
 ```
 
-**매개 변수**
-
-- `name`: 실행할 준비된 문의 이름입니다.
-- `parameter`: 준비된 문에 대한 매개 변수의 실제 값입니다. 준비된 문을 만들 때 결정된 대로 이 매개 변수의 데이터 유형과 호환되는 값을 가져오는 표현식이어야 합니다.  준비된 문에 대해 여러 매개 변수가 있는 경우 쉼표로 구분됩니다.
+| 매개 변수 | 설명 |
+| ------ | ------ |
+| `name` | 실행할 준비된 문의 이름입니다. |
+| `parameter` | 준비된 문에 대한 매개 변수의 실제 값입니다. 준비된 문을 만들 때 결정된 대로 이 매개 변수의 데이터 유형과 호환되는 값을 가져오는 표현식이어야 합니다.  준비된 문에 대해 여러 매개 변수가 있는 경우 쉼표로 구분됩니다. |
 
 ### 설명
 
@@ -482,11 +480,11 @@ ANALYZE
 FORMAT { TEXT | JSON }
 ```
 
-**매개 변수**
-
-- `ANALYZE`: 만약 `option` 다음 포함 `ANALYZE`를 입력하면 실행 시간 및 기타 통계가 표시됩니다.
-- `FORMAT`: 만약 `option` 다음 포함 `FORMAT`를 지정하는 경우 출력 형식을 지정하며, `TEXT` 또는 `JSON`. 텍스트가 아닌 출력에는 텍스트 출력 형식과 동일한 정보가 포함되어 있지만 프로그램이 구문 분석하기 쉽습니다. 이 매개 변수의 기본값은 입니다. `TEXT`.
-- `statement`: 임의 `SELECT`, `INSERT`, `UPDATE`, `DELETE`, `VALUES`, `EXECUTE`, `DECLARE`, `CREATE TABLE AS`, 또는 `CREATE MATERIALIZED VIEW AS` 표시할 실행 계획
+| 매개 변수 | 설명 |
+| ------ | ------ |
+| `ANALYZE` | 만약 `option` 다음 포함 `ANALYZE`를 입력하면 실행 시간 및 기타 통계가 표시됩니다. |
+| `FORMAT` | 만약 `option` 다음 포함 `FORMAT`를 지정하는 경우 출력 형식을 지정하며, `TEXT` 또는 `JSON`. 텍스트가 아닌 출력에는 텍스트 출력 형식과 동일한 정보가 포함되어 있지만 프로그램이 구문 분석하기 쉽습니다. 이 매개 변수의 기본값은 입니다. `TEXT`. |
+| `statement` | 임의 `SELECT`, `INSERT`, `UPDATE`, `DELETE`, `VALUES`, `EXECUTE`, `DECLARE`, `CREATE TABLE AS`, 또는 `CREATE MATERIALIZED VIEW AS` 표시할 실행 계획 |
 
 >[!IMPORTANT]
 >
@@ -515,10 +513,10 @@ EXPLAIN SELECT * FROM foo;
 FETCH num_of_rows [ IN | FROM ] cursor_name
 ```
 
-**매개 변수**
-
-- `num_of_rows`: 가져올 행 수입니다.
-- `cursor_name`: 정보를 검색할 커서의 이름입니다.
+| 매개 변수 | 설명 |
+| ------ | ------ |
+| `num_of_rows` | 가져올 행 수입니다. |
+| `cursor_name` | 정보를 검색할 커서의 이름입니다. |
 
 ### 준비 {#prepare}
 
@@ -532,10 +530,10 @@ FETCH num_of_rows [ IN | FROM ] cursor_name
 PREPARE name [ ( data_type [, ...] ) ] AS SELECT
 ```
 
-**매개 변수**
-
-- `name`: 준비된 문의 이름입니다.
-- `data_type`: 준비된 문의 매개 변수의 데이터 유형입니다. 매개 변수의 데이터 유형이 나열되지 않으면 컨텍스트에서 유형을 유추할 수 있습니다. 여러 데이터 유형을 추가해야 하는 경우 쉼표로 구분된 목록에 추가할 수 있습니다.
+| 매개 변수 | 설명 |
+| ------ | ------ |
+| `name` | 준비된 문의 이름입니다. |
+| `data_type` | 준비된 문의 매개 변수의 데이터 유형입니다. 매개 변수의 데이터 유형이 나열되지 않으면 컨텍스트에서 유형을 유추할 수 있습니다. 여러 데이터 유형을 추가해야 하는 경우 쉼표로 구분된 목록에 추가할 수 있습니다. |
 
 ### 롤백
 
@@ -568,13 +566,13 @@ SELECT [ ALL | DISTINCT [ ON ( expression [, ...] ) ] ]
     [ FOR { UPDATE | SHARE } [ OF table_name [, ...] ] [ NOWAIT ] [...] ]
 ```
 
-**매개 변수**
-
 표준 SELECT 쿼리 매개 변수에 대한 자세한 내용은 [쿼리 섹션 선택](#select-queries). 이 섹션에는 `SELECT INTO` 명령.
 
-- `TEMPORARY` 또는 `TEMP`: 선택적 매개 변수입니다. 지정하면 생성된 테이블이 임시 테이블이 됩니다.
-- `UNLOGGED`: 선택적 매개 변수입니다. 지정되면 로 만들어지는 테이블은 기록되지 않은 테이블입니다. 기록되지 않은 테이블에 대한 자세한 내용은 [PostgreSQL 설명서](https://www.postgresql.org/docs/current/sql-createtable.html).
-- `new_table`: 만들 테이블의 이름입니다.
+| 매개 변수 | 설명 |
+| ------ | ------ |
+| `TEMPORARY` 또는 `TEMP` | 선택적 매개 변수입니다. 지정하면 생성된 테이블이 임시 테이블이 됩니다. |
+| `UNLOGGED` | 선택적 매개 변수입니다. 지정되면 로 만들어지는 테이블은 기록되지 않은 테이블입니다. 기록되지 않은 테이블에 대한 자세한 내용은 [PostgreSQL 설명서](https://www.postgresql.org/docs/current/sql-createtable.html). |
+| `new_table` | 만들 테이블의 이름입니다. |
 
 **예**
 
@@ -593,15 +591,10 @@ SHOW name
 SHOW ALL
 ```
 
-**매개 변수**
-
-- `name`: 정보를 지정할 런타임 매개 변수의 이름입니다. 런타임 매개 변수에 사용할 수 있는 값에는 다음 값이 포함됩니다.
-   - `SERVER_VERSION`: 이 매개 변수는 서버의 버전 번호를 보여줍니다.
-   - `SERVER_ENCODING`: 이 매개 변수는 서버측 문자 집합 인코딩을 보여줍니다.
-   - `LC_COLLATE`: 이 매개 변수는 데이터 정렬(텍스트 순서)에 대한 데이터베이스의 로케일 설정을 보여 줍니다.
-   - `LC_CTYPE`: 이 매개 변수는 문자 분류에 대한 데이터베이스의 로케일 설정을 보여 줍니다.
-      `IS_SUPERUSER`: 이 매개 변수는 현재 역할에 수퍼유저 권한이 있는지 여부를 표시합니다.
-- `ALL`: 설명이 있는 모든 구성 매개 변수의 값을 표시합니다.
+| 매개 변수 | 설명 |
+| ------ | ------ |
+| `name` | 정보를 지정할 런타임 매개 변수의 이름입니다. 런타임 매개 변수에 사용할 수 있는 값에는 다음 값이 포함됩니다.<br>`SERVER_VERSION`: 이 매개 변수는 서버의 버전 번호를 보여줍니다.<br>`SERVER_ENCODING`: 이 매개 변수는 서버측 문자 집합 인코딩을 보여줍니다.<br>`LC_COLLATE`: 이 매개 변수는 데이터 정렬(텍스트 순서)에 대한 데이터베이스의 로케일 설정을 보여 줍니다.<br>`LC_CTYPE`: 이 매개 변수는 문자 분류에 대한 데이터베이스의 로케일 설정을 보여 줍니다.<br>`IS_SUPERUSER`: 이 매개 변수는 현재 역할에 수퍼유저 권한이 있는지 여부를 표시합니다. |
+| `ALL` | 설명이 있는 모든 구성 매개 변수의 값을 표시합니다. |
 
 **예**
 
@@ -628,10 +621,10 @@ COPY query
     [  WITH FORMAT 'format_name']
 ```
 
-**매개 변수**
-
-- `query`: 복사할 쿼리
-- `format_name`: 쿼리를 복사할 형식입니다. 다음 `format_name` 다음 중 하나일 수 있습니다. `parquet`, `csv`, 또는 `json`. 기본적으로 값은 입니다 `parquet`.
+| 매개 변수 | 설명 |
+| ------ | ------ |
+| `query` | 복사할 쿼리 |
+| `format_name` | 쿼리를 복사할 형식입니다. 다음 `format_name` 다음 중 하나일 수 있습니다. `parquet`, `csv`, 또는 `json`. 기본적으로 값은 입니다 `parquet`. |
 
 >[!NOTE]
 >
@@ -657,13 +650,13 @@ ALTER TABLE table_name DROP CONSTRAINT constraint_name PRIMARY KEY ( column_name
 ALTER TABLE table_name DROP CONSTRAINT constraint_name FOREIGN KEY ( column_name )
 ```
 
-**매개 변수**
-
-- `table_name`: 편집 중인 테이블의 이름입니다.
-- `constraint_name`: 추가하거나 삭제할 제약 조건의 이름입니다.
-- `column_name`: 제약 조건을 추가할 열의 이름입니다.
-- `referenced_table_name`: 외래 키가 참조하는 테이블의 이름입니다.
-- `primary_column_name`: 외래 키가 참조하는 열의 이름입니다.
+| 매개 변수 | 설명 |
+| ------ | ------ |
+| `table_name` | 편집 중인 테이블의 이름입니다. |
+| `constraint_name` | 추가하거나 삭제할 제약 조건의 이름입니다. |
+| `column_name` | 제약 조건을 추가할 열의 이름입니다. |
+| `referenced_table_name` | 외래 키가 참조하는 테이블의 이름입니다. |
+| `primary_column_name` | 외래 키가 참조하는 열의 이름입니다. |
 
 >[!NOTE]
 >
@@ -679,11 +672,11 @@ ALTER TABLE table_name ADD COLUMN column_name data_type
 ALTER TABLE table_name ADD COLUMN column_name_1 data_type1, column_name_2 data_type2 
 ```
 
-**매개 변수**
-
-- `table_name`: 편집 중인 테이블의 이름입니다.
-- `column_name`: 추가할 열의 이름입니다.
-- `data_type`: 추가할 열의 데이터 유형입니다. 지원되는 데이터 유형에는 다음이 포함됩니다. bigint, char, string, date, datetime, double, double precision, integer, smallint, tinyint, varchar.
+| 매개 변수 | 설명 |
+| ------ | ------ |
+| `table_name` | 편집 중인 테이블의 이름입니다. |
+| `column_name` | 추가할 열의 이름입니다. |
+| `data_type` | 추가할 열의 데이터 유형입니다. 지원되는 데이터 유형에는 다음이 포함됩니다. bigint, char, string, date, datetime, double, double precision, integer, smallint, tinyint, varchar. |
 
 ### 기본 키 표시
 
