@@ -6,9 +6,10 @@ topic-legacy: overview
 description: Adobe Experience Platform Sources SDK는 Flow Service API를 사용하여 REST API 기반 소스를 통합하여 데이터를 Experience Platform으로 가져올 수 있는 구성 API 세트입니다.
 hide: true
 hidefromtoc: true
-source-git-commit: 3d510876cfdd8ac3045dae8df6fcf6045de2538b
+exl-id: 5d5449ad-a1ba-402b-a281-0b2d8b704f32
+source-git-commit: ce902e461c748e30e0307558da894a4dbdd212a4
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '544'
 ht-degree: 0%
 
 ---
@@ -62,7 +63,7 @@ Experience Platform에서 소스를 구성하는 단계별 프로세스는 다�
    * 다음 안내서를 참조하십시오. [소스 사양 구성](./config/sourcespec.md);
    * 다음 안내서를 참조하십시오. [탐색 사양 구성](./config/explorespec.md);
 * 소스 문서화를 시작하려면 다음을 참조하십시오 [소스 SDK용 설명서 작성에 대한 개요](./documentation/doc-overview.md)
-   * 이 기능을 사용할 수 있습니다 [소스 설명서 템플릿](./documentation/template.md) 설명서를 구조화하는 방법
+   * 이 기능을 사용할 수 있습니다 [소스 API 설명서 템플릿](./documentation/template.md) api 설명서를 구조화하는 방법
+   * 이 기능을 사용할 수 있습니다 [소스 UI 설명서 템플릿](./documentation/ui-template.md) 를 사용하여 UI 설명서를 구성할 수 있습니다.
    * 다음 안내서를 참조하십시오. [gitHub 웹 인터페이스 사용](./documentation/github.md) gitHub를 사용하여 설명서를 만드는 방법에 대한 절차를 설명합니다.
    * 다음 안내서를 참조하십시오. [텍스트 편집기 사용](./documentation/text-editor.md) 로컬 시스템을 사용하여 설명서를 만드는 방법에 대한 단계입니다.
-

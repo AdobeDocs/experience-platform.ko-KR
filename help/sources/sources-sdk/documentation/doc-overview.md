@@ -6,9 +6,10 @@ topic-legacy: overview
 description: 새 소스를 Adobe Experience Platform에서 라이브로 만들려면 먼저 새 소스를 문서화하는 작업을 수행해야 합니다.
 hide: true
 hidefromtoc: true
-source-git-commit: ae1a1139c24fd80e9f689e4c637897c905004c5f
+exl-id: 80daadb1-127f-4f42-8bc9-fb89a7898462
+source-git-commit: e732a43f7ac578d7fde41c48d2c819899fabb0be
 workflow-type: tm+mt
-source-wordcount: '431'
+source-wordcount: '437'
 ht-degree: 0%
 
 ---
@@ -44,7 +45,10 @@ ht-degree: 0%
 
 미리 채워진 을 사용할 수 있습니다 [설명서 템플릿](./template.md) 를 사용하여 소스에 대한 설명서를 작성할 수 있습니다. 아래에서도 템플릿을 편집하고 끌어오기 요청을 여는 방법에 대한 지침을 찾을 수 있습니다. 새 소스에 대해 제출된 설명서는 Adobe 설명서 팀이 검토 및 게시합니다.
 
-또한 [설명서 템플릿 여기](../assets/template.zip).
+문서 템플릿을 아래에 다운로드할 수도 있습니다.
+
+* [API 설명서 템플릿](../assets/template.zip)
+* [UI 설명서 템플릿](../assets/ui-template.zip)
 
 ## 새 소스 페이지 만들기
 

@@ -6,9 +6,10 @@ topic-legacy: tutorial
 description: 이 문서에서는 GitHub 웹 인터페이스를 사용하여 설명서를 작성하고 끌어오기 요청(PR)을 제출하는 방법에 대해 설명합니다.
 hide: true
 hidefromtoc: true
-source-git-commit: d4b5b54be9fa2b430a3b45eded94a523b6bd4ef8
+exl-id: 84b4219c-b3b2-4d0a-9a65-f2d5cd989f95
+source-git-commit: 39accd28edc388c6444910f9a2ea6d2f01acfdaf
 workflow-type: tm+mt
-source-wordcount: '561'
+source-wordcount: '624'
 ht-degree: 2%
 
 ---
@@ -35,7 +36,11 @@ GitHub 환경을 설정하는 첫 번째 단계는 [Adobe Experience Platform Gi
 
 ![생성 분기](../assets/create-branch.png)
 
-포크된 리포지토리의 GitHub 폴더 구조에서 다음 위치로 이동합니다 `experience-platform.en/help/sources/tutorials/api/create/` 그런 다음 목록에서 소스에 대한 적절한 카테고리를 선택합니다. 예를 들어 새 클라우드 스토리지 소스에 대한 설명서를 만드는 경우 **클라우드 스토리지**.
+포크된 리포지토리의 GitHub 폴더 구조에서 다음 위치로 이동합니다. [`experience-platform.en/help/sources/tutorials/api/create/`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/tutorials/api/create) 그런 다음 목록에서 소스에 대한 적절한 카테고리를 선택합니다. 예를 들어 새 클라우드 스토리지 소스에 대한 설명서를 만드는 경우 **클라우드 스토리지**.
+
+>[!TIP]
+>
+>UI에 대한 설명서를 작성하는 경우 다음 위치로 이동합니다 [`experience-platform.en/help/sources/tutorials/ui/create/`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/tutorials/ui/create) 그리고 출처에 적합한 카테고리를 선택합니다. 이미지를 추가하려면 다음 위치로 이동합니다 [`experience-platform.en/help/sources/images/tutorials/create/sdk`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/images/tutorials/create) 그런 다음 스크린샷을 `sdk` 폴더를 입력합니다.
 
 ![클라우드 스토리지](../assets/cloud-storage.png)
 

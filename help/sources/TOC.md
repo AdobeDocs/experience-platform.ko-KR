@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 소스 커넥터 도움말
 breadcrumb-title: Source Connectors 안내서
 user-guide-description: 다양한 소스 또는 구조에서 데이터를 수집하고 레이블을 지정하며 기존에 수집한 데이터를 향상시킬 수 있습니다.
 feature: Sources
-source-git-commit: da3d0399bae9953cd74bd0ac6d6e16b64796a578
+source-git-commit: c74676836d4690568665f16445c0dcf91496daf6
 workflow-type: tm+mt
-source-wordcount: '745'
+source-wordcount: '750'
 ht-degree: 13%
 
 ---
@@ -217,7 +217,7 @@ ht-degree: 13%
          - [azure synapse 분석](tutorials/ui/create/databases/synapse-analytics.md)
          - [Azure 테이블 저장소](tutorials/ui/create/databases/ats.md)
          - [Couchbase](tutorials/ui/create/databases/couchbase.md)
-         - [Google BigQuery](tutorials/ui/create/databases/bigquery.md)
+         - [Google Big Query](tutorials/ui/create/databases/bigquery.md)
          - [그린 플럼](tutorials/ui/create/databases/greenplum.md)
          - [HP Vertica](tutorials/ui/create/databases/hp-vertica.md)
          - [IBM DB2](tutorials/ui/create/databases/ibm-db2.md)
@@ -277,7 +277,8 @@ ht-degree: 13%
    - [Adobe Experience Platform에서 소스 문서화](sources-sdk/documentation/doc-overview.md)
    - [GitHub 웹 인터페이스를 사용하여 소스 설명서 페이지를 만듭니다](sources-sdk/documentation/github.md)
    - [로컬 환경에서 텍스트 편집기를 사용하여 소스 설명서 페이지를 만듭니다](sources-sdk/documentation/text-editor.md)
-   - [설명서 셀프 서비스 템플릿](sources-sdk/documentation/template.md)
+   - [설명서 셀프 서비스 API 템플릿](sources-sdk/documentation/template.md)
+   - [설명서 셀프 서비스 UI 템플릿](sources-sdk/documentation/ui-template.md)
 - [흐름 실행 알림](notifications.md)
 - [IP 주소 허용 목록](ip-address-allow-list.md)
 - [자주 묻는 질문](./troubleshooting.md)
