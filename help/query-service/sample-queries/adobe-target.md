@@ -5,18 +5,18 @@ title: Adobe Target 데이터에 대한 샘플 쿼리
 topic-legacy: queries
 description: Adobe Target의 데이터는 Experience Event XDM 스키마로 변환되고 데이터 세트로 Experience Platform으로 수집됩니다. 이 문서에는 Adobe Target 데이터 세트에 Query Service를 사용하기 위한 샘플 쿼리가 포함되어 있습니다.
 exl-id: 0ab3cd6e-25ed-43dc-b8f0-a2b71621ae50
-source-git-commit: c0e7ae8f65aa0373d35a55d4da46e0ffcb0e60f9
+source-git-commit: 76847d8286776a554e55209fa1b334c98b02d76b
 workflow-type: tm+mt
-source-wordcount: '328'
+source-wordcount: '324'
 ht-degree: 1%
 
 ---
 
 # Adobe Target 데이터에 대한 샘플 쿼리
 
-Adobe Target의 데이터는 Experience Event XDM 스키마로 변환되고 데이터 세트로 Adobe Experience Platform으로 수집됩니다. 이 데이터를 사용하는 Adobe Experience Platform Query Service에 대한 사용 사례가 많이 있으며 다음 샘플 쿼리는 Adobe Target 데이터 세트에서 작동해야 합니다.
+Adobe Target에서 수집된 데이터는 Experience Event XDM 스키마로 변환되고 데이터 세트로 Adobe Experience Platform으로 수집됩니다. Adobe Experience Platform Query Service를 사용하면 이 데이터에 대한 많은 사용 사례를 용이하게 할 수 있으며 다음 샘플 쿼리는 Adobe Target 데이터 세트에서 작동해야 합니다.
 
-Experience Platform에서 자동 생성된 데이터 세트의 이름은 &quot;Adobe Target Experience Events&quot;입니다. 쿼리와 함께 이 데이터 세트를 사용할 때는 이름을 사용해야 합니다 `adobe_target_experience_events`.
+Experience Platform에서 자동 생성된 데이터 세트의 이름은 &quot;Adobe Target Experience Events&quot;입니다. 쿼리와 함께 이 데이터 세트를 사용할 때는 이름을 사용하십시오 `adobe_target_experience_events`.
 
 ## 높은 수준 부분 XDM 필드 매핑
 
