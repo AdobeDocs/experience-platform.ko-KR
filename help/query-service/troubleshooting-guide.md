@@ -5,9 +5,9 @@ title: Query Service 문제 해결 안내서
 topic-legacy: troubleshooting
 description: 이 문서에서는 사용자가 발생하는 일반적인 오류 코드 및 가능한 원인에 대한 정보를 제공합니다.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 38d0c34e7af2466fa005c8adaf3bd9e1d9fd78e1
+source-git-commit: a6924a1018d5dd4e3f03b3d8b6375cacb450a4f5
 workflow-type: tm+mt
-source-wordcount: '3292'
+source-wordcount: '3413'
 ht-degree: 1%
 
 ---
@@ -21,6 +21,8 @@ FAQ에 대한 다음 목록은 다음 카테고리로 분류됩니다.
 - [일반](#general)
 - [데이터 내보내기](#exporting-data)
 - [타사 도구](#third-party-tools)
+- [PostgreSQL API 오류](#postgresql-api-errors)
+- [REST API 오류](#rest-api-errors)
 
 ## 일반 쿼리 서비스 질문 {#general}
 
@@ -38,7 +40,7 @@ FAQ에 대한 다음 목록은 다음 카테고리로 분류됩니다.
 
 ### Query Service API에 Postman을 사용할 수 있습니까?
 
-+++답변 예. Postman(무료 타사 애플리케이션)을 사용하여 모든 Adobe API 서비스를 시각화하고 상호 작용할 수 있습니다. 보기 [Postman 설치 안내서](https://video.tv.adobe.com/v/28832) Adobe 개발자 콘솔에서 프로젝트를 설정하고 Postman에서 사용하는 데 필요한 모든 자격 증명을 획득하는 방법에 대한 단계별 지침입니다. 에 대한 공식 설명서를 참조하십시오. [Postman 컬렉션 시작, 실행 및 공유에 대한 지침](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
++++답변 예. Postman(무료 타사 애플리케이션)을 사용하여 모든 Adobe API 서비스를 시각화하고 상호 작용할 수 있습니다. 보기 [Postman 설치 안내서](https://video.tv.adobe.com/v/28832) Adobe 개발자 콘솔에서 프로젝트를 설정하고 Postman에 사용하는 데 필요한 모든 자격 증명을 획득하는 방법에 대한 단계별 지침입니다. 에 대한 공식 설명서를 참조하십시오. [Postman 컬렉션 시작, 실행 및 공유에 대한 지침](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
 +++
 
 ### UI를 통해 쿼리에서 반환되는 최대 행 수에 제한이 있습니까?
@@ -215,16 +217,17 @@ AS SELECT '1' as _id,
 
 ### 매일 시스템에 들어오는 새 데이터를 빠르게 처리하려면 어떻게 해야 합니까?
 
-+++ [`SNAPSHOT`](./sql/syntax.md#snapshot-clause) 절은 스냅샷 ID를 기반으로 테이블에서 데이터를 점진적으로 읽는 데 사용할 수 있습니다. 이 기능은 와 함께 사용하는 데 이상적입니다 [증분 로드](./best-practices/incremental-load.md) 마지막 로드 실행 이후 생성 또는 수정된 데이터 세트에 있는 정보만 처리하는 디자인 패턴입니다. 따라서 처리 효율을 높이고 스트리밍 및 배치 데이터 처리와 함께 사용할 수 있습니다.
++++Answer
+The [`SNAPSHOT`](./sql/syntax.md#snapshot-clause) clause can be used to incrementally read data on a table based on a snapshot ID. 이 기능은 와 함께 사용하는 데 이상적입니다 [증분 로드](./best-practices/incremental-load.md) 마지막 로드 실행 이후 생성 또는 수정된 데이터 세트에 있는 정보만 처리하는 디자인 패턴입니다. 따라서 처리 효율을 높이고 스트리밍 및 배치 데이터 처리와 함께 사용할 수 있습니다.
 +++
 
 ### 프로필 UI에 표시된 숫자와 프로필 내보내기 데이터 세트에서 계산된 숫자 간에 차이가 있는 이유는 무엇입니까?
 
-+++답변 프로필 대시보드에 표시된 숫자는 마지막 스냅샷에서 정확합니다. 프로필 내보내기 테이블에서 생성된 숫자는 내보내기 쿼리에 전적으로 의존합니다. 따라서 특정 세그먼트에 적합한 프로필 수를 쿼리하는 것은 이러한 불일치를 위한 일반적인 원인입니다.
++++답변 프로필 대시보드에 표시된 숫자는 마지막 스냅샷에서 정확합니다. 프로필 내보내기 테이블에서 생성된 숫자는 내보내기 쿼리에 전적으로 의존합니다. As a result, querying the number of profiles that qualify for a particular segment is a common cause for this discrepancy.
 
 >[!NOTE]
 >
->쿼리는 내역 데이터를 포함하지만 UI는 현재 프로필 데이터만 표시합니다.
+>Querying includes historical data, whereas UI only displays the current profile data.
 
 +++
 
@@ -232,7 +235,7 @@ AS SELECT '1' as _id,
 
 +++답변 쿼리 범위가 너무 좁기 때문일 수 있습니다. 의 섹션을 체계적으로 제거해야 합니다 `WHERE` 절을 클릭하여 일부 데이터를 볼 수 있습니다.
 
-다음과 같은 작은 쿼리를 사용하여 데이터 집합에 데이터가 포함되어 있는지 확인할 수도 있습니다.
+You can also confirm that your dataset contains data by using a small query such as:
 
 ```sql
 SELECT count(1) FROM myTableName
@@ -250,7 +253,7 @@ SELECT count(1) FROM myTableName
 +++Answer Query Service에서는 SQL 기능을 확장하기 위한 몇 가지 기본 제공 SQL 도우미 함수를 제공합니다. 문서의 전체 목록을 보려면 문서를 참조하십시오 [쿼리 서비스에서 지원하는 SQL 함수](./sql/spark-sql-functions.md).
 +++
 
-### 예약된 쿼리가 실패하면 어떻게 해야 합니까?
+### What should I do if my scheduled query fails?
 
 +++먼저 로그를 확인하여 오류 세부 정보를 확인하십시오. 의 FAQ 섹션 [로그 내에서 오류 찾기](#error-logs) 이 작업을 수행하는 방법에 대한 자세한 정보를 제공합니다.
 
@@ -398,11 +401,11 @@ WHERE timestamp = CAST('07-29-2021 00:00:00' AS timestamp)
 +++답변 쿼리 서비스를 **열 형식 저장소** 기존 행 기반 스토어 시스템 대신
 +++
 
-### 사용해야 합니까 `NOT IN` 내 SQL 쿼리에서?
+### Should I use `NOT IN` in my SQL query?
 
-+++ `NOT IN` 연산자는 다른 테이블이나 SQL 문에서 찾을 수 없는 행을 검색하는 데 종종 사용됩니다. 이 연산자는 성능 속도를 저하할 수 있으며 비교 중인 열이 수락되면 예기치 않은 결과를 반환할 수 있습니다 `NOT NULL`또는 레코드 수가 많습니다.
++++ `NOT IN` 연산자는 다른 테이블이나 SQL 문에서 찾을 수 없는 행을 검색하는 데 종종 사용됩니다. This operator can slow down performance and may return unexpected results if the columns that are being compared accept `NOT NULL`, or you have large numbers of records.
 
-를 사용하는 대신 `NOT IN`, 다음 중 하나를 사용할 수 있습니다. `NOT EXISTS` 또는 `LEFT OUTER JOIN`.
+Instead of using `NOT IN`, you can use either `NOT EXISTS` or `LEFT OUTER JOIN`.
 
 예를 들어 다음 테이블을 생성한 경우
 
@@ -434,38 +437,9 @@ WHERE T2.ID IS NULL
 
 +++
 
-## REST API 오류
-
-| HTTP 상태 코드 | 설명 | 가능한 원인 |
-|------------------|-----------------------|----------------------------|
-| 400 | 잘못된 요청 | 잘못된 쿼리 또는 잘못된 쿼리 |
-| 401년 | 인증 실패 | 잘못된 인증 토큰 |
-| 500 | 내부 서버 오류 | 내부 시스템 장애 |
-
-## PostgreSQL API 오류
-
-| 오류 코드 | 연결 상태 | 설명 | 가능한 원인 |
-|------------|---------------------------|-------------|----------------|
-| **08P01** | 해당 없음 | 지원되지 않는 메시지 유형 | 지원되지 않는 메시지 유형 |
-| **28P01** | 시작 - 인증 | 잘못된 암호 | 잘못된 인증 토큰 |
-| **28000** | 시작 - 인증 | 잘못된 인증 유형 | 권한 부여 형식이 잘못되었습니다. 반드시 `AuthenticationCleartextPassword`. |
-| **42P12** | 시작 - 인증 | 테이블을 찾을 수 없습니다. | 사용할 테이블을 찾을 수 없습니다. |
-| **42601** | 쿼리 | 구문 오류 | 명령 또는 구문 오류가 잘못되었습니다. |
-| **42P01** | 쿼리 | 테이블을 찾을 수 없음 | 쿼리에 지정된 테이블을 찾을 수 없습니다 |
-| **42P07** | 쿼리 | 테이블이 존재함 | 이름이 같은 테이블이 이미 있습니다(CREATE TABLE). |
-| **53400** | 쿼리 | LIMIT가 최대값을 초과합니다. | 사용자가 100,000보다 큰 LIMIT 절을 지정했습니다. |
-| **53400** | 쿼리 | 문 시간 초과 | 제출된 라이브 명령문은 최대 10분 이상 걸렸습니다 |
-| **58000** | 쿼리 | 시스템 오류 | 내부 시스템 장애 |
-| **0A000** | 쿼리/명령 | 지원되지 않음 | 쿼리/명령의 기능/기능은 지원되지 않습니다 |
-| **42501** | 테이블 쿼리 삭제 | 쿼리 서비스에서 만들지 않은 테이블 삭제 | 삭제되는 테이블이 `CREATE TABLE` statement |
-| **42501** | 테이블 쿼리 삭제 | 인증된 사용자가 만들지 않은 테이블 | 삭제되는 테이블은 현재 로그인한 사용자가 만들지 않았습니다 |
-| **42P01** | 테이블 쿼리 삭제 | 테이블을 찾을 수 없음 | 쿼리에 지정된 테이블을 찾을 수 없습니다 |
-| **42P12** | 테이블 쿼리 삭제 | 에 대한 테이블을 찾을 수 없습니다. `dbName`: 확인 `dbName` | 현재 데이터베이스에 테이블이 없습니다. |
-
 ## 데이터 내보내기 {#exporting-data}
 
 이 섹션에서는 데이터 및 제한 내보내기에 대한 정보를 제공합니다.
-
 
 ### 쿼리 처리 후 쿼리 서비스에서 데이터를 추출하고 결과를 CSV 파일에 저장하는 방법이 있습니까?
 
@@ -479,7 +453,7 @@ FROM <table_name>
 \g <table_name>.out
 ```
 
-[의 사용에 대한 지침 `COPY TO` 명령](./sql/syntax.md#copy) 는 SQL 구문 참조 설명서에서 찾을 수 있습니다.
+[Guidance on the use of the `COPY TO` command](./sql/syntax.md#copy) can be fond in the SQL syntax reference documentation.
 +++
 
 ### CTAS 쿼리를 통해 수집된 최종 데이터 세트의 컨텐츠를 추출할 수 있습니까(테라바이트와 같은 큰 데이터 양이 있다고 가정할 경우)?
@@ -517,10 +491,58 @@ FROM <table_name>
 
 대시보드에 대한 응답 시간을 개선하려면 Query Service와 BI 도구 간에 Business Intelligence(BI) 서버를 캐싱 레이어로 구현해야 합니다. 일반적으로 대부분의 BI 도구에는 서버를 위한 추가 서비스가 있습니다.
 
-캐시 서버 계층을 추가하는 목적은 쿼리 서비스에서 데이터를 캐시하고 이를 대시보드에 활용하여 응답 속도를 높이는 것입니다. 이는 실행되는 쿼리의 결과가 매일 BI 서버에 캐시되므로 가능합니다. 그런 다음 캐싱 서버는 동일한 쿼리를 가진 모든 사용자에게 이러한 결과를 제공하여 지연을 줄입니다. 이 설정에 대한 자세한 내용은 사용 중인 유틸리티 또는 타사 도구의 설명서를 참조하십시오.
+캐시 서버 계층을 추가하는 목적은 쿼리 서비스에서 데이터를 캐시하고 이를 대시보드에 활용하여 응답 속도를 높이는 것입니다. 이는 실행되는 쿼리의 결과가 매일 BI 서버에 캐시되므로 가능합니다. The caching server then serves these results for any user with the same query to decrease latency. 이 설정에 대한 자세한 내용은 사용 중인 유틸리티 또는 타사 도구의 설명서를 참조하십시오.
 +++
 
 ### pgAdmin 연결 도구를 사용하여 Query Service에 액세스할 수 있습니까?
 
 +++아니요, pgAdmin 연결은 지원되지 않습니다. A [사용 가능한 타사 클라이언트 목록 및 Query Service에 연결하는 방법에 대한 지침](./clients/overview.md) 는 설명서에서 찾을 수 있습니다.
 +++
+
+## PostgreSQL API 오류 {#postgresql-api-errors}
+
+다음 표에서는 PSQL 오류 코드 및 가능한 원인을 제공합니다.
+
+| 오류 코드 | 연결 상태 | 설명 | 가능한 원인 |
+|------------|---------------------------|-------------|----------------|
+| **08P01** | 해당 없음 | 지원되지 않는 메시지 유형 | 지원되지 않는 메시지 유형 |
+| **28P01** | 시작 - 인증 | 잘못된 암호 | 잘못된 인증 토큰 |
+| **28000** | 시작 - 인증 | 잘못된 인증 유형 | 권한 부여 형식이 잘못되었습니다. 반드시 `AuthenticationCleartextPassword`. |
+| **42P12** | Start-up - authentication | No tables found | 사용할 테이블을 찾을 수 없습니다. |
+| **42601** | 쿼리 | 구문 오류 | 명령 또는 구문 오류가 잘못되었습니다. |
+| **42P01** | 쿼리 | Table not found | 쿼리에 지정된 테이블을 찾을 수 없습니다 |
+| **42P07** | 쿼리 | 테이블이 존재함 | 이름이 같은 테이블이 이미 있습니다(CREATE TABLE). |
+| **53400** | 쿼리 | LIMIT가 최대값을 초과합니다. | 사용자가 100,000보다 큰 LIMIT 절을 지정했습니다. |
+| **53400** | 쿼리 | 문 시간 초과 | 제출된 라이브 명령문은 최대 10분 이상 걸렸습니다 |
+| **58000** | 쿼리 | 시스템 오류 | 내부 시스템 장애 |
+| **0A000** | 쿼리/명령 | 지원되지 않음 | 쿼리/명령의 기능/기능은 지원되지 않습니다 |
+| **42501** | 테이블 쿼리 삭제 | 쿼리 서비스에서 만들지 않은 테이블 삭제 | 삭제되는 테이블이 `CREATE TABLE` statement |
+| **42501** | 테이블 쿼리 삭제 | 인증된 사용자가 만들지 않은 테이블 | 삭제되는 테이블은 현재 로그인한 사용자가 만들지 않았습니다 |
+| **42P01** | 테이블 쿼리 삭제 | 테이블을 찾을 수 없음 | 쿼리에 지정된 테이블을 찾을 수 없습니다 |
+| **42P12** | 테이블 쿼리 삭제 | 에 대한 테이블을 찾을 수 없습니다. `dbName`: 확인 `dbName` | 현재 데이터베이스에 테이블이 없습니다. |
+
+### 테이블에서 history_meta() 메서드를 사용할 때 58000 오류 코드가 표시되는 이유는 무엇입니까?
+
++++ `history_meta()` 메서드는 데이터 집합에서 스냅샷에 액세스하는 데 사용됩니다. 이전에는 ADLS(Azure Data Lake Storage)의 빈 데이터 집합에 대해 쿼리를 실행하려는 경우 데이터 세트가 없다는 58000 오류 코드가 표시됩니다. 이전 시스템 오류의 예가 아래에 표시됩니다.
+
+```shell
+ErrorCode: 58000 Internal System Error [Invalid table your_table_name. historyMeta can be used on datalake tables only.]
+```
+
+쿼리에 대한 반환 값이 없으므로 이 오류가 발생했습니다. 이제 이 동작은 다음 메시지를 반환하도록 수정되었습니다.
+
+```text
+Query complete in {timeframe}. 0 rows returned. 
+```
+
++++
+
+## REST API 오류 {#rest-api-errors}
+
+다음 표는 HTTP 오류 코드 및 가능한 원인을 제공합니다.
+
+| HTTP 상태 코드 | 설명 | 가능한 원인 |
+|------------------|-----------------------|----------------------------|
+| 400 | 잘못된 요청 | 잘못된 쿼리 또는 잘못된 쿼리 |
+| 401년 | Authentication failed | 잘못된 인증 토큰 |
+| 500 | 내부 서버 오류 | Internal system failure |
