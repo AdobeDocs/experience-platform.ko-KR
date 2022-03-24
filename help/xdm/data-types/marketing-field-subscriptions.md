@@ -4,9 +4,9 @@ title: 구독 데이터 유형이 있는 일반 마케팅 기본 설정 필드
 topic-legacy: overview
 description: 이 문서에서는 구독 XDM 데이터 유형을 사용하는 일반 마케팅 기본 설정 필드에 대한 개요를 제공합니다.
 exl-id: 170ea6ca-77fc-4b0a-87f9-6d4b6f32d953
-source-git-commit: 0f39e9237185b49417f2af8dfc288ab1420cccae
+source-git-commit: bccf97d85421fcb2f8fe153ad0ddbef4975b6f7e
 workflow-type: tm+mt
-source-wordcount: '870'
+source-wordcount: '900'
 ht-degree: 2%
 
 ---
@@ -59,29 +59,31 @@ ht-degree: 2%
 다음 JSON은 다음을 포함하는 전화 통화 마케팅 채널에 대한 예제 마케팅 필드를 나타냅니다 `subscriptions` 맵 의 각 키 `subscriptions` 개체는 마케팅 채널에 대한 개별 가입을 나타냅니다. 그러면 각 구독에 옵트인 값( )이 포함됩니다`val`).
 
 ```json
-"phone-marketing-field": {
+"email-marketing-field": {
   "val": "y",
   "time": "2019-01-01T15:52:25+00:00",
   "subscriptions": {
     "loyalty-offers": {
       "val": "y",
       "type": "sales",
+      "topics": ["discounts", "early-access"],
       "subscribers": {
-        "123-555-0928": {
+        "jdoe@example.com": {
           "time": "2019-01-01T15:52:25+00:00",
           "source": "website"
         }
       }
     },
-    "overdrawn-account": {
+    "newsletters": {
       "val": "y",
-      "type": "issues",
+      "type": "advertising",
+      "topics": ["hardware"],
       "subscribers": {
-        "123-555-0928": {
+        "jdoe@example.com": {
           "time": "2021-01-01T08:32:53+07:00",
           "source": "website"
         },
-        "301-555-1527": {
+        "tparan@example.com": {
           "time": "2020-02-03T07:54:21+07:00",
           "source": "call center"
         }
@@ -93,7 +95,9 @@ ht-degree: 2%
 
 | 속성 | 설명 |
 | --- | --- |
+| `val` | 다음 [동의 값](#val) 구독. |
 | `type` | 구독 유형입니다. 15자 이내인 경우 어떤 수사적 문자열일 수 있습니다. |
+| `topics` | 고객이 구독한 관심 영역을 나타내는 문자열 배열이며 관련 콘텐츠를 보내는 데 사용할 수 있습니다. |
 | `subscribers` | 특정 구독을 구독한 식별자 세트(예: 이메일 주소 또는 전화 번호)를 나타내는 선택적 맵 유형 필드입니다. 이 개체의 각 키는 해당 식별자를 나타내며 두 개의 하위 속성을 포함합니다. <ul><li>`time`: ID가 구독한 시간의 ISO 8601 타임스탬프입니다(해당하는 경우).</li><li>`source`: 구독자가 시작한 원본입니다. 15자 이내인 경우 어떤 수사적 문자열일 수 있습니다.</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
