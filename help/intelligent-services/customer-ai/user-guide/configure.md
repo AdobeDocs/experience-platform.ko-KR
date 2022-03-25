@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;사용 안내서;고객 ai;인기 항목;인스턴스 구성;인스턴스 만들기;
-solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
+solution: Intelligent Services, Real-time Customer Data Platform
 feature: Customer AI
 title: 고객 AI 인스턴스 구성
 topic-legacy: Instance creation
 description: Intelligent Services는 고객 AI를 다양한 사용 사례에 대해 구성할 수 있는 사용하기 쉬운 Adobe Sensei 서비스로 제공합니다. 다음 섹션에서는 Customer AI 인스턴스를 구성하는 단계를 제공합니다.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: f7fde9ed299e6bdb6e63279be1126b91fc90d3f3
+source-git-commit: 16120a10f8a6e3fd7d2143e9f52a822c59a4c935
 workflow-type: tm+mt
 source-wordcount: '2608'
 ht-degree: 0%

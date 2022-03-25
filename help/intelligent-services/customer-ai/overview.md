@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;개요;고객 ai;인기 항목;고객 ai 개요
-solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
+solution: Intelligent Services, Real-time Customer Data Platform
 feature: Customer AI
-title: Customer AI 개요
+title: 고객 AI 개요
 topic-legacy: Customer AI Overview
 description: 고객 AI는 규모에 따라 개별 프로필에 대한 이탈 및 전환과 같은 사용자 지정 성향 점수를 생성하는 데 사용됩니다. 비즈니스 요구 사항을 머신 러닝 문제로 변환하거나 알고리즘을 선택하거나 교육 또는 배포하지 않아도 됩니다.
 landing-page-description: 고객 AI는 규모에 따라 개별 프로필에 대한 이탈 및 전환과 같은 사용자 지정 성향 점수를 생성하는 데 사용됩니다.
 exl-id: 3e668103-e2a2-4ce6-a40a-8029a6aaa8dd
-source-git-commit: c3320f040383980448135371ad9fae583cfca344
+source-git-commit: 16120a10f8a6e3fd7d2143e9f52a822c59a4c935
 workflow-type: tm+mt
 source-wordcount: '554'
 ht-degree: 18%
@@ -15,7 +15,7 @@ ht-degree: 18%
 ---
 
 
-# Customer AI 개요
+# 고객 AI 개요
 
 Customer AI : Intelligent Services의 일부로, 마케터는 설명을 통해 개별 수준에서 고객 예측을 생성할 수 있는 기능을 제공합니다.
 
@@ -38,7 +38,7 @@ Customer AI : Intelligent Services의 일부로, 마케터는 설명을 통해 �
 
 - 고객 AI는 동적 가격 책정 또는 고객이 구매하려는 가격 포인트를 예측하는 데 사용해서는 안 됩니다.
 - 고객 AI는 오퍼 제공으로 인해 고객이 품목을 더 많이 구매할 수 있는지 확인할 수 없습니다. 성향 점수를 기반으로 할인 오퍼를 전송하기로 결정할 수 있지만 그러한 고객을 전환하기 위한 가장 좋은 방법일 필요는 없습니다.
-- 고객 AI는 제품 권장 사항 도구가 아닙니다. 수천 개의 SKU가 있는 경우 고객 AI를 [!DNL Adobe Target]와 같은 실제 제품 권장 사항 솔루션에 대한 프록시로 사용하지 마십시오.
+- 고객 AI는 제품 권장 사항 도구가 아닙니다. 수천 개의 SKU를 보유한 경우 와 같은 실제 제품 권장 사항 솔루션에 Customer AI를 프록시로 사용하지 마십시오 [!DNL Adobe Target].
 - 고객 AI는 고객이 &quot;인지도&quot;, &quot;고려&quot;, &quot;구매&quot; 또는 &quot;유지&quot; 단계에 있는 경우 고객이 속한 구매 여정의 단계를 예측할 수 없습니다.
 - Customer AI를 사용하여 향후 제품 출시를 시작할 고객을 판단하지 마십시오. 따라서 고객 AI가 데이터에 대한 기계 학습 알고리즘을 성공적으로 교육하려면 과거에 특정 성공 이벤트가 있어야 합니다.
 
@@ -52,4 +52,4 @@ Customer AI : Intelligent Services의 일부로, 마케터는 설명을 통해 �
 
 ## 다음 단계
 
-[시작하기](./getting-started.md) 안내서를 따라 시작할 수 있습니다. 이 안내서에서는 Customer AI에 필요한 모든 사전 요구 사항을 설정하도록 안내합니다. 모든 자격 증명과 데이터를 이미 준비했다면 [고객 AI 인스턴스 구성](./user-guide/configure.md)을 방문하십시오. Customer AI 사용 단계를 제공합니다.
+다음을 수행하여 시작할 수 있습니다. [시작하기](./getting-started.md) 안내서. 이 안내서에서는 Customer AI에 필요한 모든 사전 요구 사항을 설정하도록 안내합니다. 모든 자격 증명과 데이터를 이미 준비했다면 을 방문하십시오.  [고객 AI 인스턴스 구성](./user-guide/configure.md). Customer AI 사용 단계를 제공합니다.

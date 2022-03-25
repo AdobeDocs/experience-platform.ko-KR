@@ -1,29 +1,30 @@
 ---
-keywords: Experience Platform;getting started;attribution ai;popular topics;attribution ai input;attribution ai output;attribution ai troubleshooting;attribution ai errors
-solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
+keywords: Experience Platform;시작하기;속성 ai;인기 항목;속성 ai 입력;속성 ai 출력;속성 ai 문제 해결;속성 ai 오류
+solution: Intelligent Services, Real-time Customer Data Platform
 feature: Attribution AI
-title: Attribution AI error troubleshooting
-description: Find answers to common errors in Attribution AI.
+title: Attribution AI 오류 문제 해결
+description: Attribution AI에서 일반적인 오류에 대한 답변을 찾습니다.
 type: Documentation
-source-git-commit: 896dda631cd4182f278de0607bea442d8366fe8c
+exl-id: c2ff700a-1e36-4ba2-876c-9f8b56344241
+source-git-commit: 16120a10f8a6e3fd7d2143e9f52a822c59a4c935
 workflow-type: tm+mt
 source-wordcount: '167'
 ht-degree: 0%
 
 ---
 
-# Attribution AI error troubleshooting
+# Attribution AI 오류 문제 해결
 
-This document provides answers to frequently asked questions about Attribution AI.
+이 문서에서는 Attribution AI에 대해 자주 묻는 질문에 대한 답변을 제공합니다.
 
-## Unable to access Attribution AI in Chrome incognito
+## Chrome의 Attribution AI에 액세스할 수 없음
 
-Loading errors in Google Chrome&#39;s incognito mode are present because of updates in Google Chrome’s incognito mode security settings. The issue is actively being worked on with Chrome to make experience.adobe.com a trusted domain.
+Google Chrome의 시크릿 모드 보안 설정에서 업데이트로 인해 Google Chrome의 시크릿 모드에서 오류가 발생합니다. 이 문제는 experience.adobe.com을 신뢰할 수 있는 도메인으로 만들기 위해 Chrome에서 현재 진행 중입니다.
 
 <img src="./images/faq/error.PNG" width="500" /><br />
 
-### Recommended fix
+### 권장 수정
 
-To workaround this issue you need to add experience.adobe.com as a site that can always use cookies. **** ******** `[*.]experience.adobe.com`**** ****
+이 문제를 해결하려면 항상 쿠키를 사용할 수 있는 사이트로 experience.adobe.com을 추가해야 합니다. 다음으로 이동 **chrome://settings/cookies**. 다음으로 아래로 스크롤하여 **사용자 지정된 동작** 섹션 다음에 을(를) 선택하고 **추가** &quot;항상 쿠키를 사용할 수 있는 사이트&quot; 옆에 있는 단추. 팝오버가 나타나면 복사하여 붙여넣습니다. `[*.]experience.adobe.com` 그런 다음 **타사 쿠키 포함** 이 사이트에서 확인란을 선택합니다. 완료되면 을 선택합니다 **추가** incognito에서 Attribution AI을 다시 로드합니다.
 
-![](./images/faq/cookies2.gif)
+![권장 수정](./images/faq/cookies2.gif)
