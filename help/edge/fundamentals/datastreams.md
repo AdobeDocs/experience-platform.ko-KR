@@ -3,9 +3,9 @@ title: Experience Platform Web SDK에 대한 데이터 스트림 구성
 description: '데이터 저장소를 구성하는 방법을 알아봅니다. '
 keywords: 구성;데이터 스트림;데이터 스트림 ID;에지;데이터 스트림 ID;환경 설정;edgeConfigId;id;ID 동기화 사용;ID 동기화 컨테이너 ID;샌드박스;스트리밍 입력;이벤트 데이터 세트;target;클라이언트 코드;속성 토큰;Target 환경 ID;쿠키 대상;URL 대상;Analytics 설정 차단 보고서 세트 ID;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 7fc62099ef7561595d260a5507fb2094f58b6016
+source-git-commit: 026d45b2c9d362d7510576601174c296e3b18a2a
 workflow-type: tm+mt
-source-wordcount: '2004'
+source-wordcount: '1995'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->UI에서 이 기능에 액세스하려면 조직에 이 기능이 제공되어야 합니다. 액세스 권한이 없는 경우 다음 내용을 작성하십시오 [양식](http://adobe.ly/websdkaccess) 필요한 액세스 권한을 부여해 드리겠습니다.
+>UI에서 이 기능에 액세스하려면 조직에 이 기능이 제공되어야 합니다. 다음 사항을 기입하십시오 [양식](https://adobe.ly/websdkaccess) 필요한 액세스를 요청합니다.
 
 ## 액세스 권한 [!UICONTROL 데이터 스트림] 작업 영역
 
@@ -60,7 +60,7 @@ Experience Platform에서 사용하도록 이 데이터 스트림을 구성하�
 | [!UICONTROL 자사 ID 쿠키] | 이 설정이 활성화되면 Edge Network에 [자사 장치 ID](../identity/first-party-device-ids.md)를 채우는 것이 좋습니다.<br><br>이 설정을 활성화할 때 ID가 저장되어야 하는 쿠키의 이름을 제공해야 합니다. |
 | [!UICONTROL 타사 ID 동기화] | ID 동기화를 컨테이너로 그룹화하여 다른 시간에 다른 ID 동기화를 실행할 수 있습니다. 이 설정을 사용하면 이 데이터 스트림에 대해 실행 중인 ID 동기화 컨테이너를 지정할 수 있습니다. |
 
-이 섹션의 나머지 부분에서는 선택한 Platform 이벤트 스키마에 데이터를 매핑하는 단계에 중점을 둡니다. Mobile SDK를 사용 중이거나, 플랫폼에 대한 데이터 스트림을 구성하지 않는 경우 을 선택합니다 **[!UICONTROL 저장]** 의 다음 섹션으로 이동하기 전에 [데이터 스트림에 서비스 추가](#add-services).
+이 섹션의 나머지 부분에서는 선택한 Platform 이벤트 스키마에 데이터를 매핑하는 단계에 중점을 둡니다. Mobile SDK를 사용하고 있거나 Platform에 대한 데이터 스트림을 구성하지 않는 경우 을 선택합니다 **[!UICONTROL 저장]** 의 다음 섹션으로 이동하기 전에 [데이터 스트림에 서비스 추가](#add-services).
 
 ### 데이터 수집을 위한 데이터 준비 {#data-prep}
 
