@@ -1,59 +1,58 @@
 ---
-keywords: Experience Platform;홈;인기 항목;실패한 일괄 처리 가져오기;일괄 처리;일괄 처리 통합;실패한 일괄 처리;실패한 일괄 처리 가져오기;실패한 일괄 처리 가져오기;실패한 일괄 처리 다운로드;다운로드 실패 일괄 처리;다운로드 실패 일괄 처리
+keywords: Experience Platform;홈;인기 항목;실패한 배치 검색;실패한 배치;배치 수집;배치 처리 실패;배치 가져오기;실패한 배치 가져오기;실패한 배치 다운로드;실패한 배치 다운로드;실패한 배치 다운로드
 solution: Experience Platform
 title: 데이터 액세스 API를 사용하여 실패한 배치 검색
 topic-legacy: tutorial
 type: Tutorial
-description: 이 자습서에서는 데이터 통합 API를 사용하여 실패한 일괄 처리에 대한 정보를 검색하는 절차를 다룹니다.
+description: 이 자습서에서는 데이터 수집 API를 사용하여 실패한 배치에 대한 정보를 검색하는 단계를 설명합니다.
 exl-id: 5fb9f28d-091e-4124-8d8e-b8a675938d3a
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 99f99ad78853236868550d880576b82da2af8878
 workflow-type: tm+mt
-source-wordcount: '653'
+source-wordcount: '647'
 ht-degree: 2%
 
 ---
 
 # 데이터 액세스 API를 사용하여 실패한 배치 검색
 
-Adobe Experience Platform은 데이터를 업로드하고 인제스트하는 두 가지 방법을 제공합니다. 일괄 처리 처리를 사용하면 다양한 파일 유형(예: CSV)을 사용하여 데이터를 삽입할 수 있도록 하거나 스트리밍 통합 기능을 사용하여 실시간으로 스트리밍 끝점을 사용하여 [!DNL Platform]에 데이터를 삽입할 수 있습니다.
+Adobe Experience Platform에서는 데이터를 업로드하고 수집하는 두 가지 방법을 제공합니다. 일괄 처리 수집을 사용할 수 있습니다. 이 방법을 통해 다양한 파일 유형(예: CSV)을 사용하여 해당 데이터를 삽입하거나 스트리밍 수집 기능을 사용하여에 데이터를 삽입할 수 있습니다 [!DNL Platform] 스트리밍 끝점을 실시간으로 사용합니다.
 
-이 자습서에서는 [!DNL Data Ingestion] API를 사용하여 실패한 일괄 처리에 대한 정보를 검색하는 절차를 다룹니다.
+이 자습서에서는 을 사용하여 실패한 배치에 대한 정보를 검색하는 단계를 설명합니다 [!DNL Data Ingestion] API.
 
 ## 시작하기
 
-이 가이드를 사용하려면 다음과 같은 Adobe Experience Platform 구성 요소에 대해 작업해야 합니다.
+이 안내서에서는 Adobe Experience Platform의 다음 구성 요소를 이해하고 있어야 합니다.
 
-- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md):고객 경험 데이터를  [!DNL Experience Platform] 구성하는 표준화된 프레임워크
-- [[!DNL Data Ingestion]](../home.md):데이터를 보낼 수 있는 메서드입니다 [!DNL Experience Platform].
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): 표준화된 프레임워크 [!DNL Experience Platform] 고객 경험 데이터를 구성합니다.
+- [[!DNL Data Ingestion]](../home.md): 데이터를 보낼 수 있는 메서드입니다 [!DNL Experience Platform].
 
 ### 샘플 API 호출 읽기
 
-이 자습서에서는 요청의 서식을 지정하는 방법을 보여주는 API 호출 예를 제공합니다. 여기에는 경로, 필수 헤더 및 올바른 형식의 요청 페이로드가 포함됩니다. API 응답으로 반환된 샘플 JSON도 제공됩니다. 샘플 API 호출에 대한 설명서에 사용된 규칙에 대한 자세한 내용은 [!DNL Experience Platform] 문제 해결 안내서의 [API 호출 예](../../landing/troubleshooting.md#how-do-i-format-an-api-request)를 읽는 방법에 대한 섹션을 참조하십시오.
+이 자습서에서는 요청 형식을 지정하는 방법을 보여주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 올바른 형식의 요청 페이로드가 포함됩니다. API 응답으로 반환되는 샘플 JSON도 제공됩니다. 샘플 API 호출에 대한 설명서에 사용된 규칙에 대한 자세한 내용은 [예제 API 호출을 읽는 방법](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 에서 [!DNL Experience Platform] 문제 해결 가이드.
 
-### 필수 헤더에 대한 값 수집
+### 필수 헤더에 대한 값을 수집합니다
 
-[!DNL Platform] API를 호출하려면 먼저 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 완료해야 합니다. 인증 자습서를 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
+을 호출하려면 [!DNL Platform] API를 먼저 완료해야 합니다. [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en). 인증 자습서를 완료하면 모든 히트에 필요한 각 헤더에 대한 값이 제공됩니다 [!DNL Experience Platform] 아래에 표시된 대로 API 호출:
 
-- 인증:Bearer `{ACCESS_TOKEN}`
-- x-api-key:`{API_KEY}`
-- x-gw-ims-org-id:`{IMS_ORG}`
+- `Authorization: Bearer {ACCESS_TOKEN}`
+- `x-api-key: {API_KEY}`
+- `x-gw-ims-org-id: {IMS_ORG}`
 
-[!DNL Schema Registry]에 속하는 리소스를 포함하여 [!DNL Experience Platform]의 모든 리소스는 특정 가상 샌드박스로 구분됩니다. [!DNL Platform] API에 대한 모든 요청에는 작업이 수행할 샌드박스의 이름을 지정하는 헤더가 필요합니다.
+의 모든 리소스 [!DNL Experience Platform]에 속했던 것 포함 [!DNL Schema Registry]은 특정 가상 샌드박스로 구분됩니다. 에 대한 모든 요청 [!DNL Platform] API에는 작업이 발생할 샌드박스의 이름을 지정하는 헤더가 필요합니다.
 
-- x-sandbox-name:`{SANDBOX_NAME}`
+- `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
->[!DNL Platform]의 샌드박스에 대한 자세한 내용은 [샌드박스 개요 설명서](../../sandboxes/home.md)를 참조하십시오.
+>샌드박스에 대한 자세한 내용은 [!DNL Platform]를 참조하고 [샌드박스 개요 설명서](../../sandboxes/home.md).
 
-페이로드(POST, PUT, PATCH)을 포함하는 모든 요청에는 추가 헤더가 필요합니다.
+페이로드(POST, PUT, PATCH)이 포함된 모든 요청에는 추가 헤더가 필요합니다.
 
-- Content-Type: `application/json`
+- `Content-Type: application/json`
 
-### 샘플 일괄 처리 실패
+### 샘플 실패 일괄 처리
 
-이 자습서에서는 아래 그림과 같이 월 값을 **00**&#x200B;으로 설정하는 잘못된 형식의 타임스탬프가 있는 샘플 데이터를 사용합니다.
+이 자습서에서는 월 값을 설정하는 잘못된 형식의 타임스탬프가 있는 샘플 데이터를 사용합니다 **00**&#x200B;아래에 표시된 것처럼:
 
 ```json
 {
@@ -78,7 +77,7 @@ Adobe Experience Platform은 데이터를 업로드하고 인제스트하는 두
 }
 ```
 
-잘못된 타임스탬프로 인해 위의 페이로드가 XDM 스키마에 대해 올바르게 유효성을 검사하지 않습니다.
+잘못된 형식의 타임스탬프로 인해 위의 페이로드가 XDM 스키마에 대해 제대로 유효성 검사가 수행되지 않습니다.
 
 ## 실패한 배치 검색
 
@@ -90,18 +89,18 @@ GET /batches/{BATCH_ID}/failed
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `{BATCH_ID}` | 조회하고 있는 배치의 ID입니다. |
+| `{BATCH_ID}` | 조회 중인 배치의 ID입니다. |
 
 **요청**
 
 ```shell
-curl -X GET "https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/failed" \
-  -H "Authorization: Bearer {ACCESS_TOKEN}" \
-  -H "Cache-Control: no-cache" \
-  -H "Content-Type: application/json" \
-  -H "x-api-key: {API_KEY}" \
-  -H "x-gw-ims-org-id: {IMS_ORG}" \
-  -H "x-sandbox-name: {SANDBOX_NAME}
+curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/failed' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Cache-Control: no-cache' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **응답**
@@ -135,11 +134,11 @@ curl -X GET "https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}
 }
 ```
 
-위의 응답으로, 어떤 청크가 성공했거나 실패했는지 확인할 수 있습니다. 이 응답에서 `part-00000-44c7b669-5e38-43fb-b56c-a0686dabb982-c000.json` 파일에 실패한 일괄 처리가 포함되어 있음을 확인할 수 있습니다.
+위의 응답으로, 성공적으로 및 실패한 배치 청크를 확인할 수 있습니다. 이 응답에서 파일이 `part-00000-44c7b669-5e38-43fb-b56c-a0686dabb982-c000.json` 실패한 배치를 포함합니다.
 
 ## 실패한 배치 다운로드
 
-일괄 처리에 실패한 파일을 확인한 후 실패한 파일을 다운로드하여 오류 메시지가 무엇인지 확인할 수 있습니다.
+일괄 처리에서 실패한 파일을 알고 있으면 실패한 파일을 다운로드하여 오류 메시지가 무엇인지 확인할 수 있습니다.
 
 **API 형식**
 
@@ -149,12 +148,12 @@ GET /batches/{BATCH_ID}/failed?path={FAILED_FILE}
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `{BATCH_ID}` | 실패한 파일을 포함하는 일괄 처리의 ID. |
+| `{BATCH_ID}` | 실패한 파일이 포함된 일괄 처리의 ID입니다. |
 | `{FAILED_FILE}` | 형식이 실패한 파일의 이름입니다. |
 
 **요청**
 
-다음 요청을 통해 등록 오류가 있는 파일을 다운로드할 수 있습니다.
+다음 요청을 통해 수집 오류가 있는 파일을 다운로드할 수 있습니다.
 
 ```shell
 curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/failed?path={FAILED_FILE}' \
@@ -168,7 +167,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}
 
 **응답**
 
-이전 인제스트된 일괄 처리에 잘못된 날짜 시간이 있으므로 다음 유효성 확인 오류가 표시됩니다.
+이전에 수집된 일괄 처리에 잘못된 날짜 시간이 있으므로 다음 유효성 검사 오류가 표시됩니다.
 
 ```json
 {
@@ -186,15 +185,15 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}
 
 ## 다음 단계
 
-이 자습서를 읽고 실패한 배치에서 오류를 검색하는 방법을 알아보았습니다. 일괄 처리에 대한 자세한 내용은 [일괄 처리 통합 개발자 가이드](../batch-ingestion/overview.md)를 참조하십시오. 스트리밍 통합 관련 자세한 내용은 [스트리밍 연결 자습서 만들기](../tutorials/create-streaming-connection.md)를 참조하십시오.
+이 자습서를 읽은 후 실패한 배치에서 오류를 검색하는 방법을 알아보았습니다. 일괄 처리에 대한 자세한 내용은 [배치 수집 개발자 안내서](../batch-ingestion/overview.md). 스트리밍 수집에 대한 자세한 내용은 [스트리밍 연결 만들기 자습서](../tutorials/create-streaming-connection.md).
 
 ## 부록
 
-이 섹션에는 발생할 수 있는 다른 통합 오류 유형에 대한 정보가 포함되어 있습니다.
+이 섹션에는 발생할 수 있는 다른 수집 오류 유형에 대한 정보가 들어 있습니다.
 
-### 형식이 잘못된 XDM
+### 잘못된 형식의 XDM
 
-이전 예제 흐름의 타임스탬프 오류와 마찬가지로 이러한 오류는 형식이 잘못된 XDM 때문입니다. 이러한 오류 메시지는 문제의 특성에 따라 달라집니다. 따라서 특정 오류 예는 표시되지 않습니다.
+이전 예제 흐름의 타임스탬프 오류와 마찬가지로 이러한 오류는 잘못된 형식의 XDM 때문입니다. 이러한 오류 메시지는 문제의 특성에 따라 달라집니다. 따라서 특정 오류 예는 표시되지 않습니다.
 
 ### IMS 조직 ID가 없거나 잘못되었습니다.
 
@@ -213,7 +212,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}
 
 ### XDM 스키마 누락
 
-이 오류는 `xdmMeta`에 대한 `schemaRef`이(가) 누락된 경우에 표시됩니다.
+이 오류는 `schemaRef` 대상 `xdmMeta` 이(가) 없습니다.
 
 ```json
 {
@@ -228,7 +227,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}
 
 ### 소스 이름이 없습니다.
 
-헤더의 `source`에 `name`이(가) 없는 경우 이 오류가 표시됩니다.
+이 오류는 `source` 헤더에서 헤더에 `name`.
 
 ```json
 {
@@ -242,9 +241,9 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}
 }
 ```
 
-### 누락된 XDM 엔티티
+### XDM 엔터티가 없습니다.
 
-이 오류는 `xdmEntity`이(가) 없는 경우에 표시됩니다.
+이 오류는 가 없는 경우 표시됩니다 `xdmEntity` 표시합니다.
 
 ```json
 {
