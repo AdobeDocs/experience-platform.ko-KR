@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 소스 커넥터 도움말
 breadcrumb-title: Source Connectors 안내서
 user-guide-description: 다양한 소스 또는 구조에서 데이터를 수집하고 레이블을 지정하며 기존에 수집한 데이터를 향상시킬 수 있습니다.
 feature: Sources
-source-git-commit: c74676836d4690568665f16445c0dcf91496daf6
+source-git-commit: 5d03dda7a972d37697032978b6e91a39800f81c8
 workflow-type: tm+mt
-source-wordcount: '750'
+source-wordcount: '757'
 ht-degree: 13%
 
 ---
@@ -82,6 +82,7 @@ ht-degree: 13%
    - 마케팅 자동화 {#marketing-automation}
       - [HubSpot 커넥터](connectors/marketing-automation/hubspot.md)
       - [Mailchimp 커넥터](connectors/marketing-automation/mailchimp.md)
+      - [Oracle Eloqua 커넥터](connectors/marketing-automation/oracle-eloqua.md)
       - [Salesforce Marketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
    - 결제 {#payments}
       - [PayPal 커넥터](connectors/payments/paypal.md)
@@ -141,6 +142,7 @@ ht-degree: 13%
          - [HubSpot](tutorials/api/create/marketing-automation/hubspot.md)
          - [MailChimp 캠페인](tutorials/api/create/marketing-automation/mailchimp-campaign.md)
          - [MailChimp 멤버](tutorials/api/create/marketing-automation/mailchimp-members.md)
+         - [Oracle 언달라](tutorials/api/create/marketing-automation/oracle-eloqua.md)
          - [Salesforce Marketing Cloud](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
       - 결제 {#payments}
          - [PayPal](tutorials/api/create/payments/paypal.md)
@@ -236,6 +238,7 @@ ht-degree: 13%
          - [HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)
          - [메일 그룹 캠페인](tutorials/ui/create/marketing-automation/mailchimp-campaigns.md)
          - [메일 그룹 구성원](tutorials/ui/create/marketing-automation/mailchimp-members.md)
+         - [Oracle 언달라](tutorials/ui/create/marketing-automation/oracle-eloqua.md)
          - [Salesforce Marketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
       - 결제 {#payments}
          - [PayPal](tutorials/ui/create/payments/paypal.md)
