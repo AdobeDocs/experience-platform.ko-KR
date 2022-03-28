@@ -3,9 +3,9 @@ title: Experience Platform Web SDK에 대한 데이터 스트림 구성
 description: '데이터 저장소를 구성하는 방법을 알아봅니다. '
 keywords: 구성;데이터 스트림;데이터 스트림 ID;에지;데이터 스트림 ID;환경 설정;edgeConfigId;id;ID 동기화 사용;ID 동기화 컨테이너 ID;샌드박스;스트리밍 입력;이벤트 데이터 세트;target;클라이언트 코드;속성 토큰;Target 환경 ID;쿠키 대상;URL 대상;Analytics 설정 차단 보고서 세트 ID;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 9dbadcb65d4306702e5e4d7dae2614e86cbde332
+source-git-commit: 7fc62099ef7561595d260a5507fb2094f58b6016
 workflow-type: tm+mt
-source-wordcount: '1944'
+source-wordcount: '2004'
 ht-degree: 1%
 
 ---
@@ -50,7 +50,17 @@ Experience Platform에서 사용하도록 이 데이터 스트림을 구성하�
 
 ![데이터 스트림에 대한 기본 구성](../images/datastreams/configure.png)
 
-이 섹션의 나머지 부분에서는 선택한 Platform 이벤트 스키마에 데이터를 매핑하는 단계에 중점을 둡니다. Mobile SDK를 사용하고 있거나 Platform에 대한 데이터 스트림을 구성하지 않는 경우 을 선택합니다 **[!UICONTROL 저장]** 의 다음 섹션으로 이동하기 전에 [데이터 스트림에 서비스 추가](#add-services).
+선택 **[!UICONTROL 고급 옵션]** 데이터 스트림을 구성하는 추가 컨트롤을 표시하려면 다음을 수행하십시오.
+
+![고급 구성 옵션](../images/datastreams/advanced-options.png)
+
+| 설정 | 설명 |
+| --- | --- |
+| [!UICONTROL 지리적 위치] | 사용자의 IP 주소를 기준으로 GPS 조회가 발생하는지 여부를 결정합니다. 기본 설정 **[!UICONTROL 없음]** GPS 조회가 비활성화되고 **[!UICONTROL 구/군/시]** 설정은 GPS 좌표를 소수점 이하 두 자리로 제공합니다. |
+| [!UICONTROL 자사 ID 쿠키] | 이 설정이 활성화되면 Edge Network에 [자사 장치 ID](../identity/first-party-device-ids.md)를 채우는 것이 좋습니다.<br><br>이 설정을 활성화할 때 ID가 저장되어야 하는 쿠키의 이름을 제공해야 합니다. |
+| [!UICONTROL 타사 ID 동기화] | ID 동기화를 컨테이너로 그룹화하여 다른 시간에 다른 ID 동기화를 실행할 수 있습니다. 이 설정을 사용하면 이 데이터 스트림에 대해 실행 중인 ID 동기화 컨테이너를 지정할 수 있습니다. |
+
+이 섹션의 나머지 부분에서는 선택한 Platform 이벤트 스키마에 데이터를 매핑하는 단계에 중점을 둡니다. Mobile SDK를 사용 중이거나, 플랫폼에 대한 데이터 스트림을 구성하지 않는 경우 을 선택합니다 **[!UICONTROL 저장]** 의 다음 섹션으로 이동하기 전에 [데이터 스트림에 서비스 추가](#add-services).
 
 ### 데이터 수집을 위한 데이터 준비 {#data-prep}
 
@@ -199,16 +209,6 @@ JSON이 유효하면 오른쪽 패널에 미리 보기 스키마가 표시됩니
 >[!NOTE]
 >
 >선택할 수 있습니다 **[!UICONTROL 수동으로 ID 입력]** 드롭다운 메뉴를 사용하지 않고 속성 및 환경 이름을 입력합니다.
-
-### [!UICONTROL 타사 ID 동기화] 설정
-
-타사 ID 섹션은 항상 켜져 있는 유일한 섹션입니다. 사용 가능한 설정은 두 가지입니다. &quot;[!UICONTROL 타사 ID 동기화가 활성화됨]&quot; 및 &quot;[!UICONTROL 타사 ID 동기화 컨테이너 ID]&quot;.
-
-![구성 UI의 타사 ID 동기화 섹션](../images/datastreams/third-party-id-sync-config.png)
-
-| 설정 | 설명 |
-| --- | --- |
-| [!UICONTROL 타사 ID 동기화 컨테이너 ID] | ID 동기화를 컨테이너로 그룹화하여 다른 시간에 다른 ID 동기화를 실행할 수 있습니다. 이 데이터 스트림에 대해 실행 중인 ID 동기화를 제어합니다. |
 
 ## 다음 단계
 
