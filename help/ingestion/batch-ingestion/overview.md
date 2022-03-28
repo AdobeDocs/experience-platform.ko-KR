@@ -5,9 +5,9 @@ title: 배치 수집 API 개요
 topic-legacy: overview
 description: 'Adobe Experience Platform 데이터 수집 API를 사용하면 데이터를 배치 파일로 Platform에 수집할 수 있습니다. 수집되는 데이터는 CRM 시스템의 플랫 파일(예: Parquet 파일)의 프로필 데이터 또는 XDM(Experience Data Model) 레지스트리에서 알려진 스키마를 준수하는 데이터일 수 있습니다.'
 exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 75426b1ddc16af39eb6c423027fac7d4d0e21c6a
 workflow-type: tm+mt
-source-wordcount: '1388'
+source-wordcount: '1387'
 ht-degree: 6%
 
 ---
@@ -151,7 +151,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 
 >[!INFO]
 >
->아래 예제는 [아파치 쪽모이 세공](https://parquet.apache.org/documentation/latest/) 파일 형식입니다. JSON 파일 형식을 사용하는 예는 [배치 수집 개발자 안내서](api-overview.md).
+>아래 예제는 [아파치 쪽모이 세공](https://parquet.apache.org/docs/) 파일 형식입니다. JSON 파일 형식을 사용하는 예는 [배치 수집 개발자 안내서](api-overview.md).
 
 ### 작은 파일 업로드
 

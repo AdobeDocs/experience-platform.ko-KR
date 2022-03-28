@@ -5,9 +5,9 @@ title: API를 사용하여 데이터 세트 만들기
 topic-legacy: datasets
 description: 이 문서에서는 Adobe Experience Platform API를 사용하여 데이터 세트를 만들고 파일을 사용하여 데이터 세트를 채우는 일반적인 단계를 제공합니다.
 exl-id: 3a5f48cf-ad05-4b9e-be1d-ff213a26a477
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 75426b1ddc16af39eb6c423027fac7d4d0e21c6a
 workflow-type: tm+mt
-source-wordcount: '1305'
+source-wordcount: '1304'
 ht-degree: 1%
 
 ---
@@ -214,7 +214,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->이 자습서에서는 [아파치 쪽모이 세공](https://parquet.apache.org/documentation/latest/) 모든 예제의 파일 형식입니다. JSON 파일 형식을 사용하는 예는 [배치 수집 개발자 안내서](../../ingestion/batch-ingestion/api-overview.md)
+>이 자습서에서는 [아파치 쪽모이 세공](https://parquet.apache.org/docs/) 모든 예제의 파일 형식입니다. JSON 파일 형식을 사용하는 예는 [배치 수집 개발자 안내서](../../ingestion/batch-ingestion/api-overview.md)
 
 **응답**
 

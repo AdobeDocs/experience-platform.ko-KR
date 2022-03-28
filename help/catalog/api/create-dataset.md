@@ -1,25 +1,24 @@
 ---
-keywords: Experience Platform;홈;인기 항목;데이터 집합;데이터 집합;데이터 집합 만들기;데이터 집합 만들기;데이터 집합 사용
+keywords: Experience Platform;홈;인기 항목;데이터 세트;데이터 세트;데이터 세트 만들기;데이터 세트 만들기;데이터 세트 활성화
 solution: Experience Platform
 title: API에서 데이터 세트 만들기
 topic-legacy: developer guide
 description: 이 문서에서는 카탈로그 서비스 API에서 데이터 세트 개체를 만드는 방법을 설명합니다.
 exl-id: f3e5de7f-1781-4898-ac42-063eb51e661a
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 75426b1ddc16af39eb6c423027fac7d4d0e21c6a
 workflow-type: tm+mt
-source-wordcount: '254'
+source-wordcount: '253'
 ht-degree: 1%
 
 ---
 
 # API에서 데이터 세트 만들기
 
-[!DNL Catalog] API를 사용하여 데이터 집합을 만들려면 데이터 집합의 기반이 되는 [!DNL Experience Data Model](XDM) 스키마의 `$id` 값을 알고 있어야 합니다. 스키마 ID가 있으면 [!DNL Catalog] API의 `/datasets` 끝점에 POST 요청을 하여 데이터 세트를 만들 수 있습니다.
+를 사용하여 데이터 세트를 만들려면 [!DNL Catalog] API, 다음을 알고 있어야 합니다. `$id` 값 [!DNL Experience Data Model] 데이터 세트를 기반으로 할 XDM(스키마). 스키마 ID가 있으면에서 `/datasets` 의 엔드포인트 [!DNL Catalog] API.
 
 >[!NOTE]
 >
->이 문서에서는 [!DNL Catalog]에서 데이터 집합 개체를 만드는 방법에만 다룹니다. 데이터 세트를 생성, 채우기 및 모니터링하는 방법에 대한 전체 단계는 다음 [자습서](../datasets/create.md)를 참조하십시오.
+>이 문서에서는 [!DNL Catalog]. 데이터 세트를 만들고, 채우고, 모니터링하는 방법에 대한 전체 단계는 다음을 참조하십시오 [튜토리얼](../datasets/create.md).
 
 **API 형식**
 
@@ -29,7 +28,7 @@ POST /dataSets
 
 **요청**
 
-다음 요청은 이전에 정의된 스키마를 참조하는 데이터 세트를 만듭니다.
+다음 요청은 이전에 정의한 스키마를 참조하는 데이터 세트를 만듭니다.
 
 ```SHELL
 curl -X POST \
@@ -51,16 +50,16 @@ curl -X POST \
 | 속성 | 설명 |
 | --- | --- |
 | `name` | 만들 데이터 세트의 이름입니다. |
-| `schemaRef.id` | 데이터 세트에 기반이 되는 XDM 스키마의 URI `$id` 값입니다. |
-| `schemaRef.contentType` | 스키마의 형식 및 버전을 나타냅니다. 자세한 내용은 XDM API 안내서의 [스키마 버전 관리](../../xdm/api/getting-started.md#versioning)에 대한 섹션을 참조하십시오. |
+| `schemaRef.id` | URI `$id` 데이터 세트가 기반으로 하는 XDM 스키마 값입니다. |
+| `schemaRef.contentType` | 스키마의 형식 및 버전을 나타냅니다. 의 섹션을 참조하십시오. [스키마 버전 관리](../../xdm/api/getting-started.md#versioning) 자세한 내용은 XDM API 안내서 를 참조하십시오. |
 
 >[!NOTE]
 >
->이 예제에서는 `containerFormat` 속성에 대해 [Apache Parided](https://parquet.apache.org/documentation/latest/) 파일 형식을 사용합니다. JSON 파일 형식을 사용하는 예제는 [일괄 처리 통합 개발자 가이드](../../ingestion/batch-ingestion/api-overview.md)에서 찾을 수 있습니다.
+>이 예제에서는 [아파치 쪽모이 세공](https://parquet.apache.org/docs/) 파일 형식 `containerFormat` 속성을 사용합니다. JSON 파일 형식을 사용하는 예는 [배치 수집 개발자 안내서](../../ingestion/batch-ingestion/api-overview.md).
 
 **응답**
 
-성공적인 응답은 HTTP 상태 201(만들어짐)과 새로 만든 데이터 세트의 ID를 `"@/datasets/{DATASET_ID}"` 형식으로 포함하는 배열로 구성된 응답 개체를 반환합니다. 데이터 세트 ID는 API 호출에서 데이터 세트를 참조하는 데 사용되는 읽기 전용 시스템 생성 문자열입니다.
+성공적인 응답은 HTTP 상태 201(생성됨) 및 새로 생성된 데이터 세트의 ID가 형식으로 포함된 배열로 구성된 응답 개체를 반환합니다 `"@/datasets/{DATASET_ID}"`. 데이터 세트 ID는 API 호출에서 데이터 세트를 참조하는 데 사용되는 읽기 전용 시스템 생성 문자열입니다.
 
 ```JSON
 [
