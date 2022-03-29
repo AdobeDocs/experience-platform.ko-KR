@@ -5,9 +5,9 @@ title: 외부 대상 가져오기 및 사용
 description: Adobe Experience Platform에서 외부 대상을 사용하는 방법을 배우려면 이 자습서를 따르십시오.
 topic-legacy: tutorial
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
-source-git-commit: 8325ae6fd7d0013979e80d56eccd05b6ed6f5108
+source-git-commit: 077622e891f4c42ce283e2553d6a2983569d3584
 workflow-type: tm+mt
-source-wordcount: '809'
+source-wordcount: '1471'
 ht-degree: 0%
 
 ---
@@ -46,6 +46,10 @@ ID 네임스페이스를 만들려면 [identity namespace 안내서](../../ident
 
 ![](../images/tutorials/external-audiences/identity-namespace-info.png)
 
+>[!NOTE]
+>
+>외부 대상과 함께 사용자 지정 네임스페이스를 사용하려면 지원 티켓을 만들어야 합니다. 자세한 내용은 Adobe 담당자에게 문의하십시오.
+
 ## 세그먼트 메타데이터에 대한 스키마 만들기
 
 ID 네임스페이스를 만든 후 만들 세그먼트에 대한 새 스키마를 만들어야 합니다.
@@ -72,7 +76,7 @@ ID 네임스페이스를 만든 후 만들 세그먼트에 대한 새 스키마�
 
 스키마를 구성한 후에는 세그먼트 메타데이터에 대한 데이터 세트를 만들어야 합니다.
 
-데이터 세트를 만들려면 [데이터 세트 사용 안내서](../../catalog/datasets/user-guide.md#create). 다음을 수행합니다 **[!UICONTROL 스키마에서 데이터 집합 만들기]** 옵션. 이전에 만든 스키마를 사용합니다.
+데이터 세트를 만들려면 [데이터 세트 사용 안내서](../../catalog/datasets/user-guide.md#create). 다음을 수행해야 합니다 **[!UICONTROL 스키마에서 데이터 집합 만들기]** 옵션. 이전에 만든 스키마를 사용합니다.
 
 ![](../images/tutorials/external-audiences/select-schema.png)
 
@@ -82,13 +86,70 @@ ID 네임스페이스를 만든 후 만들 세그먼트에 대한 새 스키마�
 
 ## 대상 데이터 설정 및 가져오기
 
-데이터 세트가 활성화되면 이제 UI를 통해 또는 Experience Platform API를 사용하여 데이터를 Platform으로 전송할 수 있습니다. 이 데이터를 플랫폼으로 수집하려면 스트리밍 연결을 만들어야 합니다.
+데이터 세트가 활성화되면 이제 UI를 통해 또는 Experience Platform API를 사용하여 데이터를 Platform으로 전송할 수 있습니다. 일괄 처리 또는 스트리밍 연결을 통해 이 데이터를 수집할 수 있습니다.
+
+### 배치 연결을 사용하여 데이터 수집
+
+배치 연결을 만들려면 일반 [로컬 파일 업로드 UI 안내서](../../sources/tutorials/ui/create/local-system/local-file-upload.md). 에서 수집 데이터를 사용할 수 있는 사용 가능한 소스의 전체 목록을 보려면 [소스 개요](../../sources/home.md).
+
+### 스트리밍 연결을 사용하여 데이터 수집
 
 스트리밍 연결을 만들려면 [API 자습서](../../sources/tutorials/api/create/streaming/http.md) 또는 [UI 자습서](../../sources/tutorials/ui/create/streaming/http.md).
 
 스트리밍 연결을 만들었으면 데이터를 보낼 수 있는 고유한 스트리밍 종단점에 액세스할 수 있습니다. 이러한 종단점으로 데이터를 보내는 방법에 대해 알아보려면 [레코드 데이터 스트리밍에 대한 자습서](../../ingestion/tutorials/streaming-record-data.md#ingest-data).
 
 ![](../images/tutorials/external-audiences/get-streaming-endpoint.png)
+
+## 대상 메타데이터 구조
+
+이제 연결을 만들면 데이터를 Platform에 수집할 수 있습니다.
+
+외부 대상 페이로드의 메타데이터 샘플은 아래에 나와 있습니다.
+
+```json
+{
+    "header": {
+        "schemaRef": {
+            "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
+            "contentType": "application/vnd.adobe.xed-full+json;version=1"
+        },
+        "imsOrgId": "{IMS_ORG}",
+        "datasetId": "{DATASET_ID}",
+        "source": {
+            "name": "Sample External Audience"
+        }
+    },
+    "body": {
+        "xdmMeta": {
+            "schemaRef": {
+                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
+                "contentType": "application/vnd.adobe.xed-full+json;version=1"
+            }
+        },
+        "xdmEntity": {
+            "_id": "{SEGMENT_ID}",
+            "description": "Sample description",
+            "identityMap": {
+                "{IDENTITY_NAMESPACE}": [{
+                    "id": "{}"
+                }]
+            },
+            "segmentName" : "{SEGMENT_NAME}",
+            "segmentStatus": "ACTIVE",
+            "version": "1.0"
+        }
+    }
+}
+```
+
+| 속성 | 설명 |
+| -------- | ----------- |
+| `schemaRef` | 스키마 **반드시** 세그먼트 메타데이터에 대해서는 이전에 만든 스키마를 참조하십시오. |
+| `datasetId` | 데이터 세트 ID **반드시** 방금 생성한 스키마에 대해서는 이전에 만든 데이터 세트를 참조하십시오. |
+| `xdmEntity._id` | ID **반드시** 외부 대상으로 사용하는 것과 동일한 세그먼트 ID를 참조하십시오. |
+| `xdmEntity.identityMap` | 이 섹션 **반드시** 이전에 만든 네임스페이스를 만들 때 사용되는 id 레이블을 포함합니다. |
+| `{IDENTITY_NAMESPACE}` | 이전에 만든 ID 네임스페이스의 레이블입니다. 따라서 예를 들어 ID 네임스페이스를 &quot;externalAudience&quot;라고 호출하면 배열의 키로 이 네임스페이스를 사용합니다. |
+| `segmentName` | 외부 대상을 세그먼트화할 세그먼트의 이름입니다. |
 
 ## 가져온 대상을 사용하여 세그먼트 작성
 
@@ -99,3 +160,105 @@ ID 네임스페이스를 만든 후 만들 세그먼트에 대한 새 스키마�
 ## 다음 단계
 
 세그먼트에서 외부 대상을 사용할 수 있으므로 세그먼트 빌더 를 사용하여 세그먼트를 만들 수 있습니다. 세그먼트를 만드는 방법을 알아보려면 [세그먼트 만들기 튜토리얼](./create-a-segment.md).
+
+## 부록
+
+가져온 외부 대상 메타데이터를 사용하고 세그먼트를 만드는 데 사용하는 것 외에도 외부 세그먼트 멤버십을 Platform으로 가져올 수도 있습니다.
+
+### 외부 세그먼트 멤버십 대상 스키마 설정
+
+스키마 작성을 시작하려면 먼저 을 선택합니다 **[!UICONTROL 스키마]** 왼쪽 탐색 막대에서 을 클릭하고 **[!UICONTROL 스키마 만들기]** 스키마 작업 영역의 오른쪽 상단 모서리에서 을(를) 클릭합니다. 여기에서 을 선택합니다. **[!UICONTROL XDM 개별 프로필]**.
+
+![](../images/tutorials/external-audiences/create-schema-profile.png)
+
+스키마가 만들어지면 스키마의 일부로 세그먼트 멤버십 필드 그룹을 추가해야 합니다. 이렇게 하려면 을(를) 선택합니다. [!UICONTROL 세그먼트 멤버십 세부 정보], 그 다음 [!UICONTROL 필드 그룹 추가].
+
+![](../images/tutorials/external-audiences/segment-membership-details.png)
+
+또한 스키마가 **[!UICONTROL 프로필]**. 이렇게 하려면 필드를 기본 ID로 표시해야 합니다.
+
+![](../images/tutorials/external-audiences/external-segment-profile.png)
+
+### 데이터 세트 설정
+
+스키마를 만들면 데이터 세트를 만들어야 합니다.
+
+데이터 세트를 만들려면 [데이터 세트 사용 안내서](../../catalog/datasets/user-guide.md#create). 다음을 수행해야 합니다 **[!UICONTROL 스키마에서 데이터 집합 만들기]** 옵션. 이전에 만든 스키마를 사용합니다.
+
+![](../images/tutorials/external-audiences/select-schema.png)
+
+데이터 세트를 만든 후 [데이터 세트 사용 안내서](../../catalog/datasets/user-guide.md#enable-profile) 실시간 고객 프로필에 대해 이 데이터 세트를 사용하도록 설정하려면 다음을 수행하십시오.
+
+![](../images/tutorials/external-audiences/dataset-profile.png)
+
+## 외부 대상 멤버십 데이터 설정 및 가져오기
+
+데이터 세트가 활성화되면 이제 UI를 통해 또는 Experience Platform API를 사용하여 데이터를 Platform으로 전송할 수 있습니다. 일괄 처리 또는 스트리밍 연결을 통해 이 데이터를 수집할 수 있습니다.
+
+### 배치 연결을 사용하여 데이터 수집
+
+배치 연결을 만들려면 일반 [로컬 파일 업로드 UI 안내서](../../sources/tutorials/ui/create/local-system/local-file-upload.md). 에서 수집 데이터를 사용할 수 있는 사용 가능한 소스의 전체 목록을 보려면 [소스 개요](../../sources/home.md).
+
+### 스트리밍 연결을 사용하여 데이터 수집
+
+스트리밍 연결을 만들려면 [API 자습서](../../sources/tutorials/api/create/streaming/http.md) 또는 [UI 자습서](../../sources/tutorials/ui/create/streaming/http.md).
+
+스트리밍 연결을 만들었으면 데이터를 보낼 수 있는 고유한 스트리밍 종단점에 액세스할 수 있습니다. 이러한 종단점으로 데이터를 보내는 방법에 대해 알아보려면 [레코드 데이터 스트리밍에 대한 자습서](../../ingestion/tutorials/streaming-record-data.md#ingest-data).
+
+![](../images/tutorials/external-audiences/get-streaming-endpoint.png)
+
+## 세그먼트 멤버십 구조
+
+이제 연결을 만들면 데이터를 Platform에 수집할 수 있습니다.
+
+외부 대상 멤버십 페이로드 샘플은 아래에 나와 있습니다.
+
+```json
+{
+    "header": {
+        "schemaRef": {
+            "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
+            "contentType": "application/vnd.adobe.xed-full+json;version=1"
+        },
+        "imsOrgId": "{IMS_ORG}",
+        "datasetId": "{DATASET_ID}",
+        "source": {
+            "name": "Sample External Audience Membership"
+        }
+    },
+    "body": {
+        "xdmMeta": {
+            "schemaRef": {
+                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
+                "contentType": "application/vnd.adobe.xed-full+json;version=1"
+            }
+        },
+        "xdmEntity": {
+            "_id": "{UNIQUE_ID}",
+            "description": "Sample description",
+            "{TENANT_NAME}": {
+                "identities": {
+                    "{SCHEMA_IDENTITY}": "sample-id"
+                }
+            },
+            "personId" : "sample-name",
+            "segmentMembership": {
+                "{IDENTITY_NAMESPACE}": {
+                    "{EXTERNAL_IDENTITY}": {
+                        "status": "realized",
+                        "lastQualificationTime": "2022-03-14T:00:00:00Z"
+                    }
+                }
+            }
+        }
+    }
+}
+```
+
+| 속성 | 설명 |
+| -------- | ----------- |
+| `schemaRef` | 스키마 **반드시** 세그먼트 멤버십 데이터에 대해서는 이전에 만든 스키마를 참조하십시오. |
+| `datasetId` | 데이터 세트 ID **반드시** 방금 생성한 멤버십 스키마에 대해서는 이전에 만든 데이터 세트를 참조하십시오. |
+| `xdmEntity._id` | 데이터 집합 내의 레코드를 고유하게 식별하는 데 사용되는 적절한 ID입니다. |
+| `{TENANT_NAME}.identities` | 이 섹션은 사용자 지정 ID 필드 그룹을 이전에 가져온 사용자와 연결하는 데 사용됩니다. |
+| `segmentMembership.{IDENTITY_NAMESPACE}` | 이전에 만든 사용자 지정 ID 네임스페이스의 레이블입니다. 따라서 예를 들어 ID 네임스페이스를 &quot;externalAudience&quot;라고 호출하면 배열의 키로 이 네임스페이스를 사용합니다. |
