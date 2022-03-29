@@ -2,18 +2,14 @@
 title: 감사 로그 개요
 description: 감사 로그를 사용하여 Adobe Experience Platform에서 작업을 수행한 사용자를 확인하는 방법을 알아봅니다.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: 7e4853cee8a0fa937c82eb842cd73b675eb337a3
+source-git-commit: d726576a4d1f29d83f3b7cf72c9f5c5d4ff114d3
 workflow-type: tm+mt
-source-wordcount: '657'
-ht-degree: 5%
+source-wordcount: '757'
+ht-degree: 7%
 
 ---
 
-# 감사 로그(베타)
-
->[!IMPORTANT]
->
->Adobe Experience Platform의 감사 로그 기능은 현재 베타 버전이며 조직에서 아직 액세스할 수 없을 수 있습니다. 이 설명서에 설명된 기능은 변경될 수 있습니다.
+# 감사 로그
 
 시스템에서 수행되는 활동의 투명성과 가시성을 높이기 위해 Adobe Experience Platform을 사용하면 &quot;감사 로그&quot; 형태로 다양한 서비스 및 기능에 대한 사용자 활동을 감사할 수 있습니다. 이러한 로그는 플랫폼의 문제 해결에 도움이 될 수 있는 감사 추적을 형성하며 기업의 데이터 관리 정책 및 규정 요구 사항을 효과적으로 준수할 수 있도록 도와줍니다.
 
@@ -27,13 +23,18 @@ ht-degree: 5%
 
 | 리소스 | 작업 |
 | --- | --- |
-| [데이터 세트](../../../catalog/datasets/overview.md) | <ul><li>선택 사항에서</li><li>업데이트</li><li>삭제</li><li>사용 [실시간 고객 프로필](../../../profile/home.md)</li></ul> |
-| [스키마](../../../xdm/schema/composition.md) | <ul><li>선택 사항에서</li><li>업데이트</li><li>삭제</li></ul> |
+| [데이터 세트](../../../catalog/datasets/overview.md) | <ul><li>선택 사항에서</li><li>업데이트</li><li>삭제</li><li>사용 [실시간 고객 프로필](../../../profile/home.md)</li><li>프로필에 대한 비활성화</li></ul> |
+| [스키마](../../../xdm/schema/composition.md) | <ul><li>선택 사항에서</li><li>업데이트</li><li>삭제</li><li>프로필에 사용</li></ul> |
 | [클래스](../../../xdm/schema/composition.md#class) | <ul><li>선택 사항에서</li><li>업데이트</li><li>삭제</li></ul> |
 | [필드 그룹](../../../xdm/schema/composition.md#field-group) | <ul><li>선택 사항에서</li><li>업데이트</li><li>삭제</li></ul> |
 | [데이터 유형](../../../xdm/schema/composition.md#data-type) | <ul><li>선택 사항에서</li><li>업데이트</li><li>삭제</li></ul> |
 | [샌드박스](../../../sandboxes/home.md) | <ul><li>선택 사항에서</li><li>업데이트</li><li>재설정</li><li>삭제</li></ul> |
-| [대상](../../../destinations/home.md) | <ul><li>활성화</li></ul> |
+| [대상](../../../destinations/home.md) | <ul><li>선택 사항에서</li><li>업데이트</li><li>삭제</li><li>활성화</li><li>비활성화</li><li>데이터 집합 활성화</li><li>데이터 집합 제거</li><li>프로필 활성화</li><li>프로필 제거</li></ul> |
+| [세그먼트](../../../segmentation/home.md) | <ul><li>선택 사항에서</li><li>삭제</li><li>세그먼트 활성화</li><li>세그먼트 제거</li></ul> |
+| [병합 정책](../../../profile/merge-policies/overview.md) | <ul><li>선택 사항에서</li><li>업데이트</li><li>삭제</li></ul> |
+| [계산된 특성](../../../profile/computed-attributes/overview.md) | <ul><li>선택 사항에서</li><li>업데이트</li><li>삭제</li></ul> |
+| [제품 프로필](../../../access-control/home.md) | <ul><li>선택 사항에서</li><li>업데이트</li><li>삭제</li></ul> |
+| [계정(Adobe)](../../../access-control/home.md) | <ul><li>선택 사항에서</li><li>업데이트</li><li>삭제</li></ul> |
 
 ## 감사 로그에 대한 액세스
 
@@ -47,7 +48,7 @@ ht-degree: 5%
 
 ![감사 로그 대시보드](../../images/audit-logs/audits.png)
 
-시스템은 작년의 감사 로그만 표시합니다. 이 제한을 초과하는 모든 로그는 시스템에서 자동으로 제거됩니다.
+감사 로그는 시스템에서 삭제된 후 365일 동안 유지됩니다. 따라서 최대 365일 동안만 돌아갈 수 있습니다.
 
 목록에서 이벤트를 선택하여 오른쪽 레일에서 해당 세부 사항을 확인합니다.
 
@@ -55,7 +56,12 @@ ht-degree: 5%
 
 ### 감사 로그 필터링
 
-단계 아이콘( )을 선택합니다![필터 아이콘](../../images/audit-logs/icon.png))을 클릭하여 필터 컨트롤 목록을 표시하여 결과를 좁힐 수 있습니다.
+>[!NOTE]
+>
+>이 새로운 기능이 추가되었으므로 표시되는 데이터는 2022년 3월에만 적용됩니다. 선택한 리소스에 따라 이전 데이터를 2022년 1월부터 사용할 수 있습니다.
+
+
+단계 아이콘( )을 선택합니다![필터 아이콘](../../images/audit-logs/icon.png))을 클릭하여 필터 컨트롤 목록을 표시하여 결과를 좁힐 수 있습니다. 선택한 다양한 필터에 관계없이 마지막 1000개의 레코드만 표시됩니다.
 
 ![필터](../../images/audit-logs/filters.png)
 
@@ -65,8 +71,9 @@ UI에서 감사 이벤트에 다음 필터를 사용할 수 있습니다.
 | --- | --- |
 | [!UICONTROL 카테고리] | 드롭다운 메뉴를 사용하여 표시된 결과를 [카테고리](#category). |
 | [!UICONTROL 작업] | 작업별로 필터링합니다. 현재 전용 [!UICONTROL 만들기] 및 [!UICONTROL 삭제] 작업을 필터링할 수 있습니다. |
+| [!UICONTROL 사용자] | 전체 사용자 ID를 입력합니다(예: `johndoe@acme.com`) 필터 대상 |
 | [!UICONTROL 상태] | 작업이 허용(완료) 또는 거부되었는지 여부 [액세스 제어](../../../access-control/home.md) 사용 권한. |
-| [!UICONTROL 날짜] | 결과를 필터링할 날짜 범위를 정의하려면 시작 날짜 및/또는 종료 날짜를 선택합니다. |
+| [!UICONTROL 날짜] | 결과를 필터링할 날짜 범위를 정의하려면 시작 날짜 및/또는 종료 날짜를 선택합니다. 데이터는 90일 전환 확인 기간으로 내보낼 수 있습니다(예: 2021-12-15 ~ 2022-03-15). 이벤트 유형마다 다를 수 있습니다. |
 
 필터를 제거하려면 해당 필터의 알약 아이콘에서 &quot;X&quot;를 선택하거나 을 선택합니다 **[!UICONTROL 모두 지우기]** 모든 필터를 제거하려면 다음을 수행하십시오.
 
@@ -90,6 +97,10 @@ UI에서 수행할 수 있는 모든 작업은 API 호출을 사용하여 수행
 
 Adobe Admin Console에서 활동에 대한 감사 로그를 관리하는 방법에 대해 알려면 다음을 참조하십시오 [문서](https://helpx.adobe.com/enterprise/using/audit-logs.html).
 
-## 다음 단계
+## 다음 단계 및 추가 리소스
 
 이 안내서에서는 Experience Platform에서 감사 로그를 관리하는 방법을 다룹니다. 플랫폼 활동을 모니터링하는 방법에 대한 자세한 내용은 [가시성 통찰력](../../../observability/home.md) 및 [데이터 수집 모니터링](../../../ingestion/quality/monitor-data-ingestion.md).
+
+Experience Platform의 감사 로그에 대한 이해를 보강하려면 다음 비디오를 시청하십시오.
+
+>[!VIDEO](https://video.tv.adobe.com/v/341450?quality=12&learn=on)
