@@ -2,9 +2,9 @@
 title: Real-time Customer Data Platform B2B Edition의 소스
 description: Real-time Customer Data Platform B2B Edition에서 소스의 역할에 대한 개요입니다.
 exl-id: eeea4b2e-67c5-4491-9b8e-4b8987e44777
-source-git-commit: 1a104d26b920082ee73178dd0ad7234ad43dec1a
+source-git-commit: 76bbb188f6a1643cc7f10f4a3cded1316be9e23c
 workflow-type: tm+mt
-source-wordcount: '290'
+source-wordcount: '223'
 ht-degree: 0%
 
 ---
@@ -16,10 +16,6 @@ ht-degree: 0%
 >Real-time Customer Data Platform B2B Edition을 사용하지 않는 경우 다음을 참조하십시오. [소스 개요](./sources-overview.md) 을 가리키도록 업데이트하는 것이 좋습니다.
 
 Real-time Customer Data Platform B2B Edition을 사용하면 다음을 포함한 다양한 소스를 통해 B2B 데이터를 가져올 수 있습니다 [[!DNL Marketo Engage]](../../sources/connectors/adobe-applications/marketo/marketo.md) 소스 커넥터, Salesforce, Amazon S3 및 ADLS를 사용할 수 있습니다. 이러한 소스 범위는 서비스를 사용하여 들어오는 데이터를 구성, 레이블 지정 및 향상시키는 기능을 제공합니다.
-
->[!TIP]
->
->Real-time Customer Data Platform B2B Edition은 데이터를 수집할 수 있는 다양한 외부 소스를 제공하지만 Real-time Customer Data Platform에 사용할 수 있는 것만큼 많은 외부 소스가 없습니다. 조직에서 사용할 수 있는 소스 커넥터를 학습하기 위해 플랫폼 UI에서 소스 카탈로그를 볼 수 있습니다. 카탈로그에 액세스하려면 다음을 선택합니다 **소스** 왼쪽 탐색에서 를 선택하고 **카탈로그**.
 
 소스가 B2B 워크플로우에 맞는 방식을 이해하려면 다음을 참조하십시오. [엔드 투 엔드 자습서](../b2b-tutorial.md#ingest-your-data-into-experience-platform).
 
