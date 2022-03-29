@@ -4,9 +4,9 @@ user-guide-title: 대상 안내서
 user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화합니다.
 description: 이 문서에서는 Adobe Experience Platform 대상의 목차 목록을 설명합니다
 feature: Destinations
-source-git-commit: 2d944c7bd237efbbd4a770b3a6dd03c4133bc901
+source-git-commit: c4d8ae6de2e1bbf23a25a66bde5dc88c13a13402
 workflow-type: tm+mt
-source-wordcount: '724'
+source-wordcount: '733'
 ht-degree: 9%
 
 ---
@@ -96,7 +96,7 @@ ht-degree: 9%
       * [Azure Blob 연결](./catalog/cloud-storage/azure-blob.md)
       * [(베타) Azure 이벤트 허브 연결](./catalog/cloud-storage/azure-event-hubs.md)
       * [SFTP 연결](./catalog/cloud-storage/sftp.md)
-      * [IP 주소 허용 목록](./catalog/cloud-storage/ip-address-allow-list.md)
+      * [클라우드 스토리지 허용 목록에 추가하다 대상에 대한 IP 주소](./catalog/cloud-storage/ip-address-allow-list.md)
    * 데이터 관리 플랫폼 대상 {#data-management}
       * [DMP(데이터 관리 플랫폼) 대상 개요](./catalog/data-management/overview.md)
       * [Audience Manager DIL 확장](./catalog/data-management/aam-dil-extension.md)
@@ -119,7 +119,7 @@ ht-degree: 9%
       * [Airship 태그 연결](./catalog/mobile-engagement/airship-tags.md)
       * [연결 브레이즈](./catalog/mobile-engagement/braze.md)
    * 개인화 대상 {#personalization}
-      * [개인화 대상 개요](./catalog/personalization/overview.md)
+      * [Personalization 대상 개요](./catalog/personalization/overview.md)
       * [Adobe Target 연결](./catalog/personalization/adobe-target-connection.md)
       * [Adobe Target 확장](./catalog/personalization/adobe-target.md)
       * [Adobe Target v2 확장](./catalog/personalization/adobe-target-v2.md)
@@ -138,6 +138,7 @@ ht-degree: 9%
       * [[!DNL Twitter Custom Audiences] 연결](./catalog/social/twitter.md)
    * 스트리밍 대상 {#streaming}
       * [ (베타) HTTP API 연결](./catalog/streaming/http-destination.md)
+      * [스트리밍 대상을 허용 목록에 추가하다 위한 IP 주소](./catalog/streaming/ip-address-allow-list.md)
    * 설문 조사 대상 {#survey}
       * [설문 조사 대상 개요](./catalog/survey/overview.md)
       * [Foresee 확장 대상](./catalog/survey/foresee.md)

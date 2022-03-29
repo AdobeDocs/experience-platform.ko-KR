@@ -3,9 +3,9 @@ keywords: 스트리밍;
 title: HTTP API 연결
 description: Adobe Experience Platform의 HTTP API 대상을 사용하면 프로필 데이터를 타사 HTTP 엔드포인트로 보낼 수 있습니다.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: c2e726a7e66267bf8f301014ae30dedd7472c693
+source-git-commit: 7acacc4a5ddd10f47da59837ad7dab2615d41789
 workflow-type: tm+mt
-source-wordcount: '1377'
+source-wordcount: '1384'
 ht-degree: 1%
 
 ---
@@ -61,8 +61,11 @@ curl --location --request POST '<YOUR_API_ENDPOINT>' \
 --data-urlencode 'client_secret=<CLIENT_SECRET>'
 ```
 
-
 를 사용할 수도 있습니다 [Adobe Experience Platform Destination SDK](/help/destinations/destination-sdk/overview.md) 통합을 설정하고 Experience Platform 프로필 데이터를 HTTP 엔드포인트로 보냅니다.
+
+## IP 주소 허용 목록에 추가하다 {#ip-address-allowlist}
+
+고객의 보안 및 규정 준수 요구 사항을 충족하기 위해 Experience Platform은 HTTP API 대상에 대해 검색할 수 허용 목록에 추가하다 있는 정적 IP 목록을 제공합니다. 을(를) 참조하십시오. [스트리밍 대상을 위한 IP 주소 허용 목록](/help/destinations/catalog/streaming/ip-address-allow-list.md) 을 클릭하여 검색할 IP의 전체 목록을 허용 목록에 추가하다 확인합니다.
 
 ## 대상에 연결 {#connect-destination}
 
@@ -97,10 +100,6 @@ While [설정](../../ui/connect-destination.md) 이 대상을 사용하려면 �
 ### 대상 속성 {#attributes}
 
 에서 [[!UICONTROL 속성 선택]](../../ui/activate-streaming-profile-destinations.md#select-attributes) Adobe은 사용자 지정 페이지에서 고유 식별자를 선택할 것을 권장합니다 [조합 스키마](../../../profile/home.md#profile-fragments-and-union-schemas). 대상으로 내보낼 고유 식별자 및 기타 모든 XDM 필드를 선택합니다.
-
-## 제품 고려 사항 {#product-considerations}
-
-Experience Platform은 고정된 정적 IP 세트를 통해 HTTP 종단점으로 데이터를 스트리밍하지 않습니다. 따라서 Adobe은 HTTP API 대상에 대해 검색할 수 허용 목록에 추가하다 있는 정적 IP 목록을 제공할 수 없습니다.
 
 ## 프로필 내보내기 동작 {#profile-export-behavior}
 
