@@ -1,11 +1,11 @@
 ---
-solution: Experience Platform, Data Collection
+solution: Data Collection
 audience: user
 user-guide-title: Adobe Experience Platform Web SDK 도움말
 breadcrumb-title: Web SDK 안내서
 user-guide-description: Edge 네트워크를 통해 Experience Cloud 서비스와 상호 작용할 수 있습니다.
 feature: Web SDK
-source-git-commit: ea2bd2ff025c2fbd898e58b171c24abf1dbe55b1
+source-git-commit: 1d9a924c153351f1e994d24908217d2f4edf0d64
 workflow-type: tm+mt
 source-wordcount: '163'
 ht-degree: 31%
