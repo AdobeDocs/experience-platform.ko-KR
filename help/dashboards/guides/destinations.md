@@ -4,9 +4,9 @@ title: 대상 대시보드
 description: Adobe Experience Platform은 조직의 활성 대상에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 7590c24baae669ebe3214985088a7135a69ff8bc
+source-git-commit: 86041e3165d4ea9cb55717f24b002afa084ff420
 workflow-type: tm+mt
-source-wordcount: '1642'
+source-wordcount: '1709'
 ht-degree: 0%
 
 ---
@@ -55,6 +55,7 @@ Adobe은 대상과 관련된 다양한 지표를 시각화하고 데이터 분�
 * [[!UICONTROL ID로 매핑되지 않은 세그먼트]](#unmapped-segments-by-identity)
 * [[!UICONTROL ID별로 매핑된 세그먼트]](#mapped-segments-by-identity)
 * [[!UICONTROL 일반적인 대상]](#common-audiences)
+* [[!UICONTROL 대상 수]](#destinations-count)
 
 ### [!UICONTROL 가장 많이 사용되는 대상] {#most-used-destinations}
 
@@ -151,6 +152,14 @@ id 열은 위젯 ID 드롭다운에서 선택한 ID에 매핑할 수 있는 세�
 세그먼트 내의 [!UICONTROL 매핑된 대상 상태] 위젯이 큰 여백에 의해 벗어납니다. 대상 크기 트렌드 차트를 참조하고 예외 항목 세그먼트를 찾아야 합니다. 트렌드는 세그먼트의 상태에 대한 더 많은 통찰력을 제공할 수 있습니다.
 
 ![매핑된 대상 상태 위젯.](../images/destinations/mapped-audience-health.png)
+
+### [!UICONTROL 대상 수] (#destinations-count)
+
+다음 [!UICONTROL 대상 수] 위젯은 시스템 내에서 대상을 활성화 및 전달할 수 있는 사용 가능한 총 종단점 수를 제공합니다. 이 번호에는 활성 대상과 비활성 대상이 모두 포함됩니다.
+
+총 개수 아래에서 을 선택합니다. **[!UICONTROL 대상]** 대상 찾아보기 탭으로 이동합니다. 이 페이지에는 날짜로 연결을 설정한 모든 대상이 나열됩니다.
+
+![대상 수 위젯.](../images/destinations/destinations-count.png)
 
 ## 다음 단계
 
