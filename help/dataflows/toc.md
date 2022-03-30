@@ -3,10 +3,10 @@ audience: user
 user-guide-title: 데이터 흐름 안내서
 user-guide-description: 데이터 흐름은 플랫폼 간에 데이터를 이동하는 데이터 작업을 나타냅니다.
 feature: Dataflows
-source-git-commit: 257c3f7cd93df6d63f4bc6e2836280427be1cbae
+source-git-commit: 485bddc488f98357fcf2ac33097b450541042602
 workflow-type: tm+mt
-source-wordcount: '44'
-ht-degree: 34%
+source-wordcount: '51'
+ht-degree: 29%
 
 ---
 
@@ -20,4 +20,6 @@ ht-degree: 34%
 - UI 안내서 {#ui}
    - [대상의 데이터 흐름 모니터링](./ui/monitor-destinations.md)
    - [소스의 데이터 흐름 모니터링](./ui/monitor-sources.md)
+   - B2B 모니터링 {#b2b}
+      - [프로필 보강 작업 모니터링](./ui/b2b/monitor-profile-enrichment.md)
 - [Flow Service API](https://www.adobe.io/experience-platform-apis/references/flow-service/)
