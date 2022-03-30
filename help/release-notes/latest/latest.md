@@ -2,89 +2,133 @@
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform에 대한 최신 릴리스 노트입니다.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 366656346c25cd5206b36c7ff2b9942c5027de17
+source-git-commit: 6ae54c1f3f06c8daaf7c0d36beb4d5884bc258eb
 workflow-type: tm+mt
-source-wordcount: '1018'
-ht-degree: 3%
+source-wordcount: '882'
+ht-degree: 7%
 
 ---
 
 # Adobe Experience Platform 릴리스 노트
 
-**릴리스 날짜: 2022년 3월 7일**
+**릴리스 날짜: 2022년 3월 30일**
 
->[!NOTE]
->
->이 릴리스는 2월 23일의 원래 날짜에서 3월 7일로 변경되었습니다.
+Adobe Experience Platform의 새로운 기능:
+
+- [감사 로그](#audit-logs)
 
 Adobe Experience Platform의 기존 기능 업데이트:
 
+- [경고](#alerts)
 - [[!DNL Dashboards]](#dashboards)
-- [[!DNL Data collection]](#data-collection)
-- [[!DNL Destinations]](#destinations)
-- [[!DNL Identity Service]](#identity)
-- [[!DNL Sources]](#sources)
+- [[!DNL Query Service]](#query-service)
+- [소스](#sources)
+<!-- - [Experience Data Model (XDM)](#xdm) -->
 
-## [!DNL Dashboards] {#dashboards}
+## 감사 로그 {#audit-logs}
 
-Adobe Experience Platform은 여러 기능을 제공합니다 [!DNL dashboards] 을 통해 일일 스냅샷 동안 캡처된 조직 데이터에 대한 중요한 통찰력을 볼 수 있습니다.
-
-**업데이트된 기능**
-
-| 기능 | 설명 |
-| --- | --- |
-| 신규 표준 대상 위젯 | 다음 표준 위젯을 사용하면 대상과 관련된 다양한 지표를 시각화할 수 있습니다.<ul><li>대상별로 최근에 활성화된 세그먼트입니다. 이 위젯은 선택한 대상에 따라 가장 최근에 활성화된 상위 5개의 세그먼트를 내림차순으로 표시합니다.</li><li>대상 크기 트렌드입니다. 이 위젯은 해당 대상 계정에 매핑된 세그먼트의 일정 기간 동안 프로필 수 관계를 나타냅니다.</li><li>ID로 매핑되지 않은 세그먼트입니다. 이 위젯은 지정된 대상 및 ID에 대한 내림차순 ID 카운트로 순위가 지정된 상위 5개의 매핑되지 않은 세그먼트를 나열합니다.</li><li>ID별로 매핑된 세그먼트. 이 위젯은 상위 5개의 매핑된 세그먼트를 나열합니다. 세그먼트는 위젯의 드롭다운 메뉴에서 선택한 대상 ID와 일치하는 소스 ID의 각 수에 따라 높은 값에서 낮은 순서로 정렬됩니다.</li><li>일반적인 대상. 이 위젯은 페이지 맨 위에서 선택한 대상 계정에서 활성화된 상위 5개 세그먼트 목록과 위젯 드롭다운에서 선택한 대상을 제공합니다.</li></ul> 사용 가능한 표준 위젯에 대한 자세한 내용은 [대상 대시보드 설명서.](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html?lang=en#standard-widgets). |
-
-자세한 내용은 [!DNL Dashboards]를 보려면 [[!DNL Dashboards] 개요](../../dashboards/home.md).
-
-## 데이터 수집 {#data-collection}
-
-Platform은 클라이언트측 고객 경험 데이터를 수집하고 Adobe Experience Platform Edge Network로 전송하여 Adobe 또는 비Adobe 대상으로 보강, 변환 및 배포할 수 있는 기술 세트를 제공합니다.
+Experience Platform을 사용하면 다양한 서비스 및 기능에 대한 사용자 활동을 감사할 수 있습니다. 감사 로그는 작업을 수행한 사람과 수행한 시기에 대한 정보를 제공합니다.
 
 **새로운 기능**
 
 | 기능 | 설명 |
 | --- | --- |
-| 데이터 스트림 구성을 위한 UI 워크플로우가 개선되었습니다 | 데이터 수집 UI에서 새 데이터 스트림을 만드는 워크플로우가 업데이트되었습니다. 데이터 스트림에 서비스를 추가할 때 액세스 권한이 있는 서비스만 옵션 목록에 포함됩니다. 다음 안내서를 참조하십시오. [데이터 스트림 구성](../../edge/fundamentals/datastreams.md) 추가 정보. |
-| 데이터 수집을 위한 데이터 준비 | 이제 Adobe Experience Platform Web SDK를 사용하는 경우 데이터 준비 기능을 활용하여 데이터를 서버 쪽의 XDM(Experience Data Model)에 매핑할 수 있습니다. 의 섹션을 참조하십시오. [데이터 수집을 위한 데이터 준비](../../edge/fundamentals/datastreams.md#data-prep) 자세한 내용은 데이터 스트림 안내서를 참조하십시오. |
-| 자사 장치 ID | 이제 Platform Web SDK를 사용하여 고객 데이터를 수집할 때 자체 장치 ID를 Adobe Experience Platform Edge 네트워크로 전송하여 타사 쿠키 수명 주기에 대한 최근 브라우저 제한 사항에 대한 해결 방법을 제공할 수 있습니다. 다음 안내서를 참조하십시오. [자사 장치 ID](../../edge/identity/first-party-device-ids.md) 추가 정보. |
+| 데이터 집합, 스키마, 클래스, 필드 그룹, 데이터 유형, 샌드박스, 대상, 세그먼트, 병합 정책, 계산된 속성, 제품 프로필 및 계정(Adobe)에 대한 감사 로그 | 감사 로그에 기록되는 리소스입니다. 이 기능이 활성화되어 있으면 활동이 발생하면 감사 로그가 자동으로 수집됩니다. 수동으로 로그 수집을 활성화할 필요는 없습니다. |
+| 감사 로그 내보내기 | 감사 로그를 `CSV` 또는 `JSON` 파일. 생성된 파일은 컴퓨터에 직접 저장됩니다. |
 
-Platform의 데이터 수집에 대한 자세한 내용은 [데이터 수집 개요](../../collection/home.md).
+{style=&quot;table-layout:auto&quot;}
 
-## [!DNL Destinations] {#destinations}
+Platform의 감사 로그에 대한 자세한 내용은 [감사 로그 개요](../../landing/governance-privacy-security/audit-logs/overview.md).
 
-[!DNL Destinations] 는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과의 사전 구축된 통합입니다. 대상을 사용하여 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례에 대해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
+## 경고 {#alerts}
 
-**새로운 기능 또는 업데이트된 기능**
-
-| 기능 | 설명 |
-| ----------- | ----------- |
-| (베타) 파일 기반 대상에 대한 Destination SDK 지원 | [파일 기반 대상에 대한 Destination SDK 지원](../../destinations/destination-sdk/file-based-destination-configuration.md) 는 현재 비공개 베타에 있으며 일부 파트너 및 고객만 사용할 수 있습니다. GA 릴리스 전에 기능 및 관련 설명서가 변경될 수 있습니다.<br><br>기능에 액세스하는 방법에 대해 알려면 Adobe 계정 담당자에게 문의하십시오. Adobe 내부 계정 담당자는 Experience Platform 대상 제품 및 엔지니어링 팀에 연락하여 지원되는 사용 사례에 대해 논의해야 합니다. <br><br> 파일 기반 대상에 대한 Destination SDK 지원 베타 단계에서 베타 파트너 및 고객은 [Experience Platform Destination SDK](/help/destinations/destination-sdk/overview.md) 다음 기능을 통해 혜택을 받을 비공개 대상을 빌드하려면 다음을 수행하십시오. <ul><li>Amazon S3, SFTP 서버, Azure Blob, Azure Data Lake 저장소, 데이터 랜딩 영역 저장소를 통해 파일 기반(일괄 처리) 대상을 만듭니다.</li><li>기본 파일 내보내기 예약 및 빈도 옵션을 구성하고 설정합니다.</li><li>내보낸 CSV 파일(구분 기호, 이스케이프 문자 및 기타 옵션)의 형식을 지정하는 옵션을 구성하고 설정합니다.</li><li>사용자 지정 파일 헤더를 설정하고 편집하는 기능.</li><li>파일 및 세그먼트 내보내기에 대한 이벤트 알림을 받는 기능.</li><li>CSV, TSV, JSON, Parquet과 같은 추가 파일 유형을 내보내는 기능.</li></ul>  <br>새 기능을 시작하려면 다음을 참조하십시오. [(베타) Destination SDK을 사용하여 파일 기반 대상 구성](../../destinations/destination-sdk/file-based-destination-configuration.md). <br><br> 비공개 또는 제품을 만드는 기능 *스트리밍* 모든 Experience Platform 고객 및 파트너는 Destination SDK을 사용한 대상을 이미 사용할 수 있습니다. 방법에 대한 안내서를 참조하십시오. [Destination SDK을 사용하여 스트리밍 대상 구성](/help/destinations/destination-sdk/configure-destination-instructions.md) 자세한 내용 |
-
-## [!DNL Identity Service] {#identity}
-
-적절한 디지털 경험을 제공하려면 고객을 완전히 이해해야 합니다. 서로 다른 시스템에서 고객 데이터가 단편화된 경우 각 개별 고객이 여러 &quot;ID&quot;를 보유한 것처럼 보일 때 더욱 어렵습니다.
-
-Adobe Experience Platform [!DNL Identity Service] 은 장치 및 시스템 전반에서 ID를 브리징하여 고객 및 고객의 행동을 더 잘 파악할 수 있도록 지원하고 효과적이고 개인화된 디지털 경험을 실시간으로 제공할 수 있도록 합니다.
+Experience Platform을 사용하면 다양한 플랫폼 활동에 대한 이벤트 기반 경고를 구독할 수 있습니다. 을 통해 다른 경고 규칙에 가입할 수 있습니다 [!UICONTROL 경고] 플랫폼 사용자 인터페이스의 탭. 및 UI 자체 또는 이메일 알림을 통해 경고 메시지를 수신하도록 선택할 수 있습니다.
 
 **업데이트된 기능**
 
 | 기능 | 설명 |
 | --- | --- |
-| 신규 권한 `view-identity-graph` | 이제 를 사용할 수 있습니다 `view-identity-graph` 조직의 사용자가 id 그래프 데이터를 볼 수 있는지 여부를 제어할 수 있는 권한입니다. 이 권한이 없는 사용자는 UI에서 ID 그래프 뷰어에 액세스할 수 없거나 액세스할 때 허용되지 않습니다 [!DNL Identity Service] ID를 반환하는 API입니다. 자세한 내용은 [액세스 제어 개요](../../access-control/home.md) 사용 권한에 대한 자세한 내용을 참조하십시오. |
+| 신규 경고 규칙 | 이제 데이터 수집과 관련된 소스에 두 개의 새로운 경고 규칙을 사용할 수 있습니다. 다음 사항에 대한 개요를 참조하십시오. [경고 규칙](../../observability/alerts/rules.md) 를 참조하십시오. |
 
-자세한 내용은 [!DNL Identity Service]를 참조하려면 [ID 서비스 개요](../../identity-service/home.md).
+{style=&quot;table-layout:auto&quot;}
+
+Platform의 경고에 대한 자세한 내용은 [경고 개요](../../observability/alerts/overview.md).
+
+## 대시보드 {#dashboards}
+
+Adobe Experience Platform은 여러 기능을 제공합니다 [!DNL dashboards] 을 통해 일일 스냅샷 동안 캡처된 조직 데이터에 대한 중요한 정보를 볼 수 있습니다.
+
+### 프로필 대시보드
+
+프로필 대시보드는 Experience Platform의 프로필 저장소 내에 조직에 있는 속성(레코드) 데이터의 스냅숏을 표시합니다.
+
+**업데이트된 기능**
+
+| 기능 | 설명 |
+| --- | --- |
+| 세그먼트화되지 않은 프로필 위젯 | 위젯은 세그먼트에 첨부되지 않은 모든 프로필의 총 수를 제공합니다. 생성된 숫자는 마지막 스냅샷에서 정확하며 조직 전체에서 프로파일 활성화 기회를 나타냅니다. 자세한 내용은 [프로필 표준 위젯 설명서](../../dashboards/guides/profiles.md#standard-widgets) 추가 정보. |
+| 세그먼트화되지 않은 프로필 트렌드 위젯 | 이 위젯은 주어진 기간 동안 어떤 세그먼트에도 첨부되지 않는 프로필 수에 대한 선 그래프 그림을 제공합니다. 이 트렌드는 30일, 90일 및 12개월 기간에 걸쳐 시각화할 수 있습니다. 자세한 내용은 [프로필 표준 위젯 설명서](../../dashboards/guides/profiles.md#standard-widgets) 추가 정보. |
+| ID 위젯으로 세그먼트화되지 않은 프로필 | 이 위젯은 세그먼트화되지 않은 프로필의 총 수를 고유 식별자로 분류합니다. 데이터는 막대 차트에 시각화됩니다. 자세한 내용은 [프로필 표준 위젯 설명서](../../dashboards/guides/profiles.md#standard-widgets) 추가 정보. |
+| 단일 ID 프로필 위젯 | 이 위젯은 이메일 또는 ECID와 같은 ID 유형을 만드는 유형만 포함하는 조직의 프로필 수를 제공합니다. 자세한 내용은 [프로필 표준 위젯 설명서](../../dashboards/guides/profiles.md#standard-widgets) 추가 정보. |
+
+{style=&quot;table-layout:auto&quot;}
+
+프로필 대시보드에 대한 자세한 내용은 [프로필 대시보드 개요](../../dashboards/guides/profiles.md).
+
+### 대상 대시보드
+
+대상 대시보드는 Experience Platform 내에서 조직에서 활성화한 대상의 스냅숏을 표시합니다.
+
+**업데이트된 기능**
+
+| 기능 | 설명 |
+| --- | --- |
+| 대상 수 위젯 | 위젯은 시스템 내에서 대상을 활성화 및 전달할 수 있는 사용 가능한 총 엔드포인트 수를 제공합니다. 이 번호에는 활성 대상과 비활성 대상이 모두 포함됩니다. 자세한 내용은 [대상 표준 위젯 설명서](../../dashboards/guides/destinations.md#standard-widgets) 추가 정보. |
+
+{style=&quot;table-layout:auto&quot;}
+
+Platform의 대상 대시보드에 대한 자세한 내용은 [대상 대시보드 개요](../../dashboards/guides/destinations.md).
+
+<!-- ## Experience Data Model (XDM) {#xdm}
+
+Experience Data Model (XDM) is an open-source specification that provides common structures and definitions (schemas) for data that is brought into Adobe Experience Platform. By adhering to XDM standards, all customer experience data can be incorporated into a common representation to deliver insights in a faster, more integrated way. You can gain valuable insights from customer actions, define customer audiences through segments, and use customer attributes for personalization purposes.
+
+| Feature | Description |
+| --- | --- |
+| Add or remove individual standard fields for a schema | The Schema Editor UI now allows you to add portions of standard field groups to your schemas, providing more flexibility for the fields you choose to include without needing to build custom resources from scratch.<br><br>You can now also define ad-hoc custom fields directly within the schema structure and assign them to a new or existing custom field group without needing to create or edit the field group beforehand.<br><br>See the guide on [creating and editing schemas in the UI](../../xdm/ui/resources/schemas.md) for more information on these new workflows. |
+
+{style="table-layout:auto"}
+
+For more information on XDM in Platform, see the [XDM System overview](../../xdm/home.md). -->
+
+## 쿼리 서비스 {#query-service}
+
+[!DNL Query Service] 표준 SQL을 사용하여 Adobe Experience Platform에서 데이터를 쿼리할 수 있습니다. [!DNL Data Lake]. 에서 모든 데이터 세트에 가입할 수 있습니다 [!DNL Data Lake] 쿼리 결과를 보고 또는 Data Science Workspace에 사용하거나 실시간 고객 프로필에 수집하기 위한 새로운 데이터 세트로 캡처합니다.
+
+**업데이트된 기능**
+
+| 기능 | 설명 |
+| --- | --- |
+| `table_exists` | 새 기능 명령은 현재 시스템에 테이블이 있는지 여부를 확인하는 데 사용됩니다. 이 명령은 부울 값을 반환합니다. `true` 만약 **does** 존재 및 `false` 테이블에서 **not** 존재 자세한 내용은 [SQL 구문 설명서](../../query-service/sql/syntax.md) 추가 정보. |
+
+{style=&quot;table-layout:auto&quot;}
+
+사용 가능한 기능에 대한 자세한 내용은 [쿼리 서비스 개요](../../query-service/home.md).
 
 ## 소스 {#sources}
 
 Adobe Experience Platform은 외부 소스에서 데이터를 수집하면서도 Platform 서비스를 사용하여 해당 데이터를 구조화, 레이블 지정 및 향상시킬 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 타사 소프트웨어 및 CRM 시스템과 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 
-Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 쉽게 설정할 수 있는 RESTful API 및 대화형 UI를 제공합니다. 이러한 소스 연결을 통해 외부 스토리지 시스템 및 CRM 서비스를 인증 및 연결하고, 수집 실행 시간을 설정하고, 데이터 수집 처리량을 관리할 수 있습니다.
+Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 쉽게 설정할 수 있는 RESTful API 및 대화형 UI를 제공합니다. 이러한 소스 연결을 통해 외부 스토리지 시스템 및 CRM 서비스를 인증 및 연결하고, 수집 실행 시간을 설정하고, 전체 데이터 수집을 관리할 수 있습니다.
 
 **업데이트된 기능**
 
 | 기능 | 설명 |
 | --- | --- |
-| GA로 이동하는 베타 소스 | 다음 소스가 Beta에서 GA로 승격되었습니다. <ul><li>[[!DNL Mailchimp Campaigns]](../../sources/connectors/marketing-automation/mailchimp.md)</li><li>[[!DNL Mailchimp Members]](../../sources/connectors/marketing-automation/mailchimp.md)</li><li>[[!DNL Zoho CRM]](../../sources/connectors/crm/zoho.md)</li></ul> |
+| 신규 이제 B2B 사용에 대한 소스를 사용할 수 있습니다 | 이제 B2B 사용 사례에 대해 플랫폼에서 사용 가능한 모든 소스를 사용할 수 있습니다. 자세한 내용은 [소스 카탈로그](../../sources/home.md) 를 참조하십시오. |
+| 신규 제품의 일반 공급 [!DNL Oracle Eloqua] 소스 | 이제 를 사용할 수 있습니다 [!DNL Oracle Eloqua] 소스에서 데이터를 원활하게 수집할 수 있습니다. [!DNL Oracle Eloqua] Platform에 인스턴스(계정, 캠페인, 연락처)를 제공합니다. 다음 문서를 참조하십시오. [만들기 [!DNL Oracle Eloqua] 소스 연결](../../sources/connectors/marketing-automation/oracle-eloqua.md) 추가 정보. |
+| 에 대한 API 개선 사항 [!DNL Data Landing Zone] | 다음 [!DNL Data Landing Zone] 이제 소스는 [!DNL Flow Service] API. 다음 문서를 참조하십시오. [만들기 [!DNL Data Landing Zone] 소스 연결](../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md) 추가 정보. |
+
+{style=&quot;table-layout:auto&quot;}
 
 소스에 대해 자세히 알아보려면 [소스 개요](../../sources/home.md).
