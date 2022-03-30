@@ -4,7 +4,8 @@ user-guide-title: 태그 도움말
 breadcrumb-title: 태그
 user-guide-description: 고객 경험을 향상시키기 위해 분석, 마케팅 및 광고 태그를 배포 및 관리하는 방법을 살펴볼 수 있습니다.
 feature: Tags
-source-git-commit: 66975d2352062e4abe1af35d7a7130a5c85188d0
+solution: Tags, Data Collection
+source-git-commit: 42a768a51b437a216204b3177eb758416666aac5
 workflow-type: tm+mt
 source-wordcount: '386'
 ht-degree: 69%

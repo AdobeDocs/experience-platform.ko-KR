@@ -33,7 +33,7 @@ ht-degree: 27%
    * [플랫폼 API 시작](api-guide.md)
    * [ Platform API 인증 및 액세스](api-authentication.md)
    * [API 기본 사항](api-fundamentals.md)
-   * [플랫폼 API에서 Postman 사용](postman.md)
+   * [Platform API에서 Postman 사용](postman.md)
    * [API 참조 문서](https://www.adobe.com/go/platform-api-reference-en)
 * 플랫폼 설명서 {#documentation}
    * [개요](documentation/overview.md)
