@@ -5,9 +5,9 @@ title: UI에서 XDM 필드 정의
 description: Experience Platform 사용자 인터페이스에서 XDM 필드를 정의하는 방법을 알아봅니다.
 topic-legacy: user guide
 exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
-source-git-commit: 08002616450259aded0cc53046472f10ce0a9bb9
+source-git-commit: 49a54b78d1e3745694352e779fb2226acd99d663
 workflow-type: tm+mt
-source-wordcount: '1374'
+source-wordcount: '1331'
 ht-degree: 4%
 
 ---
@@ -26,26 +26,21 @@ ht-degree: 4%
 
 UI에서 새 XDM 필드를 정의하려면 먼저 UI 내에서 스키마를 열어야 합니다 [!DNL Schema Editor]. 현재 사용 가능한 스키마에 따라, [!DNL Schema Library], 다음 중에서 선택할 수 있습니다. [새 스키마 만들기](../resources/schemas.md#create) 또는 [편집할 기존 스키마 선택](../resources/schemas.md#edit).
 
-일단 이 [!DNL Schema Editor] 필드를 추가하거나 편집할 수 있는 컨트롤이 캔버스에 나타납니다. 이러한 컨트롤은 스키마 이름 옆에 나타나고 선택한 클래스나 필드 그룹에 정의된 개체 형식 필드도 나타납니다.
+일단 이 [!DNL Schema Editor] 열어서 왼쪽 레일을 사용하여 필드를 정의할 클래스 또는 필드 그룹을 선택합니다. 리소스가 조직에서 정의한 사용자 정의 리소스인 경우 필드를 추가하거나 편집할 수 있는 컨트롤이 캔버스에 나타납니다. 이러한 컨트롤은 스키마 이름 옆에 나타나고 선택한 클래스나 필드 그룹에 정의된 개체 형식 필드도 나타납니다.
 
 ![](../../images/ui/fields/overview/select-resource.png)
 
->[!WARNING]
+>[!NOTE]
 >
->표준 필드 그룹에서 제공하는 객체에 필드를 추가하려고 하면 해당 필드 그룹이 사용자 지정 필드 그룹으로 변환되고 원래 필드 그룹은 더 이상 사용할 수 없습니다. 의 섹션을 참조하십시오. [표준 필드 그룹에 필드 추가](../resources/schemas.md#custom-fields-for-standard-groups) 스키마 UI 안내서에서 자세한 내용을 확인하십시오.
+>선택하는 클래스나 필드 그룹이 Adobe에서 제공하는 핵심 리소스인 경우 편집할 수 없으므로 위에 표시된 컨트롤이 나타나지 않습니다. 필드를 추가하려는 스키마가 코어 XDM 클래스를 기반으로 하며 사용자 지정 필드 그룹을 포함하지 않는 경우 다음을 수행할 수 있습니다 [새 필드 그룹 만들기](../resources/field-groups.md#create) 를 추가하여 스키마에 을 대신 추가합니다.
 
 리소스에 새 필드를 추가하려면 **더하기(+)** 캔버스에서 스키마 이름 옆에 있는 아이콘 또는 필드를 정의할 객체 유형 필드 옆에 있는 아이콘.
 
 ![](../../images/ui/fields/overview/plus-icon.png)
 
-필드를 스키마에 직접 추가하는지 또는 구성 클래스 및 필드 그룹에 직접 추가하는지에 따라 필드를 추가하는 데 필요한 단계가 달라집니다. 이 문서의 나머지 부분에서는 스키마에서 해당 필드가 표시되는 위치와 관계없이 필드의 속성을 구성하는 방법에 중점을 둡니다. 스키마에 필드를 추가할 수 있는 다양한 방법에 대한 자세한 내용은 스키마 UI 안내서의 다음 섹션을 참조하십시오.
+## 리소스 필드 정의 {#define}
 
-* [필드 그룹에 필드 추가](../resources/schemas.md#add-fields)
-* [스키마에 직접 필드 추가](../resources/schemas.md#add-individual-fields)
-
-## 필드의 속성 정의 {#define}
-
-을(를) 선택한 후 **더하기(+)** 아이콘, **[!UICONTROL 새 필드]** 은 고유한 테넌트 ID에 지정된 객체 내에 있는 캔버스에 나타납니다(으로 표시) `_tenantId` 아래 예에서 ). 스키마에 추가된 모든 사용자 지정 필드는 Adobe 제공 클래스 및 필드 그룹에서 다른 필드와의 충돌을 방지하기 위해 자동으로 이 네임스페이스 내에 배치됩니다.
+을(를) 선택한 후 **더하기(+)** 아이콘, **[!UICONTROL 새 필드]** 는 고유한 테넌트 ID에 지정된 루트 수준 개체(다음과 같이 표시됨)에 있는 캔버스에 표시됩니다. `_tenantId` 아래 예에서 ). 사용자 지정 클래스 및 필드 그룹을 통해 스키마에 추가되는 모든 필드는 Adobe 제공 클래스 및 필드 그룹에서 다른 필드와의 충돌을 방지하기 위해 자동으로 이 네임스페이스 내에 배치됩니다.
 
 ![](../../images/ui/fields/overview/new-field.png)
 
