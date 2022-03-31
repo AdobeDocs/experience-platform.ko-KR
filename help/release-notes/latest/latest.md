@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform에 대한 최신 릴리스 노트입니다.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: d8983f08821b9157edd64fdba1f42a8ac9d38a3d
+source-git-commit: b378a920380030d51956a0910271f1b1f9f4c371
 workflow-type: tm+mt
-source-wordcount: '1156'
+source-wordcount: '1158'
 ht-degree: 5%
 
 ---
@@ -22,8 +22,10 @@ Adobe Experience Platform의 기존 기능 업데이트:
 
 - [경고](#alerts)
 - [[!DNL Dashboards]](#dashboards)
+- [데이터 수집](#data-collection)
 - [[!DNL Query Service]](#query-service)
 - [소스](#sources)
+
 <!-- - [Experience Data Model (XDM)](#xdm) -->
 
 ## 감사 로그 {#audit-logs}
