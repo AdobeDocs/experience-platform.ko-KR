@@ -1,11 +1,11 @@
 ---
+title: (베타) HTTP API 연결
 keywords: 스트리밍;
-title: HTTP API 연결
 description: Adobe Experience Platform의 HTTP API 대상을 사용하면 프로필 데이터를 타사 HTTP 엔드포인트로 보낼 수 있습니다.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 7acacc4a5ddd10f47da59837ad7dab2615d41789
+source-git-commit: 0d58445557490a5539279f55c34183994429c632
 workflow-type: tm+mt
-source-wordcount: '1384'
+source-wordcount: '1382'
 ht-degree: 1%
 
 ---

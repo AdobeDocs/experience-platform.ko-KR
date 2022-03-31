@@ -1,11 +1,12 @@
 ---
 keywords: IP 주소, IP 범위, 허용 목록 대상, 허용 목록에 추가하다 스트리밍 허용 목록에 추가하다 대상
-title: '스트리밍 대상을 위한 IP 주소 허용 목록 '
+title: 스트리밍 대상을 허용 목록에 추가하다 위한 IP 주소
 type: Documentation
-description: 이 페이지에서는 Experience Platform에서 HTTP REST API 엔드포인트로 데이터를 안전하게 내보내기 위해 허용 목록에 추가할 수 있는 IP 범위를 제공합니다.
-source-git-commit: 508435ebe7ba762d204408118703fa6469616118
+description: 이 페이지에서는 Experience Platform에서 HTTP REST API 엔드포인트, Amazon Kinesis 또는 Azure 이벤트 허브 인스턴스로 데이터를 안전하게 내보내기 위해 허용 목록에 추가할 수 있는 IP 범위를 제공합니다.
+exl-id: f41303bd-c886-4c67-9e39-21efc3f5b768
+source-git-commit: 8ea871d3ba66b9ee1a864a6319cde21f518f4534
 workflow-type: tm+mt
-source-wordcount: '262'
+source-wordcount: '268'
 ht-degree: 0%
 
 ---
