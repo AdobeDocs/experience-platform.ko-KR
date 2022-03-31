@@ -5,9 +5,9 @@ title: 쿼리 서비스의 SQL 구문
 topic-legacy: syntax
 description: 이 문서에서는 Adobe Experience Platform 쿼리 서비스에서 지원하는 SQL 구문을 보여줍니다.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 9493909d606ba858deab5a15f1ffcc8ec9257972
+source-git-commit: 5468097c61d42a7b565520051b955329e493d51f
 workflow-type: tm+mt
-source-wordcount: '2448'
+source-wordcount: '2596'
 ht-degree: 2%
 
 ---
@@ -261,9 +261,17 @@ DROP TABLE [IF EXISTS] [db_name.]table_name
 | ------ | ------ |
 | `IF EXISTS` | 이 값을 지정하면 테이블이 지정된 경우 예외가 throw되지 않습니다 **not** 존재 |
 
+## 데이터베이스 만들기
+
+다음 `CREATE DATABASE` 명령은 ADLS 데이터베이스를 만듭니다.
+
+```sql
+CREATE DATABASE [IF NOT EXISTS] db_name
+```
+
 ## 데이터베이스 삭제
 
-다음 `DROP DATABASE` 명령은 기존 데이터베이스를 삭제합니다.
+다음 `DROP DATABASE` 명령은 인스턴스에서 데이터베이스를 삭제합니다.
 
 ```sql
 DROP DATABASE [IF EXISTS] db_name
@@ -666,6 +674,7 @@ COPY query
 
 다음 `ALTER TABLE` 명령을 사용하면 기본 또는 외래 키 제약 조건을 추가하거나 삭제하고 테이블에 열을 추가할 수 있습니다.
 
+
 #### 제약 조건 추가 또는 삭제
 
 다음 SQL 쿼리는 테이블에 제약 조건을 추가하거나 삭제하는 예를 보여줍니다.
@@ -704,6 +713,34 @@ ALTER TABLE table_name ADD COLUMN column_name data_type
 ALTER TABLE table_name ADD COLUMN column_name_1 data_type1, column_name_2 data_type2 
 ```
 
+#### 스키마 추가
+
+다음 SQL 쿼리는 데이터베이스/스키마에 테이블을 추가하는 예를 보여줍니다.
+
+```sql
+ALTER TABLE table_name ADD SCHEMA database_name.schema_name
+```
+
+>[!NOTE]
+>
+> ADLS 테이블 및 뷰를 DWH 데이터베이스/스키마에 추가할 수 없습니다.
+
+
+#### 스키마 제거
+
+다음 SQL 쿼리는 데이터베이스/스키마에서 테이블을 제거하는 예를 보여 줍니다.
+
+```sql
+ALTER TABLE table_name REMOVE SCHEMA database_name.schema_name
+```
+
+>[!NOTE]
+>
+> 물리적으로 연결된 DWH 데이터베이스/스키마에서 DWH 테이블 및 뷰를 제거할 수 없습니다.
+
+
+**매개 변수**
+
 | 매개 변수 | 설명 |
 | ------ | ------ |
 | `table_name` | 편집 중인 테이블의 이름입니다. |
@@ -738,4 +775,43 @@ SHOW FOREIGN KEYS
 ------------------+---------------------+----------+---------------------+----------------------+-----------
  table_name_1   | column_name1        | text     | table_name_3        | column_name3         |  "ECID"
  table_name_2   | column_name2        | text     | table_name_4        | column_name4         |  "AAID"
+```
+
+
+### 데이터 그룹 표시
+
+다음 `SHOW DATAGROUPS` 명령은 연결된 모든 데이터베이스의 테이블을 반환합니다. 각 데이터베이스에 대해 테이블에는 스키마, 그룹 유형, 하위 유형, 하위 이름 및 하위 ID가 포함됩니다.
+
+```sql
+SHOW DATAGROUPS
+```
+
+```console
+   Database   |      Schema       | GroupType |      ChildType       |                     ChildName                       |               ChildId
+  -------------+-------------------+-----------+----------------------+----------------------------------------------------+--------------------------------------
+   adls_db     | adls_scheema      | ADLS      | Data Lake Table      | adls_table1                                        | 6149ff6e45cfa318a76ba6d3
+   adls_db     | adls_scheema      | ADLS      | Data Warehouse Table | _table_demo1                                       | 22df56cf-0790-4034-bd54-d26d55ca6b21
+   adls_db     | adls_scheema      | ADLS      | View                 | adls_view1                                         | c2e7ddac-d41c-40c5-a7dd-acd41c80c5e9
+   adls_db     | adls_scheema      | ADLS      | View                 | adls_view4                                         | b280c564-df7e-405f-80c5-64df7ea05fc3
+```
+
+
+### 테이블에 대한 데이터 그룹 표시
+
+다음 `SHOW DATAGROUPS FOR` &#39;table_name&#39; 명령은 매개 변수를 자식으로 포함하는 연결된 모든 데이터베이스의 테이블을 반환합니다. 각 데이터베이스에 대해 테이블에는 스키마, 그룹 유형, 하위 유형, 하위 이름 및 하위 ID가 포함됩니다.
+
+```sql
+SHOW DATAGROUPS FOR 'table_name'
+```
+
+**매개 변수**
+
+- `table_name`: 연관된 데이터베이스를 찾을 테이블의 이름입니다.
+
+```console
+   Database   |      Schema       | GroupType |      ChildType       |                     ChildName                      |               ChildId
+  -------------+-------------------+-----------+----------------------+----------------------------------------------------+--------------------------------------
+   dwh_db_demo | schema2           | QSACCEL   | Data Warehouse Table | _table_demo2                                       | d270f704-0a65-4f0f-b3e6-cb535eb0c8ce
+   dwh_db_demo | schema1           | QSACCEL   | Data Warehouse Table | _table_demo2                                       | d270f704-0a65-4f0f-b3e6-cb535eb0c8ce
+   qsaccel     | profile_aggs      | QSACCEL   | Data Warehouse Table | _table_demo2                                       | d270f704-0a65-4f0f-b3e6-cb535eb0c8ce
 ```
