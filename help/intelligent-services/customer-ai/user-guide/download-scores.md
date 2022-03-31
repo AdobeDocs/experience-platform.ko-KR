@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;다운로드 점수;고객 ai;인기 항목;내보내기;내보내기;고객 ai 다운로드;고객 ai 점수
-solution: Intelligent Services, Real-time Customer Data Platform
+solution: Experience Platform, Real-time Customer Data Platform
 feature: Customer AI
 title: Customer AI에서 점수 다운로드
 topic-legacy: Downloading scores
 description: 고객 AI를 통해 Parquet 파일 형식으로 점수를 다운로드할 수 있습니다.
 exl-id: 08f05565-3fd4-4089-9c41-32467f0be751
-source-git-commit: 16120a10f8a6e3fd7d2143e9f52a822c59a4c935
+source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
 workflow-type: tm+mt
 source-wordcount: '961'
 ht-degree: 2%

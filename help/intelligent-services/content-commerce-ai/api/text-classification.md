@@ -1,11 +1,11 @@
 ---
 keywords: 텍스트 분류;텍스트 분류
-solution: Intelligent Services
+solution: Experience Platform
 title: Content and Commerce AI API의 텍스트 분류
 topic-legacy: Developer guide
 description: 텍스트 분류 서비스가 텍스트 조각에 지정된 경우 이 서비스를 하나 이상의 레이블로 분류할 수 있습니다. 분류는 단일 레이블, 다중 레이블 또는 계층적일 수 있습니다.
 exl-id: f240519a-0d83-4309-91e4-4e48be7955a1
-source-git-commit: 16120a10f8a6e3fd7d2143e9f52a822c59a4c935
+source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
 workflow-type: tm+mt
 source-wordcount: '441'
 ht-degree: 4%

@@ -1,11 +1,11 @@
 ---
 keywords: OCR;텍스트 유무;광학 문자 인식
-solution: Intelligent Services
+solution: Experience Platform
 title: 텍스트 유무 및 광학 문자 인식
 topic-legacy: Developer guide
 description: Content and Commerce AI API에서 텍스트 유무/OCR(Optical Character Recognition) 서비스는 지정된 이미지에 텍스트가 있는지 여부를 나타낼 수 있습니다. 텍스트가 있으면 OCR에서 텍스트를 반환할 수 있습니다.
 exl-id: 85b976a7-0229-43e9-b166-cdbd213b867f
-source-git-commit: 16120a10f8a6e3fd7d2143e9f52a822c59a4c935
+source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
 workflow-type: tm+mt
 source-wordcount: '525'
 ht-degree: 3%

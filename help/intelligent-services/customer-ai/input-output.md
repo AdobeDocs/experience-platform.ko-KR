@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;시작하기;고객 ai;인기 항목;고객 ai 입력;고객 ai 출력
-solution: Intelligent Services, Real-time Customer Data Platform
+solution: Experience Platform, Real-time Customer Data Platform
 feature: Customer AI
 title: 고객 AI의 입력 및 출력
 topic-legacy: Getting started
 description: Customer AI에서 활용하는 필수 이벤트, 입력 및 출력에 대해 자세히 알아보십시오.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: 16120a10f8a6e3fd7d2143e9f52a822c59a4c935
+source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
 workflow-type: tm+mt
 source-wordcount: '3054'
 ht-degree: 1%
@@ -43,7 +43,7 @@ ht-degree: 1%
 | XDM 클래스 | 모든 XDM 스키마에서는 레코드 또는 시계열로 분류할 수 있는 데이터를 설명합니다. 스키마의 데이터 동작은 처음 만들 때 스키마에 할당된 스키마 클래스에 의해 정의됩니다. XDM 클래스는 특정 데이터 동작을 나타내려면 스키마에 포함해야 하는 가장 작은 수의 속성을 설명합니다. |
 | [필드 그룹](../../xdm/schema/composition.md) | 스키마에 필드를 하나 이상 정의하는 구성 요소입니다. 필드 그룹은 해당 필드가 스키마 계층에 표시되는 방식을 적용하므로 포함된 모든 스키마에서 동일한 구조를 표시합니다. 필드 그룹은 해당 필드별로 식별되는 특정 클래스와 호환됩니다 `meta:intendedToExtend` 속성을 사용합니다. |
 | [데이터 유형](../../xdm/schema/composition.md) | 스키마에 대해 하나 이상의 필드를 제공할 수 있는 구성 요소입니다. 그러나 필드 그룹과 달리 데이터 형식은 특정 클래스에 한정되지 않습니다. 따라서 데이터 형식을 보다 유연하게 사용하여 여러 스키마에서 다시 사용할 수 있는 공통 데이터 구조를 설명하거나 다른 클래스를 사용할 수 있습니다. 이 문서에 설명된 데이터 유형은 CEE 및 Adobe Analytics 스키마에서 모두 지원됩니다. |
-| 이탈 | 구독을 취소하거나 갱신하지 않도록 선택하는 계정의 비율 측정입니다. 이탈율이 높으면 MRR(월별 반복 매출)에 부정적인 영향을 줄 수 있으며 제품 또는 서비스에 대한 불만을 나타낼 수도 있습니다. |
+| 이탈 | 구독을 취소하거나 갱신하지 않도록 선택하는 계정의 비율 측정입니다. 이탈률이 높으면 MRR(월별 반복 매출)에 부정적인 영향을 줄 수 있으며 제품 또는 서비스에 대한 불만을 나타낼 수도 있습니다. |
 | [실시간 고객 프로필](../../profile/home.md) | 실시간 고객 프로필은 타겟팅되고 개인화된 경험 관리를 위한 중앙 집중식 소비자 프로필을 제공합니다. 각 프로필에는 모든 시스템에서 집계되는 데이터와, Experience Platform에 사용하는 시스템에서 발생한 개별 이벤트와 관련된 실행 가능한 타임스탬프 계정이 포함되어 있습니다. |
 
 ## 고객 AI 입력 데이터

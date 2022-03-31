@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;시작하기;컨텐츠 ai;commerce ai;콘텐츠 및 상거래 ai;색상 추출;색상 추출
-solution: Intelligent Services
+solution: Experience Platform
 title: 콘텐츠 및 Commerce AI API의 색상 추출
 topic-legacy: Developer guide
 description: 색상 추출 서비스에서는 이미지가 지정된 경우 픽셀 색상의 히스토그램을 계산하고 우세한 색상으로 버킷으로 정렬할 수 있습니다.
 exl-id: 6b3b6314-cb67-404f-888c-4832d041f5ed
-source-git-commit: 16120a10f8a6e3fd7d2143e9f52a822c59a4c935
+source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
 workflow-type: tm+mt
 source-wordcount: '712'
 ht-degree: 2%

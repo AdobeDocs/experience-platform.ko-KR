@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;시작하기;컨텐츠 ai;commerce ai;콘텐츠 및 상거래 ai;키워드 추출;키워드 추출
-solution: Intelligent Services
+solution: Experience Platform
 title: 콘텐츠 및 Commerce AI API의 키워드 추출
 topic-legacy: Developer guide
 description: 키워드 추출 서비스는 텍스트 문서가 지정된 경우 문서의 주제를 가장 잘 설명하는 키워드 또는 키워드 구문을 자동으로 추출합니다. 키워드를 추출하기 위해 명명된 엔터티 인식(NER) 및 비감독 키워드 추출 알고리즘의 조합이 사용됩니다.
 exl-id: 56a2da96-5056-4702-9110-a1dfec56f0dc
-source-git-commit: 16120a10f8a6e3fd7d2143e9f52a822c59a4c935
+source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
 workflow-type: tm+mt
 source-wordcount: '1082'
 ht-degree: 3%

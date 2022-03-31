@@ -4,8 +4,8 @@ user-guide-title: Adobe Experience Platform Data Science Workspace 도움말
 breadcrumb-title: Data Science Workspace 안내서
 user-guide-description: 머신 러닝을 활용하여 Adobe Sensei 및 JupiterLab Notebook에서 모델과 레시피를 개발, 트레이닝 및 평가할 수 있습니다.
 feature: Data Science Workspace
-solution: Intelligent Services
-source-git-commit: 16120a10f8a6e3fd7d2143e9f52a822c59a4c935
+solution: Experience Platform
+source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
 workflow-type: tm+mt
 source-wordcount: '248'
 ht-degree: 16%

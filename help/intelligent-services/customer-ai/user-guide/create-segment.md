@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;통찰력;고객 ai;인기 항목;고객 ai 세그먼트
-solution: Intelligent Services, Real-time Customer Data Platform
+solution: Experience Platform, Real-time Customer Data Platform
 feature: Customer AI
 title: 예측된 점수를 사용하여 고객 세그먼트 만들기
 topic-legacy: Create a segment
 description: 예측 실행이 완료되면 예측된 성향 점수가 프로필에서 자동으로 사용됩니다. 고객 AI 점수로 프로필을 보강하면 고객 세그먼트를 만들어 성향 점수에 따라 대상을 찾을 수 있습니다. 이 섹션에서는 세그먼트 빌더를 사용하여 세그먼트를 만드는 단계를 제공합니다.
 exl-id: ac81f798-f599-4a8d-af25-c00c92e74b4e
-source-git-commit: 16120a10f8a6e3fd7d2143e9f52a822c59a4c935
+source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
 workflow-type: tm+mt
 source-wordcount: '318'
 ht-degree: 0%
