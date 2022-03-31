@@ -2,7 +2,8 @@
 title: Real-Time CDP B2B Edition의 관련 계정
 type: Documentation
 description: Experience Platform 실시간 CDP B2B의 관련 계정 기능에 대한 개요 및 추가 정보입니다.
-source-git-commit: 09fd6c30461a4229411ce67426fdcb247661f7cb
+exl-id: 37fd2cdb-87c0-4e5e-9599-ad4f397f7c28
+source-git-commit: 5be8eac1603f1b81e45b4c0aeace5c2017b46149
 workflow-type: tm+mt
 source-wordcount: '386'
 ht-degree: 6%
@@ -53,4 +54,4 @@ Experience Platform UI에서 탐색 중인 계정에 대한 관련 계정을 볼
 
 세그먼테이션에서 계정 및 관련 계정을 사용할 수 있습니다. 세그먼트 정의에서 관련 계정을 사용할지 여부를 결정하는 것은 마케팅 사용 사례에 따라 다릅니다. 예를 들어 이메일 마케팅 또는 광고 캠페인에 관련 계정을 사용할 수 있습니다. 이 경우 더 광범위한 도달 범위를 제공하는 대신 정확도가 낮아집니다.
 
-다음을 참조하십시오 [세분화 예](/help/rtcdp/segmentation/b2b.md#related-account) 는 관련 계정을 사용합니다.
+다음을 참조하십시오 [세분화 예](/help/rtcdp/segmentation/b2b.md#related-accounts) 는 관련 계정을 사용합니다.

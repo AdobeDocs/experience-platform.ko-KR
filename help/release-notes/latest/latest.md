@@ -2,7 +2,7 @@
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform에 대한 최신 릴리스 노트입니다.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 13e10956519199ae1872685ba6a6eff8b5d73e21
+source-git-commit: 5be8eac1603f1b81e45b4c0aeace5c2017b46149
 workflow-type: tm+mt
 source-wordcount: '1059'
 ht-degree: 5%
@@ -53,7 +53,7 @@ B2B 기업은 동일한 실제 비즈니스 업체에 대해 일부 또는 충�
 
 - [Real-Time CDP B2B Edition의 관련 계정 개요](../../rtcdp/b2b-ai-ml-services/related-accounts.md)
 - [계정 프로필 UI 안내서의 관련 계정 탭](../../rtcdp/accounts/account-profile-ui-guide.md#related-accounts-tab)
-- [세그먼트 정의에서 관련 계정을 사용하는 방법](../../rtcdp/segmentation/b2b.md#related-account)
+- [세그먼트 정의에서 관련 계정을 사용하는 방법](../../rtcdp/segmentation/b2b.md#related-accounts)
 
 실시간 CDP B2B Edition에 대한 자세한 내용은 [개요](../../rtcdp/overview.md).
 
