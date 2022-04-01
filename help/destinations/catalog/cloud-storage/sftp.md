@@ -3,9 +3,9 @@ keywords: SFTP;sftp
 title: SFTP 연결
 description: SFTP 서버에 대한 라이브 아웃바운드 연결을 만들어 Adobe Experience Platform에서 구분된 데이터 파일을 주기적으로 내보냅니다.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: 9805b984a0b19ad7e942e82f3ad927523102e772
+source-git-commit: 99bb5d1b76b926622ca21fa1df7c3cb9fabc4856
 workflow-type: tm+mt
-source-wordcount: '519'
+source-wordcount: '523'
 ht-degree: 1%
 
 ---
@@ -63,6 +63,8 @@ When [연결](../../ui/connect-destination.md) 이 대상에 대해 다음 정�
 * **[!UICONTROL 암호화 키]**: 선택적으로 RSA 형식의 공개 키를 첨부하여 내보낸 파일에 암호화를 추가할 수 있습니다. 공개 키는 [!DNL Base64] 인코딩된 문자열입니다.
    * 예: `----BEGIN PGP PUBLIC KEY BLOCK---- {Base64-encoded string} ----END PGP PUBLIC KEY BLOCK----`
 
+      ![PGP 키](../..//assets/catalog/cloud-storage/sftp/pgp-key.png)
+
 
 을(를) 선택하는 경우 **[!UICONTROL SSH 키가 있는 SFTP]** sftp 위치에 연결할 인증 유형:
 
@@ -74,6 +76,8 @@ When [연결](../../ui/connect-destination.md) 이 대상에 대해 다음 정�
 * **[!UICONTROL SSH 키]**: SFTP 저장소 위치에 로그인하는 SSH 키.
 * **[!UICONTROL 암호화 키]**: 선택적으로 RSA 형식의 공개 키를 첨부하여 내보낸 파일에 암호화를 추가할 수 있습니다. 공개 키는 [!DNL Base64] 인코딩된 문자열입니다.
    * 예: `----BEGIN PGP PUBLIC KEY BLOCK---- {Base64-encoded string} ----END PGP PUBLIC KEY BLOCK----`
+
+      ![PGP 키](../..//assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 #### 대상 세부 사항 {#destination-details}
 
