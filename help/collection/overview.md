@@ -3,10 +3,10 @@ title: Edge Network Server API
 description: Adobe Experience Platform Edge Network Server API의 정의와 사용 방법을 알아봅니다.
 seo-description: Learn what the Adobe Experience Platform Edge Network Server API is and how you can use it.
 keywords: 데이터 수집;수집;Adobe Experience Platform Edge Network;서버 api;
-source-git-commit: 92b3a7bff576f72edc8628a850a2cdb9b43cb1c4
+source-git-commit: 4145e22519c1df2d5c010e563b81642a6f647cdc
 workflow-type: tm+mt
-source-wordcount: '287'
-ht-degree: 1%
+source-wordcount: '273'
+ht-degree: 0%
 
 ---
 
@@ -31,7 +31,7 @@ Adobe Experience Platform Edge Network는 고객이 모든 Adobe Experience Clou
 1. 대화형 종단점은 고급 세그멘테이션, 개인화 및 기타 마케팅 사용 사례를 지원하는 Adobe Experience Platform 및 Adobe Experience Cloud 서비스와의 통신을 지원합니다.
 2. 배치 종단점을 사용하면 호출되는 응용 프로그램에서 응답을 받지 않고 데이터를 온보딩해야 할 때 요청을 일괄적으로 보낼 수 있습니다.
 
-다음 [!DNL Server API] 는 다음 유형의 요청을 지원합니다. 다음 [!DNL Server API] 를 통해 인증된 요청 지원 [Adobe I/O](https://developer.adobe.com/), 새 `server.adobedc.net` 엔드포인트.
+다음 [!DNL Server API] 는 다음 유형의 요청을 지원합니다.
 
 * 를 통해 인증된 요청 [Adobe I/O](https://developer.adobe.com/), 새 `server.adobedc.net` 엔드포인트.
 * 를 통해 인증되지 않은 요청 `edge.adobedc.net` 엔드포인트.
