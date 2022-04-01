@@ -3,9 +3,9 @@ keywords: SFTP;sftp
 title: SFTP 연결
 description: SFTP 서버에 대한 라이브 아웃바운드 연결을 만들어 Adobe Experience Platform에서 구분된 데이터 파일을 주기적으로 내보냅니다.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: fa393b2bd8085a17653962b5a8b112a5db10df83
+source-git-commit: 9805b984a0b19ad7e942e82f3ad927523102e772
 workflow-type: tm+mt
-source-wordcount: '517'
+source-wordcount: '519'
 ht-degree: 1%
 
 ---
@@ -55,29 +55,31 @@ When [연결](../../ui/connect-destination.md) 이 대상에 대해 다음 정�
 
 을(를) 선택하는 경우 **[!UICONTROL 기본 인증]** sftp 위치에 연결할 유형:
 
-![SFTP 대상 기본 인증](/help/destinations/assets/catalog/cloud-storage/sftp/stfp-basic-authentication.png)
+![SFTP 대상 기본 인증](../..//assets/catalog/cloud-storage/sftp/stfp-basic-authentication.png)
 
 * **[!UICONTROL 호스트]**: SFTP 저장소 위치의 주소입니다.
 * **[!UICONTROL 사용자 이름]**: SFTP 저장소 위치에 로그인할 사용자 이름;
 * **[!UICONTROL 암호]**: SFTP 저장소 위치에 로그인하는 암호입니다.
 * **[!UICONTROL 암호화 키]**: 선택적으로 RSA 형식의 공개 키를 첨부하여 내보낸 파일에 암호화를 추가할 수 있습니다. 공개 키는 [!DNL Base64] 인코딩된 문자열입니다.
+   * 예: `----BEGIN PGP PUBLIC KEY BLOCK---- {Base64-encoded string} ----END PGP PUBLIC KEY BLOCK----`
 
 
 을(를) 선택하는 경우 **[!UICONTROL SSH 키가 있는 SFTP]** sftp 위치에 연결할 인증 유형:
 
-![SFTP 대상 SSH 키 인증](/help/destinations/assets/catalog/cloud-storage/sftp/sftp-ssh-key-authentication.png)
+![SFTP 대상 SSH 키 인증](../../assets/catalog/cloud-storage/sftp/sftp-ssh-key-authentication.png)
 
 * **[!UICONTROL 도메인]**: SFTP 계정의 IP 주소 또는 도메인 이름을 입력합니다
 * **[!UICONTROL 포트]**: SFTP 저장소 위치에서 사용되는 포트입니다.
 * **[!UICONTROL 사용자 이름]**: SFTP 저장소 위치에 로그인할 사용자 이름;
 * **[!UICONTROL SSH 키]**: SFTP 저장소 위치에 로그인하는 SSH 키.
 * **[!UICONTROL 암호화 키]**: 선택적으로 RSA 형식의 공개 키를 첨부하여 내보낸 파일에 암호화를 추가할 수 있습니다. 공개 키는 [!DNL Base64] 인코딩된 문자열입니다.
+   * 예: `----BEGIN PGP PUBLIC KEY BLOCK---- {Base64-encoded string} ----END PGP PUBLIC KEY BLOCK----`
 
 #### 대상 세부 사항 {#destination-details}
 
 SFTP 위치에 인증 연결을 설정한 후 대상에 대해 다음 정보를 제공합니다.
 
-![SFTP 대상에 사용할 수 있는 대상 세부 사항](/help/destinations/assets/catalog/cloud-storage/sftp/sftp-destination-details.png)
+![SFTP 대상에 사용할 수 있는 대상 세부 사항](../../assets/catalog/cloud-storage/sftp/sftp-destination-details.png)
 
 * **[!UICONTROL 이름]**: Experience Platform 사용자 인터페이스에서 이 대상을 식별하는 데 도움이 되는 이름을 입력합니다.
 * **[!UICONTROL 설명]**: 이 대상에 대한 설명을 입력합니다.
