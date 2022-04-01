@@ -2,7 +2,7 @@
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform에 대한 최신 릴리스 노트입니다.
 exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
-source-git-commit: b378a920380030d51956a0910271f1b1f9f4c371
+source-git-commit: 8d0f39dff6b047d21d4dff17005405fc83941961
 workflow-type: tm+mt
 source-wordcount: '1158'
 ht-degree: 5%
@@ -94,18 +94,6 @@ Adobe Experience Platform은 여러 기능을 제공합니다 [!DNL dashboards] 
 
 프로필 대시보드에 대한 자세한 내용은 [프로필 대시보드 개요](../../dashboards/guides/profiles.md).
 
-## 데이터 수집 {#data-collection}
-
-Platform은 클라이언트측 고객 경험 데이터를 수집하고 Adobe Experience Platform Edge Network로 전송하여 Adobe 또는 비Adobe 대상으로 보강, 변환 및 배포할 수 있는 기술 세트를 제공합니다.
-
-**새로운 기능**
-
-| 기능 | 설명 |
-| --- | --- |
-| 글로벌 데이터 스트림 설정 | 이제 데이터 스트림을 구성할 때 몇 가지 새로운 전역 설정을 구성할 수 있습니다. 지리적 위치, 자사 ID 쿠키 및 타사 ID 동기화. 의 섹션을 참조하십시오. [데이터 스트림 구성](../../edge/fundamentals/datastreams.md#configure) 자세한 내용은 데이터 스트림 UI 안내서를 참조하십시오. |
-
-Platform의 데이터 수집에 대한 자세한 내용은 [데이터 수집 개요](../../collection/home.md).
-
 ### 대상 대시보드
 
 대상 대시보드는 Experience Platform 내에서 조직에서 활성화한 대상의 스냅숏을 표시합니다.
@@ -119,6 +107,18 @@ Platform의 데이터 수집에 대한 자세한 내용은 [데이터 수집 개
 {style=&quot;table-layout:auto&quot;}
 
 Platform의 대상 대시보드에 대한 자세한 내용은 [대상 대시보드 개요](../../dashboards/guides/destinations.md).
+
+## 데이터 수집 {#data-collection}
+
+Platform은 클라이언트측 고객 경험 데이터를 수집하고 Adobe Experience Platform Edge Network로 전송하여 Adobe 또는 비Adobe 대상으로 보강, 변환 및 배포할 수 있는 기술 세트를 제공합니다.
+
+**새로운 기능**
+
+| 기능 | 설명 |
+| --- | --- |
+| 글로벌 데이터 스트림 설정 | 이제 데이터 스트림을 구성할 때 몇 가지 새로운 전역 설정을 구성할 수 있습니다. 지리적 위치, 자사 ID 쿠키 및 타사 ID 동기화. 의 섹션을 참조하십시오. [데이터 스트림 구성](../../edge/fundamentals/datastreams.md#configure) 자세한 내용은 데이터 스트림 UI 안내서를 참조하십시오. |
+
+Platform의 데이터 수집에 대한 자세한 내용은 [데이터 수집 개요](../../collection/home.md).
 
 <!-- ## Experience Data Model (XDM) {#xdm}
 
