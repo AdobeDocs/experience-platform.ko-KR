@@ -5,7 +5,7 @@ user-guide-title: Adobe Experience Platform Edge Network Server API 도움말
 breadcrumb-title: Adobe Experience Platform Edge Network Server API 안내서
 user-guide-description: 'Edge Network Server API를 통해 Experience Cloud 서비스와 상호 작용 '
 feature: Data Collection
-source-git-commit: a8a6681e878932c03ed9a2e59527e2adc565a28e
+source-git-commit: 8ea9877fd7dc00b4f5e7b1c974bb3743ce4e1356
 workflow-type: tm+mt
 source-wordcount: '67'
 ht-degree: 7%
@@ -13,9 +13,9 @@ ht-degree: 7%
 ---
 
 
-# Edge Network Server API {#server-api}
+# Edge Network Server API {#edge-network-server-api}
 
-* Edge Network Server API {#server-api}
+* Edge Network Server API {#edge-network-server-api}
    * [개요](overview.md)
    * [인증](authentication.md)
    * 데이터 수집 {#server-api-data-collection}
