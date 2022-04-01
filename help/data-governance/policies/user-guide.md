@@ -5,9 +5,9 @@ title: UI에서 데이터 사용 정책 관리
 topic-legacy: policies
 description: Adobe Experience Platform 데이터 거버넌스는 데이터 사용 정책을 만들고 관리할 수 있는 사용자 인터페이스를 제공합니다. 이 문서에서는 Experience Platform 사용자 인터페이스의 정책 작업 영역에서 수행할 수 있는 작업에 대한 개요를 제공합니다.
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: 8feb9fbdead75ca7b9ed7e5dcd3a0aab6f328ad5
 workflow-type: tm+mt
-source-wordcount: '776'
+source-wordcount: '1295'
 ht-degree: 0%
 
 ---
@@ -24,14 +24,18 @@ Adobe Experience Platform 데이터 거버넌스는 데이터 사용 정책을 �
 
 이 안내서에서는 다음을 이해하기 위해 작업해야 합니다 [!DNL Experience Platform] 개념:
 
-- [데이터 거버넌스](../home.md)
-- [데이터 사용 정책](./overview.md)
+* [데이터 거버넌스](../home.md)
+* [데이터 사용 정책](./overview.md)
 
 ## 기존 정책 보기 {#view-policies}
 
 에서 [!DNL Experience Platform] UI, 선택 **[!UICONTROL 정책]** 열다 **[!UICONTROL 정책]** 작업 공간. 에서 **[!UICONTROL 찾아보기]** 탭에서는 관련 레이블, 마케팅 작업 및 상태 등 사용 가능한 정책 목록을 볼 수 있습니다.
 
 ![](../images/policies/browse-policies.png)
+
+동의 정책(현재 베타 버전)에 액세스할 수 있는 경우 **[!UICONTROL 동의 정책]** 에서 보려는 전환 [!UICONTROL 찾아보기] 탭.
+
+![](../images/policies/consent-policy-toggle.png)
 
 나열된 정책을 선택하여 설명 및 유형을 확인합니다. 사용자 지정 정책을 선택하면 편집, 삭제 또는 삭제할 추가 컨트롤이 표시됩니다 [정책 활성화/비활성화](#enable).
 
@@ -42,6 +46,14 @@ Adobe Experience Platform 데이터 거버넌스는 데이터 사용 정책을 �
 새 사용자 지정 데이터 사용 정책을 만들려면 **[!UICONTROL 정책 만들기]** 의 오른쪽 상단 모서리에서 **[!UICONTROL 찾아보기]** 탭에서 다음을 수행합니다. **[!UICONTROL 정책]** 작업 공간.
 
 ![](../images/policies/create-policy-button.png)
+
+동의 정책을 위해 베타 버전에 포함되는지 여부에 따라 다음 중 하나가 발생합니다.
+
+* 베타에 속하지 않으면에 대해 즉시 워크플로우로 이동합니다 [데이터 거버넌스 정책 만들기](#create-governance-policy).
+* 베타 버전인 경우 대화 상자에서 다음과 같은 추가 옵션을 제공합니다 [동의 정책 만들기](#consent-policy).
+   ![](../images/policies/choose-policy-type.png)
+
+### 데이터 거버넌스 정책 만들기 {#create-governance-policy}
 
 다음 **[!UICONTROL 정책 만들기]** 워크플로우가 나타납니다. 먼저 새 정책의 이름과 설명을 입력합니다.
 
@@ -67,9 +79,62 @@ Adobe Experience Platform 데이터 거버넌스는 데이터 사용 정책을 �
 
 ![](../images/policies/created-policy.png)
 
+### 동의 정책 만들기(베타) {#consent-policy}
+
+>[!IMPORTANT]
+>
+>동의 정책은 현재 베타 버전이며 조직에서 아직 액세스할 수 없을 수 있습니다.
+
+동의 정책을 만들도록 선택한 경우 새 정책을 구성할 수 있는 새 화면이 나타납니다.
+
+![](../images/policies/consent-policy-dialog.png)
+
+동의 정책을 사용하려면 프로필 데이터에 동의 속성이 있어야 합니다. 다음 안내서를 참조하십시오. [Experience Platform의 동의 처리](../../landing/governance-privacy-security/consent/adobe/overview.md) 를 참조하십시오.
+
+동의 정책은 두 개의 논리 구성 요소로 구성됩니다.
+
+* **[!UICONTROL If]**: 정책 확인을 트리거할 조건입니다. 이는 수행되는 특정 마케팅 작업, 특정 데이터 사용 레이블 존재 여부 또는 두 가지 조합을 기반으로 할 수 있습니다.
+* **[!UICONTROL Then]**: 정책을 트리거한 작업에 프로필을 포함하기 위해 존재해야 하는 동의 속성입니다.
+
+#### 조건 구성
+
+아래에 **[!UICONTROL If]** 섹션에서 이 정책을 트리거해야 하는 마케팅 작업 및/또는 데이터 사용 레이블을 선택합니다. 선택 **[!UICONTROL 모두 보기]** 및 **[!UICONTROL 레이블 선택]** 사용 가능한 마케팅 작업 및 레이블의 전체 목록을 각각 보려면
+
+조건을 한 개 이상 추가하면 **[!UICONTROL 조건 추가]** 필요에 따라 추가 조건을 계속 추가하려면 드롭다운에서 해당 조건 유형을 선택합니다.
+
+![](../images/policies/add-condition.png)
+
+두 개 이상의 조건을 선택하는 경우 두 조건 사이에 표시되는 아이콘을 사용하여 &quot;AND&quot;와 &quot;OR&quot; 사이의 조건부 관계를 전환할 수 있습니다.
+
+![](../images/policies/and-or-selection.png)
+
+#### 동의 속성 선택
+
+아래에 **[!UICONTROL Then]** 섹션에서 결합 스키마에서 하나 이상의 동의 속성을 선택합니다. 이 정책이 제어하는 작업에 프로필을 포함하려면 이 특성이 있어야 합니다. 목록에서 제공된 옵션 중 하나를 선택하거나 을(를) 선택할 수 있습니다 **[!UICONTROL 모두 보기]** 를 눌러 결합 스키마에서 직접 속성을 선택합니다.
+
+동의 속성을 선택할 때 이 정책을 확인할 속성 값을 선택합니다.
+
+![](../images/policies/select-schema-field.png)
+
+하나 이상의 동의 속성을 선택한 후에는 **[!UICONTROL 정책 속성]** 패널 업데이트: 전체 프로필 저장소의 백분율을 포함하여 이 정책에 따라 허용되는 예상 프로필 수를 표시합니다. 이 추정은 정책 구성을 조정할 때 자동으로 업데이트됩니다.
+
+![](../images/policies/audience-preview.png)
+
+정책에 동의 속성을 추가하려면 **[!UICONTROL 결과 추가]**.
+
+![](../images/policies/add-result.png)
+
+필요에 따라 정책에 조건 및 동의 속성을 계속 추가하고 조정할 수 있습니다. 구성에 만족하면 선택하기 전에 정책에 대한 이름과 선택적 설명을 제공합니다 **[!UICONTROL 저장]**.
+
+![](../images/policies/name-and-save.png)
+
+이제 동의 정책이 생성되고 상태는 [!UICONTROL 비활성화됨] 기본적으로 제공됩니다. 정책을 바로 사용하려면 **[!UICONTROL 상태]** 오른쪽 레일에서 전환합니다.
+
+![](../images/policies/enable-consent-policy.png)
+
 ## 정책 활성화 또는 비활성화 {#enable}
 
-모든 데이터 사용 정책(Adobe에서 제공하는 핵심 정책 포함)은 기본적으로 비활성화됩니다. 개별 정책을 적용하려면 API 또는 UI를 통해 해당 정책을 수동으로 활성화해야 합니다.
+모든 데이터 사용 정책(Adobe에서 제공하는 핵심 정책 포함)은 기본적으로 비활성화됩니다. 개별 정책이 적용을 위해 고려되도록 하려면 API 또는 UI를 통해 해당 정책을 수동으로 활성화해야 합니다.
 
 에서 정책을 활성화하거나 비활성화할 수 있습니다 **[!UICONTROL 찾아보기]** 탭에서 다음을 수행합니다. **[!UICONTROL 정책]** 작업 공간. 목록에서 사용자 지정 정책을 선택하여 오른쪽에 해당 세부 사항을 표시합니다. 아래 **[!UICONTROL 상태]**&#x200B;을(를) 선택하고 전환 버튼을 선택하여 정책을 활성화하거나 비활성화합니다.
 

@@ -5,9 +5,9 @@ title: 자동 정책 적용
 topic-legacy: guide
 description: 이 문서에서는 Experience Platform의 대상에 세그먼트를 활성화할 때 데이터 사용 정책이 자동으로 적용되는 방식을 다룹니다.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: 63705bdcf102ff01b4d67ce5955d8e23b32dbfe6
 workflow-type: tm+mt
-source-wordcount: '1231'
+source-wordcount: '1232'
 ht-degree: 0%
 
 ---
@@ -31,10 +31,11 @@ ht-degree: 0%
 
 ![](../images/enforcement/enforcement-flow.png)
 
-세그먼트가 처음 활성화되면, [!DNL Policy Service] 다음 요소를 기반으로 정책 위반을 확인합니다.
+세그먼트가 처음 활성화되면, [!DNL Policy Service] 다음 요소를 기반으로 적용 가능한 정책을 확인합니다.
 
 * 활성화할 세그먼트 내의 필드 및 데이터 세트에 적용된 데이터 사용 레이블입니다.
 * 대상의 마케팅 목적입니다.
+<!-- * (Beta) The profiles that have consented to be included in the segment activation, based on your configured consent policies. -->
 
 >[!NOTE]
 >
@@ -62,9 +63,10 @@ Experience Platform에서 정책집행은 다음과 같은 계보를 염려한�
 | 데이터 계보 단계 | 정책 집행에서의 역할 |
 | --- | --- |
 | 데이터 세트 | 데이터 세트에는 전체 데이터 세트 또는 특정 필드에 사용할 수 있는 사용 사례를 정의하는 데이터 사용 레이블(데이터 세트 또는 필드 수준에서 적용됨)이 포함되어 있습니다. 정책이 제한하는 용도로 특정 레이블이 포함된 데이터 세트 또는 필드를 사용하는 경우 정책 위반이 발생합니다. |
-| 병합 정책 | 병합 정책은 플랫폼이 여러 데이터 세트의 조각을 병합할 때 데이터에 우선 순위가 지정되는 방식을 결정하는 데 사용하는 규칙입니다. 레이블이 제한된 데이터 세트가 대상으로 활성화되도록 병합 정책이 구성된 경우 정책 위반이 발생합니다. 자세한 내용은 [정책 병합 개요](../../profile/merge-policies/overview.md) 추가 정보. |
-| 세그먼트 | 세그먼트 규칙은 고객 프로필에서 포함해야 하는 속성을 정의합니다. 세그먼트 정의에 포함되는 필드에 따라 세그먼트는 해당 필드에 대해 적용된 사용 레이블을 상속합니다. 마케팅 사용 사례를 기반으로 대상 대상의 적용 가능한 정책에 의해 상속된 레이블이 제한된 세그먼트를 활성화하는 경우 정책 위반이 발생합니다. |
-| 대상 | 대상을 설정할 때 마케팅 작업(경우에 따라 마케팅 사용 사례라고 함)을 정의할 수 있습니다. 이 사용 사례는 데이터 사용 정책에 정의된 마케팅 작업과 관련이 있습니다. 즉, 대상에 대해 정의하는 마케팅 사용 사례는 해당 대상에 적용할 수 있는 데이터 사용 정책을 결정합니다. 대상 대상의 적용 가능한 정책에 의해 사용 레이블이 제한된 세그먼트를 활성화하는 경우 정책 위반이 발생합니다. |
+<!-- | Dataset | Datasets contain data usage labels (applied at the dataset or field level) that define which use cases the entire dataset or specific fields can be used for. Policy violations will occur if a dataset or field containing certain labels is used for a purpose that a policy restricts.<br><br>Any consent attributes collected from your customers are also stored in datasets. If you have access to [consent policies](../policies/user-guide.md#consent-policy) (currently in beta), any profiles that do not meet the consent attribute requirements of your policies will be excluded from segments that are activated to a destination. | -->
+| 병합 정책 | 병합 정책 은 Platform이 여러 데이터 세트의 조각을 병합할 때 데이터에 우선 순위가 지정되는 방식을 결정하는 데 사용하는 규칙입니다. 레이블이 제한된 데이터 세트가 대상으로 활성화되도록 병합 정책이 구성된 경우 정책 위반이 발생합니다. 자세한 내용은 [정책 병합 개요](../../profile/merge-policies/overview.md) 추가 정보. | | 세그먼트 | 세그먼트 규칙은 고객 프로필에서 포함해야 하는 속성을 정의합니다. 세그먼트 정의에 포함되는 필드에 따라 세그먼트는 해당 필드에 대해 적용된 사용 레이블을 상속합니다. 마케팅 사용 사례를 기반으로 대상 대상의 적용 가능한 정책에 의해 상속된 레이블이 제한된 세그먼트를 활성화하는 경우 정책 위반이 발생합니다. |
+<!-- | Segment | Segment rules define which attributes should be included from customer profiles. Depending on which fields a segment definition includes, the segment will inherit any applied usage labels for those fields. Policy violations will occur if you activate a segment whose inherited labels are restricted by the target destination's applicable policies, based on its marketing use case. | -->
+| 대상 | 대상을 설정할 때 마케팅 작업(경우에 따라 마케팅 사용 사례라고 함)을 정의할 수 있습니다. 이 사용 사례는 정책에 정의된 마케팅 작업과 관련이 있습니다. 즉, 대상에 대해 정의하는 마케팅 사용 사례는 해당 대상에 적용할 수 있는 데이터 사용 정책 및 동의 정책을 결정합니다. 대상 대상의 적용 가능한 정책에 의해 사용 레이블이 제한된 세그먼트를 활성화하는 경우 정책 위반이 발생합니다. |
 
 >[!IMPORTANT]
 >
@@ -75,6 +77,14 @@ Experience Platform에서 정책집행은 다음과 같은 계보를 염려한�
 정책 위반이 발생하면 UI에 표시되는 결과 메시지는 위반의 기여 데이터 계열을 탐색하여 문제를 해결하는 데 유용한 도구를 제공합니다. 자세한 내용은 다음 섹션에서 제공됩니다.
 
 ## 정책 위반 메시지 {#enforcement}
+
+<!-- (TO INCLUDE FOR PHASE 2)
+The sections below outline the different policy enforcement messages that appear in the Platform UI:
+
+* [Data usage policy violation](#data-usage-violation)
+* [Consent policy evaluation](#consent-policy-evaluation)
+
+### Data usage policy violation {#data-usage-violation} -->
 
 세그먼트를 활성화하려고 할 때 정책 위반이 발생하면 [이미 활성화된 세그먼트를 편집하는 중](#policy-enforcement-for-activated-segments)) 작업을 수행할 수 없으며 하나 이상의 정책이 위반되었음을 나타내는 팝업 창이 나타납니다. 위반이 트리거되면 **[!UICONTROL 저장]** 데이터 사용 정책을 준수하도록 해당 구성 요소가 업데이트될 때까지 수정하는 엔티티에 대해 버튼이 비활성화됩니다.
 
@@ -97,6 +107,20 @@ Experience Platform에서 정책집행은 다음과 같은 계보를 염려한�
 선택 **[!UICONTROL 목록 보기]** 데이터 계열을 목록으로 표시합니다. 다시 시각적 그래프로 전환하려면 **[!UICONTROL 경로 보기]**.
 
 ![](../images/enforcement/list-view.png)
+
+<!-- (TO INCLUDE FOR PHASE 2)
+### Consent policy evaluation (Beta) {#consent-policy-evaluation}
+
+>[!IMPORTANT]
+>
+>Consent policies are currently in beta and your organization may not have access to them yet.
+
+If you have [created consent policies](../policies/user-guide.md#consent-policy) and are activating a segment to a destination, you can see how your consent policies will affect the percentage of profiles that will be included in the activation.
+
+Once you reach at the **[!UICONTROL Review]** step in the [activation workflow](../../destinations/ui/activation-overview.md), select **[!UICONTROL View applied policies]**.
+
+A policy check dialog appears, showing you a preview of how your consent policies affect the addressable audience of the activated segment.
+ -->
 
 ## 활성화된 세그먼트에 대한 정책 적용 {#policy-enforcement-for-activated-segments}
 
