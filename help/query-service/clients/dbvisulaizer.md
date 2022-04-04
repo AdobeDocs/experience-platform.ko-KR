@@ -4,20 +4,20 @@ solution: Experience Platform
 title: DbVisualizer를 Query Service에 연결
 topic-legacy: connect
 description: 이 문서에서는 DbVisualizer와 Adobe Experience Platform Query Service를 연결하는 단계를 설명합니다.
-source-git-commit: e9653341756a2067e27ca0d0658c54fc93db7505
+source-git-commit: 69e105b2c52a668ba708847795d4c92813aad0db
 workflow-type: tm+mt
-source-wordcount: '699'
-ht-degree: 1%
+source-wordcount: '701'
+ht-degree: 0%
 
 ---
 
 # Connect [!DNL DbVisualizer] to [!DNL Query Service] {#connect-dbvisualizer}
 
-이 문서에서는 연결 단계를 설명합니다 [!DNL DbVisualizer] Adobe Experience Platform을 사용한 데스크탑 [!DNL Query Service].
+이 문서에서는 [!DNL DbVisualizer] Adobe Experience Platform을 사용한 데이터베이스 도구 [!DNL Query Service].
 
 ## 시작하기
 
-이 안내서에서는 이미 [!DNL DbVisualizer] 데스크탑 앱과 는 인터페이스를 탐색하는 방법을 잘 알고 있습니다. 를 다운로드하려면 [!DNL DbVisualizer] 데스크탑 앱 또는 자세한 내용은 [공식 [!DNL DbVisualizer] 설명서](https://www.dbvis.com/download/).
+이 안내서에서는 이미 [!DNL DbVisualizer] 데스크탑 앱과 는 인터페이스를 탐색하는 방법을 잘 알고 있습니다. 를 다운로드하려면 [!DNL DbVisualizer] 자세한 내용은 데스크탑 앱 또는 [공식 [!DNL DbVisualizer] 설명서](https://www.dbvis.com/download/).
 
 >[!NOTE]
 >
@@ -94,4 +94,4 @@ ht-degree: 1%
 
 ## 다음 단계
 
-이제 연결해서 [!DNL DbVisualizer] with [!DNL Query Service], 다음 사용 가능 [!DNL DbVisualizer] 쿼리를 작성하려면 다음을 수행하십시오. 쿼리를 작성하고 실행하는 방법에 대한 자세한 내용은 쿼리 실행에 대한 안내서를 참조하십시오.
+이제 연결해서 [!DNL DbVisualizer] with [!DNL Query Service], 다음 사용 가능 [!DNL DbVisualizer] 쿼리를 작성하려면 다음을 수행하십시오. 쿼리를 작성하고 실행하는 방법에 대한 자세한 내용은 [쿼리 실행 안내서](../best-practices/writing-queries.md).
