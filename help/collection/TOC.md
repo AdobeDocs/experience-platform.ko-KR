@@ -1,11 +1,11 @@
 ---
 audience: user
-solution: Data Collection, Experience Platform
+solution: Data Collection
 user-guide-title: Adobe Experience Platform 데이터 수집
 breadcrumb-title: 데이터 수집 안내서
 user-guide-description: Adobe Experience Platform Edge Network에 대한 클라이언트측 데이터 수집을 활성화합니다.
 feature: Data Collection
-source-git-commit: 4e827ef689b85310cc7d774c94c355a831417e03
+source-git-commit: ff612f7ef466276757095a3a9a724781eeb6a089
 workflow-type: tm+mt
 source-wordcount: '38'
 ht-degree: 68%
