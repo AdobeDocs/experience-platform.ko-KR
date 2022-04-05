@@ -5,7 +5,7 @@ title: 자동 정책 적용
 topic-legacy: guide
 description: 이 문서에서는 Experience Platform의 대상에 세그먼트를 활성화할 때 데이터 사용 정책이 자동으로 적용되는 방식을 다룹니다.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: 63705bdcf102ff01b4d67ce5955d8e23b32dbfe6
+source-git-commit: ca35b1780db00ad98c2a364d45f28772c27a4bc3
 workflow-type: tm+mt
 source-wordcount: '1232'
 ht-degree: 0%
@@ -63,10 +63,11 @@ Experience Platform에서 정책집행은 다음과 같은 계보를 염려한�
 | 데이터 계보 단계 | 정책 집행에서의 역할 |
 | --- | --- |
 | 데이터 세트 | 데이터 세트에는 전체 데이터 세트 또는 특정 필드에 사용할 수 있는 사용 사례를 정의하는 데이터 사용 레이블(데이터 세트 또는 필드 수준에서 적용됨)이 포함되어 있습니다. 정책이 제한하는 용도로 특정 레이블이 포함된 데이터 세트 또는 필드를 사용하는 경우 정책 위반이 발생합니다. |
-<!-- | Dataset | Datasets contain data usage labels (applied at the dataset or field level) that define which use cases the entire dataset or specific fields can be used for. Policy violations will occur if a dataset or field containing certain labels is used for a purpose that a policy restricts.<br><br>Any consent attributes collected from your customers are also stored in datasets. If you have access to [consent policies](../policies/user-guide.md#consent-policy) (currently in beta), any profiles that do not meet the consent attribute requirements of your policies will be excluded from segments that are activated to a destination. | -->
-| 병합 정책 | 병합 정책 은 Platform이 여러 데이터 세트의 조각을 병합할 때 데이터에 우선 순위가 지정되는 방식을 결정하는 데 사용하는 규칙입니다. 레이블이 제한된 데이터 세트가 대상으로 활성화되도록 병합 정책이 구성된 경우 정책 위반이 발생합니다. 자세한 내용은 [정책 병합 개요](../../profile/merge-policies/overview.md) 추가 정보. | | 세그먼트 | 세그먼트 규칙은 고객 프로필에서 포함해야 하는 속성을 정의합니다. 세그먼트 정의에 포함되는 필드에 따라 세그먼트는 해당 필드에 대해 적용된 사용 레이블을 상속합니다. 마케팅 사용 사례를 기반으로 대상 대상의 적용 가능한 정책에 의해 상속된 레이블이 제한된 세그먼트를 활성화하는 경우 정책 위반이 발생합니다. |
-<!-- | Segment | Segment rules define which attributes should be included from customer profiles. Depending on which fields a segment definition includes, the segment will inherit any applied usage labels for those fields. Policy violations will occur if you activate a segment whose inherited labels are restricted by the target destination's applicable policies, based on its marketing use case. | -->
+| 병합 정책 | 병합 정책은 플랫폼이 여러 데이터 세트의 조각을 병합할 때 데이터에 우선 순위가 지정되는 방식을 결정하는 데 사용하는 규칙입니다. 레이블이 제한된 데이터 세트가 대상으로 활성화되도록 병합 정책이 구성된 경우 정책 위반이 발생합니다. 자세한 내용은 [정책 병합 개요](../../profile/merge-policies/overview.md) 추가 정보. |
+| 세그먼트 | 세그먼트 규칙은 고객 프로필에서 포함해야 하는 속성을 정의합니다. 세그먼트 정의에 포함되는 필드에 따라 세그먼트는 해당 필드에 대해 적용된 사용 레이블을 상속합니다. 마케팅 사용 사례를 기반으로 대상 대상의 적용 가능한 정책에 의해 상속된 레이블이 제한된 세그먼트를 활성화하는 경우 정책 위반이 발생합니다. |
 | 대상 | 대상을 설정할 때 마케팅 작업(경우에 따라 마케팅 사용 사례라고 함)을 정의할 수 있습니다. 이 사용 사례는 정책에 정의된 마케팅 작업과 관련이 있습니다. 즉, 대상에 대해 정의하는 마케팅 사용 사례는 해당 대상에 적용할 수 있는 데이터 사용 정책 및 동의 정책을 결정합니다. 대상 대상의 적용 가능한 정책에 의해 사용 레이블이 제한된 세그먼트를 활성화하는 경우 정책 위반이 발생합니다. |
+<!-- | Dataset | Datasets contain data usage labels (applied at the dataset or field level) that define which use cases the entire dataset or specific fields can be used for. Policy violations will occur if a dataset or field containing certain labels is used for a purpose that a policy restricts.<br><br>Any consent attributes collected from your customers are also stored in datasets. If you have access to [consent policies](../policies/user-guide.md#consent-policy) (currently in beta), any profiles that do not meet the consent attribute requirements of your policies will be excluded from segments that are activated to a destination. | -->
+<!-- | Segment | Segment rules define which attributes should be included from customer profiles. Depending on which fields a segment definition includes, the segment will inherit any applied usage labels for those fields. Policy violations will occur if you activate a segment whose inherited labels are restricted by the target destination's applicable policies, based on its marketing use case. | -->
 
 >[!IMPORTANT]
 >
