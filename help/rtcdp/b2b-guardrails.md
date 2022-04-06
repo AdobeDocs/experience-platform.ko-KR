@@ -2,14 +2,14 @@
 keywords: 프로필;실시간 고객 프로필;문제 해결;보호;지침;제한;엔티티;기본 엔티티;차원 엔티티;RTCDP;CDP;B2B Edition;Real-time Customer Data Platform;실시간 고객 데이터 플랫폼;실시간 cdp;b2b;cdp;
 title: Real-time Customer Data Platform B2B Edition의 기본 보호 기능
 type: Documentation
-description: 'Adobe Experience Platform에서는 기존의 관계형 데이터 모델과 다른 고도로 비정규화된 하이브리드 데이터 모델을 사용합니다. 이 문서에서는 Real-time Customer Data Platform B2B Edition을 사용하여 최적의 시스템 성능을 위해 데이터를 모델링하는 데 도움이 되는 기본 사용 및 비율 제한을 제공합니다. '
-source-git-commit: 7b9b01657ab2a682b900a8c55a201f9864e4428b
+description: Adobe Experience Platform은 기존의 관계형 데이터 모델과 다른 고도로 비정규화된 하이브리드 데이터 모델을 사용합니다. 이 문서에서는 Real-time Customer Data Platform B2B Edition을 사용하여 최적의 시스템 성능을 위해 데이터를 모델링하는 데 도움이 되는 기본 사용 및 비율 제한을 제공합니다.
+exl-id: 8eff8c3f-a250-4aec-92a1-719ce4281272
+source-git-commit: 9f00bff31f9e7d2da1294d3d1f24cba7870a4614
 workflow-type: tm+mt
 source-wordcount: '1601'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
-
 
 # Real-time Customer Data Platform B2B Edition의 기본 보호 기능
 
@@ -39,7 +39,7 @@ Real-time Customer Data Platform B2B Edition을 사용하면 실시간 고객 �
 
 ## 데이터 모델 제한
 
-실시간 고객 프로필 데이터를 모델링할 때 다음과 같은 보호 기능이 권장됩니다. 기본 엔티티 및 차원 엔티티에 대한 자세한 내용은 [엔티티 유형](#entity-types) 부록.
+실시간 고객 프로필 데이터를 모델링할 때 다음과 같은 보호 기능이 권장되는 제한을 제공합니다. 기본 엔티티 및 차원 엔티티에 대한 자세한 내용은 [엔티티 유형](#entity-types) 부록.
 
 ### 기본 엔티티 보호 기능
 

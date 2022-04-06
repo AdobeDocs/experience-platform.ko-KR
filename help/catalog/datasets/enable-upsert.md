@@ -4,16 +4,20 @@ title: API를 사용하여 프로필 업데이트에 대한 데이터 세트 활
 type: Tutorial
 description: 이 자습서에서는 실시간 고객 프로필 데이터를 업데이트하기 위해 Adobe Experience Platform API를 사용하여 "업그레이드" 기능이 있는 데이터 세트를 활성화하는 방법을 보여줍니다.
 exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
-source-git-commit: 58c58048538eaf5977b1a5905fab44307bb433a9
+source-git-commit: e7bd2c699b30276dca1a2e29c19f0a885b246f48
 workflow-type: tm+mt
-source-wordcount: '965'
-ht-degree: 2%
+source-wordcount: '991'
+ht-degree: 1%
 
 ---
 
 # API를 사용하여 프로필 업데이트에 대한 데이터 세트 활성화
 
 이 자습서에서는 실시간 고객 프로필 데이터를 업데이트하기 위해 &quot;업데이트&quot; 기능이 있는 데이터 세트를 활성화하는 프로세스에 대해 설명합니다. 여기에는 새 데이터 세트를 만들고 기존 데이터 세트를 구성하는 단계가 포함됩니다.
+
+>[!NOTE]
+>
+>업로드 워크플로우는 일괄 처리에만 작동합니다. 스트리밍 수집 **not** 지원됨.
 
 ## 시작하기
 
@@ -22,7 +26,7 @@ ht-degree: 2%
 - [[!DNL Real-time Customer Profile]](../../profile/home.md): 여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
 - [[!DNL Catalog Service]](../../catalog/home.md): 데이터 세트를 만들고 구성할 수 있는 RESTful API [!DNL Real-time Customer Profile] 및 [!DNL Identity Service].
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): 표준화된 프레임워크 [!DNL Platform] 고객 경험 데이터를 구성합니다.
-- [일괄 처리 수집](../../ingestion/batch-ingestion/overview.md)
+- [일괄 수집](../../ingestion/batch-ingestion/overview.md): 배치 수집 API를 사용하면 데이터를 배치 파일로 Experience Platform에 수집할 수 있습니다.
 
 다음 섹션에서는 플랫폼 API를 성공적으로 호출하기 위해 알고 있어야 하는 추가 정보를 제공합니다.
 
@@ -102,11 +106,11 @@ curl -X POST \
 
 ## 기존 데이터 세트 구성 {#configure-an-existing-dataset}
 
-다음 단계에서는 업데이트(&quot;업데이트&quot;) 기능을 위해 기존 프로필 사용 데이터 세트를 구성하는 방법을 설명합니다.
+다음 단계에서는 업데이트(업데이트) 기능을 위해 기존 프로필 사용 데이터 세트를 구성하는 방법을 설명합니다.
 
 >[!NOTE]
 >
->&quot;업데이트&quot;에 대해 기존 프로필 사용 데이터 세트를 구성하려면 먼저 프로필에 대한 데이터 세트를 비활성화한 다음 과 함께 다시 활성화해야 합니다 `isUpsert` 태그에 가깝게 포함했습니다. 기존 데이터 세트가 프로필에 대해 활성화되어 있지 않으면 다음 단계로 직접 진행할 수 있습니다 [프로필 및 업데이트에 대한 데이터 세트 활성화](#enable-the-dataset). 확실하지 않은 경우 다음 단계는 데이터 세트가 이미 활성화되어 있는지 확인하는 방법을 보여 줍니다.
+>업데이트할 기존 프로필 사용 데이터 세트를 구성하려면, 먼저 프로필에 대한 데이터 세트를 비활성화한 다음 과 함께 다시 활성화해야 합니다 `isUpsert` 태그에 가깝게 포함했습니다. 기존 데이터 세트가 프로필에 대해 활성화되어 있지 않으면 다음 단계로 직접 진행할 수 있습니다 [프로필 및 업데이트에 대한 데이터 세트 활성화](#enable-the-dataset). 확실하지 않은 경우 다음 단계는 데이터 세트가 이미 활성화되어 있는지 확인하는 방법을 보여 줍니다.
 
 ### 프로필에 대해 데이터 세트가 활성화되어 있는지 확인
 
@@ -220,6 +224,7 @@ curl -X PATCH \
 ```
 
 **응답**
+
 성공적인 PATCH 요청은 HTTP 상태 200(OK) 및 업데이트된 데이터 세트의 ID가 포함된 배열을 반환합니다. 이 ID는 PATCH 요청에 전송된 ID와 일치해야 합니다. 다음 `unifiedProfile` 이제 태그가 비활성화되었습니다.
 
 ```json
@@ -270,4 +275,4 @@ curl -X PATCH \
 
 ## 다음 단계
 
-이제 프로필 및 업데이트를 지원하는 데이터 세트를 일괄 처리 및 스트리밍 수집 워크플로우에서 사용하여 프로필 데이터를 업데이트할 수 있습니다. Adobe Experience Platform으로 데이터를 수집하는 방법에 대한 자세한 내용은 [데이터 수집 개요](../../ingestion/home.md).
+이제 프로필 및 업데이트를 지원하는 데이터 세트를 배치 수집 워크플로우에서 사용하여 프로필 데이터를 업데이트할 수 있습니다. Adobe Experience Platform으로 데이터를 수집하는 방법에 대한 자세한 내용은 [데이터 수집 개요](../../ingestion/home.md).
