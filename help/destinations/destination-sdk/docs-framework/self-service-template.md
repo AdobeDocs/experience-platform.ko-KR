@@ -2,9 +2,9 @@
 title: 설명서 셀프 서비스 템플릿 // 대상 이름으로 바꾸기
 description: 이 템플릿을 사용하여 Adobe Experience Platform 카탈로그에서 대상에 대한 공개 설명서를 만듭니다. // 개요 섹션의 단락으로 대체합니다
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: c5d2427635d90f3a9551e2a395d01d664005e8bc
+source-git-commit: a45fe9185e0ae74cfba7905a4bb6d18df7efed9e
 workflow-type: tm+mt
-source-wordcount: '1066'
+source-wordcount: '1201'
 ht-degree: 2%
 
 ---
@@ -21,7 +21,23 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->이 설명서 페이지는 *대상* 팀 문의 사항이나 업데이트 요청에 대해서는 *업데이트에 도달할 수 있는 링크 또는 이메일 주소를 삽입합니다*
+>이 설명서 페이지는 *대상* 팀 문의 사항이나 업데이트 요청에 대해서는 *예를 들어 업데이트를 위해 연결할 수 있는 링크 또는 이메일 주소를 삽입합니다 `support@yourdestination.com`.*
+
+## 사용 사례 {#use-cases}
+
+를 사용하는 방법과 시기를 더 잘 이해할 수 있도록 하기 위해 *대상* 대상, Adobe Experience Platform 고객이 이 대상을 사용하여 해결할 수 있는 샘플 사용 사례는 다음과 같습니다.
+
+### 사용 사례 #1
+
+*모바일 메시징 플랫폼의 경우:*
+
+*주택 임대 및 판매 플랫폼에서는 고객의 Android 및 iOS 장치에 모바일 알림을 푸시하여 이전에 대여 요청을 했던 영역에 업데이트된 목록이 100개 있음을 알려 주려고 합니다.*
+
+### 사용 사례 #2
+
+*소셜 네트워크 플랫폼의 경우:*
+
+*스포츠 의류 브랜드는 기존 고객에게 소셜 미디어 계정을 통해 연결되기를 원한다. 의류 브랜드는 자신의 CRM에서 Adobe Experience Platform으로 이메일 주소를 수집하고, 자체 오프라인 데이터에서 세그먼트를 작성하고, 이러한 세그먼트를 대상으로 전송하여 고객의 소셜 미디어 피드에 광고를 표시할 수 있습니다.*
 
 ## 전제 조건 {#prerequisites}
 
@@ -38,13 +54,13 @@ ht-degree: 2%
 
 *대상이 지원하는 ID에 대한 정보를 이 섹션에 추가합니다. 몇 가지 표준 값으로 테이블을 미리 입력했습니다. 대상에 적용되지 않는 값과 미리 채워지지 않은 값을 삭제합니다.*
 
-*대상* 은 아래 표에 설명된 id의 활성화를 지원합니다. 추가 정보 [id](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#getting-started).
+*대상* 은 아래 표에 설명된 id의 활성화를 지원합니다. 추가 정보 [id](/help/identity-service/namespaces.md).
 
 | Target ID | 설명 | 고려 사항 |
 |---|---|---|
 | GAID | Google 광고 ID | 소스 ID가 GAID 네임스페이스이면 GAID 대상 ID를 선택합니다. |
 | IDFA | 광고주용 Apple ID | 소스 ID가 IDFA 네임스페이스인 경우 IDFA 대상 ID를 선택합니다. |
-| ECID | Experience Cloud ID | ECID를 나타내는 네임스페이스입니다. 이 네임스페이스를 다음 별칭으로 참조할 수도 있습니다. &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. 다음 문서를 참조하십시오. [ECID](https://experienceleague.adobe.com/docs/experience-platform/identity/ecid.html) 추가 정보. |
+| ECID | Experience Cloud ID | ECID를 나타내는 네임스페이스입니다. 이 네임스페이스를 다음 별칭으로 참조할 수도 있습니다. &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. 다음 문서를 참조하십시오. [ECID](/help/identity-service/ecid.md) 추가 정보. |
 | phone_sha256 | SHA256 알고리즘으로 해시된 전화 번호 | 일반 텍스트와 SHA256 해시 전화 번호는 모두 Adobe Experience Platform에서 지원합니다. 소스 필드에 해시되지 않은 속성이 포함되어 있으면 **[!UICONTROL 변형 적용]** 옵션, [!DNL Platform] 활성화 시 데이터를 자동으로 해시합니다. |
 | email_lc_sha256 | SHA256 알고리즘을 사용하여 해시된 이메일 주소 | 일반 텍스트와 SHA256 해시된 이메일 주소는 모두 Adobe Experience Platform에서 지원합니다. 소스 필드에 해시되지 않은 속성이 포함되어 있으면 **[!UICONTROL 변형 적용]** 옵션, [!DNL Platform] 활성화 시 데이터를 자동으로 해시합니다. |
 | extern_id | 사용자 지정 사용자 ID | 소스 ID가 사용자 지정 네임스페이스이면 이 타겟 ID를 선택합니다. |
@@ -66,31 +82,27 @@ ht-degree: 2%
 
 {style=&quot;table-layout:auto&quot;}
 
-## 사용 사례 {#use-cases}
-
-를 사용하는 방법과 시기를 더 잘 이해할 수 있도록 하기 위해 *대상* 대상, Adobe Experience Platform 고객이 이 대상을 사용하여 해결할 수 있는 샘플 사용 사례는 다음과 같습니다.
-
-### 사용 사례 #1
-
-*모바일 메시징 플랫폼의 경우:*
-
-*주택 임대 및 판매 플랫폼에서는 고객의 Android 및 iOS 장치에 모바일 알림을 푸시하여 이전에 대여 요청을 했던 영역에 업데이트된 목록이 100개 있음을 알려 주려고 합니다.*
-
-### 사용 사례 #2
-
-*소셜 네트워크 플랫폼의 경우:*
-
-*스포츠 의류 브랜드는 기존 고객에게 소셜 미디어 계정을 통해 연결되기를 원한다. 의류 브랜드는 자신의 CRM에서 Adobe Experience Platform으로 이메일 주소를 수집하고, 자체 오프라인 데이터에서 세그먼트를 작성하고, 이러한 세그먼트를 대상으로 전송하여 고객의 소셜 미디어 피드에 광고를 표시할 수 있습니다.*
-
 ## 대상에 연결 {#connect}
 
-이 대상에 연결하려면 [대상 구성 자습서](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html).
+이 대상에 연결하려면 [대상 구성 자습서](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html). 대상 구성 워크플로우에서 아래 두 섹션에 나열된 필드를 채웁니다.
 
-### 연결 매개 변수 {#parameters}
+### 대상에 인증 {#authenticate}
 
-While [설정](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) 이 대상을 사용하려면 다음 정보를 제공해야 합니다.
+*대상에 인증할 때 고객이 입력해야 하는 필드를 추가합니다. 이러한 필드는 대상별로 다르며 Destination SDK의 구성에 따라 다릅니다. 대상 필드가 아래 나열된 필드와 같을 수 없습니다. 아래 표시된 샘플 스크린샷과 유사한 스크린샷도 포함하십시오.*
 
-*새 대상을 구성할 때 고객이 입력해야 하는 필드를 추가합니다. 이러한 필드는 대상별로 다르며 Destination SDK의 구성에 따라 다릅니다. 대상 필드가 아래 나열된 필드와 같을 수 없습니다.*
+대상을 인증하려면 필요한 필드를 입력하고 을(를) 선택합니다 **[!UICONTROL 대상에 연결]**.
+
+![대상에 인증하는 방법을 보여주는 샘플 스크린샷](/help/destinations/destination-sdk/docs-framework/assets/authenticate-destination.png)
+
+* **[!UICONTROL 베어러 토큰]**: 대상을 인증하려면 베어러 토큰을 입력합니다.
+
+### 대상 세부 사항 채우기 {#destination-details}
+
+*새 대상을 구성할 때 고객이 입력해야 하는 필드를 추가합니다. 이러한 필드는 대상별로 다르며 Destination SDK의 구성에 따라 다릅니다. 대상 필드가 아래 나열된 필드와 같을 수 없습니다. 아래 표시된 샘플 스크린샷과 유사한 스크린샷도 포함하십시오.*
+
+대상에 대한 세부 사항을 구성하려면 필수 필드를 입력하고 을(를) 선택합니다 **[!UICONTROL 다음]**.
+
+![대상에 대한 세부 사항을 채우는 방법을 보여주는 샘플 스크린샷](/help/destinations/destination-sdk/docs-framework/assets/configure-destination-details.png)
 
 * **[!UICONTROL 이름]**: 나중에 이 대상을 인식하는 이름입니다.
 * **[!UICONTROL 설명]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
@@ -161,9 +173,9 @@ If no policy violations have been detected, select **[!UICONTROL Finish]** to co
 
 -->
 
-## 내보낸 데이터 {#exported-data}
+## 내보낸 데이터 / 데이터 내보내기 유효성 검사 {#exported-data}
 
-*데이터를 대상에 내보내는 방법에 대한 메모를 추가합니다. 이렇게 하면 고객이 대상에 올바르게 통합되었는지 확인하는 데 도움이 됩니다. 예를 들어 아래 JSON과 같은 샘플 JSON을 제공할 수 있습니다.*
+*데이터를 대상에 내보내는 방식에 대한 단락을 추가합니다. 이렇게 하면 고객이 대상에 올바르게 통합되었는지 확인하는 데 도움이 됩니다. 예를 들어 아래 JSON과 같은 샘플 JSON을 제공할 수 있습니다. 또는 대상 인터페이스의 스크린샷 및 정보를 제공하여 고객이 대상 플랫폼에서 세그먼트를 채우는 방법을 보여 줄 수 있습니다.*
 
 ```
 {
@@ -205,8 +217,8 @@ If no policy violations have been detected, select **[!UICONTROL Finish]** to co
 
 ## 데이터 사용 및 거버넌스 {#data-usage-governance}
 
-모두 [!DNL Adobe Experience Platform] 대상은 데이터를 처리할 때 데이터 사용 정책을 준수합니다. 방법에 대한 자세한 정보 [!DNL Adobe Experience Platform] 데이터 거버넌스 적용, 읽기 [데이터 거버넌스 개요](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html).
+모두 [!DNL Adobe Experience Platform] 대상은 데이터를 처리할 때 데이터 사용 정책을 준수합니다. 방법에 대한 자세한 정보 [!DNL Adobe Experience Platform] 데이터 거버넌스 적용, 읽기 [데이터 거버넌스 개요](/help/data-governance/home.md).
 
 ## 추가 리소스 {#additional-resources}
 
-*제품 설명서 또는 고객이 성공하기 위해 중요하다고 생각하는 기타 리소스에 대한 추가 링크를 제공할 수 있습니다.*
+*고객이 성공적으로 작업하기 위해 중요하다고 생각하는 제품 설명서나 기타 리소스에 대한 추가 링크를 제공할 수 있습니다.*
