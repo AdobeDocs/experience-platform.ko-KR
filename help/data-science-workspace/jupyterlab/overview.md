@@ -5,7 +5,7 @@ title: JupiterLab UI 개요
 topic-legacy: Overview
 description: JupiterLab은 Project Jupiter용 웹 기반 사용자 인터페이스로, Adobe Experience Platform에 긴밀하게 통합되어 있습니다. 데이터 과학자들이 Jupiter Notebook, 코드 및 데이터를 사용하여 작업할 수 있는 대화형 개발 환경을 제공합니다. 이 문서에서는 JupiterLab 및 해당 기능에 대한 개요와 일반적인 작업을 수행하는 지침을 제공합니다.
 exl-id: 13786fbd-ef16-49cd-8bcf-46320c33e902
-source-git-commit: aa81dfd3d52b17984a0e9fb3f8863dabc4fa44ef
+source-git-commit: 1d3981c67c86f93394acf49b61bd29154e9653e8
 workflow-type: tm+mt
 source-wordcount: '1820'
 ht-degree: 3%
@@ -29,7 +29,7 @@ Experience Platform의 JupiterLab 통합에는 아키텍처 변경 사항, 디�
 | **커널들** | 커널에는 전자 필기장 및 기타 기능이 제공됩니다 [!DNL JupyterLab] 는 다양한 프로그래밍 언어로 코드를 실행하고 introspect 코드를 실행하는 기능을 제공합니다. [!DNL Experience Platform] 에서 개발을 지원하는 추가 커널을 제공합니다. [!DNL Python], R, PySpark 및 [!DNL Spark]. 자세한 내용은 [커널들](#kernels) 섹션을 참조하십시오. |
 | **데이터 액세스** | 내에서 직접 기존 데이터 세트에 액세스 [!DNL JupyterLab] 읽기 및 쓰기 기능을 완벽하게 지원합니다. |
 | **[!DNL Platform]서비스 통합** | 기본 제공 통합을 통해 다른 [!DNL Platform] 내에서 직접 서비스 [!DNL JupyterLab]. 지원되는 통합 전체 목록은 의 섹션에 제공됩니다 [다른 플랫폼 서비스와의 통합](#service-integration). |
-| **인증** | 추가 <a href="https://jupyter-notebook.readthedocs.io/en/latest/security.html" target="_blank">JupiterLab 의 기본 보안 모델</a>, 플랫폼 서비스 간 통신을 포함하여 애플리케이션과 Experience Platform 간의 모든 상호 작용은 를 통해 암호화되어 인증됩니다 <a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System] (IMS)</a>. |
+| **인증** | 추가 <a href="https://jupyter-notebook.readthedocs.io/en/stable/security.html" target="_blank">JupiterLab 의 기본 보안 모델</a>, 플랫폼 서비스 간 통신을 포함하여 애플리케이션과 Experience Platform 간의 모든 상호 작용은 를 통해 암호화되어 인증됩니다 <a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System] (IMS)</a>. |
 | **개발 라이브러리** | in [!DNL Experience Platform], [!DNL JupyterLab] 에 대해 사전 설치된 라이브러리 제공 [!DNL Python], R 및 PySpark 자세한 내용은 [부록](#supported-libraries) 를 참조하십시오. |
 | **라이브러리 컨트롤러** | 사전 설치된 라이브러리가 사용자의 요구 사항에 맞지 않을 경우 Python 및 R에 추가 라이브러리를 설치할 수 있으며, 무결성을 유지하기 위해 고립된 컨테이너에 임시 저장할 수 있습니다 [!DNL Platform] 데이터를 안전하게 유지합니다. 자세한 내용은 [커널들](#kernels) 섹션을 참조하십시오. |
 
