@@ -2,9 +2,9 @@
 description: 이 구성을 사용하면 대상 이름, 카테고리, 설명, 로고 등과 같은 기본 정보를 표시할 수 있습니다. 또한 이 구성의 설정은 Experience Platform 사용자가 대상을 인증하는 방법, Experience Platform 사용자 인터페이스에 표시되는 방법 및 대상으로 내보낼 수 있는 ID를 결정합니다.
 title: Destination SDK 스트리밍 대상 구성 옵션
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: 92bca3600d854540fd2badd925e453fba41601a7
+source-git-commit: 51417bee5dba7a96d3a7a7eb507fc95711fad4a5
 workflow-type: tm+mt
-source-wordcount: '1756'
+source-wordcount: '1787'
 ht-degree: 4%
 
 ---
@@ -98,8 +98,8 @@ ht-degree: 4%
       "aggregationType":"CONFIGURABLE_AGGREGATION",
       "configurableAggregation":{
          "splitUserById":true,
-         "maxBatchAgeInSecs":0,
-         "maxNumEventsInBatch":0,
+         "maxBatchAgeInSecs":2400,
+         "maxNumEventsInBatch":5000,
          "aggregationKey":{
             "includeSegmentId":true,
             "includeSegmentStatus":true,
@@ -276,6 +276,10 @@ ID 네임스페이스에는 1-1의 서신이 필요하지 않습니다 [!DNL Pla
    * 세그먼트 ID;
    * 세그먼트 상태;
    * ID 또는 그룹
+
+>[!NOTE]
+>
+>대상에 대해 구성 가능한 합계 옵션을 사용할 때는 두 매개 변수에 사용할 수 있는 최소값과 최대값을 고려해야 합니다 `maxBatchAgeInSecs` (최소 1.800 및 최대 3.600) 및 `maxNumEventsInBatch` (최소 1.000, 최대 10.000)
 
 합계 매개 변수에 대한 자세한 내용은 [대상 API 끝점 작업](./destination-configuration-api.md) 참조 페이지. 여기서 각 매개 변수는 설명되어 있습니다.
 

@@ -2,7 +2,7 @@
 description: 이 페이지에서는 Destination SDK을 사용하여 스트리밍 대상을 구성하는 단계를 나열하고 설명합니다.
 title: Destination SDK을 사용하여 스트리밍 대상 구성
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: 92bca3600d854540fd2badd925e453fba41601a7
+source-git-commit: 51417bee5dba7a96d3a7a7eb507fc95711fad4a5
 workflow-type: tm+mt
 source-wordcount: '688'
 ht-degree: 0%
@@ -131,8 +131,8 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
             "groups":null
          },
          "splitUserById":true,
-         "maxBatchAgeInSecs":360,
-         "maxNumEventsInBatch":100
+         "maxBatchAgeInSecs":2400,
+         "maxNumEventsInBatch":5000
       }
    },
    "destinationDelivery":[
