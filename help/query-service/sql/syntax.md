@@ -5,9 +5,9 @@ title: 쿼리 서비스의 SQL 구문
 topic-legacy: syntax
 description: 이 문서에서는 Adobe Experience Platform 쿼리 서비스에서 지원하는 SQL 구문을 보여줍니다.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 5468097c61d42a7b565520051b955329e493d51f
+source-git-commit: 2a74d900053a868ce936d957dee008da846d6608
 workflow-type: tm+mt
-source-wordcount: '2596'
+source-wordcount: '2668'
 ht-degree: 2%
 
 ---
@@ -420,6 +420,27 @@ EXCEPTION
 WHEN other THEN SELECT 'ERROR';
 
 END $$; 
+```
+
+## 인라인 {#inline}
+
+인라인 함수는 구조 배열의 요소를 분리하고 값을 표로 생성합니다. 이 ID는 `SELECT` 목록 또는 `LATERAL VIEW`.
+
+인라인 함수 **사용할 수 없음** 다른 생성기 기능이 있는 선택 목록에 배치됩니다.
+
+기본적으로 생성되는 열의 이름은 &quot;col1&quot;, &quot;col2&quot; 등입니다. 표현식이 `NULL` 그러면 행이 생성되지 않습니다.
+
+**예**
+
+```sql
+> SELECT inline(array(struct(1, 'a'), struct(2, 'b'))), 'Spark SQL';
+```
+
+이 예는 다음을 반환합니다.
+
+```text
+1  a Spark SQL
+2  b Spark SQL
 ```
 
 ## [!DNL Spark] SQL 명령
