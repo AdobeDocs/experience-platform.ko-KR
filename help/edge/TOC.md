@@ -5,9 +5,9 @@ user-guide-title: Adobe Experience Platform Web SDK 도움말
 breadcrumb-title: Web SDK 안내서
 user-guide-description: Edge 네트워크를 통해 Experience Cloud 서비스와 상호 작용할 수 있습니다.
 feature: Web SDK
-source-git-commit: ff612f7ef466276757095a3a9a724781eeb6a089
+source-git-commit: 7eb89d44bdb6e3c6e6aede0a1ce20c02b19284fd
 workflow-type: tm+mt
-source-wordcount: '163'
+source-wordcount: '174'
 ht-degree: 31%
 
 ---
@@ -48,6 +48,10 @@ ht-degree: 31%
       * [응답 토큰 액세스](personalization/adobe-target/accessing-response-tokens.md)
       * [mbox 타사 ID 사용](personalization/adobe-target/using-mbox-3rdpartyid.md)
       * [at.js 라이브러리를 웹 SDK와 비교](personalization/adobe-target/web-sdk-atjs-comparison.md)
+      * A4T(Target) 로깅 분석 {#a4t}
+         * [개요](personalization/adobe-target/analytics-logging/overview.md)
+         * [클라이언트측 로깅](personalization/adobe-target/analytics-logging/client-side.md)
+         * [서버 측 로깅](personalization/adobe-target/analytics-logging/server-side.md)
    * Offer Decisioning {#offer-decisioning}
       * [개요](personalization/offer-decisioning/offer-decisioning-overview.md)
 * 동의 {#consent}
