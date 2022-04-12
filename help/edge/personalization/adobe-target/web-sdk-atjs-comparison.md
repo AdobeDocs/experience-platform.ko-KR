@@ -2,9 +2,10 @@
 title: at.js와 Experience Platform 웹 SDK 비교
 description: at.js 기능을 Experience Platform 웹 SDK와 비교하는 방법을 알아봅니다
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisions;코드 조각 사전 숨김;vec;양식 기반 경험 작성기;xdm;대상;결정;범위;스키마;시스템 다이어그램;다이어그램
-source-git-commit: 6efb40e90cb8c29a0141bb0db6e20cec23f2be9a
+exl-id: b63fe47d-856a-4cae-9057-51917b3e58dd
+source-git-commit: 71c63e0d0b993206cb3bb5de7f7fbd5e10c6f2e3
 workflow-type: tm+mt
-source-wordcount: '2277'
+source-wordcount: '2269'
 ht-degree: 6%
 
 ---
@@ -1224,5 +1225,5 @@ At.js는 다음 디버깅 기능을 표시합니다.
 * 사용 [그리폰](https://aep-sdks.gitbook.io/docs/beta/project-griffon)
 * [웹 SDK 디버그 사용](../../../edge/fundamentals/debugging.md)
 * 사용 [웹 SDK 모니터링 후크](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)
-* 사용 [Adobe Experience Platform Debugger](https://experienceleague.adobe.com/docs/debugger/using-v2/experience-cloud-debugger.html?lang=ko-kr)
+* 사용 [Adobe Experience Platform Debugger](../../../debugger/home.md)
 * Target 추적
