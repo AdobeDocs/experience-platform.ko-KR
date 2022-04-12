@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 소스 커넥터 도움말
 breadcrumb-title: Source Connectors 안내서
 user-guide-description: 다양한 소스 또는 구조에서 데이터를 수집하고 레이블을 지정하며 기존에 수집한 데이터를 향상시킬 수 있습니다.
 feature: Sources
-source-git-commit: 5d03dda7a972d37697032978b6e91a39800f81c8
+source-git-commit: 66dafe4bca6e1eb0fc67a745ac20a6e0b119aa39
 workflow-type: tm+mt
-source-wordcount: '757'
+source-wordcount: '773'
 ht-degree: 13%
 
 ---
@@ -48,6 +48,8 @@ ht-degree: 13%
       - [Oracle 개체 저장소](connectors/cloud-storage/oracle-object-storage.md)
       - [SFTP 커넥터](connectors/cloud-storage/sftp.md)
       - [Amazon S3 및 Azure Blob 커넥터](connectors/cloud-storage/blob-s3.md)
+   - 동의 및 기본 설정 {#consent}
+      - [OneTrust 통합](connectors/consent-and-preferences/onetrust.md)
    - CRM {#crm}
       - [Microsoft Dynamics 커넥터](connectors/crm/ms-dynamics.md)
       - [Salesforce 커넥터](connectors/crm/salesforce.md)
@@ -109,6 +111,8 @@ ht-degree: 13%
          - [Google PubSub](tutorials/api/create/cloud-storage/google-pubsub.md)
          - [Oracle 개체 저장소](tutorials/api/create/cloud-storage/oracle-object-storage.md)
          - [SFTP](tutorials/api/create/cloud-storage/sftp.md)
+      - 동의 및 기본 설정 {#consent}
+         - [OneTrust 통합](tutorials/api/create/consent-and-preferences/onetrust.md)
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
          - [Salesforce](tutorials/api/create/crm/salesforce.md)
@@ -203,6 +207,8 @@ ht-degree: 13%
          - [Oracle 개체 저장소](tutorials/ui/create/cloud-storage/oracle-object-storage.md)
          - [SFTP](tutorials/ui/create/cloud-storage/sftp.md)
          - [Amazon S3 및 Blob](tutorials/ui/create/cloud-storage/blob-s3.md)
+      - 동의 및 기본 설정 {#consent}
+         - [OneTrust 통합](tutorials/ui/create/consent-and-preferences/onetrust.md)
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
          - [Salesforce](tutorials/ui/create/crm/salesforce.md)
@@ -250,6 +256,7 @@ ht-degree: 13%
       - [광고 연결 데이터 흐름](tutorials/ui/dataflow/advertising.md)
       - [일괄 클라우드 스토리지 연결 데이터 흐름](tutorials/ui/dataflow/batch/cloud-storage.md)
       - [스트리밍 클라우드 스토리지 연결 데이터 흐름](tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
+      - [동의 및 환경 설정 연결 데이터 흐름](tutorials/ui/dataflow/consent-and-preferences.md)
       - [CRM 연결 데이터 흐름](tutorials/ui/dataflow/crm.md)
       - [고객 성공 연결 데이터 흐름](tutorials/ui/dataflow/customer-success.md)
       - [데이터베이스 연결 데이터 흐름](tutorials/ui/dataflow/databases.md)
