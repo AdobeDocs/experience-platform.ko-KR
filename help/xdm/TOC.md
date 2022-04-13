@@ -4,9 +4,9 @@ user-guide-title: Experience Data Model(XDM) 시스템 도움말
 breadcrumb-title: Experience Data Model(XDM) 안내서
 user-guide-description: Experience Data Model(XDM) 클래스와 스키마 필드 그룹을 사용하여 경험 데이터를 표준화합니다.
 feature: Schemas
-source-git-commit: 2144c75eb83a5806fa2cd9c75edc8cb0e85695fd
+source-git-commit: 4ce9e53ec420a8c9ba07cdfd75e66d854989f8d2
 workflow-type: tm+mt
-source-wordcount: '441'
+source-wordcount: '442'
 ht-degree: 17%
 
 ---
@@ -171,7 +171,7 @@ ht-degree: 17%
    * [API에서 스키마 관계 정의](tutorials/relationship-api.md)
    * [실시간 CDP B2B Edition에서 스키마 관계 정의](tutorials/relationship-b2b.md)
    * [임시 스키마(API) 만들기](tutorials/ad-hoc.md)
-   * [소프트 열거형 필드(API) 확장](tutorials/extend-soft-enum.md)
+   * [필드(API)에 추천 값 추가](tutorials/suggested-values.md)
 * [문제 해결 안내서](troubleshooting-guide.md)
 * [API 참조](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
 * [플랫폼 릴리스 노트](https://www.adobe.com/go/platform-release-notes-en)

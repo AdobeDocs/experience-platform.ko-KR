@@ -2,7 +2,7 @@
 title: 스키마 레지스트리 API에서 XDM 필드 정의
 description: 스키마 레지스트리 API에서 사용자 지정 XDM(Experience Data Model) 리소스를 만들 때 다양한 필드를 정의하는 방법을 알아봅니다.
 exl-id: d79332e3-8448-42af-b250-882bcb0f1e7d
-source-git-commit: 536657f11a50ea493736296780dd57f41dfefeae
+source-git-commit: 4ce9e53ec420a8c9ba07cdfd75e66d854989f8d2
 workflow-type: tm+mt
 source-wordcount: '783'
 ht-degree: 0%
@@ -60,7 +60,7 @@ ht-degree: 0%
     <td>제약 있는 열거형 값은 <code>enum</code> 배열이지만 각 값에 대한 선택적 고객 대상 레이블은 <code>meta:enum</code>:
       <pre class="JSON language-JSON hljs">
 "sampleField": { "type": "string", "enum": ["value1", "value2", "value3" ], "meta:enum": { "value1": "값 1", "값2": "값 2", "value3": "Value 3" }, "default": "value1" }</pre>
-    <br>다음 사항에 유의하십시오. <code>meta:enum</code> 값은 <strong>not</strong> 열거형을 선언하거나 데이터 유효성 검사를 직접 구동합니다. 대부분의 경우 <code>meta:enum</code> 다음 항목에서도 제공됩니다. <code>enum</code> 가 있어야 합니다. 그러나 다음과 같은 몇 가지 사용 사례가 있습니다 <code>meta:enum</code> 이(가) 해당 없이 제공됩니다 <code>enum</code> 배열입니다. 다음에서 자습서를 참조하십시오. <a href="../tutorials/extend-soft-enum.md">소프트 열거형 확장</a> 추가 정보.
+    <br>다음 사항에 유의하십시오. <code>meta:enum</code> 값은 <strong>not</strong> 열거형을 선언하거나 데이터 유효성 검사를 직접 구동합니다. 대부분의 경우 <code>meta:enum</code> 다음 항목에서도 제공됩니다. <code>enum</code> 가 있어야 합니다. 그러나 다음과 같은 몇 가지 사용 사례가 있습니다 <code>meta:enum</code> 이(가) 해당 없이 제공됩니다 <code>enum</code> 배열입니다. 다음에서 자습서를 참조하십시오. <a href="../tutorials/suggested-values.md">추천 값 정의</a> 추가 정보.
     </td>
   </tr>
   <tr>
