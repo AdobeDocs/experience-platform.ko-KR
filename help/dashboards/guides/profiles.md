@@ -4,7 +4,7 @@ title: 프로필 대시보드
 description: Adobe Experience Platform은 조직의 실시간 고객 프로필 데이터에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 7ca40776747541615e1a1d717aae8d48bed27a74
+source-git-commit: bc449e066a6c9875dd667c5b1715ab3226228d85
 workflow-type: tm+mt
 source-wordcount: '2572'
 ht-degree: 0%
@@ -232,7 +232,7 @@ Adobe은 데이터 분석에 사용할 수 있는 수집된 프로필의 완전�
 
 ### (베타) [!UICONTROL 프로필 완결성 트렌드] {#profile-completeness-trend}
 
-이 위젯은 시간 경과에 따른 프로필 완전성의 트렌드를 나타내는 누적 열 차트를 만듭니다. 완전성은 관찰된 모든 속성 중에서 null이 아닌 값으로 채워진 속성의 백분율로 측정됩니다. 마지막 처리 날짜 이후 프로필 완전성을 높음, 중간 또는 낮은 완전성으로 분류합니다.
+이 위젯은 시간 경과에 따른 프로필 완결성의 트렌드를 나타내는 스택 영역 차트를 만듭니다. 완전성은 관찰된 모든 속성 중에서 null이 아닌 값으로 채워진 속성의 백분율로 측정됩니다. 마지막 처리 날짜 이후 프로필 완전성을 높음, 중간 또는 낮은 완전성으로 분류합니다.
 
 x축은 시간을 나타내고, y축은 프로필 수를 나타내고, 색상은 세 가지 프로필 완결성 수준을 나타냅니다.
 

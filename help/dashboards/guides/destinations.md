@@ -4,7 +4,7 @@ title: 대상 대시보드
 description: Adobe Experience Platform은 조직의 활성 대상에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 45806166e48e3a9d9d7eeeaea0827d6f83c3ca3b
+source-git-commit: bc449e066a6c9875dd667c5b1715ab3226228d85
 workflow-type: tm+mt
 source-wordcount: '1764'
 ht-degree: 0%
@@ -51,7 +51,7 @@ Adobe은 대상과 관련된 다양한 지표를 시각화하고 데이터 분�
 * [[!UICONTROL 최근에 만든 대상]](#recently-created-destinations)
 * [[!UICONTROL 최근에 활성화된 세그먼트]](#recently-activated-segments)
 * [[!UICONTROL 대상별로 최근에 활성화된 세그먼트]](#recently-activated-segments-by-destination)
-* [[!UICONTROL 대상 크기 트렌드]](#audience-size-trends)
+* [[!UICONTROL 대상 크기 트렌드]](#audience-size-trend)
 * [[!UICONTROL ID로 매핑되지 않은 세그먼트]](#unmapped-segments-by-identity)
 * [[!UICONTROL ID별로 매핑된 세그먼트]](#mapped-segments-by-identity)
 * [[!UICONTROL 일반적인 대상]](#common-audiences)
