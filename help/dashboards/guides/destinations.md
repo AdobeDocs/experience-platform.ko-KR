@@ -4,9 +4,9 @@ title: 대상 대시보드
 description: Adobe Experience Platform은 조직의 활성 대상에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 32df4c5972cb32afc6021ae27dc05f77076a5984
+source-git-commit: 45806166e48e3a9d9d7eeeaea0827d6f83c3ca3b
 workflow-type: tm+mt
-source-wordcount: '1708'
+source-wordcount: '1764'
 ht-degree: 0%
 
 ---
@@ -112,6 +112,10 @@ Experience Platform에서 세그먼트 작업에 대한 자세한 내용은 [세
 두 번째 드롭다운 메뉴에는 대시보드 맨 위에서 선택한 대상 계정으로 전송할 수 있는 모든 사용 가능한 세그먼트가 나열됩니다.
 
 ![대상 크기 트렌드 위젯.](../images/destinations/audience-size-trend.png)
+
+다음 **[!UICONTROL 대상 크기 트렌드]** 위젯은 [!UICONTROL 캡션] 위젯의 오른쪽 위에 있는 단추. 선택 **[!UICONTROL 캡션]** 자동 캡션 대화 상자를 열려면 다음을 수행하십시오. 기계 학습 모델은 차트 및 세그먼트 데이터를 분석하여 주요 추세 및 중요 이벤트를 설명하는 캡션을 자동으로 생성합니다.
+
+![대상 크기 트렌드 위젯에 대한 자동 캡션 대화 상자입니다.](../images/destinations/audience-size-trend-captions.png)
 
 ### [!UICONTROL ID로 매핑되지 않은 세그먼트] {#unmapped-segments-by-identity}
 
