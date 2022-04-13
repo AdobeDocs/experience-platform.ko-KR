@@ -5,9 +5,9 @@ title: XDM ExperienceEvent 클래스
 topic-legacy: overview
 description: 이 문서에서는 XDM ExperienceEvent 클래스에 대한 개요와 이벤트 데이터 모델링에 대한 모범 사례를 제공합니다.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: 32d8798d426696d8fd4ace4c53a8bf9b4db26b61
+source-git-commit: 39e4ed1ff872de241bc07271cfb44310d41a2401
 workflow-type: tm+mt
-source-wordcount: '1797'
+source-wordcount: '1830'
 ht-degree: 1%
 
 ---
@@ -18,18 +18,18 @@ ht-degree: 1%
 
 경험 이벤트는 관련된 개인의 시점 및 ID를 포함하여 발생한 일에 대한 팩트 레코드입니다. 이벤트는 명시적(직접 관찰가능한 사람 작업) 또는 암시적(직접적인 사용자 작업 없이 발생)일 수 있으며 집계 또는 해석 없이 기록됩니다. 플랫폼 생태계에서 이 클래스를 사용하는 방법에 대한 자세한 내용은 [XDM 개요](../home.md#data-behaviors).
 
-다음 [!DNL XDM ExperienceEvent] 클래스 자체는 스키마에 여러 시계열 관련 필드를 제공합니다. 이러한 필드 중 일부 값은 데이터를 수집할 때 자동으로 채워집니다.
+다음 [!DNL XDM ExperienceEvent] 클래스 자체는 스키마에 여러 시계열 관련 필드를 제공합니다. 이러한 필드 중 두 개(`_id` 및 `timestamp`) **필수** 클래스를 기반으로 하는 모든 스키마에 대해 나머지 스키마는 선택 사항입니다. 데이터를 수집할 때 일부 필드의 값이 자동으로 채워집니다.
 
-![](../images/classes/experienceevent/structure.png)
+![Platform UI에 표시되는 XDM ExperienceEvent의 구조](../images/classes/experienceevent/structure.png)
 
 | 속성 | 설명 |
 | --- | --- |
-| `_id` | 이벤트에 대한 고유한 문자열 식별자입니다. 이 필드는 개별 이벤트의 고유성을 추적하고 데이터의 중복을 방지하며 다운스트림 서비스에서 해당 이벤트를 찾는 데 사용됩니다. 어떤 경우에는 `_id` 다음을 수행할 수 있습니다. [Universally Unique Identifier (UUID)](https://tools.ietf.org/html/rfc4122) 또는 [GUID(Globally Unique Identifier)](https://docs.microsoft.com/en-us/dotnet/api/system.guid?view=net-5.0).<br><br>소스 연결에서 데이터를 스트리밍하거나 Parquet 파일에서 직접 수집하는 경우 기본 ID, 타임스탬프, 이벤트 유형 등과 같이 이벤트를 고유하게 만드는 특정 필드 조합을 연결하여 이 값을 생성해야 합니다. 연결된 값은 `uri-reference` 형식이 지정된 문자열. 즉, 콜론 문자를 제거해야 합니다. 그런 다음 연결된 값을 SHA-256 또는 선택한 다른 알고리즘을 사용하여 해시해야 합니다.<br><br>그것을 구분하는 것은 중요하다 **이 필드는 개별 사용자와 관련된 ID를 나타내지 않습니다**&#x200B;하지만, 오히려 데이터 자체의 기록입니다. 한 사람에 대한 신분자료는 다음과 같이 분류되어야 한다 [id 필드](../schema/composition.md#identity) 호환 필드 그룹에서 대신 제공합니다. |
+| `_id`<br>**(필수 여부)** | 이벤트에 대한 고유한 문자열 식별자입니다. 이 필드는 개별 이벤트의 고유성을 추적하고 데이터의 중복을 방지하며 다운스트림 서비스에서 해당 이벤트를 찾는 데 사용됩니다. 어떤 경우에는 `_id` 다음을 수행할 수 있습니다. [Universally Unique Identifier (UUID)](https://tools.ietf.org/html/rfc4122) 또는 [GUID(Globally Unique Identifier)](https://docs.microsoft.com/en-us/dotnet/api/system.guid?view=net-5.0).<br><br>소스 연결에서 데이터를 스트리밍하거나 Parquet 파일에서 직접 수집하는 경우 기본 ID, 타임스탬프, 이벤트 유형 등과 같이 이벤트를 고유하게 만드는 특정 필드 조합을 연결하여 이 값을 생성해야 합니다. 연결된 값은 `uri-reference` 형식이 지정된 문자열. 즉, 콜론 문자를 제거해야 합니다. 그런 다음 연결된 값을 SHA-256 또는 선택한 다른 알고리즘을 사용하여 해시해야 합니다.<br><br>그것을 구분하는 것은 중요하다 **이 필드는 개별 사용자와 관련된 ID를 나타내지 않습니다**&#x200B;하지만, 오히려 데이터 자체의 기록입니다. 한 사람에 대한 신분자료는 다음과 같이 분류되어야 한다 [id 필드](../schema/composition.md#identity) 호환 필드 그룹에서 대신 제공합니다. |
 | `eventMergeId` | 를 사용하는 경우 [Adobe Experience Platform Web SDK](../../edge/home.md) 데이터를 수집하기 위해 레코드를 만든 수집된 일괄 처리의 ID를 나타냅니다. 이 필드는 데이터 수집 시 시스템에 의해 자동으로 채워집니다. 웹 SDK 구현 컨텍스트에서 벗어난 이 필드의 사용은 지원되지 않습니다. |
 | `eventType` | 이벤트의 유형 또는 카테고리를 나타내는 문자열입니다. 이 필드는 제품 보기 이벤트를 소매 회사의 추가-장바구니 이벤트와 구별하는 것과 같이, 동일한 스키마 및 데이터 세트 내에서 서로 다른 이벤트 유형을 구분하려는 경우 사용할 수 있습니다.<br><br>이 속성에 대한 표준 값은 [부록 섹션](#eventType): 의도한 사용 사례에 대한 설명을 포함합니다. 이 필드는 확장 가능한 열거형입니다. 즉, 고유한 이벤트 유형 문자열을 사용하여 추적 중인 이벤트를 분류할 수도 있습니다.<br><br>`eventType` 애플리케이션의 히트당 하나의 이벤트만 사용하도록 제한하므로 시스템에서 가장 중요한 이벤트를 알리는 데 계산된 필드를 사용해야 합니다. 자세한 내용은 [계산된 필드의 우수 사례](#calculated). |
 | `producedBy` | 이벤트의 생성자나 출처를 설명하는 문자열 값입니다. 이 필드는 세그먼테이션을 위해 필요한 경우 특정 이벤트 생성자를 필터링하는 데 사용할 수 있습니다.<br><br>이 속성에 대한 일부 추천 값은 [부록 섹션](#producedBy). 이 필드는 확장 가능한 열거형입니다. 즉, 고유한 문자열을 사용하여 다른 이벤트 생성자를 나타낼 수도 있습니다. |
 | `identityMap` | 이벤트가 적용되는 개별 ID에 대해 이름이 지정된 ID 세트가 포함된 맵 필드입니다. ID 데이터를 수집할 때 시스템에서 이 필드를 자동으로 업데이트합니다. 에 이 필드를 적절히 활용하려면 [실시간 고객 프로필](../../profile/home.md)에서는 데이터 작업에서 필드의 내용을 수동으로 업데이트하지 마십시오.<br /><br />의 ID 맵에 대한 섹션을 참조하십시오. [스키마 구성 기본 사항](../schema/composition.md#identityMap) 를 참조하십시오. |
-| `timestamp` | 이벤트가 발생한 시점의 ISO 8601 타임스탬프이며, [RFC 3339 섹션 5.6](https://tools.ietf.org/html/rfc3339#section-5.6). 이 타임스탬프는 과거에 발생해야 합니다. 다음에서 아래 섹션을 참조하십시오. [타임스탬프](#timestamps) 을 참조하십시오. |
+| `timestamp`<br>**(필수 여부)** | 이벤트가 발생한 시점의 ISO 8601 타임스탬프이며, [RFC 3339 섹션 5.6](https://tools.ietf.org/html/rfc3339#section-5.6). 이 타임스탬프는 과거에 발생해야 합니다. 다음에서 아래 섹션을 참조하십시오. [타임스탬프](#timestamps) 을 참조하십시오. |
 
 {style=&quot;table-layout:auto&quot;}
 
