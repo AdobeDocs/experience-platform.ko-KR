@@ -1,9 +1,10 @@
 ---
 title: 스키마 레지스트리 API에서 XDM 필드 정의
 description: 스키마 레지스트리 API에서 사용자 지정 XDM(Experience Data Model) 리소스를 만들 때 다양한 필드를 정의하는 방법을 알아봅니다.
-source-git-commit: af4c345819d3e293af4e888c9cabba6bd874583b
+exl-id: d79332e3-8448-42af-b250-882bcb0f1e7d
+source-git-commit: 536657f11a50ea493736296780dd57f41dfefeae
 workflow-type: tm+mt
-source-wordcount: '762'
+source-wordcount: '783'
 ht-degree: 0%
 
 ---
@@ -165,16 +166,18 @@ ht-degree: 0%
 
 ## 사용자 지정 맵 유형 만들기 {#maps}
 
-XDM에서 &quot;맵 유사&quot; 데이터를 효율적으로 지원하기 위해 개체에 주석을 달 수 있습니다 `meta:xdmType` 설정 `map` 키 세트가 제약 없는 것처럼 개체를 관리해야 함을 명확히 하려면 XDM에서는 이 저장소 힌트의 사용에 대해 다음과 같은 제한을 둡니다.
+XDM에서 &quot;맵 유사&quot; 데이터를 효율적으로 지원하기 위해 개체에 주석을 달 수 있습니다 `meta:xdmType` 설정 `map` 키 세트가 제약 없는 것처럼 개체를 관리해야 함을 명확히 하려면 맵 필드에 수집되는 데이터는 문자열 키, 문자열 또는 정수 값만 사용해야 합니다(결정된 대로) `additionalProperties.type`).
 
-* 맵 유형은 형식이어야 합니다. `object`
-* 맵 유형에는 속성이 정의되어 있지 않아야 합니다. 즉, &quot;빈&quot; 개체를 정의합니다
-* 맵 유형은 단일 `additionalProperties` 맵 내에 배치할 수 있는 값을 설명하는 스키마
+XDM에서는 이 저장소 힌트의 사용에 대해 다음과 같은 제한을 둡니다.
+
+* 맵 유형은 형식이어야 합니다. `object`.
+* 맵 유형에는 속성이 정의되어 있지 않아야 합니다(즉, &quot;빈&quot; 개체를 정의함).
+* 맵 유형은 다음을 포함해야 합니다. `additionalProperties.type` 맵 내에 배치할 수 있는 값을 설명하는 필드입니다. `string` 또는 `integer`.
 
 다음 성능 단점이 있으므로 반드시 필요한 경우에만 맵 유형 필드를 사용해야 합니다.
 
-* Adobe Experience Platform Query Service의 응답 시간은 1억 개의 레코드에 대해 3초에서 10초로 줄어듭니다
-* 맵에는 16개 미만의 키가 있어야 하며, 그렇지 않으면 더 낮아질 수 있습니다
+* Adobe Experience Platform 쿼리 서비스의 응답 시간은 1억 개의 레코드에 대해 3초에서 10초로 줄어듭니다.
+* 맵에는 16개 미만의 키가 있어야 하며, 그렇지 않으면 더 큰 성능 저하가 발생할 수 있습니다.
 
 Platform 사용자 인터페이스에는 맵 유형 필드의 키를 추출하는 방법에 대한 제한 사항도 있습니다. 객체 유형 필드를 확장할 수 있지만 맵은 대신 단일 필드로 표시됩니다.
 
