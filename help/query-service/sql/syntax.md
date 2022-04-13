@@ -5,9 +5,9 @@ title: 쿼리 서비스의 SQL 구문
 topic-legacy: syntax
 description: 이 문서에서는 Adobe Experience Platform 쿼리 서비스에서 지원하는 SQL 구문을 보여줍니다.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 2a74d900053a868ce936d957dee008da846d6608
+source-git-commit: a5391c1ccc24845673217e15bafd1a1df33cbc18
 workflow-type: tm+mt
-source-wordcount: '2668'
+source-wordcount: '2741'
 ht-degree: 2%
 
 ---
@@ -424,11 +424,15 @@ END $$;
 
 ## 인라인 {#inline}
 
-인라인 함수는 구조 배열의 요소를 분리하고 값을 표로 생성합니다. 이 ID는 `SELECT` 목록 또는 `LATERAL VIEW`.
+다음 `inline` 함수는 구조체 배열의 요소를 분리하고 값을 표로 생성합니다. 이 ID는 `SELECT` 목록 또는 `LATERAL VIEW`.
 
-인라인 함수 **사용할 수 없음** 다른 생성기 기능이 있는 선택 목록에 배치됩니다.
+다음 `inline` 함수 **사용할 수 없음** 다른 생성기 기능이 있는 선택 목록에 배치됩니다.
 
 기본적으로 생성되는 열의 이름은 &quot;col1&quot;, &quot;col2&quot; 등입니다. 표현식이 `NULL` 그러면 행이 생성되지 않습니다.
+
+>[!TIP]
+>
+>열 이름은 `RENAME` 명령.
 
 **예**
 
@@ -442,6 +446,20 @@ END $$;
 1  a Spark SQL
 2  b Spark SQL
 ```
+
+이 두 번째 예는 의 개념 및 적용을 더 보여줍니다 `inline` 함수 위에 있어야 합니다. 이 예제의 데이터 모델은 아래 이미지에 표시되어 있습니다.
+
+![productListItems에 대한 스키마 다이어그램](../images/sql/productListItems.png)
+
+**예**
+
+```sql
+select inline(productListItems) from source_dataset limit 10;
+```
+
+에서 가져온 값 `source_dataset` 대상 테이블을 채우는 데 사용됩니다.
+
+| SKU | 경험(_E) | 수량 | priceTotal | |—+—+—+—| | product-id-1 | (&quot;(&quot;(&quot;(A,pass,B,NULL)&quot;)&quot;)&quot;) | 5 | 10.5 | | product-id-5 | (&quot;(&quot;(&quot;(A, pass, B,NULL)&quot;)&quot;) | | | | product-id-2 | (&quot;(&quot;(&quot;(AF, C, D,NULL)&quot;)&quot;)&quot;) | 6 | 40 | | product-id-4 | (&quot;(&quot;(&quot;(BM, pass, NA,NULL)&quot;)&quot;)&quot;) | 3 | 12 |
 
 ## [!DNL Spark] SQL 명령
 
