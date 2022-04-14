@@ -1,10 +1,10 @@
 ---
-description: Destination SDK의 일부로, Adobe은 대상을 구성하고 테스트하는 데 도움이 되는 개발자 도구를 제공합니다. 이 페이지에서는 메시지 변환 템플릿을 만들고 테스트하는 방법을 설명합니다.
+description: Adobe은 Destination SDK의 일부로서 대상을 구성하고 테스트하는 데 도움이 되는 개발자 도구를 제공합니다. 이 페이지에서는 메시지 변환 템플릿을 만들고 테스트하는 방법을 설명합니다.
 title: 메시지 변환 템플릿 만들기 및 테스트
 exl-id: 15e7f436-4d33-4172-bd14-ad8dfbd5e4a8
-source-git-commit: aa5898369d41ba48a1416a0b4ea82f6345333d18
+source-git-commit: 97ffaa2a53dbbf5a7be5f002e63be4ed3339f565
 workflow-type: tm+mt
-source-wordcount: '947'
+source-wordcount: '960'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 ## 개요 {#overview}
 
-Destination SDK의 일부로, Adobe은 대상을 구성하고 테스트하는 데 도움이 되는 개발자 도구를 제공합니다. 이 페이지에서는 메시지 변환 템플릿을 만들고 테스트하는 방법을 설명합니다. 대상을 테스트하는 방법에 대한 자세한 내용은 [대상 구성 테스트](./test-destination.md).
+Adobe은 Destination SDK의 일부로서 대상을 구성하고 테스트하는 데 도움이 되는 개발자 도구를 제공합니다. 이 페이지에서는 메시지 변환 템플릿을 만들고 테스트하는 방법을 설명합니다. 대상을 테스트하는 방법에 대한 자세한 내용은 [대상 구성 테스트](./test-destination.md).
 
 종료 **메시지 변환 템플릿 만들기 및 테스트** Adobe Experience Platform의 대상 스키마와 대상에서 지원하는 메시지 형식 사이에 *템플릿 작성 도구* 아래에 자세히 설명되어 있습니다.  에서 소스와 대상 스키마 간의 데이터 변환에 대해 자세히 알아보십시오 [메시지 형식 문서](./message-format.md#using-templating).
 
@@ -40,6 +40,7 @@ Adobe은 Adobe XDM 형식의 데이터를 대상에서 지원하는 형식으로
    * 사용 `maxUsersPerRequest` 를 사용하여 대상에 대한 API 호출이 세그먼트 자격, ID 및 프로필 속성과 함께 여러 프로필을 포함하려면 1보다 큰 값을 갖습니다.
 2. [대상 구성 만들기](./destination-configuration-api.md#create) 및에서 대상 서버 구성의 ID를 추가합니다. `destinationDelivery.destinationServerId`.
 3. [대상 구성의 ID 가져오기](./destination-configuration-api.md#retrieve-list) 방금 생성했으므로 템플릿 생성 도구에서 사용할 수 있습니다.
+4. 이해 [사용할 수 있는 함수 및 필터](./supported-functions.md) 메시지 변환 템플릿에서
 
 ## 샘플 템플릿 API를 사용하고 템플릿 API를 렌더링하여 대상에 대한 템플릿을 만드는 방법 {#iterative-process}
 

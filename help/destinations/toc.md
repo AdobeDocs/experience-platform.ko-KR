@@ -4,10 +4,10 @@ user-guide-title: 대상 안내서
 user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화합니다.
 description: 이 문서에서는 Adobe Experience Platform 대상의 목차 목록을 설명합니다
 feature: Destinations
-source-git-commit: 6257e06369060d7f71e837059977817cd495f62e
+source-git-commit: 4f057afec285af59a48dc4e28c08cfeba28597bf
 workflow-type: tm+mt
-source-wordcount: '738'
-ht-degree: 8%
+source-wordcount: '742'
+ht-degree: 9%
 
 ---
 
@@ -29,23 +29,23 @@ ht-degree: 8%
    * 대상에 대상 데이터 활성화{#activate}
       * [활성화 개요](./ui/activation-overview.md)
       * [스트리밍 세그먼트 내보내기 대상으로 대상 데이터 활성화](./ui/activate-segment-streaming-destinations.md)
-      * [스트리밍 프로필 내보내기 대상으로 대상 데이터 활성화](./ui/activate-streaming-profile-destinations.md)
-      * [대상자 데이터를 활성화하여 묶음 프로필 내보내기 대상 활성화](./ui/activate-batch-profile-destinations.md)
+      * [Activate audience data to streaming profile export destinations](./ui/activate-streaming-profile-destinations.md)
+      * [Activate audience data to batch profile export destinations](./ui/activate-batch-profile-destinations.md)
       * [프로필 요청 대상에 대상 데이터 활성화](./ui/activate-profile-request-destinations.md)
-      * [동일 페이지 및 다음 페이지 개인화를 위한 개인화 대상 구성](./ui/configure-personalization-destinations.md)
-   * [대상 세부 사항 보기](./ui/destination-details-page.md)
+      * [Configure personalization destinations for same-page and next-page personalization](./ui/configure-personalization-destinations.md)
+   * [View destination details](./ui/destination-details-page.md)
    * [대상 계정 업데이트](./ui/update-accounts.md)
    * [대상 계정 삭제](./ui/delete-destination-account.md)
    * [활성화 데이터 흐름 편집](./ui/edit-activation.md)
-   * [대상 삭제](./ui/delete-destinations.md)
-   * [데이터 흐름 모니터링](./ui/monitor-dataflows.md)
+   * [Delete destinations](./ui/delete-destinations.md)
+   * [Monitor dataflows](./ui/monitor-dataflows.md)
 * 대상 카탈로그 {#catalog}
    * [대상 카탈로그 개요](./catalog/overview.md)
    * Adobe 대상{#adobe}
       * [Adobe 대상 개요](./catalog/adobe/overview.md)
-      * [Marketo Engage 연결](./catalog/adobe/marketo-engage.md)
-      * [Experience Platform 세그먼트 공유](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
-   * 광고 대상{#advertising}
+      * [Marketo Engage connection](./catalog/adobe/marketo-engage.md)
+      * [Experience Platform segment sharing](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
+   * Advertising destinations{#advertising}
       * [광고 대상 개요](./catalog/advertising/overview.md)
       * [Adobe Advertising Cloud 확장](./catalog/advertising/adobe-advertising-cloud.md)
       * [Win Advertiser 변환 태그 확장](./catalog/advertising/awin-conversiontag.md)
@@ -60,7 +60,7 @@ ht-degree: 8%
       * [Google 광고 확장](./catalog/advertising/google-ads-extension.md)
       * [Google Ad Manager 연결](./catalog/advertising/google-ad-manager.md)
       * [Google Customer Match 연결](./catalog/advertising/google-customer-match.md)
-      * [Google 디스플레이 및 비디오 360 연결](./catalog/advertising/google-dv360.md)
+      * [Google Display &amp; Video 360 connection](./catalog/advertising/google-dv360.md)
       * [Google 태그 확장](./catalog/advertising/gtag-advertising.md)
       * [linkedIn Insight Tag 확장](./catalog/advertising/linkedin.md)
       * [Microsoft Bing 연결](./catalog/advertising/bing.md)
@@ -89,16 +89,16 @@ ht-degree: 8%
       * [Quantum 지표 확장](./catalog/analytics/quantum-metric.md)
       * [SessionCam 확장](./catalog/analytics/sessioncam.md)
       * [TMMData 확장](./catalog/analytics/tmmdata.md)
-      * [다음 전환 추적 확장](./catalog/analytics/yext.md)
-   * 클라우드 스토리지 대상 {#cloud-storage}
+      * [Yext Conversion Tracking extension](./catalog/analytics/yext.md)
+   * Cloud storage destinations {#cloud-storage}
       * [클라우드 스토리지 대상 개요](./catalog/cloud-storage/overview.md)
-      * [(베타) Amazon Kinesis 연결](./catalog/cloud-storage/amazon-kinesis.md)
-      * [Amazon S3 연결](./catalog/cloud-storage/amazon-s3.md)
+      * [(Beta) Amazon Kinesis connection](./catalog/cloud-storage/amazon-kinesis.md)
+      * [Amazon S3 connection](./catalog/cloud-storage/amazon-s3.md)
       * [Azure Blob 연결](./catalog/cloud-storage/azure-blob.md)
       * [(베타) Azure 이벤트 허브 연결](./catalog/cloud-storage/azure-event-hubs.md)
       * [SFTP 연결](./catalog/cloud-storage/sftp.md)
-      * [클라우드 스토리지 허용 목록에 추가하다 대상에 대한 IP 주소](./catalog/cloud-storage/ip-address-allow-list.md)
-   * 데이터 관리 플랫폼 대상 {#data-management}
+      * [IP address allowlist for cloud storage destinations](./catalog/cloud-storage/ip-address-allow-list.md)
+   * Data Management Platform destinations {#data-management}
       * [DMP(데이터 관리 플랫폼) 대상 개요](./catalog/data-management/overview.md)
       * [Audience Manager DIL 확장](./catalog/data-management/aam-dil-extension.md)
    * 이메일 대상 {#email}
@@ -111,17 +111,17 @@ ht-degree: 8%
       * [Adobe Campaign 연결](./catalog/email-marketing/adobe-campaign.md)
       * [Oracle Eloqua 연결](./catalog/email-marketing/oracle-eloqua.md)
       * [Responsys 연결 oracle](./catalog/email-marketing/oracle-responsys.md)
-      * [Salesforce Marketing Cloud 연결](./catalog/email-marketing/salesforce-marketing-cloud.md)
+      * [Salesforce Marketing Cloud connection](./catalog/email-marketing/salesforce-marketing-cloud.md)
       * [SendGrid 연결](./catalog/email-marketing/sendgrid.md)
-   * 태그 확장 {#launch-extensions}
+   * Tag extensions {#launch-extensions}
       * [태그 확장 개요](./catalog/launch-extensions/overview.md)
    * 모바일 참여 대상 {#mobile-engagement}
       * [모바일 참여 대상 개요](./catalog/mobile-engagement/overview.md)
       * [Airship 속성 연결](./catalog/mobile-engagement/airship-attributes.md)
-      * [Airship 태그 연결](./catalog/mobile-engagement/airship-tags.md)
-      * [연결 브레이즈](./catalog/mobile-engagement/braze.md)
-   * 개인화 대상 {#personalization}
-      * [Personalization 대상 개요](./catalog/personalization/overview.md)
+      * [Airship Tags connection](./catalog/mobile-engagement/airship-tags.md)
+      * [Braze connection](./catalog/mobile-engagement/braze.md)
+   * Personalization destinations {#personalization}
+      * [Personalization destinations overview](./catalog/personalization/overview.md)
       * [Adobe Target 연결](./catalog/personalization/adobe-target-connection.md)
       * [Adobe Target 확장](./catalog/personalization/adobe-target.md)
       * [Adobe Target v2 확장](./catalog/personalization/adobe-target-v2.md)
@@ -134,8 +134,8 @@ ht-degree: 8%
       * [Marketo 웹 개인화 확장](./catalog/personalization/marketo-web-personalization.md)
    * 소셜 대상{#social}
       * [소셜 대상 개요](./catalog/social/overview.md)
-      * [Livefyre 확장 Adobe](./catalog/social/adobe-livefyre.md)
-      * [Facebook 연결](./catalog/social/facebook.md)
+      * [Adobe Livefyre extension](./catalog/social/adobe-livefyre.md)
+      * [Facebook connection](./catalog/social/facebook.md)
       * [linkedIn Matched Audiences 연결](./catalog/social/linkedin.md)
       * [[!DNL Twitter Custom Audiences] 연결](./catalog/social/twitter.md)
    * 스트리밍 대상 {#streaming}
@@ -149,13 +149,13 @@ ht-degree: 8%
       * [Question Pro Intercept 설문 조사 확장](./catalog/survey/web-intercept-surveys.md)
    * 고객 대상의 음성 {#voice}
       * [고객 대상 음성 개요](./catalog/voice/overview.md)
-      * [디지털 피드백 확장 확인](./catalog/voice/confirmit-digital-feedback.md)
-      * [호출 태그 확장](./catalog/voice/invoca.md)
+      * [Confirmit Digital Feedback extension](./catalog/voice/confirmit-digital-feedback.md)
+      * [Invoca Tags extension](./catalog/voice/invoca.md)
       * [메달리아 확장](./catalog/voice/medallia.md)
       * [대화 URL 받은 편지함 확장](./catalog/voice/talkurl.md)
 * 대상 SDK {#destination-sdk}
    * [개요](./destination-sdk/overview.md)
-   * [통합 사전 요구 사항](./destination-sdk/integration-prerequisites.md)
+   * [Integration prerequisites](./destination-sdk/integration-prerequisites.md)
    * [시작하기](./destination-sdk/getting-started.md)
    * Destination SDK 기능 {#functionality}
       * [구성 옵션](./destination-sdk/configuration-options.md)
@@ -167,15 +167,15 @@ ht-degree: 8%
       * [대상 메타데이터 관리](./destination-sdk/audience-metadata-management.md)
       * 인증 {#authentication}
          * [인증 구성](./destination-sdk/authentication-configuration.md)
-         * [OAuth 2 인증](./destination-sdk/oauth2-authentication.md)
+         * [OAuth 2 authentication](./destination-sdk/oauth2-authentication.md)
       * 개발자 도구 {#developer-tools}
-         * [메시지 변환 템플릿 만들기 및 테스트](./destination-sdk/create-template.md)
+         * [Create and test a message transformation template](./destination-sdk/create-template.md)
          * [대상 구성 테스트](./destination-sdk/test-destination.md)
    * API 작업 {#api}
       * [Destination SDK(대상 작성) API 참조](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
-      * [대상 끝점 API 작업](./destination-sdk/destination-configuration-api.md)
+      * [Destinations endpoint API operations](./destination-sdk/destination-configuration-api.md)
       * [대상 서버 끝점 API 작업](./destination-sdk/destination-server-api.md)
-      * [대상 메타데이터 끝점 API 작업](./destination-sdk/audience-metadata-api.md)
+      * [Audience metadata endpoint API operations](./destination-sdk/audience-metadata-api.md)
       * [자격 증명 끝점 API 작업](./destination-sdk/credentials-configuration-api.md)
       * [게시 끝점 API 작업](./destination-sdk/destination-publish-api.md)
       * 개발자 도구 참조 {#developer-tools-reference}
@@ -187,6 +187,8 @@ ht-degree: 8%
       * [Destination SDK을 사용하여 스트리밍 대상 구성](./destination-sdk/configure-destination-instructions.md)
       * [(베타) Destination SDK을 사용하여 파일 기반 대상 구성](./destination-sdk/configure-file-based-destination-instructions.md)
       * [Destination SDK에서 작성된 대상을 검토하도록 제출](./destination-sdk/submit-destination.md)
+   * 참조 {#reference}
+      * [지원되는 변형 함수](./destination-sdk/supported-functions.md)
    * 대상을 문서화합니다. {#document-destination}
       * [Adobe Experience Platform에서 대상 문서화](./destination-sdk/docs-framework/documentation-instructions.md)
       * [GitHub 웹 인터페이스를 사용하여 대상 설명서 페이지를 만듭니다](./destination-sdk/docs-framework/use-github-interface-to-create-documentation.md)
