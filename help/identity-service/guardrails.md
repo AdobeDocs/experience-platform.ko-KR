@@ -2,9 +2,10 @@
 keywords: Experience Platform;ID;ID 서비스;문제 해결;보호 기능;지침;제한;
 title: ID 서비스에 대한 보호 기능
 description: 이 문서에서는 ID 그래프 사용을 최적화하는 데 도움이 되는 ID 서비스 데이터의 사용 및 비율 제한에 대한 정보를 제공합니다.
-source-git-commit: b36ace84acdb13b89deb6f77a02c298acade8d8e
+exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
+source-git-commit: b07a45e5bb9cae6e147ea790ebb77cb63f8790c1
 workflow-type: tm+mt
-source-wordcount: '377'
+source-wordcount: '385'
 ht-degree: 3%
 
 ---
@@ -30,7 +31,7 @@ ht-degree: 3%
 
 | 가드레일 | 제한 | 참고 |
 | --- | --- | --- |
-| 그래프의 ID 수 | 150 | 제한에 도달하면 ID 그래프가 업데이트되지 않습니다. |
+| 그래프의 ID 수 | 150 | 이 제한은 샌드박스 수준에서 적용됩니다. 제한에 도달하면 ID 그래프가 업데이트되지 않습니다. |
 | XDM 레코드의 ID 수 | 20 | 필요한 최소 XDM 레코드 수는 2개입니다. |
 | 사용자 지정 네임스페이스 수 | None | 만들 수 있는 사용자 지정 네임스페이스의 수에는 제한이 없습니다. |
 | 그래프 수 | 없음 | 만들 수 있는 ID 그래프 수에는 제한이 없습니다. |
