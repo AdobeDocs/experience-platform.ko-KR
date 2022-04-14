@@ -5,9 +5,9 @@ seo-title: Advertising destinations overview
 description: 'Adobe Experience Platform을 타사 광고 플랫폼(예: DSP, 광고 네트워크, SSP)에 연결하고 익명의 대상을 이러한 플랫폼에 공유합니다.'
 seo-description: Connect Adobe Experience Platform to a 3rd-party advertising platform (e.g. DSP, ad network, SSP) and share pseudonymous audiences to these platforms.
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: 0911a0a08c5571161acdafa6857095e275a50600
+source-git-commit: 275c3fae8b001154a702edbf4356d6a374f9a16f
 workflow-type: tm+mt
-source-wordcount: '231'
+source-wordcount: '234'
 ht-degree: 1%
 
 ---
@@ -24,11 +24,12 @@ DSP(수요 측 플랫폼), SSP(공급측 플랫폼), 광고 네트워크 등 타
 
 현재, Experience Platform은 아래에 나열된 광고 대상을 지원합니다.
 
-연결 및 확장 간의 차이점을 이해하려면 대상 유형 및 카테고리 페이지에서 [연결](../../destination-types.md#connections)을 참조하십시오.
+연결과 확장의 차이를 이해하려면 를 참조하십시오 [연결](../../destination-types.md#connections) 대상 유형 및 카테고리 페이지에서 을 참조하십시오.
 
 ### 연결
 
-* [Google Display &amp; Video 360 연결](google-dv360.md)
+* [(베타) 기준 연결](criteo.md)
+* [Google 디스플레이 및 비디오 360 연결](google-dv360.md)
 * [Google 광고 연결](google-ads-destination.md)
 * [Google Ad Manager 연결](google-ad-manager.md)
 * [Google Customer Match 연결](google-customer-match.md)
@@ -55,4 +56,4 @@ DSP(수요 측 플랫폼), SSP(공급측 플랫폼), 광고 네트워크 등 타
 
 ## 새 광고 대상에 연결 {#connect-destination}
 
-캠페인을 위해 세그먼트를 광고 대상에 보내려면 먼저 대상에 연결해야 합니다. 새 대상 설정에 대한 자세한 내용은 [대상 만들기 자습서](../../ui/connect-destination.md)를 참조하십시오.
+캠페인을 위해 세그먼트를 광고 대상에 보내려면 먼저 대상에 연결해야 합니다. 자세한 내용은 [대상 만들기 자습서](../../ui/connect-destination.md) 를 참조하십시오.

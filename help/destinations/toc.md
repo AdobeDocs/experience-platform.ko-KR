@@ -4,10 +4,10 @@ user-guide-title: 대상 안내서
 user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화합니다.
 description: 이 문서에서는 Adobe Experience Platform 대상의 목차 목록을 설명합니다
 feature: Destinations
-source-git-commit: c4d8ae6de2e1bbf23a25a66bde5dc88c13a13402
+source-git-commit: 9467aa3b09df04e901e158368db9b7a2a255e880
 workflow-type: tm+mt
-source-wordcount: '733'
-ht-degree: 9%
+source-wordcount: '736'
+ht-degree: 8%
 
 ---
 
@@ -52,6 +52,7 @@ ht-degree: 9%
       * [Awin Advertiser Master Tag 확장](./catalog/advertising/awin-mastertag.md)
       * [Bing Ads Universal Event Tracking (UET) 확장](./catalog/advertising/bing-ads.md)
       * [분기 확장](./catalog/advertising/branch.md)
+      * [(베타) 기준 연결](./catalog/advertising/criteo.md)
       * [DoubleClick Floodlight(베타) 확장](./catalog/advertising/doubleclick-floodlight.md)
       * [Facebook 픽셀 확장](./catalog/advertising/facebook-pixel.md)
       * [Flashtalk OneTag 확장](./catalog/advertising/flashtalking.md)
