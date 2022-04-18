@@ -2,9 +2,9 @@
 description: 이 페이지에서는 '/authoring/destinations/publish' API 종단점을 사용하여 수행할 수 있는 모든 API 작업을 나열하고 설명합니다.
 title: 게시 대상 API 끝점 작업
 exl-id: 0564a132-42f4-478c-9197-9b051acf093c
-source-git-commit: 702a5b7154724faa9f5e6847b462e0ae90475571
+source-git-commit: a73a4ea93a432f60d62da5e234d8e357009b2d88
 workflow-type: tm+mt
-source-wordcount: '718'
+source-wordcount: '748'
 ht-degree: 4%
 
 ---
@@ -23,6 +23,7 @@ ht-degree: 4%
 
 * Destination SDK 파트너인 경우 모든 Experience Platform 고객이 사용할 수 있도록 모든 Experience Platform 조직에서 생산화된 대상을 사용할 수 있도록 하려고 합니다.
 * 모든 샌드박스에서 고유한 Experience Platform 조직에서 사용자 지정 대상을 사용할 수 있도록 하려는 경우.
+* 다음을 수행합니다. *모든 업데이트* 참조하십시오. 구성 업데이트는 Experience Platform 팀이 승인한 새 게시 요청을 제출한 후에만 대상에 반영됩니다.
 
 ## 대상 게시 API 작업 시작 {#get-started}
 

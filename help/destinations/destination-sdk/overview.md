@@ -2,9 +2,9 @@
 description: Adobe Experience Platform Destination SDK은 선택한 데이터 및 인증 형식에 따라 Experience Platform이 대상 및 프로필 데이터를 종단점에 제공할 대상 통합 패턴을 구성할 수 있도록 해주는 구성 API 세트입니다. 구성은 Experience Platform에 저장되며, 추가 업데이트를 위해 API를 통해 검색할 수 있습니다.
 title: Adobe Experience Platform Destination SDK
 exl-id: 7aca9f40-98c8-47c2-ba88-4308fc2b1798
-source-git-commit: 85b308b3f92a734fed0c885a574b71fa05684bb4
+source-git-commit: 7c6d0c8d4d1eea16f13359e9d7a895d767ad3c00
 workflow-type: tm+mt
-source-wordcount: '702'
+source-wordcount: '703'
 ht-degree: 2%
 
 ---
@@ -76,7 +76,7 @@ Experience Platform에서 대상을 구성하는 프로세스는 다음과 같�
 2. [Experience Platform 샌드박스 제공 요청](https://adobeexchangeec.zendesk.com/hc/en-us/articles/360037457812-Adobe-Experience-Platform-Sandbox-Accounts-Access-Adding-Users-and-Support) 대상 작성 권한을 사용하도록 설정합니다.
 3. [통합 빌드](./configure-destination-instructions.md) 제품 설명서를 참조합니다.
 4. [통합 테스트](./test-destination.md) 제품 설명서를 참조합니다.
-5. [통합 제출](./submit-destination.md) Adobe 검토(표준 응답 시간은 5영업일).
+5. [통합 제출](./submit-destination.md) Adobe 검토의 경우(표준 응답 시간은 5영업일).
 6. ISV 또는 SI에서 [제품 통합](./overview.md#productized-custom-integrations)를 사용하려면 [셀프 서비스 설명서 프로세스](./docs-framework/documentation-instructions.md) 대상을 위한 Experience League에 대한 제품 설명서 페이지를 만들려면
 7. Adobe이 승인하면 통합에 [Experience Platform 카탈로그](/help/destinations/catalog/overview.md).
 8. 통합을 업데이트하려면 동일한 프로세스를 따르십시오.

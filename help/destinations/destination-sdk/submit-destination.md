@@ -2,10 +2,10 @@
 description: 이 페이지에서는 Destination SDK을 사용하여 작성된 대상을 검토하기 위해 제출하는 모든 정보를 제공합니다.
 title: Destination SDK에서 작성된 대상을 검토하도록 제출
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: 85b308b3f92a734fed0c885a574b71fa05684bb4
+source-git-commit: 7c6d0c8d4d1eea16f13359e9d7a895d767ad3c00
 workflow-type: tm+mt
-source-wordcount: '580'
-ht-degree: 1%
+source-wordcount: '648'
+ht-degree: 0%
 
 ---
 
@@ -25,9 +25,14 @@ ht-degree: 1%
 * (제품 통합 전용)에 설명된 지침에 따라 설명서 PR(끌어오기 요청)이 [셀프 서비스 설명서 프로세스](./docs-framework/documentation-instructions.md).
 * Experience Platform 대상 카탈로그에 대상 카드에 대한 로고로 표시되는 이미지 파일입니다.
 
->[!NOTE]
+>[!IMPORTANT]
 >
->대상 게시 요청을 검토할 Adobe의 표준 응답 시간은 5영업일.
+>* 대상 게시 요청을 검토하는 Adobe의 표준 응답 시간은 5영업일.
+>
+>* Adobe 팀이 초기 제출 시 구성에 대한 업데이트를 수행하도록 요청하는 경우 업데이트를 수행한 후 다른 대상 게시 요청을 제출해야 합니다.
+>
+>* 대상이 Experience Platform 카탈로그에 라이브 상태가 된 후에도 구성을 업데이트해야 하는 경우 구성에 반영되도록 새 대상 게시 요청을 제출해야 합니다.
+
 
 아래 섹션에서 각 항목에 대한 자세한 정보를 찾을 수 있습니다.
 
