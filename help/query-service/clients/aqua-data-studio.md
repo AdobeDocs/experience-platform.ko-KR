@@ -5,9 +5,9 @@ title: Aqua Data Studio를 쿼리 서비스에 연결
 topic-legacy: connect
 description: 이 문서에서는 Aqua Data Studio와 Adobe Experience Platform 쿼리 서비스를 연결하는 단계를 설명합니다.
 exl-id: 4770e221-48a7-45d8-80a4-60b5cbc0ec33
-source-git-commit: a887c502213e96d6af90af0859da78c2984f89a7
+source-git-commit: ad3e1b0de6dd3b82cc82f0dc3d0f36b12cd3899e
 workflow-type: tm+mt
-source-wordcount: '468'
+source-wordcount: '493'
 ht-degree: 0%
 
 ---
@@ -51,6 +51,10 @@ ht-degree: 0%
 ### SSL 모드 설정
 
 다음으로, **[!DNL Driver]** 탭. 아래 **[!DNL Parameters]**&#x200B;를 사용하여 값을 로 설정합니다. `?sslmode=require`
+
+>[!IMPORTANT]
+>
+>자세한 내용은 [[!DNL Query Service] SSL 설명서](./ssl-modes.md) Adobe Experience Platform Query Service에 대한 타사 연결에 대한 SSL 지원 및 `verify-full` SSL 모드.
 
 ![매개 변수 필드가 강조 표시된 Aqua Data Studio 드라이버 탭.](../images/clients/aqua-data-studio/register-server-driver-tab.png)
 
