@@ -1,10 +1,11 @@
 ---
 title: 태그 문제 해결 안내서
 description: Adobe Experience Platform에서 태그에 대해 자주 묻는 질문에 대한 답변을 얻을 수 있습니다.
-source-git-commit: dc957372e5e8c6f034f2e0cd0283e0e997501ba8
+exl-id: c06b8e25-4d79-4a11-94da-94ac096b5e33
+source-git-commit: 2181ec15f2d868d1821a5f9926729d2796f2f298
 workflow-type: tm+mt
-source-wordcount: '1055'
-ht-degree: 25%
+source-wordcount: '1042'
+ht-degree: 27%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 25%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](./term-updates.md)을 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](./term-updates.md)를 참조하십시오.
 
 이 문서에서는 Adobe Experience Platform의 태그에 대한 FAQ에 대한 답변을 제공합니다.
 
@@ -28,7 +29,7 @@ ht-degree: 25%
 
 ## 태그는 얼마입니까?
 
-태그에 대한 추가 요금은 없습니다. 모든 [!DNL Adobe Experience Cloud] 고객이 이용할 수 있습니다.
+태그에 대한 추가 요금은 없습니다. 이 서비스는 모든 용도로 사용할 수 있습니다 [!DNL Adobe Experience Cloud] 고객.
 
 ## 현재 플러그인이 있다고 들었습니다. 플러그인은 무엇입니까?
 
@@ -91,20 +92,18 @@ Adobe에는 동일한 확장 프로그램 개발 방법을 사용하여 자체 �
 
 ## 태그는 기본 모바일 앱에서 작동합니까?
 
-예! 이제 태그는 모바일 속성 및 새로운 Adobe Experience Platform [Mobile SDK](https://sdkdocs.com)에 대한 구성을 지원하여 기본 모바일 앱 환경에서 데이터 수집 및 제공을 구현합니다. 자세한 내용은 [설명서](https://sdkdocs.com)를 참조하십시오.
+예! 이제 태그는 새로운 Adobe Experience Platform에 대한 모바일 속성 및 구성을 지원합니다 [Mobile SDK](https://sdkdocs.com) 기본 모바일 앱 환경에서 데이터 수집 및 전달을 구현하기 위한 것입니다. 자세한 내용은 [설명서](https://sdkdocs.com)를 참조하십시오.
 
 ## UI에서 내 계정을 로드하는 동안 오류가 발생했습니다.
 
-계정을 로드하는 동안 오류가 발생했다는 메시지가 표시되는 경우, 계정이 태그의 제품 프로필에 속해 있지 않은 것입니다. 데이터 수집 UI에 대한 액세스 권한을 부여하기 위해 Adobe Admin Console에서 제품 프로필을 구성하는 방법을 알아보려면 [관리 권한](./ui/administration/manage-permissions.md)에 대한 안내서를 참조하십시오.
+계정을 로드하는 동안 오류가 발생했다는 메시지가 표시되는 경우, 계정이 태그의 제품 프로필에 속해 있지 않은 것입니다. 다음 안내서를 참조하십시오. [권한 관리](./ui/administration/manage-permissions.md) 데이터 수집 UI에 대한 액세스 권한을 부여하기 위해 Adobe Admin Console에서 제품 프로필을 구성하는 방법을 알아봅니다.
 
 ## UI에 속성을 추가할 수 없는 이유는 무엇입니까?
 
 데이터 수집 UI에 로그인할 때 새 속성을 만들 수 없다면, 계정이 속성 관리 권한이 있는 제품 프로필에 속해 있지 않은 것입니다.
 
-속성 관리 권한을 부여하기 위해 Adobe Admin Console에서 제품 프로필을 구성하는 방법을 알려면 [권한 관리](./ui/administration/manage-permissions.md)에 대한 안내서를 참조하십시오. 태그의 다른 권한에 대한 자세한 내용은 [태그](./ui/administration/user-permissions.md)에 대한 사용자 권한에 대한 개요를 참조하십시오.
+다음 안내서를 참조하십시오. [권한 관리](./ui/administration/manage-permissions.md) 속성 관리 권한을 부여하기 위해 Adobe Admin Console에서 제품 프로필을 구성하는 방법을 알아봅니다. 태그의 다른 권한에 대한 자세한 내용은 [태그의 사용자 권한](./ui/administration/user-permissions.md).
 
 ## 다른 질문이 있을 경우 어떻게 합니까?
 
-다른 질문이 있는 경우 [https://adobe.com/go/launchme](https://adobe.com/go/launchme)에 있는 기본 태그 페이지의 Adobe 커뮤니티에서 문의하십시오.
-
-태그는 플랫폼이 지향하는 방향 중 하나일 뿐입니다. 고객 성공을 위해 보다 개방적이고 더 통합적이며 항상 노력하고 있습니다.
+다른 질문이 있는 경우 [Adobe Experience Platform 데이터 수집 커뮤니티 페이지](https://adobe.com/go/launchme) Experience League 시 또는 [태그 개발자를 위한 공식 Slack 그룹](http://join.connectionsdevs.chat).
