@@ -3,9 +3,9 @@ keywords: Amazon Kinesis;kinesis 대상;kinesis
 title: (베타) Amazon Kinesis 연결
 description: Amazon Kinesis 스토리지에 대한 실시간 아웃바운드 연결을 만들어 Adobe Experience Platform에서 데이터를 스트리밍합니다.
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: b2ac26589527313ec9f3cf84126e3e23da6c7b83
+source-git-commit: c62117de27b150f072731c910bb0593ce1fca082
 workflow-type: tm+mt
-source-wordcount: '1340'
+source-wordcount: '1422'
 ht-degree: 1%
 
 ---
@@ -93,6 +93,16 @@ Experience Platform은 고객의 보안 및 규정 준수 요구 사항을 충�
 이 대상에 연결하려면 [대상 구성 자습서](../../ui/connect-destination.md).
 
 ### 연결 매개 변수 {#parameters}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_kinesis_includesegmentnames"
+>title="세그먼트 이름 포함"
+>abstract="데이터 내보내기에 내보낼 세그먼트의 이름이 포함되도록 하려면 전환합니다. 이 옵션을 선택한 상태로 데이터 내보내기 예제에 대한 설명서를 봅니다."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_kinesis_includesegmenttimestamps"
+>title="세그먼트 타임스탬프 포함"
+>abstract="세그먼트가 생성 및 업데이트될 때 데이터 내보내기에 UNIX 타임스탬프와 세그먼트가 활성화 대상에 매핑될 때 UNIX 타임스탬프를 포함하려면 을 전환합니다. 이 옵션을 선택한 상태로 데이터 내보내기 예제에 대한 설명서를 봅니다."
 
 While [설정](../../ui/connect-destination.md) 이 대상을 사용하려면 다음 정보를 제공해야 합니다.
 

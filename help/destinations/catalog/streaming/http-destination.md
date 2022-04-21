@@ -3,9 +3,9 @@ title: (베타) HTTP API 연결
 keywords: 스트리밍;
 description: Adobe Experience Platform의 HTTP API 대상을 사용하면 프로필 데이터를 타사 HTTP 엔드포인트로 보낼 수 있습니다.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 0d58445557490a5539279f55c34183994429c632
+source-git-commit: c62117de27b150f072731c910bb0593ce1fca082
 workflow-type: tm+mt
-source-wordcount: '1382'
+source-wordcount: '1560'
 ht-degree: 1%
 
 ---
@@ -72,6 +72,36 @@ curl --location --request POST '<YOUR_API_ENDPOINT>' \
 이 대상에 연결하려면 [대상 구성 자습서](../../ui/connect-destination.md).
 
 ### 연결 매개 변수 {#parameters}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_http_clientcredentialstype"
+>title="클라이언트 자격 증명 유형"
+>abstract="선택 **본문 양식 인코딩됨** 클라이언트 ID 및 클라이언트 암호를 요청 본문에 포함하려면 **기본 인증** 인증 헤더에 클라이언트 ID 및 클라이언트 암호를 포함하기 위해 설명서에서 예를 봅니다."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_http_headers"
+>title="헤더"
+>abstract="다음 형식을 사용하여 대상 호출에 포함할 사용자 지정 헤더를 입력합니다. `header1:value1,header2:value2,...headerN:valueN`"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_http_endpoint"
+>title="HTTP 끝점"
+>abstract="프로필 데이터를 보낼 HTTP 끝점의 URL입니다."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_http_includesegmentnames"
+>title="세그먼트 이름 포함"
+>abstract="데이터 내보내기에 내보낼 세그먼트의 이름이 포함되도록 하려면 전환합니다. 이 옵션을 선택한 상태로 데이터 내보내기 예제에 대한 설명서를 봅니다."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_http_includesegmenttimestamps"
+>title="세그먼트 타임스탬프 포함"
+>abstract="세그먼트가 생성 및 업데이트될 때 데이터 내보내기에 UNIX 타임스탬프와 세그먼트가 활성화 대상에 매핑될 때 UNIX 타임스탬프를 포함하려면 을 전환합니다. 이 옵션을 선택한 상태로 데이터 내보내기 예제에 대한 설명서를 봅니다."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_http_queryparameters"
+>title="쿼리 매개 변수"
+>abstract="선택적으로 HTTP 엔드포인트 URL에 쿼리 매개 변수를 추가할 수 있습니다. 다음과 같이 사용하는 쿼리 매개 변수의 형식을 지정합니다. `parameter1=value&parameter2=value`."
 
 While [설정](../../ui/connect-destination.md) 이 대상을 사용하려면 다음 정보를 제공해야 합니다.
 
