@@ -5,9 +5,9 @@ title: Marketo Engage 커넥터
 topic-legacy: overview
 description: 이 문서에서는 인증, 매핑 및 데이터 지연에 대한 정보를 포함하여 Marketo Engage 소스 커넥터에 대한 개요를 제공합니다.
 exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
-source-git-commit: 21617c6ec364fc05d7b8b6d00daa68608d1ed318
+source-git-commit: ebf605bda32a7e587e6a6ca93a58669d16581ff9
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '521'
 ht-degree: 0%
 
 ---
@@ -28,9 +28,9 @@ Adobe Experience Platform을 사용하면 Platform 서비스를 사용하여 들
 
 다음 사항에 설명된 단계를 참조하십시오. [Marketo 소스 커넥터 인증](./marketo-auth.md) 자격 증명을 검색할 문서입니다.
 
-## Adobe Experience Cloud 대상 공유 설정
+## Adobe 조직 매핑 설정
 
-매핑 세트를 설정하기 전에 [!DNL Marketo], 먼저 Adobe Experience Cloud 대상 공유를 설정해야 합니다. 이 작업을 완료하는 방법에 대한 자세한 단계는 다음 안내서를 참조하십시오. [다음에 대한 Adobe Experience Cloud 대상 공유 설정 [!DNL Marketo]](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-experience-cloud-audience-sharing.html?lang=en).
+매핑 세트를 설정하기 전에 [!DNL Marketo]를 지정하는 경우 먼저 Adobe 조직 매핑을 설정해야 합니다. 이 작업을 완료하는 방법에 대한 자세한 단계는 다음 안내서를 참조하십시오. [Adobe 조직 매핑 설정 [!DNL Marketo]](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html).
 
 ## XDM(경험 데이터 모델)
 
