@@ -2,18 +2,24 @@
 title: 설명서 셀프 서비스 템플릿 // 대상 이름으로 바꾸기
 description: 이 템플릿을 사용하여 Adobe Experience Platform 카탈로그에서 대상에 대한 공개 설명서를 만듭니다. // 개요 섹션의 단락으로 대체합니다
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: a45fe9185e0ae74cfba7905a4bb6d18df7efed9e
+source-git-commit: f9938aca8a5c72a53a688152ac2ab0c0abe632ce
 workflow-type: tm+mt
-source-wordcount: '1201'
+source-wordcount: '1250'
 ht-degree: 2%
 
 ---
 
-# 대상 {#your-destination}
+# 대상 연결 {#your-destination}
 
 *이 템플릿을 진행하면 모든 단락을 기울임꼴로 바꾸거나 삭제합니다(이 단락은 시작).*
 
 *먼저 페이지 상단에서 메타데이터(제목 및 설명)를 업데이트합니다. 이 페이지에서 UICONTROL의 모든 인스턴스를 무시하십시오. 기계 번역 프로세스를 통해 페이지를 지원하는 여러 언어로 올바르게 변환하는 태그입니다. 문서를 제출한 후 문서에 태그를 추가합니다.*
+
+>[!IMPORTANT]
+>
+>* 템플릿에 요약된 순서대로 이 템플릿의 모든 섹션을 입력합니다.
+>* 이 템플릿은 파트너 피드백을 기반으로 자주 업데이트됩니다. 대상에 대한 문서 작성을 시작하기 전에 [템플릿의 최신 버전](/help/destinations/destination-sdk/docs-framework/assets/yourdestination-template.zip).
+
 
 ## 개요 {#overview}
 
@@ -21,23 +27,23 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->이 설명서 페이지는 *대상* 팀 문의 사항이나 업데이트 요청에 대해서는 *예를 들어 업데이트를 위해 연결할 수 있는 링크 또는 이메일 주소를 삽입합니다 `support@yourdestination.com`.*
+>이 설명서 페이지는 *대상* 팀 문의 사항이나 업데이트 요청에 대해서는 *예를 들어 업데이트를 위해 연결할 수 있는 링크 또는 이메일 주소를 삽입합니다 `support@YourDestination.com`.*
 
 ## 사용 사례 {#use-cases}
 
 를 사용하는 방법과 시기를 더 잘 이해할 수 있도록 하기 위해 *대상* 대상, Adobe Experience Platform 고객이 이 대상을 사용하여 해결할 수 있는 샘플 사용 사례는 다음과 같습니다.
 
-### 사용 사례 #1
+### 사용 사례 #1 {#use-case-1}
 
 *모바일 메시징 플랫폼의 경우:*
 
 *주택 임대 및 판매 플랫폼에서는 고객의 Android 및 iOS 장치에 모바일 알림을 푸시하여 이전에 대여 요청을 했던 영역에 업데이트된 목록이 100개 있음을 알려 주려고 합니다.*
 
-### 사용 사례 #2
+### 사용 사례 #2 {#use-case-2}
 
 *소셜 네트워크 플랫폼의 경우:*
 
-*스포츠 의류 브랜드는 기존 고객에게 소셜 미디어 계정을 통해 연결되기를 원한다. 의류 브랜드는 자신의 CRM에서 Adobe Experience Platform으로 이메일 주소를 수집하고, 자체 오프라인 데이터에서 세그먼트를 작성하고, 이러한 세그먼트를 대상으로 전송하여 고객의 소셜 미디어 피드에 광고를 표시할 수 있습니다.*
+*스포츠 의류 브랜드는 기존 고객에게 소셜 미디어 계정을 통해 연결되기를 원한다. 의류 브랜드는 자신의 CRM에서 Adobe Experience Platform으로 이메일 주소를 수집하고, 자체 오프라인 데이터에서 세그먼트를 작성하고, 이러한 세그먼트를 YourDestination으로 전송하여 고객의 소셜 미디어 피드에 광고를 표시할 수 있습니다.*
 
 ## 전제 조건 {#prerequisites}
 
@@ -108,70 +114,9 @@ ht-degree: 2%
 * **[!UICONTROL 설명]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
 * **[!UICONTROL 계정 ID]**: 사용자 *대상* 계정 ID.
 
-
-<!--
-
-*Replace YOURDESTINATION with your destination name and TOBEFILLEDIN with the category that your destination belongs to.*
-
-1. In **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**, scroll to the ***TOBEFILLEDIN*** category. Select ***YOURDESTINATION***, then select **[!UICONTROL Configure]**.
-
-
-    >[!NOTE]
-    >
-    >If a connection with this destination already exists, you can see an **[!UICONTROL Activate]** button on the destination card. For more information about the difference between **[!UICONTROL Activate]** and **[!UICONTROL Configure]**, refer to the [Catalog](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destinations-workspace.html#catalog) section of the destination workspace documentation.  
-
-    ![Connect to YOURDESTINATION](./assets/yourdestination1.png)
-
-2. In the **Account** step, if you had previously set up a connection to your *YOURDESTINATION* destination, select **[!UICONTROL Existing Account]** and select your existing connection. Or, you can select **[!UICONTROL New Account]** to set up a new connection to *YOURDESTINATION*. Select **[!UICONTROL Connect to destination]** to log in and connect Adobe Experience Cloud to your *YOURDESTINATION* account.
-
-    >[!NOTE]
-    >
-    >Adobe Experience Platform supports credentials validation in the authentication process and displays an error message if you input incorrect credentials to your ***YOURDESTINATION*** account. This ensures that you don't complete the workflow with incorrect credentials.
-
-3. Once your credentials are confirmed and Adobe Experience Cloud is connected to your ***YOURDESTINATION*** account, you can select **[!UICONTROL Next]** to proceed to the **[!UICONTROL Setup]** step.
-
-4. In the **[!UICONTROL Authentication]** step, enter a **[!UICONTROL Name]** and a **[!UICONTROL Description]** for your activation flow and fill your account ID. <br> Also in this step, you can select any marketing action that should apply to this destination. Marketing actions indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing actions or you can create your own marketing action. For more information about marketing actions, see the [Data usage policies overview](https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html).
-
-    ![Connect to YOURDESTINATION](./assets/yourdestination2.png)
-
-5. Your destination is now created. You can select **[!UICONTROL Save & Exit]** if you want to activate segments later on or you can select **[!UICONTROL Next]** to continue the workflow and select segments to activate. In either case, see the next section, [Activate segments](#activate-segments), for the rest of the workflow.
-
--->
-
 ## 세그먼트를 이 대상에 활성화 {#activate}
 
 읽기 [스트리밍 세그먼트 내보내기 대상으로 프로필 및 세그먼트를 활성화합니다](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en) 대상 세그먼트를 이 대상으로 활성화하는 방법에 대한 지침입니다.
-
-<!--
-
-To activate segments to *YOURDESTINATION*, follow the steps below: 
-
-1. In **[!UICONTROL Destinations > Browse]**, select the *YOURDESTINATION* destination where you want to activate your segments.
-
-2. Click the name of the destination. This takes you to the Activate flow.
-    ![activate-flow](./assets/yourdestination3.png)
-    Note that if an activation flow already exists for a destination, you can see the segments that are currently being sent to the destination. Select **[!UICONTROL Edit activation]** in the right rail and follow the steps below to modify the activation details.
-3. Select **[!UICONTROL Activate]**;
-4. In the **[!UICONTROL Activate destination]** workflow, on the **[!UICONTROL Select Segments]** page, select which segments to send to *YOURDESTINATION*.
-    ![segments-to-destination](./assets/activate-segments-google-customer-match.png)
-5.  In the **[!UICONTROL Mapping]** step, select which attributes and identities from the source XDM schema to map to the target schema. Select **[!UICONTROL Add new mapping]** and browse your schema, select identity namespaces and map them to the corresponding target identity.  
-![identity mapping initial screen](./assets/gcm-identity-mapping.png) <br>&nbsp;
-   *Plain text email address as primary identity*: If you have plain text (unhashed) email addresses as primary identity in your schema, select the email field in your **[!UICONTROL Source Attributes]** and map to the Email field in the right column under **[!UICONTROL Target Identities]**, as shown below. Set up a mapping between any other attributes you plan to use.
-   ![identity mapping step](./assets/ssd-template-identity.png) <br>&nbsp;
-6. On the **[!UICONTROL Segment schedule]** page, you can set the start date for sending data to the destination.
-7. On the **[!UICONTROL Review]** page, you can see a summary of your selection. Select **[!UICONTROL Cancel]** to break up the flow, **[!UICONTROL Back]** to modify your settings, or **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination.
-
->[!IMPORTANT]
->
->In this step, Adobe Experience Platform checks for data usage policy violations. Shown below is an example where a policy is violated. You cannot complete the segment activation workflow until you have resolved the violation. For information on how to resolve policy violations, see [Policy enforcement](https://experienceleague.adobe.com/docs/experience-platform/data-governance/enforcement/auto-enforcement.html#enforcement) in the data governance documentation section.
- 
-![confirm-selection](./assets/data-policy-violation.png)
-
-If no policy violations have been detected, select **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination.
-
-![confirm-selection](./assets/gcm-review.png)
-
--->
 
 ## 내보낸 데이터 / 데이터 내보내기 유효성 검사 {#exported-data}
 
