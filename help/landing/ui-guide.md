@@ -5,7 +5,7 @@ title: Experience Platform UI 개요
 topic-legacy: ui guide
 description: Adobe Experience Platform
 exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
-source-git-commit: 8236806efae6a4f570c3dd2ef78e80184e189b84
+source-git-commit: 5fb7284760489fc526b5891d258c51ed20a2b095
 workflow-type: tm+mt
 source-wordcount: '1809'
 ht-degree: 2%
@@ -164,7 +164,7 @@ Offer Decisioning 은 Adobe Experience Platform과 통합된 애플리케이션 
 
 ### [!UICONTROL 관리]
 
-플랫폼 사용자 인터페이스(UI)는 일일 스냅샷 중에 캡처된 대로 조직의 라이선스 사용에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다. 이 대시보드에 액세스하려면 **[!UICONTROL 라이선스 사용]** 를 클릭합니다. 라이선스 사용 대시보드에 대한 자세한 내용은 [라이선스 사용 대시보드 안내서](license-usage-dashboard.md).
+플랫폼 사용자 인터페이스(UI)는 일일 스냅샷 중에 캡처된 대로 조직의 라이선스 사용에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다. 이 대시보드에 액세스하려면 **[!UICONTROL 라이선스 사용]** 를 클릭합니다. 라이선스 사용 대시보드에 대한 자세한 내용은 [라이선스 사용 대시보드 안내서](./license-usage-and-guardrails/license-usage-dashboard.md).
 
 >[!IMPORTANT]
 >

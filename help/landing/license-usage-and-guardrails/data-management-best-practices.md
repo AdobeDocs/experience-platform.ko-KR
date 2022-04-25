@@ -1,0 +1,202 @@
+---
+keywords: Experience Platform;홈;인기 항목;데이터 관리;라이선스 자격;라이선스;우수 사례
+title: 데이터 관리 라이선스 자격 모범 사례
+description: 이 문서에서는 Adobe Experience Platform을 사용하여 라이선스 자격을 더 잘 관리하는 데 사용할 수 있는 및 도구에 대한 모범 사례에 대해 설명합니다.
+source-git-commit: 3bac35ba5f6e9cde6c1324b11220c523daa1f8cb
+workflow-type: tm+mt
+source-wordcount: '2603'
+ht-degree: 0%
+
+---
+
+# 데이터 관리 라이선스 자격 모범 사례
+
+Adobe Experience Platform은 실시간으로 업데이트되는 강력한 고객 프로필로 데이터를 변환하는 오픈 시스템입니다. 또한 AI 기반의 인사이트를 사용하여 모든 채널에서 최적의 경험을 제공할 수 있습니다. 소스를 사용하여 Experience Platform에 다양한 유형, 볼륨 및 히스토리의 데이터를 수집한 다음, 세그멘테이션 및 개인화부터 분석 및 시스템 학습에 이르는 사용 사례를 제공할 수 있습니다.
+
+플랫폼은 만들 수 있는 프로필 수와 가져올 수 있는 데이터 양을 설정하는 라이선스를 제공합니다. 모든 소스, 볼륨 또는 데이터 기록을 가져올 수 있는 용량이 주어지면 데이터 볼륨이 확장되면 라이선스 자격을 초과할 수 있습니다.
+
+이 문서에서는 Adobe Experience Platform을 사용하여 라이선스 자격을 더 잘 관리하는 데 사용할 수 있는 및 도구에 대한 모범 사례에 대해 설명합니다.
+
+## Adobe Experience Platform 데이터 저장소 이해
+
+Experience Platform은 주로 다음 두 개의 데이터 리포지토리로 구성됩니다. a [!DNL Data Lake] 및 프로필 스토어를 참조하십시오.
+
+다음 **[!DNL Data Lake]** 는 주로 다음 용도로 사용됩니다.
+
+* Experience Platform으로 데이터를 온보딩하기 위한 스테이징 영역 역할을 합니다.
+* 모든 Experience Platform 데이터에 대한 장기 데이터 저장소 역할을 합니다.
+* 데이터 분석 및 데이터 과학과 같은 사용 사례를 활성화합니다.
+
+다음 **프로필 저장소** 은 고객 프로필이 생성되고 주로 다음 용도로 사용됩니다.
+
+* 실시간 경험을 지원하는 데 사용되는 프로필에 대한 데이터 저장소 역할을 합니다.
+* 세그먼테이션, 활성화 및 개인화와 같은 사용 사례를 활성화합니다.
+
+>[!NOTE]
+>
+>액세스 권한 [!DNL Data Lake] 은 구입한 제품 SKU에 따라 달라질 수 있습니다. 제품 SKU에 대한 자세한 내용은 Adobe 담당자에게 문의하십시오.
+
+## 라이선스 사용 {#license-usage}
+
+라이센스 Experience Platform 시 SKU에 따라 달라질 수 있는 라이선스 사용 자격이 제공됩니다.
+
+**[!DNL Addressable Audience]** - 알려진 프로필과 익명의 프로필을 포함하여 Experience Platform에서 계약상으로 허용되는 총 고객 프로필 수입니다.
+
+**[!DNL Profile Richness]** - Experience Platform에 있는 프로필 데이터의 평균 크기입니다. 사용자의 [!DNL Profile Richness] 부유한 팩을 구입하여 받을 자격.
+
+다음 [!DNL Profile Richness] 지표는 구입한 라이센스에 따라 다릅니다. 다음 두 가지 계산이 있습니다 [!DNL Profile Richness] 사용 가능:
+
+* 언제든지 Real-time Customer Data Platform(즉, 프로필 서비스 및 ID 서비스) 내에 저장된 모든 프로덕션 데이터의 합계를 로 분할합니다. [!DNL Addressable Audience];
+* 플랫폼 내에 저장된 모든 데이터의 합계(다음을 포함하되 이에 제한되지 않음) [!DNL Data Lake], 프로필 서비스 및 ID 서비스 )를 설정하는 것이 좋습니다. [!DNL Addressable Audience].
+
+이러한 지표의 가용성과 이러한 각 지표의 구체적인 정의는 조직이 구입한 라이센스에 따라 다릅니다.
+
+## 라이선스 사용 대시보드
+
+Adobe Experience Platform UI는 플랫폼에 대한 조직의 라이선스 관련 데이터의 스냅숏을 볼 수 있는 대시보드를 제공합니다. 대시보드의 데이터는 스냅샷을 가져온 특정 시점의 데이터와 동일하게 표시됩니다. 스냅샷은 근사값이나 데이터 샘플이 아니며, 대시보드가 실시간으로 업데이트되지 않습니다.
+
+자세한 내용은 [플랫폼 UI에서 라이선스 사용 대시보드 사용](../../dashboards/guides/license-usage.md#license-usage-dashboard-data).
+
+## 데이터 관리 우수 사례
+
+다음 섹션에서는 데이터를 보다 효율적으로 관리하기 위해 따라야 할 모범 사례에 대해 설명합니다.
+
+### 데이터 이해
+
+Adobe Experience Platform에서 모든 데이터가 동일한 것은 아닙니다. 일부 데이터는 조밀하지만 가치가 낮은 반면, 다른 데이터는 희소하지만 가치가 높은 것입니다. 일부 데이터는 생성되는 즉시 가치를 상실하지만 다른 데이터는 몇 년이 아닌 경우 몇 개월 동안 유용할 수 있습니다.
+
+데이터 값을 이해하는 데 고려해야 할 세 가지 차원이 있습니다.
+
+| 차원 | 설명 | 예 |
+| --- | --- | --- |
+| 볼륨 | 수집된 데이터의 양과 총계를 나타냅니다. | 웹 클릭 수 - 대량 및 순차적 조정 값은 빠르게 감소할 수 있습니다. |
+| 타임판 | 수집된 데이터가 계속 중요한 상태를 유지하는 시간을 나타냅니다. | 오프라인 구매 - 볼륨과 충실도를 조정하지만 장기간 동안 유용할 수 있습니다. |
+| Fidelity | 데이터가 정보와 함께 얼마나 풍부한지를 나타냅니다. | 고객 계정 - 부피가 낮지만 정확도가 높습니다. 고객의 생애 이상으로 가치 있을 수 있습니다. |
+
+### 데이터 관리 도구 {#data-management-tools}
+
+데이터 사용이 라이선스 자격 제한 내에 유지되도록 할 때 고려해야 할 두 가지 중앙 시나리오가 있습니다.
+
+### 플랫폼으로 가져올 데이터
+
+Platform에서 하나 이상의 시스템으로 데이터를 수집할 수 있습니다. 즉, [!DNL Data Lake] 및/또는 프로필 스토어. 즉, 서로 다른 여러 사용 사례를 위해 두 시스템에 서로 다른 데이터가 있을 수 있습니다. 예를 들어 [!DNL Data Lake]하지만 프로필 저장소에 없습니다. 프로필 수집을 위해 데이터 세트를 활성화하여 프로필 스토어에 전송할 데이터를 선택할 수 있습니다.
+
+>[!NOTE]
+>
+>액세스 권한 [!DNL Data Lake] 은 구입한 제품 SKU에 따라 달라질 수 있습니다. 제품 SKU에 대한 자세한 내용은 Adobe 담당자에게 문의하십시오.
+
+### 어떤 데이터를 보관해야 합니까?
+
+데이터 수집 필터와 만료 규칙(Time-To-Live &quot;TTL&quot;이라고도 함)을 모두 적용하여 사용 사례에서 더 이상 사용되지 않는 데이터를 제거할 수 있습니다. 일반적으로 행동 데이터(예: Analytics 데이터)는 레코드 데이터(예: CRM 데이터)보다 훨씬 더 많은 저장소를 사용합니다. 예를 들어, 많은 Platform 사용자가 레코드 데이터와 비교하여 동작 데이터만으로 채워지는 프로필의 최대 90% 이상을 가지고 있습니다. 따라서 라이선스 권한 내에서 규정을 준수하려면 행동 데이터를 관리하는 것이 중요합니다.
+
+라이선스 사용 권한 내에서 유지할 수 있는 다양한 도구가 있습니다.
+
+* [수집 필터](#ingestion-filters)
+* [프로필 서비스 TTL](#profile-service)
+
+### 수집 필터 {#ingestion-filters}
+
+수집 필터를 사용하면 사용 사례에 필요한 데이터만 가져오고 필요하지 않은 모든 이벤트를 필터링할 수 있습니다.
+
+| 수집 필터 | 설명 |
+| --- | --- |
+| Adobe Audience Manager 소스 필터링 | Adobe Audience Manager 소스 연결을 만들 때 로 가져올 세그먼트와 트레이트를 선택하고 선택할 수 있습니다 [!DNL Data Lake] 및 프로필 서비스 를 사용해야 합니다. 다음 안내서를 참조하십시오. [Audience Manager 소스 연결 만들기](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) 추가 정보. |
+| Adobe Analytics 데이터 준비 | 다음을 사용할 수 있습니다 [!DNL Data Prep] 분석 소스 연결을 만들어 사용 사례에 필요하지 않은 데이터를 필터링할 때의 기능. 사용 [!DNL Data Prep]를 사용하면 프로필에 게시해야 하는 속성/열을 정의할 수 있습니다. 또한 데이터가 프로필에 게시되어야 하는지 아니면 단지 [!DNL Data Lake]. 다음 안내서를 참조하십시오. [analytics 소스 연결 만들기](../../sources/tutorials/ui/create/adobe-applications/analytics.md) 추가 정보. |
+| 프로필에 대한 데이터 세트 활성화/비활성화 지원 | 프로필 서비스에 데이터를 수집하려면 프로필 저장소에서 사용할 데이터 세트를 활성화해야 합니다. 이렇게 하면 가 [!DNL Addressable Audience] 및 [!DNL Profile Richness] 권한 부여. 데이터 세트가 더 이상 고객 프로필 사용 사례에 필요하지 않으면 해당 데이터 세트의 Profile 통합을 비활성화하여 데이터가 라이센스를 준수하도록 유지할 수 있습니다. 다음 안내서를 참조하십시오. [프로필에 대한 데이터 세트 활성화 및 비활성화](../../catalog/datasets/enable-for-profile.md) 추가 정보. |
+| 웹 SDK 및 모바일 SDK 데이터 제외 | 웹 및 Mobile SDK에서 수집하는 데이터에는 두 가지 유형이 있습니다. 자동으로 수집된 데이터와 개발자가 명시적으로 수집하는 데이터입니다. 라이선스 호환성을 더 잘 관리하기 위해 컨텍스트 설정을 통해 SDK 구성에서 자동 데이터 수집을 비활성화할 수 있습니다. 사용자 지정 데이터는 개발자가 제거하거나 설정할 수도 없습니다. 다음 안내서를 참조하십시오. [sdk 기본 사항 구성](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en#fundamentals) 추가 정보. |
+| 서버 측 전달 데이터 제외 | 서버측 전달을 사용하여 Platform에 데이터를 보내는 경우 규칙 작업의 매핑을 제거하여 모든 이벤트에서 제외하거나 특정 이벤트에 대해서만 데이터가 실행되도록 규칙에 조건을 추가하여 어떤 데이터가 전송되는지 제외할 수 있습니다. 다음 문서를 참조하십시오. [이벤트 및 조건](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/rules.html#events-and-conditions-(if)) 추가 정보. |
+
+{style=&quot;table-layout:auto&quot;}
+
+### 프로필 서비스 {#profile-service}
+
+프로필 서비스 TTL(time-to-live) 기능을 사용하면 프로필 저장소의 데이터에 TTL을 적용할 수 있습니다. 이렇게 하면 시간이 지남에 따라 값이 감소된 데이터를 자동으로 제거할 수 있습니다.
+
+프로필 저장소는 다음 구성 요소로 구성됩니다.
+
+| 프로필 저장소 구성 요소 | 설명 |
+| --- | --- |
+| 프로필 조각 | 각 고객 프로필은 여러 개로 구성됩니다 **프로필 조각** 이러한 ID가 병합되어 해당 고객에 대한 단일 뷰를 형성했습니다. 예를 들어 고객이 여러 채널에서 브랜드와 상호 작용하는 경우 조직에 여러 개가 있습니다 **프로필 조각** 여러 데이터 세트에 나타나는 해당 단일 고객과 관련되어 있습니다. 이러한 조각을 Platform에 수집하면 ID 그래프를 사용하여 함께 결합하여 해당 고객에 대한 단일 프로필을 만듭니다. **프로필 조각** id 네임스페이스로 구성되며, 연결된 레코드 데이터 및/또는 시계열 데이터가 있습니다. |
+| 레코드 데이터(속성) | 프로필은 여러 항목으로 구성된 주체, 조직 또는 개인을 나타냅니다 **속성** ( **레코드 데이터**). 예를 들어 제품 프로필에 SKU 및 설명이 포함될 수 있지만, 사람의 프로필에 이름, 성 및 이메일 주소와 같은 정보가 포함되어 있습니다. **데이터 기록** 는 일반적으로 부피가 낮거나 조정되지만 장기간 동안 중요합니다. |
+| 시계열 데이터(동작) | **시계열 데이터** 사용자 동작에 대한 정보를 제공합니다. 표준 스키마 클래스 XDM(Experience Data Model)로 표시됩니다 [!DNL ExperienceEvent], 시계열 데이터는 장바구니에 추가되는 항목, 클릭된 링크, 열람된 비디오와 같은 이벤트를 설명할 수 있습니다. 행동의 값은 시간이 지남에 따라 줄어들 수 있습니다. |
+| ID 네임스페이스(ID) | 고객 데이터가 함께 제공되면 **id 네임스페이스**, 그리고 사용자에 대해 더 많은 정보가 알려진 대로 이러한 ID를 함께 결합하는 기능. 자세한 내용은 [id 네임스페이스 개요](../../identity-service/namespaces.md) 추가 정보. |
+
+{style=&quot;table-layout:auto&quot;}
+
+#### 프로필 저장소 구성 보고서
+
+프로필 저장소의 구성을 이해하는 데 도움이 되는 많은 보고서를 사용할 수 있습니다. 이러한 보고서는 프로필 TTL을 설정하는 방법 및 위치를 파악하여 라이선스 사용을 보다 효과적으로 최적화하는 데 도움이 됩니다.
+
+* **데이터 집합 Overlap Report API**: 대응 가능 대상에 가장 많이 기여하는 데이터 세트를 표시합니다. 이 보고서를 사용하여 어떤 [!DNL ExperienceEvent] TTL을 설정할 데이터 세트입니다. 다음에서 자습서를 참조하십시오. [데이터 집합 중복 보고서 생성](../../profile/tutorials/dataset-overlap-report.md) 추가 정보.
+* **ID Overlap Report API**: 대응 가능 대상에 가장 많이 기여하는 ID 네임스페이스를 노출합니다. 다음에서 자습서를 참조하십시오. [id 중복 보고서 생성](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report) 추가 정보.
+* **알 수 없는 프로필 보고서 API**: 다른 시간 임계값에 대해 익명의 TTL을 적용할 때 영향을 줍니다. 이 보고서를 사용하여 적용할 익명의 TTL 임계값을 식별할 수 있습니다. 다음에서 자습서를 참조하십시오. [알 수 없는 프로필 보고서 생성](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) 추가 정보.
+
+#### [!DNL ExperienceEvent] 데이터 집합 TTL {#dataset-ttl}
+
+프로필 사용 데이터 세트에 TTL을 적용하여 사용 사례에 더 이상 중요하지 않은 행동 데이터를 프로필 저장소에서 제거할 수 있습니다. TTL이 프로필 사용 데이터 세트에 적용되면 Platform은 두 부분으로 구성된 프로세스를 통해 더 이상 필요하지 않은 데이터를 자동으로 제거합니다.
+
+* 앞으로 이동하는 모든 새 데이터에는 수집 시 적용되는 TTL 만료 값이 있습니다.
+* 모든 기존 데이터는 1회 채우기 시스템 작업의 일부로 적용된 TTL 만료 값을 갖습니다.
+
+각 이벤트의 TTL 값이 이벤트 타임스탬프에서 나올 수 있습니다. TTL 만료 값보다 오래된 모든 이벤트는 시스템 작업이 실행될 때 즉시 삭제됩니다. 다른 모든 이벤트는 이벤트 타임스탬프에서 지정된 TTL 만료 값에 도달하면 삭제됩니다.
+
+다음 예를 참조하여 다음 내용을 이해하십시오. [!DNL ExperienceEvent] 데이터 집합 TTL입니다.
+
+5월 15일에 TTL 값을 30일로 적용하는 경우,
+
+* 모든 새로운 이벤트는 들어올 때 TTL이 적용됩니다.
+* 4월 15일보다 오래된 타임스탬프가 있는 기존 이벤트는 시스템 작업에 의해 즉시 삭제됩니다.;
+* 4월 15일 이후 타임스탬프가 있는 이벤트는 이벤트 타임스탬프 + TTL 일의 만료 기간을 갖습니다. 따라서 4월 18일 타임스탬프가 있는 이벤트는 5월 15일 이후 3일 동안 줄어듭니다.
+
+>[!IMPORTANT]
+>
+>TTL이 적용되면 선택한 TTL 수보다 오래된 모든 데이터는 **영구적으로** 삭제되었으며 복원할 수 없습니다.
+
+TTL을 적용하기 전에 TTL 경계 내에 모든 세그먼트의 전환 확인 기간을 유지해야 합니다. 그렇지 않으면 TTL이 적용된 후 세그먼트 결과가 올바르지 않을 수 있습니다. 예를 들어, Adobe Analytics 데이터에 대해 TTL(30일)을 적용하고 저장 중 트랜잭션 데이터에 대해 365일 TTL을 적용하면 다음 세그먼트가 잘못된 결과를 만듭니다.
+
+* 지난 60일 동안 제품 페이지를 본 후 매장 내에서 구매했습니다.
+* 지난 60일 동안 장바구니에 구매 후 를 추가합니다.
+
+반대로 다음과 같은 경우 여전히 올바른 결과가 생성됩니다.
+
+* 지난 14일 동안 제품 페이지를 본 후, 스토어 내 구매를 수행하면
+* 지난 30일 동안 특정 도움말 페이지를 온라인에서 열람했습니다.
+* 지난 120일 동안 오프라인으로 제품을 구입했습니다.
+* 지난 14일 동안 장바구니에 구매가 뒤따릅니다.
+
+>[!TIP]
+>
+>편의상, 모든 데이터 세트에 대해 동일한 TTL을 유지할 수 있으므로 세그멘테이션 로직의 데이터 세트 간에 TTL이 미치는 영향에 대해 걱정할 필요가 없습니다.
+
+프로필 데이터에 TTL을 적용하는 방법에 대한 자세한 내용은 [프로필 서비스 TTL](../../profile/apply-ttl.md).
+
+## 라이센스 사용 규정 준수에 대한 모범 사례 요약 {#best-practices}
+
+다음은 라이선스 사용 권한을 더 잘 준수하기 위해 따라야 할 몇 가지 권장 모범 사례 목록입니다.
+
+* 를 사용하십시오 [라이선스 사용 대시보드](../../dashboards/guides/license-usage.md) 고객 사용 트렌드를 추적 및 모니터링합니다. 이를 통해 발생할 수 있는 모든 잠재적인 초과 상황을 미리 파악할 수 있습니다.
+* 구성 [수집 필터](#ingestion-filters) 세그먼테이션 및 개인화 사용 사례에 필요한 이벤트 식별 이를 통해 사용 사례에 필요한 중요한 이벤트만 보낼 수 있습니다.
+* 다음과 같은 경우에만 [프로필에 대해 활성화된 데이터 세트](#ingestion-filters) 세그먼테이션 및 개인화 사용 사례에 필요합니다.
+* 구성 [[!DNL ExperienceEvent] 데이터 집합 TTL](#dataset-ttl) 웹 데이터와 같은 고빈도 데이터의 경우.
+* 정기적으로 [프로필 구성 보고서](#profile-store-composition-reports) 프로필 스토어 구성을 이해합니다. 이를 통해 라이선스 사용에 가장 많이 기여하는 데이터 소스를 파악할 수 있습니다.
+
+## 기능 요약 및 가용성 {#feature-summary}
+
+이 문서에 설명된 우수 사례 및 도구는 Adobe Experience Platform 내에서 라이선스 자격 사용을 더 잘 관리하는 데 도움이 됩니다. 이 문서는 모든 Experience Platform 고객에게 가시성과 제어력을 제공하는 데 도움이 되는 추가 기능이 릴리스되면 업데이트됩니다.
+
+다음 표는 라이선스 사용 권한을 보다 효율적으로 관리하기 위해 현재 사용 가능한 기능 목록을 정리해 놓은 것입니다.
+
+| 기능 | 설명 |
+| --- | --- |
+| [프로필에 대한 데이터 세트 활성화/비활성화](../../catalog/datasets/user-guide.md) | 프로필 서비스에 데이터 집합 섭취 활성화 또는 비활성화 |
+| [!DNL ExperienceEvent] 데이터 집합 TTL | 프로필 저장소의 동작 데이터 세트에 대한 TTL 만료를 적용합니다. Adobe 지원 담당자에게 문의하십시오. |
+| [Adobe Analytics 데이터 준비 필터](../../sources/tutorials/ui/create/adobe-applications/analytics.md) | 적용 [!DNL Kafka] 불필요한 데이터를 수집에서 제외하는 필터 |
+| [Adobe Audience Manager 소스 커넥터 필터](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) | Audience Manager 소스 연결 필터를 적용하여 불필요한 데이터를 수집에서 제외 |
+| [Alloy SDK 데이터 필터](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en#fundamentals) | 합금 필터를 적용하여 불필요한 데이터를 수집에서 제외 |
+| [서버측 데이터 필터](https://experienceleague.adobe.com/docs/launch/using/server-side-info/server-side-overview.html?lang=en-better-data-governance) | 적용 [!DNL Kafka] 불필요한 데이터를 수집에서 제외하는 필터.  다음 문서를 참조하십시오. [이벤트 및 조건](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/rules.html#events-and-conditions-(if)) 추가 정보. |
+| [라이선스 사용 대시보드 UI](../../dashboards/guides/license-usage.md#license-usage-dashboard-data) | Experience Platform을 위해 조직의 라이선스 관련 데이터에 대한 스냅샷 보기 |
+| [데이터 집합 Overlap Report API](../../profile/tutorials/dataset-overlap-report.md) | 대응 가능 대상에 가장 많이 기여하는 데이터 세트를 출력합니다 |
+| [알 수 없는 프로필 보고서 API](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) | 다른 시간 임계값에 대해 익명의 TTL 적용 효과를 출력합니다. |
+| [ID Overlap Report API](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report) | 대응 가능 대상에 가장 많이 기여하는 ID 네임스페이스를 출력합니다 |
+
+{style=&quot;table-layout:auto&quot;}

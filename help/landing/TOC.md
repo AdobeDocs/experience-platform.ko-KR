@@ -3,9 +3,9 @@ audience: user
 user-guide-title: Adobe Experience Platform 개요
 breadcrumb-title: Experience Platform 개요
 user-guide-description: Experience Platform을 통해 개인화된 경험을 실시간으로 고객에게 전달하는 방법을 살펴볼 수 있습니다.
-source-git-commit: 520405601dccc649b983da2b8f999f3862dd140b
+source-git-commit: ba2df1ca905bfe2d0f8868ef658b369b28eb9af3
 workflow-type: tm+mt
-source-wordcount: '235'
+source-wordcount: '245'
 ht-degree: 27%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 27%
    * [플랫폼 API 시작](api-guide.md)
    * [ Platform API 인증 및 액세스](api-authentication.md)
    * [API 기본 사항](api-fundamentals.md)
-   * [Platform API에서 Postman 사용](postman.md)
+   * [플랫폼 API에서 Postman 사용](postman.md)
    * [API 참조 문서](https://www.adobe.com/go/platform-api-reference-en)
 * 플랫폼 설명서 {#documentation}
    * [개요](documentation/overview.md)
@@ -58,7 +58,9 @@ ht-degree: 27%
       * [Platform Web SDK를 통합하여 동의 및 기본 설정 데이터를 처리합니다](./governance-privacy-security/consent/sdk.md)
    * 감사 로그 {#audit-logs}
       * [개요](./governance-privacy-security/audit-logs/overview.md)
-* [라이선스 사용 대시보드](license-usage-dashboard.md)
+* 라이센스 사용 및 보호 기능 {#license}
+   * [데이터 관리 라이선스 자격 모범 사례](./license-usage-and-guardrails/data-management-best-practices.md)
+   * [라이선스 사용 대시보드](./license-usage-and-guardrails/license-usage-dashboard.md)
 * [문제 해결 안내서](troubleshooting.md)
 * [Gen2 데이터 레이크 마이그레이션](adls2-gen2-migration.md)
 * [용어집](glossary.md)
