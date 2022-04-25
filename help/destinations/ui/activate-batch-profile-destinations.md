@@ -6,9 +6,9 @@ seo-title: Activate audience data to batch profile export destinations
 description: 세그먼트를 배치 프로필 기반 대상으로 보내 Adobe Experience Platform에서 보유한 대상 데이터를 활성화하는 방법을 알아봅니다.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: c87bf1cbf8471c178597523b06d7d109c0c87a3e
+source-git-commit: a4c70c00bf2c44abc292d189de013eb1a243bdb0
 workflow-type: tm+mt
-source-wordcount: '2237'
+source-wordcount: '2209'
 ht-degree: 0%
 
 ---
@@ -77,12 +77,12 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_aftersegmentevaluation"
 >title="세그먼트 평가 후 활성화"
->abstract="활성화는 일별 세그먼테이션 작업이 완료된 후 즉시 실행됩니다. 이렇게 하면 최신 프로필을 내보낼 수 있습니다. 올바른 연결을 위해 이 팝오버를 새 활성화 체인 섹션으로 이동해야 합니다."
+>abstract="활성화는 일별 세그먼테이션 작업이 완료된 후 즉시 실행됩니다. 이렇게 하면 최신 프로필을 내보낼 수 있습니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_scheduled"
 >title="예약된 활성화"
->abstract="활성화는 하루 중 고정된 시간에 실행됩니다. 올바른 연결을 위해 이 팝오버를 새 활성화 체인 섹션으로 이동해야 합니다."
+>abstract="활성화는 하루 중 고정된 시간에 실행됩니다."
 
 선택 **[!UICONTROL 전체 파일 내보내기]** 을(를) 사용하여 선택한 세그먼트에 대한 모든 프로필 자격에 대한 전체 스냅숏이 포함된 파일 내보내기를 트리거합니다.
 
