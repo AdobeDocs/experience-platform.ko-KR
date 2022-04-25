@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 소스 커넥터 도움말
 breadcrumb-title: Source Connectors 안내서
 user-guide-description: 다양한 소스 또는 구조에서 데이터를 수집하고 레이블을 지정하며 기존에 수집한 데이터를 향상시킬 수 있습니다.
 feature: Sources
-source-git-commit: 66dafe4bca6e1eb0fc67a745ac20a6e0b119aa39
+source-git-commit: cc966bccf28dcc915d5c19eab7614d6e80a7e67f
 workflow-type: tm+mt
-source-wordcount: '773'
+source-wordcount: '777'
 ht-degree: 13%
 
 ---
@@ -88,6 +88,7 @@ ht-degree: 13%
       - [Salesforce Marketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
    - 결제 {#payments}
       - [PayPal 커넥터](connectors/payments/paypal.md)
+      - [정사각형 커넥터](connectors/payments/square.md)
    - 프로토콜 {#protocols}
       - [일반 OData 커넥터](connectors/protocols/odata.md)
       - [일반 REST API 커넥터](connectors/protocols/generic-rest.md)
@@ -150,6 +151,7 @@ ht-degree: 13%
          - [Salesforce Marketing Cloud](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
       - 결제 {#payments}
          - [PayPal](tutorials/api/create/payments/paypal.md)
+         - [사각형](tutorials/api/create/payments/square.md)
       - 프로토콜 {#protocols}
          - [일반 OData](tutorials/api/create/protocols/odata.md)
          - [일반 REST API](tutorials/api/create/protocols/generic-rest.md)
@@ -248,6 +250,7 @@ ht-degree: 13%
          - [Salesforce Marketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
       - 결제 {#payments}
          - [PayPal](tutorials/ui/create/payments/paypal.md)
+         - [사각형](tutorials/ui/create/payments/square.md)
       - 프로토콜 {#protocols}
          - [일반 OData](tutorials/ui/create/protocols/odata.md)
       - 스트리밍 {#streaming}
