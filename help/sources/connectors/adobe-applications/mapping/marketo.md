@@ -5,16 +5,20 @@ title: Marketo Engage 소스에 대한 매핑 필드
 topic-legacy: overview
 description: 아래 표에는 Marketo 데이터 세트의 필드와 해당 XDM 필드 간의 매핑이 포함되어 있습니다.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: f5d341daffd7d4d77ee816cc7537b0d0c52ca636
+source-git-commit: 3f4c7c5a5b792476cb46afe886af5a469edfe745
 workflow-type: tm+mt
-source-wordcount: '532'
-ht-degree: 8%
+source-wordcount: '608'
+ht-degree: 7%
 
 ---
 
 # [!DNL Marketo Engage] 필드 매핑
 
 아래 표에는 9개의 필드에 대한 매핑이 포함되어 있습니다 [!DNL Marketo] 데이터 세트 및 해당 XDM(Experience Data Model) 필드를 포함합니다.
+
+>[!TIP]
+>
+>모두 [!DNL Marketo] 데이터 세트를 제외한 데이터 세트 `Activities` 이제 지원 `isDeleted`. 기존 데이터 흐름에는 자동으로 포함됩니다 `isDeleted`하지만 는 새로 수집된 데이터에 대해서만 플래그를 수집합니다. 모든 이전 데이터에 플래그를 적용하려면 기존 데이터 흐름을 중지하고 새 매핑으로 다시 만들어야 합니다. 제거할 경우 `isDeleted`로 설정되면 더 이상 기능에 액세스할 수 없습니다. 매핑이 자동 채워진 후에 유지되어야 합니다.
 
 ## 활동 {#activities}
 
@@ -118,6 +122,7 @@ ht-degree: 8%
 | `webinarHistorySyncDate` | `webinarHistorySyncDate` |
 | `startDate` | `campaignStartDate` |
 | `endDate` | `campaignEndDate` |
+| `marketoIsDeleted` | `isDeleted` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -148,6 +153,7 @@ ht-degree: 8%
 | `sfdc.firstRespondedDate` | `firstRespondedDate` |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
+| `marketoIsDeleted` | `isDeleted` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -177,6 +183,7 @@ ht-degree: 8%
 | `companyNotes` | `accountDescription` |
 | `site` | `accountSite` |
 | `iif(mktoCdpParentOrgId != null && mktoCdpParentOrgId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", concat(mktoCdpParentOrgId, ".mkto_org"), "sourceKey", concat(mktoCdpParentOrgId, ".mkto_org@${MUNCHKIN_ID}.Marketo")), null)` | `accountParentKey` |
+| `marketoIsDeleted` | `isDeleted` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -192,6 +199,7 @@ ht-degree: 8%
 | `description` | `marketingListDescription` |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
+| `marketoIsDeleted` | `isDeleted` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -206,6 +214,7 @@ ht-degree: 8%
 | `iif(staticListID != null && staticListID != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", staticListID, "sourceKey", concat(staticListID,"@${MUNCHKIN_ID}.Marketo")), null)` | `marketingListKey` | 관계 |
 | `iif(personID != null && personID != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", personID, "sourceKey", concat(personID,"@${MUNCHKIN_ID}.Marketo")), null)` | `personKey` | 관계 |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
+| `marketoIsDeleted` | `isDeleted` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -235,6 +244,7 @@ ht-degree: 8%
 | `name` | `accountName` |
 | `iif(parentAccountId != null && parentAccountId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}", "sourceID", concat(parentAccountId, ".mkto_acct"), "sourceKey", concat(parentAccountId, ".mkto_acct@${MUNCHKIN_ID}.Marketo")), null)` | `accountParentKey` |
 | `sourceType` | `accountSourceType` |
+| `marketoIsDeleted` | `isDeleted` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -268,6 +278,7 @@ ht-degree: 8%
 | `lastActivityDate` | `lastActivityDate` |
 | `leadSource` | `leadSource` |
 | `nextStep` | `nextStep` |
+| `marketoIsDeleted` | `isDeleted` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -286,6 +297,7 @@ ht-degree: 8%
 | `isPrimary` | `isPrimary` |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
+| `marketoIsDeleted` | `isDeleted` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -338,6 +350,7 @@ ht-degree: 8%
 | `email` | `personComponents.workEmail.address` |
 | `email` | `workEmail.address` |
 | `iif(ecids != null, to_object('ECID',arrays_to_objects('id',explode(ecids))), null)` | `identityMap` | 계산된 필드입니다. |
+| `marketoIsDeleted` | `isDeleted` |
 
 {style=&quot;table-layout:auto&quot;}
 
