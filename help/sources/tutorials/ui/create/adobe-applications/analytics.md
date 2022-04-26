@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: UI에서 Adobe Analytics 소스 연결을 만들어 소비자 데이터를 Adobe Experience Platform으로 가져오는 방법을 알아봅니다.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 06232d4b567ba1d6bed55226aaa08147510c4498
+source-git-commit: 2cb6803ecf56dd9a7d9614c72e3a1ff4e76ba966
 workflow-type: tm+mt
-source-wordcount: '1578'
+source-wordcount: '1700'
 ht-degree: 1%
 
 ---
@@ -46,11 +46,17 @@ ht-degree: 1%
 
 ### 데이터 선택
 
-다음 **[!UICONTROL Analytics 소스 데이터 추가]** 단계가 나타납니다. 선택 **[!UICONTROL 보고서 세트]** analytics 보고서 세트 데이터에 대한 소스 연결 만들기를 시작한 다음 수집할 보고서 세트를 선택합니다. 선택할 수 없는 보고서 세트는 이 샌드박스 또는 다른 샌드박스에서 이미 수집되었습니다. 선택 **[!UICONTROL 다음]** 계속 진행합니다.
+다음 **[!UICONTROL Analytics 소스 데이터 추가]** 단계는 [!DNL Analytics] 보고서 세트 데이터를 사용하여 소스 연결을 만들 수 있습니다.
+
+하나의 활성 데이터 흐름만 사용하여 보고서 세트를 수집할 수 있습니다. 여러 데이터 흐름에서는 사용할 수 없습니다. 또한 보고서 세트는 소스 연결이 만들어지는 Platform Sandbox 인스턴스와 동일한 영역에 속해야 합니다. 선택할 수 없는 보고서 세트는 이 샌드박스 또는 다른 샌드박스에서 이미 섭취되었습니다.
+
+여러 개의 인바운드 연결을 만들어 여러 보고서 세트를 동일한 샌드박스로 가져올 수 있습니다. 보고서 세트에 변수(예: eVar 또는 이벤트)에 대한 스키마가 다른 경우 이러한 보고서 세트를 사용자 지정 필드 그룹의 특정 필드에 매핑해야 하며 [데이터 준비](../../../../../data-prep/ui/mapping.md). 보고서 세트는 단일 샌드박스에만 추가할 수 있습니다.
 
 >[!NOTE]
 >
->여러 개의 인바운드 연결을 만들어 여러 보고서 세트를 가져올 수 있지만 한 번에 하나의 보고서 세트만 Real-time Customer Data Platform에 사용할 수 있습니다.
+>의미가 다른 두 사용자 지정 속성(eVar, 목록 및 prop)과 같은 데이터 충돌이 없으면 여러 보고서 세트의 데이터를 XDM의 동일한 속성에 매핑할 수 없는 경우에만 실시간 고객 데이터 프로필에 대해 활성화할 수 있습니다.
+
+을(를) 만들려면 [!DNL Analytics] 소스 연결에서 보고서 세트를 선택한 다음 **[!UICONTROL 다음]** 계속 진행합니다.
 
 ![](../../../../images/tutorials/create/analytics/add-data.png)
 
@@ -60,7 +66,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->에 대한 데이터 준비 지원 [!DNL Analytics] 소스가 현재 베타 버전입니다. 기능 및 설명서는 변경될 수 있습니다.
+>데이터 준비 변환은 전체 데이터 플로우에 지연을 추가할 수 있습니다. 추가된 추가적인 지연은 변환 로직의 복잡성에 따라 달라집니다.
 
 매핑하기 전에 [!DNL Analytics] 데이터를 XDM 스키마를 타겟팅하려면 먼저 기본 스키마를 사용하는지 또는 사용자 지정 스키마를 사용하는지를 선택해야 합니다.
 
