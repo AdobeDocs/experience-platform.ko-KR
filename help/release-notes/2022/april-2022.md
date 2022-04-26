@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform 릴리스 노트 - 2022년 4월
 description: Adobe Experience Platform에 대한 2022년 4월 릴리스 노트입니다.
-source-git-commit: fe30444fb2d11c38433c73d88ee4c8e9a32bdff8
+source-git-commit: d09eb2e71a5ebce31aeaf8560c20f0c8595f5d19
 workflow-type: tm+mt
-source-wordcount: '1045'
-ht-degree: 4%
+source-wordcount: '1473'
+ht-degree: 5%
 
 ---
 
@@ -15,7 +15,10 @@ ht-degree: 4%
 Adobe Experience Platform의 기존 기능 업데이트:
 
 - [데이터 흐름](#dataflows)
+- [[!DNL Data Prep]](#data-prep)
 - [XDM(경험 데이터 모델)](#xdm)
+- [Real-time Customer Data Platform B2B 에디션](#B2B)
+- [소스](#sources)
 
 ## 데이터 흐름 {#dataflows}
 
@@ -30,6 +33,19 @@ Platform에서 데이터는 다양한 소스에서 수집되고 시스템 내에
 | 세그먼트 대시보드 | 이제 모니터링 대시보드를 사용하여 세그먼트의 데이터 흐름을 모니터링할 수 있습니다. 자세한 내용은 [UI에서 세그먼트 모니터링](../../dataflows/ui/monitor-segments.md) |
 
 데이터 흐름에 대한 자세한 내용은 [데이터 흐름 개요](../../dataflows/home.md). 세그멘테이션에 대해 자세히 알아보려면 [세분화 개요](../../segmentation/home.md).
+
+## [!DNL Data Prep] {#data-prep}
+
+[!DNL Data Prep] 데이터 엔지니어가 XDM(Experience Data Model) 을 통해 데이터를 매핑, 변환 및 확인할 수 있습니다.
+
+**업데이트된 기능**
+
+| 기능 | 설명 |
+| --- | --- |
+| Adobe Analytics 소스 지원 | 이제 Adobe Analytics 소스가 데이터 준비 기능을 지원하므로 데이터 스트림을 만들 때 Analytics 보고서 세트 데이터를 대상 XDM 스키마에 매핑할 수 있습니다. 다음에서 자습서를 참조하십시오. [analytics 소스 연결 만들기](../../sources/tutorials/ui/create/adobe-applications/analytics.md) 추가 정보. |
+| 기존 매핑 규칙 가져오기 지원 | 이제 기존 데이터 흐름에서 매핑 규칙을 가져와 데이터 흐름 구성을 가속화하고 오류를 제한할 수 있습니다. 다음에서 자습서를 참조하십시오. [기존 매핑 규칙 가져오기](../../data-prep/ui/mapping.md) 추가 정보. |
+
+자세한 내용은 [!DNL Data Prep]를 보려면 [[!DNL Data Prep] 개요](../../data-prep/home.md).
 
 ## XDM(경험 데이터 모델) {#xdm}
 
@@ -86,3 +102,30 @@ XDM은 Adobe Experience Platform으로 가져온 데이터에 대한 일반적�
 
 Platform의 XDM에 대한 자세한 내용은 [XDM 시스템 개요](../../xdm/home.md).
 
+### Real-time Customer Data Platform B2B 에디션 {#B2B}
+
+Real-time Customer Data Platform(실시간 CDP)를 기반으로 구축된 실시간 CDP B2B Edition은 비즈니스-비즈니스 서비스 모델로 운영되는 마케터를 위해 특별히 빌드되었습니다. 여러 소스의 데이터를 가져와서 사람 및 계정 프로필에 대한 단일 보기로 결합합니다. 이러한 통합 데이터를 통해 마케터는 특정 대상을 정확하게 타겟팅하고 사용 가능한 모든 채널에서 그러한 대상을 선택할 수 있습니다.
+
+**업데이트된 기능**
+
+| 기능 | 설명 |
+| --- | --- |
+| 지원 대상 `isDeleted` 기능 | 모두 [!DNL Marketo] 데이터 세트를 제외한 데이터 세트 `Activities` 이제 지원 `isDeleted` 매핑. 새 매핑은 기존 B2B 데이터 흐름에 자동으로 추가됩니다. 를 사용할 수 있습니다 `isDeleted` 매핑 을 사용하여 데이터를 [!DNL Data Lake] 는 소스 데이터와 일치합니다. 자세한 내용은 [[!DNL Marketo] 매핑 필드 안내서](../../sources/connectors/adobe-applications/mapping/marketo.md) 추가 정보 `isDeleted`. |
+
+Real-time Customer Data Platform B2B Edition에 대한 자세한 내용은 다음을 참조하십시오. [B2B 개요](../../rtcdp/b2b-overview.md).
+
+## 소스 {#sources}
+
+Adobe Experience Platform은 외부 소스에서 데이터를 수집하면서도 Platform 서비스를 사용하여 해당 데이터를 구조화, 레이블 지정 및 향상시킬 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 타사 소프트웨어 및 CRM 시스템과 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
+
+Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 쉽게 설정할 수 있는 RESTful API 및 대화형 UI를 제공합니다. 이러한 소스 연결을 통해 외부 스토리지 시스템 및 CRM 서비스를 인증 및 연결하고, 수집 실행 시간을 설정하고, 데이터 수집 처리량을 관리할 수 있습니다.
+
+**업데이트된 기능**
+
+| 기능 | 설명 |
+| --- | --- |
+| 지원 대상 [!DNL OneTrust Integration] | 이제 를 사용할 수 있습니다 [!DNL OneTrust Integration] 소스에서 동의 및 환경 설정 데이터를 수집할 수 있습니다. [!DNL OneTrust] Platform에 계정을 설정합니다. 다음 문서를 참조하십시오. [만들기 [!DNL OneTrust Integration] 소스 연결](../../sources/connectors/consent-and-preferences/onetrust.md) 추가 정보. |
+| 지원 대상 [!DNL Square] | 이제 를 사용할 수 있습니다 [!DNL Square] 출처: 결제 데이터를 수집하여 [!DNL Square] Platform에 계정을 설정합니다. |
+| 고객 속성 데이터 흐름 삭제 지원 | 이제 고객 속성 소스 커넥터로 만든 데이터 흐름을 삭제할 수 있습니다. |
+
+소스에 대해 자세히 알아보려면 [소스 개요](../../sources/home.md).
