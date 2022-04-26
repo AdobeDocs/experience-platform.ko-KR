@@ -4,9 +4,9 @@ description: 기존 필드 그룹의 필드를 XDM(Experience Data Model) 스키
 hide: true
 hidefromtoc: true
 exl-id: 0499ff30-a602-419b-b9d3-2defdd4354a7
-source-git-commit: 49a54b78d1e3745694352e779fb2226acd99d663
+source-git-commit: 1d4eba9f566dc1926afd7886c6ad2808ed91ea13
 workflow-type: tm+mt
-source-wordcount: '1199'
+source-wordcount: '1208'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->이 문서에 설명된 워크플로우는 현재 베타 버전이며 조직에서 아직 액세스할 수 없습니다. 이 설명서에 설명된 기능은 변경될 수 있습니다.
+>이 베타 문서에 설명된 워크플로우는 이제 일반적으로 Adobe Experience Platform에서 사용할 수 있습니다. 스키마 편집기의 필드 기반 워크플로우에 대한 최신 지침은 [스키마 UI 안내서](./resources/schemas.md) 을 가리키도록 업데이트하는 것이 좋습니다. 이 안내서는 곧 제거됩니다.
 
 Adobe Experience Platform은 강력한 표준화된 일련의 를 제공합니다 [필드 그룹](../schema/composition.md#field-group) xdm(Experience 데이터 모델) 스키마에서 사용할 수 있습니다. 이러한 필드 그룹의 구조와 의미 체계는 Platform의 다양한 세그멘테이션 사용 사례 및 기타 다운스트림 애플리케이션을 충족하도록 신중하게 조정됩니다. 고유한 비즈니스 요구 사항을 해결하기 위해 고유한 사용자 지정 필드 그룹을 정의할 수도 있습니다.
 

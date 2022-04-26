@@ -5,9 +5,9 @@ title: UI에서 스키마 필드 그룹 만들기 및 편집
 description: Experience Platform 사용자 인터페이스에서 스키마 필드 그룹을 만들고 편집하는 방법을 알아봅니다.
 topic-legacy: user guide
 exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
-source-git-commit: 49a54b78d1e3745694352e779fb2226acd99d663
+source-git-commit: 1d4eba9f566dc1926afd7886c6ad2808ed91ea13
 workflow-type: tm+mt
-source-wordcount: '752'
+source-wordcount: '781'
 ht-degree: 0%
 
 ---
@@ -54,7 +54,11 @@ Adobe Experience Platform에서는 광범위한 마케팅 사용 사례를 다�
 
 ## 필드 그룹에 필드 추가 {#add-fields}
 
-필드 그룹에 필드를 추가하려면 [!DNL Schema Editor]왼쪽 레일에서 필드 그룹 이름을 선택하여 시작한 다음 **더하기(+)** 캔버스에서 스키마 이름 옆에 있는 아이콘.
+>[!NOTE]
+>
+>이 섹션에서는 사용자 지정 필드 그룹에 필드를 추가하는 데 중점을 둡니다. 표준 필드 그룹에 사용자 지정 필드를 추가하는 방법에 대한 자세한 내용은 [스키마 UI 안내서](./schemas.md#custom-fields-for-standard-groups).
+
+에서 사용자 지정 필드 그룹에 필드를 추가하려면 [!DNL Schema Editor]왼쪽 레일에서 필드 그룹 이름을 선택하여 시작한 다음 **더하기(+)** 캔버스에서 스키마 이름 옆에 있는 아이콘.
 
 ![](../../images/ui/resources/field-groups/add-field.png)
 
