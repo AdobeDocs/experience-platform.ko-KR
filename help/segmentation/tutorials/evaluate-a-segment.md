@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: Adobe Experience Platform 세그멘테이션 서비스 API를 사용하여 세그먼트를 평가하고 세그먼트 결과에 액세스하는 방법을 알려면 이 자습서를 따르십시오.
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-source-git-commit: 885ebbcae223229f4614acd5b50266ea11bcf906
+source-git-commit: 9d82065fdf1be087023284f153f1abedb7fdb67b
 workflow-type: tm+mt
 source-wordcount: '1595'
 ht-degree: 0%
@@ -46,7 +46,7 @@ ht-degree: 0%
 
 - 컨텐츠 유형: application/json
 
-## 세그먼트 평가
+## 세그먼트 평가 {#evaluate-a-segment}
 
 세그먼트 정의를 개발, 테스트 및 저장했으면 예약된 평가나 온디맨드 평가를 통해 세그먼트를 평가할 수 있습니다.
 

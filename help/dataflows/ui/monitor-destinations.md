@@ -6,9 +6,9 @@ title: UI에서 대상에 대한 데이터 흐름 모니터링
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 935bbbc842ce5e2f42ee92c525255c9708bf34c2
+source-git-commit: 1bb3db196ed603a5a9ba0dcf9d54419d36a6ed51
 workflow-type: tm+mt
-source-wordcount: '3363'
+source-wordcount: '3190'
 ht-degree: 0%
 
 ---
@@ -164,29 +164,6 @@ ID는 프로필의 다른 패싯을 나타냅니다. 예를 들어 프로필에 
 세부 사항 페이지에는 실패한 ID 목록과 제외된 ID도 표시됩니다. 오류 코드 및 설명을 포함하여 실패한 ID와 제외된 ID에 대한 정보가 표시됩니다. 기본적으로 목록에 실패한 ID가 표시됩니다. 제외된 ID를 표시하려면 **[!UICONTROL 제외된 ID]** 토글.
 
 ![배치 대상에 대한 데이터 흐름 레코드](../assets/ui/monitor-destinations/dataflow-records-batch.png)
-
-## 세그먼트 작업 대시보드 모니터링 {#monitoring-segment-jobs-dashboard}
-
->[!CONTEXTUALHELP]
->id="platform_monitoring_segment_jobs"
->title="세그먼트 작업"
->abstract="세그먼트 작업 보기에는 모든 세그먼트에 대한 평가 및 내보내기 작업에 대한 정보가 포함되어 있습니다."
-
-에 액세스하려면 [!UICONTROL 세그먼트 작업] 대시보드, 선택 **[!UICONTROL 모니터링]** (![모니터링 아이콘](../assets/ui/monitor-destinations/monitoring-icon.png))을 클릭하여 제품에서 사용할 수 있습니다. 에 한 번 [!UICONTROL 모니터링] 페이지를 선택하고 [!UICONTROL 세그먼트 작업]. 다음 [!UICONTROL 모니터링] 대시보드에는 세그먼트 평가 및 내보내기 작업에 대한 지표와 정보가 포함되어 있습니다.
-
-![세그먼트 작업 모니터링 대시보드](../assets/ui/monitor-destinations/dashboard-segment-jobs.png)
-
-를 사용하십시오 [!UICONTROL 세그먼트 작업] 대시보드 를 사용하여 프로필 평가 및 내보내기가 제시간에 그리고 예외 없이 발생하는지 파악할 수 있으므로 대상 활성화를 위한 다운스트림 서비스에서는 최신 평가 프로필 데이터를 가질 수 있습니다.
-
-세그먼트 작업에 다음 지표를 사용할 수 있습니다.
-
-| 지표 | 설명 |
----------|----------|
-| **[!UICONTROL 세그먼트 작업]** | 세그먼트 작업의 이름을 나타냅니다. |
-| **[!UICONTROL 유형]** | 세그먼트 작업 유형(내보내기 또는 평가)을 나타냅니다. 두 경우 모두 세그먼트 작업이 평가되거나 내보내집니다 *모두* 조직에 속한 세그먼트 |
-| **[!UICONTROL 작업 시작]** | 세그먼트 작업이 시작된 날짜 및 시간입니다. |
-| **[!UICONTROL 작업 종료]** | 세그먼트 작업이 완료된 날짜 및 시간입니다. |
-| **[!UICONTROL 상태]** | 완료된 작업의 상태 - 성공 또는 실패 |
 
 ## 대상 대시보드 모니터링 {#monitoring-destinations-dashboard}
 
