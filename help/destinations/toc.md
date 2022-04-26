@@ -4,9 +4,9 @@ user-guide-title: 대상 안내서
 user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화합니다.
 description: 이 문서에서는 Adobe Experience Platform 대상의 목차 목록을 설명합니다
 feature: Destinations
-source-git-commit: f9938aca8a5c72a53a688152ac2ab0c0abe632ce
+source-git-commit: 73bb1d21e70644ffef50b08f22048d0937a6a729
 workflow-type: tm+mt
-source-wordcount: '745'
+source-wordcount: '753'
 ht-degree: 8%
 
 ---
@@ -121,7 +121,7 @@ ht-degree: 8%
       * [Airship 태그 연결](./catalog/mobile-engagement/airship-tags.md)
       * [연결 브레이즈](./catalog/mobile-engagement/braze.md)
    * 개인화 대상 {#personalization}
-      * [Personalization 대상 개요](./catalog/personalization/overview.md)
+      * [개인화 대상 개요](./catalog/personalization/overview.md)
       * [Adobe Target 연결](./catalog/personalization/adobe-target-connection.md)
       * [Adobe Target 확장](./catalog/personalization/adobe-target.md)
       * [Adobe Target v2 확장](./catalog/personalization/adobe-target-v2.md)
@@ -188,6 +188,7 @@ ht-degree: 8%
       * [(베타) Destination SDK을 사용하여 파일 기반 대상 구성](./destination-sdk/configure-file-based-destination-instructions.md)
       * [Destination SDK에서 작성된 대상을 검토하도록 제출](./destination-sdk/submit-destination.md)
    * 참조 {#reference}
+      * [스트리밍 대상에 대한 속도 제한 및 다시 시도 정책](./destination-sdk/rate-limiting-retry-policy.md)
       * [지원되는 변형 함수](./destination-sdk/supported-functions.md)
    * 대상을 문서화합니다. {#document-destination}
       * [Adobe Experience Platform에서 대상 문서화](./destination-sdk/docs-framework/documentation-instructions.md)
