@@ -5,7 +5,7 @@ title: Marketo Engage 소스에 대한 매핑 필드
 topic-legacy: overview
 description: 아래 표에는 Marketo 데이터 세트의 필드와 해당 XDM 필드 간의 매핑이 포함되어 있습니다.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: 3f4c7c5a5b792476cb46afe886af5a469edfe745
+source-git-commit: 765a56919afa3325db2e7881664e37d16eaeaac5
 workflow-type: tm+mt
 source-wordcount: '608'
 ht-degree: 7%
@@ -18,7 +18,7 @@ ht-degree: 7%
 
 >[!TIP]
 >
->모두 [!DNL Marketo] 데이터 세트를 제외한 데이터 세트 `Activities` 이제 지원 `isDeleted`. 기존 데이터 흐름에는 자동으로 포함됩니다 `isDeleted`하지만 는 새로 수집된 데이터에 대해서만 플래그를 수집합니다. 모든 이전 데이터에 플래그를 적용하려면 기존 데이터 흐름을 중지하고 새 매핑으로 다시 만들어야 합니다. 제거할 경우 `isDeleted`로 설정되면 더 이상 기능에 액세스할 수 없습니다. 매핑이 자동 채워진 후에 유지되어야 합니다.
+>모두 [!DNL Marketo] 데이터 세트를 제외한 데이터 세트 `Activities` 이제 지원 `isDeleted`. 기존 데이터 흐름에는 자동으로 포함됩니다 `isDeleted`하지만 는 새로 수집된 데이터에 대해서만 플래그를 섭취합니다. 모든 이전 데이터에 플래그를 적용하려면 기존 데이터 흐름을 중지하고 새 매핑으로 다시 만들어야 합니다. 제거할 경우 `isDeleted`로 설정되면 더 이상 기능에 액세스할 수 없습니다. 매핑이 자동 채워진 후에 유지되어야 합니다.
 
 ## 활동 {#activities}
 
