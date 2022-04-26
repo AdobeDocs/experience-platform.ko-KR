@@ -3,9 +3,9 @@ keywords: Experience Platform;홈;인기 항목;csv 매핑;csv 파일 매핑;csv
 title: 데이터 준비 UI 안내서
 description: 이 문서에서는 Platform UI에서 데이터 준비 함수를 사용하여 CSV 파일을 XDM 스키마에 매핑하는 방법에 대한 지침을 제공합니다.
 exl-id: fafa4aca-fb64-47ff-a97d-c18e58ae4dae
-source-git-commit: 4cce36ef21ad7490941eecff3933ff0459a0425c
+source-git-commit: edef8843c03282774991f30220504ece97af52cf
 workflow-type: tm+mt
-source-wordcount: '1665'
+source-wordcount: '1837'
 ht-degree: 1%
 
 ---
@@ -168,6 +168,34 @@ CSV 데이터를 새 데이터 세트에 수집하려면 을 선택합니다 **[
 가운데 표현식 편집기를 사용하여 필드, 함수 및 연산자를 수동으로 추가할 수 있습니다. 편집기를 선택하여 표현식 만들기를 시작합니다. 완료되면 을 선택합니다 **[!UICONTROL 저장]** 계속 진행합니다.
 
 ![create-calculated-field](../images/ui/mapping/create-calculated-field.png)
+
+### 가져오기 매핑 {#import}
+
+기존 데이터 흐름의 매핑을 다시 사용하여 데이터 수집의 수동 구성 시간을 줄이고 실수를 제한할 수 있습니다. 선택 **[!UICONTROL 가져오기 매핑]** 기존 매핑을 재사용하려면
+
+![가져오기 매핑](../images/ui/mapping/import-mapping.png)
+
+다음 [!UICONTROL 가져오기 매핑] 선택할 데이터 흐름 목록을 제공하는 창이 나타납니다.
+
+미리 보기 아이콘을 선택하여 선택한 데이터 흐름의 매핑을 미리 봅니다.
+
+![목록 매핑](../images/ui/mapping/list-mapping.png)
+
+미리 보기 창을 사용하면 데이터 흐름으로 가져오기 전에 기존 매핑을 검사할 수 있습니다. 매핑을 확인하면 다음을 선택할 수 있습니다 **[!UICONTROL 뒤로]** 데이터 흐름 목록으로 돌아가서 다른 매핑 세트를 검사하거나 **[!UICONTROL 선택]** 계속 진행합니다.
+
+![미리 보기 매핑](../images/ui/mapping/preview-mapping.png)
+
+또는 데이터 흐름 목록에서 가져올 매핑을 선택할 수 있습니다. 가져올 매핑이 포함된 데이터 흐름을 선택하고 선택합니다 **[!UICONTROL 선택]** 계속 진행합니다.
+
+![선택 매핑](../images/ui/mapping/select-mapping.png)
+
+인터페이스는 가져온 매핑으로 업데이트됩니다.
+
+>[!NOTE]
+>
+>기존 데이터 플로우에서 가져온 매핑으로 또는 ML 매핑 권장 사항을 설정하는 기존 매핑 세트가 대체됩니다.
+
+![매핑](../images/ui/mapping/mapping-imported.png)
 
 선택 **[!UICONTROL 데이터 미리 보기]** 선택한 데이터 세트에서 최대 100개의 샘플 데이터 행의 매핑 결과를 확인하십시오.
 
