@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: 이 자습서에서는 고객 성공 시스템에서 데이터를 검색하고 소스 커넥터 및 API를 사용하여 플랫폼으로 수집하는 단계를 설명합니다.
 exl-id: 0fae04d0-164b-4113-a274-09677f4bbde5
-source-git-commit: 67e6de74ea8f2f4868a39ec1907ee1cac335c9f0
+source-git-commit: fc719a4ec90c5150f129deec45da87df703ec4b5
 workflow-type: tm+mt
 source-wordcount: '1305'
 ht-degree: 1%
@@ -586,7 +586,7 @@ curl -X POST \
                 "name": "Mapping",
                 "params": {
                     "mappingId": "7c3547d3cfc14f568a51c32b4c0ed739",
-                    "mappingVersion": "0"
+                    "mappingVersion": 0
                 }
             }
         ],

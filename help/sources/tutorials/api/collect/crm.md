@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: 이 자습서에서는 타사 CRM 시스템에서 데이터를 검색하고 소스 커넥터 및 API를 사용하여 Platform으로 가져오는 단계를 설명합니다.
 exl-id: b07dd640-bce6-4699-9d2b-b7096746934a
-source-git-commit: 67e6de74ea8f2f4868a39ec1907ee1cac335c9f0
+source-git-commit: fc719a4ec90c5150f129deec45da87df703ec4b5
 workflow-type: tm+mt
 source-wordcount: '1308'
 ht-degree: 1%
@@ -575,7 +575,8 @@ curl -X POST \
             {
                 "name": "Mapping",
                 "params": {
-                    "mappingId": "500a9b747fcf4908a21917d49bd61780"
+                    "mappingId": "500a9b747fcf4908a21917d49bd61780",
+                    "mappingVersion": 0
                 }
             }
         ],

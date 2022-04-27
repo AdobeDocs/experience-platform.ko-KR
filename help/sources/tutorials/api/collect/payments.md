@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: 이 자습서에서는 소스 커넥터 및 API를 사용하여 결제 애플리케이션에서 데이터를 검색하고 플랫폼으로 수집하는 단계를 설명합니다.
 exl-id: b75e2a3d-6590-4079-a261-fa4e9626e8dc
-source-git-commit: 4cc1c164ca7caa0b64859cf67a4cc206bc6404d7
+source-git-commit: fc719a4ec90c5150f129deec45da87df703ec4b5
 workflow-type: tm+mt
 source-wordcount: '1304'
 ht-degree: 1%
@@ -598,7 +598,7 @@ curl -X POST \
                 "name": "Mapping",
                 "params": {
                     "mappingId": "b54a8dc38e8d4e31a2dc096e413ae8e5",
-                    "mappingVersion": "0"
+                    "mappingVersion": 0
                 }
             }
         ],
