@@ -4,14 +4,18 @@ title: 새 대상 연결 만들기
 type: Tutorial
 description: 이 자습서에서는 Adobe Experience Platform에서 대상에 연결하는 단계를 보여줍니다
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: b275621d9c6552327e0e55c00c8fcf0397088168
+source-git-commit: 729c0724c7af88bb69c9d68a45d58c3575c90828
 workflow-type: tm+mt
-source-wordcount: '383'
+source-wordcount: '411'
 ht-degree: 0%
 
 ---
 
 # 새 대상 연결 만들기
+
+>[!IMPORTANT]
+> 
+>대상에 연결하려면 **[!UICONTROL 대상 관리]** [액세스 제어 권한](/help/access-control/home.md#permissions). 다음 문서를 참조하십시오. [액세스 제어 개요](/help/access-control/ui/overview.md) 또는 제품 관리자에게 문의하여 필요한 권한을 얻으십시오.
 
 ## 개요 {#overview}
 

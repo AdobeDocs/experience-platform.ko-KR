@@ -6,14 +6,22 @@ description: Flow Service API를 사용하여 Experience Platform에서 배치 �
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: a8a8b3b9e4fdae11be95d2fa80abc0f356eff345
+source-git-commit: 0b094e635e6d22e58e5aa79a374df0879167a833
 workflow-type: tm+mt
-source-wordcount: '3083'
+source-wordcount: '3129'
 ht-degree: 2%
 
 ---
 
 # Flow Service API를 사용하여 배치 대상에 연결하고 데이터를 활성화합니다
+
+>[!IMPORTANT]
+> 
+>대상에 연결하려면 **[!UICONTROL 대상 관리]** [액세스 제어 권한](/help/access-control/home.md#permissions).
+>
+>데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions).
+>
+>다음 문서를 참조하십시오. [액세스 제어 개요](/help/access-control/ui/overview.md) 또는 제품 관리자에게 문의하여 필요한 권한을 얻으십시오.
 
 이 자습서에서는 Flow Service API를 사용하여 배치를 만드는 방법을 보여 줍니다 [클라우드 스토리지](../catalog/cloud-storage/overview.md) 또는 [이메일 마케팅 대상](../catalog/email-marketing/overview.md)를 채우기 위해 새로 만든 대상으로 데이터 흐름을 만들고 CSV 파일을 통해 새로 만든 대상으로 데이터를 내보냅니다.
 

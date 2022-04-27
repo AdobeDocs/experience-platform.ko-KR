@@ -2,9 +2,9 @@
 title: Verizon MediaYahoo DataX 연결
 description: DataX는 Verizon Media/Yahoo가 안전하고 자동화된 확장 가능한 방식으로 외부 파트너와 데이터를 교환할 수 있도록 하는 다양한 구성 요소를 호스팅하는 종합적인 Verizon Media/Yahoo 인프라입니다.
 exl-id: 7d02671d-8650-407d-9c9f-fad7da3156bc
-source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
+source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
 workflow-type: tm+mt
-source-wordcount: '651'
+source-wordcount: '712'
 ht-degree: 3%
 
 ---
@@ -90,6 +90,10 @@ DataX API는 VMG(Verizon Media)에서 이메일 주소를 키로 사용하는 �
 
 ## 대상에 연결 {#connect}
 
+>[!IMPORTANT]
+> 
+>대상에 연결하려면 **[!UICONTROL 대상 관리]** [액세스 제어 권한](/help/access-control/home.md#permissions). 다음 문서를 참조하십시오. [액세스 제어 개요](/help/access-control/ui/overview.md) 또는 제품 관리자에게 문의하여 필요한 권한을 얻으십시오.
+
 ![Platform UI의 Yahoo DataX 대상 카드](/help/destinations/assets/catalog/advertising/yahoo-datax/catalog.png)
 
 이 대상에 연결하려면 [대상 구성 자습서](../../ui/connect-destination.md).
@@ -103,6 +107,10 @@ While [설정](../../ui/connect-destination.md) 이 대상을 사용하려면 �
 * **[!UICONTROL MDM ID]**: Yahoo DataX의 고유 식별자이며, 이 대상에 데이터 내보내기를 설정하기 위한 필수 필드입니다. 이 ID를 모르는 경우 Yahoo Data X 계정 관리자에게 문의하십시오.  MDM ID를 사용하면 특정 전용 사용자 집합(예: 광고주를 위한 자사 데이터)에서만 데이터를 사용하도록 제한할 수 있습니다.
 
 ## 세그먼트를 이 대상에 활성화 {#activate}
+
+>[!IMPORTANT]
+> 
+>데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 다음 문서를 참조하십시오. [액세스 제어 개요](/help/access-control/ui/overview.md) 또는 제품 관리자에게 문의하여 필요한 권한을 얻으십시오.
 
 읽기 [대상에 프로필 및 세그먼트 활성화](../../ui/activate-segment-streaming-destinations.md) 대상 세그먼트를 대상으로 활성화하는 방법에 대한 지침입니다.
 

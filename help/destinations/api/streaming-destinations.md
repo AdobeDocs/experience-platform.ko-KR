@@ -6,10 +6,10 @@ description: 이 문서에서는 Adobe Experience Platform API를 사용하여 �
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 0b094e635e6d22e58e5aa79a374df0879167a833
 workflow-type: tm+mt
-source-wordcount: '2021'
-ht-degree: 2%
+source-wordcount: '2067'
+ht-degree: 1%
 
 ---
 
@@ -18,6 +18,14 @@ ht-degree: 2%
 >[!NOTE]
 >
 >다음 [!DNL Amazon Kinesis] 및 [!DNL Azure Event Hubs] Platform의 대상은 현재 베타 버전입니다. 설명서 및 기능은 변경될 수 있습니다.
+
+>[!IMPORTANT]
+> 
+>대상에 연결하려면 **[!UICONTROL 대상 관리]** [액세스 제어 권한](/help/access-control/home.md#permissions).
+>
+>데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions).
+>
+>다음 문서를 참조하십시오. [액세스 제어 개요](/help/access-control/ui/overview.md) 또는 제품 관리자에게 문의하여 필요한 권한을 얻으십시오.
 
 이 자습서에서는 API 호출을 사용하여 Adobe Experience Platform 데이터에 연결하고 스트리밍 클라우드 저장소 대상([Amazon Kinesis](../catalog/cloud-storage/amazon-kinesis.md) 또는 [Azure 이벤트 허브](../catalog/cloud-storage/azure-event-hubs.md))를 편집하거나, 새로 만든 대상에 데이터 흐름을 만들고, 데이터를 새로 만든 대상에 활성화합니다.
 
@@ -608,15 +616,15 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 각 컬렉션에는 [!DNL AWS Kinesis], 및 [!DNL Azure Event Hub]각각 입니다.
 
-### Postman 컬렉션을 사용하는 방법
+### Postman 컬렉션 사용 방법
 
 첨부된 항목을 사용하여 대상에 성공적으로 연결하려면 [!DNL Postman] 컬렉션, 다음 단계를 수행합니다.
 
 * 다운로드 및 설치 [!DNL Postman];
 * [다운로드](../assets/api/streaming-destination/DestinationPostmanCollection.zip) 연결된 컬렉션의 압축을 해제합니다.
-* 해당 폴더의 컬렉션을 Postman으로 가져옵니다.
+* 해당 폴더의 컬렉션을 Postman에 가져옵니다.
 * 이 문서의 지침에 따라 환경 변수를 입력합니다.
-* 를 실행합니다. [!DNL API] 이 문서의 지침에 따라 Postman의 요청을 참조하십시오.
+* 를 실행합니다. [!DNL API] 이 문서의 지침에 따라 Postman에서 요청을 합니다.
 
 ## 다음 단계
 

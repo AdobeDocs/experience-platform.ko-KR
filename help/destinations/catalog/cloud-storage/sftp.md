@@ -3,9 +3,9 @@ keywords: SFTP;sftp
 title: SFTP 연결
 description: SFTP 서버에 대한 라이브 아웃바운드 연결을 만들어 Adobe Experience Platform에서 구분된 데이터 파일을 주기적으로 내보냅니다.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: dbefe3e9b193ccef06b6a81919233501b6e938be
+source-git-commit: 0b094e635e6d22e58e5aa79a374df0879167a833
 workflow-type: tm+mt
-source-wordcount: '557'
+source-wordcount: '642'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ SFTP 서버에 대한 라이브 아웃바운드 연결을 만들어 Adobe Experi
 
 >[!IMPORTANT]
 >
-> Adobe은 SFTP 서버로 데이터 내보내기를 지원하지만 데이터를 내보내는 권장 클라우드 저장소 위치는 다음과 같습니다 [!DNL Amazon S3] 및 [!DNL Azure Blob].
+> Experience Platform은 SFTP 서버로 데이터 내보내기를 지원하지만 데이터를 내보내는 권장 클라우드 저장소 위치는 다음과 같습니다 [!DNL Amazon S3] 및 [!DNL Azure Blob].
 
 ## 내보내기 유형 및 빈도 {#export-type-frequency}
 
@@ -34,6 +34,10 @@ SFTP 서버에 대한 라이브 아웃바운드 연결을 만들어 Adobe Experi
 ![SFTP 프로필 기반 내보내기 유형](../../assets/catalog/cloud-storage/sftp/catalog.png)
 
 ## 대상에 연결 {#connect}
+
+>[!IMPORTANT]
+> 
+>대상에 연결하려면 **[!UICONTROL 대상 관리]** [액세스 제어 권한](/help/access-control/home.md#permissions). 다음 문서를 참조하십시오. [액세스 제어 개요](/help/access-control/ui/overview.md) 또는 제품 관리자에게 문의하여 필요한 권한을 얻으십시오.
 
 이 대상에 연결하려면 [대상 구성 자습서](../../ui/connect-destination.md).
 
@@ -88,6 +92,14 @@ SFTP 위치에 인증 연결을 설정한 후 대상에 대해 다음 정보를 
 * **[!UICONTROL 이름]**: Experience Platform 사용자 인터페이스에서 이 대상을 식별하는 데 도움이 되는 이름을 입력합니다.
 * **[!UICONTROL 설명]**: 이 대상에 대한 설명을 입력합니다.
 * **[!UICONTROL 폴더 경로]**: 파일을 내보낼 SFTP 위치에 폴더의 경로를 입력합니다.
+
+## 세그먼트를 이 대상에 활성화 {#activate}
+
+>[!IMPORTANT]
+> 
+>데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 다음 문서를 참조하십시오. [액세스 제어 개요](/help/access-control/ui/overview.md) 또는 제품 관리자에게 문의하여 필요한 권한을 얻으십시오.
+
+자세한 내용은 [대상자 데이터를 활성화하여 묶음 프로필 내보내기 대상 활성화](../../ui/activate-batch-profile-destinations.md) 대상 세그먼트를 이 대상으로 활성화하는 방법에 대한 지침입니다.
 
 ## 내보낸 데이터 {#exported-data}
 

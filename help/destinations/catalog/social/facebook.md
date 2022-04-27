@@ -3,9 +3,9 @@ keywords: facebook 연결;facebook 연결;facebook 대상;facebook;instagram;mes
 title: Facebook 연결
 description: 해시된 이메일을 기반으로 대상 타깃팅, 개인화 및 억제를 위해 Facebook 캠페인용 프로필을 활성화합니다.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: c5d2427635d90f3a9551e2a395d01d664005e8bc
+source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
 workflow-type: tm+mt
-source-wordcount: '1652'
+source-wordcount: '1713'
 ht-degree: 2%
 
 ---
@@ -120,6 +120,10 @@ Experience Platform에서 이메일 주소 섭취에 대한 자세한 내용은 
 
 ## 대상에 연결 {#connect}
 
+>[!IMPORTANT]
+> 
+>대상에 연결하려면 **[!UICONTROL 대상 관리]** [액세스 제어 권한](/help/access-control/home.md#permissions). 다음 문서를 참조하십시오. [액세스 제어 개요](/help/access-control/ui/overview.md) 또는 제품 관리자에게 문의하여 필요한 권한을 얻으십시오.
+
 이 대상에 연결하려면 [대상 구성 자습서](../../ui/connect-destination.md).
 
 아래 비디오에서는 을(를) 구성하는 단계를 보여줍니다 [!DNL Facebook] 대상 및 세그먼트 활성화
@@ -160,6 +164,10 @@ While [설정](../../ui/connect-destination.md) 이 대상을 사용하려면 �
 >id="platform_destinations_activate_facebook_originofaudience_customersandpartners"
 >title="대상의 기원"
 >abstract="광고주는 고객 및 파트너로부터 직접 데이터를 수집합니다."
+
+>[!IMPORTANT]
+> 
+>데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 다음 문서를 참조하십시오. [액세스 제어 개요](/help/access-control/ui/overview.md) 또는 제품 관리자에게 문의하여 필요한 권한을 얻으십시오.
 
 자세한 내용은 [스트리밍 세그먼트 내보내기 대상으로 대상 데이터 활성화](../../ui/activate-segment-streaming-destinations.md) 대상 세그먼트를 이 대상으로 활성화하는 방법에 대한 지침입니다.
 

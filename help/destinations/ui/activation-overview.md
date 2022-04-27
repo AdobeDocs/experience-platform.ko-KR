@@ -6,14 +6,18 @@ seo-title: Activation overview
 description: Adobe Experience Platform에 있는 대상 데이터를 다양한 유형의 대상으로 활성화하는 방법을 알아봅니다.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform to various types of destinations.
 exl-id: 987af401-2d93-45b4-a8f9-191e6058e4da
-source-git-commit: f4ae6831569e8a5b458c42f76810212174f04811
+source-git-commit: 5240e0db96a5072ab02a4c8b52e9c2d3dd4d6aa0
 workflow-type: tm+mt
-source-wordcount: '294'
+source-wordcount: '327'
 ht-degree: 1%
 
 ---
 
 # 활성화 개요
+
+>[!IMPORTANT]
+> 
+>데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 다음 문서를 참조하십시오. [액세스 제어 개요](/help/access-control/ui/overview.md) 또는 제품 관리자에게 문의하여 필요한 권한을 얻으십시오.
 
 Adobe Experience Platform은 다양한 대상을 지원합니다. 대상자 활성화 워크플로우는 대상, 해당 대상자가 지원하는 대상 데이터 유형 및 데이터 내보내기 빈도에 따라 달라집니다.
 

@@ -2,13 +2,13 @@
 keywords: 이메일;이메일;이메일;이메일 대상;sendgrid;sendgrid 대상
 title: SendGrid 연결
 description: SendGrid 대상을 사용하면 비즈니스 요구 사항에 맞게 자사 데이터를 내보내고 SendGrid 내에서 활성화할 수 있습니다.
-source-git-commit: ccbc633bfce8f4f66577b50064c28cfc26cb6dca
+exl-id: 6f22746f-2043-4a20-b8a6-097d721f2fe7
+source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
 workflow-type: tm+mt
-source-wordcount: '1414'
-ht-degree: 3%
+source-wordcount: '1475'
+ht-degree: 2%
 
 ---
-
 
 # [!DNL SendGrid] 연결
 
@@ -74,6 +74,11 @@ SendGrid를 사용하는 마케팅 팀은 SendGrid 내에 메일링 목록을 �
 
 ## 대상에 연결 {#connect}
 
+>[!IMPORTANT]
+> 
+>대상에 연결하려면 **[!UICONTROL 대상 관리]** [액세스 제어 권한](/help/access-control/home.md#permissions). 다음 문서를 참조하십시오. [액세스 제어 개요](/help/access-control/ui/overview.md) 또는 제품 관리자에게 문의하여 필요한 권한을 얻으십시오.
+
+
 이 대상에 연결하려면 [대상 구성 자습서](../../ui/connect-destination.md). 이 대상에 대한 단계는 아래에 자세히 설명되어 있습니다.
 
 1. 내 [!DNL Adobe Experience Platform] 콘솔, 탐색 **대상**.
@@ -101,6 +106,10 @@ While [설정](https://experienceleague.adobe.com/docs/experience-platform/desti
 ![](../../assets/catalog/email-marketing/sendgrid/06.jpg)
 
 ## 세그먼트를 이 대상에 활성화 {#activate}
+
+>[!IMPORTANT]
+> 
+>데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 다음 문서를 참조하십시오. [액세스 제어 개요](/help/access-control/ui/overview.md) 또는 제품 관리자에게 문의하여 필요한 권한을 얻으십시오.
 
 읽기 [스트리밍 세그먼트 내보내기 대상으로 프로필 및 세그먼트를 활성화합니다](/help/destinations/ui/activate-segment-streaming-destinations.md) 대상 세그먼트를 이 대상으로 활성화하는 방법에 대한 지침입니다.
 

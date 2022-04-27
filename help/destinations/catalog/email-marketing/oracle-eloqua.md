@@ -3,10 +3,10 @@ keywords: 전자 메일;전자 메일;전자 메일 대상;oracle oqua;oracle
 title: Oracle Eloqua 연결
 description: Oracle Eloqua는 B2B 마케터와 조직이 마케팅 캠페인 및 판매 리드 생성을 관리하는 데 도움이 되도록 Oracle이 제공하는 마케팅 자동화를 위한 SaaS(Software as a Service) 플랫폼입니다.
 exl-id: 6eaa79ff-8874-423b-bdff-aa04f6101a53
-source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
+source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
 workflow-type: tm+mt
-source-wordcount: '538'
-ht-degree: 2%
+source-wordcount: '599'
+ht-degree: 1%
 
 ---
 
@@ -34,6 +34,10 @@ SFTP 저장소를 사용하여 이메일 마케팅 대상을 설정할 때 Adobe
 을(를) 참조하십시오. [클라우드 스토리지 대상에 대한 IP 주소 허용 목록](../cloud-storage/ip-address-allow-list.md) Adobe IP를 허용 목록에 추가해야 하는 경우
 
 ## 대상에 연결 {#connect}
+
+>[!IMPORTANT]
+> 
+>대상에 연결하려면 **[!UICONTROL 대상 관리]** [액세스 제어 권한](/help/access-control/home.md#permissions). 다음 문서를 참조하십시오. [액세스 제어 개요](/help/access-control/ui/overview.md) 또는 제품 관리자에게 문의하여 필요한 권한을 얻으십시오
 
 이 대상에 연결하려면 [대상 구성 자습서](../../ui/connect-destination.md).
 
@@ -72,6 +76,10 @@ Commenting out Amazon S3 bucket part for now until support is clarified
 -->
 
 ## 세그먼트를 이 대상에 활성화 {#activate}
+
+>[!IMPORTANT]
+> 
+>데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 다음 문서를 참조하십시오. [액세스 제어 개요](/help/access-control/ui/overview.md) 또는 제품 관리자에게 문의하여 필요한 권한을 얻으십시오.
 
 자세한 내용은 [대상자 데이터를 활성화하여 묶음 프로필 내보내기 대상 활성화](../../ui/activate-batch-profile-destinations.md) 대상 세그먼트를 이 대상으로 활성화하는 방법에 대한 지침입니다.
 
