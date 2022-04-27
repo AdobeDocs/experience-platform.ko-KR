@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform 릴리스 노트 - 2022년 4월
 description: Adobe Experience Platform에 대한 2022년 4월 릴리스 노트입니다.
-source-git-commit: 820fba06d3460408640c816c80f05bff1de227cd
+source-git-commit: ea04132c5092ce62820b0af1edc95bb1e0a1a16f
 workflow-type: tm+mt
-source-wordcount: '1999'
+source-wordcount: '2260'
 ht-degree: 4%
 
 ---
@@ -14,12 +14,28 @@ ht-degree: 4%
 
 Adobe Experience Platform의 기존 기능 업데이트:
 
+- [[!DNL Intelligent Services]](#intelligent-services)
 - [[!DNL Dashboards]](#dashboards)
 - [데이터 흐름](#dataflows)
 - [[!DNL Data Prep]](#data-prep)
 - [XDM(경험 데이터 모델)](#xdm)
 - [Real-time Customer Data Platform B2B 에디션](#B2B)
 - [소스](#sources)
+
+## [!DNL Intelligent Services] {#intelligent-services}
+
+마케팅 분석가 및 전문가가 고객 경험 사용 사례에서 인공 지능(AI) 및 머신 러닝을 활용할 수 있는 Intelligent Services를 활용할 수 있습니다. 이를 통해 마케팅 분석가는 데이터 과학 전문 지식 없이도 비즈니스 수준 구성을 사용하여 기업의 요구 사항에 맞는 예측을 설정할 수 있습니다.
+
+Attribution AI 및 Customer AI를 통해 고객은 마케팅 기여도 분석 및 고객 성향에 대한 고급 AI/ML 모델을 구성할 수 있습니다. 다중 데이터 세트 기능은 고객이 데이터를 미리 결합하고 준비할 필요 없이 모델 구성 시 여러 데이터 세트를 가져올 수 있도록 지원합니다.
+
+**업데이트된 기능**
+
+| 기능 | 설명 |
+| ------- | ----------- |
+| 다중 데이터 집합 지원 | 이제 다중 데이터 세트 기능이 모든 경험 이벤트 데이터 세트와 ID 맵을 ID로 선택할 수 있습니다. 데이터 세트 간에 공통 ID 네임스페이스가 있는 한 고객은 ID 맵 및 관련 ID를 선택할 수 있습니다. Attribution AI은 다음 스키마를 지원합니다. Adobe Analytics, 경험 이벤트, 소비자 경험 이벤트 등을 참조하십시오. Customer AI는 이러한 모든 스키마와 Adobe Audience Manager 스키마를 지원합니다. Attribution AI 및 고객 AI의 다중 데이터 세트 지원에 대한 자세한 내용은 [Attribution AI 사용 안내서](../../intelligent-services/attribution-ai/user-guide.md) 및 [Customer AI 사용 안내서](../../intelligent-services/customer-ai/user-guide/configure.md). |
+| Customer AI의 새로운 모델 평가 지표 | 고객 AI의 새로운 이득 차트를 통해 마케터는 예산과 ROI 목표를 기반으로 타겟팅할 그룹 크기를 결정할 수 있습니다. 새 상승도 차트는 모델의 품질을 측정하여 무작위 타깃팅을 통해 얻을 수 있는 상승도를 더 잘 파악할 수 있도록 합니다. 자세한 내용은 [고객 AI를 통해 인사이트 살펴보기](../../intelligent-services/customer-ai/user-guide/discover-insights.md) 문서. |
+
+자세한 내용은 [!DNL Intelligent Services]를 보려면 [[!DNL Intelligent Services] 개요](../../intelligent-services/home.md).
 
 ## [!DNL Dashboards] {#dashboards}
 
