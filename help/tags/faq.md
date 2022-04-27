@@ -2,9 +2,9 @@
 title: 태그 문제 해결 안내서
 description: Adobe Experience Platform에서 태그에 대해 자주 묻는 질문에 대한 답변을 얻을 수 있습니다.
 exl-id: c06b8e25-4d79-4a11-94da-94ac096b5e33
-source-git-commit: 2181ec15f2d868d1821a5f9926729d2796f2f298
+source-git-commit: c21699af0d08d0f63562910e2174273f0a139538
 workflow-type: tm+mt
-source-wordcount: '1042'
+source-wordcount: '1049'
 ht-degree: 27%
 
 ---
@@ -106,4 +106,4 @@ Adobe에는 동일한 확장 프로그램 개발 방법을 사용하여 자체 �
 
 ## 다른 질문이 있을 경우 어떻게 합니까?
 
-다른 질문이 있는 경우 [Adobe Experience Platform 데이터 수집 커뮤니티 페이지](https://adobe.com/go/launchme) Experience League 시 또는 [태그 개발자를 위한 공식 Slack 그룹](http://join.connectionsdevs.chat).
+다른 질문이 있는 경우 [Adobe Experience Platform 데이터 수집 커뮤니티 페이지](https://adobe.com/go/launchme) Experience League 시 또는 [태그 개발자를 위한 공식 Slack 그룹](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform).
