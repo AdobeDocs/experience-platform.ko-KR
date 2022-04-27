@@ -3,9 +3,9 @@ keywords: Experience Platform;홈;인기 항목;데이터 관리;라이선스 �
 title: 데이터 관리 라이선스 자격 모범 사례
 description: 이 문서에서는 Adobe Experience Platform을 사용하여 라이선스 자격을 더 잘 관리하는 데 사용할 수 있는 및 도구에 대한 모범 사례에 대해 설명합니다.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: a15b5525d3a2fa034715803c83dc22a94915347e
+source-git-commit: 02882957fc38058ff092938d631e290725d4bdc2
 workflow-type: tm+mt
-source-wordcount: '2586'
+source-wordcount: '2531'
 ht-degree: 0%
 
 ---
@@ -130,7 +130,8 @@ Platform에서 하나 이상의 시스템으로 데이터를 수집할 수 있�
 
 * **데이터 집합 Overlap Report API**: 대응 가능 대상에 가장 많이 기여하는 데이터 세트를 표시합니다. 이 보고서를 사용하여 어떤 [!DNL ExperienceEvent] TTL을 설정할 데이터 세트입니다. 다음에서 자습서를 참조하십시오. [데이터 집합 중복 보고서 생성](../../profile/tutorials/dataset-overlap-report.md) 추가 정보.
 * **ID Overlap Report API**: 대응 가능 대상에 가장 많이 기여하는 ID 네임스페이스를 노출합니다. 다음에서 자습서를 참조하십시오. [id 중복 보고서 생성](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report) 추가 정보.
-* **알 수 없는 프로필 보고서 API**: 다른 시간 임계값에 대해 익명의 TTL을 적용할 때 영향을 줍니다. 이 보고서를 사용하여 적용할 익명의 TTL 임계값을 식별할 수 있습니다. 다음에서 자습서를 참조하십시오. [알 수 없는 프로필 보고서 생성](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) 추가 정보.
+<!-- * **Unknown Profiles Report API**: Exposes the impact of applying pseudonymous TTL for different time thresholds. You can use this report to identify which pseudonymous TTL threshold to apply. See the tutorial on [generating the unknown profiles report](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) for more information.
+-->
 
 #### [!DNL ExperienceEvent] 데이터 집합 TTL {#dataset-ttl}
 
@@ -197,7 +198,6 @@ TTL을 적용하기 전에 TTL 경계 내에 모든 세그먼트의 전환 확�
 | [이벤트 전달 데이터 필터](../../tags/ui/event-forwarding/overview.md) | 서버측 적용 [!DNL Kafka] 불필요한 데이터를 수집에서 제외하는 필터.  다음 문서를 참조하십시오. [태그 규칙](../../tags/ui/managing-resources/rules.md) 추가 정보. |
 | [라이선스 사용 대시보드 UI](../../dashboards/guides/license-usage.md#license-usage-dashboard-data) | Experience Platform을 위해 조직의 라이선스 관련 데이터에 대한 스냅샷 보기 |
 | [데이터 집합 Overlap Report API](../../profile/tutorials/dataset-overlap-report.md) | 대응 가능 대상에 가장 많이 기여하는 데이터 세트를 출력합니다 |
-| [알 수 없는 프로필 보고서 API](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) | 다른 시간 임계값에 대해 익명의 TTL 적용 효과를 출력합니다. |
 | [ID Overlap Report API](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report) | 대응 가능 대상에 가장 많이 기여하는 ID 네임스페이스를 출력합니다 |
 
 {style=&quot;table-layout:auto&quot;}
