@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform에 대한 최신 릴리스 노트입니다.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 881be00b9dd10ea95677cc1a960c80db0afe0c54
+source-git-commit: 6c2271e4c5be924dcd8c137cb40bef72e104c7e2
 workflow-type: tm+mt
-source-wordcount: '2378'
+source-wordcount: '2492'
 ht-degree: 4%
 
 ---
@@ -84,14 +84,31 @@ Platform에서 데이터는 다양한 소스에서 수집되고 시스템 내에
 
 | 기능 | 설명 |
 | ----------- | ----------- |
-| [대상 데이터 흐름에 대한 컨텍스트 내 경고](../../destinations/ui/alerts.md) | 이제 대상 데이터 흐름을 만들 때 경고에 가입하여 데이터 흐름 실행 상태, 성공 또는 실패와 관련된 경고 메시지를 받을 수 있습니다. Experience Platform UI나 이메일을 통해 경고를 수신하도록 선택할 수 있습니다. |
+| 고급 엔터프라이즈 대상 커넥터 | 이제 3개의 엔터프라이즈 대상 커넥터를 일반적으로 사용할 수 있습니다. [[!DNL Amazon Kinesis]](../../destinations/catalog/cloud-storage/amazon-kinesis.md), [[!DNL Azure Event Hubs]](../../destinations/catalog/cloud-storage/azure-event-hubs.md), 및 [[!DNL HTTP API]](../../destinations/catalog/streaming/http-destination.md). <br> 엔터프라이즈 대상 커넥터의 일반 가용성에는 베타 단계에서 이전에 제공되는 모든 기능 등이 포함되어 있습니다. <ul><li>다음을 포함한 새로운 인증 기능 [Azure 이벤트 허브의 공유 액세스 서명](../../destinations/catalog/cloud-storage/azure-event-hubs.md#sas-authentication) 및 기타 [인증 유형](../../destinations/catalog/streaming/http-destination.md#authentication-information) (HTTP API 대상의 베어러 토큰, OAuth 2);</li><li>[내역 프로필 데이터 채우기](../../destinations/catalog/streaming/http-destination.md#historical-data-backfill) (처음 활성화되었을 때 세그먼트에 적합한 내역 프로필 전송)</li><li>이제 데이터 흐름 실행 지표가 이러한 대상에 대해 지원됩니다.</li><li>[추가 세그먼트 메타데이터](../../destinations/catalog/streaming/http-destination.md#destination-details) 세그먼트 이름 및 세그먼트 타임스탬프를 포함한 데이터 페이로드에 포함됨</li><li>지원 대상 [정적 IP 주소](/help/destinations/catalog/streaming/ip-address-allow-list.md) Experience Platform을 방문해야 하는 고객허용 목록에 추가하다의 경우.</li></ul> |
+| 대상 데이터 흐름에 대한 컨텍스트 내 경고 | 이제 다음을 수행할 수 있습니다 [경고 구독](../../destinations/ui/alerts.md) 대상 데이터 흐름을 만들 때 데이터 흐름 실행 상태, 성공 또는 실패와 관련된 경고 메시지를 수신합니다. Experience Platform UI나 이메일을 통해 경고를 수신하도록 선택할 수 있습니다. |
+
+<!--
+
+### Release process for advanced enterprise destination connectors {#release-process-enterprise-destinations}
+
+For the Amazon Kinesis, Azure Event Hubs, and HTTP API destinations, during the release process (starting April 27th), you will see both the former Beta destination card, as well as the new generally available (GA) destination card in the destinations catalog. Any dataflows configured by customers using the beta destinations will be migrated in the next couple of days to the GA version of the same destination. This migration should ultimately be completed by the end of day Friday April 29th. The Beta destinations will be continue to be visible during this short time-window and labeled as **Deprecated**.
+
+If you have been utilizing these destinations in the Beta phase, please note the following:
+
+- If have been previously in Beta with any of the 3 destinations, no action is needed. All dataflows set up as part of Beta will continue to be functional and will be migrated to the GA version.
+- If you want to set up these destinations beginning April 27th, please do so with the new GA version of the destinations.
+- The beta cards marked as deprecated will be removed once the release operation is complete, estimated by the end of day Friday April 29th. The Experience Platform engineering team is monitoring closely for a successful release operation.
+
+-->
 
 **새 대상**
 
 | 대상 | 설명 |
 | ----------- | ----------- |
-| [[!DNL Criteo]](../../destinations/catalog/advertising/criteo.md) | 데이터를 Digital Advertising 플랫폼에 연결하고 활성화합니다. |
-| [[!DNL Sendgrid]](../../destinations/catalog/email-marketing/sendgrid.md) | 트랜잭션 및 마케팅 이메일을 위해 데이터를 Sendgrid 플랫폼에 연결하고 활성화합니다. |
+| [!DNL Criteo] | 데이터에 연결 및 활성화 [[!DNL Criteo]](../../destinations/catalog/advertising/criteo.md) 광고 플랫폼. |
+| [!DNL Sendgrid] | 데이터에 연결 및 활성화 [[!DNL Sendgrid]](../../destinations/catalog/email-marketing/sendgrid.md) 트랜잭션 및 마케팅 이메일을 위한 플랫폼. |
+
+대상에 대한 자세한 내용은 [대상 개요](../../destinations/home.md).
 
 ## XDM(경험 데이터 모델) {#xdm}
 
