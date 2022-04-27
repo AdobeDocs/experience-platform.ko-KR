@@ -2,10 +2,10 @@
 description: 이 페이지에서는 '/authoring/destination-server' API 종단점을 사용하여 수행할 수 있는 모든 API 작업을 나열하고 설명합니다. 대상에 대한 서버 및 템플릿 사양은 일반 끝점 '/authoring/destination-servers'를 통해 Adobe Experience Platform Destination SDK에서 구성할 수 있습니다.
 title: 대상 서버 끝점 API 작업
 exl-id: a144b0fb-d34f-42d1-912b-8576296e59d2
-source-git-commit: 6bdb7a3ce6e9f37070dceff8b0226bd6cd53038b
+source-git-commit: ce63d602e768d04ba7fdc6aded34869682ee7206
 workflow-type: tm+mt
-source-wordcount: '1454'
-ht-degree: 3%
+source-wordcount: '1382'
+ht-degree: 4%
 
 ---
 
@@ -82,11 +82,13 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 ## 파일 기반 대상 서버에 대한 구성 만들기 {#create-file-based}
 
-### 예: sftp 대상 서버에 대한 구성 만들기
-
 >[!IMPORTANT]
 >
 >Adobe Experience Platform Destination SDK의 파일 기반 대상 지원은 현재 베타에 있습니다. 설명서 및 기능은 변경될 수 있습니다.
+
+### SFTP 대상 서버 예제 구성 {#sftp-server-sample}
+
++++샘플에 대한 보기 [!DNL SFTP] 대상 서버 구성
 
 에 POST 요청을 작성하여 새 SFTP 대상 서버 구성을 만들 수 있습니다 `/authoring/destination-servers` 엔드포인트.
 
@@ -192,11 +194,9 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 성공적인 응답은 새로 만든 대상 서버 구성에 대한 세부 정보와 함께 HTTP 상태 200을 반환합니다.
 +++
 
-+++예: Amazon S3 대상 서버에 대한 구성 만들기
+### [!DNL Amazon S3] 대상 서버 예 구성 {#s3-server-sample}
 
->[!IMPORTANT]
->
->Adobe Experience Platform Destination SDK의 파일 기반 대상 지원은 현재 베타에 있습니다. 설명서 및 기능은 변경될 수 있습니다.
++++샘플에 대한 보기 [!DNL Amazon S3] 대상 서버 구성
 
 에 POST 요청을 수행하여 새 Amazon S3 대상 서버 구성을 만들 수 있습니다 `/authoring/destination-servers` 엔드포인트.
 
@@ -303,16 +303,13 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 성공적인 응답은 새로 만든 대상 서버 구성에 대한 세부 정보와 함께 HTTP 상태 200을 반환합니다.
 +++
 
-+++예: azure Blob 대상 서버에 대한 구성 만들기
+### [!DNL Azure Blob] 대상 서버 예 구성 {#blob-server-sample}
 
->[!IMPORTANT]
->
->Adobe Experience Platform Destination SDK의 파일 기반 대상 지원은 현재 베타에 있습니다. 설명서 및 기능은 변경될 수 있습니다.
++++샘플에 대한 보기 [!DNL Azure Blob] 대상 서버 구성
 
 에 POST 요청을 만들어 새 Azure Blob 대상 서버 구성을 만들 수 있습니다 `/authoring/destination-servers` 엔드포인트.
 
 **API 형식**
-
 
 ```http
 POST /authoring/destination-servers
@@ -415,16 +412,13 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 성공적인 응답은 새로 만든 대상 서버 구성에 대한 세부 정보와 함께 HTTP 상태 200을 반환합니다.
 +++
 
-+++예: ADLS(Azure Data Lake Storage) 대상 서버에 대한 구성 만들기
+### [!DNL Azure Data Lake Storage] 대상 서버 예 구성 {#adls-server-sample}
 
->[!IMPORTANT]
->
->Adobe Experience Platform Destination SDK의 파일 기반 대상 지원은 현재 베타에 있습니다. 설명서 및 기능은 변경될 수 있습니다.
++++샘플에 대한 보기 [!DNL Azure Data Lake Storage (ADLS)] 대상 서버 구성
 
 에 POST 요청을 수행하여 새 ADLS 대상 서버 구성을 만들 수 있습니다 `/authoring/destination-servers` 엔드포인트.
 
 **API 형식**
-
 
 ```http
 POST /authoring/destination-servers
@@ -523,18 +517,15 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 성공적인 응답은 새로 만든 대상 서버 구성에 대한 세부 정보와 함께 HTTP 상태 200을 반환합니다.
 +++
 
-+++예: DLZ(데이터 랜딩 영역) 대상 서버에 대한 구성 만들기
+### [!DNL Data Landing Zone] (DLZ) 대상 서버 예제 구성 {#dlz-server-sample}
 
->[!IMPORTANT]
->
->Adobe Experience Platform Destination SDK의 파일 기반 대상 지원은 현재 베타에 있습니다. 설명서 및 기능은 변경될 수 있습니다.
++++샘플에 대한 보기 [!DNL Data Landing Zone (DLZ)] 대상 서버 구성
 
-[!DNL Data Landing Zone] ([!DNL DLZ])은 [!DNL Azure Blob] Adobe Experience Platform에서 프로비저닝한 스토리지 인터페이스로, Platform으로 파일을 가져올 수 있는 안전한 클라우드 기반 파일 스토리지 설비에 액세스할 수 있도록 합니다. See
+[!DNL Data Landing Zone] ([!DNL DLZ])은 [!DNL Azure Blob] Adobe Experience Platform에서 프로비저닝한 스토리지 인터페이스로, Platform으로 파일을 가져올 수 있는 안전한 클라우드 기반 파일 스토리지 설비에 액세스할 수 있도록 합니다.
 
 에 POST 요청을 수행하여 새 DLZ 대상 서버 구성을 만들 수 있습니다 `/authoring/destination-servers` 엔드포인트.
 
 **API 형식**
-
 
 ```http
 POST /authoring/destination-servers
@@ -640,7 +631,6 @@ IMS 조직에 대한 모든 대상 서버 구성 목록을 검색하려면 `/aut
 
 **API 형식**
 
-
 ```http
 GET /authoring/destination-servers
 ```
@@ -741,7 +731,6 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 **API 형식**
 
-
 ```http
 PUT /authoring/destination-servers/{INSTANCE_ID}
 ```
@@ -788,7 +777,6 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 
 **API 형식**
 
-
 ```http
 GET /authoring/destination-servers/{INSTANCE_ID}
 ```
@@ -831,7 +819,6 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
    }
 }
 ```
-
 
 ## 특정 대상 서버 구성 삭제 {#delete}
 
