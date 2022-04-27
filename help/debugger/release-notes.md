@@ -1,17 +1,17 @@
 ---
-title: 릴리스 정보
-description: Adobe Experience Platform Debugger에 대한 최신 릴리스 노트입니다.
+title: Adobe Experience Platform Debugger 릴리스 노트
+description: Adobe Experience Platform Debugger에 대한 최신 릴리스 정보입니다.
 keywords: debugger;experience Platform Debugger 확장 프로그램;chrome;확장 프로그램;릴리스 정보
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: df1a67e4b6f3d2eaeaba2b8d3c9b1588ee0b1461
+source-git-commit: a15b5525d3a2fa034715803c83dc22a94915347e
 workflow-type: tm+mt
-source-wordcount: '287'
-ht-degree: 4%
+source-wordcount: '295'
+ht-degree: 6%
 
 ---
 
-# 릴리스 정보
+# Adobe Experience Platform Debugger 릴리스 노트
 
 ## 버전 1.3.0 - 2022년 1월 28일
 

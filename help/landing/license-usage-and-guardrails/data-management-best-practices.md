@@ -2,9 +2,10 @@
 keywords: Experience Platform;홈;인기 항목;데이터 관리;라이선스 자격;라이선스;우수 사례
 title: 데이터 관리 라이선스 자격 모범 사례
 description: 이 문서에서는 Adobe Experience Platform을 사용하여 라이선스 자격을 더 잘 관리하는 데 사용할 수 있는 및 도구에 대한 모범 사례에 대해 설명합니다.
-source-git-commit: 3bac35ba5f6e9cde6c1324b11220c523daa1f8cb
+exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
+source-git-commit: a15b5525d3a2fa034715803c83dc22a94915347e
 workflow-type: tm+mt
-source-wordcount: '2603'
+source-wordcount: '2586'
 ht-degree: 0%
 
 ---
@@ -193,7 +194,7 @@ TTL을 적용하기 전에 TTL 경계 내에 모든 세그먼트의 전환 확�
 | [Adobe Analytics 데이터 준비 필터](../../sources/tutorials/ui/create/adobe-applications/analytics.md) | 적용 [!DNL Kafka] 불필요한 데이터를 수집에서 제외하는 필터 |
 | [Adobe Audience Manager 소스 커넥터 필터](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) | Audience Manager 소스 연결 필터를 적용하여 불필요한 데이터를 수집에서 제외 |
 | [Alloy SDK 데이터 필터](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en#fundamentals) | 합금 필터를 적용하여 불필요한 데이터를 수집에서 제외 |
-| [서버측 데이터 필터](https://experienceleague.adobe.com/docs/launch/using/server-side-info/server-side-overview.html?lang=en-better-data-governance) | 적용 [!DNL Kafka] 불필요한 데이터를 수집에서 제외하는 필터.  다음 문서를 참조하십시오. [이벤트 및 조건](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/rules.html#events-and-conditions-(if)) 추가 정보. |
+| [이벤트 전달 데이터 필터](../../tags/ui/event-forwarding/overview.md) | 서버측 적용 [!DNL Kafka] 불필요한 데이터를 수집에서 제외하는 필터.  다음 문서를 참조하십시오. [태그 규칙](../../tags/ui/managing-resources/rules.md) 추가 정보. |
 | [라이선스 사용 대시보드 UI](../../dashboards/guides/license-usage.md#license-usage-dashboard-data) | Experience Platform을 위해 조직의 라이선스 관련 데이터에 대한 스냅샷 보기 |
 | [데이터 집합 Overlap Report API](../../profile/tutorials/dataset-overlap-report.md) | 대응 가능 대상에 가장 많이 기여하는 데이터 세트를 출력합니다 |
 | [알 수 없는 프로필 보고서 API](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) | 다른 시간 임계값에 대해 익명의 TTL 적용 효과를 출력합니다. |

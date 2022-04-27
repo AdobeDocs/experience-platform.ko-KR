@@ -2,7 +2,7 @@
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform에 대한 최신 릴리스 노트입니다.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: e9e4e58de454abb1fc66e07d5ad4ce18398c6a44
+source-git-commit: 881be00b9dd10ea95677cc1a960c80db0afe0c54
 workflow-type: tm+mt
 source-wordcount: '2378'
 ht-degree: 4%
@@ -163,7 +163,7 @@ Attribution AI 및 Customer AI를 통해 고객은 마케팅 기여도 분석 �
 
 자세한 내용은 [!DNL Intelligent Services]를 보려면 [[!DNL Intelligent Services] 개요](../../intelligent-services/home.md).
 
-### Real-time Customer Data Platform B2B 에디션 {#B2B}
+## Real-time Customer Data Platform B2B 에디션 {#B2B}
 
 Real-time Customer Data Platform(실시간 CDP)를 기반으로 구축된 실시간 CDP B2B Edition은 비즈니스-비즈니스 서비스 모델로 운영되는 마케터를 위해 특별히 빌드되었습니다. 여러 소스의 데이터를 가져와서 사람 및 계정 프로필에 대한 단일 보기로 결합합니다. 이러한 통합 데이터를 통해 마케터는 특정 대상을 정확하게 타겟팅하고 사용 가능한 모든 채널에서 그러한 대상을 선택할 수 있습니다.
 

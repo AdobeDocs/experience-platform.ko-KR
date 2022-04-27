@@ -1,19 +1,19 @@
 ---
-title: 릴리스 정보
-description: Adobe Experience Platform의 태그에 대한 최신 릴리스 노트입니다.
+title: 태그에 대한 릴리스 노트
+description: Adobe Experience Platform의 태그에 대한 최신 릴리스 정보입니다.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: 2056f7f6e7372fa1dee2e975a75e7ba3b8dfe518
+source-git-commit: a15b5525d3a2fa034715803c83dc22a94915347e
 workflow-type: tm+mt
-source-wordcount: '658'
-ht-degree: 6%
+source-wordcount: '666'
+ht-degree: 7%
 
 ---
 
-# 릴리스 정보
+# Adobe Experience Platform의 태그에 대한 릴리스 노트
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Experience Platform에서 데이터 수집 기술 세트로 브랜드 재지정되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고자료는 다음 [문서](../term-updates.md)를 참조하십시오.
+>Adobe Experience Platform Launch은 Experience Platform에서 데이터 수집 기술 세트로 브랜드 재지정되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../term-updates.md)를 참조하십시오.
 
 ## 2021년 11월 15일
 

@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;사용자 인터페이스;UI;사용자 지정;라이선스 사용 대시보드;대시보드;라이선스 사용;권한;소비
-title: 라이선스 사용 대시보드
+title: 라이센스 사용 대시보드 안내서
 description: Adobe Experience Platform에서는 조직의 라이선스 사용에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 87b6e12b33c49bdae49be45ce10f92b309a1e98e
+source-git-commit: a15b5525d3a2fa034715803c83dc22a94915347e
 workflow-type: tm+mt
-source-wordcount: '837'
+source-wordcount: '838'
 ht-degree: 1%
 
 ---
