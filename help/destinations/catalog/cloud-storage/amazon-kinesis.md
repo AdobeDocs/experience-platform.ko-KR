@@ -1,22 +1,22 @@
 ---
 keywords: Amazon Kinesis;kinesis 대상;kinesis
-title: (베타) Amazon Kinesis 연결
+title: Amazon Kinesis 연결
 description: Amazon Kinesis 스토리지에 대한 실시간 아웃바운드 연결을 만들어 Adobe Experience Platform에서 데이터를 스트리밍합니다.
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: c62117de27b150f072731c910bb0593ce1fca082
+source-git-commit: 30549f31e7ba7f9cfafd2e71fb3ccfb701b9883f
 workflow-type: tm+mt
-source-wordcount: '1422'
-ht-degree: 1%
+source-wordcount: '1809'
+ht-degree: 0%
 
 ---
 
-# (베타) [!DNL Amazon Kinesis] 연결
+# [!DNL Amazon Kinesis] 연결
 
 ## 개요 {#overview}
 
 >[!IMPORTANT]
 >
->다음 [!DNL Amazon Kinesis] 플랫폼의 대상은 현재 베타 버전입니다. 설명서 및 기능은 변경될 수 있습니다.
+> 이 대상은 다음 작업에만 사용할 수 있습니다 [Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) 고객.
 
 다음 [!DNL Kinesis Data Streams] 서비스 기준 [!DNL Amazon Web Services] 에서는 대용량 데이터 레코드를 실시간으로 수집 및 처리할 수 있습니다.
 
@@ -90,9 +90,13 @@ Experience Platform은 고객의 보안 및 규정 준수 요구 사항을 충�
 
 ## 대상에 연결 {#connect}
 
-이 대상에 연결하려면 [대상 구성 자습서](../../ui/connect-destination.md).
+>[!IMPORTANT]
+> 
+>대상에 연결하려면 **[!UICONTROL 대상 관리]** [액세스 제어 권한](/help/access-control/home.md#permissions). 다음 문서를 참조하십시오. [액세스 제어 개요](/help/access-control/ui/overview.md) 또는 제품 관리자에게 문의하여 필요한 권한을 얻으십시오.
 
-### 연결 매개 변수 {#parameters}
+이 대상에 연결하려면 [대상 구성 자습서](../../ui/connect-destination.md). 이 대상에 연결할 때 다음 정보를 제공해야 합니다.
+
+### 인증 정보 {#authentication-information}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_kinesis_includesegmentnames"
@@ -104,13 +108,24 @@ Experience Platform은 고객의 보안 및 규정 준수 요구 사항을 충�
 >title="세그먼트 타임스탬프 포함"
 >abstract="세그먼트가 생성 및 업데이트될 때 데이터 내보내기에 UNIX 타임스탬프와 세그먼트가 활성화 대상에 매핑될 때 UNIX 타임스탬프를 포함하려면 을 전환합니다. 이 옵션을 선택한 상태로 데이터 내보내기 예제에 대한 설명서를 봅니다."
 
-While [설정](../../ui/connect-destination.md) 이 대상을 사용하려면 다음 정보를 제공해야 합니다.
+아래 필드를 입력하고 을(를) 선택합니다 **[!UICONTROL 대상에 연결]**:
+
+![Amazon Kinesis 인증 세부 사항에 대한 완료된 필드를 보여주는 UI 화면의 이미지](../../assets/catalog/cloud-storage/amazon-kinesis/kinesis-authentication-fields.png)
 
 * **[!DNL Amazon Web Services]액세스 키 및 비밀 키**: in [!DNL Amazon Web Services], 생성 `access key - secret access key` 플랫폼에 대한 액세스 권한을 부여하기 위한 쌍 [!DNL Amazon Kinesis] 계정이 필요합니다. 자세한 내용은 [Amazon Web Services 설명서](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
-* **지역**: 표시할 항목 [!DNL Amazon Web Services] 데이터를 스트리밍할 영역입니다.
-* **이름**: 연결할 이름을 입력합니다 [!DNL Amazon Kinesis]
-* **설명**: 연결에 대한 설명을 제공합니다 [!DNL Amazon Kinesis].
-* **스트림**: 에 기존 데이터 스트림의 이름을 입력합니다 [!DNL Amazon Kinesis] 계정이 필요합니다. Platform에서 데이터를 이 스트림으로 내보냅니다.
+* **[!UICONTROL 지역]**: 표시할 항목 [!DNL Amazon Web Services] 데이터를 스트리밍할 영역입니다.
+
+### 대상 세부 사항 {#destination-details}
+
+Amazon Kinesis 대상에 인증 연결을 설정한 후 대상에 대해 다음 정보를 제공합니다.
+
+![Amazon Kinesis 대상 세부 사항에 대해 완료된 필드를 보여주는 UI 화면의 이미지](../../assets/catalog/cloud-storage/amazon-kinesis/kinesis-destination-details.png)
+
+* **[!UICONTROL 이름]**: 연결할 이름을 입력합니다 [!DNL Amazon Kinesis]
+* **[!UICONTROL 설명]**: 연결에 대한 설명을 제공합니다 [!DNL Amazon Kinesis].
+* **[!UICONTROL 스트림]**: 에 기존 데이터 스트림의 이름을 입력합니다 [!DNL Amazon Kinesis] 계정이 필요합니다. Platform에서 데이터를 이 스트림으로 내보냅니다.
+* **[!UICONTROL 세그먼트 이름 포함]**: 데이터 내보내기에 내보낼 세그먼트의 이름이 포함되도록 하려면 전환합니다. 이 옵션을 선택한 데이터 내보내기의 예는 를 참조하십시오. [내보낸 데이터](#exported-data) 섹션을 참조하십시오.
+* **[!UICONTROL 세그먼트 타임스탬프 포함]**: 세그먼트가 생성 및 업데이트될 때 데이터 내보내기에 UNIX 타임스탬프와 세그먼트가 활성화 대상에 매핑될 때 UNIX 타임스탬프를 포함하려면 을 전환합니다. 이 옵션을 선택한 데이터 내보내기의 예는 를 참조하십시오. [내보낸 데이터](#exported-data) 섹션을 참조하십시오.
 
 <!--
 
@@ -121,6 +136,10 @@ While [설정](../../ui/connect-destination.md) 이 대상을 사용하려면 �
 -->
 
 ## 세그먼트를 이 대상에 활성화 {#activate}
+
+>[!IMPORTANT]
+> 
+>데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 다음 문서를 참조하십시오. [액세스 제어 개요](/help/access-control/ui/overview.md) 또는 제품 관리자에게 문의하여 필요한 권한을 얻으십시오.
 
 자세한 내용은 [스트리밍 프로필 내보내기 대상으로 대상 데이터 활성화](../../ui/activate-streaming-profile-destinations.md) 대상 세그먼트를 이 대상으로 활성화하는 방법에 대한 지침입니다.
 
@@ -153,6 +172,10 @@ Experience Platform은 프로필 내보내기 동작을 로 최적화합니다 [
 대상에 대한 프로필 내보내기는 하나 또는 둘 중 하나에 대해 자격이 있는 프로필로 결정할 수 있습니다 *3개의 매핑된 세그먼트*. 그러나 데이터 내보내기에서 `segmentMembership` 개체(참조 [내보낸 데이터](#exported-data) 아래 섹션)을 사용하면, 특정 프로필이 해당 세그먼트의 구성원일 경우 매핑되지 않은 다른 세그먼트가 나타날 수 있습니다. 프로가 DeLorinan Cars 세그먼트를 통해 고객 자격을 얻지만 또한 Viewed &quot;Back to the Future&quot; 영화 및 SF 팬의 멤버인 경우 다른 두 세그먼트도 함께 제공됩니다 `segmentMembership` 데이터가 데이터 플로우에 매핑되지 않더라도 데이터 내보내기의 객체입니다.
 
 프로필 속성 POV에서 위에 매핑된 4개의 속성에 대한 변경 사항이 대상 내보내기를 결정하며 프로필에 있는 4개의 매핑된 속성이 데이터 내보내기에 표시됩니다.
+
+## 내역 데이터 채우기 {#historical-data-backfill}
+
+기존 대상에 새 세그먼트를 추가하거나 새 대상을 만들고 세그먼트를 대상에 매핑하면 Experience Platform이 내역 세그먼트 자격 데이터를 대상으로 내보냅니다. 세그먼트에 적합한 프로필 *이전* 대상에 추가된 세그먼트는 약 1시간 이내에 대상에 내보내집니다.
 
 ## 내보낸 데이터 {#exported-data}
 
@@ -210,6 +233,53 @@ Experience Platform은 프로필 내보내기 동작을 로 최적화합니다 [
   }
 }
 ```
+
+아래는 의 연결 대상 플로우에서 선택한 UI 설정에 따라 내보낸 데이터의 추가 예입니다 **[!UICONTROL 세그먼트 이름 포함]** 및 **[!UICONTROL 세그먼트 타임스탬프 포함]** 옵션:
+
++++ 아래 데이터 내보내기 샘플에는 `segmentMembership` 섹션
+
+```json
+"segmentMembership": {
+        "ups": {
+          "5b998cb9-9488-4ec3-8d95-fa8338ced490": {
+            "lastQualificationTime": "2019-04-15T02:41:50+0000",
+            "status": "existing",
+            "createdAt": 1648553325000,
+            "updatedAt": 1648553330000,
+            "mappingCreatedAt": 1649856570000,
+            "mappingUpdatedAt": 1649856570000,
+            "name": "First name equals John"
+          }
+        }
+      }
+```
+
++++
+
++++ 아래 데이터 내보내기 샘플에는 `segmentMembership` 섹션
+
+```json
+"segmentMembership": {
+        "ups": {
+          "5b998cb9-9488-4ec3-8d95-fa8338ced490": {
+            "lastQualificationTime": "2019-04-15T02:41:50+0000",
+            "status": "existing",
+            "createdAt": 1648553325000,
+            "updatedAt": 1648553330000,
+            "mappingCreatedAt": 1649856570000,
+            "mappingUpdatedAt": 1649856570000,
+          }
+        }
+      }
+```
+
++++
+
+## 제한 및 다시 시도 정책 {#limits-retry-policy}
+
+시간의 95%에서 Experience Platform은 각 데이터 플로우에 대해 HTTP 대상에 대한 초당 10.000 미만의 요청과 함께 성공적으로 전송된 메시지에 대해 10분 미만의 처리량 지연을 제공하기 위해 시도합니다.
+
+HTTP API 대상에 대한 요청이 실패한 경우 Experience Platform은 실패한 요청을 저장하고 엔드포인트로 요청을 다시 두 번 전송합니다.
 
 >[!MORELIKETHIS]
 >

@@ -1,22 +1,22 @@
 ---
-title: (베타) HTTP API 연결
+title: HTTP API 연결
 keywords: 스트리밍;
-description: Adobe Experience Platform의 HTTP API 대상을 사용하면 프로필 데이터를 타사 HTTP 엔드포인트로 보낼 수 있습니다.
+description: Adobe Experience Platform의 HTTP API 대상을 사용하여 프로필 데이터를 타사 HTTP 엔드포인트로 보내 자체 분석을 실행하거나 Experience Platform에서 내보낸 프로필 데이터에 필요한 기타 작업을 수행할 수 있습니다.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: c62117de27b150f072731c910bb0593ce1fca082
+source-git-commit: 30549f31e7ba7f9cfafd2e71fb3ccfb701b9883f
 workflow-type: tm+mt
-source-wordcount: '1560'
-ht-degree: 1%
+source-wordcount: '2296'
+ht-degree: 0%
 
 ---
 
-# (베타) HTTP API 연결
+# HTTP API 연결
+
+## 개요 {#overview}
 
 >[!IMPORTANT]
 >
->Platform의 HTTP API 대상은 현재 베타에 있습니다. 설명서 및 기능은 변경될 수 있습니다.
-
-## 개요 {#overview}
+> 이 대상은 다음 작업에만 사용할 수 있습니다 [Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) 고객.
 
 HTTP API 대상은 [!DNL Adobe Experience Platform] 프로필 데이터를 타사 HTTP 종단점으로 보내는 데 도움이 되는 스트리밍 대상입니다.
 
@@ -24,7 +24,7 @@ HTTP API 대상은 [!DNL Adobe Experience Platform] 프로필 데이터를 타�
 
 ## 사용 사례 {#use-cases}
 
-HTTP 대상은 XDM 프로필 데이터 및 대상 세그먼트를 일반 HTTP 종단점으로 내보내야 하는 고객을 대상으로 합니다.
+HTTP API 대상을 사용하면 XDM 프로필 데이터 및 대상 세그먼트를 일반 HTTP 종단점으로 내보낼 수 있습니다. 여기에서 자체 분석을 실행하거나 Experience Platform 외부로 내보낸 프로필 데이터에 필요한 다른 작업을 수행할 수 있습니다.
 
 HTTP 엔드포인트는 고객의 시스템 또는 타사 솔루션일 수 있습니다.
 
@@ -34,24 +34,34 @@ HTTP 엔드포인트는 고객의 시스템 또는 타사 솔루션일 수 있�
 
 | 항목 | 유형 | 참고 |
 ---------|----------|---------|
-| 내보내기 유형 | **[!UICONTROL 프로필 기반]** | 원하는 스키마 필드와 함께 세그먼트의 모든 구성원을 내보냅니다(예: 전자 메일 주소, 전화 번호, 성)을 선택한 대로 [대상 활성화 워크플로우](../../ui/activate-batch-profile-destinations.md#select-attributes). |
+| 내보내기 유형 | **[!UICONTROL 프로필 기반]** | 원하는 스키마 필드와 함께 세그먼트의 모든 구성원을 내보냅니다(예: 전자 메일 주소, 전화 번호, 성)을 [대상 활성화 워크플로우](../../ui/activate-segment-streaming-destinations.md#mapping). |
 | 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 &quot;항상 설정&quot; API 기반 연결입니다. 세그먼트 평가를 기반으로 Experience Platform에서 프로필이 업데이트되는 즉시 커넥터는 업데이트 다운스트림을 대상 플랫폼으로 보냅니다. 자세한 내용 [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style=&quot;table-layout:auto&quot;}
 
 ## 전제 조건 {#prerequisites}
 
->[!IMPORTANT]
->
->회사에 대해 HTTP API 대상 베타 기능을 활성화하려면 Adobe 담당자 또는 Adobe 고객 지원 팀에 문의하십시오.
-
 HTTP API 대상을 사용하여 Experience Platform에서 데이터를 내보내려면 다음 사전 요구 사항을 충족해야 합니다.
 
 * REST API를 지원하는 HTTP 엔드포인트가 있어야 합니다.
 * HTTP 종단점은 Experience Platform 프로필 스키마를 지원해야 합니다. HTTP API 대상에서 타사 페이로드 스키마에 대한 변환이 지원되지 않습니다. 자세한 내용은 [내보낸 데이터](#exported-data) Experience Platform 출력 스키마의 예를 보려면 섹션을 참조하십시오.
 * HTTP 끝점은 헤더를 지원해야 합니다.
-* HTTP 종단점은 을 지원해야 합니다 [OAuth 2.0 클라이언트 자격 증명](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) 인증. HTTP API 대상이 베타 단계에 있는 동안 이 요구 사항이 유효합니다.
-* 아래 예와 같이 클라이언트 자격 증명은 엔드포인트에 대한 POST 요청 본문에 포함해야 합니다.
+
+>[!TIP]
+>
+> 를 사용할 수도 있습니다 [Adobe Experience Platform Destination SDK](/help/destinations/destination-sdk/overview.md) 통합을 설정하고 Experience Platform 프로필 데이터를 HTTP 엔드포인트로 보냅니다.
+
+## IP 주소 허용 목록에 추가하다 {#ip-address-allowlist}
+
+고객의 보안 및 규정 준수 요구 사항을 충족하기 위해 Experience Platform은 HTTP API 대상에 대해 검색할 수 허용 목록에 추가하다 있는 정적 IP 목록을 제공합니다. 을(를) 참조하십시오. [스트리밍 대상을 위한 IP 주소 허용 목록](/help/destinations/catalog/streaming/ip-address-allow-list.md) 을 클릭하여 검색할 IP의 전체 목록을 허용 목록에 추가하다 확인합니다.
+
+## 지원되는 인증 유형 {#supported-authentication-types}
+
+HTTP API 대상은 HTTP 종단점에 대한 몇 가지 인증 유형을 지원합니다.
+
+* 인증이 없는 HTTP 끝점
+* 베어러 토큰 인증;
+* [OAuth 2.0 클라이언트 자격 증명](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) 본문 양식을 사용한 인증, [!DNL client ID], [!DNL client secret] 및 [!DNL grant type] 아래 예와 같이 HTTP 요청 본문에 를 사용하십시오.
 
 ```shell
 curl --location --request POST '<YOUR_API_ENDPOINT>' \
@@ -61,22 +71,74 @@ curl --location --request POST '<YOUR_API_ENDPOINT>' \
 --data-urlencode 'client_secret=<CLIENT_SECRET>'
 ```
 
-를 사용할 수도 있습니다 [Adobe Experience Platform Destination SDK](/help/destinations/destination-sdk/overview.md) 통합을 설정하고 Experience Platform 프로필 데이터를 HTTP 엔드포인트로 보냅니다.
+* [OAuth 2.0 클라이언트 자격 증명](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) 기본 권한 부여, URL이 인코딩된 인증 헤더 사용 [!DNL client ID] 및 [!DNL client secret].
 
-## IP 주소 허용 목록에 추가하다 {#ip-address-allowlist}
+```shell
+curl --location --request POST 'https://some-api.com/token' \
+--header 'Authorization: Basic base64(clientId:clientSecret)' \
+--header 'Content-type: application/x-www-form-urlencoded; charset=UTF-8' \
+--data-urlencode 'grant_type=client_credentials'
+```
 
-고객의 보안 및 규정 준수 요구 사항을 충족하기 위해 Experience Platform은 HTTP API 대상에 대해 검색할 수 허용 목록에 추가하다 있는 정적 IP 목록을 제공합니다. 을(를) 참조하십시오. [스트리밍 대상을 위한 IP 주소 허용 목록](/help/destinations/catalog/streaming/ip-address-allow-list.md) 을 클릭하여 검색할 IP의 전체 목록을 허용 목록에 추가하다 확인합니다.
+* [OAuth 2.0 암호 부여](https://www.oauth.com/oauth2-servers/access-tokens/password-grant/).
 
 ## 대상에 연결 {#connect-destination}
 
-이 대상에 연결하려면 [대상 구성 자습서](../../ui/connect-destination.md).
+>[!IMPORTANT]
+> 
+>대상에 연결하려면 **[!UICONTROL 대상 관리]** [액세스 제어 권한](/help/access-control/home.md#permissions). 다음 문서를 참조하십시오. [액세스 제어 개요](/help/access-control/ui/overview.md) 또는 제품 관리자에게 문의하여 필요한 권한을 얻으십시오.
 
-### 연결 매개 변수 {#parameters}
+이 대상에 연결하려면 [대상 구성 자습서](../../ui/connect-destination.md). 이 대상에 연결할 때 다음 정보를 제공해야 합니다.
+
+### 인증 정보 {#authentication-information}
+
+#### 베어러 토큰 인증 {#bearer-token-authentication}
+
+을(를) 선택하는 경우 **[!UICONTROL 베어러 토큰]** HTTP 종단점에 연결할 인증 유형입니다. 아래 필드를 입력하고 을(를) 선택합니다 **[!UICONTROL 대상에 연결]**:
+
+![베어러 토큰 인증을 사용하여 HTTP API 대상에 연결할 수 있는 UI 화면의 이미지입니다](../../assets/catalog/http/http-api-authentication-bearer.png)
+
+* **[!UICONTROL 베어러 토큰]**: bearer 토큰을 삽입하여 HTTP 위치를 인증합니다.
+
+#### 인증 없음 {#no-authentication}
+
+을(를) 선택하는 경우 **[!UICONTROL 없음]** HTTP 끝점에 연결할 인증 유형:
+
+![인증 없이 HTTP API 대상에 연결할 수 있는 UI 화면의 이미지입니다](../../assets/catalog/http/http-api-authentication-none.png)
+
+이 인증을 연 상태로 선택하는 경우 **[!UICONTROL 대상에 연결]** 엔드포인트에 대한 연결이 설정되었습니다.
+
+#### OAuth 2 암호 인증 {#oauth-2-password-authentication}
+
+을(를) 선택하는 경우 **[!UICONTROL OAuth 2 암호]** HTTP 종단점에 연결할 인증 유형입니다. 아래 필드를 입력하고 을(를) 선택합니다 **[!UICONTROL 대상에 연결]**:
+
+![암호 인증이 있는 OAuth 2를 사용하여 HTTP API 대상에 연결할 수 있는 UI 화면의 이미지입니다](../../assets/catalog/http/http-api-authentication-oauth2-password.png)
+
+* **[!UICONTROL 액세스 토큰 URL]**: 액세스 토큰을 발급하고, 원할 경우 토큰을 새로 고치는 URL입니다.
+* **[!UICONTROL 클라이언트 ID]**: 다음 [!DNL client ID] 시스템이 Adobe Experience Platform에 할당하는 것입니다.
+* **[!UICONTROL 클라이언트 암호]**: 다음 [!DNL client secret] 시스템이 Adobe Experience Platform에 할당하는 것입니다.
+* **[!UICONTROL 사용자 이름]**: HTTP 종단점에 액세스할 사용자 이름입니다.
+* **[!UICONTROL 암호]**: HTTP 종단점에 액세스하기 위한 암호입니다.
+
+#### OAuth 2 클라이언트 자격 증명 인증 {#oauth-2-client-credentials-authentication}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_clientcredentialstype"
 >title="클라이언트 자격 증명 유형"
 >abstract="선택 **본문 양식 인코딩됨** 클라이언트 ID 및 클라이언트 암호를 요청 본문에 포함하려면 **기본 인증** 인증 헤더에 클라이언트 ID 및 클라이언트 암호를 포함하기 위해 설명서에서 예를 봅니다."
+
+을(를) 선택하는 경우 **[!UICONTROL OAuth 2 클라이언트 자격 증명]** HTTP 종단점에 연결할 인증 유형입니다. 아래 필드를 입력하고 을(를) 선택합니다 **[!UICONTROL 대상에 연결]**:
+
+![클라이언트 자격 증명 인증과 함께 OAuth 2를 사용하여 HTTP API 대상에 연결할 수 있는 UI 화면의 이미지입니다](../../assets/catalog/http/http-api-authentication-oauth2-client-credentials.png)
+
+* **[!UICONTROL 액세스 토큰 URL]**: 액세스 토큰을 발급하고, 원할 경우 토큰을 새로 고치는 URL입니다.
+* **[!UICONTROL 클라이언트 ID]**: 다음 [!DNL client ID] 시스템이 Adobe Experience Platform에 할당하는 것입니다.
+* **[!UICONTROL 클라이언트 암호]**: 다음 [!DNL client secret] 시스템이 Adobe Experience Platform에 할당하는 것입니다.
+* **[!UICONTROL 클라이언트 자격 증명 유형]**: 끝점에서 지원하는 OAuth2 클라이언트 자격 증명 부여 유형을 선택합니다.
+   * **[!UICONTROL 본문 양식 인코딩됨]**: 이 경우 [!DNL client ID] 및 [!DNL client secret] 포함 *요청 본문에* 가 대상에 전송되었습니다. 예를 보려면 [지원되는 인증 유형](#supported-authentication-types) 섹션을 참조하십시오.
+   * **[!UICONTROL 기본 인증]**: 이 경우 [!DNL client ID] 및 [!DNL client secret] 포함 *에서 `Authorization` 헤더* base64로 인코딩되어 대상으로 보낸 후 예를 보려면 [지원되는 인증 유형](#supported-authentication-types) 섹션을 참조하십시오.
+
+### 대상 세부 사항 {#destination-details}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_headers"
@@ -103,27 +165,23 @@ curl --location --request POST '<YOUR_API_ENDPOINT>' \
 >title="쿼리 매개 변수"
 >abstract="선택적으로 HTTP 엔드포인트 URL에 쿼리 매개 변수를 추가할 수 있습니다. 다음과 같이 사용하는 쿼리 매개 변수의 형식을 지정합니다. `parameter1=value&parameter2=value`."
 
-While [설정](../../ui/connect-destination.md) 이 대상을 사용하려면 다음 정보를 제공해야 합니다.
+HTTP 끝점에 대한 인증 연결을 설정한 후 대상에 대해 다음 정보를 제공합니다.
 
-* **[!UICONTROL httpEndpoint]**: a [!DNL URL] 프로필 데이터를 보낼 HTTP 끝점입니다.
-   * 선택적으로 쿼리 매개 변수를 [!UICONTROL httpEndpoint] [!DNL URL].
-* **[!UICONTROL authEndpoint]**: a [!DNL URL] 에 사용되는 HTTP 끝점의 [!DNL OAuth2] 인증.
-* **[!UICONTROL 클라이언트 ID]**: a [!DNL clientID] 에 사용된 매개 변수 [!DNL OAuth2] 클라이언트 자격 증명입니다.
-* **[!UICONTROL 클라이언트 암호]**: a [!DNL clientSecret] 에 사용된 매개 변수 [!DNL OAuth2] 클라이언트 자격 증명입니다.
+![HTTP 대상 세부 사항에 대해 완료된 필드를 보여주는 UI 화면의 이미지](../../assets/catalog/http/http-api-destination-details.png)
 
-   >[!NOTE]
-   >
-   >전용 [!DNL OAuth2] 클라이언트 자격 증명은 현재 지원됩니다.
-
-* **[!UICONTROL 이름]**: 나중에 이 대상을 인식할 이름을 입력합니다.
+* **[!UICONTROL 이름]**: 나중에 이 대상을 인식할 이름을 입력하십시오.
 * **[!UICONTROL 설명]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명을 입력합니다.
-* **[!UICONTROL 사용자 지정 헤더]**: 다음 형식을 사용하여 대상 호출에 포함할 사용자 지정 헤더를 입력합니다. `header1:value1,header2:value2,...headerN:valueN`.
-
-   >[!IMPORTANT]
-   >
-   >현재 구현에는 하나 이상의 사용자 지정 헤더가 필요합니다. 이 제한은 향후 업데이트에서 해결됩니다.
+* **[!UICONTROL 머리글]**: 다음 형식을 사용하여 대상 호출에 포함할 사용자 지정 헤더를 입력합니다. `header1:value1,header2:value2,...headerN:valueN`.
+* **[!UICONTROL HTTP 끝점]**: 프로필 데이터를 보낼 HTTP 끝점의 URL입니다.
+* **[!UICONTROL 쿼리 매개 변수]**: 선택적으로 HTTP 엔드포인트 URL에 쿼리 매개 변수를 추가할 수 있습니다. 다음과 같이 사용하는 쿼리 매개 변수의 형식을 지정합니다. `parameter1=value&parameter2=value`.
+* **[!UICONTROL 세그먼트 이름 포함]**: 데이터 내보내기에 내보낼 세그먼트의 이름이 포함되도록 하려면 전환합니다. 이 옵션을 선택한 데이터 내보내기의 예는 를 참조하십시오. [내보낸 데이터](#exported-data) 섹션을 참조하십시오.
+* **[!UICONTROL 세그먼트 타임스탬프 포함]**: 세그먼트가 생성 및 업데이트될 때 데이터 내보내기에 UNIX 타임스탬프와 세그먼트가 활성화 대상에 매핑될 때 UNIX 타임스탬프를 포함하려면 을 전환합니다. 이 옵션을 선택한 데이터 내보내기의 예는 를 참조하십시오. [내보낸 데이터](#exported-data) 섹션을 참조하십시오.
 
 ## 세그먼트를 이 대상에 활성화 {#activate}
+
+>[!IMPORTANT]
+> 
+>데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 다음 문서를 참조하십시오. [액세스 제어 개요](/help/access-control/ui/overview.md) 또는 제품 관리자에게 문의하여 필요한 권한을 얻으십시오.
 
 자세한 내용은 [스트리밍 프로필 내보내기 대상으로 대상 데이터 활성화](../../ui/activate-streaming-profile-destinations.md) 대상 세그먼트를 이 대상으로 활성화하는 방법에 대한 지침입니다.
 
@@ -160,6 +218,10 @@ Experience Platform은 세그먼트 자격 또는 기타 중요한 이벤트 후
 대상에 대한 프로필 내보내기는 하나 또는 둘 중 하나에 대해 자격이 있는 프로필로 결정할 수 있습니다 *3개의 매핑된 세그먼트*. 그러나 데이터 내보내기에서 `segmentMembership` 개체(참조 [내보낸 데이터](#exported-data) 아래 섹션)을 사용하면, 특정 프로필이 해당 세그먼트의 구성원일 경우 매핑되지 않은 다른 세그먼트가 나타날 수 있습니다. 프로가 DeLorinan Cars 세그먼트를 통해 고객 자격을 얻지만 또한 Viewed &quot;Back to the Future&quot; 영화 및 SF 팬의 멤버인 경우 다른 두 세그먼트도 함께 제공됩니다 `segmentMembership` 데이터가 데이터 플로우에 매핑되지 않더라도 데이터 내보내기의 객체입니다.
 
 프로필 속성 POV에서 위에 매핑된 4개의 속성에 대한 변경 사항이 대상 내보내기를 결정하며 프로필에 있는 4개의 매핑된 속성이 데이터 내보내기에 표시됩니다.
+
+## 내역 데이터 채우기 {#historical-data-backfill}
+
+기존 대상에 새 세그먼트를 추가하거나 새 대상을 만들고 세그먼트를 대상에 매핑하면 Experience Platform이 내역 세그먼트 자격 데이터를 대상으로 내보냅니다. 세그먼트에 적합한 프로필 *이전* 대상에 추가된 세그먼트는 약 1시간 이내에 대상에 내보내집니다.
 
 ## 내보낸 데이터 {#exported-data}
 
@@ -217,3 +279,50 @@ Experience Platform은 세그먼트 자격 또는 기타 중요한 이벤트 후
   }
 }
 ```
+
+아래는 의 연결 대상 플로우에서 선택한 UI 설정에 따라 내보낸 데이터의 추가 예입니다 **[!UICONTROL 세그먼트 이름 포함]** 및 **[!UICONTROL 세그먼트 타임스탬프 포함]** 옵션:
+
++++ 아래 데이터 내보내기 샘플에는 `segmentMembership` 섹션
+
+```json
+"segmentMembership": {
+        "ups": {
+          "5b998cb9-9488-4ec3-8d95-fa8338ced490": {
+            "lastQualificationTime": "2019-04-15T02:41:50+0000",
+            "status": "existing",
+            "createdAt": 1648553325000,
+            "updatedAt": 1648553330000,
+            "mappingCreatedAt": 1649856570000,
+            "mappingUpdatedAt": 1649856570000,
+            "name": "First name equals John"
+          }
+        }
+      }
+```
+
++++
+
++++ 아래 데이터 내보내기 샘플에는 `segmentMembership` 섹션
+
+```json
+"segmentMembership": {
+        "ups": {
+          "5b998cb9-9488-4ec3-8d95-fa8338ced490": {
+            "lastQualificationTime": "2019-04-15T02:41:50+0000",
+            "status": "existing",
+            "createdAt": 1648553325000,
+            "updatedAt": 1648553330000,
+            "mappingCreatedAt": 1649856570000,
+            "mappingUpdatedAt": 1649856570000,
+          }
+        }
+      }
+```
+
++++
+
+## 제한 및 다시 시도 정책 {#limits-retry-policy}
+
+시간의 95%에서 Experience Platform은 각 데이터 플로우에 대해 HTTP 대상에 대한 초당 10.000 미만의 요청과 함께 성공적으로 전송된 메시지에 대해 10분 미만의 처리량 지연을 제공하기 위해 시도합니다.
+
+HTTP API 대상에 대한 요청이 실패한 경우 Experience Platform은 실패한 요청을 저장하고 엔드포인트로 요청을 다시 두 번 전송합니다.

@@ -6,18 +6,14 @@ description: 이 문서에서는 Adobe Experience Platform API를 사용하여 �
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
-source-git-commit: 0b094e635e6d22e58e5aa79a374df0879167a833
+source-git-commit: 1b9b2476047b78c67a8c9950e28b0812642c7941
 workflow-type: tm+mt
-source-wordcount: '2067'
+source-wordcount: '2049'
 ht-degree: 1%
 
 ---
 
 # Flow Service API를 사용하여 스트리밍 대상에 연결하고 데이터를 활성화합니다
-
->[!NOTE]
->
->다음 [!DNL Amazon Kinesis] 및 [!DNL Azure Event Hubs] Platform의 대상은 현재 베타 버전입니다. 설명서 및 기능은 변경될 수 있습니다.
 
 >[!IMPORTANT]
 > 

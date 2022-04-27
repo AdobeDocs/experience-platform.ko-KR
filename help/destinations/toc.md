@@ -4,9 +4,9 @@ user-guide-title: 대상 안내서
 user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화합니다.
 description: 이 문서에서는 Adobe Experience Platform 대상의 목차 목록을 설명합니다
 feature: Destinations
-source-git-commit: d5f83f9d99789afba44e26400d0cea8a72946d7a
+source-git-commit: 0f3cb17650612399091c12a6b638471a80306729
 workflow-type: tm+mt
-source-wordcount: '758'
+source-wordcount: '755'
 ht-degree: 8%
 
 ---
@@ -93,10 +93,10 @@ ht-degree: 8%
       * [다음 전환 추적 확장](./catalog/analytics/yext.md)
    * 클라우드 스토리지 대상 {#cloud-storage}
       * [클라우드 스토리지 대상 개요](./catalog/cloud-storage/overview.md)
-      * [(베타) Amazon Kinesis 연결](./catalog/cloud-storage/amazon-kinesis.md)
+      * [Amazon Kinesis 연결](./catalog/cloud-storage/amazon-kinesis.md)
       * [Amazon S3 연결](./catalog/cloud-storage/amazon-s3.md)
       * [Azure Blob 연결](./catalog/cloud-storage/azure-blob.md)
-      * [(베타) Azure 이벤트 허브 연결](./catalog/cloud-storage/azure-event-hubs.md)
+      * [Azure 이벤트 허브 연결](./catalog/cloud-storage/azure-event-hubs.md)
       * [SFTP 연결](./catalog/cloud-storage/sftp.md)
       * [클라우드 스토리지 허용 목록에 추가하다 대상에 대한 IP 주소](./catalog/cloud-storage/ip-address-allow-list.md)
    * 데이터 관리 플랫폼 대상 {#data-management}
@@ -140,7 +140,7 @@ ht-degree: 8%
       * [linkedIn Matched Audiences 연결](./catalog/social/linkedin.md)
       * [[!DNL Twitter Custom Audiences] 연결](./catalog/social/twitter.md)
    * 스트리밍 대상 {#streaming}
-      * [ (베타) HTTP API 연결](./catalog/streaming/http-destination.md)
+      * [HTTP API 연결](./catalog/streaming/http-destination.md)
       * [스트리밍 대상을 허용 목록에 추가하다 위한 IP 주소](./catalog/streaming/ip-address-allow-list.md)
    * 설문 조사 대상 {#survey}
       * [설문 조사 대상 개요](./catalog/survey/overview.md)

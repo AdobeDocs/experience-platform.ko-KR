@@ -4,9 +4,9 @@ title: 대상 유형 및 카테고리
 seo-title: Destination types and categories
 description: Adobe Experience Platform의 다양한 대상 유형 및 카테고리에 대해 알아봅니다.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 08c6c2716b88180b1eb290663117e6da2d8641f0
+source-git-commit: 1c2846941df09b66eb74f8ea8bec91574577fbbc
 workflow-type: tm+mt
-source-wordcount: '533'
+source-wordcount: '596'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Adobe Experience Platform 대상의 다양한 유형과 카테고리를 이해하려면 이 페이지를 읽으십시오.
 
-## 대상 유형
+## 대상 유형 {#destination-types}
 
 Adobe Experience Platform에서는 연결과 확장의 두 대상 유형을 구별합니다. 연결 대상의 두 가지 유형인 프로필 내보내기 대상과 세그먼트 내보내기 대상이 있습니다.
 
@@ -25,16 +25,28 @@ Adobe Experience Platform에서는 연결과 확장의 두 대상 유형을 구�
 
 **[!UICONTROL 프로필 내보내기]** 및 **[!UICONTROL 스트리밍 세그먼트 내보내기]** Adobe Experience Platform의 대상 캡처 이벤트 데이터를 대상으로 하여 다른 데이터 소스와 결합하여 양식을 구성합니다 [실시간 고객 프로필](../profile/home.md), 세그먼테이션을 적용하고 세그먼트와 자격을 갖춘 프로필을 대상으로 내보냅니다.
 
-## 프로필 내보내기 대상
+## 프로필 내보내기 대상 {#profile-export}
 
 프로필 내보내기 대상은 원시 데이터를 받게 되며, 종종 이메일 주소를 기본 키로 사용합니다. Experience Platform은 현재 두 가지 유형의 프로필 내보내기 대상을 지원합니다.
 
-* [스트리밍 프로필 내보내기 대상](#streaming-profile-export)
+* [스트리밍 프로필 내보내기 대상(엔터프라이즈 대상)](#streaming-profile-export)
 * [배치(파일 기반) 대상](#file-based)
 
-### 스트리밍 프로필 내보내기 대상 {#streaming-profile-export}
+### 스트리밍 프로필 내보내기 대상(엔터프라이즈 대상) {#streaming-profile-export}
 
-스트리밍 프로필 내보내기 대상은 세그먼트 및 프로필 데이터를 Experience Platform 데이터 스트림으로 받습니다. [Amazon Kinesis](catalog/cloud-storage/amazon-kinesis.md) 및 [Azure 이벤트 허브](catalog/cloud-storage/azure-event-hubs.md) 은 그러한 대상의 예시입니다.
+>[!IMPORTANT]
+>
+>엔터프라이즈 대상 또는 스트리밍 프로필 내보내기 대상을 사용할 수 있습니다 [Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) 고객에게만 해당됩니다.
+
+엔터프라이즈 대상 Data Connectors를 사용하여 내부 시스템 또는 기타 타사 시스템에 Real-time Customer Data Platform 프로필을 실시간으로 전달하여 데이터 동기화, 분석 및 추가적인 프로필 보강 사용 사례를 제공합니다.
+
+이러한 대상은 Experience Platform 데이터 스트림으로 세그먼트 및 프로필 데이터를 받습니다.
+
+엔터프라이즈 대상:
+
+* [HTTP API 대상](catalog/streaming/http-destination.md)
+* [Amazon Kinesis](catalog/cloud-storage/amazon-kinesis.md)
+* [Azure 이벤트 허브](catalog/cloud-storage/azure-event-hubs.md)
 
 ### 배치(파일 기반) 대상 {#file-based}
 
@@ -42,7 +54,7 @@ Adobe Experience Platform에서는 연결과 확장의 두 대상 유형을 구�
 
 ## 스트리밍 세그먼트 내보내기 대상 {#streaming-destinations}
 
-세그먼트 내보내기 대상이 Experience Platform 세그먼트 데이터를 받습니다. 이러한 대상은 세그먼트 ID 또는 사용자 ID를 사용합니다. [[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md), [[!DNL Google Ads]](catalog/advertising/google-ads-destination.md), 및 는 그러한 대상의 예입니다.
+세그먼트 내보내기 대상이 Experience Platform 세그먼트 데이터를 받습니다. 이러한 대상은 세그먼트 ID 또는 사용자 ID를 사용합니다. 광고 및 다음과 같은 소셜 대상 [[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md), [[!DNL Google Ads]](catalog/advertising/google-ads-destination.md), 또는 [Facebook](catalog/social/facebook.md) 은 그러한 대상의 예시입니다.
 
 ## 프로필 내보내기 및 세그먼트 내보내기 대상 - 비디오 개요 {#video}
 
