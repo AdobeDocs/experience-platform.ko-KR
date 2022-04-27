@@ -6,14 +6,18 @@ topic-legacy: overview
 type: Tutorial
 description: 이 자습서에서는 UI에서 B2B 데이터를 Adobe Experience Platform으로 가져오기 위해 Marketo Engage 소스 커넥터를 만드는 단계를 제공합니다.
 exl-id: a6aa596b-9cfa-491e-86cb-bd948fb561a8
-source-git-commit: cffa2edf5746f0412bf8366c32ea777ca1974334
+source-git-commit: 8d88af787508f9aeaa7966409b33bf0aae488a87
 workflow-type: tm+mt
-source-wordcount: '1369'
+source-wordcount: '1427'
 ht-degree: 0%
 
 ---
 
 # 만들기 [!DNL Marketo Engage] UI의 소스 커넥터
+
+>[!IMPORTANT]
+>
+>Before creating a [!DNL Marketo Engage] source connection and a dataflow, you must first ensure that you have [mapped your Adobe IMS Organization ID](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html?lang=en) in [!DNL Marketo]. 또한 다음을 완료했는지 확인해야 합니다 [자동 채우기 [!DNL Marketo] B2B 네임스페이스 및 스키마](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md) 소스 연결 및 데이터 흐름을 만들기 전에
 
 이 자습서에서는 을(를) 만드는 단계를 제공합니다 [!DNL Marketo Engage] (이하 &quot;라 한다)[!DNL Marketo]&quot;) B2B 데이터를 Adobe Experience Platform으로 가져오기 위한 UI의 소스 커넥터입니다.
 
@@ -38,15 +42,15 @@ ht-degree: 0%
 | `clientId` | 사용자의 고유한 클라이언트 ID [!DNL Marketo] 인스턴스. |
 | `clientSecret` | 사용자의 고유한 클라이언트 암호 [!DNL Marketo] 인스턴스. |
 
-이러한 값 가져오기에 대한 자세한 내용은 [[!DNL Marketo] 인증 안내서](../../../../connectors/adobe-applications/marketo/marketo-auth.md).
+For more information on acquiring these values, refer to the [[!DNL Marketo] authentication guide](../../../../connectors/adobe-applications/marketo/marketo-auth.md).
 
-필요한 자격 증명을 수집하면 다음 섹션의 단계를 따를 수 있습니다.
+Once you have gathered your required credentials, you can follow the steps in the next section.
 
-## 연결 [!DNL Marketo] account
+## Connect your [!DNL Marketo] account
 
 플랫폼 UI에서 **[!UICONTROL 소스]** 왼쪽 탐색 모음에서 를 클릭하여 [!UICONTROL 소스] 작업 공간. 다음 [!UICONTROL 카탈로그] 화면에는 계정을 만들 수 있는 다양한 소스가 표시됩니다.
 
-화면 왼쪽에 있는 카탈로그에서 적절한 카테고리를 선택할 수 있습니다. 또는 검색 막대를 사용하여 작업할 특정 소스를 찾을 수 있습니다.
+화면 왼쪽에 있는 카탈로그에서 적절한 카테고리를 선택할 수 있습니다. Alternatively, you can find the specific source you wish to work with using the search bar.
 
 아래에 [!UICONTROL Adobe 애플리케이션] 카테고리, 선택 **[!UICONTROL Marketo Engage]**. 그런 다음 **[!UICONTROL 데이터 추가]** 새 [!DNL Marketo] 데이터 흐름.
 
@@ -56,7 +60,7 @@ ht-degree: 0%
 
 ### 기존 계정
 
-기존 계정으로 데이터 흐름을 만들려면 **[!UICONTROL 기존 계정]** 그런 다음 [!DNL Marketo] 사용할 계정입니다. 선택 **[!UICONTROL 다음]** 계속 진행합니다.
+To create a dataflow with an existing account, select **[!UICONTROL Existing account]** and then select the [!DNL Marketo] account you want to use. 선택 **[!UICONTROL 다음]** 계속 진행합니다.
 
 ![기존](../../../../images/tutorials/create/marketo/existing.png)
 
@@ -66,7 +70,7 @@ ht-degree: 0%
 
 ![새](../../../../images/tutorials/create/marketo/new.png)
 
-## 데이터 세트 선택
+## Select a dataset
 
 작성 후 [!DNL Marketo] 계정에서는 다음 단계에서 탐색할 수 있는 인터페이스를 제공합니다 [!DNL Marketo] 데이터 세트.
 
@@ -82,15 +86,15 @@ ht-degree: 0%
 
 ## 데이터 흐름 세부 정보 제공
 
-다음 [!UICONTROL 데이터 흐름 세부 정보] 페이지에서 기존 데이터 세트를 사용할지 새 데이터 세트를 사용할지 선택할 수 있습니다. 이 프로세스 중에 [!UICONTROL 프로필 데이터 세트], [!UICONTROL 오류 진단], [!UICONTROL 부분 수집], 및 [!UICONTROL 경고].
+The [!UICONTROL Dataflow detail] page allows you to select whether you want to use an existing dataset or a new dataset. 이 프로세스 중에 [!UICONTROL 프로필 데이터 세트], [!UICONTROL 오류 진단], [!UICONTROL 부분 수집], 및 [!UICONTROL 경고].
 
-![데이터 흐름 세부 정보](../../../../images/tutorials/create/marketo/dataflow-details.png)
+![dataflow-details](../../../../images/tutorials/create/marketo/dataflow-details.png)
 
-### 기존 데이터 세트 사용
+### Use an existing dataset
 
-기존 데이터 세트에 데이터를 수집하려면 을 선택합니다 **[!UICONTROL 기존 데이터 세트]**. 를 사용하여 기존 데이터 세트를 검색할 수 있습니다 [!UICONTROL 고급 검색] 옵션을 선택하거나 드롭다운 메뉴에서 기존 데이터 세트 목록을 스크롤하여 선택합니다. 데이터 세트를 선택하면 데이터 집합에 대한 이름과 설명을 제공합니다.
+기존 데이터 세트에 데이터를 수집하려면 을 선택합니다 **[!UICONTROL 기존 데이터 세트]**. You can either retrieve an existing dataset using the [!UICONTROL Advanced search] option or by scrolling through the list of existing datasets in the dropdown menu. 데이터 세트를 선택하면 데이터 집합에 대한 이름과 설명을 제공합니다.
 
-![기존 데이터 세트](../../../../images/tutorials/create/marketo/existing-dataset.png)
+![existing-dataset](../../../../images/tutorials/create/marketo/existing-dataset.png)
 
 ### 새 데이터 세트 사용
 
@@ -112,7 +116,7 @@ ht-degree: 0%
 
 ### 경고 활성화
 
-경고를 활성화하여 데이터 흐름 상태에 대한 알림을 받을 수 있습니다. 목록에서 경고를 선택하여 데이터 흐름 상태에 대한 알림을 수신합니다. 경고에 대한 자세한 내용은 [UI를 사용하여 소스 경고 구독](../../alerts.md).
+You can enable alerts to receive notifications on the status of your dataflow. 목록에서 경고를 선택하여 데이터 흐름 상태에 대한 알림을 수신합니다. 경고에 대한 자세한 내용은 [UI를 사용하여 소스 경고 구독](../../alerts.md).
 
 데이터 집합에 세부 정보 제공을 마치면 를 선택합니다 **[!UICONTROL 다음]**.
 
@@ -131,11 +135,11 @@ ht-degree: 0%
 * [정적 목록](../../../../connectors/adobe-applications/mapping/marketo.md#static-lists)
 * [정적 목록 구성원](../../../../connectors/adobe-applications/mapping/marketo.md#static-list-memberships)
 * [명명된 계정](../../../../connectors/adobe-applications/mapping/marketo.md#named-accounts)
-* [기회](../../../../connectors/adobe-applications/mapping/marketo.md#opportunities)
-* [기회 연락처 역할](../../../../connectors/adobe-applications/mapping/marketo.md#opportunity-contact-roles)
+* [Opportunities](../../../../connectors/adobe-applications/mapping/marketo.md#opportunities)
+* [Opportunity contact roles](../../../../connectors/adobe-applications/mapping/marketo.md#opportunity-contact-roles)
 * [사람](../../../../connectors/adobe-applications/mapping/marketo.md#persons)
 
-필요에 따라 필드를 직접 매핑하거나 데이터 준비 함수를 사용하여 소스 데이터를 변환하여 계산 또는 계산된 값을 도출할 수 있습니다. 매핑 인터페이스 사용에 대한 포괄적인 단계는 [데이터 준비 UI 안내서](../../../../../data-prep/ui/mapping.md).
+필요에 따라 필드를 직접 매핑하거나 데이터 준비 함수를 사용하여 소스 데이터를 변환하여 계산 또는 계산된 값을 도출할 수 있습니다. For comprehensive steps on using the mapping interface, see the [Data Prep UI guide](../../../../../data-prep/ui/mapping.md).
 
 ![매핑](../../../../images/tutorials/create/marketo/mapping.png)
 
@@ -152,9 +156,9 @@ ht-degree: 0%
 
 ![검토](../../../../images/tutorials/create/marketo/review.png)
 
-## 데이터 흐름 모니터링
+## Monitor your dataflow
 
-데이터 흐름이 만들어지면 이를 통해 수집되는 데이터를 모니터링하여 수집률, 성공 및 오류에 대한 정보를 볼 수 있습니다. 데이터 흐름을 모니터링하는 방법에 대한 자세한 내용은 다음 내용을 참조하십시오 [UI에서 데이터 흐름 모니터링](../../../../../dataflows/ui/monitor-sources.md).
+Once your dataflow has been created, you can monitor the data that is being ingested through it to see information on ingestion rates, success, and errors. 데이터 흐름을 모니터링하는 방법에 대한 자세한 내용은 다음 내용을 참조하십시오 [UI에서 데이터 흐름 모니터링](../../../../../dataflows/ui/monitor-sources.md).
 
 ## 속성 삭제
 
@@ -166,7 +170,7 @@ ht-degree: 0%
 
 ## 다음 단계
 
-이 자습서를 따라 가져올 데이터 흐름을 만들었습니다 [!DNL Marketo] 데이터. 이제 와 같은 다운스트림 Platform 서비스에서 들어오는 데이터를 사용할 수 있습니다. [!DNL Real-time Customer Profile] 및 [!DNL Data Science Workspace]. 자세한 내용은 다음 문서를 참조하십시오.
+이 자습서를 따라 가져올 데이터 흐름을 만들었습니다 [!DNL Marketo] 데이터. Incoming data can now be used by downstream Platform services such as [!DNL Real-time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
 
 * [[!DNL Real-time Customer Profile] 개요](/help/profile/home.md)
 * [[!DNL Data Science Workspace] 개요](/help/data-science-workspace/home.md)
