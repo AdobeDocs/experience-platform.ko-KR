@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform에 대한 최신 릴리스 노트입니다.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: ea04132c5092ce62820b0af1edc95bb1e0a1a16f
+source-git-commit: 7b12a4094be3eed9b562fff2d0274a1e169913f3
 workflow-type: tm+mt
-source-wordcount: '2259'
+source-wordcount: '2378'
 ht-degree: 4%
 
 ---
@@ -19,6 +19,7 @@ Adobe Experience Platform의 기존 기능 업데이트:
 - [[!DNL Dashboards]](#dashboards)
 - [데이터 흐름](#dataflows)
 - [[!DNL Data Prep]](#data-prep)
+- [대상](#destinations)
 - [XDM(경험 데이터 모델)](#xdm)
 - [Real-time Customer Data Platform B2B 에디션](#B2B)
 - [소스](#sources)
@@ -89,6 +90,23 @@ Platform에서 데이터는 다양한 소스에서 수집되고 시스템 내에
 | 기존 매핑 규칙 가져오기 지원 | 이제 기존 데이터 흐름에서 매핑 규칙을 가져와 데이터 흐름 구성을 가속화하고 오류를 제한할 수 있습니다. 다음에서 자습서를 참조하십시오. [기존 매핑 규칙 가져오기](../../data-prep/ui/mapping.md) 추가 정보. |
 
 자세한 내용은 [!DNL Data Prep]를 보려면 [[!DNL Data Prep] 개요](../../data-prep/home.md).
+
+## [!DNL Destinations] {#destinations}
+
+[!DNL Destinations] 는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과의 사전 구축된 통합입니다. 대상을 사용하여 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례에 대해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
+
+**새로운 기능 또는 업데이트된 기능**
+
+| 기능 | 설명 |
+| ----------- | ----------- |
+| [대상 데이터 흐름에 대한 컨텍스트 내 경고](../../destinations/ui/alerts.md) | 이제 대상 데이터 흐름을 만들 때 경고에 가입하여 데이터 흐름 실행 상태, 성공 또는 실패와 관련된 경고 메시지를 받을 수 있습니다. Experience Platform UI나 이메일을 통해 경고를 수신하도록 선택할 수 있습니다. |
+
+**새 대상**
+
+| 대상 | 설명 |
+| ----------- | ----------- |
+| [[!DNL Criteo]](../../destinations/catalog/advertising/criteo.md) | 데이터를 Digital Advertising 플랫폼에 연결하고 활성화합니다. |
+| [[!DNL Sendgrid]](../../destinations/catalog/email-marketing/sendgrid.md) | 트랜잭션 및 마케팅 이메일을 위해 데이터를 Sendgrid 플랫폼에 연결하고 활성화합니다. |
 
 ## XDM(경험 데이터 모델) {#xdm}
 
