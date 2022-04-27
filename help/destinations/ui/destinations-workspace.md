@@ -4,9 +4,9 @@ title: 대상 작업 공간
 description: 대상 작업 영역은 카탈로그, 찾아보기, 계정 및 시스템 보기의 네 섹션으로 구성됩니다. 이러한 내용은 아래 섹션에 설명되어 있습니다.
 seo-description: In Adobe Experience Platform, select Destinations from the left navigation bar to access the destinations workspace.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: 2d944c7bd237efbbd4a770b3a6dd03c4133bc901
+source-git-commit: b275621d9c6552327e0e55c00c8fcf0397088168
 workflow-type: tm+mt
-source-wordcount: '1101'
+source-wordcount: '1156'
 ht-degree: 2%
 
 ---
@@ -94,6 +94,7 @@ Adobe Experience Platform에서 **[!UICONTROL 대상]** 왼쪽 탐색 모음에�
 > * 에서 세 점을 선택합니다 [!UICONTROL 이름] 열 및 ![세그먼트 활성화 단추](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL 세그먼트 활성화&#x200B;]**세그먼트를 해당 대상에 전송하는 단추.
 > * 에서 세 점을 선택합니다 [!UICONTROL 이름] 열 및 ![삭제 단추](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL 삭제&#x200B;]**버튼 대상 [제거](delete-destinations.md) 대상에 대한 기존 연결.
 > * 에서 세 점을 선택합니다 [!UICONTROL 이름] 열 및 ![모니터링 단추에서 보기](../assets/ui/workspace/monitoring-icon.png)**[!UICONTROL 모니터링에서 보기&#x200B;]**단추를 클릭하여 이 대상에 대한 활성화 정보를 봅니다. [대시보드 모니터링](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
+> * 에서 세 점을 선택합니다 [!UICONTROL 이름] 열 및 ![경고 구독 ](../assets/ui/workspace/alerts-icon.png)**[!UICONTROL 경고 구독&#x200B;]**대상 데이터 흐름 경고를 구독하는 단추. 경고를 구독하면 흐름 실행 상태, 성공 또는 실패와 관련된 메시지를 받을 수 있습니다. 자세한 내용은 [컨텍스트 내 대상 경고 구독](alerts.md) 대상 데이터 흐름 경고에 대한 자세한 정보..
 
 
 ![찾아보기 탭](../assets/ui/workspace/browse-tab.png)
