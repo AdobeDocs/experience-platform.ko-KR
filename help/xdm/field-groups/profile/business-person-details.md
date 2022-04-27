@@ -2,10 +2,10 @@
 title: XDM 비즈니스 개인 세부 정보 스키마 필드 그룹
 description: 이 문서에서는 XDM 비즈니스 개인 세부 정보 스키마 필드 그룹에 대한 개요를 제공합니다.
 exl-id: e9da5c1c-5a30-4cbc-beb2-cc5efe57cab0
-source-git-commit: edf7afc5db219430232a3226dc691570b50a32bd
+source-git-commit: 0084492ed467c5996a94c5c55a79c9faf8f5046e
 workflow-type: tm+mt
-source-wordcount: '533'
-ht-degree: 7%
+source-wordcount: '601'
+ht-degree: 6%
 
 ---
 
@@ -53,6 +53,7 @@ ht-degree: 7%
 | `workEmail` | [이메일 주소](../../data-types/email-address.md) | 사람의 회사 전자 메일 주소입니다. |
 | `workPhone` | [전화번호](../../data-types/phone-number.md) | 사람의 직장 전화 번호입니다. |
 | `identityMap` | 맵 | 개인의 지정된 ID 세트가 포함된 맵 필드입니다. ID 데이터를 수집할 때 시스템에서 이 필드를 자동으로 업데이트합니다. 에 이 필드를 적절히 활용하려면 [실시간 고객 프로필](../../../profile/home.md)에서는 데이터 작업에서 필드의 내용을 수동으로 업데이트하지 마십시오.<br /><br />의 ID 맵에 대한 섹션을 참조하십시오. [스키마 구성 기본 사항](../../schema/composition.md#identityMap) 를 참조하십시오. |
+| `isDeleted` | 부울 | 이 사람이 Marketo Engage에서 삭제되었는지 여부를 나타냅니다.<br><br>를 사용할 때 [Marketo 소스 커넥터](../../../sources/connectors/adobe-applications/marketo/marketo.md)를 입력하면 Marketo에서 삭제된 모든 레코드가 실시간 고객 프로필에 자동으로 반영됩니다. 그러나 이러한 프로필과 관련된 레코드는 여전히 Data Lake에서 유지됩니다. 설정 `isDeleted` to `true`, 필드를 사용하여 데이터 레이크를 쿼리할 때 소스에서 삭제된 레코드를 필터링할 수 있습니다. |
 | `organizations` | 문자열 배열 | 개인이 근무하는 조직명 목록입니다. |
 
 {style=&quot;table-layout:auto&quot;}

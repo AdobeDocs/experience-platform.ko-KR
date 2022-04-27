@@ -2,9 +2,9 @@
 title: XDM 비즈니스 캠페인 클래스
 description: 이 문서에서는 XDM(Experience Data Model)의 XDM 비즈니스 캠페인 클래스에 대한 개요를 제공합니다.
 exl-id: 4e3228a1-74be-43af-b355-45d84afb1611
-source-git-commit: 8718512a9768158183b9fb6b9e336081e47cd889
+source-git-commit: 0084492ed467c5996a94c5c55a79c9faf8f5046e
 workflow-type: tm+mt
-source-wordcount: '206'
+source-wordcount: '239'
 ht-degree: 4%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 4%
 
 [!UICONTROL XDM 비즈니스 캠페인] 는 비즈니스 캠페인의 최소 필수 속성을 캡처하는 표준 XDM(Experience Data Model) 클래스입니다.
 
-![](../../images/classes/b2b/business-campaign.png)
+![UI에 표시되는 XDM 비즈니스 캠페인 클래스의 구조입니다](../../images/classes/b2b/business-campaign.png)
 
 | 속성 | 데이터 유형 | 설명 |
 | --- | --- | --- |
@@ -31,4 +31,6 @@ ht-degree: 4%
 
 {style=&quot;table-layout:auto&quot;}
 
-다음 안내서를 참조하십시오. [실시간 CDP B2B Edition의 스키마 관계](../../tutorials/relationship-b2b.md) 이 클래스가 다른 B2B 클래스와 개념적으로 관련이 있는 방법과 Adobe Experience Platform UI에서 이러한 관계를 설정할 수 있는 방법을 알아봅니다.
+이 클래스가 다른 B2B 클래스와 개념적으로 관련이 있는 방법과 Adobe Experience Platform UI에서 이러한 관계를 설정할 수 있는 방법에 대해 알아보려면 다음 안내서를 참조하십시오. [실시간 CDP B2B Edition의 스키마 관계](../../tutorials/relationship-b2b.md)
+
+이 클래스와 호환되는 추가 필드에 대해서는 필드 그룹 참조를 참조하십시오 [[!UICONTROL XDM 비즈니스 캠페인 세부 사항]](../../field-groups/b2b-campaign/details.md).

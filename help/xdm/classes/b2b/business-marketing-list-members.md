@@ -2,10 +2,10 @@
 title: XDM 비즈니스 마케팅 목록 구성원 클래스
 description: 이 문서에서는 XDM(Experience Data Model)의 XDM 비즈니스 마케팅 목록 멤버 클래스에 대한 개요를 제공합니다.
 exl-id: 069002c2-5583-4c59-84ee-c071e2acaaec
-source-git-commit: 8718512a9768158183b9fb6b9e336081e47cd889
+source-git-commit: 50e5fe8573d828f88867ed33fe86e974c85de60a
 workflow-type: tm+mt
-source-wordcount: '251'
-ht-degree: 3%
+source-wordcount: '338'
+ht-degree: 2%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 3%
 
 [!UICONTROL XDM 비즈니스 마케팅 목록 구성원] 는 마케팅 목록과 연관된 구성원, 개인 또는 연락처를 설명하는 표준 XDM(Experience Data Model) 클래스입니다.
 
-![](../../images/classes/b2b/business-marketing-list-members.png)
+![UI에 표시되는 XDM Business Marketing List Members 클래스의 구조](../../images/classes/b2b/business-marketing-list-members.png)
 
 | 속성 | 데이터 유형 | 설명 |
 | --- | --- | --- |
@@ -26,6 +26,7 @@ ht-degree: 3%
 | `marketingListMemberKey` | [[!UICONTROL B2B 소스]](../../data-types/b2b-source.md) | 마케팅 목록 구성원 엔터티에 대한 복합 식별자입니다. |
 | `personKey` | [[!UICONTROL B2B 소스]](../../data-types/b2b-source.md) | 마케팅 목록의 멤버인 개인에 대한 복합 식별자입니다. |
 | `_id` | 문자열 | 레코드의 고유 식별자입니다. 시스템에서 생성한 값으로, `marketingListMemberID`. |
+| `isDeleted` | 부울 | 이 마케팅 목록 구성원 엔터티가 Marketo Engage에서 삭제되었는지 여부를 나타냅니다.<br><br>를 사용할 때 [Marketo 소스 커넥터](../../../sources/connectors/adobe-applications/marketo/marketo.md)를 입력하면 Marketo에서 삭제된 모든 레코드가 실시간 고객 프로필에 자동으로 반영됩니다. 그러나 이러한 프로필과 관련된 레코드는 여전히 Data Lake에서 유지됩니다. 설정 `isDeleted` to `true`, 필드를 사용하여 데이터 레이크를 쿼리할 때 소스에서 삭제된 레코드를 필터링할 수 있습니다. |
 | `marketingListID` | 문자열 | 마케팅 목록에 대한 고유 ID입니다. |
 | `marketingListMemberID` | 문자열 | 마케팅 목록 멤버십 엔티티의 고유 ID입니다. |
 | `personId` | 문자열 | 개인의 고유 ID입니다. |
