@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 릴리스 노트 - 2022년 4월
 description: Adobe Experience Platform에 대한 2022년 4월 릴리스 노트입니다.
 exl-id: 39233787-3089-4469-8363-b006ae41ae21
-source-git-commit: 6c2271e4c5be924dcd8c137cb40bef72e104c7e2
+source-git-commit: d4a4baf330925d6696f515bf650d86740c18e97c
 workflow-type: tm+mt
-source-wordcount: '2493'
+source-wordcount: '2708'
 ht-degree: 3%
 
 ---
@@ -87,19 +87,15 @@ Platform에서 데이터는 다양한 소스에서 수집되고 시스템 내에
 | 고급 엔터프라이즈 대상 커넥터 | 이제 3개의 엔터프라이즈 대상 커넥터를 일반적으로 사용할 수 있습니다. [[!DNL Amazon Kinesis]](../../destinations/catalog/cloud-storage/amazon-kinesis.md), [[!DNL Azure Event Hubs]](../../destinations/catalog/cloud-storage/azure-event-hubs.md), 및 [[!DNL HTTP API]](../../destinations/catalog/streaming/http-destination.md). <br> 엔터프라이즈 대상 커넥터의 일반 가용성에는 베타 단계에서 이전에 제공되는 모든 기능 등이 포함되어 있습니다. <ul><li>다음을 포함한 새로운 인증 기능 [Azure 이벤트 허브의 공유 액세스 서명](../../destinations/catalog/cloud-storage/azure-event-hubs.md#sas-authentication) 및 기타 [인증 유형](../../destinations/catalog/streaming/http-destination.md#authentication-information) (HTTP API 대상의 베어러 토큰, OAuth 2);</li><li>[내역 프로필 데이터 채우기](../../destinations/catalog/streaming/http-destination.md#historical-data-backfill) (처음 활성화되었을 때 세그먼트에 적합한 내역 프로필 전송)</li><li>이제 데이터 흐름 실행 지표가 이러한 대상에 대해 지원됩니다.</li><li>[추가 세그먼트 메타데이터](../../destinations/catalog/streaming/http-destination.md#destination-details) 세그먼트 이름 및 세그먼트 타임스탬프를 포함한 데이터 페이로드에 포함됨</li><li>지원 대상 [정적 IP 주소](/help/destinations/catalog/streaming/ip-address-allow-list.md) Experience Platform을 방문해야 하는 고객허용 목록에 추가하다의 경우.</li></ul> |
 | 대상 데이터 흐름에 대한 컨텍스트 내 경고 | 이제 다음을 수행할 수 있습니다 [경고 구독](../../destinations/ui/alerts.md) 대상 데이터 흐름을 만들 때 데이터 흐름 실행 상태, 성공 또는 실패와 관련된 경고 메시지를 수신합니다. Experience Platform UI나 이메일을 통해 경고를 수신하도록 선택할 수 있습니다. |
 
-<!--
+### 고급 엔터프라이즈 대상 커넥터에 대한 릴리스 프로세스 {#release-process-enterprise-destinations}
 
-### Release process for advanced enterprise destination connectors {#release-process-enterprise-destinations}
+Amazon Kinesis, Azure 이벤트 허브 및 HTTP API 대상의 경우 릴리스 프로세스(4월 27일부터)에서 이전 베타 대상 카드와 대상 카탈로그에서 새로운 GA(General Available) 대상 카드를 모두 볼 수 있습니다. 베타 대상을 사용하는 고객이 구성한 모든 데이터 흐름은 다음 며칠 내에 동일한 대상의 GA 버전으로 마이그레이션됩니다. 이 마이그레이션은 궁극적으로 4월 29일 금요일 말까지 완료되어야 합니다. 베타 대상은 이 짧은 시간 동안 계속 표시되며 **사용되지 않음**.
 
-For the Amazon Kinesis, Azure Event Hubs, and HTTP API destinations, during the release process (starting April 27th), you will see both the former Beta destination card, as well as the new generally available (GA) destination card in the destinations catalog. Any dataflows configured by customers using the beta destinations will be migrated in the next couple of days to the GA version of the same destination. This migration should ultimately be completed by the end of day Friday April 29th. The Beta destinations will be continue to be visible during this short time-window and labeled as **Deprecated**.
+베타 단계에서 이러한 대상을 활용하는 경우 다음을 참고하십시오.
 
-If you have been utilizing these destinations in the Beta phase, please note the following:
-
-- If have been previously in Beta with any of the 3 destinations, no action is needed. All dataflows set up as part of Beta will continue to be functional and will be migrated to the GA version.
-- If you want to set up these destinations beginning April 27th, please do so with the new GA version of the destinations.
-- The beta cards marked as deprecated will be removed once the release operation is complete, estimated by the end of day Friday April 29th. The Experience Platform engineering team is monitoring closely for a successful release operation.
-
--->
+- 이전에 3개의 대상 중 하나를 사용하여 Beta에 도착한 적이 있는 경우 아무 작업도 필요하지 않습니다. Beta의 일부로 설정된 모든 데이터 흐름은 계속 작동하며 GA 버전으로 마이그레이션됩니다.
+- 4월 27일부터 이러한 대상을 설정하려면 새 GA 버전의 대상으로 설정하십시오.
+- 더 이상 사용되지 않음으로 표시된 베타 카드는 릴리스 작업이 완료되면 제거되며, 이는 4월 29일 금요일 말까지 예상됩니다. Experience Platform 엔지니어링 팀은 성공적인 릴리스 작업을 위해 면밀히 모니터링하고 있습니다.
 
 **새 대상**
 

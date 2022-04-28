@@ -3,7 +3,7 @@ title: HTTP API 연결
 keywords: 스트리밍;
 description: Adobe Experience Platform의 HTTP API 대상을 사용하여 프로필 데이터를 타사 HTTP 엔드포인트로 보내 자체 분석을 실행하거나 Experience Platform에서 내보낸 프로필 데이터에 필요한 기타 작업을 수행할 수 있습니다.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 30549f31e7ba7f9cfafd2e71fb3ccfb701b9883f
+source-git-commit: d4a4baf330925d6696f515bf650d86740c18e97c
 workflow-type: tm+mt
 source-wordcount: '2296'
 ht-degree: 0%
@@ -92,6 +92,11 @@ curl --location --request POST 'https://some-api.com/token' \
 
 ### 인증 정보 {#authentication-information}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_http_clientcredentialstype"
+>title="클라이언트 자격 증명 유형"
+>abstract="선택 **본문 양식 인코딩됨** 클라이언트 ID 및 클라이언트 암호를 요청 본문에 포함하려면 **기본 인증** 인증 헤더에 클라이언트 ID 및 클라이언트 암호를 포함하기 위해 설명서에서 예를 봅니다."
+
 #### 베어러 토큰 인증 {#bearer-token-authentication}
 
 을(를) 선택하는 경우 **[!UICONTROL 베어러 토큰]** HTTP 종단점에 연결할 인증 유형입니다. 아래 필드를 입력하고 을(를) 선택합니다 **[!UICONTROL 대상에 연결]**:
@@ -121,11 +126,6 @@ curl --location --request POST 'https://some-api.com/token' \
 * **[!UICONTROL 암호]**: HTTP 종단점에 액세스하기 위한 암호입니다.
 
 #### OAuth 2 클라이언트 자격 증명 인증 {#oauth-2-client-credentials-authentication}
-
->[!CONTEXTUALHELP]
->id="platform_destinations_connect_http_clientcredentialstype"
->title="클라이언트 자격 증명 유형"
->abstract="선택 **본문 양식 인코딩됨** 클라이언트 ID 및 클라이언트 암호를 요청 본문에 포함하려면 **기본 인증** 인증 헤더에 클라이언트 ID 및 클라이언트 암호를 포함하기 위해 설명서에서 예를 봅니다."
 
 을(를) 선택하는 경우 **[!UICONTROL OAuth 2 클라이언트 자격 증명]** HTTP 종단점에 연결할 인증 유형입니다. 아래 필드를 입력하고 을(를) 선택합니다 **[!UICONTROL 대상에 연결]**:
 

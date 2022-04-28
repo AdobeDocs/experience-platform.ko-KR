@@ -6,9 +6,9 @@ title: UI에서 대상에 대한 데이터 흐름 모니터링
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 0f3cb17650612399091c12a6b638471a80306729
+source-git-commit: 2be8ed7daaac6554bdbc52acab325a474fa87566
 workflow-type: tm+mt
-source-wordcount: '3183'
+source-wordcount: '3200'
 ht-degree: 0%
 
 ---
@@ -176,7 +176,9 @@ ID는 프로필의 다른 패싯을 나타냅니다. 예를 들어 프로필에 
 
 >[!NOTE]
 >
->대상 모니터링 기능은 현재 Experience Platform의 모든 대상에 대해 지원됩니다 *제외* a [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) 및 [사용자 지정 개인화](/help/destinations/catalog/personalization/custom-personalization.md) 대상.
+>- 대상 모니터링 기능은 현재 Experience Platform의 모든 대상에 대해 지원됩니다 *제외* a [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) 및 [사용자 지정 개인화](/help/destinations/catalog/personalization/custom-personalization.md) 대상.
+>- 대상 [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Azure 이벤트 허브](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), 및 [HTTP API](/help/destinations/catalog/streaming/http-destination.md) 대상, 제외된 id가 현재 표시되지 않습니다.
+
 
 를 사용하십시오 [!UICONTROL 대상] 대시보드 를 사용하여 활성화 흐름의 상태를 전체적으로 확인할 수 있습니다. 먼저 모든 일괄 처리 및 스트리밍 대상에 대해 집계된 수준에서 통찰력을 얻은 다음 데이터 흐름, 데이터 흐름, 데이터 흐름 실행 및 활성화된 세그먼트에 대한 세부 보기로 드릴다운하여 활성화 데이터를 심층적으로 살펴봅니다. 의 화면 [!UICONTROL 모니터링] 대시보드는 활성화 시나리오에서 발생할 수 있는 모든 문제를 해결하는 데 도움이 되는 지표와 오류 설명을 통해 실행 가능한 통찰력을 제공합니다.
 
