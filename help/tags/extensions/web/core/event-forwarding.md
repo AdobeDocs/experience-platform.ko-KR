@@ -3,7 +3,7 @@ title: 코어 이벤트 전달 확장 개요
 description: Adobe Experience Platform의 코어 이벤트 전달 확장에 대해 알아봅니다.
 feature: Event Forwarding
 exl-id: b5ee4ccf-6fa5-4472-be04-782930f07e20
-source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
+source-git-commit: d41779c5897b748130b88d3886472c7908347389
 workflow-type: tm+mt
 source-wordcount: '1724'
 ht-degree: 91%
@@ -14,7 +14,7 @@ ht-degree: 91%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
 
 코어 이벤트 전달 확장은 Adobe Experience Platform에서 이벤트 전달을 위한 기본 이벤트, 조건 및 데이터 유형을 제공합니다.
 
@@ -28,7 +28,7 @@ ht-degree: 91%
 
 이벤트의 조건으로 존재해야 하는 사용자 지정 코드를 지정합니다. 내장된 코드 편집기를 사용하여 사용자 지정 코드를 입력합니다. Adobe Experience Platform의 이벤트 전달은 ES6를 지원합니다.
 
-1. **[!UICONTROL 편집기 열기]**&#x200B;를 선택합니다.
+1. 선택 **[!UICONTROL 편집기 열기]**.
 1. 사용자 지정 코드를 입력합니다.
 1. **[!UICONTROL 저장]**&#x200B;을 선택합니다.
 
@@ -47,7 +47,7 @@ arc.ruleStash: Object<string, *>`
 ```
 
 ```javascript
-logger.log(context.arc.ruleStash);
+utils.logger.log(context.arc.ruleStash);
 ```
 
 `ruleStash`는 작업 모듈에서 모든 결과를 수집하는 개체입니다.
@@ -158,8 +158,8 @@ module.exports = (context) => {
 이벤트가 트리거되고 조건이 평가된 후 실행되는 코드를 제공합니다. Adobe Experience Platform의 이벤트 전달은 ES6를 지원합니다.
 
 1. 작업 코드에 이름을 지정합니다.
-1. **[!UICONTROL 편집기 열기]**&#x200B;를 선택합니다.
-1. 코드를 편집한 다음 **[!UICONTROL 저장]**&#x200B;을 선택합니다.
+1. 선택 **[!UICONTROL 편집기 열기]**.
+1. 코드를 편집한 다음 를 선택합니다 **[!UICONTROL 저장]**.
 
 사용자 지정 코드의 데이터 요소 값에 액세스하려면 `getDataElementValue` 메서드를 사용합니다. 예를 들어 `productName`이라는 데이터 요소의 값을 검색하려면 다음을 입력합니다.
 
@@ -183,7 +183,7 @@ arc.ruleStash.core.productCategory
 
 ### 사용자 지정 코드
 
-사용자 지정 JavaScript는 **[!UICONTROL 편집기 열기]**&#x200B;를 선택하고 코드를 편집기 창에 삽입하여 UI에 입력할 수 있습니다.
+사용자 지정 JavaScript는 을 선택하여 UI에 입력할 수 있습니다  **[!UICONTROL 편집기 열기]** 편집기 창에 코드를 삽입하고
 
 데이터 요소 값으로 어떤 값을 사용해야 하는지 알 수 있도록 편집기 창에 문장이 반환되어야 합니다. return 문이 포함되지 않거나 `null` 또는 `undefined` 값이 반환되면 데이터 요소의 기본값은 `null` 또는 `undefined`을 반영합니다. 
 
@@ -226,4 +226,4 @@ arc.event.xdm.page.pageName
 
 >[!NOTE]
 >
->클라이언트의 `interact` 호출에는 `events`이 있지만, 이벤트 전달을 위해서는 `event`가 필요합니다. 이는 이벤트 전달이 각 이벤트를 개별적으로 검사하며 클라이언트에 표시된 것처럼 여러 이벤트의 일괄 처리로 검사하지 않기 때문입니다.
+>다음 `interact` 클라이언트에서 `events`, 및에 전송됩니다. `event`. 이는 이벤트 전달이 각 이벤트를 개별적으로 검사하며 클라이언트에 표시된 것처럼 여러 이벤트의 일괄 처리로 검사하지 않기 때문입니다.
