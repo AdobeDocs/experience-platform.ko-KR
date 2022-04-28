@@ -3,7 +3,7 @@ keywords: rtcdp 프로필;프로필 rtcdp;rtcdp ID;rtcdp 병합 정책;실시간
 title: 실시간 CDP에서 실시간 고객 프로필 이해하기
 description: Real-time Customer Data Platform을 통해 실시간 고객 프로필을 사용하여 고객에게 적절하고 일관된 적절한 경험을 제공하는 방법을 알아봅니다.
 exl-id: de70948c-ffc1-49d3-a57c-25ad415752ff
-source-git-commit: f4ca1efe9c728f50008d7fbaa17aa009dfc18393
+source-git-commit: 0aca080d9f2c39b8f0a1197e1048d1a77d5e7bc1
 workflow-type: tm+mt
 source-wordcount: '456'
 ht-degree: 0%
