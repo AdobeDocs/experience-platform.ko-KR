@@ -3,9 +3,9 @@ title: Platform Web SDK의 ID 데이터
 description: Adobe Experience Platform Web SDK를 사용하여 ECID(Adobe Experience Cloud ID)를 검색하고 관리하는 방법을 알아봅니다.
 keywords: ID;자사 ID;ID 서비스;타사 ID;ID 마이그레이션;방문자 ID;타사 ID;타사 ID;MigrationEnabled;getIdentity;ID 동기화;syncIdentity;sendEvent;identityMap;기본;ecid;ID 네임스페이스;네임스페이스 ID;인증 상태;해시Enabled;
 exl-id: 03060cdb-becc-430a-b527-60c055c2a906
-source-git-commit: 6fb6d1579f888720b6af9617400d512a68d06264
+source-git-commit: 85ff35e0e7f7e892de5252e8f3ad069eff83aa15
 workflow-type: tm+mt
-source-wordcount: '1327'
+source-wordcount: '1334'
 ht-degree: 1%
 
 ---
@@ -20,9 +20,9 @@ Adobe Experience Platform 웹 SDK는 다음을 활용합니다 [Adobe Experience
 
 Platform Web SDK는 쿠키를 사용하여 ECID를 할당하고 추적하며, 이러한 쿠키를 생성하는 방법을 구성하는 데 사용할 수 있는 여러 가지 방법이 있습니다.
 
-새 사용자가 웹 사이트에 도달하면 Adobe Experience Cloud Identity 서비스는 해당 사용자에 대한 장치 ID 쿠키 설정을 시도합니다. 처음 방문하는 사용자의 경우 ECID가 생성되고 Adobe Experience Platform Edge Network의 첫 번째 응답에서 반환됩니다. 재방문자의 경우 ECID가 `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` 쿠키 를 페이로드에 추가했습니다.
+새 사용자가 웹 사이트에 도달하면 Adobe Experience Cloud Identity 서비스는 해당 사용자에 대한 장치 ID 쿠키 설정을 시도합니다. 처음 방문하는 사용자의 경우 ECID가 생성되고 Adobe Experience Platform Edge Network의 첫 번째 응답에서 반환됩니다. 재방문자의 경우 ECID가 `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` 쿠키 를 추가하고 Edge Network에 의해 페이로드에 추가됩니다.
 
-ECID가 포함된 쿠키가 설정되면 Platform Web SDK에서 생성한 후속 요청마다 ECID가 포함됩니다.
+ECID가 포함된 쿠키가 설정되면 웹 SDK에서 생성한 각 후속 요청에는 `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` 쿠키 .
 
 장치 식별을 위해 쿠키를 사용하는 경우 Edge Network와 상호 작용하는 두 가지 옵션이 있습니다.
 
