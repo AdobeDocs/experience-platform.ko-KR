@@ -2,7 +2,7 @@
 description: 이 구성을 사용하면 대상 이름, 카테고리, 설명, 로고 등과 같은 기본 정보를 표시할 수 있습니다. 또한 이 구성의 설정은 Experience Platform 사용자가 대상을 인증하는 방법, Experience Platform 사용자 인터페이스에 표시되는 방법 및 대상으로 내보낼 수 있는 ID를 결정합니다.
 title: Destination SDK 스트리밍 대상 구성 옵션
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: 51417bee5dba7a96d3a7a7eb507fc95711fad4a5
+source-git-commit: e3886cbcde76e37263d2fa23769fb9e96501edc4
 workflow-type: tm+mt
 source-wordcount: '1787'
 ht-degree: 4%
@@ -220,7 +220,7 @@ ID 네임스페이스에는 1-1의 서신이 필요하지 않습니다 [!DNL Pla
 |---------|----------|------|
 | `acceptsAttributes` | 부울 | 대상이 표준 프로필 속성을 수락하는지 여부를 나타냅니다. 일반적으로 이러한 속성은 파트너의 설명서에서 강조 표시됩니다. |
 | `acceptsCustomNamespaces` | 부울 | 고객이 대상에서 사용자 지정 네임스페이스를 설정할 수 있는지 여부를 나타냅니다. |
-| `allowedAttributesTransformation` | 문자열 | *예제 구성에 표시되지 않음*. 예를 들어 [!DNL Platform] 고객은 일반 이메일 주소를 특성으로 사용하고 플랫폼에서는 해시된 이메일만 허용합니다. 이 개체에서는 적용해야 하는 변형을 적용할 수 있습니다(예: 이메일을 소문자로 변환한 다음 해시). 예를 보려면 `requiredTransformation` 에서 [대상 구성 API 참조](./destination-configuration-api.md#update). |
+| `transformation` | 문자열 | *예제 구성에 표시되지 않음*. 예를 들어 [!DNL Platform] 고객은 일반 이메일 주소를 특성으로 사용하고 플랫폼에서는 해시된 이메일만 허용합니다. 이 개체에서는 적용해야 하는 변형을 적용할 수 있습니다(예: 이메일을 소문자로 변환한 다음 해시). 예를 보려면 `requiredTransformation` 에서 [대상 구성 API 참조](./destination-configuration-api.md#update). |
 | `acceptedGlobalNamespaces` | - | 플랫폼에서 [표준 id 네임스페이스](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces) (예: IDFA)가 있으므로 Platform 사용자가 이러한 ID 네임스페이스를 선택하도록 제한할 수 있습니다. |
 
 {style=&quot;table-layout:auto&quot;}

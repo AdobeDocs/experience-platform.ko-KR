@@ -2,7 +2,7 @@
 description: 이 페이지에서는 '/authoring/destinations' API 종단점을 사용하여 수행할 수 있는 모든 API 작업을 나열하고 설명합니다.
 title: 대상 API 끝점 작업
 exl-id: 96755e9d-be62-432f-b985-91330575b395
-source-git-commit: 51417bee5dba7a96d3a7a7eb507fc95711fad4a5
+source-git-commit: e3886cbcde76e37263d2fa23769fb9e96501edc4
 workflow-type: tm+mt
 source-wordcount: '2537'
 ht-degree: 4%
@@ -154,7 +154,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `uiAttributes.frequency` | 문자열 | `Streaming` 은 현재 사용 가능한 유일한 옵션입니다. |
 | `identityNamespaces.externalId.acceptsAttributes` | 부울 | 대상이 표준 프로필 속성을 수락하는지 여부를 나타냅니다. 일반적으로 이러한 속성은 파트너의 설명서에 강조 표시됩니다. |
 | `identityNamespaces.externalId.acceptsCustomNamespaces` | 부울 | 고객이 대상에서 사용자 지정 네임스페이스를 설정할 수 있는지 여부를 나타냅니다. |
-| `identityNamespaces.externalId.allowedAttributesTransformation` | 문자열 | _예제 구성에 표시되지 않음_. 예를 들어 [!DNL Platform] 고객은 일반 이메일 주소를 특성으로 사용하고 플랫폼에서는 해시된 이메일만 허용합니다. 여기에서 적용해야 하는 변형을 제공합니다(예: 이메일을 소문자로 변환한 다음 해시). |
+| `identityNamespaces.externalId.transformation` | 문자열 | _예제 구성에 표시되지 않음_. 예를 들어 [!DNL Platform] 고객은 일반 이메일 주소를 특성으로 사용하고 플랫폼에서는 해시된 이메일만 허용합니다. 여기에서 적용해야 하는 변형을 제공합니다(예: 이메일을 소문자로 변환한 다음 해시). |
 | `identityNamespaces.externalId.acceptedGlobalNamespaces` | - | 플랫폼에서 [표준 id 네임스페이스](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces) (예: IDFA)가 있으므로 Platform 사용자가 이러한 ID 네임스페이스를 선택하도록 제한할 수 있습니다. <br> 사용 시 `acceptedGlobalNamespaces`, 다음 사용 가능 `"requiredTransformation":"sha256(lower($))"` 을 소문자로 해시하고 이메일 주소 또는 전화 번호를 해시합니다. |
 | `destinationDelivery.authenticationRule` | 문자열 | 방법을 나타냅니다. [!DNL Platform] 고객이 대상에 연결합니다. 허용되는 값은 다음과 같습니다 `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>사용 `CUSTOMER_AUTHENTICATION` 플랫폼 고객이 사용자 이름과 암호, 베어러 토큰 또는 다른 인증 방법을 통해 시스템에 로그인하는 경우. 예를 들어, 이 옵션을 선택한 경우에도 이 옵션을 선택합니다 `authType: OAUTH2` 또는 `authType:BEARER` in `customerAuthenticationConfigurations`. </li><li> 사용 `PLATFORM_AUTHENTICATION` Adobe과 대상 및 대상 사이에 글로벌 인증 시스템이 있는 경우 [!DNL Platform] 고객은 대상에 연결하기 위해 인증 자격 증명을 제공할 필요가 없습니다. 이 경우 [자격 증명](./credentials-configuration-api.md) 구성. </li><li>사용 `NONE` 대상 플랫폼으로 데이터를 전송하는 데 인증이 필요하지 않은 경우 </li></ul> |
 | `destinationDelivery.destinationServerId` | 문자열 | 다음 `instanceId` 의 [대상 서버 템플릿](./destination-server-api.md) 이 대상에 사용됩니다. |
@@ -586,7 +586,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 | `uiAttributes.frequency` | 문자열 | `Streaming` 은 현재 사용 가능한 유일한 옵션입니다. |
 | `identityNamespaces.externalId.acceptsAttributes` | 부울 | 대상이 표준 프로필 속성을 수락하는지 여부를 나타냅니다. 일반적으로 이러한 속성은 파트너의 설명서에 강조 표시됩니다. |
 | `identityNamespaces.externalId.acceptsCustomNamespaces` | 부울 | 고객이 대상에서 사용자 지정 네임스페이스를 설정할 수 있는지 여부를 나타냅니다. 자세한 내용 [사용자 지정 네임스페이스](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#manage-namespaces) Adobe Experience Platform. |
-| `identityNamespaces.externalId.allowedAttributesTransformation` | 문자열 | _예제 구성에 표시되지 않음_. 예를 들어 [!DNL Platform] 고객은 일반 이메일 주소를 특성으로 사용하고 플랫폼에서는 해시된 이메일만 허용합니다. 여기에서 적용해야 하는 변형을 제공합니다(예: 이메일을 소문자로 변환한 다음 해시). |
+| `identityNamespaces.externalId.transformation` | 문자열 | _예제 구성에 표시되지 않음_. 예를 들어 [!DNL Platform] 고객은 일반 이메일 주소를 특성으로 사용하고 플랫폼에서는 해시된 이메일만 허용합니다. 여기에서 적용해야 하는 변형을 제공합니다(예: 이메일을 소문자로 변환한 다음 해시). |
 | `identityNamespaces.externalId.acceptedGlobalNamespaces` | - | 플랫폼에서 [표준 id 네임스페이스](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces) (예: IDFA)가 있으므로 Platform 사용자가 이러한 ID 네임스페이스를 선택하도록 제한할 수 있습니다. |
 | `destinationDelivery.authenticationRule` | 문자열 | 방법을 나타냅니다. [!DNL Platform] 고객이 대상에 연결합니다. 허용되는 값은 다음과 같습니다 `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>사용 `CUSTOMER_AUTHENTICATION` 플랫폼 고객이 사용자 이름과 암호, 베어러 토큰 또는 다른 인증 방법을 통해 시스템에 로그인하는 경우. 예를 들어, 이 옵션을 선택한 경우에도 이 옵션을 선택합니다 `authType: OAUTH2` 또는 `authType:BEARER` in `customerAuthenticationConfigurations`. </li><li> 사용 `PLATFORM_AUTHENTICATION` Adobe과 대상 및 대상 사이에 글로벌 인증 시스템이 있는 경우 [!DNL Platform] 고객은 대상에 연결하기 위해 인증 자격 증명을 제공할 필요가 없습니다. 이 경우 [자격 증명](./authentication-configuration.md) 구성. </li><li>사용 `NONE` 대상 플랫폼으로 데이터를 전송하는 데 인증이 필요하지 않은 경우 </li></ul> |
 | `destinationDelivery.destinationServerId` | 문자열 | 다음 `instanceId` 의 [대상 서버 템플릿](./destination-server-api.md) 이 대상에 사용됩니다. |
