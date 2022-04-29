@@ -1,12 +1,12 @@
 ---
 title: 데이터 스트림 구성
-description: 클라이언트 측 Experience Platform SDK 통합을 Adobe 제품 및 타사 대상과 연결합니다.
+description: 클라이언트측 Experience Platform SDK 통합 기능을 Adobe 제품 및 서드파티 대상과 연결합니다.
 keywords: 구성;데이터 스트림;데이터 스트림 ID;에지;데이터 스트림 ID;환경 설정;edgeConfigId;id 동기화 사용;ID 동기화 컨테이너 ID;샌드박스;스트리밍 입력;이벤트 데이터 세트;대상;클라이언트 코드;Target 환경 ID;쿠키 대상;Analytics 설정 차단 보고서 세트 ID;데이터 수집을 위한 데이터 준비;데이터 수집;데이터 매퍼;XDM 매퍼;Edge의 매퍼;Mapper;Mapper
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 5c57f65014736e20e1bcad6a9b158c923bbb4220
+source-git-commit: 2275a32cfa9419d2ca407dd48a15f8d06354cd49
 workflow-type: tm+mt
-source-wordcount: '2102'
-ht-degree: 1%
+source-wordcount: '2081'
+ht-degree: 2%
 
 ---
 
@@ -18,17 +18,13 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->UI에서 이 기능에 액세스하려면 조직에 이 기능이 제공되어야 합니다. 다음 사항을 기입하십시오 [양식](https://adobe.ly/websdkaccess) 필요한 액세스를 요청합니다.
+>UI에서 이 기능에 액세스하려면 조직에 이 기능이 제공되어야 합니다. 다음 사항을 기입하십시오 [양식](https://adobe.ly/websdkaccess) 필요한 액세스를 요청합니다. 데이터 저장소를 관리하려면 사용자 계정을 의 태그에 대한 제품 프로필에 추가해야 합니다 [!DNL Adobe Experience Platform].
 
 ## 액세스 권한 [!UICONTROL 데이터 스트림] 작업 영역
 
 을(를) 선택하여 데이터 수집 UI에서 데이터 세트를 만들고 관리할 수 있습니다 **[!UICONTROL 데이터 스트림]** 을 클릭합니다.
 
 ![데이터 수집 UI의 데이터 스트림 탭](../images/datastreams/datastreams-tab.png)
-
->[!NOTE]
->
->에 액세스할 수 있는 동안 [!UICONTROL 데이터 스트림] Platform의 태그 관리 기능을 사용하는지에 관계없이 데이터 세트를 직접 관리하려면 개발자 권한이 있어야 합니다. 자세한 내용은 [사용자 권한](../../tags/ui/administration/user-permissions.md) 자세한 내용은 태그 설명서의 문서를 참조하십시오.
 
 다음 [!UICONTROL 데이터 스트림] 탭에는 친숙한 이름, ID 및 마지막으로 수정한 날짜를 포함하여 기존 데이터 저장소 목록이 표시됩니다. 데이터 스트림의 이름을 선택합니다 [세부 정보 보기 및 서비스 구성](#view-details).
 
