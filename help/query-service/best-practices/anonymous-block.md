@@ -2,9 +2,9 @@
 title: 쿼리 서비스의 익명 블록
 description: 익명 블록은 Adobe Experience Platform 쿼리 서비스에서 지원하는 SQL 구문이므로 쿼리 시퀀스를 효율적으로 실행할 수 있습니다
 exl-id: ec497475-9d2b-43aa-bcf4-75a430590496
-source-git-commit: 7087991c7a3daad57c5acd92a20c7024a1152c7e
+source-git-commit: 43c5bdbfa93872ba54bde72bbea8201b73e9dfee
 workflow-type: tm+mt
-source-wordcount: '491'
+source-wordcount: '515'
 ht-degree: 0%
 
 ---
@@ -14,6 +14,10 @@ ht-degree: 0%
 Adobe Experience Platform 쿼리 서비스는 익명 블록을 지원합니다. 익명 블록 기능을 사용하면 시퀀스로 실행되는 하나 이상의 SQL 문을 체인할 수 있습니다. 예외 처리 옵션도 허용합니다.
 
 익명 블록 기능은 작업 또는 쿼리 시퀀스를 수행하는 효율적인 방법입니다. 블록 내의 쿼리 체인은 템플릿으로 저장될 수 있으며 특정 시간 또는 간격으로 실행되도록 예약할 수 있습니다. 이러한 쿼리는 새 데이터 세트를 만들기 위해 데이터를 쓰고 추가하는 데 사용할 수 있으며, 일반적으로 종속성이 있는 곳에서 사용됩니다.
+
+>[!IMPORTANT]
+>
+>익명 블록을 사용하여 쿼리를 예약하는 것은 현재 [!DNL Query Service] API. 다음 문서를 참조하십시오. [api를 통한 쿼리 예약에 대한 전체 지침](../api/scheduled-queries.md).
 
 이 표에서는 블록의 주 섹션을 설명합니다. 실행 및 예외 처리를 참조하십시오. 섹션은 키워드로 정의됩니다 `BEGIN`, `END`, 및 `EXCEPTION`.
 
