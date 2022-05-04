@@ -4,9 +4,9 @@ title: 대상 대시보드
 description: Adobe Experience Platform은 조직의 활성 대상에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: bc449e066a6c9875dd667c5b1715ab3226228d85
+source-git-commit: b4cd7bc0d8c038346aacdda7c4c9def12864065c
 workflow-type: tm+mt
-source-wordcount: '1764'
+source-wordcount: '1962'
 ht-degree: 0%
 
 ---
@@ -56,6 +56,9 @@ Adobe은 대상과 관련된 다양한 지표를 시각화하고 데이터 분�
 * [[!UICONTROL ID별로 매핑된 세그먼트]](#mapped-segments-by-identity)
 * [[!UICONTROL 일반적인 대상]](#common-audiences)
 * [[!UICONTROL 대상 수]](#destinations-count)
+* [[!UICONTROL 대상 상태]](#destination-status)
+* [[!UICONTROL 대상 플랫폼별 활성 대상]](#active-destinations-by-destination-platform)
+* [[!UICONTROL 모든 대상에서 활성화된 대상]](#activated-audiences-across-all-destinations)
 
 ### [!UICONTROL 가장 많이 사용되는 대상] {#most-used-destinations}
 
@@ -129,7 +132,7 @@ id 열은 위젯 ID 드롭다운에서 선택한 ID에 매핑할 수 있는 세�
 
 ### [!UICONTROL ID별로 매핑된 세그먼트] {#mapped-segments-by-identity}
 
-이 위젯은 **매핑된** 세그먼트 를 참조하십시오. 목록은 세그먼트 내에 포함된 소스 ID 수에 따라 높기에서 낮이로 정렬됩니다. 카운트할 대상 ID는 위젯 제목 아래의 드롭다운 메뉴에서 선택합니다. 위젯의 드롭다운에서 사용할 수 있는 대상 ID는 개요 대시보드 맨 위에서 선택한 대상 계정 필터에 따라 변경됩니다.
+이 위젯은 **매핑된** 세그먼트 를 참조하십시오. 목록은 세그먼트 내에 포함된 소스 ID 수에 따라 높기에서 낮이로 정렬됩니다. 카운트할 대상 ID는 위젯 제목 아래의 드롭다운 메뉴에서 선택합니다. 위젯의 드롭다운에서 사용할 수 있는 대상 ID는 개요 대시보드의 맨 위에서 선택한 대상 계정 필터에 따라 변경됩니다.
 
 ![ID 위젯별 매핑된 세그먼트.](../images/destinations/mapped-segments-by-identity.png)
 
@@ -164,6 +167,28 @@ id 열은 위젯 ID 드롭다운에서 선택한 ID에 매핑할 수 있는 세�
 총 개수 아래에서 을 선택합니다. **[!UICONTROL 대상]** 대상 찾아보기 탭으로 이동합니다. 이 페이지에는 날짜로 연결을 설정한 모든 대상이 나열됩니다.
 
 ![대상 수 위젯.](../images/destinations/destinations-count.png)
+
+### [!UICONTROL 대상 상태] {#destination-status}
+
+다음 [!UICONTROL 대상 상태] 위젯은 활성화된 총 대상 수를 단일 지표로 표시하며, 도넛 차트를 사용하여 활성화된 대상과 비활성화된 대상 간의 비례 차이를 보여줍니다.
+
+활성화되거나 비활성화된 대상에 대한 개별 카운트가 커서가 도넛 차트의 각 섹션을 마우스로 가리키면 대화 상자에 표시됩니다.
+
+![대상 상태 위젯.](../images/destinations/destination-status.png)
+
+### [!UICONTROL 대상 플랫폼별 활성 대상] {#active-destinations-by-destination-platform}
+
+위젯은 각 대상 플랫폼에 대한 활성 대상 플랫폼 목록과 총 활성 대상 수를 보여주는 두 개의 열 테이블을 제공합니다. 대상 플랫폼 목록은 높은 값에서 낮은 순서로 정렬됩니다.
+
+![대상 플랫폼 위젯별 활성 대상.](../images/destinations/active-destinations-by-destination-platform.png)
+
+### [!UICONTROL 모든 대상에서 활성화된 대상] {#activated-audiences-across-all-destinations}
+
+다음 [!UICONTROL 모든 대상에서 활성화된 대상] 위젯은 단일 지표에 있는 모든 대상에서 활성화된 총 대상 수를 제공합니다. 이 숫자는 최신 스냅샷까지 정확합니다.
+
+![모든 대상 위젯에서 활성화된 대상.](../images/destinations/activated-audiences-across-all-destinations.png)
+
+선택 **[!UICONTROL 대상]** 대상으로 이동 [!UICONTROL 찾아보기] 탭. 이 페이지에서는 활성화된 모든 대상 및 관련 지표 목록을 제공합니다. 다음 문서를 참조하십시오. [에 대한 추가 정보 [!UICONTROL 찾아보기] 탭](../../destinations/ui/destinations-workspace.md#browse).
 
 ## 다음 단계
 

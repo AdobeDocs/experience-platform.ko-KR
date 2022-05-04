@@ -4,9 +4,9 @@ title: 프로필 대시보드
 description: Adobe Experience Platform은 조직의 실시간 고객 프로필 데이터에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: bc449e066a6c9875dd667c5b1715ab3226228d85
+source-git-commit: b4cd7bc0d8c038346aacdda7c4c9def12864065c
 workflow-type: tm+mt
-source-wordcount: '2572'
+source-wordcount: '2976'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ Experience Platform 사용자 인터페이스 내의 모든 프로필 기능에 
 >
 >프로필 유효성 인사이트 기능은 현재 베타 버전으로 일부 사용자는 사용할 수 없습니다. 설명서 및 기능은 변경될 수 있습니다.
 
-다음 [!UICONTROL 효능] 탭에는 프로필 유효성 위젯의 사용에 대한 철저한 프로필 데이터의 품질 및 완전성에 대한 지표가 있습니다. 이러한 위젯은 프로필의 구성, 시간 경과에 따른 완벽성 추세 및 프로필 데이터 품질에 대한 평가를 한눈에 보여줍니다.
+다음 [!UICONTROL 효능] 탭은 프로필 유효성 위젯을 사용하여 프로필 데이터의 품질과 완전성에 대한 지표를 제공합니다. 이러한 위젯은 프로필의 구성, 시간 경과에 따른 완벽성 추세 및 프로필 데이터 품질에 대한 평가를 한눈에 보여줍니다.
 
 ![프로파일 효과 대시보드.](../images/profiles/attributes-quality-assessment.png)
 
@@ -65,7 +65,7 @@ Platform UI에 제공된 프로필 보기 기능에 대한 자세한 내용은 [
 
 ## 병합 정책 {#merge-policies}
 
-에 표시되는 지표 [!UICONTROL 프로필] 대시보드는 실시간 고객 프로필 데이터에 적용되는 병합 정책을 기반으로 합니다. 여러 소스에서 데이터를 함께 가져와서 고객 프로필을 만드는 경우 데이터에 충돌하는 값이 포함될 수 있습니다(예: 한 데이터 세트에 고객이 &quot;단일&quot;로 나열되고 다른 데이터 세트에 고객이 &quot;기혼&quot;으로 나열될 수 있음). 프로필의 일부로 우선 순위를 지정하고 표시할 데이터를 결정하는 것은 병합 정책의 작업입니다.
+에 표시되는 지표 [!UICONTROL 프로필] 대시보드는 실시간 고객 프로필 데이터에 적용되는 병합 정책을 기반으로 합니다. 고객 프로필을 만들기 위해 여러 소스에서 데이터를 함께 가져오는 경우 데이터에 충돌하는 값이 포함될 수 있습니다. 예를 들어, 하나의 데이터 세트에 고객이 &quot;단일&quot;로 나열되고 다른 데이터 세트에 고객이 &quot;기혼&quot;으로 나열될 수 있습니다. 프로필의 일부로 우선 순위를 지정하고 표시할 데이터를 결정하는 것은 병합 정책의 작업입니다.
 
 조직의 기본 병합 정책을 만들고 편집하고 선언하는 방법 등 병합 정책에 대한 자세한 내용은 [정책 병합 개요](../../profile/merge-policies/overview.md).
 
@@ -73,13 +73,13 @@ Platform UI에 제공된 프로필 보기 기능에 대한 자세한 내용은 [
 
 >[!NOTE]
 >
->드롭다운 메뉴에는 XDM 개별 프로필 클래스와 관련된 병합 정책만 표시되지만, 조직에서 여러 개의 병합 정책을 만든 경우 사용 가능한 병합 정책의 전체 목록을 보려면 스크롤해야 할 수도 있습니다.
+>드롭다운 메뉴에는 XDM 개별 프로필 클래스와 관련된 병합 정책만 표시됩니다. 그러나 조직에서 여러 개의 병합 정책을 만든 경우 사용 가능한 병합 정책의 전체 목록을 보려면 스크롤해야 할 수도 있습니다.
 
 ![](../images/profiles/select-merge-policy.png)
 
 ## 결합 스키마
 
-다음 [!UICONTROL 결합 스키마] 대시보드는 특정 XDM 클래스에 대한 결합 스키마를 표시합니다. 을(를) 선택하여 [!UICONTROL **클래스**] 드롭다운에서 다른 XDM 클래스에 대한 결합 스키마를 볼 수 있습니다.
+다음 [!UICONTROL 결합 스키마] 대시보드는 특정 XDM 클래스에 대한 결합 스키마를 표시합니다. 을(를) 선택하여 **[!UICONTROL 클래스]** 드롭다운에서 다른 XDM 클래스에 대한 결합 스키마를 볼 수 있습니다.
 
 결합 스키마는 동일한 클래스를 공유하고 프로필에 대해 활성화된 여러 스키마로 구성됩니다. 동일한 클래스를 공유하는 각 스키마 내에 포함된 모든 필드의 병합을 단일 보기에서 볼 수 있습니다.
 
@@ -99,13 +99,17 @@ Adobe은 프로필 데이터와 관련된 다양한 지표를 시각화하는 �
 
 * [[!UICONTROL 프로필 수]](#profile-count)
 * [[!UICONTROL 추가된 프로필]](#profiles-added)
-* [[!UICONTROL 프로필 수 트렌드]](#profiles-count-trend)
+* [[!UICONTROL 프로필이 트렌드를 추가했습니다.]](#profiles-added-trend)
 * [[!UICONTROL ID별 프로필]](#profiles-by-identity)
 * [[!UICONTROL ID 겹치기]](#identity-overlap)
 * [[!UICONTROL 단일 ID 프로필]](#single-identity-profiles)
 * [[!UICONTROL 세그먼트화되지 않은 프로필]](#unsegmented-profiles)
-* [[!UICONTROL 세그먼트화되지 않은 프로필] 트렌드](#unsegmented-profiles-trend)
+* [[!UICONTROL 세그먼트화되지 않은 프로필 트렌드]](#unsegmented-profiles-trend)
 * [[!UICONTROL ID로 세그먼트화되지 않은 프로필]](#unsegmented-profiles-by-identity)
+* [[!UICONTROL 대상 상태에 매핑된 대상]](#audiences-mapped-to-destination-status)
+* [[!UICONTROL 대상 크기]](#audiences-size)
+* [[!UICONTROL 프로필 수 트렌드]](#profile-count-trend)
+* [[!UICONTROL ID별 단일 ID 프로필]](#single-identity-profiles-by-identity)
 
 ### [!UICONTROL 프로필 수] {#profile-count}
 
@@ -127,23 +131,23 @@ Adobe은 프로필 데이터와 관련된 다양한 지표를 시각화하는 �
 
 >[!NOTE]
 >
->다음 [!UICONTROL 추가된 프로필] 위젯은 프로필 스토어를 설정하고 프로필을 처리한 후 추가된 프로필 수를 반영합니다. 즉, 조직에서 프로필 스토어를 설정하고 1일에 4,000,000을 섭취하는 경우 24시간 이내에 대시보드를 사용할 수 있지만 [!UICONTROL 추가된 프로필] 위젯이 0으로 설정됩니다. 이 작업은 프로필을 시스템으로 초기 수집과 관련된 스파이크를 방지하기 위해 수행됩니다. 향후 30일 동안 조직은 프로필 스토어에 100만 개의 프로필을 추가로 수집합니다. 다음 스냅샷을 만든 후 [!UICONTROL 추가된 프로필] 위젯에는 추가된 총 100만 개의 프로필이 표시되고 [!UICONTROL 프로필 수] 위젯은 총 5,000,000개의 프로필을 표시합니다.
+>다음 [!UICONTROL 추가된 프로필] 위젯은 추가된 프로필 수를 반영합니다 **after** 초기 프로필 수집 및 프로필 저장소 설정. 즉, 조직에서 프로필 스토어를 설정하고 1일에 4,000,000을 섭취하는 경우 24시간 이내에 대시보드를 사용할 수 있지만 [!UICONTROL 추가된 프로필] 위젯이 0으로 설정됩니다. 이 작업은 프로필을 시스템으로 초기 수집과 관련된 스파이크를 방지하기 위해 수행됩니다. 향후 30일 동안 조직은 프로필 스토어에 100만 개의 프로필을 추가로 수집합니다. 다음 스냅샷을 만든 후 [!UICONTROL 추가된 프로필] 위젯에는 추가된 총 100만 개의 프로필이 표시되고 [!UICONTROL 프로필 수] 위젯은 총 5,000,000개의 프로필을 표시합니다.
 
 ![](../images/profiles/profiles-added.png)
 
-### [!UICONTROL 프로필 수 트렌드] {#profiles-count-trend}
+### [!UICONTROL 프로필이 트렌드를 추가했습니다.] {#profiles-added-trend}
 
-다음 **[!UICONTROL 프로필 수 트렌드]** 위젯은 지난 30일, 90일 또는 12개월 동안 매일 프로필 저장소에 추가된 병합된 프로필의 총 수를 표시합니다. 이 숫자는 스냅샷을 가져올 때마다 매일 업데이트되므로 프로필을 플랫폼으로 수집하려는 경우 다음 스냅샷을 가져올 때까지 프로필 수가 반영되지 않습니다. 추가된 프로필 수는 프로필 조각을 함께 병합하여 각 개인을 위한 단일 프로필을 구성하기 위해 선택한 병합 정책이 프로필 데이터에 적용되어 있는 결과입니다.
+다음 **[!UICONTROL 프로필이 트렌드를 추가했습니다.]** 위젯은 지난 30일, 90일 또는 12개월 동안 매일 프로필 저장소에 추가된 병합된 프로필의 총 수를 표시합니다. 이 숫자는 스냅샷을 가져올 때마다 매일 업데이트되므로 프로필을 플랫폼으로 수집하려는 경우 다음 스냅샷을 가져올 때까지 프로필 수가 반영되지 않습니다. 추가된 프로필 수는 프로필 조각을 함께 병합하여 각 개인을 위한 단일 프로필을 구성하기 위해 선택한 병합 정책이 프로필 데이터에 적용되어 있는 결과입니다.
 
 자세한 내용은 [이 문서의 앞부분에서 병합 정책에 대한 섹션을 참조하십시오](#merge-policies) 추가 정보
 
-다음 **[!UICONTROL 프로필 수 트렌드]** 위젯은 위젯의 오른쪽 상단에 &#39;캡션&#39; 단추를 표시합니다. 선택 **[!UICONTROL 캡션]** 자동 캡션 대화 상자를 열려면 다음을 수행하십시오.
+다음 **[!UICONTROL 프로필이 트렌드를 추가했습니다.]** 위젯은 위젯의 오른쪽 상단에 &#39;캡션&#39; 단추를 표시합니다. 선택 **[!UICONTROL 캡션]** 자동 캡션 대화 상자를 열려면 다음을 수행하십시오.
 
-![캡션 단추가 강조 표시된 프로필 수 트렌드 위젯을 표시하는 프로필 개요 탭.](../images/profiles/profile-count-trend-captions.png)
+![캡션 단추가 강조 표시된 프로필 추가 트렌드 위젯을 표시하는 프로필 개요 탭.](../images/profiles/profiles-added-trend-captions.png)
 
 기계 학습 모델은 차트와 데이터를 분석하여 주요 트렌드와 중요한 이벤트를 설명하는 캡션을 자동으로 생성합니다.
 
-![프로필 수 트렌드 위젯에 대한 자동 캡션 대화 상자입니다.](../images/profiles/profiles-count-trends-automatic-captions-dialog.png)
+![추가된 프로필 트렌드 위젯에 대한 자동 캡션 대화 상자입니다.](../images/profiles/profiles-added-trends-automatic-captions-dialog.png)
 
 ### [!UICONTROL ID별 프로필] {#profiles-by-identity}
 
@@ -151,9 +155,15 @@ Adobe은 프로필 데이터와 관련된 다양한 지표를 시각화하는 �
 
 자세한 내용은 [이 문서의 앞부분에서 병합 정책에 대한 섹션을 참조하십시오](#merge-policies) 추가 정보
 
-ID에 대해 자세히 알아보려면 [Adobe Experience Platform Identity Service 설명서](../../identity-service/home.md).
+![ID별 프로필 위젯이 강조 표시된 프로필 개요 대시보드.](../images/profiles/profiles-by-identity.png)
 
-![](../images/profiles/profiles-by-identity.png)
+선택 **[!UICONTROL 캡션]** 자동 캡션 대화 상자를 열려면 다음을 수행하십시오.
+
+![ID 캡션별 프로필 대화 상자](../images/profiles/profiles-by-identity-captions.png)
+
+기계 학습 모델은 데이터의 전체 분포 및 주요 차원을 분석하여 데이터 인사이트를 자동으로 생성합니다.
+
+ID에 대해 자세히 알아보려면 [Adobe Experience Platform Identity Service 설명서](../../identity-service/home.md).
 
 ### [!UICONTROL ID 겹치기] {#identity-overlap}
 
@@ -181,7 +191,7 @@ ID에 대해 자세히 알아보려면 [Adobe Experience Platform Identity Servi
 
 ### [!UICONTROL 세그먼트화되지 않은 프로필 트렌드] {#unsegmented-profiles-trend}
 
-다음 [!UICONTROL 세그먼트화되지 않은 프로필 트렌드] 위젯은 지정된 기간 동안 어떤 세그먼트에도 첨부되지 않는 프로필 수에 대한 선 그래프 일러스트레이션을 제공합니다. 세그먼트에 첨부되지 않은 프로필의 트렌드는 30일, 90일 및 12개월 기간에 걸쳐 시각화할 수 있습니다. 기간은 위젯의 드롭다운 메뉴에서 선택됩니다. 프로파일 수는 X축의 y축 및 시간에 반영됩니다.
+다음 [!UICONTROL 세그먼트화되지 않은 프로필 트렌드] 위젯은 지정된 기간 동안 어떤 세그먼트에도 첨부되지 않는 프로필 수에 대한 선 그래프 일러스트레이션을 제공합니다. 세그먼트에 첨부되지 않은 프로필의 트렌드는 30일, 90일 및 12개월 기간에 걸쳐 시각화할 수 있습니다. 기간은 위젯의 드롭다운 메뉴에서 선택됩니다. 프로파일 수는 x축의 y축 및 시간에 반영됩니다.
 
 ![세그먼트화되지 않은 프로필 트렌드 위젯.](../images/profiles/unsegmented-profiles-trend.png)
 
@@ -190,6 +200,40 @@ ID에 대해 자세히 알아보려면 [Adobe Experience Platform Identity Servi
 다음 [!UICONTROL ID로 세그먼트화되지 않은 프로필] 위젯은 세그먼트화되지 않은 프로필의 총 수를 고유 식별자로 분류합니다. 쉽게 비교할 수 있도록 데이터가 막대 차트에 시각화됩니다.
 
 ![ID 위젯별로 세그먼트화되지 않은 프로필.](../images/profiles/unsegmented-profiles-by-identity.png)
+
+### [!UICONTROL 대상 상태에 매핑된 대상] {#audiences-mapped-to-destination-status}
+
+다음 [!UICONTROL 대상 상태에 매핑된 대상] 위젯은 단일 지표에 매핑되고 매핑되지 않은 대상의 총 수를 표시하고 도넛 차트를 사용하여 해당 합계의 비례 차이를 보여줍니다. 계산된 숫자는 선택한 병합 정책에 따라 달라집니다.
+
+커서가 도넛 차트의 각 섹션을 마우스로 가리키면 매핑된 대상이나 매핑되지 않은 대상에 대한 개별 카운트가 대화 상자에 표시됩니다.
+
+![대상 상태 위젯에 매핑된 대상](../images/profiles/audiences-mapped-to-destination-status.png)
+
+### [!UICONTROL 대상 크기] {#audiences-size}
+
+다음 [!UICONTROL 대상 크기] 위젯은 최대 20개의 세그먼트와 각 세그먼트에 포함된 총 대상 수를 나열하는 2열 테이블을 제공합니다. 목록은 총 대상 수에 따라 높음에서 낮음순으로 정렬됩니다. 총 대상 크기 번호는 적용된 병합 정책에 따라 다릅니다.
+
+![대상 크기 위젯.](../images/profiles/audiences-size.png)
+
+세그먼트에 대한 포괄적인 정보를 보려면 제공된 목록에서 세그먼트 이름을 선택하여 로 이동합니다 [!UICONTROL 세그먼트] [!UICONTROL 세부 사항] 페이지. 또한, **[!UICONTROL 모든 세그먼트 보기]** 위젯의 끝에서 [!UICONTROL 세그먼트] [!UICONTROL 찾아보기] 탭을 클릭하여 기존 세그먼트를 찾습니다.
+
+![세그먼트 이름이 있는 대상 크기 위젯과 강조 표시된 모든 세그먼트 텍스트를 봅니다.](../images/profiles/audiences-size-view-all-segments.png)
+
+자세한 내용은 설명서 를 참조하십시오. [[!UICONTROL 세그먼트] [!UICONTROL  찾아보기] 탭](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#browse).
+
+### [!UICONTROL 프로필 수 트렌드] {#profile-count-trend}
+
+다음 [!UICONTROL 프로필 수 트렌드] 위젯은 선 그래프를 사용하여 시간에 따라 시스템에 포함된 총 프로필 수의 트렌드를 표시합니다. 이 총 숫자에는 마지막 일별 스냅샷 이후 시스템에 가져온 모든 프로필이 포함됩니다. 데이터는 30일, 90일 및 12개월 동안 시각화할 수 있습니다. 기간은 위젯의 드롭다운 메뉴에서 선택됩니다.
+
+![프로필 수 트렌드 위젯.](../images/profiles/profile-count-trend.png)
+
+### [!UICONTROL ID별 단일 ID 프로필] {#single-identity-profiles-by-identity}
+
+이 위젯에서는 막대 차트를 사용하여 하나의 고유 식별자만 사용하여 식별되는 프로필의 총 수를 보여줍니다. 위젯은 가장 일반적으로 발생하는 ID 중 최대 5개를 지원합니다.
+
+개별 막대 위로 마우스를 가져가면 ID에 대한 총 프로필 수를 설명하는 대화 상자가 표시됩니다.
+
+![ID 위젯별 단일 ID 프로필.](../images/profiles/single-identity-profiles-by-identity.png)
 
 ## (베타) 프로필 효율성 위젯 {#profile-efficacy-widgets}
 

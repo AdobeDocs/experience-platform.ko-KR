@@ -4,9 +4,9 @@ title: 세그먼트 대시보드
 description: 'Adobe Experience Platform은 조직이 만든 세그먼트에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다. '
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 2842344f4b17d76bf1c3313500e691357df31ebc
+source-git-commit: b4cd7bc0d8c038346aacdda7c4c9def12864065c
 workflow-type: tm+mt
-source-wordcount: '1047'
+source-wordcount: '1232'
 ht-degree: 0%
 
 ---
@@ -68,9 +68,12 @@ Adobe은 세그먼트와 관련된 다양한 지표를 시각화하는 데 사�
 사용 가능한 각 표준 위젯에 대해 자세히 알아보려면 다음 목록에서 위젯 이름을 선택하십시오.
 
 * [[!UICONTROL 대상 크기]](#audience-size)
-* [[!UICONTROL 대상 크기 트렌드]](#audience-size-trend)
 * [[!UICONTROL ID 겹치기]](#identity-overlap)
 * [[!UICONTROL ID별 프로필]](#profiles-by-identity)
+* [[!UICONTROL Audience Activation 순서]](#audience-activation-order)
+* [[!UICONTROL 대상 크기 트렌드]](#audience-size-trend)
+* [[!UICONTROL 대상 크기 변경 트렌드]](#audience-size-change-trend)
+* [[!UICONTROL ID별 대상 크기 트렌드]](#audience-size-trend-by-identity)
 
 ### [!UICONTROL 대상 크기] {#audience-size}
 
@@ -79,18 +82,6 @@ Adobe은 세그먼트와 관련된 다양한 지표를 시각화하는 데 사�
 조각 및 병합된 프로필에 대한 자세한 내용은 [실시간 고객 프로필 개요](../../profile/home.md).
 
 ![](../images/segments/audience-size.png)
-
-### [!UICONTROL 대상 크기 트렌드] {#audience-size-trend}
-
-다음 **[!UICONTROL 대상 크기 트렌드]** 위젯은 일별 스냅샷 동안 지난 30일, 90일 또는 12개월 동안 캡처된 세그먼트의 총 프로필 수에 대한 정보를 제공합니다. 이 위젯은 새 프로필이 세그먼트에 대한 자격이 되거나 세그먼트에서 종료됨에 따라 세그먼트 크기가 시간에 따라 어떻게 변화했는지 표시합니다.
-
-세그먼트 평가 및 프로필이 세그먼트의 자격을 받고 종료하는 방법에 대한 자세한 내용은 다음을 참조하십시오. [Segmentation Service 설명서](../../segmentation/home.md).
-
-![세그먼트 개요는 대상 크기 트렌드 위젯을 표시합니다.](../images/segments/audience-size-trend-captions.png)
-
-다음 **[!UICONTROL 대상 크기 트렌드]** 위젯은 [!UICONTROL 캡션] 위젯의 오른쪽 위에 있는 단추. 선택 **[!UICONTROL 캡션]** 자동 캡션 대화 상자를 열려면 다음을 수행하십시오. 기계 학습 모델은 차트 및 세그먼트 데이터를 분석하여 주요 추세 및 중요 이벤트를 설명하는 캡션을 자동으로 생성합니다.
-
-![대상 크기 트렌드 위젯에 대한 자동 캡션 대화 상자입니다.](../images/segments/audience-size-trend-automatic-captions-dialog.png)
 
 ### [!UICONTROL ID 겹치기] {#identity-overlap}
 
@@ -108,9 +99,37 @@ ID에 대해 자세히 알아보려면 [Adobe Experience Platform Identity Servi
 
 다음 **[!UICONTROL ID별 프로필]** 위젯은 선택한 세그먼트에 병합된 모든 프로필의 id 분류를 표시합니다. 한 프로필에는 여러 개의 ID가 연결되어 있을 수 있으므로 ID별 총 프로필 수는 세그먼트의 총 프로필 수보다 높을 수 있습니다. 즉, 고객이 두 개 이상의 채널에서 브랜드와 상호 작용하는 경우 여러 ID가 해당 개별 고객과 연결될 수 있으므로 각 ID에 대해 표시된 값을 함께 추가하면 세그먼트에서 총 대상 크기보다 커질 수 있습니다.
 
+선택 **[!UICONTROL 캡션]** 자동 캡션 대화 상자를 열려면 다음을 수행하십시오.
+
+![ID 캡션별 프로필 대화 상자](../images/segments/profiles-by-identity.png)
+
+기계 학습 모델은 데이터의 전체 분포 및 주요 차원을 분석하여 데이터 인사이트를 자동으로 생성합니다.
+
 ID에 대해 자세히 알아보려면 [Adobe Experience Platform Identity Service 설명서](../../identity-service/home.md).
 
-![](../images/segments/profiles-by-identity.png)
+### [!UICONTROL Audience Activation 순서] {#audience-activation-order}
+
+다음 [!UICONTROL Audience Activation 순서] 위젯은 [!UICONTROL 대상 이름], [!UICONTROL platform], 및 활성화 [!UICONTROL 날짜] 시청자. 목록은 최신성에 따라 높에서 낮이로 정렬되며 최대 10개의 행을 수용할 수 있습니다.
+
+![대상 활성화 순서 위젯.](../images/segments/audience-activation-order.png)
+
+### [!UICONTROL 대상 크기 트렌드] {#audience-size-trend}
+
+다음 [!UICONTROL 대상 크기 트렌드] 위젯은 의 기준을 충족하는 총 프로필 수에 대한 선 그래프 일러스트레이션을 제공합니다 **임의** 주어진 기간에 대한 세그먼트 정의. 대상 크기 트렌드는 30일, 90일 및 12개월 기간에 걸쳐 시각화할 수 있습니다. 기간은 위젯의 드롭다운 메뉴에서 선택됩니다. 대상 크기는 x축의 y축 및 시간에 반영됩니다.
+
+![대상 크기 트렌드 위젯.](../images/segments/audience-size-trend.png)
+
+### [!UICONTROL 대상 크기 변경 트렌드] {#audience-size-change-trend}
+
+이 위젯은 가장 최근 일별 스냅샷 간 주어진 세그먼트에 자격을 부여받은 프로필의 총 수 차이에 대한 선 그래프 그림을 제공합니다. 분석을 위해 선택한 세그먼트는 개요 드롭다운에서 선택됩니다. 트렌드 분석 기간은 30일, 90일 및 12개월 기간으로 시각화할 수 있습니다. 기간은 위젯의 드롭다운 메뉴에서 선택됩니다. 대상 크기는 x축의 y축 및 시간에 반영됩니다.
+
+![대상 크기 변경 트렌드 위젯.](../images/segments/audience-size-change-trend.png)
+
+### [!UICONTROL ID별 대상 크기 트렌드] {#audience-size-trend-by-identity}
+
+이 위젯은 위젯 드롭다운 메뉴에서 선택한 ID 유형을 기반으로 하여 특정 세그먼트에 대한 대상 크기 트렌드를 보여줍니다. 분석에 사용된 세그먼트는 개요 드롭다운에서 선택됩니다. 트렌드 분석 기간은 30일, 90일 및 12개월 기간으로 시각화할 수 있습니다. 기간은 위젯의 드롭다운 메뉴에서 선택됩니다.
+
+![ID 위젯별 대상 크기 트렌드입니다.](../images/segments/audience-size-trend-by-identity.png)
 
 ## 다음 단계
 
