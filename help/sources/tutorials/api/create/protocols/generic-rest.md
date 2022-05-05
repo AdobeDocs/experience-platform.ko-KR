@@ -5,9 +5,10 @@ title: Flow Service API를 사용하여 일반 REST API 기본 연결 만들기
 topic-legacy: overview
 type: Tutorial
 description: Flow Service API를 사용하여 일반 REST API를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
-source-git-commit: 1a9c4d5ba3ba9201378e78c0e92dea5101668a24
+exl-id: 6b414868-503e-49d5-8f4a-5b2fc003dab0
+source-git-commit: 1f2ae53e5503618b7ac12628923b30c457fd17e2
 workflow-type: tm+mt
-source-wordcount: '939'
+source-wordcount: '945'
 ht-degree: 1%
 
 ---
@@ -33,7 +34,7 @@ Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용�
 
 ### 필요한 자격 증명 수집
 
-대상 [!DNL Flow Service] 연결 [!DNL Generic REST API]를 선택한 인증 유형에 유효한 자격 증명을 제공해야 합니다. [!DNL Generic REST API] 은 OAuth 2 새로 고침 코드 및 기본 인증을 모두 지원합니다. 지원되는 두 가지 인증 유형에 대한 자격 증명에 대해서는 다음 표를 참조하십시오.
+대상 [!DNL Flow Service] 연결 [!DNL Generic REST API]를 선택한 인증 유형에 유효한 자격 증명을 제공해야 합니다. [!DNL Generic REST API] 은 OAuth 2 새로 고침 코드 및 기본 인증을 모두 지원합니다. 지원되는 두 가지 인증 유형에 대한 자격 증명에 대한 자세한 내용은 다음 표를 참조하십시오.
 
 #### OAuth 2 새로 고침 코드
 
@@ -187,4 +188,7 @@ curl -X POST \
 
 ## 다음 단계
 
-이 자습서에 따라 다음을 만들었습니다 [!DNL Generic REST API] 를 사용하여 연결 [!DNL Flow Service] API를 사용하고 연결의 고유 ID 값을 받았습니다. 다음 자습서에서는 다음 ID를 사용하여 방법을 배울 수 있습니다 [흐름 서비스 API를 사용하여 프로토콜 응용 프로그램 탐색](../../explore/protocols.md).
+이 자습서에 따라 다음을 만들었습니다 [!DNL Generic REST API] 기본 연결 [!DNL Flow Service] API. 다음 자습서에서는 이 기본 연결 ID를 사용할 수 있습니다.
+
+* [를 사용하여 데이터 테이블의 구조 및 컨텐츠를 탐색합니다. [!DNL Flow Service] API](../../explore/tabular.md)
+* [데이터 흐름을 만들어 [!DNL Flow Service] API](../../collect/protocols.md)

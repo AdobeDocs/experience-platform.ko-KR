@@ -4,9 +4,10 @@ solution: Experience Platform
 title: Oracle Eloqua Connector 개요
 topic-legacy: overview
 description: API 또는 사용자 인터페이스를 사용하여 Oracle Eloqua를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
-source-git-commit: a0c7ba20926d9f55a1f7818374fc6d2b5320820f
+exl-id: ebe16bff-4c89-4d45-9973-e5aa13b61a36
+source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
 workflow-type: tm+mt
-source-wordcount: '235'
+source-wordcount: '227'
 ht-degree: 0%
 
 ---
@@ -26,7 +27,7 @@ Experience Platform은 타사 마케팅 자동화 시스템에서 데이터 섭�
 ## Connect [!DNL Oracle Eloqua] API를 사용하여 플랫폼 구현
 
 * [Flow Service API를 사용하여 Oracle Eloqua 기본 연결을 만듭니다](../../tutorials/api/create/marketing-automation/oracle-eloqua.md)
-* [Flow Service API를 사용하여 마케팅 자동화 소스의 데이터 구조 및 컨텐츠를 탐색합니다](../../tutorials/api/explore/marketing-automation.md)
+* [Flow Service API를 사용하여 데이터 테이블 탐색](../../tutorials/api/explore/tabular.md)
 * [Flow Service API를 사용하여 마케팅 자동화 소스에 대한 데이터 흐름 만들기](../../tutorials/api/collect/marketing-automation.md)
 
 ## Connect [!DNL Oracle Eloqua] UI를 사용하여 플랫폼 구현

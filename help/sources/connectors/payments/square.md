@@ -3,9 +3,10 @@ keywords: Experience Platform;홈;인기 항목;사각형
 solution: Experience Platform
 title: 정사각형 소스 커넥터 개요
 description: API 또는 사용자 인터페이스를 사용하여 Square를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
-source-git-commit: cb2902455f965aced8d40859c36824710b9e695f
+exl-id: 18d33c5a-2955-4d0b-938c-52b6f72a444d
+source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
 workflow-type: tm+mt
-source-wordcount: '225'
+source-wordcount: '218'
 ht-degree: 0%
 
 ---
@@ -25,7 +26,7 @@ Experience Platform은 타사 결제 애플리케이션에서 데이터를 수�
 ## Connect [!DNL Square] API를 사용하여 플랫폼 구현
 
 * [Flow Service API를 사용하여 Square 기본 연결 만들기](../../tutorials/api/create/payments/square.md)
-* [Flow Service API를 사용하여 지급 출처의 데이터 구조 및 내용을 탐색합니다](../../tutorials/api/explore/payments.md)
+* [Flow Service API를 사용하여 데이터 테이블 탐색](../../tutorials/api/explore/tabular.md)
 * [Flow Service API를 사용하여 지급 출처에 대한 데이터 흐름 생성](../../tutorials/api/collect/payments.md)
 
 ## Connect [!DNL Square] UI를 사용하여 플랫폼 구현

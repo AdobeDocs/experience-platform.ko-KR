@@ -4,9 +4,10 @@ solution: Experience Platform
 title: 일반 REST API 소스 커넥터 개요
 topic-legacy: overview
 description: API 또는 사용자 인터페이스를 사용하여 Adobe Experience Platform에 일반 REST API를 연결하는 방법을 알아봅니다.
-source-git-commit: 0c7bb3d6f0a1bc4154bff0e4d79cc4c3c0b0ab71
+exl-id: e3449e33-7261-4aa2-bce9-5530eb4fcc68
+source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
 workflow-type: tm+mt
-source-wordcount: '235'
+source-wordcount: '228'
 ht-degree: 0%
 
 ---
@@ -32,5 +33,5 @@ Adobe Experience Platform을 사용하면 를 사용하여 들어오는 데이�
 ## Connect [!DNL Generic REST API] to [!DNL Platform] api 사용
 
 - [Flow Service API를 사용하여 일반 REST API 기본 연결을 만듭니다](../../tutorials/api/create/protocols/generic-rest.md)
-- [Flow Service API를 사용하여 프로토콜 소스의 데이터 구조 및 컨텐츠를 탐색합니다](../../tutorials/api/explore/protocols.md)
+- [Flow Service API를 사용하여 데이터 테이블 탐색](../../tutorials/api/explore/tabular.md)
 - [Flow Service API를 사용하여 프로토콜 소스에 대한 데이터 흐름 만들기](../../tutorials/api/collect/protocols.md)

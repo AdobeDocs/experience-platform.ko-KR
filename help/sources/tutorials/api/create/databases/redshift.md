@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Flow Service API를 사용하여 Adobe Experience Platform을 Amazon Redshift에 연결하는 방법을 알아봅니다.
 exl-id: 2728ce08-05c9-4dca-af1d-d2d1b266c5d9
-source-git-commit: 2fb972b0ec8d1f679c6ce104a439265b5cc4d535
+source-git-commit: c0d750ef61ad2e295568cccabca5c52a758997c2
 workflow-type: tm+mt
-source-wordcount: '474'
+source-wordcount: '477'
 ht-degree: 1%
 
 ---
@@ -114,4 +114,7 @@ curl -X POST \
 
 ## 다음 단계
 
-이 자습서에 따라 다음을 만들었습니다 [!DNL Amazon Redshift] 를 사용하여 연결 [!DNL Flow Service] API이고, 연결의 고유 ID 값을 받았습니다. 다음 자습서에서는 다음 방법을 배울 때 이 연결 ID를 사용할 수 있습니다 [Flow Service API를 사용하여 데이터베이스 또는 NoSQL 시스템 탐색](../../explore/database-nosql.md).
+이 자습서에 따라 다음을 만들었습니다 [!DNL Amazon Redshift] 기본 연결 [!DNL Flow Service] API. 다음 자습서에서는 이 기본 연결 ID를 사용할 수 있습니다.
+
+* [를 사용하여 데이터 테이블의 구조 및 컨텐츠를 탐색합니다. [!DNL Flow Service] API](../../explore/tabular.md)
+* [데이터 흐름을 만들어 [!DNL Flow Service] API](../../collect/database-nosql.md)

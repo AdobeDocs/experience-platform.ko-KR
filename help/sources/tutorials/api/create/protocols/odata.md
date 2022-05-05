@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Flow Service API를 사용하여 일반 OData를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: 45b302cb-1a43-4fab-a8a2-cb4e1ee129f9
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 1f2ae53e5503618b7ac12628923b30c457fd17e2
 workflow-type: tm+mt
-source-wordcount: '443'
+source-wordcount: '449'
 ht-degree: 2%
 
 ---
@@ -105,4 +105,7 @@ curl -X POST \
 
 ## 다음 단계
 
-이 자습서에 따라 다음을 만들었습니다 [!DNL OData] 를 사용하여 연결 [!DNL Flow Service] API를 사용하고 연결의 고유 ID 값을 받았습니다. 다음 자습서에서는 다음 ID를 사용하여 방법을 배울 수 있습니다 [흐름 서비스 API를 사용하여 프로토콜 응용 프로그램 탐색](../../explore/protocols.md).
+이 자습서에 따라 다음을 만들었습니다 [!DNL Generic REST OData] 기본 연결 [!DNL Flow Service] API. 다음 자습서에서는 이 기본 연결 ID를 사용할 수 있습니다.
+
+* [를 사용하여 데이터 테이블의 구조 및 컨텐츠를 탐색합니다. [!DNL Flow Service] API](../../explore/tabular.md)
+* [데이터 흐름을 만들어 [!DNL Flow Service] API](../../collect/protocols.md)

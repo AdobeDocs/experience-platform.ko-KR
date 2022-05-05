@@ -5,9 +5,9 @@ title: Snowflake 소스 커넥터 개요
 topic-legacy: overview
 description: API 또는 사용자 인터페이스를 사용하여 Adobe Experience Platform에 Snowflake을 연결하는 방법을 알아봅니다.
 exl-id: df066463-1ae6-4ecd-ae0e-fb291cec4bd5
-source-git-commit: 25cc0c5a1e6dcf01b82956ea1022663445315a27
+source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
 workflow-type: tm+mt
-source-wordcount: '244'
+source-wordcount: '237'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ Experience Platform은 타사 데이터베이스에서 데이터를 수집하기
 ## Connect [!DNL Snowflake] API를 사용하여 플랫폼 구현
 
 - [Flow Service API를 사용하여 Snowflake 기본 연결을 만듭니다](../../tutorials/api/create/databases/snowflake.md)
-- [Flow Service API를 사용하여 데이터베이스 소스의 데이터 구조 및 컨텐츠를 탐색합니다](../../tutorials/api/explore/database-nosql.md)
+- [Flow Service API를 사용하여 데이터 테이블 탐색](../../tutorials/api/explore/tabular.md)
 - [Flow Service API를 사용하여 데이터베이스 소스에 대한 데이터 흐름 만들기](../../tutorials/api/collect/database-nosql.md)
 
 ## Connect [!DNL Snowflake] UI를 사용하여 플랫폼 구현

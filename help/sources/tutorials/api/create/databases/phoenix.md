@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Flow Service API를 사용하여 Phoenix 데이터베이스를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: b69d9593-06fe-4fff-88a9-7860e4e45eb7
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 0ca900b77275851076a13dcc4b8b4a9995ddd0be
 workflow-type: tm+mt
-source-wordcount: '561'
+source-wordcount: '568'
 ht-degree: 1%
 
 ---
@@ -120,4 +120,7 @@ curl -X POST \
 
 ## 다음 단계
 
-이 자습서에 따라 다음을 만들었습니다 [!DNL Phoenix] 를 사용하여 연결 [!DNL Flow Service] API를 사용하고 연결의 고유 ID 값을 받았습니다. 다음 자습서에서는 다음 ID를 사용하여 방법을 배울 수 있습니다 [흐름 서비스 API를 사용하여 데이터베이스 탐색](../../explore/database-nosql.md).
+이 자습서에 따라 다음을 만들었습니다 [!DNL Phoenix] 기본 연결 [!DNL Flow Service] API. 다음 자습서에서는 이 기본 연결 ID를 사용할 수 있습니다.
+
+* [를 사용하여 데이터 테이블의 구조 및 컨텐츠를 탐색합니다. [!DNL Flow Service] API](../../explore/tabular.md)
+* [데이터 흐름을 만들어 [!DNL Flow Service] API](../../collect/database-nosql.md)

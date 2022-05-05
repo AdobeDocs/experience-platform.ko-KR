@@ -5,9 +5,9 @@ title: Salesforce 소스 커넥터 개요
 topic-legacy: overview
 description: API 또는 사용자 인터페이스를 사용하여 Salesforce를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
-source-git-commit: bd3d3a83c030baaecccba2b1793b49ad8a6caa08
+source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
 workflow-type: tm+mt
-source-wordcount: '904'
+source-wordcount: '897'
 ht-degree: 0%
 
 ---
@@ -90,7 +90,7 @@ Experience Platform은 타사 CRM 시스템에서 데이터 섭취를 지원합�
 아래 설명서에서는 연결 방법에 대한 정보를 제공합니다 [!DNL Salesforce] API 또는 사용자 인터페이스를 사용하여 플랫폼:
 
 - [Flow Service API를 사용하여 Salesforce 기본 연결 만들기](../../tutorials/api/create/crm/salesforce.md)
-- [Flow Service API를 사용하여 CRM 소스의 데이터 구조 및 컨텐츠를 탐색합니다](../../tutorials/api/explore/crm.md)
+- [Flow Service API를 사용하여 데이터 테이블 탐색](../../tutorials/api/explore/tabular.md)
 - [Flow Service API를 사용하여 CRM 소스에 대한 데이터 흐름 만들기](../../tutorials/api/collect/crm.md)
 
 ## Connect [!DNL Salesforce] UI를 사용하여 플랫폼 구현

@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Flow Service API를 사용하여 Adobe Experience Platform을 Salesforce Marketing Cloud에 연결하는 방법을 알아봅니다.
 exl-id: fbf68d3a-f8b1-4618-bd56-160cc6e3346d
-source-git-commit: 531d5619e0643b6195abaa53d1708e0368d45871
+source-git-commit: c0d750ef61ad2e295568cccabca5c52a758997c2
 workflow-type: tm+mt
-source-wordcount: '513'
+source-wordcount: '520'
 ht-degree: 1%
 
 ---
@@ -108,4 +108,9 @@ curl -X POST \
 }
 ```
 
-이 자습서에 따라 다음을 만들었습니다 [!DNL Salesforce Marketing Cloud] 를 사용하여 연결 [!DNL Flow Service] API이고, 연결의 고유 ID 값을 받았습니다. 다음 자습서에서는 다음 방법을 배울 때 이 연결 ID를 사용할 수 있습니다 [흐름 서비스 API를 사용하여 마케팅 자동화 시스템 탐색](../../explore/marketing-automation.md).
+## 다음 단계
+
+이 자습서에 따라 다음을 만들었습니다 [!DNL Salesforce Marketing Cloud] 기본 연결 [!DNL Flow Service] API. 다음 자습서에서는 이 기본 연결 ID를 사용할 수 있습니다.
+
+* [를 사용하여 데이터 테이블의 구조 및 컨텐츠를 탐색합니다. [!DNL Flow Service] API](../../explore/tabular.md)
+* [데이터 흐름을 만들어 다음을 사용하여 마케팅 자동화 데이터를 Platform으로 가져오기 [!DNL Flow Service] API](../../collect/marketing-automation.md)

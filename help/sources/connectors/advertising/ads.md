@@ -5,9 +5,9 @@ title: Google AdWords 소스 개요
 topic-legacy: overview
 description: API 또는 사용자 인터페이스를 사용하여 Google AdWords를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: 1f6257e0-213c-4723-a240-511c11c5833c
-source-git-commit: eaac380cb4329b9233b40105d51f3809737d6173
+source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
 workflow-type: tm+mt
-source-wordcount: '240'
+source-wordcount: '233'
 ht-degree: 0%
 
 ---
@@ -32,11 +32,11 @@ Adobe Experience Platform을 사용하면 를 사용하여 들어오는 데이�
 
 ### API 사용
 
-- [Flow Service API를 사용하여 Google AdWords 기본 연결을 만듭니다](../../tutorials/api/create/advertising/ads.md)
-- [Flow Service API를 사용하여 광고 소스의 데이터 구조 및 컨텐츠를 탐색합니다](../../tutorials/api/explore/advertising.md)
-- [Flow Service API를 사용하여 광고 소스에 대한 데이터 흐름 만들기](../../tutorials/api/collect/advertising.md)
+* [Flow Service API를 사용하여 Google AdWords 기본 연결을 만듭니다](../../tutorials/api/create/advertising/ads.md)
+* [Flow Service API를 사용하여 데이터 테이블 탐색](../../tutorials/api/explore/tabular.md)
+* [Flow Service API를 사용하여 광고 소스에 대한 데이터 흐름 만들기](../../tutorials/api/collect/advertising.md)
 
 ### UI 사용
 
-- [UI에서 Google AdWords 소스 연결 만들기](../../tutorials/ui/create/advertising/ads.md)
-- [UI에서 광고 소스 연결을 위한 데이터 흐름 만들기](../../tutorials/ui/dataflow/advertising.md)
+* [UI에서 Google AdWords 소스 연결 만들기](../../tutorials/ui/create/advertising/ads.md)
+* [UI에서 광고 소스 연결을 위한 데이터 흐름 만들기](../../tutorials/ui/dataflow/advertising.md)

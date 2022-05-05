@@ -5,9 +5,9 @@ title: Salesforce Marketing Cloud 소스 개요
 topic-legacy: overview
 description: API 또는 사용자 인터페이스를 사용하여 Salesforce Marketing Cloud을 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: 2177d68c-0cef-4031-a0e7-8bf22ee2e70b
-source-git-commit: 6876ad592e4924dc884568899662dfa9c8eecc62
+source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
 workflow-type: tm+mt
-source-wordcount: '359'
+source-wordcount: '351'
 ht-degree: 0%
 
 ---
@@ -42,7 +42,7 @@ Adobe Experience Platform을 사용하면 Platform 서비스를 사용하여 들
 아래 설명서에서는 연결 방법에 대한 정보를 제공합니다 [!DNL Salesforce Marketing Cloud] api를 사용하여 플랫폼:
 
 * [Flow Service API를 사용하여 Salesforce Marketing Cloud 기본 연결 만들기](../../tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
-* [Flow Service API를 사용하여 마케팅 자동화 소스의 데이터 구조 및 컨텐츠를 탐색합니다](../../tutorials/api/explore/marketing-automation.md)
+* [Flow Service API를 사용하여 데이터 테이블 탐색](../../tutorials/api/explore/tabular.md)
 * [Flow Service API를 사용하여 마케팅 자동화 소스에 대한 데이터 흐름 만들기](../../tutorials/api/collect/marketing-automation.md)
 
 ## Connect [!DNL Salesforce Marketing Cloud] UI를 사용하여 플랫폼 구현
