@@ -3,7 +3,7 @@ title: 코어 이벤트 전달 확장 개요
 description: Adobe Experience Platform의 코어 이벤트 전달 확장에 대해 알아봅니다.
 feature: Event Forwarding
 exl-id: b5ee4ccf-6fa5-4472-be04-782930f07e20
-source-git-commit: d41779c5897b748130b88d3886472c7908347389
+source-git-commit: 15e7245acef1fe13a09ed0e083033b3963c444f2
 workflow-type: tm+mt
 source-wordcount: '1724'
 ht-degree: 91%
@@ -43,16 +43,16 @@ getDataElementValue('productName')
 사용자 지정 코드에서는 `ruleStash` 개체를 사용할 수도 있습니다.
 
 ```javascript
-arc.ruleStash: Object<string, *>`
-```
-
-```javascript
 utils.logger.log(context.arc.ruleStash);
 ```
 
 `ruleStash`는 작업 모듈에서 모든 결과를 수집하는 개체입니다.
 
 각 확장에는 고유한 네임스페이스가 있습니다. 예를 들어, 확장명의 이름이 `send-beacon`인 경우, `send-beacon` 작업의 모든 결과가 `ruleStash['send-beacon']` 네임스페이스에 저장됩니다.
+
+```javascript
+utils.logger.log(context.arc.ruleStash['adobe-cloud-connector']);
+```
 
 이 네임스페이스는 각 확장에 대해 고유하며 시작 부분에 `undefined` 값이 있습니다.
 
