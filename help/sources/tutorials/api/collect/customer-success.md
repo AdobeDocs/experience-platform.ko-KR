@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: 이 자습서에서는 고객 성공 시스템에서 데이터를 검색하고 소스 커넥터 및 API를 사용하여 플랫폼으로 수집하는 단계를 설명합니다.
 exl-id: 0fae04d0-164b-4113-a274-09677f4bbde5
-source-git-commit: fc719a4ec90c5150f129deec45da87df703ec4b5
+source-git-commit: 85af48f773d36eb00149b9fdec71a9c566a1bde5
 workflow-type: tm+mt
-source-wordcount: '1305'
+source-wordcount: '1327'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->데이터 흐름을 만들려면 이미 플랫폼에서 다음 고객 성공 소스로 유효한 기본 연결 ID가 있어야 합니다.<ul><li>[[!DNL Salesforce Service Cloud]](../create/customer-success/salesforce-service-cloud.md)</li><li>[[!DNL ServiceNow]](../create/customer-success/servicenow.md)</li></ul>
+>데이터 흐름을 만들려면 고객 성공 소스와 유효한 기본 연결 ID가 있어야 합니다. 이 ID가 없다면 다음을 참조하십시오. [소스 개요](../../../home.md#customer-success) 를 사용하여 기본 연결을 생성할 수 있는 고객 성공 소스 목록입니다.
 
 ## 시작하기
 

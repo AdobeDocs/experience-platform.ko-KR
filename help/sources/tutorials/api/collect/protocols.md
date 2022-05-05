@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: 이 자습서에서는 프로토콜 애플리케이션에서 데이터를 검색하고 소스 커넥터 및 API를 사용하여 플랫폼으로 수집하는 단계를 설명합니다.
 exl-id: e14e75c2-2a93-45d8-8056-f06075bd4b8d
-source-git-commit: fc719a4ec90c5150f129deec45da87df703ec4b5
+source-git-commit: 85af48f773d36eb00149b9fdec71a9c566a1bde5
 workflow-type: tm+mt
-source-wordcount: '1276'
+source-wordcount: '1293'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->데이터 흐름을 만들려면 이미 플랫폼의 다음 프로토콜 소스로 올바른 기본 연결 ID가 있어야 합니다.<ul><li>[일반 OData](../create/protocols/odata.md)</li><li>[일반 REST](../create/protocols/generic-rest.md)</li></ul>
+>데이터 흐름을 만들려면 이미 프로토콜 소스와 유효한 기본 연결 ID가 있어야 합니다. 이 ID가 없다면 다음을 참조하십시오. [소스 개요](../../../home.md#protocols) 기본 연결을 생성할 수 있는 프로토콜 소스 목록
 
 ## 시작하기
 

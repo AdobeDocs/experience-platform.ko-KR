@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: 이 자습서에서는 소스 커넥터 및 API를 사용하여 타사 클라우드 저장소에서 데이터를 검색하고 Platform으로 가져오는 단계를 설명합니다.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: fc719a4ec90c5150f129deec45da87df703ec4b5
+source-git-commit: 85af48f773d36eb00149b9fdec71a9c566a1bde5
 workflow-type: tm+mt
-source-wordcount: '1575'
+source-wordcount: '1597'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->데이터 흐름을 만들려면 이미 플랫폼의 다음 클라우드 저장소 소스와 유효한 기본 연결 ID가 있어야 합니다.<ul><li>[[!DNL Amazon S3]](../create/cloud-storage/s3.md)</li><li>[[!DNL Apache HDFS]](../create/cloud-storage/hdfs.md)</li><li>[[!DNL Azure Blob]](../create/cloud-storage/blob.md)</li><li>[[!DNL Azure Data Lake Storage Gen2]](../create/cloud-storage/adls-gen2.md)</li><li>[[!DNL Azure File Storage]](../create/cloud-storage/azure-file-storage.md)</li><li>[[!DNL FTP]](../create/cloud-storage/ftp.md)</li><li>[[!DNL Google Cloud Storage]](../create/cloud-storage/google.md)</li><li>[[!DNL Oracle Object Storage]](../create/cloud-storage/oracle-object-storage.md)</li><li>[[!DNL SFTP]](../create/cloud-storage/sftp.md)</li></ul>
+>데이터 흐름을 만들려면 이미 클라우드 저장소 소스와 유효한 기본 연결 ID가 있어야 합니다. 이 ID가 없다면 다음을 참조하십시오. [소스 개요](../../../home.md#cloud-storage) 을 사용하여 기본 연결을 만들 수 있는 클라우드 스토리지 소스 목록입니다.
 
 ## 시작하기
 

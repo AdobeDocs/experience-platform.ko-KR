@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: 이 자습서에서는 마케팅 자동화 시스템에서 데이터를 검색하고 소스 커넥터 및 API를 사용하여 Adobe Experience Platform으로 가져오는 단계를 설명합니다.
 exl-id: f3754bd0-ed31-4bf2-8f97-975bf6a9b076
-source-git-commit: fc719a4ec90c5150f129deec45da87df703ec4b5
+source-git-commit: 85af48f773d36eb00149b9fdec71a9c566a1bde5
 workflow-type: tm+mt
-source-wordcount: '1289'
+source-wordcount: '1311'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->데이터 흐름을 만들려면 이미 플랫폼의 다음 마케팅 자동화 소스로 올바른 기본 연결 ID가 있어야 합니다.<ul><li>[[!DNL HubSpot]](../create/marketing-automation/hubspot.md)</li><li>[[!DNL Mailchimp Campaigns]](../create/marketing-automation/mailchimp-campaign.md)</li><li>[[!DNL Mailchimp Members]](../create/marketing-automation/mailchimp-members.md)</li><li>[[!DNL Salesforce Marketing Cloud]](../create/marketing-automation/salesforce-marketing-cloud.md)</li></ul>
+>데이터 흐름을 만들려면 마케팅 자동화 소스와 유효한 기본 연결 ID가 있어야 합니다. 이 ID가 없다면 다음을 참조하십시오. [소스 개요](../../../home.md#marketing-automation) 기본 연결을 만들 수 있는 마케팅 자동화 소스 목록입니다.
 
 ## 시작하기
 

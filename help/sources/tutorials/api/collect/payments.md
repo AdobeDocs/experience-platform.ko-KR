@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: 이 자습서에서는 소스 커넥터 및 API를 사용하여 결제 애플리케이션에서 데이터를 검색하고 플랫폼으로 수집하는 단계를 설명합니다.
 exl-id: b75e2a3d-6590-4079-a261-fa4e9626e8dc
-source-git-commit: fc719a4ec90c5150f129deec45da87df703ec4b5
+source-git-commit: 85af48f773d36eb00149b9fdec71a9c566a1bde5
 workflow-type: tm+mt
-source-wordcount: '1304'
+source-wordcount: '1325'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->데이터 흐름을 만들려면 플랫폼의 다음 결제 소스와 유효한 기본 연결 ID가 있어야 합니다.<ul><li>[[!DNL PayPal]](../create/payments/paypal.md)</li><li>[[!DNL Square]](../create/payments/square.md)</li></ul>
+>데이터 흐름을 만들려면 지급 출처와 유효한 기본 연결 ID가 있어야 합니다. 이 ID가 없다면 다음을 참조하십시오. [소스 개요](../../../home.md#payments) 기본 접속을 생성할 수 있는 지급 출처 목록
 
 ## 시작하기
 

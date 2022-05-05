@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: 이 자습서에서는 데이터베이스에서 데이터를 검색하고 소스 커넥터 및 API를 사용하여 데이터를 플랫폼으로 수집하는 단계를 설명합니다.
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: fc719a4ec90c5150f129deec45da87df703ec4b5
+source-git-commit: 85af48f773d36eb00149b9fdec71a9c566a1bde5
 workflow-type: tm+mt
-source-wordcount: '1347'
+source-wordcount: '1368'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->데이터 흐름을 만들려면 이미 플랫폼의 다음 데이터베이스 소스와 유효한 기본 연결 ID가 있어야 합니다.<ul><li>[[!DNL Amazon Redshift]](../create/databases/redshift.md)</li><li>[[!DNL Apache Hive on Azure HDInsights]](../create/databases/hive.md)</li><li>[[!DNL Apache Spark on Azure HDInsights]](../create/databases/spark.md)</li><li>[[!DNL Azure Data Explorer]](../create/databases/data-explorer.md)</li><li>[[!DNL Azure Synapse Analytics]](../create/databases/synapse-analytics.md)</li><li>[[!DNL Azure Table Storage]](../create/databases/ats.md)</li><li>[[!DNL Couchbase]](../create/databases/couchbase.md)</li><li>[[!DNL Google BigQuery]](../create/databases/bigquery.md)</li><li>[[!DNL Greenplum]](../create/databases/greenplum.md)</li><li>[[!DNL HP Vertica]](../create/databases/hp-vertica.md)</li><li>[[!DNL IBM DB2]](../create/databases/ibm-db2.md)</li><li>[[!DNL MariaDB]](../create/databases/mariadb.md)</li><li>[[!DNL Microsoft SQL Server]](../create/databases/sql-server.md)</li><li>[[!DNL MySQL]](../create/databases/mysql.md)</li><li>[[!DNL Oracle]](../create/databases/oracle.md)</li><li>[[!DNL Phoenix]](../create/databases/phoenix.md)</li><li>[[!DNL PostgreSQL]](../create/databases/postgres.md)</li><li>[[!DNL Snowflake]](../create/databases/snowflake.md)</li></ul>
+>데이터 흐름을 만들려면 데이터베이스 소스와 유효한 기본 연결 ID가 있어야 합니다. 이 ID가 없다면 다음을 참조하십시오. [소스 개요](../../../home.md#database) 기본 연결을 생성할 수 있는 데이터베이스 소스 목록
 
 ## 시작하기
 

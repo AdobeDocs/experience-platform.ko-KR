@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: 이 자습서에서는 타사 CRM 시스템에서 데이터를 검색하고 소스 커넥터 및 API를 사용하여 Platform으로 가져오는 단계를 설명합니다.
 exl-id: b07dd640-bce6-4699-9d2b-b7096746934a
-source-git-commit: fc719a4ec90c5150f129deec45da87df703ec4b5
+source-git-commit: 85af48f773d36eb00149b9fdec71a9c566a1bde5
 workflow-type: tm+mt
-source-wordcount: '1308'
+source-wordcount: '1329'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->데이터 흐름을 만들려면 이미 플랫폼의 다음 CRM 소스 중 하나와 유효한 기본 연결 ID가 있어야 합니다.<ul><li>[[!DNL Microsoft Dynamics]](../create/crm/ms-dynamics.md)</li><li>[[!DNL Salesforce]](../create/crm/salesforce.md)</li><li>[[!DNL Veeva CRM]](../create/crm/veeva.md)</li><li>[[!DNL Zoho CRM]](../create/crm/zoho.md)</li></ul>
+>데이터 흐름을 만들려면 이미 CRM 소스와 유효한 기본 연결 ID가 있어야 합니다. 이 ID가 없다면 다음을 참조하십시오. [소스 개요](../../../home.md#customer-relationship-management) 를 사용하여 기본 연결을 만들 수 있는 CRM 소스 목록입니다.
 
 ## 시작하기
 

@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: 이 자습서에서는 타사 eCommerce 시스템에서 데이터를 검색하고 소스 커넥터 및 API를 사용하여 데이터를 플랫폼으로 수집하는 단계를 설명합니다.
 exl-id: 0952f037-5e20-4d84-a2e6-2c9470f168f5
-source-git-commit: fc719a4ec90c5150f129deec45da87df703ec4b5
+source-git-commit: 85af48f773d36eb00149b9fdec71a9c566a1bde5
 workflow-type: tm+mt
-source-wordcount: '1260'
+source-wordcount: '1266'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->데이터 흐름을 만들려면 이미 올바른 데이터 흐름이 있어야 합니다 [!DNL Shopify] 기본 연결 ID. 이 ID가 없는 경우 다음 방법에 대한 단계를 참조하십시오. [만들기 [!DNL Shopify] 기본 연결](../create/ecommerce/shopify.md) 이 자습서를 수행하기 전에
+>데이터 흐름을 만들려면 이미 전자 상거래 소스와 유효한 기본 연결 ID가 있어야 합니다. 이 ID가 없다면 다음을 참조하십시오. [소스 개요](../../../home.md#ecommerce) 를 사용하여 기본 연결을 만들 수 있는 E-commerce 소스 목록입니다.
 
 ## 시작하기
 
