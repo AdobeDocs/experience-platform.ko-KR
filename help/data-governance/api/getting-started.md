@@ -5,7 +5,7 @@ title: 정책 서비스 API 시작
 topic-legacy: developer guide
 description: 정책 서비스 API를 사용하면 Adobe Experience Platform 데이터 거버넌스와 관련된 다양한 리소스를 만들고 관리할 수 있습니다. 이 문서에서는 정책 서비스 API를 호출하기 전에 알아야 하는 핵심 개념을 소개합니다.
 exl-id: 5539976c-8433-45af-a147-2ab82ae308b2
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '444'
 ht-degree: 0%
@@ -35,7 +35,7 @@ API 설명서를 사용하려면 를 완료해야 합니다. [인증 자습서](
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
+* `x-gw-ims-org-id: {ORG_ID}`
 
 의 모든 리소스 [!DNL Experience Platform]는 데이터 거버넌스에 속하는 항목을 비롯하여 특정 가상 샌드박스에 고립됩니다. 에 대한 모든 요청 [!DNL Platform] API에는 작업이 발생할 샌드박스의 이름을 지정하는 헤더가 필요합니다.
 

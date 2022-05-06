@@ -5,7 +5,7 @@ title: 쿼리 API 끝점
 topic-legacy: queries
 description: 다음 섹션에서는 Query Service API에서 /queries 종단점을 사용하여 수행할 수 있는 호출을 살펴봅니다.
 exl-id: d6273e82-ce9d-4132-8f2b-f376c6712882
-source-git-commit: 536c2998f7d320dec0cb392465677dd30c8ea622
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '676'
 ht-degree: 2%
@@ -16,11 +16,11 @@ ht-degree: 2%
 
 ## 샘플 API 호출
 
-다음 섹션에서는 [!DNL Query Service] API에서 `/queries` 종단점을 사용하여 수행할 수 있는 호출을 살펴봅니다. 각 호출에는 일반 API 형식, 필수 헤더를 보여주는 샘플 요청 및 샘플 응답이 포함되어 있습니다.
+다음 섹션에서는 `/queries` 의 엔드포인트 [!DNL Query Service] API. 각 호출에는 일반 API 형식, 필수 헤더를 보여주는 샘플 요청 및 샘플 응답이 포함되어 있습니다.
 
 ### 쿼리 목록 검색
 
-`/queries` 종단점에 GET 요청을 수행하여 IMS 조직에 대한 모든 쿼리 목록을 검색할 수 있습니다.
+IMS 조직에 대한 GET 요청을 수행하여 모든 쿼리 목록을 검색할 수 있습니다 `/queries` 엔드포인트.
 
 **API 형식**
 
@@ -29,7 +29,7 @@ GET /queries
 GET /queries?{QUERY_PARAMETERS}
 ```
 
-- `{QUERY_PARAMETERS}`:(*선택 사항*) 응답에서 반환된 결과를 구성하는 요청 경로에 추가된 매개 변수입니다. 여러 매개 변수를 앰퍼샌드(`&`)로 구분하여 포함할 수 있습니다. 사용 가능한 매개 변수는 아래에 나와 있습니다.
+- `{QUERY_PARAMETERS}`: (*선택 사항입니다*) 응답에서 반환된 결과를 구성하는 요청 경로에 매개 변수가 추가되었습니다. 여러 매개 변수를 앰퍼샌드( )로 구분하여 포함할 수 있습니다`&`). 사용 가능한 매개 변수는 아래에 나와 있습니다.
 
 **쿼리 매개 변수**
 
@@ -37,12 +37,12 @@ GET /queries?{QUERY_PARAMETERS}
 
 | 매개 변수 | 설명 |
 | --------- | ----------- |
-| `orderby` | 결과를 정렬할 필드를 지정합니다. 지원되는 필드는 `created` 및 `updated`입니다. 예를 들어 `orderby=created`은(는) 오름차순으로 생성된 결과를 정렬합니다. 만들기 전에 `-`(`orderby=-created`)을 추가하면 내림차순으로 작성된 항목들이 정렬됩니다. |
-| `limit` | 페이지에 포함된 결과 수를 제어할 페이지 크기 제한을 지정합니다. (*기본값:20*) |
-| `start` | 영(0) 기반 번호 지정을 사용하여 응답 목록을 오프셋합니다. 예를 들어 `start=2`은 세 번째로 나열된 쿼리에서 시작하는 목록을 반환합니다. (*기본값:0*) |
-| `property` | 필드를 기반으로 결과를 필터링합니다. **필터는 HTML에서 이스케이프되어야 합니다**. 쉼표는 여러 필터 세트를 결합하는 데 사용됩니다. 지원되는 필드는 `created`, `updated`, `state` 및 `id`입니다. 지원되는 연산자 목록은 `>`(보다 큼), `<`(보다 작음), `>=`(보다 크거나 같음), `<=`(작거나 같음), `==`(같음), `!=`(같지 않음) 및 `~`(포함)입니다. 예를 들어 `id==6ebd9c2d-494d-425a-aa91-24033f3abeec`은 지정된 ID가 있는 모든 쿼리를 반환합니다. |
-| `excludeSoftDeleted` | 소프트 삭제된 쿼리를 포함할지 여부를 나타냅니다. 예를 들어 `excludeSoftDeleted=false`은 **소프트 삭제된 쿼리를 포함합니다.** (*부울, 기본값:true*) |
-| `excludeHidden` | 사용자가 아닌 제어 쿼리를 표시할지를 나타냅니다. 이 값을 false로 설정하면 **CURSOR 정의, FETCH 또는 메타데이터 쿼리와 같은 비 사용자 기반 쿼리를 포함합니다.** (*부울, 기본값:true*) |
+| `orderby` | 결과를 정렬할 필드를 지정합니다. 지원되는 필드는 다음과 같습니다 `created` 및 `updated`. 예, `orderby=created` 은(는) 결과를 오름차순으로 정렬하게 됩니다. 추가 `-` 생성 전(`orderby=-created`)은 내림차순으로 만든 항목을 정렬합니다. |
+| `limit` | 페이지에 포함된 결과 수를 제어할 페이지 크기 제한을 지정합니다. (*기본값: 20년*) |
+| `start` | 영(0) 기반 번호 지정을 사용하여 응답 목록을 오프셋합니다. 예, `start=2` 세 번째 나열된 쿼리에서 시작하는 목록을 반환합니다. (*기본값: 0*) |
+| `property` | 필드를 기반으로 결과를 필터링합니다. 필터 **반드시** HTML 이스케이프 처리됨. 쉼표는 여러 필터 세트를 결합하는 데 사용됩니다. 지원되는 필드는 다음과 같습니다 `created`, `updated`, `state`, 및 `id`. 지원되는 연산자 목록은 다음과 같습니다 `>` (보다 큼), `<` (보다 작음), `>=` (크거나 같음), `<=` (작거나 같음), `==` (같음), `!=` (같지 않음) 및 `~` (포함) 예, `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` 은 지정된 ID가 있는 모든 쿼리를 반환합니다. |
+| `excludeSoftDeleted` | 소프트 삭제된 쿼리를 포함할지 여부를 나타냅니다. 예, `excludeSoftDeleted=false` will **포함** 소프트 삭제된 쿼리 (*부울, 기본값: true*) |
+| `excludeHidden` | 사용자가 아닌 제어 쿼리를 표시할지를 나타냅니다. 이 값을 false로 설정하면 **포함** CURSOR 정의, FETCH 또는 메타데이터 쿼리와 같은 사용자 기반 쿼리가 아닙니다. (*부울, 기본값: true*) |
 
 **요청**
 
@@ -51,7 +51,7 @@ GET /queries?{QUERY_PARAMETERS}
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/queries?limit=1 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
@@ -119,7 +119,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/queries?limit=1 \
 
 ### 쿼리 만들기
 
-`/queries` 종단점에 대한 POST 요청을 만들어 새 쿼리를 만들 수 있습니다.
+에 POST 요청을 작성하여 새 쿼리를 만들 수 있습니다 `/queries` 엔드포인트.
 
 **API 형식**
 
@@ -135,7 +135,7 @@ POST /queries
 curl -X POST https://platform.adobe.io/data/foundation/query/queries \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '{
@@ -155,7 +155,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/queries \
 
 **응답**
 
-성공적인 응답은 새로 만든 쿼리의 세부 정보와 함께 HTTP 상태 202(허용됨)를 반환합니다. 쿼리가 활성화되고 성공적으로 실행되면 `state`이 `SUBMITTED`에서 `SUCCESS`(으)로 변경됩니다.
+성공적인 응답은 새로 만든 쿼리의 세부 정보와 함께 HTTP 상태 202(허용됨)를 반환합니다. 쿼리가 활성화되고 성공적으로 실행되면 `state` 이(가) `SUBMITTED` to `SUCCESS`.
 
 ```json
 {
@@ -198,11 +198,11 @@ curl -X POST https://platform.adobe.io/data/foundation/query/queries \
 
 >[!NOTE]
 >
->`_links.cancel` 값을 사용하여 [만든 쿼리를 취소할 수 있습니다](#cancel-a-query).
+>다음 값을 사용할 수 있습니다. `_links.cancel` to [만든 쿼리 취소](#cancel-a-query).
 
 ### ID로 쿼리 검색
 
-`/queries` 종단점에 GET 요청을 하고 요청 경로에 쿼리의 `id` 값을 제공하여 특정 쿼리에 대한 자세한 정보를 검색할 수 있습니다.
+에 GET 요청을 수행하여 특정 쿼리에 대한 세부 정보를 검색할 수 있습니다 `/queries` 끝점 및 쿼리 제공 `id` 값을 지정한 경우 이해할 수 있도록 해줍니다.
 
 **API 형식**
 
@@ -212,14 +212,14 @@ GET /queries/{QUERY_ID}
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `{QUERY_ID}` | 검색할 쿼리의 `id` 값입니다. |
+| `{QUERY_ID}` | 다음 `id` 검색할 쿼리의 값입니다. |
 
 **요청**
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/queries/4d64cd49-cf8f-463a-a182-54bccb9954fc \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
@@ -269,11 +269,11 @@ curl -X GET https://platform.adobe.io/data/foundation/query/queries/4d64cd49-cf8
 
 >[!NOTE]
 >
->`_links.cancel` 값을 사용하여 [만든 쿼리를 취소할 수 있습니다](#cancel-a-query).
+>다음 값을 사용할 수 있습니다. `_links.cancel` to [만든 쿼리 취소](#cancel-a-query).
 
 ### 쿼리 취소
 
-`/queries` 종단점에 PATCH 요청을 하고 요청 경로에 쿼리의 `id` 값을 제공하여 지정된 쿼리를 삭제하도록 요청할 수 있습니다.
+에 PATCH 요청을 작성하여 지정된 질의 삭제를 요청할 수 있습니다 `/queries` 끝점 및 쿼리 제공 `id` 값을 지정한 경우 이해할 수 있도록 해줍니다.
 
 **API 형식**
 
@@ -283,7 +283,7 @@ PATCH /queries/{QUERY_ID}
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `{QUERY_ID}` | 취소할 쿼리의 `id` 값입니다. |
+| `{QUERY_ID}` | 다음 `id` 취소할 쿼리의 값입니다. |
 
 
 **요청**
@@ -294,7 +294,7 @@ PATCH /queries/{QUERY_ID}
 curl -X PATCH https://platform.adobe.io/data/foundation/query/queries/4d64cd49-cf8f-463a-a182-54bccb9954fc \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json',
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '{
@@ -304,7 +304,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/queries/4d64cd49-c
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `op` | 쿼리를 취소하려면 `cancel ` 값으로 op 매개 변수를 설정해야 합니다. |
+| `op` | 쿼리를 취소하려면 값이 있는 op 매개 변수를 설정해야 합니다 `cancel `. |
 
 **응답**
 

@@ -1,7 +1,8 @@
 ---
 title: 규칙 끝점
 description: Reactor API에서 /rules 엔드포인트를 호출하는 방법을 알아봅니다.
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+exl-id: 79ef4389-e4b7-461e-8579-16a1a78cdd43
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '933'
 ht-degree: 8%
@@ -10,17 +11,17 @@ ht-degree: 8%
 
 # 규칙 끝점
 
-데이터 수집 태그 컨텍스트에서 규칙은 배포된 라이브러리에 있는 리소스의 동작을 제어합니다. 규칙은 규칙 구성 요소를 논리적 방식으로 함께 연결하기 위해 하나 이상의 [규칙 구성 요소](./rule-components.md)로 구성됩니다. Reactor API의 `/rules` 종단점을 사용하면 태그 규칙을 프로그래밍 방식으로 관리할 수 있습니다.
+데이터 수집 태그 컨텍스트에서 규칙은 배포된 라이브러리에 있는 리소스의 동작을 제어합니다. 규칙은 하나 이상으로 구성됩니다 [규칙 구성 요소](./rule-components.md)는 논리 방식으로 규칙 구성 요소를 함께 연결하기 위해 존재합니다. 다음 `/rules` reactor API의 종단점을 사용하면 프로그래밍 방식으로 태그 규칙을 관리할 수 있습니다.
 
 >[!NOTE]
 >
->이 문서에서는 Reactor API에서 규칙을 관리하는 방법을 다룹니다. 데이터 수집 UI에서 규칙과 상호 작용하는 방법에 대한 자세한 내용은 [UI 안내서](../../ui/managing-resources/rules.md)를 참조하십시오.
+>이 문서에서는 Reactor API에서 규칙을 관리하는 방법을 다룹니다. 데이터 수집 UI에서 규칙과 상호 작용하는 방법에 대한 자세한 내용은 [UI 안내서](../../ui/managing-resources/rules.md).
 
-규칙은 정확히 하나의 [속성](./properties.md)에 속합니다. 속성에는 많은 규칙이 있을 수 있습니다.
+규칙은 정확히 하나의 규칙에 속합니다 [속성](./properties.md). 속성에는 많은 규칙이 있을 수 있습니다.
 
 ## 시작하기
 
-이 안내서에 사용된 끝점은 [Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/)의 일부입니다. 계속하기 전에 API 인증 방법에 대한 중요한 정보가 필요하면 [시작 안내서](../getting-started.md)를 검토하십시오.
+이 안내서에 사용된 엔드포인트는 [Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/). 계속하기 전에 [시작 안내서](../getting-started.md) 를 참조하십시오.
 
 ## 규칙 목록 검색 {#list}
 
@@ -34,13 +35,13 @@ GET /properties/{PROPERTY_ID}/rules
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `PROPERTY_ID` | 구성 요소를 나열할 속성의 `id` |
+| `PROPERTY_ID` | 다음 `id` 구성 요소를 나열할 속성입니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
 >[!NOTE]
 >
->쿼리 매개 변수를 사용하여 나열된 규칙을 다음 속성에 따라 필터링할 수 있습니다.<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>자세한 내용은 [응답 필터링](../guides/filtering.md)에 대한 안내서를 참조하십시오.
+>쿼리 매개 변수를 사용하여 나열된 규칙을 다음 속성에 따라 필터링할 수 있습니다.<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>다음 안내서를 참조하십시오. [응답 필터링](../guides/filtering.md) 추가 정보.
 
 **요청**
 
@@ -49,7 +50,7 @@ curl -X GET \
   https://reactor.adobe.io/properties/PR41f64d2a9d9b4862b0582c5ff6a07504/rules \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -145,7 +146,7 @@ GET 요청 경로에 해당 ID를 제공하여 규칙을 찾을 수 있습니다
 
 >[!NOTE]
 >
->규칙이 삭제되면 삭제됨으로 표시되지만 실제로 시스템에서 제거되지 않습니다. 따라서 삭제된 규칙을 검색할 수 있습니다. 삭제된 규칙은 `meta.deleted_at` 속성이 있어도 식별할 수 있습니다.
+>규칙이 삭제되면 삭제됨으로 표시되지만 실제로 시스템에서 제거되지 않습니다. 따라서 삭제된 규칙을 검색할 수 있습니다. 삭제된 규칙은 `meta.deleted_at` 속성을 사용합니다.
 
 **API 형식**
 
@@ -155,7 +156,7 @@ GET /rules/{RULE_ID}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `RULE_ID` | 조회할 규칙의 `id` |
+| `RULE_ID` | 다음 `id` 조회하려는 규칙의 규칙입니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -166,7 +167,7 @@ curl -X GET \
   https://reactor.adobe.io/rules/RL14dc6a8c37b14b619ddb2b3ba489a1f5 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -257,7 +258,7 @@ POST /properties/{PROPERTY_ID}/rules
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `PROPERTY_ID` | 에서 규칙을 정의하는 속성의 `id` |
+| `PROPERTY_ID` | 다음 `id` Analytics Mobile Apps 또는 Analytics Premium에서도 사용할 수 있습니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -268,7 +269,7 @@ curl -X POST \
   https://reactor.adobe.io/properties/PR03cc61073ef74fd2af21e4cfb6ed97a7/rules \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
   -d '{
         "data": {
@@ -283,9 +284,9 @@ curl -X POST \
 
 | 속성 | 설명 |
 | --- | --- |
-| `attributes.name` | **(필수)** 규칙에 대해 사람이 읽을 수 있는 이름입니다. |
+| `attributes.name` | **(필수)** 사용자가 읽을 수 있는 규칙의 이름입니다. |
 | `attributes.enabled` | 규칙이 활성화되어 있는지 여부를 나타내는 부울 값입니다. |
-| `type` | 만들어지는 리소스 유형입니다. 이 끝점의 경우 값은 `rules`이어야 합니다. |
+| `type` | 만들어지는 리소스 유형입니다. 이 끝점의 경우 값은 `rules`. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -365,7 +366,7 @@ curl -X POST \
 
 ## 규칙에 이벤트, 조건 및 작업 추가 {#components}
 
-[규칙을 만들었으면 이벤트, 조건 및 작업(집합적으로 규칙 구성 요소라고 함)을 추가하여 논리를 작성할 수 있습니다. ](#create) Reactor API에서 이를 수행하는 방법에 대해 알아보려면 `/rule_components` 종단점 안내서의 [규칙 구성 요소](./rule-components.md#create) 만들기 섹션을 참조하십시오.
+일단 [규칙을 만들었습니다.](#create)를 입력하면 이벤트, 조건 및 작업(집합적으로 규칙 구성 요소라고 함)을 추가하여 논리를 작성할 수 있습니다. 의 섹션을 참조하십시오. [규칙 구성 요소 만들기](./rule-components.md#create) 에서 `/rule_components` endpoint 안내서: Reactor API에서 이를 수행하는 방법 알아보기
 
 ## 규칙 업데이트 {#update}
 
@@ -379,20 +380,20 @@ PATCH /rules/{RULE_ID}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `RULE_ID` | 업데이트할 규칙의 `id` |
+| `RULE_ID` | 다음 `id` 업데이트할 규칙의 입니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **요청**
 
-다음 요청은 기존 규칙의 `name`을 업데이트합니다.
+다음 요청은 를 업데이트합니다 `name` 기존 규칙의 규칙 중 하나입니다.
 
 ```shell
 curl -X PATCH \
   https://reactor.adobe.io/rules/RLd2528a53c21a468f93cfd85244f16fdd \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
   -d '{
   "data": {
@@ -408,8 +409,8 @@ curl -X PATCH \
 | 속성 | 설명 |
 | --- | --- |
 | `attributes` | 규칙에 대해 업데이트할 속성을 나타내는 객체입니다. 규칙에 대해 다음 속성을 업데이트할 수 있습니다. <ul><li>`name`</li><li>`enabled`</li></ul> |
-| `id` | 업데이트할 규칙의 `id` 이 값은 요청 경로에 제공된 `{RULE_ID}` 값과 일치해야 합니다. |
-| `type` | 업데이트할 리소스 유형입니다. 이 끝점의 경우 값은 `rules`이어야 합니다. |
+| `id` | 다음 `id` 업데이트할 규칙의 입니다. 이 옵션은 와 일치해야 합니다. `{RULE_ID}` 요청 경로에 제공된 값입니다. |
+| `type` | 업데이트할 리소스 유형입니다. 이 끝점의 경우 값은 `rules`. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -499,7 +500,7 @@ DELETE /rules/{RULE_ID}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `RULE_ID` | 삭제할 규칙의 `id` |
+| `RULE_ID` | 다음 `id` 삭제할 규칙에 대해 설명합니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -510,7 +511,7 @@ curl -X DELETE \
   https://reactor.adobe.io/rules/RLd2528a53c21a468f93cfd85244f16fdd \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
 **응답**
@@ -519,17 +520,17 @@ curl -X DELETE \
 
 ## 규칙에 대한 노트 관리 {#notes}
 
-규칙은 &quot;주목할 만한&quot; 리소스입니다. 즉, 각 개별 리소스에서 텍스트 기반 메모를 만들고 검색할 수 있습니다. 규칙 및 기타 호환 리소스에 대한 메모를 관리하는 방법에 대한 자세한 내용은 [참고 엔드포인트 안내서](./notes.md)를 참조하십시오.
+규칙은 &quot;주목할 만한&quot; 리소스입니다. 즉, 각 개별 리소스에서 텍스트 기반 메모를 만들고 검색할 수 있습니다. 자세한 내용은 [참고 끝점 안내서](./notes.md) 를 참조하십시오.
 
 ## 규칙에 대한 관련 리소스 검색 {#related}
 
-다음 호출에서는 규칙에 대한 관련 리소스를 검색하는 방법을 보여 줍니다. [규칙을 조회하면 ](#lookup) 규칙 아래에 이러한 관계가 나열됩니다.`relationships`
+다음 호출에서는 규칙에 대한 관련 리소스를 검색하는 방법을 보여 줍니다. When [규칙 조회](#lookup)로 설정되면 이러한 관계는 `relationships` 규칙.
 
-Reactor API의 관계에 대한 자세한 내용은 [관계 안내서](../guides/relationships.md)를 참조하십시오.
+자세한 내용은 [관계 안내서](../guides/relationships.md) 를 참조하십시오.
 
 ### 규칙에 대한 관련 라이브러리 나열 {#libraries}
 
-조회 요청의 경로에 `/libraries`을 추가하여 특정 규칙을 활용하는 라이브러리를 나열할 수 있습니다.
+를 추가하여 특정 규칙을 활용하는 라이브러리 목록을 만들 수 있습니다 `/libraries` 조회 요청의 경로에 추가할 수 없습니다.
 
 **API 형식**
 
@@ -539,7 +540,7 @@ GET  /rules/{RULE_ID}/libraries
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{RULE_ID}` | 라이브러리를 나열할 규칙의 `id` |
+| `{RULE_ID}` | 다음 `id` 라이브러리를 나열할 규칙에 대한 매핑입니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -550,7 +551,7 @@ curl -X GET \
   https://reactor.adobe.io/rules/RLd2528a53c21a468f93cfd85244f16fdd/libraries \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -651,7 +652,7 @@ curl -X GET \
 
 ### 규칙의 관련 개정 목록 {#revisions}
 
-조회 요청의 경로에 `/revisions`을 추가하여 규칙의 개정을 나열할 수 있습니다.
+규칙을 추가할 때 규칙 개정을 나열할 수 있습니다 `/revisions` 조회 요청의 경로에 추가할 수 없습니다.
 
 **API 형식**
 
@@ -661,7 +662,7 @@ GET  /rules/{RULE_ID}/revisions
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{RULE_ID}` | 개정을 나열할 규칙의 `id` |
+| `{RULE_ID}` | 다음 `id` 수정 사항을 나열할 규칙의 규칙입니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -672,7 +673,7 @@ curl -X GET \
   https://reactor.adobe.io/rules/RL67de76e5bff9413aa8ad14e55172d8dc/revisions \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -829,7 +830,7 @@ curl -X GET \
 
 ### 규칙의 관련 원본 조회 {#origin}
 
-조회 요청의 경로에 `/origin`을 추가하여 규칙의 원본(이전 버전)을 조회할 수 있습니다.
+를 추가하여 규칙의 원본(이전 버전)을 조회할 수 있습니다 `/origin` 조회 요청의 경로에 추가할 수 없습니다.
 
 **API 형식**
 
@@ -839,7 +840,7 @@ GET /rules/{RULE_ID}/origin
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{RULE_ID}` | 원본에서 찾을 규칙의 `id` |
+| `{RULE_ID}` | 다음 `id` 조회하려는 규칙의 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -850,7 +851,7 @@ curl -X GET \
   https://reactor.adobe.io/rules/RLb83ed2278dc045628c069ab7eb9bb866/origin \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -931,7 +932,7 @@ curl -X GET \
 
 ### 규칙에 대한 관련 속성 조회 {#property}
 
-조회 요청의 경로에 `/property`을 추가하여 규칙을 소유하는 속성을 조회할 수 있습니다.
+규칙을 소유하는 속성을 `/property` 조회 요청의 경로에 추가할 수 없습니다.
 
 **API 형식**
 
@@ -941,7 +942,7 @@ GET /rules/{RULE_ID}/property
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{RULE_ID}` | 속성을 조회하려는 규칙의 `id` |
+| `{RULE_ID}` | 다음 `id` 속성을 조회하려는 규칙의 규칙입니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -952,7 +953,7 @@ curl -X GET \
   https://reactor.adobe.io/rules/RC3d0805fde85d42db8988090bc074bb44/property \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```

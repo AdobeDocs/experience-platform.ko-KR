@@ -1,7 +1,8 @@
 ---
 title: 확장 패키지 끝점
 description: Reactor API에서 /extension_packages 종단점을 호출하는 방법을 알아봅니다.
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+exl-id: a91c6f32-6c72-4118-a43f-2bd8ef50709f
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '951'
 ht-degree: 5%
@@ -12,47 +13,47 @@ ht-degree: 5%
 
 >[!WARNING]
 >
->기능이 추가, 제거 및 재작동하므로 `/extension_packages` 종단점의 구현은 유동적입니다.
+>의 구현 `/extension_packages` 기능이 추가, 제거 및 재작동하므로 엔드포인트는 플럭스입니다.
 
-확장 패키지는 확장 개발자가 작성한 [확장](./extensions.md)을 나타냅니다. 확장 패키지는 태그 사용자에 대해 사용할 수 있는 추가 기능을 정의합니다. 가장 일반적으로 이러한 기능은 [규칙 구성 요소](./rule-components.md)(이벤트, 조건 및 작업) 및 [데이터 요소](./data-elements.md) 형태로 제공되지만, 기본 모듈 및 공유 모듈을 포함할 수도 있습니다.
+확장 패키지는 [확장](./extensions.md) 확장 개발자가 작성한 것입니다. 확장 패키지는 태그 사용자에 대해 사용할 수 있는 추가 기능을 정의합니다. 일반적으로 이러한 기능은 [규칙 구성 요소](./rule-components.md) (이벤트, 조건 및 작업) 및 [데이터 요소](./data-elements.md), 기본 모듈 및 공유 모듈을 포함할 수도 있습니다.
 
 확장 패키지는 사용자가 설치할 데이터 수집 UI 내의 확장 카탈로그에 표시됩니다. 확장 패키지에 대한 링크가 있는 확장을 만들면 속성에 확장 패키지를 추가할 수 있습니다.
 
-확장 패키지는 확장을 만든 개발자의 [company](./companies.md)에 속합니다.
+확장 패키지는 [회사](./companies.md) 개발자를 만든 개발자의 자산입니다.
 
 ## 시작하기
 
-이 안내서에 사용된 끝점은 [Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/)의 일부입니다. 계속하기 전에 API 인증 방법에 대한 중요한 정보가 필요하면 [시작 안내서](../getting-started.md)를 검토하십시오.
+이 안내서에 사용된 엔드포인트는 [Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/). 계속하기 전에 [시작 안내서](../getting-started.md) 를 참조하십시오.
 
-Reactor API를 호출하는 방법을 이해하는 것 외에도 확장 패키지의 `status` 및 `availability` 속성이 수행할 수 있는 작업에 어떻게 영향을 주는지를 이해하는 것이 중요합니다. 이러한 내용은 아래 섹션에 설명되어 있습니다.
+Reactor API를 호출하는 방법을 이해하는 것 외에도 확장 패키지의 방법을 이해하는 것이 중요합니다 `status` 및 `availability` 속성은 속성에서 수행할 수 있는 작업에 영향을 줍니다. 이러한 내용은 아래 섹션에 설명되어 있습니다.
 
 ### 상태
 
-확장 패키지에는 다음 세 가지 잠재적인 상태가 있습니다. `pending`, `succeeded` 및 `failed`
+확장 패키지에는 다음 세 가지 잠재적인 상태가 있습니다. `pending`, `succeeded`, 및 `failed`.
 
 | 상태 | 설명 |
 | --- | --- |
-| `pending` | 확장 패키지가 만들어지면 해당 `status`이 `pending`(으)로 설정됩니다. 시스템이 확장 패키지에 대한 정보를 수신하고 처리를 시작함을 나타냅니다. 상태가 `pending`인 확장 패키지를 사용할 수 없습니다. |
-| `succeeded` | 확장 패키지의 상태가 처리가 성공적으로 완료되면 `succeeded`으로 업데이트됩니다. |
-| `failed` | 확장 패키지의 상태는 처리가 실패한 경우 `failed`로 업데이트됩니다. 처리가 완료될 때까지 상태가 `failed`인 확장 패키지를 업데이트할 수 있습니다. 상태가 `failed`인 확장 패키지를 사용할 수 없습니다. |
+| `pending` | 확장 패키지를 만들면 `status` 가 로 설정되어 있습니다. `pending`. 시스템이 확장 패키지에 대한 정보를 수신하고 처리를 시작함을 나타냅니다. 상태가 인 확장 패키지 `pending` 사용할 수 없습니다. |
+| `succeeded` | 확장 패키지의 상태는 `succeeded` 처리가 성공적으로 완료된 경우. |
+| `failed` | 확장 패키지의 상태는 `failed` 처리가 실패한 경우. 상태가 인 확장 패키지 `failed` 처리가 성공할 때까지 업데이트할 수 있습니다. 상태가 인 확장 패키지 `failed` 사용할 수 없습니다. |
 
-### 사용 가능
+### 가용성
 
-확장 패키지에 대한 가용성 수준은 다음과 같습니다. `development`, `private` 및 `public`
+확장 패키지에 대한 가용성 수준은 다음과 같습니다. `development`, `private`, 및 `public`.
 
-| 사용 가능 | 설명 |
+| 가용성 | 설명 |
 | --- | --- |
-| `development` | `development`의 확장 패키지는 이 패키지를 소유한 회사에서만 표시되며 내에서 사용할 수 있습니다. 또한 확장 개발을 위해 구성된 속성에서만 사용할 수 있습니다. |
-| `private` | `private` 확장 패키지는 이 패키지를 소유한 회사에서만 표시되며 회사가 소유하는 속성에만 설치할 수 있습니다. |
-| `public` | 모든 회사 및 속성에서 `public` 확장 패키지를 볼 수 있습니다. |
+| `development` | 의 확장 패키지 `development` 는 해당 자산을 소유한 회사에서만 볼 수 있고 내에서 사용할 수 있습니다. 또한 확장 개발을 위해 구성된 속성에서만 사용할 수 있습니다. |
+| `private` | A `private` 확장 패키지는 확장 패키지를 소유한 회사에서만 표시되며 회사가 소유하는 속성에만 설치할 수 있습니다. |
+| `public` | A `public` 확장 패키지는 모든 회사 및 속성에서 볼 수 있으며 사용할 수 있습니다. |
 
 >[!NOTE]
 >
->확장 패키지를 만들 때 `availability`이 `development`(으)로 설정됩니다. 테스트가 완료되면 확장 패키지를 `private` 또는 `public` 로 전환할 수 있습니다.
+>확장 패키지를 만들 때 `availability` 가 로 설정되어 있습니다. `development`. 테스트가 완료되면 확장 패키지를 다음 중 하나로 전환할 수 있습니다. `private` 또는 `public`.
 
 ## 확장 패키지 목록 검색 {#list}
 
-`/extension_packages`에 GET 요청을 수행하여 확장 패키지 목록을 검색할 수 있습니다.
+에 GET 요청을 수행하여 확장 패키지 목록을 검색할 수 있습니다 `/extension_packages`.
 
 **API 형식**
 
@@ -62,7 +63,7 @@ GET /extension_packages
 
 >[!NOTE]
 >
->쿼리 매개 변수를 사용하여 나열된 확장 패키지는 다음 속성을 기반으로 필터링할 수 있습니다.<ul><li>`archive`</li><li>`created_at`</li><li>`name`</li><li>`stage`</li><li>`token`</li><li>`updated_at`</li></ul>자세한 내용은 [응답 필터링](../guides/filtering.md)에 대한 안내서를 참조하십시오.
+>쿼리 매개 변수를 사용하여 나열된 확장 패키지는 다음 속성을 기반으로 필터링할 수 있습니다.<ul><li>`archive`</li><li>`created_at`</li><li>`name`</li><li>`stage`</li><li>`token`</li><li>`updated_at`</li></ul>다음 안내서를 참조하십시오. [응답 필터링](../guides/filtering.md) 추가 정보.
 
 **요청**
 
@@ -71,7 +72,7 @@ curl -X GET \
   https://reactor.adobe.io/extension_packages \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -246,7 +247,7 @@ GET /extension_packages/{EXTENSION_PACKAGE_ID}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `EXTENSION_PACKAGE_ID` | 조회할 확장 패키지의 `id`. |
+| `EXTENSION_PACKAGE_ID` | 다음 `id` 검색할 확장 패키지의 수입니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -257,14 +258,14 @@ curl -X GET \
   https://reactor.adobe.io/extension_packages/EP75db2452065b44e2b8a38ca883ce369a \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
 **응답**
 
-성공적으로 응답하면 `actions`, `conditions`, `data_elements` 등과 같은 위임 리소스를 포함한 확장 패키지의 세부 정보가 반환됩니다. 아래 예제 응답은 스페이스에 대해 잘렸습니다.
+성공적으로 응답하면 위임 리소스를 포함한 확장 패키지의 세부 사항이 반환됩니다. `actions`, `conditions`, `data_elements`, 등. 아래 예제 응답은 스페이스에 대해 잘렸습니다.
 
 ```json
 {
@@ -471,7 +472,7 @@ curl -X GET \
 
 ## 확장 패키지 만들기 {#create}
 
-확장 패키지는 Node.js 스캐폴딩 도구를 사용하여 만들고 Reactor API에 제출되기 전에 로컬 시스템에 저장됩니다. 확장 패키지 구성에 대한 자세한 내용은 [확장 개발 시작](../../extension-dev/getting-started.md)의 안내서를 참조하십시오.
+확장 패키지는 Node.js 스캐폴딩 도구를 사용하여 만들고 Reactor API에 제출되기 전에 로컬 시스템에 저장됩니다. 확장 패키지 구성에 대한 자세한 내용은 [확장 개발 시작](../../extension-dev/getting-started.md).
 
 확장 패키지 파일을 만들면 POST 요청을 통해 Reactor API에 제출할 수 있습니다.
 
@@ -483,14 +484,14 @@ POST /extension_packages
 
 **요청**
 
-다음 요청은 새 확장 패키지를 만듭니다. 업로드 중인 패키지 파일의 로컬 경로가 양식 데이터(`package`)로 참조되므로 이 종단점에 `multipart/form-data` 의 `Content-Type` 헤더가 필요합니다.
+다음 요청은 새 확장 패키지를 만듭니다. 업로드 중인 패키지 파일의 로컬 경로가 양식 데이터(`package`). 따라서 이 종단점은 `Content-Type` 헤더 `multipart/form-data`.
 
 ```shell
 curl -X POST \
   https://reactor.adobe.io/extension_packages \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: multipart/form-data' \
   -F 'package=@"/Users/temp/extension-package.zip"'
 ```
@@ -714,20 +715,20 @@ PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `EXTENSION_PACKAGE_ID` | 업데이트할 확장 패키지의 `id`. |
+| `EXTENSION_PACKAGE_ID` | 다음 `id` 업데이트할 확장 패키지의 목록입니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **요청**
 
-[확장 패키지 생성](#create)과 마찬가지로 업데이트된 패키지의 로컬 버전을 양식 데이터를 통해 업로드해야 합니다.
+과 함께 [확장 패키지 생성](#create)를 채울 경우 양식 데이터를 통해 업데이트된 패키지의 로컬 버전을 업로드해야 합니다.
 
 ```shell
 curl -X PATCH \
   https://reactor.adobe.io/extension_packages/EP10bb503178694d73bc0cd84387b82172 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: multipart/form-data' \
   -F 'package=@"/Users/temp/extension-package.zip"'
 ```
@@ -943,7 +944,7 @@ curl -X PATCH \
 
 확장 패키지 테스트를 완료하면 비공개로 릴리스할 수 있습니다. 이를 통해 회사 내의 모든 자산에서 사용할 수 있습니다.
 
-비공개로 릴리스한 후에는 [공개 릴리스 요청 양식](https://adobe.allegiancetech.com/cgi-bin/qwebcorporate.dll?idx=7DRB5U)을 작성하여 공개 릴리스 프로세스를 시작할 수 있습니다.
+비공개로 릴리스한 후 을(를) 채워 공개 릴리스 프로세스를 시작할 수 있습니다. [공개 릴리스 요청 양식](https://adobe.allegiancetech.com/cgi-bin/qwebcorporate.dll?idx=7DRB5U).
 
 **API 형식**
 
@@ -953,20 +954,20 @@ PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `EXTENSION_PACKAGE_ID` | 개인적으로 릴리스할 확장 패키지의 `id`. |
+| `EXTENSION_PACKAGE_ID` | 다음 `id` 비공개적으로 릴리스할 확장 패키지 중 하나입니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **요청**
 
-비공개 릴리스는 요청 데이터의 `meta`에서 `release_private` 값을 포함하는 `action`을 제공하여 달성합니다.
+비공개 릴리스는 `action` 값 `release_private` 에서 `meta` 요청 데이터의 예입니다.
 
 ```shell
 curl -X PATCH \
   https://reactor.adobe.io/extension_packages/EP10bb503178694d73bc0cd84387b82172 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/vnd.api+json' \
   -d '{
         "data": {
@@ -1188,7 +1189,7 @@ curl -X PATCH \
 
 ## 확장 패키지 중단 {#discontinue}
 
-PATCH 요청을 통해 `discontinued` 속성을 `true`로 설정하여 확장 패키지를 중단할 수 있습니다.
+확장 패키지를 설정하여 중단할 수 있습니다 `discontinued` 속성 `true` PATCH 요청 사용.
 
 **API 형식**
 
@@ -1198,20 +1199,20 @@ PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `EXTENSION_PACKAGE_ID` | 중단하려는 확장 패키지의 `id` 입니다. |
+| `EXTENSION_PACKAGE_ID` | 다음 `id` 중지하려는 확장 패키지 수입니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **요청**
 
-비공개 릴리스는 요청 데이터의 `meta`에서 `release_private` 값을 포함하는 `action`을 제공하여 달성합니다.
+비공개 릴리스는 `action` 값 `release_private` 에서 `meta` 요청 데이터의 예입니다.
 
 ```shell
 curl -X PATCH \
   https://reactor.adobe.io/extension_packages/EP10bb503178694d73bc0cd84387b82172 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/vnd.api+json' \
   -d '{
         "data": {
@@ -1281,7 +1282,7 @@ curl -X PATCH \
 
 ## 확장 패키지의 버전 나열
 
-조회 요청의 경로에 `/versions`을 추가하여 확장 패키지의 버전을 나열할 수 있습니다.
+를 추가하여 확장 패키지 버전을 나열할 수 있습니다 `/versions` 조회 요청의 경로에 추가할 수 없습니다.
 
 **API 형식**
 
@@ -1291,7 +1292,7 @@ GET /extension_packages/{EXTENSION_PACKAGE_ID}/versions
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `EXTENSION_PACKAGE_ID` | 버전을 나열할 확장 패키지의 `id` 입니다. |
+| `EXTENSION_PACKAGE_ID` | 다음 `id` 버전을 나열할 확장 패키지 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -1302,7 +1303,7 @@ curl -X GET \
   https://reactor.adobe.io/extension_packages/EP10bb503178694d73bc0cd84387b82172/versions \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```

@@ -6,7 +6,7 @@ title: 고객 AI에서 시작하기
 topic-legacy: Getting started
 description: 이 안내서에서는 요청의 형식을 지정하는 방법을 보여주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 올바른 형식의 요청 페이로드가 포함됩니다.
 exl-id: 90c9a83a-8e66-4239-b2d6-2049a6319b25
-source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '571'
 ht-degree: 0%
@@ -34,7 +34,7 @@ Customer AI 점수를 다운로드하는 것은 API 호출 조합을 통해 수�
 
 - 권한 부여: 베어러 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
+- x-gw-ims-org-id: `{ORG_ID}`
 
 Experience Platform의 모든 리소스는 특정 가상 샌드박스로 구분됩니다. Platform API에 대한 모든 요청에는 작업이 수행될 샌드박스의 이름을 지정하는 헤더가 필요합니다.
 

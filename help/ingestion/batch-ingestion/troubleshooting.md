@@ -5,7 +5,7 @@ title: 배치 수집 문제 해결 안내서
 topic-legacy: troubleshooting
 description: 이 설명서는 Adobe Experience Platform 배치 데이터 수집 API와 관련된 FAQ에 대한 답변을 제공하는 데 도움이 됩니다.
 exl-id: 0a750d7e-a4ee-4a79-a697-b4b732478b2b
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1416'
 ht-degree: 1%
@@ -47,7 +47,7 @@ ht-degree: 1%
 ```shell
 curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
   -H "accept: application/json" \
-  -H "x-gw-ims-org-id: {IMS_ORG}" \
+  -H "x-gw-ims-org-id: {ORG_ID}" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
   -H "x-api-key: {API_KEY}"
   -d '{
@@ -65,7 +65,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 ```shell
 curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=COMPLETE" \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
@@ -77,7 +77,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 ```shell
 curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
   -H "accept: application/json" \
-  -H "x-gw-ims-org-id: {IMS_ORG}" \
+  -H "x-gw-ims-org-id: {ORG_ID}" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
   -H "x-api-key: {API_KEY}"
   -d '{
@@ -147,7 +147,7 @@ CSV 수집은 플랫 스키마에만 지원됩니다. 현재 CSV로 계층 데�
 
 ```shell
 curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID}" \
-  -H "x-gw-ims-org-id: {IMS_ORG}" \
+  -H "x-gw-ims-org-id: {ORG_ID}" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
   -H "x-api-key: {API_KEY}"
 ```
@@ -161,7 +161,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID
 ```json
 {
     "{BATCH_ID}":{
-        "imsOrg":"{IMS_ORG}",
+        "imsOrg":"{ORG_ID}",
         "created":1494349962314,
         "createdClient":"{API_KEY}",
         "createdUser":"{USER_ID}",

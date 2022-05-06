@@ -2,7 +2,7 @@
 title: 메모 끝점
 description: Reactor API에서 /notes 종단점을 호출하는 방법을 알아봅니다.
 exl-id: fa3bebc0-215e-4515-87b9-d195c9ab76c1
-source-git-commit: 7e4bc716e61b33563e0cb8059cb9f1332af7fd36
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '527'
 ht-degree: 7%
@@ -69,7 +69,7 @@ curl -X GET \
   https://reactor.adobe.io/libraries/LBcffea1a38c52408cae2398868625a12d/notes \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -142,7 +142,7 @@ curl -X GET \
   https://reactor.adobe.io/notes/NT550b7a17ab304d49ba289a2978d673e5 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -198,7 +198,7 @@ POST /{RESOURCE_TYPE}/{RESOURCE_ID}/notes
 | 매개 변수 | 설명 |
 | --- | --- |
 | `RESOURCE_TYPE` | 메모를 만드는 리소스 유형입니다. 다음 값 중 하나여야 합니다. <ul><li>`data_elements`</li><li>`extensions`</li><li>`libraries`</li><li>`properties`</li><li>`rule_components`</li><li>`rules`</li></ul> |
-| `RESOURCE_ID` | 다음 `id` 메모를 만들 특정 리소스의 특정 리소스를 표시합니다. |
+| `RESOURCE_ID` | 다음 `id` 메모를 만들 특정 리소스의 세부 자산입니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -211,7 +211,7 @@ curl -X POST \
   https://reactor.adobe.io/properties/PRb25a704c0b7c4562835ccdf96d3afd31/notes \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
   -d '{
         "data": {

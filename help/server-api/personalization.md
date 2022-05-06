@@ -3,7 +3,7 @@ title: 다른 Adobe 솔루션에서 개인화 컨텐츠 검색
 description: Adobe Experience Platform Edge Network Server API를 사용하여 Adobe 개인화 솔루션에서 개인화된 콘텐츠를 검색하는 방법을 알아봅니다
 seo-description: Learn how to use the Adobe Experience Platform Edge Network Server API to retrieve personalized content from Adobe personalization solutions
 keywords: 개인화; 서버 api; Adobe Experience Platform Edge Network; 개인화 검색
-source-git-commit: 422f859bef8faf292fd7e5fd8b6a8d31967421c1
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '671'
 ht-degree: 9%
@@ -140,7 +140,7 @@ POST /ee/v2/interact
 ```shell
 curl -X POST "https://server.adobedc.net/v2/interact?dataStreamId={DATASTREAM_ID}"
 -H "Authorization: Bearer {TOKEN}"
--H "x-gw-ims-org-id: {IMS_ORG_ID}"
+-H "x-gw-ims-org-id: {ORG_ID}"
 -H "x-api-key: {API_KEY}"
 -H "Content-Type: application/json"
 -d '{
@@ -261,7 +261,7 @@ POST /v2/collect
 ```shell
 url -X POST "https://server.adobedc.net/v2/collect?dataStreamId={DATASTREAM_ID}" 
 -H "Authorization: Bearer {TOKEN}" 
--H "x-gw-ims-org-id: {IMS_ORG_ID}" 
+-H "x-gw-ims-org-id: {ORG_ID}" 
 -H "x-api-key: {API_KEY}"
 -H "Content-Type: application/json"
 -d '{

@@ -1,7 +1,8 @@
 ---
 title: 속성 끝점
 description: Reactor API에서 /properties 종단점을 호출하는 방법을 알아봅니다.
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+exl-id: 7830c519-312f-4f73-b3f5-64ab0420d902
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1146'
 ht-degree: 9%
@@ -10,7 +11,7 @@ ht-degree: 9%
 
 # 속성 끝점
 
-속성은 Reactor API 내에서 사용할 수 있는 다른 대부분의 리소스를 포함하는 컨테이너 구조입니다. `/properties` 끝점을 사용하여 속성을 프로그래밍 방식으로 관리합니다.
+속성은 Reactor API 내에서 사용할 수 있는 다른 대부분의 리소스를 포함하는 컨테이너 구조입니다. 를 사용하여 속성을 프로그래밍 방식으로 관리합니다 `/properties` 엔드포인트.
 
 리소스 계층에서 속성은 다음 항목의 소유자입니다.
 
@@ -24,13 +25,13 @@ ht-degree: 9%
 * [규칙 구성 요소](./rule-components.md)
 * [규칙](./rules.md)
 
-속성은 정확히 하나의 [company](./companies.md)에 속합니다. 회사는 많은 재산을 가질 수 있습니다.
+속성은 정확히 하나의 속성에 속합니다 [회사](./companies.md). 회사는 많은 재산을 가질 수 있습니다.
 
-속성 및 태그 관리에서의 역할에 대한 일반적인 정보는 [회사 및 속성](../../ui/administration/companies-and-properties.md)에 대한 개요를 참조하십시오.
+태그 관리에서 속성 및 해당 역할에 대한 일반적인 정보는 [회사 및 속성](../../ui/administration/companies-and-properties.md).
 
 ## 시작하기
 
-이 안내서에 사용된 끝점은 [Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/)의 일부입니다. 계속하기 전에 API 인증 방법에 대한 중요한 정보가 필요하면 [시작 안내서](../getting-started.md)를 검토하십시오.
+이 안내서에 사용된 엔드포인트는 [Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/). 계속하기 전에 [시작 안내서](../getting-started.md) 를 참조하십시오.
 
 ## 속성 목록 검색 {#list}
 
@@ -44,13 +45,13 @@ GET /companies/{COMPANY_ID}/properties
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `COMPANY_ID` | 나열할 속성을 소유하는 회사의 `id` |
+| `COMPANY_ID` | 다음 `id` 나열할 속성을 소유한 회사입니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
 >[!NOTE]
 >
->쿼리 매개 변수를 사용하여 나열된 속성을 다음 속성에 따라 필터링할 수 있습니다.<ul><li>`copying`</li><li>`created_at`</li><li>`enabled`</li><li>`name`</li><li>`platform`</li><li>`token`</li><li>`updated_at`</li></ul>자세한 내용은 [응답 필터링](../guides/filtering.md)에 대한 안내서를 참조하십시오.
+>쿼리 매개 변수를 사용하여 나열된 속성을 다음 속성에 따라 필터링할 수 있습니다.<ul><li>`copying`</li><li>`created_at`</li><li>`enabled`</li><li>`name`</li><li>`platform`</li><li>`token`</li><li>`updated_at`</li></ul>다음 안내서를 참조하십시오. [응답 필터링](../guides/filtering.md) 추가 정보.
 
 **요청**
 
@@ -59,7 +60,7 @@ curl -X GET \
   https://reactor.adobe.io/companies/CO2bf094214ffd4785bb4bcf88c952a7c1/properties \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -268,7 +269,7 @@ GET /properties/{PROPERTY_ID}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `PROPERTY_ID` | 조회할 속성의 `id` |
+| `PROPERTY_ID` | 다음 `id` 조회하려는 속성의 일부입니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -279,7 +280,7 @@ curl -X GET \
   https://reactor.adobe.io/properties/PR48ade10e6acf4385ba96214e9f5d31e1 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -391,20 +392,20 @@ POST /company/{COMPANY_ID}/properties
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `COMPANY_ID` | 속성을 정의하는 회사의 `id` |
+| `COMPANY_ID` | 다음 `id` 속성을 정의할 회사의 이름입니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **요청**
 
-다음 요청은 지정된 속성에 대한 새 속성을 만듭니다. 또한 호출은 `relationships` 속성을 통해 속성을 기존 확장과 연결합니다. 자세한 내용은 [관계](../guides/relationships.md)의 안내서를 참조하십시오.
+다음 요청은 지정된 속성에 대한 새 속성을 만듭니다. 또한 호출은 를 통해 속성을 기존 확장과 연결합니다 `relationships` 속성을 사용합니다. 다음 안내서를 참조하십시오. [관계](../guides/relationships.md) 추가 정보.
 
 ```shell
 curl -X POST \
   https://reactor.adobe.io/companies/CO2bf094214ffd4785bb4bcf88c952a7c1/properties \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
   -d '{
         "data": {
@@ -426,15 +427,15 @@ curl -X POST \
 
 | 속성 | 설명 |
 | --- | --- |
-| `attributes.name` | **(필수)** 속성에 대해 사람이 읽을 수 있는 이름입니다. |
-| `attributes.platform` | **(필수)** 속성의 플랫폼입니다. 웹 속성의 경우 `web` 또는 모바일 속성의 경우 `mobile` 또는 `edge`일 수 있습니다. |
-| `attributes.domains` | **(웹 속성에 필요)**  속성에 대한 URL 도메인의 배열입니다. |
+| `attributes.name` | **(필수)** 사람이 읽을 수 있는 속성의 이름입니다. |
+| `attributes.platform` | **(필수)** 속성에 대한 플랫폼입니다. 다음 중 하나일 수 있습니다 `web` 웹 속성의 경우 또는 `mobile` 또는 `edge` 모바일 속성에 대해 사용할 수 있습니다. |
+| `attributes.domains` | **(웹 속성에 필요)** 속성에 대한 URL 도메인의 배열입니다. |
 | `attributes.development` | 개발 속성인지 여부를 나타내는 부울입니다. |
 | `attributes.privacy` | 속성에 대한 개인 정보 보호 관련 고려 사항을 참조하는 데 사용할 수 있는 문자열입니다. |
 | `attributes.rule_component_sequencing_enabled` | 이 속성에 대해 규칙 구성 요소 시퀀스를 활성화할지 여부를 나타내는 부울입니다. |
 | `attributes.ssl_enabled` | 이 속성에 대해 SSL(Secure Sockets Layer)을 사용할지 여부를 나타내는 부울입니다. |
 | `attributes.undefined_vars_return_empty` | 이 속성에 대해 정의되지 않은 변수를 비워둘 것인지 여부를 나타내는 부울입니다. |
-| `type` | 업데이트할 리소스 유형입니다. 이 끝점의 경우 값은 `properties`이어야 합니다. |
+| `type` | 업데이트할 리소스 유형입니다. 이 끝점의 경우 값은 `properties`. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -545,20 +546,20 @@ PATCH /properties/{PROPERTY_ID}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `PROPERTY_ID` | 업데이트할 속성의 `id` |
+| `PROPERTY_ID` | 다음 `id` 업데이트할 속성의 값입니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **요청**
 
-다음 요청은 기존 속성에 대한 `name` 및 `domains`을 업데이트합니다.
+다음 요청은 를 업데이트합니다 `name` 및 `domains` 추가 콘텐츠만 사용할 수 있습니다.
 
 ```shell
 curl -X PATCH \
   https://reactor.adobe.io/properties/HT5d90148e72224224aac9bc0b01498b84 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
   -d '{
         "data": {
@@ -577,8 +578,8 @@ curl -X PATCH \
 | 속성 | 설명 |
 | --- | --- |
 | `attributes` | 속성에 대해 업데이트할 속성을 나타내는 객체입니다. 속성에 대해 다음 속성을 업데이트할 수 있습니다. <ul><li>`development`</li><li>`domains`</li><li>`name`</li><li>`platform`</li><li>`privacy`</li><li>`rule_component_sequencing_enabled`</li><li>`ssl_enabled`</li><li>`undefined_vars_return_empty`</li></ul> |
-| `id` | 업데이트할 속성의 `id` 이 값은 요청 경로에 제공된 `{PROPERTY_ID}` 값과 일치해야 합니다. |
-| `type` | 업데이트할 리소스 유형입니다. 이 끝점의 경우 값은 `properties`이어야 합니다. |
+| `id` | 다음 `id` 업데이트할 속성의 값입니다. 이 옵션은 와 일치해야 합니다. `{PROPERTY_ID}` 요청 경로에 제공된 값입니다. |
+| `type` | 업데이트할 리소스 유형입니다. 이 끝점의 경우 값은 `properties`. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -689,7 +690,7 @@ DELETE /properties/{PROPERTY_ID}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `PROPERTY_ID` | 삭제할 속성의 `id` |
+| `PROPERTY_ID` | 다음 `id` 삭제할 속성의 일부입니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -700,7 +701,7 @@ curl -X DELETE \
   https://reactor.adobe.io/properties/PR541dbb24bad54dceb04710d7a9e7a740 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
 **응답**
@@ -709,17 +710,17 @@ curl -X DELETE \
 
 ## 속성에 대한 노트 관리 {#notes}
 
-속성은 &quot;주목할 만한&quot; 리소스입니다. 즉, 각 개별 리소스에서 텍스트 기반 메모를 만들고 검색할 수 있습니다. 속성 및 기타 호환되는 리소스에 대한 메모를 관리하는 방법에 대한 자세한 내용은 [참고 엔드포인트 안내서](./notes.md)를 참조하십시오.
+속성은 &quot;주목할 만한&quot; 리소스입니다. 즉, 각 개별 리소스에서 텍스트 기반 메모를 만들고 검색할 수 있습니다. 자세한 내용은 [참고 끝점 안내서](./notes.md) 속성 및 기타 호환되는 리소스에 대한 메모를 관리하는 방법에 대한 자세한 정보입니다.
 
 ## 속성에 대한 관련 리소스 검색 {#related}
 
-다음 호출에서는 속성에 대한 관련 리소스를 검색하는 방법을 보여 줍니다. [속성을 조회하면 ](#lookup) 속성 아래에 이러한 관계가 나열됩니다.`relationships`
+다음 호출에서는 속성에 대한 관련 리소스를 검색하는 방법을 보여 줍니다. When [속성 조회](#lookup)로 설정되면 이러한 관계는 `relationships` 속성을 사용합니다.
 
-Reactor API의 관계에 대한 자세한 내용은 [관계 안내서](../guides/relationships.md)를 참조하십시오.
+자세한 내용은 [관계 안내서](../guides/relationships.md) 를 참조하십시오.
 
 ### 속성에 대한 관련 콜백 목록 {#callbacks}
 
-조회 요청의 경로에 `/callbacks`를 추가하여 속성에 등록된 [콜백](./callbacks.md)을 나열할 수 있습니다.
+다음을 나열할 수 있습니다 [콜백](./callbacks.md) 를 추가하여 속성에 등록됨 `/callbacks` 조회 요청의 경로에 추가할 수 없습니다.
 
 **API 형식**
 
@@ -729,7 +730,7 @@ GET  /properties/{PROPERTY_ID}/callbacks
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{PROPERTY_ID}` | 콜백을 나열할 속성의 `id` |
+| `{PROPERTY_ID}` | 다음 `id` 콜백을 나열할 속성의 값입니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -740,7 +741,7 @@ curl -X GET \
   https://reactor.adobe.io/properties/PR66a3356c73fc4aabb67ee22caae53d70/callbacks \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -794,7 +795,7 @@ curl -X GET \
 
 ### 속성에 대한 관련 데이터 요소 나열 {#data-elements}
 
-조회 요청의 경로에 `/data_elements`를 추가하여 속성이 소유한 [데이터 요소](./data-elements.md)를 나열할 수 있습니다.
+다음을 나열할 수 있습니다 [데이터 요소](./data-elements.md) 속성을 추가하고 `/data_elements` 조회 요청의 경로에 추가할 수 없습니다.
 
 **API 형식**
 
@@ -804,7 +805,7 @@ GET  /properties/{PROPERTY_ID}/data_elements
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{PROPERTY_ID}` | 데이터 요소를 나열할 속성의 `id` |
+| `{PROPERTY_ID}` | 다음 `id` 속성 중 하나를 선택합니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -815,7 +816,7 @@ curl -X GET \
   https://reactor.adobe.io/properties/PR97d92a379a5f48758947cdf44f607a0d/data_elements \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -935,7 +936,7 @@ curl -X GET \
 
 ### 속성에 대한 관련 환경 나열 {#environments}
 
-조회 요청의 경로에 `/environments`를 추가하여 속성이 소유한 [환경](./environments.md)을 나열할 수 있습니다.
+다음을 나열할 수 있습니다 [환경](./environments.md) 속성을 추가하고 `/environments` 조회 요청의 경로에 추가할 수 없습니다.
 
 **API 형식**
 
@@ -945,7 +946,7 @@ GET  /properties/{PROPERTY_ID}/environments
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{PROPERTY_ID}` | 환경을 나열할 속성의 `id` |
+| `{PROPERTY_ID}` | 다음 `id` 목록을 만들 수 있습니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -956,7 +957,7 @@ curl -X GET \
   https://reactor.adobe.io/properties/PR06c9196bc57048dd8ff169c27baeeca8/environments \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -1055,7 +1056,7 @@ curl -X GET \
 
 ### 속성에 대한 관련 확장 목록 작성 {#extensions}
 
-조회 요청의 경로에 `/extensions`를 추가하여 속성이 소유한 [확장](./extensions.md)을 나열할 수 있습니다.
+다음을 나열할 수 있습니다 [확장](./extensions.md) 속성을 추가하고 `/extensions` 조회 요청의 경로에 추가할 수 없습니다.
 
 **API 형식**
 
@@ -1065,7 +1066,7 @@ GET  /properties/{PROPERTY_ID}/extensions
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{PROPERTY_ID}` | 확장을 나열할 속성의 `id` |
+| `{PROPERTY_ID}` | 다음 `id` 확장을 나열할 속성의 값입니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -1076,7 +1077,7 @@ curl -X GET \
   https://reactor.adobe.io/properties/PRee071cb5b7794f42b74c913e1ad2e325/extensions \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -1186,7 +1187,7 @@ curl -X GET \
 
 ### 속성에 대한 관련 호스트 나열 {#hosts}
 
-조회 요청의 경로에 `/hosts`를 추가하여 속성에 사용되는 [hosts](./hosts.md)을 나열할 수 있습니다.
+다음을 나열할 수 있습니다 [호스트](./hosts.md) 이 값은 `/hosts` 조회 요청의 경로에 추가할 수 없습니다.
 
 **API 형식**
 
@@ -1196,7 +1197,7 @@ GET  /properties/{PROPERTY_ID}/hosts
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{PROPERTY_ID}` | 호스트를 나열할 속성의 `id` |
+| `{PROPERTY_ID}` | 다음 `id` 호스트를 나열할 속성입니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -1207,7 +1208,7 @@ curl -X GET \
   https://reactor.adobe.io/properties/PRd428c2a25caa4b32af61495f5809b737/hosts \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -1264,7 +1265,7 @@ curl -X GET \
 
 ### 속성에 대한 관련 규칙 나열 {#rules}
 
-조회 요청의 경로에 `/rules`를 추가하여 속성에 사용되는 [규칙](./rules.md)을 나열할 수 있습니다.
+다음을 나열할 수 있습니다 [규칙](./rules.md) 이 값은 `/rules` 조회 요청의 경로에 추가할 수 없습니다.
 
 **API 형식**
 
@@ -1274,7 +1275,7 @@ GET  /properties/{PROPERTY_ID}/rules
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{PROPERTY_ID}` | 규칙을 나열할 속성의 `id` |
+| `{PROPERTY_ID}` | 다음 `id` 규칙을 나열할 속성의 값입니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -1285,7 +1286,7 @@ curl -X GET \
   https://reactor.adobe.io/properties/PR41f64d2a9d9b4862b0582c5ff6a07504/rules \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -1377,7 +1378,7 @@ curl -X GET \
 
 ### 관련 회사에 자산을 찾습니다. {#company}
 
-조회 요청의 경로에 `/company`을 추가하여 속성을 소유하는 회사를 조회할 수 있습니다.
+다음을 추가하여 속성을 소유하는 회사를 조회할 수 있습니다 `/company` 조회 요청의 경로에 추가할 수 없습니다.
 
 **API 형식**
 
@@ -1387,7 +1388,7 @@ GET /properties/{PROPERTY_ID}/company
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{PROPERTY_ID}` | 회사를 조회하려는 속성의 `id` |
+| `{PROPERTY_ID}` | 다음 `id` 당신이 찾고자 하는 회사의 자산입니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -1398,7 +1399,7 @@ curl -X GET \
   https://reactor.adobe.io/properties/HT5d90148e72224224aac9bc0b01498b84/company \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```

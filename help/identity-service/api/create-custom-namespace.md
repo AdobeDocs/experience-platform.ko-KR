@@ -1,23 +1,22 @@
 ---
-keywords: Experience Platform;홈;인기 항목;네임스페이스;네임스페이스;네임스페이스;네임스페이스;네임스페이스;네임스페이스;ID 네임스페이스;ID 네임스페이스;ID 네임스페이스;ID;ID
+keywords: Experience Platform;홈;인기 항목;네임스페이스;네임스페이스;네임스페이스;네임스페이스;ID 네임스페이스;ID 네임스페이스;ID;ID
 solution: Experience Platform
-title: ID 서비스 API에서 사용자 정의 네임스페이스 만들기
+title: ID 서비스 API에서 사용자 지정 네임스페이스 만들기
 topic-legacy: API guide
 description: ID 네임스페이스 API를 사용하여 조직에서만 사용할 수 있는 사용자 지정 ID 네임스페이스를 만들 수 있습니다.
 exl-id: 6015a225-4508-49cc-9dda-fb9f73a8746c
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '120'
 ht-degree: 3%
 
 ---
 
-# ID 서비스 API에서 사용자 정의 네임스페이스 만들기
+# ID 서비스 API에서 사용자 지정 네임스페이스 만들기
 
-[!DNL Identity Namespace] API를 사용하여 조직에서만 사용할 수 있는 사용자 지정 ID 네임스페이스를 만들 수 있습니다.
+사용 [!DNL Identity Namespace] API인 경우 조직에서만 사용할 수 있는 사용자 지정 ID 네임스페이스를 만들 수 있습니다.
 
-사용자 정의 네임스페이스 만들기에 대한 권장 사항은 [Identity Service FAQ 설명서](../troubleshooting-guide.md)를 참조하십시오.
+사용자 지정 네임스페이스 만들기에 대한 권장 사항은 [id 서비스 FAQ 설명서](../troubleshooting-guide.md).
 
 >[!NOTE]
 >
@@ -38,7 +37,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -d '{
         "name": "Loyalty Member",
         "code": "Loyalty",
@@ -65,4 +64,4 @@ curl -X POST \
 
 ## 다음 단계
 
-다음 튜토리얼로 진행하여 [ID](./list-native-id.md)의 기본 ID를 나열합니다.
+다음 자습서로 진행하여 [id의 기본 ID 나열](./list-native-id.md)

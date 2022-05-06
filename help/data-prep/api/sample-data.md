@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics;data prep;api guide;sample data
+keywords: Experience Platform;홈;인기 항목;데이터 준비;api 안내서;샘플 데이터;
 solution: Experience Platform
 title: 샘플 데이터 API 끝점
 topic-legacy: sample data
-description: 'Adobe Experience Platform API의 ''/samples'' 끝점을 사용하여 매핑 샘플 데이터를 프로그래밍 방식으로 검색, 만들기, 업데이트 및 확인할 수 있습니다. '
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+description: 'Adobe Experience Platform API에서 ''/samples'' 엔드포인트를 사용하여 매핑 샘플 데이터를 프로그래밍 방식으로 검색, 만들기, 업데이트 및 확인할 수 있습니다. '
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '401'
 ht-degree: 4%
@@ -15,15 +14,15 @@ ht-degree: 4%
 
 # 샘플 데이터 끝점
 
-매핑 세트에 대한 스키마를 만들 때 샘플 데이터를 사용할 수 있습니다. 데이터 준비 API의 `/samples` 끝점을 사용하여 프로그래밍 방식으로 샘플 데이터를 검색, 만들기 및 업데이트할 수 있습니다.
+샘플 데이터는 매핑 세트에 대한 스키마를 생성할 때 사용할 수 있습니다. 를 사용할 수 있습니다 `/samples` 샘플 데이터를 프로그래밍 방식으로 검색, 생성 및 업데이트하는 데이터 준비 API의 끝점입니다.
 
-## 목록 샘플 데이터
+## 샘플 데이터 나열
 
-`/samples` 종단점에 GET 요청을 하여 조직에 대한 모든 매핑 샘플 데이터 목록을 가져올 수 있습니다.
+IMS 조직에 대한 GET 요청을 수행하여 조직에 대한 모든 매핑 샘플 데이터 목록을 검색할 수 있습니다 `/samples` 엔드포인트.
 
 **API 형식**
 
-`/samples` 끝점은 결과를 필터링하는 데 도움이 되는 여러 쿼리 매개 변수를 지원합니다. 현재 요청의 일부로 `start` 및 `limit` 매개 변수를 모두 포함해야 합니다.
+다음 `/samples` endpoint는 결과를 필터링하는 데 도움이 되는 몇 가지 쿼리 매개 변수를 지원합니다. 현재 두 항목을 모두 포함해야 합니다 `start` 및 `limit` 매개 변수를 요청의 일부로 사용할 수 있습니다.
 
 ```http
 GET /samples?limit={LIMIT}&start={START}
@@ -32,23 +31,23 @@ GET /samples?limit={LIMIT}&start={START}
 | 매개 변수 | 설명 |
 | --------- | ----------- |
 | `{LIMIT}` | **필수 여부**. 반환된 매핑 샘플 데이터의 수를 지정합니다. |
-| `{START}` | **필수 여부**. 결과 페이지의 오프셋을 지정합니다. 결과의 첫 페이지를 가져오려면 값을 `start=0`으로 설정합니다. |
+| `{START}` | **필수 여부**. 결과 페이지의 오프셋을 지정합니다. 결과의 첫 페이지를 가져오려면 값을 로 설정합니다. `start=0`. |
 
 **요청**
 
-다음 요청은 IMS 조직 내에서 마지막 2개의 매핑 샘플 데이터를 검색합니다.
+다음 요청은 IMS 조직 내에서 마지막으로 두 개의 매핑 샘플 데이터를 검색합니다.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/conversion/samples?limit=2&start=0 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **응답**
 
-성공적인 응답은 샘플 데이터를 매핑하는 마지막 두 개체에 대한 정보와 함께 HTTP 상태 200을 반환합니다.
+성공적인 응답은 매핑 샘플 데이터의 마지막 두 개체에 대한 정보를 사용하여 HTTP 상태 200을 반환합니다.
 
 ```json
 {
@@ -88,7 +87,7 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/samples?limit=2
 
 ## 샘플 데이터 만들기
 
-`/samples` 끝점에 POST 요청을 하여 샘플 데이터를 만들 수 있습니다.
+에 POST 요청을 작성하여 샘플 데이터를 만들 수 있습니다 `/samples` 엔드포인트.
 
 ```http
 POST /samples
@@ -101,7 +100,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/samples \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '
   {
@@ -129,7 +128,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/samples \
 
 ## 파일을 업로드하여 샘플 데이터 만들기
 
-`/samples/upload` 끝점에 POST 요청을 하여 파일을 사용하여 샘플 데이터를 만들 수 있습니다.
+파일에 대한 POST 요청을 수행하여 파일을 사용하여 샘플 데이터를 만들 수 있습니다 `/samples/upload` 엔드포인트.
 
 **API 형식**
 
@@ -144,7 +143,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/samples \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: multipart/form-data' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -F 'file=@{PATH_TO_FILE}.json'
 ```
@@ -168,7 +167,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/samples \
 
 ## 특정 샘플 데이터 개체 찾기
 
-`/samples` 끝점에 GET 요청 경로에 해당 ID를 제공하여 샘플 데이터의 특정 개체를 찾을 수 있습니다.
+에 GET 요청 경로에 해당 ID를 제공하여 샘플 데이터의 특정 개체를 조회할 수 있습니다 `/samples` 엔드포인트.
 
 **API 형식**
 
@@ -186,7 +185,7 @@ GET /samples/{SAMPLE_ID}
 curl -X GET https://platform.adobe.io/data/foundation/conversion/samples/1fc0b6c20bae49d8ab33209ed126bdcd \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -209,7 +208,7 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/samples/1fc0b6c
 
 ## 샘플 데이터 업데이트
 
-PUT 요청 경로에서 `/samples` 끝점에 해당 ID를 제공하여 특정 샘플 데이터 개체를 업데이트할 수 있습니다.
+PUT 요청 경로에 해당 ID를 표시하여 특정 샘플 데이터 개체를 업데이트할 수 있습니다 `/samples` 엔드포인트.
 
 **API 형식**
 
@@ -219,7 +218,7 @@ PUT /samples/{SAMPLE_ID}
 
 | 매개 변수 | 설명 |
 | --------- | ----------- |
-| `{SAMPLE_ID}` | 업데이트할 샘플 데이터 개체의 ID. |
+| `{SAMPLE_ID}` | 업데이트할 샘플 데이터 개체의 ID입니다. |
 
 **요청**
 
@@ -229,7 +228,7 @@ PUT /samples/{SAMPLE_ID}
 curl -X PUT https://platform.adobe.io/data/foundation/conversion/samples/1fc0b6c20bae49d8ab33209ed126bdcd \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-gw-ims-org-id: {ORG_ID}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '
   {

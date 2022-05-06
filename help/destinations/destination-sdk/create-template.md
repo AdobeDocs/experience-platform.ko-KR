@@ -2,7 +2,7 @@
 description: Adobe은 Destination SDK의 일부로서 대상을 구성하고 테스트하는 데 도움이 되는 개발자 도구를 제공합니다. 이 페이지에서는 메시지 변환 템플릿을 만들고 테스트하는 방법을 설명합니다.
 title: 메시지 변환 템플릿 만들기 및 테스트
 exl-id: 15e7f436-4d33-4172-bd14-ad8dfbd5e4a8
-source-git-commit: 97ffaa2a53dbbf5a7be5f002e63be4ed3339f565
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '960'
 ht-degree: 0%
@@ -70,7 +70,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 --header 'Accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 

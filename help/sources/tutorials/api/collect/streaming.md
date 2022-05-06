@@ -6,16 +6,16 @@ topic-legacy: overview
 type: Tutorial
 description: 이 자습서에서는 스트리밍 데이터를 검색하고 소스 커넥터 및 API를 사용하여 Platform으로 가져오는 단계를 설명합니다.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1099'
 ht-degree: 2%
 
 ---
 
-# [!DNL Flow Service] API를 사용하여 원시 데이터에 대한 스트리밍 데이터 흐름을 만듭니다
+# 를 사용하여 원시 데이터에 대한 스트리밍 데이터 흐름 만들기 [!DNL Flow Service] API
 
-이 자습서에서는 스트리밍 소스 커넥터에서 원시 데이터를 검색하고 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)를 사용하여 Experience Platform으로 가져오는 단계를 설명합니다.
+이 자습서에서는 스트리밍 소스 커넥터에서 원시 데이터를 검색하고 을 사용하여 Experience Platform으로 가져오는 단계를 설명합니다. [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## 시작하기
 
@@ -23,14 +23,14 @@ ht-degree: 2%
 
 - [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): Experience Platform이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
    - [스키마 작성 기본 사항](../../../../xdm/schema/composition.md): 스키마 컴포지션의 주요 원칙 및 모범 사례를 포함하여 XDM 스키마의 기본 빌딩 블록에 대해 알아봅니다.
-   - [스키마 레지스트리 개발자 안내서](../../../../xdm/api/getting-started.md): 스키마 레지스트리 API 호출을 성공적으로 수행하기 위해 알아야 하는 중요한 정보를 포함합니다. 여기에는 `{TENANT_ID}`, &quot;컨테이너&quot;의 개념 및 요청을 수행하는 데 필요한 헤더가 포함됩니다(Accept 헤더 및 가능한 값에 특별히 주의).
+   - [스키마 레지스트리 개발자 안내서](../../../../xdm/api/getting-started.md): 스키마 레지스트리 API 호출을 성공적으로 수행하기 위해 알고 있어야 하는 중요한 정보를 포함합니다. 여기에는 다음이 포함됩니다 `{TENANT_ID}`, &quot;컨테이너&quot;의 개념 및 요청을 수행하는 데 필요한 헤더입니다(Accept 헤더와 가능한 값에 특별히 주의).
 - [[!DNL Catalog Service]](../../../../catalog/home.md): 카탈로그는 Experience Platform 내의 데이터 위치 및 계열에 대한 레코드 시스템입니다.
 - [[!DNL Streaming ingestion]](../../../../ingestion/streaming-ingestion/overview.md): 플랫폼에 대한 스트리밍 수집은 사용자에게 클라이언트 및 서버측 장치에서 실시간으로 Experience Platform으로 데이터를 전송하는 방법을 제공합니다.
 - [샌드박스](../../../../sandboxes/home.md): Experience Platform은 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 단일 플랫폼 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
 
 ### 플랫폼 API 사용
 
-플랫폼 API를 성공적으로 호출하는 방법에 대한 자세한 내용은 [플랫폼 API 시작](../../../../landing/api-guide.md)의 안내서를 참조하십시오.
+Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용은 [플랫폼 API 시작](../../../../landing/api-guide.md).
 
 ### 소스 연결 만들기 {#source}
 
@@ -42,9 +42,9 @@ ht-degree: 2%
 
 ## 대상 XDM 스키마 만들기 {#target-schema}
 
-Platform에서 소스 데이터를 사용하려면 필요에 따라 소스 데이터를 구조화하기 위해 대상 스키마를 만들어야 합니다. 그런 다음 대상 스키마를 사용하여 소스 데이터가 포함된 Platform 데이터 세트를 만듭니다. 이 대상 XDM 스키마도 XDM [!DNL Individual Profile] 클래스를 확장합니다.
+Platform에서 소스 데이터를 사용하려면 필요에 따라 소스 데이터를 구조화하기 위해 대상 스키마를 만들어야 합니다. 그런 다음 대상 스키마를 사용하여 소스 데이터가 포함된 Platform 데이터 세트를 만듭니다. 이 대상 XDM 스키마도 XDM을 확장합니다 [!DNL Individual Profile] 클래스 이름을 지정합니다.
 
-대상 XDM 스키마를 만들려면 [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/)의 `/schemas` 종단점에 대한 POST 요청을 수행하십시오.
+대상 XDM 스키마를 만들려면 다음에 POST 요청을 수행하십시오 `/schemas` 의 끝점 [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
 **API 형식**
 
@@ -54,14 +54,14 @@ POST /tenant/schemas
 
 **요청**
 
-다음 예제 요청은 XDM [!DNL Individual Profile] 클래스를 확장하는 XDM 스키마를 만듭니다.
+다음 예제 요청은 XDM을 확장하는 XDM 스키마를 만듭니다 [!DNL Individual Profile] 클래스 이름을 지정합니다.
 
 ```shell
 curl -X POST \
     'https://platform.adobe.io/data/foundation/schemaregistry/tenant/schemas' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
@@ -88,7 +88,7 @@ curl -X POST \
 
 **응답**
 
-성공적으로 응답하면 고유 식별자(`$id`)를 포함하여 새로 만든 스키마의 세부 정보가 반환됩니다. 이 ID는 이후 단계에서 대상 데이터 세트, 매핑 및 데이터 흐름을 만드는 데 필요합니다.
+성공적인 응답은 고유 식별자( )를 포함하여 새로 생성된 스키마의 세부 정보를 반환합니다`$id`). 이 ID는 이후 단계에서 대상 데이터 세트, 매핑 및 데이터 흐름을 만드는 데 필요합니다.
 
 ```json
 {
@@ -121,7 +121,7 @@ curl -X POST \
         "https://ns.adobe.com/xdm/context/profile-personal-details",
         "https://ns.adobe.com/xdm/context/profile"
     ],
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "meta:extensible": false,
     "meta:abstract": false,
     "meta:extends": [
@@ -152,7 +152,7 @@ curl -X POST \
 
 ## 대상 데이터 세트 만들기
 
-이제 대상 XDM 스키마가 만들어지고 고유한 `$id`을(를) 사용하여 소스 데이터를 포함할 대상 데이터 세트를 만들 수 있습니다. 대상 데이터 세트를 만들려면 페이로드 내에서 대상 스키마의 ID를 제공하는 동안 [카탈로그 서비스 API](https://www.adobe.io/experience-platform-apis/references/catalog/)의 `dataSets` 종단점에 대해 POST 요청을 하십시오.
+대상 XDM 스키마 및 해당 고유 `$id` 이제 소스 데이터를 포함할 대상 데이터 세트를 만들 수 있습니다. 대상 데이터 세트를 만들려면 다음에 POST 요청을 수행하십시오 `dataSets` 의 끝점 [카탈로그 서비스 API](https://www.adobe.io/experience-platform-apis/references/catalog/)페이로드 내에 대상 스키마의 ID를 제공하는 동안 입니다.
 
 **API 형식**
 
@@ -167,7 +167,7 @@ curl -X POST \
     'https://platform.adobe.io/data/foundation/catalog/dataSets?requestDataSource=true' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
@@ -190,12 +190,12 @@ curl -X POST \
 | 속성 | 설명 |
 | --- | --- |
 | `name` | 만들 데이터 세트의 이름입니다. |
-| `schemaRef.id` | 데이터 세트가 기반으로 할 XDM 스키마의 URI `$id` |
-| `schemaRef.contentType` | 스키마 버전입니다. 이 값은 스키마의 최신 부 버전을 반환하는 `application/vnd.adobe.xed-full-notext+json;version=1` 로 설정해야 합니다. 자세한 내용은 XDM API 안내서의 [스키마 버전 관리](../../../../xdm/api/getting-started.md#versioning)의 섹션을 참조하십시오. |
+| `schemaRef.id` | URI `$id` xdm 스키마의 경우 데이터 세트가 기반으로 합니다. |
+| `schemaRef.contentType` | 스키마 버전입니다. 이 값은 로 설정해야 합니다. `application/vnd.adobe.xed-full-notext+json;version=1`는 스키마의 최신 부 버전을 반환합니다. 의 섹션을 참조하십시오. [스키마 버전 관리](../../../../xdm/api/getting-started.md#versioning) 자세한 내용은 XDM API 안내서 를 참조하십시오. |
 
 **응답**
 
-성공적으로 응답하면 새로 만든 데이터 집합의 ID가 포함된 배열을 `"@/datasets/{DATASET_ID}"` 형식으로 반환합니다. 데이터 세트 ID는 API 호출에서 데이터 세트를 참조하는 데 사용되는 읽기 전용 시스템 생성 문자열입니다. 대상 데이터 세트 ID는 이후 단계에서 대상 연결 및 데이터 흐름을 만드는 데 필요합니다.
+성공적인 응답은 새로 생성된 데이터 세트의 ID가 포함된 배열을 형식으로 반환합니다 `"@/datasets/{DATASET_ID}"`. 데이터 세트 ID는 API 호출에서 데이터 세트를 참조하는 데 사용되는 읽기 전용 시스템 생성 문자열입니다. 대상 데이터 세트 ID는 이후 단계에서 대상 연결 및 데이터 흐름을 만드는 데 필요합니다.
 
 ```json
 [
@@ -207,7 +207,7 @@ curl -X POST \
 
 Target 연결은 Platform이나 전송된 데이터가 도착하는 모든 위치에 대한 대상 연결을 만들고 관리합니다. Target 연결에는 데이터 흐름을 만드는 데 필요한 데이터 대상, 데이터 형식 및 target 연결 ID에 대한 정보가 포함되어 있습니다. Target 연결 인스턴스는 테넌트 및 IMS 조직에 따라 다릅니다.
 
-Target 연결을 만들려면 [!DNL Flow Service] API의 `/targetConnections` 종단점에 대해 POST 요청을 수행하십시오. 요청의 일부로서, 데이터 형식, 이전 단계에서 검색된 `dataSetId` 및 [!DNL Data Lake]에 연결된 고정 연결 사양 ID를 제공해야 합니다. 이 ID는 `c604ff05-7f1a-43c0-8e18-33bf874cb11c`입니다.
+Target 연결을 만들려면 다음에 POST 요청을 수행하십시오 `/targetConnections` 의 끝점 [!DNL Flow Service] API. 요청의 일부로, 데이터 형식, `dataSetId` 이전 단계에서 읽어들인 연결 사양 ID 및 [!DNL Data Lake]. 이 ID는 `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
 **API 형식**
 
@@ -222,7 +222,7 @@ curl -X POST \
     'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
@@ -247,13 +247,13 @@ curl -X POST \
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `connectionSpec.id` | [!DNL Data Lake]에 연결하는 데 사용되는 연결 사양 ID입니다. 이 ID는 다음과 같습니다. `c604ff05-7f1a-43c0-8e18-33bf874cb11c` |
-| `data.format` | [!DNL Data Lake]에 가져오는 데이터의 지정된 형식입니다. |
+| `connectionSpec.id` | 에 연결하는 데 사용되는 연결 사양 ID [!DNL Data Lake]. 이 ID는 다음과 같습니다. `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `data.format` | 가져오는 데이터의 지정된 형식입니다 [!DNL Data Lake]. |
 | `params.dataSetId` | 이전 단계에서 검색한 대상 데이터 세트의 ID입니다. |
 
 **응답**
 
-성공적인 응답은 새 대상 연결의 고유 식별자(`id`)를 반환합니다. 이 ID는 이후 단계에서 필요합니다.
+성공적인 응답은 새 대상 연결의 고유 식별자(`id`). 이 ID는 이후 단계에서 필요합니다.
 
 ```json
 {
@@ -266,7 +266,7 @@ curl -X POST \
 
 소스 데이터를 대상 데이터 세트에 수집하려면 먼저 대상 데이터 세트가 준수하는 대상 스키마에 매핑해야 합니다.
 
-매핑 세트를 만들려면 대상 XDM 스키마 `$id` 및 만들려는 매핑 세트의 세부 정보를 제공하는 동안 [[!DNL Data Prep] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml) 의 `mappingSets` 종단점에 POST 요청을 하십시오.
+매핑 세트를 만들려면, `mappingSets` 의 끝점 [[!DNL Data Prep] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml) target XDM 스키마를 제공하는 동안 `$id` 생성하려는 매핑 세트의 세부 정보를 표시합니다.
 
 **API 형식**
 
@@ -281,7 +281,7 @@ curl -X POST \
     'https://platform.adobe.io/data/foundation/mappingSets' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
@@ -307,11 +307,11 @@ curl -X POST \
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `xdmSchema` | 대상 XDM 스키마의 `$id`. |
+| `xdmSchema` | 다음 `$id` 대상 XDM 스키마 중 하나입니다. |
 
 **응답**
 
-성공적인 응답은 해당 고유 식별자(`id`)를 포함하여 새로 생성된 매핑의 세부 정보를 반환합니다. 이 ID는 이후 단계에서 데이터 흐름을 만드는 데 필요합니다.
+성공적인 응답은 고유 식별자(`id`). 이 ID는 이후 단계에서 데이터 흐름을 만드는 데 필요합니다.
 
 ```json
 {
@@ -326,7 +326,7 @@ curl -X POST \
 
 ## 데이터 흐름 사양 목록 검색 {#specs}
 
-데이터 흐름은 소스에서 데이터를 수집하여 플랫폼으로 가져와야 합니다. 데이터 흐름을 만들려면 먼저 [!DNL Flow Service] API에 대한 GET 요청을 수행하여 데이터 흐름 사양을 가져와야 합니다.
+데이터 흐름은 소스에서 데이터를 수집하여 플랫폼으로 가져와야 합니다. 데이터 흐름을 만들려면 먼저 데이터 흐름 세부 항목을 가져오는 데 GET 요청을 수행하여 [!DNL Flow Service] API.
 
 **API 형식**
 
@@ -340,13 +340,13 @@ GET /flowSpecs
 curl -X GET \
     'https://platform.adobe.io/data/foundation/flowservice/flowSpecs' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **응답**
 
-성공적인 응답은 데이터 흐름 사양 목록을 반환합니다. [!DNL Amazon Kinesis], [!DNL Azure Event Hubs] 또는 [!DNL Google PubSub] 중 하나를 사용하여 데이터 흐름을 작성하기 위해 검색해야 하는 데이터 흐름 사양 ID는 `d69717ba-71b4-4313-b654-49f9cf126d7a`입니다.
+성공적인 응답은 데이터 흐름 사양 목록을 반환합니다. 데이터 흐름을 만드는 데 필요한 데이터 흐름 사양 ID [!DNL Amazon Kinesis], [!DNL Azure Event Hubs], 또는  [!DNL Google PubSub], 입니다 `d69717ba-71b4-4313-b654-49f9cf126d7a`.
 
 ```json
 {
@@ -437,7 +437,7 @@ POST /flows
 curl -X POST \
     'https://platform.adobe.io/data/foundation/flowservice/flows' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
@@ -467,14 +467,14 @@ curl -X POST \
 
 | 속성 | 설명 |
 | --- | --- |
-| `flowSpec.id` | 이전 단계에서 검색한 [흐름 사양 ID](#specs). |
-| `sourceConnectionIds` | 이전 단계에서 검색한 [소스 연결 ID](#source) |
-| `targetConnectionIds` | 이전 단계에서 검색된 [대상 연결 ID](#target-connection)입니다. |
-| `transformations.params.mappingId` | 이전 단계에서 검색된 [매핑 ID](#mapping)입니다. |
+| `flowSpec.id` | 다음 [흐름 사양 ID](#specs) 이전 단계에서 검색됨. |
+| `sourceConnectionIds` | 다음 [소스 연결 ID](#source) 이전 단계에서 검색됨. |
+| `targetConnectionIds` | 다음 [target 연결 ID](#target-connection) 이전 단계에서 검색됨. |
+| `transformations.params.mappingId` | 다음 [매핑 ID](#mapping) 이전 단계에서 검색됨. |
 
 **응답**
 
-성공적으로 응답하면 새로 만든 데이터 흐름의 ID(`id`)가 반환됩니다.
+성공적인 응답은 ID(`id`)을 만들 수 있습니다.
 
 ```json
 {
@@ -485,7 +485,7 @@ curl -X POST \
 
 ## 다음 단계
 
-이 자습서를 따라 스트리밍 커넥터에서 스트리밍 데이터를 수집하기 위한 데이터 흐름을 만들었습니다. 이제 들어오는 데이터를 [!DNL Real-time Customer Profile] 및 [!DNL Data Science Workspace] 등의 다운스트림 Platform 서비스에서 사용할 수 있습니다. 자세한 내용은 다음 문서를 참조하십시오.
+이 자습서를 따라 스트리밍 커넥터에서 스트리밍 데이터를 수집하기 위한 데이터 흐름을 만들었습니다. 이제 와 같은 다운스트림 Platform 서비스에서 들어오는 데이터를 사용할 수 있습니다. [!DNL Real-time Customer Profile] 및 [!DNL Data Science Workspace]. 자세한 내용은 다음 문서를 참조하십시오.
 
 - [실시간 고객 프로필 개요](../../../../profile/home.md)
 - [Data Science Workspace 개요](../../../../data-science-workspace/home.md)

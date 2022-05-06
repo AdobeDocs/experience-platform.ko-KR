@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: 이 자습서에서는 Sensei 기계 학습 API를 활용하여 실험 및 실험 실행을 만드는 방법을 보여줍니다.
 exl-id: 202c63b0-86d8-4a82-8ec8-d144a8911d08
-source-git-commit: 6ae6bbb5af0f007e483145dca5d4d505c388cc2c
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '554'
 ht-degree: 1%
@@ -30,12 +30,12 @@ curl -X POST \
   https://platform.adobe.io/data/sensei/experiments \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/vnd.adobe.platform.sensei+json;profile=experiment.v1.json' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-api-key: {API_KEY}' \
   -d '{JSON_PAYLOAD}'
 ```
 
-`{IMS_ORG}`: 고유한 Adobe Experience Platform 통합에 있는 IMS 조직 자격 증명입니다.\
+`{ORG_ID}`: 고유한 Adobe Experience Platform 통합에 있는 IMS 조직 자격 증명입니다.\
 `{ACCESS_TOKEN}`: 인증 후 제공된 특정 베어러 토큰 값입니다.\
 `{API_KEY}`: 고유한 Adobe Experience Platform 통합에 있는 특정 API 키 값입니다.\
 `{JSON_PAYLOAD}`: 보낼 실험 실행 개체입니다. 자습서에서 사용하는 예는 다음과 같습니다.
@@ -118,12 +118,12 @@ curl -X POST \
   https://platform.adobe.io/data/sensei/experiments/{EXPERIMENT_ID}/runs \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/vnd.adobe.platform.sensei+json;profile=experimentRun.v1.json' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-api-key: {API_KEY}' \
   -d '{JSON_PAYLOAD}'
 ```
 
-`{IMS_ORG}`: 고유한 Adobe Experience Platform 통합에 있는 IMS 조직 자격 증명입니다.\
+`{ORG_ID}`: 고유한 Adobe Experience Platform 통합에 있는 IMS 조직 자격 증명입니다.\
 `{ACCESS_TOKEN}`: 인증 후 제공된 특정 베어러 토큰 값입니다.\
 `{API_KEY}`: 고유한 Adobe Experience Platform 통합에 있는 특정 API 키 값입니다.\
 `{EXPERIMENT_ID}`: 타겟팅할 실험에 해당하는 ID입니다. 실험을작성할 때 응답에서 찾을 수 있습니다.\
@@ -183,12 +183,12 @@ curl -X POST \
 curl -X GET \
   'https://platform.adobe.io/data/sensei/experiments/{EXPERIMENT_ID}/runs' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
 `{EXPERIMENT_ID}`: 실행 중인 실험에 해당하는 ID입니다.\
 `{ACCESS_TOKEN}`: 인증 후 제공된 특정 베어러 토큰 값입니다.\
-`{IMS_ORG}`: 고유한 Adobe Experience Platform 통합에 있는 IMS 조직 자격 증명입니다.
+`{ORG_ID}`: 고유한 Adobe Experience Platform 통합에 있는 IMS 조직 자격 증명입니다.
 
 특정 실험에 대해 여러 개의 실험 실행이 있으므로 반환된 응답에는 실행 ID의 배열이 있습니다.
 
@@ -226,12 +226,12 @@ curl -X GET \
 curl -X DELETE \
   'https://platform.adobe.io/data/sensei/experiments/{EXPERIMENT_ID}' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
 `{EXPERIMENT_ID}`: 실험에 해당하는 ID입니다.\
 `{ACCESS_TOKEN}`: 인증 후 제공된 특정 베어러 토큰 값입니다.\
-`{IMS_ORG}`: 고유한 Adobe Experience Platform 통합에 있는 IMS 조직 자격 증명입니다.
+`{ORG_ID}`: 고유한 Adobe Experience Platform 통합에 있는 IMS 조직 자격 증명입니다.
 
 >[!NOTE]
 >

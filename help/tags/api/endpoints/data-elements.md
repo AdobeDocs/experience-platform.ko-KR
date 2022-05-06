@@ -1,7 +1,8 @@
 ---
 title: 데이터 요소 끝점
 description: Reactor API에서 /data_elements 엔드포인트를 호출하는 방법을 알아봅니다.
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+exl-id: ea346682-441b-415b-af06-094158eb7c71
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1411'
 ht-degree: 6%
@@ -10,17 +11,17 @@ ht-degree: 6%
 
 # 데이터 요소 끝점
 
-데이터 요소는 애플리케이션 내의 중요한 데이터를 가리키는 변수 역할을 합니다. 데이터 요소는 [규칙](./rules.md) 및 [확장](./extensions.md) 구성 내에서 사용됩니다. 브라우저나 애플리케이션에서 런타임 시 규칙이 트리거되면 데이터 요소의 값이 확인되고 규칙 내에서 사용됩니다. 데이터 요소는 확장 구성에 대해 동일하게 작동합니다.
+데이터 요소는 애플리케이션 내의 중요한 데이터를 가리키는 변수 역할을 합니다. 데이터 요소는 내에서 사용됩니다 [규칙](./rules.md) 및 [확장](./extensions.md) 구성. 브라우저나 애플리케이션에서 런타임 시 규칙이 트리거되면 데이터 요소의 값이 확인되고 규칙 내에서 사용됩니다. 데이터 요소는 확장 구성에 대해 동일하게 작동합니다.
 
 여러 데이터 요소를 함께 사용하면 데이터 사전 또는 데이터 맵이 생성됩니다. 이 사전은 Adobe Experience Platform이 알고 있으며 사용할 수 있는 데이터를 나타냅니다.
 
-데이터 요소는 정확히 하나의 [속성](./properties.md)에 속합니다. 속성에는 많은 데이터 요소가 있을 수 있습니다.
+데이터 요소는 정확히 하나의 항목에 속합니다 [속성](./properties.md). 속성에는 많은 데이터 요소가 있을 수 있습니다.
 
-데이터 요소 및 태그의 사용에 대한 일반적인 정보는 UI 설명서의 [데이터 요소 안내서](../../ui/managing-resources/data-elements.md)를 참조하십시오.
+데이터 요소 및 태그의 사용에 대한 일반적인 정보는 [데이터 요소 안내서](../../ui/managing-resources/data-elements.md) 를 참조하십시오.
 
 ## 시작하기
 
-이 안내서에 사용된 끝점은 [Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/)의 일부입니다. 계속하기 전에 API 인증 방법에 대한 중요한 정보가 필요하면 [시작 안내서](../getting-started.md)를 검토하십시오.
+이 안내서에 사용된 엔드포인트는 [Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/). 계속하기 전에 [시작 안내서](../getting-started.md) 를 참조하십시오.
 
 ## 데이터 요소 목록 검색 {#list}
 
@@ -34,13 +35,13 @@ GET /properties/{PROPERTY_ID}/data_elements
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `PROPERTY_ID` | 데이터 요소를 소유하는 속성의 `id` |
+| `PROPERTY_ID` | 다음 `id` 속성 중에서 선택할 수 있습니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
 >[!NOTE]
 >
->쿼리 매개 변수를 사용하여 나열된 데이터 요소는 다음 속성을 기반으로 필터링할 수 있습니다.<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>자세한 내용은 [응답 필터링](../guides/filtering.md)에 대한 안내서를 참조하십시오.
+>쿼리 매개 변수를 사용하여 나열된 데이터 요소는 다음 속성을 기반으로 필터링할 수 있습니다.<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>다음 안내서를 참조하십시오. [응답 필터링](../guides/filtering.md) 추가 정보.
 
 **요청**
 
@@ -49,7 +50,7 @@ curl -X GET \
   https://reactor.adobe.io/properties/PR97d92a379a5f48758947cdf44f607a0d/data_elements \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -173,7 +174,7 @@ GET 요청 경로에 해당 ID를 제공하여 데이터 요소를 조회할 수
 
 >[!NOTE]
 >
->데이터 요소가 삭제되면 삭제된 것으로 표시되지만 실제로 시스템에서 제거되지 않습니다. 따라서 삭제된 데이터 요소를 조회할 수 있습니다. 삭제된 데이터 요소는 `data.meta.deleted_at` 특성이 있는 것으로 식별할 수 있습니다.
+>데이터 요소가 삭제되면 삭제된 것으로 표시되지만 실제로 시스템에서 제거되지 않습니다. 따라서 삭제된 데이터 요소를 조회할 수 있습니다. 삭제된 데이터 요소는 `data.meta.deleted_at` 속성을 사용합니다.
 
 **API 형식**
 
@@ -183,7 +184,7 @@ GET /data_elements/{DATA_ELEMENT_ID}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `DATA_ELEMENT_ID` | 조회할 데이터 요소의 `id` |
+| `DATA_ELEMENT_ID` | 다음 `id` 조회하려는 데이터 요소의 수입니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -194,7 +195,7 @@ curl -X GET \
   https://reactor.adobe.io/data_elements/DE8097636264104451ac3a18c95d5ff833 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -313,20 +314,20 @@ POST /properties/{PROPERTY_ID}/data_elements
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `PROPERTY_ID` | 에서 데이터 요소를 정의하는 [속성](./properties.md)의 `id` |
+| `PROPERTY_ID` | 다음 `id` 의 [속성](./properties.md) 추가 콘텐츠에서 데이터 요소를 정의합니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **요청**
 
-다음 요청은 지정된 속성에 대한 새 데이터 요소를 만듭니다. 또한 호출은 `relationships` 속성을 통해 데이터 요소를 기존 확장과 연결합니다. 자세한 내용은 [관계](../guides/relationships.md)의 안내서를 참조하십시오.
+다음 요청은 지정된 속성에 대한 새 데이터 요소를 만듭니다. 또한 호출은 `relationships` 속성을 사용합니다. 다음 안내서를 참조하십시오. [관계](../guides/relationships.md) 추가 정보.
 
 ```shell
 curl -X POST \
   https://reactor.adobe.io/properties/PR97d92a379a5f48758947cdf44f607a0d/data_elements \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
   -d '{
         "data": {
@@ -354,14 +355,14 @@ curl -X POST \
 
 | 속성 | 설명 |
 | --- | --- |
-| `attributes.name` | **(필수)** 사용자가 읽을 수 있는 데이터 요소의 이름입니다. |
-| `attributes.delegate_descriptor_id` | **(필수)** 데이터 요소를 확장 패키지와 연결하는 형식이 지정된 문자열입니다. 각 확장 패키지는 위임 데이터 요소에 대한 호환 유형과 의도한 동작을 정의하므로 모든 데이터 요소를 처음 만들 때 확장 패키지와 연결해야 합니다. 자세한 내용은 [위임 설명자 ID](../guides/delegate-descriptor-ids.md)의 안내서를 참조하십시오. |
+| `attributes.name` | **(필수)** 사람이 읽을 수 있는 데이터 요소의 이름입니다. |
+| `attributes.delegate_descriptor_id` | **(필수)** 데이터 요소를 확장 패키지와 연결하는 형식이 지정된 문자열입니다. 각 확장 패키지는 위임 데이터 요소에 대한 호환 유형과 의도한 동작을 정의하므로 모든 데이터 요소를 처음 만들 때 확장 패키지와 연결해야 합니다. 다음 안내서를 참조하십시오. [위임 설명자 ID](../guides/delegate-descriptor-ids.md) 추가 정보. |
 | `attributes.settings` | 문자열로 표시되는 설정 JSON 개체. |
-| `attributes.default_value` | 데이터 요소가 `undefined`으로 평가되는 경우 반환할 기본값입니다. |
+| `attributes.default_value` | 데이터 요소가 로 평가되는 경우 반환할 기본값 `undefined`. |
 | `attributes.enabled` | 데이터 요소가 활성화되어 있는지 여부를 나타내는 부울 값입니다. |
 | `attributes.force_lower_case` | 저장하기 전에 데이터 요소 값을 소문자로 변환해야 하는지 여부를 나타내는 부울 값입니다. |
 | `attributes.clean_text` | 저장하기 전에 데이터 요소 값에서 선행 및 후행 공백을 제거해야 하는지 여부를 나타내는 부울 값입니다. |
-| `type` | 업데이트할 리소스 유형입니다. 이 끝점의 경우 값은 `data_elements`이어야 합니다. |
+| `type` | 업데이트할 리소스 유형입니다. 이 끝점의 경우 값은 `data_elements`. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -479,20 +480,20 @@ PATCH /data_elements/{DATA_ELEMENT_ID}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `DATA_ELEMENT_ID` | 업데이트할 데이터 요소의 `id` |
+| `DATA_ELEMENT_ID` | 다음 `id` 업데이트하려는 데이터 요소의 수입니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **요청**
 
-다음 요청은 기존 데이터 요소에 대한 `name`을 업데이트합니다.
+다음 요청은 를 업데이트합니다 `name` 기존 데이터 요소에 사용할 수 있습니다.
 
 ```shell
 curl -X PATCH \
   https://reactor.adobe.io/data_elements/DE3fab176ccf8641838b3da59f716fc42b \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
   -d '{
         "data": {
@@ -507,9 +508,9 @@ curl -X PATCH \
 
 | 속성 | 설명 |
 | --- | --- |
-| `attributes` | 속성이 데이터 요소에 대해 업데이트할 속성을 나타내는 객체입니다. 모든 데이터 요소 속성을 업데이트할 수 있습니다. 속성 목록 및 사용 사례에는 [데이터 요소 만들기](#create)에 대한 예제 호출을 참조하십시오. |
-| `id` | 업데이트할 데이터 요소의 `id` 이 값은 요청 경로에 제공된 `{DATA_ELEMENT_ID}` 값과 일치해야 합니다. |
-| `type` | 업데이트할 리소스 유형입니다. 이 끝점의 경우 값은 `data_elements`이어야 합니다. |
+| `attributes` | 속성이 데이터 요소에 대해 업데이트할 속성을 나타내는 객체입니다. 모든 데이터 요소 속성을 업데이트할 수 있습니다. 에 대한 예제 호출을 참조하십시오. [데이터 요소 만들기](#create) 속성 목록 및 사용 사례입니다. |
+| `id` | 다음 `id` 업데이트하려는 데이터 요소 중 하나입니다. 이 옵션은 와 일치해야 합니다. `{DATA_ELEMENT_ID}` 요청 경로에 제공된 값입니다. |
+| `type` | 업데이트할 리소스 유형입니다. 이 끝점의 경우 값은 `data_elements`. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -619,7 +620,7 @@ curl -X PATCH \
 
 데이터 요소를 개정할 때 현재(head) 개정으로 데이터 요소의 새 개정이 만들어집니다. 데이터 요소의 각 수정에는 자체 ID가 있습니다. 원본 데이터 요소는 원본 링크를 통해 검색될 수 있다.
 
-PATCH 요청 본문에서 `revise` 값과 함께 `meta.action` 속성을 제공하여 데이터 요소를 수정할 수 있습니다.
+다음을 제공하여 데이터 요소를 수정할 수 있습니다 `meta.action` 값이 인 속성 `revise` PATCH 요청 본문에서
 
 **API 형식**
 
@@ -629,7 +630,7 @@ PATCH /data_elements/{DATA_ELEMENT_ID}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `DATA_ELEMENT_ID` | 수정할 데이터 요소의 `id` |
+| `DATA_ELEMENT_ID` | 다음 `id` 수정할 데이터 요소의 수입니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -640,7 +641,7 @@ curl -X PATCH \
   https://reactor.adobe.io/data_elements/DE3fab176ccf8641838b3da59f716fc42b \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
   -d '{
         "data": {
@@ -658,16 +659,16 @@ curl -X PATCH \
 
 | 속성 | 설명 |
 | --- | --- |
-| `attributes` | 속성이 데이터 요소에 대해 업데이트할 속성을 나타내는 객체입니다. 모든 데이터 요소 속성을 업데이트할 수 있습니다. 속성 목록 및 사용 사례에는 [데이터 요소 만들기](#create)에 대한 예제 호출을 참조하십시오. |
-| `meta.action` | `revise` 값에 를 포함하는 경우 이 속성은 데이터 요소에 대해 새 개정을 만들어야 함을 나타냅니다. |
-| `id` | 수정할 데이터 요소의 `id` 이 값은 요청 경로에 제공된 `{DATA_ELEMENT_ID}` 값과 일치해야 합니다. |
-| `type` | 수정할 리소스 유형입니다. 이 끝점의 경우 값은 `data_elements`이어야 합니다. |
+| `attributes` | 속성이 데이터 요소에 대해 업데이트할 속성을 나타내는 객체입니다. 모든 데이터 요소 속성을 업데이트할 수 있습니다. 에 대한 예제 호출을 참조하십시오. [데이터 요소 만들기](#create) 속성 목록 및 사용 사례입니다. |
+| `meta.action` | 다음 값이 포함된 경우 `revise`이고, 이 속성은 데이터 요소에 대해 새 버전을 만들어야 함을 나타냅니다. |
+| `id` | 다음 `id` 수정할 데이터 요소의 예입니다. 이 옵션은 와 일치해야 합니다. `{DATA_ELEMENT_ID}` 요청 경로에 제공된 값입니다. |
+| `type` | 수정할 리소스 유형입니다. 이 끝점의 경우 값은 `data_elements`. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **응답**
 
-성공한 응답은 증가된 `meta.latest_revision_number` 속성에 표시된 대로 데이터 요소에 대한 새 개정 세부 사항을 반환합니다.
+성공적인 응답은 증가된 사용자가 지정한 대로 데이터 요소에 대한 새 개정 세부 사항을 반환합니다 `meta.latest_revision_number` 속성을 사용합니다.
 
 ```json
 {
@@ -779,7 +780,7 @@ DELETE /data_elements/{DATA_ELEMENT_ID}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `DATA_ELEMENT_ID` | 삭제할 데이터 요소의 `id` |
+| `DATA_ELEMENT_ID` | 다음 `id` 삭제할 데이터 요소입니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -790,7 +791,7 @@ curl -X DELETE \
   https://reactor.adobe.io/data_elements/DE3fab176ccf8641838b3da59f716fc42b \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
 **응답**
@@ -799,17 +800,17 @@ curl -X DELETE \
 
 ## 데이터 요소에 대한 참고 사항 관리 {#notes}
 
-데이터 요소는 &quot;주목할 만한&quot; 리소스입니다. 즉, 각 개별 리소스에서 텍스트 기반 메모를 만들고 검색할 수 있습니다. 데이터 요소 및 기타 호환 리소스에 대한 메모를 관리하는 방법에 대한 자세한 내용은 [참고 엔드포인트 안내서](./notes.md)를 참조하십시오.
+데이터 요소는 &quot;주목할 만한&quot; 리소스입니다. 즉, 각 개별 리소스에서 텍스트 기반 메모를 만들고 검색할 수 있습니다. 자세한 내용은 [참고 끝점 안내서](./notes.md) 를 참조하십시오.
 
 ## 데이터 요소에 대한 관련 리소스 검색 {#related}
 
-다음 호출에서는 데이터 요소에 대한 관련 리소스를 검색하는 방법을 보여 줍니다. [데이터 요소를 찾을 때 ](#lookup) 속성 아래에 이러한 관계가 나열됩니다.`relationships`
+다음 호출에서는 데이터 요소에 대한 관련 리소스를 검색하는 방법을 보여 줍니다. When [데이터 요소 조회](#lookup)로 설정되면 이러한 관계는 `relationships` 속성을 사용합니다.
 
-Reactor API의 관계에 대한 자세한 내용은 [관계 안내서](../guides/relationships.md)를 참조하십시오.
+자세한 내용은 [관계 안내서](../guides/relationships.md) 를 참조하십시오.
 
 ### 데이터 요소에 대한 관련 라이브러리 나열 {#libraries}
 
-조회 요청의 경로에 `/libraries`을 추가하여 데이터 요소를 활용하는 라이브러리를 나열할 수 있습니다.
+다음을 추가하여 데이터 요소를 활용하는 라이브러리를 나열할 수 있습니다 `/libraries` 조회 요청의 경로에 추가할 수 없습니다.
 
 **API 형식**
 
@@ -819,7 +820,7 @@ GET  /data_elements/{DATA_ELEMENT_ID}/libraries
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{DATA_ELEMENT_ID}` | 라이브러리를 나열할 데이터 요소의 `id` |
+| `{DATA_ELEMENT_ID}` | 다음 `id` 라이브러리를 나열할 데이터 요소의 수입니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -830,7 +831,7 @@ curl -X GET \
   https://reactor.adobe.io/data_elements/DE3fab176ccf8641838b3da59f716fc42b/libraries \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -931,7 +932,7 @@ curl -X GET \
 
 ### 데이터 요소에 대한 관련 수정 버전 나열 {#revisions}
 
-조회 요청의 경로에 `/revisions`을 추가하여 데이터 요소의 이전 수정 버전을 나열할 수 있습니다.
+다음을 추가하여 데이터 요소의 이전 개정 버전을 나열할 수 있습니다 `/revisions` 조회 요청의 경로에 추가할 수 없습니다.
 
 **API 형식**
 
@@ -941,7 +942,7 @@ GET  /data_elements/{DATA_ELEMENT_ID}/revisions
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{DATA_ELEMENT_ID}` | 수정 내용을 나열할 데이터 요소의 `id` |
+| `{DATA_ELEMENT_ID}` | 다음 `id` 수정 사항을 나열할 데이터 요소의 수입니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -952,7 +953,7 @@ curl -X GET \
   https://reactor.adobe.io/data_elements/DE3fab176ccf8641838b3da59f716fc42b/revisions \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -1165,7 +1166,7 @@ curl -X GET \
 
 ### 데이터 요소에 대한 관련 확장 조회 {#extension}
 
-GET 요청의 경로에 `/extension`을 추가하여 데이터 요소를 활용하는 확장을 조회할 수 있습니다.
+다음을 추가하여 데이터 요소를 사용하는 확장을 조회할 수 있습니다 `/extension` GET 요청의 경로.
 
 **API 형식**
 
@@ -1175,7 +1176,7 @@ GET  /data_elements/{DATA_ELEMENT_ID}/extension
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{DATA_ELEMENT_ID}` | 확장을 조회할 데이터 요소의 `id` |
+| `{DATA_ELEMENT_ID}` | 다음 `id` 확장을 조회하려는 데이터 요소의 수입니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -1186,7 +1187,7 @@ curl -X GET \
   https://reactor.adobe.io/data_elements/DE3fab176ccf8641838b3da59f716fc42b/extension \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -1285,7 +1286,7 @@ curl -X GET \
 
 ### 데이터 요소에 대한 관련 원본 조회 {#origin}
 
-GET 요청의 경로에 `/origin`을 추가하여 데이터 요소의 출처를 조회할 수 있습니다. 데이터 요소의 원본은 현재 개정을 만들기 위해 업데이트된 이전 개정입니다.
+다음을 추가하여 데이터 요소의 출처를 조회할 수 있습니다 `/origin` GET 요청의 경로. 데이터 요소의 원본은 현재 개정을 만들기 위해 업데이트된 이전 개정입니다.
 
 **API 형식**
 
@@ -1295,7 +1296,7 @@ GET  /data_elements/{DATA_ELEMENT_ID}/origin
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{DATA_ELEMENT_ID}` | 원본을 조회하려는 데이터 요소의 `id` |
+| `{DATA_ELEMENT_ID}` | 다음 `id` 출처를 조회하려는 데이터 요소의 수입니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -1306,7 +1307,7 @@ curl -X GET \
   https://reactor.adobe.io/data_elements/DE3fab176ccf8641838b3da59f716fc42b/origin \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -1415,7 +1416,7 @@ curl -X GET \
 
 ### 데이터 요소에 대한 관련 속성 조회 {#property}
 
-GET 요청 경로에 `/property`을 추가하여 데이터 요소를 소유하는 속성을 찾을 수 있습니다.
+다음을 추가하여 데이터 요소를 소유하는 속성을 찾을 수 있습니다 `/property` GET 요청의 경로.
 
 **API 형식**
 
@@ -1425,7 +1426,7 @@ GET  /data_elements/{DATA_ELEMENT_ID}/property
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{DATA_ELEMENT_ID}` | 속성을 조회하려는 데이터 요소의 `id` |
+| `{DATA_ELEMENT_ID}` | 다음 `id` 속성을 조회하려는 데이터 요소의 수입니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -1436,7 +1437,7 @@ curl -X GET \
   https://reactor.adobe.io/data_elements/DE3fab176ccf8641838b3da59f716fc42b/property \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```

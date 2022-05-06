@@ -5,7 +5,7 @@ title: API 엔드포인트 내보내기/가져오기
 description: 스키마 레지스트리 API의 /export 및 /import 끝점을 사용하면 IMS 조직과 샌드박스 간에 XDM 리소스를 공유할 수 있습니다.
 topic-legacy: developer guide
 exl-id: 33b62f75-2670-42f4-9aac-fa1540cd7d4a
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '506'
 ht-degree: 2%
@@ -14,17 +14,17 @@ ht-degree: 2%
 
 # 끝점 내보내기/가져오기
 
-[!DNL Schema Library] 내의 모든 리소스는 IMS 조직 내의 특정 샌드박스에 포함되어 있습니다. 샌드박스와 IMS 조직 간에 XDM(Experience Data Model) 리소스를 공유할 수 있습니다. [!DNL Schema Registry] API는[!DNL  Schema Library]에 있는 모든 스키마, 스키마 필드 그룹 또는 데이터 유형에 대한 내보내기 페이로드를 생성한 다음 해당 페이로드를 사용하여 해당 리소스(및 모든 종속 리소스)를 타겟 샌드박스 및 IMS 조직에 가져올 수 있는 두 가지 엔드포인트를 제공합니다.
+내 모든 리소스 [!DNL Schema Library] 는 IMS 조직 내의 특정 샌드박스에 포함되어 있습니다. 샌드박스와 IMS 조직 간에 XDM(Experience Data Model) 리소스를 공유할 수 있습니다. 다음 [!DNL Schema Registry] API는[!DNL  Schema Library]그런 다음 해당 페이로드를 사용하여 해당 리소스(및 모든 종속 리소스)를 target 샌드박스 및 IMS 조직에 가져옵니다.
 
 ## 시작하기
 
-이 안내서에서 사용되는 끝점은 [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/)의 일부입니다. 계속하기 전에 [시작 안내서](./getting-started.md)에서 관련 설명서에 대한 링크, 이 문서에서 샘플 API 호출을 읽는 방법에 대한 안내서, 모든 Experience Platform API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요한 정보를 검토하십시오.
+이 안내서에서 사용되는 엔드포인트는 [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). 계속하기 전에 [시작 안내서](./getting-started.md) 관련 설명서에 대한 링크의 경우, 이 문서에서 샘플 API 호출을 읽는 안내서와 Experience Platform API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요 정보를 제공합니다.
 
-내보내기/가져오기 끝점은 [!DNL Schema Registry]에서 지원하는 원격 프로시저 호출(RPC)의 일부입니다. [!DNL Schema Registry] API의 다른 끝점과 달리 RPC 끝점은 `Accept` 또는 `Content-Type` 같은 추가 헤더가 필요하지 않으며 `CONTAINER_ID`를 사용하지 않습니다. 대신, 아래 API 호출에 설명된 대로 `/rpc` 네임스페이스를 사용해야 합니다.
+내보내기/가져오기 끝점은 [!DNL Schema Registry]. 의 다른 종단점과 달리 [!DNL Schema Registry] API, RPC 끝점은 다음과 같은 추가 헤더가 필요하지 않습니다. `Accept` 또는 `Content-Type`, 및 를 사용하지 않음 `CONTAINER_ID`. 대신 를 사용해야 합니다 `/rpc` 네임스페이스에 대해 자세히 알아보십시오.
 
 ## 리소스에 대한 내보내기 페이로드 검색 {#export}
 
-[!DNL Schema Library] 의 기존 스키마, 필드 그룹 또는 데이터 유형의 경우 `/export` 종단점에 GET 요청을 수행하여 경로에 리소스의 ID를 제공하여 내보내기 페이로드를 생성할 수 있습니다.
+의 기존 스키마, 필드 그룹 또는 데이터 유형에 대해 [!DNL Schema Library]에 GET 요청을 수행하여 내보내기 페이로드를 생성할 수 있습니다. `/export` endpoint, 경로에 리소스의 ID 제공
 
 **API 형식**
 
@@ -34,29 +34,29 @@ GET /rpc/export/{RESOURCE_ID}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{RESOURCE_ID}` | 내보낼 XDM 리소스의 `meta:altId` 또는 URL로 인코딩된 `$id` 입니다. |
+| `{RESOURCE_ID}` | 다음 `meta:altId` 또는 URL로 인코딩됨 `$id` 내보낼 XDM 리소스의 경로입니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **요청**
 
-다음 요청은 `Restaurant` 필드 그룹에 대한 내보내기 페이로드를 검색합니다.
+다음 요청은 요청에 대한 내보내기 페이로드를 검색합니다. `Restaurant` 필드 그룹.
 
 ```shell
 curl -X GET \
   https://platform.adobe.io/data/foundation/schemaregistry/rpc/export/_{TENANT_ID}.mixins.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Accept: application/vnd.adobe.xdm-link+json'
 ```
 
 **응답**
 
-성공적인 응답은 대상 XDM 리소스 및 모든 종속 리소스를 나타내는 개체 배열을 반환합니다. 이 예에서 배열의 첫 번째 개체는 `Restaurant` 필드 그룹이 사용하는 임차인이 만든 `Property` 데이터 유형이고, 두 번째 개체는 `Restaurant` 필드 그룹 자체입니다. 그런 다음 이 페이로드를 사용하여 [리소스를 다른 샌드박스 또는 IMS 조직으로 가져올 수 있습니다.](#import)
+성공적인 응답은 대상 XDM 리소스 및 모든 종속 리소스를 나타내는 개체 배열을 반환합니다. 이 예에서 배열의 첫 번째 개체는 임차인이 생성한 개체입니다 `Property` 데이터 유형 `Restaurant` 필드 그룹이 사용하는 반면, 두 번째 개체는 입니다. `Restaurant` 필드 그룹 자체. 그런 다음 이 페이로드를 사용하여 다음을 수행할 수 있습니다. [리소스 가져오기](#import) 를 다른 샌드박스 또는 IMS 조직에 매핑하는 방법을 설명합니다.
 
-리소스의 테넌트 ID의 모든 인스턴스는 `<XDM_TENANTID_PLACEHOLDER>`로 대체됩니다. 이를 통해 스키마 레지스트리에서 후속 가져오기 호출에서 전송되는 위치에 따라 리소스에 올바른 테넌트 ID를 자동으로 적용할 수 있습니다.
+리소스의 테넌트 ID의 모든 인스턴스는 `<XDM_TENANTID_PLACEHOLDER>`. 이를 통해 스키마 레지스트리에서 후속 가져오기 호출에서 전송되는 위치에 따라 리소스에 올바른 테넌트 ID를 자동으로 적용할 수 있습니다.
 
 ```json
 [
@@ -198,7 +198,7 @@ curl -X GET \
 
 ## 리소스 가져오기 {#import}
 
-XDM 리소스에 대한 내보내기 페이로드](#export)를 [생성한 후에는 POST 요청에서 해당 페이로드를 `/import` 종단점에 사용하여 해당 리소스를 대상 IMS 조직 및 샌드박스로 가져올 수 있습니다.
+한번 드시면 [내보내기 페이로드를 생성했습니다.](#export) xdm 리소스의 경우 POST 요청에서 해당 페이로드를 `/import` target IMS 조직 및 샌드박스로 해당 리소스를 가져오는 종단점입니다.
 
 **API 형식**
 
@@ -208,14 +208,14 @@ POST /rpc/import
 
 **요청**
 
-다음 요청은 이전 [내보내기 example](#export)에서 반환된 페이로드를 가져와서 각각 `x-gw-ims-org-id` 및 `x-sandbox-name` 헤더에 의해 결정된 대로 새 IMS 조직 및 샌드박스로 가져옵니다.`Restaurant`
+다음 요청은 이전 요청에서 반환된 페이로드를 가져옵니다 [내보내기 예](#export) 를 `Restaurant` 필드 그룹을 새로운 IMS 조직 및 샌드박스로 변환하여 `x-gw-ims-org-id` 및 `x-sandbox-name` 헤더 를 각각 입력합니다.
 
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/foundation/schemaregistry/rpc/import \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '[
@@ -427,7 +427,7 @@ curl -X POST \
             }
         ],
         "refs": [],
-        "imsOrg": "{IMS_ORG}",
+        "imsOrg": "{ORG_ID}",
         "meta:extensible": true,
         "meta:abstract": true,
         "meta:xdmType": "object",
@@ -506,7 +506,7 @@ curl -X POST \
         "refs": [
             "https://ns.adobe.com/{TENANT_ID}/datatypes/fc07162ee7ca8d18e074a3bb50c3938c76160bf6040e8495"
         ],
-        "imsOrg": "{IMS_ORG}",
+        "imsOrg": "{ORG_ID}",
         "meta:extensible": true,
         "meta:abstract": true,
         "meta:intendedToExtend": [],

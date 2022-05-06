@@ -5,7 +5,7 @@ topic-legacy: guide
 type: Documentation
 description: 계산된 속성은 이벤트 수준 데이터를 프로필 수준 속성으로 집계하는 데 사용되는 함수입니다. 계산된 속성을 구성하려면 먼저 계산된 속성 값을 가질 필드를 식별해야 합니다. 스키마 레지스트리 API를 사용하여 이 필드를 만들어 계산된 속성 필드를 포함할 스키마와 사용자 지정 필드 그룹을 정의할 수 있습니다.
 exl-id: 91c5d125-8ab5-4291-a974-48dd44c68a13
-source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '736'
 ht-degree: 2%
@@ -20,11 +20,11 @@ ht-degree: 2%
 
 계산된 속성을 구성하려면 먼저 계산된 속성 값을 가질 필드를 식별해야 합니다. 스키마 레지스트리 API를 사용하여 이 필드를 만들어 계산된 속성 필드를 포함할 스키마와 사용자 지정 스키마 필드 그룹을 정의할 수 있습니다. 계산된 속성으로 사용할 속성을 조직에서 추가할 수 있는 별도의 &quot;계산된 속성&quot; 스키마 및 필드 그룹을 만드는 것이 좋습니다. 이렇게 하면 조직에서 계산된 속성 스키마를 데이터 처리에 사용 중인 다른 스키마와 완전히 분리할 수 있습니다.
 
-이 문서의 워크플로우에서는 스키마 레지스트리 API를 사용하여 사용자 지정 필드 그룹을 참조하는 프로필 사용 &quot;계산된 속성&quot; 스키마를 만드는 방법을 간략하게 설명합니다. 이 문서에는 계산된 속성과 관련된 샘플 코드가 포함되어 있지만 API를 사용하여 필드 그룹 및 스키마를 정의하는 방법에 대한 자세한 내용은 [스키마 레지스트리 API 안내서](../../xdm/api/overview.md)를 참조하십시오.
+이 문서의 워크플로우에서는 스키마 레지스트리 API를 사용하여 사용자 지정 필드 그룹을 참조하는 프로필 사용 &quot;계산된 속성&quot; 스키마를 만드는 방법을 간략하게 설명합니다. 이 문서에는 계산된 속성과 관련된 샘플 코드가 포함되어 있지만 [스키마 레지스트리 API 안내서](../../xdm/api/overview.md) api를 사용하여 필드 그룹 및 스키마를 정의하는 방법에 대한 자세한 정보.
 
 ## 계산된 속성 필드 그룹 만들기
 
-스키마 레지스트리 API를 사용하여 필드 그룹을 만들려면 `/tenant/fieldgroups` 종단점에 POST 요청을 하고 요청 본문에 필드 그룹의 세부 사항을 제공하는 것으로 시작합니다. 스키마 레지스트리 API를 사용하는 필드 그룹 작업에 대한 자세한 내용은 [필드 그룹 API 엔드포인트 가이드](../../xdm/api/field-groups.md)를 참조하십시오.
+스키마 레지스트리 API를 사용하여 필드 그룹을 만들려면 먼저 `/tenant/fieldgroups` endpoint 및 request body에 필드 그룹의 세부 정보를 제공합니다. 스키마 레지스트리 API를 사용하는 필드 그룹 작업에 대한 자세한 내용은 [필드 그룹 API 엔드포인트 안내서](../../xdm/api/field-groups.md).
 
 **API 형식**
 
@@ -39,7 +39,7 @@ curl -X POST \
   https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups\
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'content-type: application/json' \
   -d '{
@@ -84,7 +84,7 @@ curl -X POST \
 
 **응답**
 
-성공적인 요청은 `$id`, `meta:altIt` 및 `version`를 포함하여 새로 만든 필드 그룹의 세부 정보가 포함된 응답 본문과 함께 HTTP 응답 상태 201(생성됨)을 반환합니다. 이러한 값은 읽기 전용이며 스키마 레지스트리에 의해 지정됩니다.
+성공적인 요청은 HTTP 응답 상태 201(생성됨)을 반환하며 이 반환에는 다음을 포함하여 새로 만든 필드 그룹의 세부 사항이 포함됩니다 `$id`, `meta:altIt`, 및 `version`. 이러한 값은 읽기 전용이며 스키마 레지스트리에 의해 지정됩니다.
 
 ```json
 {
@@ -120,7 +120,7 @@ curl -X POST \
       "meta:xdmType": "object"
     }
   ],
-  "imsOrg": "{IMS_ORG}",
+  "imsOrg": "{ORG_ID}",
   "meta:extensible": true,
   "meta:abstract": true,
   "meta:intendedToExtend": [
@@ -146,9 +146,9 @@ curl -X POST \
 
 ## 추가 계산된 속성으로 필드 그룹 업데이트
 
-더 많은 계산된 특성이 필요한 경우 `/tenant/fieldgroups` 종단점에 PUT 요청을 수행하여 계산된 속성 필드 그룹을 추가 속성으로 업데이트할 수 있습니다. 이 요청을 수행하려면 경로에서 만든 필드 그룹의 고유 ID와 본문에 추가할 모든 새 필드를 포함해야 합니다.
+계산된 속성이 더 필요한 경우, `/tenant/fieldgroups` 엔드포인트. 이 요청을 수행하려면 경로에서 만든 필드 그룹의 고유 ID와 본문에 추가할 모든 새 필드를 포함해야 합니다.
 
-스키마 레지스트리 API를 사용하여 필드 그룹을 업데이트하는 방법에 대한 자세한 내용은 [필드 그룹 API 엔드포인트 가이드](../../xdm/api/field-groups.md)를 참조하십시오.
+스키마 레지스트리 API를 사용하여 필드 그룹을 업데이트하는 방법에 대한 자세한 내용은 [필드 그룹 API 엔드포인트 안내서](../../xdm/api/field-groups.md).
 
 **API 형식**
 
@@ -158,7 +158,7 @@ PUT /tenant/fieldgroups/{FIELD_GROUP_ID}
 
 **요청**
 
-이 요청은 `purchaseSummary` 정보와 관련된 새 필드를 추가합니다.
+이 요청은 와 관련된 새 필드를 추가합니다 `purchaseSummary` 정보.
 
 >[!NOTE]
 >
@@ -170,7 +170,7 @@ curl -X PUT \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "type": "object",
@@ -285,7 +285,7 @@ curl -X PUT \
       "meta:xdmType": "object"
     }
   ],
-  "imsOrg": "{IMS_ORG}",
+  "imsOrg": "{ORG_ID}",
   "meta:extensible": true,
   "meta:abstract": true,
   "meta:intendedToExtend": [
@@ -311,9 +311,9 @@ curl -X PUT \
 
 ## 프로필 사용 스키마 만들기
 
-스키마 레지스트리 API를 사용하여 스키마를 만들려면 `/tenant/schemas` 종단점에 POST 요청을 하고 요청 본문에 스키마의 세부 사항을 제공하는 방식으로 시작하십시오. 스키마는 [!DNL Profile]에 대해서도 활성화해야 하며 스키마 클래스에 대한 결합 스키마의 일부로 나타납니다.
+스키마 레지스트리 API를 사용하여 스키마를 만들려면 다음을 POST 요청하여 시작하십시오 `/tenant/schemas` endpoint 및 요청 본문에 스키마 세부 정보 제공 스키마가에 대해서도 활성화되어 있어야 합니다 [!DNL Profile] 스키마 클래스에 대한 결합 스키마의 일부로 나타납니다.
 
-[!DNL Profile] 사용 가능한 스키마 및 결합 스키마에 대한 자세한 내용은 [[!DNL Schema Registry] API 안내서](../../xdm/api/overview.md) 및 [스키마 구성 기본 사항 설명서](../../xdm/schema/composition.md)를 검토하십시오.
+자세한 내용은 [!DNL Profile]-사용 가능한 스키마 및 결합 스키마를 확인하십시오. [[!DNL Schema Registry] API 안내서](../../xdm/api/overview.md) 그리고 [스키마 구성 기본 사항 설명서](../../xdm/schema/composition.md).
 
 **API 형식**
 
@@ -323,7 +323,7 @@ POST /tenants/schemas
 
 **요청**
 
-후속 요청에서는 이 문서(고유 ID 사용)에서 이전에 만든 `computedAttributesFieldGroup`을 참조하는 새 스키마를 만들고, `meta:immutableTags` 배열을 사용하여 프로필 결합 스키마에 대해 활성화됩니다. 스키마 레지스트리 API를 사용하여 스키마를 만드는 방법에 대한 자세한 지침은 [스키마 API 엔드포인트 가이드](../../xdm/api/schemas.md)를 참조하십시오.
+다음 요청은 를 참조하는 새 스키마를 만듭니다 `computedAttributesFieldGroup` 이 문서(고유 ID 사용)에서 앞에서 생성되었으며 ( `meta:immutableTags` 배열)을 참조하십시오. 스키마 레지스트리 API를 사용하여 스키마를 만드는 방법에 대한 자세한 지침은 [스키마 API 엔드포인트 안내서](../../xdm/api/schemas.md).
 
 ```shell
 curl -X POST \
@@ -331,7 +331,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "type": "object",
@@ -366,7 +366,7 @@ curl -X POST \
 
 **응답**
 
-성공적으로 응답하면 `$id`, `meta:altId` 및 `version`를 포함하여 새로 만든 스키마의 세부 정보가 들어 있는 페이로드 및 HTTP 상태 201(생성됨)이 반환됩니다. 이러한 값은 읽기 전용이며 스키마 레지스트리에 의해 지정됩니다.
+성공적인 응답은 HTTP 상태 201(작성됨) 및 를 포함하여 새로 만든 스키마의 세부 사항이 포함된 페이로드를 반환합니다. `$id`, `meta:altId`, 및 `version`. 이러한 값은 읽기 전용이며 스키마 레지스트리에 의해 지정됩니다.
 
 ```json
 {
@@ -400,7 +400,7 @@ curl -X POST \
     "https://ns.adobe.com/xdm/context/identitymap",
     "https://ns.adobe.com/{TENANT_ID}/mixins/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352"
   ],
-  "imsOrg": "{IMS_ORG}",
+  "imsOrg": "{ORG_ID}",
   "meta:extensible": false,
   "meta:abstract": false,
   "meta:extends": [
@@ -434,4 +434,4 @@ curl -X POST \
 
 ## 다음 단계
 
-계산된 속성이 저장되는 스키마 및 필드 그룹을 만들었으므로 이제 `/computedattributes` API 엔드포인트를 사용하여 계산된 속성을 만들 수 있습니다. API에서 계산된 속성을 만드는 자세한 단계는 [계산된 속성 API 엔드포인트 가이드](ca-api.md)에 제공된 단계를 수행합니다.
+이제 계산된 속성이 저장되는 스키마와 필드 그룹을 만들었으므로 `/computedattributes` API 엔드포인트. API에서 계산된 속성을 만드는 자세한 단계는 [계산된 특성 API 끝점 안내서](ca-api.md).

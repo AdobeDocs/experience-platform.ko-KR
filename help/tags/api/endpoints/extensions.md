@@ -1,7 +1,8 @@
 ---
 title: 확장 끝점
 description: Reactor API에서 /extensions 종단점을 호출하는 방법을 알아봅니다.
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+exl-id: cc02b2aa-d107-463a-930c-5a9fcc5b4a5a
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '977'
 ht-degree: 8%
@@ -10,13 +11,13 @@ ht-degree: 8%
 
 # 확장 끝점
 
-Reactor API에서 확장은 [확장 패키지](./extension-packages.md)의 설치된 인스턴스를 나타냅니다. 확장은 확장 패키지에 정의된 기능을 [속성](./properties.md)에 사용할 수 있도록 합니다. 이러한 기능은 [확장](./data-elements.md) 및 [규칙 구성 요소](./rule-components.md)를 만들 때 활용됩니다.
+Reactor API에서 확장은 [확장 패키지](./extension-packages.md). 확장은 확장 패키지로 정의된 기능을 [속성](./properties.md). 이러한 기능은 [확장](./data-elements.md) 및 [규칙 구성 요소](./rule-components.md).
 
 확장은 정확히 하나의 속성에 속합니다. 속성에는 여러 개의 확장이 있을 수 있지만 주어진 확장 패키지의 설치된 인스턴스를 두 개 이하로 포함할 수 없습니다.
 
 ## 시작하기
 
-이 안내서에 사용된 끝점은 [Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/)의 일부입니다. 계속하기 전에 API 인증 방법에 대한 중요한 정보가 필요하면 [시작 안내서](../getting-started.md)를 검토하십시오.
+이 안내서에 사용된 엔드포인트는 [Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/). 계속하기 전에 [시작 안내서](../getting-started.md) 를 참조하십시오.
 
 ## 확장 목록 검색 {#list}
 
@@ -30,13 +31,13 @@ GET properties/{PROPERTY_ID}/extensions
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{PROPERTY_ID}` | 확장을 나열할 속성의 `id` |
+| `{PROPERTY_ID}` | 다음 `id` 확장을 나열할 속성의 값입니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
 >[!NOTE]
 >
->쿼리 매개 변수를 사용하여 나열된 확장을 다음 속성에 따라 필터링할 수 있습니다.<ul><li>`created_at`</li><li>`dirty`</li><li>`display_name`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li><li>`version`</li></ul>자세한 내용은 [응답 필터링](../guides/filtering.md)에 대한 안내서를 참조하십시오.
+>쿼리 매개 변수를 사용하여 나열된 확장을 다음 속성에 따라 필터링할 수 있습니다.<ul><li>`created_at`</li><li>`dirty`</li><li>`display_name`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li><li>`version`</li></ul>다음 안내서를 참조하십시오. [응답 필터링](../guides/filtering.md) 추가 정보.
 
 **요청**
 
@@ -45,7 +46,7 @@ curl -X GET \
   https://reactor.adobe.io/properties/PRee071cb5b7794f42b74c913e1ad2e325/extensions \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -159,7 +160,7 @@ GET 요청 경로에 해당 ID를 제공하여 확장을 조회할 수 있습니
 
 >[!NOTE]
 >
->확장이 삭제되면 시스템에서 삭제된 것으로 플래그가 지정되지만 실제로 제거되지 않습니다. 따라서 삭제된 확장을 검색할 수 있습니다. 삭제된 확장은 반환된 확장 데이터의 `meta`에 `deleted_at` 속성이 있어도 식별할 수 있습니다.
+>확장이 삭제되면 시스템에서 삭제된 것으로 플래그가 지정되지만 실제로 제거되지 않습니다. 따라서 삭제된 확장을 검색할 수 있습니다. 삭제된 확장은 `deleted_at` 속성( `meta` 반환된 확장 데이터의 경우입니다.
 
 **API 형식**
 
@@ -169,7 +170,7 @@ GET /extensions/{EXTENSION_ID}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `EXTENSION_ID` | 조회할 확장의 `id` |
+| `EXTENSION_ID` | 다음 `id` 검색할 확장의 수입니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -180,7 +181,7 @@ curl -X GET \
   https://reactor.adobe.io/extensions/EX2ba586f436ac48e390a1ee7e8c9a8f6e \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -279,7 +280,7 @@ curl -X GET \
 
 ## 확장 만들기 또는 업데이트 {#create}
 
-확장은 [확장 패키지](./extension-packages.md)를 참조하여 설치된 확장을 속성에 추가하여 만듭니다. 설치 작업이 완료되면 확장이 성공적으로 설치되었는지 여부를 나타내는 응답이 반환됩니다.
+확장은 [확장 패키지](./extension-packages.md) 설치된 확장을 속성에 추가합니다. 설치 작업이 완료되면 확장이 성공적으로 설치되었는지 여부를 나타내는 응답이 반환됩니다.
 
 **API 형식**
 
@@ -289,7 +290,7 @@ POST /properties/{PROPERTY_ID}/extensions
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `PROPERTY_ID` | 확장을 설치할 속성의 `id` |
+| `PROPERTY_ID` | 다음 `id` 확장을 설치할 속성의 이름입니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -300,7 +301,7 @@ curl -X POST \
   https://reactor.adobe.io/properties/PRee071cb5b7794f42b74c913e1ad2e325/extensions \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/vnd.api+json' \
   -d '{
         "data": {
@@ -324,8 +325,8 @@ curl -X POST \
 
 | 속성 | 설명 |
 | --- | --- |
-| `relationships.extension_package` | **(필수)**  설치 중인 확장 패키지의 ID를 참조하는 개체입니다. |
-| `attributes.delegate_descriptor_id` | 확장에는 사용자 지정 설정이 필요한 경우 위임 설명자 ID도 필요합니다. 자세한 내용은 [위임 설명자 ID](../guides/delegate-descriptor-ids.md)의 안내서를 참조하십시오. |
+| `relationships.extension_package` | **(필수)** 설치 중인 확장 패키지의 ID를 참조하는 개체입니다. |
+| `attributes.delegate_descriptor_id` | 확장에는 사용자 지정 설정이 필요한 경우 위임 설명자 ID도 필요합니다. 다음 안내서를 참조하십시오. [위임 설명자 ID](../guides/delegate-descriptor-ids.md) 추가 정보. |
 | `attributes.enabled` | 확장이 활성화되어 있는지 여부를 나타내는 부울. |
 | `attributes.settings` | 문자열로 표시되는 설정 JSON 개체. |
 
@@ -435,20 +436,20 @@ PATCH /extensions/{EXTENSION_ID}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `EXTENSION_ID` | 수정할 확장의 `id` |
+| `EXTENSION_ID` | 다음 `id` 수정할 확장 |
 
 {style=&quot;table-layout:auto&quot;}
 
 **요청**
 
-[확장을 만들 때처럼 수정된 패키지의 로컬 버전을 양식 데이터를 통해 업로드해야 합니다.](#create)
+과 함께 [확장 만들기](#create)를 채울 경우 양식 데이터를 통해 수정된 패키지의 로컬 버전을 업로드해야 합니다.
 
 ```shell
 curl -X PATCH \
   https://reactor.adobe.io/extensions/EX8ce7ced633f34bd48d33089ff8fad082 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/vnd.api+json' \
   -d '{
         "data": {
@@ -466,14 +467,14 @@ curl -X PATCH \
 
 | 속성 | 설명 |
 | --- | --- |
-| `attributes` | 수정할 속성입니다. 확장의 경우 `delegate_descriptor_id`, `enabled` 및 `settings` 속성을 수정할 수 있습니다. |
-| `meta.action` | 개정을 만들 때 `revise` 값에 포함해야 합니다. |
+| `attributes` | 수정할 속성입니다. 확장의 경우 해당 확장을 수정할 수 있습니다 `delegate_descriptor_id`, `enabled`, 및 `settings` 속성을 사용합니다. |
+| `meta.action` | 다음 값에 포함해야 합니다. `revise` 수정 사항 |
 
 {style=&quot;table-layout:auto&quot;}
 
 **응답**
 
-성공적으로 응답하면 `meta.latest_revision_number` 속성이 1만큼 증가하면서 수정된 확장의 세부 사항이 반환됩니다.
+성공적으로 응답하면 수정된 확장의 세부 사항이 반환되고 `meta.latest_revision_number` 속성이 1씩 증가합니다.
 
 ```json
 {
@@ -575,7 +576,7 @@ DELETE /extensions/{EXTENSION_ID}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `EXTENSION_ID` | 삭제할 확장의 `id` |
+| `EXTENSION_ID` | 다음 `id` 삭제할 확장입니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -586,7 +587,7 @@ curl -X DELETE \
   https://reactor.adobe.io/extensions/EX8ce7ced633f34bd48d33089ff8fad082 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
 **응답**
@@ -595,17 +596,17 @@ curl -X DELETE \
 
 ## 확장 참고 사항 관리 {#notes}
 
-확장은 &quot;주목할 만한&quot; 리소스입니다. 즉, 각 개별 리소스에서 텍스트 기반 메모를 만들고 검색할 수 있습니다. 확장 및 기타 호환 리소스에 대한 메모를 관리하는 방법에 대한 자세한 내용은 [참고 엔드포인트 안내서](./notes.md)를 참조하십시오.
+확장은 &quot;주목할 만한&quot; 리소스입니다. 즉, 각 개별 리소스에서 텍스트 기반 메모를 만들고 검색할 수 있습니다. 자세한 내용은 [참고 끝점 안내서](./notes.md) 확장 및 기타 호환 리소스에 대한 메모를 관리하는 방법에 대한 자세한 정보.
 
 ## 확장에 대한 관련 리소스 검색 {#related}
 
-다음 호출에서는 확장에 대한 관련 리소스를 검색하는 방법을 보여 줍니다. [확장을 찾을 때 ](#lookup) 속성 아래에 이러한 관계가 나열됩니다.`relationships`
+다음 호출에서는 확장에 대한 관련 리소스를 검색하는 방법을 보여 줍니다. When [확장 조회](#lookup)로 설정되면 이러한 관계는 `relationships` 속성을 사용합니다.
 
-Reactor API의 관계에 대한 자세한 내용은 [관계 안내서](../guides/relationships.md)를 참조하십시오.
+자세한 내용은 [관계 안내서](../guides/relationships.md) 를 참조하십시오.
 
 ### 확장에 대한 관련 라이브러리 나열 {#libraries}
 
-조회 요청의 경로에 `/libraries`을 추가하여 확장을 활용하는 라이브러리를 나열할 수 있습니다.
+확장을 사용하는 라이브러리를 다음을 추가하여 나열할 수 있습니다 `/libraries` 조회 요청의 경로에 추가할 수 없습니다.
 
 **API 형식**
 
@@ -615,7 +616,7 @@ GET  /extensions/{EXTENSION_ID}/libraries
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{EXTENSION_ID}` | 라이브러리를 나열할 확장의 `id` |
+| `{EXTENSION_ID}` | 다음 `id` 라이브러리를 나열할 확장 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -626,7 +627,7 @@ curl -X GET \
   https://reactor.adobe.io/extensions/EX8ce7ced633f34bd48d33089ff8fad082/libraries \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -727,7 +728,7 @@ curl -X GET \
 
 ### 확장의 관련 개정 버전 나열 {#revisions}
 
-조회 요청의 경로에 `/revisions`을 추가하여 확장의 이전 버전을 나열할 수 있습니다.
+다음을 추가하여 확장의 이전 버전을 나열할 수 있습니다 `/revisions` 조회 요청의 경로에 추가할 수 없습니다.
 
 **API 형식**
 
@@ -737,7 +738,7 @@ GET  /extensions/{EXTENSION_ID}/revisions
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{EXTENSION_ID}` | 개정을 나열할 확장의 `id` |
+| `{EXTENSION_ID}` | 다음 `id` 수정 버전을 나열할 확장 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -748,7 +749,7 @@ curl -X GET \
   https://reactor.adobe.io/extensions/EX8ce7ced633f34bd48d33089ff8fad082/revisions \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -941,7 +942,7 @@ curl -X GET \
 
 ### 확장에 대한 관련 확장 패키지 조회 {#extension}
 
-GET 요청 경로에 `/extension_package`을 추가하여 확장이 기반으로 하는 확장 패키지를 찾을 수 있습니다.
+를 추가하여 확장이 기반으로 하는 확장 패키지를 찾을 수 있습니다 `/extension_package` GET 요청의 경로.
 
 **API 형식**
 
@@ -951,7 +952,7 @@ GET  /extensions/{EXTENSION_ID}/extension_package
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{EXTENSION_ID}` | 확장을 조회하려는 확장의 `id` |
+| `{EXTENSION_ID}` | 다음 `id` 확장을 확인할 수 있는 확장 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -962,7 +963,7 @@ curl -X GET \
   https://reactor.adobe.io/extensions/EX8ce7ced633f34bd48d33089ff8fad082/extension \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -1176,7 +1177,7 @@ curl -X GET \
 
 ### 확장의 관련 원본 조회 {#origin}
 
-GET 요청의 경로에 `/origin`을 추가하여 확장의 출처를 조회할 수 있습니다. 확장의 원본은 현재 개정을 만들기 위해 업데이트된 이전 개정입니다.
+다음을 추가하여 확장의 출처를 조회할 수 있습니다 `/origin` GET 요청의 경로. 확장의 원본은 현재 개정을 만들기 위해 업데이트된 이전 개정입니다.
 
 **API 형식**
 
@@ -1186,7 +1187,7 @@ GET  /extensions/{EXTENSION_ID}/origin
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{EXTENSION_ID}` | 원본을 조회하려는 확장의 `id` |
+| `{EXTENSION_ID}` | 다음 `id` 확장을 검색합니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -1197,7 +1198,7 @@ curl -X GET \
   https://reactor.adobe.io/extensions/EX8ce7ced633f34bd48d33089ff8fad082/origin \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -1296,7 +1297,7 @@ curl -X GET \
 
 ### 확장의 관련 속성 조회 {#property}
 
-GET 요청 경로에 `/property`을 추가하여 확장을 소유하는 속성을 찾을 수 있습니다.
+다음을 추가하여 확장을 소유하는 속성을 찾을 수 있습니다 `/property` GET 요청의 경로.
 
 **API 형식**
 
@@ -1306,7 +1307,7 @@ GET  /extensions/{EXTENSION_ID}/property
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{EXTENSION_ID}` | 속성을 조회하려는 확장의 `id` |
+| `{EXTENSION_ID}` | 다음 `id` 속성을 조회하려는 확장의 수입니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -1317,7 +1318,7 @@ curl -X GET \
   https://reactor.adobe.io/extensions/EX8ce7ced633f34bd48d33089ff8fad082/property \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```

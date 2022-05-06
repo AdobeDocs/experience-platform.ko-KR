@@ -1,7 +1,8 @@
 ---
 title: 빌드 끝점
 description: Reactor API에서 /build 종단점을 호출하는 방법을 알아봅니다.
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+exl-id: 476abea0-efff-478a-b87f-ef6b91bfcca5
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '833'
 ht-degree: 8%
@@ -10,21 +11,21 @@ ht-degree: 8%
 
 # 빌드 끝점
 
-확장, 규칙 및 데이터 요소는 Adobe Experience Platform에서 태그의 기본 구성단위입니다. 애플리케이션이 작업을 수행하도록 만들면 이러한 기본 구성단위가 [library](./libraries.md)에 추가됩니다. 경험 애플리케이션에 라이브러리를 배포하기 위해 라이브러리가 빌드에 컴파일됩니다. Reactor API의 `/builds` 종단점을 사용하면 경험 애플리케이션 내의 빌드를 프로그래밍 방식으로 관리할 수 있습니다.
+확장, 규칙 및 데이터 요소는 Adobe Experience Platform에서 태그의 기본 구성단위입니다. 애플리케이션이 작업을 수행하도록 만들면 이러한 기본 구성단위가 [라이브러리](./libraries.md). 경험 애플리케이션에 라이브러리를 배포하기 위해 라이브러리가 빌드에 컴파일됩니다. 다음 `/builds` reactor API의 종단점을 사용하면 experience 애플리케이션 내의 빌드를 프로그래밍 방식으로 관리할 수 있습니다.
 
 빌드는 웹 및 모바일 애플리케이션 내에 로드되는 실제 파일(또는 파일)입니다. 각 빌드의 내용은 다음 요인에 따라 다릅니다.
 
 * 라이브러리에 포함된 리소스
-* 라이브러리가 빌드된 [환경](./environments.md)의 구성
-* 빌드가 속한 [속성](./properties.md)의 플랫폼입니다
+* 의 구성 [환경](./environments.md) 라이브러리가 빌드되는
+* 플랫폼의 [속성](./properties.md) 빌드가 속한 대상
 
 빌드는 정확히 하나의 라이브러리에 속합니다. 라이브러리에는 여러 빌드가 있을 수 있습니다.
 
-빌드와 태그가 태그의 게시 작업 과정에 어떻게 적합한지 여부에 대한 일반적인 정보는 [게시 개요](../../ui/publishing/overview.md)를 참조하십시오.
+빌드와 태그가 태그의 게시 작업 과정에 어떻게 적합한지 여부에 대한 일반적인 내용은 [게시 개요](../../ui/publishing/overview.md).
 
 ## 시작하기
 
-이 안내서에 사용된 끝점은 [Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/)의 일부입니다. 계속하기 전에 API 인증 방법에 대한 중요한 정보가 필요하면 [시작 안내서](../getting-started.md)를 검토하십시오.
+이 안내서에 사용된 엔드포인트는 [Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/). 계속하기 전에 [시작 안내서](../getting-started.md) 를 참조하십시오.
 
 ## 빌드 목록 검색 {#list}
 
@@ -38,13 +39,13 @@ GET /libraries/{LIBRARY_ID}/builds
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `LIBRARY_ID` | 빌드할 라이브러리의 `id` |
+| `LIBRARY_ID` | 다음 `id` 추가할 빌드가 있는 라이브러리 중에서 선택합니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
 >[!NOTE]
 >
->쿼리 매개 변수를 사용하여 나열된 빌드는 다음 속성을 기반으로 필터링할 수 있습니다.<ul><li>`created_at`</li><li>`status`</li><li>`token`</li><li>`updated_at`</li></ul>자세한 내용은 [응답 필터링](../guides/filtering.md)에 대한 안내서를 참조하십시오.
+>쿼리 매개 변수를 사용하여 나열된 빌드는 다음 속성을 기반으로 필터링할 수 있습니다.<ul><li>`created_at`</li><li>`status`</li><li>`token`</li><li>`updated_at`</li></ul>다음 안내서를 참조하십시오. [응답 필터링](../guides/filtering.md) 추가 정보.
 
 **요청**
 
@@ -53,7 +54,7 @@ curl -X GET \
   https://reactor.adobe.io/libraries/LBad32d71feff844b7b5a11dd0bf030964/builds \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -155,7 +156,7 @@ GET /builds/{BUILD_ID}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `BUILD_ID` | 조회할 빌드의 `id` |
+| `BUILD_ID` | 다음 `id` 조회하려는 빌드 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -166,7 +167,7 @@ curl -X GET \
   https://reactor.adobe.io/builds/BL8238895201d548718bda2d0bf2b83467 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -257,7 +258,7 @@ POST /libraries/{LIBRARY_ID}/builds
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `LIBRARY_ID` | 빌드를 정의하는 라이브러리의 `id` |
+| `LIBRARY_ID` | 다음 `id` 아래에 빌드를 정의하는 라이브러리. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -270,7 +271,7 @@ curl -X POST \
   https://reactor.adobe.io/libraries/LBd8eaef8283fe40738348db65a8984475/builds \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
 **응답**
@@ -349,7 +350,7 @@ curl -X POST \
 
 ## 빌드 다시 게시 {#republish}
 
-PATCH 요청 경로에 해당 ID를 포함하여 [게시된 라이브러리](./libraries.md#publish)에서 빌드를 다시 게시할 수 있습니다.
+빌드를 [게시된 라이브러리](./libraries.md#publish) PATCH 요청 경로에 해당 ID를 포함하여
 
 **API 형식**
 
@@ -359,20 +360,20 @@ PATCH /builds/{BUILD_ID}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `BUILD_ID` | 다시 게시할 빌드의 `id` |
+| `BUILD_ID` | 다음 `id` 다시 게시할 빌드 입니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **요청**
 
-다음 요청은 기존 앱 구성에 대한 `app_id`을 업데이트합니다.
+다음 요청은 를 업데이트합니다 `app_id` 기존 앱 구성에 대해 설명합니다.
 
 ```shell
 curl -X PATCH \
   https://reactor.adobe.io/builds/BLb408c04c20ba4a82b6df496969a99781 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
   -d '{
         "data": {
@@ -387,9 +388,9 @@ curl -X PATCH \
 
 | 속성 | 설명 |
 | --- | --- |
-| `id` | 업데이트할 빌드의 `id` 이 값은 요청 경로에 제공된 `{BUILD_ID}` 값과 일치해야 합니다. |
-| `type` | 업데이트할 리소스 유형입니다. 이 끝점의 경우 값은 `builds`이어야 합니다. |
-| `meta.action` | 수행할 PATCH 작업 유형입니다. `republish`(으)로 설정해야 합니다. |
+| `id` | 다음 `id` 업데이트할 빌드의 일부입니다. 이 옵션은 와 일치해야 합니다. `{BUILD_ID}` 요청 경로에 제공된 값입니다. |
+| `type` | 업데이트할 리소스 유형입니다. 이 끝점의 경우 값은 `builds`. |
+| `meta.action` | 수행할 PATCH 작업 유형입니다. 을(를) 로 설정해야 합니다. `republish`. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -470,13 +471,13 @@ curl -X PATCH \
 
 ## 빌드에 대한 관련 리소스 검색 {#related}
 
-다음 호출에서는 빌드에 대한 관련 리소스를 검색하는 방법을 보여 줍니다. [빌드](#lookup)를 조회하면 이러한 관계가 `relationships` 속성 아래에 나열됩니다.
+다음 호출에서는 빌드에 대한 관련 리소스를 검색하는 방법을 보여 줍니다. When [빌드 조회](#lookup)로 설정되면 이러한 관계는 `relationships` 속성을 사용합니다.
 
-Reactor API의 관계에 대한 자세한 내용은 [관계 안내서](../guides/relationships.md)를 참조하십시오.
+자세한 내용은 [관계 안내서](../guides/relationships.md) 를 참조하십시오.
 
 ### 빌드에 대한 관련 데이터 요소 나열 {#data-elements}
 
-조회 요청의 경로에 `/data_elements`을 추가하여 빌드에 대한 관련 데이터 요소를 나열할 수 있습니다.
+를 추가하여 빌드에 대한 관련 데이터 요소를 나열할 수 있습니다 `/data_elements` 조회 요청의 경로에 추가할 수 없습니다.
 
 **API 형식**
 
@@ -486,7 +487,7 @@ GET  /builds/{BUILD_ID}/data_elements
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{BUILD_ID}` | 데이터 요소를 나열할 빌드의 `id` |
+| `{BUILD_ID}` | 다음 `id` 목록을 만들 수 있습니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -497,7 +498,7 @@ curl -X GET \
   https://reactor.adobe.io/builds/BLb408c04c20ba4a82b6df496969a99781/data_elements \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -617,7 +618,7 @@ curl -X GET \
 
 ### 빌드에 대한 관련 확장 나열 {#extensions}
 
-조회 요청의 경로에 `/extensions`을 추가하여 빌드에 대한 관련 확장을 나열할 수 있습니다.
+를 추가하여 빌드에 대한 관련 확장 목록을 만들 수 있습니다 `/extensions` 조회 요청의 경로에 추가할 수 없습니다.
 
 **API 형식**
 
@@ -627,7 +628,7 @@ GET  /builds/{BUILD_ID}/extensions
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{BUILD_ID}` | 확장을 나열할 빌드의 `id` |
+| `{BUILD_ID}` | 다음 `id` 확장을 나열할 빌드 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -638,7 +639,7 @@ curl -X GET \
   https://reactor.adobe.io/builds/BLb408c04c20ba4a82b6df496969a99781/extensions \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -748,7 +749,7 @@ curl -X GET \
 
 ### 빌드에 대한 관련 규칙 나열 {#rules}
 
-조회 요청의 경로에 `/rules`을 추가하여 빌드에 대한 관련 규칙을 나열할 수 있습니다.
+를 추가하여 빌드에 대한 관련 규칙을 나열할 수 있습니다 `/rules` 조회 요청의 경로에 추가할 수 없습니다.
 
 **API 형식**
 
@@ -758,7 +759,7 @@ GET  /builds/{BUILD_ID}/rules
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{BUILD_ID}` | 규칙을 나열할 빌드의 `id` |
+| `{BUILD_ID}` | 다음 `id` 규칙을 나열할 빌드 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -769,7 +770,7 @@ curl -X GET \
   https://reactor.adobe.io/builds/BLb408c04c20ba4a82b6df496969a99781/rules \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -861,7 +862,7 @@ curl -X GET \
 
 ### 빌드에 대한 관련 라이브러리 조회 {#library}
 
-조회 요청의 경로에 `/library`을 추가하여 빌드에 대한 관련 라이브러리를 검색할 수 있습니다.
+를 추가하여 빌드에 대한 관련 라이브러리를 검색할 수 있습니다 `/library` 조회 요청의 경로에 추가할 수 없습니다.
 
 **API 형식**
 
@@ -871,7 +872,7 @@ GET  /builds/{BUILD_ID}/library
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{BUILD_ID}` | 라이브러리를 조회하려는 빌드의 `id` |
+| `{BUILD_ID}` | 다음 `id` 조회하려는 빌드의 라이브러리. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -882,7 +883,7 @@ curl -X GET \
   https://reactor.adobe.io/builds/BLb408c04c20ba4a82b6df496969a99781/library \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -974,7 +975,7 @@ curl -X GET \
 
 ### 빌드에 대한 관련 환경 조회 {#environment}
 
-조회 요청의 경로에 `/environment`을 추가하여 빌드에 대한 관련 환경을 검색할 수 있습니다.
+를 추가하여 빌드에 대한 관련 환경을 검색할 수 있습니다 `/environment` 조회 요청의 경로에 추가할 수 없습니다.
 
 **API 형식**
 
@@ -984,7 +985,7 @@ GET  /builds/{BUILD_ID}/environment
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{BUILD_ID}` | 찾아볼 환경의 `id` |
+| `{BUILD_ID}` | 다음 `id` 조회하려는 환경을 만드는 중입니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -995,7 +996,7 @@ curl -X GET \
   https://reactor.adobe.io/builds/BLb408c04c20ba4a82b6df496969a99781/environment \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```

@@ -5,7 +5,7 @@ title: 샌드박스 개요
 topic-legacy: overview
 description: 샌드박스는 단일 Experience Platform 인스턴스 내의 가상 파티션으로, 디지털 경험 애플리케이션의 개발 프로세스와의 원활한 통합을 지원합니다.
 exl-id: b760a979-8134-4a44-8433-ec6fb49bc508
-source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1005'
 ht-degree: 0%
@@ -24,11 +24,11 @@ Adobe Experience Platform은 디지털 경험 애플리케이션을 전 세계�
 
 샌드박스는 단일 Experience Platform 인스턴스 내의 가상 파티션으로, 디지털 경험 애플리케이션의 개발 프로세스와의 원활한 통합을 지원합니다. 샌드박스 내에서 수행한 모든 컨텐츠 및 작업은 해당 샌드박스에만 국한되며 다른 샌드박스에는 영향을 주지 않습니다. Experience Platform에서 지원되는 샌드박스는 두 가지입니다.
 
-* **프로덕션 샌드박스**: 프로덕션 샌드박스는 프로덕션 환경의 프로필과 함께 사용하기 위한 것입니다. Platform을 사용하면 운영 격리 상태를 유지하면서 데이터에 적합한 기능을 제공하기 위해 여러 개의 프로덕션 샌드박스를 만들 수 있습니다. 이 기능을 사용하면 특정 프로덕션 샌드박스를 고유한 비즈니스, 브랜드, 프로젝트 또는 지역 라인에 전용으로 사용할 수 있습니다. 프로덕션 샌드박스는 라이선스가 부여된 [!DNL Profile] 약정(승인된 모든 프로덕션 샌드박스에서 누적 측정됨)까지 많은 프로덕션 프로필을 지원합니다. 공인 [!DNL Profile](승인된 모든 프로덕션 샌드박스에서 누적 측정됨)당 라이선스가 부여된 평균 프로필을 사용할 수 있습니다.
-* **개발 샌드박스**: 개발 샌드박스는 비프로덕션 프로필과 함께 개발 및 테스트에만 사용할 수 있는 샌드박스입니다. 개발 샌드박스는 라이선스가 부여된 [!DNL Profile] 약속의 최대 10%까지 비프로덕션 프로필의 볼륨을 지원합니다(승인된 모든 개발 샌드박스에서 누적 측정됨). 다음과 같은 권한이 있습니다.
+* **프로덕션 샌드박스**: 프로덕션 샌드박스는 프로덕션 환경의 프로필과 함께 사용하기 위한 것입니다. Platform을 사용하면 운영 격리 상태를 유지하면서 데이터에 적합한 기능을 제공하기 위해 여러 개의 프로덕션 샌드박스를 만들 수 있습니다. 이 기능을 사용하면 특정 프로덕션 샌드박스를 고유한 비즈니스, 브랜드, 프로젝트 또는 지역 라인에 전용으로 사용할 수 있습니다. 프로덕션 샌드박스는 라이선스가 부여된 프로필까지 많은 프로덕션 프로필을 지원합니다 [!DNL Profile] 약정(승인된 모든 프로덕션 샌드박스에서 누적 측정됨). 공인 평균 프로필을 사용할 수 있습니다 [!DNL Profile] (승인된 모든 프로덕션 샌드박스에서 누적 측정됨).
+* **개발 샌드박스**: 개발 샌드박스는 비프로덕션 프로필과 함께 개발 및 테스트에만 사용할 수 있는 샌드박스입니다. 개발 샌드박스는 라이선스가 부여된 비프로덕션 프로필의 최대 10%까지 지원합니다 [!DNL Profile] 약정(승인된 모든 개발 샌드박스에서 누적 측정됨). 다음과 같은 권한이 있습니다.
    * 승인된 비프로덕션 프로필당 평균 비프로덕션 프로필 가격 75KB(승인된 모든 개발 샌드박스에서 누적 측정)
    * 개발 샌드박스박스당 하루에 하나의 일괄 세분화 작업
-   * 연간 [!DNL Profile]당 평균 120개의 [!DNL Profile] API 호출(승인된 모든 개발 샌드박스에서 누적 측정됨)입니다.
+   * 평균 120 [!DNL Profile] API 호출, 단위 [!DNL Profile]연간 ,(승인된 모든 개발 샌드박스에서 누적 측정됨).
 
 Experience Platform 인스턴스는 여러 프로덕션 및 개발 샌드박스를 지원하며 각 샌드박스는 스키마, 데이터 세트, 프로필 등 플랫폼 리소스와 관련된 자체 독립 라이브러리를 유지합니다. 또한 프로덕션 샌드박스와 개발 샌드박스에는 고객이 생성한 모든 리소스를 샌드박스에서 제거하는 재설정 기능이 있습니다. 개발 샌드박스를 프로덕션 샌드박스로 변환할 수 없습니다.
 
@@ -48,37 +48,37 @@ Experience Platform 인스턴스는 여러 프로덕션 및 개발 샌드박스�
 
 ## 샌드박스에 대한 액세스 제어
 
-기본적으로 조직의 모든 사용자는 프로덕션 샌드박스에 액세스할 수 있습니다. 비프로덕션 샌드박스에 대한 액세스 권한은 [Adobe Admin Console](https://adminconsole.adobe.com)을 통해 시스템 관리자, 제품 관리자 또는 제품 프로필 관리자가 부여해야 합니다.
+기본적으로 조직의 모든 사용자는 프로덕션 샌드박스에 액세스할 수 있습니다. 비프로덕션 샌드박스에 대한 액세스 권한은 시스템 관리자, 제품 관리자 또는 제품 프로필 관리자가 [Adobe Admin Console](https://adminconsole.adobe.com).
 
 비프로덕션 샌드박스를 보기, 만들기, 업데이트 또는 삭제하려면 사용자에게 샌드박스 관리 권한도 부여받아야 합니다.
 
-샌드박스의 역할 및 권한 관리에 대한 자세한 내용은 [액세스 제어 개요](../access-control/home.md)를 참조하십시오.
+샌드박스의 역할 및 권한 관리에 대한 자세한 내용은 [액세스 제어 개요](../access-control/home.md).
 
 ## Experience Platform UI의 샌드박스
 
-[Experience Platform 사용자 인터페이스](https://platform.adobe.com)에서 사용자는 화면 왼쪽 상단에 있는 **샌드박스 전환기** 컨트롤을 사용하여 액세스 가능한 샌드박스 간을 전환할 수 있습니다.  샌드박스 관리 권한이 있는 사용자도 왼쪽 탐색에서 **[!UICONTROL 샌드박스]** 탭에 액세스하여 조직의 샌드박스를 보고 관리할 수 있습니다. UI에서 샌드박스를 사용하는 방법에 대한 자세한 내용은 [샌드박스 사용 안내서](ui/overview.md)를 참조하십시오.
+에서 [Experience Platform 사용자 인터페이스](https://platform.adobe.com)를 사용하는 경우 사용자는 **샌드박스 전환기** 화면의 왼쪽 상단에 있는 컨트롤입니다.  샌드박스 관리 권한이 있는 사용자도 **[!UICONTROL 샌드박스]** 조직의 샌드박스를 보고 관리할 수 있는 왼쪽 탐색의 탭입니다. UI에서 샌드박스를 사용하여 작업하는 방법에 대한 자세한 내용은 [샌드박스 사용 안내서](ui/overview.md).
 
 ## Experience Platform API의 샌드박스
 
-Experience Platform API를 호출할 때 헤더 `x-sandbox-name` 아래에 샌드박스 이름을 제공해야 합니다. 예를 들어 [[!DNL Catalog Service API]](https://www.adobe.io/experience-platform-apis/references/catalog/)을 호출하여 프로덕션 샌드박스 내의 모든 데이터 세트를 볼 때 API 요청에서 샌드박스의 이름(&quot;prod&quot;)이 헤더로 제공됩니다.
+Experience Platform API를 호출할 때 헤더 아래에 샌드박스 이름을 제공해야 합니다 `x-sandbox-name`. 예를 들어 를 호출할 때 [[!DNL Catalog Service API]](https://www.adobe.io/experience-platform-apis/references/catalog/) 프로덕션 샌드박스 내의 모든 데이터 세트를 보기 위해 API 요청에서 샌드박스의 이름(&quot;prod&quot;)이 헤더로 제공됩니다.
 
 ```shell
 curl -X GET \
   https://platform.adobe.io/data/foundation/catalog/dataSets \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: prod'
 ```
 
-`x-sandbox-name`이 API 호출에 포함되지 않으면 시스템은 대신 기본 샌드박스를 사용합니다. 하지만 가장 좋은 방법은 기본 샌드박스를 사용하는 경우에도 모든 API 호출에 이 헤더를 항상 포함하는 것입니다. 이러한 이유로 Experience Platform에 대한 API 설명서는 `x-sandbox-name`을 필수 헤더로 처리합니다.
+If `x-sandbox-name` 가 API 호출에 포함되지 않은 경우 시스템은 대신 기본 샌드박스를 사용합니다. 하지만 가장 좋은 방법은 기본 샌드박스를 사용하는 경우에도 모든 API 호출에 이 헤더를 항상 포함하는 것입니다. 이러한 이유로 Experience Platform 처리에 대한 API 설명서입니다 `x-sandbox-name` 을 필수 헤더로 사용합니다.
 
 ### 샌드박스 API
 
-샌드박스 API를 사용하면 RESTful API 작업을 사용하여 샌드박스를 관리할 수 있습니다. 올바른 형식의 요청 및 예제 응답을 포함하여 API를 사용하는 방법에 대한 자세한 내용은 [샌드박스 개발자 안내서](api/overview.md)를 참조하십시오.
+샌드박스 API를 사용하면 RESTful API 작업을 사용하여 샌드박스를 관리할 수 있습니다. 자세한 내용은 [샌드박스 개발자 안내서](api/overview.md) 적절한 형식의 요청 및 예제 응답을 포함하여 API 사용 방법에 대한 자세한 정보.
 
 ## 다음 단계
 
-이 문서를 읽은 후에는 Experience Platform의 샌드박스에 대한 기본 개념을 도입했습니다. 샌드박스를 관리하는 방법에 대한 자세한 단계는 UI에 대한 [사용 안내서](ui/overview.md) 또는 API에 대한 [개발자 안내서](./api/getting-started.md)를 참조하십시오.
+이 문서를 읽은 후에는 Experience Platform의 샌드박스에 대한 기본 개념을 도입했습니다. 샌드박스를 관리하는 방법에 대한 자세한 단계는 [사용 안내서](ui/overview.md) UI 또는 [개발자 안내서](./api/getting-started.md) API용.
 
-샌드박스는 개발 팀을 위해 플랫폼 환경을 분리하는 중요한 도구 역할을 하지만 Adobe Admin Console을 사용하여 보다 세부적인 액세스 제어를 관리할 수도 있습니다. 자세한 내용은 [액세스 제어 개요](../access-control/home.md)를 참조하십시오.
+샌드박스는 개발 팀을 위해 플랫폼 환경을 분리하는 중요한 도구 역할을 하지만 Adobe Admin Console을 사용하여 보다 세부적인 액세스 제어를 관리할 수도 있습니다. 자세한 내용은 [액세스 제어 개요](../access-control/home.md) 추가 정보.

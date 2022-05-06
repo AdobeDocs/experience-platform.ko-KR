@@ -3,7 +3,7 @@ title: Privacy Service API 시작하기
 description: Privacy Service API를 인증하는 방법과 설명서에서 예제 API 호출을 해석하는 방법을 알아봅니다.
 topic-legacy: developer guide
 exl-id: c1d05e30-ef8f-4adf-87e0-1d6e3e9e9f9e
-source-git-commit: 6dcbf2df46ba35104abd9c4e6412799e77c9c49f
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '669'
 ht-degree: 1%
@@ -26,23 +26,23 @@ Privacy Service API를 호출하려면 먼저 필수 헤더에서 사용할 액�
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
+* `x-gw-ims-org-id: {ORG_ID}`
 
-이 작업에는 Adobe Admin Console에서 Adobe Experience Platform에 대한 개발자 권한을 가져온 다음 Adobe 개발자 콘솔에서 자격 증명을 생성하는 작업이 포함됩니다.
+이 작업에는 Adobe Admin Console에서 Adobe Experience Platform에 대한 개발자 권한을 가져온 다음 Adobe Developer 콘솔에서 자격 증명을 생성하는 작업이 포함됩니다.
 
 ### 개발자에게 Experience Platform 액세스 권한 얻기
 
-개발자 액세스 권한을 얻으려면 [!DNL Platform]에서 의 시작 단계를 따릅니다. [Experience Platform 인증 자습서](https://www.adobe.com/go/platform-api-authentication-en). &quot;Adobe 개발자 콘솔에서 액세스 자격 증명 생성&quot; 단계에 도달하면 이 자습서로 돌아가 Privacy Service과 관련된 자격 증명을 생성합니다.
+개발자 액세스 권한을 얻으려면 [!DNL Platform]에서 의 시작 단계를 따릅니다. [Experience Platform 인증 자습서](https://www.adobe.com/go/platform-api-authentication-en). &quot;Adobe Developer 콘솔에서 액세스 자격 증명 생성&quot; 단계에 도달하면 이 자습서로 돌아가 Privacy Service과 관련된 자격 증명을 생성합니다.
 
 ### 액세스 자격 증명 생성
 
-Adobe 개발자 콘솔을 사용하여 다음 세 가지 액세스 자격 증명을 생성해야 합니다.
+Adobe Developer 콘솔을 사용하여 다음 세 가지 액세스 자격 증명을 생성해야 합니다.
 
-* `{IMS_ORG}`
+* `{ORG_ID}`
 * `{API_KEY}`
 * `{ACCESS_TOKEN}`
 
-사용자 `{IMS_ORG}` 및 `{API_KEY}` 한 번만 생성하면 되고 향후 API 호출에서 다시 사용할 수 있습니다. 그러나, `{ACCESS_TOKEN}` 는 일시적이며 24시간마다 다시 생성해야 합니다.
+사용자 `{ORG_ID}` 및 `{API_KEY}` 한 번만 생성하면 되고 향후 API 호출에서 다시 사용할 수 있습니다. 그러나, `{ACCESS_TOKEN}` 는 일시적이며 24시간마다 다시 생성해야 합니다.
 
 이러한 값을 생성하는 단계는 아래에 자세히 설명되어 있습니다.
 
@@ -69,13 +69,13 @@ Adobe 개발자 콘솔을 사용하여 다음 세 가지 액세스 자격 증명
 프로젝트에 API가 추가되면 프로젝트 페이지가 다시 **Privacy Service API 개요** 페이지. 여기에서 아래로 스크롤하여 **[!UICONTROL 서비스 계정(JWT)]** 섹션, Privacy Service API에 대한 모든 호출에 필요한 다음 액세스 자격 증명을 제공합니다.
 
 * **[!UICONTROL 클라이언트 ID]**: 클라이언트 ID는 필수입니다 `{API_KEY}` 의 경우 x-api-key 헤더에 제공해야 합니다.
-* **[!UICONTROL 조직 ID]**: 조직 ID는 `{IMS_ORG}` x-gw-ims-org-id 헤더에서 사용해야 하는 값입니다.
+* **[!UICONTROL 조직 ID]**: 조직 ID는 `{ORG_ID}` x-gw-ims-org-id 헤더에서 사용해야 하는 값입니다.
 
 ![](../images/api/getting-started/jwt-credentials.png)
 
 #### 각 세션에 대한 인증
 
-수집해야 하는 최종 필수 자격 증명은 `{ACCESS_TOKEN}`: Authorization 헤더에 사용됩니다. 에 대한 값과 달리 `{API_KEY}` 및 `{IMS_ORG}`를 계속 사용하려면 24시간마다 새 토큰을 생성해야 합니다 [!DNL Platform] API.
+수집해야 하는 최종 필수 자격 증명은 `{ACCESS_TOKEN}`: Authorization 헤더에 사용됩니다. 에 대한 값과 달리 `{API_KEY}` 및 `{ORG_ID}`를 계속 사용하려면 24시간마다 새 토큰을 생성해야 합니다 [!DNL Platform] API.
 
 새 `{ACCESS_TOKEN}`앞에서 다운로드한 개인 키를 열고 옆에 있는 텍스트 상자에 내용을 붙여 넣습니다. **[!UICONTROL 액세스 토큰 생성]** 선택하기 전에 **[!UICONTROL 토큰 생성]**.
 

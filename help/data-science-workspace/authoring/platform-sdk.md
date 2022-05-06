@@ -5,7 +5,7 @@ title: Adobe Experience Platform Platform SDK를 사용한 모델 작성
 topic-legacy: SDK authoring
 description: 이 자습서에서는 data_access_sdk_python을 Python 및 R 모두에서 새 Python platform_sdk로 변환하는 방법에 대해 설명합니다.
 exl-id: 20909cae-5cd2-422b-8dbb-35bc63e69b2a
-source-git-commit: 38c493e6306e493f4ef5caf90509bda6f4d80023
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '495'
 ht-degree: 5%
@@ -37,7 +37,7 @@ Jupiter Notebook을 사용하지 않거나 IMS 조직을 변경해야 하는 경
 ```python
 from platform_sdk.client_context import ClientContext
 client_context = ClientContext(api_key={API_KEY},
-              org_id={IMS_ORG},
+              org_id={ORG_ID},
               user_token={USER_TOKEN},
               service_token={SERVICE_TOKEN})
 ```
@@ -62,7 +62,7 @@ library(reticulate)
 use_python("/usr/local/bin/ipython")
 psdk <- import("platform_sdk")
 client_context <- psdk$client_context$ClientContext(api_key={API_KEY},
-              org_id={IMS_ORG},
+              org_id={ORG_ID},
               user_token={USER_TOKEN},
               service_token={SERVICE_TOKEN})
 ```

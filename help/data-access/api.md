@@ -5,7 +5,7 @@ title: Data Access API 안내서
 topic-legacy: developer guide
 description: 데이터 액세스 API는 Experience Platform 내에서 수집된 데이터 세트의 검색 기능 및 액세스 가능성에 중점을 둔 RESTful 인터페이스를 개발자에게 제공하여 Adobe Experience Platform을 지원합니다.
 exl-id: 278ec322-dafa-4e3f-ae45-2d20459c5653
-source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '524'
 ht-degree: 5%
@@ -14,13 +14,13 @@ ht-degree: 5%
 
 # Data Access API 안내서
 
-데이터 액세스 API는 [!DNL Experience Platform] 내에서 수집된 데이터 세트의 검색 기능과 액세스 가능성에 중점을 둔 RESTful 인터페이스를 사용자에게 제공하여 Adobe Experience Platform을 지원합니다.
+데이터 액세스 API는 내에서 수집된 데이터 세트의 검색 기능과 액세스 가능성에 중점을 둔 RESTful 인터페이스를 사용자에게 제공하여 Adobe Experience Platform을 지원합니다 [!DNL Experience Platform].
 
 ![Experience Platform에 대한 데이터 액세스](images/Data_Access_Experience_Platform.png)
 
 ## API 사양 참조
 
-Swagger API 참조 설명서는 [여기](https://www.adobe.io/experience-platform-apis/references/data-access/)에 있습니다.
+Swagger API 참조 설명서를 찾을 수 있습니다 [여기](https://www.adobe.io/experience-platform-apis/references/data-access/).
 
 ## 용어
 
@@ -51,7 +51,7 @@ GET /batches/{BATCH_ID}/files
 curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/files \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -94,7 +94,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/
 }
 ```
 
-`"data"` 배열에 지정된 일괄 처리 내의 모든 파일 목록이 포함되어 있습니다. 반환되는 각 파일에는 `"dataSetFileId"` 필드 내에 포함된 고유한 ID(`{FILE_ID}`)가 있습니다. 그런 다음 이 고유 ID를 사용하여 파일에 액세스하거나 다운로드할 수 있습니다.
+다음 `"data"` 배열에 지정된 일괄 처리 내의 모든 파일 목록이 포함되어 있습니다. 반환되는 각 파일에는 고유한 ID( )가 있습니다`{FILE_ID}`)에 포함되어 있습니다 `"dataSetFileId"` 필드. 그런 다음 이 고유 ID를 사용하여 파일에 액세스하거나 다운로드할 수 있습니다.
 
 | 속성 | 설명 |
 | -------- | ----------- |
@@ -103,7 +103,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/
 
 ## 일괄 처리 내에서 파일 액세스 및 다운로드
 
-파일 식별자(`{FILE_ID}`)를 사용하면 데이터 액세스 API를 사용하여 파일 이름, 크기(바이트) 및 다운로드 링크 등 파일의 특정 세부 정보에 액세스할 수 있습니다.
+파일 식별자(`{FILE_ID}`). 데이터 액세스 API를 사용하여 파일 이름, 크기(바이트) 및 다운로드 링크 등 파일의 특정 세부 정보에 액세스할 수 있습니다.
 
 응답에는 데이터 배열이 포함됩니다. ID로 가리키는 파일이 개별 파일인지 아니면 디렉토리인지에 따라 반환되는 데이터 배열에 해당 디렉토리에 속하는 파일 목록이나 단일 항목이 포함될 수 있습니다. 각 파일 요소에는 파일의 세부 정보가 포함됩니다.
 
@@ -115,7 +115,7 @@ GET /files/{FILE_ID}
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `{FILE_ID}` | 액세스할 파일의 ID인 `"dataSetFileId"`와 같습니다. |
+| `{FILE_ID}` | 과 같음 `"dataSetFileId"`: 액세스할 파일의 ID입니다. |
 
 **요청**
 
@@ -123,7 +123,7 @@ GET /files/{FILE_ID}
 curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID} \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -203,7 +203,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID} \
 
 ## 파일의 내용 액세스
 
-[!DNL Data Access] API를 사용하여 파일의 컨텐츠에 액세스할 수도 있습니다. 그런 다음 컨텐츠를 외부 소스로 다운로드하는 데 사용할 수 있습니다.
+다음 [!DNL Data Access] API를 사용하여 파일의 컨텐츠에 액세스할 수도 있습니다. 그런 다음 컨텐츠를 외부 소스로 다운로드하는 데 사용할 수 있습니다.
 
 **API 형식**
 
@@ -221,7 +221,7 @@ GET /files/{dataSetFileId}?path={FILE_NAME}
 curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID}?path={FILE_NAME} \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -236,8 +236,8 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID}?pat
 
 ## 추가 코드 샘플
 
-추가 샘플은 [데이터 액세스 자습서](tutorials/dataset-data.md)를 참조하십시오.
+추가 샘플은 [데이터 액세스 자습서](tutorials/dataset-data.md).
 
 ## 데이터 수집 이벤트에 가입
 
-[!DNL Platform] 은  [Adobe 개발자 콘솔을 통해 구독에 특정 고값 이벤트를 사용할 수 있도록 합니다](https://www.adobe.com/go/devs_console_ui). 예를 들어 데이터 수집 이벤트에 가입하여 발생 가능한 지연 및 실패에 대한 알림을 받을 수 있습니다. 자세한 내용은 [데이터 수집 알림 가입](../ingestion/quality/subscribe-events.md)의 자습서를 참조하십시오.
+[!DNL Platform] 은 을 통해 특정 고부가가치 이벤트를 구독에 사용할 수 있도록 합니다. [Adobe 개발자 콘솔](https://www.adobe.com/go/devs_console_ui). 예를 들어 데이터 수집 이벤트에 가입하여 발생 가능한 지연 및 실패에 대한 알림을 받을 수 있습니다. 다음에서 자습서를 참조하십시오. [데이터 수집 알림 가입](../ingestion/quality/subscribe-events.md) 추가 정보.

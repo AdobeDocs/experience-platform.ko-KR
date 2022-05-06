@@ -2,7 +2,7 @@
 title: Reactor API 시작하기
 description: 필요한 액세스 자격 증명을 생성하는 단계를 포함하여 Reactor API를 시작하는 방법을 알아봅니다.
 exl-id: fc1acc1d-6cfb-43c1-9ba9-00b2730cad5a
-source-git-commit: 04e778d3318d60733772c2042c8bb272f0c87d5c
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1060'
 ht-degree: 1%
@@ -15,23 +15,23 @@ ht-degree: 1%
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
+* `x-gw-ims-org-id: {ORG_ID}`
 
-이 안내서에서는 Reactor API를 호출할 수 있도록 Adobe 개발자 콘솔을 사용하여 이러한 각 헤더에 대한 값을 수집하는 방법을 설명합니다.
+이 안내서에서는 Reactor API를 호출할 수 있도록 Adobe Developer 콘솔을 사용하여 이러한 각 헤더에 대한 값을 수집하는 방법을 설명합니다.
 
 ## 개발자 액세스 권한 얻기 Adobe Experience Platform
 
-Reactor API에 대한 인증 값을 생성하려면 먼저 개발자가 Experience Platform에 액세스할 수 있어야 합니다. 개발자 액세스 권한을 얻으려면 [Experience Platform 인증 자습서](https://www.adobe.com/go/platform-api-authentication-en). &quot;Adobe 개발자 콘솔에서 액세스 자격 증명 생성&quot; 단계에 도달하면 이 자습서로 돌아가 Reactor API에 대한 자격 증명을 생성합니다.
+Reactor API에 대한 인증 값을 생성하려면 먼저 개발자가 Experience Platform에 액세스할 수 있어야 합니다. 개발자 액세스 권한을 얻으려면 [Experience Platform 인증 자습서](https://www.adobe.com/go/platform-api-authentication-en). &quot;Adobe Developer 콘솔에서 액세스 자격 증명 생성&quot; 단계에 도달하면 이 자습서로 돌아가서 Reactor API에 대한 자격 증명을 생성합니다.
 
 ## 액세스 자격 증명 생성
 
-Adobe 개발자 콘솔을 사용하여 다음 세 가지 액세스 자격 증명을 생성해야 합니다.
+Adobe Developer 콘솔을 사용하여 다음 세 가지 액세스 자격 증명을 생성해야 합니다.
 
-* `{IMS_ORG}`
+* `{ORG_ID}`
 * `{API_KEY}`
 * `{ACCESS_TOKEN}`
 
-IMS 조직의 ID(`{IMS_ORG}`) 및 API 키(`{API_KEY}`)은 처음 생성된 후 향후 API 호출에서 재사용할 수 있습니다. 그러나 액세스 토큰(`{ACCESS_TOKEN}`)는 일시적이며 24시간마다 다시 생성해야 합니다.
+IMS 조직의 ID(`{ORG_ID}`) 및 API 키(`{API_KEY}`)은 처음 생성된 후 향후 API 호출에서 재사용할 수 있습니다. 그러나 액세스 토큰(`{ACCESS_TOKEN}`)는 일시적이며 24시간마다 다시 생성해야 합니다.
 
 이러한 값을 생성하는 단계는 아래에 자세히 설명되어 있습니다.
 
@@ -70,13 +70,13 @@ IMS 조직의 ID(`{IMS_ORG}`) 및 API 키(`{API_KEY}`)은 처음 생성된 후 �
 프로젝트에 API가 추가되면 프로젝트 페이지가 반응기 API Experience Platform 페이지에 다시 나타납니다. 여기에서 아래로 스크롤하여 **서비스 계정(JWT)** 섹션 - Reactor API 호출에서 필요한 다음 액세스 자격 증명을 제공합니다.
 
 * **클라이언트 ID**: 클라이언트 ID는 필수입니다 `{API_KEY}` 여기서 `x-api-key` 헤더.
-* **조직 ID**: 조직 ID는 `{IMS_ORG}` 에 사용해야 하는 값 `x-gw-ims-org-id` 헤더.
+* **조직 ID**: 조직 ID는 `{ORG_ID}` 에 사용해야 하는 값 `x-gw-ims-org-id` 헤더.
 
 ![](../images/api/getting-started/access-creds.png)
 
 ### 각 세션에 대한 인증
 
-이제 당신이 `{API_KEY}` 및 `{IMS_ORG}` 값을 지정하면 최종 단계에서 `{ACCESS_TOKEN}` 값.
+이제 당신이 `{API_KEY}` 및 `{ORG_ID}` 값을 지정하면 최종 단계에서 `{ACCESS_TOKEN}` 값.
 
 >[!NOTE]
 >
@@ -153,7 +153,7 @@ curl -X POST \
 
 ## 다음 단계
 
-이 자습서의 단계에 따라 다음 식에 유효한 값이 있어야 합니다 `{IMS_ORG}`, `{API_KEY}`, 및 `{ACCESS_TOKEN}`. 이제 Reactor API에 대한 간단한 cURL 요청에서 이러한 값을 사용하여 테스트할 수 있습니다.
+이 자습서의 단계에 따라 다음 식에 유효한 값이 있어야 합니다 `{ORG_ID}`, `{API_KEY}`, 및 `{ACCESS_TOKEN}`. 이제 Reactor API에 대한 간단한 cURL 요청에서 이러한 값을 사용하여 테스트할 수 있습니다.
 
 에 API 호출을 시도하여 시작합니다 [모든 회사 목록](./endpoints/companies.md#list).
 

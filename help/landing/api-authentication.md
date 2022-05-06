@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: 이 문서에서는 Experience Platform API를 호출하기 위해 Adobe Experience Platform 개발자 계정에 액세스할 수 있는 단계별 자습서를 제공합니다.
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
-source-git-commit: f5f4230c85a16aba00d0071b388e8305ccc654d5
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1272'
 ht-degree: 6%
@@ -20,7 +20,7 @@ ht-degree: 6%
 
 * `{ACCESS_TOKEN}`
 * `{API_KEY}`
-* `{IMS_ORG}`
+* `{ORG_ID}`
 
 애플리케이션 및 사용자의 보안을 유지 관리하려면 OAuth 및 JSON 웹 토큰(JWT)과 같은 표준을 사용하여 Adobe I/O API에 대한 모든 요청을 인증하고 인증해야 합니다. JWT는 클라이언트별 정보와 함께 사용하여 개인 액세스 토큰을 생성합니다.
 
@@ -43,7 +43,7 @@ Experience Platform API를 성공적으로 호출하려면 다음을 수행해�
 
 ## Experience Platform에 대한 개발자 및 사용자 액세스 권한 얻기
 
-Adobe 개발자 콘솔에서 통합을 만들기 전에 계정에 Adobe Admin Console의 Experience Platform 제품 프로필에 대한 개발자 및 사용자 권한이 있어야 합니다.
+Adobe Developer 콘솔에서 통합을 만들려면 먼저 Adobe Admin Console의 Experience Platform 제품 프로필에 대한 개발자 및 사용자 권한이 계정에 있어야 합니다.
 
 ### 개발자 액세스 권한 얻기
 
@@ -61,7 +61,7 @@ Adobe 개발자 콘솔에서 통합을 만들기 전에 계정에 Adobe Admin Co
 >
 >이 문서를 [Privacy Service API 안내서](../privacy-service/api/getting-started.md)로 돌아가면 해당 안내서로 돌아가서 고유한 액세스 자격 증명을 생성할 수 있습니다. [!DNL Privacy Service].
 
-을 통해 개발자 및 사용자에게 플랫폼에 대한 액세스 권한을 부여했으면 [!DNL Admin Console]를 지정하는 다음 단계는 를 생성하는 것입니다. `{IMS_ORG}` 및 `{API_KEY}` Adobe 개발자 콘솔의 자격 증명. 이러한 자격 증명은 한 번만 생성하면 되며 향후 플랫폼 API 호출에서 다시 사용할 수 있습니다.
+을 통해 개발자 및 사용자에게 플랫폼에 대한 액세스 권한을 부여했으면 [!DNL Admin Console]를 지정하는 다음 단계는 를 생성하는 것입니다. `{ORG_ID}` 및 `{API_KEY}` Adobe Developer 콘솔의 자격 증명. 이러한 자격 증명은 한 번만 생성하면 되며 향후 플랫폼 API 호출에서 다시 사용할 수 있습니다.
 
 ### 프로젝트에 Experience Platform 추가
 
@@ -86,7 +86,7 @@ Adobe 개발자 콘솔에서 통합을 만들기 전에 계정에 Adobe Admin Co
 프로젝트에 API가 추가되면 **[!UICONTROL Experience Platform API]** 프로젝트에 대한 페이지에는 Experience Platform API 호출에 필요한 다음 자격 증명이 표시됩니다.
 
 * `{API_KEY}` ([!UICONTROL 클라이언트 ID])
-* `{IMS_ORG}` ([!UICONTROL 조직 ID])
+* `{ORG_ID}` ([!UICONTROL 조직 ID])
 
 ![](././images/api-authentication/api-key-ims-org.png)
 
@@ -102,7 +102,7 @@ Adobe 개발자 콘솔에서 통합을 만들기 전에 계정에 Adobe Admin Co
 >
 >이 자습서를 위해 아래 단계는 개발자 콘솔 내에서 JWT를 생성하는 방법에 대해 간략하게 설명합니다. 그러나 이 생성 방법은 테스트와 평가 목적으로만 사용해야 합니다.
 >
->정기적으로 사용하려면 JWT를 자동으로 생성해야 합니다. 프로그래밍 방식으로 JWT를 생성하는 방법에 대한 자세한 내용은 [서비스 계정 인증 안내서](https://www.adobe.io/developer-console/docs/guides/authentication/JWT/) Adobe 개발자 참조.
+>정기적으로 사용하려면 JWT를 자동으로 생성해야 합니다. 프로그래밍 방식으로 JWT를 생성하는 방법에 대한 자세한 내용은 [서비스 계정 인증 안내서](https://www.adobe.io/developer-console/docs/guides/authentication/JWT/) Adobe Developer에서 확인하십시오.
 
 선택 **[!UICONTROL 서비스 계정(JWT)]** 왼쪽 탐색에서 를 선택하고 **[!UICONTROL JWT 생성]**.
 
@@ -118,7 +118,7 @@ Adobe 개발자 콘솔에서 통합을 만들기 전에 계정에 Adobe Admin Co
 
 ## 액세스 토큰 생성
 
-JWT를 생성했으면 API 호출에서 이 JWT를 사용하여 를 생성할 수 있습니다 `{ACCESS_TOKEN}`. 에 대한 값과 달리 `{API_KEY}` 및 `{IMS_ORG}`: 플랫폼 API를 계속 사용하려면 24시간마다 새 토큰을 생성해야 합니다.
+JWT를 생성했으면 API 호출에서 이 JWT를 사용하여 를 생성할 수 있습니다 `{ACCESS_TOKEN}`. 에 대한 값과 달리 `{API_KEY}` 및 `{ORG_ID}`: 플랫폼 API를 계속 사용하려면 24시간마다 새 토큰을 생성해야 합니다.
 
 **요청**
 
@@ -169,7 +169,7 @@ curl -X GET https://platform.adobe.io/data/foundation/schemaregistry/global/clas
   -H 'Accept: application/vnd.adobe.xed-id+json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
 **응답**
@@ -197,7 +197,7 @@ curl -X GET https://platform.adobe.io/data/foundation/schemaregistry/global/clas
 
 ## Postman을 사용하여 API 호출 인증 및 테스트
 
-[포스트맨](https://www.postman.com/) 는 개발자가 RESTful API를 탐색하고 테스트할 수 있도록 해주는 자주 사용하는 도구입니다. 이 [중간 게시물](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) 에서는 자동으로 JWT 인증을 수행하고 이 인증을 사용하여 플랫폼 API를 사용하도록 Postman을 설정하는 방법을 설명합니다.
+[포스트맨](https://www.postman.com/) 는 개발자가 RESTful API를 탐색하고 테스트할 수 있도록 해주는 자주 사용하는 도구입니다. 이 [중간 게시물](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) Postman을 설정하여 자동으로 JWT 인증을 수행하고 이 인증을 사용하여 플랫폼 API를 사용하는 방법에 대해 설명합니다.
 
 ## 다음 단계
 

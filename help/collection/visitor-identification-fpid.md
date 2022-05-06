@@ -3,13 +3,13 @@ title: FPID를 통한 방문자 식별
 description: FPID를 사용하여 서버 API를 통해 방문자를 일관되게 식별하는 방법을 알아봅니다
 seo-description: Learn how to consistently identify visitors via the Server API, by using the FPID
 keywords: 에지 네트워크;게이트웨이;api;방문자;식별;fpid
-source-git-commit: eaeab8fe96a9af399f8288b62b6ca9f31d949cfa
+exl-id: c61d2e7c-7b5e-4b14-bd52-13dde34e32e3
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '340'
 ht-degree: 0%
 
 ---
-
 
 # FPID를 통한 방문자 식별
 
@@ -176,7 +176,7 @@ curl -X POST 'https://edge.adobedc.net/ee/v2/interact?dataStreamId={Data Stream 
 ```shell
 curl -X POST "https://server.adobedc.net/v2/interact?dataStreamId={DATASTREAM_ID}"
 -H "Authorization: Bearer {TOKEN}"
--H "x-gw-ims-org-id: {IMS_ORG_ID}"
+-H "x-gw-ims-org-id: {ORG_ID}"
 -H "x-api-key: {API_KEY}"
 -H "Content-Type: application/json"
 -d '{

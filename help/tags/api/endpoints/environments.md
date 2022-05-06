@@ -1,7 +1,8 @@
 ---
 title: 환경 끝점
 description: Reactor API에서 /environments 엔드포인트를 호출하는 방법을 알아봅니다.
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+exl-id: 4c22f799-8338-4cf0-980a-3900d725ab5d
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1038'
 ht-degree: 8%
@@ -10,12 +11,12 @@ ht-degree: 8%
 
 # 환경 끝점
 
-[라이브러리](./libraries.md)가 Reactor API의 [build](./builds.md)에 컴파일되면 빌드의 정확한 내용은 환경 설정 및 라이브러리에 포함된 리소스에 따라 다릅니다. 특히, 환경에 따라 다음 사항이 결정됩니다.
+다음의 경우 [라이브러리](./libraries.md) 가 [빌드](./builds.md) reactor API에서 빌드의 정확한 내용은 환경 설정 및 라이브러리에 포함된 리소스에 따라 다릅니다. 특히, 환경에 따라 다음 사항이 결정됩니다.
 
-1. **대상**: 빌드를 배포할 위치입니다. 사용할 환경에 대해 [호스트](./hosts.md)를 선택하여 제어합니다.
-1. **보관**: 빌드를 배포 가능한 파일 세트로 검색하거나 보관 형식으로 압축하도록 선택할 수 있습니다. 이는 환경의 `archive` 설정에 의해 제어됩니다.
+1. **대상**: 빌드를 배포할 위치입니다. 이는 [호스트](./hosts.md) 를 사용하십시오.
+1. **아카이브**: 빌드를 배포 가능한 파일 세트로 검색하거나 보관 형식으로 압축하도록 선택할 수 있습니다. 이것은 `archive` 설정 을 참조하십시오.
 
-환경에 의해 구성된 대상 및 보관 형식은 응용 프로그램에서 빌드를 참조하는 방법을 변경합니다( [포함 코드](../../ui/publishing/environments.md#embed-code) 참조). 대상 또는 파일 형식을 변경하는 경우 새 참조를 사용하려면 응용 프로그램에 일치하는 업데이트를 수행해야 합니다.
+환경에 의해 구성된 대상 및 아카이브 형식은 애플리케이션에서 빌드를 참조하는 방법(즉, [포함 코드](../../ui/publishing/environments.md#embed-code)). 대상 또는 파일 형식을 변경하는 경우 새 참조를 사용하려면 응용 프로그램에 일치하는 업데이트를 수행해야 합니다.
 
 환경은 사용할 수 있는 총 수에 대한 제한이 서로 다른 세 가지 유형(또는 단계)으로 구성됩니다.
 
@@ -27,15 +28,15 @@ ht-degree: 8%
 
 {style=&quot;table-layout:auto&quot;}
 
-이러한 환경 유형은 비슷한 동작이지만 [태그 게시 작업 과정](../../ui/publishing/publishing-flow.md)의 다른 단계에서 사용됩니다.
+이러한 환경 유형은 유사한 동작이 있지만, 의 다른 단계에서 사용됩니다 [태그 게시 워크플로우](../../ui/publishing/publishing-flow.md).
 
-환경은 정확히 하나의 [속성](./properties.md)에 속합니다.
+환경은 정확히 하나의 환경에 속합니다 [속성](./properties.md).
 
-환경에 대한 일반적인 자세한 내용은 게시 문서에서 [환경](../../ui/publishing/environments.md)의 섹션을 참조하십시오.
+환경에 대한 일반적인 자세한 내용은 [환경](../../ui/publishing/environments.md) 을 참조하십시오.
 
 ## 시작하기
 
-이 안내서에 사용된 끝점은 [Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/)의 일부입니다. 계속하기 전에 API 인증 방법에 대한 중요한 정보가 필요하면 [시작 안내서](../getting-started.md)를 검토하십시오.
+이 안내서에 사용된 엔드포인트는 [Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/). 계속하기 전에 [시작 안내서](../getting-started.md) 를 참조하십시오.
 
 ## 환경 목록 검색 {#list}
 
@@ -49,13 +50,13 @@ GET /properties/{PROPERTY_ID}/environments
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `PROPERTY_ID` | 환경을 소유하는 속성의 `id` |
+| `PROPERTY_ID` | 다음 `id` 환경을 소유하는 속성의 값입니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
 >[!NOTE]
 >
->쿼리 매개 변수를 사용하여 나열된 환경은 다음 속성을 기반으로 필터링할 수 있습니다.<ul><li>`archive`</li><li>`created_at`</li><li>`name`</li><li>`stage`</li><li>`token`</li><li>`updated_at`</li></ul>자세한 내용은 [응답 필터링](../guides/filtering.md)에 대한 안내서를 참조하십시오.
+>쿼리 매개 변수를 사용하여 나열된 환경은 다음 속성을 기반으로 필터링할 수 있습니다.<ul><li>`archive`</li><li>`created_at`</li><li>`name`</li><li>`stage`</li><li>`token`</li><li>`updated_at`</li></ul>다음 안내서를 참조하십시오. [응답 필터링](../guides/filtering.md) 추가 정보.
 
 **요청**
 
@@ -64,7 +65,7 @@ curl -X GET \
   https://reactor.adobe.io/properties/PR97d92a379a5f48758947cdf44f607a0d/environments \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -173,7 +174,7 @@ GET /environments/{ENVIRONMENT_ID}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `ENVIRONMENT_ID` | 조회할 환경의 `id` |
+| `ENVIRONMENT_ID` | 다음 `id` 조회하려는 환경입니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -184,7 +185,7 @@ curl -X GET \
   https://reactor.adobe.io/environments/ENb0c1fbfdc1fd4b8593bfd269f827b3e6 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -282,20 +283,20 @@ POST /properties/{PROPERTY_ID}/environments
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `PROPERTY_ID` | 에서 환경을 정의하는 [속성](./properties.md)의 `id` |
+| `PROPERTY_ID` | 다음 `id` 의 [속성](./properties.md) 추가 콘텐츠는 아래에서 환경을 정의합니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **요청**
 
-다음 요청은 지정된 속성에 대한 새 환경을 만듭니다. 또한 호출은 `relationships` 속성을 통해 환경을 기존 호스트와 연결합니다. 자세한 내용은 [관계](../guides/relationships.md)의 안내서를 참조하십시오.
+다음 요청은 지정된 속성에 대한 새 환경을 만듭니다. 또한 호출은 를 통해 기존 호스트와 환경을 연결합니다. `relationships` 속성을 사용합니다. 다음 안내서를 참조하십시오. [관계](../guides/relationships.md) 추가 정보.
 
 ```shell
 curl -X POST \
   https://reactor.adobe.io/properties/PR97d92a379a5f48758947cdf44f607a0d/environments \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
   -d '{
         "data": {
@@ -326,8 +327,8 @@ curl -X POST \
 | `attributes.archive_passphrase` | 아카이브 파일의 잠금을 해제하는 데 사용할 수 있는 문자열 암호입니다. |
 | `attributes.path` | 환경에 대한 호스트 URL의 경로입니다. |
 | `attributes.stage` | 환경(개발, 스테이징 또는 프로덕션)의 스테이지입니다. |
-| `id` | 업데이트할 환경의 `id` 이 값은 요청 경로에 제공된 `{ENVIRONMENT_ID}` 값과 일치해야 합니다. |
-| `type` | 업데이트할 리소스 유형입니다. 이 끝점의 경우 값은 `environments`이어야 합니다. |
+| `id` | 다음 `id` 업데이트하려는 환경 중 하나입니다. 이 옵션은 와 일치해야 합니다. `{ENVIRONMENT_ID}` 요청 경로에 제공된 값입니다. |
+| `type` | 업데이트할 리소스 유형입니다. 이 끝점의 경우 값은 `environments`. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -424,20 +425,20 @@ PATCH /environments/{ENVIRONMENT_ID}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `ENVIRONMENT_ID` | 업데이트할 환경의 `id` |
+| `ENVIRONMENT_ID` | 다음 `id` 업데이트하려는 환경 중 하나입니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **요청**
 
-다음 요청은 기존 환경에 대한 `name`을 업데이트합니다.
+다음 요청은 를 업데이트합니다 `name` 기존 환경을 위한 것입니다.
 
 ```shell
 curl -X PATCH \
   https://reactor.adobe.io/environments/DE3fab176ccf8641838b3da59f716fc42b \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
   -d '{
         "data": {
@@ -452,9 +453,9 @@ curl -X PATCH \
 
 | 속성 | 설명 |
 | --- | --- |
-| `attributes` | 환경에 대해 업데이트할 속성을 나타내는 개체입니다. 다음 환경 속성을 업데이트할 수 있습니다. <ul><li>`archive`</li><li>`archive_passphrase`</li><li>`include_debug_library`</li><li>`name`</li><li>`path`</li></ul> 속성 목록 및 사용 사례에는 [환경 만들기](#create)에 대한 예제 호출을 참조하십시오. |
-| `id` | 업데이트할 환경의 `id` 이 값은 요청 경로에 제공된 `{ENVIRONMENT_ID}` 값과 일치해야 합니다. |
-| `type` | 업데이트할 리소스 유형입니다. 이 끝점의 경우 값은 `environments`이어야 합니다. |
+| `attributes` | 환경에 대해 업데이트할 속성을 나타내는 개체입니다. 다음 환경 속성을 업데이트할 수 있습니다. <ul><li>`archive`</li><li>`archive_passphrase`</li><li>`include_debug_library`</li><li>`name`</li><li>`path`</li></ul> 에 대한 예제 호출을 참조하십시오. [환경 만들기](#create) 속성 목록 및 사용 사례입니다. |
+| `id` | 다음 `id` 업데이트하려는 환경 중 하나입니다. 이 옵션은 와 일치해야 합니다. `{ENVIRONMENT_ID}` 요청 경로에 제공된 값입니다. |
+| `type` | 업데이트할 리소스 유형입니다. 이 끝점의 경우 값은 `environments`. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -551,7 +552,7 @@ DELETE /environments/{ENVIRONMENT_ID}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `ENVIRONMENT_ID` | 삭제할 환경의 `id` |
+| `ENVIRONMENT_ID` | 다음 `id` 삭제할 환경입니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -562,7 +563,7 @@ curl -X DELETE \
   https://reactor.adobe.io/environments/ENeb00d8f62d244732bd27765301b1410f \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
 **응답**
@@ -571,13 +572,13 @@ curl -X DELETE \
 
 ## 환경에 대한 관련 리소스 검색 {#related}
 
-다음 호출에서는 환경에 대한 관련 리소스를 검색하는 방법을 보여 줍니다. [환경](#lookup)을 찾으면 이러한 관계가 `relationships` 속성 아래에 나열됩니다.
+다음 호출에서는 환경에 대한 관련 리소스를 검색하는 방법을 보여 줍니다. When [환경 조회](#lookup)로 설정되면 이러한 관계는 `relationships` 속성을 사용합니다.
 
-Reactor API의 관계에 대한 자세한 내용은 [관계 안내서](../guides/relationships.md)를 참조하십시오.
+자세한 내용은 [관계 안내서](../guides/relationships.md) 를 참조하십시오.
 
 ### 환경에 대한 관련 빌드 나열 {#builds}
 
-조회 요청의 경로에 `/builds`을 추가하여 환경을 사용하는 빌드를 나열할 수 있습니다.
+를 추가하여 환경을 사용하는 빌드를 나열할 수 있습니다 `/builds` 조회 요청의 경로에 추가할 수 없습니다.
 
 **API 형식**
 
@@ -587,7 +588,7 @@ GET  /environments/{ENVIRONMENT_ID}/builds
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{ENVIRONMENT_ID}` | 빌드할 환경의 `id` 입니다. |
+| `{ENVIRONMENT_ID}` | 다음 `id` 빌드할 환경입니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -598,7 +599,7 @@ curl -X GET \
   https://reactor.adobe.io/environments/ENeb00d8f62d244732bd27765301b1410f/builds \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -690,11 +691,11 @@ curl -X GET \
 
 ### 환경에 대한 관련 호스트 조회 {#host}
 
-GET 요청의 경로에 `/host`을 추가하여 환경을 활용하는 호스트를 조회할 수 있습니다.
+추가 `/host` GET 요청의 경로.
 
 >[!NOTE]
 >
->[별도의 호출](#host-relationship)을 통해 호스트 관계 개체를 조회할 수 있습니다.
+>를 통해 호스트 관계 개체 자체를 조회할 수 있습니다 [별도의 호출](#host-relationship).
 
 **API 형식**
 
@@ -704,7 +705,7 @@ GET  /environments/{ENVIRONMENT_ID}/host
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{ENVIRONMENT_ID}` | 호스트를 조회하려는 환경의 `id` |
+| `{ENVIRONMENT_ID}` | 다음 `id` 호스트를 조회할 수 있습니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -715,7 +716,7 @@ curl -X GET \
   https://reactor.adobe.io/environments/ENeb00d8f62d244732bd27765301b1410f/host \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -761,7 +762,7 @@ curl -X GET \
 
 ### 환경에 대한 관련 라이브러리 조회 {#library}
 
-GET 요청의 경로에 `/library`을 추가하여 환경을 사용하는 라이브러리를 조회할 수 있습니다.
+를 추가하여 환경을 사용하는 라이브러리를 조회할 수 있습니다 `/library` GET 요청의 경로.
 
 **API 형식**
 
@@ -771,7 +772,7 @@ GET  /environments/{ENVIRONMENT_ID}/library
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{ENVIRONMENT_ID}` | 라이브러리를 조회하려는 환경의 `id` |
+| `{ENVIRONMENT_ID}` | 다음 `id` 라이브러리를 조회하고 싶은 환경입니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -782,7 +783,7 @@ curl -X GET \
   https://reactor.adobe.io/environments/ENeb00d8f62d244732bd27765301b1410f/library \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -876,7 +877,7 @@ curl -X GET \
 
 ### 환경에 대한 관련 속성 조회 {#property}
 
-GET 요청 경로에 `/property`을 추가하여 환경을 소유하는 속성을 찾을 수 있습니다.
+다음을 추가하여 환경을 소유하는 속성을 찾을 수 있습니다 `/property` GET 요청의 경로.
 
 **API 형식**
 
@@ -886,7 +887,7 @@ GET  /environments/{ENVIRONMENT_ID}/property
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{ENVIRONMENT_ID}` | 속성을 조회하려는 환경의 `id` |
+| `{ENVIRONMENT_ID}` | 다음 `id` 속성을 조회하려는 환경입니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -897,7 +898,7 @@ curl -X GET \
   https://reactor.adobe.io/environments/ENeb00d8f62d244732bd27765301b1410f/property \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```

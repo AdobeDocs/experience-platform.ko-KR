@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: 이 자습서에서는 Sensei 기계 학습 API를 사용하여 모델을 서비스로 게시하는 프로세스에 대해 설명합니다.
 exl-id: f78b1220-0595-492d-9f8b-c3a312f17253
-source-git-commit: a51c878bbfd3004cb597ce9244a9ed2f2318604b
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1516'
 ht-degree: 1%
@@ -26,7 +26,7 @@ ht-degree: 1%
 마지막으로 이 자습서를 시작하기 전에 [시작하기](../api/getting-started.md) 개발자 가이드의 섹션을 참조하십시오. [!DNL Sensei Machine Learning] 이 자습서 전체에서 사용되는 필수 헤더를 포함한 API입니다.
 
 - `{ACCESS_TOKEN}`
-- `{IMS_ORG}`
+- `{ORG_ID}`
 - `{API_KEY}`
 
 모든 POST, PUT 및 PATCH 요청에는 추가 헤더가 필요합니다.
@@ -64,7 +64,7 @@ curl -X POST
   https://platform.adobe.io/data/sensei/mlServices
   -H 'Authorization: {ACCESS_TOKEN}' 
   -H 'x-api-key: {API_KEY}' 
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
   -H 'Content-Type: application/json'
   -d '{
         "name": "Service name",
@@ -145,7 +145,7 @@ curl -X POST
   https://platform.adobe.io/data/sensei/mlServices
   -H 'Authorization: {ACCESS_TOKEN}' 
   -H 'x-api-key: {API_KEY}' 
-  -H 'x-gw-ims-org-id: {IMS_ORG}' 
+  -H 'x-gw-ims-org-id: {ORG_ID}' 
   -H 'x-sandbox-name: {SANDBOX_NAME}'
   -d '{
         "name": "Service name",
@@ -217,7 +217,7 @@ POST /mlServices
 curl -X POST 'https://platform.adobe.io/data/sensei/mlServices' 
   -H 'Authorization: Bearer {ACCESS_TOKEN}' 
   -H 'x-api-key: {API_KEY}' 
-  -H 'x-gw-ims-org-id: {IMS_ORG}' 
+  -H 'x-gw-ims-org-id: {ORG_ID}' 
   -H 'x-sandbox-name: {SANDBOX_NAME}'
   -d '{
         "name": "string",
@@ -304,7 +304,7 @@ GET /mlServices/{SERVICE_ID}
 curl -X GET 'https://platform.adobe.io/data/sensei/mlServices/{SERVICE_ID}' 
   -H 'Authorization: Bearer {ACCESS_TOKEN}' 
   -H 'x-api-key: {API_KEY}' 
-  -H 'x-gw-ims-org-id: {IMS_ORG}' 
+  -H 'x-gw-ims-org-id: {ORG_ID}' 
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -366,7 +366,7 @@ PUT /mlServices/{SERVICE_ID}
 curl -X PUT 'https://platform.adobe.io/data/sensei/mlServices/{SERVICE_ID}' 
   -H 'Authorization: {ACCESS_TOKEN}' 
   -H 'x-api-key: {API_KEY}' 
-  -H 'x-gw-ims-org-id: {IMS_ORG}' 
+  -H 'x-gw-ims-org-id: {ORG_ID}' 
   -H 'x-sandbox-name: {SANDBOX_NAME}'
   -d '{
         "name": "string",

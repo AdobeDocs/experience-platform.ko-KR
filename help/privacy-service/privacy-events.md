@@ -5,9 +5,9 @@ title: Privacy Service 이벤트에 가입
 topic-legacy: privacy events
 description: 사전 구성된 웹 후크를 사용하여 Privacy Service 이벤트에 구독하는 방법을 알아봅니다.
 exl-id: 9bd34313-3042-46e7-b670-7a330654b178
-source-git-commit: 82dea48c732b3ddea957511c22f90bbd032ed9b7
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '436'
+source-wordcount: '440'
 ht-degree: 1%
 
 ---
@@ -36,13 +36,13 @@ ht-degree: 1%
 
 ## 웹 후크를에 등록 [!DNL Privacy Service Events]
 
-수신하려면 [!DNL Privacy Service Events]로 설정되면 Adobe 개발자 콘솔을 사용하여 웹 후크를 [!DNL Privacy Service] 통합.
+수신하려면 [!DNL Privacy Service Events], Adobe Developer 콘솔을 사용하여 웹 후크를 [!DNL Privacy Service] 통합.
 
-다음의 자습서를 따르십시오 [구독 [!DNL I/O Event] 알림](../observability/alerts/subscribe.md) 를 참조하십시오. 다음을 선택해야 합니다 **[!UICONTROL Privacy Service 이벤트]** 를 이벤트 공급자로 사용하여 위에 나열된 이벤트에 액세스할 수 있습니다.
+다음의 자습서를 따르십시오 [[!DNL I/O Event] 알림 가입](../observability/alerts/subscribe.md) 를 참조하십시오. 다음을 선택해야 합니다 **[!UICONTROL Privacy Service 이벤트]** 를 이벤트 공급자로 사용하여 위에 나열된 이벤트에 액세스할 수 있습니다.
 
 ## 수신 [!DNL Privacy Service Event] 알림
 
-웹 후크 및 개인 정보 보호 작업을 성공적으로 등록했으면 이벤트 알림 수신을 시작할 수 있습니다. 이러한 이벤트는 웹 후크 자체를 사용하거나 **[!UICONTROL 디버그 추적]** Adobe 개발자 콘솔에서 프로젝트의 이벤트 등록 개요에 있는 탭입니다.
+웹 후크 및 개인 정보 보호 작업을 성공적으로 등록했으면 이벤트 알림 수신을 시작할 수 있습니다. 이러한 이벤트는 웹 후크 자체를 사용하거나 **[!UICONTROL 디버그 추적]** Adobe Developer 콘솔에서 프로젝트의 이벤트 등록 개요에 있는 탭입니다.
 
 ![](images/privacy-events/debug-tracing.png)
 
@@ -57,7 +57,7 @@ ht-degree: 1%
   "source":"https://ns.adobe.com/platform/gdpr",
   "time":"Wed Oct 23 18:52:32 GMT 2019",
   "data":{
-    "imsOrg":"{IMS_ORG}",
+    "imsOrg":"{ORG_ID}",
     "value":{
       "jobId":"6f0f2b62-88a7-4515-ba05-432d9a7021c5",
       "message":"analytics.access.complete"

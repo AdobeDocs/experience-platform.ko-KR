@@ -4,7 +4,7 @@ description: Adobe Experience Platform에서 고객의 저장된 개인 데이�
 hide: true
 hidefromtoc: true
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-source-git-commit: f956a8191614cc8e0eeaadaa55277abfbc5be106
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '535'
 ht-degree: 1%
@@ -27,11 +27,11 @@ ht-degree: 1%
 
 ### 필수 헤더에 대한 값을 수집합니다
 
-데이터 위생 API를 호출하려면 먼저 인증 자격 증명을 수집해야 합니다. 이는 Privacy Service API에 액세스하는 데 사용되는 것과 동일한 자격 증명입니다. 데이터 위생 API에 필요한 각 헤더에 대한 값을 생성하려면 Privacy Service API에 대한 [시작 안내서](./api/getting-started.md)를 따르십시오.
+데이터 위생 API를 호출하려면 먼저 인증 자격 증명을 수집해야 합니다. 이는 Privacy Service API에 액세스하는 데 사용되는 것과 동일한 자격 증명입니다. 다음을 수행합니다 [시작 안내서](./api/getting-started.md) 데이터 위생 API에 대해 아래 표시된 대로 각 필수 헤더에 대한 값을 생성하도록 Privacy Service API에 대해 다음을 수행합니다.
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
+* `x-gw-ims-org-id: {ORG_ID}`
 
 페이로드(POST, PUT, PATCH)이 포함된 모든 요청에는 추가 헤더가 필요합니다.
 
@@ -39,7 +39,7 @@ ht-degree: 1%
 
 ### 샘플 API 호출 읽기
 
-이 문서에서는 요청 형식을 지정하는 방법을 보여주는 예제 API 호출을 제공합니다. 샘플 API 호출에 대한 설명서에 사용된 규칙에 대한 자세한 내용은 Experience Platform API에 대한 시작 안내서에서 [예제 API 호출](../landing/api-guide.md#sample-api)를 읽는 방법 섹션을 참조하십시오.
+이 문서에서는 요청 형식을 지정하는 방법을 보여주는 예제 API 호출을 제공합니다. 샘플 API 호출에 대한 설명서에 사용된 규칙에 대한 자세한 내용은 [예제 API 호출을 읽는 방법](../landing/api-guide.md#sample-api) Experience Platform API에 대한 시작 안내서에서 를 참조하십시오.
 
 ## 삭제 작업 만들기
 
@@ -53,20 +53,20 @@ POST /jobs
 
 **요청**
 
-요청 페이로드는 Privacy Service API](./api/privacy-jobs.md#access-delete)에서 [삭제 요청의 요청과 유사하게 구조화됩니다. 여기에는 데이터를 삭제할 사용자를 나타내는 `users` 배열이 포함되어 있습니다.
+요청 페이로드는 요청의 페이로드와 유사하게 구조화됩니다 [Privacy Service API에서 요청 삭제](./api/privacy-jobs.md#access-delete). 여기에는 다음이 포함됩니다 `users` 객체를 사용하여 데이터를 삭제할 사용자를 나타내는 배열입니다.
 
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/core/hygiene/jobs \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
   -d '{
         "companyContexts": [
           {
             "namespace": "imsOrgID",
-            "value": "{IMS_ORG}"
+            "value": "{ORG_ID}"
           }
         ],
         "users": [
@@ -107,8 +107,8 @@ curl -X POST \
 
 | 속성 | 설명 |
 | --- | --- |
-| `companyContexts` | 조직에 대한 인증 정보가 포함된 배열입니다. 여기에는 다음 속성을 갖는 단일 개체가 포함되어야 합니다. <ul><li>`namespace`: 를 로 설정해야  `imsOrgID`합니다.</li><li>`value`: IMS 조직 ID입니다. 이 값은 `x-gw-ims-org-id` 헤더에 제공된 값과 동일합니다.</li></ul> |
-| `users` | 삭제할 정보가 있는 하나 이상의 사용자 컬렉션이 포함된 배열입니다. 각 사용자 객체에는 다음 정보가 포함됩니다. <ul><li>`key`: 응답 데이터에서 개별 작업 ID를 평가하는 데 사용되는 사용자의 식별자입니다. 참조하거나 나중에 조회할 수 있도록 이 값에 대해 고유하고 쉽게 식별 가능한 문자열을 선택하는 것이 좋습니다.</li><li>`action`: 사용자의 데이터에 수행할 원하는 작업을 나열하는 배열입니다. 단일 문자열 값을 포함해야 합니다. `delete`</li><li>`userIDs`: 사용자의 ID 컬렉션입니다. 한 사용자가 사용할 수 있는 ID의 수는 9개로 제한됩니다. 각 ID에는 다음 속성이 포함되어 있습니다. <ul><li>`namespace`: ID [와 ](../identity-service/namespaces.md) 연결된 ID 이름 Platform에서 인식하는 [표준 네임스페이스](./api/appendix.md#standard-namespaces)이거나 조직에서 정의한 사용자 지정 네임스페이스일 수 있습니다. 사용된 네임스페이스 유형은 `type` 속성에 반영해야 합니다.</li><li>`value`: ID 값입니다.</li><li>`type`: 전역적으로 인식되는 네임스페이스를 사용하는  `standard` 경우, 또는 조직에서 정의한 네임스페이스를 사용하는  `custom` 경우 로 설정해야 합니다.</li></ul></li></ul> |
+| `companyContexts` | 조직에 대한 인증 정보가 포함된 배열입니다. 여기에는 다음 속성을 갖는 단일 개체가 포함되어야 합니다. <ul><li>`namespace`: 을(를) 로 설정해야 합니다. `imsOrgID`.</li><li>`value`: IMS 조직 ID입니다. 이 값은 `x-gw-ims-org-id` 헤더.</li></ul> |
+| `users` | 삭제할 정보가 있는 하나 이상의 사용자 컬렉션이 포함된 배열입니다. 각 사용자 객체에는 다음 정보가 포함됩니다. <ul><li>`key`: 응답 데이터에서 개별 작업 ID를 평가하는 데 사용되는 사용자의 식별자입니다. 참조하거나 나중에 조회할 수 있도록 이 값에 대해 고유하고 쉽게 식별 가능한 문자열을 선택하는 것이 좋습니다.</li><li>`action`: 사용자의 데이터에 수행할 원하는 작업을 나열하는 배열입니다. 단일 문자열 값을 포함해야 합니다. `delete`.</li><li>`userIDs`: 사용자의 ID 컬렉션입니다. 한 사용자가 사용할 수 있는 ID의 수는 9개로 제한됩니다. 각 ID에는 다음 속성이 포함되어 있습니다. <ul><li>`namespace`: 다음 [id 네임스페이스](../identity-service/namespaces.md) 를 ID와 연결된 경우에만 해당됩니다. 다음 항목을 지정할 수 있습니다. [표준 네임스페이스](./api/appendix.md#standard-namespaces) 플랫폼에서 인식하거나 조직에서 정의한 사용자 정의 네임스페이스가 될 수 있습니다. 사용되는 네임스페이스 유형은 `type` 속성을 사용합니다.</li><li>`value`: ID 값입니다.</li><li>`type`: 을(를) 로 설정해야 합니다. `standard` 전역적으로 인식되는 네임스페이스를 사용하는 경우 또는 `custom` 조직에서 정의한 네임스페이스를 사용하는 경우.</li></ul></li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 

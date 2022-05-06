@@ -2,7 +2,7 @@
 description: 이 페이지에서는 Adobe Experience Platform Destination SDK 인증 및 사용 시작 방법에 대해 설명합니다. 여기에는 Adobe I/O 인증 자격 증명, 샌드박스 이름 및 대상 작성 액세스 제어 권한을 가져오는 방법에 대한 지침이 포함되어 있습니다.
 title: Destination SDK 시작
 exl-id: f22c37a8-202d-49ac-9af0-545dfa9af8fd
-source-git-commit: d5ce6c8ccdd29b9bcf90a1c2d08085f3be4cf33f
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '613'
 ht-degree: 2%
@@ -26,7 +26,7 @@ Destination SDK 사용 [Adobe I/O](https://www.adobe.io/) 인증을 위한 게�
 Destination SDK API 엔드포인트를 성공적으로 호출하려면 [Experience Platform 인증 자습서](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html). 자습서를 &quot;&quot;에서 시작합니다.[API 키, IMS 조직 ID 및 클라이언트 암호 생성](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html#api-ims-secret)&quot; 단계입니다. Adobe 교환 팀이 이전 단계를 처리합니다. 인증 자습서를 완료하면 아래와 같이 Destination SDK API 호출에서 각 필수 헤더에 대한 값을 제공합니다.
 
 * `x-api-key: {API_KEY}`를 클라이언트 ID라고도 합니다
-* `x-gw-ims-org-id: {IMS_ORG}`를 조직 ID라고도 합니다
+* `x-gw-ims-org-id: {ORG_ID}`를 조직 ID라고도 합니다
 * `Authorization: Bearer {ACCESS_TOKEN}` 질문에 답합니다. 액세스 토큰에는 만료 시간이 24시간이며, 밀리초 단위로 표시되므로 새로 고쳐야 합니다. 액세스 토큰을 새로 고치려면 인증 자습서에 설명된 단계를 반복합니다.
 
 <!--
@@ -38,7 +38,7 @@ To obtain the `{ACCESS_TOKEN}`, you must generate a JWT token and exchange it fo
 1. Follow the instructions in the [Generate JWT section](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/credentials.md) in the credentials guide.
 2. Follow the instructions in [Step 3: try it](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/AuthenticationOverview/ServiceAccountIntegration.md) in the Service account connection guide.
 
-You now have the required authentication headers `x-api-key: {API_KEY}`, `x-gw-ims-org-id: {IMS_ORG}`, and `Authorization: Bearer {ACCESS_TOKEN}`.
+You now have the required authentication headers `x-api-key: {API_KEY}`, `x-gw-ims-org-id: {ORG_ID}`, and `Authorization: Bearer {ACCESS_TOKEN}`.
 
 >[!NOTE]
 >
@@ -81,4 +81,4 @@ Adobe Exchange 팀에서는 Destination SDK API 엔드포인트 호출에 사용
    * [(베타) Destination SDK을 사용하여 파일 기반 대상 구성](./configure-file-based-destination-instructions.md)
 
 * 모든 작업에 대해서는 [대상 작성 API 설명서](https://www.adobe.io/experience-platform-apis/references/destination-authoring/).
-* 를 사용하십시오 [대상 작성 API Postman 컬렉션](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Destination%20Authoring%20API.postman_collection.json) Destination SDK API 엔드포인트를 사용하여 대상을 구성하기 위해 Postman을 시작하려면 다음을 참조하십시오 [환경 및 컬렉션 가져오기 절차](https://learning.postman.com/docs/getting-started/importing-and-exporting-data/) 그리고 [Postman 환경 만들기를 위한 비디오 안내서](https://video.tv.adobe.com/v/28832).
+* 를 사용하십시오 [대상 작성 API Postman 컬렉션](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Destination%20Authoring%20API.postman_collection.json) Destination SDK API 엔드포인트를 사용하여 대상을 구성하기 위해 Postman을 시작하려면 다음을 참조하십시오. [환경 및 컬렉션 가져오기 절차](https://learning.postman.com/docs/getting-started/importing-and-exporting-data/) 그리고 [Postman 환경 만들기를 위한 비디오 안내서](https://video.tv.adobe.com/v/28832).

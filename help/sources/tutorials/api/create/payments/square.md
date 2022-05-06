@@ -2,7 +2,8 @@
 keywords: Experience Platform;홈;인기 항목;사각형;사각형
 title: Flow Service API를 사용하여 스퀘어 베이스 연결 만들기
 description: Flow Service API를 사용하여 Square를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
-source-git-commit: f2f602fd618dc6b59ba13c275ca0c2964e3ea1f4
+exl-id: 82c1d513-3b06-4ce9-b637-2c5a268da506
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '542'
 ht-degree: 1%
@@ -64,7 +65,7 @@ curl -X POST \
     'https://platform.adobe.io/data/foundation/flowservice/connections' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{

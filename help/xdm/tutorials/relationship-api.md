@@ -6,43 +6,43 @@ description: 이 문서에서는 스키마 레지스트리 API를 사용하여 �
 topic-legacy: tutorial
 type: Tutorial
 exl-id: ef9910b5-2777-4d8b-a6fe-aee51d809ad5
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1365'
 ht-degree: 2%
 
 ---
 
-# [!DNL Schema Registry] API를 사용하여 두 스키마 간의 관계를 정의합니다
+# 를 사용하여 두 스키마 간의 관계를 정의합니다 [!DNL Schema Registry] API
 
-다양한 채널에서 고객과의 관계와 브랜드와의 상호 작용을 파악하는 기능은 Adobe Experience Platform의 중요한 부분입니다. XDM([!DNL Experience Data Model]) 스키마 구조 내에서 이러한 관계를 정의하면 고객 데이터에 대한 복잡한 통찰력을 얻을 수 있습니다.
+다양한 채널에서 고객과의 관계와 브랜드와의 상호 작용을 파악하는 기능은 Adobe Experience Platform의 중요한 부분입니다. 구조 내에서 이러한 관계 정의 [!DNL Experience Data Model] (XDM) 스키마를 사용하면 고객 데이터에 대한 복잡한 통찰력을 얻을 수 있습니다.
 
-스키마 관계는 결합 스키마와 [!DNL Real-time Customer Profile]을 사용하여 유추할 수 있지만 동일한 클래스를 공유하는 스키마에만 적용됩니다. 다른 클래스에 속하는 두 스키마 간의 관계를 설정하려면 대상 스키마의 ID를 참조하는 소스 스키마에 전용 관계 필드를 추가해야 합니다.
+스키마 관계는 결합 스키마 및 [!DNL Real-time Customer Profile]이는 동일한 클래스를 공유하는 스키마에만 적용됩니다. 다른 클래스에 속하는 두 스키마 간의 관계를 설정하려면 대상 스키마의 ID를 참조하는 소스 스키마에 전용 관계 필드를 추가해야 합니다.
 
-이 문서에서는 [[!DNL Schema Registry API]](https://www.adobe.io/experience-platform-apis/references/schema-registry/)을 사용하여 조직에서 정의한 두 스키마 간의 일대일 관계를 정의하는 자습서를 제공합니다.
+이 문서에서는 다음을 사용하여 조직에서 정의한 두 스키마 간의 일대일 관계를 정의하는 자습서를 제공합니다 [[!DNL Schema Registry API]](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
 ## 시작하기
 
-이 자습서에서는 [!DNL Experience Data Model](XDM) 및 [!DNL XDM System]에 대한 작업 이해를 필요로 합니다. 이 자습서를 시작하기 전에 다음 설명서를 검토하십시오.
+이 자습서에서는 을(를) 제대로 이해하고 있어야 합니다 [!DNL Experience Data Model] (XDM) 및 [!DNL XDM System]. 이 자습서를 시작하기 전에 다음 설명서를 검토하십시오.
 
 * [Experience Platform의 XDM 시스템](../home.md): XDM 및 의 구현에 대한 개요입니다 [!DNL Experience Platform].
    * [스키마 작성 기본 사항](../schema/composition.md): XDM 스키마의 기본 구성 요소 소개.
 * [[!DNL Real-time Customer Profile]](../../profile/home.md): 여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
-* [샌드박스](../../sandboxes/home.md):  [!DNL Experience Platform] 에서는 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이  [!DNL Platform] 되는 단일 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
+* [샌드박스](../../sandboxes/home.md): [!DNL Experience Platform] 단일 파티션을 생성하는 가상 샌드박스 제공 [!DNL Platform] 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 별도의 가상 환경으로 인스턴스를 구축할 수 있습니다.
 
-이 자습서를 시작하기 전에 [!DNL Schema Registry] API를 성공적으로 호출하기 위해 알고 있어야 하는 중요한 정보가 필요하면 [개발자 안내서](../api/getting-started.md)를 검토하십시오. 여기에는 `{TENANT_ID}`, &quot;containers&quot;의 개념 및 요청을 수행하는 데 필요한 헤더가 포함됩니다( [!DNL Accept] 헤더 및 가능한 값에 특별히 주의).
+이 자습서를 시작하기 전에 [개발자 안내서](../api/getting-started.md) 를 성공적으로 호출하기 위해 알고 있어야 하는 중요한 정보 [!DNL Schema Registry] API. 여기에는 다음이 포함됩니다 `{TENANT_ID}`, &quot;컨테이너&quot;의 개념 및 요청을 수행하는 데 필요한 헤더입니다(에는 [!DNL Accept] 헤더 및 가능한 값).
 
 ## 소스 및 대상 스키마 정의 {#define-schemas}
 
-이미 관계에 정의될 두 개의 스키마를 생성한 것으로 예상됩니다. 이 자습서에서는 조직의 현재 충성도 프로그램(&quot;[!DNL Loyalty Members]&quot; 스키마에 정의됨)의 멤버와 즐겨찾는 호텔(&quot;[!DNL Hotels]&quot; 스키마에 정의됨) 간의 관계를 만듭니다.
+이미 관계에 정의될 두 개의 스키마를 생성한 것으로 예상됩니다. 이 자습서에서는 조직의 현재 충성도 프로그램(&quot;에 정의됨)의 멤버 간에 관계를 만듭니다[!DNL Loyalty Members]&quot; 스키마) 및 해당 즐겨찾기 호텔([!DNL Hotels]&quot; 스키마)를 만듭니다.
 
-스키마 관계는 **대상 스키마** 내의 다른 필드를 참조하는 필드가 있는 **소스 스키마**&#x200B;로 표시됩니다. 다음에 이어지는 단계에서는 &quot;[!DNL Loyalty Members]&quot;이 소스 스키마가 되고, &quot;[!DNL Hotels]&quot;은 대상 스키마로 작동합니다.
+스키마 관계는 **소스 스키마** 다음 위치에서 다른 필드를 참조하는 필드 사용 **대상 스키마**. 다음에 나오는 단계에서, &quot;[!DNL Loyalty Members]&quot; 은 소스 스키마이고 &quot;[!DNL Hotels]는 대상 스키마로 작동합니다.
 
 >[!IMPORTANT]
 >
->관계를 설정하려면 두 스키마에 기본 ID가 정의되어 있어야 하며 [!DNL Real-time Customer Profile]에 대해 활성화되어 있어야 합니다. 스키마 구성 방법에 대한 지침이 필요한 경우 스키마 만들기 자습서의 [프로필](./create-schema-api.md#profile)에서 사용할 스키마 활성화 섹션을 참조하십시오.
+>관계를 설정하려면 두 스키마에 기본 ID가 정의되어 있어야 하며 [!DNL Real-time Customer Profile]. 의 섹션을 참조하십시오. [프로필에서 사용할 스키마 활성화](./create-schema-api.md#profile) 스키마 만들기 자습서에서 스키마를 구성하는 방법에 대한 지침이 필요한 경우 스키마 만들기 자습서에서 를 참조하십시오.
 
-두 스키마 간의 관계를 정의하려면 먼저 두 스키마에 대한 `$id` 값을 가져와야 합니다. 스키마의 표시 이름(`title`)을 알고 있는 경우 [!DNL Schema Registry] API의 `/tenant/schemas` 종단점에 GET을 요청하여 해당 `$id` 값을 찾을 수 있습니다.
+두 스키마 간의 관계를 정의하려면 먼저 를 획득해야 합니다 `$id` 두 스키마 값. 표시 이름(`title`) 스키마를 찾을 수 있습니다 `$id` 에 GET 요청을 수행하여 값을 `/tenant/schemas` 의 엔드포인트 [!DNL Schema Registry] API.
 
 **API 형식**
 
@@ -57,18 +57,18 @@ curl -X GET \
   https://platform.adobe.io/data/foundation/schemaregistry/tenant/schemas \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Accept: application/vnd.adobe.xed-id+json'
 ```
 
 >[!NOTE]
 >
->[!DNL Accept] 헤더 `application/vnd.adobe.xed-id+json`는 결과 스키마의 제목, ID 및 버전만 반환합니다.
+>다음 [!DNL Accept] 헤더 `application/vnd.adobe.xed-id+json` 결과 스키마의 제목, ID 및 버전만 반환합니다.
 
 **응답**
 
-성공적으로 응답하면 `name`, `$id`, `meta:altId` 및 `version`를 포함하여 조직에서 정의한 스키마 목록이 반환됩니다.
+성공적인 응답은 조직에서 정의한 스키마 목록(예: 해당 스키마)을 반환합니다 `name`, `$id`, `meta:altId`, 및 `version`.
 
 ```json
 {
@@ -106,25 +106,25 @@ curl -X GET \
 }
 ```
 
-관계를 정의할 두 스키마의 `$id` 값을 기록하십시오. 이러한 값은 이후 단계에서 사용됩니다.
+레코드 `$id` 관계를 정의하려는 두 스키마 값. 이러한 값은 이후 단계에서 사용됩니다.
 
 ## 소스 스키마에 대한 참조 필드 정의
 
-[!DNL Schema Registry] 내에서 관계 설명자는 관계형 데이터베이스 테이블의 외래 키와 유사하게 작동합니다. 소스 스키마의 필드는 대상 스키마의 기본 id 필드에 대한 참조 역할을 합니다. 소스 스키마에 이러한 용도로 사용할 필드가 없는 경우, 새 필드로 스키마 필드 그룹을 만들어 스키마에 추가해야 할 수 있습니다. 이 새 필드에는 &quot;[!DNL string]&quot;의 `type` 값이 있어야 합니다.
+내 [!DNL Schema Registry], 관계 설명자는 관계형 데이터베이스 테이블의 외래 키와 비슷하게 작동합니다. 소스 스키마의 필드는 대상 스키마의 기본 id 필드에 대한 참조 역할을 합니다. 소스 스키마에 이러한 용도로 사용할 필드가 없는 경우, 새 필드로 스키마 필드 그룹을 만들어 스키마에 추가해야 할 수 있습니다. 이 새 필드에는 `type` 값 &quot;[!DNL string]&quot;.
 
 >[!IMPORTANT]
 >
 >대상 스키마와 달리 소스 스키마는 기본 ID를 참조 필드로 사용할 수 없습니다.
 
-이 자습서에서는 대상 스키마 &quot;[!DNL Hotels]&quot;에 스키마의 기본 ID로 사용되는 `hotelId` 필드가 포함되어 있으므로 참조 필드로도 작동합니다. 그러나 소스 스키마 &quot;[!DNL Loyalty Members]&quot;에는 참조로 사용할 전용 필드가 없으므로 스키마에 새 필드를 추가하는 새 필드 그룹이 부여되어야 합니다. `favoriteHotel`.
+이 자습서에서는 대상 스키마 &quot;[!DNL Hotels]&quot;에 가 포함되어 있습니다 `hotelId` 스키마의 기본 ID로 작동하며 해당 참조 필드로 작용하는 필드입니다. 그러나 소스 스키마 &quot;[!DNL Loyalty Members]&quot; 에는 참조로 사용할 전용 필드가 없으며 스키마에 새 필드를 추가하는 새 필드 그룹이 부여되어야 합니다. `favoriteHotel`.
 
 >[!NOTE]
 >
->소스 스키마에 참조 필드로 사용할 전용 필드가 이미 있는 경우, [참조 설명자](#reference-identity)를 만드는 단계로 건너뛸 수 있습니다.
+>소스 스키마에 참조 필드로 사용할 전용 필드가 이미 있는 경우, 단계를 건너뛸 수 있습니다 [참조 설명자 만들기](#reference-identity).
 
 ### 새 필드 그룹 만들기
 
-스키마에 새 필드를 추가하려면 먼저 필드 그룹에서 정의해야 합니다. `/tenant/fieldgroups` 종단점에 POST 요청을 하여 새 필드 그룹을 만들 수 있습니다.
+스키마에 새 필드를 추가하려면 먼저 필드 그룹에서 정의해야 합니다. 에 POST 요청을 만들어 새 필드 그룹을 만들 수 있습니다 `/tenant/fieldgroups` 엔드포인트.
 
 **API 형식**
 
@@ -134,14 +134,14 @@ POST /tenant/fieldgroups
 
 **요청**
 
-다음 요청은 추가되는 모든 스키마의 `_{TENANT_ID}` 네임스페이스 아래에 `favoriteHotel` 필드를 추가하는 새 필드 그룹을 만듭니다.
+다음 요청은 를 추가하는 새 필드 그룹을 만듭니다 `favoriteHotel` 아래의 필드 `_{TENANT_ID}` 가 추가되는 모든 스키마의 네임스페이스입니다.
 
 ```shell
 curl -X POST\
   https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'content-type: application/json' \
   -d '{
@@ -232,11 +232,11 @@ curl -X POST\
 
 {style=&quot;table-layout:auto&quot;}
 
-필드 그룹을 소스 스키마에 추가하는 다음 단계에서 사용할 필드 그룹의 `$id` URI를 기록합니다.
+레코드 `$id` 소스 스키마에 필드 그룹을 추가하는 다음 단계에서 사용할 필드 그룹의 URI입니다.
 
 ### 소스 스키마에 필드 그룹 추가
 
-필드 그룹을 만든 후에는 `/tenant/schemas/{SCHEMA_ID}` 종단점에 PATCH 요청을 하여 소스 스키마에 추가할 수 있습니다.
+필드 그룹을 만든 후에는 필드에 PATCH 요청을 수행하여 소스 스키마에 추가할 수 있습니다 `/tenant/schemas/{SCHEMA_ID}` 엔드포인트.
 
 **API 형식**
 
@@ -246,13 +246,13 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{SCHEMA_ID}` | 소스 스키마의 URL로 인코딩된 `$id` URI 또는 `meta:altId`. |
+| `{SCHEMA_ID}` | URL로 인코딩되어 있습니다 `$id` URI 또는 `meta:altId` 소스 스키마 중 하나입니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **요청**
 
-다음 요청은 &quot;[!DNL Favorite Hotel]&quot; 필드 그룹을 &quot;[!DNL Loyalty Members]&quot; 스키마에 추가합니다.
+다음 요청은 &quot;[!DNL Favorite Hotel]&quot; 필드 그룹을 &quot;[!DNL Loyalty Members]&quot; 스키마.
 
 ```shell
 curl -X PATCH \
@@ -260,7 +260,7 @@ curl -X PATCH \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '[
     { 
@@ -275,15 +275,15 @@ curl -X PATCH \
 
 | 속성 | 설명 |
 | --- | --- |
-| `op` | 수행할 PATCH 작업입니다. 이 요청에서는 `add` 작업을 사용합니다. |
+| `op` | 수행할 PATCH 작업입니다. 이 요청에서는 `add` 작업. |
 | `path` | 새 리소스를 추가할 스키마 필드의 경로입니다. 필드 그룹을 스키마에 추가할 때 값은 &quot;/allOf/-&quot;여야 합니다. |
-| `value.$ref` | 추가할 필드 그룹의 `$id` |
+| `value.$ref` | 다음 `$id` 추가할 필드 그룹의 이름입니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **응답**
 
-성공적으로 응답하면 업데이트된 스키마의 세부 정보가 반환됩니다. 여기에는 이제 `allOf` 배열 아래에 추가된 필드 그룹의 `$ref` 값이 포함됩니다.
+성공적인 응답은 이제 다음을 포함하는 업데이트된 스키마의 세부 정보를 반환합니다 `$ref` 아래에 추가된 필드 그룹의 값 `allOf` 배열입니다.
 
 ```json
 {
@@ -319,7 +319,7 @@ curl -X PATCH \
     "meta:abstract": false,
     "meta:extensible": false,
     "meta:tenantNamespace": "_{TENANT_ID}",
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "meta:extends": [
         "https://ns.adobe.com/xdm/context/profile",
         "https://ns.adobe.com/xdm/data/record",
@@ -344,9 +344,9 @@ curl -X PATCH \
 
 ## 참조 ID 설명자 만들기 {#reference-identity}
 
-관계의 다른 스키마에서 참조로 사용 중인 경우 스키마 필드에 적용된 참조 ID 설명자가 있어야 합니다. &quot;[!DNL Loyalty Members]&quot;의 `favoriteHotel` 필드는 &quot;[!DNL Hotels]&quot;의 `hotelId` 필드를 참조하므로 `hotelId`에 참조 ID 설명자가 부여되어야 합니다.
+관계의 다른 스키마에서 참조로 사용 중인 경우 스키마 필드에 적용된 참조 ID 설명자가 있어야 합니다. 다음 이후 `favoriteHotel` 필드의 &quot;[!DNL Loyalty Members]&quot; `hotelId` 필드의 &quot;[!DNL Hotels]&quot;, `hotelId` 참조 ID 설명자를 제공해야 합니다.
 
-`/tenant/descriptors` 종단점에 대한 POST 요청을 수행하여 대상 스키마에 대한 참조 설명자를 만듭니다.
+대상 스키마에 대한 POST 요청을 수행하여 대상 스키마에 대한 참조 설명자를 만듭니다. `/tenant/descriptors` 엔드포인트.
 
 **API 형식**
 
@@ -356,14 +356,14 @@ POST /tenant/descriptors
 
 **요청**
 
-다음 요청은 대상 스키마 &quot;[!DNL Hotels]&quot;의 `hotelId` 필드에 대한 참조 설명자를 만듭니다.
+다음 요청에서는 `hotelId` 대상 스키마 &quot;&quot;의 필드[!DNL Hotels]&quot;.
 
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/foundation/schemaregistry/tenant/descriptors \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
@@ -378,10 +378,10 @@ curl -X POST \
 | 매개 변수 | 설명 |
 | --- | --- |
 | `@type` | 정의되는 설명자의 유형입니다. 참조 설명자의 경우 값은 &quot;xdm:descriptorReferenceIdentity&quot;여야 합니다. |
-| `xdm:sourceSchema` | 대상 스키마의 `$id` URL입니다. |
+| `xdm:sourceSchema` | 다음 `$id` 대상 스키마의 URL입니다. |
 | `xdm:sourceVersion` | 대상 스키마의 버전 번호입니다. |
 | `sourceProperty` | 대상 스키마의 기본 ID 필드에 대한 경로입니다. |
-| `xdm:identityNamespace` | 참조 필드의 ID 네임스페이스입니다. 필드를 스키마의 기본 ID로 정의할 때 사용되는 네임스페이스와 같아야 합니다. 자세한 내용은 [ID 네임스페이스 개요](../../identity-service/home.md)를 참조하십시오. |
+| `xdm:identityNamespace` | 참조 필드의 ID 네임스페이스입니다. 필드를 스키마의 기본 ID로 정의할 때 사용되는 네임스페이스와 같아야 합니다. 자세한 내용은 [id 네임스페이스 개요](../../identity-service/home.md) 추가 정보. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -403,7 +403,7 @@ curl -X POST \
 
 ## 관계 설명자 만들기 {#create-descriptor}
 
-관계 설명자는 소스 스키마와 대상 스키마 간에 일대일 관계를 설정합니다. 대상 스키마에 대한 참조 설명자를 정의한 후에는 `/tenant/descriptors` 종단점에 대한 POST 요청을 수행하여 새 관계 설명자를 생성할 수 있습니다.
+관계 설명자는 소스 스키마와 대상 스키마 간에 일대일 관계를 설정합니다. 대상 스키마에 대한 참조 설명자를 정의한 후에는 POST 요청을 수행하여 새 관계 설명자를 생성할 수 있습니다 `/tenant/descriptors` 엔드포인트.
 
 **API 형식**
 
@@ -413,14 +413,14 @@ POST /tenant/descriptors
 
 **요청**
 
-다음 요청은 소스 스키마로 &quot;[!DNL Loyalty Members]&quot;를 사용하고 대상 스키마로 &quot;[!DNL Legacy Loyalty Members]&quot;를 사용하는 새 관계 설명자를 만듭니다.
+다음 요청은 &quot;[!DNL Loyalty Members]&quot; 를 소스 스키마로 사용하고 &quot;[!DNL Legacy Loyalty Members]&quot; 를 대상 스키마로 사용합니다.
 
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/foundation/schemaregistry/tenant/descriptors \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
@@ -436,11 +436,11 @@ curl -X POST \
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `@type` | 생성할 설명자 유형입니다. 관계 설명자의 `@type` 값은 &quot;xdm:descriptorOneToOne&quot;입니다. |
-| `xdm:sourceSchema` | 소스 스키마의 `$id` URL입니다. |
+| `@type` | 생성할 설명자 유형입니다. 다음 `@type` 관계 설명자의 값은 &quot;xdm:descriptorOneToOne&quot;입니다. |
+| `xdm:sourceSchema` | 다음 `$id` 소스 스키마의 URL입니다. |
 | `xdm:sourceVersion` | 소스 스키마의 버전 번호입니다. |
 | `xdm:sourceProperty` | 소스 스키마에 있는 참조 필드의 경로입니다. |
-| `xdm:destinationSchema` | 대상 스키마의 `$id` URL입니다. |
+| `xdm:destinationSchema` | 다음 `$id` 대상 스키마의 URL입니다. |
 | `xdm:destinationVersion` | 대상 스키마의 버전 번호입니다. |
 | `xdm:destinationProperty` | 대상 스키마의 참조 필드에 대한 경로입니다. |
 
@@ -466,4 +466,4 @@ curl -X POST \
 
 ## 다음 단계
 
-이 자습서를 따라 두 스키마 간에 일대일 관계를 성공적으로 만들었습니다. [!DNL Schema Registry] API를 사용하여 설명자를 사용하는 방법에 대한 자세한 내용은 [스키마 레지스트리 개발자 안내서](../api/descriptors.md)를 참조하십시오. UI에서 스키마 관계를 정의하는 방법에 대한 단계는 스키마 편집기](relationship-ui.md)를 사용하여 스키마 관계를 정의하는 의 자습서를 참조하십시오.[
+이 자습서를 따라 두 스키마 간에 일대일 관계를 성공적으로 만들었습니다. 를 사용하여 설명자를 사용하는 방법에 대한 자세한 정보 [!DNL Schema Registry] API인 경우 [스키마 레지스트리 개발자 안내서](../api/descriptors.md). UI에서 스키마 관계를 정의하는 방법에 대한 단계는 [스키마 편집기를 사용하여 스키마 관계 정의](relationship-ui.md).

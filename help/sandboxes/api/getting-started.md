@@ -5,7 +5,7 @@ title: 샌드박스 API 시작하기
 topic-legacy: developer guide
 description: Sandbox API를 통해 개발자는 Adobe Experience Platform에서 샌드박스를 프로그래밍 방식으로 관리할 수 있습니다. 이 안내서를 따라 API를 사용하여 주요 작업을 수행하는 방법에 대해 알아보십시오.
 exl-id: 1ae27f30-2f89-4bfa-887d-a5def17b5cbc
-source-git-commit: d38df5ede84c1306a76fd1ec83d9d0a540b0d01c
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '376'
 ht-degree: 5%
@@ -32,7 +32,7 @@ IMS 조직의 샌드박스를 관리하려면 샌드박스 관리 권한이 있�
 
 * 권한 부여: 베어러 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* x-gw-ims-org-id: `{ORG_ID}`
 
 인증 헤더 외에, 모든 요청에는 작업이 발생할 샌드박스의 이름을 지정하는 헤더가 필요합니다.
 

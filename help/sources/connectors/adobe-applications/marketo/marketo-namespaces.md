@@ -5,7 +5,7 @@ title: B2B 네임스페이스 및 스키마
 topic-legacy: overview
 description: 이 문서에서는 B2B 소스 커넥터를 만들 때 필요한 사용자 지정 네임스페이스에 대한 개요를 제공합니다.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: 8718512a9768158183b9fb6b9e336081e47cd889
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1688'
 ht-degree: 4%
@@ -44,7 +44,7 @@ B2B 네임스페이스 및 스키마 자동 생성 유틸리티를 사용하는 
 | `PRIVATE_KEY` | 인증을 위해 사용되는 자격 증명 [!DNL Postman] Experience Platform API에 대한 인스턴스. 개발자 콘솔 설정에 대한 튜토리얼 및 [개발자 콘솔 설정 및 [!DNL Postman]](../../../../landing/postman.md) {PRIVATE_KEY}을(를) 검색하는 방법에 대한 지침은 | `{PRIVATE_KEY}` |
 | `TECHNICAL_ACCOUNT_ID` | Adobe I/O에 통합하는 데 사용되는 자격 증명입니다. | `D42AEVJZTTJC6LZADUBVPA15@techacct.adobe.com` |
 | `IMS` | IMS(Identity Management 시스템)는 Adobe 서비스에 대한 인증을 위한 프레임워크를 제공합니다. 와 관련하여 [!DNL Marketo]로 설정되면 이 값은 고정되며 항상 다음으로 설정됩니다. `ims-na1.adobelogin.com`. | `ims-na1.adobelogin.com` |
-| `IMS_ORG` | 제품 및 서비스를 소유하거나 라이센스를 부여하고 해당 구성원에 대한 액세스를 허용할 수 있는 법인. 다음에서 자습서를 참조하십시오. [개발자 콘솔 설정 및 [!DNL Postman]](../../../../landing/postman.md) 을 검색하는 방법에 대한 지침 `{IMS_ORG}` 정보. | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
+| `IMS_ORG` | 제품 및 서비스를 소유하거나 라이센스를 부여하고 해당 구성원에 대한 액세스를 허용할 수 있는 법인. 다음에서 자습서를 참조하십시오. [개발자 콘솔 설정 및 [!DNL Postman]](../../../../landing/postman.md) 을 검색하는 방법에 대한 지침 `{ORG_ID}` 정보. | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
 | `SANDBOX_NAME` | 사용 중인 가상 샌드박스 파티션의 이름입니다. | `prod` |
 | `TENANT_ID` | 사용자가 만드는 리소스가 제대로 식별되고 IMS 조직 내에 포함되어 있는지 확인하는 데 사용되는 ID입니다. | `b2bcdpproductiontest` |
 | `PLATFORM_URL` | API를 호출하는 URL 끝점입니다. 이 값은 고정되며 항상 다음으로 설정됩니다. `http://platform.adobe.io/`. | `http://platform.adobe.io/` |

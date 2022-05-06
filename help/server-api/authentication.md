@@ -4,7 +4,7 @@ description: Adobe Experience Platform Edge Network Server API에 대한 인증�
 seo-description: Learn how to configure authentication for the Adobe Experience Platform Edge Network Server API
 keywords: 데이터 수집; 인증; Adobe Experience Platform Edge Network api; 권한
 exl-id: 73c7a186-9b85-43fe-a586-4c6260b6fa8c
-source-git-commit: 422f859bef8faf292fd7e5fd8b6a8d31967421c1
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '628'
 ht-degree: 2%
@@ -44,7 +44,7 @@ ht-degree: 2%
 
 * 권한 부여: 베어러 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* x-gw-ims-org-id: `{ORG_ID}`
 
 Experience Platform의 리소스는 특정 가상 샌드박스로 분리할 수 있습니다. Platform API에 대한 요청에서 작업을 수행할 샌드박스의 이름 및 ID를 지정할 수 있습니다. 선택적 매개 변수입니다.
 

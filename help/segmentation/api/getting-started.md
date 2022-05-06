@@ -5,7 +5,7 @@ title: 세그멘테이션 서비스 API 시작하기
 topic-legacy: developer guide
 description: 다음 설명서는 세그멘테이션 API를 성공적으로 사용하기 위해 알고 있어야 하는 추가 정보를 제공합니다.
 exl-id: 41c0e50b-afed-45b8-85d7-a0c84ae090f5
-source-git-commit: 8325ae6fd7d0013979e80d56eccd05b6ed6f5108
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '353'
 ht-degree: 1%
@@ -35,7 +35,7 @@ API 설명서를 사용하려면 를 완료해야 합니다. [인증 자습서](
 
 - Authorization: `Bearer {ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
+- x-gw-ims-org-id: `{ORG_ID}`
 
 의 모든 리소스 [!DNL Experience Platform] 특정 가상 샌드박스로 격리됩니다. 에 대한 모든 요청 [!DNL Platform] API에는 작업이 발생할 샌드박스의 이름을 지정하는 헤더가 필요합니다.
 

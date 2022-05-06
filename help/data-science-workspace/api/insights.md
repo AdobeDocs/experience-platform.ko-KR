@@ -1,25 +1,24 @@
 ---
-keywords: Experience Platform;개발자 가이드;끝점;데이터 과학 작업 공간;인기 항목;인사이트;sensei 기계 학습 api
+keywords: Experience Platform;개발자 안내서;엔드포인트;데이터 과학 작업 공간;인기 항목;통찰력;sensei 기계 학습 api
 solution: Experience Platform
-title: 인사이트 API 끝점
+title: 통찰력 API 엔드포인트
 topic-legacy: Developer guide
-description: 인사이트에는 관련 평가 지표를 표시하여 데이터 과학자가 최적의 ML 모델을 평가하고 선택할 수 있도록 하는 데 사용되는 지표가 포함되어 있습니다.
+description: 인사이트에는 관련 평가 지표를 표시하여 데이터 과학자가 최적 ML 모델을 평가하고 선택할 수 있도록 하는 데 사용되는 지표가 포함되어 있습니다.
 exl-id: 603546d6-5686-4b59-99a7-90ecc0db8de3
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '515'
 ht-degree: 3%
 
 ---
 
-# 인사이트 끝점
+# 통찰력 끝점
 
-인사이트에는 관련 평가 지표를 표시하여 데이터 과학자가 최적의 ML 모델을 평가하고 선택할 수 있도록 하는 데 사용되는 지표가 포함되어 있습니다.
+인사이트에는 관련 평가 지표를 표시하여 데이터 과학자가 최적 ML 모델을 평가하고 선택할 수 있도록 하는 데 사용되는 지표가 포함되어 있습니다.
 
 ## 인사이트 목록 검색
 
-인사이트 끝점에 대한 단일 GET 요청을 수행하여 인사이트 목록을 검색할 수 있습니다.  결과를 필터링하는 데 도움이 되도록 요청 경로에서 쿼리 매개 변수를 지정할 수 있습니다. 사용 가능한 쿼리 목록은 [자산 검색을 위한 매개 변수 쿼리](./appendix.md#query)의 부록 섹션을 참조하십시오.
+인사이트 엔드포인트에 대한 단일 GET 요청을 수행하여 인사이트 목록을 검색할 수 있습니다.  결과를 필터링하는 데 도움이 되도록 요청 경로에 쿼리 매개 변수를 지정할 수 있습니다. 사용 가능한 쿼리 목록은 [자산 검색을 위한 쿼리 매개 변수](./appendix.md#query).
 
 **API 형식**
 
@@ -34,13 +33,13 @@ curl -X GET \
   https://platform.adobe.io/data/sensei/insights \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **응답**
 
-성공적인 응답은 인사이트 목록을 포함하는 페이로드를 반환하고 각 인사이트에 고유 식별자( `id` )가 있습니다. 또한 인사이트 이벤트 및 지표 데이터에 따라 특정 인사이트와 연관된 고유 식별자가 포함된 `context`을 받게 됩니다.
+성공적인 응답은 인사이트 목록을 포함하는 페이로드를 반환하며 각 인사이트에 고유한 식별자( )가 있습니다 `id` ). 또한 `context` 인사이트 이벤트 및 지표 데이터와 관련된 해당 특정 인사이트와 연관된 고유 식별자를 포함합니다.
 
 ```json
 {
@@ -102,14 +101,14 @@ curl -X GET \
 
 | 속성 | 설명 |
 | --- | --- |
-| `id` | 인사이트에 해당하는 ID. |
-| `experimentId` | 유효한 실험 ID. |
-| `experimentRunId` | 유효한 실험 실행 ID입니다. |
-| `modelId` | 유효한 모델 ID. |
+| `id` | 인사이트에 해당하는 ID입니다. |
+| `experimentId` | 유효한 실험 ID입니다. |
+| `experimentRunId` | 올바른 실험 실행 ID입니다. |
+| `modelId` | 유효한 모델 ID입니다. |
 
 ## 특정 인사이트 검색
 
-특정 인사이트를 조회하려면 GET 요청을 수행하고 요청 경로에 유효한 `{INSIGHT_ID}`을 입력합니다. 결과를 필터링하는 데 도움이 되도록 요청 경로에서 쿼리 매개 변수를 지정할 수 있습니다. 사용 가능한 쿼리 목록은 [자산 검색을 위한 매개 변수 쿼리](./appendix.md#query)의 부록 섹션을 참조하십시오.
+특정 인사이트를 조회하기 위해 GET 요청을 수행하고 유효한 인사이트를 제공합니다 `{INSIGHT_ID}` 를 입력합니다. 결과를 필터링하는 데 도움이 되도록 요청 경로에 쿼리 매개 변수를 지정할 수 있습니다. 사용 가능한 쿼리 목록은 [자산 검색을 위한 쿼리 매개 변수](./appendix.md#query).
 
 **API 형식**
 
@@ -119,7 +118,7 @@ GET /insights/{INSIGHT_ID}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{INSIGHT_ID}` | Sensei 통찰력의 고유 식별자입니다. |
+| `{INSIGHT_ID}` | Sensei 인사이트의 고유 식별자입니다. |
 
 **요청**
 
@@ -128,13 +127,13 @@ curl -X GET \
   https://platform.adobe.io/data/sensei/insights/08b8d174-6b0d-4d7e-acd8-1c4c908e14b2 \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **응답**
 
-성공적인 응답은 인사이트 고유 식별자(`id`)를 포함하는 페이로드를 반환합니다. 또한 인사이트 이벤트 및 지표 데이터와 관련된 특정 인사이트와 연관된 고유 식별자가 포함된 `context`을 받게 됩니다.
+성공적인 응답은 인사이트 고유 식별자( )를 포함하는 페이로드를 반환합니다`id`). 또한 `context` 인사이트 이벤트 및 지표 데이터와 관련된 특정 인사이트와 연관된 고유 식별자를 포함합니다.
 
 ```json
 {
@@ -165,14 +164,14 @@ curl -X GET \
 
 | 속성 | 설명 |
 | --- | --- |
-| `id` | 인사이트에 해당하는 ID. |
-| `experimentId` | 유효한 실험 ID. |
-| `experimentRunId` | 유효한 실험 실행 ID입니다. |
-| `modelId` | 유효한 모델 ID. |
+| `id` | 인사이트에 해당하는 ID입니다. |
+| `experimentId` | 유효한 실험 ID입니다. |
+| `experimentRunId` | 올바른 실험 실행 ID입니다. |
+| `modelId` | 유효한 모델 ID입니다. |
 
-## 새 모델 통찰력 추가
+## 새 모델 인사이트 추가
 
-POST 요청과 새 모델 인사이트에 대한 컨텍스트, 이벤트 및 지표를 제공하는 페이로드를 수행하여 새 모델 인사이트를 만들 수 있습니다. 새 모델 통찰력을 만드는 데 사용되는 컨텍스트 필드는 기존 서비스가 연결되어 있지 않아도 되지만, 다음 중 하나 이상의 해당 ID를 제공하여 기존 서비스를 사용하여 새 모델 통찰력을 만들도록 선택할 수 있습니다.
+POST 요청 및 새 모델 인사이트에 대한 컨텍스트, 이벤트 및 지표를 제공하는 페이로드를 수행하여 새 모델 인사이트를 만들 수 있습니다. 새 모델 인사이트를 만드는 데 사용되는 컨텍스트 필드는 기존 서비스가 연결되어 있을 필요가 없지만, 해당 ID 중 하나 이상을 제공하여 새 모델 인사이트를 기존 서비스로 만들 수 있습니다.
 
 ```json
 "context": {
@@ -200,7 +199,7 @@ curl -X POST \
   https://platform.adobe.io/data/sensei/insights \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
     -H `Content-Type: application/vnd.adobe.platform.sensei+json;profile=mlInstance.v1.json`
     -d {
@@ -230,7 +229,7 @@ curl -X POST \
 
 **응답**
 
-성공적인 응답은 `{INSIGHT_ID}`이(가) 있는 페이로드와 초기 요청에서 제공한 모든 매개 변수를 반환합니다.
+성공적으로 응답하면 가 있는 페이로드가 반환됩니다 `{INSIGHT_ID}` 및 초기 요청에서 제공한 모든 매개 변수입니다.
 
 ```json
 {
@@ -261,11 +260,11 @@ curl -X POST \
 
 | 속성 | 설명 |
 | --- | --- |
-| `insightId` | POST 요청이 성공적으로 수행된 경우 이 특정 인사이트를 위해 만들어진 고유 ID. |
+| `insightId` | 성공적인 POST 요청이 수행된 경우 이 특정 인사이트를 위해 생성되는 고유 ID입니다. |
 
 ## 알고리즘에 대한 기본 지표 목록 검색
 
-지표 끝점에 대한 단일 GET 요청을 수행하여 모든 알고리즘의 기본 지표 및 기본 지표 목록을 검색할 수 있습니다. 특정 지표를 쿼리하려면 GET 요청을 수행하고 요청 경로에 유효한 `{ALGORITHM}`을 제공합니다.
+지표 종단점에 대한 단일 GET 요청을 수행하여 모든 알고리즘과 기본 지표 목록을 검색할 수 있습니다. 특정 지표를 쿼리하려면 GET 요청을 수행하고 유효한 지표를 제공합니다 `{ALGORITHM}` 를 입력합니다.
 
 **API 형식**
 
@@ -280,20 +279,20 @@ GET /insights/metrics?algorithm={ALGORITHM}
 
 **요청**
 
-다음 요청에는 쿼리가 포함되어 있으며 알고리즘 식별자 `{ALGORITHM}`를 사용하여 특정 지표를 검색합니다.
+다음 요청은 쿼리를 포함하고 알고리즘 식별자를 사용하여 특정 지표를 검색합니다 `{ALGORITHM}`
 
 ```shell
 curl -X GET \
   'https://platform.adobe.io/data/sensei/insights/metrics?algorithm={ALGORITHM}' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **응답**
 
-성공적인 응답은 `algorithm` 고유 식별자 및 기본 지표 배열을 포함하는 페이로드를 반환합니다.
+성공적인 응답은 다음을 포함하는 페이로드를 반환합니다 `algorithm` 고유 식별자 및 기본 지표 배열입니다.
 
 ```json
 {

@@ -5,7 +5,7 @@ title: 세그먼트 정의 API 끝점
 topic-legacy: developer guide
 description: Adobe Experience Platform 세그멘테이션 서비스 API의 세그먼트 정의 종단점을 사용하면 조직의 세그먼트 정의를 프로그래밍 방식으로 관리할 수 있습니다.
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
-source-git-commit: 265607b3b21fda48a92899ec3d750058ca48868a
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1188'
 ht-degree: 3%
@@ -14,21 +14,21 @@ ht-degree: 3%
 
 # 세그먼트 정의 끝점
 
-Adobe Experience Platform에서는 프로필 그룹에서 특정 속성 또는 동작 그룹을 정의하는 세그먼트를 만들 수 있습니다. 세그먼트 정의는 [!DNL Profile Query Language] (PQL)에 작성된 쿼리를 캡슐화하는 개체입니다. 이 개체를 PQL 술어라고도 합니다. PQL은 [!DNL Real-time Customer Profile]에 제공하는 레코드 또는 시계열 데이터와 관련된 조건을 기반으로 세그먼트에 대한 규칙을 정의합니다. PQL 쿼리 작성에 대한 자세한 내용은 [PQL 안내서](../pql/overview.md)를 참조하십시오.
+Adobe Experience Platform에서는 프로필 그룹에서 특정 속성 또는 동작 그룹을 정의하는 세그먼트를 만들 수 있습니다. 세그먼트 정의는 [!DNL Profile Query Language] (PQL). 이 개체를 PQL 술어라고도 합니다. PQL은 사용자가 제공하는 레코드 또는 시계열 데이터와 관련된 조건을 기반으로 세그먼트에 대한 규칙을 정의합니다 [!DNL Real-time Customer Profile]. 자세한 내용은 [PQL 안내서](../pql/overview.md) pql 쿼리 작성에 대한 자세한 정보.
 
 이 안내서에서는 세그먼트 정의를 더 잘 이해하는 데 도움이 되는 정보를 제공하며 API를 사용하여 기본 작업을 수행하기 위한 샘플 API 호출을 포함합니다.
 
 ## 시작하기
 
-이 안내서에서 사용되는 엔드포인트는 [!DNL Adobe Experience Platform Segmentation Service] API의 일부입니다. 계속하기 전에 필수 헤더 및 예제 API 호출을 읽는 방법을 포함하여 API를 성공적으로 호출하기 위해 알고 있어야 하는 중요한 정보가 필요하면 [시작 안내서](./getting-started.md)를 검토하십시오.
+이 안내서에서 사용되는 엔드포인트는 [!DNL Adobe Experience Platform Segmentation Service] API. 계속하기 전에 [시작 안내서](./getting-started.md) 필수 헤더 및 예제 API 호출을 읽는 방법을 포함하여 API를 성공적으로 호출하기 위해 알고 있어야 하는 중요한 정보입니다.
 
 ## 세그먼트 정의 목록 검색 {#list}
 
-`/segment/definitions` 종단점에 GET 요청을 수행하여 IMS 조직에 대한 모든 세그먼트 정의 목록을 검색할 수 있습니다.
+IMS 조직에 대한 GET 요청을 수행하여 조직의 모든 세그먼트 정의 목록을 검색할 수 있습니다 `/segment/definitions` 엔드포인트.
 
 **API 형식**
 
-`/segment/definitions` 종단점은 결과를 필터링하는 데 도움이 되는 여러 쿼리 매개 변수를 지원합니다. 이러한 매개 변수는 선택 사항이지만 고가의 오버헤드를 줄이는 데 도움이 되도록 사용하는 것이 좋습니다. 매개 변수 없이 이 종단점을 호출하면 조직에서 사용할 수 있는 모든 세그먼트 정의를 검색합니다. 여러 매개 변수를 앰퍼샌드(`&`)로 구분하여 포함할 수 있습니다.
+다음 `/segment/definitions` endpoint는 결과를 필터링하는 데 도움이 되는 몇 가지 쿼리 매개 변수를 지원합니다. 이러한 매개 변수는 선택 사항이지만 고가의 오버헤드를 줄이는 데 도움이 되도록 사용하는 것이 좋습니다. 매개 변수 없이 이 종단점을 호출하면 조직에서 사용할 수 있는 모든 세그먼트 정의를 검색합니다. 여러 매개 변수를 앰퍼샌드( )로 구분하여 포함할 수 있습니다`&`).
 
 ```http
 GET /segment/definitions
@@ -42,7 +42,7 @@ GET /segment/definitions?{QUERY_PARAMETERS}
 | `start` | 반환된 세그먼트 정의에 대한 시작 오프셋을 지정합니다. | `start=4` |
 | `limit` | 페이지당 반환되는 세그먼트 정의 수를 지정합니다. | `limit=20` |
 | `page` | 세그먼트 정의 결과가 시작되는 페이지를 지정합니다. | `page=5` |
-| `sort` | 결과를 정렬할 필드를 지정합니다. 는 다음 형식으로 작성됩니다. `[attributeName]:[desc|asc]` | `sort=updateTime:desc` |
+| `sort` | 결과를 정렬할 필드를 지정합니다. 는 다음 형식으로 작성됩니다. `[attributeName]:[desc|asc]`. | `sort=updateTime:desc` |
 | `evaluationInfo.continuous.enabled` | 세그먼트 정의가 스트리밍되도록 설정되어 있는지 여부를 지정합니다. | `evaluationInfo.continuous.enabled=true` |
 
 **요청**
@@ -52,7 +52,7 @@ GET /segment/definitions?{QUERY_PARAMETERS}
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions?limit=2 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
@@ -70,7 +70,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions?limit=2 
                 "name": "_xdm.context.profile"
             },
             "ttlInDays": 30,
-            "imsOrgId": "{IMS_ORG}",
+            "imsOrgId": "{ORG_ID}",
             "sandbox": {
                 "sandboxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
                 "sandboxName": "prod",
@@ -110,7 +110,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions?limit=2 
                 "name": "_xdm.context.profile"
             },
             "ttlInDays": 30,
-            "imsOrgId": "{IMS_ORG}",
+            "imsOrgId": "{ORG_ID}",
             "name": "test segment",
             "description": "",
             "expression": {
@@ -153,7 +153,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions?limit=2 
 
 ## 새 세그먼트 정의 만들기 {#create}
 
-`/segment/definitions` 종단점에 대한 POST 요청을 만들어 새 세그먼트 정의를 생성할 수 있습니다.
+에 POST 요청을 만들어 새 세그먼트 정의를 만들 수 있습니다 `/segment/definitions` 엔드포인트.
 
 **API 형식**
 
@@ -167,7 +167,7 @@ POST /segment/definitions
 curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '{
@@ -190,16 +190,16 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 | 속성 | 설명 |
 | -------- | ----------- |
 | `name` | **필수 여부.** 세그먼트를 참조하는 고유한 이름입니다. |
-| `schema` | **필수 여부.** 세그먼트의 엔티티와 연관된 스키마입니다. `id` 또는 `name` 필드로 구성됩니다. |
+| `schema` | **필수 여부.** 세그먼트의 엔티티와 연관된 스키마입니다. 다음 중 하나로 구성됩니다 `id` 또는 `name` 필드. |
 | `expression` | **필수 여부.** 세그먼트 정의에 대한 필드 정보를 포함하는 엔티티입니다. |
 | `expression.type` | 표현식 유형을 지정합니다. 현재 &quot;PQL&quot;만 지원됩니다. |
 | `expression.format` | 값의 표현식 구조를 나타냅니다. 현재 지원되는 형식은 다음과 같습니다. <ul><li>`pql/text`: 게시된 PQL 문법에 따라 세그먼트 정의에 대한 텍스트 표현입니다.  예: `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
-| `expression.value` | `expression.format`에 표시된 유형을 따르는 식입니다. |
+| `expression.value` | 에 표시된 유형을 따르는 식입니다. `expression.format`. |
 | `description` | 사용자가 읽을 수 있는 정의 설명. |
 
 >[!NOTE]
 >
->세그먼트 정의 표현식은 계산된 속성을 참조할 수도 있습니다. 자세한 내용은 [계산된 속성 API 엔드포인트 가이드](../../profile/computed-attributes/ca-api.md)를 참조하십시오
+>세그먼트 정의 표현식은 계산된 속성을 참조할 수도 있습니다. 자세한 내용은 [계산된 특성 API 끝점 안내서](../../profile/computed-attributes/ca-api.md)
 >
 >계산된 특성 기능은 알파에 있으며 모든 사용자가 사용할 수 없습니다. 설명서 및 기능은 변경될 수 있습니다.
 
@@ -215,7 +215,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
     },
     "ttlInDays": 60,
     "profileInstanceId": "ups",
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "sandbox": {
         "sandboxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
         "sandboxName": "prod",
@@ -256,7 +256,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 
 ## 특정 세그먼트 정의 검색 {#get}
 
-`/segment/definitions` 종단점에 GET 요청을 하고 요청 경로에서 검색할 세그먼트 정의의 ID를 제공하여 특정 세그먼트 정의에 대한 자세한 정보를 검색할 수 있습니다.
+에 GET 요청을 수행하여 특정 세그먼트 정의에 대한 자세한 정보를 검색할 수 있습니다 `/segment/definitions` 요청 경로에서 검색할 세그먼트 정의의 ID를 제공하고 끝점입니다.
 
 **API 형식**
 
@@ -266,14 +266,14 @@ GET /segment/definitions/{SEGMENT_ID}
 
 | 매개 변수 | 설명 |
 | --------- | ----------- |
-| `{SEGMENT_ID}` | 검색할 세그먼트 정의의 `id` 값입니다. |
+| `{SEGMENT_ID}` | 다음 `id` 검색할 세그먼트 정의 값입니다. |
 
 **요청**
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions/4afe34ae-8c98-4513-8a1d-67ccaa54bc05 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
@@ -290,7 +290,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions/4afe34ae
     },
     "ttlInDays": 60,
     "profileInstanceId": "ups",
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "sandbox": {
         "sandboxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
         "sandboxName": "prod",
@@ -328,17 +328,17 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions/4afe34ae
 | -------- | ----------- |
 | `id` | 시스템 생성 세그먼트 정의의 읽기 전용 ID입니다. |
 | `name` | 세그먼트를 참조하는 고유한 이름입니다. |
-| `schema` | 세그먼트의 엔티티와 연관된 스키마입니다. `id` 또는 `name` 필드로 구성됩니다. |
+| `schema` | 세그먼트의 엔티티와 연관된 스키마입니다. 다음 중 하나로 구성됩니다 `id` 또는 `name` 필드. |
 | `expression` | 세그먼트 정의에 대한 필드 정보를 포함하는 엔티티입니다. |
 | `expression.type` | 표현식 유형을 지정합니다. 현재 &quot;PQL&quot;만 지원됩니다. |
 | `expression.format` | 값의 표현식 구조를 나타냅니다. 현재 지원되는 형식은 다음과 같습니다. <ul><li>`pql/text`: 게시된 PQL 문법에 따라 세그먼트 정의에 대한 텍스트 표현입니다.  예: `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
-| `expression.value` | `expression.format`에 표시된 유형을 따르는 식입니다. |
+| `expression.value` | 에 표시된 유형을 따르는 식입니다. `expression.format`. |
 | `description` | 사람이 읽을 수 있는 정의 설명. |
 | `evaluationInfo` | 세그먼트 정의가 진행될 평가, 일괄 처리, 연속(스트리밍이라고도 함) 또는 동기식의 유형을 알려주는 시스템 생성 객체입니다. |
 
 ## 세그먼트 정의 벌크 검색 {#bulk-get}
 
-`/segment/definitions/bulk-get` 종단점에 POST 요청을 하고 요청 본문에 세그먼트 정의의 `id` 값을 제공하여 지정된 여러 세그먼트 정의에 대한 자세한 정보를 검색할 수 있습니다.
+에 POST 요청을 만들어 지정된 여러 세그먼트 정의에 대한 자세한 정보를 검색할 수 있습니다 `/segment/definitions/bulk-get` 엔드포인트 및 제공 `id` 요청 본문의 세그먼트 정의 값입니다.
 
 **API 형식**
 
@@ -352,7 +352,7 @@ POST /segment/definitions/bulk-get
 curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions/bulk-get \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
@@ -381,7 +381,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions/bulk-ge
             },
             "ttlInDays": 60,
             "profileInstanceId": "ups",
-            "imsOrgId": "{IMS_ORG}",
+            "imsOrgId": "{ORG_ID}",
             "sandbox": {
                 "sandboxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
                 "sandboxName": "prod",
@@ -420,7 +420,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions/bulk-ge
             },
             "ttlInDays": 60,
             "profileInstanceId": "ups",
-            "imsOrgId": "{IMS_ORG}",
+            "imsOrgId": "{ORG_ID}",
             "sandbox": {
                 "sandboxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
                 "sandboxName": "prod",
@@ -461,21 +461,21 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions/bulk-ge
 | -------- | ----------- |
 | `id` | 시스템 생성 세그먼트 정의의 읽기 전용 ID입니다. |
 | `name` | 세그먼트를 참조하는 고유한 이름입니다. |
-| `schema` | 세그먼트의 엔티티와 연관된 스키마입니다. `id` 또는 `name` 필드로 구성됩니다. |
+| `schema` | 세그먼트의 엔티티와 연관된 스키마입니다. 다음 중 하나로 구성됩니다 `id` 또는 `name` 필드. |
 | `expression` | 세그먼트 정의에 대한 필드 정보를 포함하는 엔티티입니다. |
 | `expression.type` | 표현식 유형을 지정합니다. 현재 &quot;PQL&quot;만 지원됩니다. |
 | `expression.format` | 값의 표현식 구조를 나타냅니다. 현재 지원되는 형식은 다음과 같습니다. <ul><li>`pql/text`: 게시된 PQL 문법에 따라 세그먼트 정의에 대한 텍스트 표현입니다.  예: `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
-| `expression.value` | `expression.format`에 표시된 유형을 따르는 식입니다. |
+| `expression.value` | 에 표시된 유형을 따르는 식입니다. `expression.format`. |
 | `description` | 사람이 읽을 수 있는 정의 설명. |
 | `evaluationInfo` | 세그먼트 정의가 진행될 평가, 일괄 처리, 연속(스트리밍이라고도 함) 또는 동기식의 유형을 알려주는 시스템 생성 객체입니다. |
 
 ## 특정 세그먼트 정의 삭제 {#delete}
 
-`/segment/definitions` 종단점에 DELETE 요청을 하고 요청 경로에서 삭제하려는 세그먼트 정의의 ID를 제공하여 특정 세그먼트 정의 삭제를 요청할 수 있습니다.
+에 DELETE 요청을 하여 특정 세그먼트 정의 삭제를 요청할 수 있습니다 `/segment/definitions` 엔드포인트 및 요청 경로에서 삭제할 세그먼트 정의의 ID를 제공합니다.
 
 >[!NOTE]
 >
-> **은(는) 대상 활성화에서 사용되는 세그먼트를 삭제할 수 없습니다.**
+> 다음을 수행합니다 **not** 대상 활성화에서 사용되는 세그먼트를 삭제할 수 있습니다.
 
 **API 형식**
 
@@ -485,14 +485,14 @@ DELETE /segment/definitions/{SEGMENT_ID}
 
 | 매개 변수 | 설명 |
 | --------- | ----------- |
-| `{SEGMENT_ID}` | 삭제할 세그먼트 정의의 `id` 값. |
+| `{SEGMENT_ID}` | 다음 `id` 삭제할 세그먼트 정의 값입니다. |
 
 **요청**
 
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/ups/segment/definitions/4afe34ae-8c98-4513-8a1d-67ccaa54bc05 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
@@ -503,7 +503,7 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/segment/definitions/4afe3
 
 ## 특정 세그먼트 정의 업데이트
 
-`/segment/definitions` 종단점에 PATCH 요청을 하고 요청 경로에서 업데이트할 세그먼트 정의의 ID를 제공하여 특정 세그먼트 정의를 업데이트할 수 있습니다.
+에 PATCH 요청을 만들어 특정 세그먼트 정의를 업데이트할 수 있습니다 `/segment/definitions` 요청 경로에서 업데이트할 세그먼트 정의의 ID를 제공하고 끝점입니다.
 
 **API 형식**
 
@@ -513,7 +513,7 @@ PATCH /segment/definitions/{SEGMENT_ID}
 
 | 매개 변수 | 설명 |
 | --------- | ----------- |
-| `{SEGMENT_ID}` | 업데이트할 세그먼트 정의의 `id` 값입니다. |
+| `{SEGMENT_ID}` | 다음 `id` 업데이트할 세그먼트 정의 값입니다. |
 
 **요청**
 
@@ -523,7 +523,7 @@ PATCH /segment/definitions/{SEGMENT_ID}
 curl -X PATCH https://platform.adobe.io/data/core/ups/segment/definitions/4afe34ae-8c98-4513-8a1d-67ccaa54bc05 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '
@@ -560,7 +560,7 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/segment/definitions/4afe34
     },
     "ttlInDays": 60,
     "profileInstanceId": "ups",
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "sandbox": {
         "sandboxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
         "sandboxName": "prod",
@@ -596,7 +596,7 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/segment/definitions/4afe34
 
 ## 세그먼트 정의 변환
 
-`/segment/conversion` 종단점에 POST 요청을 하여 `pql/text` 및 `pql/json` 또는 `pql/json` 간에 세그먼트 정의를 `pql/text`(으)로 변환할 수 있습니다.
+세그먼트 정의 간에 변환할 수 있습니다 `pql/text` 및 `pql/json` 또는 `pql/json` to `pql/text` 에 POST 요청을 수행하여 `/segment/conversion` 엔드포인트.
 
 **API 형식**
 
@@ -606,13 +606,13 @@ POST /segment/conversion
 
 **요청**
 
-다음 요청은 세그먼트 정의의 형식을 `pql/text`에서 `pql/json`(으)로 변경합니다.
+다음 요청은 세그먼트 정의의 형식을 `pql/text` to `pql/json`.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/segment/conversion \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '{
@@ -657,4 +657,4 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/conversion \
 
 ## 다음 단계
 
-이 안내서를 읽은 후에는 세그먼트 정의 작동 방식을 보다 잘 이해할 수 있습니다. 세그먼트 만들기에 대한 자세한 내용은 [세그먼트 만들기](../tutorials/create-a-segment.md) 자습서를 참조하십시오.
+이 안내서를 읽은 후에는 세그먼트 정의 작동 방식을 보다 잘 이해할 수 있습니다. 세그먼트 만들기에 대한 자세한 내용은 [세그먼트 만들기](../tutorials/create-a-segment.md) 자습서입니다.

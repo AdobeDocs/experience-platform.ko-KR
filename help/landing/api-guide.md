@@ -5,7 +5,7 @@ title: Adobe Experience Platform API 시작하기
 topic-legacy: api guide
 description: Adobe Experience Platform은 서로 밀접하게 연결된 API 서비스를 제공합니다. 이 안내서에는 사용 가능한 서비스, CRUD 작업에 필요한 헤더, 오류 메시지, Postman 컬렉션 및 샘플 API 호출에 대한 정보가 포함되어 있습니다.
 exl-id: a362bcb4-a908-43a8-abd3-0e1d21cb9117
-source-git-commit: e62e4e3a12ad2a85de5b10c60fde3618cde84c4b
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1379'
 ht-degree: 0%
@@ -24,7 +24,7 @@ Adobe Experience Platform은 &quot;API 우선&quot; 철학으로 개발되었습
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
-- `x-gw-ims-org-id: {IMS_ORG}`
+- `x-gw-ims-org-id: {ORG_ID}`
 
 ### 샌드박스 헤더
 
@@ -46,7 +46,7 @@ Adobe Experience Platform API는 플랫폼 리소스를 효과적으로 관리�
 
 ## Experience Platform API에 대한 Postman 컬렉션
 
-Postman은 사전 설정된 변수를 사용하여 환경을 설정하고, API 컬렉션을 공유하고, CRUD 요청을 간소화하는 등의 작업을 수행할 수 있는 API 개발을 위한 협업 플랫폼입니다. 대부분의 Platform API 서비스에는 API 호출을 수행하는 데 도움이 되는 Postman 컬렉션이 있습니다.
+Postman은 사전 설정된 변수로 환경을 설정하고, API 컬렉션을 공유하고, CRUD 요청을 간소화하는 등의 작업을 수행할 수 있는 API 개발을 위한 협업 플랫폼입니다. 대부분의 Platform API 서비스에는 API 호출을 수행하는 데 도움이 되는 Postman 컬렉션이 있습니다.
 
 환경 설정 방법, 사용 가능한 컬렉션 목록, 컬렉션 가져오기 방법 등 Postman에 대한 자세한 내용을 보려면 [Platform Postman 설명서](postman.md).
 
@@ -80,7 +80,7 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xed-id+json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -144,4 +144,4 @@ curl -X GET \
 
 자주 묻는 질문에 대한 답변은 [플랫폼 문제 해결 안내서](troubleshooting.md).
 
-Postman 환경을 설정하고 사용 가능한 Postman 컬렉션을 탐색하려면 다음을 참조하십시오 [Platform Postman 안내서](postman.md).
+Postman 환경을 설정하고 사용 가능한 Postman 컬렉션을 탐색하려면 다음을 참조하십시오. [Platform Postman 안내서](postman.md).

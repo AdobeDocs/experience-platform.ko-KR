@@ -1,7 +1,8 @@
 ---
 title: 감사 이벤트 끝점
 description: Reactor API에서 /audit_events 엔드포인트를 호출하는 방법을 알아봅니다.
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+exl-id: 59cd58dc-4085-47b7-846f-d3937740dd9b
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '262'
 ht-degree: 4%
@@ -12,11 +13,11 @@ ht-degree: 4%
 
 >[!WARNING]
 >
->기능이 추가, 제거 및 재작동하므로 `/audit_events` 종단점의 구현은 유동적입니다.
+>의 구현 `/audit_events` 기능이 추가, 제거 및 재작동하므로 엔드포인트는 플럭스입니다.
 
-감사 이벤트는 변경 시 생성된 Reactor API의 다른 리소스에 대한 특정 변경 사항의 레코드입니다. 이러한 이벤트는 [callback](./callbacks.md)을 사용하여 구독할 수 있는 시스템 이벤트입니다. Reactor API의 `/audit_events` 종단점을 사용하면 경험 애플리케이션 내에서 감사 이벤트를 프로그래밍 방식으로 관리할 수 있습니다.
+감사 이벤트는 변경 시 생성된 Reactor API의 다른 리소스에 대한 특정 변경 사항의 레코드입니다. 이러한 이벤트는 [callback](./callbacks.md). 다음 `/audit_events` reactor API의 종단점을 사용하면 경험 애플리케이션 내에서 감사 이벤트를 프로그래밍 방식으로 관리할 수 있습니다.
 
-감사 이벤트는 `build.created` 또는 `rule.updated` 등의 형식으로 구조화됩니다.`{RESOURCE_TYPE}.{EVENT}`
+감사 이벤트는 `{RESOURCE_TYPE}.{EVENT}`, 예 `build.created` 또는 `rule.updated`.
 
 리소스 유형은 다음 중 하나일 수 있습니다.
 
@@ -38,11 +39,11 @@ ht-degree: 4%
 
 ## 시작하기
 
-이 안내서에 사용된 끝점은 [Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/)의 일부입니다. 계속하기 전에 API 인증 방법에 대한 중요한 정보가 필요하면 [시작 안내서](../getting-started.md)를 검토하십시오.
+이 안내서에 사용된 엔드포인트는 [Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/). 계속하기 전에 [시작 안내서](../getting-started.md) 를 참조하십시오.
 
 ## 감사 이벤트 목록 검색 {#list}
 
-`/audit_events` 종단점에 GET 요청을 수행하여 조직이 소유한 모든 속성에 대한 감사 이벤트 목록을 검색할 수 있습니다.
+에 GET 요청을 수행하여 조직이 소유한 모든 속성에 대한 감사 이벤트 목록을 검색할 수 있습니다 `/audit_events` 엔드포인트.
 
 **API 형식**
 
@@ -57,7 +58,7 @@ curl -X GET \
   https://reactor.adobe.io/audit_events \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
@@ -169,7 +170,7 @@ GET /audit_events/{AUDIT_EVENT_ID}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `AUDIT_EVENT_ID` | 조회하려는 감사 이벤트의 `id` |
+| `AUDIT_EVENT_ID` | 다음 `id` 조회하려는 감사 이벤트 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -180,7 +181,7 @@ curl -X GET \
   https://reactor.adobe.io/audit_events/AEa98742de8ef044d8b86767aa6a15a674 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```

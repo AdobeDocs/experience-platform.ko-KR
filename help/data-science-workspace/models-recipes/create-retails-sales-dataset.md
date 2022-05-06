@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: 이 자습서에서는 다른 모든 Adobe Experience Platform Data Science Workspace 자습서에 필요한 사전 요구 사항과 자산을 제공합니다. 완료되면 Experience Platform 시 사용자와 IMS 조직의 구성원이 소매 판매 스키마 및 데이터 세트를 사용할 수 있습니다.
 exl-id: 1b868c8c-7c92-4f99-8486-54fd7aa1af48
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '554'
 ht-degree: 1%
@@ -25,7 +25,7 @@ ht-degree: 1%
 - 인증 [!DNL Experience Platform] API 호출. 을(를) 완료합니다 [Adobe Experience Platform API 인증 및 액세스](https://www.adobe.com/go/platform-api-authentication-en) 이 자습서를 완료하기 위해 다음 값을 가져오는 자습서:
    - Authorization: `{ACCESS_TOKEN}`
    - x-api-key: `{API_KEY}`
-   - x-gw-ims-org-id: `{IMS_ORG}`
+   - x-gw-ims-org-id: `{ORG_ID}`
    - 클라이언트 암호: `{CLIENT_SECRET}`
    - 클라이언트 인증서: `{PRIVATE_KEY}`
 - 에 대한 샘플 데이터 및 소스 파일 [소매 판매 레서피](../pre-built-recipes/retail-sales.md). 이 자산 및 기타 요소에 필요한 자산 다운로드 [!DNL Data Science Workspace] 의 자습서 [공개 Git 리포지토리 Adobe](https://github.com/adobe/experience-platform-dsw-reference/).
@@ -50,7 +50,7 @@ ht-degree: 1%
    ```yaml
    Enterprise:
        api_key: {API_KEY}
-       org_id: {IMS_ORG}
+       org_id: {ORG_ID}
        tech_acct: {technical_account_id}
        client_secret: {CLIENT_SECRET}
        priv_key_filename: {PRIVATE_KEY}
