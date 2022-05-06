@@ -3,7 +3,7 @@ title: Platform Web SDK에서 Adobe Target 사용
 description: Adobe Target을 사용하여 Experience Platform Web SDK로 개인화된 컨텐츠를 렌더링하는 방법을 알아봅니다
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisions;코드 조각 사전 숨김;vec;양식 기반 경험 작성기;xdm;대상;결정;범위;스키마;시스템 다이어그램;다이어그램
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: cdcbfdec6a232495aacaf9066d880bc9a10455d1
 workflow-type: tm+mt
 source-wordcount: '1273'
 ht-degree: 5%
@@ -88,7 +88,7 @@ ht-degree: 5%
 
 응답 토큰은 주로 Google, Facebook 등과 같은 타사에 메타데이터를 전송하는 데 사용됩니다. 응답 토큰은 `meta` 내 필드 `propositions` -> `items`. 다음은 샘플입니다.
 
-```
+```json
 {
   "id": "AT:eyJhY3Rpdml0eUlkIjoiMTI2NzM2IiwiZXhwZXJpZW5jZUlkIjoiMCJ9",
   "scope": "__view__",
@@ -112,7 +112,7 @@ ht-degree: 5%
 응답 토큰을 수집하려면 `alloy.sendEvent` 약속, 반복 `propositions`
 세부 사항을 `items` -> `meta`. 모두 `proposition` 에 `renderAttempted` 부울 필드 `proposition` 이 렌더링되었거나 렌더링되지 않았습니다. 아래 샘플을 참조하십시오.
 
-```
+```js
 alloy("sendEvent",
   {
     renderDecisions: true,
@@ -183,7 +183,7 @@ alloy("sendEvent",
 
 **`sendEvent`프로필 데이터 사용**
 
-```
+```js
 alloy("sendEvent", {
    renderDecisions: true|false,
    xdm: { // Experience Event XDM data },
@@ -193,7 +193,7 @@ alloy("sendEvent", {
 
 **프로필 속성을 Adobe Target에 보내는 방법:**
 
-```
+```js
 alloy("sendEvent", {
   renderDecisions: true,
   data: {
@@ -232,7 +232,7 @@ alloy("sendEvent", {
 
 **Recommendations 특성을 Adobe Target에 보내는 방법:**
 
-```
+```js
 alloy("sendEvent", {
   renderDecisions: true,
   data: {
