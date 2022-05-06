@@ -5,7 +5,7 @@ title: 데이터 준비 매핑 함수
 topic-legacy: overview
 description: 이 문서에서는 데이터 준비에 사용되는 매핑 기능을 소개합니다.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 5b40476051ceb20cd4d43f6a49b0ee984c17abc3
+source-git-commit: 14c7c3bd0bda0ab56767b9c0f5470090cf2bdb15
 workflow-type: tm+mt
 source-wordcount: '4164'
 ht-degree: 3%
@@ -136,7 +136,6 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 | 함수 | 설명 | 매개 변수 | 구문 | 표현식 | 샘플 출력 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| size_of | 입력 크기를 반환합니다. | <ul><li>입력: **필수 여부** 크기를 찾으려는 개체입니다.</li></ul> | size_of(INPUT) | `size_of([1, 2, 3, 4])` | 4 |
 | is_empty | 개체가 비어 있는지 여부를 확인합니다. | <ul><li>입력: **필수 여부** 확인하려는 개체가 비어 있습니다.</li></ul> | is_empty(INPUT) | `is_empty([1, 2, 3])` | false |
 | array_to_object | 개체 목록을 만듭니다. | <ul><li>입력: **필수 여부** 키 및 배열 쌍의 그룹입니다.</li></ul> | array_to_object(INPUT) | 샘플 필요 | 샘플 필요 |
 | to_object | 제공된 플랫 키/값 쌍을 기반으로 개체를 만듭니다. | <ul><li>입력: **필수 여부** 키/값 쌍의 플랫 목록입니다.</li></ul> | to_object(INPUT) | to_&#x200B;object(&quot;firstName&quot;, &quot;John&quot;, &quot;lastName&quot;, &quot;Doe&quot;) | `{"firstName": "John", "lastName": "Doe"}` |
@@ -164,6 +163,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | add_to_array | 배열 끝에 요소를 추가합니다. | <ul><li>어레이: **필수 여부** 요소를 추가할 배열입니다.</li><li>값: 배열에 추가할 요소입니다.</li></ul> | add_to_&#x200B;array(ARRAY, VALUES) | add_to_&#x200B; array([&#39;a&#39;, &#39;b&#39;], &#39;c&#39;, &#39;d&#39;) | [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;] |
 | join_arrays | 배열을 서로 결합합니다. | <ul><li>어레이: **필수 여부** 요소를 추가할 배열입니다.</li><li>값: 상위 배열에 추가할 배열입니다.</li></ul> | join_&#x200B;arrays(ARRAY, VALUES) | join_arrays&#x200B;([&#39;a&#39;, &#39;b&#39;], [&#39;c&#39;], [&#39;d&#39;, &#39;e&#39;]) | [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;] |
 | to_array | 입력 목록을 가져와 배열로 변환합니다. | <ul><li>INCLUDE_NULLS: **필수 여부** 응답 배열에 null을 포함할지 여부를 나타내는 부울 값입니다.</li><li>값: **필수 여부** 배열로 변환할 요소입니다.</li></ul> | to_&#x200B;array(INCLUDE_NULLS, VALUES) | to_array(false, 1, null, 2, 3) | `[1, 2, 3]` |
+| size_of | 입력 크기를 반환합니다. | <ul><li>입력: **필수 여부** 크기를 찾으려는 개체입니다.</li></ul> | size_of(INPUT) | `size_of([1, 2, 3, 4])` | 4 |
 
 {style=&quot;table-layout:auto&quot;}
 
