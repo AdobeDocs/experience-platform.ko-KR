@@ -5,7 +5,7 @@ title: Query Service 문제 해결 안내서
 topic-legacy: troubleshooting
 description: 이 문서에서는 사용자가 발생하는 일반적인 오류 코드 및 가능한 원인에 대한 정보를 제공합니다.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: aa61cb696d647c5f039283ce5926d5fa1e901a13
+source-git-commit: 31a95a107b4d1c7aef87455833d6d4dc2a5a360d
 workflow-type: tm+mt
 source-wordcount: '3516'
 ht-degree: 1%
@@ -40,7 +40,7 @@ FAQ에 대한 다음 목록은 다음 카테고리로 분류됩니다.
 
 ### Query Service API에 Postman을 사용할 수 있습니까?
 
-+++답변 예. Postman(무료 타사 애플리케이션)을 사용하여 모든 Adobe API 서비스를 시각화하고 상호 작용할 수 있습니다. 보기 [Postman 설치 안내서](https://video.tv.adobe.com/v/28832) Adobe Developer 콘솔에서 프로젝트를 설정하고 Postman에 사용하는 데 필요한 모든 자격 증명을 획득하는 방법에 대한 단계별 지침입니다. 에 대한 공식 설명서를 참조하십시오. [Postman 컬렉션 시작, 실행 및 공유에 대한 지침](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
++++예, 무료 타사 애플리케이션(Postman)을 사용하여 모든 Adobe API 서비스를 시각화하고 상호 작용할 수 있습니다. 보기 [Postman 설정 안내서](https://video.tv.adobe.com/v/28832) Adobe 개발자 콘솔에서 프로젝트를 설정하고 Postman에 사용하는 데 필요한 모든 자격 증명을 획득하는 방법에 대한 단계별 지침입니다. 에 대한 공식 설명서를 참조하십시오. [Postman 컬렉션 시작, 실행 및 공유에 대한 지침](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
 +++
 
 ### UI를 통해 쿼리에서 반환되는 최대 행 수에 제한이 있습니까?
@@ -442,7 +442,7 @@ WHERE T2.ID IS NULL
 
 이 섹션에서는 데이터 및 제한 내보내기에 대한 정보를 제공합니다.
 
-### 쿼리 처리 후 쿼리 서비스에서 데이터를 추출하고 결과를 CSV 파일에 저장하는 방법이 있습니까?
+### 쿼리 처리 후 쿼리 서비스에서 데이터를 추출하고 결과를 CSV 파일에 저장하는 방법이 있습니까? {#export-csv}
 
 +++예. 쿼리 서비스에서 데이터를 추출할 수 있으며 SQL 명령을 통해 결과를 CSV 형식으로 저장하는 옵션도 있습니다.
 

@@ -3,7 +3,7 @@ keywords: Experience Platform;쿼리 서비스;쿼리 서비스;쿼리
 title: Adobe Experience Platform Query Service 시작하기
 topic-legacy: tutorial
 description: Adobe Experience Platform Query Service를 완전히 활용하는 데 필요한 단계 분류
-source-git-commit: a071f14dd92b22ae4f1f0e62c3d374069b684b79
+source-git-commit: 7b223b4917e6bdb3f4a05238cbaf66261d80660e
 workflow-type: tm+mt
 source-wordcount: '212'
 ht-degree: 7%
@@ -20,7 +20,7 @@ ht-degree: 7%
 
 ## 다음 단계
 
-이 문서에서는 [!DNL Query Service] Experience Platform의 기능. 방법에 대해 자세히 알아보려면 [!DNL Query Service] 플랫폼의 이점 데이터 처리 [예제 사용 사례 프레젠테이션](./use-case.md).
+이 문서에서는 [!DNL Query Service] Experience Platform의 기능. 방법에 대해 자세히 알아보려면 [!DNL Query Service] 플랫폼의 이점 데이터 처리 [예제 사용 사례 프레젠테이션](../use-cases/abandoned-cart.md).
 
 다음 리소스는 사용자의 이해를 돕기 위해 유용합니다 [!DNL Query Service]:
 

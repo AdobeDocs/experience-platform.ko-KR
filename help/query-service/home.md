@@ -5,7 +5,7 @@ title: 쿼리 서비스 개요
 topic-legacy: overview
 description: 이 문서에서는 Experience Platform 내에서 Query Service 역할에 대한 개요를 제공합니다.
 exl-id: fdaefc12-a97d-4e4e-9aed-d3dbd0f43ea0
-source-git-commit: 36710ced69cc951c27869e5491344a5f38935324
+source-git-commit: 796460be52b465216cdc69d45aa38ac80aa3516d
 workflow-type: tm+mt
 source-wordcount: '722'
 ht-degree: 0%
@@ -42,7 +42,7 @@ Adobe Experience Platform [!DNL Segmentation Service] 에서는 유사한 트레
 
 ### Adobe Analytics 찾아보기 포기
 
-이 [찾아보기 포기 예는 Adobe 사용을 중심으로 [!DNL Analytics]](./get-started/use-case.md) 데이터를 추가하여 실행 가능한 특정 대상을 만들 수 있습니다. [!DNL Query Service] 세그먼테이션에 대한 복잡한 로직을 사용하여 다운스트림을 사용할 수 있는 다양한 개인화된 특성을 계산하거나 세그먼트를 작성하는 방법을 크게 간소화합니다.
+이 [찾아보기 포기 예는 Adobe 사용을 중심으로 [!DNL Analytics]](./use-cases/abandoned-cart.md) 데이터를 추가하여 실행 가능한 특정 대상을 만들 수 있습니다. [!DNL Query Service] 세그먼테이션에 대한 복잡한 로직을 사용하여 다운스트림을 사용할 수 있는 다양한 개인화된 특성을 계산하거나 세그먼트를 작성하는 방법을 크게 간소화합니다.
 
 ### 전환 BI 대시보드
 

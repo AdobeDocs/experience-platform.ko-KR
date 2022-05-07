@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform 쿼리 서비스 도움말
 breadcrumb-title: Query Service 안내서
 user-guide-description: 표준 SQL을 사용하여 플랫폼 데이터 레이크에서 데이터를 쿼리합니다.
 feature: Queries
-source-git-commit: 2afb51fc8391dd9f60f86300e0b85fbdc38009ba
+source-git-commit: 796460be52b465216cdc69d45aa38ac80aa3516d
 workflow-type: tm+mt
-source-wordcount: '159'
-ht-degree: 20%
+source-wordcount: '163'
+ht-degree: 21%
 
 ---
 
@@ -17,7 +17,9 @@ ht-degree: 20%
 - [쿼리 서비스 개요](home.md)
 - 시작 {#get-started}
    - [전제 조건](get-started/prerequisites.md)
-   - [사용 사례](get-started/use-case.md)
+- 사용 사례 {#use-cases}
+   - [포기한 장바구니](use-cases/abandoned-cart.md)
+   - [보트 필터링](use-cases/bot-filtering.md)
 - 쿼리 서비스 API {#api}
    - [시작하기](api/getting-started.md)
    - [쿼리](api/queries.md)
