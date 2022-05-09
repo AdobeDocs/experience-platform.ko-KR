@@ -1,11 +1,11 @@
 ---
 title: 감사 로그 개요
-description: 감사 로그를 사용하여 Adobe Experience Platform에서 작업을 수행한 사용자를 확인하는 방법을 알아봅니다.
+description: 감사 로그를 통해 Adobe Experience Platform에서 누가 어떤 작업을 수행했는지 확인하는 방법에 대해 알아봅니다.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: d726576a4d1f29d83f3b7cf72c9f5c5d4ff114d3
+source-git-commit: ba190bdd1856b2d89fa28679eb7f09c258ddd17c
 workflow-type: tm+mt
-source-wordcount: '757'
-ht-degree: 7%
+source-wordcount: '767'
+ht-degree: 10%
 
 ---
 
@@ -35,6 +35,8 @@ ht-degree: 7%
 | [계산된 특성](../../../profile/computed-attributes/overview.md) | <ul><li>선택 사항에서</li><li>업데이트</li><li>삭제</li></ul> |
 | [제품 프로필](../../../access-control/home.md) | <ul><li>선택 사항에서</li><li>업데이트</li><li>삭제</li></ul> |
 | [계정(Adobe)](../../../access-control/home.md) | <ul><li>선택 사항에서</li><li>업데이트</li><li>삭제</li></ul> |
+| [쿼리 템플릿](../../../access-control/home.md) | <ul><li>선택 사항에서</li><li>업데이트</li><li>삭제</li></ul> |
+| [예약된 쿼리](../../../access-control/home.md) | <ul><li>선택 사항에서</li><li>업데이트</li><li>삭제</li></ul> |
 
 ## 감사 로그에 대한 액세스
 
