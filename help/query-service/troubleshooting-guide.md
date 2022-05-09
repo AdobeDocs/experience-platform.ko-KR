@@ -3,11 +3,11 @@ keywords: Experience Platform;홈;인기 항목;쿼리 서비스;쿼리 서비�
 solution: Experience Platform
 title: Query Service 문제 해결 안내서
 topic-legacy: troubleshooting
-description: 이 문서에서는 사용자가 발생하는 일반적인 오류 코드 및 가능한 원인에 대한 정보를 제공합니다.
+description: 이 문서에는 Query Service와 관련된 일반적인 질문과 대답이 포함되어 있습니다. 항목에는 데이터, 내보내기, 타사 도구 및 PSQL 오류가 포함됩니다.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 31a95a107b4d1c7aef87455833d6d4dc2a5a360d
+source-git-commit: 25953a5a1f5b32de7d150dbef700ad06ce6014df
 workflow-type: tm+mt
-source-wordcount: '3516'
+source-wordcount: '3522'
 ht-degree: 1%
 
 ---
@@ -40,7 +40,7 @@ FAQ에 대한 다음 목록은 다음 카테고리로 분류됩니다.
 
 ### Query Service API에 Postman을 사용할 수 있습니까?
 
-+++예, 무료 타사 애플리케이션(Postman)을 사용하여 모든 Adobe API 서비스를 시각화하고 상호 작용할 수 있습니다. 보기 [Postman 설정 안내서](https://video.tv.adobe.com/v/28832) Adobe 개발자 콘솔에서 프로젝트를 설정하고 Postman에 사용하는 데 필요한 모든 자격 증명을 획득하는 방법에 대한 단계별 지침입니다. 에 대한 공식 설명서를 참조하십시오. [Postman 컬렉션 시작, 실행 및 공유에 대한 지침](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
++++예, 무료 타사 애플리케이션(Postman)을 사용하여 모든 Adobe API 서비스를 시각화하고 상호 작용할 수 있습니다. 보기 [Postman 설치 안내서](https://video.tv.adobe.com/v/28832) Adobe Developer 콘솔에서 프로젝트를 설정하고 Postman에 사용하는 데 필요한 모든 자격 증명을 획득하는 방법에 대한 단계별 지침입니다. 에 대한 공식 설명서를 참조하십시오. [Postman 컬렉션 시작, 실행 및 공유에 대한 지침](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
 +++
 
 ### UI를 통해 쿼리에서 반환되는 최대 행 수에 제한이 있습니까?

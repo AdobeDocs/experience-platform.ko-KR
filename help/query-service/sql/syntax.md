@@ -5,9 +5,9 @@ title: 쿼리 서비스의 SQL 구문
 topic-legacy: syntax
 description: 이 문서에서는 Adobe Experience Platform 쿼리 서비스에서 지원하는 SQL 구문을 보여줍니다.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: a5391c1ccc24845673217e15bafd1a1df33cbc18
+source-git-commit: 25953a5a1f5b32de7d150dbef700ad06ce6014df
 workflow-type: tm+mt
-source-wordcount: '2741'
+source-wordcount: '2747'
 ht-degree: 2%
 
 ---
@@ -459,7 +459,12 @@ select inline(productListItems) from source_dataset limit 10;
 
 에서 가져온 값 `source_dataset` 대상 테이블을 채우는 데 사용됩니다.
 
-| SKU | 경험(_E) | 수량 | priceTotal | |—+—+—+—| | product-id-1 | (&quot;(&quot;(&quot;(A,pass,B,NULL)&quot;)&quot;)&quot;) | 5 | 10.5 | | product-id-5 | (&quot;(&quot;(&quot;(A, pass, B,NULL)&quot;)&quot;) | | | | product-id-2 | (&quot;(&quot;(&quot;(AF, C, D,NULL)&quot;)&quot;)&quot;) | 6 | 40 | | product-id-4 | (&quot;(&quot;(&quot;(BM, pass, NA,NULL)&quot;)&quot;)&quot;) | 3 | 12 |
+| SKU | _경험 | 수량 | priceTotal |
+|---------------------|-----------------------------------|----------|--------------|
+| product-id-1 | (&quot;(&quot;(&quot;(A,pass,B,NULL)&quot;)&quot;)&quot;) | 5 | 10.5 |
+| product-id-5 | (&quot;(&quot;(&quot;(A, pass, B,NULL)&quot;)&quot;)&quot;) |  |  |
+| product-id-2 | (&quot;(&quot;(&quot;(AF, C, D,NULL)&quot;)&quot;)&quot;) | 6 | 40 |
+| product-id-4 | (&quot;(&quot;(&quot;(BM, pass, NA,NULL)&quot;)&quot;)&quot;) | 3 | 12 |
 
 ## [!DNL Spark] SQL 명령
 

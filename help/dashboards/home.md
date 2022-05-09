@@ -1,12 +1,12 @@
 ---
 solution: Experience Platform
-title: Experience Platform 대시보드 소개
+title: 대시보드 개요
 type: Documentation
 description: Adobe Experience Platform에서 여러 대시보드를 탐색하여 일별 스냅샷 중에 캡처된 조직 데이터에 대한 중요한 정보를 봅니다.
 exl-id: d56cb139-392d-4bbc-97ec-202a0c8a2863
-source-git-commit: e7ff48d6aa7d7f70688081df45ae2d36da741eb4
+source-git-commit: 25953a5a1f5b32de7d150dbef700ad06ce6014df
 workflow-type: tm+mt
-source-wordcount: '309'
+source-wordcount: '306'
 ht-degree: 0%
 
 ---
