@@ -3,9 +3,9 @@ keywords: 광고; criteo;
 title: 기준 연결
 description: Criteo는 신뢰할 수 있고 영향력 있는 광고를 통해 모든 소비자를 인터넷 개방에서 더 풍부한 경험을 제공합니다. 세계 최대 규모의 상거래 데이터 세트와 동급 최강의 AI를 사용하는 Criteo는 쇼핑 여정의 각 터치포인트를 적시에 적절한 광고를 통해 고객에게 도달하도록 개인화할 수 있습니다.
 exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
-source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
+source-git-commit: add177efd3fdd0a39dc33c5add59375f8e918c1e
 workflow-type: tm+mt
-source-wordcount: '824'
+source-wordcount: '820'
 ht-degree: 3%
 
 ---
@@ -138,4 +138,4 @@ Criteo는 신뢰할 수 있고 영향력 있는 광고를 통해 모든 소비�
 ## 추가 리소스
 
 * [크리테이오 도움말 센터](https://help.criteo.com/kb/en)
-* [Digital Developer Portal](https://developers.criteo.com/marketing-solutions/v2022.04/reference/modifyaudienceuserswithattributes)
+* [Digital Developer Portal](https://developers.criteo.com)
