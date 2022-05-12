@@ -4,9 +4,9 @@ title: 세그먼트 대시보드
 description: 'Adobe Experience Platform은 조직이 만든 세그먼트에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다. '
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: b4cd7bc0d8c038346aacdda7c4c9def12864065c
+source-git-commit: 65096a2da03f504c16f00a75bfdef9e78f8c1799
 workflow-type: tm+mt
-source-wordcount: '1232'
+source-wordcount: '1491'
 ht-degree: 0%
 
 ---
@@ -77,6 +77,12 @@ Adobe은 세그먼트와 관련된 다양한 지표를 시각화하는 데 사�
 
 ### [!UICONTROL 대상 크기] {#audience-size}
 
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_segments_audiencesize"
+>title="대상 크기"
+>abstract="이 위젯은 선택한 세그먼트 내에서 병합된 프로필의 총 수를 표시합니다. 이 번호는 데이터에 적용된 병합 정책에 따라 다르며 가장 최근 스냅숏이 있을 때 정확합니다."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html#audience-size" text="설명서에서 자세히 알아보기"
+
 다음 **[!UICONTROL 대상 크기]** 위젯은 스냅숏을 만들 때 선택한 세그먼트 내의 병합된 총 프로필 수를 표시합니다. 이 숫자는 프로필 조각을 함께 병합하여 세그먼트의 각 개인을 위한 단일 프로필을 구성하기 위해 프로필 데이터에 세그먼트 병합 정책을 적용한 결과입니다.
 
 조각 및 병합된 프로필에 대한 자세한 내용은 [실시간 고객 프로필 개요](../../profile/home.md).
@@ -85,9 +91,15 @@ Adobe은 세그먼트와 관련된 다양한 지표를 시각화하는 데 사�
 
 ### [!UICONTROL ID 겹치기] {#identity-overlap}
 
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_segments_identityoverlap"
+>title="ID 겹치기"
+>abstract="이 위젯은 선택한 ID가 모두 포함된 세그먼트에서 프로필의 겹침을 보여줍니다. 원은 각 ID의 상대 크기를 표시합니다. 두 네임스페이스가 모두 포함된 프로필 수는 원 간에 겹쳐서 표시됩니다."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html#identity-overlap" text="설명서에서 자세히 알아보기"
+
 다음 **[!UICONTROL ID 겹치기]** 위젯은 여러 ID가 포함된 세그먼트에서 프로필의 겹침을 보여주는 벤 다이어그램 또는 세트 다이어그램을 표시합니다.
 
-위젯의 드롭다운 메뉴를 사용하여 비교하려는 ID를 선택하면 원이 각 ID의 상대적 크기를 표시하는 반면 두 네임스페이스가 포함된 프로필의 수는 원 간 겹침 크기로 표시됩니다.
+위젯의 드롭다운 메뉴를 사용하여 비교할 ID를 선택합니다. 원은 선택한 각 ID의 상대 크기를 표시하며, 두 네임스페이스가 포함된 프로필의 수는 원 간에 겹치는 크기의 크기로 표시됩니다.
 
 고객이 두 개 이상의 채널에서 브랜드와 상호 작용하는 경우 여러 ID가 해당 개별 고객과 연결되므로 조직에서 두 개 이상의 ID의 조각을 포함하는 여러 프로필을 가질 수 있습니다.
 
@@ -97,7 +109,13 @@ ID에 대해 자세히 알아보려면 [Adobe Experience Platform Identity Servi
 
 ### [!UICONTROL ID별 프로필] {#profiles-by-identity}
 
-다음 **[!UICONTROL ID별 프로필]** 위젯은 선택한 세그먼트에 병합된 모든 프로필의 id 분류를 표시합니다. 한 프로필에는 여러 개의 ID가 연결되어 있을 수 있으므로 ID별 총 프로필 수는 세그먼트의 총 프로필 수보다 높을 수 있습니다. 즉, 고객이 두 개 이상의 채널에서 브랜드와 상호 작용하는 경우 여러 ID가 해당 개별 고객과 연결될 수 있으므로 각 ID에 대해 표시된 값을 함께 추가하면 세그먼트에서 총 대상 크기보다 커질 수 있습니다.
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_segments_profilesbyidentity"
+>title="ID별 프로필"
+>abstract="이 위젯은 선택한 세그먼트에 병합된 모든 프로필의 ID 분류를 표시합니다."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html#profiles-by-identity" text="설명서에서 자세히 알아보기"
+
+다음 **[!UICONTROL ID별 프로필]** 위젯은 선택한 세그먼트에 병합된 모든 프로필의 ID 분류를 표시합니다. 한 프로필에는 여러 개의 ID가 연결되어 있을 수 있으므로 ID별 총 프로필 수는 세그먼트의 총 프로필 수보다 높을 수 있습니다. 즉, 고객이 두 개 이상의 채널에서 브랜드와 상호 작용하는 경우 여러 ID가 해당 개별 고객과 연결될 수 있으므로 각 ID에 대해 표시된 값을 함께 추가하면 세그먼트에서 총 대상 크기보다 커질 수 있습니다.
 
 선택 **[!UICONTROL 캡션]** 자동 캡션 대화 상자를 열려면 다음을 수행하십시오.
 
@@ -115,9 +133,23 @@ ID에 대해 자세히 알아보려면 [Adobe Experience Platform Identity Servi
 
 ### [!UICONTROL 대상 크기 트렌드] {#audience-size-trend}
 
-다음 [!UICONTROL 대상 크기 트렌드] 위젯은 의 기준을 충족하는 총 프로필 수에 대한 선 그래프 일러스트레이션을 제공합니다 **임의** 주어진 기간에 대한 세그먼트 정의. 대상 크기 트렌드는 30일, 90일 및 12개월 기간에 걸쳐 시각화할 수 있습니다. 기간은 위젯의 드롭다운 메뉴에서 선택됩니다. 대상 크기는 x축의 y축 및 시간에 반영됩니다.
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_segments_audiencesizetrend"
+>title="대상 크기 트렌드"
+>abstract="이 위젯은 **임의** 일별 스냅샷 동안 캡처된 세그먼트 정의, 최근 30일, 90일 또는 12개월 동안의 세그먼트 정의."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html#audience-size-trend" text="설명서에서 자세히 알아보기"
 
-![대상 크기 트렌드 위젯.](../images/segments/audience-size-trend.png)
+다음 **[!UICONTROL 대상 크기 트렌드]** 위젯은 의 기준을 충족하는 총 프로필 수에 대한 선 그래프 일러스트레이션을 제공합니다 **임의** 주어진 기간에 대한 세그먼트 정의. 대상 크기 트렌드는 30일, 90일 및 12개월 기간에 걸쳐 시각화할 수 있습니다. 기간은 위젯의 드롭다운 메뉴에서 선택됩니다. 대상 크기는 x축의 y축 및 시간에 반영됩니다.
+
+이 위젯에는 자동 위젯도 포함되어 있습니다 [!UICONTROL 캡션] 기계 학습 모델이 차트 및 세그먼트 데이터를 분석하고 주요 트렌드와 중요 이벤트를 설명하는 캡션을 자동으로 생성하는 기능입니다. 선택 **[!UICONTROL 캡션]** 자동 캡션 대화 상자를 열려면 다음을 수행하십시오.
+
+![세그먼트 개요는 대상 크기 트렌드 위젯을 표시합니다.](../images/segments/audience-size-trend-captions.png)
+
+데이터에 대한 통찰력을 제공하는 자동 캡션 대화 상자가 열립니다.
+
+![대상 크기 트렌드 위젯에 대한 자동 캡션 대화 상자입니다.](../images/segments/audience-size-trend-automatic-captions-dialog.png)
+
+세그먼트 평가 및 프로필이 세그먼트의 자격을 받고 종료하는 방법에 대한 자세한 내용은 다음을 참조하십시오. [Segmentation Service 설명서](../../segmentation/home.md).
 
 ### [!UICONTROL 대상 크기 변경 트렌드] {#audience-size-change-trend}
 
