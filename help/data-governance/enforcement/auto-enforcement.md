@@ -5,9 +5,9 @@ title: 자동 정책 적용
 topic-legacy: guide
 description: 이 문서에서는 Experience Platform의 대상에 세그먼트를 활성화할 때 데이터 사용 정책이 자동으로 적용되는 방식을 다룹니다.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: ca35b1780db00ad98c2a364d45f28772c27a4bc3
+source-git-commit: 679b9eb621baff99342fb55c0a13a60f5ef256bd
 workflow-type: tm+mt
-source-wordcount: '1232'
+source-wordcount: '1702'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ ht-degree: 0%
 
 * 활성화할 세그먼트 내의 필드 및 데이터 세트에 적용된 데이터 사용 레이블입니다.
 * 대상의 마케팅 목적입니다.
-<!-- * (Beta) The profiles that have consented to be included in the segment activation, based on your configured consent policies. -->
+* (베타) 구성된 동의 정책을 기반으로 세그먼트 활성화에 포함되도록 동의한 프로필.
 
 >[!NOTE]
 >
@@ -58,16 +58,14 @@ Experience Platform에서 정책집행은 다음과 같은 계보를 염려한�
 1. 프로필 그룹은 **세그먼트** 공통 속성을 기반으로 합니다.
 1. 세그먼트는 다운스트림으로 활성화됩니다 **대상**.
 
-위의 타임라인에 있는 각 스테이지는 아래 표에 요약된 대로 위반 중인 정책에 기여할 수 있는 엔터티를 나타냅니다.
+위의 타임라인에 있는 각 스테이지는 아래 표에 설명된 대로 정책 적용에 기여할 수 있는 엔터티를 나타냅니다.
 
 | 데이터 계보 단계 | 정책 집행에서의 역할 |
 | --- | --- |
-| 데이터 세트 | 데이터 세트에는 전체 데이터 세트 또는 특정 필드에 사용할 수 있는 사용 사례를 정의하는 데이터 사용 레이블(데이터 세트 또는 필드 수준에서 적용됨)이 포함되어 있습니다. 정책이 제한하는 용도로 특정 레이블이 포함된 데이터 세트 또는 필드를 사용하는 경우 정책 위반이 발생합니다. |
+| 데이터 세트 | 데이터 세트에는 전체 데이터 세트 또는 특정 필드에 사용할 수 있는 사용 사례를 정의하는 데이터 사용 레이블(데이터 세트 또는 필드 수준에서 적용됨)이 포함되어 있습니다. 정책이 제한하는 용도로 특정 레이블이 포함된 데이터 세트 또는 필드를 사용하는 경우 정책 위반이 발생합니다.<br><br>고객으로부터 수집된 모든 동의 속성은 데이터 세트에 저장됩니다. 동의 정책(현재 베타 버전)에 액세스할 수 있는 경우 정책의 동의 속성 요구 사항을 충족하지 않는 프로필은 대상으로 활성화된 세그먼트에서 제외됩니다. |
 | 병합 정책 | 병합 정책은 플랫폼이 여러 데이터 세트의 조각을 병합할 때 데이터에 우선 순위가 지정되는 방식을 결정하는 데 사용하는 규칙입니다. 레이블이 제한된 데이터 세트가 대상으로 활성화되도록 병합 정책이 구성된 경우 정책 위반이 발생합니다. 자세한 내용은 [정책 병합 개요](../../profile/merge-policies/overview.md) 추가 정보. |
 | 세그먼트 | 세그먼트 규칙은 고객 프로필에서 포함해야 하는 속성을 정의합니다. 세그먼트 정의에 포함되는 필드에 따라 세그먼트는 해당 필드에 대해 적용된 사용 레이블을 상속합니다. 마케팅 사용 사례를 기반으로 대상 대상의 적용 가능한 정책에 의해 상속된 레이블이 제한된 세그먼트를 활성화하는 경우 정책 위반이 발생합니다. |
-| 대상 | 대상을 설정할 때 마케팅 작업(경우에 따라 마케팅 사용 사례라고 함)을 정의할 수 있습니다. 이 사용 사례는 정책에 정의된 마케팅 작업과 관련이 있습니다. 즉, 대상에 대해 정의하는 마케팅 사용 사례는 해당 대상에 적용할 수 있는 데이터 사용 정책 및 동의 정책을 결정합니다. 대상 대상의 적용 가능한 정책에 의해 사용 레이블이 제한된 세그먼트를 활성화하는 경우 정책 위반이 발생합니다. |
-<!-- | Dataset | Datasets contain data usage labels (applied at the dataset or field level) that define which use cases the entire dataset or specific fields can be used for. Policy violations will occur if a dataset or field containing certain labels is used for a purpose that a policy restricts.<br><br>Any consent attributes collected from your customers are also stored in datasets. If you have access to [consent policies](../policies/user-guide.md#consent-policy) (currently in beta), any profiles that do not meet the consent attribute requirements of your policies will be excluded from segments that are activated to a destination. | -->
-<!-- | Segment | Segment rules define which attributes should be included from customer profiles. Depending on which fields a segment definition includes, the segment will inherit any applied usage labels for those fields. Policy violations will occur if you activate a segment whose inherited labels are restricted by the target destination's applicable policies, based on its marketing use case. | -->
+| 대상 | 대상을 설정할 때 마케팅 작업(경우에 따라 마케팅 사용 사례라고 함)을 정의할 수 있습니다. 이 사용 사례는 정책에 정의된 마케팅 작업과 관련이 있습니다. 즉, 대상에 대해 정의하는 마케팅 작업은 해당 대상에 적용할 수 있는 데이터 사용 정책 및 동의 정책을 결정합니다.<br><br>대상 대상의 마케팅 작업에 대해 사용 레이블이 제한된 세그먼트를 활성화하는 경우 데이터 사용 정책 위반이 발생합니다.<br><br>(베타) 세그먼트가 활성화되면 마케팅 작업(동의 정책에 정의된 대로)에 필요한 동의 속성이 포함되지 않은 프로필은 활성화된 대상에서 제외됩니다. |
 
 >[!IMPORTANT]
 >
@@ -77,15 +75,14 @@ Experience Platform에서 정책집행은 다음과 같은 계보를 염려한�
 
 정책 위반이 발생하면 UI에 표시되는 결과 메시지는 위반의 기여 데이터 계열을 탐색하여 문제를 해결하는 데 유용한 도구를 제공합니다. 자세한 내용은 다음 섹션에서 제공됩니다.
 
-## 정책 위반 메시지 {#enforcement}
+## 정책 적용 메시지 {#enforcement}
 
-<!-- (TO INCLUDE FOR PHASE 2)
-The sections below outline the different policy enforcement messages that appear in the Platform UI:
+아래 섹션에서는 Platform UI에 표시되는 다양한 정책 적용 메시지에 대해 설명합니다.
 
-* [Data usage policy violation](#data-usage-violation)
-* [Consent policy evaluation](#consent-policy-evaluation)
+* [데이터 사용 정책 위반](#data-usage-violation)
+* [동의 정책 평가](#consent-policy-evaluation)
 
-### Data usage policy violation {#data-usage-violation} -->
+### 데이터 사용 정책 위반 {#data-usage-violation}
 
 세그먼트를 활성화하려고 할 때 정책 위반이 발생하면 [이미 활성화된 세그먼트를 편집하는 중](#policy-enforcement-for-activated-segments)) 작업을 수행할 수 없으며 하나 이상의 정책이 위반되었음을 나타내는 팝업 창이 나타납니다. 위반이 트리거되면 **[!UICONTROL 저장]** 데이터 사용 정책을 준수하도록 해당 구성 요소가 업데이트될 때까지 수정하는 엔티티에 대해 버튼이 비활성화됩니다.
 
@@ -109,19 +106,55 @@ The sections below outline the different policy enforcement messages that appear
 
 ![](../images/enforcement/list-view.png)
 
-<!-- (TO INCLUDE FOR PHASE 2)
-### Consent policy evaluation (Beta) {#consent-policy-evaluation}
+### 동의 정책 평가(베타) {#consent-policy-evaluation}
 
 >[!IMPORTANT]
 >
->Consent policies are currently in beta and your organization may not have access to them yet.
+>동의 정책은 현재 베타 버전이며 조직에서 아직 액세스할 수 없을 수 있습니다.
 
-If you have [created consent policies](../policies/user-guide.md#consent-policy) and are activating a segment to a destination, you can see how your consent policies will affect the percentage of profiles that will be included in the activation.
+만약 [동의 정책 만들기](../policies/user-guide.md#consent-policy) 세그먼트를 대상에 활성화할 때, 동의 정책이 활성화에 포함된 프로필 비율에 어떻게 영향을 주는지를 알 수 있습니다.
 
-Once you reach at the **[!UICONTROL Review]** step in the [activation workflow](../../destinations/ui/activation-overview.md), select **[!UICONTROL View applied policies]**.
+#### 활성화 사전 평가
 
-A policy check dialog appears, showing you a preview of how your consent policies affect the addressable audience of the activated segment.
- -->
+에 연결되면 **[!UICONTROL 검토]** 단계 [대상 활성화](../../destinations/ui/activation-overview.md), 선택 **[!UICONTROL 적용된 정책 보기]**.
+
+![대상 활성화 워크플로우에서 적용된 정책 보기 단추](../images/enforcement/view-applied-policies.png)
+
+동의 정책이 활성화된 세그먼트의 동의 대상에게 미치는 영향을 미리 보는 정책 확인 대화 상자가 나타납니다.
+
+![플랫폼 UI의 동의 정책 확인 대화 상자](../images/enforcement/consent-policy-check.png)
+
+이 대화 상자에는 한 번에 하나의 세그먼트에 대해 동의한 대상이 표시됩니다. 다른 세그먼트에 대한 정책 평가를 보려면 다이어그램 위의 드롭다운 메뉴를 사용하여 목록에서 하나를 선택합니다.
+
+![정책 확인 대화 상자의 세그먼트 전환기](../images/enforcement/segment-switcher.png)
+
+왼쪽 레일을 사용하여 선택한 세그먼트에 적용 가능한 동의 정책 간을 전환합니다. 선택하지 않은 정책은 &quot;[!UICONTROL 기타 정책]다이어그램의 &quot; 섹션.
+
+![정책 확인 대화 상자의 정책 전환기](../images/enforcement/policy-switcher.png)
+
+다이어그램은 세 개의 프로필 그룹 간에 겹치는 것을 보여줍니다.
+
+1. 선택한 세그먼트에 적합한 프로필
+1. 선택한 동의 정책에 적합한 프로필
+1. 세그먼트에 대해 적용 가능한 다른 동의 정책을 사용할 수 있는 프로필(이하 &quot;라고 함)[!UICONTROL 기타 정책]&quot;(다이어그램에서)
+
+위의 세 그룹 모두에 대해 자격이 되는 프로필은 오른쪽 레일에 요약된 선택한 세그먼트에 대해 동의한 대상을 나타냅니다.
+
+![정책 확인 대화 상자의 요약 섹션](../images/enforcement/summary.png)
+
+다이어그램에서 대상 중 하나를 마우스로 가리키면 포함된 프로필 수가 표시됩니다.
+
+![정책 확인 대화 상자에서 다이어그램 섹션 강조 표시](../images/enforcement/highlight-segment.png)
+
+동의 대상은 다이어그램의 중앙 겹침으로 표시되며 다른 섹션처럼 강조 표시될 수 있습니다.
+
+![다이어그램에서 동의한 대상 강조 표시](../images/enforcement/consented-audience.png)
+
+#### 흐름 실행 적용
+
+데이터가 대상에 활성화되면 흐름 실행 세부 사항에 활성 동의 정책으로 인해 제외된 ID 수가 표시됩니다.
+
+![데이터 흐름 실행에 대해 제외된 ID 지표](../images/enforcement/dataflow-run-enforcement.png)
 
 ## 활성화된 세그먼트에 대한 정책 적용 {#policy-enforcement-for-activated-segments}
 

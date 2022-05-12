@@ -5,9 +5,9 @@ title: UI에서 데이터 사용 정책 관리
 topic-legacy: policies
 description: Adobe Experience Platform 데이터 거버넌스는 데이터 사용 정책을 만들고 관리할 수 있는 사용자 인터페이스를 제공합니다. 이 문서에서는 Experience Platform 사용자 인터페이스의 정책 작업 영역에서 수행할 수 있는 작업에 대한 개요를 제공합니다.
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
-source-git-commit: 8feb9fbdead75ca7b9ed7e5dcd3a0aab6f328ad5
+source-git-commit: 1c0685e7acb594829795674f859f76f229ecee61
 workflow-type: tm+mt
-source-wordcount: '1295'
+source-wordcount: '1331'
 ht-degree: 0%
 
 ---
@@ -131,6 +131,10 @@ Adobe Experience Platform 데이터 거버넌스는 데이터 사용 정책을 �
 이제 동의 정책이 생성되고 상태는 [!UICONTROL 비활성화됨] 기본적으로 제공됩니다. 정책을 바로 사용하려면 **[!UICONTROL 상태]** 오른쪽 레일에서 전환합니다.
 
 ![](../images/policies/enable-consent-policy.png)
+
+#### 정책 적용 확인
+
+동의 정책을 만들고 활성화한 후 세그먼트를 대상으로 활성화할 때 동의한 대상에 미치는 영향을 미리 볼 수 있습니다. 의 섹션을 참조하십시오. [동의 정책 평가](../enforcement/auto-enforcement.md#consent-policy-evaluation) 추가 정보.
 
 ## 정책 활성화 또는 비활성화 {#enable}
 
