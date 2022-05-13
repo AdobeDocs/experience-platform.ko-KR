@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 릴리스 노트 - 2022년 4월
 description: Adobe Experience Platform에 대한 2022년 4월 릴리스 노트입니다.
 exl-id: 39233787-3089-4469-8363-b006ae41ae21
-source-git-commit: 1f5c21e09e471ac0d6f1d98e219e06e571ede89f
+source-git-commit: a80f011dc8a6e10d1d311bc85029fa9f57d8b4ab
 workflow-type: tm+mt
-source-wordcount: '2802'
+source-wordcount: '2805'
 ht-degree: 3%
 
 ---
@@ -49,11 +49,13 @@ Adobe Experience Platform의 기존 기능 업데이트:
 | [!UICONTROL 대상 크기 변경 트렌드] | 세그먼트 | 이 위젯은 가장 최근 일별 스냅샷 간 주어진 세그먼트에 자격을 부여받은 프로필의 총 수 차이에 대한 선 그래프 그림을 제공합니다. 트렌드 분석 기간은 30일, 90일 및 12개월 기간으로 시각화할 수 있습니다. |
 | [!UICONTROL ID별 대상 크기 트렌드] | 세그먼트 | 이 위젯은 선택한 ID 유형을 기반으로 한 특정 세그먼트의 대상 크기 트렌드를 보여줍니다. 트렌드 분석 기간은 30일, 90일 및 12개월 기간으로 시각화할 수 있습니다. |
 
-**새로운 기능**
+**새로운 기능** {#new-features}
 
 | 기능 | 대시보드 | 설명 |
 | ------- | --------- | ----------- |
 | 분리된 프로필 세그먼트 멤버십 정리 | 프로필 및 라이선스 사용 | 이제 프로필 서비스에서 나머지 세그먼트 구성원을 매일 제거하여 시스템에서 프로필을 보다 정확하게 표현합니다. 이 정리 작업은 주어진 프로필에 대한 모든 프로필 조각이 삭제된 후에 발생합니다. 이 지표들은 이번 릴리스 전에 남은 세그먼트 조각을 포함했으므로, 라이선스 사용 대시보드의 &quot;대응 가능 대상&quot; 지표에 한 방울이 표시될 수 있으며, 프로필 대시보드의 &quot;프로필 수&quot; 지표에 이 릴리스 전의 남은 세그먼트 조각이 포함되어 있을 수 있습니다. |
+
+{style=&quot;table-layout:auto&quot;}
 
 자세한 내용은 설명서 를 참조하십시오 [[!DNL Profiles]](../../dashboards/guides/profiles.md), [[!DNL Destinations]](../../dashboards/guides/destinations.md), 및 [[!DNL Segments]](../../dashboards/guides/segments.md) 대시보드 .
 
