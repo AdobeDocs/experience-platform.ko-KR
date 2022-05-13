@@ -5,9 +5,9 @@ title: 데이터 준비 매핑 함수
 topic-legacy: overview
 description: 이 문서에서는 데이터 준비에 사용되는 매핑 기능을 소개합니다.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 14c7c3bd0bda0ab56767b9c0f5470090cf2bdb15
+source-git-commit: 87bdffece94404ae49fcc2b4afbe44db0864cafb
 workflow-type: tm+mt
-source-wordcount: '4164'
+source-wordcount: '4175'
 ht-degree: 3%
 
 ---
@@ -100,7 +100,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | get_url_host | 주어진 URL의 호스트를 반환합니다. 입력이 잘못된 경우 null을 반환합니다. | <ul><li>URL: **필수 여부** 호스트를 추출해야 하는 URL입니다.</li></ul> | get_url_host &#x200B;(URL) | get_url_host &#x200B;(&quot;https://platform &#x200B; .adobe.com/home&quot;) | platform.adobe.com |
 | get_url_port | 지정된 URL의 포트를 반환합니다. 입력이 잘못된 경우 null을 반환합니다. | <ul><li>URL: **필수 여부** 포트를 추출해야 하는 URL입니다.</li></ul> | get_url_port(URL) | get_url_port &#x200B;(&quot;sftp://example.com//home/ &#x200B; joe/employee.csv&quot;) | 22 |
 | get_url_path | 지정된 URL의 경로를 반환합니다. 기본적으로 전체 경로가 반환됩니다. | <ul><li>URL: **필수 여부** 경로를 추출해야 하는 URL입니다.</li><li>FULL_PATH: *선택 사항입니다* 전체 경로가 반환되는지 여부를 결정하는 부울 값입니다. false로 설정하면 경로의 끝만 반환됩니다.</li></ul> | get_url_&#x200B;path(URL, FULL_PATH) | get_url_&#x200B;path(&quot;sftp://example.com// &#x200B; home/joe/employee.csv&quot;) | &quot;//home/joe/ &#x200B; employee.csv&quot; |
-| get_url_query_str | 주어진 URL의 쿼리 문자열을 반환합니다. | <ul><li>URL: **필수 여부** 쿼리 문자열을 가져오려는 URL입니다.</li><li>앵커: **필수 여부** 쿼리 문자열의 앵커로 수행할 작업을 결정합니다. 다음 세 값 중 하나일 수 있습니다. &quot;keep&quot;, &quot;remove&quot; 또는 &quot;append&quot;.<br><br>값이 &quot;keep&quot;이면 앵커가 반환된 값에 연결됩니다.<br>값이 &quot;remove&quot;이면 반환된 값에서 앵커가 제거됩니다.<br>값이 &quot;append&quot;이면 앵커는 별도의 값으로 반환됩니다.</li></ul> | get_url_query_str&#x200B;(URL, ANCHOR) | get_url_query_str &#x200B;(&quot;foo://example.com:8042 &#x200B;/over/there?name= &#x200B; ferret#nos&quot;, &quot;retain&quot;)<br>get_url_query_str &#x200B;(&quot;foo://example.com:8042 &#x200B;/over/there?name= &#x200B; ferret#nose&quot;, &quot;remove&quot;)<br>get_url_query_str &#x200B;(&quot;foo://example.com&#x200B;:8042/over/there?name=ferret#nos&quot;, &quot;append&quot;) | `{"name": "ferret#nose"}`<br>`{"name": "ferret"}`<br>`{"name": "ferret", "_anchor_": "nose"}` |
+| get_url_query_str | 쿼리 문자열 이름 및 쿼리 문자열 값의 맵으로 주어진 URL의 쿼리 문자열을 반환합니다. | <ul><li>URL: **필수 여부** 쿼리 문자열을 가져오려는 URL입니다.</li><li>앵커: **필수 여부** 쿼리 문자열의 앵커로 수행할 작업을 결정합니다. 다음 세 값 중 하나일 수 있습니다. &quot;keep&quot;, &quot;remove&quot; 또는 &quot;append&quot;.<br><br>값이 &quot;keep&quot;이면 앵커가 반환된 값에 연결됩니다.<br>값이 &quot;remove&quot;이면 반환된 값에서 앵커가 제거됩니다.<br>값이 &quot;append&quot;이면 앵커는 별도의 값으로 반환됩니다.</li></ul> | get_url_query_str&#x200B;(URL, ANCHOR) | get_url_query_str &#x200B;(&quot;foo://example.com:8042 &#x200B;/over/there?name= &#x200B; ferret#nos&quot;, &quot;retain&quot;)<br>get_url_query_str &#x200B;(&quot;foo://example.com:8042 &#x200B;/over/there?name= &#x200B; ferret#nose&quot;, &quot;remove&quot;)<br>get_url_query_str &#x200B;(&quot;foo://example.com&#x200B;:8042/over/there?name=ferret#nos&quot;, &quot;append&quot;) | `{"name": "ferret#nose"}`<br>`{"name": "ferret"}`<br>`{"name": "ferret", "_anchor_": "nose"}` |
 
 {style=&quot;table-layout:auto&quot;}
 
