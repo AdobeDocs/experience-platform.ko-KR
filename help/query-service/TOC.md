@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform 쿼리 서비스 도움말
 breadcrumb-title: Query Service 안내서
 user-guide-description: 표준 SQL을 사용하여 플랫폼 데이터 레이크에서 데이터를 쿼리합니다.
 feature: Queries
-source-git-commit: 796460be52b465216cdc69d45aa38ac80aa3516d
+source-git-commit: 942181ae4c454e1148b1f05022d2c1975e881f05
 workflow-type: tm+mt
-source-wordcount: '163'
-ht-degree: 21%
+source-wordcount: '165'
+ht-degree: 22%
 
 ---
 
@@ -43,6 +43,8 @@ ht-degree: 21%
    - [샘플 경험 이벤트 쿼리](sample-queries/experience-event.md)
    - [샘플 Adobe Analytics 쿼리](sample-queries/adobe-analytics.md)
    - [샘플 Adobe Target 쿼리](sample-queries/adobe-target.md)
+- 데이터 거버넌스 {#data-governance}
+   - [감사 로그 안내서](data-governance/audit-log-guide.md)
 - SQL 참조 {#sql}
    - [SQL 개요](sql/overview.md)
    - [SQL 구문](sql/syntax.md)
@@ -61,7 +63,6 @@ ht-degree: 21%
    - [PSQL](clients/psql.md)
    - [RStudio](clients/rstudio.md)
    - [타블로](clients/tableau.md)
-- [감사 로그 안내서](audit-log-guide.md)
 - [문제 해결 안내서](troubleshooting-guide.md)
 - [API 참조](https://www.adobe.io/experience-platform-apis/references/query-service/)
 - [플랫폼 릴리스 노트](https://www.adobe.com/go/platform-release-notes-en)
