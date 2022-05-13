@@ -2,9 +2,9 @@
 title: 쿼리 서비스 감사 로그 통합
 description: Query Service 감사 로그는 다양한 사용자 작업에 대한 기록을 유지 관리하여 문제를 해결하거나 기업 데이터 관리 정책 및 규정 요구 사항을 준수할 수 있는 감사 추적을 형성합니다. 이 자습서에서는 Query Service와 관련된 감사 로그 기능에 대한 개요를 제공합니다.
 exl-id: 5fdc649f-3aa1-4337-965f-3f733beafe9d
-source-git-commit: 861283cb8ea99b91480bf776ff0c53de52f464ad
+source-git-commit: 12b717be67cb35928d84e83b6d692f9944d651d8
 workflow-type: tm+mt
-source-wordcount: '824'
+source-wordcount: '815'
 ht-degree: 2%
 
 ---
@@ -27,7 +27,7 @@ Adobe Experience Platform [!DNL Query Service] 감사 로그 통합에서는 쿼
 |---|---|
 | [!UICONTROL 예약된 쿼리] | 이 카테고리를 사용하면 내에서 생성, 업데이트 또는 삭제된 예약을 감사할 수 있습니다 [!DNL Query Service]. |
 | [!UICONTROL 쿼리 템플릿] | 이 카테고리를 사용하면 쿼리 템플릿에서 수행한 다양한 작업(만들기, 업데이트 및 삭제)을 감사할 수 있습니다. |
-| [!UICONTROL 쿼리] | 이 카테고리를 사용하면 쿼리 실행을 감사할 수 있습니다. |
+<!-- | [!UICONTROL Query] | This category allows you to audit query executions. | -->
 
 ## 다음 작업을 수행합니다. [!DNL Query Service] 감사 로그 {#perform-an-audit-log}
 

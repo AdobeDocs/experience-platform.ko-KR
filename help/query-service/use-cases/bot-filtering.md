@@ -1,14 +1,15 @@
 ---
 title: 기계 학습을 사용하여 쿼리 서비스에서 보트 필터링
 description: 이 문서에서는 Query Service 및 기계 학습을 사용하여 보트 활동을 확인하고 실제 온라인 웹 사이트 방문자 트래픽에서 작업을 필터링하는 방법에 대한 개요를 제공합니다.
-source-git-commit: 7b223b4917e6bdb3f4a05238cbaf66261d80660e
+exl-id: fc9dbc5c-874a-41a9-9b60-c926f3fd6e76
+source-git-commit: c5b91bd516e876e095a2a6b6e3ba962b29f55a7b
 workflow-type: tm+mt
-source-wordcount: '875'
+source-wordcount: '873'
 ht-degree: 5%
 
 ---
 
-# 보트 필터링 [!DNL Query Service] 기계 학습
+# 에서 보트 필터링 [!DNL Query Service] 기계 학습
 
 보트 활동은 분석 지표에 영향을 주고 데이터 무결성에 영향을 줄 수 있습니다. Adobe Experience Platform [!DNL Query Service] 보트 필터링 프로세스를 통해 데이터 품질을 유지하는 데 사용할 수 있습니다.
 
@@ -164,6 +165,6 @@ Model Accuracy: 0.99935
 
 ## 다음 단계
 
-이 문서를 다 읽으면 Query Service 및 기계 학습을 사용하여 보트 활동을 확인하고 필터링하는 방법을 보다 잘 이해할 수 있습니다.
+이 문서를 읽으면 사용 방법을 더 잘 이해할 수 있습니다 [!DNL Query Service] 보트 활동을 결정하고 필터링하는 기계 학습을 살펴보십시오.
 
-다음과 같은 이점을 보여주는 기타 문서 [!DNL Query Service] 조직의 전략적 비즈니스 인사이트에 대한 중요한 검색 사용 사례는 누락된 검색 사용 사례입니다.
+다음과 같은 이점을 보여주는 기타 문서 [!DNL Query Service] 조직의 전략적 비즈니스 인사이트는 [중단된 찾아보기 사용 사례](./abandoned-browse.md) 예.
