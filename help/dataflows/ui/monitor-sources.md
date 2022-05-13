@@ -6,9 +6,9 @@ title: UI에서 소스에 대한 데이터 흐름 모니터링
 topic-legacy: overview
 type: Tutorial
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
-source-git-commit: ee9ed1c17a566f37b4ad79df7c66f8b2ffb4b879
+source-git-commit: ed88ebe7822f60ace2babd7d5a04d2d92d83cf49
 workflow-type: tm+mt
-source-wordcount: '1862'
+source-wordcount: '1069'
 ht-degree: 0%
 
 ---
@@ -130,102 +130,9 @@ Adobe Experience Platform에서 데이터는 다양한 소스에서 수집되어
 
 ![탐색 표시](../assets/ui/monitor-sources/breadcrumbs.png)
 
-## 교차 서비스 모니터링 {#cross-service-monitoring}
-
-대시보드의 위쪽 부분에는 소스 수준에서 [!DNL Identity Service], 및에 [!DNL Profile]. 각 셀에는 해당 수집 단계에서 발생한 오류의 존재를 나타내는 점 마커가 포함되어 있습니다. 녹색 점은 오류 없는 수집을 의미하고 빨간색 점은 해당 수집 단계에서 오류가 발생했음을 의미합니다.
-
-![크로스 서비스 모니터링](../assets/ui/monitor-sources/cross-service-monitoring.png)
-
-데이터 흐름 페이지에서 성공적인 데이터 흐름을 찾아 필터 아이콘을 선택합니다 ![필터](../assets/ui/monitor-sources/filter.png) 해당 데이터 흐름 실행 정보를 보려면 해당 데이터 흐름 실행 정보를 참조하십시오.
-
-![데이터 흐름 성공](../assets/ui/monitor-sources/dataflow-success.png)
-
-다음 [!UICONTROL 소스 수집] 페이지에는 데이터 흐름을 성공적으로 수집하는지 확인하는 정보가 포함되어 있습니다. 여기에서 데이터 흐름 여정 모니터링을 소스 수준에서 다음으로 시작할 수 있습니다 [!DNL Identity Service], 및에 [!DNL Profile].
-
-선택 **[!UICONTROL ID]** 수집 내용을 보려면 [!UICONTROL ID] 단계.
-
-![소스](../assets/ui/monitor-sources/sources.png)
-
-### [!DNL Identity] 지표 {#identity-metrics}
-
->[!CONTEXTUALHELP]
->id="platform_monitoring_identity_processing"
->title="ID 처리"
->abstract="ID 처리 보기에는 추가된 ID 수, 생성된 그래프 및 업데이트된 그래프를 포함하여 ID 서비스에 수집된 레코드에 대한 정보가 포함되어 있습니다. 지표 및 그래프에 대한 자세한 내용을 보려면 지표 정의 안내서를 검토하십시오."
->text="Learn more in documentation"
-
->[!CONTEXTUALHELP]
->id="platform_monitoring_dataflow_run_details_identity"
->title="데이터 흐름 실행 세부 정보"
->abstract="데이터 흐름 실행 세부 정보 페이지에는 IMS 조직 ID 및 데이터 흐름 실행 ID를 포함하여 ID 데이터 흐름 실행에 대한 자세한 정보가 표시됩니다."
-
-다음 [!UICONTROL ID 처리] 페이지에 수집되는 레코드에 대한 정보가 포함되어 있습니다 [!DNL Identity Service]에는 추가된 ID 수, 생성된 그래프 및 업데이트된 그래프가 포함됩니다.
-
-필터 아이콘을 선택합니다 ![필터](../assets/ui/monitor-sources/filter.png) 데이터 흐름 시작 시간 옆의 를 사용하여 [!DNL Identity] 데이터 흐름 실행.
-
-![id](../assets/ui/monitor-sources/identities.png)
-
-| ID 지표 | 설명 |
-| ---------------- | ----------- |
-| [!UICONTROL 받은 레코드] | 받은 레코드 수 [!DNL Data Lake]. |
-| [!UICONTROL 레코드 실패] | 데이터 오류로 인해 Platform에 수집되지 않은 레코드 수입니다. |
-| [!UICONTROL 생략된 레코드] | 수집되었지만 수집되지 않은 레코드 수입니다. [!DNL Identity Service] 레코드 행에 식별자가 하나만 있으므로 |
-| [!UICONTROL 수집된 레코드] | 에 수집된 레코드 수입니다. [!DNL Identity Service]. |
-| [!UICONTROL 총 레코드] | 실패한 레코드, 건너뛰었던 레코드 등 모든 레코드의 총 수 [!DNL Identities] 레코드를 추가하고 복제합니다. |
-| [!UICONTROL 추가된 ID] | 에 추가된 순 새 식별자 수 [!DNL Identity Service]. |
-| [!UICONTROL 생성된 그래프] | 에서 만들어진 새 ID 그래프의 총 수입니다. [!DNL Identity Service]. |
-| [!UICONTROL 그래프 업데이트] | 새 가장자리로 업데이트된 기존 ID 그래프 수입니다. |
-| [!UICONTROL 실패한 데이터 흐름 실행] | 실패한 데이터 흐름 실행 수입니다. |
-| [!UICONTROL 처리 시간] | 수집 시작에서 완료까지의 타임스탬프. |
-| [!UICONTROL 상태] | 데이터 흐름의 전체 상태를 정의합니다. 가능한 상태 값은 다음과 같습니다. <ul><li>`Success`: 데이터 흐름이 활성 상태이고 제공된 일정에 따라 데이터를 수집 중임을 나타냅니다.</li><li>`Failed`: 오류로 인해 데이터 흐름의 활성화 프로세스가 중단되었음을 나타냅니다. </li><li>`Processing`: 데이터 흐름이 아직 활성 상태가 아님을 나타냅니다. 이 상태는 종종 새 데이터 흐름을 만든 후 즉시 발생합니다.</li></ul> |
-
-다음 [!UICONTROL 데이터 흐름 실행 세부 정보] 페이지에 자세한 정보가 표시됩니다 [!DNL Identity] 데이터 흐름 실행(IMS 조직 ID 및 데이터 흐름 실행 ID 포함). 또한 이 페이지에는 [!DNL Identity Service]: 수집 프로세스에서 오류가 발생하는 경우
-
-선택 **[!UICONTROL 실행 시작: 2/14/2021, 오후 9:47]** 이전 페이지로 돌아가려면 를 클릭합니다.
-
-![identities-dataflow-run](../assets/ui/monitor-sources/identities-dataflow-run.png)
-
-에서 [!UICONTROL ID 처리] 페이지를 선택하고 **[!UICONTROL 프로필]** 에서 수집 레코드 상태를 보려면 [!UICONTROL 프로필] 단계.
-
-![select-profiles](../assets/ui/monitor-sources/select-profiles.png)
-
-### [!DNL Profile] 지표 {#profile-metrics}
-
->[!CONTEXTUALHELP]
->id="platform_monitoring_profile_processing"
->title="프로필 처리"
->abstract="프로필 처리 보기에는 생성된 프로필 조각 수, 업데이트된 프로필 조각 및 총 프로필 조각 수를 포함하여 프로필 서비스에 수집된 레코드에 대한 정보가 포함되어 있습니다."
->text="Learn more in documentation"
-
->[!CONTEXTUALHELP]
->id="platform_monitoring_dataflow_run_details_profile"
->title="데이터 흐름 실행 세부 정보"
->abstract="데이터 흐름 실행 세부 정보 페이지에는 IMS 조직 ID 및 데이터 흐름 실행 ID를 포함하여 프로필 데이터 흐름 실행에 대한 자세한 정보가 표시됩니다."
-
-다음 [!UICONTROL 프로필 처리] 페이지에 수집되는 레코드에 대한 정보가 포함되어 있습니다 [!DNL Profile]생성된 프로필 조각, 업데이트된 프로필 조각 및 총 프로필 조각 수를 포함합니다.
-
-필터 아이콘을 선택합니다 ![필터](../assets/ui/monitor-sources/filter.png) 데이터 흐름 시작 시간 옆의 를 사용하여 [!DNL Profile] 데이터 흐름 실행.
-
-![프로필](../assets/ui/monitor-sources/profiles.png)
-
-| 프로필 지표 | 설명 |
-| --------------- | ----------- |
-| [!UICONTROL 받은 레코드] | 받은 레코드 수 [!DNL Data Lake]. |
-| [!UICONTROL 레코드 실패 ] | 수집되었지만 수집되지 않은 레코드 수입니다. [!DNL Profile] 오류 때문에. |
-| [!UICONTROL 추가된 프로필 조각] | 새 순 개수 [!DNL Profile] 조각이 추가되었습니다. |
-| [!UICONTROL 프로필 조각 업데이트됨] | 기존 수 [!DNL Profile] 업데이트된 조각 |
-| [!UICONTROL 총 프로필 조각] | 에 작성된 총 레코드 수 [!DNL Profile], 기존 항목 모두 포함 [!DNL Profile] 조각 업데이트와 새 [!DNL Profile] 조각을 만들었습니다. |
-| [!UICONTROL 실패한 데이터 흐름 실행] | 실패한 데이터 흐름 실행 수입니다. |
-| [!UICONTROL 처리 시간] | 수집 시작에서 완료까지의 타임스탬프. |
-| [!UICONTROL 상태] | 데이터 흐름의 전체 상태를 정의합니다. 가능한 상태 값은 다음과 같습니다. <ul><li>`Success`: 데이터 흐름이 활성 상태이고 제공된 일정에 따라 데이터를 수집 중임을 나타냅니다.</li><li>`Failed`: 오류로 인해 데이터 흐름의 활성화 프로세스가 중단되었음을 나타냅니다. </li><li>`Processing`: 데이터 흐름이 아직 활성 상태가 아님을 나타냅니다. 이 상태는 종종 새 데이터 흐름을 만든 후 즉시 발생합니다.</li></ul> |
-
-다음 [!UICONTROL 데이터 흐름 실행 세부 정보] 페이지에 자세한 정보가 표시됩니다 [!DNL Profile] 데이터 흐름 실행(IMS 조직 ID 및 데이터 흐름 실행 ID 포함). 또한 이 페이지에는 [!DNL Profile]: 수집 프로세스에서 오류가 발생하는 경우
-
-![profiles-dataflow-run](../assets/ui/monitor-sources/profiles-dataflow-run.png)
-
 ## 다음 단계 {#next-steps}
 
-이 자습서를 따라 소스 수준에서 다음으로 수집 데이터 플로우를 모니터링했습니다 [!DNL Identity Service], 및에 [!DNL Profile]를 사용 **[!UICONTROL 모니터링]** 대시보드 . 또한 수집 프로세스 중에 데이터 흐름의 실패에 기여한 오류를 성공적으로 식별했습니다. 자세한 내용은 다음 문서를 참조하십시오.
+이 자습서를 따라 다음을 사용하여 소스 수준에서 수집 데이터 플로우를 모니터링했습니다 **[!UICONTROL 모니터링]** 대시보드 . 또한 수집 프로세스 중에 데이터 흐름의 실패에 기여한 오류를 성공적으로 식별했습니다. 자세한 내용은 다음 문서를 참조하십시오.
 
-* [실시간 고객 프로필 개요](../../profile/home.md)
-* [Data Science Workspace 개요](../../data-science-workspace/home.md)
+* [데이터 흐름에서 ID 모니터링](./monitor-identities.md)
+* [데이터 흐름에서 프로필 모니터링](./monitor-profiles.md)
