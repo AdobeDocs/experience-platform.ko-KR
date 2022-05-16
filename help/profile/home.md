@@ -4,9 +4,9 @@ title: 실시간 고객 프로필 개요
 topic-legacy: guide
 description: 실시간 고객 프로필은 다양한 소스의 데이터를 병합하고 개별 고객 프로필 및 관련 시계열 이벤트 형태로 해당 데이터에 대한 액세스 권한을 제공합니다. 이 기능을 통해 마케터는 여러 채널에서 대상과 잘 조정되고 일관되며 적절한 경험을 제공할 수 있습니다.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: 9f00bff31f9e7d2da1294d3d1f24cba7870a4614
+source-git-commit: d2182b48e21de059f12ad8923bb3b420ed87bcfc
 workflow-type: tm+mt
-source-wordcount: '1888'
+source-wordcount: '2046'
 ht-degree: 0%
 
 ---
@@ -19,11 +19,24 @@ Adobe Experience Platform을 사용하면 고객이 브랜드와 상호 작용�
 
 실시간 고객 프로필과 Experience Platform 내의 다른 서비스 간의 관계는 다음 다이어그램에서 강조 표시됩니다.
 
-![](images/profile-overview/profile-in-platform.png)
+![Adobe Experience Platform의 실시간 고객 프로필과 다른 서비스 간의 관계입니다. 이 다이어그램은 프로필이 Adobe Experience Platform의 핵심 구성 요소 중 하나임을 보여줍니다.](images/profile-overview/profile-in-platform.png)
 
 ## 프로필 이해
 
 [!DNL Real-time Customer Profile] 여러 엔터프라이즈 시스템의 데이터를 병합한 다음 관련 시계열 이벤트가 있는 고객 프로필 형태로 해당 데이터에 대한 액세스를 제공합니다. 이 기능을 통해 마케터는 여러 채널에서 대상과 잘 조정되고 일관되며 적절한 경험을 제공할 수 있습니다. 다음 섹션에서는 플랫폼 내에서 프로필을 효과적으로 작성하고 유지 관리하기 위해 이해해야 하는 몇 가지 핵심 개념을 강조 표시합니다.
+
+### 프로필 엔티티 구성
+
+실시간 고객 프로필은 **기본 엔티티**&#x200B;및 다양한 지원 엔티티 기본 엔티티는 프로필의 트레이트, 동작 및 세그먼트 멤버십으로 구성됩니다. 다른 엔티티를 사용하면 세분화 엔진이 프로필의 기본 엔티티 외부에서 데이터를 활용할 수 있으며 다음을 포함합니다.
+
+- **차원 엔티티**: 이벤트 또는 프로필 레코드 간에 공유된 정보에 대한 데이터 모델링 프로세스를 간소화하는 데 사용되는 엔티티입니다. 이것을 조회 엔티티 또는 분류 엔티티라고도 합니다.
+- **B2B 엔티티**: Business-to-Business 계정 및 기회와의 프로필의 관계를 설명하는 개체입니다.
+
+![프로필 엔티티의 구성을 설명하는 다이어그램입니다.](./images/profile-overview/profile-entity-composition.png)
+
+>[!IMPORTANT]
+>
+>차원 및 B2B 엔티티는 기본 엔티티 외부에만 존재하므로 배치 세그먼테이션에만 사용됩니다.
 
 ### 프로필 데이터 저장소
 
@@ -115,9 +128,9 @@ Observability Insights를 사용하면 Adobe Experience Platform에서 주요 �
 
 데이터 액세스와 관련된 데이터 거버넌스는 [!DNL Experience Platform] 다양한 수준에서 다음을 수행합니다.
 
-* 데이터 사용 레이블 지정
-* 데이터 액세스 정책
-* 마케팅 작업을 위한 데이터에 대한 액세스 제어
+- 데이터 사용 레이블 지정
+- 데이터 액세스 정책
+- 마케팅 작업을 위한 데이터에 대한 액세스 제어
 
 데이터 거버넌스는 몇 가지 지점에서 관리됩니다. 여기에는 수집할 데이터를 결정하는 작업이 포함됩니다 [!DNL Platform] 지정된 마케팅 활동에 대해 섭취 후 액세스할 수 있는 데이터입니다. 자세한 내용은 [데이터 거버넌스 개요](../data-governance/home.md).
 
