@@ -5,10 +5,10 @@ title: 지표 API 엔드포인트
 topic-legacy: developer guide
 description: Observability Insights API를 사용하여 Experience Platform에서 가시성 지표를 검색하는 방법을 알아봅니다.
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: dc7deab2c9fe1a1fa151731fceeb3c239dd18878
 workflow-type: tm+mt
-source-wordcount: '1864'
-ht-degree: 5%
+source-wordcount: '1409'
+ht-degree: 4%
 
 ---
 
@@ -201,23 +201,12 @@ curl -X POST \
 
 | 통찰력 지표 | 설명 | ID 쿼리 매개 변수 |
 | ---- | ---- | ---- |
-| timeseries.ingestion.dataset.new.count | 생성된 총 데이터 세트 수입니다. | 해당 없음 |
 | timeseries.ingestion.dataset.size | 데이터 세트 하나 또는 모든 데이터 세트에 대해 수집된 모든 데이터의 누적 크기입니다. | 데이터 세트 ID |
 | timeseries.ingestion.dataset.dailysize | 한 데이터 세트 또는 모든 데이터 세트에 대해 일별 사용 기준으로 수집된 데이터의 크기입니다. | 데이터 세트 ID |
 | timeseries.ingestion.dataset.batchfailed.count | 하나의 데이터 세트 또는 모든 데이터 세트에 대해 실패한 일괄 처리 수입니다. | 데이터 세트 ID |
 | timeseries.ingestion.dataset.batchsuccess.count | 하나의 데이터 세트 또는 모든 데이터 세트에 대해 수집된 일괄 처리 수입니다. | 데이터 세트 ID |
 | timeseries.ingestion.dataset.recordsuccess.count | 한 데이터 세트 또는 모든 데이터 세트에 대해 수집된 레코드 수입니다. | 데이터 세트 ID |
-| **timeseries.data.collection.validation.total.messages.rate** | 하나의 데이터 세트 또는 모든 데이터 세트에 대한 총 메시지 수입니다. | 데이터 세트 ID |
-| **timeseries.data.collection.validation.valid.messages.rate** | 한 데이터 세트 또는 모든 데이터 세트에 대해 유효한 총 메시지 수입니다. | 데이터 세트 ID |
-| **timeseries.data.collection.validation.invalid.messages.rate** | 한 데이터 세트 또는 모든 데이터 세트에 대해 잘못된 메시지의 총 수입니다. | 데이터 세트 ID |
-| **timeseries.data.collection.validation.category.type.count** | 한 데이터 세트 또는 모든 데이터 세트에 대해 잘못된 &quot;type&quot; 메시지의 총 수입니다. | 데이터 세트 ID |
-| **timeseries.data.collection.validation.category.range.count** | 한 데이터 세트 또는 모든 데이터 세트에 대해 잘못된 &quot;범위&quot; 메시지의 총 수입니다. | 데이터 세트 ID |
-| **timeseries.data.collection.validation.category.format.count** | 한 데이터 세트 또는 모든 데이터 세트에 대해 잘못된 &quot;format&quot; 메시지의 총 수입니다. | 데이터 세트 ID |
-| **timeseries.data.collection.validation.category.pattern.count** | 한 데이터 세트 또는 모든 데이터 세트에 대해 잘못된 &quot;패턴&quot; 메시지의 총 수입니다. | 데이터 세트 ID |
 | **timeseries.data.collection.validation.category.presence.count** | 한 데이터 세트 또는 모든 데이터 세트에 대해 잘못된 &quot;존재&quot; 메시지의 총 수입니다. | 데이터 세트 ID |
-| **timeseries.data.collection.validation.category.enum.count** | 한 데이터 세트 또는 모든 데이터 세트에 대해 잘못된 &quot;enum&quot; 메시지의 총 수입니다. | 데이터 세트 ID |
-| **timeseries.data.collection.validation.category.unclassified.count** | 한 데이터 세트 또는 모든 데이터 세트에 대해 잘못된 &quot;분류되지 않은&quot; 메시지의 총 수입니다. | 데이터 세트 ID |
-| **timeseries.data.collection.validation.category.unknown.count** | 한 데이터 세트 또는 모든 데이터 세트에 대해 잘못된 &quot;알 수 없는&quot; 메시지의 총 수입니다. | 데이터 세트 ID |
 | **timeseries.data.collection.inlet.total.messages.received** | 하나의 데이터 입력 또는 모든 데이터 입력기에 대해 받은 총 메시지 수입니다. | 인렛 ID |
 | **timeseries.data.collection.inlet.total.messages.size.received** | 하나의 데이터 입력 또는 모든 데이터 입력기에 대해 수신한 데이터의 총 크기입니다. | 인렛 ID |
 | **timeseries.data.collection.inlet.success** | 하나의 데이터 유입이나 모든 데이터 유입구에 대한 총 HTTP 호출 수입니다. | 인렛 ID |
@@ -233,40 +222,11 @@ curl -X POST \
 | ---- | ---- | ---- |
 | timeseries.identity.dataset.recordsuccess.count | 데이터 원본에 쓰는 레코드 수 [!DNL Identity Service]: 한 개의 데이터 세트 또는 모든 데이터 세트에 대해 입니다. | 데이터 세트 ID |
 | timeseries.identity.dataset.recordfailed.count | 실패한 레코드 수 [!DNL Identity Service]한 개의 데이터 세트 또는 모든 데이터 세트에 대해 입니다. | 데이터 세트 ID |
-| timeseries.identity.dataset.namespacecode.recordsuccess.count | 네임스페이스에 대해 성공적으로 수집된 ID 레코드 수입니다. | 네임스페이스 ID(**필수 여부**) |
 | timeseries.identity.dataset.namespacecode.recordfailed.count | 네임스페이스에 의해 실패한 ID 레코드 수입니다. | 네임스페이스 ID(**필수 여부**) |
 | timeseries.identity.dataset.namespacecode.recordskipped.count | 네임스페이스에서 건너뛴 ID 레코드 수입니다. | 네임스페이스 ID(**필수 여부**) |
 | timeseries.identity.graph.imsorg.uniqueidentities.count | IMS 조직의 ID 그래프에 저장된 고유 ID 수. | 해당 없음 |
 | timeseries.identity.graph.imsorg.namespacecode.uniqueidentities.count | 네임스페이스에 대한 ID 그래프에 저장된 고유 ID의 수입니다. | 네임스페이스 ID(**필수 여부**) |
-| timeseries.identity.graph.imsorg.numidgraphs.count | IMS 조직의 ID 그래프에 저장된 고유 그래프 ID의 수입니다. | 해당 없음 |
 | timeseries.identity.graph.imsorg.graphstrength.uniqueidentities.count | 특정 그래프 강도(&quot;알 수 없음&quot;, &quot;약함&quot; 또는 &quot;strong&quot;)에 대한 IMS 조직의 ID 그래프에 저장된 고유 ID의 수입니다. | 그래프 강도(**필수 여부**) |
-
-{style=&quot;table-layout:auto&quot;}
-
-#### [!DNL Privacy Service] {#privacy}
-
-다음 표에서는 Adobe Experience Platform에 대한 지표에 대해 설명합니다 [!DNL Privacy Service].
-
-| 통찰력 지표 | 설명 | ID 쿼리 매개 변수 |
-| ---- | ---- | ---- |
-| timeseries.gdpr.jobs.totaljobs.count | GDPR에서 생성된 총 작업 수입니다. | 환경 (**필수 여부**) |
-| timeseries.gdpr.jobs.completedjobs.count | GDPR에서 완료된 작업의 총 수입니다. | 환경 (**필수 여부**) |
-| timeseries.gdpr.jobs.errorjobs.count | GDPR의 총 오류 작업 수입니다. | 환경 (**필수 여부**) |
-
-{style=&quot;table-layout:auto&quot;}
-
-#### [!DNL Query Service] {#query}
-
-다음 표에서는 Adobe Experience Platform에 대한 지표에 대해 설명합니다 [!DNL Query Service].
-
-| 통찰력 지표 | 설명 | ID 쿼리 매개 변수 |
-| ---- | ---- | ---- |
-| timeseries.queryservice.query.scheduleonce.count | 비반복 예약된 총 쿼리 수입니다. | 해당 없음 |
-| timeseries.queryservice.query.scheduledrecurring.count | 반복 예약된 쿼리의 총 수입니다. | 해당 없음 |
-| timeseries.queryservice.query.batchquery.count | 실행된 일괄 처리 쿼리의 총 수입니다. | 해당 없음 |
-| timeseries.queryservice.query.scheduledquery.count | 실행된 총 예약된 쿼리 수입니다. | 해당 없음 |
-| timeseries.queryservice.query.interactivequery.count | 실행된 총 대화형 쿼리 수입니다. | 해당 없음 |
-| timeseries.queryservice.query.batchfrompsqlquery.count | PSQL에서 실행된 일괄 처리 쿼리의 총 수입니다. | 해당 없음 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -278,18 +238,7 @@ curl -X POST \
 | ---- | ---- | ---- |
 | timeseries.profiles.dataset.recordread.count | 에서 읽은 레코드 수입니다. [!DNL Data Lake] by [!DNL Profile]한 개의 데이터 세트 또는 모든 데이터 세트에 대해 입니다. | 데이터 세트 ID |
 | timeseries.profiles.dataset.recordsuccess.count | 데이터 원본에 쓰는 레코드 수 [!DNL Profile]한 개의 데이터 세트 또는 모든 데이터 세트에 대해 입니다. | 데이터 세트 ID |
-| timeseries.profiles.dataset.recordfailed.count | 실패한 레코드 수 [!DNL Profile]한 개의 데이터 세트 또는 모든 데이터 세트에 대해 입니다. | 데이터 세트 ID |
 | timeseries.profiles.dataset.batchsuccess.count | 번호 [!DNL Profile] 데이터 세트 또는 모든 데이터 세트에 대해 수집된 일괄 처리. | 데이터 세트 ID |
-| timeseries.profiles.dataset.batchfailed.count | 번호 [!DNL Profile] 하나의 데이터 세트 또는 모든 데이터 세트에 대해 배치가 실패했습니다. | 데이터 세트 ID |
-| platform.ups.ingest.streaming.request.m1_rate | 수신 요청 비율입니다. | IMS 조직 (**필수 여부**) |
-| aep.core.unified-profile.psi.platform.ups.ingest.streaming.access.put.success.meter.m1_rate | 수집 성공률. | IMS 조직 (**필수 여부**) |
-| platform.ups.ingest.streaming.records.created.m15_rate | 데이터 집합에 대해 수집된 새 레코드 비율입니다. | 데이터 세트 ID (**필수 여부**) |
-| platform.ups.ingest.streaming.request.error.created.outOfOrder.m1_rate | 데이터 집합에 대한 만들기 요청에 대해 잘못된 타임스탬프가 지정된 레코드의 비율입니다. | 데이터 세트 ID (**필수 여부**) |
-| platform.ups.profile-commons.ingest.streaming.dataSet.record.created.timestamp | 데이터 집합에 대한 마지막 작성 레코드 요청에 대한 타임스탬프입니다. | 데이터 세트 ID (**필수 여부**) |
-| platform.ups.ingest.streaming.request.error.updated.outOfOrder.m1_rate | 데이터 집합에 대한 업데이트 요청에 대해 잘못된 타임스탬프가 지정된 레코드의 비율입니다. | 데이터 세트 ID (**필수 여부**) |
-| platform.ups.profile-commons.ingest.streaming.dataSet.record.updated.timestamp | 데이터 집합에 대한 마지막 업데이트 레코드 요청에 대한 타임스탬프입니다. | 데이터 세트 ID (**필수 여부**) |
-| platform.ups.ingest.streaming.record.size.m1_rate | 평균 레코드 크기입니다. | IMS 조직 (**필수 여부**) |
-| platform.ups.ingest.streaming.records.updated.m15_rate | 데이터 집합에 대해 수집된 레코드에 대한 업데이트 요청 비율입니다. | 데이터 세트 ID (**필수 여부**) |
 
 {style=&quot;table-layout:auto&quot;}
 
