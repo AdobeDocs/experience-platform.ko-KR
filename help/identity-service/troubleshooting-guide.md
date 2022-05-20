@@ -5,9 +5,9 @@ title: Identity Service 문제 해결 안내서
 topic-legacy: troubleshooting
 description: 이 문서에서는 Adobe Experience Platform Identity 서비스에 대해 자주 묻는 질문과 일반적인 오류에 대한 문제 해결 안내서를 제공합니다.
 exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
-source-git-commit: 80530705f5f8d30294ad31e00d8956257ee2c085
+source-git-commit: 3d308d18c926cabdf0bd4b52c0623d8ec9428ee8
 workflow-type: tm+mt
-source-wordcount: '2236'
+source-wordcount: '2180'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ ID 데이터는 개별 개인을 식별하는 데 사용할 수 있는 모든 �
 
 개인 ID 그래프는 결합된 ID와 연결된 ID 간의 관계가 조직에만 표시되는 개인 지도입니다.
 
-스트리밍 종단점에서 수집된 데이터에 둘 이상의 ID가 포함되거나 다음에 사용할 수 있는 데이터 세트로 전송되는 경우 [!DNL Identity Service]를 입력하면 해당 ID가 개인 ID 그래프에 연결됩니다. [!DNL Identity Service] 이 그래프를 활용하여 지정된 소비자 또는 엔티티에 대한 ID를 확보하여 ID 결합 및 프로필 병합을 허용합니다.
+스트리밍 종단점에서 수집된 데이터에 둘 이상의 ID가 포함되거나 다음에 활성화된 데이터 세트로 전송되는 경우 [!DNL Identity Service]를 입력하면 해당 ID가 개인 ID 그래프에 연결됩니다. [!DNL Identity Service] 이 그래프를 활용하여 지정된 소비자 또는 엔티티에 대한 ID를 확보하여 ID 결합 및 프로필 병합을 허용합니다.
 
 ## XDM 스키마 내에서 여러 ID 필드를 만들려면 어떻게 합니까?
 
@@ -90,13 +90,7 @@ ID는 해당 복합 ID 또는 XID에 의해 API 호출에서 참조됩니다. �
 
 ## Identity 서비스는 PII(개인 식별 정보)를 어떻게 처리합니까?
 
-Identity 서비스는 값을 지속하기 전에 PII의 강력한 단방향 암호화 해시를 만듭니다. &quot;Phone&quot; 및 &quot;Email&quot; 네임스페이스의 ID 데이터는 SHA-256을 사용하여 자동으로 해시되고 &quot;Email&quot; 값은 해싱 전에 자동으로 소문자로 변환됩니다.
-
-## Platform으로 보내기 전에 모든 PII를 암호화해야 합니까?
-
-PII 데이터를 Platform으로 수집하기 전에 수동으로 암호화할 필요가 없습니다. 다음을 적용하여 `I1` 데이터 사용 레이블을 적용 가능한 모든 데이터 필드에 지정하면, Platform은 수집 시 이러한 필드를 해시된 ID 값으로 자동으로 변환합니다.
-
-데이터 사용 레이블을 적용하고 관리하는 방법에 대한 단계는 다음을 참조하십시오. [데이터 사용 레이블 자습서](../data-governance/labels/user-guide.md).
+Identity Service에는 전화 번호 및 이메일에 대한 해시된 ID 값을 수집하도록 지원하는 표준 네임스페이스가 있습니다. 그러나 값의 해싱은 사용자가 책임집니다. Platform에 수집된 데이터 해시에 대한 자세한 내용은 [[!DNL Data Prep] 매핑 함수 안내서](../data-prep/functions.md#hashing).
 
 ## PII 기반 ID를 해싱할 때 고려해야 할 사항이 있습니까?
 
