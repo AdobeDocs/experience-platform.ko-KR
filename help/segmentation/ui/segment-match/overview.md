@@ -5,9 +5,9 @@ title: 세그먼트 일치 개요
 topic-legacy: overview
 description: 세그먼트 일치 는 두 명 이상의 플랫폼 사용자가 안전하고 제어되며 개인 정보에 친숙한 방식으로 세그먼트 데이터를 교환할 수 있도록 해주는 Adobe Experience Platform의 세그먼트 공유 서비스입니다.
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: 50795be308649052037be62153109eadab02c9a1
+source-git-commit: 1c2b9862facfe9fbce59246c882e6373f3e2c3ef
 workflow-type: tm+mt
-source-wordcount: '1968'
+source-wordcount: '1994'
 ht-degree: 0%
 
 ---
@@ -114,7 +114,13 @@ ID 데이터 및 네임스페이스, 동의 구성 및 데이터 사용 레이�
 
 ![connect-partner.png](./images/connect-partner.png)
 
-### 피드 만들기
+### 피드 만들기 {#create-feed}
+
+>[!CONTEXTUALHELP]
+>id="platform_segment_match_marketing"
+>title="제한된 마케팅 사용 사례"
+>abstract="제한된 마케팅 사용 사례는 데이터 거버넌스 제한에 따라 공유 세그먼트가 제대로 사용되도록 하기 위한 지침을 파트너에게 제공하는 데 도움이 됩니다."
+>text="Learn more in documentation"
 
 A **피드** 는 데이터 그룹(세그먼트), 데이터를 노출하거나 사용할 수 있는 방법에 대한 규칙 및 데이터가 파트너의 데이터와 어떻게 일치하는지 결정하는 구성입니다. 피드는 를 통해 독립적으로 관리하고 다른 플랫폼 사용자와 교환할 수 있습니다 [!DNL Segment Match].
 
