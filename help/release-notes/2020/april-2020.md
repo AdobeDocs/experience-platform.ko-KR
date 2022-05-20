@@ -1,21 +1,21 @@
 ---
-title: Adobe Experience Platform 릴리스 정보
-description: Experience Platform 릴리스 노트 - 2020년 4월 8일
+title: Adobe Experience Platform 릴리스 노트 - 2020년 4월
+description: Adobe Experience Platform에 대한 2020년 4월 릴리스 노트입니다.
 doc-type: release notes
 last-update: April 13, 2020
 author: ens71067
 keywords: 릴리스 노트;
 exl-id: 0f68c71e-3c9d-453b-a953-1cd1b6ca2e35
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: e08deb8bea7f02639b680c4988522627de82bdee
 workflow-type: tm+mt
-source-wordcount: '979'
+source-wordcount: '983'
 ht-degree: 10%
 
 ---
 
 # Adobe Experience Platform 릴리스 노트
 
-**릴리스 날짜: 2020년 4월 8일**
+**릴리스 일자: 2020년 4월 8일**
 
 Adobe Experience Platform의 새로운 기능:
 * [[!DNL Intelligent Services]](#intelligent)

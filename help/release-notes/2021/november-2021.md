@@ -1,9 +1,10 @@
 ---
-title: Adobe Experience Platform 릴리스 정보
-description: Adobe Experience Platform에 대한 최신 릴리스 노트입니다.
-source-git-commit: 7cd4a776ab07fcd123e798497b23edd41266f409
+title: Adobe Experience Platform 릴리스 노트 - 2021년 11월
+description: Adobe Experience Platform에 대한 2021년 11월 릴리스 노트입니다.
+exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
+source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
 workflow-type: tm+mt
-source-wordcount: '798'
+source-wordcount: '799'
 ht-degree: 12%
 
 ---
@@ -90,4 +91,3 @@ Real-time Customer Data Platform에서 사용할 수 있는 고객 AI는 규모�
 | 사용자 지정 프로필 속성 | 이제 Customer AI에서는 표준 이벤트 필드 외에도 데이터에서 사용자 지정 프로필 데이터 세트 필드(타임스탬프 포함)를 정의할 수 있습니다. 이 옵션을 사용하면 모델의 품질을 향상시키고 보다 정확한 결과를 제공할 수 있는 영향력 있는 프로필 속성을 추가할 수 있습니다. |
 
 Customer AI에 대한 자세한 내용은 [Customer AI 설명서](../../intelligent-services/customer-ai/overview.md).
-

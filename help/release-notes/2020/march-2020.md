@@ -1,21 +1,21 @@
 ---
-title: Adobe Experience Platform 릴리스 정보
-description: Experience Platform 릴리스 노트 - 2020년 3월 11일
+title: Adobe Experience Platform 릴리스 노트 - 2020년 3월
+description: Adobe Experience Platform에 대한 2020년 3월 릴리스 노트입니다.
 doc-type: release notes
 last-update: March 10, 2020
 author: ens71067
 keywords: 릴리스 노트;
 exl-id: 407c2bac-4c8a-4939-b3dd-788250f15650
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
 workflow-type: tm+mt
-source-wordcount: '851'
-ht-degree: 7%
+source-wordcount: '855'
+ht-degree: 6%
 
 ---
 
 # Adobe Experience Platform 릴리스 노트
 
-**릴리스 날짜: 2020년 3월 11일**
+**릴리스 일자: 2020년 3월 11일**
 
 Adobe Experience Platform의 기존 기능 업데이트:
 

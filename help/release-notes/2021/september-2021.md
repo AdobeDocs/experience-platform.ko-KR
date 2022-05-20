@@ -1,17 +1,17 @@
 ---
-title: Adobe Experience Platform 릴리스 정보
-description: Adobe Experience Platform에 대한 최신 릴리스 노트입니다.
+title: Adobe Experience Platform 릴리스 노트 - 2021년 9월
+description: Adobe Experience Platform에 대한 2021년 9월 릴리스 노트입니다.
 exl-id: 96375409-803f-45af-805e-900207d972e4
-source-git-commit: 57089cc9aa9c586f5fae70e2a7154d48ebd62447
+source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
 workflow-type: tm+mt
-source-wordcount: '376'
-ht-degree: 9%
+source-wordcount: '377'
+ht-degree: 8%
 
 ---
 
 # Adobe Experience Platform 릴리스 노트
 
-**릴리스 날짜: 2021년 29월 9일**
+**릴리스 날짜: 2021년 9월 29일**
 
 Adobe Experience Platform의 기존 기능 업데이트:
 
@@ -27,9 +27,9 @@ Adobe Experience Platform 데이터 섭취는 플랫폼이 다양한 소스에�
 
 | 기능 | 설명 |
 |------- | -----------|
-| 배치 수집을 사용하여 프로필 레코드 업데이트 또는 패치 | 이제 실시간 고객 프로필을 사용하면 배치 섭취 를 통해 개별 프로필 레코드 데이터의 프로필 속성을 업데이트할 수 있습니다. 자세한 내용은 [배치 수집 개발자 안내서](../../ingestion/batch-ingestion/api-overview.md)를 참조하십시오. |
+| 배치 수집을 사용하여 프로필 레코드 업데이트 또는 패치 | 이제 실시간 고객 프로필을 사용하면 배치 섭취 를 통해 개별 프로필 레코드 데이터의 프로필 속성을 업데이트할 수 있습니다. 자세한 내용은 [배치 수집 개발자 안내서](../../ingestion/batch-ingestion/api-overview.md). |
 
-데이터를 플랫폼으로 수집하는 방법에 대한 자세한 내용은 [데이터 수집 설명서](../../ingestion/home.md)를 참조하십시오.
+Platform으로 데이터를 수집하는 방법에 대한 자세한 내용은 [데이터 수집 설명서](../../ingestion/home.md).
 
 ## [!DNL Data Prep] {#data-prep}
 
@@ -39,9 +39,9 @@ Adobe Experience Platform 데이터 섭취는 플랫폼이 다양한 소스에�
 
 | 기능 | 설명 |
 | --- | --- |
-| 스트리밍 데이터 흐름 지원 | 이제 [!DNL Amazon Kinesis], [!DNL Azure Event Hubs] 및 [!DNL Google PubSub]에 대한 스트리밍 데이터 흐름을 만들 때 데이터 준비 함수를 사용할 수 있습니다. 자세한 내용은 [클라우드 저장소 소스를 위한 스트리밍 데이터 흐름 만들기](../../sources/tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)의 자습서를 참조하십시오. |
+| 스트리밍 데이터 흐름 지원 | 이제 스트리밍 데이터 흐름을 만들 때 데이터 준비 함수를 사용할 수 있습니다. [!DNL Amazon Kinesis], [!DNL Azure Event Hubs], 및 [!DNL Google PubSub]. 다음에서 자습서를 참조하십시오. [클라우드 스토리지 소스를 위한 스트리밍 데이터 흐름 만들기](../../sources/tutorials/ui/dataflow/streaming/cloud-storage-streaming.md) 추가 정보. |
 
-[!DNL Data Prep]에 대해 자세히 알아보려면 [[!DNL Data Prep] 개요](../../data-prep/home.md)를 참조하십시오.
+에 대해 자세히 알아보려면 [!DNL Data Prep] 참조 [[!DNL Data Prep] 개요](../../data-prep/home.md).
 
 ## 소스 {#sources}
 
@@ -51,8 +51,8 @@ Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 
 
 | 기능 | 설명 |
 | --- | --- |
-| [!DNL Data Landing Zone] | 이제 [[!DNL Flow Service] API](../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md) 또는 [사용자 인터페이스](../../sources/tutorials/ui/create/cloud-storage/data-landing-zone.md)를 사용하여 [!DNL Data Landing Zone] 소스 연결을 만들 수 있습니다. [!DNL Data Landing Zone] 는 Platform에서 제공하는  [!DNL Azure Blob] 스토리지 인터페이스로, Platform으로 파일을 가져올 수 있도록 안전한 클라우드 기반 파일 스토리지 기능에 액세스할 수 있도록 합니다. 자세한 내용은 [[!DNL Data Landing Zone] 개요](../../sources/connectors/cloud-storage/data-landing-zone.md)를 참조하십시오. |
-| [!DNL Snowflake] | 이제 [[!DNL Flow Service] API](../../sources/tutorials/api/create/databases/snowflake.md) 또는 [사용자 인터페이스](../../sources/tutorials/ui/create/databases/snowflake.md)를 사용하여 [!DNL Snowflake] 소스 연결을 만들어 [!DNL Snowflake] 데이터베이스의 데이터를 플랫폼으로 가져올 수 있습니다. 자세한 내용은 [[!DNL Snowflake] 개요](../../sources/connectors/databases/snowflake.md)를 참조하십시오. |
-| [!DNL SFTP] 소스 개선 사항 | [!DNL SFTP] 소스 연결을 만들 때 사용자 지정 포트 번호를 수동으로 설정할 수 있습니다. 자세한 내용은 [[!DNL SFTP] 개요](../../sources/connectors/cloud-storage/sftp.md)를 참조하십시오. |
+| [!DNL Data Landing Zone] | 이제 다음을 만들 수 있습니다 [!DNL Data Landing Zone] 소스 연결 [[!DNL Flow Service] API](../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md) 또는 [사용자 인터페이스](../../sources/tutorials/ui/create/cloud-storage/data-landing-zone.md). [!DNL Data Landing Zone] is [!DNL Azure Blob] Platform에서 프로비저닝한 스토리지 인터페이스로, 파일을 플랫폼으로 가져올 수 있도록 클라우드 기반의 보안 파일 스토리지 기능을 이용할 수 있습니다. 자세한 내용은 [[!DNL Data Landing Zone] 개요](../../sources/connectors/cloud-storage/data-landing-zone.md) 추가 정보. |
+| [!DNL Snowflake] | 이제 다음을 만들 수 있습니다 [!DNL Snowflake] 소스 연결 [[!DNL Flow Service] API](../../sources/tutorials/api/create/databases/snowflake.md) 또는 [사용자 인터페이스](../../sources/tutorials/ui/create/databases/snowflake.md) 데이터를에서 [!DNL Snowflake] Platform으로 데이터베이스를 전환합니다. 자세한 내용은 [[!DNL Snowflake] 개요](../../sources/connectors/databases/snowflake.md) 추가 정보. |
+| [!DNL SFTP] 소스 개선 사항 | 사용자 정의 포트 번호는 수동으로 설정할 수 있습니다 [!DNL SFTP] 소스 연결. 자세한 내용은 [[!DNL SFTP] 개요](../../sources/connectors/cloud-storage/sftp.md) 추가 정보. |
 
-소스에 대해 자세히 알아보려면 [소스 개요](../../sources/home.md)를 참조하십시오.
+소스에 대해 자세히 알아보려면 [소스 개요](../../sources/home.md).

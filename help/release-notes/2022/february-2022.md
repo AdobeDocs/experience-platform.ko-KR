@@ -1,17 +1,17 @@
 ---
-title: Adobe Experience Platform 릴리스 정보
-description: Adobe Experience Platform에 대한 최신 릴리스 노트입니다.
+title: Adobe Experience Platform 릴리스 노트 - 2022년 2월
+description: Adobe Experience Platform에 대한 2022년 2월 릴리스 노트입니다.
 exl-id: ae453f7d-ac75-4cc3-8435-57d25f086cc3
-source-git-commit: 5f6b46245781051da01a8051f023df11ff4c7d51
+source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
 workflow-type: tm+mt
-source-wordcount: '1018'
+source-wordcount: '1019'
 ht-degree: 3%
 
 ---
 
 # Adobe Experience Platform 릴리스 노트
 
-**릴리스 날짜: 2022년 3월 7일**
+**릴리스 일자: 2022년 3월 7일**
 
 >[!NOTE]
 >

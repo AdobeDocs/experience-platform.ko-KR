@@ -1,13 +1,13 @@
 ---
-title: Adobe Experience Platform 릴리스 정보
-description: Experience Platform 릴리스 노트 - 2020년 11월 11일
+title: Adobe Experience Platform 릴리스 노트 - 2020년 11월
+description: Adobe Experience Platform에 대한 2020년 11월 릴리스 노트입니다.
 doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 exl-id: 29179b56-e49a-44e8-8c64-a7c383c2eaaf
-source-git-commit: 38c493e6306e493f4ef5caf90509bda6f4d80023
+source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
 workflow-type: tm+mt
-source-wordcount: '2180'
+source-wordcount: '2184'
 ht-degree: 3%
 
 ---
