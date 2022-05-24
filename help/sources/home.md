@@ -5,9 +5,9 @@ title: 소스 커넥터 개요
 topic-legacy: overview
 description: Adobe Experience Platform을 사용하면 Platform 서비스를 사용하여 들어오는 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 외부 소스에서 데이터를 수집할 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 등과 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: f0b8b5d16739b2bec6e1a11b718962de3faed463
+source-git-commit: 365e36351bf18864c677f53dffbc30b47f29b074
 workflow-type: tm+mt
-source-wordcount: '997'
+source-wordcount: '1000'
 ht-degree: 0%
 
 ---
@@ -34,6 +34,7 @@ Experience Platform을 사용하면 Adobe Analytics 및 Adobe Audience Manager�
 - [UI에서 Adobe Analytics 분류 데이터 소스 연결 만들기](./tutorials/ui/create/adobe-applications/classifications.md)
 - [Adobe Analytics 보고서 세트 데이터 소스 연결 개요](connectors/adobe-applications/analytics.md)
 - [UI에서 Adobe Analytics 소스 연결 만들기](./tutorials/ui/create/adobe-applications/analytics.md)
+- [Adobe 데이터 수집](connectors/adobe-applications/data-collection.md)
 - [UI에서 고객 속성 소스 연결 만들기](./tutorials/ui/create/adobe-applications/customer-attributes.md)
 - [[!DNL Marketo Engage] 커넥터 개요](connectors/adobe-applications/marketo/marketo.md)
 - [만들기 [!DNL Marketo Engage] UI의 소스 연결](./tutorials/ui/create/adobe-applications/marketo.md)

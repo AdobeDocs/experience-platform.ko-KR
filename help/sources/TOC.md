@@ -4,23 +4,24 @@ user-guide-title: Adobe Experience Platform 소스 커넥터 도움말
 breadcrumb-title: Source Connectors 안내서
 user-guide-description: 다양한 소스 또는 구조에서 데이터를 수집하고 레이블을 지정하며 기존에 수집한 데이터를 향상시킬 수 있습니다.
 feature: Sources
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: be3967e7045e159736952e369a55df322afd9fec
 workflow-type: tm+mt
-source-wordcount: '780'
+source-wordcount: '777'
 ht-degree: 13%
 
 ---
 
 
-# 소스 커넥터 {#sources}
+# 소스 {#sources}
 
-- [소스 커넥터 개요](home.md)
+- [소스 개요](home.md)
 - 사용 가능한 소스 커넥터 {#connectors}
    - Adobe 애플리케이션 {#adobe-applications}
-      - [Analytics 분류 소스 커넥터](connectors/adobe-applications/classifications.md)
-      - [Analytics 소스 커넥터](connectors/adobe-applications/analytics.md)
-      - [Audience Manager 원본 커넥터](connectors/adobe-applications/audience-manager.md)
-      - [고객 특성 소스 커넥터](connectors/adobe-applications/customer-attributes.md)
+      - [Analytics 분류 소스](connectors/adobe-applications/classifications.md)
+      - [Analytics 소스](connectors/adobe-applications/analytics.md)
+      - [Audience Manager 소스](connectors/adobe-applications/audience-manager.md)
+      - [고객 속성 소스](connectors/adobe-applications/customer-attributes.md)
+      - [데이터 수집 소스](connectors/adobe-applications/data-collection.md)
       - 필드 매핑 {#mapping}
          - [Analytics 필드 매핑](connectors/adobe-applications/mapping/analytics.md)
          - [Audience Manager 필드 매핑](connectors/adobe-applications/mapping/audience-manager.md)
