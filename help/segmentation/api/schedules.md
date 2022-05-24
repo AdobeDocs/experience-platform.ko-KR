@@ -5,7 +5,7 @@ title: API 엔드포인트 예약
 topic-legacy: developer guide
 description: 예약은 하루에 한 번 배치 세그먼테이션 작업을 자동으로 실행하는 데 사용할 수 있는 도구입니다.
 exl-id: 92477add-2e7d-4d7b-bd81-47d340998ff1
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 604d1d02156b441ab3978ff976e02191bbdc311f
 workflow-type: tm+mt
 source-wordcount: '2013'
 ht-degree: 3%
@@ -257,7 +257,7 @@ PATCH /config/schedules/{SCHEDULE_ID}
 **요청**
 
 ```shell
-curl -X DELETE https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b \
+curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
