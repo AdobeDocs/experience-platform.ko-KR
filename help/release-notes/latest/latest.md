@@ -2,16 +2,16 @@
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform에 대한 최신 릴리스 노트입니다.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 7040a3415ced04035e2a6a73292c2113411df21d
+source-git-commit: 73aaf93e4d11c9e6dd20dfaaf64501eda9220ef8
 workflow-type: tm+mt
-source-wordcount: '2916'
-ht-degree: 5%
+source-wordcount: '2613'
+ht-degree: 6%
 
 ---
 
 # Adobe Experience Platform 릴리스 노트
 
-**릴리스 일자: 2022년 4월 27일**
+**릴리스 날짜: 2022년 5월 25일**
 
 Adobe Experience Platform의 기존 기능 업데이트:
 
@@ -19,7 +19,7 @@ Adobe Experience Platform의 기존 기능 업데이트:
 - [[!DNL Dashboards]](#dashboards)
 - [데이터 흐름](#dataflows)
 - [[!DNL Data Prep]](#data-prep)
-- [대상](#destinations)
+- [[!DNL Destinations]](#destinations)
 - [XDM(경험 데이터 모델)](#xdm)
 - [Real-time Customer Data Platform B2B 에디션](#B2B)
 - [소스](#sources)
@@ -94,27 +94,9 @@ Platform에서 데이터는 다양한 소스에서 수집되고 시스템 내에
 
 | 기능 | 설명 |
 | ----------- | ----------- |
-| 고급 엔터프라이즈 대상 커넥터 | 이제 3개의 엔터프라이즈 대상 커넥터를 일반적으로 사용할 수 있습니다. [[!DNL Amazon Kinesis]](../../destinations/catalog/cloud-storage/amazon-kinesis.md), [[!DNL Azure Event Hubs]](../../destinations/catalog/cloud-storage/azure-event-hubs.md), 및 [[!DNL HTTP API]](../../destinations/catalog/streaming/http-destination.md). <br> 엔터프라이즈 대상 커넥터의 일반 가용성에는 베타 단계에서 이전에 제공되는 모든 기능 등이 포함되어 있습니다. <ul><li>다음을 포함한 새로운 인증 기능 [Azure 이벤트 허브의 공유 액세스 서명](../../destinations/catalog/cloud-storage/azure-event-hubs.md#sas-authentication) 및 기타 [인증 유형](../../destinations/catalog/streaming/http-destination.md#authentication-information) (HTTP API 대상의 베어러 토큰, OAuth 2);</li><li>[내역 프로필 데이터 채우기](../../destinations/catalog/streaming/http-destination.md#historical-data-backfill) (처음 활성화되었을 때 세그먼트에 적합한 내역 프로필 전송)</li><li>이제 데이터 흐름 실행 지표가 이러한 대상에 대해 지원됩니다.</li><li>[추가 세그먼트 메타데이터](../../destinations/catalog/streaming/http-destination.md#destination-details) 세그먼트 이름 및 세그먼트 타임스탬프를 포함한 데이터 페이로드에 포함됨</li><li>지원 대상 [정적 IP 주소](/help/destinations/catalog/streaming/ip-address-allow-list.md) Experience Platform을 방문해야 하는 고객허용 목록에 추가하다의 경우.</li></ul> |
-| 대상 데이터 흐름에 대한 컨텍스트 내 경고 | 이제 다음을 수행할 수 있습니다 [경고 구독](../../destinations/ui/alerts.md) 대상 데이터 흐름을 만들 때 데이터 흐름 실행 상태, 성공 또는 실패와 관련된 경고 메시지를 수신합니다. Experience Platform UI나 이메일을 통해 경고를 수신하도록 선택할 수 있습니다. |
+| 최신 프로필 자격 내보내기 [일별 세그먼트 평가 후](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files) | 이제 일별 세그먼트 평가가 완료된 후 최신 프로필 자격을 사용하여 전체 파일 내보내기를 한 번 또는 매일 예약할 수 있습니다. |
+| 다음에 대한 선택적 데이터 스트림 ID [Adobe Target 대상](../../destinations/catalog/personalization/adobe-target-connection.md) | Experience Platform Web SDK를 구현할 수 없는 사용자를 위한 Adobe Target 개인화를 활성화하기 위해 이제 Adobe Target 대상을 구성할 때 데이터 스트림 ID 선택을 선택 사항입니다. 데이터 스트림을 사용하지 않는 경우 Experience Platform에서 Target으로 내보낸 세그먼트는 다음 세션 개인화만 지원하지만, Edge Segmentation은 모두 비활성화되어 있습니다 [사용 사례](../../destinations/ui/configure-personalization-destinations.md) 에지 세그먼테이션에 따라 다릅니다. |
 
-### 고급 엔터프라이즈 대상 커넥터에 대한 릴리스 프로세스 {#release-process-enterprise-destinations}
-
-Amazon Kinesis, Azure 이벤트 허브 및 HTTP API 대상의 경우 릴리스 프로세스(4월 27일부터)에서 이전 베타 대상 카드와 대상 카탈로그에서 새로운 GA(General Available) 대상 카드를 모두 볼 수 있습니다. 베타 대상을 사용하는 고객이 구성한 모든 데이터 흐름은 다음 며칠 내에 동일한 대상의 GA 버전으로 마이그레이션됩니다. 이 마이그레이션은 궁극적으로 4월 29일 금요일 말까지 완료되어야 합니다. 베타 대상은 이 짧은 시간 동안 계속 표시되며 **사용되지 않음**.
-
-베타 단계에서 이러한 대상을 활용하는 경우 다음을 참고하십시오.
-
-- 이전에 3개의 대상 중 하나를 사용하여 Beta에 도착한 적이 있는 경우 아무 작업도 필요하지 않습니다. Beta의 일부로 설정된 모든 데이터 흐름은 계속 작동하며 GA 버전으로 마이그레이션됩니다.
-- 4월 27일부터 이러한 대상을 설정하려면 새 GA 버전의 대상으로 설정하십시오.
-- 더 이상 사용되지 않음으로 표시된 베타 카드는 릴리스 작업이 완료되면 제거되며, 이는 4월 29일 금요일 말까지 예상됩니다. Experience Platform 엔지니어링 팀은 성공적인 릴리스 작업을 위해 면밀히 모니터링하고 있습니다.
-
-**새 대상**
-
-| 대상 | 설명 |
-| ----------- | ----------- |
-| [!DNL Criteo] | 데이터에 연결 및 활성화 [[!DNL Criteo]](../../destinations/catalog/advertising/criteo.md) 광고 플랫폼. |
-| [!DNL Sendgrid] | 데이터에 연결 및 활성화 [[!DNL Sendgrid]](../../destinations/catalog/email-marketing/sendgrid.md) 트랜잭션 및 마케팅 이메일을 위한 플랫폼. |
-
-대상에 대한 자세한 내용은 [대상 개요](../../destinations/home.md).
 
 ## XDM(경험 데이터 모델) {#xdm}
 

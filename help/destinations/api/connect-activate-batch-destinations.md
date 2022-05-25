@@ -6,9 +6,9 @@ description: Flow Service API를 사용하여 Experience Platform에서 배치 �
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 95dd6982eeecf6b13b6c8a6621b5e6563c25ae26
 workflow-type: tm+mt
-source-wordcount: '3129'
+source-wordcount: '3334'
 ht-degree: 2%
 
 ---
@@ -1003,6 +1003,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
                 "exportMode": "DAILY_FULL_EXPORT",
                 "schedule": {
                     "frequency": "ONCE",
+                    "triggerType": "SCHEDULED",
                     "startDate": "2021-12-20",
                     "startTime": "17:00"
                 },   
@@ -1037,10 +1038,15 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | `exportMode` | 필수입니다. `"DAILY_FULL_EXPORT"` 또는`"FIRST_FULL_THEN_INCREMENTAL"`를 선택합니다. 두 옵션에 대한 자세한 내용은 [전체 파일 내보내기](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) 및 [증분 파일 내보내기](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) 배치 대상 활성화 자습서에서 를 참조하십시오. |
 | `startDate` | 세그먼트가 대상에 프로필 내보내기를 시작할 날짜를 선택합니다. |
 | `frequency` | 필수입니다. <br> <ul><li>대상 `"DAILY_FULL_EXPORT"` 내보내기 모드, `ONCE` 또는 `DAILY`.</li><li>대상 `"FIRST_FULL_THEN_INCREMENTAL"` 내보내기 모드, `"DAILY"`, `"EVERY_3_HOURS"`, `"EVERY_6_HOURS"`, `"EVERY_8_HOURS"`, `"EVERY_12_HOURS"`.</li></ul> |
-| `endDate` | 선택할 때 해당 사항 없음 `"exportMode":"DAILY_FULL_EXPORT"` 및 `"frequency":"ONCE"`. <br> 세그먼트 구성원이 대상으로 내보내기를 중지하는 날짜를 설정합니다. |
-| `startTime` | 필수입니다. 세그먼트의 구성원이 포함된 파일을 생성하여 대상으로 내보내는 시간을 선택합니다. |
+| `triggerType` | 대상 *배치 대상* 전용. 이 필드는 `"DAILY_FULL_EXPORT"` 모드 `frequency` 선택기. <br> 필수입니다. <br> <ul><li>선택 `"AFTER_SEGMENT_EVAL"` 을(를) 통해 일별 플랫폼 배치 세분화 작업이 완료된 후 즉시 활성화 작업을 실행할 수 있습니다. 이렇게 하면 활성화 작업이 실행될 때 최신 프로필을 대상으로 내보낼 수 있습니다.</li><li>선택 `"SCHEDULED"` 를 입력하여 고정된 시간에 활성화 작업을 실행합니다. 이렇게 하면 Experience Platform 프로필 데이터를 매일 동시에 내보낼 수 있지만, 내보내는 프로필은 활성화 작업이 시작되기 전에 배치 세그먼테이션 작업이 완료되었는지 여부에 따라 최신 프로필이 아닐 수 있습니다. 이 옵션을 선택할 때는 `startTime` 를 입력하여 일별 내보내기가 발생해야 하는 시간을 UTC로 나타냅니다.</li></ul> |
+| `endDate` | 대상 *배치 대상* 전용. 이 필드는 Amazon S3, SFTP 또는 Azure Blob과 같은 배치 파일 내보내기 대상의 데이터 플로우에 세그먼트를 추가할 때만 필요합니다. <br> 선택할 때 해당 사항 없음 `"exportMode":"DAILY_FULL_EXPORT"` 및 `"frequency":"ONCE"`. <br> 세그먼트 구성원이 대상으로 내보내기를 중지하는 날짜를 설정합니다. |
+| `startTime` | 대상 *배치 대상* 전용. 이 필드는 Amazon S3, SFTP 또는 Azure Blob과 같은 배치 파일 내보내기 대상의 데이터 플로우에 세그먼트를 추가할 때만 필요합니다. <br> 필수입니다. 세그먼트의 구성원이 포함된 파일을 생성하여 대상으로 내보내는 시간을 선택합니다. |
 
 {style=&quot;table-layout:auto&quot;}
+
+>[!TIP]
+>
+> 자세한 내용은 [데이터 흐름에서 세그먼트의 구성 요소 업데이트](/help/destinations/api/update-destination-dataflows.md#update-segment) 내보낸 세그먼트의 다양한 구성 요소(파일 이름 템플릿, 내보내기 시간 등)를 업데이트하는 방법을 알아봅니다.
 
 **응답**
 

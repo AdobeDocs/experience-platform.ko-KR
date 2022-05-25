@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: 이 자습서에서는 대상 데이터 흐름을 업데이트하는 단계를 설명합니다. 데이터 흐름을 활성화 또는 비활성화하거나, 기본 정보를 업데이트하거나, Flow Service API를 사용하여 세그먼트 및 속성을 추가 및 제거하는 방법을 알아봅니다.
 exl-id: 3f69ad12-940a-4aa1-a1ae-5ceea997a9ba
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 95dd6982eeecf6b13b6c8a6621b5e6563c25ae26
 workflow-type: tm+mt
-source-wordcount: '2136'
+source-wordcount: '2419'
 ht-degree: 1%
 
 ---
@@ -484,8 +484,8 @@ curl -X PATCH \
             "schedule":{
                "startDate":"2022-01-05",
                "frequency":"DAILY",
-               "endData":"2022-03-10"
-               "startTime":"16:00",
+               "triggerType": "AFTER_SEGMENT_EVAL",
+               "endDate":"2022-03-10"
             }
          }
       }
@@ -504,6 +504,7 @@ curl -X PATCH \
 | `exportMode` | 대상 *배치 대상* 전용. 이 필드는 Amazon S3, SFTP 또는 Azure Blob과 같은 배치 파일 내보내기 대상의 데이터 플로우에 세그먼트를 추가할 때만 필요합니다. <br> 필수입니다. `"DAILY_FULL_EXPORT"` 또는`"FIRST_FULL_THEN_INCREMENTAL"`를 선택합니다. 두 옵션에 대한 자세한 내용은 [전체 파일 내보내기](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) 및 [증분 파일 내보내기](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) 배치 대상 활성화 자습서에서 를 참조하십시오. |
 | `startDate` | 세그먼트가 대상에 프로필 내보내기를 시작할 날짜를 선택합니다. |
 | `frequency` | 대상 *배치 대상* 전용. 이 필드는 Amazon S3, SFTP 또는 Azure Blob과 같은 배치 파일 내보내기 대상의 데이터 플로우에 세그먼트를 추가할 때만 필요합니다. <br> 필수입니다. <br> <ul><li>대상 `"DAILY_FULL_EXPORT"` 내보내기 모드, `ONCE` 또는 `DAILY`.</li><li>대상 `"FIRST_FULL_THEN_INCREMENTAL"` 내보내기 모드, `"DAILY"`, `"EVERY_3_HOURS"`, `"EVERY_6_HOURS"`, `"EVERY_8_HOURS"`, `"EVERY_12_HOURS"`.</li></ul> |
+| `triggerType` | 대상 *배치 대상* 전용. 이 필드는 `"DAILY_FULL_EXPORT"` 모드 `frequency` 선택기. <br> 필수입니다. <br> <ul><li>선택 `"AFTER_SEGMENT_EVAL"` 을(를) 통해 일별 플랫폼 배치 세분화 작업이 완료된 후 즉시 활성화 작업을 실행할 수 있습니다. 이렇게 하면 활성화 작업이 실행될 때 최신 프로필을 대상으로 내보낼 수 있습니다.</li><li>선택 `"SCHEDULED"` 를 입력하여 고정된 시간에 활성화 작업을 실행합니다. 이렇게 하면 Experience Platform 프로필 데이터를 매일 동시에 내보낼 수 있지만, 내보내는 프로필은 활성화 작업이 시작되기 전에 배치 세그먼테이션 작업이 완료되었는지 여부에 따라 최신 프로필이 아닐 수 있습니다. 이 옵션을 선택할 때는 `startTime` 를 입력하여 일별 내보내기가 발생해야 하는 시간을 UTC로 나타냅니다.</li></ul> |
 | `endDate` | 대상 *배치 대상* 전용. 이 필드는 Amazon S3, SFTP 또는 Azure Blob과 같은 배치 파일 내보내기 대상의 데이터 플로우에 세그먼트를 추가할 때만 필요합니다. <br> 선택할 때 해당 사항 없음 `"exportMode":"DAILY_FULL_EXPORT"` 및 `"frequency":"ONCE"`. <br> 세그먼트 구성원이 대상으로 내보내기를 중지하는 날짜를 설정합니다. |
 | `startTime` | 대상 *배치 대상* 전용. 이 필드는 Amazon S3, SFTP 또는 Azure Blob과 같은 배치 파일 내보내기 대상의 데이터 플로우에 세그먼트를 추가할 때만 필요합니다. <br> 필수입니다. 세그먼트의 구성원이 포함된 파일을 생성하여 대상으로 내보내는 시간을 선택합니다. |
 
@@ -639,6 +640,112 @@ curl -X PATCH \
     "etag": "\"50014cc8-0000-0200-0000-6036eb720000\""
 }
 ```
+
+데이터 플로우에서 업데이트할 수 있는 세그먼트 구성 요소에 대한 자세한 예는 아래 예를 참조하십시오.
+
+## 세그먼트 평가 후 예약에서 세그먼트로 세그먼트의 내보내기 모드를 업데이트합니다 {#update-export-mode}
+
++++ 플랫폼 배치 세분화 작업이 완료된 후 지정된 시간에 세그먼트 내보내기가 매일 활성화되지 않도록 업데이트되어 매일 활성화되는 예를 보려면 를 클릭합니다.
+
+세그먼트는 매일 16:00 UTC에 내보내집니다.
+
+```json
+{
+  "type": "PLATFORM_SEGMENT",
+  "value": {
+    "id": "b1e50e8e-a6e2-420d-99e8-a80deda2082f",
+    "name": "12JAN22-AEP-NA-NTC-90D-MW",
+    "filenameTemplate": "%DESTINATION_NAME%_%SEGMENT_ID%_%DATETIME(YYYYMMdd_HHmmss)%",
+    "exportMode": "DAILY_FULL_EXPORT"
+    "schedule": {
+      "frequency": "DAILY",
+      "triggerType": "SCHEDULED",
+      "startDate": "2022-01-13",
+      "endDate": "2023-01-13",
+      "startTime":"16:00"
+    },
+    "createTime": "1642041770",
+    "updateTime": "1642615573"
+  }
+}
+```
+
+세그먼트는 일별 배치 세그먼테이션 작업이 완료된 후 매일 내보내집니다.
+
+```json
+{
+  "type": "PLATFORM_SEGMENT",
+  "value": {
+    "id": "b1e50e8e-a6e2-420d-99e8-a80deda2082f",
+    "name": "12JAN22-AEP-NA-NTC-90D-MW",
+    "filenameTemplate": "%DESTINATION_NAME%_%SEGMENT_ID%_%DATETIME(YYYYMMdd_HHmmss)%",
+    "exportMode": "DAILY_FULL_EXPORT"
+    "schedule": {
+      "frequency": "DAILY",
+      "triggerType": "AFTER_SEGMENT_EVAL",
+      "startDate": "2022-01-13",
+      "endDate": "2023-01-13"
+    },
+    "createTime": "1642041770",
+    "updateTime": "1642615573"
+  }
+}
+```
+
++++
+
+## 파일 이름에 추가 필드를 포함하도록 파일 이름 템플릿을 업데이트합니다 {#update-filename-template}
+
++++ 파일 이름에 추가 필드를 포함하도록 파일 이름 템플릿을 업데이트하는 예를 보려면 을 클릭합니다
+
+내보낸 파일에는 대상 이름 및 Experience Platform 세그먼트 ID가 포함되어 있습니다
+
+```json
+{
+  "type": "PLATFORM_SEGMENT",
+  "value": {
+    "id": "b1e50e8e-a6e2-420d-99e8-a80deda2082f",
+    "name": "12JAN22-AEP-NA-NTC-90D-MW",
+    "filenameTemplate": "%DESTINATION_NAME%_%SEGMENT_ID%",
+    "exportMode": "DAILY_FULL_EXPORT"
+    "schedule": {
+      "frequency": "DAILY",
+      "triggerType": "SCHEDULED",
+      "startDate": "2022-01-13",
+      "endDate": "2023-01-13",
+      "startTime":"16:00"
+    },
+    "createTime": "1642041770",
+    "updateTime": "1642615573"
+  }
+}
+```
+
+내보낸 파일에는 대상 이름, Experience Platform 세그먼트 ID, Experience Platform에서 파일을 생성한 날짜 및 시간, 파일 끝에 추가된 사용자 지정 텍스트가 포함되어 있습니다.
+
+
+```json
+{
+  "type": "PLATFORM_SEGMENT",
+  "value": {
+    "id": "b1e50e8e-a6e2-420d-99e8-a80deda2082f",
+    "name": "12JAN22-AEP-NA-NTC-90D-MW",
+    "filenameTemplate": "%DESTINATION_NAME%_%SEGMENT_ID%_%DATETIME(YYYYMMdd_HHmmss)%_%this is custom text%",
+    "exportMode": "DAILY_FULL_EXPORT"
+    "schedule": {
+      "frequency": "DAILY",
+      "triggerType": "SCHEDULED",
+      "startDate": "2022-01-13",
+      "endDate": "2023-01-13",
+      "startTime":"16:00"
+    },
+    "createTime": "1642041770",
+    "updateTime": "1642615573"
+  }
+}
+```
+
++++
 
 ## 데이터 집합에 프로필 속성 추가 {#add-profile-attribute}
 

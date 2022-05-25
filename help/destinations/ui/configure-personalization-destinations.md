@@ -6,14 +6,20 @@ seo-title: Configure personalization destinations for same-page and next-page pe
 description: 동일 페이지 및 다음 페이지 개인화를 위한 개인화 대상을 구성하는 방법을 알아봅니다.
 seo-description: Configure personalization destinations for same-page and next-page personalization.
 exl-id: 7d7b6869-bd59-4766-a044-f449396f6524
-source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
+source-git-commit: 99a60621bca43ecf2dacb6202e005bbd8f191c99
 workflow-type: tm+mt
-source-wordcount: '413'
+source-wordcount: '435'
 ht-degree: 0%
 
 ---
 
 # 동일 페이지 및 다음 페이지 개인화를 위한 개인화 대상 구성
+
+## 개요 {#overview}
+
+>[!NOTE]
+>
+>When [Adobe Target 연결 구성](../catalog/personalization/adobe-target-connection.md) 데이터 스트림 ID를 사용하지 않으면 이 문서에 설명된 사용 사례가 지원되지 않습니다.
 
 Adobe Experience Platform 사용 [에지 세분화](../../segmentation/ui/edge-segmentation.md) 고객이 높은 규모로 대상 세그먼트를 실시간으로 만들고 타겟팅할 수 있도록 하는 것.
 

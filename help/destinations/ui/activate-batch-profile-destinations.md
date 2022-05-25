@@ -6,9 +6,9 @@ seo-title: Activate audience data to batch profile export destinations
 description: 세그먼트를 배치 프로필 기반 대상으로 보내 Adobe Experience Platform에서 보유한 대상 데이터를 활성화하는 방법을 알아봅니다.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 729c0724c7af88bb69c9d68a45d58c3575c90828
+source-git-commit: 95dd6982eeecf6b13b6c8a6621b5e6563c25ae26
 workflow-type: tm+mt
-source-wordcount: '2242'
+source-wordcount: '2411'
 ht-degree: 0%
 
 ---
@@ -97,7 +97,20 @@ ht-degree: 0%
    * **[!UICONTROL 한 번]**: 한 번의 온디맨드 전체 파일 내보내기를 예약합니다.
    * **[!UICONTROL 일별]**: 전체 파일 내보내기를 지정하는 시간에 매일 한 번 예약합니다.
 
-1. 를 사용하십시오 **[!UICONTROL 시간]** 선택기를 사용하여 시간 선택, 위치 [!DNL UTC] 형식을 지정할 수도 있습니다.
+1. 를 사용하십시오 **[!UICONTROL 시간]** 세그먼트 평가 후 즉시 또는 지정된 시간에 예약된 기준으로 내보내기가 수행되는지 여부를 선택하려면 토글하십시오. 을(를) 선택할 때 **[!UICONTROL 예약됨]** 선택 사항을 사용하여 선택기에서 하루 중 시간을 선택할 수 있습니다. [!DNL UTC] 형식을 지정할 수도 있습니다.
+
+   >[!NOTE]
+   >
+   >다음 **[!UICONTROL 세그먼트 평가 후]** 아래 설명된 옵션은 현재 베타 고객을 선택하는 경우에만 사용할 수 있습니다.
+
+   를 사용하십시오 **[!UICONTROL 세그먼트 평가 후]** 일별 플랫폼 일괄 처리 세그먼테이션 작업이 완료된 후 즉시 활성화 작업을 실행하는 옵션. 이렇게 하면 활성화 작업이 실행될 때 최신 프로필을 대상으로 내보낼 수 있습니다.
+
+   <!-- Batch segmentation currently runs at {{insert time of day}} and lasts for an average {{x hours}}. Adobe reserves the right to modify this schedule. -->
+
+   ![배치 대상에 대한 활성화 흐름에서 세그먼트 평가 후 옵션을 강조 표시하는 이미지](../assets/ui/activate-batch-profile-destinations/after-segment-evaluation-option.png)
+를 사용하십시오 **[!UICONTROL 예약됨]** 옵션을 선택합니다. 이렇게 하면 Experience Platform 프로필 데이터를 매일 동시에 내보낼 수 있지만, 내보내는 프로필은 활성화 작업이 시작되기 전에 배치 세분화 작업이 완료되었는지 여부에 따라 최신 프로필이 아닐 수 있습니다.
+
+   ![배치 대상에 대한 활성화 플로우에서 예약된 옵션을 강조 표시하고 시간 선택기를 표시하는 이미지](../assets/ui/activate-batch-profile-destinations/scheduled-option.png)
 
    >[!IMPORTANT]
    >
@@ -110,7 +123,6 @@ ht-degree: 0%
    > 내보내기 간격을 선택할 때 간격의 마지막 날이 내보내기에 포함되지 않습니다. 예를 들어, 1월 4일 - 11일 간격을 선택하는 경우 마지막 파일 내보내기는 1월 10일에 수행됩니다.
 
 1. 선택 **[!UICONTROL 만들기]** 일정을 저장합니다.
-
 
 ### 증분 파일 내보내기 {#export-incremental-files}
 
