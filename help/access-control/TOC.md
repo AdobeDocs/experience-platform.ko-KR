@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform 도움말의 액세스 제어
 breadcrumb-title: Access Control 안내서
 user-guide-description: Adobe Admin Console의 제품 프로필을 활용하여 사용 권한 및 샌드박스를 사용자와 연결합니다.
 feature: Access Control
-source-git-commit: f8d728a6ce7a5748bcceee3201f6ddf7c307128c
+source-git-commit: aa4dda26a55963ea26b0e050c8f2a39966da67d7
 workflow-type: tm+mt
-source-wordcount: '98'
-ht-degree: 35%
+source-wordcount: '116'
+ht-degree: 42%
 
 ---
 
@@ -17,6 +17,20 @@ ht-degree: 35%
 * [액세스 제어 개요](home.md)
 * 속성 기반 액세스 제어 {#abac}
    * [개요](abac/overview.md)
+   * [권한] {#permissions-ui}
+      * [찾아보기](abac/ui/browse.md)
+      * [레이블](abac/ui/labels.md)
+      * [권한](abac/ui/permissions.md)
+      * [정책](abac/ui/policies.md)
+      * [역할](abac/ui/roles.md)
+      * [샌드박스](abac/ui/sandboxes.md)
+      * [사용자](abac/ui/users.md)
+   * 속성 기반 액세스 제어 API {#abac-api}
+      * [개요](abac/api/overview.md)
+      * [시작하기](abac/api/getting-started.md)
+      * [역할](abac/api/roles.md)
+      * [정책](abac/api/policies.md)
+      * [제품](abac/api/products.md)
 * 액세스 제어 UI {#ui}
    * [개요](ui/overview.md)
    * [제품 프로필 선택](ui/browse.md)
