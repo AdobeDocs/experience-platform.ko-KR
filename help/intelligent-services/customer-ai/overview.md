@@ -7,10 +7,10 @@ topic-legacy: Customer AI Overview
 description: 고객 AI는 규모에 따라 개별 프로필에 대한 이탈 및 전환과 같은 사용자 지정 성향 점수를 생성하는 데 사용됩니다. 비즈니스 요구 사항을 머신 러닝 문제로 변환하거나 알고리즘을 선택하거나 교육 또는 배포하지 않아도 됩니다.
 landing-page-description: 고객 AI는 규모에 따라 개별 프로필에 대한 이탈 및 전환과 같은 사용자 지정 성향 점수를 생성하는 데 사용됩니다.
 exl-id: 3e668103-e2a2-4ce6-a40a-8029a6aaa8dd
-source-git-commit: fccb5e6193d9c456d0035ef5c7d2adf5ffe883a4
+source-git-commit: 62188f56861dd021db7b13325f622323644af8e0
 workflow-type: tm+mt
-source-wordcount: '554'
-ht-degree: 18%
+source-wordcount: '553'
+ht-degree: 19%
 
 ---
 
@@ -46,7 +46,7 @@ Customer AI : Intelligent Services의 일부로, 마케터는 설명을 통해 �
 
 >[!VIDEO](https://video.tv.adobe.com/v/32664?learn=on&quality=12)
 
-## 작동 방식
+## 작동 방법
 
 고객 AI는 기존 소비자 경험 이벤트 데이터를 분석하여 이탈이나 전환 성향 점수를 예측하여 작동합니다. Adobe은 이탈 및 전환의 정의가 모든 사용 사례에서 동일하지 않다는 것을 알고 있으므로 사용자 지정 타겟 목표를 조건 세트로 정의할 수 있습니다. 관심 이벤트가 입력 소비자 경험 이벤트 데이터 내에 존재하는 한 예측된 목표를 구성할 수 있습니다.
 

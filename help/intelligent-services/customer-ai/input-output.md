@@ -6,7 +6,7 @@ title: 고객 AI의 입력 및 출력
 topic-legacy: Getting started
 description: Customer AI에서 활용하는 필수 이벤트, 입력 및 출력에 대해 자세히 알아보십시오.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: 0f408f217dd168b9c94b8dbbd7dc3c6edb06488c
+source-git-commit: 62188f56861dd021db7b13325f622323644af8e0
 workflow-type: tm+mt
 source-wordcount: '3096'
 ht-degree: 1%
@@ -265,7 +265,7 @@ Adobe Audience Manager의 트레이트를 사용하려면 [Audience Manager 원�
 
 Customer AI는 대상으로 간주되는 개별 프로필에 대해 몇 가지 속성을 생성합니다. 제공된 항목을 기반으로 점수(출력)를 사용하는 두 가지 방법이 있습니다. 실시간 고객 프로필 사용 데이터 세트가 있는 경우 [세그먼트 빌더](../../segmentation/ui/segment-builder.md). 프로필 사용 데이터 세트가 없는 경우 다음을 수행할 수 있습니다 [고객 AI 출력 다운로드](./user-guide/download-scores.md) 데이터 레이크에서 사용할 수 있는 데이터 집합입니다.
 
-에서 출력 데이터 세트를 찾을 수 있습니다 **데이터 세트** Platform에서 사용할 수 있습니다. 모든 Customer AI 출력 데이터 세트는 이름으로 시작합니다 **Customer AI 점수 - Name_of_app** 반면에 모든 고객 AI 출력 스키마는 이름으로 시작됩니다 **Customer AI 스키마 - Name_of_app**.
+에서 출력 데이터 세트를 찾을 수 있습니다 **데이터 세트** Platform에서 사용할 수 있습니다. 모든 Customer AI 출력 데이터 세트는 이름으로 시작합니다 **Customer AI 점수 - Name_of_app**. 마찬가지로 모든 Customer AI 출력 스키마는 이름으로 시작됩니다 **Customer AI 스키마 - Name_of_app**.
 
 ![cai-schema-name-of-app](./images/user-guide/cai-schema-name-of-app.png)
 
