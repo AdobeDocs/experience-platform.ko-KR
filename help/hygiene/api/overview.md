@@ -2,7 +2,9 @@
 title: 데이터 위생 API 안내서
 description: Adobe Experience Platform에서 고객의 저장된 개인 데이터를 프로그래밍 방식으로 수정하거나 삭제하는 방법을 알아봅니다.
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-source-git-commit: 931b847761e649696aa8433d53233593efd4d1ee
+hide: true
+hidefromtoc: true
+source-git-commit: c2e7cf1859f6a2b277783cdec535ecc208703fac
 workflow-type: tm+mt
 source-wordcount: '349'
 ht-degree: 1%
