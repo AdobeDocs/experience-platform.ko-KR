@@ -5,8 +5,8 @@ keywords: 구성;데이터 스트림;데이터 스트림 ID;에지;데이터 스
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
 source-git-commit: fe66cbd61d546da8fb6621ef78b3565126cb193d
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1686'
+ht-degree: 2%
 
 ---
 
@@ -84,7 +84,7 @@ Experience Platform에서 사용하도록 이 데이터 스트림을 구성하�
 >
 >각 서비스 구성에는 **[!UICONTROL 활성화됨]** 서비스를 선택하면 자동으로 활성화되는 전환합니다. 이 데이터 스트림에 대해 선택한 서비스를 비활성화하려면 **[!UICONTROL 활성화됨]** 다시 전환합니다.
 
-### Adobe Analytics 설정 {#analytics}
+### Adobe Analytics 설정
 
 이 서비스는 Adobe Analytics으로 데이터를 전송할지 여부와 방법을 제어합니다. 자세한 내용은 [analytics에 데이터 보내기](../data-collection/adobe-analytics/analytics-overview.md).
 
@@ -94,7 +94,7 @@ Experience Platform에서 사용하도록 이 데이터 스트림을 구성하�
 | --- | --- |
 | [!UICONTROL 보고서 세트 ID] | **(필수)** 데이터를 전송할 Analytics 보고서 세트의 ID입니다. 이 ID는 아래의 Adobe Analytics UI에서 찾을 수 있습니다 [!UICONTROL 관리] > [!UICONTROL 보고서 세트]. 여러 보고서 세트를 지정하면 데이터가 각 보고서 세트에 복사됩니다. |
 
-### Adobe Audience Manager 설정 {#audience-manager}
+### Adobe Audience Manager 설정
 
 이 서비스는 Adobe Audience Manager으로 데이터를 전송할지 여부와 방법을 제어합니다. Audience Manager으로 데이터를 전송하는 데 필요한 모든 것은 이 섹션을 활성화하는 것입니다. 다른 설정은 선택 사항이지만 권장됩니다.
 
@@ -105,7 +105,7 @@ Experience Platform에서 사용하도록 이 데이터 스트림을 구성하�
 | [!UICONTROL 쿠키 대상 활성화] | SDK가 를 통해 세그먼트 정보를 공유할 수 있도록 허용합니다 [쿠키 대상](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/custom-destinations/create-cookie-destination.html) 변환 전: [!DNL Audience Manager]. |
 | [!UICONTROL URL 대상 사용] | SDK가 를 통해 세그먼트 정보를 공유할 수 있도록 허용합니다 [URL 대상](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/custom-destinations/create-url-destination.html) 변환 전: [!DNL Audience Manager]. |
 
-### Adobe Experience Platform 설정 {#aep}
+### Adobe Experience Platform 설정
 
 >[!IMPORTANT]
 >
