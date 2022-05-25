@@ -4,9 +4,9 @@ title: 세그먼트 대시보드
 description: 'Adobe Experience Platform은 조직이 만든 세그먼트에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다. '
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 65096a2da03f504c16f00a75bfdef9e78f8c1799
+source-git-commit: 63a7857c2b88e81de3df7d925daf15bf631ff84c
 workflow-type: tm+mt
-source-wordcount: '1491'
+source-wordcount: '1576'
 ht-degree: 0%
 
 ---
@@ -74,6 +74,7 @@ Adobe은 세그먼트와 관련된 다양한 지표를 시각화하는 데 사�
 * [[!UICONTROL 대상 크기 트렌드]](#audience-size-trend)
 * [[!UICONTROL 대상 크기 변경 트렌드]](#audience-size-change-trend)
 * [[!UICONTROL ID별 대상 크기 트렌드]](#audience-size-trend-by-identity)
+* [[!UICONTROL 대상 겹치기]](#audience-overlap)
 
 ### [!UICONTROL 대상 크기] {#audience-size}
 
@@ -162,6 +163,14 @@ ID에 대해 자세히 알아보려면 [Adobe Experience Platform Identity Servi
 이 위젯은 위젯 드롭다운 메뉴에서 선택한 ID 유형을 기반으로 하여 특정 세그먼트에 대한 대상 크기 트렌드를 보여줍니다. 분석에 사용된 세그먼트는 개요 드롭다운에서 선택됩니다. 트렌드 분석 기간은 30일, 90일 및 12개월 기간으로 시각화할 수 있습니다. 기간은 위젯의 드롭다운 메뉴에서 선택됩니다.
 
 ![ID 위젯별 대상 크기 트렌드입니다.](../images/segments/audience-size-trend-by-identity.png)
+
+### [!UICONTROL 대상 겹치기] {#audience-overlap}
+
+이 위젯은 두 세그먼트 정의에 대한 기준을 충족하는 두 세그먼트의 프로필 수를 나타냅니다. 비교에 사용된 세그먼트는 위젯 드롭다운 메뉴에서 선택됩니다. 관련 세그먼트 정의에 포함된 총 프로필 수는 원 또는 벤 다이어그램의 교차 지점을 마우스로 가리키면 볼 수 있습니다.
+
+이 위젯을 사용하면 세그먼트 정의 결과의 유사성을 시각화하여 세그멘테이션 전략을 최적화할 수 있습니다.
+
+![대상 겹치기 위젯입니다.](../images/segments/audience-overlap.png)
 
 ## 다음 단계
 

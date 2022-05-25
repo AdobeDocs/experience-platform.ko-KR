@@ -4,10 +4,10 @@ title: 프로필 대시보드
 description: Adobe Experience Platform은 조직의 실시간 고객 프로필 데이터에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 65096a2da03f504c16f00a75bfdef9e78f8c1799
+source-git-commit: 2fdcd0748ccfe5b6b079bc21c8dbde491fbb2471
 workflow-type: tm+mt
-source-wordcount: '3535'
-ht-degree: 0%
+source-wordcount: '3761'
+ht-degree: 1%
 
 ---
 
@@ -110,6 +110,8 @@ Adobe은 프로필 데이터와 관련된 다양한 지표를 시각화하는 �
 * [[!UICONTROL 대상 크기]](#audiences-size)
 * [[!UICONTROL 프로필 수 트렌드]](#profile-count-trend)
 * [[!UICONTROL ID별 단일 ID 프로필]](#single-identity-profiles-by-identity)
+* [[!UICONTROL 병합 정책별 대상 겹치기]](#audience-overlap-by-merge-policy)
+* [[!UICONTROL ID별 프로필 수 변경 트렌드]](#profiles-count-change-trend-by-identity)
 
 ### [!UICONTROL 프로필 수] {#profile-count}
 
@@ -290,6 +292,25 @@ ID에 대해 자세히 알아보려면 [Adobe Experience Platform Identity Servi
 개별 막대 위로 마우스를 가져가면 ID에 대한 총 프로필 수를 설명하는 대화 상자가 표시됩니다.
 
 ![ID 위젯별 단일 ID 프로필.](../images/profiles/single-identity-profiles-by-identity.png)
+
+### [!UICONTROL 병합 정책별 대상 겹치기] {#audience-overlap-by-merge-policy}
+
+이 위젯은 벤 다이어그램을 사용하여 선택한 두 세그먼트의 겹침을 표시합니다. 병합 정책은 페이지 맨 위의 개요 드롭다운에서 선택되고 분석을 위한 세그먼트는 위젯 내의 두 드롭다운 메뉴에서 선택됩니다. 관련 세그먼트 정의 내에 포함된 총 프로필 수는 원 또는 교차를 마우스로 가리키면 볼 수 있습니다.
+
+위젯에 세그먼트 정의의 시각적 크로스오버가 표시되므로 세그먼트 정의 간의 유사성을 검토하여 세그멘테이션 전략을 최적화할 수 있습니다.
+
+![병합 정책 드롭다운과 위젯 세그먼트 드롭다운이 강조 표시된 플랫폼 UI 프로필 대시보드 .](../images/profiles/audience-overlap-by-merge-policy.png)
+
+### [!UICONTROL ID별 프로필 수 변경 트렌드] {#profiles-count-change-trend-by-identity}
+
+<!-- This widget uses a line graph to illustrate the change in number of profiles filtered by a chosen source identity and merge policy. -->
+
+이 위젯은 선택한 소스 ID 및 병합 정책을 기반으로 프로필 수를 필터링한 다음 선 그래프를 사용하여 다양한 기간의 숫자 변화를 보여줍니다. 페이지 맨 위의 개요 드롭다운에서 병합 정책이 선택되면 위젯 드롭다운 메뉴에서 소스 ID 및 기간이 선택됩니다. 이 트렌드는 30일, 90일 및 12개월 기간에 걸쳐 시각화할 수 있습니다.
+
+이 위젯은 필요한 ID로 필터링된 프로필의 증가 패턴을 보여줌으로써 대상 활성화 요구 사항을 관리하는 데 도움이 됩니다.
+
+![ID 위젯별 프로필 수 변경 트렌드입니다.](../images/profiles/profiles-count-change-trend-by-identity.png)
+
 
 ## (베타) 프로필 효율성 위젯 {#profile-efficacy-widgets}
 

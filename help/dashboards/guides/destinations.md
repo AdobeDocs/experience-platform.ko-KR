@@ -4,9 +4,9 @@ title: 대상 대시보드
 description: Adobe Experience Platform은 조직의 활성 대상에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 65096a2da03f504c16f00a75bfdef9e78f8c1799
+source-git-commit: 2fdcd0748ccfe5b6b079bc21c8dbde491fbb2471
 workflow-type: tm+mt
-source-wordcount: '2538'
+source-wordcount: '2671'
 ht-degree: 0%
 
 ---
@@ -60,6 +60,7 @@ Adobe은 대상과 관련된 다양한 지표를 시각화하고 데이터 분�
 * [[!UICONTROL 대상 상태]](#destination-status)
 * [[!UICONTROL 대상 플랫폼별 활성 대상]](#active-destinations-by-destination-platform)
 * [[!UICONTROL 모든 대상에서 활성화된 대상]](#activated-audiences-across-all-destinations)
+* [[!UICONTROL 활성화된 대상]](#activated-audiences)
 
 ### [!UICONTROL 가장 많이 사용되는 대상] {#most-used-destinations}
 
@@ -250,6 +251,18 @@ id 열은 위젯 ID 드롭다운에서 선택한 ID에 매핑할 수 있는 세�
 ![모든 대상 위젯에서 활성화된 대상.](../images/destinations/activated-audiences-across-all-destinations.png)
 
 선택 **[!UICONTROL 대상]** 대상으로 이동 [!UICONTROL 찾아보기] 탭. 이 페이지에서는 활성화된 모든 대상 및 관련 지표 목록을 제공합니다. 다음 문서를 참조하십시오. [에 대한 추가 정보 [!UICONTROL 찾아보기] 탭](../../destinations/ui/destinations-workspace.md#browse).
+
+### [!UICONTROL 활성화된 대상] {#activated-audiences}
+
+이 위젯은 대상에 활성화된 총 대상 수에 대한 단일 지표를 제공합니다.
+
+![활성화된 대상 위젯.](../images/destinations/activated-audiences.png)
+
+선택 **[!UICONTROL 대상]** 대상 대시보드의 세부 사항 페이지로 이동합니다. 다음 [!UICONTROL 활성화 데이터] 탭에는 시작 날짜 및 종료 날짜(해당하는 경우) 등 대상에 매핑된 세그먼트 목록과 내보내기 유형, 예약 및 빈도 등 데이터 내보내기에 대한 기타 관련 정보가 표시됩니다. 특정 세그먼트에 대한 세부 사항을 보려면 목록에서 해당 이름을 선택합니다.
+
+![활성화 데이터 탭이 강조 표시된 대상 대시보드 세부 사항 페이지입니다.](../images/destinations/activation-data-tab.png)
+
+이 위젯은 한 눈에 활성화된 대상 수를 기반으로 대상 값을 이해하는 데 도움이 됩니다. 또한 보다 자세한 정보를 쉽게 액세스하여 추가 분석을 수행할 수 있습니다.
 
 ## 다음 단계
 
