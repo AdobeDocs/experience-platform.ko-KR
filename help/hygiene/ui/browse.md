@@ -4,8 +4,8 @@ description: Adobe Experience Platform 사용자 인터페이스에서 기존 �
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
 source-git-commit: 18ef55a084ced8c26e583598f9016dd9f4741153
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '555'
+ht-degree: 2%
 
 ---
 
