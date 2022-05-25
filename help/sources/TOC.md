@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 소스 커넥터 도움말
 breadcrumb-title: Source Connectors 안내서
 user-guide-description: 다양한 소스 또는 구조에서 데이터를 수집하고 레이블을 지정하며 기존에 수집한 데이터를 향상시킬 수 있습니다.
 feature: Sources
-source-git-commit: be3967e7045e159736952e369a55df322afd9fec
+source-git-commit: 3c80f3b297e7119067480739e206064bb2ace22c
 workflow-type: tm+mt
-source-wordcount: '777'
+source-wordcount: '781'
 ht-degree: 13%
 
 ---
@@ -59,6 +59,7 @@ ht-degree: 13%
    - 고객 성공 {#customer-success}
       - [Salesforce Service Cloud 커넥터](connectors/customer-success/salesforce-service-cloud.md)
       - [ServiceNow Connector](connectors/customer-success/servicenow.md)
+      - [Zendesk 커넥터](connectors/customer-success/zendesk.md)
    - 데이터베이스 {#databases}
       - [Amazon Redshift 커넥터](connectors/databases/redshift.md)
       - [Azure HDInsights 커넥터의 Apache Hive](connectors/databases/hive.md)
@@ -123,6 +124,7 @@ ht-degree: 13%
       - 고객 성공 {#customer-success}
          - [Salesforce Service Cloud](tutorials/api/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/api/create/customer-success/servicenow.md)
+         - [Zendesk](tutorials/api/create/customer-success/zendesk.md)
       - 데이터베이스 {#databases}
          - [Amazon Redshift](tutorials/api/create/databases/redshift.md)
          - [Azure HDInsights의 Apache Hive](tutorials/api/create/databases/hive.md)
@@ -221,6 +223,7 @@ ht-degree: 13%
       - 고객 성공 {#customer-success}
          - [Salesforce Service Cloud](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/ui/create/customer-success/servicenow.md)
+         - [Zendesk](tutorials/ui/create/customer-success/zendesk.md)
       - 데이터베이스 {#databases}
          - [Amazon Redshift](tutorials/ui/create/databases/redshift.md)
          - [Azure HDInsights의 Apache Hive](tutorials/ui/create/databases/hive.md)
