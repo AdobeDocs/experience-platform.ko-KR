@@ -4,7 +4,7 @@ description: Edge Network Server API를 사용하여 Adobe Analytics과 상호 �
 seo-description: Learn how to use the Edge Network Server API to interact with Adobe Analytics
 keywords: 데이터 수집; 콘센트 analytics; Adobe Experience Platform Edge Network api;analytics
 exl-id: b5e7a4d0-9aea-4e70-a7d6-b9aad09aaddf
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 08b1924c518a76873051b4038d8a1fe38dc7ddac
 workflow-type: tm+mt
 source-wordcount: '190'
 ht-degree: 1%
@@ -19,7 +19,7 @@ Adobe Analytics 데이터 수집은 XDM 데이터를 Adobe Analytics에서 이�
 
 다음을 수행할 수도 있습니다 [수동으로 XDM 값 매핑](../edge/data-collection/adobe-analytics/manually-mapping-variables.md) 이전 Analytics 변수에 할당하는 방법을 보여줍니다.
 
-Adobe Analytics이 서버 API에서 데이터를 수신하도록 하려면 다음을 수행해야 합니다 [데이터 스트림 구성](../edge/fundamentals/datastreams.md#adobe-analytics-settings) 이벤트를 Adobe Analytics에 전달하려면 데이터 스트림 구성 페이지에 보고서 세트 ID를 입력합니다.
+Adobe Analytics이 서버 API에서 데이터를 수신하도록 하려면 다음을 수행해야 합니다 [데이터 스트림 구성](../edge/datastreams/overview.md#adobe-analytics-settings) 이벤트를 Adobe Analytics에 전달하려면 데이터 스트림 구성 페이지에 보고서 세트 ID를 입력합니다.
 
 ![Adobe Analytics 데이터 스트림 구성](assets/analytics-datastream.png)
 
@@ -33,7 +33,7 @@ POST https://server.adobedc.net/v2/interact?dataStreamId={DATASTREAM_ID}
 
 ### 요청 {#request}
 
-아래 샘플에는 `_experience.analytics` 필드 그룹. 또한 JSON 기반 데이터 레이어도 포함되어 있습니다. 이러한 데이터 레이어는 자동으로 매핑할 수 없지만 [데이터 수집을 위한 데이터 준비](../edge/fundamentals/datastreams.md#data-prep) 이러한 값을 위에 참조된 필드 그룹을 포함하는 스키마에 매핑하려면,
+아래 샘플에는 `_experience.analytics` 필드 그룹. 또한 JSON 기반 데이터 레이어도 포함되어 있습니다. 이러한 데이터 레이어는 자동으로 매핑할 수 없지만 [데이터 수집을 위한 데이터 준비](../edge/datastreams/data-prep.md) 이러한 값을 위에 참조된 필드 그룹을 포함하는 스키마에 매핑하려면,
 
 사용자가 해당 필드에 매핑하는 모든 값은 API 요청에 포함된 것처럼 해당 Analytics 값에 자동으로 매핑됩니다.
 

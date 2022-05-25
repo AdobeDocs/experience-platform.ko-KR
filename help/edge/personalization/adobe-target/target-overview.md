@@ -3,7 +3,7 @@ title: Platform Web SDK에서 Adobe Target 사용
 description: Adobe Target을 사용하여 Experience Platform Web SDK로 개인화된 컨텐츠를 렌더링하는 방법을 알아봅니다
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisions;코드 조각 사전 숨김;vec;양식 기반 경험 작성기;xdm;대상;결정;범위;스키마;시스템 다이어그램;다이어그램
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: cdcbfdec6a232495aacaf9066d880bc9a10455d1
+source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
 workflow-type: tm+mt
 source-wordcount: '1273'
 ht-degree: 5%
@@ -25,7 +25,7 @@ ht-degree: 5%
 * [Automated Personalization 활동](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
 * [경험 타깃팅 활동](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
 * [다변량 테스트(MVT)](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html)
-* [Recommendations 활동](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html)
+* [권장 사항 활동](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html)
 * [기본 Target 노출 및 전환 보고](https://experienceleague.adobe.com/docs/target/using/reports/reports.html)
 * [VEC 지원](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html)
 
@@ -49,7 +49,7 @@ ht-degree: 5%
 
 활성화하려면 [!DNL Target]를 채울 때 다음을 수행합니다.
 
-1. 활성화 [!DNL Target] 다음 위치에서 [데이터 스트림](../../fundamentals/datastreams.md) 적절한 클라이언트 코드 사용.
+1. 활성화 [!DNL Target] 다음 위치에서 [데이터 스트림](../../datastreams/overview.md) 적절한 클라이언트 코드 사용.
 1. 추가 `renderDecisions` 선택 사항을 이벤트에 추가합니다.
 
 그런 다음, 선택적으로 다음 옵션을 추가할 수도 있습니다.

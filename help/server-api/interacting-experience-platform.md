@@ -4,7 +4,7 @@ description: Edge Network Server API를 사용하여 Adobe Experience Platform�
 seo-description: Learn how to use the Edge Network Server API to interact with Adobe Experience Platform
 keywords: 데이터 수집; 콘센트 analytics; Adobe Experience Platform Edge Network api;aep
 exl-id: c49e40b7-9653-40f1-9db5-8941b20de8a3
-source-git-commit: 422f859bef8faf292fd7e5fd8b6a8d31967421c1
+source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
 workflow-type: tm+mt
 source-wordcount: '71'
 ht-degree: 1%
@@ -15,7 +15,7 @@ ht-degree: 1%
 
 ## 개요 {#overview}
 
-Experience Platform 데이터 수집을 활성화하려면 먼저 [데이터 스트림 구성](../edge/fundamentals/datastreams.md) 이벤트를 Experience Platform 데이터 세트에 전달하는 데 사용됩니다.
+Experience Platform 데이터 수집을 활성화하려면 먼저 [데이터 스트림 구성](../edge/datastreams/overview.md) 이벤트를 Experience Platform 데이터 세트에 전달하는 데 사용됩니다.
 
 구성이 완료되면 데이터 스트림 구성에 `com_adobe_experience_platform`를 채울 수 있습니다.
 

@@ -3,10 +3,10 @@ title: Platform Web SDK에서 Offer decisioning 사용
 description: Adobe Experience Platform Web SDK는 Offer decisioning에서 관리되는 개인화된 오퍼를 제공하고 렌더링할 수 있습니다. offer decisioning UI 또는 API를 사용하여 오퍼 및 기타 관련 개체를 만들 수 있습니다.
 keywords: offer decisioning;의사 결정;웹 SDK;Platform Web SDK;개인화된 오퍼;오퍼 게재;오퍼 게재;오퍼 개인화;
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-source-git-commit: b0cc2343a502e180267d86bca4a699c02f2d6f3d
+source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
 workflow-type: tm+mt
 source-wordcount: '870'
-ht-degree: 3%
+ht-degree: 5%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 3%
 >
 >Adobe Experience Platform Web SDK에서 Offer decisioning을 사용하면 사용자를 선택하기 위해 일찍 액세스할 수 있습니다. 모든 IMS 조직에서는 이 기능을 사용할 수 없습니다.
 
-Adobe Experience Platform [!DNL Web SDK] 은 Offer decisioning에서 관리되는 개인화된 오퍼를 제공하고 렌더링할 수 있습니다. UI(Offer decisioning 사용자 인터페이스) 또는 API를 사용하여 오퍼 및 기타 관련 개체를 만들 수 있습니다.
+Adobe Experience Platform [!DNL Web SDK] 은 Offer decisioning에서 관리되는 개인화된 오퍼를 제공하고 렌더링할 수 있습니다. Offer Decisioning UI(사용자 인터페이스) 또는 API를 사용하여 오퍼 및 기타 관련 개체를 만들 수 있습니다.
 
 ## 전제 조건
 
@@ -53,7 +53,7 @@ offer decisioning 작업 시 다음 용어를 이해하는 것이 중요합니�
 
    ![](assets/decision-scope-copy.png)
 
-* **데이터 스트림:** 자세한 내용은 [데이터 세트](../../fundamentals/datastreams.md) 설명서.
+* **데이터 스트림:** 자세한 내용은 [데이터 세트](../../datastreams/overview.md) 설명서.
 
 * **ID**: 자세한 내용은 다음 설명서를 참조하십시오. [Platform Web SDK는 ID 서비스를 사용합니다](../../identity/overview.md).
 
@@ -61,7 +61,7 @@ offer decisioning 작업 시 다음 용어를 이해하는 것이 중요합니�
 
 offer decisioning을 활성화하려면 다음 단계를 수행하십시오.
 
-1. 에서 Adobe Experience Platform을 활성화했습니다. [데이터 스트림](../../fundamentals/datastreams.md) &quot;Offer decisioning&quot; 상자를 선택합니다.
+1. 에서 Adobe Experience Platform을 활성화했습니다. [데이터 스트림](../../datastreams/overview.md) &quot;Offer decisioning&quot; 상자를 선택합니다.
 
    ![offer-decisioning-edge-config](./assets/offer-decisioning-edge-config.png)
 

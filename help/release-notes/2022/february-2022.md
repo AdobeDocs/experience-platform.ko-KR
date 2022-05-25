@@ -2,7 +2,7 @@
 title: Adobe Experience Platform 릴리스 노트 - 2022년 2월
 description: Adobe Experience Platform에 대한 2022년 2월 릴리스 노트입니다.
 exl-id: ae453f7d-ac75-4cc3-8435-57d25f086cc3
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: 3a031c84138d36a5e23b2f80a44ada06e1a52184
 workflow-type: tm+mt
 source-wordcount: '1019'
 ht-degree: 3%
@@ -45,8 +45,8 @@ Platform은 클라이언트측 고객 경험 데이터를 수집하고 Adobe Exp
 
 | 기능 | 설명 |
 | --- | --- |
-| 데이터 스트림 구성을 위한 UI 워크플로우가 개선되었습니다 | 데이터 수집 UI에서 새 데이터 스트림을 만드는 워크플로우가 업데이트되었습니다. 데이터 스트림에 서비스를 추가할 때 액세스 권한이 있는 서비스만 옵션 목록에 포함됩니다. 다음 안내서를 참조하십시오. [데이터 스트림 구성](../../edge/fundamentals/datastreams.md) 추가 정보. |
-| 데이터 수집을 위한 데이터 준비 | 이제 Adobe Experience Platform Web SDK를 사용하는 경우 데이터 준비 기능을 활용하여 데이터를 서버 쪽의 XDM(Experience Data Model)에 매핑할 수 있습니다. 의 섹션을 참조하십시오. [데이터 수집을 위한 데이터 준비](../../edge/fundamentals/datastreams.md#data-prep) 자세한 내용은 데이터 스트림 안내서를 참조하십시오. |
+| 데이터 스트림 구성을 위한 UI 워크플로우가 개선되었습니다 | 데이터 수집 UI에서 새 데이터 스트림을 만드는 워크플로우가 업데이트되었습니다. 데이터 스트림에 서비스를 추가할 때 액세스 권한이 있는 서비스만 옵션 목록에 포함됩니다. 다음 안내서를 참조하십시오. [데이터 스트림 구성](../../edge/datastreams/overview.md) 추가 정보. |
+| 데이터 수집을 위한 데이터 준비 | 이제 Adobe Experience Platform Web SDK를 사용하는 경우 데이터 준비 기능을 활용하여 데이터를 서버 쪽의 XDM(Experience Data Model)에 매핑할 수 있습니다. 의 섹션을 참조하십시오. [데이터 수집을 위한 데이터 준비](../../edge/datastreams/data-prep.md) 자세한 내용은 데이터 스트림 안내서를 참조하십시오. |
 | 자사 장치 ID | 이제 Platform Web SDK를 사용하여 고객 데이터를 수집할 때 자체 장치 ID를 Adobe Experience Platform Edge 네트워크로 전송하여 타사 쿠키 수명 주기에 대한 최근 브라우저 제한 사항에 대한 해결 방법을 제공할 수 있습니다. 다음 안내서를 참조하십시오. [자사 장치 ID](../../edge/identity/first-party-device-ids.md) 추가 정보. |
 
 Platform의 데이터 수집에 대한 자세한 내용은 [데이터 수집 개요](../../collection/home.md).

@@ -2,7 +2,7 @@
 title: Adobe Experience Platform 웹 SDK FAQ
 description: Adobe Experience Platform Web SDK에 대해 자주 묻는 질문에 대한 답변을 얻을 수 있습니다.
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: e19c70883785ff338623ea2e6433562a792b3841
+source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
 workflow-type: tm+mt
 source-wordcount: '1855'
 ht-degree: 1%
@@ -46,7 +46,7 @@ Platform의 태그를 사용하면 이러한 라이브러리를 가능한 한 �
 
 ### Adobe Experience Platform Web SDK 사용
 
-새 웹 SDK는 다음 솔루션에 대한 데이터를 단일 대상(Adobe Experience Platform Edge Network)에 전송하고 앞서 언급한 가장 일반적인 솔루션 사용 사례를 위해 해결합니다.
+새로운 웹 SDK는 다음 솔루션에 대한 데이터를 단일 대상(Adobe Experience Platform Edge Network)에 전송하고 앞서 언급한 가장 일반적인 솔루션 사용 사례를 위해 해결합니다.
 
 * Adobe Analytics
 * Adobe Audience Manager
@@ -82,7 +82,7 @@ Alloy는 Adobe Experience Platform Web SDK의 코드 이름입니다. Adobe Expe
 
 ## 고객이 를 사용하려면 Adobe Experience Platform을 구입해야 합니까? [!DNL Web SDK]?
 
-아니요. 모든 Adobe 디지털 경험 고객은 Adobe Experience Platform Web SDK를 무료로 사용할 수 있습니다. 웹 SDK를 사용하려면 조직에 이 기능이 프로비저닝되어 있어야 합니다. 액세스 권한을 얻으려면 다음 사항을 기입하십시오 [양식](https://adobe.ly/websdkaccess) Adobe이 액세스 권한을 제공합니다. [데이터 스트림 UI](fundamentals/datastreams.md) 및 Adobe Experience Platform UI(필요한 경우)를 참조하십시오.
+아니요. 모든 Adobe 디지털 경험 고객은 Adobe Experience Platform Web SDK를 무료로 사용할 수 있습니다. 웹 SDK를 사용하려면 조직에 이 기능이 프로비저닝되어 있어야 합니다. 액세스 권한을 얻으려면 다음 사항을 기입하십시오 [양식](https://adobe.ly/websdkaccess) Adobe이 액세스 권한을 제공합니다. [데이터 스트림 UI](datastreams/overview.md) 및 Adobe Experience Platform UI(필요한 경우)를 참조하십시오.
 
 를 사용하려는 고객 [!DNL Web SDK] 에게 Adobe Experience Platform UI에서 스키마, 데이터 세트 및 ID 네임스페이스를 만들 수 있는 액세스 권한이 부여됩니다.
 

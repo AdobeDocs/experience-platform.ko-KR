@@ -4,13 +4,13 @@ description: Experience Platform 웹 SDK를 사용하여 A4T(Adobe Analytics for
 seo-title: Adobe Analytics for Target (A4T) Logging in the Platform Web SDK
 seo-description: Learn how to control the collection of Adobe Analytics for Target (A4T) data using the Experience Platform Web SDK.
 keywords: a4t;로깅;analytics;sdk;웹 sdk
-source-git-commit: a2214465001f90d19d88c0622c154e7a4ae3bb03
+exl-id: f1c90ccd-48a9-4668-b2ac-eacd5bec0b91
+source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
 workflow-type: tm+mt
 source-wordcount: '284'
 ht-degree: 2%
 
 ---
-
 
 # Platform Web SDK에서 A4T(Adobe Analytics for Target) 로깅
 
@@ -29,7 +29,7 @@ Adobe Experience Platform Web SDK는 A4T(Analytics for Analytics) 사용 사례�
 | 서버 측 Analytics 로깅 | Edge Network를 통해 전송된 모든 Analytics 히트는 히트 결합 프로세스를 거치지 않고 서버 쪽의 Target 세부 사항으로 강화됩니다. |
 | 클라이언트 측 분석 로깅 | Target 데이터가 클라이언트측에서 반환되므로, 를 사용하여 데이터를 수동으로 증가시키고 Analytics로 전송할 수 있습니다 [데이터 삽입 API](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html). |
 
-로깅 방법은 구성된 페이지에 Adobe Analytics을 활성화했는지 여부에 따라 결정됩니다 [데이터 스트림](../../../fundamentals/datastreams.md):
+로깅 방법은 구성된 페이지에 Adobe Analytics을 활성화했는지 여부에 따라 결정됩니다 [데이터 스트림](../../../datastreams/overview.md):
 
 ![로깅 방법 결정 흐름](../assets/analytics-logging.png)
 
