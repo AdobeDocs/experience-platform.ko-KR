@@ -2,10 +2,10 @@
 title: 감사 로그 개요
 description: 감사 로그를 통해 Adobe Experience Platform에서 누가 어떤 작업을 수행했는지 확인하는 방법에 대해 알아봅니다.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: ba190bdd1856b2d89fa28679eb7f09c258ddd17c
+source-git-commit: cd7ce8c107769a77373f328d9aa84c982be0d8ee
 workflow-type: tm+mt
-source-wordcount: '767'
-ht-degree: 10%
+source-wordcount: '847'
+ht-degree: 11%
 
 ---
 
@@ -23,20 +23,28 @@ ht-degree: 10%
 
 | 리소스 | 작업 |
 | --- | --- |
-| [데이터 세트](../../../catalog/datasets/overview.md) | <ul><li>선택 사항에서</li><li>업데이트</li><li>삭제</li><li>사용 [실시간 고객 프로필](../../../profile/home.md)</li><li>프로필에 대한 비활성화</li></ul> |
-| [스키마](../../../xdm/schema/composition.md) | <ul><li>선택 사항에서</li><li>업데이트</li><li>삭제</li><li>프로필에 사용</li></ul> |
+| [액세스 제어 정책(속성 기반 액세스 제어)](../../../access-control/home.md) | <ul><li>선택 사항에서</li><li>업데이트</li><li>삭제</li></ul> |
+| [계정(Adobe)](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li>선택 사항에서</li><li>업데이트</li><li>삭제</li></ul> |
+| [감사 로그](../../../landing/governance-privacy-security/audit-logs/overview.md) | <ul><li>내보내기</li></ul> |
 | [클래스](../../../xdm/schema/composition.md#class) | <ul><li>선택 사항에서</li><li>업데이트</li><li>삭제</li></ul> |
-| [필드 그룹](../../../xdm/schema/composition.md#field-group) | <ul><li>선택 사항에서</li><li>업데이트</li><li>삭제</li></ul> |
-| [데이터 유형](../../../xdm/schema/composition.md#data-type) | <ul><li>선택 사항에서</li><li>업데이트</li><li>삭제</li></ul> |
-| [샌드박스](../../../sandboxes/home.md) | <ul><li>선택 사항에서</li><li>업데이트</li><li>재설정</li><li>삭제</li></ul> |
-| [대상](../../../destinations/home.md) | <ul><li>선택 사항에서</li><li>업데이트</li><li>삭제</li><li>활성화</li><li>비활성화</li><li>데이터 집합 활성화</li><li>데이터 집합 제거</li><li>프로필 활성화</li><li>프로필 제거</li></ul> |
-| [세그먼트](../../../segmentation/home.md) | <ul><li>선택 사항에서</li><li>삭제</li><li>세그먼트 활성화</li><li>세그먼트 제거</li></ul> |
-| [병합 정책](../../../profile/merge-policies/overview.md) | <ul><li>선택 사항에서</li><li>업데이트</li><li>삭제</li></ul> |
 | [계산된 특성](../../../profile/computed-attributes/overview.md) | <ul><li>선택 사항에서</li><li>업데이트</li><li>삭제</li></ul> |
+| [데이터 세트](../../../catalog/datasets/overview.md) | <ul><li>선택 사항에서</li><li>업데이트</li><li>삭제</li><li>사용 [실시간 고객 프로필](../../../profile/home.md)</li><li>프로필에 대한 비활성화</li><li>데이터 추가</li><li>일괄 처리 삭제</li></ul> |
+| [데이터 유형](../../../xdm/schema/composition.md#data-type) | <ul><li>선택 사항에서</li><li>업데이트</li><li>삭제</li></ul> |
+| [대상](../../../destinations/home.md) | <ul><li>선택 사항에서</li><li>업데이트</li><li>삭제</li><li>활성화</li><li>비활성화</li><li>데이터 집합 활성화</li><li>데이터 집합 제거</li><li>프로필 활성화</li><li>프로필 제거</li></ul> |
+| [필드 그룹](../../../xdm/schema/composition.md#field-group) | <ul><li>선택 사항에서</li><li>업데이트</li><li>삭제</li></ul> |
+| [ID 그래프](../../../identity-service/ui/identity-graph-viewer.md) | <ul><li>보기</li></ul> |
+| [ID 네임스페이스](../../../identity-service/ui/identity-graph-viewer.md) | <ul><li>선택 사항에서</li><li>업데이트</li></ul> |
+| [병합 정책](../../../profile/merge-policies/overview.md) | <ul><li>선택 사항에서</li><li>업데이트</li><li>삭제</li></ul> |
 | [제품 프로필](../../../access-control/home.md) | <ul><li>선택 사항에서</li><li>업데이트</li><li>삭제</li></ul> |
-| [계정(Adobe)](../../../access-control/home.md) | <ul><li>선택 사항에서</li><li>업데이트</li><li>삭제</li></ul> |
-| [쿼리 템플릿](../../../access-control/home.md) | <ul><li>선택 사항에서</li><li>업데이트</li><li>삭제</li></ul> |
-| [예약된 쿼리](../../../access-control/home.md) | <ul><li>선택 사항에서</li><li>업데이트</li><li>삭제</li></ul> |
+| [쿼리](../../../query-service/ui/overview.md) | <ul><li>실행</li></ul> |
+| [쿼리 템플릿](../../../query-service/ui/overview.md) | <ul><li>선택 사항에서</li><li>업데이트</li><li>삭제</li></ul> |
+| [역할(속성 기반 액세스 제어)](../../../access-control/home.md) | <ul><li>선택 사항에서</li><li>업데이트</li><li>삭제</li><li>사용자 추가</li><li>사용자 제거</li></ul> |
+| [샌드박스](../../../sandboxes/home.md) | <ul><li>선택 사항에서</li><li>업데이트</li><li>재설정</li><li>삭제</li></ul> |
+| [예약된 쿼리](../../../query-service/ui/overview.md) | <ul><li>선택 사항에서</li><li>업데이트</li><li>삭제</li></ul> |
+| [스키마](../../../xdm/schema/composition.md) | <ul><li>선택 사항에서</li><li>업데이트</li><li>삭제</li><li>프로필에 사용</li></ul> |
+| [세그먼트](../../../segmentation/home.md) | <ul><li>선택 사항에서</li><li>삭제</li><li>세그먼트 활성화</li><li>세그먼트 제거</li></ul> |
+| [소스 데이터 흐름](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li>선택 사항에서</li><li>업데이트</li><li>삭제</li><li>활성화</li><li>비활성화</li><li>데이터 집합 활성화</li><li>데이터 집합 제거</li><li>프로필 활성화</li><li>프로필 제거</li></ul> |
+| [작업 순서](../../../hygiene/home.md) | <ul><li>선택 사항에서</li></ul> |
 
 ## 감사 로그에 대한 액세스
 
@@ -50,7 +58,7 @@ ht-degree: 10%
 
 ![감사 로그 대시보드](../../images/audit-logs/audits.png)
 
-감사 로그는 시스템에서 삭제된 후 365일 동안 유지됩니다. 따라서 최대 365일 동안만 돌아갈 수 있습니다.
+감사 로그는 시스템에서 삭제된 후 365일 동안 유지됩니다. 따라서 최대 365일 동안만 돌아갈 수 있습니다. 365일 이상의 데이터가 필요한 경우 내부 정책 요구 사항을 충족하려면 정기적으로 로그를 내보내야 합니다.
 
 목록에서 이벤트를 선택하여 오른쪽 레일에서 해당 세부 사항을 확인합니다.
 
