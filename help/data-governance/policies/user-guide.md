@@ -5,9 +5,9 @@ title: UI에서 데이터 사용 정책 관리
 topic-legacy: policies
 description: Adobe Experience Platform 데이터 거버넌스는 데이터 사용 정책을 만들고 관리할 수 있는 사용자 인터페이스를 제공합니다. 이 문서에서는 Experience Platform 사용자 인터페이스의 정책 작업 영역에서 수행할 수 있는 작업에 대한 개요를 제공합니다.
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
-source-git-commit: 1c0685e7acb594829795674f859f76f229ecee61
+source-git-commit: 931b847761e649696aa8433d53233593efd4d1ee
 workflow-type: tm+mt
-source-wordcount: '1331'
+source-wordcount: '1329'
 ht-degree: 0%
 
 ---
@@ -79,11 +79,11 @@ Adobe Experience Platform 데이터 거버넌스는 데이터 사용 정책을 �
 
 ![](../images/policies/created-policy.png)
 
-### 동의 정책 만들기(베타) {#consent-policy}
+### 동의 정책 만들기 {#consent-policy}
 
 >[!IMPORTANT]
 >
->동의 정책은 현재 베타 버전이며 조직에서 아직 액세스할 수 없을 수 있습니다.
+>동의 정책은 현재 Adobe Shield for Healthcare를 구입한 조직에만 사용할 수 있습니다.
 
 동의 정책을 만들도록 선택한 경우 새 정책을 구성할 수 있는 새 화면이 나타납니다.
 
