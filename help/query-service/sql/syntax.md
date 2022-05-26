@@ -5,9 +5,9 @@ title: 쿼리 서비스의 SQL 구문
 topic-legacy: syntax
 description: 이 문서에서는 Adobe Experience Platform 쿼리 서비스에서 지원하는 SQL 구문을 보여줍니다.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 25953a5a1f5b32de7d150dbef700ad06ce6014df
+source-git-commit: f509b468e7779b822eda96033a2c55cc3a12893d
 workflow-type: tm+mt
-source-wordcount: '2747'
+source-wordcount: '3050'
 ht-degree: 2%
 
 ---
@@ -714,7 +714,7 @@ COPY query
 >
 >전체 출력 경로가 `adl://<ADLS_URI>/users/<USER_ID>/acp_foundation_queryService/folder_location/<QUERY_ID>`
 
-### ALTER TABLE
+### ALTER TABLE {#alter-table}
 
 다음 `ALTER TABLE` 명령을 사용하면 기본 또는 외래 키 제약 조건을 추가하거나 삭제하고 테이블에 열을 추가할 수 있습니다.
 
@@ -747,6 +747,26 @@ ALTER TABLE table_name DROP CONSTRAINT constraint_name FOREIGN KEY ( column_name
 >
 >테이블 스키마는 고유해야 하며 여러 테이블 간에 공유되지 않아야 합니다. 또한 기본 키 제약 조건에는 네임스페이스가 필수입니다.
 
+#### 기본 및 보조 ID 추가 또는 삭제
+
+다음 `ALTER TABLE` 명령을 사용하면 SQL을 통해 직접 주 ID 테이블 열과 보조 ID 테이블 열 모두에 대한 제약 조건을 추가하거나 삭제할 수 있습니다.
+
+다음 예에서는 제한을 추가하여 기본 ID와 보조 ID를 추가합니다.
+
+```sql
+ALTER TABLE t1 ADD CONSTRAINT PRIMARY IDENTITY (id) NAMESPACE 'IDFA';
+ALTER TABLE t1 ADD CONSTRAINT IDENTITY(id) NAMESPACE 'IDFA';
+```
+
+아래 예와 같이 제약 조건을 드롭하여 ID를 제거할 수도 있습니다.
+
+```sql
+ALTER TABLE t1 DROP CONSTRAINT PRIMARY IDENTITY (c1) ;
+ALTER TABLE t1 DROP CONSTRAINT IDENTITY (c1) ;
+```
+
+자세한 내용은 Ad Hoc 데이터 세트에서 ID 설정에 대한 문서를 참조하십시오.
+
 #### 열 추가
 
 다음 SQL 쿼리는 테이블에 열을 추가하는 예를 보여줍니다.
@@ -756,6 +776,23 @@ ALTER TABLE table_name ADD COLUMN column_name data_type
 
 ALTER TABLE table_name ADD COLUMN column_name_1 data_type1, column_name_2 data_type2 
 ```
+
+##### 지원되는 데이터 유형
+
+다음 표에는 [!DNL Postgres SQL], XDM 및 [!DNL Accelerated Database Recovery] Azure SQL의 (ADR)입니다.
+
+| — | PSQL 클라이언트 | XDM | ADR. | 설명 |
+|---|---|---|---|---|
+| 1 | `bigint` | `int8` | `bigint` | -9,223,372,036,854,775,807부터 9,223,372,036,854,775,807까지의 큰 정수를 저장하는 데 사용되는 숫자 데이터 형식입니다. |
+| 2 | `integer` | `int4` | `integer` | -2,147,483,648부터 2,147,483,647까지의 정수를 4바이트로 저장하는 데 사용되는 숫자 데이터 유형입니다. |
+| 3 | `smallint` | `int2` | `smallint` | -32,768부터 215-1까지의 정수를 2바이트로 저장하는 데 사용되는 숫자 데이터 형식입니다. |
+| 4 | `tinyint` | `int1` | `tinyint` | 0부터 255까지의 정수를 1바이트로 저장하는 데 사용되는 숫자 데이터 유형입니다. |
+| 5개 | `varchar(len)` | `string` | `varchar(len)` | 변수 크기의 문자 데이터 유형입니다. `varchar` 열 데이터 항목의 크기가 상당히 다를 때 가장 잘 사용됩니다. |
+| 6 | `double` | `float8` | `double precision` | `FLOAT8` 및 `FLOAT` 에 대한 유효한 동의어입니다. `DOUBLE PRECISION`. `double precision` 는 부동 소수점 데이터 유형입니다. 부동 소수점 값은 8바이트로 저장됩니다. |
+| 7 | `double precision` | `float8` | `double precision` | `FLOAT8` 의 유효한 동의어입니다. `double precision`.`double precision` 는 부동 소수점 데이터 유형입니다. 부동 소수점 값은 8바이트로 저장됩니다. |
+| 8 | `date` | `date` | `date` | 다음 `date` 데이터 유형은 타임스탬프 정보가 없는 4바이트 저장된 달력 날짜 값입니다. 유효한 날짜 범위는 01-01-0001부터 12-31-9999까지입니다. |
+| 9 | `datetime` | `datetime` | `datetime` | 달력 날짜 및 시간으로 표현되는 시간에 인스턴스를 저장하는 데 사용되는 데이터 유형입니다. `datetime` 에는 다음 큐레이터가 포함됩니다. 연도, 월, 일, 시간, 두 번째 및 분수입니다. A `datetime` 선언에는 해당 시퀀스에서 결합되는 이러한 시간 단위의 하위 집합이 포함될 수 있고 심지어 하나의 시간 단위만 포함할 수 있습니다. |
+| 10 | `char(len)` | `string` | `char(len)` | 다음 `char(len)` 키워드는 항목이 고정 길이 문자임을 나타내는 데 사용됩니다. |
 
 #### 스키마 추가
 
