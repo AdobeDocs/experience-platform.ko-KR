@@ -3,7 +3,7 @@ keywords: target 개인화; 대상; experience platform target 대상;adobe targ
 title: Adobe Target 연결
 description: Adobe Target은 웹 사이트, 모바일 앱 등에서 모든 인바운드 고객 상호 작용에 실시간 AI 기반의 개인화 및 실험 기능을 제공하는 애플리케이션입니다.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 0868d81bcd1968b3223c79abb5a7bb8f279a4130
+source-git-commit: 46e732dfc630ad1875a57289a6e6cf9c964b9547
 workflow-type: tm+mt
 source-wordcount: '752'
 ht-degree: 1%
@@ -51,7 +51,7 @@ Adobe Target 연결을 구성할 때 [데이터 스트림 ID 사용](#parameters
 >id="platform_destinations_target_datastream"
 >title="데이터 스트림 ID 기본 정보"
 >abstract="이 옵션은 세그먼트를 포함할 데이터 수집 데이터 스트림을 결정합니다. 드롭다운 메뉴에는 Target 구성이 활성화된 데이터 세트만 표시됩니다. 에지 세그멘테이션을 사용하려면 데이터 스트림 ID를 선택해야 합니다. 없음 을 선택하면 에지 세그멘테이션을 사용하는 모든 사용 사례가 비활성화됩니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection.html#parameters" text="데이터 저장소 선택에 대한 자세한 내용을 알아봅니다."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection.html#parameters" text="데이터 저장소 선택에 대한 자세한 정보"
 
 >[!IMPORTANT]
 > 
