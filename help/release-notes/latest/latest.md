@@ -2,7 +2,7 @@
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform에 대한 최신 릴리스 노트입니다.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 37d073266bf9293ad3a9e85c193acd1e2e47fa2a
+source-git-commit: 9484da6948243a098db2ff8ebdd59c5e70a51635
 workflow-type: tm+mt
 source-wordcount: '1553'
 ht-degree: 6%
@@ -71,9 +71,11 @@ Experience Platform을 사용하면 다양한 서비스 및 기능에 대한 사
 
 **업데이트된 기능**
 
-| 기능 | 이름 | 설명 | | — | — | — | | 추가된 리소스 | <ul><li> 액세스 제어 정책 </li><li> 역할 </li><li> 감사 로그 </li><li> 작업 순서 </li><li> ID 네임스페이스 </li><li> ID 그래프 </li><li> 쿼리 </li><li> 데이터 세트 </li><li> 소스 데이터 흐름 </li></ul> | 감사 로그 리소스는 활동이 발생할 때 자동으로 기록됩니다. 이 기능이 활성화되어 있으면 수동으로 로그 수집을 활성화할 필요가 없습니다. |
+| 기능 | 이름 | 설명 |
+| --- | --- | --- |
+| 추가된 리소스 | <ul><li> 액세스 제어 정책 </li><li> 역할 </li><li> 감사 로그 </li><li> 작업 순서 </li><li> ID 네임스페이스 </li><li> ID 그래프 </li><li> 쿼리 </li><li> 데이터 세트 </li><li> 소스 데이터 흐름 </li></ul> | 활동이 발생하면 감사 로그 리소스가 자동으로 기록됩니다. 이 기능이 활성화되어 있으면 수동으로 로그 수집을 활성화할 필요가 없습니다. |
 
-
+{style=&quot;table-layout:auto&quot;}
 
 Platform의 감사 로그에 대한 자세한 내용은 [감사 로그 개요](../../landing/governance-privacy-security/audit-logs/overview.md).
 
