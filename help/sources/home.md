@@ -5,9 +5,9 @@ title: 소스 커넥터 개요
 topic-legacy: overview
 description: Adobe Experience Platform을 사용하면 Platform 서비스를 사용하여 들어오는 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 외부 소스에서 데이터를 수집할 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 등과 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: cae2c80c5e0fc7aaece948599e781b32d67989bb
+source-git-commit: 7ffc2ed09b58cc6b6118ef2115666aae092c202c
 workflow-type: tm+mt
-source-wordcount: '1000'
+source-wordcount: '1001'
 ht-degree: 0%
 
 ---
@@ -28,22 +28,22 @@ Experience Platform 소스는 다음 카테고리로 그룹화됩니다.
 
 Experience Platform을 사용하면 Adobe Analytics 및 Adobe Audience Manager을 포함한 다른 Adobe 애플리케이션에서 데이터를 수집할 수 있습니다. 자세한 내용은 다음 관련 문서를 참조하십시오.
 
-- [Adobe Audience Manager 커넥터 개요](connectors/adobe-applications/audience-manager.md)
+- [Adobe Audience Manager 소스 개요](connectors/adobe-applications/audience-manager.md)
 - [UI에서 Adobe Audience Manager 소스 연결 만들기](./tutorials/ui/create/adobe-applications/audience-manager.md)
 - [Adobe Analytics 분류 데이터 소스 연결 개요](connectors/adobe-applications/classifications.md)
 - [UI에서 Adobe Analytics 분류 데이터 소스 연결 만들기](./tutorials/ui/create/adobe-applications/classifications.md)
 - [Adobe Analytics 보고서 세트 데이터 소스 연결 개요](connectors/adobe-applications/analytics.md)
 - [UI에서 Adobe Analytics 소스 연결 만들기](./tutorials/ui/create/adobe-applications/analytics.md)
-- [Adobe 데이터 수집](connectors/adobe-applications/data-collection.md)
+- [Adobe 데이터 수집 소스 개요](connectors/adobe-applications/data-collection.md)
 - [UI에서 고객 속성 소스 연결 만들기](./tutorials/ui/create/adobe-applications/customer-attributes.md)
-- [[!DNL Marketo Engage] 커넥터 개요](connectors/adobe-applications/marketo/marketo.md)
+- [[!DNL Marketo Engage] 소스 개요](connectors/adobe-applications/marketo/marketo.md)
 - [만들기 [!DNL Marketo Engage] UI의 소스 연결](./tutorials/ui/create/adobe-applications/marketo.md)
 
 ### 광고 {#advertising}
 
 Experience Platform은 타사 광고 시스템에서 데이터 섭취를 지원합니다. 특정 소스 커넥터에 대한 자세한 내용은 다음 관련 문서를 참조하십시오.
 
-- [[!DNL Google AdWords]](connectors/advertising/ads.md) 커넥터
+- [[!DNL Google AdWords]](connectors/advertising/ads.md)
 
 ### 클라우드 스토리지 {#cloud-storage}
 
