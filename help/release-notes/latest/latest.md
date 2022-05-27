@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform에 대한 최신 릴리스 노트입니다.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 9484da6948243a098db2ff8ebdd59c5e70a51635
+source-git-commit: d8f62bdaa0d043fa2c27b25ae2a6f5979076314e
 workflow-type: tm+mt
-source-wordcount: '1553'
+source-wordcount: '1593'
 ht-degree: 6%
 
 ---
@@ -136,6 +136,7 @@ Experience Platform은 클라이언트측 고객 경험 데이터를 수집하�
 | 데이터 스트림 매핑 규칙 가져오기 | 데이터 수집을 위해 데이터 준비를 설정할 때 다음을 수행할 수 있습니다 [기존 데이터 스트림의 매핑 규칙 가져오기](../../edge/datastreams/data-prep.md#import-mapping) 모든 필드 매핑을 수동으로 구성하는 대신, |
 | Mobile SDK에 대한 데이터 스팀 매핑 지원 | 이제 Experience Platform Mobile SDK와 함께 사용하기 위한 데이터 세트에서 데이터 수집을 위한 데이터 준비를 구성할 수 있습니다. |
 | XDM 개체에 대한 데이터 스팀 매핑 지원 | XDM 개체와 데이터 레이어 개체를 매핑할 때 [데이터 수집을 위한 데이터 준비 구성](../../edge/datastreams/data-prep.md#select-data). |
+| 데이터 흐름과 통합 | Platform의 소스 카탈로그를 사용하여 데이터 수집을 위한 데이터 준비 및 데이터 준비 경고에 대한 향상된 지원을 포함하여 Platform Edge 네트워크의 데이터에 액세스할 수 있습니다. 자세한 내용은 [Adobe 데이터 수집 소스 개요](../../sources/connectors/adobe-applications/data-collection.md) 추가 정보. |
 
 Platform의 데이터 수집에 대한 자세한 내용은 [데이터 수집 개요](../../collection/home.md).
 
@@ -238,7 +239,7 @@ Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 
 | 기능 | 설명 |
 | --- | --- |
 | 베타 릴리스 [!DNL Zendesk] 소스 | 를 사용하십시오 [!DNL Zendesk] 소스 - 사용자, 에이전트 및 조직 데이터를 [!DNL Zendesk] 인스턴스 [!DNL Profile] 데이터 보강 자세한 내용은 [[!DNL Zendesk] 소스 개요](../../sources/connectors/customer-success/zendesk.md) 추가 정보. |
-| Adobe 데이터 수집 지원 | 데이터 수집을 위한 데이터 준비 를 비롯하여 데이터 수집 Experience Edge 데이터에 액세스하고 데이터 준비의 데이터 경고 지원을 개선한 소스 카탈로그를 사용합니다. 자세한 내용은 [Adobe 데이터 수집 소스 개요](../../sources/connectors/adobe-applications/data-collection.md) 추가 정보. |
+| Adobe 데이터 수집 지원 | Platform의 소스 카탈로그를 사용하여 데이터 수집을 위한 데이터 준비 및 데이터 준비 경고에 대한 향상된 지원을 포함하여 Platform Edge 네트워크의 데이터에 액세스할 수 있습니다. 자세한 내용은 [Adobe 데이터 수집 소스 개요](../../sources/connectors/adobe-applications/data-collection.md) 추가 정보. |
 | 다음을 사용하여 파일 수집 지원 `ISO-8859-1` 인코딩 | 를 사용하십시오 `encoding` 수집할 매개 변수 `ISO-8859-1` 클라우드 스토리지 소스를 사용하여 Platform으로 인코딩된 파일 [!DNL Flow Service] API. 다음 안내서를 참조하십시오. [클라우드 스토리지 소스 연결 만들기](../../sources/tutorials/api/collect/cloud-storage.md) 추가 정보. |
 
 {style=&quot;table-layout:auto&quot;}
