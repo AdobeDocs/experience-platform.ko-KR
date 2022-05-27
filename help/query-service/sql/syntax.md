@@ -5,7 +5,7 @@ title: 쿼리 서비스의 SQL 구문
 topic-legacy: syntax
 description: 이 문서에서는 Adobe Experience Platform 쿼리 서비스에서 지원하는 SQL 구문을 보여줍니다.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: f509b468e7779b822eda96033a2c55cc3a12893d
+source-git-commit: 7016c0ce1ca8be5cecb7c09d01e9fd2e48e551de
 workflow-type: tm+mt
 source-wordcount: '3050'
 ht-degree: 2%
@@ -765,7 +765,7 @@ ALTER TABLE t1 DROP CONSTRAINT PRIMARY IDENTITY (c1) ;
 ALTER TABLE t1 DROP CONSTRAINT IDENTITY (c1) ;
 ```
 
-자세한 내용은 Ad Hoc 데이터 세트에서 ID 설정에 대한 문서를 참조하십시오.
+다음 문서를 참조하십시오. [ad hoc 데이터 세트에서 ID 설정](../data-governance/ad-hoc-schema-identities.md) 를 참조하십시오.
 
 #### 열 추가
 
