@@ -2,11 +2,9 @@
 title: Data 위생 UI 안내서
 description: Adobe Experience Platform 사용자 인터페이스에서 데이터 위생 작업을 관리하는 방법을 알아봅니다.
 exl-id: 7199151a-5390-4150-8a1d-daf53b7a1f5b
-hide: true
-hidefromtoc: true
-source-git-commit: c2e7cf1859f6a2b277783cdec535ecc208703fac
+source-git-commit: 22da9e39e168d9a995c7c134733aa7a1b3587749
 workflow-type: tm+mt
-source-wordcount: '163'
+source-wordcount: '160'
 ht-degree: 0%
 
 ---
@@ -25,8 +23,7 @@ ht-degree: 0%
 
 ![이미지를 보여주는 이미지 [!UICONTROL 데이터 위생] 플랫폼 UI의 작업 영역](../images/ui/overview/home.png)
 
-여기에서 기존 작업 주문을 찾아보고 새로운 데이터 위생 요청을 만들 수 있습니다. 자세한 내용은 이 안내서의 다음 섹션을 참조하십시오.
+여기에서 기존 작업 주문을 탐색하고 새로운 데이터 위생 작업을 구성할 수 있습니다. 자세한 내용은 이 안내서의 다음 섹션을 참조하십시오.
 
 * [기존 작업 지시 찾아보기](./browse.md)
-* [소비자 데이터 삭제](./delete-consumer.md)
 * [데이터 세트에 대한 TTL(time to live)을 관리합니다](./ttl.md)

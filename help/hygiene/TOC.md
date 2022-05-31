@@ -4,9 +4,9 @@ user-guide-title: 데이터 위생 도움말
 breadcrumb-title: Data Warehouse 안내서
 user-guide-description: GDPR 및 CCPA와 같은 법적 개인 정보 보호 규정을 준수하도록 소비자 데이터 요청을 관리합니다.
 feature: Privacy
-source-git-commit: adce89e5601daf18fe9cacb704a787472262db41
+source-git-commit: 9057d424d63217a3cef7ad2237a65700d9159323
 workflow-type: tm+mt
-source-wordcount: '54'
+source-wordcount: '52'
 ht-degree: 3%
 
 ---
@@ -18,9 +18,8 @@ ht-degree: 3%
 * 데이터 위생 UI {#ui}
    * [개요](./ui/overview.md)
    * [기존 작업 지시 찾아보기](./ui/browse.md)
-   * [소비자 데이터 삭제](./ui/delete-consumer.md)
    * [데이터 세트에 대한 TTL(time to live)을 관리합니다](./ui/ttl.md)
 * 데이터 위생 API {#api}
    * [개요](./api/overview.md)
-   * [작업 순서](./api/workorder.md)
    * [데이터 집합 유지 시간(TTL)](./api/ttl.md)
+   * [소비자 삭제 작업](./api/jobs.md)

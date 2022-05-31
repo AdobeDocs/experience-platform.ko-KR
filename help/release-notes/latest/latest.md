@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform에 대한 최신 릴리스 노트입니다.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: b557946252cd2afc07159caad939ec3a11d35e28
+source-git-commit: c318d64f6dc09094855ec20d998a7c41d837211f
 workflow-type: tm+mt
-source-wordcount: '2389'
+source-wordcount: '2375'
 ht-degree: 5%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 5%
 
 Adobe Experience Platform의 새로운 기능:
 
-- [속성 기반 액세스 제어](#abac) —>
+- [속성 기반 액세스 제어](#abac)
 - [데이터 위생](#hygiene)
 
 Adobe Experience Platform의 기존 기능 업데이트:
@@ -60,8 +60,9 @@ Experience Platform은 소비자 레코드 및 데이터 집합을 프로그래�
 
 | 기능 | 설명 |
 | --- | --- |
-| 소비자 삭제 | [소비자 레코드 삭제](../../hygiene/ui/delete-consumer.md) 기본 ID 데이터를 기반으로 데이터 레이크 및 프로필 저장소에서 다음을 수행합니다. |
 | 데이터 세트에 대한 TTL(Time to Live) | [TTL 예약](../../hygiene/ui/ttl.md) 플랫폼 데이터 세트. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Platform의 감사 로그에 대한 자세한 내용은 [데이터 위생 개요](../../hygiene/home.md).
 

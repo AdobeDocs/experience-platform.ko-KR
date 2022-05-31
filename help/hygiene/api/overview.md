@@ -2,11 +2,9 @@
 title: 데이터 위생 API 안내서
 description: Adobe Experience Platform에서 고객의 저장된 개인 데이터를 프로그래밍 방식으로 수정하거나 삭제하는 방법을 알아봅니다.
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-hide: true
-hidefromtoc: true
-source-git-commit: c2e7cf1859f6a2b277783cdec535ecc208703fac
+source-git-commit: 22da9e39e168d9a995c7c134733aa7a1b3587749
 workflow-type: tm+mt
-source-wordcount: '349'
+source-wordcount: '309'
 ht-degree: 1%
 
 ---
@@ -41,9 +39,9 @@ ht-degree: 1%
 
 이 문서에서는 요청 형식을 지정하는 방법을 보여주는 예제 API 호출을 제공합니다. 샘플 API 호출에 대한 설명서에 사용된 규칙에 대한 자세한 내용은 [예제 API 호출을 읽는 방법](../../landing/api-guide.md#sample-api) Experience Platform API에 대한 시작 안내서에서 를 참조하십시오.
 
-## 작업 지시
+<!-- ## Work orders
 
-작업 순서는 특정 데이터 세트 또는 모든 데이터 세트에서 소비자 ID를 삭제하는 데이터 위생 작업을 나타냅니다. 자세한 내용은 [work order endpoint 안내서](./workorder.md) api에서 작업 주문 작업에 대한 자세한 내용을 참조하십시오.
+A work order is a representation of a data hygiene task that deletes consumer identities from a specific dataset or all datasets. See the [work order endpoint guide](./workorder.md) for details on working with work orders in the API. -->
 
 ## 데이터 세트에 대한 TTL(Time to Live)
 

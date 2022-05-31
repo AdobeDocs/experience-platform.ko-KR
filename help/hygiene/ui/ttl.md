@@ -2,11 +2,9 @@
 title: 데이터 집합 TTL 관리
 description: Adobe Experience Platform UI에서 데이터 세트에 대한 TTL(Time to Live)을 예약하는 방법을 알아봅니다.
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
-hide: true
-hidefromtoc: true
-source-git-commit: c2e7cf1859f6a2b277783cdec535ecc208703fac
+source-git-commit: 22da9e39e168d9a995c7c134733aa7a1b3587749
 workflow-type: tm+mt
-source-wordcount: '412'
+source-wordcount: '372'
 ht-degree: 0%
 
 ---
@@ -27,13 +25,11 @@ ht-degree: 0%
 
 ![이미지를 보여주는 이미지 [!UICONTROL 요청 만들기] 선택한 단추](../images/ui/ttl/create-request-button.png)
 
-요청 만들기 대화 상자가 나타납니다. 아래에 **[!UICONTROL 작업]** 섹션, **[!UICONTROL 데이터 집합]** TTL 예약에 사용할 수 있는 컨트롤을 업데이트하는 중입니다.
-
-![이미지를 보여주는 이미지 [!UICONTROL 데이터 집합] 선택](../images/ui/ttl/create-request-button.png)
+<!-- The request creation dialog appears. Under the **[!UICONTROL Action]** section, select **[!UICONTROL Dataset]** to update the available controls for TTL scheduling-->
 
 ### 날짜 및 데이터 세트 선택
 
-아래에 **[!UICONTROL 작업]** 섹션에서 데이터 세트를 삭제할 날짜를 선택합니다. 수동으로 날짜를 입력할 수 있습니다(형식) `mm/dd/yyyy`) 또는 달력 아이콘( )을 선택합니다![달력 아이콘 이미지](../images/ui/ttl/calendar-icon.png)) 을 클릭하여 대화 상자에서 날짜를 선택합니다.
+요청 만들기 대화 상자가 나타납니다. 아래에 **[!UICONTROL 작업]** 섹션에서 데이터 세트를 삭제할 날짜를 선택합니다. 수동으로 날짜를 입력할 수 있습니다(형식) `mm/dd/yyyy`) 또는 달력 아이콘( )을 선택합니다![달력 아이콘 이미지](../images/ui/ttl/calendar-icon.png)) 을 클릭하여 대화 상자에서 날짜를 선택합니다.
 
 ![TTL에 대해 설정되는 만료 날짜를 보여주는 이미지](../images/ui/ttl/select-date.png)
 
@@ -49,11 +45,11 @@ ht-degree: 0%
 
 데이터 세트와 TTL 날짜를 선택한 후에는 을 선택합니다 **[!UICONTROL 제출]**.
 
-![이미지를 보여주는 이미지 [!UICONTROL 제출] 선택한 단추](../images/ui/ttl/select-dataset.png)
+![이미지를 보여주는 이미지 [!UICONTROL 제출] 선택한 단추](../images/ui/ttl/submit.png)
 
 데이터 세트가 삭제되는 날짜를 확인하는 메시지가 표시됩니다. 선택 **[!UICONTROL 제출]** 계속하십시오.
 
-요청이 제출되면 작업 순서가 만들어지고 다음에 나타납니다 [!UICONTROL 소비자] 의 탭 [!UICONTROL 데이터 위생] 작업 공간. 여기에서 요청을 처리할 때 작업 주문의 상태를 모니터링할 수 있습니다.
+요청이 제출되면 작업 순서가 만들어지고 의 기본 탭에 표시됩니다 [!UICONTROL 데이터 위생] 작업 공간. 여기에서 요청을 처리할 때 작업 주문의 상태를 모니터링할 수 있습니다.
 
 ## TTL 편집 또는 취소
 
@@ -63,6 +59,4 @@ TTL의 세부 사항 페이지에서 오른쪽 레일에 예약된 삭제를 편
 
 ## 다음 단계
 
-이 문서에서는 Experience Platform UI에서 데이터 세트 TTL을 예약하는 방법을 다룹니다. UI에서 기타 데이터 위생 작업을 수행하는 방법에 대한 자세한 내용은 [데이터 위생 UI 개요](./overview.md).
-
-데이터 위생 API를 사용하여 데이터 세트 TTL을 예약하는 방법에 대해 알아보려면 [dataset TTL 끝점 안내서](../api/ttl.md).
+이 문서에서는 Experience Platform UI에서 데이터 세트 TTL을 예약하는 방법을 다룹니다. 데이터 위생 API를 사용하여 데이터 세트 TTL을 예약하는 방법에 대해 알아보려면 [dataset TTL 끝점 안내서](../api/ttl.md).
