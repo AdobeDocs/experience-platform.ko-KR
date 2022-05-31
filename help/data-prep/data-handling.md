@@ -5,9 +5,9 @@ title: 데이터 준비를 사용하여 데이터 형식 처리
 topic-legacy: overview
 description: 이 문서에서는 데이터 준비에서 다양한 데이터 유형을 처리하는 방법에 대해 간략하게 설명합니다.
 exl-id: 4ad253b7-3f83-48cd-9c46-8b5ba627c09e
-source-git-commit: 27c59904b1ebe98d65ff8d4001edc2a85cada294
+source-git-commit: 15afb221a3576b7a37ea02195549f246833b800d
 workflow-type: tm+mt
-source-wordcount: '568'
+source-wordcount: '575'
 ht-degree: 13%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 13%
 
 날짜 함수는 문자열 및 datetime 개체를 ISO 8601 형식의 ZoneDateTime 개체로 변환합니다.
 
-**포맷**
+**형식**
 
 ```http
 date({DATE}, {FORMAT}, {DEFAULT_DATE})
@@ -106,3 +106,7 @@ date({DATE}, {FORMAT}, {DEFAULT_DATE})
 | V | 시간대 ID | 텍스트 | 미국/로스앤젤레스 |
 | O | 시간대 오프셋 | 텍스트 | GMT+8 |
 | Q/q | 사분기 | 숫자/텍스트 | 3. 03; 3분기; 3분기 |
+
+## 지도 {#maps}
+
+맵은 현재 다음에서 지원되지 않습니다. [!DNL Data Prep].
