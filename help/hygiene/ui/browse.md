@@ -4,9 +4,9 @@ description: Adobe Experience Platform 사용자 인터페이스에서 기존 �
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
 hide: true
 hidefromtoc: true
-source-git-commit: e539ee73b04230ac6e3dc4801ce0f8446bec8de6
+source-git-commit: 41fee3bacb441c2f773382de215eba8bfac9f9df
 workflow-type: tm+mt
-source-wordcount: '562'
+source-wordcount: '546'
 ht-degree: 2%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 2%
 >id="platform_hygiene_workorders"
 >title="작업 순서 ID"
 >abstract="시스템에 데이터 위생 요청이 전송되면 요청된 작업을 실행하기 위한 작업 순서가 생성됩니다. 즉, 작업 순서는 현재 상태 및 기타 관련 세부 사항을 포함하는 특정 데이터 위생 프로세스를 나타냅니다. 각 작업 순서는 작성 시 자동으로 고유한 ID가 할당됩니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/browse.html" text="자세한 내용은 데이터 위생 UI 안내서 를 참조하십시오."
+>text="See the data hygiene UI guide to learn more."
 
 >[!IMPORTANT]
 >
