@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform에 대한 최신 릴리스 노트입니다.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 8e1f4d8cef1a962a056328417a1dbdff1aed2078
+source-git-commit: 1b417935d557f7d58039c508544ed768f6ad1cc4
 workflow-type: tm+mt
-source-wordcount: '1685'
+source-wordcount: '1719'
 ht-degree: 6%
 
 ---
@@ -252,7 +252,8 @@ Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 
 | 기능 | 설명 |
 | --- | --- |
 | 베타 릴리스 [!DNL Zendesk] 소스 | 를 사용하십시오 [!DNL Zendesk] 소스 - 사용자, 에이전트 및 조직 데이터를 [!DNL Zendesk] 인스턴스 [!DNL Profile] 데이터 보강 자세한 내용은 [[!DNL Zendesk] 소스 개요](../../sources/connectors/customer-success/zendesk.md) 추가 정보. |
-| Adobe 데이터 수집 지원 | Platform의 소스 카탈로그를 사용하여 데이터 수집을 위한 데이터 준비 및 데이터 준비 경고에 대한 향상된 지원을 포함하여 Platform Edge 네트워크의 데이터에 액세스할 수 있습니다. 자세한 내용은 [Adobe 데이터 수집 소스 개요](../../sources/connectors/adobe-applications/data-collection.md) 추가 정보. |
+| B2B의 일반 공급 [!DNL Microsoft Dynamics] 소스 | 이제 를 사용할 수 있습니다 [!DNL Microsoft Dynamics] 계정, 기회, 캠페인, 마케팅 목록 및 마케팅 목록 멤버와 같은 B2B 객체를 수집하기 위한 소스. 자세한 내용은 [[!DNL Microsoft Dynamics] 소스 개요](../../sources/connectors/crm/ms-dynamics.md) 추가 정보. |
+| Adobe 데이터 수집 지원 | 데이터 수집을 위한 데이터 준비 를 비롯하여 데이터 수집 Experience Edge 데이터에 액세스하고 데이터 준비의 데이터 경고 지원을 개선한 소스 카탈로그를 사용합니다. 자세한 내용은 [Adobe 데이터 수집 소스 개요](../../sources/connectors/adobe-applications/data-collection.md) 추가 정보. |
 | 다음을 사용하여 파일 수집 지원 `ISO-8859-1` 인코딩 | 를 사용하십시오 `encoding` 수집할 매개 변수 `ISO-8859-1` 클라우드 스토리지 소스를 사용하여 Platform으로 인코딩된 파일 [!DNL Flow Service] API. 다음 안내서를 참조하십시오. [클라우드 스토리지 소스 연결 만들기](../../sources/tutorials/api/collect/cloud-storage.md) 추가 정보. |
 
 {style=&quot;table-layout:auto&quot;}
