@@ -1,13 +1,11 @@
 ---
 keywords: Experience Platform;홈;인기 항목;액세스 제어;속성 기반 액세스 제어;ABAC
 title: 속성 기반 액세스 제어 레이블 관리
-description: 이 문서에서는 Adobe Experience Platform의 속성 기반 액세스 제어에 대한 정보를 제공합니다
-hide: true
-hidefromtoc: true
+description: 이 문서에서는 Adobe Experience Cloud의 권한 인터페이스를 통해 레이블을 관리하는 방법에 대한 정보를 제공합니다
 exl-id: c790f09c-fda6-48bf-95db-3f5053cd882e
-source-git-commit: 19f1e8df8cd8b55ed6b03f80e42810aefd211474
+source-git-commit: c31855bff9d87133252c43e2f2f2fe1960c7b144
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '168'
 ht-degree: 0%
 
 ---

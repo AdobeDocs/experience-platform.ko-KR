@@ -1,13 +1,11 @@
 ---
 keywords: Experience Platform;홈;인기 항목;액세스 제어;속성 기반 액세스 제어;ABAC
 title: 특성 기반 액세스 제어 샌드박스
-description: 이 문서에서는 Adobe Experience Platform의 속성 기반 액세스 제어에 대한 정보를 제공합니다
-hide: true
-hidefromtoc: true
+description: 이 문서에서는 Adobe Experience Cloud의 권한 인터페이스를 통해 샌드박스 관리에 대한 정보를 제공합니다
 exl-id: c21eb319-fc0d-442a-b778-bbfa2d6bb22d
-source-git-commit: 02a17d8aed743b03219958cae2f0585f871e56f6
+source-git-commit: c31855bff9d87133252c43e2f2f2fe1960c7b144
 workflow-type: tm+mt
-source-wordcount: '245'
+source-wordcount: '248'
 ht-degree: 0%
 
 ---

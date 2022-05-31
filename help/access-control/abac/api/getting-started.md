@@ -2,10 +2,8 @@
 keywords: Experience Platform;홈;인기 항목;속성 기반 액세스 제어;속성 기반 액세스 제어
 title: 속성 기반 액세스 제어 시작
 description: 속성 기반 액세스 제어를 사용하면 Adobe Experience Platform 내에서 역할 및 정책을 프로그래밍 방식으로 관리할 수 있습니다. 이 안내서를 따라 API를 사용하여 주요 작업을 수행하는 방법에 대해 알아보십시오.
-hide: true
-hidefromtoc: true
 exl-id: d1a66afa-dff4-49d7-b57c-527f05977155
-source-git-commit: 19f1e8df8cd8b55ed6b03f80e42810aefd211474
+source-git-commit: 567bfe089fd96cb08cb8ea7c90d065c804be9413
 workflow-type: tm+mt
 source-wordcount: '356'
 ht-degree: 4%

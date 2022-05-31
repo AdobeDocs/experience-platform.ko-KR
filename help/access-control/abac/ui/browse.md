@@ -1,13 +1,11 @@
 ---
 keywords: Experience Platform;홈;인기 항목;액세스 제어;속성 기반 액세스 제어;ABAC
 title: 속성 기반 액세스 제어 찾아보기
-description: 이 문서에서는 Adobe Experience Platform의 속성 기반 액세스 제어에 대한 정보를 제공합니다
-hide: true
-hidefromtoc: true
+description: 이 문서에서는 Adobe Experience Cloud의 권한 인터페이스 사용에 대한 정보를 제공합니다
 exl-id: 39634bde-8858-44a6-b39a-776846654fc1
-source-git-commit: 143db2c19ec5ee7628b5cb9b30e71f24b4b3dcc8
+source-git-commit: c31855bff9d87133252c43e2f2f2fe1960c7b144
 workflow-type: tm+mt
-source-wordcount: '376'
+source-wordcount: '377'
 ht-degree: 3%
 
 ---

@@ -3,10 +3,8 @@ keywords: Experience Platform;홈;인기 항목;api;속성 기반 액세스 제�
 solution: Experience Platform
 title: 정책 API 끝점
 description: 속성 기반 액세스 제어 API의 /policy 엔드포인트를 사용하면 Adobe Experience Platform에서 정책을 프로그래밍 방식으로 관리할 수 있습니다.
-hide: true
-hidefromtoc: true
 exl-id: 07690f43-fdd9-4254-9324-84e6bd226743
-source-git-commit: 19f1e8df8cd8b55ed6b03f80e42810aefd211474
+source-git-commit: 567bfe089fd96cb08cb8ea7c90d065c804be9413
 workflow-type: tm+mt
 source-wordcount: '1413'
 ht-degree: 2%
