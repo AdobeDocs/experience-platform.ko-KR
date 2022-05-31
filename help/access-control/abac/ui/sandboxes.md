@@ -5,9 +5,9 @@ description: 이 문서에서는 Adobe Experience Platform의 속성 기반 액�
 hide: true
 hidefromtoc: true
 exl-id: c21eb319-fc0d-442a-b778-bbfa2d6bb22d
-source-git-commit: 19f1e8df8cd8b55ed6b03f80e42810aefd211474
+source-git-commit: 02a17d8aed743b03219958cae2f0585f871e56f6
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '245'
 ht-degree: 0%
 
 ---
@@ -17,6 +17,10 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 >속성 기반 액세스 제어는 현재 미국 기반 의료 고객 제한된 릴리스에서 사용할 수 있습니다. 이 기능은 완전히 릴리스되면 모든 Real-time Customer Data Platform 고객이 사용할 수 있습니다.
+
+샌드박스는 단일 Experience Platform 인스턴스 내의 가상 파티션으로, 디지털 경험 애플리케이션의 개발 프로세스와의 원활한 통합을 지원합니다. 샌드박스 내에서 수행한 모든 컨텐츠 및 작업은 해당 샌드박스에만 국한되며 다른 샌드박스에는 영향을 주지 않습니다. 샌드박스에 대한 자세한 내용은 [샌드박스 개요](../../../sandboxes/home.md).
+
+## 샌드박스 구성
 
 샌드박스가 할당되는 세부 정보 및 역할을 보려면 **[!UICONTROL 샌드박스]** 탭.
 

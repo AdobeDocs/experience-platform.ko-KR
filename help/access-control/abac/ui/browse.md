@@ -5,10 +5,10 @@ description: 이 문서에서는 Adobe Experience Platform의 속성 기반 액�
 hide: true
 hidefromtoc: true
 exl-id: 39634bde-8858-44a6-b39a-776846654fc1
-source-git-commit: 19f1e8df8cd8b55ed6b03f80e42810aefd211474
+source-git-commit: 143db2c19ec5ee7628b5cb9b30e71f24b4b3dcc8
 workflow-type: tm+mt
-source-wordcount: '336'
-ht-degree: 2%
+source-wordcount: '376'
+ht-degree: 3%
 
 ---
 
@@ -17,6 +17,17 @@ ht-degree: 2%
 >[!IMPORTANT]
 >
 >속성 기반 액세스 제어는 현재 미국 기반 의료 고객 제한된 릴리스에서 사용할 수 있습니다. 이 기능은 완전히 릴리스되면 모든 Real-time Customer Data Platform 고객이 사용할 수 있습니다.
+
+권한 은 관리자가 사용자 역할 및 액세스 정책을 정의하여 제품 애플리케이션 내의 기능 및 개체에 대한 액세스 권한을 관리할 수 있는 Adobe Experience Cloud의 영역입니다.
+
+권한을 사용하여 다음을 구성할 수 있습니다.
+
+* [레이블](./labels.md)
+* [권한](./permissions.md)
+* [정책](./permissions.md)
+* [역할](./roles.md)
+* [샌드박스](./sandboxes.md)
+* [사용자](./users.md)
 
 속성 기반 액세스 제어 권한에 액세스하려면 [!DNL Experience Cloud], 조직의 관리자가 [!DNL Experience Cloud]. Adobe은 조직의 유연한 관리자 계층을 지원하지만 Adobe Experience Platform에서 권한을 구성하려면 제품 관리자여야 합니다. 의 Adobe Help Center 문서를 참조하십시오. [관리자 역할](https://helpx.adobe.com/enterprise/using/admin-roles.html) 추가 정보.
 
