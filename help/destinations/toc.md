@@ -4,9 +4,9 @@ user-guide-title: 대상 안내서
 user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화합니다.
 description: 이 문서에서는 Adobe Experience Platform 대상의 목차 목록을 설명합니다
 feature: Destinations
-source-git-commit: 0f3cb17650612399091c12a6b638471a80306729
+source-git-commit: d01875bcb89d887ca4f4dbb9e7fe6179446faa3c
 workflow-type: tm+mt
-source-wordcount: '755'
+source-wordcount: '759'
 ht-degree: 8%
 
 ---
@@ -48,6 +48,7 @@ ht-degree: 8%
       * [Experience Platform 세그먼트 공유](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
    * 광고 대상{#advertising}
       * [광고 대상 개요](./catalog/advertising/overview.md)
+      * [Adobe Advertising Cloud 연결](./catalog/advertising/adobe-advertising-cloud-connection.md)
       * [Adobe Advertising Cloud 확장](./catalog/advertising/adobe-advertising-cloud.md)
       * [Win Advertiser 변환 태그 확장](./catalog/advertising/awin-conversiontag.md)
       * [Awin Advertiser Master Tag 확장](./catalog/advertising/awin-mastertag.md)
