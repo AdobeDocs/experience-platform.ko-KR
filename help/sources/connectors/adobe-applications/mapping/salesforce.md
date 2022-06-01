@@ -3,7 +3,7 @@ keywords: Experience Platform;홈;인기 항목;Salesforce;salesforce;필드 매
 title: Salesforce 매핑 필드
 description: 아래 표에는 Salesforce 소스 필드와 해당 XDM 필드 간의 매핑이 포함되어 있습니다.
 exl-id: 33ee76f2-0495-4acd-a862-c942c0fa3177
-source-git-commit: d96c1db480957e8b0cbff01171ae11d8eaa801be
+source-git-commit: 93b6782bbb9ec25c720633a38c41cb70c251f017
 workflow-type: tm+mt
 source-wordcount: '279'
 ht-degree: 8%
@@ -67,6 +67,7 @@ ht-degree: 8%
 | `ReportsToId` | `extendedWorkDetails.reportsToID` |
 | `Salutation` | `person.name.courtesyTitle` |
 | `Title` | `extendedWorkDetails.jobTitle` |
+| `"Contact"` | `b2b.personType` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -75,8 +76,6 @@ ht-degree: 8%
 | 소스 필드 | Target XDM 필드 경로 | 참고 |
 | --- | --- | --- |
 | `City` | `workAddress.city` |
-| `ConvertedContactId` | `b2b.convertedContactID` |
-| `ConvertedContactId` | `personComponents.sourceConvertedContactID` |
 | `ConvertedDate` | `b2b.convertedDate` |
 | `Country` | `workAddress.country` |
 | `Email` | `workEmail.address` | 보조 ID. |
@@ -113,6 +112,16 @@ ht-degree: 8%
 | `Suffix` | `person.name.suffix` |
 | `Company` | `b2b.companyName` |
 | `Website` | `b2b.companyWebsite` |
+| `ConvertedContactId` | `b2b.convertedContactKey.sourceID` |
+| `"Salesforce"` | `b2b.convertedContactKey.sourceType` |
+| `"${CRM_ORG_ID}"` | `b2b.convertedContactKey.sourceInstanceID` |
+| `concat(ConvertedContactId,\"@${CRM_ORG_ID}.Salesforce\")` | `b2b.convertedContactKey.sourceKey` |
+| `CreatedDate` | `extSourceSystemAudit.createdDate` |
+| `"Lead"` | `b2b.personType` |
+| `ConvertedContactId` | `personComponents.sourceConvertedContactKey.sourceID` |
+| `"Salesforce"` | `personComponents.sourceConvertedContactKey.sourceType` |
+| `"${CRM_ORG_ID}"` | `personComponents.sourceConvertedContactKey.sourceInstanceID` |
+| `concat(ConvertedContactId,"@${CRM_ORG_ID}.Salesforce")` | `personComponents.sourceConvertedContactKey.sourceKey` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -152,7 +161,6 @@ ht-degree: 8%
 | `ParentId` | `accountParentKey.sourceID` |
 | `iif(ParentId != null && ParentId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}", "sourceKey", concat(ParentId,"@${CRM_ORG_ID}.Salesforce")), null)` | `accountParentKey` |
 | `Phone` | `accountPhone.number` |
-| `Rating` | `accountOrganization.rating` |
 | `ShippingCity` | `accountShippingAddress.city` |
 | `ShippingCountry` | `accountShippingAddress.country` |
 | `ShippingLatitude` | `accountShippingAddress._schema.latitude` |
@@ -166,6 +174,7 @@ ht-degree: 8%
 | `TickerSymbol` | `accountOrganization.tickerSymbol` |
 | `Tradestyle` | `accountTradeStyle` | data.com 기능 |
 | `Type` | `accountType` |
+| `Website` | `accountOrganization.website` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -203,6 +212,7 @@ ht-degree: 8%
 | `StageName` | `opportunityStage` |
 | `TotalOpportunityQuantity` | `opportunityQuantity` |
 | `Type` | `opportunityType` |
+| `CurrencyIsoCode` | `opportunityAmount.currencyCode` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -255,6 +265,7 @@ ht-degree: 8%
 | `LastActivityDate` | `extSourceSystemAudit.lastActivityDate` |
 | `LastViewedDate` | `extSourceSystemAudit.lastViewedDate` |
 | `LastReferencedDate` | `extSourceSystemAudit.lastReferencedDate` |
+| `CurrencyIsoCode` | `actualCost.currencyCode` |
 
 ## 캠페인 구성원 {#campaign-member}
 
@@ -277,6 +288,7 @@ ht-degree: 8%
 | `CreatedDate` | `extSourceSystemAudit.createdDate` |
 | `LastModifiedDate` | `extSourceSystemAudit.lastUpdatedDate` |
 | `FirstRespondedDate` | `firstRespondedDate` |
+| `Type` | `b2b.personType` |
 
 ## 다음 단계
 
