@@ -6,9 +6,9 @@ seo-title: Activate audience data to batch profile export destinations
 description: 세그먼트를 배치 프로필 기반 대상으로 보내 Adobe Experience Platform에서 보유한 대상 데이터를 활성화하는 방법을 알아봅니다.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 95dd6982eeecf6b13b6c8a6621b5e6563c25ae26
+source-git-commit: b19dc5c0d67bc218de0366fdc40f752ce7c3ad71
 workflow-type: tm+mt
-source-wordcount: '2411'
+source-wordcount: '2544'
 ht-degree: 0%
 
 ---
@@ -31,15 +31,15 @@ ht-degree: 0%
 
 1. 이동 **[!UICONTROL 연결 > 대상]**, 을(를) 선택하고 을(를) 선택합니다. **[!UICONTROL 카탈로그]** 탭.
 
-   ![대상 카탈로그 탭](../assets/ui/activate-batch-profile-destinations/catalog-tab.png)
+   ![대상 카탈로그 탭으로 이동하는 방법을 강조 표시하는 이미지](../assets/ui/activate-batch-profile-destinations/catalog-tab.png)
 
 1. 선택 **[!UICONTROL 세그먼트 활성화]** 세그먼트를 활성화할 대상에 해당하는 카드에서 아래 그림과 같이 세그먼트를 활성화하십시오.
 
-   ![세그먼트 활성화 단추](../assets/ui/activate-batch-profile-destinations/activate-segments-button.png)
+   ![세그먼트 활성화 단추를 강조 표시하는 이미지](../assets/ui/activate-batch-profile-destinations/activate-segments-button.png)
 
 1. 세그먼트를 활성화하는 데 사용할 대상 연결을 선택한 다음 을 선택합니다 **[!UICONTROL 다음]**.
 
-   ![대상 선택](../assets/ui/activate-batch-profile-destinations/select-destination.png)
+   ![세그먼트를 활성화할 하나 이상의 대상을 선택하는 방법을 강조 표시하는 이미지](../assets/ui/activate-batch-profile-destinations/select-destination.png)
 
 1. 다음 섹션으로 이동 [세그먼트 선택](#select-segments).
 
@@ -47,7 +47,7 @@ ht-degree: 0%
 
 세그먼트 이름 왼쪽에 있는 확인란을 사용하여 대상으로 활성화할 세그먼트를 선택한 다음 선택합니다 **[!UICONTROL 다음]**.
 
-![세그먼트 선택](../assets/ui/activate-batch-profile-destinations/select-segments.png)
+![활성화할 하나 이상의 세그먼트를 선택하는 방법을 강조 표시하는 이미지](../assets/ui/activate-batch-profile-destinations/select-segments.png)
 
 
 ## 세그먼트 내보내기 예약 {#scheduling}
@@ -68,7 +68,7 @@ ht-degree: 0%
 
 을(를) 선택합니다 **[!UICONTROL 예약 만들기]** 목적지로 전송할 세그먼트에 해당하는 단추.
 
-![예약 만들기 단추](../assets/ui/activate-batch-profile-destinations/create-schedule-button.png)
+![예약 만들기 단추를 강조 표시하는 이미지](../assets/ui/activate-batch-profile-destinations/create-schedule-button.png)
 
 ### 전체 파일 내보내기 {#export-full-files}
 
@@ -90,7 +90,7 @@ ht-degree: 0%
 
 선택 **[!UICONTROL 전체 파일 내보내기]** 을(를) 사용하여 선택한 세그먼트에 대한 모든 프로필 자격에 대한 전체 스냅숏이 포함된 파일 내보내기를 트리거합니다.
 
-![전체 파일 내보내기](../assets/ui/activate-batch-profile-destinations/export-full-files.png)
+![전체 파일 내보내기 가 선택된 UI의 이미지.](../assets/ui/activate-batch-profile-destinations/export-full-files.png)
 
 1. 를 사용하십시오 **[!UICONTROL 빈도]** 선택기를 사용하여 내보내기 빈도를 선택합니다.
 
@@ -132,7 +132,7 @@ ht-degree: 0%
 >
 >처음 내보낸 증분 파일에는 세그먼트를 사용할 수 있는 모든 프로필이 포함되어 있으며 채우기 역할을 합니다.
 
-![증분 파일 내보내기](../assets/ui/activate-batch-profile-destinations/export-incremental-files.png)
+![증분 파일 내보내기 토글이 선택된 UI의 이미지입니다.](../assets/ui/activate-batch-profile-destinations/export-incremental-files.png)
 
 1. 를 사용하십시오 **[!UICONTROL 빈도]** 선택기를 사용하여 내보내기 빈도를 선택합니다.
 
@@ -164,11 +164,15 @@ ht-degree: 0%
 
 연필 아이콘을 선택하여 모달 창을 열고 파일 이름을 편집합니다. 파일 이름은 255자로 제한됩니다.
 
-![파일 이름 구성](../assets/ui/activate-batch-profile-destinations/configure-name.png)
+>[!NOTE]
+>
+>아래 이미지는 Amazon S3 대상에 대해 파일 이름을 편집할 수 있는 방법을 보여주지만 모든 배치 대상(예: SFTP 또는 Azure Blob 저장소)에 대해 프로세스가 동일합니다.
+
+![파일 이름을 구성하는 데 사용되는 연필 아이콘을 강조 표시하는 이미지입니다.](../assets/ui/activate-batch-profile-destinations/configure-name.png)
 
 파일 이름 편집기에서 파일 이름에 추가할 다른 구성 요소를 선택할 수 있습니다.
 
-![파일 이름 옵션 편집](../assets/ui/activate-batch-profile-destinations/activate-workflow-configure-step-2.png)
+![사용 가능한 모든 파일 이름 옵션을 표시하는 이미지입니다.](../assets/ui/activate-batch-profile-destinations/activate-workflow-configure-step-2.png)
 
 대상 이름 및 세그먼트 ID는 파일 이름에서 제거할 수 없습니다. 이 외에도 다음을 추가할 수 있습니다.
 
@@ -191,15 +195,15 @@ ht-degree: 0%
 
 1. 에서 **[!UICONTROL 속성 선택]** 페이지를 선택하고 **[!UICONTROL 새 필드 추가]**.
 
-   ![새 매핑 추가](../assets/ui/activate-batch-profile-destinations/add-new-field.png)
+   ![새 필드 추가 단추를 강조 표시하는 이미지입니다.](../assets/ui/activate-batch-profile-destinations/add-new-field.png)
 
 1. 오른쪽 화살표를 선택합니다 **[!UICONTROL 스키마 필드]** 을 입력합니다.
 
-   ![소스 필드 선택](../assets/ui/activate-batch-profile-destinations/select-target-field.png)
+   ![소스 필드를 선택하는 방법을 강조 표시하는 이미지](../assets/ui/activate-batch-profile-destinations/select-target-field.png)
 
 1. 에서 **[!UICONTROL 필드 선택]** 페이지에서 대상으로 전송할 XDM 속성을 선택한 다음 **[!UICONTROL 선택]**.
 
-   ![소스 필드 선택 페이지](../assets/ui/activate-batch-profile-destinations/target-field-page.png)
+   ![소스 필드로 사용할 수 있는 다양한 필드를 보여주는 이미지입니다.](../assets/ui/activate-batch-profile-destinations/target-field-page.png)
 
 1. 매핑을 더 추가하려면 1~3단계를 반복합니다.
 
@@ -211,7 +215,7 @@ ht-degree: 0%
 * 만약 `segmentMembership.status` 필드를 선택하면 내보낸 파일이 포함됩니다. **[!UICONTROL 활성]** 초기 전체 스냅샷의 멤버 및 **[!UICONTROL 활성]** 및 **[!UICONTROL 만료됨]** 후속 증분 내보내기에 있는 멤버
 * 만약 `segmentMembership.status` 필드를 선택하지 않고 내보낸 파일만 포함합니다 **[!UICONTROL 활성]** 초기 전체 스냅샷과 후속 증분 내보내기의 멤버
 
-![권장 속성](../assets/ui/activate-batch-profile-destinations/mandatory-deduplication.png)
+![세그먼트 활성화 워크플로우의 매핑 단계에서 미리 입력된 권장 속성을 보여주는 이미지입니다.](../assets/ui/activate-batch-profile-destinations/mandatory-deduplication.png)
 
 ### 필수 속성 {#mandatory-attributes}
 
@@ -384,11 +388,11 @@ Adobe은 다음과 같은 ID 네임스페이스를 선택할 것을 권장합니
 >
 >이 단계에서 Adobe Experience Platform은 데이터 사용 정책 위반을 확인합니다. 아래는 정책이 위반되는 예입니다. 위반을 해결해야 세그먼트 활성화 워크플로우를 완료할 수 있습니다. 정책 위반을 해결하는 방법에 대한 자세한 내용은 [정책 적용](../../rtcdp/privacy/data-governance-overview.md#enforcement) ( 데이터 거버넌스 설명서 섹션) 을 참조하십시오.
 
-![데이터 정책 위반](../assets/common/data-policy-violation.png)
+![데이터 정책 위반 예를 보여주는 이미지](../assets/common/data-policy-violation.png)
 
 정책 위반이 검색되지 않은 경우 **[!UICONTROL 완료]** 을(를) 클릭하여 선택 내용을 확인하고 데이터를 대상으로 보내기 시작합니다.
 
-![검토](../assets/ui/activate-batch-profile-destinations/review.png)
+![세그먼트 활성화 워크플로우의 검토 화면을 보여주는 이미지입니다.](../assets/ui/activate-batch-profile-destinations/review.png)
 
 ## 세그먼트 활성화 확인 {#verify}
 

@@ -3,7 +3,7 @@ keywords: Amazon Kinesis;kinesis 대상;kinesis
 title: Amazon Kinesis 연결
 description: Amazon Kinesis 스토리지에 대한 실시간 아웃바운드 연결을 만들어 Adobe Experience Platform에서 데이터를 스트리밍합니다.
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: 30549f31e7ba7f9cfafd2e71fb3ccfb701b9883f
+source-git-commit: b19dc5c0d67bc218de0366fdc40f752ce7c3ad71
 workflow-type: tm+mt
 source-wordcount: '1809'
 ht-degree: 0%
@@ -98,6 +98,15 @@ Experience Platform은 고객의 보안 및 규정 준수 요구 사항을 충�
 
 ### 인증 정보 {#authentication-information}
 
+아래 필드를 입력하고 을(를) 선택합니다 **[!UICONTROL 대상에 연결]**:
+
+![Amazon Kinesis 인증 세부 사항에 대한 완료된 필드를 보여주는 UI 화면의 이미지](../../assets/catalog/cloud-storage/amazon-kinesis/kinesis-authentication-fields.png)
+
+* **[!DNL Amazon Web Services]액세스 키 및 비밀 키**: in [!DNL Amazon Web Services], 생성 `access key - secret access key` 플랫폼에 대한 액세스 권한을 부여하기 위한 쌍 [!DNL Amazon Kinesis] 계정이 필요합니다. 자세한 내용은 [Amazon Web Services 설명서](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
+* **[!UICONTROL 지역]**: 표시할 항목 [!DNL Amazon Web Services] 데이터를 스트리밍할 영역입니다.
+
+### 대상 세부 사항 {#destination-details}
+
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_kinesis_includesegmentnames"
 >title="세그먼트 이름 포함"
@@ -107,15 +116,6 @@ Experience Platform은 고객의 보안 및 규정 준수 요구 사항을 충�
 >id="platform_destinations_connect_kinesis_includesegmenttimestamps"
 >title="세그먼트 타임스탬프 포함"
 >abstract="세그먼트가 생성 및 업데이트될 때 데이터 내보내기에 UNIX 타임스탬프와 세그먼트가 활성화 대상에 매핑될 때 UNIX 타임스탬프를 포함하려면 을 전환합니다. 이 옵션을 선택한 상태로 데이터 내보내기 예제에 대한 설명서를 봅니다."
-
-아래 필드를 입력하고 을(를) 선택합니다 **[!UICONTROL 대상에 연결]**:
-
-![Amazon Kinesis 인증 세부 사항에 대한 완료된 필드를 보여주는 UI 화면의 이미지](../../assets/catalog/cloud-storage/amazon-kinesis/kinesis-authentication-fields.png)
-
-* **[!DNL Amazon Web Services]액세스 키 및 비밀 키**: in [!DNL Amazon Web Services], 생성 `access key - secret access key` 플랫폼에 대한 액세스 권한을 부여하기 위한 쌍 [!DNL Amazon Kinesis] 계정이 필요합니다. 자세한 내용은 [Amazon Web Services 설명서](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
-* **[!UICONTROL 지역]**: 표시할 항목 [!DNL Amazon Web Services] 데이터를 스트리밍할 영역입니다.
-
-### 대상 세부 사항 {#destination-details}
 
 Amazon Kinesis 대상에 인증 연결을 설정한 후 대상에 대해 다음 정보를 제공합니다.
 
