@@ -5,9 +5,9 @@ title: 데이터 준비 개요
 topic-legacy: overview
 description: 이 문서에서는 Adobe Experience Platform 내의 데이터 준비를 소개합니다.
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
-source-git-commit: 3dac1a80e640364f8c0b6b6fd81821499bf889b3
+source-git-commit: d6d8b6ad9877735848d04cb229b3059842471ee8
 workflow-type: tm+mt
-source-wordcount: '594'
+source-wordcount: '715'
 ht-degree: 0%
 
 ---
@@ -54,6 +54,14 @@ ht-degree: 0%
 ## 부분 행 업데이트 전송 [!DNL Data Prep]
 
 의 스트리밍 업데이트 [!DNL Data Prep] 부분 행 업데이트를 [!DNL Profile Service] 또한 단일 API 요청으로 새 id 링크를 만들고 설정하는 동안 데이터를 생성할 수 있습니다. 에서 업스트림을 스트리밍하는 방법에 대해 자세히 알아보려면 [!DNL Data Prep]에서 문서를 참조하십시오. [부분 행 업데이트 전송](./upserts.md).
+
+## 의 특성 기반 액세스 제어 [!DNL Data Prep]
+
+관리자는 Adobe Experience Platform의 속성 기반 액세스 제어를 사용하여 속성을 기반으로 특정 개체 및/또는 기능에 대한 액세스를 제어할 수 있습니다.
+
+속성 기반 액세스 제어를 사용하면 액세스 권한이 있는 속성만 매핑할 수 있습니다. 액세스 권한이 없는 속성은 통과 매핑 및 계산된 필드에 사용할 수 없습니다. 따라서 필수 필드에 액세스할 수 없는 경우에는 매핑을 저장할 수 없습니다. 또한 하위 속성 중 하나에 액세스할 수 없는 경우에는 개체나 개체 배열을 매핑할 수 없습니다. 그러나 개체 또는 개체 배열 내에 다른 요소를 개별적으로 매핑할 수 있습니다.
+
+자세한 내용은 [속성 기반 액세스 제어 개요](../access-control/abac/overview.md) 추가 정보.
 
 ## 다음 단계
 
