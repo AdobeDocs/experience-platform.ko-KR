@@ -5,9 +5,9 @@ title: 세그멘테이션 서비스 UI 안내서
 topic-legacy: ui guide
 description: Adobe Experience Platform 세그멘테이션 서비스는 세그먼트 정의를 만들고 관리하기 위한 사용자 인터페이스를 제공합니다.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: ce3d5e3db28d39b8d7d5a984700dd681c650ac94
+source-git-commit: 71741a18c99a003e6401bc324822d50a266350b3
 workflow-type: tm+mt
-source-wordcount: '1693'
+source-wordcount: '1746'
 ht-degree: 0%
 
 ---
@@ -47,6 +47,16 @@ Experience Platform UI에서 **[!UICONTROL 세그먼트]** 왼쪽 탐색에서 �
 
 ## 찾아보기 {#browse}
 
+>[!CONTEXTUALHELP]
+>id="platform_segments_browse_churncolumnname"
+>title="이탈"
+>abstract="이탈은 세그먼트 작업이 마지막으로 실행된 시간과 비교하여 세그먼트 정의 내에서 변경되는 프로필의 비율을 나타냅니다."
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_browse_evaluationmethodcolumnname"
+>title="평가 방법"
+>abstract="세그먼트에 대한 평가 방법에는 일괄 처리, 스트리밍 및 가장자리가 포함됩니다."
+
 을(를) 선택합니다 **[!UICONTROL 찾아보기]** IMS 조직에 대한 모든 세그먼트 정의 목록을 보려면 탭을 클릭하십시오.
 
 ![](../images/ui/overview/segment-browse-all.png)
@@ -65,7 +75,7 @@ Experience Platform UI에서 **[!UICONTROL 세그먼트]** 왼쪽 탐색에서 �
 
 이탈은 세그먼트 작업이 마지막으로 실행된 시간과 비교하여 세그먼트 정의 내에서 변경되는 프로필의 비율을 나타내는 반면 프로필 수는 세그먼트에 적합한 총 프로필 수를 나타냅니다.
 
-평가 방법은 스트리밍 또는 일괄 처리일 수 있습니다. 스트리밍 세그먼트는 데이터가 시스템에 들어올 때 지속해서 평가됩니다. 배치 세그먼트는 설정된 스케줄에 따라 평가됩니다.
+상기 평가 방법은 스트리밍, 일괄 처리 또는 에지 중 하나일 수 있다. 스트리밍 세그먼트는 데이터가 시스템에 들어올 때 지속해서 평가됩니다. 배치 세그먼트는 설정된 스케줄에 따라 평가됩니다. 에지 세그먼트는 실시간으로 평가되며, 동일한 페이지 및 다음 페이지 개인화 사용 사례를 허용합니다.
 
 ![](../images/ui/overview/segment-browse-segments.png)
 

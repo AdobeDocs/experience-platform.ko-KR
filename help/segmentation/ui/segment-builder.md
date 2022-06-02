@@ -5,9 +5,9 @@ title: 세그먼트 빌더 UI 안내서
 topic-legacy: ui guide
 description: Adobe Experience Platform UI의 세그먼트 빌더에서는 프로필 데이터 요소와 상호 작용할 수 있는 풍부한 작업 공간을 제공합니다. 작업 공간에서는 데이터 속성을 표시하는 데 사용되는 드래그 앤 드롭 타일과 같이 규칙을 만들고 편집하기 위한 직관적인 컨트롤을 제공합니다.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 708103a52187ef17892de60ff8e562a05fc2f2db
+source-git-commit: 71741a18c99a003e6401bc324822d50a266350b3
 workflow-type: tm+mt
-source-wordcount: '2457'
+source-wordcount: '2612'
 ht-degree: 1%
 
 ---
@@ -18,9 +18,14 @@ ht-degree: 1%
 
 ![](../images/ui/segment-builder/segment-builder.png)
 
-## 세그먼트 정의 빌딩 블록
+## 세그먼트 정의 빌딩 블록 {#building-blocks}
 
-세그먼트 정의의 기본 구성 요소는 속성 및 이벤트입니다. 또한 기존 대상에 포함된 속성 및 이벤트를 새 정의에 구성 요소로 사용할 수도 있습니다.
+>[!CONTEXTUALHELP]
+>id="platform_segments_createsegment_segmentbuilder_fields"
+>title="필드"
+>abstract="세그먼트를 구성하는 세 가지 필드 유형은 속성, 이벤트 및 대상입니다. 속성을 사용하면 XDM 개별 프로필 클래스에 속하는 프로필 속성을 사용할 수 있고, 이벤트를 사용하면 XDM ExperienceEvent 데이터 요소를 사용하여 발생하는 작업 또는 이벤트에 따라 대상을 만들 수 있으며, 대상은 외부 소스에서 가져온 대상을 사용할 수 있습니다."
+
+세그먼트 정의의 기본 구성 요소는 속성 및 이벤트입니다. 또한 기존 대상에 포함된 속성 및 이벤트를 새 정의에 구성 요소로 사용할 수 있습니다.
 
 이 빌딩 블록들은 **[!UICONTROL 필드]** 의 왼쪽에 있는 섹션 [!DNL Segment Builder] 작업 공간. **[!UICONTROL 필드]** 는 각 기본 빌딩 블록에 대한 탭을 포함합니다. &quot;[!UICONTROL 속성]&quot;, &quot;[!UICONTROL 이벤트]&quot; 및 &quot;[!UICONTROL 대상]&quot;.
 
@@ -204,13 +209,25 @@ ht-degree: 1%
 
 [!DNL Experience Platform] 을(를) 사용하면 여러 소스에서 데이터를 결합하여 각 개별 고객에 대한 전체 보기를 볼 수 있습니다. 이 데이터를 함께 가져올 때 병합 정책이 [!DNL Platform] 은(는) 데이터의 우선 순위가 지정되는 방식과 프로필을 만들기 위해 결합할 데이터를 결정하는 데 사용됩니다.
 
-You can select a merge policy that matches your marketing purpose for this audience or use the default merge policy provided by [!DNL Platform]. 고유한 기본 병합 정책을 만드는 등 조직에 고유한 여러 병합 정책을 만들 수 있습니다. 조직을 위한 병합 정책 만들기에 대한 단계별 지침은 [정책 병합 개요](../../profile/merge-policies/overview.md).
+이 대상의 마케팅 목적과 일치하는 병합 정책을 선택하거나 [!DNL Platform]. 고유한 기본 병합 정책을 만드는 등 조직에 고유한 여러 병합 정책을 만들 수 있습니다. 조직을 위한 병합 정책 만들기에 대한 단계별 지침은 [정책 병합 개요](../../profile/merge-policies/overview.md).
 
 세그먼트 정의에 대한 병합 정책을 선택하려면 **[!UICONTROL 필드]** 탭을 클릭한 다음 **[!UICONTROL 병합 정책]** 드롭다운 메뉴에서 사용할 병합 정책을 선택합니다.
 
 ![](../images/ui/segment-builder/merge-policy-selector.png)
 
-## 세그먼트 속성
+## 세그먼트 속성 {#segment-properties}
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_createsegment_segmentbuilder_segmentproperties"
+>title="세그먼트 속성"
+>abstract="세그먼트 속성 섹션에는 결과 세그먼트의 예상 크기가 표시되며, 총 프로필 수와 비교하여 정규화된 프로필 수가 표시됩니다. 이렇게 하면 대상 자체를 작성하기 전에 필요에 따라 세그먼트 정의를 조정할 수 있습니다."
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_createsegment_segmentbuilder_refreshestimate"
+>title="예상 새로 고침"
+>abstract="세그먼트의 예상 수를 새로 고쳐 제안된 세그먼트에 자격을 부여할 프로필 수에 대한 미리 보기를 즉시 볼 수 있습니다. 대상 추정은 해당 날의 샘플 데이터의 샘플 크기를 사용하여 생성됩니다."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=en#estimate-and-preview-an-audience" text="설명서에서 자세히 알아보기"
+
 
 세그먼트 정의를 작성할 때 **[!UICONTROL 세그먼트 속성]** 작업 공간 오른쪽의 섹션에 결과 세그먼트의 예상 크기가 표시되므로 대상 자체를 작성하기 전에 필요에 따라 세그먼트 정의를 조정할 수 있습니다.
 
