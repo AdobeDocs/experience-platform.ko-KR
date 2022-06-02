@@ -5,9 +5,9 @@ title: UI에서 데이터 사용 레이블 관리
 topic-legacy: labels
 description: 이 안내서에서는 Adobe Experience Platform 사용자 인터페이스 내에서 데이터 사용 레이블 작업을 수행하는 단계를 다룹니다.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: 3876af19ef100f29ef738cf7518696a57600945a
 workflow-type: tm+mt
-source-wordcount: '1140'
+source-wordcount: '1186'
 ht-degree: 0%
 
 ---
@@ -74,7 +74,7 @@ ht-degree: 0%
 
 ![상속된 레이블 숨기기](../images/labels/inherited-labels.png)
 
-## 필드 수준에서 레이블 관리
+## 데이터 세트 필드 수준에서 레이블 관리
 
 다음 기간 동안 워크플로우를 계속합니다 [데이터 세트 수준에서 데이터 사용 레이블 추가 및 편집](#add-labels)를 채울 때 **[!UICONTROL 데이터 거버넌스]** 해당 데이터 세트에 대한 작업 공간입니다.
 
@@ -99,6 +99,12 @@ ht-degree: 0%
 ![여러 필드를 선택하여 필드 수준 레이블을 동시에 적용합니다.](../images/labels/multiple-fields.png)
 
 상속이 최상위 수준 아래로(데이터 세트 → 필드)에서 이동한다는 것을 잊지 않는 것이 중요합니다. 즉, 필드 수준에서 적용된 레이블은 다른 필드 또는 데이터 세트에 전파되지 않습니다.
+
+## 스키마 수준에서 레이블 관리
+
+스키마 또는 해당 스키마 내의 필드에 직접 레이블을 추가할 수 있습니다. 스키마 수준에서 적용된 모든 필드는 해당 스키마를 기반으로 하는 모든 데이터 세트에 전파됩니다.
+
+다음에서 자습서를 참조하십시오. [스키마 수준 레이블 관리](../../xdm/tutorials/labels.md) 추가 정보.
 
 ## 사용자 지정 레이블 관리
 

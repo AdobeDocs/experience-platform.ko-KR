@@ -3,9 +3,9 @@ keywords: Experience Platform;홈;인기 항목;액세스 제어;속성 기반 �
 title: 속성 기반 액세스 제어 개요
 description: 이 문서에서는 Adobe Experience Platform의 속성 기반 액세스 제어에 대한 정보를 제공합니다
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: 567bfe089fd96cb08cb8ea7c90d065c804be9413
+source-git-commit: 6156d84cfdd33f8fe491e9a80e3711cf304733e9
 workflow-type: tm+mt
-source-wordcount: '1575'
+source-wordcount: '1576'
 ht-degree: 1%
 
 ---
@@ -113,7 +113,7 @@ XDM(Experience Data Model)은 디지털 경험의 성능을 향상하도록 설�
 
 속성 기반 액세스 제어를 사용하면 다음 작업을 수행할 수 있습니다.
 
-* 필드 그룹 및 또는 클래스에 특성을 적용합니다. 이렇게 하면 필드 그룹 또는 클래스 수준의 구성에 따라 동일한 필드 그룹 또는 클래스가 있는 여러 스키마에 동일한 속성이 태그가 지정된 필드가 있을 수 있습니다.
+* [필드 그룹 및 클래스에 데이터 사용 레이블 적용](../../xdm/tutorials/labels.md). 이렇게 하면 필드 그룹 또는 클래스 수준의 구성에 따라 동일한 필드 그룹 또는 클래스가 있는 여러 스키마에 동일한 속성이 태그가 지정된 필드가 있을 수 있습니다.
 * 사용자에게 할당된 역할에 적용되는 권한 세트에 따라 특정 XDM 스키마 필드에 대한 사용자 액세스를 구성합니다.
 
 XDM에 대한 자세한 내용은 [XDM 개요](../../xdm/home.md).
