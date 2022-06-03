@@ -5,10 +5,10 @@ user-guide-title: Edge Network Server API 설명서
 breadcrumb-title: Edge Network Server API 설명서
 user-guide-description: Edge Network Server API란 무엇이며 이를 사용하는 방법에 대해 알아봅니다.
 feature: Data Collection
-source-git-commit: c6ecd493bd8366d49ca0b9dd851c92c5ce732d18
+source-git-commit: 492efa6ef0d95b502839d612988f0b7f59b8bd69
 workflow-type: tm+mt
-source-wordcount: '67'
-ht-degree: 52%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 52%
 * 다른 Adobe 솔루션과 상호 작용 {#interacting-other-adobe-solutions}
    * [Adobe Analytics과 상호 작용](interacting-adobe-analytics.md)
 * 개인화 {#personalization}
-   * [Adobe 솔루션에서 개인화 컨텐츠 검색](personalization-overview.md)
+   * [개인화 개요](personalization-overview.md)
    * [offer decisioning을 통한 개인화](personalization-offer-decisioning.md)
    * [Adobe Target을 통한 개인화](personalization-target.md)
 * [오류 처리](error-handling.md)

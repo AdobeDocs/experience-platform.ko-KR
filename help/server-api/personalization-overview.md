@@ -1,19 +1,17 @@
 ---
-title: 다른 Adobe 솔루션에서 개인화 컨텐츠 검색
+title: 개인화 개요
 description: Adobe Experience Platform Edge Network Server API를 사용하여 Adobe 개인화 솔루션에서 개인화된 콘텐츠를 검색하는 방법을 알아봅니다
 seo-description: Learn how to use the Adobe Experience Platform Edge Network Server API to retrieve personalized content from Adobe personalization solutions
 keywords: 개인화; 서버 api; Adobe Experience Platform Edge Network; 개인화 검색
-source-git-commit: 4fd5b5eebdeca065582365343b605a5b9ee695bb
+source-git-commit: 492efa6ef0d95b502839d612988f0b7f59b8bd69
 workflow-type: tm+mt
-source-wordcount: '761'
+source-wordcount: '751'
 ht-degree: 9%
 
 ---
 
 
-# Adobe 솔루션에서 개인화 컨텐츠 검색
-
-## 개요 {#overview}
+# 개인화 개요
 
 사용 [!DNL Server API]을 포함한 Adobe 개인화 솔루션에서 개인화된 콘텐츠를 검색할 수 있습니다 [Adobe Target](https://business.adobe.com/products/target/adobe-target.html) 및 [offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=en).
 
@@ -138,7 +136,7 @@ Adobe 개인화 솔루션을 사용하기 전에 다음 개념을 이해하십�
 **API 형식**
 
 ```http
-POST /v2/interact
+POST /ee/v2/interact
 ```
 
 ### 요청 {#request}
