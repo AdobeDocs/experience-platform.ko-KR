@@ -4,7 +4,7 @@ description: Edge Network Server API를 사용하여 Adobe Analytics과 상호 �
 seo-description: Learn how to use the Edge Network Server API to interact with Adobe Analytics
 keywords: 데이터 수집; 콘센트 analytics; Adobe Experience Platform Edge Network api;analytics
 exl-id: b5e7a4d0-9aea-4e70-a7d6-b9aad09aaddf
-source-git-commit: 396dc8d861f0e699a76aa367fc07fe62be804cc5
+source-git-commit: 4fd5b5eebdeca065582365343b605a5b9ee695bb
 workflow-type: tm+mt
 source-wordcount: '190'
 ht-degree: 1%
@@ -28,7 +28,7 @@ Adobe Analytics이 서버 API에서 데이터를 수신하도록 하려면 다�
 ### API 형식 {#format}
 
 ```http
-POST https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM_ID}
+POST /ee/v2/interact?dataStreamId={DATASTREAM_ID}
 ```
 
 ### 요청 {#request}
