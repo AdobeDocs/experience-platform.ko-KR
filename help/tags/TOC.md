@@ -5,9 +5,9 @@ breadcrumb-title: 태그
 user-guide-description: 고객 경험을 향상시키기 위해 분석, 마케팅 및 광고 태그를 배포 및 관리하는 방법을 살펴볼 수 있습니다.
 feature: Tags
 solution: Data Collection
-source-git-commit: ff612f7ef466276757095a3a9a724781eeb6a089
+source-git-commit: 638b4fea8a80763a2b46863ecb0e3969a6fc127a
 workflow-type: tm+mt
-source-wordcount: '386'
+source-wordcount: '392'
 ht-degree: 69%
 
 ---
@@ -119,6 +119,9 @@ ht-degree: 69%
       * [!DNL BrightCove] 비디오 추적 {#brightcove}
          * [개요](./extensions/web/brightcove/overview.md)
          * [릴리스 정보](./extensions/web/brightcove/release-notes.md)
+      * Google 데이터 레이어 {#google-data-layer}
+         * [개요](./extensions/web/google-data-layer/overview.md)
+         * [릴리스 정보](./extensions/web/google-data-layer/release-notes.md)
       * [!DNL YouTube] 비디오 추적 확장 {#youtube}
          * [개요](./extensions/web/youtube/overview.md)
          * [릴리스 정보](./extensions/web/youtube/release-notes.md)
