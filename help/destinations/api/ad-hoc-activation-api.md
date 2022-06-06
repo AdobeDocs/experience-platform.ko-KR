@@ -6,9 +6,9 @@ description: 이 문서에서는 활성화 전에 발생하는 세분화 작업�
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 049b9c3ef2b96001a23ee54ac3e86a4df7b4ecea
 workflow-type: tm+mt
-source-wordcount: '1047'
+source-wordcount: '1102'
 ht-degree: 2%
 
 ---
@@ -65,7 +65,7 @@ Adobe Experience Platform API를 호출하려면 먼저 다음 전제 조건을 
 
 * Adobe Experience Platform에 액세스할 수 있는 IMS 조직 계정이 있습니다.
 * Experience Platform 계정에는 `developer` 및 `user` Adobe Experience Platform API 제품 프로필에 대해 활성화된 역할. 다음 사항에 문의하십시오. [Admin Console](../../access-control/home.md) 관리자가 계정에 대해 이러한 역할을 사용할 수 있도록 설정
-* Adobe ID이 있습니다. Adobe ID이 없는 경우 [Adobe 개발자 콘솔](https://developer.adobe.com/console) 새 계정을 만듭니다.
+* Adobe ID이 있습니다. Adobe ID이 없는 경우 [Adobe Developer 콘솔](https://developer.adobe.com/console) 새 계정을 만듭니다.
 
 ## 2단계: 자격 증명 수집 {#credentials}
 
@@ -91,9 +91,10 @@ Experience Platform의 리소스는 특정 가상 샌드박스로 분리할 수 
 
 임시 활성화 API를 통해 세그먼트를 활성화하려면 먼저 선택한 대상에 대해 플랫폼 UI에 활성화 플로우가 구성되어 있어야 합니다.
 
-활성화 워크플로우로 이동하고, 세그먼트를 선택하고, 일정을 구성하고, 활성화합니다.
+활성화 워크플로우로 이동하고, 세그먼트를 선택하고, 일정을 구성하고, 활성화합니다. UI 또는 API를 사용하여 활성화 흐름을 만들 수 있습니다.
 
-배치 대상에 대한 활성화 흐름을 구성하는 방법에 대한 자세한 지침은 다음 자습서를 참조하십시오. [대상자 데이터를 활성화하여 묶음 프로필 내보내기 대상 활성화](../ui/activate-batch-profile-destinations.md).
+* [플랫폼 UI를 사용하여 묶음 프로필 내보내기 대상에 활성화 흐름 만들기](../ui/activate-batch-profile-destinations.md)
+* [Flow Service API를 사용하여 배치 프로필 내보내기 대상에 연결하고 데이터를 활성화합니다](../api/connect-activate-batch-destinations.md)
 
 ## 4단계: 최신 세그먼트 내보내기 작업 ID 가져오기 {#segment-export-id}
 
@@ -156,7 +157,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adho
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | 세그먼트를 활성화할 대상 인스턴스의 ID입니다. |
+| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | 세그먼트를 활성화할 대상 인스턴스의 ID입니다. 로 이동하여 Platform UI에서 이러한 ID를 가져올 수 있습니다 **[!UICONTROL 대상]** > **[!UICONTROL 찾아보기]** 탭하고 원하는 대상 행을 클릭하여 오른쪽 레일에 대상 ID를 표시합니다. 자세한 내용은 [대상 작업 공간 설명서](/help/destinations/ui/destinations-workspace.md#browse). |
 | <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | 선택한 대상으로 활성화할 세그먼트의 ID입니다. |
 | <ul><li>`exportId1`</li></ul> | 의 응답으로 반환된 ID입니다 [세그먼트 내보내기](../../segmentation/api/export-jobs.md#retrieve-list) 작업. 자세한 내용은 [4단계: 최신 세그먼트 내보내기 작업 ID 가져오기](#segment-export-id) 를 참조하십시오. |
 
