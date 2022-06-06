@@ -3,9 +3,9 @@ keywords: target 개인화; 대상; experience platform target 대상;adobe targ
 title: Adobe Target 연결
 description: Adobe Target은 웹 사이트, 모바일 앱 등에서 모든 인바운드 고객 상호 작용에 실시간 AI 기반의 개인화 및 실험 기능을 제공하는 애플리케이션입니다.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 46e732dfc630ad1875a57289a6e6cf9c964b9547
+source-git-commit: 12e2c1a32f08b6942d6e4aefc35a53bae8387d7e
 workflow-type: tm+mt
-source-wordcount: '752'
+source-wordcount: '846'
 ht-degree: 1%
 
 ---
@@ -16,9 +16,11 @@ ht-degree: 1%
 
 Adobe Target은 웹 사이트, 모바일 앱 등에서 모든 인바운드 고객 상호 작용에 실시간 AI 기반의 개인화 및 실험 기능을 제공하는 애플리케이션입니다.
 
-Adobe Target은 Adobe Experience Platform의 개인화 연결입니다.
+Adobe Target 는 Adobe Experience Platform 대상 카탈로그의 개인화 연결입니다.
 
 ## 전제 조건 {#prerequisites}
+
+### 데이터 스트림 ID {#datastream-id}
 
 Adobe Target 연결을 구성할 때 [데이터 스트림 ID 사용](#parameters), 다음을 수행해야 합니다. [Adobe Experience Platform Web SDK](../../../edge/home.md) 구현됨.
 
@@ -27,6 +29,15 @@ Adobe Target 연결을 구성할 때 [데이터 스트림 ID 사용](#parameters
 >[!IMPORTANT]
 >
 >만들기 전 [!DNL Adobe Target] 연결, 방법에 대한 안내서를 참조하십시오. [동일한 페이지 및 다음 페이지 개인화를 위한 개인화 대상 구성](../../ui/configure-personalization-destinations.md). 이 안내서에서는 여러 Experience Platform 구성 요소에서 동일한 페이지 및 다음 페이지 개인화 사용 사례에 필요한 구성 단계를 안내합니다. 동일한 페이지 및 다음 페이지 개인화를 사용하려면 Adobe Target 연결을 구성할 때 데이터 스트림 ID를 사용해야 합니다.
+
+### Adobe Target의 사전 요구 사항 {#prerequisites-in-adobe-target}
+
+Adobe Target에서 사용자가 다음을 보유하고 있는지 확인합니다.
+
+* 에 액세스 [기본 작업 공간](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html?lang=en#default-workspace);
+* 다음 **승인자** [역할](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html?lang=en#roles-and-permissions).
+
+에 대한 권한 부여에 대한 자세한 내용 [Target Premium](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html?lang=en#section_8C425E43E5DD4111BBFC734A2B7ABC80) 및 대상 [Target Standard](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/users/user-management.html?lang=en#roles-permissions).
 
 ## 내보내기 유형 및 빈도 {#export-type-frequency}
 
