@@ -5,10 +5,10 @@ user-guide-title: Edge Network Server API 설명서
 breadcrumb-title: Edge Network Server API 설명서
 user-guide-description: Edge Network Server API란 무엇이며 이를 사용하는 방법에 대해 알아봅니다.
 feature: Data Collection
-source-git-commit: 492efa6ef0d95b502839d612988f0b7f59b8bd69
+source-git-commit: 951773d7a314b3d128fa364a7a034e0e8514bbe4
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '65'
+ht-degree: 53%
 
 ---
 
@@ -17,6 +17,7 @@ ht-degree: 0%
 
 
 * [개요](overview.md)
+* [성능 보호 기능](guardrails.md)
 * [인증](authentication.md)
 * 데이터 수집 {#data-collection}
    * [단일 이벤트 데이터 수집](interactive-data-collection.md)
