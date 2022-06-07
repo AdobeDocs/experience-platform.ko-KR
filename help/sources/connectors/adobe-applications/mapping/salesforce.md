@@ -3,7 +3,7 @@ keywords: Experience Platform;홈;인기 항목;Salesforce;salesforce;필드 매
 title: Salesforce 매핑 필드
 description: 아래 표에는 Salesforce 소스 필드와 해당 XDM 필드 간의 매핑이 포함되어 있습니다.
 exl-id: 33ee76f2-0495-4acd-a862-c942c0fa3177
-source-git-commit: 93b6782bbb9ec25c720633a38c41cb70c251f017
+source-git-commit: 7921eded0a63b8667e693aefab87013c12cd4061
 workflow-type: tm+mt
 source-wordcount: '279'
 ht-degree: 8%
@@ -100,7 +100,6 @@ ht-degree: 8%
 | `LeadSource` | `personComponents.personSource` |
 | `Latitude` | `workAddress._schema.latitude` |
 | `Longitude` | `workAddress._schema.longitude` |
-| `MiddleName` | `person.name.middleName` |
 | `Name` | `person.name.fullName` |
 | `PostalCode` | `workAddress.postalCode` |
 | `Salutation` | `person.name.courtesyTitle` |

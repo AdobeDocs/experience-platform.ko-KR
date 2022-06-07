@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Zendesk 소스 커넥터 개요
 description: API 또는 사용자 인터페이스를 사용하여 Zendesk을 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: 9f245783-949d-4f40-9cf3-8991b4b6d780
-source-git-commit: 19f1e8df8cd8b55ed6b03f80e42810aefd211474
+source-git-commit: 61b694ca5fbd3548243663b3f1bff06aaca72434
 workflow-type: tm+mt
 source-wordcount: '391'
 ht-degree: 0%
@@ -33,7 +33,7 @@ Experience Platform은 타사 고객 성공 애플리케이션에서 데이터�
 
 이 섹션에서는 다음을 인증하기 위해 완료해야 하는 필수 구성 요소 단계에 대해 설명합니다 [!DNL Zendesk] 계정이 필요합니다.
 
-* 를 인증하는 첫 번째 단계 [!DNL Zendesk] 계정을 사용하는 경우 [!DNL Zendesk] 지원 계정. 아직 표시되지 않은 경우 [[!DNL Zendesk]페이지 등록](https://www.zendesk.com/register/) 을 입력하여 Zendesk 계정을 등록하고 만듭니다.
+* 를 인증하는 첫 번째 단계 [!DNL Zendesk] 계정을 사용하는 경우 [!DNL Zendesk] 지원 계정. 아직 표시되지 않은 경우 [[!DNL Zendesk] 페이지 등록](https://www.zendesk.com/register/) 을 입력하여 Zendesk 계정을 등록하고 만듭니다.
 * 등록되면 다음 위치로 이동합니다 [[!DNL Zendesk] 웹 사이트](https://www.zendesk.com/login/) 그리고 **하위 도메인**.
 * 다음 을 선택합니다. **[!DNL Settings]** > **[!DNL Apps and Integrations]** > **[!DNL Zendesk API]**.
 * 마지막으로 API 토큰을 **[!DNL API token]** 섹션을 참조하십시오.
