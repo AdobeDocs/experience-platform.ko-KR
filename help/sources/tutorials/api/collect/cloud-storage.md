@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: 이 자습서에서는 소스 커넥터 및 API를 사용하여 타사 클라우드 저장소에서 데이터를 검색하고 Platform으로 가져오는 단계를 설명합니다.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: 88e6f084ce1b857f785c4c1721d514ac3b07e80b
+source-git-commit: e059ff1066ef0197207667b40fb2f31c296464cb
 workflow-type: tm+mt
-source-wordcount: '1549'
+source-wordcount: '1586'
 ht-degree: 1%
 
 ---
@@ -99,7 +99,8 @@ curl -X POST \
 | `data.properties.columnDelimiter` | (선택 사항) 플랫 파일을 수집할 때 지정할 수 있는 단일 문자 열 구분 기호입니다. 단일 문자 값은 허용 열 구분 기호입니다. 지정하지 않으면 쉼표( )를 입력합니다`,`)가 기본값으로 사용됩니다. **참고**: 다음 `columnDelimiter` 속성은 구분된 파일을 수집할 때만 사용할 수 있습니다. |
 | `data.properties.encoding` | (선택 사항) 데이터를 Platform에 수집할 인코딩 유형을 정의하는 속성입니다. 지원되는 인코딩 유형은 다음과 같습니다. `UTF-8` 및 `ISO-8859-1`. **참고**: 다음 `encoding` 매개 변수는 구분된 CSV 파일을 수집할 때만 사용할 수 있습니다. 다른 파일 유형은 기본 인코딩으로 수집됩니다. `UTF-8`. |
 | `data.properties.compressionType` | (선택 사항) 수집을 위한 압축 파일 유형을 정의하는 속성입니다. 지원되는 압축 파일 유형은 다음과 같습니다. `bzip2`, `gzip`, `deflate`, `zipDeflate`, `tarGzip`, 및 `tar`. **참고**: 다음 `compressionType` 속성은 구분된 또는 JSON 파일을 수집할 때만 사용할 수 있습니다. |
-| `params.path` | 액세스하는 소스 파일의 경로입니다. |
+| `params.path` | 액세스하는 소스 파일의 경로입니다. 이 매개 변수는 개별 파일 또는 전체 폴더를 가리킵니다. |
+| `params.type` | 수집 중인 소스 데이터 파일의 파일 유형입니다. 유형 사용 `file` 개별 파일을 수집하고 유형을 사용하려면 `folder` 전체 폴더를 수집하려면 다음을 수행하십시오. |
 | `connectionSpec.id` | 특정 클라우드 스토리지 소스와 연결된 연결 사양 ID입니다. 자세한 내용은 [부록](#appendix) 연결 사양 ID 목록 |
 
 **응답**
