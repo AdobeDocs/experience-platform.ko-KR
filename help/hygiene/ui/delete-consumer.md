@@ -4,7 +4,7 @@ description: Adobe Experience Platform UI에서 소비자 레코드를 삭제하
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
 hide: true
 hidefromtoc: true
-source-git-commit: c2e7cf1859f6a2b277783cdec535ecc208703fac
+source-git-commit: 95d75292b7697ef4f98e3ebd34c04724019ac37f
 workflow-type: tm+mt
 source-wordcount: '1113'
 ht-degree: 0%
@@ -57,7 +57,7 @@ Platform의 ID에 대한 자세한 내용은 다음 설명서를 참조하십시
 >
 >선택 **[!UICONTROL 모든 데이터 세트]** 선택 사항으로 인해 삭제 작업이 오래 걸릴 수 있으며 정확한 레코드 삭제가 수행되지 않을 수 있습니다.
 
-## 소비자 ID 제공 {#identities}
+## 소비자 ID 제공 {#provide-consumer-identities}
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_primaryidentity"
