@@ -4,9 +4,9 @@ description: Adobe Experience Platform UI에서 소비자 레코드를 삭제하
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
 hide: true
 hidefromtoc: true
-source-git-commit: 95d75292b7697ef4f98e3ebd34c04724019ac37f
+source-git-commit: 6f94c7c5e844eaddd50653296875886757f6fb35
 workflow-type: tm+mt
-source-wordcount: '1113'
+source-wordcount: '1110'
 ht-degree: 0%
 
 ---
@@ -62,12 +62,12 @@ Platform의 ID에 대한 자세한 내용은 다음 설명서를 참조하십시
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_primaryidentity"
 >title="기본 ID"
->abstract="기본 ID는 Experience Platform에서 소비자의 프로필에 레코드를 연결하는 속성입니다. 데이터 세트에 대한 기본 ID 필드는 데이터 세트가 기반으로 하는 스키마에 의해 정의됩니다. 이 열에서 Experience Cloud ID에 대한 유형(또는 네임스페이스)을 이메일 주소의 경우 &quot;이메일&quot;, ID의 &quot;ecid&quot;와 같이 소비자의 기본 ID에 제공해야 합니다. 자세한 내용은 데이터 위생 UI 안내서를 참조하십시오."
+>abstract="기본 ID는 Experience Platform에서 소비자의 프로필에 레코드를 연결하는 속성입니다. 데이터 세트에 대한 기본 ID 필드는 데이터 세트가 기반으로 하는 스키마에 의해 정의됩니다. 이 열에서 소비자의 기본 ID에 대한 유형(또는 네임스페이스)을 제공해야 합니다(예: ) `email` 이메일 주소 및 `ecid` Experience Cloud ID용. 자세한 내용은 데이터 위생 UI 안내서를 참조하십시오."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_identityvalue"
 >title="ID 값"
->abstract="이 열에서 소비자의 기본 ID에 대한 값을 제공해야 합니다. 이 값은 왼쪽 열에 제공된 ID 유형과 일치해야 합니다. 기본 ID 유형이 &quot;이메일&quot;인 경우 값은 소비자의 이메일 주소여야 합니다. 자세한 내용은 데이터 위생 UI 안내서를 참조하십시오."
+>abstract="이 열에서 소비자의 기본 ID에 대한 값을 제공해야 합니다. 이 값은 왼쪽 열에 제공된 ID 유형과 일치해야 합니다. 기본 ID 유형이 `email`: 값은 소비자의 이메일 주소여야 합니다. 자세한 내용은 데이터 위생 UI 안내서를 참조하십시오."
 
 소비자 데이터를 삭제할 때 시스템에서 삭제할 레코드를 결정할 수 있도록 ID 정보를 제공해야 합니다. Platform의 모든 데이터 세트에 대해 레코드는 **기본 ID** 데이터 집합 스키마에 의해 정의된 필드입니다.
 
