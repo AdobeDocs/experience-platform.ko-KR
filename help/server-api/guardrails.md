@@ -2,13 +2,13 @@
 title: 성능 보호 기능
 description: 최적의 성능 보호 기능 내에서 서버 API를 사용하는 방법을 알아봅니다
 keywords: 데이터 수집;수집;에지 네트워크;api;sla;slt;서비스 수준
-source-git-commit: 951773d7a314b3d128fa364a7a034e0e8514bbe4
+exl-id: 063d0fbb-26d1-4727-9dea-8e7223b2173d
+source-git-commit: 6f0eb81f9709cf4fcaea94334449117c4ed76107
 workflow-type: tm+mt
-source-wordcount: '435'
+source-wordcount: '426'
 ht-degree: 2%
 
 ---
-
 
 # 성능 보호 기능
 
@@ -20,12 +20,12 @@ Adobe은 사용 제한을 초과하여 발생하는 성능 저하에 대해 책�
 
 ## 정의
 
-* **사용 가능** 은(는) Experience Adobe Experience Platform Edge Network에서 처리한 요청에서 오류가 발생하지 않고 프로비저닝된 Adobe Experience Platform Edge Network API와 관련된 요청의 비율로 5분마다 계산됩니다. 테넌트가 지정된 5분 간격으로 요청을 하지 않은 경우 해당 간격은 100%를 사용할 수 있는 것으로 간주됩니다.
+* **사용 가능** 은 Experience Platform 에지 네트워크에서 처리한 요청에서 오류가 발생하지 않고 프로비저닝된 에지 네트워크 API와 관련된 요청의 비율로 5분마다 계산됩니다. 테넌트가 지정된 5분 간격으로 요청을 하지 않은 경우 해당 간격은 100%를 사용할 수 있는 것으로 간주됩니다.
 * **월별 가동 시간 비율** 특정 지역의 경우 한 달에 5분 간격 모두에 대한 가용성의 평균으로 계산됩니다.
-* An **업스트림** Adobe Edge 네트워크 뒤의 서비스로서, Adobe 서버 측 전달, Adobe Edge 세그멘테이션 또는 Adobe Target과 같은 특정 데이터 스트림에 대해 활성화됩니다.
+* An **업스트림** 은 에지 네트워크 뒤의 서비스로, Adobe 서버 측 전달, Adobe Edge 세그멘테이션 또는 Adobe Target과 같은 특정 데이터 스트림에 대해 활성화됩니다.
 * A **요청 단위** 은 요청의 8KB 조각과 데이터 스트림에 대해 구성된 하나의 업스트림에 해당합니다.
 * A **요청** 고객 소유 애플리케이션에서 로 보낸 단일 메시지입니다. [!DNL Server API]. 요청에는 하나 이상의 요청 단위가 포함될 수 있습니다.
-* An **오류** 은 Adobe Experience Platform Edge Network로 인해 실패하는 모든 요청입니다 [내부 서비스 오류](error-handling.md).
+* An **오류** 은 에지 네트워크로 인해 실패하는 모든 요청입니다. [내부 서비스 오류](error-handling.md).
 
 ## 서비스 제한
 
