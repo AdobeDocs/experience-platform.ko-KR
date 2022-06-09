@@ -4,9 +4,9 @@ description: Adobe Experience Platform Edge Network Server API에 대한 인증�
 seo-description: Learn how to configure authentication for the Adobe Experience Platform Edge Network Server API
 keywords: 데이터 수집; 인증; Adobe Experience Platform Edge Network api; 권한
 exl-id: 73c7a186-9b85-43fe-a586-4c6260b6fa8c
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 64093bdb8cb1bf2f14caaa562e196a1d69e74359
 workflow-type: tm+mt
-source-wordcount: '628'
+source-wordcount: '648'
 ht-degree: 2%
 
 ---
@@ -15,15 +15,15 @@ ht-degree: 2%
 
 ## 개요
 
-다음 [!DNL Adobe Experience Platform Edge Network Server API] 는 이벤트 소스 및 API 수집 도메인에 따라 인증되고 인증되지 않은 데이터 수집을 모두 처리합니다.
+다음 [!DNL Edge Network Server API] 는 이벤트 소스 및 API 수집 도메인에 따라 인증되고 인증되지 않은 데이터 수집을 모두 처리합니다.
 
-각 요청에 대해 [!DNL Server API] 데이터 스트림 확인 `access_type` 설정
+각 요청에 대해 [!DNL Server API] 데이터 스트림 확인 [!DNL access type] 설정 이 설정을 사용하여 고객은 인증된 데이터 또는 인증된 데이터와 인증되지 않은 데이터를 모두 허용하도록 데이터 스트림을 구성할 수 있습니다. 기본적으로 두 유형의 데이터는 모두 허용됩니다.
 
-이 설정을 사용하여 고객은 인증된 데이터 또는 인증된 데이터와 인증되지 않은 데이터를 모두 허용하도록 데이터 스트림을 구성할 수 있습니다. 기본적으로 두 유형의 데이터는 모두 허용됩니다.
+데이터 스트림 액세스 유형 구성에 대한 자세한 내용은 다음 방법에 대한 설명서를 참조하십시오 [데이터 스트림 만들기 및 구성](../edge/datastreams/overview.md#create).
 
-다음은 를 기반으로 한 동작 요약입니다 `access_type` 구성 및 요청을 받은 끝점입니다.
+다음은 데이터 스트림을 기반으로 한 동작 요약입니다 [!DNL Access Type] 구성 및 요청을 받은 끝점입니다.
 
-| `access_type` | edge.adobedc.net | server.adobedc.net |
+| [!DNL Access Type] | edge.adobedc.net | server.adobedc.net |
 |-----------------|-------------------------------|-----------------------|
 | 혼합(기본값) | 요청을 인증하지 않음 | 요청 인증 |
 | 인증됨 | 요청 인증 | 요청 인증 |
@@ -36,7 +36,7 @@ ht-degree: 2%
 
 * Adobe Experience Platform에 액세스할 수 있는 IMS 조직 계정이 있습니다.
 * Experience Platform 계정에는 `developer` 및 `user` Adobe Experience Platform API 제품 프로필에 대해 활성화된 역할. 다음 사항에 문의하십시오. [Admin Console](../access-control/home.md) 관리자가 계정에 대해 이러한 역할을 사용할 수 있도록 설정
-* Adobe ID이 있습니다. Adobe ID이 없는 경우 [Adobe 개발자 콘솔](https://developer.adobe.com/console) 새 계정을 만듭니다.
+* Adobe ID이 있습니다. Adobe ID이 없는 경우 [Adobe Developer 콘솔](https://developer.adobe.com/console) 새 계정을 만듭니다.
 
 ## 자격 증명 수집 {#credentials}
 
