@@ -3,9 +3,9 @@ title: 데이터 스트림 개요
 description: 클라이언트측 Experience Platform SDK 통합 기능을 Adobe 제품 및 서드파티 대상과 연결합니다.
 keywords: 구성;데이터 스트림;데이터 스트림 ID;에지;데이터 스트림 ID;환경 설정;edgeConfigId;id 동기화 사용;ID 동기화 컨테이너 ID;샌드박스;스트리밍 입력;이벤트 데이터 세트;대상;클라이언트 코드;Target 환경 ID;쿠키 대상;Analytics 설정 차단 보고서 세트 ID;데이터 수집을 위한 데이터 준비;데이터 수집;데이터 매퍼;XDM 매퍼;Edge의 매퍼;Mapper;Mapper
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: fe66cbd61d546da8fb6621ef78b3565126cb193d
+source-git-commit: e0c39c20ce536b057367da2854901e33a3f67dd6
 workflow-type: tm+mt
-source-wordcount: '1686'
+source-wordcount: '1774'
 ht-degree: 2%
 
 ---
@@ -53,6 +53,7 @@ Experience Platform에서 사용하도록 이 데이터 스트림을 구성하�
 | [!UICONTROL 지리적 위치] | 사용자의 IP 주소를 기준으로 GPS 조회가 발생하는지 여부를 결정합니다. 기본 설정 **[!UICONTROL 없음]** GPS 조회가 비활성화되고 **[!UICONTROL 구/군/시]** 설정은 GPS 좌표를 소수점 이하 두 자리로 제공합니다. |
 | [!UICONTROL 자사 ID 쿠키] | 이 설정이 활성화되면 Edge Network에 [자사 장치 ID](../identity/first-party-device-ids.md)를 채우는 것이 좋습니다.<br><br>이 설정을 활성화할 때 ID가 저장되어야 하는 쿠키의 이름을 제공해야 합니다. |
 | [!UICONTROL 타사 ID 동기화] | ID 동기화를 컨테이너로 그룹화하여 다른 시간에 다른 ID 동기화를 실행할 수 있습니다. 이 설정을 사용하면 이 데이터 스트림에 대해 실행 중인 ID 동기화 컨테이너를 지정할 수 있습니다. |
+| [!UICONTROL 액세스 유형] | Adobe Analytics에서 [!DNL Edge Network] 는 데이터 스트림에 대해 허용합니다. <ul><li>**[!UICONTROL 혼합 인증]**: 이 옵션을 선택하면 Edge Network에서 인증된 요청과 인증되지 않은 요청을 모두 허용합니다. 웹 SDK를 사용할 계획이나 [Mobile SDK](https://aep-sdks.gitbook.io/docs/)와 함께 [서버 API](../../server-api/overview.md). </li><li>**[!UICONTROL 인증만]**: 이 옵션을 선택하면 에지 네트워크에서 인증된 요청만 허용합니다. 서버 API만 사용하고 인증되지 않은 요청이 에 의해 처리되지 않도록 하려면 이 옵션을 선택합니다 [!DNL Edge Network]. </li></ul> |
 
 여기에서 Experience Platform을 위해 데이터 스트림을 구성하는 경우 다음 자습서를 따르십시오. [데이터 수집을 위한 데이터 준비](./data-prep.md) 이 안내서로 돌아가기 전에 Platform 이벤트 스키마에 데이터를 매핑하려면 다음을 수행하십시오. 그렇지 않으면 을 선택합니다. **[!UICONTROL 저장]** 그리고 다음 섹션으로 계속하십시오.
 
