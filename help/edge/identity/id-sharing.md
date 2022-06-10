@@ -2,13 +2,13 @@
 title: 모바일-투-웹 및 도메인 간 ID 공유
 description: 모바일, 웹 속성 및 도메인 간에 방문자 ID를 유지하는 방법을 알아봅니다
 keywords: ID;모바일;id;공유;도메인;도메인 간;sdk;플랫폼;
-source-git-commit: 55e28f749741c653a230b42fabf5a047ba8c7d01
+exl-id: b9bb236f-52cf-4615-96d8-1137d957de8c
+source-git-commit: 3b65143e33804b251f888dbe2a69d238b3f4cda3
 workflow-type: tm+mt
-source-wordcount: '893'
+source-wordcount: '901'
 ht-degree: 1%
 
 ---
-
 
 # 모바일-투-웹 및 도메인 간 ID 공유
 
@@ -32,9 +32,11 @@ Adobe Experience Platform Web SDK는 고객이 모바일 앱과 모바일 웹 �
 
 ## 전제 조건 {#prerequisites}
 
-모바일-투-웹 및 도메인 간 ID 공유를 사용하려면 [!DNL Web SDK] 버전 2.11.0 이상.
+모바일-to-web 및 도메인 간 ID 공유를 사용하려면 다음을 사용해야 합니다 [!DNL Web SDK] 버전 2.11.0 이상.
 
 Edge Network 모바일 구현의 경우 이 기능은 [에지 네트워크의 ID](https://aep-sdks.gitbook.io/docs/foundation-extensions/identity-for-edge-network) 확장 프로그램: 버전 1.1.0(iOS 및 Android)부터 시작합니다.
+
+이 기능은 [!DNL VisitorAPI.js] 버전 1.7.0 이상
 
 ## 모바일-웹 ID 공유 {#mobile-to-web}
 
