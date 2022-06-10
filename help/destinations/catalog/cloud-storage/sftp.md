@@ -3,9 +3,9 @@ keywords: SFTP;sftp
 title: SFTP 연결
 description: SFTP 서버에 대한 라이브 아웃바운드 연결을 만들어 Adobe Experience Platform에서 구분된 데이터 파일을 주기적으로 내보냅니다.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: 0b094e635e6d22e58e5aa79a374df0879167a833
+source-git-commit: 715533352e84573f60f012504988595af6146e2f
 workflow-type: tm+mt
-source-wordcount: '642'
+source-wordcount: '671'
 ht-degree: 1%
 
 ---
@@ -50,8 +50,8 @@ SFTP 서버에 대한 라이브 아웃바운드 연결을 만들어 Adobe Experi
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_sftp_ssh"
->title="SSH 키"
->abstract="SSH 키에는 Base64 문자열이 필요합니다."
+>title="개인 SSH 키"
+>abstract="개인 SSH 키는 Base64로 인코딩된 문자열로 포맷해야 하며 암호로 보호되어서는 안 됩니다. "
 
 When [연결](../../ui/connect-destination.md) 이 대상에 대해 다음 정보를 제공해야 합니다.
 
@@ -59,7 +59,7 @@ When [연결](../../ui/connect-destination.md) 이 대상에 대해 다음 정�
 
 을(를) 선택하는 경우 **[!UICONTROL 기본 인증]** sftp 위치에 연결할 유형:
 
-![SFTP 대상 기본 인증](../..//assets/catalog/cloud-storage/sftp/stfp-basic-authentication.png)
+![SFTP 대상 기본 인증](../../assets/catalog/cloud-storage/sftp/stfp-basic-authentication.png)
 
 * **[!UICONTROL 호스트]**: SFTP 저장소 위치의 주소입니다.
 * **[!UICONTROL 사용자 이름]**: SFTP 저장소 위치에 로그인할 사용자 이름;
@@ -77,11 +77,11 @@ When [연결](../../ui/connect-destination.md) 이 대상에 대해 다음 정�
 * **[!UICONTROL 도메인]**: SFTP 계정의 IP 주소 또는 도메인 이름을 입력합니다
 * **[!UICONTROL 포트]**: SFTP 저장소 위치에서 사용되는 포트입니다.
 * **[!UICONTROL 사용자 이름]**: SFTP 저장소 위치에 로그인할 사용자 이름;
-* **[!UICONTROL SSH 키]**: SFTP 저장소 위치에 로그인하는 SSH 키.
+* **[!UICONTROL SSH 키]**: SFTP 저장소 위치에 로그인하는 데 사용되는 개인 SSH 키입니다. 개인 키는 Base64로 인코딩된 문자열로 포맷해야 하며 암호로 보호되어서는 안 됩니다.
 * **[!UICONTROL 암호화 키]**: 선택적으로 RSA 형식의 공개 키를 첨부하여 내보낸 파일에 암호화를 추가할 수 있습니다. 공개 키는 [!DNL Base64] 인코딩된 문자열입니다.
    * 예: `----BEGIN PGP PUBLIC KEY BLOCK---- {Base64-encoded string} ----END PGP PUBLIC KEY BLOCK----`. 간결성을 위해 중간 부분이 단축된 올바른 형식의 PGP 키의 예를 아래 를 참조하십시오.
 
-      ![PGP 키](../..//assets/catalog/cloud-storage/sftp/pgp-key.png)
+      ![PGP 키](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 #### 대상 세부 사항 {#destination-details}
 
