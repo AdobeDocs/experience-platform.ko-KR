@@ -6,7 +6,7 @@ topic-legacy: queries
 type: Tutorial
 description: 이 문서에서는 Adobe Experience Platform Query Service에서 쿼리를 작성할 때 알아야 할 중요한 세부 정보에 대해 설명합니다.
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
-source-git-commit: 7016c0ce1ca8be5cecb7c09d01e9fd2e48e551de
+source-git-commit: 13e2248845734d985331653a17599f48aec0ebde
 workflow-type: tm+mt
 source-wordcount: '1031'
 ht-degree: 3%
@@ -318,4 +318,8 @@ Query Service는 UTC 타임스탬프 형식을 사용하여 Adobe Experience Pla
 
 이 문서를 읽은 후에는 [!DNL Query Service]. SQL 구문을 사용하여 쿼리를 작성하는 방법에 대한 자세한 내용은 [SQL 구문 설명서](../sql/syntax.md).
 
-Query Service에서 사용할 수 있는 쿼리 샘플을 더 보려면 [Adobe Analytics 샘플 쿼리](../sample-queries/adobe-analytics.md), [Adobe Target 샘플 쿼리](../sample-queries/adobe-target.md), 또는 [ExperienceEvent 샘플 쿼리](../sample-queries/experience-event.md).
+Query Service에서 사용할 수 있는 쿼리 샘플을 더 보려면 다음 사용 사례 설명서를 참조하십시오.
+
+- [Analytics 통찰력](../use-cases/analytics-insights.md)
+- [Adobe Target을 사용한 활동 분석](../use-cases/activity-analysis-with-adobe-target.md)
+- [ExperienceEvent 샘플 쿼리](../sample-queries/experience-event.md).

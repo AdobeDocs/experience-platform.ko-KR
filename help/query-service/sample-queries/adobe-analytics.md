@@ -5,9 +5,9 @@ title: Adobe Analytics 데이터에 대한 샘플 쿼리
 topic-legacy: queries
 description: 선택한 Adobe Analytics 보고서 세트의 데이터는 XDM ExperienceEvents로 변환되고 데이터 세트로 Adobe Experience Platform으로 수집됩니다. 이 문서에서는 Query Service가 이 데이터를 사용하는 많은 사용 사례를 간략하게 설명하고 Adobe Analytics 데이터 세트에서 작동하도록 설계된 샘플 쿼리를 포함합니다.
 exl-id: 96da3713-c7ab-41b3-9a9d-397756d9dd07
-source-git-commit: fec6f614946860e6ad377beaca05972a63052dd8
+source-git-commit: e0cdfc514a9e1277134d4c0d5396fc0bdf9d9958
 workflow-type: tm+mt
-source-wordcount: '1066'
+source-wordcount: '975'
 ht-degree: 1%
 
 ---
@@ -16,107 +16,9 @@ ht-degree: 1%
 
 선택한 Adobe Analytics 보고서 세트의 데이터는 [!DNL XDM ExperienceEvent] 분류 및 데이터 세트로 Adobe Experience Platform에 수집됩니다.
 
-이 문서에서는 Adobe Experience Platform이 [!DNL Query Service] 에서는 Adobe Analytics 데이터 세트에서 작동하도록 설계된 샘플 쿼리를 포함하여 이 데이터를 사용합니다. 다음 문서를 참조하십시오. [Analytics 필드 매핑](../../sources/connectors/adobe-applications/mapping/analytics.md) 매핑 대상 [!DNL Experience Events].
+이 문서에서는 Adobe Experience Platform이 [!DNL Query Service] 은 이 데이터를 사용합니다. 다음 문서를 참조하십시오. [Analytics 필드 매핑](../../sources/connectors/adobe-applications/mapping/analytics.md) 매핑 대상 [!DNL Experience Events].
 
-## 시작하기
-
-이 문서 전체에서 SQL 예를 사용하려면 SQL을 편집하고 평가하려는 데이터 세트, eVar, 이벤트 또는 시간대를 기반으로 쿼리에 대한 예상 매개 변수를 입력해야 합니다. 표시되는 곳에 매개 변수를 제공합니다. `{ }` 아래의 SQL 예에서 확인할 수 있습니다.
-
-## 일반적으로 사용되는 SQL 예
-
-다음 예제에서는 Adobe Analytics 데이터를 분석하는 일반적인 사용 사례에 대한 SQL 쿼리를 보여줍니다.
-
-### 지정된 날짜에 대한 시간별 방문자 수
-
-```sql
-SELECT Substring(from_utc_timestamp(timestamp, 'America/New_York'), 1, 10) AS Day,
-       Substring(from_utc_timestamp(timestamp, 'America/New_York'), 12, 2) AS Hour, 
-       Count(DISTINCT enduserids._experience.aaid.id) AS Visitor_Count 
-FROM   {TARGET_TABLE}
-WHERE TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
-GROUP BY Day, Hour
-ORDER BY Hour;
-```
-
-### 지정된 날짜에 대해 상위 10개 보기 페이지
-
-```sql
-SELECT web.webpagedetails.name AS Page_Name, 
-       Sum(web.webpagedetails.pageviews.value) AS Page_Views 
-FROM   {TARGET_TABLE}
-WHERE TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
-GROUP BY web.webpagedetails.name 
-ORDER BY page_views DESC 
-LIMIT  10;
-```
-
-### 가장 활성 상태인 상위 10개 사용자
-
-```sql
-SELECT enduserids._experience.aaid.id AS aaid, 
-       Count(timestamp) AS Count
-FROM   {TARGET_TABLE}
-WHERE TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
-GROUP BY enduserids._experience.aaid.id
-ORDER BY Count DESC
-LIMIT  10;
-```
-
-### 사용자 활동별 상위 10개 도시
-
-```sql
-SELECT concat(placeContext.geo.stateProvince, ' - ', placeContext.geo.city) AS state_city, 
-       Count(timestamp) AS Count
-FROM   {TARGET_TABLE}
-WHERE TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
-GROUP BY state_city
-ORDER BY Count DESC
-LIMIT  10;
-```
-
-### 상위 10개 보기 제품
-
-```sql
-SELECT Product_SKU,
-       Sum(Product_Views) AS Total_Product_Views
-FROM  (SELECT Explode(productlistitems.sku) AS Product_SKU, 
-              commerce.productviews.value   AS Product_Views 
-       FROM   {TARGET_TABLE}
-            WHERE TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
-              AND commerce.productviews.value IS NOT NULL) 
-GROUP BY Product_SKU 
-ORDER BY Total_Product_Views DESC
-LIMIT  10;
-```
-
-### 상위 10개 주문 매출
-
-```sql
-SELECT Purchase_ID, 
-       Round(Sum(Product_Items.priceTotal * Product_Items.quantity), 2) AS Total_Order_Revenue 
-FROM   (SELECT commerce.`order`.purchaseid AS Purchase_ID, 
-               Explode(productlistitems)   AS Product_Items 
-        FROM   {TARGET_TABLE} 
-        WHERE  commerce.`order`.purchaseid IS NOT NULL 
-                AND TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
-
-GROUP BY Purchase_ID 
-ORDER BY total_order_revenue DESC 
-LIMIT  10;
-```
-
-### 일별 이벤트 수
-
-```sql
-SELECT Substring(from_utc_timestamp(timestamp, 'America/New_York'), 1, 10) AS Day, 
-       Substring(from_utc_timestamp(timestamp, 'America/New_York'), 12, 2) AS Hour, 
-       Sum(_experience.analytics.event1to100.{TARGET_EVENT}.value) AS Event_Count
-FROM   {TARGET_TABLE}
-WHERE  _experience.analytics.event1to100.{TARGET_EVENT}.value IS NOT NULL 
-        AND TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
-GROUP BY Day, Hour
-ORDER BY Hour;
-```
+자세한 내용은 [analytics 사용 사례 설명서](../use-cases/analytics-insights.md) 수집된 Adobe Analytics 데이터에서 실행 가능한 인사이트를 만들기 위해 쿼리 서비스를 사용하는 방법을 알아봅니다.
 
 ## 중복 제거
 
