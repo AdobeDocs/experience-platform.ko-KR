@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 웹 SDK FAQ
 description: Adobe Experience Platform Web SDK에 대해 자주 묻는 질문에 대한 답변을 얻을 수 있습니다.
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
+source-git-commit: 219f0f66026e8eb6729370916be3490309937f2a
 workflow-type: tm+mt
-source-wordcount: '1855'
+source-wordcount: '1924'
 ht-degree: 1%
 
 ---
@@ -46,7 +46,7 @@ Platform의 태그를 사용하면 이러한 라이브러리를 가능한 한 �
 
 ### Adobe Experience Platform Web SDK 사용
 
-새로운 웹 SDK는 다음 솔루션에 대한 데이터를 단일 대상(Adobe Experience Platform Edge Network)에 전송하고 앞서 언급한 가장 일반적인 솔루션 사용 사례를 위해 해결합니다.
+새 웹 SDK는 다음 솔루션에 대한 데이터를 단일 대상(Adobe Experience Platform Edge Network)에 전송하고 앞서 언급한 가장 일반적인 솔루션 사용 사례를 위해 해결합니다.
 
 * Adobe Analytics
 * Adobe Audience Manager
@@ -160,6 +160,10 @@ CNAME에 대한 자세한 내용은 [Adobe 설명서](https://experienceleague.a
 **ndctr_orgid_personalization:** 이 쿠키에는 Adobe Target에서 웹 페이지를 개인화하는 데 사용하는 세션 정보가 포함되어 있습니다.
 
 **ndctr_orgid_consenscheck:** 이 세션 기반 쿠키는 서버에 동의 환경 설정 서버 측을 검색하도록 신호를 보냅니다.
+
+웹 SDK를 사용할 때 Edge Network는 위의 쿠키 중 하나 이상을 설정합니다. Edge Network는 `secure` 및 `sameSite="none"` 속성을 사용합니다.
+
+현재 웹 사이트에 보안 섹션과 비보안 섹션이 모두 있는 경우 사용자 식별을 방해할 수 있습니다. 사용자가 사이트의 보안 섹션에서 비보안 섹션으로 이동하면 Edge Network가 새 보안 섹션을 생성합니다 `ECID` 요청 사용.
 
 ## Adobe Experience Platform Web SDK는 어떤 브라우저를 지원합니까?
 
