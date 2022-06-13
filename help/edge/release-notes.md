@@ -3,14 +3,32 @@ title: Adobe Experience Platform Web SDK 릴리스 노트
 description: Adobe Experience Platform Web SDK에 대한 최신 릴리스 정보입니다.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;릴리스 노트;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 29852bc8f17de6db04805f4738f383f2dc7c1406
+source-git-commit: 207fdd6d8a8dc27fa89798999734ba820f30fd54
 workflow-type: tm+mt
-source-wordcount: '1018'
+source-wordcount: '1169'
 ht-degree: 3%
 
 ---
 
+
 # 릴리스 정보
+
+이 문서에서는 Adobe Experience Platform Web SDK에 대한 릴리스 노트를 다룹니다.
+웹 SDK 태그 확장에 대한 최신 릴리스 노트는 [웹 SDK 태그 확장 릴리스 노트](extension/web-sdk-ext-release-notes.md).
+
+## 버전 2.11.0 - 2022년 6월 13일
+
+**새로운 기능**
+
+* 이제 모바일 앱과 모바일 웹 콘텐츠 간 및 도메인 간에 방문자 ID를 공유하여 개인화된 경험을 더 정확하게 제공할 수 있습니다. 자세한 내용은 [전용 설명서](identity/id-sharing.md) 추가 정보
+* 이제 다음 위치에서 일련의 proposition을 렌더링하거나 실행할 수 있습니다 [!DNL Adobe Target] analytics 지표를 증가시키지 않고 단일 페이지 애플리케이션에 기여합니다. 이렇게 하면 보고 오류가 줄어들고 분석 정확도가 높아집니다. 자세한 내용은 [전용 설명서](personalization/rendering-personalization-content.md#applypropositions) 추가 정보
+* 에 추가 정보를 추가했습니다. `getLibraryInfo` 사용 가능한 명령과 인스턴스에 대한 최종 구성을 포함하는 명령
+
+**수정 사항 및 향상된 기능**
+
+* 사용할 쿠키 설정이 업데이트되었습니다. `sameSite="none"` 및 `secure` 플래그 [!DNL HTTPS] 페이지.
+* 를 사용할 때 개인화된 콘텐츠가 올바르게 적용되지 않던 문제를 수정했습니다. `eq` 유사 선택기.
+* 다음 상황에서 `localTimezoneOffset` Experience Platform 유효성 검사에 실패할 수 있습니다.
 
 ## 버전 2.10.1 - 2022년 5월 3일
 
@@ -70,7 +88,7 @@ ht-degree: 3%
 
 ## 버전 2.4.0 - 2021년 3월
 
-* 이제 SDK를 [npm 패키지로 설치됨](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/installing-the-sdk.html?lang=ko-KR).
+* 이제 SDK를 [npm 패키지로 설치됨](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/installing-the-sdk.html?lang=ko-KR?lang=ko-KR).
 * 에 대한 지원을 추가했습니다. `out` 옵션 [기본 동의 구성](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#default-consent): 동의를 받을 때까지 모든 이벤트를 삭제합니다(기존 `pending` 옵션은 이벤트를 큐에 넣고 동의를 받으면 전송합니다.)
 * 다음 [onBeforeEventSend 콜백](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#onbeforeeventsend) 이제 를 사용하여 이벤트가 전송되지 않도록 할 수 있습니다.
 * 이제 는 대신 XDM 스키마 필드 그룹을 사용합니다 `meta.personalization` 렌더링하거나 클릭하는 개인화된 콘텐츠에 대한 이벤트를 보낼 때.

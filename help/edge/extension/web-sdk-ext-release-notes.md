@@ -2,16 +2,27 @@
 title: Adobe Experience Platform Web SDK Extension 릴리스 노트
 description: Adobe Experience Platform 웹 SDK 태그 확장
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 18f7e32c8922b254d68655aeb2b633c12a97d2a7
+source-git-commit: 83f7fca5d8a3fd2a57d39c155153caa70d89d353
 workflow-type: tm+mt
-source-wordcount: '1343'
-ht-degree: 46%
+source-wordcount: '1398'
+ht-degree: 44%
 
 ---
+
 
 # Adobe Experience Platform Web SDK 확장 릴리스 노트
 
 이 문서에서는 Adobe Experience Platform 웹 SDK 태그 확장에 대한 릴리스 노트를 다룹니다. SDK 자체에 대한 최신 릴리스 노트는 [Platform Web SDK 릴리스 노트](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
+
+## 버전 2.12.0 - 2022년 6월 13일
+
+* 업데이트 날짜: `identityMap` 확장 설정에 정의된 샌드박스를 기반으로 네임스페이스 옵션을 채우는 데이터 요소입니다.
+* 추가됨 **[!UICONTROL ID를 사용하여 리디렉션]** 도메인 간 ID 공유를 허용하는 작업.
+* 에 설명서 링크가 추가되었습니다. `sendEvent` 작업.
+* React Spectrum UI 라이브러리를 업그레이드했습니다.
+* 향상된 여러 사용자 인터페이스
+
+Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.11.0을 포함합니다.
 
 ## 버전 2.11.2 - 2022년 5월 3일
 
