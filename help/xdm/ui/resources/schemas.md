@@ -5,9 +5,9 @@ title: UI에서 스키마 만들기 및 편집
 description: Experience Platform 사용자 인터페이스에서 스키마를 만들고 편집하는 방법에 대한 기본 사항을 배웁니다.
 topic-legacy: user guide
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: e0148480ce8d4179771f1c10fb6b921baf6a24d1
+source-git-commit: 90f055f2fbeb7571d2f7c1daf4ea14490069f2eb
 workflow-type: tm+mt
-source-wordcount: '2844'
+source-wordcount: '2895'
 ht-degree: 0%
 
 ---
@@ -52,7 +52,7 @@ ht-degree: 0%
 >
 >작업 공간의 검색 및 필터링 기능을 사용하여 스키마를 보다 쉽게 찾을 수 있습니다. 다음 안내서를 참조하십시오. [xdm 리소스 탐색](../explore.md) 추가 정보.
 
-스키마를 선택하면 [!DNL Schema Editor] 캔버스에 표시된 스키마 구조와 함께 나타납니다. 이제 다음을 수행할 수 있습니다 [필드 그룹 추가](#add-field-groups) 스키마(또는 [개별 필드 추가](#add-individual-fields) 해당 그룹에서 [필드 표시 이름 편집](#display-names), 또는 [기존 사용자 지정 필드 그룹 편집](./field-groups.md#edit) 스키마에서 적용되는 경우.
+스키마를 선택하면 [!DNL Schema Editor] 캔버스에 표시된 스키마 구조와 함께 나타납니다. 이제 다음을 수행할 수 있습니다 [필드 그룹 추가](#add-field-groups) 스키마(또는 [개별 필드 추가](#add-individual-fields) 해당 그룹에서 다음을 수행합니다. [필드 표시 이름 편집](#display-names), 또는 [기존 사용자 지정 필드 그룹 편집](./field-groups.md#edit) 스키마에서 적용되는 경우.
 
 ## 스키마에 필드 그룹 추가 {#add-field-groups}
 
@@ -221,6 +221,12 @@ ht-degree: 0%
 ![표준 객체에 추가된 필드](../../images/ui/resources/schemas/added-to-standard-object.png)
 
 ## 실시간 고객 프로필에 대한 스키마 활성화 {#profile}
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_enableforprofile"
+>title="프로필에 대한 스키마 활성화"
+>abstract="프로필에 대해 스키마가 활성화되면 이 스키마에서 생성된 모든 데이터 세트는 실시간 고객 프로필에 참여하며, 서로 다른 소스의 데이터를 병합하여 각 고객에 대한 전체 보기를 구성합니다. 스키마를 사용하여 데이터를 프로필에 수집하면 비활성화할 수 없습니다."
+>text="See the documentation for more information on enabling a schema for Profile."
 
 [실시간 고객 프로필](../../../profile/home.md) 서로 다른 소스의 데이터를 병합하여 각 개별 고객에 대한 전체 보기를 구성합니다. 스키마로 캡처된 데이터를 이 프로세스에 참여하도록 하려면 에서 사용할 스키마를 활성화해야 합니다 [!DNL Profile].
 

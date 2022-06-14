@@ -5,14 +5,20 @@ title: 데이터 사용 레이블 용어집
 topic-legacy: labels
 description: 이 문서에서는 현재 Adobe Experience Platform에서 지원하는 모든 데이터 사용 레이블에 대해 간략하게 설명합니다.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: 15b0c2fb2565ada489c5a8811b946efc4319696b
+source-git-commit: 90f055f2fbeb7571d2f7c1daf4ea14490069f2eb
 workflow-type: tm+mt
-source-wordcount: '2053'
+source-wordcount: '2083'
 ht-degree: 2%
 
 ---
 
 # 데이터 사용 레이블 용어집
+
+>[!CONTEXTUALHELP]
+>id="platform_policies_labeltype"
+>title="레이블 유형"
+>abstract="데이터 사용 레이블에는 몇 가지 카테고리가 있습니다. Adobe 정의 레이블에는 계약 레이블, ID 레이블 및 중요 레이블이 포함됩니다. 조직에서 정의한 레이블은 사용자 지정 레이블로 분류됩니다."
+>text="See the data usage labels glossary for more information on these label types."
 
 데이터 사용 레이블을 사용하면 해당 데이터에 적용되는 사용 정책에 따라 데이터 세트와 필드를 분류할 수 있습니다. Adobe Experience Platform 데이터 거버넌스에서는 데이터 카테고리를 시작하는 데 사용할 수 있는 몇 가지 핵심 데이터 사용 레이블을 기본적으로 제공합니다.
 
