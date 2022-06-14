@@ -5,9 +5,9 @@ title: 데이터 거버넌스 개요
 topic-legacy: overview
 description: Adobe Experience Platform 데이터 거버넌스를 사용하면 고객 데이터를 관리하고 데이터 사용에 적용되는 규정, 제한 및 정책을 준수할 수 있습니다. 이 디자이너는 카탈로그 작성, 데이터 계보, 데이터 사용 레이블 지정, 데이터 사용 정책, 마케팅 작업을 위한 데이터 사용 제어 등 다양한 수준에서 Experience Platform 내에서 주요 역할을 합니다
 exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
-source-git-commit: 6e4a3ff03a551069efb8dc96f21b82de06cc47d8
+source-git-commit: 0c78b5dc420a1346c92bf9ed7864fa1733422a83
 workflow-type: tm+mt
-source-wordcount: '1432'
+source-wordcount: '1431'
 ht-degree: 0%
 
 ---
@@ -81,7 +81,7 @@ Adobe Experience Platform 데이터 거버넌스를 사용하면 고객 데이�
 사용할 수 있는 정책에는 두 가지 유형이 있습니다.
 
 * **[!UICONTROL 데이터 거버넌스 정책]**: 수행되는 마케팅 작업 및 해당 데이터에 의해 전달된 데이터 사용 레이블을 기반으로 데이터 활성화를 제한합니다.
-* **[!UICONTROL 동의 정책] (베타)**: 활성화할 수 있는 프로필을 필터링합니다. [대상](../destinations/home.md) 고객의 동의 또는 기본 설정에 따라 다릅니다.
+* **[!UICONTROL 동의 정책]**: 활성화할 수 있는 프로필을 필터링합니다. [대상](../destinations/home.md) 고객의 동의 또는 기본 설정에 따라 다릅니다.
 
 데이터 사용 레이블이 적용되면 데이터 관리자는 를 사용하여 정책을 만들 수 있습니다 [!DNL Policy Service] API 또는 [!DNL Experience Platform] 사용자 인터페이스. 데이터 사용 정책 및 마케팅 작업에 대한 자세한 내용은 [정책 개요](./policies/overview.md).
 
