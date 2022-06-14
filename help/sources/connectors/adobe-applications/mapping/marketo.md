@@ -5,10 +5,10 @@ title: Marketo Engage 소스에 대한 매핑 필드
 topic-legacy: overview
 description: 아래 표에는 Marketo 데이터 세트의 필드와 해당 XDM 필드 간의 매핑이 포함되어 있습니다.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: 1d2f485a91a8ad2c5b2bea9816c05b7bc26ae8e7
+source-git-commit: be3ec7dc7e2089a8cee0b1577659e1ec0a465044
 workflow-type: tm+mt
-source-wordcount: '634'
-ht-degree: 7%
+source-wordcount: '713'
+ht-degree: 6%
 
 ---
 
@@ -21,6 +21,8 @@ ht-degree: 7%
 >모두 [!DNL Marketo] 데이터 세트를 제외한 데이터 세트 `Activities` 이제 지원 `isDeleted`. 기존 데이터 흐름에는 자동으로 포함됩니다 `isDeleted`하지만 는 새로 수집된 데이터에 대해서만 플래그를 섭취합니다. 모든 이전 데이터에 플래그를 적용하려면 기존 데이터 흐름을 중지하고 새 매핑으로 다시 만들어야 합니다. 제거할 경우 `isDeleted`로 설정되면 더 이상 기능에 액세스할 수 없습니다. 매핑이 자동 채워진 후에 유지되어야 합니다.
 
 ## 활동 {#activities}
+
+다음 [!DNL Marketo] 이제 소스가 추가 표준 활동을 지원합니다. 표준 활동을 사용하려면 [스키마 자동 생성 유틸리티](../marketo/marketo-namespaces.md) 새 `activities` 데이터 흐름에서 스키마를 업데이트하지 않으면 새 대상 필드가 스키마에 없으므로 매핑 템플릿이 실패합니다. 스키마를 업데이트하지 않도록 선택하더라도 새 데이터 흐름을 생성하고 오류를 취소할 수 있습니다. 하지만 새 필드나 업데이트된 필드는 Platform에 수집되지 않습니다.
 
 | 소스 데이터 세트 | XDM 대상 필드 | 참고 |
 | -------------- | ---------------- | ----- |
