@@ -3,9 +3,9 @@ keywords: google customer match;Google 고객 일치;Google Customer Match
 title: Google Customer Match 연결
 description: Google Customer Match를 사용하면 온라인 및 오프라인 데이터를 사용하여 검색, 쇼핑, Gmail 및 YouTube과 같은 Google이 소유하고 운영하는 속성에서 고객에게 도달하고 다시 참여합니다.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
+source-git-commit: 23828fcbb1257fa093c1e114ee4c2fcb2162d9d6
 workflow-type: tm+mt
-source-wordcount: '1684'
+source-wordcount: '1715'
 ht-degree: 1%
 
 ---
@@ -135,7 +135,7 @@ While [설정](../../ui/connect-destination.md) 이 대상을 사용하려면 �
 
 * **[!UICONTROL 이름]**: 이 대상 연결의 이름을 입력하십시오.
 * **[!UICONTROL 설명]**: 이 대상 연결에 대한 설명을 제공합니다.
-* **[!UICONTROL 계정 ID]**: Google 고객 클라이언트 ID입니다. ID의 형식은 xxx-xxx-xxxx입니다.
+* **[!UICONTROL 계정 ID]**: your [Google 광고 고객 ID](https://support.google.com/google-ads/answer/1704344?hl=en). ID의 형식은 xxx-xxx-xxxx입니다. 를 사용하는 경우 [!DNL Google Ads Manager Account (My Client Center)], 관리자 계정 ID를 사용하지 마십시오. 를 사용하십시오 [Google 광고 고객 ID](https://support.google.com/google-ads/answer/1704344?hl=en) 을 가리키도록 업데이트하는 것이 좋습니다.
 
 >[!IMPORTANT]
 >
