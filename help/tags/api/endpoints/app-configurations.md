@@ -2,7 +2,7 @@
 title: 앱 구성 끝점
 description: Reactor API에서 /app_configurations 종단점을 호출하는 방법을 알아봅니다.
 exl-id: 88a1ec36-b4d2-4fb6-92cb-1da04268492a
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 36320addc790e844a1102314890e8692841dc5d0
 workflow-type: tm+mt
 source-wordcount: '586'
 ht-degree: 8%
@@ -189,6 +189,7 @@ curl -X POST \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
+  -H 'Accept: application/vnd.api+json;revision=1' \
   -d '{
         "data": {
           "attributes": {
@@ -257,12 +258,12 @@ curl -X POST \
 
 ## 앱 구성 업데이트
 
-PUT 요청 경로에 해당 ID를 포함하여 앱 구성을 업데이트할 수 있습니다.
+PATCH 요청 경로에 해당 ID를 포함하여 앱 구성을 업데이트할 수 있습니다.
 
 **API 형식**
 
 ```http
-PUT /app_configurations/{APP_CONFIGURATION_ID}
+PATCH /app_configurations/{APP_CONFIGURATION_ID}
 ```
 
 | 매개 변수 | 설명 |
@@ -276,12 +277,13 @@ PUT /app_configurations/{APP_CONFIGURATION_ID}
 다음 요청은 를 업데이트합니다 `app_id` 기존 앱 구성에 대해 설명합니다.
 
 ```shell
-curl -X PUT \
+curl -X PATCH \
   https://reactor.adobe.io/app_configurations/AC40c339ab80d24c958b90d67b698602eb \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
+  -H 'Accept: application/vnd.api+json;revision=1' \
   -d '{
         "data": {
           "attributes": {
@@ -361,7 +363,9 @@ curl -X DELETE \
   https://reactor.adobe.io/app_configurations/AC40c339ab80d24c958b90d67b698602eb \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}'
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H "Content-Type: application/vnd.api+json" \
+  -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
 **응답**

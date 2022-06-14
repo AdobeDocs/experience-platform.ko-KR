@@ -2,7 +2,7 @@
 title: 콜백 끝점
 description: Reactor API에서 /callbacks 종단점을 호출하는 방법을 알아봅니다.
 exl-id: dd980f91-89e3-4ba0-a6fc-64d66b288a22
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 7f3b9ef9270b7748bc3366c8c39f503e1aee2100
 workflow-type: tm+mt
 source-wordcount: '621'
 ht-degree: 8%
@@ -205,6 +205,7 @@ curl -X POST \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
+  -H 'Accept: application/vnd.api+json;revision=1' \
   -d '{
         "data": {
           "attributes": {
@@ -262,12 +263,12 @@ curl -X POST \
 
 ## 콜백 업데이트
 
-PUT 요청 경로에 해당 ID를 포함하여 콜백을 업데이트할 수 있습니다.
+PATCH 요청 경로에 해당 ID를 포함하여 콜백을 업데이트할 수 있습니다.
 
 **API 형식**
 
 ```http
-PUT /callbacks/{CALLBACK_ID}
+PATCH /callbacks/{CALLBACK_ID}
 ```
 
 | 매개 변수 | 설명 |
@@ -281,15 +282,17 @@ PUT /callbacks/{CALLBACK_ID}
 다음 요청은 를 업데이트합니다 `subscriptions` 기존 콜백용 배열입니다.
 
 ```shell
-curl -X PUT \
+curl -X PATCH \
   https://reactor.adobe.io/callbacks/CB4310904d415549888cc9e31ebe1e1e45 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
+  -H 'Accept: application/vnd.api+json;revision=1' \
   -d '{
         "data": {
           "attributes": {
+            "url": "https://www.example.net",
             "subscriptions": [
               "rule.created",
               "build.created"
@@ -369,7 +372,9 @@ curl -X DELETE \
   https://reactor.adobe.io/callbacks/CB4310904d415549888cc9e31ebe1e1e45 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}'
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'Content-Type: application/json' \
+  -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
 **응답**
