@@ -3,7 +3,7 @@ keywords: DoubleClick 입찰 관리자;DoubleClick 입찰 관리자;DoubleClick;
 title: Google 디스플레이 및 비디오 360 연결
 description: 이전에 DoubleClick Bid Manager라고 알려진 Display & Video 360은 디스플레이, 비디오 및 모바일 인벤토리 소스에서 재타겟팅하고 대상 지정 디지털 캠페인을 실행하는 데 사용되는 도구입니다.
 exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
-source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
+source-git-commit: 898bd0d5d986bf26e62b0843de7cbb71b859aee3
 workflow-type: tm+mt
 source-wordcount: '830'
 ht-degree: 2%
@@ -29,7 +29,7 @@ ht-degree: 2%
 
 ## 지원되는 ID {#supported-identities}
 
-[!DNL Google Ad Manager] 은 아래 표에 설명된 id의 활성화를 지원합니다.
+[!DNL Google Display & Video 360] 은 아래 표에 설명된 id의 활성화를 지원합니다.
 
 | Target ID | 설명 | 고려 사항 |
 |---|---|---|
