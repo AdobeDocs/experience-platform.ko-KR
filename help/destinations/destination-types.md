@@ -4,9 +4,9 @@ title: 대상 유형 및 카테고리
 seo-title: Destination types and categories
 description: Adobe Experience Platform의 다양한 대상 유형 및 카테고리에 대해 알아봅니다.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 1c2846941df09b66eb74f8ea8bec91574577fbbc
+source-git-commit: 2252c6e8bd5f0ada717d67f005b7f6ddd0b238ab
 workflow-type: tm+mt
-source-wordcount: '596'
+source-wordcount: '642'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Adobe Experience Platform에서는 연결과 확장의 두 대상 유형을 구�
 
 ## 연결 {#connections}
 
-**[!UICONTROL 프로필 내보내기]** 및 **[!UICONTROL 스트리밍 세그먼트 내보내기]** Adobe Experience Platform의 대상 캡처 이벤트 데이터를 대상으로 하여 다른 데이터 소스와 결합하여 양식을 구성합니다 [실시간 고객 프로필](../profile/home.md), 세그먼테이션을 적용하고 세그먼트와 자격을 갖춘 프로필을 대상으로 내보냅니다.
+**[!UICONTROL 프로필 내보내기]**, **[!UICONTROL 스트리밍 세그먼트 내보내기]**, 및 **[!DNL Edge Personalization]** Adobe Experience Platform의 대상 캡처 이벤트 데이터를 대상으로 하여 다른 데이터 소스와 결합하여 양식을 구성합니다 [실시간 고객 프로필](../profile/home.md), 세그먼테이션을 적용하고 세그먼트와 자격을 갖춘 프로필을 대상으로 내보냅니다.
 
 ## 프로필 내보내기 대상 {#profile-export}
 
@@ -55,6 +55,12 @@ Adobe Experience Platform에서는 연결과 확장의 두 대상 유형을 구�
 ## 스트리밍 세그먼트 내보내기 대상 {#streaming-destinations}
 
 세그먼트 내보내기 대상이 Experience Platform 세그먼트 데이터를 받습니다. 이러한 대상은 세그먼트 ID 또는 사용자 ID를 사용합니다. 광고 및 다음과 같은 소셜 대상 [[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md), [[!DNL Google Ads]](catalog/advertising/google-ads-destination.md), 또는 [Facebook](catalog/social/facebook.md) 은 그러한 대상의 예시입니다.
+
+## Edge 개인화 대상 {#edge-personalization-destinations}
+
+Experience Platform의 Edge 개인화 대상은 다음과 같습니다 [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) 그리고 [사용자 지정 개인화 대상](/help/destinations/catalog/personalization/custom-personalization.md). 이러한 대상을 사용하여 고객에 대해 동일한 페이지 및 다음 페이지 개인화 사용 사례를 활성화할 수 있습니다.
+
+방법 알아보기 [동일한 페이지 및 다음 페이지 개인화를 위한 개인화 대상 구성](/help/destinations/ui/configure-personalization-destinations.md).
 
 ## 프로필 내보내기 및 세그먼트 내보내기 대상 - 비디오 개요 {#video}
 
