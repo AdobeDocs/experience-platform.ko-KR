@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK를 사용하여 개인화된 컨텐츠 
 description: Adobe Experience Platform Web SDK를 사용하여 개인화된 컨텐츠를 렌더링하는 방법을 알아봅니다.
 keywords: 개인화;renderDecisions;sendEvent;decisions;proposition;
 exl-id: 6a3252ca-cdec-48a0-a001-2944ad635805
-source-git-commit: 6ba563db7fd31084813426ffbb0c35be9d7fe4bb
+source-git-commit: 0d8e19d8428191cc0c6c56e629e8c5528a96115c
 workflow-type: tm+mt
-source-wordcount: '741'
+source-wordcount: '924'
 ht-degree: 1%
 
 ---
@@ -296,3 +296,94 @@ alloy("sendEvent", {
 ### 플리커 관리
 
 SDK는 [플리커 관리](../personalization/manage-flicker.md) 개인화 프로세스 중에
+
+## 지표를 증가시키지 않고 단일 페이지 애플리케이션에서 제안 렌더링 {#applypropositions}
+
+다음 `applyPropositions` 명령 를 사용하면 [!DNL Target] 단일 페이지 애플리케이션에 [!DNL Analytics] 및 [!DNL Target] 지표 를 참조하십시오. 따라서 보고 정확도가 높아집니다.
+
+>[!IMPORTANT]
+>
+>에 대한 `__view__` 범위가 페이지 로드 시 렌더링되고, `renderAttempted` 플래그가 로 설정됩니다. `true`. 다음 `applyPropositions` 명령은 다시 렌더링되지 않습니다. `__view__` 범위 제안 `renderAttempted: true` 플래그.
+
+### 사용 사례 1: 단일 페이지 애플리케이션 보기 제안 다시 렌더링
+
+아래 샘플에 설명된 사용 사례는 디스플레이 알림을 보내지 않고 이전에 가져온 후 렌더링된 장바구니 보기 제안을 다시 렌더링합니다.
+
+아래 예에서는 `sendEvent` 명령은 뷰 변경 시 트리거되며 결과 객체를 상수로 저장합니다.
+
+그런 다음 보기 또는 구성 요소가 업데이트되면 `applyPropositions` 이전 명령의 proposition과 함께 명령이 호출됩니다. `sendEvent` 명령, 보기 등록 정보를 다시 렌더링합니다.
+
+```js
+var cartPropositions = alloy("sendEvent", {
+    renderDecisions: true,
+    xdm: {
+        web: {
+            webPageDetails: {
+                viewName: "cart"
+            }
+        }
+    }
+}).then(function(result) {
+    var propositions = result.propositions;
+
+    // Collect response tokens, etc.
+    return propositions;
+});
+
+// Call applyPropositions to re-render the view propositions from the previous sendEvent command.
+alloy("applyPropositions", {
+    propositions: cartPropositions
+});
+```
+
+### 사용 사례 2: 선택기가 없는 프로필 렌더링
+
+이 사용 사례는 를 사용하여 작성된 활동 오퍼에 적용됩니다. [!DNL Target Form-based Experience Composer].
+
+에서 선택기, 작업 및 범위를 제공해야 합니다 `applyPropositions` 호출.
+
+지원됨 `actionTypes` 입니다.
+
+* `setHtml`
+* `replaceHtml`
+* `appendHtml`
+
+```js
+// Retrieve propositions for salutation and discount scopes
+alloy("sendEvent", {
+    decisionScopes: ["salutation", "discount"]
+}).then(function(result) {
+    var retrievedPropositions = result.propositions;
+    // Render propositions on the page by providing additional metadata
+
+    return alloy("applyPropositions", {
+        propositions: retrievedPropositions,
+        metadata: {
+            salutation: {
+                selector: "#first-form-based-offer",
+                actionType: "setHtml"
+            },
+            discount: {
+                selector: "#second-form-based-offer",
+                actionType: "replaceHtml"
+            }
+        }
+    }).then(function(applyPropositionsResult) {
+        var renderedPropositions = applyPropositionsResult.propositions;
+
+        // Send the display notifications via sendEvent command
+        alloy("sendEvent", {
+            xdm: {
+                eventType: "decisioning.propositionDisplay",
+                _experience: {
+                    decisioning: {
+                        propositions: renderedPropositions
+                    }
+                }
+            }
+        });
+    });
+});
+```
+
+결정 범위에 대한 메타데이터를 제공하지 않으면 연결된 제안이 렌더링되지 않습니다.
