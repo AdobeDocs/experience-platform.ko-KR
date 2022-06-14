@@ -4,14 +4,26 @@ description: Adobe Experience Platform Debugger에 대한 최신 릴리스 정�
 keywords: debugger;experience Platform Debugger 확장 프로그램;chrome;확장 프로그램;릴리스 정보
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: a15b5525d3a2fa034715803c83dc22a94915347e
+source-git-commit: 9c4f16c84b78403e5baf02595a38093341eefa67
 workflow-type: tm+mt
-source-wordcount: '295'
-ht-degree: 6%
+source-wordcount: '351'
+ht-degree: 5%
 
 ---
 
 # Adobe Experience Platform Debugger 릴리스 노트
+
+## 버전 1.3.2 - 2022년 6월 9일
+
+* 사용자가 로그인하면 기본 아바타가 추가되었습니다.
+* 로그의 JSON 개체에 구문 강조를 추가했습니다.
+
+## 버전 1.3.1 - 2022년 5월 24일
+
+* 종속성이 업데이트되었습니다.
+* 사후 프로세스 히트를 활성화할 수 없는 Analytics 문제가 해결되었습니다.
+* 디버거가 Adobe 로그인 창에 첨부되는 문제가 해결되었습니다.
+* 로그 메시지가 디버거에 표시되지 않는 AT.js 문제가 해결되었습니다.
 
 ## 버전 1.3.0 - 2022년 1월 28일
 
