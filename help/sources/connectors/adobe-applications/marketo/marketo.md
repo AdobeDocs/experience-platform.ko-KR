@@ -5,9 +5,9 @@ title: Marketo Engage 커넥터
 topic-legacy: overview
 description: 이 문서에서는 인증, 매핑 및 데이터 지연에 대한 정보를 포함하여 Marketo Engage 소스 커넥터에 대한 개요를 제공합니다.
 exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
-source-git-commit: ebf605bda32a7e587e6a6ca93a58669d16581ff9
+source-git-commit: 1ecdd5f058a5996b4a3d12ba62c5f352633cd75a
 workflow-type: tm+mt
-source-wordcount: '521'
+source-wordcount: '578'
 ht-degree: 0%
 
 ---
@@ -31,6 +31,10 @@ Adobe Experience Platform을 사용하면 Platform 서비스를 사용하여 들
 ## Adobe 조직 매핑 설정
 
 매핑 세트를 설정하기 전에 [!DNL Marketo]를 지정하는 경우 먼저 Adobe 조직 매핑을 설정해야 합니다. 이 작업을 완료하는 방법에 대한 자세한 단계는 다음 안내서를 참조하십시오. [Adobe 조직 매핑 설정 [!DNL Marketo]](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html).
+
+## B2B 네임스페이스 및 스키마 자동 생성 유틸리티를 설정합니다
+
+다음으로, B2B 네임스페이스 및 스키마 자동 생성 유틸리티를 사용하여 플랫폼 개발자 콘솔 및 Postman 환경을 설정합니다. 이렇게 하면 B2B 네임스페이스 및 스키마를 자동으로 채울 수 있습니다. 자세한 지침은 [B2B 네임스페이스 및 스키마 자동 생성 유틸리티 설정](./marketo-namespaces.md)
 
 ## XDM(경험 데이터 모델)
 
