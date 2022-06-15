@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Flow Service API를 사용하여 Adobe Experience Platform을 Vec CRM에 연결하는 방법을 알아봅니다.
 exl-id: e1aea5a2-a247-43eb-8252-2e2ed96b82a1
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: ea20a850a5d83f648c699119913aa31e2ea16233
 workflow-type: tm+mt
-source-wordcount: '504'
+source-wordcount: '505'
 ht-degree: 2%
 
 ---
@@ -40,7 +40,7 @@ ht-degree: 2%
 | `securityToken` | 사용자의 보안 토큰 [!DNL Veeva CRM] 인스턴스. |
 | `connectionSpec.id` | 연결 사양은 기본 및 소스 연결 생성과 관련된 인증 사양이 포함된 소스의 커넥터 등록 정보를 반환합니다. 에 대한 연결 사양 ID [!DNL Veeva CRM] is: `fcad62f3-09b0-41d3-be11-449d5a621b69`. |
 
-이러한 값에 대한 자세한 내용은 다음을 참조하십시오 [[!DNL Veeva CRM] 문서](https://developer.veevacrm.com/api/#order-management-rest-api).
+이러한 값에 대한 자세한 내용은 다음을 참조하십시오 [[!DNL Veeva CRM] 문서](https://developer.veevacrm.com/doc/Content/rest-api.htm).
 
 ### 플랫폼 API 사용
 

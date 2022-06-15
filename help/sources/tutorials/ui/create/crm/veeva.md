@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Adobe Experience Platform UI를 사용하여 Vec CRM 소스 연결을 만드는 방법을 알아봅니다.
 exl-id: 4ef76c28-9bd2-4e54-a3d6-dceb89162337
-source-git-commit: 8b4e3b9e95dd4c2ff8f3b5a1399eb7d114024bb6
+source-git-commit: ea20a850a5d83f648c699119913aa31e2ea16233
 workflow-type: tm+mt
-source-wordcount: '428'
+source-wordcount: '429'
 ht-degree: 1%
 
 ---
@@ -37,7 +37,7 @@ Adobe Experience Platform의 소스 커넥터는 예약된 대로 외부에서 �
 | `password` | 의 암호 [!DNL Veeva CRM] 사용자 계정. |
 | `securityToken` | 에 대한 보안 토큰 [!DNL Veeva CRM] 사용자 계정. |
 
-시작하는 방법에 대한 자세한 내용은 다음을 참조하십시오 [[!DNL Veeva CRM] 문서](https://developer.veevacrm.com/api/#order-management-rest-api).
+시작하는 방법에 대한 자세한 내용은 다음을 참조하십시오 [[!DNL Veeva CRM] 문서](https://developer.veevacrm.com/doc/Content/rest-api.htm).
 
 ## 연결 [!DNL Veeva CRM] account
 
