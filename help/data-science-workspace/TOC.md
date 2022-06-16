@@ -5,9 +5,9 @@ breadcrumb-title: Data Science Workspace 안내서
 user-guide-description: 머신 러닝을 활용하여 Adobe Sensei 및 JupiterLab Notebook에서 모델과 레시피를 개발, 트레이닝 및 평가할 수 있습니다.
 feature: Data Science Workspace
 solution: Experience Platform
-source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
+source-git-commit: ec69c859a7b40f3d527c73405b358862ebdb92e7
 workflow-type: tm+mt
-source-wordcount: '248'
+source-wordcount: '236'
 ht-degree: 16%
 
 ---
@@ -35,11 +35,6 @@ ht-degree: 16%
    * [MLSservices](api/mlservices.md)
    * [Insights](api/insights.md)
    * [부록](api/appendix.md)
-* 실시간 머신 러닝(알파) {#real-time-machine-learning}
-   * [개요](real-time-machine-learning/home.md)
-   * [시작하기](real-time-machine-learning/getting-started.md)
-   * [전자 필기장 관리](real-time-machine-learning/rtml-authoring-notebook.md)
-   * [노드 참조 안내서](real-time-machine-learning/node-reference.md)
 * 사전 빌드된 레서피 {#pre-built-recipes}
    * [제품 추천 레서피](pre-built-recipes/product-recommendations.md)
    * [제품 구매 예측](pre-built-recipes/product-purchase-prediction.md)
