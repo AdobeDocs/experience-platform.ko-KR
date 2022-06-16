@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 소스 커넥터 도움말
 breadcrumb-title: Source Connectors 안내서
 user-guide-description: 다양한 소스 또는 구조에서 데이터를 수집하고 레이블을 지정하며 기존에 수집한 데이터를 향상시킬 수 있습니다.
 feature: Sources
-source-git-commit: b21e735b5c6c310b485700ef619302e3e3086763
+source-git-commit: 6f7611b120046fffc1b7c15bd657d699f4b4a588
 workflow-type: tm+mt
-source-wordcount: '785'
+source-wordcount: '795'
 ht-degree: 13%
 
 ---
@@ -35,6 +35,8 @@ ht-degree: 13%
          - [B2B 네임스페이스 및 스키마](connectors/adobe-applications/marketo/marketo-namespaces.md)
    - 광고 {#advertising}
       - [Google AdWords 커넥터](connectors/advertising/ads.md)
+   - Analytics {#analytics}
+      - [Mixpanel 커넥터](connectors/analytics/mixpanel.md)
    - 클라우드 스토리지 {#cloud-storage}
       - [Amazon Kinesis 커넥터](connectors/cloud-storage/kinesis.md)
       - [Amazon S3 커넥터](connectors/cloud-storage/s3.md)
@@ -101,6 +103,8 @@ ht-degree: 13%
    - 기본 연결 만들기 {#create}
       - 광고 {#advertising}
          - [Google AdWords](tutorials/api/create/advertising/ads.md)
+      - Analytics {#analytics}
+         - [Mixpanel](tutorials/api/create/analytics/mixpanel.md)
       - 클라우드 스토리지 {#cloud-storage}
          - [Amazon Kinesis](tutorials/api/create/cloud-storage/kinesis.md)
          - [Amazon S3](tutorials/api/create/cloud-storage/s3.md)
@@ -197,8 +201,10 @@ ht-degree: 13%
          - [Adobe Campaign Managed Services](tutorials/ui/create/adobe-applications/campaign.md)
          - [고객 속성](tutorials/ui/create/adobe-applications/customer-attributes.md)
          - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
-      - 광고 {#create}
+      - 광고 {#advertising}
          - [Google AdWords](tutorials/ui/create/advertising/ads.md)
+      - Analytics {#analytics}
+         - [Mixpanel](tutorials/ui/create/analytics/mixpanel.md)
       - 클라우드 스토리지 {#cloud-storage}
          - [Amazon Kinesis](tutorials/ui/create/cloud-storage/kinesis.md)
          - [Amazon S3](tutorials/ui/create/cloud-storage/s3.md)
@@ -263,6 +269,7 @@ ht-degree: 13%
          - [HTTP API](tutorials/ui/create/streaming/http.md)
    - 데이터 흐름 구성 {#dataflow}
       - [광고 연결 데이터 흐름](tutorials/ui/dataflow/advertising.md)
+      - [Analytics 연결 데이터 흐름](tutorials/ui/dataflow/analytics.md)
       - [일괄 클라우드 스토리지 연결 데이터 흐름](tutorials/ui/dataflow/batch/cloud-storage.md)
       - [스트리밍 클라우드 스토리지 연결 데이터 흐름](tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
       - [동의 및 환경 설정 연결 데이터 흐름](tutorials/ui/dataflow/consent-and-preferences.md)
