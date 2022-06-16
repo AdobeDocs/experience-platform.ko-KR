@@ -3,9 +3,9 @@ keywords: Amazon S3;S3 대상;s3;amazon s3
 title: Amazon S3 연결
 description: Amazon Web Services(AWS) S3 저장소에 대한 라이브 아웃바운드 연결을 만들어 Adobe Experience Platform의 CSV 데이터 파일을 고유한 S3 버킷으로 주기적으로 내보냅니다.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
+source-git-commit: f3f713848c7796c95d5326eba8a2e75f36704fd0
 workflow-type: tm+mt
-source-wordcount: '613'
+source-wordcount: '682'
 ht-degree: 1%
 
 ---
@@ -31,9 +31,30 @@ ht-degree: 1%
 
 ## 대상에 연결 {#connect}
 
-이 대상에 연결하려면 [대상 구성 자습서](../../ui/connect-destination.md).
+>[!IMPORTANT]
+> 
+>대상에 연결하려면 **[!UICONTROL 대상 관리]** [액세스 제어 권한](/help/access-control/home.md#permissions). 다음 문서를 참조하십시오. [액세스 제어 개요](/help/access-control/ui/overview.md) 또는 제품 관리자에게 문의하여 필요한 권한을 얻으십시오.
 
-### 연결 매개 변수 {#parameters}
+이 대상에 연결하려면 [대상 구성 자습서](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html). 대상 구성 워크플로우에서 아래 두 섹션에 나열된 필드를 입력합니다.
+
+### 대상에 인증 {#authenticate}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_s3_rsa"
+>title="RSA 공개 키"
+>abstract="선택적으로 RSA 형식의 공개 키를 첨부하여 내보낸 파일에 암호화를 추가할 수 있습니다. 공개 키는 [!DNL Base64-encoded] 문자열. 아래 설명서 링크에서 올바른 형식의 키의 예를 봅니다."
+
+대상을 인증하려면 필요한 필드를 입력하고 을(를) 선택합니다 **[!UICONTROL 대상에 연결]**.
+
+* **[!DNL Amazon S3]액세스 키** 및 **[!DNL Amazon S3]비밀 키**: in [!DNL Amazon S3], 생성 `access key - secret access key` 플랫폼에 대한 액세스 권한을 부여하기 위한 쌍 [!DNL Amazon S3] 계정이 필요합니다. 자세한 내용은 [Amazon Web Services 설명서](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
+* **[!UICONTROL 암호화 키]**: 선택적으로 RSA 형식의 공개 키를 첨부하여 내보낸 파일에 암호화를 추가할 수 있습니다. 공개 키는 [!DNL Base64-encoded] 문자열.
+   * 예: `----BEGIN PGP PUBLIC KEY BLOCK---- {Base64-encoded string} ----END PGP PUBLIC KEY BLOCK----`. 간결성을 위해 중간 부분이 단축된 올바른 형식의 PGP 키의 예를 아래 를 참조하십시오.
+
+      ![PGP 키](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+
+### 대상 세부 사항 채우기 {#destination-details}
+
+대상에 대한 세부 사항을 구성하려면 필수 필드를 입력하고 을(를) 선택합니다 **[!UICONTROL 다음]**.
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_s3_bucket"
@@ -43,27 +64,13 @@ ht-degree: 1%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_s3_folderpath"
 >title="폴더 경로"
->abstract="A-Z, a-z, 0-9 문자만 포함해야 하며 다음 특수 문자를 포함할 수 있습니다. `/!-_.'()"^[]+$%.*"`. 세그먼트 파일당 폴더를 만들려면 매크로 /%SEGMENT_NAME% 또는 /%SEGMENT_ID% 또는 /%SEGMENT_NAME%/%SEGMENT_ID%를 텍스트 필드에 삽입합니다. 매크로는 폴더 경로 끝에만 삽입할 수 있습니다. 설명서에서 매크로 예제를 봅니다."
+>abstract="A-Z, a-z, 0-9 문자만 포함해야 하며 다음 특수 문자를 포함할 수 있습니다. `/!-_.'()"^[]+$%.*"`. 세그먼트 파일당 폴더를 만들려면 매크로를 삽입합니다 `/%SEGMENT_NAME%` 또는 `/%SEGMENT_ID%` 또는 `/%SEGMENT_NAME%/%SEGMENT_ID%` 텍스트 필드에 입력할 수 있습니다. 매크로는 폴더 경로 끝에만 삽입할 수 있습니다. 설명서에서 매크로 예제를 봅니다."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/cloud-storage/overview.html#use-macros" text="매크로를 사용하여 저장소 위치에 폴더를 만듭니다"
 
->[!CONTEXTUALHELP]
->id="platform_destinations_connect_s3_rsa"
->title="RSA 공개 키"
->abstract="선택적으로 RSA 형식의 공개 키를 첨부하여 내보낸 파일에 암호화를 추가할 수 있습니다. 공개 키는 Base64 인코딩 문자열로 작성해야 합니다."
-
->[!IMPORTANT]
-> 
->대상에 연결하려면 **[!UICONTROL 대상 관리]** [액세스 제어 권한](/help/access-control/home.md#permissions). 다음 문서를 참조하십시오. [액세스 제어 개요](/help/access-control/ui/overview.md) 또는 제품 관리자에게 문의하여 필요한 권한을 얻으십시오.
-
-While [설정](../../ui/connect-destination.md) 이 대상을 사용하려면 다음 정보를 제공해야 합니다.
-
-* **[!DNL Amazon S3]액세스 키** 및 **[!DNL Amazon S3]비밀 키**: in [!DNL Amazon S3], 생성 `access key - secret access key` 플랫폼에 대한 액세스 권한을 부여하기 위한 쌍 [!DNL Amazon S3] 계정이 필요합니다. 자세한 내용은 [Amazon Web Services 설명서](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 * **[!UICONTROL 이름]**: 이 대상을 식별하는 데 도움이 되는 이름을 입력하십시오.
 * **[!UICONTROL 설명]**: 이 대상에 대한 설명을 입력합니다.
 * **[!UICONTROL 버킷 이름]**: 이름 입력 [!DNL Amazon S3] 이 대상에서 사용할 버킷입니다.
 * **[!UICONTROL 폴더 경로]**: 내보낸 파일을 호스팅할 대상 폴더의 경로를 입력합니다.
-
-선택적으로 RSA 형식의 공개 키를 첨부하여 내보낸 파일에 암호화를 추가할 수 있습니다. 공개 키는 [!DNL Base64] 인코딩된 문자열입니다.
 
 >[!TIP]
 >
