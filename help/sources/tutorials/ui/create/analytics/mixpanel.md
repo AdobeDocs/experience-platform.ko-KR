@@ -4,9 +4,9 @@ title: (베타) UI에서 Mixpanel 소스 연결 만들기
 description: Adobe Experience Platform UI를 사용하여 Mixpanel 소스 연결을 만드는 방법을 알아봅니다.
 hide: true
 hidefromtoc: true
-source-git-commit: 2ad3737c7099319e0b14f4e843dda87a6a554d97
+source-git-commit: 8092829c95c9bc43894b73db104fdbb22363e460
 workflow-type: tm+mt
-source-wordcount: '898'
+source-wordcount: '897'
 ht-degree: 2%
 
 ---
@@ -72,7 +72,7 @@ ht-degree: 2%
 >id="platform_sources_mixpanel_timezone"
 >title="Mixpanel 통합에 대한 시간대 설정"
 >abstract="Platform은 지정된 프로젝트 시간대를 사용하여 Mixpanel에서 관련 데이터를 수집하므로 시간대는 Mixpanel 프로필 시간대 설정과 동일해야 합니다. Mixpanel은 이벤트를 Mixpanel 데이터 저장소에 기록하기 전에 프로젝트 시간대와 좌표되도록 시간대를 조정합니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/sources/tutorials/ui/create/analytics/mixpanel.html?lang=en#project-id-and-timezone" text="자세한 내용은 문서에서 알아보십시오"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/analytics/mixpanel.html?lang=en#project-id-and-timezone" text="자세한 내용은 문서에서 알아보십시오"
 
 소스가 인증되면 프로젝트 ID와 시간대를 제공한 다음, 을 선택합니다 **[!UICONTROL 선택]**.
 
