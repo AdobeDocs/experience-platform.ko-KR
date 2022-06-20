@@ -2,10 +2,11 @@
 title: 이벤트 전달에서 활동 모니터링
 description: 이벤트 전달 속성에서 사용, 오류 및 계산 시간을 모니터링하는 방법을 알아봅니다.
 feature: Event Forwarding
-source-git-commit: 4de448fb5e8ed94d23ebfbcc1bfe19bcfd36fbca
+exl-id: 9d8572a3-816e-4b66-afe6-344fe8a15f22
+source-git-commit: 9313ebe6d51d5ef42915d154def9cb0612407439
 workflow-type: tm+mt
-source-wordcount: '534'
-ht-degree: 0%
+source-wordcount: '548'
+ht-degree: 1%
 
 ---
 
@@ -22,6 +23,12 @@ ht-degree: 0%
 ## 전제 조건
 
 이 안내서에서는 이벤트 전달을 구입했으며 이벤트 전달이 작동하는 방식을 제대로 이해하고 있다고 가정합니다. 자세한 내용은 [이벤트 전달 개요](./overview.md) 추가 정보.
+
+## 비디오 개요
+
+모니터링 기능에 대한 높은 수준의 개요를 보려면 다음 비디오를 시청하십시오.
+
+>[!VIDEO](https://video.tv.adobe.com/v/343999?quality=12&learn=on)
 
 ## 속성 및 환경 선택
 
