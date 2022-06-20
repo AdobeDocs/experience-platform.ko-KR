@@ -5,9 +5,9 @@ title: 설명자 API 끝점
 description: 스키마 레지스트리 API의 /descriptors 종단점을 사용하면 경험 애플리케이션 내의 XDM 설명자를 프로그래밍 방식으로 관리할 수 있습니다.
 topic-legacy: developer guide
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: b92246e729ca26387a3d375e5627165a29956e52
 workflow-type: tm+mt
-source-wordcount: '1626'
+source-wordcount: '1836'
 ht-degree: 3%
 
 ---
@@ -311,7 +311,7 @@ ID 설명자는 &quot;[!UICONTROL sourceProperty]&quot;[!UICONTROL sourceSchema]
 
 | 속성 | 설명 |
 | --- | --- |
-| `@type` | 정의되는 설명자의 유형입니다. |
+| `@type` | 정의되는 설명자의 유형입니다. ID 설명자의 경우 이 값을 `xdm:descriptorIdentity`. |
 | `xdm:sourceSchema` | 다음 `$id` 설명자가 정의되는 스키마의 URI입니다. |
 | `xdm:sourceVersion` | 소스 스키마의 주 버전입니다. |
 | `xdm:sourceProperty` | ID가 될 특정 속성의 경로입니다. 경로는 &quot;/&quot;로 시작해야 하며 하나로 끝나지 않습니다. 경로에 &quot;속성&quot;을 포함하지 마십시오(예: &quot;/properties/personalEmail/properties/address&quot; 대신 &quot;/personalEmail/address&quot;를 사용) |
@@ -347,7 +347,7 @@ ID 설명자는 &quot;[!UICONTROL sourceProperty]&quot;[!UICONTROL sourceSchema]
 
 | 속성 | 설명 |
 | --- | --- |
-| `@type` | 정의되는 설명자의 유형입니다. |
+| `@type` | 정의되는 설명자의 유형입니다. 친숙한 이름 설명자의 경우 이 값을 `xdm:alternateDisplayInfo`. |
 | `xdm:sourceSchema` | 다음 `$id` 설명자가 정의되는 스키마의 URI입니다. |
 | `xdm:sourceVersion` | 소스 스키마의 주 버전입니다. |
 | `xdm:sourceProperty` | ID가 될 특정 속성의 경로입니다. 경로는 &quot;/&quot;로 시작해야 하며 하나로 끝나지 않습니다. 경로에 &quot;속성&quot;을 포함하지 마십시오(예: &quot;/properties/personalEmail/properties/address&quot; 대신 &quot;/personalEmail/address&quot;를 사용) |
@@ -377,7 +377,7 @@ ID 설명자는 &quot;[!UICONTROL sourceProperty]&quot;[!UICONTROL sourceSchema]
 
 | 속성 | 설명 |
 | --- | --- |
-| `@type` | 정의되는 설명자의 유형입니다. |
+| `@type` | 정의되는 설명자의 유형입니다. 관계 설명자의 경우 이 값을 `xdm:descriptorOneToOne`. |
 | `xdm:sourceSchema` | 다음 `$id` 설명자가 정의되는 스키마의 URI입니다. |
 | `xdm:sourceVersion` | 소스 스키마의 주 버전입니다. |
 | `xdm:sourceProperty` | 관계가 정의된 소스 스키마의 필드에 대한 경로입니다. &quot;/&quot;로 시작해야 하며 하나로 끝나지 않아야 합니다. 경로에 &quot;속성&quot;을 포함하지 마십시오(예: &quot;/properties/personalEmail/properties/address&quot; 대신 &quot;/personalEmail/address&quot;). |
@@ -386,7 +386,6 @@ ID 설명자는 &quot;[!UICONTROL sourceProperty]&quot;[!UICONTROL sourceSchema]
 | `xdm:destinationProperty` | 대상 스키마 내의 대상 필드에 대한 선택적 경로입니다. 이 속성을 생략하면 대상 필드는 일치하는 참조 ID 설명자를 포함하는 모든 필드에 의해 추론됩니다(아래 참조). |
 
 {style=&quot;table-layout:auto&quot;}
-
 
 #### 참조 ID 설명자
 
@@ -404,8 +403,32 @@ ID 설명자는 &quot;[!UICONTROL sourceProperty]&quot;[!UICONTROL sourceSchema]
 
 | 속성 | 설명 |
 | --- | --- |
-| `@type` | 정의되는 설명자의 유형입니다. |
+| `@type` | 정의되는 설명자의 유형입니다. 참조 ID 설명자의 경우 이 값을 `xdm:descriptorReferenceIdentity`. |
 | `xdm:sourceSchema` | 다음 `$id` 설명자가 정의되는 스키마의 URI입니다. |
 | `xdm:sourceVersion` | 소스 스키마의 주 버전입니다. |
 | `xdm:sourceProperty` | 설명자가 정의되는 소스 스키마의 필드에 대한 경로입니다. &quot;/&quot;로 시작해야 하며 하나로 끝나지 않아야 합니다. 경로에 &quot;속성&quot;을 포함하지 마십시오(예: &quot;/properties/personalEmail/properties/address&quot; 대신 &quot;/personalEmail/address&quot;). |
 | `xdm:identityNamespace` | 소스 속성에 대한 ID 네임스페이스 코드입니다. |
+
+{style=&quot;table-layout:auto&quot;}
+
+#### 사용되지 않는 필드 설명자
+
+다음을 수행할 수 있습니다 [사용자 지정 XDM 리소스 내의 필드 사용 안 함](../tutorials/field-deprecation.md#custom) 추가 `meta:status` 속성 설정 `deprecated` 문제가 있는 필드에 연결합니다. 스키마에 표준 XDM 리소스에서 제공하는 필드를 사용하지 않으려면 해당 스키마에 더 이상 사용되지 않는 필드 설명자를 할당하여 동일한 효과를 얻을 수 있습니다. 사용 [올바른 `Accept` 헤더](../tutorials/field-deprecation.md#verify-deprecation)그런 다음 API에서 스키마를 찾을 때 사용 중단되는 표준 필드를 볼 수 있습니다.
+
+```json
+{
+  "@type": "xdm:descriptorDeprecated",
+  "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/c65ddf08cf2d4a2fe94bd06113bf4bc4c855e12a936410d5",
+  "xdm:sourceVersion": 1,
+  "xdm:sourceProperty": "/faxPhone"
+}
+```
+
+| 속성 | 설명 |
+| --- | --- |
+| `@type` | 설명자의 유형입니다. 필드 사용 중단 설명자의 경우 이 값을 `xdm:descriptorDeprecated`. |
+| `xdm:sourceSchema` | URI `$id` 설명자를 적용할 스키마 중 하나입니다. |
+| `xdm:sourceVersion` | 설명자를 적용할 스키마의 버전입니다. 을(를) 로 설정해야 합니다. `1`. |
+| `xdm:sourceProperty` | 설명자를 적용할 스키마 내의 속성 경로입니다. 설명자를 여러 속성에 적용하려면 스토리지 시스템 형태로 경로 목록을 제공할 수 있습니다. 예를 들면 다음과 같습니다. `["/firstName", "/lastName"]`). |
+
+{style=&quot;table-layout:auto&quot;}

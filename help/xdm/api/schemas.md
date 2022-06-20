@@ -5,9 +5,9 @@ title: 스키마 API 끝점
 description: 스키마 레지스트리 API의 /schema 종단점을 사용하면 경험 애플리케이션 내에서 XDM 스키마를 프로그래밍 방식으로 관리할 수 있습니다.
 topic-legacy: developer guide
 exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: b92246e729ca26387a3d375e5627165a29956e52
 workflow-type: tm+mt
-source-wordcount: '1454'
+source-wordcount: '1468'
 ht-degree: 4%
 
 ---
@@ -138,6 +138,7 @@ curl -X GET \
 | `application/vnd.adobe.xed-notext+json; version=1` | 원시 `$ref` 및 `allOf`, 제목 또는 설명이 없습니다. |
 | `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` 및 `allOf` 해결됨, 제목 또는 설명이 없습니다. |
 | `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` 및 `allOf` 해결된 설명자가 포함되어 있습니다. |
+| `application/vnd.adobe.xed-deprecatefield+json; version=1` | `$ref` 및 `allOf` 해결됨, 에는 제목 및 설명이 있습니다. 사용되지 않는 필드는 `meta:status` 속성 `deprecated`. |
 
 {style=&quot;table-layout:auto&quot;}
 

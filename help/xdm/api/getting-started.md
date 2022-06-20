@@ -5,9 +5,9 @@ title: 스키마 레지스트리 API 시작하기
 description: 이 문서에서는 스키마 레지스트리 API를 호출하기 전에 알아야 하는 핵심 개념을 소개합니다.
 topic-legacy: developer guide
 exl-id: 7daebb7d-72d2-4967-b4f7-1886736db69f
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: b92246e729ca26387a3d375e5627165a29956e52
 workflow-type: tm+mt
-source-wordcount: '1342'
+source-wordcount: '1356'
 ht-degree: 0%
 
 ---
@@ -211,6 +211,7 @@ URI를 보다 REST 친화적으로 만들기 위해 스키마에는 라는 속�
 | `application/vnd.adobe.xed-notext+json; version=1` | 원시 XDM 및 `$ref` 및 `allOf`. 제목 또는 설명이 없습니다. |
 | `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` 속성 및 `allOf` 해결됨. 제목 또는 설명이 없습니다. |
 | `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` 속성 및 `allOf` 해결됨. 설명자가 포함되어 있습니다. |
+| `application/vnd.adobe.xed-deprecatefield+json; version=1` | `$ref` 및 `allOf` 해결됨, 에는 제목 및 설명이 있습니다. 사용되지 않는 필드는 `meta:status` 속성 `deprecated`. |
 
 {style=&quot;table-layout:auto&quot;}
 
