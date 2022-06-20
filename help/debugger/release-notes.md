@@ -4,14 +4,19 @@ description: Adobe Experience Platform Debugger에 대한 최신 릴리스 정�
 keywords: debugger;experience Platform Debugger 확장 프로그램;chrome;확장 프로그램;릴리스 정보
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: 9c4f16c84b78403e5baf02595a38093341eefa67
+source-git-commit: b4e3b40942390ef183ccb01f65702ae400a5e22f
 workflow-type: tm+mt
-source-wordcount: '351'
-ht-degree: 5%
+source-wordcount: '373'
+ht-degree: 4%
 
 ---
 
 # Adobe Experience Platform Debugger 릴리스 노트
+
+## 버전 1.3.3 - 2022년 6월 20일
+
+* 네트워크 이벤트 테이블에서 팝업을 열 수 없는 문제를 수정했습니다.
+* 온페이지 합금 정보를 로드할 수 없는 문제를 해결했습니다.
 
 ## 버전 1.3.2 - 2022년 6월 9일
 
