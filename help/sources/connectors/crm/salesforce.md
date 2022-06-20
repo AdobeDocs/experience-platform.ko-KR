@@ -5,9 +5,9 @@ title: Salesforce 소스 커넥터 개요
 topic-legacy: overview
 description: API 또는 사용자 인터페이스를 사용하여 Salesforce를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: e178e0df2653b8cb0d4176734be7cb421098e225
 workflow-type: tm+mt
-source-wordcount: '897'
+source-wordcount: '900'
 ht-degree: 0%
 
 ---
@@ -35,6 +35,7 @@ Experience Platform은 타사 CRM 시스템에서 데이터 섭취를 지원합�
 - [기회 연락처 역할](../adobe-applications/mapping/salesforce.md#opportunity-contact-role)
 - [캠페인](../adobe-applications/mapping/salesforce.md#campaign)
 - [캠페인 구성원](../adobe-applications/mapping/salesforce.md#campaign-member)
+- [계정 연락처 관계](../adobe-applications/mapping/salesforce.md#account-contact-relation)
 
 ## 설정 [!DNL Salesforce] 네임스페이스 및 스키마 자동 생성 유틸리티
 
