@@ -5,9 +5,9 @@ title: 실시간 고객 프로필의 개인 정보 보호 요청 처리
 type: Documentation
 description: Adobe Experience Platform Privacy Service은 다양한 개인 정보 보호 규정에 따라 지정된 대로 고객 개인 데이터에 대한 액세스, 판매 거부 또는 삭제 요청을 처리합니다. 이 문서에서는 실시간 고객 프로필에 대한 개인 정보 보호 요청 처리와 관련된 필수 개념을 다룹니다.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 1686ff1684080160057462e9aa40819a60bf6b75
 workflow-type: tm+mt
-source-wordcount: '1272'
+source-wordcount: '1281'
 ht-degree: 0%
 
 ---
@@ -135,7 +135,7 @@ When [!DNL Experience Platform] 에서 삭제 요청을 받습니다. [!DNL Priv
 
 >[!IMPORTANT]
 >
->삭제 요청이 성공하면 고객(또는 고객 세트)에 대해 수집된 속성 데이터를 제거하지만 ID 그래프에 설정된 연결은 요청에 제거되지 않습니다.
+>프로필에 대해 삭제 요청이 수행된 경우(`ProfileService`)이지만 ID 서비스(`identity`). 결과 작업은 고객(또는 고객 세트)에 대해 수집된 속성 데이터를 제거하지만 identity 그래프에 설정된 연관은 제거하지 않습니다.
 >
 >예를 들어 고객의 `email_id` 및 `customer_id` 는 해당 ID에 저장된 모든 속성 데이터를 제거합니다. 그러나 이후에 수집된 모든 데이터는 동일한 위치에서 수집됩니다 `customer_id` 은 여전히 적절한 `email_id`: 연결이 아직 있으므로
 >
