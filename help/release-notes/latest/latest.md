@@ -2,247 +2,52 @@
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform에 대한 최신 릴리스 노트입니다.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 1dc97fa33fa8cb46184e11d311ef8246199b4f03
+source-git-commit: 56d43d93be7aca059a38e9428ad5680dd52ad6f9
 workflow-type: tm+mt
-source-wordcount: '2409'
-ht-degree: 5%
+source-wordcount: '562'
+ht-degree: 7%
 
 ---
 
 # Adobe Experience Platform 릴리스 노트
 
-**릴리스 날짜: 2022년 5월 25일**
-
-Adobe Experience Platform의 새로운 기능:
-
-- [속성 기반 액세스 제어](#abac)
-- [데이터 위생](#hygiene)
+**릴리스 날짜: 2022년 6월 22일**
 
 Adobe Experience Platform의 기존 기능 업데이트:
 
-- [경고](#alerts)
-- [감사 로그](#audit-logs)
-- [대시보드](#dashbaords)
-- [데이터 수집](#data-collection)
-- [데이터 거버넌스](#data-governance)
-- [데이터 준비](#data-prep)
-- [대상](#destinations)
-- [XDM(경험 데이터 모델)](#xdm)
+- [[!DNL Data Science Workspace]](#dsw)
 - [쿼리 서비스](#query-service)
 - [소스](#sources)
 
-## 속성 기반 액세스 제어 {#abac}
+## [!DNL Data Science Workspace] {#dsw}
 
->[!IMPORTANT]
->
->속성 기반 액세스 제어는 현재 미국 기반 의료 고객 제한된 릴리스에서 사용할 수 있습니다. 이 기능은 완전히 릴리스되면 모든 Real-time Customer Data Platform 고객이 사용할 수 있습니다.
-
-속성 기반 액세스 제어는 관리자가 속성을 기반으로 특정 개체 및/또는 기능에 대한 액세스를 제어할 수 있도록 해주는 Adobe Experience Platform의 기능입니다. 속성은 스키마 필드나 세그먼트에 추가된 레이블과 같이 객체에 추가된 메타데이터일 수 있습니다. 관리자는 사용자 액세스 권한을 관리하기 위한 속성을 포함하는 액세스 정책을 정의합니다.
-
-특성 기반 액세스 제어를 통해 조직의 관리자는 모든 플랫폼 워크플로우 및 리소스에서 중요한 SPD(개인 데이터)와 PII(개인 식별 정보)에 대한 사용자의 액세스를 제어할 수 있습니다. 관리자는 해당 필드에 해당하는 특정 필드 및 데이터에만 액세스할 수 있는 사용자 역할을 정의할 수 있습니다.
+Data Science Workspace는 기계 학습 및 인공 지능을 사용하여 데이터를 통해 통찰력을 제공합니다. Adobe Experience Platform에 통합된 Data Science Workspace을 사용하면 Adobe 솔루션에서 컨텐츠 및 데이터 자산을 사용하여 예측을 할 수 있습니다. Data Science Workspace가 이를 수행하는 방법 중 하나는 JupiterLab을 사용하는 것입니다. JupiterLab 은 웹 기반 사용자 인터페이스로서 <a href="https://jupyter.org/" target="_blank">프로젝트 선택기</a> 와 Adobe Experience Platform은 긴밀하게 통합되어 있습니다. 데이터 과학자들이 Jupiter 노트북, 코드 및 데이터를 사용하여 작업할 수 있는 대화형 개발 환경을 제공합니다.
 
 | 기능 | 설명 |
 | --- | --- |
-| 속성 기반 액세스 제어 | 특성 기반 액세스 제어를 사용하면 XDM(Experience Data Model) 스키마 필드에 조직 또는 데이터 사용 범위를 정의하는 레이블을 지정할 수 있습니다. 동시에 관리자는 사용자 및 역할 관리 인터페이스를 사용하여 XDM 스키마 필드를 다루는 액세스 정책을 정의하고 사용자 또는 사용자 그룹(내부, 외부 또는 타사 사용자)에 부여된 액세스를 더 잘 관리할 수 있습니다. 또한 속성 기반 액세스 제어를 사용하여 관리자가 특정 세그먼트에 대한 액세스를 관리할 수 있습니다. 자세한 내용은 [속성 기반 액세스 제어 개요](../../access-control/abac/overview.md). |
-| 권한 | 권한은 관리자가 사용자 역할 및 액세스 정책을 정의하여 제품 응용 프로그램 내의 기능 및 개체에 대한 액세스 권한을 관리할 수 있는 Experience Cloud 영역입니다. 권한을 통해 역할을 만들고 관리하고 이러한 역할에 대해 원하는 리소스 권한을 할당할 수 있습니다. 또한 권한을 사용하여 특정 역할과 연관된 레이블, 샌드박스 및 사용자를 관리할 수도 있습니다. 자세한 내용은 [권한 UI 안내서](../../access-control/abac/ui/browse.md). |
-
-속성 기반 액세스 제어에 대한 자세한 내용은 [속성 기반 액세스 제어 개요](../../access-control/abac/overview.md).
-
-## 데이터 위생 {#hygiene}
-
-Experience Platform은 소비자 레코드 및 데이터 집합을 프로그래밍 방식으로 삭제하여 저장된 데이터를 관리할 수 있도록 해주는 데이터 위생 기능 집합을 제공합니다. 다음 중 하나를 사용합니다 [!UICONTROL 데이터 위생] ui의 작업 공간 또는 데이터 위생 API 호출을 통해 데이터 저장소를 관리하여 정보가 예상대로 사용되는지, 잘못된 데이터 수정이 필요한 경우 가 업데이트되는지, 조직 정책이 필요하다고 인정하는 경우 삭제됩니다.
-
->[!IMPORTANT]
->
->데이터 위생 기능은 현재 Adobe Shield for Healthcare 추가 기능을 구입한 조직에서만 사용할 수 있습니다.
-
-**새로운 기능**
-
-| 기능 | 설명 |
-| --- | --- |
-| 데이터 세트에 대한 TTL(Time to Live) | [TTL 예약](../../hygiene/ui/ttl.md) 플랫폼 데이터 세트. |
+| JupiterLab Launcher | 이제 JupiterLab Launcher에 Spark 3.2 노트북의 새로운 제품이 포함됩니다. Spark 2.4 노트북 제품이 Spark 3.2 노트북으로 교체되었으며 이번 릴리스의 일부가 됩니다. |
+| Spark 3.2 | New Scala(Spark) 및 PySpark 레시피에서 Spark 3.2 사용 |
+| 커널들 | Scala(Spark) 노트북은 이제 Scala 커널을 통해 작성됩니다. 이제 PySpark 노트북은 Python 커널을 통해 작성됩니다. Spark 및 PySpark 커널은 사용되지 않으며 이후 릴리스에서 제거되도록 설정됩니다. |
+| 레서피 | 새로운 PySpark 및 Spark 레시피가 Python 및 R 레서피와 유사한 Docker 워크플로우를 따릅니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
-Platform의 감사 로그에 대한 자세한 내용은 [데이터 위생 개요](../../hygiene/home.md).
-
-## 경고 {#alerts}
-
-Experience Platform을 사용하면 다양한 플랫폼 활동에 대한 이벤트 기반 경고를 구독할 수 있습니다. 을 통해 다른 경고 규칙에 가입할 수 있습니다 [!UICONTROL 경고] 플랫폼 사용자 인터페이스의 탭. 및 UI 자체 또는 이메일 알림을 통해 경고 메시지를 수신하도록 선택할 수 있습니다.
-
-**업데이트된 기능**
-
-| 기능 | 경고 규칙 | 설명 |
-| --- | --- | --- |
-| 새 경고 규칙 | 건너가기가 임계값을 초과합니다. | 이제 소스 데이터 양이 ID 임계값을 초과할 때 알림을 사용하여 알림을 받을 수 있습니다. 다음 사항에 대한 개요를 참조하십시오. [경고 규칙](../../observability/alerts/rules.md) 를 참조하십시오. |
-
-{style=&quot;table-layout:auto&quot;}
-
-경고에 대한 자세한 내용은 [[!DNL Observability Insights] 개요](../../observability/home.md).
-
-## 감사 로그 {#audit-logs}
-
-Experience Platform을 사용하면 다양한 서비스 및 기능에 대한 사용자 활동을 감사할 수 있습니다. 감사 로그는 작업을 수행한 사람과 수행한 시기에 대한 정보를 제공합니다.
-
-**업데이트된 기능**
-
-| 기능 | 이름 | 설명 |
-| --- | --- | --- |
-| 추가된 리소스 | <ul><li> 액세스 제어 정책 </li><li> 역할 </li><li> 감사 로그 </li><li> 작업 순서 </li><li> ID 네임스페이스 </li><li> ID 그래프 </li><li> 쿼리 </li><li> 데이터 세트 </li><li> 소스 데이터 흐름 </li></ul> | 활동이 발생하면 감사 로그 리소스가 자동으로 기록됩니다. 이 기능이 활성화되어 있으면 수동으로 로그 수집을 활성화할 필요가 없습니다. |
-
-{style=&quot;table-layout:auto&quot;}
-
-Platform의 감사 로그에 대한 자세한 내용은 [감사 로그 개요](../../landing/governance-privacy-security/audit-logs/overview.md).
-
-## 대시보드 {#dashboards}
-
-Adobe Experience Platform은 일별 스냅샷 중에 캡처된 대로 조직의 데이터에 대한 중요한 정보를 볼 수 있는 여러 개의 대시보드를 제공합니다.
-
-### 프로필 대시보드
-
-프로필 대시보드는 Experience Platform의 프로필 저장소 내에 조직에 있는 속성(레코드) 데이터의 스냅숏을 표시합니다.
-
-**업데이트된 기능**
-
-| 기능 | 설명 |
-| --- | --- |
-| 병합 정책 위젯별 대상 겹치기 | 이 위젯은 세그먼트 정의의 시각적 크로스오버를 표시하며 세그먼트 정의 간의 유사성을 연구하여 세그먼테이션 전략을 최적화할 수 있도록 해줍니다. |
-| ID 위젯별 프로필 수 변경 트렌드 | 이 위젯은 필요한 ID로 필터링된 프로필의 증가 패턴을 보여줌으로써 대상 활성화 요구 사항을 관리하는 데 도움이 됩니다. |
-
-{style=&quot;table-layout:auto&quot;}
-
-프로필에 대한 자세한 내용은 [프로필 대시보드 설명서](../../dashboards/guides/profiles.md).
-
-### 대상 대시보드
-
-대상 대시보드는 Experience Platform 내에서 조직에서 활성화한 대상의 스냅숏을 표시합니다.
-
-| 기능 | 설명 |
-| --- | --- |
-| 대상 위젯별로 활성화된 대상 | 이 위젯을 사용하면 활성화된 대상 수를 기반으로 대상 값을 한눈에 파악할 수 있습니다. 또한 대상에 매핑된 세그먼트의 자세한 정보에 쉽게 액세스할 수 있습니다. |
-
-{style=&quot;table-layout:auto&quot;}
-
-대상에 대한 자세한 내용은 [대상 대시보드 설명서](../../dashboards/guides/destinations.md).
-
-### 세그먼트 대시보드
-
-세그먼트 대시보드는 일별 스냅샷 중에 캡처된 세그먼트 관련 중요한 정보를 볼 수 있는 사용자 인터페이스를 제공합니다.
-
-**업데이트된 기능**
-
-| 기능 | 설명 |
-| --- | --- |
-| 대상 겹치기 위젯 | 이 위젯을 사용하면 세그먼트 정의 결과의 유사성을 시각화하여 세그멘테이션 전략을 최적화할 수 있습니다. |
-
-{style=&quot;table-layout:auto&quot;}
-
-세그먼트에 대한 자세한 내용은 [세그먼트 대시보드 설명서](../../dashboards/guides/segments.md).
-
-## 데이터 수집 {#data-collection}
-
-Experience Platform은 클라이언트측 고객 경험 데이터를 수집하고 Adobe Experience Platform Edge Network로 전송하여 Adobe 또는 비Adobe 대상으로 보강, 변환 및 배포할 수 있는 기술 세트를 제공합니다.
-
-**새로운 기능**
-
-| 기능 | 설명 |
-| --- | --- |
-| 데이터 스트림 복사 | [기존 데이터 스트림의 사본 만들기](../../edge/datastreams/overview.md#copy) 처음부터 시작하지 않도록 필요에 따라 구성을 조정합니다. |
-| 데이터 스트림 매핑 규칙 가져오기 | 데이터 수집을 위해 데이터 준비를 설정할 때 다음을 수행할 수 있습니다 [기존 데이터 스트림의 매핑 규칙 가져오기](../../edge/datastreams/data-prep.md#import-mapping) 모든 필드 매핑을 수동으로 구성하는 대신, |
-| Mobile SDK에 대한 데이터 스팀 매핑 지원 | 이제 Experience Platform Mobile SDK와 함께 사용하기 위한 데이터 세트에서 데이터 수집을 위한 데이터 준비를 구성할 수 있습니다. |
-| XDM 개체에 대한 데이터 스팀 매핑 지원 | XDM 개체와 데이터 레이어 개체를 매핑할 때 [데이터 수집을 위한 데이터 준비 구성](../../edge/datastreams/data-prep.md#select-data). |
-| 데이터 흐름과 통합 | Platform의 소스 카탈로그를 사용하여 데이터 수집을 위한 데이터 준비 및 데이터 준비 경고에 대한 향상된 지원을 포함하여 Platform Edge 네트워크의 데이터에 액세스할 수 있습니다. 자세한 내용은 [Adobe 데이터 수집 소스 개요](../../sources/connectors/adobe-applications/data-collection.md) 추가 정보. |
-
-Platform의 데이터 수집에 대한 자세한 내용은 [데이터 수집 개요](../../collection/home.md).
-
-## 데이터 거버넌스 {#governance}
-
-Adobe Experience Platform 데이터 거버넌스는 고객 데이터를 관리하고 데이터 사용량에 적용되는 규정, 제한 및 정책을 준수하는 데 사용되는 일련의 전략 및 기술입니다. 이 구성 요소는 [!DNL Experience Platform] 카탈로그 작성, 데이터 계보, 데이터 사용 레이블 지정, 데이터 액세스 정책, 마케팅 작업을 위한 데이터 액세스 제어 등 다양한 수준에서 사용할 수 있습니다.
-
-**새로운 기능**
-
-| 기능 | 설명 |
-| ------- | ----------- |
-| 동의 정책 적용(제한된 가용성) | 조직에서 Adobe Shield for Healthcare 추가 기능을 구입한 경우 이제 다음을 수행할 수 있습니다 [동의 정책 만들기](../../data-governance/policies/user-guide.md#consent-policy) 자동으로 [세그먼트 참여에 고객 동의 및 환경 설정 적용](../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation). |
-
-{style=&quot;table-layout:auto&quot;}
-
-자세한 내용은 [데이터 거버넌스 개요](../../data-governance/home.md) 를 참조하십시오.
-
-## [!DNL Data Prep] {#data-prep}
-
-[!DNL Data Prep] 데이터 엔지니어가 XDM(Experience Data Model) 을 통해 데이터를 매핑, 변환 및 확인할 수 있습니다.
-
-**업데이트된 기능**
-
-| 기능 | 설명 |
-| ------- | ----------- |
-| 의 특성 기반 액세스 제어 [!DNL Data Prep] | 이제 액세스 권한이 있는 속성만 매핑할 수 있습니다. 액세스 권한이 없는 속성은 통과 매핑 및 계산된 필드에 사용할 수 없습니다. 자세한 내용은 [의 속성 기반 액세스 제어 [!DNL Data Prep]](../../data-prep/home.md). **참고**: 속성 기반 액세스 제어는 현재 미국 기반 의료 고객 제한된 릴리스에서 사용할 수 있습니다. 이 기능은 완전히 릴리스되면 모든 Real-time Customer Data Platform 고객이 사용할 수 있습니다. |
-| 현지화된 데이터 오류 | [!DNL Data Prep] 이제 모든 변환 오류를 속성 수준(이전의 행 수준)에 현지화합니다. 이제 데이터 흐름은 전체 행을 무시하지 않고 변환 오류가 없는 열로 채워진 부분 행을 수집합니다. |
-| 스트리밍 업스트림 - [!DNL Profile Service] | 다음을 사용하여 스트림 업스트림 [!DNL Data Prep] 을 사용하여 프로필 서비스에 부분 행 업데이트를 보내려면 [[!DNL Amazon Kinesis]](../../sources/connectors/cloud-storage/kinesis.md), [[!DNL Azure Event Hubs]](../../sources/connectors/cloud-storage/eventhub.md), 또는 [[!DNL HTTP API]](../../sources/connectors/streaming/http.md) 소스. 다음 안내서를 참조하십시오. [스트리밍 업그레이드](../../data-prep/upserts.md) 추가 정보. |
-
-{style=&quot;table-layout:auto&quot;}
-
-자세한 내용은 [!DNL Data Prep]를 보려면 [[!DNL Data Prep] 개요](../../data-prep/home.md).
-
-## [!DNL Destinations] {#destinations}
-
-[!DNL Destinations] 는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과의 사전 구축된 통합입니다. 대상을 사용하여 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례에 대해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
-
-**새로운 기능 또는 업데이트된 기능**
-
-| 기능 | 설명 |
-| ----------- | ----------- |
-| 최신 프로필 자격 내보내기 [일별 세그먼트 평가 후](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files) | 이제 일별 세그먼트 평가가 완료된 후 최신 프로필 자격을 사용하여 전체 파일 내보내기를 한 번 또는 매일 예약할 수 있습니다. |
-| 다음에 대한 선택적 데이터 스트림 ID [Adobe Target 대상](../../destinations/catalog/personalization/adobe-target-connection.md) | Experience Platform Web SDK를 구현할 수 없는 사용자를 위한 Adobe Target 개인화를 활성화하기 위해 이제 Adobe Target 대상을 구성할 때 데이터 스트림 ID 선택을 선택 사항입니다. 데이터 스트림을 사용하지 않는 경우 Experience Platform에서 Target으로 내보낸 세그먼트는 다음 세션 개인화만 지원하지만, Edge Segmentation은 모두 비활성화되어 있습니다 [사용 사례](../../destinations/ui/configure-personalization-destinations.md) 에지 세그먼테이션에 따라 다릅니다. |
-
-{style=&quot;table-layout:auto&quot;}
-
-## XDM(경험 데이터 모델) {#xdm}
-
-XDM은 Adobe Experience Platform으로 가져온 데이터에 대한 일반적인 구조 및 정의(스키마)를 제공하는 오픈 소스 사양입니다. XDM 표준을 준수함으로써 모든 고객 경험 데이터를 공통 표현으로 통합하여 보다 빠르고 통합된 방식으로 통찰력을 제공할 수 있습니다. 고객 작업을 통해 유용한 통찰력을 얻을 수 있고, 세그먼트를 통해 고객 대상을 정의하고, 개인화를 위해 고객 속성을 사용할 수 있습니다.
-
-**새로운 XDM 구성 요소**
-
-| 구성 요소 유형 | 이름 | 설명 |
-| --- | --- | --- |
-| 필드 그룹 | [[!UICONTROL 변경 세트]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/changeset.schema.json) | 데이터 세트에 대한 행 수준 변경 사항을 캡처합니다. 이 필드 그룹은 모든 클래스에 적용할 수 있습니다. |
-| 필드 그룹 | [[!UICONTROL 참조 키]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-reference-keys.schema.json) | ExperienceEvent 스키마에 대한 참조 키를 캡처하여 다른 클래스를 기반으로 스키마와의 관계를 작성할 수 있습니다. |
-
-{style=&quot;table-layout:auto&quot;}
-
-**업데이트된 XDM 구성 요소**
-
-| 구성 요소 유형 | 이름 | 설명 업데이트 |
-| --- | --- | --- |
-| 비헤이비어 | [[!UICONTROL 시계열 스키마]](https://github.com/surbhi114/xdm/blob/master/components/behaviors/time-series.schema.json) | 업데이트됨 `eventType` 미디어 및 Adobe Journey Optimizer에 대한 웹 채널 인바운드 사용 사례와 관련된 몇 가지 새로운 이벤트 유형을 포함하려면 |
-| 전역 스키마 | [[!UICONTROL 대상]](https://github.com/tumulurik/xdm/blob/master/schemas/destinations/destination.schema.json) | 열거형 값이 `xdm:destinationCategory`. |
-| 필드 그룹 | [[!UICONTROL 레코드 상태]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/record-status.schema.json) | 업데이트된 필드 그룹 상태: `experimental` to `stable`. |
-| 필드 그룹 | (여러 개) | 일부 B2B 필드 그룹이 업데이트되어 특정 ID 필드가 더 이상 사용되지 않으므로 를 사용하는 키 유형 필드가 좋습니다 [[!UICONTROL B2B 소스]](../../xdm/data-types/b2b-source.md) 데이터 유형. 이전 ID 필드는 향후 업데이트에서는 더 이상 사용되지 않습니다. 다음을 참조하십시오 [가져오기 요청](https://github.com/adobe/xdm/pull/1533/files#diff-720c0bb1d1cbaf622f5656c2a4b62d35830c75f6563794da72a280a6a520fbc1) 영향을 받는 필드 그룹에 대한 전체 변경 사항 목록 |
-| 데이터 유형 | [[!UICONTROL 브라우저 세부 사항]](https://github.com/liljenback/xdm/blob/master/components/datatypes/browserdetails.schema.json) | 새 필드를 추가했습니다 `xdm:userAgentClientHints` 는 브라우저와 상호 작용하는 사용자 에이전트에 대한 컨텍스트 정보를 캡처합니다. |
-| 데이터 유형 | [[!UICONTROL 미디어 정보]](https://github.com/lidiaist/xdm/blob/master/components/datatypes/media.schema.json) | 를 추가했습니다. `xdm:playhead` 미디어 컨텐츠에 대한 플레이헤드 시간을 캡처하는 필드입니다. 에 대한 패턴 유효성 검사가 수정되었습니다. `xdm:videoSegment`. |
-| 데이터 유형 | [[!UICONTROL 등급]](https://github.com/lidiaist/xdm/blob/master/components/datatypes/external/iptc/rating.schema.json) | `iptc4xmpExt:RatingSourceLink` 는 더 이상 필수 필드가 아닙니다. |
-
-{style=&quot;table-layout:auto&quot;}
-
-Platform의 XDM에 대한 자세한 내용은 [XDM 시스템 개요](../../xdm/home.md).
+Data Science Workspace에 대한 일반적인 정보는 [개요 설명서](../../data-science-workspace/home.md).
 
 ## 쿼리 서비스 {#query-service}
 
-Query Service를 사용하면 표준 SQL을 사용하여 Adobe Experience Platform에서 데이터를 쿼리할 수 있습니다 [!DNL data lake]. 에서 모든 데이터 세트에 가입할 수 있습니다 [!DNL data lake] 쿼리 결과를 보고 또는 Data Science Workspace에 사용하거나 실시간 고객 프로필에 수집하기 위한 새로운 데이터 세트로 캡처합니다.
+Query Service를 사용하면 표준 SQL을 사용하여 Adobe Experience Platform에서 데이터를 쿼리할 수 있습니다 [!DNL Data Lake]. 에서 모든 데이터 세트에 가입할 수 있습니다 [!DNL Data Lake] 쿼리 결과를 보고 또는 Data Science Workspace에 사용하거나 실시간 고객 프로필에 수집하기 위한 새로운 데이터 세트로 캡처합니다.
 
 **업데이트된 기능**
 
 | 기능 | 설명 |
 | --- | --- |
-| Query Service 감사 로그 통합 | Query Service 감사 로그 통합은 기업 데이터 관리 정책 및 규정 요구 사항을 문제 해결하거나 준수하기 위해 쿼리 관련 사용자 작업 기록을 제공합니다. 자세한 내용은 [감사 로그 통합 설명서](../../query-service/data-governance/audit-log-guide.md) 포괄적인 정보 |
-| ALTER TABLE SQL 구성 | SQL을 사용하여 임시 데이터 세트에 있는 기본 ID를 설정합니다. Query Service를 사용하면 SQL을 통해 직접 데이터 집합 열을 기본 ID 또는 보조 ID로 표시할 수 있습니다. `ALTER TABLE` 명령. |
+| 애드혹 스키마 레이블 지정 | Query Service CTAS 쿼리를 통해 자동으로 생성된 Ad Hoc 스키마의 데이터 필드에 레이블을 적용하여 중요한 데이터에 대한 액세스를 관리합니다. 임시 스키마의 특정 필드 또는 데이터 세트의 사용을 제한하여 중요한 개인 데이터와 개인 식별 정보 모두에 대한 액세스를 제어할 수 있습니다. 특성 기반 액세스 제어 기능을 사용하면 플랫폼 UI를 통해 임시 스키마 필드에 레이블을 지정할 수 있습니다. |
+| `FLATTEN` 설정 | 타사 BI 도구를 통해 데이터베이스에 연결할 때 `FLATTEN` 중첩 데이터 구조를 병합하면 속성 이름이 행 값을 포함하는 열 이름이 되는 별도의 열로 병합됩니다. 따라서 Ad Hoc 스키마의 유용성이 개선되고, 중첩된 데이터 구조를 지원하지 않는 BI 도구에서 데이터를 검색, 분석, 변환 및 보고하는 데 필요한 작업 로드가 줄어듭니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
-Query Service 기능에 대한 자세한 내용은 [쿼리 서비스 개요](../../query-service/home.md)
-
-<!--For more information on data governance in Query Service, see the [data governance overview](../../query-service/data-governance/overview.md).-->
+쿼리 서비스에 대한 자세한 내용은 [쿼리 서비스 개요](../../query-service/home.md).
 
 ## 소스 {#sources}
 
@@ -252,11 +57,7 @@ Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 
 
 | 기능 | 설명 |
 | --- | --- |
-| 소스의 속성 기반 액세스 제어 | 이제 수집 중에 개별 소스 필드 및 특성에 대한 액세스를 관리하고 제어할 수 있습니다. **참고**: 속성 기반 액세스 제어는 현재 미국 기반 의료 고객 제한된 릴리스에서 사용할 수 있습니다. 이 기능은 완전히 릴리스되면 모든 Real-time Customer Data Platform 고객이 사용할 수 있습니다. |
-| 베타 릴리스 [!DNL Zendesk] 소스 | 를 사용하십시오 [!DNL Zendesk] 소스 - 사용자, 에이전트 및 조직 데이터를 [!DNL Zendesk] 인스턴스 [!DNL Profile] 데이터 보강 자세한 내용은 [[!DNL Zendesk] 소스 개요](../../sources/connectors/customer-success/zendesk.md) 추가 정보. |
-| B2B의 일반 공급 [!DNL Microsoft Dynamics] 소스 | 이제 를 사용할 수 있습니다 [!DNL Microsoft Dynamics] 계정, 기회, 캠페인, 마케팅 목록 및 마케팅 목록 멤버와 같은 B2B 객체를 수집하기 위한 소스. 자세한 내용은 [[!DNL Microsoft Dynamics] 소스 개요](../../sources/connectors/crm/ms-dynamics.md) 추가 정보. |
-| Adobe 데이터 수집 지원 | Platform의 소스 카탈로그를 사용하여 데이터 수집을 위한 데이터 준비 및 데이터 준비 경고에 대한 향상된 지원을 포함하여 Platform Edge 네트워크의 데이터에 액세스할 수 있습니다. 자세한 내용은 [Adobe 데이터 수집 소스 개요](../../sources/connectors/adobe-applications/data-collection.md) 추가 정보. |
-| 다음을 사용하여 파일 수집 지원 `ISO-8859-1` 인코딩 | 를 사용하십시오 `encoding` 수집할 매개 변수 `ISO-8859-1` 클라우드 스토리지 소스를 사용하여 Platform으로 인코딩된 파일 [!DNL Flow Service] API. 다음 안내서를 참조하십시오. [클라우드 스토리지 소스 연결 만들기](../../sources/tutorials/api/collect/cloud-storage.md) 추가 정보. |
+| 베타 릴리스 [!DNL Mixpanel] 소스 | 이제 를 사용할 수 있습니다 [!DNL Mixpanel] 소스에서 analytics 데이터 수집 [!DNL Mixpanel] Experience Platform 계정. 자세한 내용은 [[!DNL Mixpanel] 소스 설명서](../../sources/connectors/analytics/mixpanel.md) 추가 정보. |
 
 {style=&quot;table-layout:auto&quot;}
 
