@@ -5,7 +5,7 @@ title: XDM 필드 유형 제한
 topic-legacy: overview
 description: 매핑할 수 있는 다른 직렬화 형식 및 API에서 고유한 필드 유형을 정의하는 방법을 포함하여 XDM(Experience Data Model)의 필드 유형 제약 조건에 대한 참조입니다.
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
-source-git-commit: 279a1d90be82188ad6fd9d2bb9123354d0046b0d
+source-git-commit: 2a58236031834bbe298576e2fcab54b04ec16ac3
 workflow-type: tm+mt
 source-wordcount: '668'
 ht-degree: 6%
@@ -22,7 +22,7 @@ XDM(Experience Data Model) 스키마에서 필드의 유형은 필드에 포함�
 
 API에서 고유한 필드 유형을 정의할 계획이라면, [스키마 레지스트리 개발자 안내서](../api/getting-started.md) 에 사용자 지정 필드를 포함하도록 필드 그룹 및 데이터 유형을 만드는 방법을 알아봅니다. Experience Platform UI를 사용하여 스키마를 만드는 경우, 다음 안내서에서 안내서를 참조하십시오 [ui에서 필드 정의](../ui/fields/overview.md) 사용자 지정 필드 그룹 및 데이터 유형 내에서 정의하는 필드에 대한 제한을 구현하는 방법을 알아봅니다.
 
-## 기본 구조 및 예
+## 기본 구조 및 예 {#basic-types}
 
 XDM은 JSON 스키마 위에 구축되므로 XDM 필드는 해당 유형을 정의할 때 유사한 구문을 상속합니다. JSON 스키마에 다양한 필드 유형이 표시되는 방식을 이해하면 각 유형의 기본 제한을 나타내는 데 도움이 됩니다.
 

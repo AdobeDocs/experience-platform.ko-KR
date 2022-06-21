@@ -4,9 +4,9 @@ user-guide-title: 경험 데이터 모델(XDM) 시스템 도움말
 breadcrumb-title: 경험 데이터 모델(XDM) 안내서
 user-guide-description: 경험 데이터 모델(XDM) 클래스와 스키마 필드 그룹을 사용하여 경험 데이터를 표준화합니다.
 feature: Schemas
-source-git-commit: b92246e729ca26387a3d375e5627165a29956e52
+source-git-commit: c57c0ff63abe35fcf0246088b12b6bc6cfc542b6
 workflow-type: tm+mt
-source-wordcount: '469'
+source-wordcount: '473'
 ht-degree: 16%
 
 ---
@@ -161,7 +161,9 @@ ht-degree: 16%
    * [데이터 유형](api/data-types.md)
    * [설명자](api/descriptors.md)
    * [노조](api/unions.md)
-   * [내보내기/가져오기](api/export-import.md)
+   * [CSV로 스키마 변환](api/csv-to-schema.md)
+   * [내보내기](api/export.md)
+   * [가져오기](api/import.md)
    * [샘플 데이터](api/sample-data.md)
    * [감사 로그](api/audit-log.md)
    * [애드혹 스키마](api/ad-hoc.md)
