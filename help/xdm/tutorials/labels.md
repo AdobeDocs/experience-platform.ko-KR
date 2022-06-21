@@ -1,9 +1,10 @@
 ---
 title: 스키마에 대한 데이터 사용 레이블 관리
 description: Adobe Experience Platform UI의 XDM(Experience Data Model) 스키마 필드에 데이터 사용 레이블을 추가하는 방법을 알아봅니다.
-source-git-commit: 6156d84cfdd33f8fe491e9a80e3711cf304733e9
+exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
+source-git-commit: 6c72e9dd5961d4dc94d8264a7da795ebd96c40ec
 workflow-type: tm+mt
-source-wordcount: '691'
+source-wordcount: '711'
 ht-degree: 0%
 
 ---
@@ -20,6 +21,8 @@ Adobe Experience Platform으로 가져오는 모든 데이터는 XDM(Experience 
 
 레이블을 개별 데이터 세트(및 해당 데이터 세트 내의 필드)에 적용할 수 있지만 스키마 수준에서 레이블을 적용할 수도 있습니다. 레이블을 스키마에 직접 적용할 때 이러한 레이블은 해당 스키마를 기반으로 하는 모든 기존 및 향후 데이터 세트에 전파됩니다.
 
+또한 하나의 스키마에 추가하는 모든 필드 레이블은 공유 클래스 또는 필드 그룹에서 동일한 필드를 사용하는 다른 모든 스키마로 전파됩니다. 이렇게 하면 전체 데이터 모델에서 유사한 필드에 대한 사용 규칙이 일관되도록 할 수 있습니다.
+
 이 자습서에서는 플랫폼 UI에서 스키마 편집기를 사용하여 스키마에 레이블을 추가하는 단계를 설명합니다.
 
 ## 시작하기
@@ -32,7 +35,7 @@ Adobe Experience Platform으로 가져오는 모든 데이터는 XDM(Experience 
 
 ## 레이블을 추가할 스키마나 필드를 선택합니다
 
-스키마에만 레이블을 적용할 수 있으며 이러한 스키마(클래스, 필드 그룹 및 데이터 유형)를 구성하는 구성 요소에 추가할 수 없습니다. 레이블 추가를 시작하려면 먼저 다음을 수행해야 합니다 [편집할 기존 스키마 선택](../ui/resources/schemas.md#edit) 또는 [새 스키마 만들기](../ui/resources/schemas.md#create) 스키마 편집기에서 해당 구조를 보려면 다음과 같이 하십시오.
+레이블 추가를 시작하려면 먼저 다음을 수행해야 합니다 [편집할 기존 스키마 선택](../ui/resources/schemas.md#edit) 또는 [새 스키마 만들기](../ui/resources/schemas.md#create) 스키마 편집기에서 해당 구조를 보려면 다음과 같이 하십시오.
 
 개별 필드의 레이블을 편집하려면 캔버스에서 필드를 선택한 다음 을(를) 선택할 수 있습니다 **[!UICONTROL 액세스 관리]** 오른쪽 레일에 있습니다.
 
