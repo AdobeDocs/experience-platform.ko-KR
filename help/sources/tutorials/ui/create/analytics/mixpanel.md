@@ -2,9 +2,8 @@
 keywords: Experience Platform;홈;인기 항목;소스;커넥터;소스 커넥터;소스 sdk;sdk;SDK
 title: (베타) UI에서 Mixpanel 소스 연결 만들기
 description: Adobe Experience Platform UI를 사용하여 Mixpanel 소스 연결을 만드는 방법을 알아봅니다.
-hide: true
-hidefromtoc: true
-source-git-commit: 8092829c95c9bc43894b73db104fdbb22363e460
+exl-id: 2a02f6a4-08ed-468c-8052-f5b7be82d183
+source-git-commit: e44f6d5bb2fd891a3e3b3c5e4aed68e8d4687b53
 workflow-type: tm+mt
 source-wordcount: '897'
 ht-degree: 2%

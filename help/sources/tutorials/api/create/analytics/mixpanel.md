@@ -2,9 +2,8 @@
 keywords: Experience Platform;홈;인기 항목;소스;커넥터;소스 커넥터;소스 sdk;sdk;SDK
 title: (베타) Flow Service API를 사용하여 Mixpanel용 소스 연결 및 데이터 흐름 만들기
 description: Flow Service API를 사용하여 Adobe Experience Platform을 Mixpanel에 연결하는 방법을 알아봅니다.
-hide: true
-hidefromtoc: true
-source-git-commit: 0a21280aaeb62374437c208da83cd4b42569ee91
+exl-id: 804b876d-6fd5-4a28-b33c-4ecab1ba3333
+source-git-commit: e44f6d5bb2fd891a3e3b3c5e4aed68e8d4687b53
 workflow-type: tm+mt
 source-wordcount: '2391'
 ht-degree: 2%

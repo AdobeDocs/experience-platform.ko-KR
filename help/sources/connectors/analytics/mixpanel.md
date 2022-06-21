@@ -2,9 +2,8 @@
 keywords: Experience Platform;홈;인기 있는 주제
 title: (베타) Mixpanel 소스 커넥터 개요
 description: API 또는 사용자 인터페이스를 사용하여 Mixpanel을 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
-hide: true
-hidefromtoc: true
-source-git-commit: e7a5e20721f5826ca1f4520b4a27d261eed1e4df
+exl-id: 7eb605f6-8580-40b7-a9b3-96b9c3444f5d
+source-git-commit: e44f6d5bb2fd891a3e3b3c5e4aed68e8d4687b53
 workflow-type: tm+mt
 source-wordcount: '472'
 ht-degree: 0%
@@ -61,4 +60,3 @@ Experience Platform은 타사 analytics 애플리케이션에서 데이터를 �
 
 * [만들기 [!DNL Mixpanel] UI의 소스 연결](../../tutorials/ui/create/analytics/mixpanel.md)
 * [UI에서 고객 성공 소스 연결을 위한 데이터 흐름 만들기](../../tutorials/ui/dataflow/analytics.md)
-

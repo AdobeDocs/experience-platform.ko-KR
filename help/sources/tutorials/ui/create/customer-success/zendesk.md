@@ -3,9 +3,9 @@ keywords: Experience Platform;Zendesk;소스;커넥터;소스 커넥터;소스 s
 title: UI에서 Zendesk 소스 연결 만들기
 description: Adobe Experience Platform UI를 사용하여 Zendesk 소스 연결을 만드는 방법을 알아봅니다.
 exl-id: 75d303b0-2dcd-4202-987c-fe3400398d90
-source-git-commit: 017f074a325b5ca1921128f6d3d9759612a8a398
+source-git-commit: f0348abd41e7d594109a04fd11ed06857cedfa53
 workflow-type: tm+mt
-source-wordcount: '808'
+source-wordcount: '797'
 ht-degree: 6%
 
 ---
@@ -97,10 +97,6 @@ ht-degree: 6%
 그런 다음 보려는 데이터 흐름의 데이터 흐름 실행 ID를 선택하여 해당 데이터 흐름 실행에 대한 특정 세부 정보를 확인합니다.
 
 ![데이터 흐름 페이지](../../../../images/tutorials/create/zendesk/dataflow-monitoring.png)
-
-스키마에 대한 세부 정보를 보려면 **[!UICONTROL 데이터 거버넌스]**.
-
-![Zendesk 스키마](../../../../images/tutorials/create/zendesk/dataset-governance.png)
 
 마지막으로 다음을 선택합니다. **[!UICONTROL 데이터 세트 미리 보기]** 수집된 데이터를 표시합니다.
 

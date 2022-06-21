@@ -5,9 +5,9 @@ title: 소스 커넥터 개요
 topic-legacy: overview
 description: Adobe Experience Platform을 사용하면 Platform 서비스를 사용하여 들어오는 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 외부 소스에서 데이터를 수집할 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 등과 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 16f61ae259f6da23cfb7aa96e685716cd623d1b2
+source-git-commit: e44f6d5bb2fd891a3e3b3c5e4aed68e8d4687b53
 workflow-type: tm+mt
-source-wordcount: '1001'
+source-wordcount: '1022'
 ht-degree: 0%
 
 ---
@@ -45,11 +45,11 @@ Experience Platform은 타사 광고 시스템에서 데이터 섭취를 지원�
 
 - [[!DNL Google AdWords]](connectors/advertising/ads.md)
 
-<!-- ### Analytics {#analytics}
+### Analytics {#analytics}
 
-Experience Platform provides support for ingesting data from a third-party analytics platform. See the following related documents for more information:
+Experience Platform은 타사 분석 플랫폼에서 데이터를 수집하는 데 대한 지원을 제공합니다. 자세한 내용은 다음 관련 문서를 참조하십시오.
 
-- [[!DNL Mixpanel]](connectors/analytics/mixpanel.md) -->
+- [[!DNL Mixpanel]](connectors/analytics/mixpanel.md)
 
 ### 클라우드 스토리지 {#cloud-storage}
 
