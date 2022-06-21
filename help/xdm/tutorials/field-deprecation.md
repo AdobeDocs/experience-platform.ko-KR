@@ -1,16 +1,18 @@
 ---
 title: XDM 필드 사용 안 함
 description: 스키마 레지스트리 API에서 XDM(Experience Data Model) 필드를 사용하지 않는 방법을 알아봅니다.
-source-git-commit: dc400dce8a77f27347e767230faf7301afc7c1fb
+source-git-commit: a1b86e6976cdb5b2bd3c2ecee933dfde337c9880
 workflow-type: tm+mt
-source-wordcount: '519'
+source-wordcount: '554'
 ht-degree: 2%
 
 ---
 
 # XDM 필드 사용 안 함
 
-XDM(Experience Data Model)에서는 [스키마 레지스트리 API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). 이 문서에서는 다른 XDM 리소스에 대한 필드를 사용하지 않는 방법을 설명합니다.
+XDM(Experience Data Model)에서는 [스키마 레지스트리 API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). 필드를 사용하지 않으면 다음과 같은 다운스트림 UI에서 필드가 숨겨집니다 [!UICONTROL 프로필] 작업 공간 및 Customer Journey Analytics이지만, 그렇지 않으면 끊김 없는 변경이며 기존 데이터 흐름에 부정적인 영향을 주지 않습니다.
+
+이 문서에서는 다른 XDM 리소스에 대한 필드를 사용하지 않는 방법을 설명합니다.
 
 ## 시작하기
 
