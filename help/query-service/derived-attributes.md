@@ -1,7 +1,9 @@
 ---
 title: 파생 속성
 description: 파생된 특성을 사용하면 일반 케이던스에 대한 속성을 계산하고 선택적으로 이러한 파생된 특성을 실시간 고객 프로필에 프로필 속성으로 게시할 수 있습니다. 이 문서에서는 Query Service를 사용하여 프로필 데이터에 사용할 파생된 속성을 만드는 방법에 대한 개요를 제공합니다.
-source-git-commit: 72e157e0a6310ebf2f55205b03b60600a56e3cf6
+hide: true
+hidefromtoc: true
+source-git-commit: fc2d2e7dadb95460f5d735ba33e5f106880a0198
 workflow-type: tm+mt
 source-wordcount: '1650'
 ht-degree: 1%
