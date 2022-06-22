@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK를 사용하여 이벤트 추적
 description: Adobe Experience Platform Web SDK 이벤트를 추적하는 방법을 알아봅니다.
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
 exl-id: 8b221cae-3490-44cb-af06-85be4f8d280a
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 9b108d0e1722ea1b895c08fd7f42104a0d0da5df
 workflow-type: tm+mt
-source-wordcount: '1209'
+source-wordcount: '1177'
 ht-degree: 1%
 
 ---
@@ -218,14 +218,6 @@ alloy("sendEvent", {
 >[!WARNING]
 >
 >`destinations` 은 현재 베타 버전입니다. 설명서 및 기능은 변경될 수 있습니다.
-
-**추론**: 실시간 머신 러닝 인사이트 [실시간 머신 러닝에 대해 자세히 알아보십시오.](https://experienceleague.adobe.com/docs/experience-platform/data-science-workspace/real-time-machine-learning/home.html?lang=en)
-
->[!WARNING]
->
->`inferences` 은 현재 베타 버전입니다. 설명서 및 기능은 변경될 수 있습니다.
-
-
 
 ## 이벤트 전역 수정 {#modifying-events-globally}
 
