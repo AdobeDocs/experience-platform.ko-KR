@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: 이 자습서에서는 JupiterLab 노트북 레서피 빌더 템플릿을 사용하여 레서피를 만드는 데 필요한 단계를 안내합니다.
 exl-id: d3f300ce-c9e8-4500-81d2-ea338454bfde
-source-git-commit: fd0f6aa2ac73bdc0a5413c437d091df6bb5d38a6
+source-git-commit: b4dabd36f54cc571b78a6c6c9535f9f08c403b64
 workflow-type: tm+mt
 source-wordcount: '2119'
 ht-degree: 0%
@@ -38,7 +38,7 @@ ht-degree: 0%
 >
 >다음 [!UICONTROL 레서피 빌더] 전자 필기장은 모든 파일 형식을 사용하여 작업할 수 있지만 현재 레서피 만들기 기능은 [!DNL Python].
 
-![](../images/jupyterlab/create-recipe/recipe_builder.png)
+![](../images/jupyterlab/create-recipe/recipe_builder-new.png)
 
 을(를) 선택하는 경우 [!UICONTROL 레서피 빌더] 시작 장치의 전자 필기장이 새 탭에 열립니다.
 

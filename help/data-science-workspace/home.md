@@ -5,7 +5,7 @@ title: 데이터 과학 작업 공간 개요
 topic-legacy: overview
 description: 이 안내서에서는 Adobe Experience Platform의 데이터 과학 작업 공간과 관련된 주요 개념에 대한 개요를 제공합니다.
 exl-id: bef25073-0dfb-453d-8c32-7f44d917d62d
-source-git-commit: b30700fde3ce75cc4f66343c8d37d3e731775627
+source-git-commit: 4119242fef46d916e90e1dfb95f7e8fb9e8902f0
 workflow-type: tm+mt
 source-wordcount: '2388'
 ht-degree: 0%
@@ -154,7 +154,7 @@ Adobe Experience Platform의 모든 데이터는 표준화된 XDM 스키마를 �
 필요한 데이터를 즉시 찾지 못하지만 Adobe Experience Platform 외부에 있는 경우 추가 데이터 세트를 수집하는 것이 비교적 간단한 작업이며 이를 표준화된 XDM 스키마로도 변환할 수 있습니다.\
 다음을 사용할 수 있습니다 [!DNL Jupyter Notebook] 데이터 사전 처리를 단순화하기 위해 - 이전에 구매 성향에 사용한 노트북 템플릿이나 노트북으로 시작할 수 있습니다.
 
-![](./images/home/notebook_templates.png)
+![](./images/home/notebook_templates-new.png)
 
 ### 레시피 작성
 
