@@ -4,9 +4,9 @@ user-guide-title: 대상 안내서
 user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화합니다.
 description: 이 문서에서는 Adobe Experience Platform 대상의 목차 목록을 설명합니다
 feature: Destinations
-source-git-commit: d01875bcb89d887ca4f4dbb9e7fe6179446faa3c
+source-git-commit: 34c408e5e4c9917be7f664f284e4b8e87898945c
 workflow-type: tm+mt
-source-wordcount: '759'
+source-wordcount: '761'
 ht-degree: 8%
 
 ---
@@ -153,6 +153,7 @@ ht-degree: 8%
       * [고객 대상 음성 개요](./catalog/voice/overview.md)
       * [디지털 피드백 확장 확인](./catalog/voice/confirmit-digital-feedback.md)
       * [호출 태그 확장](./catalog/voice/invoca.md)
+      * [메달리아 연결](./catalog/voice/medallia-connector.md)
       * [메달리아 확장](./catalog/voice/medallia.md)
       * [대화 URL 받은 편지함 확장](./catalog/voice/talkurl.md)
 * 대상 SDK {#destination-sdk}
