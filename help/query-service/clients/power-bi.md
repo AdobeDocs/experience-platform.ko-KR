@@ -5,9 +5,9 @@ title: 쿼리 서비스에 Power BI 연결
 topic-legacy: connect
 description: 이 문서에서는 Adobe Experience Platform Query Service와 Power BI을 연결하는 단계를 안내합니다.
 exl-id: 8fcd3056-aac7-4226-a354-ed7fb8fe9ad7
-source-git-commit: 69f57a0e2293e438a0e5c986d888027892cc6359
+source-git-commit: 0c20b19c4c34b29c46964d5d87a8646c61055b06
 workflow-type: tm+mt
-source-wordcount: '969'
+source-wordcount: '1014'
 ht-degree: 1%
 
 ---
@@ -53,6 +53,10 @@ Power BI을 Query Service에 연결하려면 Power BI을 열고 를 선택합니
 대상 **[!DNL Server]** Power BI의 필드에 Query Service Credentials 섹션에 있는 호스트의 값을 입력합니다. 프로덕션의 경우 포트 추가 `:80` 를 호스트 문자열 끝에 추가합니다. 예: `made-up.platform-query.adobe.io:80`.
 
 다음 **[!DNL Database]** 필드는 &quot;모두&quot; 또는 데이터 집합 테이블 이름일 수 있습니다. 예: `prod:all`.
+
+>[!IMPORTANT]
+>
+>타사 BI 도구의 중첩된 데이터 구조를 병합하여 사용 편의성을 향상시키고 데이터를 검색, 분석, 변환 및 보고하는 데 필요한 작업 로드를 줄일 수 있습니다. 다음 항목에 대한 설명서를 참조하십시오.[`FLATTEN` 기능](../best-practices/flatten-nested-data.md) 데이터베이스에 연결할 때 이 설정을 활성화하는 방법에 대한 지침
 
 ![서버 및 데이터베이스 입력 필드가 강조 표시된 Power BI 대시보드.](../images/clients/power-bi/postgresql-database-dialog.png)
 

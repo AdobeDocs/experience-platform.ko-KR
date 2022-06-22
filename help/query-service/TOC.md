@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 쿼리 서비스 도움말
 breadcrumb-title: Query Service 안내서
 user-guide-description: 표준 SQL을 사용하여 플랫폼 데이터 레이크에서 데이터를 쿼리합니다.
 feature: Queries
-source-git-commit: f6faaddb43c006948b16849456305c0a5468ecce
+source-git-commit: d074ebaef19616f1556671f4c7307faeb954cd60
 workflow-type: tm+mt
-source-wordcount: '189'
+source-wordcount: '193'
 ht-degree: 18%
 
 ---
@@ -39,6 +39,7 @@ ht-degree: 18%
    - [쿼리 실행에 대한 일반 지침](best-practices/writing-queries.md)
    - [데이터 자산 조직에 대한 지침](./best-practices/organize-data-assets.md)
    - [중첩된 데이터 구조를 사용한 작업](best-practices/nested-data-structures.md)
+   - [중첩 데이터 구조 평면화](best-practices/flatten-nested-data.md)
    - [익명 블록](best-practices/anonymous-block.md)
    - [증분 로드](best-practices/incremental-load.md)
    - [데이터 중복 제거](best-practices/deduplication.md)
