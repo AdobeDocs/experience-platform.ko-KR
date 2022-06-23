@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform 릴리스 노트 - 2022년 6월
 description: Adobe Experience Platform에 대한 2022년 6월 릴리스 노트입니다.
-source-git-commit: 71f781fafa6124237955e7979fab29e7c03f984e
+source-git-commit: bff266fca5762d6da123af712364ee1fc30a6784
 workflow-type: tm+mt
-source-wordcount: '693'
+source-wordcount: '802'
 ht-degree: 6%
 
 ---
@@ -52,6 +52,15 @@ Data Science Workspace에 대한 일반적인 정보는 [개요 설명서](../..
 ## [!DNL Destinations] {#destinations}
 
 [!DNL Destinations] 는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과의 사전 구축된 통합입니다. 대상을 사용하여 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례에 대해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
+
+**새로운 기능 또는 업데이트된 기능**
+
+| 기능 | 설명 |
+| ----------- | ----------- |
+| [(베타) Google Ad Manager 360 연결](../../destinations/catalog/advertising/google-ad-manager-360-connection.md) | 다음 [!DNL Google Ad Manager 360] 연결을 통해 일괄 업로드를 수행할 수 있습니다. [!DNL publisher provided identifiers] (PPID)을 [!DNL Google Ad Manager 360], 를 통해 [!DNL Google Cloud Storage] <br><br>이 대상은 현재 베타에 있으며 제한된 수의 고객만 사용할 수 있습니다. 액세스 권한을 요청하려면 [!DNL Google Ad Manager 360] 연결되면 Adobe 담당자에게 연락하여 [!DNL IMS Organization ID]. |
+| (베타) Destination SDK 지원 [[!DNL Google Cloud Storage]](../../destinations/destination-sdk/server-and-file-configuration.md#gcs-example) 파일 기반 대상 및 [구성 가능한 파일 이름](../../destinations/destination-sdk/file-based-destination-configuration.md#file-name-configuration). | 이제 Destination SDK을 사용하여 Google Cloud 저장소 대상을 만들고 파일 이름 매크로를 통해 내보낸 파일에 대한 사용자 지정 파일 이름을 정의할 수 있습니다. <br><br> Adobe Experience Platform Destination SDK의 파일 기반 대상 지원은 현재 베타에 있습니다. 설명서 및 기능은 변경될 수 있습니다. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **새 대상**
 
