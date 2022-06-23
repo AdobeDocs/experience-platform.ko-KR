@@ -1,10 +1,11 @@
 ---
 description: 파일 기반 대상의 서버 및 파일 구성 사양은 /destination-servers 엔드포인트를 통해 Adobe Experience Platform Destination SDK에서 구성할 수 있습니다.
 title: (베타) 파일 기반 대상 서버 사양을 위한 구성 옵션
-source-git-commit: bc357e2e93b80edb5f7825bf2dee692f14bd7297
+exl-id: 56434e36-0458-45d9-961d-f6505de998f7
+source-git-commit: 3c8ad296ab9f0ce62743466ca8823b13c4545a9d
 workflow-type: tm+mt
-source-wordcount: '748'
-ht-degree: 10%
+source-wordcount: '895'
+ht-degree: 11%
 
 ---
 
@@ -37,7 +38,7 @@ ht-degree: 10%
         }
     },
     "fileConfigurations": {
-       // see File-based destinations file configuration
+       // See the file formatting configuration section further below on this page
     }
 }
 ```
@@ -50,6 +51,7 @@ ht-degree: 10%
 | `fileBasedS3Destination.bucket.value` | 문자열 | 의 이름 [!DNL Amazon S3] 이 대상에서 사용할 버킷입니다. |
 | `fileBasedS3Destination.path.templatingStrategy` | 문자열 | *필수 여부.*  `PEBBLE_V1`. |
 | `fileBasedS3Destination.path.value` | 문자열 | 내보낸 파일을 호스트할 대상 폴더의 경로입니다. |
+| `fileConfigurations` | 개체 | 자세한 내용은 [파일 형식 구성](#file-configuration) 자세한 내용은 이 섹션에 대해 설명합니다. |
 
 ## 파일 기반 SFTP 대상 서버 사양 {#sftp-example}
 
@@ -70,7 +72,7 @@ ht-degree: 10%
       "encryptionMode" : "PGP"
    },
     "fileConfigurations": {
-       // see File-based destinations file configuration
+       // See the file formatting configuration section further below on this page
     }
 }
 ```
@@ -85,6 +87,7 @@ ht-degree: 10%
 | `fileBasedSftpDestination.hostName.value` | 문자열 | 대상 스토리지의 호스트 이름입니다. |
 | `port` | 정수 | SFTP 파일 서버 포트입니다. |
 | `encryptionMode` | 문자열 | 파일 암호화를 사용할지 여부를 나타냅니다. 지원되는 값: <ul><li>PGP</li><li>None</li></ul> |
+| `fileConfigurations` | 개체 | 자세한 내용은 [파일 형식 구성](#file-configuration) 자세한 내용은 이 섹션에 대해 설명합니다. |
 
 ## 파일 기반 [!DNL Azure Data Lake Storage] ([!DNL ADLS]) 대상 서버 사양 {#adls-example}
 
@@ -99,7 +102,7 @@ ht-degree: 10%
       }
    },
   "fileConfigurations": {
-       // see File-based destinations file configuration
+       // See the file formatting configuration section further below on this page
     }
 }
 ```
@@ -110,6 +113,7 @@ ht-degree: 10%
 | `destinationServerType` | 문자열 | 대상 플랫폼에 따라 이 값을 설정합니다. 대상 [!DNL Azure Data Lake Storage] 대상, 다음 위치로 설정 `FILE_BASED_ADLS_GEN2`. |
 | `fileBasedAdlsGen2Destination.path.templatingStrategy` | 문자열 | *필수 여부.*  `PEBBLE_V1`. |
 | `fileBasedAdlsGen2Destination.path.value` | 문자열 | 내보낸 파일을 호스트할 대상 폴더의 경로입니다. |
+| `fileConfigurations` | 개체 | 자세한 내용은 [파일 형식 구성](#file-configuration) 자세한 내용은 이 섹션에 대해 설명합니다. |
 
 ## 파일 기반 [!DNL Azure Blob Storage] 대상 서버 사양 {#blob-example}
 
@@ -128,7 +132,7 @@ ht-degree: 10%
       }
    },
   "fileConfigurations": {
-       // see File-based destinations file configuration
+       // See the file formatting configuration section further below on this page
     }
 }
 ```
@@ -141,6 +145,7 @@ ht-degree: 10%
 | `fileBasedAzureBlobDestination.path.value` | 문자열 | 내보낸 파일을 호스트할 대상 폴더의 경로입니다. |
 | `fileBasedAzureBlobDestination.container.templatingStrategy` | 문자열 | *필수 여부.*  `PEBBLE_V1`. |
 | `fileBasedAzureBlobDestination.container.value` | 문자열 | 의 이름 [!DNL Azure Blob Storage] 이 대상에서 사용할 컨테이너입니다. |
+| `fileConfigurations` | 개체 | 자세한 내용은 [파일 형식 구성](#file-configuration) 자세한 내용은 이 섹션에 대해 설명합니다. |
 
 ## 파일 기반 [!DNL Data Landing Zone] ([!DNL DLZ]) 대상 서버 사양 {#dlz-example}
 
@@ -156,7 +161,7 @@ ht-degree: 10%
       "useCase": "Your use case"
    },
    "fileConfigurations": {
-       // see File-based destinations file configuration
+       // See the file formatting configuration section further below on this page
     }
 }
 ```
@@ -167,8 +172,41 @@ ht-degree: 10%
 | `destinationServerType` | 문자열 | 대상 플랫폼에 따라 이 값을 설정합니다. 대상 [!DNL Data Landing Zone] 대상, 다음 위치로 설정 `FILE_BASED_DLZ`. |
 | `fileBasedDlzDestination.path.templatingStrategy` | 문자열 | *필수 여부.*   `PEBBLE_V1`. |
 | `fileBasedDlzDestination.path.value` | 문자열 | 내보낸 파일을 호스트할 대상 폴더의 경로입니다. |
+| `fileConfigurations` | 개체 | 자세한 내용은 [파일 형식 구성](#file-configuration) 자세한 내용은 이 섹션에 대해 설명합니다. |
 
-## 파일 기반 대상 파일 구성 {#file-configuration}
+## 파일 기반 [!DNL Google Cloud Storage] 대상 서버 사양 {#gcs-example}
+
+```json
+{
+   "name":"Google Cloud Storage Server",
+   "destinationServerType":"FILE_BASED_GOOGLE_CLOUD",
+   "fileBasedGoogleCloudStorageDestination":{
+      "bucket":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{{customerData.bucket}}"
+      },
+      "path":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{{customerData.path}}"
+      }
+   },
+   "fileConfigurations":{
+      // See the file formatting configuration section further below on this page
+   }
+}
+```
+
+| 매개 변수 | 유형 | 설명 |
+|---|---|---|
+| `name` | 문자열 | 대상 연결의 이름입니다. |
+| `destinationServerType` | 문자열 | 대상 플랫폼에 따라 이 값을 설정합니다. 대상 [!DNL Google Cloud Storage] 대상, 다음 위치로 설정 `FILE_BASED_GOOGLE_CLOUD`. |
+| `fileBasedGoogleCloudStorageDestination.bucket.templatingStrategy` | 문자열 | *필수 여부.*   `PEBBLE_V1`. |
+| `fileBasedGoogleCloudStorageDestination.bucket.value` | 문자열 | 의 이름 [!DNL Google Cloud Storage] 이 대상에서 사용할 버킷입니다. |
+| `fileBasedGoogleCloudStorageDestination.path.templatingStrategy` | 문자열 | *필수 여부.*  `PEBBLE_V1`. |
+| `fileBasedGoogleCloudStorageDestination.path.value` | 문자열 | 내보낸 파일을 호스트할 대상 폴더의 경로입니다. |
+| `fileConfigurations` | 개체 | 자세한 내용은 [파일 형식 구성](#file-configuration) 자세한 내용은 이 섹션에 대해 설명합니다. |
+
+## 파일 형식 구성 {#file-configuration}
 
 이 섹션에서는 내보낸 파일의 파일 형식 설정을 설명합니다 `CSV` 파일. Experience Platform에서 받은 파일을 최적의 방식으로 읽고 해석할 수 있도록 내보낸 파일의 여러 속성을 사용자 측에서 파일 수신 시스템의 요구 사항에 맞게 수정할 수 있습니다.
 
@@ -239,7 +277,8 @@ ht-degree: 10%
                 "templatingStrategy": "NONE",
                 "value": "\n"
             }
-        }
+        },
+        "maxFileRowCount":5000000
     }
 ```
 
@@ -260,3 +299,4 @@ ht-degree: 10%
 | `csvOptions.charToEscapeQuoteEscaping.value` | 선택 사항입니다 | *전용`"fileType.value": "csv"`*. 따옴표 문자의 이스케이프를 이스케이프 처리하는 데 사용되는 단일 문자를 설정합니다. | `\` 이스케이프 및 따옴표 문자가 다른 경우. `\0` 이스케이프 문자와 따옴표 문자가 같은 경우. |
 | `csvOptions.emptyValue.value` | 선택 사항입니다 | *전용`"fileType.value": "csv"`*. 빈 값의 문자열 표현을 설정합니다. | `""` |
 | `csvOptions.lineSep.value` | 선택 사항입니다 | *전용`"fileType.value": "csv"`*. 작성에 사용해야 하는 라인 구분자를 정의합니다. 최대 길이는 1자입니다. | `\n` |
+| `maxFileRowCount` | 선택 사항입니다 | 내보낸 파일에 포함할 수 있는 최대 행 수입니다. 대상 플랫폼 파일 크기 요구 사항에 따라 구성합니다. | 해당 없음 |

@@ -1,9 +1,10 @@
 ---
 description: 이 페이지에서는 Destination SDK을 사용하여 파일 기반 대상을 구성하는 단계를 나열하고 설명합니다.
 title: (베타) Destination SDK을 사용하여 파일 기반 대상 구성
-source-git-commit: 92bca3600d854540fd2badd925e453fba41601a7
+exl-id: 84d73452-88e4-4e0f-8fc7-d0d8e10f9ff5
+source-git-commit: 77c80c391ef6677f95af81ef15272380687e6789
 workflow-type: tm+mt
-source-wordcount: '477'
+source-wordcount: '480'
 ht-degree: 0%
 
 ---
@@ -259,8 +260,9 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 * 선택한 경우 `"authenticationRule": "CUSTOMER_AUTHENTICATION"` 대상 구성에서 파일 기반 대상에 대해 Destination SDK에서 지원하는 인증 유형에 대해서는 다음 섹션을 참조하십시오.
 
    * [Amazon S3 인증](authentication-configuration.md#s3)
-   * [Azure 연결 문자열](authentication-configuration.md#blob)
-   * [Azure 서비스 주체](authentication-configuration.md#adls)
+   * [Azure Blob](authentication-configuration.md#blob)
+   * [Azure Data Lake 저장소](authentication-configuration.md#adls)
+   * [Google 클라우드 스토리지](authentication-configuration.md#gcs)
    * [SSH 키를 사용한 SFTP 인증](authentication-configuration.md#sftp-ssh)
    * [암호를 사용한 SFTP 인증](authentication-configuration.md#sftp-password)
 

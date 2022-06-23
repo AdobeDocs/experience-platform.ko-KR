@@ -2,9 +2,9 @@
 description: Adobe Experience Platform Destination SDK에서 지원되는 인증 구성을 사용하여 사용자를 인증하고 데이터를 대상 종단점으로 활성화합니다.
 title: 인증 구성
 exl-id: 33eaab24-f867-4744-b424-4ba71727373c
-source-git-commit: 92bca3600d854540fd2badd925e453fba41601a7
+source-git-commit: 631c0ac02cb7f4f95500897ca224aa532393c109
 workflow-type: tm+mt
-source-wordcount: '564'
+source-wordcount: '600'
 ht-degree: 0%
 
 ---
@@ -17,15 +17,16 @@ ht-degree: 0%
 
 Adobe Experience Platform Destination SDK은 몇 가지 인증 유형을 지원합니다.
 
-* 베어러 인증
-* (베타) Amazon S3 인증
-* (베타) Azure 연결 문자열
-* (베타) Azure 서비스 주체
-* (베타) SSH 키가 있는 SFTP
-* (베타) 암호가 있는 SFTP
-* 인증 코드가 있는 OAuth 2
-* 암호 부여가 있는 AUth 2
-* 클라이언트 자격 증명 부여가 있는 OAuth 2
+* [베어러 인증](#bearer)
+* [(베타) Amazon S3 인증](#s3)
+* [(베타) Azure Blob 저장소](#blob)
+* [(베타) Azure Data Lake 저장소](#adls)
+* [(베타) Google 클라우드 스토리지](#gcs)
+* [(베타) SSH 키가 있는 SFTP](#sftp-ssh)
+* [(베타) 암호가 있는 SFTP](#sftp-password)
+* [인증 코드가 있는 OAuth 2](#oauth2)
+* [암호 부여가 있는 AUth 2](#oauth2)
+* [클라이언트 자격 증명 부여가 있는 OAuth 2](#oauth2)
 
 를 통해 대상에 대한 인증 정보를 구성할 수 있습니다 `customerAuthenticationConfigurations` 의 매개 변수 `/destinations` 엔드포인트.
 
@@ -41,11 +42,11 @@ Experience Platform의 스트리밍 대상에 대해 베어러 인증이 지원�
 대상에 대한 베어러 유형 인증을 설정하려면 다음을 구성합니다 `customerAuthenticationConfigurations` 의 매개 변수 `/destinations` 아래에 표시된 것처럼 종단점이 있습니다.
 
 ```json
-   "customerAuthenticationConfigurations":[
-      {
-         "authType":"BEARER"
-      }
-   ]
+"customerAuthenticationConfigurations":[
+   {
+      "authType":"BEARER"
+   }
+]
 ```
 
 ## (베타) [!DNL Amazon S3] 인증 {#s3}
@@ -59,11 +60,11 @@ Experience Platform의 스트리밍 대상에 대해 베어러 인증이 지원�
 대상에 대한 Amazon S3 인증을 설정하려면 다음을 구성합니다 `customerAuthenticationConfigurations` 의 매개 변수 `/destinations` 아래에 표시된 것처럼 종단점이 있습니다.
 
 ```json
-   "customerAuthenticationConfigurations":[
-      {
-         "authType":"S3"
-      }
-   ]
+"customerAuthenticationConfigurations":[
+   {
+      "authType":"S3"
+   }
+]
 ```
 
 ## (베타) [!DNL Azure Blob Storage] {#blob}
@@ -77,11 +78,11 @@ Experience Platform의 스트리밍 대상에 대해 베어러 인증이 지원�
 설정하려면 [!DNL Azure Blob] 대상에 대한 인증, 구성 `customerAuthenticationConfigurations` 의 매개 변수 `/destinations` 아래에 표시된 것처럼 종단점이 있습니다.
 
 ```json
-   "customerAuthenticationConfigurations":[
-     {
-        "authType":"AZURE_CONNECTION_STRING"
-     }
-  ]
+"customerAuthenticationConfigurations":[
+   {
+      "authType":"AZURE_CONNECTION_STRING"
+   }
+]
 ```
 
 ## (베타) [!DNL Azure Data Lake Storage] {#adls}
@@ -95,12 +96,29 @@ Experience Platform의 스트리밍 대상에 대해 베어러 인증이 지원�
 설정하려면 [!DNL Azure Data Lake Storage] 대상에 대한 (ADLS) 인증에서 `customerAuthenticationConfigurations` 의 매개 변수 `/destinations` 아래에 표시된 것처럼 종단점이 있습니다.
 
 ```json
-   "customerAuthenticationConfigurations":[
-     {
-        "authType":"AZURE_SERVICE_PRINCIPAL"
-     }
-  ]
+"customerAuthenticationConfigurations":[
+   {
+      "authType":"AZURE_SERVICE_PRINCIPAL"
+   }
+]
 ```
+
+## (베타) [!DNL Google Cloud Storage] {#gcs}
+
+[!DNL Google Cloud Storage] Experience Platform의 파일 기반 대상에 대해 인증이 지원됩니다.
+
+>[!IMPORTANT]
+>
+>Adobe Experience Platform Destination SDK의 파일 기반 대상 지원은 현재 베타에 있습니다. 설명서 및 기능은 변경될 수 있습니다.
+
+```json
+"customerAuthenticationConfigurations":[
+   {
+      "authType":"GOOGLE_CLOUD_STORAGE"
+   }
+]
+```
+
 
 ## (베타) [!DNL SFTP] 인증 [!DNL SSH] key {#sftp-ssh}
 
@@ -113,11 +131,11 @@ Experience Platform의 스트리밍 대상에 대해 베어러 인증이 지원�
 대상에 대해 SSH 키를 사용하여 SFTP 인증을 설정하려면 다음을 구성합니다 `customerAuthenticationConfigurations` 의 매개 변수 `/destinations` 아래에 표시된 것처럼 종단점이 있습니다.
 
 ```json
-   "customerAuthenticationConfigurations":[
-      {
-         "authType":"SFTP_WITH_SSH_KEY"
-      }
-   ]
+"customerAuthenticationConfigurations":[
+   {
+      "authType":"SFTP_WITH_SSH_KEY"
+   }
+]
 ```
 
 ## (베타) [!DNL SFTP] 암호로 인증 {#sftp-password}
@@ -131,11 +149,11 @@ Experience Platform의 스트리밍 대상에 대해 베어러 인증이 지원�
 대상에 대한 암호를 사용하여 SFTP 인증을 설정하려면 다음을 구성합니다 `customerAuthenticationConfigurations` 의 매개 변수 `/destinations` 아래에 표시된 것처럼 종단점이 있습니다.
 
 ```json
-   "customerAuthenticationConfigurations":[
-      {
-         "authType":"SFTP_WITH_PASSWORD"
-      }
-   ]
+"customerAuthenticationConfigurations":[
+   {
+      "authType":"SFTP_WITH_PASSWORD"
+   }
+]
 ```
 
 ## [!DNL OAuth 2] 인증 {#oauth2}

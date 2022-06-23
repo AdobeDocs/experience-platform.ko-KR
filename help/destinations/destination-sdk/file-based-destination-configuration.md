@@ -1,9 +1,10 @@
 ---
 description: 이 구성을 사용하면 대상 이름, 카테고리, 설명, 로고 등과 같은 기본 정보를 표시할 수 있습니다. 또한 이 구성의 설정은 Experience Platform 사용자가 대상을 인증하는 방법, Experience Platform 사용자 인터페이스에 표시되는 방법 및 대상으로 내보낼 수 있는 ID를 결정합니다.
 title: (베타) Destination SDK을 위한 파일 기반 대상 구성 옵션
-source-git-commit: 5186e90b850f1e75ec358fa01bfb8a5edac29277
+exl-id: 6b0a0398-6392-470a-bb27-5b34b0062793
+source-git-commit: 3c8ad296ab9f0ce62743466ca8823b13c4545a9d
 workflow-type: tm+mt
-source-wordcount: '1899'
+source-wordcount: '2304'
 ht-degree: 5%
 
 ---
@@ -278,7 +279,7 @@ ht-degree: 5%
    },
    "batchConfig":{
       "allowMandatoryFieldSelection":true,
-      "allowJoinKeyFieldSelection":true,
+      "allowDedupeKeyFieldSelection":true,
       "defaultExportMode":"DAILY_FULL_EXPORT",
       "allowedExportMode":[
          "DAILY_FULL_EXPORT",
@@ -290,11 +291,20 @@ ht-degree: 5%
          "EVERY_6_HOURS",
          "EVERY_8_HOURS",
          "EVERY_12_HOURS",
-         "ONCE",
-         "EVERY_HOUR"
+         "ONCE"
       ],
       "defaultFrequency":"DAILY",
-      "defaultStartTime":"00:00"
+      "defaultStartTime":"00:00",
+      "filenameConfig": {
+            "allowedFilenameAppendOptions": [
+                "SEGMENT_NAME",
+                "DATETIME",
+                "TIMESTAMP",
+                "DESTINATION_NAME",
+                "SANDBOX_NAME"
+            ],
+            "defaultFilename": "{{DESTINATION_NAME}}_{{SEGMENT_ID}}"
+      }
    },
    "backfillHistoricalProfileData":true
 }
@@ -324,7 +334,7 @@ ht-degree: 5%
 
 항목에 따라 [인증 옵션](authentication-configuration.md##supported-authentication-types) 에 `authType` 필드에서는 다음과 같이 사용자에 대해 Experience Platform 페이지가 생성됩니다.
 
-### Amazon S3 인증
+### Amazon S3 인증 {#s3}
 
 Amazon S3 인증 유형을 구성할 때 사용자가 S3 자격 증명을 입력해야 합니다.
 
@@ -352,7 +362,7 @@ SSH 키 인증 유형을 사용하여 SFTP를 구성할 때는 SFTP 사용자 �
 
 Experience Platform UI에서 대상에 연결할 때 대상에 고유한 사용자 지정 필드를 작성하도록 사용자에게 요청하려면 이 섹션을 사용합니다.
 
-아래 예에서는 `customerDataFields` 를 사용하려면 사용자가 대상의 이름을 입력하고 [!DNL Amazon S3] 버킷 이름 및 폴더 경로와 압축 유형 및 파일 형식입니다.
+아래 예에서는 `customerDataFields` 를 사용하려면 사용자가 대상의 이름을 입력하고 [!DNL Amazon S3] 버킷 이름 및 폴더 경로, 압축 유형, 파일 형식 및 기타 여러 파일 내보내기 옵션.
 
 ```json
  "customerDataFields":[
@@ -649,6 +659,7 @@ Experience Platform UI에서 대상에 연결할 때 대상에 고유한 사용�
       "profileRequired":true,
       "segmentRequired":true,
       "identityRequired":true
+}
 ```
 
 | 매개 변수 | 유형 | 설명 |
@@ -722,37 +733,96 @@ ID 네임스페이스에는 1-1의 서신이 필요하지 않습니다 [!DNL Pla
 이 섹션은 Adobe Experience Platform 사용자 인터페이스에서 대상에 사용해야 하는 위의 구성에서 파일 내보내기 설정을 참조합니다.
 
 ```json
- "batchConfig":{
-      "allowMandatoryFieldSelection":true,
-      "allowDedupeKeyFieldSelection":true,
-      "defaultExportMode":"DAILY_FULL_EXPORT",
-      "allowedExportMode":[
-         "DAILY_FULL_EXPORT",
-         "FIRST_FULL_THEN_INCREMENTAL"
+"batchConfig":{
+   "allowMandatoryFieldSelection":true,
+   "allowDedupeKeyFieldSelection":true,
+   "defaultExportMode":"DAILY_FULL_EXPORT",
+   "allowedExportMode":[
+      "DAILY_FULL_EXPORT",
+      "FIRST_FULL_THEN_INCREMENTAL"
+   ],
+   "allowedScheduleFrequency":[
+      "DAILY",
+      "EVERY_3_HOURS",
+      "EVERY_6_HOURS",
+      "EVERY_8_HOURS",
+      "EVERY_12_HOURS",
+      "ONCE"
+   ],
+   "defaultFrequency":"DAILY",
+   "defaultStartTime":"00:00",
+   "filenameConfig":{
+      "allowedFilenameAppendOptions":[
+         "SEGMENT_NAME",
+         "DESTINATION_INSTANCE_ID",
+         "DESTINATION_INSTANCE_NAME",
+         "ORGANIZATION_NAME",
+         "SANDBOX_NAME",
+         "DATETIME",
+         "CUSTOM_TEXT"
       ],
-      "allowedScheduleFrequency":[
-         "DAILY",
-         "EVERY_3_HOURS",
-         "EVERY_6_HOURS",
-         "EVERY_8_HOURS",
-         "EVERY_12_HOURS",
-         "ONCE",
-         "EVERY_HOUR"
+      "defaultFilenameAppendOptions":[
+         "SEGMENT_ID",
+         "DATETIME"
       ],
-      "defaultFrequency":"DAILY",
-      "defaultStartTime":"00:00"
+      "defaultFilename":"%DESTINATION%_%SEGMENT_ID%"
    }
+}
 ```
 
 | 매개 변수 | 유형 | 설명 |
 |---------|----------|------|
 | `allowMandatoryFieldSelection` | 부울 | 을 로 설정합니다. `true` 고객이 필수 프로필 속성을 지정할 수 있도록 해줍니다. 기본값은 `false`입니다. 자세한 내용은 [필수 속성](../ui/activate-batch-profile-destinations.md#mandatory-attributes) 추가 정보. |
 | `allowDedupeKeyFieldSelection` | 부울 | 을 로 설정합니다. `true` 고객이 중복 제거 키를 지정할 수 있도록 허용 기본값은 `false`입니다.  자세한 내용은 [중복 제거 키](../ui/activate-batch-profile-destinations.md#deduplication-keys) 추가 정보. |
-| `defaultExportMode` | 열거형 | 기본 파일 내보내기 모드를 정의합니다. 지원되는 값:<ul><li>`DAILY_FULL_EXPORT`</li><li>`FIRST_FULL_THEN_INCREMENTAL`</li></ul><br>기본값은 `DAILY_FULL_EXPORT`입니다. 자세한 내용은 [배치 활성화 설명서](../ui/activate-batch-profile-destinations.md#scheduling) 파일 내보내기 예약에 대한 자세한 내용은 다음을 참조하십시오. |
+| `defaultExportMode` | 열거형 | 기본 파일 내보내기 모드를 정의합니다. 지원되는 값:<ul><li>`DAILY_FULL_EXPORT`</li><li>`FIRST_FULL_THEN_INCREMENTAL`</li></ul> 기본값은 `DAILY_FULL_EXPORT`입니다. 자세한 내용은 [배치 활성화 설명서](../ui/activate-batch-profile-destinations.md#scheduling) 파일 내보내기 예약에 대한 자세한 내용은 다음을 참조하십시오. |
 | `allowedExportModes` | 목록 | 고객이 사용할 수 있는 파일 내보내기 모드를 정의합니다. 지원되는 값:<ul><li>`DAILY_FULL_EXPORT`</li><li>`FIRST_FULL_THEN_INCREMENTAL`</li></ul> |
 | `allowedScheduleFrequency` | 목록 | 고객이 사용할 수 있는 파일 내보내기 빈도를 정의합니다. 지원되는 값:<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul> |
-| `defaultFrequency` | 열거형 | 기본 파일 내보내기 빈도를 정의합니다.지원되는 값:<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul> <br>기본값은 `DAILY`입니다. |
+| `defaultFrequency` | 열거형 | 기본 파일 내보내기 빈도를 정의합니다.지원되는 값:<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul> 기본값은 `DAILY`입니다. |
 | `defaultStartTime` | 문자열 | 파일 내보내기의 기본 시작 시간을 정의합니다. 24시간 파일 형식을 사용합니다. 기본값은 &quot;00:00&quot;입니다. |
+| `filenameConfig.allowedFilenameAppendOptions` | 문자열 | *필수 여부*. 사용자가 선택할 수 있는 사용 가능한 파일 이름 매크로 목록 내보낸 파일 이름에 추가되는 항목(세그먼트 ID, 조직 이름, 내보내기 날짜 및 시간 등)을 결정합니다. 설정 시 `defaultFilename`를 사용하여 매크로가 중복되지 않도록 합니다. <br><br>지원되는 값: <ul><li>`DESTINATION`</li><li>`SEGMENT_ID`</li><li>`SEGMENT_NAME`</li><li>`DESTINATION_INSTANCE_ID`</li><li>`DESTINATION_INSTANCE_NAME`</li><li>`ORGANIZATION_NAME`</li><li>`SANDBOX_NAME`</li><li>`DATETIME`</li><li>`CUSTOM_TEXT`</li></ul>매크로를 정의하는 순서에 관계없이 Experience Platform UI에서 항상 여기에 표시된 순서대로 표시됩니다. <br><br> If `defaultFilename` 비어 있는 경우 `allowedFilenameAppendOptions` 목록에 하나 이상의 매크로가 있어야 합니다. |
+| `filenameConfig.defaultFilenameAppendOptions` | 문자열 | *필수 여부*. 사용자가 선택 취소할 수 있는 미리 선택된 기본 파일 이름 매크로입니다.<br><br> 이 목록의 매크로는 `allowedFilenameAppendOptions`. |
+| `filenameConfig.defaultFilename` | 문자열 | *선택 사항입니다*. 내보낸 파일의 기본 파일 이름 매크로를 정의합니다. 사용자가 덮어쓸 수 없습니다. <br><br>에 의해 정의된 모든 매크로 `allowedFilenameAppendOptions` 다음에 추가됩니다. `defaultFilename` 매크로 <br><br>If `defaultFilename` 비어 있으면, 에서 매크로를 하나 이상 정의해야 합니다. `allowedFilenameAppendOptions`. |
+
+
+### 파일 이름 구성 {#file-name-configuration}
+
+파일 이름 구성 매크로를 사용하여 내보낸 파일 이름에 포함해야 하는 항목을 정의합니다. 아래 표의 매크로에서는 [파일 이름 구성](../ui/activate-batch-profile-destinations.md#file-names) 화면.
+
+가장 좋은 방법으로서, 항상 를 포함해야 합니다 `SEGMENT_ID` 내보낸 파일 이름에 매크로가 있습니다. 세그먼트 ID는 고유하므로 파일 이름도 고유하게 구별할 수 있는 가장 좋은 방법입니다.
+
+| 매크로 | UI 레이블 | 설명 | 예 |
+|---|---|---|---|
+| `DESTINATION` | [!UICONTROL 대상] | UI의 대상 이름입니다. | Amazon S3 |
+| `SEGMENT_ID` | [!UICONTROL 세그먼트 ID] | 고유한 플랫폼 생성 세그먼트 ID | ce5c5482-2813-4a80-99bc-57113f6acde2 |
+| `SEGMENT_NAME` | [!UICONTROL 세그먼트 이름] | 사용자 정의 세그먼트 이름 | VIP 가입자 |
+| `DESTINATION_INSTANCE_ID` | [!UICONTROL 대상 ID] | 대상 인스턴스의 플랫폼 생성 고유 ID | 7b891e5f-025a-4f0d-9e73-1919e71da3b0 |
+| `DESTINATION_INSTANCE_NAME` | [!UICONTROL 대상 이름] | 대상 인스턴스의 사용자 정의 이름입니다. | 2022년 내 광고 대상 |
+| `ORGANIZATION_NAME` | [!UICONTROL 조직 이름] | Adobe Experience Platform에 있는 고객 조직의 이름입니다. | 내 조직 이름 |
+| `SANDBOX_NAME` | [!UICONTROL 샌드박스 이름] | 고객이 사용하는 샌드박스의 이름입니다. | prod |
+| `DATETIME` / `TIMESTAMP` | [!UICONTROL 날짜 및 시간] | `DATETIME` 및 `TIMESTAMP` 두 정의 모두 파일이 생성된 시점을 정의하지만 형식은 다릅니다. <br><br><ul><li>`DATETIME` 는 다음 형식을 사용합니다. YYYMMDD_HMMSS.</li><li>`TIMESTAMP` 는 10자리 Unix 형식을 사용합니다. </li></ul> `DATETIME` 및 `TIMESTAMP` 는 함께 사용할 수 없으며 동시에 사용할 수 없습니다. | <ul><li>`DATETIME`: 20220509_210543</li><li>`TIMESTAMP`: 1652131584</li></ul> |
+| `CUSTOM_TEXT` | [!UICONTROL 사용자 정의 텍스트] | 파일 이름에 포함할 사용자 정의 사용자 정의 텍스트입니다. 에서는 사용할 수 없습니다. `defaultFilename`. | My_Custom_Text |
+| `TIMESTAMP` | [!UICONTROL 날짜 및 시간] | 파일이 생성된 시간의 10자리 타임스탬프(Unix 형식)입니다. | 1652131584 |
+
+
+![미리 선택된 매크로가 있는 파일 이름 구성 화면을 보여주는 UI 이미지](assets/file-name-configuration.png)
+
+위의 이미지에 표시된 예제는 다음 파일 이름 매크로 구성을 사용합니다.
+
+```json
+"filenameConfig":{
+   "allowedFilenameAppendOptions":[
+      "CUSTOM_TEXT",
+      "SEGMENT_ID",
+      "DATETIME"
+   ],
+   "defaultFilenameAppendOptions":[
+      "SEGMENT_ID",
+      "DATETIME"
+   ],
+   "defaultFilename": "%DESTINATION%"
+}
+```
+
 
 ## 내역 프로필 자격 {#profile-backfill}
 

@@ -2,7 +2,7 @@
 description: 이 페이지에서는 Adobe Experience Platform에서 대상으로 내보낸 데이터의 메시지 포맷 및 프로필 변환에 대해 설명합니다.
 title: 메시지 포맷
 exl-id: 1212c1d0-0ada-4ab8-be64-1c62a1158483
-source-git-commit: f000eadb689a99f7667c47e2bef5d2a780aa0505
+source-git-commit: 6600549cf421e2adc360b75e0b463992d549b85e
 workflow-type: tm+mt
 source-wordcount: '2266'
 ht-degree: 1%
@@ -24,7 +24,7 @@ Adobe 측의 메시지 형식 및 프로필 구성 및 변환 프로세스를 �
 
 이 페이지의 콘텐츠와 나머지 [파트너 대상에 대한 구성 옵션](./configuration-options.md). 이 페이지에서는 Adobe Experience Platform에서 대상으로 내보낸 데이터의 메시지 포맷 및 프로필 변환에 대해 설명합니다. 다른 페이지에서는 대상 연결 및 인증에 대한 세부 사항을 설명합니다.
 
-Adobe Experience Platform exports data to a significant number of destinations, in various data formats. 대상 유형의 예로는 광고 플랫폼(Google), 소셜 네트워크(Facebook) 및 클라우드 저장소 위치(Amazon S3, Azure 이벤트 허브)가 있습니다.
+Adobe Experience Platform은 다양한 데이터 형식으로 데이터를 상당한 수의 대상으로 내보냅니다. 대상 유형의 예로는 광고 플랫폼(Google), 소셜 네트워크(Facebook) 및 클라우드 저장소 위치(Amazon S3, Azure 이벤트 허브)가 있습니다.
 
 Experience Platform은 내보낸 프로필의 메시지 포맷을 측면에서 예상되는 형식과 일치하도록 조정할 수 있습니다. 이 사용자 지정을 이해하려면 다음 개념이 중요합니다.
 * Adobe Experience Platform의 소스(1) 및 대상(2) XDM 스키마
@@ -41,11 +41,11 @@ Users who want to activate data to your destination need to map the fields in th
 
 -->
 
-**소스 XDM 스키마(1)**: 이 항목은 고객이 Experience Platform에서 사용하는 스키마를 참조합니다. In Experience Platform, in the [mapping step](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en#mapping) of the activate destination workflow, customers map fields from their XDM schema to your destination&#39;s target schema (2).
+**소스 XDM 스키마(1)**: 이 항목은 고객이 Experience Platform에서 사용하는 스키마를 참조합니다. Experience Platform에서 [매핑 단계](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en#mapping) 대상 활성화 워크플로우에서 고객은 XDM 스키마의 필드를 대상의 대상 스키마(2)에 매핑합니다.
 
 **XDM 스키마 Target(2)**: 대상의 예상 형식의 JSON 표준 스키마(3) 및 대상이 해석할 수 있는 속성을 기반으로 대상 XDM 스키마에서 프로필 속성 및 ID를 정의할 수 있습니다. 대상 구성의 [schemaConfig](./destination-configuration.md#schema-configuration) 및 [identityNamespaces](./destination-configuration.md#identities-and-attributes) 개체.
 
-**대상 프로필 속성의 JSON 표준 스키마(3)**: 이 예는 [JSON 스키마](https://json-schema.org/learn/miscellaneous-examples.html) 플랫폼이 지원하는 모든 프로필 속성 및 해당 유형(예: 개체, 문자열, 배열). 대상이 지원할 수 있는 필드의 예는 다음과 같습니다 `firstName`, `lastName`, `gender`, `email`, `phone`, `productId`, `productName`등 You need a [message transformation template](./message-format.md#using-templating) to tailor the data exported out of Experience Platform to your expected format.
+**대상 프로필 속성의 JSON 표준 스키마(3)**: 이 예는 [JSON 스키마](https://json-schema.org/learn/miscellaneous-examples.html) 플랫폼이 지원하는 모든 프로필 속성 및 해당 유형(예: 개체, 문자열, 배열). 대상이 지원할 수 있는 필드의 예는 다음과 같습니다 `firstName`, `lastName`, `gender`, `email`, `phone`, `productId`, `productName`등 다음을 수행해야 합니다. [메시지 변환 템플릿](./message-format.md#using-templating) Experience Platform에서 내보낸 데이터를 원하는 형식으로 조정할 수 있습니다.
 
 위에 설명된 스키마 변형을 기반으로 다음은 소스 XDM 스키마와 파트너 측의 샘플 스키마 간의 프로필 구성 변경 방법입니다.
 
@@ -59,9 +59,9 @@ Users who want to activate data to your destination need to map the fields in th
 >
 >고객은 소스 XDM 스키마의 속성을 Adobe Experience Platform UI의 파트너 XDM 스키마로 매핑합니다( **매핑** 의 단계 [대상 워크플로우 활성화](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping).
 
-Let&#39;s say your platform can receive a message format like:
+플랫폼이 다음과 같은 메시지 형식을 수신할 수 있다고 가정합니다.
 
-```curl
+```shell
 POST https://YOUR_REST_API_URL/users/
 Content-Type: application/json
 Authorization: Bearer YOUR_REST_API_KEY
@@ -78,7 +78,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 메시지 형식을 고려할 때 해당 변형은 다음과 같습니다.
 
-| Attribute in partner XDM schema on the Adobe side | 변환 | 사용자 측의 HTTP 메시지에 있는 속성 |
+| Adobe 측의 파트너 XDM 스키마의 속성 | 변환 | 사용자 측의 HTTP 메시지에 있는 속성 |
 |---------|----------|---------|
 | `_your_custom_schema.firstName` | ` attributes.first_name` | `first_name` |
 | `_your_custom_schema.lastName` | `attributes.last_name` | `last_name` |
@@ -86,7 +86,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 ## Experience Platform의 프로필 구조 {#profile-structure}
 
-To understand the examples further below on the page, it is important to know the structure of a profile in Experience Platform.
+페이지에서 아래의 예를 더 이해하려면 Experience Platform에서 프로필의 구조를 알고 있어야 합니다.
 
 프로필에는 3개의 섹션이 있습니다.
 
@@ -94,7 +94,7 @@ To understand the examples further below on the page, it is important to know th
    * 이 섹션에는 프로필에 있는 모든 세그먼트가 포함되어 있습니다. 세그먼트는 다음 3가지 상태 중 하나를 가질 수 있습니다. `realized`, `existing`, `exited`.
 * `identityMap` (항상 프로필에 있음)
    * 이 섹션에는 프로필에 있는 모든 ID(이메일, Google GAID, Apple IDFA 등)와 활성화 워크플로우에서 내보내도록 매핑되어 있는 사용자가 포함됩니다.
-* 속성(대상 구성에 따라 프로필에 있을 수 있습니다.) There is also a slight difference to note between predefined attributes and freeform attributes:
+* 속성(대상 구성에 따라 프로필에 있을 수 있습니다.) 사전 정의된 속성과 자유 형식 속성 간에 약간의 차이가 있습니다.
    * 대상 *자유 형식 속성*, 여기에는 다음이 포함됩니다 `.value` 프로파일에 속성이 있으면 경로( `lastName` 속성(예 1)을 포함합니다. 프로필에 없으면 프로필에 가 포함되지 않습니다 `.value` 경로(참조) `firstName` 속성(예 1)을 포함합니다.
    * 대상 *사전 정의된 속성*: 다음을 포함하지 않습니다 `.value` 경로. 프로필에 있는 모든 매핑된 속성이 특성 맵에 표시됩니다. 존재하지 않는 항목은 없습니다(예 2 - 다음 참조). `firstName` 속성이 프로필에 없음).
 
@@ -475,10 +475,9 @@ Experience Platform의 ID에 대한 자세한 내용은 [ID 네임스페이스 �
 }
 ```
 
-
 ### 세그먼트 및 ID를 보내는 템플릿 만들기 {#segments-and-identities}
 
-This section provides an example of a commonly used transformation between the Adobe XDM schema and partner destination schema.
+이 섹션에서는 Adobe XDM 스키마와 파트너 대상 스키마 간에 일반적으로 사용되는 변환의 예를 제공합니다.
 아래 예는 세그먼트 멤버십 및 ID 형식을 변형하고 대상으로 출력하는 방법을 보여줍니다.
 
 **입력**
@@ -645,11 +644,11 @@ This section provides an example of a commonly used transformation between the A
 
 ### 세그먼트, ID 및 프로필 속성을 보내는 템플릿을 만듭니다 {#segments-identities-attributes}
 
-This section provides an example of a commonly used transformation between the Adobe XDM schema and partner destination schema.
+이 섹션에서는 Adobe XDM 스키마와 파트너 대상 스키마 간에 일반적으로 사용되는 변환의 예를 제공합니다.
 
-다른 일반적인 사용 사례는 세그먼트 멤버십, ID가 포함된 데이터를 내보내는 것입니다(예: 이메일 주소, 전화번호, 광고 ID) 및 프로필 속성. To export data in this manner, see the example below:
+다른 일반적인 사용 사례는 세그먼트 멤버십, ID가 포함된 데이터를 내보내는 것입니다(예: 이메일 주소, 전화번호, 광고 ID) 및 프로필 속성. 이러한 방식으로 데이터를 내보내려면 아래 예를 참조하십시오.
 
-**Input**
+**입력**
 
 프로필 1:
 
@@ -695,7 +694,7 @@ This section provides an example of a commonly used transformation between the A
 }
 ```
 
-Profile 2:
+프로필 2:
 
 ```json
 {
@@ -729,7 +728,7 @@ Profile 2:
 
 >[!IMPORTANT]
 >
->사용하는 모든 템플릿의 경우 큰 따옴표와 같은 잘못된 문자를 이스케이프 처리해야 합니다 `""` 템플릿을 삽입하기 전에 [대상 서버 구성](./server-and-template-configuration.md#template-specs). For more information on escaping double quotes, see Chapter 9 in the [JSON standard](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
+>사용하는 모든 템플릿의 경우 큰 따옴표와 같은 잘못된 문자를 이스케이프 처리해야 합니다 `""` 템플릿을 삽입하기 전에 [대상 서버 구성](./server-and-template-configuration.md#template-specs). 큰따옴표 이스케이프에 대한 자세한 내용은 [JSON 표준](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
 ```python
 {
@@ -1174,7 +1173,7 @@ action={% if input.aggregationKey.segmentStatus == "exited" %}REMOVE{% else %}AD
 }
 ```
 
-#### Use the aggregation key in a URL template {#aggregation-key-url-template}
+#### URL 템플릿에서 집계 키 사용 {#aggregation-key-url-template}
 
 사용 사례에 따라 아래 그림과 같이 여기에 설명된 집계 키를 URL에 사용할 수도 있습니다.
 
@@ -1191,15 +1190,15 @@ https://api.example.com/audience/{{input.aggregationKey.segmentId}}
 | 함수 | 설명 |
 |---------|----------|
 | `input.profile` | 프로필은 [JsonNode](https://fasterxml.github.io/jackson-databind/javadoc/2.11/com/fasterxml/jackson/databind/node/JsonNodeType.html). 이 페이지에서 위에 언급된 파트너 XDM 스키마를 따릅니다. |
-| `destination.segmentAliases` | Map from segment IDs in the Adobe Experience Platform namespace to segment aliases in the partner&#39;s system. |
+| `destination.segmentAliases` | Adobe Experience Platform 네임스페이스의 세그먼트 ID에서 파트너 시스템의 세그먼트 별칭에 매핑합니다. |
 | `destination.segmentNames` | Adobe Experience Platform 네임스페이스의 세그먼트 이름에서 파트너 시스템의 세그먼트 이름에 매핑합니다. |
 | `addedSegments(listOfSegments)` | 상태가 있는 세그먼트만 반환합니다 `realized` 또는 `existing`. |
 | `removedSegments(listOfSegments)` | 상태가 있는 세그먼트만 반환합니다 `exited`. |
 
 ## 다음 단계 {#next-steps}
 
-이 문서를 읽은 후에는 Experience Platform에서 내보낸 데이터가 어떻게 변환되는지 알 수 있습니다. Next, read the following pages to complete your knowledge about creating message transformation templates for your destination:
+이 문서를 읽은 후에는 Experience Platform에서 내보낸 데이터가 어떻게 변환되는지 알 수 있습니다. 다음으로 대상을 위한 메시지 변환 템플릿 만들기에 대한 지식을 완료하려면 다음 페이지를 읽으십시오.
 
-* [Create and test a message transformation template](/help/destinations/destination-sdk/create-template.md)
+* [메시지 변환 템플릿 만들기 및 테스트](/help/destinations/destination-sdk/create-template.md)
 * [템플릿 API 작업 렌더링](/help/destinations/destination-sdk/render-template-api.md)
 * [Destination SDK에서 지원되는 변형 함수](/help/destinations/destination-sdk/supported-functions.md)

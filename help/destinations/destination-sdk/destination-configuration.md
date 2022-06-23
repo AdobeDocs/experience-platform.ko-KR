@@ -2,7 +2,7 @@
 description: 이 구성을 사용하면 대상 이름, 카테고리, 설명, 로고 등과 같은 기본 정보를 표시할 수 있습니다. 또한 이 구성의 설정은 Experience Platform 사용자가 대상을 인증하는 방법, Experience Platform 사용자 인터페이스에 표시되는 방법 및 대상으로 내보낼 수 있는 ID를 결정합니다.
 title: Destination SDK 스트리밍 대상 구성 옵션
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: e3886cbcde76e37263d2fa23769fb9e96501edc4
+source-git-commit: b12e46592c6c7bb09a90b809e7fac7d05703210a
 workflow-type: tm+mt
 source-wordcount: '1787'
 ht-degree: 4%
@@ -271,6 +271,7 @@ ID 네임스페이스에는 1-1의 서신이 필요하지 않습니다 [!DNL Pla
 이 옵션은 동일한 호출에서 수천 개의 프로필을 사용하여 일괄 처리를 수행하려는 경우에 가장 적합합니다. 또한 이 옵션을 사용하면 복잡한 집계 규칙을 기반으로 내보낸 프로필을 집계할 수 있습니다.
 
 이 옵션을 사용하면 다음 작업을 수행할 수 있습니다.
+
 * 대상에 API 호출이 수행되기 전에 집계할 최대 프로필 수 및 최대 프로필 수를 설정합니다.
 * 다음을 기반으로 대상에 매핑된 내보낸 프로필을 집계합니다.
    * 세그먼트 ID;
