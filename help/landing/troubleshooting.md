@@ -7,9 +7,9 @@ landing-page-description: 자주 묻는 질문에 대한 답변과 Experience Pl
 topic-legacy: getting started
 type: Documentation
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
-source-git-commit: ef565383ab6abfe93eb8ed6a86216642eec11f6e
+source-git-commit: da3e93f6c10c89c173fff786604ef844f56081be
 workflow-type: tm+mt
-source-wordcount: '1758'
+source-wordcount: '1851'
 ht-degree: 4%
 
 ---
@@ -34,11 +34,11 @@ API 요청 서식에 대한 자세한 내용은 플랫폼 API 시작 안내서�
 
 ## IMS 조직이란 무엇입니까? {#what-is-my-ims-organization}
 
-IMS 조직은 고객의 Adobe 표현입니다. 라이센스가 있는 모든 Adobe 솔루션은 이 고객 조직과 통합됩니다. IMS 조직에서 다음 권한을 받을 수 있는 경우 [!DNL Experience Platform]로 설정되면 개발자에게 액세스 권한을 할당할 수 있습니다. IMS 조직 ID(`x-gw-ims-org-id`)은 API 호출을 실행해야 하는 조직을 나타내며, 따라서 모든 API 요청의 헤더로 필요합니다. 이 ID는 [Adobe 개발자 콘솔](https://www.adobe.com/go/devs_console_ui): 에서 **통합** 탭으로 이동하여 **개요** 특정 통합에 대한 섹션을 참조 하여 **클라이언트 자격 증명**. 인증 방법에 대한 단계별 연습 [!DNL Platform]를 참조하고 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en).
+IMS 조직은 고객의 Adobe 표현입니다. 라이센스가 있는 모든 Adobe 솔루션은 이 고객 조직과 통합됩니다. IMS 조직에서 다음 권한을 받을 수 있는 경우 [!DNL Experience Platform]로 설정되면 개발자에게 액세스 권한을 할당할 수 있습니다. IMS 조직 ID(`x-gw-ims-org-id`)은 API 호출을 실행해야 하는 조직을 나타내며, 따라서 모든 API 요청의 헤더로 필요합니다. 이 ID는 [Adobe Developer 콘솔](https://www.adobe.com/go/devs_console_ui): 에서 **통합** 탭으로 이동하여 **개요** 특정 통합에 대한 섹션을 참조 하여 **클라이언트 자격 증명**. 인증 방법에 대한 단계별 연습 [!DNL Platform]를 참조하고 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en).
 
 ## API 키는 어디에서 찾을 수 있습니까? {#where-can-i-find-my-api-key}
 
-API 키는 모든 API 요청의 헤더로 필요합니다. URL은 [Adobe 개발자 콘솔](https://www.adobe.com/go/devs_console_ui). 콘솔 내에서 **통합** 탭으로 이동하여 **개요** 특정 통합에 대한 섹션에서 아래에 키가 있습니다. **클라이언트 자격 증명**. 인증 방법에 대한 단계별 연습 [!DNL Platform]를 참조하고 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en).
+API 키는 모든 API 요청의 헤더로 필요합니다. URL은 [Adobe Developer 콘솔](https://www.adobe.com/go/devs_console_ui). 콘솔 내에서 **통합** 탭으로 이동하여 **개요** 특정 통합에 대한 섹션에서 아래에 키가 있습니다. **클라이언트 자격 증명**. 인증 방법에 대한 단계별 연습 [!DNL Platform]를 참조하고 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en).
 
 ## 액세스 토큰을 받으려면 어떻게 해야 합니까? {#how-do-i-get-an-access-token}
 
@@ -62,9 +62,9 @@ GET /batches?createdAfter=1559775880000&orderBy=desc:created
 
 의 많은 PATCH 작업 [!DNL Platform] API 사용 [JSON 포인터](https://tools.ietf.org/html/rfc6901) 업데이트할 JSON 속성을 나타내는 문자열입니다. 이러한 항목은 일반적으로 [JSON 패치](https://tools.ietf.org/html/rfc6902) 형식 지정 자세한 내용은 [API 기본 사항 안내서](api-fundamentals.md) 를 참조하십시오.
 
-## Postman을 이용해서 [!DNL Platform] API? {#how-do-i-use-postman-to-make-calls-to-platform-apis}
+## Postman을 사용하여 [!DNL Platform] API? {#how-do-i-use-postman-to-make-calls-to-platform-apis}
 
-[포스트맨](https://www.postman.com/) 는 RESTful API에 대한 호출을 시각화하는 데 유용한 도구입니다. 다음 [Platform API 시작 안내서](api-guide.md) 는 Postman 컬렉션을 가져오기 위한 비디오 및 지침을 포함합니다. 또한, 각 서비스의 Postman 컬렉션 목록이 제공됩니다.
+[Postman](https://www.postman.com/) 는 RESTful API에 대한 호출을 시각화하는 데 유용한 도구입니다. 다음 [Platform API 시작 안내서](api-guide.md) Postman 컬렉션을 가져오기 위한 비디오 및 지침이 포함되어 있습니다. 또한, 각 서비스의 Postman 컬렉션 목록이 제공됩니다.
 
 ## 시스템 요구 사항은 무엇입니까? [!DNL Platform]? {#what-are-the-system-requirements-for-platform}
 
@@ -109,7 +109,7 @@ UI를 사용하는지 또는 API를 사용하는지에 따라 다음 시스템 �
 
 이 오류 메시지는 `Authorization` 헤더가 API 요청에 없습니다. 다시 시도하기 전에 인증 헤더가 올바른 액세스 토큰에 포함되어 있는지 확인하십시오.
 
-### OAuth 토큰이 잘못되었습니다.
+### OAuth 토큰이 잘못되었습니다. {#oauth-token-is-not-valid}
 
 ```json
 {
@@ -120,7 +120,7 @@ UI를 사용하는지 또는 API를 사용하는지에 따라 다음 시스템 �
 
 이 오류 메시지는 `Authorization` 헤더가 잘못되었습니다. 토큰이 올바르게 입력되었는지 또는 [새 토큰 생성](https://www.adobe.com/go/platform-api-authentication-en) Adobe I/O 콘솔에서 게시할 수 있습니다.
 
-### API 키가 필요합니다
+### API 키가 필요합니다 {#api-key-is-required}
 
 ```json
 {
@@ -131,7 +131,7 @@ UI를 사용하는지 또는 API를 사용하는지에 따라 다음 시스템 �
 
 이 오류 메시지는 API 키 헤더(`x-api-key`)이 API 요청에서 누락되었습니다. 다시 시도하기 전에 헤더에 올바른 API 키가 포함되어 있는지 확인하십시오.
 
-### API 키가 잘못되었습니다.
+### API 키가 잘못되었습니다. {#api-key-is-invalid}
 
 ```json
 {
@@ -142,8 +142,7 @@ UI를 사용하는지 또는 API를 사용하는지에 따라 다음 시스템 �
 
 이 오류 메시지는 제공된 API 키 헤더(`x-api-key`)가 잘못되었습니다. 키를 올바르게 입력한 후에 다시 시도하십시오. API 키를 모르는 경우에는 [Adobe I/O 콘솔](https://console.adobe.io): 에서 **통합** 탭으로 이동하여 **개요** 아래에 API 키를 찾기 위한 특정 통합 섹션을 참조하십시오. **클라이언트 자격 증명**.
 
-
-### 헤더 없음
+### 헤더 없음 {#missing-header}
 
 ```json
 {
@@ -154,7 +153,7 @@ UI를 사용하는지 또는 API를 사용하는지에 따라 다음 시스템 �
 
 이 오류 메시지는 IMS 조직 헤더(`x-gw-ims-org-id`)이 API 요청에서 누락되었습니다. 다시 시도하기 전에 헤더가 IMS 조직의 ID에 포함되어 있는지 확인하십시오.
 
-### 프로필이 잘못되었습니다.
+### 프로필이 잘못되었습니다. {#profile-is-not-valid}
 
 ```json
 {
@@ -165,7 +164,19 @@ UI를 사용하는지 또는 API를 사용하는지에 따라 다음 시스템 �
 
 이 오류 메시지는 사용자 또는 Adobe I/O 통합( [액세스 토큰](#how-do-i-get-an-access-token) 에서 `Authorization` header)에 대한 호출을 수행할 수 없습니다. [!DNL Experience Platform] 에 제공된 IMS 조직에 대한 API `x-gw-ims-org-id` 헤더. 다시 시도하기 전에 헤더에서 IMS 조직에 올바른 ID를 제공했는지 확인하십시오. 조직 ID를 모를 경우, [Adobe I/O 콘솔](https://console.adobe.io): 에서 **통합** 탭으로 이동하여 **개요** 섹션에서 ID를 찾아 특정 통합 섹션을 참조하십시오. **클라이언트 자격 증명**.
 
-### 올바른 콘텐츠 형식을 지정하지 않았습니다.
+### 태그 새로 고침 오류 {#refresh-etag-error}
+
+```json
+{
+"errorMessage":"Supplied version=[\\\\\\\"a200a2a3-0000-0200-0000-123178f90000\\\\\\\"] does not match the current version on entity=[\\\\\\\"a200cdb2-0000-0200-0000-456179940000\\\\\\\"]"
+}
+```
+
+흐름, 연결, 소스 커넥터 또는 다른 API 호출자에 의한 타겟 연결과 같은 소스 또는 대상 엔터티를 변경하면 태그 오류를 받을 수 있습니다. 버전이 일치하지 않으므로 수행하려는 변경 사항이 엔터티의 최신 버전에 적용되지 않습니다.
+
+이 문제를 해결하려면 엔티티를 다시 가져오고, 변경 내용이 엔티티의 새 버전과 호환되는지 확인한 다음, `If-Match` 헤더를 검색하고 마지막으로 API 호출을 만듭니다.
+
+### 올바른 콘텐츠 형식을 지정하지 않았습니다. {#valid-content-type-not-specified}
 
 ```json
 {
@@ -178,7 +189,7 @@ UI를 사용하는지 또는 API를 사용하는지에 따라 다음 시스템 �
 
 이 오류 메시지는 POST, PUT 또는 PATCH 요청에 잘못되었거나 누락되었을 때 표시됩니다 `Content-Type` 헤더. 헤더가 요청에 포함되어 있고 해당 값이 `application/json`.
 
-### 사용자 영역이 없습니다.
+### 사용자 영역이 없습니다. {#user-region-is-missing}
 
 ```json
 {
@@ -203,7 +214,7 @@ UI를 사용하는지 또는 API를 사용하는지에 따라 다음 시스템 �
 | Adobe Experience Platform 데이터 거버넌스 | [[!DNL Policy Service API]](https://www.adobe.io/experience-platform-apis/references/policy-service/) |  |
 | Adobe Experience Platform ID 서비스 | [[!DNL Identity Service API]](https://www.adobe.io/experience-platform-apis/references/identity-service) | [[!DNL Identity Service] 문제 해결 안내서](../identity-service/troubleshooting-guide.md) |
 | Adobe Experience Platform 쿼리 서비스 | [[!DNL Query Service API]](https://www.adobe.io/experience-platform-apis/references/query-service/) | [[!DNL Query Service] 문제 해결 안내서](../query-service/troubleshooting-guide.md) |
-| Adobe Experience Platform Segmentation | [[!DNL Segmentation API]](https://www.adobe.io/experience-platform-apis/references/segmentation/) |
+| Adobe Experience Platform 세그멘테이션 | [[!DNL Segmentation API]](https://www.adobe.io/experience-platform-apis/references/segmentation/) |
 | [!DNL Catalog Service] | [[!DNL Catalog Service API]](https://www.adobe.io/experience-platform-apis/references/catalog/) |  |
 | [!DNL Experience Data Model] (XDM) | [[!DNL Schema Registry API]](https://www.adobe.io/experience-platform-apis/references/schema-registry/) | [[!DNL XDM System] FAQ 및 문제 해결 안내서](../xdm/troubleshooting-guide.md) |
 | [!DNL Flow Service] ([!DNL Sources] 및 [!DNL Destinations]) | [[!DNL Flow Service API]](https://www.adobe.io/experience-platform-apis/references/flow-service/) |  |

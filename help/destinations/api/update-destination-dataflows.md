@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: 이 자습서에서는 대상 데이터 흐름을 업데이트하는 단계를 설명합니다. 데이터 흐름을 활성화 또는 비활성화하거나, 기본 정보를 업데이트하거나, Flow Service API를 사용하여 세그먼트 및 속성을 추가 및 제거하는 방법을 알아봅니다.
 exl-id: 3f69ad12-940a-4aa1-a1ae-5ceea997a9ba
-source-git-commit: 95dd6982eeecf6b13b6c8a6621b5e6563c25ae26
+source-git-commit: c35a29d4e9791b566d9633b651aecd2c16f88507
 workflow-type: tm+mt
-source-wordcount: '2419'
+source-wordcount: '2408'
 ht-degree: 1%
 
 ---
@@ -856,8 +856,8 @@ curl -X PATCH \
 
 ## API 오류 처리 {#api-error-handling}
 
-이 자습서의 API 엔드포인트는 일반 Experience Platform API 오류 메시지 원칙을 따릅니다. 을(를) 참조하십시오. [API 상태 코드](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) 및 [요청 헤더 오류](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) 을 참조하십시오.
+이 자습서의 API 엔드포인트는 일반 Experience Platform API 오류 메시지 원칙을 따릅니다. 을(를) 참조하십시오. [API 상태 코드](/help/landing/troubleshooting.md#api-status-codes) 및 [요청 헤더 오류](/help/landing/troubleshooting.md#request-header-errors) 오류 응답 해석에 대한 자세한 내용은 플랫폼 문제 해결 가이드를 참조하십시오.
 
-## 다음 단계
+## 다음 단계 {#next-steps}
 
 이 자습서에서는 다음을 사용하여 세그먼트 또는 프로필 속성을 추가 또는 제거하는 등 대상 데이터 흐름의 다양한 구성 요소를 업데이트하는 방법을 알아보았습니다 [!DNL Flow Service] API. 대상에 대한 자세한 내용은 [대상 개요](../home.md).

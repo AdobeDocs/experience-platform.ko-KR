@@ -6,10 +6,10 @@ description: Flow Service API를 사용하여 Experience Platform에서 배치 �
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: 67f1ba46a9d570d3d494b126a83e6ca3ace1c727
+source-git-commit: 183830318a3dd5012f27a73a8dd2753638aff83f
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '3420'
+ht-degree: 2%
 
 ---
 
@@ -1026,7 +1026,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | 속성 | 설명 |
 | --------- | ----------- |
 | `{DATAFLOW_ID}` | URL에서 이전 단계에서 만든 데이터 흐름의 ID를 사용합니다. |
-| `{ETAG}` | 이전 단계에서 얻은 태그를 사용합니다. |
+| `{ETAG}` | 가져오기 `{ETAG}` 이전 단계의 응답에서 [데이터 흐름 만들기](#create-dataflow). 이전 단계의 응답 형식이 따옴표를 이스케이프 처리했습니다. 요청 헤더에 이스케이프 처리되지 않은 값을 사용해야 합니다. 아래 예를 참조하십시오. <br> <ul><li>응답 예: `"etag":""7400453a-0000-1a00-0000-62b1c7a90000""`</li><li>요청에 사용할 값: `"etag": "7400453a-0000-1a00-0000-62b1c7a90000"`</li></ul> <br> 태그 값은 데이터 흐름을 성공적으로 업데이트할 때마다 업데이트됩니다. |
 | `{SEGMENT_ID}` | 이 대상으로 내보낼 세그먼트 ID를 제공합니다. 활성화할 세그먼트의 세그먼트 ID를 검색하려면 를 참조하십시오 [세그먼트 정의 검색](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById) ( Experience Platform API 참조). |
 | `{PROFILE_ATTRIBUTE}` | 예, `"person.lastName"` |
 | `op` | 데이터 흐름을 업데이트하는 데 필요한 작업을 정의하는 데 사용되는 작업 호출입니다. 작업은 다음과 같습니다. `add`, `replace`, 및 `remove`. 데이터 플로우에 세그먼트를 추가하려면 `add` 작업. |
@@ -1236,7 +1236,11 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 ]
 ```
 
-## 다음 단계
+## API 오류 처리 {#api-error-handling}
+
+이 자습서의 API 엔드포인트는 일반 Experience Platform API 오류 메시지 원칙을 따릅니다. 을(를) 참조하십시오. [API 상태 코드](/help/landing/troubleshooting.md#api-status-codes) 및 [요청 헤더 오류](/help/landing/troubleshooting.md#request-header-errors) 오류 응답 해석에 대한 자세한 내용은 플랫폼 문제 해결 가이드를 참조하십시오.
+
+## 다음 단계 {#next-steps}
 
 이 자습서를 따라 Platform을 기본 설정 배치 클라우드 스토리지 또는 이메일 마케팅 대상 중 하나에 연결하고 데이터 파일을 내보내기 위해 각 대상에 데이터 플로를 설정했습니다. 이제 보내는 데이터를 대상에 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례에 사용할 수 있습니다. Flow Service API를 사용하여 기존 데이터 흐름을 편집하는 방법 등 자세한 내용은 다음 페이지를 참조하십시오.
 

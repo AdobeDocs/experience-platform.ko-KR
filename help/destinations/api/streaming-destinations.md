@@ -6,9 +6,9 @@ description: 이 문서에서는 Adobe Experience Platform API를 사용하여 �
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 183830318a3dd5012f27a73a8dd2753638aff83f
 workflow-type: tm+mt
-source-wordcount: '2049'
+source-wordcount: '2241'
 ht-degree: 1%
 
 ---
@@ -471,10 +471,17 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 ]
 ```
 
-* `{DATAFLOW_ID}`: 이전 단계에서 얻은 데이터 흐름을 사용합니다.
-* `{ETAG}`: 이전 단계에서 얻은 태그를 사용합니다.
-* `{SEGMENT_ID}`: 이 대상으로 내보낼 세그먼트 ID를 제공합니다. 활성화할 세그먼트의 세그먼트 ID를 검색하려면 다음 위치로 이동하십시오. **https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/**, 선택 **[!UICONTROL 세그멘테이션 서비스 API]** 왼쪽 탐색 메뉴에서 `GET /segment/definitions` 작업 **[!UICONTROL 세그먼트 정의]**.
-* `{PROFILE_ATTRIBUTE}`: 예, `personalEmail.address` 또는 `person.lastName`
+| 속성 | 설명 |
+| --------- | ----------- |
+| `{DATAFLOW_ID}` | URL에서 이전 단계에서 만든 데이터 흐름의 ID를 사용합니다. |
+| `{ETAG}` | 가져오기 `{ETAG}` 이전 단계의 응답에서 [데이터 흐름 만들기](#create-dataflow). 이전 단계의 응답 형식이 따옴표를 이스케이프 처리했습니다. 요청 헤더에 이스케이프 처리되지 않은 값을 사용해야 합니다. 아래 예를 참조하십시오. <br> <ul><li>응답 예: `"etag":""7400453a-0000-1a00-0000-62b1c7a90000""`</li><li>요청에 사용할 값: `"etag": "7400453a-0000-1a00-0000-62b1c7a90000"`</li></ul> <br> 태그 값은 데이터 흐름을 성공적으로 업데이트할 때마다 업데이트됩니다. |
+| `{SEGMENT_ID}` | 이 대상으로 내보낼 세그먼트 ID를 제공합니다. 활성화할 세그먼트의 세그먼트 ID를 검색하려면 를 참조하십시오 [세그먼트 정의 검색](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById) ( Experience Platform API 참조). |
+| `{PROFILE_ATTRIBUTE}` | 예, `"person.lastName"` |
+| `op` | 데이터 흐름을 업데이트하는 데 필요한 작업을 정의하는 데 사용되는 작업 호출입니다. 작업은 다음과 같습니다. `add`, `replace`, 및 `remove`. 데이터 플로우에 세그먼트를 추가하려면 `add` 작업. |
+| `path` | 업데이트할 흐름의 일부를 정의합니다. 데이터 플로우에 세그먼트를 추가할 때는 예제에 지정된 경로를 사용합니다. |
+| `value` | 매개 변수를 업데이트할 새 값입니다. |
+| `id` | 대상 데이터 플로우에 추가할 세그먼트의 ID를 지정합니다. |
+| `name` | *선택 사항입니다*. 대상 데이터 플로우에 추가할 세그먼트 이름을 지정합니다. 이 필드는 필수가 아니므로 이름을 제공하지 않고 대상 데이터 플로우에 세그먼트를 성공적으로 추가할 수 있습니다. |
 
 **응답**
 
@@ -597,7 +604,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 }
 ```
 
-## Postman 컬렉션을 사용하여 스트리밍 대상에 연결  {#collections}
+## 사용 [!DNL Postman] 스트리밍 대상에 연결하는 컬렉션  {#collections}
 
 이 자습서에 설명된 스트리밍 대상에 보다 능률적인 방법으로 연결하려면 [[!DNL Postman]](https://www.postman.com/).
 
@@ -612,17 +619,21 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 각 컬렉션에는 [!DNL AWS Kinesis], 및 [!DNL Azure Event Hub]각각 입니다.
 
-### Postman 컬렉션 사용 방법
+### 사용 방법 [!DNL Postman] 컬렉션 {#how-to-use-postman-collections}
 
 첨부된 항목을 사용하여 대상에 성공적으로 연결하려면 [!DNL Postman] 컬렉션, 다음 단계를 수행합니다.
 
 * 다운로드 및 설치 [!DNL Postman];
 * [다운로드](../assets/api/streaming-destination/DestinationPostmanCollection.zip) 연결된 컬렉션의 압축을 해제합니다.
-* 해당 폴더의 컬렉션을 Postman에 가져옵니다.
+* 해당 폴더의 컬렉션을 [!DNL Postman];
 * 이 문서의 지침에 따라 환경 변수를 입력합니다.
-* 를 실행합니다. [!DNL API] 이 문서의 지침에 따라 Postman에서 요청을 합니다.
+* 를 실행합니다. [!DNL API] 요청 [!DNL Postman]를 설정하는 것이 좋습니다.
 
-## 다음 단계
+## API 오류 처리 {#api-error-handling}
+
+이 자습서의 API 엔드포인트는 일반 Experience Platform API 오류 메시지 원칙을 따릅니다. 을(를) 참조하십시오. [API 상태 코드](/help/landing/troubleshooting.md#api-status-codes) 및 [요청 헤더 오류](/help/landing/troubleshooting.md#request-header-errors) 오류 응답 해석에 대한 자세한 내용은 플랫폼 문제 해결 가이드를 참조하십시오.
+
+## 다음 단계 {#next-steps}
 
 이 자습서를 따라 선호하는 스트리밍 대상 중 하나에 플랫폼을 연결하고 각 대상에 데이터 흐름을 설정했습니다. 이제 발신 데이터를 대상 고객 분석 또는 수행하려는 기타 데이터 작업에서 사용할 수 있습니다. 자세한 내용은 다음 페이지를 참조하십시오.
 

@@ -5,9 +5,9 @@ title: Flow Service API를 사용하여 대상 데이터 흐름 삭제
 type: Tutorial
 description: Flow Service API를 사용하여 데이터 흐름을 일괄 처리 및 스트리밍 대상으로 삭제하는 방법을 알아봅니다.
 exl-id: fa40cf97-46c6-4a10-b53c-30bed2dd1b2d
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: c35a29d4e9791b566d9633b651aecd2c16f88507
 workflow-type: tm+mt
-source-wordcount: '565'
+source-wordcount: '572'
 ht-degree: 1%
 
 ---
@@ -84,7 +84,7 @@ curl -X DELETE \
 
 ## API 오류 처리 {#api-error-handling}
 
-이 자습서의 API 엔드포인트는 일반 Experience Platform API 오류 메시지 원칙을 따릅니다. 을(를) 참조하십시오. [API 상태 코드](../../landing/troubleshooting.md#api-status-codes) 및 [요청 헤더 오류](../../landing/troubleshooting.md#request-header-errors) 을 참조하십시오.
+이 자습서의 API 엔드포인트는 일반 Experience Platform API 오류 메시지 원칙을 따릅니다. 을(를) 참조하십시오. [API 상태 코드](/help/landing/troubleshooting.md#api-status-codes) 및 [요청 헤더 오류](/help/landing/troubleshooting.md#request-header-errors) 오류 응답 해석에 대한 자세한 내용은 플랫폼 문제 해결 가이드를 참조하십시오.
 
 ## 다음 단계 {#next-steps}
 
