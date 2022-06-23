@@ -2,7 +2,7 @@
 description: 이 구성을 사용하면 대상 이름, 카테고리, 설명, 로고 등과 같은 기본 정보를 표시할 수 있습니다. 또한 이 구성의 설정은 Experience Platform 사용자가 대상을 인증하는 방법, Experience Platform 사용자 인터페이스에 표시되는 방법 및 대상으로 내보낼 수 있는 ID를 결정합니다.
 title: (베타) Destination SDK을 위한 파일 기반 대상 구성 옵션
 exl-id: 6b0a0398-6392-470a-bb27-5b34b0062793
-source-git-commit: 3c8ad296ab9f0ce62743466ca8823b13c4545a9d
+source-git-commit: 89e05ed522aed697ba3a2f06137546fd5673920d
 workflow-type: tm+mt
 source-wordcount: '2304'
 ht-degree: 5%
@@ -30,14 +30,16 @@ ht-degree: 5%
    "name":"S3 Destination with CSV Options",
    "description":"S3 Destination with CSV Options",
    "status":"TEST",
-   "maxProfileAttributes": "2000",
-   "maxIdentityAttributes": "10",
+   "maxProfileAttributes":"2000",
+   "maxIdentityAttributes":"10",
    "customerAuthenticationConfigurations":[
       {
          "authType":"S3"
       }
    ],
-   "customerEncryptionConfigurations":[],
+   "customerEncryptionConfigurations":[
+      
+   ],
    "customerDataFields":[
       {
          "name":"bucket",
@@ -245,34 +247,34 @@ ht-degree: 5%
          "destinationServerId":"{{destinationServerId}}"
       }
    ],
-   "identityNamespaces": {
-        "adobe_id": {
-            "acceptsAttributes": true,
-            "acceptsCustomNamespaces": true
-        },
-        "mobile_id": {
-            "acceptsAttributes": true,
-            "acceptsCustomNamespaces": true
-        }
-    },
+   "identityNamespaces":{
+      "adobe_id":{
+         "acceptsAttributes":true,
+         "acceptsCustomNamespaces":true
+      },
+      "mobile_id":{
+         "acceptsAttributes":true,
+         "acceptsCustomNamespaces":true
+      }
+   },
    "segmentMappingConfig":{
-       "mapExperiencePlatformSegmentName":false,
-       "mapExperiencePlatformSegmentId":false,
-       "mapUserInput":false,
-       "audienceTemplateId":"cbf90a70-96b4-437b-86be-522fbdaabe9c"
+      "mapExperiencePlatformSegmentName":false,
+      "mapExperiencePlatformSegmentId":false,
+      "mapUserInput":false,
+      "audienceTemplateId":"cbf90a70-96b4-437b-86be-522fbdaabe9c"
    },
    "schemaConfig":{
       "profileFields":[
-           {
-              "name":"phoneNo",
-              "title":"phoneNo",
-              "description":"This is a fixed attribute on your destination side that customers can map profile attributes to. For example, the phoneNumber value in Experience Platform could be phoneNo on your side.",
-              "type":"string",
-              "isRequired":false,
-              "readOnly":false,
-              "hidden":false
-           }
-        ],
+         {
+            "name":"phoneNo",
+            "title":"phoneNo",
+            "description":"This is a fixed attribute on your destination side that customers can map profile attributes to. For example, the phoneNumber value in Experience Platform could be phoneNo on your side.",
+            "type":"string",
+            "isRequired":false,
+            "readOnly":false,
+            "hidden":false
+         }
+      ],
       "profileRequired":true,
       "segmentRequired":true,
       "identityRequired":true
@@ -295,19 +297,24 @@ ht-degree: 5%
       ],
       "defaultFrequency":"DAILY",
       "defaultStartTime":"00:00",
-      "filenameConfig": {
-            "allowedFilenameAppendOptions": [
-                "SEGMENT_NAME",
-                "DATETIME",
-                "TIMESTAMP",
-                "DESTINATION_NAME",
-                "SANDBOX_NAME"
-            ],
-            "defaultFilename": "{{DESTINATION_NAME}}_{{SEGMENT_ID}}"
-      }
-   },
-   "backfillHistoricalProfileData":true
-}
+      "filenameConfig":{
+         "allowedFilenameAppendOptions":[
+            "SEGMENT_NAME",
+            "DESTINATION_INSTANCE_ID",
+            "DESTINATION_INSTANCE_NAME",
+            "ORGANIZATION_NAME",
+            "SANDBOX_NAME",
+            "DATETIME",
+            "CUSTOM_TEXT"
+         ],
+         "defaultFilenameAppendOptions":[
+            "SEGMENT_ID",
+            "DATETIME"
+         ],
+         "defaultFilename":"%DESTINATION%_%SEGMENT_ID%"
+      },
+      "backfillHistoricalProfileData":true
+   }
 ```
 
 | 매개 변수 | 유형 | 설명 |
