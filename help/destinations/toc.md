@@ -4,9 +4,9 @@ user-guide-title: 대상 안내서
 user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화합니다.
 description: 이 문서에서는 Adobe Experience Platform 대상의 목차 목록을 설명합니다
 feature: Destinations
-source-git-commit: 8c2ce6936eea5c90319a03e35f697ebcdb89e1e5
+source-git-commit: e017f98ba2fbeab9fe1a785cc7710f75d3dd496a
 workflow-type: tm+mt
-source-wordcount: '773'
+source-wordcount: '777'
 ht-degree: 8%
 
 ---
@@ -62,6 +62,7 @@ ht-degree: 8%
       * [Google 광고 연결](./catalog/advertising/google-ads-destination.md)
       * [Google 광고 확장](./catalog/advertising/google-ads-extension.md)
       * [Google Ad Manager 연결](./catalog/advertising/google-ad-manager.md)
+      * [Google Ad Manager 360 연결](./catalog/advertising/google-ad-manager-360-connection.md)
       * [Google Customer Match 연결](./catalog/advertising/google-customer-match.md)
       * [Google 디스플레이 및 비디오 360 연결](./catalog/advertising/google-dv360.md)
       * [Google 태그 확장](./catalog/advertising/gtag-advertising.md)
