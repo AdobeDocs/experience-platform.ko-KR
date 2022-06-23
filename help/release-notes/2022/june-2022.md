@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform 릴리스 노트 - 2022년 6월
 description: Adobe Experience Platform에 대한 2022년 6월 릴리스 노트입니다.
-source-git-commit: 98b9e79fadecc6e0d5ee8e86b785fd905643f725
+source-git-commit: 71f781fafa6124237955e7979fab29e7c03f984e
 workflow-type: tm+mt
-source-wordcount: '639'
+source-wordcount: '693'
 ht-degree: 6%
 
 ---
@@ -14,10 +14,25 @@ ht-degree: 6%
 
 Adobe Experience Platform의 기존 기능 업데이트:
 
+- [[!DNL Data Prep]](#data-prep)
 - [[!DNL Data Science Workspace]](#dsw)
 - [[!DNL Destinations]](#destinations)
 - [쿼리 서비스](#query-service)
 - [소스](#sources)
+
+## [!DNL Data Prep] {#data-prep}
+
+[!DNL Data Prep] 데이터 엔지니어가 XDM(Experience Data Model) 을 통해 데이터를 매핑, 변환 및 확인할 수 있습니다.
+
+**업데이트된 기능**
+
+| 기능 | 설명 |
+| --- | --- |
+| 개선 사항 [!DNL Data Prep] Recommendations | [!DNL Data Prep] Recommendations은 이제 더 똑똑하고 더 빠릅니다. 새 유효성 검사 기능을 통해 가장 일반적인 매핑 오류가 크게 줄어들어 시간-값 이 줄어듭니다. |
+
+{style=&quot;table-layout:auto&quot;}
+
+자세한 내용은 [!DNL Data Prep]를 보려면 [[!DNL Data Prep] 개요](../../data-prep/home.md).
 
 ## [!DNL Data Science Workspace] {#dsw}
 
