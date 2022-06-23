@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform 릴리스 노트 - 2022년 6월
 description: Adobe Experience Platform에 대한 2022년 6월 릴리스 노트입니다.
-source-git-commit: 492a05b24ec905de926d861f607a6e5d294d46e0
+source-git-commit: 4edd2042234149ab8836da4fc58eb4d6084ae205
 workflow-type: tm+mt
-source-wordcount: '801'
+source-wordcount: '824'
 ht-degree: 6%
 
 ---
@@ -67,6 +67,7 @@ Data Science Workspace에 대한 일반적인 정보는 [개요 설명서](../..
 | ----------- | ----------- |
 | [(베타) Google Ad Manager 360](../../destinations/catalog/advertising/google-ad-manager-360-connection.md) | 다음 [!DNL Google Ad Manager 360] 연결을 통해 일괄 업로드를 수행할 수 있습니다. [!DNL publisher provided identifiers] (PPID)을 [!DNL Google Ad Manager 360], 를 통해 [!DNL Google Cloud Storage] <br><br>이 대상은 현재 베타에 있으며 제한된 수의 고객만 사용할 수 있습니다. 액세스 권한을 요청하려면 [!DNL Google Ad Manager 360] 연결되면 Adobe 담당자에게 연락하여 [!DNL IMS Organization ID]. |
 | [[!DNL Medallia]](/help/destinations/catalog/voice/medallia-connector.md) | 대상 Medallia 설문 조사 및 피드백 수집에 대한 프로필을 활성화하여 고객 요구 사항과 기대를 더 잘 이해합니다. |
+| [[!DNL Adobe Advertising Cloud DSP]](../../destinations/catalog/advertising/adobe-advertising-cloud-connection.md) | Adobe Advertising Cloud [!DNL Demand-Side Platform] (DSP) 대상을 사용하면 DSP과 캠페인 활성화를 위해 승인된 자사 세그먼트를 승인된 광고주 및 사용자와 공유할 수 있습니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
