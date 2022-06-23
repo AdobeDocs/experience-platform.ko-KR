@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform 릴리스 노트 - 2022년 6월
 description: Adobe Experience Platform에 대한 2022년 6월 릴리스 노트입니다.
-source-git-commit: 4edd2042234149ab8836da4fc58eb4d6084ae205
+source-git-commit: 314cd79185748e848bcb06fb21bfe4fea37a8853
 workflow-type: tm+mt
-source-wordcount: '824'
+source-wordcount: '860'
 ht-degree: 6%
 
 ---
@@ -58,6 +58,7 @@ Data Science Workspace에 대한 일반적인 정보는 [개요 설명서](../..
 | 기능 | 설명 |
 | ----------- | ----------- |
 | (베타) Destination SDK 지원 [[!DNL Google Cloud Storage]](../../destinations/destination-sdk/server-and-file-configuration.md#gcs-example) 파일 기반 대상 및 [구성 가능한 파일 이름](../../destinations/destination-sdk/file-based-destination-configuration.md#file-name-configuration). | 이제 Destination SDK을 사용하여 Google Cloud 저장소 대상을 만들고 파일 이름 매크로를 통해 내보낸 파일에 대한 사용자 지정 파일 이름을 정의할 수 있습니다. <br><br> Adobe Experience Platform Destination SDK의 파일 기반 대상 지원은 현재 베타에 있습니다. 설명서 및 기능은 변경될 수 있습니다. |
+| 데이터 흐름의 세그먼트 열은 배치 대상으로 실행됩니다 | 이제 데이터 흐름에서 배치 대상으로 실행하는 경우 UI에 각 데이터 흐름 실행과 연결된 세그먼트의 이름이 표시됩니다. 자세한 내용 [데이터 흐름에서 배치 대상에 실행](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations). |
 
 {style=&quot;table-layout:auto&quot;}
 
