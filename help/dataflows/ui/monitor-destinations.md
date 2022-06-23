@@ -6,9 +6,9 @@ title: UI에서 대상에 대한 데이터 흐름 모니터링
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 2be8ed7daaac6554bdbc52acab325a474fa87566
+source-git-commit: 20fbc4a33baa677cf34b3e1525f45af1862a7024
 workflow-type: tm+mt
-source-wordcount: '3200'
+source-wordcount: '3211'
 ht-degree: 0%
 
 ---
@@ -141,6 +141,7 @@ ID는 프로필의 다른 패싯을 나타냅니다. 예를 들어 프로필에 
 각 개별 데이터 흐름 실행에는 다음 세부 정보가 표시됩니다.
 
 - **[!UICONTROL 데이터 흐름 실행 시작]**: 데이터 흐름 실행이 시작된 시간입니다.
+- **[!UICONTROL 세그먼트]**: 각 데이터 흐름 실행과 연결된 세그먼트의 이름입니다.
 - **[!UICONTROL 처리 시간]**: 데이터 흐름 실행을 처리하는 데 걸린 시간입니다.
 - **[!UICONTROL 받은 프로필]**: 데이터 플로우에서 받은 총 프로필 수 이 값은 60분마다 업데이트됩니다.
 - **[!UICONTROL ID가 활성화됨]**: 데이터 흐름 실행의 일부로 선택한 대상에 성공적으로 활성화된 총 프로필 ID 수입니다. 이 지표에는 내보낸 세그먼트에서 생성, 업데이트 및 제거된 ID가 포함됩니다.
@@ -214,7 +215,7 @@ ID는 프로필의 다른 패싯을 나타냅니다. 예를 들어 프로필에 
 | **[!UICONTROL 제외된 ID]** | 스트리밍 및 일괄 처리 |
 | **[!UICONTROL 활성화 비율]** | 스트리밍 |
 | **[!UICONTROL 실패한 총 데이터 흐름 수]** | 일괄 처리 |
-| **[!UICONTROL 마지막 업데이트 날짜]** | 스트리밍 및 일괄 처리 |
+| **[!UICONTROL 마지막으로 업데이트됨]** | 스트리밍 및 일괄 처리 |
 
 ![활성화된 모든 대상을 대시보드](../assets/ui/monitor-destinations/dashboard-destinations.png)
 
