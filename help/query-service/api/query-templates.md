@@ -3,11 +3,11 @@ keywords: Experience Platform;홈;인기 항목;쿼리 서비스;쿼리 템플�
 solution: Experience Platform
 title: 쿼리 템플릿 API 끝점
 topic-legacy: query templates
-description: 다음 설명서는 Query Service API에 대한 쿼리 템플릿을 사용하여 수행할 수 있는 다양한 API 호출을 안내합니다.
+description: 이 안내서에서는 Query Service API를 사용하여 수행할 수 있는 다양한 쿼리 템플릿 API 호출에 대해 자세히 설명합니다.
 exl-id: 14cd7907-73d2-478f-8992-da3bdf08eacc
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: c8b3b22b678622c31462ba0baa2f50fbe89b00d5
 workflow-type: tm+mt
-source-wordcount: '674'
+source-wordcount: '668'
 ht-degree: 3%
 
 ---
@@ -16,7 +16,9 @@ ht-degree: 3%
 
 ## 샘플 API 호출
 
-이제 사용할 헤더를 이해하므로 을 호출할 준비가 되었습니다. [!DNL Query Service] API. 다음 섹션에서는 를 사용하여 수행할 수 있는 다양한 API 호출을 살펴봅니다 [!DNL Query Service] API. 각 호출에는 일반 API 형식, 필수 헤더를 보여주는 샘플 요청 및 샘플 응답이 포함되어 있습니다.
+다음 섹션에서는 [!DNL Query Service] API. 각 호출에는 일반 API 형식, 필수 헤더를 보여주는 샘플 요청 및 샘플 응답이 포함되어 있습니다.
+
+자세한 내용은 [UI 쿼리 템플릿 설명서](../ui/query-templates.md) Experience Platform UI를 통한 템플릿 만들기에 대한 정보입니다.
 
 ### 쿼리 템플릿 목록 검색
 

@@ -5,9 +5,9 @@ title: 쿼리 편집기 UI 안내서
 topic-legacy: query editor
 description: 쿼리 편집기는 Adobe Experience Platform 쿼리 서비스에서 제공하는 대화형 도구로서 Experience Platform 사용자 인터페이스 내에서 고객 경험 데이터에 대한 쿼리를 작성, 유효성 검사 및 실행할 수 있습니다. 쿼리 편집기는 분석 및 데이터 탐색을 위한 쿼리 개발을 지원하며, Experience Platform에서 데이터 세트를 채우기 위해 비대화형 쿼리는 물론 개발 목적으로 대화형 쿼리를 실행할 수 있도록 해줍니다.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: aa61cb696d647c5f039283ce5926d5fa1e901a13
+source-git-commit: c8b3b22b678622c31462ba0baa2f50fbe89b00d5
 workflow-type: tm+mt
-source-wordcount: '1599'
+source-wordcount: '1625'
 ht-degree: 1%
 
 ---
@@ -135,6 +135,10 @@ ht-degree: 1%
 ### 쿼리 저장 {#saving-queries}
 
 [!DNL Query Editor] 은 쿼리를 저장하고 나중에 작업할 수 있는 저장 함수를 제공합니다. 쿼리를 저장하려면 **[!UICONTROL 저장]** 의 오른쪽 상단 모서리에서 [!DNL Query Editor]. 쿼리를 저장하려면 먼저 **[!UICONTROL 쿼리 세부 정보]** 패널.
+
+>[!NOTE]
+>
+>쿼리 편집기를 사용하여 이름이 지정되고 저장된 쿼리는 쿼리 대시보드 내에서 템플릿으로 사용할 수 있습니다 [!UICONTROL 찾아보기] 탭. 자세한 내용은 [템플릿 설명서](./query-templates.md) 추가 정보.
 
 ### 이전 쿼리를 찾는 방법 {#previous-queries}
 
