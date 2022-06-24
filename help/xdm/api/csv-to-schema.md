@@ -1,9 +1,10 @@
 ---
 title: CSV 템플릿으로 스키마 변환 API 엔드포인트
 description: 스키마 레지스트리 API의 /rpc/csv2schema 종단점을 사용하면 CSV 템플릿을 사용하여 XDM(Experience Data Model) 스키마를 자동으로 만들 수 있습니다.
-source-git-commit: 3860724b97987e555e12807c47f65fe040912d69
+exl-id: cf08774a-db94-4ea1-a22e-bb06385f8d0e
+source-git-commit: b4c186c8c40d1372fb5011f49979523e1201fb0b
 workflow-type: tm+mt
-source-wordcount: '856'
+source-wordcount: '857'
 ht-degree: 6%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 6%
 
 ## 시작하기
 
-다음 `/rpc/csv2schema` 엔드포인트는 [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). 계속하기 전에 [시작 안내서](./getting-started.md) 관련 설명서에 대한 링크의 경우, 이 문서에서 샘플 API 호출을 읽는 안내서와 Experience Platform API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요 정보를 제공합니다.
+다음 `/rpc/csv2schema` 엔드포인트는 [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). 계속하기 전에 [시작 안내서](./getting-started.md) 관련 설명서에 대한 링크의 경우, 이 문서에서 샘플 API 호출 읽기에 대한 안내서와 Adobe Experience Platform API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요 정보를 제공합니다.
 
 다음 `/rpc/csv2schema` 끝점은 RPC(원격 프로시저 호출)에서 지원하는 일부입니다 [!DNL Schema Registry]. 의 다른 종단점과 달리 [!DNL Schema Registry] API, RPC 끝점은 다음과 같은 추가 헤더가 필요하지 않습니다. `Accept` 또는 `Content-Type`, 및 를 사용하지 않음 `CONTAINER_ID`. 대신 를 사용해야 합니다 `/rpc` 네임스페이스에 대해 자세히 알아보십시오.
 
