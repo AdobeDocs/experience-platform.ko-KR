@@ -1,14 +1,13 @@
 ---
 title: offer decisioning을 통한 개인화
-description: 서버 API를 사용하여 Offer decisioning을 통해 개인화된 경험을 제공하고 렌더링하는 방법을 알아봅니다
-keywords: 개인화; 서버 api; Adobe Experience Platform Edge Network; 개인화 검색;target;offer decisioning;
-source-git-commit: 59cb43007c4a7ff125738c21064381cf833063b2
+description: 서버 API를 사용하여 Offer decisioning을 통해 개인화된 경험을 제공하고 렌더링하는 방법을 알아봅니다.
+exl-id: 5348cd3e-08db-4778-b413-3339cb56b35a
+source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
 workflow-type: tm+mt
-source-wordcount: '568'
+source-wordcount: '555'
 ht-degree: 2%
 
 ---
-
 
 # offer decisioning을 통한 개인화
 
@@ -260,4 +259,3 @@ curl -X POST 'https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM
 | `content` | 문자열 형식의 제안된 오퍼와 연관된 컨텐츠. | `"content": "<p style="color:red;">20% Off on shipping</p>"` |
 | `deliveryUrl` | URL 형식으로 제안된 오퍼와 연결된 이미지 컨텐츠. | `"deliveryURL": "https://image.jpeg"` |
 | `characteristics` | 제안된 오퍼와 연관된 특성이 포함된 JSON 개체. | `"characteristics": { "foo": "bar", "foo1": "bar1" }` |
-

@@ -1,16 +1,16 @@
 ---
-title: 성능 보호 기능
-description: 최적의 성능 보호 기능 내에서 서버 API를 사용하는 방법을 알아봅니다
+title: Edge Network Server API에 대한 성능 보호 기능
+description: 최적의 성능 보호 기능 내에서 서버 API를 사용하는 방법을 살펴볼 수 있습니다.
 keywords: 데이터 수집;수집;에지 네트워크;api;sla;slt;서비스 수준
 exl-id: 063d0fbb-26d1-4727-9dea-8e7223b2173d
-source-git-commit: 6f0eb81f9709cf4fcaea94334449117c4ed76107
+source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
 workflow-type: tm+mt
-source-wordcount: '426'
+source-wordcount: '436'
 ht-degree: 2%
 
 ---
 
-# 성능 보호 기능
+# Edge Network Server API에 대한 성능 보호 기능
 
 ## 개요 {#overview}
 

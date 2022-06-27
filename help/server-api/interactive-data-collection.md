@@ -1,12 +1,10 @@
 ---
 title: 대화형 데이터 수집
-description: Adobe Experience Platform Edge Network Server API에서 대화형 데이터 수집을 수행하는 방법을 알아봅니다
-seo-description: Learn how the Adobe Experience Platform Edge Network Server API performs interactive data collection
-keywords: 데이터 수집;수집;experience platform edge network;api;대화형 데이터 수집
+description: Adobe Experience Platform Edge Network Server API에서 대화형 데이터 수집을 수행하는 방법을 알아봅니다.
 exl-id: 1b06e755-b6a9-42dd-96c1-98ad67e7d222
-source-git-commit: 0dce36d690cbe0b666bf30acfa69f52a8c6cac57
+source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
 workflow-type: tm+mt
-source-wordcount: '149'
+source-wordcount: '138'
 ht-degree: 6%
 
 ---

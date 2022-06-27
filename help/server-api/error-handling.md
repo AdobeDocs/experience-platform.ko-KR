@@ -1,12 +1,10 @@
 ---
 title: 오류 처리
 description: Adobe Experience Platform Edge Network Server API에 대한 API 요청을 수행할 때 발생할 수 있는 오류에 대해 알아봅니다.
-seo-description: Learn about the possible errors you might encounter when performing API requests to the Adobe Experience Platform Edge Network Server API.
-keywords: 오류;코드;처리;에지;네트워크;게이트웨이;api
 exl-id: f6b8435c-b163-4046-b5fb-50a13a897637
-source-git-commit: 422f859bef8faf292fd7e5fd8b6a8d31967421c1
+source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
 workflow-type: tm+mt
-source-wordcount: '772'
+source-wordcount: '765'
 ht-degree: 3%
 
 ---

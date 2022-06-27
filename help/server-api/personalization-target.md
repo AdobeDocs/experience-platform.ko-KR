@@ -1,14 +1,13 @@
 ---
 title: Adobe Target을 통한 개인화
-description: 서버 API를 사용하여 Adobe Target에서 만든 개인화된 경험을 제공하고 렌더링하는 방법을 알아봅니다
-keywords: 개인화; 서버 api; Adobe Experience Platform Edge Network; 개인화 검색;target;adobe target
-source-git-commit: 59cb43007c4a7ff125738c21064381cf833063b2
+description: 서버 API를 사용하여 Adobe Target에서 만든 개인화된 경험을 제공하고 렌더링하는 방법을 알아봅니다.
+exl-id: c9e2f7ef-5022-4dc4-82b4-ecc210f27270
+source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
 workflow-type: tm+mt
-source-wordcount: '715'
+source-wordcount: '702'
 ht-degree: 2%
 
 ---
-
 
 # Adobe Target을 통한 개인화
 

@@ -1,12 +1,10 @@
 ---
 title: 인증
-description: Adobe Experience Platform Edge Network Server API에 대한 인증을 구성하는 방법 알아보기
-seo-description: Learn how to configure authentication for the Adobe Experience Platform Edge Network Server API
-keywords: 데이터 수집; 인증; Adobe Experience Platform Edge Network api; 권한
+description: Adobe Experience Platform Edge Network Server API에 대한 인증을 구성하는 방법을 알아봅니다.
 exl-id: 73c7a186-9b85-43fe-a586-4c6260b6fa8c
-source-git-commit: 64093bdb8cb1bf2f14caaa562e196a1d69e74359
+source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
 workflow-type: tm+mt
-source-wordcount: '648'
+source-wordcount: '638'
 ht-degree: 2%
 
 ---

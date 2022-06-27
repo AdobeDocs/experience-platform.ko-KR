@@ -1,12 +1,10 @@
 ---
 title: Adobe Analytics과 상호 작용
-description: Edge Network Server API를 사용하여 Adobe Analytics과 상호 작용하는 방법을 알아봅니다
-seo-description: Learn how to use the Edge Network Server API to interact with Adobe Analytics
-keywords: 데이터 수집; 콘센트 analytics; Adobe Experience Platform Edge Network api;analytics
+description: Edge Network Server API를 사용하여 Adobe Analytics과 상호 작용하는 방법을 알아봅니다.
 exl-id: b5e7a4d0-9aea-4e70-a7d6-b9aad09aaddf
-source-git-commit: 4fd5b5eebdeca065582365343b605a5b9ee695bb
+source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
 workflow-type: tm+mt
-source-wordcount: '190'
+source-wordcount: '179'
 ht-degree: 1%
 
 ---

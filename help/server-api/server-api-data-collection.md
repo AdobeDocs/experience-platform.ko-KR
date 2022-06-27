@@ -1,12 +1,10 @@
 ---
 title: 데이터 수집
-description: Adobe Experience Platform Edge Network Server API가 수집된 데이터를 구성하는 방법을 알아봅니다
-seo-description: Learn how the Adobe Experience Platform Edge Network Server API structures the collected data
-keywords: 데이터 수집;수집;Adobe Experience Platform Edge Network;api;구조
-source-git-commit: 422f859bef8faf292fd7e5fd8b6a8d31967421c1
+description: Adobe Experience Platform Edge Network Server API가 수집된 데이터를 구성하는 방법을 알아봅니다.
+source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
 workflow-type: tm+mt
-source-wordcount: '141'
-ht-degree: 4%
+source-wordcount: '131'
+ht-degree: 5%
 
 ---
 

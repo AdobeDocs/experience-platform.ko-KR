@@ -1,15 +1,13 @@
 ---
 title: 개인화 개요
-description: Adobe Experience Platform Edge Network Server API를 사용하여 Adobe 개인화 솔루션에서 개인화된 콘텐츠를 검색하는 방법을 알아봅니다
-seo-description: Learn how to use the Adobe Experience Platform Edge Network Server API to retrieve personalized content from Adobe personalization solutions
-keywords: 개인화; 서버 api; Adobe Experience Platform Edge Network; 개인화 검색
-source-git-commit: 492efa6ef0d95b502839d612988f0b7f59b8bd69
+description: Adobe Experience Platform Edge Network Server API를 사용하여 Adobe 개인화 솔루션에서 개인화된 콘텐츠를 검색하는 방법을 알아봅니다.
+exl-id: 11be9178-54fe-49d0-b578-69e6a8e6ab90
+source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
 workflow-type: tm+mt
-source-wordcount: '751'
+source-wordcount: '741'
 ht-degree: 9%
 
 ---
-
 
 # 개인화 개요
 
