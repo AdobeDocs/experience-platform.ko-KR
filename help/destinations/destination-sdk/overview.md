@@ -2,10 +2,10 @@
 description: Adobe Experience Platform Destination SDK은 선택한 데이터 및 인증 형식에 따라 Experience Platform이 대상 및 프로필 데이터를 종단점에 제공할 대상 통합 패턴을 구성할 수 있도록 해주는 구성 API 세트입니다. 구성은 Experience Platform에 저장되며, 추가 업데이트를 위해 API를 통해 검색할 수 있습니다.
 title: Adobe Experience Platform Destination SDK
 exl-id: 7aca9f40-98c8-47c2-ba88-4308fc2b1798
-source-git-commit: 7c6d0c8d4d1eea16f13359e9d7a895d767ad3c00
+source-git-commit: abc9b9857e4a93a334440e855ca0ae562c695df1
 workflow-type: tm+mt
-source-wordcount: '703'
-ht-degree: 2%
+source-wordcount: '704'
+ht-degree: 3%
 
 ---
 
@@ -64,7 +64,7 @@ Destination SDK 액세스는 파트너 또는 Experience Platform 고객의 상�
 | 독립 소프트웨어 공급업체(ISV) | 가입 [Adobe 교환 프로그램](https://partners.adobe.com/exchangeprogram/experiencecloud.html) 및 Destination SDK 액세스를 위해 Experience Platform 샌드박스를 공급하도록 요청합니다. |
 | 시스템 통합자(SI) | Gold 또는 Platinum 수준에서 [Adobe 솔루션 파트너 프로그램](https://solutionpartners.adobe.com/home.html)로 설정되면 Experience Platform 샌드박스가 프로비저닝되고 Destination SDK에 액세스할 수 있습니다. |
 | 에서 고객 Experience Platform [활성화 패키지](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html) | 기본적으로 Experience Platform 샌드박스 및 Destination SDK에 액세스할 수 있습니다. |
-| 에서 고객 Experience Platform [실시간 CDP 패키지](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) | Destination SDK에 액세스할 수 없지만 Destination SDK을 사용하여 다른 회사가 구성하고 Experience Platform 조직 간에 게시된 모든 프로덕션 대상에 액세스할 수 있습니다. |
+| 에서 고객 Experience Platform [실시간 CDP Ultimate 패키지](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) | Destination SDK에 액세스할 수 없지만 Destination SDK을 사용하여 다른 회사가 구성하고 Experience Platform 조직 간에 게시된 모든 프로덕션 대상에 액세스할 수 있습니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -86,5 +86,5 @@ Experience Platform에서 대상을 구성하는 프로세스는 다음과 같�
 Adobe은 다음 Experience Platform 설명서를 읽고 이해할 것을 권장합니다.
 
 * [Adobe Experience Platform 대상 개요](https://experienceleague.adobe.com/docs/experience-platform/destinations/home.html?lang=en)
-* [XDM 스키마 구성 기초](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=en)
+* [XDM 스키마 구성 기초](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=ko-KR)
 * [ID 네임스페이스 개요](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=ko)

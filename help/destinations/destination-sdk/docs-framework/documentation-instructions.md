@@ -2,14 +2,18 @@
 title: Adobe Experience Platform에서 대상 문서화
 description: Adobe Experience Platform에서 대상에 대한 설명서 페이지를 만드는 단계별 지침입니다
 exl-id: 6cc9c758-44bb-463b-941a-06b1a22ee8f3
-source-git-commit: 3c871471802e905b58acf8cd25db6788f49b9e43
+source-git-commit: dd4a150351b5e0c41586cf663324aeb345a896e4
 workflow-type: tm+mt
-source-wordcount: '502'
+source-wordcount: '538'
 ht-degree: 1%
 
 ---
 
 # Adobe Experience Platform에서 대상 문서화
+
+>[!IMPORTANT]
+>
+>여기에 설명된 프로세스는 제품(공개) 대상을 제출하는 파트너에게만 필요합니다. 직접 사용할 비공개 대상을 만드는 경우 대상에 대한 설명서를 만들고 게시할 필요가 없습니다.
 
 ## 개요 {#overview}
 
