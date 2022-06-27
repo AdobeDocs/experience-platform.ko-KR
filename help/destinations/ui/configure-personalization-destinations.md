@@ -2,11 +2,9 @@
 keywords: 개인화; target; 대상; 개인화 대상 개인화 대상 구성 동일한 페이지. 다음 페이지;
 title: 동일 페이지 및 다음 페이지 개인화를 위한 개인화 대상 구성
 type: Tutorial
-seo-title: Configure personalization destinations for same-page and next-page personalization.
 description: 동일 페이지 및 다음 페이지 개인화를 위한 개인화 대상을 구성하는 방법을 알아봅니다.
-seo-description: Configure personalization destinations for same-page and next-page personalization.
 exl-id: 7d7b6869-bd59-4766-a044-f449396f6524
-source-git-commit: 99a60621bca43ecf2dacb6202e005bbd8f191c99
+source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
 workflow-type: tm+mt
 source-wordcount: '435'
 ht-degree: 0%

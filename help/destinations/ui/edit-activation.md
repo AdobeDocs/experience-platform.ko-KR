@@ -2,11 +2,9 @@
 keywords: 활성화 편집, 대상 편집, 대상 편집
 title: 활성화 데이터 흐름 편집
 type: Tutorial
-seo-title: Edit activation dataflows
 description: Adobe Experience Platform의 기존 활성화 데이터 플로우를 편집하려면 이 문서의 단계를 따르십시오.
-seo-description: Follow the steps in this article to edit an existing activation dataflow in Adobe Experience Platform.
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
-source-git-commit: cf87db062f162f73a22c7085a25cc34e997597b1
+source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
 workflow-type: tm+mt
 source-wordcount: '328'
 ht-degree: 0%
@@ -31,7 +29,7 @@ Adobe Experience Platform에서는 내보낸 세그먼트 및 프로필 속성, 
 
 3. 편집할 대상 데이터 흐름의 이름을 선택합니다.
 
-   ![Select destination](../assets/ui/edit-activation/destination-select.png)
+   ![대상 선택](../assets/ui/edit-activation/destination-select.png)
 
 4. 다음 **[!UICONTROL 데이터 흐름 실행]** 사용 가능한 컨트롤을 보여주는 대상 페이지가 나타납니다. 이때 대상 데이터 흐름의 여러 구성 요소를 편집할 수 있습니다.
 
@@ -42,7 +40,7 @@ Adobe Experience Platform에서는 내보낸 세그먼트 및 프로필 속성, 
    * 또한 대상 데이터 흐름 이름 및 설명을 편집할 수 있습니다.
    * 를 사용할 수 있습니다 **[!UICONTROL 활성화됨]/[!UICONTROL 비활성화됨]** 모든 데이터 내보내기를 대상으로 시작 및 일시 중지로 전환합니다.
 
-   ![Destination details](../assets/ui/edit-activation/destination-details.png)
+   ![대상 세부 사항](../assets/ui/edit-activation/destination-details.png)
 
 ## 다음 단계 {#next-steps}
 

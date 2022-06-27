@@ -1,11 +1,9 @@
 ---
 keywords: rtcdp 관리 개요;관리 개요
 title: Real-time Customer Data Platform 관리 개요
-seo-title: Real-Time CDP administration overview
 description: '이 문서에서는 Adobe Experience Platform 기반의 Real-time Customer Data Platform 관리 기능에 대한 개요를 제공합니다. '
-seo-description: seo description
 exl-id: c5bdeac6-345a-4ef1-bc5a-a993f565b9d6
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
+source-git-commit: ad0d38cbd249642d582a807c5679065827f57717
 workflow-type: tm+mt
 source-wordcount: '282'
 ht-degree: 1%

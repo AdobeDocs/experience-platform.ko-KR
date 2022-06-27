@@ -1,12 +1,11 @@
 ---
 keywords: 플랫폼;대상;대상 작업 공간;작업 공간;ui;대상 ui;카탈로그;대상 카탈로그
 title: 대상 작업 공간
-description: 대상 작업 영역은 카탈로그, 찾아보기, 계정 및 시스템 보기의 네 섹션으로 구성됩니다. 이러한 내용은 아래 섹션에 설명되어 있습니다.
-seo-description: In Adobe Experience Platform, select Destinations from the left navigation bar to access the destinations workspace.
+description: 대상 작업 영역은 개요, 카탈로그, 찾아보기, 계정 및 시스템 보기, 5개의 섹션으로 구성됩니다. 이러한 내용은 아래 섹션에 설명되어 있습니다.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: b275621d9c6552327e0e55c00c8fcf0397088168
+source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
 workflow-type: tm+mt
-source-wordcount: '1156'
+source-wordcount: '1157'
 ht-degree: 2%
 
 ---

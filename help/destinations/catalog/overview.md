@@ -1,11 +1,9 @@
 ---
 keywords: 카탈로그;카탈로그
 title: 대상 카탈로그 개요
-seo-title: Destinations catalog overview
 description: 대상 카탈로그에서는 데이터를 받을 준비가 된 사용 가능한 대상 목록을 제공합니다. 이러한 대상에는 Adobe 솔루션, 광고 플랫폼, 설문 조사 플랫폼, 이메일 마케팅 플랫폼 등이 포함됩니다.
-seo-description: The Destinations catalog provides a list of available destinations that are ready to receive data. These destinations include Adobe solutions, advertising platforms, survey platforms, email marketing platforms, and more.
 exl-id: c490f6f0-f673-4a56-b87a-22884f8be92d
-source-git-commit: 320c95f894c75a7f52808730b0cac4bc1e4411e1
+source-git-commit: ad0d38cbd249642d582a807c5679065827f57717
 workflow-type: tm+mt
 source-wordcount: '171'
 ht-degree: 0%

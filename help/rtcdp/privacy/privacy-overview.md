@@ -1,11 +1,9 @@
 ---
 keywords: 데이터 거버넌스 rtcdp;rtcdp 데이터 거버넌스;실시간 고객 데이터 프로필 데이터 거버넌스;개인 정보 보호 rtcdp;rtcdp 개인 정보
 title: Real-time Customer Data Platform의 개인 정보
-seo-title: Privacy in Real-time Customer Data Platform
 description: Real-time Customer Data Platform을 사용하면 데이터 작업을 개인 정보 보호 규정을 준수하도록 하는 프로세스를 간소화할 수 있습니다.
-seo-description: Real-time Customer Data Platform allows you to streamline the process of keeping your data operations compliant with privacy regulations.
 exl-id: bcb0e42e-4549-4952-bb69-5534aee353f8
-source-git-commit: e3519817559dca372e228ed19bba4f9adf279768
+source-git-commit: ad0d38cbd249642d582a807c5679065827f57717
 workflow-type: tm+mt
 source-wordcount: '386'
 ht-degree: 0%
@@ -24,7 +22,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Adobe Marketo Engage을 위해 Adobe Experience Platform Privacy Service을 통해 제출된 개인 정보 보호 요청은 실시간 CDP B2B 고객에게만 적용됩니다.
+> Adobe Marketo Engage용 Adobe Experience Platform Privacy Service을 통해 제출된 개인 정보 보호 요청은 실시간 CDP B2B 고객에게만 적용됩니다.
 
 ## 옵트아웃 기능
 

@@ -2,11 +2,9 @@
 keywords: 프로필 요청 대상 활성화;데이터 활성화;프로필 요청 대상 활성화
 title: 프로필 요청 대상에 대상 데이터 활성화
 type: Tutorial
-seo-title: Activate audience data to profile request destinations
 description: 세그먼트를 프로필 요청 대상에 매핑하여 Adobe Experience Platform에서 보유한 대상 데이터를 활성화하는 방법을 알아봅니다.
-seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by mapping segments to profile request destinations.
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: 0b094e635e6d22e58e5aa79a374df0879167a833
+source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
 workflow-type: tm+mt
 source-wordcount: '467'
 ht-degree: 0%

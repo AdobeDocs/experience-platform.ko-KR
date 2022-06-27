@@ -2,11 +2,9 @@
 keywords: 대상 활성화;데이터 활성화
 title: 활성화 개요
 type: Tutorial
-seo-title: Activation overview
 description: Adobe Experience Platform에 있는 대상 데이터를 다양한 유형의 대상으로 활성화하는 방법을 알아봅니다.
-seo-description: Learn how to activate the audience data you have in Adobe Experience Platform to various types of destinations.
 exl-id: 987af401-2d93-45b4-a8f9-191e6058e4da
-source-git-commit: 5240e0db96a5072ab02a4c8b52e9c2d3dd4d6aa0
+source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
 workflow-type: tm+mt
 source-wordcount: '327'
 ht-degree: 1%

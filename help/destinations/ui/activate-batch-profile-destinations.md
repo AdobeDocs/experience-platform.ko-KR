@@ -2,11 +2,9 @@
 keywords: 프로필 대상 활성화;대상 활성화;데이터 활성화 이메일 마케팅 대상 활성화 클라우드 스토리지 대상 활성화
 title: 대상자 데이터를 활성화하여 묶음 프로필 내보내기 대상 활성화
 type: Tutorial
-seo-title: Activate audience data to batch profile export destinations
 description: 세그먼트를 배치 프로필 기반 대상으로 보내 Adobe Experience Platform에서 보유한 대상 데이터를 활성화하는 방법을 알아봅니다.
-seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 2f38f98567523a5b2830be99782658cd8863771e
+source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
 workflow-type: tm+mt
 source-wordcount: '2544'
 ht-degree: 0%

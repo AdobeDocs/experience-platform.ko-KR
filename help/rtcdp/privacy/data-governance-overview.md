@@ -1,14 +1,12 @@
 ---
 keywords: 데이터 거버넌스 rtcdp;rtcdp 데이터 거버넌스;실시간 고객 데이터 프로필 데이터 거버넌스
 title: 데이터 거버넌스 개요
-seo-title: Data Governance in Real-time Customer Data Platform
 description: '데이터 거버넌스를 사용하면 고객 데이터를 관리하고 데이터 사용에 적용되는 규정, 제한 및 정책을 준수할 수 있습니다. '
-seo-description: Data Governance allows you to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data use.
 exl-id: eb501d85-cabd-4667-a1cd-2210ec83fb71
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: ad0d38cbd249642d582a807c5679065827f57717
 workflow-type: tm+mt
 source-wordcount: '690'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 

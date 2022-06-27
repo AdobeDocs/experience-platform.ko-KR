@@ -2,9 +2,8 @@
 keywords: 대상;대상;대상 세부 정보 페이지;대상 세부 정보 페이지
 title: 대상 세부 사항 보기
 description: '개별 대상에 대한 세부 사항 페이지에서는 대상 세부 사항에 대한 개요를 제공합니다. 대상 세부 사항에는 대상 이름, ID, 대상에 매핑된 세그먼트 및 활성화를 편집하고 데이터 흐름을 활성화 및 비활성화하는 컨트롤이 포함됩니다. '
-seo-description: The details page for an individual destination provides an overview of the destination details. Destination details include the destination name, ID, segments mapped to the destination, and controls to edit the activation and to enable and disable the data flow.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: 9928241235cac97b9b9a050256a22f9659e4092f
+source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
 workflow-type: tm+mt
 source-wordcount: '718'
 ht-degree: 2%

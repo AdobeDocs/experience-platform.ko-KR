@@ -1,57 +1,55 @@
 ---
-keywords: 세분화;세분화 rtcdp;실시간 고객 데이터 플랫폼 세분화
-title: 실시간 고객 데이터 플랫폼의 세분화 서비스
-seo-title: 실시간 고객 데이터 플랫폼의 세분화 서비스
-description: 실시간 CDP는 Adobe Experience Platform을 기반으로 구축되어 많은 Experience Platform 서비스 및 기능을 활용합니다. 세그멘테이션 서비스를 사용하면 유사한 트레이트를 가진 작은 그룹으로 고객을 구분하여 맞춤 마케팅을 제공할 수 있습니다.
-translation-type: tm+mt
-source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
+keywords: 세분화; 세분화 rtcdp;실시간 고객 데이터 플랫폼 세그멘테이션
+title: Real-time Customer Data Platform의 세그멘테이션 서비스
+description: 실시간 CDP는 Adobe Experience Platform을 기반으로 구축되었으며 많은 Experience Platform 서비스 및 기능을 사용합니다. 세그멘테이션 서비스를 사용하여 고객을 유사한 트레이트를 가진 작은 그룹으로 분할하여 맞춤 마케팅을 제공할 수 있습니다.
+exl-id: 140667c0-e288-40c4-8c45-c275e348b84a
+source-git-commit: ad0d38cbd249642d582a807c5679065827f57717
 workflow-type: tm+mt
-source-wordcount: '544'
-ht-degree: 0%
+source-wordcount: '537'
+ht-degree: 4%
 
 ---
 
-
 # [!DNL Segmentation Service] in [!DNL Real-time Customer Data Platform]
 
-[!DNL Real-time Customer Data Platform] (실시간 CDP)를 사용하면 여러 소스에서 데이터를 가져와 고객에게 일관되고 일관된 경험을 제공할 수 있습니다. Adobe Experience Platform의 일부인 [!DNL Segmentation Service]을 사용하여 연관성 있는 개인화된 마케팅 캠페인을 제공할 수 있습니다.
+[!DNL Real-time Customer Data Platform] (실시간 CDP)를 사용하면 여러 소스에서 데이터를 가져와서 고객을 위해 통합적이고 일관된 경험을 제공할 수 있습니다. 관련 개인화된 마케팅 캠페인을 제공하는 것은 [!DNL Segmentation Service]Adobe Experience Platform에 속해 있어야 합니다.
 
-실시간 CDP는 Adobe Experience Platform을 기반으로 구축되며, 많은 [!DNL Experience Platform] 서비스 및 기능을 활용합니다. [!DNL Segmentation Service]을 사용하면 고객을 유사한 트레이트가 있는 작은 그룹으로 나누어 맞춤 마케팅을 제공할 수 있습니다.
+실시간 CDP는 Adobe Experience Platform을 기반으로 구축되었으며 [!DNL Experience Platform] 서비스 및 기능. 사용 [!DNL Segmentation Service]를 사용하면 고객을 유사한 트레이트로 더 작은 그룹으로 분할하여 맞춤 마케팅을 제공할 수 있습니다.
 
 ## 세그먼테이션
 
-세그먼테이션은 프로필 하위 세트가 프로필 스토어와 공유한 특정 특성 또는 행동을 정의하여 마케팅 가능한 사람 그룹을 고객 기반과 구별하는 프로세스입니다. 예를 들어 &quot;운동화 구입을 잊으셨습니까?&quot;라는 이메일 캠페인에서는 지난 30일 이내에 운동화를 검색했지만 구매를 완료하지 않은 모든 사용자를 원할 수 있습니다. 세그먼트가 다른 경우 다양한 대상에 집중할 수 있으므로 보다 맞춤화된 마케팅 경험을 제공할 수 있습니다.
+세그먼테이션은 마케팅 가능한 사람 그룹을 고객 기반과 구분하기 위해 프로필 저장소의 프로필 하위 집합에 의해 공유되는 특정 속성 또는 동작을 정의하는 프로세스입니다. 예를 들어 &quot;운동화 구입을 잊으셨습니까?&quot;라는 이메일 캠페인에서 지난 30일 이내에 운동화 구매를 검색했지만 구매를 완료하지 않은 모든 사용자의 청중을 원할 수 있습니다. 다양한 세그먼트를 사용하여 다양한 대상에 집중하여 보다 맞춤형 마케팅 경험을 제공할 수 있습니다.
 
 ## [!DNL Segment Builder]
 
-[!DNL Platform] 세그먼트를 쉽게 만들고 액세스할 수 있을 뿐만 아니라, 다양한 기본 요소를 사용하여 세그먼트를 더 세분화할 수 있습니다. 세그먼트 빌더 사용 방법에 대한 자세한 내용은 [세그먼트 빌더 안내서](./segment-builder-guide.md)를 참조하십시오.
+[!DNL Platform] 을(를) 사용하면 세그먼트를 쉽게 만들고 액세스할 수 있을 뿐만 아니라, 서로 다른 구성 요소를 사용하여 세그먼트를 더 규명할 수 있습니다. 세그먼트 빌더 사용 방법에 대한 자세한 내용은 [세그먼트 빌더 안내서](./segment-builder-guide.md).
 
 ## 고객 AI
 
-실시간 고객 데이터 플랫폼에 포함되어 있는 고객 AI는 고객의 상황을 개별적으로 예측하는 방법을 제공합니다.
+Real-time Customer Data Platform에 포함된 고객 AI는 개별 수준에서 고객 예측을 생성할 수 있는 기능을 제공합니다.
 
-고객 AI는 영향력 있는 요소를 활용하여 고객의 관심사와 이유를 파악할 수 있습니다. 또한 고객 AI의 예측과 인사이트를 활용하여 최적의 제안과 메시지를 제공함으로써 고객 경험을 개인화할 수 있습니다. 고객 AI는 다음을 지원할 수 있습니다.
+영향력 있는 요소를 통해 고객 AI는 고객이 무엇을 할 수 있고 왜 하는지 알려 줄 수 있습니다. 또한 Customer AI 예측 및 인사이트를 통해 가장 적합한 오퍼 및 메시지를 제공하여 고객 경험을 개인화할 수 있습니다. 고객 AI는 다음을 지원할 수 있습니다.
 
-* 세그멘테이션 및 타깃팅을 강화할 수 있는 정확도가 높은 고객 성향 모델을 제공합니다.
-* 특정 고객 행동의 영향력과 가능성을 파악합니다.
-* 회사의 고유한 사용 사례 및 데이터에 대해 사용자 정의 가능한 옵션을 제공합니다.
-* 고객 이탈률 및 전환율과 같은 고객 성향 점수를 통해 실시간 고객 프로파일 향상
-* 고객 성향 점수를 위한 영향력 있는 요소를 통해 고객 프로파일을 향상시킬 수 있습니다.
-* 영향력 있는 요인 및 성향 점수를 기반으로 고객 세그먼트 만들기
+* 더 강력한 세분화 및 타겟팅을 위해 정확도가 높은 고객 성향 모델을 제공합니다.
+* 특정 고객 행동에 영향을 미치는 요소와 가능성을 파악합니다.
+* 회사의 고유한 사용 사례 및 데이터에 대해 사용자 정의 가능한 옵션 제공.
+* 이탈 및 전환과 같은 고객 성향 점수를 통해 실시간 고객 프로필 개선.
+* 성향 점수에 대한 영향력 있는 요소로 고객 프로필 개선.
+* 영향력 있는 요소 및 성향 점수를 기반으로 고객의 세그먼트 만들기
 
-고객 AI는 **[!UICONTROL Adobe 서비스]**&#x200B;의 **[!UICONTROL 서비스]** 탭에 있습니다.
+고객 AI는 **[!UICONTROL 서비스]** 아래의 탭 **[!UICONTROL Adobe 서비스]**.
 
 ![고객 AI 위치](../assets/overview/rtcdp-customer-ai.png)
 
 ### 고객 AI 시작하기
 
-고객 AI를 시작하려면 [데이터 사전 설정 자습서](../../intelligent-services/data-preparation.md)를 따르고 사용 사례에 따라 입력 스키마를 구성해야 합니다. 다음으로 [고객 AI 인스턴스](../../intelligent-services/customer-ai/user-guide/configure.md)를 구성해야 합니다. 인스턴스를 구성한 후 [인사이트와 점수](../../intelligent-services/customer-ai/user-guide/discover-insights.md)를 볼 수 있는 모델이 생성됩니다. 모델에서 생성된 데이터를 사용하여 데이터 기반 활성화를 위한 세그먼트를 만들 수 있습니다.
+Customer AI를 시작하려면 다음을 수행해야 합니다 [데이터 준비 자습서](../../intelligent-services/data-preparation.md) 사용 사례에 따라 입력 스키마를 구성합니다. 이제 다음을 수행해야 합니다 [고객 AI 인스턴스 구성](../../intelligent-services/customer-ai/user-guide/configure.md). 인스턴스를 구성한 후 다음을 수행할 수 있는 모델이 생성됩니다 [인사이트 및 점수 보기](../../intelligent-services/customer-ai/user-guide/discover-insights.md). 모델에서 생성된 데이터를 사용하여 데이터 기반 활성화를 위한 세그먼트를 만들 수 있습니다.
 
-고객 AI에 대한 자세한 내용은 [고객 AI 개요](../../intelligent-services/customer-ai/overview.md)를 방문하여 시작하십시오. 또한 다음 비디오에서는 고객 AI가 어떻게 AI 기반 자산으로 고객 프로파일을 강화하고 고객 세분화와 타겟팅 활동을 강화하는지 보여줍니다.
+Customer AI에 대해 자세히 알아보려면 [Customer AI 개요](../../intelligent-services/customer-ai/overview.md). 또한 다음 비디오에서는 고객 AI 가 AI 기반 자산으로 고객 프로필을 강화하고 고객 세분화와 타겟팅 활동을 강화하는 방법을 보여줍니다.
 
 >[!VIDEO](https://video.tv.adobe.com/v/40374/?quality=12&learn=on)
 
 
 ## 다음 단계
 
-이 개요를 본 후에는 실시간 CDP가 [!DNL Segmentation Service]을 활용하여 마케팅 캠페인의 맞춤화 및 개인화를 향상시키는 방법을 이해해야 합니다. [!DNL Segmentation Service]에 대한 자세한 내용은 [세그멘테이션 설명서](../../segmentation/home.md)를 참조하십시오.
+이제 이 개요를 읽고 실시간 CDP가 어떻게 활용하는지를 이해해야 합니다 [!DNL Segmentation Service] 마케팅 캠페인의 사용자 지정 및 개인화를 개선하기 위해 에 대한 자세한 정보 [!DNL Segmentation Service]을(를) 참조하십시오. [세그먼테이션 설명서](../../segmentation/home.md).

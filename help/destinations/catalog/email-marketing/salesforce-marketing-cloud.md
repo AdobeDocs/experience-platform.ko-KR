@@ -1,11 +1,11 @@
 ---
 keywords: 이메일;이메일;이메일;이메일 대상;salesforce;salesforce 대상
 title: Salesforce Marketing Cloud 연결
-seo-description: Salesforce Marketing Cloud is a digital marketing suite formerly known as ExactTarget that allows you to build and customize journeys for visitors and customers to personalize their experience.
+description: Salesforce Marketing Cloud은 방문자와 고객이 경험을 개인화할 수 있도록 여정을 만들고 사용자 지정할 수 있도록 해주는 이전에 ExactTarget이라고 하는 디지털 마케팅 세트입니다.
 exl-id: e85049a7-eaed-4f8a-b670-9999d56928f8
-source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
+source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
 workflow-type: tm+mt
-source-wordcount: '567'
+source-wordcount: '595'
 ht-degree: 2%
 
 ---
