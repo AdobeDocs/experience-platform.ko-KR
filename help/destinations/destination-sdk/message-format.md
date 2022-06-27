@@ -2,10 +2,10 @@
 description: 이 페이지에서는 Adobe Experience Platform에서 대상으로 내보낸 데이터의 메시지 포맷 및 프로필 변환에 대해 설명합니다.
 title: 메시지 포맷
 exl-id: 1212c1d0-0ada-4ab8-be64-1c62a1158483
-source-git-commit: 6600549cf421e2adc360b75e0b463992d549b85e
+source-git-commit: bd89df0659604c05ffd049682343056dbe5667e3
 workflow-type: tm+mt
-source-wordcount: '2266'
-ht-degree: 1%
+source-wordcount: '2272'
+ht-degree: 2%
 
 ---
 
@@ -83,6 +83,8 @@ Authorization: Bearer YOUR_REST_API_KEY
 | `_your_custom_schema.firstName` | ` attributes.first_name` | `first_name` |
 | `_your_custom_schema.lastName` | `attributes.last_name` | `last_name` |
 | `personalEmail.address` | `attributes.external_id` | `external_id` |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Experience Platform의 프로필 구조 {#profile-structure}
 
@@ -1194,6 +1196,8 @@ https://api.example.com/audience/{{input.aggregationKey.segmentId}}
 | `destination.segmentNames` | Adobe Experience Platform 네임스페이스의 세그먼트 이름에서 파트너 시스템의 세그먼트 이름에 매핑합니다. |
 | `addedSegments(listOfSegments)` | 상태가 있는 세그먼트만 반환합니다 `realized` 또는 `existing`. |
 | `removedSegments(listOfSegments)` | 상태가 있는 세그먼트만 반환합니다 `exited`. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## 다음 단계 {#next-steps}
 

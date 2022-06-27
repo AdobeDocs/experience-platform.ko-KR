@@ -2,9 +2,9 @@
 description: 이 구성을 사용하면 대상 이름, 카테고리, 설명, 로고 등과 같은 기본 정보를 표시할 수 있습니다. 또한 이 구성의 설정은 Experience Platform 사용자가 대상을 인증하는 방법, Experience Platform 사용자 인터페이스에 표시되는 방법 및 대상으로 내보낼 수 있는 ID를 결정합니다.
 title: Destination SDK 스트리밍 대상 구성 옵션
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: b12e46592c6c7bb09a90b809e7fac7d05703210a
+source-git-commit: bd89df0659604c05ffd049682343056dbe5667e3
 workflow-type: tm+mt
-source-wordcount: '1787'
+source-wordcount: '1790'
 ht-degree: 4%
 
 ---
@@ -291,6 +291,8 @@ ID 네임스페이스에는 1-1의 서신이 필요하지 않습니다 [!DNL Pla
 | 매개 변수 | 유형 | 설명 |
 |---------|----------|------|
 | `backfillHistoricalProfileData` | 부울 | 세그먼트가 대상으로 활성화될 때 이전 프로필 데이터를 내보내지 여부를 제어합니다. <br> <ul><li> `true`: [!DNL Platform] 세그먼트가 활성화되기 전에 세그먼트에 대해 자격이 있는 내역 사용자 프로필을 보냅니다. </li><li> `false`: [!DNL Platform] 세그먼트가 활성화된 후에 세그먼트에 대한 자격이 되는 사용자 프로필만 포함합니다. </li></ul> |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## 이 구성이 대상에 필요한 모든 정보를 연결하는 방법 {#connecting-all-configurations}
 

@@ -2,10 +2,10 @@
 description: 파일 기반 대상의 서버 및 파일 구성 사양은 /destination-servers 엔드포인트를 통해 Adobe Experience Platform Destination SDK에서 구성할 수 있습니다.
 title: (베타) 파일 기반 대상 서버 사양을 위한 구성 옵션
 exl-id: 56434e36-0458-45d9-961d-f6505de998f7
-source-git-commit: 3c8ad296ab9f0ce62743466ca8823b13c4545a9d
+source-git-commit: 7a72c190d28d63c7bcd1bf12d8a52efc4589b848
 workflow-type: tm+mt
-source-wordcount: '895'
-ht-degree: 11%
+source-wordcount: '916'
+ht-degree: 13%
 
 ---
 
@@ -53,6 +53,8 @@ ht-degree: 11%
 | `fileBasedS3Destination.path.value` | 문자열 | 내보낸 파일을 호스트할 대상 폴더의 경로입니다. |
 | `fileConfigurations` | 개체 | 자세한 내용은 [파일 형식 구성](#file-configuration) 자세한 내용은 이 섹션에 대해 설명합니다. |
 
+{style=&quot;table-layout:auto&quot;}
+
 ## 파일 기반 SFTP 대상 서버 사양 {#sftp-example}
 
 ```json
@@ -89,6 +91,8 @@ ht-degree: 11%
 | `encryptionMode` | 문자열 | 파일 암호화를 사용할지 여부를 나타냅니다. 지원되는 값: <ul><li>PGP</li><li>None</li></ul> |
 | `fileConfigurations` | 개체 | 자세한 내용은 [파일 형식 구성](#file-configuration) 자세한 내용은 이 섹션에 대해 설명합니다. |
 
+{style=&quot;table-layout:auto&quot;}
+
 ## 파일 기반 [!DNL Azure Data Lake Storage] ([!DNL ADLS]) 대상 서버 사양 {#adls-example}
 
 ```json
@@ -114,6 +118,8 @@ ht-degree: 11%
 | `fileBasedAdlsGen2Destination.path.templatingStrategy` | 문자열 | *필수 여부.*  `PEBBLE_V1`. |
 | `fileBasedAdlsGen2Destination.path.value` | 문자열 | 내보낸 파일을 호스트할 대상 폴더의 경로입니다. |
 | `fileConfigurations` | 개체 | 자세한 내용은 [파일 형식 구성](#file-configuration) 자세한 내용은 이 섹션에 대해 설명합니다. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## 파일 기반 [!DNL Azure Blob Storage] 대상 서버 사양 {#blob-example}
 
@@ -147,6 +153,8 @@ ht-degree: 11%
 | `fileBasedAzureBlobDestination.container.value` | 문자열 | 의 이름 [!DNL Azure Blob Storage] 이 대상에서 사용할 컨테이너입니다. |
 | `fileConfigurations` | 개체 | 자세한 내용은 [파일 형식 구성](#file-configuration) 자세한 내용은 이 섹션에 대해 설명합니다. |
 
+{style=&quot;table-layout:auto&quot;}
+
 ## 파일 기반 [!DNL Data Landing Zone] ([!DNL DLZ]) 대상 서버 사양 {#dlz-example}
 
 ```json
@@ -173,6 +181,8 @@ ht-degree: 11%
 | `fileBasedDlzDestination.path.templatingStrategy` | 문자열 | *필수 여부.*   `PEBBLE_V1`. |
 | `fileBasedDlzDestination.path.value` | 문자열 | 내보낸 파일을 호스트할 대상 폴더의 경로입니다. |
 | `fileConfigurations` | 개체 | 자세한 내용은 [파일 형식 구성](#file-configuration) 자세한 내용은 이 섹션에 대해 설명합니다. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## 파일 기반 [!DNL Google Cloud Storage] 대상 서버 사양 {#gcs-example}
 
@@ -205,6 +215,8 @@ ht-degree: 11%
 | `fileBasedGoogleCloudStorageDestination.path.templatingStrategy` | 문자열 | *필수 여부.*  `PEBBLE_V1`. |
 | `fileBasedGoogleCloudStorageDestination.path.value` | 문자열 | 내보낸 파일을 호스트할 대상 폴더의 경로입니다. |
 | `fileConfigurations` | 개체 | 자세한 내용은 [파일 형식 구성](#file-configuration) 자세한 내용은 이 섹션에 대해 설명합니다. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## 파일 형식 구성 {#file-configuration}
 
@@ -299,4 +311,6 @@ ht-degree: 11%
 | `csvOptions.charToEscapeQuoteEscaping.value` | 선택 사항입니다 | *전용`"fileType.value": "csv"`*. 따옴표 문자의 이스케이프를 이스케이프 처리하는 데 사용되는 단일 문자를 설정합니다. | `\` 이스케이프 및 따옴표 문자가 다른 경우. `\0` 이스케이프 문자와 따옴표 문자가 같은 경우. |
 | `csvOptions.emptyValue.value` | 선택 사항입니다 | *전용`"fileType.value": "csv"`*. 빈 값의 문자열 표현을 설정합니다. | `""` |
 | `csvOptions.lineSep.value` | 선택 사항입니다 | *전용`"fileType.value": "csv"`*. 작성에 사용해야 하는 라인 구분자를 정의합니다. 최대 길이는 1자입니다. | `\n` |
-| `maxFileRowCount` | 선택 사항입니다 | 내보낸 파일에 포함할 수 있는 최대 행 수입니다. 대상 플랫폼 파일 크기 요구 사항에 따라 구성합니다. | 해당 없음 |
+| `maxFileRowCount` | 선택 사항입니다 | 내보낸 파일에 포함할 수 있는 최대 행 수입니다. 대상 플랫폼 파일 크기 요구 사항에 따라 구성합니다. | N/A |
+
+{style=&quot;table-layout:auto&quot;}

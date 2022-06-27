@@ -2,9 +2,9 @@
 description: 이 구성을 사용하면 대상 이름, 카테고리, 설명, 로고 등과 같은 기본 정보를 표시할 수 있습니다. 또한 이 구성의 설정은 Experience Platform 사용자가 대상을 인증하는 방법, Experience Platform 사용자 인터페이스에 표시되는 방법 및 대상으로 내보낼 수 있는 ID를 결정합니다.
 title: (베타) Destination SDK을 위한 파일 기반 대상 구성 옵션
 exl-id: 6b0a0398-6392-470a-bb27-5b34b0062793
-source-git-commit: 39fbdcdb704f096e1fcee680221c529758a00555
+source-git-commit: bd89df0659604c05ffd049682343056dbe5667e3
 workflow-type: tm+mt
-source-wordcount: '2304'
+source-wordcount: '2313'
 ht-degree: 5%
 
 ---
@@ -788,6 +788,7 @@ ID 네임스페이스에는 1-1의 서신이 필요하지 않습니다 [!DNL Pla
 | `filenameConfig.defaultFilenameAppendOptions` | 문자열 | *필수 여부*. 사용자가 선택 취소할 수 있는 미리 선택된 기본 파일 이름 매크로입니다.<br><br> 이 목록의 매크로는 `allowedFilenameAppendOptions`. |
 | `filenameConfig.defaultFilename` | 문자열 | *선택 사항입니다*. 내보낸 파일의 기본 파일 이름 매크로를 정의합니다. 사용자가 덮어쓸 수 없습니다. <br><br>에 의해 정의된 모든 매크로 `allowedFilenameAppendOptions` 다음에 추가됩니다. `defaultFilename` 매크로 <br><br>If `defaultFilename` 비어 있으면, 에서 매크로를 하나 이상 정의해야 합니다. `allowedFilenameAppendOptions`. |
 
+{style=&quot;table-layout:auto&quot;}
 
 ### 파일 이름 구성 {#file-name-configuration}
 
@@ -808,6 +809,7 @@ ID 네임스페이스에는 1-1의 서신이 필요하지 않습니다 [!DNL Pla
 | `CUSTOM_TEXT` | [!UICONTROL 사용자 정의 텍스트] | 파일 이름에 포함할 사용자 정의 사용자 정의 텍스트입니다. 에서는 사용할 수 없습니다. `defaultFilename`. | My_Custom_Text |
 | `TIMESTAMP` | [!UICONTROL 날짜 및 시간] | 파일이 생성된 시간의 10자리 타임스탬프(Unix 형식)입니다. | 1652131584 |
 
+{style=&quot;table-layout:auto&quot;}
 
 ![미리 선택된 매크로가 있는 파일 이름 구성 화면을 보여주는 UI 이미지](assets/file-name-configuration.png)
 
@@ -840,6 +842,8 @@ ID 네임스페이스에는 1-1의 서신이 필요하지 않습니다 [!DNL Pla
 | 매개 변수 | 유형 | 설명 |
 |---------|----------|------|
 | `backfillHistoricalProfileData` | 부울 | 세그먼트가 대상으로 활성화될 때 이전 프로필 데이터를 내보내지 여부를 제어합니다. <br> <ul><li> `true`: [!DNL Platform] 세그먼트가 활성화되기 전에 세그먼트에 대해 자격이 있는 내역 사용자 프로필을 보냅니다. </li><li> `false`: [!DNL Platform] 세그먼트가 활성화된 후에 세그먼트에 대한 자격이 되는 사용자 프로필만 포함합니다. </li></ul> |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## 이 구성이 대상에 필요한 모든 정보를 연결하는 방법 {#connecting-all-configurations}
 
