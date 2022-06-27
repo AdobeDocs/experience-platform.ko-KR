@@ -5,9 +5,9 @@ breadcrumb-title: 태그
 user-guide-description: 고객 경험을 향상시키기 위해 분석, 마케팅 및 광고 태그를 배포 및 관리하는 방법을 살펴볼 수 있습니다.
 feature: Tags
 solution: Data Collection
-source-git-commit: 881d9602ff3462afb5df30f8446113a372650c8d
+source-git-commit: 2cabd8d8fa44f942f9bfce914fd2910a4ddbb973
 workflow-type: tm+mt
-source-wordcount: '394'
+source-wordcount: '396'
 ht-degree: 68%
 
 ---
@@ -107,6 +107,9 @@ ht-degree: 68%
       * Adobe Target v2 {#target-v2}
          * [개요](./extensions/web/target-v2/overview.md)
          * [릴리스 정보](./extensions/web/target-v2/release-notes.md)
+      * [!DNL BrightCove] 비디오 추적 {#brightcove}
+         * [개요](./extensions/web/brightcove/overview.md)
+         * [릴리스 정보](./extensions/web/brightcove/release-notes.md)
       * 일반 Analytics 플러그인 {#plugins}
          * [개요](./extensions/web/plugins/overview.md)
          * [릴리스 정보](./extensions/web/plugins/release-notes.md)
@@ -114,12 +117,11 @@ ht-degree: 68%
          * [개요](./extensions/web/core/overview.md)
          * [이벤트 전달](./extensions/web/core/event-forwarding.md)
          * [릴리스 정보](./extensions/web/core/release-notes.md)
+      * [!DNL Mailchimp] Edge {#mailchimp-edge}
+         * [개요](./extensions/web/mailchimp/overview.md)
       * [!DNL Marketo Munchkin] {#marketo}
          * [개요](./extensions/web/marketo/overview.md)
          * [릴리스 정보](./extensions/web/marketo/release-notes.md)
-      * [!DNL BrightCove] 비디오 추적 {#brightcove}
-         * [개요](./extensions/web/brightcove/overview.md)
-         * [릴리스 정보](./extensions/web/brightcove/release-notes.md)
       * Google 데이터 레이어 {#google-data-layer}
          * [개요](./extensions/web/google-data-layer/overview.md)
          * [릴리스 정보](./extensions/web/google-data-layer/release-notes.md)

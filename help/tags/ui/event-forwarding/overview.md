@@ -3,7 +3,7 @@ title: 이벤트 전달 개요
 description: Platform Edge Network를 사용하여 태그 구현을 변경하지 않고 작업을 실행할 수 있도록 Adobe Experience Platform의 이벤트 전달에 대해 알아봅니다.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
+source-git-commit: b445e25ebda39e1604b926dc40d8ed52ad2e9b54
 workflow-type: tm+mt
 source-wordcount: '955'
 ht-degree: 8%
@@ -67,7 +67,7 @@ Adobe Experience Platform과 결합된 이벤트 전달 [웹 SDK](../../../edge/
 
 데이터 요소 자체가 태그와 동일한 방식으로 이벤트 전달에서 만들어지고 구성되는 반면, Platform Edge Network에서 데이터를 참조하는 방법과 관련하여 몇 가지 중요한 구문 차이가 있습니다.
 
-#### Platform Edge Network의 데이터 참조 {#edge}
+#### Platform Edge Network의 데이터 참조 {#data-element-path}
 
 Platform Edge Network에서 데이터를 참조하려면 해당 데이터에 올바른 경로를 제공하는 데이터 요소를 만들어야 합니다. UI에서 데이터 요소를 만들 때 **[!UICONTROL 코어]** 확장 및 **[!UICONTROL 경로]** 참조하십시오.
 
