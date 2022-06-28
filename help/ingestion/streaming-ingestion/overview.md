@@ -5,9 +5,9 @@ title: 스트리밍 수집 개요
 topic-legacy: overview
 description: Adobe Experience Platform을 위한 스트리밍 수집에서는 사용자에게 클라이언트 및 서버측 장치에서 실시간으로 Experience Platform으로 데이터를 전송하는 방법을 제공합니다.
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: 57555011ce5cf8b3f80b1d1d849cb179f4801f02
+source-git-commit: 968f2635330fb0fa8a55b17b30bd8557f7d70335
 workflow-type: tm+mt
-source-wordcount: '348'
+source-wordcount: '352'
 ht-degree: 2%
 
 ---
@@ -40,7 +40,7 @@ Adobe Experience Platform을 사용하면 통합 및 일관되고 적절한 경�
 
 | 대상 | 예상 지연 |
 | --------- | ---------------- |
-| 실시간 고객 프로필 | &lt; 1분 |
+| 실시간 고객 프로필 | &lt; 15분, 95번째 백분위수 |
 | Data Lake | &lt; 60분 |
 
 ## 스트리밍 통합에 대한 RPS(초당 요청) 지침

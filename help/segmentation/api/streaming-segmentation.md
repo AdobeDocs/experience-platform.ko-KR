@@ -5,9 +5,9 @@ title: '스트리밍 세그먼테이션을 사용하여 거의 실시간으로 �
 topic-legacy: developer guide
 description: 이 문서에는 Adobe Experience Platform 세그멘테이션 서비스 API에서 스트리밍 세그멘테이션을 사용하는 방법에 대한 예가 나와 있습니다.
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 81659da18d4fa8b733200998c27c25ec356ca264
 workflow-type: tm+mt
-source-wordcount: '1896'
+source-wordcount: '1915'
 ht-degree: 1%
 
 ---
@@ -424,7 +424,7 @@ Adobe Experience Platform 사용자 인터페이스를 사용하여 유사한 �
 
 ### 스트리밍 세그먼테이션은 어떤 데이터에서 작동합니까?
 
-스트리밍 세그먼테이션은 스트리밍 소스를 사용하여 수집된 모든 데이터에서 작동합니다. 일괄 처리 기반 소스를 사용하여 수집된 세그먼트는 스트리밍 세그멘테이션의 자격이 있는 경우에도 매일 평가됩니다.
+스트리밍 세그먼테이션은 스트리밍 소스를 사용하여 수집된 모든 데이터에서 작동합니다. 일괄 처리 기반 소스를 사용하여 수집된 세그먼트는 스트리밍 세그멘테이션의 자격이 있는 경우에도 매일 평가됩니다. 24시간 이전의 타임스탬프와 함께 시스템으로 스트리밍되는 이벤트는 후속 배치 작업에서 처리됩니다.
 
 ### 세그먼트는 어떻게 일괄 처리 또는 스트리밍 세그먼테이션으로 정의됩니까?
 
