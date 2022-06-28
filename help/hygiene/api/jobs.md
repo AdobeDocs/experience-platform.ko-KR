@@ -3,18 +3,23 @@ title: 데이터 위생 API를 사용하여 소비자 레코드 삭제
 description: Adobe Experience Platform에서 고객의 저장된 개인 데이터를 프로그래밍 방식으로 수정하거나 삭제하는 방법을 알아봅니다.
 hide: true
 hidefromtoc: true
-source-git-commit: 9057d424d63217a3cef7ad2237a65700d9159323
+exl-id: d80a4be3-e072-4bb4-a56d-b34a20f88c78
+source-git-commit: c0d51d33d1e9d49d43f732925f2a794b5afea03b
 workflow-type: tm+mt
-source-wordcount: '481'
+source-wordcount: '505'
 ht-degree: 1%
 
 ---
 
 # 데이터 위생 API를 사용하여 소비자 레코드 삭제
 
+>[!IMPORTANT]
+>
+>데이터 위생 API는 현재 베타 버전입니다. 이 문서에 설명된 기능은 변경될 수 있습니다.
+
 데이터 위생 API를 사용하면 Adobe Experience Platform에서 고객의 저장된 개인 데이터를 프로그래밍 방식으로 수정하거나 삭제할 수 있습니다.
 
-다음 루트 경로를 통해 API에 액세스할 수 있습니다. `https://platform.adobe.io/data/core/hygiene/`
+와 동일한 루트 경로를 통해 API에 액세스할 수 있습니다 [Privacy Service API](../../privacy-service/api/overview.md): `https://platform.adobe.io/data/core/privacy/`
 
 ## 시작하기
 
@@ -52,7 +57,7 @@ POST /jobs
 
 ```shell
 curl -X POST \
-  https://platform.adobe.io/data/core/hygiene/jobs \
+  https://platform.adobe.io/data/core/privacy/jobs \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
