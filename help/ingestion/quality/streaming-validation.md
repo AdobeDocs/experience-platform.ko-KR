@@ -6,9 +6,9 @@ topic-legacy: tutorial
 type: Tutorial
 description: 스트리밍 수집 기능을 사용하면 스트리밍 끝점을 사용하여 실시간으로 Adobe Experience Platform에 데이터를 업로드할 수 있습니다. 스트리밍 수집 API는 동기식과 비동기식의 두 가지 유효성 검사 모드를 지원합니다.
 exl-id: 6e9ac943-6d73-44de-a13b-bef6041d3834
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 958bd461be0eb3ed59b44759407bed40a3edc00a
 workflow-type: tm+mt
-source-wordcount: '898'
+source-wordcount: '917'
 ht-degree: 3%
 
 ---
@@ -59,6 +59,10 @@ ht-degree: 3%
 - 형식
 
 ## 동기 유효성 검사
+
+>[!WARNING]
+>
+>다음 `syncValidation` 쿼리 매개 변수는 단일 메시지 끝점에 대해서만 사용할 수 있으며 배치 끝점에 사용할 수 없습니다.
 
 동기 유효성 검사는 수집이 실패한 이유에 대한 즉각적인 피드백을 제공하는 유효성 검사 방법입니다. 그러나 실패 시 유효성 검사가 실패한 레코드는 삭제되고 다운스트림으로 전송되지 않습니다. 따라서 동기 유효성 검사는 개발 프로세스 동안에만 사용해야 합니다. 동기 유효성 검사를 수행할 때 호출자에게 XDM 유효성 검사 결과와 실패 이유를 모두 알려줍니다.
 
