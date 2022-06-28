@@ -5,9 +5,9 @@ title: Access Control 문제 해결 안내서
 topic-legacy: troubleshooting guide
 description: 이 문서에서는 Adobe Experience Platform의 액세스 제어에 대해 자주 묻는 질문에 대한 답변을 제공합니다.
 exl-id: c299c0c4-dbee-4e6d-8af4-2446444bed69
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
+source-git-commit: 79ffdf35e27d74a64ea8e25544fdeeb293b58306
 workflow-type: tm+mt
-source-wordcount: '321'
+source-wordcount: '408'
 ht-degree: 0%
 
 ---
@@ -33,3 +33,7 @@ IMS 조직의 시스템 관리자, 제품 관리자 또는 제품 프로필 관�
 권한은 [!DNL Platform] 이 기능들이 (예: [!DNL Data Management] 및 [!DNL Profile Management]). 사용 가능한 권한 및 해당 권한이 속한 그룹의 전체 목록을 보려면 [권한 섹션](home.md#permissions) 액세스 제어 개요
 
 자세한 내용은 [액세스 제어 개요](home.md) 역할 기반 액세스 제어 제공에 대한 자세한 정보.
+
+## Adobe IO에서 비즈니스 ID로 마이그레이션한 후 권한은 어떻게 됩니까?
+
+액세스 제어는 권한 부여에 사용자 ID(사용자에게 할당된 내부 고유 ID)를 사용합니다. 조직이 Adobe ID에서 비즈니스 ID로 마이그레이션되면 사용자 ID가 변경되고 액세스 제어가 새로 생성된 사용자 ID를 사용하므로 해당 사용자에 대해 설정된 모든 권한이 손실됩니다. 조직이 비즈니스 ID로 마이그레이션된 경우 Adobe 담당자에게 문의하여 사용자 ID를 Adobe ID에서 비즈니스 ID로 마이그레이션하십시오.
