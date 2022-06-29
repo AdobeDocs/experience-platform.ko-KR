@@ -2,10 +2,10 @@
 title: Adobe Target v2 확장에 대한 릴리스 노트
 description: Adobe Experience Platform의 Adobe Target v2 태그 확장에 대한 최신 릴리스 노트입니다.
 exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
-source-git-commit: 824fea41bc7e7082814648efd58184f5208e5e6f
+source-git-commit: 3f6526ec87189d6e629d4dcb8eb626367543b9e5
 workflow-type: tm+mt
-source-wordcount: '642'
-ht-degree: 36%
+source-wordcount: '603'
+ht-degree: 27%
 
 ---
 
@@ -15,36 +15,31 @@ ht-degree: 36%
 >
 >Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
 
-## 2022년 1월 28일
+## v0.18.0(2022년 6월 1일)
 
-### Adobe Target v2 확장 0.17.1
+- 을 지원하도록 업데이트됨 `at.js` v2.9.0
+- 사용자 에이전트 클라이언트 힌트 지원이 추가되었습니다.
+
+## v0.17.1(2022년 1월 28일)
 
 - 을 지원하도록 업데이트됨 `at.js` v2.8.1
 - 고정 `pageLoad` 매핑되지 않음 `target-global-mbox` ODD 하이브리드 실행 모드에서
 - Analytics 세부 사항 관련 문제가 해결되었습니다. `mbox` 요청
-- 보안 취약점을 수정하도록 개발 종속성을 업그레이드했습니다.
+- 보안 취약성을 해결하기 위해 개발 종속성이 업그레이드되었습니다
 
-## 2022년 1월 7일
-
-### Adobe Target v2 확장 0.17.0
+## v0.17.0(2022년 1월 7일)
 
 - 을 지원하도록 업데이트됨 `at.js` 이제 기능 사용 및 성능 원격 분석 데이터를 수집하는 v2.8.0입니다.  개인 데이터는 수집되지 않습니다. 이 기능을 옵트아웃하려면 다음을 설정합니다. `telemetryEnabled` to `false` in `targetGlobalSettings`.
 
-## 2021년 10월 28일
-
-### Adobe Target v2 확장 0.16.0
+## v0.16.0(2021년 10월 28일)
 
 - 을 지원하도록 업데이트됨 `at.js` 이제 Adobe Target에서 다운로드할 수 있는 v2.7.0을 다운로드하십시오.
 
-## 2021년 7월 20일
-
-### Adobe Target v2 확장 0.15.1
+## v0.15.1(2021년 7월 20일)
 
 - 다음 문제를 수정했습니다. `stringify` 함수 이름 충돌이 발생하여 UUID 값이 잘못 생성되었습니다. `sessionId`, `requestId`등
 
-## 2021년 7월 16일
-
-### Adobe Target v2 확장 0.15.0
+## v0.15.0(2021년 7월 16일)
 
 - 항상 쿠키에 보안 속성 추가 `at.js` secureOnly 설정이 true로 설정되어 있습니다.
 - 이제 응답 토큰을 사용할 수 있습니다 `triggerView()`
@@ -54,77 +49,57 @@ ht-degree: 36%
 - `sessionId` 쿠키 만료는 모든 네트워크 호출에서 올바르게 확장됩니다
 - 이제 SPA 보기 캐시 초기화가 올바르게 처리되고 적용됩니다 `viewsEnable` 설정
 
-## 2021년 6월 2일
-
-### Adobe Target v2 확장 0.14.2
+## v0.14.2(2021년 6월 2일)
 
 - 최종 번들에 두 개의 버그가 포함되어 있는 버그를 수정합니다 `at.js` 버전, On-Device Decisioning이 있는 버전 및 없는 버전.
 
-## 2021년 5월 19일
-
-### Adobe Target v2 확장 0.14.1
+## v0.14.1(2021년 5월 19일)
 
 - Target 로드 작업이 글로벌 mbox 호출을 실행하는 v0.14 릴리스에서 도입된 회귀 수정
 
-## 2021년 5월 14일
-
-### Adobe Target v2 확장 0.14
+## v0.14(2021년 5월 14일)
 
 - 을 사용하여 새 작업 로드 Target 추가 [On-Device Decisioning](./overview.md#load-target-with-on-device-decisioning): `at.js` On-Device Decisioning 기능 포함 2.5
 - 업데이트됨 `at.js` to 2.5
 
 
-## 2021년 3월 25일
-
-### Adobe Target v2 확장 0.13.7
+## v0.13.7(2021년 3월 25일)
 
 - mbox 요청에 포함되는 `targetPageParams`에 관한 문제가 해결되었습니다. `targetPageParams` 는 `pageLoad` 요청.
 - 전역 개체 종속성을 직접 참조로 대체하여 태그 확장에서 문서 및 창 전역 개체 문제를 해결했습니다.
 - 업데이트됨 `at.js` 변환 후: 2.4.1.
 
-## 2021년 1월 25일
-
-### Adobe Target v2 확장 0.13.6
+## v0.13.6(2021년 1월 25일)
 
 - 통합 프로필/플랫폼 ID에 대한 지원을 게재 API customerId에 추가
 - 잘못된 스타일 태그 삽입 수정
 - at.s가 2.4.0으로 업데이트되었습니다.
 - 정의되지 않은 매개 변수가 잘못된 게재 요청을 초래할 수 있는 문제가 해결되었습니다.
 
-## 2020년 11월 25일
-
-### Adobe Target v2 확장 0.13.4
+## v0.13.4(2020년 11월 25일)
 
 - mbox 매개 변수가 UI에 표시되지 않던 버그를 수정했습니다.
 - 브랜딩 업데이트
 - 업데이트 날짜: `at.js` 버전 2.3.3으로
 
-## 2020년 7월 24일
-
-### Adobe Target v2 확장 0.13.3
+## v0.13.3(2020년 7월 24일)
 
 - 비활성 활동에 대해 QA 모드 링크가 작동하지 않던 버그를 수정했습니다
 - 스크립트나 코드가 `default` 속성을 `window` 또는 `document`에 추가할 때 확장에 실패하는 경우 버그를 수정했습니다
 
-## 2020년 6월 15일
-
-### Adobe Target v2 확장 0.13.2
+## v0.13.2(2020년 6월 15일)
 
 - CNAME 및 Edge Override를 사용할 때 발생하는 문제가 해결되었습니다. `at.js` 1.x가 서버 도메인을 잘못 만들어 Target 요청이 실패할 수 있습니다
 - Target 및 Adobe Analytics 태그 확장에 v2 태그 확장을 사용할 때 Target이 Analytics sendBeacon 호출을 지연하는 문제가 해결되었습니다.
 - `deviceIdLifetime`을 통해 재정의 가능하도록 하여 `targetGlobalSettings` 설정을 개선했습니다.
 
-## 2020년 3월 25일
-
-### Adobe Target v2 확장 0.13.0
+## v0.13.0(2020년 3월 25일)
 
 - 업데이트됨 `at.js` v2.3으로 이동합니다.
 - adobe.target.getOffer API에 Target Global Mbox 지원 추가됨
 - 매개 변수 및 페이지 로드 매개 변수가 올바르게 처리되지 않는 문제가 해결되었습니다.
 
-## 2019년 10월 10일
-
-### Adobe Target v2 확장 0.12.0
+## v0.12.0 (2019년 10월 10일)
 
 - 업데이트됨 `at.js` v2.2로 업그레이드했습니다.
 - ECID(Experience Cloud ID 라이브러리) v4.4와 간의 통합을 위해 성능이 향상되었습니다 `at.js` 2.2.
@@ -133,15 +108,11 @@ ht-degree: 36%
 >[!NOTE]
 >ECID 태그 확장을 v4.4.1로 업그레이드하여 향상된 성능을 이용해 보십시오.
 
-## 2019년 7월 31일
-
-### Adobe Target v2 확장 0.11.1
+## v0.11.1(2019년 7월 31일)
 
 - 사용할 확장 버전이 업데이트되었습니다. `at.js` 2.1.1
 - 매개 변수 처리에 대한 수정이 추가되었습니다.
 
-## 2019년 6월 3일
-
-### Adobe Target v2 확장 0.11.0
+## v0.11.0(2019년 6월 3일)
 
 - 지원을 위한 새 태그 확장 `at.js` 2.1
