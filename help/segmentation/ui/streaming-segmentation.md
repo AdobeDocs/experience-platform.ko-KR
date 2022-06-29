@@ -5,9 +5,9 @@ title: 스트리밍 세그멘테이션 UI 안내서
 topic-legacy: ui guide
 description: Adobe Experience Platform의 스트리밍 세그멘테이션을 사용하면 데이터 다양성에 중점을 두고 거의 실시간으로 세그멘테이션을 수행할 수 있습니다. 스트리밍 세그먼테이션을 사용하면 이제 데이터가 플랫폼에 도달하면 세그먼트 자격이 발생하므로 세그먼테이션 작업을 예약하고 실행해야 하는 필요성을 완화합니다. 이 기능을 사용하면 이제 데이터가 Platform으로 전달되므로 대부분의 세그먼트 규칙을 평가할 수 있습니다. 즉, 세그먼트 멤버십은 예약된 세그먼테이션 작업을 실행하지 않고 최신 상태로 유지됩니다.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 4022eb62e791282bb519f9604b6edf903d69239f
+source-git-commit: f6825869805733d2c3838f0cad0bca0f4baf7f16
 workflow-type: tm+mt
-source-wordcount: '1295'
+source-wordcount: '1315'
 ht-degree: 0%
 
 ---
@@ -67,9 +67,9 @@ ht-degree: 0%
 
 ![](../images/ui/streaming-segmentation/monitoring-streaming-segment.png)
 
-특히, **[!UICONTROL 총 적격 대상 크기]** 표시됩니다. 다음 **[!UICONTROL 총 정규화된 대상 크기]** 마지막으로 완료된 세그먼트 작업 실행의 총 적격 대상 수를 표시합니다. 지난 24시간 내에 세그먼트 작업이 완료되지 않으면 대신 예측에서 대상 수를 가져옵니다.
+특히, **[!UICONTROL 전체 적격]** 이 세그먼트에 대한 일괄 처리 및 스트리밍 평가를 기반으로 자격이 있는 총 대상 수를 표시하는 지표가 표시됩니다.
 
-아래에는 지난 24시간 동안 자격이 있고 자격이 없는 세그먼트의 수를 보여주는 선 그래프가 있습니다. 드롭다운을 조정하여 최근 24시간, 지난 주 또는 최근 30일을 표시할 수 있습니다.
+아래는 스트리밍 평가 방법을 사용하여 지난 24시간 동안 업데이트한 새 대상의 수를 보여주는 선 그래프입니다. 드롭다운을 조정하여 최근 24시간, 지난 주 또는 최근 30일을 표시할 수 있습니다. 다음 **[!UICONTROL 새 대상 업데이트됨]** 지표는 스트리밍 세그먼테이션으로 평가된 대로 선택한 시간 범위 동안의 대상 크기 변화를 기반으로 합니다. 이 지표에는 일별 세그먼트 배치 평가에서 총 적격한 대상이 포함되지 않습니다.
 
 >[!NOTE]
 >
@@ -79,7 +79,7 @@ ht-degree: 0%
 
 ![](../images/ui/streaming-segmentation/monitoring-streaming-segment-graph.png)
 
-정보 버블을 선택하여 마지막 세그먼트 평가에 대한 추가 정보를 찾을 수 있습니다.
+다음 옆에 있는 정보 버블을 선택하여 마지막 세그먼트 평가에 대한 추가 정보를 찾을 수 있습니다 **[!UICONTROL 전체 적격]**.
 
 ![](../images/ui/streaming-segmentation/info-bubble.png)
 
