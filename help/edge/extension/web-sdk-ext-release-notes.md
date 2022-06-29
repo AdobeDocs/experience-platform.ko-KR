@@ -2,10 +2,10 @@
 title: Adobe Experience Platform Web SDK Extension 릴리스 노트
 description: Adobe Experience Platform 웹 SDK 태그 확장
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 83f7fca5d8a3fd2a57d39c155153caa70d89d353
+source-git-commit: 4e80588777e1c5f334e15533c7c44623a0cd2b64
 workflow-type: tm+mt
-source-wordcount: '1398'
-ht-degree: 44%
+source-wordcount: '1426'
+ht-degree: 43%
 
 ---
 
@@ -13,6 +13,12 @@ ht-degree: 44%
 # Adobe Experience Platform Web SDK 확장 릴리스 노트
 
 이 문서에서는 Adobe Experience Platform 웹 SDK 태그 확장에 대한 릴리스 노트를 다룹니다. SDK 자체에 대한 최신 릴리스 노트는 [Platform Web SDK 릴리스 노트](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
+
+## 버전 2.13.0 - 2022년 6월 29일
+
+* eVar와 같은 XDM 개체 데이터 요소에서 숫자 속성의 정렬 순서를 수정했습니다.
+
+Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.12.0을 포함합니다.
 
 ## 버전 2.12.0 - 2022년 6월 13일
 

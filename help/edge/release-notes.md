@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK 릴리스 노트
 description: Adobe Experience Platform Web SDK에 대한 최신 릴리스 정보입니다.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;릴리스 노트;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 207fdd6d8a8dc27fa89798999734ba820f30fd54
+source-git-commit: b12f97a7c5e937a116d86495b3434dd9c0805b04
 workflow-type: tm+mt
-source-wordcount: '1169'
+source-wordcount: '1227'
 ht-degree: 3%
 
 ---
@@ -15,6 +15,11 @@ ht-degree: 3%
 
 이 문서에서는 Adobe Experience Platform Web SDK에 대한 릴리스 노트를 다룹니다.
 웹 SDK 태그 확장에 대한 최신 릴리스 노트는 [웹 SDK 태그 확장 릴리스 노트](extension/web-sdk-ext-release-notes.md).
+
+## 버전 2.12.0 - 2022년 6월 29일
+
+* 요청을 Edge Network로 변경하여 `cluster` 쿠키 위치 힌트를 URL의 일부로 사용합니다. 따라서 VPN을 통해 위치를 변경하거나 모바일 장치 등을 사용하여 운전하는 등의 중간 세션을 사용하는 사용자가 동일한 에지를 히트하고 동일한 개인화 프로필을 갖도록 할 수 있습니다.
+* getLibraryInfo 명령 응답에서 구성된 함수를 지정합니다.
 
 ## 버전 2.11.0 - 2022년 6월 13일
 
