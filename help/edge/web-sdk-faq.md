@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 웹 SDK FAQ
 description: Adobe Experience Platform Web SDK에 대해 자주 묻는 질문에 대한 답변을 얻을 수 있습니다.
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: 219f0f66026e8eb6729370916be3490309937f2a
+source-git-commit: 95305c0a5df71295e1321eb4c8c28baa66c5d94d
 workflow-type: tm+mt
-source-wordcount: '1924'
+source-wordcount: '1955'
 ht-degree: 1%
 
 ---
@@ -46,7 +46,7 @@ Platform의 태그를 사용하면 이러한 라이브러리를 가능한 한 �
 
 ### Adobe Experience Platform Web SDK 사용
 
-새 웹 SDK는 다음 솔루션에 대한 데이터를 단일 대상(Adobe Experience Platform Edge Network)에 전송하고 앞서 언급한 가장 일반적인 솔루션 사용 사례를 위해 해결합니다.
+새로운 웹 SDK는 다음 솔루션에 대한 데이터를 단일 대상(Adobe Experience Platform Edge Network)에 전송하고 앞서 언급한 가장 일반적인 솔루션 사용 사례를 위해 해결합니다.
 
 * Adobe Analytics
 * Adobe Audience Manager
@@ -157,9 +157,7 @@ CNAME에 대한 자세한 내용은 [Adobe 설명서](https://experienceleague.a
 
 **ndctr_orgid_consent:** 이 쿠키는 웹 사이트에 대한 사용자의 동의 기본 설정을 저장합니다.
 
-**ndctr_orgid_personalization:** 이 쿠키에는 Adobe Target에서 웹 페이지를 개인화하는 데 사용하는 세션 정보가 포함되어 있습니다.
-
-**ndctr_orgid_consenscheck:** 이 세션 기반 쿠키는 서버에 동의 환경 설정 서버 측을 검색하도록 신호를 보냅니다.
+**ndctr_orgid_cluster:** 이 쿠키는 현재 사용자의 요청을 제공하는 Experience Edge 영역을 저장합니다. 이 영역은 Experience Edge에서 요청을 올바른 영역으로 라우팅할 수 있도록 URL 경로에 사용됩니다. 이 쿠키의 수명은 30분으로, 사용자가 다른 IP 주소와 연결하는 경우 요청을 가장 가까운 영역으로 라우팅할 수 있습니다.
 
 웹 SDK를 사용할 때 Edge Network는 위의 쿠키 중 하나 이상을 설정합니다. Edge Network는 `secure` 및 `sameSite="none"` 속성을 사용합니다.
 
