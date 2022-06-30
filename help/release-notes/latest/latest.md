@@ -1,11 +1,11 @@
 ---
-title: Adobe Experience Platform 릴리스 노트 - 2022년 6월
-description: Adobe Experience Platform에 대한 2022년 6월 릴리스 노트입니다.
+title: Adobe Experience Platform 릴리스 정보
+description: Adobe Experience Platform에 대한 최신 릴리스 노트입니다.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 3b0ae00e97eddc342e5a502f4ebf08d2fa90259f
+source-git-commit: def32d9667c4630de760d228c88676eb9d5a6de4
 workflow-type: tm+mt
-source-wordcount: '1036'
-ht-degree: 5%
+source-wordcount: '1786'
+ht-degree: 4%
 
 ---
 
@@ -18,6 +18,7 @@ Adobe Experience Platform의 기존 기능 업데이트:
 - [[!DNL Data Collection]](#data-collection)
 - [[!DNL Data Science Workspace]](#dsw)
 - [[!DNL Destinations]](#destinations)
+- [XDM(경험 데이터 모델)](#xdm)
 - [쿼리 서비스](#query-service)
 - [소스](#sources)
 
@@ -74,6 +75,46 @@ Data Science Workspace에 대한 일반적인 정보는 [개요 설명서](../..
 {style=&quot;table-layout:auto&quot;}
 
 대상에 대한 자세한 내용은 [대상 개요](../../destinations/home.md).
+
+## XDM(경험 데이터 모델) {#xdm}
+
+XDM은 Adobe Experience Platform으로 가져온 데이터에 대한 일반적인 구조 및 정의(스키마)를 제공하는 오픈 소스 사양입니다. XDM 표준을 준수함으로써 모든 고객 경험 데이터를 공통 표현으로 통합하여 보다 빠르고 통합된 방식으로 통찰력을 제공할 수 있습니다. 고객 작업을 통해 유용한 통찰력을 얻을 수 있고, 세그먼트를 통해 고객 대상을 정의하고, 개인화를 위해 고객 속성을 사용할 수 있습니다.
+
+**새로운 XDM 구성 요소**
+
+| 구성 요소 유형 | 이름 | 설명 |
+| --- | --- | --- |
+| 클래스 | [[!UICONTROL 약물]](https://github.com/adobe/xdm/blob/master/components/classes/medication.schema.json) | 의료용 물질, 특히 약이나 약물에 대한 자세한 내용을 캡처하는 의료 산업 클래스. |
+| 클래스 | [[!UICONTROL 계획]](https://github.com/adobe/xdm/blob/master/components/classes/plan.schema.json) | 의료 계획이나 보험 계획과 같은 의료 계획에 대한 세부 사항을 캡처하는 의료 산업 등급. |
+| 클래스 | [[!UICONTROL 공급자]](https://github.com/adobe/xdm/blob/master/components/classes/provider.schema.json) | 의료 기관에 대한 세부 정보를 캡처하는 의료 산업 클래스 |
+| 클래스 | [[!UICONTROL 지급인]](https://github.com/adobe/xdm/blob/master/components/classes/payer.schema.json) | 보험 회사에 대한 세부 사항을 캡처하는 의료 산업 클래스. |
+| 클래스 | [[!UICONTROL 라이브 이벤트 일정]](https://github.com/adobe/xdm/blob/master/components/classes/live-event-schedule.json) | 여행 콘서트 일정이나 스포츠 팀의 일정과 같은 라이브 행사 일정에 대한 세부 사항을 캡처하는 스포츠 및 엔터테인먼트 업계 클래스입니다. |
+| 클래스 | [[!UICONTROL 위치]](https://github.com/adobe/xdm/blob/master/components/classes/location.json) | 콘서트 홀이나 스포츠 경기장과 같은 라이브 이벤트의 위치를 캡처하는 스포츠 및 엔터테인먼트 업계 클래스입니다. |
+| 필드 그룹 | [[!UICONTROL 의료용 약물]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/medication/healthcare-medication.schema.json) | 에 대한 필드 그룹 [!UICONTROL 약물] 브랜드 이름, 로트 번호, 수량 등 약물에 대한 세부 사항을 캡처하는 분류 |
+| 필드 그룹 | [[!UICONTROL 의료 계획 세부 정보]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/plan/healthcare-plan-details.schema.json) | 에 대한 필드 그룹 [!UICONTROL 계획] 네트워크, 유형 및 활성 상태 등의 세부 정보를 캡처하는 클래스입니다. |
+| 필드 그룹 | [[!UICONTROL 의료 기관]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/provider/healthcare-provider-details.schema.json) | 에 대한 필드 그룹 [!UICONTROL 공급자] 보건의료 진단 및 치료 서비스를 제공할 수 있는 허가를 받은 개인 건강 전문가 또는 건강 시설 조직의 세부 사항을 캡처하는 클래스입니다. |
+| 필드 그룹 | [[!UICONTROL 의료 구성원 세부 정보]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/provider/healthcare-provider-details.schema.json) | 에 대한 필드 그룹 [!UICONTROL XDM 개별 프로필] 연락처 정보, 1차 진료 의사 및 계획 정보 등 서비스 또는 의료 서비스를 받거나 받게 될 사람의 세부 정보를 캡처하는 클래스입니다. |
+| 필드 그룹 | [[!UICONTROL Sitetool 세부 정보]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-healthcare-sitetool.schema.json) | 에 대한 필드 그룹 [!UICONTROL XDM ExperienceEvent] chatbot, survey 등과 같은 사이트 도구에 의해 수집된 정보를 캡처하는 클래스입니다. |
+| 필드 그룹 | [[!UICONTROL 라이브 이벤트 티켓 구매]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-live-event-ticket-purchase.json) | 에 대한 필드 그룹 [!UICONTROL XDM ExperienceEvent] 콘서트 또는 스포츠 게임과 같은 라이브 이벤트 티켓 구매 내역을 캡처하는 클래스입니다. |
+| 필드 그룹 | [[!UICONTROL 스포츠 및 엔터테인먼트 이벤트 일정]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/live-event-schedule/sports-entertainment-event-schedule.schema.json) | 에 대한 필드 그룹 [!UICONTROL 라이브 이벤트 일정] 명소 이름, 도어 개설 시간 등 일정에 대한 세부 정보를 캡처하는 클래스. |
+| 필드 그룹 | [[!UICONTROL 스포츠 엔터테인먼트 행사 장소]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/location/sports-entertainment-event-venue.schema.json) | 에 대한 필드 그룹 [!UICONTROL 위치] 좌석 용량 및 DMA(지정 시장 지역)와 같은 이벤트 장소에 대한 자세한 내용을 캡처하는 클래스입니다. |
+| 전역 스키마 | (여러 개) | RTCDP Insights의 대상 지표에 새로운 전역 스키마를 사용할 수 있습니다. 다음을 참조하십시오 [가져오기 요청](https://github.com/adobe/xdm/pull/1560) 자세한 내용 |
+
+{style=&quot;table-layout:auto&quot;}
+
+**업데이트된 XDM 구성 요소**
+
+| 구성 요소 유형 | 이름 | 설명 업데이트 |
+| --- | --- | --- |
+| 비헤이비어 | [[!UICONTROL 시계열 스키마]](https://github.com/adobe/xdm/blob/master/components/behaviors/time-series.schema.json) | 미디어 상태 업데이트 이벤트 유형을 추가했습니다. |
+| 필드 그룹 | [[!UICONTROL 숙박예약]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-lodging-reservation.schema.json) | 숙박 체크아웃 속성을 추가했습니다. |
+| 데이터 유형 | [[!UICONTROL 미디어 정보]](https://github.com/adobe/xdm/blob/master/components/datatypes/media.schema.json) | 상태 시작 및 상태 종료 필드가 추가되었습니다. |
+| 확장 | [[!UICONTROL Workfront 변경 이벤트]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/changeevent.schema.json) | 사용자 및 이벤트 만들기 시간을 식별하는 데 도움이 되는 속성을 저장하는 데 사용되는 두 개의 필드를 추가했습니다. |
+| 확장 | [[!UICONTROL Adobe CJM ExperienceEvent - 메시지 상호 작용 세부 사항]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/message-interaction.schema.json) | 구독, 동의, 사용자 지정 이메일 및 추가 데이터 정보를 랜딩 페이지 개체에 추가했습니다. |
+
+{style=&quot;table-layout:auto&quot;}
+
+Platform의 XDM에 대한 자세한 내용은 [XDM 시스템 개요](../../xdm/home.md).
 
 ## 쿼리 서비스 {#query-service}
 
