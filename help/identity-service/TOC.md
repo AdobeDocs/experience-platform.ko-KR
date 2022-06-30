@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform ID 서비스
 breadcrumb-title: Platform Identity Service 안내서
 user-guide-description: 다양한 디바이스와 시스템에서 고객 ID를 연결하여 개인화된 디지털 경험을 전달할 수 있습니다.
 feature: Identities
-source-git-commit: 6ef978251c8b1ecaffa3a28cf2b89e24e2d725b6
+source-git-commit: ae51c9bd07944f26be2809a6d15f9d9e8c2fd5a1
 workflow-type: tm+mt
-source-wordcount: '102'
-ht-degree: 29%
+source-wordcount: '108'
+ht-degree: 27%
 
 ---
 
@@ -29,6 +29,7 @@ ht-degree: 29%
 - ID 서비스 UI {#ui}
    - [ID 그래프 뷰어](ui/identity-graph-viewer.md)
    - [공유 장치 탐지](ui/shared-devices.md)
+   - [UI에서 ID 필드 정의](ui/label-identities.md)
 - [ECID 개요](ecid.md)
 - [개인 정보 보호 요청 처리](privacy.md)
 - [문제 해결 안내서](troubleshooting-guide.md)
