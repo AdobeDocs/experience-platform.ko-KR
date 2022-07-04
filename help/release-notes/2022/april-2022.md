@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 릴리스 노트 - 2022년 4월
 description: Adobe Experience Platform에 대한 2022년 4월 릴리스 노트입니다.
 exl-id: 39233787-3089-4469-8363-b006ae41ae21
-source-git-commit: 7040a3415ced04035e2a6a73292c2113411df21d
+source-git-commit: 6798c15b1cee781c41b9faf5cc6dcfa73090a60a
 workflow-type: tm+mt
-source-wordcount: '2917'
-ht-degree: 5%
+source-wordcount: '2916'
+ht-degree: 6%
 
 ---
 
@@ -135,7 +135,7 @@ XDM은 Adobe Experience Platform으로 가져온 데이터에 대한 일반적�
 | 전역 스키마 | [[!UICONTROL 데이터 위생 작업 요청]](https://github.com/adobe/xdm/blob/master/schemas/hygiene/aep-hygiene-ops-record.schema.json) | 지정된 데이터 세트 또는 샌드박스에서 레코드를 삭제하거나 수정하기 위한 데이터 정리 요청의 세부 정보를 캡처합니다. |
 | 설명자 | [[!UICONTROL 시계열 세부기간 설명자]](https://github.com/adobe/xdm/blob/master/schemas/descriptors/time-series/descriptorTimeSeriesGranularity.schema.json) | 시계열 및 요약 데이터의 세부기간을 나타냅니다. 스키마에 적용할 경우 스키마는 `timestamp` 필드는 이 세부 기간 동안의 첫 번째 타임스탬프입니다. |
 | 클래스 | [[!UICONTROL XDM 요약 지표]](https://github.com/adobe/xdm/blob/master/components/classes/summary_metrics.schema.json) | SQL SELECT를 GROUP BY로 사용한 결과와 같은 그룹 차원과 함께 사전 요약된 지표를 제공합니다. |
-| 필드 그룹 | [[!UICONTROL 동의 정책 평가 결과 맵]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-site-search.schema.json) | 개인에게 대한 동의 정책 평가 결과를 캡처합니다. |
+| 필드 그룹 | [[!UICONTROL 동의 정책 평가 결과 맵]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-consentResults.schema.json) | 개인에게 대한 동의 정책 평가 결과를 캡처합니다. |
 | 필드 그룹 | [[!UICONTROL 사이트 검색]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-site-search.schema.json) | 검색 쿼리, 필터링 및 순서 지정과 같은 사이트 검색 관련 정보를 캡처합니다. |
 | 필드 그룹 | [[!UICONTROL 리드 병합]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/events/merge-leads.schema.json) | 두 개 이상의 리드가 병합되는 이벤트의 세부 정보를 캡처합니다. |
 | 필드 그룹 | [[!UICONTROL 이메일 전송됨]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/events/emailsent.schema.json) | 수신자에게 이메일이 전송되는 이벤트의 세부 정보를 캡처합니다. |
@@ -145,7 +145,7 @@ XDM은 Adobe Experience Platform으로 가져온 데이터에 대한 일반적�
 | 필드 그룹 | [[!UICONTROL 계정 개인 세부 정보]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/account-person/account-person-details.schema.json) | 계정-개인 관계와 관련된 세부 정보를 캡처합니다. |
 | 데이터 유형 | [[!UICONTROL 장바구니]](https://github.com/adobe/xdm/blob/master/components/datatypes/cart.schema.json) | 전자 상거래 장바구니에 대한 정보를 캡처합니다. |
 | 데이터 유형 | [[!UICONTROL 배송]](https://github.com/adobe/xdm/blob/master/components/datatypes/shipping.schema.json) | 하나 이상의 제품에 대한 배송 정보를 캡처합니다. |
-| 데이터 유형 | [[!UICONTROL 사이트 검색]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-site-search.schema.json) | 사이트 검색 활동에 대한 정보를 캡처합니다. |
+| 데이터 유형 | [[!UICONTROL 사이트 검색]](https://github.com/adobe/xdm/blob/master/components/datatypes/sitesearch.schema.json) | 사이트 검색 활동에 대한 정보를 캡처합니다. |
 | 확장(Workfront) | [[!UICONTROL 작업 작업 속성]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/opTask.schema.json) | 작업 작업과 관련된 세부 정보를 캡처합니다. |
 | 확장(Workfront) | [[!UICONTROL 작업 Portfolio 속성]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/portfolio.schema.json) | 작업 포트폴리오와 관련된 세부 정보를 캡처합니다. |
 | 확장(Workfront) | [[!UICONTROL 작업 프로그램 속성]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/program.schema.json) | 작업 프로그램과 관련된 세부 정보를 캡처합니다. |
@@ -175,7 +175,7 @@ Platform의 XDM에 대한 자세한 내용은 [XDM 시스템 개요](../../xdm/h
 
 마케팅 분석가 및 전문가가 AI/ML 서비스를 통해 고객 경험 사용 사례에서 인공 지능(AI) 및 머신 러닝을 활용할 수 있습니다. 이를 통해 마케팅 분석가는 데이터 과학 전문 지식 없이도 비즈니스 수준 구성을 사용하여 기업의 요구 사항에 맞는 예측을 설정할 수 있습니다.
 
-### Attribution AI
+### 기여도 AI
 
 Attribution AI는 전환 이벤트로 연결되는 터치포인트에 크레딧을 적용하는 데 사용됩니다. 이를 통해 마케터는 고객 여정 전반에서 각 개별 마케팅 터치포인트의 마케팅 효과를 수량화할 수 있습니다.
 

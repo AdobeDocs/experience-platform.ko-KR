@@ -4,16 +4,14 @@ description: FPID를 사용하여 서버 API를 통해 방문자를 일관되게
 seo-description: Learn how to consistently identify visitors via the Server API, by using the FPID
 keywords: 에지 네트워크;게이트웨이;api;방문자;식별;fpid
 exl-id: c61d2e7c-7b5e-4b14-bd52-13dde34e32e3
-source-git-commit: 0a01dd2b0d8a1039178e3593475f9a87639ccdcd
+source-git-commit: 6798c15b1cee781c41b9faf5cc6dcfa73090a60a
 workflow-type: tm+mt
-source-wordcount: '340'
+source-wordcount: '348'
 ht-degree: 0%
 
 ---
 
 # FPID를 통한 방문자 식별
-
-## 개요
 
 [!DNL First-party IDs] (`FPIDs`)는 고객이 생성, 관리 및 저장하는 장치 ID입니다. 이를 통해 고객은 사용자 장치 식별을 제어할 수 있습니다. 보내기 `FPIDs`Edge Network는 새 브랜드를 생성하지 않습니다 `ECID` 를 포함해야 합니다.
 
@@ -35,7 +33,7 @@ An `FPID` 결정적으로 `ECID` 에지 네트워크에서 `FPID` id는 Experien
 }
 ```
 
-둘 다 포함하는 요청의 경우 `FPID` 그리고 `ECID`, `ECID` 요청에 이미 있는 경우, `FPID`. 따라서 에지 네트워크에서 `ECID` 이미 제공되었으며 지정된 항목에서 하나를 계산하지 않습니다 `FPID`.
+를 모두 포함하는 요청의 경우 `FPID` 그리고 `ECID`, `ECID` 요청에 이미 있는 경우, `FPID`. 즉, 에지 네트워크는 `ECID` 이미 제공되고 있습니다. `FPID` 은 무시됩니다. 새로운 `ECID` 는 `FPID` 자체 제공됩니다.
 
 장치 ID와 관련하여 `server` 데이터 세트는 다음 경우에 사용해야 합니다 `FPID` 를 장치 ID로 설정합니다. 기타 ID(예: `EMAIL`)도 요청 본문 내에 제공할 수 있지만, Edge Network에서는 기본 ID를 명시적으로 제공해야 합니다. 기본 ID는 프로필 데이터가 저장되는 기본 ID입니다.
 
