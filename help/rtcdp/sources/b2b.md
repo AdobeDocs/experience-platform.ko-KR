@@ -2,9 +2,9 @@
 title: Real-time Customer Data Platform B2B Edition의 소스
 description: Real-time Customer Data Platform B2B Edition에서 소스의 역할에 대한 개요입니다.
 exl-id: eeea4b2e-67c5-4491-9b8e-4b8987e44777
-source-git-commit: 76bbb188f6a1643cc7f10f4a3cded1316be9e23c
+source-git-commit: 8b8e08adb5ff3498169c1702680ea44f3bebf5c5
 workflow-type: tm+mt
-source-wordcount: '223'
+source-wordcount: '247'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,10 @@ Real-time Customer Data Platform B2B Edition을 사용하면 다음을 포함한
 소스가 B2B 워크플로우에 맞는 방식을 이해하려면 다음을 참조하십시오. [엔드 투 엔드 자습서](../b2b-tutorial.md#ingest-your-data-into-experience-platform).
 
 자세한 내용은 [소스 커넥터 개요](../../sources/home.md) Adobe Experience Platform에서 사용할 수 있는 소스 유형에 대한 자세한 내용을 참조하십시오.
+
+>[!IMPORTANT]
+>
+>액세스 권한이 있어야 합니다. [Real-time Customer Data Platform B2B 에디션](../../rctcdp/../rtcdp/b2b-overview.md) B2B 스키마가 [실시간 고객 프로필](../proile/../../profile/home.md).
 
 다음 문서에서는 [!DNL Marketo] B2B 데이터를 플랫폼으로 가져오려면 다음을 수행하십시오.
 

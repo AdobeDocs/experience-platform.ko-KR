@@ -5,9 +5,9 @@ title: Marketo Engage 커넥터
 topic-legacy: overview
 description: 이 문서에서는 인증, 매핑 및 데이터 지연에 대한 정보를 포함하여 Marketo Engage 소스 커넥터에 대한 개요를 제공합니다.
 exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
-source-git-commit: 1ecdd5f058a5996b4a3d12ba62c5f352633cd75a
+source-git-commit: 8b8e08adb5ff3498169c1702680ea44f3bebf5c5
 workflow-type: tm+mt
-source-wordcount: '578'
+source-wordcount: '601'
 ht-degree: 0%
 
 ---
@@ -19,6 +19,10 @@ Adobe Experience Platform을 사용하면 Platform 서비스를 사용하여 들
 [[!DNL Marketo Engage]](https://www.marketo.com/software/) (이하 &quot;라 한다)[!DNL Marketo]&quot;)는 리드 관리를 위한 완전한 솔루션이며, 복잡한 구매 여정의 모든 단계에서 고객 경험을 전환하여 고객 경험을 혁신하고자 하는 B2B 마케터입니다.
 
 사용 [!DNL Marketo] 소스 커넥터에서는 B2B 데이터를 가져올 수 있습니다 [!DNL Marketo] 플랫폼 연결 응용 프로그램을 사용하여 이 데이터를 최신 상태로 유지할 수 있습니다.
+
+>[!IMPORTANT]
+>
+>액세스 권한이 있어야 합니다. [Real-time Customer Data Platform B2B 에디션](../../../../rtcdp/b2b-overview.md) Marketo Engage이 [실시간 고객 프로필](../../../../profile/home.md).
 
 이 문서에서는 [!DNL Marketo] 커넥터 인증 방법, 매핑 방법 정보가 포함된 소스 커넥터 [!DNL Marketo] experience 데이터 모델(XDM) 및 커넥터의 데이터 지연 필드.
 
