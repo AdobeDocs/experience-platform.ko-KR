@@ -1,16 +1,17 @@
 ---
 title: 제품 클래스
 description: 이 문서에서는 XDM(Experience Data Model)의 제품 클래스에 대한 개요를 제공합니다.
-source-git-commit: c0437b8f9d93c46dbec991a33a893a5b9e0cdf2c
+exl-id: 911680ae-b761-4945-9ad3-0233eaea89b0
+source-git-commit: fdd68e5a94d841992a6f8abe10f3cffe0ebb6794
 workflow-type: tm+mt
-source-wordcount: '213'
+source-wordcount: '215'
 ht-degree: 7%
 
 ---
 
 # [!UICONTROL 제품] 클래스
 
-XDM(Experience Data Model)에서 [!UICONTROL 제품] 클래스는 제품을 정의하는 최소 속성 집합을 캡처합니다.
+XDM(Experience Data Model)에서 [!UICONTROL 제품] 클래스는 소매 제품을 정의하는 최소 속성 세트를 캡처합니다.
 
 ![](../images/classes/product.png)
 
@@ -29,7 +30,7 @@ XDM(Experience Data Model)에서 [!UICONTROL 제품] 클래스는 제품을 정�
 
 ## 호환 가능한 필드 그룹 {#field-groups}
 
-Adobe은 와 함께 사용할 여러 표준 필드 그룹을 제공합니다 [!DNL XDM Individual Profile] 클래스 이름을 지정합니다. 다음은 클래스에 일반적으로 사용되는 몇 가지 필드 그룹 목록입니다.
+Adobe은 와 함께 사용할 여러 표준 필드 그룹을 제공합니다 [!UICONTROL 제품] 클래스 이름을 지정합니다. 다음은 클래스에 일반적으로 사용되는 몇 가지 필드 그룹 목록입니다.
 
 * [[!UICONTROL 제품 카탈로그]](../field-groups/product/product-catalog.md)
 * [[!UICONTROL 제품 카테고리]](../field-groups/product/product-category.md)

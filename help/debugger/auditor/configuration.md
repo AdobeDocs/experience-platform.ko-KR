@@ -2,10 +2,10 @@
 title: 구성 테스트 참조
 description: Auditor가 Adobe Experience Platform Debugger에서 구성을 테스트하는 방법을 알아봅니다.
 exl-id: 92b07224-57f1-4891-9923-aa079945e6bc
-source-git-commit: 10a5605c40143b58f6ba0108cc087956aa929866
+source-git-commit: 797d4f305b4a6884ada4e0619beadff6a45ab42d
 workflow-type: tm+mt
-source-wordcount: '749'
-ht-degree: 65%
+source-wordcount: '740'
+ht-degree: 67%
 
 ---
 
@@ -30,8 +30,8 @@ ht-degree: 65%
 | Launch - DOM Ready 이후 타사 태그가 비동기적으로 로드 | 3 | 사용자 경험과 정확한 데이터 수집 간의 균형을 맞추기 위해 타사 태그를 DOM Ready에서 바로 트리거해야 합니다. 이렇게 하면 사이트 기능에 영향을 주지 않고 이러한 추적 스크립트가 실행됩니다. | DOM Ready에서 시작할 수 있는 타사 픽셀을 실행하는 모든 규칙을 조정하여 이 문제를 해결합니다.<br><br>[추가 정보](../../tags/ui/managing-resources/rules.md) |
 | Experience Cloud ID Service - 최신 버전 | 2 | 페이지에서 방문자 ID 서비스 코드 라이브러리의 최신 버전인 visitorAPI.js를 실행하고 있지 않습니다. 향상된 성능을 활용하고 최신 기능을 제공하기 위해 Experience Cloud 기술을 지원하는 코드 라이브러리가 지속적으로 업데이트 및 변경되고 있습니다. | 최신 버전의 방문자 ID 서비스 라이브러리를 설치합니다.<br><br>[추가 정보](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/library.html) |
 | Launch - 최신 버전 | 2개 | 이러한 페이지에서 최신 버전의 태그 코드 라이브러리(Turbine)를 실행하고 있지 않습니다. 향상된 성능을 활용하고 최신 기능을 제공하기 위해 Experience Cloud 기술을 지원하는 코드 라이브러리가 지속적으로 업데이트 및 변경되고 있습니다. | 태그 라이브러리를 다시 빌드하고 게시합니다.<br><br>[추가 정보](../../tags/quick-start/quick-start.md) |
-| Target - 최신 버전 | 2개 | 페이지에서 최신 버전의 Target 코드 라이브러리를 실행하고 있지 않습니다. 향상된 성능을 활용하고 최신 기능을 제공하기 위해 Experience Cloud 기술을 지원하는 코드 라이브러리가 지속적으로 업데이트 및 변경되고 있습니다. | 최신 버전의 Target 라이브러리를 설치합니다.<br><br>[추가 정보](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/implement-target-for-client-side-web.html) |
-| Target - mboxDefault가 mboxCreate보다 우선함 | 5개 | mboxCreate의 적절한 사용은 다음과 유사합니다.<br><br> `<div class="mboxDefault"><!-Customer content--></div><script>mboxCreate('myMboxName')</script>` | 다음을 포함해야 합니다  `<div class="mboxDefault"></div>` 태그에 다음 코드를 배치하십시오. at.js는 사용자를 위해 추가하지 않습니다.<br><br>[추가 정보](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/implement-target-for-client-side-web.html) |
-| Target - 유효한 DOCTYPE | 5개 | 잘못된 DOCTYPE이 검색되었습니다. 이 시나리오에서는 mbox가 실행되지 않습니다.  at.js의 경우 DOCTYPE이 표준 모드여야 합니다. 그렇지 않으면 Target이 작동하지 않습니다. | 페이지에서 DOCTYPE을 업데이트합니다.<br><br>[추가 정보](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/faq-at-js/target-atjs-faq.html) |
+| Target - 최신 버전 | 2개 | 페이지에서 최신 버전의 Target 코드 라이브러리를 실행하고 있지 않습니다. 향상된 성능을 활용하고 최신 기능을 제공하기 위해 Experience Cloud 기술을 지원하는 코드 라이브러리가 지속적으로 업데이트 및 변경되고 있습니다. | 최신 버전의 Target 라이브러리를 설치합니다.<br><br>[추가 정보](https://developer.adobe.com/target/implement/client-side/) |
+| Target - mboxDefault가 mboxCreate보다 우선함 | 5개 | mboxCreate의 적절한 사용은 다음과 유사합니다.<br><br> `<div class="mboxDefault"><!-Customer content--></div><script>mboxCreate('myMboxName')</script>` | 다음을 포함해야 합니다  `<div class="mboxDefault"></div>` 태그에 다음 코드를 배치하십시오. at.js는 사용자를 위해 추가하지 않습니다.<br><br>[추가 정보](https://developer.adobe.com/target/implement/client-side/) |
+| Target - 유효한 DOCTYPE | 5개 | 잘못된 DOCTYPE이 검색되었습니다. 이 시나리오에서는 mbox가 실행되지 않습니다.  at.js의 경우 DOCTYPE이 표준 모드여야 합니다. 그렇지 않으면 Target이 작동하지 않습니다. | 페이지에서 DOCTYPE을 업데이트합니다.<br><br>[추가 정보](https://developer.adobe.com/target/implement/client-side/atjs/target-atjs-faq/) |
 
 {style=&quot;table-layout:auto&quot;}
