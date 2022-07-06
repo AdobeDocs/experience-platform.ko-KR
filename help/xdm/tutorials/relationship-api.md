@@ -1,14 +1,13 @@
 ---
 keywords: Experience Platform;홈;인기 항목;api;XDM;XDM 시스템;경험 데이터 모델;경험 데이터 모델;데이터 모델;데이터 모델;스키마 레지스트리;스키마 레지스트리;스키마;스키마;스키마;관계;관계;관계 설명자;관계 설명자;참조 ID;참조 ID;
-solution: Experience Platform
 title: 스키마 레지스트리 API를 사용하여 두 스키마 간의 관계를 정의합니다.
 description: 이 문서에서는 스키마 레지스트리 API를 사용하여 조직에서 정의한 두 스키마 간에 일대일 관계를 정의하는 자습서를 제공합니다.
 topic-legacy: tutorial
 type: Tutorial
 exl-id: ef9910b5-2777-4d8b-a6fe-aee51d809ad5
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 65a6eca9450b3a3e19805917fb777881c08817a0
 workflow-type: tm+mt
-source-wordcount: '1365'
+source-wordcount: '1367'
 ht-degree: 2%
 
 ---
@@ -110,13 +109,13 @@ curl -X GET \
 
 ## 소스 스키마에 대한 참조 필드 정의
 
-내 [!DNL Schema Registry], 관계 설명자는 관계형 데이터베이스 테이블의 외래 키와 비슷하게 작동합니다. 소스 스키마의 필드는 대상 스키마의 기본 id 필드에 대한 참조 역할을 합니다. 소스 스키마에 이러한 용도로 사용할 필드가 없는 경우, 새 필드로 스키마 필드 그룹을 만들어 스키마에 추가해야 할 수 있습니다. 이 새 필드에는 `type` 값 &quot;[!DNL string]&quot;.
+내 [!DNL Schema Registry], 관계 설명자는 관계형 데이터베이스 테이블의 외래 키와 비슷하게 작동합니다. 소스 스키마의 필드는 대상 스키마의 기본 id 필드에 대한 참조 역할을 합니다. 소스 스키마에 이러한 용도로 사용할 필드가 없는 경우, 새 필드로 스키마 필드 그룹을 만들어 스키마에 추가해야 할 수 있습니다. 이 새 필드에는 `type` 값 `string`.
 
 >[!IMPORTANT]
 >
->대상 스키마와 달리 소스 스키마는 기본 ID를 참조 필드로 사용할 수 없습니다.
+>소스 스키마는 기본 ID를 참조 필드로 사용할 수 없습니다.
 
-이 자습서에서는 대상 스키마 &quot;[!DNL Hotels]&quot;에 가 포함되어 있습니다 `hotelId` 스키마의 기본 ID로 작동하며 해당 참조 필드로 작용하는 필드입니다. 그러나 소스 스키마 &quot;[!DNL Loyalty Members]&quot; 에는 참조로 사용할 전용 필드가 없으며 스키마에 새 필드를 추가하는 새 필드 그룹이 부여되어야 합니다. `favoriteHotel`.
+이 자습서에서는 대상 스키마 &quot;[!DNL Hotels]&quot;에 가 포함되어 있습니다 `hotelId` 스키마의 기본 id로 사용되는 필드입니다. 그러나 소스 스키마 &quot;[!DNL Loyalty Members]&quot;에 대한 참조로 사용할 전용 필드가 없습니다 `hotelId`를 지정하는 경우, 스키마에 새 필드를 추가하려면 사용자 지정 필드 그룹을 만들어야 합니다. `favoriteHotel`.
 
 >[!NOTE]
 >
@@ -344,9 +343,9 @@ curl -X PATCH \
 
 ## 참조 ID 설명자 만들기 {#reference-identity}
 
-관계의 다른 스키마에서 참조로 사용 중인 경우 스키마 필드에 적용된 참조 ID 설명자가 있어야 합니다. 다음 이후 `favoriteHotel` 필드의 &quot;[!DNL Loyalty Members]&quot; `hotelId` 필드의 &quot;[!DNL Hotels]&quot;, `hotelId` 참조 ID 설명자를 제공해야 합니다.
+스키마 필드가 관계의 다른 스키마에 대한 참조로 사용되는 경우 해당 스키마에 적용된 참조 ID 설명자가 있어야 합니다. 다음 이후 `favoriteHotel` 필드의 &quot;[!DNL Loyalty Members]&quot; `hotelId` 필드의 &quot;[!DNL Hotels]&quot;, `favoriteHotel` 참조 ID 설명자를 제공해야 합니다.
 
-대상 스키마에 대한 POST 요청을 수행하여 대상 스키마에 대한 참조 설명자를 만듭니다. `/tenant/descriptors` 엔드포인트.
+에 POST 요청을 수행하여 소스 스키마에 대한 참조 설명자를 만듭니다. `/tenant/descriptors` 엔드포인트.
 
 **API 형식**
 
@@ -356,7 +355,7 @@ POST /tenant/descriptors
 
 **요청**
 
-다음 요청에서는 `hotelId` 대상 스키마 &quot;&quot;의 필드[!DNL Hotels]&quot;.
+다음 요청에서는 `favoriteHotel` 소스 스키마 &quot;[!DNL Loyalty Members]&quot;.
 
 ```shell
 curl -X POST \
@@ -368,33 +367,33 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -d '{
     "@type": "xdm:descriptorReferenceIdentity",
-    "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/d4ad4b8463a67f6755f2aabbeb9e02c7",
+    "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/533ca5da28087c44344810891b0f03d9",
     "xdm:sourceVersion": 1,
-    "xdm:sourceProperty": "/_{TENANT_ID}/hotelId",
+    "xdm:sourceProperty": "/_{TENANT_ID}/favoriteHotel",
     "xdm:identityNamespace": "Hotel ID"
   }'
 ```
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `@type` | 정의되는 설명자의 유형입니다. 참조 설명자의 경우 값은 &quot;xdm:descriptorReferenceIdentity&quot;여야 합니다. |
-| `xdm:sourceSchema` | 다음 `$id` 대상 스키마의 URL입니다. |
-| `xdm:sourceVersion` | 대상 스키마의 버전 번호입니다. |
-| `sourceProperty` | 대상 스키마의 기본 ID 필드에 대한 경로입니다. |
-| `xdm:identityNamespace` | 참조 필드의 ID 네임스페이스입니다. 필드를 스키마의 기본 ID로 정의할 때 사용되는 네임스페이스와 같아야 합니다. 자세한 내용은 [id 네임스페이스 개요](../../identity-service/home.md) 추가 정보. |
+| `@type` | 정의되는 설명자의 유형입니다. 참조 설명자의 경우 값은 `xdm:descriptorReferenceIdentity`. |
+| `xdm:sourceSchema` | 다음 `$id` 소스 스키마의 URL입니다. |
+| `xdm:sourceVersion` | 소스 스키마의 버전 번호입니다. |
+| `sourceProperty` | 대상 스키마의 기본 ID를 참조하는 데 사용할 소스 스키마의 필드 경로입니다. |
+| `xdm:identityNamespace` | 참조 필드의 ID 네임스페이스입니다. 대상 스키마의 기본 ID와 동일한 네임스페이스여야 합니다. 자세한 내용은 [id 네임스페이스 개요](../../identity-service/home.md) 추가 정보. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **응답**
 
-성공적인 응답은 대상 스키마에 대해 새로 생성된 참조 설명자의 세부 정보를 반환합니다.
+성공적인 응답은 소스 필드에 대해 새로 생성된 참조 설명자의 세부 정보를 반환합니다.
 
 ```json
 {
     "@type": "xdm:descriptorReferenceIdentity",
-    "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/d4ad4b8463a67f6755f2aabbeb9e02c7",
+    "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/533ca5da28087c44344810891b0f03d9",
     "xdm:sourceVersion": 1,
-    "xdm:sourceProperty": "/_{TENANT_ID}/hotelId",
+    "xdm:sourceProperty": "/_{TENANT_ID}/favoriteHotel",
     "xdm:identityNamespace": "Hotel ID",
     "meta:containerId": "tenant",
     "@id": "53180e9f86eed731f6bf8bf42af4f59d81949ba6"
@@ -403,7 +402,7 @@ curl -X POST \
 
 ## 관계 설명자 만들기 {#create-descriptor}
 
-관계 설명자는 소스 스키마와 대상 스키마 간에 일대일 관계를 설정합니다. 대상 스키마에 대한 참조 설명자를 정의한 후에는 POST 요청을 수행하여 새 관계 설명자를 생성할 수 있습니다 `/tenant/descriptors` 엔드포인트.
+관계 설명자는 소스 스키마와 대상 스키마 간에 일대일 관계를 설정합니다. 소스 스키마의 해당 필드에 대한 참조 ID 설명자를 정의한 후에는 `/tenant/descriptors` 엔드포인트.
 
 **API 형식**
 
@@ -413,7 +412,7 @@ POST /tenant/descriptors
 
 **요청**
 
-다음 요청은 &quot;[!DNL Loyalty Members]&quot; 를 소스 스키마로 사용하고 &quot;[!DNL Legacy Loyalty Members]&quot; 를 대상 스키마로 사용합니다.
+다음 요청은 &quot;[!DNL Loyalty Members]&quot; 를 소스 스키마로 사용하고 &quot;[!DNL Hotels]&quot; 를 대상 스키마로 사용합니다.
 
 ```shell
 curl -X POST \
@@ -436,13 +435,13 @@ curl -X POST \
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `@type` | 생성할 설명자 유형입니다. 다음 `@type` 관계 설명자의 값은 &quot;xdm:descriptorOneToOne&quot;입니다. |
+| `@type` | 생성할 설명자 유형입니다. 다음 `@type` 관계 설명자의 값은 `xdm:descriptorOneToOne`. |
 | `xdm:sourceSchema` | 다음 `$id` 소스 스키마의 URL입니다. |
 | `xdm:sourceVersion` | 소스 스키마의 버전 번호입니다. |
 | `xdm:sourceProperty` | 소스 스키마에 있는 참조 필드의 경로입니다. |
 | `xdm:destinationSchema` | 다음 `$id` 대상 스키마의 URL입니다. |
 | `xdm:destinationVersion` | 대상 스키마의 버전 번호입니다. |
-| `xdm:destinationProperty` | 대상 스키마의 참조 필드에 대한 경로입니다. |
+| `xdm:destinationProperty` | 대상 스키마의 기본 ID 필드에 대한 경로입니다. |
 
 {style=&quot;table-layout:auto&quot;}
 

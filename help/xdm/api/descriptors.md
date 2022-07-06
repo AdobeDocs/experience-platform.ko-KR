@@ -5,9 +5,9 @@ title: 설명자 API 끝점
 description: 스키마 레지스트리 API의 /descriptors 종단점을 사용하면 경험 애플리케이션 내의 XDM 설명자를 프로그래밍 방식으로 관리할 수 있습니다.
 topic-legacy: developer guide
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: b92246e729ca26387a3d375e5627165a29956e52
+source-git-commit: 65a6eca9450b3a3e19805917fb777881c08817a0
 workflow-type: tm+mt
-source-wordcount: '1836'
+source-wordcount: '1839'
 ht-degree: 3%
 
 ---
@@ -389,7 +389,7 @@ ID 설명자는 &quot;[!UICONTROL sourceProperty]&quot;[!UICONTROL sourceSchema]
 
 #### 참조 ID 설명자
 
-참조 ID 설명자는 스키마 필드의 기본 ID에 대한 참조 컨텍스트를 제공하여 다른 스키마의 필드에서 참조할 수 있습니다. 참조 설명자를 적용하려면 먼저 필드에 ID 설명자로 레이블을 지정해야 합니다.
+참조 ID 설명자는 스키마 필드의 기본 ID에 대한 참조 컨텍스트를 제공하여 다른 스키마의 필드에서 참조할 수 있습니다. 대상 스키마에 이미 기본 ID 필드가 정의되어 있어야 이 설명자를 통해 다른 스키마에서 참조할 수 있습니다.
 
 ```json
 {
@@ -406,7 +406,7 @@ ID 설명자는 &quot;[!UICONTROL sourceProperty]&quot;[!UICONTROL sourceSchema]
 | `@type` | 정의되는 설명자의 유형입니다. 참조 ID 설명자의 경우 이 값을 `xdm:descriptorReferenceIdentity`. |
 | `xdm:sourceSchema` | 다음 `$id` 설명자가 정의되는 스키마의 URI입니다. |
 | `xdm:sourceVersion` | 소스 스키마의 주 버전입니다. |
-| `xdm:sourceProperty` | 설명자가 정의되는 소스 스키마의 필드에 대한 경로입니다. &quot;/&quot;로 시작해야 하며 하나로 끝나지 않아야 합니다. 경로에 &quot;속성&quot;을 포함하지 마십시오(예: &quot;/properties/personalEmail/properties/address&quot; 대신 &quot;/personalEmail/address&quot;). |
+| `xdm:sourceProperty` | 대상 스키마를 참조하는 데 사용할 소스 스키마의 필드 경로입니다. &quot;/&quot;로 시작해야 하며 하나로 끝나지 않아야 합니다. 경로에 &quot;속성&quot;을 포함하지 마십시오(예: `/personalEmail/address` 대신 `/properties/personalEmail/properties/address`). |
 | `xdm:identityNamespace` | 소스 속성에 대한 ID 네임스페이스 코드입니다. |
 
 {style=&quot;table-layout:auto&quot;}
