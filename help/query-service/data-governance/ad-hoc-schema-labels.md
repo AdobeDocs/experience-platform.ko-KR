@@ -1,10 +1,11 @@
 ---
 title: Ad Hoc 스키마에 대한 속성 기반 액세스 제어 지원
 description: Adobe Experience Platform Query Service를 통해 생성된 Ad Hoc 스키마의 데이터 필드에 대한 액세스를 제한하는 안내서입니다.
-source-git-commit: 3d908face315c7aa2ad8f6350fb1fe0d3446d428
+exl-id: d675e3de-ab62-4beb-9360-1f6090397a17
+source-git-commit: 9b327257eacea189363587ad79dc6595b636d5b8
 workflow-type: tm+mt
 source-wordcount: '1037'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -41,7 +42,7 @@ Adobe Experience Platform으로 가져오는 모든 데이터는 XDM(Experience 
 
 ## Platform UI의 스키마 인벤토리에서 Ad Hoc 스키마 검색
 
-Platform UI에서 임시 스키마를 표시하려면 검색 필드 왼쪽에 있는 필터 아이콘(../images/data-governance/filter.png)을 선택한 다음 **[!UICONTROL 임시 스키마 표시] 왼쪽 레일에 표시됩니다.
+Platform UI에서 Ad Hoc 스키마를 표시하려면 필터 아이콘(![필터 아이콘.](../images/data-governance/filter.png))을 클릭하여 검색 필드 왼쪽에 있는 다음 **을 선택합니다[!UICONTROL 임시 스키마 표시] 왼쪽 레일에 표시됩니다.
 
 ![&#39;임시 스키마 표시&#39; 토글이 활성화된 왼쪽 레일 위의 스키마 대시보드 필터 옵션 .](../images/data-governance/adhoc-schema-toggle.png)
 
@@ -93,4 +94,4 @@ Id 또는 기본 ID가 Ad Hoc 스키마에 설정된 경우, 시스템에서는 
 이 문서를 읽은 후에는 Query Service CTAS 쿼리를 통해 만든 임시 스키마에 데이터 사용 레이블을 추가하는 방법을 보다 잘 이해할 수 있습니다. 아직 수행하지 않았다면 다음 문서를 사용하여 Query Service의 데이터 거버넌스에 대한 이해를 높일 수 있습니다.
 
 * [애드혹 스키마 ID](./ad-hoc-schema-identities.md)
-* [데이터 거버넌스](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html)
+* [데이터 거버넌스](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=ko)
