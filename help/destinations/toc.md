@@ -4,9 +4,9 @@ user-guide-title: 대상 안내서
 user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화합니다.
 description: 이 문서에서는 Adobe Experience Platform 대상의 목차 목록을 설명합니다
 feature: Destinations
-source-git-commit: 492a05b24ec905de926d861f607a6e5d294d46e0
+source-git-commit: fa092e4d1828d9ecd5bc98e3f225fa377f38065f
 workflow-type: tm+mt
-source-wordcount: '778'
+source-wordcount: '814'
 ht-degree: 8%
 
 ---
@@ -184,10 +184,17 @@ ht-degree: 8%
       * [자격 증명 끝점 API 작업](./destination-sdk/credentials-configuration-api.md)
       * [게시 끝점 API 작업](./destination-sdk/destination-publish-api.md)
       * 개발자 도구 참조 {#developer-tools-reference}
-         * [샘플 템플릿 API 작업 가져오기](./destination-sdk/sample-template-api.md)
-         * [템플릿 API 작업 렌더링](./destination-sdk/render-template-api.md)
-         * [대상 테스트 API 작업](./destination-sdk/destination-testing-api.md)
-         * [샘플 프로필 생성 API 작업](./destination-sdk/sample-profile-generation-api.md)
+         * 스트리밍 대상 테스트 API {#streaming-destination-testing-api}
+            * [샘플 템플릿 API 작업 가져오기](./destination-sdk/sample-template-api.md)
+            * [템플릿 API 작업 렌더링](./destination-sdk/render-template-api.md)
+            * [대상 테스트 API 작업](./destination-sdk/destination-testing-api.md)
+            * [샘플 프로필 생성 API 작업](./destination-sdk/sample-profile-generation-api.md)
+         * 파일 기반 대상 테스트 API {#file-based-destination-testing-api}
+            * [파일 기반 대상 테스트 API 개요](./destination-sdk/file-based-destination-testing-overview.md)
+            * [소스 스키마를 기반으로 샘플 프로필 생성](./destination-sdk/file-based-sample-profile-generation-api.md)
+            * [샘플 프로필로 파일 기반 대상 테스트](./destination-sdk/file-based-destination-testing-api.md)
+            * [자세한 활성화 결과 보기](./destination-sdk/file-based-destination-results-api.md)
+            * [템플릿화된 고객 필드의 유효성 검사](./destination-sdk/file-based-render-template-api.md)
    * 안내서 {#guides}
       * [Destination SDK을 사용하여 스트리밍 대상 구성](./destination-sdk/configure-destination-instructions.md)
       * [(베타) Destination SDK을 사용하여 파일 기반 대상 구성](./destination-sdk/configure-file-based-destination-instructions.md)
