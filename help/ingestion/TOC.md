@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 데이터 수집 도움말
 breadcrumb-title: Data Ingestion 안내서
 user-guide-description: 일괄 처리 또는 스트리밍 통합 기능을 통해 데이터를 플랫폼에 가져올 수 있습니다.
 feature: Data Ingestion
-source-git-commit: 19837e820ab3abdaa0bc8569ad78ce51dec1d21e
+source-git-commit: 2c0791af8bb4f40c5ab4e0504af154b757af5e84
 workflow-type: tm+mt
-source-wordcount: '124'
+source-wordcount: '128'
 ht-degree: 25%
 
 ---
@@ -41,6 +41,7 @@ ht-degree: 25%
    - [실패한 배치 검색](quality/retrieve-failed-batches.md)
    - [스트리밍 수집 유효성 검사](quality/streaming-validation.md)
    - [데이터 수집 알림](quality/subscribe-events.md)
+- [데이터 수집 보호](guardrails.md)
 - [소스 커넥터](source-connectors.md)
 - [API 참조](https://www.adobe.io/experience-platform-apis/references/data-ingestion/)
 - [플랫폼 릴리스 노트](https://www.adobe.com/go/platform-release-notes-en)

@@ -5,10 +5,10 @@ title: Adobe Experience Platform 용어
 topic-legacy: getting started
 description: Experience Platform의 중요한 용어에 대한 용어집입니다.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: 7bafa87de874c6be90b80e4a899c02fd3868290e
+source-git-commit: c0f01efa224bffb5b435e2f247e793edfbc576b9
 workflow-type: tm+mt
-source-wordcount: '7385'
-ht-degree: 1%
+source-wordcount: '7428'
+ht-degree: 0%
 
 ---
 
@@ -257,6 +257,8 @@ ht-degree: 1%
 **지오펜스**: 지오펜스는 GPS 또는 RFID 기술로 정의된 가상 지리적 경계로서, 모바일 장치가 특정 영역에 들어오거나 나갈 때 소프트웨어가 응답을 트리거할 수 있도록 합니다.
 
 **GDPR(일반 데이터 보호 규정)**: GDPR(General Data Protection Regulation)은 유럽 연합(EU) 내에서 개인 정보를 수집 및 처리하는 방법에 대한 지침을 설정하는 법적 프레임워크입니다. GDPR은 데이터 관리 원칙 및 개인 권한을 설정하며 EU 시민의 데이터를 처리하는 모든 회사를 다룹니다.
+
+**가드레일**: 가드레일은 데이터 및 시스템 사용, 성능 최적화, Adobe Experience Platform에서 오류 또는 예기치 않은 결과를 방지하기 위한 지침을 제공하는 임계값입니다. 보호 기능은 라이선스 권한과 관련하여 데이터 및 처리 사용량 또는 사용을 참조할 수 있습니다.
 
 ## H
 
