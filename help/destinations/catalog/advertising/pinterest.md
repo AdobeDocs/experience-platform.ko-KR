@@ -2,9 +2,9 @@
 title: Pinterest 고객 목록 연결
 description: 고객 목록, 사이트를 방문한 사람 또는 Pinterest의 콘텐츠와 이미 상호 작용한 사람으로 대상을 만듭니다.
 exl-id: e601f75f-0d40-4cd0-93ca-54d7439f1db7
-source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
+source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
 workflow-type: tm+mt
-source-wordcount: '639'
+source-wordcount: '702'
 ht-degree: 3%
 
 ---
@@ -23,7 +23,6 @@ ht-degree: 3%
 
 * 사용자는 대상을 추가하려는 광고주 계정에 액세스할 수 있는 Pinterest 계정으로 인증해야 합니다. 광고주 계정 공유에 대한 세부 사항을 찾을 수 있습니다 [여기](https://help.pinterest.com/en/business/article/share-and-manage-access-to-your-ad-accounts). 특히 사용자에게 &quot;대상&quot; 액세스 수준이 필요합니다.
 * 고객 목록 ID 형식에 대한 자세한 내용은 [여기](https://help.pinterest.com/en/business/article/audience-targeting).
-
 
 ## 지원되는 ID {#supported-identities}
 
@@ -74,6 +73,12 @@ While [설정](../../ui/connect-destination.md) 이 대상을 사용하려면 �
 * **[!UICONTROL 설명]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
 * **[!UICONTROL 광고주 ID]**: pinterest 광고주 ID입니다.
 
+### 경고 활성화 {#enable-alerts}
+
+경고를 활성화하여 대상으로 데이터 흐름 상태에 대한 알림을 받을 수 있습니다. 목록에서 경고를 선택하여 데이터 흐름 상태에 대한 알림을 수신합니다. 경고에 대한 자세한 내용은 [UI를 사용하여 대상 경고 구독](../../ui/alerts.md).
+
+대상 연결에 대한 세부 정보 제공을 마치면 를 선택합니다 **[!UICONTROL 다음]**.
+
 ## 세그먼트를 이 대상에 활성화 {#activate}
 
 >[!IMPORTANT]
@@ -84,7 +89,7 @@ While [설정](../../ui/connect-destination.md) 이 대상을 사용하려면 �
 
 ## 데이터 사용 및 거버넌스 {#data-usage-governance}
 
-모두 [!DNL Adobe Experience Platform] 대상은 데이터를 처리할 때 데이터 사용 정책을 준수합니다. 방법에 대한 자세한 정보 [!DNL Adobe Experience Platform] 데이터 거버넌스를 적용하는 경우 다음을 참조하십시오. [데이터 거버넌스 개요](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html).
+모두 [!DNL Adobe Experience Platform] 대상은 데이터를 처리할 때 데이터 사용 정책을 준수합니다. 방법에 대한 자세한 정보 [!DNL Adobe Experience Platform] 데이터 거버넌스를 적용하는 경우 다음을 참조하십시오. [데이터 거버넌스 개요](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=ko).
 
 ## 추가 리소스 {#additional-resources}
 

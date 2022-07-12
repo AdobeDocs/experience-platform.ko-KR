@@ -3,9 +3,9 @@ title: HTTP API 연결
 keywords: 스트리밍;
 description: Adobe Experience Platform의 HTTP API 대상을 사용하여 프로필 데이터를 타사 HTTP 엔드포인트로 보내 자체 분석을 실행하거나 Experience Platform에서 내보낸 프로필 데이터에 필요한 기타 작업을 수행할 수 있습니다.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: d4a4baf330925d6696f515bf650d86740c18e97c
+source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
 workflow-type: tm+mt
-source-wordcount: '2296'
+source-wordcount: '2374'
 ht-degree: 0%
 
 ---
@@ -138,7 +138,7 @@ curl --location --request POST 'https://some-api.com/token' \
    * **[!UICONTROL 본문 양식 인코딩됨]**: 이 경우 [!DNL client ID] 및 [!DNL client secret] 포함 *요청 본문에* 가 대상에 전송되었습니다. 예를 보려면 [지원되는 인증 유형](#supported-authentication-types) 섹션을 참조하십시오.
    * **[!UICONTROL 기본 인증]**: 이 경우 [!DNL client ID] 및 [!DNL client secret] 포함 *에서 `Authorization` 헤더* base64로 인코딩되어 대상으로 보낸 후 예를 보려면 [지원되는 인증 유형](#supported-authentication-types) 섹션을 참조하십시오.
 
-### 대상 세부 사항 {#destination-details}
+### 대상 세부 사항 채우기 {#destination-details}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_headers"
@@ -165,7 +165,7 @@ curl --location --request POST 'https://some-api.com/token' \
 >title="쿼리 매개 변수"
 >abstract="선택적으로 HTTP 엔드포인트 URL에 쿼리 매개 변수를 추가할 수 있습니다. 다음과 같이 사용하는 쿼리 매개 변수의 형식을 지정합니다. `parameter1=value&parameter2=value`."
 
-HTTP 끝점에 대한 인증 연결을 설정한 후 대상에 대해 다음 정보를 제공합니다.
+대상에 대한 세부 사항을 구성하려면 아래 필수 및 선택적 필드를 입력합니다. UI에서 필드 옆에 있는 별표는 필드가 필수임을 나타냅니다.
 
 ![HTTP 대상 세부 사항에 대해 완료된 필드를 보여주는 UI 화면의 이미지](../../assets/catalog/http/http-api-destination-details.png)
 
@@ -176,6 +176,12 @@ HTTP 끝점에 대한 인증 연결을 설정한 후 대상에 대해 다음 정
 * **[!UICONTROL 쿼리 매개 변수]**: 선택적으로 HTTP 엔드포인트 URL에 쿼리 매개 변수를 추가할 수 있습니다. 다음과 같이 사용하는 쿼리 매개 변수의 형식을 지정합니다. `parameter1=value&parameter2=value`.
 * **[!UICONTROL 세그먼트 이름 포함]**: 데이터 내보내기에 내보낼 세그먼트의 이름이 포함되도록 하려면 전환합니다. 이 옵션을 선택한 데이터 내보내기의 예는 를 참조하십시오. [내보낸 데이터](#exported-data) 섹션을 참조하십시오.
 * **[!UICONTROL 세그먼트 타임스탬프 포함]**: 세그먼트가 생성 및 업데이트될 때 데이터 내보내기에 UNIX 타임스탬프와 세그먼트가 활성화 대상에 매핑될 때 UNIX 타임스탬프를 포함하려면 을 전환합니다. 이 옵션을 선택한 데이터 내보내기의 예는 를 참조하십시오. [내보낸 데이터](#exported-data) 섹션을 참조하십시오.
+
+### 경고 활성화 {#enable-alerts}
+
+경고를 활성화하여 대상으로 데이터 흐름 상태에 대한 알림을 받을 수 있습니다. 목록에서 경고를 선택하여 데이터 흐름 상태에 대한 알림을 수신합니다. 경고에 대한 자세한 내용은 [UI를 사용하여 대상 경고 구독](../../ui/alerts.md).
+
+대상 연결에 대한 세부 정보 제공을 마치면 를 선택합니다 **[!UICONTROL 다음]**.
 
 ## 세그먼트를 이 대상에 활성화 {#activate}
 

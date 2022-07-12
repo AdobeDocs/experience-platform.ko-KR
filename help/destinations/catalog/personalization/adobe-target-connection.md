@@ -3,9 +3,9 @@ keywords: target 개인화; 대상; experience platform target 대상;adobe targ
 title: Adobe Target 연결
 description: Adobe Target은 웹 사이트, 모바일 앱 등에서 모든 인바운드 고객 상호 작용에 실시간 AI 기반의 개인화 및 실험 기능을 제공하는 애플리케이션입니다.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 12e2c1a32f08b6942d6e4aefc35a53bae8387d7e
+source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
 workflow-type: tm+mt
-source-wordcount: '846'
+source-wordcount: '909'
 ht-degree: 1%
 
 ---
@@ -85,6 +85,12 @@ While [설정](../../ui/connect-destination.md) 이 대상을 사용하려면 �
 |---|---|
 | <ul><li>[에지 세그멘테이션](../../../segmentation/ui/edge-segmentation.md) 은 지원되지 않습니다.</li><li>[동일 페이지 및 다음 페이지 개인화](../../ui/configure-personalization-destinations.md) 지원되지 않습니다.</li><li>프로덕션 샌드박스에 대해서만 세그먼트를 Adobe Target 연결에 공유할 수 있습니다.</li><li>데이터 스트림 ID를 사용하지 않고 다음 세션 개인화를 구성하려면 [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html?lang=en).</li></ul> | <ul><li>에지 세그먼테이션은 예상대로 작동합니다.</li><li>[동일 페이지 및 다음 페이지 개인화](../../ui/configure-personalization-destinations.md) 이 지원됩니다.</li><li>다른 샌드박스에 대해 세그먼트 공유가 지원됩니다.</li></ul> |
 
+### 경고 활성화 {#enable-alerts}
+
+경고를 활성화하여 대상으로 데이터 흐름 상태에 대한 알림을 받을 수 있습니다. 목록에서 경고를 선택하여 데이터 흐름 상태에 대한 알림을 수신합니다. 경고에 대한 자세한 내용은 [UI를 사용하여 대상 경고 구독](../../ui/alerts.md).
+
+대상 연결에 대한 세부 정보 제공을 마치면 를 선택합니다 **[!UICONTROL 다음]**.
+
 ## 세그먼트를 이 대상에 활성화 {#activate}
 
 >[!IMPORTANT]
@@ -99,4 +105,4 @@ Adobe Target은 Adobe Experience Platform Edge Network에서 프로필 데이터
 
 ## 데이터 사용 및 거버넌스 {#data-usage-governance}
 
-모두 [!DNL Adobe Experience Platform] 대상은 데이터를 처리할 때 데이터 사용 정책을 준수합니다. 방법에 대한 자세한 정보 [!DNL Adobe Experience Platform] 데이터 거버넌스 적용, 읽기 [데이터 거버넌스 개요](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html).
+모두 [!DNL Adobe Experience Platform] 대상은 데이터를 처리할 때 데이터 사용 정책을 준수합니다. 방법에 대한 자세한 정보 [!DNL Adobe Experience Platform] 데이터 거버넌스 적용, 읽기 [데이터 거버넌스 개요](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=ko).

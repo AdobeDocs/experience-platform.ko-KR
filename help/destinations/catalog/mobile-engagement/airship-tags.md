@@ -3,9 +3,9 @@ keywords: 항공 태그;항공 운항 대상
 title: Airship 태그 연결
 description: Airship 내에서 타깃팅할 대상 태그로 Adobe 대상 데이터를 Airship에 원활하게 전달합니다.
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
-source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
+source-git-commit: fd2019feb25b540612a278cbea5bf5efafe284dc
 workflow-type: tm+mt
-source-wordcount: '831'
+source-wordcount: '947'
 ht-degree: 1%
 
 ---
@@ -89,16 +89,27 @@ Adobe Experience Platform의 세그먼트 개념은 다음과 유사합니다 [�
 > 
 >대상에 연결하려면 **[!UICONTROL 대상 관리]** [액세스 제어 권한](/help/access-control/home.md#permissions). 다음 문서를 참조하십시오. [액세스 제어 개요](/help/access-control/ui/overview.md) 또는 제품 관리자에게 문의하여 필요한 권한을 얻으십시오.
 
-이 대상에 연결하려면 [대상 구성 자습서](../../ui/connect-destination.md).
+이 대상에 연결하려면 [대상 구성 자습서](../../ui/connect-destination.md). 대상 구성 워크플로우에서 아래 두 섹션에 나열된 필드를 채웁니다.
 
-### 연결 매개 변수 {#parameters}
+### 대상에 인증 {#authenticate}
 
-While [설정](../../ui/connect-destination.md) 이 대상을 사용하려면 다음 정보를 제공해야 합니다.
+대상을 인증하려면 필요한 필드를 입력하고 을(를) 선택합니다 **[!UICONTROL 대상에 연결]**.
 
 * **[!UICONTROL 베어러 토큰]**: 에서 생성한 bearer 토큰 [!DNL Airship] 대시보드 .
+
+### 대상 세부 사항 채우기 {#destination-details}
+
+대상에 대한 세부 사항을 구성하려면 아래 필수 및 선택적 필드를 입력합니다. UI에서 필드 옆에 있는 별표는 필드가 필수임을 나타냅니다.
+
 * **[!UICONTROL 이름]**: 이 대상을 식별하는 데 도움이 되는 이름을 입력하십시오.
 * **[!UICONTROL 설명]**: 이 대상에 대한 설명을 입력합니다.
 * **[!UICONTROL 도메인]**: EU 데이터 센터를 선택할 때 [!DNL Airship] 데이터 센터는 이 대상에 적용됩니다.
+
+### 경고 활성화 {#enable-alerts}
+
+경고를 활성화하여 대상으로 데이터 흐름 상태에 대한 알림을 받을 수 있습니다. 목록에서 경고를 선택하여 데이터 흐름 상태에 대한 알림을 수신합니다. 경고에 대한 자세한 내용은 [UI를 사용하여 대상 경고 구독](../../ui/alerts.md).
+
+대상 연결에 대한 세부 정보 제공을 마치면 를 선택합니다 **[!UICONTROL 다음]**.
 
 ## 세그먼트를 이 대상에 활성화 {#activate}
 

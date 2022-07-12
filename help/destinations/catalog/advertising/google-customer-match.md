@@ -3,9 +3,9 @@ keywords: google customer match;Google 고객 일치;Google Customer Match
 title: Google Customer Match 연결
 description: Google Customer Match를 사용하면 온라인 및 오프라인 데이터를 사용하여 검색, 쇼핑, Gmail 및 YouTube과 같은 Google이 소유하고 운영하는 속성에서 고객에게 도달하고 다시 참여합니다.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: 23828fcbb1257fa093c1e114ee4c2fcb2162d9d6
+source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
 workflow-type: tm+mt
-source-wordcount: '1715'
+source-wordcount: '1778'
 ht-degree: 1%
 
 ---
@@ -141,6 +141,12 @@ While [설정](../../ui/connect-destination.md) 이 대상을 사용하려면 �
 >
 > * 다음 **[!UICONTROL PII와 결합]** 마케팅 작업은 기본적으로 [!DNL Google Customer Match] 대상을 제거할 수 없습니다.
 
+
+### 경고 활성화 {#enable-alerts}
+
+경고를 활성화하여 대상으로 데이터 흐름 상태에 대한 알림을 받을 수 있습니다. 목록에서 경고를 선택하여 데이터 흐름 상태에 대한 알림을 수신합니다. 경고에 대한 자세한 내용은 [UI를 사용하여 대상 경고 구독](../../ui/alerts.md).
+
+대상 연결에 대한 세부 정보 제공을 마치면 를 선택합니다 **[!UICONTROL 다음]**.
 
 ## 세그먼트를 이 대상에 활성화 {#activate}
 

@@ -1,25 +1,19 @@
 ---
-title: 설명서 셀프 서비스 템플릿 // 대상 이름으로 바꾸기
+title: 셀프 서비스 템플릿 // 대상 이름으로 바꾸기
 description: 이 템플릿을 사용하여 Adobe Experience Platform 카탈로그에서 대상에 대한 공개 설명서를 만듭니다. // 개요 섹션의 단락으로 대체합니다
-exl-id: 99700474-8bf6-4176-acc1-38814e17c995
 source-git-commit: fd2019feb25b540612a278cbea5bf5efafe284dc
 workflow-type: tm+mt
-source-wordcount: '1382'
+source-wordcount: '1341'
 ht-degree: 1%
 
 ---
+
 
 # 대상 연결 {#your-destination}
 
 *이 템플릿을 진행하면 모든 단락을 기울임꼴로 바꾸거나 삭제합니다(이 단락은 시작).*
 
 *먼저 페이지 상단에서 메타데이터(제목 및 설명)를 업데이트합니다. 이 페이지에서 UICONTROL의 모든 인스턴스를 무시하십시오. 기계 번역 프로세스를 통해 페이지를 지원하는 여러 언어로 올바르게 변환하는 태그입니다. 문서를 제출한 후 문서에 태그를 추가합니다.*
-
->[!IMPORTANT]
->
->* 템플릿에 요약된 순서대로 이 템플릿의 모든 섹션을 입력합니다.
->* 이 템플릿은 파트너 피드백을 기반으로 자주 업데이트됩니다. 대상에 대한 문서 작성을 시작하기 전에 [템플릿의 최신 버전](/help/destinations/destination-sdk/docs-framework/assets/yourdestination-template.zip).
-
 
 ## 개요 {#overview}
 
@@ -33,13 +27,13 @@ ht-degree: 1%
 
 를 사용하는 방법과 시기를 더 잘 이해할 수 있도록 하기 위해 *대상* 대상, Adobe Experience Platform 고객이 이 대상을 사용하여 해결할 수 있는 샘플 사용 사례는 다음과 같습니다.
 
-### 사용 사례 #1 {#use-case-1}
+### 사용 사례 #1
 
 *모바일 메시징 플랫폼의 경우:*
 
 *주택 임대 및 판매 플랫폼에서는 고객의 Android 및 iOS 장치에 모바일 알림을 푸시하여 이전에 대여 요청을 했던 영역에 업데이트된 목록이 100개 있음을 알려 주려고 합니다.*
 
-### 사용 사례 #2 {#use-case-2}
+### 사용 사례 #2
 
 *소셜 네트워크 플랫폼의 경우:*
 
@@ -102,7 +96,7 @@ ht-degree: 1%
 
 대상을 인증하려면 필요한 필드를 입력하고 을(를) 선택합니다 **[!UICONTROL 대상에 연결]**.
 
-![대상에 인증하는 방법을 보여주는 샘플 스크린샷](/help/destinations/destination-sdk/docs-framework/assets/authenticate-destination.png)
+![사용자에게 대상을 인증하는 방법을 보여주는 하나 이상의 샘플 스크린샷에 링크를 여기에 추가합니다](/help/destinations/destination-sdk/docs-framework/assets/authenticate-destination.png)
 
 * **[!UICONTROL 베어러 토큰]**: 대상을 인증하려면 베어러 토큰을 입력합니다.
 
@@ -112,7 +106,7 @@ ht-degree: 1%
 
 대상에 대한 세부 사항을 구성하려면 아래 필수 및 선택적 필드를 입력합니다. UI에서 필드 옆에 있는 별표는 필드가 필수임을 나타냅니다.
 
-![대상에 대한 세부 사항을 채우는 방법을 보여주는 샘플 스크린샷](/help/destinations/destination-sdk/docs-framework/assets/configure-destination-details.png)
+![대상에 대한 세부 사항을 채우는 방법을 보여 주는 하나 이상의 샘플 스크린샷에 링크를 추가합니다](/help/destinations/destination-sdk/docs-framework/assets/configure-destination-details.png)
 
 * **[!UICONTROL 이름]**: 나중에 이 대상을 인식하는 이름입니다.
 * **[!UICONTROL 설명]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
@@ -130,7 +124,7 @@ ht-degree: 1%
 > 
 >데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 다음 문서를 참조하십시오. [액세스 제어 개요](/help/access-control/ui/overview.md) 또는 제품 관리자에게 문의하여 필요한 권한을 얻으십시오.
 
-읽기 [스트리밍 세그먼트 내보내기 대상으로 프로필 및 세그먼트를 활성화합니다](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en) 대상 세그먼트를 이 대상으로 활성화하는 방법에 대한 지침입니다.
+읽기 [스트리밍 세그먼트 내보내기 대상으로 프로필 및 세그먼트를 활성화합니다](../../ui/activate/activate-segment-streaming-destinations.md) 대상 세그먼트를 이 대상으로 활성화하는 방법에 대한 지침입니다.
 
 ## 내보낸 데이터 / 데이터 내보내기 유효성 검사 {#exported-data}
 
@@ -176,8 +170,8 @@ ht-degree: 1%
 
 ## 데이터 사용 및 거버넌스 {#data-usage-governance}
 
-모두 [!DNL Adobe Experience Platform] 대상은 데이터를 처리할 때 데이터 사용 정책을 준수합니다. 방법에 대한 자세한 정보 [!DNL Adobe Experience Platform] 데이터 거버넌스 적용, 읽기 [데이터 거버넌스 개요](/help/data-governance/home.md).
+모두 [!DNL Adobe Experience Platform] 대상은 데이터를 처리할 때 데이터 사용 정책을 준수합니다. 방법에 대한 자세한 정보 [!DNL Adobe Experience Platform] 데이터 거버넌스를 적용하는 경우 다음을 참조하십시오. [데이터 거버넌스 개요](/help/data-governance/home.md).
 
 ## 추가 리소스 {#additional-resources}
 
-*고객이 성공적으로 작업하기 위해 중요하다고 생각하는 제품 설명서나 기타 리소스에 대한 추가 링크를 제공할 수 있습니다.*
+*제품 설명서 또는 고객이 성공하기 위해 중요하다고 생각하는 기타 리소스에 대한 추가 링크를 제공할 수 있습니다.*

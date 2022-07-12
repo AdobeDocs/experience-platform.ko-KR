@@ -3,10 +3,10 @@ keywords: facebook 연결;facebook 연결;facebook 대상;facebook;instagram;mes
 title: Facebook 연결
 description: 해시된 이메일을 기반으로 대상 타깃팅, 개인화 및 억제를 위해 Facebook 캠페인용 프로필을 활성화합니다.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
+source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
 workflow-type: tm+mt
-source-wordcount: '1713'
-ht-degree: 2%
+source-wordcount: '1867'
+ht-degree: 1%
 
 ---
 
@@ -90,7 +90,6 @@ Adobe Experience Platform에 수집하는 ID 유형에 따라 해당 요구 사�
 >
 >에 수집된 전화 번호 `Phone` 네임스페이스는에서 활성화할 수 없습니다. [!DNL Facebook].
 
-
 ## 이메일 해싱 요구 사항 {#email-hashing-requirements}
 
 전자 메일 주소를 Adobe Experience Platform에 수집하기 전에 해시하거나 Experience Platform에서 명확히 전자 메일 주소를 사용하여 다음을 보유할 수 있습니다. [!DNL Platform] 활성화 시 해시합니다.
@@ -124,7 +123,7 @@ Experience Platform에서 이메일 주소 섭취에 대한 자세한 내용은 
 > 
 >대상에 연결하려면 **[!UICONTROL 대상 관리]** [액세스 제어 권한](/help/access-control/home.md#permissions). 다음 문서를 참조하십시오. [액세스 제어 개요](/help/access-control/ui/overview.md) 또는 제품 관리자에게 문의하여 필요한 권한을 얻으십시오.
 
-이 대상에 연결하려면 [대상 구성 자습서](../../ui/connect-destination.md).
+이 대상에 연결하려면 [대상 구성 자습서](../../ui/connect-destination.md). 대상 구성 워크플로우에서 아래 두 섹션에 나열된 필드를 채웁니다.
 
 아래 비디오에서는 을(를) 구성하는 단계를 보여줍니다 [!DNL Facebook] 대상 및 세그먼트 활성화
 
@@ -134,13 +133,31 @@ Experience Platform에서 이메일 주소 섭취에 대한 자세한 내용은 
 >
 >Experience Platform 사용자 인터페이스는 자주 업데이트되며 이 비디오를 기록한 후 변경되었을 수 있습니다. 최신 정보는 [대상 구성 자습서](../../ui/connect-destination.md).
 
-### 연결 매개 변수 {#parameters}
+### 대상에 인증 {#authenticate}
 
-While [설정](../../ui/connect-destination.md) 이 대상을 사용하려면 다음 정보를 제공해야 합니다.
+1. 대상 카탈로그에서 Facebook 대상을 찾고 을(를) 선택합니다 **[!UICONTROL 설정]**.
+2. 선택 **[!UICONTROL 대상에 연결]**.
+   ![facebook 인증](/help/destinations/assets/catalog/social/facebook/authenticate-facebook-destination.png)
+3. facebook 자격 증명을 입력하고 을(를) 선택합니다 **로그인**.
+
+### 대상 세부 사항 채우기 {#destination-details}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_facebook_accountid"
+>title="계정 ID"
+>abstract="facebook 광고 계정 ID입니다. 이 ID는 Facebook Ads Manager 계정에서 찾을 수 있습니다. 이 ID를 입력할 때 항상 접두사로 붙입니다 `act_`."
+
+대상에 대한 세부 사항을 구성하려면 아래 필수 및 선택적 필드를 입력합니다. UI에서 필드 옆에 있는 별표는 필드가 필수임을 나타냅니다.
 
 * **[!UICONTROL 이름]**: 나중에 이 대상을 인식하는 이름입니다.
 * **[!UICONTROL 설명]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
-* **[!UICONTROL 계정 ID]**: your [!DNL Facebook Ad Account ID]. 이 ID는 [!DNL Facebook Ads Manager] 계정이 필요합니다. 이 ID를 입력할 때 항상 접두사로 붙입니다 `act_`.
+* **[!UICONTROL 계정 ID]**: 사용자 [!DNL Facebook Ad Account ID]. 이 ID는 [!DNL Facebook Ads Manager] 계정이 필요합니다. 이 ID를 입력할 때 항상 접두사로 붙입니다 `act_`.
+
+### 경고 활성화 {#enable-alerts}
+
+경고를 활성화하여 대상으로 데이터 흐름 상태에 대한 알림을 받을 수 있습니다. 목록에서 경고를 선택하여 데이터 흐름 상태에 대한 알림을 수신합니다. 경고에 대한 자세한 내용은 [UI를 사용하여 대상 경고 구독](../../ui/alerts.md).
+
+대상 연결에 대한 세부 정보 제공을 마치면 를 선택합니다 **[!UICONTROL 다음]**.
 
 ## 세그먼트를 이 대상에 활성화 {#activate}
 

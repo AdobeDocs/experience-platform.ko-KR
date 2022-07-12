@@ -1,13 +1,13 @@
 ---
 title: 메달리아 연결
 description: 대상 Medallia 설문 조사 및 피드백 수집에 대한 프로필을 활성화하여 고객 요구 사항과 기대를 더 잘 이해합니다.
-source-git-commit: be2d4e5d1f204feefc7acb7cb4518044ab3f153a
+exl-id: 2c2766eb-7be1-418c-bf17-d119d244de92
+source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
 workflow-type: tm+mt
-source-wordcount: '1031'
+source-wordcount: '1102'
 ht-degree: 1%
 
 ---
-
 
 # 메달리아 연결
 
@@ -70,7 +70,7 @@ Medallia는 아래 표에 설명된 ID의 활성화를 지원합니다. 추가 �
 > 
 >대상에 연결하려면 **[!UICONTROL 대상 관리]** [액세스 제어 권한](/help/access-control/home.md#permissions). 다음 문서를 참조하십시오. [액세스 제어 개요](/help/access-control/ui/overview.md) 또는 제품 관리자에게 문의하여 필요한 권한을 얻으십시오.
 
-이 대상에 연결하려면 [대상 구성 자습서](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html). 대상 구성 워크플로우에서 아래 두 섹션에 나열된 필드를 채웁니다.
+이 대상에 연결하려면 [대상 구성 자습서](../../ui/connect-destination.md). 대상 구성 워크플로우에서 아래 두 섹션에 나열된 필드를 채웁니다.
 
 ### 대상에 인증 {#authenticate}
 
@@ -84,7 +84,7 @@ Medallia는 아래 표에 설명된 ID의 활성화를 지원합니다. 추가 �
 
 ### 대상 세부 사항 채우기 {#destination-details}
 
-대상에 대한 세부 사항을 구성하려면 필수 필드를 입력하고 을(를) 선택합니다 **[!UICONTROL 다음]**.
+대상에 대한 세부 사항을 구성하려면 아래 필수 및 선택적 필드를 입력합니다. UI에서 필드 옆에 있는 별표는 필드가 필수임을 나타냅니다.
 
 * **[!UICONTROL 이름]**: 나중에 이 대상을 인식하는 이름입니다.
 * **[!UICONTROL 설명]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
@@ -92,6 +92,12 @@ Medallia는 아래 표에 설명된 ID의 활성화를 지원합니다. 추가 �
 * **[!UICONTROL API 이름 가져오기]**: Medallia 배달 팀으로부터 얻습니다. 이 연결에 사용할 Media 가져오기 API(웹 피드라고도 함)의 이름입니다. 다른 세그먼트를 다른 가져오기 API로 활성화하여 다른 설문 조사 프로그램을 트리거할 수 있습니다.
 
 ![이 대상에 대한 대상 세부 사항 화면을 표시하는 이미지입니다.](/help/destinations/assets/catalog/voice/medallia-destination-details.png)
+
+### 경고 활성화 {#enable-alerts}
+
+경고를 활성화하여 대상으로 데이터 흐름 상태에 대한 알림을 받을 수 있습니다. 목록에서 경고를 선택하여 데이터 흐름 상태에 대한 알림을 수신합니다. 경고에 대한 자세한 내용은 [UI를 사용하여 대상 경고 구독](../../ui/alerts.md).
+
+대상 연결에 대한 세부 정보 제공을 마치면 를 선택합니다 **[!UICONTROL 다음]**.
 
 ## 세그먼트를 이 대상에 활성화 {#activate}
 

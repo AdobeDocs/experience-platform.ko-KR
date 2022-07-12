@@ -3,9 +3,9 @@ keywords: 이메일;이메일;이메일;이메일 대상;sendgrid;sendgrid 대�
 title: SendGrid 연결
 description: SendGrid 대상을 사용하면 비즈니스 요구 사항에 맞게 자사 데이터를 내보내고 SendGrid 내에서 활성화할 수 있습니다.
 exl-id: 6f22746f-2043-4a20-b8a6-097d721f2fe7
-source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
+source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
 workflow-type: tm+mt
-source-wordcount: '1475'
+source-wordcount: '1548'
 ht-degree: 2%
 
 ---
@@ -78,8 +78,9 @@ SendGrid를 사용하는 마케팅 팀은 SendGrid 내에 메일링 목록을 �
 > 
 >대상에 연결하려면 **[!UICONTROL 대상 관리]** [액세스 제어 권한](/help/access-control/home.md#permissions). 다음 문서를 참조하십시오. [액세스 제어 개요](/help/access-control/ui/overview.md) 또는 제품 관리자에게 문의하여 필요한 권한을 얻으십시오.
 
+이 대상에 연결하려면 [대상 구성 자습서](../../ui/connect-destination.md). 대상 구성 워크플로우에서 아래 두 섹션에 나열된 필드를 채웁니다.
 
-이 대상에 연결하려면 [대상 구성 자습서](../../ui/connect-destination.md). 이 대상에 대한 단계는 아래에 자세히 설명되어 있습니다.
+### 대상에 인증 {#authenticate}
 
 1. 내 [!DNL Adobe Experience Platform] 콘솔, 탐색 **대상**.
 
@@ -96,7 +97,7 @@ SendGrid를 사용하는 마케팅 팀은 SendGrid 내에 메일링 목록을 �
 
 ![](../../assets/catalog/email-marketing/sendgrid/05.jpg)
 
-### 연결 매개 변수 {#parameters}
+### 대상 세부 사항 채우기 {#destination-details}
 
 While [설정](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=en) 이 대상을 사용하려면 다음 정보를 제공해야 합니다.
 
@@ -104,6 +105,12 @@ While [설정](https://experienceleague.adobe.com/docs/experience-platform/desti
 * **[!UICONTROL 설명]**: 나중에 이 대상을 식별하는 데 도움이 되는 선택적 설명입니다.
 
 ![](../../assets/catalog/email-marketing/sendgrid/06.jpg)
+
+### 경고 활성화 {#enable-alerts}
+
+경고를 활성화하여 대상으로 데이터 흐름 상태에 대한 알림을 받을 수 있습니다. 목록에서 경고를 선택하여 데이터 흐름 상태에 대한 알림을 수신합니다. 경고에 대한 자세한 내용은 [UI를 사용하여 대상 경고 구독](../../ui/alerts.md).
+
+대상 연결에 대한 세부 정보 제공을 마치면 를 선택합니다 **[!UICONTROL 다음]**.
 
 ## 세그먼트를 이 대상에 활성화 {#activate}
 

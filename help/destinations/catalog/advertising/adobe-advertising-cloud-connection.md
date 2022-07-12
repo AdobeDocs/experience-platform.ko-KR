@@ -2,9 +2,9 @@
 title: Adobe Advertising Cloud DSP 연결
 description: 'Adobe Advertising Cloud DSP은 [!DNL Adobe Real-time Customer Data Profile]: 인증된 자사 세그먼트를 승인된 광고주 및 사용자와 캠페인 활성화를 위해 공유할 수 있습니다.'
 exl-id: 11ff7797-a9c6-4334-b843-ae9df9a48e54
-source-git-commit: 2b8c9d81b7d9eddbbed3119a496e9c8d37e6c415
+source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
 workflow-type: tm+mt
-source-wordcount: '954'
+source-wordcount: '1026'
 ht-degree: 1%
 
 ---
@@ -78,12 +78,18 @@ Adobe Advertising Cloud DSP 대상은 아래 표에 설명된 ID의 활성화를
 
 ### 대상 세부 사항 채우기 {#destination-details}
 
-대상에 대한 세부 사항을 구성하려면 [!UICONTROL 대상 세부 사항] 섹션을 선택한 다음 **[!UICONTROL 다음]**.
+대상에 대한 세부 사항을 구성하려면 아래 필수 및 선택적 필드를 입력합니다. UI에서 필드 옆에 있는 별표는 필드가 필수임을 나타냅니다.
 
 * **[!UICONTROL 이름]**: 나중에 이 대상을 인식하는 이름입니다.
 * **[!UICONTROL 설명]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
 
 ![대상 세부 사항 필드](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/destination-details.png)
+
+### 경고 활성화 {#enable-alerts}
+
+경고를 활성화하여 대상으로 데이터 흐름 상태에 대한 알림을 받을 수 있습니다. 목록에서 경고를 선택하여 데이터 흐름 상태에 대한 알림을 수신합니다. 경고에 대한 자세한 내용은 [UI를 사용하여 대상 경고 구독](../../ui/alerts.md).
+
+대상 연결에 대한 세부 정보 제공을 마치면 를 선택합니다 **[!UICONTROL 다음]**.
 
 ## 세그먼트를 이 대상에 활성화 {#activate}
 

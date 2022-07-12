@@ -3,9 +3,9 @@ keywords: SFTP;sftp
 title: SFTP 연결
 description: SFTP 서버에 대한 라이브 아웃바운드 연결을 만들어 Adobe Experience Platform에서 구분된 데이터 파일을 주기적으로 내보냅니다.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: 715533352e84573f60f012504988595af6146e2f
+source-git-commit: fd2019feb25b540612a278cbea5bf5efafe284dc
 workflow-type: tm+mt
-source-wordcount: '671'
+source-wordcount: '673'
 ht-degree: 1%
 
 ---
@@ -39,9 +39,9 @@ SFTP 서버에 대한 라이브 아웃바운드 연결을 만들어 Adobe Experi
 > 
 >대상에 연결하려면 **[!UICONTROL 대상 관리]** [액세스 제어 권한](/help/access-control/home.md#permissions). 다음 문서를 참조하십시오. [액세스 제어 개요](/help/access-control/ui/overview.md) 또는 제품 관리자에게 문의하여 필요한 권한을 얻으십시오.
 
-이 대상에 연결하려면 [대상 구성 자습서](../../ui/connect-destination.md).
+이 대상에 연결하려면 [대상 구성 자습서](../../ui/connect-destination.md). 대상 구성 워크플로우에서 아래 두 섹션에 나열된 필드를 채웁니다.
 
-### 연결 매개 변수 {#parameters}
+### 인증 정보 {#authentication-information}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_sftp_rsa"
@@ -51,11 +51,7 @@ SFTP 서버에 대한 라이브 아웃바운드 연결을 만들어 Adobe Experi
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_sftp_ssh"
 >title="개인 SSH 키"
->abstract="개인 SSH 키는 Base64로 인코딩된 문자열로 포맷해야 하며 암호로 보호되어서는 안 됩니다. "
-
-When [연결](../../ui/connect-destination.md) 이 대상에 대해 다음 정보를 제공해야 합니다.
-
-#### 인증 정보 {#authentication-information}
+>abstract="개인 SSH 키는 Base64로 인코딩된 문자열로 포맷해야 하며 암호로 보호되어서는 안 됩니다."
 
 을(를) 선택하는 경우 **[!UICONTROL 기본 인증]** sftp 위치에 연결할 유형:
 
@@ -83,7 +79,7 @@ When [연결](../../ui/connect-destination.md) 이 대상에 대해 다음 정�
 
       ![PGP 키](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
-#### 대상 세부 사항 {#destination-details}
+### 대상 세부 사항 {#destination-details}
 
 SFTP 위치에 인증 연결을 설정한 후 대상에 대해 다음 정보를 제공합니다.
 

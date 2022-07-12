@@ -3,9 +3,9 @@ keywords: Azure 이벤트 허브 대상;azure 이벤트 허브;azure 이벤트 �
 title: Azure 이벤트 허브 연결
 description: 에 대한 실시간 아웃바운드 연결을 만듭니다. [!DNL Azure Event Hubs] Experience Platform에서 데이터를 스트리밍할 스토리지.
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: b19dc5c0d67bc218de0366fdc40f752ce7c3ad71
+source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
 workflow-type: tm+mt
-source-wordcount: '1926'
+source-wordcount: '2002'
 ht-degree: 0%
 
 ---
@@ -80,7 +80,7 @@ Experience Platform은 고객의 보안 및 규정 준수 요구 사항을 충�
 * **[!UICONTROL 네임스페이스]**: 을 입력합니다. [!DNL Azure Event Hubs] 네임스페이스. 알아보기 [!DNL Azure Event Hubs] 네임스페이스 [Microsoft 설명서](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace).
 * **[!UICONTROL 네임스페이스]**: 을 입력합니다. [!DNL Azure Event Hubs] 네임스페이스. 알아보기 [!DNL Azure Event Hubs] 네임스페이스 [Microsoft 설명서](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace).
 
-### 대상 세부 사항 {#destination-details}
+### 대상 세부 사항 채우기 {#destination-details}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_eventhubs_includesegmentnames"
@@ -92,7 +92,7 @@ Experience Platform은 고객의 보안 및 규정 준수 요구 사항을 충�
 >title="세그먼트 타임스탬프 포함"
 >abstract="세그먼트가 생성 및 업데이트될 때 데이터 내보내기에 UNIX 타임스탬프와 세그먼트가 활성화 대상에 매핑될 때 UNIX 타임스탬프를 포함하려면 을 전환합니다. 이 옵션을 선택한 상태로 데이터 내보내기 예제에 대한 설명서를 봅니다."
 
-Azure 이벤트 허브 대상에 인증 연결을 설정한 후 대상에 대해 다음 정보를 제공합니다.
+대상에 대한 세부 사항을 구성하려면 아래 필수 및 선택적 필드를 입력합니다. UI에서 필드 옆에 있는 별표는 필드가 필수임을 나타냅니다.
 
 ![Azure 이벤트 허브 대상 세부 정보에 대해 완료된 필드를 표시하는 UI 화면의 이미지](../../assets/catalog/cloud-storage/event-hubs/event-hubs-destination-details.png)
 
@@ -101,6 +101,12 @@ Azure 이벤트 허브 대상에 인증 연결을 설정한 후 대상에 대해
 * **[!UICONTROL eventHubName]**: 스트림의 이름을 로 입력합니다 [!DNL Azure Event Hubs] 대상.
 * **[!UICONTROL 세그먼트 이름 포함]**: 데이터 내보내기에 내보낼 세그먼트의 이름이 포함되도록 하려면 전환합니다. 이 옵션을 선택한 데이터 내보내기의 예는 를 참조하십시오. [내보낸 데이터](#exported-data) 섹션을 참조하십시오.
 * **[!UICONTROL 세그먼트 타임스탬프 포함]**: 세그먼트가 생성 및 업데이트될 때 데이터 내보내기에 UNIX 타임스탬프와 세그먼트가 활성화 대상에 매핑될 때 UNIX 타임스탬프를 포함하려면 을 전환합니다. 이 옵션을 선택한 데이터 내보내기의 예는 를 참조하십시오. [내보낸 데이터](#exported-data) 섹션을 참조하십시오.
+
+### 경고 활성화 {#enable-alerts}
+
+경고를 활성화하여 대상으로 데이터 흐름 상태에 대한 알림을 받을 수 있습니다. 목록에서 경고를 선택하여 데이터 흐름 상태에 대한 알림을 수신합니다. 경고에 대한 자세한 내용은 [UI를 사용하여 대상 경고 구독](../../ui/alerts.md).
+
+대상 연결에 대한 세부 정보 제공을 마치면 를 선택합니다 **[!UICONTROL 다음]**.
 
 ## 세그먼트를 이 대상에 활성화 {#activate}
 

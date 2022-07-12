@@ -2,10 +2,10 @@
 title: Twitter 사용자 지정 대상 연결
 description: Twitter에서 기존 팔로워와 고객을 Target 하고 Adobe Experience Platform 내에 구축된 대상을 활성화하여 적절한 리마케팅 캠페인을 만듭니다
 exl-id: fd244e58-cd94-4de7-81e4-c321eb673b65
-source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
+source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
 workflow-type: tm+mt
-source-wordcount: '669'
-ht-degree: 3%
+source-wordcount: '812'
+ht-degree: 4%
 
 ---
 
@@ -58,15 +58,33 @@ Twitter에서 기존 팔로워와 고객을 Target 하고 Adobe Experience Platf
 > 
 >대상에 연결하려면 **[!UICONTROL 대상 관리]** [액세스 제어 권한](/help/access-control/home.md#permissions). 다음 문서를 참조하십시오. [액세스 제어 개요](/help/access-control/ui/overview.md) 또는 제품 관리자에게 문의하여 필요한 권한을 얻으십시오.
 
-이 대상에 연결하려면 [대상 구성 자습서](../../ui/connect-destination.md).
+이 대상에 연결하려면 [대상 구성 자습서](../../ui/connect-destination.md). 대상 구성 워크플로우에서 아래 두 섹션에 나열된 필드를 채웁니다.
 
-### 연결 매개 변수 {#parameters}
+### 대상에 인증 {#authenticate}
 
-While [설정](../../ui/connect-destination.md) 이 대상을 사용하려면 다음 정보를 제공해야 합니다.
+1. 를 찾습니다. [!DNL Twitter Custom Audiences] 대상 카탈로그의 대상을 선택하고 을(를) 선택합니다. **[!UICONTROL 설정]**.
+2. 선택 **[!UICONTROL 대상에 연결]**.
+   ![LinkedIn 인증](/help/destinations/assets/catalog/social/twitter/authenticate-twitter-destination.png)
+3. twitter 자격 증명을 입력하고 을 선택합니다 **로그인**.
+
+### 대상 세부 사항 채우기 {#destination-details}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_twitter_accountid"
+>title="계정 ID"
+>abstract="twitter 광고 계정 ID입니다. twitter 광고 설정에서 찾을 수 있습니다."
+
+대상에 대한 세부 사항을 구성하려면 아래 필수 및 선택적 필드를 입력합니다. UI에서 필드 옆에 있는 별표는 필드가 필수임을 나타냅니다.
 
 * **[!UICONTROL 이름]**: 나중에 이 대상을 인식하는 이름입니다.
 * **[!UICONTROL 설명]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
 * **[!UICONTROL 계정 ID]**: 사용자 [!DNL Twitter Ads] 계정 ID. 다음 위치에서 찾을 수 있습니다. [!DNL Twitter Ads] 설정.
+
+### 경고 활성화 {#enable-alerts}
+
+경고를 활성화하여 대상으로 데이터 흐름 상태에 대한 알림을 받을 수 있습니다. 목록에서 경고를 선택하여 데이터 흐름 상태에 대한 알림을 수신합니다. 경고에 대한 자세한 내용은 [UI를 사용하여 대상 경고 구독](../../ui/alerts.md).
+
+대상 연결에 대한 세부 정보 제공을 마치면 를 선택합니다 **[!UICONTROL 다음]**.
 
 ## 세그먼트를 이 대상에 활성화 {#activate}
 
@@ -78,7 +96,7 @@ While [설정](../../ui/connect-destination.md) 이 대상을 사용하려면 �
 
 ## 데이터 사용 및 거버넌스 {#data-usage-governance}
 
-모두 [!DNL Adobe Experience Platform] 대상은 데이터를 처리할 때 데이터 사용 정책을 준수합니다. 방법에 대한 자세한 정보 [!DNL Adobe Experience Platform] 데이터 거버넌스를 적용하는 경우 다음을 참조하십시오. [데이터 거버넌스 개요](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html).
+모두 [!DNL Adobe Experience Platform] 대상은 데이터를 처리할 때 데이터 사용 정책을 준수합니다. 방법에 대한 자세한 정보 [!DNL Adobe Experience Platform] 데이터 거버넌스를 적용하는 경우 다음을 참조하십시오. [데이터 거버넌스 개요](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=ko).
 
 ## 추가 리소스 {#additional-resources}
 

@@ -3,9 +3,9 @@ keywords: Amazon Kinesis;kinesis 대상;kinesis
 title: Amazon Kinesis 연결
 description: Amazon Kinesis 스토리지에 대한 실시간 아웃바운드 연결을 만들어 Adobe Experience Platform에서 데이터를 스트리밍합니다.
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: b19dc5c0d67bc218de0366fdc40f752ce7c3ad71
+source-git-commit: abe2e7ba363b82a696136aa46aa1adbbe25ee461
 workflow-type: tm+mt
-source-wordcount: '1809'
+source-wordcount: '1889'
 ht-degree: 0%
 
 ---
@@ -86,6 +86,8 @@ Experience Platform은 고객의 보안 및 규정 준수 요구 사항을 충�
 | `kinesis:PutRecord` | 단일 데이터 레코드를 Kinesis 데이터 스트림에 작성하는 작업입니다. |
 | `kinesis:PutRecords` | 여러 데이터 레코드를 단일 호출로 Kinesis 데이터 스트림에 쓰는 작업입니다. |
 
+{style=&quot;table-layout:auto&quot;}
+
 액세스 제어에 대한 자세한 정보 [!DNL Kinesis] 데이터 스트림, 다음 읽기 [[!DNL Kinesis] 문서](https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html).
 
 ## 대상에 연결 {#connect}
@@ -105,7 +107,7 @@ Experience Platform은 고객의 보안 및 규정 준수 요구 사항을 충�
 * **[!DNL Amazon Web Services]액세스 키 및 비밀 키**: in [!DNL Amazon Web Services], 생성 `access key - secret access key` 플랫폼에 대한 액세스 권한을 부여하기 위한 쌍 [!DNL Amazon Kinesis] 계정이 필요합니다. 자세한 내용은 [Amazon Web Services 설명서](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 * **[!UICONTROL 지역]**: 표시할 항목 [!DNL Amazon Web Services] 데이터를 스트리밍할 영역입니다.
 
-### 대상 세부 사항 {#destination-details}
+### 대상 세부 사항 채우기 {#destination-details}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_kinesis_includesegmentnames"
@@ -117,7 +119,7 @@ Experience Platform은 고객의 보안 및 규정 준수 요구 사항을 충�
 >title="세그먼트 타임스탬프 포함"
 >abstract="세그먼트가 생성 및 업데이트될 때 데이터 내보내기에 UNIX 타임스탬프와 세그먼트가 활성화 대상에 매핑될 때 UNIX 타임스탬프를 포함하려면 을 전환합니다. 이 옵션을 선택한 상태로 데이터 내보내기 예제에 대한 설명서를 봅니다."
 
-Amazon Kinesis 대상에 인증 연결을 설정한 후 대상에 대해 다음 정보를 제공합니다.
+대상에 대한 세부 사항을 구성하려면 아래 필수 및 선택적 필드를 입력합니다. UI에서 필드 옆에 있는 별표는 필드가 필수임을 나타냅니다.
 
 ![Amazon Kinesis 대상 세부 사항에 대해 완료된 필드를 보여주는 UI 화면의 이미지](../../assets/catalog/cloud-storage/amazon-kinesis/kinesis-destination-details.png)
 
@@ -134,6 +136,12 @@ Amazon Kinesis 대상에 인증 연결을 설정한 후 대상에 대해 다음 
 >Platform needs `write` permissions on the bucket object where the export files will be delivered.
 
 -->
+
+### 경고 활성화 {#enable-alerts}
+
+경고를 활성화하여 대상으로 데이터 흐름 상태에 대한 알림을 받을 수 있습니다. 목록에서 경고를 선택하여 데이터 흐름 상태에 대한 알림을 수신합니다. 경고에 대한 자세한 내용은 [UI를 사용하여 대상 경고 구독](../../ui/alerts.md).
+
+대상 연결에 대한 세부 정보 제공을 마치면 를 선택합니다 **[!UICONTROL 다음]**.
 
 ## 세그먼트를 이 대상에 활성화 {#activate}
 
