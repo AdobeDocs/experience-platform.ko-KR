@@ -1,9 +1,9 @@
 ---
 title: (베타) Snap Inc 연결
 description: Snapchat Ads Platform에 연결하고 Experience Platform에서 대상 세그먼트를 내보내는 방법을 알아봅니다.
-source-git-commit: 14f7efc2d893bf081c4e167b46a3e85baeff4ec9
+source-git-commit: 734d66cc881ab1b691c13ef446331d0c51851cf9
 workflow-type: tm+mt
-source-wordcount: '949'
+source-wordcount: '1012'
 ht-degree: 2%
 
 ---
@@ -103,6 +103,12 @@ ht-degree: 2%
 >[!IMPORTANT]
 > 
 >잘못되었거나 잘못된 Snapchat Ad 계정 ID를 입력하면 세그먼트 활성화가 실패합니다. 적절한 광고 계정 ID를 입력했는지 다시 확인하십시오.
+
+### 경고 활성화 {#enable-alerts}
+
+경고를 활성화하여 대상으로 데이터 흐름 상태에 대한 알림을 받을 수 있습니다. 목록에서 경고를 선택하여 데이터 흐름 상태에 대한 알림을 수신합니다. 경고에 대한 자세한 내용은 [UI를 사용하여 대상 경고 구독](../../ui/alerts.md).
+
+대상 연결에 대한 세부 정보 제공을 마치면 를 선택합니다 **[!UICONTROL 다음]**.
 
 ## 세그먼트를 이 대상에 활성화 {#activate}
 

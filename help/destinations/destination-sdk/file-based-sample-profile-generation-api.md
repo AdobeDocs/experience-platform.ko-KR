@@ -1,9 +1,9 @@
 ---
 description: 이 페이지에서는 Destination SDK의 /sample-profiles API 엔드포인트를 사용하여 소스 스키마를 기반으로 샘플 프로필을 생성하는 방법에 대해 설명합니다. 이러한 샘플 프로필을 사용하여 파일 기반 대상 구성을 테스트할 수 있습니다.
 title: 소스 스키마를 기반으로 샘플 프로필 생성
-source-git-commit: fa092e4d1828d9ecd5bc98e3f225fa377f38065f
+source-git-commit: 734d66cc881ab1b691c13ef446331d0c51851cf9
 workflow-type: tm+mt
-source-wordcount: '676'
+source-wordcount: '674'
 ht-degree: 2%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 2%
 
 파일 기반 대상을 테스트하는 첫 번째 단계는 `/sample-profiles` 기존 소스 스키마를 기반으로 샘플 프로필을 생성하는 끝점입니다.
 
-샘플 프로필은 프로필의 JSON 구조를 이해하는 데 도움이 되는 것입니다. 또한 추가적인 대상 테스트를 위해 자체 프로필 데이터로 사용자 지정할 수 있는 백본을 제공합니다.
+샘플 프로필은 프로필의 JSON 구조를 이해하는 데 도움이 될 수 있습니다. 또한 추가적인 대상 테스트를 위해 자체 프로필 데이터로 사용자 지정할 수 있는 기본값을 제공합니다.
 
 ## 시작하기 {#getting-started}
 
@@ -51,7 +51,7 @@ GET /authoring/sample-profiles?destinationInstanceId={DESTINATION_INSTANCE_ID}&c
 다음 요청은 대상 인스턴스에 정의된 소스 스키마를 기반으로 샘플 프로필을 생성합니다. `destinationInstanceId`.
 
 ```shell
-curl -X GET 'https://platform.adobe.io/data/core/activation/authoring/sample-profiles?destinationInstanceId={DESTINATION_INSTANCE_ID}&count=2' \
+curl -X GET 'https://platform.adobe.io/data/core/activation/authoring/sample-profiles?destinationInstanceId={DESTINATION_INSTANCE_ID}' \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {IMS_ORG}' \

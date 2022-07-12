@@ -1,7 +1,7 @@
 ---
 description: 이 페이지에서는 /testing/destinationInstance API 엔드포인트를 사용하여 테스트 결과의 전체 세부 사항을 보는 방법에 대해 설명합니다. 이 API 종단점은 Flow Service API를 사용하여 데이터 흐름을 모니터링할 때 얻을 것과 동일한 결과를 반환합니다.
 title: 자세한 활성화 결과 보기
-source-git-commit: 5b62203113dd55dad8adeb96cbcc2d46b3420c3a
+source-git-commit: 734d66cc881ab1b691c13ef446331d0c51851cf9
 workflow-type: tm+mt
 source-wordcount: '545'
 ht-degree: 2%
@@ -42,7 +42,7 @@ ht-degree: 2%
 
 한번 드시면 [대상 구성을 검증했습니다.](file-based-destination-testing-api.md)에 대한 GET 요청을 수행하여 세부 활성화 결과를 볼 수 있습니다. `authoring/testing/destinationInstance/` 테스트할 대상의 대상 인스턴스 ID와 활성화된 세그먼트의 흐름 실행 ID를 제공하는 종단점입니다.
 
-사용해야 하는 전체 API URL을 `results` 에서 반환된 속성 [대상 테스트 호출 응답](file-based-destination-testing-api.md).
+에서 사용해야 하는 전체 API URL을 찾을 수 있습니다. `results` 에서 반환된 속성 [대상 테스트 호출 응답](file-based-destination-testing-api.md).
 
 **API 형식**
 

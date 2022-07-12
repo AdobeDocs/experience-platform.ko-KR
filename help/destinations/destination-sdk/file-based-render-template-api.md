@@ -1,9 +1,9 @@
 ---
 description: 이 페이지에서는 /authoring/testing/template/render 종단점을 사용하여 대상 구성에 정의된 템플릿 지정된 고객 데이터 필드가 어떻게 표시되는지 시각화하는 방법에 대해 설명합니다.
 title: 템플릿화된 고객 필드의 유효성 검사
-source-git-commit: fa092e4d1828d9ecd5bc98e3f225fa377f38065f
+source-git-commit: 734d66cc881ab1b691c13ef446331d0c51851cf9
 workflow-type: tm+mt
-source-wordcount: '388'
+source-wordcount: '386'
 ht-degree: 2%
 
 ---
@@ -83,7 +83,7 @@ curl -X POST 'https://platform.adobe.io/data/core/activation/authoring/testing/t
 
 성공적인 응답은 `HTTP 200 OK` 상태 및 본문은 템플릿 필드에 대해 임의로 생성된 값을 포함합니다.
 
-이 응답은 버킷 이름 또는 폴더 경로와 같은 고객 데이터 필드의 올바른 구조를 확인하는 데 도움이 되기 위한 것입니다.
+이 응답을 통해 버킷 이름 또는 폴더 경로와 같은 고객 데이터 필드의 올바른 구조를 확인할 수 있습니다.
 
 
 ```json
