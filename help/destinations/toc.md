@@ -4,9 +4,9 @@ user-guide-title: 대상 안내서
 user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화합니다.
 description: 이 문서에서는 Adobe Experience Platform 대상의 목차 목록을 설명합니다
 feature: Destinations
-source-git-commit: fa092e4d1828d9ecd5bc98e3f225fa377f38065f
+source-git-commit: 14f7efc2d893bf081c4e167b46a3e85baeff4ec9
 workflow-type: tm+mt
-source-wordcount: '814'
+source-wordcount: '818'
 ht-degree: 8%
 
 ---
@@ -70,6 +70,7 @@ ht-degree: 8%
       * [Microsoft Bing 연결](./catalog/advertising/bing.md)
       * [Pinterest 전환 추적 확장](./catalog/advertising/pinterest-extension.md)
       * [Pinterest 고객 목록 연결](./catalog/advertising/pinterest.md)
+      * [(베타) Snapchat Ads 연결](./catalog/advertising/snap-inc.md)
       * [무역센터 연결](./catalog/advertising/tradedesk.md)
       * [Twitter 범용 웹 사이트 태그 확장](./catalog/advertising/twitter-uwt.md)
       * [Yahoo/Verizon DataX 연결](./catalog/advertising/datax.md)
