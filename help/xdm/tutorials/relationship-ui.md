@@ -6,14 +6,14 @@ description: 이 문서에서는 Experience Platform 사용자 인터페이스�
 topic-legacy: tutorial
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
-source-git-commit: 90f055f2fbeb7571d2f7c1daf4ea14490069f2eb
+source-git-commit: 0ce574700ce4134cddbb990b9b2765c25112b44d
 workflow-type: tm+mt
-source-wordcount: '1042'
+source-wordcount: '1145'
 ht-degree: 0%
 
 ---
 
-# 를 사용하여 두 스키마 간의 관계를 정의합니다 [!DNL Schema Editor]
+# 를 사용하여 두 스키마 간에 일대일 관계 정의 [!DNL Schema Editor]
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_relationships"
@@ -21,9 +21,21 @@ ht-degree: 0%
 >abstract="서로 다른 클래스에 속하는 스키마는 관계 필드를 통해 컨텍스트에 따라 연결되므로 더 복잡한 세그멘테이션 규칙을 작성할 수 있습니다."
 >text="See the documentation for more information on schema relationships."
 
+>[!CONTEXTUALHELP]
+>id="platform_xdm_1to1_reference_schema"
+>title="참조 스키마"
+>abstract="관계를 설정할 스키마를 선택합니다. 이 스키마는 현재 스키마와 다른 클래스일 수 있습니다."
+>text="See the documentation for more information on schema relationships."
+
+>[!CONTEXTUALHELP]
+>id="platform_xdm_1to1_identity_namespace"
+>title="참조 ID 네임스페이스"
+>abstract="참조 스키마의 기본 ID 필드에 대한 네임스페이스(유형)입니다. 관계에 참여하려면 참조 스키마에 설정된 기본 ID 필드가 있어야 합니다."
+>text="See the documentation for more information on schema relationships."
+
 >[!NOTE]
 >
->Real-time Customer Data Platform B2B Edition을 사용하는 경우 다음 안내서를 참조하십시오 [B2B 관계 생성](./relationship-b2b.md) 을 가리키도록 업데이트하는 것이 좋습니다.
+>Real-time Customer Data Platform B2B Edition에서 일대일 관계를 만드는 방법에 대한 단계는 다음 안내서를 참조하십시오 [B2B 관계 생성](./relationship-b2b.md).
 
 다양한 채널에서 고객과의 관계와 브랜드와의 상호 작용을 파악하는 기능은 Adobe Experience Platform의 중요한 부분입니다. 구조 내에서 이러한 관계 정의 [!DNL Experience Data Model] (XDM) 스키마를 사용하면 고객 데이터에 대한 복잡한 통찰력을 얻을 수 있습니다.
 
@@ -110,6 +122,10 @@ ht-degree: 0%
 ## 소스 스키마에 대한 관계 필드 정의 {#relationship-field}
 
 소스 스키마에 전용 참조 필드가 정의되면 이를 관계 필드로 지정할 수 있습니다.
+
+>[!NOTE]
+>
+>아래 단계에서는 캔버스에서 오른쪽 레일 컨트롤을 사용하여 관계 필드를 정의하는 방법을 설명합니다. Real-Time CDP B2B Edition에 대한 액세스 권한이 있는 경우 를 사용하여 일대일 관계를 정의할 수도 있습니다 [동일한 대화 상자](./relationship-b2b.md#relationship-field) 일대일 관계를 만들 때
 
 을(를) 선택합니다 `favoriteHotel` 캔버스에서 필드를 아래로 스크롤한 다음 **[!UICONTROL 필드 속성]** 까지 **[!UICONTROL 관계]** 확인란이 표시됩니다. 관계 필드 구성에 필요한 매개 변수를 표시하려면 확인란을 선택합니다.
 

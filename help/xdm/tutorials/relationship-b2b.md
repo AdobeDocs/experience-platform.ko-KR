@@ -2,18 +2,24 @@
 title: Real-time Customer Data Platform B2B Edition에서 두 스키마 간의 관계 정의
 description: Real-time Customer Data Platform B2B Edition에서 두 스키마 간에 일대일 관계를 정의하는 방법을 알아봅니다.
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: f4ca1efe9c728f50008d7fbaa17aa009dfc18393
+source-git-commit: b9ec275df738e006d3fec2cdd64b0ed6577dbff8
 workflow-type: tm+mt
-source-wordcount: '1201'
+source-wordcount: '1351'
 ht-degree: 0%
 
 ---
 
-# Real-time Customer Data Platform B2B Edition에서 두 스키마 간의 관계를 정의합니다
+# Real-time Customer Data Platform B2B Edition에서 두 스키마 간에 다대다 관계 정의
+
+>[!CONTEXTUALHELP]
+>id="platform_xdm_b2b_reference_schema"
+>title="참조 스키마"
+>abstract="관계를 설정할 스키마를 선택합니다. 스키마의 클래스에 따라 B2B 컨텍스트에서 다른 엔티티와의 기존 관계가 있을 수도 있습니다."
+>text="See the documentation to learn how B2B schema classes relate to each other."
 
 >[!NOTE]
 >
->Real-time Customer Data Platform B2B Edition을 사용하지 않는 경우 다음에 대한 안내서를 참조하십시오 [비B2B 관계 만들기](./relationship-ui.md) 을 가리키도록 업데이트하는 것이 좋습니다.
+>Real-time Customer Data Platform B2B Edition을 사용하지 않거나 일대일 관계를 만들려면 다음에 대한 안내서를 참조하십시오 [일대일 관계 만들기](./relationship-ui.md) 을 가리키도록 업데이트하는 것이 좋습니다.
 
 Real-time Customer Data Platform B2B Edition은 다음을 포함하여 기본 B2B 데이터 엔티티를 캡처하는 여러 XDM(Experience Data Model) 클래스를 제공합니다 [계정](../classes/b2b/business-account.md), [기회](../classes/b2b/business-opportunity.md), [캠페인](../classes/b2b/business-campaign.md), 등. 이러한 클래스를 기반으로 스키마를 빌드하고 이 스키마를 [실시간 고객 프로필](../../profile/home.md)를 사용하면 서로 다른 소스의 데이터를 조합 스키마라고 하는 통합 표현으로 병합할 수 있습니다.
 
@@ -45,7 +51,13 @@ Real-time Customer Data Platform B2B Edition은 다음을 포함하여 기본 B2
 
 ### B2B 관계에서의 ID 이해
 
-관계를 설정하려면 두 스키마에 기본 ID가 정의되어 있어야 하며 [!DNL Real-time Customer Profile]. B2B 엔티티에 대한 기본 ID를 설정할 때는 문자열 기반 엔티티 ID가 서로 다른 시스템 또는 위치에서 수집하는 경우 겹칠 수 있으므로 Platform에서 데이터 충돌이 발생할 수 있습니다.
+>[!CONTEXTUALHELP]
+>id="platform_xdm_b2b_identity_namespace"
+>title="참조 ID 네임스페이스"
+>abstract="참조 스키마의 기본 ID 필드에 대한 네임스페이스(유형)입니다. 관계에 참여하려면 참조 스키마에 설정된 기본 ID 필드가 있어야 합니다."
+>text="See the documentation to learn more about identities in B2B relationships."
+
+관계를 설정하려면 대상 스키마에 정의된 기본 ID가 있어야 합니다. B2B 엔티티에 대한 기본 ID를 설정할 때는 문자열 기반 엔티티 ID가 서로 다른 시스템 또는 위치에서 수집하는 경우 겹칠 수 있으므로 Platform에서 데이터 충돌이 발생할 수 있습니다.
 
 이를 설명하기 위해 모든 표준 B2B 클래스에는 [[!UICONTROL B2B 소스] 데이터 유형](../data-types/b2b-source.md). 이 데이터 유형은 식별자의 소스에 대한 다른 컨텍스트 정보와 함께 B2B 엔티티에 대한 문자열 식별자에 대한 필드를 제공합니다. 이 필드 중 하나는 `sourceKey`를 사용하여 데이터 유형의 다른 필드의 값을 연결하여 엔티티에 대한 완전 고유 식별자를 생성합니다. 이 필드는 항상 B2B 엔티티 스키마의 기본 ID로 사용해야 합니다.
 
@@ -60,6 +72,7 @@ Real-time Customer Data Platform B2B Edition은 다음을 포함하여 기본 B2
 ### [!DNL Opportunities] 스키마
 
 소스 스키마 &quot;[!DNL Opportunities]&quot; [!UICONTROL XDM 비즈니스 기회] 클래스 이름을 지정합니다. 이 수업에서 제공한 필드 중 하나이고 `opportunityKey`는 스키마의 식별자 역할을 합니다. 특히, `sourceKey` 아래의 필드 `opportunityKey` 개체는 라는 사용자 지정 네임스페이스 아래에 스키마의 기본 ID로 설정됩니다. [!DNL B2B Opportunity].
+
 아래에 표시됨 **[!UICONTROL 스키마 속성]**&#x200B;에서 사용할 수 있도록 이 스키마가 활성화되었습니다. [!DNL Real-time Customer Profile].
 
 ![기회 스키마](../images/tutorials/relationship-b2b/opportunities.png)
@@ -71,6 +84,18 @@ Real-time Customer Data Platform B2B Edition은 다음을 포함하여 기본 B2
 ![계정 스키마](../images/tutorials/relationship-b2b/accounts.png)
 
 ## 소스 스키마에 대한 관계 필드 정의 {#relationship-field}
+
+>[!CONTEXTUALHELP]
+>id="platform_xdm_b2b_relationship_name_current"
+>title="현재 스키마의 관계 이름"
+>abstract="현재 스키마에서 참조 스키마로의 관계를 설명하는 레이블입니다(예: &#39;관련 계정&#39;). 이 레이블은 프로필 및 세그멘테이션에서 사용하여 관련 B2B 엔티티의 데이터에 컨텍스트를 제공합니다."
+>text="See the documentation to learn more about building B2B schema relationships."
+
+>[!CONTEXTUALHELP]
+>id="platform_xdm_b2b_relationship_name_reference"
+>title="참조 스키마의 관계 이름"
+>abstract="참조 스키마에서 현재 스키마에 대한 관계를 설명하는 레이블입니다(예: &#39;관련 기회&#39;). 이 레이블은 프로필 및 세그멘테이션에서 사용하여 관련 B2B 엔티티의 데이터에 컨텍스트를 제공합니다."
+>text="See the documentation to learn more about building B2B schema relationships."
 
 두 스키마 간의 관계를 정의하려면 소스 스키마에 대상 스키마의 기본 ID를 참조하는 전용 필드가 있어야 합니다. 표준 B2B 클래스에는 일반적으로 관련된 비즈니스 엔터티에 대한 전용 소스 키 필드가 포함됩니다. 예: [!UICONTROL XDM 비즈니스 기회] 클래스에 관련 계정의 소스 키 필드가 포함되어 있습니다(`accountKey`) 및 관련 캠페인(`campaignKey`). 하지만 다른 항목을 추가할 수도 있습니다 [!UICONTROL B2B 소스] 기본 구성 요소 이상이 필요한 경우 사용자 지정 필드 그룹을 사용하여 스키마에 필드를 추가합니다.
 
