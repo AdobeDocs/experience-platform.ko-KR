@@ -5,10 +5,10 @@ title: ID 네임스페이스 개요
 topic-legacy: overview
 description: ID 네임스페이스는 ID 서비스의 구성 요소이며 ID가 연관되는 컨텍스트의 지표 역할을 합니다. 예를 들어 "name@email.com"이라는 값을 이메일 주소로 또는 "443522"이라는 값을 숫자 CRM ID로 구분합니다.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 3a9e97b472482d6a7f6df5f2a59f2f75635be181
+source-git-commit: 3e073d2c45f88c56473ccc2e3d18a2bbedd4f254
 workflow-type: tm+mt
-source-wordcount: '1598'
-ht-degree: 2%
+source-wordcount: '1627'
+ht-degree: 3%
 
 ---
 
@@ -32,7 +32,13 @@ ID 네임스페이스로 작업하려면 관련된 다양한 Adobe Experience Pl
 
 ![](images/identity-service-stitching.png)
 
-### ID 유형
+### ID 유형 {#identity-types}
+
+>[!CONTEXTUALHELP]
+>id="platform_identity_create_namespace"
+>title="ID 유형 지정"
+>abstract="ID 유형은 데이터가 ID 그래프에 저장되는지 여부를 제어합니다. 사람이 아닌 식별자는 저장되지 않으며 다른 모든 ID 유형은 저장됩니다."
+>text="Learn more in documentation"
 
 데이터는 여러 가지 ID 유형으로 식별할 수 있습니다. ID 유형은 ID 네임스페이스가 생성될 때 지정되며 데이터가 ID 그래프로 유지되는지 여부와 데이터를 처리하는 방법에 대한 특수 지침을 제어합니다. ID 유형을 제외한 모든 ID 유형 **비사용자 식별자** 네임스페이스 및 해당 ID 값을 id 그래프 클러스터에 결합하는 동일한 동작을 따릅니다. 를 사용할 때 데이터가 함께 결합되지 않습니다 **비사용자 식별자**.
 
@@ -77,7 +83,7 @@ Platform 내의 모든 조직에서 사용할 수 있도록 다음과 같은 표
 
 UI에서 ID 네임스페이스를 보려면 **[!UICONTROL ID]** 왼쪽 탐색에서 를 선택하고 을 선택합니다. **[!UICONTROL 찾아보기]**.
 
-![찾아보기](./images/browse.png)
+![검색](./images/browse.png)
 
 ID 네임스페이스 목록은 페이지의 기본 인터페이스에 나타나며 해당 이름, ID 기호, 최근 업데이트 날짜 및 ID가 표준 네임스페이스인지 사용자 지정 네임스페이스인지에 대한 정보를 표시합니다. 오른쪽 레일에는 다음 정보가 있습니다. [!UICONTROL ID 그래프 강도].
 
