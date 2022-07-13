@@ -5,9 +5,9 @@ title: UI에서 스키마 만들기 및 편집
 description: Experience Platform 사용자 인터페이스에서 스키마를 만들고 편집하는 방법에 대한 기본 사항을 배웁니다.
 topic-legacy: user guide
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 90f055f2fbeb7571d2f7c1daf4ea14490069f2eb
+source-git-commit: a95e5cf02e993d6c761abd74c98c0967a89eb678
 workflow-type: tm+mt
-source-wordcount: '2895'
+source-wordcount: '2901'
 ht-degree: 0%
 
 ---
@@ -225,8 +225,7 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_schemas_enableforprofile"
 >title="프로필에 대한 스키마 활성화"
->abstract="프로필에 대해 스키마가 활성화되면 이 스키마에서 생성된 모든 데이터 세트는 실시간 고객 프로필에 참여하며, 서로 다른 소스의 데이터를 병합하여 각 고객에 대한 전체 보기를 구성합니다. 스키마를 사용하여 데이터를 프로필에 수집하면 비활성화할 수 없습니다."
->text="See the documentation for more information on enabling a schema for Profile."
+>abstract="프로필에 대해 스키마가 활성화되면 이 스키마에서 생성된 모든 데이터 세트는 실시간 고객 프로필에 참여하며, 서로 다른 소스의 데이터를 병합하여 각 고객에 대한 전체 보기를 구성합니다. 스키마를 사용하여 데이터를 프로필에 수집하면 비활성화할 수 없습니다. 자세한 내용은 설명서를 참조하십시오."
 
 [실시간 고객 프로필](../../../profile/home.md) 서로 다른 소스의 데이터를 병합하여 각 개별 고객에 대한 전체 보기를 구성합니다. 스키마로 캡처된 데이터를 이 프로세스에 참여하도록 하려면 에서 사용할 스키마를 활성화해야 합니다 [!DNL Profile].
 

@@ -2,9 +2,9 @@
 title: Real-time Customer Data Platform B2B Edition에서 두 스키마 간의 관계 정의
 description: Real-time Customer Data Platform B2B Edition에서 두 스키마 간에 일대일 관계를 정의하는 방법을 알아봅니다.
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: b9ec275df738e006d3fec2cdd64b0ed6577dbff8
+source-git-commit: a95e5cf02e993d6c761abd74c98c0967a89eb678
 workflow-type: tm+mt
-source-wordcount: '1351'
+source-wordcount: '1401'
 ht-degree: 0%
 
 ---
@@ -14,12 +14,7 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_reference_schema"
 >title="참조 스키마"
->abstract="관계를 설정할 스키마를 선택합니다. 스키마의 클래스에 따라 B2B 컨텍스트에서 다른 엔티티와의 기존 관계가 있을 수도 있습니다."
->text="See the documentation to learn how B2B schema classes relate to each other."
-
->[!NOTE]
->
->Real-time Customer Data Platform B2B Edition을 사용하지 않거나 일대일 관계를 만들려면 다음에 대한 안내서를 참조하십시오 [일대일 관계 만들기](./relationship-ui.md) 을 가리키도록 업데이트하는 것이 좋습니다.
+>abstract="관계를 설정할 스키마를 선택합니다. 스키마의 클래스에 따라 B2B 컨텍스트에서 다른 엔티티와의 기존 관계가 있을 수도 있습니다. B2B 스키마 클래스가 서로 어떻게 관련되는지를 알아보려면 설명서를 참조하십시오."
 
 Real-time Customer Data Platform B2B Edition은 다음을 포함하여 기본 B2B 데이터 엔티티를 캡처하는 여러 XDM(Experience Data Model) 클래스를 제공합니다 [계정](../classes/b2b/business-account.md), [기회](../classes/b2b/business-opportunity.md), [캠페인](../classes/b2b/business-campaign.md), 등. 이러한 클래스를 기반으로 스키마를 빌드하고 이 스키마를 [실시간 고객 프로필](../../profile/home.md)를 사용하면 서로 다른 소스의 데이터를 조합 스키마라고 하는 통합 표현으로 병합할 수 있습니다.
 
@@ -32,6 +27,8 @@ Real-time Customer Data Platform B2B Edition은 다음을 포함하여 기본 B2
 이 자습서에서는 실시간 CDP B2B Edition에서 두 스키마 간에 다대다 관계를 정의하는 단계를 설명합니다.
 
 >[!NOTE]
+>
+>Real-time Customer Data Platform B2B Edition을 사용하지 않거나 일대일 관계를 만들려면 다음에 대한 안내서를 참조하십시오 [일대일 관계 만들기](./relationship-ui.md) 을 가리키도록 업데이트하는 것이 좋습니다.
 >
 >이 자습서에서는 플랫폼 UI에서 B2B 스키마 간의 관계를 수동으로 설정하는 방법에 중점을 둡니다. B2B 소스 연결에서 데이터를 가져오는 경우 자동 생성 유틸리티를 사용하여 필요한 스키마, ID 및 관계를 대신 생성할 수 있습니다. 자세한 내용은 B2B 네임스페이스 및 스키마에 대한 소스 설명서를 참조하십시오 [자동 생성 유틸리티 사용](../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md).
 
@@ -54,8 +51,7 @@ Real-time Customer Data Platform B2B Edition은 다음을 포함하여 기본 B2
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_identity_namespace"
 >title="참조 ID 네임스페이스"
->abstract="참조 스키마의 기본 ID 필드에 대한 네임스페이스(유형)입니다. 관계에 참여하려면 참조 스키마에 설정된 기본 ID 필드가 있어야 합니다."
->text="See the documentation to learn more about identities in B2B relationships."
+>abstract="참조 스키마의 기본 ID 필드에 대한 네임스페이스(유형)입니다. 관계에 참여하려면 참조 스키마에 설정된 기본 ID 필드가 있어야 합니다. B2B 관계의 ID에 대해 자세히 알려면 설명서를 참조하십시오."
 
 관계를 설정하려면 대상 스키마에 정의된 기본 ID가 있어야 합니다. B2B 엔티티에 대한 기본 ID를 설정할 때는 문자열 기반 엔티티 ID가 서로 다른 시스템 또는 위치에서 수집하는 경우 겹칠 수 있으므로 Platform에서 데이터 충돌이 발생할 수 있습니다.
 
@@ -88,14 +84,12 @@ Real-time Customer Data Platform B2B Edition은 다음을 포함하여 기본 B2
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_relationship_name_current"
 >title="현재 스키마의 관계 이름"
->abstract="현재 스키마에서 참조 스키마로의 관계를 설명하는 레이블입니다(예: &#39;관련 계정&#39;). 이 레이블은 프로필 및 세그멘테이션에서 사용하여 관련 B2B 엔티티의 데이터에 컨텍스트를 제공합니다."
->text="See the documentation to learn more about building B2B schema relationships."
+>abstract="현재 스키마에서 참조 스키마로의 관계를 설명하는 레이블입니다(예: &#39;관련 계정&#39;). 이 레이블은 프로필 및 세그멘테이션에서 사용하여 관련 B2B 엔티티의 데이터에 컨텍스트를 제공합니다. B2B 스키마 관계 구축에 대한 자세한 내용은 설명서를 참조하십시오."
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_relationship_name_reference"
 >title="참조 스키마의 관계 이름"
->abstract="참조 스키마에서 현재 스키마에 대한 관계를 설명하는 레이블입니다(예: &#39;관련 기회&#39;). 이 레이블은 프로필 및 세그멘테이션에서 사용하여 관련 B2B 엔티티의 데이터에 컨텍스트를 제공합니다."
->text="See the documentation to learn more about building B2B schema relationships."
+>abstract="참조 스키마에서 현재 스키마에 대한 관계를 설명하는 레이블입니다(예: &#39;관련 기회&#39;). 이 레이블은 프로필 및 세그멘테이션에서 사용하여 관련 B2B 엔티티의 데이터에 컨텍스트를 제공합니다. B2B 스키마 관계 구축에 대한 자세한 내용은 설명서를 참조하십시오."
 
 두 스키마 간의 관계를 정의하려면 소스 스키마에 대상 스키마의 기본 ID를 참조하는 전용 필드가 있어야 합니다. 표준 B2B 클래스에는 일반적으로 관련된 비즈니스 엔터티에 대한 전용 소스 키 필드가 포함됩니다. 예: [!UICONTROL XDM 비즈니스 기회] 클래스에 관련 계정의 소스 키 필드가 포함되어 있습니다(`accountKey`) 및 관련 캠페인(`campaignKey`). 하지만 다른 항목을 추가할 수도 있습니다 [!UICONTROL B2B 소스] 기본 구성 요소 이상이 필요한 경우 사용자 지정 필드 그룹을 사용하여 스키마에 필드를 추가합니다.
 

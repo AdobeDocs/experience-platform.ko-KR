@@ -6,9 +6,9 @@ description: 이 문서에서는 Experience Platform 사용자 인터페이스�
 topic-legacy: tutorial
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
-source-git-commit: 0ce574700ce4134cddbb990b9b2765c25112b44d
+source-git-commit: a95e5cf02e993d6c761abd74c98c0967a89eb678
 workflow-type: tm+mt
-source-wordcount: '1145'
+source-wordcount: '1172'
 ht-degree: 0%
 
 ---
@@ -18,30 +18,27 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_schemas_relationships"
 >title="스키마 관계"
->abstract="서로 다른 클래스에 속하는 스키마는 관계 필드를 통해 컨텍스트에 따라 연결되므로 더 복잡한 세그멘테이션 규칙을 작성할 수 있습니다."
->text="See the documentation for more information on schema relationships."
+>abstract="서로 다른 클래스에 속하는 스키마는 관계 필드를 통해 컨텍스트에 따라 연결되므로 더 복잡한 세그멘테이션 규칙을 작성할 수 있습니다. 스키마 관계에 대한 자세한 내용은 설명서를 참조하십시오."
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_1to1_reference_schema"
 >title="참조 스키마"
->abstract="관계를 설정할 스키마를 선택합니다. 이 스키마는 현재 스키마와 다른 클래스일 수 있습니다."
->text="See the documentation for more information on schema relationships."
+>abstract="관계를 설정할 스키마를 선택합니다. 이 스키마는 현재 스키마와 다른 클래스일 수 있습니다. 스키마 관계에 대한 자세한 내용은 설명서를 참조하십시오."
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_1to1_identity_namespace"
 >title="참조 ID 네임스페이스"
->abstract="참조 스키마의 기본 ID 필드에 대한 네임스페이스(유형)입니다. 관계에 참여하려면 참조 스키마에 설정된 기본 ID 필드가 있어야 합니다."
->text="See the documentation for more information on schema relationships."
-
->[!NOTE]
->
->Real-time Customer Data Platform B2B Edition에서 일대일 관계를 만드는 방법에 대한 단계는 다음 안내서를 참조하십시오 [B2B 관계 생성](./relationship-b2b.md).
+>abstract="참조 스키마의 기본 ID 필드에 대한 네임스페이스(유형)입니다. 관계에 참여하려면 참조 스키마에 설정된 기본 ID 필드가 있어야 합니다. 스키마 관계에 대한 자세한 내용은 설명서를 참조하십시오."
 
 다양한 채널에서 고객과의 관계와 브랜드와의 상호 작용을 파악하는 기능은 Adobe Experience Platform의 중요한 부분입니다. 구조 내에서 이러한 관계 정의 [!DNL Experience Data Model] (XDM) 스키마를 사용하면 고객 데이터에 대한 복잡한 통찰력을 얻을 수 있습니다.
 
 스키마 관계는 결합 스키마 및 [!DNL Real-time Customer Profile]이는 동일한 클래스를 공유하는 스키마에만 적용됩니다. 다른 클래스에 속하는 두 스키마 간의 관계를 설정하려면 대상 스키마의 ID를 참조하는 소스 스키마에 전용 관계 필드를 추가해야 합니다.
 
 이 문서에서는 [!DNL Experience Platform] 사용자 인터페이스. API를 사용하여 스키마 관계를 정의하는 단계는 [스키마 레지스트리 API를 사용하여 관계 정의](relationship-api.md).
+
+>[!NOTE]
+>
+>Real-time Customer Data Platform B2B Edition에서 일대일 관계를 만드는 방법에 대한 단계는 다음 안내서를 참조하십시오 [B2B 관계 생성](./relationship-b2b.md).
 
 ## 시작하기
 

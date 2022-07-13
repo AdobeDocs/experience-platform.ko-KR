@@ -5,9 +5,9 @@ title: 스키마 구성 기본 사항
 topic-legacy: overview
 description: 이 문서에서는 Adobe Experience Platform에서 사용할 스키마를 구성하기 위한 XDM(Experience Data Model) 스키마와 빌딩 블록, 원칙 및 모범 사례를 소개합니다.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 11dcb1a824020a5b803621025863e95539ab4d71
+source-git-commit: a95e5cf02e993d6c761abd74c98c0967a89eb678
 workflow-type: tm+mt
-source-wordcount: '3992'
+source-wordcount: '4103'
 ht-degree: 0%
 
 ---
@@ -54,8 +54,7 @@ Dell의 [!DNL Experience Platform] 빌드되어 있으며, 다음과 같이 알�
 >[!CONTEXTUALHELP]
 >id="platform_schemas_identities"
 >title="스키마의 ID"
->abstract="ID는 이메일 주소 또는 마케팅 ID와 같이 제목을 식별하는 데 사용할 수 있는 스키마 내의 주요 필드입니다. 이러한 필드는 각 개인에 대한 ID 그래프를 만들고 고객 프로필을 빌드하는 데 사용됩니다."
->text="See the documentation for more information on identities in schemas."
+>abstract="ID는 이메일 주소 또는 마케팅 ID와 같이 제목을 식별하는 데 사용할 수 있는 스키마 내의 주요 필드입니다. 이러한 필드는 각 개인에 대한 ID 그래프를 만들고 고객 프로필을 빌드하는 데 사용됩니다. 스키마의 ID에 대한 자세한 내용은 설명서를 참조하십시오."
 
 스키마는에 데이터를 수집하는 데 사용됩니다 [!DNL Experience Platform]. 이 데이터는 여러 서비스에서 사용하여 개별 엔터티에 대한 단일 통합 보기를 만들 수 있습니다. 따라서 스키마를 생각할 때 고객 ID와 데이터가 어디에서 왔는지에 관계없이 대상을 식별하는 데 사용할 수 있는 필드를 고려하는 것이 중요합니다.
 
@@ -169,6 +168,11 @@ ID 데이터를 Platform으로 전송하는 방법에는 두 가지가 있습니
 
 ### 클래스 {#class}
 
+>[!CONTEXTUALHELP]
+>id="platform_schemas_class"
+>title="클래스"
+>abstract="모든 스키마는 단일 클래스를 기반으로 합니다. 클래스는 스키마 동작과 해당 클래스를 기반으로 하는 모든 스키마에 포함해야 하는 공통 속성을 정의합니다. 스키마 구성에 클래스가 관련되는 방식에 대한 자세한 내용은 설명서를 참조하십시오."
+
 스키마 작성은 클래스를 할당하여 시작됩니다. 클래스는 스키마에 포함할 데이터의 행동 측면(레코드 또는 시계열)을 정의합니다. 이 외에도 클래스는 해당 클래스를 기반으로 하는 모든 스키마에는 여러 호환 데이터 세트를 병합하는 방법을 포함하고 제공해야 하는 가장 작은 수의 공통 속성을 설명합니다.
 
 스키마의 클래스는 해당 스키마에 사용할 수 있는 필드 그룹을 결정합니다. 이 내용은 [다음 섹션](#field-group).
@@ -182,6 +186,11 @@ Adobe은 몇 가지 표준(&quot;core&quot;) XDM 클래스를 제공합니다. �
 사용 가능한 표준 XDM 클래스의 최신 목록을 보려면 [공식 XDM 저장소](https://github.com/adobe/xdm/tree/master/components/classes). 또는 다음 안내서를 참조할 수 있습니다 [xdm 구성 요소 탐색](../ui/explore.md) ui에서 리소스를 보려는 경우.
 
 ### 필드 그룹 {#field-group}
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_fieldgroup"
+>title="필드 그룹"
+>abstract="필드 그룹은 추가 속성으로 스키마를 확장할 수 있는 재사용 가능한 구성 요소입니다. 대부분의 필드 그룹은 특정 클래스와 호환됩니다. Adobe으로 정의된 표준 필드 그룹을 사용하거나 사용자 지정 필드 그룹을 수동으로 정의할 수 있습니다. 필드 그룹이 스키마 구성에 포함되는 방법에 대한 자세한 내용은 설명서를 참조하십시오."
 
 필드 그룹은 개인 세부 정보, 호텔 환경 설정 또는 주소와 같은 특정 기능을 구현하는 필드를 하나 이상 정의하는 재사용 가능한 구성 요소입니다. 필드 그룹은 호환 클래스를 구현하는 스키마의 일부로 포함되기 위한 것입니다.
 
