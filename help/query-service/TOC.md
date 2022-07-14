@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 쿼리 서비스 도움말
 breadcrumb-title: Query Service 안내서
 user-guide-description: 표준 SQL을 사용하여 플랫폼 데이터 레이크에서 데이터를 쿼리합니다.
 feature: Queries
-source-git-commit: b35581387a8b75f365db433b6138fdd8a7f96db0
+source-git-commit: d955473fb9123a6fc2384cde4073c713b921f582
 workflow-type: tm+mt
-source-wordcount: '199'
+source-wordcount: '200'
 ht-degree: 18%
 
 ---
@@ -69,6 +69,7 @@ ht-degree: 18%
    - [RStudio](clients/rstudio.md)
    - [타블로](clients/tableau.md)
 - 데이터 거버넌스 {#data-governance}
+   - [개요](data-governance/overview.md)
    - [감사 로그 안내서](data-governance/audit-log-guide.md)
    - [임시 스키마 데이터 세트의 ID](data-governance/ad-hoc-schema-identities.md)
    - [Ad Hoc 스키마에 대한 특성 기반 액세스 제어 지원](./data-governance/ad-hoc-schema-labels.md)

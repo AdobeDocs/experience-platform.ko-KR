@@ -2,7 +2,7 @@
 title: Ad Hoc 스키마에 대한 속성 기반 액세스 제어 지원
 description: Adobe Experience Platform Query Service를 통해 생성된 Ad Hoc 스키마의 데이터 필드에 대한 액세스를 제한하는 안내서입니다.
 exl-id: d675e3de-ab62-4beb-9360-1f6090397a17
-source-git-commit: 9b327257eacea189363587ad79dc6595b636d5b8
+source-git-commit: d955473fb9123a6fc2384cde4073c713b921f582
 workflow-type: tm+mt
 source-wordcount: '1037'
 ht-degree: 1%
@@ -40,7 +40,7 @@ Adobe Experience Platform으로 가져오는 모든 데이터는 XDM(Experience 
 >
 >Ad Hoc 스키마는 스키마 인벤토리에 기본적으로 표시되지 않습니다.
 
-## Platform UI의 스키마 인벤토리에서 Ad Hoc 스키마 검색
+## Platform UI의 스키마 인벤토리에서 Ad Hoc 스키마 검색 {#discover-ad-hoc-schemas}
 
 Platform UI에서 Ad Hoc 스키마를 표시하려면 필터 아이콘(![필터 아이콘.](../images/data-governance/filter.png))을 클릭하여 검색 필드 왼쪽에 있는 다음 **을 선택합니다[!UICONTROL 임시 스키마 표시] 왼쪽 레일에 표시됩니다.
 
