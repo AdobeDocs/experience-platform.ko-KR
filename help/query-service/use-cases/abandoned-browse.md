@@ -4,7 +4,7 @@ title: Adobe Experience Platform 쿼리 서비스에 대한 사용 사례 예
 topic-legacy: tutorial
 description: Adobe Experience Platform Query Service의 다기능성과 이점을 보여주는 완벽한 예입니다.
 exl-id: 00bdae47-71b7-44ea-9365-a1d64c88d2bf
-source-git-commit: 06655e930e447b48089891ca930da89854b8320b
+source-git-commit: 6f6256b5601ce5c230ef334a9ce71325b43fda45
 workflow-type: tm+mt
 source-wordcount: '712'
 ht-degree: 2%
@@ -15,7 +15,7 @@ ht-degree: 2%
 
 이 문서 및 함께 제공되는 비디오 프레젠테이션은 Adobe Experience Platform을 어떻게 구현하는지 보여주는 포괄적인 워크플로우를 제공합니다 [!DNL Query Service] 조직의 전략적 비즈니스 통찰력을 얻을 수 있습니다. 이 안내서에서는 찾아보기 포기 사용 사례를 예로 사용하여 다음과 같은 주요 개념을 보여줍니다.
 
-* Adobe Experience Platform의 잠재력을 극대화하기 위한 데이터 처리의 주요 중요성
+* Adobe Experience Platform의 잠재력을 극대화하기 위한 데이터 처리의 주요 중요성입니다.
 * 기존 데이터 아키텍처를 기반으로 쿼리를 빌드하는 방법입니다.
 * 요구 사항에 맞는 데이터 품질 및 단점을 완화하는 방법을 보장합니다.
 * 세분화 및 개인화를 위한 대상의 다운스트림으로 사용하기 위해 설정된 빈도에서 쿼리를 실행하도록 예약하는 프로세스입니다.

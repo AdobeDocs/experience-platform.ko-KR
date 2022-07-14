@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform 쿼리 서비스 도움말
 breadcrumb-title: Query Service 안내서
 user-guide-description: 표준 SQL을 사용하여 플랫폼 데이터 레이크에서 데이터를 쿼리합니다.
 feature: Queries
-source-git-commit: b93221a9611de719d5194c387d582e77a162a1fd
+source-git-commit: b35581387a8b75f365db433b6138fdd8a7f96db0
 workflow-type: tm+mt
-source-wordcount: '195'
-ht-degree: 17%
+source-wordcount: '199'
+ht-degree: 18%
 
 ---
 
@@ -44,7 +44,9 @@ ht-degree: 17%
    - [익명 블록](best-practices/anonymous-block.md)
    - [증분 로드](best-practices/incremental-load.md)
    - [데이터 중복 제거](best-practices/deduplication.md)
-- [파생 특성](derived-attributes.md)
+- 파생 특성 {#derived-attributes}
+   - [개요](derived-attributes/overview.md)
+   - [십진수 사용 사례](derived-attributes/deciles-use-case.md)
 - 샘플 쿼리 {#sample-queries}
    - [샘플 경험 이벤트 쿼리](sample-queries/experience-event.md)
    - [샘플 Adobe Analytics 쿼리](sample-queries/adobe-analytics.md)
