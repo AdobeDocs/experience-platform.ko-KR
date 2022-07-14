@@ -1,9 +1,7 @@
 ---
 title: '데칠레 기반 파생 속성 사용 사례 '
 description: 이 안내서에서는 Query Service를 사용하여 프로필 데이터에 사용할 데코일 기반 파생 속성을 만드는 데 필요한 단계를 보여줍니다.
-hide: true
-hidefromtoc: true
-source-git-commit: 4f44e66ee7537e038628a5beb6b3b3bd0760ff1b
+source-git-commit: 61e0895484b8005e2109056d51557f609fecaf97
 workflow-type: tm+mt
 source-wordcount: '1508'
 ht-degree: 2%

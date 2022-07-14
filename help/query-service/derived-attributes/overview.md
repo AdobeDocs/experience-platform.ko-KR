@@ -1,10 +1,8 @@
 ---
 title: 파생 속성
 description: 파생된 특성을 사용하면 원하는 특성을 생성하여 일반 케이지에서 새로 고치고 선택적으로 실시간 고객 프로필 데이터에 게시할 수 있습니다. 이 문서에서는 Query Service를 사용하여 프로필 데이터에 사용할 파생된 속성을 만드는 방법에 대한 개요를 제공합니다.
-hide: true
-hidefromtoc: true
 exl-id: 5d52b268-e2a3-411c-8242-3aa32e759937
-source-git-commit: ae11d6f622c42d08373b7454ef920a80abaf2425
+source-git-commit: 61e0895484b8005e2109056d51557f609fecaf97
 workflow-type: tm+mt
 source-wordcount: '752'
 ht-degree: 0%
