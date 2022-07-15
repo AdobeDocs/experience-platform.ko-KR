@@ -2,9 +2,9 @@
 title: Adobe Advertising Cloud DSP 연결
 description: 'Adobe Advertising Cloud DSP은 [!DNL Adobe Real-time Customer Data Profile]: 인증된 자사 세그먼트를 승인된 광고주 및 사용자와 캠페인 활성화를 위해 공유할 수 있습니다.'
 exl-id: 11ff7797-a9c6-4334-b843-ae9df9a48e54
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: 27869b91deeb4a5cca580970507845d992d21aaf
 workflow-type: tm+mt
-source-wordcount: '1026'
+source-wordcount: '1044'
 ht-degree: 1%
 
 ---
@@ -33,7 +33,7 @@ DSP 계정이 있는 미디어 업체는 고객을 대신하여 재타겟팅 캠
 
 ## 전제 조건 {#prerequisites}
 
-* DSP 계정 수준 및 캠페인 수준 설정을 사용하여 세그먼트를 [!DNL LiveRamp RampID]으로 고객 데이터를 변환하는 [!DNL RampIDs] 대상 가능한 세그먼트를 만들려면 DSP 계정 팀이 이 구성을 수행합니다.
+* DSP 계정 수준 및 캠페인 수준 설정을 사용하여 세그먼트를 [!DNL LiveRamp RampID]으로 고객 데이터를 변환하는 [!DNL RampIDs] 대상 가능한 세그먼트를 만들려면 DSP 계정 팀이 이 구성을 수행합니다. [!DNL RampID] 는 DSP과 간의 파트너십을 통해 사용할 수 있습니다 [!DNL LiveRamp], 그리고 당신은 당신 자신이 필요하지 않습니다 [!DNL LiveRamp] 사용할 멤버십입니다.
 * Experience Platform 계정에 대한 Experience Cloud 조직 ID입니다. 에서 ID를 찾을 수 있습니다 [!DNL Real-Time CDP] 사용자 프로필 페이지.
 * A [[!DNL Real-Time CDP] DSP의 소스](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html) campaign 활성화를 위한 세그먼트를 수신하려면 다음을 수행하십시오. DSP 계정 팀이 Experience Cloud 조직 ID를 사용하여 소스를 만듭니다.
 * DSP 계정 또는 광고주의 소스 키로서, [[!DNL Real-Time CDP] 소스가 DSP에서 생성됨](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html). DSP 계정 팀이 이 키를 사용자와 공유합니다. Experience Platform 내에서 사용할 수 있게 Advertising Cloud DSP 대상에 대한 대상 연결을 만듭니다. [아래의 설명](#authenticate).
