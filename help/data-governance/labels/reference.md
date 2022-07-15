@@ -5,14 +5,14 @@ title: 데이터 사용 레이블 용어집
 topic-legacy: labels
 description: 이 문서에서는 현재 Adobe Experience Platform에서 지원하는 모든 데이터 사용 레이블에 대해 간략하게 설명합니다.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: 90f055f2fbeb7571d2f7c1daf4ea14490069f2eb
+source-git-commit: 1a10216c01a049539b5e1d21d0c42942496b2e3e
 workflow-type: tm+mt
 source-wordcount: '2083'
 ht-degree: 2%
 
 ---
 
-# 데이터 사용 레이블 용어집
+# 데이터 사용 레이블 용어집 {#data-usage-labels-glossary}
 
 >[!CONTEXTUALHELP]
 >id="platform_policies_labeltype"
