@@ -9,7 +9,7 @@ exl-id: a5991b08-217a-4b39-9948-d28eadea7ded
 source-git-commit: c3320f040383980448135371ad9fae583cfca344
 workflow-type: tm+mt
 source-wordcount: '499'
-ht-degree: 32%
+ht-degree: 36%
 
 ---
 
@@ -25,7 +25,7 @@ Attribution AI 출력은 다양한 차원에 걸쳐 분리될 수 있으며, 고
 
 Attribution AI 데이터는 Adobe(예: [!DNL Analytics]) 또는 비Adobe 데이터 소스.
 
-Attribution AI은 점수, 알고리즘 및 규칙 기반의 두 가지 카테고리를 지원합니다. 알고리즘 점수에는 증분 및 영향을 받는 점수가 포함됩니다. 규칙 기반 점수는 첫 번째 터치, 마지막 터치, 선형, U자형 및 시간 감소가 포함됩니다.
+Attribution AI은 점수, 알고리즘 및 규칙 기반의 두 가지 카테고리를 지원합니다. 알고리즘 점수에는 증분 및 영향을 주는 점수가 포함됩니다. 규칙 기반 점수에는 첫 번째 터치, 마지막 터치, 선형, U자형 및 시간 감소가 포함됩니다.
 
 다음 비디오는 Attribution AI에 대한 이해를 지원하도록 설계되었습니다.
 
@@ -43,8 +43,8 @@ Attribution AI 를 사용하여 다음 사용 사례를 지원할 수 있습니�
 
 ### 추가 기능
 
-또한 Attribution AI은 [!DNL Adobe Analytics] 과 같은 다른 Adobe 솔루션과의 통합을 제공합니다. 따라서 이러한 솔루션을 사용하여 사용자 정의 가능한 알고리즘 모델을 활용하여 미디어 성능을 평가하고 분석 통찰력을 제공할 수 있습니다.
+또한 Attribution AI은 다음과 같은 다른 Adobe 솔루션과의 통합을 제공합니다 [!DNL Adobe Analytics]. 따라서 이러한 솔루션을 사용하여 사용자 정의 가능한 알고리즘 모델을 활용하여 미디어 성능을 평가하고 분석 통찰력을 제공할 수 있습니다.
 
 ## 다음 단계
 
-[시작하기](./getting-started.md) 안내서를 따라 시작할 수 있습니다. 이 안내서에서는 Attribution AI에 필요한 모든 사전 요청 설정을 안내합니다. 자격 증명과 데이터를 이미 준비했다면 [Attribution AI 사용 안내서](./user-guide.md)를 방문하십시오. 이 안내서에서는 인스턴스를 만들고 교육 및 점수를 위해 인스턴스를 제출하는 과정을 안내합니다.
+다음을 수행하여 시작할 수 있습니다. [시작하기](./getting-started.md) 안내서. 이 안내서에서는 Attribution AI에 필요한 모든 사전 요청 설정을 안내합니다. 자격 증명과 데이터를 이미 준비했다면 [Attribution AI 사용 안내서](./user-guide.md). 이 안내서에서는 인스턴스를 만들고 교육 및 점수를 위해 인스턴스를 제출하는 과정을 안내합니다.

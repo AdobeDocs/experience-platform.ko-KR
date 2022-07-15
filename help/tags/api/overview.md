@@ -1,11 +1,11 @@
 ---
 title: Reactor API 안내서
-description: Reactor API를 사용하여 개발자가 Adobe Experience Platform에서 태그에 대한 모든 리소스를 프로그래밍 방식으로 관리할 수 있습니다. API를 사용하여 주요 작업을 수행하는 방법을 알아보려면 이 안내서를 따르십시오.
+description: 개발자는 Reactor API를 통해 프로그래밍 방식으로 Adobe Experience Platform의 태그에 대한 모든 리소스를 관리할 수 있습니다. 이 안내서를 따라 API를 사용하여 주요 작업을 수행하는 방법에 대해 알아보십시오.
 exl-id: 153eab11-db08-499e-80d1-c56f254372ce
 source-git-commit: 7e4bc716e61b33563e0cb8059cb9f1332af7fd36
 workflow-type: tm+mt
 source-wordcount: '1082'
-ht-degree: 1%
+ht-degree: 4%
 
 ---
 

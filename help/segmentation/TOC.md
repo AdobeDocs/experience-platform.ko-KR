@@ -7,7 +7,7 @@ feature: Segments
 source-git-commit: 0f20b5cfb3301bc7f7f336e14e9faa0234c05c51
 workflow-type: tm+mt
 source-wordcount: '163'
-ht-degree: 27%
+ht-degree: 29%
 
 ---
 
@@ -55,7 +55,7 @@ ht-degree: 27%
    - [논리 정량자](pql/logical-quantifiers.md)
    - [기타 함수](pql/misc-functions.md)
 - 튜토리얼 {#tutorials}
-   - [세그먼트 만들기](tutorials/create-a-segment.md)
+   - [세그먼트를 만듭니다](tutorials/create-a-segment.md)
    - [세그먼트 만들기(비디오)](video/create-segment.md)
    - [동적 세그먼트 만들기(비디오)](video/create-a-dynamic-segment.md)
    - [다중 엔티티 세그먼트 만들기(비디오)](video/create-multi-entity-segments.md)

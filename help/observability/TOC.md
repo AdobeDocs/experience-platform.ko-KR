@@ -14,7 +14,7 @@ ht-degree: 46%
 # Observability Insights {#observability}
 
 * [가시성 통찰력 개요](./home.md)
-* 가시성 통찰력 API {#api}
+* Observability Insights API {#api}
    * [개요](./api/overview.md)
    * [시작하기](./api/getting-started.md)
    * [지표](./api/metrics.md)

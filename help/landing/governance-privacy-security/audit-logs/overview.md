@@ -5,7 +5,7 @@ exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
 source-git-commit: cd7ce8c107769a77373f328d9aa84c982be0d8ee
 workflow-type: tm+mt
 source-wordcount: '847'
-ht-degree: 11%
+ht-degree: 14%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 11%
 
 ## 감사 로그로 캡처된 이벤트 유형 {#category}
 
-다음 표에서는 감사 로그에서 리소스가 기록되는 작업을 설명합니다.
+다음 표에서는 감사 로그에서 리소스를 기록하는 작업을 설명합니다:
 
 | 리소스 | 작업 |
 | --- | --- |

@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;홈;인기 항목;데이터 관리;라이선스 자격;라이선스;우수 사례
 title: 데이터 관리 라이선스 자격 모범 사례
-description: 이 문서에서는 Adobe Experience Platform을 사용하여 라이선스 자격을 더 잘 관리하는 데 사용할 수 있는 및 도구에 대한 모범 사례에 대해 설명합니다.
+description: 이 문서에서는 Adobe Experience Platform을 사용하여 라이선스 권한을 보다 효과적으로 관리하는 데 사용할 수 있는 모범 사례 및 도구에 대한 개요를 설명합니다.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
 source-git-commit: 02882957fc38058ff092938d631e290725d4bdc2
 workflow-type: tm+mt
 source-wordcount: '2531'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -16,7 +16,7 @@ Adobe Experience Platform은 실시간으로 업데이트되는 강력한 고객
 
 플랫폼은 만들 수 있는 프로필 수와 가져올 수 있는 데이터 양을 설정하는 라이선스를 제공합니다. 모든 소스, 볼륨 또는 데이터 기록을 가져올 수 있는 용량이 주어지면 데이터 볼륨이 확장되면 라이선스 자격을 초과할 수 있습니다.
 
-이 문서에서는 Adobe Experience Platform을 사용하여 라이선스 자격을 더 잘 관리하는 데 사용할 수 있는 및 도구에 대한 모범 사례에 대해 설명합니다.
+이 문서에서는 Adobe Experience Platform을 사용하여 라이선스 권한을 보다 효과적으로 관리하는 데 사용할 수 있는 모범 사례 및 도구에 대한 개요를 설명합니다.
 
 ## Adobe Experience Platform 데이터 저장소 이해
 

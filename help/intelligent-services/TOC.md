@@ -7,7 +7,7 @@ user-guide-description: 인텔리전트 AI 서비스를 활용하여 점수를 �
 source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
 workflow-type: tm+mt
 source-wordcount: '123'
-ht-degree: 22%
+ht-degree: 24%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 22%
 
 - [Intelligent Services 개요](home.md)
 - [Intelligent Services에서 사용할 데이터 준비](data-preparation.md)
-- Attribution AI {#attribution-ai}
+- 기여도 AI {#attribution-ai}
    - [개요](attribution-ai/overview.md)
    - [Attribution AI 시작](attribution-ai/getting-started.md)
    - [입력 및 출력](attribution-ai/input-output.md)

@@ -6,7 +6,7 @@ feature: Profiles
 source-git-commit: 3eea0a1ecbe7db202f56f326e7b9b1300b37d236
 workflow-type: tm+mt
 source-wordcount: '136'
-ht-degree: 18%
+ht-degree: 23%
 
 ---
 
@@ -22,8 +22,8 @@ ht-degree: 18%
    * [개요](api/overview.md)
    * [시작하기](api/getting-started.md)
    * [에지 예측](api/edge-projections.md)
-   * [엔터티([!DNL Profile] 액세스)](api/entities.md)
-   * [작업 내보내기([!DNL Profile] 내보내기)](api/export-jobs.md)
+   * [엔티티 ([!DNL Profile] access)](api/entities.md)
+   * [작업 내보내기([!DNL Profile] export)](api/export-jobs.md)
    * [샘플 상태 미리 보기([!DNL Profile] 미리 보기)](api/preview-sample-status.md)
    * [[!DNL Profile] 시스템 작업(요청 삭제)](api/profile-system-jobs.md)
 * 프로필 UI {#ui}
@@ -34,7 +34,7 @@ ht-degree: 18%
    * [계산된 특성 API](computed-attributes/ca-api.md)
    * [계산된 속성 필드 구성](computed-attributes/configure-api.md)
    * [샘플 표현식](computed-attributes/expressions.md)
-* 정책 병합 {#merge-policies}
+* 병합 정책 {#merge-policies}
    * [개요](merge-policies/overview.md)
    * [병합 정책 API](api/merge-policies.md)
    * [병합 정책 UI 안내서](merge-policies/ui-guide.md)
@@ -46,7 +46,7 @@ ht-degree: 18%
    * [실시간 고객 프로필에 데이터 추가](tutorials/add-profile-data.md)
    * [프로필에 대한 데이터 세트 구성](tutorials/dataset-configuration.md)
    * [데이터 집합 중복 보고서 생성](tutorials/dataset-overlap-report.md)
-   * [추가 자습서](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
+   * [추가 자습서](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=ko-KR)
 * [개인 정보 보호 요청 처리](privacy.md)
 * [[!DNL Profile] 문제 해결 안내서](troubleshooting.md)
 * [프로필 API 참조](https://www.adobe.com/go/profile-apis-en)

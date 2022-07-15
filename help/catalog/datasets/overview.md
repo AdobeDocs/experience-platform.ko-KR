@@ -3,12 +3,12 @@ keywords: Experience Platform;홈;인기 항목;데이터 위치;데이터 위�
 solution: Experience Platform
 title: 데이터 세트 개요
 topic-legacy: datasets
-description: 이 문서에서는 Experience Platform의 데이터 세트에 대한 높은 수준의 개요를 제공합니다.
+description: 이 설명서는 Experience Platform의 데이터 세트에 대한 높은 수준의 개요를 제공합니다.
 exl-id: 51ecefb0-a699-4b1a-80f1-26c6ba92fcbf
 source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
 workflow-type: tm+mt
 source-wordcount: '711'
-ht-degree: 6%
+ht-degree: 7%
 
 ---
 

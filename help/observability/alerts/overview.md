@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;홈;인기 항목;날짜 범위
 title: 경고 개요
-description: 경고 규칙 정의 구조를 포함하여 Adobe Experience Platform의 경고에 대해 알아봅니다.
+description: 경고 규칙이 정의되는 구조를 포함하여 Adobe Experience Platform에서의 다양한 경고에 대해 알아봅니다.
 feature: Alerts
 exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
 source-git-commit: d82487f34c0879ed27ac55e42d70346f45806131
 workflow-type: tm+mt
 source-wordcount: '740'
-ht-degree: 3%
+ht-degree: 5%
 
 ---
 
 # 경고 개요
 
-Adobe Experience Platform에서는 Adobe Experience Platform 활동에 대한 이벤트 기반 경고를 구독할 수 있습니다. 경고는 작업이 완료되었는지, 워크플로우 내의 특정 이정표에 도달했는지 또는 오류가 발생했는지 확인하기 위해 [[!DNL Observability Insights] API](../api/overview.md)를 폴링할 필요가 없어지거나 없어집니다.
+Adobe Experience Platform에서는 Adobe Experience Platform 활동에 대한 이벤트 기반 경고를 구독할 수 있습니다. 경고는 를 폴링할 필요가 없어지거나 없어집니다 [[!DNL Observability Insights] API](../api/overview.md) 작업이 완료되었는지, 워크플로우 내의 특정 이정표에 도달했는지 또는 오류가 발생했는지 확인하기 위해.
 
 플랫폼 작업의 특정 조건 세트에 도달하면(예: 시스템이 임계값을 위반한 경우 발생할 수 있는 문제) Platform은 해당 조건을 구독한 조직의 모든 사용자에게 경고 메시지를 전달할 수 있습니다. 이러한 메시지는 경고가 해결될 때까지 미리 정의된 시간 간격에 따라 반복될 수 있습니다.
 
@@ -37,7 +37,7 @@ Adobe Experience Platform에서는 Adobe Experience Platform 활동에 대한 �
 
 | 구성 요소 | 설명 |
 | --- | --- |
-| **지표** | 실패한 배치 수집 이벤트 수(`timeseries.ingestion.dataset.batchfailed.count`)와 같이 값이 경고를 트리거하는 관찰성 [지표](../api/metrics.md#available-metrics). |
+| **지표** | 가시성 [지표](../api/metrics.md#available-metrics) 실패한 배치 수집 이벤트 수와 같이 경고를 트리거하는 값`timeseries.ingestion.dataset.batchfailed.count`). |
 | **조건** | 특정 수를 초과하는 카운트 지표와 같이, 경고가 true로 확인되는 경우 경고를 트리거하는 지표와 관련된 조건입니다. 이 조건은 미리 정의된 시간 창과 연관될 수 있습니다. |
 | **창** | (선택 사항) 경고에 대한 조건은 사전 정의된 시간 창으로 제한될 수 있습니다. 예를 들어 지난 5분 동안 실패한 배치 수에 따라 경고가 트리거될 수 있습니다. |
 | **작업** | 경고가 트리거되면 작업이 수행됩니다. 특히, 메시지는 사전 구성된 웹 후크 또는 Experience Platform UI와 같은 게재 채널을 통해 적용 가능한 수신자에게 전송됩니다. |
@@ -54,7 +54,7 @@ Adobe Experience Platform에서는 Adobe Experience Platform 활동에 대한 �
 
 ### I/O 이벤트 {#events}
 
-작업 모니터링을 효율적으로 자동화할 수 있도록 구성된 웹 후크에 경고를 보낼 수 있습니다. Webhook를 통해 경고를 수신하려면 Adobe 개발자 콘솔에 Platform 경고에 대한 웹 후크를 등록해야 합니다. 특정 단계에 대해서는 [Adobe I/O 이벤트 알림 구독](./subscribe.md)에 대한 안내서를 참조하십시오.
+작업 모니터링을 효율적으로 자동화할 수 있도록 구성된 웹 후크에 경고를 보낼 수 있습니다. 웹 후크를 통해 경고를 수신하려면 Adobe Developer 콘솔에서 Platform 경고에 대한 웹 후크를 등록해야 합니다. 다음 안내서를 참조하십시오. [이벤트 알림 Adobe I/O](./subscribe.md) 참조하십시오.
 
 ### 플랫폼 UI {#ui}
 
@@ -67,23 +67,23 @@ Platform UI에서 경고를 사용하여 작업하려면 Adobe Admin Console을 
 | 사용 권한 | 설명 |
 | --- | --- |
 | 경고 보기 | 수신한 경고 메시지를 볼 수 있습니다. |
-| 경고 기록 보기* | [!UICONTROL 경고] 탭을 통해 받은 경고 기록을 볼 수 있습니다. |
-| 경고 관리* | [!UICONTROL 경고] 탭을 통해 경고 규칙을 활성화하고 비활성화할 수 있습니다. |
-| 경고 해결* | [!UICONTROL 경고] 탭을 통해 트리거된 경고를 해결할 수 있습니다. |
+| 경고 기록 보기* | 를 통해 받은 경고 기록을 볼 수 있습니다 [!UICONTROL 경고] 탭. |
+| 경고 관리* | 를 통해 경고 규칙을 활성화 및 비활성화할 수 있습니다 [!UICONTROL 경고] 탭. |
+| 경고 해결* | 를 통해 트리거된 경고를 해결할 수 있습니다. [!UICONTROL 경고] 탭. |
 
 {style=&quot;table-layout:auto&quot;}
 
-**경고] 탭에 액세스하려면 다른 권한 중 하나와 함께 경고 보기 권한도 부여받아야 합니다.*[!UICONTROL 
+**에 액세스하려면 [!UICONTROL 경고] 탭에서는 다른 권한 중 하나와 함께 경고 보기 권한이 부여되어야 합니다.*
 
 >[!NOTE]
 >
->Platform에서 권한을 관리하는 방법에 대한 자세한 내용은 [액세스 제어 설명서](../../access-control/ui/overview.md)를 참조하십시오.
+>Platform에서 권한을 관리하는 방법에 대한 자세한 내용은 [액세스 제어 설명서](../../access-control/ui/overview.md).
 
-경고 보기 권한을 사용하면 오른쪽 상단 모서리에서 벨 아이콘(![벨 아이콘](../images/alerts/overview/icon.png))을 선택하여 수신한 경고를 볼 수 있습니다.
+경고 보기 권한을 사용하여 벨 아이콘( )을 선택하여 수신한 경고를 볼 수 있습니다![종 아이콘](../images/alerts/overview/icon.png))을 클릭하여 제품에서 사용할 수 있습니다.
 
 ![](../images/alerts/overview/ui.png)
 
-또한 UI의 [!UICONTROL 경고] 탭에서는 개별 사용자가 특정 경고 유형에 가입할 수 있고 관리자가 경고 규칙을 모두 활성화하거나 비활성화할 수 있습니다. 경고 관리에 대한 자세한 내용은 [UI 안내서](./ui.md)를 참조하십시오.
+또한 [!UICONTROL 경고] UI의 탭에서는 개별 사용자가 특정 경고 유형에 가입할 수 있으며, 관리자가 경고 규칙을 모두 활성화하거나 비활성화할 수 있습니다. 자세한 내용은 [UI 안내서](./ui.md) 경고 관리에 대한 자세한 내용을 참조하십시오.
 
 ## 다음 단계
 

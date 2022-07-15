@@ -15,7 +15,7 @@ ht-degree: 27%
 
 * [플랫폼 개요](home.md)
 * [플랫폼 개요(비디오)](video/platform-overview.md)
-* [플랫폼 자습서](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
+* [플랫폼 자습서](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=ko-KR)
 * [플랫폼 기반의 고객 경험(비디오)](video/customer-experience.md)
 * [플랫폼(비디오)에서 제공하는 고객 경험의 배경](video/customer-experience-bts.md)
 * 시작하기 {#getting-started}
