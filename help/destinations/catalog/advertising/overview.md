@@ -3,9 +3,9 @@ keywords: 광고 대상;대상;플랫폼 대상
 title: 광고 대상 개요
 description: 'Adobe Experience Platform을 타사 광고 플랫폼(예: DSP, 광고 네트워크, SSP)에 연결하고 익명의 대상을 이러한 플랫폼에 공유합니다.'
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: 14f7efc2d893bf081c4e167b46a3e85baeff4ec9
+source-git-commit: 4b48a1062e922a28ba925050b3879feff8fc40b2
 workflow-type: tm+mt
-source-wordcount: '243'
+source-wordcount: '248'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 ## 개요 {#overview}
 
-DSP(수요 측 플랫폼), SSP(공급측 플랫폼), 광고 네트워크 등 타사 광고 플랫폼에 Adobe Experience Platform을 연결하고 익명의 대상을 이러한 플랫폼에 공유합니다.
+DSP(수요 측 플랫폼), SSP(공급측 플랫폼), 광고 네트워크와 같은 광고 플랫폼에 Adobe Experience Platform을 연결하여 알려진 익명의 대상을 이러한 플랫폼에 공유할 수 있습니다.
 
 광고 대상에 연결할 때 대상은 대상 플랫폼에 ID로 전송되며 대상 플랫폼에서는 대상 플랫폼에 의해 알려진 ID에 매핑됩니다.
 
@@ -26,6 +26,7 @@ DSP(수요 측 플랫폼), SSP(공급측 플랫폼), 광고 네트워크 등 타
 
 ### 연결
 
+* [Adobe Advertising Cloud 연결](adobe-advertising-cloud-connection.md)
 * [(베타) 기준 연결](criteo.md)
 * [Google 디스플레이 및 비디오 360 연결](google-dv360.md)
 * [Google 광고 연결](google-ads-destination.md)
