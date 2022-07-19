@@ -1,8 +1,8 @@
 ---
 title: Query Service의 데이터 거버넌스
 description: 이 개요에서는 Experience Platform Query Service의 데이터 거버넌스의 주요 요소를 다룹니다.
-feature: Data Governance
-source-git-commit: ec063a0f5600729d3575f98898ade04443f29f2a
+exl-id: 37543d43-bd8c-4bf9-88e5-39de5efe3164
+source-git-commit: c1ec6f949bd0ab9ec3b1ccc58baf74d8c71deca0
 workflow-type: tm+mt
 source-wordcount: '2667'
 ht-degree: 0%

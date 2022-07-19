@@ -1,7 +1,8 @@
 ---
-title: '데칠레 기반 파생 속성 사용 사례 '
+title: 데칠레 기반 파생 속성 사용 사례
 description: 이 안내서에서는 Query Service를 사용하여 프로필 데이터에 사용할 데코일 기반 파생 속성을 만드는 데 필요한 단계를 보여줍니다.
-source-git-commit: 61e0895484b8005e2109056d51557f609fecaf97
+exl-id: 0ec6b511-b9fd-4447-b63d-85aa1f235436
+source-git-commit: c1ec6f949bd0ab9ec3b1ccc58baf74d8c71deca0
 workflow-type: tm+mt
 source-wordcount: '1508'
 ht-degree: 2%
@@ -59,7 +60,7 @@ Query Service를 사용하여 카테고리적 분류가 포함된 데이터 세�
 
 >[!NOTE]
 >
->간결성을 위해 테닛 ID `_profilefoundationreportingstg` 열 제목과 문서 전체의 후속 언급 등에서 네임스페이스 시작에서 이 생략되었습니다.
+>간결성을 위해 테넌트 ID `_profilefoundationreportingstg` 열 제목과 문서 전체의 후속 언급 등에서 네임스페이스 시작에서 이 생략되었습니다.
 
 | `.membershipNumber` | `.emailAddress.address` | `.transactionDate` | `.transactionType` | `.transactionDetails` | `.mileage` | `.loyaltyStatus` |
 |---|---|---|---|---|---|---|
@@ -299,4 +300,3 @@ GROUP BY rankings.membershipNumber
 ## 다음 단계
 
 위에 제공된 예제 사용 사례에서는 실시간 고객 프로필에서 데모를 사용할 수 있도록 하는 단계를 중점적으로 설명합니다. 이렇게 하면 사용자 인터페이스나 RESTful API를 통해 세그멘테이션 서비스가 이러한 decimal 버킷을 기반으로 대상을 생성할 수 있습니다. 자세한 내용은 [세그먼테이션 서비스 개요](../../segmentation/home.md) 세그먼트 만들기, 평가 및 액세스 방법에 대한 자세한 내용을 참조하십시오.
-
