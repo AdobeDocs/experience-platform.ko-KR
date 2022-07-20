@@ -5,9 +5,9 @@ title: Adobe Experience Platform의 Postman
 topic-legacy: api guide
 description: 이 문서에는 Postman 환경 설정, Postman 컬렉션 가져오기 및 각 Platform 서비스에 대한 사용 가능한 컬렉션 목록을 설명하는 단계가 포함되어 있습니다.
 exl-id: a09b3875-97f5-47f1-a562-52decbce67b1
-source-git-commit: 9f00bff31f9e7d2da1294d3d1f24cba7870a4614
+source-git-commit: d06c3bc51909b464b9eed2a2f0df04ca531010b3
 workflow-type: tm+mt
-source-wordcount: '550'
+source-wordcount: '545'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Postman은 사전 설정된 변수로 환경을 설정하고, API 컬렉션을 �
 
 >[!VIDEO](https://video.tv.adobe.com/v/28832)
 
-## 포스트맨 컬렉션 {#collections}
+## Postman 컬렉션 {#collections}
 
 사용 가능한 모든 Postman 컬렉션이 들어 있는 폴더는 [Experience Platform Postman 샘플 GitHub 저장소](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/experience-platform). 또는 Postman 컬렉션 링크는 [API 참조 설명서](https://www.adobe.com/go/platform-api-reference-en) Adobe I/O에서 확인하십시오.
 
@@ -52,9 +52,9 @@ Postman UI 및 사용 가능한 기능에 대한 자세한 내용은 [Postman �
 
 >[!WARNING]
 >
->Adobe I/O 액세스 토큰 생성 Postman 컬렉션에서 언급한 바와 같이, 표현된 생성 방법은 **비프로덕션 사용**. 로컬 서명은 타사 호스트에서 JavaScript 라이브러리를 로드하고 원격 서명은 개인 키를 Adobe이 소유하고 운영하는 웹 서비스로 보냅니다. Adobe은 이 개인 키를 저장하지 않지만 프로덕션 키는 다른 사람과 공유해서는 안 됩니다.
+>IMS(Identity Management Service) Postman 컬렉션에서 언급한 대로, 표현된 생성 방법은 다음 항목에 적합합니다 **비프로덕션 사용**. 로컬 서명은 타사 호스트에서 JavaScript 라이브러리를 로드하고 원격 서명은 개인 키를 Adobe이 소유하고 운영하는 웹 서비스로 보냅니다. Adobe은 이 개인 키를 저장하지 않지만 프로덕션 키는 다른 사람과 공유해서는 안 됩니다.
 
-아래 비디오에서는 을(를) 사용합니다 [Adobe I/O 액세스 토큰 생성 컬렉션](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/ims/Adobe%20IO%20Access%20Token%20Generation.postman_collection.json) 공용 GitHub 리포지토리에서 다운로드할 수 있는 .
+아래 비디오에서는 을(를) 사용합니다 [IMS(Identity Management Service) Postman 컬렉션](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/ims/Identity%20Management%20Service.postman_collection.json) 공용 GitHub 리포지토리에서 다운로드할 수 있는 .
 
 >[!VIDEO](https://video.tv.adobe.com/v/29698/?quality=12&learn=on)
 
