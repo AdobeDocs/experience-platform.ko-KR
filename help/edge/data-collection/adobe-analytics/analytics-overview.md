@@ -3,10 +3,10 @@ title: Platform Web SDK에서 Adobe Analytics 사용
 description: Adobe Experience Platform Web SDK를 사용하여 Adobe Analytics으로 데이터를 전송하는 방법을 알아봅니다.
 keywords: adobe analytics;analytics;매핑된 데이터;매핑된 vars;
 exl-id: b18d1163-9edf-4a9c-b247-cd1aa7dfca50
-source-git-commit: 921a3a32ee5f2daa04512a3f2c68935667ab3875
+source-git-commit: f627c1f6c917e74e0a366ce0611a1fa6bd0e3c3d
 workflow-type: tm+mt
-source-wordcount: '233'
-ht-degree: 6%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -28,7 +28,7 @@ Adobe Experience Platform [!DNL Edge Network] 는 여러 XDM 변수를 자동으
 
 ## 수동으로 매핑된 데이터
 
-에지 네트워크에서 수집한 모든 데이터는 처리 규칙을 통해 액세스할 수 있습니다. 데이터는 점 표기법을 사용하여 변환되고 contextData로 사용할 수 있습니다.
+에지 네트워크에 의해 자동으로 매핑되지 않은 데이터는 처리 규칙을 통해 액세스할 수 있습니다. 데이터는 점 표기법을 사용하여 변환되고 contextData로 사용할 수 있습니다.
 
 스키마는 다음과 같습니다.
 
