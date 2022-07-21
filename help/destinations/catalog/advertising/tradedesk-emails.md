@@ -1,9 +1,9 @@
 ---
 title: (베타) 트레이드데스크 - CRM 연결
 description: CRM 데이터를 기반으로 대상 타겟팅 및 억제를 위해 프로필을 Trade Desk 계정에 활성화합니다.
-source-git-commit: 69bf43f86ab3369ad0c7febcb69ec41d3bcac8bb
+source-git-commit: b186a1a4b7417503ffa08a66136411ccff495510
 workflow-type: tm+mt
-source-wordcount: '1046'
+source-wordcount: '1041'
 ht-degree: 2%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 2%
 
 세그먼트를 활성화하기 전에 [!DNL The Trade Desk], 다음 주소로 [!DNL The Trade Desk] 계정 관리자가 CRM 온보딩 계약에 서명하도록 합니다. [!DNL The Trade Desk] 그런 다음 에게 권한을 부여하고 광고주 ID를 공유하여 대상을 구성합니다.
 
-## ID 일치 요구 사항(#id-matching-requirements)
+## ID 일치 요구 사항 {#id-matching-requirements}
 
 Adobe Experience Platform에 수집하는 ID의 유형에 따라 해당 요구 사항을 준수해야 합니다. 자세한 내용은 [ID 네임스페이스 개요](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=ko) 추가 정보.
 
@@ -50,7 +50,7 @@ Adobe Experience Platform에 수집하는 ID의 유형에 따라 해당 요구 �
 
 {style=&quot;table-layout:auto&quot;}
 
-## 이메일 해싱 요구 사항(#hashing-requirements)
+## 이메일 해싱 요구 사항 {#hashing-requirements}
 
 Adobe Experience Platform에 수집하기 전에 이메일 주소를 해시하거나 원시 이메일 주소를 사용할 수 있습니다.
 
@@ -77,11 +77,11 @@ Experience Platform에서 이메일 주소 섭취에 대한 자세한 내용은 
 
 ## 대상에 연결 {#connect}
 
-### 대상 인증(#authenticate)
+### 대상에 인증 {#authenticate}
 
 [!DNL The Trade Desk] CRM 대상은 일별 일괄 처리 파일 업로드이며, 사용자의 인증이 필요하지 않습니다.
 
-### 대상 세부 사항 입력(#fill-in-details)
+### 대상 세부 사항 채우기 {#fill-in-details}
 
 대상으로 대상 데이터를 전송하거나 활성화하려면 먼저 고유한 대상 플랫폼에 연결을 설정해야 합니다. While [설정](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=en) 이 대상을 사용하려면 다음 정보를 제공해야 합니다.
 
@@ -120,7 +120,7 @@ Experience Platform에서 이메일 주소 섭취에 대한 자세한 내용은 
 * 을(를) 선택합니다 `Email` 소스 네임스페이스 또는 속성이 `Email`.
 * 을(를) 선택합니다 `Email_LC_SHA256` 소스 네임스페이스 또는 속성이 `Email_LC_SHA256`.
 
-## 데이터 내보내기의 유효성 검사(#validate)
+## 데이터 내보내기의 유효성 검사 {#validate}
 
 데이터가 Experience Platform에서 로 올바르게 내보내졌는지 확인하려면 [!DNL The Trade Desk]의 Adobe 1PD 데이터 타일에서 세그먼트를 찾으십시오. [!DNL The Trade Desk] DMP(데이터 관리 플랫폼). 다음은 에서 해당 ID를 찾는 단계입니다 [!DNL Trade Desk] UI:
 
