@@ -2,9 +2,9 @@
 description: 이 구성을 사용하면 대상 이름, 카테고리, 설명, 로고 등과 같은 기본 정보를 표시할 수 있습니다. 또한 이 구성의 설정은 Experience Platform 사용자가 대상을 인증하는 방법, Experience Platform 사용자 인터페이스에 표시되는 방법 및 대상으로 내보낼 수 있는 ID를 결정합니다.
 title: (베타) Destination SDK을 위한 파일 기반 대상 구성 옵션
 exl-id: 6b0a0398-6392-470a-bb27-5b34b0062793
-source-git-commit: 301cef53644e813c3fd43e7f2dbaf730c9e5fc11
+source-git-commit: fe61b2ebe1a06e8909ef675cae088cb4e7d2b325
 workflow-type: tm+mt
-source-wordcount: '2330'
+source-wordcount: '2389'
 ht-degree: 5%
 
 ---
@@ -369,6 +369,8 @@ SSH 키 인증 유형을 사용하여 SFTP를 구성할 때는 SFTP 사용자 �
 Experience Platform UI에서 대상에 연결할 때 대상에 고유한 사용자 지정 필드를 작성하도록 사용자에게 요청하려면 이 섹션을 사용합니다.
 
 아래 예에서는 `customerDataFields` 를 사용하려면 사용자가 대상의 이름을 입력하고 [!DNL Amazon S3] 버킷 이름 및 폴더 경로, 압축 유형, 파일 형식 및 기타 여러 파일 내보내기 옵션.
+
+템플릿의 고객 데이터 필드에서 고객 입력에 액세스하여 사용할 수 있습니다. 매크로 사용 `{{customerData.name}}`. 예를 들어, 사용자에게 이름이 인 Amazon S3 버킷 필드를 입력하도록 요청하는 경우 `bucket`매크로를 사용하여 템플릿에 액세스할 수 있습니다 `{{customerData.bucket}}`. 에서 고객 데이터 필드가 사용되는 방법의 예를 봅니다 [대상 서버 구성](/help/destinations/destination-sdk/server-and-file-configuration.md#s3-example).
 
 ```json
  "customerDataFields":[

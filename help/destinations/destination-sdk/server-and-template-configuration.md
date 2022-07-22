@@ -2,7 +2,7 @@
 description: 서버 및 템플릿 사양은 '/authoring/destination-servers' 공통 끝점을 통해 Adobe Experience Platform Destination SDK에 구성할 수 있습니다.
 title: Destination SDK의 서버 및 템플릿 사양에 대한 구성 옵션
 exl-id: cf493ed5-0bdb-4b90-b84d-73926a566a2a
-source-git-commit: 92bca3600d854540fd2badd925e453fba41601a7
+source-git-commit: a08201c4bc71b0e37202133836e9347ed4d3cd6b
 workflow-type: tm+mt
 source-wordcount: '425'
 ht-degree: 8%
@@ -54,7 +54,7 @@ ht-degree: 8%
    "urlBasedDestination":{
       "url":{
          "templatingStrategy":"PEBBLE_V1",
-         "value":"https://api.moviestar.com/data/{{customerData.region}}/items"
+         "value":"https://api.moviestar.com/data/{{customerData.endpointRegion}}/items"
       }
    },
    "httpTemplate":{
