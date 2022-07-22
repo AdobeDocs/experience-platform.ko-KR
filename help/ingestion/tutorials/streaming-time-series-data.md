@@ -6,9 +6,9 @@ topic-legacy: tutorial
 type: Tutorial
 description: 이 자습서는 Adobe Experience Platform 데이터 수집 서비스 API의 일부인 스트리밍 수집 API를 사용하는 데 도움이 됩니다.
 exl-id: 720b15ea-217c-4c13-b68f-41d17b54d500
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: cedc53b78ea8eb8f3e93178b60ebe49b90c11650
 workflow-type: tm+mt
-source-wordcount: '1369'
+source-wordcount: '1204'
 ht-degree: 2%
 
 ---
@@ -27,31 +27,9 @@ ht-degree: 2%
 
 또한 이 자습서에서는 스트리밍 연결을 이미 만들어야 합니다. 스트리밍 연결 만들기에 대한 자세한 내용은 [스트리밍 연결 만들기 자습서](./create-streaming-connection.md).
 
-다음 섹션에서는 스트리밍 수집 API를 성공적으로 호출하기 위해 알고 있어야 하는 추가 정보를 제공합니다.
+### 플랫폼 API 사용
 
-### 샘플 API 호출 읽기
-
-이 안내서에서는 요청의 형식을 지정하는 방법을 보여주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 올바른 형식의 요청 페이로드가 포함됩니다. API 응답으로 반환되는 샘플 JSON도 제공됩니다. 샘플 API 호출에 대한 설명서에 사용된 규칙에 대한 자세한 내용은 [예제 API 호출을 읽는 방법](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 에서 [!DNL Experience Platform] 문제 해결 가이드.
-
-### 필수 헤더에 대한 값을 수집합니다
-
-을 호출하려면 [!DNL Platform] API를 먼저 완료해야 합니다. [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en). 인증 자습서를 완료하면 모든 히트에 필요한 각 헤더에 대한 값이 제공됩니다 [!DNL Experience Platform] 아래에 표시된 대로 API 호출:
-
-- 권한 부여: 베어러 `{ACCESS_TOKEN}`
-- x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{ORG_ID}`
-
-의 모든 리소스 [!DNL Experience Platform] 특정 가상 샌드박스로 격리됩니다. 에 대한 모든 요청 [!DNL Platform] API에는 작업이 발생할 샌드박스의 이름을 지정하는 헤더가 필요합니다.
-
-- x-sandbox-name: `{SANDBOX_NAME}`
-
->[!NOTE]
->
->샌드박스에 대한 자세한 내용은 [!DNL Platform]를 참조하고 [샌드박스 개요 설명서](../../sandboxes/home.md).
-
-페이로드(POST, PUT, PATCH)이 포함된 모든 요청에는 추가 헤더가 필요합니다.
-
-- 컨텐츠 유형: application/json
+Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용은 [플랫폼 API 시작](../../landing/api-guide.md).
 
 ## XDM ExperienceEvent 클래스를 기반으로 스키마를 작성합니다
 
@@ -342,7 +320,15 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?syncValidation=t
             "schemaRef": {
                 "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
                 "contentType": "application/vnd.adobe.xed-full+json;version=1"
-            }
+            },
+        "identityMap": {
+                "Email": [
+                  {
+                    "id": "acme_user@gmail.com",
+                    "primary": true
+                  }
+                ]
+              },
         },
         "xdmEntity":{
             "_id": "9af5adcc-db9c-4692-b826-65d3abe68c22",
