@@ -2,9 +2,9 @@
 title: 태그의 사용자 권한
 description: 태그에 사용할 수 있는 다양한 권한 유형과 다양한 비즈니스 사용 사례를 위한 몇 가지 기본 구현 전략에 대해 알아봅니다.
 exl-id: 9b48847a-6133-4dbd-b17d-e7b88152ad7d
-source-git-commit: 88593d921d6ad97fc4dfb059f0272817caee06c7
+source-git-commit: a99046cc7df18d53b068c679ab07f5f9dd8eff0a
 workflow-type: tm+mt
-source-wordcount: '1307'
+source-wordcount: '1311'
 ht-degree: 17%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 17%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
 
 Adobe Experience Platform의 태그에 대한 사용자 권한은 Adobe Admin Console을 통해 사용자에게 할당됩니다. 개별 사용자에게 할당되지 않고 다양한 권한 세트가 제품 프로필로 별도로 구성됩니다. 그런 다음 사용자가 구성된 권한을 부여받기 위해 이러한 제품 프로필에 할당됩니다.
 
@@ -21,7 +21,7 @@ Adobe Experience Platform의 태그에 대한 사용자 권한은 Adobe Admin Co
 
 >[!NOTE]
 >
->Admin Console을 사용하는 사용자에 대한 권한을 구성하는 방법에 대한 단계는 [태그](./manage-permissions.md)에 대한 권한 관리 자습서를 참조하십시오.
+>Admin Console을 사용하여 사용자에 대한 권한을 구성하는 방법에 대한 단계는 다음 튜토리얼을 참조하십시오. [데이터 수집을 위한 권한 관리](../../../rtcdp-connections/permissions.md).
 
 ## 권한 유형
 
@@ -55,8 +55,8 @@ Adobe Experience Platform의 태그에 대한 사용자 권한은 Adobe Admin Co
 | **개발** | 이렇게 하면 다음 작업을 수행할 수 있습니다.<ul><li>규칙 및 데이터 요소 만들기</li><li>라이브러리를 만들고 기존 개발 환경에서 빌드합니다.</li><li>승인을 위해 라이브러리 제출</li></ul>데이터 수집 UI에서 수행하는 대부분의 일상적인 작업은 이 권한이 필요합니다. |
 | **승인** | 이렇게 하면 제출된 라이브러리를 가져와 스테이징 환경에 빌드할 수 있습니다. 테스트가 완료되면 게시할 라이브러리를 승인할 수도 있습니다. |
 | **게시** | 이렇게 하면 승인된 라이브러리를 프로덕션 환경에 게시할 수 있습니다. |
-| **확장 관리** | 이렇게 하면 다음 작업을 수행할 수 있습니다. <ul><li>속성에 새 확장 설치</li><li>이미 설치된 확장에 대한 구성을 수정합니다</li><li>확장 삭제</li></ul>확장](../managing-resources/extensions/overview.md)에 대한 자세한 내용은 [용 확장 개요 설명서를 참조하십시오. 이 역할은 조직에 따라 일반적으로 IT 또는 마케팅에 속합니다. |
-| **환경 관리** | 이를 통해 환경을 만들고 수정할 수 있습니다. 자세한 내용은 [환경 설명서](../publishing/environments.md)를 참조하십시오. 이 역할은 일반적으로 IT 그룹에 속합니다. |
+| **확장 관리** | 이렇게 하면 다음 작업을 수행할 수 있습니다. <ul><li>속성에 새 확장 설치</li><li>이미 설치된 확장에 대한 구성을 수정합니다</li><li>확장 삭제</li></ul>에 대한 확장 개요 설명서를 참조하십시오. [확장에 대한 자세한 정보](../managing-resources/extensions/overview.md). 이 역할은 조직에 따라 일반적으로 IT 또는 마케팅에 속합니다. |
+| **환경 관리** | 이를 통해 환경을 만들고 수정할 수 있습니다. 자세한 내용은 [환경 설명서](../publishing/environments.md) 추가 정보. 이 역할은 일반적으로 IT 그룹에 속합니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -66,9 +66,9 @@ Adobe Experience Platform의 태그에 대한 사용자 권한은 Adobe Admin Co
 
 | 회사 권한 | 설명 |
 | --- | --- |
-| **속성 관리** | 이렇게 하면 다음 작업을 수행할 수 있습니다.<ul><li>새 속성 만들기</li><li>속성 수준에서 메타데이터 및 설정 수정</li><li>속성 삭제</li></ul>관리자는 일반적으로 이 역할을 수행합니다. 자세한 내용은 [속성 설명서](companies-and-properties.md)를 참조하십시오. |
+| **속성 관리** | 이렇게 하면 다음 작업을 수행할 수 있습니다.<ul><li>새 속성 만들기</li><li>속성 수준에서 메타데이터 및 설정 수정</li><li>속성 삭제</li></ul>관리자는 일반적으로 이 역할을 수행합니다. 자세한 내용은 [속성 설명서](companies-and-properties.md) 추가 정보. |
 | **확장 개발** | 비공개 릴리스 및 공개 릴리스 요청을 포함하여 회사가 소유한 확장 패키지를 만들고 수정하는 권한을 부여합니다. |
-| **앱 구성 관리** | 모바일 인앱 및 푸시 메시지에 대한 액세스 권한을 부여하는 Adobe Journey Optimizer 또는 다른 솔루션에 대한 라이센스가 있는 경우에만 사용할 수 있습니다.  이를 통해 Firebase 클라우드 메시징 서비스 및 Apple 푸시 알림 서비스와 통신하는 데 필요한 푸시 자격 증명과 함께 Experience Cloud이 알고 있는 앱을 관리할 수 있습니다. |
+| **앱 구성 관리** | 모바일 인앱 및 푸시 메시지에 대한 액세스 권한을 부여하는 Adobe Journey Optimizer 또는 다른 솔루션에 대한 라이센스가 있는 경우에만 사용할 수 있습니다.  이를 통해 Firebase Cloud 메시징 서비스 및 Apple 푸시 알림 서비스와 통신하는 데 필요한 푸시 자격 증명과 함께 Experience Cloud이 알고 있는 앱을 관리할 수 있습니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -121,4 +121,4 @@ Adobe Experience Platform의 태그에 대한 사용자 권한은 Adobe Admin Co
 
 ## 다음 단계
 
-이 문서에서는 Experience Platform에서 태그에 사용할 수 있는 권한에 대한 개요를 제공합니다. Adobe Admin Console에서 태그의 제품 프로필을 구성하는 방법에 대한 단계는 [사용자 권한 관리](./manage-permissions.md)에 대한 안내서를 참조하십시오.
+이 문서에서는 Experience Platform에서 태그에 사용할 수 있는 권한에 대한 개요를 제공합니다. Adobe Admin Console에서 태그의 제품 프로필을 구성하는 방법에 대한 단계는 다음 안내서를 참조하십시오 [데이터 수집에 대한 사용자 권한 관리](../../../rtcdp-connections/permissions.md).

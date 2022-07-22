@@ -2,9 +2,9 @@
 title: Real-time Customer Data Platform 연결 종단 간 개요
 description: Real-time Customer Data Platform 연결을 사용하여 이벤트 데이터를 Adobe Experience Cloud 솔루션으로 보내는 방법에 대한 높은 수준의 개요입니다.
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
-source-git-commit: 0a01dd2b0d8a1039178e3593475f9a87639ccdcd
+source-git-commit: a99046cc7df18d53b068c679ab07f5f9dd8eff0a
 workflow-type: tm+mt
-source-wordcount: '2612'
+source-wordcount: '2613'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Real-time Customer Data Platform(RTCDP) 연결은 데이터를 수집하여 다�
 * 개발
 * 확장 관리
 
-다음 안내서를 참조하십시오. [태그의 권한 관리](../tags/ui/administration/manage-permissions.md) 속성 및 속성 권한에 대한 액세스 권한을 부여하는 방법을 알아봅니다.
+다음 안내서를 참조하십시오. [데이터 수집을 위한 권한 관리](./permissions.md) 속성 및 속성 권한에 대한 액세스 권한을 부여하는 방법을 알아봅니다.
 
 이 안내서에서 언급된 다양한 데이터 수집 제품을 사용하려면 데이터 세트에 대한 액세스 권한과 스키마를 만들고 관리하는 기능도 있어야 합니다. 이러한 기능 중 하나에 액세스할 수 있어야 하는 경우에는 CSM에 문의하여 필요한 액세스 권한을 받으십시오. Adobe Experience Platform을 구매하지 않은 경우 Adobe은 추가 비용 없이 SDK를 사용하기 위해 필요한 액세스 권한을 제공합니다.
 
