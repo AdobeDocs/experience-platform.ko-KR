@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform에 대한 최신 릴리스 노트입니다.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 0a01dd2b0d8a1039178e3593475f9a87639ccdcd
+source-git-commit: 4956b940dfd25f55eaf67296f2cb31db65fac079
 workflow-type: tm+mt
-source-wordcount: '1794'
-ht-degree: 4%
+source-wordcount: '1864'
+ht-degree: 5%
 
 ---
 
@@ -17,9 +17,9 @@ Adobe Experience Platform의 기존 기능 업데이트:
 
 - [[!DNL Data Science Workspace]](#dsw)
 - [[!DNL Destinations]](#destinations)
+- [[데이터 수집]](#data-collection)
 - [XDM(경험 데이터 모델)](#xdm)
 - [쿼리 서비스](#query-service)
-- [Real-time Customer Data Platform 연결](#data-collection)
 - [소스](#sources)
 
 ## [!DNL Data Science Workspace] {#dsw}
@@ -61,6 +61,23 @@ Data Science Workspace에 대한 일반적인 정보는 [개요 설명서](../..
 {style=&quot;table-layout:auto&quot;}
 
 대상에 대한 자세한 내용은 [대상 개요](../../destinations/home.md).
+
+## 데이터 수집 {#data-collection}
+
+Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수집하고 Adobe Experience Platform Edge Network로 전송하여 Adobe 또는 비Adobe 대상으로 보강, 변환 및 배포할 수 있는 기술 세트를 제공합니다.
+
+**새로운 기능**
+
+| 기능 | 설명 |
+| --- | --- |
+| [데이터 세트에 대한 액세스 유형 구성](../../edge/datastreams/overview.md#create) | 이제 새 데이터 스트림을 만들 때 Edge Network에서 허용할 요청 유형을 선택할 수 있습니다. <ul><li>**[!UICONTROL 혼합 인증]**: 이 옵션을 선택하면 Edge Network에서 인증된 요청과 인증되지 않은 요청을 모두 허용합니다. 웹 SDK를 사용할 계획이나 [Mobile SDK](https://aep-sdks.gitbook.io/docs/)와 함께 [서버 API](../../server-api/overview.md). </li><li>**[!UICONTROL 인증만]**: 이 옵션을 선택하면 에지 네트워크에서 인증된 요청만 허용합니다. 서버 API만 사용하고 인증되지 않은 요청이 에 의해 처리되지 않도록 하려면 이 옵션을 선택합니다 [!DNL Edge Network]. </li></ul> |
+| [프로젝트 렌더링](../../edge/personalization/rendering-personalization-content.md#applypropositions) 지표를 증가시키지 않고 단일 페이지 애플리케이션에서 를 생성합니다. | 새로 추가된 `applyPropositions` 명령 를 사용하면 [!DNL Target] 단일 페이지 애플리케이션에 [!DNL Analytics] 및 [!DNL Target] 지표 를 참조하십시오. 따라서 보고 정확도가 높아집니다. |
+| [모바일-투-웹 및 도메인 간 ID 공유](../../edge/identity/id-sharing.md) | 이제 Adobe Experience Platform Web SDK는 방문자 ID 공유 기능을 지원하므로 모바일 앱과 모바일 웹 콘텐츠 간, 도메인 간에 보다 정확하게 개인화된 경험을 제공할 수 있습니다. |
+| [Google 데이터 레이어 태그 확장](../../tags/extensions/web/google-data-layer/overview.md) | Google 데이터 레이어 확장을 사용하면 태그 구현에서 Google 데이터 레이어를 사용할 수 있습니다. |
+| [Google 광고 향상된 전환 이벤트 전달 확장](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.108630.html) | Google 광고 향상된 전환 확장을 사용하면 Google 광고 전환을 실시간으로 향상시킬 수 있습니다. |
+| [메일 침팬지 이벤트 전달 확장](../../tags/extensions/web/mailchimp/overview.md) | Mailchimp 이벤트 전달 확장은 Mailchimp 마케팅 캠페인, 여정 또는 트랜잭션에 대한 이메일을 트리거할 수 있는 Mailchimp 마케팅 API에 이벤트를 보냅니다. |
+
+자세한 내용은 [데이터 수집 개요](../../rtcdp-connections/home.md).
 
 ## XDM(경험 데이터 모델) {#xdm}
 
@@ -116,20 +133,6 @@ Query Service를 사용하면 표준 SQL을 사용하여 Adobe Experience Platfo
 {style=&quot;table-layout:auto&quot;}
 
 쿼리 서비스에 대한 자세한 내용은 [쿼리 서비스 개요](../../query-service/home.md).
-
-## Real-time Customer Data Platform 연결 {#data-collection}
-
-Real-time Customer Data Platform 연결은 클라이언트측 고객 경험 데이터를 수집하고 Adobe Experience Platform Edge Network로 전송하여 Adobe 또는 Adobe이 아닌 대상으로 보강, 변환 및 배포할 수 있는 기술 세트를 제공합니다.
-
-**새로운 기능**
-
-| 기능 | 설명 |
-| --- | --- |
-| [데이터 세트에 대한 액세스 유형 구성](../../edge/datastreams/overview.md#create) | 이제 새 데이터 스트림을 만들 때 Edge Network에서 허용할 요청 유형을 선택할 수 있습니다. <ul><li>**[!UICONTROL 혼합 인증]**: 이 옵션을 선택하면 Edge Network에서 인증된 요청과 인증되지 않은 요청을 모두 허용합니다. 웹 SDK를 사용할 계획이나 [Mobile SDK](https://aep-sdks.gitbook.io/docs/)와 함께 [서버 API](../../server-api/overview.md). </li><li>**[!UICONTROL 인증만]**: 이 옵션을 선택하면 에지 네트워크에서 인증된 요청만 허용합니다. 서버 API만 사용하고 인증되지 않은 요청이 에 의해 처리되지 않도록 하려면 이 옵션을 선택합니다 [!DNL Edge Network]. </li></ul> |
-| [프로젝트 렌더링](../../edge/personalization/rendering-personalization-content.md#applypropositions) 지표를 증가시키지 않고 단일 페이지 애플리케이션에서 를 생성합니다. | 새로 추가된 `applyPropositions` 명령 를 사용하면 [!DNL Target] 단일 페이지 애플리케이션에 [!DNL Analytics] 및 [!DNL Target] 지표 를 참조하십시오. 따라서 보고 정확도가 높아집니다. |
-| [모바일-투-웹 및 도메인 간 ID 공유](../../edge/identity/id-sharing.md) | 이제 Adobe Experience Platform Web SDK는 방문자 ID 공유 기능을 지원하므로 모바일 앱과 모바일 웹 콘텐츠 간, 도메인 간에 보다 정확하게 개인화된 경험을 제공할 수 있습니다. |
-
-자세한 내용은 [Real-Time CDP 연결 개요](../../rtcdp-connections/home.md).
 
 ## 소스 {#sources}
 
