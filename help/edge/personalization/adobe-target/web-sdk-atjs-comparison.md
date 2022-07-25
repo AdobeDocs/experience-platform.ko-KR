@@ -3,7 +3,7 @@ title: at.js와 Experience Platform 웹 SDK 비교
 description: at.js 기능을 Experience Platform 웹 SDK와 비교하는 방법을 알아봅니다
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisions;코드 조각 사전 숨김;vec;양식 기반 경험 작성기;xdm;대상;결정;범위;스키마;시스템 다이어그램;다이어그램
 exl-id: b63fe47d-856a-4cae-9057-51917b3e58dd
-source-git-commit: 7bdf4c01ad3b361b3bc53574d4da1096757c815c
+source-git-commit: 3c229dfced2ea404e8b333a25cd8148ac81a91c2
 workflow-type: tm+mt
 source-wordcount: '2286'
 ht-degree: 6%
@@ -1015,8 +1015,8 @@ alloy("sendEvent", {
 adobe.target.getOffer({
    mbox: "target-global-mbox",
    params: {
-     "entity.productName": "T-shirt",
-     "entity.productId": "1234"
+     "entity.name": "T-shirt",
+     "entity.id": "1234"
    },
    success: console.log,
    error: console.error
@@ -1031,8 +1031,8 @@ adobe.target.getOffers({
       execute: {
         pageLoad: {
           parameters: {
-            "entity.productName": "T-shirt",
-            "entity.productId": "1234"
+            "entity.name": "T-shirt",
+            "entity.id": "1234"
           }
         }
     }
@@ -1057,8 +1057,8 @@ alloy("sendEvent", {
   data: {
     __adobe: {
       target: {
-        "entity.productName": "T-shirt",
-        "entity.productId": "1234"
+        "entity.name": "T-shirt",
+        "entity.id": "1234"
       }
     }
   }
