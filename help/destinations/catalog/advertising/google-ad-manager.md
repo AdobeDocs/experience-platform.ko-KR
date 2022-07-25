@@ -3,7 +3,7 @@ keywords: google ad manager;google ad;doubleclick;DoubleClick AdX;DoubleClick;Go
 title: Google Ad Manager 연결
 description: 이전에 DoubleClick for Publishers 또는 DoubleClick AdX라고 알려진 Google Ad Manager는 비디오 및 모바일 앱을 통해 게시자가 웹 사이트에서 광고를 표시할 수 있는 방법을 제공하는 Google의 광고 서비스 플랫폼입니다.
 exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
-source-git-commit: 0c5d3ae2f43b0eeb6c86f535e37a906b7c414600
+source-git-commit: aed15e0abfd51a8a08290e78302239792f86535a
 workflow-type: tm+mt
 source-wordcount: '873'
 ht-degree: 2%
@@ -85,7 +85,7 @@ While [설정](../../ui/connect-destination.md) 이 대상을 사용하려면 �
 * **[!UICONTROL 계정 유형]**: Google을 사용하는 계정에 따라 옵션을 선택합니다.
    * 사용 `DFP by Google` 대상 [!DNL DoubleClick] 게시자
    * 사용 `AdX buyer` 대상 [!DNL Google AdX]
-* **[!UICONTROL 계정 ID]**: 계정 ID 입력 [!DNL Google]. 네트워크 ID 또는 대상 링크 ID일 수 있습니다. 일반적으로 8자리 ID입니다.
+* **[!UICONTROL 계정 ID]**: 계정 ID 입력 [!DNL Google]. 네트워크 코드 또는 대상 링크 ID일 수 있습니다. 일반적으로 8자리 ID입니다.
 
 >[!NOTE]
 >
