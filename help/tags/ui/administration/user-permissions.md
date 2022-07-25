@@ -2,7 +2,7 @@
 title: 태그의 사용자 권한
 description: 태그에 사용할 수 있는 다양한 권한 유형과 다양한 비즈니스 사용 사례를 위한 몇 가지 기본 구현 전략에 대해 알아봅니다.
 exl-id: 9b48847a-6133-4dbd-b17d-e7b88152ad7d
-source-git-commit: a99046cc7df18d53b068c679ab07f5f9dd8eff0a
+source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
 workflow-type: tm+mt
 source-wordcount: '1311'
 ht-degree: 17%
@@ -21,7 +21,7 @@ Adobe Experience Platform의 태그에 대한 사용자 권한은 Adobe Admin Co
 
 >[!NOTE]
 >
->Admin Console을 사용하여 사용자에 대한 권한을 구성하는 방법에 대한 단계는 다음 튜토리얼을 참조하십시오. [데이터 수집을 위한 권한 관리](../../../rtcdp-connections/permissions.md).
+>Admin Console을 사용하여 사용자에 대한 권한을 구성하는 방법에 대한 단계는 다음 튜토리얼을 참조하십시오. [데이터 수집을 위한 권한 관리](../../../collection/permissions.md).
 
 ## 권한 유형
 
@@ -121,4 +121,4 @@ Adobe Experience Platform의 태그에 대한 사용자 권한은 Adobe Admin Co
 
 ## 다음 단계
 
-이 문서에서는 Experience Platform에서 태그에 사용할 수 있는 권한에 대한 개요를 제공합니다. Adobe Admin Console에서 태그의 제품 프로필을 구성하는 방법에 대한 단계는 다음 안내서를 참조하십시오 [데이터 수집에 대한 사용자 권한 관리](../../../rtcdp-connections/permissions.md).
+이 문서에서는 Experience Platform에서 태그에 사용할 수 있는 권한에 대한 개요를 제공합니다. Adobe Admin Console에서 태그의 제품 프로필을 구성하는 방법에 대한 단계는 다음 안내서를 참조하십시오 [데이터 수집에 대한 사용자 권한 관리](../../../collection/permissions.md).

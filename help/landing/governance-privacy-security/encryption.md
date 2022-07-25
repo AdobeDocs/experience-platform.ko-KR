@@ -3,7 +3,7 @@ title: Adobe Experience Platform의 데이터 암호화
 topic-legacy: data protection
 description: 데이터를 전송 및 Adobe Experience Platform에서 안전하게 암호화하는 방법을 알아봅니다.
 exl-id: 184b2b2d-8cd7-4299-83f8-f992f585c336
-source-git-commit: 0a01dd2b0d8a1039178e3593475f9a87639ccdcd
+source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
 workflow-type: tm+mt
 source-wordcount: '398'
 ht-degree: 3%
@@ -24,7 +24,7 @@ Adobe Experience Platform은 엔터프라이즈 솔루션 전반에서 고객 �
 
 일반적으로 데이터는 다음 세 가지 방법으로 Platform으로 가져옵니다.
 
-* [데이터 수집](../../rtcdp-connections/home.md) 웹 사이트 및 모바일 애플리케이션에서 스테이징과 수집 준비를 위해 Platform Edge Network에 데이터를 전송할 수 있습니다.
+* [데이터 수집](../../collection/home.md) 웹 사이트 및 모바일 애플리케이션에서 스테이징과 수집 준비를 위해 Platform Edge Network에 데이터를 전송할 수 있습니다.
 * [소스 커넥터](../../sources/home.md) Adobe Experience Cloud 애플리케이션 및 기타 엔터프라이즈 데이터 소스에서 Platform으로 직접 데이터를 스트리밍할 수 있습니다.
 * 비Adobe ETL(추출, 변환, 로드) 도구는 데이터를 [배치 수집 API](../../ingestion/batch-ingestion/overview.md) 소비.
 

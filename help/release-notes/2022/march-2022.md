@@ -2,7 +2,7 @@
 title: Adobe Experience Platform 릴리스 노트 - 2022년 3월
 description: Adobe Experience Platform에 대한 2022년 3월 릴리스 노트입니다.
 exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
-source-git-commit: 0a01dd2b0d8a1039178e3593475f9a87639ccdcd
+source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
 workflow-type: tm+mt
 source-wordcount: '1194'
 ht-degree: 5%
@@ -117,7 +117,7 @@ Platform은 클라이언트측 고객 경험 데이터를 수집하고 Adobe Exp
 | 글로벌 데이터 스트림 설정 | 이제 데이터 스트림을 구성할 때 몇 가지 새로운 전역 설정을 구성할 수 있습니다. 지리적 위치, 자사 ID 쿠키 및 타사 ID 동기화. 의 섹션을 참조하십시오. [데이터 스트림 구성](../../edge/datastreams/overview.md#create) 자세한 내용은 데이터 스트림 UI 안내서를 참조하십시오. |
 | [Edge Network Server API](../../server-api/overview.md) | 서버 API를 사용하면 고객이 인증한 새로운 엔드포인트를 사용하여 Experience Platform Edge Network와 상호 작용하여 다양한 데이터 수집, 개인화, 광고 및 마케팅 활용 사례를 제공할 수 있습니다. |
 
-Platform의 데이터 수집에 대한 자세한 내용은 [데이터 수집 개요](../../rtcdp-connections/home.md).
+Platform의 데이터 수집에 대한 자세한 내용은 [데이터 수집 개요](../../collection/home.md).
 
 ## 쿼리 서비스 {#query-service}
 

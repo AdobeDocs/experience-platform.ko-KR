@@ -3,7 +3,7 @@ title: 이벤트 전달 개요
 description: Platform Edge Network를 사용하여 태그 구현을 변경하지 않고 작업을 실행할 수 있도록 Adobe Experience Platform의 이벤트 전달에 대해 알아봅니다.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: 0a01dd2b0d8a1039178e3593475f9a87639ccdcd
+source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
 workflow-type: tm+mt
 source-wordcount: '955'
 ht-degree: 8%
@@ -20,11 +20,11 @@ Adobe Experience Platform의 이벤트 전달을 통해 수집된 이벤트 데�
 
 이 문서에서는 Platform의 이벤트 전달에 대한 높은 수준의 개요를 제공합니다.
 
-![데이터 수집 생태계에서 이벤트 전달](../../../rtcdp-connections/images/home/event-forwarding.png)
+![데이터 수집 생태계에서 이벤트 전달](../../../collection/images/home/event-forwarding.png)
 
 >[!NOTE]
 >
->Platform의 데이터 수집 에코시스템에 이벤트 전달을 적용하는 방법에 대한 자세한 내용은 [데이터 수집 개요](../../../rtcdp-connections/home.md).
+>Platform의 데이터 수집 에코시스템에 이벤트 전달을 적용하는 방법에 대한 자세한 내용은 [데이터 수집 개요](../../../collection/home.md).
 
 Adobe Experience Platform과 결합된 이벤트 전달 [웹 SDK](../../../edge/home.md) 및 [Mobile SDK](https://aep-sdks.gitbook.io/docs/) 은 다음과 같은 이점을 제공합니다.
 

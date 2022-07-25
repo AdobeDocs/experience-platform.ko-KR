@@ -2,7 +2,7 @@
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform에 대한 최신 릴리스 노트입니다.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 4956b940dfd25f55eaf67296f2cb31db65fac079
+source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
 workflow-type: tm+mt
 source-wordcount: '1864'
 ht-degree: 5%
@@ -77,7 +77,7 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 | [Google 광고 향상된 전환 이벤트 전달 확장](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.108630.html) | Google 광고 향상된 전환 확장을 사용하면 Google 광고 전환을 실시간으로 향상시킬 수 있습니다. |
 | [메일 침팬지 이벤트 전달 확장](../../tags/extensions/web/mailchimp/overview.md) | Mailchimp 이벤트 전달 확장은 Mailchimp 마케팅 캠페인, 여정 또는 트랜잭션에 대한 이메일을 트리거할 수 있는 Mailchimp 마케팅 API에 이벤트를 보냅니다. |
 
-자세한 내용은 [데이터 수집 개요](../../rtcdp-connections/home.md).
+자세한 내용은 [데이터 수집 개요](../../collection/home.md).
 
 ## XDM(경험 데이터 모델) {#xdm}
 
