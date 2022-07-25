@@ -5,7 +5,7 @@ title: Veva CRM 소스 커넥터 개요
 topic-legacy: overview
 description: API 또는 사용자 인터페이스를 사용하여 Veva CRM을 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: fcd7af48-e66a-4313-bbfe-73301d335c67
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: ec0d6be6fde8ea7a0378769810079e3e62e9fd60
 workflow-type: tm+mt
 source-wordcount: '224'
 ht-degree: 0%
@@ -32,5 +32,5 @@ Experience Platform은 타사 CRM 시스템에서 데이터 섭취를 지원합�
 
 ## Connect [!DNL Veeva CRM] to [!DNL Platform] ui 사용
 
-- [UI에서 Microsoft Dynamics 소스 연결 만들기](../../tutorials/ui/create/crm/veeva.md)
+- [UI에서 Vec CRM 소스 연결 만들기](../../tutorials/ui/create/crm/veeva.md)
 - [UI에서 CRM 소스 연결을 위한 데이터 흐름 만들기](../../tutorials/ui/dataflow/crm.md)
