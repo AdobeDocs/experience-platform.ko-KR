@@ -2,7 +2,8 @@
 keywords: Experience Platform;쿼리 서비스;쿼리 서비스;중첩된 데이터 구조;중첩된 데이터;평면화;중첩된 데이터 평면화;
 title: BI 도구에서 사용할 중첩 데이터 구조 병합
 description: 이 문서에서는 Query Service에서 타사 BI 도구를 사용할 때 세션 중에 모든 테이블 및 보기에 대한 XDM 스키마를 평면화하는 방법을 설명합니다.
-source-git-commit: 3c9a1f552760b34bfb2c4246382fcb2d66e563d0
+exl-id: 7e534c0a-db6c-463e-85da-88d7b2534ece
+source-git-commit: a7f273383293359cf6adbcc0a508fb19d2789339
 workflow-type: tm+mt
 source-wordcount: '865'
 ht-degree: 0%
@@ -55,7 +56,7 @@ prod:all?FLATTEN
 
 이 안내서에서 사용되는 예제 스키마는 표준 필드 그룹을 사용합니다 [!UICONTROL 상거래 세부 사항]는 `commerce` 개체 구조 및 `productListItems` 배열입니다. 에 대한 XDM 설명서 를 참조하십시오. [에 대한 추가 정보 [!UICONTROL 상거래 세부 사항] 필드 그룹](../../xdm/field-groups/event/commerce-details.md). 스키마 구조의 표현은 아래 이미지에 표시됩니다.
 
-![다음을 포함하는 상거래 세부 사항 필드 그룹의 스키마 다이어그램입니다 `commerce` 및 `productListItems` 구조.](../images/best-practices/final-subscription-schema.png)
+![다음을 포함하는 상거래 세부 사항 필드 그룹의 스키마 다이어그램입니다 `commerce` 및 `productListItems` 구조.](../images/best-practices/flatten-nested-data/commerce-details.png)
 
 BI 도구가 중첩된 데이터 구조를 지원하지 않는 경우, 중첩된 필드에 직렬화된 값이 있어야(예: `commerce` 및 `productListItems` 예제 스키마에서). 이러한 값은 단일 인코딩의 일부로 표시될 수 있습니다 `commerce` 문자열 필드를 사용할 수 없으며 현실적으로 사용할 수 없습니다.
 

@@ -1,7 +1,8 @@
 ---
 title: 계정 프로필 대시보드
 description: Adobe Experience Platform은 조직의 B2B 계정 프로필에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
-source-git-commit: 4ff30c689808e0513245852625efc4a162ab2c0e
+exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
+source-git-commit: 8de94d38fd1d2c001935180851d6877dfe2a8941
 workflow-type: tm+mt
 source-wordcount: '822'
 ht-degree: 0%
@@ -42,7 +43,7 @@ Adobe Experience Platform UI(사용자 인터페이스)는 일별 스냅샷 중�
 
 을(를) 선택합니다 [!UICONTROL 프로필 ID] 에 표시되는 결과에서 [!UICONTROL 찾아보기] 탭을 클릭하여 열기 [!UICONTROL 세부 사항] 계정 프로필에 대한 탭입니다.
 
-![결과가 표시되고 프로필 ID가 강조 표시된 계정 프로필 찾아보기 탭이 있습니다.](../images/account-profiles/account-profiles-browse-tab.png) —>
+![결과가 표시되고 프로필 ID가 강조 표시된 계정 프로필 찾아보기 탭이 있습니다.](../images/account-profiles/account-profiles-browse-tab.png)
 
 에 표시되는 계정 프로필 정보 [!UICONTROL 세부 사항] 탭이 여러 프로필 조각에서 병합되어 개별 계정의 단일 보기를 형성했습니다. 다음 문서를 참조하십시오. [Real-time Customer Data Platform에서 계정 프로필 찾아보기](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles) 플랫폼 UI의 계정 프로필 보기 기능에 대해 자세히 알아보십시오.
 
