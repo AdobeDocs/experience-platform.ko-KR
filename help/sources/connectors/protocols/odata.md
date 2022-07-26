@@ -1,22 +1,18 @@
 ---
 keywords: Experience Platform;홈;인기 항목;OData;odata;데이터;일반 OData;일반 데이터
 solution: Experience Platform
-title: 일반 OData 소스 커넥터 개요
+title: 일반 OData 소스 개요
 topic-legacy: overview
 description: API 또는 사용자 인터페이스를 사용하여 Adobe Experience Platform에 일반 OData를 연결하는 방법을 알아봅니다.
 exl-id: ff50f883-d4fd-4f32-a9d6-fe4624a32e24
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: 1e2644b7d83a0bcb7175f27d7c4859c0efba4060
 workflow-type: tm+mt
-source-wordcount: '239'
+source-wordcount: '221'
 ht-degree: 0%
 
 ---
 
-# (베타) [!DNL Generic OData] 커넥터
-
->[!NOTE]
->
->다음 [!DNL Generic OData] 커넥터가 베타 버전입니다. 자세한 내용은 [소스 개요](../../home.md#terms-and-conditions) 베타 레이블이 지정된 커넥터 사용에 대한 자세한 정보.
+# [!DNL Generic OData] 소스
 
 Adobe Experience Platform을 사용하면 를 사용하여 들어오는 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 외부 소스에서 데이터를 수집할 수 있습니다 [!DNL Platform] 서비스. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 등과 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 

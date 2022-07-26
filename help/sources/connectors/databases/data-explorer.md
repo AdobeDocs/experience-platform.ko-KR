@@ -1,22 +1,18 @@
 ---
 keywords: Experience Platform;홈;인기 항목;Azure Data Explorer;azure 데이터 탐색기
 solution: Experience Platform
-title: Azure Data Explorer 소스 커넥터 개요
+title: Azure Data Explorer 소스 개요
 topic-legacy: overview
 description: API 또는 사용자 인터페이스를 사용하여 Azure Data Explorer을 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: 869bd8bb-51e6-4e0c-a3ec-ff083dda5789
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: 1e2644b7d83a0bcb7175f27d7c4859c0efba4060
 workflow-type: tm+mt
-source-wordcount: '221'
+source-wordcount: '203'
 ht-degree: 0%
 
 ---
 
-# (베타) [!DNL Azure Data Explorer] 커넥터
-
->[!NOTE]
->
->다음 [!DNL Azure Data Explorer] 커넥터가 베타 버전입니다. 자세한 내용은 [소스 개요](../../home.md#terms-and-conditions) 베타 레이블이 지정된 커넥터 사용에 대한 자세한 정보.
+# [!DNL Azure Data Explorer] 소스
 
 Adobe Experience Platform은 과 같은 데이터베이스 공급자를 위한 기본 연결을 제공합니다 [!DNL Microsoft], MySQL 및 [!DNL Azure]. 이러한 시스템의 데이터를 [!DNL Platform].
 

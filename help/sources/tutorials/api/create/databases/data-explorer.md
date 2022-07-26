@@ -6,18 +6,14 @@ topic-legacy: overview
 type: Tutorial
 description: Flow Service API를 사용하여 Azure Azure Data Explorer을 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: 1b17bbb0-1f7b-4d89-a158-ad269e6edf30
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 1e2644b7d83a0bcb7175f27d7c4859c0efba4060
 workflow-type: tm+mt
-source-wordcount: '538'
+source-wordcount: '522'
 ht-degree: 1%
 
 ---
 
 # 만들기 [!DNL Azure Azure Data Explorer] 기본 연결 [!DNL Flow Service] API
-
->[!NOTE]
->
->다음 [!DNL Azure Azure Data Explorer] 커넥터가 베타 버전입니다. 자세한 내용은 [소스 개요](../../../../home.md#terms-and-conditions) 베타 레이블이 지정된 커넥터 사용에 대한 자세한 정보.
 
 기본 연결은 소스와 Adobe Experience Platform 간의 인증된 연결을 나타냅니다.
 
