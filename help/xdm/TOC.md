@@ -4,9 +4,9 @@ user-guide-title: 경험 데이터 모델(XDM) 시스템 도움말
 breadcrumb-title: 경험 데이터 모델(XDM) 안내서
 user-guide-description: 경험 데이터 모델(XDM) 클래스와 스키마 필드 그룹을 사용하여 경험 데이터를 표준화합니다.
 feature: Schemas
-source-git-commit: c57c0ff63abe35fcf0246088b12b6bc6cfc542b6
+source-git-commit: e476574e35ea18a50749009ffd1b4182941cc496
 workflow-type: tm+mt
-source-wordcount: '473'
+source-wordcount: '503'
 ht-degree: 16%
 
 ---
@@ -25,14 +25,19 @@ ht-degree: 16%
       * [개요](./schema/industries/overview.md)
       * [소매](./schema/industries/retail.md)
       * [금융 서비스](./schema/industries/financial.md)
+      * [의료](./schema/industries/healthcare.md)
       * [통신](./schema/industries/telecom.md)
       * [여행 및 숙박](./schema/industries/travel-hospitality.md)
    * [XDM 필드 사전](schema/field-dictionary.md)
 * 클래스 {#classes}
    * [XDM 개별 프로필](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
+   * [약물](./classes/medication.md)
+   * [지급인](./classes/payer.md)
+   * [계획](./classes/plan.md)
    * [정책](./classes/policy.md)
    * [제품](./classes/product.md)
+   * [공급자](./classes/provider.md)
    * [세그먼트 정의](./classes/segment-definition.md)
    * B2B 클래스 {#b2b}
       * [XDM 비즈니스 계정](./classes/b2b/business-account.md)
@@ -45,12 +50,13 @@ ht-degree: 16%
       * [XDM 비즈니스 마케팅 목록 구성원](./classes/b2b/business-marketing-list-members.md)
 * 필드 그룹 {#field-groups}
    * XDM 개별 프로필 {#profile}
+      * [동의 및 기본 설정](./field-groups/profile/consents.md)
       * [인구 통계 세부 정보](./field-groups/profile/demographic-details.md)
       * [IAB TCF 2.0 동의](./field-groups/profile/iab.md)
       * [IdentityMap](./field-groups/profile/identitymap.md)
+      * [의료 구성원 세부 정보](./field-groups/profile/healthcare-member-details.md)
       * [충성도 세부 사항](./field-groups/profile/loyalty-details.md)
       * [개인 연락처 세부 정보](./field-groups/profile/personal-contact-details.md)
-      * [동의 및 기본 설정](./field-groups/profile/consents.md)
       * [세그먼트 멤버십 세부 정보](./field-groups/profile/segmentation.md)
       * [통신 구독](./field-groups/profile/telecom-subscription.md)
       * [작업 연락처 세부 정보](./field-groups/profile/work-contact-details.md)
@@ -58,6 +64,8 @@ ht-degree: 16%
       * [XDM 비즈니스 개인 세부 정보](./field-groups/profile/business-person-details.md)
    * XDM ExperienceEvent {#event}
       * [Adobe Analytics 전체 확장](./field-groups/event/analytics-full-extension.md)
+      * [광고 세부 사항](./field-groups/event/advertising-details.md)
+      * [애플리케이션 세부 정보](./field-groups/event/application-details.md)
       * [잔액 이전](./field-groups/event/balance-transfers.md)
       * [캠페인 마케팅 세부 사항](./field-groups/event/campaign-marketing-details.md)
       * [카드 작업](./field-groups/event/card-actions.md)
@@ -73,6 +81,7 @@ ht-degree: 16%
       * [숙박예약](./field-groups/event/lodging-reservation.md)
       * [견적 요청 세부 정보](./field-groups/event/quote-request-details.md)
       * [예약 세부 정보](./field-groups/event/reservation-details.md)
+      * [Sitetool 세부 정보](./field-groups/event/sitetool-details.md)
       * [사이트 검색 지원](./field-groups/event/support-site-search.md)
       * [업그레이드 세부 정보](./field-groups/event/upgrade-details.md)
       * [업셀 세부 정보](./field-groups/event/upsell-details.md)
@@ -81,11 +90,19 @@ ht-degree: 16%
       * [XDM 비즈니스 캠페인 세부 사항](./field-groups/b2b-campaign/details.md)
    * XDM 비즈니스 캠페인 구성원 {#b2b-campaign-members}
       * [XDM 비즈니스 캠페인 구성원 세부 정보](./field-groups/b2b-campaign-members/details.md)
+   * 약물 {#medication}
+      * [의료용 약물](./field-groups/medication/healthcare-medication.md)
+   * 계획 {#plan}
+      * [의료 계획 세부 정보](./field-groups/plan/healthcare-plan-details.md)
    * 제품 {#product}
       * [제품 카탈로그](./field-groups/product/product-catalog.md)
       * [제품 카테고리](./field-groups/product/product-category.md)
+   * 공급자 {#provider}
+      * [의료 기관](./field-groups/provider/healthcare-provider.md)
    * [필드 그룹 이름 업데이트](./field-groups/name-updates.md)
 * 데이터 유형 {#data-types}
+   * [계정 세부 사항](./data-types/account-details.md)
+   * [광고 브레이크](./data-types/ad-break.md)
    * [애플리케이션](./data-types/application.md)
    * [비콘](./data-types/beacon.md)
    * [브라우저 세부 사항](./data-types/browser-details.md)
@@ -111,6 +128,7 @@ ht-degree: 16%
    * [지역 모양](./data-types/geo-shape.md)
    * [신원](./data-types/identity.md)
    * [노출 횟수](./data-types/impressions.md)
+   * [구현 세부 사항](./data-types/implementation-details.md)
    * [내부 사이트 검색](./data-types/internal-site-search.md)
    * [키 값 쌍](./data-types/key-value-pair.md)
    * [마케팅](./data-types/marketing.md)
