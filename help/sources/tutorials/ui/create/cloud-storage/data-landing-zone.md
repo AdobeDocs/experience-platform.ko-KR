@@ -1,21 +1,18 @@
 ---
 keywords: Experience Platform;홈;인기 항목;데이터 랜딩 영역;데이터 랜딩 영역
-solution: Experience Platform
 title: UI를 사용하여 플랫폼에 데이터 랜딩 영역 연결
-topic-legacy: overview
-type: Tutorial
 description: 플랫폼 사용자 인터페이스를 사용하여 데이터 랜딩 영역 소스 커넥터를 만드는 방법을 알아봅니다.
 exl-id: 653c9958-5d89-4b0c-af3d-a3e74aa47a08
-source-git-commit: b007cdf92811b453df5b5d005456a05cd845b769
+source-git-commit: fb16ea940ef394a15dd24fe703239b4487fafb18
 workflow-type: tm+mt
-source-wordcount: '462'
+source-wordcount: '606'
 ht-degree: 0%
 
 ---
 
 # Connect [!DNL Data Landing Zone] UI를 사용하여 플랫폼 구현
 
-[!DNL Data Landing Zone] 는 Adobe Experience Platform에 프로비저닝된 임시 파일 저장소를 위한 클라우드 기반 데이터 저장소 기능입니다. 데이터는 [!DNL Data Landing Zone] 7일 후
+[!DNL Data Landing Zone] 는 Adobe Experience Platform으로 파일을 가져올 수 있는 안전한 클라우드 기반 파일 저장 기능입니다. 데이터는 [!DNL Data Landing Zone] 7일 후
 
 이 자습서에서는 을(를) 만드는 단계를 제공합니다 [!DNL Data Landing Zone] 플랫폼 사용자 인터페이스를 사용한 소스 연결.
 
@@ -38,7 +35,24 @@ ht-degree: 0%
 
 다음 [!UICONTROL 데이터 추가] Platform으로 가져올 데이터를 선택하고 미리 볼 수 있는 인터페이스를 제공하는 단계가 나타납니다.
 
+* 인터페이스 왼쪽 부분은 폴더 브라우저로, 이 브라우저에서 Platform으로 가져올 수 있는 컨테이너의 파일 목록을 제공합니다.
+* 인터페이스의 오른쪽 부분에서 호환되는 파일에서 최대 100개의 데이터 행을 미리 볼 수 있습니다.
+
+Platform으로 가져올 파일을 선택하고 올바른 인터페이스가 미리 보기 화면으로 업데이트될 때까지 잠시 기다립니다.
+
 ![add-data](../../../../images/tutorials/create/dlz/add-data.png)
+
+>[!TIP]
+>
+>Platform은 선택한 파일의 속성 정보를 자동으로 검색합니다. 여기에는 파일의 데이터 형식에 대한 정보, 지정된 열 구분 기호 및 압축 유형이 포함됩니다.
+
+미리 보기 인터페이스를 사용하면 파일의 내용 및 구조를 검사할 수 있습니다. 기본적으로 미리 보기 인터페이스에서는 선택한 폴더에 첫 번째 파일이 표시됩니다.
+
+다른 파일을 미리 보려면 검사할 파일 이름 옆에 있는 미리 보기 아이콘을 선택합니다.
+
+완료되면 을 선택합니다 **[!UICONTROL 다음]**.
+
+![파일 감지](../../../../images/tutorials/create/dlz/file-detection.png)
 
 클라우드 스토리지 소스용 데이터 흐름을 만드는 방법에 대한 단계별 세부 안내서는 [플랫폼으로 데이터를 가져오기 위한 클라우드 스토리지 데이터 흐름 만들기](../../dataflow/batch/cloud-storage.md).
 
