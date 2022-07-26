@@ -3,9 +3,9 @@ keywords: Experience Platform;홈;인기 항목;데이터 준비;데이터 준�
 title: 데이터 준비를 사용하여 프로필 서비스에 부분 행 업데이트 보내기
 description: 이 문서에서는 데이터 준비를 사용하여 프로필 서비스에 부분 행 업데이트를 보내는 방법에 대한 정보를 제공합니다.
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-source-git-commit: 0f1b9cdde3452afdf8cf045cf0a6660ee0ce56cf
+source-git-commit: cc3ecbd8544839246d54f72b894ad27e850c0c90
 workflow-type: tm+mt
-source-wordcount: '1205'
+source-wordcount: '1188'
 ht-degree: 1%
 
 ---
@@ -249,7 +249,7 @@ curl -X POST 'https://dcs.adobedc.net/collection/9aba816d350a69c4abbd283eb5818ec
 
 * 스트리밍 업데이트 메서드는 부분 행 업데이트를 [!DNL Profile Service]. 부분 행 업데이트는 다음과 같습니다 **not** data lake에서 소비합니다.
 * 스트리밍 업데이트 메서드는 ID 업데이트, 교체 및 제거를 지원하지 않습니다. 새 ID가 없는 경우 만들어집니다. 따라서 `identity` 작업은 항상 생성하도록 설정해야 합니다. ID가 이미 존재하는 경우 작업은 작업이 아닙니다.
-* 스트리밍 업데이트 메서드는 현재 기본 단일 값 속성(예: 정수, 날짜, 타임스탬프 및 문자열)과 개체만 지원합니다. 스트리밍 업데이트 메서드는 배열 특성 및 특정 배열 인덱스의 교체, 추가 또는 덮어쓰기를 지원하지 않습니다.
+* 스트리밍 업데이트 메서드는 현재 기본 단일 값 속성(예: 정수, 날짜, 타임스탬프 및 문자열)과 개체만 지원합니다.
 * 현재 스트리밍 업데이트 메서드가 지원되지 않습니다 [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html?lang=en) 및 [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/).
 
 ## 다음 단계
