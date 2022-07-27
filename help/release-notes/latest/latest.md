@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform에 대한 최신 릴리스 노트입니다.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 93ac391370ddd1fe596b8515bd520fb870a10a3c
+source-git-commit: 45a69586dbe492a9cfe64383adc44be62854154a
 workflow-type: tm+mt
-source-wordcount: '1913'
+source-wordcount: '1884'
 ht-degree: 5%
 
 ---
@@ -95,11 +95,14 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 | 기능 | 설명 |
 | --- | --- |
 | 개선 사항 [!DNL Data Prep] Recommendations | [!DNL Data Prep] Recommendations은 이제 더 똑똑하고 더 빠릅니다. 새 유효성 검사 기능을 통해 가장 일반적인 매핑 오류가 크게 감소하여 시간-값 차이가 줄어듭니다. |
-| 스트리밍 이변을 위한 계층적 지원 | 이제 함수를 사용할 수 있습니다 `upsert_array_append` 및 `upsert_array_replace` 를 업데이트하여 프로필에 스트리밍할 때 배열 및 개체를 업데이트합니다. 자세한 내용은 [[!DNL Data Prep] 매핑 함수 안내서](../../data-prep/functions.md) 추가 정보. |
 
 {style=&quot;table-layout:auto&quot;}
 
 에 대해 자세히 알아보려면 [!DNL Data Prep]를 참조하고 [[!DNL Data Prep] 개요](../../data-prep/home.md).
+
+<!--
+| Hierarchical support for streaming upsets | You can now use functions `upsert_array_append` and `upsert_array_replace` to update arrays and objects when streaming upserts to Profile. See the [[!DNL Data Prep] mapping functions guide](../../data-prep/functions.md) for more information. |
+-->
 
 ## [!DNL Destinations] {#destinations}
 

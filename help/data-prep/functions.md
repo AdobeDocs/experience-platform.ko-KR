@@ -5,9 +5,9 @@ title: 데이터 준비 매핑 함수
 topic-legacy: overview
 description: 이 문서에서는 데이터 준비에 사용되는 매핑 기능을 소개합니다.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 666286970d0cbbcd28f07c34e3f08ec9f4333b0c
+source-git-commit: 45a69586dbe492a9cfe64383adc44be62854154a
 workflow-type: tm+mt
-source-wordcount: '4298'
+source-wordcount: '4175'
 ht-degree: 3%
 
 ---
@@ -164,11 +164,13 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | join_arrays | 배열을 서로 결합합니다. | <ul><li>어레이: **필수 여부** 요소를 추가할 배열입니다.</li><li>값: 상위 배열에 추가할 배열입니다.</li></ul> | join_&#x200B;arrays(ARRAY, VALUES) | join_arrays&#x200B;([&#39;a&#39;, &#39;b&#39;], [&#39;c&#39;], [&#39;d&#39;, &#39;e&#39;]) | [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;] |
 | to_array | 입력 목록을 가져와 배열로 변환합니다. | <ul><li>INCLUDE_NULLS: **필수 여부** 응답 배열에 null을 포함할지 여부를 나타내는 부울 값입니다.</li><li>값: **필수 여부** 배열로 변환할 요소입니다.</li></ul> | to_&#x200B;array(INCLUDE_NULLS, VALUES) | to_array(false, 1, null, 2, 3) | `[1, 2, 3]` |
 | size_of | 입력 크기를 반환합니다. | <ul><li>입력: **필수 여부** 크기를 찾으려는 개체입니다.</li></ul> | size_of(INPUT) | `size_of([1, 2, 3, 4])` | 4 |
-| upsert_array_append | 이 함수는 전체 입력 배열의 모든 요소를 프로필의 배열 끝에 추가하는 데 사용됩니다. 이 함수는 **전용** 업데이트 중에 적용할 수 있습니다. 삽입 문맥에서 사용하는 경우 이 함수는 입력을 그대로 반환합니다. | <ul><li>어레이: **필수 여부** 프로필에 배열을 추가할 배열입니다.</li></ul> | upsert_array_append(ARRAY) | `upsert_array_append([123, 456])` | [123,456] |
-| upsert_array_replace | 이 함수는 배열의 요소를 바꾸는 데 사용됩니다. 이 함수는 **전용** 업데이트 중에 적용할 수 있습니다. 삽입 문맥에서 사용하는 경우 이 함수는 입력을 그대로 반환합니다. | <ul><li>어레이: **필수 여부** 프로필에서 배열을 바꿀 배열입니다.</li><li>인덱스: **선택 사항입니다** 교체해야 하는 지점입니다.</li></li> | upsert_array_replace(ARRAY, INDEX) | `upsert_array_replace([123, 456], 1)` | [123,456] |
 
 {style=&quot;table-layout:auto&quot;}
 
+<!--
+| upsert_array_append | This function is used to append all elements in the entire input array to the end of the array in Profile. This function is **only** applicable during updates. If used in the context of inserts, this function returns the input as is. | <ul><li>ARRAY: **Required** The array to append the array in the Profile.</li></ul> | upsert_array_append(ARRAY) | `upsert_array_append([123, 456])` | [123, 456] |
+| upsert_array_replace | This function is used to replace elements in an array. This function is **only** applicable during updates. If used in the context of inserts, this function returns the input as is. | <ul><li>ARRAY: **Required** The array to replace the array in the Profile.</li><li>INDEX: **Optional** The position from where the replacement needs to happen.</li></li> | upsert_array_replace(ARRAY, INDEX) | `upsert_array_replace([123, 456], 1)` | [123, 456] |
+-->
 
 ### 논리 연산자 {#logical-operators}
 
