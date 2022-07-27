@@ -2,11 +2,10 @@
 title: (베타) Experience Platform UI를 사용하여 온디맨드 파일을 배치 대상으로 내보내기
 type: Tutorial
 description: Experience Platform UI를 사용하여 온디맨드 파일을 배치 대상으로 내보내는 방법을 알아봅니다.
-hide: true
-hidefromtoc: true
-source-git-commit: ff0fe836b2bb181ae4395f1d04c04b8e51a5bac6
+exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
+source-git-commit: 874c590e83712a45e75308239fb71db04614bd1e
 workflow-type: tm+mt
-source-wordcount: '736'
+source-wordcount: '745'
 ht-degree: 0%
 
 ---
@@ -16,6 +15,7 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 >다음 **[!UICONTROL 지금 파일 내보내기]** Adobe Experience Platform Destination SDK의 옵션은 현재 베타에 있습니다. 설명서 및 기능은 변경될 수 있습니다.
+>이 기능에 액세스하려면 Adobe 담당자에게 문의하십시오.
 
 >[!IMPORTANT]
 > 
