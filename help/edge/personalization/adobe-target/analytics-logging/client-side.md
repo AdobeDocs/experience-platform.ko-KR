@@ -5,9 +5,9 @@ seo-title: Client-side logging for A4T data in the Platform Web SDK
 seo-description: Learn how to enable client-side logging for Adobe Analytics for Target (A4T) using the Experience Platform Web SDK.
 keywords: target;a4t;로깅;웹 sdk;experience;platform
 exl-id: 7071d7e4-66e0-4ab5-a51a-1387bbff1a6d
-source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
+source-git-commit: de420d3bbf35968fdff59b403a0f2b18110f3c17
 workflow-type: tm+mt
-source-wordcount: '1159'
+source-wordcount: '1155'
 ht-degree: 4%
 
 ---
@@ -136,7 +136,7 @@ Target Edge에서 proposition 응답을 계산할 때 Analytics 클라이언트 
 }
 ```
 
-양식 기반 경험 작성기 활동의 Proposition에는 동일한 제안 아래에 콘텐츠와 클릭 지표 항목이 모두 포함될 수 있습니다. 따라서 컨텐츠에 대한 단일 분석 토큰이 있는 대신 `scopeDetails.characteristics.analyticsToken` 속성, 아래에 지정된 디스플레이 및 클릭 분석 토큰이 모두 있을 수 있습니다. `scopeDetails.characteristics.analyticsTokens` 개체, 위치 `display` 및 `click` 이에 상응한다.
+양식 기반 경험 작성기 활동의 Proposition에는 동일한 제안 아래에 콘텐츠와 클릭 지표 항목이 모두 포함될 수 있습니다. 따라서 컨텐츠에 대한 단일 분석 토큰이 있는 대신 `scopeDetails.characteristics.analyticsToken` 속성, 여기에는 표시 및 클릭 분석 토큰이 모두 지정되어 있을 수 있습니다. `scopeDetails.characteristics.analyticsDisplayToken` 및 `scopeDetails.characteristics.analyticsClickToken` 이에 상응한다.
 
 ```json
 {
@@ -162,14 +162,10 @@ Target Edge에서 proposition 응답을 계산할 때 Analytics 클라이언트 
               }
             ],
             "characteristics": {
-              "eventTokens": {
-                "display": "2lTS5KA6gj4JuSjOdhqUhGqipfsIHvVzTQxHolz2IpTMromRrB5ztP5VMxjHbs7c6qPG9UF4rvQTJZniWgqbOw==",
-                "click": "E0gb6q1+WyFW3FMbbQJmrg=="
-              },
-              "analyticsTokens": {
-                "display": "434689:0:0|2,434689:0:0|1",
-                "click": "434689:0:0|32767"
-              }
+               "displayToken": "2lTS5KA6gj4JuSjOdhqUhGqipfsIHvVzTQxHolz2IpTMromRrB5ztP5VMxjHbs7c6qPG9UF4rvQTJZniWgqbOw==",
+               "clickToken": "E0gb6q1+WyFW3FMbbQJmrg==",
+               "analyticsDisplayToken": "434689:0:0|2,434689:0:0|1", 
+               "analyticsClickToken": "434689:0:0|32767"
             }
           },
           "items": [
@@ -208,11 +204,11 @@ Target Edge에서 proposition 응답을 계산할 때 Analytics 클라이언트 
 }
 ```
 
-의 모든 값 `scopeDetails.characteristics.analyticsToken`뿐만 아니라 `scopeDetails.characteristics.analyticsTokens.display` (표시된 컨텐츠에 대해) 및 `scopeDetails.characteristics.analyticsTokens.click` (클릭 지표의 경우) 은 수집하고 다음과 같이 포함해야 하는 A4T 페이로드입니다. `tnta` 태그를에서 지정합니다. [데이터 삽입 API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md) 호출.
+의 모든 값 `scopeDetails.characteristics.analyticsToken`뿐만 아니라 `scopeDetails.characteristics.analyticsDisplayToken` (표시된 컨텐츠에 대해) 및 `scopeDetails.characteristics.analyticsClickToken` (클릭 지표의 경우) 은 수집하고 다음과 같이 포함해야 하는 A4T 페이로드입니다. `tnta` 태그를에서 지정합니다. [데이터 삽입 API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md) 호출.
 
 >[!IMPORTANT]
 >
->일부 `analyticsToken`/`analyticsTokens` 속성에는 여러 토큰을 포함할 수 있으며, 하나의 쉼표로 구분된 문자열로 연결됩니다.
+>다음 `analyticsToken`, `analyticsDisplayToken`, `analyticsClickToken` 속성에는 여러 토큰을 포함할 수 있으며, 하나의 쉼표로 구분된 문자열로 연결됩니다.
 >
 >다음 섹션에 제공된 구현 예에서 여러 Analytics 토큰이 반복적으로 수집됩니다. Analytics 토큰 배열을 연결하려면 다음과 유사한 함수를 사용하십시오.
 >
@@ -344,13 +340,10 @@ alloy("sendEvent", {
         }
       ],
       "characteristics": {
-        "eventTokens": {
-          "display": "91TS5KA6gj4JuSjOdhqUhGqipfsIHvVzTQxHolz2IpTMromRrB5ztP5VMxjHbs7c6qPG9UF4rvQTJZniWgqgEt==",
-          "click": "Tagb6q1+WyFW3FMbbQJrtg=="
-        },
-        "analyticsTokens": {
-          "display": "434688:0:0|2,434688:0:0|1",
-          "click": "434688:0:0|32767"
+          "displayToken": "91TS5KA6gj4JuSjOdhqUhGqipfsIHvVzTQxHolz2IpTMromRrB5ztP5VMxjHbs7c6qPG9UF4rvQTJZniWgqgEt==",
+          "clickToken": "Tagb6q1+WyFW3FMbbQJrtg==",
+          "analyticsDisplayTokens": "434688:0:0|2,434688:0:0|1",
+          "analyticsClickTokens": "434688:0:0|32767"
         }
       }
     },
@@ -392,8 +385,8 @@ function getDisplayAnalyticsPayload(proposition) {
     return;
   }
   var characteristics = proposition.scopeDetails.characteristics;
-  if (characteristics.analyticsTokens) {
-    return characteristics.analyticsTokens.display;
+  if (characteristics.analyticsDisplayToken) {
+    return characteristics.analyticsDisplayToken;
   }
   return characteristics.analyticsToken;
 }
@@ -420,8 +413,8 @@ function getClickAnalyticsPayload(proposition) {
     return;
   }
   var characteristics = proposition.scopeDetails.characteristics;
-  if (characteristics.analyticsTokens) {
-    return characteristics.analyticsTokens.click;
+  if (characteristics.analyticsClickToken) {
+    return characteristics.analyticsClickToken;
   }
   return characteristics.analyticsToken;
 }
