@@ -4,9 +4,9 @@ title: 세그먼트 대시보드
 description: 'Adobe Experience Platform은 조직이 만든 세그먼트에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다. '
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 2d84a9a7caf080abd51e846f39e4090cb4aa05c7
+source-git-commit: 4bb0078b6687da5239f57e7285507815aa7f3255
 workflow-type: tm+mt
-source-wordcount: '1576'
+source-wordcount: '1575'
 ht-degree: 0%
 
 ---
@@ -57,11 +57,11 @@ Adobe Experience Platform UI(사용자 인터페이스)는 일별 스냅샷 중�
 
 세그먼트 대시보드는 위젯으로 구성되며, 위젯은 선택한 세그먼트에 대한 중요한 정보를 제공하는 읽기 전용 지표입니다.
 
-위젯의 &quot;최근 업데이트&quot; 날짜 및 시간은 데이터의 마지막 스냅숏을 만든 시기를 보여줍니다. 스냅샷의 날짜 및 시간은 UTC로 제공됩니다. 개별 사용자 또는 IMS 조직의 시간대에 있지 않습니다.
+위젯의 &quot;최근 업데이트&quot; 날짜 및 시간은 데이터의 마지막 스냅숏을 만든 시기를 보여줍니다. 스냅샷의 날짜 및 시간은 UTC로 제공됩니다. 개별 사용자 또는 조직의 시간대에 있지 않습니다.
 
 ![](../images/segments/widget-timestamp.png)
 
-## 표준 위젯
+## 표준 위젯 {#standard-widgets}
 
 Adobe은 세그먼트와 관련된 다양한 지표를 시각화하는 데 사용할 수 있는 여러 표준 위젯을 제공합니다. 또한 [!UICONTROL 위젯 라이브러리]. 사용자 지정 위젯을 만드는 방법에 대해 자세히 알아보려면 [위젯 라이브러리 개요](../customize/widget-library.md).
 

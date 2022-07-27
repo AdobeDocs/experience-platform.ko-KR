@@ -4,7 +4,7 @@ title: 대상 대시보드
 description: Adobe Experience Platform은 조직의 활성 대상에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 54020785166b735fcd4dbe052ce1e738a70a30df
+source-git-commit: 4bb0078b6687da5239f57e7285507815aa7f3255
 workflow-type: tm+mt
 source-wordcount: '2726'
 ht-degree: 0%
@@ -41,7 +41,7 @@ Platform UI 내에서 대상 대시보드로 이동하려면 다음을 선택합
 
 자세한 내용은 [대시보드 수정](../customize/modify.md) 및 [위젯 라이브러리 개요](../customize/widget-library.md) 설명서 를 참조하십시오.
 
-## 표준 위젯
+## 표준 위젯 {#standard-widgets}
 
 Adobe은 대상과 관련된 다양한 지표를 시각화하고 데이터 분석에 사용할 수 있는 세그먼트의 완벽성을 평가하는 데 사용할 수 있는 여러 표준 위젯을 제공합니다. 또한 [!UICONTROL 위젯 라이브러리]. 사용자 지정 위젯을 만드는 방법에 대해 자세히 알아보려면 [위젯 라이브러리 개요](../customize/widget-library.md).
 

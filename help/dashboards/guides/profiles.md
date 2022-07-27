@@ -4,9 +4,9 @@ title: 프로필 대시보드
 description: Adobe Experience Platform은 조직의 실시간 고객 프로필 데이터에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: bc1516d5453134ffb18fa682fd70b1f3581d5e18
+source-git-commit: 4bb0078b6687da5239f57e7285507815aa7f3255
 workflow-type: tm+mt
-source-wordcount: '3816'
+source-wordcount: '3814'
 ht-degree: 1%
 
 ---
@@ -59,7 +59,7 @@ Experience Platform 사용자 인터페이스 내의 모든 프로필 기능에 
 
 ## 프로필 찾아보기 {#browse-profiles}
 
-다음 [!UICONTROL 찾아보기] 탭에서 IMS 조직에 수집된 읽기 전용 프로필을 검색하고 볼 수 있습니다. 여기에서 기본 설정, 이전 이벤트, 상호 작용 및 세그먼트와 관련하여 프로필에 속하는 중요한 정보를 볼 수 있습니다
+다음 [!UICONTROL 찾아보기] 탭에서 조직에 수집된 읽기 전용 프로필을 검색하고 볼 수 있습니다. 여기에서 기본 설정, 이전 이벤트, 상호 작용 및 세그먼트와 관련하여 프로필에 속하는 중요한 정보를 볼 수 있습니다
 
 Platform UI에 제공된 프로필 보기 기능에 대한 자세한 내용은 [Real-time Customer Data Platform에서 프로필 검색](../../rtcdp/profile/profile-browse.md).
 
@@ -89,9 +89,9 @@ Platform UI에 제공된 프로필 보기 기능에 대한 자세한 내용은 [
 
 대시보드는 프로필 데이터와 관련된 중요한 정보를 제공하는 읽기 전용 지표인 위젯으로 구성됩니다.
 
-위젯의 &quot;최근 업데이트&quot; 날짜 및 시간은 데이터의 마지막 스냅숏을 만든 시기를 보여줍니다. 스냅샷의 날짜 및 시간은 UTC로 제공됩니다. 개별 사용자 또는 IMS 조직의 시간대에 있지 않습니다.
+위젯의 &quot;최근 업데이트&quot; 날짜 및 시간은 데이터의 마지막 스냅숏을 만든 시기를 보여줍니다. 스냅샷의 날짜 및 시간은 UTC로 제공됩니다. 개별 사용자 또는 조직의 시간대에 있지 않습니다.
 
-## 표준 위젯
+## 표준 위젯 {#standard-widgets}
 
 Adobe은 프로필 데이터와 관련된 다양한 지표를 시각화하는 데 사용할 수 있는 여러 표준 위젯을 제공합니다. 또한 [!UICONTROL 위젯 라이브러리]. 사용자 지정 위젯을 만드는 방법에 대해 자세히 알아보려면 [위젯 라이브러리 개요](../customize/widget-library.md).
 
