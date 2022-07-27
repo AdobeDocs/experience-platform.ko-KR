@@ -4,9 +4,9 @@ title: 대상 대시보드
 description: Adobe Experience Platform은 조직의 활성 대상에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 2fdcd0748ccfe5b6b079bc21c8dbde491fbb2471
+source-git-commit: 54020785166b735fcd4dbe052ce1e738a70a30df
 workflow-type: tm+mt
-source-wordcount: '2671'
+source-wordcount: '2726'
 ht-degree: 0%
 
 ---
@@ -55,6 +55,7 @@ Adobe은 대상과 관련된 다양한 지표를 시각화하고 데이터 분�
 * [[!UICONTROL ID로 매핑되지 않은 세그먼트]](#unmapped-segments-by-identity)
 * [[!UICONTROL ID별로 매핑된 세그먼트]](#mapped-segments-by-identity)
 * [[!UICONTROL 일반적인 대상]](#common-audiences)
+* [[!UICONTROL 매핑된 대상]](#mapped-audiences)
 * [[!UICONTROL 매핑된 대상 상태]](#mapped-audience-health)
 * [[!UICONTROL 대상 수]](#destinations-count)
 * [[!UICONTROL 대상 상태]](#destination-status)
@@ -195,6 +196,14 @@ id 열은 위젯 ID 드롭다운에서 선택한 ID에 매핑할 수 있는 세�
 다음 [!UICONTROL 대상 크기] 열은 나열된 각 세그먼트의 총 프로필 수를 제공합니다.
 
 ![공통 대상 위젯.](../images/destinations/common-audiences.png)
+
+### 매핑된 대상 {#mapped-audiences}
+
+다음 [!UICONTROL 매핑된 대상] 위젯은 페이지 맨 위에서 선택한 대상에 활성화할 수 있는 매핑된 대상의 총 수를 표시합니다.
+
+선택 **[!UICONTROL 세그먼트]** 세그먼트 대시보드로 이동 [!UICONTROL 찾아보기] 탭. 이 작업 영역에는 조직의 모든 세그먼트 정의 목록이 표시됩니다.
+
+![매핑된 대상 위젯.](../images/destinations/mapped-audiences.png)
 
 ### 매핑된 대상 상태 {#mapped-audience-health}
 

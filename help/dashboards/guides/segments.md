@@ -4,7 +4,7 @@ title: 세그먼트 대시보드
 description: 'Adobe Experience Platform은 조직이 만든 세그먼트에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다. '
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 63a7857c2b88e81de3df7d925daf15bf631ff84c
+source-git-commit: 2d84a9a7caf080abd51e846f39e4090cb4aa05c7
 workflow-type: tm+mt
 source-wordcount: '1576'
 ht-degree: 0%
@@ -171,6 +171,15 @@ ID에 대해 자세히 알아보려면 [Adobe Experience Platform Identity Servi
 이 위젯을 사용하면 세그먼트 정의 결과의 유사성을 시각화하여 세그멘테이션 전략을 최적화할 수 있습니다.
 
 ![대상 겹치기 위젯입니다.](../images/segments/audience-overlap.png)
+
+<!-- * [[!UICONTROL Audience overlap report]](#audience-overlap-report) -->
+<!-- ### [!UICONTROL Audience overlap report] {#audience-overlap-report} -->
+
+<!-- View an ordered list of audiences by Highest or Lowest overlap percentages. -->
+
+<!-- ![The Audience overlap report widget.]() -->
+
+<!-- https://jira.corp.adobe.com/browse/PLAT-125511 -->
 
 ## 다음 단계
 

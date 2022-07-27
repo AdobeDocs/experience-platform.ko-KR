@@ -4,9 +4,9 @@ title: 프로필 대시보드
 description: Adobe Experience Platform은 조직의 실시간 고객 프로필 데이터에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 2fdcd0748ccfe5b6b079bc21c8dbde491fbb2471
+source-git-commit: bc1516d5453134ffb18fa682fd70b1f3581d5e18
 workflow-type: tm+mt
-source-wordcount: '3761'
+source-wordcount: '3816'
 ht-degree: 1%
 
 ---
@@ -106,6 +106,7 @@ Adobe은 프로필 데이터와 관련된 다양한 지표를 시각화하는 �
 * [[!UICONTROL 세그먼트화되지 않은 프로필]](#unsegmented-profiles)
 * [[!UICONTROL 세그먼트화되지 않은 프로필 트렌드]](#unsegmented-profiles-trend)
 * [[!UICONTROL ID로 세그먼트화되지 않은 프로필]](#unsegmented-profiles-by-identity)
+* [[!UICONTROL 대상자]](#audiences)
 * [[!UICONTROL 대상 상태에 매핑된 대상]](#audiences-mapped-to-destination-status)
 * [[!UICONTROL 대상 크기]](#audiences-size)
 * [[!UICONTROL 프로필 수 트렌드]](#profile-count-trend)
@@ -258,6 +259,32 @@ ID에 대해 자세히 알아보려면 [Adobe Experience Platform Identity Servi
 다음 [!UICONTROL ID로 세그먼트화되지 않은 프로필] 위젯은 세그먼트화되지 않은 프로필의 총 수를 고유 식별자로 분류합니다. 쉽게 비교할 수 있도록 데이터가 막대 차트에 시각화됩니다.
 
 ![ID 위젯별로 세그먼트화되지 않은 프로필.](../images/profiles/unsegmented-profiles-by-identity.png)
+
+### [!UICONTROL 대상자] {#audiences}
+
+이 위젯은 프로필 데이터에 적용된 선택한 병합 정책에 따라 활성화될 준비가 된 총 세그먼트 수를 제공합니다.
+
+선택 **[!UICONTROL 대상]** 로 이동 [!UICONTROL 세그먼트] 대시보드 [!UICONTROL 찾아보기] 탭. 여기에서 조직의 모든 세그먼트 정의 목록을 볼 수 있습니다.
+
+![대상 위젯.](../images/profiles/audiences.png)
+
+<!-- https://jira.corp.adobe.com/browse/PLAT-115291 -->
+
+<!-- * [[!UICONTROL Audiences change trend]](#audiences-change-trend) -->
+<!-- ### [!UICONTROL Audiences change trend] {#audiences-change-trend}
+
+This line graph widget visualizes the change in the total number of audiences each day, trending over time. The change in the number of audiences is dependent on the selected merge policy being applied to your profile data. The period of analysis is selected from the widget dropdown menu. The bar chart can be visualized over 30 days, 90 days, and 12-month periods.  
+
+The visualization allows you to monitor the overall health of audiences within Adobe Experience Platform by understanding trends in the growth or decline of the total number of audiences. -->
+
+<!-- ![The Audiences change trend widget.]() -->
+
+<!-- * [[!UICONTROL Audience overlap report]](#audience-overlap-report) -->
+<!-- ### [!UICONTROL Audience overlap report] {#audience-overlap-report} -->
+
+<!-- View an ordered list of audiences by highest or lowest overlap percentages by selected merge policy. -->
+<!-- ![The Audiences overlap report widget.]() -->
+<!-- https://jira.corp.adobe.com/browse/PLAT-126851 -->
 
 ### [!UICONTROL 대상 상태에 매핑된 대상] {#audiences-mapped-to-destination-status}
 
