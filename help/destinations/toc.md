@@ -4,10 +4,10 @@ user-guide-title: 대상 안내서
 user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화합니다.
 description: 이 문서에서는 Adobe Experience Platform 대상의 목차 목록을 설명합니다
 feature: Destinations
-source-git-commit: 97f68a0d11b1b1fb51f230eee5f1f1e6b6ca2307
+source-git-commit: a8faa3a146669e206b9aa129f5541a7511c1854a
 workflow-type: tm+mt
-source-wordcount: '834'
-ht-degree: 8%
+source-wordcount: '842'
+ht-degree: 7%
 
 ---
 
@@ -104,6 +104,8 @@ ht-degree: 8%
       * [Azure 이벤트 허브 연결](./catalog/cloud-storage/azure-event-hubs.md)
       * [SFTP 연결](./catalog/cloud-storage/sftp.md)
       * [클라우드 스토리지 허용 목록에 추가하다 대상에 대한 IP 주소](./catalog/cloud-storage/ip-address-allow-list.md)
+   * CRM(고객 관계 관리) 대상 {#crm-destinations}
+      * [Salesforce CRM 연결](./catalog/crm/salesforce.md)
    * 데이터 관리 플랫폼 대상 {#data-management}
       * [DMP(데이터 관리 플랫폼) 대상 개요](./catalog/data-management/overview.md)
       * [Audience Manager DIL 확장](./catalog/data-management/aam-dil-extension.md)
