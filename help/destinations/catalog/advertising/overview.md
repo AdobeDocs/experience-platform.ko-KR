@@ -3,9 +3,9 @@ keywords: 광고 대상;대상;플랫폼 대상
 title: 광고 대상 개요
 description: 'Adobe Experience Platform을 타사 광고 플랫폼(예: DSP, 광고 네트워크, SSP)에 연결하고 익명의 대상을 이러한 플랫폼에 공유합니다.'
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: 69bf43f86ab3369ad0c7febcb69ec41d3bcac8bb
+source-git-commit: 30e75b8fbaa4a8269a32f82ade435b67767630c5
 workflow-type: tm+mt
-source-wordcount: '253'
+source-wordcount: '254'
 ht-degree: 1%
 
 ---
@@ -37,7 +37,7 @@ DSP(수요 측 플랫폼), SSP(공급측 플랫폼), 광고 네트워크와 같�
 * [Pinterest 고객 목록 연결](pinterest.md)
 * [(베타) Snapchat Ads 연결](snap-inc.md)
 * [무역센터 연결](tradedesk.md)
-* [Trade Desk CRM 연결](tradedesk-emails.md)
+* [(베타) Trade Desk CRM 연결](tradedesk-emails.md)
 * [Yahoo/Verizon DataX](datax.md)
 
 ### 확장

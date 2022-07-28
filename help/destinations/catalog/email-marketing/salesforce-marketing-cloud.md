@@ -3,14 +3,14 @@ keywords: 이메일;이메일;이메일;이메일 대상;salesforce;salesforce �
 title: Salesforce Marketing Cloud 연결
 description: Salesforce Marketing Cloud은 방문자와 고객이 경험을 개인화할 수 있도록 여정을 만들고 사용자 지정할 수 있도록 해주는 이전에 ExactTarget이라고 하는 디지털 마케팅 세트입니다.
 exl-id: e85049a7-eaed-4f8a-b670-9999d56928f8
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: 30e75b8fbaa4a8269a32f82ade435b67767630c5
 workflow-type: tm+mt
 source-wordcount: '658'
 ht-degree: 2%
 
 ---
 
-# [!DNL Salesforce Marketing Cloud] 연결
+# [!DNL (Files) Salesforce Marketing Cloud] 연결
 
 ## 개요 {#overview}
 
