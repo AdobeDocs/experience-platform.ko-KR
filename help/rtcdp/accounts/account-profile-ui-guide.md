@@ -3,9 +3,9 @@ keywords: rtcdp 프로필;프로필 rtcdp;rtcdp ID;rtcdp 병합 정책;실시간
 title: 계정 프로필 UI 안내서
 description: Real-time Customer Data Platform B2B Edition에서는 계정 프로필을 사용하여 여러 소스에서 계정 정보를 통합할 수 있습니다. 이 안내서에서는 Adobe Experience Platform 사용자 인터페이스의 계정 프로필과 상호 작용하기 위한 세부 사항을 제공합니다.
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: 9963c78bff8d48816982bc79af9239f1a7b5e90a
+source-git-commit: e94753236623343dcd739ff65c18248c1112f361
 workflow-type: tm+mt
-source-wordcount: '1478'
+source-wordcount: '1479'
 ht-degree: 0%
 
 ---
@@ -22,11 +22,11 @@ B2B 워크플로우의 일부로 계정 프로필을 만드는 방법에 대한 
 
 ## 계정 프로필 개요 {#account-profiles-overview}
 
-계정 프로필 개요의 경우 다음을 선택하여 시작합니다 **[!UICONTROL 프로필]** 아래에 [!UICONTROL 계정] 를 클릭합니다. 아래에 [!UICONTROL 개요] 탭에서 대시보드는 단일 시작 지점에 위젯을 표시하는 그래픽 또는 차트를 표시합니다.
+선택 **[!UICONTROL 프로필]** 아래에 [!UICONTROL 계정] 왼쪽 탐색에서 계정 프로필 개요를 확인합니다. 아래에 [!UICONTROL 개요] 탭에서 대시보드는 단일 시작 지점에 위젯을 표시하는 그래픽 또는 차트를 표시합니다.
 
-![개요 탭](images/b2b-account-profile-overview.png)
+![위젯을 표시하는 개요 탭](images/b2b-account-profile-overview.png)
 
-계정 프로필 대시보드에 대한 자세한 내용은 [계정 프로필 대시보드](../../dashboards/guides/account-profiles.md) 설명서.
+[[!UICONTROL 계정 프로필]] ((../../dashboards/guides/account-profiles.md) 대시보드 를 참조하십시오.
 
 ## 계정 프로필 찾아보기 {#browse-account-profiles}
 
