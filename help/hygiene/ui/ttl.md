@@ -2,9 +2,9 @@
 title: 데이터 집합 TTL 관리
 description: Adobe Experience Platform UI에서 데이터 세트에 대한 TTL(Time to Live)을 예약하는 방법을 알아봅니다.
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
-source-git-commit: 22da9e39e168d9a995c7c134733aa7a1b3587749
+source-git-commit: 7f1e4bdf54314cab1f69619bcbb34216da94b17e
 workflow-type: tm+mt
-source-wordcount: '372'
+source-wordcount: '370'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Adobe Experience Platform의 데이터 위생 기능은 현재 Healthcare용 Adobe Shield를 구입한 조직에서만 사용할 수 있습니다.
+>Adobe Experience Platform의 데이터 위생 기능은 현재 Healthcare Shield를 구입한 조직에서만 사용할 수 있습니다.
 
 다음 [[!UICONTROL 데이터 위생] 작업 영역](./overview.md) Adobe Experience Platform UI에서 데이터 세트에 대한 TTL(Time to Live)을 예약할 수 있습니다.
 

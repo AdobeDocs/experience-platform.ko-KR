@@ -4,10 +4,10 @@ description: 데이터 위생 API의 /workorder 종단점을 사용하면 소비
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
 hide: true
 hidefromtoc: true
-source-git-commit: c2e7cf1859f6a2b277783cdec535ecc208703fac
+source-git-commit: 7f1e4bdf54314cab1f69619bcbb34216da94b17e
 workflow-type: tm+mt
-source-wordcount: '1000'
-ht-degree: 3%
+source-wordcount: '998'
+ht-degree: 4%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->Adobe Experience Platform의 데이터 위생 기능은 현재 Healthcare용 Adobe Shield를 구입한 조직에서만 사용할 수 있습니다.
+>Adobe Experience Platform의 데이터 위생 기능은 현재 Healthcare Shield를 구입한 조직에서만 사용할 수 있습니다.
 
 다음 `/workorder` data 위생 API의 종단점을 사용하면 Adobe Experience Platform에서 소비자 ID에 대한 삭제 작업을 프로그래밍 방식으로 관리할 수 있습니다.
 
@@ -75,7 +75,7 @@ curl -X POST \
 | --- | --- |
 | `action` | 수행할 작업입니다. 값은 로 설정해야 합니다. `delete_identity` ID를 삭제할 때 사용됩니다. |
 | `datasetId` | 단일 데이터 세트에서 삭제하는 경우 이 값은 해당 데이터 세트의 ID여야 합니다. 모든 데이터 세트에서 삭제하는 경우 값을 로 설정합니다. `ALL`.<br><br>단일 데이터 세트를 지정하는 경우 데이터 세트의 연결된 XDM(Experience Data Model) 스키마에 기본 ID가 정의되어 있어야 합니다. |
-| `identities` | 삭제할 정보가 있는 하나 이상의 사용자의 ID가 포함된 배열입니다. 각 ID는 [id 네임스페이스](../../identity-service/namespaces.md) 및 값:<ul><li>`namespace`: 단일 문자열 속성을 포함합니다. `code`: id 네임스페이스를 나타냅니다. </li><li>`id`: ID 값입니다.</ul>If `datasetId` 단일 데이터 세트를 지정합니다. 각 엔티티는 아래에 있습니다 `identities` 스키마의 기본 id와 동일한 id 네임스페이스를 사용해야 합니다.<br><br>If `datasetId` 가 로 설정되어 있습니다. `ALL`, `identities` 각 데이터 세트가 다를 수 있으므로 배열은 단일 네임스페이스로 제한되지 않습니다. 그러나 요청에 의해 보고된 대로 조직에서 사용할 수 있는 네임스페이스가 여전히 제한됩니다 [ID 서비스](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |
+| `identities` | 삭제할 정보가 있는 하나 이상의 사용자의 ID가 포함된 배열입니다. 각 ID는 [id 네임스페이스](../../identity-service/namespaces.md) 및 값:<ul><li>`namespace`: 단일 문자열 속성을 포함합니다. `code`: id 네임스페이스를 나타냅니다. </li><li>`id`: ID 값입니다.</ul>If `datasetId` 단일 데이터 세트를 지정합니다. 각 엔티티는 아래에 있습니다 `identities` 스키마의 기본 id와 동일한 id 네임스페이스를 사용해야 합니다.<br><br>If `datasetId` 가 로 설정되어 있습니다. `ALL`, `identities` 각 데이터 세트가 다를 수 있으므로 배열은 단일 네임스페이스로 제한되지 않습니다. 그러나 요청에 의해 보고된 대로 조직에서 사용할 수 있는 네임스페이스가 여전히 제한됩니다 [ID 서비스](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces?lang=ko). |
 
 {style=&quot;table-layout:auto&quot;}
 

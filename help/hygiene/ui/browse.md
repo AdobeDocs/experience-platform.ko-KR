@@ -2,9 +2,9 @@
 title: 데이터 위생 작업 주문 찾아보기
 description: Adobe Experience Platform 사용자 인터페이스에서 기존 데이터 위생 작업 순서를 보고 관리하는 방법을 알아봅니다.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: c24aa700eb425770266bbee5c187e2e87b15a9ac
+source-git-commit: 7f1e4bdf54314cab1f69619bcbb34216da94b17e
 workflow-type: tm+mt
-source-wordcount: '413'
+source-wordcount: '411'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->Adobe Experience Platform의 데이터 위생 기능은 현재 Healthcare용 Adobe Shield를 구입한 조직에서만 사용할 수 있습니다.
+>Adobe Experience Platform의 데이터 위생 기능은 현재 Healthcare Shield를 구입한 조직에서만 사용할 수 있습니다.
 
 시스템에 데이터 위생 요청이 전송되면 요청된 작업을 실행하기 위한 작업 순서가 생성됩니다. 작업 순서는 데이터 집합에 대한 TTL(Scheduled Time to Live)과 같은 특정 데이터 위생 프로세스를 나타내며, 현재 상태 및 기타 관련 세부 정보가 포함됩니다.
 

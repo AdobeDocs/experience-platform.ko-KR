@@ -2,9 +2,9 @@
 title: 데이터 위생 API 안내서
 description: Adobe Experience Platform에서 고객의 저장된 개인 데이터를 프로그래밍 방식으로 수정하거나 삭제하는 방법을 알아봅니다.
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-source-git-commit: 22da9e39e168d9a995c7c134733aa7a1b3587749
+source-git-commit: 7f1e4bdf54314cab1f69619bcbb34216da94b17e
 workflow-type: tm+mt
-source-wordcount: '309'
+source-wordcount: '307'
 ht-degree: 1%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->Adobe Experience Platform의 데이터 위생 기능은 현재 Healthcare용 Adobe Shield를 구입한 조직에서만 사용할 수 있습니다.
+>Adobe Experience Platform의 데이터 위생 기능은 현재 Healthcare Shield를 구입한 조직에서만 사용할 수 있습니다.
 
 데이터 위생 API를 사용하면 데이터 세트에 대해 TTL(time-to-live) 프로토콜을 예약하고 Adobe Experience Platform에 고객의 저장된 개인 데이터를 프로그래밍 방식으로 수정하거나 삭제할 수 있습니다. 이 안내서에서는 API를 사용하기 위한 사전 요구 사항을 설명하고 더 엔드포인트별 설명서에 대한 링크를 제공합니다.
 

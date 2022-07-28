@@ -4,9 +4,9 @@ description: Adobe Experience Platform UI에서 소비자 레코드를 삭제하
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
 hide: true
 hidefromtoc: true
-source-git-commit: d17c53066d77652e46471ba4c696fde682eb3bab
+source-git-commit: 7f1e4bdf54314cab1f69619bcbb34216da94b17e
 workflow-type: tm+mt
-source-wordcount: '1091'
+source-wordcount: '1089'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Adobe Experience Platform의 데이터 위생 기능은 현재 Healthcare용 Adobe Shield를 구입한 조직에서만 사용할 수 있습니다.
+>Adobe Experience Platform의 데이터 위생 기능은 현재 Healthcare Shield를 구입한 조직에서만 사용할 수 있습니다.
 
 다음 [[!UICONTROL 데이터 위생] 작업 영역](./overview.md) Adobe Experience Platform UI에서 ID 서비스 및 실시간 고객 프로필에 참여하는 소비자 레코드를 삭제할 수 있습니다.
 
