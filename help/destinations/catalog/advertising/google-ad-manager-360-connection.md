@@ -2,9 +2,9 @@
 title: (베타) [!DNL Google Ad Manager 360] 연결
 description: Google Ad Manager 360은 게시자가 비디오 및 모바일 앱을 통해 웹 사이트에서 광고 표시를 관리할 수 있는 수단을 제공하는 Google의 광고 서비스 플랫폼입니다.
 exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
-source-git-commit: aed15e0abfd51a8a08290e78302239792f86535a
+source-git-commit: f163b1e3c60953192b2ddf543eb4f3e8df88799b
 workflow-type: tm+mt
-source-wordcount: '931'
+source-wordcount: '914'
 ht-degree: 1%
 
 ---
@@ -93,7 +93,7 @@ ht-degree: 1%
 * **[!UICONTROL 설명]**: 선택 사항입니다. 예를 들어 이 대상을 사용하는 캠페인을 언급할 수 있습니다.
 * **[!UICONTROL 버킷 이름]**: 이름 입력 [!DNL Google Cloud Storage] 이 대상에서 사용할 버킷입니다.
 * **[!UICONTROL 폴더 경로]**: 내보낸 파일을 호스트할 대상 폴더의 경로를 입력합니다.
-* **[!UICONTROL 계정 ID]**: 계정 ID 입력 [!DNL Google]. 네트워크 코드 또는 대상 링크 ID일 수 있습니다. 일반적으로 8자리 ID입니다.
+* **[!UICONTROL 계정 ID]**: 대상 링크 ID를 [!DNL Google].
 * **[!UICONTROL 계정 유형]**: Google을 사용하는 계정에 따라 옵션을 선택합니다.
    * 사용 `DFP by Google` 대상 [!DNL DoubleClick] 게시자
    * 사용 `AdX buyer` 대상 [!DNL Google AdX]
