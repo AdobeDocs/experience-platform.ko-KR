@@ -4,7 +4,7 @@ title: Experience Platform 대시보드에 대한 액세스 권한을 얻고 부
 type: Documentation
 description: Adobe Admin Console을 사용하여 Experience Platform 대시보드를 보고 편집하고 업데이트할 수 있는 권한을 사용자에게 부여합니다.
 exl-id: 2e50790f-b3ab-4851-a9a5-7cb98bf98ce3
-source-git-commit: 052e365c6127961363b7b5333cb0f4f82ab5479a
+source-git-commit: f138bb0f1b8d289cc872afc065d31c5e55d4b05c
 workflow-type: tm+mt
 source-wordcount: '645'
 ht-degree: 6%
@@ -56,7 +56,7 @@ ht-degree: 6%
 | [!DNL Dashboards] [!DNL Inventory] <br/>(찾아보기 탭) | 활성화됨 | 해당 없음 | 해당 없음 | 해당 없음 |
 | [!DNL Dashboards] [!DNL Integrations] 탭 <br/>(Power BI 설치에 사용됨) | 활성화됨 | **하나 이상의 필수** | 해당 없음 | 해당 없음 |
 | Power BI 설치 단추 및 워크플로우 | 활성화됨 | 해당 없음 | **필수 여부** | 해당 없음 |
-| [!DNL Profiles],<br/>[!DNL Segments],<br/>[!DNL Destinations] 대시보드<br/>위젯 스키마를 편집하고 위젯 사용자 지정을 위한 새로운 특성을 추가하는 기능 | **Manage-standard-dashboard 필수** | **필수(각 대시보드에 대해)** | 해당 없음 | 해당 없음 |
+| [!DNL Profiles],<br/>[!DNL Segments],<br/>[!DNL Destinations] 대시보드 .<br/>위젯 스키마를 편집하고 위젯 사용자 지정을 위한 새로운 특성을 추가하는 기능 | **Manage-standard-dashboard 필수** | **필수(각 대시보드에 대해)** | 해당 없음 | 해당 없음 |
 | [!DNL License Usage Dashboard] | 해당 없음 | 해당 없음 | 해당 없음 | 활성화됨 |
 
 {style=&quot;table-layout:auto&quot;}

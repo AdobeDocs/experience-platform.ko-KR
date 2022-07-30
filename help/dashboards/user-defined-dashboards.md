@@ -1,7 +1,8 @@
 ---
 title: 사용자 정의 대시보드
 description: 주요 지표를 시각화하기 위해 맞춤형 위젯을 만들고, 추가하고, 편집할 수 있는 사용자 지정 대시보드를 만들고 관리하는 방법을 알아봅니다.
-source-git-commit: 47e74a0cabbf40df3a45e835ca3a1e9a36fb4532
+exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
+source-git-commit: f138bb0f1b8d289cc872afc065d31c5e55d4b05c
 workflow-type: tm+mt
 source-wordcount: '883'
 ht-degree: 0%
@@ -68,9 +69,9 @@ Adobe Experience Platform에서 대시보드를 보려면 적절한 권한이 �
 
 선택 **[!UICONTROL 다음]** 데이터 모델 선택을 확인합니다. 다음 보기는 왼쪽 레일에 있는 사용 가능한 테이블 목록을 표시합니다. 선택한 테이블에 포함된 데이터의 포괄적인 분류를 보려면 표를 선택합니다.
 
-다음 [!UICONTROL 미리 보기] 패널에 탭 포함 [!UICONTROL 샘플 레코드] 및 [!UICONTROL 속성].The [!UICONTROL 샘플 레코드] 탭에서는 테이블 보기에서 선택한 테이블의 레코드 하위 집합을 제공합니다. 다음 [!UICONTROL 속성] 탭에는 선택한 테이블과 연관된 모든 속성에 대한 속성 이름, 데이터 유형 및 소스 테이블이 제공됩니다.
+다음 [!UICONTROL 미리 보기] 패널에 탭 포함 [!UICONTROL 샘플 레코드] 및 [!UICONTROL 속성]. 다음 [!UICONTROL 샘플 레코드] 탭에서는 테이블 보기에서 선택한 테이블의 레코드 하위 집합을 제공합니다. 다음 [!UICONTROL 속성] 탭에는 선택한 테이블과 연관된 모든 속성에 대한 속성 이름, 데이터 유형 및 소스 테이블이 제공됩니다.
 
-왼쪽 레일에서 사용할 수 있는 목록에서 표를 선택하여 위젯에 대한 데이터를 제공하고 을 선택합니다 [!UICONTROL 선택] 위젯 작성기로 돌아갑니다.
+왼쪽 레일에서 사용할 수 있는 목록에서 표를 선택하여 위젯에 대한 데이터를 제공하고 을 선택합니다 **[!UICONTROL 선택]** 위젯 작성기로 돌아갑니다.
 
 ![선택 사항이 강조 표시된 데이터 선택 대화 상자](./images/user-defined-dashboards/select-a-table.png)
 
@@ -117,7 +118,3 @@ Adobe Experience Platform에서 대시보드를 보려면 적절한 권한이 �
 이 문서를 읽은 후에는 사용자 지정 대시보드를 만드는 방법과 해당 대시보드에 대한 사용자 지정 위젯을 만들고, 편집하고 업데이트하는 방법을 더 잘 이해할 수 있습니다.
 
 에 대해 사용 가능한 사전 구성된 지표 및 시각화를 검색하려면 [프로필](./guides/profiles.md#standard-widgets), [세그먼트](./guides/segments.md#standard-widgets), 및 [대상](./guides/destinations.md#standard-widgets) 대시보드 각각의 설명서에서 표준 위젯 목록을 참조하십시오.
-
-
-
-

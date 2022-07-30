@@ -4,9 +4,9 @@ title: 프로필 대시보드
 description: Adobe Experience Platform은 조직의 실시간 고객 프로필 데이터에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: a1a5a34ed0f46223b1eae3df75ff65f27041503e
+source-git-commit: e1d44c453385b8beaa49e9793eb4858876d865b0
 workflow-type: tm+mt
-source-wordcount: '3875'
+source-wordcount: '3901'
 ht-degree: 1%
 
 ---
@@ -89,7 +89,9 @@ Platform UI에 제공된 프로필 보기 기능에 대한 자세한 내용은 [
 
 대시보드는 프로필 데이터와 관련된 중요한 정보를 제공하는 읽기 전용 지표인 위젯으로 구성됩니다.
 
-위젯의 &quot;최근 업데이트&quot; 날짜 및 시간은 데이터의 마지막 스냅숏을 만든 시기를 보여줍니다. 스냅샷의 날짜 및 시간은 UTC로 제공됩니다. 개별 사용자 또는 조직의 시간대에 있지 않습니다.
+가장 최근 스냅샷의 날짜 및 시간이 [!UICONTROL 개요] 병합 정책 드롭다운 옆에 있는 탭입니다. 모든 위젯 데이터는 해당 날짜 및 시간에 따라 정확합니다. 스냅샷의 타임스탬프는 UTC로 제공됩니다. 개별 사용자 또는 조직의 시간대에 있지 않습니다.
+
+![가장 최근 스냅샷 타임스탬프가 강조 표시된 프로필 대시보드 개요 탭.](../images/profiles/snapshot-timestamp.png)
 
 ## 표준 위젯 {#standard-widgets}
 
@@ -105,13 +107,13 @@ Adobe은 프로필 데이터와 관련된 다양한 지표를 시각화하는 �
 * [[!UICONTROL ID별 프로필]](#profiles-by-identity)
 * [[!UICONTROL ID 겹치기]](#identity-overlap)
 * [[!UICONTROL 단일 ID 프로필]](#single-identity-profiles)
+* [[!UICONTROL ID별 단일 ID 프로필]](#single-identity-profiles-by-identity)
 * [[!UICONTROL 세그먼트화되지 않은 프로필]](#unsegmented-profiles)
 * [[!UICONTROL 세그먼트화되지 않은 프로필 트렌드]](#unsegmented-profiles-trend)
 * [[!UICONTROL ID로 세그먼트화되지 않은 프로필]](#unsegmented-profiles-by-identity)
 * [[!UICONTROL 대상자]](#audiences)
 * [[!UICONTROL 대상 상태에 매핑된 대상]](#audiences-mapped-to-destination-status)
 * [[!UICONTROL 대상 크기]](#audiences-size)
-* [[!UICONTROL ID별 단일 ID 프로필]](#single-identity-profiles-by-identity)
 * [[!UICONTROL 병합 정책별 대상 겹치기]](#audience-overlap-by-merge-policy)
 
 ### [!UICONTROL 프로필 수] {#profile-count}
@@ -238,6 +240,14 @@ ID에 대해 자세히 알아보려면 [Adobe Experience Platform Identity Servi
 
 ![단일 ID 프로필 위젯.](../images/profiles/single-identity-profiles.png)
 
+### [!UICONTROL ID별 단일 ID 프로필] {#single-identity-profiles-by-identity}
+
+이 위젯에서는 막대 차트를 사용하여 하나의 고유 식별자만 사용하여 식별되는 프로필의 총 수를 보여줍니다. 위젯은 가장 일반적으로 발생하는 ID 중 최대 5개를 지원합니다.
+
+개별 막대 위로 마우스를 가져가면 ID에 대한 총 프로필 수를 설명하는 대화 상자가 표시됩니다.
+
+![ID 위젯별 단일 ID 프로필.](../images/profiles/single-identity-profiles-by-identity.png)
+
 ### [!UICONTROL 세그먼트화되지 않은 프로필] {#unsegmented-profiles}
 
 >[!CONTEXTUALHELP]
@@ -319,14 +329,6 @@ The visualization allows you to monitor the overall health of audiences within A
 ![세그먼트 이름이 있는 대상 크기 위젯과 강조 표시된 모든 세그먼트 텍스트를 봅니다.](../images/profiles/audiences-size-view-all-segments.png)
 
 자세한 내용은 설명서 를 참조하십시오. [[!UICONTROL 세그먼트] [!UICONTROL  찾아보기] 탭](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#browse).
-
-### [!UICONTROL ID별 단일 ID 프로필] {#single-identity-profiles-by-identity}
-
-이 위젯에서는 막대 차트를 사용하여 하나의 고유 식별자만 사용하여 식별되는 프로필의 총 수를 보여줍니다. 위젯은 가장 일반적으로 발생하는 ID 중 최대 5개를 지원합니다.
-
-개별 막대 위로 마우스를 가져가면 ID에 대한 총 프로필 수를 설명하는 대화 상자가 표시됩니다.
-
-![ID 위젯별 단일 ID 프로필.](../images/profiles/single-identity-profiles-by-identity.png)
 
 ### [!UICONTROL 병합 정책별 대상 겹치기] {#audience-overlap-by-merge-policy}
 

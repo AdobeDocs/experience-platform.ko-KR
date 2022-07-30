@@ -3,9 +3,9 @@ keywords: 플랫폼;대상;대상 작업 공간;작업 공간;ui;대상 ui;카�
 title: 대상 작업 공간
 description: 대상 작업 영역은 개요, 카탈로그, 찾아보기, 계정 및 시스템 보기, 5개의 섹션으로 구성됩니다. 이러한 내용은 아래 섹션에 설명되어 있습니다.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
+source-git-commit: 802a15212f51db2c616860ed0fd2c3f1cf2d3777
 workflow-type: tm+mt
-source-wordcount: '1157'
+source-wordcount: '1162'
 ht-degree: 2%
 
 ---
@@ -26,7 +26,7 @@ Adobe Experience Platform에서 **[!UICONTROL 대상]** 왼쪽 탐색 모음에�
 >
 >조직에서 Experience Platform을 처음 사용하고 아직 활성 대상이 없는 경우 [!UICONTROL 대상] 대시보드 및 [!UICONTROL 개요] 탭이 표시되지 않습니다. 대신, 선택 [!UICONTROL 대상] 왼쪽 탐색에서 는 [[!UICONTROL 카탈로그] 탭](#catalog).
 
-![](../../dashboards/images/destinations/dashboard-overview.png)
+![대상 대시보드 개요 탭.](../../dashboards/images/destinations/dashboard-overview.png)
 
 ## [!UICONTROL 카탈로그] {#catalog}
 
