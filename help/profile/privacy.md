@@ -5,9 +5,9 @@ title: 실시간 고객 프로필의 개인 정보 보호 요청 처리
 type: Documentation
 description: Adobe Experience Platform Privacy Service은 다양한 개인 정보 보호 규정에 따라 지정된 대로 고객 개인 데이터에 대한 액세스, 판매 거부 또는 삭제 요청을 처리합니다. 이 문서에서는 실시간 고객 프로필에 대한 개인 정보 보호 요청 처리와 관련된 필수 개념을 다룹니다.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: 1686ff1684080160057462e9aa40819a60bf6b75
+source-git-commit: a713245f3228ed36f262fa3c2933d046ec8ee036
 workflow-type: tm+mt
-source-wordcount: '1281'
+source-wordcount: '1312'
 ht-degree: 0%
 
 ---
@@ -46,9 +46,7 @@ ID 서비스는 전역적으로 정의된(표준) 및 사용자 정의(사용자
 
 >[!IMPORTANT]
 >
->Privacy Service은 처리할 수만 있습니다 [!DNL Profile] ID 결합을 수행하지 않는 병합 정책을 사용하는 데이터. UI를 사용하여 개인 정보 보호 요청이 처리 중인지 확인하는 경우 &quot;[!DNL None]&quot; [!UICONTROL ID 결합] 유형. 즉, [!UICONTROL ID 결합] 가 &quot;(으)로 설정되어 있습니다.[!UICONTROL 비공개 그래프]&quot;.
->
->![병합 정책의 ID 결합이 없음으로 설정되어 있습니다](./images/privacy/no-id-stitch.png)
+>Privacy Service은 처리할 수만 있습니다 [!DNL Profile] ID 결합을 수행하지 않는 병합 정책을 사용하는 데이터. 의 섹션을 참조하십시오. [정책 제한 사항 병합](#merge-policy-limitations) 추가 정보.
 >
 >개인 정보 보호 요청을 완료하는 데 걸리는 시간은 보장할 수 없습니다. 에서 변경 사항이 발생하는 경우 [!DNL Profile] 요청이 여전히 처리 중인 동안 해당 레코드가 처리되는지 여부도 보장할 수 없습니다.
 
@@ -60,7 +58,11 @@ API에서 작업 요청을 만들 때 내에 제공된 모든 ID입니다 `userI
 >
 >ID 그래프와 프로필 조각이 Platform 데이터 세트에 배포되는 방법에 따라 각 고객에 대해 두 개 이상의 ID를 제공해야 할 수 있습니다. 다음 섹션을 참조하십시오 [프로필 조각](#fragments) 추가 정보.
 
-또한 `include` 요청 페이로드 배열에는 요청이 수행되고 있는 다양한 데이터 저장소의 제품 값이 포함되어야 합니다. 에 요청할 때 [!DNL Data Lake]를 지정하는 경우 배열에 &quot;ProfileService&quot; 값이 포함되어야 합니다.
+또한 `include` 요청 페이로드 배열에는 요청이 수행되고 있는 다양한 데이터 저장소의 제품 값이 포함되어야 합니다. ID와 연결된 프로필 데이터를 삭제하려면 배열에 값이 포함되어야 합니다 `ProfileService`. 고객의 ID 그래프 연결을 삭제하려면 배열에 값이 포함되어야 합니다 `identity`.
+
+>[!NOTE]
+>
+>의 섹션을 참조하십시오. [프로필 요청 및 ID 요청](#profile-v-identity) 의 사용에 대한 효과에 대한 자세한 내용은 이 문서의 뒷부분에서 참조하십시오 `ProfileService` 및 `identity` 내 `include` 배열입니다.
 
 다음 요청은 의 단일 고객 데이터에 대한 새 개인 정보 작업을 만듭니다 [!DNL Profile] 저장. 에서는 고객에 대해 두 개의 ID 값이 제공됩니다 `userIDs` 배열; 표준 `Email` id 네임스페이스 및 사용자 지정 `Customer_ID` 네임스페이스. 여기에는 다음에 대한 제품 값도 포함됩니다 [!DNL Profile] (`ProfileService`)을 클릭하여 제품에서 사용할 수 있습니다. `include` 배열:
 
@@ -96,7 +98,7 @@ curl -X POST \
         ]
       }
     ],
-    "include": ["ProfileService"],
+    "include": ["ProfileService","identity"],
     "expandIds": false,
     "priority": "normal",
     "regulation": "ccpa"
@@ -129,22 +131,25 @@ UI에서 작업 요청을 만들 때는 반드시 선택해야 합니다 **[!UIC
 
 개인 정보 보호 요청이 모든 관련 고객 속성을 처리하도록 하려면 해당 속성을 저장할 수 있는 모든 적용 가능한 데이터 세트에 대한 기본 ID 값을 제공해야 합니다(고객당 최대 9개의 ID). 의 ID 필드에 대한 섹션을 참조하십시오. [스키마 구성 기본 사항](../xdm/schema/composition.md#identity) id로 일반적으로 표시된 필드에 대한 자세한 내용은 다음을 참조하십시오.
 
-## 요청 처리 삭제
+## 요청 처리 삭제 {#delete}
 
 When [!DNL Experience Platform] 에서 삭제 요청을 받습니다. [!DNL Privacy Service], [!DNL Platform] 에 확인 보내기 [!DNL Privacy Service] 요청이 수신되고 영향을 받는 데이터가 삭제로 표시되었음을 나타냅니다. 그러면 레코드가 [!DNL Data Lake] 또는 [!DNL Profile] 개인 정보 작업이 완료되면 저장합니다. 삭제 작업이 계속 처리되는 동안 데이터는 소프트 삭제되므로 어떤 방법으로도 액세스할 수 없습니다 [!DNL Platform] 서비스. 자세한 내용은 [[!DNL Privacy Service] 설명서](../privacy-service/home.md#monitor) 작업 상태 추적에 대한 자세한 내용을 참조하십시오.
 
->[!IMPORTANT]
->
->프로필에 대해 삭제 요청이 수행된 경우(`ProfileService`)이지만 ID 서비스(`identity`). 결과 작업은 고객(또는 고객 세트)에 대해 수집된 속성 데이터를 제거하지만 identity 그래프에 설정된 연관은 제거하지 않습니다.
->
->예를 들어 고객의 `email_id` 및 `customer_id` 는 해당 ID에 저장된 모든 속성 데이터를 제거합니다. 그러나 이후에 수집된 모든 데이터는 동일한 위치에서 수집됩니다 `customer_id` 은 여전히 적절한 `email_id`: 연결이 아직 있으므로
->
->또한 Privacy Service은 [!DNL Profile] ID 결합을 수행하지 않는 병합 정책을 사용하는 데이터. UI를 사용하여 개인 정보 보호 요청이 처리 중인지 확인하는 경우 &quot;[!DNL None]&quot; [!UICONTROL ID 결합] 유형. 즉, [!UICONTROL ID 결합] 가 &quot;(으)로 설정되어 있습니다.[!UICONTROL 비공개 그래프]&quot;.
->
->![병합 정책의 ID 결합이 없음으로 설정되어 있습니다](./images/privacy/no-id-stitch.png)
-
 향후 릴리스에서 [!DNL Platform] 은(는) 확인을 [!DNL Privacy Service] 데이터가 물리적으로 삭제된 후
 
+### 프로필 요청 및 ID 요청 {#profile-v-identity}
+
+프로필에 대해 삭제 요청이 수행된 경우(`ProfileService`)이지만 ID 서비스(`identity`). 결과 작업은 고객(또는 고객 세트)에 대해 수집된 속성 데이터를 제거하지만 identity 그래프에 설정된 연관은 제거하지 않습니다.
+
+예를 들어 고객의 `email_id` 및 `customer_id` 는 해당 ID에 저장된 모든 속성 데이터를 제거합니다. 그러나 이후에 수집된 모든 데이터는 동일한 위치에서 수집됩니다 `customer_id` 은 여전히 적절한 `email_id`: 연결이 아직 있으므로
+
+지정된 고객에 대한 프로필 및 모든 ID 연결을 제거하려면 삭제 요청에 프로필 및 ID 서비스를 모두 대상 제품으로 포함해야 합니다.
+
+### 병합 정책 제한 사항 {#merge-policy-limitations}
+
+Privacy Service은 처리할 수만 있습니다 [!DNL Profile] ID 결합을 수행하지 않는 병합 정책을 사용하는 데이터. UI를 사용하여 개인 정보 보호 요청이 처리되는지 확인하는 경우 **[!DNL None]** 로서의 [!UICONTROL ID 결합] 유형. 즉, [!UICONTROL ID 결합] 가 로 설정되어 있습니다. [!UICONTROL 비공개 그래프].
+>![병합 정책의 ID 결합이 없음으로 설정되어 있습니다](./images/privacy/no-id-stitch.png)
+>
 ## 다음 단계
 
 이 문서를 읽은 후에는 의 개인 정보 보호 요청 처리와 관련된 중요한 개념을 도입했습니다 [!DNL Experience Platform]. ID 데이터를 관리하고 개인 정보 보호 작업을 만드는 방법을 더 깊이 이해하기 위해 이 안내서 전체에서 제공된 설명서를 계속 읽는 것이 좋습니다.

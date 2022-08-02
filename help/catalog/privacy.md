@@ -5,9 +5,9 @@ title: Data Lake의 개인 정보 보호 요청 처리
 topic-legacy: overview
 description: Adobe Experience Platform Privacy Service은 법률 및 조직 개인 정보 보호 규정에 따라 지정된 대로 고객 개인 데이터에 대한 액세스, 판매 거부 또는 삭제 요청을 처리합니다. 이 문서에서는 Data Lake에 저장된 고객 데이터의 개인 정보 보호 요청 처리와 관련된 중요한 개념을 다룹니다.
 exl-id: c06b0a44-be1a-4938-9c3e-f5491a3dfc19
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: a713245f3228ed36f262fa3c2933d046ec8ee036
 workflow-type: tm+mt
-source-wordcount: '1380'
+source-wordcount: '1388'
 ht-degree: 1%
 
 ---
@@ -148,9 +148,9 @@ curl -X POST \
 
 ### UI 사용
 
-UI에서 작업 요청을 만들 때는 반드시 선택해야 합니다 **[!UICONTROL AEP Data Lake]** 및/또는 **[!UICONTROL 프로필]** 아래에 **[!UICONTROL 제품]** 에 저장된 데이터의 작업을 처리하려면 [!DNL Data Lake] 또는 [!DNL Real-time Customer Profile]각각 입니다.
+UI에서 작업 요청을 만들 때는 반드시 선택해야 합니다 **[!UICONTROL AEP Data Lake]** 아래에 **[!UICONTROL 제품]** 에 저장된 데이터의 작업을 처리하려면 [!DNL Data Lake].
 
-<img src="images/privacy/product-value.png" width="450"><br>
+![개인 정보 보호 요청 만들기 대화 상자에서 선택한 Data Lake 제품을 보여주는 이미지](./images/privacy/product-value.png)
 
 ### API 사용
 
