@@ -3,9 +3,9 @@ title: Platform Web SDK의 ID 데이터
 description: Adobe Experience Platform Web SDK를 사용하여 ECID(Adobe Experience Cloud ID)를 검색하고 관리하는 방법을 알아봅니다.
 keywords: ID;자사 ID;ID 서비스;타사 ID;ID 마이그레이션;방문자 ID;타사 ID;타사 ID;MigrationEnabled;getIdentity;ID 동기화;syncIdentity;sendEvent;identityMap;기본;ecid;ID 네임스페이스;네임스페이스 ID;인증 상태;해시Enabled;
 exl-id: 03060cdb-becc-430a-b527-60c055c2a906
-source-git-commit: 85ff35e0e7f7e892de5252e8f3ad069eff83aa15
+source-git-commit: d6aed404828d06bf223f348dd97960652b05933a
 workflow-type: tm+mt
-source-wordcount: '1334'
+source-wordcount: '1356'
 ht-degree: 1%
 
 ---
@@ -101,6 +101,10 @@ alloy("sendEvent", {
 ```
 
 내의 각 속성 `identityMap` 특정 ID에 속하는 ID를 나타냅니다 [id 네임스페이스](../../identity-service/namespaces.md). 속성 이름은 ID 네임스페이스 심벌이어야 합니다. 이 심볼은 &quot; 아래에 Adobe Experience Platform 사용자 인터페이스에 나열된 것을 찾을 수 있습니다.[!UICONTROL ID]&quot;. 속성 값은 해당 ID 네임스페이스와 관련된 ID 배열이어야 합니다.
+
+>[!IMPORTANT]
+>
+>에서 전달된 네임스페이스 ID입니다 `identityMap` 는 대/소문자를 구분합니다. 불완전한 데이터 수집을 방지하려면 올바른 네임스페이스 ID를 사용해야 합니다.
 
 ID 배열의 각 ID 객체에는 다음 속성이 포함됩니다.
 
