@@ -3,7 +3,7 @@ keywords: Experience Platform;홈;인기 항목;액세스 제어;속성 기반 �
 title: 속성 기반 액세스 제어 정책 만들기
 description: 이 문서에서는 Adobe Experience Cloud의 권한 인터페이스를 통해 정책 관리에 대한 정보를 제공합니다
 exl-id: 66820711-2db0-4621-908d-01187771de14
-source-git-commit: c31855bff9d87133252c43e2f2f2fe1960c7b144
+source-git-commit: 97b4b98a2f14e36e8e8c71bd2ab9631782bc333f
 workflow-type: tm+mt
 source-wordcount: '692'
 ht-degree: 0%
@@ -42,7 +42,7 @@ ht-degree: 0%
 
 드롭다운을 사용하여 **리소스**.
 
-![flac-policy-resource-dropdown](../../images/flac-ui/flac-policy-resource-dropdown.png)
+![flac-policy-resource-dropdown](../../images/flac-ui/flac-policy-resource-dropdown-1.png)
 
 그런 다음 드롭다운을 사용하여 **일치**.
 
