@@ -2,10 +2,10 @@
 title: 호스트 끝점
 description: Reactor API에서 /hosts 종단점을 호출하는 방법을 알아봅니다.
 exl-id: 9d0d2a65-49e9-429c-a665-754b59a11cf1
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 905384b3190cd55e7caa9c4560d6b2774280eee7
 workflow-type: tm+mt
-source-wordcount: '765'
-ht-degree: 7%
+source-wordcount: '821'
+ht-degree: 6%
 
 ---
 
@@ -211,6 +211,7 @@ curl -X POST \
             "username": "John Doe",
             "encrypted_private_key": "{PRIVATE_KEY}",
             "server": "https://example.com",
+            "skip_symlinks": true,
             "path": "assets",
             "port": 22
           },
@@ -227,6 +228,7 @@ curl -X POST \
 | `attributes.path` | 에 추가할 경로입니다 `server` URL. |
 | `attributes.port` | 사용할 특정 서버 포트를 나타내는 정수입니다. |
 | `attributes.server` | 서버의 호스트 URL입니다. |
+| `attributes.skip_symlinks`<br><br>(SFTP 호스트의 경우에만 해당) | 기본적으로 모든 SFTP 호스트는 심볼릭 링크(symlink)를 사용하여 서버에 저장된 라이브러리 빌드를 참조합니다. 그러나 모든 서버가 symlink 사용을 지원하는 것은 아닙니다. 이 속성이 포함되고 로 설정된 경우 `true`를 지정하는 경우 호스트는 복사 작업을 사용하여 symlink를 사용하는 대신 직접 빌드 자산을 업데이트합니다. |
 | `attributes.username` | 인증에 사용할 선택적 사용자 이름입니다. |
 | `type` | 업데이트할 리소스 유형입니다. 이 끝점의 경우 값은 `hosts`. |
 
@@ -248,6 +250,7 @@ curl -X POST \
       "path": "assets",
       "port": 22,
       "status": "pending",
+      "skip_symlinks": true,
       "type_of": "sftp",
       "updated_at": "2020-12-14T17:42:07.033Z",
       "username": "John Doe"
@@ -337,6 +340,7 @@ curl -X PATCH \
       "path": null,
       "port": null,
       "status": "succeeded",
+      "skip_symlinks": true,
       "type_of": "sftp",
       "updated_at": "2020-12-14T17:42:45.696Z",
       "username": null
