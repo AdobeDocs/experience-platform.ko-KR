@@ -4,14 +4,14 @@ solution: Experience Platform
 title: 프로필 보강 작업 모니터링
 type: Tutorial
 exl-id: 096a2212-ed7f-4419-8ead-fa1ca01c2804
-source-git-commit: 6811e3032abe569b1f00d757553eb6862e4e3354
+source-git-commit: 47a6cc9b77a0591d488d5ebc3929b465e1a6e6d2
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '634'
+ht-degree: 1%
 
 ---
 
-# UI에서 프로필 보강 작업 모니터링(#monitor-profile-enrichment)
+# UI에서 프로필 보강 작업 모니터링 {#monitor-profile-enrichment}
 
 를 사용하십시오 [!UICONTROL 프로필 보강] 대시보드 를 사용하여 프로필 데이터 보강 작업이 실행 및 완료되었는지 이해하고 데이터 보강 작업의 효과를 측정하는 기본 지표를 확인합니다.
 
@@ -38,7 +38,7 @@ ht-degree: 0%
 | **[!UICONTROL 상태]** | 관련 계정 작업의 상태(성공, 실패 또는 처리)를 나타냅니다. |
 | **[!UICONTROL 메시지]** | 특정 작업 실행에 대한 오류 또는 경고 메시지를 나타냅니다. |
 
-## 프로필 데이터 보강(#lead-to-account-matching)을 사용하여 계정 일치
+## 계정 일치 프로필 데이터 보강 리드 {#lead-to-account-matching}
 
 다음 [!UICONTROL 계정 일치 리드] 대시보드는 기본 지표와 [계정 일치 리드](/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md) 프로필 보강.
 
