@@ -3,9 +3,9 @@ keywords: rtcdp 프로필;프로필 rtcdp;rtcdp ID;rtcdp 병합 정책;실시간
 title: 계정 프로필 UI 안내서
 description: Real-time Customer Data Platform B2B Edition에서는 계정 프로필을 사용하여 여러 소스에서 계정 정보를 통합할 수 있습니다. 이 안내서에서는 Adobe Experience Platform 사용자 인터페이스의 계정 프로필과 상호 작용하기 위한 세부 사항을 제공합니다.
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: 604d2e100981b2c92d4cfac6862d78511791aa91
+source-git-commit: 9119e6376228c3cec214977265abf0ce55093b64
 workflow-type: tm+mt
-source-wordcount: '1476'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -27,6 +27,26 @@ B2B 워크플로우의 일부로 계정 프로필을 만드는 방법에 대한 
 ![위젯을 표시하는 개요 탭](images/b2b-account-profile-overview.png)
 
 다음 항목에 대한 설명서를 참조하십시오. [[!UICONTROL 계정 프로필]](../../dashboards/guides/account-profiles.md) 대시보드 를 참조하십시오.
+
+## 리드와 계정 일치 구성 {#configure-lead-to-account-matching}
+
+>[!IMPORTANT]
+>
+> B2B AI 관리자만 계정 일치 서비스에 대한 리드를 활성화, 비활성화 및 구성할 수 있습니다. 서비스를 비활성화하면 24시간 이내에 일치하는 결과가 삭제됩니다.
+
+리드를 계정 일치로 구성하려면 **[!UICONTROL 프로필]** 아래에 [!UICONTROL 계정] 을 클릭합니다. 설정 **[!UICONTROL 개요]** 탭, 선택 **[!UICONTROL 설정]** 오른쪽 위에 있습니다.
+
+![설정 선택](images/b2b-configuring-accounts-profile.png)
+
+다음 **[!UICONTROL 계정 설정]** 대화 상자가 열립니다. 여기에서 **[!UICONTROL Lead-to-Account 일치 활성화]** 기능을 활성화하려면 전환합니다. 드롭다운 메뉴를 사용하여 선택 **[!UICONTROL 일별]** 대상 **[!UICONTROL 일치하는 대상]** 설정 마지막으로 관련 항목을 선택합니다 **[!UICONTROL 일치 기준]** 옵션 뒤에 **[!UICONTROL 저장]** 설정을 확인하고 로 돌아갑니다. **[!UICONTROL 계정 프로필]** 화면.
+
+>[!NOTE]
+>
+> 주소는 일치하는 유일한 기준으로 사용할 수 없습니다. 다른 일치 기준 중 하나 이상을 선택해야 합니다.
+
+![계정 설정 구성](images/b2b-configuring-account-settings.png)
+
+계정 일치에 대한 리드에 대해 자세히 알아보려면 [실시간 CDP B2B 개요에서 계정 일치 시작](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md).
 
 ## 계정 프로필 찾아보기 {#browse-account-profiles}
 

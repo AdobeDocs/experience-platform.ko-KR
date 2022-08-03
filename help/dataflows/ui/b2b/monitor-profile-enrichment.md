@@ -3,18 +3,23 @@ description: 를 사용하십시오 [!UICONTROL 프로필 보강] 대시보드 �
 solution: Experience Platform
 title: 프로필 보강 작업 모니터링
 type: Tutorial
-source-git-commit: f3389ef2c2bd9ff52ecde2a4f5fd55e5b86783fc
+exl-id: 096a2212-ed7f-4419-8ead-fa1ca01c2804
+source-git-commit: 6811e3032abe569b1f00d757553eb6862e4e3354
 workflow-type: tm+mt
-source-wordcount: '466'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
-# UI에서 프로필 보강 작업 모니터링
+# UI에서 프로필 보강 작업 모니터링(#monitor-profile-enrichment)
 
 를 사용하십시오 [!UICONTROL 프로필 보강] 대시보드 를 사용하여 프로필 데이터 보강 작업이 실행 및 완료되었는지 이해하고 데이터 보강 작업의 효과를 측정하는 기본 지표를 확인합니다.
 
-에서 [플랫폼 UI](https://platform.adobe.com), 선택 **[!UICONTROL 모니터링]** 왼쪽 탐색에서 로 이동하여 [!UICONTROL 모니터링] 대시보드 . 보기 선택기에서 을 선택합니다 **B2B 흐름** 에 해당하는 대시보드 요소를 보려면 [Real-Time CDP B2B](/help/rtcdp/b2b-overview.md).  다음 [!UICONTROL 모니터링] 대시보드에는 최근 성공적인 실행의 기본 지표와 일별 작업 상태가 과거 최대 90일까지 포함됩니다. 다음 [!UICONTROL 관련 계정] 대시보드에는 다음과 같은 기본 지표와 특정 일별 작업 상태가 표시됩니다 [관련 계정](/help/rtcdp/b2b-ai-ml-services/related-accounts.md) 프로필 보강.
+에서 [플랫폼 UI](https://platform.adobe.com), 선택 **[!UICONTROL 모니터링]** 왼쪽 탐색에서 로 이동하여 [!UICONTROL 모니터링] 대시보드 . 보기 선택기에서 을 선택합니다 **B2B 흐름** 에 해당하는 대시보드 요소를 보려면 [Real-Time CDP B2B](/help/rtcdp/b2b-overview.md).  다음 [!UICONTROL 모니터링] 대시보드에는 최근 성공적인 실행의 기본 지표와 일별 작업 상태가 과거 최대 90일까지 포함됩니다.
+
+## 관련 계정 프로필 보강(#related-accounts)
+
+다음 [!UICONTROL 관련 계정] 대시보드는 기본 지표와 [관련 계정](/help/rtcdp/b2b-ai-ml-services/related-accounts.md) 프로필 보강.
 
 ![Experience Platform UI에서 프로필 보강 작업 모니터링 화면에 도달하는 방법에 대한 시각적 표시입니다.](/help/dataflows/assets/ui/b2b/monitoring-profile-enrichment-jobs.png)
 
@@ -23,7 +28,7 @@ ht-degree: 1%
 관련 계정 프로필 데이터 보강 작업에 다음 지표를 사용할 수 있습니다.
 
 | 지표 | 설명 |
----------|----------|
+| --------- | ---------- |
 | **[!UICONTROL 총 계정 프로필]** | 조직에서 액세스할 수 있는 총 계정 프로필을 나타냅니다. |
 | **[!UICONTROL 계정 그룹]** | 관련 계정 기계 학습 작업에 의해 클러스터링된 계정 그룹 수를 나타냅니다. |
 | **[!UICONTROL 단일 계정 그룹]** | 다른 계정과 함께 그룹화되지 않은 계정 수를 나타냅니다. |
@@ -32,6 +37,24 @@ ht-degree: 1%
 | **[!UICONTROL 마지막 성공 실행]** | 마지막으로 성공한 관련 계정 작업 실행 날짜와 시간을 나타냅니다. |
 | **[!UICONTROL 상태]** | 관련 계정 작업의 상태(성공, 실패 또는 처리)를 나타냅니다. |
 | **[!UICONTROL 메시지]** | 특정 작업 실행에 대한 오류 또는 경고 메시지를 나타냅니다. |
+
+## 프로필 데이터 보강(#lead-to-account-matching)을 사용하여 계정 일치
+
+다음 [!UICONTROL 계정 일치 리드] 대시보드는 기본 지표와 [계정 일치 리드](/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md) 프로필 보강.
+
+![계정 일치 프로필 데이터 보강 리드](/help/dataflows/assets/ui/b2b/mpc-lead-to-account-matching.png)
+
+프로필 데이터 보강 작업에서 계정 일치 항목에 이어지는 리드에 다음 지표를 사용할 수 있습니다.
+
+| 지표 | 설명 |
+| --------- | ---------- |
+| **[!UICONTROL 계정이 있는 총 사용자 수]** | 계정과 연결된 총 사용자 수를 나타냅니다. |
+| **[!UICONTROL 총 계정]** | 총 계정 수를 나타냅니다. |
+| **[!UICONTROL 계정이 있는 기존 사용자]** | 데이터 소스의 계정과 이미 연결된 사람 수를 나타냅니다. |
+| **[!UICONTROL 일치하는 사람]** | 계정에 일치된 사람 수를 나타냅니다. |
+| **[!UICONTROL 미대응 사람]** | 계정과 일치하지 않는 사람 수를 나타냅니다. |
+| **[!UICONTROL 마지막 성공 실행]** | 계정 일치 작업 실행에서 마지막으로 성공한 리드의 날짜 및 시간을 나타냅니다. |
+| **[!UICONTROL 상태]** | 리드의 상태(성공, 실패 또는 처리)를 나타내는 계정 일치 작업을 나타냅니다. |
 
 ## UI 컨트롤 {#ui-controls}
 
@@ -51,7 +74,8 @@ ht-degree: 1%
 
 ## 다음 단계 {#next-steps}
 
-이제 이 자습서를 따라 관련 계정 프로필 보강 작업에 대한 지표를 모니터링하고 이해할 수 있습니다. 자세한 내용은 다음 문서를 참조하십시오.
+이제 이 자습서를 따라 프로필 보강 작업에 대한 지표를 모니터링하고 이해할 수 있습니다. 자세한 내용은 다음 문서를 참조하십시오.
 
 * [실시간 CDP B2B의 관련 계정](/help/rtcdp/b2b-ai-ml-services/related-accounts.md)
 * [계정 프로필 UI 안내서의 관련 계정 탭](/help/rtcdp/accounts/account-profile-ui-guide.md)
+* [실시간 CDP B2B에서 계정 일치 시작](/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md)
