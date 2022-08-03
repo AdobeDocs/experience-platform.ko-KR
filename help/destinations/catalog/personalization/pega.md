@@ -1,13 +1,13 @@
 ---
 title: Pega 고객 의사 결정 허브 연결
 description: Adobe Experience Platform의 Pega Customer Decisioning Hub 대상을 사용하여 프로필 속성 및 세그먼트 멤버십 데이터를 Pega Customer Decisioning Hub로 전송하여 다음으로 좋은 작업 결정을 내릴 수 있습니다.
-source-git-commit: 475b3b6dceefe968ffb451193cee4d7ed6387c86
+exl-id: 0546da5d-d50d-43ec-bbc2-9468a7db4d90
+source-git-commit: f06afec31b7fa550a612280b8ad665b8393ee2e3
 workflow-type: tm+mt
 source-wordcount: '1003'
 ht-degree: 1%
 
 ---
-
 
 # Pega 고객 의사 결정 허브 연결
 
@@ -39,7 +39,7 @@ Adobe Experience Platform의 프로필 세그먼트 멤버십에 로드된 경�
 
 * 에서 Adobe 세그먼트 멤버십 구성 요소 구성 [!DNL Pega Customer Decision Hub] 인스턴스.
 * OAuth 2.0 구성 [클라이언트 자격 증명을 사용한 클라이언트 등록](https://docs.pega.com/security/87/creating-and-configuring-oauth-20-client-registration) 권한 부여 [!DNL Pega Customer Decision Hub] 인스턴스.
-* 구성 [실시간 실행 데이터 흐름](https://docs.pega.com/decision-management/87/creating-real-time-run-data-flow)  세그먼트 멤버십 Adobe 데이터 플로우에서 사용할 수 있습니다 [!DNL Pega Customer Decision Hub] 인스턴스.
+* 구성 [실시간 실행 데이터 흐름](https://docs.pega.com/decision-management/87/creating-real-time-run-data-flows) 세그먼트 멤버십 Adobe 데이터 플로우에서 사용할 수 있습니다 [!DNL Pega Customer Decision Hub] 인스턴스.
 
 ## 지원되는 ID {#supported-identities}
 
