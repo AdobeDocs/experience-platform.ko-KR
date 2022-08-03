@@ -1,7 +1,7 @@
 ---
 keywords: rtcdp b2b;b2b;계정;계정 프로필;계정 프로필 rtcdp;실시간 고객 데이터 플랫폼
 title: 실시간 CDP B2B Edition의 계정 프로필
-description: Real-time Customer Data Platform B2B 에디션을 통해 계정 프로필을 사용하여 여러 소스에서 계정 정보를 통합하는 방법에 대해 알아봅니다.
+description: Real-Time Customer Data Platform B2B 에디션을 통해 계정 프로필을 사용하여 여러 소스에서 계정 정보를 통합하는 방법에 대해 알아봅니다.
 exl-id: 67515fe0-975e-4ee1-b172-60bc93ba1010
 source-git-commit: 9bd7434f2b224d76decac1e04d8491a6b3149a3a
 workflow-type: tm+mt

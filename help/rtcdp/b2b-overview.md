@@ -1,7 +1,7 @@
 ---
 keywords: RTCDP;CDP;B2B Edition;Real-time Customer Data Platform;실시간 고객 데이터 플랫폼;실시간 cdp;b2b;cdp;Customer AI
 title: 실시간 CDP B2B Edition 개요
-description: Real-time Customer Data Platform B2B 에디션 계정 개요
+description: Real-Time Customer Data Platform B2B 에디션 계정 개요
 exl-id: 9b45bba4-fc46-4d69-b36a-5cb91f316612
 source-git-commit: ad0d38cbd249642d582a807c5679065827f57717
 workflow-type: tm+mt

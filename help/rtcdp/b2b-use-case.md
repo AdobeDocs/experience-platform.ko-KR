@@ -1,7 +1,7 @@
 ---
 keywords: RTCDP;CDP;Real-time Customer Data Platform;실시간 고객 데이터 플랫폼;실시간 cdp;cdp;rtcdp
 title: Real-time Customer Data Platform B2B Edition의 사용 사례 예
-description: 이 샘플 시나리오는 Real-time Customer Data Platform B2B 에디션 구현 구성에 대한 예제를 제공합니다.
+description: 이 샘플 시나리오는 Real-Time Customer Data Platform B2B 에디션 구현 구성에 대한 예제를 제공합니다.
 exl-id: 15505980-ac33-44b2-8989-c08cbabd212b
 source-git-commit: e6f71954d52e0a998955c3420307417cc011c24d
 workflow-type: tm+mt

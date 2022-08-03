@@ -1,6 +1,6 @@
 ---
 audience: user
-user-guide-title: Real-time Customer Profile 안내서
+user-guide-title: Real-Time Customer Profile 안내서
 user-guide-description: 고객 데이터를 통합하여 다양한 채널에서 고객과의 상호 작용을 종합적으로 파악합니다.
 feature: Profiles
 source-git-commit: 3eea0a1ecbe7db202f56f326e7b9b1300b37d236
