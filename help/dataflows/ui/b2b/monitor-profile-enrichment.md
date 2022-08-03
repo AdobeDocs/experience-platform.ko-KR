@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 프로필 보강 작업 모니터링
 type: Tutorial
 exl-id: 096a2212-ed7f-4419-8ead-fa1ca01c2804
-source-git-commit: 47a6cc9b77a0591d488d5ebc3929b465e1a6e6d2
+source-git-commit: 842fe74b0b751c515a4faee437e1f94bd0662e11
 workflow-type: tm+mt
-source-wordcount: '634'
+source-wordcount: '633'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 에서 [플랫폼 UI](https://platform.adobe.com), 선택 **[!UICONTROL 모니터링]** 왼쪽 탐색에서 로 이동하여 [!UICONTROL 모니터링] 대시보드 . 보기 선택기에서 을 선택합니다 **B2B 흐름** 에 해당하는 대시보드 요소를 보려면 [Real-Time CDP B2B](/help/rtcdp/b2b-overview.md).  다음 [!UICONTROL 모니터링] 대시보드에는 최근 성공적인 실행의 기본 지표와 일별 작업 상태가 과거 최대 90일까지 포함됩니다.
 
-## 관련 계정 프로필 보강(#related-accounts)
+## 관련 계정 프로필 보강 {#related-accounts}
 
 다음 [!UICONTROL 관련 계정] 대시보드는 기본 지표와 [관련 계정](/help/rtcdp/b2b-ai-ml-services/related-accounts.md) 프로필 보강.
 
