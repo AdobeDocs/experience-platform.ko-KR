@@ -3,20 +3,20 @@ keywords: Experience Platform;홈;인기 항목;데이터 레이크 개인 정�
 solution: Experience Platform
 title: Data Lake의 개인 정보 보호 요청 처리
 topic-legacy: overview
-description: Adobe Experience Platform Privacy Service은 법률 및 조직 개인 정보 보호 규정에 따라 지정된 대로 고객 개인 데이터에 대한 액세스, 판매 거부 또는 삭제 요청을 처리합니다. 이 문서에서는 Data Lake에 저장된 고객 데이터의 개인 정보 보호 요청 처리와 관련된 중요한 개념을 다룹니다.
+description: Adobe Experience Platform Privacy Service은 법률 및 조직 개인 정보 보호 규정에 따라 지정된 대로 고객 개인 데이터에 대한 액세스, 판매 거부 또는 삭제 요청을 처리합니다. 이 문서에서는 데이터 레이크에 저장된 고객 데이터의 개인 정보 보호 요청 처리와 관련된 중요한 개념을 다룹니다.
 exl-id: c06b0a44-be1a-4938-9c3e-f5491a3dfc19
-source-git-commit: a713245f3228ed36f262fa3c2933d046ec8ee036
+source-git-commit: 159a46fa227207bf161100e50bc286322ba2d00b
 workflow-type: tm+mt
-source-wordcount: '1388'
+source-wordcount: '1428'
 ht-degree: 1%
 
 ---
 
-# 의 개인 정보 보호 요청 처리 [!DNL Data Lake]
+# 데이터 레이크에서 개인 정보 보호 요청 처리
 
 Adobe Experience Platform [!DNL Privacy Service] 법적 및 조직 개인 정보 보호 규정에 따라 지정된 대로 고객 개인 데이터에 대한 액세스, 판매 거부 또는 삭제 요청을 처리합니다.
 
-이 문서에서는 [!DNL Data Lake].
+이 문서에서는 데이터 레이크에 저장된 고객 데이터의 개인 정보 보호 요청 처리와 관련된 중요한 개념을 다룹니다.
 
 >[!NOTE]
 >
@@ -43,7 +43,7 @@ Adobe Experience Platform [!DNL Identity Service] 는 시스템 및 장치에서
 
 ## 데이터 세트에 ID 데이터 추가
 
-에 대한 개인 정보 보호 요청을 만들 때 [!DNL Data Lake], 데이터를 찾고 그에 따라 처리하기 위해서는 각 개별 고객에 대해 유효한 ID 값(및 관련 네임스페이스)을 제공해야 합니다. 따라서 개인 정보 보호 요청의 대상이 되는 모든 데이터 세트에는 연결된 XDM 스키마에 ID 설명자가 포함되어야 합니다.
+데이터 레이크에 대한 개인 정보 보호 요청을 만들 때 데이터를 찾고 그에 따라 처리하기 위해 각 개별 고객에 대해 유효한 ID 값(및 관련 네임스페이스)을 제공해야 합니다. 따라서 개인 정보 보호 요청의 대상이 되는 모든 데이터 세트에는 연결된 XDM 스키마에 ID 설명자가 포함되어야 합니다.
 
 >[!NOTE]
 >
@@ -138,27 +138,27 @@ curl -X POST \
 
 >[!NOTE]
 >
->이 섹션에서는 다음에 대한 개인 정보 보호 요청의 형식을 지정하는 방법을 다룹니다 [!DNL Data Lake]. 를 검토하는 것이 좋습니다 [[!DNL Privacy Service] UI](../privacy-service/ui/overview.md) 또는 [[!DNL Privacy Service] API](../privacy-service/api/getting-started.md) 문서 를 참조하십시오.
+>이 섹션에서는 데이터 레이크에 대한 개인 정보 보호 요청의 형식을 지정하는 방법을 다룹니다. 를 검토하는 것이 좋습니다 [[!DNL Privacy Service] UI](../privacy-service/ui/overview.md) 또는 [[!DNL Privacy Service] API](../privacy-service/api/getting-started.md) 문서 를 참조하십시오.
 
-다음 섹션에서는 [!DNL Data Lake] 사용 [!DNL Privacy Service] UI 또는 API.
+다음 섹션에서는 [!DNL Privacy Service] UI 또는 API.
 
 >[!IMPORTANT]
 >
->개인 정보 보호 요청을 완료하는 데 걸리는 시간은 보장할 수 없습니다. 요청이 여전히 처리 중인 동안 Data Lake 내에서 변경 사항이 발생하는 경우 해당 레코드가 처리되는지 여부도 보장할 수 없습니다.
+>개인 정보 보호 요청을 완료하는 데 걸리는 시간은 보장할 수 없습니다. 요청이 아직 처리되는 동안 데이터 레이크 내에서 변경 사항이 발생하는 경우 해당 레코드가 처리되는지 여부도 보장할 수 없습니다.
 
 ### UI 사용
 
-UI에서 작업 요청을 만들 때는 반드시 선택해야 합니다 **[!UICONTROL AEP Data Lake]** 아래에 **[!UICONTROL 제품]** 에 저장된 데이터의 작업을 처리하려면 [!DNL Data Lake].
+UI에서 작업 요청을 만들 때는 반드시 선택해야 합니다 **[!UICONTROL AEP Data Lake]** 아래에 **[!UICONTROL 제품]** data lake에 저장된 데이터에 대한 작업을 처리하기 위해.
 
-![개인 정보 보호 요청 만들기 대화 상자에서 선택한 Data Lake 제품을 보여주는 이미지](./images/privacy/product-value.png)
+![개인 정보 보호 요청 만들기 대화 상자에서 선택한 데이터 레이크 제품을 보여주는 이미지](./images/privacy/product-value.png)
 
 ### API 사용
 
-API에서 작업 요청을 만들 때 `userIDs` 제공된 경우 특정 `namespace` 및 `type` 적용되는 데이터 저장소에 따라 다릅니다. 의 ID [!DNL Data Lake] 를 사용해야 합니다. `unregistered` 그들의 `type` 값, 및 `namespace` 와 일치하는 값 [개인 정보 레이블](#privacy-labels) 해당 데이터 세트에 추가되었습니다.
+API에서 작업 요청을 만들 때 `userIDs` 제공된 경우 특정 `namespace` 및 `type` 적용되는 데이터 저장소에 따라 다릅니다. 데이터 레이크의 ID는 `unregistered` 그들의 `type` 값, 및 `namespace` 와 일치하는 값 [개인 정보 레이블](#privacy-labels) 해당 데이터 세트에 추가되었습니다.
 
-또한 `include` 요청 페이로드 배열에는 요청이 수행되고 있는 다양한 데이터 저장소의 제품 값이 포함되어야 합니다. 에 요청할 때 [!DNL Data Lake]이면 배열에 값이 포함되어야 합니다 `aepDataLake`.
+또한 `include` 요청 페이로드 배열에는 요청이 수행되고 있는 다양한 데이터 저장소의 제품 값이 포함되어야 합니다. 데이터 레이크에 요청을 할 때 배열에 값이 포함되어야 합니다 `aepDataLake`.
 
-다음 요청은 [!DNL Data Lake], 등록 취소를 사용하여 `email_label` 네임스페이스. 여기에는 다음에 대한 제품 값도 포함됩니다 [!DNL Data Lake] 에서 `include` 배열:
+다음 요청은 등록되지 않은 를 사용하여 데이터 레이크에 대한 새 개인 정보 보호 작업을 만듭니다 `email_label` 네임스페이스. 또한, `include` 배열:
 
 ```shell
 curl -X POST \
@@ -205,19 +205,19 @@ curl -X POST \
 
 ## 요청 처리 삭제
 
-When [!DNL Experience Platform] 에서 삭제 요청을 받습니다. [!DNL Privacy Service], [!DNL Platform] 에 확인 보내기 [!DNL Privacy Service] 요청이 수신되고 영향을 받는 데이터가 삭제로 표시되었음을 나타냅니다. 그러면 레코드가 [!DNL Data Lake] 7일 안에 이 7일 기간 동안 데이터는 소프트 삭제되므로 다른 사용자가 액세스할 수 없습니다 [!DNL Platform] 서비스.
+When [!DNL Experience Platform] 에서 삭제 요청을 받습니다. [!DNL Privacy Service], [!DNL Platform] 에 확인 보내기 [!DNL Privacy Service] 요청이 수신되고 영향을 받는 데이터가 삭제로 표시되었음을 나타냅니다. 그러면 레코드가 7일 이내에 데이터 레이크에서 제거됩니다. 이 7일 기간 동안 데이터는 소프트 삭제되므로 다른 사용자가 액세스할 수 없습니다 [!DNL Platform] 서비스.
 
-향후 릴리스에서 [!DNL Platform] 은(는) 확인을 [!DNL Privacy Service] 데이터가 물리적으로 삭제된 후
+포함되어 있는 경우 `ProfileService` 또는 `identity` 개인 정보 보호 요청에서 관련 데이터는 별도로 처리됩니다. 의 섹션을 참조하십시오. [프로필에 대한 요청 처리 삭제](../profile/privacy.md#delete) 추가 정보.
 
 ## 다음 단계
 
-이 문서를 읽은 후에는 의 개인 정보 보호 요청 처리와 관련된 중요한 개념을 도입했습니다 [!DNL Data Lake]. ID 데이터를 관리하고 개인 정보 보호 작업을 만드는 방법을 더 깊이 이해하기 위해 이 안내서 전체에서 제공된 설명서를 계속 읽는 것이 좋습니다.
+이 문서를 읽은 후에는 데이터 레이크에 대한 개인 정보 보호 요청 처리와 관련된 중요한 개념을 도입했습니다. ID 데이터를 관리하고 개인 정보 보호 작업을 만드는 방법을 더 깊이 이해하기 위해 이 안내서 전체에서 제공된 설명서를 계속 읽는 것이 좋습니다.
 
 다음 문서를 참조하십시오. [실시간 고객 프로필에 대한 개인 정보 보호 요청 처리](../profile/privacy.md) 에 대한 개인 정보 보호 요청 처리 단계에 대해 설명합니다. [!DNL Profile] 저장.
 
 ## 부록
 
-다음 섹션에서는 [!DNL Data Lake].
+다음 섹션에는 데이터 레이크에서 개인 정보 요청을 처리하는 데 대한 추가 정보가 들어 있습니다.
 
 ### 중첩 맵 유형 필드에 레이블 지정 {#nested-maps}
 

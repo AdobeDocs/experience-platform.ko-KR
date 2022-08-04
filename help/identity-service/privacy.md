@@ -3,9 +3,9 @@ keywords: Experience Platform;홈;인기 있는 주제
 title: Identity 서비스에서 개인 정보 보호 요청 처리
 description: Adobe Experience Platform Privacy Service은 다양한 개인 정보 보호 규정에 따라 지정된 대로 고객 개인 데이터에 대한 액세스, 판매 거부 또는 삭제 요청을 처리합니다. 이 문서에서는 Identity 서비스의 개인 정보 보호 요청 처리와 관련된 필수 개념을 다룹니다.
 exl-id: ab84450b-1a4b-4fdd-b77d-508c86bbb073
-source-git-commit: f0fa8d77e6184314056f8e70205a9b42409d09d5
+source-git-commit: 159a46fa227207bf161100e50bc286322ba2d00b
 workflow-type: tm+mt
-source-wordcount: '722'
+source-wordcount: '1038'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ Adobe Experience Platform [!DNL Privacy Service] 는 GDPR(General Data Protectio
 
 >[!NOTE]
 >
->이 안내서에서는 Experience Platform의 ID 데이터 저장소에 대해 개인 정보 보호 요청을 하는 방법만 다룹니다. 플랫폼 데이터 레이크에 대해 개인 정보 보호 요청을 하려는 경우 또는 [!DNL Real-time Customer Profile]에서 참조할 수 있는 [Data Lake의 개인 정보 보호 요청 처리](../catalog/privacy.md) 및 [프로필에 대한 개인 정보 보호 요청 처리](../profile/privacy.md) 추가 정보.
+>이 안내서에서는 Experience Platform의 ID 데이터 저장소에 대해 개인 정보 보호 요청을 하는 방법만 다룹니다. 플랫폼 데이터 레이크에 대해 개인 정보 보호 요청을 하려는 경우 또는 [!DNL Real-time Customer Profile]에서 참조할 수 있는 [data lake의 개인 정보 보호 요청 처리](../catalog/privacy.md) 및 [프로필에 대한 개인 정보 보호 요청 처리](../profile/privacy.md) 추가 정보.
 >
 >다른 Adobe Experience Cloud 애플리케이션에 대해 개인 정보 보호 요청을 수행하는 방법에 대한 단계는 [Privacy Service 설명서](../privacy-service/experience-cloud-apps.md).
 
@@ -105,6 +105,17 @@ UI에서 작업 요청을 만들 때는 반드시 선택해야 합니다 **[!UIC
 ## 요청 처리 삭제
 
 When [!DNL Experience Platform] 에서 삭제 요청을 받습니다. [!DNL Privacy Service], [!DNL Platform] 에 확인 보내기 [!DNL Privacy Service] 요청이 수신되고 영향을 받는 데이터가 삭제로 표시되었음을 나타냅니다. 개별 ID의 삭제는 제공된 네임스페이스 및/또는 ID 값을 기반으로 합니다. 또한, 지정된 IMS 조직과 연결된 모든 샌드박스에 대해서도 삭제를 수행합니다.
+
+실시간 고객 프로필(`ProfileService`) 및 data lake(`aepDataLake`)을 ID 서비스에 대한 개인 정보 보호 요청의 제품으로 사용(`identity`). ID와 관련된 다른 데이터 세트는 잠재적으로 다른 시간에 시스템에서 제거됩니다.
+
+| 포함된 제품 | 효과 |
+| --- | --- |
+| `identity` 전용 | 제공된 ID와 연결된 ID 그래프는 Platform이 삭제 요청을 수신했다는 확인을 전송하는 즉시 삭제됩니다. 해당 ID 그래프에서 생성된 프로필은 여전히 남아 있지만 ID 연결이 제거되므로 새 데이터를 수집할 때 업데이트되지 않습니다. 프로필과 연결된 데이터도 데이터 레이크에 유지됩니다. |
+| `identity` 및 `ProfileService` | Platform이 삭제 요청을 수신했다는 확인을 전송하는 즉시 ID 그래프 및 관련 프로필이 삭제됩니다. 프로필과 연관된 데이터는 데이터 레이크에 유지됩니다. |
+| `identity` 및 `aepDataLake` | 제공된 ID와 연결된 ID 그래프는 Platform이 삭제 요청을 수신했다는 확인을 전송하는 즉시 삭제됩니다. 해당 ID 그래프에서 생성된 프로필은 여전히 남아 있지만 ID 연결이 제거되므로 새 데이터를 수집할 때 업데이트되지 않습니다.<br><br>Data Lake 제품이 요청을 받고 현재 처리 중임을 응답하면 프로필과 연결된 데이터가 소프트 삭제되므로 다른 제품도 액세스할 수 없습니다 [!DNL Platform] 서비스. 작업이 완료되면 데이터가 데이터 레이크에서 완전히 제거됩니다. |
+| `identity`, `ProfileService`, 및 `aepDataLake` | Platform이 삭제 요청을 수신했다는 확인을 전송하는 즉시 ID 그래프 및 관련 프로필이 삭제됩니다.<br><br>Data Lake 제품이 요청을 받고 현재 처리 중임을 응답하면 프로필과 연결된 데이터가 소프트 삭제되므로 다른 제품도 액세스할 수 없습니다 [!DNL Platform] 서비스. 작업이 완료되면 데이터가 데이터 레이크에서 완전히 제거됩니다. |
+
+자세한 내용은 [[!DNL Privacy Service] 설명서](../privacy-service/home.md#monitor) 작업 상태 추적에 대한 자세한 내용을 참조하십시오.
 
 ## 다음 단계
 

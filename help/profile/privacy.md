@@ -5,9 +5,9 @@ title: 실시간 고객 프로필의 개인 정보 보호 요청 처리
 type: Documentation
 description: Adobe Experience Platform Privacy Service은 다양한 개인 정보 보호 규정에 따라 지정된 대로 고객 개인 데이터에 대한 액세스, 판매 거부 또는 삭제 요청을 처리합니다. 이 문서에서는 실시간 고객 프로필에 대한 개인 정보 보호 요청 처리와 관련된 필수 개념을 다룹니다.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: a713245f3228ed36f262fa3c2933d046ec8ee036
+source-git-commit: 159a46fa227207bf161100e50bc286322ba2d00b
 workflow-type: tm+mt
-source-wordcount: '1312'
+source-wordcount: '1563'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ Adobe Experience Platform [!DNL Privacy Service] 는 GDPR(General Data Protectio
 
 >[!NOTE]
 >
->이 안내서에서는 Experience Platform의 프로필 데이터 저장소에 대해 개인 정보 보호 요청을 하는 방법만 다룹니다. Platform Data Lake에 대한 개인 정보 보호 요청도 할 계획이라면 [Data Lake의 개인 정보 보호 요청 처리](../catalog/privacy.md) 추가 정보.
+>이 안내서에서는 Experience Platform의 프로필 데이터 저장소에 대해 개인 정보 보호 요청을 하는 방법만 다룹니다. 플랫폼 데이터 레이크에 대한 개인 정보 보호 요청을 수행하려는 경우 [data lake의 개인 정보 보호 요청 처리](../catalog/privacy.md) 추가 정보.
 >
 >다른 Adobe Experience Cloud 애플리케이션에 대해 개인 정보 보호 요청을 수행하는 방법에 대한 단계는 [Privacy Service 설명서](../privacy-service/experience-cloud-apps.md).
 
@@ -111,7 +111,7 @@ curl -X POST \
 
 ### UI 사용
 
-UI에서 작업 요청을 만들 때는 반드시 선택해야 합니다 **[!UICONTROL AEP Data Lake]** 및/또는 **[!UICONTROL 프로필]** 아래에 **[!UICONTROL 제품]** 에 저장된 데이터의 작업을 처리하려면 [!DNL Data Lake] 또는 [!DNL Real-time Customer Profile]각각 입니다.
+UI에서 작업 요청을 만들 때는 반드시 선택해야 합니다 **[!UICONTROL AEP Data Lake]** 및/또는 **[!UICONTROL 프로필]** 아래에 **[!UICONTROL 제품]** data lake 또는 [!DNL Real-time Customer Profile]각각 입니다.
 
 ![제품 아래에 프로필 옵션이 선택된 상태로 UI에서 생성 중인 액세스 작업 요청](./images/privacy/product-value.png)
 
@@ -133,9 +133,18 @@ UI에서 작업 요청을 만들 때는 반드시 선택해야 합니다 **[!UIC
 
 ## 요청 처리 삭제 {#delete}
 
-When [!DNL Experience Platform] 에서 삭제 요청을 받습니다. [!DNL Privacy Service], [!DNL Platform] 에 확인 보내기 [!DNL Privacy Service] 요청이 수신되고 영향을 받는 데이터가 삭제로 표시되었음을 나타냅니다. 그러면 레코드가 [!DNL Data Lake] 또는 [!DNL Profile] 개인 정보 작업이 완료되면 저장합니다. 삭제 작업이 계속 처리되는 동안 데이터는 소프트 삭제되므로 어떤 방법으로도 액세스할 수 없습니다 [!DNL Platform] 서비스. 자세한 내용은 [[!DNL Privacy Service] 설명서](../privacy-service/home.md#monitor) 작업 상태 추적에 대한 자세한 내용을 참조하십시오.
+When [!DNL Experience Platform] 에서 삭제 요청을 받습니다. [!DNL Privacy Service], [!DNL Platform] 에 확인 보내기 [!DNL Privacy Service] 요청이 수신되고 영향을 받는 데이터가 삭제로 표시되었음을 나타냅니다. 그런 다음 개인 정보 작업이 완료되면 레코드가 제거됩니다.
 
-향후 릴리스에서 [!DNL Platform] 은(는) 확인을 [!DNL Privacy Service] 데이터가 물리적으로 삭제된 후
+ID 서비스(`identity`) 및 data lake(`aepDataLake`)을 제품(`ProfileService`). 프로필과 관련된 서로 다른 데이터 세트가 잠재적으로 다른 시점에 시스템에서 제거됩니다.
+
+| 포함된 제품 | 효과 |
+| --- | --- |
+| `ProfileService` 전용 | Platform이 삭제 요청을 수신했다는 확인을 전송하는 즉시 프로필이 삭제됩니다. 하지만 프로필의 ID 그래프는 여전히 남아 있으며 동일한 ID를 사용하는 새 데이터를 수집할 수 있습니다. 프로필과 연결된 데이터도 데이터 레이크에 유지됩니다. |
+| `ProfileService` 및 `identity` | Platform이 삭제 요청을 수신했다는 확인을 전송하는 즉시 프로필 및 관련 ID 그래프가 삭제됩니다. 프로필과 연관된 데이터는 데이터 레이크에 유지됩니다. |
+| `ProfileService` 및 `aepDataLake` | Platform이 삭제 요청을 수신했다는 확인을 전송하는 즉시 프로필이 삭제됩니다. 하지만 프로필의 ID 그래프는 여전히 남아 있으며 동일한 ID를 사용하는 새 데이터를 수집할 수 있습니다.<br><br>Data Lake 제품이 요청을 받고 현재 처리 중임을 응답하면 프로필과 연결된 데이터가 소프트 삭제되므로 다른 제품도 액세스할 수 없습니다 [!DNL Platform] 서비스. 작업이 완료되면 데이터가 데이터 레이크에서 완전히 제거됩니다. |
+| `ProfileService`, `identity`, 및 `aepDataLake` | Platform이 삭제 요청을 수신했다는 확인을 전송하는 즉시 프로필 및 관련 ID 그래프가 삭제됩니다.<br><br>Data Lake 제품이 요청을 받고 현재 처리 중임을 응답하면 프로필과 연결된 데이터가 소프트 삭제되므로 다른 제품도 액세스할 수 없습니다 [!DNL Platform] 서비스. 작업이 완료되면 데이터가 데이터 레이크에서 완전히 제거됩니다. |
+
+자세한 내용은 [[!DNL Privacy Service] 설명서](../privacy-service/home.md#monitor) 작업 상태 추적에 대한 자세한 내용을 참조하십시오.
 
 ### 프로필 요청 및 ID 요청 {#profile-v-identity}
 
@@ -154,4 +163,4 @@ Privacy Service은 처리할 수만 있습니다 [!DNL Profile] ID 결합을 수
 
 이 문서를 읽은 후에는 의 개인 정보 보호 요청 처리와 관련된 중요한 개념을 도입했습니다 [!DNL Experience Platform]. ID 데이터를 관리하고 개인 정보 보호 작업을 만드는 방법을 더 깊이 이해하기 위해 이 안내서 전체에서 제공된 설명서를 계속 읽는 것이 좋습니다.
 
-에 대한 개인 정보 보호 요청 처리에 대한 자세한 내용은 [!DNL Platform] 에서 사용하지 않는 리소스 [!DNL Profile]에서 문서를 참조하십시오. [Data Lake의 개인 정보 보호 요청 처리](../catalog/privacy.md).
+에 대한 개인 정보 보호 요청 처리에 대한 자세한 내용은 [!DNL Platform] 에서 사용하지 않는 리소스 [!DNL Profile]에서 문서를 참조하십시오. [data lake의 개인 정보 보호 요청 처리](../catalog/privacy.md).
