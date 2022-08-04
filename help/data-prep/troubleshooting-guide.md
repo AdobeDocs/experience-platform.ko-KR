@@ -3,9 +3,10 @@ keywords: Experience Platform;홈;인기 있는 주제
 title: 데이터 준비 문제 해결 안내서
 topic-legacy: troubleshooting
 description: 이 문서에서는 Adobe Experience Platform 데이터 준비에 대해 자주 묻는 질문과 답변을 제공합니다.
-source-git-commit: e96263847f53ea2c884c273fd7986855d4c478c1
+exl-id: 810cfb2f-f80a-4aa7-ab3c-beb5de78708e
+source-git-commit: 4bb21ce5861419964b80a827269e40ef3e6483f8
 workflow-type: tm+mt
-source-wordcount: '254'
+source-wordcount: '326'
 ht-degree: 0%
 
 ---
@@ -25,3 +26,7 @@ ht-degree: 0%
 열을 **필수 여부** 변환 문제로 인해 무효화된 경우 행이 수집되지 않습니다. 부분 데이터 처리가 활성화되면 전체 흐름이 실패하기 전에 이러한 거부의 임계값을 설정할 수 있습니다. 무효화 속성이 스키마 수준 유효성 검사에 영향을 주지 않으면 행이 계속 수집됩니다.
 
 변환 오류 없이 유효하지 않은 행도 거부됩니다. 예를 들어, 데이터 수집 플로우에는 필수 필드에 대한 통과 매핑(변환 논리 없음)이 있으며, 해당 속성에 대해 들어오는 값이 없을 수 있습니다. 이 행은 거부됩니다.
+
+### 필드에서 특수 문자를 이스케이프 처리하려면 어떻게 해야 합니까?
+
+를 사용하여 필드에서 특수 문자를 이스케이프 처리할 수 있습니다 `${...}`. 그러나 마침표(`.`)은 이 메커니즘에서 지원되지 않습니다. 계층과 상호 작용할 때 하위 속성에 마침표(`.`), 백슬래시(`\`)을 사용하여 특수 문자를 이스케이프 처리합니다. 예, `address` 는 속성을 포함하는 객체입니다 `street.name`그런 다음 를 `address.street\.name` 대신 `address.street.name`.

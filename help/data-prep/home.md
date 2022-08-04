@@ -5,9 +5,9 @@ title: 데이터 준비 개요
 topic-legacy: overview
 description: 이 문서에서는 Adobe Experience Platform 내의 데이터 준비를 소개합니다.
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
-source-git-commit: d6d8b6ad9877735848d04cb229b3059842471ee8
+source-git-commit: 7042c6f5e3061fee7183b1befa447333f116c125
 workflow-type: tm+mt
-source-wordcount: '715'
+source-wordcount: '780'
 ht-degree: 0%
 
 ---
@@ -40,6 +40,10 @@ ht-degree: 0%
 계산된 필드를 사용하면 입력 스키마의 속성을 기반으로 값을 만들 수 있습니다. 그런 다음 이러한 값을 대상 스키마의 속성에 지정하고 쉽게 참조할 수 있도록 이름 및 설명을 제공할 수 있습니다.
 
 계산된 필드에 대한 자세한 내용은 [계산된 필드 안내서](./functions.md#calculated-fields).
+
+### 특수 문자 이스케이프 처리
+
+를 사용하여 필드에서 특수 문자를 이스케이프 처리할 수 있습니다 `${...}`. 그러나 마침표(`.`)은 이 메커니즘에서 지원되지 않습니다. 계층과 상호 작용할 때 하위 속성에 마침표(`.`), 백슬래시(`\`)을 사용하여 특수 문자를 이스케이프 처리합니다. 예, `address` 는 속성을 포함하는 객체입니다 `street.name`그런 다음 를 `address.street\.name` 대신 `address.street.name`.
 
 ## 매핑 세트
 
