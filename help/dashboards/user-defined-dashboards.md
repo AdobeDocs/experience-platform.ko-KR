@@ -2,9 +2,9 @@
 title: 사용자 정의 대시보드
 description: 주요 지표를 시각화하기 위해 맞춤형 위젯을 만들고, 추가하고, 편집할 수 있는 사용자 지정 대시보드를 만들고 관리하는 방법을 알아봅니다.
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: f138bb0f1b8d289cc872afc065d31c5e55d4b05c
+source-git-commit: bf2b35e3366c71c51c58b6257cc55f7c9b0cd9c7
 workflow-type: tm+mt
-source-wordcount: '883'
+source-wordcount: '825'
 ht-degree: 0%
 
 ---
@@ -17,21 +17,19 @@ ht-degree: 0%
 
 Adobe Experience Platform 대시보드는 사용자 정의 대시보드 기능을 통해 통찰력을 제공하고 시각화를 사용자 지정하는 데 도움이 됩니다. 이 기능을 사용하면 맞춤형 위젯을 만들고, 추가하고, 편집하여 조직과 관련된 주요 지표를 시각화할 수 있는 사용자 지정 대시보드를 만들고 관리할 수 있습니다.
 
-## 시작하기
+<!-- Getting started / permissions section commented out for Beta. This will be necessary after GA only
 
-Adobe Experience Platform에서 대시보드를 보려면 적절한 권한이 활성화되어 있어야 합니다. 자세한 내용은 [대시보드 권한 설명서](./permissions.md#available-permissions) Adobe Admin Console을 사용하여 Experience Platform 대시보드를 보고 편집하고 업데이트하는 기능을 사용자에게 부여하는 방법을 알아보십시오. 조직에 대한 관리자 권한이 없는 경우 제품 관리자에게 문의하여 필요한 권한을 얻으십시오.
+## Getting started
+
+To view dashboards in Adobe Experience Platform you must have the appropriate permissions enabled. Please read the [dashboards permissions documentation](./permissions.md#available-permissions) to learn how to grant users the ability to view, edit, and update Experience Platform dashboards using Adobe Admin Console. If you do not have administrator privileges for your organization, contact your product administrator to obtain the required permissions. -->
 
 ## 사용자 지정 대시보드 만들기
 
 사용자 지정 대시보드를 만들려면 먼저 대시보드 인벤토리로 이동합니다. 선택 **[!UICONTROL 대시보드]** 플랫폼 UI의 왼쪽 탐색 영역에서 다음을 수행합니다 **[!UICONTROL 대시보드 만들기]**.
 
-사용 가능한 사전 구성된 대시보드에 대한 자세한 내용은 [대시보드 인벤토리 개요](./inventory.md).
+![왼쪽 탐색에 대시보드가 있고 &quot;대시보드 만들기&quot;가 강조 표시된 대시보드 인벤토리입니다.](./images/user-defined-dashboards/create-dashboard.png)
 
->[!NOTE]
->
->사용자 지정 대시보드를 추가하면 사전 구성된 대시보드 목록이 대시보드 인벤토리에서 제거됩니다. 대신, 대시보드 인벤토리는 사용자 정의 대시보드만으로 구성됩니다.
-
-![&quot;대시보드 만들기&quot;가 강조 표시된 대시보드 인벤토리.](./images/user-defined-dashboards/create-dashboard.png)
+사용자 지정 대시보드를 추가하기 전에 대시보드 인벤토리가 비어 있고 &quot;대시보드를 찾을 수 없음&quot;을 표시합니다. 메시지를 표시합니다. 만들어지면 사용자 정의 대시보드가 모두 대시보드 인벤토리에 나열됩니다.
 
 다음 [!UICONTROL 대시보드 만들기] 대화 상자가 나타납니다. 만들려는 위젯 컬렉션에 대해 사용하기 쉽고 설명적인 이름을 입력하고 을 선택합니다 **[!UICONTROL 저장]**.
 
@@ -85,9 +83,9 @@ Adobe Experience Platform에서 대시보드를 보려면 적절한 권한이 �
 >
 >연필 아이콘(![연필 아이콘.](./images/user-defined-dashboards/edit-icon.png))을 클릭하여 제품에서 사용할 수 있습니다.
 
-줄임표(`...`) 속성 이름 옆에 속성을 추가하여 X 또는 Y 축에 속성을 추가합니다.
+추가 아이콘()을 선택합니다./images/user-defined-dashboards/add-icon.png) 속성 이름 옆에 속성을 추가하여 X 또는 Y 축에 속성을 추가합니다.
 
-![타원 드롭다운이 강조 표시된 위젯 작성기가 위젯 축에 속성을 추가합니다.](./images/user-defined-dashboards/attributes-dropdown.png)
+![위젯 축에 속성을 추가하기 위해 강조 표시된 추가 아이콘 드롭다운이 있는 위젯 작성기입니다.](./images/user-defined-dashboards/attributes-dropdown.png)
 
 다음으로, [!UICONTROL 표시] 드롭다운을 사용하여 위젯의 현재 설정에 대한 미리 보기 시각화를 생성합니다. 에서 [!UICONTROL 속성] 화면 오른쪽의 레일에서 위젯의 이름을 [!UICONTROL 위젯 제목] 텍스트 필드.
 
