@@ -5,7 +5,7 @@ title: 데이터 준비 매핑 함수
 topic-legacy: overview
 description: 이 문서에서는 데이터 준비에 사용되는 매핑 기능을 소개합니다.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 7cb940019905240b36e96b834b9e5d0166c1324d
+source-git-commit: a48072d2c418588a05397e991c1a2e17eee4c028
 workflow-type: tm+mt
 source-wordcount: '4286'
 ht-degree: 3%
@@ -25,7 +25,7 @@ ht-degree: 3%
 또한 필드 이름이 **임의** 다음 예약된 키워드 중에서 `${}`:
 
 ```console
-new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continue, else, and, ne, true, le, if, ge, return
+new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continue, else, and, ne, true, le, if, ge, return, _errors
 ```
 
 점 표기법을 사용하여 하위 필드 내의 데이터에 액세스할 수 있습니다. 예를 들어 `name` 개체, 액세스 `firstName` 필드, `name.firstName`.
