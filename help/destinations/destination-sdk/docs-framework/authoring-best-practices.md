@@ -1,9 +1,10 @@
 ---
 title: 작성 우수 사례
 description: 대상 설명서 페이지를 작성할 때 따라야 하는 규칙과 팁을 확인하여 Adobe Experience Platform 설명서 품질 표준을 충족하는지 알아보십시오.
-source-git-commit: 35e5c388e9572a3b27ec4bce55e766725936eda4
+exl-id: b12059f1-6635-41cd-acc5-6ff471111164
+source-git-commit: 0b9b724c2530e43ce681011d12fc1341148ddbf5
 workflow-type: tm+mt
-source-wordcount: '489'
+source-wordcount: '565'
 ht-degree: 0%
 
 ---
@@ -21,9 +22,18 @@ ht-degree: 0%
 * Experience Platform 설명서에서 Adobe 작성자는 **굵게 서식** 다음과 같은 사용자 인터페이스 컨트롤을 참조하십시오.
    * 이동 **[!UICONTROL 연결]** > **[!UICONTROL 대상]**, 을(를) 선택하고 을(를) 선택합니다. **[!UICONTROL 카탈로그]** 탭. 사용자 인터페이스 컨트롤이 [대상 자습서](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#select-destination).
 
+## 쓰기 스타일
+
+>[!IMPORTANT]
+>
+>읽기 [Adobe 설명서 작성 지침 작성](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html?lang=en) 대상 설명서 페이지 작성을 시작하기 전에
+
+* 문장을 짧게 유지한 다음 요점을 빨리 이해하세요. 문장이 20단어를 초과하거나 여러 개의 쉼표를 사용하는 경우 구분하는 것이 좋습니다. 길이가 20단어를 초과하는 문장은 독자들에게 특히 도전적일 수 있다.
+* 지나치게 예의 바르지 마라. &quot;제발&quot; 또는 &quot;친절하게 하십시오...&quot;를 사용하지 마십시오. 참조하십시오.
+
 ## 연결 {#linking}
 
-제공된 설명서 템플릿을 따르고 템플릿에 있는 기존 링크를 편집하지 마십시오. 새 링크를 포함할 때 [설명서에서 링크 사용](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html?lang=en) 기여자 가이드에서 참조할 수 있습니다.
+제공된 설명서 템플릿을 따르고 템플릿에 있는 기존 링크를 편집하지 않습니다. 새 링크를 포함할 때 [설명서에서 링크 사용](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html?lang=en) 기여자 가이드에서 참조할 수 있습니다.
 
 ## 브랜딩 지침 {#branding}
 
