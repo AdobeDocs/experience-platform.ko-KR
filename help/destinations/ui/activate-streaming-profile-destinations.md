@@ -4,9 +4,9 @@ title: 스트리밍 프로필 내보내기 대상으로 대상 데이터 활성�
 type: Tutorial
 description: 세그먼트를 스트리밍 프로필 기반 대상으로 보내 Adobe Experience Platform에서 보유한 대상 데이터를 활성화하는 방법을 알아봅니다.
 exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
-source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
+source-git-commit: af761155bc510d96cea2b0bd475ee4a3bc4abe16
 workflow-type: tm+mt
-source-wordcount: '557'
+source-wordcount: '645'
 ht-degree: 0%
 
 ---
@@ -29,15 +29,15 @@ ht-degree: 0%
 
 1. 이동 **[!UICONTROL 연결 > 대상]**, 을(를) 선택하고 을(를) 선택합니다. **[!UICONTROL 카탈로그]** 탭.
 
-   ![대상 카탈로그 탭](../assets/ui/activate-streaming-profile-destinations/catalog-tab.png)
+   ![대상 카탈로그 탭을 표시하는 이미지입니다.](../assets/ui/activate-streaming-profile-destinations/catalog-tab.png)
 
 1. 선택 **[!UICONTROL 세그먼트 활성화]** 세그먼트를 활성화할 대상에 해당하는 카드에서 아래 그림과 같이 세그먼트를 활성화하십시오.
 
-   ![세그먼트 활성화 단추](../assets/ui/activate-streaming-profile-destinations/activate-segments-button.png)
+   ![대상 카탈로그 탭에서 세그먼트 활성화 컨트롤을 강조 표시하는 이미지입니다.](../assets/ui/activate-streaming-profile-destinations/activate-segments-button.png)
 
 1. 세그먼트를 활성화하는 데 사용할 대상 연결을 선택한 다음 을 선택합니다 **[!UICONTROL 다음]**.
 
-   ![대상 선택](../assets/ui/activate-streaming-profile-destinations/select-destination.png)
+   ![연결할 수 있는 두 대상 선택을 보여주는 이미지입니다.](../assets/ui/activate-streaming-profile-destinations/select-destination.png)
 
 1. 다음 섹션으로 이동 [세그먼트 선택](#select-segments).
 
@@ -45,11 +45,11 @@ ht-degree: 0%
 
 세그먼트 이름 왼쪽에 있는 확인란을 사용하여 대상으로 활성화할 세그먼트를 선택한 다음 선택합니다 **[!UICONTROL 다음]**.
 
-![세그먼트 선택](../assets/ui/activate-streaming-profile-destinations/select-segments.png)
+![활성화 워크플로우의 세그먼트 선택 단계에서 확인란 선택을 강조 표시하는 이미지입니다.](../assets/ui/activate-streaming-profile-destinations/select-segments.png)
 
 ## 프로필 속성 선택 {#select-attributes}
 
-대상 대상으로 전송할 프로필 속성을 선택합니다.
+에서 **[!UICONTROL 매핑]** 단계에서 대상 대상으로 전송할 프로필 속성을 선택합니다.
 
 >[!NOTE]
 >
@@ -59,19 +59,19 @@ ht-degree: 0%
 * 만약 `segmentMembership.status` 필드를 선택하면 내보낸 파일이 포함됩니다. **[!UICONTROL 활성]** 초기 전체 스냅샷의 멤버 및 **[!UICONTROL 활성]** 및 **[!UICONTROL 만료됨]** 후속 증분 내보내기에 있는 멤버
 * 만약 `segmentMembership.status` 필드를 선택하지 않고 내보낸 파일만 포함합니다 **[!UICONTROL 활성]** 초기 전체 스냅샷과 후속 증분 내보내기의 멤버
 
-![권장 속성](../assets/ui/activate-streaming-profile-destinations/attributes-default.png)
+![매핑 단계에서 미리 입력된 권장 속성을 보여주는 이미지입니다.](../assets/ui/activate-streaming-profile-destinations/attributes-default.png)
 
 1. 에서 **[!UICONTROL 속성 선택]** 페이지를 선택하고 **[!UICONTROL 새 필드 추가]**.
 
-   ![새 매핑 추가](../assets/ui/activate-streaming-profile-destinations/add-new-field.png)
+   ![매핑 단계에서 새 필드 컨트롤 추가 를 강조 표시하는 이미지입니다.](../assets/ui/activate-streaming-profile-destinations/add-new-field.png)
 
 1. 오른쪽 화살표를 선택합니다 **[!UICONTROL 스키마 필드]** 을 입력합니다.
 
-   ![소스 필드 선택](../assets/ui/activate-streaming-profile-destinations/select-schema-field.png)
+   ![매핑 단계에서 소스 필드를 선택하는 방법을 강조 표시하는 이미지](../assets/ui/activate-streaming-profile-destinations/select-schema-field.png)
 
 1. 에서 **[!UICONTROL 필드 선택]** 페이지에서 대상으로 전송할 XDM 속성을 선택한 다음 **[!UICONTROL 선택]**.
 
-   ![소스 필드 선택 페이지](../assets/ui/activate-streaming-profile-destinations/target-field-page.png)
+   ![소스 필드로 선택할 수 있는 XDM 필드 선택을 보여주는 이미지입니다.](../assets/ui/activate-streaming-profile-destinations/target-field-page.png)
 
 
 1. 매핑을 추가하려면 1단계부터 3단계까지 반복한 다음 을 선택합니다 **[!UICONTROL 다음]**.
@@ -84,11 +84,11 @@ ht-degree: 0%
 >
 >이 단계에서 Adobe Experience Platform은 데이터 사용 정책 위반을 확인합니다. 아래는 정책이 위반되는 예입니다. 위반을 해결해야 세그먼트 활성화 워크플로우를 완료할 수 있습니다. 정책 위반을 해결하는 방법에 대한 자세한 내용은 [정책 적용](../../rtcdp/privacy/data-governance-overview.md#enforcement) ( 데이터 거버넌스 설명서 섹션) 을 참조하십시오.
 
-![데이터 정책 위반](../assets/common/data-policy-violation.png)
+![검토 단계에서 데이터 정책 위반을 보여주는 이미지입니다.](../assets/common/data-policy-violation.png)
 
 정책 위반이 검색되지 않은 경우 **[!UICONTROL 완료]** 을(를) 클릭하여 선택 내용을 확인하고 데이터를 대상으로 보내기 시작합니다.
 
-![검토](../assets/ui/activate-streaming-profile-destinations/review.png)
+![활성화 워크플로우의 검토 단계를 보여주는 이미지입니다.](../assets/ui/activate-streaming-profile-destinations/review.png)
 
 ## 세그먼트 활성화 확인 {#verify}
 
