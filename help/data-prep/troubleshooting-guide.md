@@ -4,9 +4,9 @@ title: 데이터 준비 문제 해결 안내서
 topic-legacy: troubleshooting
 description: 이 문서에서는 Adobe Experience Platform 데이터 준비에 대해 자주 묻는 질문과 답변을 제공합니다.
 exl-id: 810cfb2f-f80a-4aa7-ab3c-beb5de78708e
-source-git-commit: 4bb21ce5861419964b80a827269e40ef3e6483f8
+source-git-commit: d0f5d1f55101ce15934289d4fcfd1f70c1b63fc7
 workflow-type: tm+mt
-source-wordcount: '326'
+source-wordcount: '342'
 ht-degree: 0%
 
 ---
@@ -30,3 +30,7 @@ ht-degree: 0%
 ### 필드에서 특수 문자를 이스케이프 처리하려면 어떻게 해야 합니까?
 
 를 사용하여 필드에서 특수 문자를 이스케이프 처리할 수 있습니다 `${...}`. 그러나 마침표(`.`)은 이 메커니즘에서 지원되지 않습니다. 계층과 상호 작용할 때 하위 속성에 마침표(`.`), 백슬래시(`\`)을 사용하여 특수 문자를 이스케이프 처리합니다. 예, `address` 는 속성을 포함하는 객체입니다 `street.name`그런 다음 를 `address.street\.name` 대신 `address.street.name`.
+
+### 계산된 필드의 최대 길이는 얼마입니까?
+
+계산된 필드의 길이는 최대 4096자입니다.

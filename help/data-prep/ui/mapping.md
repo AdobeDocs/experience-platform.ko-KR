@@ -3,9 +3,9 @@ keywords: Experience Platform;홈;인기 항목;csv 매핑;csv 파일 매핑;csv
 title: 데이터 준비 UI 안내서
 description: 이 문서에서는 Platform UI에서 데이터 준비 함수를 사용하여 CSV 파일을 XDM 스키마에 매핑하는 방법에 대한 지침을 제공합니다.
 exl-id: fafa4aca-fb64-47ff-a97d-c18e58ae4dae
-source-git-commit: edef8843c03282774991f30220504ece97af52cf
+source-git-commit: d0f5d1f55101ce15934289d4fcfd1f70c1b63fc7
 workflow-type: tm+mt
-source-wordcount: '1837'
+source-wordcount: '1845'
 ht-degree: 1%
 
 ---
@@ -149,7 +149,7 @@ CSV 데이터를 새 데이터 세트에 수집하려면 을 선택합니다 **[
 
 #### 계산된 필드 {#calculated-fields}
 
-계산된 필드를 사용하면 입력 스키마의 속성을 기반으로 값을 만들 수 있습니다. 그런 다음 이러한 값을 대상 스키마의 속성에 지정하고 쉽게 참조할 수 있도록 이름 및 설명을 제공할 수 있습니다.
+계산된 필드를 사용하면 입력 스키마의 속성을 기반으로 값을 만들 수 있습니다. 그런 다음 이러한 값을 대상 스키마의 속성에 지정하고 쉽게 참조할 수 있도록 이름 및 설명을 제공할 수 있습니다. 계산된 필드의 길이는 최대 4096자입니다.
 
 계산된 필드를 만들려면 **[!UICONTROL 새 필드 유형]** 그런 다음 **[!UICONTROL 계산된 필드 추가]**
 

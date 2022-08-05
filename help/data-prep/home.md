@@ -5,9 +5,9 @@ title: 데이터 준비 개요
 topic-legacy: overview
 description: 이 문서에서는 Adobe Experience Platform 내의 데이터 준비를 소개합니다.
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
-source-git-commit: 7042c6f5e3061fee7183b1befa447333f116c125
+source-git-commit: d0f5d1f55101ce15934289d4fcfd1f70c1b63fc7
 workflow-type: tm+mt
-source-wordcount: '780'
+source-wordcount: '788'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ ht-degree: 0%
 
 ### 계산된 필드
 
-계산된 필드를 사용하면 입력 스키마의 속성을 기반으로 값을 만들 수 있습니다. 그런 다음 이러한 값을 대상 스키마의 속성에 지정하고 쉽게 참조할 수 있도록 이름 및 설명을 제공할 수 있습니다.
+계산된 필드를 사용하면 입력 스키마의 속성을 기반으로 값을 만들 수 있습니다. 그런 다음 이러한 값을 대상 스키마의 속성에 지정하고 쉽게 참조할 수 있도록 이름 및 설명을 제공할 수 있습니다. 계산된 필드의 길이는 최대 4096자입니다.
 
 계산된 필드에 대한 자세한 내용은 [계산된 필드 안내서](./functions.md#calculated-fields).
 
