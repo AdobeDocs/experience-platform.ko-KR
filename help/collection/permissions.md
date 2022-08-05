@@ -2,10 +2,10 @@
 title: Experience Platform의 데이터 수집을 위한 권한 관리
 description: Adobe Experience Platform에서 권한을 관리하고 데이터 수집 기능에 대한 액세스를 제어하는 방법에 대한 높은 수준의 개요입니다.
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
-source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
+source-git-commit: 58b8446d6a20ac797ac004b19bdbfdb10f692647
 workflow-type: tm+mt
-source-wordcount: '1201'
-ht-degree: 6%
+source-wordcount: '1311'
+ht-degree: 5%
 
 ---
 
@@ -70,19 +70,36 @@ Adobe Experience Platform 데이터 수집의 권한은 속성, 확장 및 환�
 >
 >일반적인 시나리오에 대한 관리 전략 등 이러한 권한이 태그의 기능에 미치는 영향에 대한 자세한 내용은 태그 설명서를 참조하십시오. [사용자 권한](../tags/ui/administration/user-permissions.md).
 
-## Adobe Experience Platform 데이터 수집에 대한 권한 관리 {#manage}
+## 권한 관리 {#manage}
 
->[!IMPORTANT]
->
->이 섹션에서는 Admin Console에서 Adobe Experience Platform 데이터 수집 제품에 대한 권한을 관리하는 방법만 다룹니다. 하지만 Adobe Experience Platform 제품에서 권한을 관리하는 단계는 유사합니다.
->
->자세한 내용은 [access control UI 안내서](../access-control/ui/overview.md) 플랫폼 권한 관리에 대한 자세한 지침입니다. 조직에서 액세스할 수 있는 제품 SKU에 따라 사용 가능한 모든 권한이 없을 수 있습니다.
+이전 섹션에 요약된 대로 데이터 수집에 대한 권한은 Admin Console의 두 가지 제품 지정을 통해 관리됩니다. **Adobe Experience Platform** 및 **Adobe Experience Platform 데이터 수집**.
 
-데이터 수집에 대한 권한을 관리하려면 [Admin Console](https://adminconsole.adobe.com/) 을(를) 선택합니다. **[!UICONTROL 제품]** 위쪽 탐색에서 를 클릭합니다. 여기서 카드를 선택합니다 **[!UICONTROL Adobe Experience Platform 데이터 수집]**.
+이러한 권한을 관리하려면 [Admin Console](https://adminconsole.adobe.com/) 을(를) 선택합니다. **[!UICONTROL 제품]** 위쪽 탐색에서 를 클릭합니다. 여기에서 구성할 권한에 대한 제품 카드를 선택합니다. Admin Console의 각 제품에서 관련 권한을 관리하는 방법에 대한 단계는 아래 하위 섹션을 참조하십시오.
+
+* [Adobe Experience Platform 권한](#manage-platform)
+* [Adobe Experience Platform 데이터 수집 권한](#manage-collection)
+
+### Adobe Experience Platform에서 권한 관리 {#manage-platform}
+
+에서 **[!UICONTROL 제품]** Admin Console에서 보기, 선택 **[!UICONTROL Adobe Experience Platform 데이터 수집]**. 권한을 편집할 제품 프로필을 선택한 다음 **[!UICONTROL 권한]** 탭.
+
+데이터 수집 기능에 액세스하려면 **[!UICONTROL 샌드박스]**, **[!UICONTROL 데이터 모델링]**, **[!UICONTROL Identity Management]**, 및 **[!UICONTROL 데이터 수집]** 카테고리.
+
+![Admin Console의 데이터 수집 제품 카드를 보여주는 이미지](./images/permissions/platform-permission-card.png)
+
+자세한 내용은 [access control UI 안내서](../access-control/ui/overview.md) 플랫폼 권한 관리에 대한 자세한 지침입니다.
+
+>[!NOTE]
+>
+>조직에서 액세스할 수 있는 제품 SKU에 따라 사용 가능한 모든 플랫폼 권한이 없을 수 있습니다.
+
+### Adobe Experience Platform 데이터 수집에서 권한 관리 {#manage-collection}
+
+에서 **[!UICONTROL 제품]** Admin Console에서 보기, 선택 **[!UICONTROL Adobe Experience Platform 데이터 수집]**.
 
 ![Admin Console의 데이터 수집 제품 카드를 보여주는 이미지](./images/permissions/data-collection-card.png)
 
-### 제품 프로필 선택 또는 만들기
+#### 제품 프로필 선택 또는 만들기
 
 다음 화면에는 조직 아래의 데이터 수집에 사용할 수 있는 제품 프로필 목록인 기본 프로필이 **[!DNL Default Data Collection All Access]**. 원할 경우 기본 제품 프로필을 편집하거나 선택할 수 있습니다 **[!UICONTROL 새 프로필]** 만들 수 있습니다. 조직에 서로 다른 수준의 액세스가 필요한 여러 역할이나 사용자 그룹이 있는 경우 각 역할에 대해 별도의 제품 프로필을 만들어야 합니다.
 
@@ -92,7 +109,7 @@ Adobe Experience Platform 데이터 수집의 권한은 속성, 확장 및 환�
 
 ![제품 프로필 Admin Console에 대한 권한 탭을 보여주는 이미지](./images/permissions/edit-permission-categories.png)
 
-### 제품 프로필에 대한 권한 편집 {#edit-permissions}
+#### 제품 프로필에 대한 권한 편집 {#edit-permissions}
 
 프로필에 대한 권한을 편집할 때 사용 가능한 권한이 왼쪽 열에 나열되고 프로필에 포함된 권한은 오른쪽 열에 나열됩니다. 두 열 간에 이동할 나열된 권한을 선택합니다.
 
@@ -110,7 +127,7 @@ Adobe Experience Platform 데이터 수집의 권한은 속성, 확장 및 환�
 
 ![제품 프로필에 대해 추가된 권한을 보여주는 이미지](./images/permissions/permissions-added.png)
 
-### 제품 프로필에 사용자 할당 {#assign-users}
+#### 제품 프로필에 사용자 할당 {#assign-users}
 
 제품 프로필에 사용자를 할당(그리고 프로필에 구성된 권한을 부여)하려면 다음을 선택합니다 **[!UICONTROL 사용자]** 탭, 그 다음 **[!UICONTROL 사용자 추가]**.
 
