@@ -3,9 +3,9 @@ keywords: 광고; criteo;
 title: 기준 연결
 description: Criteo는 신뢰할 수 있고 영향력 있는 광고를 통해 모든 소비자를 인터넷 개방에서 더 풍부한 경험을 제공합니다. 세계 최대 규모의 상거래 데이터 세트와 동급 최강의 AI를 사용하는 Criteo는 쇼핑 여정의 각 터치포인트를 적시에 적절한 광고를 통해 고객에게 도달하도록 개인화할 수 있습니다.
 exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: 8211ca28462548e1c17675e504e6de6f5cc55e73
 workflow-type: tm+mt
-source-wordcount: '1005'
+source-wordcount: '1007'
 ht-degree: 2%
 
 ---
@@ -28,7 +28,6 @@ Criteo는 신뢰할 수 있고 영향력 있는 광고를 통해 모든 소비�
 
 ## 제한 사항 {#limitations}
 
-* 현재는 대상에서 사용자 제거를 지원하지 않습니다.
 * 기준은 [!DNL SHA-256]-해시된 일반 텍스트 이메일(다음으로 변환) [!DNL SHA-256] 보내기 전). PII(개인 이름 또는 전화 번호와 같은 개인 식별 정보)는 전송하지 마십시오.
 * 클라이언트는 하나 이상의 식별자를 제공해야 합니다. 우선 순위를 매깁니다 [!DNL GUM ID] 해시된 이메일에 대한 식별자로, 일치율이 향상되는 데 기여합니다.
 
@@ -41,7 +40,7 @@ Criteo는 신뢰할 수 있고 영향력 있는 광고를 통해 모든 소비�
 | Target ID | 설명 | 고려 사항 |
 | --- | --- | --- |
 | `email_sha256` | SHA-256 알고리즘을 사용하여 해시된 이메일 주소 | 일반 텍스트와 SHA-256 해시된 이메일 주소는 모두 Adobe Experience Platform에서 지원합니다. 소스 필드에 해시되지 않은 속성이 포함되어 있으면 [!UICONTROL 변형 적용] 활성화 시 Platform에서 자동으로 데이터를 해시하도록 하는 옵션. |
-| `gum_id` | 크리테이오 [!DNL GUM] 쿠키 식별자 | [!DNL GUM IDs] 클라이언트가 사용자 식별 시스템과 Criteo의 사용자 ID([!DNL UID]). 식별자 유형이 `GUM`, 추가 매개 변수, [!DNL GUM Caller ID]도 포함해야 합니다. 적절한 경우 Criteo 계정 팀에 문의하십시오 [!DNL GUM Caller ID] 또는 이 작업에 대한 자세한 정보를 `GUM` 필요한 경우 동기화합니다. |
+| `gum_id` | 크리테이오 [!DNL GUM] 쿠키 식별자 | [!DNL GUM IDs] 클라이언트가 사용자 식별 시스템과 Criteo의 사용자 ID([!DNL UID]). 식별자 유형이 `gum_id`, 추가 매개 변수, [!DNL GUM Caller ID]도 포함해야 합니다. 적절한 경우 Criteo 계정 팀에 문의하십시오 [!DNL GUM Caller ID] 또는 이 작업에 대한 자세한 정보를 [!DNL GUM ID] 필요한 경우 동기화합니다. |
 
 ## 내보내기 유형 및 빈도 {#export-type-frequency}
 
@@ -99,7 +98,6 @@ Criteo는 신뢰할 수 있고 영향력 있는 광고를 통해 모든 소비�
 | --- | --- | --- |
 | 이름 | 나중에 이 대상을 인식하는 데 도움이 되는 이름입니다. 여기서 선택하는 이름은 다음과 같습니다 [!DNL Audience] 이름(Criteo Management Center)을 사용하여 나중에 수정할 수 없습니다. | 예 |
 | 설명 | 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다. | 아니요 |
-| API 버전 | 기준 API 버전. 미리 보기를 선택하십시오. | 예 |
 | 광고주 ID | 조직의 기준 광고주 ID입니다. 이 정보를 얻으려면 Criteo 계정 관리자에게 문의하십시오. | 예 |
 | 크리테이오 [!DNL GUM caller ID] | [!DNL GUM Caller ID] Analytics Premium을 사용할 수 없습니다. 적절한 경우 Criteo 계정 팀에 문의하십시오 [!DNL GUM Caller ID] 또는 이 작업에 대한 자세한 정보를 [!DNL GUM] 필요한 경우 동기화합니다. | 네, 언제나 [!DNL GUM ID] 은 식별자로 제공됩니다 |
 
@@ -121,7 +119,7 @@ Criteo는 신뢰할 수 있고 영향력 있는 광고를 통해 모든 소비�
 
 에서 내보낸 세그먼트를 볼 수 있습니다 [기준 관리 센터](https://marketing.criteo.com/audience-manager/dashboard).
 
-에서 받은 요청 본문 [!DNL Criteo] 연결은 다음과 유사합니다.
+에서 받은 사용자 프로필 추가 요청 본문 [!DNL Criteo] 연결은 다음과 유사합니다.
 
 ```json
 {
@@ -129,6 +127,34 @@ Criteo는 신뢰할 수 있고 영향력 있는 광고를 통해 모든 소비�
     "type": "ContactlistWithUserAttributesAmendment",
     "attributes": {
       "operation": "add",
+      "identifierType": "gum",
+      "gumCallerId": "123",
+      "identifiers": [
+        {
+          "identifier": "456",
+          "attributes": [
+            { "key": "ctoid_GumCaller", "value": "123" },
+            { "key": "ctoid_Gum", "value": "456" },
+            {
+              "key": "ctoid_HashedEmail",
+              "value": "98833030dc03751f2b2c1a0017078975fdae951aa6908668b3ec422040f2d4be"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
+```
+
+에서 받은 사용자 프로필 제거 요청 본문 [!DNL Criteo] 연결은 다음과 유사합니다.
+
+```json
+{
+  "data": {
+    "type": "ContactlistWithUserAttributesAmendment",
+    "attributes": {
+      "operation": "remove",
       "identifierType": "gum",
       "gumCallerId": "123",
       "identifiers": [
