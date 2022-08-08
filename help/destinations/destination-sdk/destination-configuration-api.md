@@ -2,9 +2,9 @@
 description: 이 페이지에서는 '/authoring/destinations' API 종단점을 사용하여 수행할 수 있는 모든 API 작업을 나열하고 설명합니다.
 title: 대상 API 끝점 작업
 exl-id: 96755e9d-be62-432f-b985-91330575b395
-source-git-commit: 301cef53644e813c3fd43e7f2dbaf730c9e5fc11
+source-git-commit: 75399d2fbe111a296479f8d3404d43c6ba0d50b5
 workflow-type: tm+mt
-source-wordcount: '2571'
+source-wordcount: '2572'
 ht-degree: 4%
 
 ---
@@ -171,7 +171,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `aggregation.bestEffortAggregation.maxUsersPerRequest` | 정수 | Experience Platform은 내보낸 여러 프로필을 단일 HTTP 호출로 집계할 수 있습니다. 하나의 HTTP 호출에서 엔드포인트가 수신할 최대 프로필 수를 지정합니다. 이는 최상의 노력 집계에 해당합니다. 예를 들어 값 100을 지정하는 경우 Platform은 호출 시 100보다 작은 수의 프로필을 전송할 수 있습니다. <br> 서버가 요청당 여러 사용자를 허용하지 않는 경우 이 값을 1로 설정하십시오. |
 | `aggregation.bestEffortAggregation.splitUserById` | 부울 | 대상에 대한 호출이 ID로 분할되어야 하는 경우 이 플래그를 사용합니다. 이 플래그를 로 설정 `true` 서버가 특정 네임스페이스에 대해 호출당 하나의 ID만 허용하는 경우. |
 | `aggregation.configurableAggregation.splitUserById` | 부울 | 구성 예는 매개 변수 를 참조하십시오 [여기](./destination-configuration.md#example-configuration). 대상에 대한 호출이 ID로 분할되어야 하는 경우 이 플래그를 사용합니다. 이 플래그를 로 설정 `true` 서버가 특정 네임스페이스에 대해 호출당 하나의 ID만 허용하는 경우. |
-| `aggregation.configurableAggregation.maxBatchAgeInSecs` | 정수 | <ul><li>*최소값: 1800년*</li><li>*최대값: 3600년*</li><li>구성 예는 매개 변수 를 참조하십시오 [여기](./destination-configuration.md#example-configuration). 최소값과 최대값 사이의 값을 구성합니다. 함께 `maxNumEventsInBatch`로 지정하는 경우 이 매개 변수는 엔드포인트에 API 호출을 전송할 때까지 Experience Platform이 대기하는 시간을 결정합니다. <br> 예를 들어 두 매개 변수에 최대 값을 사용하는 경우 Experience Platform은 API 호출을 수행하기 전에 10.000개의 정규화된 프로필이 있을 때까지 3600초 또는 10.000개의 대기 중 가장 먼저 수행됩니다. </li></ul> |
+| `aggregation.configurableAggregation.maxBatchAgeInSecs` | 정수 | <ul><li>*최소값: 1800년*</li><li>*최대값: 3600년*</li><li>구성 예는 매개 변수 를 참조하십시오 [여기](./destination-configuration.md#example-configuration). 최소값과 최대값 사이의 값을 구성합니다. 함께 `maxNumEventsInBatch`로 지정하는 경우 이 매개 변수는 엔드포인트에 API 호출을 전송할 때까지 Experience Platform이 대기하는 시간을 결정합니다. <br> 예를 들어 두 매개 변수에 대해 최대 값을 사용하는 경우 Experience Platform은 API 호출을 수행하기 전에 10,000개의 정규화된 프로필이 있을 때까지 360초 또는 대기합니다(어느 쪽이든 먼저 발생함). </li></ul> |
 | `aggregation.configurableAggregation.maxNumEventsInBatch` | 정수 | <ul><li>*최소값: 1000년*</li><li>*최대값: 10000*</li><li>구성 예는 매개 변수 를 참조하십시오 [여기](./destination-configuration.md#example-configuration). 최소값과 최대값 사이의 값을 구성합니다. 이 매개 변수에 대한 설명은 다음을 참조하십시오 `maxBatchAgeInSecs` 바로 위에요</li></ul> |
 | `aggregation.configurableAggregation.aggregationKey` | 부울 | 구성 예는 매개 변수 를 참조하십시오 [여기](./destination-configuration.md#example-configuration). 아래 매개 변수를 기반으로 대상에 매핑된 내보낸 프로필을 집계할 수 있습니다. <br> <ul><li>세그먼트 ID</li><li> 세그먼트 상태 </li><li> id 네임스페이스 </li></ul> |
 | `aggregation.configurableAggregation.aggregationKey.includeSegmentId` | 부울 | 구성 예는 매개 변수 를 참조하십시오 [여기](./destination-configuration.md#example-configuration). 을(를) (으)로 설정합니다. `true` 대상으로 내보낸 프로필을 세그먼트 ID별로 그룹화하려면 |

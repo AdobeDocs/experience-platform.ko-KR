@@ -3,9 +3,9 @@ title: HTTP API 연결
 keywords: 스트리밍;
 description: Adobe Experience Platform의 HTTP API 대상을 사용하여 프로필 데이터를 타사 HTTP 엔드포인트로 보내 자체 분석을 실행하거나 Experience Platform에서 내보낸 프로필 데이터에 필요한 기타 작업을 수행할 수 있습니다.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: 75399d2fbe111a296479f8d3404d43c6ba0d50b5
 workflow-type: tm+mt
-source-wordcount: '2374'
+source-wordcount: '2375'
 ht-degree: 0%
 
 ---
@@ -329,6 +329,6 @@ Experience Platform은 세그먼트 자격 또는 기타 중요한 이벤트 후
 
 ## 제한 및 다시 시도 정책 {#limits-retry-policy}
 
-시간의 95%에서 Experience Platform은 각 데이터 플로우에 대해 HTTP 대상에 대한 초당 10.000 미만의 요청과 함께 성공적으로 전송된 메시지에 대해 10분 미만의 처리량 지연을 제공하기 위해 시도합니다.
+시간의 95% 동안 Experience Platform은 각 데이터 플로우에 대해 초당 10,000개 미만의 요청과 함께 성공적으로 전송된 메시지에 대해 10분 미만의 처리량 지연을 제공하기 위해 시도합니다.
 
 HTTP API 대상에 대한 요청이 실패한 경우 Experience Platform은 실패한 요청을 저장하고 엔드포인트로 요청을 다시 두 번 전송합니다.

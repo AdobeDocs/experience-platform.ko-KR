@@ -3,9 +3,9 @@ keywords: Amazon Kinesis;kinesis 대상;kinesis
 title: Amazon Kinesis 연결
 description: Amazon Kinesis 스토리지에 대한 실시간 아웃바운드 연결을 만들어 Adobe Experience Platform에서 데이터를 스트리밍합니다.
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: abe2e7ba363b82a696136aa46aa1adbbe25ee461
+source-git-commit: 75399d2fbe111a296479f8d3404d43c6ba0d50b5
 workflow-type: tm+mt
-source-wordcount: '1889'
+source-wordcount: '1890'
 ht-degree: 0%
 
 ---
@@ -285,7 +285,7 @@ Experience Platform은 프로필 내보내기 동작을 로 최적화합니다 [
 
 ## 제한 및 다시 시도 정책 {#limits-retry-policy}
 
-시간의 95%에서 Experience Platform은 각 데이터 플로우에 대해 HTTP 대상에 대한 초당 10.000 미만의 요청과 함께 성공적으로 전송된 메시지에 대해 10분 미만의 처리량 지연을 제공하기 위해 시도합니다.
+시간의 95% 동안 Experience Platform은 각 데이터 플로우에 대해 초당 10,000개 미만의 요청과 함께 성공적으로 전송된 메시지에 대해 10분 미만의 처리량 지연을 제공하기 위해 시도합니다.
 
 HTTP API 대상에 대한 요청이 실패한 경우 Experience Platform은 실패한 요청을 저장하고 엔드포인트로 요청을 다시 두 번 전송합니다.
 
