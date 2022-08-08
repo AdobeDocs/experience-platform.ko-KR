@@ -4,9 +4,9 @@ user-guide-title: 대상 안내서
 user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화합니다.
 description: 이 문서에서는 Adobe Experience Platform 대상의 목차 목록을 설명합니다
 feature: Destinations
-source-git-commit: ff00dcda3bbccd731c91fdf475b37221edb659db
+source-git-commit: fd3114a4578637dcf99232245f8d2cec64de14b5
 workflow-type: tm+mt
-source-wordcount: '925'
+source-wordcount: '943'
 ht-degree: 7%
 
 ---
@@ -210,6 +210,7 @@ ht-degree: 7%
          * [(베타) 사용자 지정 파일 이름 및 서식 옵션을 사용하여 Amazon S3 대상을 구성합니다](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-custom-file-formatting.md)
          * [(베타) 사용자 지정 파일 형식 옵션 및 사용자 지정 파일 이름 구성으로 Azure Blob 저장소 대상을 구성합니다](../destinations/destination-sdk/guides/batch/configure-blob-destination-with-custom-file-formatting.md)
          * [(베타) 사용자 지정 파일 형식 옵션 및 사용자 지정 파일 이름 구성으로 Azure Data Lake 저장소 대상을 구성합니다](../destinations/destination-sdk/guides/batch/configure-adls-destination-with-custom-file-formatting.md)
+         * [(베타) 사용자 지정 파일 형식 옵션 및 사용자 지정 파일 이름 구성으로 DLZ(데이터 랜딩 영역) 대상을 구성합니다](../destinations/destination-sdk/guides/batch/configure-dlz-destination-with-custom-file-formatting.md)
          * [(베타) 사전 정의된 파일 형식 옵션 및 사용자 지정 파일 이름 구성으로 SFTP 대상을 구성합니다](../destinations/destination-sdk/guides/batch/configure-sftp-destination-with-predefined-file-formatting.md)
    * 참조 {#reference}
       * [스트리밍 대상에 대한 속도 제한 및 다시 시도 정책](./destination-sdk/rate-limiting-retry-policy.md)
