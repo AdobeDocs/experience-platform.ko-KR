@@ -2,10 +2,10 @@
 title: 데이터 위생 작업 주문 찾아보기
 description: Adobe Experience Platform 사용자 인터페이스에서 기존 데이터 위생 작업 순서를 보고 관리하는 방법을 알아봅니다.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: 7f1e4bdf54314cab1f69619bcbb34216da94b17e
+source-git-commit: e57b5ec6c6234d4d1fe22f8d03c70d6bd9c02f0f
 workflow-type: tm+mt
-source-wordcount: '411'
-ht-degree: 1%
+source-wordcount: '484'
+ht-degree: 2%
 
 ---
 
@@ -41,10 +41,10 @@ ht-degree: 1%
 
 | 필터 | 설명 |
 | --- | --- |
-| [!UICONTROL 상태] | 작업 순서의 현재 상태에 따라 필터링합니다. |
-| [!UICONTROL 만든 날짜] | 데이터 집합 TTL 요청이 수행된 시기를 기준으로 필터링합니다. |
-| [!UICONTROL 삭제 날짜] | TTL이 예약한 삭제 날짜를 기준으로 필터링합니다. |
-| [!UICONTROL 업데이트 날짜] | 데이터 집합 TTL이 마지막으로 업데이트된 시기를 기준으로 필터링합니다. TTL 만들기 및 기간은 업데이트로 계산됩니다. |
+| [!UICONTROL 상태] | 작업 순서의 현재 상태에 따라 필터링합니다.<ul><li>**[!UICONTROL 완료됨]**: 작업이 완료되었습니다.</li><li>**[!UICONTROL 보류 중]**: 작업이 생성되었지만 아직 실행되지 않았습니다. A [데이터 집합 TTL(time-to-live) 요청](./ttl.md) 은 예약된 삭제 날짜 이전에 이 상태를 가정합니다. 삭제 날짜가 되면 상태가 로 업데이트됩니다 [!UICONTROL 실행 중] 작업을 미리 취소하지 않는 한.</li><li>**[!UICONTROL 실행 중]**: 작업이 시작되었으며 현재 처리 중입니다.</li><li>**[!UICONTROL 취소됨]**: 수동 사용자 요청의 일부로 작업이 취소되었습니다.</li></ul> |
+| [!UICONTROL 만든 날짜] | 작업 순서가 수행된 시기를 기준으로 필터링합니다. |
+| [!UICONTROL 만료 날짜] | 해당 데이터 세트에 대한 예약된 삭제 날짜를 기반으로 TTL 요청을 필터링합니다. |
+| [!UICONTROL 업데이트 날짜] | 작업 순서가 마지막으로 업데이트된 시기를 기준으로 TTL 요청을 필터링합니다. TTL 만들기 및 기간은 업데이트로 계산됩니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
