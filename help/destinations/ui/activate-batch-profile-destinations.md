@@ -4,9 +4,9 @@ title: 대상자 데이터를 활성화하여 묶음 프로필 내보내기 대�
 type: Tutorial
 description: 세그먼트를 배치 프로필 기반 대상으로 보내 Adobe Experience Platform에서 보유한 대상 데이터를 활성화하는 방법을 알아봅니다.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
+source-git-commit: 70670f7aec2ab6a5594f5e69672236c7bcc3ce81
 workflow-type: tm+mt
-source-wordcount: '2544'
+source-wordcount: '2520'
 ht-degree: 0%
 
 ---
@@ -54,7 +54,6 @@ ht-degree: 0%
 >id="platform_destinations_activate_schedule"
 >title="예약"
 >abstract="연필 아이콘을 사용하여 파일 내보내기 유형(전체 파일 또는 증분 파일)과 내보내기 빈도를 설정합니다."
->additional-url="https://www.adobe.com/go/destinations-profile-batch-en" text="자세한 내용은 문서에서 알아보십시오"
 
 [!DNL Adobe Experience Platform] 이메일 마케팅 및 클라우드 스토리지 대상의 데이터를 다음과 같은 형태로 내보냅니다. [!DNL CSV] 파일. 에서 **[!UICONTROL 예약]** 페이지에서 내보낼 각 세그먼트의 일정 및 파일 이름을 구성할 수 있습니다. 예약을 구성해야 하지만 파일 이름을 구성하는 것은 선택 사항입니다.
 
@@ -221,7 +220,6 @@ ht-degree: 0%
 >id="platform_destinations_activate_mandatorykey"
 >title="필수 속성 정보"
 >abstract="내보낸 모든 프로필에 포함해야 하는 XDM 스키마 속성을 선택합니다. 필수 키가 없는 프로필은 대상으로 내보내지지 않습니다. 필수 키를 선택하지 않으면 속성과 관계없이 자격이 있는 모든 프로필이 내보내집니다."
->additional-url="http://www.adobe.com/go/destinations-mandatory-attributes-en" text="자세한 내용은 문서에서 알아보십시오"
 
 필수 속성은 모든 프로필 레코드에 선택한 속성이 포함되도록 하는 사용자 활성화 확인란입니다. 예: 내보낸 모든 프로필에 이메일 주소가 &#x200B; 있습니다.
 
@@ -237,7 +235,6 @@ ht-degree: 0%
 >id="platform_destinations_activate_deduplicationkey"
 >title="중복 제거 키 기본 정보"
 >abstract="중복 제거 키를 선택하여 내보내기 파일에서 동일한 프로필의 여러 레코드를 제거합니다. 중복 제거 키로 단일 네임스페이스 또는 최대 2개의 XDM 스키마 속성을 선택합니다. 중복 제거 키를 선택하지 않으면 내보내기 파일에서 중복된 프로필 항목이 발생할 수 있습니다."
->additional-url="http://www.adobe.com/go/destinations-deduplication-keys-en" text="자세한 내용은 문서에서 알아보십시오"
 
 중복 제거 키는 사용자가 프로필을 중복 제거하려는 ID를 결정하는 사용자 정의 기본 키입니다&#x200B;.
 

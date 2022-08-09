@@ -3,9 +3,9 @@ keywords: facebook 연결;facebook 연결;facebook 대상;facebook;instagram;mes
 title: Facebook 연결
 description: 해시된 이메일을 기반으로 대상 타깃팅, 개인화 및 억제를 위해 Facebook 캠페인용 프로필을 활성화합니다.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: 70670f7aec2ab6a5594f5e69672236c7bcc3ce81
 workflow-type: tm+mt
-source-wordcount: '1867'
+source-wordcount: '1859'
 ht-degree: 1%
 
 ---
@@ -165,7 +165,6 @@ Experience Platform에서 이메일 주소 섭취에 대한 자세한 내용은 
 >id="platform_destinations_activate_facebook_originofaudience"
 >title="대상의 기원"
 >abstract="원래 세그먼트에서 고객 데이터를 수집한 방법을 선택합니다. 사용자가 세그먼트에 의해 타깃팅되면 데이터가 Facebook에 표시됩니다"
->additional-url="http://www.adobe.com/go/destinations-facebook-activate-section-en" text="자세한 내용은 문서에서 알아보십시오"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience_customers"

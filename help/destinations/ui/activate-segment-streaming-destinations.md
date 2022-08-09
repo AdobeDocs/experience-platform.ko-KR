@@ -4,9 +4,9 @@ title: 스트리밍 세그먼트 내보내기 대상으로 대상 데이터 활�
 type: Tutorial
 description: 세그먼트를 세그먼트 스트리밍 대상에 매핑하여 Adobe Experience Platform에서 보유한 대상 데이터를 활성화하는 방법을 알아봅니다.
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
-source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
+source-git-commit: 70670f7aec2ab6a5594f5e69672236c7bcc3ce81
 workflow-type: tm+mt
-source-wordcount: '832'
+source-wordcount: '811'
 ht-degree: 0%
 
 ---
@@ -83,7 +83,6 @@ ht-degree: 0%
 >id="platform_destinations_activate_applytransformation"
 >title="변형 적용"
 >abstract="해시되지 않은 소스 필드를 사용할 때 이 옵션을 선택하여 Adobe Experience Platform에서 활성화 시 자동으로 해시하도록 합니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html#apply-transformation" text="자세한 내용은 문서에서 알아보십시오"
 
 해시되지 않은 소스 속성을 대상이 해시될 대상 속성에 매핑하는 경우(예: `email_lc_sha256` 또는 `phone_sha256`), 을(를) 선택합니다. **변형 적용** Adobe Experience Platform이 활성화 시 소스 속성을 자동으로 해시하도록 하는 옵션입니다.
 
@@ -95,7 +94,6 @@ ht-degree: 0%
 >id="platform_destinations_activate_enddate"
 >title="종료 날짜"
 >abstract="세그먼트 예약에 대한 종료 날짜를 추가할 수 없습니다."
->additional-url="https://www.adobe.com/go/destinations-activate-segment-scheduling-en" text="자세한 내용은 문서에서 알아보십시오"
 
 기본적으로 [!UICONTROL 세그먼트 예약] 페이지에는 현재 활성화 플로우에서 선택한 새로 선택한 세그먼트만 표시됩니다.
 
