@@ -1,14 +1,23 @@
 ---
 title: 일반 Analytics 플러그인 확장 프로그램에 대한 릴리스 노트
 description: Adobe Experience Platform의 일반 Analytics 플러그인 태그 확장에 대한 최신 릴리스 노트입니다.
-source-git-commit: cce218d984bae92428c7d48aefcd0f57dab837ea
+exl-id: 5ea4b709-4e21-4f5d-be99-e72e4889ed99
+source-git-commit: 1be361f9cd70b0424542af64a994da0b21d6b5dc
 workflow-type: tm+mt
-source-wordcount: '314'
-ht-degree: 57%
+source-wordcount: '329'
+ht-degree: 56%
 
 ---
 
 # 일반 Analytics 플러그인 릴리스 노트
+
+## 2022년 6월 03일
+
+### 일반 Analytics 플러그인 확장 프로그램 3.0.7
+
+#### 기능
+
+쿠키를 설정하는 플러그인은 이제 보안 플래그를 사용합니다
 
 ## 2021년 6월 23일
 
