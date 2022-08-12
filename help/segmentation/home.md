@@ -5,9 +5,9 @@ title: 세그먼테이션 서비스 개요
 topic-legacy: overview
 description: Adobe Experience Platform 세그멘테이션 서비스 및 플랫폼 생태계에서 수행하는 역할에 대해 알아봅니다.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: 3130d9731a53c01fb7bc15265e044191ceae47f6
+source-git-commit: 0267b0141f7b6944ea65bc413f14cc9580081387
 workflow-type: tm+mt
-source-wordcount: '1507'
+source-wordcount: '1630'
 ht-degree: 0%
 
 ---
@@ -46,25 +46,47 @@ API를 사용하여 세그먼트 정의 작성에 대한 자세한 내용은 [ap
 >
 >또한 데이터 세트에서 TTL(time-to-live)이 활성화된 경우 생성된 세그먼트의 멤버십에 영향을 줄 수 있습니다. TTL 및 세그먼테이션에 영향을 줄 수 있는 방법에 대한 자세한 내용은 [프로필 서비스 TTL 안내서](../profile/apply-ttl.md).
 
-## 세그먼트 평가
+## 세그먼트 평가 {#evaluate-segments}
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_evaluation"
+>title="평가 방법"
+>abstract="Platform은 현재 세 가지 세그먼트 평가 방법을 지원합니다. 스트리밍 세그멘테이션, 배치 세그멘테이션 및 에지 세그먼테이션."
 
 Platform은 현재 세 가지 세그먼트 평가 방법을 지원합니다. 스트리밍 세그멘테이션, 배치 세그멘테이션 및 에지 세그먼테이션.
 
-### 스트리밍 세그멘테이션
+### 스트리밍 세그멘테이션 {#streaming}
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_evaluation_streaming"
+>title="스트리밍 평가"
+>abstract="Platform은 현재 세 가지 세그먼트 평가 방법을 지원합니다. 스트리밍 세그멘테이션, 배치 세그멘테이션 및 에지 세그먼테이션."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/api/streaming-segmentation.html" text="스트리밍 세그먼테이션을 통해 거의 실시간으로 이벤트 평가"
 
 스트리밍 세그먼테이션은 사용자 활동에 대한 응답으로 세그먼트를 업데이트하는 지속적인 데이터 선택 프로세스입니다. 세그먼트가 만들어지고 저장되면, 들어오는 데이터에 대해 세그먼트 정의가 적용됩니다. [!DNL Real-time Customer Profile]. 세그먼트 추가 및 제거는 정기적으로 처리되므로 타겟 대상이 적절하도록 합니다.
 
 스트리밍 세그멘테이션에 대한 자세한 내용은 [스트리밍 세그멘테이션 설명서](./api/streaming-segmentation.md).
 
-### 일괄 세분화
+### 일괄 세분화 {#batch}
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_evaluation_batch"
+>title="일괄 평가"
+>abstract="일괄 처리 세그먼테이션은 진행 중인 데이터 선택 프로세스의 대안으로서, 세그먼트 정의를 통해 모든 프로필 데이터를 한 번에 이동하여 해당 대상을 생성합니다. 세그먼트가 만들어지면 저장되고 저장되므로 사용할 수 있도록 내보낼 수 있습니다."
 
 일괄 처리 세그먼테이션은 진행 중인 데이터 선택 프로세스의 대안으로서, 세그먼트 정의를 통해 모든 프로필 데이터를 한 번에 이동하여 해당 대상을 생성합니다. 세그먼트가 만들어지면 저장되고 저장되므로 사용할 수 있도록 내보낼 수 있습니다.
 
 배치 세그먼트는 24시간 간격으로 자동 평가됩니다. 요청 시 배치 세그먼트를 평가하려면 세그먼트 작업을 사용할 수 있습니다. 세그먼트 작업에 대한 자세한 내용은 [세그먼트 작업 설명서](./api/segment-jobs.md).
 
-### 에지 세그멘테이션
+### 에지 세그멘테이션 {#edge}
 
-에지 세그멘테이션은 Experience Edge에서 즉시 세그먼트를 평가하여 동일한 페이지 및 다음 페이지 개인화 사용 사례를 활성화합니다.
+>[!CONTEXTUALHELP]
+>id="platform_segments_evaluation_edge"
+>title="에지 평가"
+>abstract="Edge 세그멘테이션은 Experience Edge에서 즉시 세그먼트를 평가하여 동일한 페이지 및 다음 페이지 개인화 사용 사례를 활성화합니다."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/edge-segmentation.html" text="Edge Segmentation UI 안내서"
+
+Edge 세그멘테이션은 즉시 Platform의 세그먼트를 평가하는 기능입니다 [Experience Edge에서](../edge/home.md), 동일한 페이지 및 다음 페이지 개인화 사용 사례를 활성화합니다.
 
 Edge Segmentation에 대한 자세한 내용은 [API 설명서](./api/edge-segmentation.md) 또는 [UI 설명서](./ui/edge-segmentation.md).
 
