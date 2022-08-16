@@ -1,7 +1,8 @@
 ---
 description: 미리 정의된 파일 형식 옵션 및 사용자 지정 파일 이름 구성으로 Amazon S3 대상을 구성하는 방법에 대해 알아봅니다.
 title: (베타) 사전 정의된 파일 형식 옵션 및 사용자 지정 파일 이름 구성으로 Amazon S3 대상을 구성합니다.
-source-git-commit: 1e6515bf4fe34258194f56d341e477a02a1c31be
+exl-id: 0ecd3575-dcda-4e5c-af5c-247d4ea13fa1
+source-git-commit: a43bb18182ac6e591e011b585719da955ee681b7
 workflow-type: tm+mt
 source-wordcount: '772'
 ht-degree: 0%
@@ -117,10 +118,6 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
             "emptyValue": {
                 "templatingStrategy": "NONE",
                 "value": ""
-            },
-            "lineSep": {
-                "templatingStrategy": "NONE",
-                "value": "\n"
             }
         }
     }

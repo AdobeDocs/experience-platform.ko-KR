@@ -2,7 +2,7 @@
 description: 이 페이지에서는 '/authoring/destination-server' API 종단점을 사용하여 수행할 수 있는 모든 API 작업을 나열하고 설명합니다. 대상에 대한 서버 및 템플릿 사양은 일반 끝점 '/authoring/destination-servers'를 통해 Adobe Experience Platform Destination SDK에서 구성할 수 있습니다.
 title: 대상 서버 끝점 API 작업
 exl-id: a144b0fb-d34f-42d1-912b-8576296e59d2
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: a43bb18182ac6e591e011b585719da955ee681b7
 workflow-type: tm+mt
 source-wordcount: '1382'
 ht-degree: 4%
@@ -179,10 +179,6 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
             "emptyValue": {
                 "templatingStrategy": "NONE",
                 "value": ""
-            },
-            "lineSep": {
-                "templatingStrategy": "NONE",
-                "value": "\n"
             }
         }
     }
@@ -288,10 +284,6 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
             "emptyValue": {
                 "templatingStrategy": "NONE",
                 "value": ""
-            },
-            "lineSep": {
-                "templatingStrategy": "NONE",
-                "value": "\n"
             }
         }
     }
@@ -397,10 +389,6 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
             "emptyValue": {
                 "templatingStrategy": "NONE",
                 "value": ""
-            },
-            "lineSep": {
-                "templatingStrategy": "NONE",
-                "value": "\n"
             }
         }
     }
@@ -502,10 +490,6 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
             "emptyValue": {
                 "templatingStrategy": "NONE",
                 "value": ""
-            },
-            "lineSep": {
-                "templatingStrategy": "NONE",
-                "value": "\n"
             }
         }
     }
@@ -610,10 +594,6 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
             "emptyValue": {
                 "templatingStrategy": "NONE",
                 "value": ""
-            },
-            "lineSep": {
-                "templatingStrategy": "NONE",
-                "value": "\n"
             }
         }
     }
