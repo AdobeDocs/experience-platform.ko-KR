@@ -5,9 +5,9 @@ title: '스트리밍 세그먼테이션을 사용하여 거의 실시간으로 �
 topic-legacy: developer guide
 description: 이 문서에는 Adobe Experience Platform 세그멘테이션 서비스 API에서 스트리밍 세그멘테이션을 사용하는 방법에 대한 예가 나와 있습니다.
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: 81659da18d4fa8b733200998c27c25ec356ca264
+source-git-commit: 654e141735b6882b4c0233b8e1c73d0838c8374e
 workflow-type: tm+mt
-source-wordcount: '1915'
+source-wordcount: '1873'
 ht-degree: 1%
 
 ---
@@ -429,10 +429,6 @@ Adobe Experience Platform 사용자 인터페이스를 사용하여 유사한 �
 ### 세그먼트는 어떻게 일괄 처리 또는 스트리밍 세그먼테이션으로 정의됩니까?
 
 세그먼트는 쿼리 유형 및 이벤트 내역 기간의 조합을 기반으로 일괄 처리 또는 스트리밍 세그먼테이션으로 정의됩니다. 스트리밍 세그먼트로 평가될 세그먼트 목록은 [세그먼테이션 쿼리 유형 섹션](#query-types).
-
-### 사용자가 세그먼트를 일괄 처리 또는 스트리밍 세그먼테이션으로 정의할 수 있습니까?
-
-이 시점에서 시스템은 세그먼트가 평가될 방법을 자동으로 결정하므로 사용자는 일괄 처리 또는 스트리밍 통합 기능을 사용하여 세그먼트를 평가할지 여부를 정의할 수 없습니다.
 
 ### 최근 X일 아래의 수가 세그먼트 세부 사항 섹션 내에 0으로 남아 있는 동안 &quot;총 적격한&quot; 세그먼트 수는 왜 계속 증가합니까?
 

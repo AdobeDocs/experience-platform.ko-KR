@@ -5,7 +5,7 @@ title: Edge Segmentation UI 안내서
 topic-legacy: ui guide
 description: Edge Segmentation은 Platform의 세그먼트를 즉시 평가하여 동일한 페이지와 다음 페이지 개인화 사용 사례를 가능하게 하는 기능입니다.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: 0173fbd36791f837e0d0336f9fa7bcc84e64909f
+source-git-commit: 654e141735b6882b4c0233b8e1c73d0838c8374e
 workflow-type: tm+mt
 source-wordcount: '769'
 ht-degree: 0%
@@ -30,7 +30,7 @@ ht-degree: 0%
 
 현재 선택한 쿼리 유형만 에지 세그먼테이션으로 평가할 수 있습니다. 다음 섹션에서는 에지 세그먼테이션으로 평가할 수 있는 쿼리 유형 목록과 현재 지원되지 않는 쿼리 유형 목록을 제공합니다.
 
-### 지원되는 쿼리 유형
+### 지원되는 쿼리 유형 {#query-types}
 
 쿼리는 다음 표에 요약된 기준을 충족하는 경우 에지 세그먼테이션으로 평가할 수 있습니다.
 
