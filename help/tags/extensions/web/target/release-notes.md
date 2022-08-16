@@ -1,10 +1,11 @@
 ---
 title: Adobe Target 확장에 대한 릴리스 노트
 description: Adobe Experience Platform의 Adobe Target 태그 확장에 대한 최신 릴리스 노트입니다.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: ba29f614-c3cd-4e0b-b043-2b1c17567def
+source-git-commit: 130db749ef84840532588a8a27e40cb277c13066
 workflow-type: tm+mt
-source-wordcount: '506'
-ht-degree: 69%
+source-wordcount: '520'
+ht-degree: 74%
 
 ---
 
@@ -12,7 +13,14 @@ ht-degree: 69%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../../term-updates.md)을 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
+
+## 2021년 9월 16일
+
+### Adobe Target 확장 0.11.4
+
+* at.js v1.8.3으로 업데이트됨
+* 추가됨 `SameSite=None` 및 `Secure` 쿠키를 설정할 때의 속성
 
 ## 2020년 7월 24일
 
