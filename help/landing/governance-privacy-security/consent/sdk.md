@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK를 사용하여 고객 동의 데이터
 topic-legacy: getting started
 description: Adobe Experience Platform Web SDK를 통합하여 Adobe Experience Platform에서 고객 동의 데이터를 처리하는 방법을 알아봅니다.
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
-source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
+source-git-commit: 79bc41c713425e14bb3c12646b9b71b2c630618b
 workflow-type: tm+mt
-source-wordcount: '1330'
+source-wordcount: '1375'
 ht-degree: 0%
 
 ---
@@ -98,14 +98,19 @@ SDK 확장이 설치되어 있으면 기본 데이터 수집 동의 값(`collect
 
 웹 사이트에 SDK 확장을 통합하면 Platform Web SDK 사용을 시작할 수 있습니다 `setConsent` Platform으로 동의 데이터를 전송하는 명령.
 
->[!IMPORTANT]
->
->다음 `setConsent` command는 프로필 저장소에서 직접 데이터만 업데이트하고 데이터를 Data Lake로 전송하지 않습니다.
+다음 `setConsent` 명령은 두 가지 작업을 수행합니다.
+
+1. 프로필 저장소에서 직접 사용자의 프로필 속성을 업데이트합니다. 이렇게 해도 data lake에는 데이터가 전송되지 않습니다.
+1. 만들기 [경험 이벤트](../../../xdm/classes/experienceevent.md) 은 동의 변경 이벤트의 타임스탬프가 지정된 계정을 기록합니다. 이 데이터는 데이터 레이크로 직접 전송되며 시간이 지남에 따라 동의 기본 설정 변경을 추적하는 데 사용할 수 있습니다.
+
+### 호출 시기 `setConsent`
 
 다음과 같은 두 가지 시나리오가 있습니다. `setConsent` 는 사이트에서 호출해야 합니다.
 
 1. 페이지에서 동의가 로드될 때(즉, 페이지 로드 시마다)
 1. 동의 설정의 변경 사항을 감지하는 CMP 후크 또는 이벤트 리스너의 일부로
+
+### `setConsent` 구문
 
 >[!NOTE]
 >
