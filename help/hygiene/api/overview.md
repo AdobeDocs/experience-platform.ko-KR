@@ -2,9 +2,9 @@
 title: 데이터 위생 API 안내서
 description: Adobe Experience Platform에서 고객의 저장된 개인 데이터를 프로그래밍 방식으로 수정하거나 삭제하는 방법을 알아봅니다.
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-source-git-commit: 7f1e4bdf54314cab1f69619bcbb34216da94b17e
+source-git-commit: 49ba5263c6dc8eccac2ffe339476cf316c68e486
 workflow-type: tm+mt
-source-wordcount: '307'
+source-wordcount: '303'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 1%
 >
 >Adobe Experience Platform의 데이터 위생 기능은 현재 Healthcare Shield를 구입한 조직에서만 사용할 수 있습니다.
 
-데이터 위생 API를 사용하면 데이터 세트에 대해 TTL(time-to-live) 프로토콜을 예약하고 Adobe Experience Platform에 고객의 저장된 개인 데이터를 프로그래밍 방식으로 수정하거나 삭제할 수 있습니다. 이 안내서에서는 API를 사용하기 위한 사전 요구 사항을 설명하고 더 엔드포인트별 설명서에 대한 링크를 제공합니다.
+데이터 위생 API를 사용하면 데이터 세트에 대해 만료 날짜를 예약하고 Adobe Experience Platform에 고객의 저장된 개인 데이터를 프로그래밍 방식으로 수정하거나 삭제할 수 있습니다. 이 안내서에서는 API를 사용하기 위한 사전 요구 사항을 설명하고 더 엔드포인트별 설명서에 대한 링크를 제공합니다.
 
 ## 시작하기
 
@@ -43,9 +43,9 @@ ht-degree: 1%
 
 A work order is a representation of a data hygiene task that deletes consumer identities from a specific dataset or all datasets. See the [work order endpoint guide](./workorder.md) for details on working with work orders in the API. -->
 
-## 데이터 세트에 대한 TTL(Time to Live)
+## 데이터 집합 만료
 
-데이터 세트 TTL은 시간이 지연된 &quot;데이터 세트 삭제&quot; 작업입니다. TTL을 만들면 해당 데이터 세트를 삭제할 미래의 시간을 지정합니다. 자세한 내용은 [dataset TTL 끝점 안내서](./ttl.md) 를 참조하십시오.
+데이터 세트 만료는 시간 지연된 &quot;데이터 세트 삭제&quot; 작업입니다. 데이터 세트 만료일을 만들어 해당 데이터 세트를 삭제할 시간을 지정합니다. 자세한 내용은 [데이터 세트 만료 끝점 안내서](./dataset-expiration.md) 를 참조하십시오.
 
 ## 다음 단계
 
