@@ -2,7 +2,7 @@
 description: 이 페이지에서는 Destination SDK을 사용하여 작성된 제품 대상 검토를 위해 제출하는 모든 정보를 제공합니다.
 title: Destination SDK에서 작성된 제품 대상 검토를 위해 제출
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: dd4a150351b5e0c41586cf663324aeb345a896e4
+source-git-commit: 50f205a5ddd9ec264d7390911fef45dc595ca6a1
 workflow-type: tm+mt
 source-wordcount: '683'
 ht-degree: 0%
@@ -15,7 +15,14 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->여기에 설명된 프로세스는 제품(공개) 대상을 제출하는 파트너에게만 필요합니다. 직접 사용할 전용 대상을 만드는 경우 이러한 자료를 만들고 Adobe과 공유할 필요가 없습니다.
+>* 여기에 설명된 프로세스는 제품(공개) 대상을 제출하는 파트너에게만 필요합니다. 직접 사용할 전용 대상을 만드는 경우 이러한 자료를 만들고 Adobe과 공유할 필요가 없습니다.
+>
+>* 대상 게시 요청을 검토하는 Adobe의 표준 응답 시간은 5영업일.
+>
+>* Adobe 팀이 초기 제출 시 구성에 대한 업데이트를 수행하도록 요청하는 경우 업데이트를 수행한 후 다른 대상 게시 요청을 제출해야 합니다.
+>
+>* 대상이 Experience Platform 카탈로그에 라이브 상태가 된 후에도 구성을 업데이트해야 하는 경우 구성에 반영되도록 새 대상 게시 요청을 제출해야 합니다.
+
 
 대상을 [Experience Platform 대상 카탈로그](/help/destinations/catalog/overview.md)를 채울 때는 Adobe이 데이터를 플랫폼에 활성화할 때 최상의 경험을 누릴 수 있도록 대상 및 수행한 테스트에 대한 특정 정보를 제공해야 합니다.
 
@@ -28,15 +35,6 @@ ht-degree: 0%
 * 를 사용하여 대상에 대한 대상 게시 요청을 제출했는지 확인 [대상 게시 API](./destination-publish-api.md).
 * 에 설명된 지침에 따라 설명서 PR(끌어오기 요청) [셀프 서비스 설명서 프로세스](./docs-framework/documentation-instructions.md).
 * Experience Platform 대상 카탈로그에 대상 카드에 대한 로고로 표시되는 이미지 파일입니다.
-
->[!IMPORTANT]
->
->* 대상 게시 요청을 검토하는 Adobe의 표준 응답 시간은 5영업일.
->
->* Adobe 팀이 초기 제출 시 구성에 대한 업데이트를 수행하도록 요청하는 경우 업데이트를 수행한 후 다른 대상 게시 요청을 제출해야 합니다.
->
->* 대상이 Experience Platform 카탈로그에 라이브 상태가 된 후에도 구성을 업데이트해야 하는 경우 구성에 반영되도록 새 대상 게시 요청을 제출해야 합니다.
-
 
 아래 섹션에서 각 항목에 대한 자세한 정보를 찾을 수 있습니다.
 

@@ -2,9 +2,9 @@
 description: Adobe Experience Platform Destination SDK은 선택한 데이터 및 인증 형식에 따라 Experience Platform이 대상 및 프로필 데이터를 종단점에 제공할 대상 통합 패턴을 구성할 수 있도록 해주는 구성 API 세트입니다. 구성은 Experience Platform에 저장되며, 추가 업데이트를 위해 API를 통해 검색할 수 있습니다.
 title: Adobe Experience Platform Destination SDK
 exl-id: 7aca9f40-98c8-47c2-ba88-4308fc2b1798
-source-git-commit: abc9b9857e4a93a334440e855ca0ae562c695df1
+source-git-commit: 179d5697e1b8d14f613a512f51bcea3575b7a832
 workflow-type: tm+mt
-source-wordcount: '704'
+source-wordcount: '740'
 ht-degree: 3%
 
 ---
@@ -74,11 +74,11 @@ Experience Platform에서 대상을 구성하는 프로세스는 다음과 같�
 
 1. ISV 또는 SI인 경우 위의 섹션에서 액세스 정보를 참조하십시오. [Adobe Experience Platform 활성화](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html) 고객은 이 단계를 건너뛸 수 있습니다.
 2. [Experience Platform 샌드박스 제공 요청](https://adobeexchangeec.zendesk.com/hc/en-us/articles/360037457812-Adobe-Experience-Platform-Sandbox-Accounts-Access-Adding-Users-and-Support) 대상 작성 권한을 사용하도록 설정합니다.
-3. [통합 빌드](./configure-destination-instructions.md) 제품 설명서를 참조합니다.
-4. [통합 테스트](./test-destination.md) 제품 설명서를 참조합니다.
-5. [통합 제출](./submit-destination.md) Adobe 검토의 경우(표준 응답 시간은 5영업일).
-6. ISV 또는 SI에서 [제품 통합](./overview.md#productized-custom-integrations)를 사용하려면 [셀프 서비스 설명서 프로세스](./docs-framework/documentation-instructions.md) 대상을 위한 Experience League에 대한 제품 설명서 페이지를 만들려면
-7. Adobe이 승인하면 통합에 [Experience Platform 카탈로그](/help/destinations/catalog/overview.md).
+3. 통합을 구축합니다. 제품 설명서의 지침에 따라 을 구성합니다 [스트리밍 대상](./configure-destination-instructions.md) 또는 [파일 기반 대상(베타)](./configure-file-based-destination-instructions.md).
+4. 통합을 테스트합니다. 제품 설명서의 지침에 따라 을 테스트합니다 [스트리밍 대상](./test-destination.md) 또는 [파일 기반 대상(베타)](./file-based-destination-testing-overview.md).
+5. ISV 또는 SI에서 [제품 통합](./overview.md#productized-custom-integrations), [통합 제출](./submit-destination.md) Adobe 검토의 경우(표준 응답 시간은 5영업일).
+6. ISV 또는 SI에서 제품 통합을 만드는 경우 [셀프 서비스 설명서 프로세스](./docs-framework/documentation-instructions.md) 대상을 위한 Experience League에 대한 제품 설명서 페이지를 만들려면
+7. 프로덕션 통합의 경우, Adobe이 승인하면 통합이 [Experience Platform 카탈로그](/help/destinations/catalog/overview.md).
 8. 통합을 업데이트하려면 동일한 프로세스를 따르십시오.
 
 ## 참조 {#reference}
