@@ -3,9 +3,9 @@ keywords: DoubleClick 입찰 관리자;DoubleClick 입찰 관리자;DoubleClick;
 title: Google 디스플레이 및 비디오 360 연결
 description: 이전에 DoubleClick Bid Manager라고 알려진 Display & Video 360은 디스플레이, 비디오 및 모바일 인벤토리 소스에서 재타겟팅하고 대상 지정 디지털 캠페인을 실행하는 데 사용되는 도구입니다.
 exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: 7d32499bec8d7248472ae60b07893dbb5496d984
 workflow-type: tm+mt
-source-wordcount: '893'
+source-wordcount: '942'
 ht-degree: 2%
 
 ---
@@ -56,7 +56,8 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->첫 번째 목록을 설정하기 전에 허용 목록이 필수입니다 [!DNL Google Display & Video 360] 대상 을 참조하십시오. 대상을 만들기 전에 Google에서 아래 설명된 허용 목록 프로세스가 완료되었는지 확인하십시오.
+>첫 번째 목록을 설정하기 전에 허용 목록이 필수입니다 [!DNL Google Display & Video 360] 대상 을 참조하십시오. 아래 설명된 허용 목록 프로세스가 [!DNL Google] 대상을 만들기 전에
+>이 규칙의 예외는 입니다 [Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html) 고객. Audience Manager에서 이 Google 대상에 이미 연결을 만든 경우 허용 목록 프로세스를 다시 진행할 필요가 없으며 다음 단계를 계속 진행할 수 있습니다.
 
 만들기 전 [!DNL Google Display & Video 360] Platform의 대상은 Google에 연락하여 Adobe이 허용된 데이터 공급자 목록에 추가되도록 하고, 계정을 허용 목록에 추가하도록 요청해야 합니다. Google에 문의하여 다음 정보를 제공하십시오.
 

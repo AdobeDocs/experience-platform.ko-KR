@@ -3,9 +3,9 @@ keywords: Google 광고;google 광고;google adwords;Google AdWords;Google Adwor
 title: Google 광고 연결
 description: 이전에 Google AdWords라고 알려진 Google Ads는 텍스트 기반 검색, 그래픽 디스플레이, YouTube 비디오 및 인앱 모바일 디스플레이에서 클릭당 과금광고를 할 수 있도록 하는 온라인 광고 서비스입니다.
 exl-id: 7143f476-49a8-42aa-bfb4-b11fc2b8f5c3
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: 7d32499bec8d7248472ae60b07893dbb5496d984
 workflow-type: tm+mt
-source-wordcount: '898'
+source-wordcount: '945'
 ht-degree: 3%
 
 ---
@@ -66,7 +66,8 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->허용 목록은 첫 번째 설정을 수행하기 전에 필수입니다 [!DNL Google Ads] 대상 을 참조하십시오. 아래 설명된 허용 목록 프로세스가 [!DNL Google] 대상을 만들기 전에
+>첫 번째 목록을 설정하기 전에 허용 목록이 필수입니다 [!DNL Google Ads] 대상 을 참조하십시오. 아래 설명된 허용 목록 프로세스가 [!DNL Google] 대상을 만들기 전에
+>이 규칙의 예외는 입니다 [Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html) 고객. Audience Manager에서 이 Google 대상에 이미 연결을 만든 경우 허용 목록 프로세스를 다시 진행할 필요가 없으며 다음 단계를 계속 진행할 수 있습니다.
 
 만들기 전 [!DNL Google Ads] 플랫폼의 대상은 [!DNL Google] Adobe이 허용된 데이터 공급자 목록에 추가되고 허용 목록에 계정이 추가되도록 하는 경우입니다. 연락처 [!DNL Google] 및 는 다음 정보를 제공합니다.
 
