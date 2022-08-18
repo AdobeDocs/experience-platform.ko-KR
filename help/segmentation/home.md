@@ -5,9 +5,9 @@ title: 세그먼테이션 서비스 개요
 topic-legacy: overview
 description: Adobe Experience Platform 세그멘테이션 서비스 및 플랫폼 생태계에서 수행하는 역할에 대해 알아봅니다.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: 0267b0141f7b6944ea65bc413f14cc9580081387
+source-git-commit: 52197a6c009fb5b0b6037a4fef3c98ad7c327e2e
 workflow-type: tm+mt
-source-wordcount: '1630'
+source-wordcount: '1632'
 ht-degree: 0%
 
 ---
@@ -53,15 +53,15 @@ API를 사용하여 세그먼트 정의 작성에 대한 자세한 내용은 [ap
 >title="평가 방법"
 >abstract="Platform은 현재 세 가지 세그먼트 평가 방법을 지원합니다. 스트리밍 세그멘테이션, 배치 세그멘테이션 및 에지 세그먼테이션."
 
-Platform은 현재 세 가지 세그먼트 평가 방법을 지원합니다. 스트리밍 세그멘테이션, 배치 세그멘테이션 및 에지 세그먼테이션.
-
-### 스트리밍 세그멘테이션 {#streaming}
-
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_streaming"
 >title="스트리밍 평가"
->abstract="Platform은 현재 세 가지 세그먼트 평가 방법을 지원합니다. 스트리밍 세그멘테이션, 배치 세그멘테이션 및 에지 세그먼테이션."
+>abstract="스트리밍 세그먼테이션은 사용자 활동에 대한 응답으로 세그먼트를 업데이트하는 지속적인 데이터 선택 프로세스입니다."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/api/streaming-segmentation.html" text="스트리밍 세그먼테이션을 통해 거의 실시간으로 이벤트 평가"
+
+Platform은 현재 세 가지 세그먼트 평가 방법을 지원합니다. 스트리밍 세그멘테이션, 배치 세그멘테이션 및 에지 세그먼테이션.
+
+### 스트리밍 세그멘테이션 {#streaming}
 
 스트리밍 세그먼테이션은 사용자 활동에 대한 응답으로 세그먼트를 업데이트하는 지속적인 데이터 선택 프로세스입니다. 세그먼트가 만들어지고 저장되면, 들어오는 데이터에 대해 세그먼트 정의가 적용됩니다. [!DNL Real-time Customer Profile]. 세그먼트 추가 및 제거는 정기적으로 처리되므로 타겟 대상이 적절하도록 합니다.
 
