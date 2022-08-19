@@ -3,10 +3,10 @@ keywords: Experience Platform;홈;인기 항목;Salesforce;salesforce;필드 매
 title: Salesforce 매핑 필드
 description: 아래 표에는 Salesforce 소스 필드와 해당 XDM 필드 간의 매핑이 포함되어 있습니다.
 exl-id: 33ee76f2-0495-4acd-a862-c942c0fa3177
-source-git-commit: d77bee173791843997985cfdae15959350fd9ab2
+source-git-commit: 948247c1ffbe10fa07ba1d03f1715fd707c6d836
 workflow-type: tm+mt
 source-wordcount: '291'
-ht-degree: 8%
+ht-degree: 14%
 
 ---
 
@@ -114,15 +114,10 @@ ht-degree: 8%
 | `Company` | `b2b.companyName` |
 | `Website` | `b2b.companyWebsite` |
 | `ConvertedContactId` | `b2b.convertedContactKey.sourceID` |
-| `"Salesforce"` | `b2b.convertedContactKey.sourceType` |
-| `"${CRM_ORG_ID}"` | `b2b.convertedContactKey.sourceInstanceID` |
-| `concat(ConvertedContactId,\"@${CRM_ORG_ID}.Salesforce\")` | `b2b.convertedContactKey.sourceKey` |
+| `iif(ConvertedContactId != null && ConvertedContactId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}", "sourceKey", concat(ConvertedContactId,"@${CRM_ORG_ID}.Salesforce")), null)` | `b2b.convertedContactKey` |
 | `CreatedDate` | `extSourceSystemAudit.createdDate` |
 | `"Lead"` | `b2b.personType` |
-| `ConvertedContactId` | `personComponents.sourceConvertedContactKey.sourceID` |
-| `"Salesforce"` | `personComponents.sourceConvertedContactKey.sourceType` |
-| `"${CRM_ORG_ID}"` | `personComponents.sourceConvertedContactKey.sourceInstanceID` |
-| `concat(ConvertedContactId,"@${CRM_ORG_ID}.Salesforce")` | `personComponents.sourceConvertedContactKey.sourceKey` |
+| `iif(ConvertedContactId != null && ConvertedContactId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", ConvertedContactId, "sourceKey", concat(ConvertedContactId,"@${CRM_ORG_ID}.Salesforce")), null)` | `personComponents.sourceConvertedContactKey` |
 
 {style=&quot;table-layout:auto&quot;}
 
