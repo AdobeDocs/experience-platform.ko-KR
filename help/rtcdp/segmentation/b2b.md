@@ -2,9 +2,9 @@
 title: 실시간 CDP B2B Edition에 대한 세그먼테이션 사용 사례
 description: 사용 가능한 다양한 실시간 CDP B2B Edition 사용 사례에 대한 개요입니다.
 exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
-source-git-commit: 6a108a0bfde3c8f44c1a1221b06581f0f69b5203
+source-git-commit: 1fed0cf37e7297c21330ebf51ae15054aa21c781
 workflow-type: tm+mt
-source-wordcount: '1247'
+source-wordcount: '1275'
 ht-degree: 0%
 
 ---
@@ -105,6 +105,12 @@ HR(Human Resources) 부서에서 근무하며, 지정된 금액(100만 달러) �
 HR(Human Resources) 부서에서 근무하며 모든 계정과 관련된 모든 인력을 찾습니다 *또는 계정의 관련 계정 중 하나* 해당 금액 ( 백만 달러 ) 이상의 영업 기회가 있는 기회가 한 개 이상 있습니다. 이 세그먼트에는 [!UICONTROL XDM 개별 프로필] 클래스, [!UICONTROL XDM 비즈니스 계정] 클래스 및 [!UICONTROL XDM 비즈니스 기회] 클래스 이름을 지정합니다.
 
 ![관련 계정에 대한 세그먼테이션 표시 UI](../assets/segmentation/segmentation-related-accounts.png)
+
+### 예제 9: 프로필 자격을 얻으려면 리드 점수 및/또는 계정 점수를 사용하십시오 {#account-scoring}
+
+리드 점수가 80점이 넘는 모든 프로필을 찾습니다.
+
+![예측 리드 및 계정 점수 책정 세분화 표시 UI](../assets/segmentation/segmentation-predictive-lead-and-account-scoring.png)
 
 ## 다음 단계 {#next-steps}
 

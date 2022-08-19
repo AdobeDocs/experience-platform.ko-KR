@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 프로필 보강 작업 모니터링
 type: Tutorial
 exl-id: 096a2212-ed7f-4419-8ead-fa1ca01c2804
-source-git-commit: 842fe74b0b751c515a4faee437e1f94bd0662e11
+source-git-commit: 1fed0cf37e7297c21330ebf51ae15054aa21c781
 workflow-type: tm+mt
-source-wordcount: '633'
-ht-degree: 1%
+source-wordcount: '768'
+ht-degree: 2%
 
 ---
 
@@ -56,6 +56,23 @@ ht-degree: 1%
 | **[!UICONTROL 마지막 성공 실행]** | 계정 일치 작업 실행에서 마지막으로 성공한 리드의 날짜 및 시간을 나타냅니다. |
 | **[!UICONTROL 상태]** | 리드의 상태(성공, 실패 또는 처리)를 나타내는 계정 일치 작업을 나타냅니다. |
 
+## 예측 리드 및 계정 점수 프로필 강화 {#predictive-lead-to-account-scoring}
+
+다음 [!UICONTROL 예측 리드 및 계정 점수 책정] 대시보드는 기본 지표와 [예측 리드 및 계정 점수 책정](/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md) 프로필 보강.
+
+![예측 리드 및 계정 점수 프로필 강화](/help/dataflows/assets/ui/b2b/predictive-lead-and-account-scoring.png)
+
+예측 리드 및 계정 점수 프로필 데이터 보강 작업에 다음 지표를 사용할 수 있습니다.
+
+| 지표 | 설명 |
+| --------- | ---------- |
+| **[!UICONTROL 작업 시작]** | 예측 리드 및 계정 점수 작업 실행의 시작 날짜 및 시간을 나타냅니다. |
+| **[!UICONTROL 처리 시간]** | 작업을 완료하는 데 걸린 총 시간입니다. |
+| **[!UICONTROL 점수 이름]** | 작업의 점수 이름입니다. |
+| **[!UICONTROL 프로필 유형]** | 점수의 유형: <ul><li>사람</li><li>계정</li></ul>. |
+| **[!UICONTROL 작업 유형]** | 작업 유형:<ul><li>점수 책정</li><li>교육</li>. |
+| **[!UICONTROL 상태]** | 예측 리드 및 계정 점수 작업 상태(성공, 실패 또는 처리)를 나타냅니다. |
+
 ## UI 컨트롤 {#ui-controls}
 
 이 섹션에서는 페이지에 표시되는 지표를 필터링할 수 있는 모니터링 인터페이스의 다양한 UI(사용자 인터페이스) 옵션에 대해 설명합니다.
@@ -79,3 +96,4 @@ ht-degree: 1%
 * [실시간 CDP B2B의 관련 계정](/help/rtcdp/b2b-ai-ml-services/related-accounts.md)
 * [계정 프로필 UI 안내서의 관련 계정 탭](/help/rtcdp/accounts/account-profile-ui-guide.md)
 * [실시간 CDP B2B에서 계정 일치 시작](/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md)
+* [실시간 CDP B2B에서 예측 리드 및 계정 점수 책정](/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md)
