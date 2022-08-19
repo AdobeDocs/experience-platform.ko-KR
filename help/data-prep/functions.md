@@ -5,7 +5,7 @@ title: 데이터 준비 매핑 함수
 topic-legacy: overview
 description: 이 문서에서는 데이터 준비에 사용되는 매핑 기능을 소개합니다.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: a48072d2c418588a05397e991c1a2e17eee4c028
+source-git-commit: 66c3f4fc6da987f731f7b7e54f416c60fcc670d8
 workflow-type: tm+mt
 source-wordcount: '4286'
 ht-degree: 3%
@@ -126,7 +126,6 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | zone_date_to_zone | 날짜를 하나의 시간대에서 다른 시간대로 변환합니다. | <ul><li>날짜: **필수 여부** 변환하려는 날짜입니다.</li><li>영역: **필수 여부** 날짜를 변환하려는 시간대</li></ul> | zone_date_to_&#x200B;zone(DATE, ZONE) | `zone_date_to_utc&#x200B;(now(), "Europe/Paris")` | `2021-10-26T15:43:59Z` |
 
 {style=&quot;table-layout:auto&quot;}
-&#x200B;
 
 ### 계층 - 객체 {#objects}
 
