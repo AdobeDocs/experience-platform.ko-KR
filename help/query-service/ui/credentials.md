@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;홈;인기 항목;쿼리 서비스;쿼리 서비스;쿼리;쿼리 편집기;쿼리 편집기;쿼리 편집기;쿼리 편집기;
 solution: Experience Platform
-title: Query Service UI 안내서
+title: Query Service 자격 증명 안내서
 topic-legacy: guide
 description: Adobe Experience Platform 쿼리 서비스는 쿼리를 작성 및 실행하고, 이전에 실행된 쿼리를 보고, IMS 조직 내의 사용자가 저장한 쿼리에 액세스하는 데 사용할 수 있는 사용자 인터페이스를 제공합니다.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: a5e8b4df78d8dff58e000030d209606b46a582e8
+source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
 workflow-type: tm+mt
 source-wordcount: '1168'
 ht-degree: 1%
@@ -49,7 +49,7 @@ Adobe Experience Platform 쿼리 서비스를 통해 외부 클라이언트와 �
 
 권한을 할당하는 방법에 대한 자세한 내용은 [액세스 제어](../../access-control/home.md).
 
-이제 사용자가 만료 자격 증명 기능을 사용할 수 있도록 필요한 모든 권한이 Adobe 개발자 콘솔에 구성됩니다.
+이제 사용자가 만료 자격 증명 기능을 사용할 수 있도록 필요한 모든 권한이 Adobe Developer 콘솔에 구성됩니다.
 
 ### 자격 증명 생성
 

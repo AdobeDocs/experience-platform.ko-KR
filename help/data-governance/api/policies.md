@@ -1,20 +1,24 @@
 ---
 keywords: Experience Platform;홈;인기 항목;정책 적용;API 기반 적용;데이터 거버넌스
 solution: Experience Platform
-title: 정책 API 끝점
+title: 데이터 사용 정책 API 엔드포인트
 topic-legacy: developer guide
 description: 데이터 사용 정책은 Experience Platform 내에서 데이터를 수행할 수 있도록 허용하거나 제한하는 마케팅 작업 종류를 설명하는 조직에서 사용하는 규칙입니다. /policy 엔드포인트는 데이터 사용 정책 보기, 만들기, 업데이트 또는 삭제와 관련된 모든 API 호출에 사용됩니다.
 exl-id: 62a6f15b-4c12-4269-bf90-aaa04c147053
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
 workflow-type: tm+mt
-source-wordcount: '1813'
+source-wordcount: '1840'
 ht-degree: 2%
 
 ---
 
-# 정책 끝점
+# 데이터 사용 정책 끝점
 
 데이터 사용 정책은 내에서 데이터를 수행할 수 있도록 허용되거나 제한된 마케팅 작업 종류를 설명하는 규칙입니다 [!DNL Experience Platform]. 다음 `/policies` 의 엔드포인트 [!DNL Policy Service API] 조직의 데이터 사용 정책을 프로그래밍 방식으로 관리할 수 있습니다.
+
+>[!IMPORTANT]
+>
+>이 종단점은 `/policies` 의 엔드포인트 [액세스 제어 API](../../access-control/abac/api/policies.md): 액세스 제어 정책을 관리하는 데 사용됩니다.
 
 ## 시작하기
 

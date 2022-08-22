@@ -1,13 +1,11 @@
 ---
 keywords: Experience Platform;홈;인기 항목;데이터 준비;api 안내서;스키마
-solution: Experience Platform
-title: 스키마 API 끝점
-topic-legacy: schemas
-description: Adobe Experience Platform API에서 '/functions' 엔드포인트를 사용하여 매핑 표현식의 유효성을 확인하고 사용 가능한 매핑 세트 함수를 나열할 수 있습니다.
+title: 함수 API 끝점
+description: 데이터 준비 API에서 '/functions' 끝점을 사용하여 매핑 표현식의 유효성을 확인하고 사용 가능한 매핑 집합 함수를 나열할 수 있습니다.
 exl-id: dc24bfb4-2d96-4757-a610-0c2ee960d41d
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
 workflow-type: tm+mt
-source-wordcount: '210'
+source-wordcount: '209'
 ht-degree: 2%
 
 ---

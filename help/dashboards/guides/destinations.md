@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;프로필;실시간 고객 프로필;사용자 인터페이스;UI;사용자 지정;프로필 대시보드;대시보드
-title: 대상 대시보드
+title: 대상 대시보드 안내서
 description: Adobe Experience Platform은 조직의 활성 대상에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: e1d44c453385b8beaa49e9793eb4858876d865b0
+source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
 workflow-type: tm+mt
-source-wordcount: '2791'
+source-wordcount: '2792'
 ht-degree: 0%
 
 ---

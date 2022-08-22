@@ -1,10 +1,10 @@
 ---
-title: 계정 프로필 대시보드
+title: 계정 프로필 대시보드 안내서
 description: Adobe Experience Platform은 조직의 B2B 계정 프로필에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: 8de94d38fd1d2c001935180851d6877dfe2a8941
+source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
 workflow-type: tm+mt
-source-wordcount: '822'
+source-wordcount: '823'
 ht-degree: 0%
 
 ---
