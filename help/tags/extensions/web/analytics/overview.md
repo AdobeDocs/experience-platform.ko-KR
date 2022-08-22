@@ -2,10 +2,10 @@
 title: Adobe Analytics 확장 개요
 description: Adobe Experience Platform의 Adobe Analytics 태그 확장에 대해 알아봅니다.
 exl-id: 33ebdcb6-9bf0-44e6-b016-e93fe78af578
-source-git-commit: 4b0b4cf7c262940bd21965d928cc7d0cf12d15d1
+source-git-commit: 9fe94af349e1d9c979c78dce69c5180086df3adb
 workflow-type: tm+mt
 source-wordcount: '2275'
-ht-degree: 81%
+ht-degree: 82%
 
 ---
 
@@ -222,7 +222,7 @@ Adobe Analytics 확장 배포에 사용되는 쿠키 글로벌 설정에 대한 
 
 온라인과 오프라인 시스템 모두에서 고객을 나타내는 고유한 값입니다.
 
-[visitorID](https://experienceleague.adobe.com/docs/analytics/import/data-sources/data-types-and-categories/datasrc-visitorid.html)를 참조하십시오.
+[visitorID](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/visitorid.html)를 참조하십시오.
 
 ### 방문자 네임스페이스
 
