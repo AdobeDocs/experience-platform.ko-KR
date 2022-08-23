@@ -4,9 +4,9 @@ title: 프로필 대시보드 안내서
 description: Adobe Experience Platform은 조직의 실시간 고객 프로필 데이터에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
+source-git-commit: e59ba2e83808b460016805997580dc16c4cd369e
 workflow-type: tm+mt
-source-wordcount: '3902'
+source-wordcount: '3769'
 ht-degree: 1%
 
 ---
@@ -122,7 +122,6 @@ Adobe은 프로필 데이터와 관련된 다양한 지표를 시각화하는 �
 >id="platform_dashboards_profiles_profilecount"
 >title="프로필 수"
 >abstract="이 위젯은 스냅숏을 만들 때 프로필 저장소 내에 병합된 총 프로필 수를 표시합니다. 숫자는 프로필 데이터에 적용되는 선택한 병합 정책에 따라 달라집니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="설명서에서 자세히 알아보기"
 
 다음 **[!UICONTROL 프로필 수]** 위젯은 스냅숏을 만들 때 프로필 저장소 내에 병합된 총 프로필 수를 표시합니다. 이 숫자는 프로필 조각을 함께 병합하여 각 개인을 위한 단일 프로필을 구성하기 위해 선택한 병합 정책이 프로필 데이터에 적용되는 결과입니다.
 
@@ -148,7 +147,6 @@ Adobe은 프로필 데이터와 관련된 다양한 지표를 시각화하는 �
 >id="platform_dashboards_profiles_profilescountchange"
 >title="프로필 수 변경"
 >abstract="이 위젯은 병합된 프로필의 총 수를 표시합니다 **추가됨** 최신 스냅샷 시 프로필 저장소에 추가 숫자는 프로필 데이터에 적용되는 선택한 병합 정책에 따라 달라집니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="설명서에서 자세히 알아보기"
 
 다음 **[!UICONTROL 프로필 수 변경]** 위젯은 이전 스냅숏 이후 프로필 저장소에 추가된 병합된 프로필 수를 표시합니다. 이 숫자는 프로필 조각을 함께 병합하여 각 개인을 위한 단일 프로필을 구성하기 위해 선택한 병합 정책이 프로필 데이터에 적용되는 결과입니다. 드롭다운 선택기를 사용하여 지난 30일, 90일 또는 12개월 동안 추가된 프로필 수를 볼 수 있습니다.
 
@@ -164,7 +162,6 @@ Adobe은 프로필 데이터와 관련된 다양한 지표를 시각화하는 �
 >id="platform_dashboards_profiles_profilesaddedtrend"
 >title="프로필 수 변경 트렌드"
 >abstract="이 위젯은 지난 30일, 90일 또는 12개월 동안 매일 프로필 저장소에 추가된 병합된 프로필 수를 표시합니다. 프로필 데이터에 적용되는 선택한 병합 정책에 따라서도 번호가 달라집니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="설명서에서 자세히 알아보기"
 
 다음 **[!UICONTROL 프로필 수 변경 트렌드]** 위젯은 지난 30일, 90일 또는 12개월 동안 매일 프로필 저장소에 추가된 병합된 프로필의 총 수를 표시합니다. 이 숫자는 스냅샷을 가져올 때마다 매일 업데이트되므로 프로필을 플랫폼으로 수집하려는 경우 다음 스냅샷을 가져올 때까지 프로필 수가 반영되지 않습니다. 추가된 프로필 수는 프로필 조각을 함께 병합하여 각 개인을 위한 단일 프로필을 구성하기 위해 선택한 병합 정책이 프로필 데이터에 적용되어 있는 결과입니다.
 
@@ -194,7 +191,6 @@ Adobe은 프로필 데이터와 관련된 다양한 지표를 시각화하는 �
 >id="platform_dashboards_profiles_profilesbyidentity"
 >title="ID별 프로필"
 >abstract="이 위젯은 ID로 프로필 저장소에 병합된 모든 프로필의 분류를 표시합니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="설명서에서 자세히 알아보기"
 
 다음 **[!UICONTROL ID별 프로필]** 위젯은 프로필 저장소에 있는 병합된 모든 프로필의 ID 분류를 표시합니다. 한 프로필에는 여러 네임스페이스가 연결되어 있을 수 있으므로 ID별 총 프로필 수(즉, 각 네임스페이스에 대해 표시된 값을 함께 추가)는 병합된 총 프로필 수보다 높을 수 있습니다. 예를 들어 고객이 둘 이상의 채널에서 브랜드와 상호 작용하는 경우 여러 네임스페이스가 해당 개별 고객과 연결됩니다.
 
@@ -216,7 +212,6 @@ ID에 대해 자세히 알아보려면 [Adobe Experience Platform Identity Servi
 >id="platform_dashboards_profiles_identityoverlap"
 >title="ID 겹치기"
 >abstract="이 위젯은 벤 다이어그램을 사용하여 선택한 두 ID가 포함된 프로필 저장소에 프로필의 겹침을 표시합니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="설명서에서 자세히 알아보기"
 
 다음 **[!UICONTROL ID 겹치기]** 위젯은 벤 다이어그램 또는 설정 다이어그램을 사용하여 선택한 두 개의 ID가 포함된 프로필 저장소에 프로필의 겹침을 표시합니다.
 
@@ -234,7 +229,6 @@ ID에 대해 자세히 알아보려면 [Adobe Experience Platform Identity Servi
 >id="platform_dashboards_profiles_singleidentityprofiles"
 >title="단일 ID 프로필"
 >abstract="이 위젯은 ID를 만드는 유형의 ID만 있는 조직의 프로필 수를 제공합니다. 이 ID 유형은 이메일 또는 ECID일 수 있습니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="설명서에서 자세히 알아보기"
 
 다음 [!UICONTROL 단일 ID 프로필] 위젯은 해당 id를 만드는 하나의 유형의 ID만 사용하는 조직의 프로필 수를 제공합니다. 이 ID 유형은 이메일 또는 ECID일 수 있습니다. 프로필 수는 최신 스냅샷에 포함된 데이터에서 생성됩니다.
 
@@ -254,7 +248,6 @@ ID에 대해 자세히 알아보려면 [Adobe Experience Platform Identity Servi
 >id="platform_dashboards_profiles_unsegmentedprofiles"
 >title="세그먼트화되지 않은 프로필"
 >abstract="이 위젯은 세그먼트에 첨부되지 않은 모든 프로필의 총 수를 제공하며 조직 전체에서 프로필 활성화 기회를 나타냅니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="설명서에서 자세히 알아보기"
 
 다음 [!UICONTROL 세그먼트화되지 않은 프로필] 위젯은 어떤 세그먼트에도 첨부되지 않은 모든 프로필의 총 수를 제공합니다. 생성된 숫자는 마지막 스냅샷에서 정확하며 조직 전체에서 프로파일 활성화 기회를 나타냅니다. 또한 적절한 ROI를 제공하지 않는 프로필을 확장할 수 있는 기회를 나타냅니다.
 
@@ -266,7 +259,6 @@ ID에 대해 자세히 알아보려면 [Adobe Experience Platform Identity Servi
 >id="platform_dashboards_profiles_unsegmentedprofilestrend"
 >title="세그먼트화되지 않은 프로필 트렌드"
 >abstract="이 위젯은 주어진 기간 동안 어떤 세그먼트에도 첨부되지 않는 프로필 수에 대한 선 그래프 그림을 제공합니다. 세그먼트에 첨부되지 않은 프로필의 트렌드는 30일, 90일 및 12개월 기간에 걸쳐 시각화할 수 있습니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#unsegmented-profiles-trend" text="설명서에서 자세히 알아보기"
 
 다음 [!UICONTROL 세그먼트화되지 않은 프로필 트렌드] 위젯은 지정된 기간 동안 어떤 세그먼트에도 첨부되지 않는 프로필 수에 대한 선 그래프 일러스트레이션을 제공합니다. 세그먼트에 첨부되지 않은 프로필의 트렌드는 30일, 90일 및 12개월 기간에 걸쳐 시각화할 수 있습니다. 기간은 위젯의 드롭다운 메뉴에서 선택됩니다. 프로파일 수는 x축의 y축 및 시간에 반영됩니다.
 
@@ -278,7 +270,6 @@ ID에 대해 자세히 알아보려면 [Adobe Experience Platform Identity Servi
 >id="platform_dashboards_profiles_unsegmentedprofilesbyidentity"
 >title="ID로 세그먼트화되지 않은 프로필"
 >abstract="이 위젯은 세그먼트화되지 않은 프로필의 총 수를 고유 식별자로 분류합니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="설명서에서 자세히 알아보기"
 
 다음 [!UICONTROL ID로 세그먼트화되지 않은 프로필] 위젯은 세그먼트화되지 않은 프로필의 총 수를 고유 식별자로 분류합니다. 쉽게 비교할 수 있도록 데이터가 막대 차트에 시각화됩니다.
 
@@ -359,7 +350,6 @@ Adobe은 데이터 분석에 사용할 수 있는 수집된 프로필의 완전�
 >id="platform_dashboards_profiles_attributesqualityassessment"
 >title="속성 품질 평가"
 >abstract="이 위젯은 속성에 따라 모든 프로필의 완전성과 카디널리티를 보여줍니다. 각 행은 하나의 속성에 대해 설명합니다. 다음 **프로필** 열은 이 속성이 있고 null이 아닌 값으로 채워진 프로필 수를 제공합니다. 다음 **완전성** 백분율은 이 속성을 가지고 있고 null이 아닌 값으로 채워진 프로필의 총 개수를 해당 속성에 대한 프로필의 비어 있지 않은 값의 총 수로 나눈 값에 의해 결정됩니다. **카디널리티** 모든 속성에 대해 이 속성의 null이 아닌 고유한 값의 총 수를 제공합니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="설명서에서 자세히 알아보기"
 
 다음 [!UICONTROL 속성 품질 평가] 위젯은 속성에 따라 모든 프로필의 완전성과 카디널리티를 보여줍니다. 데이터가 마지막 처리 날짜까지 정확합니다. 이 정보는 테이블의 각 행이 단일 속성을 나타내는 네 개의 열이 있는 테이블로 표시됩니다.
 
@@ -378,7 +368,6 @@ Adobe은 데이터 분석에 사용할 수 있는 수집된 프로필의 완전�
 >id="platform_dashboards_profiles_profilesbycompleteness"
 >title="완벽을 기한 프로필"
 >abstract="도넛 차트는 관찰된 모든 속성 중에서 null이 아닌 값으로 채워진 프로필 속성의 백분율을 표시합니다. 높은 프로필, 중간 또는 완전성이 낮은 프로필의 비율을 보여줍니다. 완전성이 높은 프로필의 속성 중 70% 이상이 채워졌습니다. 중간 완결성 프로필의 속성 중 30%에서 70% 사이가 채워진 것입니다. 완전성이 낮은 프로필의 속성은 채워진 속성의 30% 미만입니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="설명서에서 자세히 알아보기"
 
 다음 [!UICONTROL 완벽을 기한 프로필] 위젯은 마지막 처리 날짜 이후 최종 프로필 완결성 도넛 차트를 만듭니다. 프로필의 완전성은 관찰된 모든 속성 중에서 null이 아닌 값으로 채워진 속성의 백분율로 측정됩니다.
 
@@ -396,7 +385,6 @@ Adobe은 데이터 분석에 사용할 수 있는 수집된 프로필의 완전�
 >id="platform_dashboards_profiles_profilescompletenesstrend"
 >title="프로필 완결성 트렌드"
 >abstract="이 위젯은 시간 경과에 따른 프로필 완결성의 트렌드를 나타내는 스택 영역 차트를 만듭니다. 완전성은 관찰된 모든 속성 중에서 null이 아닌 값으로 채워진 속성의 백분율로 측정됩니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="설명서에서 자세히 알아보기"
 
 이 위젯은 시간 경과에 따른 프로필 완결성의 트렌드를 나타내는 스택 영역 차트를 만듭니다. 완전성은 관찰된 모든 속성 중에서 null이 아닌 값으로 채워진 속성의 백분율로 측정됩니다. 마지막 처리 날짜 이후 프로필 완전성을 높음, 중간 또는 낮은 완전성으로 분류합니다.
 

@@ -4,9 +4,9 @@ title: 세그먼트 대시보드 안내서
 description: 'Adobe Experience Platform은 조직이 만든 세그먼트에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다. '
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
+source-git-commit: e59ba2e83808b460016805997580dc16c4cd369e
 workflow-type: tm+mt
-source-wordcount: '1598'
+source-wordcount: '1550'
 ht-degree: 0%
 
 ---
@@ -82,7 +82,6 @@ Adobe은 세그먼트와 관련된 다양한 지표를 시각화하는 데 사�
 >id="platform_dashboards_segments_audiencesize"
 >title="대상 크기"
 >abstract="이 위젯은 선택한 세그먼트 내에서 병합된 프로필의 총 수를 표시합니다. 이 번호는 데이터에 적용된 병합 정책에 따라 다르며 가장 최근 스냅숏이 있을 때 정확합니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html#audience-size" text="설명서에서 자세히 알아보기"
 
 다음 **[!UICONTROL 대상 크기]** 위젯은 스냅숏을 만들 때 선택한 세그먼트 내의 병합된 총 프로필 수를 표시합니다. 이 숫자는 프로필 조각을 함께 병합하여 세그먼트의 각 개인을 위한 단일 프로필을 구성하기 위해 프로필 데이터에 세그먼트 병합 정책을 적용한 결과입니다.
 
@@ -96,7 +95,6 @@ Adobe은 세그먼트와 관련된 다양한 지표를 시각화하는 데 사�
 >id="platform_dashboards_segments_audiencesizetrend"
 >title="대상 크기 트렌드"
 >abstract="이 위젯은 **임의** 일별 스냅샷 동안 캡처된 세그먼트 정의, 최근 30일, 90일 또는 12개월 동안의 세그먼트 정의."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html#audience-size-trend" text="설명서에서 자세히 알아보기"
 
 다음 **[!UICONTROL 대상 크기 트렌드]** 위젯은 의 기준을 충족하는 총 프로필 수에 대한 선 그래프 일러스트레이션을 제공합니다 **임의** 주어진 기간에 대한 세그먼트 정의. 대상 크기 트렌드는 30일, 90일 및 12개월 기간에 걸쳐 시각화할 수 있습니다. 기간은 위젯의 드롭다운 메뉴에서 선택됩니다. 대상 크기는 x축의 y축 및 시간에 반영됩니다.
 
@@ -151,7 +149,6 @@ Adobe은 세그먼트와 관련된 다양한 지표를 시각화하는 데 사�
 >id="platform_dashboards_segments_identityoverlap"
 >title="ID 겹치기"
 >abstract="이 위젯은 선택한 ID가 모두 포함된 세그먼트에서 프로필의 겹침을 보여줍니다. 원은 각 ID의 상대 크기를 표시합니다. 두 네임스페이스가 모두 포함된 프로필 수는 원 간에 겹쳐서 표시됩니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html#identity-overlap" text="설명서에서 자세히 알아보기"
 
 다음 **[!UICONTROL ID 겹치기]** 위젯은 여러 ID가 포함된 세그먼트에서 프로필의 겹침을 보여주는 벤 다이어그램 또는 세트 다이어그램을 표시합니다.
 
@@ -169,7 +166,6 @@ ID에 대해 자세히 알아보려면 [Adobe Experience Platform Identity Servi
 >id="platform_dashboards_segments_profilesbyidentity"
 >title="ID별 프로필"
 >abstract="이 위젯은 선택한 세그먼트에 병합된 모든 프로필의 ID 분류를 표시합니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html#profiles-by-identity" text="설명서에서 자세히 알아보기"
 
 다음 **[!UICONTROL ID별 프로필]** 위젯은 선택한 세그먼트에 병합된 모든 프로필의 ID 분류를 표시합니다. 한 프로필에는 여러 개의 ID가 연결되어 있을 수 있으므로 ID별 총 프로필 수는 세그먼트의 총 프로필 수보다 높을 수 있습니다. 즉, 고객이 두 개 이상의 채널에서 브랜드와 상호 작용하는 경우 여러 ID가 해당 개별 고객과 연결될 수 있으므로 각 ID에 대해 표시된 값을 함께 추가하면 세그먼트에서 총 대상 크기보다 커질 수 있습니다.
 
