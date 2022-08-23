@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: 이 자습서에서는 소스 커넥터 및 API를 사용하여 타사 클라우드 저장소에서 데이터를 검색하고 Platform으로 가져오는 단계를 설명합니다.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: 313d80603f54b7e79316b01790fb4f258851858e
+source-git-commit: 962baf6258629f319c24ec1503ea82f04b6c9c95
 workflow-type: tm+mt
-source-wordcount: '1613'
+source-wordcount: '1631'
 ht-degree: 1%
 
 ---
@@ -286,134 +286,220 @@ curl -X GET \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
+>[!NOTE]
+>
+>아래의 JSON 응답 페이로드는 간결성을 위해 숨겨져 있습니다. 응답 페이로드를 보려면 &quot;페이로드&quot;를 선택합니다.
+
++++ 페이로드 보기
+
 **응답**
 
 성공적인 응답은 소스에서 플랫폼으로 데이터를 가져오는 데이터 흐름 사양의 세부 정보를 반환합니다. 응답에는 고유한 흐름 세부 사항이 포함됩니다 `id` 새 데이터 흐름을 만드는 데 필요합니다.
 
 ```json
 {
-    "items": [
-        {
-            "id": "9753525b-82c7-4dce-8a9b-5ccfce2b9876",
-            "name": "CloudStorageToAEP",
-            "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
-            "version": "1.0",
-            "sourceConnectionSpecIds": [
-                "b3ba5556-48be-44b7-8b85-ff2b69b46dc4",
-                "ecadc60c-7455-4d87-84dc-2a0e293d997b",
-                "b7829c2f-2eb0-4f49-a6ee-55e33008b629",
-                "4c10e202-c428-4796-9208-5f1f5732b1cf",
-                "fb2e94c9-c031-467d-8103-6bd6e0a432f2",
-                "32e8f412-cdf7-464c-9885-78184cb113fd",
-                "b7bf2577-4520-42c9-bae9-cad01560f7bc",
-                "998b8ae3-cec0-43b7-8abe-40b1eb4ee069",
-                "be5ec48c-5b78-49d5-b8fa-7c89ec4569b8"
-            ],
-            "targetConnectionSpecIds": [
-                "c604ff05-7f1a-43c0-8e18-33bf874cb11c"
-            ],
-            "transformationSpecs": [
-                {
-                    "name": "Mapping",
-                    "spec": {
-                        "$schema": "http://json-schema.org/draft-07/schema#",
-                        "type": "object",
-                        "description": "defines various params required for different mapping from source to target",
-                        "properties": {
-                            "mappingId": {
-                                "type": "string"
-                            },
-                            "mappingVersion": {
-                                "type": "string"
-                            }
-                        }
-                    }
-                }
-            ],
-            "scheduleSpec": {
-                "name": "PeriodicSchedule",
-                "type": "Periodic",
-                "spec": {
-                    "$schema": "http://json-schema.org/draft-07/schema#",
-                    "type": "object",
-                    "properties": {
-                        "startTime": {
-                            "description": "epoch time",
-                            "type": "integer"
-                        },
-                        "endTime": {
-                            "description": "epoch time",
-                            "type": "integer"
-                        },
-                        "interval": {
-                            "type": "integer"
-                        },
-                        "frequency": {
-                            "type": "string",
-                            "enum": [
-                                "minute",
-                                "hour",
-                                "day",
-                                "week"
-                            ]
-                        },
-                        "backfill": {
-                            "type": "boolean",
-                            "default": true
-                        }
-                    },
-                    "required": [
-                        "startTime",
-                        "frequency",
-                        "interval"
-                    ],
-                    "if": {
-                        "properties": {
-                            "frequency": {
-                                "const": "minute"
-                            }
-                        }
-                    },
-                    "then": {
-                        "properties": {
-                            "interval": {
-                                "minimum": 15
-                            }
-                        }
-                    },
-                    "else": {
-                        "properties": {
-                            "interval": {
-                                "minimum": 1
-                            }
-                        }
-                    }
-                }
-            },
-            "permissionsInfo": {
-                "view": [
-                    {
-                        "@type": "lowLevel",
-                        "name": "EnterpriseSource",
-                        "permissions": [
-                            "read"
-                        ]
-                    }
-                ],
-                "manage": [
-                    {
-                        "@type": "lowLevel",
-                        "name": "EnterpriseSource",
-                        "permissions": [
-                            "write"
-                        ]
-                    }
-                ]
-            }
-        }
+  "id": "9753525b-82c7-4dce-8a9b-5ccfce2b9876",
+  "name": "CloudStorageToAEP",
+  "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
+  "version": "1.0",
+  "attributes": {
+    "isSourceFlow": true,
+    "frequency": "batch",
+    "notification": {
+      "category": "sources",
+      "flowRun": {
+        "enabled": true
+      }
+    }
+  },
+  "sourceConnectionSpecIds": [
+    "b3ba5556-48be-44b7-8b85-ff2b69b46dc4",
+    "ecadc60c-7455-4d87-84dc-2a0e293d997b",
+    "b7829c2f-2eb0-4f49-a6ee-55e33008b629",
+    "4c10e202-c428-4796-9208-5f1f5732b1cf",
+    "fb2e94c9-c031-467d-8103-6bd6e0a432f2",
+    "32e8f412-cdf7-464c-9885-78184cb113fd",
+    "b7bf2577-4520-42c9-bae9-cad01560f7bc",
+    "998b8ae3-cec0-43b7-8abe-40b1eb4ee069",
+    "be5ec48c-5b78-49d5-b8fa-7c89ec4569b8",
+    "54e221aa-d342-4707-bcff-7a4bceef0001",
+    "c85f9425-fb21-426c-ad0b-405e9bd8a46c",
+    "26f526f2-58f4-4712-961d-e41bf1ccc0e8"
+  ],
+  "targetConnectionSpecIds": [
+    "c604ff05-7f1a-43c0-8e18-33bf874cb11c"
+  ],
+  "permissionsInfo": {
+    "view": [
+      {
+        "@type": "lowLevel",
+        "name": "EnterpriseSource",
+        "permissions": [
+          "read"
+        ]
+      }
+    ],
+    "manage": [
+      {
+        "@type": "lowLevel",
+        "name": "EnterpriseSource",
+        "permissions": [
+          "write"
+        ]
+      }
     ]
+  },
+  "optionSpec": {
+    "name": "OptionSpec",
+    "spec": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "properties": {
+        "errorDiagnosticsEnabled": {
+          "title": "Error diagnostics.",
+          "description": "Flag to enable detailed and sample error diagnostics summary.",
+          "type": "boolean",
+          "default": false
+        },
+        "partialIngestionPercent": {
+          "title": "Partial ingestion threshold.",
+          "description": "Percentage which defines the threshold of errors allowed before the run is marked as failed.",
+          "type": "number",
+          "exclusiveMinimum": 0
+        }
+      }
+    }
+  },
+  "scheduleSpec": {
+    "name": "PeriodicSchedule",
+    "type": "Periodic",
+    "spec": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "properties": {
+        "startTime": {
+          "description": "epoch time",
+          "type": "integer"
+        },
+        "frequency": {
+          "type": "string",
+          "enum": [
+            "once",
+            "minute",
+            "hour",
+            "day",
+            "week"
+          ]
+        },
+        "interval": {
+          "type": "integer"
+        },
+        "backfill": {
+          "type": "boolean",
+          "default": true
+        }
+      },
+      "required": [
+        "startTime",
+        "frequency"
+      ],
+      "if": {
+        "properties": {
+          "frequency": {
+            "const": "once"
+          }
+        }
+      },
+      "then": {
+        "allOf": [
+          {
+            "not": {
+              "required": [
+                "interval"
+              ]
+            }
+          },
+          {
+            "not": {
+              "required": [
+                "backfill"
+              ]
+            }
+          }
+        ]
+      },
+      "else": {
+        "required": [
+          "interval"
+        ],
+        "if": {
+          "properties": {
+            "frequency": {
+              "const": "minute"
+            }
+          }
+        },
+        "then": {
+          "properties": {
+            "interval": {
+              "minimum": 15
+            }
+          }
+        },
+        "else": {
+          "properties": {
+            "interval": {
+              "minimum": 1
+            }
+          }
+        }
+      }
+    }
+  },
+  "transformationSpec": [
+    {
+      "name": "Mapping",
+      "spec": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "description": "defines various params required for different mapping from source to target",
+        "properties": {
+          "mappingId": {
+            "type": "string"
+          },
+          "mappingVersion": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  ],
+  "runSpec": {
+      "name": "ProviderParams",
+      "spec": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "description": "defines various params required for creating flow run.",
+        "properties": {
+          "windowStartTime": {
+            "type": "integer",
+            "description": "The start time for the dataflow in epoch time."
+          },
+          "windowEndTime": {
+            "type": "integer",
+            "description": "The end time for the dataflow in epoch time."
+          }
+        },
+        "required": [
+          "windowStartTime",
+          "windowEndTime"
+        ]
+      }
+    }
 }
 ```
+
++++
 
 ## 데이터 흐름 만들기
 
