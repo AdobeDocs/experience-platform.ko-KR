@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform 릴리스 노트 - 2022년 8월
 description: Adobe Experience Platform에 대한 2022년 8월 릴리스 노트입니다.
-source-git-commit: b8513fa214ea74eec6809796cc194466e05cbb21
+source-git-commit: 925991d58c3cdd84e13b12a095e9681b8f4b254b
 workflow-type: tm+mt
-source-wordcount: '497'
-ht-degree: 9%
+source-wordcount: '942'
+ht-degree: 8%
 
 ---
 
@@ -15,6 +15,7 @@ ht-degree: 9%
 Adobe Experience Platform의 기존 기능 업데이트:
 
 - [데이터 준비](#data-prep)
+- [XDM(경험 데이터 모델)](#xdm)
 - [소스](#sources)
 
 ## [!DNL Data Prep] {#data-prep}
@@ -30,6 +31,38 @@ Adobe Experience Platform의 기존 기능 업데이트:
 {style=&quot;table-layout:auto&quot;}
 
 에 대해 자세히 알아보려면 [!DNL Data Prep]를 참조하고 [[!DNL Data Prep] 개요](../../data-prep/home.md).
+
+## XDM(경험 데이터 모델) {#xdm}
+
+XDM은 Adobe Experience Platform으로 가져온 데이터에 대한 일반적인 구조 및 정의(스키마)를 제공하는 오픈 소스 사양입니다. XDM 표준을 준수함으로써 모든 고객 경험 데이터를 공통 표현으로 통합하여 보다 빠르고 통합된 방식으로 통찰력을 제공할 수 있습니다. 고객 작업을 통해 유용한 통찰력을 얻을 수 있고, 세그먼트를 통해 고객 대상을 정의하고, 개인화를 위해 고객 속성을 사용할 수 있습니다.
+
+**새로운 XDM 구성 요소**
+
+| 구성 요소 유형 | 이름 | 설명 |
+| --- | --- | --- |
+| 전역 스키마 | [[!UICONTROL AJO 엔티티 스키마]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/ajo-entity.schema.json) | Adobe Journey Optimizer의 비정규화된 엔터티에 대해 설명합니다. |
+| 클래스 | [[!UICONTROL AJO 실행 엔티티]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/ajo-execution-entity.schema.json) | 세그멘테이션에 사용할 Adobe Journey Optimizer 실행 엔티티에 대해 설명합니다. |
+| 필드 그룹 | [[!UICONTROL Workfront 작업 개체]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/workobjects-all.schema.json) | Adobe Workfront의 모든 하위 수준 개체 특정 필드 그룹을 참조하는 래퍼 필드 그룹입니다. |
+
+{style=&quot;table-layout:auto&quot;}
+
+**업데이트된 XDM 구성 요소**
+
+| 구성 요소 유형 | 이름 | 설명 |
+| --- | --- | --- |
+| 필드 그룹 | [[!UICONTROL Journey Orchestration 단계 이벤트 공통 필드]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/journeyOrchestration/stepEvents/journeyStepEventCommonFieldsMixin.schema.json) | 두 개의 새 속성이 추가되었습니다. `origTimeStamp` 및 `experienceID`. |
+| 필드 그룹 | [[!UICONTROL 세그먼트 멤버십 세부 정보]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/segmentation.schema.json) | 추가 [!UICONTROL XDM 개별 프로필]이렇게 하면 이제 XDM 비즈니스 계정 클래스를 기반으로 한 스키마에서도 이 필드 그룹을 사용할 수 있습니다. |
+| 필드 그룹 | (복수) | Marketo B2B 활동과 관련된 여러 필드 그룹이 안정적인 상태로 업데이트되었습니다. 다음을 참조하십시오 [가져오기 요청](https://github.com/adobe/xdm/pull/1593/files) 자세한 내용 |
+| 필드 그룹 | (복수) | 몇 가지 날씨 관련 필드 그룹이 에 대해 발생한 오류를 수정하도록 업데이트되었습니다 `uvIndex` 및 `sunsetTime`. 다음을 참조하십시오 [가져오기 요청](https://github.com/adobe/xdm/pull/1602/files) 자세한 내용 |
+| 데이터 유형 | [[!UICONTROL 제품 목록 항목]](https://github.com/adobe/xdm/blob/master/components/datatypes/productlistitem.schema.json) | 새 속성 `productImageUrl` 이 추가되었습니다. |
+| 데이터 유형 | [[!UICONTROL Qoe 데이터 세부 정보]](https://github.com/adobe/xdm/blob/master/components/datatypes/qoedatadetails.schema.json) | 새 속성 `framesPerSecond` 이 추가되었습니다. |
+| 데이터 유형 | [[!UICONTROL 세션 세부 정보]](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | `sdkVersion`의 이름이 `appVersion`로 변경되었습니다. `meta:enum` 및 `description` 필드도 업데이트되었습니다. |
+| 데이터 유형 및 필드 그룹 | (복수) | 여러 미디어 데이터 유형과 필드 그룹에는 새 필드와 업데이트된 설명이 있습니다. 다음을 참조하십시오 [가져오기 요청](https://github.com/adobe/xdm/pull/1582/files) 자세한 내용 |
+| (모두) | (복수) | 를 포함하는 모든 스키마 개체 `enum` 이제 필드에 해당 필드도 포함됩니다 `meta:enum` 각 제약 조건에 대한 표시 값을 나타내는 필드입니다. 다음을 참조하십시오 [가져오기 요청](https://github.com/adobe/xdm/pull/1601/files) 자세한 내용 |
+
+{style=&quot;table-layout:auto&quot;}
+
+Platform의 XDM에 대한 자세한 내용은 [XDM 시스템 개요](../../xdm/home.md).
 
 ## 소스 {#sources}
 
