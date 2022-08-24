@@ -6,45 +6,42 @@ topic-legacy: overview
 type: Tutorial
 description: Flow Service API를 사용하여 Adobe Experience Platform을 Google BigQuery에 연결하는 방법을 알아봅니다.
 exl-id: 51f90366-7a0e-49f1-bd57-b540fa1d15af
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 015a4fa06fc2157bb8374228380bb31826add37e
 workflow-type: tm+mt
-source-wordcount: '525'
+source-wordcount: '526'
 ht-degree: 1%
 
 ---
 
 # 만들기 [!DNL Google BigQuery] 기본 연결 [!DNL Flow Service] API
 
->[!NOTE]
->
->다음 [!DNL Google BigQuery] 커넥터가 베타 버전입니다. 자세한 내용은 [소스 개요](../../../../home.md#terms-and-conditions) 베타 레이블이 지정된 커넥터 사용에 대한 자세한 정보.
-
 기본 연결은 소스와 Adobe Experience Platform 간의 인증된 연결을 나타냅니다.
 
-이 자습서에서는 다음에 대한 기본 연결을 만드는 단계를 안내합니다 [!DNL Google BigQuery] (이하 &quot;라 한다)[!DNL BigQuery]&quot;) [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+이 자습서에서는 다음에 대한 기본 연결을 만드는 단계를 안내합니다 [!DNL Google BigQuery] 사용 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## 시작하기
 
-이 안내서에서는 Adobe Experience Platform의 다음 구성 요소를 이해하고 있어야 합니다.
+이 안내서에서는 Experience Platform의 다음 구성 요소에 대한 작업 이해를 필요로 합니다.
 
-* [소스](../../../../home.md): [!DNL Experience Platform] 을(를) 사용하여 들어오는 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 다양한 소스에서 데이터를 수집할 수 있습니다. [!DNL Platform] 서비스.
-* [샌드박스](../../../../../sandboxes/home.md): [!DNL Experience Platform] 단일 파티션을 생성하는 가상 샌드박스 제공 [!DNL Platform] 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 별도의 가상 환경으로 인스턴스를 구축할 수 있습니다.
+* [소스](../../../../home.md): Experience Platform을 사용하면 Platform 서비스를 사용하여 들어오는 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 다양한 소스에서 데이터를 수집할 수 있습니다.
+* [샌드박스](../../../../../sandboxes/home.md): Experience Platform은 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 단일 플랫폼 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
 
-다음 섹션에서는에 성공적으로 연결하기 위해 알고 있어야 하는 추가 정보를 제공합니다 [!DNL BigQuery] 사용 [!DNL Flow Service] API.
+다음 섹션에서는에 성공적으로 연결하기 위해 알고 있어야 하는 추가 정보를 제공합니다 [!DNL Google BigQuery] 사용 [!DNL Flow Service] API.
 
 ### 필요한 자격 증명 수집
 
-대상 [!DNL Flow Service] 연결 [!DNL BigQuery] platform에 다음 OAuth 2.0 인증 값을 제공해야 합니다.
+대상 [!DNL Flow Service] 연결 [!DNL Google BigQuery] platform에 다음 OAuth 2.0 인증 값을 제공해야 합니다.
 
 | 자격 증명 | 설명 |
 | ---------- | ----------- |
-| `project` | 기본값은 프로젝트 ID입니다 [!DNL BigQuery] 쿼리할 프로젝트입니다. |
+| `project` | 기본값은 프로젝트 ID입니다 [!DNL Google BigQuery] 쿼리할 프로젝트입니다. |
 | `clientID` | 새로 고침 토큰을 생성하는 데 사용되는 ID 값입니다. |
 | `clientSecret` | 새로 고침 토큰을 생성하는 데 사용되는 암호 값입니다. |
-| `refreshToken` | 에서 가져온 새로 고침 토큰 [!DNL Google] 액세스 권한을 인증하는 데 사용됩니다. [!DNL BigQuery]. |
-| `connectionSpec.id` | 연결 사양은 기본 및 소스 연결 생성과 관련된 인증 사양이 포함된 소스의 커넥터 등록 정보를 반환합니다. 에 대한 연결 사양 ID [!DNL BigQuery] is: `3c9b37f8-13a6-43d8-bad3-b863b941fedd`. |
+| `refreshToken` | 에서 가져온 새로 고침 토큰 [!DNL Google] 액세스 권한을 인증하는 데 사용됩니다. [!DNL Google BigQuery]. |
+| `largeResultsDataSetId` | 미리 만들어진  [!DNL Google BigQuery] 큰 결과 세트에 대한 지원을 활성화하기 위해 필요한 데이터 세트 ID입니다. |
+| `connectionSpec.id` | 연결 사양은 기본 및 소스 연결 생성과 관련된 인증 사양이 포함된 소스의 커넥터 등록 정보를 반환합니다. 에 대한 연결 사양 ID [!DNL Google BigQuery] is: `3c9b37f8-13a6-43d8-bad3-b863b941fedd`. |
 
-이러한 값에 대한 자세한 내용은 다음을 참조하십시오 [[!DNL BigQuery] 문서](https://cloud.google.com/storage/docs/json_api/v1/how-tos/authorizing).
+이러한 값에 대한 자세한 내용은 다음을 참조하십시오 [[!DNL Google BigQuery] 문서](https://cloud.google.com/storage/docs/json_api/v1/how-tos/authorizing).
 
 ### 플랫폼 API 사용
 
@@ -54,7 +51,7 @@ Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용�
 
 기본 연결은 소스의 인증 자격 증명, 현재 연결 상태 및 고유한 기본 연결 ID를 포함하여 소스와 플랫폼 간의 정보를 유지합니다. 기본 연결 ID를 사용하면 소스 내에서 파일을 탐색 및 탐색하고 해당 데이터 유형 및 형식에 대한 정보를 포함하여 수집할 특정 항목을 식별할 수 있습니다.
 
-기본 연결 ID를 만들려면 `/connections` 제공하는 동안 엔드포인트 [!DNL BigQuery] 요청 매개 변수의 일부로 인증 자격 증명.
+기본 연결 ID를 만들려면 `/connections` 제공하는 동안 엔드포인트 [!DNL Google BigQuery] 요청 매개 변수의 일부로 인증 자격 증명.
 
 **API 형식**
 
@@ -64,7 +61,7 @@ POST /connections
 
 **요청**
 
-다음 요청은에 대한 기본 연결을 만듭니다. [!DNL BigQuery]:
+다음 요청은에 대한 기본 연결을 만듭니다. [!DNL Google BigQuery]:
 
 ```shell
 curl -X POST \
@@ -96,10 +93,10 @@ curl -X POST \
 
 | 속성 | 설명 |
 | --------- | ----------- |
-| `auth.params.project` | 기본값은 프로젝트 ID입니다 [!DNL BigQuery] 쿼리할 프로젝트입니다. 반대입니다. |
+| `auth.params.project` | 기본값은 프로젝트 ID입니다 [!DNL Google BigQuery] 쿼리할 프로젝트입니다. 반대입니다. |
 | `auth.params.clientId` | 새로 고침 토큰을 생성하는 데 사용되는 ID 값입니다. |
 | `auth.params.clientSecret` | 새로 고침 토큰을 생성하는 데 사용되는 클라이언트 값입니다. |
-| `auth.params.refreshToken` | 에서 가져온 새로 고침 토큰 [!DNL Google] 액세스 권한을 인증하는 데 사용됩니다. [!DNL BigQuery]. |
+| `auth.params.refreshToken` | 에서 가져온 새로 고침 토큰 [!DNL Google] 액세스 권한을 인증하는 데 사용됩니다. [!DNL Google BigQuery]. |
 | `connectionSpec.id` | 다음 [!DNL Google BigQuery] 연결 사양 ID: `3c9b37f8-13a6-43d8-bad3-b863b941fedd`. |
 
 **응답**

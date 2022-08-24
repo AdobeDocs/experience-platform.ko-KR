@@ -6,20 +6,20 @@ topic-legacy: overview
 type: Tutorial
 description: UI에서 Adobe Analytics 소스 연결을 만들어 소비자 데이터를 Adobe Experience Platform으로 가져오는 방법을 알아봅니다.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 1d77ad44c7123f32301257c238299b7c16e2c92b
+source-git-commit: ae30ac2fe1c6366c987748e198b9dc3530bc512a
 workflow-type: tm+mt
-source-wordcount: '2182'
-ht-degree: 2%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
 # UI에서 Adobe Analytics 소스 연결 만들기
 
-이 자습서에서는 가져올 UI에서 Adobe Analytics 소스 연결을 만드는 단계를 제공합니다 [!DNL Analytics] 보고서 세트 데이터를 Adobe Experience Platform에 가져옵니다.
+이 자습서에서는 UI에서 Adobe Analytics 보고서 세트 데이터를 Adobe Experience Platform으로 가져오기 위한 Adobe Analytics 소스 연결을 만드는 단계를 제공합니다.
 
 ## 시작하기
 
-이 자습서에서는 Adobe Experience Platform의 다음 구성 요소를 이해하고 있어야 합니다.
+이 자습서에서는 Experience Platform의 다음 구성 요소를 이해하고 있어야 합니다.
 
 * [XDM(경험 데이터 모델) 시스템](../../../../../xdm/home.md): Experience Platform이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
 * [실시간 고객 프로필](../../../../../profile/home.md): 여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
@@ -30,7 +30,7 @@ ht-degree: 2%
 이 문서 전체에서 사용되는 다음과 같은 주요 용어를 이해하는 것이 중요합니다.
 
 * **표준 속성**: 표준 속성은 Adobe에 의해 사전 정의된 모든 속성입니다. 모든 고객에 대해 동일한 의미를 포함하며, [!DNL Analytics] 소스 데이터 및 [!DNL Analytics] 스키마 필드 그룹.
-* **사용자 지정 속성**: 사용자 지정 속성은 다음 의 사용자 지정 변수 계층 구조에 있는 모든 속성입니다. [!DNL Analytics]. 사용자 지정 속성은 Adobe Analytics 구현 내에서 특정 정보를 보고서 세트에 캡처하는 데 사용되며 보고서 세트와 보고서 세트의 사용에 따라 다를 수 있습니다. 사용자 지정 속성에는 eVar, prop 및 목록이 포함됩니다. 다음을 참조하십시오 [[!DNL Analytics] 전환 변수에 대한 설명서](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en) 를 참조하십시오.
+* **사용자 지정 속성**: 사용자 지정 속성은 다음 의 사용자 지정 변수 계층 구조에 있는 모든 속성입니다. [!DNL Analytics]. 사용자 지정 속성은 Adobe Analytics 구현 내에서 특정 정보를 보고서 세트에 캡처하는 데 사용되며 보고서 세트마다 다르게 사용할 수 있습니다. 사용자 지정 속성에는 eVar, prop 및 목록이 포함됩니다. 다음을 참조하십시오 [[!DNL Analytics] 전환 변수에 대한 설명서](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en) 를 참조하십시오.
 * **사용자 지정 필드 그룹의 모든 속성**: 고객이 생성한 필드 그룹에서 생성된 속성은 모두 사용자가 정의하며 표준 또는 사용자 지정 속성이 아닌 것으로 간주됩니다.
 * **친숙한 이름**: 친숙한 이름은 에서 사용자 지정 변수에 대해 사용자가 제공하는 레이블입니다 [!DNL Analytics] 구현 을 참조하십시오. 다음을 참조하십시오 [[!DNL Analytics] 전환 변수에 대한 설명서](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en) 친숙한 이름에 대한 자세한 정보.
 
@@ -48,13 +48,17 @@ ht-degree: 2%
 
 다음 **[!UICONTROL Analytics 소스 데이터 추가]** 단계는 [!DNL Analytics] 보고서 세트 데이터를 사용하여 소스 연결을 만들 수 있습니다.
 
-하나의 활성 데이터 흐름만 사용하여 보고서 세트를 수집할 수 있습니다. 여러 데이터 흐름에서는 사용할 수 없습니다. 또한 보고서 세트는 소스 연결이 만들어지는 Platform Sandbox 인스턴스와 동일한 영역에 속해야 합니다. 선택할 수 없는 보고서 세트는 이 샌드박스 또는 다른 샌드박스에서 이미 섭취되었습니다.
+보고서 세트는 [!DNL Analytics] 보고. 조직에는 여러 개의 보고서 세트가 있을 수 있으며, 각 보고서 세트에는 서로 다른 데이터 세트가 포함되어 있습니다.
+
+소스 연결이 만들어지고 있는 Experience Platform 샌드박스 인스턴스와 동일한 조직에 매핑되는 한 모든 지역(미국, 영국 또는 싱가포르)에서 보고서 세트를 수집할 수 있습니다. 하나의 활성 데이터 흐름만 사용하여 보고서 세트를 수집할 수 있습니다. 사용 중인 샌드박스에서 또는 다른 샌드박스에서 선택할 수 없는 보고서 세트가 이미 수집되었습니다.
 
 여러 개의 인바운드 연결을 만들어 여러 보고서 세트를 동일한 샌드박스로 가져올 수 있습니다. 보고서 세트에 변수(예: eVar 또는 이벤트)에 대한 스키마가 다른 경우 이러한 보고서 세트를 사용자 지정 필드 그룹의 특정 필드에 매핑해야 하며 [데이터 준비](../../../../../data-prep/ui/mapping.md). 보고서 세트는 단일 샌드박스에만 추가할 수 있습니다.
 
+![](../../../../images/tutorials/create/analytics/report-suite.png)
+
 >[!NOTE]
 >
->의미가 다른 두 사용자 지정 속성(eVar, 목록 및 prop)과 같은 데이터 충돌이 없으면 여러 보고서 세트의 데이터를 XDM의 동일한 속성에 매핑할 수 없는 경우에만 실시간 고객 데이터 프로필에 대해 활성화할 수 있습니다.
+>서로 다른 의미를 갖는 두 사용자 지정 속성(eVar, 목록 및 prop)과 같은 데이터 충돌이 없는 경우에만 실시간 고객 데이터 프로필에 대해 여러 보고서 세트의 데이터를 활성화할 수 있습니다.
 
 을(를) 만들려면 [!DNL Analytics] 소스 연결에서 보고서 세트를 선택한 다음 **[!UICONTROL 다음]** 계속 진행합니다.
 
