@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform 릴리스 노트 - 2022년 8월
 description: Adobe Experience Platform에 대한 2022년 8월 릴리스 노트입니다.
-source-git-commit: 925991d58c3cdd84e13b12a095e9681b8f4b254b
+source-git-commit: 5967dee9c8b1c05ebd103998021e02a47ac3982c
 workflow-type: tm+mt
-source-wordcount: '942'
-ht-degree: 8%
+source-wordcount: '1246'
+ht-degree: 7%
 
 ---
 
@@ -16,6 +16,8 @@ Adobe Experience Platform의 기존 기능 업데이트:
 
 - [데이터 준비](#data-prep)
 - [XDM(경험 데이터 모델)](#xdm)
+- [실시간 고객 프로필](#profile)
+- [세분화 서비스](#segmentation)
 - [소스](#sources)
 
 ## [!DNL Data Prep] {#data-prep}
@@ -63,6 +65,30 @@ XDM은 Adobe Experience Platform으로 가져온 데이터에 대한 일반적�
 {style=&quot;table-layout:auto&quot;}
 
 Platform의 XDM에 대한 자세한 내용은 [XDM 시스템 개요](../../xdm/home.md).
+
+## 실시간 고객 프로필 {#profile}
+
+Adobe Experience Platform을 사용하면 고객이 브랜드와 상호 작용하는 위치와 시기에 관계없이 고객을 위해 조정되고 일관되며 적절한 경험을 제공할 수 있습니다. 실시간 고객 프로필을 사용하면 온라인, 오프라인, CRM 및 타사 데이터를 포함하여 여러 채널의 데이터를 결합하는 각 개별 고객을 전체적으로 확인할 수 있습니다. 프로필을 사용하면 모든 고객 상호 작용을 실행 가능하고 타임스탬프가 지정된 계정을 제공하는 통합 보기에 고객 데이터를 통합할 수 있습니다.
+
+| 기능 | 설명 |
+| ------- | ----------- |
+| 분리된 프로필 에지 특성 정리 | 이제 모든 조직의 경우 프로필 서비스에서 사용자 활동 영역의 남은 에지 속성을 매일 제거하여 시스템에서 프로필을 보다 정확하게 표현합니다. 이 정리는 주어진 프로필에 대한 모든 프로필 조각이 삭제된 후 발생하며 다음 데이터 세트에서 병합되는 프로필에 영향을 주어야 합니다. `com_adobe_aep_profile_region_dataset` 으로 표시됨 `true`. 이 지표들은 이번 릴리스 전에 남은 에지 특성 조각을 포함했으므로 라이선스 사용 대시보드의 &quot;주소 지정 가능 대상&quot; 지표에 감소가 표시될 수 있으며, 프로필 대시보드의 &quot;프로필 수&quot; 지표에 이 릴리스 전의 남은 에지 특성 조각이 포함되어 있을 수 있습니다. |
+
+{style=&quot;table-layout:auto&quot;}
+
+프로필 데이터 작업에 대한 자습서 및 모범 사례 등 실시간 고객 프로필에 대한 자세한 내용은 [실시간 고객 프로필 개요](../../profile/home.md).
+
+## 세분화 서비스 {#segmentation}
+
+[!DNL Segmentation Service] 고객 기반 내의 마케팅 가능한 사람 그룹을 구분하는 기준을 설명하여 특정 프로필 하위 집합을 정의합니다. 세그먼트는 브랜드와의 고객 상호 작용을 나타내는 레코드 데이터(예: 인구 통계 정보) 또는 시계열 이벤트를 기반으로 할 수 있습니다.
+
+**새로운 기능**
+
+| 기능 | 설명 |
+| ------- | ----------- |
+| 4000개 세그먼트 지원 | 이제 Platform을 사용하는 모든 조직이 최대 4000개의 세그먼트 정의를 지원할 수 있습니다. 이 변경 사항이 세그먼트 작업 API에 미치는 영향에 대한 자세한 내용은 [세그먼트 작업 끝점 안내서](../../segmentation/api/segment-jobs.md) |
+
+자세한 내용은 [!DNL Segmentation Service]를 보려면 [세그먼테이션 개요](../../segmentation/home.md).
 
 ## 소스 {#sources}
 
