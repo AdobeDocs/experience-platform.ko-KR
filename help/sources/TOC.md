@@ -6,8 +6,8 @@ user-guide-description: 다양한 소스 또는 구조에서 데이터를 수집
 feature: Sources
 source-git-commit: ed6a5ba39de2aecaef6f44604ff605721bfcb924
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '820'
+ht-degree: 13%
 
 ---
 
