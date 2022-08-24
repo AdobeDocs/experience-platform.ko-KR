@@ -1,30 +1,24 @@
 ---
 keywords: Experience Platform;홈;인기 항목;소스;커넥터;소스 커넥터;소스 sdk;sdk;SDK
 solution: Experience Platform
-title: 소스 SDK(베타) 시작하기
+title: 셀프 서비스 소스 시작하기(배치 SDK)
 topic-legacy: developer guide
-description: 이 문서에서는 소스 SDK를 사용하여 새 소스를 만들기 전에 알아야 하는 전제 조건 정보를 소개합니다.
-hide: true
-hidefromtoc: true
+description: 이 문서에서는 Self-Serve Sources(배치 SDK)를 사용하여 새 소스를 만들기 전에 알아야 하는 전제 조건 정보를 소개합니다.
 exl-id: ba131442-ff20-4854-87fe-918aa313382d
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
-source-wordcount: '400'
+source-wordcount: '387'
 ht-degree: 0%
 
 ---
 
-# 소스 SDK(베타) 시작하기
+# 셀프 서비스 소스 시작하기(배치 SDK)
 
->[!IMPORTANT]
->
->소스 SDK는 현재 베타 버전이며 조직에서 아직 액세스할 수 없습니다. 이 설명서에 설명된 기능은 변경될 수 있습니다.
-
-소스 SDK를 사용하면 고유한 REST 기반 소스를 통합하여 데이터를 Adobe Experience Platform에 가져올 수 있습니다. 이 문서에서는 을 호출하기 전에 알아야 하는 핵심 개념을 소개합니다 [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+셀프서비스 소스(배치 SDK)를 사용하면 REST 기반 소스를 통합하여 배치 데이터를 Adobe Experience Platform에 가져올 수 있습니다. 이 문서에서는 을 호출하기 전에 알아야 하는 핵심 개념을 소개합니다 [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## 전제 조건
 
-소스 SDK를 사용하려면 Adobe Experience Platform 소스로 제공된 IMS 조직 샌드박스에 액세스할 수 있는지 확인해야 합니다.
+셀프 서비스 소스(배치 SDK)를 사용하려면 Adobe Experience Platform 소스로 제공된 IMS 조직 샌드박스에 액세스할 수 있는지 확인해야 합니다.
 
 또한 이 안내서에서는 Adobe Experience Platform의 다음 구성 요소에 대한 작업 이해를 필요로 합니다.
 
@@ -33,7 +27,7 @@ ht-degree: 0%
 
 ## 샘플 API 호출 읽기
 
-소스 SDK 및 [!DNL Flow Service] API 설명서는 요청의 형식을 지정하는 방법을 보여주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 올바른 형식의 요청 페이로드가 포함됩니다. API 응답으로 반환되는 샘플 JSON도 제공됩니다. 샘플 API 호출에 대한 설명서에 사용된 규칙에 대한 자세한 내용은 [예제 API 호출을 읽는 방법](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) Experience Platform 문제 해결 안내서에서 을 참조하십시오.
+셀프 서비스 소스(배치 SDK) 및 [!DNL Flow Service] API 설명서는 요청의 형식을 지정하는 방법을 보여주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 올바른 형식의 요청 페이로드가 포함됩니다. API 응답으로 반환되는 샘플 JSON도 제공됩니다. 샘플 API 호출에 대한 설명서에 사용된 규칙에 대한 자세한 내용은 [예제 API 호출을 읽는 방법](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) Experience Platform 문제 해결 안내서에서 을 참조하십시오.
 
 ## 필수 헤더에 대한 값을 수집합니다
 
@@ -57,4 +51,4 @@ ht-degree: 0%
 
 ## 다음 단계
 
-Sources SDK로 새 소스를 만들려면 [새 소스 만들기](./create.md).
+셀프 서비스 소스(배치 SDK)로 새 소스를 만들려면 [새 소스 만들기](./create.md).

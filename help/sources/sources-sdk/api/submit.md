@@ -1,24 +1,19 @@
 ---
 keywords: Experience Platform;홈;인기 항목;소스;커넥터;소스 커넥터;소스 sdk;sdk;SDK
-title: 소스(베타) 제출
+title: 소스 제출
 topic-legacy: overview
-description: 다음 문서에서는 Flow Service API를 사용하여 새 소스를 테스트 및 확인하고 소스 SDK를 통해 새 소스를 통합하는 방법에 대해 설명합니다.
-hide: true
-hidefromtoc: true
-source-git-commit: 274784a5b82d12497f7437fdeaf665dd64224c2d
+description: 다음 문서에서는 Flow Service API를 사용하여 새 소스를 테스트 및 확인하고 자체 서비스 소스(배치 SDK)를 통해 새 소스를 통합하는 방법에 대한 단계를 제공합니다.
+exl-id: 9e945ba1-51b6-40a9-b92f-e0a52b3f92fa
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
-source-wordcount: '855'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
 
-# 소스(베타) 제출
+# 소스 제출
 
->[!IMPORTANT]
->
->소스 SDK는 현재 베타 버전이며 조직에서 아직 액세스할 수 없습니다. 이 설명서에 설명된 기능은 변경될 수 있습니다.
-
-를 사용하여 새 소스를 Adobe Experience Platform에 통합하는 마지막 단계입니다 [!DNL Sources SDK] 은 확인을 위해 소스를 테스트하는 것입니다. 성공하면 Adobe 담당자에게 연락하여 새 소스를 제출할 수 있습니다.
+셀프 서비스 소스(배치 SDK)를 사용하여 Adobe Experience Platform에 새 소스를 통합하는 마지막 단계는 확인을 위해 소스를 테스트하는 것입니다. 성공하면 Adobe 담당자에게 연락하여 새 소스를 제출할 수 있습니다.
 
 다음 문서에서는 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
@@ -27,13 +22,13 @@ ht-degree: 0%
 * Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용은 [플랫폼 API 시작](../../../landing/api-guide.md).
 * Platform API용 자격 증명을 생성하는 방법에 대한 자세한 내용은 [Experience Platform API 인증 및 액세스](../../../landing/api-authentication.md).
 * 설정 방법에 대한 자세한 내용 [!DNL Postman] 플랫폼 API의 경우 다음 위치에서 자습서를 참조하십시오. [개발자 콘솔 설정 및 [!DNL Postman]](../../../landing/postman.md).
-* 테스트 및 디버깅 프로세스에 도움이 되도록 [[!DNL Sources SDK] 여기서 수집 및 환경 확인](../assets/sdk-verification.zip) 및 아래에 설명된 단계를 따릅니다.
+* 테스트 및 디버깅 프로세스에 도움이 되도록 [여기서 Self-Serve Sources 확인 수집 및 환경](../assets/sdk-verification.zip) 및 아래에 설명된 단계를 따릅니다.
 
 ## 소스 테스트
 
-소스를 테스트하려면 [[!DNL Sources SDK] 확인 컬렉션 및 환경](../assets/sdk-verification.zip) on [!DNL Postman] 를 통해 소스와 관련된 적절한 환경 변수를 제공할 수 있습니다.
+소스를 테스트하려면 [셀프 서비스 소스 검증 수집 및 환경](../assets/sdk-verification.zip) on [!DNL Postman] 를 통해 소스와 관련된 적절한 환경 변수를 제공할 수 있습니다.
 
-테스트를 시작하려면 먼저 수집 및 환경을 설정해야 합니다 [!DNL Postman]. 다음으로 테스트할 연결 사양 ID를 지정합니다. 이 ID는 [!DNL Sources SDK].
+테스트를 시작하려면 먼저 수집 및 환경을 설정해야 합니다 [!DNL Postman]. 다음으로 테스트할 연결 사양 ID를 지정합니다.
 
 ### 분류에 사용할 `authSpecName`
 

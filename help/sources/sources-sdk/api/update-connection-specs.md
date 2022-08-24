@@ -1,19 +1,17 @@
 ---
 keywords: Experience Platform;홈;인기 항목;소스;커넥터;소스 커넥터;소스 sdk;sdk;SDK
-title: Flow Service API(Beta)를 사용하여 연결 사양 업데이트
+title: Flow Service API를 사용하여 연결 사양 업데이트
 topic-legacy: developer guide
 description: PUT 작업을 통해 연결 사양의 속성을 업데이트할 수 있습니다.
-hide: true
-hidefromtoc: true
 exl-id: fcb00521-8fc2-491e-aa35-6e0f9b730dd4
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
-source-wordcount: '120'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
-# Flow Service API(Beta)를 사용하여 연결 사양 업데이트
+# Flow Service API를 사용하여 연결 사양 업데이트
 
 PUT 작업을 통해 연결 사양의 속성을 업데이트할 수 있습니다. PUT 요청을 통해 연결 사양을 업데이트할 때 본문에는 POST 요청에 새 연결 사양을 생성할 때 필요한 모든 필드가 포함되어야 합니다.
 

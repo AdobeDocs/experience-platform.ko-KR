@@ -2,12 +2,11 @@
 keywords: Experience Platform;홈;인기 항목;소스;커넥터;소스 커넥터;소스 sdk;sdk;SDK
 title: UI에 대한 셀프 서비스 설명서 템플릿
 description: Adobe Experience Platform UI를 사용하여 YOURSOURCE 연결을 만드는 방법을 알아봅니다.
-hide: true
-hidefromtoc: true
-source-git-commit: 39accd28edc388c6444910f9a2ea6d2f01acfdaf
+exl-id: 6471c0a2-22e8-4133-a76f-ee3c5c669ef8
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
-source-wordcount: '722'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 

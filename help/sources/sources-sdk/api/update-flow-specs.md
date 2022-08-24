@@ -1,29 +1,23 @@
 ---
 keywords: Experience Platform;홈;인기 항목;소스;커넥터;소스 커넥터;소스 sdk;sdk;SDK
-title: Flow Service API(Beta)를 사용하여 플로우 사양 업데이트
+title: Flow Service API를 사용하여 흐름 사양 업데이트
 topic-legacy: developer guide
-description: 다음 문서에서는 Sources SDK용 Flow Service API를 사용하여 흐름 사양을 검색하고 업데이트하는 방법에 대해 설명합니다.
-hide: true
-hidefromtoc: true
+description: 다음 문서에서는 셀프 서비스 소스(배치 SDK)용 Flow Service API를 사용하여 플로우 사양을 검색하고 업데이트하는 방법에 대해 설명합니다.
 exl-id: 67a0cd3e-ac18-43a4-aa22-8f6376d5cc3f
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
-source-wordcount: '432'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
-# 를 사용하여 흐름 사양 업데이트 [!DNL Flow Service] API(Beta)
-
->[!IMPORTANT]
->
->소스 SDK는 현재 베타 버전이며 조직에서 아직 액세스할 수 없습니다. 이 설명서에 설명된 기능은 변경될 수 있습니다.
+# 를 사용하여 흐름 사양 업데이트 [!DNL Flow Service] API
 
 새 연결 사양 ID를 생성한 후에는 데이터 흐름을 만들려면 이 ID를 흐름 사양에 추가해야 합니다.
 
 흐름 사양은 지원되는 소스 및 대상 연결 ID, 데이터에 적용해야 하는 변환 사양, 흐름 생성에 필요한 스케줄링 매개 변수 등 흐름을 정의하는 정보를 포함합니다. 를 사용하여 흐름 사양을 편집할 수 있습니다 `/flowSpecs` 엔드포인트.
 
-다음 문서에서는 [!DNL Flow Service] 소스 SDK용 API.
+다음 문서에서는 [!DNL Flow Service] 셀프 서비스 소스용 API(배치 SDK).
 
 ## 시작하기
 

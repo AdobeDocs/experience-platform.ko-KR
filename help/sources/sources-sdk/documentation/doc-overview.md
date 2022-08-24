@@ -4,21 +4,15 @@ solution: Experience Platform
 title: 소스 문서 작성
 topic-legacy: overview
 description: 새 소스를 Adobe Experience Platform에서 라이브로 만들려면 먼저 새 소스를 문서화하는 작업을 수행해야 합니다.
-hide: true
-hidefromtoc: true
 exl-id: 80daadb1-127f-4f42-8bc9-fb89a7898462
-source-git-commit: e732a43f7ac578d7fde41c48d2c819899fabb0be
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
-source-wordcount: '437'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
 
 # 소스 문서 작성
-
->[!IMPORTANT]
->
->소스 SDK는 현재 베타 버전이며 조직에서 아직 액세스할 수 없습니다. 이 설명서에 설명된 기능은 변경될 수 있습니다.
 
 새 소스를 Adobe Experience Platform에서 라이브로 설정하려면 마지막 단계를 수행해야 새 소스를 작성할 수 있습니다.
 

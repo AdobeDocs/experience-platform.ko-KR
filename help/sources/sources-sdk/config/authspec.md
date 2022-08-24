@@ -1,19 +1,17 @@
 ---
 keywords: Experience Platform;홈;인기 항목;소스;커넥터;소스 커넥터;소스 sdk;sdk;SDK
-title: 소스 SDK에 대한 인증 사양 구성
+title: 셀프 서비스 소스(배치 SDK)에 대한 인증 사양 구성
 topic-legacy: overview
-description: 이 문서에서는 소스 SDK를 사용하기 위해 준비해야 하는 구성에 대한 개요를 제공합니다.
-hide: true
-hidefromtoc: true
+description: 이 문서에서는 셀프 서비스 소스(배치 SDK)를 사용하기 위해 준비해야 하는 구성에 대한 개요를 제공합니다.
 exl-id: 68ed22fe-1f22-46d2-9d58-72ad8a9e6b98
-source-git-commit: a3bfd3b87343ca1dd2d122f4f82926082965578c
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
-source-wordcount: '526'
-ht-degree: 2%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
-# 소스 SDK에 대한 인증 사양 구성
+# 셀프 서비스 소스(배치 SDK)에 대한 인증 사양 구성
 
 인증 사양은 Adobe Experience Platform 사용자가 소스에 연결할 수 있는 방법을 정의합니다.
 
@@ -21,7 +19,7 @@ ht-degree: 2%
 
 ## 인증 사양
 
-현재, [!DNL Sources SDK] 은 OAuth 2 새로 고침 코드 및 기본 인증을 지원합니다. OAuth 2 새로 고침 코드 및 기본 인증 사용에 대한 지침은 아래 표를 참조하십시오
+셀프 서비스 소스(배치 SDK)는 OAuth 2 새로 고침 코드 및 기본 인증을 지원합니다. OAuth 2 새로 고침 코드 및 기본 인증 사용에 대한 지침은 아래 표를 참조하십시오
 
 ### OAuth 2 새로 고침 코드
 
@@ -36,10 +34,6 @@ OAuth 2 새로 고침 코드는 임시 액세스 토큰 및 새로 고침 토큰
     "type": "object",
     "description": "Define auth params required for connecting to generic rest using oauth2 authorization code.",
     "properties": {
-      "host": {
-        "type": "string",
-        "description": "Enter resource url host path."
-      },
       "authorizationTestUrl": {
         "description": "Authorization test url to validate accessToken.",
         "type": "string"

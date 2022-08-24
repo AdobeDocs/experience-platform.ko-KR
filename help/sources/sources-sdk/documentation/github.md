@@ -4,13 +4,11 @@ solution: Experience Platform
 title: GitHub 웹 인터페이스를 사용하여 소스 설명서 페이지 만들기
 topic-legacy: tutorial
 description: 이 문서에서는 GitHub 웹 인터페이스를 사용하여 설명서를 작성하고 끌어오기 요청(PR)을 제출하는 방법에 대해 설명합니다.
-hide: true
-hidefromtoc: true
 exl-id: 84b4219c-b3b2-4d0a-9a65-f2d5cd989f95
-source-git-commit: 39accd28edc388c6444910f9a2ea6d2f01acfdaf
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
-source-wordcount: '624'
-ht-degree: 2%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -36,19 +34,19 @@ GitHub 환경을 설정하는 첫 번째 단계는 [Adobe Experience Platform Gi
 
 ![생성 분기](../assets/create-branch.png)
 
-포크된 리포지토리의 GitHub 폴더 구조에서 다음 위치로 이동합니다. [`experience-platform.en/help/sources/tutorials/api/create/`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/tutorials/api/create) 그런 다음 목록에서 소스에 대한 적절한 카테고리를 선택합니다. 예를 들어 새 클라우드 스토리지 소스에 대한 설명서를 만드는 경우 **클라우드 스토리지**.
+포크된 리포지토리의 GitHub 폴더 구조에서 다음 위치로 이동합니다. [`experience-platform.en/help/sources/tutorials/api/create/`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/tutorials/api/create) 그런 다음 목록에서 소스에 대한 적절한 카테고리를 선택합니다. 예를 들어 새 CRM 소스에 대한 설명서를 만드는 경우 **crm**.
 
 >[!TIP]
 >
 >UI에 대한 설명서를 작성하는 경우 다음 위치로 이동합니다 [`experience-platform.en/help/sources/tutorials/ui/create/`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/tutorials/ui/create) 그리고 출처에 적합한 카테고리를 선택합니다. 이미지를 추가하려면 다음 위치로 이동합니다 [`experience-platform.en/help/sources/images/tutorials/create/sdk`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/images/tutorials/create) 그런 다음 스크린샷을 `sdk` 폴더를 입력합니다.
 
-![클라우드 스토리지](../assets/cloud-storage.png)
+![crm](../assets/crm.png)
 
-기존 클라우드 저장소 소스의 폴더가 표시됩니다. 새 소스에 대한 설명서를 추가하려면 **파일 추가** 그런 다음 **새 파일 만들기** 표시되는 드롭다운 메뉴에서 을 클릭합니다.
+기존 CRM 소스의 폴더가 나타납니다. 새 소스에 대한 설명서를 추가하려면 **파일 추가** 그런 다음 **새 파일 만들기** 표시되는 드롭다운 메뉴에서 을 클릭합니다.
 
 ![create-new-file](../assets/create-new-file.png)
 
-소스 파일의 이름을 지정합니다 `YOURSOURCE.md` 여기서 YOURSOURCE는 Platform의 소스 이름입니다. 예를 들어, 회사가 [!DNL Mailchimp]를 지정하는 경우 파일 이름이 `mailchimp.md`.
+소스 파일의 이름을 지정합니다 `YOURSOURCE.md` 여기서 YOURSOURCE는 Platform의 소스 이름입니다. 예를 들어 회사가 ACME CRM인 경우 파일 이름은 `acme-crm.md`.
 
 ![git 인터페이스](../assets/git-interface.png)
 

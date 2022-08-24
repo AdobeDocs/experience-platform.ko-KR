@@ -1,28 +1,23 @@
 ---
 keywords: Experience Platform;홈;인기 항목;소스;커넥터;소스 커넥터;소스 sdk;sdk;SDK
-title: 소스 SDK의 구성 옵션
+title: 셀프 서비스 소스(배치 SDK)의 구성 옵션
 topic-legacy: overview
-description: 이 문서에서는 소스 SDK를 사용하기 위해 준비해야 하는 구성에 대한 개요를 제공합니다.
-hide: true
-hidefromtoc: true
-source-git-commit: d4b5b54be9fa2b430a3b45eded94a523b6bd4ef8
+description: 이 문서에서는 셀프 서비스 소스(배치 SDK)를 사용하기 위해 준비해야 하는 구성에 대한 개요를 제공합니다.
+exl-id: a41b3b80-599a-47ed-a391-419721be5aa2
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
-source-wordcount: '316'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
-# 소스 SDK의 구성 옵션
+# 셀프 서비스 소스(배치 SDK)의 구성 옵션
 
->[!IMPORTANT]
->
->소스 SDK는 현재 베타 버전이며 조직에서 아직 액세스할 수 없습니다. 이 설명서에 설명된 기능은 변경될 수 있습니다.
-
-이 문서에서는 소스 SDK를 사용하기 위해 준비해야 하는 구성에 대한 개요를 제공합니다.
+이 문서에서는 셀프 서비스 소스(배치 SDK)를 사용하기 위해 준비해야 하는 구성에 대한 개요를 제공합니다.
 
 ## 연결 사양
 
-연결 사양은 소스의 커넥터 속성을 반환합니다. 여기에는 기본 및 소스 연결 생성과 관련된 인증 사양과 특정 소스에 할당된 고정 연결 사양 ID가 포함됩니다. 연결 사양은 테넌트 및 IMS 조직에 관계 없습니다. 일반적인 연결 사양은 특정 소스에 대한 기본 정보와 세 개의 개별 섹션을 포함합니다. `authSpec`, `sourceSpec`, 및 `exploreSpec`.
+연결 사양은 소스의 커넥터 속성을 반환합니다. 여기에는 기본 및 소스 연결 생성과 관련된 인증 사양과 특정 소스에 할당된 고정 연결 사양 ID가 포함됩니다. 연결 사양은 테넌트 및 조직에 관계 없습니다. 일반적인 연결 사양은 특정 소스에 대한 기본 정보와 세 개의 개별 섹션을 포함합니다. `authSpec`, `sourceSpec`, 및 `exploreSpec`.
 
 | 사양 | 설명 |
 | --- | --- |
@@ -41,5 +36,3 @@ ht-degree: 1%
 * [인증 사양 구성](./authspec.md)
 * [소스 사양 구성](./sourcespec.md)
 * [탐색 사양 구성](./explorespec.md)
-
-

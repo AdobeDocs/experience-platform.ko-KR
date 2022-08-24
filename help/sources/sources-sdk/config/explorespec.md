@@ -1,19 +1,17 @@
 ---
 keywords: Experience Platform;홈;인기 항목;소스;커넥터;소스 커넥터;소스 sdk;sdk;SDK
-title: 소스 SDK에 대한 탐색 사양 구성
+title: 셀프 서비스 소스(배치 SDK)에 대한 탐색 사양 구성
 topic-legacy: overview
-description: 이 문서에서는 소스 SDK를 사용하기 위해 준비해야 하는 구성에 대한 개요를 제공합니다.
-hide: true
-hidefromtoc: true
-source-git-commit: ae1a1139c24fd80e9f689e4c637897c905004c5f
+description: 이 문서에서는 셀프 서비스 소스(배치 SDK)를 사용하기 위해 준비해야 하는 구성에 대한 개요를 제공합니다.
+exl-id: 423a7e56-9dd1-4071-bd26-ee4f9f206122
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
-source-wordcount: '248'
-ht-degree: 2%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
-
-# 소스 SDK에 대한 탐색 사양 구성
+# 셀프 서비스 소스(배치 SDK)에 대한 탐색 사양 구성
 
 탐색 사양은 소스에 포함된 객체를 탐색하고 검사하는 데 필요한 매개변수를 정의합니다. 또한 탐색 사양은 객체를 탐색하고 검사할 때 반환되는 응답 형식을 정의합니다.
 
@@ -87,4 +85,4 @@ ht-degree: 2%
 
 ## 다음 단계
 
-탐색 세부 항목이 채워지면 을 사용하여 전체 연결 사양을 만들 수 있습니다. [!DNL Flow Service] API. 자세한 내용은 [[!DNL Sources SDK] API 안내서](../api/api-overview.md) 추가 정보.
+탐색 세부 항목이 채워지면 을 사용하여 전체 연결 사양을 만들 수 있습니다. [!DNL Flow Service] API. 자세한 내용은 [셀프 서비스 소스(배치 SDK) API 안내서](../api/api-overview.md) 추가 정보.
