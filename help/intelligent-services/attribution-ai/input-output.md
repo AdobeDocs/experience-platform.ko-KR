@@ -5,9 +5,9 @@ title: Attribution AI의 입력 및 출력
 topic-legacy: Input and Output data for Attribution AI
 description: 다음 문서에서는 Attribution AI에서 사용되는 다양한 입력 및 출력에 대해 설명합니다.
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
-source-git-commit: 3ea17aa57a5bfbc968f354b13d2ed107b2efa39b
+source-git-commit: b3c331821e2df17380edbc673066f6b10a06d65f
 workflow-type: tm+mt
-source-wordcount: '2392'
+source-wordcount: '2476'
 ht-degree: 3%
 
 ---
@@ -234,6 +234,12 @@ Attribution AI은 증가율과 영향을 받는 두 가지 유형의 알고리�
 | 작업 | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.mediaAction |
 | campaign_group | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.campaignGroup |
 | campaign_name | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.campaignName |
+
+>[!IMPORTANT]
+>
+> - Attribution AI은 추가 교육 및 점수를 위해 업데이트된 데이터만 사용합니다. 마찬가지로, 데이터 삭제를 요청하는 경우 Attribution AI은 삭제된 데이터를 사용하지 않습니다.
+> - Attribution AI에서 GDPR 준수를 위해 Adobe Experience Platform Privacy Service을 사용하여 데이터 레이크, Identity Service 및 실시간 고객 프로필에서 데이터에 액세스하고 삭제하는 고객 요청을 수락할 수 있도록 프로토콜을 설정할 수 있습니다.
+> - 모든 데이터는 전송 및 휴지 상태로 암호화되어 있습니다. 자세한 내용은 설명서 를 참조하십시오 [데이터 암호화](../../../help/landing/governance-privacy-security/encryption.md)
 
 
 ## 다음 단계 {#next-steps}

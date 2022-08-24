@@ -4,20 +4,21 @@ solution: Experience Platform, Real-time Customer Data Platform
 feature: Customer AI
 title: 고객 AI 인스턴스 구성
 topic-legacy: Instance creation
-description: Intelligent Services는 고객 AI를 다양한 사용 사례에 대해 구성할 수 있는 사용하기 쉬운 Adobe Sensei 서비스로 제공합니다. 다음 섹션에서는 Customer AI 인스턴스를 구성하는 단계를 제공합니다.
+description: AI/ML 서비스는 다양한 사용 사례에 대해 구성할 수 있는 간단한 사용 Adobe Sensei 서비스로서 고객 AI를 제공합니다. 다음 섹션에서는 Customer AI 인스턴스를 구성하는 단계를 제공합니다.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: c4e1d739bf54cbebf6a04d87f92d0df4bdbc083e
+source-git-commit: ac21668955305c135d78c1e6afbee8f6499f6885
 workflow-type: tm+mt
-source-wordcount: '2618'
+source-wordcount: '3088'
 ht-degree: 0%
 
 ---
 
+
 # 고객 AI 인스턴스 구성
 
-고객 AI 는 Intelligent Services의 일부로, 기계 학습에 대한 걱정 없이 사용자 지정 성향 점수를 생성할 수 있습니다.
+고객 AI 는 AI/ML 서비스의 일부로서, 기계 학습에 대한 걱정 없이 사용자 지정 성향 점수를 생성할 수 있습니다.
 
-Intelligent Services는 고객 AI를 다양한 사용 사례에 대해 구성할 수 있는 사용하기 쉬운 Adobe Sensei 서비스로 제공합니다. 다음 섹션에서는 Customer AI 인스턴스를 구성하는 단계를 제공합니다.
+AI/ML 서비스는 다양한 사용 사례에 대해 구성할 수 있는 간단한 사용 Adobe Sensei 서비스로서 고객 AI를 제공합니다. 다음 섹션에서는 Customer AI 인스턴스를 구성하는 단계를 제공합니다.
 
 ## 인스턴스 만들기 {#set-up-your-instance}
 
@@ -191,6 +192,18 @@ ID를 선택하려면 ID 열에 있는 밑줄이 있는 값을 선택합니다. 
 
 ![사용자 지정 프로필 속성 추가](../images/user-guide/profile-attributes.png)
 
+#### 프로필 스냅샷 내보내기에서 프로필 속성 선택
+
+일별 프로필 스냅샷 내보내기에서 프로필 속성을 포함하도록 선택할 수도 있습니다. 이러한 속성은 프로필 스냅샷 내보내기에 동기화되어 가장 최근에 사용 가능한 값을 표시합니다.
+
+>[!WARNING]
+>
+> 예측 목표의 결과로 업데이트되거나 예측 목표와 크게 관련이 있는 프로필 속성을 선택하지 않도록 주의하십시오. 이로 인해 모델이 데이터 누출 및 오버피팅됩니다. 이러한 속성의 예는 입니다. `total_purchases_in_the_last_3_months` 은(는) 구매 전환을 예측합니다.
+
+>[!NOTE]
+>
+>UPS 스냅샷 내보내기에서 프로필 속성을 사용하기 위한 지원은 요청 시 UI에서 사용할 수 있습니다.
+
 ### 사용자 지정 이벤트 예제 추가 {#custom-event}
 
 다음 예에서는 사용자 지정 이벤트 및 프로필 속성이 고객 AI 인스턴스에 추가됩니다. Customer AI 인스턴스의 목표는 향후 60일 내에 고객이 다른 Luma 제품을 구입할 가능성을 예측하는 것입니다. 일반적으로 제품 데이터는 제품 SKU에 연결됩니다. 이 경우 SKU는 `prd1013`. 고객 AI 모델이 교육/점수를 받으면 이 SKU를 이벤트에 연결할 수 있고 성향 버킷의 영향을 주는 요소로 표시할 수 있습니다.
@@ -234,6 +247,38 @@ Customer AI를 처음 사용하는 경우 모델 출력 결과에 만족될 때�
 >입력 데이터의 크기에 따라 예측 실행을 완료하는 데 최대 24시간이 걸릴 수 있습니다.
 
 이 섹션 다음에 고객 AI 인스턴스를 구성하고 예측 실행을 실행했습니다. 프로필 전환이 활성화되면 점화된 인사이트가 자동으로 프로필을 예측 점수로 채웁니다. 이 자습서의 다음 섹션을 계속하기 전에 최대 24시간을 기다려 주십시오.
+
+### 속성 기반 액세스 제어
+
+>[!IMPORTANT]
+>
+>속성 기반 액세스 제어는 현재 제한된 릴리스에서만 사용할 수 있습니다.
+
+[속성 기반 액세스 제어](../../../access-control/abac/overview.md) 는 관리자가 속성을 기반으로 특정 개체 및/또는 기능에 대한 액세스를 제어할 수 있도록 해주는 Adobe Experience Platform의 기능입니다. 속성은 스키마 필드나 세그먼트에 추가된 레이블과 같이 객체에 추가된 메타데이터일 수 있습니다. 관리자는 사용자 액세스 권한을 관리하기 위한 속성을 포함하는 액세스 정책을 정의합니다.
+
+이 기능을 사용하면 조직 또는 데이터 사용 범위를 정의하는 레이블을 사용하여 XDM(Experience Data Model) 스키마 필드에 레이블을 지정할 수 있습니다. 동시에 관리자는 사용자 및 역할 관리 인터페이스를 사용하여 XDM 스키마 필드를 둘러싼 액세스 정책을 정의하고 사용자 또는 사용자 그룹(내부, 외부 또는 타사 사용자)에 부여된 액세스를 더 잘 관리할 수 있습니다. 또한 속성 기반 액세스 제어를 사용하여 관리자가 특정 세그먼트에 대한 액세스를 관리할 수 있습니다.
+
+특성 기반 액세스 제어를 통해 조직의 관리자는 모든 플랫폼 워크플로우 및 리소스에서 중요한 SPD(개인 데이터)와 PII(개인 식별 정보)에 대한 사용자의 액세스를 제어할 수 있습니다. 관리자는 해당 필드에 해당하는 특정 필드 및 데이터에만 액세스할 수 있는 사용자 역할을 정의할 수 있습니다.
+
+특성 기반 액세스 제어로 인해 일부 필드 및 기능에는 액세스가 제한되고 특정 고객 AI 서비스 인스턴스에 사용할 수 없습니다. 예를 들면 &quot;Identity&quot;, &quot;Score Definition&quot; 및 &quot;Clone&quot;이 있습니다.
+
+![서비스 인스턴스의 제한된 필드가 포함된 Customer AI 작업 영역은 강조 표시됩니다.](../images/user-guide/unavailable-functionalities.png)
+
+고객 AI 작업 공간 맨 위에서 **통찰력 페이지**&#x200B;사이드바, 점수 정의, ID 및 프로필 속성의 세부 사항이 모두 &quot;액세스 제한&quot;으로 표시됩니다.
+
+![스키마의 제한된 필드가 강조 표시된 Customer AI 작업 영역입니다.](../images/user-guide/access-restricted.png)
+
+<!-- If you select datasets with restricted schemas on the **[!UICONTROL Create instance workflow]** page, a warning sign appears next to the dataset name with the message: [!UICONTROL Restricted information is excluded].
+
+![The Customer AI workspace with the restricted fields of the selected datasets results highlighted.](../images/user-guide/restricted-info-excluded.png) -->
+
+에서 제한된 스키마가 있는 데이터 세트를 미리 볼 때 **[!UICONTROL 인스턴스 만들기 워크플로우]** 페이지를 보면 [!UICONTROL 액세스 제한 사항으로 인해 데이터 집합 미리 보기에 특정 정보가 표시되지 않습니다.]
+
+![제한된 스키마 결과가 강조 표시된 미리 보기 데이터 세트의 제한된 필드가 포함된 Customer AI 작업 영역입니다.](../images/user-guide/restricted-dataset-preview.png)
+
+제한된 정보로 인스턴스를 만든 후 **[!UICONTROL 목표 정의]** 단계에서 경고가 맨 위에 표시됩니다. [!UICONTROL 액세스 제한 사항으로 인해 구성에 특정 정보가 표시되지 않습니다.]
+
+![서비스 인스턴스의 제한된 필드가 포함된 Customer AI 작업 영역은 강조 표시됩니다.](../images/user-guide/information-not-displayed.png)
 
 ## 다음 단계 {#next-steps}
 

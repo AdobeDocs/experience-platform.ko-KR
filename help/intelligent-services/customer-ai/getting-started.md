@@ -6,9 +6,9 @@ title: 고객 AI에서 시작하기
 topic-legacy: Getting started
 description: 이 안내서에서는 요청의 형식을 지정하는 방법을 보여주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 올바른 형식의 요청 페이로드가 포함됩니다.
 exl-id: 90c9a83a-8e66-4239-b2d6-2049a6319b25
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: b3c331821e2df17380edbc673066f6b10a06d65f
 workflow-type: tm+mt
-source-wordcount: '571'
+source-wordcount: '650'
 ht-degree: 0%
 
 ---
@@ -47,6 +47,12 @@ Experience Platform의 모든 리소스는 특정 가상 샌드박스로 구분�
 ### 샘플 API 호출 읽기
 
 이 안내서에서는 요청의 형식을 지정하는 방법을 보여주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 올바른 형식의 요청 페이로드가 포함됩니다. API 응답으로 반환되는 샘플 JSON도 제공됩니다. 샘플 API 호출에 대한 설명서에 사용된 규칙에 대한 자세한 내용은 [예제 API 호출을 읽는 방법](../../landing/troubleshooting.md) Experience Platform 문제 해결 안내서에서 을 참조하십시오.
+
+## 권한
+
+액세스 제어를 사용하는 경우 **고객 AI 보기** 및 **고객 AI 관리** 권한은 고객 AI의 다양한 기능에 대한 액세스 권한을 부여합니다. 다음 **고객 AI 관리** 사용 권한 을 통해 **만들기**,**업데이트**, **delete**, **활성화**, 또는 **disable** 다음 기간 동안 인스턴스 **고객 AI 보기** 이를 읽거나 볼 수 있습니다. 다음 **만들기**, **업데이트** 및 **delete** 작업은 감사 로그에 기록됩니다.
+
+자세한 내용은 설명서 를 참조하십시오 [액세스 제어 권한 할당](../../../help/access-control/home.md) 또는 방법 [감사 로그를 사용하여 액세스 및 활동 모니터링](../../../help/landing/governance-privacy-security/audit-logs/overview.md).
 
 ## 다음 단계
 

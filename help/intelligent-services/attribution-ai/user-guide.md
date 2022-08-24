@@ -5,9 +5,9 @@ title: Attribution AI UI 안내서
 topic-legacy: User guide
 description: 이 문서는 Intelligent Services 사용자 인터페이스의 Attribution AI과 상호 작용하기 위한 안내서의 역할을 합니다.
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-source-git-commit: f27ddda4d5e6c33fa41e4ac503f80ddb1e39b09b
+source-git-commit: ac21668955305c135d78c1e6afbee8f6499f6885
 workflow-type: tm+mt
-source-wordcount: '2331'
+source-wordcount: '2716'
 ht-degree: 1%
 
 ---
@@ -261,6 +261,36 @@ Attribution AI의 마지막 페이지는 **[!UICONTROL 고급]** 교육 및 점�
 교육 창을 선택하면 **[!UICONTROL 완료]** 오른쪽 상단 모서리에서 데이터를 처리할 시간을 허용합니다. 완료되면 인스턴스 설정이 완료되었음을 확인하는 팝업 대화 상자가 나타납니다. 선택 **[!UICONTROL 확인]** 으로 리디렉션됩니다. **[!UICONTROL 서비스 인스턴스]** 서비스 인스턴스를 볼 수 있는 페이지입니다.
 
 ![설치 완료](./images/user-guide/instance_setup_complete.png)
+
+### 속성 기반 액세스 제어
+
+>[!IMPORTANT]
+>
+>속성 기반 액세스 제어는 현재 제한된 릴리스에서만 사용할 수 있습니다.
+
+[속성 기반 액세스 제어](../../../help/access-control/abac/overview.md) 는 관리자가 속성을 기반으로 특정 개체 및/또는 기능에 대한 액세스를 제어할 수 있도록 해주는 Adobe Experience Platform의 기능입니다. 속성은 스키마 필드나 세그먼트에 추가된 레이블과 같이 객체에 추가된 메타데이터일 수 있습니다. 관리자는 사용자 액세스 권한을 관리하기 위한 속성을 포함하는 액세스 정책을 정의합니다.
+
+이 기능을 사용하면 조직 또는 데이터 사용 범위를 정의하는 레이블을 사용하여 XDM(Experience Data Model) 스키마 필드에 레이블을 지정할 수 있습니다. 동시에 관리자는 사용자 및 역할 관리 인터페이스를 사용하여 XDM 스키마 필드를 둘러싼 액세스 정책을 정의하고 사용자 또는 사용자 그룹(내부, 외부 또는 타사 사용자)에 부여된 액세스를 더 잘 관리할 수 있습니다. 또한 속성 기반 액세스 제어를 사용하여 관리자가 특정 세그먼트에 대한 액세스를 관리할 수 있습니다.
+
+속성 기반 액세스 제어를 통해 관리자는 모든 플랫폼 워크플로우 및 리소스에서 중요한 SPD(개인 데이터)와 PII(개인 식별 정보)에 대한 사용자의 액세스를 제어할 수 있습니다. 관리자는 해당 필드에 해당하는 특정 필드 및 데이터에만 액세스할 수 있는 사용자 역할을 정의할 수 있습니다.
+
+특성 기반 액세스 제어로 인해 일부 필드 및 기능에는 액세스가 제한되어 특정 Attribution AI 서비스 인스턴스에 사용할 수 없을 수 있습니다. 예를 들면 &quot;Identity&quot;, &quot;Score Definition&quot; 및 &quot;Clone&quot;이 있습니다.
+
+Attribution AI 작업 공간 상단에서 **통찰력 페이지**&#x200B;로 지정하는 경우, 사이드바에 표시되는 세부 정보는 액세스가 제한되었습니다.
+
+![스키마의 제한된 필드가 강조 표시된 Attribution AI 작업 영역입니다.](./images/user-guide/access-restricted.png)
+
+에서 제한된 스키마가 있는 데이터 세트를 선택하는 경우 **[!UICONTROL 인스턴스 만들기 워크플로우]** 페이지가 표시되면 메시지가 있는 데이터 세트 이름 옆에 경고 기호가 나타납니다. [!UICONTROL 제한된 정보는 제외됩니다].
+
+![제한된 스키마가 있는 선택한 데이터 세트의 제한된 필드가 있는 Attribution AI 작업 영역이 강조 표시됩니다.](./images/user-guide/restricted-info-excluded.png)
+
+에서 제한된 스키마가 있는 데이터 세트를 미리 볼 때 **[!UICONTROL 인스턴스 만들기 워크플로우]** 페이지를 보면 [!UICONTROL 액세스 제한 사항으로 인해 데이터 집합 미리 보기에 특정 정보가 표시되지 않습니다.]
+
+![미리 보기 스키마의 제한된 필드가 강조 표시된 Attribution AI 작업 공간입니다.](./images/user-guide/restricted-dataset-preview.png)
+
+제한된 정보로 인스턴스를 만든 후 **[!UICONTROL 목표 정의]** 단계에서 경고가 맨 위에 표시됩니다. [!UICONTROL 액세스 제한 사항으로 인해 구성에 특정 정보가 표시되지 않습니다.]
+
+![인스턴스의 제한된 필드가 있는 Attribution AI 작업 영역은 강조 표시됩니다.](./images/user-guide/information-not-displayed.png)
 
 ## 다음 단계
 
