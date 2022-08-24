@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform 릴리스 노트 - 2022년 8월
 description: Adobe Experience Platform에 대한 2022년 8월 릴리스 노트입니다.
-source-git-commit: 5967dee9c8b1c05ebd103998021e02a47ac3982c
+source-git-commit: c3452dda554b3c7750ad1166cef598d51d739e02
 workflow-type: tm+mt
-source-wordcount: '1246'
+source-wordcount: '1348'
 ht-degree: 7%
 
 ---
@@ -14,11 +14,24 @@ ht-degree: 7%
 
 Adobe Experience Platform의 기존 기능 업데이트:
 
+- [[!DNL Dashboards]](#dashboards)
 - [데이터 준비](#data-prep)
 - [XDM(경험 데이터 모델)](#xdm)
 - [실시간 고객 프로필](#profile)
 - [세분화 서비스](#segmentation)
 - [소스](#sources)
+
+## [!DNL Dashboards] {#dashboards}
+
+Adobe Experience Platform은 여러 기능을 제공합니다 [!DNL dashboards] 을 통해 일일 스냅샷 동안 캡처된 조직 데이터에 대한 중요한 통찰력을 볼 수 있습니다.
+
+**업데이트된 기능**
+
+| 기능 | 설명 |
+| --- | --- |
+| 예약된 활동 위젯 | 다음 [!UICONTROL 예약된 활동] 위젯은 가장 최근에 활성화된 대상에 대해 표 형식으로 된 보기를 제공합니다. 각 세그먼트에 대해 이름, 대상 플랫폼, 활성화 시작 및 종료 날짜가 포함됩니다. 이 위젯을 사용하면 대상이 활성화된 위치와 시점을 한눈에 파악할 수 있으며, 중복되거나 불필요한 활동을 보다 투명하게 만들 수 있습니다. 이렇게 축적된 정보에서도 활동이 중지된 위치를 강조 표시합니다. |
+
+자세한 내용은 [!DNL Dashboards]를 보려면 [[!DNL Dashboards] 개요](../../dashboards/home.md).
 
 ## [!DNL Data Prep] {#data-prep}
 
