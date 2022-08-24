@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform 릴리스 노트 - 2022년 8월
 description: Adobe Experience Platform에 대한 2022년 8월 릴리스 노트입니다.
-source-git-commit: 208dbba4c2ed4abb51b90073eeee0663e2b2f35f
+source-git-commit: 24f16e315607a1076ff2efef129d9e97040a9500
 workflow-type: tm+mt
-source-wordcount: '1861'
+source-wordcount: '1811'
 ht-degree: 7%
 
 ---
@@ -155,7 +155,6 @@ Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 
 | 의 일반 공급 [!DNL Google BigQuery] 소스 | 를 사용하십시오 [!DNL Google BigQuery] 소스에서 데이터 수집 [!DNL Google BigQuery] data warehouse에서 Experience Platform으로 자세한 내용은 [[!DNL Google BigQuery] 소스](../../sources/connectors/databases/bigquery.md). |
 | [!DNL Teradata Vantage] 소스(베타) | 를 사용하십시오 [!DNL Teradata Vantage] 하이브리드 다중 클라우드 환경에서 Experience Platform으로 데이터를 수집할 소스입니다. 자세한 내용은 [[!DNL Teradata Vantage] 소스](../../sources/connectors/databases/teradata-vantage.md). |
 | Adobe Analytics 소스에 대한 지역 간 지원 | 이제 모든 지역(미국, 영국 또는 싱가포르)에서 보고서 세트를 수집할 수 있습니다. 보고서 세트는 소스 연결을 만들고 있는 Experience Platform 샌드박스 인스턴스와 동일한 조직에 매핑되어야 합니다. 자세한 내용은 다음 안내서를 참조하십시오. [UI에서 Adobe Analytics 소스 연결 만들기](../../sources/tutorials/ui/create/adobe-applications/analytics.md). |
-| 온디맨드 수집을 위한 API 지원 | 온디맨드 수집 기능을 사용하여 [!DNL Flow Service] API. 생성된 흐름 실행은 1회 수집으로 설정해야 합니다. 자세한 내용은 다음 안내서를 참조하십시오. [api를 사용하여 온디맨드 통합에 대한 흐름 실행 만들기](../../sources/tutorials/api/on-demand-ingestion.md) 추가 정보. |
 
 {style=&quot;table-layout:auto&quot;}
 
