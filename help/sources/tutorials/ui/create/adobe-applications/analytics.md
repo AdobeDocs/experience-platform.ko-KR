@@ -8,8 +8,8 @@ description: UI에서 Adobe Analytics 소스 연결을 만들어 소비자 데�
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
 source-git-commit: ae30ac2fe1c6366c987748e198b9dc3530bc512a
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '2211'
+ht-degree: 2%
 
 ---
 

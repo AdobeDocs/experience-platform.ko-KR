@@ -1,9 +1,10 @@
 ---
 title: Adobe Experience Platform 릴리스 노트 - 2022년 8월
 description: Adobe Experience Platform에 대한 2022년 8월 릴리스 노트입니다.
-source-git-commit: 24f16e315607a1076ff2efef129d9e97040a9500
+exl-id: dbf1e7a3-8599-4991-8932-f57d3b1c640d
+source-git-commit: 30aa5db39d63c238a3f70e48f6a88e8885b1f3ee
 workflow-type: tm+mt
-source-wordcount: '1811'
+source-wordcount: '1963'
 ht-degree: 7%
 
 ---
@@ -14,10 +15,10 @@ ht-degree: 7%
 
 Adobe Experience Platform의 기존 기능 업데이트:
 
-
 - [[!DNL Artificial Intelligence and Machine Learning Services]](#ai-and-ml-services)
 - [[!DNL Dashboards]](#dashboards)
-- [데이터 준비](#data-prep)
+- [[!DNL Data Prep]](#data-prep)
+- [[!DNL Destinations]](#destinations)
 - [XDM(경험 데이터 모델)](#xdm)
 - [실시간 고객 프로필](#profile)
 - [세분화 서비스](#segmentation)
@@ -35,7 +36,7 @@ Attribution AI는 전환 이벤트로 연결되는 터치포인트에 크레딧�
 
 | 기능 | 설명 |
 | ------- | ----------- |
-| 개인 정보 지원 | <li> 이제 Attribution AI은 사용자 역할 정의 및 관리 액세스 정책 을 지원합니다 [권한](../../help/access-control/abac/ui/permissions.md) 제품 애플리케이션 내의 기능 및 개체 </li><li>활동이 발생하면 감사 로그 리소스가 자동으로 기록됩니다.</li> <li> 사용 [속성 기반 액세스 제어](../../access-control/abac/overview.md)를 설정하는 경우, 관리자는 특정 속성에 따라 특정 객체 및/또는 기능에 대한 액세스를 제어할 수 있습니다. 특정 필드 및 해당 필드에 해당하는 데이터에만 액세스할 수 있는 사용자 역할을 정의할 수도 있습니다</li> <li>[데이터 위생](../../help/hygiene/home.md) Attribution AI 내의 기능을 사용하면 추가 교육 및 점수 책정 시 업데이트된 데이터만 사용할 수 있습니다. 마찬가지로, 데이터 삭제를 요청하는 경우 Attribution AI은 삭제된 데이터를 사용하지 않습니다.</li><li>Attribution AI은 Platform 데이터 세트를 사용합니다. GDPR 준수를 위해 Adobe Experience Platform Privacy Service을 사용하여 데이터 레이크, ID 서비스 및 실시간 고객 프로필에서 데이터에 액세스하고 삭제하는 고객 요청을 수락하는 프로토콜을 설정할 수 있습니다. 모든 데이터는 전송 및 휴지 상태로 암호화되어 있습니다.</li> |
+| 개인 정보 지원 | <li>이제 Attribution AI은 사용자 역할 정의 및 관리 액세스 정책 을 지원합니다 [권한](../../../help/access-control/abac/ui/permissions.md) 제품 애플리케이션 내의 기능 및 개체</li><li>활동이 발생하면 감사 로그 리소스가 자동으로 기록됩니다.</li><li>사용 [속성 기반 액세스 제어](../../../help/access-control/abac/overview.md)를 설정하는 경우, 관리자는 특정 속성에 따라 특정 객체 및/또는 기능에 대한 액세스를 제어할 수 있습니다. 특정 필드 및 해당 필드에 해당하는 데이터에만 액세스할 수 있는 사용자 역할을 정의할 수도 있습니다</li><li>[데이터 위생](../../../help/hygiene/home.md) Attribution AI 내의 기능을 사용하면 추가 교육 및 점수 책정 시 업데이트된 데이터만 사용할 수 있습니다. 마찬가지로, 데이터 삭제를 요청하는 경우 Attribution AI은 삭제된 데이터를 사용하지 않습니다.</li><li>Attribution AI은 Platform 데이터 세트를 사용합니다. GDPR 준수를 위해 Adobe Experience Platform Privacy Service을 사용하여 데이터 레이크, ID 서비스 및 실시간 고객 프로필에서 데이터에 액세스하고 삭제하는 고객 요청을 수락하는 프로토콜을 설정할 수 있습니다. 모든 데이터는 전송 및 휴지 상태로 암호화되어 있습니다.</li> |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -51,7 +52,7 @@ Real-time Customer Data Platform에서 사용할 수 있는 고객 AI는 규모�
 
 | 기능 | 설명 |
 | ------- | ----------- |
-| 개인 정보 지원 | <li> Customer AI는 이제 관리를 위한 사용자 역할 및 액세스 정책 정의를 지원합니다 [권한](../../help/access-control/abac/ui/permissions.md) 제품 애플리케이션 내의 기능 및 개체 </li><li>활동이 발생하면 감사 로그 리소스가 자동으로 기록됩니다.</li> <li> 사용 [속성 기반 액세스 제어](../../access-control/abac/overview.md), 관리자는 특정 속성에 따라 특정 객체 및/또는 기능에 대한 액세스를 제어할 수 있습니다. 이러한 속성은 레이블과 같은 객체에 추가된 메타데이터일 수 있습니다. 또한 관리자는 해당 필드에 해당하는 특정 필드 및 데이터에만 액세스할 수 있는 사용자 역할을 정의할 수 있습니다.</li> <li>[데이터 위생](../../help/hygiene/home.md) customer AI 내의 기능을 사용하면 추가 교육 및 점수 책정 시 업데이트된 데이터만 사용할 수 있습니다. 마찬가지로, 데이터 삭제를 요청하면 Customer AI가 삭제된 데이터를 사용하지 않습니다.</li><li>고객 AI는 플랫폼 데이터 세트를 활용합니다. GDPR 준수를 위해 Adobe Experience Platform Privacy Service을 사용하여 데이터 레이크, ID 서비스 및 실시간 고객 프로필에서 데이터에 액세스하고 삭제하는 고객 요청을 수락하는 프로토콜을 설정할 수 있습니다. 모든 데이터는 전송 및 휴지 상태로 암호화되어 있습니다.</li> |
+| 개인 정보 지원 | <li>Customer AI는 이제 관리를 위한 사용자 역할 및 액세스 정책 정의를 지원합니다 [권한](../../../help/access-control/abac/ui/permissions.md) 제품 애플리케이션 내의 기능 및 개체</li><li>활동이 발생하면 감사 로그 리소스가 자동으로 기록됩니다.</li><li> 사용 [속성 기반 액세스 제어](../../access-control/abac/overview.md), 관리자는 특정 속성에 따라 특정 객체 및/또는 기능에 대한 액세스를 제어할 수 있습니다. 이러한 속성은 레이블과 같은 객체에 추가된 메타데이터일 수 있습니다. 또한 관리자는 해당 필드에 해당하는 특정 필드 및 데이터에만 액세스할 수 있는 사용자 역할을 정의할 수 있습니다.</li><li>[데이터 위생](../../../help/hygiene/home.md) customer AI 내의 기능을 사용하면 추가 교육 및 점수 책정 시 업데이트된 데이터만 사용할 수 있습니다. 마찬가지로, 데이터 삭제를 요청하면 Customer AI가 삭제된 데이터를 사용하지 않습니다.</li><li>고객 AI는 플랫폼 데이터 세트를 활용합니다. GDPR 준수를 위해 Adobe Experience Platform Privacy Service을 사용하여 데이터 레이크, ID 서비스 및 실시간 고객 프로필에서 데이터에 액세스하고 삭제하는 고객 요청을 수락하는 프로토콜을 설정할 수 있습니다. 모든 데이터는 전송 및 휴지 상태로 암호화되어 있습니다.</li> |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -84,6 +85,32 @@ Adobe Experience Platform은 여러 기능을 제공합니다 [!DNL dashboards] 
 {style=&quot;table-layout:auto&quot;}
 
 에 대해 자세히 알아보려면 [!DNL Data Prep]를 참조하고 [[!DNL Data Prep] 개요](../../data-prep/home.md).
+
+## [!DNL Destinations] {#destinations}
+
+[!DNL Destinations] 는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과의 사전 구축된 통합입니다. 대상을 사용하여 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례에 대해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
+
+<!--
+
+**New or updated features**
+
+| Feature | Description |
+| ----------- | ----------- |
+|  ||
+
+{style="table-layout:auto"}
+
+-->
+
+**새 대상**
+
+| 대상 | 설명 |
+| ----------- | ----------- |
+| [[!DNL Outreach]](../..//destinations/catalog/crm/outreach.md) | [[!DNL Outreach]](https://www.outreach.io/) 는 전 세계에서 가장 많은 B2B 구매자 상호 작용 데이터와 독점 AI 기술에 대한 상당한 투자를 보유한 판매 실행 플랫폼으로서 판매 데이터를 인텔리전스로 변환합니다. [!DNL Outreach] 영업 참여를 자동화하고 수익 인텔리전스를 활용하여 효율성, 예측 가능성 및 성장을 향상시킬 수 있습니다. |
+
+{style=&quot;table-layout:auto&quot;}
+
+대상에 대한 자세한 내용은 [대상 개요](../../destinations/home.md).
 
 ## XDM(경험 데이터 모델) {#xdm}
 
@@ -123,6 +150,7 @@ Adobe Experience Platform을 사용하면 고객이 브랜드와 상호 작용�
 
 | 기능 | 설명 |
 | ------- | ----------- |
+| 병합 정책 하드 제한 | 이제 플랫폼에서는 **5개** 샌드박스당 정책 병합 샌드박스에 현재 5개 이상의 병합 정책이 있는 경우 다음을 수행합니다 **not** 샌드박스에 5개 미만의 병합 정책이 있을 때까지 새 병합 정책을 만들 수 있습니다. |
 | 분리된 프로필 에지 특성 정리 | 이제 모든 조직의 경우 프로필 서비스에서 사용자 활동 영역의 남은 에지 속성을 매일 제거하여 시스템에서 프로필을 보다 정확하게 표현합니다. 이 정리는 주어진 프로필에 대한 모든 프로필 조각이 삭제된 후 발생하며 다음 데이터 세트에서 병합되는 프로필에 영향을 주어야 합니다. `com_adobe_aep_profile_region_dataset` 으로 표시됨 `true`. 이 지표들은 이번 릴리스 전에 남은 에지 특성 조각을 포함했으므로 라이선스 사용 대시보드의 &quot;주소 지정 가능 대상&quot; 지표에 감소가 표시될 수 있으며, 프로필 대시보드의 &quot;프로필 수&quot; 지표에 이 릴리스 전의 남은 에지 특성 조각이 포함되어 있을 수 있습니다. |
 
 {style=&quot;table-layout:auto&quot;}

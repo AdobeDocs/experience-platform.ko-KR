@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 소스 커넥터 도움말
 breadcrumb-title: Source Connectors 안내서
 user-guide-description: 다양한 소스 또는 구조에서 데이터를 수집하고 레이블을 지정하며 기존에 수집한 데이터를 향상시킬 수 있습니다.
 feature: Sources
-source-git-commit: 9d615d70ce37c6dad683e9082db02697b9882ab3
+source-git-commit: ed6a5ba39de2aecaef6f44604ff605721bfcb924
 workflow-type: tm+mt
-source-wordcount: '804'
+source-wordcount: '820'
 ht-degree: 13%
 
 ---
@@ -292,23 +292,26 @@ ht-degree: 13%
    - [계정 삭제](tutorials/ui/delete-accounts.md)
    - [데이터 흐름 삭제](tutorials/ui/delete.md)
    - [소스 경고 구독](tutorials/ui/alerts.md)
-- 소스 SDK {#sdk}
+- 셀프 서비스 소스(배치 SDK) {#sdk}
    - [개요](sources-sdk/overview.md)
-   - [구성 옵션](sources-sdk/config/config.md)
-   - [인증 사양 구성](sources-sdk/config/authspec.md)
-   - [소스 사양 구성](sources-sdk/config/sourcespec.md)
-   - [탐색 사양 구성](sources-sdk/config/explorespec.md)
-   - [소스 SDK API 개요](sources-sdk/api/api-overview.md)
-   - [시작하기](sources-sdk/api/getting-started.md)
-   - [연결 사양 만들기](sources-sdk/api/create.md)
-   - [연결 사양 업데이트](sources-sdk/api/update-connection-specs.md)
-   - [흐름 사양 업데이트](sources-sdk/api/update-flow-specs.md)
-   - [소스 제출](sources-sdk/api/submit.md)
-   - [Adobe Experience Platform에서 소스 문서화](sources-sdk/documentation/doc-overview.md)
-   - [GitHub 웹 인터페이스를 사용하여 소스 설명서 페이지를 만듭니다](sources-sdk/documentation/github.md)
-   - [로컬 환경에서 텍스트 편집기를 사용하여 소스 설명서 페이지를 만듭니다](sources-sdk/documentation/text-editor.md)
-   - [설명서 셀프 서비스 API 템플릿](sources-sdk/documentation/template.md)
-   - [설명서 셀프 서비스 UI 템플릿](sources-sdk/documentation/ui-template.md)
+   - 연결 사양 구성 {#config}
+      - [구성 옵션](sources-sdk/config/config.md)
+      - [인증 사양 구성](sources-sdk/config/authspec.md)
+      - [소스 사양 구성](sources-sdk/config/sourcespec.md)
+      - [탐색 사양 구성](sources-sdk/config/explorespec.md)
+   - 셀프 서비스 소스(배치 SDK) API 안내서 {#self-serve-api}
+      - [셀프 서비스 소스(배치 SDK) API 개요](sources-sdk/api/api-overview.md)
+      - [시작하기](sources-sdk/api/getting-started.md)
+      - [연결 사양 만들기](sources-sdk/api/create.md)
+      - [연결 사양 업데이트](sources-sdk/api/update-connection-specs.md)
+      - [흐름 사양 업데이트](sources-sdk/api/update-flow-specs.md)
+      - [소스 제출](sources-sdk/api/submit.md)
+   - 설명서 안내서 {#documentation}
+      - [Adobe Experience Platform에서 소스 문서화](sources-sdk/documentation/doc-overview.md)
+      - [GitHub 웹 인터페이스를 사용하여 소스 설명서 페이지를 만듭니다](sources-sdk/documentation/github.md)
+      - [로컬 환경에서 텍스트 편집기를 사용하여 소스 설명서 페이지를 만듭니다](sources-sdk/documentation/text-editor.md)
+      - [설명서 셀프 서비스 API 템플릿](sources-sdk/documentation/template.md)
+      - [설명서 셀프 서비스 UI 템플릿](sources-sdk/documentation/ui-template.md)
 - [흐름 실행 알림](notifications.md)
 - [IP 주소 허용 목록](ip-address-allow-list.md)
 - [자주 묻는 질문](./troubleshooting.md)
