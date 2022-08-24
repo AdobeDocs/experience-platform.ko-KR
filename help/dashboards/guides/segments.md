@@ -4,9 +4,9 @@ title: 세그먼트 대시보드 안내서
 description: 'Adobe Experience Platform은 조직이 만든 세그먼트에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다. '
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: e59ba2e83808b460016805997580dc16c4cd369e
+source-git-commit: e18d37ba02d6edee77c91b719a0a2336e1316b71
 workflow-type: tm+mt
-source-wordcount: '1550'
+source-wordcount: '1665'
 ht-degree: 0%
 
 ---
@@ -75,6 +75,7 @@ Adobe은 세그먼트와 관련된 다양한 지표를 시각화하는 데 사�
 * [[!UICONTROL 대상 겹치기]](#audience-overlap)
 * [[!UICONTROL ID 겹치기]](#identity-overlap)
 * [[!UICONTROL ID별 프로필]](#profiles-by-identity)
+* [[!UICONTROL 예약된 활동]](#scheduled-activations)
 
 ### [!UICONTROL 대상 크기] {#audience-size}
 
@@ -176,6 +177,14 @@ ID에 대해 자세히 알아보려면 [Adobe Experience Platform Identity Servi
 기계 학습 모델은 데이터의 전체 분포 및 주요 차원을 분석하여 데이터 인사이트를 자동으로 생성합니다.
 
 ID에 대해 자세히 알아보려면 [Adobe Experience Platform Identity Service 설명서](../../identity-service/home.md).
+
+### 예약된 활동 {#scheduled-activations}
+
+다음 [!UICONTROL 예약된 활동] 위젯은 가장 최근에 활성화된 대상에 대해 표 형식으로 된 보기를 제공합니다. 표에는 대상 플랫폼, 이 대상에 대한 활성화 흐름 이름, 선택한 세그먼트에 대한 활성화 시작 및 종료 날짜가 포함되어 있습니다. 활성화에 대해 제공된 종료 날짜가 없는 경우 을 로 표시합니다 [!UICONTROL 진행 중]. 분석 세그먼트는 페이지 상단의 드롭다운에서 선택됩니다.
+
+위젯을 사용하면 대상이 활성화된 위치와 시점을 한눈에 파악할 수 있으며, 중복되거나 불필요한 활동을 보다 투명하게 만들 수 있습니다. 이렇게 축적된 정보에서도 활동이 중지된 위치를 강조 표시합니다.
+
+![예약된 활동 위젯.](../images/segments/scheduled-activations.png)
 
 ## 다음 단계
 
