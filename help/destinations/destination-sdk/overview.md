@@ -2,9 +2,9 @@
 description: Adobe Experience Platform Destination SDK은 선택한 데이터 및 인증 형식에 따라 Experience Platform이 대상 및 프로필 데이터를 종단점에 제공할 대상 통합 패턴을 구성할 수 있도록 해주는 구성 API 세트입니다. 구성은 Experience Platform에 저장되며, 추가 업데이트를 위해 API를 통해 검색할 수 있습니다.
 title: Adobe Experience Platform Destination SDK
 exl-id: 7aca9f40-98c8-47c2-ba88-4308fc2b1798
-source-git-commit: 179d5697e1b8d14f613a512f51bcea3575b7a832
+source-git-commit: c207b6700a31c59b00af6d55264c7a345219d999
 workflow-type: tm+mt
-source-wordcount: '740'
+source-wordcount: '768'
 ht-degree: 3%
 
 ---
@@ -53,18 +53,17 @@ Destination SDK을 통해 Adobe Experience Platform은 REST API 종단점이 있
 
 의 대상 측에 있는 기술 요구 사항에 대해 읽어보십시오. [통합 사전 요구 사항](./integration-prerequisites.md) 문서.
 
-
 ## Destination SDK 액세스 권한 얻기 {#get-access}
 
-Destination SDK 액세스는 파트너 또는 Experience Platform 고객의 상태에 따라 다릅니다. 자세한 내용은 아래 표를 참조하십시오.
+Destination SDK 액세스는 Real-Time CDP 고객인 파트너 또는 Experience Platform의 상태에 따라 다릅니다. 자세한 내용은 아래 표를 참조하십시오.
 
 
 | 파트너 또는 고객 유형 | Destination SDK 액세스 방법 |
 ---------|----------|
 | 독립 소프트웨어 공급업체(ISV) | 가입 [Adobe 교환 프로그램](https://partners.adobe.com/exchangeprogram/experiencecloud.html) 및 Destination SDK 액세스를 위해 Experience Platform 샌드박스를 공급하도록 요청합니다. |
 | 시스템 통합자(SI) | Gold 또는 Platinum 수준에서 [Adobe 솔루션 파트너 프로그램](https://solutionpartners.adobe.com/home.html)로 설정되면 Experience Platform 샌드박스가 프로비저닝되고 Destination SDK에 액세스할 수 있습니다. |
-| 에서 고객 Experience Platform [활성화 패키지](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html) | 기본적으로 Experience Platform 샌드박스 및 Destination SDK에 액세스할 수 있습니다. |
-| 에서 고객 Experience Platform [실시간 CDP Ultimate 패키지](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) | Destination SDK에 액세스할 수 없지만 Destination SDK을 사용하여 다른 회사가 구성하고 Experience Platform 조직 간에 게시된 모든 프로덕션 대상에 액세스할 수 있습니다. |
+| 에서 고객 Experience Platform [활성화 패키지](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html) | 기본적으로 Experience Platform 샌드박스 및 Destination SDK에 액세스할 수 있습니다. <br> 또한 Destination SDK을 사용하여 다른 회사가 구성하고 Experience Platform 조직 간에 게시된 모든 프로덕션 대상에 액세스할 수 있습니다. |
+| 에서 고객 Experience Platform [Real-Time CDP Ultimate 패키지](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) | 기본적으로 Experience Platform 샌드박스 및 Destination SDK에 액세스할 수 있습니다. <br> 또한 Destination SDK을 사용하여 다른 회사가 구성하고 Experience Platform 조직 간에 게시된 모든 프로덕션 대상에 액세스할 수 있습니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
