@@ -2,13 +2,13 @@
 keywords: 이메일;이메일;이메일;이메일 대상;salesforce;api salesforce marketing cloud 대상
 title: (API) Salesforce Marketing Cloud 연결
 description: Salesforce Marketing Cloud(이전의 ExactTarget) 대상을 사용하면 계정 데이터를 내보내고 Salesforce Marketing Cloud 내에서 활성화하여 비즈니스 요구 사항을 충족할 수 있습니다.
-source-git-commit: ce7b28ce31c652965a6eaad81348e330bd38e9ac
+exl-id: 0cf068e6-8a0a-4292-a7ec-c40508846e27
+source-git-commit: 2dda77c3d9a02b53a02128e835abf77ab97ad033
 workflow-type: tm+mt
-source-wordcount: '1869'
-ht-degree: 1%
+source-wordcount: '1906'
+ht-degree: 2%
 
 ---
-
 
 # [!DNL (API) Salesforce Marketing Cloud] 연결
 
@@ -48,7 +48,7 @@ Salesforce로 이동 [재판](https://www.salesforce.com/in/form/signup/freetria
 
 #### Salesforce 내에서 사용자 지정 필드 만들기 {#prerequisites-custom-field}
 
-유형의 사용자 지정 속성 만들기 `Text Area Long` salesforce Marketing Cloud 내에서 세그먼트 상태를 업데이트하는 데 사용할 Experience Platform을 지정합니다.
+유형의 사용자 지정 속성을 만들어야 합니다 `Text Area Long`: Salesforce Marketing Cloud 내에서 세그먼트 상태를 업데이트하는 데 사용할 Experience Platform입니다. 세그먼트를 대상에 활성화하는 워크플로우에서 **[세그먼트 예약](#schedule-segment-export-example)** 단계별로 사용자 지정 속성을 활성화한 각 세그먼트에 대한 매핑 ID로 사용합니다.
 
 자세한 내용은 Salesforce Marketing Cloud 설명서를 참조하십시오. [사용자 지정 필드 만들기](https://help.salesforce.com/s/articleView?id=mc_cab_create_an_attribute.htm&amp;type=5&amp;language=en_US) 추가 지침이 필요한 경우
 
@@ -72,6 +72,8 @@ Salesforce Marketing Cloud 대상을 인증하기 전에 아래 항목을 참고
 | --- | --- | --- |
 | <ul><li>Salesforce Marketing Cloud 접두사</li></ul> | 자세한 내용은 [Salesforce Marketing Cloud 도메인 접두사](https://help.salesforce.com/s/articleView?id=sf.domain_name_setting_login_policy.htm&amp;type=5) 추가 지침 | <ul><li>도메인이 다음과 같은 경우 강조 표시된 값이 필요합니다.<br> <i>`mcq4jrssqdlyc4lph19nnqgzzs84`.login.exacttarget.com</i></li></ul> |
 | <ul><li>클라이언트 ID</li><li>클라이언트 암호</li></ul> | 자세한 내용은 [Salesforce 설명서](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/access-token-s2s.html) 추가 지침이 필요한 경우 | <ul><li>r23kxxxxxxxx0z05xxxxxx</li><li>ipxxxxxxxxxxT4xxxxxxxxxx</li></ul> |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## 지원되는 ID {#supported-identities}
 
@@ -140,7 +142,7 @@ Salesforce Marketing Cloud은 아래 표에 설명된 ID의 활성화를 지원�
 
 ### 매핑 고려 사항 및 예 {#mapping-considerations-example}
 
-Adobe Experience Platform에서 Salesforce Marketing Cloud 대상으로 대상 데이터를 올바르게 전송하려면 필드 매핑 단계를 수행해야 합니다. 매핑은 플랫폼 계정의 Experience Data Model(XDM) 스키마 필드와 대상 대상의 해당 상당 요소 간에 링크를 만드는 작업으로 이루어집니다. XDM 필드를 Salesforce Marketing Cloud 대상 필드에 올바르게 매핑하려면 다음 단계를 수행합니다.
+Adobe Experience Platform에서 Salesforce Marketing Cloud 대상으로 대상 데이터를 올바르게 전송하려면 필드 매핑 단계를 수행해야 합니다. 매핑은 플랫폼 계정의 Experience Data Model(XDM) 스키마 필드와 대상 대상의 해당 상당 요소 간에 링크를 만드는 작업으로 이루어집니다. XDM 필드를 Salesforce Marketing Cloud 대상 필드에 올바르게 매핑하려면 아래 단계를 따르십시오.
 
 에 대해 설정할 수 있는 속성 매핑 목록입니다 [Salesforce REST API](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/dome_composite_upsert_example.htm?q=contacts) 은 아래에 제공됩니다. 대상은 [Salesforce 검색 속성 집합 정의 REST API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/retrieveAttributeSetDefinitions.html) Salesforce 내에 정의된 연락처 및 계정별 특성을 검색하려면
 
@@ -148,7 +150,7 @@ Adobe Experience Platform에서 Salesforce Marketing Cloud 대상으로 대상 �
 > 
 > 특성 이름은 Salesforce 계정에 따라 동일하지만 `contactKey` 및 `personalEmail.address` 는 필수입니다.
 
-1. 매핑 단계에서 **[!UICONTROL 새 매핑 추가]**이면 화면에 새 매핑 행이 표시됩니다.
+1. 매핑 단계에서 **[!UICONTROL 새 매핑 추가]**. 이제 화면에 새 매핑 행이 표시됩니다.
    ![새 매핑 추가](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/add-new-mapping.png)
 
 1. 소스 필드 선택 창에서 소스 필드를 선택할 때 **[!UICONTROL 속성 선택]** 카테고리를 추가하고 원하는 매핑을 추가합니다.
@@ -172,7 +174,7 @@ Adobe Experience Platform에서 Salesforce Marketing Cloud 대상으로 대상 �
 
 ### 세그먼트 내보내기 예약 및 예제 {#schedule-segment-export-example}
 
-다음을 수행할 때 [세그먼트 내보내기 예약](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) 단계는 Platform 세그먼트를 Salesforce의 사용자 지정 속성에 수동으로 매핑해야 합니다.
+다음을 수행할 때 [세그먼트 내보내기 예약](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) 단계별로 Platform 세그먼트를 Salesforce의 사용자 지정 속성에 수동으로 매핑해야 합니다.
 
 이렇게 하려면 각 세그먼트를 선택한 다음 Salesforce의 해당 사용자 지정 속성을 **[!UICONTROL 매핑 ID]** 필드.
 
@@ -233,4 +235,3 @@ Adobe Experience Platform에서 Salesforce Marketing Cloud 대상으로 대상 �
 * 자세한 내용은 [Salesforce Marketing Cloud 참여 가격 책정](https://www.salesforce.com/editions-pricing/marketing-cloud/email/) 페이지 대상 *전체 버전 비교 차트 다운로드* 계획에 의해 적용되는 제한을 자세히 설명하는 pdf입니다.
 * 다음 [API 개요](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/apis-overview.html) 페이지 세부 사항 추가 제한.
 * 이러한 세부 정보를 수집하는 KB 항목을 사용할 수 있습니다 [여기](https://salesforce.stackexchange.com/questions/205898/marketing-cloud-api-limits#:~:text=Day%2FHour%2FMinute%20Limit&amp;text=We%20recommend%20a%20limit%20of,per%20minute%20for%20SOAP%20calls.&amp;text=As%20has%20be%20added%20in,상호 작용%20with%20the%20REST%2DAPI).
-
