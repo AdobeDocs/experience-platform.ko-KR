@@ -5,9 +5,9 @@ title: API 엔드포인트 예약
 topic-legacy: developer guide
 description: 예약은 하루에 한 번 배치 세그먼테이션 작업을 자동으로 실행하는 데 사용할 수 있는 도구입니다.
 exl-id: 92477add-2e7d-4d7b-bd81-47d340998ff1
-source-git-commit: 604d1d02156b441ab3978ff976e02191bbdc311f
+source-git-commit: 84026b447eea00955bc9e6482b81ae1aad3c312e
 workflow-type: tm+mt
-source-wordcount: '2013'
+source-wordcount: '2011'
 ht-degree: 3%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 3%
 
 ## 일정 목록 검색 {#retrieve-list}
 
-IMS 조직에 대한 GET 요청을 수행하여 모든 스케줄 목록을 검색할 수 있습니다 `/config/schedules` 엔드포인트.
+에 GET 요청을 작성하여 조직의 모든 예약 목록을 검색할 수 있습니다 `/config/schedules` 엔드포인트.
 
 **API 형식**
 
@@ -41,7 +41,7 @@ GET /config/schedules?limit={LIMIT}
 
 **요청**
 
-다음 요청은 IMS 조직 내에 게시된 마지막 10개의 일정을 검색합니다.
+다음 요청은 조직 내에 게시된 마지막 10개의 일정을 검색합니다.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/config/schedules?limit=10 \
