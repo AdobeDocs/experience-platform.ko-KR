@@ -5,9 +5,9 @@ title: 개인 정보 작업 API 끝점
 topic-legacy: developer guide
 description: Privacy Service API를 사용하여 Experience Cloud 애플리케이션의 개인 정보 보호 작업을 관리하는 방법을 알아봅니다.
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: b126726aa7f7fe6070693fdecfdac1ec66050aa9
 workflow-type: tm+mt
-source-wordcount: '1362'
+source-wordcount: '1429'
 ht-degree: 3%
 
 ---
@@ -143,10 +143,11 @@ curl -X POST \
         ]
       }
     ],
-    "include": ["Analytics", "AudienceManager"],
+    "include": ["Analytics", "AudienceManager","profileService"],
     "expandIds": false,
     "priority": "normal",
     "analyticsDeleteMethod": "anonymize",
+    "mergePolicyId": 124,
     "regulation": "ccpa"
 }'
 ```
@@ -159,6 +160,7 @@ curl -X POST \
 | `expandIDs` | 로 설정된 경우 `true`는 애플리케이션의 ID 처리를 위한 최적화를 나타냅니다(현재 [!DNL Analytics]). 생략하면 이 값의 기본값은 입니다. `false`. |
 | `priority` | 요청 처리 우선순위를 설정하는 Adobe Analytics에서 사용하는 선택적 속성입니다. 허용되는 값은 다음과 같습니다 `normal` 및 `low`. If `priority` 이 생략되면 기본 동작은 `normal`. |
 | `analyticsDeleteMethod` | Adobe Analytics에서 개인 데이터를 처리하는 방법을 지정하는 선택적 속성입니다. 이 속성에 대해 가능한 두 개의 값이 허용됩니다. <ul><li>`anonymize`: 지정된 사용자 ID 컬렉션에서 참조하는 모든 데이터는 익명으로 수행됩니다. If `analyticsDeleteMethod` 생략하면 기본 동작입니다.</li><li>`purge`: 모든 데이터가 완전히 제거됩니다.</li></ul> |
+| `mergePolicyId` | 실시간 고객 프로필에 대해 개인 정보 보호 요청을 수행할 때(`profileService`)에서 특정 ID를 선택적으로 제공할 수 있습니다 [병합 정책](../../profile/merge-policies/overview.md) ID 결합에 사용할 구성 요소. 병합 정책을 지정하여 개인 정보 보호 요청에는 고객에 대한 데이터를 반환할 때 세그먼트 정보가 포함될 수 있습니다. 요청당 하나의 병합 정책만 지정할 수 있습니다. 병합 정책이 제공되지 않으면 세그먼테이션 정보가 응답에 포함되지 않습니다. |
 | `regulation` **(필수 여부)** | 개인 정보 보호 업무에 대한 규정. 다음 값이 허용됩니다. <ul><li>`gdpr` (유럽 연합)</li><li>`ccpa` (캘리포니아)</li><li>`lgpd_bra` (브라질)</li><li>`nzpa_nzl` (뉴질랜드)</li><li>`pdpa_tha` (태국)</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
