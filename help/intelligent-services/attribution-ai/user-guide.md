@@ -5,9 +5,9 @@ title: Attribution AI UI 안내서
 topic-legacy: User guide
 description: 이 문서는 Intelligent Services 사용자 인터페이스의 Attribution AI과 상호 작용하기 위한 안내서의 역할을 합니다.
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-source-git-commit: ac21668955305c135d78c1e6afbee8f6499f6885
+source-git-commit: 67b4c49de6ebb9986f735390a0657d908b07e039
 workflow-type: tm+mt
-source-wordcount: '2716'
+source-wordcount: '2705'
 ht-degree: 1%
 
 ---
@@ -262,7 +262,7 @@ Attribution AI의 마지막 페이지는 **[!UICONTROL 고급]** 교육 및 점�
 
 ![설치 완료](./images/user-guide/instance_setup_complete.png)
 
-### 속성 기반 액세스 제어
+## 속성 기반 액세스 제어
 
 >[!IMPORTANT]
 >
@@ -278,15 +278,15 @@ Attribution AI의 마지막 페이지는 **[!UICONTROL 고급]** 교육 및 점�
 
 Attribution AI 작업 공간 상단에서 **통찰력 페이지**&#x200B;로 지정하는 경우, 사이드바에 표시되는 세부 정보는 액세스가 제한되었습니다.
 
-![스키마의 제한된 필드가 강조 표시된 Attribution AI 작업 영역입니다.](./images/user-guide/access-restricted.png)
+![제한된 스키마 필드가 강조 표시된 Attribution AI 작업 영역입니다.](./images/user-guide/access-restricted.png)
 
 에서 제한된 스키마가 있는 데이터 세트를 선택하는 경우 **[!UICONTROL 인스턴스 만들기 워크플로우]** 페이지가 표시되면 메시지가 있는 데이터 세트 이름 옆에 경고 기호가 나타납니다. [!UICONTROL 제한된 정보는 제외됩니다].
 
-![제한된 스키마가 있는 선택한 데이터 세트의 제한된 필드가 있는 Attribution AI 작업 영역이 강조 표시됩니다.](./images/user-guide/restricted-info-excluded.png)
+![제한된 데이터 세트 필드가 강조 표시된 Attribution AI 작업 공간입니다.](./images/user-guide/restricted-info-excluded.png)
 
 에서 제한된 스키마가 있는 데이터 세트를 미리 볼 때 **[!UICONTROL 인스턴스 만들기 워크플로우]** 페이지를 보면 [!UICONTROL 액세스 제한 사항으로 인해 데이터 집합 미리 보기에 특정 정보가 표시되지 않습니다.]
 
-![미리 보기 스키마의 제한된 필드가 강조 표시된 Attribution AI 작업 공간입니다.](./images/user-guide/restricted-dataset-preview.png)
+![제한된 미리 보기 스키마 필드가 있는 Attribution AI 작업 공간 결과가 강조 표시됩니다.](./images/user-guide/restricted-dataset-preview.png)
 
 제한된 정보로 인스턴스를 만든 후 **[!UICONTROL 목표 정의]** 단계에서 경고가 맨 위에 표시됩니다. [!UICONTROL 액세스 제한 사항으로 인해 구성에 특정 정보가 표시되지 않습니다.]
 
