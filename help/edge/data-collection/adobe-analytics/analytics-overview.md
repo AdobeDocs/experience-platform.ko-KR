@@ -3,9 +3,9 @@ title: Platform Web SDK에서 Adobe Analytics 사용
 description: Adobe Experience Platform Web SDK를 사용하여 Adobe Analytics으로 데이터를 전송하는 방법을 알아봅니다.
 keywords: adobe analytics;analytics;매핑된 데이터;매핑된 vars;
 exl-id: b18d1163-9edf-4a9c-b247-cd1aa7dfca50
-source-git-commit: f627c1f6c917e74e0a366ce0611a1fa6bd0e3c3d
+source-git-commit: 836fa7814a6966903639e871bfaea0563847f363
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '306'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Adobe Experience Platform [!DNL Edge Network] 는 여러 XDM 변수를 자동으
 
 ## 수동으로 매핑된 데이터
 
-에지 네트워크에 의해 자동으로 매핑되지 않은 데이터는 처리 규칙을 통해 액세스할 수 있습니다. 데이터는 점 표기법을 사용하여 변환되고 contextData로 사용할 수 있습니다.
+에 의해 자동으로 매핑되지 않는 모든 데이터 [!DNL Edge Network] 는 처리 규칙을 통해 액세스할 수 있습니다. 데이터는 점 표기법을 사용하여 변환되고 contextData로 사용할 수 있습니다.
 
 스키마는 다음과 같습니다.
 
@@ -71,3 +71,7 @@ a.x.arrayofobjects.1.obj2key //objval1
 다음은 이 데이터를 사용하는 처리 규칙의 예입니다.
 
 ![처리 규칙 인터페이스](./assets/edge_analytics_processing_rules.png)
+
+>[!NOTE]
+>
+>Experience Edge 컬렉션을 사용하면 모든 이벤트가 Analytics와 데이터 스트림에 대해 구성한 다른 서비스로 전송됩니다. 예를 들어, Analytics와 Target이 모두 서비스로 구성되어 있고 개인화와 Analytics에 대해 별도의 호출을 하는 경우 두 이벤트가 모두 Target과 Analytics로 전송됩니다. 이러한 이벤트는 Analytics 보고에 기록되며 바운스 비율 등의 지표에 영향을 줄 수 있습니다.
