@@ -3,14 +3,23 @@ keywords: target 개인화; 대상; experience platform target 대상;adobe targ
 title: Adobe Target 연결
 description: Adobe Target은 웹 사이트, 모바일 앱 등에서 모든 인바운드 고객 상호 작용에 실시간 AI 기반의 개인화 및 실험 기능을 제공하는 애플리케이션입니다.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: 769d3f14e858ed69c6bb50360da90e4e0816a377
 workflow-type: tm+mt
-source-wordcount: '909'
+source-wordcount: '1005'
 ht-degree: 1%
 
 ---
 
 # Adobe Target 연결 {#adobe-target-connection}
+
+## 대상 변경 로그 {#changelog}
+
+>[!IMPORTANT]
+>
+>향상된 Adobe Target V2 대상 커넥터의 베타 릴리스를 사용하면 대상 카탈로그에 두 개의 Adobe Target 카드가 표시될 수 있습니다.
+>Adobe Target V2 대상 커넥터는 현재 베타 버전이며 일부 고객만 사용할 수 있습니다. V1 Adobe 카드에서 제공하는 기능 외에도 Target V2 커넥터는 [매핑 단계](/help/destinations/ui/activate-profile-request-destinations.md#map-attributes) 프로필 속성을 Adobe Target에 매핑할 수 있는 활성화 워크플로우에 속성 기반의 동일 페이지 및 다음 페이지 개인화를 활성화합니다.
+
+![나란히 보기에 있는 두 Adobe Target 대상 카드의 이미지입니다.](/help/destinations/assets/catalog/personalization/adobe-target-connection/adobe-target-side-by-side-view.png)
 
 ## 개요 {#overview}
 

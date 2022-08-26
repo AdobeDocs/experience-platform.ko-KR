@@ -3,14 +3,33 @@ keywords: 사용자 지정 개인화; 대상; experience platform 사용자 지�
 title: 사용자 지정 개인화 연결
 description: 이 대상은 Adobe Experience Platform에서 세그먼트 정보를 검색하는 방법으로 사이트에서 실행 중인 외부 개인화, 콘텐츠 관리 시스템, 광고 서버 및 기타 애플리케이션을 제공합니다. 이 대상은 사용자 프로필 세그먼트 멤버십에 따라 실시간 개인화를 제공합니다.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: 09e81093c2ed2703468693160939b3b6f62bc5b6
 workflow-type: tm+mt
-source-wordcount: '1036'
+source-wordcount: '1305'
 ht-degree: 0%
 
 ---
 
 # 사용자 지정 개인화 연결 {#custom-personalization-connection}
+
+## 대상 변경 로그 {#changelog}
+
+향상된 베타 릴리스 사용 **[!UICONTROL 사용자 지정 개인화]** 대상 커넥터, **[!UICONTROL 사용자 지정 개인화]** 대상 카탈로그에 있는 카드.
+
+다음 **[!UICONTROL 속성을 사용한 사용자 지정 개인화]** 커넥터는 현재 베타에 있으며 일부 고객만 사용할 수 있습니다. 에서 제공하는 기능 추가 **[!UICONTROL 사용자 지정 개인화]**, **[!UICONTROL 속성을 사용한 사용자 지정 개인화]** 커넥터가 옵션 추가 [매핑 단계](/help/destinations/ui/activate-profile-request-destinations.md#map-attributes) 프로필 속성을 사용자 지정 개인화 대상에 매핑하고 속성 기반의 동일 페이지 및 다음 페이지 개인화를 활성화할 수 있는 활성화 워크플로우에 대한 것입니다.
+
+>[!IMPORTANT]
+>
+>프로필 속성에는 중요한 데이터가 포함될 수 있습니다. 이 데이터를 보호하려면 **[!UICONTROL 속성을 사용한 사용자 지정 개인화]** 대상을 사용하려면 [Edge Network Server API](/help/server-api/overview.md) 참조하십시오. 또한 모든 서버 API 호출은 [인증된 컨텍스트](../../../server-api/authentication.md).
+>
+>통합에 Web SDK나 Mobile SDK를 이미 사용 중인 경우 서버 API를 통해 다음 두 가지 방법으로 속성을 검색할 수 있습니다.
+>
+> * 서버 API를 통해 속성을 검색하는 서버측 통합을 추가합니다.
+> * 클라이언트 측 구성을 사용자 지정 Javascript 코드로 업데이트하여 서버 API를 통해 속성을 검색합니다.
+>
+> 위의 요구 사항을 따르지 않는 경우, 개인화는 의 제공 경험과 동일한 세그먼트 멤버십만을 기반으로 합니다 **[!UICONTROL 사용자 지정 개인화]** 커넥터.
+
+![나란히 보기에 있는 두 개의 사용자 지정 개인화 대상 카드의 이미지입니다.](../../assets/catalog/personalization/custom-personalization/custom-personalization-side-by-side-view.png)
 
 ## 개요 {#overview}
 
@@ -30,7 +49,7 @@ ht-degree: 0%
 
 ## 사용 사례 {#use-cases}
 
-다음 [!DNL Custom personalization connection] 은 고유한 개인화 파트너 플랫폼(예: [!DNL Optimizely], [!DNL Pega])을 클릭하여 보다 심층적인 고객 개인화 환경을 구축할 수 있도록 Edge Network 데이터 수집 및 세그멘테이션 기능을 활용할 수 있습니다.
+다음 [!DNL Custom Personalization Connection] 은 고유한 개인화 파트너 플랫폼(예: [!DNL Optimizely], [!DNL Pega]또한, 독점 시스템(예: 사내 CMS)뿐만 아니라 Experience Platform 에지 네트워크 데이터 수집 및 세그멘테이션 기능도 활용하여 보다 심층적인 고객 개인화 경험을 제공할 수 있습니다.
 
 아래 설명된 사용 사례에는 사이트 개인화와 타깃팅된 온사이트 광고가 모두 포함됩니다.
 
@@ -134,11 +153,11 @@ alloy("sendEvent", {
     if(result.destinations) { // Looking to see if the destination results are there
  
         // Get the destination with a particular alias
-        var personalizationDestinations = result.destinations.filter(x => x.alias == “personalizationAlias”)
+        var personalizationDestinations = result.destinations.filter(x => x.alias == "personalizationAlias")
         if(personalizationDestinations.length > 0) {
              // Code to pass the segment IDs into the system that corresponds to personalizationAlias
         }
-        var adServerDestinations = result.destinations.filter(x => x.alias == “adServerAlias”)
+        var adServerDestinations = result.destinations.filter(x => x.alias == "adServerAlias")
         if(adServerDestinations.length > 0) {
             // Code to pass the segment ids into the system that corresponds to adServerAlias
         }
@@ -149,6 +168,37 @@ alloy("sendEvent", {
   });
 ```
 
+### 에 대한 응답 예 [!UICONTROL 속성을 사용한 사용자 지정 개인화]
+
+사용 시 **[!UICONTROL 속성을 사용한 사용자 지정 개인화]**&#x200B;를 설정하는 경우 API 응답은 아래 예제와 비슷합니다.
+
+차이점 **[!UICONTROL 속성을 사용한 사용자 지정 개인화]** 및 **[!UICONTROL 사용자 지정 개인화]** 는 `attributes` 섹션을 참조하십시오.
+
+```json
+[
+    {
+        "type": "profileLookup",
+        "destinationId": "7bb4cb8d-8c2e-4450-871d-b7824f547130",
+        "alias": "personalizationAlias",
+        "attributes": {
+             "countryCode": {
+                   "value" : "DE"
+              },
+             "membershipStatus": {
+                   "value" : "PREMIUM"
+              }
+         },         
+        "segments": [
+            {
+                "id": "399eb3e7-3d50-47d3-ad30-a5ad99e8ab77"
+            },
+            {
+                "id": "499eb3e7-3d50-47d3-ad30-a5ad99e8ab77"
+            }
+        ]
+    }
+]
+```
 
 ## 데이터 사용 및 거버넌스 {#data-usage-governance}
 

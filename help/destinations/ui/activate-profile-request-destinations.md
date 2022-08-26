@@ -4,9 +4,9 @@ title: 프로필 요청 대상에 대상 데이터 활성화
 type: Tutorial
 description: 세그먼트를 프로필 요청 대상에 매핑하여 Adobe Experience Platform에서 보유한 대상 데이터를 활성화하는 방법을 알아봅니다.
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
+source-git-commit: 26e7a3e78a4513aa69cdfbed7902509609e114cc
 workflow-type: tm+mt
-source-wordcount: '467'
+source-wordcount: '678'
 ht-degree: 0%
 
 ---
@@ -19,11 +19,13 @@ ht-degree: 0%
 
 ## 개요 {#overview}
 
-이 문서에서는 Adobe Experience Platform 프로필 요청 대상에서 대상 데이터를 활성화하는 데 필요한 워크플로우에 대해 설명합니다. 프로필 요청 대상의 예는 다음과 같습니다 [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) 그리고 [사용자 지정 개인화](../../destinations/catalog/personalization/custom-personalization.md) 연결.
+이 문서에서는 Adobe Experience Platform 프로필 요청 대상에서 대상 데이터를 활성화하는 데 필요한 워크플로우에 대해 설명합니다. 와 함께 사용하는 경우 [에지 세분화](../../segmentation/ui/edge-segmentation.md)이러한 대상은 웹 속성에서 동일한 페이지 및 다음 페이지 개인화 사용 사례를 활성화합니다. 자세한 내용 [동일한 페이지 및 다음 페이지 개인화 사용 사례 활성화](/help/destinations/ui/configure-personalization-destinations.md).
+
+프로필 요청 대상의 예는 다음과 같습니다 [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) 그리고 [사용자 지정 개인화](../../destinations/catalog/personalization/custom-personalization.md) 연결.
 
 ## 전제 조건 {#prerequisites}
 
-대상에 데이터를 활성화하려면 [대상에 연결](./connect-destination.md). 아직 하지 않았다면 을(를) 참조하십시오. [대상 카탈로그](../catalog/overview.md)를 클릭하고 지원되는 대상을 탐색하고 사용할 대상을 구성합니다.
+대상에 데이터를 활성화하려면 [대상에 연결](./connect-destination.md). 아직 하지 않았다면 을(를) 참조하십시오. [대상 카탈로그](../catalog/overview.md)에서 지원되는 개인화 대상을 탐색하고 사용할 대상을 구성합니다.
 
 ### 세그먼트 병합 정책 {#merge-policy}
 
@@ -35,7 +37,7 @@ ht-degree: 0%
 
    ![대상 카탈로그 탭](../assets/ui/activate-segment-streaming-destinations/catalog-tab.png)
 
-1. 선택 **[!UICONTROL 세그먼트 활성화]** 세그먼트를 활성화할 대상에 해당하는 카드에서 아래 그림과 같이 세그먼트를 활성화하십시오.
+1. 선택 **[!UICONTROL 세그먼트 활성화]** 아래 그림과 같이 세그먼트를 활성화할 개인화 대상에 해당하는 카드에서 세그먼트를 활성화하십시오.
 
    ![단추 활성화](../assets/ui/activate-profile-request-destinations/activate-segments-button.png)
 
@@ -50,6 +52,22 @@ ht-degree: 0%
 세그먼트 이름 왼쪽에 있는 확인란을 사용하여 대상으로 활성화할 세그먼트를 선택한 다음 선택합니다 **[!UICONTROL 다음]**.
 
 ![세그먼트 선택](../assets/ui/activate-profile-request-destinations/select-segments.png)
+
+## (베타) 맵 속성 {#map-attributes}
+
+>[!IMPORTANT]
+>
+>에 대한 속성 기반 개인화를 활성화하는 매핑 단계입니다 [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) 및 [일반 개인화 대상](/help/destinations/catalog/personalization/custom-personalization.md): 은 현재 베타 버전이며 조직에서 아직 액세스할 수 없습니다. 이 설명서는 변경될 수 있습니다.
+
+사용자에 대한 개인화 사용 사례를 활성화할 속성에 따라 속성을 선택합니다. 즉, 속성 값이 변경되거나 속성에 속성이 프로필에 추가되면 해당 프로필은 세그먼트의 구성원이 되며 개인화 대상에 활성화됩니다.
+
+속성을 추가하는 것은 선택 사항이며, 속성을 선택하지 않고 다음 단계로 계속하여 동일한 페이지 및 다음 페이지 개인화를 활성화할 수 있습니다. 이 단계에서 속성을 추가하지 않는 경우에도 세그먼트의 멤버십 및 프로필에 대한 ID 맵 자격에 따라 개인화가 계속 발생합니다.
+
+![속성이 선택된 매핑 단계를 보여주는 이미지](../assets/ui/activate-profile-request-destinations/mapping-step.png)
+
+속성을 추가하려면 **[!UICONTROL 새 필드 추가]** 아래와 같이 원하는 XDM 속성 필드를 제어 및 검색하거나 탐색합니다.
+
+![매핑 단계에서 XDM 속성을 선택하는 방법을 보여주는 화면 기록](../assets/ui/activate-profile-request-destinations/mapping-step-select-attribute.gif)
 
 ## 세그먼트 내보내기 예약 {#scheduling}
 
