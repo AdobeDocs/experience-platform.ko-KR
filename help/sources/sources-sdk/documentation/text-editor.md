@@ -5,10 +5,10 @@ title: 로컬 환경에서 텍스트 편집기를 사용하여 소스 설명서 
 topic-legacy: tutorial
 description: 이 문서에서는 로컬 환경을 사용하여 소스에 대한 설명서를 작성하고 끌어오기 요청(PR)을 제출하는 방법에 대해 설명합니다.
 exl-id: 4cc89d1d-bc42-473d-ba54-ab3d1a2cd0d6
-source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
+source-git-commit: adf7dbe5e32310fee680f996ffbde0fd6ddd993a
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '650'
+ht-degree: 3%
 
 ---
 
@@ -70,7 +70,7 @@ Adobe은 [Visual Studio 코드](https://code.visualstudio.com/) Markdown 작성 
 
 ![설치](../assets/install.png)
 
-로컬 시스템을 준비하고 있는 경우 [소스 설명서 템플릿](../assets/template.zip) 파일을 추출하여 `experience-platform.en/help/sources/tutorials/api/create/...` with [`...`] 선택한 카테고리를 나타냅니다. 예를 들어 데이터베이스 소스를 생성하는 경우 데이터베이스 폴더를 선택합니다.
+로컬 시스템을 준비하고 있는 경우 [소스 설명서 템플릿](../assets/api-template.zip) 파일을 추출하여 `experience-platform.en/help/sources/tutorials/api/create/...` with [`...`] 선택한 카테고리를 나타냅니다. 예를 들어 데이터베이스 소스를 생성하는 경우 데이터베이스 폴더를 선택합니다.
 
 마지막으로, 템플릿에 설명된 지침에 따라 소스와 관련된 관련 정보가 있는 템플릿을 편집합니다.
 

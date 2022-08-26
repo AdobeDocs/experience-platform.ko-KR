@@ -5,9 +5,9 @@ title: 소스 문서 작성
 topic-legacy: overview
 description: 새 소스를 Adobe Experience Platform에서 라이브로 만들려면 먼저 새 소스를 문서화하는 작업을 수행해야 합니다.
 exl-id: 80daadb1-127f-4f42-8bc9-fb89a7898462
-source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
+source-git-commit: adf7dbe5e32310fee680f996ffbde0fd6ddd993a
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '411'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,7 @@ ht-degree: 0%
 
 문서 템플릿을 아래에 다운로드할 수도 있습니다.
 
-* [API 설명서 템플릿](../assets/template.zip)
+* [API 설명서 템플릿](../assets/api-template.zip)
 * [UI 설명서 템플릿](../assets/ui-template.zip)
 
 ## 새 소스 페이지 만들기

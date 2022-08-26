@@ -5,10 +5,10 @@ title: GitHub 웹 인터페이스를 사용하여 소스 설명서 페이지 만
 topic-legacy: tutorial
 description: 이 문서에서는 GitHub 웹 인터페이스를 사용하여 설명서를 작성하고 끌어오기 요청(PR)을 제출하는 방법에 대해 설명합니다.
 exl-id: 84b4219c-b3b2-4d0a-9a65-f2d5cd989f95
-source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
+source-git-commit: adf7dbe5e32310fee680f996ffbde0fd6ddd993a
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '624'
+ht-degree: 2%
 
 ---
 
@@ -52,7 +52,7 @@ GitHub 환경을 설정하는 첫 번째 단계는 [Adobe Experience Platform Gi
 
 ## 소스에 대한 설명서 페이지 작성
 
-새 소스 문서화를 시작하려면 [소스 설명서 템플릿](./template.md) ( GitHub 웹 편집기)로 이동하는 것을 참조하십시오. 템플릿을 다운로드할 수도 있습니다 [여기](../assets/template.zip).
+새 소스 문서화를 시작하려면 [소스 설명서 템플릿](./template.md) ( GitHub 웹 편집기)로 이동하는 것을 참조하십시오. 템플릿을 다운로드할 수도 있습니다 [여기](../assets/api-template.zip).
 
 GitHub 웹 편집기 인터페이스로 복사한 템플릿을 사용하여 템플릿에 설명된 지침을 따르고 소스에 대한 관련 정보가 포함된 값을 편집합니다.
 
