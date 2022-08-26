@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform에 대한 최신 릴리스 노트입니다.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 3e3389c3e77597ace4177e683aaf7494364a5be7
+source-git-commit: f2d2499147b40a15a413773068b65139278bd4ff
 workflow-type: tm+mt
-source-wordcount: '1900'
+source-wordcount: '2094'
 ht-degree: 7%
 
 ---
@@ -90,17 +90,13 @@ Adobe Experience Platform은 여러 기능을 제공합니다 [!DNL dashboards] 
 
 [!DNL Destinations] 는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과의 사전 구축된 통합입니다. 대상을 사용하여 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례에 대해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 
-<!--
+**새로운 기능 또는 업데이트된 기능**
 
-**New or updated features**
-
-| Feature | Description |
+| 기능 | 설명 |
 | ----------- | ----------- |
-|  ||
+| (베타) 개인화 대상에 대한 속성 기반 개인화 지원 | 특성 기반 개인화의 베타 릴리스를 사용하면 [대상 카탈로그](../../destinations/catalog/overview.md): <ul><li>**[!UICONTROL Adobe Target V2]**: 이 커넥터는 현재 베타에 있으며 일부 고객만 사용할 수 있습니다. Adobe Target V1 카드에서 제공하는 기능 외에도 Target V2 커넥터는 [매핑 단계](/help/destinations/ui/activate-profile-request-destinations.md#map-attributes) 프로필 속성을 Adobe Target에 매핑할 수 있는 활성화 워크플로우에 속성 기반의 동일 페이지 및 다음 페이지 개인화를 활성화합니다.</li><li>**[!UICONTROL 속성을 사용한 사용자 지정 개인화]**: 이 커넥터는 현재 베타에 있으며 일부 고객만 사용할 수 있습니다. 에서 제공하는 기능 추가 **[!UICONTROL 사용자 지정 개인화]**, **[!UICONTROL 속성을 사용한 사용자 지정 개인화]** 커넥터가 옵션 추가 [매핑 단계](../../destinations/ui/activate-profile-request-destinations.md#map-attributes) 프로필 속성을 사용자 지정 개인화 대상에 매핑하고 속성 기반의 동일 페이지 및 다음 페이지 개인화를 활성화할 수 있는 활성화 워크플로우에 대한 것입니다.</li></ul> <br> 프로필 속성에는 중요한 데이터가 포함될 수 있습니다. 이 데이터를 보호하려면 **[!UICONTROL 속성을 사용한 사용자 지정 개인화]** 대상을 사용하려면 [Edge Network Server API](../../server-api/overview.md) 참조하십시오. 또한 모든 서버 API 호출은 [인증된 컨텍스트](../../server-api/authentication.md). |
 
-{style="table-layout:auto"}
-
--->
+{style=&quot;table-layout:auto&quot;}
 
 **새 대상**
 
