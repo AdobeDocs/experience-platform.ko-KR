@@ -4,9 +4,9 @@ title: Query Service를 사용하여 대시보드 데이터 세트를 탐색, �
 type: Documentation
 description: Query Service를 사용하여 Experience Platform에서 프로필, 세그먼트 및 대상 대시보드에 적용되는 원시 데이터 세트를 탐색하고 처리하는 방법을 알아봅니다.
 exl-id: 0087dcab-d5fe-4a24-85f6-587e9ae74fb8
-source-git-commit: fe2d9e60dd641e1f03f7dde72e64e2892ae7c1a2
+source-git-commit: 62e282138de8cf2d74b4a62f4ced39e3fb78001a
 workflow-type: tm+mt
-source-wordcount: '848'
+source-wordcount: '951'
 ht-degree: 0%
 
 ---
@@ -83,6 +83,16 @@ Adobe Experience Platform [!DNL Query Service] 에서는 마케터가 표준 SQL
 DIM 대상 데이터 집합의 전체 스키마를 이해하기 위해 데이터 집합을 미리 보고 탐색할 수 있습니다 [데이터 집합 뷰어 사용](../catalog/datasets/user-guide.md) Experience Platform UI에서 클릭합니다.
 
 ![](images/query/destinations-metadata.png)
+
+## (베타) CDP(고객 데이터 플랫폼) 통찰력 보고서
+
+>[!IMPORTANT]
+>
+>CDP 통찰력 데이터 모델 기능은 베타에 있습니다. 해당 기능과 설명서는 변경될 수 있습니다.
+
+CDP 통찰력 데이터 모델 기능은 다양한 프로필, 대상 및 세그멘테이션 위젯에 대한 통찰력을 제공하는 SQL을 표시합니다. 이러한 SQl 쿼리 템플릿을 사용자 지정하여 마케팅 및 KPI 사용 사례를 위한 CDP 보고서를 만들 수 있습니다.
+
+CDP 보고에서는 프로필 데이터와 세그먼트 및 대상과의 관계에 대한 통찰력을 제공합니다. 방법에 대한 자세한 내용은 CDP 통찰력 데이터 모델 설명서 를 참조하십시오 [특정 KPI 사용 사례에 CDP 통찰력 데이터 모델 적용](./cdp-insights-data-model.md).
 
 ## 쿼리 예
 
