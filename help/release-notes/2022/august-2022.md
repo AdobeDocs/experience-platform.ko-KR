@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 릴리스 노트 - 2022년 8월
 description: Adobe Experience Platform에 대한 2022년 8월 릴리스 노트입니다.
 exl-id: dbf1e7a3-8599-4991-8932-f57d3b1c640d
-source-git-commit: f2d2499147b40a15a413773068b65139278bd4ff
+source-git-commit: fb9fdc70aabb62cdc39888b1ff90557d8420c31b
 workflow-type: tm+mt
-source-wordcount: '2095'
+source-wordcount: '2137'
 ht-degree: 7%
 
 ---
@@ -36,7 +36,7 @@ Attribution AI는 전환 이벤트로 연결되는 터치포인트에 크레딧�
 
 | 기능 | 설명 |
 | ------- | ----------- |
-| 개인 정보 지원 | <ul><li> 이제 Attribution AI은 사용자 역할 정의 및 관리 액세스 정책 을 지원합니다 [권한](../../../help/access-control/abac/ui/permissions.md) 제품 애플리케이션 내의 기능 및 개체 </li><li>활동이 발생하면 감사 로그 리소스가 자동으로 기록됩니다.</li><li> 사용 [속성 기반 액세스 제어](../../access-control/abac/overview.md)를 설정하는 경우, 관리자는 특정 속성에 따라 특정 객체 및/또는 기능에 대한 액세스를 제어할 수 있습니다. 특정 필드 및 해당 필드에 해당하는 데이터에만 액세스할 수 있는 사용자 역할을 정의할 수도 있습니다</li><li>Attribution AI은 Platform 데이터 세트를 사용합니다. GDPR 준수를 위해 Adobe Experience Platform Privacy Service을 사용하여 데이터 레이크, ID 서비스 및 실시간 고객 프로필에서 데이터에 액세스하고 삭제하는 고객 요청을 수락하는 프로토콜을 설정할 수 있습니다. 모든 데이터는 전송 및 휴지 상태로 암호화되어 있습니다.</li></ul> |
+| 개인 정보 지원 | <ul><li> 이제 Attribution AI은 사용자 역할 정의 및 관리 액세스 정책 을 지원합니다 [권한](../../../help/access-control/abac/ui/permissions.md) 제품 애플리케이션 내의 기능 및 개체 </li><li>활동이 발생하면 감사 로그 리소스가 자동으로 기록됩니다.</li><li> 사용 [속성 기반 액세스 제어](../../access-control/abac/overview.md)를 설정하는 경우, 관리자는 특정 속성에 따라 특정 객체 및/또는 기능에 대한 액세스를 제어할 수 있습니다. 특정 필드 및 해당 필드에 해당하는 데이터에만 액세스할 수 있는 사용자 역할을 정의할 수도 있습니다</li><li>Attribution AI은 Platform 데이터 세트를 사용합니다. 브랜드가 수신할 수 있는 소비자 권한 요청을 지원하려면 브랜드는 Platform Privacy Service을 사용하여 소비자 액세스 및 삭제 요청을 제출하여 데이터 레이크, Identity Service 및 실시간 고객 프로필에서 데이터를 제거해야 합니다.  </li><li>모델의 입출력 작업에 사용되는 모든 데이터 세트는 플랫폼 지침을 따릅니다. Platform 데이터 암호화는 전송 중인 데이터를 위해 적용됩니다. 자세한 내용은 설명서 를 참조하십시오 [데이터 암호화](../../../help/landing/governance-privacy-security/encryption.md).</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -52,7 +52,7 @@ Real-time Customer Data Platform에서 사용할 수 있는 고객 AI는 규모�
 
 | 기능 | 설명 |
 | ------- | ----------- |
-| 개인 정보 지원 | <ul><li> Customer AI는 이제 관리를 위한 사용자 역할 및 액세스 정책 정의를 지원합니다 [권한](../../../help/access-control/abac/ui/permissions.md) 제품 애플리케이션 내의 기능 및 개체 </li><li>활동이 발생하면 감사 로그 리소스가 자동으로 기록됩니다.</li><li> 사용 [속성 기반 액세스 제어](../../access-control/abac/overview.md), 관리자는 특정 속성에 따라 특정 객체 및/또는 기능에 대한 액세스를 제어할 수 있습니다. 이러한 속성은 레이블과 같은 객체에 추가된 메타데이터일 수 있습니다. 또한 관리자는 해당 필드에 해당하는 특정 필드 및 데이터에만 액세스할 수 있는 사용자 역할을 정의할 수 있습니다.</li><li>고객 AI는 플랫폼 데이터 세트를 활용합니다. GDPR 준수를 위해 Adobe Experience Platform Privacy Service을 사용하여 데이터 레이크, ID 서비스 및 실시간 고객 프로필에서 데이터에 액세스하고 삭제하는 고객 요청을 수락하는 프로토콜을 설정할 수 있습니다. 모든 데이터는 전송 및 휴지 상태로 암호화되어 있습니다.</li></ul> |
+| 개인 정보 지원 | <ul><li> Customer AI는 이제 관리를 위한 사용자 역할 및 액세스 정책 정의를 지원합니다 [권한](../../../help/access-control/abac/ui/permissions.md) 제품 애플리케이션 내의 기능 및 개체 </li><li>활동이 발생하면 감사 로그 리소스가 자동으로 기록됩니다.</li><li> 사용 [속성 기반 액세스 제어](../../access-control/abac/overview.md), 관리자는 특정 속성에 따라 특정 객체 및/또는 기능에 대한 액세스를 제어할 수 있습니다. 이러한 속성은 레이블과 같은 객체에 추가된 메타데이터일 수 있습니다. 또한 관리자는 해당 필드에 해당하는 특정 필드 및 데이터에만 액세스할 수 있는 사용자 역할을 정의할 수 있습니다.</li><li>고객 AI는 플랫폼 데이터 세트를 활용합니다. 브랜드가 수신할 수 있는 소비자 권한 요청을 지원하려면 브랜드는 Platform Privacy Service을 사용하여 소비자 액세스 및 삭제 요청을 제출하여 데이터 레이크, Identity Service 및 실시간 고객 프로필에서 데이터를 제거해야 합니다. </li><li>모델의 입출력 작업에 사용되는 모든 데이터 세트는 플랫폼 지침을 따릅니다. Platform 데이터 암호화는 전송 중인 데이터를 위해 적용됩니다. 자세한 내용은 설명서 를 참조하십시오 [데이터 암호화](../../../help/landing/governance-privacy-security/encryption.md).</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
