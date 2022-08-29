@@ -2,7 +2,7 @@
 title: 데이터 위생 작업 주문 찾아보기
 description: Adobe Experience Platform 사용자 인터페이스에서 기존 데이터 위생 작업 순서를 보고 관리하는 방법을 알아봅니다.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: 0b7196b195fc5ee8abb45ccb93f1fcc9a000a603
+source-git-commit: 80f9f0c64f2af2c7ceea59bddab9a5d6b57bc882
 workflow-type: tm+mt
 source-wordcount: '517'
 ht-degree: 1%
@@ -48,7 +48,7 @@ ht-degree: 1%
 
 {style=&quot;table-layout:auto&quot;}
 
-## 작업 주문의 세부 정보 보기
+## 작업 주문의 세부 정보 보기 {#view-details}
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_statusbyservice"
