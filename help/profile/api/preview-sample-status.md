@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;프로필;실시간 고객 프로필;문제 해결;API;미리 보기;샘플
 title: 미리 보기 샘플 상태(프로필 미리 보기) API 끝점
-description: 실시간 고객 프로필 API의 일부인 미리 보기 샘플 상태 엔드포인트를 사용하여 프로필 데이터의 가장 성공적인 샘플을 미리 보고, 데이터 집합 및 ID별로 프로필 배포를 나열하고, 데이터 집합 겹치기, ID 겹치기 및 알 수 없는 프로필을 보여주는 보고서를 생성할 수 있습니다.
+description: 실시간 고객 프로필 API의 미리 보기 샘플 상태 엔드포인트를 사용하면 프로필 데이터의 가장 성공적인 샘플을 미리 보고, 데이터 집합 및 ID별로 프로필 배포를 나열하고, 데이터 집합 겹치기, ID 겹치기 및 연결되지 않은 프로필을 보여주는 보고서를 생성할 수 있습니다.
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 8a17648757b342bd8026382918ca41c469210b51
 workflow-type: tm+mt
-source-wordcount: '2882'
+source-wordcount: '2875'
 ht-degree: 1%
 
 ---
@@ -465,25 +465,25 @@ curl -X GET \
 * 24개의 프로필로 구성됩니다 `AAID` 및 `ECID` id 네임스페이스.
 * 만 포함된 6,565개의 프로필이 있습니다 `ECID` ID.
 
-## 알 수 없는 프로필 보고서 생성
+## 연결되지 않은 프로필 보고서 생성
 
-알 수 없는 프로필 보고서를 통해 조직의 프로필 저장소 구성을 추가로 표시할 수 있습니다. 알 수 없는 프로필은 지정된 기간 동안 연결되지 않은 프로필과 비활성 상태인 모든 프로필을 나타냅니다. 연결되지 않은 프로필은 하나의 프로필 조각만 포함하는 프로필이며, &quot;비활성&quot; 프로필은 지정된 기간 동안 새 이벤트를 추가하지 않은 프로필입니다. 알 수 없는 프로필 보고서는 7일, 30일, 60일, 90일 및 120일 동안의 프로필 분류를 제공합니다.
+연결되지 않은 프로필 보고서를 통해 조직의 프로필 저장소 구성을 추가로 표시할 수 있습니다. 연결되지 않은 프로필은 하나의 프로필 조각만 포함하는 프로필입니다. 알 수 없는 프로필은 같은 익명의 ID 네임스페이스와 연결된 프로필입니다 `ECID` 및 `AAID`. 알 수 없는 프로필은 비활성 상태이므로 지정된 기간 동안 새 이벤트를 추가하지 않았습니다. 연결되지 않은 프로필 보고서는 7, 30, 60, 90 및 120일 동안의 프로필 분류를 제공합니다.
 
-에 대한 GET 요청을 수행하여 알 수 없는 프로필 보고서를 생성할 수 있습니다 `/previewsamplestatus/report/unknownProfiles` 엔드포인트.
+에 대한 GET 요청을 수행하여 연결되지 않은 프로필 보고서를 생성할 수 있습니다 `/previewsamplestatus/report/unstitchedProfiles` 엔드포인트.
 
 **API 형식**
 
 ```http
-GET /previewsamplestatus/report/unknownProfiles
+GET /previewsamplestatus/report/unstitchedProfiles
 ```
 
 **요청**
 
-다음 요청은 알 수 없는 프로필 보고서를 반환합니다.
+다음 요청은 연결되지 않은 프로필 보고서를 반환합니다.
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/unknownProfiles \
+  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/unstitchedProfiles \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -491,18 +491,18 @@ curl -X GET \
 
 **응답**
 
-성공적인 요청은 HTTP 상태 200(OK) 및 알 수 없는 프로필 보고서를 반환합니다.
+성공적인 요청은 HTTP 상태 200(OK) 및 연결되지 않은 프로필 보고서를 반환합니다.
 
 >[!NOTE]
 >
->이 안내서의 목적을 위해 보고서는 만 포함하도록 잘렸습니다 `"120days"` 및 &quot;`7days`&quot; 기간 전체 알 수 없는 프로필 보고서는 7일, 30일, 60일, 90일 및 120일 동안의 프로필 분류를 제공합니다.
+>이 안내서의 목적을 위해 보고서는 만 포함하도록 잘렸습니다 `"120days"` 및 &quot;`7days`&quot; 기간 전체 연결되지 않은 프로필 보고서는 7, 30, 60, 90 및 120일 동안의 프로필 분류를 제공합니다.
 
 ```json
 {
   "data": {
       "totalNumberOfProfiles": 63606,
       "totalNumberOfEvents": 130977,
-      "unknownProfiles": {
+      "unstitchedProfiles": {
           "120days": {
               "countOfProfiles": 1644,
               "eventsAssociated": 26824,
@@ -547,16 +547,16 @@ curl -X GET \
 
 | 속성 | 설명 |
 |---|---|
-| `data` | 다음 `data` 개체에는 알 수 없는 프로필 보고서에 대해 반환된 정보가 포함되어 있습니다. |
-| `totalNumberOfProfiles` | 프로필 저장소에 있는 고유 프로필의 총 수입니다. 이는 대응 가능 대상 수와 같습니다. 여기에는 알려진 프로필과 알 수 없는 프로필이 모두 포함되어 있습니다. |
+| `data` | 다음 `data` 개체에는 연결되지 않은 프로필 보고서에 대해 반환된 정보가 포함되어 있습니다. |
+| `totalNumberOfProfiles` | 프로필 저장소에 있는 고유 프로필의 총 수입니다. 이는 대응 가능 대상 수와 같습니다. 여기에는 알려진 프로필과 연결되지 않은 프로필이 모두 포함됩니다. |
 | `totalNumberOfEvents` | 프로필 저장소의 총 ExperienceEvents 수입니다. |
-| `unknownProfiles` | 기간별 알 수 없는 프로필(연결되지 않은 프로필과 비활성)의 분류가 포함된 객체입니다. 알 수 없는 프로필 보고서는 7, 30, 60, 90 및 120일 기간에 대한 프로필 분류를 제공합니다. |
-| `countOfProfiles` | 기간 동안 알 수 없는 프로필 수 또는 네임스페이스에 대한 알 수 없는 프로필 수입니다. |
+| `unstitchedProfiles` | 기간별로 연결되지 않은 프로필 분류가 포함된 객체입니다. 연결되지 않은 프로필 보고서는 7, 30, 60, 90 및 120일 기간에 대한 프로필 분류를 제공합니다. |
+| `countOfProfiles` | 기간 동안 결합되지 않은 프로필 수 또는 네임스페이스에 대해 결합되지 않은 프로필 수입니다. |
 | `eventsAssociated` | 시간 범위에 대한 ExperienceEvents 수 또는 네임스페이스에 대한 이벤트 수입니다. |
-| `nsDistribution` | 각 네임스페이스에 대해 알 수 없는 프로필과 이벤트가 배포되는 개별 ID 네임스페이스가 포함된 객체입니다. 참고: 합계 추가 `countOfProfiles` 의 각 id 네임스페이스에 대해 `nsDistribution` 개체가 다음과 같음 `countOfProfiles` 해당 기간에 대해 지정합니다. 같은 것이 `eventsAssociated` 네임스페이스 및 총계 `eventsAssociated` 기간당 |
+| `nsDistribution` | 각 네임스페이스에 대해 연결되지 않은 프로필 및 이벤트가 배포되는 개별 ID 네임스페이스가 포함된 객체입니다. 참고: 합계 추가 `countOfProfiles` 의 각 id 네임스페이스에 대해 `nsDistribution` 개체가 다음과 같음 `countOfProfiles` 해당 기간에 대해 지정합니다. 같은 것이 `eventsAssociated` 네임스페이스 및 총계 `eventsAssociated` 기간당 |
 | `reportTimestamp` | 보고서의 타임스탬프입니다. |
 
-### 알 수 없는 프로필 보고서 해석
+### 연결되지 않은 프로필 보고서 해석
 
 보고서 결과를 통해 조직에서 프로필 스토어 내에 있는 결합되지 않은 프로필과 비활성 프로필의 수에 대한 통찰력을 제공할 수 있습니다.
 
@@ -586,9 +586,9 @@ curl -X GET \
 이 보고서는 다음 정보를 제공합니다.
 
 * 하나의 프로필 조각만 포함하고 지난 7일 동안 새 이벤트가 없는 1,782개의 프로필이 있습니다.
-* 1,782개의 알 수 없는 프로필과 연결된 29,151개의 ExperienceEvents가 있습니다.
-* ECID의 ID 네임스페이스에서 단일 프로필 조각을 포함하는 알 수 없는 프로필은 1,734개입니다.
-* ECID의 ID 네임스페이스에서 가져온 단일 프로필 조각을 포함하는 1,734개의 알 수 없는 프로필과 연결된 28,591개의 이벤트가 있습니다.
+* 1,782개의 연결되지 않은 프로필과 연결된 29,151개의 ExperienceEvents가 있습니다.
+* ECID의 ID 네임스페이스에서 단일 프로필 조각을 포함하는 연결되지 않은 프로필 1,734개가 있습니다.
+* ECID의 ID 네임스페이스에서 단일 프로필 조각을 포함하는 1,734개의 연결되지 않은 프로필과 연결된 28,591개의 이벤트가 있습니다.
 
 ## 다음 단계
 
