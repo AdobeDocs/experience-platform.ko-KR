@@ -4,10 +4,10 @@ title: 셀프 서비스 소스(배치 SDK)에 대한 인증 사양 구성
 topic-legacy: overview
 description: 이 문서에서는 셀프 서비스 소스(배치 SDK)를 사용하기 위해 준비해야 하는 구성에 대한 개요를 제공합니다.
 exl-id: 68ed22fe-1f22-46d2-9d58-72ad8a9e6b98
-source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
+source-git-commit: 25e0061cc47ec4179f3f02958eb8bda1714ea139
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '525'
+ht-degree: 2%
 
 ---
 
@@ -105,7 +105,6 @@ OAuth 2 새로 고침 코드는 임시 액세스 토큰 및 새로 고침 토큰
       }
     },
     "required": [
-      "host",
       "accessToken"
     ]
   }
@@ -137,7 +136,7 @@ OAuth 2 새로 고침 코드는 임시 액세스 토큰 및 새로 고침 토큰
 
 ### 기본 인증
 
-기본 인증은 응용 프로그램의 호스트 URL, 계정 사용자 이름 및 계정 암호를 조합하여 응용 프로그램에 액세스할 수 있는 인증 유형입니다.
+기본 인증은 계정 사용자 이름과 계정 암호를 조합하여 응용 프로그램에 액세스할 수 있는 인증 유형입니다.
 
 ```json
 {
@@ -148,10 +147,6 @@ OAuth 2 새로 고침 코드는 임시 액세스 토큰 및 새로 고침 토큰
     "type": "object",
     "description": "defines auth params required for connecting to rest service.",
     "properties": {
-      "host": {
-        "type": "string",
-        "description": "Enter resource url host path"
-      },
       "username": {
         "description": "Username to connect rest endpoint.",
         "type": "string"
@@ -163,7 +158,6 @@ OAuth 2 새로 고침 코드는 임시 액세스 토큰 및 새로 고침 토큰
       }
     },
     "required": [
-      "host",
       "username",
       "password"
     ]
@@ -180,10 +174,9 @@ OAuth 2 새로 고침 코드는 임시 액세스 토큰 및 새로 고침 토큰
 | `authSpec.spec.type` | 스키마의 데이터 유형을 정의합니다. | `object` |
 | `authSpec.spec.description` | 인증 유형에 대한 추가 정보를 표시합니다. |
 | `authSpec.spec.properties` | 인증에 사용되는 자격 증명에 대한 정보를 포함합니다. |
-| `authSpec.spec.properties.host` | 애플리케이션의 호스트 URL입니다. |
 | `authSpec.spec.properties.username` | 애플리케이션과 연관된 계정 사용자 이름. |
 | `authSpec.spec.properties.password` | 응용 프로그램과 연결된 계정 암호입니다. |
-| `authSpec.spec.required` | Platform에 입력해야 하는 필수 값으로 필요한 필드를 지정합니다. | `host` |
+| `authSpec.spec.required` | Platform에 입력해야 하는 필수 값으로 필요한 필드를 지정합니다. | `username` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -201,10 +194,6 @@ OAuth 2 새로 고침 코드는 임시 액세스 토큰 및 새로 고침 토큰
         "type": "object",
         "description": "Define auth params required for connecting to generic rest using oauth2 authorization code.",
         "properties": {
-          "host": {
-            "type": "string",
-            "description": "Enter resource url host path"
-          },
           "authorizationTestUrl": {
             "description": "Authorization test url to validate accessToken.",
             "type": "string"
@@ -216,7 +205,6 @@ OAuth 2 새로 고침 코드는 임시 액세스 토큰 및 새로 고침 토큰
           }
         },
         "required": [
-          "host",
           "accessToken"
         ]
       }
@@ -229,10 +217,6 @@ OAuth 2 새로 고침 코드는 임시 액세스 토큰 및 새로 고침 토큰
         "type": "object",
         "description": "defines auth params required for connecting to rest service.",
         "properties": {
-          "host": {
-            "type": "string",
-            "description": "Enter resource url host path."
-          },
           "username": {
             "description": "Username to connect mailChimp endpoint.",
             "type": "string"
@@ -244,7 +228,6 @@ OAuth 2 새로 고침 코드는 임시 액세스 토큰 및 새로 고침 토큰
           }
         },
         "required": [
-          "host",
           "username",
           "password"
         ]

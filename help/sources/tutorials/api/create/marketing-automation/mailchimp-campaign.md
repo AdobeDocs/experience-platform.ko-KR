@@ -5,10 +5,10 @@ title: Flow Service API를 사용하여 Mailchimp Campaign에 대한 데이터 �
 topic-legacy: tutorial
 description: Flow Service API를 사용하여 Adobe Experience Platform을 MailChimp Campaign에 연결하는 방법을 알아봅니다.
 exl-id: fd4821c7-6fe1-4cad-8e13-3549dbe0ce98
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 23a6f8ee23fb67290a5bcba2673a87ce74c9e1d3
 workflow-type: tm+mt
-source-wordcount: '2319'
-ht-degree: 2%
+source-wordcount: '1942'
+ht-degree: 1%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 2%
 
 ### 만들기 [!DNL Mailchimp] 기본 인증을 사용한 기본 연결
 
-을(를) 만들려면 [!DNL Mailchimp] 기본 인증을 사용하여 기본 연결에서 `/connections` 끝점 [!DNL Flow Service] 에 대한 자격 증명을 제공하는 동안 API `host`, `authorizationTestUrl`, `username`, 및 `password`.
+을(를) 만들려면 [!DNL Mailchimp] 기본 인증을 사용하여 기본 연결에서 `/connections` 끝점 [!DNL Flow Service] 에 대한 자격 증명을 제공하는 동안 API `authorizationTestUrl`, `username`, 및 `password`.
 
 **API 형식**
 
@@ -60,7 +60,6 @@ curl -X POST \
       "auth": {
           "specName": "Basic Authentication",
           "params": {
-              "host": "{HOST}",
               "authorizationTestUrl": "https://login.mailchimp.com/oauth2/metadata",
               "username": "{USERNAME}",
               "password": "{PASSWORD}"
@@ -75,7 +74,6 @@ curl -X POST \
 | `description` | (선택 사항) 기본 연결에 대한 자세한 정보를 제공하기 위해 포함할 수 있는 속성입니다. |
 | `connectionSpec.id` | 소스의 연결 사양 ID입니다. 이 ID는 소스를 등록하고 [!DNL Flow Service] API. |
 | `auth.specName` | 소스를 Platform에 연결하는 데 사용하는 인증 유형입니다. |
-| `auth.params.host` | 연결하는 데 사용되는 루트 URL입니다 [!DNL Mailchimp] API. 루트 URL의 형식은 다음과 같습니다 `https://{DC}.api.mailchimp.com`, 위치 `{DC}` 계정에 해당하는 데이터 센터를 나타냅니다. |
 | `auth.params.authorizationTestUrl` | (선택 사항) 기본 연결을 만들 때 인증 테스트 URL을 사용하여 자격 증명을 확인합니다. 지정하지 않으면 소스 연결 생성 단계 동안 자격 증명이 자동으로 선택됩니다. |
 | `auth.params.username` | 사용자 이름과 일치하는 사용자 이름 [!DNL Mailchimp] 계정이 필요합니다. 기본 인증에 필요합니다. |
 | `auth.params.password` | 사용자의 [!DNL Mailchimp] 계정이 필요합니다. 기본 인증에 필요합니다. |
@@ -93,7 +91,7 @@ curl -X POST \
 
 ### 만들기 [!DNL Mailchimp] OAuth 2 새로 고침 코드를 사용한 기본 연결
 
-을(를) 만들려면 [!DNL Mailchimp] OAuth 2 새로 고침 코드를 사용하여 기본 연결에 대해 POST 요청을 수행하십시오 `/connections` 에 대한 자격 증명을 제공하는 중 끝점입니다. `host`, `authorizationTestUrl`, 및 `accessToken`.
+을(를) 만들려면 [!DNL Mailchimp] OAuth 2 새로 고침 코드를 사용하여 기본 연결에 대해 POST 요청을 수행하십시오 `/connections` 에 대한 자격 증명을 제공하는 중 끝점입니다. `authorizationTestUrl`, 및 `accessToken`.
 
 **API 형식**
 
@@ -123,7 +121,6 @@ curl -X POST \
       "auth": {
           "specName": "oAuth2RefreshCode",
           "params": {
-              "host": "{HOST}",
               "authorizationTestUrl": "https://login.mailchimp.com/oauth2/metadata",
               "accessToken": "{ACCESS_TOKEN}"
           }
@@ -137,7 +134,6 @@ curl -X POST \
 | `description` | (선택 사항) 기본 연결에 대한 자세한 정보를 제공하기 위해 포함할 수 있는 속성입니다. |
 | `connectionSpec.id` | 소스의 연결 사양 ID입니다. 이 ID는 [!DNL Flow Service] API. |
 | `auth.specName` | Platform에 소스를 인증하는 데 사용하는 인증 유형입니다. |
-| `auth.params.host` | 연결하는 데 사용되는 루트 URL입니다 [!DNL Mailchimp] API. 루트 URL의 형식은 다음과 같습니다 `https://{DC}.api.mailchimp.com`, 위치 `{DC}` 계정에 해당하는 데이터 센터를 나타냅니다. |
 | `auth.params.authorizationTestUrl` | (선택 사항) 기본 연결을 만들 때 인증 테스트 URL을 사용하여 자격 증명을 확인합니다. 지정하지 않으면 소스 연결 생성 단계 동안 자격 증명이 자동으로 선택됩니다. |
 | `auth.params.accessToken` | 소스를 인증하는 데 사용되는 해당 액세스 토큰. OAuth 기반 인증에 필요합니다. |
 
@@ -546,308 +542,26 @@ curl -X POST \
 }
 ```
 
-## 데이터 흐름 모니터링
+## 부록
 
-데이터 흐름을 만든 후에는 데이터 흐름을 통해 수집 중인 데이터를 모니터링하여 흐름 실행, 완료 상태 및 오류에 대한 정보를 볼 수 있습니다.
+다음 섹션에서는 데이터 흐름을 모니터링, 업데이트 및 삭제할 수 있는 단계에 대한 정보를 제공합니다.
 
-**API 형식**
+### 데이터 흐름 모니터링
 
-```http
-GET /runs?property=flowId=={FLOW_ID}
-```
+데이터 흐름을 만든 후에는 데이터 흐름을 통해 수집 중인 데이터를 모니터링하여 흐름 실행, 완료 상태 및 오류에 대한 정보를 볼 수 있습니다. 전체 API 예는 다음 안내서를 참조하십시오. [API를 사용하여 소스 데이터 흐름 모니터링](../../monitor.md).
 
-**요청**
+### 데이터 흐름 업데이트
 
-다음 요청은 기존 데이터 흐름의 사양을 검색합니다.
+PATCH 요청을 수행하여 데이터 흐름의 세부 정보(예: 이름 및 설명)와 해당 실행 일정 및 관련 매핑 세트를 업데이트합니다 `/flows` 끝점 [!DNL Flow Service] API, 데이터 흐름의 ID를 제공합니다. PATCH 요청을 만들 때 데이터 흐름의 고유한 정보를 제공해야 합니다 `etag` 에서 `If-Match` 헤더. 전체 API 예는 다음 안내서를 참조하십시오. [api를 사용하여 소스 데이터 흐름 업데이트](../../update-dataflows.md).
 
-```shell
-curl -X GET \
-  'https://platform.adobe.io/data/foundation/flowservice/runs?property=flowId==993f908f-3342-4d9c-9f3c-5aa9a189ca1a' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
+### 계정 업데이트
 
-**응답**
+에 PATCH 요청을 수행하여 소스 계정의 이름, 설명 및 자격 증명을 업데이트합니다 [!DNL Flow Service] 기본 연결 ID를 쿼리 매개 변수로 제공하는 동안 API입니다. PATCH 요청을 만들 때 소스 계정의 고유한 `etag` 에서 `If-Match` 헤더. 전체 API 예는 다음 안내서를 참조하십시오. [API를 사용하여 소스 계정 업데이트](../../update.md).
 
-성공적인 응답은 생성 날짜, 소스 및 대상 연결에 대한 정보, 흐름 실행의 고유 식별자(`id`).
+### 데이터 흐름 삭제
 
-```json
-{
-    "items": [
-        {
-            "id": "209812ad-7bef-430c-b5b2-a648aae72094",
-            "createdAt": 1633044829955,
-            "updatedAt": 1633044838006,
-            "createdBy": "{CREATED_BY}",
-            "updatedBy": "{UPDATED_BY}",
-            "createdClient": "{CREATED_CLIENT}",
-            "updatedClient": "{UPDATED_CLIENT}",
-            "sandboxId": "{SANDBOX_ID}",
-            "sandboxName": "{SANDBOX_NAME}",
-            "imsOrgId": "{ORG_ID}",
-            "name": "MailChimp Campaign dataflow",
-            "description": "MailChimp Campaign dataflow",
-            "flowSpec": {
-                "id": "6499120c-0b15-42dc-936e-847ea3c24d72",
-                "version": "1.0"
-            },
-            "state": "enabled",
-            "version": "\"7e01322c-0000-0200-0000-615b5d520000\"",
-            "etag": "\"7e01322c-0000-0200-0000-615b5d520000\"",
-            "sourceConnectionIds": [
-                "d6557bf1-7347-415f-964c-9316bd4cbf56"
-            ],
-            "targetConnectionIds": [
-                "9463fe9c-027d-4347-a423-894fcd105647"
-            ],
-            "inheritedAttributes": {
-                "sourceConnections": [
-                    {
-                        "id": "d6557bf1-7347-415f-964c-9316bd4cbf56",
-                        "connectionSpec": {
-                            "id": "c8ce8c8c-37fb-4162-9fbf-c2f181e04a7a",
-                            "version": "1.0"
-                        },
-                        "baseConnection": {
-                            "id": "9601747c-6874-4c02-bb00-5732a8c43086",
-                            "connectionSpec": {
-                                "id": "c8ce8c8c-37fb-4162-9fbf-c2f181e04a7a",
-                                "version": "1.0"
-                            }
-                        }
-                    }
-                ],
-                "targetConnections": [
-                    {
-                        "id": "9463fe9c-027d-4347-a423-894fcd105647",
-                        "connectionSpec": {
-                            "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
-                            "version": "1.0"
-                        }
-                    }
-                ]
-            },
-            "scheduleParams": {
-                "startTime": "1633377385",
-                "frequency": "minute",
-                "interval": 15
-            },
-            "runs": "/flows/be2d5249-eeaf-4a74-bdbd-b7bf62f7b2da/runs",
-            "lastOperation": {
-                "started": 1633377421476,
-                "updated": 0,
-                "operation": "create"
-            },
-            "lastRunDetails": {
-                "id": "84f95788-3e83-4ce0-8e45-c0a89117c6f1",
-                "state": "failed",
-                "startedAtUTC": 1633377445979,
-                "completedAtUTC": 1633377487082
-            }
-        }
-    ]
-}
-```
+에 DELETE 요청을 수행하여 데이터 흐름을 삭제합니다. [!DNL Flow Service] 삭제할 데이터 흐름의 ID를 쿼리 매개 변수의 일부로 제공하는 API입니다. 전체 API 예는 다음 안내서를 참조하십시오. [API를 사용하여 데이터 흐름 삭제](../../delete-dataflows.md).
 
-| 속성 | 설명 |
-| -------- | ----------- |
-| `items` | 특정 흐름 실행과 연결된 메타데이터의 단일 페이로드를 포함합니다. |
-| `id` | 데이터 흐름과 해당하는 ID를 표시합니다. |
-| `state` | 데이터 흐름의 현재 상태를 표시합니다. |
-| `inheritedAttributes` | 해당 기본, 소스 및 타겟 연결에 대한 ID와 같이 흐름을 정의하는 속성을 포함합니다. |
-| `scheduleParams` | 데이터 흐름의 수집 일정(예: 시작 시간(epoch 시간), 빈도 및 간격)에 대한 정보를 포함합니다. |
-| `transformations` | 데이터 집합에 적용되는 변형 속성에 대한 정보를 포함합니다. |
-| `runs` | 흐름의 해당 실행 ID를 표시합니다. 이 ID를 사용하여 특정 흐름 실행을 모니터링할 수 있습니다. |
+### 계정 삭제
 
-## 데이터 흐름 업데이트
-
-데이터 흐름의 실행 일정, 이름 및 설명을 업데이트하려면 [!DNL Flow Service] 플로우 ID, 버전 및 사용할 새 일정을 제공하는 API입니다.
-
->[!IMPORTANT]
->
->다음 `If-Match` PATCH 요청을 만들 때는 헤더가 필요합니다. 이 헤더의 값은 업데이트할 연결의 고유한 버전입니다.
-
-**API 형식**
-
-```http
-PATCH /flows/{FLOW_ID}
-```
-
-**요청**
-
-다음 요청은 흐름 실행 일정과 데이터 흐름의 이름과 설명을 업데이트합니다.
-
-```shell
-curl -X PATCH \
-  'https://platform.adobe.io/data/foundation/flowservice/flows/209812ad-7bef-430c-b5b2-a648aae72094' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-  -H 'If-Match: "2e01f11d-0000-0200-0000-615649660000"' \
-  -d '[
-          {
-              "op": "replace",
-              "path": "/scheduleParams/frequency",
-              "value": "day"
-          },
-          {
-              "op": "replace",
-              "path": "/name",
-              "value": "MailChimp Campaign Dataflow 2.0"
-          },
-          {
-              "op": "replace",
-              "path": "/description",
-              "value": "MailChimp Campaign Dataflow Updated"
-          }
-      ]'
-```
-
-| 매개 변수 | 설명 |
-| --------- | ----------- |
-| `op` | 데이터 흐름을 업데이트하는 데 필요한 작업을 정의하는 데 사용되는 작업 호출입니다. 작업은 다음과 같습니다. `add`, `replace`, 및 `remove`. |
-| `path` | 업데이트할 매개 변수의 경로입니다. |
-| `value` | 매개 변수를 업데이트할 새 값입니다. |
-
-**응답**
-
-성공적인 응답은 플로우 ID와 업데이트된 태그를 반환합니다. 에 GET 요청을 수행하여 업데이트를 확인할 수 있습니다 [!DNL Flow Service] 흐름 ID를 제공하는 동안 API를 사용하여 규칙 세트를 단순화하는 것이 좋습니다.
-
-```json
-{
-    "id": "209812ad-7bef-430c-b5b2-a648aae72094",
-    "etag": "\"50014cc8-0000-0200-0000-6036eb720000\""
-}
-```
-
-## 데이터 흐름 삭제
-
-기존 흐름 ID를 사용하는 경우, [!DNL Flow Service] API.
-
-**API 형식**
-
-```http
-DELETE /flows/{FLOW_ID}
-```
-
-| 매개 변수 | 설명 |
-| --------- | ----------- |
-| `{FLOW_ID}` | 고유 `id` 삭제할 데이터 흐름 값입니다. |
-
-**요청**
-
-```shell
-curl -X DELETE \
-  'https://platform.adobe.io/data/foundation/flowservice/flows/209812ad-7bef-430c-b5b2-a648aae72094' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**응답**
-
-성공적인 응답은 HTTP 상태 204(컨텐츠 없음) 및 빈 본문을 반환합니다. 데이터 플로우에 조회(GET) 요청을 시도하여 삭제를 확인할 수 있습니다. API가 HTTP 404(찾을 수 없음) 오류를 반환하여 데이터 흐름이 삭제되었음을 나타냅니다.
-
-## 연결 업데이트
-
-연결의 이름, 설명 및 자격 증명을 업데이트하려면 [!DNL Flow Service] 기본 연결 ID, 버전 및 사용할 새 정보를 제공하는 동안 API입니다.
-
->[!IMPORTANT]
->
->다음 `If-Match` PATCH 요청을 만들 때는 헤더가 필요합니다. 이 헤더의 값은 업데이트할 연결의 고유한 버전입니다.
-
-**API 형식**
-
-```http
-PATCH /connections/{BASE_CONNECTION_ID}
-```
-
-| 매개 변수 | 설명 |
-| --------- | ----------- |
-| `{BASE_CONNECTION_ID}` | 고유 `id` 업데이트할 연결의 값입니다. |
-
-**요청**
-
-다음 요청에서는 연결을 업데이트할 새 이름 및 설명과 새 자격 증명 세트를 제공합니다.
-
-```shell
-curl -X PATCH \
-  'https://platform.adobe.io/data/foundation/flowservice/connections/4cea039f-f1cc-4fa5-9136-db8dd4c7fbfa' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-  -H 'If-Match: 4000cff7-0000-0200-0000-6154bad60000' \
-  -d '[
-      {
-          "op": "replace",
-          "path": "/auth/params",
-          "value": {
-              "username": "mailchimp-member-activity-user",
-              "password": "{NEW_PASSWORD}"
-          }
-      },
-      {
-          "op": "replace",
-          "path": "/name",
-          "value": "MailChimp Campaign Connection 2.0"
-      },
-      {
-          "op": "add",
-          "path": "/description",
-          "value": "Updated MailChimp Campaign Connection"
-      }
-  ]'
-```
-
-| 매개 변수 | 설명 |
-| --------- | ----------- |
-| `op` | 연결을 업데이트하는 데 필요한 작업을 정의하는 데 사용되는 작업 호출입니다. 작업은 다음과 같습니다. `add`, `replace`, 및 `remove`. |
-| `path` | 업데이트할 매개 변수의 경로입니다. |
-| `value` | 매개 변수를 업데이트할 새 값입니다. |
-
-**응답**
-
-성공적인 응답은 기본 연결 ID와 업데이트된 태그를 반환합니다. 에 GET 요청을 수행하여 업데이트를 확인할 수 있습니다 [!DNL Flow Service] API, 연결 ID를 제공하는 동안
-
-```json
-{
-    "id": "4cea039f-f1cc-4fa5-9136-db8dd4c7fbfa",
-    "etag": "\"3600e378-0000-0200-0000-5f40212f0000\""
-}
-```
-
-## 연결 삭제
-
-기존 기본 연결 ID가 있는 경우, 다음에 대한 DELETE 요청을 수행합니다 [!DNL Flow Service] API.
-
-**API 형식**
-
-```http
-DELETE /connections/{CONNECTION_ID}
-```
-
-| 매개 변수 | 설명 |
-| --------- | ----------- |
-| `{BASE_CONNECTION_ID}` | 고유 `id` 삭제할 기본 연결 값입니다. |
-
-**요청**
-
-```shell
-curl -X DELETE \
-  'https://platform.adobe.io/data/foundation/flowservice/connections/4cea039f-f1cc-4fa5-9136-db8dd4c7fbfa' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**응답**
-
-성공적인 응답은 HTTP 상태 204(컨텐츠 없음) 및 빈 본문을 반환합니다.
-
-연결에 조회(GET) 요청을 시도하여 삭제를 확인할 수 있습니다.
+에 DELETE 요청을 수행하여 계정을 삭제합니다. [!DNL Flow Service] 삭제할 계정의 기본 연결 ID를 제공하는 동안 API가 제공됩니다. 전체 API 예는 다음 안내서를 참조하십시오. [API를 사용하여 소스 계정 삭제](../../delete.md).

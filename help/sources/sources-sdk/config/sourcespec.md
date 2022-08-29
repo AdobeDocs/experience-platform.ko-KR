@@ -4,10 +4,10 @@ title: 셀프 서비스 소스(배치 SDK)에 대한 소스 사양 구성
 topic-legacy: overview
 description: 이 문서에서는 셀프 서비스 소스(배치 SDK)를 사용하기 위해 준비해야 하는 구성에 대한 개요를 제공합니다.
 exl-id: f814c883-b529-4ecc-bedd-f638bf0014b5
-source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
+source-git-commit: adaa0e1a63536bc1fdf751eec477e5cda9fd20ae
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1690'
+ht-degree: 1%
 
 ---
 
@@ -48,7 +48,8 @@ ht-degree: 0%
           "properties": {
             "host": {
               "type": "string",
-              "description": "Enter resource url host path."
+              "description": "Enter resource url host path.",
+              "example": "https://{domain}.api.mailchimp.com"
             },
             "path": {
               "type": "string",
@@ -69,6 +70,7 @@ ht-degree: 0%
             }
           },
           "required": [
+            "host",
             "path",
             "method"
           ]
@@ -336,6 +338,7 @@ ht-degree: 0%
         }
       },
       "urlParams": {
+        "host": "https://{domain}.api.mailchimp.com",
         "path": "/3.0/lists/${listId}/members",
         "method": "GET"
       },

@@ -3,10 +3,10 @@ keywords: Experience Platform;홈;인기 항목;소스;커넥터;소스 커넥�
 title: (베타) Flow Service API를 사용하여 Mixpanel용 소스 연결 및 데이터 흐름 만들기
 description: Flow Service API를 사용하여 Adobe Experience Platform을 Mixpanel에 연결하는 방법을 알아봅니다.
 exl-id: 804b876d-6fd5-4a28-b33c-4ecab1ba3333
-source-git-commit: e44f6d5bb2fd891a3e3b3c5e4aed68e8d4687b53
+source-git-commit: 23a6f8ee23fb67290a5bcba2673a87ce74c9e1d3
 workflow-type: tm+mt
-source-wordcount: '2391'
-ht-degree: 2%
+source-wordcount: '2050'
+ht-degree: 1%
 
 ---
 
@@ -33,7 +33,6 @@ ht-degree: 2%
 
 | 자격 증명 | 설명 | 예 |
 | --- | --- | --- |
-| `host` | 다음 [!DNL Mixpanel] 원시 데이터 내보내기 API 엔드포인트. 자세한 내용은 [!DNL Raw Data Export API] 의 섹션 [Mixpanel API 참조 설명서](https://developer.mixpanel.com/reference/overview) 추가 정보. | `https://data.mixpanel.com` |
 | `username` | 사용자 이름과 일치하는 서비스 계정 사용자 이름 [!DNL Mixpanel] 계정이 필요합니다. 자세한 내용은 [[!DNL Mixpanel] 서비스 계정 설명서](https://developer.mixpanel.com/reference/service-accounts#authenticating-with-a-service-account) 추가 정보. | `Test8.6d4ee7.mp-service-account` |
 | `password` | 사용자의 [!DNL Mixpanel] 계정이 필요합니다. | `dLlidiKHpCZtJhQDyN2RECKudMeTItX1` |
 | `projectId` | 사용자 [!DNL Mixpanel] 프로젝트 ID. 이 ID는 소스 연결을 만드는 데 필요합니다. 자세한 내용은 [[!DNL Mixpanel] 프로젝트 설정 설명서](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) 그리고 [[!DNL Mixpanel] 프로젝트 생성 및 관리 안내서](https://help.mixpanel.com/hc/en-us/articles/115004505106-Create-and-Manage-Projects) 추가 정보. | `2384945` |
@@ -75,7 +74,6 @@ curl -X POST \
       "auth": {
           "specName": "Basic Authentication",
           "params": {
-              "host": "https://data.mixpanel.com",
               "username": "{USERNAME}",
               "password": "{PASSWORD}"
           }
@@ -90,7 +88,6 @@ curl -X POST \
 | `connectionSpec.id` | 소스의 연결 사양 ID입니다. 이 ID는 소스를 등록하고 [!DNL Flow Service] API. |
 | `auth.specName` | Platform에 소스를 인증하는 데 사용하는 인증 유형입니다. |
 | `auth.params.` | 소스를 인증하는 데 필요한 자격 증명을 포함합니다. |
-| `auth.params.host` | 등록 프로세스 중에 만든 계정에 대한 고유 도메인입니다. |
 | `auth.params.username` | 사용자 이름과 일치하는 사용자 이름 [!DNL Mixpanel] 계정이 필요합니다. |
 | `auth.params.password` | 사용자의 [!DNL Mixpanel] 계정이 필요합니다. |
 
@@ -672,392 +669,26 @@ curl -X POST \
 }
 ```
 
-## 데이터 흐름 모니터링
+## 부록
 
-데이터 흐름을 만든 후에는 데이터 흐름을 통해 수집 중인 데이터를 모니터링하여 흐름 실행, 완료 상태 및 오류에 대한 정보를 볼 수 있습니다.
+다음 섹션에서는 데이터 흐름을 모니터링, 업데이트 및 삭제할 수 있는 단계에 대한 정보를 제공합니다.
 
-**API 형식**
+### 데이터 흐름 모니터링
 
-```http
-GET /runs?property=flowId=={FLOW_ID}
-```
+데이터 흐름을 만든 후에는 데이터 흐름을 통해 수집 중인 데이터를 모니터링하여 흐름 실행, 완료 상태 및 오류에 대한 정보를 볼 수 있습니다. 전체 API 예는 다음 안내서를 참조하십시오. [API를 사용하여 소스 데이터 흐름 모니터링](../../monitor.md).
 
-**요청**
+### 데이터 흐름 업데이트
 
-다음 요청은 기존 데이터 흐름의 사양을 검색합니다.
+PATCH 요청을 수행하여 데이터 흐름의 세부 정보(예: 이름 및 설명)와 해당 실행 일정 및 관련 매핑 세트를 업데이트합니다 `/flows` 끝점 [!DNL Flow Service] API, 데이터 흐름의 ID를 제공합니다. PATCH 요청을 만들 때 데이터 흐름의 고유한 정보를 제공해야 합니다 `etag` 에서 `If-Match` 헤더. 전체 API 예는 다음 안내서를 참조하십시오. [api를 사용하여 소스 데이터 흐름 업데이트](../../update-dataflows.md).
 
-```shell
-curl -X GET \
-    'https://platform.adobe.io/data/foundation/flowservice/runs?property=flowId==993f908f-3342-4d9c-9f3c-5aa9a189ca1a' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
+### 계정 업데이트
 
-**응답**
+에 PATCH 요청을 수행하여 소스 계정의 이름, 설명 및 자격 증명을 업데이트합니다 [!DNL Flow Service] 기본 연결 ID를 쿼리 매개 변수로 제공하는 동안 API입니다. PATCH 요청을 만들 때 소스 계정의 고유한 `etag` 에서 `If-Match` 헤더. 전체 API 예는 다음 안내서를 참조하십시오. [API를 사용하여 소스 계정 업데이트](../../update.md).
 
-성공적인 응답은 생성 날짜, 소스 및 대상 연결에 대한 정보, 흐름 실행의 고유 식별자(`id`).
+### 데이터 흐름 삭제
 
-```json
-{
-    "items": [
-        {
-            "createdAt": 1596656079576,
-            "updatedAt": 1596656113526,
-            "createdBy": "{CREATED_BY}",
-            "updatedBy": "{UPDATED_BY}",
-            "createdClient": "{CREATED_CLIENT}",
-            "updatedClient": "{UPDATED_CLIENT}",
-            "sandboxId": "1bd86660-c5da-11e9-93d4-6d5fc3a66a8e",
-            "sandboxName": "prod",
-            "id": "9830305a-985f-47d0-b030-5a985fd7d004",
-            "flowId": "993f908f-3342-4d9c-9f3c-5aa9a189ca1a",
-            "etag": "\"510bb1d4-8453-4034-b991-ab942e11dd8a\"",
-            "metrics": {
-                "durationSummary": {
-                    "startedAtUTC": 1596656058198,
-                    "completedAtUTC": 1596656113306
-                },
-                "sizeSummary": {
-                    "inputBytes": 24012,
-                    "outputBytes": 17128
-                },
-                "recordSummary": {
-                    "inputRecordCount": 100,
-                    "outputRecordCount": 99,
-                    "failedRecordCount": 1
-                },
-                "fileSummary": {
-                    "inputFileCount": 1,
-                    "outputFileCount": 1,
-                    "activityRefs": [
-                        "promotionActivity"
-                    ]
-                },
-                "statusSummary": {
-                    "status": "success",
-                    "errors": [
-                        {
-                            "code": "CONNECTOR-2001-500",
-                            "message": "Error occurred at promotion activity."
-                        }
-                    ],
-                    "activityRefs": [
-                        "promotionActivity"
-                    ]
-                }
-            },
-            "activities": [
-                {
-                    "id": "copyActivity",
-                    "updatedAtUTC": 1596656095088,
-                    "durationSummary": {
-                        "startedAtUTC": 1596656058198,
-                        "completedAtUTC": 1596656089650,
-                        "extensions": {
-                            "windowStart": 1596653708000,
-                            "windowEnd": 1596655508000
-                        }
-                    },
-                    "sizeSummary": {
-                        "inputBytes": 24012,
-                        "outputBytes": 24012
-                    },
-                    "recordSummary": {},
-                    "fileSummary": {
-                        "inputFileCount": 1,
-                        "outputFileCount": 1
-                    },
-                    "statusSummary": {
-                        "status": "success",
-                        "extensions": {
-                            "type": "one-time"
-                        }
-                    },
-                    "sourceInfo": [
-                        {
-                            "id": "c0e18602-f9ea-44f9-a186-02f9ea64f9ac",
-                            "type": "SourceConnection",
-                            "reference": {
-                                "type": "AdfRunId",
-                                "ids": [
-                                    "8a8eb0cc-e283-4605-ac70-65a5adb1baef"
-                                ]
-                            }
-                        }
-                    ]
-                },
-                {
-                    "id": "promotionActivity",
-                    "updatedAtUTC": 1596656113485,
-                    "durationSummary": {
-                        "startedAtUTC": 1596656095333,
-                        "completedAtUTC": 1596656113306
-                    },
-                    "sizeSummary": {
-                        "inputBytes": 24012,
-                        "outputBytes": 17128
-                    },
-                    "recordSummary": {
-                        "inputRecordCount": 100,
-                        "outputRecordCount": 99,
-                        "failedRecordCount": 1
-                    },
-                    "fileSummary": {
-                        "inputFileCount": 2,
-                        "outputFileCount": 1,
-                        "extensions": {
-                            "manifest": {
-                                "fileInfo": "https://platform.adobe.io/data/foundation/export/batches/01EF01X41KJD82Y9ZX6ET54PCZ/meta?path=input_files"
-                            }
-                        }
-                    },
-                    "statusSummary": {
-                        "status": "success",
-                        "errors": [
-                            {
-                                "code": "CONNECTOR-2001-500",
-                                "message": "Error occurred at promotion activity."
-                            }
-                        ],
-                        "extensions": {
-                            "manifest": {
-                                "failedRecords": "https://platform.adobe.io/data/foundation/export/batches/01EF01X41KJD82Y9ZX6ET54PCZ/meta?path=row_errors",
-                                "sampleErrors": "https://platform.adobe.io/data/foundation/export/batches/01EF01X41KJD82Y9ZX6ET54PCZ/meta?path=row_error_samples.json"
-                            },
-                            "errors": [
-                                {
-                                    "code": "INGEST-1212-400",
-                                    "message": "Encountered 1 errors in the data. Successfully ingested 99 rows. Review the associated diagnostic files for additional details."
-                                },
-                                {
-                                    "code": "MAPPER-3700-400",
-                                    "recordCount": 1,
-                                    "message": "Mapper Transform Error"
-                                }
-                            ]
-                        }
-                    },
-                    "targetInfo": [
-                        {
-                            "id": "47166b83-01c7-4b65-966b-8301c70b6562",
-                            "type": "TargetConnection",
-                            "reference": {
-                                "type": "Batch",
-                                "ids": [
-                                    "01EF01X41KJD82Y9ZX6ET54PCZ"
-                                ]
-                            }
-                        }
-                    ]
-                }
-            ]
-        }
-    ],
-    "_links": {}
-}
-```
+에 DELETE 요청을 수행하여 데이터 흐름을 삭제합니다. [!DNL Flow Service] 삭제할 데이터 흐름의 ID를 쿼리 매개 변수의 일부로 제공하는 API입니다. 전체 API 예는 다음 안내서를 참조하십시오. [API를 사용하여 데이터 흐름 삭제](../../delete-dataflows.md).
 
-| 속성 | 설명 |
-| -------- | ----------- |
-| `items` | 특정 흐름 실행과 연결된 메타데이터의 단일 페이로드를 포함합니다. |
-| `metrics` | 흐름 실행에서 데이터의 특성을 정의합니다. |
-| `activities` | 데이터가 변형되는 방법을 정의합니다. |
-| `durationSummary` | 흐름 실행의 시작 및 종료 시간을 정의합니다. |
-| `sizeSummary` | 데이터의 볼륨을 바이트 단위로 정의합니다. |
-| `recordSummary` | 데이터의 레코드 수를 정의합니다. |
-| `fileSummary` | 데이터의 파일 개수를 정의합니다. |
-| `statusSummary` | 흐름 실행이 성공인지 실패인지를 정의합니다. |
+### 계정 삭제
 
-## 데이터 흐름 업데이트
-
-데이터 흐름의 실행 일정, 이름 및 설명을 업데이트하려면 [!DNL Flow Service] 플로우 ID, 버전 및 사용할 새 일정을 제공하는 API입니다.
-
->[!IMPORTANT]
->
->다음 `If-Match` PATCH 요청을 만들 때는 헤더가 필요합니다. 이 헤더의 값은 업데이트할 데이터 흐름의 고유한 문자열입니다.
-
-**API 형식**
-
-```http
-PATCH /flows/{FLOW_ID}
-```
-
-**요청**
-
-다음 요청은 흐름 실행 일정과 데이터 흐름의 이름과 설명을 업데이트합니다.
-
-```shell
-curl -X PATCH \
-    'https://platform.adobe.io/data/foundation/flowservice/flows/993f908f-3342-4d9c-9f3c-5aa9a189ca1a' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-    -H 'If-Match: "1a0037e4-0000-0200-0000-602e06f60000"' \
-    -d '[
-            {
-                "op": "replace",
-                "path": "/scheduleParams/frequency",
-                "value": "day"
-            },
-            {
-                "op": "replace",
-                "path": "/name",
-                "value": "New dataflow name"
-            },
-            {
-                "op": "replace",
-                "path": "/description",
-                "value": "Updated dataflow description"
-            }
-        ]'
-```
-
-| 매개 변수 | 설명 |
-| --------- | ----------- |
-| `op` | 데이터 흐름을 업데이트하는 데 필요한 작업을 정의하는 데 사용되는 작업 호출입니다. 작업은 다음과 같습니다. `add`, `replace`, 및 `remove`. |
-| `path` | 업데이트할 매개 변수의 경로입니다. |
-| `value` | 매개 변수를 업데이트할 새 값입니다. |
-
-**응답**
-
-성공적인 응답은 플로우 ID와 업데이트된 태그를 반환합니다. 에 GET 요청을 수행하여 업데이트를 확인할 수 있습니다 [!DNL Flow Service] 흐름 ID를 제공하는 동안 API를 사용하여 규칙 세트를 단순화하는 것이 좋습니다.
-
-```json
-{
-    "id": "993f908f-3342-4d9c-9f3c-5aa9a189ca1a",
-    "etag": "\"50014cc8-0000-0200-0000-6036eb720000\""
-}
-```
-
-## 데이터 흐름 삭제
-
-기존 흐름 ID를 사용하는 경우, [!DNL Flow Service] API.
-
-**API 형식**
-
-```http
-DELETE /flows/{FLOW_ID}
-```
-
-| 매개 변수 | 설명 |
-| --------- | ----------- |
-| `{FLOW_ID}` | 고유 `id` 삭제할 데이터 흐름 값입니다. |
-
-**요청**
-
-```shell
-curl -X DELETE \
-    'https://platform.adobe.io/data/foundation/flowservice/flows/993f908f-3342-4d9c-9f3c-5aa9a189ca1a' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**응답**
-
-성공적인 응답은 HTTP 상태 204(컨텐츠 없음) 및 빈 본문을 반환합니다. 데이터 플로우에 조회(GET) 요청을 시도하여 삭제를 확인할 수 있습니다. API가 HTTP 404(찾을 수 없음) 오류를 반환하여 데이터 흐름이 삭제되었음을 나타냅니다.
-
-## 연결 업데이트
-
-연결의 이름, 설명 및 자격 증명을 업데이트하려면 [!DNL Flow Service] 기본 연결 ID, 버전 및 사용할 새 정보를 제공하는 동안 API입니다.
-
->[!IMPORTANT]
->
->다음 `If-Match` PATCH 요청을 만들 때는 헤더가 필요합니다. 이 헤더의 값은 업데이트할 연결의 고유한 버전입니다.
-
-**API 형식**
-
-```http
-PATCH /connections/{BASE_CONNECTION_ID}
-```
-
-| 매개 변수 | 설명 |
-| --------- | ----------- |
-| `{BASE_CONNECTION_ID}` | 고유 `id` 업데이트할 연결의 값입니다. |
-
-**요청**
-
-다음 요청에서는 연결을 업데이트할 새 이름 및 설명과 새 자격 증명 세트를 제공합니다.
-
-```shell
-curl -X PATCH \
-    'https://platform.adobe.io/data/foundation/flowservice/connections/139f6a5f-a78b-4744-9f6a-5fa78bd74431' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-    -H 'If-Match: 1400dd53-0000-0200-0000-5f3f23450000' \
-    -d '[
-        {
-            "op": "replace",
-            "path": "/auth/params",
-            "value": {
-                "username": "salesforce-connector-username",
-                "password": "{NEW_PASSWORD}",
-                "securityToken": "{NEW_SECURITY_TOKEN}"
-            }
-        },
-        {
-            "op": "replace",
-            "path": "/name",
-            "value": "Test salesforce connection"
-        },
-        {
-            "op": "add",
-            "path": "/description",
-            "value": "A test salesforce connection"
-        }
-    ]'
-```
-
-| 매개 변수 | 설명 |
-| --------- | ----------- |
-| `op` | 연결을 업데이트하는 데 필요한 작업을 정의하는 데 사용되는 작업 호출입니다. 작업은 다음과 같습니다. `add`, `replace`, 및 `remove`. |
-| `path` | 업데이트할 매개 변수의 경로입니다. |
-| `value` | 매개 변수를 업데이트할 새 값입니다. |
-
-**응답**
-
-성공적인 응답은 기본 연결 ID와 업데이트된 태그를 반환합니다. 에 GET 요청을 수행하여 업데이트를 확인할 수 있습니다 [!DNL Flow Service] API, 연결 ID를 제공하는 동안
-
-```json
-{
-    "id": "139f6a5f-a78b-4744-9f6a-5fa78bd74431",
-    "etag": "\"3600e378-0000-0200-0000-5f40212f0000\""
-}
-```
-
-## 연결 삭제
-
-기존 기본 연결 ID가 있는 경우, 다음에 대한 DELETE 요청을 수행합니다 [!DNL Flow Service] API.
-
-**API 형식**
-
-```http
-DELETE /connections/{CONNECTION_ID}
-```
-
-| 매개 변수 | 설명 |
-| --------- | ----------- |
-| `{BASE_CONNECTION_ID}` | 고유 `id` 삭제할 기본 연결 값입니다. |
-
-**요청**
-
-```shell
-curl -X DELETE \
-    'https://platform.adobe.io/data/foundation/flowservice/connections/dd3631cd-d0ea-4fea-b631-cdd0ea6fea21' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**응답**
-
-성공적인 응답은 HTTP 상태 204(컨텐츠 없음) 및 빈 본문을 반환합니다.
-
-연결에 조회(GET) 요청을 시도하여 삭제를 확인할 수 있습니다.
+에 DELETE 요청을 수행하여 계정을 삭제합니다. [!DNL Flow Service] 삭제할 계정의 기본 연결 ID를 제공하는 동안 API가 제공됩니다. 전체 API 예는 다음 안내서를 참조하십시오. [API를 사용하여 소스 계정 삭제](../../delete.md).
