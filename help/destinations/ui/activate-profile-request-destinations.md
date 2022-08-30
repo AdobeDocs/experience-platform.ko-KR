@@ -4,9 +4,9 @@ title: 프로필 요청 대상에 대상 데이터 활성화
 type: Tutorial
 description: 세그먼트를 프로필 요청 대상에 매핑하여 Adobe Experience Platform에서 보유한 대상 데이터를 활성화하는 방법을 알아봅니다.
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: 26e7a3e78a4513aa69cdfbed7902509609e114cc
+source-git-commit: cda4591021c5b0a0bd6f43765d72b5867ec59aea
 workflow-type: tm+mt
-source-wordcount: '678'
+source-wordcount: '772'
 ht-degree: 0%
 
 ---
@@ -65,9 +65,23 @@ ht-degree: 0%
 
 ![속성이 선택된 매핑 단계를 보여주는 이미지](../assets/ui/activate-profile-request-destinations/mapping-step.png)
 
-속성을 추가하려면 **[!UICONTROL 새 필드 추가]** 아래와 같이 원하는 XDM 속성 필드를 제어 및 검색하거나 탐색합니다.
+### 소스 속성 선택 {#select-source-attributes}
 
-![매핑 단계에서 XDM 속성을 선택하는 방법을 보여주는 화면 기록](../assets/ui/activate-profile-request-destinations/mapping-step-select-attribute.gif)
+소스 속성을 추가하려면 **[!UICONTROL 새 필드 추가]** 제어 **[!UICONTROL 소스 필드]** 아래와 같이 열을 검색하고 원하는 XDM 속성 필드로 이동합니다.
+
+![매핑 단계에서 대상 속성을 선택하는 방법을 보여주는 화면 기록](../assets/ui/activate-profile-request-destinations/mapping-step-select-attribute.gif)
+
+### 타겟 속성 선택 {#select-target-attributes}
+
+>[!NOTE]
+>
+>일부 대상에서는 소스 속성만 선택하도록 하는 반면, 다른 대상에는 소스 및 타겟 속성이 모두 필요합니다.
+>
+>현재, [Adobe Target V2](../catalog/personalization/adobe-target-connection.md) 대상에 소스 속성만 필요하지만 [속성을 사용한 사용자 지정 개인화](../catalog/personalization/custom-personalization.md) 에는 소스 및 타겟 속성이 모두 필요합니다.
+
+대상 속성을 추가하려면 **[!UICONTROL 새 필드 추가]** 제어 **[!UICONTROL Target 필드]** 열 및 을 입력합니다.
+
+![매핑 단계에서 XDM 속성을 선택하는 방법을 보여주는 화면 기록](../assets/ui/activate-profile-request-destinations/mapping-step-select-target-attribute.gif)
 
 ## 세그먼트 내보내기 예약 {#scheduling}
 
