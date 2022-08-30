@@ -5,9 +5,9 @@ title: 쿼리 편집기 UI 안내서
 topic-legacy: query editor
 description: 쿼리 편집기는 Adobe Experience Platform 쿼리 서비스에서 제공하는 대화형 도구로서 Experience Platform 사용자 인터페이스 내에서 고객 경험 데이터에 대한 쿼리를 작성, 유효성 검사 및 실행할 수 있습니다. 쿼리 편집기는 분석 및 데이터 탐색을 위한 쿼리 개발을 지원하며, Experience Platform에서 데이터 세트를 채우기 위해 비대화형 쿼리는 물론 개발 목적으로 대화형 쿼리를 실행할 수 있도록 해줍니다.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: c8b3b22b678622c31462ba0baa2f50fbe89b00d5
+source-git-commit: b393311a4ddcfaab3f8ea2ccd517e0e3b32a268a
 workflow-type: tm+mt
-source-wordcount: '1625'
+source-wordcount: '1882'
 ht-degree: 1%
 
 ---
@@ -62,7 +62,37 @@ ht-degree: 1%
 
 - **테이블 및 필드 자동 완료:** 원하는 테이블 이름 입력 시작 `SELECT` 에서 화살표 키를 사용하여 원하는 테이블로 이동한 다음 키를 누릅니다 **Enter 키**. 테이블을 선택하면 자동 완성 기능이 해당 테이블의 필드를 인식합니다.
 
-![이미지](../images/ui/query-editor/tables-auto.png)
+![드롭다운 제안을 표시하는 쿼리 편집기 명령줄 인터페이스입니다.](../images/ui/query-editor/tables-auto.png)
+
+### (베타) 자동 완료 UI 구성 전환 {#auto-complete}
+
+>[!IMPORTANT]
+>
+>자동 완성 UI 구성 토글이 베타에 있습니다. 해당 기능과 설명서는 변경될 수 있습니다.
+
+다음 [!DNL Query Editor] 은(는) 생성할 때 쿼리에 대한 테이블 또는 열 세부 정보와 함께 잠재적 SQL 키워드를 자동으로 제안합니다. 자동 완성 기능은 기본적으로 활성화되어 있으며, [!UICONTROL 구문 자동 완성] 쿼리 편집기의 오른쪽 상단으로 전환합니다.
+
+자동 완료 구성 설정은 사용자별로 설정되며 해당 사용자에 대한 연속 로그인을 위해 기억됩니다.
+
+![구문 자동 완성 토글이 강조 표시된 쿼리 편집기.](../images/ui/query-editor/auto-complete-toggle.png)
+
+이 기능을 비활성화하면 여러 메타데이터 명령이 처리되지 않고 쿼리를 편집할 때 일반적으로 작성자의 속도에 도움이 되는 권장 사항을 제공할 수 없습니다.
+
+토글을 사용하여 자동 완료 기능을 활성화하면 짧은 일시 중지 후에 테이블 및 열 이름과 SQL 키워드를 위한 권장 제안을 사용할 수 있습니다. 쿼리 편집기 아래의 콘솔에 있는 성공 메시지는 기능이 활성화되어 있음을 나타냅니다.
+
+자동 완료 기능을 비활성화하는 경우 기능을 적용하려면 페이지를 새로 고쳐야 합니다. 을 비활성화하면 세 가지 옵션이 있는 확인 대화 상자가 나타납니다 [!UICONTROL 구문 자동 완성] 전환 :
+
+- [!UICONTROL 취소]
+- [!UICONTROL 변경 내용 저장 및 새로 고침]
+- [!UICONTROL 변경 내용을 저장하지 않고 새로 고침]
+
+>[!IMPORTANT]
+>
+>이 기능을 비활성화할 때 쿼리를 작성하거나 편집하는 경우 페이지를 새로 고치기 전에 쿼리에 변경 내용을 저장해야 합니다. 그렇지 않으면 모든 진행 상태가 손실됩니다.
+
+![자동 완료 기능을 비활성화하는 확인 대화 상자](../images/ui/query-editor/confirmation-dialog.png)
+
+자동 완료 기능을 비활성화하려면 적절한 옵션을 선택합니다.
 
 ### 오류 감지 {#error-detection}
 
