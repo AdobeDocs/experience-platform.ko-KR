@@ -3,9 +3,9 @@ title: 데이터 스트림 개요
 description: 클라이언트측 Experience Platform SDK 통합 기능을 Adobe 제품 및 서드파티 대상과 연결합니다.
 keywords: 구성;데이터 스트림;데이터 스트림 ID;에지;데이터 스트림 ID;환경 설정;edgeConfigId;id 동기화 사용;ID 동기화 컨테이너 ID;샌드박스;스트리밍 입력;이벤트 데이터 세트;대상;클라이언트 코드;Target 환경 ID;쿠키 대상;Analytics 설정 차단 보고서 세트 ID;데이터 수집을 위한 데이터 준비;데이터 수집;데이터 매퍼;XDM 매퍼;Edge의 매퍼;Mapper;Mapper
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
+source-git-commit: 45f5d23a671c8e015ca26e0d5025685255c2fc35
 workflow-type: tm+mt
-source-wordcount: '1774'
+source-wordcount: '1728'
 ht-degree: 2%
 
 ---
@@ -15,10 +15,6 @@ ht-degree: 2%
 데이터 스트림은 Adobe Experience Platform Web 및 Mobile SDK를 구현할 때 서버측 구성을 나타냅니다. 반면에 [명령 구성](../fundamentals/configuring-the-sdk.md) sdk에서 는 클라이언트(예: `edgeDomain`), 데이터 세트는 SDK에 대한 다른 모든 구성을 처리합니다. Adobe Experience Platform Edge Network에 요청이 전송되면 `edgeConfigId` 는 데이터 스트림을 참조하는 데 사용됩니다. 이렇게 하면 웹 사이트에서 코드를 변경하지 않고도 서버측 구성을 업데이트할 수 있습니다.
 
 이 문서에서는 Data Collection UI에서 데이터 스트림을 구성하는 절차에 대해 설명합니다.
-
->[!NOTE]
->
->UI에서 이 기능에 액세스하려면 조직에 이 기능이 제공되어야 합니다. 다음 사항을 기입하십시오 [양식](https://adobe.ly/websdkaccess) 필요한 액세스를 요청합니다. 데이터 저장소를 관리하려면 사용자 계정을 의 태그에 대한 제품 프로필에 추가해야 합니다 [!DNL Adobe Experience Platform].
 
 ## 액세스 권한 [!UICONTROL 데이터 스트림] 작업 영역
 

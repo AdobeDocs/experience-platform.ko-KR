@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 웹 SDK FAQ
 description: Adobe Experience Platform Web SDK에 대해 자주 묻는 질문에 대한 답변을 얻을 수 있습니다.
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: 95305c0a5df71295e1321eb4c8c28baa66c5d94d
+source-git-commit: 720960b7d63c30707f823fdfafc2299289ea0a11
 workflow-type: tm+mt
-source-wordcount: '1955'
+source-wordcount: '1935'
 ht-degree: 1%
 
 ---
@@ -46,7 +46,7 @@ Platform의 태그를 사용하면 이러한 라이브러리를 가능한 한 �
 
 ### Adobe Experience Platform Web SDK 사용
 
-새로운 웹 SDK는 다음 솔루션에 대한 데이터를 단일 대상(Adobe Experience Platform Edge Network)에 전송하고 앞서 언급한 가장 일반적인 솔루션 사용 사례를 위해 해결합니다.
+새 웹 SDK는 다음 솔루션에 대한 데이터를 단일 대상(Adobe Experience Platform Edge Network)에 전송하고 앞서 언급한 가장 일반적인 솔루션 사용 사례를 위해 해결합니다.
 
 * Adobe Analytics
 * Adobe Audience Manager
@@ -82,9 +82,9 @@ Alloy는 Adobe Experience Platform Web SDK의 코드 이름입니다. Adobe Expe
 
 ## 고객이 를 사용하려면 Adobe Experience Platform을 구입해야 합니까? [!DNL Web SDK]?
 
-아니요. 모든 Adobe 디지털 경험 고객은 Adobe Experience Platform Web SDK를 무료로 사용할 수 있습니다. 웹 SDK를 사용하려면 조직에 이 기능이 프로비저닝되어 있어야 합니다. 액세스 권한을 얻으려면 다음 사항을 기입하십시오 [양식](https://adobe.ly/websdkaccess) Adobe이 액세스 권한을 제공합니다. [데이터 스트림 UI](datastreams/overview.md) 및 Adobe Experience Platform UI(필요한 경우)를 참조하십시오.
+아니요. 모든 Adobe 디지털 경험 고객은 Adobe Experience Platform Web SDK를 무료로 사용할 수 있습니다. 를 사용하려는 고객 [!DNL Web SDK] 는 Adobe Experience Platform 데이터 수집 UI에서 스키마, 데이터 세트, ID 네임스페이스 및 데이터 세트를 만드는 올바른 권한을 구성해야 합니다.
 
-를 사용하려는 고객 [!DNL Web SDK] 에게 Adobe Experience Platform UI에서 스키마, 데이터 세트 및 ID 네임스페이스를 만들 수 있는 액세스 권한이 부여됩니다.
+이러한 권한 구성에 대한 자세한 내용은 [데이터 수집 권한 관리](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html?lang=en).
 
 ## 웹 SDK는 누가 사용해야 합니까?
 
@@ -133,7 +133,7 @@ Adobe Experience Platform Web SDK는 다음 사용자를 위해 개발되었습�
 
 아니요. 을 다운로드할 수 있습니다 `alloy.js` 직접 파일을 작성합니다.
 
-그러나,
+하지만
 
 * Adobe Experience Platform Web SDK를 사용하려면 Edge 네트워크가 스트림을 식별하고 데이터를 사용하여 수행할 작업을 결정할 수 있도록 데이터 스트림 ID라고 하는 것이 필요합니다. 이 ID는 Experience Platform 내에 만들어집니다. 이는 Data Collection UI를 사용하여 속성을 만들거나 JavaScript 코드를 배포해야 함을 의미하지는 않지만, 태그를 사용하여 구성 ID를 만들어야 합니다.
 
