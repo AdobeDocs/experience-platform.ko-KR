@@ -5,9 +5,9 @@ title: 쿼리 편집기 UI 안내서
 topic-legacy: query editor
 description: 쿼리 편집기는 Adobe Experience Platform 쿼리 서비스에서 제공하는 대화형 도구로서 Experience Platform 사용자 인터페이스 내에서 고객 경험 데이터에 대한 쿼리를 작성, 유효성 검사 및 실행할 수 있습니다. 쿼리 편집기는 분석 및 데이터 탐색을 위한 쿼리 개발을 지원하며, Experience Platform에서 데이터 세트를 채우기 위해 비대화형 쿼리는 물론 개발 목적으로 대화형 쿼리를 실행할 수 있도록 해줍니다.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: b393311a4ddcfaab3f8ea2ccd517e0e3b32a268a
+source-git-commit: b4f4549e49eb8b37bd4209c5bcf01c5622e8fbd1
 workflow-type: tm+mt
-source-wordcount: '1882'
+source-wordcount: '1865'
 ht-degree: 1%
 
 ---
@@ -64,11 +64,7 @@ ht-degree: 1%
 
 ![드롭다운 제안을 표시하는 쿼리 편집기 명령줄 인터페이스입니다.](../images/ui/query-editor/tables-auto.png)
 
-### (베타) 자동 완료 UI 구성 전환 {#auto-complete}
-
->[!IMPORTANT]
->
->자동 완성 UI 구성 토글이 베타에 있습니다. 해당 기능과 설명서는 변경될 수 있습니다.
+### 자동 완료 UI 구성 전환 {#auto-complete}
 
 다음 [!DNL Query Editor] 은(는) 생성할 때 쿼리에 대한 테이블 또는 열 세부 정보와 함께 잠재적 SQL 키워드를 자동으로 제안합니다. 자동 완성 기능은 기본적으로 활성화되어 있으며, [!UICONTROL 구문 자동 완성] 쿼리 편집기의 오른쪽 상단으로 전환합니다.
 
