@@ -4,9 +4,9 @@ title: 대상 대시보드 안내서
 description: Adobe Experience Platform은 조직의 활성 대상에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: e59ba2e83808b460016805997580dc16c4cd369e
+source-git-commit: 7a67ac4e1e8730197221832090c1414073399a1b
 workflow-type: tm+mt
-source-wordcount: '2670'
+source-wordcount: '2716'
 ht-degree: 0%
 
 ---
@@ -215,6 +215,10 @@ id 열은 위젯 ID 드롭다운에서 선택한 ID에 매핑할 수 있는 세�
 세그먼트 매핑 프로필 카운트가 지난 30일 동안 평균 매핑된 프로필 크기보다 하나의 표준 편차를 초과하는 경우, 이것은 시스템의 예외 항목을 나타내며 조사해야 합니다.
 
 세그먼트 내의 [!UICONTROL 매핑된 대상 상태] 위젯이 큰 여백에 의해 벗어납니다. 대상 크기 트렌드 차트를 참조하고 예외 항목 세그먼트를 찾아야 합니다. 트렌드는 세그먼트의 상태에 대한 더 많은 통찰력을 제공할 수 있습니다.
+
+>[!NOTE]
+>
+>매핑된 대상 상태 위젯의 기본 크기는 테이블 정보를 방해할 수 있습니다. 매핑된 세그먼트 이름 및 열 제목의 가독성을 개선하려면 위젯의 크기를 수정하십시오. 에 대한 지침은 대시보드 수정 설명서 를 참조하십시오 [위젯의 크기 조정 방법](../customize/modify.md).
 
 ![매핑된 대상 상태 위젯.](../images/destinations/mapped-audience-health.png)
 
