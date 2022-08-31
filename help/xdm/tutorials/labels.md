@@ -2,9 +2,9 @@
 title: 스키마에 대한 데이터 사용 레이블 관리
 description: Adobe Experience Platform UI의 XDM(Experience Data Model) 스키마 필드에 데이터 사용 레이블을 추가하는 방법을 알아봅니다.
 exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
-source-git-commit: 6c72e9dd5961d4dc94d8264a7da795ebd96c40ec
+source-git-commit: 3d49b5c503ec0fd92f0639abf366d7652566fac7
 workflow-type: tm+mt
-source-wordcount: '711'
+source-wordcount: '736'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,12 @@ Adobe Experience Platform으로 가져오는 모든 데이터는 XDM(Experience 
    * [스키마 편집기](../ui/overview.md): Platform UI에서 스키마 및 기타 리소스를 만들고 관리하는 방법을 알아봅니다.
 * [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): 레이블이 지정된 데이터에 대해 수행할 수 있거나 수행할 수 없는 마케팅 작업을 정의하는 정책을 사용하여 플랫폼 작업에 대한 데이터 사용 제한을 적용하기 위한 인프라를 제공합니다.
 
-## 레이블을 추가할 스키마나 필드를 선택합니다
+## 레이블을 추가할 스키마나 필드를 선택합니다 {#select-schema-field}
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_editgovernancelabels"
+>title="거버넌스 레이블 편집"
+>abstract="스키마 필드에 레이블을 적용하여 해당 특정 필드에 포함된 데이터에 적용되는 사용 정책을 나타냅니다."
 
 레이블 추가를 시작하려면 먼저 다음을 수행해야 합니다 [편집할 기존 스키마 선택](../ui/resources/schemas.md#edit) 또는 [새 스키마 만들기](../ui/resources/schemas.md#create) 스키마 편집기에서 해당 구조를 보려면 다음과 같이 하십시오.
 

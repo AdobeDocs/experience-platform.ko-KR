@@ -5,9 +5,9 @@ title: UI에서 데이터 사용 레이블 관리
 topic-legacy: labels
 description: 이 안내서에서는 Adobe Experience Platform 사용자 인터페이스 내에서 데이터 사용 레이블 작업을 수행하는 단계를 다룹니다.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: 3876af19ef100f29ef738cf7518696a57600945a
+source-git-commit: 3d49b5c503ec0fd92f0639abf366d7652566fac7
 workflow-type: tm+mt
-source-wordcount: '1186'
+source-wordcount: '1229'
 ht-degree: 0%
 
 ---
@@ -106,7 +106,12 @@ ht-degree: 0%
 
 다음에서 자습서를 참조하십시오. [스키마 수준 레이블 관리](../../xdm/tutorials/labels.md) 추가 정보.
 
-## 사용자 지정 레이블 관리
+## 사용자 지정 레이블 관리 {#manage-custom-labels}
+
+>[!CONTEXTUALHELP]
+>id="platform_governance_createlabels"
+>title="레이블 만들기"
+>abstract="레이블을 사용하면 해당 데이터에 적용되는 사용 정책에 따라 데이터 세트 및 필드를 분류할 수 있습니다. 플랫폼에서는 사용할 표준 레이블 세트를 제공하지만 조직 고유의 사용자 지정 레이블을 만들 수도 있습니다."
 
 내에서 고유한 사용자 지정 사용 레이블을 만들 수 있습니다 **[!UICONTROL 정책]** 작업 영역 [!DNL Experience Platform] UI. 선택 **[!UICONTROL 정책]** 왼쪽 탐색에서 를 선택하고 **[!UICONTROL 레이블]** 기존 레이블 목록을 보려면 여기에서 을 선택합니다. **[!UICONTROL 레이블 만들기]**.
 
