@@ -5,10 +5,10 @@ title: Experience Platform UI 개요
 topic-legacy: ui guide
 description: Adobe Experience Platform
 exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
-source-git-commit: 5fb7284760489fc526b5891d258c51ed20a2b095
+source-git-commit: 769e8e6e5d159254d34ad1d3e5e468c3b0bca10b
 workflow-type: tm+mt
-source-wordcount: '1809'
-ht-degree: 2%
+source-wordcount: '1812'
+ht-degree: 1%
 
 ---
 
@@ -134,7 +134,7 @@ Adobe Experience Platform에 로그인하면 [!UICONTROL 홈] 페이지, [지표
 
 다음 **[!UICONTROL ID]** 섹션에서 ID 네임스페이스를 만들고 관리할 수 있습니다. 에 대한 자세한 정보 [!UICONTROL ID] ID 네임스페이스와 Platform UI에서 ID를 사용하는 방법에 대한 정보가 포함된 섹션을 참조하십시오. [id 네임스페이스 개요](../identity-service/namespaces.md).
 
-### [!UICONTROL 개인 정보 보호]
+### [!UICONTROL 개인정보 보호]
 
 다음 **[!UICONTROL 정책]** 섹션에서 데이터 사용 정책을 만들고 관리할 수 있습니다. 정책 섹션을 사용하는 방법에 대한 자세한 내용은 [데이터 사용 정책 사용 안내서](../data-governance/policies/user-guide.md). 데이터 사용 정책에 대한 자세한 내용은 [데이터 사용 정책 개요](../data-governance/policies/overview.md).
 
@@ -160,7 +160,7 @@ Adobe Experience Platform에 로그인하면 [!UICONTROL 홈] 페이지, [지표
 
 ### [!UICONTROL 의사결정]
 
-Offer Decisioning 은 Adobe Experience Platform과 통합된 애플리케이션 서비스입니다. 이를 통해 Experience Platform을 사용하여 모든 터치 포인트에서 고객에게 최적의 오퍼와 경험을 적시에 제공할 수 있습니다. offer decisioning에 대한 자세한 내용은 다음을 참조하십시오 [!UICONTROL 오퍼] 및 [!UICONTROL 활동] 방문 [offer decisioning 설명서](https://experienceleague.adobe.com/docs/offer-decisioning.html).
+Adobe Journey Optimizer 는 Experience Platform 위에 구축된 애플리케이션 서비스입니다. 강력한 의사 결정 기술을 사용하여 모든 터치 포인트에서 고객에게 최상의 오퍼와 경험을 적시에 제공할 수 있습니다. 작업 등 Journey Optimizer에 대해 자세히 알아보려면 [!UICONTROL 오퍼] 및 [!UICONTROL 활동] 방문 [Journey Optimizer 설명서](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=ko).
 
 ### [!UICONTROL 관리]
 

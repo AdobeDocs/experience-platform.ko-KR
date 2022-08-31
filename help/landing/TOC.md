@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Adobe Experience Platform 개요
 breadcrumb-title: Experience Platform 개요
 user-guide-description: Experience Platform을 통해 개인화된 경험을 실시간으로 고객에게 전달하는 방법을 살펴볼 수 있습니다.
-source-git-commit: f456b28016af6d2978933deac68f45c2f8d37f80
+source-git-commit: 769e8e6e5d159254d34ad1d3e5e468c3b0bca10b
 workflow-type: tm+mt
-source-wordcount: '247'
-ht-degree: 27%
+source-wordcount: '248'
+ht-degree: 29%
 
 ---
 
@@ -40,11 +40,11 @@ ht-degree: 27%
    * [언어 지원](documentation/language-support.md)
 * 플랫폼 기반 애플리케이션 서비스 {#ecosystem}
    * [개요](application-services.md)
-   * [Customer Journey Analytics](https://experienceleague.adobe.com/docs/customer-journey-analytics.html)
-   * [Journey Orchestration](https://experienceleague.adobe.com/docs/journey-orchestration.html)
-   * [Offer Decisioning](https://experienceleague.adobe.com/docs/offer-decisioning.html)
    * [Real-time Customer Data Platform (모든 에디션)](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html)
    * [애플리케이션 및 지능형 서비스(비디오)](video/application-intelligent-services.md)
+   * [Customer Journey Analytics](https://experienceleague.adobe.com/docs/customer-journey-analytics.html)
+   * [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html)
+   * [Journey Orchestration](https://experienceleague.adobe.com/docs/journey-orchestration.html)
    * [Experience Cloud과 플랫폼 통합(비디오)](video/experience-cloud-integrations.md)
 * 거버넌스, 개인 정보 및 보안 {#governance-privacy-security}
    * [개요](./governance-privacy-security/overview.md)

@@ -5,7 +5,7 @@ title: Adobe Experience Platform 개요
 topic-legacy: getting started
 description: Adobe Experience Platform을 사용하면 데이터 과학 및 시스템 학습을 적용하여 풍부한 개인별 경험을 더 잘 설계하고 전달하기 전에 조직 내 고객 데이터와 컨텐츠를 중앙 집중화 및 표준화할 수 있습니다.
 exl-id: edcce353-338a-440e-99eb-a64e2abca579
-source-git-commit: 0e58db465b9e978d66325c4600ed78e81c03ae44
+source-git-commit: 769e8e6e5d159254d34ad1d3e5e468c3b0bca10b
 workflow-type: tm+mt
 source-wordcount: '437'
 ht-degree: 2%
@@ -28,11 +28,11 @@ RESTful API를 기반으로 하여, [!DNL Experience Platform] 친숙한 도구�
 
 Adobe은 Experience Platform 위에 여러 애플리케이션 서비스를 구축했습니다. 아래 링크된 자체 가이드에서 이러한 서비스에 대한 설명서를 찾을 수 있습니다.
 
-* [[!DNL Customer Journey Analytics]](https://experienceleague.adobe.com/docs/customer-journey-analytics.html)
-* [[!DNL Journey Orchestration]](https://experienceleague.adobe.com/docs/journey-orchestration.html)
-* [[!DNL Offer Decisioning]](https://experienceleague.adobe.com/docs/offer-decisioning.html)
 * [[!DNL Real-time Customer Data Platform (Real-time CDP)]](../rtcdp/overview.md)
 * [[!DNL Real-time Customer Data Platform (Real-time CDP) B2B Edition]](../rtcdp/b2b-overview.md)
+* [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer.html)
+* [[!DNL Customer Journey Analytics]](https://experienceleague.adobe.com/docs/customer-journey-analytics.html)
+* [[!DNL Journey Orchestration]](https://experienceleague.adobe.com/docs/journey-orchestration.html)
 
 ## [!DNL Experience Platform] 자습서
 
@@ -51,7 +51,7 @@ Adobe은 Experience Platform 위에 여러 애플리케이션 서비스를 구�
 * [**용어집**](glossary.md)\
    Adobe Experience Platform 용어를 검토합니다.
 
-* [**릴리스 정보**](https://www.adobe.com/go/platform-release-notes-en)\
+* [**년 릴리스 정보**](https://www.adobe.com/go/platform-release-notes-en)\
    최신 정보에 대한 정보 찾기 [!DNL Experience Platform] 이전 릴리스를 릴리스 및 검토합니다.
 
 * [**문제 해결 안내서**](troubleshooting.md)\
