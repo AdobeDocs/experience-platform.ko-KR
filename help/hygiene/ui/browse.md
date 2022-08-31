@@ -2,9 +2,9 @@
 title: 데이터 위생 작업 주문 찾아보기
 description: Adobe Experience Platform 사용자 인터페이스에서 기존 데이터 위생 작업 순서를 보고 관리하는 방법을 알아봅니다.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: 80f9f0c64f2af2c7ceea59bddab9a5d6b57bc882
+source-git-commit: f246a014de7869b627a677ac82e98d4556065010
 workflow-type: tm+mt
-source-wordcount: '517'
+source-wordcount: '616'
 ht-degree: 1%
 
 ---
@@ -55,25 +55,29 @@ ht-degree: 1%
 >title="서비스별 상태"
 >abstract="데이터 위생 요청은 여러 Experience Platform 서비스에서 독립적으로 처리됩니다. 이 섹션에서는 각 서비스에 대한 요청의 현재 처리 상태에 대해 설명합니다. 자세한 내용은 데이터 위생 UI 안내서를 참조하십시오."
 
+>[!CONTEXTUALHELP]
+>id="platform_hygiene_numberofidentities"
+>title="ID 수"
+>abstract="이 작업 순서의 일부로 삭제되도록 요청한 ID 수입니다. 개수에 포함된 ID가 영향을 받는 데이터 세트에 반드시 존재하지 않을 수 있습니다. 자세한 내용은 데이터 위생 UI 안내서를 참조하십시오."
+
+>[!CONTEXTUALHELP]
+>id="platform_hygiene_responsemessages"
+>title="소비자 삭제 응답"
+>abstract="소비자 삭제 프로세스가 시스템으로부터 응답을 받으면 이러한 메시지가 **[!UICONTROL 결과]** 섹션을 참조하십시오. 작업 순서가 처리되는 동안 문제가 발생하면 이 섹션에 관련 오류 메시지가 표시되어 문제를 해결하는 데 도움이 됩니다. 자세한 내용은 데이터 위생 UI 안내서를 참조하십시오."
+
 나열된 작업 주문의 ID를 선택하여 해당 상세내역을 확인합니다.
 
 ![선택한 작업 순서 ID를 보여주는 이미지](../images/ui/browse/select-work-order.png)
 
 <!-- Depending on the type of work order selected, different information and controls are provided. These are covered in the sections below.
 
-### Consumer delete details
-
->[!CONTEXTUALHELP]
->id="platform_hygiene_responsemessages"
->title="Consumer delete response"
->abstract="When a consumer deletion process receives a response from the system, these messages are displayed under the **[!UICONTROL Result]** section. If a problem occurs while a work order is processing, any relevant error messages will appear in this section to help you troubleshoot the issue. To learn more, see the data hygiene UI guide."
-
+### Consumer delete details {#consumer-delete}
 
 The details of a consumer delete request are read-only, displaying its basic attributes such as its current status and the time elapsed since the request was made.
 
 ![Image showing the details page for a consumer delete work order](../images/ui/browse/consumer-delete-details.png)
 
-### Dataset expiration details -->
+### Dataset expiration details {#dataset-expiration} -->
 
 데이터 세트 만료에 대한 세부 정보 페이지에서는 삭제가 발생하기 전 남은 날짜에 예약된 만료 날짜를 포함하여 기본 속성에 대한 정보를 제공합니다. 오른쪽 레일에서 컨트롤을 사용하여 만료를 편집하거나 취소할 수 있습니다.
 
