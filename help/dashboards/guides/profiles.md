@@ -4,9 +4,9 @@ title: 프로필 대시보드 안내서
 description: Adobe Experience Platform은 조직의 실시간 고객 프로필 데이터에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: e59ba2e83808b460016805997580dc16c4cd369e
+source-git-commit: 93bb816857545e2e5abca51e4046d225927daef4
 workflow-type: tm+mt
-source-wordcount: '3769'
+source-wordcount: '3788'
 ht-degree: 1%
 
 ---
@@ -171,9 +171,9 @@ Adobe은 프로필 데이터와 관련된 다양한 지표를 시각화하는 �
 
 ![캡션 단추가 강조 표시된 프로필 수 변경 트렌드 위젯을 표시하는 프로필 개요 탭.](../images/profiles/profiles-count-change-trend-captions.png)
 
-기계 학습 모델은 차트와 데이터를 분석하여 주요 트렌드와 중요한 이벤트를 설명하는 캡션을 자동으로 생성합니다.
+기계 학습 모델은 차트와 데이터를 분석하여 주요 트렌드와 중요한 이벤트를 설명하는 캡션을 자동으로 생성합니다. 캡션을 기반으로 차트에 주석이 추가됩니다. 해당 주석에 초점을 맞출 캡션을 선택합니다.
 
-![프로필 수 변경 트렌드 위젯에 대한 자동 캡션 대화 상자입니다.](../images/profiles/profiles-added-trends-automatic-captions-dialog.png)
+![프로필 수 변경 트렌드 위젯에 대한 자동 캡션 대화 상자입니다.](../images/profiles/profiles-added-trends-automatic-captions-dialog-with-annotation.png)
 
 ### [!UICONTROL ID별 프로필 수 변경 트렌드] {#profiles-count-change-trend-by-identity}
 
