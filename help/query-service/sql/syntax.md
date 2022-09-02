@@ -5,9 +5,9 @@ title: 쿼리 서비스의 SQL 구문
 topic-legacy: syntax
 description: 이 문서에서는 Adobe Experience Platform 쿼리 서비스에서 지원하는 SQL 구문을 보여줍니다.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 17a90bb716bd64c9fb9b383a5ffa49598e978288
+source-git-commit: 33c45c53e2ff591e7b94be1b4b17c25d2fe9d497
 workflow-type: tm+mt
-source-wordcount: '3042'
+source-wordcount: '3033'
 ht-degree: 2%
 
 ---
@@ -554,25 +554,23 @@ EXECUTE name [ ( parameter ) ]
 다음 `EXPLAIN` 명령에는 제공된 문에 대한 실행 계획이 표시됩니다. 실행 계획에는 문에서 참조하는 테이블을 스캔하는 방법이 표시됩니다.  여러 테이블을 참조하면 각 입력 테이블에서 필요한 행을 함께 가져오는 데 사용되는 조인 알고리즘이 표시됩니다.
 
 ```sql
-EXPLAIN option statement
+EXPLAIN statement
 ```
 
-위치 `option` 다음 중 하나일 수 있습니다.
+를 사용하십시오 `FORMAT` 키워드 `EXPLAIN` 명령의 형식을 정의합니다.
 
 ```sql
-ANALYZE
-FORMAT { TEXT | JSON }
+EXPLAIN FORMAT { TEXT | JSON } statement
 ```
 
 | 매개 변수 | 설명 |
 | ------ | ------ |
-| `ANALYZE` | 만약 `option` 다음 포함 `ANALYZE`를 입력하면 실행 시간 및 기타 통계가 표시됩니다. |
-| `FORMAT` | 만약 `option` 다음 포함 `FORMAT`를 지정하는 경우 출력 형식을 지정하며, `TEXT` 또는 `JSON`. 텍스트가 아닌 출력에는 텍스트 출력 형식과 동일한 정보가 포함되어 있지만 프로그램이 구문 분석하기 쉽습니다. 이 매개 변수의 기본값은 입니다. `TEXT`. |
+| `FORMAT` | 를 사용하십시오 `FORMAT` 출력 형식을 지정하는 명령 사용 가능한 옵션은 다음과 같습니다 `TEXT` 또는 `JSON`. 텍스트가 아닌 출력에는 텍스트 출력 형식과 동일한 정보가 포함되어 있지만 프로그램이 구문 분석하기 쉽습니다. 이 매개 변수의 기본값은 입니다. `TEXT`. |
 | `statement` | 임의 `SELECT`, `INSERT`, `UPDATE`, `DELETE`, `VALUES`, `EXECUTE`, `DECLARE`, `CREATE TABLE AS`, 또는 `CREATE MATERIALIZED VIEW AS` 표시할 실행 계획 |
 
 >[!IMPORTANT]
 >
->문은 `ANALYZE` 옵션이 사용됩니다. 하지만 `EXPLAIN` 출력에서 `SELECT` 를 반환하면 문의 다른 부작용이 평소대로 발생합니다.
+>모든 출력은 `SELECT` 문은 `EXPLAIN` 키워드. 그 진술의 다른 부작용들은 평상시처럼 발생한다.
 
 **예**
 
@@ -585,7 +583,7 @@ EXPLAIN SELECT * FROM foo;
 ```console
                        QUERY PLAN
 ---------------------------------------------------------
- Seq Scan on foo  (cost=0.00..155.00 rows=10000 width=4)
+ Seq Scan on foo (dataSetId = "6307eb92f90c501e072f8457", dataSetName = "foo") [0,1000000242,6973776840203d3d,6e616c58206c6153,6c6c6f430a3d4d20,74696d674c746365]
 (1 row)
 ```
 
