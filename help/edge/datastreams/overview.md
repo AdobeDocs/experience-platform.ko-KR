@@ -3,9 +3,9 @@ title: 데이터 스트림 개요
 description: 클라이언트측 Experience Platform SDK 통합 기능을 Adobe 제품 및 서드파티 대상과 연결합니다.
 keywords: 구성;데이터 스트림;데이터 스트림 ID;에지;데이터 스트림 ID;환경 설정;edgeConfigId;id 동기화 사용;ID 동기화 컨테이너 ID;샌드박스;스트리밍 입력;이벤트 데이터 세트;대상;클라이언트 코드;Target 환경 ID;쿠키 대상;Analytics 설정 차단 보고서 세트 ID;데이터 수집을 위한 데이터 준비;데이터 수집;데이터 매퍼;XDM 매퍼;Edge의 매퍼;Mapper;Mapper
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 45f5d23a671c8e015ca26e0d5025685255c2fc35
+source-git-commit: 3690a32f32c6cfa25120e9af44fe559122e779a0
 workflow-type: tm+mt
-source-wordcount: '1728'
+source-wordcount: '1729'
 ht-degree: 2%
 
 ---
@@ -117,12 +117,12 @@ Experience Platform에서 사용하도록 이 데이터 스트림을 구성하�
 ![Adobe Experience Platform 설정 블록](../images/datastreams/overview/platform-config.png)
 
 | 설정 | 설명 |
-| --- | --- |
+|---| --- |
 | [!UICONTROL 이벤트 데이터 세트] | **(필수)** 고객 이벤트 데이터를 스트리밍할 플랫폼 데이터 세트를 선택합니다. 이 스키마는 [XDM ExperienceEvent 클래스](../../xdm/classes/experienceevent.md). |
 | [!UICONTROL 프로필 데이터 세트] | 고객 특성 데이터를 전송할 Platform 데이터 세트를 선택합니다. 이 스키마는 [XDM 개별 프로필 클래스](../../xdm/classes/individual-profile.md). |
 | [!UICONTROL Offer Decisioning] | Platform Web SDK 구현에 Offer decisioning을 활성화하려면 이 확인란을 선택하십시오. 다음 안내서를 참조하십시오. [platform Web SDK에서 Offer decisioning 사용](../personalization/offer-decisioning/offer-decisioning-overview.md) 를 참조하십시오. offer decisioning 기능에 대한 자세한 내용은 [Adobe Journey Optimizer 설명서](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started/starting-offer-decisioning.html?lang=ko-KR). |
 | [!UICONTROL 에지 세그멘테이션] | 이 확인란을 선택하여 [에지 세분화](../../segmentation/ui/edge-segmentation.md) 이 데이터 스트림에 대해 설명합니다. SDK가 에지 세그먼테이션이 활성화된 데이터 스트림을 통해 데이터를 전송하면 해당 프로필에 대해 업데이트된 세그먼트 멤버십이 응답으로 다시 전송됩니다.<br><br>이 옵션은 [!UICONTROL 개인화 대상] 대상 [다음 페이지 개인화 사용 사례](../../destinations/ui/configure-personalization-destinations.md). |
-| [!UICONTROL 개인화 대상] | 와 함께 사용하는 경우 [!UICONTROL 에지 세그멘테이션] 확인란을 선택하면 이 옵션을 사용하여 데이터 스트림이 Adobe Target과 같은 개인화 엔진에 연결할 수 있습니다. 의 특정 단계에 대해서는 대상 설명서 를 참조하십시오 [개인화 대상 구성](../../destinations/ui/configure-personalization-destinations.md). |
+| [!UICONTROL 개인화 대상] | 을 활성화한 후 이 설정을 활성화할 때 [!UICONTROL 에지 세그멘테이션] 확인란을 선택하면 이 옵션을 통해 데이터 스트림이 다음과 같은 개인화 대상에 연결할 수 있습니다 [사용자 지정 개인화](../../destinations/catalog/personalization/custom-personalization.md). 의 특정 단계에 대해서는 대상 설명서 를 참조하십시오 [개인화 대상 구성](../../destinations/ui/configure-personalization-destinations.md). |
 
 ### Adobe Target 설정 {#target}
 
