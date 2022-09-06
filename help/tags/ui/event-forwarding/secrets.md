@@ -2,10 +2,10 @@
 title: 이벤트 전달에서 암호 구성
 description: 이벤트 전달 속성에 사용되는 엔드포인트를 인증하도록 데이터 수집 UI에서 암호를 구성하는 방법을 알아봅니다.
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
-source-git-commit: 737354ca3b286f6c39cb71bc09aa4d6141c4d9a4
+source-git-commit: 4f3c97e2cad6160481adb8b3dab3d0c8b23717cc
 workflow-type: tm+mt
-source-wordcount: '1447'
-ht-degree: 1%
+source-wordcount: '1637'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +19,8 @@ ht-degree: 1%
 | --- | --- |
 | [!UICONTROL 토큰] | 두 시스템에서 모두 알고 이해할 수 있는 인증 토큰 값을 나타내는 단일 문자열입니다. |
 | [!UICONTROL HTTP] | 사용자 이름과 암호로 각각 두 개의 문자열 속성을 포함합니다. |
-| [!UICONTROL OAuth2] | 을(를) 지원하는 여러 특성을 포함합니다 [OAuth2](https://datatracker.ietf.org/doc/html/rfc6749) 인증 사양입니다. 시스템에서 필요한 정보를 요청한 다음 지정된 간격에 따라 이러한 토큰의 갱신을 처리합니다. 현재 [클라이언트 자격 증명](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.4) OAuth2 버전이 지원됩니다. |
+| [!UICONTROL OAuth 2] | 을(를) 지원하는 여러 특성을 포함합니다 [클라이언트 자격 증명 부여 유형](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.4) 대상 [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) 인증 사양입니다. 시스템에서 필요한 정보를 요청한 다음 지정된 간격에 따라 이러한 토큰의 갱신을 처리합니다. |
+| [!UICONTROL Google OAuth 2] | 을(를) 지원하는 여러 특성을 포함합니다 [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) 에서 사용할 인증 사양 [Google 광고 API](https://developers.google.com/google-ads/api/docs/oauth/overview) 및 [Pub/Sub API](https://cloud.google.com/pubsub/docs/reference/service_apis_overview). 시스템에서 필요한 정보를 요청한 다음 지정된 간격에 따라 이러한 토큰의 갱신을 처리합니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -65,7 +66,8 @@ ht-degree: 1%
 
 * [[!UICONTROL 토큰]](#token)
 * [[!UICONTROL HTTP]](#http)
-* [[!UICONTROL OAuth2]](#oauth2)
+* [[!UICONTROL OAuth 2]](#oauth2)
+* [[!UICONTROL Google OAuth 2]](#google-oauth2)
 
 ### [!UICONTROL 토큰] {#token}
 
@@ -83,11 +85,11 @@ HTTP 암호를 만들려면 **[!UICONTROL 단순 HTTP]** 에서 **[!UICONTROL �
 
 ![HTTP 암호](../../images/ui/event-forwarding/secrets/http-secret.png)
 
-### [!UICONTROL OAuth2] {#oauth2}
+### [!UICONTROL OAuth 2] {#oauth2}
 
-OAuth2 암호를 만들려면 **[!UICONTROL OAuth2]** 에서 **[!UICONTROL 유형]** 드롭다운. 아래 표시되는 필드에서 [[!UICONTROL 클라이언트 ID] 및 [!UICONTROL 클라이언트 암호]](https://www.oauth.com/oauth2-servers/client-registration/client-id-secret/)뿐만 아니라 [인증 URL](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) 를 사용하십시오. 다음 [!UICONTROL 인증 URL] 데이터 수집 UI의 필드는 인증 서버 호스트와 토큰 경로 간의 연결입니다.
+OAuth 2 암호를 만들려면 을(를) 선택합니다. **[!UICONTROL OAuth 2]** 에서 **[!UICONTROL 유형]** 드롭다운. 아래 표시되는 필드에서 [[!UICONTROL 클라이언트 ID] 및 [!UICONTROL 클라이언트 암호]](https://www.oauth.com/oauth2-servers/client-registration/client-id-secret/)뿐만 아니라 [[!UICONTROL 토큰 URL]](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) 를 사용하십시오. 다음 [!UICONTROL 토큰 URL] 데이터 수집 UI의 필드는 인증 서버 호스트와 토큰 경로 간의 연결입니다.
 
-![OAuth2 암호](../../images/ui/event-forwarding/secrets/oauth-secret-1.png)
+![OAuth 2 암호](../../images/ui/event-forwarding/secrets/oauth-secret-1.png)
 
 아래 **[!UICONTROL 자격 증명 옵션]**&#x200B;과 같은 다른 자격 증명 옵션을 제공할 수 있습니다 `scope` 및 `audience` 키-값 쌍 형태로 표시됩니다. 키-값 쌍을 더 추가하려면 을 선택합니다 **[!UICONTROL 다른 추가]**.
 
@@ -107,7 +109,24 @@ OAuth2 암호를 만들려면 **[!UICONTROL OAuth2]** 에서 **[!UICONTROL 유�
 
 완료되면 을 선택합니다 **[!UICONTROL 암호 만들기]** 비밀을 지키기 위해
 
-![OAuth2 오프셋 저장](../../images/ui/event-forwarding/secrets/oauth-secret-4.png)
+![OAuth 2 오프셋 저장](../../images/ui/event-forwarding/secrets/oauth-secret-4.png)
+
+### [!UICONTROL Google OAuth 2] {#google-oauth2}
+
+Google OAuth 2 암호를 만들려면 을(를) 선택합니다 **[!UICONTROL Google OAuth 2]** 에서 **[!UICONTROL 유형]** 드롭다운. 아래 **[!UICONTROL 범위]**&#x200B;에서 이 암호를 사용하여 액세스 권한을 부여할 Google API를 선택합니다. 현재 지원되는 제품은 다음과 같습니다.
+
+* [Google 광고 API](https://developers.google.com/google-ads/api/docs/oauth/overview)
+* [Pub/Sub API](https://cloud.google.com/pubsub/docs/reference/service_apis_overview)
+
+완료되면 을 선택합니다 **[!UICONTROL 암호 만들기]**.
+
+![Google OAuth 2 암호](../../images/ui/event-forwarding/secrets/google-oauth.png)
+
+Google을 통해 암호를 수동으로 승인해야 함을 알려주는 팝오버가 나타납니다. 선택 **[!UICONTROL 만들기 및 승인]** 계속하십시오.
+
+![Google 권한 부여 팝업](../../images/ui/event-forwarding/secrets/google-authorization.png)
+
+Google 계정에 대한 자격 증명을 입력할 수 있는 대화 상자가 나타납니다. 프롬프트에 따라 선택한 범위의 데이터에 이벤트 전달 액세스 권한을 부여합니다. 인증 프로세스가 완료되면 비밀이 만들어집니다.
 
 ## 암호 편집
 
@@ -131,7 +150,7 @@ OAuth2 암호를 만들려면 **[!UICONTROL OAuth2]** 에서 **[!UICONTROL 유�
 | --- | --- |
 | [!UICONTROL 토큰] | 선택 **[!UICONTROL Exchange 암호]** 암호 교환을 다시 시도합니다. 이 컨트롤은 비밀에 연결된 환경이 있는 경우에만 사용할 수 있습니다. |
 | [!UICONTROL HTTP] | 비밀에 첨부된 환경이 없는 경우 을 선택합니다 **[!UICONTROL Exchange 암호]** 자격 증명을 base64로 교환하려면 환경이 연결된 경우 [선택]을 선택합니다 **[!UICONTROL 암호 교환 및 배포]** base64로 교환하고 암호를 배포합니다. |
-| [!UICONTROL OAuth2] | 선택 **[!UICONTROL 토큰 생성]** 자격 증명을 교환하고 인증 공급자로부터 액세스 토큰을 반환하려면 다음을 수행하십시오. |
+| [!UICONTROL OAuth 2] | 선택 **[!UICONTROL 토큰 생성]** 자격 증명을 교환하고 인증 공급자로부터 액세스 토큰을 반환하려면 다음을 수행하십시오. |
 
 ## 암호 삭제
 
