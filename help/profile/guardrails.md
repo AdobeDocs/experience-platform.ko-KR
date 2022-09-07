@@ -4,11 +4,11 @@ title: 실시간 고객 프로필 데이터에 대한 기본 보호 기능
 solution: Experience Platform
 product: experience platform
 type: Documentation
-description: 'Adobe Experience Platform은 기존의 관계형 데이터 모델과 다른 고도로 비정규화된 하이브리드 데이터 모델을 사용합니다. 이 문서는 최적의 시스템 성능을 위해 프로필 데이터를 모델링하는 데 도움이 되는 기본 사용 및 속도 제한을 제공합니다. '
+description: Adobe Experience Platform은 기존의 관계형 데이터 모델과 다른 고도로 비정규화된 하이브리드 데이터 모델을 사용합니다. 이 문서는 최적의 시스템 성능을 위해 프로필 데이터를 모델링하는 데 도움이 되는 기본 사용 및 속도 제한을 제공합니다.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: e3813691af6477a0afbb47ed0fd53d5bb3834fd0
+source-git-commit: 1b98a04f92833f5c906ec0081b35144cd47d77bc
 workflow-type: tm+mt
-source-wordcount: '1941'
+source-wordcount: '1950'
 ht-degree: 5%
 
 ---
@@ -139,7 +139,7 @@ Adobe Experience Platform을 사용하면 실시간 고객 프로필 형태로 �
 
 ### 병합 정책 {#merge-policies}
 
-여러 소스에서 데이터를 함께 가져올 때 병합 정책은 Platform이 데이터 우선 순위가 지정되는 방식과 해당 통합 보기를 만들기 위해 결합할 데이터를 결정하는 데 사용하는 규칙입니다. 예를 들어 고객이 여러 채널에서 브랜드와 상호 작용하는 경우 조직에는 여러 데이터 세트에 표시되는 해당 단일 고객과 관련된 여러 프로필 조각이 있습니다. 이러한 조각을 Platform에 수집하면 병합되어 해당 고객에 대한 단일 프로필을 만듭니다. 여러 소스의 데이터가 충돌하면 병합 정책에 따라 개별 프로필에 포함할 정보가 결정됩니다. 병합 정책에 대해 자세히 알아보려면 [정책 병합 개요](merge-policies/overview.md).
+여러 소스에서 데이터를 함께 가져올 때 병합 정책은 Platform이 데이터 우선 순위가 지정되는 방식과 해당 통합 보기를 만들기 위해 결합할 데이터를 결정하는 데 사용하는 규칙입니다. 예를 들어 고객이 여러 채널에서 브랜드와 상호 작용하는 경우 조직에는 여러 데이터 세트에 표시되는 해당 단일 고객과 관련된 여러 프로필 조각이 있습니다. 이러한 조각을 Platform에 수집하면 병합되어 해당 고객에 대한 단일 프로필을 만듭니다. 여러 소스의 데이터가 충돌하면 병합 정책에 따라 개별 프로필에 포함할 정보가 결정됩니다. 조직당 최대 5개의 병합 정책이 허용됩니다. 병합 정책에 대한 자세한 내용은 [정책 병합 개요](merge-policies/overview.md).
 
 ### Platform의 Adobe Analytics 보고서 세트 데이터 세트 {#aa-datasets}
 
