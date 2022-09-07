@@ -5,9 +5,9 @@ title: 쿼리 서비스의 Adobe 정의 SQL 함수
 topic-legacy: functions
 description: 이 문서에서는 Adobe Experience Platform Query Service에서 사용할 수 있는 Adobe 정의 기능에 대한 정보를 제공합니다.
 exl-id: 275aa14e-f555-4365-bcd6-0dd6df2456b3
-source-git-commit: e0cdfc514a9e1277134d4c0d5396fc0bdf9d9958
+source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
 workflow-type: tm+mt
-source-wordcount: '1469'
+source-wordcount: '1486'
 ht-degree: 3%
 
 ---
@@ -17,6 +17,10 @@ ht-degree: 3%
 ADF라고 하는 Adobe 정의 함수는 Adobe Experience Platform Query Service에서 사전 빌드된 기능으로서, [!DNL Experience Event] 데이터. 여기에는 [세션](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html) 및 [속성](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html) Adobe Analytics에 있는 것처럼
 
 이 문서에서는 [!DNL Query Service].
+
+>[!NOTE]
+>
+>ECID(Experience Cloud ID)는 MCID라고도 하며 네임스페이스에서 계속 사용됩니다.
 
 ## 창 함수 {#window-functions}
 

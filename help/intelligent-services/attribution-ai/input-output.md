@@ -5,9 +5,9 @@ title: Attribution AI의 입력 및 출력
 topic-legacy: Input and Output data for Attribution AI
 description: 다음 문서에서는 Attribution AI에서 사용되는 다양한 입력 및 출력에 대해 설명합니다.
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
-source-git-commit: e0e96a52e30f5c34e0695c3e291bed9b6c085e00
+source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
 workflow-type: tm+mt
-source-wordcount: '2491'
+source-wordcount: '2504'
 ht-degree: 3%
 
 ---
@@ -138,7 +138,7 @@ Attribution AI은 모든 점수 열로 점수를 나누고 분류할 수 있도�
 | commerce_order_purchaseCity(String) | True | 추가 점수 데이터 세트 열. <br> **예:** city: San Jose |
 | customerProfile(Object) | False | 모델을 만드는 데 사용되는 사용자의 ID 세부 사항입니다. |
 | id(개체) | False | 다음과 같이 모델을 만드는 데 사용되는 사용자의 세부 정보를 포함합니다. `id` 및 `namespace`. |
-| id(문자열) | True | 쿠키 ID 또는 AAID 또는 MCID 등과 같은 사용자의 ID <br> **예:** 17348762725408656344688320891369597404 |
+| id(문자열) | True | 쿠키 ID, Adobe Analytics ID(AAID) 또는 Experience Cloud ID(ECID(MCID 또는 방문자 ID라고도 함) 등과 같은 사용자의 ID입니다. <br> **예:** 17348762725408656344688320891369597404 |
 | namespace(문자열) | True | 경로를 빌드하여 모델을 만드는 데 사용되는 ID 네임스페이스입니다. <br> **예:** aaid |
 | touchpointsDetail(개체 배열) | True | 주문된 전환으로 이어지는 터치 포인트 세부 사항 목록 | 터치 포인트 발생 또는 타임스탬프. |
 | touchpointName(문자열) | True | 설정 중에 구성된 터치 포인트의 이름입니다. <br> **예:** PAID_SEARCH_CLICK |

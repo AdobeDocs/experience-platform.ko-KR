@@ -5,9 +5,9 @@ title: Intelligent Services에서 사용할 데이터 준비
 topic-legacy: Intelligent Services
 description: Intelligent Services에서 마케팅 이벤트 데이터에서 통찰력을 검색하려면 데이터를 표준 구조로 의미상 보강하고 유지 관리해야 합니다. Intelligent Services는 이를 위해 XDM(Experience Data Model) 스키마를 사용합니다.
 exl-id: 17bd7cc0-da86-4600-8290-cd07bdd5d262
-source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
+source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
 workflow-type: tm+mt
-source-wordcount: '2919'
+source-wordcount: '2936'
 ht-degree: 0%
 
 ---
@@ -117,6 +117,10 @@ CEE 필드 그룹에는 몇 가지 주요 필드가 있으며, 이러한 필드�
 
 데이터의 소스와 특성을 기반으로 기본 ID로 사용할 최상의 필드를 결정해야 합니다. ID 필드에는 **id 네임스페이스** 이는 필드에 값으로 필요한 ID 데이터의 유형을 나타냅니다. 일부 유효한 네임스페이스 값은 다음과 같습니다.
 
+>[!NOTE]
+>
+>ECID(Experience Cloud ID)는 MCID라고도 하며 네임스페이스에서 계속 사용됩니다.
+
 * &quot;이메일&quot;
 * &quot;phone&quot;
 * &quot;mcid&quot;(Adobe Audience Manager ID용)
@@ -124,7 +128,7 @@ CEE 필드 그룹에는 몇 가지 주요 필드가 있으며, 이러한 필드�
 
 기본 ID로 사용해야 하는 필드를 잘 모르는 경우 Adobe 컨설팅 서비스에 문의하여 최상의 솔루션을 선택하십시오. 기본 ID가 설정되지 않은 경우 Intelligent Service 애플리케이션은 다음 기본 동작을 사용합니다.
 
-| 기본값 | Attribution AI | 고객 AI |
+| 기본값 | 기여도 AI | 고객 AI |
 | --- | --- | --- |
 | ID 열 | `endUserIDs._experience.aaid.id` | `endUserIDs._experience.mcid.id` |
 | 네임스페이스 | AAID | ECID |

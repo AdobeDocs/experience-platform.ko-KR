@@ -5,10 +5,10 @@ title: Adobe Analytics 소스 커넥터에 대한 매핑 필드
 topic-legacy: overview
 description: Adobe Experience Platform을 사용하면 Analytics 소스를 통해 Adobe Analytics 데이터를 수집할 수 있습니다. ADC를 통해 수집된 일부 데이터는 Analytics 필드에서 XDM(Experience Data Model) 필드에 직접 매핑할 수 있는 반면, 다른 데이터에는 변환과 특정 기능이 필요합니다.
 exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
-source-git-commit: efe36904b0dce94a8b1f5e7a3d3f38da1038d49c
+source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
 workflow-type: tm+mt
-source-wordcount: '3401'
-ht-degree: 15%
+source-wordcount: '3431'
+ht-degree: 14%
 
 ---
 
@@ -86,41 +86,41 @@ Adobe Experience Platform을 사용하면 Analytics 소스를 통해 Adobe Analy
 | mobilebeaconuuid | placeContext.POIinteraction.POIDetail.beaconInteractionDetails.proximityUUID | string | Mobile Services 비콘 UUID. |
 | videosessionid | media.mediaTimed.primaryAssetViewDetails._ID | string | 비디오 세션 ID. |
 | videogenre | media.mediaTimed.primaryAssetReference._iptc4xmpExt.Genre | 배열 | 비디오 장르. | {title(개체), 설명(개체), 유형(개체), meta:xdmType(개체), 항목(문자열), meta:xdmField(개체)} |
-| mobileinstalls | application.firstLaunches | 개체 | 설치 또는 재설치 후 처음 실행할 때 트리거됩니다 | {id(문자열), 값(숫자)} |
-| mobileupgrades | application.upgrades | 개체 | 앱 업그레이드 수를 보고합니다. 업그레이드 후 또는 버전 번호가 변경될 때마다 처음 실행할 때 트리거됩니다. | {id(문자열), 값(숫자)} |
-| mobilelaunches | application.launches | 개체 | 앱을 시작한 횟수입니다. | {id(문자열), 값(숫자)} |
-| mobilecrashes | application.crashes | 개체 | <!-- MISSING --> | {id(문자열), 값(숫자)} |
-| mobilemessageclicks | directMarketing.clicks | 개체 | <!-- MISSING --> | {id(문자열), 값(숫자)} |
-| mobileplaceentry | placeContext.POIinteraction.poiEntries | 개체 | <!-- MISSING --> | {id(문자열), 값(숫자)} |
-| mobileplaceexit | placeContext.POIinteraction.poiExits | 개체 | <!-- MISSING --> | {id(문자열), 값(숫자)} |
-| videotime | media.mediaTimed.timePlayed | 개체 | <!-- MISSING --> | {id(문자열), 값(숫자)} |
-| videostart | media.mediaTimed.impressions | 개체 | <!-- MISSING --> | {id(문자열), 값(숫자)} |
-| videocomplete | media.mediaTimed.completes | 개체 | <!-- MISSING --> | {id(문자열), 값(숫자)} |
-| videosegmentviews | media.mediaTimed.mediaSegmentViews | 개체 | <!-- MISSING --> | {id(문자열), 값(숫자)} |
-| videoadstart | advertising.impressions | 개체 | <!-- MISSING --> | {id(문자열), 값(숫자)} |
-| videoadcomplete | advertising.completes | 개체 | <!-- MISSING --> | {id(문자열), 값(숫자)} |
-| videoadtime | advertising.timePlayed | 개체 | <!-- MISSING --> | {id(문자열), 값(숫자)} |
-| videochapterstart | media.mediaTimed.mediaChapter.impressions | 개체 | <!-- MISSING --> | {id(문자열), 값(숫자)} |
-| videochaptercomplete | media.mediaTimed.mediaChapter.completes | 개체 | <!-- MISSING --> | {id(문자열), 값(숫자)} |
-| videochaptertime | media.mediaTimed.mediaChapter.timePlayed | 개체 | <!-- MISSING --> | {id(문자열), 값(숫자)} |
-| videoplay | media.mediaTimed.starts | 개체 | <!-- MISSING --> | {id(문자열), 값(숫자)} |
-| videototaltime | media.mediaTimed.totalTimePlayed | 개체 | <!-- MISSING --> | {id(문자열), 값(숫자)} |
-| videoqoetimetostart | media.mediaTimed.primaryAssetViewDetails.qoe.timeToStart | 개체 | 시작할 비디오 품질 시간입니다. | {id(문자열), 값(숫자)} |
-| videoqoedropbeforestart | media.mediaTimed.dropBeforeStarts | 개체 | <!-- MISSING --> | {id(문자열), 값(숫자)} |
-| videoqoebuffercount | media.mediaTimed.primaryAssetViewDetails.qoe.buffers | 개체 | 비디오 품질 버퍼 카운트 | {id(문자열), 값(숫자)} |
-| videoqoebuffertime | media.mediaTimed.primaryAssetViewDetails.qoe.bufferTime | 개체 | 비디오 품질 버퍼 시간 | {id(문자열), 값(숫자)} |
-| videoqoebitratechangecount | media.mediaTimed.primaryAssetViewDetails.qoe.bitrateChanges | 개체 | 비디오 품질 변경 카운트 | {id(문자열), 값(숫자)} |
-| videoqoebitrateaverage | media.mediaTimed.primaryAssetViewDetails.qoe.bitrateAverage | 개체 | 비디오 품질 평균 비트 전송률 | {id(문자열), 값(숫자)} |
-| videoqoeerrorcount | media.mediaTimed.primaryAssetViewDetails.qoe.errors | 개체 | 비디오 품질 오류 카운트 | {id(문자열), 값(숫자)} |
-| videoqoedroppedframecount | media.mediaTimed.primaryAssetViewDetails.qoe.droppedFrames | 개체 | <!-- MISSING --> | {id(문자열), 값(숫자)} |
-| videoprogress10 | media.mediaTimed.progress10 | 개체 | <!-- MISSING --> | {id(문자열), 값(숫자)} |
-| videoprogress25 | media.mediaTimed.progress25 | 개체 | <!-- MISSING --> | {id(문자열), 값(숫자)} |
-| videoprogress50 | media.mediaTimed.progress50 | 개체 | <!-- MISSING --> | {id(문자열), 값(숫자)} |
-| videoprogress75 | media.mediaTimed.progress75 | 개체 | <!-- MISSING --> | {id(문자열), 값(숫자)} |
-| videoprogress95 | media.mediaTimed.progress95 | 개체 | <!-- MISSING --> | {id(문자열), 값(숫자)} |
-| videoresume | media.mediaTimed.resumes | 개체 | <!-- MISSING --> | {id(문자열), 값(숫자)} |
-| videopausecount | media.mediaTimed.pauses | 개체 | <!-- MISSING --> | {id(문자열), 값(숫자)} |
-| videopausetime | media.mediaTimed.pauseTime | 개체 | <!-- MISSING --> | {id(문자열), 값(숫자)} |
+| mobileinstalls | application.firstLaunches | 오브젝트 | 설치 또는 재설치 후 처음 실행할 때 트리거됩니다 | {id(문자열), 값(숫자)} |
+| mobileupgrades | application.upgrades | 오브젝트 | 앱 업그레이드 수를 보고합니다. 업그레이드 후 또는 버전 번호가 변경될 때마다 처음 실행할 때 트리거됩니다. | {id(문자열), 값(숫자)} |
+| mobilelaunches | application.launches | 오브젝트 | 앱을 시작한 횟수입니다. | {id(문자열), 값(숫자)} |
+| mobilecrashes | application.crashes | 오브젝트 | <!-- MISSING --> | {id(문자열), 값(숫자)} |
+| mobilemessageclicks | directMarketing.clicks | 오브젝트 | <!-- MISSING --> | {id(문자열), 값(숫자)} |
+| mobileplaceentry | placeContext.POIinteraction.poiEntries | 오브젝트 | <!-- MISSING --> | {id(문자열), 값(숫자)} |
+| mobileplaceexit | placeContext.POIinteraction.poiExits | 오브젝트 | <!-- MISSING --> | {id(문자열), 값(숫자)} |
+| videotime | media.mediaTimed.timePlayed | 오브젝트 | <!-- MISSING --> | {id(문자열), 값(숫자)} |
+| videostart | media.mediaTimed.impressions | 오브젝트 | <!-- MISSING --> | {id(문자열), 값(숫자)} |
+| videocomplete | media.mediaTimed.completes | 오브젝트 | <!-- MISSING --> | {id(문자열), 값(숫자)} |
+| videosegmentviews | media.mediaTimed.mediaSegmentViews | 오브젝트 | <!-- MISSING --> | {id(문자열), 값(숫자)} |
+| videoadstart | advertising.impressions | 오브젝트 | <!-- MISSING --> | {id(문자열), 값(숫자)} |
+| videoadcomplete | advertising.completes | 오브젝트 | <!-- MISSING --> | {id(문자열), 값(숫자)} |
+| videoadtime | advertising.timePlayed | 오브젝트 | <!-- MISSING --> | {id(문자열), 값(숫자)} |
+| videochapterstart | media.mediaTimed.mediaChapter.impressions | 오브젝트 | <!-- MISSING --> | {id(문자열), 값(숫자)} |
+| videochaptercomplete | media.mediaTimed.mediaChapter.completes | 오브젝트 | <!-- MISSING --> | {id(문자열), 값(숫자)} |
+| videochaptertime | media.mediaTimed.mediaChapter.timePlayed | 오브젝트 | <!-- MISSING --> | {id(문자열), 값(숫자)} |
+| videoplay | media.mediaTimed.starts | 오브젝트 | <!-- MISSING --> | {id(문자열), 값(숫자)} |
+| videototaltime | media.mediaTimed.totalTimePlayed | 오브젝트 | <!-- MISSING --> | {id(문자열), 값(숫자)} |
+| videoqoetimetostart | media.mediaTimed.primaryAssetViewDetails.qoe.timeToStart | 오브젝트 | 시작할 비디오 품질 시간입니다. | {id(문자열), 값(숫자)} |
+| videoqoedropbeforestart | media.mediaTimed.dropBeforeStarts | 오브젝트 | <!-- MISSING --> | {id(문자열), 값(숫자)} |
+| videoqoebuffercount | media.mediaTimed.primaryAssetViewDetails.qoe.buffers | 오브젝트 | 비디오 품질 버퍼 카운트 | {id(문자열), 값(숫자)} |
+| videoqoebuffertime | media.mediaTimed.primaryAssetViewDetails.qoe.bufferTime | 오브젝트 | 비디오 품질 버퍼 시간 | {id(문자열), 값(숫자)} |
+| videoqoebitratechangecount | media.mediaTimed.primaryAssetViewDetails.qoe.bitrateChanges | 오브젝트 | 비디오 품질 변경 카운트 | {id(문자열), 값(숫자)} |
+| videoqoebitrateaverage | media.mediaTimed.primaryAssetViewDetails.qoe.bitrateAverage | 오브젝트 | 비디오 품질 평균 비트 전송률 | {id(문자열), 값(숫자)} |
+| videoqoeerrorcount | media.mediaTimed.primaryAssetViewDetails.qoe.errors | 오브젝트 | 비디오 품질 오류 카운트 | {id(문자열), 값(숫자)} |
+| videoqoedroppedframecount | media.mediaTimed.primaryAssetViewDetails.qoe.droppedFrames | 오브젝트 | <!-- MISSING --> | {id(문자열), 값(숫자)} |
+| videoprogress10 | media.mediaTimed.progress10 | 오브젝트 | <!-- MISSING --> | {id(문자열), 값(숫자)} |
+| videoprogress25 | media.mediaTimed.progress25 | 오브젝트 | <!-- MISSING --> | {id(문자열), 값(숫자)} |
+| videoprogress50 | media.mediaTimed.progress50 | 오브젝트 | <!-- MISSING --> | {id(문자열), 값(숫자)} |
+| videoprogress75 | media.mediaTimed.progress75 | 오브젝트 | <!-- MISSING --> | {id(문자열), 값(숫자)} |
+| videoprogress95 | media.mediaTimed.progress95 | 오브젝트 | <!-- MISSING --> | {id(문자열), 값(숫자)} |
+| videoresume | media.mediaTimed.resumes | 오브젝트 | <!-- MISSING --> | {id(문자열), 값(숫자)} |
+| videopausecount | media.mediaTimed.pauses | 오브젝트 | <!-- MISSING --> | {id(문자열), 값(숫자)} |
+| videopausetime | media.mediaTimed.pauseTime | 오브젝트 | <!-- MISSING --> | {id(문자열), 값(숫자)} |
 | videosecondssincelastcall | media.mediaTimed.primaryAssetViewDetails.sessionTimeout | 정수 |
 
 {style=&quot;table-layout:auto&quot;}
@@ -149,13 +149,13 @@ ADC에서 오는 선택 필드를 변환해야 하며, XDM에서 생성하려면
 
 | Analytics 필드 | XDM 필드 | XDM 유형 | 설명 |
 | --------------- | --------- | -------- | ----------- |
-| m_prop1 - m_prop75 | _experience.analytics.customDimensions.listprops.prop1 - _experience.analytics.customDimensions.listprop75 | 개체 | 사용자 지정 트래픽 변수, 1-75 범위 | {} |
-| m_hier1 - m_hier5 | _experience.analytics.customDimensions.hierarches.hier1 - _experience.analytics.customDimensions.hierarches.hier5 | 개체 | 계층 변수에서 사용됩니다. 여기에는 다음 항목이 포함되어 있습니다 | 구분된 값 목록. | {values (array), 구분 기호(문자열)} |
+| m_prop1 - m_prop75 | _experience.analytics.customDimensions.listprops.prop1 - _experience.analytics.customDimensions.listprop75 | 오브젝트 | 사용자 지정 트래픽 변수, 1-75 범위 | {} |
+| m_hier1 - m_hier5 | _experience.analytics.customDimensions.hierarches.hier1 - _experience.analytics.customDimensions.hierarches.hier5 | 오브젝트 | 계층 변수에서 사용됩니다. 여기에는 다음 항목이 포함되어 있습니다 | 구분된 값 목록. | {values (array), 구분 기호(문자열)} |
 | m_mvvar1 - m_mvvar3 | _experience.analytics.customDimensions.lists.list1.list[] - _experience.analytics.customDimensions.list.list3.list[] | 배열 | 변수 값 목록. 구현에 따라 구분된 사용자 지정 값 목록을 포함합니다 | {value (string), 키(문자열)} |
 | m_color | device.colorDepth | 정수 | c_color 열의 값을 기반으로 하는 색상 깊이 ID입니다. |
 | m_cookies | environment.browserDetails.cookiesEnabled | 부울 | 쿠키 지원 차원에 사용되는 변수입니다. |
-| m_event_list | commerce.purchases, commerce.productViews, commerce.productListOpenes, commerce.checkout, commerce.productListAdds, commerce.productListRemoval, commerce.productListViews | 개체 | 히트에서 트리거되는 표준 상거래 이벤트입니다. | {id(문자열), 값(숫자)} |
-| m_event_list | _experience.analytics.event1to100.event1 - _experience.analytics.event1to100.event100, _experience.analytics.event101to200.event101to200.event200, _experience.analytics.event201to300.event201 - _experience.analytics.event003000001to3.event003000 _experience.analytics.event301to400.event301 - _experience.analytics.event301to400.event400, _experience.analytics.event401to500.event401 - _experience.analytics.event401to5500.event500, _experience.analytics.event0150001 이벤트050.event0001 501to600.event600, _experience.analytics.event601to700.event601 - _experience.analytics.event601to700.event700, _experience.analytics.event701to800.event701to800.event0000800에서 _experience80.event080000001로 0.event801 - _experience.analytics.event801to900.event900, _experience.analytics.event901to1000.event901 - _experience.analytics.event901to1000.event1000 | 개체 | 히트에서 트리거된 사용자 지정 이벤트입니다. | {id(개체), 값(개체)} |
+| m_event_list | commerce.purchases, commerce.productViews, commerce.productListOpenes, commerce.checkout, commerce.productListAdds, commerce.productListRemoval, commerce.productListViews | 오브젝트 | 히트에서 트리거되는 표준 상거래 이벤트입니다. | {id(문자열), 값(숫자)} |
+| m_event_list | _experience.analytics.event1to100.event1 - _experience.analytics.event1to100.event100, _experience.analytics.event101to200.event101to200.event200, _experience.analytics.event201to300.event201 - _experience.analytics.event003000001to3.event003000 _experience.analytics.event301to400.event301 - _experience.analytics.event301to400.event400, _experience.analytics.event401to500.event401 - _experience.analytics.event401to5500.event500, _experience.analytics.event0150001 이벤트050.event0001 501to600.event600, _experience.analytics.event601to700.event601 - _experience.analytics.event601to700.event700, _experience.analytics.event701to800.event701to800.event0000800에서 _experience80.event080000001로 0.event801 - _experience.analytics.event801to900.event900, _experience.analytics.event901to1000.event901 - _experience.analytics.event901to1000.event1000 | 오브젝트 | 히트에서 트리거된 사용자 지정 이벤트입니다. | {id(개체), 값(개체)} |
 | m_geo_country | placeContext.geo.countryCode | string | IP를 기반으로 하며 히트가 발생한 국가의 약어입니다. |
 | m_geo_latitude | placeContext.geo._schema.latitude | number | <!-- MISSING --> |
 | m_geo_longitude | placeContext.geo._schema.longitude | number | <!-- MISSING --> |
@@ -186,9 +186,9 @@ ADC에서 오는 선택 필드를 변환해야 하며, XDM에서 생성하려면
 | ip | environment.ipV4 | string | 이미지 요청의 HTTP 헤더를 기반으로 한 IP 주소입니다. |
 | j_jscript | environment.browserDetails.javaScriptEnabled | 부울 | 사용된 JavaScript 버전입니다. |
 | mcvisid_high + mcvisid_low | identityMap | 개체 | Experience Cloud 방문자 ID입니다. |
-| mcvisid_high + mcvisid_low | endUserIDs._experience.mcid.id | string | Experience Cloud 방문자 ID입니다. |
-| mcvisid_high | endUserIDs._experience.mcid.primary | 부울 | Experience Cloud 방문자 ID입니다. |
-| mcvisid_high | endUserIDs._experience.mcid.namespace.code | string | Experience Cloud 방문자 ID입니다. |
+| mcvisid_high + mcvisid_low | endUserIDs._experience.mcid.id | string | ECID(Experience Cloud ID)는 MCID라고도 하며 경우에 따라 네임스페이스에 사용됩니다. |
+| mcvisid_high | endUserIDs._experience.mcid.primary | 부울 | ECID(Experience Cloud ID)는 MCID라고도 하며 경우에 따라 네임스페이스에 사용됩니다. |
+| mcvisid_high | endUserIDs._experience.mcid.namespace.code | string | ECID(Experience Cloud ID)는 MCID라고도 하며 경우에 따라 네임스페이스에 사용됩니다. |
 | mcvisid_low | identityMap | 개체 | Experience Cloud 방문자 ID입니다. |
 | sdid_high + sdid_low | _experience.target.supplementalDataID | string | 히트 결합 ID. Analytics 필드 sdid_high 및 sdid_low는 두 개 이상의 들어오는 히트를 함께 결합하는 데 사용되는 보조 데이터 ID입니다. |
 | mobilebeaconproximity | placeContext.POIinteraction.POIDetail.beaconInteractionDetails.proximity | string | Mobile Services 비콘 Proximity. |
@@ -242,12 +242,12 @@ ADC에서 오는 선택 필드를 변환해야 하며, XDM에서 생성하려면
 | visit_page_num | _experience.analytics.session.depth | 정수 | 히트 깊이 차원에 사용되는 변수입니다. 이 값은 사용자가 생성하는 각 히트에 대해 1씩 증가하며 각 방문 후 재설정됩니다. |
 | visit_referrer | _experience.analytics.session.web.webReferrer.URL | string | 방문의 첫 번째 레퍼러입니다. |
 | visit_search_page_num | _experience.analytics.session.search.pageDepth | 정수 | 방문의 첫 번째 페이지 이름입니다. |
-| post_prop1 - post_prop75 | _experience.analytics.customDimensions.listprops.prop1 - _experience.analytics.customDimensions.listprop75 | 개체 | 사용자 지정 트래픽 변수 1 - 75. |
-| post_hier1 - post_hier5 | _experience.analytics.customDimensions.hierarches.hier1 - _experience.analytics.customDimensions.hierarches.hier5 | 개체 | 계층 변수에서 사용되며 구분된 값 목록을 포함합니다. | {values (array), 구분 기호(문자열)} |
+| post_prop1 - post_prop75 | _experience.analytics.customDimensions.listprops.prop1 - _experience.analytics.customDimensions.listprop75 | 오브젝트 | 사용자 지정 트래픽 변수 1 - 75. |
+| post_hier1 - post_hier5 | _experience.analytics.customDimensions.hierarches.hier1 - _experience.analytics.customDimensions.hierarches.hier5 | 오브젝트 | 계층 변수에서 사용되며 구분된 값 목록을 포함합니다. | {values (array), 구분 기호(문자열)} |
 | post_mvvar1 - post_mvvar3 | _experience.analytics.customDimensions.lists.list1.list[] - _experience.analytics.customDimensions.list.list3.list[] | 배열 | 변수 값 목록. 구현에 따라 구분된 사용자 지정 값 목록을 포함합니다. | {value (string), 키(문자열)} |
 | post_cookies | environment.browserDetails.cookiesEnabled | 부울 | 쿠키 지원 차원에 사용되는 변수입니다. |
-| post_event_list | commerce.purchases, commerce.productViews, commerce.productListOpenes, commerce.checkout, commerce.productListAdds, commerce.productListRemoval, commerce.productListViews | 개체 | 히트에서 트리거되는 표준 상거래 이벤트입니다. | {id(문자열), 값(숫자)} |
-| post_event_list | _experience.analytics.event1to100.event1 - _experience.analytics.event1to100.event100, _experience.analytics.event101to200.event101to200.event200, _experience.analytics.event201to300.event201 - _experience.analytics.event003000001to3.event003000 _experience.analytics.event301to400.event301 - _experience.analytics.event301to400.event400, _experience.analytics.event401to500.event401 - _experience.analytics.event401to5500.event500, _experience.analytics.event0150001 이벤트050.event0001 501to600.event600, _experience.analytics.event601to700.event601 - _experience.analytics.event601to700.event700, _experience.analytics.event701to800.event701to800.event0000800에서 _experience80.event080000001로 0.event801 - _experience.analytics.event801to900.event900, _experience.analytics.event901to1000.event901 - _experience.analytics.event901to1000.event1000 | 개체 | 히트에서 트리거된 사용자 지정 이벤트입니다. | {id(개체), 값(개체)} |
+| post_event_list | commerce.purchases, commerce.productViews, commerce.productListOpenes, commerce.checkout, commerce.productListAdds, commerce.productListRemoval, commerce.productListViews | 오브젝트 | 히트에서 트리거되는 표준 상거래 이벤트입니다. | {id(문자열), 값(숫자)} |
+| post_event_list | _experience.analytics.event1to100.event1 - _experience.analytics.event1to100.event100, _experience.analytics.event101to200.event101to200.event200, _experience.analytics.event201to300.event201 - _experience.analytics.event003000001to3.event003000 _experience.analytics.event301to400.event301 - _experience.analytics.event301to400.event400, _experience.analytics.event401to500.event401 - _experience.analytics.event401to5500.event500, _experience.analytics.event0150001 이벤트050.event0001 501to600.event600, _experience.analytics.event601to700.event601 - _experience.analytics.event601to700.event700, _experience.analytics.event701to800.event701to800.event0000800에서 _experience80.event080000001로 0.event801 - _experience.analytics.event801to900.event900, _experience.analytics.event901to1000.event901 - _experience.analytics.event901to1000.event1000 | 오브젝트 | 히트에서 트리거된 사용자 지정 이벤트입니다. | {id(개체), 값(개체)} |
 | post_java_enabled | environment.browserDetails.javaEnabled | 부울 | Java가 활성화되어 있는지 여부를 나타내는 플래그입니다. |
 | post_latitude | placeContext.geo._schema.latitude | number | <!-- MISSING --> |
 | post_longitude | placeContext.geo._schema.longitude | number | <!-- MISSING --> |
@@ -259,9 +259,9 @@ ADC에서 오는 선택 필드를 변환해야 하며, XDM에서 생성하려면
 | post_pagename_no_url | web.webPageDetails.pageViews.value | number | 페이지 이름(설정된 경우)입니다. 페이지가 지정되지 않은 경우 이 값은 비어 있습니다. |
 | post_product_list | productListItems[].items | 배열 | products 변수를 통해 전달된 제품 목록입니다. | {SKU(문자열), 수량(정수), priceTotal(숫자)} |
 | post_search_engine | search.searchEngine | string | 방문자를 사이트로 유도한 검색 엔진을 나타내는 숫자 ID입니다. |
-| mvvar1_instances | .list.items[] | 개체 | 변수 값 목록. 구현에 따라 구분된 사용자 지정 값 목록을 포함합니다. |
-| mvvar2_instances | .list.items[] | 개체 | 변수 값 목록. 구현에 따라 구분된 사용자 지정 값 목록을 포함합니다. |
-|  | mvvar3_instances | .list.items[] | 개체 | 변수 값 목록. 구현에 따라 구분된 사용자 지정 값 목록을 포함합니다. |
+| mvvar1_instances | .list.items[] | 오브젝트 | 변수 값 목록. 구현에 따라 구분된 사용자 지정 값 목록을 포함합니다. |
+| mvvar2_instances | .list.items[] | 오브젝트 | 변수 값 목록. 구현에 따라 구분된 사용자 지정 값 목록을 포함합니다. |
+|  | mvvar3_instances | .list.items[] | 오브젝트 | 변수 값 목록. 구현에 따라 구분된 사용자 지정 값 목록을 포함합니다. |
 | 색상 | device.colorDepth | 정수 | c_color 열의 값을 기반으로 하는 색상 깊이 ID입니다. |
 | first_hit_ref_type | _experience.analytics.endUser.firstWeb.webReferrer.type | string | 방문자의 첫 번째 레퍼러의 레퍼러 유형을 나타내는 숫자 ID입니다. |
 | first_hit_time_gmt | _experience.analytics.endUser.firstTimestamp | 정수 | Unix 시간에서 방문자의 첫 번째 히트 타임스탬프입니다. |

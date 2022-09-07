@@ -2,9 +2,9 @@
 title: 기계 학습을 사용하여 쿼리 서비스에서 보트 필터링
 description: 이 문서에서는 Query Service 및 기계 학습을 사용하여 보트 활동을 확인하고 실제 온라인 웹 사이트 방문자 트래픽에서 작업을 필터링하는 방법에 대한 개요를 제공합니다.
 exl-id: fc9dbc5c-874a-41a9-9b60-c926f3fd6e76
-source-git-commit: c5b91bd516e876e095a2a6b6e3ba962b29f55a7b
+source-git-commit: 8a7c04ebe8fe372dbf686fddc92867e938a93614
 workflow-type: tm+mt
-source-wordcount: '873'
+source-wordcount: '899'
 ht-degree: 5%
 
 ---
@@ -29,8 +29,12 @@ ht-degree: 5%
 
 보트 탐지를 위해 데이터를 추출하는 데 사용되는 두 가지 속성은 다음과 같습니다.
 
-* Marketing Cloud ID(MCID): 모든 Adobe 솔루션에서 방문자를 식별하는 범용 영구 ID를 제공합니다.
+* Experience Cloud 방문자 ID(MCID라고도 함): 모든 Adobe 솔루션에서 방문자를 식별하는 범용 영구 ID를 제공합니다.
 * 타임스탬프: 웹 사이트에서 활동이 발생한 UTC 형식의 시간 및 날짜를 제공합니다.
+
+>[!NOTE]
+>
+>의 사용 `mcid` 아래 예와 같이 Experience Cloud 방문자 ID에 대한 네임스페이스 참조에서 여전히 찾을 수 있습니다.
 
 다음 SQL 문은 보트 활동을 식별하는 초기 예를 제공합니다. 이 문에서는 방문자가 1분 내에 50번의 클릭을 수행하면 사용자가 봇이라고 가정합니다.
 
@@ -45,7 +49,7 @@ WHERE  enduserids._experience.mcid NOT IN (SELECT enduserids._experi
                                            HAVING Count(*) > 50);  
 ```
 
-표현식은 임계값을 충족하지만 다른 간격의 트래픽 스파이크를 처리하지 않는 모든 방문자의 MCID를 필터링합니다.
+표현식은 ECID(`mcid`) 임계값을 충족하지만 다른 간격의 트래픽 스파이크를 처리하지 않는 모든 방문자의 수입니다.
 
 ## 머신 러닝을 통해 보트 탐지 개선
 
@@ -53,7 +57,7 @@ WHERE  enduserids._experience.mcid NOT IN (SELECT enduserids._experi
 
 예제 문은 클릭 수가 300인 5분 및 30분을 포함하여 클릭 수가 각각 1800인 1분부터 확장됩니다.
 
-이 예제 문은 여러 지속 시간에 대해 각 MCID에 대한 최대 클릭 수를 수집합니다. 이 초기 문은 1분(60초), 5분(300초), 1시간(즉, 1800초) 기간을 포함하도록 확장되었습니다.
+example 문은 각 ECID에 대한 최대 클릭 수(`mcid`)을 클릭하여 제품에서 사용할 수 있습니다. 이 초기 문은 1분(60초), 5분(300초), 1시간(즉, 1800초) 기간을 포함하도록 확장되었습니다.
 
 ```sql
 SELECT table_count_1_min.mcid AS id, 

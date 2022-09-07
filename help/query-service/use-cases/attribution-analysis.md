@@ -1,9 +1,10 @@
 ---
 title: 속성 분석
 description: 이 문서에서는 Query Service를 사용하여 첫 번째 및 마지막 터치의 마케팅 속성 모델을 기반으로 마케팅 효율성 측정 기술을 만드는 방법을 설명합니다.
-source-git-commit: 870626f25b1aabdcb5739bbb1ab85bdad44df195
+exl-id: d62cd349-06fc-4ce6-a5e8-978f11186927
+source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
 workflow-type: tm+mt
-source-wordcount: '1402'
+source-wordcount: '1419'
 ht-degree: 1%
 
 ---
@@ -68,6 +69,10 @@ ht-degree: 1%
 첫 번째 터치 속성은 소비자가 접하는 초기 채널에 성공적인 결과에 대한 책임의 100%를 인증합니다. 이 SQL 예는 후속 고객 작업으로 이어지는 상호 작용을 강조 표시하는 데 사용됩니다.
 
 아래 쿼리는 타겟에서 첫 번째 터치 속성 값과 채널의 세부 사항을 반환합니다 [!DNL Experience Event] 데이터 세트. 또한 를 반환합니다 `struct` 선택된 채널에 대해 각 행에 대한 첫 번째 터치 값, 타임스탬프 및 속성을 갖는 객체.
+
+>[!NOTE]
+>
+>ECID(Experience Cloud ID)는 MCID라고도 하며 네임스페이스에서 계속 사용됩니다.
 
 **쿼리 구문**
 

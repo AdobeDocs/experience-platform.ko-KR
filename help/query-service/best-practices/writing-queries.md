@@ -6,9 +6,9 @@ topic-legacy: queries
 type: Tutorial
 description: 이 문서에서는 Adobe Experience Platform Query Service에서 쿼리를 작성할 때 알아야 할 중요한 세부 정보에 대해 설명합니다.
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
-source-git-commit: 13e2248845734d985331653a17599f48aec0ebde
+source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
 workflow-type: tm+mt
-source-wordcount: '1031'
+source-wordcount: '1048'
 ht-degree: 3%
 
 ---
@@ -48,6 +48,10 @@ Adobe Experience Platform [!DNL Query Service] 에는 쿼리 실행 모델이 �
 ## 개체 내의 특정 필드에 액세스
 
 쿼리의 개체 내에 필드에 액세스하려면 점 표기법(`.`) 또는 대괄호 표기법( )`[]`). 다음 SQL 문은 점 표기법을 사용하여 `endUserIds` 개체 아래로 `mcid` 개체.
+
+>[!NOTE]
+>
+>ECID(Experience Cloud ID)는 MCID라고도 하며 네임스페이스에서 계속 사용됩니다.
 
 ```sql
 SELECT endUserIds._experience.mcid
