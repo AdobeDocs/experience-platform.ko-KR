@@ -5,9 +5,9 @@ title: Query Service 문제 해결 안내서
 topic-legacy: troubleshooting
 description: 이 문서에는 Query Service와 관련된 일반적인 질문과 대답이 포함되어 있습니다. 항목에는 데이터, 내보내기, 타사 도구 및 PSQL 오류가 포함됩니다.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 25953a5a1f5b32de7d150dbef700ad06ce6014df
+source-git-commit: 722d7144639d7280ef85c9bfc285e616e7d7fcce
 workflow-type: tm+mt
-source-wordcount: '3522'
+source-wordcount: '3755'
 ht-degree: 1%
 
 ---
@@ -40,7 +40,7 @@ FAQ에 대한 다음 목록은 다음 카테고리로 분류됩니다.
 
 ### Query Service API에 Postman을 사용할 수 있습니까?
 
-+++예, 무료 타사 애플리케이션(Postman)을 사용하여 모든 Adobe API 서비스를 시각화하고 상호 작용할 수 있습니다. 보기 [Postman 설치 안내서](https://video.tv.adobe.com/v/28832) Adobe Developer 콘솔에서 프로젝트를 설정하고 Postman에 사용하는 데 필요한 모든 자격 증명을 획득하는 방법에 대한 단계별 지침입니다. 에 대한 공식 설명서를 참조하십시오. [Postman 컬렉션 시작, 실행 및 공유에 대한 지침](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
++++예, 무료 타사 애플리케이션(Postman)을 사용하여 모든 Adobe API 서비스를 시각화하고 상호 작용할 수 있습니다. 보기 [Postman 설정 안내서](https://video.tv.adobe.com/v/28832) Adobe Developer 콘솔에서 프로젝트를 설정하고 Postman에 사용하는 데 필요한 모든 자격 증명을 획득하는 방법에 대한 단계별 지침입니다. 에 대한 공식 설명서를 참조하십시오. [Postman 컬렉션 시작, 실행 및 공유에 대한 지침](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
 +++
 
 ### UI를 통해 쿼리에서 반환되는 최대 행 수에 제한이 있습니까?
@@ -252,6 +252,16 @@ SELECT count(1) FROM myTableName
 +++Answer Query Service에서는 SQL 기능을 확장하기 위한 몇 가지 기본 제공 SQL 도우미 함수를 제공합니다. 문서의 전체 목록을 보려면 문서를 참조하십시오 [쿼리 서비스에서 지원하는 SQL 함수](./sql/spark-sql-functions.md).
 +++
 
+### 모두 모국어입니까 [!DNL Spark SQL] 가 지원되거나 사용자가 래퍼로만 제한되는 함수 [!DNL Spark SQL] Adobe에서 제공하는 함수?
+
++++모든 오픈 소스는 아니지만 아직 답하십시오 [!DNL Spark SQL] 데이터 레이크 데이터에 대한 기능이 테스트되었습니다. 테스트 및 확인 후 지원되는 목록에 추가됩니다. 자세한 내용은 [지원되는 목록 [!DNL Spark SQL] 함수](./sql/spark-sql-functions.md) 를 눌러 특정 함수를 확인합니다.
++++
+
+### 사용자가 다른 쿼리에서 사용할 수 있는 UDF(사용자 정의 함수)를 정의할 수 있습니까?
+
++++답변 데이터 보안 고려 사항으로 인해 UDF에 대한 사용자 정의 정의가 허용되지 않습니다.
++++
+
 ### 예약된 쿼리가 실패하면 어떻게 해야 합니까?
 
 +++먼저 로그를 확인하여 오류 세부 정보를 확인하십시오. 의 FAQ 섹션 [로그 내에서 오류 찾기](#error-logs) 이 작업을 수행하는 방법에 대한 자세한 정보를 제공합니다.
@@ -438,6 +448,11 @@ WHERE T2.ID IS NULL
 
 +++
 
+### UI에 표시된 것과 같은 이중 밑줄 이름을 사용하는 CTAS 쿼리를 사용하여 데이터 세트를 만들 수 있습니까? 예: `test_table_001`.
+
++++아니요. 이는 Query Service를 포함하여 모든 Adobe 서비스에 적용되는 Experience Platform 간에 의도적인 제한입니다. 밑줄이 두 개인 이름은 스키마와 데이터 세트 이름으로 사용할 수 있지만 데이터 집합에 대한 테이블 이름은 밑줄이 하나만 포함될 수 있습니다.
++++
+
 ## 데이터 내보내기 {#exporting-data}
 
 이 섹션에서는 데이터 및 제한 내보내기에 대한 정보를 제공합니다.
@@ -462,6 +477,25 @@ FROM <table_name>
 +++아니요. 현재 수집된 데이터를 추출할 수 있는 기능이 없습니다.
 +++
 
+### Analytics 데이터 커넥터가 데이터를 반환하지 않는 이유는 무엇입니까?
+
++++답변 이 문제에 대한 일반적인 원인은 시간 필터 없이 시계열 데이터를 쿼리하는 것입니다. 예:
+
+```sql
+SELECT * FROM prod_table LIMIT 1;
+```
+
+다음 형식으로 작성해야 합니다.
+
+```sql
+SELECT * FROM prod_table
+WHERE
+timestamp >= to_timestamp('2022-07-22')
+and timestamp < to_timestamp('2022-07-23');
+```
+
++++
+
 ## 타사 도구 {#third-party-tools}
 
 이 섹션에는 PSQL 및 Power BI과 같은 타사 도구 사용에 대한 정보가 포함되어 있습니다.
@@ -473,7 +507,13 @@ FROM <table_name>
 
 ### 타사 도구와 함께 계속 사용할 수 있도록 Query Service를 한 번 연결하는 방법이 있습니까?
 
-+++예, 만료되지 않은 자격 증명을 1회 설정하여 타사 데스크탑 클라이언트를 Query Service에 연결할 수 있습니다. 만료되지 않은 자격 증명은 인증된 사용자가 생성할 수 있으며 로컬 시스템에 다운로드한 JSON 파일에 수신됩니다. 전체 [만료되지 않은 자격 증명을 만들고 다운로드하는 방법에 대한 지침](./ui/credentials.md#non-expiring-credentials) 는 설명서에서 찾을 수 있습니다.
++++예, 만료되지 않은 자격 증명을 1회 설정하여 타사 데스크탑 클라이언트를 Query Service에 연결할 수 있습니다. 만료되지 않은 자격 증명은 인증된 사용자가 생성하여 로컬 시스템에 자동으로 다운로드되는 JSON 파일에서 수신할 수 있습니다. 전체 [만료되지 않은 자격 증명을 만들고 다운로드하는 방법에 대한 지침](./ui/credentials.md#non-expiring-credentials) 는 설명서에서 찾을 수 있습니다.
++++
+
+### 만료되지 않은 자격 증명이 작동하지 않는 이유는 무엇입니까?
+
++++답변 만료되지 않은 자격 증명의 값은 `technicalAccountID` 그리고 `credential` 구성 JSON 파일에서 가져옵니다. 암호 값은 다음 형식을 사용합니다. `{{technicalAccountId}:{credential}}`.
+방법에 대한 자세한 내용은 설명서 를 참조하십시오 [자격 증명을 사용하여 외부 클라이언트에 연결](./ui/credentials.md#using-credentials-to-connect-to-external-clients).
 +++
 
 ### Query Service 편집기에 연결할 수 있는 타사 SQL 편집기는 무엇입니까?
