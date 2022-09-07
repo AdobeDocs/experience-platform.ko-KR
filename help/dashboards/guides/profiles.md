@@ -4,9 +4,9 @@ title: 프로필 대시보드 안내서
 description: Adobe Experience Platform은 조직의 실시간 고객 프로필 데이터에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 93bb816857545e2e5abca51e4046d225927daef4
+source-git-commit: 9a4257ef6f9e32feeb2bb90bc7dd46b0d533cb35
 workflow-type: tm+mt
-source-wordcount: '3788'
+source-wordcount: '3859'
 ht-degree: 1%
 
 ---
@@ -43,6 +43,14 @@ Experience Platform 사용자 인터페이스 내의 모든 프로필 기능에 
 
 자세한 내용은 [대시보드 수정](../customize/modify.md) 및 [위젯 라이브러리 개요](../customize/widget-library.md) 설명서 를 참조하십시오.
 
+### 위젯 추가 {#add-widget}
+
+선택 **[!UICONTROL 위젯 추가]** 위젯 라이브러리로 이동하고 대시보드에 추가할 수 있는 위젯 목록을 확인합니다.
+
+![추가 위젯이 강조 표시된 프로필 대시보드 개요.](../images/profiles/profiles-overview-add-widget.png)
+
+위젯 라이브러리에서 표준 및 사용자 지정 세그먼트 위젯의 선택 항목을 찾아볼 수 있습니다.위젯을 추가하는 방법에 대한 자세한 내용은 위젯 라이브러리 설명서를 참조하십시오 [위젯 추가](../customize/widget-library.md#add-widgets).
+
 ## (베타) 프로필 유효성 통찰력 {#profile-efficacy-insights}
 
 >[!IMPORTANT]
@@ -73,9 +81,9 @@ Platform UI에 제공된 프로필 보기 기능에 대한 자세한 내용은 [
 
 >[!NOTE]
 >
->드롭다운 메뉴에는 XDM 개별 프로필 클래스와 관련된 병합 정책만 표시됩니다. 그러나 조직에서 여러 개의 병합 정책을 만든 경우 사용 가능한 병합 정책의 전체 목록을 보려면 스크롤해야 할 수도 있습니다.
+>드롭다운 메뉴에는 `_xdm.context.profile` 스키마. 그러나 조직에서 여러 개의 병합 정책을 만든 경우 사용 가능한 병합 정책의 전체 목록을 보려면 스크롤해야 할 수도 있습니다.
 
-![](../images/profiles/select-merge-policy.png)
+![병합 정책 드롭다운이 강조 표시된 프로필 개요 탭.](../images/profiles/select-merge-policy.png)
 
 ## 결합 스키마
 

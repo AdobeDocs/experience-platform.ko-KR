@@ -4,9 +4,9 @@ title: 대상 대시보드 안내서
 description: Adobe Experience Platform은 조직의 활성 대상에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 7a67ac4e1e8730197221832090c1414073399a1b
+source-git-commit: 7f226a37996ab5e1fef432c6007d7d488f84ded6
 workflow-type: tm+mt
-source-wordcount: '2716'
+source-wordcount: '2829'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Adobe Experience Platform UI(사용자 인터페이스)는 일별 스냅샷 중�
 >
 >스냅샷을 생성하기 때문에 데이터가 변경된 사항이나 업데이트는 다음 스냅샷을 가져올 때까지 대시보드에 반영되지 않습니다.
 
-## 대상 대시보드 탐색
+## 탐색 [!UICONTROL 대상] 대시보드 {#explore}
 
 Platform UI 내에서 대상 대시보드로 이동하려면 다음을 선택합니다 **[!UICONTROL 대상]** 왼쪽 레일에서 **[!UICONTROL 개요]** 탭을 클릭하여 대시보드를 표시합니다.
 
@@ -37,11 +37,19 @@ Platform UI 내에서 대상 대시보드로 이동하려면 다음을 선택합
 
 ![최신 스냅숏이 강조 표시된 Platform UI 대상 개요](../images/destinations/snapshot-timestamp.png)
 
-### 대상 대시보드 수정
+### 수정 [!UICONTROL 대상] 대시보드 {#modify}
 
-을 선택하여 대상 대시보드의 모양을 수정할 수 있습니다 **[!UICONTROL 대시보드 수정]**. 이를 통해 대시보드에서 위젯을 이동, 추가 및 제거할 수 있을 뿐만 아니라 **[!UICONTROL 위젯 라이브러리]** 사용 가능한 위젯을 살펴보고 조직에 대한 사용자 지정 위젯을 만들려면
+선택 **[!UICONTROL 대시보드 수정]** 대상 대시보드의 모양을 변경하려면 다음을 수행하십시오. 이를 통해 대시보드에서 위젯을 이동, 추가 및 제거하고 위젯 라이브러리에 액세스할 수 있습니다. 위젯 라이브러리에서 사용 가능한 위젯을 탐색하고 조직을 위한 사용자 지정 위젯을 만들 수 있습니다.
 
 자세한 내용은 [대시보드 수정](../customize/modify.md) 및 [위젯 라이브러리 개요](../customize/widget-library.md) 설명서 를 참조하십시오.
+
+### 위젯 추가 {#add-widget}
+
+선택 **[!UICONTROL 위젯 추가]** 위젯 라이브러리로 이동하고 대시보드에 추가할 수 있는 위젯 목록을 확인합니다.
+
+![추가 위젯이 강조 표시된 대상 대시보드 개요.](../images/destinations/destinations-overview-add-widget.png)
+
+위젯 라이브러리에서 표준 및 사용자 지정 세그먼트 위젯의 선택을 찾아볼 수 있습니다. 위젯을 추가하는 방법에 대한 자세한 내용은 위젯 라이브러리 설명서 를 참조하십시오 [위젯 추가](../customize/widget-library.md#add-widgets).
 
 ## 표준 위젯 {#standard-widgets}
 
@@ -80,7 +88,7 @@ Adobe은 대상과 관련된 다양한 지표를 시각화하고 데이터 분�
 
 위젯에 표시된 목록에서 대상 이름을 선택하면 **[!UICONTROL 찾아보기]** 탭. 선택할 수도 있습니다 **[!UICONTROL 모두 보기]** 로 이동 **[!UICONTROL 찾아보기]** 탭한 다음 대상의 이름을 선택하여 세부 정보를 확인합니다.
 
-![](../images/destinations/most-used-destinations.png)
+![가장 많이 사용되는 대상 위젯이 강조 표시된 대상 대시보드의 개요 탭.](../images/destinations/most-used-destinations.png)
 
 ### [!UICONTROL 최근에 만든 대상] {#recently-created-destinations}
 
@@ -97,7 +105,7 @@ Adobe은 대상과 관련된 다양한 지표를 시각화하고 데이터 분�
 
 특정 유형의 대상을 구성하는 방법에 대해 자세히 알아보려면 [대상 설명서](../../destinations/home.md).
 
-![](../images/destinations/recently-created-destinations.png)
+![최근에 만든 대상 위젯이 강조 표시된 대상 대시보드의 개요 탭.](../images/destinations/recently-created-destinations.png)
 
 ### [!UICONTROL 최근에 활성화된 세그먼트] {#recently-activated-segments}
 
@@ -114,7 +122,7 @@ Adobe은 대상과 관련된 다양한 지표를 시각화하고 데이터 분�
 
 Experience Platform에서 세그먼트 작업에 대한 자세한 내용은 [세그먼테이션 서비스 개요](../../segmentation/home.md).
 
-![](../images/destinations/recently-activated-segments.png)
+![최근에 활성화된 세그먼트 위젯이 강조 표시된 대상 대시보드의 개요 탭.](../images/destinations/recently-activated-segments.png)
 
 ### [!UICONTROL 대상별로 최근에 활성화된 세그먼트] {#recently-activated-segments-by-destination}
 
