@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform 소스 커넥터 도움말
 breadcrumb-title: Source Connectors 안내서
 user-guide-description: 다양한 소스 또는 구조에서 데이터를 수집하고 레이블을 지정하며 기존에 수집한 데이터를 향상시킬 수 있습니다.
 feature: Sources
-source-git-commit: ed6a5ba39de2aecaef6f44604ff605721bfcb924
+source-git-commit: b732fa1f4afb71e7b8c3276335b371d0f8ef888d
 workflow-type: tm+mt
 source-wordcount: '820'
-ht-degree: 13%
+ht-degree: 12%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 13%
          - [Marketo Engage 인증 안내서](connectors/adobe-applications/marketo/marketo-auth.md)
          - [B2B 네임스페이스 및 스키마](connectors/adobe-applications/marketo/marketo-namespaces.md)
    - 광고 {#advertising}
-      - [Google AdWords 커넥터](connectors/advertising/ads.md)
+      - [Google 광고 커넥터](connectors/advertising/ads.md)
    - Analytics {#analytics}
       - [Mixpanel 커넥터](connectors/analytics/mixpanel.md)
    - 클라우드 스토리지 {#cloud-storage}
@@ -103,7 +103,7 @@ ht-degree: 13%
 - API 자습서 {#api-tutorials}
    - 기본 연결 만들기 {#create}
       - 광고 {#advertising}
-         - [Google AdWords](tutorials/api/create/advertising/ads.md)
+         - [Google 광고](tutorials/api/create/advertising/ads.md)
       - Analytics {#analytics}
          - [Mixpanel](tutorials/api/create/analytics/mixpanel.md)
       - 클라우드 스토리지 {#cloud-storage}
@@ -205,7 +205,7 @@ ht-degree: 13%
          - [고객 속성](tutorials/ui/create/adobe-applications/customer-attributes.md)
          - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
       - 광고 {#advertising}
-         - [Google AdWords](tutorials/ui/create/advertising/ads.md)
+         - [Google 광고](tutorials/ui/create/advertising/ads.md)
       - Analytics {#analytics}
          - [Mixpanel](tutorials/ui/create/analytics/mixpanel.md)
       - 클라우드 스토리지 {#cloud-storage}
