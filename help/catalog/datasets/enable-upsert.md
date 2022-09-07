@@ -4,9 +4,9 @@ title: API를 사용하여 프로필 업데이트에 대한 데이터 세트 활
 type: Tutorial
 description: 이 자습서에서는 실시간 고객 프로필 데이터를 업데이트하기 위해 Adobe Experience Platform API를 사용하여 "업그레이드" 기능이 있는 데이터 세트를 활성화하는 방법을 보여줍니다.
 exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: b0ba7578cc8e790c70cba4cc55c683582b685843
 workflow-type: tm+mt
-source-wordcount: '991'
+source-wordcount: '994'
 ht-degree: 1%
 
 ---
@@ -64,7 +64,7 @@ POST /dataSets
 
 **요청**
 
-다음을 포함 `unifiedProfile` 아래에 `tags` 요청 본문에서 데이터 집합은 [!DNL Profile] 창조 시. 내 `unifiedProfile` 배열, 추가 `isUpsert:true` 는 데이터 세트에서 업데이트를 지원하는 기능을 추가합니다.
+다음을 모두 포함합니다 `unifiedIdentity` 그리고 `unifiedProfile` 아래에 `tags` 요청 본문에서 데이터 집합은 [!DNL Profile] 창조 시. 내 `unifiedProfile` 배열, 추가 `isUpsert:true` 는 데이터 세트에서 업데이트를 지원하는 기능을 추가합니다.
 
 ```shell
 curl -X POST \
@@ -75,24 +75,27 @@ curl -X POST \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
-        "fields":[],
+        "fields": [],
         "schemaRef": {
-          "id": "https://ns.adobe.com/{TENANT_ID}/schemas/31670881463308a46f7d2cb09762715",
-          "contentType": "application/vnd.adobe.xed-full-notext+json; version=1"
+            "id": "https://ns.adobe.com/{TENANT_ID}/schemas/31670881463308a46f7d2cb09762715",
+            "contentType": "application/vnd.adobe.xed-full-notext+json; version=1"
         },
         "tags": {
-          "unifiedProfile": [
-            "enabled:true",
-            "isUpsert:true"
-          ]
+            "unifiedIdentity": [
+                "enabled: true"
+            ],
+            "unifiedProfile": [
+                "enabled: true",
+                "isUpsert: true"
+            ]
         }
       }'
 ```
 
 | 속성 | 설명 |
-|---|---|
+| -------- | ----------- |
 | `schemaRef.id` | 의 ID입니다 [!DNL Profile]데이터 세트를 기반으로 할 사용 가능한 스키마. |
-| `{TENANT_ID}` | 네임스페이스 [!DNL Schema Registry] 에는 IMS 조직에 속하는 리소스가 포함되어 있습니다. 자세한 내용은 [TENANT_ID](../../xdm/api/getting-started.md#know-your-tenant-id) 섹션 [!DNL Schema Registry] 개발자 안내서 를 참조하십시오. |
+| `{TENANT_ID}` | 네임스페이스 [!DNL Schema Registry] 조직에 속하는 리소스를 포함합니다. 자세한 내용은 [TENANT_ID](../../xdm/api/getting-started.md#know-your-tenant-id) 섹션 [!DNL Schema Registry] 개발자 안내서 를 참조하십시오. |
 
 **응답**
 
@@ -147,6 +150,9 @@ curl -X GET \
         "tags": {
             "adobe/pqs/table": [
                 "unifiedprofileingestiontesteventsdataset"
+            ],
+            "unifiedIdentity": [
+                "enabled:true"
             ],
             "unifiedProfile": [
                 "enabled:true"
