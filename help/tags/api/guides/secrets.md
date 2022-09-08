@@ -2,7 +2,7 @@
 title: Reactor API의 암호
 description: 이벤트 전달에서 사용할 Reactor API에서 암호를 구성하는 방법에 대한 기본 사항을 알아봅니다.
 exl-id: 0298c0cd-9fba-4b54-86db-5d2d8f9ade54
-source-git-commit: 4f3c97e2cad6160481adb8b3dab3d0c8b23717cc
+source-git-commit: 24e79c14268b9eab0e8286eb8cd1352c1dfcd1b6
 workflow-type: tm+mt
 source-wordcount: '1241'
 ht-degree: 2%
@@ -107,11 +107,11 @@ Reactor API에서 암호는 인증 자격 증명을 나타내는 리소스입니
 | --- | --- | --- |
 | `scopes` | 어레이 | 인증에 대한 Google 제품 범위를 나열합니다. 지원되는 범위는 다음과 같습니다.<ul><li>[Google 광고](https://developers.google.com/google-ads/api/docs/oauth/overview): `https://www.googleapis.com/auth/adwords`</li><li>[Google Pub/Sub](https://cloud.google.com/pubsub/docs/reference/service_apis_overview): `https://www.googleapis.com/auth/pubsub`</li></ul> |
 
-만들기 후 `oauth2-google` 비밀, 응답에는 `meta.token_url` 속성을 사용합니다. Google 인증 흐름을 완료하려면 이 URL을 브라우저에 복사하여 붙여넣어야 합니다.
+만들기 후 `oauth2-google` 비밀, 응답에는 `meta.authorization_url` 속성을 사용합니다. Google 인증 흐름을 완료하려면 이 URL을 브라우저에 복사하여 붙여넣어야 합니다.
 
 #### 권한 재인증 `oauth2-google` 비밀
 
-에 대한 인증 URL `oauth2-google` 비밀이 만들어지면 1시간 후에 만료됩니다. `meta.token_url_expires_at`). 이 시간이 지나면 인증 프로세스를 갱신하려면 암호를 재승인해야 합니다.
+에 대한 인증 URL `oauth2-google` 비밀이 만들어지면 1시간 후에 만료됩니다. `meta.authorization_url_expires_at`). 이 시간이 지나면 인증 프로세스를 갱신하려면 암호를 재승인해야 합니다.
 
 자세한 내용은 [비밀 끝점 안내서](../endpoints/secrets.md#reauthorize) 재인증 방법에 대한 자세한 내용 `oauth2-google` secret으로 사용하십시오.
 
