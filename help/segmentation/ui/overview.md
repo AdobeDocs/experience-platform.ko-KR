@@ -5,9 +5,9 @@ title: 세그멘테이션 서비스 UI 안내서
 topic-legacy: ui guide
 description: Adobe Experience Platform 세그멘테이션 서비스는 세그먼트 정의를 만들고 관리하기 위한 사용자 인터페이스를 제공합니다.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 71741a18c99a003e6401bc324822d50a266350b3
+source-git-commit: 356d76d61293b9ff0887afbf30852159af8d72ad
 workflow-type: tm+mt
-source-wordcount: '1746'
+source-wordcount: '1775'
 ht-degree: 0%
 
 ---
@@ -56,6 +56,11 @@ Experience Platform UI에서 **[!UICONTROL 세그먼트]** 왼쪽 탐색에서 �
 >id="platform_segments_browse_evaluationmethodcolumnname"
 >title="평가 방법"
 >abstract="세그먼트에 대한 평가 방법에는 일괄 처리, 스트리밍 및 가장자리가 포함됩니다."
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_browse_addallsegmentstoschedule"
+>title="예약에 모든 세그먼트 추가"
+>abstract="모든 배치 평가 세그먼트를 오후 3:30 UTC에 일별 예약된 업데이트에 포함할 수 있습니다. 예약된 업데이트에서 모든 세그먼트를 제거하려면 을 비활성화합니다."
 
 을(를) 선택합니다 **[!UICONTROL 찾아보기]** IMS 조직에 대한 모든 세그먼트 정의 목록을 보려면 탭을 클릭하십시오.
 
@@ -155,7 +160,7 @@ Experience Platform UI에서 **[!UICONTROL 세그먼트]** 왼쪽 탐색에서 �
 
 ![](../images/ui/overview/segment-details-profiles.png)
 
-## 세그먼트 만들기 {#create-segment}
+## 세그먼트 작성 {#create-segment}
 
 선택 **[!UICONTROL 세그먼트 만들기]** 오른쪽 상단 모서리에서 [!DNL Segment Builder] 작업 공간. 세그먼트 정의 만들기를 시작할 수 있습니다.
 

@@ -5,9 +5,9 @@ title: 세그먼트 빌더 UI 안내서
 topic-legacy: ui guide
 description: Adobe Experience Platform UI의 세그먼트 빌더에서는 프로필 데이터 요소와 상호 작용할 수 있는 풍부한 작업 공간을 제공합니다. 작업 공간에서는 데이터 속성을 표시하는 데 사용되는 드래그 앤 드롭 타일과 같이 규칙을 만들고 편집하기 위한 직관적인 컨트롤을 제공합니다.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: dd87f9e5787961442ca7d7b4c761d2e7ca724994
+source-git-commit: 1d70aee1bd225268b8f2a2d1dc24d446bb4ce633
 workflow-type: tm+mt
-source-wordcount: '3081'
+source-wordcount: '3082'
 ht-degree: 1%
 
 ---
@@ -226,7 +226,7 @@ ht-degree: 1%
 >id="platform_segments_createsegment_segmentbuilder_refreshestimate"
 >title="예상 새로 고침"
 >abstract="세그먼트의 예상 수를 새로 고쳐 제안된 세그먼트에 자격을 부여할 프로필 수에 대한 미리 보기를 즉시 볼 수 있습니다. 대상 추정은 해당 날의 샘플 데이터의 샘플 크기를 사용하여 생성됩니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=en#estimate-and-preview-an-audience" text="설명서에서 자세히 알아보기"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=en#estimate-and-preview-an-audience" text="대상 예측 및 미리 보기"
 
 세그먼트 정의를 작성할 때 **[!UICONTROL 세그먼트 속성]** 작업 공간 오른쪽의 섹션에 결과 세그먼트의 예상 크기가 표시되므로 대상 자체를 작성하기 전에 필요에 따라 세그먼트 정의를 조정할 수 있습니다.
 
