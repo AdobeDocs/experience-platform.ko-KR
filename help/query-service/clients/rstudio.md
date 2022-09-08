@@ -5,7 +5,7 @@ title: RStudio를 쿼리 서비스에 연결
 topic-legacy: connect
 description: 이 문서에서는 R Studio와 Adobe Experience Platform 쿼리 서비스를 연결하는 단계를 안내합니다.
 exl-id: 8dd82bad-6ffb-4536-9c27-223f471a49c6
-source-git-commit: ad3e1b0de6dd3b82cc82f0dc3d0f36b12cd3899e
+source-git-commit: 9ab3d69553dee9fdb97472edfa3f812133ee1bb1
 workflow-type: tm+mt
 source-wordcount: '387'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 >
 > 이 안내서에서는 사용자가 이미 [!DNL RStudio] 사용 방법도 잘 알고 있습니다. 에 대한 추가 정보 [!DNL RStudio] 은 [공식 [!DNL RStudio] 설명서](https://rstudio.com/products/rstudio/).
 > 
-> 또한 쿼리 서비스와 함께 RStudio를 사용하려면 PostgreSQL JDBC 4.2 드라이버를 설치해야 합니다. JDBC 드라이버를 [PostgreSQL 공식 사이트](https://jdbc.postgresql.org/download.html).
+> 또한 쿼리 서비스와 함께 RStudio를 사용하려면 PostgreSQL JDBC 4.2 드라이버를 설치해야 합니다. JDBC 드라이버를 [PostgreSQL 공식 사이트](https://jdbc.postgresql.org/download/).
 
 ## 만들기 [!DNL Query Service] 연결 위치 [!DNL RStudio] 인터페이스
 
