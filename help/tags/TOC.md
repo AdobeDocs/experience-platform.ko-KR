@@ -5,9 +5,9 @@ breadcrumb-title: 태그
 user-guide-description: 고객 경험을 향상시키기 위해 분석, 마케팅 및 광고 태그를 배포 및 관리하는 방법을 살펴볼 수 있습니다.
 feature: Tags
 solution: Data Collection
-source-git-commit: a99046cc7df18d53b068c679ab07f5f9dd8eff0a
+source-git-commit: d9787b6d093037a2d346ac3bd2f37220ace43ad2
 workflow-type: tm+mt
-source-wordcount: '400'
+source-wordcount: '402'
 ht-degree: 67%
 
 ---
@@ -199,6 +199,7 @@ ht-degree: 67%
 * [Internet Explorer 10 및 11에 대한 지원 중단](./ie-deprecation.md)
 * 릴리스 정보  {#release-notes}
    * [최신 항목](./release-notes/current.md)
+   * [2021 릴리스 정보](./release-notes/2021.md)
    * [2020 릴리스 정보](./release-notes/2020.md)
    * [2019 릴리스 정보](./release-notes/2019.md)
    * [2018 릴리스 노트](./release-notes/2018.md)
