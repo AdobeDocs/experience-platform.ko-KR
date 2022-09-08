@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform 쿼리 서비스 도움말
 breadcrumb-title: Query Service 안내서
 user-guide-description: 표준 SQL을 사용하여 플랫폼 데이터 레이크에서 데이터를 쿼리합니다.
 feature: Queries
-source-git-commit: 1fe657ac698dd4fcce84902d85b582a9ed7fd4ac
+source-git-commit: 490a24df5ef127ba4ff6727d0d1cd5e0b381f447
 workflow-type: tm+mt
-source-wordcount: '204'
-ht-degree: 18%
+source-wordcount: '206'
+ht-degree: 17%
 
 ---
 
@@ -63,6 +63,7 @@ ht-degree: 18%
    - [SSL 모드](./clients/ssl-modes.md)
    - [아쿠아 데이터 스튜디오](clients/aqua-data-studio.md)
    - [Db 시각화 도우미](./clients/dbvisulaizer.md)
+   - [Jupiter 노트북](clients//jupyter-notebook.md)
    - [조회](clients/looker.md)
    - [포스티코](clients/postico.md)
    - [Power BI](clients/power-bi.md)
