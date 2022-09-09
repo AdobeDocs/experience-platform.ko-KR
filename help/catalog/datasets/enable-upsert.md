@@ -4,9 +4,9 @@ title: API를 사용하여 프로필 업데이트에 대한 데이터 세트 활
 type: Tutorial
 description: 이 자습서에서는 실시간 고객 프로필 데이터를 업데이트하기 위해 Adobe Experience Platform API를 사용하여 "업그레이드" 기능이 있는 데이터 세트를 활성화하는 방법을 보여줍니다.
 exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
-source-git-commit: b0ba7578cc8e790c70cba4cc55c683582b685843
+source-git-commit: 5bd3e43e6b307cc1527e8734936c051fb4fc89c4
 workflow-type: tm+mt
-source-wordcount: '994'
+source-wordcount: '1015'
 ht-degree: 1%
 
 ---
@@ -126,14 +126,13 @@ GET /dataSets/{DATASET_ID}
 ```
 
 | 매개 변수 | 설명 |
-|---|---|
+| --------- | ----------- |
 | `{DATASET_ID}` | 검사할 데이터 세트의 ID입니다. |
 
 **요청**
 
 ```shell
-curl -X GET \
-  'https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e' \
+curl -X GET 'https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -196,11 +195,11 @@ curl -X GET \
 
 ### 프로필에 대한 데이터 세트 비활성화
 
-업데이트에 대해 프로필 사용 가능한 데이터 세트를 구성하려면 먼저 을 비활성화해야 합니다 `unifiedProfile` 태그와 함께 다시 활성화합니다 `isUpsert` 태그에 가깝게 포함했습니다. 이 작업은 한 번은 비활성화하고, 한 번은 다시 활성화하기 위해 두 개의 PATCH 요청을 사용하여 수행됩니다.
+업데이트에 대해 프로필 사용 가능한 데이터 세트를 구성하려면 먼저 을 비활성화해야 합니다 `unifiedProfile` 및 `unifiedIdentity` 태그를 만든 다음 함께 다시 활성화합니다 `isUpsert` 태그에 가깝게 포함했습니다. 이 작업은 한 번은 비활성화하고, 한 번은 다시 활성화하기 위해 두 개의 PATCH 요청을 사용하여 수행됩니다.
 
 >[!WARNING]
 >
->비활성화되어 있는 동안 데이터 집합에 수집된 데이터는 프로필 저장소에 수집되지 않습니다. 프로필에 대해 다시 활성화될 때까지 데이터 집합에 데이터를 섭취하지 않는 것이 좋습니다.
+>비활성화되어 있는 동안 데이터 집합에 수집된 데이터는 프로필 저장소에 수집되지 않습니다. 프로필에 대해 다시 활성화될 때까지 데이터 집합에 데이터를 섭취하지 않아야 합니다.
 
 **API 형식**
 
@@ -209,29 +208,37 @@ PATCH /dataSets/{DATASET_ID}
 ```
 
 | 매개 변수 | 설명 |
-|---|---|
+| --------- | ----------- |
 | `{DATASET_ID}` | 업데이트할 데이터 세트의 ID입니다. |
 
 **요청**
 
-제1 PATCH 요청 본문은 `path` to `unifiedProfile` 설정 `value` to `enabled:false` 를 입력하여 태그를 비활성화합니다.
+제1 PATCH 요청 본문은 `path` to `unifiedProfile` 그리고 `path` to `unifiedIdentity`, 설정 `value` to `enabled:false` 를 사용하도록 선택할 수 있습니다.
 
 ```shell
-curl -X PATCH \
-  https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e \
+curl -X PATCH https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e \
   -H 'Content-Type:application/json-patch+json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '[
-        { "op": "replace", "path": "/tags/unifiedProfile", "value": ["enabled:false"] }
+        { 
+            "op": "replace", 
+            "path": "/tags/unifiedProfile", 
+            "value": ["enabled:false"] 
+        },
+        {
+            "op": "replace",
+            "path": "/tags/unifiedIdentity",
+            "value": ["enabled:false"]
+        }
       ]'
 ```
 
 **응답**
 
-성공적인 PATCH 요청은 HTTP 상태 200(OK) 및 업데이트된 데이터 세트의 ID가 포함된 배열을 반환합니다. 이 ID는 PATCH 요청에 전송된 ID와 일치해야 합니다. 다음 `unifiedProfile` 이제 태그가 비활성화되었습니다.
+성공적인 PATCH 요청은 HTTP 상태 200(OK) 및 업데이트된 데이터 세트의 ID가 포함된 배열을 반환합니다. 이 ID는 PATCH 요청에 전송된 ID와 일치해야 합니다. 다음 `unifiedProfile` 및 `unifiedIdentity` 이제 태그를 사용할 수 없습니다.
 
 ```json
 [
@@ -250,28 +257,42 @@ PATCH /dataSets/{DATASET_ID}
 ```
 
 | 매개 변수 | 설명 |
-|---|---|
+| --------- | ----------- |
 | `{DATASET_ID}` | 업데이트할 데이터 세트의 ID입니다. |
 
 **요청**
 
-요청 본문은 `path` to `unifiedProfile` 설정 `value` 를 `enabled` 및 `isUpsert` 태그, 둘 다 `true`.
+요청 본문은 `path` to `unifiedProfile` 설정 `value` 를 `enabled` 및 `isUpsert` 태그, 둘 다 `true`, 및 `path` to `unifiedIdentity` 설정 `value` 를 `enabled` 태그 설정 `true`.
 
 ```shell
-curl -X PATCH \
-  https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e \
+curl -X PATCH https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e \
   -H 'Content-Type:application/json-patch+json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '[
-        { "op": "add", "path": "/tags/unifiedProfile", "value": ["enabled:true","isUpsert:true"] },
+        { 
+            "op": "add", 
+            "path": "/tags/unifiedProfile", 
+            "value": [
+                "enabled:true",
+                "isUpsert:true"
+            ] 
+        },
+        {
+            "op": "add",
+            "path": "/tags/unifiedIdentity",
+            "value": [
+                "enabled:true"
+            ]
+        }
       ]'
 ```
 
 **응답**
-성공적인 PATCH 요청은 HTTP 상태 200(OK) 및 업데이트된 데이터 세트의 ID가 포함된 배열을 반환합니다. 이 ID는 PATCH 요청에 전송된 ID와 일치해야 합니다. 다음 `unifiedProfile` 이제 태그 가 활성화되고 속성 업데이트에 대해 구성되었습니다.
+
+성공적인 PATCH 요청은 HTTP 상태 200(OK) 및 업데이트된 데이터 세트의 ID가 포함된 배열을 반환합니다. 이 ID는 PATCH 요청에 전송된 ID와 일치해야 합니다. 다음 `unifiedProfile` 태그 및 `unifiedIdentity` 이제 태그 가 활성화되고 속성 업데이트에 대해 구성되었습니다.
 
 ```json
 [
