@@ -2,9 +2,9 @@
 title: 데이터 집합 만료 관리
 description: Adobe Experience Platform UI에서 데이터 세트 만료를 예약하는 방법을 알아봅니다.
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
-source-git-commit: 769c872d67141b4973b29a492e72c23491e2d1ae
+source-git-commit: 5a12c75a54f420b2ca831dbfe05105dfd856dc4d
 workflow-type: tm+mt
-source-wordcount: '408'
+source-wordcount: '438'
 ht-degree: 0%
 
 ---
@@ -16,6 +16,10 @@ ht-degree: 0%
 >Adobe Experience Platform의 데이터 위생 기능은 현재 Healthcare Shield를 구입한 조직에서만 사용할 수 있습니다.
 
 다음 [[!UICONTROL 데이터 위생] 작업 영역](./overview.md) Adobe Experience Platform UI에서 데이터 세트 만료를 예약할 수 있습니다. 데이터 세트가 만료 날짜에 도달하면 데이터 레이크, Identity 서비스 및 실시간 고객 프로필에서 별도의 프로세스를 시작하여 해당 서비스에서 데이터 세트의 컨텐츠를 제거합니다. 세 서비스 모두에서 데이터가 삭제되면 만료가 완료로 표시됩니다.
+
+>[!WARNING]
+>
+>데이터 세트가 만료되도록 설정된 경우 다운스트림 워크플로우가 부정적인 영향을 받지 않도록 데이터를 해당 데이터 세트에 수집할 수 있는 모든 데이터 흐름을 수동으로 변경해야 합니다.
 
 이 문서에서는 Platform UI에서 데이터 세트 만료를 예약하고 관리하는 방법을 다룹니다.
 
