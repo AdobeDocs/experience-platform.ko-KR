@@ -2,7 +2,7 @@
 title: Pega 고객 의사 결정 허브 연결
 description: Adobe Experience Platform의 Pega Customer Decisioning Hub 대상을 사용하여 프로필 속성 및 세그먼트 멤버십 데이터를 Pega Customer Decisioning Hub로 전송하여 다음으로 좋은 작업 결정을 내릴 수 있습니다.
 exl-id: 0546da5d-d50d-43ec-bbc2-9468a7db4d90
-source-git-commit: 144aa80beeb13fde7ca339692774e3d20256f49c
+source-git-commit: ae00b113308354e98f4448d2544e2a6e475c384e
 workflow-type: tm+mt
 source-wordcount: '1013'
 ht-degree: 1%
@@ -102,7 +102,7 @@ Adobe Experience Platform의 프로필 세그먼트 멤버십에 로드된 경�
 
 에서 [[!UICONTROL 속성 선택]](../../ui/activate-streaming-profile-destinations.md#select-attributes) Adobe은 사용자 지정 페이지에서 고유 식별자를 선택할 것을 권장합니다 [조합 스키마](../../../profile/home.md#profile-fragments-and-union-schemas). 대상으로 내보낼 고유 식별자 및 기타 모든 XDM 필드를 선택합니다.
 
-### 매핑 예: 에서 프로필 업데이트 활성화 [!DNL Pega Customer Decision Hub]
+### 매핑 예: 에서 프로필 업데이트 활성화 [!DNL Pega Customer Decision Hub] {#mapping-example}
 
 아래는 프로필을 로 내보낼 때 올바른 ID 매핑의 예입니다 [!DNL Pega Customer Decision Hub].
 

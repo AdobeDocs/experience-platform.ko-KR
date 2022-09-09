@@ -2,9 +2,9 @@
 title: 설명서 셀프 서비스 템플릿 // 대상 이름으로 바꾸기
 description: 이 템플릿을 사용하여 Adobe Experience Platform 카탈로그에서 대상에 대한 공개 설명서를 만듭니다. // 개요 섹션의 단락으로 대체합니다
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: fd2019feb25b540612a278cbea5bf5efafe284dc
+source-git-commit: 788c02622b5176b41eb6da70bed0994d4824c984
 workflow-type: tm+mt
-source-wordcount: '1382'
+source-wordcount: '1452'
 ht-degree: 1%
 
 ---
@@ -131,6 +131,13 @@ ht-degree: 1%
 >데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 다음 문서를 참조하십시오. [액세스 제어 개요](/help/access-control/ui/overview.md) 또는 제품 관리자에게 문의하여 필요한 권한을 얻으십시오.
 
 읽기 [스트리밍 세그먼트 내보내기 대상으로 프로필 및 세그먼트를 활성화합니다](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en) 대상 세그먼트를 이 대상으로 활성화하는 방법에 대한 지침입니다.
+
+### 특성 및 ID 매핑 {#map}
+
+*활성화 워크플로우의 매핑 단계에서 소스와 대상 필드 간의 지원되는 매핑에 대한 정보를 추가합니다. 대상은 프로필 속성, ID 네임스페이스 또는 둘 다 내보내기를 지원할 수 있습니다. 일부 필드는 필수입니다. Target 속성은 사전 정의되거나 사용자 지정일 수 있습니다. 중요한 주의 사항을 살펴보고 스크린샷과 같은 예를 사용하십시오. 참조로 사용할 수 있는 대상 페이지의 두 예는 다음과 같습니다.*
+
+* *[페가](/help/destinations/catalog/personalization/pega.md#mapping-example)*
+* *[메달리아](/help/destinations/catalog/voice/medallia-connector.md#map)*
 
 ## 내보낸 데이터 / 데이터 내보내기 유효성 검사 {#exported-data}
 
