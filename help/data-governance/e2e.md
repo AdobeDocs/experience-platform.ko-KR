@@ -1,9 +1,9 @@
 ---
 title: Data Governance End-to-End 안내서
 description: Adobe Experience Platform의 필드 및 데이터 세트에 대한 데이터 사용 제한을 적용하는 전체 프로세스를 따릅니다.
-source-git-commit: 415300f6338eb485b8dead307f3e6a5b2d5d8b22
+source-git-commit: c8b2dba9b1e305f826830b8341bf1a6dde4e2da2
 workflow-type: tm+mt
-source-wordcount: '1449'
+source-wordcount: '1447'
 ht-degree: 0%
 
 ---
@@ -111,7 +111,7 @@ Adobe Experience Platform의 특정 데이터 세트 및 필드에서 수행할 
 
 ![UI에서 정책에 할당되는 마케팅 작업을 보여주는 이미지](./images/e2e/select-marketing-action.png)
 
-최종 화면에는 정책의 세부 사항 및 어떤 레이블에 대해 제한될 작업에 대한 요약이 표시됩니다. 선택 **[!UICONTROL 완료]** 정책을 만들고 사용하도록 설정합니다.
+최종 화면에는 정책의 세부 사항 및 어떤 레이블에 대해 제한될 작업에 대한 요약이 표시됩니다. 선택 **[!UICONTROL 완료]** 정책을 만들려면
 
 ![UI에서 확인 중인 정책 구성을 보여주는 이미지](./images/e2e/confirm-policy.png)
 
