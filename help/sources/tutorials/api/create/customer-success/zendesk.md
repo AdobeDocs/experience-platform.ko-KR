@@ -5,9 +5,9 @@ title: Flow Service API를 사용하여 Zendesk용 데이터 흐름 만들기
 topic-legacy: tutorial
 description: Flow Service API를 사용하여 Adobe Experience Platform을 Zendesk에 연결하는 방법을 알아봅니다.
 exl-id: 3e00e375-c6f8-407c-bded-7357ccf3482e
-source-git-commit: 23a6f8ee23fb67290a5bcba2673a87ce74c9e1d3
+source-git-commit: e92c2386d9f4a4709f0a749d3ed97e033f066610
 workflow-type: tm+mt
-source-wordcount: '1977'
+source-wordcount: '1996'
 ht-degree: 1%
 
 ---
@@ -35,6 +35,7 @@ ht-degree: 1%
 
 | 자격 증명 | 설명 | 예 |
 | --- | --- | --- |
+| `subdomain` | 계정과 연결된 고유 도메인입니다. | `https://yoursubdomain.zendesk.com` |
 | `accessToken` | Zendesk API 토큰. | `0lZnClEvkJSTQ7olGLl7PMhVq99gu26GTbJtf` |
 
 인증에 대한 자세한 정보 [!DNL Zendesk] 소스, 자세한 내용은 [[!DNL Zendesk] 소스 개요](../../../../connectors/customer-success/zendesk.md).
@@ -77,6 +78,7 @@ curl -X POST \
         "auth": {
             "specName": "OAuth2 Refresh Code",
             "params": {
+                "subdomain": "{SUBDOMAIN}",
                 "accessToken": "{ACCESS_TOKEN}"
             }
         }
@@ -90,6 +92,7 @@ curl -X POST \
 | `connectionSpec.id` | 소스의 연결 사양 ID입니다. 이 ID는 소스를 등록하고 [!DNL Flow Service] API. |
 | `auth.specName` | Platform에 소스를 인증하는 데 사용하는 인증 유형입니다. |
 | `auth.params.` | 소스를 인증하는 데 필요한 자격 증명을 포함합니다. |
+| `auth.params.subdomain` | 계정과 연결된 고유 도메인입니다. 하위 도메인의 형식은 입니다. `https://yoursubdomain.zendesk.com`. |
 | `auth.params.accessToken` | 소스를 인증하는 데 사용되는 해당 액세스 토큰. OAuth 기반 인증에 필요합니다. |
 
 **응답**

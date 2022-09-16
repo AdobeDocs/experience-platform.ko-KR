@@ -5,7 +5,7 @@ title: Platform UI를 사용하여 MailChimp 캠페인 소스 연결 만들기
 topic-legacy: tutorial
 description: 플랫폼 UI를 사용하여 Adobe Experience Platform을 MailChimp 캠페인에 연결하는 방법을 알아봅니다.
 exl-id: e8e1ed32-4277-44c9-aafc-6bb9e0a1fe0d
-source-git-commit: ed185d0957c3cd84c33a6ff60c5ded2b17fbfe74
+source-git-commit: 430b544835956ec0b212fb44d48beaae46afdd2e
 workflow-type: tm+mt
 source-wordcount: '682'
 ht-degree: 1%
@@ -33,7 +33,7 @@ ht-degree: 1%
 
 | 자격 증명 | 설명 |
 | --- | --- |
-| Host | MailChimp API에 연결하는 데 사용되는 루트 URL입니다. 루트 URL의 형식은 다음과 같습니다 `https://{DC}.api.mailchimp.com`, 위치 `{DC}` 계정에 해당하는 데이터 센터를 나타냅니다. |
+| 도메인 | MailChimp API에 연결하는 데 사용되는 루트 URL입니다. 루트 URL의 형식은 다음과 같습니다 `https://{DC}.api.mailchimp.com`, 위치 `{DC}` 계정에 해당하는 데이터 센터를 나타냅니다. |
 | 인증 테스트 URL | 연결 시 자격 증명을 확인하는 데 인증 테스트 URL을 사용합니다 [!DNL Mailchimp] 플랫폼. 이 값이 제공되지 않으면 원본 연결 생성 단계 동안 자격 증명이 자동으로 선택됩니다. |
 | 액세스 토큰 | 소스를 인증하는 데 사용되는 해당 액세스 토큰. OAuth 기반 인증에 필요합니다. |
 
@@ -43,7 +43,7 @@ OAuth 2를 사용하여 인증을 받는 방법에 대한 자세한 내용은 [!
 
 | 자격 증명 | 설명 |
 | --- | --- |
-| 호스트 | MailChimp API에 연결하는 데 사용되는 루트 URL입니다. 루트 URL의 형식은 다음과 같습니다 `https://{DC}.api.mailchimp.com`, 위치 `{DC}` 계정에 해당하는 데이터 센터를 나타냅니다. |
+| 도메인 | MailChimp API에 연결하는 데 사용되는 루트 URL입니다. 루트 URL의 형식은 다음과 같습니다 `https://{DC}.api.mailchimp.com`, 위치 `{DC}` 계정에 해당하는 데이터 센터를 나타냅니다. |
 | 사용자 이름 | MailChimp 계정에 해당하는 사용자 이름입니다. 기본 인증에 필요합니다. |
 | 암호 | MailChimp 계정에 해당하는 암호입니다. 기본 인증에 필요합니다. |
 
@@ -73,13 +73,13 @@ OAuth 2를 사용하여 인증을 받는 방법에 대한 자세한 내용은 [!
 
 #### OAuth 2를 사용하여 인증
 
-OAuth 2를 사용하려면 을(를) 선택합니다. [!UICONTROL OAuth 2 새로 고침 코드]호스트, 인증 테스트 URL 및 액세스 토큰에 대한 값을 제공한 다음 **[!UICONTROL 소스에 연결]**. 자격 증명이 유효한지 잠시 후에 을 선택합니다 **[!UICONTROL 다음]** 계속 진행합니다.
+OAuth 2를 사용하려면 을(를) 선택합니다. [!UICONTROL OAuth 2 새로 고침 코드]을 입력하여 도메인, 인증 테스트 URL 및 액세스 토큰에 대한 값을 제공한 다음 **[!UICONTROL 소스에 연결]**. 자격 증명이 유효한지 잠시 후에 을 선택합니다 **[!UICONTROL 다음]** 계속 진행합니다.
 
 ![사용합니다](../../../../images/tutorials/create/mailchimp-campaigns/oauth.png)
 
 #### 기본 인증을 사용하여 인증
 
-기본 인증을 사용하려면 [!UICONTROL 기본 인증]를 사용하여 호스트, 사용자 이름 및 암호의 값을 지정한 다음 을 선택합니다 **[!UICONTROL 소스에 연결]**. 자격 증명이 유효한지 잠시 후에 을 선택합니다 **[!UICONTROL 다음]** 계속 진행합니다.
+기본 인증을 사용하려면 [!UICONTROL 기본 인증]도메인, 사용자 이름 및 암호 값을 제공한 다음 을 선택합니다. **[!UICONTROL 소스에 연결]**. 자격 증명이 유효한지 잠시 후에 을 선택합니다 **[!UICONTROL 다음]** 계속 진행합니다.
 
 ![기본](../../../../images/tutorials/create/mailchimp-campaigns/basic.png)
 

@@ -3,9 +3,9 @@ keywords: Experience Platform;홈;인기 항목;소스;커넥터;소스 커넥�
 title: (베타) UI에서 Mixpanel 소스 연결 만들기
 description: Adobe Experience Platform UI를 사용하여 Mixpanel 소스 연결을 만드는 방법을 알아봅니다.
 exl-id: 2a02f6a4-08ed-468c-8052-f5b7be82d183
-source-git-commit: e44f6d5bb2fd891a3e3b3c5e4aed68e8d4687b53
+source-git-commit: bee13becb59e3277921549e6db027ce864bba28b
 workflow-type: tm+mt
-source-wordcount: '897'
+source-wordcount: '874'
 ht-degree: 2%
 
 ---
@@ -33,7 +33,6 @@ ht-degree: 2%
 
 | 자격 증명 | 설명 | 예 |
 | --- | --- | --- |
-| Host | 다음 [!DNL Mixpanel] 원시 데이터 내보내기 API 엔드포인트. 자세한 내용은 [!DNL Raw Data Export API] 의 섹션 [Mixpanel API 참조 설명서](https://developer.mixpanel.com/reference/overview) 추가 정보. | `https://data.mixpanel.com` |
 | 사용자 이름 | 사용자 이름과 일치하는 서비스 계정 사용자 이름 [!DNL Mixpanel] 계정이 필요합니다. 자세한 내용은 [[!DNL Mixpanel] 서비스 계정 설명서](https://developer.mixpanel.com/reference/service-accounts#authenticating-with-a-service-account) 추가 정보. | `Test8.6d4ee7.mp-service-account` |
 | 암호 | 사용자의 [!DNL Mixpanel] 계정이 필요합니다. | `dLlidiKHpCZtJhQDyN2RECKudMeTItX1` |
 | 프로젝트 ID | 사용자 [!DNL Mixpanel] 프로젝트 ID. 이 ID는 소스 연결을 만드는 데 필요합니다. 자세한 내용은 [[!DNL Mixpanel] 프로젝트 설정 설명서](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) 그리고 [[!DNL Mixpanel] 프로젝트 생성 및 관리 안내서](https://help.mixpanel.com/hc/en-us/articles/115004505106-Create-and-Manage-Projects) 추가 정보. | `2384945` |

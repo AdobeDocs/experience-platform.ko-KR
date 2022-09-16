@@ -3,7 +3,7 @@ keywords: Experience Platform;Zendesk;소스;커넥터;소스 커넥터;소스 s
 title: UI에서 Zendesk 소스 연결 만들기
 description: Adobe Experience Platform UI를 사용하여 Zendesk 소스 연결을 만드는 방법을 알아봅니다.
 exl-id: 75d303b0-2dcd-4202-987c-fe3400398d90
-source-git-commit: f0348abd41e7d594109a04fd11ed06857cedfa53
+source-git-commit: e92c2386d9f4a4709f0a749d3ed97e033f066610
 workflow-type: tm+mt
 source-wordcount: '797'
 ht-degree: 6%
@@ -33,7 +33,7 @@ ht-degree: 6%
 
 | 자격 증명 | 설명 | 예 |
 | --- | --- | --- |
-| Host | 등록 프로세스 중에 만든 계정에 대한 고유 도메인입니다. | `https://yoursubdomain.zendesk.com` |
+| 하위 도메인 | 등록 프로세스 중에 만든 계정에 대한 고유 도메인입니다. | `https://yoursubdomain.zendesk.com` |
 | 액세스 토큰 | Zendesk API 토큰. | `0lZnClEvkJSTQ7olGLl7PMhVq99gu26GTbJtf` |
 
 인증에 대한 자세한 정보 [!DNL Zendesk] 소스, 자세한 내용은 [[!DNL Zendesk] 소스 개요](../../../../connectors/customer-success/zendesk.md).

@@ -5,10 +5,11 @@ title: (베타) UI에서 OneTrust 소스 연결 만들기
 topic-legacy: overview
 type: Tutorial
 description: Adobe Experience Platform UI를 사용하여 OneTrust 소스 연결을 만드는 방법을 알아봅니다.
-source-git-commit: adefaeb895c91d45727f791b73b73a17a2b1ccf9
+exl-id: 6af0604d-cbb6-4c8e-b017-3eb82ec6ee1c
+source-git-commit: cfc6e7cb3877f3b5f716b7f82e7c2d308ef5ed10
 workflow-type: tm+mt
-source-wordcount: '526'
-ht-degree: 1%
+source-wordcount: '527'
+ht-degree: 0%
 
 ---
 
@@ -36,7 +37,7 @@ ht-degree: 1%
 
 | 자격 증명 | 설명 | 예 |
 | --- | --- | --- |
-| Host | Adobe Analytics Mobile Apps 또는 Analytics Premium이 [!DNL OneTrust Integration] 데이터를 가져와야 합니다. | `https://uat.onetrust.com/` |
+| 호스트 이름 | Adobe Analytics Mobile Apps 또는 Analytics Premium이 [!DNL OneTrust Integration] 데이터를 가져와야 합니다. | `https://uat.onetrust.com/` |
 | 인증 테스트 URL | (선택 사항) 기본 연결을 만들 때 인증 테스트 URL을 사용하여 자격 증명을 확인합니다. 지정하지 않으면 소스 연결 생성 단계 동안 자격 증명이 자동으로 선택됩니다. |  |
 | 액세스 토큰 | 사용자의 [!DNL OneTrust Integration] 계정이 필요합니다. | `ZGFkZDMyMjFhMmEyNDQ2ZGFhNTdkZjNkZjFmM2IyOWE6QjlUSERVUTNjOFVsRmpEZTJ6Vk9oRnF3Sk8xNlNtcm4=` |
 
