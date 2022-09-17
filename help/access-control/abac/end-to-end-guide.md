@@ -4,9 +4,9 @@ title: 특성 기반 액세스 제어 종단간 안내서
 description: 이 문서에서는 Adobe Experience Platform의 특성 기반 액세스 제어에 대한 종단 간 안내서를 제공합니다
 hide: true
 hidefromtoc: true
-source-git-commit: 440176ea1f21db3c7c4b3572fb52771dc70c80a0
+source-git-commit: f7a8f9a5eb0ef3c961f9524057ff01564f88dec3
 workflow-type: tm+mt
-source-wordcount: '1612'
+source-wordcount: '2218'
 ht-degree: 0%
 
 ---
@@ -58,6 +58,35 @@ ht-degree: 0%
 플랫폼 UI에 대한 권한 작업 영역이 나타나고 **[!UICONTROL 역할]** 페이지.
 
 ## 역할에 레이블 적용 {#label-roles}
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_labels_about"
+>title="레이블이란 무엇입니까?"
+>abstract="레이블을 사용하면 해당 데이터에 적용되는 사용 정책에 따라 데이터 세트 및 필드를 분류할 수 있습니다. 플랫폼은 데이터 거버넌스에 적용되는 다양한 일반적인 제한 사항을 다루는 여러 Adobe 정의 &quot;핵심&quot; 데이터 사용 레이블을 제공합니다. 예를 들어, RHD(규제 대상 상태 데이터)와 같은 중요 &quot;S&quot; 레이블을 사용하면 PHI(보호 상태 정보)를 참조하는 데이터를 분류할 수 있습니다. 조직의 요구 사항에 맞게 고유한 사용자 지정 레이블을 정의할 수도 있습니다."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=en#understanding-data-usage-labels" text="데이터 사용 레이블 개요"
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_labels_about_create"
+>title="새 레이블 만들기"
+>abstract="조직의 요구 사항에 맞게 고유한 사용자 지정 레이블을 만들 수 있습니다. 사용자 지정 레이블은 데이터에 데이터 거버넌스 및 액세스 제어 구성을 모두 적용하는 데 사용할 수 있습니다."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=en#manage-labels" text="사용자 지정 레이블 관리"
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_roles_about"
+>title="역할이란 무엇입니까?"
+>abstract="역할은 Platform 인스턴스와 상호 작용하고 액세스 제어 정책의 기본 구성원인 사용자 유형을 분류하는 방법입니다. 역할에는 주어진 권한 세트가 있으며 필요한 보기 또는 쓰기 액세스 범위에 따라 조직의 구성원을 하나 이상의 역할에 할당할 수 있습니다."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=en" text="역할 관리"
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_roles_about_create"
+>title="새 역할 만들기"
+>abstract="새 역할을 만들어 Platform 인스턴스에 액세스하는 사용자를 보다 잘 분류할 수 있습니다. 예를 들어 내부 마케팅 팀에 대한 역할을 만들고 RHD 레이블을 해당 역할에 적용할 수 있으므로 내부 마케팅 팀이 PHI(보호 상태 정보)에 액세스할 수 있습니다. 또는 외부 기관에 대한 역할을 만들고 해당 역할에 RHD 레이블을 적용하지 않고 PHI 데이터에 대한 해당 역할 액세스를 거부할 수도 있습니다."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=en#create-a-new-role" text="새 역할 만들기"
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_roles_details"
+>title="역할 개요"
+>abstract="역할 개요 대화 상자에는 지정된 역할이 액세스할 수 있는 리소스 및 샌드박스가 표시됩니다."
 
 역할은 Platform 인스턴스와 상호 작용하고 액세스 제어 정책의 기본 구성원인 사용자 유형을 분류하는 방법입니다. 역할에는 주어진 권한 세트가 있으며 조직의 구성원은 필요한 액세스 범위에 따라 하나 이상의 역할에 할당할 수 있습니다.
 
@@ -117,6 +146,34 @@ ht-degree: 0%
 다음 작업을 수행하여 위의 단계를 반복합니다. **[!UICONTROL 인슐린 &lt;50]**.
 
 ## 액세스 제어 정책 만들기 {#policy}
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_policies_about"
+>title="정책이란 무엇입니까?"
+>abstract="정책은 허용 및 허용되지 않는 작업을 설정하기 위해 특성을 함께 가져오는 구문입니다. 모든 조직에는 세그먼트 및 스키마 필드와 같은 리소스에 대한 규칙을 정의하기 위해 활성화해야 하는 기본 정책이 있습니다. 기본 정책은 편집하거나 삭제할 수 없습니다. 그러나 기본 정책은 활성화하거나 비활성화할 수 있습니다."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en" text="정책 관리"
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_policies_about_create"
+>title="정책 만들기"
+>abstract="세그먼트와 스키마 필드에 대해 사용자가 수행할 수 있고 수행할 수 없는 작업을 정의하는 정책을 만듭니다."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en#create-a-new-policy" text="정책 만들기"
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_policies_edit_permitdeny"
+>title="정책에 대해 허용 및 허용되지 않는 작업 구성"
+>abstract="리소스에 대해 사용자가 수행할 수 있는 허용 가능한 작업을 구성하려면 액세스 허용 또는 액세스 허용 여부를 선택합니다. 리소스에 대해 사용자가 수행할 수 없는 작업을 구성하려면 액세스 거부 를 선택하고,"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en#edit-a-policy" text="정책 편집"
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_policies_edit_resource"
+>title="리소스에 대한 권한 구성"
+>abstract="리소스는 사용자가 액세스할 수 있거나 액세스할 수 없는 자산 또는 개체입니다. 리소스는 세그먼트나 스키마일 수 있습니다. 세그먼트 및 스키마 필드에 대한 쓰기, 읽기 또는 삭제 권한을 구성할 수 있습니다."
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_policies_edit_condition"
+>title="조건 편집"
+>abstract="정책에 조건문을 적용하여 특정 리소스에 대한 사용자 액세스를 구성합니다. 액세스를 허용하려면 사용자에게 리소스와 정확히 동일한 레이블이 있는 역할이 있어야 하려면 모두 일치 를 선택합니다. 사용자에게 리소스와 일치하는 레이블이 하나만 있는 역할이 있어야 하도록 하려면 [일치 항목]을 선택합니다. 레이블은 Adobe에서 만들어 제공하는 레이블을 나타내는 코어 레이블과 조직에 대해 만든 레이블을 나타내는 사용자 지정 레이블로 핵심 또는 사용자 지정 레이블로 정의할 수 있습니다."
 
 액세스 제어 정책은 레이블을 활용하여 특정 플랫폼 리소스에 액세스할 수 있는 사용자 역할을 정의합니다. 정책은 로컬 또는 글로벌 정책일 수 있으며 다른 정책을 재정의할 수 있습니다. 이 예에서는 스키마 필드에 해당 레이블이 없는 사용자를 위해 모든 샌드박스에서 스키마 필드 및 세그먼트에 대한 액세스가 거부됩니다.
 
