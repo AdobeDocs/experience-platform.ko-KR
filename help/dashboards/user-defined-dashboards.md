@@ -2,9 +2,9 @@
 title: 사용자 정의 대시보드
 description: 주요 지표를 시각화하기 위해 맞춤형 위젯을 만들고, 추가하고, 편집할 수 있는 사용자 지정 대시보드를 만들고 관리하는 방법을 알아봅니다.
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: bf2b35e3366c71c51c58b6257cc55f7c9b0cd9c7
+source-git-commit: bb94f7438efe1e24056d6689ffc10b928fc633c2
 workflow-type: tm+mt
-source-wordcount: '825'
+source-wordcount: '881'
 ht-degree: 0%
 
 ---
@@ -37,9 +37,18 @@ To view dashboards in Adobe Experience Platform you must have the appropriate pe
 
 새로 만든 빈 대시보드가 보기의 왼쪽 상단 모서리에 선택한 이름과 함께 나타납니다.
 
-## 위젯 만들기
+## 위젯 만들기 {#create-widget}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_udd_maxwidgets"
+>title="최대 위젯 수"
+>abstract="사용자 정의 대시보드는 최대 10개의 위젯을 지원합니다. 10개의 위젯을 대시보드에 추가한 후에는 [!UICONTROL 새 위젯 추가] 옵션이 비활성화되어 회색으로 표시됩니다."
 
 새 대시보드 보기에서 를 선택합니다 **[!UICONTROL 새 위젯 추가]** 위젯 생성 프로세스를 시작합니다.
+
+>[!IMPORTANT]
+>
+>사용자 정의 대시보드는 최대 10개의 위젯을 지원합니다. 10개의 위젯을 대시보드에 추가한 후에는 [!UICONTROL 새 위젯 추가] 옵션이 비활성화되어 회색으로 표시됩니다.
 
 ![새 위젯 추가 가 강조 표시된 새로운 빈 대시보드입니다.](./images/user-defined-dashboards/add-new-widget.png)
 
