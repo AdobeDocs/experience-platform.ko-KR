@@ -2,7 +2,7 @@
 title: 웹 확장의 라이브러리 모듈
 description: Adobe Experience Platform에서 웹 확장용 라이브러리 모듈의 형식을 지정하는 방법을 알아봅니다.
 exl-id: 08f2bb01-9071-49c5-a0ff-47d592cc34a5
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
+source-git-commit: 8d29765c0d3b57c69b46271e3f0b7338c75c135d
 workflow-type: tm+mt
 source-wordcount: '378'
 ht-degree: 70%
@@ -23,7 +23,7 @@ ht-degree: 70%
 
 라이브러리 모듈은 [CommonJS 모듈](https://nodejs.org/api/modules.html#modules-commonjs-modules)로 구성됩니다. CommonJS 모듈 내에서 사용할 수 있는 변수는 다음과 같습니다.
 
-## [!DNL require]
+## `require`
 
 액세스하기 위해서는 `require` 함수를 사용할 수 있습니다.
 
@@ -37,7 +37,7 @@ var cookie = require('@adobe/reactor-cookie');
 cookie.set('foo', 'bar');
 ```
 
-## [!DNL module]
+## `module`
 
 이름이 `module`인 자유 변수를 사용하여 모듈의 API를 내보낼 수 있습니다.
 
@@ -47,7 +47,7 @@ cookie.set('foo', 'bar');
 module.exports = function(…) { … }
 ```
 
-## [!DNL exports]
+## `exports`
 
 이름이 `exports`인 자유 변수를 사용하여 모듈의 API를 내보낼 수 있습니다.
 
