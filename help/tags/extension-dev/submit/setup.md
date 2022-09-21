@@ -1,10 +1,11 @@
 ---
 title: Experience Cloud 조직 설정
 description: Adobe Experience Platform용 확장 개발을 시작하기 위해 Adobe Experience Cloud 조직을 등록하는 방법을 알아봅니다.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: ee36319d-5de8-462e-879b-311445cf334c
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '608'
-ht-degree: 45%
+source-wordcount: '595'
+ht-degree: 50%
 
 ---
 
@@ -12,11 +13,11 @@ ht-degree: 45%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../term-updates.md)을 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
 
 Adobe Experience Platform에서 태그 확장을 개발하려면 Adobe Experience Cloud 조직을 등록해야 합니다.
 
-Experience Cloud 고객은 계약이 체결되면 조직에 할당됩니다. 기존 고객이고 이미 등록된 조직이 있는 경우 이 문서를 건너뛰고 확장 개발에 대한 사용자 액세스 권한 부여](./access.md)에 대한 안내서를 진행할 수 있습니다. [ Experience Cloud 고객이 아닌 경우 아래 나열된 Adobe 파트너 프로그램 중 하나에 가입하여 조직을 만들 수 있습니다.
+Experience Cloud 고객은 계약이 체결되면 조직에 할당됩니다. 기존 고객이고 이미 등록된 조직이 있는 경우 이 문서를 건너뛰고 가이드를 진행할 수 있습니다 [확장 개발에 대한 사용자 액세스 권한 부여](./access.md). Experience Cloud 고객이 아닌 경우 아래 나열된 Adobe 파트너 프로그램 중 하나에 가입하여 조직을 만들 수 있습니다.
 
 ## Exchange 파트너 프로그램
 
@@ -30,17 +31,19 @@ Experience Cloud 고객은 계약이 체결되면 조직에 할당됩니다. 기
 
 ## 솔루션 파트너 프로그램(SPP)
 
-이 프로그램은 Adobe 고객이 투자를 최대한 활용할 수 있도록 지원하는 컨설팅 회사 및 Adobe 솔루션을 판매하는 파트너를 위한 프로그램입니다. 솔루션 파트너 프로그램에 참여하는 방법에 대한 단계별 안내서는 [Adobe Spark 웹 사이트](https://spark.adobe.com/page/7PKZzIJJjkcDd/)로 이동하거나, 자세한 내용은 [솔루션 파트너 프로그램 사이트](https://solutionpartners.adobe.com/home.html)를 참조하십시오.
+이 프로그램은 Adobe 고객이 투자를 최대한 활용할 수 있도록 지원하는 컨설팅 회사 및 Adobe 솔루션을 판매하는 파트너를 위한 프로그램입니다. 솔루션 파트너 프로그램에 참여하는 방법에 대한 단계별 안내서는 로 이동합니다. [Adobe Spark 웹 사이트](https://spark.adobe.com/page/7PKZzIJJjkcDd/)또는 자세한 내용은 를 참조하십시오. [솔루션 파트너 프로그램 사이트](https://solutionpartners.adobe.com/home.html).
 
 >[!NOTE]
 >
->Exchange 계약에는 Adobe Experience Platform 확장 개발에 대한 약관이 포함되어 있으므로 솔루션 파트너는 Exchange 파트너 프로그램에도 [등록](https://partners.adobe.com/exchangeprogram/experiencecloud/prereg.html)해야 합니다.
+>솔루션 파트너도 [등록](https://partners.adobe.com/exchangeprogram/experiencecloud/prereg.html) exchange 계약으로서 Exchange 파트너 프로그램의 경우 Adobe Experience Platform 확장 개발에 대한 약관이 포함됩니다.
 >
 >Exchange 등록을 완료하기 전, Exchange 관리자에게 <ExchangeHelpEC@adobe.com>으로 이메일을 보내 확장을 프로모션하기 위한 목적으로 등록함을 알려 주십시오. 이렇게 하지 않으면 애플리케이션이 거부되고 대신 SPP를 참조하게 됩니다.
 >
 >현재 회사 이메일은 한 번에 하나의 파트너 프로그램에서만 사용할 수 있으므로 각 프로그램에 등록된 연락처와 다른 회사 이메일을 사용해야 합니다.
 
-회사가 Exchange 파트너 프로그램에 참여 중인 경우, [Exchange 파트너 사이트](https://partners.adobe.com/exchangeprogram/experiencecloud)에 로그인한 다음 아래 단계를 수행하여 Adobe 솔루션에 대한 액세스를 요청할 수 있습니다. 이미 Experience Cloud 계정을 가지고 있고 솔루션에 액세스할 수 있지만 Adobe Experience Platform의 데이터 수집 UI에 액세스할 수 없는 경우에는 [그룹 및 사용자 설정 지침](../../ui/administration/user-permissions.md)을 참조하십시오.
+회사가 Exchange 파트너 프로그램에 참여 중인 경우, [Exchange 파트너 사이트](https://partners.adobe.com/exchangeprogram/experiencecloud)에 로그인한 다음 아래 단계를 수행하여 Adobe 솔루션에 대한 액세스를 요청할 수 있습니다.
+
+Experience Cloud 계정이 데이터 수집 UI 및 Experience Platform UI에 액세스해야 하는 경우 다음을 참조하십시오. [데이터 수집 권한 안내서](../../../collection/permissions.md).
 
 ## 독립 개발자용
 

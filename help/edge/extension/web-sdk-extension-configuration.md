@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform 웹 SDK 확장 구성
-description: 데이터 수집 UI에서 Adobe Experience Platform 웹 SDK 태그 확장을 구성하는 방법입니다.
+description: UI에서 Adobe Experience Platform Web SDK 태그 확장을 구성하는 방법입니다.
 exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
-source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '1047'
+source-wordcount: '1041'
 ht-degree: 6%
 
 ---
@@ -13,11 +13,11 @@ ht-degree: 6%
 
 Adobe Experience Platform Web SDK 태그 확장은 Adobe Experience Platform Edge 네트워크를 통해 웹 속성에서 Adobe Experience Cloud으로 데이터를 전송합니다. 확장을 사용하면 데이터를 플랫폼으로 스트리밍하고 ID를 동기화하고 고객 동의 신호를 처리하며 컨텍스트 데이터를 자동으로 수집할 수 있습니다.
 
-이 문서에서는 데이터 수집 UI에서 확장을 구성하는 방법을 설명합니다.
+이 문서에서는 UI에서 확장을 구성하는 방법에 대해 설명합니다.
 
 ## 시작하기
 
-속성에 대해 Platform Web SDK 확장이 이미 설치되어 있는 경우 데이터 수집 UI에서 속성을 열고 을 선택합니다. **[!UICONTROL 확장]** 탭. Platform Web SDK에서 **[!UICONTROL 구성]**.
+속성에 대해 Platform 웹 SDK 확장이 이미 설치되어 있는 경우 UI에서 속성을 열고 을 선택합니다. **[!UICONTROL 확장]** 탭. Platform Web SDK에서 **[!UICONTROL 구성]**.
 
 ![](../images/extension/overview/configure.png)
 
@@ -54,7 +54,7 @@ Adobe Experience Platform Edge Network에 요청이 전송되면 서버측 구�
 다음 안내서를 참조하십시오. [데이터 세트](../datastreams/overview.md) 추가 정보.
 
 
-## [!UICONTROL 개인 정보 보호]
+## [!UICONTROL 개인정보 보호]
 
 ![](../images/extension/overview/privacy.png)
 

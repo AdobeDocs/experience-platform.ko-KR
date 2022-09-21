@@ -3,9 +3,9 @@ title: 이벤트 전달 개요
 description: Platform Edge Network를 사용하여 태그 구현을 변경하지 않고 작업을 실행할 수 있도록 Adobe Experience Platform의 이벤트 전달에 대해 알아봅니다.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '955'
+source-wordcount: '959'
 ht-degree: 8%
 
 ---
@@ -49,7 +49,7 @@ Adobe Experience Platform과 결합된 이벤트 전달 [웹 SDK](../../../edge/
 
 ### 속성 {#properties}
 
-이벤트 전달은 태그와 별도로 고유한 속성 저장소를 유지 관리하며, 이 속성을 선택하여 데이터 수집 UI에서 볼 수 있습니다 **[!UICONTROL 이벤트 전달]** 을 클릭합니다.
+이벤트 전달은 태그와 별도로 고유한 속성 저장소를 유지 관리하며, Experience Platform UI 또는 데이터 수집 UI에서 를 선택하여 볼 수 있습니다 **[!UICONTROL 이벤트 전달]** 을 클릭합니다.
 
 ![데이터 수집 UI의 이벤트 전달 속성](../../images/ui/event-forwarding/overview/properties.png)
 

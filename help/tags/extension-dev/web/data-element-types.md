@@ -1,10 +1,11 @@
 ---
 title: 웹 확장에 대한 데이터 요소 유형
 description: 웹 속성에서 태그 확장에 대한 데이터 요소 유형 라이브러리 모듈을 정의하는 방법을 알아봅니다.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: 3aa79322-2237-492f-82ff-0ba4d4902f70
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '596'
-ht-degree: 56%
+source-wordcount: '600'
+ht-degree: 60%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 56%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../term-updates.md)을 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
 
 데이터 수집 태그에서 데이터 요소는 페이지의 데이터 조각을 나타내는 별칭입니다. 이 데이터는 쿼리 문자열 매개 변수, 쿠키, DOM 요소 또는 기타 위치에서 찾을 수 있습니다. 데이터 요소는 규칙에서 참조하고 이러한 데이터 조각에 액세스하기 위해 추상적으로 사용할 수 있습니다.
 
@@ -22,13 +23,13 @@ ht-degree: 56%
 
 >[!IMPORTANT]
 >
->Edge 확장을 개발 중인 경우 Edge Extensions](../edge/data-element-types.md)에 대한 [데이터 요소 유형에 대한 안내서를 대신 참조하십시오.
+>Edge 확장을 개발하는 경우 안내서를 참조하십시오. [edge extensions에 대한 데이터 요소 유형](../edge/data-element-types.md) 을 가리키도록 업데이트하는 것이 좋습니다.
 >
 >또한 이 문서에서는 사용자가 라이브러리 모듈 및 웹 확장에 이러한 모듈을 통합하는 방법을 잘 알고 있다고 가정합니다. 소개 내용이 필요한 경우 이 안내서로 돌아가기 전에 [라이브러리 모듈 형식 지정](./format.md)에 대한 개요를 참조하십시오.
 
 일반적으로 데이터 요소 유형은 다음과 같이 구성됩니다.
 
-1. 사용자가 데이터 요소의 설정을 수정할 수 있는 데이터 수집 UI 내에 표시되는 [view](./views.md)
+1. A [보기](./views.md) 사용자가 데이터 요소의 설정을 수정할 수 있는 Experience Platform UI 및 데이터 수집 UI 내에 표시됩니다.
 2. 설정을 해석하고 데이터 조각을 검색하기 위해 태그 런타임 라이브러리 내에 제공되는 라이브러리 모듈입니다.
 
 사용자가 이름이 `productName`인 로컬 저장소 항목에서 데이터를 검색할 수 있도록 허용하려는 상황을 생각해 보겠습니다 . 모듈은 다음과 같습니다.
@@ -39,7 +40,7 @@ module.exports = function(settings) {
 }
 ```
 
-Adobe Experience Platform 사용자가 로컬 저장소 항목 이름을 구성할 수 있도록 하기 위해, 사용자가 이름을 입력한 다음 해당 이름을 `settings` 개체에 저장하도록 허용할 수 있습니다. 객체는 다음과 같을 수 있습니다.
+Adobe Experience Platform 사용자가 로컬 저장소 항목 이름을 구성할 수 있도록 하기 위해, 사용자가 이름을 입력한 다음 해당 이름을 `settings` 개체. 객체는 다음과 같을 수 있습니다.
 
 ```js
 {

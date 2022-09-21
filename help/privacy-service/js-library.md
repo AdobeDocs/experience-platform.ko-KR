@@ -5,9 +5,9 @@ title: Adobe 개인 정보 JavaScript 라이브러리 개요
 topic-legacy: overview
 description: Adobe 개인 정보 JavaScript 라이브러리를 사용하면 Privacy Service에서 사용할 데이터 주체 ID를 검색할 수 있습니다.
 exl-id: 757bf69e-25bf-4ef9-9787-3e74b213908a
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '1012'
+source-wordcount: '1007'
 ht-degree: 6%
 
 ---
@@ -48,7 +48,7 @@ Adobe은 데이터 처리자로서 귀사의 허가 및 지침에 따라 개인 
 * 다음 명령을 실행하여 npm으로 설치합니다. `npm install @adobe/adobe-privacy`
 * 에서 다운로드 [Experience Cloud GitHub 리포지토리](https://github.com/Adobe-Marketing-Cloud/adobe-privacy)
 
-데이터 수집 UI의 태그 확장을 통해 라이브러리를 설치할 수도 있습니다. 의 개요를 참조하십시오. [Adobe 개인 정보 태그 확장](../tags/extensions/web/privacy/overview.md) 추가 정보.
+태그 확장을 통해 라이브러리를 설치할 수도 있습니다. 의 개요를 참조하십시오. [Adobe 개인 정보 태그 확장](../tags/extensions/web/privacy/overview.md) 추가 정보.
 
 ## 를 인스턴스화합니다. [!DNL Privacy JS Library]
 

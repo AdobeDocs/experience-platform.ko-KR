@@ -1,10 +1,11 @@
 ---
 title: Adobe 관리 호스트 개요
 description: Adobe Experience Platform에서 태그 라이브러리 빌드를 배포하기 위한 기본 호스팅 옵션에 대해 알아봅니다.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: 9042c313-b0d3-4f6e-963d-0051d760fd16
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '1175'
-ht-degree: 56%
+source-wordcount: '1173'
+ht-degree: 59%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 56%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../../term-updates.md)을 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
 
 Adobe 관리 호스트는 Adobe Experience Platform에서 태그 라이브러리 빌드를 배포하기 위한 기본 호스트 설정입니다. 데이터 수집 사용자 인터페이스를 통해 새 속성을 만들면 기본 Adobe 관리 호스트가 만들어집니다.
 
@@ -75,7 +76,7 @@ Akamai에는 여러 원본 서버가 있어 서로 간에 파일을 복제하고
 
 또한 라이브러리 빌드는 `cache-control` HTTP 헤더를 사용하여 브라우저에 캐싱됩니다. Adobe 관리 호스트를 사용하는 경우 API 응답으로 반환되는 헤더를 제어할 수 없으므로 캐싱에 대한 Adobe 기본값이 사용됩니다. 즉, Adobe 관리 호스트에 사용자 지정 헤더를 활용할 수 없습니다. 사용자 지정 `cache-control` 헤더가 필요한 경우 [자체 호스팅](self-hosting-libraries.md)을 대신 고려할 수 있습니다.
 
-브라우저에 캐싱되는 라이브러리 빌드( `cache-control` 헤더에서 결정됨)의 TTL(time-to-live)은 사용 중인 태그 환경에 따라 달라집니다.
+브라우저에 캐싱되는 라이브러리 빌드( `cache-control` header) 는 사용 중인 태그 환경에 따라 달라집니다.
 
 | 환경 | `cache-control` 값 |
 | --- | --- |
@@ -87,20 +88,19 @@ Akamai에는 여러 원본 서버가 있어 서로 간에 파일을 복제하고
 
 캐시 제어 헤더는 기본 라이브러리 빌드에만 적용됩니다. 기본 라이브러리 아래에 있는 모든 하위 리소스는 항상 순-신규로 간주되므로 브라우저에서 캐싱할 필요가 없습니다.
 
-## 데이터 수집 UI에서 Adobe 관리 호스팅 사용
+##  UI에서 Adobe 관리 호스팅 사용
 
-처음으로 [데이터 수집 UI](https://experience.adobe.com/#/data-collection/)에서 속성을 만들면 Adobe 관리 호스트가 자동으로 생성됩니다. 사용 가능한 속성이 즉시 있는 사용 가능한 모든 환경도 기본적으로 Adobe 관리 호스트에 할당됩니다.
+처음으로 플랫폼 UI 또는 데이터 수집 UI에서 속성을 만들면 Adobe 관리 호스트가 자동으로 생성됩니다. 사용 가능한 속성이 즉시 있는 사용 가능한 모든 환경도 기본적으로 Adobe 관리 호스트에 할당됩니다.
 
 >[!NOTE]
 >
 >모든 환경에서 기본 Adobe 관리 호스트가 할당되지 않은 경우 호스트를 삭제할 수 있습니다. 이 작업을 수행한 후 Adobe 관리 호스트로 다시 전환하려면 다음 단계를 통해 새 호스트를 생성할 수 있습니다.
 >
->1. 속성에서 **[!UICONTROL 호스트]** 탭을 선택한 다음 **[!UICONTROL 호스트 추가]**&#x200B;를 선택합니다.
->1. 호스트의 이름을 입력하고 Adobe ]**에서 관리&lt; a0/>를 호스트 유형으로 선택한 다음**[!UICONTROL &#x200B;저장&#x200B;]**을 선택합니다.**[!UICONTROL 
+>1. 을(를) 선택합니다 **[!UICONTROL 호스트]** 탭에서 을(를) 선택한 다음 **[!UICONTROL 호스트 추가]**.
+>1. 호스트의 이름을 입력하고 을 선택합니다. **[!UICONTROL Adobe에서 관리]** 를 호스트 유형으로 선택한 다음 **[!UICONTROL 저장]**.
 
 >
->
-그런 다음 Adobe 관리 호스트에 환경을 원하는 대로 다시 할당할 수 있습니다.
+>그런 다음 Adobe 관리 호스트에 환경을 원하는 대로 다시 할당할 수 있습니다.
 
 ## 다음 단계
 

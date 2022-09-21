@@ -2,9 +2,9 @@
 title: 환경
 description: 태그 환경의 개념 및 Adobe Experience Platform 내에서 작동하는 방법에 대해 알아봅니다.
 exl-id: 0bf641c9-412e-4737-9b76-232d980385b2
-source-git-commit: 66975d2352062e4abe1af35d7a7130a5c85188d0
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '1468'
+source-wordcount: '1464'
 ht-degree: 73%
 
 ---
@@ -91,7 +91,7 @@ ht-degree: 73%
 
 ![](./images/environments/select-host.png)
 
-빌드가 만들어지면 해당 빌드가 지정된 호스트에 지정한 위치로 전달됩니다. 데이터 수집 UI에서 호스트를 만들고 구성하는 방법에 대한 자세한 내용은 [호스트 개요](./hosts/hosts-overview.md).
+빌드가 만들어지면 해당 빌드가 지정된 호스트에 지정한 위치로 전달됩니다. 태그 호스트를 만들고 구성하는 방법에 대한 자세한 내용은 [호스트 개요](./hosts/hosts-overview.md).
 
 ### 아카이브 설정 {#archive}
 

@@ -2,9 +2,9 @@
 title: Adobe 개인 정보 보호 확장 개요
 description: Adobe Experience Platform의 Adobe 개인 정보 태그 확장에 대해 알아봅니다.
 exl-id: 8401861e-93ad-48eb-8796-b26ed8963c32
-source-git-commit: 285e7ff1a1cd6c9790c526ca27ffafc60e94218d
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '909'
+source-wordcount: '901'
 ht-degree: 5%
 
 ---
@@ -13,11 +13,11 @@ ht-degree: 5%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
 
 Adobe 개인 정보 태그 확장을 사용하면 클라이언트측 장치의 Adobe 솔루션별로 최종 사용자에게 할당된 사용자 ID를 수집 및 제거할 수 있습니다. 그런 다음 수집된 ID를에 보낼 수 있습니다 [Adobe Experience Platform Privacy Service](../../../../privacy-service/home.md) 지원되는 Adobe Experience Cloud 애플리케이션에서 관련 개인의 개인 데이터에 액세스하거나 삭제할 수 있습니다.
 
-이 안내서에서는 데이터 수집 UI에서 Adobe 개인 정보 보호 확장을 설치하고 구성하는 방법을 설명합니다.
+이 안내서에서는 Experience Platform UI 또는 데이터 수집 UI에서 Adobe 개인 정보 보호 확장을 설치하고 구성하는 방법을 설명합니다.
 
 >[!NOTE]
 >
@@ -25,7 +25,7 @@ Adobe 개인 정보 태그 확장을 사용하면 클라이언트측 장치의 A
 
 ##  확장 설치 및 구성
 
-데이터 수집 UI에서 **[!UICONTROL 확장]** 왼쪽 탐색에서 를 차례로 클릭하거나 **[!UICONTROL 카탈로그]** 탭. Adobe 개인 정보를 찾을 때까지 사용 가능한 확장 목록 범위를 좁히려면 검색 막대를 사용합니다. 선택 **[!UICONTROL 설치]** 계속하십시오.
+선택 **[!UICONTROL 확장]** 왼쪽 탐색에서 를 차례로 클릭하거나 **[!UICONTROL 카탈로그]** 탭. Adobe 개인 정보를 찾을 때까지 사용 가능한 확장 목록 범위를 좁히려면 검색 막대를 사용합니다. 선택 **[!UICONTROL 설치]** 계속하십시오.
 
 ![확장 설치](../../../images/extensions/privacy/install.png)
 
@@ -71,7 +71,7 @@ Adobe 개인 정보 태그 확장을 사용할 때는 데이터 요소 형태로
 
 ### ID를 처리할 데이터 요소 정의
 
-데이터 수집 UI에서 을(를) 선택하여 새 데이터 요소를 만드는 프로세스를 시작합니다 **[!UICONTROL 데이터 요소]** 왼쪽 탐색에서 를 차례로 클릭하거나 **[!UICONTROL 데이터 요소 추가]**. 구성 화면에 표시된 경우 **[!UICONTROL 코어]** 확장 및 **[!UICONTROL 사용자 지정 코드]** 를 반환합니다. 여기에서 을 선택합니다. **[!UICONTROL 편집기 열기]** 오른쪽 패널에 표시됩니다.
+을(를) 선택하여 새 데이터 요소를 만드는 프로세스를 시작합니다 **[!UICONTROL 데이터 요소]** 왼쪽 탐색에서 를 차례로 클릭하거나 **[!UICONTROL 데이터 요소 추가]**. 구성 화면에 표시된 경우 **[!UICONTROL 코어]** 확장 및 **[!UICONTROL 사용자 지정 코드]** 를 반환합니다. 여기에서 을 선택합니다. **[!UICONTROL 편집기 열기]** 오른쪽 패널에 표시됩니다.
 
 ![데이터 요소 유형 선택](../../../images/extensions/privacy/data-element-type.png)
 
@@ -111,4 +111,4 @@ Adobe 개인 정보 태그 확장을 사용할 때는 데이터 요소 형태로
 
 ## 다음 단계
 
-이 안내서에서는 데이터 수집 UI에서 Adobe 개인 정보 태그 확장 사용을 다룹니다. 원시 코드를 사용하여 사용하는 방법의 예를 포함하여 확장에서 제공하는 기능에 대한 자세한 내용은 [개인 정보 JavaScript 라이브러리 개요](../../../../privacy-service/js-library.md) Privacy Service 설명서에서 을 참조하십시오.
+이 안내서에서는 UI에서 Adobe 개인 정보 태그 확장 사용을 다룹니다. 원시 코드를 사용하여 사용하는 방법의 예를 포함하여 확장에서 제공하는 기능에 대한 자세한 내용은 [개인 정보 JavaScript 라이브러리 개요](../../../../privacy-service/js-library.md) Privacy Service 설명서에서 을 참조하십시오.

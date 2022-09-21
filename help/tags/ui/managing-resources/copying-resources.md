@@ -1,10 +1,11 @@
 ---
 title: 리소스 복사
 description: Adobe Experience Platform에서 기존 태그 리소스의 설정을 사용하여 새 태그 리소스를 만드는 방법을 알아봅니다.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: 7e52ceae-97df-4c64-aba3-4f5ba6018a47
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '785'
-ht-degree: 75%
+source-wordcount: '780'
+ht-degree: 79%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 75%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../term-updates.md)을 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
 
 기존 리소스의 설정을 사용하여 새 리소스를 만드는 것이 편리한 경우도 있습니다. 이러한 경우 복사본을 만들 수 있습니다.
 
@@ -22,11 +23,11 @@ ht-degree: 75%
 
 ## 복사 시작
 
-설치된 확장을 보고, **[!UICONTROL 구성]** 단추에서 드롭다운 화살표를 선택하고, **[!UICONTROL 복사]**&#x200B;를 선택하여 확장의 복사를 시작할 수 있습니다.
+설치된 확장을 보고, **[!UICONTROL 구성]** 버튼 및 선택 **[!UICONTROL 복사]**.
 
 ![Analytics 확장 복사](../../images/copy-initiate-extension.png)
 
-속성, 규칙 및 데이터 요소의 경우 복사할 리소스를 선택한 다음 작업 메뉴에서 **[!UICONTROL 복사]**&#x200B;를 선택하면 됩니다.
+속성, 규칙 및 데이터 요소의 경우 복사할 리소스를 선택한 다음 **[!UICONTROL 복사]** 를 클릭합니다.
 
 ![내 Analytics 규칙 복사](../../images/copy-initiate-rule.png)
 
@@ -34,9 +35,9 @@ ht-degree: 75%
 
 >[!NOTE]
 >
->데이터 수집 UI에서는 한 속성이 확장 개발에 대해 구성되어 있고 다른 속성은 아닌 경우 리소스를 다른 속성에 복사할 수 없습니다.
+>한 속성이 확장 개발에 대해 구성되어 있고 다른 속성은 아닌 경우 리소스를 다른 속성에 복사할 수 없습니다.
 
-원하는 동작을 구성했으면 **[!UICONTROL 복사]**&#x200B;를 선택합니다.
+원하는 동작을 구성했으면 를 선택합니다 **[!UICONTROL 복사]**.
 
 ## 속성 복사
 

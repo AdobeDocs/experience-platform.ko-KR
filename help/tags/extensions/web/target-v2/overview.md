@@ -1,10 +1,11 @@
 ---
 title: Adobe Target v2 확장 개요
 description: Adobe Experience Platform의 Adobe Target v2 태그 확장에 대해 알아봅니다.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: 8f491d67-86da-4e27-92bf-909cd6854be1
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '1363'
-ht-degree: 60%
+source-wordcount: '1356'
+ht-degree: 61%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 60%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../../term-updates.md)을 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
 
 이 확장을 사용하여 규칙을 작성할 때 사용할 수 있는 옵션에 대한 정보를 보려면 이 참조를 사용하십시오.
 
@@ -22,15 +23,15 @@ ht-degree: 60%
 >
 >Adobe Target 확장을 사용하려면 At.js 2.x가 필요합니다.
 
-Adobe Target 확장이 아직 설치되지 않은 경우 속성을 연 다음, **[!UICONTROL 확장 > 카탈로그]**&#x200B;를 선택하고 Target 확장을 마우스로 가리킨 다음 **[!UICONTROL 설치]**&#x200B;를 선택합니다.
+Adobe Target 확장이 아직 설치되지 않은 경우 속성을 연 다음, 를 선택합니다 **[!UICONTROL Extensions > Catalog]**&#x200B;를 클릭하고 Target 확장을 마우스로 가리킨 다음 을 선택합니다. **[!UICONTROL 설치]**.
 
-확장을 구성하려면 Extensions 탭을 열고 확장을 마우스로 가리킨 다음 **[!UICONTROL Configure]**&#x200B;을 선택합니다.
+확장을 구성하려면 Extensions 탭을 열고 확장을 마우스로 가리킨 다음 을 선택합니다 **[!UICONTROL 구성]**.
 
 ![](../../../images/targetv2config.png)
 
 ### at.js 설정
 
-시간 초과를 제외한 모든 at.js 설정은 Target UI의 at.js 구성에서 자동으로 검색됩니다. 확장은 처음 추가될 때 Target UI에서 설정만 검색하므로, 추가 업데이트가 필요한 경우 데이터 수집 UI에서 모든 설정을 관리해야 합니다.
+시간 초과를 제외한 모든 at.js 설정은 Target UI의 at.js 구성에서 자동으로 검색됩니다. 확장은 처음 추가될 때 Target UI에서 설정만 검색하므로, 추가 업데이트가 필요한 경우 UI에서 모든 설정을 관리해야 합니다.
 
 다음 구성 옵션을 사용할 수 있습니다.
 
@@ -70,7 +71,7 @@ Target 확장은 규칙의 Then 부분에서 다음 작업을 제공합니다.
 
 ### On-Device Decisioning을 사용하여 Target 로드
 
-규칙 컨텍스트에서 [on-device decisioning](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/on-device-decisioning/on-device-decisioning.html)이 활성화된 상태로 Target을 로드하는 것이 적절할 수 있는 태그 규칙에 이 작업을 추가합니다. 이렇게 하면 On-Device Decisioning이 활성화된 at.js 라이브러리가 페이지에 로드됩니다. 대부분의 구현에서 사이트의 모든 페이지에 Target을 로드해야 합니다. Adobe은 On-Device Decisioning에서 Target 로드 작업이 Target 호출 앞에 있는 경우에만 을 사용하는 것이 좋습니다. 그렇지 않으면 Analytics 호출이 지연되는 것과 같은 문제가 발생할 수 있습니다.
+을 사용하여 Target을 로드하는 것이 적절할 수 있는 태그 규칙에 이 작업을 추가합니다. [on-device decisioning](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/on-device-decisioning/on-device-decisioning.html) 규칙 컨텍스트에서 활성화됩니다. 이렇게 하면 On-Device Decisioning이 활성화된 at.js 라이브러리가 페이지에 로드됩니다. 대부분의 구현에서 사이트의 모든 페이지에 Target을 로드해야 합니다. Adobe은 On-Device Decisioning에서 Target 로드 작업이 Target 호출 앞에 있는 경우에만 을 사용하는 것이 좋습니다. 그렇지 않으면 Analytics 호출이 지연되는 것과 같은 문제가 발생할 수 있습니다.
 
 구성이 필요하지 않습니다.
 
@@ -133,7 +134,7 @@ Target 확장이 설치되면 하나 이상의 규칙을 만들어 적절하게 
    * 페이지 로드 요청이 시간 초과된 경우
    * 코드 조각 자체가 시간 초과된 경우
 * 사전 숨김 기간을 최소화하기 위해 코드 조각 사전 숨김을 사용하는 모든 페이지에서 &quot;Fire Page Load Request&quot; 작업을 사용해야 합니다.
-* 데이터 수집 UI에서 Target에 사용하는 페이지 로드 규칙의 페이지 로드 요청 작업에서도 본문 숨기기가 활성화되어 있어야 합니다. 그렇지 않으면, 모든 페이지 로드는 시간 초과 기간 동안 숨겨진 상태로 유지됩니다.
+* Target에 사용하는 페이지 로드 규칙의 페이지 로드 요청 작업에서도 본문 숨기기가 활성화되어 있어야 합니다. 그렇지 않으면, 모든 페이지 로드는 시간 초과 기간 동안 숨겨진 상태로 유지됩니다.
 
 코드 조각 사전 숨김은 다음과 같으며, 축소할 수 있습니다. 구성 가능한 옵션은 끝에 있습니다.
 

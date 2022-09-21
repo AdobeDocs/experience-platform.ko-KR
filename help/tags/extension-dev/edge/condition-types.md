@@ -1,10 +1,11 @@
 ---
 title: Edge Extensions에 대한 조건 유형
 description: Adobe Experience Platform에서 Edge Extension에 대한 조건 유형 라이브러리 모듈을 정의하는 방법을 알아봅니다.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: fe13420e-ffa7-49d6-92c4-965ebd9d7390
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '408'
-ht-degree: 44%
+source-wordcount: '412'
+ht-degree: 50%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 44%
 
 >[!NOTE]
 >
-> Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../term-updates.md)을 참조하십시오.
+> Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
 
 태그 규칙에서 조건은 이벤트가 발생한 후 평가됩니다. 규칙이 계속 처리되려면 모든 조건이 true를 반환해야 합니다. 조건 유형은 확장에 의해 제공되며, 어떤 조건이 true 또는 false인지를 평가하여 부울 값을 반환합니다.
 
@@ -28,10 +29,10 @@ ht-degree: 44%
 
 조건 유형은 일반적으로 다음과 같이 구성됩니다.
 
-1. 사용자가 조건에 대한 설정을 수정할 수 있는 데이터 수집 UI 내에 표시되는 보기입니다.
+1. 사용자가 조건에 대한 설정을 수정할 수 있는 Experience Platform UI 및 데이터 수집 UI 내에 표시되는 보기.
 2. 설정을 해석하고 조건을 평가하는 태그 런타임 라이브러리 내에 제공되는 라이브러리 모듈입니다.
 
-예를 들어, 사용자가 호스트 `example.com`에 있는지 여부를 평가하려면 모듈이 다음과 같을 수 있습니다.
+예를 들어, 사용자가 호스트에 있는지 여부를 평가하려면 `example.com`과 같은 경우 모듈이 표시될 수 있습니다.
 
 ```js
 module.exports = (context) => {

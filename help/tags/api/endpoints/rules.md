@@ -2,9 +2,9 @@
 title: 규칙 끝점
 description: Reactor API에서 /rules 엔드포인트를 호출하는 방법을 알아봅니다.
 exl-id: 79ef4389-e4b7-461e-8579-16a1a78cdd43
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '933'
+source-wordcount: '931'
 ht-degree: 8%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 8%
 
 >[!NOTE]
 >
->이 문서에서는 Reactor API에서 규칙을 관리하는 방법을 다룹니다. 데이터 수집 UI에서 규칙과 상호 작용하는 방법에 대한 자세한 내용은 [UI 안내서](../../ui/managing-resources/rules.md).
+>이 문서에서는 Reactor API에서 규칙을 관리하는 방법을 다룹니다. UI에서 규칙과 상호 작용하는 방법에 대한 자세한 내용은 [UI 안내서](../../ui/managing-resources/rules.md).
 
 규칙은 정확히 하나의 규칙에 속합니다 [속성](./properties.md). 속성에는 많은 규칙이 있을 수 있습니다.
 

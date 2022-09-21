@@ -1,10 +1,11 @@
 ---
 title: 웹 확장에 대한 조건 유형
 description: 웹 속성에서 태그 확장에 대한 조건 유형 라이브러리 모듈을 정의하는 방법을 알아봅니다.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: db504455-858b-4ac8-aa42-de516b0f1d5a
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '498'
-ht-degree: 60%
+source-wordcount: '502'
+ht-degree: 65%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 60%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../term-updates.md)을 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
 
 규칙 컨텍스트에서 조건은 이벤트가 발생한 후 평가됩니다. 규칙이 계속 처리되려면 모든 조건이 true를 반환해야 합니다. 예외 사항은 사용자가 명시적으로 &quot;예외&quot; 버킷에 조건을 배치하는 경우로, 이때는 버킷 내의 모든 조건이 처리를 계속하기 위해서는 false를 반환해야 합니다.
 
@@ -28,7 +29,7 @@ ht-degree: 60%
 
 조건 유형은 일반적으로 다음과 같이 구성됩니다.
 
-1. 사용자가 조건에 대한 설정을 수정할 수 있는 데이터 수집 UI 내에 표시되는 [view](./views.md)
+1. A [보기](./views.md) 사용자가 조건에 대한 설정을 수정할 수 있는 Experience Platform UI 및 데이터 수집 UI에 표시됩니다.
 2. 설정을 해석하고 조건을 평가하는 태그 런타임 라이브러리 내에 제공되는 라이브러리 모듈입니다.
 
 조건 유형 라이브러리 모듈에는 다음과 같은 하나의 목표가 있습니다. 사실인지 거짓인지를 평가합니다. 평가 대상은 사용자가 결정합니다.

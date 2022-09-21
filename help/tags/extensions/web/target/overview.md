@@ -1,9 +1,10 @@
 ---
 title: Adobe Target 확장 개요
 description: Adobe Experience Platform에서 Adobe Target의 태그 확장에 대해 알아봅니다.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: b1c5e25b-42ea-4835-b2d4-913fa2536e77
+source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
 workflow-type: tm+mt
-source-wordcount: '1194'
+source-wordcount: '1192'
 ht-degree: 73%
 
 ---
@@ -12,7 +13,7 @@ ht-degree: 73%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../../term-updates.md)을 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
 
 이 확장을 사용하여 규칙을 작성할 때 사용할 수 있는 옵션에 대한 정보를 보려면 이 참조를 사용하십시오.
 
@@ -22,15 +23,15 @@ ht-degree: 73%
 >
 > Adobe Target 확장을 사용하려면 at.js가 필요합니다. 이 확장은 mbox.js를 지원하지 않습니다.
 
-Adobe Target 확장이 아직 설치되지 않은 경우 속성을 연 다음, **[!UICONTROL 확장 > 카탈로그]**&#x200B;를 선택하고 Target 확장을 마우스로 가리킨 다음 **[!UICONTROL 설치]**&#x200B;를 선택합니다.
+Adobe Target 확장이 아직 설치되지 않은 경우 속성을 연 다음, 를 선택합니다 **[!UICONTROL Extensions > Catalog]**&#x200B;를 클릭하고 Target 확장을 마우스로 가리킨 다음 을 선택합니다. **[!UICONTROL 설치]**.
 
-확장을 구성하려면 [!UICONTROL 확장] 탭을 열고 확장을 마우스로 가리킨 다음 **[!UICONTROL 구성]**&#x200B;을 선택합니다.
+확장을 구성하려면 [!UICONTROL 확장] 탭에서 확장을 마우스로 가리킨 다음 을 선택합니다 **[!UICONTROL 구성]**.
 
 ![](../../../images/ext-target-config.png)
 
 ### at.js 설정
 
-시간 초과를 제외한 모든 at.js 설정은 Target 사용자 인터페이스의 at.js 구성에서 자동으로 검색됩니다. 확장은 처음 추가될 때 Target 사용자 인터페이스에서 설정만 검색하므로, 추가 업데이트가 필요한 경우 데이터 수집 UI에서 모든 설정을 관리해야 합니다.
+시간 초과를 제외한 모든 at.js 설정은 Target 사용자 인터페이스의 at.js 구성에서 자동으로 검색됩니다. 확장은 처음 추가될 때 Target 사용자 인터페이스에서 설정만 검색하므로, 추가 업데이트가 필요한 경우 UI에서 모든 설정을 관리해야 합니다.
 
 다음 구성 옵션을 사용할 수 있습니다.
 
@@ -71,7 +72,7 @@ Target이 브라우저에서 쿠키를 설정하는 위치를 결정합니다.
 
 #### Target 사용자 인터페이스에서 사용할 수 있는 기타 at.js 설정
 
-Target UI의 [!UICONTROL at.js 설정 편집] 페이지에서 사용할 수 있는 몇 가지 설정은 Target 확장의 일부가 아닙니다. 다음은 추천 해결 방법입니다.
+에서 사용할 수 있는 몇 가지 설정 [!UICONTROL at.js 설정 편집] Target UI의 페이지는 Target 확장의 일부가 아닙니다. 다음은 추천 해결 방법입니다.
 
 * Auto-create global mbox. 이 설정은 Target 확장에서 글로벌 Mbox 실행 작업에 의해 대체됩니다.
 * Library Header. 이 설정은 Target 확장의 일부가 아닙니다. Target 로드 작업을 사용하기 전에 Core Extension>Custom Code 작업에서 at.js 앞에 로드해야 하는 코드를 지정합니다.
