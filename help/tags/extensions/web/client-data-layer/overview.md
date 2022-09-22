@@ -2,9 +2,9 @@
 title: Adobe 클라이언트 데이터 레이어 확장
 description: Adobe Experience Platform의 Adobe 클라이언트 데이터 레이어 태그 확장에 대해 알아봅니다.
 exl-id: c4d1b4d3-4b51-4701-be2e-31b08e109bf6
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '647'
+source-wordcount: '643'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ If you would like to have more details on development consideration, [please rea
 
 ## 설치
 
-확장을 설치하려면 Experience Platform UI 또는 데이터 수집 UI에서 확장 카탈로그로 이동하고 Adobe 클라이언트 데이터 레이어를 선택합니다.
+확장을 설치하려면 데이터 수집 UI에서 확장 카탈로그로 이동하고 Adobe 클라이언트 데이터 레이어를 선택합니다.
 
 ![카탈로그의 ACDL 확장 보기](./images/catalog.png)
 

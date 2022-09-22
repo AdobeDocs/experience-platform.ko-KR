@@ -2,9 +2,9 @@
 title: 게시 흐름
 description: Adobe Experience Platform에서 라이브러리를 만들고, 빌드를 테스트하고, 프로덕션에 대해 승인하는 프로세스에 대해 알아봅니다.
 exl-id: 4885f60b-6401-4ec7-aa1a-29c135087847
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '1490'
+source-wordcount: '1499'
 ht-degree: 36%
 
 ---
@@ -42,7 +42,7 @@ Adobe Experience Platform에서 태그 게시 플로우는 라이브러리를 �
 * [[!UICONTROL 승인됨]](#approved)
 * [[!UICONTROL 게시됨]](#published)
 
-이 네 가지 상태는 **[!UICONTROL 게시 흐름]** 탭.
+이 네 가지 상태는 **[!UICONTROL 게시 흐름]** 탭(데이터 수집 UI)을 참조하십시오.
 
 ![](./images/approval-workflow/flow-ui.png)
 
@@ -112,7 +112,7 @@ Adobe Experience Platform에서 태그 게시 플로우는 라이브러리를 �
 
 ![](./images/approval-workflow/upstream.png)
 
-UI에서 라이브러리를 편집할 때 업스트림에서 상속된 모든 리소스는 **[!UICONTROL 리소스 업스트림]** 섹션을 참조하십시오. 이러한 리소스를 보려면 섹션 제목 아래의 확장 탭을 선택합니다.
+데이터 수집 UI에서 라이브러리를 편집하는 경우 업스트림에서 상속된 모든 리소스는 **[!UICONTROL 리소스 업스트림]** 섹션을 참조하십시오. 이러한 리소스를 보려면 섹션 제목 아래의 확장 탭을 선택합니다.
 
 ![](./images/approval-workflow/upstream-collapse.png)
 

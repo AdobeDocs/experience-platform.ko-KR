@@ -2,10 +2,10 @@
 title: Quickstart 안내서
 description: Adobe Experience Platform에서 태그를 신속하게 설정하고 실행하는 방법을 배웁니다.
 exl-id: 490ee344-3b18-4189-9293-2378f86fb10d
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '1527'
-ht-degree: 43%
+source-wordcount: '1532'
+ht-degree: 42%
 
 ---
 
@@ -31,13 +31,13 @@ ht-degree: 43%
 
 태그는 Adobe ID과 완전히 통합되었습니다. 사용자 권한은 의 다른 Adobe 제품 및 솔루션과 Admin Console을 통해 관리됩니다 [!DNL Creative Cloud], [!DNL Document Cloud], 및 Experience Cloud.
 
-태그에는 권한 기반 사용자 관리 시스템이 있습니다. 즉, 개별 권한을 명시적으로 부여해야 합니다. 이러한 권한이 그룹에 할당되면 사용자가 액세스 권한을 얻을 수 있도록 해당 그룹에 추가됩니다. 조직에서 데이터 수집에 대한 액세스 권한을 가지고 있어도 관리자가 명시적으로 일부 권한을 부여할 때까지 개별 사용자는 아무 작업도 수행할 수 없습니다.
+태그에는 권한 기반 사용자 관리 시스템이 있습니다. 즉, 개별 권한을 명시적으로 부여해야 합니다. 이러한 권한이 그룹에 할당되면 사용자가 액세스 권한을 얻을 수 있도록 해당 그룹에 추가됩니다. 조직에서 데이터 수집 UI에 액세스할 수 있어도 조직 관리자가 명시적으로 일부 권한을 부여할 때까지 개별 사용자는 아무 작업도 수행할 수 없습니다.
 
-그룹을 만들고 태그에 사용자를 추가하는 방법에 대한 자세한 지침은 [데이터 수집 권한 안내서](../../collection/permissions.md).
+그룹을 만들고 태그에 사용자를 추가하는 방법에 대한 자세한 지침은 [사용자 권한](../ui/administration/user-permissions.md) 문서.
 
 ## 2. 로그인
 
-태그 권한이 Adobe ID에 추가되면 Experience Platform UI 또는 데이터 수집 UI에 로그인해야 합니다. 이렇게 하려면 로 직접 이동하여 [Experience Cloud 로그인 화면](https://experience.adobe.com/), 다음 중 하나를 선택합니다. **[!UICONTROL 데이터 수집]** 또는 **[!UICONTROL Experience Platform]**.
+태그 권한이 Adobe ID에 추가되면 데이터 수집 UI에 로그인해야 합니다. 이렇게 하려면 로 직접 이동하여 [Experience Cloud 로그인 화면](https://experiencecloud.adobe.com), 빠른 액세스 탭에서 데이터 수집 UI 선택 .
 
 >[!NOTE]
 >
@@ -45,7 +45,7 @@ ht-degree: 43%
 
 ## 3. 속성 만들기
 
-UI에 로그인하면 맨 먼저 속성을 만듭니다. 속성은 사이트에 태그를 배포할 때 기본적으로 확장, 규칙, 데이터 요소 및 라이브러리로 채우는 컨테이너입니다. 많은 사람들이 동일한 태그 세트를 배포하려는 각 웹 사이트(또는 밀접하게 연관된 사이트 그룹)에 대한 속성을 만듭니다.
+데이터 수집 UI에 로그인하면 맨 먼저 속성을 만듭니다. 속성은 사이트에 태그를 배포할 때 기본적으로 확장, 규칙, 데이터 요소 및 라이브러리로 채우는 컨테이너입니다. 많은 사람들이 동일한 태그 세트를 배포하려는 각 웹 사이트(또는 밀접하게 연관된 사이트 그룹)에 대한 속성을 만듭니다.
 
 속성 만들기에 대한 자세한 내용은 [속성 만들기](../ui/administration/companies-and-properties.md)를 참조하십시오.
 
@@ -67,7 +67,7 @@ Platform에서 태그를 고유하게 만드는 것은 이러한 확장을 누�
 * 세션 및 로컬 저장소
 * 기타 정보
 
-데이터 요소가 정의된 후에는 UI 전체에서 모든 확장명에 요소를 사용할 수 있습니다. 다음 문서를 참조하십시오. [데이터 요소](../ui/managing-resources/data-elements.md) 를 참조하십시오.
+데이터 요소가 정의된 후에는 데이터 수집 UI 전체에서 모든 확장명에 요소를 사용할 수 있습니다. 다음 문서를 참조하십시오. [데이터 요소](../ui/managing-resources/data-elements.md) 를 참조하십시오.
 
 **규칙**&#x200B;은 구현의 논리 코어에 있으며, 사이트에서 모든 태그의 내용, 시기, 시기, 위치 및 방법을 제어합니다. 이벤트를 정의하고, 조건 및 예외를 설정한 다음 작업 및 순서를 정의합니다. 마지막으로 변경 사항을 게시하여 결과를 확인합니다. 자세한 내용은 [규칙](../ui/managing-resources/rules.md)을 참조하십시오.
 

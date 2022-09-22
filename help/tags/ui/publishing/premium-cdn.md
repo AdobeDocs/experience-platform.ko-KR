@@ -2,9 +2,9 @@
 title: 태그에 대한 Premium CDN 지원
 description: 태그의 프리미엄 CDN 기능과 이 기능을 사용하여 여러 지리적 지역에서 콘텐츠를 전달하는 방법을 알아봅니다.
 exl-id: 33e36d3b-9e21-44a8-8498-32a5fc20b46b
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '540'
+source-wordcount: '536'
 ht-degree: 0%
 
 ---
@@ -19,11 +19,11 @@ ht-degree: 0%
 
 이를 설명하기 위해 Experience Platform의 태그는 이러한 특수 영역에 컨텐츠를 전달할 수 있는 프리미엄 CDN 기능을 제공합니다.
 
-Premium CDN 지원은 유료 기능이며, 활성화 및 사용하려면 조직에서 구매해야 합니다. 이 안내서에서는 이 기능을 구입한 후 Experience Platform UI 또는 데이터 수집 UI에서 구성하고 사용하는 방법을 설명합니다.
+Premium CDN 지원은 유료 기능이며, 활성화 및 사용하려면 조직에서 구매해야 합니다. 이 안내서에서는 이 기능을 구입한 후 데이터 수집 UI에서 구성하고 사용하는 방법을 설명합니다.
 
 ## 조직에 프리미엄 CDN을 사용하도록 설정
 
-Premium CDN은 회사 수준에서 사용할 수 있습니다. 조직에서 프리미엄 CDN 기능을 구입하면 Adobe 관리자가 회사의 UI에서 이 기능을 사용하도록 설정합니다.
+Premium CDN은 회사 수준에서 사용할 수 있습니다. 조직에서 프리미엄 CDN 기능을 구입하면 데이터 수집 UI에서 Adobe 관리자가 귀사에 대해 활성화합니다.
 
 ## 업데이트된 포함 코드로 태그 라이브러리를 다시 빌드하고 설치합니다
 

@@ -2,9 +2,9 @@
 title: Adobe 관리 호스트 개요
 description: Adobe Experience Platform에서 태그 라이브러리 빌드를 배포하기 위한 기본 호스팅 옵션에 대해 알아봅니다.
 exl-id: 9042c313-b0d3-4f6e-963d-0051d760fd16
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '1173'
+source-wordcount: '1175'
 ht-degree: 59%
 
 ---
@@ -88,9 +88,9 @@ Akamai에는 여러 원본 서버가 있어 서로 간에 파일을 복제하고
 
 캐시 제어 헤더는 기본 라이브러리 빌드에만 적용됩니다. 기본 라이브러리 아래에 있는 모든 하위 리소스는 항상 순-신규로 간주되므로 브라우저에서 캐싱할 필요가 없습니다.
 
-##  UI에서 Adobe 관리 호스팅 사용
+## 데이터 수집 UI에서 Adobe 관리 호스팅 사용
 
-처음으로 플랫폼 UI 또는 데이터 수집 UI에서 속성을 만들면 Adobe 관리 호스트가 자동으로 생성됩니다. 사용 가능한 속성이 즉시 있는 사용 가능한 모든 환경도 기본적으로 Adobe 관리 호스트에 할당됩니다.
+에서 속성을 처음 만들 때 [데이터 수집 UI](https://experience.adobe.com/#/data-collection/)를 선택하면 Adobe 관리 호스트가 자동으로 생성됩니다. 사용 가능한 속성이 즉시 있는 사용 가능한 모든 환경도 기본적으로 Adobe 관리 호스트에 할당됩니다.
 
 >[!NOTE]
 >

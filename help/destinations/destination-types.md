@@ -3,9 +3,9 @@ keywords: 대상;대상;대상 유형
 title: 대상 유형 및 카테고리
 description: Adobe Experience Platform의 다양한 대상 유형 및 카테고리에 대해 알아봅니다.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '640'
+source-wordcount: '642'
 ht-degree: 0%
 
 ---
@@ -69,7 +69,7 @@ Experience Platform의 Edge 개인화 대상은 다음과 같습니다 [Adobe Ta
 
 ## 확장 {#extensions}
 
-Platform은 태그 관리의 힘과 유연성을 활용하여 UI에서 태그 확장을 구성할 수 있습니다.
+Platform은 태그 관리의 힘과 유연성을 활용하여 데이터 수집 UI에서 태그 확장을 구성할 수 있습니다.
 
 >[!TIP]
 >

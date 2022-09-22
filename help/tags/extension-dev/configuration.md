@@ -1,10 +1,10 @@
 ---
 title: 확장 구성
-description: Adobe Experience Platform UI 또는 데이터 수집 UI에서 사용자로부터 전역 설정을 수집하도록 태그 확장을 구성하는 방법을 알아봅니다.
+description: Adobe Experience Platform의 데이터 수집 UI에서 사용자로부터 전역 설정을 수집하도록 태그 확장을 구성하는 방법을 알아봅니다.
 exl-id: 2bf33617-1398-499f-8325-3849dbdb1f97
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '274'
+source-wordcount: '273'
 ht-degree: 68%
 
 ---

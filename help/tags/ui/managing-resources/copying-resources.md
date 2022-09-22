@@ -2,10 +2,10 @@
 title: 리소스 복사
 description: Adobe Experience Platform에서 기존 태그 리소스의 설정을 사용하여 새 태그 리소스를 만드는 방법을 알아봅니다.
 exl-id: 7e52ceae-97df-4c64-aba3-4f5ba6018a47
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '780'
-ht-degree: 79%
+source-wordcount: '785'
+ht-degree: 78%
 
 ---
 
@@ -35,7 +35,7 @@ ht-degree: 79%
 
 >[!NOTE]
 >
->한 속성이 확장 개발에 대해 구성되어 있고 다른 속성은 아닌 경우 리소스를 다른 속성에 복사할 수 없습니다.
+>데이터 수집 UI에서는 한 속성이 확장 개발에 대해 구성되어 있고 다른 속성은 아닌 경우 리소스를 다른 속성에 복사할 수 없습니다.
 
 원하는 동작을 구성했으면 를 선택합니다 **[!UICONTROL 복사]**.
 

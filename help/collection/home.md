@@ -5,9 +5,9 @@ title: 데이터 수집 개요
 topic-legacy: overview
 description: Adobe Experience Platform의 고객 경험에 대한 데이터 수집과 관련된 다양한 기술에 대해 알아봅니다.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '469'
+source-wordcount: '464'
 ht-degree: 4%
 
 ---
@@ -38,7 +38,7 @@ Adobe Experience Platform은 클라이언트측 소스에서 고객 경험 데�
 
 ## 태그, 웹 SDK 및 Mobile SDK
 
-Platform Web SDK 및 Platform Mobile SDK는 모든 Adobe 제품 라이브러리를 웹 및 모바일 플랫폼용 단일 개발 키트로 각각 축소하고 압축합니다. 원시 코드를 사용하거나 [태그](../tags/home.md) 데이터 수집 UI 또는 Adobe Experience Platform UI 사용.
+Platform Web SDK 및 Platform Mobile SDK는 모든 Adobe 제품 라이브러리를 웹 및 모바일 플랫폼용 단일 개발 키트로 각각 축소하고 압축합니다. 원시 코드를 사용하거나 [태그](../tags/home.md) 데이터 수집 UI 사용.
 
 이러한 라이브러리를 압축하면 데이터 수집이 빨라지고 클라이언트 측 장치에서 Platform Edge 네트워크로 작업을 단일 스트림으로 통합할 수 있습니다.
 

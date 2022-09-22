@@ -3,9 +3,9 @@ keywords: Win Advertiser 변환 태그 확장;변환 태그;Win;Win;AWIN
 title: Win Advertiser 변환 태그 확장
 description: Win Advertiser 변환 태그 확장 은 Adobe Experience Platform의 광고 대상입니다. 확장 기능에 대한 자세한 내용은 Exchange Adobe의 확장 페이지를 참조하십시오.
 exl-id: 99feb169-acf3-4e68-8785-3f4cf565e5a9
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '506'
+source-wordcount: '504'
 ht-degree: 3%
 
 ---
@@ -26,7 +26,7 @@ Win Advertiser Conversion Tag는 Adobe Experience Platform의 광고 확장입�
 
 이 확장은 Platform을 구입한 모든 고객을 위한 대상 카탈로그에서 사용할 수 있습니다.
 
-이 확장을 사용하려면 Platform에서 태그에 액세스해야 합니다. 태그는 부가가치 기능으로 포함되어 Adobe Experience Cloud 고객에게 제공됩니다. 조직 관리자에게 문의하여 UI의 데이터 수집 기능에 대한 액세스 권한을 받으십시오 **[!UICONTROL manage_properties]** 확장을 설치할 수 있는 권한.
+이 확장을 사용하려면 Platform에서 태그에 액세스해야 합니다. 태그는 부가가치 기능으로 포함되어 Adobe Experience Cloud 고객에게 제공됩니다. 조직 관리자에게 문의하여 데이터 수집 UI에 대한 액세스 권한을 받고 사용자에게 **[!UICONTROL manage_properties]** 확장을 설치할 수 있는 권한.
 
 ## 확장 설치 {#install-extension}
 

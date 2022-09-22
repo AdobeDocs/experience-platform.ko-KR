@@ -2,9 +2,9 @@
 title: 위성 개체 참조
 description: 클라이언트측 _satellite 개체 및 태그를 사용하여 수행할 수 있는 다양한 기능에 대해 알아봅니다.
 exl-id: f8b31c23-409b-471e-bbbc-b8f24d254761
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '1290'
+source-wordcount: '1291'
 ht-degree: 42%
 
 ---
@@ -51,7 +51,7 @@ var product = _satellite.getVar('product');
 
 >[!NOTE]
 >
->백분율(`%`) 구문을 통해 태그 구현에서 많은 양식 필드에 대한 변수를 참조할 수 있으므로 호출의 필요성을 줄일 수 있습니다 `_satellite.getVar()`. 예를 들어 `%product%` 은 제품 데이터 요소 또는 사용자 지정 변수의 값에 액세스합니다.
+>백분율(`%`) 구문을 통해 데이터 수집 UI의 많은 양식 필드에 대한 변수를 참조할 수 있으므로 호출의 필요성을 줄일 수 있습니다 `_satellite.getVar()`. 예를 들어 `%product%` 은 제품 데이터 요소 또는 사용자 지정 변수의 값에 액세스합니다.
 
 이벤트가 규칙을 트리거할 때 규칙의 해당 규칙을 전달할 수 있습니다 `event` 개체 `_satellite.getVar()` 다음과 같습니다.
 

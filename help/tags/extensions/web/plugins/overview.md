@@ -2,10 +2,10 @@
 title: 일반 Analytics 확장 개요
 description: Adobe Experience Platform의 일반 Analytics 태그 확장에 대해 알아봅니다.
 exl-id: 9eeb4589-df90-4356-b927-b2c29c32370b
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '406'
-ht-degree: 77%
+source-wordcount: '549'
+ht-degree: 62%
 
 ---
 
@@ -50,7 +50,7 @@ ht-degree: 77%
 >
 >이 작업을 쉽게 구현할 수 있지만 Adobe Consulting에서는 플러그인의 가중치를 늘리도록 이 작업을 사용할 것을 권장합니다.
 
-이 작업에서는 구현에 포함할 각 플러그인을 선택하고 변경 내용을 저장할 수 있습니다. 구현 중에 사용할 만큼만 선택합니다.
+이 작업에서는 구현에 포함할 각 플러그인을 선택하고 변경 내용을 저장할 수 있습니다. 구현 중에 사용할 만큼만 선택합니다. 각 플러그인을 사용하는 방법에 대한 설명서 링크 및 간단한 설명은 Analytics [플러그인 개요](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/impl-plugins.html)에 나와 있습니다.
 
 ### 플러그인 초기화
 
@@ -58,17 +58,36 @@ ht-degree: 77%
 
 ## 일반 Analytics 플러그인 확장 데이터 요소
 
-다음 데이터 요소는 Analytics에서 해당 플러그인을 설정하고 구성하는 태그 기능을 활용하는 일반 Analytics 플러그인 확장에서 사용할 수 있습니다.
+이 섹션에서는 Adobe Analytics 확장 프로그램에서 사용할 수 있는 데이터 요소를 설명합니다.
 
-* `getGeoCoordinates`
-* `getNewRepeat`
-* `getPageName`
-* `getResponsiveLayout`
-* `getTimeParting`
-* `getTimeSinceLastVisit`
-* `getVisitDuration`
-* `getVisitNum`
+### getGeoCoordinates
 
->[!NOTE]
->
->위의 플러그인에 대한 자세한 내용은 [Analytics 설명서](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/impl-plugins.html).
+사용자가 Adobe Experience Platform의 기본 데이터 수집 UI를 활용하여 getGeoCoordinates 플러그인을 설정하고 구성할 수 있습니다.
+
+### getNewRepeat
+
+사용자는 기본 데이터 수집 UI를 활용하여 getNewRepeat 플러그인을 설정하고 구성할 수 있습니다.
+
+### getPageName
+
+사용자는 기본 데이터 수집 UI를 활용하여 getPageName 플러그인을 설정하고 구성할 수 있습니다.
+
+### getResponsiveLayout
+
+사용자는 기본 데이터 수집 UI를 활용하여 getResponsiveLayout 플러그인을 설정하고 구성할 수 있습니다.
+
+### getTimeParting
+
+사용자가 기본 데이터 수집 UI를 활용하여 getTimeParting 플러그인을 설정하고 구성할 수 있습니다.
+
+### getTimeSinceLastVisit
+
+사용자가 기본 데이터 수집 UI를 활용하여 getTimeSinceLastVisit 플러그인을 설정하고 구성할 수 있습니다.
+
+### getVisitDuration
+
+사용자는 기본 데이터 수집 UI를 활용하여 getVisitDuration 플러그인을 설정하고 구성할 수 있습니다.
+
+### getVisitNum
+
+사용자가 기본 데이터 수집 UI를 활용하여 getVisitNum 플러그인을 설정하고 구성할 수 있습니다.

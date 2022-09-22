@@ -2,9 +2,9 @@
 title: Experience Platform의 데이터 수집을 위한 권한 관리
 description: Adobe Experience Platform에서 권한을 관리하고 데이터 수집 기능에 대한 액세스를 제어하는 방법에 대한 높은 수준의 개요입니다.
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '1309'
+source-wordcount: '1311'
 ht-degree: 5%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 5%
 
 ## 시작하기
 
-데이터 수집에 대한 액세스 제어를 구성하려면 Adobe Experience Platform 데이터 수집과 제품 통합이 있는 조직에 대한 관리자 권한이 있어야 합니다. 권한을 부여하거나 취소할 수 있는 최소 역할은 입니다 **제품 프로필 관리자**. 권한을 관리할 수 있는 기타 관리자 역할은 다음과 같습니다 **제품 관리자** (제품 내의 모든 프로필을 관리할 수 있음) 및 **시스템 관리자** (제한 없음) 다음 문서를 참조하십시오. [관리자 역할](https://helpx.adobe.com/enterprise/using/admin-roles.html) 자세한 내용은 Adobe 엔터프라이즈 관리 안내서 를 참조하십시오.
+데이터 수집에 대한 액세스 제어를 구성하려면 Adobe Experience Platform 데이터 수집과 제품 통합이 있는 조직에 대한 관리자 권한이 있어야 합니다. 권한을 부여하거나 취소할 수 있는 최소 역할은 제품 프로필 관리자입니다. 권한을 관리할 수 있는 다른 관리자 역할은 제품 관리자(제품 내의 모든 프로필을 관리할 수 있음)와 시스템 관리자(제한 없음)입니다. 다음 문서를 참조하십시오. [관리자 역할](https://helpx.adobe.com/enterprise/using/admin-roles.html) 자세한 내용은 Adobe 엔터프라이즈 관리 안내서 를 참조하십시오.
 
 이 안내서에서는 제품 프로필과 같은 기본 Admin Console 개념 및 개별 사용자 및 그룹에 제품 권한을 부여하는 방법에 대해 잘 알고 있다고 가정합니다. 자세한 내용은 [Admin Console 사용 안내서](https://helpx.adobe.com/kr/enterprise/using/admin-console.html).
 
@@ -137,4 +137,4 @@ Adobe Experience Platform 데이터 수집의 권한은 속성, 확장 및 환�
 
 ## 다음 단계
 
-이 안내서에서는 데이터 수집을 위한 사용 가능한 권한 및 Admin Console을 통해 데이터 수집을 관리하는 방법에 대해 다룹니다. 다른 Adobe Experience Platform 기능에 대한 권한 관리에 대한 자세한 내용은 [액세스 제어 설명서](../access-control/home.md).
+이 안내서에서는 데이터 수집 UI에 사용할 수 있는 권한과 Admin Console을 통해 관리하는 방법에 대해 다룹니다. 다른 Adobe Experience Platform 기능에 대한 권한 관리에 대한 자세한 내용은 [액세스 제어 설명서](../access-control/home.md).

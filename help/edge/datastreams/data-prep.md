@@ -2,9 +2,9 @@
 title: 데이터 수집을 위한 데이터 준비
 description: Adobe Experience Platform Web 및 Mobile SDK에 대한 데이터 스트림을 구성할 때 데이터를 XDM(Experience Data Model) 이벤트 스키마에 매핑하는 방법을 알아봅니다.
 exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '914'
+source-wordcount: '918'
 ht-degree: 1%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 1%
 >* [데이터 준비를 사용하여 데이터 형식 처리](../../data-prep/data-handling.md)
 
 
-이 안내서에서는 UI 내에 데이터를 매핑하는 방법을 다룹니다. 단계를 따라 데이터 스트림을 만드는 프로세스를 최대(및 포함)까지 시작합니다 [기본 구성 단계](./overview.md#create).
+이 안내서에서는 데이터 수집 UI 내에 데이터를 매핑하는 방법을 다룹니다. 단계를 따라 데이터 스트림을 만드는 프로세스를 최대(및 포함)까지 시작합니다 [기본 구성 단계](./overview.md#create).
 
 데이터 수집을 위한 데이터 준비 프로세스에 대한 빠른 데모는 다음 비디오를 참조하십시오.
 
@@ -203,4 +203,4 @@ XDM 개체 데이터 요소에서 속성을 캡처하려면 동일한 규칙이 
 
 ## 다음 단계
 
-이 안내서에서는 UI에서 데이터 스트림을 설정할 때 데이터를 XDM에 매핑하는 방법을 다룹니다. 일반 데이터 스트림 자습서를 따르는 경우 이제 다음 단계로 돌아갈 수 있습니다 [데이터 스트림 세부 정보 보기](./overview.md).
+이 안내서에서는 데이터 수집 UI에서 데이터 스트림을 설정할 때 데이터를 XDM에 매핑하는 방법을 다룹니다. 일반 데이터 스트림 자습서를 따르는 경우 이제 다음 단계로 돌아갈 수 있습니다 [데이터 스트림 세부 정보 보기](./overview.md).

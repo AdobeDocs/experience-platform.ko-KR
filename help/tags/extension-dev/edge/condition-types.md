@@ -2,10 +2,10 @@
 title: Edge Extensions에 대한 조건 유형
 description: Adobe Experience Platform에서 Edge Extension에 대한 조건 유형 라이브러리 모듈을 정의하는 방법을 알아봅니다.
 exl-id: fe13420e-ffa7-49d6-92c4-965ebd9d7390
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '412'
-ht-degree: 50%
+source-wordcount: '408'
+ht-degree: 51%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 50%
 
 조건 유형은 일반적으로 다음과 같이 구성됩니다.
 
-1. 사용자가 조건에 대한 설정을 수정할 수 있는 Experience Platform UI 및 데이터 수집 UI 내에 표시되는 보기.
+1. 사용자가 조건에 대한 설정을 수정할 수 있는 데이터 수집 UI 내에 표시되는 보기입니다.
 2. 설정을 해석하고 조건을 평가하는 태그 런타임 라이브러리 내에 제공되는 라이브러리 모듈입니다.
 
 예를 들어, 사용자가 호스트에 있는지 여부를 평가하려면 `example.com`과 같은 경우 모듈이 표시될 수 있습니다.

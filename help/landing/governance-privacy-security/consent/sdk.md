@@ -3,7 +3,7 @@ title: Adobe Experience Platform Web SDK를 사용하여 고객 동의 데이터
 topic-legacy: getting started
 description: Adobe Experience Platform Web SDK를 통합하여 Adobe Experience Platform에서 고객 동의 데이터를 처리하는 방법을 알아봅니다.
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
 source-wordcount: '1375'
 ht-degree: 0%
@@ -23,7 +23,7 @@ Adobe Experience Platform Web SDK를 사용하면 CMP(동의 관리 플랫폼)�
 * [Adobe 표준을 사용하여 데이터 세트 만들기](./adobe/dataset.md)
 * [TCF 2.0 표준을 사용하여 데이터 세트 만들기](./iab/dataset.md)
 
-이 안내서는 UI에서 태그 확장을 사용하여 SDK를 설정하는 워크플로우를 따릅니다. 확장을 사용하지 않고 사이트에 독립형 버전의 SDK를 직접 포함하려는 경우 이 안내서 대신 다음 문서를 참조하십시오.
+이 안내서는 데이터 수집 UI에서 태그 확장을 사용하여 SDK를 설정하는 워크플로우를 따릅니다. 확장을 사용하지 않고 사이트에 독립형 버전의 SDK를 직접 포함하려는 경우 이 안내서 대신 다음 문서를 참조하십시오.
 
 * [데이터 스트림 구성](../../../edge/datastreams/overview.md)
 * [SDK 설치](../../../edge/fundamentals/installing-the-sdk.md)
@@ -37,7 +37,7 @@ Adobe Experience Platform Web SDK를 사용하면 CMP(동의 관리 플랫폼)�
 
 ## 데이터 스트림 설정
 
-SDK에서 Experience Platform으로 데이터를 전송하려면 먼저 데이터 스트림을 구성해야 합니다. 데이터 수집 UI 또는 Experience Platform UI에서 **[!UICONTROL 데이터 스트림]** 을 클릭합니다.
+SDK에서 Experience Platform으로 데이터를 전송하려면 먼저 데이터 스트림을 구성해야 합니다. 데이터 수집 UI에서 **[!UICONTROL 데이터 스트림]** 을 클릭합니다.
 
 새 데이터 스트림을 만들거나 편집할 기존 데이터 스트림을 선택한 후 옆에 있는 전환 단추를 선택합니다 **[!UICONTROL Adobe Experience Platform]**. 그런 다음 아래 나열된 값을 사용하여 양식을 완료합니다.
 
@@ -80,7 +80,7 @@ SDK 확장이 설치되어 있으면 기본 데이터 수집 동의 값(`collect
 1. 이벤트 처리기에서 `adobeDefaultConsent` 변수를 채우는 방법을 설명합니다.
 1. 를 사용하는 데이터 요소를 설정합니다. `adobeDefaultConsent` JavaScript 변수를 사용하고, 이 데이터 요소를 사용자의 기본 동의 값으로 사용하십시오.
 
-UI에서 데이터 요소를 만들려면 **[!UICONTROL 데이터 요소]** 왼쪽 탐색에서 를 선택하고 **[!UICONTROL 데이터 요소 추가]** 데이터 요소 만들기 대화 상자로 이동합니다.
+데이터 수집 UI에서 데이터 요소를 만들려면 **[!UICONTROL 데이터 요소]** 왼쪽 탐색에서 를 선택하고 **[!UICONTROL 데이터 요소 추가]** 데이터 요소 만들기 대화 상자로 이동합니다.
 
 여기에서 [!UICONTROL JavaScript 변수] 데이터 요소 기반 `adobeDefaultConsent`. 선택 **[!UICONTROL 저장]** 완료됨.
 

@@ -2,10 +2,10 @@
 title: Adobe Target v2 확장 개요
 description: Adobe Experience Platform의 Adobe Target v2 태그 확장에 대해 알아봅니다.
 exl-id: 8f491d67-86da-4e27-92bf-909cd6854be1
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '1356'
-ht-degree: 61%
+source-wordcount: '1363'
+ht-degree: 62%
 
 ---
 
@@ -31,7 +31,7 @@ Adobe Target 확장이 아직 설치되지 않은 경우 속성을 연 다음, �
 
 ### at.js 설정
 
-시간 초과를 제외한 모든 at.js 설정은 Target UI의 at.js 구성에서 자동으로 검색됩니다. 확장은 처음 추가될 때 Target UI에서 설정만 검색하므로, 추가 업데이트가 필요한 경우 UI에서 모든 설정을 관리해야 합니다.
+시간 초과를 제외한 모든 at.js 설정은 Target UI의 at.js 구성에서 자동으로 검색됩니다. 확장은 처음 추가될 때 Target UI에서 설정만 검색하므로, 추가 업데이트가 필요한 경우 데이터 수집 UI에서 모든 설정을 관리해야 합니다.
 
 다음 구성 옵션을 사용할 수 있습니다.
 
@@ -134,7 +134,7 @@ Target 확장이 설치되면 하나 이상의 규칙을 만들어 적절하게 
    * 페이지 로드 요청이 시간 초과된 경우
    * 코드 조각 자체가 시간 초과된 경우
 * 사전 숨김 기간을 최소화하기 위해 코드 조각 사전 숨김을 사용하는 모든 페이지에서 &quot;Fire Page Load Request&quot; 작업을 사용해야 합니다.
-* Target에 사용하는 페이지 로드 규칙의 페이지 로드 요청 작업에서도 본문 숨기기가 활성화되어 있어야 합니다. 그렇지 않으면, 모든 페이지 로드는 시간 초과 기간 동안 숨겨진 상태로 유지됩니다.
+* 데이터 수집 UI에서 Target에 사용하는 페이지 로드 규칙의 페이지 로드 요청 작업에서도 본문 숨기기가 활성화되어 있어야 합니다. 그렇지 않으면, 모든 페이지 로드는 시간 초과 기간 동안 숨겨진 상태로 유지됩니다.
 
 코드 조각 사전 숨김은 다음과 같으며, 축소할 수 있습니다. 구성 가능한 옵션은 끝에 있습니다.
 

@@ -2,9 +2,9 @@
 title: 확장 패키지 끝점
 description: Reactor API에서 /extension_packages 종단점을 호출하는 방법을 알아봅니다.
 exl-id: a91c6f32-6c72-4118-a43f-2bd8ef50709f
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '956'
+source-wordcount: '951'
 ht-degree: 5%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 5%
 
 확장 패키지는 [확장](./extensions.md) 확장 개발자가 작성한 것입니다. 확장 패키지는 태그 사용자에 대해 사용할 수 있는 추가 기능을 정의합니다. 일반적으로 이러한 기능은 [규칙 구성 요소](./rule-components.md) (이벤트, 조건 및 작업) 및 [데이터 요소](./data-elements.md), 기본 모듈 및 공유 모듈을 포함할 수도 있습니다.
 
-확장 패키지는 사용자가 설치할 데이터 수집 UI 및 Adobe Experience Platform UI 내의 확장 카탈로그에 표시됩니다. 확장 패키지에 대한 링크가 있는 확장을 만들면 속성에 확장 패키지를 추가할 수 있습니다.
+확장 패키지는 사용자가 설치할 데이터 수집 UI 내의 확장 카탈로그에 표시됩니다. 확장 패키지에 대한 링크가 있는 확장을 만들면 속성에 확장 패키지를 추가할 수 있습니다.
 
 확장 패키지는 [회사](./companies.md) 개발자를 만든 개발자의 자산입니다.
 

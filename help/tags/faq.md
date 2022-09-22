@@ -2,7 +2,7 @@
 title: 태그 문제 해결 안내서
 description: Adobe Experience Platform에서 태그에 대해 자주 묻는 질문에 대한 답변을 얻을 수 있습니다.
 exl-id: c06b8e25-4d79-4a11-94da-94ac096b5e33
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
 source-wordcount: '1049'
 ht-degree: 27%
@@ -96,11 +96,11 @@ Adobe에는 동일한 확장 프로그램 개발 방법을 사용하여 자체 �
 
 ## UI에서 내 계정을 로드하는 동안 오류가 발생했습니다.
 
-계정을 로드하는 동안 오류가 발생했다는 메시지가 표시되는 경우, 계정이 태그의 제품 프로필에 속해 있지 않은 것입니다. 다음 안내서를 참조하십시오. [권한 관리](../collection/permissions.md) ui에서 데이터 수집 기능에 대한 액세스 권한을 부여하도록 Adobe Admin Console에서 제품 프로필을 구성하는 방법을 알아봅니다.
+계정을 로드하는 동안 오류가 발생했다는 메시지가 표시되는 경우, 계정이 태그의 제품 프로필에 속해 있지 않은 것입니다. 다음 안내서를 참조하십시오. [권한 관리](../collection/permissions.md) 데이터 수집 UI에 대한 액세스 권한을 부여하기 위해 Adobe Admin Console에서 제품 프로필을 구성하는 방법을 알아봅니다.
 
 ## UI에 속성을 추가할 수 없는 이유는 무엇입니까?
 
-UI에 로그인할 때 새 속성을 만들 수 없다면, 계정이 속성 관리 권한이 있는 제품 프로필에 속해 있지 않은 것입니다.
+데이터 수집 UI에 로그인할 때 새 속성을 만들 수 없다면, 계정이 속성 관리 권한이 있는 제품 프로필에 속해 있지 않은 것입니다.
 
 다음 안내서를 참조하십시오. [권한 관리](../collection/permissions.md) 속성 관리 권한을 부여하기 위해 Adobe Admin Console에서 제품 프로필을 구성하는 방법을 알아봅니다. 태그의 다른 권한에 대한 자세한 내용은 [태그의 사용자 권한](./ui/administration/user-permissions.md).
 

@@ -2,9 +2,9 @@
 title: Edge Extensions에 대한 데이터 요소 유형
 description: edge 속성에서 태그 확장에 대한 데이터 요소 유형 라이브러리 모듈을 정의하는 방법을 알아봅니다.
 exl-id: ddbc3912-1c25-4d21-bde8-e40e583b4278
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '439'
+source-wordcount: '435'
 ht-degree: 31%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 31%
 
 일반적으로 데이터 요소 유형은 다음과 같이 구성됩니다.
 
-1. 사용자가 데이터 요소의 설정을 수정할 수 있는 Experience Platform UI 및 데이터 수집 UI 내에 표시되는 보기.
+1. 사용자가 데이터 요소의 설정을 수정할 수 있는 데이터 수집 UI 내에 표시되는 보기.
 2. 설정을 해석하고 데이터 조각을 검색하기 위해 태그 런타임 라이브러리 내에 제공되는 라이브러리 모듈입니다.
 
 사용자가 사용자 지정 데이터 레이어에서 데이터를 검색할 수 있도록 허용하려면 모듈이 이 예제와 같을 수 있습니다.

@@ -2,9 +2,9 @@
 title: 웹 확장에 대한 이벤트 유형
 description: Adobe Experience Platform에서 웹 확장에 대한 이벤트 유형 라이브러리 모듈을 정의하는 방법을 알아봅니다.
 exl-id: dbdd1c88-5c54-46be-9824-2f15cce3d160
-source-git-commit: 77313baabee10e21845fa79763c7ade4e479e080
+source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
 workflow-type: tm+mt
-source-wordcount: '1052'
+source-wordcount: '1048'
 ht-degree: 30%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 30%
 
 이벤트 유형은 확장에 의해 정의되며 일반적으로 다음과 같이 구성됩니다.
 
-1. A [보기](./views.md) 사용자가 이벤트의 설정을 수정할 수 있는 Experience Platform UI 및 데이터 수집 UI 내에 표시됩니다.
+1. A [보기](./views.md) 사용자가 이벤트의 설정을 수정할 수 있는 데이터 수집 UI 내에 표시됩니다.
 2. 설정을 해석하고 특정 활동이 수행되는지를 감시하는, 태그 런타임 라이브러리 내에 제공되는 라이브러리 모듈입니다.
 
 `module.exports` 둘 다 수락 `settings` 및 `trigger` 매개 변수. 이를 통해 이벤트 유형의 사용자 지정을 사용할 수 있습니다.
