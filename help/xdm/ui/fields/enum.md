@@ -5,7 +5,7 @@ title: UI에서 열거형 필드 정의
 description: Experience Platform 사용자 인터페이스에서 열거형 필드를 정의하는 방법을 알아봅니다.
 topic-legacy: user guide
 exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
-source-git-commit: f6fefda974d2ae6fd4b035ef3b5fe633311c9772
+source-git-commit: 878d99d9eb45f40ff76e5e90116abf032be1c93f
 workflow-type: tm+mt
 source-wordcount: '310'
 ht-degree: 2%
@@ -15,7 +15,7 @@ ht-degree: 2%
 # UI에서 열거형 필드 정의 {#enum}
 
 >[!CONTEXTUALHELP]
->id="platform_xdm_enumsuggestedvalue"
+>id="platform_xdm_enum_suggestedvalue"
 >title="열거형 및 추천 값"
 >abstract="열거형은 미리 정의된 값 세트와 일치하는 데이터만 수집하도록 문자열 필드를 제한합니다. 또는, 수집을 제한하지 않고 대신 세그먼테이션에서 선택할 수 있는 속성을 정의하는 데 권장되는 값 세트를 정의할 수 있습니다. 자세한 내용은 설명서를 참조하십시오."
 
