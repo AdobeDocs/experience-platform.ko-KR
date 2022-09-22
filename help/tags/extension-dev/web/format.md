@@ -2,7 +2,7 @@
 title: 웹 확장의 라이브러리 모듈
 description: Adobe Experience Platform에서 웹 확장용 라이브러리 모듈의 형식을 지정하는 방법을 알아봅니다.
 exl-id: 08f2bb01-9071-49c5-a0ff-47d592cc34a5
-source-git-commit: 8d29765c0d3b57c69b46271e3f0b7338c75c135d
+source-git-commit: b3754c94843f32ba58aa1e020dface1179372de3
 workflow-type: tm+mt
 source-wordcount: '378'
 ht-degree: 70%
@@ -47,7 +47,7 @@ cookie.set('foo', 'bar');
 module.exports = function(…) { … }
 ```
 
-## `exports`
+## `exports` {#exports-variable}
 
 이름이 `exports`인 자유 변수를 사용하여 모듈의 API를 내보낼 수 있습니다.
 
