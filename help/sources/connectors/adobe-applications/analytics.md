@@ -3,10 +3,10 @@ keywords: Experience Platform;홈;인기 항목;Analytics 소스 커넥터;분�
 title: 보고서 세트 데이터용 Adobe Analytics 소스 커넥터
 description: 이 문서에서는 Analytics에 대한 개요를 제공하며 Analytics 데이터의 사용 사례를 설명합니다.
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-source-git-commit: 352993365dfcd4f39e7aea337b014430f7bad41c
+source-git-commit: fd114a418668436efa17edb00f2849a10f2c8cd6
 workflow-type: tm+mt
-source-wordcount: '1043'
-ht-degree: 2%
+source-wordcount: '997'
+ht-degree: 6%
 
 ---
 
@@ -64,8 +64,8 @@ XDM에 대한 자세한 내용은 [XDM 시스템 개요](../../../xdm/home.md).
 | ID 필드 | 설명 |
 | --- | --- |
 | AAID | AAID는 Adobe Analytics의 기본 장치 식별자이며, 를 통해 전달되는 모든 이벤트에 계속 존재할 수 있습니다 [!DNL Analytics] 소스. AAID는 때로 *기존 Analytics ID* 또는 `s_vi` 쿠키 ID. 그럼에도 불구하고, `s_vi` 쿠키가 없습니다. AAID는 `post_visid_high` 및 `post_visid_low` 열 [[!DNL Analytics] 데이터 피드](https://experienceleague.adobe.com/docs/analytics/export/analytics-data-feed/data-feed-contents/datafeeds-reference.html). 제공된 이벤트에서 AAID 필드에는 단일 ID가 포함되어 있습니다. ID는 [작업 순서 [!DNL Analytics] ID](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/analytics-order-of-operations.html). **참고**: 전체 보고서 세트 내에서 AAID에는 여러 이벤트 간에 유형이 혼합되어 있을 수 있습니다. |
-| ECID | ECID(Experience Cloud ID)는 Adobe Analytics에서 채워지는 별도의 장치 식별자 필드입니다 [!DNL Analytics] 는 Experience Cloud ID 서비스를 사용하여 구현됩니다. ECID를 MCID(Marketing Cloud ID)라고도 합니다. 이벤트에 ECID가 존재하는 경우 AAID는 Analytics가 있는지에 따라 ECID를 기반으로 할 수 있습니다 [유예 기간](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/grace-period.html) 가 구성되어 있습니다. ECID는 `mcvisid` Analytics 데이터 피드에서 참조할 수 있습니다. ECID에 대한 자세한 내용은 [ECID 개요](../../../identity-service/ecid.md). ECID가 작동하는 방식에 대한 자세한 정보 [!DNL Analytics]에서 문서를 참조하십시오. [Analytics 및 Experience Cloud ID 요청](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/legacy-analytics.html?lang=en). |
-| AACUCUSTOMER | AACUCUSTOMER ID는 페이지의 `s.VisitorID` 변수를으로 지정합니다. [!DNL Analytics] 구현 을 참조하십시오. AACUCUSTOMERid는 `cust_visid` 열 [[!DNL Analytics] 데이터 피드](https://experienceleague.adobe.com/docs/analytics/export/analytics-data-feed/data-feed-contents/datafeeds-reference.html). AACUCUSTOMER id가 있는 경우 AAID는 AACUCUSTOMER id가 [작업 순서 [!DNL Analytics] ID](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/analytics-order-of-operations.html). |
+| ECID | ECID(Experience Cloud ID)는 Adobe Analytics에서 채워지는 별도의 장치 식별자 필드입니다 [!DNL Analytics] 는 Experience Cloud ID 서비스를 사용하여 구현됩니다. ECID를 MCID(Marketing Cloud ID)라고도 합니다. 이벤트에 ECID가 존재하는 경우 AAID는 Analytics가 있는지에 따라 ECID를 기반으로 할 수 있습니다 [유예 기간](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/grace-period.html) 가 구성되어 있습니다. ECID는 `mcvisid` Analytics 데이터 피드에서 참조할 수 있습니다. ECID에 대한 자세한 내용은 [ECID 개요](../../../identity-service/ecid.md). ECID가 작동하는 방식에 대한 자세한 정보 [!DNL Analytics]에서 문서를 참조하십시오. [Analytics 및 Experience Cloud ID 요청](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/legacy-analytics.html?lang=ko-kr). |
+| AACUSTOMID | AACUCUSTOMER ID는 페이지의 `s.VisitorID` 변수를으로 지정합니다. [!DNL Analytics] 구현 을 참조하십시오. AACUCUSTOMERid는 `cust_visid` 열 [[!DNL Analytics] 데이터 피드](https://experienceleague.adobe.com/docs/analytics/export/analytics-data-feed/data-feed-contents/datafeeds-reference.html). AACUCUSTOMER id가 있는 경우 AAID는 AACUCUSTOMER id가 [작업 순서 [!DNL Analytics] ID](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/analytics-order-of-operations.html). |
 
 ### 방법 [!DNL Analytics] 소스 ID 처리
 
@@ -75,14 +75,10 @@ XDM에 대한 자세한 내용은 [XDM 시스템 개요](../../../xdm/home.md).
 * `endUserIDs._experience.mcid.id`
 * `endUserIDs._experience.aacustomid.id`
 
-이러한 필드는 ID로 표시되지 않습니다. 대신 동일한 ID가 XDM의 `identityMap` 키 값 쌍으로:
+이들 필드는 ID로 표시되지 않습니다. 대신 동일한 ID가 XDM의 `identityMap` 키 값 쌍으로:
 
 * `{ “key”: “AAID”, “value”: [ { “id”: “<identity>”, “primary”: <true or false> } ] }`
 * `{ “key”: “ECID”, “value”: [ { “id”: “<identity>”, “primary”: <true or false> } ] }`
 * `{ “key”: “AACUSTOMID”, “value”: [ { “id”: “<identity>”, “primary”: false } ] }`
 
 ID 맵에서 ECID가 있으면 이벤트의 기본 ID로 표시됩니다. 이 경우 AAID는 [ID 서비스 유예 기간](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/grace-period.html). 그렇지 않으면 AAID가 이벤트의 기본 ID로 표시됩니다. AACUSTOMID는 이벤트의 기본 ID로 표시되지 않습니다. 그러나 AACUSTOMID가 있는 경우 작업의 Experience Cloud 순서 때문에 AAID는 AACUSTOMID를 기반으로 합니다.
-
-### Customer Journey Analytics 및 기본 ID
-
-Customer Journey Analytics의 경우, 기본 ID의 정의는 기본 ID를 개인 ID로 사용하기로 결정하는 경우에만 중요합니다. 그러나 이것은 필수가 아닙니다. 다른 ID 열을 개인 ID로 선택할 수 있습니다.
