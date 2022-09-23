@@ -4,9 +4,9 @@ title: 특성 기반 액세스 제어 종단간 안내서
 description: 이 문서에서는 Adobe Experience Platform의 특성 기반 액세스 제어에 대한 종단 간 안내서를 제공합니다
 hide: true
 hidefromtoc: true
-source-git-commit: f7a8f9a5eb0ef3c961f9524057ff01564f88dec3
+source-git-commit: 230bcfdb92c3fbacf2e24e7210d61e2dbe0beb86
 workflow-type: tm+mt
-source-wordcount: '2218'
+source-wordcount: '2315'
 ht-degree: 0%
 
 ---
@@ -39,9 +39,9 @@ ht-degree: 0%
 
 다음을 수행합니다.
 
-* [사용자의 역할에 레이블 지정]{#label-roles}: 마케팅 그룹이 외부 에이전시와 작동하는 의료 공급자(ACME Business Group)의 예를 사용합니다.
-* [리소스 레이블 지정(스키마 필드 및 세그먼트)]{#label-resources}: 을(를) 지정합니다. **[!UICONTROL PHI/규제 상태 데이터]** 스키마 리소스 및 세그먼트에 레이블을 지정합니다.
-* [함께 연결할 정책을 만듭니다]{#policy}: 스키마 필드 및 세그먼트에 대한 액세스를 거부하는 역할에 따라 리소스의 레이블을 레이블에 연결하는 정책을 만듭니다. 이렇게 하면 일치하는 레이블이 없는 사용자를 위해 모든 샌드박스에서 스키마 필드 및 세그먼트에 대한 액세스를 거부합니다.
+* [사용자의 역할에 레이블 지정](#label-roles): 마케팅 그룹이 외부 에이전시와 작동하는 의료 공급자(ACME Business Group)의 예를 사용합니다.
+* [리소스 레이블 지정(스키마 필드 및 세그먼트)](#label-resources): 을(를) 지정합니다. **[!UICONTROL PHI/규제 상태 데이터]** 스키마 리소스 및 세그먼트에 레이블을 지정합니다.
+* [함께 연결할 정책을 만듭니다](#policy): 스키마 필드 및 세그먼트에 대한 액세스를 거부하는 역할에 따라 리소스의 레이블을 레이블에 연결하는 정책을 만듭니다. 이렇게 하면 일치하는 레이블이 없는 사용자를 위해 모든 샌드박스에서 스키마 필드 및 세그먼트에 대한 액세스를 거부합니다.
 
 ## 권한
 
@@ -162,7 +162,7 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_edit_permitdeny"
 >title="정책에 대해 허용 및 허용되지 않는 작업 구성"
->abstract="리소스에 대해 사용자가 수행할 수 있는 허용 가능한 작업을 구성하려면 액세스 허용 또는 액세스 허용 여부를 선택합니다. 리소스에 대해 사용자가 수행할 수 없는 작업을 구성하려면 액세스 거부 를 선택하고,"
+>abstract="A <b>액세스 거부</b> 정책이 조건을 충족하면 사용자의 액세스를 거부합니다. 와 결합할 때 <b>다음은 false입니다</b> - 모든 사용자는 일치하는 기준 세트를 충족하지 않는 한 액세스가 거부됩니다. 이러한 유형의 정책을 사용하면 중요한 리소스를 보호하고 레이블이 일치하는 사용자에게만 액세스할 수 있습니다. <br>A <b>액세스 허용</b> 정책이 조건을 충족하면 사용자가 액세스할 수 있도록 허용합니다. 와 결합할 때 <b>다음 내용이 참인 경우</b> - 사용자에게 일치하는 기준 세트를 충족하면 액세스 권한이 부여됩니다. 이 경우 사용자에 대한 액세스를 명시적으로 거부하지 않고 허용 액세스를 추가합니다. 이러한 유형의 정책에서는 역할 권한을 통해 이미 액세스할 수 있는 사용자 외에도 리소스에 대한 추가 액세스 권한을 제공할 수 있습니다.&quot;</br>
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en#edit-a-policy" text="정책 편집"
 
 >[!CONTEXTUALHELP]
