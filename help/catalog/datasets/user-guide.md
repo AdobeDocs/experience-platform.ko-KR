@@ -5,9 +5,9 @@ title: 데이터 세트 UI 안내서
 topic-legacy: datasets
 description: Adobe Experience Platform 사용자 인터페이스에서 데이터 세트로 작업할 때 일반적인 작업을 수행하는 방법을 알아봅니다.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 6238558e8edf968df4b24c43a626b736e2478be6
+source-git-commit: 3e25bd111d7a5cb482fa8e872452b352676b29ad
 workflow-type: tm+mt
-source-wordcount: '1208'
+source-wordcount: '1209'
 ht-degree: 0%
 
 ---
@@ -143,7 +143,7 @@ CSV 파일을 사용하여 데이터 세트를 만들면 임시 스키마를 만
 
 ## 프로필 사용 데이터 세트 삭제
 
-데이터 세트에 대해 활성화된 경우 [!DNL Profile]를 눌러 UI를 통해 해당 데이터 세트를 삭제하면 Data Lake와 Platform 내의 프로필 저장소 모두에서 삭제됩니다.
+프로필에 대해 데이터 세트가 활성화되어 있으면 UI를 통해 해당 데이터 세트를 삭제하면 Data Lake, Identity Service 및 Platform 내의 프로필 저장소에서 삭제됩니다.
 
 에서 데이터 세트를 삭제할 수 있습니다 [!DNL Profile] 실시간 고객 프로필 API를 사용하여 데이터만 저장(Data Lake에 데이터 유지)합니다. 자세한 내용은 [프로필 시스템 작업 API 끝점 안내서](../../profile/api/profile-system-jobs.md).
 
