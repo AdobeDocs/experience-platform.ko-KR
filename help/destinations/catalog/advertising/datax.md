@@ -2,43 +2,32 @@
 title: Verizon MediaYahoo DataX 연결
 description: DataX는 Verizon Media/Yahoo가 안전하고 자동화된 확장 가능한 방식으로 외부 파트너와 데이터를 교환할 수 있도록 하는 다양한 구성 요소를 호스팅하는 종합적인 Verizon Media/Yahoo 인프라입니다.
 exl-id: 7d02671d-8650-407d-9c9f-fad7da3156bc
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: f61771ec11b8bd2d19e303b39e57e82da8f11ead
 workflow-type: tm+mt
-source-wordcount: '775'
-ht-degree: 4%
+source-wordcount: '789'
+ht-degree: 3%
 
 ---
 
-# Verizon Media/Yahoo DataX 연결
+# [!DNL Verizon Media/Yahoo DataX] 연결
 
 ## 개요 {#overview}
 
-DataX는 Verizon Media/Yahoo가 안전하고 자동화된 확장 가능한 방식으로 외부 파트너와 데이터를 교환할 수 있도록 하는 다양한 구성 요소를 호스팅하는 종합적인 Verizon Media/Yahoo 인프라입니다.
+[!DNL DataX] 는 합계입니다 [!DNL Verizon Media/Yahoo] 다양한 구성 요소를 호스팅하는 인프라 [!DNL Verizon Media/Yahoo] 보안, 자동화 및 확장 가능한 방식으로 외부 파트너와 데이터를 교환합니다.
 
 >[!IMPORTANT]
 >
->이 설명서 페이지는 Verizon Media/Yahoo의 DataX 팀이 작성했습니다. 문의 사항이나 업데이트 요청에 대해서는 [dataops@verizonmedia.com](mailto:dataops@verizonmedia.com)
+>이 설명서 페이지는 [!DNL Verizon Media/Yahoo]s [!DNL DataX] 팀 문의 사항이나 업데이트 요청에 대해서는 [dataops@verizonmedia.com](mailto:dataops@verizonmedia.com)
 
 ## 전제 조건 {#prerequisites}
 
 **MDM ID**
 
-Yahoo DataX의 고유 식별자이며, 이 대상에 데이터 내보내기를 설정하기 위한 필수 필드입니다. 이 ID를 모르는 경우 Yahoo Data X 계정 관리자에게 문의하십시오.
-
-**비율 제한**
-
-DataX는 [DataX 설명서](https://developer.verizonmedia.com/datax/guide/rate-limits/).
-
-
-| 오류 코드 | 오류 메시지 | 설명 |
-|---------|----------|---------|
-| 429 너무 많은 요청 | 시간당 비율 제한이 초과됨 **(제한: 100)** | 공급자당 1시간에 허용되는 요청 수입니다. |
-
-{style=&quot;table-layout:auto&quot;}
+의 고유 식별자입니다 [!DNL Yahoo DataX] 이 대상 데이터 내보내기를 설정하려면 필수 필드입니다. 이 ID를 모르는 경우 [!DNL Yahoo DataX] 계정 관리자.
 
 **분류 메타데이터**
 
-분류 리소스는 기본 DataX 메타데이터 구조에 대한 확장을 정의합니다
+분류 리소스는 기본 위에 확장을 정의합니다 [!DNL DataX] 메타데이터 구조
 
 ```
 {
@@ -59,11 +48,26 @@ DataX는 [DataX 설명서](https://developer.verizonmedia.com/datax/guide/rate-l
 }
 ```
 
-자세한 내용 [분류 메타데이터](https://developer.verizonmedia.com/datax/guide/taxonomy/taxo-metadata/) ( DataX 개발자 설명서) 를 참조하십시오.
+자세한 내용 [분류 메타데이터](https://developer.verizonmedia.com/datax/guide/taxonomy/taxo-metadata/) 에서 [!DNL DataX] 개발자 설명서입니다.
+
+## 비율 제한 및 보호 기능 {#rate-limits-guardrails}
+
+>[!IMPORTANT]
+>
+>100개 이상의 세그먼트를 [!DNL Verizon Media/Yahoo DataX]인 경우 대상에서 제한 오류를 받을 수 있습니다. 세그먼트를 [!DNL Yahoo/DataX] 대상, 하나의 활성화 데이터 플로우에서 100개 미만의 세그먼트를 활성화하는 것이 좋습니다. 더 많은 세그먼트를 활성화해야 하는 경우 동일한 계정에서 새 대상을 만듭니다.
+
+[!DNL DataX] 는 [DataX 설명서](https://developer.verizonmedia.com/datax/guide/rate-limits/).
+
+
+| 오류 코드 | 오류 메시지 | 설명 |
+|---------|----------|---------|
+| 429 너무 많은 요청 | 시간당 비율 제한이 초과됨 **(제한: 100)** | 공급자당 1시간에 허용되는 요청 수입니다. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## 지원되는 ID {#supported-identities}
 
-Verizon Media는 아래 표에 설명된 ID 활성화를 지원합니다. 추가 정보 [id](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#getting-started).
+[!DNL Verizon Media] 은 아래 표에 설명된 id의 활성화를 지원합니다. 추가 정보 [id](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#getting-started).
 
 | Target ID | 설명 | 고려 사항 |
 |---|---|---|
@@ -86,7 +90,7 @@ Verizon Media는 아래 표에 설명된 ID 활성화를 지원합니다. 추가
 
 ## 사용 사례 {#use-cases}
 
-DataX API는 VMG(Verizon Media)에서 이메일 주소를 키로 사용하는 특정 대상 그룹을 타겟팅하려는 광고주가 VMG의 근실시간 API를 사용하여 새로운 세그먼트를 신속하게 생성하고 원하는 대상 그룹을 푸시할 수 있습니다.
+[!DNL DataX] API는 의 이메일 주소를 키로 사용하는 특정 대상 그룹을 타겟팅하려는 광고주가 사용할 수 있습니다 [!DNL Verizon Media] (VMG)는 VMG의 근실시간 API를 사용하여 새로운 세그먼트를 신속하게 생성하고 원하는 대상 그룹을 푸시할 수 있습니다.
 
 ## 대상에 연결 {#connect}
 
@@ -104,7 +108,7 @@ While [설정](../../ui/connect-destination.md) 이 대상을 사용하려면 �
 
 * **[!UICONTROL 이름]**: 나중에 이 대상을 인식하는 이름입니다.
 * **[!UICONTROL 설명]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
-* **[!UICONTROL MDM ID]**: Yahoo DataX의 고유 식별자이며, 이 대상에 데이터 내보내기를 설정하기 위한 필수 필드입니다. 이 ID를 모르는 경우 Yahoo Data X 계정 관리자에게 문의하십시오.  MDM ID를 사용하면 특정 전용 사용자 집합(예: 광고주를 위한 자사 데이터)에서만 데이터를 사용하도록 제한할 수 있습니다.
+* **[!UICONTROL MDM ID]**: 의 고유 식별자입니다 [!DNL Yahoo DataX] 이 대상 데이터 내보내기를 설정하려면 필수 필드입니다. 이 ID를 모르는 경우 [!DNL Yahoo DataX] 계정 관리자.  MDM ID를 사용하면 특정 전용 사용자 집합(예: 광고주를 위한 자사 데이터)에서만 데이터를 사용하도록 제한할 수 있습니다.
 
 ### 경고 활성화 {#enable-alerts}
 
@@ -126,4 +130,4 @@ While [설정](../../ui/connect-destination.md) 이 대상을 사용하려면 �
 
 ## 추가 리소스 {#additional-resources}
 
-자세한 내용은 Yahoo/Verizon Media 를 참조하십시오 [dataX에 대한 설명서](https://developer.verizonmedia.com/datax/guide/).
+자세한 내용은 [!DNL Yahoo/Verizon Media] [설명서 [!DNL DataX]](https://developer.verizonmedia.com/datax/guide/).
