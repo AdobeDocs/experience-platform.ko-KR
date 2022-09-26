@@ -2,9 +2,9 @@
 title: Verizon MediaYahoo DataX 연결
 description: DataX는 Verizon Media/Yahoo가 안전하고 자동화된 확장 가능한 방식으로 외부 파트너와 데이터를 교환할 수 있도록 하는 다양한 구성 요소를 호스팅하는 종합적인 Verizon Media/Yahoo 인프라입니다.
 exl-id: 7d02671d-8650-407d-9c9f-fad7da3156bc
-source-git-commit: f61771ec11b8bd2d19e303b39e57e82da8f11ead
+source-git-commit: 0580816c471400ba17eddcb6b1a9dfbf01797938
 workflow-type: tm+mt
-source-wordcount: '789'
+source-wordcount: '787'
 ht-degree: 3%
 
 ---
@@ -54,7 +54,7 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->100개 이상의 세그먼트를 [!DNL Verizon Media/Yahoo DataX]인 경우 대상에서 제한 오류를 받을 수 있습니다. 세그먼트를 [!DNL Yahoo/DataX] 대상, 하나의 활성화 데이터 플로우에서 100개 미만의 세그먼트를 활성화하는 것이 좋습니다. 더 많은 세그먼트를 활성화해야 하는 경우 동일한 계정에서 새 대상을 만듭니다.
+>100개 이상의 세그먼트를 [!DNL Verizon Media/Yahoo DataX]인 경우 대상에서 제한 오류를 받을 수 있습니다. 세그먼트를 이 대상에 활성화할 때 하나의 활성화 데이터 플로우에서 100개 미만의 세그먼트를 활성화해 보십시오. 더 많은 세그먼트를 활성화해야 하는 경우 동일한 계정에서 새 대상을 만듭니다.
 
 [!DNL DataX] 는 [DataX 설명서](https://developer.verizonmedia.com/datax/guide/rate-limits/).
 
