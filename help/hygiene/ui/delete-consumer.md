@@ -2,11 +2,9 @@
 title: 소비자 레코드 삭제
 description: Adobe Experience Platform UI에서 소비자 레코드를 삭제하는 방법을 알아봅니다.
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-hide: true
-hidefromtoc: true
-source-git-commit: 7f1e4bdf54314cab1f69619bcbb34216da94b17e
+source-git-commit: 425298ec28517bba4eca1bf0966fd3b205fce764
 workflow-type: tm+mt
-source-wordcount: '1089'
+source-wordcount: '1131'
 ht-degree: 0%
 
 ---
@@ -15,7 +13,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Adobe Experience Platform의 데이터 위생 기능은 현재 Healthcare Shield를 구입한 조직에서만 사용할 수 있습니다.
+>소비자 삭제 요청은 Adobe Healthcare Shield 또는 Privacy Shield를 구입한 조직에만 사용할 수 있습니다.
 
 다음 [[!UICONTROL 데이터 위생] 작업 영역](./overview.md) Adobe Experience Platform UI에서 ID 서비스 및 실시간 고객 프로필에 참여하는 소비자 레코드를 삭제할 수 있습니다.
 
@@ -37,7 +35,7 @@ Platform의 ID에 대한 자세한 내용은 다음 설명서를 참조하십시
 
 ![이미지를 보여주는 이미지 [!UICONTROL 요청 만들기] 선택한 단추](../images/ui/delete-consumer/create-request-button.png)
 
-요청 만들기 대화 상자가 나타납니다. 기본적으로 **[!UICONTROL 소비자]** 옵션 아래에 선택되어 있습니다 **[!UICONTROL 작업]** 섹션을 참조하십시오. 이 옵션을 선택된 상태로 두십시오.
+요청 만들기 대화 상자가 나타납니다. 기본적으로 **[!UICONTROL 소비자]** 옵션 아래에 선택되어 있습니다 **[!UICONTROL 요청된 작업]** 섹션을 참조하십시오. 이 옵션을 선택된 상태로 두십시오.
 
 ![만들기 대화 상자에서 선택한 소비자 옵션을 보여주는 이미지](../images/ui/delete-consumer/consumer-action.png)
 
@@ -130,7 +128,7 @@ ID를 더 추가하려면 더하기 아이콘(![더하기 아이콘 이미지](.
 
 ## 요청 제출(#submit)
 
-요청에 ID를 추가했으면 을 선택합니다 **[!UICONTROL 제출]**.
+요청에 ID를 추가했으면 아래의 **[!UICONTROL 요청 설정]**&#x200B;을(를) 선택하기 전에 요청에 대한 이름과 선택적 설명을 제공합니다 **[!UICONTROL 제출]**.
 
 ![이미지를 보여주는 이미지 [!UICONTROL 제출] 선택한 단추](../images/ui/delete-consumer/submit.png)
 
@@ -138,16 +136,14 @@ ID를 더 추가하려면 더하기 아이콘(![더하기 아이콘 이미지](.
 
 ![확인 대화 상자를 보여주는 이미지](../images/ui/delete-consumer/confirm-request.png)
 
-요청이 제출되면 작업 순서가 만들어지고 다음에 나타납니다 [!UICONTROL 소비자] 의 탭 [!UICONTROL 데이터 위생] 작업 공간. 여기에서 요청을 처리할 때 작업 주문의 상태를 모니터링할 수 있습니다. 대부분의 소비자 삭제 작업 주문은 완료하는 데 며칠이 걸립니다.
+요청이 제출되면 작업 순서가 만들어지고 다음에 나타납니다 [!UICONTROL 소비자] 의 탭 [!UICONTROL 데이터 위생] 작업 공간. 여기에서 요청을 처리할 때 작업 주문의 상태를 모니터링할 수 있습니다.
+
+>[!NOTE]
+>
+>의 개요 섹션을 참조하십시오. [타임라인 및 투명도](../home.md#consumer-delete-transparency) 소비자 삭제를 실행한 후 처리하는 방법에 대한 자세한 내용은 다음을 참조하십시오.
 
 ## 다음 단계
 
 이 문서에서는 Experience Platform UI에서 소비자 레코드를 삭제하는 방법에 대해 다룹니다. UI에서 기타 데이터 위생 작업을 수행하는 방법에 대한 자세한 내용은 [데이터 위생 UI 개요](./overview.md).
 
-<!--
-
-Paragraph below should be commented out until workorder.md will be added to the TOC.
-
-To learn how to delete consumer records using the Data Hygiene API, refer to the [work order endpoint guide](../api/workorder.md).
-
--->
+데이터 위생 API를 사용하여 소비자 레코드를 삭제하는 방법에 대해 알아보려면 [work order endpoint 안내서](../api/workorder.md).

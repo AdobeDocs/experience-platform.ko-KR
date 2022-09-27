@@ -2,20 +2,16 @@
 title: 데이터 집합 만료 관리
 description: Adobe Experience Platform UI에서 데이터 세트 만료를 예약하는 방법을 알아봅니다.
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
-source-git-commit: 5a12c75a54f420b2ca831dbfe05105dfd856dc4d
+source-git-commit: 425298ec28517bba4eca1bf0966fd3b205fce764
 workflow-type: tm+mt
-source-wordcount: '438'
+source-wordcount: '511'
 ht-degree: 0%
 
 ---
 
 # 데이터 집합 만료 관리
 
->[!IMPORTANT]
->
->Adobe Experience Platform의 데이터 위생 기능은 현재 Healthcare Shield를 구입한 조직에서만 사용할 수 있습니다.
-
-다음 [[!UICONTROL 데이터 위생] 작업 영역](./overview.md) Adobe Experience Platform UI에서 데이터 세트 만료를 예약할 수 있습니다. 데이터 세트가 만료 날짜에 도달하면 데이터 레이크, Identity 서비스 및 실시간 고객 프로필에서 별도의 프로세스를 시작하여 해당 서비스에서 데이터 세트의 컨텐츠를 제거합니다. 세 서비스 모두에서 데이터가 삭제되면 만료가 완료로 표시됩니다.
+다음 [[!UICONTROL 데이터 위생] 작업 영역](./overview.md) Adobe Experience Platform UI에서 데이터 세트에 대한 만료를 예약할 수 있습니다. 데이터 세트가 만료 날짜에 도달하면 데이터 레이크, Identity 서비스 및 실시간 고객 프로필에서 별도의 프로세스를 시작하여 해당 서비스에서 데이터 세트의 컨텐츠를 제거합니다. 세 서비스 모두에서 데이터가 삭제되면 만료가 완료로 표시됩니다.
 
 >[!WARNING]
 >
@@ -29,11 +25,13 @@ ht-degree: 0%
 
 ![이미지를 보여주는 이미지 [!UICONTROL 요청 만들기] 선택한 단추](../images/ui/ttl/create-request-button.png)
 
-<!-- The request creation dialog appears. Under the **[!UICONTROL Action]** section, select **[!UICONTROL Dataset]** to update the available controls for dataset expiration scheduling-->
+요청 만들기 대화 상자가 나타납니다. 아래에 **[!UICONTROL 요청된 작업]** 섹션, **[!UICONTROL 데이터 집합 삭제]** 데이터 세트 만료 예약에 사용할 수 있는 컨트롤을 업데이트하려면 다음을 수행하십시오.
+
+![이미지를 보여주는 이미지 [!UICONTROL 요청 만들기] 선택한 단추](../images/ui/ttl/dataset-selected.png)
 
 ### 날짜 및 데이터 세트 선택
 
-요청 만들기 대화 상자가 나타납니다. 아래에 **[!UICONTROL 작업]** 섹션에서 데이터 세트를 삭제할 날짜를 선택합니다. 수동으로 날짜를 입력할 수 있습니다(형식) `mm/dd/yyyy`) 또는 달력 아이콘( )을 선택합니다![달력 아이콘 이미지](../images/ui/ttl/calendar-icon.png)) 을 클릭하여 대화 상자에서 날짜를 선택합니다.
+요청 만들기 대화 상자가 나타납니다. 아래에 **[!UICONTROL 요청된 작업]** 섹션에서 데이터 세트를 삭제할 날짜를 선택합니다. 수동으로 날짜를 입력할 수 있습니다(형식) `mm/dd/yyyy`) 또는 달력 아이콘( )을 선택합니다![달력 아이콘 이미지](../images/ui/ttl/calendar-icon.png)) 을 클릭하여 대화 상자에서 날짜를 선택합니다.
 
 ![데이터 집합에 대해 설정되는 만료 날짜를 표시하는 이미지](../images/ui/ttl/select-date.png)
 
@@ -47,13 +45,17 @@ ht-degree: 0%
 
 ### 요청 제출
 
-데이터 세트와 만료 날짜를 선택한 후에는 을(를) 선택합니다 **[!UICONTROL 제출]**.
+다음 [!UICONTROL 데이터 집합 세부 정보] 섹션이 선택된 데이터 세트에 대한 기본 ID 및 스키마를 포함하도록 채워집니다. 아래 **[!UICONTROL 요청 설정]**&#x200B;요청에 대한 이름과 선택적 설명을 입력한 후 다음을 입력합니다 **[!UICONTROL 제출]**.
 
 ![이미지를 보여주는 이미지 [!UICONTROL 제출] 선택한 단추](../images/ui/ttl/submit.png)
 
 데이터 세트가 삭제되는 날짜를 확인하는 메시지가 표시됩니다. 선택 **[!UICONTROL 제출]** 계속하십시오.
 
 요청이 제출되면 작업 순서가 만들어지고 의 기본 탭에 표시됩니다 [!UICONTROL 데이터 위생] 작업 공간. 여기에서 요청을 처리할 때 작업 주문의 상태를 모니터링할 수 있습니다.
+
+>[!NOTE]
+>
+>의 개요 섹션을 참조하십시오. [타임라인 및 투명도](../home.md#dataset-expiration-transparency) 데이터 세트 만료를 실행한 후 처리하는 방법에 대한 자세한 내용은
 
 ## 데이터 세트 만료 편집 또는 취소
 
@@ -63,4 +65,6 @@ ht-degree: 0%
 
 ## 다음 단계
 
-이 문서에서는 Experience Platform UI에서 데이터 세트 만료를 예약하는 방법에 대해 다룹니다. 데이터 위생 API를 사용하여 데이터 세트 만료를 예약하는 방법에 대한 자세한 내용은 [데이터 세트 만료 끝점 안내서](../api/dataset-expiration.md).
+이 문서에서는 Experience Platform UI에서 데이터 세트 만료를 예약하는 방법에 대해 다룹니다. UI에서 기타 데이터 위생 작업을 수행하는 방법에 대한 자세한 내용은 [데이터 위생 UI 개요](./overview.md).
+
+데이터 위생 API를 사용하여 데이터 세트 만료를 예약하는 방법에 대한 자세한 내용은 [데이터 세트 만료 끝점 안내서](../api/dataset-expiration.md).
