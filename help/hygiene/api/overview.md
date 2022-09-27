@@ -2,9 +2,9 @@
 title: 데이터 위생 API 안내서
 description: Adobe Experience Platform에서 고객의 저장된 개인 데이터를 프로그래밍 방식으로 수정하거나 삭제하는 방법을 알아봅니다.
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-source-git-commit: 49ba5263c6dc8eccac2ffe339476cf316c68e486
+source-git-commit: 724852c63886ea8761b177c4351cca8a6fe748c3
 workflow-type: tm+mt
-source-wordcount: '303'
+source-wordcount: '345'
 ht-degree: 1%
 
 ---
@@ -46,6 +46,10 @@ A work order is a representation of a data hygiene task that deletes consumer id
 ## 데이터 집합 만료
 
 데이터 세트 만료는 시간 지연된 &quot;데이터 세트 삭제&quot; 작업입니다. 데이터 세트 만료일을 만들어 해당 데이터 세트를 삭제할 시간을 지정합니다. 자세한 내용은 [데이터 세트 만료 끝점 안내서](./dataset-expiration.md) 를 참조하십시오.
+
+## 할당량
+
+조직은 각 유형의 데이터 위생 작업에 대해 정해진 월별 작업 할당량으로 제한되어 있으며, 라이센스에 따라 달라질 수 있습니다. 자세한 내용은 [할당량 끝점 안내서](./quota.md) 데이터 위생 프로세스의 현재 할당량 상태 보기에 대한 자세한 정보.
 
 ## 다음 단계
 
