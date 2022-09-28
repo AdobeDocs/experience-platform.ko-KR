@@ -2,10 +2,8 @@
 keywords: Experience Platform;홈;인기 항목;흐름 서비스;
 title: (베타) Flow Service API를 사용하여 온디맨드 수집을 위한 흐름 실행 만들기
 description: 이 자습서에서는 Flow Service API를 사용하여 온디맨드 수집에 대한 흐름 실행을 만드는 단계를 설명합니다
-hide: true
-hidefromtoc: true
 exl-id: a7b20cd1-bb52-4b0a-aad0-796929555e4a
-source-git-commit: 24f16e315607a1076ff2efef129d9e97040a9500
+source-git-commit: 659f99a47b533bba2a6084bc8e235df2a29a6386
 workflow-type: tm+mt
 source-wordcount: '1147'
 ht-degree: 1%
