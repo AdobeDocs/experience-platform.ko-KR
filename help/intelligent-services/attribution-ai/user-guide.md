@@ -5,9 +5,9 @@ title: Attribution AI UI 안내서
 topic-legacy: User guide
 description: 이 문서는 Intelligent Services 사용자 인터페이스의 Attribution AI과 상호 작용하기 위한 안내서의 역할을 합니다.
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-source-git-commit: 67b4c49de6ebb9986f735390a0657d908b07e039
+source-git-commit: cec2449525eb067fa7915073e929f9693a45575a
 workflow-type: tm+mt
-source-wordcount: '2705'
+source-wordcount: '2960'
 ht-degree: 1%
 
 ---
@@ -34,7 +34,7 @@ UI 오른쪽의 컨트롤을 사용하여 서비스 인스턴스를 편집, 복�
 
 - **[!UICONTROL 편집]**: 선택 **[!UICONTROL 편집]** 기존 서비스 인스턴스를 수정할 수 있습니다. 인스턴스의 이름, 설명, 상태 및 점수 주기를 편집할 수 있습니다.
 - **[!UICONTROL 복제]**: 선택 **[!UICONTROL 복제]** 선택한 서비스 인스턴스를 복사합니다. 그런 다음 워크플로우를 수정하여 작은 수정 사항을 만들고 새 인스턴스로 이름을 변경할 수 있습니다.
-- **[!UICONTROL 삭제]**: 임의의 기록 실행을 포함하는 서비스 인스턴스를 삭제할 수 있습니다.
+- **[!UICONTROL 삭제]**: 임의의 기록 실행을 포함하는 서비스 인스턴스를 삭제할 수 있습니다. 해당 출력 데이터 세트가 플랫폼에서 삭제됩니다. 하지만 실시간 고객 프로필에 동기화된 점수는 삭제되지 않습니다.
 - **[!UICONTROL 데이터 소스]**: 사용 중인 데이터 세트에 대한 링크. Attribution AI에서 두 개 이상의 데이터 세트를 사용 중인 경우 &quot;복수&quot; 다음에 데이터 세트 수가 표시됩니다. 하이퍼링크를 선택하면 데이터 세트 미리 보기 팝오버가 표시됩니다.
 - **[!UICONTROL 마지막 실행 세부 사항]**: 실행이 실패한 경우에만 표시됩니다. 오류 코드와 같이 실행이 실패한 이유에 대한 정보가 여기에 표시됩니다.
 
@@ -70,6 +70,10 @@ UI 오른쪽의 컨트롤을 사용하여 서비스 인스턴스를 편집, 복�
 
 데이터 집합 미리 보기에는 마지막 업데이트 시간, 소스 스키마 및 처음 10개 열의 미리 보기와 같은 데이터가 포함되어 있습니다.
 
+선택 **[!UICONTROL 저장]** 워크플로우를 따라 이동할 때 초안을 저장합니다. 초안 모델 구성을 저장하고 워크플로우의 다음 단계로 이동할 수도 있습니다. 사용 **[!UICONTROL 저장 후 계속]** 모델 구성 중에 초안을 만들고 저장하려면 이 기능을 사용하면 모델 구성의 초안을 만들고 저장할 수 있으며, 구성 워크플로우에서 많은 필드를 정의해야 하는 경우에 특히 유용합니다.
+
+![저장 및 저장 을 사용하여 Data Science Services Attribution AI 탭의 생성 워크플로우를 강조 표시하고 계속합니다.](./images/user-guide/aai-save-save-&-exit.png)
+
 ### 데이터 집합 완결성 {#dataset-completeness}
 
 <!-- https://www.adobe.com/go/aai-dataset-completeness -->
@@ -92,7 +96,7 @@ UI 오른쪽의 컨트롤을 사용하여 서비스 인스턴스를 편집, 복�
 
 ID를 선택하려면 ID 열에 있는 밑줄이 있는 값을 선택합니다. ID 선택 팝오버가 나타납니다.
 
-![동일한 네임스페이스 선택](./images/user-guide/aai-identity-map.png)
+![동일한 네임스페이스 선택](./images/user-guide/aai-identity-map-save-and-exit.png)
 
 네임스페이스 내에서 두 개 이상의 ID를 사용할 수 있는 경우 사용 사례에 대한 올바른 ID 필드를 선택해야 합니다. 예를 들어 이메일 네임스페이스, 작업 및 개인 이메일 내에 두 개의 이메일 ID를 사용할 수 있습니다. 사용 사례에 따라 개인 이메일은 보다 많이 채워질 가능성이 높고 개별 예측에 더 유용합니다. 즉, `EMAIL (personalEmail.address)` ID로 사용
 
@@ -108,7 +112,7 @@ ID를 선택하려면 ID 열에 있는 밑줄이 있는 값을 선택합니다. 
 
 데이터 세트 선택 및 추가를 완료하면 **맵** 구성 단계가 나타납니다. Attribution AI을 사용하려면 이전 단계에서 선택한 각 데이터 세트에 대한 미디어 채널 필드를 매핑해야 합니다. 데이터 세트 간 미디어 채널 매핑이 없으면 Attribution AI에서 파생된 인사이트가 제대로 표시되지 않아 인사이트 페이지를 해석하기 어렵습니다. 미디어 채널만 필요하지만 미디어 작업, 캠페인 이름, 캠페인 그룹 및 캠페인 태그와 같은 일부 선택적 필드를 매핑하는 것이 좋습니다. 이렇게 하면 Attribution AI이 보다 명확한 통찰력과 최적의 결과를 제공할 수 있습니다.
 
-![매핑](./images/user-guide/mapping.png)
+![매핑](./images/user-guide/mapping-save-&-exit.png)
 
 ## 이벤트 정의 {#define-events}
 
@@ -198,13 +202,13 @@ ID를 선택하려면 ID 열에 있는 밑줄이 있는 값을 선택합니다. 
 
 필요한 모든 터치포인트를 정의했으면 위로 스크롤하여 선택합니다 **다음** 오른쪽 상단 모서리에서 최종 단계로 진행합니다.
 
-![완성된 정의](./images/user-guide/define_event_next.png)
+![완성된 정의](./images/user-guide/define_event_save_and_exit.png)
 
 ## 고급 교육 및 점수 설정
 
 Attribution AI의 마지막 페이지는 **[!UICONTROL 고급]** 교육 및 점수 설정에 사용되는 페이지입니다.
 
-![새 페이지 고급](./images/user-guide/advanced_settings.png)
+![새 페이지 세트 옵션](./images/user-guide/advanced_settings_set_options.png)
 
 ### 교육 일정 예약
 
@@ -262,6 +266,14 @@ Attribution AI의 마지막 페이지는 **[!UICONTROL 고급]** 교육 및 점�
 
 ![설치 완료](./images/user-guide/instance_setup_complete.png)
 
+## 거버넌스 정책
+
+워크플로우를 통해 인스턴스를 만들고 모델의 구성을 제출하면 [정책 시행](/help/data-governance/enforcement/auto-enforcement.md) 위반이 있는지 확인합니다. 정책 위반이 발생하면 하나 이상의 정책이 위반되었음을 나타내는 팝업 창이 나타납니다. 플랫폼 내의 데이터 작업 및 마케팅 작업이 데이터 사용 정책을 준수하도록 하기 위한 것입니다.
+
+![정책 위반을 보여주는 팝업](./images/user-guide/policy-violation-popover-aai.png)
+
+팝오버는 해당 위반에 대한 구체적인 정보를 제공합니다. 구성 워크플로우와 직접 관련이 없는 정책 설정 및 기타 조치를 통해 이러한 위반을 해결할 수 있습니다. 예를 들어 데이터 과학 목적으로 특정 필드를 사용할 수 있도록 레이블을 변경할 수 있습니다. 또는 레이블이 있는 것을 사용하지 않도록 모델 구성 자체를 수정할 수도 있습니다. 설정 방법에 대한 자세한 내용은 설명서를 참조하십시오 [정책](/help/data-governance/policies/overview.md).
+
 ## 속성 기반 액세스 제어
 
 >[!IMPORTANT]
@@ -290,7 +302,7 @@ Attribution AI 작업 공간 상단에서 **통찰력 페이지**&#x200B;로 지
 
 제한된 정보로 인스턴스를 만든 후 **[!UICONTROL 목표 정의]** 단계에서 경고가 맨 위에 표시됩니다. [!UICONTROL 액세스 제한 사항으로 인해 구성에 특정 정보가 표시되지 않습니다.]
 
-![인스턴스의 제한된 필드가 있는 Attribution AI 작업 영역은 강조 표시됩니다.](./images/user-guide/information-not-displayed.png)
+![인스턴스의 제한된 필드가 있는 Attribution AI 작업 영역은 강조 표시됩니다.](./images/user-guide/information-not-displayed-save-and-exit.png)
 
 ## 다음 단계
 
