@@ -2,9 +2,9 @@
 title: SFTP 호스트
 description: 보안 자체 호스팅된 SFTP 서버에 라이브러리 빌드를 전달하도록 Adobe Experience Platform에서 태그를 구성하는 방법을 알아봅니다.
 exl-id: 3c1dc43b-291c-4df4-94f7-a03b25dbb44c
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '821'
+source-wordcount: '820'
 ht-degree: 18%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 18%
 >
 >Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
 
-Adobe Experience Platform을 사용하면 태그 라이브러리 빌드를 사용자가 호스트하는 보안 SFTP 서버에 전달하여 빌드의 저장 및 관리 방식을 보다 강력하게 제어할 수 있습니다. 이 안내서에서는 데이터 수집 UI에서 태그 속성에 대한 SFTP 호스트를 설정하는 방법을 다룹니다.
+Adobe Experience Platform을 사용하면 태그 라이브러리 빌드를 사용자가 호스트하는 보안 SFTP 서버에 전달하여 빌드의 저장 및 관리 방식을 보다 강력하게 제어할 수 있습니다. 이 안내서에서는 Experience Platform UI 또는 데이터 수집 UI에서 태그 속성에 대한 SFTP 호스트를 설정하는 방법을 다룹니다.
 
 >[!NOTE]
 >
@@ -51,7 +51,7 @@ Platform이 SFTP 서버에 연결할 수 있도록 하기 위해 회사 방화�
 
 ## SFTP 호스트 만들기 {#create}
 
-데이터 수집 UI에서 **[!UICONTROL 호스트]** 왼쪽 탐색에서 를 차례로 클릭하거나 **[!UICONTROL 호스트 추가]**.
+선택 **[!UICONTROL 호스트]** 왼쪽 탐색에서 를 차례로 클릭하거나 **[!UICONTROL 호스트 추가]**.
 
 ![UI에서 선택한 호스트 추가 단추를 보여주는 이미지](../../../images/ui/publishing/sftp-hosts/add-host-button.png)
 

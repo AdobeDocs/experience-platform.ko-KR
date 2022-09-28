@@ -2,10 +2,10 @@
 title: Experience Cloud 조직 설정
 description: Adobe Experience Platform용 확장 개발을 시작하기 위해 Adobe Experience Cloud 조직을 등록하는 방법을 알아봅니다.
 exl-id: ee36319d-5de8-462e-879b-311445cf334c
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '608'
-ht-degree: 49%
+source-wordcount: '595'
+ht-degree: 50%
 
 ---
 
@@ -41,7 +41,9 @@ Experience Cloud 고객은 계약이 체결되면 조직에 할당됩니다. 기
 >
 >현재 회사 이메일은 한 번에 하나의 파트너 프로그램에서만 사용할 수 있으므로 각 프로그램에 등록된 연락처와 다른 회사 이메일을 사용해야 합니다.
 
-회사가 Exchange 파트너 프로그램에 참여 중인 경우, [Exchange 파트너 사이트](https://partners.adobe.com/exchangeprogram/experiencecloud)에 로그인한 다음 아래 단계를 수행하여 Adobe 솔루션에 대한 액세스를 요청할 수 있습니다. 이미 Experience Cloud 계정을 가지고 있고 솔루션에 액세스할 수 있지만 Adobe Experience Platform의 데이터 수집 UI에 액세스할 수 없는 경우에는 다음을 참조하십시오 [그룹 및 사용자 설정 지침](../../ui/administration/user-permissions.md).
+회사가 Exchange 파트너 프로그램에 참여 중인 경우, [Exchange 파트너 사이트](https://partners.adobe.com/exchangeprogram/experiencecloud)에 로그인한 다음 아래 단계를 수행하여 Adobe 솔루션에 대한 액세스를 요청할 수 있습니다.
+
+Experience Cloud 계정이 데이터 수집 UI 및 Experience Platform UI에 액세스해야 하는 경우 다음을 참조하십시오. [데이터 수집 권한 안내서](../../../collection/permissions.md).
 
 ## 독립 개발자용
 

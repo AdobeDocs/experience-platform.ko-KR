@@ -2,9 +2,9 @@
 title: BrightCove 비디오 추적 확장 개요
 description: Adobe Experience Platform의 BrightCove 비디오 추적 태그 확장에 대해 알아봅니다.
 exl-id: d27eff21-2abf-4495-8382-08cab32742e0
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '915'
+source-wordcount: '908'
 ht-degree: 37%
 
 ---
@@ -100,7 +100,7 @@ Adobe Experience Platform의 각 태그 속성에는 확장 화면에 다음과 
 
 >[!TIP]
 >
->각 비디오 요소에 대해 여러 개의 eVar 또는 prop을 제공하기를 원하지 않는 사용자의 경우 대체 방법이 있습니다. 데이터 요소 값은 데이터 수집 UI 내에서 연결할 수 있습니다. 그런 다음 분류 규칙 빌더 도구를 사용하여 분류 보고서로 구문 분석됩니다. 자세한 내용은 [분류 규칙 빌더 도구](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html) 설명서 를 참조하십시오. 마지막으로, Analysis Workspace에서 세그먼트로 적용됩니다.
+>각 비디오 요소에 대해 여러 개의 eVar 또는 prop을 제공하기를 원하지 않는 사용자의 경우, 데이터 요소 값이 대체 방법으로 연결됩니다. 그런 다음 분류 규칙 빌더 도구를 사용하여 분류 보고서로 구문 분석됩니다. 자세한 내용은 [분류 규칙 빌더 도구](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html) 설명서 를 참조하십시오. 마지막으로, Analysis Workspace에서 세그먼트로 적용됩니다.
 >
 >이렇게 하려면 &quot;비디오 메타데이터&quot;와 같은 새로운 데이터 요소를 만들고 이를 프로그래밍하여 모든 비디오 데이터 요소(위에 나열됨)를 가져와서 함께 연결합니다.
 

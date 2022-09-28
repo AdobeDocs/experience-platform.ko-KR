@@ -2,9 +2,9 @@
 title: 데이터 수집 종단간 개요
 description: Adobe Experience Platform의 데이터 수집 기능을 사용하여 Adobe Experience Cloud 솔루션으로 이벤트 데이터를 전송하는 방법에 대한 높은 수준의 개요입니다.
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '2606'
+source-wordcount: '2619'
 ht-degree: 0%
 
 ---
@@ -18,6 +18,8 @@ Adobe Experience Platform은 데이터를 수집하여 다른 Adobe 제품 및 �
 >[!NOTE]
 >
 >태그를 사용하지 않으려는 경우 수동으로 SDK를 설치 및 구성하도록 선택할 수도 있지만, 아래 요약된 대로 주변 단계를 계속 완료해야 합니다.
+>
+>데이터 수집 UI와 관련된 모든 단계는 Experience Platform UI에서도 수행할 수 있습니다.
 
 ## 전제 조건
 
@@ -57,7 +59,7 @@ Edge Network에 데이터를 보낼 수 있게 되면 선택적으로 다음 작
 >
 >XDM 스키마는 사용자 지정할 수 있습니다. 아래 요약된 단계는 과도하게 처방되지 않고 웹 SDK에 대한 스키마 요구 사항에 특히 중점을 둡니다. 이러한 매개 변수를 제외하면 원하는 대로 나머지 구조를 정의할 수 있습니다.
 
-데이터 수집 UI에서 **[!UICONTROL 스키마]** 을 클릭합니다. 여기에서 조직에 속한 이전에 만든 스키마 목록을 볼 수 있습니다. 계속하려면 **[!UICONTROL 스키마 만들기]**&#x200B;를 선택하고 을 선택합니다. **[!UICONTROL XDM ExperienceEvent]** 드롭다운 메뉴에서 을 클릭합니다.
+UI에서 **[!UICONTROL 스키마]** 을 클릭합니다. 여기에서 조직에 속한 이전에 만든 스키마 목록을 볼 수 있습니다. 계속하려면 **[!UICONTROL 스키마 만들기]**&#x200B;를 선택하고 을 선택합니다. **[!UICONTROL XDM ExperienceEvent]** 드롭다운 메뉴에서 을 클릭합니다.
 
 ![스키마 작업 공간](./images/e2e/schemas.png)
 
@@ -97,7 +99,7 @@ Edge Network에 데이터를 보낼 수 있게 되면 선택적으로 다음 작
 >
 >사용하려면 [이벤트 전달](../tags/ui/event-forwarding/overview.md) (조직에 기능에 대한 라이센스가 있는 것으로 가정) Adobe 제품을 활성화할 때와 동일한 방법으로 데이터 스트림에 대해 활성화해야 합니다. 이 프로세스에 대한 자세한 내용은 [이후 섹션](#event-forwarding).
 
-데이터 수집 UI에서 **[!UICONTROL 데이터 스트림]**. 여기에서 편집할 목록에서 기존 데이터 스트림을 선택하거나, 을(를) 선택하여 새 구성을 만들 수 있습니다 **[!UICONTROL 새 데이터 스트림]**.
+선택 **[!UICONTROL 데이터 스트림]** 을 클릭합니다. 여기에서 편집할 목록에서 기존 데이터 스트림을 선택하거나, 을(를) 선택하여 새 구성을 만들 수 있습니다 **[!UICONTROL 새 데이터 스트림]**.
 
 ![데이터스트림](./images/e2e/datastreams.png)
 

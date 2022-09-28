@@ -2,10 +2,10 @@
 title: AEM 자산 통찰력 확장에 대한 릴리스 노트
 description: Adobe Experience Platform의 AEM 자산 통찰력 태그 확장에 대한 최신 릴리스 노트입니다.
 exl-id: cee35b44-2249-47c6-80d6-8b4eaa9802df
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '137'
-ht-degree: 42%
+source-wordcount: '134'
+ht-degree: 43%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 42%
 
 - 이 확장은 AEM 자산 통찰력과 함께 사용됩니다.
 - 특히 ***pageTracker*** 프로세스와 페이지 코드를 대체합니다.
-- 이 확장이 데이터 수집 UI에서 구성되면, AEM 자산 노출과 클릭 지표를 Adobe Analytics으로 전송하며, 그 다음 이 정보를 AEM의 자산 통찰력 보고서로 자동으로 다시 가져옵니다.
+- 구성 및 활성화되면 이 확장은 AEM 자산 노출과 클릭 지표를 Adobe Analytics으로 전송하며 그러면 이 정보를 AEM의 자산 통찰력 보고서로 자동으로 다시 가져옵니다.
 
 **버그 수정**
 

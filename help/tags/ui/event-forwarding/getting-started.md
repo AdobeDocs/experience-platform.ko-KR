@@ -3,10 +3,10 @@ title: 이벤트 전달 시작
 description: Adobe Experience Platform에서 이벤트 전달을 사용하여 시작하려면 이 단계별 자습서를 따르십시오.
 feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '907'
-ht-degree: 30%
+source-wordcount: '872'
+ht-degree: 26%
 
 ---
 
@@ -54,7 +54,7 @@ Adobe Experience Platform에서 스키마를 만듭니다.
 
 ## 이벤트 전달 속성 만들기
 
-데이터 수집 UI에서 &quot;Edge&quot; 유형의 속성을 만듭니다.
+에서 **[!UICONTROL 태그]** 작업 공간, 유형의 속성 만들기 **[!UICONTROL Edge]**.
 
 1. 선택 **[!UICONTROL 새 속성]**.
 
@@ -70,22 +70,18 @@ Adobe Experience Platform에서 스키마를 만듭니다.
 
 Adobe Experience Platform에서 데이터 스트림을 만들려면 이벤트 전달 속성을 만들 때 생성된 환경 ID를 사용합니다.
 
-1. 데이터 수집 UI의 왼쪽 레일에 있는 링크를 사용하여 데이터 스트림 인터페이스를 엽니다.
-
-1. 선택 **[!UICONTROL 데이터 스트림]**.
+1. 선택 **[!UICONTROL 데이터 스트림]** 을 클릭합니다.
 
 1. 구성의 이름을 지정하고 선택적 설명을 입력합니다.
 이 설명은 여러 구성이 있는 목록에서 구성을 식별하는 데 도움이 됩니다.
 
 1. **[!UICONTROL 저장]**&#x200B;을 선택합니다.
 
-
-
 ## 이벤트 전달 활성화
 
 다음으로, 이벤트 전달 및 기타 Adobe 제품으로 데이터를 보내도록 Edge Network를 구성합니다.
 
-1. 데이터 저장소 UI에서 생성한 속성을 선택합니다.
+1. 에서 **[!UICONTROL 데이터 스트림]** 작업 영역에서 만든 속성을 선택합니다.
 
 1. 개발, 프로덕션 또는 스테이징 환경을 선택합니다.
 
@@ -101,17 +97,9 @@ Adobe Experience Platform에서 데이터 스트림을 만들려면 이벤트 �
 
 ## 이전에 만든 데이터 스트림으로 데이터를 보내도록 Platform Web SDK 확장을 구성합니다
 
-데이터 수집 UI에서 속성을 만든 다음 Adobe Experience Platform 웹 SDK 확장을 사용하여 구성합니다.
+에서 속성을 만듭니다 **[!UICONTROL 태그]** 작업 영역으로 이동한 다음 **[!UICONTROL 확장]** 카탈로그에서 Experience Platform 웹 SDK 확장을 선택하여 구성하고 설치합니다.
 
-1. 속성 이름을 지정합니다.
-
-   Alloy 인스턴스가 여러 개 있을 수 있습니다. 예를 들어, 다른 유료화 전 및 이후 추적 속성이 있을 수 있습니다.
-
-1. 조직 ID를 선택합니다.
-
-1. Edge 도메인을 선택합니다.
-
-구성 옵션에 대한 자세한 내용은 [웹 SDK 확장 설명서](../../extensions/web/sdk/overview.md)를 참조하십시오.
+자세한 내용은 [웹 SDK 확장 프로그램 설명서](../../extensions/web/sdk/overview.md) 구성 옵션에 대한 자세한 내용을 참조하십시오.
 
 ## Platform Web SDK로 데이터를 전송하는 태그 규칙 만들기
 

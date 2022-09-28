@@ -2,10 +2,10 @@
 title: 웹 확장에 대한 작업 유형
 description: 웹 속성에서 태그 확장에 대한 작업 유형 라이브러리 모듈을 정의하는 방법을 알아봅니다.
 exl-id: d4539132-a72c-40b0-84b6-50cbe3785d2d
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '408'
-ht-degree: 51%
+source-wordcount: '412'
+ht-degree: 50%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 51%
 
 작업 유형은 일반적으로 다음과 같이 구성됩니다.
 
-1. A [보기](./views.md) 사용자가 작업의 설정을 수정할 수 있는 데이터 수집 UI 내에 표시됩니다.
+1. A [보기](./views.md) 사용자가 작업의 설정을 수정할 수 있는 Experience Platform UI 및 데이터 수집 UI 내에 표시됩니다.
 2. 설정을 해석하고 작업을 수행하기 위해 태그 런타임 라이브러리 내에 제공되는 라이브러리 모듈입니다.
 
 ```js

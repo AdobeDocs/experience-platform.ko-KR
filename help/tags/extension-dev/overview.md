@@ -2,9 +2,9 @@
 title: 확장 개발 개요
 description: Adobe Experience Platform에서 다양한 태그 확장 기능 유형의 주요 구성 요소와 확장 기능 개발 프로세스에 대해 알아봅니다.
 exl-id: b72df3df-f206-488d-a690-0f086973c5b6
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '949'
+source-wordcount: '950'
 ht-degree: 22%
 
 ---
@@ -37,11 +37,11 @@ Adobe Experience Platform에서 태그의 주요 목표 중 하나는 Adobe 외�
 
 ### 보기 횟수
 
-보기는 에 로드할 수 있는 HTML 파일입니다 [`iframe` 요소](https://developer.mozilla.org/ko-KR/docs/Web/HTML/Element/iframe) 태그 애플리케이션 내, 특히 데이터 수집 UI를 통해 보기에는 확장에서 제공하는 스크립트가 포함되어야 하며, 애플리케이션과 통신하기 위해 작은 API를 따라야 합니다.
+보기는 에 로드할 수 있는 HTML 파일입니다 [`iframe` 요소](https://developer.mozilla.org/ko-KR/docs/Web/HTML/Element/iframe) 태그 애플리케이션 내, 특히 플랫폼 UI 및 데이터 수집 UI를 통해 보기에는 확장에서 제공하는 스크립트가 포함되어야 하며, 애플리케이션과 통신하기 위해 작은 API를 따라야 합니다.
 
 확장에 대한 가장 중요한 보기 파일은 해당 구성입니다. 의 섹션을 참조하십시오. [확장 구성](#configuration) 추가 정보.
 
-보기 내에서 사용되는 라이브러리에 대해서는 제한이 없습니다. 즉, jQuery, Underscore, React, Angular, Bootstrap 또는 기타 항목을 사용할 수 있습니다. 그러나 확장의 모양과 느낌을 데이터 수집 UI와 유사하게 유지하는 것이 좋습니다.
+보기 내에서 사용되는 라이브러리에 대해서는 제한이 없습니다. 즉, jQuery, Underscore, React, Angular, Bootstrap 또는 기타 항목을 사용할 수 있습니다. 그러나 확장의 모양과 느낌을 UI와 유사하게 유지하는 것이 좋습니다.
 
 모든 보기 관련 파일(HTML, CSS, JavaScript)을 라이브러리 모듈 파일과 분리된 단일 하위 디렉터리에 배치하는 것이 좋습니다. in `extension.json`로 지정하는 경우 이 보기의 하위 디렉터리가 있는 위치를 설명할 수 있습니다. 그런 다음 Platform은 웹 서버에서 이 하위 디렉터리(및 이 하위 디렉터리만)를 처리합니다.
 

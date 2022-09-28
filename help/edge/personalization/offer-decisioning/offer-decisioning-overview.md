@@ -3,9 +3,9 @@ title: Platform Web SDK에서 Offer decisioning 사용
 description: Adobe Experience Platform Web SDK는 Offer decisioning에서 관리되는 개인화된 오퍼를 제공하고 렌더링할 수 있습니다. offer decisioning UI 또는 API를 사용하여 오퍼 및 기타 관련 개체를 만들 수 있습니다.
 keywords: offer decisioning;의사 결정;웹 SDK;Platform Web SDK;개인화된 오퍼;오퍼 게재;오퍼 게재;오퍼 개인화;
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '870'
+source-wordcount: '865'
 ht-degree: 5%
 
 ---
@@ -65,7 +65,7 @@ offer decisioning을 활성화하려면 다음 단계를 수행하십시오.
 
    ![offer-decisioning-edge-config](./assets/offer-decisioning-edge-config.png)
 
-1. 지침에 따라 다음을 수행합니다 [sdk 설치](../../fundamentals/installing-the-sdk.md) (SDK는 독립 실행형 또는 [데이터 수집 UI](https://experience.adobe.com/#/data-collection/). 자세한 내용은 [태그 빠른 시작 안내서](../../../tags/quick-start/quick-start.md)) 를 참조하십시오.
+1. 지침에 따라 다음을 수행합니다 [sdk 설치](../../fundamentals/installing-the-sdk.md) (SDK는 독립 실행형 또는 UI를 통해 설치할 수 있습니다. 자세한 내용은 [태그 빠른 시작 안내서](../../../tags/quick-start/quick-start.md)) 를 참조하십시오.
 1. [SDK 구성](../../fundamentals/configuring-the-sdk.md) offer decisioning. 추가적인 Offer decisioning 특정 단계는 아래에 제공됩니다.
 
    * 독립형 SDK 설치

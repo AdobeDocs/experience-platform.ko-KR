@@ -2,9 +2,9 @@
 title: 규칙 구성 요소 끝점
 description: Reactor API에서 /rule_components 끝점을 호출하는 방법을 알아봅니다.
 exl-id: 8a878a89-7f41-45fc-88f3-17f0f743e29c
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '1207'
+source-wordcount: '1205'
 ht-degree: 6%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 6%
 
 >[!NOTE]
 >
->이 문서에서는 Reactor API에서 규칙 구성 요소를 관리하는 방법을 다룹니다. 데이터 수집 UI에서 규칙 및 규칙 구성 요소와 상호 작용하는 방법에 대한 자세한 내용은 [UI 안내서](../../ui/managing-resources/rules.md).
+>이 문서에서는 Reactor API에서 규칙 구성 요소를 관리하는 방법을 다룹니다. UI에서 규칙 및 규칙 구성 요소와 상호 작용하는 방법에 대한 자세한 내용은 [UI 안내서](../../ui/managing-resources/rules.md).
 
 규칙 구성 요소에는 세 가지 기본 유형이 있습니다.
 

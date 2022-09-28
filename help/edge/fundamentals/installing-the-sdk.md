@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK 설치
 description: Experience Platform 웹 SDK를 설치하는 방법을 알아봅니다.
 keywords: 웹 sdk 설치;웹 sdk 설치;internet explorer;약속;npm 패키지
 exl-id: b1de7ca1-d0d2-4661-a273-a1acf29afcd5
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '920'
+source-wordcount: '924'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 Adobe Experience Platform Web SDK를 사용하는 세 가지 지원 방법이 있습니다.
 
-1. Adobe Experience Platform Web SDK를 사용하는 기본 방법은 데이터 수집 UI를 사용하는 것입니다.
+1. Adobe Experience Platform Web SDK를 사용하는 기본 방법은 데이터 수집 UI 또는 Experience Platform UI를 사용하는 것입니다.
 1. Adobe Experience Platform Web SDK는 CDN(Content Delivery Network)에서도 사용할 수 있습니다.
 1. EcmaScript 5 및 EcmaScript 2015(ES6) 모듈을 내보내는 NPM 라이브러리를 사용합니다.
 

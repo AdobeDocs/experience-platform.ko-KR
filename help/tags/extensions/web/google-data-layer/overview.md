@@ -2,9 +2,9 @@
 title: Google 데이터 레이어 확장
 description: Adobe Experience Platform의 Google 클라이언트 데이터 레이어 태그 확장에 대해 알아봅니다.
 exl-id: 7990351d-8669-432b-94a9-4f9db1c2b3fe
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '819'
+source-wordcount: '823'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Google 데이터 레이어 확장을 사용하면 태그 구현에서 Google 데
 
 ## 설치
 
-확장을 설치하려면 데이터 수집 UI에서 확장 카탈로그로 이동하고 을 선택합니다 **Google 데이터 레이어**.
+확장을 설치하려면 Experience Platform UI 또는 데이터 수집 UI에서 확장 카탈로그로 이동하고 을 선택합니다 **Google 데이터 레이어**.
 
 설치하면 확장은 태그 라이브러리가 웹 사이트에 로드될 때마다 데이터 레이어를 만들거나 액세스합니다.
 

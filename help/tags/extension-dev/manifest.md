@@ -2,9 +2,9 @@
 title: 확장 매니페스트
 description: 확장을 제대로 사용하는 방법을 Adobe Experience Platform에 알려주는 JSON 매니페스트 파일을 구성하는 방법을 알아봅니다.
 exl-id: 7cac020b-3cfd-4a0a-a2d1-edee1be125d0
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '2647'
+source-wordcount: '2645'
 ht-degree: 69%
 
 ---
@@ -120,7 +120,7 @@ ht-degree: 69%
     </tr>
     <tr>
       <td><code>categoryName</code> <em>(선택 사항)</em></td>
-      <td>제공된 경우 <code>displayName</code> 은 <code>categoryName</code> ( 데이터 수집 UI 내에 없음) <code>categoryName</code>이 동일한 모든 유형은 동일한 카테고리에 나열됩니다. 예를 들어, 확장에서 <code>keyUp</code> 이벤트 유형 및 <code>keyDown</code> 이벤트 유형을 제공했는데 둘 다 <code>Keyboard</code>의 <code>categoryName</code> 이벤트 유형이 있는 경우, 사용자가 규칙을 작성할 때 사용 가능한 이벤트 유형 목록에서 선택하는 동안 두 이벤트 유형이 키보드 범주 아래에 나열됩니다. <code>categoryName</code>의 값은 사람이 읽을 수 있어야 합니다.</td>
+      <td>제공되면,  UI의 <code>categoryName</code> 아래에 <code>displayName</code>이 나열됩니다. <code>categoryName</code>이 동일한 모든 유형은 동일한 카테고리에 나열됩니다. 예를 들어, 확장에서 <code>keyUp</code> 이벤트 유형 및 <code>keyDown</code> 이벤트 유형을 제공했는데 둘 다 <code>Keyboard</code>의 <code>categoryName</code> 이벤트 유형이 있는 경우, 사용자가 규칙을 작성할 때 사용 가능한 이벤트 유형 목록에서 선택하는 동안 두 이벤트 유형이 키보드 범주 아래에 나열됩니다. <code>categoryName</code>의 값은 사람이 읽을 수 있어야 합니다.</td>
     </tr>
     <tr>
       <td><code>libPath</code></td>
