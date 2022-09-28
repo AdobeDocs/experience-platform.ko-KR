@@ -2,11 +2,11 @@
 audience: user
 user-guide-title: Adobe Experience Platform Segmentation Service
 breadcrumb-title: Segmentation Service 안내서
-user-guide-description: 실시간 고객 프로필 데이터에서 세그먼트를 작성하고 대상을 생성합니다.
+user-guide-description: 실시간 고객 프로필 데이터에서 세그먼트를 작성하고 대상자를 생성합니다.
 feature: Segments
-source-git-commit: b70b4302c95cbf4301b036feea799537fa633490
+source-git-commit: 0b14416cc312479c08303bf5cf610c513eaa26cb
 workflow-type: tm+mt
-source-wordcount: '164'
+source-wordcount: '166'
 ht-degree: 29%
 
 ---
@@ -30,6 +30,7 @@ ht-degree: 29%
    - [스트리밍 세그멘테이션](api/streaming-segmentation.md)
 - 세그멘테이션 UI {#ui}
    - [개요](ui/overview.md)
+   - [Audience Builder](ui/audience-builder.md)
    - [세그먼트 대시보드](ui/segment-dashboard.md)
    - [세그먼트 빌더](ui/segment-builder.md)
    - [에지 세그멘테이션](ui/edge-segmentation.md)

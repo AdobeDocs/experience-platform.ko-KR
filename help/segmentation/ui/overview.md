@@ -5,10 +5,10 @@ title: 세그멘테이션 서비스 UI 안내서
 topic-legacy: ui guide
 description: Adobe Experience Platform 세그멘테이션 서비스는 세그먼트 정의를 만들고 관리하기 위한 사용자 인터페이스를 제공합니다.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 356d76d61293b9ff0887afbf30852159af8d72ad
+source-git-commit: f71d49b576059e687c337cbacd6dd3d525e97834
 workflow-type: tm+mt
-source-wordcount: '1775'
-ht-degree: 0%
+source-wordcount: '2375'
+ht-degree: 1%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 또한 이 문서를 통해 사용되는 두 가지 주요 용어를 알고 이 용어 간의 차이점을 이해하는 것이 중요합니다.
 - **세그먼트 정의**: 대상 대상의 주요 특성이나 동작을 설명하는 데 사용되는 규칙 세트입니다.
-- **Audience**: 세그먼트 정의 기준을 충족하는 결과 프로필 집합입니다.
+- **Audience**: 세그먼트 정의 기준을 충족하는 결과 프로필 집합입니다. Adobe Experience Platform(플랫폼 생성 대상)를 통해 또는 외부 소스(외부에서 생성된 대상)에서 만들 수 있습니다.
 
 ## 개요
 
@@ -62,7 +62,7 @@ Experience Platform UI에서 **[!UICONTROL 세그먼트]** 왼쪽 탐색에서 �
 >title="예약에 모든 세그먼트 추가"
 >abstract="모든 배치 평가 세그먼트를 오후 3:30 UTC에 일별 예약된 업데이트에 포함할 수 있습니다. 예약된 업데이트에서 모든 세그먼트를 제거하려면 을 비활성화합니다."
 
-을(를) 선택합니다 **[!UICONTROL 찾아보기]** IMS 조직에 대한 모든 세그먼트 정의 목록을 보려면 탭을 클릭하십시오.
+을(를) 선택합니다 **[!UICONTROL 찾아보기]** 탭의 을 클릭하여 조직의 모든 세그먼트 정의 목록을 확인합니다.
 
 ![](../images/ui/overview/segment-browse-all.png)
 
@@ -92,7 +92,7 @@ Experience Platform UI에서 **[!UICONTROL 세그먼트]** 왼쪽 탐색에서 �
 
 ![](../images/ui/overview/segment-browse-top.png)
 
-오른쪽 사이드바는 총 세그먼트 수, 마지막 평가 날짜, 다음 평가 날짜 및 평가 방법별 세그먼트 분류를 나열하는 IMS 조직 내의 모든 세그먼트에 대한 정보를 포함합니다.
+오른쪽 사이드바는 총 세그먼트 수, 마지막 평가 날짜, 다음 평가 날짜 및 평가 방법별 세그먼트 분류를 나열하는 조직 내의 모든 세그먼트에 대한 정보를 포함합니다.
 
 ![](../images/ui/overview/segment-browse-segment-info.png)
 
@@ -112,7 +112,7 @@ Experience Platform UI에서 **[!UICONTROL 세그먼트]** 왼쪽 탐색에서 �
 
 ![](../images/ui/overview/segment-details-summary.png)
 
-### 세그먼트 요약
+### 세그먼트 요약 {#segment-summary}
 
 다음 **[!UICONTROL 세그먼트 요약]** 섹션에서는 ID, 이름, 설명 및 속성에 대한 세부 사항과 같은 정보를 제공합니다.
 
@@ -191,6 +191,80 @@ Experience Platform UI에서 **[!UICONTROL 세그먼트]** 왼쪽 탐색에서 �
 예약은 현재 API를 사용해서만 만들 수 있습니다. API를 사용하여 일정을 만들고, 편집하고, 작업하는 방법에 대한 자세한 단계는 세그먼트 결과를 평가하고 액세스하는 자습서, 특히 [API를 사용하여 예약된 평가](../tutorials/evaluate-a-segment.md#scheduled-evaluation).
 
 ![](../images/ui/overview/segment-browse-scheduled.png)
+
+## Audiences {#audiences}
+
+>[!IMPORTANT]
+>
+>대상 기능은 현재 제한된 베타에 있으며 일부 사용자는 사용할 수 없습니다. 설명서 및 기능은 변경될 수 있습니다.
+
+을(를) 선택합니다 **[!UICONTROL 대상]** 탭을 클릭하여 조직의 모든 대상 목록을 확인합니다.
+
+![조직의 대상 목록입니다.](../images/ui/overview/list-audiences.png)
+
+기본적으로 이 보기에는 이름, 프로필 수, 원본, 만든 날짜 및 마지막 수정 날짜를 포함한 대상에 대한 정보가 표시됩니다.
+
+을(를) 선택할 수 있습니다 ![테이블 사용자 지정](../images/ui/overview/customize-table.png) 아이콘을 클릭하여 표시되는 필드를 변경할 수 있습니다.
+
+![테이블 사용자 지정 단추가 강조 표시됩니다. 이 단추를 선택하면 대상 찾아보기 페이지에 표시되는 필드를 사용자 지정할 수 있습니다.](../images/ui/overview/select-customize-table.png)
+
+테이블 내에 표시할 수 있는 모든 필드를 나열하는 팝오버가 나타납니다.
+
+![대상 찾아보기 섹션에 표시할 수 있는 속성입니다.](../images/ui/overview/customize-table-attributes.png)
+
+| 필드 | 설명 |
+| ----- | ----------- | 
+| [!UICONTROL 이름] | 대상자의 이름입니다. |
+| [!UICONTROL 프로필 수] | 대상자에 적합한 총 프로필 수입니다. |
+| [!UICONTROL Origin] | 대상자의 기원. 이 대상이 플랫폼에서 생성된 경우 세그먼테이션 서비스의 출처가 있게 됩니다. |
+| [!UICONTROL 라이프사이클 상태] | 대상자의 상태입니다. 이 필드에 사용할 수 있는 값은 다음과 같습니다 `Draft`, `Published`, 및 `Archived`. |
+| [!UICONTROL 업데이트 빈도] | 대상자의 데이터가 업데이트되는 빈도를 설명하는 값입니다. 이 필드에 사용할 수 있는 값은 다음과 같습니다 `On Demand`, `Scheduled`, 및 `Continuous`. |
+| [!UICONTROL 마지막으로 업데이트한 사람] | 대상자를 마지막으로 업데이트한 사람의 이름입니다. |
+| [!UICONTROL 생성됨] | 대상자를 만든 시간과 날짜입니다. |
+| [!UICONTROL 마지막으로 업데이트됨] | 대상자를 마지막으로 만든 시간과 날짜입니다. |
+| [!UICONTROL 레이블 액세스] | 대상의 액세스 레이블입니다. 액세스 레이블을 사용하면 해당 데이터에 적용되는 사용 정책에 따라 데이터 세트와 필드를 분류할 수 있습니다. 이러한 레이블은 언제든지 적용할 수 있으므로 데이터를 관리하는 방법을 유연하게 선택할 수 있습니다. 액세스 레이블에 대한 자세한 내용은 [레이블 관리](../../access-control/abac/ui/labels.md). |
+
+선택할 수 있습니다 **[!UICONTROL 대상 만들기]** 대상자를 만들려면 다음을 수행하십시오.
+
+![대상 만들기 단추가 강조 표시되어 대상을 만들 위치를 보여줍니다.](../images/ui/overview/create-audience.png)
+
+대상자를 작성하거나 규칙을 작성할 때 선택할 수 있는 팝업 창이 나타납니다.
+
+![만들 수 있는 두 가지 유형의 대상을 표시하는 팝오버입니다.](../images/ui/overview/create-audience-type.png)
+
+선택 **[!UICONTROL 대상자 작성]** 대상 빌더로 이동합니다. 대상자 만들기에 대한 자세한 내용은 [Audience Builder 안내서](./audience-builder.md).
+
+선택 **[!UICONTROL 빌드 규칙]** 세그먼트 빌더로 이동합니다. 세그먼트 만들기에 대한 자세한 내용은 [세그먼트 빌더 안내서](./segment-builder.md)
+
+## 대상 세부 사항 {#audience-details}
+
+특정 대상에 대한 자세한 내용을 보려면 [!UICONTROL 대상] 탭.
+
+대상 세부 사항 페이지가 나타납니다. 이 페이지는 대상이 Adobe Experience Platform으로 생성되었는지 또는 Audience Orchestration과 같은 외부 소스에서 생성되었는지 여부에 따라 세부 사항이 다릅니다.
+
+### 플랫폼 생성 대상
+
+플랫폼에서 생성한 대상에 대한 자세한 내용은 [세그먼트 요약 섹션](#segment-summary).
+
+### 외부에서 생성된 대상
+
+대상 세부 사항 페이지 맨 위에는 대상 요약 및 대상이 저장된 데이터 세트에 대한 세부 사항이 있습니다.
+
+![외부에서 생성된 대상에 대해 제공된 세부 정보입니다.](../images/ui/overview/externally-generated-audience.png)
+
+다음 **[!UICONTROL 대상 요약]** 섹션에서는 ID, 이름, 설명 및 속성에 대한 세부 사항과 같은 정보를 제공합니다.
+
+다음 **[!UICONTROL 데이터 세트 세부 정보]** 이 섹션에서는 이름, 설명, 테이블 이름, 소스 및 스키마와 같은 정보를 제공합니다. 선택할 수 있습니다 **[!UICONTROL 데이터 집합 보기]** 데이터 세트에 대한 자세한 내용을 보려면 를 참조하십시오.
+
+| 필드 | 설명 |
+| ----- | ----------- |
+| [!UICONTROL 이름] | 데이터 세트의 이름입니다. |
+| [!UICONTROL 설명] | 데이터 집합에 대한 설명입니다. |
+| [!UICONTROL 테이블 이름] | 데이터 집합의 테이블 이름. |
+| [!UICONTROL 소스] | 데이터 세트의 소스. 외부에서 생성된 대상의 경우 이 값은 다음과 같습니다 **스키마**. |
+| [!UICONTROL 스키마] | 데이터 세트에 해당하는 XDM 스키마 유형입니다. |
+
+데이터 세트에 대한 자세한 내용은 [데이터 세트 개요](../../catalog/datasets/overview.md).
 
 ## 스트리밍 세그멘테이션 {#streaming-segmentation}
 
