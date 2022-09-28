@@ -3,9 +3,9 @@ keywords: Experience Platform;홈;인기 있는 주제 경고
 description: 데이터 흐름을 만들 때 경고에 가입하여 흐름 실행 상태, 성공 또는 실패와 관련된 경고 메시지를 받을 수 있습니다.
 title: UI에서 컨텍스트 내 경고 구독
 exl-id: 5d51edaa-ecba-4ac0-8d3c-49010466b9a5
-source-git-commit: 2acb58d21952699c60471cb4f4347af89621f045
+source-git-commit: d450dc7b0dc0303c9d33c3e8e003659e3140cf5b
 workflow-type: tm+mt
-source-wordcount: '832'
+source-wordcount: '845'
 ht-degree: 1%
 
 ---
@@ -49,7 +49,7 @@ Adobe Experience Platform에서는 Adobe Experience Platform 활동에 대한 �
 | 소스 데이터 흐름 실행 시작 | 이 경고는 소스 데이터 흐름이 시작되면 메시지를 보냅니다. |
 | 소스 데이터 흐름 실행 성공 | 이 경고는 소스의 데이터를 Platform에 성공적으로 수집하면 메시지를 보냅니다. |
 | 소스 데이터 흐름 실행 실패 | 이 경고는 데이터 플로우에서 오류가 발생하면 메시지를 보냅니다. |
-| 소스 데이터 흐름 수집 부족 | 이 경고는 수집이 7시간 이상 지연되고 Platform에 데이터를 수집하지 않는 경우 메시지를 보냅니다. |
+| ~~소스 데이터 흐름 수집 부족~~ | ~~이 경고는 수집이 7시간 이상 지연되고 Platform에 데이터를 수집하지 않는 경우 메시지를 보냅니다.~~ <br>**참고:** 이 경고는 더 이상 사용되지 않으므로 더 이상 경고를 받지 않습니다. |
 
 가입하려는 경고를 선택한 다음 선택합니다 **[!UICONTROL 다음]** 데이터 흐름을 검토하고 완료하려면
 
