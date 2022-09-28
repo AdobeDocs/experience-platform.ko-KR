@@ -4,10 +4,10 @@ description: Adobe Experience Platform Web SDK를 구성하는 방법을 알아�
 seo-description: Learn how to configure the Experience Platform Web SDK
 keywords: 구성;구성;SDK;Edge;Web SDK;구성;EdgeConfigId;컨텍스트;웹;장치;환경;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;웹 sdk 설정;사전 숨김Style;불투명도;쿠키DestinationsEnabled;urlDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 exl-id: d1e95afc-0b8a-49c0-a20e-e2ab3d657e45
-source-git-commit: 4d0f1b3e064bd7b24e17ff0fafb50d930b128968
+source-git-commit: ed39d782ba6991a00a31b48abb9d143e15e6d89e
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '999'
+ht-degree: 14%
 
 ---
 
@@ -44,15 +44,26 @@ alloy("configure", {
 
 SDK를 적절한 계정 및 구성에 연결하는 할당된 구성 ID입니다. 단일 페이지 내에서 여러 인스턴스를 구성할 때는 다른 인스턴스를 구성해야 합니다 `edgeConfigId` 참조하십시오.
 
-### `context`
+### `context` {#context}
 
 | **유형** | **필수 여부** | **기본값** |
 | ---------------- | ------------ | -------------------------------------------------- |
-| 문자열 배열 | 아니요 | `["web", "device", "environment", "placeContext"]` |
+| 문자열 배열 | 아니요 | `["web", "device", "environment", "placeContext", "highEntropyUserAgentHints"]` |
 
 {style=&quot;table-layout:auto&quot;}
 
 에 설명된 대로 자동으로 수집할 컨텍스트 카테고리를 나타냅니다. [자동 정보](../data-collection/automatic-information.md). 이 구성을 지정하지 않으면 기본적으로 모든 카테고리가 사용됩니다.
+
+>[!IMPORTANT]
+>
+>다음을 제외한 모든 컨텍스트 속성 `highEntropyUserAgentHints`은 기본적으로 활성화되어 있습니다. 웹 SDK 구성에서 컨텍스트 속성을 수동으로 지정한 경우 필요한 정보를 계속 수집하려면 모든 컨텍스트 속성을 활성화해야 합니다.
+
+활성화하려면 [높은 엔트로피 클라이언트 힌트](user-agent-client-hints.md#enabling-high-entropy-client-hints) 웹 SDK 배포에서 추가 항목을 포함해야 합니다 `highEntropyUserAgentHints` 컨텍스트 선택 사항, 기존 구성과 함께 제공됩니다.
+
+예를 들어 웹 속성에서 높은 엔트로피 클라이언트 힌트를 검색하려면 구성은 다음과 같습니다.
+
+`context: ["highEntropyUserAgentHints", "web"]`
+
 
 ### `debugEnabled`
 
@@ -124,7 +135,7 @@ Adobe 서비스와 통신하고 상호 작용하는 데 사용되는 edgeDomain 
 
 | **유형** | **필수 여부** | **기본값** |
 | -------- | ------------ | ----------------- |
-| 개체 | 아니요 | `"in"` |
+| 오브젝트 | 아니요 | `"in"` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -134,9 +145,9 @@ Adobe 서비스와 통신하고 상호 작용하는 데 사용되는 edgeDomain 
 * `"out"`: 이 설정을 지정하면 사용자가 동의 환경 설정을 제공할 때까지 작업이 삭제됩니다.
 사용자의 환경 설정이 제공되면 사용자의 환경 설정에 따라 작업이 진행되거나 중단됩니다. 자세한 내용은 [지원 동의](../consent/supporting-consent.md) 추가 정보.
 
-## 개인화 옵션
+## 개인화 옵션 {#personalization}
 
-### `prehidingStyle`
+### `prehidingStyle` {#prehidingStyle}
 
 | **유형** | **필수 여부** | **기본값** |
 | -------- | ------------ | ----------------- |
@@ -151,6 +162,16 @@ Adobe 서비스와 통신하고 상호 작용하는 데 사용되는 edgeDomain 
 ```javascript
   prehidingStyle: "#container { opacity: 0 !important }"
 ```
+
+### `targetMigrationEnabled` {#targetMigrationEnabled}
+
+이 옵션은 에서 개별 페이지를 마이그레이션할 때 사용해야 합니다 [!DNL at.js] 추가 작업이 필요합니다.
+
+이 옵션을 사용하여 웹 SDK에서 이전 항목을 읽고 쓸 수 있도록 합니다 `mbox` 및 `mboxEdgeCluster` 에서 사용하는 쿠키 [!DNL at.js]. 이렇게 하면 웹 SDK를 사용하는 페이지에서 를 사용하는 페이지로 이동하는 동안 방문자 프로필을 유지할 수 있습니다 [!DNL at.js] 라이브러리 및 그 반대의 경우도 마찬가지입니다.
+
+| **유형** | **필수 여부** | **기본값** |
+| -------- | ------------ | ----------------- |
+| 부울 | 아니요 | `false` |
 
 ## 대상 옵션
 
@@ -184,7 +205,9 @@ Adobe 서비스와 통신하고 상호 작용하는 데 사용되는 edgeDomain 
 
 {style=&quot;table-layout:auto&quot;}
 
-true인 경우 SDK는 이전 AMCV 쿠키를 읽고 설정합니다. 이 옵션은 사이트의 일부 부분이 여전히 Visitor.js를 사용할 수 있지만 Adobe Experience Platform Web SDK를 사용하여 로 전환하는 데 도움이 됩니다. 방문자 API가 페이지에 정의된 경우 SDK는 ECID에 대해 방문자 API를 쿼리합니다. 이 옵션을 사용하면 Adobe Experience Platform Web SDK를 사용하여 페이지를 이중 태깅하고 여전히 동일한 ECID를 가질 수 있습니다.
+true인 경우 SDK는 이전 AMCV 쿠키를 읽고 설정합니다. 이 옵션은 사이트의 일부 부분이 여전히 Visitor.js를 사용할 수 있지만 Adobe Experience Platform Web SDK를 사용하여 로 전환하는 데 도움이 됩니다.
+
+방문자 API가 페이지에 정의된 경우 SDK는 ECID에 대해 방문자 API를 쿼리합니다. 이 옵션을 사용하면 Adobe Experience Platform Web SDK를 사용하여 페이지를 이중 태깅하고 여전히 동일한 ECID를 가질 수 있습니다.
 
 ### `thirdPartyCookiesEnabled`
 
