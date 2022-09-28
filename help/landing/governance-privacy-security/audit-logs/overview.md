@@ -2,10 +2,10 @@
 title: 감사 로그 개요
 description: 감사 로그를 통해 Adobe Experience Platform에서 누가 어떤 작업을 수행했는지 확인하는 방법에 대해 알아봅니다.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: 6c0e001419dc78d4ff87bebd0604c7add07b635f
+source-git-commit: fdc61c920ee9ae2c66344e781334844d38b44806
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '944'
+ht-degree: 15%
 
 ---
 
@@ -41,6 +41,7 @@ ht-degree: 0%
 | [계산된 특성](../../../profile/computed-attributes/overview.md) | <ul><li>선택 사항에서</li><li>업데이트</li><li>삭제</li></ul> |
 | [고객 AI 인스턴스](../../../intelligent-services/customer-ai/overview.md) | <ul><li>선택 사항에서</li><li>업데이트</li><li>삭제</li><li>활성화</li><li>비활성화</li></ul> |
 | [데이터 세트](../../../catalog/datasets/overview.md) | <ul><li>선택 사항에서</li><li>업데이트</li><li>삭제</li><li>사용 [실시간 고객 프로필](../../../profile/home.md)</li><li>프로필에 대한 비활성화</li><li>데이터 추가</li><li>일괄 처리 삭제</li></ul> |
+| [데이터 스트림](../../../edge/datastreams/overview.md) | <ul><li>선택 사항에서</li><li>업데이트</li><li>삭제</li><li>활성화</li><li>비활성화</li><li>[매핑 편집](../../../edge/datastreams/data-prep.md)</li></ul> |
 | [데이터 유형](../../../xdm/schema/composition.md#data-type) | <ul><li>선택 사항에서</li><li>업데이트</li><li>삭제</li></ul> |
 | [대상](../../../destinations/home.md) | <ul><li>선택 사항에서</li><li>업데이트</li><li>삭제</li><li>활성화</li><li>비활성화</li><li>데이터 집합 활성화</li><li>데이터 집합 제거</li><li>프로필 활성화</li><li>프로필 제거</li></ul> |
 | [필드 그룹](../../../xdm/schema/composition.md#field-group) | <ul><li>선택 사항에서</li><li>업데이트</li><li>삭제</li></ul> |
