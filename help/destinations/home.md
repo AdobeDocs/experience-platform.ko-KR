@@ -3,10 +3,10 @@ keywords: 대상;adobe experience platform;플랫폼;대상 개요;데이터 활
 title: 대상 개요
 description: 대상은 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과의 사전 구축된 통합입니다. Adobe Experience Platform에서 대상 을 사용하여 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: ad0d38cbd249642d582a807c5679065827f57717
+source-git-commit: 842aaa7104b277cf415d1ed9ee2744a200c07ce8
 workflow-type: tm+mt
-source-wordcount: '489'
-ht-degree: 0%
+source-wordcount: '633'
+ht-degree: 1%
 
 ---
 
@@ -44,7 +44,24 @@ ht-degree: 0%
 
 Platform의 대상 기능은 Adobe Experience Platform 액세스 제어 권한과 함께 작동합니다. 사용자의 권한 수준에 따라 대상을 보고, 관리하고, 활성화할 수 있습니다. 개별 권한에 대한 자세한 내용은 [Adobe Experience Platform의 액세스 제어](../access-control/home.md) 페이지 아래쪽으로 스크롤합니다.
 
+다음 표에서는 대상에서 특정 작업을 수행하는 데 필요한 권한 및 권한 조합에 대해 설명합니다.
+
+| 권한 수준 | 설명 |
+| ---- | ----|
+| **[!UICONTROL 대상 관리]** | 대상에 연결하려면 **[!UICONTROL 대상 관리]** [액세스 제어 권한](/help/access-control/home.md#permissions). |
+| **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** | 세그먼트를 대상에 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). |
+
+{style=&quot;table-layout:auto&quot;}
+
 액세스 컨트롤에 대한 자세한 내용은 [액세스 제어 사용 안내서](../access-control/ui/overview.md).
+
+### 대상에 대한 속성 기반 액세스 제어 {#attribute-based-access}
+
+관리자는 Adobe Experience Platform의 속성 기반 액세스 제어를 사용하여 속성을 기반으로 특정 개체 및/또는 기능에 대한 액세스를 제어할 수 있습니다.
+
+속성 기반 액세스 제어를 사용하면 권한이 있는 필드에 매핑 구성을 적용할 수 있습니다. 또한 데이터 집합에 있는 모든 필드에 액세스할 수 없는 경우 데이터를 대상으로 내보낼 수 없습니다.
+
+대상이 속성 기반 액세스 제어를 사용하여 작업하는 방법에 대한 자세한 내용은 [속성 기반 액세스 제어 개요](../access-control/abac/overview.md#destinations).
 
 ## 대상에 데이터 활성화에 대한 데이터 거버넌스 제한 {#data-governance}
 
@@ -64,7 +81,7 @@ Platform의 대상 기능은 Adobe Experience Platform 액세스 제어 권한�
 * [이메일 마케팅 대상](./catalog/email-marketing/overview.md)
 * [소셜 대상](./catalog/social/overview.md)
 
-세그먼트 활성화 워크플로우의 데이터 정책 위반에 대한 자세한 내용은 다음 안내서의 검토 단계를 참조하십시오.
+세그먼트 활성화 워크플로우의 데이터 정책 위반에 대한 자세한 내용은 **[!UICONTROL 검토]** 다음 안내서에서 를 수행하십시오.
 
 * [스트리밍 세그먼트 내보내기 대상으로 대상 데이터 활성화](./ui/activate-segment-streaming-destinations.md#review)
 * [스트리밍 프로필 내보내기 대상으로 대상 데이터 활성화](./ui/activate-streaming-profile-destinations.md#review)

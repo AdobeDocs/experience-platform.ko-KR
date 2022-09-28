@@ -3,9 +3,9 @@ keywords: Experience Platform;홈;인기 항목;액세스 제어;속성 기반 �
 title: 속성 기반 액세스 제어 개요
 description: 이 문서에서는 Adobe Experience Platform의 속성 기반 액세스 제어에 대한 정보를 제공합니다
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: 981d604770fbc2e979346146845ad7bc80805356
+source-git-commit: b095461b0c2510e84ca9a3a368f4907f8b3d5370
 workflow-type: tm+mt
-source-wordcount: '1583'
+source-wordcount: '1684'
 ht-degree: 1%
 
 ---
@@ -62,7 +62,7 @@ ht-degree: 1%
 
 액세스 제어에 대한 자세한 내용은 [액세스 제어 개요](../home.md).
 
-### 대상
+### 대상 {#destinations}
 
 [!DNL Destinations] 는 플랫폼에서 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과의 사전 구축된 통합입니다. 대상을 사용하여 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례에 대해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 
@@ -72,6 +72,15 @@ ht-degree: 1%
    * 활성화 프로세스에서 사용자는 대상으로 활성화할 세그먼트를 선택해야 할 수 있습니다. 관리자는 조직의 사용자에게 사용자가 액세스할 수 있는 레이블이 지정된 세그먼트와 레이블이 없는 세그먼트만 표시하도록 제공할 수 있습니다.
 * 역할, 권한 및 레이블을 기반으로 활성화 프로세스에서 특정 필드를 표시하도록 사용자 액세스를 구성합니다.
    * 활성화 프로세스에서 사용자는 대상으로 활성화할 필드를 선택해야 할 수 있습니다. 관리자는 조직의 사용자에게 사용자가 액세스할 수 있는 레이블이 지정된 필드와 레이블이 포함되지 않은 필드만 표시하도록 제공할 수 있습니다.
+
+>[!IMPORTANT]
+>
+>요약하면 대상 및 속성 기반 액세스 제어를 사용할 때 다음과 같은 의미에 유의하십시오.
+>
+>* 액세스 및 보기 권한이 있는 세그먼트만 활성화할 수 있습니다 [세그먼트 찾아보기 보기](/help/segmentation/ui/overview.md#browse) 및 [세그먼트 단계 선택](/help/destinations/ui/activate-batch-profile-destinations.md#select-segments) 활성화 워크플로우에 대한 업데이트입니다.
+>* 에서 [활성화 워크플로우의 매핑 단계](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping)을(를) 선택한 경우 액세스 권한이 있는 필드만 보고 활성화할 수 있습니다.
+>* 내보내도록 매핑된 모든 필드에 액세스할 수 없는 기존 대상에 추가 세그먼트를 활성화하려는 경우 활성화 워크플로우가 차단됩니다.
+
 
 자세한 내용은 [!DNL Destinations]를 참조하려면 [[!DNL Destinations] 개요](../../destinations/home.md).
 
