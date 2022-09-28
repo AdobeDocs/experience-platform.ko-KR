@@ -5,9 +5,9 @@ title: 설명자 API 끝점
 description: 스키마 레지스트리 API의 /descriptors 종단점을 사용하면 경험 애플리케이션 내의 XDM 설명자를 프로그래밍 방식으로 관리할 수 있습니다.
 topic-legacy: developer guide
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: 65a6eca9450b3a3e19805917fb777881c08817a0
+source-git-commit: e8ad829ac4ea89c0d0167e6b414db577c9ecf094
 workflow-type: tm+mt
-source-wordcount: '1839'
+source-wordcount: '1900'
 ht-degree: 3%
 
 ---
@@ -341,6 +341,10 @@ ID 설명자는 &quot;[!UICONTROL sourceProperty]&quot;[!UICONTROL sourceSchema]
     "click": "Mouse Click",
     "addCart": "Add to Cart",
     "checkout": "Cart Checkout"
+  },
+  "xdm:excludeMetaEnum": {
+    "web.formFilledOut": "Web Form Filled Out",
+    "media.ping": "Media ping"
   }
 }
 ```
@@ -350,10 +354,11 @@ ID 설명자는 &quot;[!UICONTROL sourceProperty]&quot;[!UICONTROL sourceSchema]
 | `@type` | 정의되는 설명자의 유형입니다. 친숙한 이름 설명자의 경우 이 값을 `xdm:alternateDisplayInfo`. |
 | `xdm:sourceSchema` | 다음 `$id` 설명자가 정의되는 스키마의 URI입니다. |
 | `xdm:sourceVersion` | 소스 스키마의 주 버전입니다. |
-| `xdm:sourceProperty` | ID가 될 특정 속성의 경로입니다. 경로는 &quot;/&quot;로 시작해야 하며 하나로 끝나지 않습니다. 경로에 &quot;속성&quot;을 포함하지 마십시오(예: &quot;/properties/personalEmail/properties/address&quot; 대신 &quot;/personalEmail/address&quot;를 사용) |
+| `xdm:sourceProperty` | 세부 정보를 수정할 특정 속성의 경로입니다.경로는 슬래시(`/`)로 끝나는 것이 아닙니다. 포함하지 않음 `properties` 경로(예: `/personalEmail/address` 대신 `/properties/personalEmail/properties/address`). |
 | `xdm:title` | 제목 사례에 작성된 이 필드에 표시할 새 제목입니다. |
 | `xdm:description` | 선택적 설명을 제목과 함께 추가할 수 있습니다. |
-| `meta:enum` | 로 표시된 경우 `xdm:sourceProperty` 는 문자열 필드입니다. `meta:enum` 의 필드에 대해 제안된 값 목록을 결정합니다 [!DNL Experience Platform] UI. 중요한 것은 `meta:enum` 은 열거형을 선언하거나 XDM 필드에 대한 데이터 유효성 검사를 제공하지 않습니다.<br><br>Adobe에 의해 정의된 코어 XDM 필드에만 사용해야 합니다. 소스 속성이 조직에서 정의한 사용자 정의 필드인 경우 대신 필드의 `meta:enum` 속성의 부모 리소스에 대한 PATCH 요청을 통해 직접 속성에 액세스할 수 있습니다. |
+| `meta:enum` | 로 표시된 경우 `xdm:sourceProperty` 는 문자열 필드입니다. `meta:enum` 는 세그먼테이션 UI에서 필드에 대해 제안된 값을 추가하는 데 사용할 수 있습니다. 중요한 것은 `meta:enum` 은 열거형을 선언하거나 XDM 필드에 대한 데이터 유효성 검사를 제공하지 않습니다.<br><br>Adobe에 의해 정의된 코어 XDM 필드에만 사용해야 합니다. 소스 속성이 조직에서 정의한 사용자 정의 필드인 경우 대신 필드의 `meta:enum` 속성의 부모 리소스에 대한 PATCH 요청을 통해 직접 속성에 액세스할 수 있습니다. |
+| `meta:excludeMetaEnum` | 로 표시된 경우 `xdm:sourceProperty` 는 `meta:enum` 필드에서는 이 개체를 친숙한 이름 설명자에 포함하여 세그먼테이션에서 이러한 값의 일부 또는 전부를 제외할 수 있습니다. 각 항목의 키와 값은 원본에 포함된 키와 일치해야 합니다 `meta:enum` 을 입력합니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
