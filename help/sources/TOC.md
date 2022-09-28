@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 소스 커넥터 도움말
 breadcrumb-title: Source Connectors 안내서
 user-guide-description: 다양한 소스 또는 구조에서 데이터를 수집하고 레이블을 지정하며 기존에 수집한 데이터를 향상시킬 수 있습니다.
 feature: Sources
-source-git-commit: dfb95f457d7ddb730950159165ed85b2f532f9ab
+source-git-commit: 47a9ce5211d3dabe427ad1e545dc12181a84b644
 workflow-type: tm+mt
-source-wordcount: '824'
+source-wordcount: '831'
 ht-degree: 12%
 
 ---
@@ -20,6 +20,7 @@ ht-degree: 12%
       - [Analytics 분류 소스](connectors/adobe-applications/classifications.md)
       - [Analytics 소스](connectors/adobe-applications/analytics.md)
       - [Audience Manager 소스](connectors/adobe-applications/audience-manager.md)
+      - [Adobe Campaign Managed Cloud Services 소스](connectors/adobe-applications/campaign.md)
       - [고객 속성 소스](connectors/adobe-applications/customer-attributes.md)
       - [데이터 수집 소스](connectors/adobe-applications/data-collection.md)
       - 필드 매핑 {#mapping}
@@ -202,7 +203,7 @@ ht-degree: 12%
          - [Adobe Analytics (보고서 세트 데이터)](tutorials/ui/create/adobe-applications/analytics.md)
          - [Adobe Analytics (분류 데이터)](tutorials/ui/create/adobe-applications/classifications.md)
          - [Adobe Audience Manager](tutorials/ui/create/adobe-applications/audience-manager.md)
-         - [Adobe Campaign Managed Services](tutorials/ui/create/adobe-applications/campaign.md)
+         - [Adobe Campaign Managed Cloud Services](tutorials/ui/create/adobe-applications/campaign.md)
          - [고객 속성](tutorials/ui/create/adobe-applications/customer-attributes.md)
          - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
       - 광고 {#advertising}
