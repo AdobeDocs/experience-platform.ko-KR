@@ -5,9 +5,9 @@ title: 소스 커넥터 개요
 topic-legacy: overview
 description: Adobe Experience Platform을 사용하면 Platform 서비스를 사용하여 들어오는 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 외부 소스에서 데이터를 수집할 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 등과 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: b732fa1f4afb71e7b8c3276335b371d0f8ef888d
+source-git-commit: 552d8412067503847a6c9e4ffcf1aa18710dfbdd
 workflow-type: tm+mt
-source-wordcount: '1024'
+source-wordcount: '1094'
 ht-degree: 0%
 
 ---
@@ -169,7 +169,15 @@ Experience Platform은 타사 프로토콜 시스템에서 데이터 섭취를 �
 | **[!UICONTROL 소스 관리]** 설정 | 에 포함된 함수 외에 **[!UICONTROL 소스 보기]**, 액세스 권한을 부여합니다 **[!UICONTROL 연결 소스]** 옵션 **[!UICONTROL 카탈로그]** 및 **[!UICONTROL 데이터 선택]** 옵션 **[!UICONTROL 찾아보기]**. **[!UICONTROL 소스 관리]** 을 활성화하거나 비활성화할 수도 있습니다 **[!UICONTROL 데이터 흐름]** 일정을 편집합니다. |
 | **[!UICONTROL 소스 보기]** 해제 및 **[!UICONTROL 소스 관리]** 해제 | 소스에 대한 모든 액세스를 취소합니다. |
 
-해당 4개의 소스를 포함하여 Admin Console을 통해 부여된 사용 가능한 권한에 대한 자세한 내용은 [액세스 제어 개요](../access-control/home.md).
+Adobe 권한을 통해 부여된 사용 가능한 권한에 대한 자세한 내용은 [액세스 제어 개요](../access-control/home.md).
+
+### 소스에 대한 속성 기반 액세스 제어
+
+관리자는 Adobe Experience Platform의 속성 기반 액세스 제어를 사용하여 속성을 기반으로 특정 개체 및/또는 기능에 대한 액세스를 제어할 수 있습니다.
+
+속성 기반 액세스 제어를 사용하면 권한이 있는 필드에 매핑 구성을 적용할 수 있습니다. 또한 데이터 집합에 있는 모든 필드에 액세스할 수 없는 경우 데이터를 데이터 집합에 수집할 수 없습니다.
+
+속성 기반 액세스 제어에 대한 자세한 내용은 [속성 기반 액세스 제어 개요](../access-control/abac/overview.md).
 
 ## 약관 {#terms-and-conditions}
 
