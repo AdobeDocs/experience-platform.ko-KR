@@ -2,9 +2,9 @@
 description: Adobe Experience Platform Destination SDK에서 지원되는 인증 구성을 사용하여 사용자를 인증하고 데이터를 대상 종단점으로 활성화합니다.
 title: 인증 구성
 exl-id: 33eaab24-f867-4744-b424-4ba71727373c
-source-git-commit: 631c0ac02cb7f4f95500897ca224aa532393c109
+source-git-commit: 9b4c7da5aa02ae27608c2841b1d825445ac3015e
 workflow-type: tm+mt
-source-wordcount: '600'
+source-wordcount: '446'
 ht-degree: 0%
 
 ---
@@ -18,12 +18,12 @@ ht-degree: 0%
 Adobe Experience Platform Destination SDK은 몇 가지 인증 유형을 지원합니다.
 
 * [베어러 인증](#bearer)
-* [(베타) Amazon S3 인증](#s3)
-* [(베타) Azure Blob 저장소](#blob)
-* [(베타) Azure Data Lake 저장소](#adls)
-* [(베타) Google 클라우드 스토리지](#gcs)
-* [(베타) SSH 키가 있는 SFTP](#sftp-ssh)
-* [(베타) 암호가 있는 SFTP](#sftp-password)
+* [[!DNL Amazon S3] 인증](#s3)
+* [[!DNL Azure Blob] 스토리지](#blob)
+* [[!DNL Azure Data Lake Storage]](#adls)
+* [[!DNL Google Cloud Storage]](#gcs)
+* [SSH 키가 있는 SFTP](#sftp-ssh)
+* [암호가 있는 SFTP](#sftp-password)
 * [인증 코드가 있는 OAuth 2](#oauth2)
 * [암호 부여가 있는 AUth 2](#oauth2)
 * [클라이언트 자격 증명 부여가 있는 OAuth 2](#oauth2)
@@ -49,15 +49,11 @@ Experience Platform의 스트리밍 대상에 대해 베어러 인증이 지원�
 ]
 ```
 
-## (베타) [!DNL Amazon S3] 인증 {#s3}
+## [!DNL Amazon S3] 인증 {#s3}
 
 [!DNL Amazon S3] Experience Platform의 파일 기반 대상에 대해 인증이 지원됩니다.
 
->[!IMPORTANT]
->
->Adobe Experience Platform Destination SDK의 파일 기반 대상 지원은 현재 베타에 있습니다. 설명서 및 기능은 변경될 수 있습니다.
-
-대상에 대한 Amazon S3 인증을 설정하려면 다음을 구성합니다 `customerAuthenticationConfigurations` 의 매개 변수 `/destinations` 아래에 표시된 것처럼 종단점이 있습니다.
+설정하려면 [!DNL Amazon S3] 대상에 대한 인증, 구성 `customerAuthenticationConfigurations` 의 매개 변수 `/destinations` 아래에 표시된 것처럼 종단점이 있습니다.
 
 ```json
 "customerAuthenticationConfigurations":[
@@ -67,13 +63,9 @@ Experience Platform의 스트리밍 대상에 대해 베어러 인증이 지원�
 ]
 ```
 
-## (베타) [!DNL Azure Blob Storage] {#blob}
+## [!DNL Azure Blob Storage] {#blob}
 
 [!DNL Azure Blob Storage] Experience Platform의 파일 기반 대상에 대해 인증이 지원됩니다.
-
->[!IMPORTANT]
->
->Adobe Experience Platform Destination SDK의 파일 기반 대상 지원은 현재 베타에 있습니다. 설명서 및 기능은 변경될 수 있습니다.
 
 설정하려면 [!DNL Azure Blob] 대상에 대한 인증, 구성 `customerAuthenticationConfigurations` 의 매개 변수 `/destinations` 아래에 표시된 것처럼 종단점이 있습니다.
 
@@ -85,13 +77,9 @@ Experience Platform의 스트리밍 대상에 대해 베어러 인증이 지원�
 ]
 ```
 
-## (베타) [!DNL Azure Data Lake Storage] {#adls}
+## [!DNL Azure Data Lake Storage] {#adls}
 
 [!DNL Azure Data Lake Storage] Experience Platform의 파일 기반 대상에 대해 인증이 지원됩니다.
-
->[!IMPORTANT]
->
->Adobe Experience Platform Destination SDK의 파일 기반 대상 지원은 현재 베타에 있습니다. 설명서 및 기능은 변경될 수 있습니다.
 
 설정하려면 [!DNL Azure Data Lake Storage] 대상에 대한 (ADLS) 인증에서 `customerAuthenticationConfigurations` 의 매개 변수 `/destinations` 아래에 표시된 것처럼 종단점이 있습니다.
 
@@ -103,13 +91,9 @@ Experience Platform의 스트리밍 대상에 대해 베어러 인증이 지원�
 ]
 ```
 
-## (베타) [!DNL Google Cloud Storage] {#gcs}
+## [!DNL Google Cloud Storage] {#gcs}
 
 [!DNL Google Cloud Storage] Experience Platform의 파일 기반 대상에 대해 인증이 지원됩니다.
-
->[!IMPORTANT]
->
->Adobe Experience Platform Destination SDK의 파일 기반 대상 지원은 현재 베타에 있습니다. 설명서 및 기능은 변경될 수 있습니다.
 
 ```json
 "customerAuthenticationConfigurations":[
@@ -120,13 +104,9 @@ Experience Platform의 스트리밍 대상에 대해 베어러 인증이 지원�
 ```
 
 
-## (베타) [!DNL SFTP] 인증 [!DNL SSH] key {#sftp-ssh}
+## [!DNL SFTP] 인증 [!DNL SSH] key {#sftp-ssh}
 
 [!DNL SFTP] 인증 [!DNL SSH] Experience Platform에서 파일 기반 대상에 대해 키가 지원됩니다.
-
->[!IMPORTANT]
->
->Adobe Experience Platform Destination SDK의 파일 기반 대상 지원은 현재 베타에 있습니다. 설명서 및 기능은 변경될 수 있습니다.
 
 대상에 대해 SSH 키를 사용하여 SFTP 인증을 설정하려면 다음을 구성합니다 `customerAuthenticationConfigurations` 의 매개 변수 `/destinations` 아래에 표시된 것처럼 종단점이 있습니다.
 
@@ -138,13 +118,9 @@ Experience Platform의 스트리밍 대상에 대해 베어러 인증이 지원�
 ]
 ```
 
-## (베타) [!DNL SFTP] 암호로 인증 {#sftp-password}
+## [!DNL SFTP] 암호로 인증 {#sftp-password}
 
 [!DNL SFTP] Experience Platform의 파일 기반 대상에 대해 암호가 포함된 인증이 지원됩니다.
-
->[!IMPORTANT]
->
->Adobe Experience Platform Destination SDK의 파일 기반 대상 지원은 현재 베타에 있습니다. 설명서 및 기능은 변경될 수 있습니다.
 
 대상에 대한 암호를 사용하여 SFTP 인증을 설정하려면 다음을 구성합니다 `customerAuthenticationConfigurations` 의 매개 변수 `/destinations` 아래에 표시된 것처럼 종단점이 있습니다.
 
@@ -160,7 +136,7 @@ Experience Platform의 스트리밍 대상에 대해 베어러 인증이 지원�
 
 [!DNL OAuth 2] Experience Platform의 스트리밍 대상에 대해 인증이 지원됩니다.
 
-지원되는 다양한 OAuth 2 흐름과 사용자 지정 OAuth 2 지원을 설정하는 방법에 대해서는 다음 Destination SDK 설명서를 참조하십시오. [OAuth 2 인증](./oauth2-authentication.md).
+지원되는 다양한 변수를 설정하는 방법은 다음과 같습니다 [!DNL OAuth 2] 흐름 및 사용자 지정 [!DNL OAuth 2] 지원,에서 Destination SDK 설명서 읽기 [[!DNL OAuth 2] 인증](./oauth2-authentication.md).
 
 
 ## 를 사용해야 하는 경우 `/credentials` API 엔드포인트 {#when-to-use}

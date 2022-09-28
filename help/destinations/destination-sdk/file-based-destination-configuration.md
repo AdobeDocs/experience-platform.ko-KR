@@ -1,29 +1,27 @@
 ---
-description: 이 구성을 사용하면 대상 이름, 카테고리, 설명, 로고 등과 같은 기본 정보를 표시할 수 있습니다. 또한 이 구성의 설정은 Experience Platform 사용자가 대상을 인증하는 방법, Experience Platform 사용자 인터페이스에 표시되는 방법 및 대상으로 내보낼 수 있는 ID를 결정합니다.
-title: (베타) Destination SDK을 위한 파일 기반 대상 구성 옵션
+description: 이 구성을 사용하면 대상 이름, 카테고리, 설명 등과 같은 파일 기반 대상에 대한 필수 정보를 나타낼 수 있습니다. 또한 이 구성의 설정은 Experience Platform 사용자가 대상을 인증하는 방법, Experience Platform 사용자 인터페이스에 표시되는 방법 및 대상으로 내보낼 수 있는 ID를 결정합니다.
+title: Destination SDK을 위한 파일 기반 대상 구성 옵션
 exl-id: 6b0a0398-6392-470a-bb27-5b34b0062793
-source-git-commit: fe61b2ebe1a06e8909ef675cae088cb4e7d2b325
+source-git-commit: 1d6318e33be639237c2c8e6f1bf67e1702949c20
 workflow-type: tm+mt
-source-wordcount: '2389'
+source-wordcount: '2664'
 ht-degree: 5%
 
 ---
 
-# (베타) 파일 기반 대상 구성 {#destination-configuration}
+# 파일 기반 대상 구성 {#destination-configuration}
 
 ## 개요 {#overview}
 
->[!IMPORTANT]
->
->Adobe Experience Platform Destination SDK의 파일 기반 대상 지원은 현재 베타에 있습니다. 설명서 및 기능은 변경될 수 있습니다.
+이 구성을 사용하면 대상 이름, 카테고리, 설명 등과 같은 파일 기반 대상에 대한 필수 정보를 나타낼 수 있습니다. 또한 이 구성의 설정은 Experience Platform 사용자가 대상을 인증하는 방법, Experience Platform 사용자 인터페이스에 표시되는 방법 및 대상으로 내보낼 수 있는 ID를 결정합니다. 이 구성을 사용하여 내보낸 파일의 파일 유형, 파일 형식 또는 압축 설정과 관련된 옵션을 표시할 수도 있습니다.
 
-이 구성을 사용하면 대상 이름, 카테고리, 설명 등과 같은 파일 기반 대상에 대한 필수 정보를 나타낼 수 있습니다. 또한 이 구성의 설정은 Experience Platform 사용자가 대상을 인증하는 방법, Experience Platform 사용자 인터페이스에 표시되는 방법 및 대상으로 내보낼 수 있는 ID를 결정합니다.
-
-또한 이 구성에서는 대상이 작동하는 데 필요한 다른 구성(대상 서버 및 대상 메타데이터)도 이 구성에 연결합니다. 에서 두 구성을 참조할 수 있는 방법을 읽어 보십시오 [아래의 섹션](./destination-configuration.md#connecting-all-configurations).
+또한 이 구성에서는 대상이 작동하는 데 필요한 다른 구성(대상 서버 및 대상 메타데이터)도 이 구성에 연결합니다. 에서 두 구성을 참조할 수 있는 방법을 읽어 보십시오 [아래의 섹션](./file-based-destination-configuration.md#connecting-all-configurations).
 
 이 문서에 설명된 기능을 `/authoring/destinations` API 엔드포인트. 읽기 [대상 API 끝점 작업](./destination-configuration-api.md) 전체 작업 목록을 보려면 종단점에서 수행할 수 있습니다.
 
 ## Amazon S3 대상 구성 예 {#batch-example-configuration}
+
+다음은 를 통해 작성된 비공개 사용자 지정 Amazon S3 대상의 예입니다. `/destinations` 구성 끝점입니다.
 
 ```json
 {
@@ -368,9 +366,9 @@ SSH 키 인증 유형을 사용하여 SFTP를 구성할 때는 SFTP 사용자 �
 
 Experience Platform UI에서 대상에 연결할 때 대상에 고유한 사용자 지정 필드를 작성하도록 사용자에게 요청하려면 이 섹션을 사용합니다.
 
-아래 예에서는 `customerDataFields` 를 사용하려면 사용자가 대상의 이름을 입력하고 [!DNL Amazon S3] 버킷 이름 및 폴더 경로, 압축 유형, 파일 형식 및 기타 여러 파일 내보내기 옵션.
+아래 예에서는 `customerDataFields` 를 사용하려면 사용자가 대상의 이름을 입력하고 [!DNL Amazon S3] 버킷 이름 및 폴더 경로뿐만 아니라 압축 유형, 파일 형식 및 기타 여러 파일 형식 옵션도 있습니다.
 
-템플릿의 고객 데이터 필드에서 고객 입력에 액세스하여 사용할 수 있습니다. 매크로 사용 `{{customerData.name}}`. 예를 들어, 사용자에게 이름이 인 Amazon S3 버킷 필드를 입력하도록 요청하는 경우 `bucket`매크로를 사용하여 템플릿에 액세스할 수 있습니다 `{{customerData.bucket}}`. 에서 고객 데이터 필드가 사용되는 방법의 예를 봅니다 [대상 서버 구성](/help/destinations/destination-sdk/server-and-file-configuration.md#s3-example).
+템플릿의 고객 데이터 필드에서 고객 입력에 액세스하여 사용할 수 있습니다. 매크로 사용 `{{customerData.exampleName}}`. 예를 들어, 사용자에게 이름이 인 Amazon S3 버킷 필드를 입력하도록 요청하는 경우 `bucket`매크로를 사용하여 템플릿에 액세스할 수 있습니다 `{{customerData.bucket}}`. 에서 고객 데이터 필드가 사용되는 방법의 예를 봅니다 [대상 서버 구성](/help/destinations/destination-sdk/server-and-file-configuration.md#s3-example).
 
 ```json
  "customerDataFields":[
@@ -558,6 +556,10 @@ Experience Platform UI에서 대상에 연결할 때 대상에 고유한 사용�
       }
 ```
 
+>[!TIP]
+>
+>위의 예에 나열된 모든 파일 형식 구성은 [파일 형식 구성](/help/destinations/destination-sdk/server-and-file-configuration.md#file-configuration) 섹션을 참조하십시오.
+
 | 매개 변수 | 유형 | 설명 |
 |---------|----------|------|
 | `name` | 문자열 | 도입하는 사용자 정의 필드의 이름을 입력합니다. |
@@ -578,7 +580,7 @@ Experience Platform UI에서 대상에 연결할 때 대상에 고유한 사용�
 ```json
 "uiAttributes":{
       "documentationLink":"http://www.adobe.com/go/YOURDESTINATION-en",
-      "category":"S3",
+      "category":"cloudStorage",
       "iconUrl":"https://dc5tqsrhldvnl.cloudfront.net/2/90048/da276e30c730ce6cd666c8ca78360df21.png",
       "connectionType":"S3",
       "flowRunsSupported":true,
@@ -591,7 +593,7 @@ Experience Platform UI에서 대상에 연결할 때 대상에 고유한 사용�
 |---------|----------|------|
 | `documentationLink` | 문자열 | 에서 설명서 페이지를 참조합니다. [대상 카탈로그](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=en#catalog) 목적지에 대해 지정합니다. 사용 `http://www.adobe.com/go/destinations-YOURDESTINATION-en`, 위치 `YOURDESTINATION` 은 대상의 이름입니다. Moviestar라는 대상의 경우 `http://www.adobe.com/go/destinations-moviestar-en`. 이 링크는 Adobe이 대상을 라이브로 설정하고 설명서가 게시된 후에만 작동합니다. |
 | `category` | 문자열 | Adobe Experience Platform에서 대상에 지정된 카테고리를 나타냅니다. 자세한 내용은 [대상 카테고리](https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-types.html). 다음 값 중 하나를 사용합니다. `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`. |
-| `iconUrl` | 문자열 | 대상 카탈로그 카드에 표시할 아이콘을 호스팅한 URL입니다. |
+| `iconUrl` | 문자열 | 대상 카탈로그 카드에 표시할 아이콘을 호스팅한 URL입니다. 개인 사용자 지정 통합의 경우 필요하지 않습니다. 제품 구성의 경우, 생성 시 Adobe 팀과 아이콘을 공유해야 합니다 [검토할 대상 제출](/help/destinations/destination-sdk/submit-destination.md#logo). |
 | `connectionType` | 문자열 | 대상에 따라 연결 유형입니다. 지원되는 값: <ul><li>`Azure Blob`</li><li>`Azure Data Lake Storage`</li><li>`S3`</li><li>`SFTP`</li></ul> |
 | `flowRunsSupported` | 부울 | 대상 연결이 [흐름 실행 UI](../../dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard). 로 설정할 때 `true`: <ul><li>다음 **[!UICONTROL 마지막 데이터 흐름 실행 날짜]** 및 **[!UICONTROL 마지막 데이터 흐름 실행 상태]** 대상 찾아보기 페이지에 표시됩니다.</li><li>다음 **[!UICONTROL 데이터 흐름 실행]** 및 **[!UICONTROL 활성화 데이터]** 대상 보기 페이지에 탭이 표시됩니다.</li></ul> |
 | `monitoringSupported` | 부울 | 대상 연결이 [UI 모니터링](../ui/destinations-workspace.md#browse). 로 설정할 때 `true`, **[!UICONTROL 모니터링에서 보기]** 옵션이 대상 찾아보기 페이지에 표시됩니다. |
@@ -600,6 +602,10 @@ Experience Platform UI에서 대상에 연결할 때 대상에 고유한 사용�
 {style=&quot;table-layout:auto&quot;}
 
 ## 대상 게재 {#destination-delivery}
+
+대상 게재 섹션은 내보낸 데이터의 위치와 데이터가 도착하는 위치에서 사용되는 인증 규칙을 나타냅니다. 하나 이상을 지정해야 합니다 `destinationServerId`데이터가 전달되고 인증 규칙이 적용되는 위치입니다. 대부분의 경우 사용해야 하는 인증 규칙은 다음과 같습니다 `CUSTOMER_AUTHENTICATION`.
+
+다음 `deliveryMatchers` 섹션은 선택 사항이며, 여러 항목을 지정하는 경우 사용할 수 있습니다 `destinationServerId`s. 그렇다면, `deliveryMatchers` 섹션은 내보낸 데이터를 다양한 대상 서버 간에 분할하는 방법을 나타냅니다.
 
 ```json
  "destinationDelivery":[
@@ -621,7 +627,7 @@ Experience Platform UI에서 대상에 연결할 때 대상에 고유한 사용�
 | 매개 변수 | 유형 | 설명 |
 |---------|----------|------|
 | `authenticationRule` | 문자열 | 방법을 나타냅니다. [!DNL Platform] 고객이 대상에 연결합니다. 허용되는 값은 다음과 같습니다 `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>사용 `CUSTOMER_AUTHENTICATION` platform 고객이 다음 방법 중 하나를 통해 시스템에 로그인하는 경우: <ul><li>`"authType": "S3"`</li><li>`"authType":"AZURE_CONNECTION_STRING"`</li><li>`"authType":"AZURE_SERVICE_PRINCIPAL"`</li><li>`"authType":"SFTP_WITH_SSH_KEY"`</li><li>`"authType":"SFTP_WITH_PASSWORD"`</li></ul> </li><li> 사용 `PLATFORM_AUTHENTICATION` Adobe과 대상 및 대상 사이에 글로벌 인증 시스템이 있는 경우 [!DNL Platform] 고객은 대상에 연결하기 위해 인증 자격 증명을 제공할 필요가 없습니다. 이 경우 [자격 증명](./credentials-configuration-api.md) 구성. </li><li>사용 `NONE` 대상 플랫폼으로 데이터를 전송하는 데 인증이 필요하지 않은 경우 </li></ul> |
-| `destinationServerId` | 문자열 | 다음 `instanceId` 의 [대상 서버 구성](./destination-server-api.md) 이 대상에 사용됩니다. |
+| `destinationServerId` | 문자열 | 다음 `instanceId` 의 [대상 서버 구성](./server-and-file-configuration.md) 당신이 [생성됨](/help/destinations/destination-sdk/destination-server-api.md#create-file-based) 을 가리키도록 업데이트하는 것이 좋습니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -649,7 +655,15 @@ Experience Platform UI에서 대상에 연결할 때 대상에 고유한 사용�
 
 ## 매핑 단계의 스키마 구성 {#schema-configuration}
 
+Adobe Experience Platform Destination SDK은 파트너 정의 스키마를 지원합니다. 파트너 정의 스키마를 사용하면 프로필 속성 및 ID를 대상 파트너가 정의한 사용자 정의 스키마에 매핑할 수 있습니다 [스트리밍 대상](destination-configuration.md#schema-configuration) 워크플로우.
+
 에서 매개 변수 사용 `schemaConfig` 대상 활성화 워크플로우의 매핑 단계를 활성화하려면 아래 설명된 매개 변수를 사용하여 Experience Platform 사용자가 프로필 속성 및/또는 ID를 파일 기반 대상에 매핑할 수 있는지 확인할 수 있습니다.
+
+정적, 하드코딩된 스키마 필드를 생성하거나 Experience Platform이 매핑 워크플로우의 대상 스키마에서 필드를 동적으로 검색하고 채우기 위해 연결해야 하는 동적 스키마를 지정할 수 있습니다. 대상 스키마가 아래 스크린샷에 표시됩니다.
+
+![활성화 워크플로우의 매핑 단계에서 대상 스키마 필드를 강조 표시하는 스크린샷입니다.](/help/destinations/destination-sdk/assets/target-schema-fields.png)
+
+### 정적 하드 코딩된 스키마 필드 구성
 
 ```json
 "schemaConfig":{
@@ -681,16 +695,14 @@ Experience Platform UI에서 대상에 연결할 때 대상에 고유한 사용�
 
 ### 매핑 단계의 동적 스키마 구성 {#dynamic-schema-configuration}
 
-Adobe Experience Platform Destination SDK은 파트너 정의 스키마를 지원합니다. 파트너 정의 스키마를 사용하면 프로필 속성 및 ID를 대상 파트너가 정의한 사용자 정의 스키마에 매핑할 수 있습니다 [스트리밍 대상](destination-configuration.md#schema-configuration) 워크플로우.
-
-에서 매개 변수 사용  `dynamicSchemaConfig` 플랫폼 프로필 속성 및/또는 ID를 매핑할 수 있는 자체 스키마를 정의하기 위해.
+에서 매개 변수 사용  `dynamicSchemaConfig` 플랫폼 프로필 속성 및/또는 ID가 매핑될 수 있는 고유한 스키마를 동적으로 검색하려면 다음을 수행하십시오.
 
 ```json
 "schemaConfig":{
    "dynamicSchemaConfig":{
       "dynamicEnum": {
          "authenticationRule":"CUSTOMER_AUTHENTICATION",
-         "destinationServerId":"{{destinationServerId}}",
+         "destinationServerId":"2aa8a809-c4ae-4f66-bb02-12df2e0a2279",
          "value": "Schema Name",
          "responseFormat": "SCHEMA"
       }
@@ -706,7 +718,7 @@ Adobe Experience Platform Destination SDK은 파트너 정의 스키마를 지�
 | `profileRequired` | 부울 | 사용 `true` 위의 예제 구성에 표시된 대로 사용자가 Experience Platform의 프로필 속성을 대상의 사용자 지정 속성에 매핑할 수 있어야 합니다. |
 | `segmentRequired` | 부울 | 항상 사용 `segmentRequired:true`. |
 | `identityRequired` | 부울 | 사용 `true` 사용자가 Experience Platform의 ID 네임스페이스를 원하는 스키마에 매핑할 수 있어야 합니다. |
-| `destinationServerId` | 문자열 | 다음 `instanceId` 의 [대상 서버 구성](./destination-server-api.md) 이 대상에 사용됩니다. |
+| `destinationServerId` | 문자열 | 다음 `instanceId` 의 [대상 서버 구성](./destination-server-api.md) 동적 스키마용으로 만든 구성 요소입니다. 이 대상 서버에는 대상 필드를 채우는 데 사용되는 동적 스키마를 검색하기 위해 Experience Platform이 호출하는 HTTP 엔드포인트가 포함되어 있습니다. |
 | `authenticationRule` | 문자열 | 방법을 나타냅니다. [!DNL Platform] 고객이 대상에 연결합니다. 허용되는 값은 다음과 같습니다 `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>사용 `CUSTOMER_AUTHENTICATION` platform 고객이 다음 방법 중 하나를 통해 시스템에 로그인하는 경우: <ul><li>`"authType": "S3"`</li><li>`"authType":"AZURE_CONNECTION_STRING"`</li><li>`"authType":"AZURE_SERVICE_PRINCIPAL"`</li><li>`"authType":"SFTP_WITH_SSH_KEY"`</li><li>`"authType":"SFTP_WITH_PASSWORD"`</li></ul> </li><li> 사용 `PLATFORM_AUTHENTICATION` Adobe과 대상 및 대상 사이에 글로벌 인증 시스템이 있는 경우 [!DNL Platform] 고객은 대상에 연결하기 위해 인증 자격 증명을 제공할 필요가 없습니다. 이 경우 [자격 증명](./credentials-configuration-api.md) 구성. </li><li>사용 `NONE` 대상 플랫폼으로 데이터를 전송하는 데 인증이 필요하지 않은 경우 </li></ul> |
 | `value` | 문자열 | 매핑 단계에서 Experience Platform 사용자 인터페이스에 표시할 스키마의 이름입니다. |
 | `responseFormat` | 문자열 | 항상 로 설정 `SCHEMA` 사용자 지정 스키마를 정의할 때. |
@@ -720,7 +732,7 @@ Adobe Experience Platform Destination SDK은 파트너 정의 스키마를 지�
 
 ```json
 "identityNamespaces": {
-        "adobe_id": {
+        "crm_id": {
             "acceptsAttributes": true,
             "acceptsCustomNamespaces": true
         },
@@ -736,9 +748,9 @@ Adobe Experience Platform Destination SDK은 파트너 정의 스키마를 지�
 ID 네임스페이스에는 1-1의 서신이 필요하지 않습니다 [!DNL Platform] 및 대상을 선택합니다.
 예를 들어 고객이 [!DNL Platform] [!DNL IDFA] 네임스페이스에 [!DNL IDFA] 대상의 네임스페이스이거나, 동일한 네임스페이스를 매핑할 수 있습니다 [!DNL Platform] [!DNL IDFA] 네임스페이스 [!DNL Customer ID] 네임스페이스가 대상에 있습니다.
 
-## 배치 구성 {#batch-configuration}
+## 배치 구성 - 파일 이름 지정 및 내보내기 예약 {#batch-configuration}
 
-이 섹션은 Adobe Experience Platform 사용자 인터페이스에서 대상에 사용해야 하는 위의 구성에서 파일 내보내기 설정을 참조합니다.
+이 섹션에서는 Adobe Experience Platform 사용자 인터페이스에 대상에 대해 표시될 파일 이름 지정 및 내보내기 예약 설정을 참조합니다. 여기서 설정한 값은 [세그먼트 내보내기 예약](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) 파일 기반 대상 활성화 워크플로우의 단계입니다.
 
 ```json
 "batchConfig":{
@@ -796,7 +808,10 @@ ID 네임스페이스에는 1-1의 서신이 필요하지 않습니다 [!DNL Pla
 
 파일 이름 구성 매크로를 사용하여 내보낸 파일 이름에 포함해야 하는 항목을 정의합니다. 아래 표의 매크로에서는 [파일 이름 구성](../ui/activate-batch-profile-destinations.md#file-names) 화면.
 
-가장 좋은 방법으로서, 항상 를 포함해야 합니다 `SEGMENT_ID` 내보낸 파일 이름에 매크로가 있습니다. 세그먼트 ID는 고유하므로 파일 이름도 고유하게 구별할 수 있는 가장 좋은 방법입니다.
+
+>[!TIP]
+> 
+>가장 좋은 방법으로서, 항상 를 포함해야 합니다 `SEGMENT_ID` 내보낸 파일 이름에 매크로가 있습니다. 세그먼트 ID는 고유하므로 파일 이름도 고유하게 구별할 수 있는 가장 좋은 방법입니다.
 
 | 매크로 | UI 레이블 | 설명 | 예 |
 |---|---|---|---|
@@ -849,7 +864,7 @@ ID 네임스페이스에는 1-1의 서신이 필요하지 않습니다 [!DNL Pla
 
 ## 이 구성이 대상에 필요한 모든 정보를 연결하는 방법 {#connecting-all-configurations}
 
-일부 대상 설정은 [대상 서버](./server-and-file-configuration.md) 또는 [대상 메타데이터 구성](./audience-metadata-management.md). 여기에 설명된 대상 구성은 다음과 같이 다른 두 구성을 참조하여 이러한 모든 설정을 연결합니다.
+일부 대상 설정은 [대상 서버](./server-and-file-configuration.md) 또는 [대상 메타데이터 구성](./audience-metadata-management.md) 엔드포인트. 여기에 설명된 대상 구성은 다음과 같이 다른 두 구성을 참조하여 이러한 모든 설정을 연결합니다.
 
-* 를 사용하십시오 `destinationServerId` 대상 서버 및 대상에 대해 설정된 템플릿 구성을 참조하려면 다음을 수행하십시오.
+* 를 사용하십시오 `destinationServerId` 대상에 대해 설정된 대상 서버 및 파일 템플릿 구성을 참조하려면 다음을 수행하십시오.
 * 를 사용하십시오 `audienceMetadataId` 대상에 대해 설정된 대상 메타데이터 구성을 참조하려면 다음을 수행하십시오.

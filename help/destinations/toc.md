@@ -4,9 +4,9 @@ user-guide-title: 대상 안내서
 user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화합니다.
 description: 이 문서에서는 Adobe Experience Platform 대상의 목차 목록을 설명합니다
 feature: Destinations
-source-git-commit: 9336545ce77406ca8b1a04d9b9c0ce7752aa9ce5
+source-git-commit: 3a46eee98797da7b113f45624682377cc7ad05a3
 workflow-type: tm+mt
-source-wordcount: '950'
+source-wordcount: '945'
 ht-degree: 7%
 
 ---
@@ -173,9 +173,9 @@ ht-degree: 7%
    * Destination SDK 기능 {#functionality}
       * [구성 옵션](./destination-sdk/configuration-options.md)
       * [스트리밍 대상 구성](./destination-sdk/destination-configuration.md)
-      * [(베타) 파일 기반 대상 구성](./destination-sdk/file-based-destination-configuration.md)
+      * [파일 기반 대상 구성](./destination-sdk/file-based-destination-configuration.md)
       * [스트리밍 대상 서버 및 템플릿 사양](./destination-sdk/server-and-template-configuration.md)
-      * [(베타) 파일 기반 대상 서버 및 파일 사양](./destination-sdk/server-and-file-configuration.md)
+      * [파일 기반 대상 서버 및 파일 사양](./destination-sdk/server-and-file-configuration.md)
       * [메시지 포맷](./destination-sdk/message-format.md)
       * [대상 메타데이터 관리](./destination-sdk/audience-metadata-management.md)
       * 인증 {#authentication}
@@ -205,15 +205,16 @@ ht-degree: 7%
             * [템플릿화된 고객 필드의 유효성 검사](./destination-sdk/file-based-render-template-api.md)
    * 안내서 {#guides}
       * [Destination SDK을 사용하여 스트리밍 대상 구성](./destination-sdk/configure-destination-instructions.md)
-      * [(베타) Destination SDK을 사용하여 파일 기반 대상 구성](./destination-sdk/configure-file-based-destination-instructions.md)
+      * [Destination SDK을 사용하여 파일 기반 대상 구성](./destination-sdk/configure-file-based-destination-instructions.md)
       * [Destination SDK에서 작성된 대상을 검토하도록 제출](./destination-sdk/submit-destination.md)
       * 파일 기반 대상 구성 {#configure-file-based-destinations}
-         * [(베타) 사전 정의된 파일 형식 옵션 및 사용자 지정 파일 이름 구성으로 Amazon S3 대상을 구성합니다](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-predefined-file-formatting.md)
-         * [(베타) 사용자 지정 파일 이름 및 서식 옵션을 사용하여 Amazon S3 대상을 구성합니다](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-custom-file-formatting.md)
-         * [(베타) 사용자 지정 파일 형식 옵션 및 사용자 지정 파일 이름 구성으로 Azure Blob 저장소 대상을 구성합니다](../destinations/destination-sdk/guides/batch/configure-blob-destination-with-custom-file-formatting.md)
-         * [(베타) 사용자 지정 파일 형식 옵션 및 사용자 지정 파일 이름 구성으로 Azure Data Lake 저장소 대상을 구성합니다](../destinations/destination-sdk/guides/batch/configure-adls-destination-with-custom-file-formatting.md)
-         * [(베타) 사용자 지정 파일 형식 옵션 및 사용자 지정 파일 이름 구성으로 DLZ(데이터 랜딩 영역) 대상을 구성합니다](../destinations/destination-sdk/guides/batch/configure-dlz-destination-with-custom-file-formatting.md)
-         * [(베타) 사전 정의된 파일 형식 옵션 및 사용자 지정 파일 이름 구성으로 SFTP 대상을 구성합니다](../destinations/destination-sdk/guides/batch/configure-sftp-destination-with-predefined-file-formatting.md)
+         * [파일 형식 옵션 구성](/help/destinations/destination-sdk/guides/batch/configure-file-formatting-options.md)
+         * [사전 정의된 파일 형식 옵션 및 사용자 지정 파일 이름 구성으로 Amazon S3 대상을 구성합니다](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-predefined-file-formatting.md)
+         * [사용자 지정 파일 이름 및 서식 옵션을 사용하여 Amazon S3 대상 구성](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-custom-file-formatting.md)
+         * [사용자 지정 파일 형식 옵션 및 사용자 지정 파일 이름 구성으로 Azure Blob 저장소 대상을 구성합니다](../destinations/destination-sdk/guides/batch/configure-blob-destination-with-custom-file-formatting.md)
+         * [사용자 지정 파일 형식 옵션 및 사용자 지정 파일 이름 구성으로 Azure Data Lake 저장소 대상을 구성합니다](../destinations/destination-sdk/guides/batch/configure-adls-destination-with-custom-file-formatting.md)
+         * [사용자 지정 파일 형식 옵션 및 사용자 지정 파일 이름 구성으로 DLZ(데이터 랜딩 영역) 대상 구성](../destinations/destination-sdk/guides/batch/configure-dlz-destination-with-custom-file-formatting.md)
+         * [사전 정의된 파일 형식 옵션 및 사용자 지정 파일 이름 구성으로 SFTP 대상 구성](../destinations/destination-sdk/guides/batch/configure-sftp-destination-with-predefined-file-formatting.md)
    * 참조 {#reference}
       * [스트리밍 대상에 대한 속도 제한 및 다시 시도 정책](./destination-sdk/rate-limiting-retry-policy.md)
       * [지원되는 변형 함수](./destination-sdk/supported-functions.md)

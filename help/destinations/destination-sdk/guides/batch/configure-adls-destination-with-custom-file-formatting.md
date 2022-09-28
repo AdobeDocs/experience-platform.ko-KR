@@ -1,14 +1,15 @@
 ---
 description: Destination SDK을 사용하여 사용자 지정 파일 형식 옵션 및 사용자 지정 파일 이름 구성으로 Azure Data Lake 저장소 대상을 구성하는 방법을 알아봅니다.
-title: (베타) 사용자 지정 파일 형식 옵션 및 사용자 지정 파일 이름 구성으로 Azure Data Lake 저장소 대상을 구성합니다.
-source-git-commit: 1e6515bf4fe34258194f56d341e477a02a1c31be
+title: 사용자 지정 파일 형식 옵션 및 사용자 지정 파일 이름 구성으로 Azure Data Lake 저장소 대상을 구성합니다.
+exl-id: cb67b126-cd30-4fb7-b67e-c15dc7daef73
+source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
 workflow-type: tm+mt
-source-wordcount: '769'
+source-wordcount: '767'
 ht-degree: 0%
 
 ---
 
-# (베타) 구성 [!DNL Azure Data Lake Storage] 사용자 지정 파일 형식 옵션 및 사용자 지정 파일 이름 구성이 있는 대상
+# 구성 [!DNL Azure Data Lake Storage] 사용자 지정 파일 형식 옵션 및 사용자 지정 파일 이름 구성이 있는 대상
 
 ## 개요 {#overview}
 

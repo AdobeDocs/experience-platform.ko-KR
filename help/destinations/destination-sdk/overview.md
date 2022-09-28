@@ -1,10 +1,10 @@
 ---
-description: Adobe Experience Platform Destination SDK은 선택한 데이터 및 인증 형식에 따라 Experience Platform이 대상 및 프로필 데이터를 종단점에 제공할 대상 통합 패턴을 구성할 수 있도록 해주는 구성 API 세트입니다. 구성은 Experience Platform에 저장되며, 추가 업데이트를 위해 API를 통해 검색할 수 있습니다.
+description: Adobe Experience Platform Destination SDK은 선택한 데이터 및 인증 형식에 따라 Experience Platform이 대상 및 프로필 데이터를 엔드포인트 또는 저장소 위치에 전달하도록 대상 통합 패턴을 구성할 수 있도록 해주는 구성 API 세트입니다. 구성은 Experience Platform에 저장되며, 추가 업데이트를 위해 API를 통해 검색할 수 있습니다.
 title: Adobe Experience Platform Destination SDK
 exl-id: 7aca9f40-98c8-47c2-ba88-4308fc2b1798
-source-git-commit: af8718f7d5351993c5e4aa00822ed7d2b290b9f0
+source-git-commit: 95a7029864de84819cacc57c02a3e6f30def0b25
 workflow-type: tm+mt
-source-wordcount: '708'
+source-wordcount: '791'
 ht-degree: 3%
 
 ---
@@ -13,9 +13,9 @@ ht-degree: 3%
 
 ## 개요 {#destinations-sdk}
 
-Adobe Experience Platform Destination SDK은 선택한 데이터 및 인증 형식에 따라 Experience Platform이 대상 및 프로필 데이터를 종단점에 제공할 대상 통합 패턴을 구성할 수 있도록 해주는 구성 API 세트입니다. 구성은 Experience Platform에 저장되며, 추가 업데이트를 위해 API를 통해 검색할 수 있습니다.
+Adobe Experience Platform Destination SDK은 선택한 데이터 및 인증 형식을 기반으로 하여 Experience Platform이 대상 및 프로필 데이터를 엔드포인트 또는 저장소 위치에 전달하도록 대상 통합 패턴을 구성할 수 있도록 해주는 구성 API 세트입니다. 구성은 Experience Platform에 저장되며, 추가 업데이트를 위해 API를 통해 검색할 수 있습니다.
 
-Destination SDK 설명서에서는 Adobe Experience Platform Destination SDK을 사용하여 Adobe Experience Platform와의 제품 화된 대상 통합을 구성, 테스트 및 출시하고 대상을 계속 증가하는 대상 카탈로그에 포함하도록 하는 지침을 제공합니다.
+Destination SDK 설명서에서는 Adobe Experience Platform Destination SDK을 사용하여 Adobe Experience Platform와의 제품 화된 대상 통합을 구성, 테스트 및 출시하고 대상을 계속 증가하는 대상 카탈로그에 포함하도록 하는 지침을 제공합니다. Destination SDK을 사용하여 고유한 사용자 지정 개인 대상을 만들어 필요에 맞는 데이터를 내보낼 수도 있습니다.
 
 ![대상 카탈로그 개요](./assets/destinations-catalog-overview.png)
 
@@ -26,7 +26,7 @@ Destination SDK 파트너인 은 제품 대상을 [Experience Platform 카탈로
 2. 고객 설정 및 인식을 간소화하기 위해 Experience Platform 대상 카탈로그에 브랜드 대상 카드를 도입합니다.
 3. Adobe Experience Platform 및 Real-time Customer Data Platform과 통합된 생산형 대상 제품으로 부각됩니다.
 
-Experience Platform 고객은 활성화 요구 사항에 가장 적합한 고유한 사용자 지정 대상을 작성할 수 있습니다.
+Experience Platform 고객은 활성화 요구 사항에 가장 적합한 고유한 사용자 지정 대상을 작성할 수도 있습니다.
 
 ![Destination SDK 시각적 다이어그램](./assets/destination-sdk-visual.png)
 
@@ -51,6 +51,10 @@ Destination SDK을 통해 Adobe Experience Platform은 REST API 종단점이 있
 * 구성 가능한 인증
 * 대상 구성을 테스트 및 반복할 수 있는 테스트 및 유효성 검사 API 세트
 
+Destination SDK을 통해 원하는 저장소 위치로 파일을 주기적으로 내보내도록 통합을 설정할 수도 있습니다. Experience Platform과 실시간 통합은 다음과 같은 기능을 지원합니다.
+* 지원되는 여러 형식(CSV, Parquet, JSON)으로 파일 내보내기
+* 구성 가능한 파일 형식 옵션. 이 옵션을 사용하면 다운스트림 요구 사항을 충족하도록 내보낸 파일의 형식을 구성할 수 있습니다.
+
 의 대상 측에 있는 기술 요구 사항에 대해 읽어보십시오. [통합 사전 요구 사항](./integration-prerequisites.md) 문서.
 
 ## Destination SDK 액세스 권한 얻기 {#get-access}
@@ -72,8 +76,8 @@ Experience Platform에서 대상을 구성하는 프로세스는 다음과 같�
 
 1. ISV 또는 SI인 경우 위의 섹션에서 액세스 정보를 참조하십시오. [Adobe Experience Platform 활성화](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html) 고객은 이 단계를 건너뛸 수 있습니다.
 2. [Experience Platform 샌드박스 제공 요청](https://adobeexchangeec.zendesk.com/hc/en-us/articles/360037457812-Adobe-Experience-Platform-Sandbox-Accounts-Access-Adding-Users-and-Support) 대상 작성 권한을 사용하도록 설정합니다.
-3. 통합을 구축합니다. 제품 설명서의 지침에 따라 을 구성합니다 [스트리밍 대상](./configure-destination-instructions.md) 또는 [파일 기반 대상(베타)](./configure-file-based-destination-instructions.md).
-4. 통합을 테스트합니다. 제품 설명서의 지침에 따라 을 테스트합니다 [스트리밍 대상](./test-destination.md) 또는 [파일 기반 대상(베타)](./file-based-destination-testing-overview.md).
+3. 통합을 구축합니다. 제품 설명서의 지침에 따라 을 구성합니다 [스트리밍 대상](./configure-destination-instructions.md) 또는 [파일 기반 대상](./configure-file-based-destination-instructions.md).
+4. 통합을 테스트합니다. 제품 설명서의 지침에 따라 을 테스트합니다 [스트리밍 대상](./test-destination.md) 또는 [파일 기반 대상](./file-based-destination-testing-overview.md).
 5. ISV 또는 SI에서 [제품 통합](./overview.md#productized-custom-integrations), [통합 제출](./submit-destination.md) Adobe 검토의 경우(표준 응답 시간은 5영업일).
 6. ISV 또는 SI에서 제품 통합을 만드는 경우 [셀프 서비스 설명서 프로세스](./docs-framework/documentation-instructions.md) 대상을 위한 Experience League에 대한 제품 설명서 페이지를 만들려면
 7. 프로덕션 통합의 경우, Adobe이 승인하면 통합이 [Experience Platform 카탈로그](/help/destinations/catalog/overview.md).

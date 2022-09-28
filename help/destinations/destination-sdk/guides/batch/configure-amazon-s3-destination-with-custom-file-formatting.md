@@ -1,14 +1,15 @@
 ---
 description: Destination SDK을 사용하여 사용자 지정 파일 이름 및 서식 옵션을 사용하여 Amazon S3 대상을 구성하는 방법을 알아봅니다.
-title: (베타) 사용자 지정 파일 이름 및 서식 옵션을 사용하여 Amazon S3 대상을 구성합니다.
-source-git-commit: 1e6515bf4fe34258194f56d341e477a02a1c31be
+title: 사용자 지정 파일 이름 및 서식 옵션을 사용하여 Amazon S3 대상을 구성합니다.
+exl-id: eed73572-5050-44fa-ba16-90729c65495e
+source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
 workflow-type: tm+mt
-source-wordcount: '760'
+source-wordcount: '758'
 ht-degree: 0%
 
 ---
 
-# (베타) 사용자 지정 파일 이름 및 서식 옵션을 사용하여 Amazon S3 대상을 구성합니다
+# 사용자 지정 파일 이름 및 서식 옵션을 사용하여 Amazon S3 대상 구성
 
 ## 개요 {#overview}
 

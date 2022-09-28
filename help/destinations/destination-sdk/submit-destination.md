@@ -2,7 +2,7 @@
 description: 이 페이지에서는 Destination SDK을 사용하여 작성된 제품 대상 검토를 위해 제출하는 모든 정보를 제공합니다.
 title: Destination SDK에서 작성된 제품 대상 검토를 위해 제출
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: 50f205a5ddd9ec264d7390911fef45dc595ca6a1
+source-git-commit: e68ae7d1cb87d078d9fce5a5df501cc6ce944403
 workflow-type: tm+mt
 source-wordcount: '683'
 ht-degree: 0%
@@ -225,7 +225,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 
 ISV(Independent Software Vendor) 또는 SI(System Integrator)가 [제품 통합](./overview.md#productized-custom-integrations)를 사용하려면 [셀프 서비스 설명서 프로세스](./docs-framework/documentation-instructions.md) 를 클릭하여 대상에 대한 제품 설명서 페이지를 만듭니다. 제출 프로세스의 일부로 대상 설명서에 대한 PR(끌어오기 요청)을 제공합니다.
 
-## 대상의 로고
+## 대상의 로고 {#logo}
 
 대상 카탈로그에는 각 대상 카드에 대한 로고가 포함되어 있습니다. 제출 이메일에 대상에 대한 로고가 있는 이미지를 포함합니다.
 

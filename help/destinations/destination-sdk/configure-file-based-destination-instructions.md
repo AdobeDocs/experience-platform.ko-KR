@@ -1,15 +1,15 @@
 ---
 description: 이 페이지에서는 Destination SDK을 사용하여 파일 기반 대상을 구성하는 단계를 나열하고 설명합니다.
-title: (베타) Destination SDK을 사용하여 파일 기반 대상 구성
+title: Destination SDK을 사용하여 파일 기반 대상 구성
 exl-id: 84d73452-88e4-4e0f-8fc7-d0d8e10f9ff5
-source-git-commit: a43bb18182ac6e591e011b585719da955ee681b7
+source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
 workflow-type: tm+mt
-source-wordcount: '544'
+source-wordcount: '542'
 ht-degree: 0%
 
 ---
 
-# (베타) Destination SDK을 사용하여 파일 기반 대상 구성
+# Destination SDK을 사용하여 파일 기반 대상 구성
 
 ## 개요 {#overview}
 

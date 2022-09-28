@@ -1,14 +1,15 @@
 ---
 description: Destination SDK을 사용하여 사용자 지정 파일 형식 옵션 및 사용자 지정 파일 이름 구성으로 DLZ(데이터 랜딩 영역) 대상을 구성하는 방법을 알아봅니다.
-title: (베타) 사용자 지정 파일 형식 옵션 및 사용자 지정 파일 이름 구성으로 DLZ(데이터 랜딩 영역) 대상을 구성합니다.
-source-git-commit: fd3114a4578637dcf99232245f8d2cec64de14b5
+title: 사용자 지정 파일 형식 옵션 및 사용자 지정 파일 이름 구성으로 DLZ(데이터 랜딩 영역) 대상을 구성합니다.
+exl-id: 3a5c1188-c2b5-4e81-ae41-9fff797f08a6
+source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
 workflow-type: tm+mt
-source-wordcount: '765'
+source-wordcount: '763'
 ht-degree: 0%
 
 ---
 
-# (베타) 구성 [!DNL Data Landing Zone (DLZ)] 사용자 지정 파일 형식 옵션 및 사용자 지정 파일 이름 구성이 있는 대상
+# 구성 [!DNL Data Landing Zone (DLZ)] 사용자 지정 파일 형식 옵션 및 사용자 지정 파일 이름 구성이 있는 대상
 
 ## 개요 {#overview}
 

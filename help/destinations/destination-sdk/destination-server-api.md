@@ -2,9 +2,9 @@
 description: 이 페이지에서는 '/authoring/destination-server' API 종단점을 사용하여 수행할 수 있는 모든 API 작업을 나열하고 설명합니다. 대상에 대한 서버 및 템플릿 사양은 일반 끝점 '/authoring/destination-servers'를 통해 Adobe Experience Platform Destination SDK에서 구성할 수 있습니다.
 title: 대상 서버 끝점 API 작업
 exl-id: a144b0fb-d34f-42d1-912b-8576296e59d2
-source-git-commit: a43bb18182ac6e591e011b585719da955ee681b7
+source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
 workflow-type: tm+mt
-source-wordcount: '1382'
+source-wordcount: '1361'
 ht-degree: 4%
 
 ---
@@ -81,10 +81,6 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 성공적인 응답은 새로 만든 대상 서버 구성에 대한 세부 정보와 함께 HTTP 상태 200을 반환합니다.
 
 ## 파일 기반 대상 서버에 대한 구성 만들기 {#create-file-based}
-
->[!IMPORTANT]
->
->Adobe Experience Platform Destination SDK의 파일 기반 대상 지원은 현재 베타에 있습니다. 설명서 및 기능은 변경될 수 있습니다.
 
 ### SFTP 대상 서버 예제 구성 {#sftp-server-sample}
 
