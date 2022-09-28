@@ -5,9 +5,9 @@ title: 쿼리 서비스의 SQL 구문
 topic-legacy: syntax
 description: 이 문서에서는 Adobe Experience Platform 쿼리 서비스에서 지원하는 SQL 구문을 보여줍니다.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 33c45c53e2ff591e7b94be1b4b17c25d2fe9d497
+source-git-commit: 5ec37ee797ec297b2e5c275dc0e6091e4ee8ecae
 workflow-type: tm+mt
-source-wordcount: '3033'
+source-wordcount: '3160'
 ht-degree: 2%
 
 ---
@@ -488,6 +488,30 @@ SET property_key = property_value
 ## PostgreSQL 명령
 
 아래 하위 섹션에서는 Query Service에서 지원하는 PostgreSQL 명령을 다룹니다.
+
+### 테이블 분석
+
+다음 `ANALYZE TABLE` 명령은 가속 저장소의 테이블에 대한 통계를 계산합니다. 통계는 가속화된 저장소의 지정된 테이블에 대해 실행된 CTAS 또는 ITAS 쿼리에서 계산됩니다.
+
+**예**
+
+```sql
+ANALYZE TABLE <original_table_name>
+```
+
+다음은 를 사용한 후에 사용할 수 있는 통계 계산 목록입니다 `ANALYZE TABLE` 명령:-
+
+| 계산된 값 | 설명 |
+|---|---|
+| `field` | 테이블에 있는 열의 이름입니다. |
+| `data-type` | 각 열에 대해 허용되는 데이터 유형입니다. |
+| `count` | 이 필드에 대해 null이 아닌 값을 포함하는 행 수입니다. |
+| `distinct-count` | 이 필드에 대한 고유한 또는 개별 값의 수입니다. |
+| `missing` | 이 필드에 대해 null 값이 있는 행 수입니다. |
+| `max` | 분석된 테이블의 최대값입니다. |
+| `min` | 분석된 테이블의 최소값입니다. |
+| `mean` | 분석된 테이블의 평균 값입니다. |
+| `stdev` | 분석된 테이블의 표준 편차. |
 
 ### 시작
 
