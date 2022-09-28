@@ -2,18 +2,14 @@
 title: 사용자 정의 대시보드
 description: 주요 지표를 시각화하기 위해 맞춤형 위젯을 만들고, 추가하고, 편집할 수 있는 사용자 지정 대시보드를 만들고 관리하는 방법을 알아봅니다.
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: bb94f7438efe1e24056d6689ffc10b928fc633c2
+source-git-commit: 2c96bfd2c1b541d30a72fcf2bac414ee06607456
 workflow-type: tm+mt
-source-wordcount: '881'
+source-wordcount: '865'
 ht-degree: 0%
 
 ---
 
-# 사용자 정의 대시보드(베타)
-
->[!IMPORTANT]
->
->사용자 정의 대시보드 기능은 베타에 있습니다. 해당 기능과 설명서는 변경될 수 있습니다.
+# 사용자 정의 대시보드
 
 Adobe Experience Platform 대시보드는 사용자 정의 대시보드 기능을 통해 통찰력을 제공하고 시각화를 사용자 지정하는 데 도움이 됩니다. 이 기능을 사용하면 맞춤형 위젯을 만들고, 추가하고, 편집하여 조직과 관련된 주요 지표를 시각화할 수 있는 사용자 지정 대시보드를 만들고 관리할 수 있습니다.
 

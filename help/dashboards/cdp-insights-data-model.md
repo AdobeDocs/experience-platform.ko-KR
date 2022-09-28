@@ -1,20 +1,17 @@
 ---
 title: CDP(고객 데이터 플랫폼) 통찰력 데이터 모델
 description: CDP 통찰력 데이터 모델의 SQL 쿼리를 사용하여 마케팅 및 KPI 사용 사례를 위해 고유한 CDP 보고서를 사용자 지정하는 방법을 알아봅니다.
-source-git-commit: 62e282138de8cf2d74b4a62f4ced39e3fb78001a
+exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
+source-git-commit: 2c96bfd2c1b541d30a72fcf2bac414ee06607456
 workflow-type: tm+mt
-source-wordcount: '1084'
+source-wordcount: '1066'
 ht-degree: 0%
 
 ---
 
-# (베타) CDP(고객 데이터 플랫폼) 통찰력 데이터 모델
+# CDP(고객 데이터 플랫폼) 통찰력 데이터 모델
 
->[!IMPORTANT]
->
->CDP 통찰력 데이터 모델 기능은 베타에 있습니다. 해당 기능과 설명서는 변경될 수 있습니다.
-
-CDP(Customer Data Platform) 인사이트 데이터 모델 기능은 다양한 프로필, 대상 및 세그멘테이션 위젯에 대한 통찰력을 제공하는 데이터 모델 및 SQL을 표시합니다. 이러한 SQL 쿼리 템플릿을 사용자 지정하여 마케팅 및 KPI(주요 성과 지표) 사용 사례를 위한 CDP 보고서를 만들 수 있습니다. 그런 다음 이러한 통찰력을 사용한 정의된 대시보드의 사용자 지정 위젯으로 사용할 수 있습니다.
+CDP(Customer Data Platform) 인사이트 데이터 모델 기능은 다양한 프로필, 대상 및 세그멘테이션 위젯에 대한 통찰력을 제공하는 데이터 모델 및 SQL을 표시합니다. 이러한 SQL 쿼리 템플릿을 사용자 지정하여 마케팅 및 KPI(주요 성과 지표) 사용 사례를 위한 CDP 보고서를 만들 수 있습니다. 그런 다음 이러한 통찰력을 사용자 정의 대시보드에 대한 사용자 지정 위젯으로 사용할 수 있습니다.
 
 ## 전제 조건
 

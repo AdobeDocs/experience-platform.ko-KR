@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform 릴리스 노트 - 2022년 9월
 description: Adobe Experience Platform에 대한 2022년 9월 릴리스 노트입니다.
-source-git-commit: 5f79b10306f74db75b25654ca51969ea69e38299
+source-git-commit: 65743c1741210a87b1cc64406412dd7e58218321
 workflow-type: tm+mt
-source-wordcount: '2539'
+source-wordcount: '2979'
 ht-degree: 5%
 
 ---
@@ -24,6 +24,7 @@ Adobe Experience Platform의 기존 기능 업데이트:
 - [감사 로그](#audit-logs)
 - [[!DNL Dashboards]](#dashboards)
 - [데이터 수집](#data-collection)
+- [대상](#destinations)
 - [XDM(경험 데이터 모델)](#xdm)
 - [ID 서비스](#identity-service)
 - [쿼리 서비스](#query-service)
@@ -52,9 +53,9 @@ Adobe Experience Platform은 소비자 경험을 오케스트레이션하기 위
 
 Adobe Experience Platform의 데이터 위생 기능을 사용하면 자동화된 데이터 세트 만료를 예약하고 id로 소비자 데이터를 프로그래밍 방식으로 삭제하여 데이터를 정리할 수 있습니다.
 
->[!NOTE]
+>[!IMPORTANT]
 >
->소비자 삭제 기능은 Adobe Healthcare Shield 또는 Privacy Shield를 구입한 조직에서만 사용할 수 있습니다.
+>데이터 위생 기능은 Adobe Healthcare Shield 또는 Privacy Shield를 구입한 조직에서만 사용할 수 있습니다.
 
 데이터 위생을 시작하려면 다음 설명서를 참조하십시오.
 
@@ -64,7 +65,7 @@ Adobe Experience Platform의 데이터 위생 기능을 사용하면 자동화�
 
 ## [!UICONTROL 개인 정보 콘솔] {#privacy-console}
 
-다음 [!UICONTROL 개인 정보 콘솔] Experience Platform UI의 탭에서는 다음과 같은 개인 정보 관련 기능의 주요 통찰력에 대한 대시보드 보기를 제공합니다 [Privacy Service의 데이터 주체 요청], [데이터 위생 작업 명령], 및 [감사 로그]. 또한 이 콘솔에서는 일반적인 개인 정보 보호 워크플로우를 안내하는 몇 가지 제품 내 사용 사례 안내서도 제공합니다.
+다음 [!UICONTROL 개인 정보 콘솔] Experience Platform UI의 탭에서는 다음과 같은 개인 정보 관련 기능의 주요 통찰력에 대한 대시보드 보기를 제공합니다 [Privacy Service의 데이터 주체 요청](../../privacy-service/home.md), [데이터 위생 작업 명령](../../hygiene/home.md), 및 [감사 로그](../../landing/governance-privacy-security/audit-logs/overview.md). 또한 이 콘솔에서는 일반적인 개인 정보 보호 워크플로우를 안내하는 몇 가지 제품 내 사용 사례 안내서도 제공합니다.
 
 자세한 내용은 [개인 정보 콘솔 개요](../../landing/governance-privacy-security/privacy-console.md) 를 참조하십시오.
 
@@ -115,6 +116,9 @@ Adobe Experience Platform은 일별 스냅샷 중에 캡처된 대로 조직의 
 | 기능 | 설명 |
 | --- | --- |
 | 사용 중인 레이블 | 위젯 라이브러리에서 볼 때 사용 중 레이블은 대시보드에 기존 위젯이 있는지 쉽게 식별합니다. 따라서 원할 경우 동일한 위젯을 두 번 이상 추가할 수 있지만, 중복을 피하기가 쉽습니다. |
+| 사용자 정의 대시보드 | 사용자 정의 대시보드는 사용자 정의 대시보드를 만들고 관리할 수 있도록 하여 통찰력을 높이고 시각화를 사용자 지정하는 데 도움이 됩니다. 사용자 정의 대시보드를 사용하여 맞춤형 위젯을 생성, 추가 및 편집하여 조직과 관련된 주요 지표를 시각화할 수 있습니다. 다음 문서를 참조하십시오. [기능 안내서](../../dashboards/user-defined-dashboards.md) 추가 정보 |
+| 고객 데이터 플랫폼 통찰력 데이터 모델 | CDP(Customer Data Platform) 인사이트 데이터 모델 기능은 다양한 프로필, 대상 및 세그멘테이션 위젯에 대한 통찰력을 제공하는 데이터 모델 및 SQL을 표시합니다. 이러한 SQL 쿼리 템플릿을 사용자 지정하여 마케팅 및 주요 성능 지표 사용 사례를 위한 CDP 보고서를 만들 수 있습니다. 그런 다음 이러한 통찰력을 사용자 정의 대시보드에 대한 사용자 지정 위젯으로 사용할 수 있습니다. 다음 문서를 참조하십시오. [CDP 통찰력 데이터 모델 기능 안내서](../../dashboards/cdp-insights-data-model.md) 추가 정보 |
+| 대상 겹치기 보고서 위젯 | 이 위젯은 둘 다 사용할 수 있습니다 [!UICONTROL 프로필] 및 [!UICONTROL 세그먼트] 대시보드 . 이 보고서는 선택한 세그먼트에 대해 가장 높은 겹치기 비율 또는 가장 낮은 겹치기 비율 별로 순위가 지정된 대상 목록을 제공합니다. 에서 [!UICONTROL 프로필] 대시보드 사용 가능한 모든 세그먼트의 병합 정책별로 대상 겹침을 필터링하고 볼 수 있습니다. 다음 [!UICONTROL 세그먼트] 대시보드를 사용하면 특정 세그먼트별로 겹치는 대상을 필터링할 수 있습니다.<br>이 분석을 사용하여 새롭고 고성능 세그먼트를 작성하고 동일한 대상을 다른 대상으로 보내지 않습니다. 또한 이 보고서를 통해 숨겨진 인사이트를 식별하여 세그멘테이션을 향상하거나 추적할 고유 프로필을 찾을 수 있습니다. |
 
 자세한 내용은 [!DNL Dashboards]를 보려면 [[!DNL Dashboards] 개요](../../dashboards/home.md).
 
@@ -127,10 +131,39 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 | 기능 | 설명 |
 | --- | --- |
 | 플랫폼 UI에서 왼쪽 탐색 통합 | 이전에 데이터 수집 UI에 배타적이었던 모든 기능(태그, 이벤트 전달 및 데이터 세트 포함)은 이제 Experience Platform의 왼쪽 탐색 영역에서 카테고리 아래에 있습니다 **[!UICONTROL 데이터 수집]**. 따라서 Platform에서 데이터 수집 기능을 사용할 때 UI 간을 전환할 필요가 없습니다. |
+| 태그 및 이벤트 전달의 사용자 속성 | 사용 가능한 목록 작성 시 [!UICONTROL 속성] 태그 및 이벤트 전달에서, 이제 나열된 각 속성이 마지막으로 업데이트된 시간과 업데이트를 수행한 사용자를 표시합니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
 Platform의 데이터 수집에 대한 자세한 내용은 [데이터 수집 개요](../../collection/home.md).
+
+## [!DNL Destinations] {#destinations}
+
+[!DNL Destinations] 는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과의 사전 구축된 통합입니다. 대상을 사용하여 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례에 대해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
+
+**새로운 기능 또는 업데이트된 기능**
+
+| 기능 | 설명 |
+| ----------- | ----------- |
+| 대상 SDK | 이제 Destination SDK은 일괄 처리(또는 파일 기반)를 만들거나 개인 대상을 만드는 파트너와 고객을 완벽하게 지원합니다. 자세한 내용은 다음 설명서 페이지를 참조하십시오. <ul><li>[Destination SDK 개요](/help/destinations/destination-sdk/overview.md)</li><li>[파일 기반 대상 구성](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md)</li><li>[파일 기반 대상에 대한 파일 형식 옵션 구성](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md)</li><li>[파일 기반 대상 테스트](/help/destinations/destination-sdk/file-based-destination-testing-overview.md)</li></ul> |
+
+{style=&quot;table-layout:auto&quot;}
+
+**새 대상 또는 업데이트된 대상**
+
+| 대상 | 설명 |
+| ----------- | ----------- |
+| [[!DNL Salesforce CRM]](../..//destinations/catalog/crm/salesforce.md) | 다음 [!DNL Salesforce CRM] 연락처 및 리드 업데이트를 모두 지원하고 더 빠른 업데이트를 위한 성능 개선 사항을 지원하도록 대상이 업데이트되었습니다. |
+
+{style=&quot;table-layout:auto&quot;}
+
+**새 설명서 또는 업데이트된 설명서**
+
+| 설명서 | 설명 |
+| ----------- | ----------- |
+| 대상 흐름 서비스 API 설명서 | 다음 [대상 API 참조 설명서](https://developer.adobe.com/experience-platform-apis/references/destinations/) 파일 기반 대상에서 작업을 수행하는 방법에 대한 지침을 포함하도록 가 업데이트되었습니다. 나중에 스트리밍 대상에 대한 작업이 추가됩니다. |
+
+대상에 대한 자세한 내용은 [대상 개요](../../destinations/home.md).
 
 ## XDM(경험 데이터 모델) {#xdm}
 
@@ -218,6 +251,6 @@ Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 
 | Adobe Campaign 관리 Cloud Service 지원 | Adobe Campaign 관리 Cloud Service 소스를 사용하여 Adobe Campaign v8.4 게재 및 추적 로그 데이터를 Experience Platform으로 가져옵니다. 안내서 읽기 [UI에서 Adobe Campaign 관리 Cloud Service 소스 연결 만들기](../../sources/tutorials/ui/create/adobe-applications/campaign.md) 추가 정보. |
 | 배치 소스에 대한 온디맨드 섭취에 대한 API 지원 | 온디맨드 수집 기능을 사용하여 [!DNL Flow Service] API. 생성된 흐름 실행은 1회 수집으로 설정해야 합니다. 자세한 내용은 다음 안내서를 참조하십시오. [api를 사용하여 온디맨드 통합에 대한 흐름 실행 만들기](../../sources/tutorials/api/on-demand-ingestion.md) 추가 정보. |
 | 배치 소스에 대한 실패한 데이터 흐름 실행을 다시 시도하는 데 대한 API 지원 | 를 사용하십시오 `re-trigger` API를 통해 실패한 데이터 흐름을 다시 시도하는 작업입니다. 안내서 읽기 [API를 사용하여 실패한 데이터 흐름 다시 시도](../../sources/tutorials/api/retry-flows.md) 추가 정보. |
-| 에 대한 행 수준 데이터 필터링을 위한 API 지원 [!DNL Google BigQuery] 및 [!DNL Snowflake] 소스 | 논리 및 비교 연산자를 사용하여 [!DNL Google BigQuery] 및 [!DNL Snowflake] 소스. 자세한 내용은 API를 사용하여 소스에 대한 데이터 필터링에 대한 안내서를 참조하십시오. |
+| 에 대한 행 수준 데이터 필터링을 위한 API 지원 [!DNL Google BigQuery] 및 [!DNL Snowflake] 소스 | 논리 및 비교 연산자를 사용하여 [!DNL Google BigQuery] 및 [!DNL Snowflake] 소스. 안내서 읽기 [API를 사용하여 소스에 대한 데이터 필터링](../../sources/tutorials/api/filter.md) 추가 정보. |
 
 소스에 대해 자세히 알아보려면 [소스 개요](../../sources/home.md).
