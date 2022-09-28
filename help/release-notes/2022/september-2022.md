@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform 릴리스 노트 - 2022년 9월
 description: Adobe Experience Platform에 대한 2022년 9월 릴리스 노트입니다.
-source-git-commit: a3f12b9524d393441923cd11e09ed3e406814691
+source-git-commit: 3d7a04c0ec6cf6a9bed90c9c22db2e8b56bfa01f
 workflow-type: tm+mt
-source-wordcount: '1377'
-ht-degree: 7%
+source-wordcount: '1827'
+ht-degree: 6%
 
 ---
 
@@ -12,12 +12,95 @@ ht-degree: 7%
 
 **릴리스 날짜: 2022년 9월 28일**
 
+Adobe Experience Platform의 새로운 기능:
+
+- [데이터 위생](#data-hygiene)
+- [[!UICONTROL 개인 정보 콘솔]](#privacy-console)
+
 Adobe Experience Platform의 기존 기능 업데이트:
 
+- [[!DNL Artificial Intelligence and Machine Learning Services]](#ai-and-ml-services)
+- [감사 로그](#audit-logs)
+- [데이터 수집](#data-collection)
 - [XDM(경험 데이터 모델)](#xdm)
 - [ID 서비스](#identity-service)
-- [[!DNL Artificial Intelligence and Machine Learning Services]](#ai-and-ml-services)
 - [소스](#sources)
+
+## 데이터 위생 {#data-hygiene}
+
+Adobe Experience Platform은 소비자 경험을 오케스트레이션하기 위해 복잡하고 큰 데이터 작업을 관리하는 강력한 도구 세트를 제공합니다. 시간이 지나면서 시스템에 데이터를 수집하면 데이터가 예상대로 사용되고, 잘못된 데이터를 수정해야 할 때 업데이트되고, 조직 정책이 필요하다고 인정하는 경우 삭제되도록 데이터 저장소를 관리하는 것이 점점 더 중요해집니다.
+
+Adobe Experience Platform의 데이터 위생 기능을 사용하면 자동화된 데이터 세트 만료를 예약하고 id로 소비자 데이터를 프로그래밍 방식으로 삭제하여 데이터를 정리할 수 있습니다.
+
+>[!NOTE]
+>
+>소비자 삭제 기능은 Adobe Healthcare Shield 또는 Privacy Shield를 구입한 조직에서만 사용할 수 있습니다.
+
+데이터 위생을 시작하려면 다음 설명서를 참조하십시오.
+
+- [데이터 위생 개요](../../hygiene/home.md): Platform의 데이터 위생 기능에 대한 기본 사항을 살펴보십시오.
+- [[!UICONTROL 데이터 위생] UI 안내서](../../hygiene/ui/overview.md): Platform 사용자 인터페이스 내에서 데이터 세트 만료 및 소비자 삭제 요청을 예약하는 방법을 알아봅니다.
+- [데이터 위생 API 안내서](../../hygiene/api/overview.md): UI에서 수행할 수 있는 모든 데이터 위생 활동은 프로그래밍 방식으로 수행할 수도 있습니다
+
+## [!UICONTROL 개인 정보 콘솔] {#privacy-console}
+
+다음 [!UICONTROL 개인 정보 콘솔] Experience Platform UI의 탭에서는 다음과 같은 개인 정보 관련 기능의 주요 통찰력에 대한 대시보드 보기를 제공합니다 [Privacy Service의 데이터 주체 요청], [데이터 위생 작업 명령], 및 [감사 로그]. 또한 이 콘솔에서는 일반적인 개인 정보 보호 워크플로우를 안내하는 몇 가지 제품 내 사용 사례 안내서도 제공합니다.
+
+자세한 내용은 [개인 정보 콘솔 개요](../../landing/governance-privacy-security/privacy-console.md) 를 참조하십시오.
+
+## [!DNL Artificial Intelligence/Machine Learning services] {#ai-and-ml-services}
+
+마케팅 분석가 및 전문가가 AI/ML 서비스를 통해 고객 경험 사용 사례에서 인공 지능(AI) 및 머신 러닝을 활용할 수 있습니다. 이를 통해 마케팅 분석가는 데이터 과학 전문 지식 없이도 비즈니스 수준 구성을 사용하여 기업의 요구 사항에 맞는 모델을 설정할 수 있습니다.
+
+### 기여도 AI
+
+Attribution AI는 전환 이벤트로 연결되는 터치포인트에 크레딧을 적용하는 데 사용됩니다. 이를 통해 마케터는 고객 여정 전반에서 각 개별 마케팅 터치포인트의 마케팅 효과를 수량화할 수 있습니다.
+
+| 기능 | 설명 |
+| --- | --- |
+| 초안 인스턴스 저장 | 이 새로운 기능을 사용하면 마케팅 분석가가 구성 중에 모델 구성을 초안 인스턴스로 저장하고 교육 및 점수 책정 전에 완료될 때까지 초안을 계속 편집할 수 있습니다. 이 기능이 유용한 시나리오에는 포함되지만, 제한되어 있지는 않습니다. 구성 워크플로우에서 정의할 필드가 여러 개 있는 경우 한 번의 이동으로 완료할 수 없거나, 하나 이상의 데이터 세트 통계(예: 열 완전성)가 사용되기 전에 처리하는 데 시간이 걸릴 수 있습니다. 다음 문서를 참조하십시오. [Attribution AI 사용 안내서](../../intelligent-services/attribution-ai/user-guide.md) 추가 정보 |
+| 거버넌스 정책 | 사용자가 구성 워크플로우를 통해 인스턴스를 생성하도록 제출한 후 새 정책 적용 서비스는 데이터 사용에 대한 정책 위반이 있는지 확인하고 팝오버에 세부 정보를 표시합니다. 이렇게 하면 데이터 작업 및 마케팅 작업이 Adobe Experience Platform에 구성된 데이터 사용 정책을 준수하게 됩니다. |
+
+Attribution AI에 대한 자세한 내용은 [Attribution AI 개요](../../intelligent-services/attribution-ai/overview.md). 데이터 거버넌스 정책에 대한 자세한 내용은 [정책 개요](../../data-governance/policies/overview.md).
+
+### 고객 AI
+
+Real-time Customer Data Platform에서 사용할 수 있는 고객 AI는 규모에 따라 개별 프로필에 대한 이탈 및 전환과 같은 사용자 지정 성향 점수를 생성하는 데 사용됩니다.
+
+| 기능 | 설명 |
+| --- | --- |
+| 초안 인스턴스 저장 | 이 새로운 기능을 사용하면 마케팅 분석가가 구성 중에 모델 구성을 초안 인스턴스로 저장하고 교육 및 점수 책정 전에 완료될 때까지 초안을 계속 편집할 수 있습니다. 이 기능이 유용한 시나리오에는 포함되지만, 제한되어 있지는 않습니다. 구성 워크플로우에서 정의할 필드가 여러 개 있는 경우 한 번의 이동으로 완료할 수 없거나, 하나 이상의 데이터 세트 통계(예: 열 완전성)가 사용되기 전에 처리하는 데 시간이 걸릴 수 있습니다. 다음 문서를 참조하십시오. [Customer AI 사용 안내서](../../intelligent-services/customer-ai/user-guide/configure.md) 추가 정보 |
+| 거버넌스 정책 | 사용자가 구성 워크플로우를 통해 인스턴스를 생성하도록 제출한 후 새 정책 적용 서비스는 데이터 사용에 대한 정책 위반이 있는지 확인하고 팝오버에 세부 정보를 표시합니다. 이렇게 하면 데이터 작업 및 마케팅 작업이 Adobe Experience Platform에 구성된 데이터 사용 정책을 준수하게 됩니다. |
+
+Customer AI에 대한 자세한 내용은 [Customer AI 개요](../../intelligent-services/customer-ai/overview.md). 데이터 거버넌스 정책에 대한 자세한 내용은 [정책 개요](../../data-governance/policies/overview.md).
+
+## 감사 로그 {#audit-logs}
+
+Experience Platform을 사용하면 다양한 서비스 및 기능에 대한 사용자 활동을 감사할 수 있습니다. 감사 로그는 작업을 수행한 사람과 수행한 시기에 대한 정보를 제공합니다.
+
+**업데이트된 기능**
+
+| 기능 | 이름 | 설명 |
+| --- | --- | --- |
+| 추가된 리소스 | <ul><li>Attribution AI 인스턴스</li><li>고객 AI 인스턴스</li><li>데이터 스트림</li></ul> | 활동이 발생하면 감사 로그 리소스가 자동으로 기록됩니다. 이 기능이 활성화되어 있으면 수동으로 로그 수집을 활성화할 필요가 없습니다. |
+
+{style=&quot;table-layout:auto&quot;}
+
+Platform에서 감사 로그에 의해 추적되는 다양한 리소스 특정 이벤트 유형에 대한 자세한 내용은 [감사 로그 개요](../../landing/governance-privacy-security/audit-logs/overview.md).
+
+## 데이터 수집
+
+Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수집하고 Adobe Experience Platform Edge Network로 전송하여 Adobe 또는 비Adobe 대상으로 보강, 변환 및 배포할 수 있는 기술 세트를 제공합니다.
+
+**업데이트된 기능**
+
+| 기능 | 설명 |
+| --- | --- |
+| 플랫폼 UI에서 왼쪽 탐색 통합 | 이전에 데이터 수집 UI에 배타적이었던 모든 기능(태그, 이벤트 전달 및 데이터 세트 포함)은 이제 Experience Platform의 왼쪽 탐색 영역에서 카테고리 아래에 있습니다 **[!UICONTROL 데이터 수집]**. 따라서 Platform에서 데이터 수집 기능을 사용할 때 UI 간을 전환할 필요가 없습니다. |
+
+{style=&quot;table-layout:auto&quot;}
+
+Platform의 데이터 수집에 대한 자세한 내용은 [데이터 수집 개요](../../collection/home.md).
 
 ## XDM(경험 데이터 모델) {#xdm}
 
@@ -77,32 +160,6 @@ Adobe Experience Platform Identity 서비스를 사용하면 장치 및 시스�
 | 데이터 집합 삭제 지원 | 이제 ID 서비스는 를 통해 요청할 때 데이터 세트 삭제를 지원합니다 [카탈로그 서비스 API](https://developer.adobe.com/experience-platform-apis/references/catalog/), UI 또는 데이터 위생입니다. 안내서 읽기 [UI에서 데이터 세트 삭제](../../catalog/datasets/user-guide.md#delete-a-dataset) 추가 정보. |
 
 ID 서비스에 대한 자세한 내용은 [ID 서비스 개요](../../identity-service/home.md).
-
-## [!DNL Artificial Intelligence/Machine Learning services] {#ai-and-ml-services}
-
-마케팅 분석가 및 전문가가 AI/ML 서비스를 통해 고객 경험 사용 사례에서 인공 지능(AI) 및 머신 러닝을 활용할 수 있습니다. 이를 통해 마케팅 분석가는 데이터 과학 전문 지식 없이도 비즈니스 수준 구성을 사용하여 기업의 요구 사항에 맞는 모델을 설정할 수 있습니다.
-
-### 기여도 AI
-
-Attribution AI는 전환 이벤트로 연결되는 터치포인트에 크레딧을 적용하는 데 사용됩니다. 이를 통해 마케터는 고객 여정 전반에서 각 개별 마케팅 터치포인트의 마케팅 효과를 수량화할 수 있습니다.
-
-| 기능 | 설명 |
-| --- | --- |
-| 초안 인스턴스 저장 | 이 새로운 기능을 사용하면 마케팅 분석가가 구성 중에 모델 구성을 초안 인스턴스로 저장하고 교육 및 점수 책정 전에 완료될 때까지 초안을 계속 편집할 수 있습니다. 이 기능이 유용한 시나리오에는 포함되지만, 제한되어 있지는 않습니다. 구성 워크플로우에서 정의할 필드가 여러 개 있는 경우 한 번의 이동으로 완료할 수 없거나, 하나 이상의 데이터 세트 통계(예: 열 완전성)가 사용되기 전에 처리하는 데 시간이 걸릴 수 있습니다. 다음 문서를 참조하십시오. [Attribution AI 사용 안내서](../../intelligent-services/attribution-ai/user-guide.md) 추가 정보 |
-| 거버넌스 정책 | 사용자가 구성 워크플로우를 통해 인스턴스를 생성하도록 제출한 후 새 정책 적용 서비스는 데이터 사용에 대한 정책 위반이 있는지 확인하고 팝오버에 세부 정보를 표시합니다. 이렇게 하면 데이터 작업 및 마케팅 작업이 Adobe Experience Platform에 구성된 데이터 사용 정책을 준수하게 됩니다. |
-
-Attribution AI에 대한 자세한 내용은 [Attribution AI 개요](../../intelligent-services/attribution-ai/overview.md). 데이터 거버넌스 정책에 대한 자세한 내용은 [정책 개요](../../data-governance/policies/overview.md).
-
-### 고객 AI
-
-Real-time Customer Data Platform에서 사용할 수 있는 고객 AI는 규모에 따라 개별 프로필에 대한 이탈 및 전환과 같은 사용자 지정 성향 점수를 생성하는 데 사용됩니다.
-
-| 기능 | 설명 |
-| --- | --- |
-| 초안 인스턴스 저장 | 이 새로운 기능을 사용하면 마케팅 분석가가 구성 중에 모델 구성을 초안 인스턴스로 저장하고 교육 및 점수 책정 전에 완료될 때까지 초안을 계속 편집할 수 있습니다. 이 기능이 유용한 시나리오에는 포함되지만, 제한되어 있지는 않습니다. 구성 워크플로우에서 정의할 필드가 여러 개 있는 경우 한 번의 이동으로 완료할 수 없거나, 하나 이상의 데이터 세트 통계(예: 열 완전성)가 사용되기 전에 처리하는 데 시간이 걸릴 수 있습니다. 다음 문서를 참조하십시오. [Customer AI 사용 안내서](../../intelligent-services/customer-ai/user-guide/configure.md) 추가 정보 |
-| 거버넌스 정책 | 사용자가 구성 워크플로우를 통해 인스턴스를 생성하도록 제출한 후 새 정책 적용 서비스는 데이터 사용에 대한 정책 위반이 있는지 확인하고 팝오버에 세부 정보를 표시합니다. 이렇게 하면 데이터 작업 및 마케팅 작업이 Adobe Experience Platform에 구성된 데이터 사용 정책을 준수하게 됩니다. |
-
-Customer AI에 대한 자세한 내용은 [Customer AI 개요](../../intelligent-services/customer-ai/overview.md). 데이터 거버넌스 정책에 대한 자세한 내용은 [정책 개요](../../data-governance/policies/overview.md).
 
 ## 소스 {#sources}
 
