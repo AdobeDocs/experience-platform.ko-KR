@@ -3,9 +3,9 @@ keywords: Experience Platform;홈;인기 항목;흐름 서비스;
 title: (베타) Flow Service API를 사용하여 온디맨드 수집을 위한 흐름 실행 만들기
 description: 이 자습서에서는 Flow Service API를 사용하여 온디맨드 수집에 대한 흐름 실행을 만드는 단계를 설명합니다
 exl-id: a7b20cd1-bb52-4b0a-aad0-796929555e4a
-source-git-commit: 659f99a47b533bba2a6084bc8e235df2a29a6386
+source-git-commit: 61b3799a4d8c8b6682babd85b6f50a7e69778553
 workflow-type: tm+mt
-source-wordcount: '1147'
+source-wordcount: '1157'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 흐름 실행은 흐름 실행의 인스턴스를 나타냅니다. 예를 들어, 흐름이 오전 9:00, 오전 10:00 및 오전 11:00에 시간별로 실행되도록 예약된 경우, 흐름 실행의 세 인스턴스가 있습니다. 흐름 실행은 특정 조직에만 적용됩니다.
 
-주문형 수집은 주어진 데이터 플로우에 대해 흐름 실행을 만드는 기능을 제공합니다. 이를 통해 사용자는 지정된 매개 변수를 기반으로 플로우 실행을 만들고 서비스 토큰 없이 수집 주기를 만들 수 있습니다.
+주문형 수집은 주어진 데이터 플로우에 대해 흐름 실행을 만드는 기능을 제공합니다. 이를 통해 사용자는 지정된 매개 변수를 기반으로 플로우 실행을 만들고 서비스 토큰 없이 수집 주기를 만들 수 있습니다. 온디맨드 수집 지원은 배치 소스에만 사용할 수 있습니다.
 
 이 자습서에서는 온디맨드 수집을 사용하고 을 사용하여 흐름 실행을 만드는 방법에 대해 설명합니다 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 

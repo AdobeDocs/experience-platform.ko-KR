@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform 릴리스 노트 - 2022년 9월
 description: Adobe Experience Platform에 대한 2022년 9월 릴리스 노트입니다.
-source-git-commit: 3d7a04c0ec6cf6a9bed90c9c22db2e8b56bfa01f
+source-git-commit: 61b3799a4d8c8b6682babd85b6f50a7e69778553
 workflow-type: tm+mt
-source-wordcount: '1827'
-ht-degree: 6%
+source-wordcount: '2326'
+ht-degree: 5%
 
 ---
 
@@ -14,6 +14,7 @@ ht-degree: 6%
 
 Adobe Experience Platform의 새로운 기능:
 
+- [속성 기반 액세스 제어](#abac)
 - [데이터 위생](#data-hygiene)
 - [[!UICONTROL 개인 정보 콘솔]](#privacy-console)
 
@@ -25,6 +26,23 @@ Adobe Experience Platform의 기존 기능 업데이트:
 - [XDM(경험 데이터 모델)](#xdm)
 - [ID 서비스](#identity-service)
 - [소스](#sources)
+
+## 속성 기반 액세스 제어 {#abac}
+
+>[!IMPORTANT]
+>
+>특성 기반 액세스 제어는 2022년 10월부터 사용할 수 있습니다. 얼리 어답터가 되려면 Adobe 담당자에게 문의하십시오.
+
+특성 기반 액세스 제어는 개인 정보 보호 관련 브랜드에게 사용자 액세스를 관리할 수 있는 더 많은 유연성을 제공하는 Adobe Experience Platform 기능입니다. 스키마 필드 및 세그먼트와 같은 개별 객체를 사용자 역할에 할당할 수 있습니다. 이 기능을 사용하면 조직의 특정 Platform 사용자에 대한 개별 개체에 대한 액세스 권한을 부여하거나 취소할 수 있습니다.
+
+특성 기반 액세스 제어를 통해 조직의 관리자는 모든 플랫폼 워크플로우 및 리소스에서 사용자의 중요한 개인 데이터(SPD), 개인 식별 정보(PII) 및 기타 사용자 정의된 데이터 유형에 대한 액세스를 제어할 수 있습니다. 관리자는 해당 필드에 해당하는 특정 필드 및 데이터에만 액세스할 수 있는 사용자 역할을 정의할 수 있습니다.
+
+| 기능 | 설명 |
+| --- | --- |
+| 속성 기반 액세스 제어 | 특성 기반 액세스 제어를 사용하면 XDM(Experience Data Model) 스키마 필드와 세그먼트에 조직 또는 데이터 사용 범위를 정의하는 레이블을 지정할 수 있습니다. 동시에 관리자는 사용자 및 역할 관리 인터페이스를 사용하여 XDM 스키마 필드 및 세그먼트를 포함하는 액세스 정책을 정의하여 사용자 또는 사용자 그룹(내부, 외부 또는 타사 사용자)에 부여된 액세스를 더 잘 관리할 수 있습니다. 자세한 내용은 [속성 기반 액세스 제어 개요](../../access-control/abac/overview.md). |
+| 권한 | 권한은 관리자가 사용자 역할 및 액세스 정책을 정의하여 제품 응용 프로그램 내의 기능 및 개체에 대한 액세스 권한을 관리할 수 있는 Experience Cloud 영역입니다. 권한을 통해 역할을 만들고 관리하고, 이러한 역할에 대해 원하는 리소스 권한을 할당하고, 레이블을 활용하고 특정 플랫폼 리소스에 액세스할 수 있는 사용자 역할을 정의하는 정책을 작성할 수 있습니다. 또한 권한을 사용하여 특정 역할과 연관된 레이블, 샌드박스 및 사용자를 관리할 수도 있습니다. 자세한 내용은 [권한 UI 안내서](../../access-control/abac/ui/browse.md). |
+
+속성 기반 액세스 제어에 대한 자세한 내용은 [속성 기반 액세스 제어 개요](../../access-control/abac/overview.md). 속성 기반 액세스 제어 워크플로우에 대한 포괄적인 지침은 [특성 기반 액세스 제어 종단 안내서](../../access-control/abac/end-to-end-guide.md).
 
 ## 데이터 위생 {#data-hygiene}
 
@@ -172,5 +190,9 @@ Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 
 | 기능 | 설명 |
 | --- | --- |
 | Audience Manager 세그먼트 모집단이 실시간 고객 프로필에 미치는 영향 | 크기 조정 가능한 Audience Manager 세그먼트 모집단을 수집하면 Audience Manager 소스를 사용하여 처음 Audience Manager 세그먼트를 Platform으로 보낼 때 총 프로필 수에 직접적인 영향을 줍니다. 즉, 모든 세그먼트를 선택하면 라이센스 사용 권한을 초과하는 프로필 수가 발생할 수 있습니다. 자세한 내용은 [Audience Manager 소스 개요](../../sources/connectors/adobe-applications/audience-manager.md). 라이센스 사용에 대한 자세한 내용은 [라이선스 사용 대시보드 사용](../../dashboards/guides/license-usage.md). |
+| Adobe Campaign 관리 Cloud Service 지원 | Adobe Campaign 관리 Cloud Service 소스를 사용하여 Adobe Campaign v8.4 게재 및 추적 로그 데이터를 Experience Platform으로 가져옵니다. 안내서 읽기 [UI에서 Adobe Campaign 관리 Cloud Service 소스 연결 만들기](../../sources/tutorials/ui/create/adobe-applications/campaign.md) 추가 정보. |
+| 배치 소스에 대한 온디맨드 섭취에 대한 API 지원 | 온디맨드 수집 기능을 사용하여 [!DNL Flow Service] API. 생성된 흐름 실행은 1회 수집으로 설정해야 합니다. 자세한 내용은 다음 안내서를 참조하십시오. [api를 사용하여 온디맨드 통합에 대한 흐름 실행 만들기](../../sources/tutorials/api/on-demand-ingestion.md) 추가 정보. |
+| 배치 소스에 대한 실패한 데이터 흐름 실행을 다시 시도하는 데 대한 API 지원 | 를 사용하십시오 `re-trigger` API를 통해 실패한 데이터 흐름을 다시 시도하는 작업입니다. 안내서 읽기 [API를 사용하여 실패한 데이터 흐름 다시 시도](../../sources/tutorials/api/retry-flows.md) 추가 정보. |
+| 에 대한 행 수준 데이터 필터링을 위한 API 지원 [!DNL Google BigQuery] 및 [!DNL Snowflake] 소스 | 논리 및 비교 연산자를 사용하여 [!DNL Google BigQuery] 및 [!DNL Snowflake] 소스. 자세한 내용은 API를 사용하여 소스에 대한 데이터 필터링에 대한 안내서를 참조하십시오. |
 
 소스에 대해 자세히 알아보려면 [소스 개요](../../sources/home.md).
