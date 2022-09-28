@@ -4,9 +4,9 @@ description: Adobe Experience Platform에서 고객의 저장된 개인 데이�
 hide: true
 hidefromtoc: true
 exl-id: d80a4be3-e072-4bb4-a56d-b34a20f88c78
-source-git-commit: c0d51d33d1e9d49d43f732925f2a794b5afea03b
+source-git-commit: c2ff0d5806e57f230b937e8754d40031fb4b2305
 workflow-type: tm+mt
-source-wordcount: '505'
+source-wordcount: '504'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->데이터 위생 API는 현재 베타 버전입니다. 이 문서에 설명된 기능은 변경될 수 있습니다.
+>이 종단점은 소비자 삭제에 대한 베타 기능을 나타냅니다. 최신 기능은 [`/workorder` 엔드포인트](./workorder.md) 을 가리키도록 업데이트하는 것이 좋습니다.
 
 데이터 위생 API를 사용하면 Adobe Experience Platform에서 고객의 저장된 개인 데이터를 프로그래밍 방식으로 수정하거나 삭제할 수 있습니다.
 

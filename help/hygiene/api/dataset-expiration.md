@@ -2,10 +2,10 @@
 title: 데이터 집합 만료 API 끝점
 description: 데이터 위생 API의 /ttl 종단점을 사용하면 Adobe Experience Platform에서 데이터 세트 만료를 프로그래밍 방식으로 예약할 수 있습니다.
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: 5a12c75a54f420b2ca831dbfe05105dfd856dc4d
+source-git-commit: c2ff0d5806e57f230b937e8754d40031fb4b2305
 workflow-type: tm+mt
-source-wordcount: '1405'
-ht-degree: 6%
+source-wordcount: '1450'
+ht-degree: 4%
 
 ---
 
@@ -55,7 +55,7 @@ GET /ttl?{QUERY_PARAMETERS}
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/core/hygiene/ttl?page=1&size=50 \
+  https://platform.adobe.io/data/core/hygiene/ttl?updatedToDate=2021-08-01&author=LIKE%Jane Doe%25 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -68,38 +68,43 @@ curl -X GET \
 
 ```json
 {
-  "results": [
+  "totalRecords": 3,
+  "ttlDetails": [
     {
-      "ttlId": "SDfba908e9fb2e427ab4275d20465631d7",
-      "datasetId": "62799c3e1151781b63ccaa28",
-      "imsOrg": "{ORG_ID}",
-      "status": "cancelled",
-      "expiry": "2022-05-09T22:57:05.531024Z",
-      "updatedAt": "2022-05-09T22:57:05.531025Z",
-      "updatedBy": "{USER_ID}"
+      "status": "completed",
+      "workorderId": "SDc17a9501345c4997878c1383c475a77b",
+      "imsOrgId": "885737B25DC460C50A49411B@AdobeOrg",
+      "datasetId": "f440ac301c414bf1b6ba419162866346",
+      "expiry": "2021-07-07T13:14:15Z",
+      "updatedAt": "2021-07-07T13:14:15Z",
+      "updatedBy": "Jane Doe <jane.doe@example.com> d741b5b877bf47cf@AdobeId"
     },
     {
-      "ttlId": "SD5cfd7a11b25543a9bcd9ef647db3d8df",
-      "datasetId": "62759f2ede9e601b63a2ee14",
-      "imsOrg": "{ORG_ID}",
       "status": "pending",
-      "expiry": "2032-12-31T23:59:59Z",
-      "updatedAt": "2022-05-09T22:41:46.731002Z",
-      "updatedBy": "{USER_ID}"
+      "workorderId": "SD8ef60b33dbed444fb81861cced5da10b",
+      "imsOrgId": "885737B25DC460C50A49411B@AdobeOrg",
+      "datasetId": "80f0d38820a74879a2c5be82e38b1a94",
+      "expiry": "2099-02-02T00:00:00Z",
+      "updatedAt": "2021-02-02T13:00:00Z",
+      "updatedBy": "John Q. Public <jqp@example.com> 93220281bad34ed0@AdobeId"
+    },
+    {
+      "status": "pending",
+      "workorderId": "SD2140ad4eaf1f47a1b24c05cce53e303e",
+      "imsOrgId": "885737B25DC460C50A49411B@AdobeOrg",
+      "datasetId": "9e63f9b25896416ba811657678b4fcb7",
+      "expiry": "2099-01-01T00:00:00Z",
+      "updatedAt": "2021-01-01T13:00:00Z",
+      "updatedBy": "Jane Doe <jane.doe@example.com> d741b5b877bf47cf@AdobeId"
     }
-  ],
-  "current_page": 1,
-  "total_pages": 36,
-  "total_count": 886
+  ]
 }
 ```
 
 | 속성 | 설명 |
 | --- | --- |
-| `results` | 반환된 데이터 세트 만료에 대한 세부 정보를 포함합니다. 데이터 세트 만료 속성에 대한 자세한 내용은 응답 섹션을 참조하십시오 [조회 호출](#lookup). |
-| `current_page` | 나열된 결과의 현재 페이지입니다. |
-| `total_pages` | 응답의 총 페이지 수입니다. |
-| `total_count` | 응답의 총 데이터 세트 만료 수입니다. |
+| `totalRecords` | 목록 호출의 매개 변수와 일치하는 데이터 세트 만료 수입니다. |
+| `ttlDetails` | 반환된 데이터 세트 만료에 대한 세부 정보를 포함합니다. 데이터 세트 만료 속성에 대한 자세한 내용은 응답 섹션을 참조하십시오 [조회 호출](#lookup). |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -110,20 +115,22 @@ GET 요청을 통해 데이터 세트 만료를 조회할 수 있습니다.
 **API 형식**
 
 ```http
-GET /ttl/{TTL_ID}
+GET /ttl/{DATASET_ID}
 ```
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{TTL_ID}` | 조회할 데이터 세트 만료 ID입니다. |
+| `{DATASET_ID}` | 조회할 데이터 세트의 ID입니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **요청**
 
+다음 요청은 데이터 세트에 대한 만료 세부 사항을 조회합니다 `62759f2ede9e601b63a2ee14`:
+
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/core/hygiene/ttl/5b020a27e7040801dedbf46e \
+  https://platform.adobe.io/data/core/hygiene/ttl/62759f2ede9e601b63a2ee14 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -136,110 +143,71 @@ curl -X GET \
 
 ```json
 {
-    "ttlId": "SD5cfd7a11b25543a9bcd9ef647db3d8df",
+    "workorderId": "SD5cfd7a11b25543a9bcd9ef647db3d8df",
     "datasetId": "62759f2ede9e601b63a2ee14",
     "imsOrg": "{ORG_ID}",
     "status": "pending",
     "expiry": "2023-12-31T23:59:59Z",
     "updatedAt": "2022-05-11T15:12:40.393115Z",
-    "updatedBy": "{USER_ID}"
+    "updatedBy": "{USER_ID}",
+    "displayName": "Example Dataset Expiration Request",
+    "description": "A dataset expiration request that will execute at the end of 2023"
 }
 ```
 
 | 속성 | 설명 |
 | --- | --- |
-| `ttlId` | 데이터 세트 만료의 ID입니다. |
+| `workorderId` | 데이터 세트 만료의 ID입니다. |
 | `datasetId` | 이 만료가 적용되는 데이터 세트의 ID입니다. |
 | `imsOrg` | 조직의 ID입니다. |
 | `status` | 데이터 세트 만료의 현재 상태입니다. |
 | `expiry` | 데이터 세트를 삭제할 예약된 날짜 및 시간입니다. |
 | `updatedAt` | 만료가 마지막으로 업데이트된 시간의 타임스탬프입니다. |
 | `updatedBy` | 만료 기간을 마지막으로 업데이트한 사용자입니다. |
+| `displayName` | 만료 요청에 대한 표시 이름입니다. |
+| `description` | 만료 요청에 대한 설명입니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
-## 데이터 세트 만료 만들기 {#create}
+### 카탈로그 만료 태그
 
-POST 요청을 통해 데이터 세트에 대한 만료 날짜를 만들 수 있습니다.
+를 사용할 때 [카탈로그 API](../../catalog/api/getting-started.md) 데이터 세트 세부 사항을 조회하려면, 데이터 세트에 활성 만료가 있는 경우 아래에 나열됩니다 `tags.adobe/hygiene/ttl`.
 
-**API 형식**
-
-```http
-POST /ttl
-```
-
-**요청**
-
-다음 요청은 데이터 집합을 예약합니다 `5b020a27e7040801dedbf46e` 2022년 말(그리니치 평균 시간) 삭제에 대한
-
-```shell
-curl -X POST \
-  https://platform.adobe.io/data/core/hygiene/ttl \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -H 'Content-Type: application/json' \
-  -d '{
-        "datasetId": "5b020a27e7040801dedbf46e",
-        "expiry": "2022-12-31T23:59:59Z"
-      }'
-```
-
-| 속성 | 설명 |
-| --- | --- |
-| `datasetId` | 만료 날짜를 예약하려는 데이터 세트의 ID입니다. |
-| `expiry` | 데이터 세트가 삭제될 시기에 대한 ISO 8601 타임스탬프. |
-
-{style=&quot;table-layout:auto&quot;}
-
-**응답**
-
-성공적으로 응답하면 데이터 집합 만료의 세부 정보가 반환되고, 기존 만료가 업데이트된 경우 HTTP 상태 200(OK), 기존 만료가 없는 경우 201(생성됨)이 반환됩니다.
+다음 JSON은 만료값이 인 카탈로그의 데이터 세트 세부 사항에 대한 잘린 응답을 나타냅니다 `32503680000000`. 태그의 값은 Unix Epoch가 시작된 이후 만료 시간을 정수(밀리초)로 인코딩합니다.
 
 ```json
 {
-    "ttlId": "SD5cfd7a11b25543a9bcd9ef647db3d8df",
-    "datasetId": "5b020a27e7040801dedbf46e",
-    "imsOrg": "{ORG_ID}",
-    "status": "pending",
-    "expiry": "2032-12-31T23:59:59Z",
-    "updatedAt": "2022-05-09T22:38:40.393115Z",
-    "updatedBy": "{USER_ID}"
+  "63212313c308d51b997858ba": {
+    "name": "TTL Test Dataset",
+    "description": "A piecrust promise, made to be broken",
+    "imsOrg": "0FCC747E56F59C747F000101@AdobeOrg",
+    "sandboxId": "8dc51b90-d0f9-11e9-b164-ed6a398c8b35",
+    "tags": {
+      "adobe/hygiene/ttl": [ "32503680000000" ],
+      ...
+    },
+    ...
+  }
 }
 ```
 
-| 속성 | 설명 |
-| --- | --- |
-| `ttlId` | 데이터 세트 만료의 ID입니다. |
-| `datasetId` | 이 만료가 적용되는 데이터 세트의 ID입니다. |
-| `imsOrg` | 조직의 ID입니다. |
-| `status` | 데이터 세트 만료의 현재 상태입니다. |
-| `expiry` | 데이터 세트를 삭제할 예약된 날짜 및 시간입니다. |
-| `updatedAt` | 만료가 마지막으로 업데이트된 시간의 타임스탬프입니다. |
-| `updatedBy` | 만료 기간을 마지막으로 업데이트한 사용자입니다. |
+## 데이터 세트 만료 만들기 또는 업데이트 {#create-or-update}
 
-{style=&quot;table-layout:auto&quot;}
-
-## 데이터 세트 만료 업데이트 {#update}
-
-PUT 요청을 통해 데이터 세트 만료를 업데이트할 수 있습니다.
+PUT 요청을 통해 데이터 세트에 대한 만료 날짜를 만들거나 업데이트할 수 있습니다.
 
 **API 형식**
 
 ```http
-PUT /ttl/{TTL_ID}
+PUT /ttl/{DATASET_ID}
 ```
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{TTL_ID}` | 수정할 데이터 세트 만료의 ID입니다. |
-
-{style=&quot;table-layout:auto&quot;}
+| `{DATASET_ID}` | 만료를 예약하려는 데이터 세트의 ID입니다. |
 
 **요청**
 
-다음 요청은 데이터 세트에 대한 만료를 업데이트합니다 `5b020a27e7040801dedbf46e` 따라서 2023년 말(그리니치 표준시)에 만료됩니다.
+다음 요청은 데이터 집합을 예약합니다 `5b020a27e7040801dedbf46e` 2022년 말(그리니치 평균 시간) 삭제에 대한 데이터 세트에 대한 기존 만료가 없으면 새 만료가 만들어집니다. 데이터 세트에 이미 보류 중인 만료가 있는 경우 해당 만료가 새 `expiry` 값.
 
 ```shell
 curl -X PUT \
@@ -250,35 +218,41 @@ curl -X PUT \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
-        "expiry": "2023-12-31T23:59:59Z"
+        "expiry": "2022-12-31T23:59:59Z",
+        "displayName": "Example Expiration Request",
+        "description": "Cleanup identities required by JIRA request 12345 across all datasets in the prod sandbox."
       }'
 ```
 
 | 속성 | 설명 |
 | --- | --- |
 | `expiry` | 데이터 세트가 삭제될 시기에 대한 ISO 8601 타임스탬프. |
+| `displayName` | 만료 요청에 대한 표시 이름입니다. |
+| `description` | 만료 요청에 대한 선택적 설명입니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **응답**
 
-성공적인 응답은 업데이트된 만료에 대한 세부 정보를 반환합니다.
+성공적으로 응답하면 데이터 집합 만료의 세부 정보가 반환되고, 기존 만료가 업데이트된 경우 HTTP 상태 200(OK), 기존 만료가 없는 경우 201(생성됨)이 반환됩니다.
 
 ```json
 {
-    "ttlId": "SD5cfd7a11b25543a9bcd9ef647db3d8df",
-    "datasetId": "62759f2ede9e601b63a2ee14",
+    "workorderId": "SD5cfd7a11b25543a9bcd9ef647db3d8df",
+    "datasetId": "5b020a27e7040801dedbf46e",
     "imsOrg": "{ORG_ID}",
     "status": "pending",
-    "expiry": "2023-12-31T23:59:59Z",
-    "updatedAt": "2022-05-11T15:12:40.393115Z",
-    "updatedBy": "{USER_ID}"
+    "expiry": "2032-12-31T23:59:59Z",
+    "updatedAt": "2022-05-09T22:38:40.393115Z",
+    "updatedBy": "{USER_ID}",
+    "displayName": "Example Expiration Request",
+    "description": "Cleanup identities required by JIRA request 12345 across all datasets in the prod sandbox."
 }
 ```
 
 | 속성 | 설명 |
 | --- | --- |
-| `ttlId` | 데이터 세트 만료의 ID입니다. |
+| `workorderId` | 데이터 세트 만료의 ID입니다. |
 | `datasetId` | 이 만료가 적용되는 데이터 세트의 ID입니다. |
 | `imsOrg` | 조직의 ID입니다. |
 | `status` | 데이터 세트 만료의 현재 상태입니다. |
@@ -292,25 +266,29 @@ curl -X PUT \
 
 DELETE 요청을 만들어 데이터 세트 만료를 취소할 수 있습니다.
 
+>[!NOTE]
+>
+>상태가 인 데이터 세트 만료만 `pending` 취소할 수 있습니다. 실행되었거나 이미 취소된 만료를 취소하려고 하면 HTTP 404 오류가 반환됩니다.
+
 **API 형식**
 
 ```http
-DELETE /ttl/{TTL_ID}
+DELETE /ttl/{EXPIRATION_ID}
 ```
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{TTL_ID}` | 취소할 데이터 세트 만료 ID입니다. |
+| `{EXPIRATION_ID}` | 다음 `workorderId` 취소할 데이터 세트 만료 기간입니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **요청**
 
-다음 요청은 데이터 세트에 대한 만료를 업데이트합니다 `5b020a27e7040801dedbf46e` 따라서 2023년 말(그리니치 표준시)에 만료됩니다.
+다음 요청은 ID가 있는 데이터 세트 만료를 취소합니다 `SD5cfd7a11b25543a9bcd9ef647db3d8df`:
 
 ```shell
 curl -X DELETE \
-  https://platform.adobe.io/data/core/hygiene/ttl/5b020a27e7040801dedbf46e \
+  https://platform.adobe.io/data/core/hygiene/ttl/SD5cfd7a11b25543a9bcd9ef647db3d8df \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -319,45 +297,21 @@ curl -X DELETE \
 
 **응답**
 
-성공적인 응답은 데이터 세트 만료 세부 사항을 반환하고 `status` 이제 속성이 `cancelled`.
+성공적으로 응답하면 HTTP 상태 204(컨텐츠 없음) 및 만료가 반환됩니다 `status` 속성이 `cancelled`.
 
-```json
-{
-    "ttlId": "SD5cfd7a11b25543a9bcd9ef647db3d8df",
-    "datasetId": "62759f2ede9e601b63a2ee14",
-    "imsOrg": "{ORG_ID}",
-    "status": "cancelled",
-    "expiry": "2023-12-31T23:59:59Z",
-    "updatedAt": "2022-05-09T23:47:30.071186Z",
-    "updatedBy": "{USER_ID}"
-}
-```
+## 데이터 집합의 만료 상태 내역 검색
 
-| 속성 | 설명 |
-| --- | --- |
-| `ttlId` | 데이터 세트 만료의 ID입니다. |
-| `datasetId` | 이 만료가 적용되는 데이터 세트의 ID입니다. |
-| `imsOrg` | 조직의 ID입니다. |
-| `status` | 데이터 세트 만료의 현재 상태입니다. |
-| `expiry` | 데이터 세트를 삭제할 예약된 날짜 및 시간입니다. |
-| `updatedAt` | 만료가 마지막으로 업데이트된 시간의 타임스탬프입니다. |
-| `updatedBy` | 만료 기간을 마지막으로 업데이트한 사용자입니다. |
-
-{style=&quot;table-layout:auto&quot;}
-
-## 데이터 세트 만료 기록 검색
-
-쿼리 매개 변수를 사용하여 특정 데이터 세트 만료 내역을 조회할 수 있습니다 `include=history` 조회 요청에서. 그 결과에는 데이터 세트 만료 작성, 적용된 모든 업데이트 및 취소 또는 실행(해당되는 경우)에 대한 정보가 포함됩니다.
+쿼리 매개 변수를 사용하여 특정 데이터 집합의 만료 상태 내역을 조회할 수 있습니다 `include=history` 조회 요청에서. 그 결과에는 데이터 세트 만료 작성, 적용된 모든 업데이트 및 취소 또는 실행(해당되는 경우)에 대한 정보가 포함됩니다.
 
 **API 형식**
 
 ```http
-GET /ttl/{TTL_ID}?include=history
+GET /ttl/{DATASET_ID}?include=history
 ```
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{TTL_ID}` | 조회하려는 기록 데이터 세트 만료의 ID입니다. |
+| `{DATASET_ID}` | 만료 내역을 조회하려는 데이터 세트의 ID입니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -365,7 +319,7 @@ GET /ttl/{TTL_ID}?include=history
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/core/hygiene/ttl/5b020a27e7040801dedbf46e?include=history \
+  https://platform.adobe.io/data/core/hygiene/ttl/62759f2ede9e601b63a2ee14?include=history \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -378,8 +332,12 @@ curl -X GET \
 
 ```json
 {
-  "ttlId": "SD5cfd7a11b25543a9bcd9ef647db3d8df",
+  "workorderId": "SD5cfd7a11b25543a9bcd9ef647db3d8df",
   "datasetId": "62759f2ede9e601b63a2ee14",
+  "datasetName": "Example Dataset",
+  "sandboxName": "prod",
+  "displayName": "Expiration Request 123",
+  "description": "Expiration Request 123 Description",
   "imsOrg": "{ORG_ID}",
   "status": "cancelled",
   "expiry": "2022-05-09T23:47:30.071186Z",
@@ -410,8 +368,12 @@ curl -X GET \
 
 | 속성 | 설명 |
 | --- | --- |
-| `ttlId` | 데이터 세트 만료의 ID입니다. |
+| `workorderId` | 데이터 세트 만료의 ID입니다. |
 | `datasetId` | 이 만료가 적용되는 데이터 세트의 ID입니다. |
+| `datasetName` | 이 만료가 적용되는 데이터 세트에 대한 표시 이름입니다. |
+| `sandboxName` | 대상 데이터 세트에 있는 샌드박스의 이름입니다. |
+| `displayName` | 만료 요청에 대한 표시 이름입니다. |
+| `description` | 만료 요청에 대한 설명입니다. |
 | `imsOrg` | 조직의 ID입니다. |
 | `history` | 만료에 대한 업데이트 기록을 객체 배열로서 나열하고 각 객체에는 `status`, `expiry`, `updatedAt`, 및 `updatedBy` 업데이트 시 만료에 대한 속성입니다. |
 
@@ -427,8 +389,11 @@ curl -X GET \
 | --- | --- | --- |
 | `size` | 반환할 최대 만료 수를 나타내는 1과 100 사이의 정수입니다. 기본값은 25입니다. | `size=50` |
 | `page` | 반환할 만료 페이지를 나타내는 정수입니다. | `page=3` |
+| `orgId` | 조직 ID가 매개 변수의 값과 일치하는 데이터 세트 만료로 일치합니다. 이 값은 기본적으로 `x-gw-ims-org-id` 요청이 서비스 토큰을 제공하지 않는 한, 머리글 및 은 무시됩니다. | `orgId=885737B25DC460C50A49411B@AdobeOrg` |
 | `status` | 쉼표로 구분된 상태 목록입니다. 포함된 경우 응답은 현재 상태가 나열된 데이터 세트 만료와 일치합니다. | `status=pending,cancelled` |
 | `author` | 만료와 일치하는 값 `created_by` 은 검색 문자열과 일치합니다. 검색 문자열이 `LIKE` 또는 `NOT LIKE`을 지정하면 나머지 항목은 SQL 검색 패턴으로 처리됩니다. 그렇지 않으면 전체 검색 문자열이 페이지의 전체 콘텐츠와 정확히 일치해야 하는 리터럴 문자열로 처리됩니다 `created_by` 필드. | `author=LIKE %john%` |
+| `sandboxName` | 샌드박스 이름이 인수와 정확히 일치하는 데이터 세트 만료와 일치합니다. 기본값은 요청의 샌드박스 이름입니다. `x-sandbox-name` 헤더. 사용 `sandboxName=*` 모든 샌드박스에서 데이터 세트 만료를 포함하려면 다음을 수행하십시오. | `sandboxName=dev1` |
+| `datasetId` | 특정 데이터 세트에 적용되는 만료와 일치합니다. | `datasetId=62b3925ff20f8e1b990a7434` |
 | `createdDate` | 지정된 시간에 시작하여 24시간 창에 생성된 만료와 일치합니다.<br><br>시간이 없는 날짜(예: `2021-12-07`)은 해당 날짜의 시작 부분에 있는 날짜/시간을 나타냅니다. 따라서, `createdDate=2021-12-07` 은(는) 2021년 12월 7일에 만료로 설정됩니다. `00:00:00` through `23:59:59.999999999` (UTC). | `createdDate=2021-12-07` |
 | `createdFromDate` | 표시된 시간에 또는 이후에 생성된 만료와 일치합니다. | `createdFromDate=2021-12-07T00:00:00Z` |
 | `createdToDate` | 표시된 시간에 또는 그 전에 생성된 만료와 일치합니다. | `createdToDate=2021-12-07T23:59:59.999999999Z` |
