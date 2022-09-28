@@ -2,10 +2,10 @@
 title: Adobe Experience Platform Web SDK Extension 릴리스 노트
 description: Adobe Experience Platform 웹 SDK 태그 확장
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 4e80588777e1c5f334e15533c7c44623a0cd2b64
+source-git-commit: bfdb25e853c16ca38c69d777362681a4b3b06a2f
 workflow-type: tm+mt
-source-wordcount: '1426'
-ht-degree: 43%
+source-wordcount: '1466'
+ht-degree: 42%
 
 ---
 
@@ -13,6 +13,14 @@ ht-degree: 43%
 # Adobe Experience Platform Web SDK 확장 릴리스 노트
 
 이 문서에서는 Adobe Experience Platform 웹 SDK 태그 확장에 대한 릴리스 노트를 다룹니다. SDK 자체에 대한 최신 릴리스 노트는 [Platform Web SDK 릴리스 노트](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
+
+## 버전 2.14.0 - 2022년 9월 28일
+
+* 새로 추가됨 `targetMigrationEnabled` 페이지 전체 마이그레이션별로 페이지를 활성화하는 구성입니다.
+* 하이브리드 서버-클라이언트 구현을 활성화하는 응답 적용 작업을 추가했습니다.
+* 높은 엔트로피 사용자 에이전트 클라이언트 힌트 컨텍스트 옵션이 추가되었습니다.
+
+Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.13.0을 포함합니다.
 
 ## 버전 2.13.0 - 2022년 6월 29일
 
