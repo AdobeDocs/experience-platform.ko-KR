@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 쿼리 서비스 도움말
 breadcrumb-title: Query Service 안내서
 user-guide-description: 표준 SQL을 사용하여 플랫폼 데이터 레이크에서 데이터를 쿼리합니다.
 feature: Queries
-source-git-commit: 490a24df5ef127ba4ff6727d0d1cd5e0b381f447
+source-git-commit: f1f7bef6bcac5abfaa01f10849f41a55fef797e5
 workflow-type: tm+mt
-source-wordcount: '206'
+source-wordcount: '208'
 ht-degree: 17%
 
 ---
@@ -58,6 +58,7 @@ ht-degree: 17%
    - [스파크 SQL 함수](sql/spark-sql-functions.md)
    - [메타데이터 명령](sql/metadata.md)
    - [준비된 설명](sql/prepared-statements.md)
+   - [데이터 집합 샘플](sql/dataset-samples.md)
 - 클라이언트를 Query Service에 연결 {#clients}
    - [클라이언트 연결 개요](clients/overview.md)
    - [SSL 모드](./clients/ssl-modes.md)
