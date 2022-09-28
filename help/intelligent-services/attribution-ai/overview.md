@@ -6,16 +6,16 @@ topic-legacy: Attribution AI
 description: Attribution AI는 전환 이벤트로 연결되는 터치포인트에 크레딧을 적용하는 데 사용됩니다. 이를 통해 마케터는 고객 여정 전반에서 각 개별 마케팅 터치포인트의 마케팅 효과를 수량화할 수 있습니다. 터치포인트의 예로는 디스플레이 광고 노출, 이메일 전송, 이메일 열기, 유료 검색 클릭 수가 있습니다.
 landing-page-description: Attribution AI는 전환 이벤트로 연결되는 터치포인트에 크레딧을 적용하는 데 사용됩니다. 이를 통해 마케터는 고객 여정 전반에서 각 개별 마케팅 터치포인트의 마케팅 효과를 수량화할 수 있습니다.
 exl-id: a5991b08-217a-4b39-9948-d28eadea7ded
-source-git-commit: a71da02b7cef5870bc9ca689a47c25098b2297b8
+source-git-commit: 6c0e001419dc78d4ff87bebd0604c7add07b635f
 workflow-type: tm+mt
-source-wordcount: '499'
-ht-degree: 36%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
 # Attribution AI 개요
 
-Attribution AI은 지능형 서비스의 일부로서 멀티 채널, 알고리즘 기반의 어트리뷰션 서비스로, 지정된 결과에 대한 고객 상호 작용의 영향과 점진적 효과를 계산합니다. 마케터는 Attribution AI를 통해 고객 여정의 각 단계에서 개별 고객과의 인터랙션이 미치는 영향을 파악하여 마케팅 및 광고 비용을 측정하고 최적화할 수 있습니다.
+Intelligent Services의 일부인 Attribution AI은 지정된 결과에 대한 고객 상호 작용의 영향과 점진적 효과를 계산하는 다중 채널 알고리즘 속성 서비스입니다. 마케터는 Attribution AI을 통해 고객 여정의 각 단계에서 개별 고객과의 상호 작용이 미치는 영향을 파악하여 마케팅 및 광고 비용을 측정하고 최적화할 수 있습니다.
 
 ## Attribution AI 이해
 

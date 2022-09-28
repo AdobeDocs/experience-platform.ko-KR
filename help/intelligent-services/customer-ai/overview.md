@@ -4,26 +4,26 @@ solution: Experience Platform, Real-time Customer Data Platform
 feature: Customer AI
 title: 고객 AI 개요
 topic-legacy: Customer AI Overview
-description: 고객 AI는 규모에 따라 개별 프로필에 대한 이탈 및 전환과 같은 사용자 지정 성향 점수를 생성하는 데 사용됩니다. 비즈니스 요구 사항을 머신 러닝 문제로 변환하거나 알고리즘을 선택하거나 교육 또는 배포하지 않아도 됩니다.
-landing-page-description: 고객 AI는 규모에 따라 개별 프로필에 대한 이탈 및 전환과 같은 사용자 지정 성향 점수를 생성하는 데 사용됩니다.
+description: 고객 AI는 규모에 따라 개별 프로필에 대한 이탈 및 전환과 같은 사용자 정의 성향 점수를 생성하는 데 사용됩니다. 비즈니스 요구 사항을 머신 러닝 문제로 변환하거나 알고리즘을 선택하거나 교육 또는 배포하지 않아도 됩니다.
+landing-page-description: 고객 AI는 규모에 따라 개별 프로필에 대한 이탈 및 전환과 같은 사용자 정의 성향 점수를 생성하는 데 사용됩니다.
 exl-id: 3e668103-e2a2-4ce6-a40a-8029a6aaa8dd
-source-git-commit: 62188f56861dd021db7b13325f622323644af8e0
+source-git-commit: 6c0e001419dc78d4ff87bebd0604c7add07b635f
 workflow-type: tm+mt
-source-wordcount: '553'
-ht-degree: 26%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
 
 # 고객 AI 개요
 
-Customer AI : Intelligent Services의 일부로, 마케터는 설명을 통해 개별 수준에서 고객 예측을 생성할 수 있는 기능을 제공합니다.
+Customer AI는 Intelligent Services의 일부로 마케터에게 개별 수준에서 고객 예측을 생성할 수 있는 기능을 제공합니다.
 
 영향력 있는 요소를 통해 고객 AI는 고객이 무엇을 할 수 있고 왜 하는지 알려 줄 수 있습니다. 또한 마케터는 고객 AI 예측 및 통찰력을 활용하여 가장 적절한 오퍼와 메시지를 제공함으로써 고객 경험을 개인화할 수 있습니다.
 
 ## 고객 AI 이해
 
-고객 AI는 규모에 따라 개별 프로필에 대한 이탈 및 전환과 같은 사용자 지정 성향 점수를 생성하는 데 사용됩니다. 비즈니스 요구 사항을 머신 러닝 문제로 변환하거나 알고리즘을 선택하거나 교육 또는 배포하지 않아도 됩니다.
+고객 AI는 규모에 따라 개별 프로필에 대한 이탈 및 전환과 같은 사용자 정의 성향 점수를 생성하는 데 사용됩니다. 비즈니스 요구 사항을 머신 러닝 문제로 변환하거나 알고리즘을 선택하거나 교육 또는 배포하지 않아도 됩니다.
 
 고객 AI는 다음과 같은 용도로 빌드되어 있습니다.
 
