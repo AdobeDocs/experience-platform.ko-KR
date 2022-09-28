@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 소스 커넥터 도움말
 breadcrumb-title: Source Connectors 안내서
 user-guide-description: 다양한 소스 또는 구조에서 데이터를 수집하고 레이블을 지정하며 기존에 수집한 데이터를 향상시킬 수 있습니다.
 feature: Sources
-source-git-commit: 47a9ce5211d3dabe427ad1e545dc12181a84b644
+source-git-commit: ae6ec330ce62024a0eccec0dbc5c29e9a4645de2
 workflow-type: tm+mt
-source-wordcount: '831'
+source-wordcount: '837'
 ht-degree: 12%
 
 ---
@@ -191,6 +191,7 @@ ht-degree: 12%
       - [프로토콜 데이터 수집](tutorials/api/collect/protocols.md)
       - [스트리밍 데이터 수집](tutorials/api/collect/streaming.md)
    - [온디맨드 수집](tutorials/api/on-demand-ingestion.md)
+   - [소스 수준에서 데이터 필터링](tutorials/api/filter.md)
    - [데이터 흐름 모니터링](tutorials/api/monitor.md)
    - [계정 업데이트](tutorials/api/update.md)
    - [데이터 흐름 업데이트](tutorials/api/update-dataflows.md)
