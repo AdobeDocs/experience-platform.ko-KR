@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform 릴리스 노트 - 2022년 9월
 description: Adobe Experience Platform에 대한 2022년 9월 릴리스 노트입니다.
-source-git-commit: 61b3799a4d8c8b6682babd85b6f50a7e69778553
+source-git-commit: 5f79b10306f74db75b25654ca51969ea69e38299
 workflow-type: tm+mt
-source-wordcount: '2326'
+source-wordcount: '2539'
 ht-degree: 5%
 
 ---
@@ -22,9 +22,11 @@ Adobe Experience Platform의 기존 기능 업데이트:
 
 - [[!DNL Artificial Intelligence and Machine Learning Services]](#ai-and-ml-services)
 - [감사 로그](#audit-logs)
+- [[!DNL Dashboards]](#dashboards)
 - [데이터 수집](#data-collection)
 - [XDM(경험 데이터 모델)](#xdm)
 - [ID 서비스](#identity-service)
+- [쿼리 서비스](#query-service)
 - [소스](#sources)
 
 ## 속성 기반 액세스 제어 {#abac}
@@ -106,7 +108,17 @@ Experience Platform을 사용하면 다양한 서비스 및 기능에 대한 사
 
 Platform에서 감사 로그에 의해 추적되는 다양한 리소스 특정 이벤트 유형에 대한 자세한 내용은 [감사 로그 개요](../../landing/governance-privacy-security/audit-logs/overview.md).
 
-## 데이터 수집
+## [!DNL Dashboards] {#dashboards}
+
+Adobe Experience Platform은 일별 스냅샷 중에 캡처된 대로 조직의 데이터에 대한 중요한 통찰력을 볼 수 있는 여러 개의 대시보드를 제공합니다.
+
+| 기능 | 설명 |
+| --- | --- |
+| 사용 중인 레이블 | 위젯 라이브러리에서 볼 때 사용 중 레이블은 대시보드에 기존 위젯이 있는지 쉽게 식별합니다. 따라서 원할 경우 동일한 위젯을 두 번 이상 추가할 수 있지만, 중복을 피하기가 쉽습니다. |
+
+자세한 내용은 [!DNL Dashboards]를 보려면 [[!DNL Dashboards] 개요](../../dashboards/home.md).
+
+## 데이터 수집 {#data-collection}
 
 Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수집하고 Adobe Experience Platform Edge Network로 전송하여 Adobe 또는 비Adobe 대상으로 보강, 변환 및 배포할 수 있는 기술 세트를 제공합니다.
 
@@ -178,6 +190,19 @@ Adobe Experience Platform Identity 서비스를 사용하면 장치 및 시스�
 | 데이터 집합 삭제 지원 | 이제 ID 서비스는 를 통해 요청할 때 데이터 세트 삭제를 지원합니다 [카탈로그 서비스 API](https://developer.adobe.com/experience-platform-apis/references/catalog/), UI 또는 데이터 위생입니다. 안내서 읽기 [UI에서 데이터 세트 삭제](../../catalog/datasets/user-guide.md#delete-a-dataset) 추가 정보. |
 
 ID 서비스에 대한 자세한 내용은 [ID 서비스 개요](../../identity-service/home.md).
+
+## 쿼리 서비스 {#query-service}
+
+Query Service를 사용하면 표준 SQL을 사용하여 Adobe Experience Platform에서 데이터를 쿼리할 수 있습니다 [!DNL Data Lake]. 에서 모든 데이터 세트에 가입할 수 있습니다 [!DNL Data Lake] 쿼리 결과를 보고 또는 Data Science Workspace에 사용하거나 실시간 고객 프로필에 수집하기 위한 새로운 데이터 세트로 캡처합니다.
+
+**업데이트된 기능**
+
+| 기능 | 설명 |
+| --- | --- |
+| 경고 구독 API | Adobe Experience Platform Query Service를 사용하면 애드혹 쿼리 및 예약된 쿼리 모두에 대한 경고를 구독할 수 있습니다. 경고는 이메일, Platform UI 또는 두 가지 모두로 수신할 수 있습니다. 현재 쿼리 경고는 [쿼리 서비스 API](https://developer.adobe.com/experience-platform-apis/references/query-service/). |
+| 데이터 집합 샘플 | 쿼리 서비스 데이터 세트 샘플을 사용하면 쿼리 정확성 비용 측면에서 처리 시간이 크게 단축된 빅데이터에 대해 예비 쿼리를 수행할 수 있습니다. |
+
+자세한 내용은 [!DNL Query Service]를 보려면 [[!DNL Query Service] 개요](../../query-service/home.md).
 
 ## 소스 {#sources}
 
