@@ -5,9 +5,9 @@ title: UI에서 열거형 필드 및 제안 값 정의
 description: Experience Platform 사용자 인터페이스에서 문자열 필드에 대한 열거형 및 제안 값을 정의하는 방법을 알아봅니다.
 topic-legacy: user guide
 exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
-source-git-commit: e515e32588991e468429c9256533732d04a4339f
+source-git-commit: ea27486a198f5248eeb5348ce20865bc41c2339a
 workflow-type: tm+mt
-source-wordcount: '1295'
+source-wordcount: '1207'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ When [새 필드 정의](./overview.md#define) Adobe Experience Platform 사용�
 
 ![UI에서 선택한 추천 값 옵션을 보여주는 이미지](../../images/ui/fields/enum/suggested-add-row.png)
 
-아래에 **[!UICONTROL 표시 이름]** 열에서 세분화 UI에 표시할 값에 대해 친숙한 이름을 제공합니다. 제안된 값을 추가하려면 **[!UICONTROL 행 추가]** 필요에 따라 프로세스를 다시 반복하고 반복합니다. 이전에 추가한 행을 제거하려면 삭제 아이콘(![삭제 아이콘 이미지](../../images/ui/fields/enum/remove-icon.png))을 클릭하여 제품에서 사용할 수 있습니다.
+아래에 **[!UICONTROL 표시 이름]** 열에서 세분화 UI에 표시할 값에 대해 친숙한 이름을 제공합니다. 제안된 값을 추가하려면 **[!UICONTROL 행 추가]** 필요에 따라 프로세스를 다시 반복하고 반복합니다. 이전에 추가한 행을 제거하려면 ![삭제 아이콘](../../images/ui/fields/enum/remove-icon.png) 문제의 행 옆에 있습니다.
 
 완료되면 을 선택합니다 **[!UICONTROL 적용]** 스키마에 변경 사항을 적용하려면
 
@@ -61,25 +61,25 @@ When [새 필드 정의](./overview.md#define) Adobe Experience Platform 사용�
 
 ### 표준 필드에 대해 제안된 값 관리
 
-표준 XDM 구성 요소의 일부 필드에는 다음과 같이 고유한 제안된 값이 포함되어 있습니다 `eventType` 에서 [[!UICONTROL XDM ExperienceEvent] 클래스](../../classes/experienceevent.md). 스키마에서 이러한 필드를 사용할 때 사용 가능한 전환을 사용하여 어떤 기존 제안된 값을 사용할 것인지 제어할 수 있습니다.
+표준 XDM 구성 요소의 일부 필드에는 다음과 같이 고유한 제안된 값이 포함되어 있습니다 `eventType` 에서 [[!UICONTROL XDM ExperienceEvent] 클래스](../../classes/experienceevent.md). 표준 필드에 대해 추가적인 제안 값을 생성할 수 있지만, 조직에서 정의하지 않은 제안된 값은 수정하거나 제거할 수 없습니다. UI에서 표준 필드를 볼 때 해당 제안된 값이 표시되지만 읽기 전용입니다.
 
 ![UI의 문자열 필드에 대해 채워진 열거형 값 및 표시 이름을 표시하는 이미지](../../images/ui/fields/enum/suggested-standard.png)
 
-사용자 지정 필드와 유사하게 **[!UICONTROL 행 추가]** 표준 필드에 대해 고유한 제안된 값을 추가하려면 다음을 수행합니다.
+표준 필드에 대해 제안된 새 값을 추가하려면 **[!UICONTROL 행 추가]**. 이전에 조직에서 추가한 제안 값을 제거하려면 을 선택합니다 ![삭제 아이콘](../../images/ui/fields/enum/remove-icon.png) 문제의 행 옆에 있습니다.
 
-![UI의 문자열 필드에 대해 채워진 열거형 값 및 표시 이름을 표시하는 이미지](../../images/ui/fields/enum/suggested-standard.png)
+![UI의 문자열 필드에 대해 채워진 열거형 값 및 표시 이름을 표시하는 이미지](../../images/ui/fields/enum/suggested-standard-add.png)
 
-### 표준 필드에 대해 제안된 값 제거
+<!-- ### Removing suggested values for standard fields
 
-정의한 제안된 값만 표준 필드에서 제거할 수 있습니다. 기존의 제안된 값은 더 이상 세그멘테이션 드롭다운에 표시되지 않도록 비활성화할 수 있지만 완전히 제거할 수 없습니다.
+Only suggested values that you define can be removed from a standard field. Existing suggested values can be disabled so that they no longer appear in the segmentation dropdown, but they cannot be removed outright.
 
-예를 들어, 표준 값을 위해 제안되는 프로필 스키마를 고려하십시오 `person.gender` 필드를 사용할 수 없습니다.
+For example, consider a profile schema where the a suggested value for the standard `person.gender` field is disabled:
 
-![UI의 문자열 필드에 대해 채워진 열거형 값 및 표시 이름을 표시하는 이미지](../../images/ui/fields/enum/standard-enum-disabled.png)
+![Image showing the enum values and display names filled out for the string field in the UI](../../images/ui/fields/enum/standard-enum-disabled.png)
 
-이 예에서는 표시 이름 &quot;[!UICONTROL 비특정]이제 세그먼테이션 드롭다운 목록에 &quot;이 표시되지 않습니다. 하지만 값은 `non_specific` 는 여전히 열거 필드 목록의 일부이며, 따라서 여전히 수집이 허용됩니다. 즉, 필드를 덜 제한적으로 만드는 변경 사항만 허용하는 원칙에 위배되므로 표준 필드에 대한 실제 열거형 값을 비활성화할 수 없습니다.
+In this example, the display name "[!UICONTROL Non-specific]" is now disabled from being shown in the segmentation dropdown list. However, the value `non_specific` is still part of the list of enumerated fields and is therefore still allowed on ingestion. In other words, you cannot disable the actual enum value for the standard field as it would go against the principle of only allowing changes that make a field less restrictive.
 
-자세한 내용은 [아래 섹션](#evolution) 기존 스키마 필드에 대한 열거형 및 제안된 값을 업데이트하는 규칙에 대한 자세한 내용은 다음을 참조하십시오.
+See the [section below](#evolution) for more information on the rules for updating enums and suggested values for existing schema fields. -->
 
 ## 열거형 및 제안된 값에 대한 진행 규칙 {#evolution}
 
@@ -109,6 +109,13 @@ When [새 필드 정의](./overview.md#define) Adobe Experience Platform 사용�
 
 * 추가적인 추천 값은 **추가됨** 노조에서
 * 두 개 이상의 스키마에 동일한 추가 제안된 값이 정의되어 있으면 해당 값은 다음과 같습니다 **병합됨** 노조에서 즉, 병합한 후 동일한 제안된 값이 두 번 표시되지 않습니다.
+
+## 유효성 검사 제한 사항
+
+현재 시스템 제한 사항으로 인해, 섭취 중에 시스템에서 열거형의 유효성을 검사하지 않는 두 가지 경우가 있습니다.
+
+1. 열거형은 [배열 필드](./array.md).
+1. 열거형은 스키마 계층 구조에서 두 개 이상의 수준에서 정의됩니다.
 
 ## 다음 단계
 

@@ -1,9 +1,9 @@
 ---
-title: Adobe Experience Platform 릴리스 노트 - 2022년 9월
-description: Adobe Experience Platform에 대한 2022년 9월 릴리스 노트입니다.
-source-git-commit: eb146769ac78312f83a8336e4eac578f8301abc8
+title: Adobe Experience Platform 릴리스 정보
+description: Adobe Experience Platform에 대한 최신 릴리스 노트입니다.
+source-git-commit: bbc9df59f91b6de12e902a71f7b9d054735cad7b
 workflow-type: tm+mt
-source-wordcount: '3080'
+source-wordcount: '3079'
 ht-degree: 5%
 
 ---
