@@ -2,9 +2,9 @@
 title: 소비자 레코드 삭제
 description: Adobe Experience Platform UI에서 소비자 레코드를 삭제하는 방법을 알아봅니다.
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: 425298ec28517bba4eca1bf0966fd3b205fce764
+source-git-commit: e4cc78591d0d3b4abd660956b1263092697d63d5
 workflow-type: tm+mt
-source-wordcount: '1131'
+source-wordcount: '1136'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->소비자 삭제 요청은 Adobe Healthcare Shield 또는 Privacy Shield를 구입한 조직에만 사용할 수 있습니다.
+>Adobe Experience Platform의 데이터 위생 기능은 현재 Adobe Healthcare Shield 또는 Privacy Shield를 구입한 조직에서만 사용할 수 있습니다.
 
 다음 [[!UICONTROL 데이터 위생] 작업 영역](./overview.md) Adobe Experience Platform UI에서 ID 서비스 및 실시간 고객 프로필에 참여하는 소비자 레코드를 삭제할 수 있습니다.
 

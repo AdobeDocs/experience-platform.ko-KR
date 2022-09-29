@@ -2,9 +2,9 @@
 title: 데이터 위생 작업 주문 찾아보기
 description: Adobe Experience Platform 사용자 인터페이스에서 기존 데이터 위생 작업 순서를 보고 관리하는 방법을 알아봅니다.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: 425298ec28517bba4eca1bf0966fd3b205fce764
+source-git-commit: e4cc78591d0d3b4abd660956b1263092697d63d5
 workflow-type: tm+mt
-source-wordcount: '857'
+source-wordcount: '863'
 ht-degree: 1%
 
 ---
@@ -16,6 +16,10 @@ ht-degree: 1%
 >title="작업 순서 ID"
 >abstract="시스템에 데이터 위생 요청이 전송되면 요청된 작업을 실행하기 위한 작업 순서가 생성됩니다. 즉, 작업 순서는 현재 상태 및 기타 관련 세부 사항을 포함하는 특정 데이터 위생 프로세스를 나타냅니다. 각 작업 순서는 작성 시 자동으로 고유한 ID가 할당됩니다."
 >text="See the data hygiene UI guide to learn more."
+
+>[!IMPORTANT]
+>
+>Adobe Experience Platform의 데이터 위생 기능은 현재 Adobe Healthcare Shield 또는 Privacy Shield를 구입한 조직에서만 사용할 수 있습니다.
 
 시스템에 데이터 위생 요청이 전송되면 요청된 작업을 실행하기 위한 작업 순서가 생성됩니다. 작업 순서는 예약된 데이터 세트 만료와 같은 특정 데이터 위생 프로세스를 나타냅니다. 여기에는 현재 상태 및 기타 관련 세부 정보가 포함됩니다.
 
@@ -30,10 +34,6 @@ ht-degree: 1%
 목록에는 한 번에 하나의 카테고리에 대한 작업 주문만 표시됩니다. 선택 **[!UICONTROL 소비자]** 소비자 삭제 작업 목록을 보려면 **[!UICONTROL 데이터 집합]** 예약된 데이터 세트 만료 목록을 보려면
 
 ![이미지를 보여주는 이미지 [!UICONTROL 데이터 집합] 탭](../images/ui/browse/dataset-tab.png)
-
->[!IMPORTANT]
->
->소비자 삭제는 Adobe Healthcare Shield 또는 Privacy Shield를 구입한 조직에만 사용할 수 있습니다.
 
 단계 아이콘( )을 선택합니다![단계 아이콘 이미지](../images/ui/browse/funnel-icon.png))을 클릭하여 표시된 작업 주문에 대한 필터 목록을 확인합니다.
 
