@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform에 대한 최신 릴리스 노트입니다.
-source-git-commit: bbc9df59f91b6de12e902a71f7b9d054735cad7b
+source-git-commit: ac60e664d7708d9ac6772c61d13b7c1c44e92321
 workflow-type: tm+mt
-source-wordcount: '3079'
+source-wordcount: '3106'
 ht-degree: 5%
 
 ---
@@ -118,7 +118,7 @@ Adobe Experience Platform은 일별 스냅샷 중에 캡처된 대로 조직의 
 | 사용 중인 레이블 | 위젯 라이브러리에서 볼 때 사용 중 레이블은 대시보드에 기존 위젯이 있는지 쉽게 식별합니다. 따라서 원할 경우 동일한 위젯을 두 번 이상 추가할 수 있지만, 중복을 피하기가 쉽습니다. |
 | 사용자 정의 대시보드 | 사용자 정의 대시보드는 사용자 정의 대시보드를 만들고 관리할 수 있도록 하여 통찰력을 높이고 시각화를 사용자 지정하는 데 도움이 됩니다. 사용자 정의 대시보드를 사용하여 맞춤형 위젯을 생성, 추가 및 편집하여 조직과 관련된 주요 지표를 시각화할 수 있습니다. 다음 문서를 참조하십시오. [기능 안내서](../../dashboards/user-defined-dashboards.md) 추가 정보 |
 | 고객 데이터 플랫폼 통찰력 데이터 모델 | CDP(Customer Data Platform) 인사이트 데이터 모델 기능은 다양한 프로필, 대상 및 세그멘테이션 위젯에 대한 통찰력을 제공하는 데이터 모델 및 SQL을 표시합니다. 이러한 SQL 쿼리 템플릿을 사용자 지정하여 마케팅 및 주요 성능 지표 사용 사례를 위한 CDP 보고서를 만들 수 있습니다. 그런 다음 이러한 통찰력을 사용자 정의 대시보드에 대한 사용자 지정 위젯으로 사용할 수 있습니다. 다음 문서를 참조하십시오. [CDP 통찰력 데이터 모델 기능 안내서](../../dashboards/cdp-insights-data-model.md) 추가 정보 |
-| 대상 겹치기 보고서 위젯 | 이 위젯은 둘 다 사용할 수 있습니다 [!UICONTROL 프로필] 및 [!UICONTROL 세그먼트] 대시보드 . 이 보고서는 선택한 세그먼트에 대해 가장 높은 겹치기 비율 또는 가장 낮은 겹치기 비율 별로 순위가 지정된 대상 목록을 제공합니다. 에서 [!UICONTROL 프로필] 대시보드 사용 가능한 모든 세그먼트의 병합 정책별로 대상 겹침을 필터링하고 볼 수 있습니다. 다음 [!UICONTROL 세그먼트] 대시보드를 사용하면 특정 세그먼트별로 겹치는 대상을 필터링할 수 있습니다.<br>이 분석을 사용하여 새롭고 고성능 세그먼트를 작성하고 동일한 대상을 다른 대상으로 보내지 않습니다. 또한 이 보고서를 통해 숨겨진 인사이트를 식별하여 세그멘테이션을 향상하거나 추적할 고유 프로필을 찾을 수 있습니다. |
+| 대상 겹치기 보고서 위젯 | 이 위젯은 둘 다 사용할 수 있습니다 [!UICONTROL 프로필] 및 [!UICONTROL 세그먼트] 대시보드 . 이 보고서는 선택한 세그먼트에 대해 가장 높은 겹치기 비율 또는 가장 낮은 겹치기 비율 별로 순위가 지정된 대상 목록을 제공합니다. 에서 [!UICONTROL 프로필] 대시보드 사용 가능한 모든 세그먼트의 병합 정책별로 대상 겹침을 필터링하고 볼 수 있습니다. 다음 [!UICONTROL 세그먼트] 대시보드를 사용하면 특정 세그먼트별로 겹치는 대상을 필터링할 수 있습니다.<br>이 분석을 사용하여 새롭고 고성능 세그먼트를 작성하고 동일한 대상을 다른 대상으로 보내지 않습니다. 또한 이 보고서를 통해 숨겨진 인사이트를 식별하여 세그멘테이션을 향상하거나 추적할 고유 프로필을 찾을 수 있습니다. 각각 읽기 [프로필](../../dashboards/guides/profiles.md#audience-overlap-report) 및 [세그먼트](../../dashboards/guides/segments.md#audience-overlap-report) 위젯 가이드로 자세히 알아보십시오. |
 
 자세한 내용은 [!DNL Dashboards]를 보려면 [[!DNL Dashboards] 개요](../../dashboards/home.md).
 
@@ -238,8 +238,8 @@ Query Service를 사용하면 표준 SQL을 사용하여 Adobe Experience Platfo
 
 | 기능 | 설명 |
 | --- | --- |
-| 경고 구독 API | Adobe Experience Platform Query Service를 사용하면 애드혹 쿼리 및 예약된 쿼리 모두에 대한 경고를 구독할 수 있습니다. 경고는 이메일, Platform UI 또는 두 가지 모두로 수신할 수 있습니다. 현재 쿼리 경고는 [쿼리 서비스 API](https://developer.adobe.com/experience-platform-apis/references/query-service/). |
-| 데이터 집합 샘플 | 쿼리 서비스 데이터 세트 샘플을 사용하면 쿼리 정확성 비용 측면에서 처리 시간이 크게 단축된 빅데이터에 대해 예비 쿼리를 수행할 수 있습니다. |
+| 경고 구독 API | Adobe Experience Platform Query Service를 사용하면 애드혹 쿼리 및 예약된 쿼리 모두에 대한 경고를 구독할 수 있습니다. 경고는 이메일, Platform UI 또는 두 가지 모두로 수신할 수 있습니다. 현재 쿼리 경고는 [쿼리 서비스 API](https://developer.adobe.com/experience-platform-apis/references/query-service/). 자세한 내용은 [쿼리 경고 설명서](../../query-service/api/alert-subscriptions.md) 추가 정보 |
+| 데이터 집합 샘플 | 쿼리 서비스 데이터 세트 샘플을 사용하면 쿼리 정확성 비용 측면에서 처리 시간이 크게 단축된 빅데이터에 대해 예비 쿼리를 수행할 수 있습니다. 자세한 내용은 [데이터 세트 샘플 안내서](../../query-service/sql/dataset-samples.md) 추가 정보 |
 
 자세한 내용은 [!DNL Query Service]를 보려면 [[!DNL Query Service] 개요](../../query-service/home.md).
 
