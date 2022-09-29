@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform 릴리스 노트 - 2022년 9월
 description: Adobe Experience Platform에 대한 2022년 9월 릴리스 노트입니다.
-source-git-commit: c9abf2d0ef2b8a9a9727224fdbb4c784dd041158
+source-git-commit: 5c6bb56b4b3fa63c285aa62b0a7b68ed269654b2
 workflow-type: tm+mt
-source-wordcount: '2959'
+source-wordcount: '3042'
 ht-degree: 5%
 
 ---
@@ -126,14 +126,19 @@ Adobe Experience Platform은 일별 스냅샷 중에 캡처된 대로 조직의 
 
 Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수집하고 Adobe Experience Platform Edge Network로 전송하여 Adobe 또는 비Adobe 대상으로 보강, 변환 및 배포할 수 있는 기술 세트를 제공합니다.
 
-**업데이트된 기능**
+**새로운 기능 또는 업데이트된 기능**
 
 | 기능 | 설명 |
 | --- | --- |
 | 플랫폼 UI에서 왼쪽 탐색 통합 | 이전에 데이터 수집 UI에 배타적이었던 모든 기능(태그, 이벤트 전달 및 데이터 세트 포함)은 이제 Experience Platform의 왼쪽 탐색 영역에서 카테고리 아래에 있습니다 **[!UICONTROL 데이터 수집]**. 따라서 Platform에서 데이터 수집 기능을 사용할 때 UI 간을 전환할 필요가 없습니다. |
 | 태그 및 이벤트 전달의 사용자 속성 | 사용 가능한 목록 작성 시 [!UICONTROL 속성] 태그 및 이벤트 전달에서, 이제 나열된 각 속성이 마지막으로 업데이트된 시간과 업데이트를 수행한 사용자를 표시합니다. |
+| [[!DNL User-Agent Client Hints] 웹 SDK에서](../../edge/fundamentals/user-agent-client-hints.md) | 이제 웹 SDK에서 를 지원합니다 [[!DNL User-Agent Client Hints]](https://developer.chrome.com/docs/privacy-sandbox/user-agent/). 클라이언트 힌트를 사용하면 웹 사이트 소유자는 [!DNL User-Agent] 하지만 개인 정보 보호 방식으로 사용됩니다. |
+| [웹 SDK 페이지별 마이그레이션](../../edge/home.md#migrating-to-web-sdk) | 이제 다음과 같은 다른 Experience Cloud 라이브러리에서 기존 웹 속성을 마이그레이션할 수 있습니다 [!DNL at.js], 웹 SDK에 한 번에 한 페이지 이렇게 하면 모든 페이지를 한 번에 마이그레이션하지 않고도 웹 SDK 마이그레이션에 단계적인 접근 방식이 가능합니다. |
 
 {style=&quot;table-layout:auto&quot;}
+
+<!-- | [[!DNL Adobe Journey Optimizer] support for datastreams](../../edge/datastreams/overview.md#aep)| The Adobe Experience Platform service for datastreams now supports [!DNL Adobe Journey Optimizer]. This option allows you to use web and app-based inbound channels in [!DNL Adobe Journey Optimizer].|
+-->
 
 Platform의 데이터 수집에 대한 자세한 내용은 [데이터 수집 개요](../../collection/home.md).
 
