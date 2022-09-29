@@ -5,9 +5,9 @@ topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platform 사용자 인터페이스 내의 사용자 지정 액세스 가능성 솔루션에 대해 자세히 알아보십시오.
 exl-id: cb5ad99e-8a95-4c9e-aae6-1d0036ecf052
-source-git-commit: e30e04453bd814de103cceb14e3580992436923d
+source-git-commit: 7f4202c9c4a132ed9d74c495f6608357eac8003f
 workflow-type: tm+mt
-source-wordcount: '1568'
+source-wordcount: '1615'
 ht-degree: 0%
 
 ---
@@ -132,6 +132,10 @@ Experience Platform 사용자 인터페이스 내의 모든 테이블은 키보�
 * 세그먼트 빌더 UI는 키보드 탐색을 통해 액세스할 수 있습니다.
 * 화면 판독기는 머리글에 대한 마크업 태그를 인식해야 하며 제목과 해당 수준을 함께 발표할 수 있습니다.
 * 다른 보조 기술은 개요 또는 대체 보기를 표시하기 위해 적절하게 코딩된 제목을 사용하여 페이지의 시각적 표시를 변경할 수 있습니다.
+
+이제 세그먼트 빌더 캔버스의 왼쪽 및 오른쪽 레일을 축소하거나 확장하여 더 많은 화면 공간을 확보할 수 있습니다. 이 기능은 200% 확대/축소에 전체 기능 기능을 제공하므로 특히 유용합니다.
+
+![왼쪽 및 오른쪽 레일 공개 위젯이 강조 표시된 세그먼트 빌더 캔버스.](images/left-right-rail-expandables.png)
 
 ## 쿼리 서비스 편집기
 
