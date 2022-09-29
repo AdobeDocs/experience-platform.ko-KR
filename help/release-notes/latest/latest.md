@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform 릴리스 노트 - 2022년 9월
 description: Adobe Experience Platform에 대한 2022년 9월 릴리스 노트입니다.
-source-git-commit: 64c376b52aa7f7827c19194d677d8a1648c04195
+source-git-commit: c9abf2d0ef2b8a9a9727224fdbb4c784dd041158
 workflow-type: tm+mt
-source-wordcount: '2776'
+source-wordcount: '2959'
 ht-degree: 5%
 
 ---
@@ -24,6 +24,7 @@ Adobe Experience Platform의 기존 기능 업데이트:
 - [감사 로그](#audit-logs)
 - [[!DNL Dashboards]](#dashboards)
 - [데이터 수집](#data-collection)
+- [대상](#destinations)
 - [XDM(경험 데이터 모델)](#xdm)
 - [ID 서비스](#identity-service)
 - [쿼리 서비스](#query-service)
@@ -135,6 +136,34 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 {style=&quot;table-layout:auto&quot;}
 
 Platform의 데이터 수집에 대한 자세한 내용은 [데이터 수집 개요](../../collection/home.md).
+
+## [!DNL Destinations] {#destinations}
+
+[!DNL Destinations] 는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과의 사전 구축된 통합입니다. 대상을 사용하여 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례에 대해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
+
+**새로운 기능 또는 업데이트된 기능**
+
+| 기능 | 설명 |
+| ----------- | ----------- |
+| 대상 SDK | 이제 Destination SDK은 일괄 처리(또는 파일 기반)를 만들거나 개인 대상을 만드는 파트너와 고객을 완벽하게 지원합니다. 자세한 내용은 다음 설명서 페이지를 참조하십시오. <ul><li>[Destination SDK 개요](/help/destinations/destination-sdk/overview.md)</li><li>[파일 기반 대상 구성](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md)</li><li>[파일 기반 대상에 대한 파일 형식 옵션 구성](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md)</li><li>[파일 기반 대상 테스트](/help/destinations/destination-sdk/file-based-destination-testing-overview.md)</li></ul> |
+
+{style=&quot;table-layout:auto&quot;}
+
+**새 대상 또는 업데이트된 대상**
+
+| 대상 | 설명 |
+| ----------- | ----------- |
+| [[!DNL Salesforce CRM]](../..//destinations/catalog/crm/salesforce.md) | 다음 [!DNL Salesforce CRM] 연락처 및 리드 업데이트를 모두 지원하고 더 빠른 업데이트를 위한 성능 개선 사항을 지원하도록 대상이 업데이트되었습니다. |
+
+{style=&quot;table-layout:auto&quot;}
+
+**새 설명서 또는 업데이트된 설명서**
+
+| 설명서 | 설명 |
+| ----------- | ----------- |
+| 대상 흐름 서비스 API 설명서 | 다음 [대상 API 참조 설명서](https://developer.adobe.com/experience-platform-apis/references/destinations/) 파일 기반 대상에서 작업을 수행하는 방법에 대한 지침을 포함하도록 가 업데이트되었습니다. 나중에 스트리밍 대상에 대한 작업이 추가됩니다. |
+
+대상에 대한 자세한 내용은 [대상 개요](../../destinations/home.md).
 
 ## XDM(경험 데이터 모델) {#xdm}
 
