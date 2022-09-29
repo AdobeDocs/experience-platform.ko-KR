@@ -3,9 +3,9 @@ keywords: Experience Platform;사용자 인터페이스;UI;대시보드;대시�
 title: 대시보드 위젯 라이브러리 개요
 description: 이 안내서에서는 Adobe Experience Platform의 위젯 라이브러리에 액세스하기 위한 단계별 지침을 제공합니다.
 exl-id: 1d33e3ea-a8a8-4a09-8bd9-2e04ecedebdc
-source-git-commit: 7f226a37996ab5e1fef432c6007d7d488f84ded6
+source-git-commit: 09f212741321f17372d52fee507a96d2d2834e85
 workflow-type: tm+mt
-source-wordcount: '458'
+source-wordcount: '516'
 ht-degree: 0%
 
 ---
@@ -41,6 +41,12 @@ Adobe Experience Platform 사용자 인터페이스 내에서는 여러 대시�
 에서 [!UICONTROL 위젯 라이브러리]사용 가능한 표준 또는 사용자 지정 위젯 목록에서 위젯을 선택합니다. 위젯 모서리에 있는 확인 표시는 선택 사항을 나타냅니다.
 
 ![선택한 위젯과 강조 표시된 확인 표시가 있는 위젯 라이브러리.](../images/customization/confirm-selected-widget-to-add.png)
+
+### 사용 중인 레이블 {#in-use-label}
+
+대시보드에 이미 추가된 위젯에는 [!UICONTROL 사용 중] 위젯 라이브러리에서 볼 때 첨부된 레이블입니다. 이 레이블은 중복을 방지하기 위해 이미 대시보드에 추가된 위젯을 강조 표시합니다. 그러나 원할 경우 동일한 위젯을 두 번 이상 추가할 수 있습니다.
+
+![사용 중인 레이블이 강조 표시된 위젯 라이브러리.](../images/customization/in-use-label.png)
 
 필요한 위젯을 모두 선택하면 **[!UICONTROL 위젯 추가]** 선택을 확인하고 위젯을 대시보드에 추가합니다.
 
