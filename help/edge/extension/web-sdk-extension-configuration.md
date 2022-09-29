@@ -2,7 +2,7 @@
 title: Adobe Experience Platform 웹 SDK 확장 구성
 description: UI에서 Adobe Experience Platform Web SDK 태그 확장을 구성하는 방법입니다.
 exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 3ab02646968222c0ad09c1d8ce8fda04de7aaac6
 workflow-type: tm+mt
 source-wordcount: '1041'
 ht-degree: 6%
@@ -19,15 +19,15 @@ Adobe Experience Platform Web SDK 태그 확장은 Adobe Experience Platform Edg
 
 속성에 대해 Platform 웹 SDK 확장이 이미 설치되어 있는 경우 UI에서 속성을 열고 을 선택합니다. **[!UICONTROL 확장]** 탭. Platform Web SDK에서 **[!UICONTROL 구성]**.
 
-![](../images/extension/overview/configure.png)
+![](../assets/extension/overview/configure.png)
 
 확장을 아직 설치하지 않은 경우 **[!UICONTROL 카탈로그]** 탭. 사용 가능한 확장 목록에서 Platform Web SDK 확장을 찾아 을 선택합니다. **[!UICONTROL 설치]**.
 
-![](../images/extension/overview/install.png)
+![](../assets/extension/overview/install.png)
 
 두 경우 모두 Platform Web SDK용 구성 페이지에 도달합니다. 아래 섹션에서는 확장의 구성 옵션에 대해 설명합니다.
 
-![](../images/extension/overview/config-screen.png)
+![](../assets/extension/overview/config-screen.png)
 
 ## 일반 구성 옵션
 
@@ -56,7 +56,7 @@ Adobe Experience Platform Edge Network에 요청이 전송되면 서버측 구�
 
 ## [!UICONTROL 개인정보 보호]
 
-![](../images/extension/overview/privacy.png)
+![](../assets/extension/overview/privacy.png)
 
 다음 [!UICONTROL 개인 정보 보호] 섹션에서 SDK가 웹 사이트에서 사용자 동의 신호를 처리하는 방법을 구성할 수 있습니다. 특히, 다른 명시적 동의 기본 설정이 제공되지 않은 경우 사용자에 가정되는 기본 동의 수준을 선택할 수 있습니다. 기본 동의 수준이 사용자 프로필에 저장되지 않습니다. 다음 표에서는 각 옵션에 포함되는 사항을 설명합니다.
 
@@ -71,7 +71,7 @@ Adobe Experience Platform Edge Network에 요청이 전송되면 서버측 구�
 
 ## [!UICONTROL 신원]
 
-![](../images/extension/overview/identity.png)
+![](../assets/extension/overview/identity.png)
 
 ### [!UICONTROL VisitorAPI에서 ECID 마이그레이션]
 
@@ -83,13 +83,13 @@ Adobe Experience Platform Edge Network에 요청이 전송되면 서버측 구�
 
 ## [!UICONTROL 개인화]
 
-![](../images/extension/overview/personalization.png)
+![](../assets/extension/overview/personalization.png)
 
 개인화된 컨텐츠가 로드되는 동안 사이트에서 특정 부분을 숨기려면 사전 숨김 스타일 편집기에서 숨길 요소를 지정할 수 있습니다. 제공된 기본 코드 조각 사전 숨김을 복사하여 내부에 붙여넣을 수 있습니다 `<head>`HTML 사이트의 요소입니다.
 
 ## [!UICONTROL 데이터 수집]
 
-![](../images/extension/overview/data-collection.png)
+![](../assets/extension/overview/data-collection.png)
 
 ### [!UICONTROL 콜백 함수]
 
@@ -105,7 +105,7 @@ SDK는 자동으로 링크 클릭 정보를 수집할 수 있습니다. 기본�
 
 ## [!UICONTROL 고급 설정]
 
-![](../images/extension/overview/advanced-settings.png)
+![](../assets/extension/overview/advanced-settings.png)
 
 ### [!UICONTROL 에지 기본 경로]
 

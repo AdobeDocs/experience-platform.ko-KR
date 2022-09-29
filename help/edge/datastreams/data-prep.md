@@ -2,7 +2,7 @@
 title: 데이터 수집을 위한 데이터 준비
 description: Adobe Experience Platform Web 및 Mobile SDK에 대한 데이터 스트림을 구성할 때 데이터를 XDM(Experience Data Model) 이벤트 스키마에 매핑하는 방법을 알아봅니다.
 exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 3ab02646968222c0ad09c1d8ce8fda04de7aaac6
 workflow-type: tm+mt
 source-wordcount: '914'
 ht-degree: 1%
@@ -132,7 +132,7 @@ XDM 개체 데이터 요소에서 속성을 캡처하려면 동일한 규칙이 
 
 옵션을 선택하여 개체를 파일로 업로드하거나 원시 개체를 제공된 텍스트 상자에 대신 붙여넣을 수 있습니다. JSON이 유효하면 오른쪽 패널에 미리 보기 스키마가 표시됩니다. 선택 **[!UICONTROL 다음]** 계속하십시오.
 
-![예상 수신 데이터의 JSON 샘플](../images/datastreams/data-prep/select-data.png)
+![예상 수신 데이터의 JSON 샘플](../assets/datastreams/data-prep/select-data.png)
 
 ## [!UICONTROL 매핑]
 
@@ -145,25 +145,25 @@ XDM 개체 데이터 요소에서 속성을 캡처하려면 동일한 규칙이 
 
 시작하려면 다음을 선택합니다 **[!UICONTROL 새 매핑 추가]** 새 매핑 행을 만들려면
 
-![새 매핑 추가](../images/datastreams/data-prep/add-new-mapping.png)
+![새 매핑 추가](../assets/datastreams/data-prep/add-new-mapping.png)
 
-소스 아이콘(![소스 아이콘](../images/datastreams/data-prep/source-icon.png))이고 표시되는 대화 상자에서 제공된 캔버스에 매핑할 소스 필드를 선택합니다. 필드를 선택한 후에는 **[!UICONTROL 선택]** 계속하려면 클릭하십시오.
+소스 아이콘(![소스 아이콘](../assets/datastreams/data-prep/source-icon.png))이고 표시되는 대화 상자에서 제공된 캔버스에 매핑할 소스 필드를 선택합니다. 필드를 선택한 후에는 **[!UICONTROL 선택]** 계속하려면 클릭하십시오.
 
-![소스 스키마에 매핑할 필드 선택](../images/datastreams/data-prep/source-mapping.png)
+![소스 스키마에 매핑할 필드 선택](../assets/datastreams/data-prep/source-mapping.png)
 
-다음으로 스키마 아이콘(![스키마 아이콘](../images/datastreams/data-prep/schema-icon.png))를 클릭하여 target 이벤트 스키마에 대한 유사한 대화 상자를 엽니다. 확인을 하기 전에 데이터를 매핑할 필드를 선택합니다 **[!UICONTROL 선택]**.
+다음으로 스키마 아이콘(![스키마 아이콘](../assets/datastreams/data-prep/schema-icon.png))를 클릭하여 target 이벤트 스키마에 대한 유사한 대화 상자를 엽니다. 확인을 하기 전에 데이터를 매핑할 필드를 선택합니다 **[!UICONTROL 선택]**.
 
-![대상 스키마에 매핑할 필드 선택](../images/datastreams/data-prep/target-mapping.png)
+![대상 스키마에 매핑할 필드 선택](../assets/datastreams/data-prep/target-mapping.png)
 
 완료된 필드 매핑이 표시된 채 매핑 페이지가 다시 나타납니다. 다음 **[!UICONTROL 매핑 진행률]** 섹션에 성공적으로 매핑된 총 필드 수를 반영하도록 업데이트했습니다.
 
-![진행 상태가 반영된 필드를 매핑했습니다.](../images/datastreams/data-prep/field-mapped.png)
+![진행 상태가 반영된 필드를 매핑했습니다.](../assets/datastreams/data-prep/field-mapped.png)
 
 >[!TIP]
 >
 >소스 필드의 객체 배열을 다른 객체 배열(대상 필드)에 매핑하려면 를 추가합니다 `[*]` 소스 및 대상 필드 경로의 배열 이름 뒤에 놓습니다.
 >
->![배열 개체 매핑](../images/datastreams/data-prep/array-object-mapping.png)
+>![배열 개체 매핑](../assets/datastreams/data-prep/array-object-mapping.png)
 
 ### 기존 매핑 규칙 가져오기 {#import-mapping}
 
@@ -175,11 +175,11 @@ XDM 개체 데이터 요소에서 속성을 캡처하려면 동일한 규칙이 
 
 시작하려면 다음을 선택합니다 **[!UICONTROL 가져오기 매핑]**.
 
-![이미지를 보여주는 이미지 [!UICONTROL 가져오기 매핑] 선택한 단추](../images/datastreams/data-prep/import-mapping-button.png)
+![이미지를 보여주는 이미지 [!UICONTROL 가져오기 매핑] 선택한 단추](../assets/datastreams/data-prep/import-mapping-button.png)
 
 표시되는 대화 상자에서 매핑 규칙을 가져오려는 데이터 스트림을 선택합니다. 데이터 스트림을 선택하면 **[!UICONTROL 미리 보기]**.
 
-![선택한 기존 데이터 스트림을 보여주는 이미지](../images/datastreams/data-prep/select-mapping-rules.png)
+![선택한 기존 데이터 스트림을 보여주는 이미지](../assets/datastreams/data-prep/select-mapping-rules.png)
 
 >[!NOTE]
 >
@@ -187,7 +187,7 @@ XDM 개체 데이터 요소에서 속성을 캡처하려면 동일한 규칙이 
 
 다음 화면에서는 선택한 데이터 스트림에 대해 저장된 매핑 규칙의 미리 보기를 보여줍니다. 표시된 매핑이 예상과 같은지 확인한 다음 **[!UICONTROL 가져오기]** 매핑을 확인하고 새 데이터 스트림에 추가합니다.
 
-![가져올 매핑 규칙을 보여주는 이미지](../images/datastreams/data-prep/import-mapping-rules.png)
+![가져올 매핑 규칙을 보여주는 이미지](../assets/datastreams/data-prep/import-mapping-rules.png)
 
 >[!NOTE]
 >
@@ -199,7 +199,7 @@ XDM 개체 데이터 요소에서 속성을 캡처하려면 동일한 규칙이 
 
 필수 필드 수가 0에 도달하고 매핑에 만족하면 을(를) 선택합니다 **[!UICONTROL 저장]** 변경 사항을 확정하려면 다음을 수행하십시오.
 
-![매핑 완료](../images/datastreams/data-prep/mapping-complete.png)
+![매핑 완료](../assets/datastreams/data-prep/mapping-complete.png)
 
 ## 다음 단계
 

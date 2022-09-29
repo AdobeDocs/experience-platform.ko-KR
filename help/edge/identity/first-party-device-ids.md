@@ -2,7 +2,7 @@
 title: Platform Web SDK의 자사 장치 ID
 description: Adobe Experience Platform Web SDK에 대한 자사 장치 ID(FPID)를 구성하는 방법을 알아봅니다.
 exl-id: c3b17175-8a57-43c9-b8a0-b874fecca952
-source-git-commit: 700dea7ed7f35797b3a3fe4bf09f5e266577363b
+source-git-commit: f5270d1d1b9697173bc60d16c94c54d001ae175a
 workflow-type: tm+mt
 source-wordcount: '1776'
 ht-degree: 0%
@@ -209,7 +209,7 @@ ID는 다음 순서로 우선 순위가 지정됩니다.
 
 이 프로세스를 설명하는 데 도움이 되도록 이전에 사이트를 방문한 고객이 참여하는 시나리오와, FPID 마이그레이션이 Adobe 솔루션에서 해당 고객이 식별되는 방식에 어떤 영향을 미칠 것인지 생각해 보십시오.
 
-![FPID로 마이그레이션한 후 방문 간에 고객의 ID 값이 업데이트되는 방식을 보여주는 다이어그램](../images/identity/tracking/visits.png)
+![FPID로 마이그레이션한 후 방문 간에 고객의 ID 값이 업데이트되는 방식을 보여주는 다이어그램](../assets/identity/tracking/visits.png)
 
 | 방문 | 설명 |
 | --- | --- |
