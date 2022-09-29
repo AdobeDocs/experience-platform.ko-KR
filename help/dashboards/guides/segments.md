@@ -4,9 +4,9 @@ title: 세그먼트 대시보드 안내서
 description: Adobe Experience Platform은 조직이 만든 세그먼트에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 7f226a37996ab5e1fef432c6007d7d488f84ded6
+source-git-commit: 18288130b98e13d824273426a860d97722c434de
 workflow-type: tm+mt
-source-wordcount: '1791'
+source-wordcount: '2094'
 ht-degree: 0%
 
 ---
@@ -85,6 +85,7 @@ Adobe은 세그먼트와 관련된 다양한 지표를 시각화하는 데 사�
 * [[!UICONTROL 대상 크기 변경 트렌드]](#audience-size-change-trend)
 * [[!UICONTROL ID별 대상 크기 트렌드]](#audience-size-trend-by-identity)
 * [[!UICONTROL 대상 겹치기]](#audience-overlap)
+* [[!UICONTROL 대상 겹치기 보고서]](#audience-overlap-report)
 * [[!UICONTROL ID 겹치기]](#identity-overlap)
 * [[!UICONTROL ID별 프로필]](#profiles-by-identity)
 * [[!UICONTROL 예약된 활동]](#scheduled-activations)
@@ -147,14 +148,33 @@ Adobe은 세그먼트와 관련된 다양한 지표를 시각화하는 데 사�
 
 ![대상 겹치기 위젯입니다.](../images/segments/audience-overlap.png)
 
-<!-- * [[!UICONTROL Audience overlap report]](#audience-overlap-report) -->
-<!-- ### [!UICONTROL Audience overlap report] {#audience-overlap-report} -->
+### [!UICONTROL 대상 겹치기 보고서] {#audience-overlap-report}
 
-<!-- View an ordered list of audiences by Highest or Lowest overlap percentages. -->
+이 위젯은 특정 세그먼트에 대한 대상 겹치기 데이터를 집계합니다. 화면 상단의 드롭다운 메뉴에서 선택한 세그먼트에 대해 가장 높은 겹치기 백분율에서 가장 낮은 겹치기 비율 순으로 순위가 지정된 5개 대상 목록이 제공됩니다. 명확하게 확인하기 위해 선택한 세그먼트가 [!UICONTROL 세그먼트 이름] 열. Audience Overlap Analysis는 [!UICONTROL 세그먼트 B 이름] 열. 겹치는 백분율은 세 번째 열에 12개의 소수 자리까지 정확히 제공됩니다.
 
-<!-- ![The Audience overlap report widget.]() -->
+대상 겹치기 보고서는 새롭고 고성능 세그먼트를 만드는 데 도움이 됩니다. 높은 백분율을 관찰하면 대상을 표시하지 않고, 동일한 대상을 다른 대상으로 보내지 않을 수 있습니다. 또한 개선된 세그멘테이션에 도움이 될 수 있는 숨겨진 인사이트를 식별하는 데 도움이 됩니다. 겹치는 비율이 낮으면 추적할 고유 프로필을 찾는 데 도움이 됩니다.
 
-<!-- https://jira.corp.adobe.com/browse/PLAT-125511 -->
+선택 **[!UICONTROL 자세히 보기]** 더 많은 세그먼트 겹치기 데이터가 포함된 전체 화면 대화 상자를 열려면 다음을 수행하십시오.
+
+![대상 겹치기 보고서 위젯과 보기가 더 강조 표시되어 있습니다.](../images/segments/audience-overlap-report.png)
+
+다음 [!UICONTROL 대상 겹치기 보고서] 대화 상자가 나타납니다. 이 대화 상자에는 6개의 열로 분류된 최대 50개의 대상 겹치기 분석 행이 포함될 수 있습니다. 설정 아이콘( )을 선택합니다![설정 아이콘.](../images/segments/settings-icon.png))를 클릭하여 테이블에서 열을 제거하거나 추가합니다.
+
+![대상 겹치기 보고서 대화 상자.](../images/segments/audience-overlap-report-dialog.png)
+
+>[!NOTE]
+>
+>을(를) 선택합니다 **[!UICONTROL 겹치기]** 열 머리글 : 결과의 등급을 가장 높은 항목부터 가장 낮은 항목순으로 또는 가장 낮은 항목순으로 변경합니다.
+
+전체 보고서를 PDF 형식으로 다운로드하려면 옵션 메뉴(**`...`**) 뒤에 **[!UICONTROL 다운로드]**.
+
+![대상 중복 보고서 대화 상자는 강조 표시된 줄임표 및 다운로드 선택 사항과 관련이 있습니다.](../images/segments/segments-audience-overlap-report-dialog-download.png)
+
+보고서에서 행을 선택하여 중복 분석의 벤 다이어그램을 엽니다. 벤 다이어그램의 섹션을 마우스로 가리키면 대화 상자에서 프로필 수를 볼 수 있습니다.
+
+![대상 겹치기 보고서 대화 상자는 벤 다이어그램과 강조 표시된 행이 있는 것입니다.](../images/segments/audience-overlap-report-dialog-venn.png)
+
+선택 **[!UICONTROL 닫기]** 로 돌아가기 [!UICONTROL 세그먼트] 대시보드 .
 
 ### [!UICONTROL ID 겹치기] {#identity-overlap}
 

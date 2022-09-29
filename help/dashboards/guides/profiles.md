@@ -4,9 +4,9 @@ title: 프로필 대시보드 안내서
 description: Adobe Experience Platform은 조직의 실시간 고객 프로필 데이터에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 9a4257ef6f9e32feeb2bb90bc7dd46b0d533cb35
+source-git-commit: 18288130b98e13d824273426a860d97722c434de
 workflow-type: tm+mt
-source-wordcount: '3859'
+source-wordcount: '4154'
 ht-degree: 1%
 
 ---
@@ -123,6 +123,7 @@ Adobe은 프로필 데이터와 관련된 다양한 지표를 시각화하는 �
 * [[!UICONTROL 대상 상태에 매핑된 대상]](#audiences-mapped-to-destination-status)
 * [[!UICONTROL 대상 크기]](#audiences-size)
 * [[!UICONTROL 병합 정책별 대상 겹치기]](#audience-overlap-by-merge-policy)
+* [[!UICONTROL 대상 겹치기 보고서]](#audience-overlap-report)
 
 ### [!UICONTROL 프로필 수] {#profile-count}
 
@@ -302,12 +303,33 @@ The visualization allows you to monitor the overall health of audiences within A
 
 <!-- ![The Audiences change trend widget.]() -->
 
-<!-- * [[!UICONTROL Audience overlap report]](#audience-overlap-report) -->
-<!-- ### [!UICONTROL Audience overlap report] {#audience-overlap-report} -->
+### [!UICONTROL 대상 겹치기 보고서] {#audience-overlap-report}
 
-<!-- View an ordered list of audiences by highest or lowest overlap percentages by selected merge policy. -->
-<!-- ![The Audiences overlap report widget.]() -->
-<!-- https://jira.corp.adobe.com/browse/PLAT-126851 -->
+이 위젯은 병합 정책으로 필터링된 사용 가능한 모든 세그먼트의 대상 겹치기 데이터를 집계합니다. 화면 상단의 드롭다운 메뉴에서 선택한 병합 정책에 대해 가장 높은 겹치기 백분율에서 가장 낮은 겹치기 비율 순으로 순위가 지정된 5개 대상 목록이 제공됩니다. 분석된 두 세그먼트는 [!UICONTROL 세그먼트 이름] 및 [!UICONTROL 세그먼트 B 이름] 열. 겹치는 백분율은 세 번째 열에 12개의 소수 자리까지 정확히 제공됩니다.
+
+대상 겹치기 보고서는 새롭고 고성능 세그먼트를 만드는 데 도움이 됩니다. 높은 백분율을 관찰하면 대상을 표시하지 않고, 동일한 대상을 다른 대상으로 보내지 않을 수 있습니다. 또한 개선된 세그멘테이션에 도움이 될 수 있는 숨겨진 인사이트를 식별하는 데 도움이 됩니다. 겹치는 비율이 낮으면 추적할 고유 프로필을 찾는 데 도움이 됩니다.
+
+선택 **[!UICONTROL 자세히 보기]** 더 많은 대상 겹치기 데이터가 포함된 전체 화면 대화 상자를 열려면 다음을 수행하십시오.
+
+![대상 겹치기 보고서 위젯과 보기가 더 강조 표시되어 있습니다.](../images/profiles/profiles-audience-overlap-report.png)
+
+다음 [!UICONTROL 대상 겹치기 보고서] 대화 상자가 나타납니다. 이 대화 상자에는 6개의 열로 분류된 최대 50개의 대상 겹치기 분석 행이 포함될 수 있습니다. 설정 아이콘( )을 선택합니다![설정 아이콘.](../images/profiles/settings-icon.png))를 클릭하여 테이블에서 열을 제거하거나 추가합니다.
+
+![대상 겹치기 보고서 대화 상자.](../images/profiles/profiles-audience-overlap-report-dialog.png)
+
+>[!NOTE]
+>
+>을(를) 선택합니다 **[!UICONTROL 겹치기]** 열 머리글 : 결과의 등급을 가장 높은 항목부터 가장 낮은 항목순으로 또는 가장 낮은 항목순으로 변경합니다.
+
+전체 보고서를 PDF 형식으로 다운로드하려면 옵션 메뉴(**`...`**) 뒤에 **[!UICONTROL 다운로드]**.
+
+![대상 중복 보고서 대화 상자는 강조 표시된 줄임표 및 다운로드 선택 사항과 관련이 있습니다.](../images/profiles/profiles-audience-overlap-report-dialog-download.png)
+
+보고서에서 행을 선택하여 중복 분석의 벤 다이어그램을 엽니다. 벤 다이어그램의 섹션을 마우스로 가리키면 대화 상자에서 프로필 수를 볼 수 있습니다.
+
+![대상 겹치기 보고서 대화 상자는 벤 다이어그램과 강조 표시된 행이 있는 것입니다.](../images/profiles/profiles-audience-overlap-report-dialog-venn.png)
+
+선택 **[!UICONTROL 닫기]** 로 돌아가기 [!UICONTROL 프로필] 대시보드 .
 
 ### [!UICONTROL 대상 상태에 매핑된 대상] {#audiences-mapped-to-destination-status}
 
