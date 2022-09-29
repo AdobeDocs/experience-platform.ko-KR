@@ -2,9 +2,9 @@
 description: Destination SDK을 사용하여 사용자 지정 파일 형식 옵션 및 사용자 지정 파일 이름 구성으로 DLZ(데이터 랜딩 영역) 대상을 구성하는 방법을 알아봅니다.
 title: 사용자 지정 파일 형식 옵션 및 사용자 지정 파일 이름 구성으로 DLZ(데이터 랜딩 영역) 대상을 구성합니다.
 exl-id: 3a5c1188-c2b5-4e81-ae41-9fff797f08a6
-source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
+source-git-commit: 29962e07aa50c97b6098f4c892facf48508d28cf
 workflow-type: tm+mt
-source-wordcount: '763'
+source-wordcount: '739'
 ht-degree: 0%
 
 ---
@@ -12,10 +12,6 @@ ht-degree: 0%
 # 구성 [!DNL Data Landing Zone (DLZ)] 사용자 지정 파일 형식 옵션 및 사용자 지정 파일 이름 구성이 있는 대상
 
 ## 개요 {#overview}
-
->[!IMPORTANT]
->
->Adobe Experience Platform Destination SDK을 사용하여 파일 기반 대상을 구성하는 기능은 현재 베타에 있습니다. 설명서 및 기능은 변경될 수 있습니다.
 
 이 페이지에서는 Destination SDK을 사용하여 [!DNL Data Landing Zone] 사용자 지정 대상 [파일 서식 옵션](../../server-and-file-configuration.md#file-configuration) 및 사용자 지정 [파일 이름 구성](../../file-based-destination-configuration.md#file-name-configuration).
 

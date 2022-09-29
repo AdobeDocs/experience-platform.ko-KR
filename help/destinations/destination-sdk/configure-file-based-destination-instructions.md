@@ -2,9 +2,9 @@
 description: 이 페이지에서는 Destination SDK을 사용하여 파일 기반 대상을 구성하는 단계를 나열하고 설명합니다.
 title: Destination SDK을 사용하여 파일 기반 대상 구성
 exl-id: 84d73452-88e4-4e0f-8fc7-d0d8e10f9ff5
-source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
+source-git-commit: 29962e07aa50c97b6098f4c892facf48508d28cf
 workflow-type: tm+mt
-source-wordcount: '542'
+source-wordcount: '516'
 ht-degree: 0%
 
 ---
@@ -12,10 +12,6 @@ ht-degree: 0%
 # Destination SDK을 사용하여 파일 기반 대상 구성
 
 ## 개요 {#overview}
-
->[!IMPORTANT]
->
->Adobe Experience Platform Destination SDK을 사용하여 파일 기반 대상을 구성하고 제출하는 기능은 현재 베타에 있습니다. 설명서 및 기능은 변경될 수 있습니다.
 
 이 페이지에서는에서 정보를 사용하는 방법을 설명합니다. [대상 SDK의 구성 옵션](./configuration-options.md) 및 를 사용하여 다음을 구성할 수 있습니다 [파일 기반 대상](../../destinations/destination-types.md#file-based). 단계는 아래의 순차적 순서로 수행됩니다.
 

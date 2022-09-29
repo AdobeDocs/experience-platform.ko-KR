@@ -2,9 +2,9 @@
 description: 파일 기반 대상의 서버 및 파일 구성 사양은 /destination-servers 엔드포인트를 통해 Adobe Experience Platform Destination SDK에서 구성할 수 있습니다.
 title: 파일 기반 대상 서버 사양을 위한 구성 옵션
 exl-id: 56434e36-0458-45d9-961d-f6505de998f7
-source-git-commit: 5506a938253083d3dfd657a787eae20a05b1c0a9
+source-git-commit: 29962e07aa50c97b6098f4c892facf48508d28cf
 workflow-type: tm+mt
-source-wordcount: '1274'
+source-wordcount: '1248'
 ht-degree: 9%
 
 ---
@@ -12,10 +12,6 @@ ht-degree: 9%
 # 파일 기반 대상 서버 사양을 위한 서버 및 파일 구성
 
 ## 개요 {#overview}
-
->[!IMPORTANT]
->
->Adobe Experience Platform Destination SDK을 사용하여 파일 기반 대상을 구성하고 제출하는 기능은 현재 베타에 있습니다. 설명서 및 기능은 변경될 수 있습니다.
 
 이 페이지에서는 파일 기반 대상 서버에 대한 모든 서버 구성 옵션에 대해 자세히 설명하고 Experience Platform에서 대상으로 파일을 내보내는 사용자에 대한 다양한 파일 구성 옵션을 설정하는 방법을 보여 줍니다.
 

@@ -2,9 +2,9 @@
 description: 미리 정의된 파일 형식 옵션 및 사용자 지정 파일 이름 구성으로 SFTP 대상을 구성하는 방법을 Destination SDK으로 알아봅니다.
 title: 사전 정의된 파일 형식 옵션 및 사용자 지정 파일 이름 구성으로 SFTP 대상을 구성합니다.
 exl-id: 6e0fe019-7fbb-48e4-9469-6cc7fc3cb6e4
-source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
+source-git-commit: bdeebca9608e7c1ff3ae0cb1aeb444dccb78028f
 workflow-type: tm+mt
-source-wordcount: '764'
+source-wordcount: '740'
 ht-degree: 0%
 
 ---
@@ -12,10 +12,6 @@ ht-degree: 0%
 # 사전 정의된 파일 형식 옵션 및 사용자 지정 파일 이름 구성으로 SFTP 대상 구성
 
 ## 개요 {#overview}
-
->[!IMPORTANT]
->
->Adobe Experience Platform Destination SDK을 사용하여 파일 기반 대상을 구성하는 기능은 현재 베타에 있습니다. 설명서 및 기능은 변경될 수 있습니다.
 
 이 페이지에서는 Destination SDK을 사용하여 사전 정의된 기본값으로 SFTP 대상을 구성하는 방법을 설명합니다 [파일 서식 옵션](../../server-and-file-configuration.md#file-configuration) 및 사용자 지정 [파일 이름 구성](../../file-based-destination-configuration.md#file-name-configuration).
 
