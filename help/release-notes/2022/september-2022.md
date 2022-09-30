@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform 릴리스 노트 - 2022년 9월
 description: Adobe Experience Platform에 대한 2022년 9월 릴리스 노트입니다.
-source-git-commit: ea4d17459dcd7abd981260fe6733320b08af15e8
+source-git-commit: 81c17a6ea07efbbea91e0d918d52ec96e0335152
 workflow-type: tm+mt
-source-wordcount: '3125'
+source-wordcount: '3128'
 ht-degree: 4%
 
 ---
@@ -158,7 +158,7 @@ Platform의 데이터 수집에 대한 자세한 내용은 [데이터 수집 개
 
 | 대상 | 설명 |
 | ----------- | ----------- |
-| [[!DNL Adobe Campaign Managed Cloud Services]](../../destinations/catalog/email-marketing/adobe-campaign-managed-services.md) | Adobe Campaign Managed Cloud Services은 크로스 채널 고객 경험을 디자인하고 시각적 캠페인 운영, 실시간 상호 작용 관리 및 크로스 채널 실행을 위한 환경을 제공할 수 있는 플랫폼을 제공합니다. [Campaign으로 시작](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html). 이 통합은 Adobe Campaign 버전 8.4 이상에서 작동합니다. 버전 8.4는 2022년 9월 30일에 릴리스될 예정입니다. |
+| [[!DNL Adobe Campaign Managed Cloud Services]](../../destinations/catalog/email-marketing/adobe-campaign-managed-services.md) | Adobe Campaign Managed Cloud Services은 크로스 채널 고객 경험을 디자인하고 시각적 캠페인 운영, 실시간 상호 작용 관리 및 크로스 채널 실행을 위한 환경을 제공할 수 있는 플랫폼을 제공합니다. [Campaign으로 시작](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html). 이 통합은 [Adobe Campaign 버전 8.4 이상](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html?lang=en#release-8-4-1). |
 | [[!DNL Salesforce CRM]](../../destinations/catalog/crm/salesforce.md) | 다음 [!DNL Salesforce CRM] 연락처 및 리드 업데이트를 모두 지원하고 더 빠른 업데이트를 위한 성능 개선 사항을 지원하도록 대상이 업데이트되었습니다. |
 
 {style=&quot;table-layout:auto&quot;}
