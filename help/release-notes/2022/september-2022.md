@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform 릴리스 노트 - 2022년 9월
 description: Adobe Experience Platform에 대한 2022년 9월 릴리스 노트입니다.
-source-git-commit: 45281721c6fb26c303bb820fa39f5c6ed71b55f9
+source-git-commit: 20902b6a0dce4c189f43343d9fd0a87913a0fdbf
 workflow-type: tm+mt
-source-wordcount: '3059'
+source-wordcount: '3060'
 ht-degree: 5%
 
 ---
@@ -15,7 +15,6 @@ ht-degree: 5%
 Adobe Experience Platform의 새로운 기능:
 
 - [속성 기반 액세스 제어](#abac)
-- [데이터 위생](#data-hygiene)
 
 Adobe Experience Platform의 기존 기능 업데이트:
 
@@ -23,6 +22,7 @@ Adobe Experience Platform의 기존 기능 업데이트:
 - [감사 로그](#audit-logs)
 - [[!DNL Dashboards]](#dashboards)
 - [데이터 수집](#data-collection)
+- [데이터 위생](#data-hygiene)
 - [대상](#destinations)
 - [XDM(경험 데이터 모델)](#xdm)
 - [ID 서비스](#identity-service)
@@ -45,22 +45,6 @@ Adobe Experience Platform의 기존 기능 업데이트:
 | 권한 | 권한은 관리자가 사용자 역할 및 액세스 정책을 정의하여 제품 응용 프로그램 내의 기능 및 개체에 대한 액세스 권한을 관리할 수 있는 Experience Cloud 영역입니다. 권한을 통해 역할을 만들고 관리하고, 이러한 역할에 대해 원하는 리소스 권한을 할당하고, 레이블을 활용하고 특정 플랫폼 리소스에 액세스할 수 있는 사용자 역할을 정의하는 정책을 작성할 수 있습니다. 또한 권한을 사용하여 특정 역할과 연관된 레이블, 샌드박스 및 사용자를 관리할 수도 있습니다. 자세한 내용은 [권한 UI 안내서](../../access-control/abac/ui/browse.md). |
 
 속성 기반 액세스 제어에 대한 자세한 내용은 [속성 기반 액세스 제어 개요](../../access-control/abac/overview.md). 속성 기반 액세스 제어 워크플로우에 대한 포괄적인 지침은 [특성 기반 액세스 제어 종단 안내서](../../access-control/abac/end-to-end-guide.md).
-
-## 데이터 위생 {#data-hygiene}
-
-Adobe Experience Platform은 소비자 경험을 오케스트레이션하기 위해 복잡하고 큰 데이터 작업을 관리하는 강력한 도구 세트를 제공합니다. 시간이 지나면서 시스템에 데이터를 수집하면 데이터가 예상대로 사용되고, 잘못된 데이터를 수정해야 할 때 업데이트되고, 조직 정책이 필요하다고 인정하는 경우 삭제되도록 데이터 저장소를 관리하는 것이 점점 더 중요해집니다.
-
-Adobe Experience Platform의 데이터 위생 기능을 사용하면 자동화된 데이터 세트 만료를 예약하고 id로 소비자 데이터를 프로그래밍 방식으로 삭제하여 데이터를 정리할 수 있습니다.
-
->[!IMPORTANT]
->
->데이터 위생 기능은 Adobe Healthcare Shield를 구입한 조직에서만 사용할 수 있습니다.
-
-데이터 위생을 시작하려면 다음 설명서를 참조하십시오.
-
-- [데이터 위생 개요](../../hygiene/home.md): Platform의 데이터 위생 기능에 대한 기본 사항을 살펴보십시오.
-- [[!UICONTROL 데이터 위생] UI 안내서](../../hygiene/ui/overview.md): Platform 사용자 인터페이스 내에서 데이터 세트 만료 및 소비자 삭제 요청을 예약하는 방법을 알아봅니다.
-- [데이터 위생 API 안내서](../../hygiene/api/overview.md): UI에서 수행할 수 있는 모든 데이터 위생 활동은 프로그래밍 방식으로 수행할 수도 있습니다
 
 ## [!DNL Artificial Intelligence/Machine Learning services] {#ai-and-ml-services}
 
@@ -134,6 +118,27 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 -->
 
 Platform의 데이터 수집에 대한 자세한 내용은 [데이터 수집 개요](../../collection/home.md).
+
+## 데이터 위생 {#data-hygiene}
+
+Adobe Experience Platform은 소비자 경험을 오케스트레이션하기 위해 복잡하고 큰 데이터 작업을 관리하는 강력한 도구 세트를 제공합니다. 시간이 지나면서 시스템에 데이터를 수집하면 데이터가 예상대로 사용되고, 잘못된 데이터를 수정해야 할 때 업데이트되고, 조직 정책이 필요하다고 인정하는 경우 삭제되도록 데이터 저장소를 관리하는 것이 점점 더 중요해집니다.
+
+Adobe Experience Platform의 데이터 위생 기능을 사용하면 자동화된 데이터 세트 만료를 예약하고 id로 소비자 데이터를 프로그래밍 방식으로 삭제하여 데이터를 정리할 수 있습니다.
+
+>[!IMPORTANT]
+>
+>데이터 위생 기능은 Adobe Healthcare Shield를 구입한 조직에서만 사용할 수 있습니다.
+
+**새로운 기능 또는 업데이트된 기능**
+
+| 기능 | 설명 |
+| --- | --- |
+| 업데이트된 UI 워크플로우 | 을 위한 워크플로우 [데이터 세트 만료 예약](../../hygiene/ui/dataset-expiration.md) 및 [소비자 데이터 삭제](../../hygiene/ui/delete-consumer.md) ui가 간소화되었습니다. |
+| 할당량 API 끝점 | 이제 를 호출하여 조직의 데이터 위생 프로세스에 대한 할당량 정보를 검색할 수 있습니다 [`/quota` 엔드포인트](../../hygiene/api/quota.md). |
+
+{style=&quot;table-layout:auto&quot;}
+
+플랫폼의 데이터 위생 기능에 대한 자세한 내용은 [데이터 위생 개요](../../hygiene/home.md).
 
 ## [!DNL Destinations] {#destinations}
 
