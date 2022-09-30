@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform 릴리스 노트 - 2022년 9월
 description: Adobe Experience Platform에 대한 2022년 9월 릴리스 노트입니다.
-source-git-commit: 81c17a6ea07efbbea91e0d918d52ec96e0335152
+source-git-commit: 45281721c6fb26c303bb820fa39f5c6ed71b55f9
 workflow-type: tm+mt
-source-wordcount: '3128'
-ht-degree: 4%
+source-wordcount: '3059'
+ht-degree: 5%
 
 ---
 
@@ -16,7 +16,6 @@ Adobe Experience Platform의 새로운 기능:
 
 - [속성 기반 액세스 제어](#abac)
 - [데이터 위생](#data-hygiene)
-- [[!UICONTROL 개인 정보 콘솔]](#privacy-console)
 
 Adobe Experience Platform의 기존 기능 업데이트:
 
@@ -55,19 +54,13 @@ Adobe Experience Platform의 데이터 위생 기능을 사용하면 자동화�
 
 >[!IMPORTANT]
 >
->데이터 위생 기능은 Adobe Healthcare Shield 또는 Privacy Shield를 구입한 조직에서만 사용할 수 있습니다.
+>데이터 위생 기능은 Adobe Healthcare Shield를 구입한 조직에서만 사용할 수 있습니다.
 
 데이터 위생을 시작하려면 다음 설명서를 참조하십시오.
 
 - [데이터 위생 개요](../../hygiene/home.md): Platform의 데이터 위생 기능에 대한 기본 사항을 살펴보십시오.
 - [[!UICONTROL 데이터 위생] UI 안내서](../../hygiene/ui/overview.md): Platform 사용자 인터페이스 내에서 데이터 세트 만료 및 소비자 삭제 요청을 예약하는 방법을 알아봅니다.
 - [데이터 위생 API 안내서](../../hygiene/api/overview.md): UI에서 수행할 수 있는 모든 데이터 위생 활동은 프로그래밍 방식으로 수행할 수도 있습니다
-
-## [!UICONTROL 개인 정보 콘솔] {#privacy-console}
-
-다음 [!UICONTROL 개인 정보 콘솔] Experience Platform UI의 탭에서는 다음과 같은 개인 정보 관련 기능의 주요 통찰력에 대한 대시보드 보기를 제공합니다 [Privacy Service의 데이터 주체 요청](../../privacy-service/home.md), [데이터 위생 작업 명령](../../hygiene/home.md), 및 [감사 로그](../../landing/governance-privacy-security/audit-logs/overview.md). 또한 이 콘솔에서는 일반적인 개인 정보 보호 워크플로우를 안내하는 몇 가지 제품 내 사용 사례 안내서도 제공합니다.
-
-자세한 내용은 [개인 정보 콘솔 개요](../../landing/governance-privacy-security/privacy-console.md) 를 참조하십시오.
 
 ## [!DNL Artificial Intelligence/Machine Learning services] {#ai-and-ml-services}
 

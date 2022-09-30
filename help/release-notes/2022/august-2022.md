@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 릴리스 노트 - 2022년 8월
 description: Adobe Experience Platform에 대한 2022년 8월 릴리스 노트입니다.
 exl-id: dbf1e7a3-8599-4991-8932-f57d3b1c640d
-source-git-commit: fb9fdc70aabb62cdc39888b1ff90557d8420c31b
+source-git-commit: 83149c4e6e8ea483133da4766c37886b8ebd7316
 workflow-type: tm+mt
-source-wordcount: '2137'
+source-wordcount: '2131'
 ht-degree: 7%
 
 ---
@@ -40,7 +40,7 @@ Attribution AI는 전환 이벤트로 연결되는 터치포인트에 크레딧�
 
 {style=&quot;table-layout:auto&quot;}
 
-**참고**: 추가 통지가 있을 때까지는 기존 Healthcare Shield 또는 Privacy Shield 고객에게 Attribution AI을 제공할 수 없습니다.
+**참고**: 추가 통지가 있을 때까지는 기존 Healthcare Shield 고객에게는 Attribution AI을 제공하지 않습니다.
 
 Attribution AI에 대한 자세한 내용은 [Attribution AI](../../intelligent-services/attribution-ai/overview.md) 개요.
 
@@ -56,7 +56,7 @@ Real-time Customer Data Platform에서 사용할 수 있는 고객 AI는 규모�
 
 {style=&quot;table-layout:auto&quot;}
 
-**참고**: 고객 AI는 추가 통지가 있을 때까지 기존 Healthcare Shield 또는 Privacy Shield 고객에게 제공되지 않습니다.
+**참고**: 고객 AI는 추가 통지가 있을 때까지 기존 Healthcare Shield 고객에게 제공되지 않습니다.
 
 Customer AI에 대한 자세한 내용은 [고객 AI](../../intelligent-services/customer-ai/overview.md) 개요.
 
