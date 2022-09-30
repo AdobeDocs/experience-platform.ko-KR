@@ -4,18 +4,14 @@ solution: Experience Platform
 title: 액세스 제어 정책 API 끝점
 description: 속성 기반 액세스 제어 API의 /policy 엔드포인트를 사용하면 Adobe Experience Platform에서 정책을 프로그래밍 방식으로 관리할 수 있습니다.
 exl-id: 07690f43-fdd9-4254-9324-84e6bd226743
-source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
+source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
 workflow-type: tm+mt
-source-wordcount: '1443'
+source-wordcount: '1412'
 ht-degree: 2%
 
 ---
 
 # 액세스 제어 정책 끝점
-
->[!IMPORTANT]
->
->속성 기반 액세스 제어는 현재 미국 기반 의료 고객 제한된 릴리스에서 사용할 수 있습니다. 이 기능은 완전히 릴리스되면 모든 Real-time Customer Data Platform 고객이 사용할 수 있습니다.
 
 액세스 제어 정책은 허용 및 허용되지 않는 작업을 설정하기 위해 특성을 함께 가져오는 명령문입니다. 이러한 정책은 로컬 또는 글로벌 정책일 수 있으며 다른 정책을 재정의할 수 있습니다. 다음 `/policies` 특성 기반 액세스 제어 API의 종단점을 사용하면 정책을 제어하는 규칙 및 각 제목 조건에 대한 정보를 포함하여 정책을 프로그래밍 방식으로 관리할 수 있습니다.
 

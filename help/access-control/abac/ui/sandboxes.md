@@ -3,18 +3,14 @@ keywords: Experience Platform;홈;인기 항목;액세스 제어;속성 기반 �
 title: 특성 기반 액세스 제어 샌드박스
 description: 이 문서에서는 Adobe Experience Cloud의 권한 인터페이스를 통해 샌드박스 관리에 대한 정보를 제공합니다
 exl-id: c21eb319-fc0d-442a-b778-bbfa2d6bb22d
-source-git-commit: c31855bff9d87133252c43e2f2f2fe1960c7b144
+source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
 workflow-type: tm+mt
-source-wordcount: '248'
+source-wordcount: '217'
 ht-degree: 0%
 
 ---
 
 # 샌드박스 관리
-
->[!IMPORTANT]
->
->속성 기반 액세스 제어는 현재 미국 기반 의료 고객 제한된 릴리스에서 사용할 수 있습니다. 이 기능은 완전히 릴리스되면 모든 Real-time Customer Data Platform 고객이 사용할 수 있습니다.
 
 샌드박스는 단일 Experience Platform 인스턴스 내의 가상 파티션으로, 디지털 경험 애플리케이션의 개발 프로세스와의 원활한 통합을 지원합니다. 샌드박스 내에서 수행한 모든 컨텐츠 및 작업은 해당 샌드박스에만 국한되며 다른 샌드박스에는 영향을 주지 않습니다. 샌드박스에 대한 자세한 내용은 [샌드박스 개요](../../../sandboxes/home.md).
 

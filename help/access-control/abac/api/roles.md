@@ -4,18 +4,14 @@ solution: Experience Platform
 title: 역할 API 끝점
 description: 속성 기반 액세스 제어 API의 /roles 엔드포인트를 사용하면 Adobe Experience Platform에서 역할을 프로그래밍 방식으로 관리할 수 있습니다.
 exl-id: 049f7a18-7d06-437b-8ce9-25d7090ba782
-source-git-commit: 567bfe089fd96cb08cb8ea7c90d065c804be9413
+source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
 workflow-type: tm+mt
-source-wordcount: '1614'
+source-wordcount: '1583'
 ht-degree: 3%
 
 ---
 
 # 역할 끝점
-
->[!IMPORTANT]
->
->속성 기반 액세스 제어는 현재 미국 기반 의료 고객 제한된 릴리스에서 사용할 수 있습니다. 이 기능은 완전히 릴리스되면 모든 Real-time Customer Data Platform 고객이 사용할 수 있습니다.
 
 역할은 관리자, 전문가 또는 최종 사용자가 조직의 리소스에 대한 액세스를 정의합니다. 역할 기반 액세스 제어 환경에서 사용자 액세스 프로비저닝은 일반적인 책임 및 요구 사항을 통해 그룹화됩니다. 역할에는 주어진 권한 세트가 있으며 필요한 보기 또는 쓰기 액세스 범위에 따라 조직의 구성원을 하나 이상의 역할에 할당할 수 있습니다.
 

@@ -3,18 +3,14 @@ keywords: Experience Platform;홈;인기 항목;액세스 제어;속성 기반 �
 title: 속성 기반 액세스 제어 사용자 관리
 description: 이 문서에서는 Adobe Experience Cloud의 권한 인터페이스를 통해 사용자 및 사용자 그룹을 관리하는 방법에 대한 정보를 제공합니다
 exl-id: 16450867-040a-4be1-a6c0-f03d0a1b90ba
-source-git-commit: c31855bff9d87133252c43e2f2f2fe1960c7b144
+source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
 workflow-type: tm+mt
-source-wordcount: '191'
+source-wordcount: '160'
 ht-degree: 2%
 
 ---
 
 # 사용자 관리
-
->[!IMPORTANT]
->
->속성 기반 액세스 제어는 현재 미국 기반 의료 고객 제한된 릴리스에서 사용할 수 있습니다. 이 기능은 완전히 릴리스되면 모든 Real-time Customer Data Platform 고객이 사용할 수 있습니다.
 
 할당된 사용자 세부 정보와 역할을 보려면 **[!UICONTROL 사용자]** 탭.
 

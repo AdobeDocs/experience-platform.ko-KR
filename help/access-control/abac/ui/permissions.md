@@ -3,18 +3,14 @@ keywords: Experience Platform;홈;인기 항목;액세스 제어;속성 기반 �
 title: 속성 기반 액세스 제어 역할 권한 관리
 description: 이 문서에서는 Adobe Experience Cloud의 권한 인터페이스를 통해 역할에 대한 권한 구성에 대한 정보를 제공합니다
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: 79ffdf35e27d74a64ea8e25544fdeeb293b58306
+source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
 workflow-type: tm+mt
-source-wordcount: '930'
+source-wordcount: '899'
 ht-degree: 0%
 
 ---
 
 # 역할에 대한 권한 관리
-
->[!IMPORTANT]
->
->속성 기반 액세스 제어는 현재 미국 기반 의료 고객 제한된 릴리스에서 사용할 수 있습니다. 이 기능은 완전히 릴리스되면 모든 Real-time Customer Data Platform 고객이 사용할 수 있습니다.
 
 >[!IMPORTANT]
 >

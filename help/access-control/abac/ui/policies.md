@@ -3,18 +3,14 @@ keywords: Experience Platform;홈;인기 항목;액세스 제어;속성 기반 �
 title: 속성 기반 액세스 제어 정책 만들기
 description: 이 문서에서는 Adobe Experience Cloud의 권한 인터페이스를 통해 정책 관리에 대한 정보를 제공합니다
 exl-id: 66820711-2db0-4621-908d-01187771de14
-source-git-commit: 97b4b98a2f14e36e8e8c71bd2ab9631782bc333f
+source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
 workflow-type: tm+mt
-source-wordcount: '692'
+source-wordcount: '661'
 ht-degree: 0%
 
 ---
 
 # 정책 관리
-
->[!IMPORTANT]
->
->속성 기반 액세스 제어는 현재 미국 기반 의료 고객 제한된 릴리스에서 사용할 수 있습니다. 이 기능은 완전히 릴리스되면 모든 Real-time Customer Data Platform 고객이 사용할 수 있습니다.
 
 정책은 허용 및 허용되지 않는 작업을 설정하기 위해 특성을 함께 가져오는 구문입니다. 정책은 로컬 또는 글로벌 정책일 수 있으며 다른 정책을 재정의할 수 있습니다.
 

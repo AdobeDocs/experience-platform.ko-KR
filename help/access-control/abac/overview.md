@@ -3,18 +3,14 @@ keywords: Experience Platform;홈;인기 항목;액세스 제어;속성 기반 �
 title: 속성 기반 액세스 제어 개요
 description: 이 문서에서는 Adobe Experience Platform의 속성 기반 액세스 제어에 대한 정보를 제공합니다
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: b095461b0c2510e84ca9a3a368f4907f8b3d5370
+source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
 workflow-type: tm+mt
-source-wordcount: '1684'
+source-wordcount: '1653'
 ht-degree: 1%
 
 ---
 
 # 속성 기반 액세스 제어 개요
-
->[!IMPORTANT]
->
->속성 기반 액세스 제어는 현재 미국 기반 의료 고객 제한된 릴리스에서 사용할 수 있습니다. 이 기능은 완전히 릴리스되면 모든 Real-time Customer Data Platform 고객이 사용할 수 있습니다.
 
 속성 기반 액세스 제어는 관리자가 속성을 기반으로 특정 개체 및/또는 기능에 대한 액세스를 제어할 수 있도록 해주는 Adobe Experience Platform의 기능입니다. 속성은 스키마 필드나 세그먼트에 추가된 레이블과 같이 객체에 추가된 메타데이터일 수 있습니다. 관리자는 사용자 액세스 권한을 관리하기 위한 속성을 포함하는 액세스 정책을 정의합니다.
 
