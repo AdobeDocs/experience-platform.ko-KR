@@ -2,9 +2,9 @@
 description: 이 구성을 사용하면 대상 이름, 카테고리, 설명 등과 같은 파일 기반 대상에 대한 필수 정보를 나타낼 수 있습니다. 또한 이 구성의 설정은 Experience Platform 사용자가 대상을 인증하는 방법, Experience Platform 사용자 인터페이스에 표시되는 방법 및 대상으로 내보낼 수 있는 ID를 결정합니다.
 title: Destination SDK을 위한 파일 기반 대상 구성 옵션
 exl-id: 6b0a0398-6392-470a-bb27-5b34b0062793
-source-git-commit: 1d6318e33be639237c2c8e6f1bf67e1702949c20
+source-git-commit: b32450311469ecf2af2ca45b3fa1feaf25147ea2
 workflow-type: tm+mt
-source-wordcount: '2664'
+source-wordcount: '3021'
 ht-degree: 5%
 
 ---
@@ -722,6 +722,54 @@ Adobe Experience Platform Destination SDK은 파트너 정의 스키마를 지�
 | `authenticationRule` | 문자열 | 방법을 나타냅니다. [!DNL Platform] 고객이 대상에 연결합니다. 허용되는 값은 다음과 같습니다 `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>사용 `CUSTOMER_AUTHENTICATION` platform 고객이 다음 방법 중 하나를 통해 시스템에 로그인하는 경우: <ul><li>`"authType": "S3"`</li><li>`"authType":"AZURE_CONNECTION_STRING"`</li><li>`"authType":"AZURE_SERVICE_PRINCIPAL"`</li><li>`"authType":"SFTP_WITH_SSH_KEY"`</li><li>`"authType":"SFTP_WITH_PASSWORD"`</li></ul> </li><li> 사용 `PLATFORM_AUTHENTICATION` Adobe과 대상 및 대상 사이에 글로벌 인증 시스템이 있는 경우 [!DNL Platform] 고객은 대상에 연결하기 위해 인증 자격 증명을 제공할 필요가 없습니다. 이 경우 [자격 증명](./credentials-configuration-api.md) 구성. </li><li>사용 `NONE` 대상 플랫폼으로 데이터를 전송하는 데 인증이 필요하지 않은 경우 </li></ul> |
 | `value` | 문자열 | 매핑 단계에서 Experience Platform 사용자 인터페이스에 표시할 스키마의 이름입니다. |
 | `responseFormat` | 문자열 | 항상 로 설정 `SCHEMA` 사용자 지정 스키마를 정의할 때. |
+
+{style=&quot;table-layout:auto&quot;}
+
+### 필요한 매핑 {#required-mappings}
+
+스키마 구성 내에 필수(또는 사전 정의된) 매핑을 추가할 수 있습니다. 이는 사용자가 대상에 대한 연결을 설정할 때 볼 수 있지만 수정할 수는 없는 매핑입니다. 예를 들어 내보낸 파일의 대상에 항상 전송되도록 이메일 주소 필드를 적용할 수 있습니다. 필요한 매핑이 포함된 스키마 구성 및 스키마 구성 예는 아래의 매핑 단계에서 를 참조하십시오 [데이터를 배치 대상에 활성화 워크플로우](/help/destinations/ui/activate-batch-profile-destinations.md).
+
+```json
+    "requiredMappingsOnly": true, // this is selected true , users cannot map other attributes and identities in the activation flow, apart from the required mappings that you define.
+    "requiredMappings": [
+      {
+        "destination": "identityMap.ExamplePartner_ID", //if only the destination field is specified, then the user is able to select a source field to map to the destination.
+        "mandatoryRequired": true,
+        "primaryKeyRequired": true
+      },
+      {
+        "sourceType": "text/x.schema-path",
+        "source": "personalEmail.address",
+        "destination": "personalEmail.address" //when both source and destination fields are specified as required mappings, then the user can not select or edit any of the two fields and can only view the selection.
+      },
+      {
+        "sourceType": "text/x.aep-xl",
+        "source": "iif(${segmentMembership.ups.seg_id.status}==\"exited\", \"1\",\"0\")",
+        "destination": "delete"
+      }
+    ] 
+```
+
+![UI 활성화 플로우에서 필요한 매핑의 이미지입니다.](/help/destinations/destination-sdk/assets/required-mappings.png)
+
+>[!NOTE]
+>
+>현재 지원되는 필수 매핑 조합은 다음과 같습니다.
+>* 필수 소스 필드 및 필수 대상 필드를 구성할 수 있습니다. 이 경우 사용자는 두 필드를 편집하거나 선택할 수 없으며 선택 사항만 볼 수 있습니다.
+>* 필수 대상 필드만 구성할 수 있습니다. 이 경우 사용자는 대상에 매핑할 소스 필드를 선택할 수 있습니다.
+>
+> 필수 소스 필드만 구성할 수 있습니다 *not* 지원됨.
+
+대상에 대한 활성화 워크플로우에서 필수 매핑을 추가하려면 아래 표에 설명된 매개 변수를 사용하십시오.
+
+| 매개 변수 | 유형 | 설명 |
+|---------|----------|------|
+| `requiredMappingsOnly` | 부울 | 사용자가 활성화 흐름에서 다른 속성과 ID를 매핑할 수 있는지 여부를 나타냅니다. *분리* 정의하는 필수 매핑입니다. |
+| `requiredMappings.mandatoryRequired` | 부울 | 이 필드가 항상 대상에 대한 파일 내보내기에 있어야 하는 필수 속성이어야 하는 경우 true로 설정합니다. 자세한 내용 [필수 속성](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes). |
+| `requiredMappings.primaryKeyRequired` | 부울 | 대상으로 파일 내보내기에서 중복 제거 키로 이 필드를 사용해야 하는 경우 true로 설정합니다. 자세한 내용 [중복 제거 키](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-keys). |
+| `requiredMappings.sourceType` | 문자열 | 필요에 따라 소스 필드를 구성할 때 사용됩니다. 소스 필드의 필드 유형을 나타냅니다. 사용 가능한 옵션은 다음과 같습니다. <ul><li>`"text/x.schema-path"` 소스 필드가 사전 정의된 XDM 속성인 경우</li><li>`"text/x.aep-xl"` 소스 필드가 함수인 경우(예: 소스 필드 쪽에서 조건을 충족해야 하는 경우) 지원되는 함수에 대한 자세한 내용은 [데이터 준비](/help/data-prep/api/functions.md) 설명서.</li></ul> |
+| `requiredMappings.source` | 문자열 | 필요한 소스 필드를 나타냅니다. |
+| `requiredMappings.destination` | 문자열 | 필요한 대상 필드를 나타냅니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
