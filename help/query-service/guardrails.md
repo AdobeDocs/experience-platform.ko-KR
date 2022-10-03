@@ -2,9 +2,10 @@
 keywords: Experience Platform;쿼리;쿼리 서비스;문제 해결;보호 기능;지침;제한;
 title: 쿼리 서비스에 대한 보호 기능
 description: 이 문서에서는 쿼리 사용을 최적화하는 데 도움이 되는 쿼리 서비스 데이터의 사용 제한에 대한 정보를 제공합니다.
-source-git-commit: 8ae8efae04e299302cca42f9c92827d374883cd9
+exl-id: 1ad5dcf4-d048-49ff-97e3-07040392b65b
+source-git-commit: d874fed681449c6f5114196cface157c8c406d69
 workflow-type: tm+mt
-source-wordcount: '692'
+source-wordcount: '765'
 ht-degree: 3%
 
 ---
@@ -22,6 +23,10 @@ ht-degree: 3%
 * **애드혹 쿼리**: 실행 `SELECT` 쿼리의 결과를 찾는 데이터 탐색, 실험 및 유효성 검사 **저장되지 않음** 데이터 레이크.
 
 * **일괄 처리 쿼리**: 실행 `INSERT TABLE AS SELECT` 및 `CREATE TABLE AS SELECT` 데이터를 정리, 모양, 조작 및 보강하기 위한 쿼리 이러한 쿼리의 결과 **저장됨** 데이터 레이크. 이 기능의 소비를 측정하기 위한 지표는 계산 시간입니다.
+
+>[!IMPORTANT]
+>
+>Real-time Customer Data Platform 인사이트 대시보드에 대한 각 쿼리에 효율적으로 실행할 수 있는 리소스가 충분하도록, API는 각 쿼리에 동시성 슬롯을 할당하여 리소스 사용을 추적합니다. 시스템은 최대 4개의 동시 쿼리를 처리할 수 있으므로 지정된 시간에 4개의 동시 쿼리 슬롯을 사용할 수 있습니다. 쿼리는 동시성 슬롯을 기반으로 큐에 넣은 다음 충분한 동시성 슬롯을 사용할 수 있을 때까지 대기열에서 대기합니다.
 
 아래 그림은 Query Service 기능을 현재 패키징하고 라이센스를 부여하는 방법을 요약합니다.
 
