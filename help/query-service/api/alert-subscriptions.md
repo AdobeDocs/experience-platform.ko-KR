@@ -2,7 +2,7 @@
 keywords: Experience Platform;홈;인기 항목;쿼리 서비스;쿼리 서비스;경고
 title: 경고 구독 API 끝점
 description: 이 안내서에서는 Query Service API를 사용하여 경고 구독 종단점에 대해 수행할 수 있는 다양한 API 호출에 대한 샘플 HTTP 요청 및 응답을 제공합니다.
-source-git-commit: bd841244fcb7d63af9c3383335307647b93499ce
+source-git-commit: cab7fcfda1bd8f6462af6e631f1fcee1f354d26b
 workflow-type: tm+mt
 source-wordcount: '2289'
 ht-degree: 2%
@@ -301,7 +301,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/query/alert-subscriptions
 
 **응답**
 
-성공적으로 응답하면 HTML 상태 200과 구독한 모든 경고를 반환합니다. 여기에는 경고 ID, 경고 유형, 가입자의 등록된 이메일 ID Adobe 및 기본 알림 채널이 포함됩니다.
+성공적으로 응답하면 200이라는 HTTP 상태와 구독한 모든 경고를 반환합니다. 여기에는 경고 ID, 경고 유형, 가입자의 등록된 이메일 ID Adobe 및 기본 알림 채널이 포함됩니다.
 
 ```json
 {

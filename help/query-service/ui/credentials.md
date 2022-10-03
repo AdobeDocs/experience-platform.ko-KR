@@ -5,9 +5,9 @@ title: Query Service 자격 증명 안내서
 topic-legacy: guide
 description: Adobe Experience Platform 쿼리 서비스는 쿼리를 작성 및 실행하고, 이전에 실행된 쿼리를 보고, IMS 조직 내의 사용자가 저장한 쿼리에 액세스하는 데 사용할 수 있는 사용자 인터페이스를 제공합니다.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
+source-git-commit: f3052745105df603e547535a12285b6c1d771fa6
 workflow-type: tm+mt
-source-wordcount: '1168'
+source-wordcount: '1186'
 ht-degree: 1%
 
 ---
@@ -109,6 +109,7 @@ Adobe Experience Platform 쿼리 서비스를 통해 외부 클라이언트와 �
 >[!NOTE]
 >
 >만료되지 않은 자격 증명을 사용하여 호스트에 연결할 때에도 [!UICONTROL 만료 자격 증명] 암호 및 사용자 이름을 제외한 섹션을 참조하십시오.
+>사용자 이름과 암호를 입력하는 형식은 이 예제에서 보듯이 콜론 구분 값을 사용합니다 `username:{your_username}` 및 `password:{password_string}`.
 
 | 매개 변수 | 설명 |
 |---|---|
