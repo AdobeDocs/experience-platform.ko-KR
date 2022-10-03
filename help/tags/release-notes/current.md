@@ -1,15 +1,20 @@
 ---
 title: 태그 및 이벤트 전달을 위한 릴리스 노트
-description: Adobe Experience Platform의 태그 및 이벤트 전달에 대한 최신 릴리스 노트입니다.
+description: Adobe Experience Platform의 태그 및 이벤트 전달에 대한 최신 릴리스 정보입니다.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: af424089c0afdaae76b312137afc5cbd28e82856
+source-git-commit: 2a5c31f8991c1c6aff294eabf4cc0e35c96ecaf7
 workflow-type: tm+mt
-source-wordcount: '138'
-ht-degree: 5%
+source-wordcount: '224'
+ht-degree: 9%
 
 ---
 
 # 태그 및 이벤트 전달에 대한 릴리스 노트
+
+## 2022년 9월 28일
+
+* **Adobe Experience Platform 왼쪽 탐색 통합**: 데이터 수집 UI에 대해 이전에 배타적이었던 모든 기능(태그 및 이벤트 전달 포함)은 이제 Experience Platform UI의 카테고리 아래에 있는 왼쪽 탐색 기능을 통해 사용할 수도 있습니다 **[!UICONTROL 데이터 수집]**. 따라서 Platform에서 데이터 수집 기능을 사용할 때 UI 간을 전환할 필요가 없습니다.
+* **태그 및 이벤트 전달의 사용자 속성**: 태그 및 이벤트 전달에서 사용 가능한 속성을 나열할 때 이제 나열된 각 속성에 마지막으로 업데이트된 시간과 해당 속성의 소유자가 표시됩니다.
 
 ## 2022년 7월 27일
 
