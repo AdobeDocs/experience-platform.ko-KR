@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: 이 자습서에서는 소스 커넥터 및 API를 사용하여 타사 클라우드 저장소에서 데이터를 검색하고 Platform으로 가져오는 단계를 설명합니다.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: 2d3fbbb5c743b8e172e3e64bda31ebf3278b4f5b
+source-git-commit: 1f492fd48de304c70fdd8beb477b8a22369b853a
 workflow-type: tm+mt
-source-wordcount: '1631'
+source-wordcount: '1692'
 ht-degree: 1%
 
 ---
@@ -62,33 +62,33 @@ POST /sourceConnections
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "Cloud Storage source connection",
-        "description: "Source connection for a cloud storage source",
-        "baseConnectionId": "1f164d1b-debe-4b39-b4a9-df767f7d6f7c",
-        "data": {
-            "format": "delimited",
-            "properties": {
-                "columnDelimiter": "{COLUMN_DELIMITER}",
-                "encoding": "{ENCODING}"
-                "compressionType": "{COMPRESSION_TYPE}"
-            }
-        },
-        "params": {
-            "path": "/acme/summerCampaign/account.csv",
-            "type": "file"
-        },
-        "connectionSpec": {
-            "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
-            "version": "1.0"
-        }
-    }'
+  'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Cloud Storage source connection",
+      "description: "Source connection for a cloud storage source",
+      "baseConnectionId": "1f164d1b-debe-4b39-b4a9-df767f7d6f7c",
+      "data": {
+          "format": "delimited",
+          "properties": {
+              "columnDelimiter": "{COLUMN_DELIMITER}",
+              "encoding": "{ENCODING}",
+              "compressionType": "{COMPRESSION_TYPE}"
+          }
+      },
+      "params": {
+          "path": "/acme/summerCampaign/account.csv",
+          "type": "file"
+      },
+      "connectionSpec": {
+          "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
+          "version": "1.0"
+      }
+  }'
 ```
 
 | 속성 | 설명 |
@@ -112,6 +112,46 @@ curl -X POST \
     "id": "26b53912-1005-49f0-b539-12100559f0e2",
     "etag": "\"11004d97-0000-0200-0000-5f3c3b140000\""
 }
+```
+
+### 정규 표현식을 사용하여 수집을 위한 특정 파일 세트를 선택합니다 {#regex}
+
+소스 연결을 만들 때 정규 표현식을 사용하여 소스에서 플랫폼으로 특정 파일 세트를 수집할 수 있습니다.
+
+**API 형식**
+
+```http
+POST /sourceConnections
+```
+
+**요청**
+
+아래 예에서는 파일 경로에 정규 표현식을 사용하여 모든 CSV 파일에 대한 수집을 지정합니다 `premium` 이름.
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Cloud Storage source connection",
+      "description: "Source connection for a cloud storage source",
+      "baseConnectionId": "1f164d1b-debe-4b39-b4a9-df767f7d6f7c",
+      "data": {
+          "format": "delimited"
+      },
+      "params": {
+          "path": "/acme/summerCampaign/*premium*.csv",
+          "type": "folder"
+      },
+      "connectionSpec": {
+          "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
+          "version": "1.0"
+      }
+  }'
 ```
 
 ## 대상 XDM 스키마 만들기 {#target-schema}
