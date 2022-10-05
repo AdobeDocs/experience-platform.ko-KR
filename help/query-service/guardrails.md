@@ -3,9 +3,9 @@ keywords: Experience Platform;쿼리;쿼리 서비스;문제 해결;보호 기�
 title: 쿼리 서비스에 대한 보호 기능
 description: 이 문서에서는 쿼리 사용을 최적화하는 데 도움이 되는 쿼리 서비스 데이터의 사용 제한에 대한 정보를 제공합니다.
 exl-id: 1ad5dcf4-d048-49ff-97e3-07040392b65b
-source-git-commit: 8e5df8b3e38197520c6e15f7c6639c62527c086e
+source-git-commit: f8913fd8f5d6f4acf70a43c0a047bcd034dfd402
 workflow-type: tm+mt
-source-wordcount: '764'
+source-wordcount: '769'
 ht-degree: 3%
 
 ---
@@ -67,6 +67,8 @@ ht-degree: 3%
 | 를 통해 반환된 결과 | 데이터 세트 | 해당 없음 | 사용자가 결과를 사용할 수 있도록 하는 방법을 정의합니다. |
 
 {style=&quot;table-layout:auto&quot;}
+
+## 쿼리로 생성된 대시보드 통찰력 {#dashboard-insights}
 
 Real-time Customer Data Platform 인사이트 대시보드에 대한 각 쿼리에 효율적으로 실행할 수 있는 리소스가 충분하도록, API는 각 쿼리에 동시성 슬롯을 할당하여 리소스 사용을 추적합니다. 시스템은 최대 4개의 동시 쿼리를 처리할 수 있으므로 지정된 시간에 4개의 동시 쿼리 슬롯을 사용할 수 있습니다. 쿼리는 동시성 슬롯을 기반으로 큐에 넣은 다음 충분한 동시성 슬롯을 사용할 수 있을 때까지 대기열에서 대기합니다.
 
