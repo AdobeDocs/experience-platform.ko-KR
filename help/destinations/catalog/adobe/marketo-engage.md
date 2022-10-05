@@ -2,9 +2,9 @@
 title: Marketo Engage 대상
 description: Marketo Engage은 마케팅, 광고, 분석 및 상거래를 위한 유일한 CXM(엔드 투 엔드 고객 경험 관리) 솔루션입니다. CRM 리드 관리 및 고객 참여에서 계정 기반 마케팅 및 매출 기여도에 이르는 활동을 자동화하고 관리할 수 있습니다.
 exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
-source-git-commit: 6dc4a93b46d6111637e0024da574d605e0d2b986
+source-git-commit: 9f305ee7824bd8790dec57ccbd2d9462ccfa8b49
 workflow-type: tm+mt
-source-wordcount: '740'
+source-wordcount: '870'
 ht-degree: 2%
 
 ---
@@ -75,9 +75,15 @@ Experience Platform의 속성을 Marketo에서 조직에서 액세스할 수 있
 
 아래 비디오에서는 Marketo 대상을 구성하고 세그먼트를 활성화하는 방법을 보여줍니다.
 
->[!NOTE]
+>[!IMPORTANT]
 >
->Experience Platform 사용자 인터페이스는 자주 업데이트되며 이 비디오를 기록한 후 변경되었을 수 있습니다. 최신 정보는 위에 링크된 안내서를 참조하십시오.
+>이 비디오는 현재 기능을 완전히 반영하지는 않습니다. 최신 정보는 위에 링크된 안내서를 참조하십시오. 비디오의 다음 부분이 구식입니다.
+> 
+>* Experience Platform UI에서 사용해야 하는 대상 카드는 **[!UICONTROL Marketo V2]**.
+>* 비디오가 새 **[!UICONTROL 개인 만들기]** 대상에 연결 워크플로우의 선택기 필드.
+>* 비디오에서 호출된 두 가지 제한 사항은 더 이상 적용되지 않습니다. 이제 비디오가 기록될 때 지원되는 세그먼트 멤버십 정보 외에 다른 여러 프로필 속성 필드를 매핑할 수 있습니다. 세그먼트 구성원을 Marketo 정적 목록에 아직 없는 Marketo으로 내보낼 수 있으며, 이러한 구성원이 목록에 추가됩니다.
+>* 에서 **[!UICONTROL 세그먼트 단계 예약]** 활성화 워크플로우의 경우, Marketo V1에서 수동으로 **[!UICONTROL 매핑 ID]** 데이터를 Marketo으로 성공적으로 내보내기 위해 다음을 수행하십시오. 이 수동 단계는 Marketo V2에서 더 이상 필요하지 않습니다.
+
 
 >[!VIDEO](https://video.tv.adobe.com/v/338248?quality=12)
 
