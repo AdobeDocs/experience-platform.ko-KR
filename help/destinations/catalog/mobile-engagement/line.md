@@ -2,9 +2,9 @@
 keywords: 모바일;모바일 참여 대상;LINE;LINE 모바일 참여 대상
 title: LINE 연결
 description: LINE 대상을 사용하면 프로필을 플랫폼 세그먼트에 추가하고 연결된 사용자에게 개인화된 경험을 전달할 수 있습니다.
-source-git-commit: 10c04bdee8536194baea00d3466c758f848c46c5
+source-git-commit: b15ad6339cb342d754e3a78e0d68b232a94a835e
 workflow-type: tm+mt
-source-wordcount: '1166'
+source-wordcount: '1183'
 ht-degree: 1%
 
 ---
@@ -32,7 +32,10 @@ ht-degree: 1%
 
 #### 다음을 수행해야 합니다 [!DNL LINE] account {#prerequisites-account}
 
-로 이동합니다. [!DNL LINE] [등록](https://account.line.biz/signup) 계정을 아직 등록하지 않은 경우 페이지를 만들어 계정을 만듭니다.
+등록하고 [!DNL LINE] 계정, 아직 없는 경우 계정을 만들려면:
+
+1. 로 이동합니다 [!DNL LINE] [계정 로그인](https://account.line.biz/login?redirectUri=https%3A%2F%2Fmanager.line.biz%2F) 페이지
+2. 선택 **[!UICONTROL 계정 만들기]**.
 
 #### 를 수집합니다 [!DNL LINE channel access token (long-lived)] 에서 [!DNL LINE] 개발자 콘솔 {#gather-credentials}
 
