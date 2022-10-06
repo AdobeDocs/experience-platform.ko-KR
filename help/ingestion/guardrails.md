@@ -3,9 +3,9 @@ keywords: Experience Platform;문제 해결;보호 기능;지침
 title: 데이터 수집 보호 기능
 description: 이 문서에서는 Adobe Experience Platform의 데이터 수집을 위한 보호 기능에 대한 지침을 제공합니다
 exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
-source-git-commit: 4fd26078017ae13e22ebb02f98335094c8e0581b
+source-git-commit: fa0ddc4c0053018d013c14c568ebb2fd231f4bd2
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '546'
 ht-degree: 1%
 
 ---
@@ -25,6 +25,7 @@ ht-degree: 1%
 | 배치 수집 API를 사용한 데이터 레이크 수집 | <ul><li>배치 수집 API를 사용하여 데이터 레이크에 시간당 최대 20GB의 데이터를 수집할 수 있습니다.</li><li>배치당 최대 파일 수는 1500개입니다.</li><li>최대 일괄 처리 크기는 100GB입니다.</li><li>행당 최대 속성 또는 필드 수는 10000.</li><li>사용자당 최대 분당 배치 수는 138개입니다.</li></ul> |
 | 배치 소스를 사용한 데이터 레이크 수집 | <ul><li>다음과 같은 배치 수집 소스를 사용하여 데이터 레이크에 시간당 최대 200GB의 데이터를 수집할 수 있습니다 [!DNL Azure Blob], [!DNL Amazon S3], 및 [!DNL SFTP].</li><li>일괄 처리 크기는 256MB와 100GB 사이여야 합니다.</li><li>배치당 최대 파일 수는 1500개입니다.</li></ul> | 자세한 내용은 [소스 개요](../sources/home.md) 소스 카탈로그의 경우 데이터 처리에 를 사용할 수 있습니다. |
 | 프로필에 일괄 수집 | <ul><li>시간당 최대 120GB의 데이터를 수집할 수 있습니다.</li><li>레코드 클래스의 최대 크기는 100KB(소프트)입니다.</li><li>ExperienceEvent 클래스의 최대 크기는 10KB(소프트)입니다.</li><li>단일 레코드의 최대 크기는 1MB입니다.</li></ul> |
+| 일별로 수집된 프로필 또는 ExperienceEvent 배치 수 | **일별 수집된 프로필 또는 ExperienceEvent 일괄 처리의 최대 수는 90개입니다.** 즉, 매일 수집된 프로필 및 ExperienceEvent 일괄 처리의 합계는 90을 초과할 수 없습니다. 추가 배치를 섭취하는 것은 시스템 성능에 영향을 줍니다. | 이것은 일시적인 제한이다. 그러나 소프트 한도를 넘을 수는 있지만, 소프트 한계는 시스템 성능에 대한 권장 지침을 제공합니다. |
 
 ## 스트리밍 수집 가드 레일
 
