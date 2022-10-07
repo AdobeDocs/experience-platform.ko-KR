@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform에 대한 최신 릴리스 노트입니다.
-source-git-commit: 319c30facb7e8093318a01a3155bdb2fee0f548b
+source-git-commit: 87789668da0cfdf86d3c47be6e4dc49282932180
 workflow-type: tm+mt
-source-wordcount: '2933'
+source-wordcount: '2925'
 ht-degree: 5%
 
 ---
@@ -41,7 +41,7 @@ Adobe Experience Platform의 기존 기능 업데이트:
 | 기능 | 설명 |
 | --- | --- |
 | 속성 기반 액세스 제어 | 특성 기반 액세스 제어를 사용하면 XDM(Experience Data Model) 스키마 필드와 세그먼트에 조직 또는 데이터 사용 범위를 정의하는 레이블을 지정할 수 있습니다. 동시에 관리자는 사용자 및 역할 관리 인터페이스를 사용하여 XDM 스키마 필드 및 세그먼트를 포함하는 액세스 정책을 정의하여 사용자 또는 사용자 그룹(내부, 외부 또는 타사 사용자)에 부여된 액세스를 더 잘 관리할 수 있습니다. 자세한 내용은 [속성 기반 액세스 제어 개요](../../access-control/abac/overview.md). |
-| 권한 | 권한은 관리자가 사용자 역할 및 액세스 정책을 정의하여 제품 응용 프로그램 내의 기능 및 개체에 대한 액세스 권한을 관리할 수 있는 Experience Cloud 영역입니다. 권한을 통해 역할을 만들고 관리하고, 이러한 역할에 대해 원하는 리소스 권한을 할당하고, 레이블을 활용하고 특정 플랫폼 리소스에 액세스할 수 있는 사용자 역할을 정의하는 정책을 작성할 수 있습니다. 또한 권한을 사용하여 특정 역할과 연관된 레이블, 샌드박스 및 사용자를 관리할 수도 있습니다. 자세한 내용은 [권한 UI 안내서](../../access-control/abac/ui/browse.md). |
+| 권한 | 권한은 관리자가 사용자 역할 및 액세스 정책을 정의하여 제품 응용 프로그램 내의 기능 및 개체에 대한 액세스 권한을 관리할 수 있는 Experience Cloud 영역입니다. 권한을 통해 역할을 만들고 관리하고, 이러한 역할에 대해 원하는 리소스 권한을 할당하고, 레이블을 활용하고 특정 플랫폼 리소스에 액세스할 수 있는 사용자 역할을 정의하는 정책을 작성할 수 있습니다. 또한 권한을 사용하여 레이블, 샌드박스 및 특정 역할과 연관된 사용자를 관리할 수 있습니다. 자세한 내용은 [권한 UI 안내서](../../access-control/abac/ui/browse.md). |
 
 속성 기반 액세스 제어에 대한 자세한 내용은 [속성 기반 액세스 제어 개요](../../access-control/abac/overview.md). 속성 기반 액세스 제어 워크플로우에 대한 포괄적인 지침은 [특성 기반 액세스 제어 종단 안내서](../../access-control/abac/end-to-end-guide.md).
 
@@ -215,10 +215,12 @@ Query Service를 사용하면 표준 SQL을 사용하여 Adobe Experience Platfo
 
 | 기능 | 설명 |
 | --- | --- |
-| 경고 구독 API | Adobe Experience Platform Query Service를 사용하면 애드혹 쿼리 및 예약된 쿼리 모두에 대한 경고를 구독할 수 있습니다. 경고는 이메일, Platform UI 또는 두 가지 모두로 수신할 수 있습니다. 현재 쿼리 경고는 [쿼리 서비스 API](https://developer.adobe.com/experience-platform-apis/references/query-service/). 자세한 내용은 [쿼리 경고 설명서](../../query-service/api/alert-subscriptions.md) 추가 정보 |
+| 경고 구독 API | Adobe Experience Platform Query Service를 사용하면 애드혹 쿼리 및 예약된 쿼리 모두에 대한 경고를 구독할 수 있습니다. 경고는 이메일, Platform UI 또는 두 가지 모두로 수신할 수 있습니다. 현재 쿼리 경고는 [쿼리 서비스 API](https://developer.adobe.com/experience-platform-apis/references/query-service/). |
 | 데이터 집합 샘플 | 쿼리 서비스 데이터 세트 샘플을 사용하면 쿼리 정확성 비용 측면에서 처리 시간이 크게 단축된 빅데이터에 대해 예비 쿼리를 수행할 수 있습니다. 자세한 내용은 [데이터 세트 샘플 안내서](../../query-service/sql/dataset-samples.md) 추가 정보 |
 
 자세한 내용은 [!DNL Query Service]를 보려면 [[!DNL Query Service] 개요](../../query-service/home.md).
+
+<!-- See the [query alerts documentation](../../query-service/api/alert-subscriptions.md) to learn more. -->
 
 ## 소스 {#sources}
 
