@@ -2,9 +2,9 @@
 title: 계정 프로필 대시보드 안내서
 description: Adobe Experience Platform은 조직의 B2B 계정 프로필에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
+source-git-commit: 19d6d3c03e6b3b0f9f82ceeee30816fa054261a3
 workflow-type: tm+mt
-source-wordcount: '823'
+source-wordcount: '1050'
 ht-degree: 0%
 
 ---
@@ -63,6 +63,8 @@ Adobe은 계정 프로필과 관련된 다양한 지표를 시각화하는 데 �
 
 * [산업별 총 계정](#total-accounts-by-industry)
 * [추가된 계정 프로필](#account-profiles-added)
+* [예측 점수 분배](#predictive-scoring-distribution)
+* [예측 점수 책정 상위 영향력 있는 요소](#predictive-scoring-top-influential-factors)
 
 ### 산업별 총 계정 {#total-accounts-by-industry}
 
@@ -82,6 +84,28 @@ Adobe은 계정 프로필과 관련된 다양한 지표를 시각화하는 데 �
 
 ![추가된 계정 프로필 위젯.](../images/account-profiles/accounts-profiles-added-widget.png)
 
+### 예측 점수 분배 {#predictive-scoring-distribution}
+
+다음 [!UICONTROL 예측 점수 분배] 위젯은 모든 계정 프로필의 점수 분포를 표시하여 판매 파이프라인의 상태를 한 눈에 파악할 수 있습니다. 점수 데이터는 도넛 차트와 열 차트를 통해 전달됩니다.
+
+도넛 차트는 높은, 중간 및 낮은 버킷 구매 성향 각에서 총 계정 프로필의 비율을 보여줍니다. 키는 점수 버킷 범위 및 해당 범위의 계정 프로필 수를 포함하여 색상 코딩된 섹션에 대한 자세한 정보를 제공합니다.
+
+열 차트는 보다 세부적인 점수 분류를 제공합니다. 각 열에는 20개의 5포인트 증분 버킷의 계정 프로필 수가 표시됩니다.
+
+위젯 내의 드롭다운 메뉴를 사용하면 계정 점수 모델을 선택할 수 있습니다.
+
+![예측 점수 분배 위젯.](../images/account-profiles/predictive-scoring-distribution.png)
+
+### 예측 점수 책정 상위 영향력 있는 요소 {#predictive-scoring-top-influential-factors}
+
+다음 [!UICONTROL 예측 점수 책정 상위 영향력 있는 요소] 위젯을 사용하면 각 성향 버킷의 점수를 유도하는 가장 중요한 요소를 이해할 수 있습니다.
+
+이 위젯은 높은, 중간 및 낮은 성향 버킷에 대해 가장 영향력 있는 요소를 보여줍니다. 각 영향력 있는 인자에 대한 막대는 특정 영향을 주는 요소를 포함하는 성향 버킷의 계정 프로필의 비율을 나타냅니다.
+
+위젯 내의 드롭다운 메뉴를 사용하면 계정 점수 모델을 선택할 수 있습니다.
+
+![예측 점수 책정 상위 영향력 있는 요소 위젯.](../images/account-profiles/predictive-scoring-top-influential-factors.png)
+
 ## 다음 단계
 
-이제 이 문서를 참조하여 [!UICONTROL 계정 프로필] 대시보드 . 사용 가능한 위젯에 표시되는 지표도 이해해야 합니다. Experience Platform UI에서 B2B 데이터의 일부로 계정 프로필 작업에 대한 자세한 내용은 [계정 프로필 개요](../../rtcdp/accounts/account-profile-overview.md) Adobe Real-Time CDP용 B2B Edition.
+이 문서를 따라 다음을 찾는 방법을 알아야 합니다 [!UICONTROL 계정 프로필] 대시보드 . 사용 가능한 위젯에 표시되는 지표도 이해해야 합니다. Experience Platform UI에서 B2B 데이터의 일부로 계정 프로필 작업에 대한 자세한 내용은 [계정 프로필 개요](../../rtcdp/accounts/account-profile-overview.md) Adobe Real-Time CDP용 B2B Edition.
