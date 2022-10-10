@@ -3,9 +3,9 @@ keywords: Experience Platform;홈;인기 항목;흐름 서비스;
 title: (베타) Flow Service API를 사용하여 온디맨드 수집을 위한 흐름 실행 만들기
 description: 이 자습서에서는 Flow Service API를 사용하여 온디맨드 수집에 대한 흐름 실행을 만드는 단계를 설명합니다
 exl-id: a7b20cd1-bb52-4b0a-aad0-796929555e4a
-source-git-commit: 61b3799a4d8c8b6682babd85b6f50a7e69778553
+source-git-commit: 795b1af6421c713f580829588f954856e0a88277
 workflow-type: tm+mt
-source-wordcount: '1157'
+source-wordcount: '856'
 ht-degree: 1%
 
 ---
@@ -70,6 +70,7 @@ curl -X POST \
   -d '{
       "flowId": "3abea21c-7e36-4be1-bec1-d3bad0e3e0de",
       "params": {
+          "startTime": "1663735590",
           "windowStartTime": "1651584991",
           "windowEndTime": "16515859567",
           "deltaColumn": {
@@ -82,9 +83,10 @@ curl -X POST \
 | 매개 변수 | 설명 |
 | --- | --- |
 | `flowId` | 흐름 실행이 만들어질 흐름의 ID입니다. |
+| `params.startTime` | 실행 시작 시간을 정의하는 정수입니다. 이 값은 unix epoch 시간으로 표시됩니다. |
 | `params.windowStartTime` | 데이터를 가져올 창의 시작 시간을 정의하는 정수입니다. 값은 unix 시간으로 표시됩니다. |
 | `params.windowEndTime` | 데이터를 가져올 창의 종료 시간을 정의하는 정수입니다. 값은 unix 시간으로 표시됩니다. |
-| `params.deltaColumn` | 델타 열은 데이터를 분할하고 새로 수집된 데이터를 내역 데이터에서 구분해야 합니다. |
+| `params.deltaColumn` | 델타 열은 데이터를 분할하고 새로 수집된 데이터를 내역 데이터에서 구분해야 합니다. **참고**: 다음 `deltaColumn` 는 첫 번째 흐름 실행을 생성할 때만 필요합니다. |
 | `params.deltaColumn.name` | 델타 열의 이름입니다. |
 
 **응답**
@@ -93,53 +95,36 @@ curl -X POST \
 
 ```json
 {
-    "id": "3fb0418e-1804-45d6-8d56-dd51f05c0baf",
-    "createdAt": 1651587212543,
-    "updatedAt": 1651587223839,
-    "createdBy": "{CREATED_BY}",
-    "updatedBy": "{UPDATED_BY}",
-    "createdClient": "{CREATED_CLIENT}",
-    "updatedClient": "{UPDATED_CLIENT}",
-    "sandboxId": "{SANDBOX_ID}",
-    "sandboxName": "prod",
-    "imsOrgId": "{ORGANIZATION_ID}",
-    "flowId": "3abea21c-7e36-4be1-bec1-d3bad0e3e0de",
-    "params": {
-        "windowStartTime": "1651584991",
-        "windowEndTime": "16515859567",
-        "deltaColumn": {
-            "name": "DOB"
+    "items": [
+        {
+            "id": "3fb0418e-1804-45d6-8d56-dd51f05c0baf",
+            "etag": "\"1100c53e-0000-0200-0000-627138980000\""
         }
-    },
-    "etag": "\"1100c53e-0000-0200-0000-627138980000\"",
-    "metrics": {
-        "statusSummary": {
-            "status": "scheduled"
-        }
-    },
-    "activities": []
+    ]
 }
 ```
 
 | 속성 | 설명 |
 | --- | --- |
 | `id` | 새로 만든 흐름 실행의 ID입니다. 다음 안내서를 참조하십시오. [흐름 사양 검색](../api/collect/database-nosql.md#specs) 를 참조하십시오. |
-| `createdAt` | 흐름 실행이 생성된 시점을 지정하는 unix 타임스탬프입니다. |
-| `updatedAt` | 흐름 실행이 마지막으로 업데이트된 시기를 지정하는 unix 타임스탬프입니다. |
-| `createdBy` | 흐름 실행을 생성한 사용자의 조직 ID입니다. |
-| `updatedBy` | 흐름 실행을 마지막으로 업데이트한 사용자의 조직 ID입니다. |
-| `createdClient` | 흐름 실행을 만든 응용 프로그램 클라이언트입니다. |
-| `updatedClient` | 흐름 실행을 마지막으로 업데이트한 애플리케이션 클라이언트입니다. |
-| `sandboxId` | 흐름 실행이 포함된 샌드박스의 ID입니다. |
-| `sandboxName` | 흐름 실행이 포함된 샌드박스의 이름입니다. |
-| `imsOrgId` | 조직 ID입니다. |
-| `flowId` | 흐름 실행이 작성된 흐름의 ID입니다. |
-| `params.windowStartTime` | 데이터를 가져올 창의 시작 시간을 정의하는 정수입니다. 값은 unix 시간으로 표시됩니다. |
-| `params.windowEndTime` | 데이터를 가져올 창의 종료 시간을 정의하는 정수입니다. 값은 unix 시간으로 표시됩니다. |
-| `params.deltaColumn` | 델타 열은 데이터를 분할하고 새로 수집된 데이터를 내역 데이터에서 구분해야 합니다. **참고**: 다음 `deltaColumn` 는 첫 번째 흐름 실행을 생성할 때만 필요합니다. |
-| `params.deltaColumn.name` | 델타 열의 이름입니다. |
 | `etag` | 흐름 실행의 리소스 버전입니다. |
-| `metrics` | 이 속성은 흐름 실행에 대한 상태 요약을 표시합니다. |
+<!-- 
+| `createdAt` | The unix timestamp that designates when the flow run was created. |
+| `updatedAt` | The unix timestamp that designates when the flow run was last updated. |
+| `createdBy` | The organization ID of the user who created the flow run. |
+| `updatedBy` | The organization ID of the user who last updated the flow run. |
+| `createdClient` | The application client that created the flow run. |
+| `updatedClient` | The application client that last updated the flow run. |
+| `sandboxId` | The ID of the sandbox that contains the flow run. |
+| `sandboxName` | The name of the sandbox that contains the flow run. |
+| `imsOrgId` | The organization ID. |
+| `flowId` | The ID of the flow in which the flow run is created against. |
+| `params.windowStartTime` | An integer that defines the start time of the window during which data is to be pulled. The value is represented in unix time. |
+| `params.windowEndTime` | An integer that defines the end time of the window during which data is to be pulled. The value is represented in unix time. |
+| `params.deltaColumn` | The delta column is required to partition the data and separate newly ingested data from historic data. **Note**: The `deltaColumn` is only needed when creating your firs flow run. |
+| `params.deltaColumn.name` | The name of the delta column. |
+| `etag` | The resource version of the flow run. |
+| `metrics` | This property displays a status summary for the flow run. | -->
 
 ## 파일 기반 소스에 대해 흐름 실행 만들기
 
@@ -170,6 +155,7 @@ curl -X POST \
   -d '{
       "flowId": "3abea21c-7e36-4be1-bec1-d3bad0e3e0de",
       "params": {
+          "startTime": "1663735590",
           "windowStartTime": "1651584991",
           "windowEndTime": "16515859567"
       }
@@ -179,6 +165,7 @@ curl -X POST \
 | 매개 변수 | 설명 |
 | --- | --- |
 | `flowId` | 흐름 실행이 만들어질 흐름의 ID입니다. |
+| `params.startTime` | 실행 시작 시간을 정의하는 정수입니다. 이 값은 unix epoch 시간으로 표시됩니다. |
 | `params.windowStartTime` | 데이터를 가져올 창의 시작 시간을 정의하는 정수입니다. 값은 unix 시간으로 표시됩니다. |
 | `params.windowEndTime` | 데이터를 가져올 창의 종료 시간을 정의하는 정수입니다. 값은 unix 시간으로 표시됩니다. |
 
@@ -189,49 +176,19 @@ curl -X POST \
 
 ```json
 {
-    "id": "3fb0418e-1804-45d6-8d56-dd51f05c0baf",
-    "createdAt": 1651587212543,
-    "updatedAt": 1651587223839,
-    "createdBy": "{CREATED_BY}",
-    "updatedBy": "{UPDATED_BY}",
-    "createdClient": "{CREATED_CLIENT}",
-    "updatedClient": "{UPDATED_CLIENT}",
-    "sandboxId": "{SANDBOX_ID}",
-    "sandboxName": "prod",
-    "imsOrgId": "{ORGANIZATION_ID}",
-    "flowId": "3abea21c-7e36-4be1-bec1-d3bad0e3e0de",
-    "params": {
-        "windowStartTime": "1651584991",
-        "windowEndTime": "16515859567"
-    },
-    "etag": "\"1100c53e-0000-0200-0000-627138980000\"",
-    "metrics": {
-        "statusSummary": {
-            "status": "scheduled"
+    "items": [
+        {
+            "id": "3fb0418e-1804-45d6-8d56-dd51f05c0baf",
+            "etag": "\"1100c53e-0000-0200-0000-627138980000\""
         }
-    },
-    "activities": []
+    ]
 }
 ```
 
 | 속성 | 설명 |
 | --- | --- |
-| `id` | 새로 만든 흐름 실행의 ID입니다. 다음 안내서를 참조하십시오. [흐름 사양 검색](../api/collect/cloud-storage.md#specs) 파일 기반 실행 사양에 대한 자세한 정보. |
-| `createdAt` | 흐름 실행이 생성된 시점을 지정하는 unix 타임스탬프입니다. |
-| `updatedAt` | 흐름 실행이 마지막으로 업데이트된 시기를 지정하는 unix 타임스탬프입니다. |
-| `createdBy` | 흐름 실행을 생성한 사용자의 조직 ID입니다. |
-| `updatedBy` | 흐름 실행을 마지막으로 업데이트한 사용자의 조직 ID입니다. |
-| `createdClient` | 흐름 실행을 만든 응용 프로그램 클라이언트입니다. |
-| `updatedClient` | 흐름 실행을 마지막으로 업데이트한 애플리케이션 클라이언트입니다. |
-| `sandboxId` | 흐름 실행이 포함된 샌드박스의 ID입니다. |
-| `sandboxName` | 흐름 실행이 포함된 샌드박스의 이름입니다. |
-| `imsOrgId` | 조직 ID입니다. |
-| `flowId` | 흐름 실행이 작성된 흐름의 ID입니다. |
-| `params.windowStartTime` | 데이터를 가져올 창의 시작 시간을 정의하는 정수입니다. 값은 unix 시간으로 표시됩니다. |
-| `params.windowEndTime` | 데이터를 가져올 창의 종료 시간을 정의하는 정수입니다. 값은 unix 시간으로 표시됩니다. |
+| `id` | 새로 만든 흐름 실행의 ID입니다. 다음 안내서를 참조하십시오. [흐름 사양 검색](../api/collect/database-nosql.md#specs) 를 참조하십시오. |
 | `etag` | 흐름 실행의 리소스 버전입니다. |
-| `metrics` | 이 속성은 흐름 실행에 대한 상태 요약을 표시합니다. |
-
 
 ## 흐름 실행 모니터링
 
