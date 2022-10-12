@@ -2,12 +2,12 @@
 audience: user
 user-guide-title: Adobe Experience Platform 데이터 수집 도움말
 breadcrumb-title: Data Ingestion 안내서
-user-guide-description: 일괄 처리 또는 스트리밍 통합 기능을 통해 데이터를 플랫폼에 가져올 수 있습니다.
+user-guide-description: 일괄 처리 또는 스트리밍 통합 기능을 통해 데이터를 Experience Platform으로 가져올 수 있습니다.
 feature: Data Ingestion
-source-git-commit: 2c0791af8bb4f40c5ab4e0504af154b757af5e84
+source-git-commit: ba0399b0d171c2e604b4de3b22f8568b5431bcf4
 workflow-type: tm+mt
-source-wordcount: '128'
-ht-degree: 27%
+source-wordcount: '129'
+ht-degree: 19%
 
 ---
 

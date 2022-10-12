@@ -1,12 +1,12 @@
 ---
 audience: user
 user-guide-title: 데이터 흐름 안내서
-user-guide-description: 데이터 흐름은 플랫폼 간에 데이터를 이동하는 데이터 작업을 나타냅니다.
+user-guide-description: 데이터 흐름과 다양한 서비스에서 데이터 흐름을 구성하는 방법에 대해 알아봅니다.
 feature: Dataflows
-source-git-commit: 2e5d5a574f4c8bec99ef05ea751908c81c358050
+source-git-commit: ba0399b0d171c2e604b4de3b22f8568b5431bcf4
 workflow-type: tm+mt
-source-wordcount: '63'
-ht-degree: 23%
+source-wordcount: '62'
+ht-degree: 4%
 
 ---
 

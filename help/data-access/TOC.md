@@ -2,12 +2,12 @@
 audience: user
 user-guide-title: Adobe Experience Platform 데이터 액세스
 breadcrumb-title: Data Access 안내서
-user-guide-description: 플랫폼 내에서 수집된 데이터 세트를 검색 및 액세스합니다.
+user-guide-description: Experience Platform에서 수집된 데이터 세트를 찾아 액세스합니다.
 feature: Data Access
-source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
+source-git-commit: 2790ae0b0bbba454ded1a6a8f73e05500f531cda
 workflow-type: tm+mt
-source-wordcount: '37'
-ht-degree: 56%
+source-wordcount: '38'
+ht-degree: 36%
 
 ---
 

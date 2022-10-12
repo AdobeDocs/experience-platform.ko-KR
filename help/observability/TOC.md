@@ -1,12 +1,12 @@
 ---
 audience: user
 user-guide-title: Observability Insights 안내서
-user-guide-description: 통계 지표 및 이벤트 알림을 사용하여 플랫폼 활동을 모니터링합니다.
+user-guide-description: 통계 지표 및 이벤트 알림을 사용하여 Experience Platform 활동을 모니터링합니다.
 feature: Observability
-source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
+source-git-commit: 5aa2be236d35f761a1e4d34fbe0bb28fd9087935
 workflow-type: tm+mt
-source-wordcount: '54'
-ht-degree: 46%
+source-wordcount: '53'
+ht-degree: 24%
 
 ---
 

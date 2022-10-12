@@ -2,12 +2,12 @@
 audience: user
 user-guide-title: Adobe Experience Platform 소스 커넥터 도움말
 breadcrumb-title: Source Connectors 안내서
-user-guide-description: 다양한 소스 또는 구조에서 데이터를 수집하고 레이블을 지정하며 기존에 수집한 데이터를 향상시킬 수 있습니다.
+user-guide-description: 다양한 소스에서 데이터 수집 이미 수집된 데이터를 구조화, 레이블 지정 및 향상시키는 방법을 알아봅니다.
 feature: Sources
-source-git-commit: eb78984d233c5d0dea04f235ee9e75eefff71752
+source-git-commit: ba0399b0d171c2e604b4de3b22f8568b5431bcf4
 workflow-type: tm+mt
-source-wordcount: '830'
-ht-degree: 12%
+source-wordcount: '832'
+ht-degree: 10%
 
 ---
 
