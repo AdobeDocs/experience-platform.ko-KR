@@ -2,10 +2,10 @@
 description: Adobe Experience Platform Destination SDK은 선택한 데이터 및 인증 형식에 따라 Experience Platform이 대상 및 프로필 데이터를 엔드포인트 또는 저장소 위치에 전달하도록 대상 통합 패턴을 구성할 수 있도록 해주는 구성 API 세트입니다. 구성은 Experience Platform에 저장되며, 추가 업데이트를 위해 API를 통해 검색할 수 있습니다.
 title: Adobe Experience Platform Destination SDK
 exl-id: 7aca9f40-98c8-47c2-ba88-4308fc2b1798
-source-git-commit: 95a7029864de84819cacc57c02a3e6f30def0b25
+source-git-commit: 94d46ceeef6eef507115c60aaa6820d4560e4d44
 workflow-type: tm+mt
-source-wordcount: '791'
-ht-degree: 3%
+source-wordcount: '838'
+ht-degree: 2%
 
 ---
 
@@ -17,9 +17,13 @@ Adobe Experience Platform Destination SDK은 선택한 데이터 및 인증 형�
 
 Destination SDK 설명서에서는 Adobe Experience Platform Destination SDK을 사용하여 Adobe Experience Platform와의 제품 화된 대상 통합을 구성, 테스트 및 출시하고 대상을 계속 증가하는 대상 카탈로그에 포함하도록 하는 지침을 제공합니다. Destination SDK을 사용하여 고유한 사용자 지정 개인 대상을 만들어 필요에 맞는 데이터를 내보낼 수도 있습니다.
 
-![대상 카탈로그 개요](./assets/destinations-catalog-overview.png)
+![대상 카탈로그를 보여주는 Experience Platform UI의 스크린샷](./assets/destinations-catalog-overview.png)
 
 ## 프로덕션 및 사용자 지정 통합 {#productized-custom-integrations}
+
+>[!IMPORTANT]
+>
+> 비공개 사용자 지정 대상을 만드는 이 기능은 [Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) 고객.
 
 Destination SDK 파트너인 은 제품 대상을 [Experience Platform 카탈로그](/help/destinations/catalog/overview.md):
 1. 사전 구성된 매개 변수로 고객 간의 통합 구성을 표준화하고 고객을 위한 설정 경험을 간소화합니다.
@@ -28,19 +32,7 @@ Destination SDK 파트너인 은 제품 대상을 [Experience Platform 카탈로
 
 Experience Platform 고객은 활성화 요구 사항에 가장 적합한 고유한 사용자 지정 대상을 작성할 수도 있습니다.
 
-![Destination SDK 시각적 다이어그램](./assets/destination-sdk-visual.png)
-
-<!--
-
-## Types of destinations in Adobe Experience Platform {#types-of-destinations}
-
-In Adobe Experience Platform, we distinguish between two destination types - *connections* and *extensions*. In the user interface, customers can choose between two types of connection destinations, Profile Export destinations and Segment Export destinations. For more details around the difference between the different destination types, read [Destination Types and Categories](https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-types.html?lang=en).
-
-![Destination types](./assets/types-of-destinations.png)
-
-This documentation set provides you with all the necessary information to add your destination to Adobe Experience Platform, as a *connection*, either Profile Export or Segment Export. To set up an extension, visit the [Experience Platform Launch developer portal](https://developer.adobelaunch.com/extensions/).
-
--->
+![대상 개발자가 Destination SDK과 상호 작용하는 방법 및 실시간 CDP 고객이 제품 및 개인 대상을 통해 어떤 혜택을 받는지를 보여주는 개요 다이어그램입니다.](./assets/destination-sdk-visual.png)
 
 ## 지원되는 통합 유형 {#supported-integration-types}
 

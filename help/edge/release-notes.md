@@ -3,7 +3,7 @@ title: Adobe Experience Platform Web SDK 릴리스 노트
 description: Adobe Experience Platform Web SDK에 대한 최신 릴리스 정보입니다.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;릴리스 노트;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 777a1749670f36abc09e4bacd190b1be17a9a237
+source-git-commit: becff2390aca3a1195cc157c075b1c9a087989c8
 workflow-type: tm+mt
 source-wordcount: '1349'
 ht-degree: 3%
@@ -20,7 +20,7 @@ ht-degree: 3%
 
 **새로운 기능**
 
-* 페이지별 전체 마이그레이션에 대한 지원이 추가되었습니다. 이제 방문자가 at.js와 Web SDK 페이지 간을 이동할 때 Adobe Target 프로필이 유지됩니다.
+* 에 대한 지원이 추가되었습니다 [페이지별 전체 마이그레이션](home.md#migrating-to-web-sdk). 이제 방문자가 at.js와 Web SDK 페이지 간을 이동할 때 Adobe Target 프로필이 유지됩니다.
 * 에 대한 구성 가능한 지원이 추가되었습니다. [높은 엔트로피 사용자 에이전트 클라이언트 힌트](fundamentals/user-agent-client-hints.md#high-entropy).
 * 새로운 기능에 대한 지원이 추가되었습니다 `applyResponse` 명령. 이를 통해 다음을 통해 하이브리드 개인화를 사용할 수 있습니다 [Edge Network Server API](../server-api/overview.md).
 * 이제 여러 페이지에서 QA 모드 링크가 작동합니다.

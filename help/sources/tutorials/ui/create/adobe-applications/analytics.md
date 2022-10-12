@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: UI에서 Adobe Analytics 소스 연결을 만들어 소비자 데이터를 Adobe Experience Platform으로 가져오는 방법을 알아봅니다.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 7ad0015dbea0b74673ed0ed2c8c2159065f47ba7
+source-git-commit: 04a8ca33e712c00d687432ddf9ad82f5d1644db2
 workflow-type: tm+mt
-source-wordcount: '2243'
+source-wordcount: '2302'
 ht-degree: 2%
 
 ---
@@ -156,7 +156,12 @@ Platform은 친숙한 이름 충돌에 대한 매핑 세트를 자동으로 감�
 * [데이터 준비 매핑 함수](../../../../../data-prep/functions.md)
 * [계산된 필드 추가](../../../../../data-prep/ui/mapping.md#calculated-fields)
 
-### 필터링 대상 [!DNL Profile Service] (베타)
+### 필터링 대상 [!DNL Profile Service] (베타) {#filtering-for-profile}
+
+>[!CONTEXTUALHELP]
+>id="platform_data_prep_analytics_filtering"
+>title="필터 규칙 만들기"
+>abstract="실시간 고객 프로필에 데이터를 전송할 때 행 및 열 수준 필터링 규칙을 정의합니다. 행 수준 필터링을 사용하여 조건을 적용하고 지정할 데이터를 지정합니다 **프로필 처리에 포함**. 열 수준 필터링을 사용하여 원하는 데이터 열을 선택합니다 **프로필 수집 제외**. 데이터 레이크로 전송된 데이터에는 필터링 규칙이 적용되지 않습니다."
 
 >[!IMPORTANT]
 >
