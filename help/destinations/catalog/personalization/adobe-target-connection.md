@@ -3,9 +3,9 @@ keywords: target 개인화; 대상; experience platform target 대상;adobe targ
 title: Adobe Target 연결
 description: Adobe Target은 웹 사이트, 모바일 앱 등에서 모든 인바운드 고객 상호 작용에 실시간 AI 기반의 개인화 및 실험 기능을 제공하는 애플리케이션입니다.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 769d3f14e858ed69c6bb50360da90e4e0816a377
+source-git-commit: 2dbc449d6074c5bbfc44f92de59dd8acc3bf275d
 workflow-type: tm+mt
-source-wordcount: '1005'
+source-wordcount: '1006'
 ht-degree: 1%
 
 ---
@@ -92,7 +92,7 @@ While [설정](../../ui/connect-destination.md) 이 대상을 사용하려면 �
 
 | 선택한 데이터 스트림이 없습니다. | 선택한 데이터 스트림 |
 |---|---|
-| <ul><li>[에지 세그멘테이션](../../../segmentation/ui/edge-segmentation.md) 은 지원되지 않습니다.</li><li>[동일 페이지 및 다음 페이지 개인화](../../ui/configure-personalization-destinations.md) 지원되지 않습니다.</li><li>프로덕션 샌드박스에 대해서만 세그먼트를 Adobe Target 연결에 공유할 수 있습니다.</li><li>데이터 스트림 ID를 사용하지 않고 다음 세션 개인화를 구성하려면 [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html?lang=en).</li></ul> | <ul><li>에지 세그먼테이션은 예상대로 작동합니다.</li><li>[동일 페이지 및 다음 페이지 개인화](../../ui/configure-personalization-destinations.md) 이 지원됩니다.</li><li>다른 샌드박스에 대해 세그먼트 공유가 지원됩니다.</li></ul> |
+| <ul><li>[에지 세그멘테이션](../../../segmentation/ui/edge-segmentation.md) 은 지원되지 않습니다.</li><li>[동일 페이지 및 다음 페이지 개인화](../../ui/configure-personalization-destinations.md) 지원되지 않습니다.</li><li>에 대해서만 세그먼트를 Adobe Target 연결에 공유할 수 있습니다 *기본 프로덕션 샌드박스*.</li><li>데이터 스트림 ID를 사용하지 않고 다음 세션 개인화를 구성하려면 [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html?lang=en).</li></ul> | <ul><li>에지 세그먼테이션은 예상대로 작동합니다.</li><li>[동일 페이지 및 다음 페이지 개인화](../../ui/configure-personalization-destinations.md) 이 지원됩니다.</li><li>다른 샌드박스에 대해 세그먼트 공유가 지원됩니다.</li></ul> |
 
 ### 경고 활성화 {#enable-alerts}
 
