@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK 릴리스 노트
 description: Adobe Experience Platform Web SDK에 대한 최신 릴리스 정보입니다.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;릴리스 노트;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: becff2390aca3a1195cc157c075b1c9a087989c8
+source-git-commit: f406ad74da00a7f4bf7ef1b52bee59cd91435d8f
 workflow-type: tm+mt
-source-wordcount: '1349'
+source-wordcount: '1388'
 ht-degree: 3%
 
 ---
@@ -15,6 +15,11 @@ ht-degree: 3%
 
 이 문서에서는 Adobe Experience Platform Web SDK에 대한 릴리스 노트를 다룹니다.
 웹 SDK 태그 확장에 대한 최신 릴리스 노트는 [웹 SDK 태그 확장 릴리스 노트](extension/web-sdk-ext-release-notes.md).
+
+## 버전 2.13.1 - 2022년 10월 13일
+
+* 구성 후 window.Visitor가 정의된 경우 방문자 마이그레이션이 작동하지 않는 문제가 해결되었습니다. 특히 Adobe 태그로 실행할 때 발생하는 문제입니다.
+* 다음 상황에서 `device.screenWidth` 및 `device.screenHeight` 일부 환경에서 문자열로 채워집니다.
 
 ## 버전 2.13.0 - 2022년 9월 28일
 
