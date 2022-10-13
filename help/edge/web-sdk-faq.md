@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 웹 SDK FAQ
 description: Adobe Experience Platform Web SDK에 대해 자주 묻는 질문에 대한 답변을 얻을 수 있습니다.
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 5586c788f4ae5c61b3b94f93b4180fc293d7e179
 workflow-type: tm+mt
-source-wordcount: '1934'
-ht-degree: 1%
+source-wordcount: '2101'
+ht-degree: 2%
 
 ---
 
@@ -151,13 +151,17 @@ CNAME에 대한 자세한 내용은 [Adobe 설명서](https://experienceleague.a
 
 ## Adobe Experience Platform 웹 SDK에서 쿠키를 사용합니까? 쿠키라면 어떤 쿠키를 사용합니까?
 
-예. 현재 웹 SDK는 구현에 따라 1~4 쿠키 사이의 어느 곳에서든 쿠키를 사용합니다. 다음은 웹 SDK에서 볼 수 있는 4개의 쿠키 및 쿠키 사용 방법입니다.
+예. 현재 웹 SDK는 구현에 따라 1~7개의 쿠키를 사용합니다. 다음은 웹 SDK에서 볼 수 있는 쿠키 및 쿠키 사용 방법입니다.
 
-**ndct_orgid_identity:** ID 쿠키는 ECID와 ECID와 관련된 기타 정보를 저장하는 데 사용됩니다.
-
-**ndctr_orgid_consent:** 이 쿠키는 웹 사이트에 대한 사용자의 동의 기본 설정을 저장합니다.
-
-**ndctr_orgid_cluster:** 이 쿠키는 현재 사용자의 요청을 제공하는 Experience Edge 영역을 저장합니다. 이 영역은 Experience Edge에서 요청을 올바른 영역으로 라우팅할 수 있도록 URL 경로에 사용됩니다. 이 쿠키의 수명은 30분으로, 사용자가 다른 IP 주소와 연결하는 경우 요청을 가장 가까운 영역으로 라우팅할 수 있습니다.
+| **이름** | **maxAge** | **친숙한 연령** | **설명** |
+|---|---|---|---|
+| **kndct_orgid_identity** | 34128000 | 395일 | ID 쿠키는 ECID 및 ECID와 관련된 기타 정보를 저장합니다. |
+| **ndctr_orgid_consent_check** | 7200년 | 2시간 | 이 쿠키는 웹 사이트에 대한 사용자의 동의 기본 설정을 저장합니다. |
+| **ndctr_orgid_consent** | 15552000 | 180일 | 이 세션 기반 쿠키는 서버에 동의 환경 설정 서버 측을 검색하도록 신호를 보냅니다. |
+| **ndctr_orgid_cluster** | 1800년 | 30분 | 이 쿠키는 현재 사용자의 요청을 제공하는 Experience Edge 영역을 저장합니다. 이 영역은 Experience Edge에서 요청을 올바른 영역으로 라우팅할 수 있도록 URL 경로에 사용됩니다. 이 쿠키의 수명은 30분으로, 사용자가 다른 IP 주소와 연결하는 경우 요청을 가장 가까운 영역으로 라우팅할 수 있습니다. |
+| **mbox** | 63072000 | 2년 | 이 쿠키는 Target 마이그레이션 설정이 true로 설정되면 나타납니다. 이렇게 하면 Target이 허용됩니다 [mbox 쿠키](https://developer.adobe.com/target/implement/client-side/atjs/atjs-cookies/) 를 사용 중인지 확인합니다. |
+| **mboxEdgeCluster** | 1800년 | 30분 | 이 쿠키는 Target 마이그레이션 설정이 true로 설정되면 나타납니다. 이 쿠키를 사용하면 웹 SDK에서 올바른 에지 클러스터를 at.js에 전달하여 사용자가 사이트를 탐색할 때 Target 프로필이 계속 동기화될 수 있습니다. |
+| **AMCV_###@AdobeOrg** | 34128000 | 395일 | 이 쿠키는 Adobe Experience Platform Web SDK에서 ID 마이그레이션이 활성화된 경우에만 나타납니다. 이 쿠키는 사이트의 일부 부분이 여전히 visitor.js를 사용하는 동안 웹 SDK로 전환할 때 도움이 됩니다. 자세한 내용은 [idMigrationEnabled 설명서](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en#identity-options) 을 참조하십시오. |
 
 웹 SDK를 사용할 때 Edge Network는 위의 쿠키 중 하나 이상을 설정합니다. Edge Network는 `secure` 및 `sameSite="none"` 속성을 사용합니다.
 
