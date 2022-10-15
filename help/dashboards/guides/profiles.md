@@ -4,10 +4,10 @@ title: 프로필 대시보드 안내서
 description: Adobe Experience Platform은 조직의 실시간 고객 프로필 데이터에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 18288130b98e13d824273426a860d97722c434de
+source-git-commit: 1755f5030f5730ca06ea718635ede9deb1188d21
 workflow-type: tm+mt
-source-wordcount: '4154'
-ht-degree: 1%
+source-wordcount: '3387'
+ht-degree: 0%
 
 ---
 
@@ -51,19 +51,19 @@ Experience Platform 사용자 인터페이스 내의 모든 프로필 기능에 
 
 위젯 라이브러리에서 표준 및 사용자 지정 세그먼트 위젯의 선택 항목을 찾아볼 수 있습니다.위젯을 추가하는 방법에 대한 자세한 내용은 위젯 라이브러리 설명서를 참조하십시오 [위젯 추가](../customize/widget-library.md#add-widgets).
 
-## (베타) 프로필 유효성 통찰력 {#profile-efficacy-insights}
+<!-- ## (Beta) Profile efficacy insights {#profile-efficacy-insights}
 
 >[!IMPORTANT]
 >
->프로필 유효성 인사이트 기능은 현재 베타 버전으로 일부 사용자는 사용할 수 없습니다. 설명서 및 기능은 변경될 수 있습니다.
+>The profile efficacy insight functionality is currently in beta and are not available to all users. The documentation and the functionality are subject to change.
 
-다음 [!UICONTROL 효능] 탭은 프로필 유효성 위젯을 사용하여 프로필 데이터의 품질과 완전성에 대한 지표를 제공합니다. 이러한 위젯은 프로필의 구성, 시간 경과에 따른 완벽성 추세 및 프로필 데이터 품질에 대한 평가를 한눈에 보여줍니다.
+The [!UICONTROL Efficacy] tab provides metrics on the quality and completeness of your profile data through the use of profile efficacy widgets. These widgets illustrate at a glance the composition of your profiles, trends in completeness over time, and assessments on the quality of your profile data.
 
-![프로파일 효과 대시보드.](../images/profiles/attributes-quality-assessment.png)
+![The profile efficacy dashboard.](../images/profiles/attributes-quality-assessment.png)
 
-자세한 내용은 [프로필 효과 위젯 섹션](#profile-efficacy-widgets) 위젯에 대한 자세한 내용은 현재 사용 가능합니다.
+See the [profile efficacy widgets section](#profile-efficacy-widgets) for more information on the widgets currently available.
 
-또한, 이 대시보드의 레이아웃은 [**[!UICONTROL 대시보드 수정]**](../customize/modify.md) 에서 [!UICONTROL 개요] 탭.
+The layout of this dashboard is also customizable by selecting [**[!UICONTROL Modify dashboard]**](../customize/modify.md) from the [!UICONTROL Overview] tab. -->
 
 ## 프로필 찾아보기 {#browse-profiles}
 
@@ -360,73 +360,73 @@ The visualization allows you to monitor the overall health of audiences within A
 ![병합 정책 드롭다운과 위젯 세그먼트 드롭다운이 강조 표시된 플랫폼 UI 프로필 대시보드 .](../images/profiles/audience-overlap-by-merge-policy.png)
 
 
-## (베타) 프로필 효율성 위젯 {#profile-efficacy-widgets}
+<!-- ## (Beta) Profile efficacy widgets {#profile-efficacy-widgets}
 
 >[!IMPORTANT]
 >
->프로필 효과 위젯은 현재 베타 버전이며 모든 사용자가 사용할 수 없습니다. 설명서 및 기능은 변경될 수 있습니다.
+>The profile efficacy widgets are currently in Beta and are not available to all users. The documentation and the functionality are subject to change.
 
-Adobe은 데이터 분석에 사용할 수 있는 수집된 프로필의 완전성을 평가하는 여러 위젯을 제공합니다. 각각의 프로필 효과 위젯은 병합 정책에 의해 필터링할 수 있습니다. 병합 정책 필터를 변경하려면[!UICONTROL 병합 정책을 사용한 프로필] 드롭다운을 클릭하고 사용 가능한 목록에서 적절한 정책을 선택합니다.
+Adobe provides multiple widgets to assess the completeness of the ingested profiles available for your data analysis. Each of the profile efficacy widgets can be filtered by the merge policy. To change the merge policy filter, select the[!UICONTROL Profiles using merge policy] dropdown and choose the appropriate policy from the available list.
 
-각 프로필 효과 위젯에 대해 자세히 알려면 다음 목록에서 위젯의 이름을 선택합니다.
+To learn more about each of the profile efficacy widgets, select the name of a widget from the following list:
 
-* [[!UICONTROL 속성 품질 평가]](#attributes-quality-assessment)
-* [[!UICONTROL 완벽을 기한 프로필]](#profiles-by-completeness)
-* [[!UICONTROL 프로필 완결성 트렌드]](#profiles-completeness-trend)
+* [[!UICONTROL Attribute quality assessment]](#attributes-quality-assessment)
+* [[!UICONTROL Profiles by completeness]](#profiles-by-completeness)
+* [[!UICONTROL Profiles completeness trend]](#profiles-completeness-trend)
 
-### (베타) [!UICONTROL 속성 품질 평가] {#attributes-quality-assessment}
+### (Beta) [!UICONTROL Attributes quality assessment] {#attributes-quality-assessment}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_attributesqualityassessment"
->title="속성 품질 평가"
->abstract="이 위젯은 속성에 따라 모든 프로필의 완전성과 카디널리티를 보여줍니다. 각 행은 하나의 속성에 대해 설명합니다. 다음 **프로필** 열은 이 속성이 있고 null이 아닌 값으로 채워진 프로필 수를 제공합니다. 다음 **완전성** 백분율은 이 속성을 가지고 있고 null이 아닌 값으로 채워진 프로필의 총 개수를 해당 속성에 대한 프로필의 비어 있지 않은 값의 총 수로 나눈 값에 의해 결정됩니다. **카디널리티** 모든 속성에 대해 이 속성의 null이 아닌 고유한 값의 총 수를 제공합니다."
+>title="Attributes quality assessment"
+>abstract="This widget shows the completeness and cardinality of all profiles according to their attributes. Each row describes one attribute. The **Profiles** column provides the number of profiles that have this attribute and are filled with non-null values. The **Completeness** percentage is determined by the total number of profiles that have this attribute and are filled with non-null values divided by the total number of non-empty values in the profiles for that attribute. **Cardinality** provides the total number of unique non-null values of this attribute across all attributes."
 
-다음 [!UICONTROL 속성 품질 평가] 위젯은 속성에 따라 모든 프로필의 완전성과 카디널리티를 보여줍니다. 데이터가 마지막 처리 날짜까지 정확합니다. 이 정보는 테이블의 각 행이 단일 속성을 나타내는 네 개의 열이 있는 테이블로 표시됩니다.
+The [!UICONTROL Attribute quality assessment] widget shows the completeness and cardinality of all profiles according to their attributes. The data is accurate to the last processing date. This information is presented as a table with four columns where each row in the table represents a single attribute.
 
-| 열 | 설명 |
+| Column  | Description  |
 |---|---|
-| 속성 | 속성의 이름입니다. |
-| 프로필 | 이 특성이 있고 null이 아닌 값으로 채워진 프로필 수입니다. |
-| 완전성 | 이 백분율은 이 속성을 가지고 있고 null이 아닌 값으로 채워진 총 프로필 수에 의해 결정됩니다. 이 숫자는 총 프로필 수를 해당 속성의 프로필에서 비어 있지 않은 값의 총 수로 나누어 계산됩니다. |
-| 카디널리티 | 총 개수 **고유** 이 특성의 null이 아닌 값. 모든 프로필에서 측정됩니다. |
+| Attribute  | The name of the attribute.  |
+| Profiles  | The number of profiles that have this attribute and are filled with non-null values.  |
+| Completeness  | This percentage is determined by the total number of profiles that have this attribute and are filled with non-null values. The number is calculated by dividing the total number of profiles by the total number of non-empty values in the profiles for that attribute.  |
+| Cardinality  | The total number of **unique** non-null values of this attribute. It is measured across all profiles. |
 
-![속성 품질 평가 위젯](../images/profiles/attributes-quality-assessment.png)
+![The attributes quality assessment widget](../images/profiles/attributes-quality-assessment.png)
 
-### (베타) [!UICONTROL 완벽을 기한 프로필] {#profiles-by-completeness}
+### (Beta) [!UICONTROL Profiles by completeness] {#profiles-by-completeness}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_profilesbycompleteness"
->title="완벽을 기한 프로필"
->abstract="도넛 차트는 관찰된 모든 속성 중에서 null이 아닌 값으로 채워진 프로필 속성의 백분율을 표시합니다. 높은 프로필, 중간 또는 완전성이 낮은 프로필의 비율을 보여줍니다. 완전성이 높은 프로필의 속성 중 70% 이상이 채워졌습니다. 중간 완결성 프로필의 속성 중 30%에서 70% 사이가 채워진 것입니다. 완전성이 낮은 프로필의 속성은 채워진 속성의 30% 미만입니다."
+>title="Profiles by completeness"
+>abstract="The donut chart displays the percentage of profile attributes that are filled with non-null values among all observed attributes. It illustrates the proportion of profiles that are of high, medium, or low completeness. High completeness profiles have more than 70% of their attributes filled. Medium completeness profiles have between 30% and 70% of their attributes filled. Low completeness profiles have less than 30% of their attributes filled."
 
-다음 [!UICONTROL 완벽을 기한 프로필] 위젯은 마지막 처리 날짜 이후 최종 프로필 완결성 도넛 차트를 만듭니다. 프로필의 완전성은 관찰된 모든 속성 중에서 null이 아닌 값으로 채워진 속성의 백분율로 측정됩니다.
+The [!UICONTROL Profiles by completeness] widget creates a donut chart of profile completeness since the last processing date. The completeness of a profile is measured by the percentage of attributes that are filled with non-null values among all observed attributes.
 
-이 위젯은 높은 프로필, 중간 또는 낮은 완전성을 나타내는 프로필의 비율을 표시합니다. 기본적으로 구성된 완결성 수준은 다음과 같습니다.
+This widget shows the proportion of profiles that are of high, medium, or low completeness. By default, there are three levels of completeness configured: 
 
-* 높은 완전성: 프로필의 속성 중 70% 이상이 채워져 있습니다.
-* 미디어 완결성: 프로필의 속성 중 30%~70% 가량이 채워져 있습니다.
-* 낮은 완결성: 프로필의 속성 중 30% 미만이 입력되었습니다.
+* High completeness: Profiles have more than 70% of their attributes filled. 
+* Medium completeness: Profiles have between 30% and 70% of their attributes filled. 
+* Low completeness: Profiles have less than 30% of their attributes filled. 
 
-![완결성 위젯의 프로필](../images/profiles/profiles-by-completeness.png)
+![The profiles by completeness widget](../images/profiles/profiles-by-completeness.png)
 
-### (베타) [!UICONTROL 프로필 완결성 트렌드] {#profiles-completeness-trend}
+### (Beta) [!UICONTROL Profiles completeness trend] {#profiles-completeness-trend}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_profilescompletenesstrend"
->title="프로필 완결성 트렌드"
->abstract="이 위젯은 시간 경과에 따른 프로필 완결성의 트렌드를 나타내는 스택 영역 차트를 만듭니다. 완전성은 관찰된 모든 속성 중에서 null이 아닌 값으로 채워진 속성의 백분율로 측정됩니다."
+>title="Profiles completeness trend"
+>abstract="This widget creates a stacked area chart to depict the trend of profile completeness over time. Completeness is measured by the percentage of attributes that are filled with non-null values among all observed attributes."
 
-이 위젯은 시간 경과에 따른 프로필 완결성의 트렌드를 나타내는 스택 영역 차트를 만듭니다. 완전성은 관찰된 모든 속성 중에서 null이 아닌 값으로 채워진 속성의 백분율로 측정됩니다. 마지막 처리 날짜 이후 프로필 완전성을 높음, 중간 또는 낮은 완전성으로 분류합니다.
+This widget creates a stacked area chart to depict the trend of profile completeness over time. Completeness is measured by the percentage of attributes filled with non-null values among all observed attributes. It categorizes the profile completeness as high, medium, or low completeness since the last processing date.
 
-x축은 시간을 나타내고, y축은 프로필 수를 나타내고, 색상은 세 가지 프로필 완결성 수준을 나타냅니다.
+The x-axis represents time, the y-axis represents the number of profiles, and the colors represent the three levels of profile completeness. 
 
-세 가지 완결성 수준은 다음과 같습니다.
+The three levels of completeness are:
 
-* 높은 완전성: 프로필의 속성 중 70% 이상이 채워졌습니다.
-* 미디어 완결성: 프로필의 속성 중 70% 미만과 30% 이상이 채워진 경우
-* 낮은 완결성: 프로필의 속성 중 30% 미만이 입력되었습니다.
+* High completeness: Profiles have more than 70% of attributes filled. 
+* Medium completeness: Profiles have less than 70% and more than 30% of attributes filled. 
+* Low completeness: Profiles have less than 30% of attributes filled.
 
-![프로필 완결성 트렌드 위젯](../images/profiles/profiles-completeness-trend.png)
+![The profiles completeness trend widget](../images/profiles/profiles-completeness-trend.png) -->
 
 ## 다음 단계
 
