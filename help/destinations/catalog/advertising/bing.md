@@ -1,11 +1,11 @@
 ---
-keywords: '광고; bing; '
+keywords: 광고; bing;
 title: Microsoft Bing 연결
 description: Microsoft Bing 연결 대상을 사용하면 Microsoft 디스플레이 광고에서 리타겟팅 및 대상 타깃팅된 디지털 캠페인을 실행할 수 있습니다.
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: 812688043a7da943832b5798de0f433928634998
+source-git-commit: aec9708680c2a4cb3c70af12f95c67ec37b2e129
 workflow-type: tm+mt
-source-wordcount: '633'
+source-wordcount: '622'
 ht-degree: 2%
 
 ---
@@ -69,7 +69,7 @@ While [설정](../../ui/connect-destination.md) 이 대상을 사용하려면 �
 
 * **[!UICONTROL 이름]**: 나중에 이 대상을 인식하는 이름입니다.
 * **[!UICONTROL 설명]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
-* **[!UICONTROL 계정 ID]**: 사용자 [!DNL Bing Ads CID].
+* **[!UICONTROL 계정 ID]**: 사용자 [!DNL Bing Ads Customer ID] (CID). CID는 로그인할 때 URL에 있는 정수입니다 [!DNL Microsoft Advertising].
 
 ### 경고 활성화 {#enable-alerts}
 
@@ -90,11 +90,9 @@ While [설정](../../ui/connect-destination.md) 이 대상을 사용하려면 �
 
 자세한 내용은 [스트리밍 세그먼트 내보내기 대상으로 대상 데이터 활성화](../../ui/activate-segment-streaming-destinations.md) 대상 세그먼트를 이 대상으로 활성화하는 방법에 대한 지침입니다.
 
-에서 [세그먼트 예약](../../ui/activate-segment-streaming-destinations.md#scheduling) 1단계에서 세그먼트를 [!DNL Bing] 대상. 숫자 세그먼트 ID를 입력합니다. [!DNL Bing] 에서 [!UICONTROL 매핑 ID] 필드.
+에서 [세그먼트 예약](../../ui/activate-segment-streaming-destinations.md#scheduling) 단계에서 수동으로 세그먼트 이름을 [!UICONTROL 매핑 ID] 필드. 이렇게 하면 세그먼트 메타데이터가에 올바르게 전달됩니다 [!DNL Bing].
 
-![Bing 매핑 ID의 예를 들어 있는 세그먼트 매핑 화면을 보여주는 UI 이미지](../../assets/catalog/advertising/bing/mapping-id.png)
-
-제공된 경우 [!UICONTROL 매핑 ID] 는 Bing 대상의 세그먼트 ID에 해당하지 않으므로 Bing 계정에 예상 대상 데이터가 표시되지 않습니다.
+![세그먼트 이름을 Bing Mapping ID에 매핑하는 방법의 예와 함께 세그먼트 예약 화면을 보여주는 UI 이미지](../../assets/catalog/advertising/bing/mapping-id.png)
 
 ## 내보낸 데이터 {#exported-data}
 
