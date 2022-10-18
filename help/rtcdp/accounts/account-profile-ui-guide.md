@@ -3,9 +3,9 @@ keywords: rtcdp 프로필;프로필 rtcdp;rtcdp ID;rtcdp 병합 정책;실시간
 title: 계정 프로필 UI 안내서
 description: Real-time Customer Data Platform B2B Edition에서는 계정 프로필을 사용하여 여러 소스에서 계정 정보를 통합할 수 있습니다. 이 안내서에서는 Adobe Experience Platform 사용자 인터페이스의 계정 프로필과 상호 작용하기 위한 세부 사항을 제공합니다.
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: 9119e6376228c3cec214977265abf0ce55093b64
+source-git-commit: 85d3e5f265fdbfd51f184d36205127f005e2b9df
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '1624'
 ht-degree: 0%
 
 ---
@@ -52,8 +52,6 @@ B2B 워크플로우의 일부로 계정 프로필을 만드는 방법에 대한 
 
 계정 프로필을 찾아보려면 먼저 **[!UICONTROL 프로필]** 아래에 [!UICONTROL 계정] 를 클릭합니다.
 
-![왼쪽 탐색에서 프로필 선택](images/b2b-account-browse.png)
-
 설정 **[!UICONTROL 찾아보기]** 탭에서 연결된 엔터프라이즈 소스에서 계정 ID를 사용하거나 소스 세부 사항을 직접 입력하여 계정 프로필을 탐색할 수 있습니다.
 
 ![계정 ID를 사용하여 프로필 탐색](images/b2b-account-browse-by.png)
@@ -72,9 +70,9 @@ B2B 워크플로우의 일부로 계정 프로필을 만드는 방법에 대한 
 
 엔터프라이즈 소스 연결에 대한 자세한 내용은 [소스 개요](../sources/sources-overview.md).
 
-![소스 워크플로우 선택](images/b2b-account-select-source.png)
-
 연결 이름 옆에 있는 라디오 단추를 선택하여 소스를 선택한 다음 **[!UICONTROL 선택]** 로 돌아가기 [!UICONTROL 찾아보기] 탭.
+
+![소스 워크플로우 선택](images/b2b-account-select-source.png)
 
 소스를 선택한 상태에서 이제 **[!UICONTROL 계정 ID]** 소스와 관련되어 있습니다. 예를 들어, Salesforce 소스를 선택하면 Salesforce 인스턴스에서 계정 ID를 입력해야 해당 ID에 연결된 계정 프로필을 볼 수 있습니다.
 
