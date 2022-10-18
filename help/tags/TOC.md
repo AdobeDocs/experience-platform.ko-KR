@@ -5,9 +5,9 @@ breadcrumb-title: 태그
 user-guide-description: 고객 경험을 향상시키기 위해 분석, 마케팅 및 광고 태그를 배포 및 관리하는 방법을 살펴볼 수 있습니다.
 feature: Tags
 solution: Data Collection
-source-git-commit: 48151842ffcba4082988d008f9370714da51ee05
+source-git-commit: d5e8e49e50d0c5792828140626b933a4f232dd00
 workflow-type: tm+mt
-source-wordcount: '409'
+source-wordcount: '413'
 ht-degree: 67%
 
 ---
@@ -132,6 +132,8 @@ ht-degree: 67%
       * [!DNL YouTube] 비디오 추적 확장 {#youtube}
          * [개요](./extensions/web/youtube/overview.md)
          * [릴리스 정보](./extensions/web/youtube/release-notes.md)
+      * [!DNL Zendesk] 이벤트 API 확장 {#zendesk}
+         * [개요](./extensions/web/zendesk/overview.md)
    * [타사 확장](./extensions/3rd-party-extensions.md)
 * 확장 개발 {#extension-dev}
    * [개요](./extension-dev/overview.md)
