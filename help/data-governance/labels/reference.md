@@ -5,7 +5,7 @@ title: 데이터 사용 레이블 용어집
 topic-legacy: labels
 description: 이 문서에서는 현재 Adobe Experience Platform에서 지원하는 모든 데이터 사용 레이블에 대해 간략하게 설명합니다.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: 1a10216c01a049539b5e1d21d0c42942496b2e3e
+source-git-commit: 1ab97c63bc169965ca759f2dd8b411c175559fb8
 workflow-type: tm+mt
 source-wordcount: '2083'
 ht-degree: 2%
@@ -51,7 +51,7 @@ ID &quot;I&quot; 레이블은 특정 개인을 식별하거나 연락할 수 있
 | **I1** | 장치가 아닌 특정 개인을 식별하거나 연락할 수 있는 직접 식별 가능한 데이터. |
 | **I2** | 특정 개인을 식별하거나 연락하기 위해 다른 데이터와 함께 사용할 수 있는 간접적으로 식별 가능한 데이터. |
 
-## 중요 레이블
+## 중요 레이블 {#sensitive}
 
 중요 &quot;S&quot; 레이블은 사용자와 조직이 민감하도록 데이터를 분류하는 데 사용됩니다.
 
