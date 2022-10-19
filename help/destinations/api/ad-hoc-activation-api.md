@@ -6,9 +6,9 @@ description: 이 문서에서는 활성화 전에 발생하는 세분화 작업�
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: 9e191d52d8385d716ed312725f72bd85c1e4b72d
+source-git-commit: 8d67d89db6a8c179935b4fe709f91279860d464e
 workflow-type: tm+mt
-source-wordcount: '1488'
+source-wordcount: '1531'
 ht-degree: 2%
 
 ---
@@ -124,6 +124,10 @@ Experience Platform의 리소스는 특정 가상 샌드박스로 분리할 수 
 ## 5단계: 임시 활성화 작업 실행 {#activation-job}
 
 Adobe Experience Platform은 24시간마다 예약된 세그먼테이션 작업을 실행합니다. 임시 활성화 API는 최신 세분화 결과를 기반으로 실행됩니다.
+
+>[!IMPORTANT]
+>
+>다음의 일회성 제약 조건을 참고하십시오. 임시 활성화 작업을 실행하기 전에, 세그먼트가 처음 활성화된 상태에서 설정 스케줄에 따라 최소 20분이 경과했는지 확인하십시오 [3단계 - Platform UI에서 활성화 흐름 만들기](#activation-flow).
 
 임시 활성화 작업을 실행하기 전에 세그먼트에 대해 예약된 세그먼트 내보내기 작업이 완료되었는지 확인하십시오. 자세한 내용은 [대상 데이터 흐름 모니터링](../../dataflows/ui/monitor-destinations.md) 활성화 흐름의 상태를 모니터링하는 방법에 대한 정보입니다. 예를 들어 활성화 데이터 양이 **[!UICONTROL 처리 중]** 상태, ad-hoc 활성화 작업을 실행하기 전에 완료될 때까지 기다립니다.
 
