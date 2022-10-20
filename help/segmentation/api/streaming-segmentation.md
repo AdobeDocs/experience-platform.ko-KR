@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;홈;인기 항목;세그먼테이션;세그먼테이션;세그먼테이션 서비스;스트리밍 세그먼테이션;스트리밍 세그먼테이션;연속 평가;
 solution: Experience Platform
-title: '스트리밍 세그먼테이션을 사용하여 거의 실시간으로 이벤트 평가 '
+title: 스트리밍 세그먼테이션을 사용하여 거의 실시간으로 이벤트 평가
 topic-legacy: developer guide
 description: 이 문서에는 Adobe Experience Platform 세그멘테이션 서비스 API에서 스트리밍 세그멘테이션을 사용하는 방법에 대한 예가 나와 있습니다.
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: 654e141735b6882b4c0233b8e1c73d0838c8374e
+source-git-commit: 5a4a8a8b77d06890f212a457e599b66aa46d8b7e
 workflow-type: tm+mt
-source-wordcount: '1873'
+source-wordcount: '1915'
 ht-degree: 1%
 
 ---
@@ -429,6 +429,8 @@ Adobe Experience Platform 사용자 인터페이스를 사용하여 유사한 �
 ### 세그먼트는 어떻게 일괄 처리 또는 스트리밍 세그먼테이션으로 정의됩니까?
 
 세그먼트는 쿼리 유형 및 이벤트 내역 기간의 조합을 기반으로 일괄 처리 또는 스트리밍 세그먼테이션으로 정의됩니다. 스트리밍 세그먼트로 평가될 세그먼트 목록은 [세그먼테이션 쿼리 유형 섹션](#query-types).
+
+세그먼트에 **둘 다** an `inSegment` 표현식 및 직접적인 단일 이벤트 체인은 스트리밍 세그먼테이션의 자격이 없습니다. 이 세그먼트가 스트리밍 세그먼테이션에 대한 자격이 되게 하려면 직접 단일 이벤트 체인을 자체 세그먼트로 만들어야 합니다.
 
 ### 최근 X일 아래의 수가 세그먼트 세부 사항 섹션 내에 0으로 남아 있는 동안 &quot;총 적격한&quot; 세그먼트 수는 왜 계속 증가합니까?
 
