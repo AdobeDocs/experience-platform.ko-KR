@@ -3,7 +3,7 @@ product: adobe experience platform
 solution: Real-time Customer Data Platform
 audience: user
 user-guide-title: Real-time Customer Data Platform 안내서
-user-guide-description: 여러 엔터프라이즈 소스에서 알려진 데이터와 익명의 데이터를 결합하여 고객 프로필을 생성하고, 이러한 프로필에서 고객 세그먼트를 생성하며, 이러한 세그먼트를 서드파티 대상으로 활성화할 수 있습니다.
+user-guide-description: 여러 엔터프라이즈 소스에서 알려진 데이터와 익명의 데이터를 결합하여 고객 프로필을 생성하고, 이러한 프로필에서 대상자 세그먼트를 생성하며, 이러한 세그먼트를 서드파티 대상으로 활성화할 수 있습니다.
 source-git-commit: 03c2a8b427d2bd916c87000b63de16950a9e05bf
 workflow-type: tm+mt
 source-wordcount: '205'

@@ -9,8 +9,8 @@ landing-page-description: 고객 AI는 규모에 따라 개별 프로필에 대�
 exl-id: 3e668103-e2a2-4ce6-a40a-8029a6aaa8dd
 source-git-commit: 6c0e001419dc78d4ff87bebd0604c7add07b635f
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '553'
+ht-degree: 26%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 Customer AI는 Intelligent Services의 일부로 마케터에게 개별 수준에서 고객 예측을 생성할 수 있는 기능을 제공합니다.
 
-영향력 있는 요소를 통해 고객 AI는 고객이 무엇을 할 수 있고 왜 하는지 알려 줄 수 있습니다. 또한 마케터는 고객 AI 예측 및 통찰력을 활용하여 가장 적절한 오퍼와 메시지를 제공함으로써 고객 경험을 개인화할 수 있습니다.
+영향력 있는 요소를 통해 Customer AI는 고객이 무엇을 할 수 있고 왜 하는지 알려 줄 수 있습니다. 또한 마케터는 Customer AI 예측 및 통찰력을 활용하여 가장 적절한 오퍼와 메시지를 제공함으로써 고객 경험을 개인화할 수 있습니다.
 
 ## 고객 AI 이해
 

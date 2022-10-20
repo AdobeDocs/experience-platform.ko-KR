@@ -3,11 +3,11 @@ solution: Experience Platform
 audience: user
 user-guide-title: 인텔리전트 서비스 도움말
 breadcrumb-title: Intelligent Services 안내서
-user-guide-description: 인텔리전트 AI 서비스를 사용하여 점수를 생성하고 인사이트를 발견하며 마케팅 이벤트 데이터를 통해 세그먼트를 만들 수 있습니다.
+user-guide-description: 인텔리전트 AI 서비스를 이용하여 점수를 생성하고 인사이트를 발견하며 마케팅 이벤트 데이터를 통해 세그먼트를 만들 수 있습니다.
 source-git-commit: ba0399b0d171c2e604b4de3b22f8568b5431bcf4
 workflow-type: tm+mt
 source-wordcount: '123'
-ht-degree: 10%
+ht-degree: 24%
 
 ---
 

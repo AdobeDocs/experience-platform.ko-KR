@@ -7,7 +7,7 @@ feature: Data Ingestion
 source-git-commit: ba0399b0d171c2e604b4de3b22f8568b5431bcf4
 workflow-type: tm+mt
 source-wordcount: '129'
-ht-degree: 19%
+ht-degree: 27%
 
 ---
 

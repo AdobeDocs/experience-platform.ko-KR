@@ -75,7 +75,7 @@ ht-degree: 16%
       * [장치 거래 세부 사항](./field-groups/event/device-trade-in-details.md)
       * [식사 예약](./field-groups/event/dining-reservation.md)
       * [최종 사용자 ID 세부 정보](./field-groups/event/enduserids.md)
-      * [환경 세부 사항](./field-groups/event/environment-details.md)
+      * [환경 세부 정보](./field-groups/event/environment-details.md)
       * [비행 예약](./field-groups/event/flight-reservation.md)
       * [IAB TCF 2.0 동의](./field-groups/event/iab.md)
       * [숙박예약](./field-groups/event/lodging-reservation.md)

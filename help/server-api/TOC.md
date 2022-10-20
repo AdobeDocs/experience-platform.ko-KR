@@ -3,12 +3,12 @@ audience: user
 solution: Data Collection
 user-guide-title: Edge Network Server API 설명서
 breadcrumb-title: Edge Network Server API 설명서
-user-guide-description: Experience Cloud 또는 Experience Platform Edge 서비스에서 데이터 수집, 개인화, 광고 및 마케팅 사용 사례에 Edge Network Server API를 사용하십시오.
+user-guide-description: Experience Cloud 또는 Experience Platform Edge 서비스의 데이터 수집, 개인화, 광고 및 마케팅 사용 사례에 Edge Network Server API를 사용하십시오.
 feature: Data Collection
 source-git-commit: ba0399b0d171c2e604b4de3b22f8568b5431bcf4
 workflow-type: tm+mt
 source-wordcount: '85'
-ht-degree: 23%
+ht-degree: 50%
 
 ---
 

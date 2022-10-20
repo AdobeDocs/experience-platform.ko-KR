@@ -1,11 +1,11 @@
 ---
 audience: user
 user-guide-title: Adobe Experience Platform의 접근성
-user-guide-description: 모든 개인에게 접근가능하고 포괄적인 기능을 제공하기 위한 Experience Platform 약정에 대해 알아봅니다.
+user-guide-description: 모든 개인에게 접근 가능하고 포괄적인 기능을 제공하기 위한 Experience Platform의 기능에 대해 알아봅니다.
 source-git-commit: 2790ae0b0bbba454ded1a6a8f73e05500f531cda
 workflow-type: tm+mt
 source-wordcount: '50'
-ht-degree: 20%
+ht-degree: 50%
 
 ---
 

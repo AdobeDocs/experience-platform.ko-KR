@@ -1,13 +1,13 @@
 ---
 audience: user
 user-guide-title: 데이터 위생 도움말
-breadcrumb-title: Data Warehouse 안내서
-user-guide-description: GDPR 및 CCPA와 같은 법적 개인 정보 보호 규정을 준수하도록 소비자 데이터 요청을 관리합니다.
+breadcrumb-title: 데이터 위생 안내서
+user-guide-description: GDPR 및 CPA와 같은 법적 개인정보 보호 규정을 준수하도록 소비자 데이터 요청을 관리합니다.
 feature: Data Hygiene
 source-git-commit: 16eecb22a1bec89c7dbac2fcee566a2226cf897f
 workflow-type: tm+mt
 source-wordcount: '48'
-ht-degree: 4%
+ht-degree: 45%
 
 ---
 

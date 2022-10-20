@@ -2,11 +2,11 @@
 audience: user
 user-guide-title: Adobe Experience Platform 릴리스 정보
 breadcrumb-title: Platform 릴리스 정보
-user-guide-description: Adobe Experience Platform에 대한 월별 릴리스 노트를 찾습니다.
+user-guide-description: Adobe Experience Platform에 대한 월별 릴리스 정보를 살펴보십시오.
 source-git-commit: ba0399b0d171c2e604b4de3b22f8568b5431bcf4
 workflow-type: tm+mt
 source-wordcount: '67'
-ht-degree: 82%
+ht-degree: 94%
 
 ---
 
