@@ -5,9 +5,9 @@ title: UI에서 열거형 필드 및 제안 값 정의
 description: Experience Platform 사용자 인터페이스에서 문자열 필드에 대한 열거형 및 제안 값을 정의하는 방법을 알아봅니다.
 topic-legacy: user guide
 exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
-source-git-commit: 3b71f6b07345d7b1e08fa5a8b93abc3519606015
+source-git-commit: 1c1797a01a0a4e2cd355399d3f913cb81adf9006
 workflow-type: tm+mt
-source-wordcount: '1207'
+source-wordcount: '1217'
 ht-degree: 0%
 
 ---
@@ -21,9 +21,9 @@ ht-degree: 0%
 
 XDM(Experience Data Model)에서 사전 정의된 허용 또는 제안 값 세트를 문자열 필드에 제공하여 해당 필드에 수집되는 값 또는 세그먼테이션에서 동작하는 방법을 더 잘 제어할 수 있습니다.
 
-An **enum** 문자열 필드에 대해 수집할 수 있는 값을 사전 정의된 세트로 제한합니다. 데이터를 열거형 필드에 수집하려고 하며 값이 해당 구성에 정의된 데이터와 일치하지 않으면 수집이 거부됩니다.
+**[!UICONTROL 열거형]** 문자열 필드에 수집할 수 있는 값을 사전 정의된 세트로 제한합니다. 데이터를 열거형 필드에 수집하려고 하며 값이 해당 구성에 정의된 데이터와 일치하지 않으면 수집이 거부됩니다.
 
-열거형과는 반대로, **제안된 값** 문자열 필드로 이동해도 처리할 수 있는 값이 제한되지 않습니다. 대신, 제안된 값은 [세그멘테이션 UI](../../../segmentation/ui/overview.md) 문자열 필드를 속성으로 포함할 때.
+열거형과는 반대로, **[!UICONTROL 제안된 값]** 옵션을 사용하면 수집할 수 있는 값을 제한하지 않는 문자열 필드에 대해 권장 값 집합을 나타낼 수 있습니다. 대신, 제안된 값은 [세그멘테이션 UI](../../../segmentation/ui/overview.md) 문자열 필드를 속성으로 포함할 때.
 
 When [새 필드 정의](./overview.md#define) Adobe Experience Platform 사용자 인터페이스에서 유형을 [!UICONTROL 문자열]를 정의할 수 있는 옵션이 제공됩니다 [enum](#enum) 또는 [제안된 값](#suggested-values) 해당 필드에 대해 입력합니다.
 
