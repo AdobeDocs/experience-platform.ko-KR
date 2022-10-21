@@ -2,9 +2,9 @@
 title: 이벤트 전달에서 암호 구성
 description: 이벤트 전달 속성에 사용되는 엔드포인트를 인증하도록 UI에서 암호를 구성하는 방법을 알아봅니다.
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 9f38925645ec4311f4a809a913fe51792e889105
 workflow-type: tm+mt
-source-wordcount: '1633'
+source-wordcount: '1715'
 ht-degree: 0%
 
 ---
@@ -127,6 +127,12 @@ Google을 통해 암호를 수동으로 승인해야 함을 알려주는 팝오�
 ![Google 권한 부여 팝업](../../images/ui/event-forwarding/secrets/google-authorization.png)
 
 Google 계정에 대한 자격 증명을 입력할 수 있는 대화 상자가 나타납니다. 프롬프트에 따라 선택한 범위의 데이터에 이벤트 전달 액세스 권한을 부여합니다. 인증 프로세스가 완료되면 비밀이 만들어집니다.
+
+>[!IMPORTANT]
+>
+>조직에 Google Cloud 응용 프로그램에 대한 재인증 정책이 설정된 경우 인증이 만료된 후(정책 구성에 따라 1시간에서 24시간 사이) 생성된 암호가 성공적으로 새로 고쳐지지 않습니다.
+>
+>이 문제를 해결하려면 Google Admin Console에 로그인하여 **[!DNL App access control]** 페이지로 표시되므로 이벤트 전달 앱(Adobe Real-Time CDP 이벤트 전달)을 [!DNL Trusted]. 의 Google 설명서를 참조하십시오. [Google 클라우드 서비스에 대한 세션 길이 설정](https://support.google.com/a/answer/9368756) 추가 정보.
 
 ## 암호 편집
 
