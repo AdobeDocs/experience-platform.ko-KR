@@ -1,29 +1,29 @@
 ---
-title: CDP(고객 데이터 플랫폼) 통찰력 데이터 모델
-description: CDP 통찰력 데이터 모델의 SQL 쿼리를 사용하여 마케팅 및 KPI 사용 사례를 위해 고유한 CDP 보고서를 사용자 지정하는 방법을 알아봅니다.
+title: Real-time Customer Data Platform 통찰력 데이터 모델
+description: Real-time Customer Data Platform 통찰력 데이터 모델과 함께 SQL 쿼리를 사용하여 마케팅 및 KPI 사용 사례에 대한 고유한 Real-Time CDP 보고서를 사용자 지정하는 방법을 알아봅니다.
 exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
-source-git-commit: 2c96bfd2c1b541d30a72fcf2bac414ee06607456
+source-git-commit: 16ae8a16d8c4f7ec68a054e8d15a518f453a05c7
 workflow-type: tm+mt
-source-wordcount: '1066'
+source-wordcount: '1105'
 ht-degree: 0%
 
 ---
 
-# CDP(고객 데이터 플랫폼) 통찰력 데이터 모델
+# Real-time Customer Data Platform 통찰력 데이터 모델
 
-CDP(Customer Data Platform) 인사이트 데이터 모델 기능은 다양한 프로필, 대상 및 세그멘테이션 위젯에 대한 통찰력을 제공하는 데이터 모델 및 SQL을 표시합니다. 이러한 SQL 쿼리 템플릿을 사용자 지정하여 마케팅 및 KPI(주요 성과 지표) 사용 사례를 위한 CDP 보고서를 만들 수 있습니다. 그런 다음 이러한 통찰력을 사용자 정의 대시보드에 대한 사용자 지정 위젯으로 사용할 수 있습니다.
+Real-time Customer Data Platform 인사이트 데이터 모델 기능은 다양한 프로필, 대상 및 세그멘테이션 위젯에 대한 통찰력을 제공하는 데이터 모델 및 SQL을 표시합니다. 이러한 SQL 쿼리 템플릿을 사용자 지정하여 마케팅 및 KPI(주요 성과 지표) 사용 사례를 위한 Real-Time CDP 보고서를 만들 수 있습니다. 그런 다음 이러한 통찰력을 사용자 정의 대시보드에 대한 사용자 지정 위젯으로 사용할 수 있습니다. 자세한 내용은 쿼리 가속 저장소 보고 통찰력 설명서를 참조하십시오 [가속화된 저장소 데이터 및 사용자 정의 대시보드에서 사용할 Query Service를 통해 보고 인사이트 데이터 모델을 만드는 방법](../query-service/query-accelerated-store/reporting-insights-data-model.md).
 
 ## 전제 조건
 
 이 안내서에서는 다음을 작업해야 합니다 [사용자 정의 대시보드 기능](./user-defined-dashboards.md). 이 안내서를 계속하기 전에 설명서를 읽어 보십시오.
 
-## CDP 인사이트 보고서 및 사용 사례
+## Real-Time CDP 인사이트 보고서 및 사용 사례
 
-CDP 보고에서는 프로필 데이터와 세그먼트 및 대상과의 관계에 대한 통찰력을 제공합니다. 다양한 스타 스키마 모델이 개발되어 다양한 일반적인 마케팅 활용 사례를 해결하였으며 각 데이터 모델은 여러 활용 사례를 지원할 수 있습니다.
+Real-Time CDP 보고는 프로필 데이터 및 세그먼트 및 대상과의 관계에 대한 통찰력을 제공합니다. 다양한 스타 스키마 모델이 개발되어 다양한 일반적인 마케팅 활용 사례를 해결하였으며 각 데이터 모델은 여러 활용 사례를 지원할 수 있습니다.
 
 >[!IMPORTANT]
 >
->CDP 보고에 사용되는 데이터는 선택한 병합 정책 및 최신 일별 스냅샷에서 정확합니다.
+>Real-Time CDP 보고에 사용되는 데이터는 선택한 병합 정책 및 가장 최근 일별 스냅숏에서 정확합니다.
 
 ### 프로필 모델 {#profile-model}
 

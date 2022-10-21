@@ -1,9 +1,9 @@
 ---
 title: 쿼리 가속 저장소 보고 통찰력
 description: 가속화된 저장소 데이터 및 사용자 정의 대시보드에서 사용할 Query Service를 통해 보고 인사이트 데이터 모델을 만드는 방법을 알아봅니다.
-source-git-commit: 9c18432bbd9322aee1924c34cb10aadac440e726
+source-git-commit: 16ae8a16d8c4f7ec68a054e8d15a518f453a05c7
 workflow-type: tm+mt
-source-wordcount: '996'
+source-wordcount: '1031'
 ht-degree: 0%
 
 ---
@@ -12,7 +12,9 @@ ht-degree: 0%
 
 쿼리 가속 저장소를 사용하면 데이터를 통해 중요한 통찰력을 얻는 데 필요한 시간과 처리 능력을 줄일 수 있습니다. 일반적으로 데이터는 집계 보기를 만들고 보고할 때 정기적으로(예: 시간별 또는 일별) 처리됩니다. 집계된 데이터에서 생성된 이러한 보고서의 분석은 비즈니스 성과를 향상시키기 위한 통찰력을 도출합니다. 쿼리 가속 저장소는 캐시 서비스, 동시 실행, 대화형 경험 및 상태 비저장 API를 제공합니다. 하지만 이 섹션에서는 데이터가 원시 데이터 쿼리를 위한 것이 아니라 집계된 쿼리 작업에 대해 사전 처리 및 최적화된다고 가정합니다.
 
-쿼리 가속 스토어를 사용하면 기존 Real-time Customer Data Platform 데이터 모델을 기반으로 사용자 지정 데이터 모델을 만들거나 확장할 수 있습니다. 그런 다음 보고 인사이트를 원하는 보고/시각화 프레임워크에 포함하거나 참여시킬 수 있습니다. Adobe Experience Platform의 실시간 CDP 데이터 모델은 프로필, 세그먼트 및 대상에 대한 통찰력을 제공하고 실시간 CDP 인사이트 대시보드를 활성화합니다. 이 문서에서는 보고 인사이트 데이터 모델을 만드는 과정과 필요에 따라 실시간 CDP 데이터 모델을 확장하는 방법을 안내합니다.
+쿼리 가속 스토어를 사용하면 기존 Real-time Customer Data Platform 데이터 모델을 기반으로 사용자 지정 데이터 모델을 만들거나 확장할 수 있습니다. 그런 다음 보고 인사이트를 원하는 보고/시각화 프레임워크에 포함하거나 참여시킬 수 있습니다. 자세한 내용은 Real-time Customer Data Platform 인사이트 데이터 모델 설명서를 참조하십시오 [SQL 쿼리 템플릿을 사용자 지정하여 마케팅 및 KPI(주요 성과 지표) 사용 사례를 위한 Real-Time CDP 보고서를 만들 수 있습니다](../../dashboards/cdp-insights-data-model.md).
+
+Adobe Experience Platform의 Real-Time CDP 데이터 모델은 프로필, 세그먼트 및 대상에 대한 통찰력을 제공하고 Real-Time CDP 인사이트 대시보드를 활성화합니다. 이 문서에서는 보고 인사이트 데이터 모델을 만드는 프로세스와 필요에 따라 Real-Time CDP 데이터 모델을 확장하는 방법을 안내합니다.
 
 ## 전제 조건
 
@@ -20,7 +22,7 @@ ht-degree: 0%
 
 ## 시작하기
 
-Data Distiller SKU는 보고 통찰력을 위한 사용자 지정 데이터 모델을 만들고 보강된 플랫폼 데이터를 포함하는 실시간 CDP 데이터 모델을 확장하려면 필요합니다. 자세한 내용은 [포장](../packages.md), [가드 레일](../guardrails.md#query-accelerated-store), 및 [라이선스](../data-distiller/licence-usage.md) data Distiller SKU와 관련된 설명서입니다. Data Distiller SKU가 없는 경우 자세한 내용은 Adobe 고객 서비스 담당자에게 문의하십시오.
+Data Distiller SKU는 보고 통찰력을 위한 사용자 지정 데이터 모델을 만들고 보강된 플랫폼 데이터를 포함하는 Real-Time CDP 데이터 모델을 확장하는 데 필요합니다. 자세한 내용은 [포장](../packages.md), [가드 레일](../guardrails.md#query-accelerated-store), 및 [라이선스](../data-distiller/licence-usage.md) data Distiller SKU와 관련된 설명서입니다. Data Distiller SKU가 없는 경우 자세한 내용은 Adobe 고객 서비스 담당자에게 문의하십시오.
 
 ## 보고 통찰력 데이터 모델 구축
 
@@ -124,15 +126,15 @@ ext_custom_audience_id | approximate_count_upper_bound
 (10 rows)
 ```
 
-## 실시간 CDP 통찰력 데이터 모델로 데이터 모델 확장
+## Real-Time CDP 인사이트 데이터 모델로 데이터 모델 확장
 
 대상 모델을 추가적인 세부 사항으로 확장하여 더 풍부한 차원 테이블을 만들 수 있습니다. 예를 들어 세그먼트 이름 및 대상 이름을 외부 대상 식별자에 매핑할 수 있습니다. 이렇게 하려면 Query Service 를 사용하여 새 데이터 세트를 만들거나 새로 고침하고 세그먼트 및 대상을 외부 ID와 결합하는 대상 모델에 추가합니다. 아래 다이어그램은 이 데이터 모델 확장의 개념을 보여줍니다.
 
-![실시간 CDP 인사이트 데이터 모델과 쿼리 가속 저장소 모델을 연결하는 ERD 다이어그램입니다.](../images/query-accelerated-store/updatingAudienceInsightUserModel.png)
+![Real-Time CDP 인사이트 데이터 모델과 쿼리 가속 저장소 모델을 연결하는 ERD 다이어그램입니다.](../images/query-accelerated-store/updatingAudienceInsightUserModel.png)
 
 ## 보고 통찰력 모델을 확장하기 위해 차원 테이블 만들기
 
-Query Service를 사용하여 보강된 실시간 CDP 차원 데이터 세트에서 `audienceinsight` 데이터 모델을 만들고 팩트 테이블과 새 차원 테이블 간의 관계를 설정합니다. 아래 SQL에서는 기존 차원 테이블을 보고 인사이트 데이터 모델에 통합하는 방법을 보여 줍니다.
+쿼리 서비스 를 사용하여 보강된 Real-Time CDP 차원 데이터 세트의 주요 설명 속성을 `audienceinsight` 데이터 모델을 만들고 팩트 테이블과 새 차원 테이블 간의 관계를 설정합니다. 아래 SQL에서는 기존 차원 테이블을 보고 인사이트 데이터 모델에 통합하는 방법을 보여 줍니다.
 
 ```sql
 CREATE TABLE audienceinsight.audiencemodel.external_seg_dest_map AS
