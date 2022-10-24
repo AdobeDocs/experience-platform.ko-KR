@@ -5,14 +5,19 @@ title: Marketo Engage 소스에 대한 매핑 필드
 topic-legacy: overview
 description: 아래 표에는 Marketo 데이터 세트의 필드와 해당 XDM 필드 간의 매핑이 포함되어 있습니다.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: be3ec7dc7e2089a8cee0b1577659e1ec0a465044
+source-git-commit: a0ca9cff43b6f8276268467fecf944c664992950
 workflow-type: tm+mt
-source-wordcount: '713'
+source-wordcount: '746'
 ht-degree: 6%
 
 ---
 
-# [!DNL Marketo Engage] 필드 매핑
+# [!DNL Marketo Engage] 필드 매핑 {#marketo-engage-field-mappings}
+
+>[!CONTEXTUALHELP]
+>id="platform_sources_marketo_mapping"
+>title="Marketo 소스 필드 매핑"
+>abstract="Marketo과 플랫폼 간에 소스 연결을 설정하려면 Platform으로 수집하기 전에 Marketo 소스 데이터 필드를 적절한 대상 XDM 필드에 매핑해야 합니다."
 
 아래 표에는 9개의 필드에 대한 매핑이 포함되어 있습니다 [!DNL Marketo] 데이터 세트 및 해당 XDM(Experience Data Model) 필드를 포함합니다.
 

@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 소스 커넥터 도움말
 breadcrumb-title: 소스 커넥터 안내서
 user-guide-description: 다양한 소스에서 데이터를 수집합니다. 이미 수집된 데이터를 구조화하고, 레이블을 지정하고, 개선하는 방법을 알아봅니다.
 feature: Sources
-source-git-commit: ba0399b0d171c2e604b4de3b22f8568b5431bcf4
+source-git-commit: fe8d5f3a73c7db311cd0d82c2a7f3ac63fb1edac
 workflow-type: tm+mt
-source-wordcount: '832'
+source-wordcount: '841'
 ht-degree: 12%
 
 ---
@@ -287,6 +287,7 @@ ht-degree: 12%
       - [마케팅 자동화 연결 데이터 흐름](tutorials/ui/dataflow/marketing-automation.md)
       - [결제 연결 데이터 흐름](tutorials/ui/dataflow/payments.md)
       - [프로토콜 연결 데이터 흐름](tutorials/ui/dataflow/protocols.md)
+   - [UI에서 템플릿을 사용하여 소스 데이터 흐름 만들기](tutorials/ui/templates.md)
    - [일괄 데이터 흐름 모니터링](tutorials/ui/monitor.md)
    - [스트리밍 데이터 흐름 모니터링](tutorials/ui/monitor-streaming.md)
    - [계정 업데이트](tutorials/ui/update.md)
