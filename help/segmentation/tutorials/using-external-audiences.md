@@ -5,9 +5,9 @@ title: 외부 대상 가져오기 및 사용
 description: Adobe Experience Platform에서 외부 대상을 사용하는 방법을 배우려면 이 자습서를 따르십시오.
 topic-legacy: tutorial
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 13fd1e372a63b55c41893f41d1590d9dab9f7903
 workflow-type: tm+mt
-source-wordcount: '1471'
+source-wordcount: '1445'
 ht-degree: 0%
 
 ---
@@ -45,10 +45,6 @@ Adobe Experience Platform은 외부 대상을 가져오는 기능을 지원하�
 ID 네임스페이스를 만들려면 [identity namespace 안내서](../../identity-service/namespaces.md#manage-namespaces). ID 네임스페이스를 만들 때 ID 네임스페이스에 소스 세부 정보를 추가하고 해당 네임스페이스에 표시합니다 [!UICONTROL 유형] 로서의 **[!UICONTROL 비사용자 식별자]**.
 
 ![](../images/tutorials/external-audiences/identity-namespace-info.png)
-
->[!NOTE]
->
->외부 대상과 함께 사용자 지정 네임스페이스를 사용하려면 지원 티켓을 만들어야 합니다. 자세한 내용은 Adobe 담당자에게 문의하십시오.
 
 ## 세그먼트 메타데이터에 대한 스키마 만들기
 
