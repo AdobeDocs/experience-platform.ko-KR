@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: UI에서 Adobe Analytics 소스 연결을 만들어 소비자 데이터를 Adobe Experience Platform으로 가져오는 방법을 알아봅니다.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: e67b3a6f9f57a3971a5bfa755db3b1043bebc96b
+source-git-commit: 28e7f10529daa8df56534e6ada129a52d3f7604d
 workflow-type: tm+mt
-source-wordcount: '2301'
+source-wordcount: '2345'
 ht-degree: 2%
 
 ---
@@ -45,6 +45,10 @@ ht-degree: 2%
 ![카탈로그](../../../../images/tutorials/create/analytics/catalog.png)
 
 ### 데이터 선택
+
+>[!IMPORTANT]
+>
+>화면에 나열된 보고서 세트는 다양한 지역에서 제공될 수 있습니다. 귀하는 데이터의 제한 및 의무와 Adobe Experience Platform 교차 지역에서 해당 데이터를 사용하는 방법을 이해할 책임이 있습니다. 귀사에서 이 서비스가 허용되는지 확인하십시오.
 
 다음 **[!UICONTROL Analytics 소스 데이터 추가]** 단계는 [!DNL Analytics] 보고서 세트 데이터를 사용하여 소스 연결을 만들 수 있습니다.
 
