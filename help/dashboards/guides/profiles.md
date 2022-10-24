@@ -4,9 +4,9 @@ title: 프로필 대시보드 안내서
 description: Adobe Experience Platform은 조직의 실시간 고객 프로필 데이터에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 1755f5030f5730ca06ea718635ede9deb1188d21
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '3387'
+source-wordcount: '3388'
 ht-degree: 0%
 
 ---
@@ -69,7 +69,7 @@ The layout of this dashboard is also customizable by selecting [**[!UICONTROL Mo
 
 다음 [!UICONTROL 찾아보기] 탭에서 조직에 수집된 읽기 전용 프로필을 검색하고 볼 수 있습니다. 여기에서 기본 설정, 이전 이벤트, 상호 작용 및 세그먼트와 관련하여 프로필에 속하는 중요한 정보를 볼 수 있습니다
 
-Platform UI에 제공된 프로필 보기 기능에 대한 자세한 내용은 [Real-time Customer Data Platform에서 프로필 검색](../../rtcdp/profile/profile-browse.md).
+Platform UI에 제공된 프로필 보기 기능에 대한 자세한 내용은 [Adobe Real-time Customer Data Platform에서 프로필 검색](../../rtcdp/profile/profile-browse.md).
 
 ## 병합 정책 {#merge-policies}
 

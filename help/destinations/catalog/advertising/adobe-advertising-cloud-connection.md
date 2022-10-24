@@ -1,10 +1,10 @@
 ---
 title: Adobe Advertising Cloud DSP 연결
-description: 'Adobe Advertising Cloud DSP은 [!DNL Adobe Real-time Customer Data Profile]: 인증된 자사 세그먼트를 승인된 광고주 및 사용자와 캠페인 활성화를 위해 공유할 수 있습니다.'
+description: Adobe Advertising Cloud DSP은 Adobe Real-time Customer Data Platform의 통합 대상으로서, 인증된 자사 세그먼트를 승인된 광고주 및 캠페인 활성화를 위해 사용자와 공유할 수 있습니다.
 exl-id: 11ff7797-a9c6-4334-b843-ae9df9a48e54
-source-git-commit: 27869b91deeb4a5cca580970507845d992d21aaf
+source-git-commit: e67b3a6f9f57a3971a5bfa755db3b1043bebc96b
 workflow-type: tm+mt
-source-wordcount: '1044'
+source-wordcount: '1055'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ Advertising Cloud DSP 대상을 사용하는 방법과 시기를 더 잘 이해�
 
 ### 브랜드 광고 사용 사례
 
-온라인 소매업체는 타깃팅에 쿠키를 사용하지 않고 디스플레이 캠페인을 통해 고부가가치 고객을 재타겟팅하려고 합니다. 판매업체는 높은 가치를 제공하는 고객의 해시된 이메일 ID로 구성된 세그먼트를 공유합니다 [!DNL Real-Time CDP] 계정을 DSP 계정에 추가합니다. 그러면 DSP에서 해시된 이메일 ID를 인증됨으로 변환합니다 [!DNL RampIDs] DSP과 LiveRamp 간의 파트너십을 통해 결과 [!DNL RampIDs] 디스플레이 캠페인에서 대상을 타깃팅하는 데 사용할 수 있습니다.
+온라인 소매업체는 타깃팅에 쿠키를 사용하지 않고 디스플레이 캠페인을 통해 고부가가치 고객을 재타겟팅하려고 합니다. 소매업체는 Adobe Real-time Customer Data Platform(Real-Time CDP) 계정에서 DSP 계정에 고부가가치 고객의 해시된 이메일 ID로 구성된 세그먼트를 공유합니다. 그러면 DSP에서 해시된 이메일 ID를 인증됨으로 변환합니다 [!DNL RampIDs] DSP과 LiveRamp 간의 파트너십을 통해 결과 [!DNL RampIDs] 디스플레이 캠페인에서 대상을 타깃팅하는 데 사용할 수 있습니다.
 
 ### 기관 사용 사례
 

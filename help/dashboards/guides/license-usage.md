@@ -4,10 +4,10 @@ title: 라이센스 사용 대시보드 안내서
 description: Adobe Experience Platform에서는 조직의 라이선스 사용에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: d3a1d4a65d1e5810bbc37fa9d3d230557bec39ee
+source-git-commit: e67b3a6f9f57a3971a5bfa755db3b1043bebc96b
 workflow-type: tm+mt
-source-wordcount: '873'
-ht-degree: 2%
+source-wordcount: '875'
+ht-degree: 1%
 
 ---
 
@@ -85,10 +85,10 @@ Adobe Experience Platform UI(사용자 인터페이스)는 일별 스냅샷 중�
 |---|---|
 | <ul><li>Adobe Experience Platform:OD LITE</li><li>Adobe Experience Platform:OD STANDARD</li><li>Adobe Experience Platform:OD HEAVY</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
 | <ul><li>Adobe Experience Platform:OD</li></ul> | [Experience Platform, 앱 서비스 및 Intelligent Services](https://helpx.adobe.com/legal/product-descriptions/exp-platform-app-svcs.html) |
-| <ul><li>RT 고객 데이터 플랫폼:OD</li><li>RT 고객 데이터 플랫폼:POD - 10M</li><li>RT 고객 데이터 플랫폼:OD PRFL에서 50M까지</li></ul> | [실시간 고객 데이터 플랫폼](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) |
+| <ul><li>RT 고객 데이터 플랫폼:OD</li><li>RT 고객 데이터 플랫폼:POD - 10M</li><li>RT 고객 데이터 플랫폼:OD PRFL에서 50M까지</li></ul> | [Adobe Real-time Customer Data Platform](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) |
 | <ul><li>AEP:OD 활성화</li><li>AEP:OD 활성화 PRFL - 10M</li><li>AEP:OD 활성화 PRFL 최대 50M</li></ul> | [Adobe Experience Platform 활성화](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html) |
 | <ul><li>AEP:OD INTELLIGENCE</li></ul> | [Adobe Experience Platform Intelligence](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
-| <ul><li>Journey Optimizer SELECT:OD</li><li>Journey Optimizer PRIME:OD</li><li>Journey Optimizer ULTIMATE:OD</li><li>UNP AJO PRIME STARTER:OD</li><li>UNP AJO ULTIMATE STARTER:OD</li><li>RTCDP 취소:OD PROFILE ORCHESTRATION</li></ul> | [Adobe Journey Optimizer](https://helpx.adobe.com/legal/product-descriptions/adobe-journey-optimizer.html) |
+| <ul><li>Journey Optimizer SELECT:OD</li><li>Journey Optimizer PRIME:OD</li><li>Journey Optimizer ULTIMATE:OD</li><li>UNP AJO PRIME STARTER:OD</li><li>UNP AJO ULTIMATE STARTER:OD</li><li>UNP Real-Time CDP:OD PROFILE ORCHESTRATION</li></ul> | [Adobe Journey Optimizer](https://helpx.adobe.com/legal/product-descriptions/adobe-journey-optimizer.html) |
 
 >[!WARNING]
 >

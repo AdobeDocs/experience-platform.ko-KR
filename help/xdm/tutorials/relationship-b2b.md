@@ -1,10 +1,10 @@
 ---
 title: Real-time Customer Data Platform B2B Edition에서 두 스키마 간의 관계 정의
-description: Real-time Customer Data Platform B2B Edition에서 두 스키마 간에 일대일 관계를 정의하는 방법을 알아봅니다.
+description: Adobe Real-time Customer Data Platform B2B Edition에서 두 스키마 간에 일대일 관계를 정의하는 방법을 알아봅니다.
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: 86a230d746d6642437c4e37958c07a1186ebadc3
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '1401'
+source-wordcount: '1403'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 >title="참조 스키마"
 >abstract="관계를 설정할 스키마를 선택합니다. 스키마의 클래스에 따라 B2B 컨텍스트에서 다른 엔티티와의 기존 관계가 있을 수도 있습니다. B2B 스키마 클래스가 서로 어떻게 관련되는지를 알아보려면 설명서를 참조하십시오."
 
-Real-time Customer Data Platform B2B Edition은 다음을 포함하여 기본 B2B 데이터 엔티티를 캡처하는 여러 XDM(Experience Data Model) 클래스를 제공합니다 [계정](../classes/b2b/business-account.md), [기회](../classes/b2b/business-opportunity.md), [캠페인](../classes/b2b/business-campaign.md), 등. 이러한 클래스를 기반으로 스키마를 빌드하고 이 스키마를 [실시간 고객 프로필](../../profile/home.md)를 사용하면 서로 다른 소스의 데이터를 조합 스키마라고 하는 통합 표현으로 병합할 수 있습니다.
+Adobe Real-time Customer Data Platform B2B Edition은 다음을 포함하여 기본 B2B 데이터 엔티티를 캡처하는 여러 XDM(Experience Data Model) 클래스를 제공합니다 [계정](../classes/b2b/business-account.md), [기회](../classes/b2b/business-opportunity.md), [캠페인](../classes/b2b/business-campaign.md), 등. 이러한 클래스를 기반으로 스키마를 빌드하고 이 스키마를 [실시간 고객 프로필](../../profile/home.md)를 사용하면 서로 다른 소스의 데이터를 조합 스키마라고 하는 통합 표현으로 병합할 수 있습니다.
 
 그러나 결합 스키마에는 동일한 클래스를 공유하는 스키마에서 캡처된 필드만 포함할 수 있습니다. 스키마 관계가 여기에서 시작됩니다. B2B 스키마에서 관계를 구현하면 이러한 비즈니스 엔티티가 어떻게 상호 관련되는지를 설명할 수 있으며 다운스트림 세그먼테이션 사용 사례에 여러 클래스의 속성을 포함할 수 있습니다.
 
@@ -24,7 +24,7 @@ Real-time Customer Data Platform B2B Edition은 다음을 포함하여 기본 B2
 
 ![B2B 클래스 관계](../images/tutorials/relationship-b2b/classes.png)
 
-이 자습서에서는 실시간 CDP B2B Edition에서 두 스키마 간에 다대다 관계를 정의하는 단계를 설명합니다.
+이 자습서에서는 Real-Time CDP B2B Edition에서 두 스키마 간에 다대다 관계를 정의하는 단계를 설명합니다.
 
 >[!NOTE]
 >
@@ -123,4 +123,4 @@ Real-time Customer Data Platform B2B Edition은 다음을 포함하여 기본 B2
 
 ## 다음 단계
 
-이 자습서를 따라 를 사용하여 두 스키마 간에 다대다 관계를 만들었습니다 [!DNL Schema Editor]. 이러한 스키마를 기반으로 하는 데이터 세트를 사용하여 데이터를 수집하여 프로필 데이터 저장소에서 데이터가 활성화되면 두 스키마의 속성을 여러 클래스 세그먼테이션 사용 사례에 사용할 수 있습니다. 자세한 내용은 실시간 CDP B2B Edition에 대한 설명서를 참조하십시오.
+이 자습서를 따라 를 사용하여 두 스키마 간에 다대다 관계를 만들었습니다 [!DNL Schema Editor]. 이러한 스키마를 기반으로 하는 데이터 세트를 사용하여 데이터를 수집하여 프로필 데이터 저장소에서 데이터가 활성화되면 두 스키마의 속성을 여러 클래스 세그먼테이션 사용 사례에 사용할 수 있습니다. 자세한 내용은 Real-Time CDP B2B Edition의 설명서를 참조하십시오.

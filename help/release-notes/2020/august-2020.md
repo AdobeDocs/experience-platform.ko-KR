@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: August 10, 2020
 author: crhoades, ens28527
 exl-id: 9347147f-e830-4487-aa12-f56723abb3c8
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '572'
 ht-degree: 6%
@@ -20,7 +20,7 @@ Adobe Experience Platform의 기존 기능 업데이트:
 
 - [[!DNL Data Science Workspace]](#dsw)
 - [[!DNL Destinations]](#destinations)
-- [[!DNL Real-time Customer Data Platform]](#rtcdp)
+- [[!DNL Real-Time Customer Data Platform]](#rtcdp)
 - [[!DNL Sources]](#sources)
 
 ## [!DNL Data Science Workspace] {#dsw}
@@ -45,7 +45,7 @@ in [Real-time Customer Data Platform](../../rtcdp/overview.md), 대상은 대상
 
 | 대상 | 설명 |
 |--- | ---|
-| [!DNL Google Customer Match] | Google 고객 일치 기능을 사용하면 온라인 및 오프라인 데이터를 사용하여 다음과 같이 Google이 소유하거나 운영하는 속성에서 고객에게 도달하고 다시 참여하도록 할 수 있습니다. [!DNL Search], [!DNL Shopping], Gmail 및 YouTube. <br><br> 다음 방문 [!DNL Google Customer Match] [페이지](../../destinations/catalog/advertising/google-customer-match.md) 대상 카탈로그를 참조하십시오. |
+| [!DNL Google Customer Match] | Google 고객 일치 기능을 사용하면 온라인 및 오프라인 데이터를 사용하여 다음과 같이 Google이 소유하거나 운영하는 속성에서 고객에게 도달하고 다시 참여하도록 할 수 있습니다. [!DNL Search], [!DNL Shopping], Gmail 및 YouTube. <br><br> 다음 방문 [!DNL Google Customer Match] [페이지](../../destinations/catalog/advertising/google-customer-match.md) 대상 카탈로그에서 대상 및 Real-Time CDP에서 설정하는 방법에 대한 자세한 내용을 참조하십시오. |
 
 **새로운 기능**
 
@@ -54,17 +54,17 @@ in [Real-time Customer Data Platform](../../rtcdp/overview.md), 대상은 대상
 | 사용자 지정 파일 이름 편집기 | 내보낸 파일의 이름을 편집할 수 있는 이메일 마케팅 대상 및 클라우드 스토리지 대상에 대한 데이터 활성화 워크플로우를 업데이트합니다. 자세한 내용은 [ 단계 구성](../../destinations/ui/activate-batch-profile-destinations.md) 활성화 워크플로우에서 생성합니다. |
 | 권장 속성 | 내보낸 파일에 추가할 권장 속성을 표시하는 이메일 마케팅 대상 및 클라우드 스토리지 대상에 대한 데이터 활성화 워크플로우로 업데이트합니다. 자세한 내용은 [속성 선택 단계](../../destinations/ui/activate-batch-profile-destinations.md) 활성화 워크플로우에서 생성합니다. |
 
-## [!DNL Real-time Customer Data Platform] {#rtcdp}
+## [!DNL Real-Time Customer Data Platform] {#rtcdp}
 
-Experience Platform, Real-time Customer Data Platform(영어) 기본 제공[!DNL Real-time CDP])은 회사에서 알려진 데이터와 알 수 없는 데이터를 함께 가져와서 고객 여정 전체에서 지능형 의사 결정을 사용하여 고객 프로필을 활성화하는 데 도움이 됩니다. [!DNL Real-time CDP] 여러 엔터프라이즈 데이터 소스를 결합하여 고객 프로필을 실시간으로 만듭니다. 그런 다음 이러한 프로필에서 작성한 세그먼트를 다운스트림 대상으로 전송하여 모든 채널 및 장치에서 개인화된 고객 경험을 일대일로 제공할 수 있습니다.
+Experience Platform, Real-time Customer Data Platform(영어) 기본 제공[!DNL Real-Time CDP])은 회사에서 알려진 데이터와 알 수 없는 데이터를 함께 가져와서 고객 여정 전체에서 지능형 의사 결정을 사용하여 고객 프로필을 활성화하는 데 도움이 됩니다. [!DNL Real-Time CDP] 여러 엔터프라이즈 데이터 소스를 결합하여 고객 프로필을 실시간으로 만듭니다. 그런 다음 이러한 프로필에서 작성한 세그먼트를 다운스트림 대상으로 전송하여 모든 채널 및 장치에서 개인화된 고객 경험을 일대일로 제공할 수 있습니다.
 
 **새로운 기능**
 
 | 기능 | 설명 |
 | ------- | ----------- |
-| IAB TCF 2.0 지원 | [!DNL Real-time CDP] 는 이제 2.0 버전의 [!DNL Transparency & Consent Framework] (TCF), [!DNL Interactive Advertising Bureau] (IAB). CMP에서 생성한 고객 동의 데이터를 수락하도록 데이터 작업 및 프로필 스키마를 구성하고, 세그먼트를 다운스트림 대상으로 활성화할 때 고객의 동의 환경 설정을 적용할 수 있습니다. |
+| IAB TCF 2.0 지원 | [!DNL Real-Time CDP] 는 이제 2.0 버전의 [!DNL Transparency & Consent Framework] (TCF), [!DNL Interactive Advertising Bureau] (IAB). CMP에서 생성한 고객 동의 데이터를 수락하도록 데이터 작업 및 프로필 스키마를 구성하고, 세그먼트를 다운스트림 대상으로 활성화할 때 고객의 동의 환경 설정을 적용할 수 있습니다. |
 
-자세한 내용은 [!DNL Real-time CDP]를 참조하고 [[!DNL Real-time CDP] 개요](../../rtcdp/overview.md).
+자세한 내용은 [!DNL Real-Time CDP]를 참조하고 [[!DNL Real-Time CDP] 개요](../../rtcdp/overview.md).
 
 ## 소스 {#sources}
 

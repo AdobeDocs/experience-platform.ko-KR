@@ -1,15 +1,16 @@
 ---
-title: 실시간 CDP B2B에서 예측 리드 및 계정 점수 관리
+title: Real-Time CDP B2B에서 예측 리드 및 계정 점수 관리
 type: Documentation
 description: 이 문서에서는 Experience Platform CDP B2B에서 예측 리드 및 계정 점수 책정 기능 관리에 대한 정보를 제공합니다.
-source-git-commit: 5ac8e099a6de563371f9a53a8b4816e6cf4d1953
+exl-id: fe7eb94e-5cf1-46bf-80e5-affe5735c998
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '1017'
+source-wordcount: '1018'
 ht-degree: 2%
 
 ---
 
-# Real-time Customer Data Platform, B2B Edition에서 예측 리드 및 계정 점수 관리
+# Adobe Real-time Customer Data Platform, B2B Edition에서 예측 리드 및 계정 점수 관리
 
 >[!NOTE]
 >
@@ -115,7 +116,7 @@ ht-degree: 2%
 
 ![plas-delete-score](../assets/../b2b-ai-ml-services/assets/plas-delete-score.png)
 
-다음 **[!UICONTROL 설명서 삭제]** 확인 대화 상자가 나타납니다. 선택 **[!UICONTROL 삭제]**.
+다음 **[!UICONTROL 설명서 삭제]** 확인 대화 상자가 나타납니다. **[!UICONTROL 삭제]**&#x200B;를 선택합니다.
 
 ![plas-delete-score-confirmation](../assets/../b2b-ai-ml-services/assets/plas-delete-score-confirmation.png)
 

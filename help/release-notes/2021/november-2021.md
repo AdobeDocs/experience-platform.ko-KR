@@ -2,7 +2,7 @@
 title: Adobe Experience Platform 릴리스 노트 - 2021년 11월
 description: Adobe Experience Platform에 대한 2021년 11월 릴리스 노트입니다.
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '799'
 ht-degree: 12%
@@ -17,23 +17,23 @@ ht-degree: 12%
 
 Adobe Experience Platform의 새로운 기능:
 
-- [Real-time Customer Data Platform B2B 에디션](#B2B)
+- [Real-Time Customer Data Platform B2B 에디션](#B2B)
 - [(베타) 임시 활성화 API를 통해 대상자 세그먼트를 배치 대상에 활성화합니다](#ad-hoc-activation)
 
 ## 기존 기능 업데이트
 
 Adobe Experience Platform의 기존 기능 업데이트:
 
-- [Attribution AI](#attribution-ai)
+- [기여도 AI](#attribution-ai)
 - [고객 AI](#customer-ai)
 
-### Real-time Customer Data Platform B2B 에디션 {#B2B}
+### Real-Time Customer Data Platform B2B 에디션 {#B2B}
 
 **릴리스 날짜: 2021년 11월 12일**
 
-Real-time Customer Data Platform(실시간 CDP)를 기반으로 구축된 실시간 CDP B2B Edition은 비즈니스-비즈니스 서비스 모델로 운영되는 마케터를 위해 특별히 빌드되었습니다. 여러 소스의 데이터를 가져와서 사람 및 계정 프로필에 대한 단일 보기로 결합합니다. 이러한 통합 데이터를 통해 마케터는 특정 대상을 정확하게 타겟팅하고 사용 가능한 모든 채널에서 그러한 대상을 선택할 수 있습니다.
+Real-time Customer Data Platform(Real-Time CDP)에 구축된 Real-Time CDP B2B Edition은 비즈니스-비즈니스 서비스 모델로 운영되는 마케터를 위해 특별히 빌드되었습니다. 여러 소스의 데이터를 가져와서 사람 및 계정 프로필에 대한 단일 보기로 결합합니다. 이러한 통합 데이터를 통해 마케터는 특정 대상을 정확하게 타겟팅하고 사용 가능한 모든 채널에서 그러한 대상을 선택할 수 있습니다.
 
-실시간 CDP B2B Edition과 B2C 오퍼를 구분하는 다양한 Adobe Experience Platform 기능이 개선되었습니다. 여기에는 B2B 사용 사례를 위한 XDM(Experience Data Model) 개선 사항, ID 확인 및 프로필 세그멘테이션으로 업그레이드, Marketo Engage을 위한 사용자 지정 커넥터 및 대상이 포함됩니다. Marketo 커넥터를 사용하면 B2B 브랜드가 업계를 선도하는 B2B 참여 데이터를 행동 정보와 연계하여 리드를 육성하고 계정 기반 마케팅 활동을 향상시킬 수 있습니다.
+Real-Time CDP B2B Edition과 B2C 상대방을 구분하는 다양한 Adobe Experience Platform 기능이 개선되었습니다. 여기에는 B2B 사용 사례를 위한 XDM(Experience Data Model) 개선 사항, ID 확인 및 프로필 세그멘테이션으로 업그레이드, Marketo Engage을 위한 사용자 지정 커넥터 및 대상이 포함됩니다. Marketo 커넥터를 사용하면 B2B 브랜드가 업계를 선도하는 B2B 참여 데이터를 행동 정보와 연계하여 리드를 육성하고 계정 기반 마케팅 활동을 향상시킬 수 있습니다.
 
 -[새로운 B2B 및 B2P 버전](#editions)
 -[새로운 Marketo 데이터 소스 및 대상 커넥터](#marketo)
@@ -41,9 +41,9 @@ Real-time Customer Data Platform(실시간 CDP)를 기반으로 구축된 실시
 
 ### 새로운 B2B 및 B2P 버전 {#editions}
 
-실시간 CDP와 Platform Activation 제품 모두에 B2B 데이터 및 기능을 제공하는 새로운 B2B 및 B2P 버전을 구입할 수 있습니다.
+Real-Time CDP 및 Platform Activation 제품 모두에 B2B 데이터 및 기능을 가져오는 새로운 B2B 및 B2P 버전을 구매할 수 있습니다.
 
-실시간 CDP B2B Edition에 대한 자세한 내용은 [개요](../../rtcdp/overview.md).
+Real-Time CDP B2B Edition에 대한 자세한 내용은 다음을 참조하십시오. [개요](../../rtcdp/overview.md).
 
 ### 새로운 Marketo 데이터 소스 및 대상 커넥터 {#marketo}
 
@@ -68,7 +68,7 @@ Real-time Customer Data Platform(실시간 CDP)를 기반으로 구축된 실시
 
 Ad-hoc 활성화 API를 사용하면 즉시 활성화해야 하는 상황에서 마케터는 빠르고 효율적인 방식으로 대상 세그먼트를 대상으로 프로그래밍 방식으로 활성화할 수 있습니다. 임시 대상 활성화는 [배치 파일 기반 대상](../../destinations/destination-types.md#file-based) 및 은 현재 베타 버전입니다. 자세한 내용은 [ad-hoc 활성화 API 설명서](../../destinations/api/ad-hoc-activation-api.md).
 
-### Attribution AI {#attribution-ai}
+### 기여도 AI {#attribution-ai}
 
 Attribution AI는 전환 이벤트로 연결되는 터치포인트에 크레딧을 적용하는 데 사용됩니다. 이를 통해 마케터는 고객 여정 전반에서 각 개별 마케팅 터치포인트의 마케팅 효과를 수량화할 수 있습니다.
 

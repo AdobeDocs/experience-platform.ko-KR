@@ -2,7 +2,7 @@
 title: Adobe Experience Platform 릴리스 노트 - 2022년 3월
 description: Adobe Experience Platform에 대한 2022년 3월 릴리스 노트입니다.
 exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
-source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '1194'
 ht-degree: 5%
@@ -47,7 +47,7 @@ Platform의 감사 로그에 대한 자세한 내용은 [감사 로그 개요](.
 >
 >관련 계정 기능은 Real-Time CDP B2B Edition 고객만 사용할 수 있습니다.
 
-B2B 기업은 동일한 실제 비즈니스 업체에 대해 일부 또는 충돌하는 데이터만 포함하여 여러 시스템에 고객 정보를 저장하는 경우가 많습니다. 이를 통해 고객의 정확한 관점을 파악할 수 있으므로 B2B 마케팅 및 영업 활동의 효율성과 효율성을 줄일 수 있습니다. 관련 계정 릴리스를 통해 [!DNL Real-time CDP B2B] 이제 탐색 중인 계정과 유사한 계정 목록이 표시됩니다. 세그먼트 정의에 관련 계정을 포함하여 도달 범위를 넓히거나 세그먼트에 더 넓은 기준을 적용할 수 있습니다.
+B2B 기업은 동일한 실제 비즈니스 업체에 대해 일부 또는 충돌하는 데이터만 포함하여 여러 시스템에 고객 정보를 저장하는 경우가 많습니다. 이를 통해 고객의 정확한 관점을 파악할 수 있으므로 B2B 마케팅 및 영업 활동의 효율성과 효율성을 줄일 수 있습니다. 관련 계정 릴리스를 통해 [!DNL Real-Time CDP B2B] 이제 탐색 중인 계정과 유사한 계정 목록이 표시됩니다. 세그먼트 정의에 관련 계정을 포함하여 도달 범위를 넓히거나 세그먼트에 더 넓은 기준을 적용할 수 있습니다.
 
 다음 설명서 페이지에서 기능에 대해 자세히 알아보십시오.
 
@@ -55,7 +55,7 @@ B2B 기업은 동일한 실제 비즈니스 업체에 대해 일부 또는 충�
 - [계정 프로필 UI 안내서의 관련 계정 탭](../../rtcdp/accounts/account-profile-ui-guide.md#related-accounts-tab)
 - [세그먼트 정의에서 관련 계정을 사용하는 방법](../../rtcdp/segmentation/b2b.md#related-accounts)
 
-실시간 CDP B2B Edition에 대한 자세한 내용은 [개요](../../rtcdp/overview.md).
+Real-Time CDP B2B Edition에 대한 자세한 내용은 다음을 참조하십시오. [개요](../../rtcdp/overview.md).
 
 ## 경고 {#alerts}
 

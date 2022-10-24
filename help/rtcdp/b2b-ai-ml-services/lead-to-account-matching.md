@@ -1,16 +1,16 @@
 ---
-title: 실시간 CDP B2B에서 계정 일치 시작
+title: Real-Time CDP B2B에서 계정 일치 리드
 type: Documentation
 description: Experience Platform CDP B2B의 리드-계정 일치 기능에 대한 개요 및 추가 정보입니다.
-source-git-commit: 827bd1b930478c3c0b553a9485f98545771a9062
+exl-id: 2f853599-6bca-4ba6-bbba-131a49d8854e
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '616'
+ht-degree: 3%
 
 ---
 
-
-# 실시간 CDP B2B에서 계정 일치 시작
+# Real-Time CDP B2B에서 계정 일치 리드
 
 ## 개요 {#overview}
 

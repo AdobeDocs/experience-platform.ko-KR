@@ -6,7 +6,7 @@ last-update: March 10, 2020
 author: ens71067
 keywords: 릴리스 노트;
 exl-id: 407c2bac-4c8a-4939-b3dd-788250f15650
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '855'
 ht-degree: 6%
@@ -39,8 +39,8 @@ Adobe Experience Platform 데이터 거버넌스는 고객 데이터를 관리�
 
 | 기능 | 설명 |
 | ------- | ----------- |
-| 에 대한 데이터 사용 정책 자동 적용 [!DNL Real-time Customer Data Platform] | 이제 대상에 데이터를 활성화하는 워크플로우에서 데이터 사용 정책이 적용됩니다. 데이터 거버넌스는 기존 활성화(예: 데이터 세트 레이블, 병합 정책, 세그먼트 정의 등)에 영향을 주는 변경 사항을 적용할 때 포함 및 적용됩니다. |
-| 실행을 위한 데이터 계보 | 실시간 CDP에서 데이터 사용 정책을 위반하면 UI에 데이터 계보 정보가 포함된 알림이 표시되므로 사용자가 정책이 위반되는 이유와 위반을 해결하기 위해 수행할 수 있는 작업을 이해할 수 있습니다. |
+| 에 대한 데이터 사용 정책 자동 적용 [!DNL Real-Time Customer Data Platform] | 이제 대상에 데이터를 활성화하는 워크플로우에서 데이터 사용 정책이 적용됩니다. 데이터 거버넌스는 기존 활성화(예: 데이터 세트 레이블, 병합 정책, 세그먼트 정의 등)에 영향을 주는 변경 사항을 적용할 때 포함 및 적용됩니다. |
+| 실행을 위한 데이터 계보 | Real-Time CDP에서 데이터 사용 정책을 위반하면 UI에 데이터 계보 정보가 포함된 알림이 표시되므로 사용자가 정책이 위반되는 이유와 위반을 해결하기 위해 수행할 수 있는 작업을 이해할 수 있습니다. |
 
 
 **알려진 문제**
@@ -76,8 +76,8 @@ in [Real-time Customer Data Platform](../../rtcdp/overview.md), 대상은 대상
 
 | 대상 | 설명 |
 |--- | ---|
-| 클라우드 스토리지 대상 | 이제 실시간 CDP를 통해 세그먼트를 데이터 파일로 [!DNL Amazon S3] 또는 SFTP 클라우드 저장소 위치. 이렇게 하면 CSV 또는 탭으로 구분된 파일을 통해 대상자 및 해당 프로필 속성을 내부 시스템으로 보낼 수 있습니다. |
-| 광고 대상 | 다음 [!DNL Google] 대상 카드는 이제 세 개의 대상 카드로 분할됩니다. [!DNL Google] 실시간 CDP에서 현재 지원되는 플랫폼: [!DNL Google Ads], [!DNL Google Ad Manager], [!DNL Google] 디스플레이 및 비디오 360. |
+| 클라우드 스토리지 대상 | 이제 Real-Time CDP에서 세그먼트를 데이터 파일로 [!DNL Amazon S3] 또는 SFTP 클라우드 저장소 위치. 이렇게 하면 CSV 또는 탭으로 구분된 파일을 통해 대상자 및 해당 프로필 속성을 내부 시스템으로 보낼 수 있습니다. |
+| 광고 대상 | 다음 [!DNL Google] 대상 카드는 이제 세 개의 대상 카드로 분할됩니다. [!DNL Google] Real-Time CDP에서 현재 지원되는 플랫폼 [!DNL Google Ads], [!DNL Google Ad Manager], [!DNL Google] 디스플레이 및 비디오 360. |
 
 자세한 내용은 [대상 개요](../../destinations/home.md)
 

@@ -3,9 +3,9 @@ title: HTTP API 연결
 keywords: 스트리밍;
 description: Adobe Experience Platform의 HTTP API 대상을 사용하여 프로필 데이터를 타사 HTTP 엔드포인트로 보내 자체 분석을 실행하거나 Experience Platform에서 내보낸 프로필 데이터에 필요한 기타 작업을 수행할 수 있습니다.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 75399d2fbe111a296479f8d3404d43c6ba0d50b5
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '2375'
+source-wordcount: '2376'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> 이 대상은 다음 작업에만 사용할 수 있습니다 [Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) 고객.
+> 이 대상은 다음 작업에만 사용할 수 있습니다 [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) 고객.
 
 HTTP API 대상은 [!DNL Adobe Experience Platform] 프로필 데이터를 타사 HTTP 종단점으로 보내는 데 도움이 되는 스트리밍 대상입니다.
 

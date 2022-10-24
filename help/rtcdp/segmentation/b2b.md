@@ -1,17 +1,17 @@
 ---
-title: 실시간 CDP B2B Edition에 대한 세그먼테이션 사용 사례
-description: 사용 가능한 다양한 실시간 CDP B2B Edition 사용 사례에 대한 개요입니다.
+title: Real-time Customer Data Platform B2B Edition에 대한 세그멘테이션 사용 사례
+description: 사용 가능한 다양한 Adobe Real-time Customer Data Platform B2B Edition 사용 사례에 대한 개요입니다.
 exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
-source-git-commit: 1fed0cf37e7297c21330ebf51ae15054aa21c781
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '1275'
+source-wordcount: '1283'
 ht-degree: 0%
 
 ---
 
 # Real-time Customer Data Platform B2B Edition에 대한 세그먼테이션 사용 사례
 
-이 문서에서는 실시간 CDP B2B Edition의 세그먼트 정의 예와 일반적인 B2B 사용 사례를 위해 다양한 유형의 속성을 결합할 수 있는 방법에 대해 설명합니다. 대상이 B2B 워크플로우에 어떻게 적합한지 이해하려면 다음을 참조하십시오. [엔드 투 엔드 자습서](../b2b-tutorial.md#create-a-segment-to-evaluate-your-data).
+이 문서에서는 Adobe Real-time Customer Data Platform B2B Edition의 세그먼트 정의 예와 일반적인 B2B 사용 사례에 대해 서로 다른 유형의 속성을 결합할 수 있는 방법에 대해 설명합니다. 대상이 B2B 워크플로우에 어떻게 적합한지 이해하려면 다음을 참조하십시오. [엔드 투 엔드 자습서](../b2b-tutorial.md#create-a-segment-to-evaluate-your-data).
 
 >[!NOTE]
 >
@@ -36,7 +36,7 @@ B2B 클래스와 해당 속성은 `B2B` 분류 작업 공간 내에서 레이블
 
 B2B 사용 사례에 대한 세그먼트를 효과적으로 만들려면 스키마에 대한 전문적인 지식을 가지고 데이터 모델이 어떤 모습인지 이해하는 것이 중요합니다. 또한 한 데이터 객체에서 다른 데이터 객체로 이동하는 경로를 인식하는 것이 유용합니다.
 
-아래 이미지는 실시간 CDP B2B Edition 내에서 사용할 수 있는 B2B 클래스 간의 관계를 보여줍니다.
+아래 이미지는 Real-Time CDP B2B Edition 내에서 사용할 수 있는 B2B 클래스 간의 관계를 보여줍니다.
 
 ![B2B 클래스 ERD](../assets/segmentation/b2b-classes.png)
 
@@ -114,4 +114,4 @@ HR(Human Resources) 부서에서 근무하며 모든 계정과 관련된 모든 
 
 ## 다음 단계 {#next-steps}
 
-이 개요를 읽고 나면 실시간 CDP, B2B Edition을 사용하여 사용할 수 있는 세그먼테이션 가능성을 살펴봅니다. 세그멘테이션 서비스에 대한 자세한 내용은 [세그먼테이션 설명서](../../segmentation/home.md).
+이 개요를 읽고 나면 이제 Real-Time CDP, B2B Edition을 사용하여 사용할 수 있는 세그먼테이션 가능성을 이해할 수 있습니다. 세그멘테이션 서비스에 대한 자세한 내용은 [세그먼테이션 설명서](../../segmentation/home.md).

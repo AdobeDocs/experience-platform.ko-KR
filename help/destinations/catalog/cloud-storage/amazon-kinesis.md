@@ -3,9 +3,9 @@ keywords: Amazon Kinesis;kinesis 대상;kinesis
 title: Amazon Kinesis 연결
 description: Amazon Kinesis 스토리지에 대한 실시간 아웃바운드 연결을 만들어 Adobe Experience Platform에서 데이터를 스트리밍합니다.
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: 75399d2fbe111a296479f8d3404d43c6ba0d50b5
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '1890'
+source-wordcount: '1891'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> 이 대상은 다음 작업에만 사용할 수 있습니다 [Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) 고객.
+> 이 대상은 다음 작업에만 사용할 수 있습니다 [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) 고객.
 
 다음 [!DNL Kinesis Data Streams] 서비스 기준 [!DNL Amazon Web Services] 에서는 대용량 데이터 레코드를 실시간으로 수집 및 처리할 수 있습니다.
 

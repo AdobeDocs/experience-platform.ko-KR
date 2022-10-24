@@ -1,18 +1,18 @@
 ---
 keywords: RTCDP;CDP;Real-time Customer Data Platform;실시간 고객 데이터 플랫폼;실시간 cdp;cdp;rtcdp
 title: Real-time Customer Data Platform B2B Edition의 사용 사례 예
-description: 이 샘플 시나리오는 Real-Time Customer Data Platform B2B 에디션 구현 구성에 대한 예제를 제공합니다.
+description: 이 샘플 시나리오는 Adobe Real-time Customer Data Platform B2B Edition 구현의 구성에 대한 예를 제공합니다.
 exl-id: 15505980-ac33-44b2-8989-c08cbabd212b
-source-git-commit: e6f71954d52e0a998955c3420307417cc011c24d
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '1134'
-ht-degree: 2%
+source-wordcount: '1135'
+ht-degree: 0%
 
 ---
 
 # Real-time Customer Data Platform B2B Edition의 사용 사례 예
 
-Real-time Customer Data Platform B2B Edition은 기존 실시간 CDP 및 Adobe Experience Platform 오퍼링을 확장하여 B2B 데이터 및 워크플로우를 지원합니다. 이 문서에서는 B2B Edition에서 제공하는 추가적인 이점을 보여주는 사용 사례를 제공합니다. 자동 프로필 변수에는 다음이 포함됩니다.
+Real-time Customer Data Platform B2B Edition은 기존 Real-Time CDP 및 Adobe Experience Platform 오퍼링을 확장하여 B2B 데이터 및 워크플로우를 지원합니다. 이 문서에서는 B2B Edition에서 제공하는 추가적인 이점을 보여주는 사용 사례를 제공합니다. 자동 프로필 변수에는 다음이 포함됩니다.
 
 - 서로 다른 분산된 데이터 소스의 개인 및 계정 데이터를 통합하여 고객을 더 잘 이해하고 더 정확한 세그멘테이션을 가능하게 하는 포괄적인 보기를 생성합니다. 다음 문서를 참조하십시오. [xdm 스키마 관계 만들기](./schemas/b2b.md) 추가 정보를 위해 다양한 B2B 소스와 함께 사용하기 위한.
 - 관련 엔티티의 속성을 기반으로 대상을 세그먼트화합니다. 여기에는 계정, 기회, 캠페인 및 마케팅 목록이 포함됩니다. 세그먼트는 더 이상 개인 속성 및 경험 이벤트로 제한되지 않습니다. 자세한 내용은 [B2B 세그먼테이션 설명서](./segmentation/b2b.md) b2B 특정 대상을 만드는 더 많은 예를 보려면 다음을 수행하십시오.
@@ -52,11 +52,11 @@ Line 1은 새로운 소프트웨어 제품을 출시했으며, Bodea의 기존 �
 
 Townsend의 지출은 서로 다른 판매 시스템으로 구분되고 개별적 합계가 100만 건을 넘지 않으므로 Marketo 1 또는 Marketo 2에 자격이 있는 사람은 찾지 못할 것입니다.
 
-### 실시간 CDP B2B Edition이 문제를 해결하는 방법
+### Real-Time CDP B2B Edition이 문제를 해결하는 방법
 
-Bodea의 마케팅 팀은 실시간 CDP B2B Edition을 통해 다음을 수행할 수 있습니다.
+Real-Time CDP B2B Edition을 사용하면 Bodea의 마케팅 팀은 다음을 수행할 수 있습니다.
 
-- 서로 다른 모든 소스(여러 Marketo 및 CRM 인스턴스, 기본 데이터 관리)의 데이터를 실시간 CDP B2B Edition으로 결합합니다.
+- 서로 다른 모든 소스(여러 Marketo 및 CRM 인스턴스, 기본 데이터 관리)의 데이터를 Real-Time CDP B2B Edition에 결합합니다.
 
 RT-CDP B2B Edition을 사용하는 Bodea는 Marketo Engage 소스 커넥터를 사용하여 Marketo 1 및 Marketo 2의 B2B 데이터를 Experience Platform으로 가져오고 플랫폼 연결 애플리케이션을 사용하여 이 데이터를 최신 상태로 유지할 수 있습니다. 자세한 내용은 [Marketo 소스 커넥터](../sources/connectors/adobe-applications/marketo/marketo.md) 설명서 를 참조하십시오.
 
@@ -87,7 +87,7 @@ Bodea는 Marketo Engage 및 LinkedIn 대상을 사용하여 마케팅 팀을 위
 
 ## 다음 단계
 
-이 문서를 읽은 후에는 실시간 CDP B2B Edition을 사용하여 해결할 수 있는 목표 및 문제의 유형이 도입되었습니다.
+이 문서를 읽은 후에는 Real-Time CDP B2B Edition을 사용하여 해결할 수 있는 목표 및 문제 유형에 대해 소개되었습니다.
 
 다음 설명서는 B2B 특정 기능에 대한 이해를 개선하기 위해 권장됩니다.
 

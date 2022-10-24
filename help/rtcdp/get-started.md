@@ -1,18 +1,18 @@
 ---
 keywords: RTCDP;CDP;Real-time Customer Data Platform;실시간 고객 데이터 플랫폼;실시간 cdp;cdp;rtcdp
 title: Real-time Customer Data Platform 시작하기
-description: 실시간 고객 데이터 플랫폼 구현을 설정할 때 이 샘플 시나리오를 예로 사용하십시오.
+description: Adobe Real-time Customer Data Platform 구현을 설정할 때 이 샘플 시나리오를 예로 사용하십시오.
 exl-id: 9f775d33-27a1-4a49-a4c5-6300726a531b
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '2332'
-ht-degree: 2%
+source-wordcount: '2333'
+ht-degree: 1%
 
 ---
 
 # Real-time Customer Data Platform 시작하기
 
-이 시작 가이드는 Real-time Customer Data Platform(실시간 CDP)의 샘플 구현을 안내합니다. 자체 구현을 설정할 때 예로 사용할 수 있습니다. 이 안내서에서는 특정 예를 표시하지만, 설정을 만드는 동안 사용할 수 있는 추가 정보에 연결됩니다.
+이 시작 안내서는 Real-time Customer Data Platform(Real-Time CDP)의 샘플 구현 을 안내합니다. 자체 구현을 설정할 때 예로 사용할 수 있습니다. 이 안내서에서는 특정 예를 표시하지만, 설정을 만드는 동안 사용할 수 있는 추가 정보에 연결됩니다.
 
 이 예에서는 Adobe Experience Platform에서 제공하는 Real-time Customer Data Platform의 다음과 같은 기능을 보여줍니다.
 
@@ -39,7 +39,7 @@ ht-degree: 2%
 
 이러한 목표를 달성하기 위해서는 마케팅 팀이 고객 데이터를 규모에 맞게 관리할 수 있어야 합니다.
 
-Luma의 마케팅 조직은 Adobe Experience Platform에서 제공하는 실시간 CDP를 사용하여 다음을 수행할 수 있습니다.
+Adobe Experience Platform에서 제공하는 Real-Time CDP을 통해 Luma의 마케팅 조직은 다음을 수행할 수 있습니다.
 
 1. 서로 다른 플랫폼에서 데이터를 수집하고 다른 마케팅 활동에 대해 다운스트림으로 사용할 수 있는지 확인합니다.
 1. 데이터가 생성되는 위치와 관계없이 고객에 대한 하나의 실시간 보기를 만듭니다.
@@ -141,7 +141,7 @@ Luma의 팀에는 모든 행동 및 고객 데이터가 한 곳에 있습니다.
 
 ## 데이터 소스 구성
 
-사용 [!DNL Real-time Customer Data Platform] 를 사용하십시오. 실시간 CDP에는 프로필에 빠르고 쉽게 추가할 수 있는 데이터 소스 카탈로그가 포함되어 있습니다.
+사용 [!DNL Real-Time Customer Data Platform] 를 사용하십시오. Real-Time CDP에는 프로필에 빠르고 쉽게 추가할 수 있는 데이터 소스 카탈로그가 포함되어 있습니다.
 
 ![이미지](assets/luma-source-cat.png)
 
@@ -178,7 +178,7 @@ Luma에는 수집된 특정 종류의 정보의 사용을 제한하는 여러 �
 
 ![](assets/governance-labels.png)
 
-데이터 사용 레이블이 적용되면 Luma는 데이터 거버넌스 를 사용하여 데이터 사용 정책을 만들 수 있습니다. 데이터 사용 정책은 특정 레이블이 포함된 데이터에 대해 수행할 수 있는 작업 종류를 설명하는 규칙입니다. 정책 위반을 구성하는 실시간 CDP에서 작업을 수행하려고 하면 작업을 방지하고 어떤 정책이 위반되었는지 및 그 이유를 보여주는 경고가 제공됩니다.
+데이터 사용 레이블이 적용되면 Luma는 데이터 거버넌스 를 사용하여 데이터 사용 정책을 만들 수 있습니다. 데이터 사용 정책은 특정 레이블이 포함된 데이터에 대해 수행할 수 있는 작업 종류를 설명하는 규칙입니다. 정책 위반을 구성하는 Real-Time CDP에서 작업을 수행하려고 할 때 작업이 방지되고 어떤 정책이 위반되었는지 및 그 이유를 알려주는 경고가 표시됩니다.
 
 ## 특정 고객을 위해 데이터 함께 가져오기
 
@@ -193,7 +193,7 @@ Luma가 Sarah에 대해 가지고 있는 모든 프로필 정보. 여기에는 �
 | ID | 에서 함께 연결된 ID를 표시합니다 [!DNL Platform] 여러 채널 및 장치에서 Luma와의 사라의 상호 작용 웹 사이트의 ECID가 표시됩니다. 이 ID에는 모바일 앱의 ECID, 이메일 ID, 최근 추가한 CRM ID도 포함됩니다 [!DNL Microsoft Dynamics] 데이터 세트 및 Luma 충성도 시스템에서 Adobe Experience Platform으로 전달된 충성도 ID입니다. |
 | 이벤트 | Luma 브랜드와 Sarah의 모든 상호 작용 데이터를 표시합니다. 여기에는 그녀가 방금 본 항목, 과거에 본 모든 항목, 그녀가 받은 이메일, 콜 센터와의 상호 작용, 그리고 이러한 각각의 상호 작용이 발생한 채널과 장치가 포함됩니다. |
 
-실시간 CDP 프로필은 이 360도 고객 보기를 기반으로 Luma 마케팅 팀의 워크플로우를 몇 주에서 몇 분으로 줄이고 개인화 가능성을 잠금 해제합니다. 이 프로필은 로그인하기 전에 사이트를 탐색할 때 사용한 행동 데이터를 기존 고객 프로필과 병합하여 Sarah에 대한 포괄적인 보기를 만듭니다.
+Real-Time CDP 프로필은 이 360도 고객 보기를 기반으로 Luma 마케팅 팀의 워크플로우를 몇 주에서 몇 분으로 줄이고 개인화 가능성을 잠금 해제합니다. 이 프로필은 로그인하기 전에 사이트를 탐색할 때 사용한 행동 데이터를 기존 고객 프로필과 병합하여 Sarah에 대한 포괄적인 보기를 만듭니다.
 
 마케팅 팀은 향상된 기능을 사용할 수 있습니다. [!DNL Real-time Customer Profile] Luma를 사용하여 Sarah의 경험을 더 잘 개인화하고 브랜드 충성도를 높이기 위해.
 
@@ -234,7 +234,7 @@ Loyalty member
 
 선택 **[!UICONTROL 대상에 보내기]**.
 
-Luma는 실시간 CDP에서 개인화를 위해 대상 세그먼트에 대해 원활하게 작동할 수 있습니다.\
+Real-Time CDP에서 Luma는 개인화를 위해 대상 세그먼트에 대해 원활하게 작동할 수 있습니다.\
 여기서는 Luma가 Adobe 솔루션과 비Adobe 솔루션 모두에 이 대상을 보낼 수 있는 모든 대상을 볼 수 있습니다.
 
 ![이미지](assets/luma-dest.png)
@@ -297,7 +297,7 @@ Adobe Experience Platform에는 특정 대상에 대해 세그먼트를 활성�
 
 ## 프로필 분석
 
-Luma 마케터는 Adobe Experience Platform을 사용하여 실시간 CDP 대시보드에서 선물 보호자 세그먼트를 봅니다. 그들은 시간이 지남에 따라 이 계획의 결과를 보고 그것이 성장하고 있다는 것을 봅니다. 고객들은 오퍼에 반응하고 더 많은 돈을 지출하고 있다.
+Luma 마케터는 Adobe Experience Platform을 사용하여 Real-Time CDP 대시보드에서 선물 보호자 세그먼트를 봅니다. 그들은 시간이 지남에 따라 이 계획의 결과를 보고 그것이 성장하고 있다는 것을 봅니다. 고객들은 오퍼에 반응하고 더 많은 돈을 지출하고 있다.
 
 이러한 인사이트를 통해 마케터는 CDP에서 이 데이터를 사용할 수 있고 Sarah와 같은 고객이 세그먼트에 연결됨으로써 이 신호에 대해 조치를 취할 수 있습니다.
 

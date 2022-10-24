@@ -3,9 +3,9 @@ keywords: Azure 이벤트 허브 대상;azure 이벤트 허브;azure 이벤트 �
 title: Azure 이벤트 허브 연결
 description: 에 대한 실시간 아웃바운드 연결을 만듭니다. [!DNL Azure Event Hubs] Experience Platform에서 데이터를 스트리밍할 스토리지.
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: 75399d2fbe111a296479f8d3404d43c6ba0d50b5
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '2003'
+source-wordcount: '2004'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> 이 대상은 다음 작업에만 사용할 수 있습니다 [Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) 고객.
+> 이 대상은 다음 작업에만 사용할 수 있습니다 [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) 고객.
 
 [!DNL Azure Event Hubs] 는 빅데이터 스트리밍 플랫폼 및 이벤트 수집 서비스입니다. 초당 수백만 개의 이벤트를 받고 처리할 수 있습니다. 이벤트 허브로 전송된 데이터는 모든 실시간 분석 공급자나 일괄 처리/저장소 어댑터를 사용하여 변환하고 저장할 수 있습니다.
 

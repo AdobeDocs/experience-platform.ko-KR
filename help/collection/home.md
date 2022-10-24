@@ -5,9 +5,9 @@ title: 데이터 수집 개요
 topic-legacy: overview
 description: Adobe Experience Platform의 고객 경험에 대한 데이터 수집과 관련된 다양한 기술에 대해 알아봅니다.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: 96ee731ce8de708b1671c40f1bbef9902495f3b4
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '513'
+source-wordcount: '514'
 ht-degree: 6%
 
 ---
@@ -64,7 +64,7 @@ Platform Edge Network는 광범위한 규모로 데이터를 수신하고 처리
 
 >[!NOTE]
 >
->이벤트 전달은 Real-time Customer Data Platform 연결 서비스의 일부로만 포함된 유료 기능입니다.
+>이벤트 전달은 Adobe Real-time Customer Data Platform 연결 서비스의 일부로만 포함된 유료 기능입니다.
 
 ## 다음 단계
 

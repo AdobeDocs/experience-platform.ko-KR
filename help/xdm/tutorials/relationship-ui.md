@@ -6,9 +6,9 @@ description: 이 문서에서는 Experience Platform 사용자 인터페이스�
 topic-legacy: tutorial
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
-source-git-commit: 86a230d746d6642437c4e37958c07a1186ebadc3
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '1172'
+source-wordcount: '1173'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Real-time Customer Data Platform B2B Edition에서 일대일 관계를 만드는 방법에 대한 단계는 다음 안내서를 참조하십시오 [B2B 관계 생성](./relationship-b2b.md).
+>Adobe Real-time Customer Data Platform B2B Edition에서 일대일 관계를 만드는 방법에 대한 단계는 다음 안내서를 참조하십시오 [B2B 관계 생성](./relationship-b2b.md).
 
 ## 시작하기
 

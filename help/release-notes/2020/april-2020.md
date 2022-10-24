@@ -6,7 +6,7 @@ last-update: April 13, 2020
 author: ens71067
 keywords: 릴리스 노트;
 exl-id: 0f68c71e-3c9d-453b-a953-1cd1b6ca2e35
-source-git-commit: e08deb8bea7f02639b680c4988522627de82bdee
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '983'
 ht-degree: 10%
@@ -93,12 +93,12 @@ in [Real-time Customer Data Platform](../../rtcdp/overview.md), 대상은 대상
 
 **새 대상**
 
-실시간 CDP는 이제 50개 이상으로 데이터 활성화를 지원합니다 [!DNL Experience Cloud Launch] 확장, analytics, 개인화 및 기타 사용 사례 활성화. 자세한 내용은 아래를 참조하십시오.
+Real-Time CDP은 이제 50개 이상으로 데이터 활성화를 지원합니다 [!DNL Experience Cloud Launch] 확장, analytics, 개인화 및 기타 사용 사례 활성화. 자세한 내용은 아래를 참조하십시오.
 
 | 설명서 | 설명 |
 |--- | ---|
-| [대상 유형 및 카테고리](../../destinations/destination-types.md) | 이 문서에서는 실시간 CDP 인터페이스의 연결과 확장의 차이에 대해 설명하고 각 대상을 사용할 시기를 권장합니다. |
-| [Experience Platform Launch 확장](../../destinations/catalog/launch-extensions/overview.md) | 이 페이지에서는 다음 내용을 설명합니다. [!DNL Launch] 확장은 를 사용하기 위한 사용 사례를 나열하고 각 확장에 대한 설명서 링크 [!DNL Launch] 실시간 CDP의 확장. |
+| [대상 유형 및 카테고리](../../destinations/destination-types.md) | 이 문서에서는 Real-Time CDP 인터페이스의 연결 및 확장 차이에 대해 설명하고 각 대상을 사용할 시기를 권장합니다. |
+| [Experience Platform Launch 확장](../../destinations/catalog/launch-extensions/overview.md) | 이 페이지에서는 다음 내용을 설명합니다. [!DNL Launch] 확장은 를 사용하기 위한 사용 사례를 나열하고 각 확장에 대한 설명서 링크 [!DNL Launch] 확장 기능 을 사용할 수 있습니다. |
 
 자세한 내용은 [대상 개요](../../destinations/home.md).
 

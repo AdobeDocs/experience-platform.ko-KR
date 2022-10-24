@@ -3,7 +3,7 @@ keywords: rtcdp 대상;대상 rtcdp;실시간 고객 데이터 플랫폼 대상
 title: Real-time Customer Data Platform의 대상
 description: 이 문서에서는 Adobe Experience Platform의 대상에 대한 개요를 제공합니다
 exl-id: 82f4bad2-a0e7-4f49-ac2f-412b5c5c35f3
-source-git-commit: ad0d38cbd249642d582a807c5679065827f57717
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '98'
 ht-degree: 0%

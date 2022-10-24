@@ -3,9 +3,9 @@ keywords: Experience Platform;홈;인기 항목;데이터 관리;라이선스 �
 title: 데이터 관리 라이선스 자격 모범 사례
 description: Adobe Experience Platform을 사용하여 라이선스 권한을 보다 효율적으로 관리하는 데 사용할 수 있는 모범 사례 및 도구에 대해 알아봅니다.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: 5da2a6cfc9e9da6bbe6c6560577d22eed32c858c
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '2528'
+source-wordcount: '2529'
 ht-degree: 2%
 
 ---
@@ -47,7 +47,7 @@ Experience Platform은 주로 다음 두 개의 데이터 리포지토리로 구
 
 다음 [!DNL Profile Richness] 지표는 구입한 라이센스에 따라 다릅니다. 다음 두 가지 계산이 있습니다 [!DNL Profile Richness] 사용 가능:
 
-* 언제든지 Real-time Customer Data Platform(즉, 프로필 서비스 및 ID 서비스) 내에 저장된 모든 프로덕션 데이터의 합계를 로 분할합니다. [!DNL Addressable Audience];
+* 언제든지 Adobe Real-time Customer Data Platform(즉, 프로필 서비스 및 ID 서비스) 내에 저장된 모든 프로덕션 데이터의 합계를 로 분할합니다. [!DNL Addressable Audience];
 * 플랫폼 내에 저장된 모든 데이터의 합계(다음을 포함하되 이에 제한되지 않음) [!DNL Data Lake], 프로필 서비스 및 ID 서비스 )를 설정하는 것이 좋습니다. [!DNL Addressable Audience].
 
 이러한 지표의 가용성과 이러한 각 지표의 구체적인 정의는 조직이 구입한 라이센스에 따라 다릅니다.

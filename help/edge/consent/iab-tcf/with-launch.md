@@ -2,9 +2,9 @@
 title: 태그 및 Platform Web SDK 확장을 사용하여 IAB TCF 2.0 지원 통합
 description: 태그 및 Adobe Experience Platform Web SDK 확장을 사용하여 IAB TCF 2.0 동의를 설정하는 방법을 알아봅니다.
 exl-id: dc0e6b68-8257-4862-9fc4-50b370ef204f
-source-git-commit: f5270d1d1b9697173bc60d16c94c54d001ae175a
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '838'
+source-wordcount: '839'
 ht-degree: 0%
 
 ---
@@ -123,4 +123,4 @@ Platform Web SDK 확장에서 &quot;이벤트 보내기&quot; 작업을 추가�
 
 ## 다음 단계
 
-이제 Platform Web SDK 확장과 함께 IAB TCF 2.0을 사용하는 방법을 알았으므로 Adobe Analytics 또는 실시간 고객 데이터 플랫폼과 같은 다른 Adobe 솔루션과 통합하도록 선택할 수도 있습니다. 자세한 내용은 [IAB Transparency &amp; Consent Framework 2.0 개요](./overview.md) 추가 정보.
+이제 Platform Web SDK 확장과 함께 IAB TCF 2.0을 사용하는 방법을 알았으므로 Adobe Analytics 또는 Adobe Real-time Customer Data Platform과 같은 다른 Adobe 솔루션과 통합하도록 선택할 수도 있습니다. 자세한 내용은 [IAB Transparency &amp; Consent Framework 2.0 개요](./overview.md) 추가 정보.

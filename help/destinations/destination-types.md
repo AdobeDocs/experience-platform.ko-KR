@@ -3,9 +3,9 @@ keywords: 대상;대상;대상 유형
 title: 대상 유형 및 카테고리
 description: Adobe Experience Platform의 다양한 대상 유형 및 카테고리에 대해 알아봅니다.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '640'
+source-wordcount: '642'
 ht-degree: 0%
 
 ---
@@ -35,9 +35,9 @@ Adobe Experience Platform에서는 연결과 확장의 두 대상 유형을 구�
 
 >[!IMPORTANT]
 >
->엔터프라이즈 대상 또는 스트리밍 프로필 내보내기 대상을 사용할 수 있습니다 [Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) 고객에게만 해당됩니다.
+>엔터프라이즈 대상 또는 스트리밍 프로필 내보내기 대상을 사용할 수 있습니다 [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) 고객에게만 해당됩니다.
 
-엔터프라이즈 대상 Data Connectors를 사용하여 내부 시스템 또는 기타 타사 시스템에 Real-time Customer Data Platform 프로필을 실시간으로 전달하여 데이터 동기화, 분석 및 추가적인 프로필 보강 사용 사례를 제공합니다.
+엔터프라이즈 대상 Data Connectors를 사용하여 내부 시스템 또는 기타 타사 시스템에 Adobe Real-time Customer Data Platform 프로필을 실시간으로 전달하여 데이터 동기화, 분석 및 추가적인 프로필 보강 사용 사례를 제공합니다.
 
 이러한 대상은 Experience Platform 데이터 스트림으로 세그먼트 및 프로필 데이터를 받습니다.
 

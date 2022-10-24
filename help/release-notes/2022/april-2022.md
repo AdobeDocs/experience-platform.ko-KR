@@ -2,7 +2,7 @@
 title: Adobe Experience Platform 릴리스 노트 - 2022년 4월
 description: Adobe Experience Platform에 대한 2022년 4월 릴리스 노트입니다.
 exl-id: 39233787-3089-4469-8363-b006ae41ae21
-source-git-commit: 6798c15b1cee781c41b9faf5cc6dcfa73090a60a
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '2916'
 ht-degree: 6%
@@ -21,7 +21,7 @@ Adobe Experience Platform의 기존 기능 업데이트:
 - [[!DNL Data Prep]](#data-prep)
 - [대상](#destinations)
 - [XDM(경험 데이터 모델)](#xdm)
-- [Real-time Customer Data Platform B2B 에디션](#B2B)
+- [Real-Time Customer Data Platform B2B 에디션](#B2B)
 - [소스](#sources)
 
 ## [!DNL Dashboards] {#dashboards}
@@ -200,9 +200,9 @@ Real-time Customer Data Platform에서 사용할 수 있는 고객 AI는 규모�
 
 자세한 내용은 [!DNL Intelligent Services]를 보려면 [[!DNL Intelligent Services] 개요](../../intelligent-services/home.md).
 
-## Real-time Customer Data Platform B2B 에디션 {#B2B}
+## Real-Time Customer Data Platform B2B 에디션 {#B2B}
 
-Real-time Customer Data Platform(실시간 CDP)를 기반으로 구축된 실시간 CDP B2B Edition은 비즈니스-비즈니스 서비스 모델로 운영되는 마케터를 위해 특별히 빌드되었습니다. 여러 소스의 데이터를 가져와서 사람 및 계정 프로필에 대한 단일 보기로 결합합니다. 이러한 통합 데이터를 통해 마케터는 특정 대상을 정확하게 타겟팅하고 사용 가능한 모든 채널에서 그러한 대상을 선택할 수 있습니다.
+Real-time Customer Data Platform(Real-Time CDP)에 구축된 Real-Time CDP B2B Edition은 비즈니스-비즈니스 서비스 모델로 운영되는 마케터를 위해 특별히 빌드되었습니다. 여러 소스의 데이터를 가져와서 사람 및 계정 프로필에 대한 단일 보기로 결합합니다. 이러한 통합 데이터를 통해 마케터는 특정 대상을 정확하게 타겟팅하고 사용 가능한 모든 채널에서 그러한 대상을 선택할 수 있습니다.
 
 **업데이트된 기능**
 

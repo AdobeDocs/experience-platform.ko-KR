@@ -3,22 +3,22 @@ keywords: 지표 개요. rtcdp 지표 개요
 title: Real-time Customer Data Platform 홈페이지 및 대시보드
 description: 대시보드, 홈페이지 및 Adobe Experience Platform의 최초 사용자 경험
 exl-id: ced5b69c-5bb5-4e06-9cb4-938e36e6e5cc
-source-git-commit: ad0d38cbd249642d582a807c5679065827f57717
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '619'
+source-wordcount: '620'
 ht-degree: 2%
 
 ---
 
-# [!DNL Real-time Customer Data Platform] 홈 페이지 및 대시보드
+# [!DNL Real-Time Customer Data Platform] 홈 페이지 및 대시보드
 
-실시간 CDP에 로그인할 때 지표 대시보드가 포함된 Real-time Customer Data Platform(실시간 CDP) 홈 페이지가 나타납니다.
+지표 대시보드가 포함된 Adobe Real-time Customer Data Platform(Real-Time CDP) 홈 페이지는 Real-Time CDP에 로그인할 때 나타납니다.
 
-홈 페이지는 지표 카드가 표시되는 위치 중 하나뿐입니다. 실시간 CDP는 경험 전체에서 지표 카드를 제공합니다. 이러한 지표는 시스템의 데이터, 프로필 및 세그먼트 대상에 대해 알려줍니다.
+홈 페이지는 지표 카드가 표시되는 위치 중 하나뿐입니다. Real-Time CDP은 경험 전체에서 지표 카드를 제공합니다. 이러한 지표는 시스템의 데이터, 프로필 및 세그먼트 대상에 대해 알려줍니다.
 
 ![image](assets/home.png)
 
-실시간 CDP에 로그인할 때 시스템에 데이터가 없으면 홈 페이지의 대시보드가 나타나지 않습니다. 이 경우 홈 페이지는 처음으로 사용자 경험을 위한 학습 자료를 제공합니다. 데이터가 수집되면, 즉 <!--sources-->데이터 세트, 프로필, 세그먼트 및 대상을 만들고 시스템으로 데이터를 전송합니다. 대시보드는 해당 데이터에 대한 정보를 표시하기 위해 자동으로 업데이트됩니다<!-- in metric cards-->.
+Real-Time CDP에 로그인할 때 시스템에 데이터가 없으면 홈 페이지의 대시보드가 나타나지 않습니다. 이 경우 홈 페이지는 처음으로 사용자 경험을 위한 학습 자료를 제공합니다. 데이터가 수집되면, 즉 <!--sources-->데이터 세트, 프로필, 세그먼트 및 대상을 만들고 시스템으로 데이터를 전송합니다. 대시보드는 해당 데이터에 대한 정보를 표시하기 위해 자동으로 업데이트됩니다<!-- in metric cards-->.
 
 ## 홈 페이지 대시보드 보기
 
@@ -53,7 +53,7 @@ Some information is shown in different ways on both the leaderboard and metric c
 
 프로필 수는 24시간마다 한 번 업데이트됩니다.
 
-프로필에 대한 자세한 내용은 [실시간 CDP에서 고객의 통합 보기](profile/profile-overview.md).
+프로필에 대한 자세한 내용은 [Real-Time CDP에서 고객에 대한 통합된 보기](profile/profile-overview.md).
 
 ### 세그먼트
 
@@ -77,7 +77,7 @@ There is also a metric card that shows the percentage of successful records. Sel
 
 The number of successful profile records is updated hourly. 
 
-For more information about profiles, see [A unified view of your customer in Real-time CDP](profile/profile-overview.md).
+For more information about profiles, see [A unified view of your customer in Real-Time CDP](profile/profile-overview.md).
 
 ### Total profile records
 
@@ -89,7 +89,7 @@ The **[!UICONTROL Total profile records]** metric card shows the total number of
 
 Select **[!UICONTROL View profiles]** to see more details about the profile records.
 
-For more information about profiles, see [A unified view of your customer in Real-time CDP](profile/profile-overview.md).
+For more information about profiles, see [A unified view of your customer in Real-Time CDP](profile/profile-overview.md).
 
 For more information about viewing a specific profile, see [Profile viewer](profile/profile-viewer.md).
 

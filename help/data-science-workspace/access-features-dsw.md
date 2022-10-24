@@ -5,9 +5,9 @@ title: 데이터 과학 작업 공간 액세스 및 기능
 topic-legacy: Access and features for data science workspace
 description: 다음 문서에서는 Data Science Workspace 권한 및 기능에 대한 액세스를 간략하게 설명합니다.
 exl-id: 6759fea4-adb9-4e4e-9f3d-e0e8c885b1dd
-source-git-commit: 2ff2721f5420483ddc5caffd1eb0532df729e01b
+source-git-commit: e67b3a6f9f57a3971a5bfa755db3b1043bebc96b
 workflow-type: tm+mt
-source-wordcount: '684'
+source-wordcount: '688'
 ht-degree: 2%
 
 ---
@@ -18,15 +18,15 @@ ht-degree: 2%
 
 ![DSW 탭](./images/access/platform-tabs.png)
 
-- **노트북:** Experience Platform에서 데이터를 탐색, 분석 및 모델링할 수 있는 대화형 개발 환경([JupiterLab](./jupyterlab/overview.md))을 제공합니다.
-- **모델:** 고급 기계 학습 레서피 및 모델을 만들고, 게시하고, 저장하는 데 사용되는 도구를 제공합니다. 자세한 내용은 [기계 학습 모델 만들기 및 게시](./models-recipes/create-publish-model.md) 자습서를 참조하십시오.
-- **서비스:**  [AI/ML 서비스와 같은 Adobe 제공 서비스 ](../intelligent-services/home.md) 및 Data Science Workspace로 만든 사용자 지정 서비스를 모두 포함합니다.
+- **노트북:** 대화형 개발 환경 제공([JupiterLab](./jupyterlab/overview.md)) Experience Platform에서 데이터를 탐색, 분석 및 모델링할 수 있습니다.
+- **모델:** 고급 기계 학습 레서피 및 모델을 만들고, 게시하고, 저장하는 데 사용되는 도구를 제공합니다. 자세한 내용은 [기계 학습 모델 만들기 및 게시](./models-recipes/create-publish-model.md) 자습서입니다.
+- **서비스:** 과 같은 Adobe 제공 서비스를 모두 포함합니다. [AI/ML 서비스](../intelligent-services/home.md) 및 Data Science Workspace으로 만든 사용자 지정 서비스를 사용할 수 있습니다.
 
 서비스 탭만 표시되는 이유는 무엇입니까?
 
-- 조직은 Customer AI AI/ML 서비스를 포함하는 실시간 RTCDP(고객 데이터 플랫폼)만 사용할 수 있습니다.
+- 조직은 고객 AI AI/ML 서비스를 포함하는 Adobe Real-time Customer Data Platform(Real-Time CDP)에만 액세스할 수 있습니다.
 
-**데이터 과학** 탭을 볼 수 없고 데이터 과학 작업 공간 기능을 활용하려면 회사 관리자에게 문의하여 Adobe Experience Platform Intelligence 라이센스가 있는지 확인하십시오.
+다음을 볼 수 없는 경우 **데이터 과학** 탭하고 Data Science Workspace 기능을 활용하려면 회사 관리자에게 문의하여 Adobe Experience Platform Intelligence 라이센스가 있는지 확인하십시오.
 
 ## Data Science Workspace 패키지
 
@@ -53,17 +53,17 @@ Data Science Workspace 기능은 Adobe Experience Platform Intelligence 패키�
 
 ## 액세스 제어
 
-Experience Platform에 대한 액세스 제어는 [Adobe Admin Console](https://adminconsole.adobe.com)을 통해 관리됩니다. 이 기능은 사용 권한 및 샌드박스를 사용자와 연결하는 Admin Console의 제품 프로필을 활용합니다. 자세한 내용은 [액세스 제어 개요](../access-control/home.md)를 참조하십시오.
+Experience Platform에 대한 액세스 제어는 [Adobe Admin Console](https://adminconsole.adobe.com). 이 기능은 사용 권한 및 샌드박스를 사용자와 연결하는 Admin Console의 제품 프로필을 활용합니다. 자세한 내용은 [액세스 제어 개요](../access-control/home.md) 추가 정보.
 
 Data Science Workspace를 사용하려면 &quot;데이터 과학 작업 공간 관리&quot; 권한을 활성화해야 합니다. 다음 표에서는 이 권한을 활성화하거나 비활성화하는 효과에 대해 설명합니다.
 
 | 사용 권한 | 활성화됨 | 비활성화됨 |
 |---|---|---|
-| 데이터 과학 작업 공간 관리 | Data Science Workspace의 모든 서비스에 대한 액세스 권한을 제공합니다. | 데이터 과학 작업 공간 내의 모든 서비스에 대한 API 및 UI 액세스가 비활성화됩니다. 비활성화되어 있는 동안 **Notebook**, **Models** 및 **Services** 페이지를 선택할 수 없습니다. <li>**서비스**&#x200B;에 대한 액세스는 여전히 RTCDP(실시간 고객 데이터 플랫폼)를 통해 사용할 수 있습니다.</li> |
+| 데이터 과학 작업 공간 관리 | Data Science Workspace의 모든 서비스에 대한 액세스 권한을 제공합니다. | 데이터 과학 작업 공간 내의 모든 서비스에 대한 API 및 UI 액세스가 비활성화됩니다. 비활성화된 상태에서 **노트북**, **모델**, 및 **서비스** 페이지를 사용할 수 없습니다. <li>액세스 권한 **서비스** Adobe Real-time Customer Data Platform(Real-Time CDP)을 통해 계속 사용할 수 있습니다.</li> |
 
 ## 샌드박스 지원
 
-샌드박스는 단일 Experience Platform 인스턴스 내의 가상 파티션입니다. 각 Platform 인스턴스는 여러 프로덕션 및 비프로덕션 샌드박스를 지원하며, 각 샌드박스는 자체 플랫폼 리소스 라이브러리를 유지합니다. 비프로덕션 샌드박스를 사용하면 프로덕션 샌드박스에 영향을 주지 않고 기능을 테스트하고, 실험을 실행하고, 사용자 지정 구성을 만들 수 있습니다. 샌드박스에 대한 자세한 내용은 [샌드박스 개요](../sandboxes/home.md)를 참조하십시오.
+샌드박스는 단일 Experience Platform 인스턴스 내의 가상 파티션입니다. 각 Platform 인스턴스는 여러 프로덕션 및 비프로덕션 샌드박스를 지원하며, 각 샌드박스는 자체 플랫폼 리소스 라이브러리를 유지합니다. 비프로덕션 샌드박스를 사용하면 프로덕션 샌드박스에 영향을 주지 않고 기능을 테스트하고, 실험을 실행하고, 사용자 지정 구성을 만들 수 있습니다. 샌드박스에 대한 자세한 내용은 [샌드박스 개요](../sandboxes/home.md).
 
 현재 Data Science Workspace 에는 다음과 같은 샌드박스 제한이 있습니다.
 
@@ -73,4 +73,4 @@ Data Science Workspace를 사용하려면 &quot;데이터 과학 작업 공간 �
 
 이 문서에서는 Data Science Workspace에서 사용할 수 있는 다양한 유형의 액세스 및 기능에 대해 간략하게 설명합니다.
 
-전체 일상적인 워크플로우와 같은 데이터 과학 작업 공간에 대한 자세한 내용은 [데이터 과학 작업 공간 연습](./walkthrough.md) 설명서를 읽으면서 시작하십시오. 자세한 내용은 [데이터 과학 작업 공간 개요](./home.md)를 참조하십시오.
+전체 일상적인 워크플로우와 같은 Data Science Workspace에 대해 자세히 알아보려면 [데이터 과학 작업 공간 안내](./walkthrough.md) 설명서. 일반적인 정보를 보려면 [Data Science Workspace 개요](./home.md).

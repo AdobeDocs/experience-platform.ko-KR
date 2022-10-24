@@ -1,9 +1,9 @@
 ---
 title: Real-Time CDP B2B Edition의 관련 계정
 type: Documentation
-description: Experience Platform 실시간 CDP B2B의 관련 계정 기능에 대한 개요 및 추가 정보입니다.
+description: Real-Time CDP B2B Experience Platform의 관련 계정 기능에 대한 개요 및 추가 정보.
 exl-id: 37fd2cdb-87c0-4e5e-9599-ad4f397f7c28
-source-git-commit: 5be8eac1603f1b81e45b4c0aeace5c2017b46149
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '386'
 ht-degree: 6%
@@ -26,7 +26,7 @@ B2B 기업은 동일한 실제 비즈니스 업체에 대해 일부 또는 충�
 
 {style=&quot;table-layout:auto&quot;}
 
-관련 계정, [!DNL Real-time CDP B2B] 이제 탐색 중인 계정과 유사한 계정 목록이 표시됩니다.
+관련 계정, [!DNL Real-Time CDP B2B] 이제 탐색 중인 계정과 유사한 계정 목록이 표시됩니다.
 
 ![Experience Platform UI에서 관련 계정을 표시하는 화면](/help/rtcdp/b2b-ai-ml-services/assets/related-accounts-in-ui.png)
 

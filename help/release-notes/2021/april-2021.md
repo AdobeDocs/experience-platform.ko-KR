@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: April 21, 2021
 author: ens72741
 exl-id: cc78e48a-3578-4c55-ae86-1946d62bddb9
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '888'
-ht-degree: 9%
+ht-degree: 10%
 
 ---
 
@@ -61,7 +61,7 @@ Real-time Customer Data Platform에서 사용할 수 있는 고객 AI는 규모�
 
 지원되는 데이터 세트에 대한 자세한 내용은 [[!DNL Intelligent Services] 데이터 준비 설명서](../../intelligent-services/data-preparation.md).
 
-### Attribution AI
+### 기여도 AI
 
 Attribution AI는 전환 이벤트로 연결되는 터치포인트에 크레딧을 적용하는 데 사용됩니다. 이를 통해 마케터는 고객 여정 전반에서 각 개별 마케팅 터치포인트의 마케팅 효과를 수량화할 수 있습니다.
 

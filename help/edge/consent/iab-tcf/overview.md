@@ -1,18 +1,18 @@
 ---
 title: Adobe Experience Platform Web SDK의 IAB TCF 2.0 지원
 description: Adobe Experience Platform Web SDK를 사용하여 IAB TCF 2.0 동의 환경 설정을 지원하는 방법을 알아봅니다
-keywords: 동의;설정 동의;프로필 개인 정보 필드 그룹;경험 이벤트 개인 정보 필드 그룹;개인 정보 필드 그룹;IAB TCF 2.0;실시간 CDP;실시간 고객 데이터 프로필
+keywords: 동의;설정 동의;프로필 개인 정보 필드 그룹;경험 이벤트 개인 정보 필드 그룹;개인 정보 필드 그룹;IAB TCF 2.0;Real-Time CDP;
 exl-id: 78e728f4-1604-40bf-9e21-a056024bbc98
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: e67b3a6f9f57a3971a5bfa755db3b1043bebc96b
 workflow-type: tm+mt
-source-wordcount: '864'
+source-wordcount: '861'
 ht-degree: 0%
 
 ---
 
 # Adobe Experience Platform Web SDK의 IAB TCF 2.0 지원
 
-Adobe Experience Platform Web SDK는 Interactive Advertising Bureau Transparency &amp; Consent Framework 버전 2.0(IAB TCF 2.0)을 지원합니다. 이 안내서에서는 실시간 고객 데이터 플랫폼, Audience Manager, 경험 이벤트, Adobe Analytics 및 Experience Edge와 통합된 Adobe Experience Platform Web SDK를 통해 IAB TCF 2.0을 지원하는 요구 사항을 보여줍니다.
+Adobe Experience Platform Web SDK는 Interactive Advertising Bureau Transparency &amp; Consent Framework 버전 2.0(IAB TCF 2.0)을 지원합니다. 이 안내서에서는 Adobe Real-time Customer Data Platform, Audience Manager, Experience Events, Adobe Analytics 및 Experience Edge와 통합된 Adobe Experience Platform Web SDK를 통해 IAB TCF 2.0을 지원하는 요구 사항을 보여줍니다.
 
 또한 IAB TCF 2.0을 태그 및 없이 통합하는 방법을 학습하기 위해 다음 지침을 사용할 수 있습니다.
 
@@ -29,10 +29,10 @@ IAB TCF 2.0을 사용하여 웹 SDK를 구현하려면 XDM(Experience Data Model
 
 SDK를 사용하여 Adobe Experience Platform에 동의 데이터를 전송하려면 다음 조건을 충족해야 합니다.
 
-- [!DNL XDM Individual Profile] 클래스를 기반으로 하며 [!DNL Real-time Customer Profile]에서 사용할 수 있도록 활성화된 TCF 2.0 동의 필드를 포함하는 데이터 집합입니다.
+- 스키마를 기반으로 하는 데이터 세트 [!DNL XDM Individual Profile] 클래스에는 사용할 수 있는 TCF 2.0 동의 필드가 포함되어 있습니다 [!DNL Real-time Customer Profile].
 - 위에 언급된 플랫폼 및 프로필 사용 데이터 세트를 사용하여 설정된 데이터 스트림.
 
-필요한 데이터 세트 및 데이터 스트림을 만드는 방법에 대한 지침은 [TCF 2.0 준수](../../../landing/governance-privacy-security/consent/iab/overview.md)의 안내서를 참조하십시오.
+다음 안내서를 참조하십시오. [TCF 2.0 규정 준수](../../../landing/governance-privacy-security/consent/iab/overview.md) 필요한 데이터 세트 및 데이터 스트림 생성에 대한 지침.
 
 ## Audience Manager 통합
 
@@ -44,14 +44,14 @@ Adobe Audience Manager(AAM)에는 다운스트림 파트너에게 고객 개인 
 
 ## Experience Events 및 Adobe Analytics 통합
 
-실시간 CDP와 Audience Manager의 대상은 고객의 현재 동의 환경 설정을 추적하는 반면 Experience Events는 이벤트가 수집될 때 활성 상태인 고객의 동의 환경 설정을 보유할 수 있습니다.
+Real-Time CDP 및 Audience Manager의 대상은 고객의 현재 동의 환경 설정을 추적하는 반면, 경험 이벤트는 이벤트가 수집될 때 활성 상태인 고객의 동의 환경 설정을 보유할 수 있습니다.
 
 이벤트에 대한 동의 정보를 수집하려면 다음 조건을 충족해야 합니다.
 
-- [!DNL Experience Event] 개인 정보 스키마 필드 그룹이 있는 [!DNL XDM Experience Event] 클래스를 기반으로 하는 데이터 집합입니다.
-- 위의 [!DNL XDM Experience Event] 데이터 세트를 사용하여 설정된 데이터 스트림.
+- 를 기반으로 하는 데이터 세트 [!DNL XDM Experience Event] 클래스, [!DNL Experience Event] 개인 정보 스키마 필드 그룹.
+- 로 설정된 데이터 스트림 [!DNL XDM Experience Event] 위의 데이터 세트 입니다.
 
-XDM 경험 이벤트를 Analytics 히트로 변환하는 방법에 대한 자세한 내용은 [Analytics 개요](../../data-collection/adobe-analytics/analytics-overview.md) 설명서를 참조하여 시작하십시오.
+XDM 경험 이벤트를 Analytics 히트로 변환하는 방법에 대한 자세한 내용은 다음을 참조하십시오. [Analytics 개요](../../data-collection/adobe-analytics/analytics-overview.md) 설명서.
 
 ## Adobe Experience Platform 웹 SDK 통합
 
@@ -59,35 +59,35 @@ XDM 경험 이벤트를 Analytics 히트로 변환하는 방법에 대한 자세
 
 >[!NOTE]
 >
->실시간 CDP나 Audience Manager을 설정하지 않고도 웹 SDK와 IAB TCF 2.0을 통합할 수 있습니다. 동의 환경 설정은 경험 이벤트 컬렉션을 제어하고 ID 쿠키를 설정하는 데 사용할 수 있습니다.
+>Real-Time CDP 또는 Audience Manager을 설정하지 않고도 웹 SDK와 IAB TCF 2.0을 통합할 수 있습니다. 동의 환경 설정은 경험 이벤트 컬렉션을 제어하고 ID 쿠키를 설정하는 데 사용할 수 있습니다.
 
 ### 기본 동의
 
 고객에 대해 이미 저장된 동의 기본 설정이 없을 때 기본 동의가 사용됩니다. 즉, 기본 동의 옵션은 Adobe Experience Platform Web SDK의 동작을 제어하고 고객의 지역에 따라 변경할 수 있습니다.
 
-예를 들어, GDPR(일반 데이터 보호 규정)의 관할에 속하지 않는 고객이 있는 경우 기본 동의는 `in`으로 설정될 수 있지만 GDPR의 관할 내에서는 기본 동의를 `pending`로 설정할 수 있습니다. CMP(동의 관리 플랫폼)가 고객의 지역을 감지하고 IAB TCF 2.0에 플래그 `gdprApplies`를 제공할 수 있습니다. 이 플래그는 기본 동의를 설정하는 데 사용할 수 있습니다.
+예를 들어 GDPR(일반 데이터 보호 규정)의 관할에 속하지 않는 고객이 있는 경우 기본 동의를 `in`로 설정되지만 GDPR의 관할 내에서는 기본 동의가 `pending`. CMP(동의 관리 플랫폼)가 고객의 지역을 감지하고 플래그를 제공할 수 있습니다 `gdprApplies` 대상. 이 플래그를 사용하여 기본 동의를 설정할 수 있습니다.
 
-기본 동의에 대한 자세한 내용은 SDK 구성 설명서의 [기본 동의 섹션](../../fundamentals/configuring-the-sdk.md#default-consent)을 참조하십시오.
+기본 동의에 대한 자세한 내용은 [기본 동의 섹션](../../fundamentals/configuring-the-sdk.md#default-consent) 를 참조하십시오.
 
 ### 변경 시 동의 설정
 
-Adobe Experience Platform Web SDK에는 IAB TCF 2.0을 사용하여 고객의 동의 환경 설정을 모든 Adobe 서비스에 전달하는 `setConsent` 명령이 있습니다. 실시간 CDP와 통합하는 경우 고객 프로필이 업데이트됩니다. Audience Manager과 통합하는 경우 고객 정보가 업데이트됩니다. 이를 호출하면 향후 경험 이벤트의 전송 허용 여부를 제어하는 전체 또는 임의 동의 환경 설정이 있는 쿠키도 설정됩니다. 이 작업은 동의가 변경될 때마다 호출됩니다. 향후 페이지가 로드될 때 Experience Edge 동의 쿠키를 읽어 Experience Event를 전송할 수 있는지 여부 및 ID 쿠키를 설정할 수 있는지 여부를 결정합니다.
+Adobe Experience Platform 웹 SDK에는 `setConsent` IAB TCF 2.0을 사용하여 고객의 동의 환경 설정을 모든 Adobe 서비스에 전달하는 명령. Real-Time CDP과 통합하면 고객 프로필이 업데이트됩니다. Audience Manager과 통합하는 경우 고객 정보가 업데이트됩니다. 이를 호출하면 향후 경험 이벤트의 전송 허용 여부를 제어하는 전체 또는 임의 동의 환경 설정이 있는 쿠키도 설정됩니다. 이 작업은 동의가 변경될 때마다 호출됩니다. 향후 페이지가 로드될 때 Experience Edge 동의 쿠키를 읽어 Experience Event를 전송할 수 있는지 여부 및 ID 쿠키를 설정할 수 있는지 여부를 결정합니다.
 
 Audience Manager의 IAB TCF 2.0 통합과 유사한 Experience Edge는 고객이 다음 용도에 대해 명시적 동의를 제공하면 동의를 제공합니다.
 
-- **목적 1:** 장치에서 정보 저장 및/또는 액세스
+- **목적 1:** 장치에 정보 저장 및/또는 액세스
 - **목적 10:** 제품 개발 및 개선
-- **특수 목적 1:** 보안 확보, 사기 방지 및 디버그 (IAB TCF 규정에 따라 항상 동의함)
+- **특수 목적 1:** 보안을 유지하고, 사기를 방지하며 디버그를 수행합니다. (IAB TCF 규정에 따라 항상 동의함)
 - **Adobe 공급업체 권한:** Adobe 동의(공급업체 565)
 
-`setConsent` 명령에 대한 자세한 내용은 [지원 동의](../../consent/supporting-consent.md)에서 설명서를 참조하십시오.
+에 대한 자세한 내용은 `setConsent` 명령, 다음 문서를 참조하십시오. [지원 동의](../../consent/supporting-consent.md).
 
 ### 경험 이벤트에 동의 추가
 
-Adobe Experience Platform Web SDK에는 Experience Event를 수집하는 `sendEvent` 명령이 있습니다. Experience Events 또는 Adobe Analytics과 통합하고 모든 Experience Event에 대한 동의 환경 설정을 원하는 경우 모든 `sendEvent` 명령에 동의 정보를 추가해야 합니다.
+Adobe Experience Platform 웹 SDK에는 `sendEvent` experience 이벤트를 수집하는 명령입니다. Experience Events 또는 Adobe Analytics과 통합하고 모든 Experience Event에 대한 동의 환경 설정을 원하는 경우, 동의 정보를 `sendEvent` 명령.
 
-`sendEvent` 명령에 대한 자세한 내용은 [추적 이벤트](../../fundamentals/tracking-events.md)에서 설명서를 참조하십시오.
+에 대한 자세한 내용은 `sendEvent` 명령, 다음 문서를 참조하십시오. [이벤트 추적](../../fundamentals/tracking-events.md).
 
 ## 다음 단계
 
-IAB Transparency &amp; Consent Framework 2.0에 대한 기본적인 이해가 있으므로 태그](./with-launch.md) 또는 태그 없이 [IAB TCF 2.0 [을 사용하는 방법에 대한 안내서를 참조하십시오.](./without-launch.md)
+IAB Transparency &amp; Consent Framework 2.0에 대한 기본적인 이해가 있으므로 IAB TCF 2.0 사용에 대한 안내서를 참조하십시오 [태그 포함](./with-launch.md) 또는 [태그 제외](./without-launch.md).

@@ -2,9 +2,9 @@
 description: Adobe Experience Platform Destination SDK은 선택한 데이터 및 인증 형식에 따라 Experience Platform이 대상 및 프로필 데이터를 엔드포인트 또는 저장소 위치에 전달하도록 대상 통합 패턴을 구성할 수 있도록 해주는 구성 API 세트입니다. 구성은 Experience Platform에 저장되며, 추가 업데이트를 위해 API를 통해 검색할 수 있습니다.
 title: Adobe Experience Platform Destination SDK
 exl-id: 7aca9f40-98c8-47c2-ba88-4308fc2b1798
-source-git-commit: 94d46ceeef6eef507115c60aaa6820d4560e4d44
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '838'
+source-wordcount: '840'
 ht-degree: 2%
 
 ---
@@ -23,16 +23,16 @@ Destination SDK 설명서에서는 Adobe Experience Platform Destination SDK을 
 
 >[!IMPORTANT]
 >
-> 비공개 사용자 지정 대상을 만드는 이 기능은 [Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) 고객.
+> 비공개 사용자 지정 대상을 만드는 이 기능은 [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) 고객.
 
 Destination SDK 파트너인 은 제품 대상을 [Experience Platform 카탈로그](/help/destinations/catalog/overview.md):
 1. 사전 구성된 매개 변수로 고객 간의 통합 구성을 표준화하고 고객을 위한 설정 경험을 간소화합니다.
 2. 고객 설정 및 인식을 간소화하기 위해 Experience Platform 대상 카탈로그에 브랜드 대상 카드를 도입합니다.
-3. Adobe Experience Platform 및 Real-time Customer Data Platform과 통합된 생산형 대상 제품으로 부각됩니다.
+3. Adobe Experience Platform 및 Adobe Real-time Customer Data Platform과 통합된 생산형 대상 제품으로 부각됩니다.
 
 Experience Platform 고객은 활성화 요구 사항에 가장 적합한 고유한 사용자 지정 대상을 작성할 수도 있습니다.
 
-![대상 개발자가 Destination SDK과 상호 작용하는 방법 및 실시간 CDP 고객이 제품 및 개인 대상을 통해 어떤 혜택을 받는지를 보여주는 개요 다이어그램입니다.](./assets/destination-sdk-visual.png)
+![대상 개발자가 Destination SDK과 상호 작용하는 방법 및 Real-Time CDP 고객이 제품 및 개인 대상을 통해 혜택을 받는 방법을 보여주는 개요 다이어그램입니다.](./assets/destination-sdk-visual.png)
 
 ## 지원되는 통합 유형 {#supported-integration-types}
 

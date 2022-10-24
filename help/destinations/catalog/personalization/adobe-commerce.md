@@ -1,7 +1,7 @@
 ---
 title: (베타) Adobe Commerce 대상 커넥터
 description: Real-Time CDP 내에서 구축되고 관리되는 고객 세그먼트에 맞게 사용자 지정된 고도로 적절한 사이트 컨텐츠와 프로모션을 제공하여 Adobe Commerce 및 Real-Time CDP 가맹점이 쇼핑 경험을 개인화할 수 있는 방법을 알아봅니다.
-source-git-commit: 51c5458f444220fb526eb9e82417ae6456857de6
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '687'
 ht-degree: 1%
@@ -36,7 +36,7 @@ To help you better understand how and when you should use the *YourDestination* 
 
 ## 전제 조건 {#prerequisites}
 
-이 확장은 실시간 CDP Prime 또는 Ultimate 및 Adobe Commerce을 구입한 일부 베타 고객을 위해 대상 카탈로그에서 사용할 수 있습니다.
+이 확장은 Real-Time CDP Prime 또는 Ultimate 및 Adobe Commerce을 구입한 일부 베타 고객의 대상 카탈로그에서 사용할 수 있습니다.
 
 Beta 고객은 다음 항목에 액세스할 수 있어야 합니다.
 
@@ -90,7 +90,7 @@ While [설정](../../ui/connect-destination.md) 이 대상을 사용하려면 �
 
 ## 의 다음 단계 [!DNL Adobe Commerce]
 
-이제 다음을 구성했으므로 [!DNL Commerce] Experience Platform 내에서 대상을 구성해야 합니다 [!DNL Commerce Admin] 만든 실시간 CDP 세그먼트를 가져오기 위해 자세한 내용은 [[!DNL Commerce] 설명서](https://docs.magento.com/user-guide/marketing/customer-segment-rtcdp.html) 추가 정보
+이제 다음을 구성했으므로 [!DNL Commerce] Experience Platform 내에서 대상을 구성해야 합니다 [!DNL Commerce Admin] 만든 Real-Time CDP 세그먼트를 가져오기 위해 자세한 내용은 [[!DNL Commerce] 설명서](https://docs.magento.com/user-guide/marketing/customer-segment-rtcdp.html) 추가 정보
 
 ## 데이터 내보내기의 유효성 검사 {#exported-data}
 

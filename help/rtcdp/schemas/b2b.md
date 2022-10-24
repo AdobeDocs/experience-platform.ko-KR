@@ -1,23 +1,23 @@
 ---
 title: Real-time Customer Data Platform B2B Edition의 스키마
-description: Real-time Customer Data Platform B2B Edition에서 XDM(Experience Data Model) 스키마의 역할에 대한 개요입니다.
+description: Adobe Real-time Customer Data Platform B2B Edition에서 XDM(Experience Data Model) 스키마의 역할에 대한 개요입니다.
 exl-id: 3b18d377-108f-443f-86ae-dc7537cf9013
-source-git-commit: 1a104d26b920082ee73178dd0ad7234ad43dec1a
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '235'
+source-wordcount: '237'
 ht-degree: 0%
 
 ---
 
 # Real-time Customer Data Platform B2B Edition의 스키마
 
-Real-time Customer Data Platform B2B Edition은 몇 가지 표준을 제공합니다 [XDM(경험 데이터 모델) 클래스](../../xdm/schema/composition.md#class) 계정, 기회, 캠페인 등과 같은 중요한 B2B 데이터 엔티티에 대한 세부 사항을 캡처합니다. 또한 실시간 CDP B2B Edition을 사용하면 이러한 스키마 간에 다대다 관계를 정의하여 고급 세그멘테이션 사용 사례에 참여할 수 있습니다.
+Adobe Real-time Customer Data Platform B2B Edition은 몇 가지 표준을 제공합니다 [XDM(경험 데이터 모델) 클래스](../../xdm/schema/composition.md#class) 계정, 기회, 캠페인 등과 같은 중요한 B2B 데이터 엔티티에 대한 세부 사항을 캡처합니다. 또한 Real-Time CDP B2B Edition을 사용하면 이러한 스키마 간에 다대다 관계를 정의하여 고급 세그먼테이션 사용 사례에 참여할 수 있습니다.
 
 >[!IMPORTANT]
 >
->B2B 스키마가 참여하려면 실시간 CDP B2B 버전에 액세스할 수 있어야 합니다 [실시간 고객 프로필](../../profile/home.md).
+>B2B 스키마가 참여하려면 Real-Time CDP B2B Edition에 액세스할 수 있어야 합니다 [실시간 고객 프로필](../../profile/home.md).
 
-실시간 CDP B2B Edition에서는 다음과 같은 표준 클래스가 제공됩니다.
+다음 표준 클래스는 Real-Time CDP B2B Edition에서 제공됩니다.
 
 * [XDM 비즈니스 계정](../../xdm/classes/b2b/business-account.md)
 * [XDM 비즈니스 계정 담당자 관계](../../xdm/classes/b2b/business-account-person-relation.md)

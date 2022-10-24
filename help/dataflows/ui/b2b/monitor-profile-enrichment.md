@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 프로필 보강 작업 모니터링
 type: Tutorial
 exl-id: 096a2212-ed7f-4419-8ead-fa1ca01c2804
-source-git-commit: 1fed0cf37e7297c21330ebf51ae15054aa21c781
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '768'
 ht-degree: 2%
@@ -93,7 +93,7 @@ ht-degree: 2%
 
 이제 이 자습서를 따라 프로필 보강 작업에 대한 지표를 모니터링하고 이해할 수 있습니다. 자세한 내용은 다음 문서를 참조하십시오.
 
-* [실시간 CDP B2B의 관련 계정](/help/rtcdp/b2b-ai-ml-services/related-accounts.md)
+* [Real-Time CDP B2B의 관련 계정](/help/rtcdp/b2b-ai-ml-services/related-accounts.md)
 * [계정 프로필 UI 안내서의 관련 계정 탭](/help/rtcdp/accounts/account-profile-ui-guide.md)
-* [실시간 CDP B2B에서 계정 일치 시작](/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md)
-* [실시간 CDP B2B에서 예측 리드 및 계정 점수 책정](/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md)
+* [Real-Time CDP B2B에서 계정 일치 리드](/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md)
+* [Real-Time CDP B2B의 예측 리드 및 계정 점수 책정](/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md)

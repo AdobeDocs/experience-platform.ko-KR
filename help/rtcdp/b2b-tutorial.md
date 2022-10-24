@@ -2,11 +2,11 @@
 keywords: RTCDP;CDP;B2B Edition;Real-time Customer Data Platform;실시간 고객 데이터 플랫폼;실시간 cdp;b2b;cdp
 solution: Experience Platform
 title: Real-time Customer Data Platform B2B Edition 시작하기
-description: Real-time Customer Data Platform B2B Edition 구현을 설정할 때 이 샘플 시나리오를 예로 사용하십시오.
+description: Adobe Real-time Customer Data Platform B2B Edition 구현을 설정할 때 이 샘플 시나리오를 예로 사용하십시오.
 exl-id: ad9ace46-9915-4b8f-913a-42e735859edf
-source-git-commit: eb71896ec049253266685fdc831f941e14f3268a
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '1205'
+source-wordcount: '1206'
 ht-degree: 0%
 
 ---
@@ -56,7 +56,7 @@ Adobe Experience Platform UI에서 상위 마케터가 선택합니다 **[!UICON
 
 ## 데이터를 Experience Platform에 수집
 
-다음으로, 보데아 마케터는 [Marketo Engage 커넥터](../sources/connectors/adobe-applications/marketo/marketo.md) 다운스트림 서비스에서 사용할 데이터를 Platform으로 수집할 수 있습니다. 또한 실시간 CDP B2B Edition에 대해 승인된 소스 중 하나를 사용하여 데이터를 수집할 수 있습니다.
+다음으로, 보데아 마케터는 [Marketo Engage 커넥터](../sources/connectors/adobe-applications/marketo/marketo.md) 다운스트림 서비스에서 사용할 데이터를 Platform으로 수집할 수 있습니다. Real-Time CDP B2B Edition에 대해 승인된 소스 중 하나를 사용하여 데이터를 수집할 수도 있습니다.
 
 >[!NOTE]
 > 
@@ -84,7 +84,7 @@ Marketo Engage 소스 커넥터는 모든 데이터 필드를 새로 만든 스�
 
 >[!NOTE]
 > 
->데이터를 평가할 세그먼트를 만드는 방법에 대한 지침은 [세그먼트 빌더 UI 안내서](../segmentation/ui/segment-builder.md). 구체적인 B2B 세그멘테이션 사용 사례는 다음을 참조하십시오. [실시간 CDP B2B Edition에 대한 세그멘테이션 개요](./segmentation/b2b.md).
+>데이터를 평가할 세그먼트를 만드는 방법에 대한 지침은 [세그먼트 빌더 UI 안내서](../segmentation/ui/segment-builder.md). 구체적인 B2B 세그멘테이션 사용 사례는 다음을 참조하십시오. [Real-Time CDP B2B Edition에 대한 세그멘테이션 개요](./segmentation/b2b.md).
 
 세그먼트 빌더 를 사용하면 실시간 고객 프로필 데이터에서 마케팅 가능한 대상을 만들고 정의한 속성, 이벤트 및 기존 대상의 조합을 기반으로 예상 대상의 예측을 볼 수 있습니다.
 
@@ -104,4 +104,4 @@ Marketo Engage 소스 커넥터는 모든 데이터 필드를 새로 만든 스�
 
 ## 다음 단계
 
-이 자습서를 따라 실시간 CDP B2B Edition에서 사용하는 다양한 Adobe Experience Platform 서비스를 성공적으로 활용했습니다. 그 결과, 다양한 채널에서 참여할 수 있는 실행 가능한 대상으로 B2B 데이터를 수집, 세그먼트화, 평가 및 내보내는 방법을 학습했습니다.
+이 자습서를 따라 Real-Time CDP B2B Edition에서 사용하는 다양한 Adobe Experience Platform 서비스를 성공적으로 활용했습니다. 그 결과, 다양한 채널에서 참여할 수 있는 실행 가능한 대상으로 B2B 데이터를 수집, 세그먼트화, 평가 및 내보내는 방법을 학습했습니다.

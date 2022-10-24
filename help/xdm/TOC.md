@@ -4,7 +4,7 @@ user-guide-title: 경험 데이터 모델(XDM) 시스템 도움말
 breadcrumb-title: 경험 데이터 모델(XDM) 안내서
 user-guide-description: 경험 데이터 모델(XDM) 클래스와 스키마 필드 그룹을 사용하여 경험 데이터를 표준화합니다.
 feature: Schemas
-source-git-commit: e476574e35ea18a50749009ffd1b4182941cc496
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '503'
 ht-degree: 16%
@@ -195,7 +195,7 @@ ht-degree: 16%
    * [XDM 필드 사용 안 함](tutorials/field-deprecation.md)
    * [UI에서 스키마 관계 정의](tutorials/relationship-ui.md)
    * [API에서 스키마 관계 정의](tutorials/relationship-api.md)
-   * [실시간 CDP B2B Edition에서 스키마 관계 정의](tutorials/relationship-b2b.md)
+   * [Real-Time CDP B2B Edition에서 스키마 관계 정의](tutorials/relationship-b2b.md)
    * [스키마에 대한 데이터 사용 레이블 관리](tutorials/labels.md)
    * [임시 스키마 만들기](tutorials/ad-hoc.md)
 * [문제 해결 안내서](troubleshooting-guide.md)

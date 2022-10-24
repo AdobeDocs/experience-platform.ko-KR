@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: November 18, 2019
 author: crhoades, ens28527
 exl-id: 2c417c56-cc61-4788-b248-d98ea6cf89f0
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '1887'
 ht-degree: 2%
@@ -17,7 +17,7 @@ ht-degree: 2%
 **릴리스 날짜: 2019년 11월 18일**
 
 Adobe Experience Platform의 새로운 기능:
-* [[!DNL Real-time Customer Data Platform]](#rtcdp)
+* [[!DNL Real-Time Customer Data Platform]](#rtcdp)
 * [[!DNL Destinations]](#destinations)
 * [[!DNL Sources]](#sources)
 
@@ -27,15 +27,15 @@ Adobe Experience Platform의 새로운 기능:
 * [[!DNL Real-time Customer Profile]](#profile)
 * [[!DNL Segmentation Service]](#segmentation)
 
-## [!DNL Real-time Customer Data Platform] {#rtcdp}
+## [!DNL Real-Time Customer Data Platform] {#rtcdp}
 
-Adobe Experience Platform에 구축된 Real-time Customer Data Platform(실시간 CDP)는 기업이 알려진 데이터와 알 수 없는 데이터를 결합하여 고객 여정 전체에서 지능적인 의사 결정을 통해 고객 프로필을 활성화할 수 있도록 지원합니다. 실시간 CDP는 여러 엔터프라이즈 데이터 소스를 결합하여 실시간으로 통합 프로필을 생성하며 이를 통해 모든 채널 및 장치에서 개인화된 고객 경험을 일대일로 제공할 수 있습니다.
+Adobe Experience Platform에 구축된 Real-time Customer Data Platform(Real-Time CDP)은 기업이 알려진 데이터와 알 수 없는 데이터를 결합하여 고객 여정 전체에서 지능형 의사 결정을 통해 고객 프로필을 활성화할 수 있도록 지원합니다. Real-Time CDP은 여러 엔터프라이즈 데이터 소스를 결합하여 실시간으로 통합 프로필을 만듭니다. 이 통합을 통해 모든 채널 및 장치에서 개인화된 고객 경험을 일대일로 제공할 수 있습니다.
 
-[!DNL Real-time Customer Data Platform] 에는 엄격한 데이터 거버넌스 정책을 적용할 수 있을 뿐만 아니라 프로필을 빌드하고 대상을 정의할 수 있도록 데이터 거버넌스, ID 관리, 고급 세분화 및 데이터 과학을 위한 도구가 포함되어 있습니다.
+[!DNL Real-Time Customer Data Platform] 에는 엄격한 데이터 거버넌스 정책을 적용할 수 있을 뿐만 아니라 프로필을 빌드하고 대상을 정의할 수 있도록 데이터 거버넌스, ID 관리, 고급 세분화 및 데이터 과학을 위한 도구가 포함되어 있습니다.
 
 Adobe은 Adobe Experience Cloud와의 기본 통합은 물론 파트너의 대규모 에코시스템에 연결되므로 이러한 대상을 원활하게 활성화하고 온사이트 또는 인앱 개인화에서 이메일, 유료 미디어, 콜 센터, 연결된 장치 등에 이르기까지 모든 채널에서 훌륭한 고객 경험을 제공할 수 있습니다.
 
-실시간 CDP를 사용하면 다음 작업을 수행할 수 있습니다.
+Real-Time CDP을 사용하면 다음 작업을 수행할 수 있습니다.
 
 * 전사적으로 고객 데이터를 스트리밍하여 고객의 전체 상황을 파악할 수 있습니다.
 * 알려진 식별자와 알 수 없는 식별자에 대한 신뢰할 수 있는 거버넌스 및 개인 정보 제어를 사용하여 프로필을 관리합니다.
@@ -48,17 +48,17 @@ Adobe은 Adobe Experience Cloud와의 기본 통합은 물론 파트너의 대�
 
 | 기능 | 설명 |
 |---|---|
-| 대상 | Adobe이 지원하는 대상 플랫폼과의 사전 구축된 통합 [!DNL Real-time Customer Data Platform] 데이터를 해당 파트너에게 원활하게 제공할 수 있습니다. 자세한 내용은 [대상](#destinations) 아래 정보를 참조하십시오. |
-| 홈 페이지 지표 대시보드 | Real-time Customer Data Platform(실시간 CDP) 홈 페이지에는 프로필 및 세그먼트에 대한 정보를 보여주는 지표 대시보드가 포함되어 있습니다. 홈 페이지에는 학습 자료에 대한 링크도 포함되어 있습니다. 의 섹션을 참조하십시오. [Real-time Customer Data Platform 지표](#real-time-customer-data-platform-metrics) 아래의 제품에서 사용할 수 있습니다. |
+| 대상 | Adobe이 지원하는 대상 플랫폼과의 사전 구축된 통합 [!DNL Real-Time Customer Data Platform] 데이터를 해당 파트너에게 원활하게 제공할 수 있습니다. 자세한 내용은 [대상](#destinations) 아래 정보를 참조하십시오. |
+| 홈 페이지 지표 대시보드 | Real-time Customer Data Platform(Real-Time CDP) 홈 페이지에는 프로필 및 세그먼트에 대한 정보를 보여주는 지표 대시보드가 포함되어 있습니다. 홈 페이지에는 학습 자료에 대한 링크도 포함되어 있습니다. 의 섹션을 참조하십시오. [Real-time Customer Data Platform 지표](#real-time-customer-data-platform-metrics) 아래의 제품에서 사용할 수 있습니다. |
 | 소스 | Adobe 솔루션, 클라우드 기반 스토리지, 타사 소프트웨어 및 CRM과 같은 다양한 소스에서 데이터를 수집할 수 있습니다. 자세한 내용은 [소스](#sources) 자세한 내용은 아래 섹션을 참조하십시오. |
 
-**[!DNL Real-time Customer Data Platform]지표**
+**[!DNL Real-Time Customer Data Platform]지표**
 
-실시간 CDP에 로그인할 때 지표 대시보드가 포함된 Real-time Customer Data Platform(실시간 CDP) 홈 페이지가 나타납니다.
+지표 대시보드가 포함된 Real-time Customer Data Platform(Real-Time CDP) 홈 페이지는 Real-Time CDP에 로그인할 때 나타납니다.
 
-홈 페이지는 지표 카드가 표시되는 위치 중 하나뿐입니다. 실시간 CDP는 경험 전체에서 지표 카드를 제공합니다. 이러한 지표는 시스템의 데이터, 프로필 및 세그먼트 대상에 대해 알려줍니다.
+홈 페이지는 지표 카드가 표시되는 위치 중 하나뿐입니다. Real-Time CDP은 경험 전체에서 지표 카드를 제공합니다. 이러한 지표는 시스템의 데이터, 프로필 및 세그먼트 대상에 대해 알려줍니다.
 
-실시간 CDP에 로그인할 때 시스템에 데이터가 없으면 홈 페이지의 대시보드가 나타나지 않습니다. 이 경우 홈 페이지는 처음으로 사용자 경험을 위한 학습 자료를 제공합니다. 데이터가 수집되면 대시보드가 자동으로 업데이트되어 해당 데이터에 대한 정보를 표시합니다.
+Real-Time CDP에 로그인할 때 시스템에 데이터가 없으면 홈 페이지의 대시보드가 나타나지 않습니다. 이 경우 홈 페이지는 처음으로 사용자 경험을 위한 학습 자료를 제공합니다. 데이터가 수집되면 대시보드가 자동으로 업데이트되어 해당 데이터에 대한 정보를 표시합니다.
 
 자세한 내용은 [Real-time Customer Data Platform 지표 개요](../../rtcdp/home-page-dashboards.md)
 

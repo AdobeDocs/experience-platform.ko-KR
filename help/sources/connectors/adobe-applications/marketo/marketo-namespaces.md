@@ -5,9 +5,9 @@ title: B2B 네임스페이스 및 스키마
 topic-legacy: overview
 description: 이 문서에서는 B2B 소스 커넥터를 만들 때 필요한 사용자 지정 네임스페이스에 대한 개요를 제공합니다.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: c6ba91f6aa64f02ac3571bb960d4005fdade3d57
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '1706'
+source-wordcount: '1707'
 ht-degree: 4%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 4%
 
 >[!IMPORTANT]
 >
->액세스 권한이 있어야 합니다. [Real-time Customer Data Platform B2B 에디션](../../../../rtcdp/b2b-overview.md) B2B 스키마가 [실시간 고객 프로필](../../../../profile/home.md).
+>액세스 권한이 있어야 합니다. [Adobe Real-time Customer Data Platform B2B 에디션](../../../../rtcdp/b2b-overview.md) B2B 스키마가 [실시간 고객 프로필](../../../../profile/home.md).
 
 ## B2B 네임스페이스 및 스키마 자동 생성 유틸리티를 설정합니다
 

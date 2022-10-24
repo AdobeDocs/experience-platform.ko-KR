@@ -1,11 +1,11 @@
 ---
 keywords: rtcdp 프로필;프로필 rtcdp;rtcdp ID;rtcdp 병합 정책;실시간 고객 프로필
-title: 실시간 CDP에서 실시간 고객 프로필 이해하기
-description: Real-time Customer Data Platform을 통해 실시간 고객 프로필을 사용하여 고객에게 적절하고 일관된 적절한 경험을 제공하는 방법을 알아봅니다.
+title: Real-Time CDP의 실시간 고객 프로필 이해
+description: Adobe Real-time Customer Data Platform을 통해 실시간 고객 프로필을 사용하여 고객에게 적절하고 일관된 적절한 경험을 제공하는 방법을 알아봅니다.
 exl-id: de70948c-ffc1-49d3-a57c-25ad415752ff
-source-git-commit: 0aca080d9f2c39b8f0a1197e1048d1a77d5e7bc1
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '456'
+source-wordcount: '457'
 ht-degree: 0%
 
 ---
@@ -14,15 +14,15 @@ ht-degree: 0%
 
 실시간 고객 프로필을 사용하면 온라인, 오프라인, CRM 및 타사 데이터를 포함하여 여러 채널의 데이터를 결합하여 각 개별 고객을 전체적으로 볼 수 있습니다. 각 개별 고객 프로필을 사용하면 서로 다른 고객 데이터를 모든 고객 상호 작용에 대해 실행 가능하고 타임스탬프가 지정된 계정을 제공하는 통합 보기에 통합할 수 있습니다.
 
-## 의 프로필 [!DNL Real-time Customer Data Platform]
+## 의 프로필 [!DNL Real-Time Customer Data Platform]
 
-[!DNL Real-time Customer Data Platform] 은 고객이 브랜드와 상호 작용하는 위치와 시기에 관계없이 고객을 위해 체계적이고 일관된 경험을 제공할 수 있도록 해줍니다. 개인화된 이러한 경험을 통해 적시에 연관성 있고 전달할 수 있는 것은 사소한 이점이 없지만 Adobe Experience Platform의 일부인 실시간 고객 프로필을 사용하여 달성할 수 있습니다.
+[!DNL Adobe Real-Time Customer Data Platform] 은 고객이 브랜드와 상호 작용하는 위치와 시기에 관계없이 고객을 위해 체계적이고 일관된 경험을 제공할 수 있도록 해줍니다. 개인화된 이러한 경험을 통해 적시에 연관성 있고 전달할 수 있는 것은 사소한 이점이 없지만 Adobe Experience Platform의 일부인 실시간 고객 프로필을 사용하여 달성할 수 있습니다.
 
-실시간 CDP는 Experience Platform을 기반으로 구축되었으며 프로필 생성을 비롯한 많은 핵심 Experience Platform 기능과 기능을 사용합니다. 개별 고객의 이러한 집계된 보기는 고객 데이터를 저장하는 데 사용하는 다양한 시스템과 많은 마케팅 채널에서 가져온 데이터를 결합합니다.
+Real-Time CDP은 Experience Platform을 기반으로 구축되었으며 프로필 만들기를 포함한 많은 핵심 Experience Platform 기능과 기능을 사용합니다. 개별 고객의 이러한 집계된 보기는 고객 데이터를 저장하는 데 사용하는 다양한 시스템과 많은 마케팅 채널에서 가져온 데이터를 결합합니다.
 
-## 실시간 CDP, B2B Edition을 위한 프로필 개선 사항
+## Real-Time CDP, B2B Edition에 대한 프로필 개선 사항
 
-실시간 CDP에서 지원하는 프로필 기능 외에도 실시간 CDP, B2B Edition을 사용하여 계정 및 기회와 같은 개인 관련 중요한 정보를 검색할 수 있습니다. 실시간 CDP에 대한 프로필 개선 사항에 대해 자세히 알아보려면 [프로필 찾아보기 안내서](profile-browse.md).
+Real-Time CDP에서 지원하는 프로필 기능 외에도 Real-Time CDP, B2B Edition을 사용하여 계정 및 기회와 같은 개인과 연관된 중요한 정보를 찾아볼 수 있습니다. Real-Time CDP, B2B Edition의 프로필 개선 사항에 대해 자세히 알아보려면 [프로필 찾아보기 안내서](profile-browse.md).
 
 ## ID 및 ID 네임스페이스
 

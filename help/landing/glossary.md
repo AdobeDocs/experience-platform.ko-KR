@@ -5,9 +5,9 @@ title: Adobe Experience Platform 용어
 topic-legacy: getting started
 description: Experience Platform의 중요한 용어에 대한 용어집입니다.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: c0f01efa224bffb5b435e2f247e793edfbc576b9
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '7428'
+source-wordcount: '7436'
 ht-degree: 0%
 
 ---
@@ -298,7 +298,7 @@ ht-degree: 0%
 
 **입력 기능**: 입력 피쳐는 피쳐 매핑에 지정되며 기계 학습 모델에서 예측을 수행하는 데 사용됩니다.
 
-**[!DNL Intelligent Services]**: [!DNL Intelligent Services] 예 [!DNL Attribution AI] 및 [!DNL Customer AI] Experience Platform(또는 Real-time Customer Data Platform과 같은 플랫폼 위에 구축된 애플리케이션)가 실행 및 작동해야 하는 머신 러닝, 인공 지능 기반 모델입니다.
+**[!DNL Intelligent Services]**: [!DNL Intelligent Services] 예 [!DNL Attribution AI] 및 [!DNL Customer AI] Experience Platform(또는 Adobe Real-time Customer Data Platform과 같은 플랫폼 위에 구축된 애플리케이션)가 실행 및 작동해야 하는 머신 러닝, 인공 지능 기반 모델입니다.
 
 **관심사 기반 타깃팅 또는 개인화**: 다음 세 가지 조건이 충족되면 개인화라고도 하는 관심 기반 타깃팅이 발생합니다.
 
@@ -414,7 +414,7 @@ ht-degree: 0%
 
 ## R
 
-**Real-time Customer Data Platform**: [!DNL Real-time Customer Data Platform] 디지털 고객 여정 전반에서 간소화된 통합, 지능적인 세그먼테이션 및 실시간 활성화를 통해 신뢰할 수 있는 고객 프로필을 만들기 위해 알려진 알 수 없는 고객 데이터를 제공합니다.
+**Real-time Customer Data Platform**: Adobe Real-time Customer Data Platform(Real-Time CDP)은 디지털 고객 여정 전반에서 간소화된 통합, 지능적인 세그먼테이션 및 실시간 활성화를 통해 신뢰할 수 있는 고객 프로필을 만들기 위해 알려진 알 수 없는 고객 데이터를 제공합니다.
 
 **실시간 고객 프로필**: 실시간 고객 프로필(경우에 따라 프로필)은 온라인, 오프라인, CRM 및 타사 등 여러 채널의 데이터를 결합하여 각 개별 고객을 전체적으로 확인할 수 있도록 합니다. 프로필 을 사용하면 고객 데이터를 모든 고객 상호 작용을 실행 가능하고 타임스탬프가 지정된 계정을 제공하는 개별 프로필에 통합할 수 있습니다.
 

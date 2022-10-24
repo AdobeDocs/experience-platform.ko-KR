@@ -5,9 +5,9 @@ title: Adobe Experience Platform의 동의 처리
 topic-legacy: getting started
 description: Adobe 2.0 표준을 사용하여 Adobe Experience Platform에서 고객 동의 신호를 처리하는 방법을 알아봅니다.
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
-source-git-commit: f9ccce8943e2aaf65cd3e0ffe2b974a668bba9b7
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '1566'
+source-wordcount: '1567'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ Adobe Experience Platform을 사용하면 고객으로부터 수집한 동의 �
 
 >[!NOTE]
 >
->이 문서는 Adobe 표준을 사용한 동의 데이터 처리에 중점을 둡니다. IAB TCF(Transparency and Consent Framework) 2.0을 준수하는 동의 데이터를 처리하는 경우 안내서를 참조하십시오 [Real-time Customer Data Platform의 TCF 2.0 지원](../iab/overview.md).
+>이 문서는 Adobe 표준을 사용한 동의 데이터 처리에 중점을 둡니다. IAB TCF(Transparency and Consent Framework) 2.0을 준수하는 동의 데이터를 처리하는 경우 안내서를 참조하십시오 [Adobe Real-time Customer Data Platform의 TCF 2.0 지원](../iab/overview.md).
 
 ## 전제 조건
 

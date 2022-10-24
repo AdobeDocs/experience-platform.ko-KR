@@ -2,9 +2,9 @@
 title: 계정 프로필 대시보드 안내서
 description: Adobe Experience Platform은 조직의 B2B 계정 프로필에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: 19d6d3c03e6b3b0f9f82ceeee30816fa054261a3
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '1050'
+source-wordcount: '1052'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Adobe Experience Platform UI(사용자 인터페이스)는 일별 스냅샷 중�
 
 ## 시작하기
 
-귀하는 [Real-time Customer Data Platform B2B 에디션](../../rtcdp/b2b-overview.md) B2B에 접근하기 위해 [!UICONTROL 계정 프로필] 대시보드 .
+귀하는 [Adobe Real-time Customer Data Platform B2B 에디션](../../rtcdp/b2b-overview.md) B2B에 접근하기 위해 [!UICONTROL 계정 프로필] 대시보드 .
 
 ## 계정 프로필 데이터
 
@@ -45,7 +45,7 @@ Adobe Experience Platform UI(사용자 인터페이스)는 일별 스냅샷 중�
 
 ![결과가 표시되고 프로필 ID가 강조 표시된 계정 프로필 찾아보기 탭이 있습니다.](../images/account-profiles/account-profiles-browse-tab.png)
 
-에 표시되는 계정 프로필 정보 [!UICONTROL 세부 사항] 탭이 여러 프로필 조각에서 병합되어 개별 계정의 단일 보기를 형성했습니다. 다음 문서를 참조하십시오. [Real-time Customer Data Platform에서 계정 프로필 찾아보기](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles) 플랫폼 UI의 계정 프로필 보기 기능에 대해 자세히 알아보십시오.
+에 표시되는 계정 프로필 정보 [!UICONTROL 세부 사항] 탭이 여러 프로필 조각에서 병합되어 개별 계정의 단일 보기를 형성했습니다. 다음 문서를 참조하십시오. [Adobe Real-time Customer Data Platform에서 계정 프로필 찾아보기](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles) 플랫폼 UI의 계정 프로필 보기 기능에 대해 자세히 알아보십시오.
 
 ## 다음 [!UICONTROL 계정 프로필] [!UICONTROL 개요] {#overview}
 

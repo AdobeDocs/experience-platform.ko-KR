@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: UI에서 Adobe Analytics 소스 연결을 만들어 소비자 데이터를 Adobe Experience Platform으로 가져오는 방법을 알아봅니다.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 04a8ca33e712c00d687432ddf9ad82f5d1644db2
+source-git-commit: e67b3a6f9f57a3971a5bfa755db3b1043bebc96b
 workflow-type: tm+mt
-source-wordcount: '2302'
+source-wordcount: '2301'
 ht-degree: 2%
 
 ---
@@ -58,7 +58,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->서로 다른 의미를 갖는 두 사용자 지정 속성(eVar, 목록 및 prop)과 같은 데이터 충돌이 없는 경우에만 실시간 고객 데이터 프로필에 대해 여러 보고서 세트의 데이터를 활성화할 수 있습니다.
+>서로 다른 의미를 갖는 두 사용자 지정 속성(eVar, 목록 및 prop)과 같은 데이터 충돌이 없는 경우에만 실시간 고객 프로필에 대해 여러 보고서 세트의 데이터를 활성화할 수 있습니다.
 
 을(를) 만들려면 [!DNL Analytics] 소스 연결에서 보고서 세트를 선택한 다음 **[!UICONTROL 다음]** 계속 진행합니다.
 

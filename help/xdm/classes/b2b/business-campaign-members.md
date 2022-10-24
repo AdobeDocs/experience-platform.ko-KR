@@ -2,9 +2,9 @@
 title: XDM 비즈니스 캠페인 구성원 클래스
 description: 이 문서에서는 XDM(Experience Data Model)의 XDM 비즈니스 캠페인 구성원 클래스에 대한 개요를 제공합니다.
 exl-id: a39eac7d-46ee-4e9c-a1c0-4dbb63f2c813
-source-git-commit: 0084492ed467c5996a94c5c55a79c9faf8f5046e
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '248'
+source-wordcount: '249'
 ht-degree: 2%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->이 클래스는 [Real-time Customer Data Platform B2B 에디션](../../../rtcdp/b2b-overview.md). 이 클래스가 참여하려면 실시간 CDP B2B Edition에 액세스할 수 있어야 합니다 [실시간 고객 프로필](../../../profile/home.md).
+>이 클래스는 [Adobe Real-time Customer Data Platform B2B 에디션](../../../rtcdp/b2b-overview.md). 이 클래스가 참여하려면 Real-Time CDP B2B Edition에 액세스할 수 있어야 합니다 [실시간 고객 프로필](../../../profile/home.md).
 
 [!UICONTROL XDM 비즈니스 캠페인 구성원] 는 비즈니스 캠페인과 연관된 연락처 또는 리드를 설명하는 표준 XDM(Experience Data Model) 클래스입니다.
 
@@ -29,6 +29,6 @@ ht-degree: 2%
 
 {style=&quot;table-layout:auto&quot;}
 
-이 클래스가 다른 B2B 클래스와 개념적으로 관련이 있는 방법과 Adobe Experience Platform UI에서 이러한 관계를 설정할 수 있는 방법에 대해 알아보려면 다음 안내서를 참조하십시오. [실시간 CDP B2B Edition의 스키마 관계](../../tutorials/relationship-b2b.md)
+이 클래스가 다른 B2B 클래스와 개념적으로 관련이 있는 방법과 Adobe Experience Platform UI에서 이러한 관계를 설정할 수 있는 방법에 대해 알아보려면 다음 안내서를 참조하십시오. [Real-Time CDP B2B Edition의 스키마 관계](../../tutorials/relationship-b2b.md)
 
 이 클래스와 호환되는 추가 필드에 대해서는 필드 그룹 참조를 참조하십시오 [[!UICONTROL XDM 비즈니스 캠페인 구성원 세부 정보]](../../field-groups/b2b-campaign-members/details.md).

@@ -1,15 +1,16 @@
 ---
-title: 실시간 CDP B2B에서 예측 리드 및 계정 점수 책정
+title: Real-Time CDP B2B의 예측 리드 및 계정 점수 책정
 type: Documentation
 description: Experience Platform CDP B2B의 예측 리드 및 계정 점수 책정 기능에 대한 개요 및 추가 정보입니다.
-source-git-commit: 5ac8e099a6de563371f9a53a8b4816e6cf4d1953
+exl-id: d3afbabb-005d-4537-831a-857c88043759
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '858'
 ht-degree: 2%
 
 ---
 
-# 실시간 CDP B2B에서 예측 리드 및 계정 점수 책정
+# Real-Time CDP B2B의 예측 리드 및 계정 점수 책정
 
 B2B 마케터는 마케팅 단계 맨 위에서 여러 어려움에 직면해 있습니다. 효과를 거두기 위해 B2B 마케터는 많은 수의 사람들이 가치가 높은 타겟에 집중할 수 있도록 자동화된 방법을 필요로 합니다. 마케팅 전환뿐만 아니라 최종 판매 결과와 자격을 맞춰야 합니다.
 

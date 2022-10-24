@@ -2,9 +2,9 @@
 title: XDM 비즈니스 계정 클래스
 description: 이 문서에서는 XDM(Experience Data Model)의 XDM 비즈니스 계정 클래스에 대한 개요를 제공합니다.
 exl-id: abe4c919-a680-4aad-918e-6e56cae8bd4d
-source-git-commit: 50e5fe8573d828f88867ed33fe86e974c85de60a
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '263'
+source-wordcount: '264'
 ht-degree: 2%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->이 클래스는 [Real-time Customer Data Platform B2B 에디션](../../../rtcdp/b2b-overview.md). 이 클래스가 참여하려면 실시간 CDP B2B Edition에 액세스할 수 있어야 합니다 [실시간 고객 프로필](../../../profile/home.md).
+>이 클래스는 [Adobe Real-time Customer Data Platform B2B 에디션](../../../rtcdp/b2b-overview.md). 이 클래스가 참여하려면 Real-Time CDP B2B Edition에 액세스할 수 있어야 합니다 [실시간 고객 프로필](../../../profile/home.md).
 
 [!UICONTROL XDM 비즈니스 계정] 는 비즈니스 계정의 최소 필수 속성을 캡처하는 표준 XDM(Experience Data Model) 클래스입니다.
 
@@ -28,4 +28,4 @@ ht-degree: 2%
 
 {style=&quot;table-layout:auto&quot;}
 
-다음 안내서를 참조하십시오. [실시간 CDP B2B Edition의 스키마 관계](../../tutorials/relationship-b2b.md) 이 클래스가 다른 B2B 클래스와 개념적으로 관련이 있는 방법과 Adobe Experience Platform UI에서 이러한 관계를 설정할 수 있는 방법을 알아봅니다.
+다음 안내서를 참조하십시오. [Real-Time CDP B2B Edition의 스키마 관계](../../tutorials/relationship-b2b.md) 이 클래스가 다른 B2B 클래스와 개념적으로 관련이 있는 방법과 Adobe Experience Platform UI에서 이러한 관계를 설정할 수 있는 방법을 알아봅니다.

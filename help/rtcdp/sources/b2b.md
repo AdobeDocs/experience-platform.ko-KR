@@ -1,10 +1,10 @@
 ---
 title: Real-time Customer Data Platform B2B Edition의 소스
-description: Real-time Customer Data Platform B2B Edition에서 소스의 역할에 대한 개요입니다.
+description: Adobe Real-time Customer Data Platform B2B Edition에서 소스의 역할에 대한 개요입니다.
 exl-id: eeea4b2e-67c5-4491-9b8e-4b8987e44777
-source-git-commit: 8b8e08adb5ff3498169c1702680ea44f3bebf5c5
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '247'
+source-wordcount: '250'
 ht-degree: 0%
 
 ---
@@ -13,9 +13,9 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Real-time Customer Data Platform B2B Edition을 사용하지 않는 경우 다음을 참조하십시오. [소스 개요](./sources-overview.md) 을 가리키도록 업데이트하는 것이 좋습니다.
+>Adobe Real-time Customer Data Platform B2B Edition을 사용하지 않는 경우 다음을 참조하십시오. [소스 개요](./sources-overview.md) 을 가리키도록 업데이트하는 것이 좋습니다.
 
-Real-time Customer Data Platform B2B Edition을 사용하면 다음을 포함한 다양한 소스를 통해 B2B 데이터를 가져올 수 있습니다 [[!DNL Marketo Engage]](../../sources/connectors/adobe-applications/marketo/marketo.md) 소스 커넥터, Salesforce, Amazon S3 및 ADLS를 사용할 수 있습니다. 이러한 소스 범위는 서비스를 사용하여 들어오는 데이터를 구성, 레이블 지정 및 향상시키는 기능을 제공합니다.
+Adobe Real-time Customer Data Platform B2B Edition을 사용하면 다음을 포함한 다양한 소스를 통해 B2B 데이터를 가져올 수 있습니다 [[!DNL Marketo Engage]](../../sources/connectors/adobe-applications/marketo/marketo.md) 소스 커넥터, Salesforce, Amazon S3 및 ADLS를 사용할 수 있습니다. 이러한 소스 범위는 서비스를 사용하여 들어오는 데이터를 구성, 레이블 지정 및 향상시키는 기능을 제공합니다.
 
 소스가 B2B 워크플로우에 맞는 방식을 이해하려면 다음을 참조하십시오. [엔드 투 엔드 자습서](../b2b-tutorial.md#ingest-your-data-into-experience-platform).
 

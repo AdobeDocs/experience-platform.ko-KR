@@ -1,20 +1,20 @@
 ---
 keywords: 세분화; 세분화 rtcdp;실시간 고객 데이터 플랫폼 세그멘테이션
 title: Real-time Customer Data Platform의 세그멘테이션 서비스
-description: 실시간 CDP는 Adobe Experience Platform을 기반으로 구축되었으며 많은 Experience Platform 서비스 및 기능을 사용합니다. 세그멘테이션 서비스를 사용하여 고객을 유사한 트레이트를 가진 작은 그룹으로 분할하여 맞춤 마케팅을 제공할 수 있습니다.
+description: Adobe Real-Time Customer Data Platform은 Adobe Experience Platform을 기반으로 구축되었으며 많은 Experience Platform 서비스 및 기능을 사용합니다. 세그멘테이션 서비스를 사용하여 고객을 유사한 트레이트를 가진 작은 그룹으로 분할하여 맞춤 마케팅을 제공할 수 있습니다.
 exl-id: 140667c0-e288-40c4-8c45-c275e348b84a
-source-git-commit: ad0d38cbd249642d582a807c5679065827f57717
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '537'
+source-wordcount: '540'
 ht-degree: 4%
 
 ---
 
-# [!DNL Segmentation Service] in [!DNL Real-time Customer Data Platform]
+# [!DNL Segmentation Service] in [!DNL Real-Time Customer Data Platform]
 
-[!DNL Real-time Customer Data Platform] (실시간 CDP)를 사용하면 여러 소스에서 데이터를 가져와서 고객을 위해 통합적이고 일관된 경험을 제공할 수 있습니다. 관련 개인화된 마케팅 캠페인을 제공하는 것은 [!DNL Segmentation Service]Adobe Experience Platform에 속해 있어야 합니다.
+[!DNL Adobe Real-Time Customer Data Platform] (Real-Time CDP)을 사용하면 여러 소스에서 데이터를 가져와 고객에게 통일되고 일관된 경험을 제공할 수 있습니다. 관련 개인화된 마케팅 캠페인을 제공하는 것은 [!DNL Segmentation Service]Adobe Experience Platform에 속해 있어야 합니다.
 
-실시간 CDP는 Adobe Experience Platform을 기반으로 구축되었으며 [!DNL Experience Platform] 서비스 및 기능. 사용 [!DNL Segmentation Service]를 사용하면 고객을 유사한 트레이트로 더 작은 그룹으로 분할하여 맞춤 마케팅을 제공할 수 있습니다.
+Real-Time CDP은 Adobe Experience Platform을 기반으로 구축되었으며, [!DNL Experience Platform] 서비스 및 기능. 사용 [!DNL Segmentation Service]를 사용하면 고객을 유사한 트레이트로 더 작은 그룹으로 분할하여 맞춤 마케팅을 제공할 수 있습니다.
 
 ## 세그먼테이션
 
@@ -28,7 +28,7 @@ ht-degree: 4%
 
 Real-time Customer Data Platform에 포함된 고객 AI는 개별 수준에서 고객 예측을 생성할 수 있는 기능을 제공합니다.
 
-영향력 있는 요소를 통해 고객 AI는 고객이 무엇을 할 수 있고 왜 하는지 알려 줄 수 있습니다. 또한 Customer AI 예측 및 인사이트를 통해 가장 적합한 오퍼 및 메시지를 제공하여 고객 경험을 개인화할 수 있습니다. 고객 AI는 다음을 지원할 수 있습니다.
+영향력 있는 요소를 통해 Customer AI는 고객이 무엇을 할 수 있고 왜 하는지 알려 줄 수 있습니다. 또한 Customer AI 예측 및 인사이트를 통해 가장 적합한 오퍼 및 메시지를 제공하여 고객 경험을 개인화할 수 있습니다. 고객 AI는 다음을 지원할 수 있습니다.
 
 * 더 강력한 세분화 및 타겟팅을 위해 정확도가 높은 고객 성향 모델을 제공합니다.
 * 특정 고객 행동에 영향을 미치는 요소와 가능성을 파악합니다.
@@ -52,4 +52,4 @@ Customer AI에 대해 자세히 알아보려면 [Customer AI 개요](../../intel
 
 ## 다음 단계
 
-이제 이 개요를 읽고 실시간 CDP가 어떻게 활용하는지를 이해해야 합니다 [!DNL Segmentation Service] 마케팅 캠페인의 사용자 지정 및 개인화를 개선하기 위해 에 대한 자세한 정보 [!DNL Segmentation Service]을(를) 참조하십시오. [세그먼테이션 설명서](../../segmentation/home.md).
+이 개요를 읽고 나면 이제 Real-Time CDP이 어떻게을 활용하는지를 이해해야 합니다 [!DNL Segmentation Service] 마케팅 캠페인의 사용자 지정 및 개인화를 개선하기 위해 에 대한 자세한 정보 [!DNL Segmentation Service]을(를) 참조하십시오. [세그먼테이션 설명서](../../segmentation/home.md).

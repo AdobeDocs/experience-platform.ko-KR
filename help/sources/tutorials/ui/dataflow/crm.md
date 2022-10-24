@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: 데이터 흐름은 소스에서 플랫폼 데이터 집합으로 데이터를 검색하고 수집하는 예약된 작업입니다. 이 자습서에서는 플랫폼 UI를 사용하여 CRM 소스용 데이터 흐름을 만드는 방법에 대해 설명합니다.
 exl-id: e14eafa7-6594-48e6-ab7a-f6c928d1e5fb
-source-git-commit: a9a443eda060606be4394dfc2e2707fe18618160
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '1424'
+source-wordcount: '1425'
 ht-degree: 0%
 
 ---
@@ -89,7 +89,7 @@ CRM 소스 계정을 만든 후 **[!UICONTROL 데이터 추가]** CRM 계정의 
 
 >[!NOTE]
 >
->사용 중인 경우 [!DNL Salesforce] Real-time Customer Data Platform B2B Edition의 일부로, [[!DNL Salesforce] 필드 매핑 문서](../../../connectors/adobe-applications/mapping/salesforce.md) 매핑에 대한 지침 [!DNL Salesforce] 소스 필드를 해당 XDM 대상 필드에 추가합니다.
+>사용 중인 경우 [!DNL Salesforce] Adobe Real-time Customer Data Platform B2B Edition의 일부로, [[!DNL Salesforce] 필드 매핑 문서](../../../connectors/adobe-applications/mapping/salesforce.md) 매핑에 대한 지침 [!DNL Salesforce] 소스 필드를 해당 XDM 대상 필드에 추가합니다.
 
 소스 데이터가 매핑되면 을 선택합니다 **[!UICONTROL 다음]**.
 
