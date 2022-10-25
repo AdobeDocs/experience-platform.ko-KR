@@ -1,15 +1,19 @@
 ---
 keywords: Experience Platform;홈;인기 있는 주제
-title: UI에서 Adobe Workfront 소스 연결 만들기
+title: (베타) UI에서 Adobe Workfront 소스 연결 만들기
 description: 이 자습서에서는 사용자 인터페이스를 사용하여 Workfront 데이터를 Adobe Experience Platform으로 가져오기 위한 Adobe Workfront 소스 연결을 만드는 단계를 제공합니다.
-source-git-commit: 99741a3be4d50d1a812e945483c9ed1577a0a999
+source-git-commit: 1af0863766e29c599e02f2a553d237bc62f455d2
 workflow-type: tm+mt
-source-wordcount: '751'
+source-wordcount: '771'
 ht-degree: 0%
 
 ---
 
-# UI에서 Adobe Workfront 소스 연결 만들기
+# (베타) UI에서 Adobe Workfront 소스 연결 만들기
+
+>[!NOTE]
+>
+>Adobe Workfront 소스가 베타 버전입니다. 자세한 내용은 [소스 개요](../../../../home.md#terms-and-conditions) 베타 레이블이 지정된 소스 사용에 대한 자세한 정보.
 
 이 자습서에서는 사용자 인터페이스를 사용하여 Workfront 데이터를 Adobe Experience Platform으로 가져오기 위한 Adobe Workfront 소스 연결을 만드는 단계를 제공합니다.
 

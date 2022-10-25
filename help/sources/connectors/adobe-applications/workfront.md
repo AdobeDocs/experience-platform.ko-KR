@@ -1,15 +1,19 @@
 ---
 keywords: Experience Platform;홈;인기 있는 주제
-title: Adobe Workfront 소스
+title: (베타) Adobe Workfront 소스
 description: Adobe Workfront은 한 곳에서 전체 작업 수명 주기를 관리하는 데 도움이 되는 마케팅 작업 관리 애플리케이션입니다. Workfront에는 조직에서 작업 흐름을 더 잘 이해하고 최적화하는 데 사용할 수 있는 보고 및 분석 도구가 포함되어 있습니다.
-source-git-commit: 99741a3be4d50d1a812e945483c9ed1577a0a999
+source-git-commit: 1af0863766e29c599e02f2a553d237bc62f455d2
 workflow-type: tm+mt
-source-wordcount: '261'
+source-wordcount: '281'
 ht-degree: 1%
 
 ---
 
-# Adobe Workfront 소스
+# (베타) Adobe Workfront 소스
+
+>[!NOTE]
+>
+>Adobe Workfront 소스가 베타 버전입니다. 자세한 내용은 [소스 개요](../../home.md#terms-and-conditions) 베타 레이블이 지정된 커넥터 사용에 대한 자세한 정보.
 
 Adobe Workfront은 한 곳에서 전체 작업 수명 주기를 관리하는 데 도움이 되는 마케팅 작업 관리 애플리케이션입니다. Workfront에는 조직에서 작업 흐름을 더 잘 이해하고 최적화하는 데 사용할 수 있는 보고 및 분석 도구가 포함되어 있습니다.
 
