@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform 릴리스 노트 - 2022년 10월
 description: Adobe Experience Platform에 대한 2022년 10월 릴리스 노트입니다.
-source-git-commit: e9a7c0561277be21aab1c699a1bc07b793684525
+source-git-commit: 098b4b7a0dcd3ddfcd13f7dd473c4fa6832d23df
 workflow-type: tm+mt
-source-wordcount: '236'
-ht-degree: 8%
+source-wordcount: '609'
+ht-degree: 5%
 
 ---
 
@@ -12,9 +12,51 @@ ht-degree: 8%
 
 **릴리스 날짜: 2022년 10월 26일**
 
+Adobe Experience Platform의 새로운 기능:
+
+- [고객 관리 키](#cmk)
+
 Adobe Experience Platform의 기존 기능 업데이트:
 
+- [데이터 수집](#data-collection)
+- [XDM(경험 데이터 모델)](#xdm)
 - [소스](#sources)
+
+## 고객 관리 키 {#cmk}
+
+Adobe Experience Platform에 저장된 모든 데이터는 시스템 수준 키를 사용하여 나머지 위치에서 암호화됩니다. 플랫폼 위에 구축된 응용 프로그램을 사용하는 경우 이제 자체 암호화 키를 사용하도록 선택할 수 있으므로 데이터 보안을 더욱 강화할 수 있습니다.
+
+다음 사항에 대한 개요를 참조하십시오. [고객 관리 키](../../landing/governance-privacy-security/customer-managed-keys.md) 를 참조하십시오.
+
+## 데이터 수집 {#data-collection}
+
+Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수집하고 Adobe Experience Platform Edge Network로 전송하여 Adobe 또는 비Adobe 대상으로 보강, 변환 및 배포할 수 있는 기술 세트를 제공합니다.
+
+**새로운 기능 또는 업데이트된 기능**
+
+| 기능 | 설명 |
+| --- | --- |
+| 데이터 세트에 대한 중요 데이터 처리 | 이제 데이터 저장소는 여러 플랫폼 기술을 활용하여 HIPAA(Health Insurance Portability and Accountability Act)와 같은 규정에 따라 적용되는 중요한 데이터를 적절하게 처리합니다. 의 섹션을 참조하십시오. [datstreams의 sendstive 데이터 처리](../../edge/datastreams/overview.md#sensitive) 추가 정보. |
+| [!DNL Splunk] 이벤트 전달을 위한 확장 | 이제 데이터를에 보낼 수 있습니다 [!DNL Splunk] 사용 [이벤트 전달](../../tags/ui/event-forwarding/overview.md) 확장. 자세한 내용은 [[!DNL Splunk] 확장 개요](../../tags/extensions/web/splunk/overview.md) 추가 정보. |
+| [!DNL Zendesk] 이벤트 전달을 위한 확장 | 이제 데이터를에 보낼 수 있습니다 [!DNL Zendesk] 사용 [이벤트 전달](../../tags/ui/event-forwarding/overview.md) 확장. 자세한 내용은 [[!DNL Zendesk] 확장 개요](../../tags/extensions/web/zendesk/overview.md) 추가 정보. |
+
+{style=&quot;table-layout:auto&quot;}
+
+## XDM(경험 데이터 모델) {#xdm}
+
+XDM은 Adobe Experience Platform으로 가져온 데이터에 대한 일반적인 구조 및 정의(스키마)를 제공하는 오픈 소스 사양입니다. XDM 표준을 준수함으로써 모든 고객 경험 데이터를 공통 표현으로 통합하여 보다 빠르고 통합된 방식으로 통찰력을 제공할 수 있습니다. 고객 작업을 통해 유용한 통찰력을 얻을 수 있고, 세그먼트를 통해 고객 대상을 정의하고, 개인화를 위해 고객 속성을 사용할 수 있습니다.
+
+**업데이트된 XDM 구성 요소**
+
+| 구성 요소 유형 | 이름 | 설명 |
+| --- | --- | --- |
+| 데이터 유형 | [[!UICONTROL 세션 세부 정보]](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | 업데이트 날짜: `authorized` 필드를 부울 형식에서 문자열로 가져옵니다. `season` 및 `episode` 가 정수에서 문자열로 변경되었습니다. |
+| 데이터 유형 | [[!UICONTROL 광고 세부 사항 정보]](https://github.com/adobe/xdm/blob/master/components/datatypes/advertisingdetails.schema.json) | `name` 의 이름이 `friendlyName`, 및 `ID` 의 이름이 `name`. |
+| 데이터 유형 | [[!UICONTROL 오류 세부 정보]](https://github.com/adobe/xdm/blob/master/components/datatypes/errordetails.schema.json) | `ID`의 이름이 `name`로 변경되었습니다.  |
+
+{style=&quot;table-layout:auto&quot;}
+
+Platform의 XDM에 대한 자세한 내용은 [XDM 시스템 개요](../../xdm/home.md).
 
 ## 소스 {#sources}
 

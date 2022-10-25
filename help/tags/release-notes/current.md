@@ -2,14 +2,20 @@
 title: 태그 및 이벤트 전달을 위한 릴리스 노트
 description: Adobe Experience Platform의 태그 및 이벤트 전달에 대한 최신 릴리스 정보입니다.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: 319c30facb7e8093318a01a3155bdb2fee0f548b
+source-git-commit: 12648469a1e06e316597fa46fb877f947c8ddb92
 workflow-type: tm+mt
-source-wordcount: '263'
-ht-degree: 8%
+source-wordcount: '350'
+ht-degree: 6%
 
 ---
 
 # 태그 및 이벤트 전달에 대한 릴리스 노트
+
+## 2022년 10월 26일
+
+* **데이터 세트에 대한 중요 데이터 처리**: 이제 데이터 저장소는 여러 플랫폼 기술을 활용하여 HIPAA(Health Insurance Portability and Accountability Act)와 같은 규정에 따라 적용되는 중요한 데이터를 적절하게 처리합니다. 의 섹션을 참조하십시오. [datstreams의 sendstive 데이터 처리](../../edge/datastreams/overview.md#sensitive) 추가 정보.
+* **[!DNL Splunk]이벤트 전달을 위한 확장**: 이제 데이터를에 보낼 수 있습니다 [!DNL Splunk] 사용 [이벤트 전달](../ui/event-forwarding/overview.md) 확장. 자세한 내용은 [[!DNL Splunk] 확장 개요](../extensions/web/splunk/overview.md) 추가 정보.
+* **[!DNL Zendesk]이벤트 전달을 위한 확장**: 이제 데이터를에 보낼 수 있습니다 [!DNL Zendesk] 사용 [이벤트 전달](../ui/event-forwarding/overview.md) 확장. 자세한 내용은 [[!DNL Zendesk] 확장 개요](../extensions/web/zendesk/overview.md) 추가 정보.
 
 ## 2022년 9월 28일
 
