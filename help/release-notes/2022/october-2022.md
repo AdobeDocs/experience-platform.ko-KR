@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform 릴리스 노트 - 2022년 10월
 description: Adobe Experience Platform에 대한 2022년 10월 릴리스 노트입니다.
-source-git-commit: 098b4b7a0dcd3ddfcd13f7dd473c4fa6832d23df
+source-git-commit: 0ea2718247792e997b7a90ab9027946e800c8157
 workflow-type: tm+mt
-source-wordcount: '609'
+source-wordcount: '764'
 ht-degree: 5%
 
 ---
@@ -12,14 +12,13 @@ ht-degree: 5%
 
 **릴리스 날짜: 2022년 10월 26일**
 
-Adobe Experience Platform의 새로운 기능:
-
 - [고객 관리 키](#cmk)
 
 Adobe Experience Platform의 기존 기능 업데이트:
 
 - [데이터 수집](#data-collection)
 - [XDM(경험 데이터 모델)](#xdm)
+- [쿼리 서비스](#query-service)
 - [소스](#sources)
 
 ## 고객 관리 키 {#cmk}
@@ -57,6 +56,21 @@ XDM은 Adobe Experience Platform으로 가져온 데이터에 대한 일반적�
 {style=&quot;table-layout:auto&quot;}
 
 Platform의 XDM에 대한 자세한 내용은 [XDM 시스템 개요](../../xdm/home.md).
+
+## 쿼리 서비스 {#query-service}
+
+Query Service를 사용하면 표준 SQL을 사용하여 Adobe Experience Platform에서 데이터를 쿼리할 수 있습니다 [!DNL Data Lake]. 에서 모든 데이터 세트에 가입할 수 있습니다 [!DNL Data Lake] 쿼리 결과를 보고 또는 Data Science Workspace에 사용하거나 실시간 고객 프로필에 수집하기 위한 새로운 데이터 세트로 캡처합니다.
+
+**업데이트된 기능**
+
+| 기능 | 설명 |
+| --- | --- |
+| 쿼리 가속 보고 통찰력 데이터 모델 | Data Distiller SKU의 일부로 쿼리 가속 스토어를 사용하면 데이터를 통해 중요한 통찰력을 얻는 데 필요한 시간과 처리 능력을 줄일 수 있습니다. 쿼리 가속 스토어를 사용하여 사용자 지정 데이터 모델을 만들거나 기존 Adobe Real-time Customer Data Platform 데이터 모델을 확장하여 보고 통찰력과 시각화를 향상시킬 수 있습니다. 자세한 내용은 [쿼리 가속 저장소 보고 통찰력 문서](https://experienceleague.adobe.com/docs/experience-platform/query/query-accelerated-store/reporting-insights-data-model.html) 이 기능에 대해 자세히 알아보십시오. |
+
+{style=&quot;table-layout:auto&quot;}
+
+쿼리 서비스에 대한 자세한 내용은 [쿼리 서비스 개요](../../query-service/home.md).
+Adobe Experience Platform의 새로운 기능:
 
 ## 소스 {#sources}
 
