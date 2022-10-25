@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 소스 커넥터 도움말
 breadcrumb-title: 소스 커넥터 안내서
 user-guide-description: 다양한 소스에서 데이터를 수집합니다. 이미 수집된 데이터를 구조화하고, 레이블을 지정하고, 개선하는 방법을 알아봅니다.
 feature: Sources
-source-git-commit: 3518131261f2a2a811284f77bbb8784666e8df96
+source-git-commit: cf9390076e027ba746c3bc83df8a18e3751b84a8
 workflow-type: tm+mt
-source-wordcount: '844'
+source-wordcount: '853'
 ht-degree: 12%
 
 ---
@@ -62,6 +62,7 @@ ht-degree: 12%
       - [Veva CRM 커넥터](connectors/crm/veeva.md)
       - [Zoho CRM 커넥터](connectors/crm/zoho.md)
    - 고객 성공 {#customer-success}
+      - [Oracle 서비스 클라우드](connectors/customer-success/oracle-service-cloud.md)
       - [Salesforce Service Cloud 커넥터](connectors/customer-success/salesforce-service-cloud.md)
       - [ServiceNow Connector](connectors/customer-success/servicenow.md)
       - [Zendesk 커넥터](connectors/customer-success/zendesk.md)
@@ -130,6 +131,7 @@ ht-degree: 12%
          - [Veva CRM](tutorials/api/create/crm/veeva.md)
          - [Zoho CRM](tutorials/api/create/crm/zoho.md)
       - 고객 성공 {#customer-success}
+         - [Oracle 서비스 클라우드](tutorials/api/create/customer-success/oracle-service-cloud.md)
          - [Salesforce Service Cloud](tutorials/api/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/api/create/customer-success/servicenow.md)
          - [Zendesk](tutorials/api/create/customer-success/zendesk.md)
@@ -236,6 +238,7 @@ ht-degree: 12%
          - [Veva CRM](tutorials/ui/create/crm/veeva.md)
          - [Zoho CRM](tutorials/ui/create/crm/zoho.md)
       - 고객 성공 {#customer-success}
+         - [Oracle 서비스 클라우드](tutorials/ui/create/customer-success/oracle-service-cloud.md)
          - [Salesforce Service Cloud](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/ui/create/customer-success/servicenow.md)
          - [Zendesk](tutorials/ui/create/customer-success/zendesk.md)

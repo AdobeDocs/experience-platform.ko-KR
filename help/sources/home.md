@@ -5,7 +5,7 @@ title: 소스 커넥터 개요
 topic-legacy: overview
 description: Adobe Experience Platform을 사용하면 Platform 서비스를 사용하여 들어오는 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 외부 소스에서 데이터를 수집할 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 등과 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 7bcdfb2a49e0c0b65282d401114754a4cc114ad8
+source-git-commit: cf9390076e027ba746c3bc83df8a18e3751b84a8
 workflow-type: tm+mt
 source-wordcount: '1123'
 ht-degree: 0%
@@ -92,6 +92,7 @@ CRM 시스템은 고객 관계를 구축하는 데 도움이 되는 데이터를
 
 Experience Platform은 타사 고객 성공 애플리케이션에서 데이터를 수집하기 위한 지원을 제공합니다. 자세한 내용은 다음 관련 문서를 참조하십시오.
 
+- [[!DNL Oracle Service Cloud]](connectors/customer-success/oracle-service-cloud.md)
 - [[!DNL Salesforce Service Cloud]](connectors/customer-success/salesforce-service-cloud.md)
 - [[!DNL ServiceNow]](connectors/customer-success/servicenow.md)
 - [[!DNL Zendesk]](connectors/customer-success/zendesk.md)
