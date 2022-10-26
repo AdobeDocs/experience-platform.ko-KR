@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform의 고객 관리 키
 description: Adobe Experience Platform에 저장된 데이터에 대해 고유한 암호화 키를 설정하는 방법을 알아봅니다.
-source-git-commit: f06f00f7581ccd7fe64f5292a53ebb0303c65069
+source-git-commit: 6fe0d72bcb3dbf1e1167f80724577ba3e0f741f4
 workflow-type: tm+mt
-source-wordcount: '1418'
+source-wordcount: '1416'
 ht-degree: 0%
 
 ---
@@ -65,7 +65,7 @@ CMK는 [!DNL Microsoft Azure] 키 저장소. 시작하려면 다음을 수행해
 
 ![주요 자격 증명 모음의 기본 구성](../images/governance-privacy-security/customer-managed-keys/finish-creation.png)
 
-## Microsoft에 방화벽 예외 부여
+## 네트워킹 옵션 구성
 
 키 저장소가 특정 가상 네트워크에 대한 공개 액세스를 제한하거나 공개 액세스를 완전히 비활성화하도록 구성된 경우 Microsoft에 방화벽 예외를 부여해야 합니다.
 
