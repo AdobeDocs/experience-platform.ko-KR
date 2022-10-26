@@ -3,9 +3,9 @@ keywords: Experience Platform;홈;인기 항목;Audience Manager 소스 커넥�
 title: UI에서 Adobe Audience Manager 소스 연결 만들기
 description: 이 자습서에서는 사용자 인터페이스를 사용하여 소비자 경험 이벤트 데이터를 Platform으로 가져올 수 있도록 Adobe Audience Manager에 대한 소스 연결을 만드는 단계를 안내합니다.
 exl-id: 90c4a719-aaad-4687-afd8-7a1c0c56f744
-source-git-commit: 90a917ea2b623079f26c67b776dd46b62531c7da
+source-git-commit: 9cdb8933d166445bf41ed314d7ffc7d5762e1adb
 workflow-type: tm+mt
-source-wordcount: '523'
+source-wordcount: '583'
 ht-degree: 0%
 
 ---
@@ -46,6 +46,10 @@ ht-degree: 0%
 ![select-data](../../../../images/tutorials/create/aam/select-data.png)
 
 또는, **[!UICONTROL 모든 세그먼트 선택]** 및 **[!UICONTROL 모든 트레이트 선택]** 상자. 모든 세그먼트를 선택하면 Audience Manager 세그먼트가 Platform으로 이동되고, 모든 트레이트를 선택하면 Audience Manager의 모든 자사 트레이트가 활성화됩니다.
+
+>[!WARNING]
+>
+>크기 조정 가능한 Audience Manager 세그먼트 모집단을 수집하면 Audience Manager 소스를 사용하여 처음 Audience Manager 세그먼트를 Platform으로 보낼 때 총 프로필 수에 직접적인 영향을 줍니다. 즉, 모든 세그먼트를 선택하면 라이센스 사용 권한을 초과하는 프로필 수가 발생할 수 있습니다. 다음 문서를 검토하십시오 [라이선스 사용 허용](../../../../../dashboards/guides/license-usage.md) 계속 진행하기 전에
 
 완료되면 을 선택합니다 **[!UICONTROL 다음]**
 
