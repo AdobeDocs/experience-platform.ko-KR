@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform 릴리스 노트 - 2022년 10월
 description: Adobe Experience Platform에 대한 2022년 10월 릴리스 노트입니다.
-source-git-commit: 0ea2718247792e997b7a90ab9027946e800c8157
+source-git-commit: 021a0833941f250475786bb8629542c50229b238
 workflow-type: tm+mt
-source-wordcount: '764'
+source-wordcount: '916'
 ht-degree: 5%
 
 ---
@@ -17,6 +17,7 @@ ht-degree: 5%
 Adobe Experience Platform의 기존 기능 업데이트:
 
 - [데이터 수집](#data-collection)
+- [대상](#destinations)
 - [XDM(경험 데이터 모델)](#xdm)
 - [쿼리 서비스](#query-service)
 - [소스](#sources)
@@ -40,6 +41,27 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 | [!DNL Zendesk] 이벤트 전달을 위한 확장 | 이제 데이터를에 보낼 수 있습니다 [!DNL Zendesk] 사용 [이벤트 전달](../../tags/ui/event-forwarding/overview.md) 확장. 자세한 내용은 [[!DNL Zendesk] 확장 개요](../../tags/extensions/web/zendesk/overview.md) 추가 정보. |
 
 {style=&quot;table-layout:auto&quot;}
+
+## [!DNL Destinations] {#destinations}
+
+[!DNL Destinations] 는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과의 사전 구축된 통합입니다. 대상을 사용하여 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례에 대해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
+
+**새 대상 또는 업데이트된 대상**
+
+| 대상 | 설명 |
+| ----------- | ----------- |
+| [[!DNL Line]](../../destinations/catalog/mobile-engagement/line.md) | Line 은 사용자, 서비스 및 정보를 연결하는 인기 있는 통신 플랫폼으로, 채팅 앱에서 엔터테인먼트, 소셜 및 일상적인 활동을 위한 허브로 성장했습니다. |
+| [[!DNL Microsoft Dynamics 365]](../../destinations/catalog/crm/microsoft-dynamics-365.md) | Microsoft Dynamics 365는 ERP(Enterprise Resource Planning)와 CRM(Customer Relationship Management)을 생산성 애플리케이션 및 AI 도구와 결합하여 종단 간 더욱 원활하고 제어된 운영, 향상된 성장 가능성 및 비용 절감을 제공하는 클라우드 기반 비즈니스 애플리케이션 플랫폼입니다. |
+
+{style=&quot;table-layout:auto&quot;}
+
+**새 설명서 또는 업데이트된 설명서**
+
+| 설명서 | 설명 |
+| ----------- | ----------- |
+| [대상 보호 기능](../../destinations/guardrails.md) | 이 페이지에서는 활성화 동작과 관련된 기본 사용량 및 비율 제한을 제공합니다. |
+
+대상에 대한 자세한 내용은 [대상 개요](../../destinations/home.md).
 
 ## XDM(경험 데이터 모델) {#xdm}
 
