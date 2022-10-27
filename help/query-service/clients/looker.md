@@ -5,9 +5,9 @@ title: 조회 서비스에 연결
 topic-legacy: connect
 description: 이 문서에서는 Adobe Experience Platform 쿼리 서비스와 전환 확인을 연결하는 단계를 설명합니다.
 exl-id: 806e9077-533a-4546-b5ca-8124751957f5
-source-git-commit: ad3e1b0de6dd3b82cc82f0dc3d0f36b12cd3899e
+source-git-commit: 75e97efcb68439f1b837af93b62c96f43e5d7a31
 workflow-type: tm+mt
-source-wordcount: '275'
+source-wordcount: '313'
 ht-degree: 0%
 
 ---
@@ -22,15 +22,15 @@ ht-degree: 0%
 
 로그인한 후 [!DNL Looker], 선택 **[!DNL Admin]**, 그 다음 **[!DNL Connections]**.
 
-![](../images/clients/looker/click-admin-connections.png)
+![다음 [!DNL Looker] 관리 드롭다운 메뉴에서 연결 이 강조 표시된 대시보드.](../images/clients/looker/click-admin-connections.png)
 
 이 페이지에서 **[!DNL New Connection]**.
 
-![](../images/clients/looker/click-new-connection.png)
+![새 연결이 강조 표시된 연결 작업 영역입니다.](../images/clients/looker/click-new-connection.png)
 
 여기에서 연결 설정에 대한 세부 정보를 입력할 수 있습니다.
 
-![](../images/clients/looker/new-connection.png)
+![새 연결에 대한 연결 설정 페이지입니다.](../images/clients/looker/new-connection.png)
 
 - **[!DNL Name]:** 연결의 이름입니다.
 - **[!DNL Dialect]:** SQL 데이터베이스에 사용되는 언어입니다. [!DNL Query Service] 사용 **[!DNL PostgreSQL]**.
@@ -47,7 +47,7 @@ ht-degree: 0%
 
 연결 세부 정보를 입력한 후 을 선택합니다 **[!DNL Test These Settings]** 자격 증명이 제대로 작동하는지 확인합니다. 연결된 경우 아래에 연결할 수 있다는 메시지가 표시됩니다. 연결이 실제로 성공하면 **[!DNL Add Connection]** 연결 만들기
 
-![](../images/clients/looker/click-test-connection.png)
+![이 설정을 테스트하여 새 연결에 대한 연결 설정 페이지가 강조 표시되어 있습니다.](../images/clients/looker/click-test-connection.png)
 
 ## 다음 단계
 

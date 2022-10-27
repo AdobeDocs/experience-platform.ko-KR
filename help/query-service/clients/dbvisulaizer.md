@@ -5,9 +5,9 @@ title: DbVisualizer를 Query Service에 연결
 topic-legacy: connect
 description: 이 문서에서는 DbVisualizer와 Adobe Experience Platform Query Service를 연결하는 단계를 설명합니다.
 exl-id: badb0d89-1713-438c-8a9c-d1404051ff5f
-source-git-commit: 760b04499edd0374f1aae71600bef074a6f17531
+source-git-commit: 910522cc981bddba86f0a47ded48125c28712032
 workflow-type: tm+mt
-source-wordcount: '743'
+source-wordcount: '754'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ ht-degree: 0%
 
 데이터베이스 연결 작업 영역에서 **[!DNL Properties]** 탭, 그 다음에 **[!DNL Driver Properties]** 탐색 사이드바에서 참조할 수 있습니다.
 
-![등록 정보 탭이 강조 표시된 데이터베이스 연결 작업 영역입니다.](../images/clients/dbvisualizer/driver-properties.png)
+![속성 및 드라이버 속성이 강조 표시된 데이터베이스 연결 작업 영역입니다.](../images/clients/dbvisualizer/driver-properties.png)
 
 아래 표에 표시된 드라이버 속성은 DBVisualizer에서 SSL을 사용할 수 있도록 설정하는 것이 좋습니다.
 
@@ -57,7 +57,7 @@ ht-degree: 0%
 
 다음 `PGHOST` 및 `user` 값은 Adobe Experience Platform 자격 증명에서 가져옵니다. 자격 증명을 찾으려면 Platform UI에 로그인하고 를 선택합니다 **[!UICONTROL 쿼리]** 왼쪽 탐색에서 다음을 차례로 수행합니다 **[!UICONTROL 자격 증명]**. 데이터베이스 이름, 호스트, 포트 및 로그인 자격 증명을 찾는 방법에 대한 자세한 내용은 [자격 증명 안내서](../ui/credentials.md).
 
-![Experience Platform 쿼리 자격 증명 대시보드에 자격 증명이 강조 표시됩니다.](../images/clients/dbvisualizer/query-service-credentials-page.png)
+![자격 증명과 만료 자격 증명이 강조 표시된 Experience Platform 쿼리 작업 영역의 자격 증명 페이지.](../images/clients/dbvisualizer/query-service-credentials-page.png)
 
 [!DNL Query Service] 또한 타사 클라이언트로 1회 설정할 수 있도록 만료되는 자격 증명을 제공합니다. 다음 문서를 참조하십시오. [만료되지 않은 자격 증명을 생성하고 사용하는 방법에 대한 전체 지침](../ui/credentials.md#non-expiring-credentials).
 
@@ -75,7 +75,7 @@ ht-degree: 0%
 
 연결 인증 패널에서 **[!DNL Require Userid]** 및 **[!DNL Require Password]** 확인란을 선택한 다음 **[!DNL Apply]**.
 
-![사용자 ID 및 암호 확인란이 강조 표시된 연결 인증 패널.](../images/clients/dbvisualizer/connection-authentication.png)
+![용 인증 패널 [!DNL PostgreSQL] 사용자 ID 및 암호 필요 확인란을 선택한 데이터베이스 연결](../images/clients/dbvisualizer/connection-authentication.png)
 
 ## 플랫폼에 연결
 
@@ -90,11 +90,11 @@ ht-degree: 0%
 
 관련 자격 증명을 모두 입력한 후 을 선택합니다 **[!DNL Connect]**.
 
-![[연결] 탭 및 [연결] 단추가 강조 표시된 [데이터베이스 연결] 작업 영역입니다.](../images/clients/dbvisualizer/connect.png)
+![다음 [!DNL PostgreSQL] 연결 탭 및 연결 단추가 강조 표시된 데이터베이스 연결 작업 영역입니다.](../images/clients/dbvisualizer/connect.png)
 
 다음 [!DNL Connect] 대화 상자가 세션의 첫 번째 사례에 나타납니다.
 
-![데이터베이스 사용자 ID 및 데이터베이스 암호 텍스트 필드가 포함된 연결 대화 상자가 강조 표시됩니다.](../images/clients/dbvisualizer/connect-dialog.png)
+![연결: [!DNL PostgreSQL] 데이터베이스 사용자 id 및 데이터베이스 암호 텍스트 필드가 강조 표시된 대화 상자](../images/clients/dbvisualizer/connect-dialog.png)
 
 사용자 ID와 암호를 입력하고 을(를) 선택합니다 **[!DNL Connect]**. 연결에 성공했는지 확인하는 메시지가 로그에 나타납니다.
 

@@ -5,9 +5,9 @@ title: PostgreSQL 소스 커넥터 개요
 topic-legacy: overview
 description: API 또는 사용자 인터페이스를 사용하여 PostgreSQL을 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: 27b891c5-5fc5-4539-8f98-e3a53e2eefe3
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: 9c450f340706040593dfea5292702c4b00dd9852
 workflow-type: tm+mt
-source-wordcount: '227'
+source-wordcount: '225'
 ht-degree: 0%
 
 ---
@@ -26,11 +26,11 @@ Adobe Experience Platform을 사용하면 Platform 서비스를 사용하여 들
 
 ## Connect [!DNL PostgreSQL] to [!DNL Platform] api 사용
 
-- [Flow Service API를 사용하여 PostgreSQL 기본 연결 만들기](../../tutorials/api/create/databases/postgres.md)
+- [만들기 [!DNL PostgreSQL] 흐름 서비스 API를 사용한 기본 연결](../../tutorials/api/create/databases/postgres.md)
 - [Flow Service API를 사용하여 데이터 테이블 탐색](../../tutorials/api/explore/tabular.md)
 - [Flow Service API를 사용하여 데이터베이스 소스에 대한 데이터 흐름 만들기](../../tutorials/api/collect/database-nosql.md)
 
 ## Connect [!DNL PostgreSQL] to [!DNL Platform] ui 사용
 
-- [UI에서 PostgreSQL 소스 연결 만들기](../../tutorials/ui/create/databases/postgres.md)
+- [만들기 [!DNL PostgreSQL] UI의 소스 연결](../../tutorials/ui/create/databases/postgres.md)
 - [UI에서 데이터베이스 소스 연결을 위한 데이터 흐름 만들기](../../tutorials/ui/dataflow/databases.md)

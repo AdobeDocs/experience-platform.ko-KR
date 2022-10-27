@@ -2,9 +2,9 @@
 title: Ad Hoc 스키마에 대한 속성 기반 액세스 제어 지원
 description: Adobe Experience Platform Query Service를 통해 생성된 Ad Hoc 스키마의 데이터 필드에 대한 액세스를 제한하는 안내서입니다.
 exl-id: d675e3de-ab62-4beb-9360-1f6090397a17
-source-git-commit: d955473fb9123a6fc2384cde4073c713b921f582
+source-git-commit: 91f318596bf268aa93e8b2df9c13774aab76d13a
 workflow-type: tm+mt
-source-wordcount: '1037'
+source-wordcount: '1040'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ Adobe Experience Platform으로 가져오는 모든 데이터는 XDM(Experience 
 
 이 안내서에서는 Adobe Experience Platform의 다음 구성 요소를 이해하고 있어야 합니다.
 
-* [XDM(경험 데이터 모델) 시스템](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=ko): Experience Platform이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
+* [XDM(경험 데이터 모델) 시스템](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=ko-KR): Experience Platform이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
    * [[!DNL Schema Editor]](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/overview.html): Platform UI에서 스키마 및 기타 리소스를 만들고 관리하는 방법을 알아봅니다.
 * [[!DNL Data Governance]](../../data-governance/home.md): 방법 알아보기 [!DNL Data Governance] 고객 데이터를 관리하고 데이터 사용에 적용되는 규정, 제한 및 정책을 준수할 수 있습니다.
 * [속성 기반 액세스 제어](../../access-control/abac/overview.md): 속성 기반 액세스 제어는 관리자가 속성을 기반으로 특정 개체 및/또는 기능에 대한 액세스를 제어할 수 있도록 해주는 Adobe Experience Platform의 기능입니다. 속성은 임시 또는 일반 스키마 필드에 추가된 레이블과 같이 객체에 추가된 메타데이터일 수 있습니다. 관리자는 사용자 액세스 권한을 관리하기 위한 속성을 포함하는 액세스 정책을 정의합니다.
@@ -56,13 +56,13 @@ Platform UI에서 Ad Hoc 스키마를 표시하려면 필터 아이콘(![필터 
 
 ## 스키마 또는 필드의 레이블 편집
 
-전체 스키마의 레이블을 편집하려면 연필 아이콘(![](../images/data-governance/edit-icon.png)) 내의 스키마 이름 옆에 표시됩니다. [!UICONTROL 레이블] 탭.
+전체 스키마의 레이블을 편집하려면 연필 아이콘(![연필 아이콘.](../images/data-governance/edit-icon.png)) 내의 스키마 이름 옆에 표시됩니다. [!UICONTROL 레이블] 탭.
 
 ![연필 아이콘이 강조 표시된 스키마 작업 영역의 레이블 보기](../images/data-governance/edit-entire-schema-labels.png)
 
 기존 필드에 레이블을 적용하려면 목록에서 하나 이상의 필드를 선택하고 [!UICONTROL 거버넌스 레이블 편집] 오른쪽 사이드바
 
-![권한 보조 사이드바에서 강조 표시된 &#39;거버넌스 레이블 편집&#39; 옵션이 있는 스키마 작업 공간의 레이블 보기.](../images/data-governance/edit-governance-labels.png)
+![오른쪽 사이드바에서 강조 표시된 &#39;거버넌스 레이블 편집&#39; 옵션이 있는 스키마 작업 영역의 레이블 보기](../images/data-governance/edit-governance-labels.png)
 
 ## 레이블 편집 팝업
 

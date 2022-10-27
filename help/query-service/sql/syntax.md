@@ -5,9 +5,9 @@ title: 쿼리 서비스의 SQL 구문
 topic-legacy: syntax
 description: 이 문서에서는 Adobe Experience Platform 쿼리 서비스에서 지원하는 SQL 구문을 보여줍니다.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 5ec37ee797ec297b2e5c275dc0e6091e4ee8ecae
+source-git-commit: 9c450f340706040593dfea5292702c4b00dd9852
 workflow-type: tm+mt
-source-wordcount: '3160'
+source-wordcount: '3156'
 ht-degree: 2%
 
 ---
@@ -449,7 +449,7 @@ END $$;
 
 이 두 번째 예는 의 개념 및 적용을 더 보여줍니다 `inline` 함수 위에 있어야 합니다. 이 예제의 데이터 모델은 아래 이미지에 표시되어 있습니다.
 
-![productListItems에 대한 스키마 다이어그램](../images/sql/productListItems.png)
+![productListItems에 대한 스키마 다이어그램입니다.](../images/sql/productListItems.png)
 
 **예**
 
@@ -485,9 +485,9 @@ SET property_key = property_value
 
 설정에 대한 값을 반환하려면 `SET [property key]` 없이 `property_value`.
 
-## PostgreSQL 명령
+## [!DNL PostgreSQL] 명령
 
-아래 하위 섹션에서는 Query Service에서 지원하는 PostgreSQL 명령을 다룹니다.
+아래의 하위 섹션은 [!DNL PostgreSQL] 쿼리 서비스에서 지원하는 명령
 
 ### 테이블 분석
 
@@ -677,7 +677,7 @@ SELECT [ ALL | DISTINCT [ ON ( expression [, ...] ) ] ]
 | 매개 변수 | 설명 |
 | ------ | ------ |
 | `TEMPORARY` 또는 `TEMP` | 선택적 매개 변수입니다. 지정하면 생성된 테이블이 임시 테이블이 됩니다. |
-| `UNLOGGED` | 선택적 매개 변수입니다. 지정되면 로 만들어지는 테이블은 기록되지 않은 테이블입니다. 기록되지 않은 테이블에 대한 자세한 내용은 [PostgreSQL 설명서](https://www.postgresql.org/docs/current/sql-createtable.html). |
+| `UNLOGGED` | 선택적 매개 변수입니다. 지정되면 로 만들어지는 테이블은 기록되지 않은 테이블입니다. 기록되지 않은 테이블에 대한 자세한 내용은 [[!DNL PostgreSQL] 설명서](https://www.postgresql.org/docs/current/sql-createtable.html). |
 | `new_table` | 만들 테이블의 이름입니다. |
 
 **예**

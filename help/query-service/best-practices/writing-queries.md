@@ -6,9 +6,9 @@ topic-legacy: queries
 type: Tutorial
 description: 이 문서에서는 Adobe Experience Platform Query Service에서 쿼리를 작성할 때 알아야 할 중요한 세부 정보에 대해 설명합니다.
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
-source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
+source-git-commit: 9c450f340706040593dfea5292702c4b00dd9852
 workflow-type: tm+mt
-source-wordcount: '1048'
+source-wordcount: '1047'
 ht-degree: 3%
 
 ---
@@ -206,7 +206,7 @@ Query Service에 연결한 후에는 `\d` 또는 `SHOW TABLES` 명령.
 
 ### 표준 표 보기
 
-다음 `\d` 명령은 목록 테이블에 대한 표준 PostgreSQL 보기를 표시합니다. 이 명령의 출력의 예는 다음과 같습니다.
+다음 `\d` 명령은 표준 [!DNL PostgreSQL] 목록 테이블에 대한 보기. 이 명령의 출력의 예는 다음과 같습니다.
 
 ```sql
              List of relations

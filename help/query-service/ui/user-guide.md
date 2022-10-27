@@ -5,10 +5,10 @@ title: 쿼리 편집기 UI 안내서
 topic-legacy: query editor
 description: 쿼리 편집기는 Adobe Experience Platform 쿼리 서비스에서 제공하는 대화형 도구로서 Experience Platform 사용자 인터페이스 내에서 고객 경험 데이터에 대한 쿼리를 작성, 유효성 검사 및 실행할 수 있습니다. 쿼리 편집기는 분석 및 데이터 탐색을 위한 쿼리 개발을 지원하며, Experience Platform에서 데이터 세트를 채우기 위해 비대화형 쿼리는 물론 개발 목적으로 대화형 쿼리를 실행할 수 있도록 해줍니다.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: b4f4549e49eb8b37bd4209c5bcf01c5622e8fbd1
+source-git-commit: 9c7068b4209a7c85c444b1cc83415747b93bacb2
 workflow-type: tm+mt
-source-wordcount: '1865'
-ht-degree: 1%
+source-wordcount: '1993'
+ht-degree: 0%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 1%
 
 [!DNL Query Editor] 를 초기화하고 연결하는 데 몇 초 걸립니다. [!DNL Query Service] 열려 있을 때 콘솔은 아래와 같이 언제 연결되는지 알려줍니다. 편집기가 연결되기 전에 쿼리를 실행하려고 하면 연결이 완료될 때까지 실행이 지연됩니다.
 
-![이미지](../images/ui/query-editor/connect.png)
+![초기 연결 시 쿼리 편집기의 콘솔 출력입니다.](../images/ui/query-editor/connect.png)
 
 ### 쿼리 실행 방법 [!DNL Query Editor] {#run-a-query}
 
@@ -36,17 +36,17 @@ ht-degree: 1%
 
 사용 [!DNL Query Editor], 고객 경험 데이터에 대한 쿼리를 작성, 실행 및 저장할 수 있습니다. 실행 또는 저장된 모든 쿼리 [!DNL Query Editor] 조직의 모든 사용자가 [!DNL Query Service].
 
-### [!DNL Query Editor]에 액세스  {#accessing-query-editor}
+### [!DNL Query Editor]에 액세스 {#accessing-query-editor}
 
 에서 [!DNL Experience Platform] UI, 선택 **[!UICONTROL 쿼리]** 왼쪽 탐색 메뉴에서 를 클릭하여 [!DNL Query Service] 작업 공간. 다음 을 선택합니다. **[!UICONTROL 쿼리 만들기]** 화면 오른쪽 상단에서 쿼리 작성을 시작합니다. 이 링크는 [!DNL Query Service] 작업 공간.
 
-![이미지](../images/ui/query-editor/create-query.png)
+![쿼리 만들기 쿼리가 강조 표시된 쿼리 작업 공간 개요 탭입니다.](../images/ui/query-editor/create-query.png)
 
 ### 쿼리 쓰기 {#writing-queries}
 
-[!UICONTROL 쿼리 편집기] 는 가능한 한 쉽게 쓰기 쿼리를 만들도록 구성됩니다. 아래 스크린샷은 편집기가 UI에 와 **재생** 단추 및 SQL 항목 필드가 강조 표시되어 있습니다.
+[!UICONTROL 쿼리 편집기] 는 가능한 한 쉽게 쓰기 쿼리를 만들도록 구성됩니다. 아래 스크린샷에서는 SQL 항목 필드와 함께 UI에 편집기가 표시되는 방법을 보여줍니다. **재생** 강조 표시되어 있습니다.
 
-![이미지](../images/ui/query-editor/editor.png)
+![SQL 입력 필드와 재생이 강조 표시된 쿼리 편집기.](../images/ui/query-editor/editor.png)
 
 개발 시간을 최소화하려면 반환된 행에 제한이 있는 쿼리를 개발하는 것이 좋습니다. 예, `SELECT fields FROM table WHERE conditions LIMIT number_of_rows`. 쿼리에서 예상 출력을 생성하는지 확인한 후 제한을 제거하고 쿼리를 `CREATE TABLE tablename AS SELECT` 를 입력하여 해당 출력으로 데이터 세트를 생성합니다.
 
@@ -54,15 +54,15 @@ ht-degree: 1%
 
 - **자동 구문 강조 표시:** SQL을 보다 쉽게 읽고 구성할 수 있습니다.
 
-![이미지](../images/ui/query-editor/syntax-highlight.png)
+![구문 색상 강조 표시를 보여 주는 쿼리 편집기의 SQL 문입니다.](../images/ui/query-editor/syntax-highlight.png)
 
 - **SQL 키워드 자동 완료:** 쿼리 입력을 시작한 다음 화살표 키를 사용하여 원하는 용어로 이동한 다음 키를 누릅니다 **Enter 키**.
 
-![이미지](../images/ui/query-editor/syntax-auto.png)
+![쿼리 편집기의 옵션을 제공하는 자동 완료 드롭다운 메뉴가 있는 SQL의 몇 자.](../images/ui/query-editor/syntax-auto.png)
 
 - **테이블 및 필드 자동 완료:** 원하는 테이블 이름 입력 시작 `SELECT` 에서 화살표 키를 사용하여 원하는 테이블로 이동한 다음 키를 누릅니다 **Enter 키**. 테이블을 선택하면 자동 완성 기능이 해당 테이블의 필드를 인식합니다.
 
-![드롭다운 제안을 표시하는 쿼리 편집기 명령줄 인터페이스입니다.](../images/ui/query-editor/tables-auto.png)
+![드롭다운 테이블 이름 제안을 표시하는 쿼리 편집기 입력입니다.](../images/ui/query-editor/tables-auto.png)
 
 ### 자동 완료 UI 구성 전환 {#auto-complete}
 
@@ -94,17 +94,17 @@ ht-degree: 1%
 
 [!DNL Query Editor] 작성할 때 자동으로 쿼리의 유효성을 검사하여 일반 SQL 유효성 검사 및 특정 실행 유효성 검사를 제공합니다. 쿼리 아래에 빨간색 밑줄이 나타나면(아래 이미지에 표시) 쿼리 내의 오류를 나타냅니다.
 
-![이미지](../images/ui/query-editor/syntax-error-highlight.png)
+![오류를 나타내기 위해 빨간색으로 밑줄이 표시된 SQL을 표시하는 쿼리 편집기 입력입니다.](../images/ui/query-editor/syntax-error-highlight.png)
 
 오류가 감지되면 SQL 코드를 마우스로 가리키면 특정 오류 메시지를 볼 수 있습니다.
 
-![이미지](../images/ui/query-editor/linting-error.png)
+![오류 메시지가 있는 대화 상자](../images/ui/query-editor/linting-error.png)
 
 ### 쿼리 세부 사항 {#query-details}
 
-에서 쿼리를 보는 동안 [!DNL Query Editor], **[!UICONTROL 쿼리 세부 정보]** 패널에서는 선택한 쿼리를 관리하는 도구를 제공합니다.
+에서 저장한 템플릿을 선택합니다 [!UICONTROL 템플릿] 탭을 클릭하여 쿼리 편집기에서 봅니다. 쿼리 세부 정보 패널에서는 선택한 쿼리를 관리하는 추가 정보 및 도구를 제공합니다.
 
-![이미지](../images/ui/query-editor/query-details.png)
+![쿼리 세부 사항 패널이 강조 표시된 쿼리 편집기.](../images/ui/query-editor/query-details.png)
 
 이 패널을 사용하면 UI에서 직접 출력 데이터 세트를 생성하고, 표시된 쿼리를 삭제하거나 이름을 지정하고, 쿼리에 예약을 추가할 수 있습니다.
 
@@ -118,11 +118,13 @@ ht-degree: 1%
 
 쿼리에 예약을 추가하려면 **[!UICONTROL 예약 추가]**.
 
-![이미지](../images/ui/query-editor/add-schedule.png)
+<!-- Cannot update this image below yet. Believe schedules tab is being added to the Query Editor -->
+
+![추가 일정이 강조 표시된 쿼리 편집기.](../images/ui/query-editor/add-schedule.png)
 
 다음 **[!UICONTROL 예약 세부 사항]** 페이지가 나타납니다. 이 페이지에서 예약된 쿼리의 빈도, 예약된 쿼리가 실행될 날짜 및 쿼리를 내보낼 데이터 세트를 선택할 수 있습니다.
 
-![이미지](../images/ui/query-editor/schedule-details.png)
+![[예약 세부 사항] 패널이 강조 표시되어 있습니다.](../images/ui/query-editor/schedule-details.png)
 
 다음 옵션을 선택할 수 있습니다 **[!UICONTROL 빈도]**:
 
@@ -152,7 +154,9 @@ ht-degree: 1%
 
 일정을 선택하여 삭제할 수 있습니다 **[!UICONTROL 일정 삭제]**.
 
-![이미지](../images/ui/query-editor/delete-schedule.png)
+<!-- Cannot update this image below yet. Believe schedules tab is being added to the Query Editor -->
+
+![예약 비활성화 및 삭제 일정이 강조 표시된 쿼리 편집기.](../images/ui/query-editor/delete-schedule.png)
 
 >[!IMPORTANT]
 >
@@ -184,7 +188,7 @@ ht-degree: 1%
 
 콘솔은 의 상태 및 작업에 대한 정보를 제공합니다 [!DNL Query Service]. 콘솔에 연결 상태가 표시됩니다 [!DNL Query Service], 실행 중인 쿼리 작업과 이러한 쿼리에서 발생하는 모든 오류 메시지
 
-![이미지](../images/ui/query-editor/console.png)
+![쿼리 편집기 콘솔의 콘솔 탭입니다.](../images/ui/query-editor/console.png)
 
 >[!NOTE]
 >
@@ -194,7 +198,7 @@ ht-degree: 1%
 
 쿼리가 완료되면 결과는 **[!UICONTROL 결과]** 탭, 옆에 있습니다. **[!UICONTROL 콘솔]** 탭. 이 보기는 쿼리의 테이블 형식 출력을 보여주며 최대 100개의 행을 표시합니다. 이 보기에서는 쿼리가 예상 출력을 생성하는지 확인할 수 있습니다. 쿼리를 사용하여 데이터 세트를 생성하려면 반환된 행의 제한을 제거하고 `CREATE TABLE tablename AS SELECT` 를 입력하여 해당 출력으로 데이터 세트를 생성합니다. 자세한 내용은 [데이터 세트 생성 자습서](./create-datasets.md) 쿼리에서 데이터 세트를 생성하는 방법에 대한 지침은 [!DNL Query Editor].
 
-![이미지](../images/ui/query-editor/query-results.png)
+![쿼리 편집기 콘솔의 결과 탭에 쿼리 실행 결과가 표시됩니다.](../images/ui/query-editor/query-results.png)
 
 ## 쿼리 실행 [!DNL Query Service] 튜토리얼 비디오 {#query-tutorial-video}
 

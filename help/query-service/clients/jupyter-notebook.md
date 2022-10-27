@@ -1,9 +1,9 @@
 ---
 title: Jupiter 전자 필기장을 Query Service에 연결
 description: Jupiter Notebook을 Adobe Experience Platform Query Service와 연결하는 방법을 알아봅니다.
-source-git-commit: f910deca43ac49d3a3452b8dbafda20ffdf3bf48
+source-git-commit: af37fe3be6b9645965b7477b9b85c5e11fe6fbae
 workflow-type: tm+mt
-source-wordcount: '614'
+source-wordcount: '615'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 0%
 
 새 파일을 연 후 [!DNL Jupyter Notebook] 웹 응용 프로그램에서 **[!DNL New]** 드롭다운 후 **[!DNL Python 3]** 새 전자 필기장을 만들려면 다음 [!DNL Notebook] 편집기가 나타납니다.
 
-![다음 [!DNL Jupiter Notebook] 를 사용하는 파일 탭 [!DNL New dropdown] 및 [!DNL Python] 3 강조 표시됩니다.](../images/clients/jupyter-notebook/new-notebook.png)
+![다음 [!DNL Jupiter Notebook] 를 사용하는 파일 탭 [!DNL New] 드롭다운 및 [!DNL Python] 3 강조 표시됩니다.](../images/clients/jupyter-notebook/new-notebook.png)
 
 의 첫 번째 줄 [!DNL Notebook] 편집기에 다음 값을 입력합니다. `pip install psycopg2-binary` 을(를) 선택합니다. **[!DNL Run]** 명령 모음에서 를 클릭합니다. 입력 줄 아래에 성공 메시지가 나타납니다.
 

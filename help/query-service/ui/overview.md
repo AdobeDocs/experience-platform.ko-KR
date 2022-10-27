@@ -5,9 +5,9 @@ title: Query Service UI 안내서
 topic-legacy: guide
 description: Adobe Experience Platform 쿼리 서비스는 쿼리를 작성 및 실행하고, 이전에 실행된 쿼리를 보고, IMS 조직 내의 사용자가 저장한 쿼리에 액세스하는 데 사용할 수 있는 사용자 인터페이스를 제공합니다.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: a887c502213e96d6af90af0859da78c2984f89a7
+source-git-commit: 0a44d15f9dfaf5100fa44e2e6442b1be23ee0ab0
 workflow-type: tm+mt
-source-wordcount: '662'
+source-wordcount: '716'
 ht-degree: 2%
 
 ---
@@ -26,15 +26,15 @@ Adobe Experience Platform [!DNL Query Service] 은 IMS 조직 내에서 사용�
 
 ![갑자기 그 광경이 펼쳐졌다 [!DNL Query Editor].](../images/ui/overview/query-editor.png)
 
-## 찾아보기 {#browse}
+## 템플릿 {#browse}
 
-다음 **[!UICONTROL 찾아보기]** 탭에는 조직의 사용자가 저장한 쿼리가 표시됩니다. 여기에 저장된 쿼리는 여전히 구성 중일 수 있으므로 이러한 쿼리를 쿼리 프로젝트로 생각하는 것이 유용합니다. 에 표시되는 쿼리 **[!UICONTROL 찾아보기]** 탭도 실행 쿼리로 표시됩니다 **[!UICONTROL 로그]** 탭에서 이전에 [!DNL Query Service].
+다음 **[!UICONTROL 템플릿]** 탭에는 조직의 사용자가 저장한 쿼리가 표시됩니다. 여기에 저장된 쿼리는 여전히 구성 중일 수 있으므로 이러한 쿼리를 쿼리 프로젝트로 생각하는 것이 유용합니다. 에 표시되는 쿼리 **[!UICONTROL 템플릿]** 탭도 실행 쿼리로 표시됩니다 **[!UICONTROL 로그]** 탭에서 이전에 [!DNL Query Service].
 
-![여러 개의 저장된 쿼리를 표시하는 쿼리 대시보드 찾아보기 탭의 보기가 축소되었습니다.](../images/ui/overview/browse.png)
+![몇 개의 저장된 쿼리를 표시하는 쿼리 대시보드 템플릿 탭의 보기가 축소되었습니다.](../images/ui/overview/templates.png)
 
 | 열 | 설명 |
 | --- | --- |
-| **[!UICONTROL 이름]** | 사용자가 만든 쿼리 이름입니다. 이름에 을(를) 선택하여 [!DNL Query Editor]. 검색 막대를 사용하여 쿼리의 이름을 검색할 수도 있습니다. 검색은 대소문자를 구분합니다. |
+| **[!UICONTROL 이름]** | 이름 필드는 사용자가 만든 쿼리 이름 또는 SQL 쿼리의 처음 몇 문자입니다. 쿼리 편집기를 사용하여 UI를 통해 생성된 모든 쿼리는 시작 시 이름이 지정됩니다. API를 통해 쿼리를 만든 경우 쿼리 이름은 쿼리를 만드는 데 사용되는 초기 SQL의 코드 조각입니다. 쿼리 이름을 선택하여 쿼리를 [!DNL Query Editor]. 검색 창에서 [!UICONTROL 이름] 쿼리 문자열과 같은 형식입니다. 검색은 대소문자를 구분합니다. |
 | **[!UICONTROL SQL]** | SQL 쿼리의 처음 몇 문자입니다. 코드 위로 마우스를 가져가면 전체 쿼리가 표시됩니다. |
 | **[!UICONTROL 수정한 사람]** | 쿼리를 수정한 마지막 사용자입니다. 조직의 모든 사용자가 [!DNL Query Service] 쿼리를 수정할 수 있습니다. |
 | **[!UICONTROL 마지막 수정일]** | 브라우저의 시간대에서 쿼리를 마지막으로 수정한 날짜 및 시간입니다. |

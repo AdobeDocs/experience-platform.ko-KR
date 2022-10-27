@@ -6,9 +6,9 @@ topic-legacy: queries
 type: Tutorial
 description: Adobe Experience Platform 쿼리 서비스를 통해 UI에서 데이터 세트를 만들 수 있습니다. 데이터 세트를 만든 후에는 데이터 레이크에서 다른 데이터 세트와 같이 액세스할 수 있고, 다양한 사용 사례에 사용할 수 있습니다.
 exl-id: 6f6c049d-f19f-4161-aeb4-3a01eca7dc75
-source-git-commit: 0c2cfe9b0bd839bdf662622283a7563c0417c9a9
+source-git-commit: 228ed51ea056d3593a59bc0eee8d9b767aa74489
 workflow-type: tm+mt
-source-wordcount: '476'
+source-wordcount: '493'
 ht-degree: 0%
 
 ---
@@ -19,6 +19,8 @@ ht-degree: 0%
 
 ## Adobe Experience Platform 사용자 인터페이스에서 데이터 세트 생성
 
+<!-- Screenshot for #3 will need to be updated if schedule queries is moved. -->
+
 Adobe Experience Platform UI(사용자 인터페이스)에서 데이터 세트를 만들려면 다음 단계를 수행하십시오.
 
 1. 연결된 클라이언트를 사용하여 쿼리를 만들고 출력의 유효성을 확인합니다. 쿼리를 사용하여 작성하는 방법을 알아보려면 [!DNL Query Editor]를 읽고 [!DNL Query Editor] UI 안내서 [쿼리 작성](./user-guide.md#writing-queries).
@@ -27,13 +29,13 @@ Adobe Experience Platform UI(사용자 인터페이스)에서 데이터 세트�
 
 3. 쿼리 세부 정보 패널에서 **[!UICONTROL 출력 데이터 세트]**.
 
-   ![출력 데이터 세트 선택](../images/ui/create-datasets/output-dataset.png)
+   ![출력 데이터 세트 선택이 강조 표시된 쿼리 작업 공간 템플릿 탭](../images/ui/create-datasets/output-dataset.png)
 
 4. 대화 상자에 LDAP ID 앞에 데이터 세트 이름을 입력합니다. 데이터 집합 이름은 고유해야 하거나 SQL이 안전하지 않을 수 있습니다. 데이터 세트에 대한 테이블 이름은 여기에서 만드는 데이터 세트 이름을 기반으로 생성됩니다.
 
 5. 그런 다음 데이터 세트에 대한 설명을 [!UICONTROL 설명] 필드 및 선택 **[!UICONTROL 쿼리 실행]**.
 
-   ![쿼리 실행](../images/ui/create-datasets/run-query.png)
+   ![데이터 집합 세부 정보와 실행 쿼리가 강조 표시된 출력 데이터 집합 대화 상자](../images/ui/create-datasets/run-query.png)
 
 6. 쿼리 실행이 완료되면 다음 위치로 이동합니다. **[!UICONTROL 데이터 세트]** 생성한 데이터 세트를 보려는 경우 Platform UI 내에서 데이터 세트를 사용할 때 일반적인 작업을 수행하는 방법에 대한 자세한 내용은 [데이터 세트 UI 안내서](../../catalog/datasets/user-guide.md).
 

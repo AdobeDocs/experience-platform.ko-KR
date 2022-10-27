@@ -5,9 +5,9 @@ title: Query Service 문제 해결 안내서
 topic-legacy: troubleshooting
 description: 이 문서에는 Query Service와 관련된 일반적인 질문과 대답이 포함되어 있습니다. 항목에는 데이터, 내보내기, 타사 도구 및 PSQL 오류가 포함됩니다.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 722d7144639d7280ef85c9bfc285e616e7d7fcce
+source-git-commit: 08272f72c71f775bcd0cd7fffcd2e4da90af9ccb
 workflow-type: tm+mt
-source-wordcount: '3755'
+source-wordcount: '3781'
 ht-degree: 1%
 
 ---
@@ -86,15 +86,15 @@ SELECT * FROM customers LIMIT 0;
 - Experience Platform에 로그인한 후 **[!UICONTROL 데이터 세트]** 로 이동할 UI의 왼쪽 탐색 영역에서 [!UICONTROL 데이터 세트] 대시보드 .
 - 데이터 세트 [!UICONTROL 찾아보기] 탭이 열립니다. 검색 창을 사용하여 사용 가능한 옵션을 세분화할 수 있습니다. 표시된 목록에서 데이터 세트를 선택합니다.
 
-![플랫폼 UI에 강조 표시된 데이터 세트.](./images/troubleshooting/dataset-selection.png)
+![검색 막대와 데이터 세트가 강조 표시된 Platform UI의 데이터 세트 대시보드.](./images/troubleshooting/dataset-selection.png)
 
-- 다음 [!UICONTROL 데이터 세트 활동] 화면이 나타납니다. 선택 [!UICONTROL 데이터 세트 미리 보기] xdm 스키마의 대화 상자를 열고 선택한 데이터 집합에서 병합된 데이터의 테이블 보기를 엽니다. 자세한 내용은 [데이터 세트 설명서 미리 보기](../catalog/datasets/user-guide.md#preview-a-dataset)
+- 다음 [!UICONTROL 데이터 세트 활동] 화면이 나타납니다. 선택 **[!UICONTROL 데이터 세트 미리 보기]** xdm 스키마의 대화 상자를 열고 선택한 데이터 집합에서 병합된 데이터의 테이블 보기를 엽니다. 자세한 내용은 [데이터 세트 설명서 미리 보기](../catalog/datasets/user-guide.md#preview-a-dataset)
 
-![병합된 데이터의 XDM 스키마 및 테이블 형식 보기입니다.](./images/troubleshooting/dataset-preview.png)
+![미리 보기 데이터 세트가 강조 표시된 데이터 세트 대시보드의 데이터 세트 활동 탭.](./images/troubleshooting/dataset-preview.png)
 
 - 스키마에서 필드를 선택하여 병합된 열에 해당 내용을 표시합니다. 열 이름은 페이지 오른쪽의 해당 컨텐츠 위에 표시됩니다. 이 데이터 세트를 쿼리하는 데 사용할 이 이름을 복사해야 합니다.
 
-![UI에서 강조 표시된 중첩 데이터 세트의 열 이름입니다.](./images/troubleshooting/column-name.png)
+![병합된 데이터의 XDM 스키마 및 테이블 형식 보기입니다. 중첩된 데이터 세트의 열 이름이 UI에서 강조 표시됩니다.](./images/troubleshooting/column-name.png)
 
 에 대한 자세한 내용은 설명서 를 참조하십시오 [중첩 데이터 구조를 사용한 작업 방법](./best-practices/nested-data-structures.md) 쿼리 편집기 또는 타사 클라이언트 사용.
 +++
@@ -119,12 +119,12 @@ SELECT * FROM customers LIMIT 0;
 - 다음으로 이동 [https://www.adobe.com/](https://www.adobe.com/) 참조하십시오.
 - 위쪽 탐색 막대의 오른쪽에서 을 선택합니다. **[!UICONTROL 로그인]**.
 
-![로그인이 강조 표시된 Adobe 웹 사이트입니다.](./images/troubleshooting/adobe-sign-in.png)
+![로그인 이 강조 표시된 Adobe 웹 사이트입니다.](./images/troubleshooting/adobe-sign-in.png)
 
 - Adobe 라이선스에 등록된 Adobe ID 및 암호를 사용하십시오.
 - 선택 **[!UICONTROL 도움말 및 지원]** 상단 탐색 막대에서 을 클릭합니다.
 
-![도움말 및 지원이 강조 표시된 위쪽 탐색 모음 드롭다운 메뉴](./images/troubleshooting/help-and-support.png)
+![도움말 및 지원, 엔터프라이즈 지원 및 연락처 기능이 강조 표시된 위쪽 탐색 모음 드롭다운 메뉴](./images/troubleshooting/help-and-support.png)
 
 다음을 포함하는 드롭다운 배너가 나타납니다 [!UICONTROL 도움말 및 지원] 섹션을 참조하십시오. 선택 **[!UICONTROL 문의]** Adobe 고객 지원 가상 도우미를 열려면 또는 **[!UICONTROL 엔터프라이즈 지원]** 대규모 조직을 위한 전담 도움말
 +++

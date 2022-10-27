@@ -2,9 +2,10 @@
 keywords: Experience Platform;홈;인기 항목;쿼리 서비스;쿼리 서비스;연결;쿼리 서비스에 연결;SSL;ssl;sslmode;
 title: 쿼리 서비스 SSL 옵션
 description: Adobe Experience Platform Query Service에 대한 타사 연결에 대한 SSL 지원 및 verify-full SSL 모드를 사용하여 연결하는 방법에 대해 알아봅니다.
-source-git-commit: 92dac8e75e1ddda860d255ce1b7d278041c89325
+exl-id: 41b0a71f-165e-49a2-8a7d-d809f5f683ae
+source-git-commit: 75e97efcb68439f1b837af93b62c96f43e5d7a31
 workflow-type: tm+mt
-source-wordcount: '905'
+source-wordcount: '903'
 ht-degree: 1%
 
 ---
@@ -32,8 +33,8 @@ ht-degree: 1%
 | `allow` | 부분 | 아니요 | 보안이 우선순위가 아니며, 속도가 빠르며 처리 오버헤드가 낮습니다. 이 모드는 서버에서 암호화를 고집하는 경우에만 작동합니다. |
 | `prefer` | 부분 | 아니요 | 암호화는 필요하지 않지만 서버에서 지원하는 경우 통신이 암호화됩니다. |
 | `require` | 예 | 아니요 | 모든 통신에서 암호화가 필요합니다. 올바른 서버에 연결하도록 네트워크를 신뢰할 수 있습니다. 서버 SSL 인증서 유효성 검사가 필요하지 않습니다. |
-| `verify-ca` | 예 | CA 정책에 따라 다릅니다 | 모든 통신에서 암호화가 필요합니다. 데이터를 공유하려면 먼저 서버 유효성 검사가 필요합니다. 이렇게 하려면 PostgreSQL 홈 디렉터리에서 루트 인증서를 설정해야 합니다. [자세한 내용은 아래에 나와 있습니다](#instructions) |
-| `verify-full` | 예 | 예 | 모든 통신에서 암호화가 필요합니다. 데이터를 공유하려면 먼저 서버 유효성 검사가 필요합니다. 이렇게 하려면 PostgreSQL 홈 디렉터리에서 루트 인증서를 설정해야 합니다. [자세한 내용은 아래에 나와 있습니다](#instructions). |
+| `verify-ca` | 예 | CA 정책에 따라 다릅니다 | 모든 통신에서 암호화가 필요합니다. 데이터를 공유하려면 먼저 서버 유효성 검사가 필요합니다. 이렇게 하려면 루트 인증서를 [!DNL PostgreSQL] 홈 디렉토리. [자세한 내용은 아래에 나와 있습니다](#instructions) |
+| `verify-full` | 예 | 예 | 모든 통신에서 암호화가 필요합니다. 데이터를 공유하려면 먼저 서버 유효성 검사가 필요합니다. 이렇게 하려면 루트 인증서를 [!DNL PostgreSQL] 홈 디렉토리. [자세한 내용은 아래에 나와 있습니다](#instructions). |
 
 >[!NOTE]
 >

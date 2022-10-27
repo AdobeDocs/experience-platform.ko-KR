@@ -3,9 +3,9 @@ keywords: Experience Platform;쿼리 서비스;쿼리 서비스;중첩된 데이
 title: Query Service에서 중첩된 데이터 구조 작업
 description: 이 문서에서는 CTAS 및 INSERT INTO 문을 사용하여 중첩된 데이터 필드를 처리하고 변형하는 작업 예를 제공합니다.
 exl-id: 593379fb-88ad-4b14-8d2e-aa6d18129974
-source-git-commit: b2b292dba0cf9ab9adbdff26aa61ef5a2cd5fe86
+source-git-commit: 9c450f340706040593dfea5292702c4b00dd9852
 workflow-type: tm+mt
-source-wordcount: '796'
+source-wordcount: '795'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 Adobe Experience Platform 쿼리 서비스는 중첩된 데이터 필드 사용을 지원합니다. 엔터프라이즈 데이터 구조의 복잡성으로 인해 이러한 데이터를 변환하거나 처리할 수 있습니다. 이 문서에서는 중첩 데이터 구조를 포함하여 복잡한 데이터 유형을 사용하여 데이터 세트를 생성, 처리 또는 변환하는 방법에 대한 예를 제공합니다.
 
-쿼리 서비스는 Experience Platform에서 관리하는 모든 데이터 세트에 대해 SQL 쿼리를 실행할 수 있는 PostgreSQL 인터페이스를 제공합니다. 플랫폼은 구조체, 배열, 맵, 깊이 중첩된 구조체, 배열 및 맵과 같은 테이블 열에 기본 또는 복잡한 데이터 형식을 사용할 수 있도록 지원합니다. 또한 데이터 세트에는 열 데이터 유형이 중첩된 구조의 배열처럼 복잡할 수 있는 중첩 구조나 키-값 쌍의 값이 여러 중첩 수준이 있는 구조가 될 수 있는 맵 맵을 포함할 수 있습니다.
+쿼리 서비스에서는 [!DNL PostgreSQL] Experience Platform에서 관리하는 모든 데이터 세트에 대해 SQL 쿼리를 실행하는 인터페이스. 플랫폼은 구조체, 배열, 맵, 깊이 중첩된 구조체, 배열 및 맵과 같은 테이블 열에 기본 또는 복잡한 데이터 형식을 사용할 수 있도록 지원합니다. 또한 데이터 세트에는 열 데이터 유형이 중첩된 구조의 배열처럼 복잡할 수 있는 중첩 구조나 키-값 쌍의 값이 여러 중첩 수준이 있는 구조가 될 수 있는 맵 맵을 포함할 수 있습니다.
 
 ## 시작하기
 

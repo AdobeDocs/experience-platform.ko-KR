@@ -5,9 +5,9 @@ title: Experience Platform UI 개요
 topic-legacy: ui guide
 description: Adobe Experience Platform
 exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
-source-git-commit: 769e8e6e5d159254d34ad1d3e5e468c3b0bca10b
+source-git-commit: 9c450f340706040593dfea5292702c4b00dd9852
 workflow-type: tm+mt
-source-wordcount: '1812'
+source-wordcount: '1811'
 ht-degree: 1%
 
 ---
@@ -154,7 +154,7 @@ Adobe Experience Platform에 로그인하면 [!UICONTROL 홈] 페이지, [지표
 
 다음 **[!UICONTROL 데이터 세트]** 섹션에서 데이터 세트를 만들고 관리할 수 있습니다. 데이터 세트에 대한 자세한 내용은 [데이터 세트 사용 안내서](../catalog/datasets/user-guide.md).
 
-다음 **[!UICONTROL 쿼리]** 섹션에서 쿼리를 만들고 관리하고 Adobe Experience Platform Query Service에서 만든 SQL 쿼리를 기록하고 PostgreSQL 자격 증명을 볼 수 있습니다. 쿼리에 대한 자세한 내용은 [Query Service 사용 안내서](../query-service/ui/overview.md).
+다음 **[!UICONTROL 쿼리]** 섹션을 통해 쿼리를 만들고 관리하고 Adobe Experience Platform Query Service에서 만든 SQL 쿼리를 기록하고 [!DNL PostgreSQL] 자격 증명. 쿼리에 대한 자세한 내용은 [Query Service 사용 안내서](../query-service/ui/overview.md).
 
 다음 **[!UICONTROL 모니터링]** 섹션에서 일괄 처리 및 스트리밍 수집을 모니터링할 수 있습니다. 모니터링에 대한 자세한 내용은 [데이터 수집 모니터링 사용 안내서](../ingestion/quality/monitor-data-ingestion.md).
 

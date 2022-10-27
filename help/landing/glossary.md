@@ -5,9 +5,9 @@ title: Adobe Experience Platform 용어
 topic-legacy: getting started
 description: Experience Platform의 중요한 용어에 대한 용어집입니다.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: b9b33a6c1df0810db32f3253205221fed8957dd5
 workflow-type: tm+mt
-source-wordcount: '7436'
+source-wordcount: '7435'
 ht-degree: 0%
 
 ---
@@ -92,7 +92,7 @@ ht-degree: 0%
 
 **클래스**: XDM(Experience Data Model)에서 클래스는 스키마를 만드는 데 사용되는 가장 작은 필드 집합을 정의하고 스키마가 나타내는 비즈니스 개체의 기본 동작을 정의합니다.
 
-**클라이언트**: 클라이언트는 에 연결되는 외부 도구 또는 애플리케이션입니다 [!DNL Query Service] PostgreSQL 프로토콜 또는 HTTP API를 통해 지원됩니다.
+**클라이언트**: 클라이언트는 에 연결되는 외부 도구 또는 애플리케이션입니다 [!DNL Query Service] via [!DNL PostgreSQL] 프로토콜 또는 HTTP API.
 
 **컬렉션**: in [!DNL Offer Decisioning], 컬렉션은 오퍼의 카테고리와 같이 마케터가 정의한 사전 정의된 조건을 기반으로 오퍼의 하위 집합입니다.
 

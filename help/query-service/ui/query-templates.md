@@ -1,7 +1,8 @@
 ---
 title: 쿼리 템플릿
 description: 쿼리 템플릿은 다른 사용자가 시간과 노력을 절약하기 위해 다시 사용할 수 있는 재사용 가능한 저장된 SQL 쿼리입니다. 쿼리 편집기 또는 쿼리 서비스 API를 사용하여 만들 수 있으며 모든 Experience Platform 데이터 세트에서 사용할 수 있습니다.
-source-git-commit: 5ed822ec16e8e8d38e93370440242ec4c1c01320
+exl-id: e74d058f-bb89-45ed-83cc-2e3a33401270
+source-git-commit: e4526b515dc6f480136615f3aa78f38f3e43a60f
 workflow-type: tm+mt
 source-wordcount: '436'
 ht-degree: 1%
@@ -26,9 +27,11 @@ Query Service API에 POST 요청을 수행하여 두 가지 방법을 통해 쿼
 
 쿼리 편집기를 사용하여 다음을 수행하는 방법에 대한 지침은 설명서를 참조하십시오 [쓰기](./user-guide.md#query-authoring) 및 [쿼리 저장](./user-guide.md#saving-queries). 쿼리를 이름을 지정하고 저장하면 [!UICONTROL 찾아보기] 탭.
 
-플랫폼 UI의 쿼리 작업 영역에서 을 선택합니다 **[!UICONTROL 찾아보기]** 을 클릭하여 사용 가능한 저장된 질의 목록을 표시합니다.
+플랫폼 UI의 쿼리 작업 영역에서 을 선택합니다 **[!UICONTROL 템플릿]** 을 클릭하여 사용 가능한 저장된 질의 목록을 표시합니다.
 
-![찾아보기 탭이 강조 표시된 질의 작업 영역입니다.](../images/ui/query-templates/query-templates.png)
+<!-- This may need updating idf the Schedule are added to a separate Tab -->
+
+![템플릿 탭이 강조 표시된 질의 작업 영역입니다.](../images/ui/query-templates/query-templates.png)
 
 관련 템플릿 정보를 찾으려면 사용 가능한 목록에서 쿼리 템플릿을 선택하여 세부 정보 패널을 엽니다.
 
