@@ -5,9 +5,9 @@ title: UI에서 열거형 필드 및 제안 값 정의
 description: Experience Platform 사용자 인터페이스에서 문자열 필드에 대한 열거형 및 제안 값을 정의하는 방법을 알아봅니다.
 topic-legacy: user guide
 exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
-source-git-commit: 1c1797a01a0a4e2cd355399d3f913cb81adf9006
+source-git-commit: 89ada47cb6e0b204d8f2f19e7e9b6f31bf347964
 workflow-type: tm+mt
-source-wordcount: '1217'
+source-wordcount: '1257'
 ht-degree: 0%
 
 ---
@@ -28,6 +28,10 @@ XDM(Experience Data Model)에서 사전 정의된 허용 또는 제안 값 세�
 When [새 필드 정의](./overview.md#define) Adobe Experience Platform 사용자 인터페이스에서 유형을 [!UICONTROL 문자열]를 정의할 수 있는 옵션이 제공됩니다 [enum](#enum) 또는 [제안된 값](#suggested-values) 해당 필드에 대해 입력합니다.
 
 ![UI의 문자열 필드에 대해 활성화된 열거형 및 제안된 값 옵션을 보여주는 이미지](../../images/ui/fields/enum/enum-options-selected.png)
+
+이 문서에서는 [!UICONTROL 스키마] UI 작업 공간. UI에서 구성 방법 및 다운스트림 효과를 포함하여 열거형 및 제안된 값에 대한 간단한 개요를 보려면 다음 비디오를 시청하십시오.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3409501/?quality=12&learn=on)
 
 ## 열거형 정의 {#enum}
 
