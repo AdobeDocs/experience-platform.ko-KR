@@ -4,10 +4,10 @@ title: Segmentation Service API 안내서
 topic-legacy: guide
 description: 세그먼테이션 서비스 API를 사용하여 개발자는 Adobe Experience Platform에서 세그먼테이션 작업을 프로그래밍 방식으로 관리할 수 있습니다. 이 안내서를 따라 API를 사용하여 주요 작업을 수행하는 방법에 대해 알아보십시오.
 exl-id: cebecaf3-9746-4b0b-9c50-11789fba66c3
-source-git-commit: b48ead4255d50585cd315436ccb9727d86142d4c
+source-git-commit: 6133c3127aaf10243d5472540c29125155c99d7b
 workflow-type: tm+mt
-source-wordcount: '564'
-ht-degree: 2%
+source-wordcount: '497'
+ht-degree: 3%
 
 ---
 
@@ -19,11 +19,11 @@ ht-degree: 2%
 
 사용 가능한 모든 끝점 및 CRUD 작업을 보려면 [세그먼테이션 서비스 API 참조](https://www.adobe.io/experience-platform-apis/references/segmentation/).
 
-## Audiences
+<!-- ## Audiences
 
-대상은 유사한 행동 및/또는 특성을 공유하는 사람들의 컬렉션입니다. Platform 또는 외부 소스에서 생성할 수 있습니다. 를 사용할 수 있습니다 `/audiences` 모든 대상을 검색하거나, 새 대상을 만들고, 특정 대상의 세부 사항을 검색하거나, 특정 대상을 업데이트하거나, 특정 대상을 삭제하는 종단점입니다.
+Audiences are a collection of people who share similar behaviors and/or characteristics. These can be generated either by using Platform or from external sources. You can use the `/audiences` endpoint to retrieve all audiences, create a new audience, retrieve details of a specific audience, update a specific audience, or delete a specific audience.
 
-이 종단점 사용에 대한 자세한 내용은 [audience endpoint 안내서](./audiences.md).
+For more information on using this endpoint, please read the [audiences endpoint guide](./audiences.md). -->
 
 ## 작업 내보내기
 
