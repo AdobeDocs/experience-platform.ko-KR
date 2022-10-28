@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform의 고객 관리 키
 description: Adobe Experience Platform에 저장된 데이터에 대해 고유한 암호화 키를 설정하는 방법을 알아봅니다.
-source-git-commit: b778d5c81512e538f08989952f8727d1d694f66c
+source-git-commit: 02898f5143a7f4f48c64b22fb3c59a072f1e957d
 workflow-type: tm+mt
-source-wordcount: '1501'
+source-wordcount: '1493'
 ht-degree: 0%
 
 ---
@@ -24,14 +24,14 @@ CMK는 Adobe의 Healthcare Shield 및 Privacy and Security Shield 오퍼링에 �
 
 프로세스는 다음과 같습니다.
 
-1. [만들기 [!DNL Microsoft Azure] 주요 저장소](#create-key-vault), 그런 다음 [암호화 키 생성](#generate-a-key) (조직의 정책에 따라) 최종적으로 Adobe과 공유될 수 있습니다.
-1. 에 API 호출 사용 [CMK 앱 등록](#register-app) 사용 [!DNL Azure] 임차인.
-1. [CMK 앱에 대한 서비스 주도자 할당](#assign-to-role) 키 저장소에 적절한 역할을 합니다.
-1. 에 API 호출 사용 [암호화 키 ID를 Adobe에 보내기](#send-to-adobe).
+1. [구성 [!DNL Microsoft Azure] 주요 저장소](#create-key-vault) 조직의 정책에 따라 [암호화 키 생성](#generate-a-key) 궁극적으로 Adobe과 공유됩니다.
+1. 에 API 호출 사용 [cmk 앱 설정](#register-app) 사용 [!DNL Azure] 임차인.
+1. 에 API 호출 사용 [암호화 키 ID를 Adobe에 보내기](#send-to-adobe) 및에 해당 기능에 대한 활성화 프로세스를 시작합니다.
+1. [구성 상태를 확인합니다](#check-status) cmk가 활성화되어 있는지 확인하려면
 
-설정 프로세스가 완료되면 모든 샌드박스에서 Platform으로 온보딩되는 모든 데이터는 [!DNL Azure] 키 설정, [[!DNL Cosmos DB]](https://docs.microsoft.com/en-us/azure/cosmos-db/) 및 [[!DNL Data Lake Storage]](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction) 리소스 를 참조하십시오. CMK를 사용하려면 다음을 활용합니다 [!DNL Microsoft Azure] 해당 기능의 일부일 수 있는 기능 [공개 미리 보기 프로그램](https://azure.microsoft.com/en-ca/support/legal/preview-supplemental-terms/).
+설정 프로세스가 완료되면 모든 샌드박스에서 Platform으로 온보딩되는 모든 데이터는 [!DNL Azure] 키 설정입니다. CMK를 사용하려면 다음을 활용합니다 [!DNL Microsoft Azure] 해당 기능의 일부일 수 있는 기능 [공개 미리 보기 프로그램](https://azure.microsoft.com/en-ca/support/legal/preview-supplemental-terms/).
 
-## 만들기 [!DNL Azure] 주요 저장소 {#create-key-vault}
+## 구성 [!DNL Azure] 주요 저장소 {#create-key-vault}
 
 CMK는 [!DNL Microsoft Azure] 키 저장소. 시작하려면 다음을 수행해야 합니다 [!DNL Azure] 새 엔터프라이즈 계정을 만들거나 기존 엔터프라이즈 계정을 사용하고 아래 단계에 따라 키 저장소를 만듭니다.
 
@@ -65,7 +65,7 @@ CMK는 [!DNL Microsoft Azure] 키 저장소. 시작하려면 다음을 수행해
 
 ![주요 자격 증명 모음의 기본 구성](../images/governance-privacy-security/customer-managed-keys/finish-creation.png)
 
-## 네트워킹 옵션 구성
+### 네트워킹 옵션 구성
 
 키 저장소가 특정 가상 네트워크에 대한 공개 액세스를 제한하거나 공개 액세스를 완전히 비활성화하도록 구성된 경우 Microsoft에 방화벽 예외를 부여해야 합니다.
 
@@ -73,7 +73,7 @@ CMK는 [!DNL Microsoft Azure] 키 저장소. 시작하려면 다음을 수행해
 
 ![주요 자격 증명 모음의 기본 구성](../images/governance-privacy-security/customer-managed-keys/networking.png)
 
-## 키 생성 {#generate-a-key}
+### 키 생성 {#generate-a-key}
 
 키 저장소를 만들면 새 키를 생성할 수 있습니다. 로 이동합니다 **[!DNL Keys]** 탭을 선택하고 **[!DNL Generate/Import]**.
 
@@ -93,7 +93,7 @@ CMK는 [!DNL Microsoft Azure] 키 저장소. 시작하려면 다음을 수행해
 
 ![키 추가됨](../images/governance-privacy-security/customer-managed-keys/key-added.png)
 
-## CMK 앱 등록 {#register-app}
+## CMK 앱 설정 {#register-app}
 
 키 저장소를 구성했으면 다음 단계는 다음 단계에 연결할 CMK 애플리케이션에 등록하는 것입니다 [!DNL Azure] 임차인.
 
@@ -135,7 +135,7 @@ curl -X GET \
 
 ![권한 요청 수락](../images/governance-privacy-security/customer-managed-keys/app-permission.png)
 
-## 역할에 CMK 앱 할당 {#assign-to-role}
+### 역할에 CMK 앱 할당 {#assign-to-role}
 
 인증 프로세스를 완료한 후 다음 위치로 돌아갑니다. [!DNL Azure] 키 저장소 및 선택 **[!DNL Access control]** 을 클릭합니다. 여기에서 을 선택합니다. **[!DNL Add]** 후 **[!DNL Add role assignment]**.
 
@@ -151,7 +151,7 @@ curl -X GET \
 >
 >목록에서 애플리케이션을 찾을 수 없는 경우 서비스 주도자가 테넌트에 허용되지 않습니다. 다음 작업을 수행하십시오. [!DNL Azure] 관리자 또는 담당자가 올바른 권한을 가지고 있는지 확인합니다.
 
-## Adobe으로 키 URI 보내기 {#send-to-adobe}
+## Experience Platform에서 암호화 키 구성 활성화 {#send-to-adobe}
 
 CMK 앱을 설치한 후 [!DNL Azure]를 입력하면 암호화 키 식별자를 Adobe으로 보낼 수 있습니다. 선택 **[!DNL Keys]** 왼쪽 탐색에서 를 클릭하고 전송할 키 이름이 옵니다.
 
@@ -221,7 +221,7 @@ curl -X POST \
 
 작업은 몇 분 내에 처리를 완료해야 합니다.
 
-### 구성 상태 확인 {#check-status}
+## 구성 상태 확인 {#check-status}
 
 구성 요청의 상태를 확인하기 위해 GET 요청을 수행할 수 있습니다.
 
