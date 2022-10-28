@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: 이 자습서에서는 소스 커넥터 및 API를 사용하여 타사 클라우드 저장소에서 데이터를 검색하고 Platform으로 가져오는 단계를 설명합니다.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: 1f492fd48de304c70fdd8beb477b8a22369b853a
+source-git-commit: e4853c61848bec20eb8a6902365b97c3a9d0b3b3
 workflow-type: tm+mt
-source-wordcount: '1692'
+source-wordcount: '1736'
 ht-degree: 1%
 
 ---
@@ -146,6 +146,47 @@ curl -X POST \
       "params": {
           "path": "/acme/summerCampaign/*premium*.csv",
           "type": "folder"
+      },
+      "connectionSpec": {
+          "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
+          "version": "1.0"
+      }
+  }'
+```
+
+### 데이터를 재귀적으로 수집하도록 소스 연결 구성
+
+소스 연결을 만들 때 `recursive` 깊이 중첩된 폴더에서 데이터를 수집할 매개 변수입니다.
+
+**API 형식**
+
+```http
+POST /sourceConnections
+```
+
+**요청**
+
+아래 예에서는 `recursive: true` 매개 변수 정보 [!DNL Flow Service] 수집 프로세스 중에 모든 하위 폴더를 재귀적으로 읽습니다.
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Cloud Storage source connection",
+      "description: "Source connection for a cloud storage source with recursive ingestion",
+      "baseConnectionId": "1f164d1b-debe-4b39-b4a9-df767f7d6f7c",
+      "data": {
+          "format": "delimited"
+      },
+      "params": {
+          "path": "/acme/summerCampaign/customers/premium/buyers/recursive",
+          "type": "folder",
+          "recursive": true
       },
       "connectionSpec": {
           "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
