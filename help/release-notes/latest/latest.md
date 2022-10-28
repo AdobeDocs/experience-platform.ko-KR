@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform에 대한 최신 릴리스 노트입니다.
-source-git-commit: 021a0833941f250475786bb8629542c50229b238
+source-git-commit: d6858ab1389a0b5cfadc9f79b20b80c1c36a114e
 workflow-type: tm+mt
-source-wordcount: '921'
-ht-degree: 6%
+source-wordcount: '988'
+ht-degree: 5%
 
 ---
 
@@ -54,6 +54,7 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 | ----------- | ----------- |
 | [[!DNL Line]](../../destinations/catalog/mobile-engagement/line.md) | Line 은 사용자, 서비스 및 정보를 연결하는 인기 있는 통신 플랫폼으로, 채팅 앱에서 엔터테인먼트, 소셜 및 일상적인 활동을 위한 허브로 성장했습니다. |
 | [[!DNL Microsoft Dynamics 365]](../../destinations/catalog/crm/microsoft-dynamics-365.md) | Microsoft Dynamics 365는 ERP(Enterprise Resource Planning)와 CRM(Customer Relationship Management)을 생산성 애플리케이션 및 AI 도구와 결합하여 종단 간 더욱 원활하고 제어된 운영, 향상된 성장 가능성 및 비용 절감을 제공하는 클라우드 기반 비즈니스 애플리케이션 플랫폼입니다. |
+| [[!DNL (Beta) Adobe Commerce]](../../destinations/catalog/personalization/adobe-commerce.md) | 다음 [!DNL (Beta) Adobe Commerce] 대상 커넥터를 사용하면 하나 이상의 Real-Time CDP 세그먼트를 선택하여 원하는 위치에 활성화할 수 있습니다 [!DNL Adobe Commerce] 고객을 위한 동적 개인화된 경험을 제공하기 위한 계정입니다. 내 [!DNL Adobe Commerce]그런 다음 이러한 Real-Time CDP 세그먼트를 선택하여 장바구니에서 &#39;buy 2 get 1 free&#39; 등의 고유한 오퍼를 개인화할 수 있습니다. Adobe Real-Time CDP 세그먼트에 맞게 사용자 지정된 프로모션 오퍼를 통해 대표 배너를 표시하고 제품 가격을 수정할 수도 있습니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
