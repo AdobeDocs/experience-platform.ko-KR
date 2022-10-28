@@ -1,26 +1,26 @@
 ---
 title: Adobe Experience Platform의 고객 관리 키
 description: Adobe Experience Platform에 저장된 데이터에 대해 고유한 암호화 키를 설정하는 방법을 알아봅니다.
-source-git-commit: 6fe0d72bcb3dbf1e1167f80724577ba3e0f741f4
+source-git-commit: b778d5c81512e538f08989952f8727d1d694f66c
 workflow-type: tm+mt
-source-wordcount: '1416'
+source-wordcount: '1501'
 ht-degree: 0%
 
 ---
 
 # Adobe Experience Platform의 고객 관리 키
 
-Adobe Experience Platform에 저장된 모든 데이터는 시스템 수준 키를 사용하여 나머지 위치에서 암호화됩니다. 플랫폼 위에 구축된 응용 프로그램을 사용하는 경우 대신 고유한 암호화 키를 사용하도록 선택할 수 있으므로 데이터 보안을 더욱 강화할 수 있습니다.
+Adobe Experience Platform에 저장된 데이터는 시스템 수준 키를 사용하여 나머지 위치에서 암호화됩니다. 플랫폼 위에 구축된 응용 프로그램을 사용하는 경우 대신 고유한 암호화 키를 사용하도록 선택할 수 있으므로 데이터 보안을 더욱 강화할 수 있습니다.
 
 이 문서에서는 Platform에서 고객 관리 키(CMK) 기능을 활성화하는 프로세스에 대해 설명합니다.
 
 ## 프로세스 요약
 
-CMK는 Adobe의 Healthcare Shield 및 Privacy and Security Shield 오퍼링에 포함되어 있습니다. 조직에서 이러한 서비스 중 하나를 구입한 후 기능을 설정하는 1회 프로세스를 시작할 수 있습니다.
+CMK는 Adobe의 Healthcare Shield 및 Privacy and Security Shield 오퍼링에 포함되어 있습니다. 조직에서 이러한 서비스 중 하나에 대한 라이선스를 구입한 후 기능을 설정하는 1회 프로세스를 시작할 수 있습니다.
 
 >[!WARNING]
 >
->CMK를 설정한 후에는 시스템 관리 키로 되돌릴 수 없습니다. 키 및 키 저장소를 [!DNL Azure] 데이터 액세스 권한을 상실하지 않도록 합니다.
+>CMK를 설정한 후에는 시스템 관리 키로 되돌릴 수 없습니다. 사용자는 키를 안전하게 관리하고 Key Vault, Key 및 CMK 앱에 대한 액세스를 제공할 책임이 있습니다 [!DNL Azure] 데이터 액세스 권한을 상실하지 않도록 합니다.
 
 프로세스는 다음과 같습니다.
 
@@ -29,7 +29,7 @@ CMK는 Adobe의 Healthcare Shield 및 Privacy and Security Shield 오퍼링에 �
 1. [CMK 앱에 대한 서비스 주도자 할당](#assign-to-role) 키 저장소에 적절한 역할을 합니다.
 1. 에 API 호출 사용 [암호화 키 ID를 Adobe에 보내기](#send-to-adobe).
 
-설정 프로세스가 완료되면 모든 샌드박스에서 Platform으로 온보딩되는 모든 데이터는 [!DNL Azure] 키 설정, [[!DNL Cosmos DB]](https://docs.microsoft.com/en-us/azure/cosmos-db/) 및 [[!DNL Data Lake Storage]](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction) 리소스 를 참조하십시오. CMK는 다음을 활용합니다 [!DNL Azure]s [공개 미리 보기 프로그램](https://azure.microsoft.com/en-ca/support/legal/preview-supplemental-terms/) 이를 가능하게 하기 위해
+설정 프로세스가 완료되면 모든 샌드박스에서 Platform으로 온보딩되는 모든 데이터는 [!DNL Azure] 키 설정, [[!DNL Cosmos DB]](https://docs.microsoft.com/en-us/azure/cosmos-db/) 및 [[!DNL Data Lake Storage]](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction) 리소스 를 참조하십시오. CMK를 사용하려면 다음을 활용합니다 [!DNL Microsoft Azure] 해당 기능의 일부일 수 있는 기능 [공개 미리 보기 프로그램](https://azure.microsoft.com/en-ca/support/legal/preview-supplemental-terms/).
 
 ## 만들기 [!DNL Azure] 주요 저장소 {#create-key-vault}
 
@@ -165,6 +165,10 @@ CMK 앱을 설치한 후 [!DNL Azure]를 입력하면 암호화 키 식별자를
 
 키 볼트(Vault) URI를 얻으면 POST 요청을 사용하여 CMK 구성 끝점으로 보낼 수 있습니다.
 
+>[!NOTE]
+>
+>키 자격 증명 모음 및 키 이름만 키 버전이 아니라 Adobe과 함께 저장됩니다.
+
 **요청**
 
 ```shell
@@ -265,6 +269,10 @@ curl -X GET \
 
 ## 다음 단계
 
-위의 단계를 완료하여 조직에 대해 CMK를 성공적으로 활성화했습니다. 이제 Platform으로 수집되는 모든 데이터는 암호화되어 사용자의 [!DNL Azure] 키 저장소. 데이터에 대한 플랫폼 액세스를 취소하려는 경우 내의 키 저장소에서 응용 프로그램과 연결된 사용자 역할을 제거할 수 있습니다 [!DNL Azure].
+위의 단계를 완료하여 조직에 대해 CMK를 성공적으로 활성화했습니다. 이제 Platform으로 수집되는 데이터는 암호화되어 사용자의 [!DNL Azure] 키 저장소. 데이터에 대한 플랫폼 액세스를 취소하려는 경우 내의 키 저장소에서 응용 프로그램과 연결된 사용자 역할을 제거할 수 있습니다 [!DNL Azure].
 
-애플리케이션에 대한 액세스를 비활성화한 후 Platform에서 더 이상 데이터에 액세스할 수 없는 데 2~24시간이 소요됩니다. 애플리케이션에 대한 액세스를 다시 활성화할 때 동일한 시간 범위가 데이터를 다시 사용할 수 있게 됩니다.
+애플리케이션에 대한 액세스를 비활성화한 후 몇 분에서 24시간 동안 Platform에서 더 이상 데이터를 액세스할 수 없게 됩니다. 애플리케이션에 대한 액세스를 다시 활성화할 때 동일한 시간 지연이 데이터를 다시 사용할 수 있게 됩니다.
+
+>[!WARNING]
+>
+>Key Vault, Key 또는 CMK 앱이 비활성화되어 Platform에서 더 이상 데이터에 액세스할 수 없으면 해당 데이터와 관련된 다운스트림 작업은 더 이상 수행할 수 없습니다. 구성을 변경하기 전에 데이터에 대한 플랫폼 액세스 취소로 인한 다운스트림 영향을 이해하십시오.
