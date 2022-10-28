@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Flow Service API를 사용하여 Adobe Experience Platform을 데이터 랜딩 영역에 연결하는 방법을 알아봅니다.
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
-source-git-commit: b98afad74ef45cf3fabb9fa1ced283b2c768cef8
+source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
 workflow-type: tm+mt
-source-wordcount: '1222'
+source-wordcount: '1224'
 ht-degree: 4%
 
 ---
@@ -72,7 +72,7 @@ curl -X GET \
 | 속성 | 설명 |
 | --- | --- |
 | `containerName` | 검색한 랜딩 영역의 이름입니다. |
-| `containerTTL` | 랜딩 영역 내의 데이터에 적용되는 Time-to-Live 설정입니다. 주어진 랜딩 영역 내의 모든 항목은 7일 후 삭제됩니다. |
+| `containerTTL` | 랜딩 영역 내의 데이터에 적용되는 만료 시간(일)입니다. 주어진 랜딩 영역 내의 모든 항목은 7일 후 삭제됩니다. |
 
 ## 검색 [!DNL Data Landing Zone] 자격 증명
 

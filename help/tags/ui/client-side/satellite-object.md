@@ -2,7 +2,7 @@
 title: 위성 개체 참조
 description: 클라이언트측 _satellite 개체 및 태그를 사용하여 수행할 수 있는 다양한 기능에 대해 알아봅니다.
 exl-id: f8b31c23-409b-471e-bbbc-b8f24d254761
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
 workflow-type: tm+mt
 source-wordcount: '1290'
 ht-degree: 42%
@@ -156,7 +156,7 @@ _satellite.cookie.set(name: string, value: string[, attributes: Object])
 
 >[!NOTE]
 >
->오래된 [`setCookie`](#setCookie) 쿠키를 설정하는 메서드에서 이 함수 호출에 대한 세 번째(선택 사항) 인수는 쿠키의 TTL(time-to-live)을 나타내는 정수입니다. 이 새 메서드에서는 &quot;attributes&quot; 개체가 대신 세 번째 인수로 수락됩니다. 새 메서드를 사용하여 쿠키에 대한 TTL을 설정하려면 다음을 제공해야 합니다 `expires` 속성 개체의 속성을 원하는 값으로 설정합니다. 이것은 아래 예제에 나와 있습니다.
+>오래된 [`setCookie`](#setCookie) 쿠키를 설정하는 방법으로서, 이 함수 호출에 대한 세 번째(선택 사항) 인수는 쿠키의 만료 시간을 일 단위로 나타내는 정수입니다. 이 새 메서드에서는 &quot;attributes&quot; 개체가 대신 세 번째 인수로 수락됩니다. 새 메서드를 사용하여 쿠키에 대한 만료를 설정하려면 다음을 제공해야 합니다 `expires` 속성 개체의 속성을 원하는 값으로 설정합니다. 이것은 아래 예제에 나와 있습니다.
 
 **예**
 

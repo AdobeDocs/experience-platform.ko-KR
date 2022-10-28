@@ -5,10 +5,10 @@ title: 데이터 모델링 우수 사례
 topic-legacy: overview
 description: 이 문서에서는 Adobe Experience Platform에서 사용할 스키마를 구성하기 위한 XDM(Experience Data Model) 스키마와 빌딩 블록, 원칙 및 모범 사례를 소개합니다.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: c5ab8c12c4c5bd14d3504d60c654105ad36effe6
+source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
 workflow-type: tm+mt
-source-wordcount: '2698'
-ht-degree: 1%
+source-wordcount: '2699'
+ht-degree: 2%
 
 ---
 
@@ -175,7 +175,7 @@ ERD에서 확립된 카디널리티브는 개체를 분류하는 방법에 대�
 **단점**
 
 * 세그먼테이션은 원래 의도한 사용 사례에 대해 더 복잡해집니다(고객의 가장 최근 구독 상태 확인). 이제 세그먼트에 고객의 상태를 확인하기 위해 고객에 대한 마지막 구독 이벤트에 플래그를 지정하는 추가 로직이 필요합니다.
-* 이벤트는 자동으로 만료되고 프로필 저장소에서 제거될 위험이 높습니다. 다음 안내서를 참조하십시오. [프로필 TTL](../../profile/apply-ttl.md) 추가 정보.
+* 이벤트는 자동으로 만료되고 프로필 저장소에서 제거될 위험이 높습니다. 다음 안내서를 참조하십시오. [경험 이벤트 만료](../../profile/event-expirations.md) 추가 정보.
 
 ## 분류된 엔터티를 기반으로 스키마 만들기
 

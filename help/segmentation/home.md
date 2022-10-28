@@ -5,9 +5,9 @@ title: 세그먼테이션 서비스 개요
 topic-legacy: overview
 description: Adobe Experience Platform 세그멘테이션 서비스 및 플랫폼 생태계에서 수행하는 역할에 대해 알아봅니다.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: 52197a6c009fb5b0b6037a4fef3c98ad7c327e2e
+source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
 workflow-type: tm+mt
-source-wordcount: '1632'
+source-wordcount: '1635'
 ht-degree: 0%
 
 ---
@@ -44,7 +44,7 @@ API를 사용하여 세그먼트 정의 작성에 대한 자세한 내용은 [ap
 >
 >스키마가 확장되는 경우 이후의 모든 업로드는 그에 따라 새로 추가된 필드를 업데이트해야 합니다. 사용자 지정에 대한 자세한 정보 [!DNL Experience Data Model] (XDM), [스키마 편집기 자습서](../xdm/tutorials/create-schema-ui.md).
 >
->또한 데이터 세트에서 TTL(time-to-live)이 활성화된 경우 생성된 세그먼트의 멤버십에 영향을 줄 수 있습니다. TTL 및 세그먼테이션에 영향을 줄 수 있는 방법에 대한 자세한 내용은 [프로필 서비스 TTL 안내서](../profile/apply-ttl.md).
+>또한 데이터 세트에서 경험 이벤트 만료 값이 활성화된 경우 생성된 세그먼트의 멤버십에 영향을 줄 수 있습니다. 다음 안내서를 읽어 주십시오 [경험 이벤트 만료](../profile/event-expirations.md) 이 기능이 세그멘테이션에 어떻게 영향을 줄 수 있는지에 대해 자세히 알아보십시오.
 
 ## 세그먼트 평가 {#evaluate-segments}
 

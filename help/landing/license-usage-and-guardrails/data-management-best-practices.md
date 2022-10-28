@@ -3,9 +3,9 @@ keywords: Experience Platform;홈;인기 항목;데이터 관리;라이선스 �
 title: 데이터 관리 라이선스 자격 모범 사례
 description: Adobe Experience Platform을 사용하여 라이선스 권한을 보다 효율적으로 관리하는 데 사용할 수 있는 모범 사례 및 도구에 대해 알아봅니다.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 9a8e247784dc51d7dc667b7467042399df700b3c
 workflow-type: tm+mt
-source-wordcount: '2529'
+source-wordcount: '2134'
 ht-degree: 2%
 
 ---
@@ -88,12 +88,12 @@ Platform에서 하나 이상의 시스템으로 데이터를 수집할 수 있�
 
 ### 어떤 데이터를 보관해야 합니까?
 
-데이터 수집 필터와 만료 규칙(Time-To-Live &quot;TTL&quot;이라고도 함)을 모두 적용하여 사용 사례에서 더 이상 사용되지 않는 데이터를 제거할 수 있습니다. 일반적으로 행동 데이터(예: Analytics 데이터)는 레코드 데이터(예: CRM 데이터)보다 훨씬 더 많은 저장소를 사용합니다. 예를 들어, 많은 Platform 사용자가 레코드 데이터와 비교하여 동작 데이터만으로 채워지는 프로필의 최대 90% 이상을 가지고 있습니다. 따라서 라이선스 권한 내에서 규정을 준수하려면 행동 데이터를 관리하는 것이 중요합니다.
+데이터 수집 필터와 만료 규칙을 모두 적용하여 사용 사례에서 더 이상 사용되지 않는 데이터를 제거할 수 있습니다. 일반적으로 행동 데이터(예: Analytics 데이터)는 레코드 데이터(예: CRM 데이터)보다 훨씬 더 많은 저장소를 사용합니다. 예를 들어, 많은 Platform 사용자가 레코드 데이터와 비교하여 동작 데이터만으로 채워지는 프로필의 최대 90% 이상을 가지고 있습니다. 따라서 라이선스 권한 내에서 규정을 준수하려면 행동 데이터를 관리하는 것이 중요합니다.
 
 라이선스 사용 권한 내에서 유지할 수 있는 다양한 도구가 있습니다.
 
 * [수집 필터](#ingestion-filters)
-* [프로필 서비스 TTL](#profile-service)
+* [프로필 저장소](#profile-service)
 
 ### 수집 필터 {#ingestion-filters}
 
@@ -109,9 +109,7 @@ Platform에서 하나 이상의 시스템으로 데이터를 수집할 수 있�
 
 {style=&quot;table-layout:auto&quot;}
 
-### 프로필 서비스 {#profile-service}
-
-프로필 서비스 TTL(time-to-live) 기능을 사용하면 프로필 저장소의 데이터에 TTL을 적용할 수 있습니다. 이렇게 하면 시간이 지남에 따라 값이 감소된 데이터를 자동으로 제거할 수 있습니다.
+### 프로필 저장소 {#profile-service}
 
 프로필 저장소는 다음 구성 요소로 구성됩니다.
 
@@ -124,53 +122,20 @@ Platform에서 하나 이상의 시스템으로 데이터를 수집할 수 있�
 
 {style=&quot;table-layout:auto&quot;}
 
+
+
 #### 프로필 저장소 구성 보고서
 
-프로필 저장소의 구성을 이해하는 데 도움이 되는 많은 보고서를 사용할 수 있습니다. 이러한 보고서는 프로필 TTL을 설정하는 방법 및 위치를 파악하여 라이선스 사용을 보다 효과적으로 최적화하는 데 도움이 됩니다.
+프로필 저장소의 구성을 이해하는 데 도움이 되는 많은 보고서를 사용할 수 있습니다. 이러한 보고서는 라이선스 사용을 더 잘 최적화하기 위해 경험 이벤트 만료를 설정하는 방법 및 위치에 대한 올바른 결정을 내리는 데 도움이 됩니다.
 
-* **데이터 집합 Overlap Report API**: 대응 가능 대상에 가장 많이 기여하는 데이터 세트를 표시합니다. 이 보고서를 사용하여 어떤 [!DNL ExperienceEvent] TTL을 설정할 데이터 세트입니다. 다음에서 자습서를 참조하십시오. [데이터 집합 중복 보고서 생성](../../profile/tutorials/dataset-overlap-report.md) 추가 정보.
+* **데이터 집합 Overlap Report API**: 대응 가능 대상에 가장 많이 기여하는 데이터 세트를 표시합니다. 이 보고서를 사용하여 어떤 [!DNL ExperienceEvent] 에 대한 만료를 설정하는 데이터 세트입니다. 다음에서 자습서를 참조하십시오. [데이터 집합 중복 보고서 생성](../../profile/tutorials/dataset-overlap-report.md) 추가 정보.
 * **ID Overlap Report API**: 대응 가능 대상에 가장 많이 기여하는 ID 네임스페이스를 노출합니다. 다음에서 자습서를 참조하십시오. [id 중복 보고서 생성](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report) 추가 정보.
-<!-- * **Unknown Profiles Report API**: Exposes the impact of applying pseudonymous TTL for different time thresholds. You can use this report to identify which pseudonymous TTL threshold to apply. See the tutorial on [generating the unknown profiles report](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) for more information.
+<!-- * **Unknown Profiles Report API**: Exposes the impact of applying pseudonymous expirations for different time thresholds. You can use this report to identify which pseudonymous expirations threshold to apply. See the tutorial on [generating the unknown profiles report](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) for more information.
 -->
 
-#### [!DNL ExperienceEvent] 데이터 집합 TTL {#dataset-ttl}
+#### 경험 이벤트 만료 {#event-expirations}
 
-프로필 사용 데이터 세트에 TTL을 적용하여 사용 사례에 더 이상 중요하지 않은 행동 데이터를 프로필 저장소에서 제거할 수 있습니다. TTL이 프로필 사용 데이터 세트에 적용되면 Platform은 두 부분으로 구성된 프로세스를 통해 더 이상 필요하지 않은 데이터를 자동으로 제거합니다.
-
-* 앞으로 이동하는 모든 새 데이터에는 수집 시 적용되는 TTL 만료 값이 있습니다.
-* 모든 기존 데이터는 1회 채우기 시스템 작업의 일부로 적용된 TTL 만료 값을 갖습니다.
-
-각 이벤트의 TTL 값이 이벤트 타임스탬프에서 나올 수 있습니다. TTL 만료 값보다 오래된 모든 이벤트는 시스템 작업이 실행될 때 즉시 삭제됩니다. 다른 모든 이벤트는 이벤트 타임스탬프에서 지정된 TTL 만료 값에 도달하면 삭제됩니다.
-
-다음 예를 참조하여 다음 내용을 이해하십시오. [!DNL ExperienceEvent] 데이터 집합 TTL입니다.
-
-5월 15일에 TTL 값을 30일로 적용하는 경우,
-
-* 모든 새로운 이벤트는 들어올 때 TTL이 적용됩니다.
-* 4월 15일보다 오래된 타임스탬프가 있는 기존 이벤트는 시스템 작업에 의해 즉시 삭제됩니다.;
-* 4월 15일 이후 타임스탬프가 있는 이벤트는 이벤트 타임스탬프 + TTL 일의 만료 기간을 갖습니다. 따라서 4월 18일 타임스탬프가 있는 이벤트는 5월 15일 이후 3일 동안 줄어듭니다.
-
->[!IMPORTANT]
->
->TTL이 적용되면 선택한 TTL 수보다 오래된 모든 데이터는 **영구적으로** 삭제되었으며 복원할 수 없습니다.
-
-TTL을 적용하기 전에 TTL 경계 내에 모든 세그먼트의 전환 확인 기간을 유지해야 합니다. 그렇지 않으면 TTL이 적용된 후 세그먼트 결과가 올바르지 않을 수 있습니다. 예를 들어, Adobe Analytics 데이터에 대해 TTL(30일)을 적용하고 저장 중 트랜잭션 데이터에 대해 365일 TTL을 적용하면 다음 세그먼트가 잘못된 결과를 만듭니다.
-
-* 지난 60일 동안 제품 페이지를 본 후 매장 내에서 구매했습니다.
-* 지난 60일 동안 장바구니에 구매 후 를 추가합니다.
-
-반대로 다음과 같은 경우 여전히 올바른 결과가 생성됩니다.
-
-* 지난 14일 동안 제품 페이지를 본 후, 스토어 내 구매를 수행하면
-* 지난 30일 동안 특정 도움말 페이지를 온라인에서 열람했습니다.
-* 지난 120일 동안 오프라인으로 제품을 구입했습니다.
-* 지난 14일 동안 장바구니에 구매가 뒤따릅니다.
-
->[!TIP]
->
->편의상, 모든 데이터 세트에 대해 동일한 TTL을 유지할 수 있으므로 세그멘테이션 로직의 데이터 세트 간에 TTL이 미치는 영향에 대해 걱정할 필요가 없습니다.
-
-프로필 데이터에 TTL을 적용하는 방법에 대한 자세한 내용은 [프로필 서비스 TTL](../../profile/apply-ttl.md).
+이 기능을 사용하면 사용 사례에 더 이상 중요하지 않은 프로필 사용 데이터 세트에서 동작 데이터를 자동으로 제거할 수 있습니다. 다음 사항에 대한 개요를 참조하십시오. [경험 이벤트 만료](../../profile/event-expirations.md) 데이터 세트에 대해 활성화한 후 이 프로세스가 작동하는 방식에 대한 자세한 내용은 을 참조하십시오.
 
 ## 라이센스 사용 규정 준수에 대한 모범 사례 요약 {#best-practices}
 
@@ -179,7 +144,7 @@ TTL을 적용하기 전에 TTL 경계 내에 모든 세그먼트의 전환 확�
 * 를 사용하십시오 [라이선스 사용 대시보드](../../dashboards/guides/license-usage.md) 고객 사용 트렌드를 추적 및 모니터링합니다. 이를 통해 발생할 수 있는 모든 잠재적인 초과 상황을 미리 파악할 수 있습니다.
 * 구성 [수집 필터](#ingestion-filters) 세그먼테이션 및 개인화 사용 사례에 필요한 이벤트 식별 이를 통해 사용 사례에 필요한 중요한 이벤트만 보낼 수 있습니다.
 * 다음과 같은 경우에만 [프로필에 대해 활성화된 데이터 세트](#ingestion-filters) 세그먼테이션 및 개인화 사용 사례에 필요합니다.
-* 구성 [[!DNL ExperienceEvent] 데이터 집합 TTL](#dataset-ttl) 웹 데이터와 같은 고빈도 데이터의 경우.
+* 구성 [경험 이벤트 만료](#event-expirations) 웹 데이터와 같은 빈도가 높은 데이터의 경우.
 * 정기적으로 [프로필 구성 보고서](#profile-store-composition-reports) 프로필 스토어 구성을 이해합니다. 이를 통해 라이선스 사용에 가장 많이 기여하는 데이터 소스를 파악할 수 있습니다.
 
 ## 기능 요약 및 가용성 {#feature-summary}
@@ -191,7 +156,7 @@ TTL을 적용하기 전에 TTL 경계 내에 모든 세그먼트의 전환 확�
 | 기능 | 설명 |
 | --- | --- |
 | [프로필에 대한 데이터 세트 활성화/비활성화](../../catalog/datasets/user-guide.md) | 프로필 서비스에 데이터 집합 섭취 활성화 또는 비활성화 |
-| [!DNL ExperienceEvent] 데이터 집합 TTL | 프로필 저장소의 동작 데이터 세트에 대한 TTL 만료를 적용합니다. Adobe 지원 담당자에게 문의하십시오. |
+| [경험 이벤트 만료](../../profile/event-expirations.md) | 프로필 사용 데이터 세트에 수집된 모든 이벤트에 대해 만료 시간을 적용합니다. 이 기능을 사용하려면 Adobe 지원 담당자에게 문의하십시오. |
 | [Adobe Analytics 데이터 준비 필터](../../sources/tutorials/ui/create/adobe-applications/analytics.md) | 적용 [!DNL Kafka] 불필요한 데이터를 수집에서 제외하는 필터 |
 | [Adobe Audience Manager 소스 커넥터 필터](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) | Audience Manager 소스 연결 필터를 적용하여 불필요한 데이터를 수집에서 제외 |
 | [Alloy SDK 데이터 필터](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en#fundamentals) | 합금 필터를 적용하여 불필요한 데이터를 수집에서 제외 |

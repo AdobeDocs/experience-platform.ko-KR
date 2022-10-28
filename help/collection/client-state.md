@@ -4,9 +4,9 @@ description: Adobe Experience Platform Edge Network에서 클라이언트 상태
 seo-description: Learn how the Adobe Experience Platform Edge Network  manages client state
 keywords: 클라이언트;상태;관리;에지;네트워크;게이트웨이;api
 exl-id: 798ecc52-1af1-4480-a2a3-3198a83538f8
-source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
+source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
 workflow-type: tm+mt
-source-wordcount: '848'
+source-wordcount: '850'
 ht-degree: 2%
 
 ---
@@ -70,7 +70,7 @@ Edge Network는 상태 관리 프로토콜을 사용하고 스토리지 측면�
 | --- | --- | --- |
 | `key` | 문자열 | **필수 여부**. 항목 이름입니다. |
 | `value` | 문자열 | *선택 사항입니다*. 항목 값입니다. |
-| `maxAge` | 정수 | *선택 사항입니다* 시작 TTL(Time-to-Live)(초). 누락된 항목은 현재 세션에 대해서만 저장해야 합니다. |
+| `maxAge` | 정수 | *선택 사항입니다* 항목이 만료될 때까지의 시간(초)입니다. 누락된 항목은 현재 세션에 대해서만 저장해야 합니다. |
 | `attrs` | `Map<String, String>` | *선택 사항입니다*. 선택적 항목 속성 목록입니다. 보안 레퍼러 HTTP 헤더를 사용하는 모든 보안 연결에 대해 `SameSite` 속성이 `None`. |
 
 
