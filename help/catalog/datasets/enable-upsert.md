@@ -4,9 +4,9 @@ title: API를 사용하여 프로필 업데이트에 대한 데이터 세트 활
 type: Tutorial
 description: 이 자습서에서는 실시간 고객 프로필 데이터를 업데이트하기 위해 Adobe Experience Platform API를 사용하여 "업그레이드" 기능이 있는 데이터 세트를 활성화하는 방법을 보여줍니다.
 exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
-source-git-commit: 5bd3e43e6b307cc1527e8734936c051fb4fc89c4
+source-git-commit: 1e83bc3eb2a2cc10ab945aebeef66d5108b568ea
 workflow-type: tm+mt
-source-wordcount: '1015'
+source-wordcount: '1050'
 ht-degree: 1%
 
 ---
@@ -75,6 +75,8 @@ curl -X POST \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
+        "name": "Sample dataset",
+        "description: "A sample dataset with a sample description.",
         "fields": [],
         "schemaRef": {
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/31670881463308a46f7d2cb09762715",
@@ -249,6 +251,10 @@ curl -X PATCH https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a2
 ### 프로필 및 업데이트를 위한 데이터 세트 활성화 {#enable-the-dataset}
 
 기존 데이터 세트는 단일 PATCH 요청을 사용하여 프로필 및 속성 업데이트를 활성화할 수 있습니다.
+
+>[!IMPORTANT]
+>
+>프로필에 데이터 세트를 활성화할 때 데이터 세트가 연결된 스키마가 인지 확인하십시오 **또한** 프로필 사용. 스키마가 프로필을 사용하지 않으면 데이터 세트가 수행됩니다 **not** 플랫폼 UI에서 프로필 활성화로 표시됩니다.
 
 **API 형식**
 
