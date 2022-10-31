@@ -4,9 +4,9 @@ title: 경고 개요
 description: 경고 규칙이 정의되는 구조를 포함하여 Adobe Experience Platform에서의 다양한 경고에 대해 알아봅니다.
 feature: Alerts
 exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
-source-git-commit: d82487f34c0879ed27ac55e42d70346f45806131
+source-git-commit: b1c82169056e66b9cdcf99f73daa7d37a3a01600
 workflow-type: tm+mt
-source-wordcount: '740'
+source-wordcount: '760'
 ht-degree: 5%
 
 ---
@@ -82,6 +82,10 @@ Platform UI에서 경고를 사용하여 작업하려면 Adobe Admin Console을 
 경고 보기 권한을 사용하여 벨 아이콘( )을 선택하여 수신한 경고를 볼 수 있습니다![종 아이콘](../images/alerts/overview/icon.png))을 클릭하여 제품에서 사용할 수 있습니다.
 
 ![](../images/alerts/overview/ui.png)
+
+>[!NOTE]
+>
+> 경고가 트리거된 이유에 대한 자세한 내용을 보려면 경고를 선택하여 관련 대시보드로 이동합니다.
 
 또한 [!UICONTROL 경고] UI의 탭에서는 개별 사용자가 특정 경고 유형에 가입할 수 있으며, 관리자가 경고 규칙을 모두 활성화하거나 비활성화할 수 있습니다. 자세한 내용은 [UI 안내서](./ui.md) 경고 관리에 대한 자세한 내용을 참조하십시오.
 
