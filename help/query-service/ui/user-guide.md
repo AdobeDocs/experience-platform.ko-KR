@@ -5,9 +5,9 @@ title: 쿼리 편집기 UI 안내서
 topic-legacy: query editor
 description: 쿼리 편집기는 Adobe Experience Platform 쿼리 서비스에서 제공하는 대화형 도구로서 Experience Platform 사용자 인터페이스 내에서 고객 경험 데이터에 대한 쿼리를 작성, 유효성 검사 및 실행할 수 있습니다. 쿼리 편집기는 분석 및 데이터 탐색을 위한 쿼리 개발을 지원하며, Experience Platform에서 데이터 세트를 채우기 위해 비대화형 쿼리는 물론 개발 목적으로 대화형 쿼리를 실행할 수 있도록 해줍니다.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 6cb28f8afa528849662fb416d81d155384a3de6c
+source-git-commit: 283c6ba323a327b0c525343a96a45a2412baa67b
 workflow-type: tm+mt
-source-wordcount: '2062'
+source-wordcount: '2081'
 ht-degree: 0%
 
 ---
@@ -176,7 +176,7 @@ API를 사용하여 일정을 추가하는 방법에 대해 알아보려면 [예
 
 에서 실행된 모든 쿼리 [!DNL Query Editor] 로그 테이블에서 캡처됩니다. 에서 검색 기능을 사용할 수 있습니다 **[!UICONTROL 로그]** 탭을 클릭하여 쿼리 실행을 찾습니다. 저장된 쿼리는 **[!UICONTROL 템플릿]** 탭.
 
-자세한 내용은 [Query Service UI 개요](./overview.md) 추가 정보.
+쿼리를 예약한 경우 [!UICONTROL 예약된 쿼리] 탭은 해당 쿼리 작업에 대한 UI를 통해 향상된 가시성을 제공합니다. 자세한 내용은 [쿼리 모니터링 설명서](../monitor-queries.md) 추가 정보.
 
 >[!NOTE]
 >
