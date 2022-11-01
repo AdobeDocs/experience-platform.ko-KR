@@ -5,9 +5,9 @@ title: 쿼리 편집기 UI 안내서
 topic-legacy: query editor
 description: 쿼리 편집기는 Adobe Experience Platform 쿼리 서비스에서 제공하는 대화형 도구로서 Experience Platform 사용자 인터페이스 내에서 고객 경험 데이터에 대한 쿼리를 작성, 유효성 검사 및 실행할 수 있습니다. 쿼리 편집기는 분석 및 데이터 탐색을 위한 쿼리 개발을 지원하며, Experience Platform에서 데이터 세트를 채우기 위해 비대화형 쿼리는 물론 개발 목적으로 대화형 쿼리를 실행할 수 있도록 해줍니다.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 9c7068b4209a7c85c444b1cc83415747b93bacb2
+source-git-commit: 6cb28f8afa528849662fb416d81d155384a3de6c
 workflow-type: tm+mt
-source-wordcount: '1993'
+source-wordcount: '2062'
 ht-degree: 0%
 
 ---
@@ -116,13 +116,19 @@ ht-degree: 0%
 >
 >다음은 쿼리 편집기를 사용할 때 예약된 쿼리에 대한 제한 사항 목록입니다. 에는 적용되지 않습니다 [!DNL Query Service] API:<br/>이미 생성, 저장 및 실행된 쿼리에 예약만 추가할 수 있습니다.<br/>사용자 **사용할 수 없음** 매개 변수가 있는 쿼리에 일정을 추가합니다.<br/>예약된 쿼리 **사용할 수 없음** 익명 블록을 포함합니다.
 
-쿼리에 예약을 추가하려면 **[!UICONTROL 예약 추가]**.
+예약은 쿼리 편집기에서 설정됩니다. 그러나 이미 템플릿으로 저장된 질의만 예약할 수 있습니다. 쿼리에 일정을 추가하려면 다음 중 하나에서 쿼리 템플릿을 선택합니다 [!UICONTROL 템플릿] 탭 또는 [!UICONTROL 예약된 쿼리] 탭으로 이동하여 쿼리 편집기로 이동합니다.
 
-<!-- Cannot update this image below yet. Believe schedules tab is being added to the Query Editor -->
+API를 사용하여 일정을 추가하는 방법에 대해 알아보려면 [예약된 쿼리 엔드포인트 가이드](../api/scheduled-queries.md).
 
-![추가 일정이 강조 표시된 쿼리 편집기.](../images/ui/query-editor/add-schedule.png)
+쿼리 편집기에서 저장한 쿼리에 액세스하면 [!UICONTROL 예약] 탭이 쿼리 이름 아래에 나타납니다. 선택 **[!UICONTROL 예약]**.
 
-다음 **[!UICONTROL 예약 세부 사항]** 페이지가 나타납니다. 이 페이지에서 예약된 쿼리의 빈도, 예약된 쿼리가 실행될 날짜 및 쿼리를 내보낼 데이터 세트를 선택할 수 있습니다.
+![예약 탭이 강조 표시된 쿼리 편집기.](../images/ui/query-editor/schedules-tab.png)
+
+예약 작업 공간이 나타납니다. 선택 **[!UICONTROL 예약 추가]** 일정을 만들려면
+
+![[추가] 일정이 강조 표시된 쿼리 편집기 예약 작업 영역.](../images/ui/query-editor/add-schedule.png)
+
+스케줄 세부 사항 페이지가 나타납니다. 이 페이지에서는 예약된 쿼리의 빈도, 시작 및 종료 날짜, 예약된 쿼리가 실행될 요일 및 쿼리를 내보낼 데이터 세트를 선택할 수 있습니다.
 
 ![[예약 세부 사항] 패널이 강조 표시되어 있습니다.](../images/ui/query-editor/schedule-details.png)
 
@@ -140,39 +146,35 @@ ht-degree: 0%
 >
 > 기존 데이터 세트를 사용하거나 새 데이터 세트를 만들려면 다음을 수행합니다 **not** 다음 중 하나를 포함해야 합니다. `INSERT INTO` 또는 `CREATE TABLE AS SELECT` 데이터 세트가 이미 설정되어 있으므로 쿼리의 일부로 사용됩니다. 다음 중 하나를 포함합니다 `INSERT INTO` 또는 `CREATE TABLE AS SELECT` 예약된 쿼리의 일부로 인해 오류가 발생합니다.
 
-이러한 세부 사항을 모두 확인한 후 **[!UICONTROL 저장]** 일정을 만들려면
+이러한 세부 사항을 모두 확인한 후 **[!UICONTROL 저장]** 일정을 만들려면 예약 ID, 예약 자체 및 예약의 출력 데이터 세트를 포함하여 새로 생성된 예약의 세부 사항을 표시하는 예약 작업 공간으로 돌아갑니다. 예약 ID를 사용하여 예약된 쿼리 자체의 실행에 대한 자세한 정보를 조회할 수 있습니다. 자세한 내용은 [예약된 쿼리 실행 끝점 안내서](../api/runs-scheduled-queries.md).
 
-쿼리 세부 정보 페이지가 다시 나타나고 이제 예약 ID, 예약 자체 및 예약의 출력 데이터 세트를 포함하여 새로 만든 예약의 세부 정보가 표시됩니다. 예약 ID를 사용하여 예약된 쿼리 자체의 실행에 대한 자세한 정보를 조회할 수 있습니다. 자세한 내용은 [예약된 쿼리 실행 끝점 안내서](../api/runs-scheduled-queries.md).
+![새로 만든 일정이 강조 표시된 작업 공간 예약](../images/ui/query-editor/schedules-workspace.png)
 
->[!NOTE]
->
-> 예약만 수행할 수 있습니다 **하나** UI를 사용하여 쿼리 템플릿. 쿼리 템플릿에 예약을 더 추가하려면 API를 사용해야 합니다. API를 사용하여 이미 일정을 추가한 경우 다음을 수행합니다. **not** ui를 사용하여 추가 일정을 추가할 수 있습니다. 여러 개의 일정이 이미 쿼리 템플릿에 첨부된 경우 가장 오래된 일정만 표시됩니다. API를 사용하여 일정을 추가하는 방법에 대해 알아보려면 [예약된 쿼리 엔드포인트 가이드](../api/scheduled-queries.md).
->
-> 또한 보고 있는 예약에 대한 최신 상태가 있는지 확인하려면 페이지를 새로 고쳐야 합니다.
+#### 일정 삭제 또는 비활성화 {#delete-schedule}
 
-#### 일정 삭제 {#delete-schedule}
+예약 작업 공간에서 일정을 삭제하거나 비활성화할 수 있습니다. 다음 중 하나에서 쿼리 템플릿을 선택해야 합니다 [!UICONTROL 템플릿] 탭 또는 [!UICONTROL 예약된 쿼리] 탭으로 이동하여 쿼리 편집기를 선택하고 을 선택합니다 **[!UICONTROL 예약]** 스케줄 작업공간에 액세스하려면
 
-일정을 선택하여 삭제할 수 있습니다 **[!UICONTROL 일정 삭제]**.
-
-<!-- Cannot update this image below yet. Believe schedules tab is being added to the Query Editor -->
-
-![예약 비활성화 및 삭제 일정이 강조 표시된 쿼리 편집기.](../images/ui/query-editor/delete-schedule.png)
+사용 가능한 스케줄 행에서 스케줄을 선택합니다. 토글을 사용하여 예약된 쿼리를 비활성화하거나 활성화할 수 있습니다.
 
 >[!IMPORTANT]
 >
-> 쿼리의 예약을 삭제하려면 먼저 스케줄을 비활성화해야 합니다.
+>쿼리 일정을 삭제하려면 먼저 예약을 비활성화해야 합니다.
+
+선택 **[!UICONTROL 일정 삭제]** 비활성화된 일정을 삭제하려면
+
+![예약 사용 안 함 및 삭제 일정이 강조 표시된 예약 작업 공간](../images/ui/query-editor/delete-schedule.png)
 
 ### 쿼리 저장 {#saving-queries}
 
-[!DNL Query Editor] 은 쿼리를 저장하고 나중에 작업할 수 있는 저장 함수를 제공합니다. 쿼리를 저장하려면 **[!UICONTROL 저장]** 의 오른쪽 상단 모서리에서 [!DNL Query Editor]. 쿼리를 저장하려면 먼저 **[!UICONTROL 쿼리 세부 정보]** 패널.
+다음 [!DNL Query Editor] 은 쿼리를 저장하고 나중에 작업할 수 있는 저장 함수를 제공합니다. 쿼리를 저장하려면 **[!UICONTROL 저장]** 의 오른쪽 상단 모서리에서 [!DNL Query Editor]. 쿼리를 저장하려면 먼저 **[!UICONTROL 쿼리 세부 정보]** 패널.
 
 >[!NOTE]
 >
->쿼리 편집기를 사용하여 이름이 지정되고 저장된 쿼리는 쿼리 대시보드 내에서 템플릿으로 사용할 수 있습니다 [!UICONTROL 찾아보기] 탭. 자세한 내용은 [템플릿 설명서](./query-templates.md) 추가 정보.
+>쿼리 편집기를 사용하여 이름이 지정되고 저장된 쿼리는 쿼리 대시보드 내에서 템플릿으로 사용할 수 있습니다 [!UICONTROL 템플릿] 탭. 자세한 내용은 [템플릿 설명서](./query-templates.md) 추가 정보.
 
 ### 이전 쿼리를 찾는 방법 {#previous-queries}
 
-에서 실행된 모든 쿼리 [!DNL Query Editor] 로그 테이블에서 캡처됩니다. 에서 검색 기능을 사용할 수 있습니다 **[!UICONTROL 로그]** 탭을 클릭하여 쿼리 실행을 찾습니다. 저장된 쿼리는 **[!UICONTROL 찾아보기]** 탭.
+에서 실행된 모든 쿼리 [!DNL Query Editor] 로그 테이블에서 캡처됩니다. 에서 검색 기능을 사용할 수 있습니다 **[!UICONTROL 로그]** 탭을 클릭하여 쿼리 실행을 찾습니다. 저장된 쿼리는 **[!UICONTROL 템플릿]** 탭.
 
 자세한 내용은 [Query Service UI 개요](./overview.md) 추가 정보.
 
@@ -182,7 +184,7 @@ ht-degree: 0%
 
 ## 쿼리 편집기를 사용하여 쿼리 실행 {#executing-queries}
 
-에서 쿼리를 실행하려면 [!DNL Query Editor]편집기에서 SQL을 입력하거나 **[!UICONTROL 로그]** 또는 **[!UICONTROL 찾아보기]** 탭을 선택하고 **재생**. 쿼리 실행 상태는 **[!UICONTROL 콘솔]** 아래 탭에 출력 데이터가 **[!UICONTROL 결과]** 탭.
+에서 쿼리를 실행하려면 [!DNL Query Editor]편집기에서 SQL을 입력하거나 **[!UICONTROL 로그]** 또는 **[!UICONTROL 템플릿]** 탭을 선택하고 **재생**. 쿼리 실행 상태는 **[!UICONTROL 콘솔]** 아래 탭에 출력 데이터가 **[!UICONTROL 결과]** 탭.
 
 ### 콘솔 {#console}
 

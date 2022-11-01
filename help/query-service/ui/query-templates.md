@@ -2,7 +2,7 @@
 title: 쿼리 템플릿
 description: 쿼리 템플릿은 다른 사용자가 시간과 노력을 절약하기 위해 다시 사용할 수 있는 재사용 가능한 저장된 SQL 쿼리입니다. 쿼리 편집기 또는 쿼리 서비스 API를 사용하여 만들 수 있으며 모든 Experience Platform 데이터 세트에서 사용할 수 있습니다.
 exl-id: e74d058f-bb89-45ed-83cc-2e3a33401270
-source-git-commit: e4526b515dc6f480136615f3aa78f38f3e43a60f
+source-git-commit: a085bac6b4ee825d534710ae91d6690fa076e873
 workflow-type: tm+mt
 source-wordcount: '436'
 ht-degree: 1%
@@ -25,11 +25,9 @@ Query Service API에 POST 요청을 수행하여 두 가지 방법을 통해 쿼
 
 ### 쿼리 편집기를 사용하여 쿼리를 템플릿으로 작성 및 저장
 
-쿼리 편집기를 사용하여 다음을 수행하는 방법에 대한 지침은 설명서를 참조하십시오 [쓰기](./user-guide.md#query-authoring) 및 [쿼리 저장](./user-guide.md#saving-queries). 쿼리를 이름을 지정하고 저장하면 [!UICONTROL 찾아보기] 탭.
+쿼리 편집기를 사용하여 다음을 수행하는 방법에 대한 지침은 설명서를 참조하십시오 [쓰기](./user-guide.md#query-authoring) 및 [쿼리 저장](./user-guide.md#saving-queries). 쿼리를 이름을 지정하고 저장하면 [!UICONTROL 템플릿] 탭.
 
 플랫폼 UI의 쿼리 작업 영역에서 을 선택합니다 **[!UICONTROL 템플릿]** 을 클릭하여 사용 가능한 저장된 질의 목록을 표시합니다.
-
-<!-- This may need updating idf the Schedule are added to a separate Tab -->
 
 ![템플릿 탭이 강조 표시된 질의 작업 영역입니다.](../images/ui/query-templates/query-templates.png)
 
@@ -43,7 +41,7 @@ Query Service API에 POST 요청을 수행하여 두 가지 방법을 통해 쿼
 
 >[!NOTE]
 >
->API를 사용하여 만든 템플릿은 플랫폼 UI 쿼리 서비스 찾아보기 탭에 표시됩니다.
+>API를 사용하여 만든 템플릿도 플랫폼 UI 쿼리 서비스 템플릿 탭에 표시됩니다.
 
 ## 다음 단계
 

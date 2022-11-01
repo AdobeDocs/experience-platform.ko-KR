@@ -6,7 +6,7 @@ topic-legacy: queries
 type: Tutorial
 description: Adobe Experience Platform 쿼리 서비스를 통해 UI에서 데이터 세트를 만들 수 있습니다. 데이터 세트를 만든 후에는 데이터 레이크에서 다른 데이터 세트와 같이 액세스할 수 있고, 다양한 사용 사례에 사용할 수 있습니다.
 exl-id: 6f6c049d-f19f-4161-aeb4-3a01eca7dc75
-source-git-commit: 228ed51ea056d3593a59bc0eee8d9b767aa74489
+source-git-commit: 5ea5d48119eb3d7c1e66233f3b2629c1049d0784
 workflow-type: tm+mt
 source-wordcount: '493'
 ht-degree: 0%
@@ -19,13 +19,11 @@ ht-degree: 0%
 
 ## Adobe Experience Platform 사용자 인터페이스에서 데이터 세트 생성
 
-<!-- Screenshot for #3 will need to be updated if schedule queries is moved. -->
-
 Adobe Experience Platform UI(사용자 인터페이스)에서 데이터 세트를 만들려면 다음 단계를 수행하십시오.
 
 1. 연결된 클라이언트를 사용하여 쿼리를 만들고 출력의 유효성을 확인합니다. 쿼리를 사용하여 작성하는 방법을 알아보려면 [!DNL Query Editor]를 읽고 [!DNL Query Editor] UI 안내서 [쿼리 작성](./user-guide.md#writing-queries).
 
-2. 플랫폼 UI에서 **[!UICONTROL 쿼리]** 다음에 **[!UICONTROL 찾아보기]** 탭을 선택하고 생성한 쿼리를 선택합니다. Platform UI 내에서 조직에 대해 생성 및 저장된 쿼리를 보는 방법에 대한 자세한 내용은 [[!DNL Query Service] 개요](./overview.md#browse).
+2. 플랫폼 UI에서 **[!UICONTROL 쿼리]** 다음에 **[!UICONTROL 템플릿]** 탭을 선택하고 생성한 쿼리를 선택합니다. Platform UI 내에서 조직에 대해 생성 및 저장된 쿼리를 보는 방법에 대한 자세한 내용은 [[!DNL Query Service] 개요](./overview.md#browse).
 
 3. 쿼리 세부 정보 패널에서 **[!UICONTROL 출력 데이터 세트]**.
 

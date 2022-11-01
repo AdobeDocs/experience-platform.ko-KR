@@ -5,7 +5,7 @@ title: Query Service UI 안내서
 topic-legacy: guide
 description: Adobe Experience Platform 쿼리 서비스는 쿼리를 작성 및 실행하고, 이전에 실행된 쿼리를 보고, IMS 조직 내의 사용자가 저장한 쿼리에 액세스하는 데 사용할 수 있는 사용자 인터페이스를 제공합니다.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: 0a44d15f9dfaf5100fa44e2e6442b1be23ee0ab0
+source-git-commit: a085bac6b4ee825d534710ae91d6690fa076e873
 workflow-type: tm+mt
 source-wordcount: '716'
 ht-degree: 2%
@@ -18,7 +18,7 @@ Adobe Experience Platform [!DNL Query Service] 은 IMS 조직 내에서 사용�
 
 ## [!DNL Query Editor]
 
-다음 [!DNL Query Editor] 외부 클라이언트를 사용하지 않고 쿼리를 작성하고 실행할 수 있습니다. 선택 **[!UICONTROL 쿼리 만들기]** 열다 [!DNL Query Editor] 새 쿼리를 만듭니다. 또한 [!DNL Query Editor] 에서 쿼리를 선택하여 **[!UICONTROL 로그]** 또는 **[!UICONTROL 찾아보기]** 탭. 이전에 실행하거나 저장한 쿼리를 선택하면 [!DNL Query Editor] 선택한 쿼리의 SQL을 표시합니다.
+다음 [!DNL Query Editor] 외부 클라이언트를 사용하지 않고 쿼리를 작성하고 실행할 수 있습니다. 선택 **[!UICONTROL 쿼리 만들기]** 열다 [!DNL Query Editor] 새 쿼리를 만듭니다. 또한 [!DNL Query Editor] 에서 쿼리를 선택하여 **[!UICONTROL 로그]** 또는 **[!UICONTROL 템플릿]** 탭. 이전에 실행하거나 저장한 쿼리를 선택하면 [!DNL Query Editor] 선택한 쿼리의 SQL을 표시합니다.
 
 ![쿼리 만들기 가 강조 표시된 쿼리 대시보드](../images/ui/overview/overview.png)
 
