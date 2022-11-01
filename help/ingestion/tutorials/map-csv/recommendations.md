@@ -1,9 +1,9 @@
 ---
 title: AI 생성 Recommendations(베타)를 사용하여 XDM 스키마에 CSV 파일 매핑
 description: 이 자습서에서는 AI에서 생성한 권장 사항을 사용하여 XDM 스키마에 CSV 파일을 매핑하는 방법을 설명합니다.
-source-git-commit: a8a7523c5b7f696ecc0ae89cb4e0474b44a222e7
+source-git-commit: d6f858af8bc44be74b1aaf12b973fb6818c1b2a5
 workflow-type: tm+mt
-source-wordcount: '1021'
+source-wordcount: '1043'
 ht-degree: 0%
 
 ---
@@ -35,13 +35,13 @@ Experience Platform UI에서 **[!UICONTROL 소스]** 을 클릭합니다. 설정
 
 다음 **[!UICONTROL CSV XDM 스키마 매핑]** 워크플로우가 나타나고, **[!UICONTROL 데이터 흐름 세부 정보]** 단계.
 
-선택 **[!UICONTROL ML 권장 사항을 사용하여 새 스키마 만들기]**&#x200B;새 컨트롤이 나타납니다. 매핑할 CSV 데이터에 적절한 클래스를 선택합니다([!UICONTROL 프로필] 또는 [!UICONTROL ExperienceEvent])이고 드롭다운 메뉴를 사용하여 비즈니스에 대한 관련 산업을 선택합니다. 조직이 [business-to-business(B2B)](../../../xdm/tutorials/relationship-b2b.md) 모델, **[!UICONTROL B2B 데이터]** 확인란을 선택합니다.
+선택 **[!UICONTROL ML 권장 사항을 사용하여 새 스키마 만들기]**&#x200B;새 컨트롤이 나타납니다. 매핑할 CSV 데이터에 적절한 클래스를 선택합니다([!UICONTROL 프로필] 또는 [!UICONTROL ExperienceEvent]). 드롭다운 메뉴를 사용하여 비즈니스에 대한 관련 산업을 선택하거나, 제공된 카테고리가 적용되지 않는 경우 비워 둘 수 있습니다(선택적). 조직이 [business-to-business(B2B)](../../../xdm/tutorials/relationship-b2b.md) 모델, **[!UICONTROL B2B 데이터]** 확인란을 선택합니다.
 
 ![다음 [!UICONTROL 데이터 흐름 세부 정보] html 권장 사항 선택 사항을 선택한 상태로 단계가 진행됩니다. [!UICONTROL 프로필] 클래스 및 [!UICONTROL 통신] 업계](../../images/tutorials/map-csv-recommendations/select-class-and-industry.png)
 
 여기에서 CSV 데이터에서 만들 스키마의 이름과 해당 스키마 아래에 수집된 데이터가 포함될 출력 데이터 세트의 이름을 입력합니다.
 
-선택적으로 데이터 플로우에 대해 다음과 같은 추가 기능을 구성할 수 있습니다.
+계속하기 전에 데이터 플로우에 대해 다음 추가 기능을 선택적으로 구성할 수 있습니다.
 
 | 입력 이름 | 설명 |
 | --- | --- |
@@ -50,6 +50,8 @@ Experience Platform UI에서 **[!UICONTROL 소스]** 을 클릭합니다. 설정
 | [!UICONTROL 부분 수집] | 활성화되면 지정된 오류 임계값 내에서 새 배치 데이터에 대한 유효한 레코드를 수집합니다. 이 임계값을 사용하여 전체 배치에 실패하기 전에 허용 가능한 오류 비율을 구성할 수 있습니다. |
 | [!UICONTROL 데이터 흐름 세부 정보] | CSV 데이터를 플랫폼으로 가져올 데이터 흐름의 이름 및 선택적 설명을 제공합니다. 이 워크플로우를 시작할 때 데이터 로드에 자동으로 기본 이름이 할당됩니다. 이름 변경은 선택 사항입니다. |
 | [!UICONTROL 경고] | 다음 목록에서 선택 [제품 내 경고](../../../observability/alerts/overview.md) 데이터 흐름 상태가 시작되면 받게 될 데이터 흐름 상태와 관련된 정보를 받게 됩니다. |
+
+{style=&quot;table-layout:auto&quot;}
 
 데이터 흐름 구성을 마치면 를 선택합니다 **[!UICONTROL 다음]**.
 
@@ -81,7 +83,7 @@ ML 모델은 데이터 흐름 구성 및 업로드된 CSV 파일을 기반으로
 
 ### 필드 그룹 편집 {#edit-field-groups}
 
-CSV 필드는 ML 모델을 사용하여 기존 필드 그룹에 자동으로 매핑됩니다. 특정 CSV 필드에 대한 필드 그룹을 변경하려면, 을(를) 선택합니다 **[!UICONTROL 편집]** 스키마 트리 옆에 있습니다.
+CSV 필드는 ML 모델을 사용하여 기존 XDM 필드 그룹에 자동으로 매핑됩니다. 특정 CSV 필드에 대한 필드 그룹을 변경하려면, 을(를) 선택합니다 **[!UICONTROL 편집]** 스키마 트리 옆에 있습니다.
 
 ![다음 [!UICONTROL 편집] 스키마 트리 옆에 있는 단추 선택](../../images/tutorials/map-csv-recommendations/edit-schema-structure.png)
 
