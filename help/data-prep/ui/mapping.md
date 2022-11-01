@@ -3,7 +3,7 @@ keywords: Experience Platform;홈;인기 항목;csv 매핑;csv 파일 매핑;csv
 title: 데이터 준비 UI 안내서
 description: 이 문서에서는 Platform UI에서 데이터 준비 함수를 사용하여 CSV 파일을 XDM 스키마에 매핑하는 방법에 대한 지침을 제공합니다.
 exl-id: fafa4aca-fb64-47ff-a97d-c18e58ae4dae
-source-git-commit: d0f5d1f55101ce15934289d4fcfd1f70c1b63fc7
+source-git-commit: d380b4d2a75efb1c34010a30c619649a7b99643c
 workflow-type: tm+mt
 source-wordcount: '1845'
 ht-degree: 1%
@@ -79,7 +79,7 @@ CSV 데이터를 새 데이터 세트에 수집하려면 을 선택합니다 **[
 
 ![csv-to-xdm](../images/ui/mapping/map-csv-to-xdm.png)
 
-### 매핑 인터페이스 이해
+### 매핑 인터페이스 이해 {#mapping-interface}
 
 매핑 인터페이스에는 수집 워크플로우 컨텍스트 내의 매핑 필드 상태에 대한 정보를 제공하는 대시보드가 포함되어 있습니다. 대시보드는 매핑 필드에 대한 다음 세부 정보를 표시합니다.
 

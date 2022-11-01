@@ -5,7 +5,7 @@ title: Intelligent Services에서 사용할 데이터 준비
 topic-legacy: Intelligent Services
 description: Intelligent Services에서 마케팅 이벤트 데이터에서 통찰력을 검색하려면 데이터를 표준 구조로 의미상 보강하고 유지 관리해야 합니다. Intelligent Services는 이를 위해 XDM(Experience Data Model) 스키마를 사용합니다.
 exl-id: 17bd7cc0-da86-4600-8290-cd07bdd5d262
-source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
+source-git-commit: d380b4d2a75efb1c34010a30c619649a7b99643c
 workflow-type: tm+mt
 source-wordcount: '2936'
 ht-degree: 0%
@@ -356,7 +356,7 @@ CEE 필드 그룹에는 몇 가지 주요 필드가 있으며, 이러한 필드�
 
 #### 데이터 매핑 및 수집 {#ingest}
 
-CEE 스키마 및 데이터 집합을 만든 후 데이터 테이블을 스키마에 매핑하고 해당 데이터를 플랫폼으로 수집할 수 있습니다. 다음에서 자습서를 참조하십시오. [XDM 스키마에 CSV 파일 매핑](../ingestion/tutorials/map-a-csv-file.md) UI에서 이 작업을 수행하는 방법에 대한 단계를 설명합니다. 다음을 사용할 수 있습니다 [샘플 JSON 파일](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) 고유한 데이터를 사용하기 전에 수집 프로세스를 테스트하십시오.
+CEE 스키마 및 데이터 집합을 만든 후 데이터 테이블을 스키마에 매핑하고 해당 데이터를 플랫폼으로 수집할 수 있습니다. 다음에서 자습서를 참조하십시오. [XDM 스키마에 CSV 파일 매핑](../ingestion/tutorials/map-csv/overview.md) UI에서 이 작업을 수행하는 방법에 대한 단계를 설명합니다. 다음을 사용할 수 있습니다 [샘플 JSON 파일](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) 고유한 데이터를 사용하기 전에 수집 프로세스를 테스트하십시오.
 
 데이터 세트를 채운 후에는 동일한 데이터 세트를 사용하여 추가 데이터 파일을 수집할 수 있습니다.
 

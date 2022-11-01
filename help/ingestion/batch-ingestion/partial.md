@@ -5,7 +5,7 @@ title: 부분 배치 수집 개요
 topic-legacy: overview
 description: 이 문서에서는 부분 배치 섭취 관리를 위한 자습서를 제공합니다.
 exl-id: 25a34da6-5b7c-4747-8ebd-52ba516b9dc3
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: d380b4d2a75efb1c34010a30c619649a7b99643c
 workflow-type: tm+mt
 source-wordcount: '945'
 ht-degree: 0%
@@ -110,7 +110,7 @@ ht-degree: 0%
 
 ### &quot;[!UICONTROL XDM 스키마에 CSV 매핑]&quot; 흐름 {#map-flow}
 
-를 사용하려면[!UICONTROL XDM 스키마에 CSV 매핑]&quot; 흐름을 수행하려면 [CSV 파일 매핑 자습서](../tutorials/map-a-csv-file.md). 에 도달하면 **[!UICONTROL 데이터 추가]** 한 단계, 다음 사항을 기록해 두십시오 **[!UICONTROL 부분 수집]** 및 **[!UICONTROL 오류 진단]** 필드.
+를 사용하려면[!UICONTROL XDM 스키마에 CSV 매핑]&quot; 흐름을 수행하려면 [CSV 파일 매핑 자습서](../tutorials/map-csv/overview.md). 에 도달하면 **[!UICONTROL 데이터 추가]** 한 단계, 다음 사항을 기록해 두십시오 **[!UICONTROL 부분 수집]** 및 **[!UICONTROL 오류 진단]** 필드.
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow.png)
 

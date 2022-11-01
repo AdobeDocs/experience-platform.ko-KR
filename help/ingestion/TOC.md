@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform 데이터 수집 도움말
 breadcrumb-title: Data Ingestion 안내서
 user-guide-description: 일괄 처리 또는 스트리밍 통합 기능을 통해 데이터를 Experience Platform으로 가져올 수 있습니다.
 feature: Data Ingestion
-source-git-commit: ba0399b0d171c2e604b4de3b22f8568b5431bcf4
+source-git-commit: f77bbc60f2bc1f12970e8050ec6a924b9713f303
 workflow-type: tm+mt
-source-wordcount: '129'
-ht-degree: 27%
+source-wordcount: '145'
+ht-degree: 25%
 
 ---
 
@@ -26,7 +26,10 @@ ht-degree: 27%
    - [부분 배치 수집](batch-ingestion/partial.md)
    - [문제 해결](batch-ingestion/troubleshooting.md)
 - 튜토리얼 {#tutorials}
-   - [XDM에 CSV 파일 매핑](tutorials/map-a-csv-file.md)
+   - XDM에 CSV 파일 매핑 {#map-csv}
+      - [개요](./tutorials/map-csv/overview.md)
+      - [기존 스키마에 CSV 파일 매핑](./tutorials/map-csv/existing-schema.md)
+      - [AI에서 생성된 권장 사항을 사용하여 CSV 파일 매핑](./tutorials/map-csv/recommendations.md)
    - [UI를 사용하여 배치 데이터 수집](tutorials/ingest-batch-data.md)
    - [인증된 스트리밍 연결 만들기](tutorials/create-authenticated-streaming-connection.md)
    - [스트리밍 연결(API) 만들기](tutorials/create-streaming-connection.md)
