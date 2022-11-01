@@ -5,9 +5,9 @@ title: 자동 정책 적용
 topic-legacy: guide
 description: 이 문서에서는 Experience Platform의 대상에 세그먼트를 활성화할 때 데이터 사용 정책이 자동으로 적용되는 방식을 다룹니다.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: 7f1e4bdf54314cab1f69619bcbb34216da94b17e
+source-git-commit: 6453ec6c98d90566449edaa0804ada260ae12bf6
 workflow-type: tm+mt
-source-wordcount: '1694'
+source-wordcount: '1700'
 ht-degree: 0%
 
 ---
@@ -110,7 +110,7 @@ Experience Platform에서 정책집행은 다음과 같은 계보를 염려한�
 
 >[!IMPORTANT]
 >
->동의 정책은 현재 Healthcare Shield를 구입한 조직에만 사용할 수 있습니다.
+>동의 정책은 현재 구매한 조직에만 사용할 수 있습니다 **Adobe 의료 보호** 또는 **Adobe 개인 정보 보호 및 보안 차단**.
 
 만약 [동의 정책 만들기](../policies/user-guide.md#consent-policy) 세그먼트를 대상에 활성화할 때, 동의 정책이 활성화에 포함된 프로필 비율에 어떻게 영향을 주는지를 알 수 있습니다.
 
