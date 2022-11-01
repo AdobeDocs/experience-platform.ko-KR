@@ -5,9 +5,9 @@ user-guide-title: Adobe Experience Platform Web SDK 도움말
 breadcrumb-title: Web SDK 안내서
 user-guide-description: Edge 네트워크를 통해 Experience Cloud 서비스와 상호 작용할 수 있습니다.
 feature: Web SDK
-source-git-commit: 2cec87d3f45b1b774925a9b669b53a958e65e57a
+source-git-commit: 15a1fd71bc5f00efdd475abd3385dc6bf4737a17
 workflow-type: tm+mt
-source-wordcount: '189'
+source-wordcount: '193'
 ht-degree: 32%
 
 ---
@@ -46,6 +46,7 @@ ht-degree: 32%
       * [Analytics에 데이터 보내기](data-collection/adobe-analytics/sending-data-to-analytics.md)
 * 개인화 {#personalization}
    * [개인화된 콘텐츠 렌더링](personalization/rendering-personalization-content.md)
+   * [하이브리드 구현을 통한 개인화](personalization/hybrid-personalization.md)
    * [플리커 관리](personalization/manage-flicker.md)
    * Adobe Target {#adobe-target}
       * [개요](personalization/adobe-target/target-overview.md)
