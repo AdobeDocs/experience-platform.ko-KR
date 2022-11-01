@@ -1,9 +1,9 @@
 ---
 title: (베타) Adobe Commerce 대상 커넥터
 description: Real-Time CDP 내에서 구축되고 관리되는 고객 세그먼트에 맞게 사용자 지정된 고도로 적절한 사이트 컨텐츠와 프로모션을 제공하여 Adobe Commerce 및 Real-Time CDP 가맹점이 쇼핑 경험을 개인화할 수 있는 방법을 알아봅니다.
-source-git-commit: 566f26ec0f13bfaceb0ee59f3e4c72e767bc8cc9
+source-git-commit: 0a6100f2aa98f5c40f2492dcfab79a991eded94b
 workflow-type: tm+mt
-source-wordcount: '689'
+source-wordcount: '691'
 ht-degree: 1%
 
 ---
@@ -92,7 +92,7 @@ While [설정](../../ui/connect-destination.md) 이 대상을 사용하려면 �
 
 이제 다음을 구성했으므로 [!DNL Commerce] Experience Platform 내에서 대상을 구성해야 합니다 [!DNL Commerce Admin] 만든 Real-Time CDP 세그먼트를 가져오기 위해 자세한 내용은 [[!DNL Commerce] 설명서](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/cart-rules/customer-segment-rtcdp.html) 추가 정보
 
-## 데이터 내보내기의 유효성 검사 {#exported-data}
+## Commerce에서 대상 활성화 유효성 검사 {#exported-data}
 
 Real-Time CDP 세그먼트를 [!DNL Adobe Commerce] 계정, [!DNL Admin] 장바구니 가격 규칙을 만들 때:
 
