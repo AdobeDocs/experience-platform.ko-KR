@@ -2,9 +2,9 @@
 title: Adobe Target을 통한 개인화
 description: 서버 API를 사용하여 Adobe Target에서 만든 개인화된 경험을 제공하고 렌더링하는 방법을 알아봅니다.
 exl-id: c9e2f7ef-5022-4dc4-82b4-ecc210f27270
-source-git-commit: d6573f8f4d779fb7ed11b44561a0ad9667748b27
+source-git-commit: 3730a9a20644291db844ecfad88355daa4a1cba7
 workflow-type: tm+mt
-source-wordcount: '735'
+source-wordcount: '744'
 ht-degree: 2%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->를 통해 생성된 개인화 경험 [Target VEC(시각적 경험 작성기)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=en) 서버 API에서 완전히 지원되지 않습니다. 서버 API는 다음을 수행할 수 있습니다 **검색** vec에서 만든 활동이지만 서버 API는 만들 수 없습니다 **렌더링** vec에서 만든 활동. VEC에서 만든 활동을 렌더링하려면 [웹 SDK](../edge/home.md).
+>를 통해 생성된 개인화 경험 [Target VEC(시각적 경험 작성기)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=en) 서버 API에서 완전히 지원되지 않습니다. 서버 API는 다음을 수행할 수 있습니다 **검색** vec에서 만든 활동이지만 서버 API는 만들 수 없습니다 **렌더링** vec에서 만든 활동. VEC에서 만든 활동을 렌더링하려면 를 구현하십시오 [하이브리드 개인화](../edge/personalization/hybrid-personalization.md) 웹 SDK 및 Edge Network Server API 사용.
 
 ## 데이터 스트림 구성 {#configure-your-datastream}
 
