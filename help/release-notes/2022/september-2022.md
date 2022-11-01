@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform 릴리스 노트 - 2022년 9월
 description: Adobe Experience Platform에 대한 2022년 9월 릴리스 노트입니다.
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 4f85f38e4870f0c2429a3a2a50bd7f95075c6be4
 workflow-type: tm+mt
-source-wordcount: '2926'
+source-wordcount: '2934'
 ht-degree: 5%
 
 ---
@@ -220,7 +220,7 @@ Query Service를 사용하면 표준 SQL을 사용하여 Adobe Experience Platfo
 
 자세한 내용은 [!DNL Query Service]를 보려면 [[!DNL Query Service] 개요](../../query-service/home.md).
 
-<!-- See the [query alerts documentation](../../query-service/api/alert-subscriptions.md) to learn more. -->
+자세한 내용은 [쿼리 경고 설명서](../../query-service/api/alert-subscriptions.md) 추가 정보
 
 ## 소스 {#sources}
 

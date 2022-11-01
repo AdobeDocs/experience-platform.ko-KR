@@ -5,9 +5,9 @@ title: Query Service API 안내서
 topic-legacy: query templates
 description: Query Service API를 사용하여 개발자가 표준 SQL을 사용하여 Adobe Experience Platform 데이터를 쿼리할 수 있습니다. 이 안내서를 따라 API를 사용하여 주요 작업을 수행하는 방법에 대해 알아보십시오.
 exl-id: 2f4a156b-5623-419a-a9b2-72310f755708
-source-git-commit: 87789668da0cfdf86d3c47be6e4dc49282932180
+source-git-commit: 4f85f38e4870f0c2429a3a2a50bd7f95075c6be4
 workflow-type: tm+mt
-source-wordcount: '395'
+source-wordcount: '397'
 ht-degree: 5%
 
 ---
@@ -55,8 +55,7 @@ ht-degree: 5%
 - [예약된 쿼리](scheduled-queries.md)
 - [예약된 쿼리에 대해 실행됩니다](runs-scheduled-queries.md)
 - [쿼리 템플릿](query-templates.md)
-
-<!-- - [Alert subscriptions](./alert-subscriptions.md) -->
+- [경고 구독](./alert-subscriptions.md)
 
 ## 다음 단계
 

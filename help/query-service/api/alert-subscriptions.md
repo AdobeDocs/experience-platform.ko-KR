@@ -2,9 +2,7 @@
 keywords: Experience Platform;홈;인기 항목;쿼리 서비스;쿼리 서비스;경고
 title: 경고 구독 API 끝점
 description: 이 안내서에서는 Query Service API를 사용하여 경고 구독 종단점에 대해 수행할 수 있는 다양한 API 호출에 대한 샘플 HTTP 요청 및 응답을 제공합니다.
-hide: true
-hidefromtoc: true
-source-git-commit: df894d8b52aff3708aa06e73d4c5ba3e1e501f10
+source-git-commit: 4f85f38e4870f0c2429a3a2a50bd7f95075c6be4
 workflow-type: tm+mt
 source-wordcount: '2289'
 ht-degree: 2%
