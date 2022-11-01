@@ -4,9 +4,9 @@ title: 대상 대시보드 안내서
 description: Adobe Experience Platform은 조직의 활성 대상에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 7f226a37996ab5e1fef432c6007d7d488f84ded6
+source-git-commit: fdfc2a2b0f1f5be0508741de0e70ad72fe07d79f
 workflow-type: tm+mt
-source-wordcount: '2829'
+source-wordcount: '2828'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Adobe Experience Platform UI(사용자 인터페이스)는 일별 스냅샷 중�
 
 ## [!UICONTROL 대상] 대시보드 데이터 {#destinations-dashboard-data}
 
-다음 [!UICONTROL 대상] 대시보드는 Experience Platform 내에서 조직에서 활성화한 대상의 스냅숏을 표시합니다. 스냅샷의 데이터는 스냅샷을 가져온 특정 시점의 데이터와 동일하게 표시됩니다. 즉, 스냅샷은 근사 또는 데이터 샘플이 아니며, 대상 대시보드가 실시간으로 업데이트되지 않습니다.
+대상 대시보드는 Experience Platform 내에서 조직에서 활성화한 대상의 스냅숏을 표시합니다. 스냅샷의 데이터는 스냅샷을 가져온 특정 시점의 데이터와 동일하게 표시됩니다. 즉, 스냅샷은 근사 또는 데이터 샘플이 아니며, 대상 대시보드가 실시간으로 업데이트되지 않습니다.
 
 >[!NOTE]
 >
@@ -33,7 +33,7 @@ Platform UI 내에서 대상 대시보드로 이동하려면 다음을 선택합
 
 >[!NOTE]
 >
->조직에서 Experience Platform을 처음 사용하고 아직 활성 대상이 없는 경우 [!UICONTROL 대상] 대시보드 및 [!UICONTROL 개요] 탭이 표시되지 않습니다. 대신, 선택 [!UICONTROL 대상] 왼쪽 탐색에서 는 [!UICONTROL 카탈로그] 탭. 에 대해 자세히 알아보려면 [!UICONTROL 카탈로그] 탭에서 다음을 참조하십시오 [[!UICONTROL 대상] 작업 공간 안내서](../../destinations/ui/destinations-workspace.md).
+>조직에서 Experience Platform을 처음 사용하고 아직 활성 대상이 없는 경우 대상 대시보드 및 [!UICONTROL 개요] 탭이 표시되지 않습니다. 대신, 선택 [!UICONTROL 대상] 왼쪽 탐색에서 는 [!UICONTROL 카탈로그] 탭. 에 대해 자세히 알아보려면 [!UICONTROL 카탈로그] 탭에서 다음을 참조하십시오 [[!UICONTROL 대상] 작업 공간 안내서](../../destinations/ui/destinations-workspace.md).
 
 ![최신 스냅숏이 강조 표시된 Platform UI 대상 개요](../images/destinations/snapshot-timestamp.png)
 
