@@ -4,9 +4,9 @@ title: 대상자 데이터를 활성화하여 묶음 프로필 내보내기 대�
 type: Tutorial
 description: 세그먼트를 배치 프로필 기반 대상으로 보내 Adobe Experience Platform에서 보유한 대상 데이터를 활성화하는 방법을 알아봅니다.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 04ccf5c44e24f281171e5dd753a8431c24e0e0cf
+source-git-commit: 79fc200f4e56699013b1ba3f91f5e383cea77e2a
 workflow-type: tm+mt
-source-wordcount: '3468'
+source-wordcount: '3411'
 ht-degree: 0%
 
 ---
@@ -124,11 +124,6 @@ ht-degree: 0%
 1. 선택 **[!UICONTROL 만들기]** 일정을 저장합니다.
 
 ### 증분 파일 내보내기 {#export-incremental-files}
-
->[!CONTEXTUALHELP]
->id="platform_destinations_activate_datasets_exportoptions"
->title="데이터 세트에 대한 파일 내보내기 옵션"
->abstract="선택 **증분 파일 내보내기** 마지막 내보내기 이후 데이터 세트에 추가된 데이터만 내보냅니다. <br> 첫 번째 증분 파일 내보내기에는 데이터 집합에 있는 모든 데이터가 포함되며 채우기 역할을 합니다. 향후 증분 파일에는 첫 번째 내보내기 이후 데이터 세트에 추가된 데이터만 포함됩니다."
 
 선택 **[!UICONTROL 증분 파일 내보내기]** 첫 번째 파일이 선택한 세그먼트에 대한 모든 프로필 자격에 대한 전체 스냅샷이고 그 다음 파일은 이전 내보내기 이후의 증분 프로필 자격인 내보내기를 트리거합니다.
 

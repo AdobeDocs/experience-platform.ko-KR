@@ -2,9 +2,9 @@
 title: (베타) 클라우드 스토리지 대상으로 데이터 세트 내보내기
 type: Tutorial
 description: Adobe Experience Platform에서 기본 설정 클라우드 스토리지 위치로 데이터 세트를 내보내는 방법을 알아봅니다.
-source-git-commit: 92e2d575d92b9d412f473610fc149663e815f5c3
+source-git-commit: 97a39e12d916e4fbd048c0fb9ddfa9bdfa10d438
 workflow-type: tm+mt
-source-wordcount: '1252'
+source-wordcount: '1309'
 ht-degree: 1%
 
 ---
@@ -68,6 +68,11 @@ Experience Platform 카탈로그의 일부 파일 기반 대상은 세그먼트 
 ![내보낼 데이터 세트를 선택할 수 있는 데이터 세트 선택 단계를 보여주는 데이터 세트 내보내기 워크플로우입니다.](/help/destinations/assets/ui/export-datasets/select-datasets.png)
 
 ## 데이터 집합 내보내기 예약 {#scheduling}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_datasets_exportoptions"
+>title="데이터 세트에 대한 파일 내보내기 옵션"
+>abstract="선택 **증분 파일 내보내기** 마지막 내보내기 이후 데이터 세트에 추가된 데이터만 내보냅니다. <br> 첫 번째 증분 파일 내보내기에는 데이터 집합에 있는 모든 데이터가 포함되며 채우기 역할을 합니다. 향후 증분 파일에는 첫 번째 내보내기 이후 데이터 세트에 추가된 데이터만 포함됩니다."
 
 에서 **[!UICONTROL 예약]** 1단계에서 시작 날짜와 데이터 세트 내보내기에 대한 내보내기 간격을 설정할 수 있습니다.
 

@@ -2,7 +2,7 @@
 title: (베타) [!DNL Google Ad Manager 360] 연결
 description: Google Ad Manager 360은 게시자가 비디오 및 모바일 앱을 통해 웹 사이트에서 광고 표시를 관리할 수 있는 수단을 제공하는 Google의 광고 서비스 플랫폼입니다.
 exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
-source-git-commit: f163b1e3c60953192b2ddf543eb4f3e8df88799b
+source-git-commit: 97a39e12d916e4fbd048c0fb9ddfa9bdfa10d438
 workflow-type: tm+mt
 source-wordcount: '914'
 ht-degree: 1%
@@ -81,7 +81,7 @@ ht-degree: 1%
 대상을 인증하려면 필요한 필드를 입력하고 을(를) 선택합니다 **[!UICONTROL 대상에 연결]**.
 
 * **[!UICONTROL 액세스 키 ID]**: 인증을 위해 사용되는 61자의 영숫자 문자열입니다 [!DNL Google Cloud Storage] Platform에 계정을 설정합니다.
-* **[!UICONTROL 비밀 액세스 키]**: 인증을 위해 사용되는 40자의 기본-64로 인코딩된 문자열입니다 [!DNL Google Cloud Storage] Platform에 계정을 설정합니다.
+* **[!UICONTROL 비밀 액세스 키]**: 인증을 위해 사용되는 40자의 base64로 인코딩된 문자열입니다 [!DNL Google Cloud Storage] Platform에 계정을 설정합니다.
 
 이러한 값에 대한 자세한 내용은 [Google 클라우드 스토리지 HMAC 키](https://cloud.google.com/storage/docs/authentication/hmackeys#overview) 안내서. 고유한 액세스 키 ID 및 비밀 액세스 키를 생성하는 방법에 대한 단계는 [[!DNL Google Cloud Storage] 소스 개요](/help/sources/connectors/cloud-storage/google-cloud-storage.md).
 
