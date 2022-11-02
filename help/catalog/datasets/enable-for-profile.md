@@ -4,7 +4,7 @@ title: API를 사용하여 프로필 및 ID 서비스에 대한 데이터 세트
 type: Tutorial
 description: 이 자습서에서는 Adobe Experience Platform API를 사용하여 실시간 고객 프로필 및 ID 서비스에 사용할 데이터 세트를 활성화하는 방법을 보여줍니다.
 exl-id: a115e126-6775-466d-ad7e-ee36b0b8b49c
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 132407af947b97a1925799a1fb5e12caa2b0410c
 workflow-type: tm+mt
 source-wordcount: '1073'
 ht-degree: 1%
@@ -175,8 +175,7 @@ curl -X GET \
         "schemaMetadata": {
             "primaryKey": [],
             "delta": [],
-            "dule": [],
-            "gdpr": []
+            "dule": []
         },
         "schemaRef": {
             "id": "https://ns.adobe.com/xdm/context/experienceevent",
