@@ -3,9 +3,9 @@ keywords: 플랫폼;대상;대상 작업 공간;작업 공간;ui;대상 ui;카�
 title: 대상 작업 공간
 description: 대상 작업 영역은 개요, 카탈로그, 찾아보기, 계정 및 시스템 보기, 5개의 섹션으로 구성됩니다. 이러한 내용은 아래 섹션에 설명되어 있습니다.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: 802a15212f51db2c616860ed0fd2c3f1cf2d3777
+source-git-commit: 69e1f065cb3b302c4b144f39c84179075379f648
 workflow-type: tm+mt
-source-wordcount: '1162'
+source-wordcount: '1223'
 ht-degree: 2%
 
 ---
@@ -16,7 +16,7 @@ Adobe Experience Platform에서 **[!UICONTROL 대상]** 왼쪽 탐색 모음에�
 
 다음 [!UICONTROL 대상] 작업 공간은 다섯 개의 섹션으로 구성됩니다. [!UICONTROL 개요], [!UICONTROL 카탈로그], [!UICONTROL 찾아보기], [!UICONTROL 계정], 및 [!UICONTROL 시스템 보기]아래의 섹션에 설명되어 있습니다.
 
-![대상 - 개요](../assets/ui/workspace/destinations-overview.png)
+![3개의 위젯을 보여주는 대상 개요 대시보드.](../assets/ui/workspace/destinations-overview.png)
 
 ## [!UICONTROL 개요] {#overview}
 
@@ -37,16 +37,18 @@ Adobe Experience Platform에서 **[!UICONTROL 대상]** 왼쪽 탐색 모음에�
 * 페이지에서 검색 기능을 사용하여 특정 대상을 찾습니다.
 * 을 사용하여 대상 필터링 [!UICONTROL 카테고리] 제어.
 * 전환 [!UICONTROL 모든 대상] 및 [!UICONTROL 내 대상]. 선택 시 **[!UICONTROL 모든 대상]**, 모두 사용 가능 [!DNL Platform] 대상이 표시됩니다. 선택 시 **[!UICONTROL 내 대상]**&#x200B;를 입력하면 연결을 설정한 대상만 볼 수 있습니다.
-* 보려는 선택 **[!UICONTROL 연결]** 및/또는 **[!UICONTROL 확장]**. 두 범주 간의 차이를 이해하려면 다음을 참조하십시오 [대상 유형 및 카테고리](../destination-types.md).
+* 을(를) 선택하여 **[!UICONTROL 연결]** 및/또는 **[!UICONTROL 확장]** 유형. 두 범주 간의 차이를 이해하려면 다음을 참조하십시오 [대상 유형 및 카테고리](../destination-types.md).
 
-![카탈로그](../assets/ui/workspace/catalog.png)
+![몇 가지 광고 및 클라우드 스토리지 대상을 보여주는 대상 카탈로그입니다.](../assets/ui/workspace/catalog.png)
 
-대상 카드에 **[!UICONTROL 설정]** 또는 **[!UICONTROL 세그먼트 활성화]** 컨트롤 및 더 많은 옵션을 제공하는 보조 컨트롤 이러한 컨트롤은 아래에 설명되어 있습니다.
+대상 카드에 기본 및 보조 제어 옵션이 포함되어 있습니다. 기본 컨트롤은 다음과 같습니다 [!UICONTROL 설정], [!UICONTROL 활성화], [!UICONTROL 세그먼트 활성화], 또는 [!UICONTROL 데이터 세트 내보내기]. 보조 컨트롤을 사용하면 옵션을 볼 수 있습니다. 이러한 컨트롤은 아래에 설명되어 있습니다.
 
 | 제어 | 설명 |
 |---------|----------|
 | [!UICONTROL 설정] | 대상에 대한 연결을 만들 수 있습니다. |
-| [!UICONTROL 세그먼트 활성화] | 대상에 대한 연결을 설정한 후에는 세그먼트를 활성화할 수 있습니다. |
+| [!UICONTROL 활성화] | 대상에 대한 연결을 설정한 후에는 세그먼트를 활성화하거나 데이터 세트를 이 대상으로 내보낼 수 있습니다. |
+| [!UICONTROL 세그먼트 활성화] | 대상에 대한 연결을 설정한 후에는 세그먼트를 이 대상에 활성화할 수 있습니다. |
+| [!UICONTROL 데이터 세트 내보내기] | 대상에 대한 연결을 설정하면 데이터 세트를 이 대상으로 내보낼 수 있습니다. |
 | [!UICONTROL 계정 보기] | 대상에 대해 연결한 계정을 봅니다. |
 | [!UICONTROL 데이터 흐름 보기] | 대상에 대해 존재하는 데이터 활성화 흐름을 봅니다. |
 | [!UICONTROL 설명서 보기] | 자세한 내용을 알고 설정하는 데 도움이 되도록 특정 대상에 대한 설명서 페이지에 대한 링크를 엽니다. |
@@ -67,9 +69,9 @@ Adobe Experience Platform에서 **[!UICONTROL 대상]** 왼쪽 탐색 모음에�
 
 >[!TIP]
 >
-> * 에서 세 점을 선택합니다 [!UICONTROL 플랫폼] 열 및 ![세그먼트 활성화 단추](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL 세그먼트 활성화&#x200B;]**세그먼트를 해당 대상에 전송하는 단추.
-> * 에서 세 점을 선택합니다 [!UICONTROL 플랫폼] 열 및 ![세부 사항 편집 단추](../assets/ui/workspace/pencil-icon.png)**[!UICONTROL 세부 사항 편집&#x200B;]**버튼 대상 [업데이트](update-accounts.md) 기존 대상 계정의 세부 정보입니다.
-> * 에서 세 점을 선택합니다 [!UICONTROL 플랫폼] 열 및 ![삭제 단추](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL 삭제&#x200B;]**버튼 대상 [delete](delete-destination-account.md) 기존 대상 계정.
+> * 줄임표(`...`)을 클릭하여 제품에서 사용할 수 있습니다. [!UICONTROL 플랫폼] 열 및 ![컨트롤 활성화](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL 활성화&#x200B;]**/**[!UICONTROL &#x200B;세그먼트 활성화&#x200B;]**/**[!UICONTROL &#x200B;데이터 세트 내보내기&#x200B;]**세그먼트 또는 데이터 세트를 해당 대상으로 내보내는 제어.
+> * 줄임표(`...`)을 클릭하여 제품에서 사용할 수 있습니다. [!UICONTROL 플랫폼] 열 및 ![세부 사항 컨트롤 편집](../assets/ui/workspace/pencil-icon.png)**[!UICONTROL 세부 사항 편집&#x200B;]**컨트롤 [업데이트](update-accounts.md) 기존 대상 계정의 세부 정보입니다.
+> * 줄임표(`...`)을 클릭하여 제품에서 사용할 수 있습니다. [!UICONTROL 플랫폼] 열 및 ![컨트롤 삭제](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL 삭제&#x200B;]**컨트롤 [delete](delete-destination-account.md) 기존 대상 계정.
 
 
 ![계정 탭](../assets/ui/workspace/destination-account-options.png)
@@ -90,10 +92,10 @@ Adobe Experience Platform에서 **[!UICONTROL 대상]** 왼쪽 탐색 모음에�
 
 >[!TIP]
 >
-> * 에서 세 점을 선택합니다 [!UICONTROL 이름] 열 및 ![세그먼트 활성화 단추](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL 세그먼트 활성화&#x200B;]**세그먼트를 해당 대상에 전송하는 단추.
-> * 에서 세 점을 선택합니다 [!UICONTROL 이름] 열 및 ![삭제 단추](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL 삭제&#x200B;]**버튼 대상 [제거](delete-destinations.md) 대상에 대한 기존 연결.
-> * 에서 세 점을 선택합니다 [!UICONTROL 이름] 열 및 ![모니터링 단추에서 보기](../assets/ui/workspace/monitoring-icon.png)**[!UICONTROL 모니터링에서 보기&#x200B;]**단추를 클릭하여 이 대상에 대한 활성화 정보를 봅니다. [대시보드 모니터링](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
-> * 에서 세 점을 선택합니다 [!UICONTROL 이름] 열 및 ![경고 구독 ](../assets/ui/workspace/alerts-icon.png)**[!UICONTROL 경고 구독&#x200B;]**대상 데이터 흐름 경고를 구독하는 단추. 경고를 구독하면 흐름 실행 상태, 성공 또는 실패와 관련된 메시지를 받을 수 있습니다. 자세한 내용은 [컨텍스트 내 대상 경고 구독](alerts.md) 대상 데이터 흐름 경고에 대한 자세한 정보..
+> * 줄임표(`...`)을 클릭하여 제품에서 사용할 수 있습니다. [!UICONTROL 이름] 열 및 ![세그먼트 컨트롤 활성화](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL 활성화&#x200B;]**세그먼트 또는 데이터 세트를 해당 대상으로 내보내는 제어.
+> * 줄임표(`...`)을 클릭하여 제품에서 사용할 수 있습니다. [!UICONTROL 이름] 열 및 ![컨트롤 삭제](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL 삭제&#x200B;]**컨트롤 [제거](delete-destinations.md) 대상에 대한 기존 연결.
+> * 줄임표(`...`)을 클릭하여 제품에서 사용할 수 있습니다. [!UICONTROL 이름] 열 및 ![모니터링 컨트롤의 보기](../assets/ui/workspace/monitoring-icon.png)**[!UICONTROL 모니터링에서 보기&#x200B;]**이 대상에 대한 활성화 정보를 보려면 [대시보드 모니터링](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
+> * 줄임표(`...`)을 클릭하여 제품에서 사용할 수 있습니다. [!UICONTROL 이름] 열 및 ![경고 구독 ](../assets/ui/workspace/alerts-icon.png)**[!UICONTROL 경고 구독&#x200B;]**대상 데이터 흐름 경고를 구독하도록 제어합니다. 경고를 구독하면 흐름 실행 상태, 성공 또는 실패와 관련된 메시지를 받을 수 있습니다. 자세한 내용은 [컨텍스트 내 대상 경고 구독](alerts.md) 대상 데이터 흐름 경고에 대한 자세한 정보..
 
 
 ![찾아보기 탭](../assets/ui/workspace/browse-tab.png)

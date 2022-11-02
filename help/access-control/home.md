@@ -5,9 +5,9 @@ topic-legacy: overview
 title: 액세스 제어 개요
 description: Adobe Experience Platform에 대한 액세스 제어는 Adobe Admin Console을 통해 제공됩니다. 이 기능은 사용 권한 및 샌드박스를 사용자와 연결하는 Admin Console의 제품 프로필을 활용합니다.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: a3ee014656f135a0701b33f938384d3ab4316a99
+source-git-commit: e2d3267715f693a321b2f4ce1bae0650f38c21d7
 workflow-type: tm+mt
-source-wordcount: '1392'
+source-wordcount: '1419'
 ht-degree: 3%
 
 ---
@@ -103,7 +103,8 @@ Adobe Admin Console은 조직에 대한 Adobe 제품 권한 및 액세스를 관
 | [!DNL Sandbox Administration] | [!UICONTROL 샌드박스 재설정] | 샌드박스를 재설정하는 기능. |
 | [!DNL Destinations] | [!UICONTROL 대상 관리] | 대상을 읽기, 만들기, 편집 및 비활성화하기 위한 액세스 권한. |
 | [!DNL Destinations] | [!UICONTROL 대상 보기] | 에서 사용 가능한 대상에 대한 읽기 전용 액세스 **[!UICONTROL 카탈로그]** 의 탭 및 인증된 대상 **[!UICONTROL 찾아보기]** 탭. |
-| [!DNL Destinations] | [!UICONTROL 대상 활성화] | 생성된 활성 대상에 데이터를 활성화하는 기능. 이 권한을 사용하려면 &quot;대상 보기&quot; 또는 &quot;관리&quot;가 필요합니다 [!UICONTROL 대상&quot;] 대상을 활성화할 사용자에게 부여됩니다. |
+| [!DNL Destinations] | [!UICONTROL 대상 활성화] | 생성된 활성 대상에 데이터를 활성화하는 기능. 이 권한을 사용하려면 다음 중 하나가 필요합니다 [!UICONTROL 대상 보기] 또는 [!UICONTROL 대상 관리] 대상을 활성화할 사용자에게 부여됩니다. |
+| [!DNL Destinations] | [!UICONTROL 데이터 집합 대상 관리 및 활성화] | 데이터 집합 내보내기 흐름을 읽기, 만들기, 편집 및 비활성화할 수 있습니다. 또한 생성된 활성 데이터 세트에 데이터를 활성화하는 기능입니다. |
 | [!DNL Destinations] | [!UICONTROL 대상 작성] | 을 사용하여 대상을 작성할 수 있는 기능 [Adobe Experience Platform Destination SDK](../destinations/destination-sdk/overview.md). |
 | [!DNL Data Ingestion] | [!UICONTROL 소스 관리] | 소스를 읽고, 만들고, 편집하고, 비활성화할 수 있는 액세스 권한. |
 | [!DNL Data Ingestion] | [!UICONTROL 소스 보기] | 에서 사용 가능한 소스에 대한 읽기 전용 액세스 권한 **[!UICONTROL 카탈로그]** 의 탭 및 인증된 소스 **[!UICONTROL 찾아보기]** 탭. |
