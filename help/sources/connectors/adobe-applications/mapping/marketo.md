@@ -5,10 +5,10 @@ title: Marketo Engage 소스에 대한 매핑 필드
 topic-legacy: overview
 description: 아래 표에는 Marketo 데이터 세트의 필드와 해당 XDM 필드 간의 매핑이 포함되어 있습니다.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: a0ca9cff43b6f8276268467fecf944c664992950
+source-git-commit: 5e93a86d6bdbf66e6b4991e0e2bc4d3dfe90d2b5
 workflow-type: tm+mt
-source-wordcount: '746'
-ht-degree: 6%
+source-wordcount: '952'
+ht-degree: 4%
 
 ---
 
@@ -28,6 +28,8 @@ ht-degree: 6%
 ## 활동 {#activities}
 
 다음 [!DNL Marketo] 이제 소스가 추가 표준 활동을 지원합니다. 표준 활동을 사용하려면 [스키마 자동 생성 유틸리티](../marketo/marketo-namespaces.md) 새 `activities` 데이터 흐름에서 스키마를 업데이트하지 않으면 새 대상 필드가 스키마에 없으므로 매핑 템플릿이 실패합니다. 스키마를 업데이트하지 않도록 선택하더라도 새 데이터 흐름을 생성하고 오류를 취소할 수 있습니다. 하지만 새 필드나 업데이트된 필드는 Platform에 수집되지 않습니다.
+
+다음 문서를 참조하십시오. [XDM 경험 이벤트 클래스](../../../../xdm/classes/experienceevent.md) xdm 클래스 및 XDM 필드 그룹에 대한 자세한 내용을 참조하십시오.
 
 | 소스 데이터 세트 | XDM 대상 필드 | 참고 |
 | -------------- | ---------------- | ----- |
@@ -136,6 +138,8 @@ ht-degree: 6%
 
 ## 프로그램 {#programs}
 
+다음 문서를 참조하십시오. [XDM 비즈니스 캠페인 개요](../../../../xdm/classes/b2b/business-campaign.md) xdm 클래스에 대한 자세한 내용을 참조하십시오. XDM 필드 그룹에 대한 자세한 내용은 [비즈니스 캠페인 세부 사항 스키마 필드 그룹](../../../../xdm/field-groups/b2b-campaign/details.md) 안내서.
+
 | 소스 데이터 세트 | XDM 대상 필드 | 참고 |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `campaignKey.sourceType` |
@@ -164,6 +168,8 @@ ht-degree: 6%
 {style=&quot;table-layout:auto&quot;}
 
 ## 프로그램 멤버십 {#program-memberships}
+
+다음 문서를 참조하십시오. [XDM 비즈니스 캠페인 구성원 개요](../../../../xdm/classes/b2b/business-campaign-members.md) xdm 클래스에 대한 자세한 내용을 참조하십시오. XDM 필드 그룹에 대한 자세한 내용은 [XDM 비즈니스 캠페인 구성원 세부 정보 스키마 필드 그룹](../../../../xdm/field-groups/b2b-campaign-members/details.md) 안내서.
 
 | 소스 데이터 세트 | XDM 대상 필드 | 참고 |
 | -------------- | ---------------- | ----- |
@@ -196,6 +202,8 @@ ht-degree: 6%
 
 ## 회사 {#companies}
 
+다음 문서를 참조하십시오. [XDM 비즈니스 계정 개요](../../../../xdm/classes/b2b/business-account.md) xdm 클래스에 대한 자세한 내용을 참조하십시오.
+
 | 소스 데이터 세트 | XDM 대상 필드 | 참고 |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `accountKey.sourceType` |
@@ -226,6 +234,8 @@ ht-degree: 6%
 
 ## 정적 목록 {#static-lists}
 
+다음 문서를 참조하십시오. [XDM 비즈니스 마케팅 목록 개요](../../../../xdm/classes/b2b/business-marketing-list.md) xdm 클래스에 대한 자세한 내용을 참조하십시오.
+
 | 소스 데이터 세트 | XDM 대상 필드 | 참고 |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `marketingListKey.sourceType` |
@@ -241,6 +251,8 @@ ht-degree: 6%
 {style=&quot;table-layout:auto&quot;}
 
 ## 정적 목록 구성원 {#static-list-memberships}
+
+다음 문서를 참조하십시오. [XDM 비즈니스 마케팅 목록 구성원 개요](../../../../xdm/classes/b2b/business-marketing-list-members.md) xdm 클래스에 대한 자세한 내용을 참조하십시오.
 
 | 소스 데이터 세트 | XDM 대상 필드 | 참고 |
 | -------------- | ---------------- | ----- |
@@ -260,6 +272,8 @@ ht-degree: 6%
 >[!IMPORTANT]
 >
 >명명된 계정 데이터 세트는 Marketo의 ABM(계정 기반 마케팅) 기능에서만 필요합니다. ABM을 사용하지 않는 경우 명명된 계정에 대한 매핑을 설정할 필요가 없습니다.
+
+다음 문서를 참조하십시오. [XDM 비즈니스 계정 개요](../../../../xdm/classes/b2b/business-account.md) xdm 클래스에 대한 자세한 내용을 참조하십시오.
 
 | 소스 데이터 세트 | XDM 대상 필드 | 참고 |
 | -------------- | ---------------- | ----- |
@@ -286,6 +300,8 @@ ht-degree: 6%
 {style=&quot;table-layout:auto&quot;}
 
 ## 기회 {#opportunities}
+
+다음 문서를 참조하십시오. [XDM 비즈니스 기회 개요](../../../../xdm/classes/b2b/business-opportunity.md) xdm 클래스에 대한 자세한 내용을 참조하십시오.
 
 | 소스 데이터 세트 | XDM 대상 필드 | 참고 |
 | -------------- | ---------------- | ----- |
@@ -322,6 +338,8 @@ ht-degree: 6%
 
 ## 기회 연락처 역할 {#opportunity-contact-roles}
 
+다음 문서를 참조하십시오. [XDM 비즈니스 기회 개인 관계 개요](../../../../xdm/classes/b2b/business-account-person-relation.md) xdm 클래스에 대한 자세한 내용을 참조하십시오.
+
 | 소스 데이터 세트 | XDM 대상 필드 | 참고 |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `opportunityPersonKey.sourceType` |
@@ -340,6 +358,8 @@ ht-degree: 6%
 {style=&quot;table-layout:auto&quot;}
 
 ## 사람 {#persons}
+
+다음 문서를 참조하십시오. [XDM 개별 프로필 개요](../../../../xdm/classes/individual-profile.md) xdm 클래스에 대한 자세한 내용을 참조하십시오. XDM 필드 그룹에 대한 자세한 내용은 [XDM 비즈니스 개인 세부 정보 스키마 필드 그룹](../../../../xdm/field-groups/profile/business-person-details.md) 안내서 및 [XDM 비즈니스 개인 구성 요소 스키마 필드 그룹](../../../../xdm/field-groups/profile/business-person-components.md) 안내서.
 
 | 소스 데이터 세트 | XDM 대상 필드 | 참고 |
 | -------------- | ---------------- | ----- |

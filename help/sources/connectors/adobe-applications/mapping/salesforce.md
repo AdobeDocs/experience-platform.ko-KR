@@ -3,10 +3,10 @@ keywords: Experience Platform;홈;인기 항목;Salesforce;salesforce;필드 매
 title: Salesforce 매핑 필드
 description: 아래 표에는 Salesforce 소스 필드와 해당 XDM 필드 간의 매핑이 포함되어 있습니다.
 exl-id: 33ee76f2-0495-4acd-a862-c942c0fa3177
-source-git-commit: 948247c1ffbe10fa07ba1d03f1715fd707c6d836
+source-git-commit: 5e93a86d6bdbf66e6b4991e0e2bc4d3dfe90d2b5
 workflow-type: tm+mt
-source-wordcount: '291'
-ht-degree: 14%
+source-wordcount: '494'
+ht-degree: 8%
 
 ---
 
@@ -15,6 +15,8 @@ ht-degree: 14%
 아래 표에는 두 테이블 간의 매핑이 포함되어 있습니다 [!DNL Salesforce] 소스 필드 및 해당 XDM(Experience Data Model) 필드.
 
 ## 연락처 {#contact}
+
+다음 문서를 참조하십시오. [XDM 개별 프로필 개요](../../../../xdm/classes/individual-profile.md) xdm 클래스에 대한 자세한 내용을 참조하십시오. XDM 필드 그룹에 대한 자세한 내용은 [XDM 비즈니스 개인 세부 정보 스키마 필드 그룹](../../../../xdm/field-groups/profile/business-person-details.md) 안내서 및 [XDM 비즈니스 개인 구성 요소 스키마 필드 그룹](../../../../xdm/field-groups/profile/business-person-components.md) 안내서.
 
 | 소스 필드 | Target XDM 필드 경로 | 참고 |
 | --- | --- | --- |
@@ -74,6 +76,8 @@ ht-degree: 14%
 
 ## 리드 {#lead}
 
+다음 문서를 참조하십시오. [XDM 개별 프로필 개요](../../../../xdm/classes/individual-profile.md) xdm 클래스에 대한 자세한 내용을 참조하십시오. XDM 필드 그룹에 대한 자세한 내용은 [XDM 비즈니스 개인 세부 정보 스키마 필드 그룹](../../../../xdm/field-groups/profile/business-person-details.md) 안내서 및 [XDM 비즈니스 개인 구성 요소 스키마 필드 그룹](../../../../xdm/field-groups/profile/business-person-components.md) 안내서.
+
 | 소스 필드 | Target XDM 필드 경로 | 참고 |
 | --- | --- | --- |
 | `City` | `workAddress.city` |
@@ -122,6 +126,8 @@ ht-degree: 14%
 {style=&quot;table-layout:auto&quot;}
 
 ## 계정 {#account}
+
+다음 문서를 참조하십시오. [XDM 비즈니스 계정 세부 사항 개요](../../../../xdm/classes/b2b/business-account.md) xdm 클래스에 대한 자세한 내용을 참조하십시오.
 
 | 소스 필드 | Target XDM 필드 경로 | 참고 |
 | --- | --- | --- |
@@ -177,6 +183,8 @@ ht-degree: 14%
 
 ## 기회 {#opportunity}
 
+다음 문서를 참조하십시오. [XDM 비즈니스 기회 개요](../../../../xdm/classes/b2b/business-opportunity.md) xdm 클래스에 대한 자세한 내용을 참조하십시오.
+
 | 소스 필드 | Target XDM 필드 경로 | 참고 |
 | --- | --- | --- |
 | `"Salesforce"` | `opportunityKey.sourceType` |
@@ -216,6 +224,8 @@ ht-degree: 14%
 
 ## 기회 연락처 역할 {#opportunity-contact-role}
 
+다음 문서를 참조하십시오. [XDM Business Opportunity 개인 관계 클래스 개요](../../../../xdm/classes/b2b/business-opportunity-person-relation.md) xdm 클래스에 대한 자세한 내용을 참조하십시오.
+
 | 소스 필드 | Target XDM 필드 경로 | 참고 |
 | --- | --- | --- |
 | `"Salesforce"` | `opportunityPersonKey.sourceType` |
@@ -239,6 +249,8 @@ ht-degree: 14%
 {style=&quot;table-layout:auto&quot;}
 
 ## Campaign {#campaign}
+
+다음 문서를 참조하십시오. [XDM 비즈니스 캠페인 클래스 개요](../../../../xdm/classes/b2b/business-campaign.md) xdm 클래스에 대한 자세한 내용을 참조하십시오. XDM 필드 그룹에 대한 자세한 내용은 [XDM 비즈니스 캠페인 세부 사항 스키마 필드 그룹](../../../../xdm/field-groups/b2b-campaign/details.md) 안내서.
 
 | 소스 필드 | Target XDM 필드 경로 | 참고 |
 | --- | --- | --- |
@@ -269,6 +281,8 @@ ht-degree: 14%
 
 ## 캠페인 구성원 {#campaign-member}
 
+다음 문서를 참조하십시오. [XDM 비즈니스 캠페인 구성원 개요](../../../../xdm/classes/b2b/business-campaign-members.md) xdm 클래스에 대한 자세한 내용을 참조하십시오. XDM 필드 그룹에 대한 자세한 내용은 [XDM 비즈니스 캠페인 구성원 세부 정보 스키마 필드 그룹](../../../../xdm/field-groups/b2b-campaign/details.md) 문서.
+
 | 소스 필드 | Target XDM 필드 경로 | 참고 |
 | --- | --- | --- |
 | `"Salesforce"` | `campaignMemberKey.sourceType` |
@@ -292,6 +306,8 @@ ht-degree: 14%
 | `Type` | `b2b.personType` |
 
 ## 계정 연락처 관계 {#account-contact-relation}
+
+다음 문서를 참조하십시오. [XDM 비즈니스 계정 개인 관계 분류](../../../../xdm/classes/b2b/business-account-person-relation.md) xdm 클래스에 대한 자세한 내용을 참조하십시오.
 
 | 소스 필드 | Target XDM 필드 경로 | 참고 |
 | --- | --- | --- |
