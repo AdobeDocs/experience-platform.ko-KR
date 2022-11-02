@@ -4,9 +4,9 @@ title: 대상자 데이터를 활성화하여 묶음 프로필 내보내기 대�
 type: Tutorial
 description: 세그먼트를 배치 프로필 기반 대상으로 보내 Adobe Experience Platform에서 보유한 대상 데이터를 활성화하는 방법을 알아봅니다.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: c096720d9b7a645475d3a3f63f900e81c212d121
+source-git-commit: 04ccf5c44e24f281171e5dd753a8431c24e0e0cf
 workflow-type: tm+mt
-source-wordcount: '2626'
+source-wordcount: '3468'
 ht-degree: 0%
 
 ---
@@ -16,6 +16,8 @@ ht-degree: 0%
 >[!IMPORTANT]
 > 
 >데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 다음 문서를 참조하십시오. [액세스 제어 개요](/help/access-control/ui/overview.md) 또는 제품 관리자에게 문의하여 필요한 권한을 얻으십시오.
+>
+>향상된 파일 내보내기 기능 베타 프로그램에 참여하는 일부 고객이 새로운 기능을 살펴보고 있습니다 **[!UICONTROL 매핑]** 활성화 워크플로우에서 의 일부로 단계 [새로운 베타 클라우드 스토리지 대상](/help/release-notes/2022/october-2022.md#destinations). 또한 [알려진 제한 사항](#known-limitations) 릴리스의 일부로 사용됩니다.
 
 ## 개요 {#overview}
 
@@ -162,13 +164,13 @@ ht-degree: 0%
 >title="파일 이름 구성"
 >abstract="파일 기반 대상의 경우 세그먼트별로 고유한 파일 이름이 생성됩니다. 파일 이름 편집기를 사용하여 고유한 파일 이름을 만들고 편집하거나 기본 이름을 유지합니다."
 
-기본 파일 이름은 대상 이름, 세그먼트 ID, 날짜 및 시간 표시기로 구성됩니다. 예를 들어 내보낸 파일 이름을 편집하여 서로 다른 캠페인을 구분하거나 데이터 내보내기 시간을 파일에 추가할 수 있습니다.
+대부분의 대상의 경우, 기본 파일 이름은 대상 이름, 세그먼트 ID, 날짜 및 시간 표시기로 구성됩니다. 예를 들어 내보낸 파일 이름을 편집하여 서로 다른 캠페인을 구분하거나 데이터 내보내기 시간을 파일에 추가할 수 있습니다. 일부 대상 개발자는 대상에 대해 다른 기본 파일 이름 추가 옵션이 표시되도록 선택할 수 있습니다.
 
 연필 아이콘을 선택하여 모달 창을 열고 파일 이름을 편집합니다. 파일 이름은 255자로 제한됩니다.
 
 >[!NOTE]
 >
->아래 이미지는 Amazon S3 대상에 대해 파일 이름을 편집할 수 있는 방법을 보여주지만 모든 배치 대상(예: SFTP 또는 Azure Blob 저장소)에 대해 프로세스가 동일합니다.
+>아래 이미지는 파일 이름을 편집할 수 있는 방법을 보여줍니다 [!DNL Amazon S3] 대상이 되지만 프로세스는 모든 배치 대상(예: SFTP, [!DNL Azure Blob Storage], 또는 [!DNL Google Cloud Storage]).
 
 ![파일 이름을 구성하는 데 사용되는 연필 아이콘을 강조 표시하는 이미지입니다.](../assets/ui/activate-batch-profile-destinations/configure-name.png)
 
@@ -178,9 +180,17 @@ ht-degree: 0%
 
 대상 이름 및 세그먼트 ID는 파일 이름에서 제거할 수 없습니다. 이 외에도 다음을 추가할 수 있습니다.
 
-* **[!UICONTROL 세그먼트 이름]**: 세그먼트 이름을 파일 이름에 추가할 수 있습니다.
-* **[!UICONTROL 날짜 및 시간]**: 추가 중 선택 `MMDDYYYY_HHMMSS` 파일이 생성되는 시간의 Unix 10자리 타임스탬프의 형식 또는 형식입니다. 각 증분 내보내기로 생성된 동적 파일 이름을 파일에 포함하려면 다음 옵션 중 하나를 선택합니다.
-* **[!UICONTROL 사용자 정의 텍스트]**: 파일 이름에 사용자 지정 텍스트를 추가합니다.
+| 파일 이름 옵션 | 설명 |
+|---------|----------|
+| **[!UICONTROL 세그먼트 이름]** | 내보낸 세그먼트의 이름입니다. |
+| **[!UICONTROL 날짜 및 시간]** | 추가 중 선택 `MMDDYYYY_HHMMSS` 파일이 생성되는 시간의 Unix 10자리 타임스탬프의 형식 또는 형식입니다. 각 증분 내보내기로 생성된 동적 파일 이름을 파일에 포함하려면 다음 옵션 중 하나를 선택합니다. |
+| **[!UICONTROL 사용자 정의 텍스트]** | 파일 이름에 추가할 사용자 지정 텍스트입니다. |
+| **[!UICONTROL 대상 ID]** | 세그먼트를 내보내는 데 사용하는 대상 데이터 흐름의 ID입니다. <br> **참고**: 이 파일 이름 추가 옵션은 향상된 파일 내보내기 기능 베타 프로그램에 참여하는 베타 고객만 사용할 수 있습니다. 베타 프로그램에 액세스하려면 Adobe 담당자 또는 고객 지원 센터에 문의하십시오. |
+| **[!UICONTROL 대상 이름]** | 세그먼트를 내보내는 데 사용하는 대상 데이터 흐름의 이름입니다. <br> **참고**: 이 파일 이름 추가 옵션은 향상된 파일 내보내기 기능 베타 프로그램에 참여하는 베타 고객만 사용할 수 있습니다. 베타 프로그램에 액세스하려면 Adobe 담당자 또는 고객 지원 센터에 문의하십시오. |
+| **[!UICONTROL 조직 이름]** | Experience Platform 내의 조직 이름입니다. <br> **참고**: 이 파일 이름 추가 옵션은 향상된 파일 내보내기 기능 베타 프로그램에 참여하는 베타 고객만 사용할 수 있습니다. 베타 프로그램에 액세스하려면 Adobe 담당자 또는 고객 지원 센터에 문의하십시오. |
+| **[!UICONTROL 샌드박스 이름]** | 세그먼트를 내보내는 데 사용하는 샌드박스의 ID입니다. <br> **참고**: 이 파일 이름 추가 옵션은 향상된 파일 내보내기 기능 베타 프로그램에 참여하는 베타 고객만 사용할 수 있습니다. 베타 프로그램에 액세스하려면 Adobe 담당자 또는 고객 지원 센터에 문의하십시오. |
+
+{style=&quot;table-layout:auto&quot;}
 
 선택 **[!UICONTROL 변경 사항 적용]** 을 클릭하여 선택 항목을 확인합니다.
 
@@ -193,7 +203,6 @@ ht-degree: 0%
 ## 프로필 속성 선택 {#select-attributes}
 
 프로필 기반 대상의 경우 대상 대상으로 전송할 프로필 속성을 선택해야 합니다.
-
 
 1. 에서 **[!UICONTROL 속성 선택]** 페이지를 선택하고 **[!UICONTROL 새 필드 추가]**.
 
@@ -386,6 +395,75 @@ Adobe은 다음과 같은 ID 네임스페이스를 선택할 것을 권장합니
 >
 > 예를 들어, 필드가 `person.name.firstName` 에는 대상의 마케팅 작업과 충돌하는 특정 데이터 사용 레이블이 있으며, 검토 단계에서 데이터 사용 정책 위반이 표시됩니다. 자세한 내용은 [Adobe Experience Platform의 데이터 거버넌스](../../rtcdp/privacy/data-governance-overview.md#destinations).
 
+## (베타) 매핑 {#mapping}
+
+>[!IMPORTANT]
+> 
+>베타 고객이 향상된 기능을 볼 수 있음 선택 **[!UICONTROL 매핑]** 대체 단계 [프로필 속성 선택](#select-attributes) 위에 자세히 설명된 단계입니다. 이 새로운 기능 **[!UICONTROL 매핑]** 단계를 사용하면 내보낸 파일의 헤더를 원하는 사용자 지정 이름으로 편집할 수 있습니다.
+> 
+> 기능 및 설명서는 변경될 수 있습니다. 이 베타 프로그램에 액세스하려면 Adobe 담당자 또는 고객 지원 센터에 문의하십시오.
+
+이 단계에서는 대상 대상으로 내보낸 파일에 추가할 프로필 속성을 선택해야 합니다. 내보낼 프로필 속성 및 ID를 선택하려면 다음을 수행하십시오.
+
+1. 에서 **[!UICONTROL 매핑]** 페이지를 선택하고 **[!UICONTROL 새 필드 추가]**.
+
+   ![매핑 워크플로우에서 강조 표시된 새 필드 컨트롤을 추가합니다.](../assets/ui/activate-batch-profile-destinations/add-new-field-mapping.png)
+
+1. 오른쪽 화살표를 선택합니다 **[!UICONTROL 소스 필드]** 을 입력합니다.
+
+   ![매핑 워크플로우에서 강조 표시된 소스 필드 컨트롤을 선택합니다.](../assets/ui/activate-batch-profile-destinations/select-source-field.png)
+
+1. 에서 **[!UICONTROL 소스 필드 선택]** 페이지에서 내보낸 파일에 포함할 프로필 속성 및 ID를 선택한 다음 대상을 선택합니다 **[!UICONTROL 선택]**.
+
+   >[!TIP]
+   > 
+   >아래 이미지와 같이 검색 필드를 사용하여 선택 영역의 범위를 좁힐 수 있습니다.
+
+   ![대상으로 내보낼 수 있는 프로필 속성을 보여주는 모달 창.](../assets/ui/activate-batch-profile-destinations/select-source-field-modal.png)
+
+
+1. 이제 내보내도록 선택한 필드가 매핑 보기에 나타납니다. 원할 경우 내보낸 파일에서 헤더의 이름을 편집할 수 있습니다. 이렇게 하려면 대상 필드에서 아이콘을 선택합니다.
+
+   ![대상으로 내보낼 수 있는 프로필 속성을 보여주는 모달 창.](../assets/ui/activate-batch-profile-destinations/mapping-step-select-target-field.png)
+
+1. 에서 **[!UICONTROL 대상 필드 선택]** 페이지를 입력한 다음 내보낸 파일에 있는 헤더의 원하는 이름을 입력하고 **[!UICONTROL 선택]**.
+
+   ![헤더에 대해 형식화된 친숙한 이름을 표시하는 모달 창.](../assets/ui/activate-batch-profile-destinations/select-target-field-mapping.png)
+
+1. 이제 내보내도록 선택한 필드가 매핑 보기에 나타나고 내보낸 파일에 편집된 헤더를 표시합니다.
+
+   ![대상으로 내보낼 수 있는 프로필 속성을 보여주는 모달 창.](../assets/ui/activate-batch-profile-destinations/select-target-field-updated.png)
+
+1. (선택 사항) 내보낸 필드를 선택할 수 있습니다. [필수 키](#mandatory-keys) 또는 [중복 제거 키](#deduplication-keys).
+
+   ![대상으로 내보낼 수 있는 프로필 속성을 보여주는 모달 창.](../assets/ui/activate-batch-profile-destinations/select-mandatory-deduplication-key.png)
+
+1. 내보낼 필드를 더 추가하려면 위의 단계를 반복합니다.
+
+### 알려진 제한 사항 {#known-limitations}
+
+새로운 **[!UICONTROL 매핑]** 페이지에는 다음과 같은 알려진 제한 사항이 있습니다.
+
+#### 매핑 워크플로우를 통해 세그먼트 멤버십 속성을 선택할 수 없습니다
+
+알려진 제한 사항으로 인해 현재 **[!UICONTROL 필드 선택]** 추가할 창 `segmentMembership.status` 로 내보내기 대신 값을 수동으로 붙여넣어야 합니다 `xdm: segmentMembership.status` 아래와 같이 스키마 필드에 추가합니다.
+
+![활성화 워크플로우의 매핑 단계에서 세그먼트 구성원 해결 방법을 보여주는 화면 기록.](/help/destinations/assets/ui/activate-batch-profile-destinations/segment-membership-mapping-step.gif)
+
+파일 내보내기는 여부에 따라 다음과 같은 방식으로 달라집니다 `segmentMembership.status` 이(가) 선택되어 있습니다.
+* 만약 `segmentMembership.status` 필드를 선택하면 내보낸 파일이 포함됩니다. **[!UICONTROL 활성]** 초기 전체 스냅샷의 멤버 및 **[!UICONTROL 활성]** 및 **[!UICONTROL 만료됨]** 후속 증분 내보내기에 있는 멤버
+* 만약 `segmentMembership.status` 필드를 선택하지 않고 내보낸 파일만 포함합니다 **[!UICONTROL 활성]** 초기 전체 스냅샷과 후속 증분 내보내기의 멤버
+
+#### 내보내기에 대해 현재 ID 네임스페이스를 선택할 수 없습니다
+
+아래 이미지와 같이 내보낼 ID 네임스페이스를 선택하는 것은 현재 지원되지 않습니다. 내보낼 ID 네임스페이스를 선택하면 **[!UICONTROL 검토]** 단계.
+
+![ID 내보내기를 보여주는 지원되지 않는 매핑](/help/destinations/assets/ui/activate-batch-profile-destinations/unsupported-identity-mapping.png)
+
+베타 중에 내보낸 파일에 ID 네임스페이스를 추가해야 하는 경우 임시 해결 방법으로 다음 중 하나를 수행할 수 있습니다.
+* 내보내기에 ID 네임스페이스를 포함하려는 데이터 흐름의 기존 클라우드 저장소 대상을 사용합니다
+* ID를 속성으로 Experience Platform에 업로드한 다음 클라우드 스토리지 대상으로 내보냅니다.
+
 ## 검토 {#review}
 
 설정 **[!UICONTROL 검토]** 페이지에서 선택 사항에 대한 요약을 볼 수 있습니다. 선택 **[!UICONTROL 취소]** 흐름을 분해하려면 **[!UICONTROL 뒤로]** 설정을 수정하려면 **[!UICONTROL 완료]** 을(를) 클릭하여 선택 내용을 확인하고 데이터를 대상으로 보내기 시작합니다.
@@ -402,11 +480,10 @@ Adobe은 다음과 같은 ID 네임스페이스를 선택할 것을 권장합니
 
 ## 세그먼트 활성화 확인 {#verify}
 
-
-이메일 마케팅 대상 및 클라우드 스토리지 대상에 대해 Adobe Experience Platform은 `.csv` 파일을 입력한 저장 위치에 저장합니다. 매일 저장소 위치에 새 파일이 생성될 것으로 예상됩니다. 기본 파일 형식은 다음과 같습니다.
+이메일 마케팅 대상 및 클라우드 스토리지 대상에 대해 Adobe Experience Platform은 `.csv` 파일을 입력한 저장 위치에 저장합니다. 워크플로우에서 설정한 일정에 따라 스토리지 위치에 새 파일이 생성되기를 기대합니다. 기본 파일 형식은 다음과 같습니다.
 `<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv`
 
-3일 연속으로 받은 파일은 다음과 같습니다.
+예를 들어 일별 내보내기 빈도를 선택한 경우 3일 연속으로 받은 파일은 다음과 같을 수 있습니다.
 
 ```console
 Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv

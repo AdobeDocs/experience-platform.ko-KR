@@ -4,9 +4,9 @@ user-guide-title: 대상 안내서
 user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 등에 대해 알려진 데이터와 알 수 없는 데이터를 활성화합니다.
 description: 이 문서에서는 Adobe Experience Platform 대상의 목차 목록을 설명합니다
 feature: Destinations
-source-git-commit: 5c938f8158cfd16b8904ee1e7f67b6ce66b2e45c
+source-git-commit: d046c17a7b376f5c2e2f25c38fac0916ed2dba73
 workflow-type: tm+mt
-source-wordcount: '963'
+source-wordcount: '985'
 ht-degree: 6%
 
 ---
@@ -35,6 +35,7 @@ ht-degree: 6%
       * [프로필 요청 대상에 대상 데이터 활성화](./ui/activate-profile-request-destinations.md)
       * [동일 페이지 및 다음 페이지 개인화를 위한 개인화 대상 구성](./ui/configure-personalization-destinations.md)
       * [(베타) Experience Platform UI를 사용하여 온디맨드 파일을 배치 대상으로 내보내기](./ui/export-file-now.md)
+      * [(베타) Experience Platform UI를 사용하여 데이터 세트 내보내기](./ui/export-datasets.md)
    * [대상 세부 사항 보기](./ui/destination-details-page.md)
    * [대상 계정 업데이트](./ui/update-accounts.md)
    * [대상 계정 삭제](./ui/delete-destination-account.md)
@@ -103,7 +104,10 @@ ht-degree: 6%
       * [Amazon Kinesis 연결](./catalog/cloud-storage/amazon-kinesis.md)
       * [Amazon S3 연결](./catalog/cloud-storage/amazon-s3.md)
       * [Azure Blob 연결](./catalog/cloud-storage/azure-blob.md)
+      * [(베타) Azure Data Lake Storage Gen2](./catalog/cloud-storage/adls-gen2.md)
       * [Azure 이벤트 허브 연결](./catalog/cloud-storage/azure-event-hubs.md)
+      * [(베타) 데이터 랜딩 영역](./catalog/cloud-storage/data-landing-zone.md)
+      * [(베타) Google 클라우드 스토리지](./catalog/cloud-storage/google-cloud-storage.md)
       * [SFTP 연결](./catalog/cloud-storage/sftp.md)
       * [클라우드 스토리지 허용 목록에 추가하다 대상에 대한 IP 주소](./catalog/cloud-storage/ip-address-allow-list.md)
    * CRM(고객 관계 관리) 대상 {#crm}

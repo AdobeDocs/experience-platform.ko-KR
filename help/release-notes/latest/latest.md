@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform에 대한 최신 릴리스 노트입니다.
-source-git-commit: cf8f630360c2cdbba1082913b179e719156183f4
+source-git-commit: d046c17a7b376f5c2e2f25c38fac0916ed2dba73
 workflow-type: tm+mt
-source-wordcount: '1060'
-ht-degree: 5%
+source-wordcount: '1394'
+ht-degree: 4%
 
 ---
 
@@ -48,6 +48,15 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 
 [!DNL Destinations] 는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과의 사전 구축된 통합입니다. 대상을 사용하여 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례에 대해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 
+**새로운 기능 또는 업데이트된 기능**
+
+| 기능 | 설명 |
+| --- | --- |
+| (베타) 데이터 집합 내보내기 | 다음 [데이터 집합에서 베타 기능을 내보냅니다](/help/destinations/ui/export-datasets.md) 의 [Real-time Customer Data Platform 제품 설명](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)) 대상 사용자 인터페이스를 통해 고유한 외부 고객 시스템에 Adobe Experience Platform 외부에서 가져옵니다. 이를 통해 분석 및 규정 준수 사용 사례를 위해 코드 없음/낮은 코드 워크플로우를 통해 데이터를 6개의 클라우드 스토리지 대상(아래 표에 나열됨)으로 Experience Platform 밖으로 가져올 수 있습니다. |
+| (베타) 향상된 파일 내보내기 기능 | 이제 Experience Platform에서 파일을 내보낼 때 향상된 사용자 지정 기능을 활용할 수 있습니다. <br><ul><li>추가 [파일 이름 지정 옵션](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).</li><li>를 통해 내보낸 파일에서 사용자 지정 파일 헤더를 설정할 수 있습니다. [매핑 단계 개선](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).</li><li>[내보낸 CSV 데이터 파일의 형식을 사용자 지정하는 기능](/help/destinations/ui/batch-destinations-file-formatting-options.md).</li></ul> <br> 이 기능은 아래 표에 나열된 6개의 새로운 베타 클라우드 스토리지 카드에서 지원됩니다. |
+
+{style=&quot;table-layout:auto&quot;}
+
 **새 대상 또는 업데이트된 대상**
 
 | 대상 | 설명 |
@@ -55,6 +64,12 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 | [[!DNL Line]](../../destinations/catalog/mobile-engagement/line.md) | Line 은 사용자, 서비스 및 정보를 연결하는 인기 있는 통신 플랫폼으로, 채팅 앱에서 엔터테인먼트, 소셜 및 일상적인 활동을 위한 허브로 성장했습니다. |
 | [[!DNL Microsoft Dynamics 365]](../../destinations/catalog/crm/microsoft-dynamics-365.md) | Microsoft Dynamics 365는 ERP(Enterprise Resource Planning)와 CRM(Customer Relationship Management)을 생산성 애플리케이션 및 AI 도구와 결합하여 종단 간 더욱 원활하고 제어된 운영, 향상된 성장 가능성 및 비용 절감을 제공하는 클라우드 기반 비즈니스 애플리케이션 플랫폼입니다. |
 | [[!DNL (Beta) Adobe Commerce]](../../destinations/catalog/personalization/adobe-commerce.md) | 다음 [!DNL (Beta) Adobe Commerce] 대상 커넥터를 사용하면 하나 이상의 Real-Time CDP 세그먼트를 선택하여 원하는 위치에 활성화할 수 있습니다 [!DNL Adobe Commerce] 고객을 위한 동적 개인화된 경험을 제공하기 위한 계정입니다. 내 [!DNL Adobe Commerce]그런 다음 이러한 Real-Time CDP 세그먼트를 선택하여 장바구니에서 &#39;buy 2 get 1 free&#39; 등의 고유한 오퍼를 개인화할 수 있습니다. Adobe Real-Time CDP 세그먼트에 맞게 사용자 지정된 프로모션 오퍼를 통해 대표 배너를 표시하고 제품 가격을 수정할 수도 있습니다. |
+| [[!DNL (Beta) Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md) | 에 대한 라이브 아웃바운드 연결을 만듭니다. [!DNL Azure Data Lake Storage Gen2] Adobe Experience Platform의 데이터 파일을 주기적으로 자체 저장소 위치로 내보냅니다. 이 새로운 베타 대상은 향상된 파일 내보내기 기능을 제공하고 데이터 세트 내보내기를 지원합니다. |
+| [[!DNL (Beta) Azure Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md) | [!DNL Data Landing Zone] is [!DNL Azure Blob] Adobe Experience Platform에서 프로비저닝한 스토리지 인터페이스로, Platform에서 파일을 내보낼 수 있는 안전한 클라우드 기반 파일 저장소 기능에 대한 액세스 권한을 부여합니다. 이 새로운 베타 대상은 향상된 파일 내보내기 기능을 제공하고 데이터 세트 내보내기를 지원합니다. |
+| [[!DNL (Beta) Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md) | 에 대한 라이브 아웃바운드 연결을 만듭니다. [!DNL Google Cloud Storage] 를 통해 Adobe Experience Platform의 데이터 파일을 고유한 버킷으로 주기적으로 내보냅니다. 이 새로운 베타 대상은 향상된 파일 내보내기 기능을 제공하고 데이터 세트 내보내기를 지원합니다. |
+| [[!DNL (Beta) Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md#changelog) | 베타 참가자에게 이제 두 명이 표시됩니다. [!DNL Amazon S3] 대상 카탈로그의 대상 카드를 나란히 표시합니다. 새로운 베타 대상은 향상된 파일 내보내기 기능을 제공하고 데이터 세트 내보내기를 지원합니다. |
+| [[!DNL (Beta) Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md#changelog) | 베타 참가자에게 이제 두 명이 표시됩니다. [!DNL Azure Blob] 대상 카탈로그의 대상 카드를 나란히 표시합니다. 새로운 베타 대상은 향상된 파일 내보내기 기능을 제공하고 데이터 세트 내보내기를 지원합니다. |
+| [[!DNL (Beta) SFTP]](../../destinations/catalog/cloud-storage/sftp.md#changelog) | 베타 참가자에게 이제 두 명이 표시됩니다. [!DNL SFTP] 대상 카탈로그의 대상 카드를 나란히 표시합니다. 새로운 베타 대상은 향상된 파일 내보내기 기능을 제공하고 데이터 세트 내보내기를 지원합니다. |
 
 {style=&quot;table-layout:auto&quot;}
 

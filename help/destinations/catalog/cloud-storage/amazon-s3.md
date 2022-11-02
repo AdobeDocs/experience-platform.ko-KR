@@ -3,18 +3,36 @@ keywords: Amazon S3;S3 대상;s3;amazon s3
 title: Amazon S3 연결
 description: Amazon Web Services(AWS) S3 저장소에 대한 라이브 아웃바운드 연결을 만들어 Adobe Experience Platform의 CSV 데이터 파일을 고유한 S3 버킷으로 주기적으로 내보냅니다.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: 1dd87ce19c3d9f4eb07c49968754ab979b4dee5c
+source-git-commit: 56fd7a5ab58186367c729cb4ca8c3b4213c44900
 workflow-type: tm+mt
-source-wordcount: '771'
+source-wordcount: '920'
 ht-degree: 0%
 
 ---
 
 # [!DNL Amazon S3] 연결 {#s3-connection}
 
+## 대상 변경 로그 {#changelog}
+
+>[!IMPORTANT]
+>
+>데이터 세트 내보내기 기능의 베타 릴리스와 향상된 파일 내보내기 기능을 사용하면 이제 두 가지 기능이 표시될 수 있습니다 [!DNL Amazon S3] 대상 카탈로그에 있는 카드.
+>* 이미 파일을 로 내보내는 경우 **[!UICONTROL Amazon S3]** 대상: 새 데이터 흐름을 새로 만드세요 **[!UICONTROL Amazon S3 베타]** 대상.
+>* 데이터 흐름을 아직 만들지 않았다면 **[!UICONTROL Amazon S3]** 대상, 새 **[!UICONTROL Amazon S3 베타]** 파일로 내보내기 **[!UICONTROL Amazon S3]**.
+
+
+![나란히 보기에 있는 두 Amazon S3 대상 카드의 이미지입니다.](/help/destinations/assets/catalog/cloud-storage/amazon-s3/two-amazons3-destination-cards.png)
+
+새로운 기능 개선 사항 [!DNL Amazon S3] 대상 카드는 다음과 같습니다.
+
+* [데이터 집합 내보내기 지원](/help/destinations/ui/export-datasets.md).
+* 추가 [파일 이름 지정 옵션](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).
+* 를 통해 내보낸 파일에서 사용자 지정 파일 헤더를 설정할 수 있습니다. [매핑 단계 개선](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
+* [내보낸 CSV 데이터 파일의 형식을 사용자 지정하는 기능](/help/destinations/ui/batch-destinations-file-formatting-options.md).
+
 ## 개요 {#overview}
 
-에 대한 라이브 아웃바운드 연결을 만듭니다. [!DNL Amazon Web Services] (AWS) S3 저장소를 사용하여 Adobe Experience Platform의 CSV 데이터 파일을 고유한 S3 버킷으로 주기적으로 내보냅니다.
+에 대한 라이브 아웃바운드 연결을 만듭니다. [!DNL Amazon S3] 저장소 를 사용하여 Adobe Experience Platform의 데이터 파일을 고유한 S3 버킷으로 주기적으로 내보낼 수 있습니다.
 
 ## 내보내기 유형 및 빈도 {#export-type-frequency}
 
@@ -110,6 +128,10 @@ Commenting out this note, as write permissions are assigned through the s3:PutOb
 
 자세한 내용은 [대상자 데이터를 활성화하여 묶음 프로필 내보내기 대상 활성화](../../ui/activate-batch-profile-destinations.md) 대상 세그먼트를 이 대상으로 활성화하는 방법에 대한 지침입니다.
 
+## (베타) 데이터 세트 내보내기 {#export-datasets}
+
+이 대상은 데이터 집합 내보내기를 지원합니다. 데이터 집합 내보내기를 설정하는 방법에 대한 자세한 내용은 [데이터 세트 내보내기 자습서](/help/destinations/ui/export-datasets.md).
+
 ## 내보낸 데이터 {#exported-data}
 
-대상 [!DNL Amazon S3] 대상, [!DNL Platform] 만들기 `.csv` 파일을 입력한 저장 위치에 저장합니다. 파일에 대한 자세한 내용은 [대상자 데이터를 활성화하여 묶음 프로필 내보내기 대상 활성화](../../ui/activate-batch-profile-destinations.md) 세그먼트 활성화 자습서에서 를 참조하십시오.
+대상 [!DNL Amazon S3] 대상, [!DNL Platform] 제공한 저장소 위치에 데이터 파일을 만듭니다. 파일에 대한 자세한 내용은 [대상자 데이터를 활성화하여 묶음 프로필 내보내기 대상 활성화](../../ui/activate-batch-profile-destinations.md) 세그먼트 활성화 자습서에서 를 참조하십시오.

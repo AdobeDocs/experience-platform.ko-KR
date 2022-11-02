@@ -3,9 +3,9 @@ keywords: 클라우드 스토리지 대상;클라우드 스토리지
 title: 클라우드 스토리지 대상 개요
 description: Adobe Experience Platform은 세그먼트를 Amazon S3, AWS Kinesis, Azure 이벤트 허브 또는 SFTP 클라우드 저장소 위치에 데이터 파일로 제공할 수 있습니다.
 exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
-source-git-commit: 818c9a6f5cd39db1405827b657872b99254ad1e5
+source-git-commit: 4a4c82cc4528fe07bbdb75ae9f795bdbab48c089
 workflow-type: tm+mt
-source-wordcount: '295'
+source-wordcount: '309'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 ## 개요 {#overview}
 
-Adobe Experience Platform은 세그먼트를 데이터 파일로 클라우드 저장소 위치에 제공할 수 있습니다. 이렇게 하면에 대한 CSV 파일을 통해 대상 및 해당 프로필 속성을 내부 시스템으로 보낼 수 있습니다 [!DNL Amazon S3], [!DNL Azure Blob] 및 SFTP를 참조하십시오. 대상 [!DNL Amazon Kinesis] 및 [!DNL Azure Event Hubs] 대상, 데이터는에서 Experience Platform에서 스트리밍됩니다. [!DNL JSON] 형식 지정
+Adobe Experience Platform은 세그먼트를 데이터 파일로 클라우드 저장소 위치에 제공할 수 있습니다. 이렇게 하면에 대한 CSV 파일을 통해 대상 및 해당 프로필 속성을 내부 시스템으로 보낼 수 있습니다 [!DNL Amazon S3], [!DNL Azure Blob], [!DNL Azure Data Lake Storage Gen2], [!DNL Data Landing Zone], [!DNL Google Cloud Storage], 및 SFTP. 대상 [!DNL Amazon Kinesis] 및 [!DNL Azure Event Hubs] 대상, 데이터는에서 Experience Platform에서 스트리밍됩니다. [!DNL JSON] 형식 지정
 
 ![클라우드 스토리지 대상 Adobe](../../assets/catalog/cloud-storage/cloud-storage-destinations.png)
 
@@ -25,7 +25,10 @@ Adobe Experience Platform은 다음과 같은 클라우드 스토리지 대상�
 * [Amazon Kinesis 연결](amazon-kinesis.md)
 * [Amazon S3 연결](amazon-s3.md)
 * [Azure Blob 연결](azure-blob.md)
+* [(베타) Azure Data Lake Storage Gen2](adls-gen2.md)
 * [Azure 이벤트 허브 연결](azure-event-hubs.md)
+* [(베타) 데이터 랜딩 영역](data-landing-zone.md)
+* [(베타) Google 클라우드 스토리지](google-cloud-storage.md)
 * [SFTP 연결](sftp.md)
 
 ## 새 클라우드 스토리지 대상에 연결 {#connect-destination}
