@@ -5,9 +5,9 @@ title: Edge Segmentation UI 안내서
 topic-legacy: ui guide
 description: Edge Segmentation은 Platform의 세그먼트를 즉시 평가하여 동일한 페이지와 다음 페이지 개인화 사용 사례를 가능하게 하는 기능입니다.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: 75583d9688f0c5ee0fe4627ce64b5436ca621aa1
+source-git-commit: d2196d4d9cae4bdec160ce0c028d354a0db21cb5
 workflow-type: tm+mt
-source-wordcount: '853'
+source-wordcount: '895'
 ht-degree: 0%
 
 ---
@@ -58,3 +58,11 @@ ht-degree: 0%
 ## 다음 단계
 
 이 안내서에서는 Adobe Experience Platform에서 에지 세그먼테이션을 사용하여 세그먼트를 평가하는 방법을 설명합니다. Experience Platform 사용자 인터페이스 사용에 대한 자세한 내용은 [세그멘테이션 사용 안내서](./overview.md). 유사한 작업을 수행하고 Experience Platform API를 사용하여 세그먼트를 작업하는 방법에 대해 알아보려면 [edge segmentation API 안내서](../api/edge-segmentation.md).
+
+## 부록
+
+다음 섹션에는 에지 세그멘테이션에 대한 FAQ가 나열되어 있습니다.
+
+### Edge 네트워크에서 세그먼트를 사용할 수 있는 데 시간이 얼마나 걸립니까?
+
+Edge Network에서 세그먼트를 사용할 수 있는 데 최대 1시간이 걸립니다.

@@ -5,9 +5,9 @@ title: 스트리밍 세그먼테이션을 사용하여 거의 실시간으로 �
 topic-legacy: developer guide
 description: 이 문서에는 Adobe Experience Platform 세그멘테이션 서비스 API에서 스트리밍 세그멘테이션을 사용하는 방법에 대한 예가 나와 있습니다.
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: 5a4a8a8b77d06890f212a457e599b66aa46d8b7e
+source-git-commit: 30a12fee487609b4c85ba342963bb915e8152195
 workflow-type: tm+mt
-source-wordcount: '1915'
+source-wordcount: '1938'
 ht-degree: 1%
 
 ---
@@ -439,3 +439,7 @@ Adobe Experience Platform 사용자 인터페이스를 사용하여 유사한 �
 마지막 X일 아래의 숫자 **전용** 스트리밍 세그멘테이션의 자격이 있는 대상을 포함하며, **전용** 시스템에 데이터를 스트리밍한 경우 해당 스트리밍 정의로 카운트되면 증가합니다. 이 값은 **전용** 스트리밍 세그먼트에 대해 표시됩니다. 따라서 이 값은 **5월** 배치 세그먼트에 대해 0으로 표시합니다.
 
 따라서 &quot;최근 X일&quot; 아래의 숫자가 0이고 선 그래프도 0을 보고하는 경우, **not** 해당 세그먼트에 대한 자격이 되는 시스템에 모든 프로필을 스트리밍했습니다.
+
+### 세그먼트를 사용할 수 있는 데 시간이 얼마나 걸립니까?
+
+세그먼트를 사용할 수 있으려면 최대 1시간이 걸립니다.

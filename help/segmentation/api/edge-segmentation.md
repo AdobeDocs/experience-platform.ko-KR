@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;홈;인기 항목;세그먼테이션;세그먼테이션;세그먼테이션 서비스;에지 세그멘테이션;에지 세그멘테이션;스트리밍 에지
 solution: Experience Platform
-title: 'API를 사용한 Edge Segmentation '
+title: API를 사용한 Edge Segmentation
 topic-legacy: developer guide
 description: 이 문서에는 Adobe Experience Platform 세그멘테이션 서비스 API와 함께 에지 세그멘테이션을 사용하는 방법에 대한 예가 나와 있습니다.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: de63939c44b338bb9632a57c74c095135f023d50
+source-git-commit: d2196d4d9cae4bdec160ce0c028d354a0db21cb5
 workflow-type: tm+mt
-source-wordcount: '1098'
+source-wordcount: '1140'
 ht-degree: 0%
 
 ---
@@ -259,3 +259,11 @@ curl -X POST \
 에지 세그먼테이션이 활성화된 세그먼트를 만드는 방법을 알고 있으므로 이 세그먼트를 사용하여 동일한 페이지 및 다음 페이지 개인화 사용 사례를 활성화할 수 있습니다.
 
 Adobe Experience Platform 사용자 인터페이스를 사용하여 유사한 작업을 수행하고 세그먼트를 작업하는 방법을 배우려면 [세그먼트 빌더 사용 안내서](../ui/segment-builder.md).
+
+## 부록
+
+다음 섹션에는 에지 세그멘테이션에 대한 FAQ가 나열되어 있습니다.
+
+### Edge 네트워크에서 세그먼트를 사용할 수 있는 데 시간이 얼마나 걸립니까?
+
+Edge Network에서 세그먼트를 사용할 수 있는 데 최대 1시간이 걸립니다.
