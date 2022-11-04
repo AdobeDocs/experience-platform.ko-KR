@@ -3,10 +3,10 @@ keywords: Experience Platform;홈;인기 항목;액세스 제어;속성 기반 �
 title: 속성 기반 액세스 제어 역할 권한 관리
 description: 이 문서에서는 Adobe Experience Cloud의 권한 인터페이스를 통해 역할에 대한 권한 구성에 대한 정보를 제공합니다
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
+source-git-commit: a94cf02a57bd91d2342b53ced7da98836343aa2b
 workflow-type: tm+mt
-source-wordcount: '899'
-ht-degree: 0%
+source-wordcount: '966'
+ht-degree: 4%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 권한은 관리자가 사용자 역할 및 액세스 정책을 정의하여 제품 응용 프로그램 내의 기능 및 개체에 대한 액세스 권한을 관리할 수 있는 Experience Cloud 영역입니다.
 
-권한을 통해 역할을 만들고 관리하고 이러한 역할에 대해 원하는 리소스 권한을 할당할 수 있습니다. 또한 권한을 사용하여 특정 역할과 연관된 레이블, 샌드박스 및 사용자를 관리할 수도 있습니다.
+ 권한을 통해 역할을 만들고 관리하며, 이러한 역할에 대해 원하는 리소스 권한을 지정할 수 있습니다. 또한 권한을 사용하여 레이블, 샌드박스 및 특정 역할과 연관된 사용자를 관리할 수 있습니다.
 
 바로 다음 [새 역할 만들기](#create-a-new-role)를 반환하면 **[!UICONTROL 역할]** 탭. 기존 역할에 대한 권한을 편집하는 경우 **[!UICONTROL 역할]** 탭. 또는 필터 옵션을 사용하여 결과를 필터링하여 역할을 찾습니다.
 
@@ -147,9 +147,21 @@ UI에서 역할에 다음 필터를 사용할 수 있습니다.
 
 다음 **[!UICONTROL 사용자 그룹 제거]** 대화 상자가 나타나서 삭제를 확인하는 메시지가 나타납니다.
 
-![flac-confirm-user-groups-delete](../../images/flac-ui/flac-confirm-user-groups-delete.png)
+![flash-confirm-user-groups-delete](../../images/flac-ui/flac-confirm-user-groups-delete.png)
 
 그러면 로 돌아갑니다. **[!UICONTROL 사용자 그룹]** 탭.
+
+## 제품 프로필을 통해 Experience Platform에 사용자 추가
+
+제품 프로필에 사용자를 추가하려면 Admin Console에 로그인하고 를 선택합니다 **[!UICONTROL 사용자 추가]**
+
+![product-profile-add-users](../../images/flac-ui/product-profile-add-users.png)
+
+다음 **[!UICONTROL 팀에 사용자 추가]** 대화 상자가 나타납니다. 사용자 이메일 주소, 이름(선택 사항) 및 성을 입력합니다(선택 사항).
+
+연필 아이콘을 선택하여 제품 및 사용자 그룹을 선택하고 **[!UICONTROL Adobe Experience Platform]**&#x200B;를 선택하고 을 선택합니다. **[!UICONTROL AEP-Default-All-Users]**&#x200B;를 선택하고 을 선택합니다.  **[!UICONTROL 저장]**.
+
+![product-profile](../../images/flac-ui/product-profile.png)
 
 ## 다음 단계
 
