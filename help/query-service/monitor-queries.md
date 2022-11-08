@@ -1,18 +1,15 @@
 ---
 title: 쿼리 모니터링
 description: Query Service UI를 통해 쿼리를 모니터링하는 방법을 알아봅니다.
-source-git-commit: 283c6ba323a327b0c525343a96a45a2412baa67b
+exl-id: 4640afdd-b012-4768-8586-32f1b8232879
+source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
 workflow-type: tm+mt
-source-wordcount: '1051'
+source-wordcount: '1033'
 ht-degree: 1%
 
 ---
 
-# 쿼리 모니터링(제한된 릴리스)
-
->[!IMPORTANT]
->
->이 기능은 현재 제한된 릴리스이며 적은 수의 고객만 사용할 수 있습니다.
+# 쿼리 모니터링
 
 Adobe Experience Platform은 UI를 통해 모든 쿼리 작업의 상태에 대한 가시성을 개선합니다. From [!UICONTROL 예약된 쿼리] 이제 실패 시 상태, 예약 세부 사항 및 오류 메시지/코드가 포함된 쿼리 실행에 대한 중요한 정보를 찾을 수 있습니다. UI를 통해 이러한 쿼리에 대한 해당 상태에 따른 쿼리에 대한 경고를 구독할 수도 있습니다 [!UICONTROL 예약된 쿼리] 탭.
 
@@ -126,4 +123,3 @@ Adobe Experience Platform은 UI를 통해 모든 쿼리 작업의 상태에 대�
 선택 **[!UICONTROL 쿼리]** 일정 세부 사항 화면으로 돌아가려면 또는 **[!UICONTROL 예약된 쿼리]** 로 돌아가기 [!UICONTROL 예약된 쿼리] 탭.
 
 ![쿼리가 강조 표시된 실행 세부 사항 화면.](./images/monitor-queries/return-navigation.png)
-

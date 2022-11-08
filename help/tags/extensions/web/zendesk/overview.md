@@ -1,7 +1,8 @@
 ---
 title: Zendesk 이벤트 전달 확장
 description: Adobe Experience Platform용 Zendesk 이벤트 전달 확장.
-source-git-commit: ae585660bbf057f25e6f0dfc2520e6bb0af9d8d0
+exl-id: 22e94699-5b84-4a73-b007-557221d3e223
+source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
 workflow-type: tm+mt
 source-wordcount: '1286'
 ht-degree: 6%
@@ -53,7 +54,7 @@ UI에 Zendesk 확장을 설치하려면 다음 위치로 이동합니다. **이�
 
 ## 이벤트 전달 규칙 구성
 
-새 이벤트 전달 규칙 만들기 시작 [규칙](../../../ui/managing-resources/rules.md) 원하는 대로 조건을 구성합니다. 규칙에 대한 작업을 선택할 때 [!UICONTROL Splunk] 확장을 선택한 다음 [!UICONTROL 이벤트 만들기] 작업 유형.
+새 이벤트 전달 규칙 만들기 시작 [규칙](../../../ui/managing-resources/rules.md) 원하는 대로 조건을 구성합니다. 규칙에 대한 작업을 선택할 때 [!UICONTROL Zendesk] 확장을 선택한 다음 [!UICONTROL 이벤트 만들기] 작업 유형.
 
 ![규칙 정의](../../../images/extensions/zendesk/rule.png)
 
