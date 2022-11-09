@@ -3,9 +3,9 @@ keywords: google ad manager;google ad;doubleclick;DoubleClick AdX;DoubleClick;Go
 title: Google Ad Manager 연결
 description: 이전에 DoubleClick for Publishers 또는 DoubleClick AdX라고 알려진 Google Ad Manager는 비디오 및 모바일 앱을 통해 게시자가 웹 사이트에서 광고를 표시할 수 있는 방법을 제공하는 Google의 광고 서비스 플랫폼입니다.
 exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
-source-git-commit: 7d32499bec8d7248472ae60b07893dbb5496d984
+source-git-commit: 94cd05ca8b5c8331b1b49e5172daf499918d2320
 workflow-type: tm+mt
-source-wordcount: '903'
+source-wordcount: '955'
 ht-degree: 3%
 
 ---
@@ -22,6 +22,8 @@ ht-degree: 3%
 
 * 활성화된 대상은 프로그래밍 방식으로 [!DNL Google] 플랫폼.
 * [!DNL Platform] 현재 에는 성공적인 활성화를 확인하기 위한 측정 지표가 포함되어 있지 않습니다. 통합의 유효성을 확인하고 대상 타깃팅 크기를 이해하려면 Google의 대상 카운트를 참조하십시오.
+* 세그먼트를 [!DNL Google Ad Manager] 대상, 세그먼트 이름이 [!DNL Google Ad Manager] 사용자 인터페이스.
+* 세그먼트 모집단에 표시되려면 24-48시간이 필요합니다 [!DNL Google Ad Manager]. 또한 세그먼트를 표시하려면 대상 크기가 50개 이상인 프로필이어야 합니다 [!DNL Google Ad Manager]. 대상 크기가 50보다 작은 세그먼트는 [!DNL Google Ad Manager].
 
 ## 지원되는 ID {#supported-identities}
 
