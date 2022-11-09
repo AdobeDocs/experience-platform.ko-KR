@@ -5,7 +5,7 @@ title: Edge Segmentation UI 안내서
 topic-legacy: ui guide
 description: Edge Segmentation은 Platform의 세그먼트를 즉시 평가하여 동일한 페이지와 다음 페이지 개인화 사용 사례를 가능하게 하는 기능입니다.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: d2196d4d9cae4bdec160ce0c028d354a0db21cb5
+source-git-commit: 95ffd09b81b49c8c7d65695a2fbc0fcd97b12c9e
 workflow-type: tm+mt
 source-wordcount: '895'
 ht-degree: 0%
@@ -42,11 +42,11 @@ ht-degree: 0%
 | ---------- | ------- | ------- | ----------- |
 | 단일 이벤트 | 시간 제한 없이 단일 수신 이벤트를 참조하는 모든 세그먼트 정의입니다. | 장바구니에 항목을 추가한 사람. | `chain(xEvent, timestamp, [A: WHAT(eventType = "addToCart")])` |
 | 단일 프로필 | 단일 프로필 전용 속성을 참조하는 모든 세그먼트 정의 | 미국에 사는 사람들. | `homeAddress.countryCode = "US"` |
-| 프로필을 참조하는 단일 이벤트 | 하나 이상의 프로필 속성 및 시간 제한 없이 단일 수신 이벤트를 참조하는 모든 세그먼트 정의입니다. | 미국에 거주하는 사람들이 홈페이지를 방문했습니다. | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [A: WHAT(eventType = "addToCart")])` |
+| 프로필을 참조하는 단일 이벤트 | 하나 이상의 프로필 속성 및 시간 제한 없이 단일 수신 이벤트를 참조하는 모든 세그먼트 정의입니다. | 미국에 거주하는 사람들이 홈페이지를 방문했습니다. | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView")])` |
 | 프로필 속성을 사용하여 단일 이벤트 무효화 | 무효화된 단일 수신 이벤트와 하나 이상의 프로필 속성을 참조하는 모든 세그먼트 정의 | 미국에 살고 **not** 홈 페이지를 방문했습니다. | `not(chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView")]))` |
-| 시간 창 내의 단일 이벤트 | 설정된 기간 내에 단일 수신 이벤트를 참조하는 모든 세그먼트 정의입니다. | 지난 24시간 동안 홈페이지를 방문한 사람들. | `chain(xEvent, timestamp, [X: WHAT(eventType = "addToCart") WHEN(< 8 days before now)])` |
-| 시간 창 내에 프로필 속성이 있는 단일 이벤트 | 설정된 기간 내에 하나 이상의 프로필 속성 및 단일 수신 이벤트를 참조하는 모든 세그먼트 정의입니다. | 미국에 거주하는 사람들이 지난 24시간 동안 홈페이지를 방문했습니다. | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [X: WHAT(eventType = "addToCart") WHEN(< 8 days before now)])` |
-| 시간 창 내에서 프로필 속성이 있는 단일 이벤트를 무효화했습니다. | 일정 기간 내에 하나 이상의 프로필 속성 및 무효화된 단일 수신 이벤트를 참조하는 모든 세그먼트 정의. | 미국에 살고 **not** 지난 24시간 동안 홈페이지를 방문했다. | `homeAddress.countryCode = "US" and not(chain(xEvent, timestamp, [X: WHAT(eventType = "addToCart") WHEN(< 8 days before now)]))` |
+| 시간 창 내의 단일 이벤트 | 설정된 기간 내에 단일 수신 이벤트를 참조하는 모든 세그먼트 정의입니다. | 지난 24시간 동안 홈페이지를 방문한 사람들. | `chain(xEvent, timestamp, [X: WHAT(eventType = "homePageView") WHEN(< 8 days before now)])` |
+| 시간 창 내에 프로필 속성이 있는 단일 이벤트 | 설정된 기간 내에 하나 이상의 프로필 속성 및 단일 수신 이벤트를 참조하는 모든 세그먼트 정의입니다. | 미국에 거주하는 사람들이 지난 24시간 동안 홈페이지를 방문했습니다. | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [X: WHAT(eventType = "homePageView") WHEN(< 8 days before now)])` |
+| 시간 창 내에서 프로필 속성이 있는 단일 이벤트를 무효화했습니다. | 일정 기간 내에 하나 이상의 프로필 속성 및 무효화된 단일 수신 이벤트를 참조하는 모든 세그먼트 정의. | 미국에 살고 **not** 지난 24시간 동안 홈페이지를 방문했다. | `homeAddress.countryCode = "US" and not(chain(xEvent, timestamp, [X: WHAT(eventType = "homePageView") WHEN(< 8 days before now)]))` |
 | 24시간 시간 기간 내의 빈도 이벤트 | 24시간의 시간 창 내에서 특정 시간에 발생하는 이벤트를 참조하는 모든 세그먼트 정의입니다. | 홈 페이지를 방문한 사람 **적어도** 지난 24시간 동안 5번 | `chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView") WHEN(< 24 hours before now) COUNT(5) ] )` |
 | 24시간 시간 창 내에 프로필 속성이 있는 빈도 이벤트 | 하나 이상의 프로필 속성 및 24시간의 시간 창 내에서 특정 횟수를 발생하는 이벤트를 참조하는 모든 세그먼트 정의입니다. | 홈페이지를 방문한 미국 출신 **적어도** 지난 24시간 동안 5번 | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView") WHEN(< 24 hours before now) COUNT(5) ] )` |
 | 24시간 시간 창 내에서 프로필이 무효화된 빈도 이벤트 | 24시간의 시간 창 내에서 특정 시간에 발생하는 하나 이상의 프로필 속성 및 무효화된 이벤트를 참조하는 모든 세그먼트 정의. | 홈 페이지를 방문하지 않은 사람 **자세히** 지난 24시간 동안 5번 이상 | `not(chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView") WHEN(< 24 hours before now) COUNT(5) ] ))` |
