@@ -3,9 +3,9 @@ keywords: Experience Platform;홈;인기 항목;액세스 제어;속성 기반 �
 title: 속성 기반 액세스 제어 정책 만들기
 description: 이 문서에서는 Adobe Experience Cloud의 권한 인터페이스를 통해 정책 관리에 대한 정보를 제공합니다
 exl-id: 66820711-2db0-4621-908d-01187771de14
-source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
+source-git-commit: 1a755fa5480e036bde50617f01440cfabbaf64c2
 workflow-type: tm+mt
-source-wordcount: '661'
+source-wordcount: '678'
 ht-degree: 0%
 
 ---
@@ -44,7 +44,7 @@ ht-degree: 0%
 
 ![flac-policy-matches-dropdown](../../images/flac-ui/flac-policy-matches-dropdown.png)
 
-그런 다음 드롭다운을 사용하여 **사용자**.
+그런 다음 드롭다운을 사용하여 레이블 유형(**[!UICONTROL 코어 레이블]** 또는 **[!UICONTROL 사용자 지정 레이블]**)을 클릭하여 롤의 사용자에게 할당된 레이블과 일치시킵니다.
 
 ![flac-policy-user-dropdown](../../images/flac-ui/flac-policy-user-dropdown.png)
 
