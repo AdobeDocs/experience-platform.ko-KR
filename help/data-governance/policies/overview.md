@@ -3,16 +3,21 @@ keywords: Experience Platform;홈;인기 항목;dule;DULE
 solution: Experience Platform
 title: 데이터 사용 정책 개요
 topic-legacy: policies
-description: 데이터 사용 레이블이 데이터 규정 준수를 효과적으로 지원하려면 데이터 사용 정책을 구현해야 합니다. 데이터 사용 정책은 Experience Platform 내에서 데이터를 수행할 수 있도록 허용되거나 제한된 마케팅 작업 종류를 설명하는 규칙입니다.
+description: 데이터 사용 레이블이 데이터 규정 준수를 효과적으로 지원하려면 데이터 사용 정책을 구현해야 합니다. 데이터 사용 정책은 Experience Platform 내에서 데이터 수행을 허용하거나 제한하는 마케팅 작업 종류를 설명하는 규칙입니다.
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
-source-git-commit: 0c78b5dc420a1346c92bf9ed7864fa1733422a83
+source-git-commit: c314cba6b822e12aa0367e1377ceb4f6c9d07ac2
 workflow-type: tm+mt
-source-wordcount: '1121'
-ht-degree: 0%
+source-wordcount: '1180'
+ht-degree: 2%
 
 ---
 
-# 데이터 사용 정책 개요
+# 데이터 사용 정책 개요 {#policies-overview}
+
+>[!CONTEXTUALHELP]
+>id="platform_governance_policies_restrictusage"
+>title="데이터 사용 제한"
+>abstract="데이터 사용 정책 유형은 마케팅 활동에 대한 데이터 사용을 제한하기 위해 데이터 거버넌스 레이블에 적용된 특정 마케팅 작업을 평가합니다."
 
 데이터 사용 레이블이 데이터 규정 준수를 효과적으로 지원하려면 데이터 사용 정책을 구현해야 합니다. 데이터 사용 정책은 내에서 데이터를 수행할 수 있도록 허용되거나 제한된 마케팅 작업 종류를 설명하는 규칙입니다 [!DNL Experience Platform].
 
@@ -20,6 +25,10 @@ ht-degree: 0%
 
 * **[!UICONTROL 데이터 거버넌스 정책]**: 수행되는 마케팅 작업 및 해당 데이터에 의해 전달된 데이터 사용 레이블을 기반으로 데이터 활성화를 제한합니다.
 * **[!UICONTROL 동의 정책]**: 활성화할 수 있는 프로필을 필터링합니다. [대상](../../destinations/home.md) 고객의 동의 또는 환경 설정에 따라
+
+>[!NOTE]
+>
+>데이터 사용 정책은 [액세스 제어 정책](../../access-control/abac/end-to-end-guide.md#policy)- 조직의 특정 플랫폼 사용자가 특정 데이터 필드에 액세스할 수 있는지 여부를 확인하고, [!UICONTROL 권한] 탭.
 
 이 문서에서는 데이터 사용 정책에 대한 높은 수준의 개요를 제공하며 UI 또는 API의 정책 작업을 위한 추가 설명서에 대한 링크를 제공합니다.
 

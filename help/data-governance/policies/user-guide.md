@@ -5,9 +5,9 @@ title: UI에서 데이터 사용 정책 관리
 topic-legacy: policies
 description: Adobe Experience Platform 데이터 거버넌스는 데이터 사용 정책을 만들고 관리할 수 있는 사용자 인터페이스를 제공합니다. 이 문서에서는 Experience Platform 사용자 인터페이스의 정책 작업 영역에서 수행할 수 있는 작업에 대한 개요를 제공합니다.
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
-source-git-commit: 6453ec6c98d90566449edaa0804ada260ae12bf6
+source-git-commit: c314cba6b822e12aa0367e1377ceb4f6c9d07ac2
 workflow-type: tm+mt
-source-wordcount: '1330'
+source-wordcount: '1408'
 ht-degree: 0%
 
 ---
@@ -96,7 +96,12 @@ Adobe Experience Platform 데이터 거버넌스는 데이터 사용 정책을 �
 * **[!UICONTROL If]**: 정책 확인을 트리거할 조건입니다. 이는 수행되는 특정 마케팅 작업, 특정 데이터 사용 레이블 존재 여부 또는 두 가지 조합을 기반으로 할 수 있습니다.
 * **[!UICONTROL Then]**: 정책을 트리거한 작업에 프로필을 포함하기 위해 존재해야 하는 동의 속성입니다.
 
-#### 조건 구성
+#### 조건 구성 {#consent-conditions}
+
+>[!CONTEXTUALHELP]
+>id="platform_governance_policies_consentif"
+>title="조건"
+>abstract="먼저 정책 확인을 트리거할 조건을 정의합니다. 조건에는 취할 특정 마케팅 작업, 현재 있는 특정 데이터 거버넌스 레이블 또는 두 가지 모두를 조합하는 것이 포함될 수 있습니다."
 
 아래에 **[!UICONTROL If]** 섹션에서 이 정책을 트리거해야 하는 마케팅 작업 및/또는 데이터 사용 레이블을 선택합니다. 선택 **[!UICONTROL 모두 보기]** 및 **[!UICONTROL 레이블 선택]** 사용 가능한 마케팅 작업 및 레이블의 전체 목록을 각각 보려면
 
@@ -108,7 +113,12 @@ Adobe Experience Platform 데이터 거버넌스는 데이터 사용 정책을 �
 
 ![](../images/policies/and-or-selection.png)
 
-#### 동의 속성 선택
+#### 동의 속성 선택 {#consent-attributes}
+
+>[!CONTEXTUALHELP]
+>id="platform_governance_policies_consentthen"
+>title="Then 조건"
+>abstract="&#39;If&#39; 조건이 정의되면 &#39;Then&#39; 섹션을 사용하여 결합 스키마에서 하나 이상의 동의 속성을 선택합니다. 이 정책이 제어하는 작업에 프로필을 포함하려면 이 특성이 있어야 합니다."
 
 아래에 **[!UICONTROL Then]** 섹션에서 결합 스키마에서 하나 이상의 동의 속성을 선택합니다. 이 정책이 제어하는 작업에 프로필을 포함하려면 이 특성이 있어야 합니다. 목록에서 제공된 옵션 중 하나를 선택하거나 을(를) 선택할 수 있습니다 **[!UICONTROL 모두 보기]** 를 눌러 결합 스키마에서 직접 속성을 선택합니다.
 

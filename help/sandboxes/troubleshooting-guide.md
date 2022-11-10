@@ -5,10 +5,10 @@ title: 샌드박스 문제 해결 안내서
 topic-legacy: troubleshooting guide
 description: 이 문서에서는 Adobe Experience Platform의 샌드박스에 대한 자주 묻는 질문에 대한 답변을 제공합니다.
 exl-id: 6a496509-a4e9-4e76-829b-32d67ccfcce6
-source-git-commit: 2a7b2040c221ff039f17f78d9ca712032d9fc02c
+source-git-commit: c314cba6b822e12aa0367e1377ceb4f6c9d07ac2
 workflow-type: tm+mt
-source-wordcount: '815'
-ht-degree: 0%
+source-wordcount: '857'
+ht-degree: 1%
 
 ---
 
@@ -22,7 +22,13 @@ ht-degree: 0%
 
 샌드박스는 단일 Experience Platform 인스턴스 내의 가상 파티션입니다. 각 샌드박스는 스키마, 데이터 세트, 프로필 등 플랫폼 리소스의 자체 독립 라이브러리를 유지 관리합니다. 샌드박스 내에서 수행한 모든 컨텐츠 및 작업은 해당 샌드박스에만 국한되며 다른 샌드박스에는 영향을 주지 않습니다. 자세한 내용은 [샌드박스 개요](home.md) 추가 정보.
 
-## 샌드박스는 어떤 종류가 있고 어떤 차이가 있습니까?
+## 샌드박스는 어떤 종류가 있고 어떤 차이가 있습니까? {#sandbox-types}
+
+>[!CONTEXTUALHELP]
+>id="platform_sandboxes_sandboxtypes"
+>title="샌드박스 유형"
+>abstract="샌드박스 유형은 프로덕션 또는 개발 샌드박스인지를 나타냅니다. 프로덕션 샌드박스에는 테스트 및 개발에 사용되는 라이브 데이터 및 개발 샌드박스가 포함되어 있습니다."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/sandbox/ui/user-guide.html#create" text="UI에서 샌드박스 만들기"
 
 Experience Platform에는 두 가지 샌드박스 유형이 있습니다.
 

@@ -5,10 +5,10 @@ title: 샌드박스 UI 안내서
 topic-legacy: user guide
 description: 이 문서에서는 Adobe Experience Platform 사용자 인터페이스의 샌드박스와 관련된 다양한 작업을 수행하는 방법에 대해 설명합니다.
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
-source-git-commit: 2fb972b0ec8d1f679c6ce104a439265b5cc4d535
+source-git-commit: df0f543b18f008b656c5e411305c5243efa744ad
 workflow-type: tm+mt
-source-wordcount: '770'
-ht-degree: 1%
+source-wordcount: '816'
+ht-degree: 2%
 
 ---
 
@@ -36,7 +36,17 @@ ht-degree: 1%
 
 ![샌드박스 스위치](../images/ui/sandbox-switched.png)
 
-## 새 샌드박스 만들기
+## 새 샌드박스 만들기 {#create}
+
+>[!CONTEXTUALHELP]
+>id="platform_sandboxes_sandboxname"
+>title="샌드박스 이름"
+>abstract="샌드박스 이름은 이 샌드박스에 대한 고유 ID를 만들기 위해 백 엔드에서 사용되는 텍스트입니다."
+
+>[!CONTEXTUALHELP]
+>id="platform_sandboxes_sandboxtitle"
+>title="샌드박스 제목"
+>abstract="샌드박스 제목은 Experience Platform UI 전체에서 메뉴 및 드롭다운의 샌드박스를 나타내는 표시 이름입니다."
 
 >[!NOTE]
 >

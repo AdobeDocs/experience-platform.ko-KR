@@ -2,9 +2,9 @@
 title: 이벤트 전달에서 암호 구성
 description: 이벤트 전달 속성에 사용되는 엔드포인트를 인증하도록 UI에서 암호를 구성하는 방법을 알아봅니다.
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
-source-git-commit: 9f38925645ec4311f4a809a913fe51792e889105
+source-git-commit: c314cba6b822e12aa0367e1377ceb4f6c9d07ac2
 workflow-type: tm+mt
-source-wordcount: '1715'
+source-wordcount: '1766'
 ht-degree: 0%
 
 ---
@@ -37,6 +37,12 @@ ht-degree: 0%
 또한 라이브러리에 리소스를 추가하고 테스트를 위해 웹 사이트에 빌드를 설치하는 방법 등 태그 및 이벤트 전달을 위한 게시 플로우에 대한 작업 이해를 해야 합니다. 자세한 내용은 [게시 개요](../publishing/overview.md) 자세한 내용
 
 ## 암호 만들기 {#create}
+
+>[!CONTEXTUALHELP]
+>id="platform_eventforwarding_secrets_environments"
+>title="기밀 환경"
+>abstract="이벤트 전달에서 암호를 사용할 수 있도록 하려면 기존 환경에 할당해야 합니다. 이벤트 전달 속성에 대해 만든 환경이 없는 경우 계속하기 전에 구성해야 합니다."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html" text="환경 개요"
 
 암호를 만들려면 **[!UICONTROL 이벤트 전달]** 왼쪽 탐색에서 암호를 추가할 이벤트 전달 속성을 엽니다. 다음 을 선택합니다. **[!UICONTROL 비밀]** 왼쪽 탐색에서 를 차례로 클릭하거나 **[!UICONTROL 새 암호 만들기]**.
 
