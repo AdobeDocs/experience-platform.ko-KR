@@ -2,9 +2,9 @@
 title: 데이터 위생 개요
 description: Adobe Experience Platform 데이터 위생에서는 오래된 레코드 또는 부정확한 레코드를 업데이트하거나 삭제하여 데이터 주기를 관리할 수 있습니다.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: 850ab3c98fb27d1dcf98b02dfbef0c8ae3b2ad62
+source-git-commit: b76e1bc6d5b346c32ea09612e24b68c6636f7deb
 workflow-type: tm+mt
-source-wordcount: '821'
+source-wordcount: '834'
 ht-degree: 2%
 
 ---
@@ -54,6 +54,10 @@ UI에서 데이터 위생 작업을 관리하는 방법에 대한 자세한 단�
 {style=&quot;table-layout:auto&quot;}
 
 ### 소비자 삭제 {#consumer-delete-transparency}
+
+>[!IMPORTANT]
+>
+>소비자 삭제는 Adobe Healthcare Shield를 구입한 조직에서만 사용할 수 있습니다.
 
 다음 작업은 [소비자 삭제 요청](./ui/delete-consumer.md) 이(가) 생성되었습니다.
 

@@ -2,9 +2,9 @@
 title: 데이터 위생 API 안내서
 description: Adobe Experience Platform에서 고객의 저장된 개인 데이터를 프로그래밍 방식으로 수정하거나 삭제하는 방법을 알아봅니다.
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-source-git-commit: 6453ec6c98d90566449edaa0804ada260ae12bf6
+source-git-commit: b76e1bc6d5b346c32ea09612e24b68c6636f7deb
 workflow-type: tm+mt
-source-wordcount: '405'
+source-wordcount: '419'
 ht-degree: 0%
 
 ---
@@ -44,6 +44,10 @@ ht-degree: 0%
 데이터 세트 만료는 시간 지연된 &quot;데이터 세트 삭제&quot; 작업입니다. 데이터 세트 만료일을 만들어 해당 데이터 세트를 삭제할 시간을 지정합니다. 자세한 내용은 [데이터 세트 만료 끝점 안내서](./dataset-expiration.md) 를 참조하십시오.
 
 ## 소비자 삭제
+
+>[!IMPORTANT]
+>
+>소비자 삭제 요청은 Adobe Healthcare Shield를 구입한 조직에만 사용할 수 있습니다.
 
 데이터 위생 API를 사용하면 한 데이터 세트 또는 모든 데이터 세트에서 소비자 ID와 연결된 모든 레코드를 삭제할 수 있습니다. 소비자 ID를 삭제하는 모든 데이터 위생 작업은 작업 순서라고 하는 구성에 의해 표시됩니다. 자세한 내용은 [work order endpoint 안내서](./workorder.md) api에서 소비자 삭제 작업에 대한 자세한 내용은 를 참조하십시오.
 
