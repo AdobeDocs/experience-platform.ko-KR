@@ -2,18 +2,29 @@
 title: Adobe Analytics 확장에 대한 릴리스 노트
 description: Adobe Experience Platform의 Adobe Analytics 태그 확장에 대한 최신 릴리스 노트입니다.
 exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
-source-git-commit: 6bb452285ea98380617afd13462b4a2b9a8e8b68
+source-git-commit: cc04a40b2fb649511950ed80af7028a19154dcdd
 workflow-type: tm+mt
-source-wordcount: '1284'
-ht-degree: 90%
+source-wordcount: '1333'
+ht-degree: 84%
 
 ---
 
 # Adobe Analytics 확장 릴리스 노트
 
+다음은 Adobe Analytics 태그 확장에 대한 릴리스 노트 목록입니다.
+
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
+>Analytics 태그 확장 프로그램(Analytics Mobile Services의 [AppMeasurement JavaScript 라이브러리](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=ko-KR). 자세한 내용은 [AppMeasurement 릴리스 정보](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html) 를 참조하십시오.
+
+## 2022년 9월 23일
+
+**Adobe Analytics Extension 1.9.1**
+
+**기능**:
+
+* AppMeasurement v2.23.0으로 업그레이드되었습니다.
+* 이제 확장에서 높은 엔트로피를 수집할 수 있습니다 [사용자 에이전트 클라이언트 힌트](https://developer.mozilla.org/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) 최신 버전의 AppMeasurement에서 지원하는 것입니다.
 
 ## 2022년 2월 28일
 
@@ -161,7 +172,7 @@ ht-degree: 90%
 * Audience Manager용 DIL 9.2를 지원하도록 Adobe Analytics 확장이 업데이트됨
 
 * [AppMeasurement 2.15.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html#version-2.15.0)을 지원하도록 확장이 업데이트
-* Do not attach the destination publishing IFRAME to the DOM or fire destinations 확인란이 더 이상 지원되지 않으므로 제거됨
+* 다음 확인란이 더 이상 지원되지 않으므로 제거되었습니다. &quot;DOM 또는 Fire 대상에 대상 게시 IFRAME을 연결하지 마십시오&quot;
 
 ## 2019년 6월 4일
 
