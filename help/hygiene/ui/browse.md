@@ -2,9 +2,9 @@
 title: 데이터 위생 작업 주문 찾아보기
 description: Adobe Experience Platform 사용자 인터페이스에서 기존 데이터 위생 작업 순서를 보고 관리하는 방법을 알아봅니다.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: 6453ec6c98d90566449edaa0804ada260ae12bf6
+source-git-commit: 4a6532bbd7a378e44e7c6139330420c0363a54af
 workflow-type: tm+mt
-source-wordcount: '865'
+source-wordcount: '868'
 ht-degree: 1%
 
 ---
@@ -74,7 +74,7 @@ ht-degree: 1%
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_numberofidentities"
 >title="ID 수"
->abstract="이 작업 순서의 일부로 삭제되도록 요청한 ID 수입니다. 개수에 포함된 ID가 영향을 받는 데이터 세트에 반드시 존재하지 않을 수 있습니다. 자세한 내용은 데이터 위생 UI 안내서를 참조하십시오."
+>abstract="이 작업 주문의 일부로 레코드를 업데이트 또는 삭제하도록 요청한 ID 수입니다. 개수에 포함된 ID가 영향을 받는 데이터 세트에 반드시 존재하지 않을 수 있습니다. 자세한 내용은 데이터 위생 UI 안내서를 참조하십시오."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_responsemessages"
