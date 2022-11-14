@@ -1,7 +1,8 @@
 ---
 title: (베타) Adobe Commerce 대상 커넥터
 description: Real-Time CDP 내에서 구축되고 관리되는 고객 세그먼트에 맞게 사용자 지정된 고도로 적절한 사이트 컨텐츠와 프로모션을 제공하여 Adobe Commerce 및 Real-Time CDP 가맹점이 쇼핑 경험을 개인화할 수 있는 방법을 알아봅니다.
-source-git-commit: 0a6100f2aa98f5c40f2492dcfab79a991eded94b
+exl-id: f7aa3c6c-ba7a-440c-a4d7-5d7b50dbbc0d
+source-git-commit: 638a778d1d999ab6a1726333f9cde0a0b4fad57b
 workflow-type: tm+mt
 source-wordcount: '691'
 ht-degree: 1%
@@ -42,7 +43,7 @@ Beta 고객은 다음 항목에 액세스할 수 있어야 합니다.
 
 - [Adobe Experience Platform](https://experience.adobe.com/)
 - [Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started/)
-- [Adobe Commerce Cloud 버전 2.4.3 이상](https://business.adobe.com/products/magento/magento-commerce.html)
+- [Adobe Commerce Cloud 버전 2.4.4 이상](https://business.adobe.com/products/magento/magento-commerce.html)
 
 Experience Platform에서 다음을 만듭니다.
 
