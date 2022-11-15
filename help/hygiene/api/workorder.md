@@ -2,9 +2,9 @@
 title: 작업 순서 API 끝점
 description: 데이터 위생 API의 /workorder 종단점을 사용하면 소비자 ID에 대한 삭제 작업을 프로그래밍 방식으로 관리할 수 있습니다.
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-source-git-commit: b76e1bc6d5b346c32ea09612e24b68c6636f7deb
+source-git-commit: 7679de9d30c00873b279c5315aa652870d8c34fd
 workflow-type: tm+mt
-source-wordcount: '981'
+source-wordcount: '1033'
 ht-degree: 4%
 
 ---
@@ -16,6 +16,9 @@ ht-degree: 4%
 >[!IMPORTANT]
 >
 >소비자 삭제 요청은 구매한 조직에만 사용할 수 있습니다 **Adobe 의료 보호**.
+>
+>
+>소비자 삭제는 데이터 정리, 익명 데이터 제거 또는 데이터 최소화에 사용됩니다. 그렇습니다 **not** GDPR(일반 데이터 보호 규정)과 같은 개인 정보 보호 규정에 관련된 데이터 주체 권한 요청(준수)에 사용됩니다. 모든 규정 준수 사용 사례의 경우 [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) 을 가리키도록 업데이트하는 것이 좋습니다.
 
 ## 시작하기
 

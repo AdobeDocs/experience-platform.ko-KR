@@ -2,9 +2,9 @@
 title: 데이터 위생 개요
 description: Adobe Experience Platform 데이터 위생에서는 오래된 레코드 또는 부정확한 레코드를 업데이트하거나 삭제하여 데이터 주기를 관리할 수 있습니다.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: b76e1bc6d5b346c32ea09612e24b68c6636f7deb
+source-git-commit: 7679de9d30c00873b279c5315aa652870d8c34fd
 workflow-type: tm+mt
-source-wordcount: '834'
+source-wordcount: '886'
 ht-degree: 2%
 
 ---
@@ -20,7 +20,11 @@ Adobe Experience Platform은 소비자 경험을 오케스트레이션하기 위
 플랫폼의 데이터 위생 기능을 사용하면 다음을 통해 저장된 소비자 데이터를 관리할 수 있습니다.
 
 * 자동화된 데이터 세트 만료 예약
-* 수집된 ID를 기반으로 소비자 데이터 삭제
+* 레코드에서 개별 소비자 데이터 삭제
+
+>[!IMPORTANT]
+>
+>소비자 삭제는 데이터 정리, 익명 데이터 제거 또는 데이터 최소화에 사용됩니다. 그렇습니다 **not** GDPR(일반 데이터 보호 규정)과 같은 개인 정보 보호 규정에 관련된 데이터 주체 권한 요청(준수)에 사용됩니다. 모든 규정 준수 사용 사례의 경우 [Adobe Experience Platform Privacy Service](../privacy-service/home.md) 을 가리키도록 업데이트하는 것이 좋습니다.
 
 이러한 활동은 [[!UICONTROL 데이터 위생] UI 작업 공간](#ui) 또는 [데이터 위생 API](#api). 데이터 위생 작업이 실행되면 시스템은 프로세스의 각 단계에서 투명성 업데이트를 제공합니다. 의 섹션을 참조하십시오. [타임라인 및 투명도](#timelines-and-transparency) 시스템에서 각 작업 유형이 표시되는 방식에 대한 자세한 정보.
 
