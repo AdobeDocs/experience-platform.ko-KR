@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 배치 수집 API 안내서
 description: 이 문서에서는 Adobe Experience Platform용 배치 수집 API를 사용하는 개발자를 위한 포괄적인 안내서를 제공합니다.
 exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 49281d6ef959c84c3da964f0a9e19859fd8901a5
 workflow-type: tm+mt
-source-wordcount: '2373'
+source-wordcount: '2413'
 ht-degree: 4%
 
 ---
@@ -109,7 +109,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | 업로드할 일괄 처리의 ID입니다. |
 | `{DATASET_ID}` | 일괄 처리의 참조 데이터 세트에 대한 ID입니다. |
-| `{FILE_NAME}` | 업로드할 파일의 이름입니다. 이 파일 경로는 Adobe 측에 파일을 저장할 위치입니다. |
+| `{FILE_NAME}` | 업로드할 파일의 이름입니다. 제출할 파일 배치에 대해 다른 파일과 충돌하지 않도록 고유한 파일 이름을 사용해야 합니다. |
 
 **요청**
 
@@ -129,7 +129,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | 매개 변수 | 설명 |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | 업로드하려는 파일의 전체 경로 및 이름입니다. 이 파일 경로는 다음과 같은 로컬 파일 경로입니다 `Users/sample-user/Downloads/sample.json`. |
+| `{FILE_PATH_AND_NAME}` | 업로드하려는 파일의 전체 경로 및 이름입니다. 이 파일 경로는 다음과 같은 로컬 파일 경로입니다 `acme/customers/campaigns/summer.json`. |
 
 **응답**
 
@@ -244,7 +244,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | 업로드할 일괄 처리의 ID입니다. |
 | `{DATASET_ID}` | 일괄 처리의 참조 데이터 세트에 대한 ID입니다. |
-| `{FILE_NAME}` | 업로드할 파일의 이름입니다. 이 파일 경로는 Adobe 측에 파일을 저장할 위치입니다. |
+| `{FILE_NAME}` | 업로드할 파일의 이름입니다. 제출할 파일 배치에 대해 다른 파일과 충돌하지 않도록 고유한 파일 이름을 사용해야 합니다. |
 
 **요청**
 
@@ -264,7 +264,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | 매개 변수 | 설명 |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | 업로드하려는 파일의 전체 경로 및 이름입니다. 이 파일 경로는 다음과 같은 로컬 파일 경로입니다 `Users/sample-user/Downloads/sample.json`. |
+| `{FILE_PATH_AND_NAME}` | 업로드하려는 파일의 전체 경로 및 이름입니다. 이 파일 경로는 다음과 같은 로컬 파일 경로입니다 `acme/customers/campaigns/summer.parquet`. |
 
 **응답**
 
@@ -417,7 +417,7 @@ PATCH /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | 업로드할 일괄 처리의 ID입니다. |
 | `{DATASET_ID}` | 일괄 처리의 참조 데이터 세트에 대한 ID입니다. |
-| `{FILE_NAME}` | 업로드할 파일의 이름입니다. 이 파일 경로는 Adobe 측에 파일을 저장할 위치입니다. |
+| `{FILE_NAME}` | 업로드할 파일의 이름입니다. 제출할 파일 배치에 대해 다른 파일과 충돌하지 않도록 고유한 파일 이름을 사용해야 합니다. |
 
 **요청**
 
@@ -439,7 +439,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 | 매개 변수 | 설명 |
 | --------- | ----------- |
 | `{CONTENT_RANGE}` | 정수로, 요청된 범위의 시작 및 끝. |
-| `{FILE_PATH_AND_NAME}` | 업로드하려는 파일의 전체 경로 및 이름입니다. 이 파일 경로는 다음과 같은 로컬 파일 경로입니다 `Users/sample-user/Downloads/sample.json`. |
+| `{FILE_PATH_AND_NAME}` | 업로드하려는 파일의 전체 경로 및 이름입니다. 이 파일 경로는 다음과 같은 로컬 파일 경로입니다 `acme/customers/campaigns/summer.json`. |
 
 
 **응답**
@@ -633,7 +633,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | 업로드할 일괄 처리의 ID입니다. |
 | `{DATASET_ID}` | 일괄 처리의 참조 데이터 세트에 대한 ID입니다. |
-| `{FILE_NAME}` | 업로드할 파일의 이름입니다. 이 파일 경로는 Adobe 측에 파일을 저장할 위치입니다. |
+| `{FILE_NAME}` | 업로드할 파일의 이름입니다. 제출할 파일 배치에 대해 다른 파일과 충돌하지 않도록 고유한 파일 이름을 사용해야 합니다. |
 
 **요청**
 
@@ -653,7 +653,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | 매개 변수 | 설명 |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | 업로드하려는 파일의 전체 경로 및 이름입니다. 이 파일 경로는 다음과 같은 로컬 파일 경로입니다 `Users/sample-user/Downloads/sample.json`. |
+| `{FILE_PATH_AND_NAME}` | 업로드하려는 파일의 전체 경로 및 이름입니다. 이 파일 경로는 다음과 같은 로컬 파일 경로입니다 `acme/customers/campaigns/summer.csv`. |
 
 
 **응답**
@@ -855,7 +855,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | 업로드할 일괄 처리의 ID입니다. |
 | `{DATASET_ID}` | 일괄 처리의 참조 데이터 세트에 대한 ID입니다. |
-| `{FILE_NAME}` | 업로드할 파일의 이름입니다. 이 파일 경로는 Adobe 측에 파일을 저장할 위치입니다. |
+| `{FILE_NAME}` | 업로드할 파일의 이름입니다. 제출할 파일 배치에 대해 다른 파일과 충돌하지 않도록 고유한 파일 이름을 사용해야 합니다. |
 
 **요청**
 
@@ -875,7 +875,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | 매개 변수 | 설명 |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | 업로드하려는 파일의 전체 경로 및 이름입니다. 이 파일 경로는 다음과 같은 로컬 파일 경로입니다 `Users/sample-user/Downloads/sample.json`. |
+| `{FILE_PATH_AND_NAME}` | 업로드하려는 파일의 전체 경로 및 이름입니다. 이 파일 경로는 다음과 같은 로컬 파일 경로입니다 `acme/customers/campaigns/summer.json`. |
 
 **응답**
 
