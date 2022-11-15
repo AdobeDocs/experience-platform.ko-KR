@@ -5,10 +5,10 @@ title: 데이터 준비 매핑 함수
 topic-legacy: overview
 description: 이 문서에서는 데이터 준비에 사용되는 매핑 기능을 소개합니다.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 66c3f4fc6da987f731f7b7e54f416c60fcc670d8
+source-git-commit: b7800dd67c2d16747815f2cb3311ca9b6d6fa342
 workflow-type: tm+mt
-source-wordcount: '4286'
-ht-degree: 3%
+source-wordcount: '4337'
+ht-degree: 4%
 
 ---
 
@@ -234,6 +234,11 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 {style=&quot;table-layout:auto&quot;}
 
 ### 사용자 에이전트 함수 {#user-agent}
+
+아래 표에 포함된 사용자 에이전트 함수는 다음 값 중 하나를 반환할 수 있습니다.
+
+* 휴대폰 - 작은 화면이 있는 모바일 장치(일반적으로 &lt; 7&quot;)
+* 모바일 - 아직 식별되지 않은 모바일 장치입니다. 이 모바일 장치는 eReader, 태블릿, 휴대폰, 시계 등이 될 수 있습니다.
 
 >[!NOTE]
 >

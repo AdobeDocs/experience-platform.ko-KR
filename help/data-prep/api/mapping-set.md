@@ -5,9 +5,9 @@ title: 매핑 집합 API 끝점
 topic-legacy: mapping sets
 description: Adobe Experience Platform API에서 '/mappingSets' 끝점을 사용하여 매핑 세트를 프로그래밍 방식으로 검색, 만들기, 업데이트 및 확인할 수 있습니다.
 exl-id: a4e4ddcd-164e-42aa-b7d1-ba59d70da142
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: b7800dd67c2d16747815f2cb3311ca9b6d6fa342
 workflow-type: tm+mt
-source-wordcount: '807'
+source-wordcount: '854'
 ht-degree: 3%
 
 ---
@@ -219,7 +219,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets \
 | -------- | ----------- |
 | `outputSchema.schemaRef.id` | 참조하는 XDM 스키마의 ID입니다. |
 | `outputSchema.schemaRef.contentType` | 참조된 스키마의 응답 형식을 결정합니다. 이 필드에 대한 자세한 내용은 [스키마 레지스트리 개발자 안내서](../../xdm/api/schemas.md#lookup). |
-| `mappings.sourceType` | 소스 유형은 소스에서 대상으로 값을 추출하는 방법을 설명합니다. |
+| `mappings.sourceType` | 소스 유형은 소스에서 대상으로 값을 추출하는 방법을 설명합니다. 소스 유형은 다음 두 가지 값을 지원합니다. <ul><li>`ATTRIBUTE`: 소스 유형 `ATTRIBUTE` 입력 속성이 소스 스키마에서 온 경우 사용됩니다.</li><li>`EXPRESSION`: 소스 유형 `EXPRESSION` 은 계산된 필드를 사용하여 매핑을 완료할 때 사용됩니다.</li></ul> **경고**: 소스 유형 값을 잘못 설정하면 매핑 세트를 편집할 수 없게 렌더링할 수 있습니다. |
 | `mappings.source` | 데이터를 매핑할 위치입니다. |
 | `mappings.destination` | 데이터를 매핑할 위치입니다. |
 
