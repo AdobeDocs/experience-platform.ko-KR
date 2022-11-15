@@ -1,9 +1,10 @@
 ---
 title: Google 광고 향상된 전환 확장
 description: Adobe Experience Platform의 이벤트 전달을 위한 Google 광고 향상된 전환 확장에 대해 알아봅니다.
-source-git-commit: a279c44ef9df3aa9bfc7763b153b87bde0015d57
+exl-id: 65cdff40-276f-4481-9621-6c6861dbd412
+source-git-commit: 670e59a6111b7e4b7febca197d7e462ce5c14596
 workflow-type: tm+mt
-source-wordcount: '1295'
+source-wordcount: '1314'
 ht-degree: 1%
 
 ---
@@ -35,6 +36,10 @@ ht-degree: 1%
 >클라이언트측 전환 이벤트를 이벤트 전달에서 보낸 자사 데이터와 연결하려면 `transaction_ID` 는 두 호출 모두에서 동일해야 합니다. 각 서비스에 대해 이 값을 제공해야 하는 위치에 대한 자세한 내용은 [태그](#conversion-action-tags) 및 [이벤트 전달](#conversion-action-event-forwarding)각각 입니다.
 
 전환 이벤트 전송에는 클라이언트측 및 서버측 구현이 모두 포함되므로 이 문서에서는 클라이언트측 설정을 위한 사전 요구 절차를 다룹니다 [[!DNL Google Global Site Tag] (gtag) 확장](https://exchange.adobe.com/apps/ec/101437/google-global-site-tag-gtag) 그리고 [!DNL Enhanced Conversions] 이벤트 전달을 위한 확장.
+
+다음 비디오에서는 를 소개합니다 [!DNL Enhanced Conversions] 확장을 살펴보고 다음 높은 수준에서 구현 단계를 안내합니다.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3411365?quality=12&learn=on)
 
 ## 태그를 사용하여 전환 보내기
 
