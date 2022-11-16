@@ -5,9 +5,9 @@ title: Query Service UI 안내서
 topic-legacy: guide
 description: Adobe Experience Platform 쿼리 서비스는 쿼리를 작성 및 실행하고, 이전에 실행된 쿼리를 보고, IMS 조직 내의 사용자가 저장한 쿼리에 액세스하는 데 사용할 수 있는 사용자 인터페이스를 제공합니다.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: a085bac6b4ee825d534710ae91d6690fa076e873
+source-git-commit: 3b6862dd3bb770df4a1549275f911dd81a178002
 workflow-type: tm+mt
-source-wordcount: '716'
+source-wordcount: '1095'
 ht-degree: 2%
 
 ---
@@ -25,6 +25,29 @@ Adobe Experience Platform [!DNL Query Service] 은 IMS 조직 내에서 사용�
 [!DNL Query Editor] 은 쿼리 입력을 시작할 수 있는 편집 공간을 제공합니다. 입력할 때 편집기는 테이블 내의 SQL 예약 단어, 테이블 및 필드 이름을 자동으로 완료합니다. 쿼리 작성을 마쳤으면 **재생** 단추를 클릭하여 쿼리를 실행합니다. 다음 **[!UICONTROL 콘솔]** 편집기 아래 탭에 표시되는 내용은 [!DNL Query Service] 쿼리 반환 시기를 나타내는 현재 실행 중입니다. 다음 **[!UICONTROL 결과]** 콘솔 옆의 탭에 쿼리 결과가 표시됩니다. 자세한 내용은 [쿼리 편집기 안내서](./user-guide.md) 자세한 내용은 [!DNL Query Editor].
 
 ![갑자기 그 광경이 펼쳐졌다 [!DNL Query Editor].](../images/ui/overview/query-editor.png)
+
+## 예약된 쿼리 {#scheduled-queries}
+
+템플릿으로 이미 저장된 쿼리는 일반 케이던스에서 실행하도록 예약할 수 있습니다. 쿼리를 예약할 때 실행 빈도, 시작 및 종료 날짜, 예약된 쿼리가 실행되는 요일 및 쿼리를 내보낼 데이터 세트를 선택할 수 있습니다. 쿼리 일정은 쿼리 편집기를 사용하여 설정됩니다.
+
+UI를 통해 쿼리를 예약하는 방법에 대해 알아보려면 [예약된 쿼리 안내서](./user-guide.md#scheduled-queries). API를 사용하여 일정을 추가하는 방법에 대해 알아보려면 [예약된 쿼리 엔드포인트 가이드](../api/scheduled-queries.md).
+
+쿼리를 예약하면 [!UICONTROL 예약된 쿼리] 탭. 목록에서 예약된 쿼리를 선택하여 쿼리, 실행, 작성자 및 시간에 대한 전체 세부 정보를 찾을 수 있습니다.
+
+![예약된 쿼리 탭이 강조 표시된 질의 작업 영역에서 쿼리 일정 행을 표시합니다.](../images/ui/overview/scheduled-queries.png)
+
+| 열 | 설명 |
+| --- | --- |
+| **[!UICONTROL 이름]** | 이름 필드는 템플릿 이름 또는 SQL 쿼리의 처음 몇 문자입니다. 쿼리 편집기를 사용하여 UI를 통해 생성된 모든 쿼리는 시작 시 이름이 지정됩니다. API를 통해 쿼리를 만든 경우 쿼리 이름은 쿼리를 만드는 데 사용되는 초기 SQL의 코드 조각입니다. |
+| **[!UICONTROL 템플릿]** | 쿼리의 템플릿 이름입니다. 템플릿 이름을 선택하여 쿼리 편집기로 이동합니다. 편의를 위해 쿼리 템플릿이 쿼리 편집기에 표시됩니다. 템플릿 이름이 없는 경우 행은 하이픈으로 표시되고 쿼리 편집기로 리디렉션하여 쿼리를 볼 수 없습니다. |
+| **[!UICONTROL SQL]** | SQL 쿼리의 코드 조각입니다. |
+| **[!UICONTROL 실행 빈도]** | 쿼리가 실행되도록 설정된 케이던스입니다. 사용 가능한 값은 다음과 같습니다 `Run once` 및 `Scheduled`. 쿼리는 실행 빈도에 따라 필터링할 수 있습니다. |
+| **[!UICONTROL 작성자]** | 쿼리를 만든 사용자의 이름입니다. |
+| **[!UICONTROL 생성됨]** | UTC 형식으로 쿼리를 만들 때의 타임스탬프. |
+| **[!UICONTROL 마지막 실행 타임스탬프]** | 쿼리를 실행할 때의 가장 최근 타임스탬프입니다. 이 열에는 현재 일정에 따라 쿼리가 실행되었는지 여부가 강조 표시됩니다. |
+| **[!UICONTROL 마지막 실행 상태]** | 가장 최근 쿼리 실행의 상태입니다. 세 가지 상태 값은 다음과 같습니다. `successful` `failed` 또는 `in progress`. |
+
+방법에 대한 자세한 내용은 설명서 를 참조하십시오 [쿼리 서비스 UI를 통해 쿼리 모니터링](../monitor-queries.md).
 
 ## 템플릿 {#browse}
 
