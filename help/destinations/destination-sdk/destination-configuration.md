@@ -2,9 +2,9 @@
 description: 이 구성을 사용하면 대상 이름, 카테고리, 설명, 로고 등과 같은 기본 정보를 표시할 수 있습니다. 또한 이 구성의 설정은 Experience Platform 사용자가 대상을 인증하는 방법, Experience Platform 사용자 인터페이스에 표시되는 방법 및 대상으로 내보낼 수 있는 ID를 결정합니다.
 title: Destination SDK 스트리밍 대상 구성 옵션
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: 75399d2fbe111a296479f8d3404d43c6ba0d50b5
+source-git-commit: 21278b39a2dc12771449b9a471ea4182c6b999a3
 workflow-type: tm+mt
-source-wordcount: '1888'
+source-wordcount: '1894'
 ht-degree: 4%
 
 ---
@@ -212,21 +212,21 @@ Experience Platform UI에서 대상에 연결할 때 대상에 고유한 사용�
 
 이 섹션의 매개 변수는 대상이 수락하는 ID를 결정합니다. 이 구성은 또한 [매핑 단계](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) ID와 속성을 XDM 스키마에서 대상의 스키마에 매핑하는 Experience Platform 사용자 인터페이스 수입니다.
 
-어떤 것을 표시해야 합니다 [!DNL Platform] id 고객은 대상으로 내보낼 수 있습니다. 몇 가지 예는 다음과 같습니다 [!DNL Experience Cloud ID], 해시된 이메일, 장치 ID ([!DNL IDFA], [!DNL GAID]). 이러한 값은 [!DNL Platform] 고객이 대상의 ID 네임스페이스에 매핑할 수 있는 ID 네임스페이스입니다. 고객이 사용자 지정 네임스페이스를 대상이 지원하는 ID에 매핑할 수 있는지 여부를 나타낼 수도 있습니다.
+어떤 것을 표시해야 합니다 [!DNL Platform] id 고객은 대상으로 내보낼 수 있습니다. 몇 가지 예는 다음과 같습니다 [!DNL Experience Cloud ID], 해시된 이메일, 장치 ID ([!DNL IDFA], [!DNL GAID]). 이러한 값은 [!DNL Platform] 고객이 대상의 ID 네임스페이스에 매핑할 수 있는 ID 네임스페이스입니다. 고객이 사용자 지정 네임스페이스를 대상이 지원하는 ID에 매핑할 수 있는지 여부를 나타낼 수도 있습니다(`acceptsCustomNamespaces: true`)과 함께 사용할 수 있습니다.`acceptsAttributes: true`).
 
 ID 네임스페이스에는 1-1의 서신이 필요하지 않습니다 [!DNL Platform] 및 대상을 선택합니다.
 예를 들어 고객이 [!DNL Platform] [!DNL IDFA] 네임스페이스에 [!DNL IDFA] 대상의 네임스페이스이거나, 동일한 네임스페이스를 매핑할 수 있습니다 [!DNL Platform] [!DNL IDFA] 네임스페이스 [!DNL Customer ID] 네임스페이스가 대상에 있습니다.
 
-자세한 내용은 [ID 네임스페이스 개요](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=ko).
+에서 ID에 대해 자세히 알아보십시오 [ID 네임스페이스 개요](/help/identity-service/namespaces.md).
 
 ![UI에서 대상 ID 렌더링](./assets/target-identities-ui.png)
 
 | 매개 변수 | 유형 | 설명 |
 |---------|----------|------|
-| `acceptsAttributes` | 부울 | 대상이 표준 프로필 속성을 수락하는지 여부를 나타냅니다. 일반적으로 이러한 속성은 파트너의 설명서에서 강조 표시됩니다. |
+| `acceptsAttributes` | 부울 | 고객이 표준 프로필 속성을 구성 중인 ID에 매핑할 수 있는지 여부를 나타냅니다. |
 | `acceptsCustomNamespaces` | 부울 | 고객이 대상에서 사용자 지정 네임스페이스를 설정할 수 있는지 여부를 나타냅니다. |
 | `transformation` | 문자열 | *예제 구성에 표시되지 않음*. 예를 들어 [!DNL Platform] 고객은 일반 이메일 주소를 특성으로 사용하고 플랫폼에서는 해시된 이메일만 허용합니다. 이 개체에서는 적용해야 하는 변형을 적용할 수 있습니다(예: 이메일을 소문자로 변환한 다음 해시). 예를 보려면 `requiredTransformation` 에서 [대상 구성 API 참조](./destination-configuration-api.md#update). |
-| `acceptedGlobalNamespaces` | - | 플랫폼에서 [표준 id 네임스페이스](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces) (예: IDFA)가 있으므로 Platform 사용자가 이러한 ID 네임스페이스를 선택하도록 제한할 수 있습니다. |
+| `acceptedGlobalNamespaces` | - | 다음 항목을 나타냅니다. [표준 id 네임스페이스](/help/identity-service/namespaces.md#standard) (예: IDFA) 고객은 구성 중인 ID에 매핑할 수 있습니다. <br> 사용 시 `acceptedGlobalNamespaces`, 다음 사용 가능 `"requiredTransformation":"sha256(lower($))"` 을 소문자로 해시하고 이메일 주소 또는 전화 번호를 해시합니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
