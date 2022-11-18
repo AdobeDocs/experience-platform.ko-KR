@@ -1,18 +1,19 @@
 ---
 title: 데이터 집합 샘플
 description: Query Service 샘플 데이터 세트를 사용하면 쿼리 정확성 비용으로 처리 시간이 크게 단축되어 빅데이터에 대해 예비 쿼리를 수행할 수 있습니다. 이 안내서에서는 대략적인 쿼리 처리를 위해 샘플을 관리하는 방법에 대한 정보를 제공합니다
-source-git-commit: 3d2802ff5cdb359b28da23a05d1d6831cc273a52
+exl-id: 9e676d7c-c24f-4234-878f-3e57bf57af44
+source-git-commit: 9d543b5c7c7f39e809b6a13b8adc46b9a99f51c7
 workflow-type: tm+mt
-source-wordcount: '536'
+source-wordcount: '538'
 ht-degree: 0%
 
 ---
 
-# (베타) 데이터 세트 샘플
+# (제한된 릴리스) 데이터 세트 샘플
 
 >[!IMPORTANT]
 >
->데이터 세트 샘플 기능은 베타에 있습니다. 해당 기능과 설명서는 변경될 수 있습니다.
+>데이터 세트 샘플 기능은 현재 제한된 릴리스에 있으며 모든 고객에게 제공되지 않습니다.
 
 Adobe Experience Platform Query Service는 대략적인 쿼리 처리 기능의 일부로서 샘플 데이터 세트를 제공합니다. 샘플 데이터 세트는 기존 [!DNL Azure Data Lake Storage] (ADLS) 원래 레코드의 백분율만 사용하는 데이터 세트. 이 비율을 샘플링 속도라고 합니다. 샘플링 속도를 조절하여 정확성 및 처리 시간의 균형을 제어하면 쿼리 정확성 비용으로 처리 시간이 크게 단축된 빅데이터에 대해 예비 쿼리를 수행할 수 있습니다.
 

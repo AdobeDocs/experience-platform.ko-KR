@@ -1,14 +1,19 @@
 ---
 title: 배치 질의 라이선스 사용량 모니터링
 description: Adobe Experience Platform UI는 조직의 Data Distiller 라이선스 사용에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
-source-git-commit: 0a44d15f9dfaf5100fa44e2e6442b1be23ee0ab0
+exl-id: a1e365a0-cc65-4fd6-b36f-8d79b7d9ec7c
+source-git-commit: 9d543b5c7c7f39e809b6a13b8adc46b9a99f51c7
 workflow-type: tm+mt
-source-wordcount: '318'
+source-wordcount: '341'
 ht-degree: 0%
 
 ---
 
-# 배치 쿼리 라이선스 사용 모니터링 {#monitor-license-usage}
+# (베타) 일괄 쿼리 라이선스 사용 모니터링 {#monitor-license-usage}
+
+>[!IMPORTANT]
+>
+>UI를 통해 배치 쿼리 라이선스 사용을 모니터링하는 기능이 베타에 있습니다. 해당 기능과 설명서는 변경될 수 있습니다.
 
 Adobe Experience Platform UI(사용자 인터페이스)는 조직의 Query Service 라이선스 사용에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 
