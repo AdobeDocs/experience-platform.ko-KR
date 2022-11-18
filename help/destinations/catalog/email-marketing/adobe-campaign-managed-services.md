@@ -1,9 +1,10 @@
 ---
 title: Adobe Campaign Managed Cloud Services 연결
 description: Adobe Campaign Managed Cloud Services은 크로스 채널 고객 경험을 디자인하고 시각적 캠페인 운영, 실시간 상호 작용 관리 및 크로스 채널 실행을 위한 환경을 제공할 수 있는 플랫폼을 제공합니다.
-source-git-commit: 81c17a6ea07efbbea91e0d918d52ec96e0335152
+exl-id: fe151ad3-c431-4b5a-b453-9d1d9aedf775
+source-git-commit: ef49bebb96afb9b25430fcc69f8ba91305ad6697
 workflow-type: tm+mt
-source-wordcount: '1490'
+source-wordcount: '1368'
 ht-degree: 4%
 
 ---
@@ -46,29 +47,6 @@ Adobe Experience Platform은 id 그래프, analytics의 행동 데이터, 오프
 그 결과 Adobe Experience Cloud 에코시스템에서 보다 일관성 있는 크로스 채널 캠페인과 신속한 적용 및 학습이 가능한 풍부한 고객 프로필이 제공됩니다.
 
 [Adobe Experience Platform과 Adobe Campaign 통합에 대해 자세히 알아보기](https://experienceleague.adobe.com/docs/campaign/campaign-v8/connect/ac-aep.html)
-
-
-## 전제 조건 {#prerequisites}
-
-Campaign이 Adobe Experience Platform에서 데이터를 검색하려면 캠페인 API 프로젝트를 만들고 고객 지원 센터에 연결된 클라이언트 ID를 허용 목록에 추가하도록 요청해야 합니다.
-
->[!NOTE]
->
->API 프로젝트를 만드는 방법에 대한 글로벌 정보는 [이 설명서](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman.html)
-
-1. 에 로그인합니다. [Adobe Developer 콘솔](https://console.adobe.io/) 새 프로젝트를 만듭니다.
-
-1. 선택 **[!UICONTROL API 추가]** 및 **[!UICONTROL Adobe Campaign]**.
-
-   ![](../../assets/catalog/email-marketing/adobe-campaign-managed-services/create-api.png)
-
-1. 키 쌍을 생성합니다.
-
-1. 을(를) 선택합니다 `<Instance Name> - admin` 제품 프로필을 선택하고 **[!UICONTROL 구성된 API 저장]**.
-
-1. API 프로젝트가 만들어집니다. 아래 참고 사항 **[!UICONTROL 클라이언트 ID]** 프로젝트에 표시됩니다. Adobe 고객 지원 센터에 연락하여 허용 목록에 클라이언트 ID를 추가하도록 요청하십시오.
-
-   ![](../../assets/catalog/email-marketing/adobe-campaign-managed-services/client-id.png)
 
 ## 지원되는 ID {#supported-identities}
 
