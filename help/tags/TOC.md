@@ -5,10 +5,10 @@ breadcrumb-title: 태그
 user-guide-description: 고객 경험을 향상시키기 위해 분석, 마케팅 및 광고 태그를 배포 및 관리하는 방법을 살펴볼 수 있습니다.
 feature: Tags
 solution: Data Collection
-source-git-commit: 67f3d27ebb17e1b1dc77dcd32246f407753c20df
+source-git-commit: a03ab5086f8f3935425da147f721dec42ced9d00
 workflow-type: tm+mt
-source-wordcount: '416'
-ht-degree: 67%
+source-wordcount: '419'
+ht-degree: 66%
 
 ---
 
@@ -119,16 +119,18 @@ ht-degree: 67%
          * [개요](./extensions/web/core/overview.md)
          * [이벤트 전달](./extensions/web/core/event-forwarding.md)
          * [릴리스 정보](./extensions/web/core/release-notes.md)
-      * [!DNL Mailchimp] Edge {#mailchimp-edge}
-         * [개요](./extensions/web/mailchimp/overview.md)
-      * [!DNL Marketo Munchkin] {#marketo}
-         * [개요](./extensions/web/marketo/overview.md)
-         * [릴리스 정보](./extensions/web/marketo/release-notes.md)
       * Google 광고 향상된 전환 {#google-ads-enhanced-conversions}
          * [개요](./extensions/web/google-ads-enhanced-conversions/overview.md)
       * Google 데이터 레이어 {#google-data-layer}
          * [개요](./extensions/web/google-data-layer/overview.md)
          * [릴리스 정보](./extensions/web/google-data-layer/release-notes.md)
+      * [!DNL Mailchimp] Edge {#mailchimp-edge}
+         * [개요](./extensions/web/mailchimp/overview.md)
+      * [!DNL Marketo Munchkin] {#marketo}
+         * [개요](./extensions/web/marketo/overview.md)
+         * [릴리스 정보](./extensions/web/marketo/release-notes.md)
+      * [!UICONTROL Microsoft Azure] {#azure}
+         * [개요](./extensions/web/azure/overview.md)
       * [!DNL Splunk] {#splunk}
          * [개요](./extensions/web/splunk/overview.md)
       * [!DNL YouTube] 비디오 추적 {#youtube}
