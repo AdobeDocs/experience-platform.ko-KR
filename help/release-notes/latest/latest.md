@@ -1,9 +1,10 @@
 ---
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform에 대한 최신 릴리스 노트입니다.
-source-git-commit: 38eadb3a03577fde9651842e3aecc0291b14f0a0
+exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
+source-git-commit: 184ead059533d2706a5d3fca96dc082248955afe
 workflow-type: tm+mt
-source-wordcount: '1394'
+source-wordcount: '1357'
 ht-degree: 4%
 
 ---
@@ -124,6 +125,5 @@ Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 
 | 기능 | 설명 |
 | --- | --- | 
 | Adobe Workfront 소스의 베타 가용성 | 를 사용하십시오 [Adobe Workfront 소스](../../sources/connectors/adobe-applications/workfront.md) Workfront 데이터를 Experience Platform에 가져와서 작업 레코드를 타사 데이터와 결합하고, 작업 레코드에 내역 및 시계열 분석을 적용하고, 표준 SQL을 사용하여 작업 데이터를 쿼리하는 등의 사용 사례를 수행할 수 있습니다. 자세한 내용은 다음 안내서를 참조하십시오. [UI에서 Workfront 소스 연결 만들기](../../sources/tutorials/ui/create/adobe-applications/workfront.md). |
-| oracle 서비스 클라우드 소스의 베타 가용성 | oracle 서비스 클라우드 소스를 사용하여 Oracle 서비스 클라우드 계정의 데이터를 Experience Platform으로 수집할 수 있습니다. 자세한 내용은 [Oracle 서비스 클라우드 소스](../../sources/connectors/customer-success/oracle-service-cloud.md). |
 
 소스에 대해 자세히 알아보려면 [소스 개요](../../sources/home.md).
