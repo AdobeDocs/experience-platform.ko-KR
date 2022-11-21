@@ -3,9 +3,9 @@ keywords: Azure Blob;Blob 대상;s3;azure Blob 대상
 title: Azure Blob 연결
 description: Azure Blob 저장 공간에 대한 라이브 아웃바운드 연결을 만들어 Adobe Experience Platform에서 CSV 데이터 파일을 주기적으로 내보냅니다.
 exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
-source-git-commit: 56fd7a5ab58186367c729cb4ca8c3b4213c44900
+source-git-commit: f841b27a2d2700b0b68a386b89d1a5c62d3910ff
 workflow-type: tm+mt
-source-wordcount: '890'
+source-wordcount: '860'
 ht-degree: 1%
 
 ---
@@ -75,15 +75,15 @@ ht-degree: 1%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_blob_rsa"
 >title="RSA 공개 키"
->abstract="선택적으로 RSA 형식의 공개 키를 첨부하여 내보낸 파일에 암호화를 추가할 수 있습니다. 공개 키는 [!DNL Base64-encoded] 문자열. 아래 설명서 링크에서 올바른 형식의 키의 예를 봅니다."
+>abstract="선택적으로 RSA 형식의 공개 키를 첨부하여 내보낸 파일에 암호화를 추가할 수 있습니다. 아래 설명서 링크에서 올바른 형식의 키의 예를 봅니다."
 
 대상을 인증하려면 필요한 필드를 입력하고 을(를) 선택합니다 **[!UICONTROL 대상에 연결]**.
 
 * **[!UICONTROL 연결 문자열]**: Blob 저장소의 데이터에 액세스하려면 연결 문자열이 필요합니다. 다음 [!DNL Blob] 연결 문자열 패턴은 다음으로 시작: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`.
    * 구성에 대한 자세한 정보 [!DNL Blob] 연결 문자열을 참조하십시오. [Azure 저장소 계정에 대한 연결 문자열 구성](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string#configure-a-connection-string-for-an-azure-storage-account) ( Microsoft 설명서)를 참조하십시오.
-* **[!UICONTROL 암호화 키]**: 선택적으로 RSA 형식의 공개 키를 첨부하여 내보낸 파일에 암호화를 추가할 수 있습니다. 공개 키는 [!DNL Base64-encoded] 문자열. 아래 설명서 링크에서 올바른 형식의 base64로 인코딩된 키의 예를 봅니다. 중간 부분은 간결성을 위해 짧게 되어 있다.
+* **[!UICONTROL 암호화 키]**: 선택적으로 RSA 형식의 공개 키를 첨부하여 내보낸 파일에 암호화를 추가할 수 있습니다. 아래 이미지에서 올바른 형식의 암호화 키의 예를 봅니다.
 
-![UI에서 올바르게 포맷된 및 base64로 암호화된 PGP 키의 예를 보여주는 이미지](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+   ![UI에서 올바른 형식의 PGP 키의 예를 보여주는 이미지](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 ### 대상 세부 사항 채우기 {#destination-details}
 

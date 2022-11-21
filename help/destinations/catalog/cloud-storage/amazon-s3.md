@@ -3,9 +3,9 @@ keywords: Amazon S3;S3 대상;s3;amazon s3
 title: Amazon S3 연결
 description: Amazon Web Services(AWS) S3 저장소에 대한 라이브 아웃바운드 연결을 만들어 Adobe Experience Platform의 CSV 데이터 파일을 고유한 S3 버킷으로 주기적으로 내보냅니다.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: 56fd7a5ab58186367c729cb4ca8c3b4213c44900
+source-git-commit: f841b27a2d2700b0b68a386b89d1a5c62d3910ff
 workflow-type: tm+mt
-source-wordcount: '920'
+source-wordcount: '890'
 ht-degree: 0%
 
 ---
@@ -60,14 +60,14 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_s3_rsa"
 >title="RSA 공개 키"
->abstract="선택적으로 RSA 형식의 공개 키를 첨부하여 내보낸 파일에 암호화를 추가할 수 있습니다. 공개 키는 [!DNL Base64-encoded] 문자열. 아래 설명서 링크에서 올바른 형식의 키의 예를 봅니다."
+>abstract="선택적으로 RSA 형식의 공개 키를 첨부하여 내보낸 파일에 암호화를 추가할 수 있습니다. 아래 설명서 링크에서 올바른 형식의 키의 예를 봅니다."
 
 대상을 인증하려면 필요한 필드를 입력하고 을(를) 선택합니다 **[!UICONTROL 대상에 연결]**.
 
 * **[!DNL Amazon S3]액세스 키** 및 **[!DNL Amazon S3]비밀 키**: in [!DNL Amazon S3], 생성 `access key - secret access key` 플랫폼에 대한 액세스 권한을 부여하기 위한 쌍 [!DNL Amazon S3] 계정이 필요합니다. 자세한 내용은 [Amazon Web Services 설명서](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
-* **[!UICONTROL 암호화 키]**: 선택적으로 RSA 형식의 공개 키를 첨부하여 내보낸 파일에 암호화를 추가할 수 있습니다. 공개 키는 [!DNL Base64-encoded] 문자열. 아래 설명서 링크에서 올바른 형식의 base64로 인코딩된 키의 예를 봅니다. 중간 부분은 간결성을 위해 짧게 되어 있다.
+* **[!UICONTROL 암호화 키]**: 선택적으로 RSA 형식의 공개 키를 첨부하여 내보낸 파일에 암호화를 추가할 수 있습니다. 아래 이미지에서 올바른 형식의 암호화 키의 예를 봅니다.
 
-![UI에서 올바르게 포맷된 및 base64로 암호화된 PGP 키의 예를 보여주는 이미지](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+   ![UI에서 올바른 형식의 PGP 키의 예를 보여주는 이미지](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 ### 대상 세부 사항 채우기 {#destination-details}
 

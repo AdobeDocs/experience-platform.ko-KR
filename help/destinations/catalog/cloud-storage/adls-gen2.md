@@ -1,9 +1,10 @@
 ---
 title: (베타) Azure Data Lake Storage Gen2 연결
 description: Azure Data Lake Storage Gen2에 연결하여 세그먼트를 활성화하고 데이터 세트를 내보내는 방법을 알아봅니다.
-source-git-commit: 56fd7a5ab58186367c729cb4ca8c3b4213c44900
+exl-id: d265a02d-c901-4b39-8714-fe9ecdbb5bb1
+source-git-commit: f841b27a2d2700b0b68a386b89d1a5c62d3910ff
 workflow-type: tm+mt
-source-wordcount: '663'
+source-wordcount: '642'
 ht-degree: 1%
 
 ---
@@ -47,9 +48,9 @@ ht-degree: 1%
 * **[!UICONTROL 테넌트]**: 애플리케이션이 포함된 임차인 정보입니다.
 * **[!UICONTROL 서비스 주체 ID]**: 애플리케이션의 클라이언트 ID입니다.
 * **[!UICONTROL 서비스 사용자 키]**: 응용 프로그램의 키입니다.
-* **[!UICONTROL 암호화 키]**: 선택적으로 RSA 형식의 공개 키를 첨부하여 내보낸 파일에 암호화를 추가할 수 있습니다. 공개 키는 [!DNL Base64-encoded] 문자열. 아래 설명서 링크에서 올바른 형식의 base64로 인코딩된 키의 예를 봅니다. 중간 부분은 간결성을 위해 짧게 되어 있다.
+* **[!UICONTROL 암호화 키]**: 선택적으로 RSA 형식의 공개 키를 첨부하여 내보낸 파일에 암호화를 추가할 수 있습니다. 아래 이미지에서 올바른 형식의 암호화 키의 예를 봅니다.
 
-   ![UI에서 올바르게 포맷된 및 base64로 암호화된 PGP 키의 예를 보여주는 이미지](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+   ![UI에서 올바른 형식의 PGP 키의 예를 보여주는 이미지](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 ### 대상 세부 사항 채우기 {#destination-details}
 

@@ -3,9 +3,9 @@ keywords: SFTP;sftp
 title: SFTP 연결
 description: SFTP 서버에 대한 라이브 아웃바운드 연결을 만들어 Adobe Experience Platform에서 구분된 데이터 파일을 주기적으로 내보냅니다.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: 56fd7a5ab58186367c729cb4ca8c3b4213c44900
+source-git-commit: f841b27a2d2700b0b68a386b89d1a5c62d3910ff
 workflow-type: tm+mt
-source-wordcount: '835'
+source-wordcount: '812'
 ht-degree: 0%
 
 ---
@@ -64,7 +64,7 @@ SFTP 서버에 대한 라이브 아웃바운드 연결을 만들어 Adobe Experi
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_sftp_rsa"
 >title="RSA 공개 키"
->abstract="선택적으로 RSA 형식의 공개 키를 첨부하여 내보낸 파일에 암호화를 추가할 수 있습니다. 공개 키는 Base64 인코딩 문자열로 작성해야 합니다."
+>abstract="선택적으로 RSA 형식의 공개 키를 첨부하여 내보낸 파일에 암호화를 추가할 수 있습니다. 아래 설명서 링크에서 올바른 형식의 키의 예를 봅니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_sftp_ssh"
@@ -78,9 +78,9 @@ SFTP 서버에 대한 라이브 아웃바운드 연결을 만들어 Adobe Experi
 * **[!UICONTROL 호스트]**: SFTP 저장소 위치의 주소입니다.
 * **[!UICONTROL 사용자 이름]**: SFTP 저장소 위치에 로그인할 사용자 이름;
 * **[!UICONTROL 암호]**: SFTP 저장소 위치에 로그인하는 암호입니다.
-* **[!UICONTROL 암호화 키]**: 선택적으로 RSA 형식의 공개 키를 첨부하여 내보낸 파일에 암호화를 추가할 수 있습니다. 공개 키는 [!DNL Base64-encoded] 문자열. 아래 설명서 링크에서 올바른 형식의 base64로 인코딩된 키의 예를 봅니다. 중간 부분은 간결성을 위해 짧게 되어 있다.
+* **[!UICONTROL 암호화 키]**: 선택적으로 RSA 형식의 공개 키를 첨부하여 내보낸 파일에 암호화를 추가할 수 있습니다. 아래 이미지에서 올바른 형식의 암호화 키의 예를 봅니다.
 
-![UI에서 올바르게 포맷된 및 base64로 암호화된 PGP 키의 예를 보여주는 이미지](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+   ![UI에서 올바른 형식의 PGP 키의 예를 보여주는 이미지](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 
 을(를) 선택하는 경우 **[!UICONTROL SSH 키가 있는 SFTP]** sftp 위치에 연결할 인증 유형:
@@ -91,10 +91,9 @@ SFTP 서버에 대한 라이브 아웃바운드 연결을 만들어 Adobe Experi
 * **[!UICONTROL 포트]**: SFTP 저장소 위치에서 사용되는 포트입니다.
 * **[!UICONTROL 사용자 이름]**: SFTP 저장소 위치에 로그인할 사용자 이름;
 * **[!UICONTROL SSH 키]**: SFTP 저장소 위치에 로그인하는 데 사용되는 개인 SSH 키입니다. 개인 키는 Base64로 인코딩된 문자열로 포맷해야 하며 암호로 보호되어서는 안 됩니다.
-* **[!UICONTROL 암호화 키]**: 선택적으로 RSA 형식의 공개 키를 첨부하여 내보낸 파일에 암호화를 추가할 수 있습니다. 공개 키는 [!DNL Base64] 인코딩된 문자열입니다.
-   * 예: `----BEGIN PGP PUBLIC KEY BLOCK---- {Base64-encoded string} ----END PGP PUBLIC KEY BLOCK----`. 간결성을 위해 중간 부분이 단축된 올바른 형식의 PGP 키의 예를 아래 를 참조하십시오.
+* **[!UICONTROL 암호화 키]**: 선택적으로 RSA 형식의 공개 키를 첨부하여 내보낸 파일에 암호화를 추가할 수 있습니다. 아래 이미지에서 올바른 형식의 암호화 키의 예를 봅니다.
 
-      ![PGP 키](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+   ![UI에서 올바른 형식의 PGP 키의 예를 보여주는 이미지](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 ### 대상 세부 사항 {#destination-details}
 
