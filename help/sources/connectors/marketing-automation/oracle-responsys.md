@@ -2,7 +2,10 @@
 keywords: Experience Platform;홈;인기 항목;oracle;oracle responsys;responsys
 title: (베타) Oracle Responsys 소스 개요
 description: API 또는 사용자 인터페이스를 사용하여 Responsys를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
-source-git-commit: 071157110ef255bf0692c7b9e1db9fb86d930c2c
+hide: true
+hidefromtoc: true
+exl-id: 806ae7e2-d4af-47d5-a3aa-561b69acc836
+source-git-commit: 784ec5f799c591185620e8376a6980b4930d914a
 workflow-type: tm+mt
 source-wordcount: '274'
 ht-degree: 0%

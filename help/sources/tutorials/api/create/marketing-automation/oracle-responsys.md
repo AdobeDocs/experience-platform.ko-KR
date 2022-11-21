@@ -2,7 +2,10 @@
 keywords: Experience Platform;홈;인기 항목;oracle;
 title: (베타) Flow Service API를 사용하여 Oracle Responsys Base Connection 만들기
 description: Flow Service API를 사용하여 Adobe Experience Platform을 Responsys에 연결하는 방법을 알아봅니다.
-source-git-commit: aa4573325f2859c258e66d4b6df411118a5d1942
+hide: true
+hidefromtoc: true
+exl-id: 76659f5a-c923-488c-88f6-1919bc6a7bb5
+source-git-commit: 784ec5f799c591185620e8376a6980b4930d914a
 workflow-type: tm+mt
 source-wordcount: '552'
 ht-degree: 1%
