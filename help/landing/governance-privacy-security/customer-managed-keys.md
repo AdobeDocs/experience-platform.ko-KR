@@ -1,9 +1,10 @@
 ---
 title: Adobe Experience Platform의 고객 관리 키
 description: Adobe Experience Platform에 저장된 데이터에 대해 고유한 암호화 키를 설정하는 방법을 알아봅니다.
-source-git-commit: 02898f5143a7f4f48c64b22fb3c59a072f1e957d
+exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
+source-git-commit: 82a29cedfd12e0bc3edddeb26abaf36b0edea6df
 workflow-type: tm+mt
-source-wordcount: '1493'
+source-wordcount: '1613'
 ht-degree: 0%
 
 ---
@@ -13,6 +14,14 @@ ht-degree: 0%
 Adobe Experience Platform에 저장된 데이터는 시스템 수준 키를 사용하여 나머지 위치에서 암호화됩니다. 플랫폼 위에 구축된 응용 프로그램을 사용하는 경우 대신 고유한 암호화 키를 사용하도록 선택할 수 있으므로 데이터 보안을 더욱 강화할 수 있습니다.
 
 이 문서에서는 Platform에서 고객 관리 키(CMK) 기능을 활성화하는 프로세스에 대해 설명합니다.
+
+## 전제 조건
+
+CMK를 활성화하려면 **모두** 의 다음 기능 중 [!DNL Microsoft Azure]:
+
+* [역할 기반 액세스 제어 정책](https://learn.microsoft.com/en-us/azure/role-based-access-control/) (Experience Platform에서 동일한 기능과 혼동하지 않도록 합니다.)
+* [키 저장소 소프트 삭제](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview)
+* [제거 보호](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview#purge-protection)
 
 ## 프로세스 요약
 
@@ -24,7 +33,7 @@ CMK는 Adobe의 Healthcare Shield 및 Privacy and Security Shield 오퍼링에 �
 
 프로세스는 다음과 같습니다.
 
-1. [구성 [!DNL Microsoft Azure] 주요 저장소](#create-key-vault) 조직의 정책에 따라 [암호화 키 생성](#generate-a-key) 궁극적으로 Adobe과 공유됩니다.
+1. [구성 [!DNL Azure] 주요 저장소](#create-key-vault) 조직의 정책에 따라 [암호화 키 생성](#generate-a-key) 궁극적으로 Adobe과 공유됩니다.
 1. 에 API 호출 사용 [cmk 앱 설정](#register-app) 사용 [!DNL Azure] 임차인.
 1. 에 API 호출 사용 [암호화 키 ID를 Adobe에 보내기](#send-to-adobe) 및에 해당 기능에 대한 활성화 프로세스를 시작합니다.
 1. [구성 상태를 확인합니다](#check-status) cmk가 활성화되어 있는지 확인하려면
@@ -97,11 +106,13 @@ CMK는 [!DNL Microsoft Azure] 키 저장소. 시작하려면 다음을 수행해
 
 키 저장소를 구성했으면 다음 단계는 다음 단계에 연결할 CMK 애플리케이션에 등록하는 것입니다 [!DNL Azure] 임차인.
 
->[!NOTE]
->
->CMK 앱을 등록하려면 플랫폼 API를 호출해야 합니다. 이러한 호출을 위해 필요한 인증 헤더를 수집하는 방법에 대한 자세한 내용은 [플랫폼 API 인증 안내서](../../landing/api-authentication.md).
->
->반면에 인증 안내서에서는 필요한 사용자에 대해 고유한 값을 생성하는 방법에 대한 지침을 제공합니다 `x-api-key` 요청 헤더, 이 안내서의 모든 API 작업은 정적 값을 사용합니다. `acp_provisioning` 을 가리키도록 업데이트하는 것이 좋습니다. 에 대해 고유한 값을 제공해야 합니다 `{ACCESS_TOKEN}` 및 `{ORG_ID}`하지만,
+### 시작하기
+
+CMK 앱을 등록하려면 플랫폼 API를 호출해야 합니다. 이러한 호출을 위해 필요한 인증 헤더를 수집하는 방법에 대한 자세한 내용은 [플랫폼 API 인증 안내서](../../landing/api-authentication.md).
+
+반면에 인증 안내서에서는 필요한 사용자에 대해 고유한 값을 생성하는 방법에 대한 지침을 제공합니다 `x-api-key` 요청 헤더, 이 안내서의 모든 API 작업은 정적 값을 사용합니다. `acp_provisioning` 을 가리키도록 업데이트하는 것이 좋습니다. 에 대해 고유한 값을 제공해야 합니다 `{ACCESS_TOKEN}` 및 `{ORG_ID}`하지만,
+
+이 안내서에 표시된 모든 API 호출에서 `platform.adobe.io` 루트 경로로 사용됩니다. 이 경로는 기본적으로 VA7 영역으로 설정됩니다. 조직에서 다른 지역을 사용하는 경우, `platform` 대시 및 조직에 할당된 지역 코드가 뒤에 와야 합니다. `nld2` NLD2 또는 `aus5` AUS5용(예: `platform-aus5.adobe.io`). 조직의 지역을 모르는 경우 시스템 관리자에게 문의하십시오.
 
 ### 인증 URL 가져오기
 
@@ -183,7 +194,7 @@ curl -X POST \
         "imsOrgId": "{ORG_ID}",
         "configData": {
           "providerType": "AZURE_KEYVAULT",
-          "keyVaultIdentifier": "https://adobecmkexample.vault.azure.net/keys/adobeCMK-key/7c1d50lo28234cc895534c00d7eb4eb4"
+          "keyVaultKeyIdentifier": "https://adobecmkexample.vault.azure.net/keys/adobeCMK-key/7c1d50lo28234cc895534c00d7eb4eb4"
         }
       }'
 ```
@@ -193,7 +204,7 @@ curl -X POST \
 | `name` | 구성에 대한 이름입니다. 다음 위치에서 구성의 상태를 확인하는 데 필요하므로 이 값을 기억하는지 확인합니다. [이후 단계](#check-status). 값은 대/소문자를 구분합니다. |
 | `type` | 구성 유형입니다. 을(를) 로 설정해야 합니다. `BYOK_CONFIG`. |
 | `imsOrgId` | IMS 조직 ID입니다. 이 값은 `x-gw-ims-org-id` 헤더. |
-| `configData` | 구성에 대한 다음 세부 정보를 포함합니다.<ul><li>`providerType`: 을(를) 로 설정해야 합니다. `AZURE_KEYVAULT`.</li><li>`keyVaultIdentifier`: 복사한 키 저장소 URI [이전](#send-to-adobe).</li></ul> |
+| `configData` | 구성에 대한 다음 세부 정보를 포함합니다.<ul><li>`providerType`: 을(를) 로 설정해야 합니다. `AZURE_KEYVAULT`.</li><li>`keyVaultKeyIdentifier`: 복사한 키 저장소 URI [이전](#send-to-adobe).</li></ul> |
 
 **응답**
 
