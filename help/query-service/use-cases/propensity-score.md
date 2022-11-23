@@ -1,16 +1,19 @@
 ---
 title: 기계 학습에서 생성된 예측 모델을 사용하여 성향 점수 결정
 description: Query Service를 사용하여 예측 모델을 Platform 데이터에 적용하는 방법을 알아봅니다. 이 문서에서는 플랫폼 데이터를 사용하여 각 방문 시 고객의 구매 성향을 예측하는 방법을 보여줍니다.
-source-git-commit: af1c8f94d1758b3a4e7ea00c46b0f9a71a01c6be
+exl-id: 29587541-50dd-405c-bc18-17947b8a5942
+source-git-commit: 40c27a52fdae2c7d38c5e244a6d1d6ae3f80f496
 workflow-type: tm+mt
-source-wordcount: '1294'
+source-wordcount: '1295'
 ht-degree: 0%
 
 ---
 
 # 기계 학습에서 생성된 예측 모델을 사용하여 성향 점수를 결정합니다
 
-쿼리 서비스를 사용하여 기계 학습 플랫폼의 Experience Platform 데이터를 활용하여 성향 점수와 같은 예측 모델을 생성할 수 있습니다. 이 안내서에서는 계산 전자 필기장에서 모델을 교육하기 위해 Query Service를 사용하여 데이터를 기계 학습 플랫폼으로 보내는 방법을 설명합니다. 숙련된 모델은 SQL을 사용하여 데이터에 적용되어 각 방문에 대해 고객의 구매 성향을 예측할 수 있습니다.
+Query Service를 사용하면 시스템 학습 플랫폼에 구축된 성향 점수와 같은 예측 모델을 활용하여 Experience Platform 데이터를 분석할 수 있습니다.
+
+이 안내서에서는 계산 전자 필기장에서 모델을 교육하기 위해 Query Service를 사용하여 데이터를 기계 학습 플랫폼으로 보내는 방법을 설명합니다. 숙련된 모델은 SQL을 사용하여 데이터에 적용되어 각 방문에 대해 고객의 구매 성향을 예측할 수 있습니다.
 
 ## 시작하기
 
@@ -322,5 +325,3 @@ bootstrap_accuracy = np.sort(bootstrap_accuracy)
 ![성향 점수의 신뢰 구간을 표시하는 인쇄 명령입니다.](../images/use-cases/confidence-interval.png)
 
 위의 그림에서 모델을 교육하기 위해 1000개의 행만 사용하는 경우 약 84%와 88% 사이에 정확도가 떨어질 것으로 예상할 수 있습니다. 을 조정할 수 있습니다 `LIMIT` 모델의 성능을 보장하기 위해 필요에 따라 쿼리 서비스 쿼리의 절을 참조하십시오.
-
-
