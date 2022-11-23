@@ -2,9 +2,9 @@
 title: Adobe Experience Platform의 고객 관리 키
 description: Adobe Experience Platform에 저장된 데이터에 대해 고유한 암호화 키를 설정하는 방법을 알아봅니다.
 exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
-source-git-commit: 82a29cedfd12e0bc3edddeb26abaf36b0edea6df
+source-git-commit: 47b3de5035f93f8a4288a0fec0a9111a979d7442
 workflow-type: tm+mt
-source-wordcount: '1613'
+source-wordcount: '1603'
 ht-degree: 0%
 
 ---
@@ -17,11 +17,11 @@ Adobe Experience Platform에 저장된 데이터는 시스템 수준 키를 사�
 
 ## 전제 조건
 
-CMK를 활성화하려면 **모두** 의 다음 기능 중 [!DNL Microsoft Azure]:
+CMK를 활성화하려면 [!DNL Azure] 키 보관소는 다음 설정으로 구성해야 합니다.
 
-* [역할 기반 액세스 제어 정책](https://learn.microsoft.com/en-us/azure/role-based-access-control/) (Experience Platform에서 동일한 기능과 혼동하지 않도록 합니다.)
-* [키 저장소 소프트 삭제](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview)
-* [제거 보호](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview#purge-protection)
+* [제거 보호 사용](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview#purge-protection)
+* [소프트 삭제 활성화](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview)
+* [을 사용하여 액세스 구성 [!DNL Azure] 역할 기반 액세스 제어](https://learn.microsoft.com/en-us/azure/role-based-access-control/)
 
 ## 프로세스 요약
 
