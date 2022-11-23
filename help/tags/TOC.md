@@ -5,9 +5,9 @@ breadcrumb-title: 태그
 user-guide-description: 고객 경험을 향상시키기 위해 분석, 마케팅 및 광고 태그를 배포 및 관리하는 방법을 살펴볼 수 있습니다.
 feature: Tags
 solution: Data Collection
-source-git-commit: a03ab5086f8f3935425da147f721dec42ced9d00
+source-git-commit: de09106f4446981176ca001f607d540b490de8d1
 workflow-type: tm+mt
-source-wordcount: '419'
+source-wordcount: '420'
 ht-degree: 66%
 
 ---
@@ -106,6 +106,8 @@ ht-degree: 66%
       * Adobe Target v2 {#target-v2}
          * [개요](./extensions/web/target-v2/overview.md)
          * [릴리스 정보](./extensions/web/target-v2/release-notes.md)
+      * [!DNL AWS] {#aws}
+         * [개요](./extensions/web/aws/overview.md)
       * [!DNL BrightCove] 비디오 추적 {#brightcove}
          * [개요](./extensions/web/brightcove/overview.md)
          * [릴리스 정보](./extensions/web/brightcove/release-notes.md)
