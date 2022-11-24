@@ -2,7 +2,7 @@
 title: Reactor API의 암호
 description: 이벤트 전달에서 사용할 Reactor API에서 암호를 구성하는 방법에 대한 기본 사항을 알아봅니다.
 exl-id: 0298c0cd-9fba-4b54-86db-5d2d8f9ade54
-source-git-commit: 24e79c14268b9eab0e8286eb8cd1352c1dfcd1b6
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '1241'
 ht-degree: 2%
@@ -131,7 +131,7 @@ Exchange 아티팩트가 환경에 성공적으로 저장되면 비밀의 `activ
 
 ## 참조 암호 {#referencing-secrets}
 
-암호를 참조하려면 &quot; 유형의 데이터 요소를 만들어야 합니다[!UICONTROL 비밀]&quot;(에서 제공) [[!UICONTROL 코어] 확장](../../extensions/web/core/overview.md)) 내의 아무 곳에나 삽입할 수 있습니다. 이 데이터 요소를 구성할 때 각 환경에 사용할 암호를 입력하라는 메시지가 표시됩니다. 그런 다음 HTTP 호출을 위한 헤더 내에서 등의 비밀 데이터 요소를 참조하는 규칙을 만들 수 있습니다.
+암호를 참조하려면 &quot; 유형의 데이터 요소를 만들어야 합니다[!UICONTROL 비밀]&quot;(에서 제공) [[!UICONTROL 코어] 확장](../../extensions/client/core/overview.md)) 내의 아무 곳에나 삽입할 수 있습니다. 이 데이터 요소를 구성할 때 각 환경에 사용할 암호를 입력하라는 메시지가 표시됩니다. 그런 다음 HTTP 호출을 위한 헤더 내에서 등의 비밀 데이터 요소를 참조하는 규칙을 만들 수 있습니다.
 
 ![비밀 데이터 요소](../../images/api/guides/secrets/data-element.png)
 

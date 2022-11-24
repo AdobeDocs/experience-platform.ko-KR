@@ -3,7 +3,7 @@ title: 이벤트 전달 시작
 description: Adobe Experience Platform에서 이벤트 전달을 사용하여 시작하려면 이 단계별 자습서를 따르십시오.
 feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '872'
 ht-degree: 26%
@@ -18,7 +18,7 @@ ht-degree: 26%
 
 Adobe Experience Platform에서 이벤트 전달을 사용하려면 다음 세 가지 옵션 중 하나 이상을 사용하여 데이터를 Adobe Experience Platform Edge Network에 전송해야 합니다.
 
-* [Adobe Experience Platform 웹 SDK](../../extensions/web/sdk/overview.md)
+* [Adobe Experience Platform 웹 SDK](../../extensions/client/sdk/overview.md)
 * [Adobe Experience Platform Mobile SDK](https://sdkdocs.com)
 * [서버 간 API](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-apis/dcs-s2s.html?lang=en)
 
@@ -99,7 +99,7 @@ Adobe Experience Platform에서 데이터 스트림을 만들려면 이벤트 �
 
 에서 속성을 만듭니다 **[!UICONTROL 태그]** 작업 영역으로 이동한 다음 **[!UICONTROL 확장]** 카탈로그에서 Experience Platform 웹 SDK 확장을 선택하여 구성하고 설치합니다.
 
-자세한 내용은 [웹 SDK 확장 프로그램 설명서](../../extensions/web/sdk/overview.md) 구성 옵션에 대한 자세한 내용을 참조하십시오.
+자세한 내용은 [웹 SDK 확장 프로그램 설명서](../../extensions/client/sdk/overview.md) 구성 옵션에 대한 자세한 내용을 참조하십시오.
 
 ## Platform Web SDK로 데이터를 전송하는 태그 규칙 만들기
 

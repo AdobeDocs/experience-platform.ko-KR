@@ -2,7 +2,7 @@
 title: 비동기 배포
 description: 웹 사이트에서 Adobe Experience Platform 태그 라이브러리를 비동기식으로 배포하는 방법을 알아봅니다.
 exl-id: ed117d3a-7370-42aa-9bc9-2a01b8e7794e
-source-git-commit: c314cba6b822e12aa0367e1377ceb4f6c9d07ac2
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '1079'
 ht-degree: 55%
@@ -56,7 +56,7 @@ Adobe 제품에 필요한 JavaScript 라이브러리의 성능 및 비차단 배
 
 둘째, 태그 라이브러리는 [`DOMContentLoaded`](https://developer.mozilla.org/ko-KR/docs/Web/Events/DOMContentLoaded) 브라우저 이벤트(DOM Ready)가 발생했습니다.
 
-이 두 가지 점 때문에, 어떻게 [라이브러리가 로드됨](../../extensions/web/core/overview.md#library-loaded-page-top), [페이지 하단](../../extensions/web/core/overview.md#page-bottom), [DOM 지원](../../extensions/web/core/overview.md#page-bottom), 및 [Window Loaded](../../extensions/web/core/overview.md#window-loaded) 태그 라이브러리를 비동기식으로 로드할 때 코어 확장의 이벤트 유형.
+이 두 가지 점 때문에, 어떻게 [라이브러리가 로드됨](../../extensions/client/core/overview.md#library-loaded-page-top), [페이지 하단](../../extensions/client/core/overview.md#page-bottom), [DOM 지원](../../extensions/client/core/overview.md#page-bottom), 및 [Window Loaded](../../extensions/client/core/overview.md#window-loaded) 태그 라이브러리를 비동기식으로 로드할 때 코어 확장의 이벤트 유형.
 
 태그 속성에 다음 네 가지 규칙이 포함되어 있는 경우:
 

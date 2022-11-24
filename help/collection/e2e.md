@@ -2,7 +2,7 @@
 title: 데이터 수집 종단간 개요
 description: Adobe Experience Platform의 데이터 수집 기능을 사용하여 Adobe Experience Cloud 솔루션으로 이벤트 데이터를 전송하는 방법에 대한 높은 수준의 개요입니다.
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '2619'
 ht-degree: 0%
@@ -212,7 +212,7 @@ XDM 개체 유형에 대한 구성 대화 상자가 나타납니다. 이 대화 
 
 >[!NOTE]
 >
->구성 방법 등 Adobe 웹 확장에서 제공하는 다양한 이벤트 유형에 대한 자세한 내용은 [Adobe 확장 참조](../tags/extensions/web/overview.md) 태그 설명서에 추가했습니다.
+>구성 방법 등 Adobe 웹 확장에서 제공하는 다양한 이벤트 유형에 대한 자세한 내용은 [Adobe 확장 참조](../tags/extensions/client/overview.md) 태그 설명서에 추가했습니다.
 
 양식 제출 이벤트에서 [CSS 선택기](https://www.w3schools.com/css/css_selectors.asp) 를 눌러 실행할 규칙에 대한 특정 요소를 참조합니다. 아래 예에서는 ID입니다 `add-to-cart-form` 이 규칙은 &quot;장바구니에 추가&quot; 양식에만 실행되도록 사용됩니다. 선택 **[!UICONTROL 변경 내용 유지]** 를 눌러 규칙에 이벤트를 추가합니다.
 

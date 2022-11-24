@@ -5,10 +5,10 @@ breadcrumb-title: 태그
 user-guide-description: 고객 경험을 향상시키기 위해 분석, 마케팅 및 광고 태그를 배포 및 관리하는 방법을 살펴볼 수 있습니다.
 feature: Tags
 solution: Data Collection
-source-git-commit: de09106f4446981176ca001f607d540b490de8d1
+source-git-commit: ccfc46714069e8c29f1777dea5ba73e318c0a4a6
 workflow-type: tm+mt
-source-wordcount: '420'
-ht-degree: 66%
+source-wordcount: '954'
+ht-degree: 31%
 
 ---
 
@@ -64,83 +64,164 @@ ht-degree: 66%
    * [사용자 권한](./ui/administration/user-permissions.md)
 * 확장 {#extensions}
    * [개요](./extensions/overview.md)
-   * Adobe 확장 {#adobe}
-      * [개요](./extensions/web/overview.md)
+   * 태그 확장(클라이언트측) {#client}
+      * [개요](./extensions/client/overview.md)
+      * [액세스 가능한 사이트 속도 지표](https://exchange.adobe.com/apps/ec/103053)
+      * [Activity Map 사용자 지정자](https://exchange.adobe.com/apps/ec/101531)
+      * [작업 페이지 새로 고침](https://exchange.adobe.com/apps/ec/102848)
+      * [Adform 웹 사이트 추적](https://exchange.adobe.com/apps/ec/103195)
+      * [Adobe Advertising Cloud](https://exchange.adobe.com/apps/ec/100155)
       * Adobe Analytics {#analytics}
-         * [개요](./extensions/web/analytics/overview.md)
-         * [공유 모듈](./extensions/web/analytics/shared-modules.md)
-         * [릴리스 정보](./extensions/web/analytics/release-notes.md)
+         * [개요](./extensions/client/analytics/overview.md)
+         * [공유 모듈](./extensions/client/analytics/shared-modules.md)
+         * [릴리스 정보](./extensions/client/analytics/release-notes.md)
+      * [Adobe Analytics 및 Adobe Target](https://exchange.adobe.com/apps/ec/105363/6sense-for-analytics-and-target)
+      * [Adobe Analytics 및 Microsoft Dynamics](https://exchange.adobe.com/apps/ec/102966)
+      * [Adobe Analytics &amp; Salesforce](https://exchange.adobe.com/apps/ec/101530)
       * Adobe Analytics 제품 문자열 {#product-string}
-         * [개요](./extensions/web/product-string/overview.md)
-         * [릴리스 정보](./extensions/web/product-string/release-notes.md)
+         * [개요](./extensions/client/product-string/overview.md)
+         * [릴리스 정보](./extensions/client/product-string/release-notes.md)
+      * [Adobe Analytics 제품 문자열 빌더](https://exchange.adobe.com/apps/ec/101461)
       * Adobe Audience Manager {#audience-manager}
-         * [개요](./extensions/web/audience-manager/overview.md)
+         * [개요](./extensions/client/audience-manager/overview.md)
       * Adobe 클라이언트 데이터 레이어 {#client-data-layer}
-         * [개요](./extensions/web/client-data-layer/overview.md)
-         * [릴리스 정보](./extensions/web/client-data-layer/release-notes.md)
+         * [개요](./extensions/client/client-data-layer/overview.md)
+         * [릴리스 정보](./extensions/client/client-data-layer/release-notes.md)
       * Adobe ContextHub {#contexthub}
-         * [개요](./extensions/web/contexthub/overview.md)
+         * [개요](./extensions/client/contexthub/overview.md)
+      * [Adobe Experience Manager Forms](https://exchange.adobe.com/apps/ec/107493)
       * Adobe Experience Cloud ID 서비스 {#id-service}
-         * [개요](./extensions/web/id-service/overview.md)
-         * [릴리스 정보](./extensions/web/id-service/release-notes.md)
+         * [개요](./extensions/client/id-service/overview.md)
+         * [릴리스 정보](./extensions/client/id-service/release-notes.md)
       * Adobe Experience Platform 데모 {#platform-demo}
-         * [개요](./extensions/web/platform-demo/overview.md)
+         * [개요](./extensions/client/platform-demo/overview.md)
       * Adobe Experience Platform 웹 SDK {#sdk}
-         * [개요](./extensions/web/sdk/overview.md)
-      * Adobe Experience Platform Cloud 커넥터 {#cloud-connector}
-         * [개요](./extensions/web/cloud-connector/overview.md)
+         * [개요](./extensions/client/sdk/overview.md)
       * Adobe Experience Manager 자산 통찰력 {#asset-insights}
-         * [개요](./extensions/web/asset-insights/overview.md)
-         * [릴리스 정보](./extensions/web/asset-insights/release-notes.md)
+         * [개요](./extensions/client/asset-insights/overview.md)
+         * [릴리스 정보](./extensions/client/asset-insights/release-notes.md)
+      * [Adobe Fonts](https://exchange.adobe.com/apps/ec/101538)
       * 오디오 및 비디오용 Adobe Medium 분석 {#media-analytics}
-         * [개요](./extensions/web/media-analytics/overview.md)
-         * [릴리스 정보](./extensions/web/media-analytics/release-notes.md)
+         * [개요](./extensions/client/media-analytics/overview.md)
+         * [릴리스 정보](./extensions/client/media-analytics/release-notes.md)
       * Adobe Medium Analytics(3.x SDK) {#media-analytics-3x}
-         * [개요](./extensions/web/media-analytics-3x/overview.md)
-         * [릴리스 정보](./extensions/web/media-analytics-3x/release-notes.md)
+         * [개요](./extensions/client/media-analytics-3x/overview.md)
+         * [릴리스 정보](./extensions/client/media-analytics-3x/release-notes.md)
       * Adobe 개인 정보 {#privacy}
-         * [개요](./extensions/web/privacy/overview.md)
+         * [개요](./extensions/client/privacy/overview.md)
+      * [Adobe 보고서 세트 선택기](https://exchange.adobe.com/apps/ec/100640)
       * Adobe Target {#target}
-         * [개요](./extensions/web/target/overview.md)
-         * [릴리스 정보](./extensions/web/target/release-notes.md)
+         * [개요](./extensions/client/target/overview.md)
+         * [릴리스 정보](./extensions/client/target/release-notes.md)
       * Adobe Target v2 {#target-v2}
-         * [개요](./extensions/web/target-v2/overview.md)
-         * [릴리스 정보](./extensions/web/target-v2/release-notes.md)
-      * [!DNL AWS] {#aws}
-         * [개요](./extensions/web/aws/overview.md)
+         * [개요](./extensions/client/target-v2/overview.md)
+         * [릴리스 정보](./extensions/client/target-v2/release-notes.md)
+      * [Adobe Target 툴킷](https://exchange.adobe.com/apps/ec/100640)
+      * [Advertising Cloud](https://exchange.adobe.com/apps/ec/100640)
+      * [AEM 자산 통찰력](https://exchange.adobe.com/apps/ec/103406)
+      * [Airbrake JS 알림](https://exchange.adobe.com/apps/ec/103342)
+      * [진폭](https://exchange.adobe.com/apps/ec/108010)
+      * [아폴로 액스](https://exchange.adobe.com/apps/ec/105068)
+      * [Awin Advertiser MasterTag](https://exchange.adobe.com/apps/ec/103176)
+      * [Win 변환 태그](https://exchange.adobe.com/apps/ec/103240)
+      * [Beemray Human Context](https://exchange.adobe.com/apps/ec/101063)
+      * [Bing Ads 범용 이벤트 추적](https://exchange.adobe.com/apps/ec/100154)
+      * [Branch](https://exchange.adobe.com/apps/ec/101382)
       * [!DNL BrightCove] 비디오 추적 {#brightcove}
-         * [개요](./extensions/web/brightcove/overview.md)
-         * [릴리스 정보](./extensions/web/brightcove/release-notes.md)
+         * [개요](./extensions/client/brightcove/overview.md)
+         * [릴리스 정보](./extensions/client/brightcove/release-notes.md)
+      * [CallTrackingMetrics](https://exchange.adobe.com/apps/ec/107695)
+      * [채널 소스 식별자](https://exchange.adobe.com/apps/ec/101412)
+      * [Cheetah 경험](https://exchange.adobe.com/apps/ec/102759)
+      * [Clicktale](https://exchange.adobe.com/apps/ec/100082)
       * 일반 Analytics 플러그인 {#plugins}
-         * [개요](./extensions/web/plugins/overview.md)
-         * [릴리스 정보](./extensions/web/plugins/release-notes.md)
+         * [개요](./extensions/client/plugins/overview.md)
+         * [릴리스 정보](./extensions/client/plugins/release-notes.md)
       * 일반 웹 SDK 플러그인 {#web-sdk-plugins}
-         * [개요](./extensions/web/web-sdk-plugins/overview.md)
-         * [릴리스 정보](./extensions/web/web-sdk-plugins/release-notes.md)
+         * [개요](./extensions/client/web-sdk-plugins/overview.md)
+         * [릴리스 정보](./extensions/client/web-sdk-plugins/release-notes.md)
+      * [Concat](https://exchange.adobe.com/apps/ec/104690)
+      * [ContentSquare](https://exchange.adobe.com/apps/ec/100364)
+      * [Usercentrics CMP v2의 쿠키 동의 관리](https://exchange.adobe.com/apps/ec/107037)
       * 코어 {#core}
-         * [개요](./extensions/web/core/overview.md)
-         * [이벤트 전달](./extensions/web/core/event-forwarding.md)
-         * [릴리스 정보](./extensions/web/core/release-notes.md)
-      * Google 광고 향상된 전환 {#google-ads-enhanced-conversions}
-         * [개요](./extensions/web/google-ads-enhanced-conversions/overview.md)
+         * [개요](./extensions/client/core/overview.md)
+         * [릴리스 정보](./extensions/client/core/release-notes.md)
+      * [사용자 지정 디버그 로거](https://exchange.adobe.com/apps/ec/104698)
+      * [고객 인식](https://exchange.adobe.com/apps/ec/100688)
+      * [DEA(데이터 요소 지원)](https://exchange.adobe.com/apps/ec/101413)
+      * [데이터 레이어 관리자](https://exchange.adobe.com/apps/ec/101462)
+      * [Decibel](https://exchange.adobe.com/apps/ec/100913)
+      * [Demandbase](https://exchange.adobe.com/apps/ec/101605)
+      * [차등 개인 정보](https://exchange.adobe.com/apps/ec/104535)
+      * [Dynamic Media 뷰어](https://exchange.adobe.com/apps/ec/103048)
+      * [EDDL Helper](https://exchange.adobe.com/apps/ec/107691)
+      * [Flashtalking OneTag](https://exchange.adobe.com/apps/ec/101392)
+      * [ForeSee](https://exchange.adobe.com/apps/ec/100164)
+      * [Gainsight PX](https://exchange.adobe.com/apps/ec/103343)
+      * [예측 참여 생성](https://exchange.adobe.com/apps/ec/106148)
       * Google 데이터 레이어 {#google-data-layer}
-         * [개요](./extensions/web/google-data-layer/overview.md)
-         * [릴리스 정보](./extensions/web/google-data-layer/release-notes.md)
-      * [!DNL Mailchimp] Edge {#mailchimp-edge}
-         * [개요](./extensions/web/mailchimp/overview.md)
+         * [개요](./extensions/client/google-data-layer/overview.md)
+         * [릴리스 정보](./extensions/client/google-data-layer/release-notes.md)
+      * [Google 전역 사이트 태그(gtag)](https://exchange.adobe.com/apps/ec/101437/google-global-site-tag-gtag)
+      * [InMoment](https://exchange.adobe.com/apps/ec/100847)
+      * [JSON Helper](https://exchange.adobe.com/apps/ec/106449)
+      * [JW 플레이어 분석](https://exchange.a[](https://exchange.adobe.com/apps/ec/101460/sdi-toolkit)dobe.com/apps/ec/101523))
+      * [KickFire](https://exchange.adobe.com/apps/ec/101621)
+      * [매핑 테이블](https://exchange.adobe.com/apps/ec/103136)
       * [!DNL Marketo Munchkin] {#marketo}
-         * [개요](./extensions/web/marketo/overview.md)
-         * [릴리스 정보](./extensions/web/marketo/release-notes.md)
-      * [!UICONTROL Microsoft Azure] {#azure}
-         * [개요](./extensions/web/azure/overview.md)
-      * [!DNL Splunk] {#splunk}
-         * [개요](./extensions/web/splunk/overview.md)
+         * [개요](./extensions/client/marketo/overview.md)
+         * [릴리스 정보](./extensions/client/marketo/release-notes.md)
+      * [기본 속성 관리자](https://exchange.adobe.com/apps/ec/102992)
+      * [모니터링](https://exchange.adobe.com/apps/ec/106544)
+      * [Nielsen Digital SDK](https://exchange.adobe.com/apps/ec/101361)
+      * [쿠키에 대한 OneTrust 동의 관리](https://exchange.adobe.com/apps/ec/100340)
+      * [페퍼잼](https://exchange.adobe.com/apps/ec/103587)
+      * [Persado Connect](https://exchange.adobe.com/apps/ec/103745)
+      * [Pinterest 전환 추적](https://exchange.adobe.com/apps/ec/100523)
+      * [픽셀 로더](https://exchange.adobe.com/apps/ec/100152)
+      * [Qualtrics 웹 사이트 피드백](https://exchange.adobe.com/apps/ec/101569)
+      * [양자 지표](https://exchange.adobe.com/apps/ec/101535)
+      * [모멘텀 해결](https://exchange.adobe.com/apps/ec/108352)
+      * [Rokt](https://exchange.adobe.com/apps/ec/107591)
+      * [SDI 설문 조사](https://exchange.adobe.com/apps/ec/102991)
+      * [SDI 툴킷](https://exchange.adobe.com/apps/ec/101460)
+      * [SessionCam](https://exchange.adobe.com/apps/ec/100517)
+      * [SPA 보기 변경 이벤트](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.105867.html)
+      * [스토리지 스패너](https://exchange.adobe.com/apps/ec/102990)
+      * [루프 수평선별 태그](https://exchange.adobe.com/apps/ec/106092)
+      * [Tealium Collect](https://exchange.adobe.com/apps/ec/104217)
+      * [데이터 데이터 보강](https://exchange.adobe.com/apps/ec/104217)
+      * [TMMData Foundation 플랫폼](https://exchange.adobe.com/apps/ec/100148)
+      * [TrustArc 쿠키 동의 관리자](https://exchange.adobe.com/apps/ec/107037)
+      * [Vimeo 재생](https://exchange.adobe.com/apps/ec/108937)
+      * [웹 바이탈](https://exchange.adobe.com/apps/ec/106769)
+      * [XDM 작성기](https://exchange.adobe.com/apps/ec/106062)
+      * [Yahoo Dot](https://exchange.adobe.com/apps/ec/106062)
+      * [다음 전환 추적](https://exchange.adobe.com/apps/ec/103174)
+      * [[!DNL Youtube] 재생](https://exchange.adobe.com/apps/ec/103174)
       * [!DNL YouTube] 비디오 추적 {#youtube}
-         * [개요](./extensions/web/youtube/overview.md)
-         * [릴리스 정보](./extensions/web/youtube/release-notes.md)
+         * [개요](./extensions/client/youtube/overview.md)
+         * [릴리스 정보](./extensions/client/youtube/release-notes.md)
+   * 이벤트 전달 확장(서버측) {#server}
+      * [개요](./extensions/server/overview.md)
+      * Adobe Experience Platform Cloud 커넥터 {#cloud-connector}
+         * [개요](./extensions/server/cloud-connector/overview.md)
+      * [!DNL AWS] {#aws}
+         * [개요](./extensions/server/aws/overview.md)
+      * 코어 {#core}
+         * [개요](./extensions/server/core/overview.md)
+      * Google 광고 향상된 전환 {#google-ads-enhanced-conversions}
+         * [개요](./extensions/server/google-ads-enhanced-conversions/overview.md)
+      * [!DNL Mailchimp] Edge {#mailchimp}
+         * [개요](./extensions/server/mailchimp/overview.md)
+      * [!UICONTROL Microsoft Azure] {#azure}
+         * [개요](./extensions/server/azure/overview.md)
+      * [Pega 고객 결정 허브](https://exchange.adobe.com/apps/ec/107597)
+      * [스냅 전환 API](https://exchange.adobe.com/apps/ec/108550)
+      * [!DNL Splunk] {#splunk}
+         * [개요](./extensions/server/splunk/overview.md)
       * [!DNL Zendesk] 이벤트 API {#zendesk}
-         * [개요](./extensions/web/zendesk/overview.md)
-   * [타사 확장](./extensions/3rd-party-extensions.md)
+         * [개요](./extensions/server/zendesk/overview.md)
 * 확장 개발 {#extension-dev}
    * [개요](./extension-dev/overview.md)
    * [시작하기](./extension-dev/getting-started.md)

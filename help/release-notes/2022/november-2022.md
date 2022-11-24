@@ -1,7 +1,8 @@
 ---
 title: Adobe Experience Platform 릴리스 노트 - 2022년 11월
 description: Adobe Experience Platform에 대한 2022년 11월 릴리스 노트입니다.
-source-git-commit: 9100597c94c21beb9d967f67061e18a9421c6674
+exl-id: 1048cfae-6e7a-4d05-a004-c5c095a17fc4
+source-git-commit: ccfc46714069e8c29f1777dea5ba73e318c0a4a6
 workflow-type: tm+mt
 source-wordcount: '454'
 ht-degree: 5%
@@ -26,9 +27,9 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 
 | 기능 | 설명 |
 | --- | --- |
-| [!DNL AWS] 이벤트 전달을 위한 확장 | 이제 데이터를에 보낼 수 있습니다 [!DNL Amazon Web Services] ([!DNL AWS]) 사용 [이벤트 전달](../../tags/ui/event-forwarding/overview.md) 확장. 자세한 내용은 [[!DNL AWS] 확장 개요](../../tags/extensions/web/aws/overview.md) 추가 정보. |
-| [!DNL Google Ads Enhanced Conversions] 이벤트 전달을 위한 확장 | 이제 변환 데이터를에 보낼 수 있습니다 [!DNL Google Ads] 사용 [이벤트 전달](../../tags/ui/event-forwarding/overview.md) 확장. 자세한 내용은 [[!DNL Google Ads Enhanced Conversions] 확장 개요](../../tags/extensions/web/google-ads-enhanced-conversions/overview.md) 추가 정보. |
-| [!DNL Microsoft Azure] 이벤트 전달을 위한 확장 | 이제 데이터를에 보낼 수 있습니다 [!DNL Microsoft Azure] 사용 [이벤트 전달](../../tags/ui/event-forwarding/overview.md) 확장. 자세한 내용은 [[!DNL Microsoft Azure] 확장 개요](../../tags/extensions/web/azure/overview.md) 추가 정보. |
+| [!DNL AWS] 이벤트 전달을 위한 확장 | 이제 데이터를에 보낼 수 있습니다 [!DNL Amazon Web Services] ([!DNL AWS]) 사용 [이벤트 전달](../../tags/ui/event-forwarding/overview.md) 확장. 자세한 내용은 [[!DNL AWS] 확장 개요](../../tags/extensions/server/aws/overview.md) 추가 정보. |
+| [!DNL Google Ads Enhanced Conversions] 이벤트 전달을 위한 확장 | 이제 변환 데이터를에 보낼 수 있습니다 [!DNL Google Ads] 사용 [이벤트 전달](../../tags/ui/event-forwarding/overview.md) 확장. 자세한 내용은 [[!DNL Google Ads Enhanced Conversions] 확장 개요](../../tags/extensions/server/google-ads-enhanced-conversions/overview.md) 추가 정보. |
+| [!DNL Microsoft Azure] 이벤트 전달을 위한 확장 | 이제 데이터를에 보낼 수 있습니다 [!DNL Microsoft Azure] 사용 [이벤트 전달](../../tags/ui/event-forwarding/overview.md) 확장. 자세한 내용은 [[!DNL Microsoft Azure] 확장 개요](../../tags/extensions/server/azure/overview.md) 추가 정보. |
 
 플랫폼의 데이터 수집 기능에 대한 자세한 내용은 [데이터 수집 개요](../../collection/home.md).
 

@@ -3,7 +3,7 @@ keywords: Analytics 확장;analytics 확장;대상 분석
 title: Adobe Analytics 확장
 description: Adobe Analytics 확장은 Adobe Experience Platform의 분석 대상입니다. 확장 기능에 대한 자세한 내용은 Exchange Adobe의 확장 페이지를 참조하십시오.
 exl-id: 95b6e079-09a6-4262-bd01-11f155286aa9
-source-git-commit: 468b9309c5184684c0b25c2656a9eef37715af53
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '473'
 ht-degree: 9%
@@ -16,7 +16,7 @@ ht-degree: 9%
 
 Adobe Analytics는 고객 인텔리전스로 고객을 사람으로 이해하고 고객 인텔리전스로 비즈니스를 이끌어 나갈 수 있는 업계 선도적인 솔루션입니다.
 
-Adobe Analytics은 Adobe Experience Platform의 analytics 확장입니다. 확장 기능에 대한 자세한 내용은 [Adobe Analytics 확장 개요](/help/tags/extensions/web/analytics/overview.md) 를 참조하십시오.
+Adobe Analytics은 Adobe Experience Platform의 analytics 확장입니다. 확장 기능에 대한 자세한 내용은 [Adobe Analytics 확장 개요](/help/tags/extensions/client/analytics/overview.md) 를 참조하십시오.
 
 이 대상은 태그 확장입니다. Platform에서 태그 확장이 작동하는 방식에 대한 자세한 내용은 [태그 확장 개요](../launch-extensions/overview.md).
 

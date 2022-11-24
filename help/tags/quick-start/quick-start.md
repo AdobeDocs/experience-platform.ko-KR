@@ -2,7 +2,7 @@
 title: Quickstart 안내서
 description: Adobe Experience Platform에서 태그를 신속하게 설정하고 실행하는 방법을 배웁니다.
 exl-id: 490ee344-3b18-4189-9293-2378f86fb10d
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '1527'
 ht-degree: 43%
@@ -53,7 +53,7 @@ UI에 로그인하면 맨 먼저 속성을 만듭니다. 속성은 사이트에 
 
 확장은 Adobe 또는 Adobe 파트너가 빌드한 통합으로, 사용자가 자신의 사이트에 배포할 수 있는 태그에 대한 새롭고 무한한 옵션을 추가합니다. 태그를 운영 체제라고 생각하면 확장은 필요한 특정 작업을 수행하기 위해 설치하는 앱입니다.
 
-새 속성은 모두 [코어 확장](../extensions/web/core/overview.md)을 설치하면 제공됩니다. 모바일 속성은 추가 확장으로 제공됩니다. 코어 확장은 데이터 계층에 강력한 기본 데이터 요소 유형 세트를 제공하고 규칙에 이벤트 유형을 제공하기 위해 Adobe에서 빌드합니다. 수행하려는 대부분의 작업(ECID 가져오기, [!DNL Adobe Analytics] 비콘 보내기, [!DNL Target] 글로벌 mbox 로드 등)은 카탈로그에서 설치하는 확장에서 가져옵니다.
+새 속성은 모두 [코어 확장](../extensions/client/core/overview.md)을 설치하면 제공됩니다. 모바일 속성은 추가 확장으로 제공됩니다. 코어 확장은 데이터 계층에 강력한 기본 데이터 요소 유형 세트를 제공하고 규칙에 이벤트 유형을 제공하기 위해 Adobe에서 빌드합니다. 수행하려는 대부분의 작업(ECID 가져오기, [!DNL Adobe Analytics] 비콘 보내기, [!DNL Target] 글로벌 mbox 로드 등)은 카탈로그에서 설치하는 확장에서 가져옵니다.
 
 Platform에서 태그를 고유하게 만드는 것은 이러한 확장을 누구나 구축할 수 있다는 것입니다. 사이트에서 Facebook 리마케팅 픽셀을 삭제해야 합니까? Facebook에서 작성한 확장을 확인합니다. Twitter나 LinkedIn에 대해 동일하게 하시겠습니까? 그러한 확장을 사용합니다. 설문 조사를 실행해야 합니까? Question Pro 또는 Foresee를 참조하십시오. 을 지원하기 위해 최종 사용자의 개인 정보를 관리하고 동의를 받아야 합니까? [!DNL GDPR]? Evidon 및 Trust Arc를 살펴보십시오. 사이트에서 개별 사용자의 행동을 세부적으로 살펴보시겠습니까? Clicktale을 살펴보십시오. 자세한 내용은 [새 확장 추가](../ui/managing-resources/extensions/overview.md#add-a-new-extension).
 

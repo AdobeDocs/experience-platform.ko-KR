@@ -2,7 +2,7 @@
 title: 규칙
 description: Adobe Experience Platform에서 태그 확장이 작동하는 방식을 알아봅니다.
 exl-id: 2beca2c9-72b7-4ea0-a166-50a3b8edb9cd
-source-git-commit: 85413e4a8b604dd9111ca4d47ad6a1ec49d8f547
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '1973'
 ht-degree: 66%
@@ -41,7 +41,7 @@ Adobe Experience Platform의 태그는 규칙 기반 시스템을 따릅니다. 
 
 * **조건**: 이벤트가 규칙을 트리거하기 위해 true여야 하는 조건을 구성하여 이벤트 범위를 좁힙니다. 예외는 NOT 조건으로 정의됩니다. 여러 조건은 AND로 연결됩니다.
 
-사용할 수 있는 이벤트는 설치된 확장에 따라 다릅니다. 코어 확장의 이벤트에 대한 자세한 내용은 [코어 확장 이벤트 유형](../../extensions/web/core/overview.md#core-extension-event-types)을 참조하십시오.
+사용할 수 있는 이벤트는 설치된 확장에 따라 다릅니다. 코어 확장의 이벤트에 대한 자세한 내용은 [코어 확장 이벤트 유형](../../extensions/client/core/overview.md#core-extension-event-types)을 참조하십시오.
 
 ### 작업(then)
 

@@ -3,7 +3,7 @@ title: 이벤트 전달 개요
 description: Platform Edge Network를 사용하여 태그 구현을 변경하지 않고 작업을 실행할 수 있도록 Adobe Experience Platform의 이벤트 전달에 대해 알아봅니다.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: c7344d0ac5b65c6abae6a040304f27dc7cd77cbb
 workflow-type: tm+mt
 source-wordcount: '959'
 ht-degree: 8%
@@ -57,7 +57,7 @@ Adobe Experience Platform과 결합된 이벤트 전달 [웹 SDK](../../../edge/
 
 ### 확장 {#extensions}
 
-이벤트 전달에는 와 같은 호환되는 확장 카탈로그가 있습니다 [코어](../../extensions/web/core/event-forwarding.md) 확장 및 [Adobe 클라우드 커넥터](../../extensions/web/cloud-connector/overview.md) 확장. UI에서 을 선택하여 이벤트 전달 속성에 사용할 수 있는 확장을 볼 수 있습니다 **[!UICONTROL 확장]** 왼쪽 탐색에서 를 차례로 클릭하거나 **[!UICONTROL 카탈로그]**.
+이벤트 전달에는 와 같은 호환되는 확장 카탈로그가 있습니다 [코어](../../extensions/server/core/overview.md) 확장 및 [Adobe 클라우드 커넥터](../../extensions/server/cloud-connector/overview.md) 확장. UI에서 을 선택하여 이벤트 전달 속성에 사용할 수 있는 확장을 볼 수 있습니다 **[!UICONTROL 확장]** 왼쪽 탐색에서 를 차례로 클릭하거나 **[!UICONTROL 카탈로그]**.
 
 ![데이터 수집 UI의 이벤트 전달 확장](../../images/ui/event-forwarding/overview/extensions.png)
 

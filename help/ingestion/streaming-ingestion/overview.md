@@ -5,7 +5,7 @@ title: 스트리밍 수집 개요
 topic-legacy: overview
 description: Adobe Experience Platform을 위한 스트리밍 수집에서는 사용자에게 클라이언트 및 서버측 장치에서 실시간으로 Experience Platform으로 데이터를 전송하는 방법을 제공합니다.
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: 3ec4bfcb185459ec644ce1826e2a970cb6294538
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '348'
 ht-degree: 2%
@@ -58,4 +58,4 @@ Adobe Experience Platform을 사용하면 통합 및 일관되고 적절한 경�
 
 ## Adobe Experience Platform 확장
 
-Adobe Experience Platform 확장을 사용하여 새 스트리밍 연결을 만들 수 있습니다. 다음 [!DNL Experience Platform] 확장은 [!DNL Experience Data Model] (XDM) 을 참조하십시오 [!DNL Experience Platform]. 다음 방문 [Experience Platform 확장](../../tags/extensions/web/sdk/overview.md) 설명서 를 참조하십시오.
+Adobe Experience Platform 확장을 사용하여 새 스트리밍 연결을 만들 수 있습니다. 다음 [!DNL Experience Platform] 확장은 [!DNL Experience Data Model] (XDM) 을 참조하십시오 [!DNL Experience Platform]. 다음 방문 [Experience Platform 확장](../../tags/extensions/client/sdk/overview.md) 설명서 를 참조하십시오.
