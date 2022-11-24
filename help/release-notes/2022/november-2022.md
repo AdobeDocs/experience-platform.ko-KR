@@ -1,7 +1,7 @@
 ---
 title: Adobe Experience Platform 릴리스 노트 - 2022년 11월
 description: Adobe Experience Platform에 대한 2022년 11월 릴리스 노트입니다.
-source-git-commit: 3c78fc1cbfcd00f0fd5facfdf07bbc2757f492fa
+source-git-commit: 9100597c94c21beb9d967f67061e18a9421c6674
 workflow-type: tm+mt
 source-wordcount: '454'
 ht-degree: 5%
@@ -40,7 +40,7 @@ XDM은 Adobe Experience Platform으로 가져온 데이터에 대한 일반적�
 
 | 기능 | 설명 |
 | --- | --- |
-| 스키마에 직접 추가할 때 사용자 지정 클래스에 필드를 할당합니다 | When [스키마에 개별 필드 직접 추가](../../xdm/ui/resources/schemas.md#add-individual-fields)이전에는 필드를 필드 그룹에 상위 리소스로 할당할 수만 있었습니다. 이제 필드 그룹 외에도 다음을 수행할 수 있습니다 [사용자 지정 클래스에 필드 할당](../../xdm/ui/resources/schemas.md.md#add-to-class) 을 상위 리소스로 지정합니다. |
+| 스키마에 직접 추가할 때 사용자 지정 클래스에 필드를 할당합니다 | When [스키마에 개별 필드 직접 추가](../../xdm/ui/resources/schemas.md#add-individual-fields)이전에는 필드를 필드 그룹에 상위 리소스로 할당할 수만 있었습니다. 이제 필드 그룹 외에도 다음을 수행할 수 있습니다 [사용자 지정 클래스에 필드 할당](../../xdm/ui/resources/schemas.md#add-to-class) 을 상위 리소스로 지정합니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
