@@ -3,10 +3,10 @@ keywords: Experience Platform;홈;인기 항목;Analytics 소스 커넥터;분�
 title: 보고서 세트 데이터용 Adobe Analytics 소스 커넥터
 description: 이 문서에서는 Analytics에 대한 개요를 제공하며 Analytics 데이터의 사용 사례를 설명합니다.
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-source-git-commit: fd114a418668436efa17edb00f2849a10f2c8cd6
+source-git-commit: d94bbbd34b116f10098624d565c1ae285fc0461e
 workflow-type: tm+mt
-source-wordcount: '997'
-ht-degree: 6%
+source-wordcount: '1014'
+ht-degree: 7%
 
 ---
 
@@ -49,7 +49,9 @@ XDM에 대한 자세한 내용은 [XDM 시스템 개요](../../../xdm/home.md).
 | 새 데이터를에 [!DNL Real-time Customer Profile] (A4T **not** enabled) | &lt; 2분 |
 | 새 데이터를에 [!DNL Real-time Customer Profile] (A4T **is** enabled) | &lt; 15분 |
 | Data Lake의 새로운 데이터 | &lt; 90분 |
-| 데이터 채우기(데이터 13개월 또는 100억 개 이벤트 중 더 낮음) | &lt; 4주 |
+| 100억 개 미만의 이벤트 채우기 | &lt; 4주 |
+
+Analytics 채우기 작업은 기본적으로 13개월로 채워집니다. 위의 표에 언급된 100억 개의 이벤트 제한은 예상 지연에 대해 엄격히 적용됩니다.
 
 >[!NOTE]
 >
