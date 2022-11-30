@@ -1,21 +1,21 @@
 ---
-title: 데이터 위생 API를 사용하여 소비자 레코드 삭제
+title: 데이터 위생 API를 사용하여 레코드 삭제
 description: Adobe Experience Platform에서 고객의 저장된 개인 데이터를 프로그래밍 방식으로 수정하거나 삭제하는 방법을 알아봅니다.
 hide: true
 hidefromtoc: true
 exl-id: d80a4be3-e072-4bb4-a56d-b34a20f88c78
-source-git-commit: c2ff0d5806e57f230b937e8754d40031fb4b2305
+source-git-commit: da8b5d9fffdf8a176a4d70be5df5b3021cf0df7b
 workflow-type: tm+mt
-source-wordcount: '504'
+source-wordcount: '502'
 ht-degree: 1%
 
 ---
 
-# 데이터 위생 API를 사용하여 소비자 레코드 삭제
+# 데이터 위생 API를 사용하여 레코드 삭제
 
 >[!IMPORTANT]
 >
->이 종단점은 소비자 삭제에 대한 베타 기능을 나타냅니다. 최신 기능은 [`/workorder` 엔드포인트](./workorder.md) 을 가리키도록 업데이트하는 것이 좋습니다.
+>이 종단점은 레코드 삭제에 대한 베타 기능을 나타냅니다. 최신 기능은 [`/workorder` 엔드포인트](./workorder.md) 을 가리키도록 업데이트하는 것이 좋습니다.
 
 데이터 위생 API를 사용하면 Adobe Experience Platform에서 고객의 저장된 개인 데이터를 프로그래밍 방식으로 수정하거나 삭제할 수 있습니다.
 

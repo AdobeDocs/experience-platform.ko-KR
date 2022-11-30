@@ -1,9 +1,10 @@
 ---
 title: 할당량 API 끝점
 description: 데이터 위생 API의 /quota 끝점을 사용하면 각 작업 유형에 대한 조직의 월별 할당량 제한에 대해 데이터 위생사용을 모니터링할 수 있습니다.
-source-git-commit: 6453ec6c98d90566449edaa0804ada260ae12bf6
+exl-id: 91858a13-e5ce-4b36-a69c-9da9daf8cd66
+source-git-commit: 1c6a5df6473e572cae88a5980fe0db9dfcf9944e
 workflow-type: tm+mt
-source-wordcount: '352'
+source-wordcount: '350'
 ht-degree: 3%
 
 ---
@@ -18,7 +19,7 @@ ht-degree: 3%
 
 할당량은 다음과 같은 방법으로 각 데이터 위생 작업 유형에 대해 적용됩니다.
 
-* 소비자 삭제 및 필드 업데이트는 매달 특정 수의 요청으로 제한됩니다.
+* 레코드 삭제 및 업데이트는 매달 특정 수의 요청으로 제한됩니다.
 * 데이터 집합 만료는 만료가 실행될 시기에 관계없이 동시 활성 작업 수에 대한 제한이 있습니다.
 
 ## 시작하기
@@ -42,7 +43,7 @@ GET /quota?quotaType={QUOTA_TYPE}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{QUOTA_TYPE}` | 검색할 할당량 유형을 지정하는 선택적 쿼리 매개 변수입니다. 없는 경우 `quotaType` 매개 변수가 제공되면 모든 할당량 값이 API 응답으로 반환됩니다. 허용되는 유형 값은 다음과 같습니다.<ul><li>`expirationDatasetQuota`: 데이터 집합 만료</li><li>`deleteIdentityWorkOrderDatasetQuota`: 소비자 삭제</li><li>`fieldUpdateWorkOrderDatasetQuota`: 필드 업데이트</li></ul> |
+| `{QUOTA_TYPE}` | 검색할 할당량 유형을 지정하는 선택적 쿼리 매개 변수입니다. 없는 경우 `quotaType` 매개 변수가 제공되면 모든 할당량 값이 API 응답으로 반환됩니다. 허용되는 유형 값은 다음과 같습니다.<ul><li>`expirationDatasetQuota`: 데이터 집합 만료</li><li>`deleteIdentityWorkOrderDatasetQuota`: 레코드 삭제</li><li>`fieldUpdateWorkOrderDatasetQuota`: 레코드 업데이트</li></ul> |
 
 **요청**
 
@@ -70,7 +71,7 @@ curl -X GET \
     },
     {
       "name": "deleteIdentityWorkOrderQuota",
-      "description": "The number of Consumer Delete Work Order requests for the organization for this month.",
+      "description": "The number of Record Delete Work Order requests for the organization for this month.",
       "consumed": 390,
       "quota": 10000
     }
@@ -80,6 +81,6 @@ curl -X GET \
 
 | 속성 | 설명 |
 | --- | --- |
-| `quotas` | 각 데이터 위생 작업 유형에 대한 할당량 정보를 나열합니다. 각 할당량 객체에는 다음 속성이 포함됩니다.<ul><li>`name`: 데이터 위생 작업 유형:<ul><li>`expirationDatasetQuota`: 데이터 집합 만료</li><li>`deleteIdentityWorkOrderDatasetQuota`: 소비자 삭제</li></ul></li><li>`description`: 데이터 위생 작업 유형에 대한 설명입니다.</li><li>`consumed`: 현재 월별 기간에 실행된 이 유형의 작업 수입니다.</li><li>`quota`: 이 작업 형식에 대한 할당량 제한입니다. 소비자 삭제 및 필드 업데이트의 경우 월별 기간마다 실행할 수 있는 작업 수를 나타냅니다. 데이터 세트 만료의 경우 지정된 시간에 동시에 활성화할 수 있는 작업 수를 나타냅니다.</li></ul> |
+| `quotas` | 각 데이터 위생 작업 유형에 대한 할당량 정보를 나열합니다. 각 할당량 객체에는 다음 속성이 포함됩니다.<ul><li>`name`: 데이터 위생 작업 유형:<ul><li>`expirationDatasetQuota`: 데이터 집합 만료</li><li>`deleteIdentityWorkOrderDatasetQuota`: 레코드 삭제</li></ul></li><li>`description`: 데이터 위생 작업 유형에 대한 설명입니다.</li><li>`consumed`: 현재 월별 기간에 실행된 이 유형의 작업 수입니다.</li><li>`quota`: 이 작업 형식에 대한 할당량 제한입니다. 레코드 삭제 및 업데이트의 경우 월별 기간마다 실행할 수 있는 작업 수를 나타냅니다. 데이터 세트 만료의 경우 지정된 시간에 동시에 활성화할 수 있는 작업 수를 나타냅니다.</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
