@@ -2,9 +2,9 @@
 title: 태그 문제 해결 안내서
 description: Adobe Experience Platform에서 태그에 대해 자주 묻는 질문에 대한 답변을 얻을 수 있습니다.
 exl-id: c06b8e25-4d79-4a11-94da-94ac096b5e33
-source-git-commit: 6109e44ff4b20cadbd3a5016517e954c10c68931
+source-git-commit: b0cc02478273c0b6035488a5d21191ce5cc0e268
 workflow-type: tm+mt
-source-wordcount: '1044'
+source-wordcount: '1051'
 ht-degree: 27%
 
 ---
@@ -106,4 +106,4 @@ UI에 로그인할 때 새 속성을 만들 수 없다면, 계정이 속성 관�
 
 ## 다른 질문이 있을 경우 어떻게 합니까?
 
-다른 질문이 있는 경우 [Adobe Experience Platform 데이터 수집 커뮤니티 페이지](https://adobe.com/go/launchme) Experience League 시 또는 [커뮤니티 Slack 작업 공간](http://join.connectionsdevs.chat) 개발자 및 기술 구현 주제입니다.
+다른 질문이 있는 경우 [Adobe Experience Platform 데이터 수집 커뮤니티 페이지](https://adobe.com/go/launchme) Experience League 시 또는 [커뮤니티 Slack 작업 공간](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform) 개발자 및 기술 구현 주제입니다.
