@@ -4,9 +4,9 @@ title: 대상 대시보드 안내서
 description: Adobe Experience Platform은 조직의 활성 대상에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: fdfc2a2b0f1f5be0508741de0e70ad72fe07d79f
+source-git-commit: 66e8d3c594280d4b40cb2b6170544d4411220a6a
 workflow-type: tm+mt
-source-wordcount: '2828'
+source-wordcount: '3031'
 ht-degree: 0%
 
 ---
@@ -54,6 +54,16 @@ Platform UI 내에서 대상 대시보드로 이동하려면 다음을 선택합
 ## 표준 위젯 {#standard-widgets}
 
 Adobe은 대상과 관련된 다양한 지표를 시각화하고 데이터 분석에 사용할 수 있는 세그먼트의 완벽성을 평가하는 데 사용할 수 있는 여러 표준 위젯을 제공합니다. 또한 [!UICONTROL 위젯 라이브러리]. 사용자 지정 위젯을 만드는 방법에 대해 자세히 알아보려면 [위젯 라이브러리 개요](../customize/widget-library.md).
+
+### 전제 조건 {#prerequisites}
+
+표준 위젯에 대한 설명을 계속하기 전에 설명서 전체에서 사용되는 다음 주요 용어에 대한 정의를 숙지하십시오.
+
+* **세그먼트:** 세그먼트는 **규칙 세트** 여기에는 다수의 프로필을 대상으로 평가하는 속성 및 이벤트 데이터가 포함됩니다.
+* **Audience**: 대상은 다음과 같습니다 **프로필 집합** 세그먼트 정의의 기준을 충족합니다.
+* **매핑 / 매핑**: 데이터 매핑은 대상의 관련 대상 필드에 소스 데이터 필드를 매핑하는 프로세스입니다.
+* **ID**: ID는 쿠키 ID, 장치 ID 또는 이메일 ID와 같이 개별 고객을 고유하게 나타내는 식별자입니다.
+* **활성화**: 활성화 는 Oracle Eloqua, Google 또는 Salesforce Marketing Cloud과 같은 대상에 세그먼트 또는 프로필을 매핑하기 위해 사용자가 수행하는 작업입니다.
 
 사용 가능한 각 표준 위젯에 대해 자세히 알아보려면 다음 목록에서 위젯 이름을 선택하십시오.
 
@@ -139,6 +149,8 @@ Experience Platform에서 세그먼트 작업에 대한 자세한 내용은 [세
 
 ![대상 위젯별로 최근에 활성화된 세그먼트입니다.](../images/destinations/recently-activated-segments-by-destination.png)
 
+에 대한 사전 요구 사항 섹션을 참조하십시오. [사용된 용어 정의](#prerequisites) 참조하십시오.
+
 ### [!UICONTROL 대상 크기 트렌드] {#audience-size-trend}
 
 >[!CONTEXTUALHELP]
@@ -172,6 +184,8 @@ Experience Platform에서 세그먼트 작업에 대한 자세한 내용은 [세
 id 열은 위젯 ID 드롭다운에서 선택한 ID에 매핑할 수 있는 세그먼트 내의 소스 ID 수를 계산합니다.
 
 ![ID 위젯별로 매핑되지 않은 세그먼트.](../images/destinations/unmapped-segments-by-identity.png)
+
+에 대한 사전 요구 사항 섹션을 참조하십시오. [사용된 용어 정의](#prerequisites) 참조하십시오.
 
 ### [!UICONTROL ID별로 매핑된 세그먼트] {#mapped-segments-by-identity}
 
@@ -259,11 +273,13 @@ id 열은 위젯 ID 드롭다운에서 선택한 ID에 매핑할 수 있는 세�
 
 ### [!UICONTROL 모든 대상에서 활성화된 대상] {#activated-audiences-across-all-destinations}
 
-다음 [!UICONTROL 모든 대상에서 활성화된 대상] 위젯은 단일 지표에 있는 모든 대상에서 활성화된 총 대상 수를 제공합니다. 이 숫자는 최신 스냅샷까지 정확합니다.
+다음 [!UICONTROL 모든 대상에서 활성화된 대상] 위젯은 단일 지표에 있는 모든 대상에서 활성화된 총 대상 수를 제공합니다. 이 위젯은 세그먼트 수가 아니라 대상자 수를 표시합니다. 이 숫자는 최신 스냅샷까지 정확합니다.
 
 ![모든 대상 위젯에서 활성화된 대상.](../images/destinations/activated-audiences-across-all-destinations.png)
 
-선택 **[!UICONTROL 대상]** 대상으로 이동 [!UICONTROL 찾아보기] 탭. 이 페이지에서는 활성화된 모든 대상 및 관련 지표 목록을 제공합니다. 다음 문서를 참조하십시오. [에 대한 추가 정보 [!UICONTROL 찾아보기] 탭](../../destinations/ui/destinations-workspace.md#browse).
+선택 **[!UICONTROL 대상]** 대상으로 이동 [!UICONTROL 찾아보기] 탭. 이 페이지에서는 활성화된 모든 대상 및 관련 지표 목록을 제공합니다. 자세한 내용은 설명서 를 참조하십시오. [[!UICONTROL 찾아보기] 탭](../../destinations/ui/destinations-workspace.md#browse).
+
+에 대한 사전 요구 사항 섹션을 참조하십시오. [사용된 용어 정의](#prerequisites) 참조하십시오.
 
 ### [!UICONTROL 활성화된 대상] {#activated-audiences}
 
@@ -276,6 +292,8 @@ id 열은 위젯 ID 드롭다운에서 선택한 ID에 매핑할 수 있는 세�
 ![활성화 데이터 탭이 강조 표시된 대상 대시보드 세부 사항 페이지입니다.](../images/destinations/activation-data-tab.png)
 
 이 위젯은 한 눈에 활성화된 대상 수를 기반으로 대상 값을 이해하는 데 도움이 됩니다. 또한 보다 자세한 정보를 쉽게 액세스하여 추가 분석을 수행할 수 있습니다.
+
+에 대한 사전 요구 사항 섹션을 참조하십시오. [사용된 용어 정의](#prerequisites) 참조하십시오.
 
 ## 다음 단계
 
