@@ -5,7 +5,7 @@ title: Google Pub Sub Source Connector 개요
 topic-legacy: overview
 description: API 또는 사용자 인터페이스를 사용하여 Google PubSub를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: 7c78173d-2639-47cb-8935-77fb7841a121
-source-git-commit: da7b6fe8f9d274b8e5f27138a1baf8caf63a0c01
+source-git-commit: 28c07150958c6ac22bf2a23537d5792b8990b2d3
 workflow-type: tm+mt
 source-wordcount: '174'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 Adobe Experience Platform은 과 같은 클라우드 제공업체를 위한 기본 연결을 제공합니다 [!DNL AWS], [!DNL Google Cloud Platform], 및 [!DNL Azure]를 사용하면 이러한 시스템의 데이터를 다운스트림 서비스 및 대상에서 사용하기 위해 플랫폼으로 가져올 수 있습니다.
 
-클라우드 스토리지 소스는 다운로드, 형식 지정 또는 업로드 없이 데이터를 플랫폼으로 가져올 수 있습니다. 수집된 데이터는 XDM JSON, XDM Parquet 또는 구분된 형식으로 지정할 수 있습니다. 프로세스의 모든 단계는 소스 워크플로우에 통합됩니다. Platform에서 데이터를 가져올 수 있습니다. [!DNL Azure Event Hubs] 실시간으로
+클라우드 스토리지 소스는 다운로드, 형식 지정 또는 업로드 없이 데이터를 플랫폼으로 가져올 수 있습니다. 수집된 데이터는 XDM JSON, XDM Parquet 또는 구분된 형식으로 지정할 수 있습니다. 프로세스의 모든 단계는 소스 워크플로우에 통합됩니다. Platform에서 데이터를 가져올 수 있습니다. [!DNL Google PubSub] 실시간으로
 
 ## Connect [!DNL Google PubSub] 플랫폼
 
