@@ -1,59 +1,34 @@
 ---
 keywords: Experience Platform;홈;인기 항목;스트리밍 연결;스트리밍 연결 만들기;api 안내서;자습서;스트리밍 연결 만들기;스트리밍 수집;섭취;
-solution: Experience Platform
 title: API를 사용하여 HTTP API 스트리밍 연결 만들기
-topic-legacy: tutorial
-type: Tutorial
 description: 이 자습서는 Adobe Experience Platform 데이터 수집 서비스 API의 일부인 스트리밍 수집 API를 사용하는 데 도움이 됩니다.
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: d4889a302edbcdbe3f4a969a616c2fbc52f6c556
 workflow-type: tm+mt
-source-wordcount: '1567'
-ht-degree: 2%
+source-wordcount: '1415'
+ht-degree: 3%
 
 ---
 
 
-# 만들기 [!DNL HTTP API] api를 사용한 스트리밍 연결
+# 를 사용하여 HTTP API 스트리밍 연결을 만듭니다 [!DNL Flow Service] API
 
-Flow Service는 Adobe Experience Platform 내의 다양한 종류의 소스로부터 고객 데이터를 수집하고 중앙 집중화하는 데 사용됩니다. 이 서비스는 지원되는 모든 소스를 연결할 수 있는 사용자 인터페이스 및 RESTful API를 제공합니다.
+흐름 서비스는 Adobe Experience Platform 내의 다른 소스에서 고객 데이터를 수집하고 중앙 집중화하는 데 사용됩니다. 이 서비스는 지원되는 모든 소스를 연결할 수 있는 사용자 인터페이스 및 RESTful API를 제공합니다.
 
-이 자습서에서는 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) 흐름 서비스 API를 사용하여 스트리밍 연결을 만드는 단계를 안내합니다.
+이 자습서에서는 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) 를 사용하여 스트리밍 연결을 만드는 단계를 살펴보려면 [!DNL Flow Service] API.
 
 ## 시작하기
 
 이 안내서에서는 Adobe Experience Platform의 다음 구성 요소를 이해하고 있어야 합니다.
 
-- [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md): 표준화된 프레임워크 [!DNL Platform] 경험 데이터를 구성합니다.
-- [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): 여러 소스에서 집계된 데이터를 기반으로 통합된 소비자 프로필을 실시간으로 제공합니다.
+* [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md): 표준화된 프레임워크 [!DNL Platform] 경험 데이터를 구성합니다.
+* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): 여러 소스에서 집계된 데이터를 기반으로 통합된 소비자 프로필을 실시간으로 제공합니다.
 
 또한 스트리밍 연결을 만들려면 대상 XDM 스키마와 데이터 세트가 있어야 합니다. 이러한 단원을 만드는 방법을 알아보려면 [스트리밍 레코드 데이터](../../../../../ingestion/tutorials/streaming-record-data.md) 또는 [스트리밍 시계열 데이터](../../../../../ingestion/tutorials/streaming-time-series-data.md).
 
-다음 섹션에서는 스트리밍 수집 API를 성공적으로 호출하기 위해 알고 있어야 하는 추가 정보를 제공합니다.
+### 플랫폼 API 사용
 
-### 샘플 API 호출 읽기
-
-이 안내서에서는 요청의 형식을 지정하는 방법을 보여주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 올바른 형식의 요청 페이로드가 포함됩니다. API 응답으로 반환되는 샘플 JSON도 제공됩니다. 샘플 API 호출에 대한 설명서에 사용된 규칙에 대한 자세한 내용은 [예제 API 호출을 읽는 방법](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) 에서 [!DNL Experience Platform] 문제 해결 가이드.
-
-### 필수 헤더에 대한 값을 수집합니다
-
-을 호출하려면 [!DNL Platform] API를 먼저 완료해야 합니다. [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en). 인증 자습서를 완료하면 모든 히트에 필요한 각 헤더에 대한 값이 제공됩니다 [!DNL Experience Platform] 아래에 표시된 대로 API 호출:
-
-- 권한 부여: 베어러 `{ACCESS_TOKEN}`
-- x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{ORG_ID}`
-
-의 모든 리소스 [!DNL Experience Platform]에 속했던 것 포함 [!DNL Flow Service]은 특정 가상 샌드박스로 구분됩니다. 에 대한 모든 요청 [!DNL Platform] API에는 작업이 발생할 샌드박스의 이름을 지정하는 헤더가 필요합니다.
-
-- x-sandbox-name: `{SANDBOX_NAME}`
-
->[!NOTE]
->
->샌드박스에 대한 자세한 내용은 [!DNL Platform]를 참조하고 [샌드박스 개요 설명서](../../../../../sandboxes/home.md).
-
-페이로드(POST, PUT, PATCH)이 포함된 모든 요청에는 추가 헤더가 필요합니다.
-
-- 컨텐츠 유형: application/json
+Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용은 [플랫폼 API 시작](../../../../../landing/api-guide.md).
 
 ## 기본 연결 만들기
 
@@ -63,6 +38,8 @@ Flow Service는 Adobe Experience Platform 내의 다양한 종류의 소스로�
 
 인증되지 않은 연결은 데이터를 플랫폼으로 스트리밍할 때 만들 수 있는 표준 스트리밍 연결입니다.
 
+인증되지 않은 기본 연결을 만들려면 `/connections` 끝점입니다. 이 ID는 `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`.
+
 **API 형식**
 
 ```http
@@ -71,7 +48,11 @@ POST /flowservice/connections
 
 **요청**
 
-스트리밍 연결을 만들려면 POST 요청의 일부로 공급자 ID 및 연결 사양 ID를 제공해야 합니다. 공급자 ID `521eee4d-8cbe-4906-bb48-fb6bd4450033` 연결 사양 ID는 `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`.
+다음 요청은 HTTP API에 대한 기본 연결을 만듭니다.
+
+>[!BEGINTABS]
+
+>[!TAB XDM]
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
@@ -81,29 +62,55 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '{
-     "name": "Sample streaming connection",
-     "description": "Sample description",
-     "connectionSpec": {
-         "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
-         "version": "1.0"
-     },
-     "auth": {
-         "specName": "Streaming Connection",
-         "params": {
-             "sourceId": "Sample connection",
-             "dataType": "xdm",
-             "name": "Sample connection"
-         }
-     }
- }'
+    "name": "ACME Streaming Connection XDM Data",
+    "description": "ACME streaming connection for customer data",
+    "connectionSpec": {
+        "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
+        "version": "1.0"
+    },
+    "auth": {
+      "specName": "Streaming Connection",
+      "params": {
+        "dataType": "xdm"
+      }
+    }
+  }'
 ```
 
+>[!TAB 원시 데이터]
+
+```shell
+curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '{
+    "name": "ACME Streaming Connection Raw Data",
+    "description": "ACME streaming connection for customer data",
+    "connectionSpec": {
+        "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
+        "version": "1.0"
+    },
+    "auth": {
+      "specName": "Streaming Connection",
+      "params": {
+        "dataType": "raw"
+      }
+    }
+  }'
+```
+
+>[!ENDTABS]
+
 | 속성 | 설명 |
-| -------- | ----------- |
-| `auth.params.sourceId` | 만들 스트리밍 연결의 ID입니다. |
-| `auth.params.dataType` | 스트리밍 연결에 대한 데이터 유형입니다. 이 값은 `xdm`. |
+| --- | --- |
+| `name` | 기본 연결의 이름입니다. 기본 연결에 대한 정보를 조회하는 데 사용할 수 있으므로 이름이 설명적인지 확인합니다. |
+| `description` | (선택 사항) 기본 연결에 대한 자세한 정보를 제공하기 위해 포함할 수 있는 속성입니다. |
+| `connectionSpec.id` | HTTP API에 해당하는 연결 사양 ID입니다. 이 ID는 `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`. |
+| `auth.params.dataType` | 스트리밍 연결에 대한 데이터 유형입니다. 지원되는 값은 다음과 같습니다. `xdm` 및 `raw`. |
 | `auth.params.name` | 만들 스트리밍 연결의 이름입니다. |
-| `connectionSpec.id` | 연결 사양 `id` 스트리밍 연결 |
 
 **응답**
 
@@ -111,19 +118,22 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 
 ```json
 {
-    "id": "77a05521-91d6-451c-a055-2191d6851c34",
-    "etag": "\"a500e689-0000-0200-0000-5e31df730000\""
+  "id": "a59d368a-1152-4673-a46e-bd52e8cdb9a9",
+  "etag": "\"f50185ed-0000-0200-0000-637e8fad0000\""
 }
 ```
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `id` | 다음 `id` 새로 만든 연결의 경우입니다. 여기서 이것을 라고 합니다 `{CONNECTION_ID}`. |
-| `etag` | 연결의 개정을 지정하는 연결에 지정된 식별자입니다. |
+| `id` | 다음 `id` 새로 만든 기본 연결 |
+| `etag` | 기본 연결의 버전을 지정하여 연결에 지정된 식별자입니다. |
 
 ### 인증된 연결
 
 인증된 연결은 신뢰할 수 있는 원본과 신뢰할 수 없는 원본에서 들어오는 레코드를 구분해야 할 때 사용해야 합니다. PII(개인 식별 정보)로 정보를 전송하려는 사용자는 플랫폼에 정보를 스트리밍할 때 인증된 연결을 만들어야 합니다.
+
+인증된 기본 연결을 만들려면 소스 ID와 POST 요청을 수행할 때 인증이 필요한지 여부를 지정해야 합니다 `/connections` 엔드포인트.
+
 
 **API 형식**
 
@@ -133,7 +143,11 @@ POST /flowservice/connections
 
 **요청**
 
-스트리밍 연결을 만들려면 POST 요청의 일부로 공급자 ID 및 연결 사양 ID를 제공해야 합니다. 공급자 ID `521eee4d-8cbe-4906-bb48-fb6bd4450033` 연결 사양 ID는 `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`.
+다음 요청은 HTTP API에 대한 인증된 기본 연결을 만듭니다.
+
+>[!BEGINTABS]
+
+>[!TAB XDM]
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
@@ -143,8 +157,8 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '{
-     "name": "Sample streaming connection",
-     "description": "Sample description",
+     "name": "ACME Streaming Connection XDM Data Authenticated",
+     "description": "ACME streaming connection for customer data",
      "connectionSpec": {
          "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
          "version": "1.0"
@@ -152,7 +166,7 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
      "auth": {
          "specName": "Streaming Connection",
          "params": {
-             "sourceId": "Sample connection",
+             "sourceId": "{SOURCE_ID}",
              "dataType": "xdm",
              "name": "Sample connection",
              "authenticationRequired": true
@@ -161,14 +175,40 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
  }
 ```
 
+>[!TAB 원시 데이터]
+
+```shell
+curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '{
+     "name": "ACME Streaming Connection Raw Data Authenticated",
+     "description": "ACME streaming connection for customer data",
+     "connectionSpec": {
+         "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
+         "version": "1.0"
+     },
+     "auth": {
+         "specName": "Streaming Connection",
+         "params": {
+             "sourceId": "Sample connection",
+             "dataType": "raw",
+             "name": "Sample connection",
+             "authenticationRequired": true
+         }
+     }
+ }
+```
+
+>[!ENDTABS]
 
 | 속성 | 설명 |
 | -------- | ----------- |
 | `auth.params.sourceId` | 만들 스트리밍 연결의 ID입니다. |
-| `auth.params.dataType` | 스트리밍 연결에 대한 데이터 유형입니다. 이 값은 `xdm`. |
-| `auth.params.name` | 만들 스트리밍 연결의 이름입니다. |
 | `auth.params.authenticationRequired` | 생성된 스트리밍 연결을 지정하는 매개 변수입니다 |
-| `connectionSpec.id` | 연결 사양 `id` 스트리밍 연결 |
 
 **응답**
 
@@ -176,15 +216,10 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 
 ```json
 {
-    "id": "77a05521-91d6-451c-a055-2191d6851c34",
-    "etag": "\"a500e689-0000-0200-0000-5e31df730000\""
+  "id": "a59d368a-1152-4673-a46e-bd52e8cdb9a9",
+  "etag": "\"f50185ed-0000-0200-0000-637e8fad0000\""
 }
 ```
-
-| 속성 | 설명 |
-| -------- | ----------- |
-| `id` | 다음 `id` 새로 만든 연결의 경우입니다. 여기서 이것을 라고 합니다 `{CONNECTION_ID}`. |
-| `etag` | 연결의 개정을 지정하는 연결에 지정된 식별자입니다. |
 
 ## 스트리밍 끝점 URL 가져오기
 
@@ -193,17 +228,17 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 **API 형식**
 
 ```http
-GET /flowservice/connections/{CONNECTION_ID}
+GET /flowservice/connections/{BASE_CONNECTION_ID}
 ```
 
 | 매개 변수 | 설명 |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | 다음 `id` 이전에 만든 연결의 값입니다. |
+| `{BASE_CONNECTION_ID}` | 다음 `id` 이전에 만든 연결의 값입니다. |
 
 **요청**
 
 ```shell
-curl -X GET https://platform.adobe.io/data/foundation/flowservice/connections/{CONNECTION_ID} \
+curl -X GET https://platform.adobe.io/data/foundation/flowservice/connections/{BASE_CONNECTION_ID} \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
@@ -216,42 +251,46 @@ curl -X GET https://platform.adobe.io/data/foundation/flowservice/connections/{C
 
 ```json
 {
-    "items": [
-        {
-            "createdAt": 1583971856947,
-            "updatedAt": 1583971856947,
-            "createdBy": "{API_KEY}",
-            "updatedBy": "{API_KEY}",
-            "createdClient": "{USER_ID}",
-            "updatedClient": "{USER_ID}",
-            "id": "77a05521-91d6-451c-a055-2191d6851c34",
-            "name": "Another new sample connection (Experience Event)",
-            "description": "Sample description",
-            "connectionSpec": {
-                "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
-                "version": "1.0"
-            },
-            "state": "enabled",
-            "auth": {
-                "specName": "Streaming Connection",
-                "params": {
-                    "sourceId": "Sample connection (ExperienceEvent)",
-                    "inletUrl": "https://dcs.adobedc.net/collection/a868e1ce678a911ef1482b083329af3cafa4bafdc781285f25911eaae9e00eb2",
-                    "inletId": "a868e1ce678a911ef1482b083329af3cafa4bafdc781285f25911eaae9e00eb2",
-                    "dataType": "xdm",
-                    "name": "Sample connection (ExperienceEvent)"
-                }
-            },
-            "version": "\"56008aee-0000-0200-0000-5e697e150000\"",
-            "etag": "\"56008aee-0000-0200-0000-5e697e150000\""
+  "items": [
+    {
+      "id": "a59d368a-1152-4673-a46e-bd52e8cdb9a9",
+      "createdAt": 1669238699119,
+      "updatedAt": 1669238699119,
+      "createdBy": "acme@AdobeID",
+      "updatedBy": "acme@AdobeID",
+      "createdClient": "{CREATED_CLIENT}",
+      "updatedClient": "{UPDATEDD_CLIENT}",
+      "sandboxId": "{SANDBOX_ID}",
+      "sandboxName": "{SANDBOX_NAME}",
+      "imsOrgId": "{ORG_ID}}",
+      "name": "ACME Streaming Connection XDM Data",
+      "description": "ACME streaming connection for customer data",
+      "connectionSpec": {
+        "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
+        "version": "1.0"
+      },
+      "state": "enabled",
+      "auth": {
+        "specName": "Streaming Connection",
+        "params": {
+          "sourceId": "ACME Streaming Connection XDM Data",
+          "inletUrl": "https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec",
+          "authenticationRequired": false,
+          "inletId": "667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec",
+          "dataType": "xdm",
+          "name": "ACME Streaming Connection XDM Data"
         }
-    ]
+      },
+      "version": "\"f50185ed-0000-0200-0000-637e8fad0000\"",
+      "etag": "\"f50185ed-0000-0200-0000-637e8fad0000\""
+    }
+  ]
 }
 ```
 
 ## 소스 연결 만들기 {#source}
 
-기본 연결을 만든 후 소스 연결을 만들어야 합니다. 소스 연결을 만들 때 `id` 생성된 기본 연결의 값입니다.
+소스 연결을 만들려면 `/sourceConnections` 기본 연결 ID를 제공하는 동안 끝점입니다.
 
 **API 형식**
 
@@ -270,14 +309,14 @@ curl -X POST \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
-    "name": "Sample source connection",
-    "description": "Sample source connection description",
-    "baseConnectionId": "{BASE_CONNECTION_ID}",
-    "connectionSpec": {
-        "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
-        "version": "1.0"
-    }
-}'
+      "name": "ACME Streaming Source Connection for Customer Data",
+      "description": "A streaming source connection for ACME XDM Customer Data",
+      "baseConnectionId": "a59d368a-1152-4673-a46e-bd52e8cdb9a9",
+      "connectionSpec": {
+          "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
+          "version": "1.0"
+      }
+    }'
 ```
 
 **응답**
@@ -286,8 +325,8 @@ curl -X POST \
 
 ```json
 {
-    "id": "63070871-ec3f-4cb5-af47-cf7abb25e8bb",
-    "etag": "\"28000b90-0000-0200-0000-6091b0150000\""
+  "id": "34ece231-294d-416c-ad2a-5a5dfb2bc69f",
+  "etag": "\"d505125b-0000-0200-0000-637eb7790000\""
 }
 ```
 
@@ -307,9 +346,7 @@ Platform에서 소스 데이터를 사용하려면 필요에 따라 소스 데�
 
 ## 대상 연결 만들기 {#target}
 
-대상 연결은 수집된 데이터가 들어오는 대상에 대한 연결을 나타냅니다. 대상 연결을 만들려면 데이터 레이크와 연결된 고정 연결 사양 ID를 제공해야 합니다. 이 연결 사양 ID는 다음과 같습니다. `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
-
-이제 대상 스키마에서 대상 데이터 세트와 데이터 레이크에 대한 연결 사양 ID의 고유 식별자가 있습니다. 이러한 식별자를 사용하여 [!DNL Flow Service] 인바운드 소스 데이터를 포함할 데이터 세트를 지정하는 API입니다.
+대상 연결은 수집된 데이터가 들어오는 대상에 대한 연결을 나타냅니다. Target 연결을 만들려면 다음 POST을 요청합니다. `/targetConnections` target 데이터 세트 및 target XDM 스키마에 대한 ID를 제공하는 동안. 이 단계에서는 데이터 레이크 연결 사양 ID도 제공해야 합니다. 이 ID는 `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
 **API 형식**
 
@@ -328,19 +365,22 @@ curl -X POST \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
-    "name": "Sample target connection",
-    "description": "Sample target connection description",
-    "connectionSpec": {
-        "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
-        "version": "1.0"
-    },
-    "data": {
-        "format": "parquet_xdm"
-    },
-    "params": {
-        "dataSetId": "{DATASET_ID}"
-    }
-}'
+      "name": "ACME Streaming Target Connection",
+      "description": "ACME Streaming Target Connection",
+      "data": {
+          "schema": {
+              "id": "https://ns.adobe.com/{TENANT}/schemas/7f682c29f887512a897791e7161b90a1ae7ed3dd07a177b1",
+              "version": "application/vnd.adobe.xed-full+json;version=1.0"
+          }
+      },
+      "params": {
+          "dataSetId": "637eb7fadc8a211b6312b65b"
+      },
+          "connectionSpec": {
+          "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
+          "version": "1.0"
+      }
+  }'
 ```
 
 **응답**
@@ -349,8 +389,8 @@ curl -X POST \
 
 ```json
 {
-    "id": "98a2a72e-a80f-49ae-aaa3-4783cc9404c2",
-    "etag": "\"0500b73f-0000-0200-0000-6091b0b90000\""
+  "id": "07f2f6ff-1da5-4704-916a-c615b873cba9",
+  "etag": "\"340680f7-0000-0200-0000-637eb8730000\""
 }
 ```
 
@@ -370,31 +410,31 @@ POST /mappingSets
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/mappingSets' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "version": 0,
-        "xdmSchema": "_{TENANT_ID}.schemas.e45dd983026ce0daec5185cfddd48cbc0509015d880d6186",
-        "xdmVersion": "1.0",
-        "mappings": [
-            {
-                "destinationXdmPath": "person.name.firstName",
-                "sourceAttribute": "firstName",
-                "identity": false,
-                "version": 0
-            },
-            {
-                "destinationXdmPath": "person.name.lastName",
-                "sourceAttribute": "lastName",
-                "identity": false,
-                "version": 0
-            }
-        ]
-    }'
+  'https://platform.adobe.io/data/foundation/mappingSets' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "version": 0,
+      "xdmSchema": "https://ns.adobe.com/{TENANT}/schemas/7f682c29f887512a897791e7161b90a1ae7ed3dd07a177b1",
+      "xdmVersion": "1.0",
+      "mappings": [
+          {
+              "destinationXdmPath": "person.name.firstName",
+              "sourceAttribute": "firstName",
+              "identity": false,
+              "version": 0
+          },
+          {
+              "destinationXdmPath": "person.name.lastName",
+              "sourceAttribute": "lastName",
+              "identity": false,
+              "version": 0
+          }
+      ]
+  }'
 ```
 
 | 속성 | 설명 |
@@ -407,14 +447,17 @@ curl -X POST \
 
 ```json
 {
-    "id": "380b032b445a46008e77585e046efe5e",
-    "version": 0,
-    "createdDate": 1604960750613,
-    "modifiedDate": 1604960750613,
-    "createdBy": "{CREATED_BY}",
-    "modifiedBy": "{MODIFIED_BY}"
+  "id": "79a623960d3f4969835c9e00dc90c8df",
+  "version": 0,
+  "createdDate": 1669249214031,
+  "modifiedDate": 1669249214031,
+  "createdBy": "acme@AdobeID",
+  "modifiedBy": "acme@AdobeID"
 }
 ```
+
+| 속성 | 설명 |
+| --- | --- |
 
 ## 데이터 흐름 만들기
 
@@ -428,6 +471,10 @@ POST /flows
 
 **요청**
 
+>[!BEGINTABS]
+
+>[!TAB 변형 없이]
+
 ```shell
 curl -X POST \
   'https://platform.adobe.io/data/foundation/flowservice/flows' \
@@ -437,33 +484,63 @@ curl -X POST \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
-        "name": "HTTP API streaming dataflow",
-        "description": "HTTP API streaming dataflow",
-        "flowSpec": {
-            "id": "c1a19761-d2c7-4702-b9fa-fe91f0613e81",
-            "version": "1.0"
-        },
-        "sourceConnectionIds": [
-            "63070871-ec3f-4cb5-af47-cf7abb25e8bb"
-        ],
-        "targetConnectionIds": [
-            "98a2a72e-a80f-49ae-aaa3-4783cc9404c2"
-        ],
-        "transformations": [
-            {
-            "name": "Mapping",
-            "params": {
-                "mappingId": "380b032b445a46008e77585e046efe5e",
-                "mappingVersion": 0
-            }
-            }
-        ]
+      "name": "ACME Streaming Dataflow",
+      "description": "ACME streaming dataflow for customer data",
+      "flowSpec": {
+        "id": "d8a6f005-7eaf-4153-983e-e8574508b877",
+        "version": "1.0"
+      },
+      "sourceConnectionIds": [
+        "34ece231-294d-416c-ad2a-5a5dfb2bc69f"
+      ],
+      "targetConnectionIds": [
+        "07f2f6ff-1da5-4704-916a-c615b873cba9"
+      ]
     }'
 ```
 
+>[!TAB 변형 사용]
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/flows' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+      "name": "<name>",
+      "description": "<description>",
+      "flowSpec": {
+        "id": "c1a19761-d2c7-4702-b9fa-fe91f0613e81",
+        "version": "1.0"
+      },
+      "sourceConnectionIds": [
+        "34ece231-294d-416c-ad2a-5a5dfb2bc69f"
+      ],
+      "targetConnectionIds": [
+        "07f2f6ff-1da5-4704-916a-c615b873cba9"
+      ],
+      "transformations": [
+        {
+          "name": "Mapping",
+          "params": {
+            "mappingId": "79a623960d3f4969835c9e00dc90c8df",
+            "mappingVersion": 0
+          }
+        }
+      ]
+    }'
+```
+
+>[!ENDTABS]
+
 | 속성 | 설명 |
 | --- | --- |
-| `flowSpec.id` | 흐름 사양 ID [!DNL HTTP API]. 이 ID는 다음과 같습니다. `c1a19761-d2c7-4702-b9fa-fe91f0613e81`. |
+| `name` | 데이터 흐름의 이름입니다. 데이터 흐름에서 정보를 조회하는 데 사용할 수 있으므로 데이터 흐름의 이름이 설명적인지 확인합니다. |
+| `description` | (선택 사항) 데이터 집합에 대한 자세한 정보를 제공하기 위해 포함할 수 있는 속성입니다. |
+| `flowSpec.id` | 흐름 사양 ID [!DNL HTTP API]. 변형을 사용하여 데이터 흐름을 만들려면  `c1a19761-d2c7-4702-b9fa-fe91f0613e81`. 변형 없이 데이터 흐름을 만들려면 `d8a6f005-7eaf-4153-983e-e8574508b877`. |
 | `sourceConnectionIds` | 다음 [소스 연결 ID](#source) 이전 단계에서 검색됨. |
 | `targetConnectionIds` | 다음 [target 연결 ID](#target) 이전 단계에서 검색됨. |
 | `transformations.params.mappingId` | 다음 [매핑 ID](#mapping) 이전 단계에서 검색됨. |
@@ -474,10 +551,113 @@ curl -X POST \
 
 ```json
 {
-    "id": "ab03bde0-86f2-45c7-b6a5-ad8374f7db1f",
-    "etag": "\"1200c123-0000-0200-0000-6091b1730000\""
+  "id": "f2ae0194-8bd8-4a40-a4d9-f07bdc3e6ce2",
+  "etag": "\"dc0459ae-0000-0200-0000-637ebaec0000\""
 }
 ```
+
+
+## Platform에 수집할 데이터 게시 {#ingest-data}
+
+이제 플로우를 만들었으므로 이전에 만든 스트리밍 엔드포인트로 JSON 메시지를 보낼 수 있습니다.
+
+**API 형식**
+
+```http
+POST /collection/{INLET_URL}
+```
+
+| 매개 변수 | 설명 |
+| --------- | ----------- |
+| `{INLET_URL}` | 스트리밍 끝점 URL입니다. 에 GET 요청을 작성하여 이 URL을 검색할 수 있습니다 `/connections` 기본 연결 ID를 제공하는 동안 끝점입니다. |
+
+**요청**
+
+>[!BEGINTABS]
+
+>[!TAB XDM]
+
+```shell
+curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec \
+  -H 'Content-Type: application/json' \
+  -H 'x-adobe-flow-id: f2ae0194-8bd8-4a40-a4d9-f07bdc3e6ce2' \
+  -d '{
+        "header": {
+          "schemaRef": {
+            "id": "https://ns.adobe.com/{TENANT}/schemas/7f682c29f887512a897791e7161b90a1ae7ed3dd07a177b1",
+            "contentType": "application/vnd.adobe.xed-full-notext+json; version=1.0"
+          },
+          "flowId": "f2ae0194-8bd8-4a40-a4d9-f07bdc3e6ce2",
+          "datasetId": "604a18a3bae67d18db6d258c"
+        },
+        "body": {
+          "xdmMeta": {
+            "schemaRef": {
+              "id": "https://ns.adobe.com/{TENANT}/schemas/7f682c29f887512a897791e7161b90a1ae7ed3dd07a177b1",
+              "contentType": "application/vnd.adobe.xed-full-notext+json; version=1.0"
+            }
+          },
+          "xdmEntity": {
+            "_id": "http-source-connector-acme-01",
+            "person": {
+              "name": {
+                "firstName": "suman",
+                "lastName": "nolan"
+              }
+            },
+            "workEmail": {
+              "primary": true,
+              "address": "suman@acme.com",
+              "type": "work",
+              "status": "active"
+            }
+          }
+        }
+      }'
+```
+
+>[!TAB 원시 데이터]
+
+```shell
+curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec \
+  -H 'Content-Type: application/json' \
+  -H 'x-adobe-flow-id: 1f086c23-2ea8-4d06-886c-232ea8bd061d' \
+  -d '{
+      "name": "Johnson Smith",
+      "location": {
+          "city": "Seattle",
+          "country": "United State of America",
+          "address": "3692 Main Street"
+      },
+      "gender": "Male",
+      "birthday": {
+          "year": 1984,
+          "month": 6,
+          "day": 9
+      }
+  }'
+```
+
+>[!ENDTABS]
+
+**응답**
+
+성공적인 응답은 새로 수집된 정보의 세부 정보와 함께 HTTP 상태 200을 반환합니다.
+
+```json
+{
+    "inletId": "{BASE_CONNECTION_ID}",
+    "xactionId": "1584479347507:2153:240",
+    "receivedTimeMs": 1584479347507
+}
+```
+
+| 속성 | 설명 |
+| -------- | ----------- |
+| `{BASE_CONNECTION_ID}` | 이전에 만든 스트리밍 연결의 ID입니다. |
+| `xactionId` | 방금 보낸 레코드에 대해 서버 측에서 생성된 고유 식별자입니다. 이 ID는 Adobe이 다양한 시스템과 디버깅을 통해 이 레코드의 라이프사이클을 추적하는 데 도움이 됩니다. |
+| `receivedTimeMs` | 요청을 받은 시간을 보여주는 타임스탬프(밀리초 단위)입니다. |
+
 
 ## 다음 단계
 
@@ -507,59 +687,3 @@ curl -X POST \
     }
 }
 ```
-
-### Platform에 수집할 원시 데이터 게시 {#ingest-data}
-
-이제 플로우를 만들었으므로 이전에 만든 스트리밍 엔드포인트로 JSON 메시지를 보낼 수 있습니다.
-
-**API 형식**
-
-```http
-POST /collection/{CONNECTION_ID}
-```
-
-| 매개 변수 | 설명 |
-| --------- | ----------- |
-| `{CONNECTION_ID}` | 다음 `id` 새로 만든 스트리밍 연결의 값입니다. |
-
-**요청**
-
-이 예제 요청은 이전에 만든 스트리밍 종단점에 원시 데이터를 수집합니다.
-
-```shell
-curl -X POST https://dcs.adobedc.net/collection/2301a1f761f6d7bf62c5312c535e1076bbc7f14d728e63cdfd37ecbb4344425b \
-  -H 'Content-Type: application/json' \
-  -H 'x-adobe-flow-id: 1f086c23-2ea8-4d06-886c-232ea8bd061d' \
-  -d '{
-      "name": "Johnson Smith",
-      "location": {
-          "city": "Seattle",
-          "country": "United State of America",
-          "address": "3692 Main Street"
-      },
-      "gender": "Male",
-      "birthday": {
-          "year": 1984,
-          "month": 6,
-          "day": 9
-      }
-  }'
-```
-
-**응답**
-
-성공적인 응답은 새로 수집된 정보의 세부 정보와 함께 HTTP 상태 200을 반환합니다.
-
-```json
-{
-    "inletId": "{CONNECTION_ID}",
-    "xactionId": "1584479347507:2153:240",
-    "receivedTimeMs": 1584479347507
-}
-```
-
-| 속성 | 설명 |
-| -------- | ----------- |
-| `{CONNECTION_ID}` | 이전에 만든 스트리밍 연결의 ID입니다. |
-| `xactionId` | 방금 보낸 레코드에 대해 서버 측에서 생성된 고유 식별자입니다. 이 ID는 Adobe이 다양한 시스템과 디버깅을 통해 이 레코드의 라이프사이클을 추적하는 데 도움이 됩니다. |
-| `receivedTimeMs` | 요청을 받은 시간을 보여주는 타임스탬프(밀리초 단위)입니다. |
