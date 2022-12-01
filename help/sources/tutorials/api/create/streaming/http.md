@@ -3,10 +3,10 @@ keywords: Experience Platform;홈;인기 항목;스트리밍 연결;스트리밍
 title: Flow Service API를 사용하여 HTTP API 스트리밍 연결 만들기
 description: 이 자습서에서는 Flow Service API를 사용하여 원시 및 XDM 데이터에 대한 HTTP API 소스를 사용하여 스트리밍 연결을 만드는 방법을 제공합니다
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: 26c967418e983322cc39aa799a681d258638d769
+source-git-commit: 2b3f8b7b0a19214a95a2ad76c9fecd70ffd91743
 workflow-type: tm+mt
-source-wordcount: '1424'
-ht-degree: 3%
+source-wordcount: '1472'
+ht-degree: 2%
 
 ---
 
@@ -132,7 +132,7 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 
 인증된 연결은 신뢰할 수 있는 원본과 신뢰할 수 없는 원본에서 들어오는 레코드를 구분해야 할 때 사용해야 합니다. PII(개인 식별 정보)로 정보를 전송하려는 사용자는 플랫폼에 정보를 스트리밍할 때 인증된 연결을 만들어야 합니다.
 
-인증된 기본 연결을 만들려면 소스 ID와 POST 요청을 수행할 때 인증이 필요한지 여부를 지정해야 합니다 `/connections` 엔드포인트.
+인증된 기본 연결을 만들려면 다음을 포함해야 합니다 `authenticationRequired` 매개 변수 를 요청에 지정하고 해당 값을 로 지정합니다. `true`. 이 단계에서는 인증된 기본 연결에 대한 소스 ID를 제공할 수도 있습니다. 이 매개 변수는 선택 사항이며 와 동일한 값을 사용합니다 `name` 속성을 지정해야 합니다.
 
 
 **API 형식**
@@ -166,9 +166,9 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
      "auth": {
          "specName": "Streaming Connection",
          "params": {
-             "sourceId": "{SOURCE_ID}",
+             "sourceId": "Authenticated XDM streaming connection",
              "dataType": "xdm",
-             "name": "Sample connection",
+             "name": "Authenticated XDM streaming connection",
              "authenticationRequired": true
          }
      }
@@ -194,9 +194,9 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
      "auth": {
          "specName": "Streaming Connection",
          "params": {
-             "sourceId": "Sample connection",
+             "sourceId": "Authenticated raw streaming connection",
              "dataType": "raw",
-             "name": "Sample connection",
+             "name": "Authenticated raw streaming connection",
              "authenticationRequired": true
          }
      }
@@ -207,7 +207,7 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `auth.params.sourceId` | 만들 스트리밍 연결의 ID입니다. |
+| `auth.params.sourceId` | 인증된 기본 연결을 만들 때 사용할 수 있는 추가 식별자입니다. 이 매개 변수는 선택 사항이며 와 동일한 값을 사용합니다 `name` 속성을 지정해야 합니다. |
 | `auth.params.authenticationRequired` | 생성된 스트리밍 연결을 지정하는 매개 변수입니다 |
 
 **응답**
