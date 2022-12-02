@@ -2,9 +2,9 @@
 title: 사용자 정의 대시보드
 description: 주요 지표를 시각화하기 위해 맞춤형 위젯을 만들고, 추가하고, 편집할 수 있는 사용자 지정 대시보드를 만들고 관리하는 방법을 알아봅니다.
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 5d9428c4323e65c2605fd116160e160af7d9086d
 workflow-type: tm+mt
-source-wordcount: '939'
+source-wordcount: '956'
 ht-degree: 0%
 
 ---
@@ -118,8 +118,12 @@ To view dashboards in Adobe Experience Platform you must have the appropriate pe
 
 Adobe Real-time Customer Data Platform 인사이트 대시보드에 대한 각 쿼리에 효율적으로 실행할 수 있는 리소스가 충분하도록, API는 각 쿼리에 동시성 슬롯을 할당하여 리소스 사용을 추적합니다. 시스템은 최대 4개의 동시 쿼리를 처리할 수 있으므로 지정된 시간에 4개의 동시 쿼리 슬롯을 사용할 수 있습니다. 쿼리는 동시성 슬롯을 기반으로 큐에 넣은 다음 충분한 동시성 슬롯을 사용할 수 있을 때까지 대기열에서 대기합니다.
 
-## 다음 단계
+## 다음 단계 및 추가 리소스
 
 이 문서를 읽은 후에는 사용자 지정 대시보드를 만드는 방법과 해당 대시보드에 대한 사용자 지정 위젯을 만들고, 편집하고 업데이트하는 방법을 더 잘 이해할 수 있습니다.
 
 에 대해 사용 가능한 사전 구성된 지표 및 시각화를 검색하려면 [프로필](./guides/profiles.md#standard-widgets), [세그먼트](./guides/segments.md#standard-widgets), 및 [대상](./guides/destinations.md#standard-widgets) 대시보드 각각의 설명서에서 표준 위젯 목록을 참조하십시오.
+
+Experience Platform에서 사용자 정의 대시보드에 대한 이해를 강화하려면 다음 비디오를 시청하십시오.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3409637?quality=12&learn=on)

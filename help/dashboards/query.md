@@ -4,9 +4,9 @@ title: Query Service를 사용하여 대시보드 데이터 세트를 탐색, �
 type: Documentation
 description: Query Service를 사용하여 Experience Platform에서 프로필, 세그먼트 및 대상 대시보드에 적용되는 원시 데이터 세트를 탐색하고 처리하는 방법을 알아봅니다.
 exl-id: 0087dcab-d5fe-4a24-85f6-587e9ae74fb8
-source-git-commit: 62e282138de8cf2d74b4a62f4ced39e3fb78001a
+source-git-commit: 4826731682bcaf5a43c7ce047220c1805d97243a
 workflow-type: tm+mt
-source-wordcount: '951'
+source-wordcount: '970'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ Adobe Experience Platform [!DNL Query Service] 에서는 마케터가 표준 SQL
 
 각 프로필 스냅샷 내보내기 데이터 세트의 전체 스키마를 이해하려면 데이터 세트를 미리 보고 탐색할 수 있습니다 [데이터 집합 뷰어 사용](../catalog/datasets/user-guide.md) Experience Platform UI에서 클릭합니다.
 
-![](images/query/profile-attribute.png)
+![프로필 스냅샷 내보내기 데이터 집합의 미리 보기입니다.](images/query/profile-attribute.png)
 
 #### 프로필 속성 데이터 세트를 병합 정책 ID에 매핑
 
@@ -72,7 +72,7 @@ Adobe Experience Platform [!DNL Query Service] 에서는 마케터가 표준 SQL
 
 각 세그먼트 정의 스냅샷 내보내기 데이터 세트의 전체 스키마를 이해하려면 데이터 세트를 미리 보고 탐색할 수 있습니다 [데이터 집합 뷰어 사용](../catalog/datasets/user-guide.md) Experience Platform UI에서 클릭합니다.
 
-![](images/query/segment-metadata.png)
+![Segmentdefinition-Snapshot-Export 데이터 세트의 미리 보기입니다.](images/query/segment-metadata.png)
 
 ### 대상 메타데이터 데이터 세트
 
@@ -82,7 +82,7 @@ Adobe Experience Platform [!DNL Query Service] 에서는 마케터가 표준 SQL
 
 DIM 대상 데이터 집합의 전체 스키마를 이해하기 위해 데이터 집합을 미리 보고 탐색할 수 있습니다 [데이터 집합 뷰어 사용](../catalog/datasets/user-guide.md) Experience Platform UI에서 클릭합니다.
 
-![](images/query/destinations-metadata.png)
+![DIM_Destination 데이터 세트의 미리 보기입니다.](images/query/destinations-metadata.png)
 
 ## (베타) CDP(고객 데이터 플랫폼) 통찰력 보고서
 

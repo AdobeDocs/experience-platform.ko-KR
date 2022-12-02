@@ -4,9 +4,9 @@ title: 세그먼트 대시보드 안내서
 description: Adobe Experience Platform은 조직이 만든 세그먼트에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 23df35d7d90b6674b089a842818dba83283a1646
+source-git-commit: e5a4fddbd7f5b14280e283871d8b66a2e2f2407d
 workflow-type: tm+mt
-source-wordcount: '2092'
+source-wordcount: '2105'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Adobe Experience Platform UI(사용자 인터페이스)는 일별 스냅샷 중�
 >
 >조직이 Platform을 처음 사용하고 아직 활성 프로필 데이터 세트 또는 병합 정책이 만들어지지 않은 경우, [!UICONTROL 세그먼트] 대시보드가 표시되지 않습니다. 대신, [!UICONTROL 개요] 탭에는 세그먼테이션을 시작하는 데 도움이 되는 링크 및 설명서가 표시됩니다.
 
-![세그먼트 대시보드 개요 탭.](../images/segments/dashboard-overview.png)
+![세그먼트 대시보드 개요 탭(세그먼트 및 개요 강조 표시)](../images/segments/dashboard-overview.png)
 
 ### 수정 [!UICONTROL 세그먼트] 대시보드 {#modify}
 
@@ -204,7 +204,7 @@ ID에 대해 자세히 알아보려면 [Adobe Experience Platform Identity Servi
 
 선택 **[!UICONTROL 캡션]** 자동 캡션 대화 상자를 열려면 다음을 수행하십시오.
 
-![ID 캡션별 프로필 대화 상자](../images/segments/profiles-by-identity.png)
+![ID 위젯별 프로필 및 캡션 옵션이 강조 표시된 세그먼트 대시보드 개요.](../images/segments/profiles-by-identity.png)
 
 기계 학습 모델은 데이터의 전체 분포 및 주요 차원을 분석하여 데이터 인사이트를 자동으로 생성합니다.
 

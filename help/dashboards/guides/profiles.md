@@ -4,9 +4,9 @@ title: 프로필 대시보드 안내서
 description: Adobe Experience Platform은 조직의 실시간 고객 프로필 데이터에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: fdfc2a2b0f1f5be0508741de0e70ad72fe07d79f
+source-git-commit: c4457d82c66be382ebb8619ce248f282fb45ed3a
 workflow-type: tm+mt
-source-wordcount: '3385'
+source-wordcount: '3416'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Experience Platform 사용자 인터페이스 내의 모든 프로필 기능에 
 >
 >조직이 Platform을 처음 사용하고 아직 활성 프로필 데이터 세트 또는 작성된 병합 정책이 없는 경우 프로필 대시보드가 표시되지 않습니다. 대신, [!UICONTROL 개요] 실시간 고객 프로필을 시작하는 데 도움이 되는 링크와 설명서가 탭에 표시됩니다.
 
-![](../images/profiles/dashboard-overview.png)
+![Experience Platform 프로필 및 개요 가 강조 표시된 프로필 대시보드 .](../images/profiles/dashboard-overview.png)
 
 ### 프로필 대시보드 수정
 
@@ -142,7 +142,7 @@ Adobe은 프로필 데이터와 관련된 다양한 지표를 시각화하는 �
 >
 >다른 일반적인 이유는 대시보드 스냅샷을 가져오는 시간과 에 대해 샘플 작업을 실행하는 시간 간의 차이 때문입니다 [!UICONTROL 찾아보기] 탭. 언제 [!UICONTROL 프로필 수] 위젯이 위젯에서 타임스탬프를 보고 마지막으로 업데이트되었습니다. 에서 샘플 작업이 트리거되는 방식에 대해 자세히 알아보려면 [!UICONTROL 찾아보기] 탭에서 다음을 참조하십시오 [실시간 고객 프로필 UI 안내서의 프로필 카운트 섹션](https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html?lang=en#profile-count).
 
-![](../images/profiles/profile-count.png)
+![Experience Platform 카운트 위젯이 강조 표시된 프로필 대시보드 .](../images/profiles/profile-count.png)
 
 ### [!UICONTROL 프로필 수 트렌드] {#profile-count-trend}
 
@@ -230,7 +230,7 @@ ID에 대해 자세히 알아보려면 [Adobe Experience Platform Identity Servi
 
 ID에 대해 자세히 알아보려면 [Adobe Experience Platform Identity Service 설명서](../../identity-service/home.md).
 
-![](../images/profiles/identity-overlap.png)
+![ID 겹치기 위젯이 강조 표시된 프로필 대시보드 개요.](../images/profiles/identity-overlap.png)
 
 ### [!UICONTROL 단일 ID 프로필] {#single-identity-profiles}
 

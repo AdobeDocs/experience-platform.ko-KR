@@ -2,9 +2,9 @@
 title: Real-time Customer Data Platform 통찰력 데이터 모델
 description: Real-time Customer Data Platform 통찰력 데이터 모델과 함께 SQL 쿼리를 사용하여 마케팅 및 KPI 사용 사례에 대한 고유한 Real-Time CDP 보고서를 사용자 지정하는 방법을 알아봅니다.
 exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
-source-git-commit: 16ae8a16d8c4f7ec68a054e8d15a518f453a05c7
+source-git-commit: 9f33ad0146b72f820530233b651370c43fafe713
 workflow-type: tm+mt
-source-wordcount: '1105'
+source-wordcount: '1109'
 ht-degree: 0%
 
 ---
@@ -81,10 +81,10 @@ GROUP BY adwh_dim_merge_policies.merge_policy_name;
 
 네임스페이스 모델은 다음 데이터 세트로 구성됩니다.
 
-- `adwh_fact_profile_by_namespace`
 - `adwh_dim_date`
-- `adwh_dim_namespaces`
+- `adwh_fact_profile_by_namespace`
 - `adwh_dim_merge_policies`
+- `adwh_dim_namespaces`
 
 아래 이미지에는 각 데이터 세트에 있는 관련 데이터 필드가 포함되어 있습니다.
 
@@ -149,9 +149,9 @@ GROUP BY
 세그먼트 모델은 다음 데이터 세트로 구성됩니다.
 
 - `adwh_dim_date`
+- `adwh_fact_profile_by_segment`
 - `adwh_dim_merge_policies`
 - `adwh_dim_segments`
-- `adwh_fact_profile_by_segment`
 - `adwh_dim_br_segment_destinations`
 - `adwh_dim_destination`
 - `adwh_dim_destination_platform`
@@ -260,9 +260,9 @@ ORDER BY create_time desc, segment LIMIT 5;
 네임스페이스-세그먼트 모델은 다음 데이터 세트로 구성됩니다.
 
 - `adwh_dim_date`
-- `adwh_dim_merge_policies`
 - `adwh_dim_namespaces`
 - `adwh_fact_profile_by_segment_and_namespace`
+- `adwh_dim_merge_policies`
 - `adwh_dim_segments`
 - `adwh_dim_br_segment_destinations`
 - `adwh_dim_destination`
@@ -270,7 +270,7 @@ ORDER BY create_time desc, segment LIMIT 5;
 
 아래 이미지에는 각 데이터 세트에 있는 관련 데이터 필드가 포함되어 있습니다.
 
-![세그먼트 모델의 ERD입니다.](./images/cdp-insights/namespace-segment-model.png)
+![namespace-segment 모델의 ERD입니다.](./images/cdp-insights/namespace-segment-model.png)
 
 #### 세그먼트 사용 사례에 대한 ID별 프로필
 
@@ -300,13 +300,13 @@ GROUP BY adwh_dim_namespaces.namespace_description;
 겹치기 네임스페이스 모델은 다음 데이터 세트로 구성됩니다.
 
 - `adwh_dim_date`
-- `adwh_dim_namespaces`
+- `adwh_dim_overlap_namespaces`
 - `adwh_fact_profile_overlap_of_namespace`
 - `adwh_dim_merge_policies`
 
 아래 이미지에는 각 데이터 세트에 있는 관련 데이터 필드가 포함되어 있습니다.
 
-![세그먼트 모델의 ERD입니다.](./images/cdp-insights/overlap-namespace-model.png)
+![겹치기 네임스페이스 모델의 ERD입니다.](./images/cdp-insights/overlap-namespace-model.png)
 
 #### ID 겹치기(프로필) 사용 사례
 
@@ -364,7 +364,7 @@ SELECT Sum(overlap_col1) overlap_col1,
 세그먼트 모델별로 겹치는 네임스페이스는 다음 데이터 세트로 구성됩니다.
 
 - `adwh_dim_date`
-- `adwh_dim_namespaces`
+- `adwh_dim_overlap_namespaces`
 - `adwh_fact_profile_overlap_of_namespace_by_segment`
 - `adwh_dim_merge_policies`
 - `adwh_dim_segments`
@@ -374,7 +374,7 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 아래 이미지에는 각 데이터 세트에 있는 관련 데이터 필드가 포함되어 있습니다.
 
-![세그먼트 모델의 ERD입니다.](./images/cdp-insights/overlap-namespace-by-segment-model.png)
+![세그먼트 모델별로 겹치는 네임스페이스의 ERD입니다.](./images/cdp-insights/overlap-namespace-by-segment-model.png)
 
 #### ID 겹치기(세그먼트) 사용 사례
 

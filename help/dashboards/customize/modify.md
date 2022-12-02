@@ -3,9 +3,9 @@ keywords: Experience Platform;사용자 인터페이스;UI;대시보드;대시�
 title: UI에서 플랫폼 대시보드 수정
 description: 이 안내서에서는 조직의 Adobe Experience Platform 데이터가 대시보드 내에 표시되는 방식을 사용자 지정하는 단계별 지침을 제공합니다.
 exl-id: 75e4aea7-b521-434d-9cd5-32a00d00550d
-source-git-commit: d5acc317a48aef94dd4d6e3ccea89d0d674c8b34
+source-git-commit: 338aa6849f58b3c0fd6c871f1e199ebf6a73d115
 workflow-type: tm+mt
-source-wordcount: '467'
+source-wordcount: '510'
 ht-degree: 0%
 
 ---
@@ -24,13 +24,13 @@ Adobe Experience Platform UI(사용자 인터페이스) 내에서 여러 대시�
 
 모든 대시보드(예: [!UICONTROL 프로필] 대시보드), **[!UICONTROL 대시보드 수정]** 기존 위젯의 크기를 조정하고 재정렬하기 위해.
 
-![](../images/customization/modify-dashboard.png)
+![수정 대시보드가 강조 표시된 프로필 대시보드.](../images/customization/modify-dashboard.png)
 
 ## 위젯 순서 조정
 
 대시보드를 수정하도록 선택한 후 위젯 제목을 선택하고 위젯을 원하는 순서로 드래그 앤 드롭하여 위젯의 순서를 변경할 수 있습니다. 이 예에서 **[!UICONTROL 프로필 수 트렌드]** 위젯이 위쪽 행으로 이동하고 **[!UICONTROL 프로필 수]** 이제 위젯이 두 번째 행에 나타납니다.
 
-![](../images/customization/move-widget.png)
+![순서가 변경된 위젯이 두 개 강조 표시된 프로필 대시보드.](../images/customization/move-widget.png)
 
 ## 위젯 크기 조정
 
@@ -40,13 +40,13 @@ Adobe Experience Platform UI(사용자 인터페이스) 내에서 여러 대시�
 >
 >위젯의 크기를 조정하면 주변 위젯이 동적으로 다시 배치됩니다. 이로 인해 일부 위젯이 추가 행으로 이동되므로 모든 위젯을 보기 위해 스크롤해야 할 수 있습니다.
 
-![](../images/customization/resize-widget.png)
+![크기가 조정된 위젯이 강조 표시된 프로필 대시보드 .](../images/customization/resize-widget.png)
 
 ## 대시보드 업데이트 저장
 
 위젯 이동 및 크기 조정을 완료했으면 을 선택합니다 **[!UICONTROL 저장 및 종료]** 변경 사항을 저장하고 기본 대시보드 보기로 돌아가려면 를 클릭합니다. 변경 사항을 유지하지 않으려면 을(를) 선택합니다 **[!UICONTROL 취소]** 대시보드를 재설정하고 기본 대시보드 보기로 돌아가려면 를 클릭합니다.
 
-![](../images/customization/save-changes.png)
+![취소 및 저장 과 종료가 모두 강조 표시된 프로필 대시보드 .](../images/customization/save-changes.png)
 
 ## 위젯 라이브러리
 
@@ -54,7 +54,7 @@ Adobe Experience Platform UI(사용자 인터페이스) 내에서 여러 대시�
 
 에 액세스하여 작업하는 방법에 대한 단계별 지침을 보려면 [!UICONTROL 위젯 라이브러리]를 참조하려면 [위젯 라이브러리 안내서](widget-library.md).
 
-![](../images/customization/widget-library.png)
+![표준 및 사용자 지정 이 강조 표시된 위젯 라이브러리 작업 영역입니다.](../images/customization/widget-library.png)
 
 ## 다음 단계
 
