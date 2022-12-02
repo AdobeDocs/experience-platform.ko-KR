@@ -5,10 +5,10 @@ breadcrumb-title: 태그
 user-guide-description: 고객 경험을 향상시키기 위해 분석, 마케팅 및 광고 태그를 배포 및 관리하는 방법을 살펴볼 수 있습니다.
 feature: Tags
 solution: Data Collection
-source-git-commit: 05cc1388f4b32036e1c1ba76bfc584774acb014c
+source-git-commit: 1c92860695f74173cd57ec61f8ccc6e72808012a
 workflow-type: tm+mt
-source-wordcount: '976'
-ht-degree: 30%
+source-wordcount: '971'
+ht-degree: 31%
 
 ---
 
@@ -155,7 +155,6 @@ ht-degree: 30%
       * [차등 개인 정보](https://exchange.adobe.com/apps/ec/104535)
       * [Dynamic Media 뷰어](https://exchange.adobe.com/apps/ec/103048)
       * [EDDL Helper](https://exchange.adobe.com/apps/ec/107691)
-      * [Facebook 픽셀](https://exchange.adobe.com/apps/ec/102804)
       * [Flashtalking OneTag](https://exchange.adobe.com/apps/ec/101392)
       * [ForeSee](https://exchange.adobe.com/apps/ec/100164)
       * [Gainsight PX](https://exchange.adobe.com/apps/ec/103343)
@@ -173,6 +172,8 @@ ht-degree: 30%
          * [개요](./extensions/client/marketo/overview.md)
          * [릴리스 정보](./extensions/client/marketo/release-notes.md)
       * [기본 속성 관리자](https://exchange.adobe.com/apps/ec/102992)
+      * [!DNL Meta Pixel] {#meta}
+         * [개요](./extensions/client/meta/overview.md)
       * [모니터링](https://exchange.adobe.com/apps/ec/106544)
       * [Nielsen Digital SDK](https://exchange.adobe.com/apps/ec/101361)
       * [쿠키에 대한 OneTrust 동의 관리](https://exchange.adobe.com/apps/ec/100340)

@@ -2,9 +2,9 @@
 title: Microsoft Azure 확장 개요
 description: Adobe Experience Platform에서 이벤트 전달을 위한 Microsoft Azure 확장에 대해 알아봅니다.
 exl-id: 2337d99d-861e-44e7-94ed-ba21ef28d815
-source-git-commit: bfbad3c11df64526627e4ce2d766b527df678bca
+source-git-commit: 8b972841c8412d510fce4c970a09d9c1eecd401e
 workflow-type: tm+mt
-source-wordcount: '937'
+source-wordcount: '938'
 ht-degree: 4%
 
 ---
@@ -35,7 +35,7 @@ Microsoft을 설치하려면 [!DNL Azure] 확장, 데이터 수집 UI 또는 Exp
 
 ## 이벤트 전달 규칙 구성 {#rule}
 
-새 이벤트 전달 규칙 만들기를 시작하고 원하는 대로 조건을 구성합니다. 규칙에 대한 작업을 선택할 때 **[!UICONTROL Microsoft Azure]** 확장을 위해 를 선택한 다음 **[!UICONTROL 이벤트 허브에 데이터 보내기]** 용.
+새 이벤트 전달 규칙 만들기를 시작하고 원하는 대로 조건을 구성합니다. 규칙에 대한 작업을 선택할 때 **[!UICONTROL Microsoft Azure]** 확장을 위해 를 선택한 다음 **[!UICONTROL 이벤트 허브에 데이터 보내기]** 를 사용 중입니다.
 
 ![다음 [!UICONTROL 이벤트 허브에 데이터 보내기] 데이터 수집 UI에서 규칙에 대해 선택되는 작업 유형입니다.](../../../images/extensions/server/azure/select-action-type.png)
 
