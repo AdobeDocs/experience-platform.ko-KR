@@ -4,7 +4,7 @@ title: 대상 대시보드 안내서
 description: Adobe Experience Platform은 조직의 활성 대상에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 66e8d3c594280d4b40cb2b6170544d4411220a6a
+source-git-commit: d9e10271db52f61cdc3e4adc546fe05adadb5a46
 workflow-type: tm+mt
 source-wordcount: '3031'
 ht-degree: 0%
@@ -273,7 +273,13 @@ id 열은 위젯 ID 드롭다운에서 선택한 ID에 매핑할 수 있는 세�
 
 ### [!UICONTROL 모든 대상에서 활성화된 대상] {#activated-audiences-across-all-destinations}
 
-다음 [!UICONTROL 모든 대상에서 활성화된 대상] 위젯은 단일 지표에 있는 모든 대상에서 활성화된 총 대상 수를 제공합니다. 이 위젯은 세그먼트 수가 아니라 대상자 수를 표시합니다. 이 숫자는 최신 스냅샷까지 정확합니다.
+다음 [!UICONTROL 모든 대상에서 활성화된 대상] 위젯은 단일 지표에 있는 모든 대상에서 활성화된 총 대상 수를 제공합니다.
+
+>[!NOTE]
+>
+>이 위젯은 세그먼트 수가 아니라 대상자 수를 표시합니다.
+
+이 숫자는 최신 스냅샷까지 정확합니다.
 
 ![모든 대상 위젯에서 활성화된 대상.](../images/destinations/activated-audiences-across-all-destinations.png)
 
