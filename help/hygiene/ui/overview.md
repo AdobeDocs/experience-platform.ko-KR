@@ -2,9 +2,9 @@
 title: Data 위생 UI 안내서
 description: Adobe Experience Platform 사용자 인터페이스에서 데이터 위생 작업을 관리하는 방법을 알아봅니다.
 exl-id: 7199151a-5390-4150-8a1d-daf53b7a1f5b
-source-git-commit: 70a2abcc4d6e27a89e77d68e7757e4876eaa4fc0
+source-git-commit: d4073f18844de65b9181667d0332c0315ee1cc09
 workflow-type: tm+mt
-source-wordcount: '216'
+source-wordcount: '218'
 ht-degree: 0%
 
 ---
@@ -13,8 +13,8 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_privacyconsole_consumer"
->title="데이터 위생 바퀴"
->abstract="이 위젯은 선택한 기간에 대한 데이터 위생 레코드 삭제 작업 상태를 표시합니다. 데이터 위생 프로세스에 대한 자세한 내용을 보려면 **데이터 위생** 을 클릭합니다."
+>title="데이터 위생 요청 상태"
+>abstract="이 위젯은 생성, 실패 및 완료된 데이터 위생 레코드 삭제 작업의 총 수를 보여줍니다. 데이터 위생 프로세스에 대한 자세한 내용을 보려면 **데이터 위생** 을 클릭합니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_privacyconsole_recents"
