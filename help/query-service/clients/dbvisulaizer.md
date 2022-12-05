@@ -5,9 +5,9 @@ title: DbVisualizer를 Query Service에 연결
 topic-legacy: connect
 description: 이 문서에서는 DbVisualizer와 Adobe Experience Platform Query Service를 연결하는 단계를 설명합니다.
 exl-id: badb0d89-1713-438c-8a9c-d1404051ff5f
-source-git-commit: 910522cc981bddba86f0a47ded48125c28712032
+source-git-commit: 640a89231abf96a966f55dce2e3a7242c739538f
 workflow-type: tm+mt
-source-wordcount: '754'
+source-wordcount: '805'
 ht-degree: 0%
 
 ---
@@ -46,7 +46,7 @@ ht-degree: 0%
 | ------ | ------ |
 | `PGHOST` | 의 호스트 이름 [!DNL PostgreSQL] server. 이 값은 Experience Platform입니다 [!UICONTROL 호스트] 자격 증명. |
 | `ssl` | SSL 값 정의 `1` 를 ssl을 사용하도록 설정합니다. |
-| `sslmode` | 이는 SSL 요구 사항의 사용을 제어합니다. 사용자 **반드시** 값 사용 `require` 이 요구 사항을 사용하려면 |
+| `sslmode` | 이는 SSL 보호 수준을 제어합니다. 을 사용하는 것이 좋습니다 `require` 타사 클라이언트를 Adobe Experience Platform에 연결할 때 SSL 모드. 다음 `require` 모드에서는 모든 통신에서 암호화가 필요하며 올바른 서버에 연결하기 위해 네트워크를 신뢰할 수 있습니다. 서버 SSL 인증서 유효성 검사가 필요하지 않습니다. 자세한 내용은 [타사 클라이언트 연결을 위한 SSL 옵션](./ssl-modes.md) to [!DNL Query Service]. |
 | `user` | 데이터베이스에 연결된 사용자 이름은 조직 ID입니다. 로 끝나는 영숫자 문자열입니다 `@adobe.org` |
 
 >[!IMPORTANT]
