@@ -6,10 +6,10 @@ description: 이 문서에서는 활성화 전에 발생하는 세분화 작업�
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: 8d67d89db6a8c179935b4fe709f91279860d464e
+source-git-commit: cdf96088be27cba1fb92f1348f002123614285fe
 workflow-type: tm+mt
-source-wordcount: '1531'
-ht-degree: 2%
+source-wordcount: '1563'
+ht-degree: 1%
 
 ---
 
@@ -25,13 +25,13 @@ ht-degree: 2%
 
 Ad-hoc 활성화 API를 사용하면 즉시 활성화해야 하는 상황에서 마케터는 빠르고 효율적인 방식으로 대상 세그먼트를 대상으로 프로그래밍 방식으로 활성화할 수 있습니다.
 
+임시 활성화 API를 사용하여 전체 파일을 원하는 파일 수신 시스템으로 내보냅니다. 임시 대상 활성화는 [배치 파일 기반 대상](../destination-types.md#file-based).
+
 아래 다이어그램은 24시간마다 Platform에서 발생하는 세그먼테이션 작업을 포함하여, Ad-Hoc 활성화 API를 통해 세그먼트를 활성화하는 종단 간 워크플로우를 보여줍니다.
 
 ![ad-hoc-activation](../assets/api/ad-hoc-activation/ad-hoc-activation-overview.png)
 
->[!NOTE]
->
->임시 대상 활성화는 [배치 파일 기반 대상](../destination-types.md#file-based).
+
 
 ## 사용 사례 {#use-cases}
 
@@ -129,7 +129,7 @@ Adobe Experience Platform은 24시간마다 예약된 세그먼테이션 작업�
 >
 >다음의 일회성 제약 조건을 참고하십시오. 임시 활성화 작업을 실행하기 전에, 세그먼트가 처음 활성화된 상태에서 설정 스케줄에 따라 최소 20분이 경과했는지 확인하십시오 [3단계 - Platform UI에서 활성화 흐름 만들기](#activation-flow).
 
-임시 활성화 작업을 실행하기 전에 세그먼트에 대해 예약된 세그먼트 내보내기 작업이 완료되었는지 확인하십시오. 자세한 내용은 [대상 데이터 흐름 모니터링](../../dataflows/ui/monitor-destinations.md) 활성화 흐름의 상태를 모니터링하는 방법에 대한 정보입니다. 예를 들어 활성화 데이터 양이 **[!UICONTROL 처리 중]** 상태, ad-hoc 활성화 작업을 실행하기 전에 완료될 때까지 기다립니다.
+임시 활성화 작업을 실행하기 전에 세그먼트에 대해 예약된 세그먼트 내보내기 작업이 완료되었는지 확인하십시오. 자세한 내용은 [대상 데이터 흐름 모니터링](../../dataflows/ui/monitor-destinations.md) 활성화 흐름의 상태를 모니터링하는 방법에 대한 정보입니다. 예를 들어 활성화 데이터 양이 **[!UICONTROL 처리 중]** 상태, 임시 활성화 작업을 실행하여 전체 파일을 내보내기 전에 작업이 완료될 때까지 기다립니다.
 
 세그먼트 내보내기 작업이 완료되면 활성화를 트리거할 수 있습니다.
 
@@ -250,3 +250,4 @@ Ad-hoc 활성화 API를 사용할 때 이 API 엔드포인트에 해당하는 �
 ## 관련 정보 {#related-information}
 
 * [Flow Service API를 사용하여 배치 대상에 연결하고 데이터를 활성화합니다](/help/destinations/api/connect-activate-batch-destinations.md)
+* [(베타) Experience Platform UI를 사용하여 온디맨드 파일을 배치 대상으로 내보내기](/help/destinations/ui/export-file-now.md)
