@@ -3,9 +3,9 @@ keywords: 대상;대상;대상 유형
 title: 대상 유형 및 카테고리
 description: Adobe Experience Platform의 다양한 대상 유형 및 카테고리에 대해 알아봅니다.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: c140e68467065d17f143850bfb8eefb3ac46443a
+source-git-commit: 606038116391e75ba4ffc36bab11757f963a8346
 workflow-type: tm+mt
-source-wordcount: '675'
+source-wordcount: '680'
 ht-degree: 0%
 
 ---
@@ -97,4 +97,4 @@ Platform은 태그 관리의 힘과 유연성을 활용하여 UI에서 태그 �
 
 의 연결 및 확장 [대상 카탈로그](https://platform.adobe.com/destination/catalog) 대상 카테고리별로 그룹화됩니다(**광고**, **클라우드 스토리지**, **설문 조사 플랫폼**, **이메일 마케팅**&#x200B;등)을 사용할 수 있습니다. 각 카테고리와 각 카테고리에 포함된 대상에 대한 자세한 내용은 [대상 카탈로그 설명서](./catalog/overview.md).
 
-![대상 카테고리](./assets/destination-types/destination-categories-menu.png)
+![카탈로그 페이지에서 강조 표시된 대상 카테고리.](./assets/destination-types/destination-categories-menu.png)

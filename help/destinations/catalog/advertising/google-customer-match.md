@@ -3,7 +3,7 @@ keywords: google customer match;Google 고객 일치;Google Customer Match
 title: Google Customer Match 연결
 description: Google Customer Match를 사용하면 온라인 및 오프라인 데이터를 사용하여 검색, 쇼핑, Gmail 및 YouTube과 같은 Google이 소유하고 운영하는 속성에서 고객에게 도달하고 다시 참여합니다.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: b189f1b0fe29ebefb3cba9c4f820022a772ce297
 workflow-type: tm+mt
 source-wordcount: '1778'
 ht-degree: 1%
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 [Google 고객 일치](https://support.google.com/google-ads/answer/6379332?hl=en) 을 사용하면 온라인 및 오프라인 데이터를 사용하여 다음과 같은 Google의 소유물과 운영 속성에서 고객에게 도달하고 다시 참여하도록 할 수 있습니다. [!DNL Search], [!DNL Shopping], [!DNL Gmail], 및 [!DNL YouTube].
 
-![Adobe Experience Platform UI의 Google Customer Match 대상](../../assets/catalog/advertising/google-customer-match/catalog.png)
+![Adobe Experience Platform UI의 Google 고객 일치 대상.](../../assets/catalog/advertising/google-customer-match/catalog.png)
 
 ## 사용 사례 {#use-cases}
 

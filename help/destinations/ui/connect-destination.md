@@ -4,9 +4,9 @@ title: 새 대상 연결 만들기
 type: Tutorial
 description: Adobe Experience Platform에서 대상에 연결하고, 경고를 활성화하고, 연결된 대상에 대한 마케팅 작업을 설정하는 방법을 알아봅니다.
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: 434b9ed4f64320b5fd73b752716cb34a8e48aec9
+source-git-commit: 606038116391e75ba4ffc36bab11757f963a8346
 workflow-type: tm+mt
-source-wordcount: '1106'
+source-wordcount: '1107'
 ht-degree: 0%
 
 ---
@@ -79,7 +79,7 @@ ht-degree: 0%
 
 ![트레이드데스크 대상에 연결할 때 필요한 입력 매개 변수와 선택적 입력 매개 변수를 표시하는 이미지입니다.](../assets/ui/connect-destinations/connect-destination-trade-desk-example.png)
 
-### 내보낸 파일에 대한 파일 형식 옵션을 설정합니다 {#file-formatting-and-compression-options}
+### (베타) 내보낸 파일에 대한 파일 형식 옵션을 설정합니다 {#file-formatting-and-compression-options}
 
 파일 기반 대상의 경우, 내보낸 파일의 형식 및 압축 방법과 관련된 다양한 설정을 구성할 수 있습니다. 사용 가능한 모든 서식 및 압축 옵션에 대한 자세한 내용은 [파일 기반 대상에 대한 파일 형식 옵션 구성 자습서](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
