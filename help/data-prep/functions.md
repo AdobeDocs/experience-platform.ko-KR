@@ -5,9 +5,9 @@ title: 데이터 준비 매핑 함수
 topic-legacy: overview
 description: 이 문서에서는 데이터 준비에 사용되는 매핑 기능을 소개합니다.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: b7800dd67c2d16747815f2cb3311ca9b6d6fa342
+source-git-commit: 714ce6eb1a77559a7bd1691afeac4a96e0877717
 workflow-type: tm+mt
-source-wordcount: '4337'
+source-wordcount: '4367'
 ht-degree: 4%
 
 ---
@@ -20,7 +20,11 @@ ht-degree: 4%
 
 필드 이름은 유니코드 문자 및 자릿수의 무제한 길이 시퀀스로 문자, 달러 기호( )로 시작하는 모든 올바른 식별자가 될 수 있습니다`$`) 또는 밑줄 문자(`_`). 변수 이름은 대소문자를 구분합니다.
 
-필드 이름이 이 규칙을 따르지 않는 경우 필드 이름을 `${}`. 따라서 예를 들어 필드 이름이 &quot;First Name&quot; 또는 &quot;First.Name&quot;인 경우 이름을 다음과 같이 래핑해야 합니다 `${First Name}` 또는 `${First.Name}` 각각 사용할 수 있습니다.
+필드 이름이 이 규칙을 따르지 않는 경우 필드 이름을 `${}`. 따라서 예를 들어 필드 이름이 &quot;First Name&quot; 또는 &quot;First.Name&quot;인 경우 이름을 다음과 같이 래핑해야 합니다 `${First Name}` 또는 `${First\.Name}` 각각 사용할 수 있습니다.
+
+>[!TIP]
+>
+>계층과 상호 작용할 때 하위 속성에 마침표(`.`), 백슬래시(`\`)을 사용하여 특수 문자를 이스케이프 처리합니다. 자세한 내용은 다음 안내서를 참조하십시오. [특수 문자 이스케이프 처리](home.md#escape-special-characters).
 
 또한 필드 이름이 **임의** 다음 예약된 키워드 중에서 `${}`:
 

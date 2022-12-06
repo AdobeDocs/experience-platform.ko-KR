@@ -5,7 +5,7 @@ title: 데이터 준비 개요
 topic-legacy: overview
 description: 이 문서에서는 Adobe Experience Platform 내의 데이터 준비를 소개합니다.
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
-source-git-commit: d0f5d1f55101ce15934289d4fcfd1f70c1b63fc7
+source-git-commit: 61603d7516dbd859b0cce6c167c75aab42ca7171
 workflow-type: tm+mt
 source-wordcount: '788'
 ht-degree: 0%
@@ -41,7 +41,7 @@ ht-degree: 0%
 
 계산된 필드에 대한 자세한 내용은 [계산된 필드 안내서](./functions.md#calculated-fields).
 
-### 특수 문자 이스케이프 처리
+### 특수 문자 이스케이프 처리 {#escape-special-characters}
 
 를 사용하여 필드에서 특수 문자를 이스케이프 처리할 수 있습니다 `${...}`. 그러나 마침표(`.`)은 이 메커니즘에서 지원되지 않습니다. 계층과 상호 작용할 때 하위 속성에 마침표(`.`), 백슬래시(`\`)을 사용하여 특수 문자를 이스케이프 처리합니다. 예, `address` 는 속성을 포함하는 객체입니다 `street.name`그런 다음 를 `address.street\.name` 대신 `address.street.name`.
 
