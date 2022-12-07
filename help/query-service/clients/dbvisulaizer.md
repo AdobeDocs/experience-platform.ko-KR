@@ -5,10 +5,10 @@ title: DbVisualizer를 Query Service에 연결
 topic-legacy: connect
 description: 이 문서에서는 DbVisualizer와 Adobe Experience Platform Query Service를 연결하는 단계를 설명합니다.
 exl-id: badb0d89-1713-438c-8a9c-d1404051ff5f
-source-git-commit: 640a89231abf96a966f55dce2e3a7242c739538f
+source-git-commit: 7d38488c204e28c9cfd8ea50c06f1ce781d76c59
 workflow-type: tm+mt
-source-wordcount: '805'
-ht-degree: 0%
+source-wordcount: '950'
+ht-degree: 1%
 
 ---
 
@@ -36,38 +36,44 @@ ht-degree: 0%
 
 ![드라이버 이름 드롭다운 메뉴에서 [!DNL PostgreSQL] 강조 표시되어 있습니다.](../images/clients/dbvisualizer/driver-name.png)
 
+### 연결에 대한 속성 설정 {#properties}
+
 데이터베이스 연결 작업 영역에서 **[!DNL Properties]** 탭, 그 다음에 **[!DNL Driver Properties]** 탐색 사이드바에서 참조할 수 있습니다.
 
 ![속성 및 드라이버 속성이 강조 표시된 데이터베이스 연결 작업 영역입니다.](../images/clients/dbvisualizer/driver-properties.png)
 
-아래 표에 표시된 드라이버 속성은 DBVisualizer에서 SSL을 사용할 수 있도록 설정하는 것이 좋습니다.
-
-| 속성 | 설명 |
-| ------ | ------ |
-| `PGHOST` | 의 호스트 이름 [!DNL PostgreSQL] server. 이 값은 Experience Platform입니다 [!UICONTROL 호스트] 자격 증명. |
-| `ssl` | SSL 값 정의 `1` 를 ssl을 사용하도록 설정합니다. |
-| `sslmode` | 이는 SSL 보호 수준을 제어합니다. 을 사용하는 것이 좋습니다 `require` 타사 클라이언트를 Adobe Experience Platform에 연결할 때 SSL 모드. 다음 `require` 모드에서는 모든 통신에서 암호화가 필요하며 올바른 서버에 연결하기 위해 네트워크를 신뢰할 수 있습니다. 서버 SSL 인증서 유효성 검사가 필요하지 않습니다. 자세한 내용은 [타사 클라이언트 연결을 위한 SSL 옵션](./ssl-modes.md) to [!DNL Query Service]. |
-| `user` | 데이터베이스에 연결된 사용자 이름은 조직 ID입니다. 로 끝나는 영숫자 문자열입니다 `@adobe.org` |
+그런 다음 아래 표에 설명된 드라이버 속성을 입력합니다.
 
 >[!IMPORTANT]
 >
->자세한 내용은 [[!DNL Query Service] SSL 설명서](./ssl-modes.md) Adobe Experience Platform Query Service에 대한 타사 연결에 대한 SSL 지원 및 `verify-full` SSL 모드.
+>DBVisualizer를 Adobe Experience Platform과 연결하려면 SSL을 사용하도록 설정해야 합니다. 자세한 내용은 [SSL 모드 설명서](./ssl-modes.md) Adobe Experience Platform Query Service에 대한 타사 연결에 대한 SSL 지원 및 `verify-full` SSL 모드.
 
-### [!DNL Query Service] 자격 증명
-
-다음 `PGHOST` 및 `user` 값은 Adobe Experience Platform 자격 증명에서 가져옵니다. 자격 증명을 찾으려면 Platform UI에 로그인하고 를 선택합니다 **[!UICONTROL 쿼리]** 왼쪽 탐색에서 다음을 차례로 수행합니다 **[!UICONTROL 자격 증명]**. 데이터베이스 이름, 호스트, 포트 및 로그인 자격 증명을 찾는 방법에 대한 자세한 내용은 [자격 증명 안내서](../ui/credentials.md).
-
-![자격 증명과 만료 자격 증명이 강조 표시된 Experience Platform 쿼리 작업 영역의 자격 증명 페이지.](../images/clients/dbvisualizer/query-service-credentials-page.png)
-
-[!DNL Query Service] 또한 타사 클라이언트로 1회 설정할 수 있도록 만료되는 자격 증명을 제공합니다. 다음 문서를 참조하십시오. [만료되지 않은 자격 증명을 생성하고 사용하는 방법에 대한 전체 지침](../ui/credentials.md#non-expiring-credentials).
+| 속성 | 설명 |
+| ------ | ------ |
+| `PGHOST` | 의 호스트 이름 [!DNL PostgreSQL] server. 이 값은 Experience Platform입니다 **[!UICONTROL 호스트] 자격 증명**. |
+| `ssl` | SSL 값 정의 `1` 를 ssl을 사용하도록 설정합니다. |
+| `sslmode` | 이는 SSL 보호 수준을 제어합니다. 을 사용하는 것이 좋습니다 `require` 타사 클라이언트를 Adobe Experience Platform에 연결할 때 SSL 모드. 다음 `require` 모드에서는 모든 통신에서 암호화가 필요하며 올바른 서버에 연결하기 위해 네트워크를 신뢰할 수 있습니다. 서버 SSL 인증서 유효성 검사가 필요하지 않습니다. |
+| `user` | 데이터베이스에 연결된 사용자 이름은 조직 ID입니다. 로 끝나는 영숫자 문자열입니다 `@Adobe.Org`. 이 값은 Experience Platform입니다 **[!UICONTROL 사용자 이름] 자격 증명**. |
 
 검색 막대를 사용하여 각 속성을 찾은 다음 매개 변수 값에 해당하는 셀을 선택합니다. 셀이 파란색으로 강조 표시됩니다. 값 필드에 Platform 자격 증명을 입력하고 을 선택합니다. **[!DNL Apply]** 드라이버 속성을 추가하려면
+
+![값을 입력하고 적용(Apply)이 강조 표시된 DBVisulaizer 드라이버 등록 정보 탭이 있습니다.](../images/clients/dbvisualizer/apply-parameter-value.png)
 
 >[!NOTE]
 >
 >초 추가 `user` 프로필, 선택 `user` 매개 변수 열에서 파란색 + (더하기) 아이콘을 선택하여 각 사용자에 대한 자격 증명을 추가합니다. 선택 **[!DNL Apply]** 드라이버 속성을 추가하려면
 
 다음 [!DNL Edited] 열에는 매개 변수 값이 업데이트되었음을 나타내는 확인 표시가 표시됩니다.
+
+### 입력[!DNL Query Service] 자격 증명
+
+BBVisualizer를 Query Service와 연결하는 데 필요한 자격 증명을 찾으려면 Platform UI에 로그인하고 를 선택합니다 **[!UICONTROL 쿼리]** 왼쪽 탐색에서 다음을 차례로 수행합니다 **[!UICONTROL 자격 증명]**. 검색 결과에 대한 자세한 정보 **호스트**, **포트**, **데이터베이스**, **사용자 이름**, 및 **암호** 자격 증명, [자격 증명 안내서](../ui/credentials.md).
+
+![자격 증명과 만료 자격 증명이 강조 표시된 Experience Platform 쿼리 작업 영역의 자격 증명 페이지.](../images/clients/dbvisualizer/query-service-credentials-page.png)
+
+>[!IMPORTANT]
+>
+>[!DNL Query Service] 또한 타사 클라이언트로 1회 설정할 수 있도록 만료되는 자격 증명을 제공합니다. 다음 문서를 참조하십시오. [만료되지 않은 자격 증명을 생성하고 사용하는 방법에 대한 전체 지침](../ui/credentials.md#non-expiring-credentials). BDVisualizer를 1회 설정으로 연결하려면 이 프로세스를 완료해야 합니다. 다음 `credential` 및 `technicalAccountId` 획득한 값은 DBVisualizer의 값을 포함합니다 `password` 매개 변수.
 
 ## 인증
 
@@ -79,14 +85,20 @@ ht-degree: 0%
 
 ## 플랫폼에 연결
 
-연결을 만들려면 **[!DNL Connection]** 데이터베이스 연결 작업 영역에서 탭을 선택하고 다음 설정에 대한 Experience Platform 인증서를 입력합니다.
+만료 자격 증명 또는 만료되지 않은 자격 증명을 사용하여 연결할 수 있습니다. 연결을 만들려면 **[!DNL Connection]** 데이터베이스 연결 작업 영역에서 탭을 선택하고 다음 설정에 대한 Experience Platform 인증서를 입력합니다.
 
-- **이름**: 연결을 인식하려면 친숙한 이름을 제공하는 것이 좋습니다.
-- **데이터베이스 서버**: Experience Platform [!UICONTROL 호스트] 자격 증명.
-- **데이터베이스 포트**: 포트 [!DNL Query Service]. 연결할 포트 80을 사용해야 합니다. [!DNL Query Service].
-- **데이터베이스**: 자격 증명 사용 `dbname` value `prod:all`.
-- **데이터베이스 사용자 ID**: 플랫폼 조직 ID입니다. Userid는 `ORG_ID@AdobeOrg`.
-- **데이터베이스 암호**: 이 문자열은 [!DNL Query Service] 자격 증명 대시보드.
+>[!NOTE]
+>
+>아래 표에 BDVisualizer에 필요한 모든 자격 증명은 매개 변수 설명에 명시되어 있지 않는 한 만료되는 자격 증명과 만료되지 않은 자격 증명에 대해 동일합니다.
+
+| 연결 매개 변수 | 설명 |
+|---|---|
+| **[!UICONTROL 이름]** | 연결의 이름을 만듭니다. 연결을 인식하려면 친숙한 이름을 제공하는 것이 좋습니다. |
+| **[!UICONTROL 데이터베이스 서버]** | Experience Platform **[!UICONTROL 호스트]** 자격 증명. |
+| **[!UICONTROL 데이터베이스 포트]** | 포트 [!DNL Query Service]. 포트를 사용해야 합니다. **80** 연결 [!DNL Query Service]. |
+| **[!UICONTROL 데이터베이스]** | Experience Platform 사용 **[!UICONTROL 데이터베이스]** 자격 증명 값: `prod:all`. |
+| **[!UICONTROL 데이터베이스 사용자 ID]** | 플랫폼 조직 ID입니다. Experience Platform 사용 **[!UICONTROL 사용자 이름]** 자격 증명 값. ID는 `ORG_ID@AdobeOrg`. |
+| **[!UICONTROL 데이터베이스 암호]** | 이 영숫자 문자열은 Experience Platform입니다 **[!UICONTROL 암호]** credential.만료되지 않은 자격 증명을 사용하려면 이 값이 `technicalAccountID` 그리고 `credential` 구성 JSON 파일에서 다운로드되었습니다. 암호 값은 다음 형식을 사용합니다. {technicalAccountId}:{credential}. 만료되지 않은 자격 증명을 위한 구성 JSON 파일은 Adobe이 복사본을 보존하지 않는 초기화 중에 일회성 다운로드입니다. |
 
 관련 자격 증명을 모두 입력한 후 을 선택합니다 **[!DNL Connect]**.
 
