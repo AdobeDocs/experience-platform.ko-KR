@@ -5,10 +5,10 @@ title: Privacy Service UI 개요
 topic-legacy: UI guide
 description: Privacy Service 사용자 인터페이스를 사용하여 다양한 Experience Cloud 애플리케이션에서 개인 정보 요청을 조정하고 모니터링합니다.
 exl-id: 5624691f-0b9a-4565-8277-ea273a0d239a
-source-git-commit: 3a98275b4b2969e2c7d8c1ec6ada14d1dd52b9b8
+source-git-commit: 8814c8a7e8feac4901917663d5cbeb5dddb8c288
 workflow-type: tm+mt
-source-wordcount: '212'
-ht-degree: 0%
+source-wordcount: '206'
+ht-degree: 1%
 
 ---
 
@@ -19,7 +19,11 @@ ht-degree: 0%
 >title="데이터 주체 요청"
 >abstract="이 위젯은 지정된 일 동안 Privacy Service이 처리한 제출 및 완료된 데이터 주체 요청 수를 보여줍니다. Privacy Service 프로세스에 대한 자세한 내용은 **요청** 을 클릭합니다."
 
-Adobe Experience Platform [!DNL Privacy Service] 는 다양한 솔루션에서 개인 정보 보호 및 규정 준수 요청을 조정할 수 있는 RESTful API 및 사용자 인터페이스를 제공합니다. 이 문서에서는 [!DNL Privacy Service] UI. API 사용에 대한 자세한 내용은 [Privacy Service API 안내서](../api/overview.md).
+Privacy Service UI [!DNL Privacy Service] 다양한 Adobe Experience Cloud 애플리케이션에서 개인 정보 보호 및 규정 준수 요청을 조정할 수 있습니다.
+
+>[!NOTE]
+>
+>Privacy Service API를 사용하여 프로그래밍 방식으로 준수 요청을 관리하는 방법에 대한 자세한 내용은 [Privacy Service API 안내서](../api/overview.md).
 
 ## 에 로그인합니다. [!DNL Privacy Service] UI
 
@@ -27,7 +31,7 @@ Adobe Experience Platform [!DNL Privacy Service] 는 다양한 솔루션에서 �
 >
 >에 인증하려면 Adobe ID이 있어야 합니다 [!DNL Privacy Service] UI. 또한 IMS 조직 내에 시스템 관리자 권한이 있어야 합니다.
 
-선택 **[!UICONTROL Adobe ID으로 로그인]** 메시지가 표시되면 Adobe ID 자격 증명을 입력합니다.
+UI에 액세스하려면 다음 위치에 로그인합니다 [Adobe Experience Cloud](https://experience.adobe.com/)
 
 로그인하고 나면 **[!UICONTROL 개인 정보 UI]**.
 
