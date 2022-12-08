@@ -3,9 +3,9 @@ keywords: SFTP;sftp
 title: SFTP 연결
 description: SFTP 서버에 대한 라이브 아웃바운드 연결을 만들어 Adobe Experience Platform에서 구분된 데이터 파일을 주기적으로 내보냅니다.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: f841b27a2d2700b0b68a386b89d1a5c62d3910ff
+source-git-commit: cb0b80f79a849d81216c5500c54b62ac5d85e2f6
 workflow-type: tm+mt
-source-wordcount: '812'
+source-wordcount: '873'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 >* 데이터 흐름을 아직 만들지 않았다면 **[!UICONTROL SFTP]** 대상, 새 **[!UICONTROL SFTP 베타]** 파일로 내보내기 **[!UICONTROL SFTP]**.
 
 
-![나란히 보기에 있는 두 SFTP 대상 카드의 이미지입니다.](/help/destinations/assets/catalog/cloud-storage/sftp/two-sftp-destination-cards.png)
+![나란히 보기에 있는 두 SFTP 대상 카드의 이미지입니다.](../../assets/catalog/cloud-storage/sftp/two-sftp-destination-cards.png)
 
 새로운 기능 개선 사항 [!DNL SFTP] 대상 카드는 다음과 같습니다.
 
@@ -104,6 +104,8 @@ SFTP 위치에 인증 연결을 설정한 후 대상에 대해 다음 정보를 
 * **[!UICONTROL 이름]**: Experience Platform 사용자 인터페이스에서 이 대상을 식별하는 데 도움이 되는 이름을 입력합니다.
 * **[!UICONTROL 설명]**: 이 대상에 대한 설명을 입력합니다.
 * **[!UICONTROL 폴더 경로]**: 파일을 내보낼 SFTP 위치에 폴더의 경로를 입력합니다.
+* **[!UICONTROL 파일 유형]**: 내보낸 파일에 사용할 형식 Experience Platform을 선택합니다. 이 옵션은 **[!UICONTROL SFTP 베타]** 대상. 을(를) 선택할 때 [!UICONTROL CSV] 선택 사항 [파일 서식 옵션 구성](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL 압축 포맷]**: 내보낸 파일에 사용할 압축 유형을 Experience Platform에서 선택합니다. 이 옵션은 **[!UICONTROL SFTP 베타]** 대상.
 
 ## 세그먼트를 이 대상에 활성화 {#activate}
 

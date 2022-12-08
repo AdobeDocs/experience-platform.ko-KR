@@ -2,9 +2,9 @@
 title: (베타) Google 클라우드 스토리지 연결
 description: Google 클라우드 스토리지에 연결하고 세그먼트를 활성화하거나 데이터 세트를 내보내는 방법을 알아봅니다.
 exl-id: ab274270-ae8c-4264-ba64-700b118e6435
-source-git-commit: f841b27a2d2700b0b68a386b89d1a5c62d3910ff
+source-git-commit: a07557ec398631ece0c8af6ec7b32e0e8593e24b
 workflow-type: tm+mt
-source-wordcount: '867'
+source-wordcount: '908'
 ht-degree: 0%
 
 ---
@@ -34,15 +34,15 @@ ht-degree: 0%
 
 Platform을 [!DNL Google Cloud Storage]를 사용하려면 먼저 상호 운용성을 설정해야 합니다. [!DNL Google Cloud Storage] 계정이 필요합니다. 상호 운용성 설정에 액세스하려면 [!DNL Google Cloud Platform] 을(를) 선택합니다. **[!UICONTROL 설정]** 에서 **[!UICONTROL 클라우드 스토리지]** 옵션을 선택합니다.
 
-![클라우드 스토리지 및 설정이 강조 표시된 Google Cloud Platform 대시보드 .](/help/sources/images/tutorials/create/google-cloud-storage/nav.png)
+![클라우드 스토리지 및 설정이 강조 표시된 Google Cloud Platform 대시보드 .](../../../sources/images/tutorials/create/google-cloud-storage/nav.png)
 
 다음 **[!UICONTROL 설정]** 페이지가 나타납니다. 여기에서 [!DNL Google] 프로젝트 ID 및 세부 정보 [!DNL Google Cloud Storage] 계정이 필요합니다. 상호 운용성 설정에 액세스하려면 **[!UICONTROL 상호 운용성]** 상단 헤더에서
 
-![Google Cloud Platform 대시보드에 강조 표시된 상호 운용성 탭입니다.](/help/sources/images/tutorials/create/google-cloud-storage/project-access.png)
+![Google Cloud Platform 대시보드에 강조 표시된 상호 운용성 탭입니다.](../../../sources/images/tutorials/create/google-cloud-storage/project-access.png)
 
 다음 **[!UICONTROL 상호 운용성]** 페이지에는 인증, 액세스 키 및 서비스 계정과 연결된 기본 프로젝트에 대한 정보가 들어 있습니다. 서비스 계정에 대한 새 액세스 키 ID와 비밀 액세스 키를 생성하려면 **[!UICONTROL 서비스 계정 키 만들기]**.
 
-![Google Cloud Platform 대시보드에 강조 표시된 서비스 계정 컨트롤 키 만들기](/help/sources/images/tutorials/create/google-cloud-storage/interoperability.png)
+![Google Cloud Platform 대시보드에 강조 표시된 서비스 계정 컨트롤 키 만들기](../../../sources/images/tutorials/create/google-cloud-storage/interoperability.png)
 
 새로 생성된 액세스 키 ID와 비밀 액세스 키를 사용하여 [!DNL Google Cloud Storage] Platform에 계정을 설정합니다.
 
@@ -74,6 +74,8 @@ Platform을 [!DNL Google Cloud Storage]를 사용하려면 먼저 상호 운용�
 * **[!UICONTROL 설명]**: 선택 사항입니다. 예를 들어 이 대상을 사용하는 캠페인을 언급할 수 있습니다.
 * **[!UICONTROL 버킷 이름]**: 이름 입력 [!DNL Google Cloud Storage] 이 대상에서 사용할 버킷입니다.
 * **[!UICONTROL 폴더 경로]**: 내보낸 파일을 호스트할 대상 폴더의 경로를 입력합니다.
+* **[!UICONTROL 파일 유형]**: 내보낸 파일에 사용할 형식 Experience Platform을 선택합니다. 을(를) 선택할 때 [!UICONTROL CSV] 선택 사항 [파일 서식 옵션 구성](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL 압축 포맷]**: 내보낸 파일에 사용할 압축 유형을 Experience Platform에서 선택합니다.
 
 ### 경고 활성화 {#enable-alerts}
 

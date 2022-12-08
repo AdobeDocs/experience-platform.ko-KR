@@ -3,7 +3,7 @@ keywords: Amazon Kinesis;kinesis 대상;kinesis
 title: Amazon Kinesis 연결
 description: Amazon Kinesis 스토리지에 대한 실시간 아웃바운드 연결을 만들어 Adobe Experience Platform에서 데이터를 스트리밍합니다.
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: cb0b80f79a849d81216c5500c54b62ac5d85e2f6
 workflow-type: tm+mt
 source-wordcount: '1891'
 ht-degree: 0%
@@ -175,7 +175,7 @@ Experience Platform은 프로필 내보내기 동작을 로 최적화합니다 [
 
 예를 들어 이 데이터 흐름을 [!DNL Amazon Kinesis] 대상: 데이터 흐름에서 세 개의 세그먼트를 선택하고 네 개의 속성이 대상에 매핑됩니다.
 
-![Amazon Kinesis 대상 데이터 흐름](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png)
+![Amazon Kinesis 대상 데이터 흐름](../../assets/catalog/http/profile-export-example-dataflow.png)
 
 대상에 대한 프로필 내보내기는 하나 또는 둘 중 하나에 대해 자격이 있는 프로필로 결정할 수 있습니다 *3개의 매핑된 세그먼트*. 그러나 데이터 내보내기에서 `segmentMembership` 개체(참조 [내보낸 데이터](#exported-data) 아래 섹션)을 사용하면, 특정 프로필이 해당 세그먼트의 구성원일 경우 매핑되지 않은 다른 세그먼트가 나타날 수 있습니다. 프로가 DeLorinan Cars 세그먼트를 통해 고객 자격을 얻지만 또한 Viewed &quot;Back to the Future&quot; 영화 및 SF 팬의 멤버인 경우 다른 두 세그먼트도 함께 제공됩니다 `segmentMembership` 데이터가 데이터 플로우에 매핑되지 않더라도 데이터 내보내기의 객체입니다.
 

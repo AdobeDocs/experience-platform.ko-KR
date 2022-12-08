@@ -1,9 +1,10 @@
 ---
 title: 데이터 랜딩 영역 대상
 description: 데이터 랜딩 영역에 연결하여 세그먼트를 활성화하고 데이터 세트를 내보내는 방법을 알아봅니다.
-source-git-commit: 56fd7a5ab58186367c729cb4ca8c3b4213c44900
+exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
+source-git-commit: a07557ec398631ece0c8af6ec7b32e0e8593e24b
 workflow-type: tm+mt
-source-wordcount: '946'
+source-wordcount: '987'
 ht-degree: 0%
 
 ---
@@ -87,6 +88,8 @@ Platform에서는 [!DNL Data Landing Zone] 컨테이너. 7일 후 모든 파일�
 * **[!UICONTROL 이름]**: 이 대상의 기본 이름을 입력합니다.
 * **[!UICONTROL 설명]**: 선택 사항입니다. 예를 들어 이 대상을 사용하는 캠페인을 언급할 수 있습니다.
 * **[!UICONTROL 폴더 경로]**: 내보낸 파일을 호스트할 대상 폴더의 경로를 입력합니다.
+* **[!UICONTROL 파일 유형]**: 내보낸 파일에 사용할 형식 Experience Platform을 선택합니다. 을(를) 선택할 때 [!UICONTROL CSV] 선택 사항 [파일 서식 옵션 구성](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL 압축 포맷]**: 내보낸 파일에 사용할 압축 유형을 Experience Platform에서 선택합니다.
 
 ### 경고 활성화 {#enable-alerts}
 

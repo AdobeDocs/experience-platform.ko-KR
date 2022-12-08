@@ -3,9 +3,9 @@ keywords: Azure Blob;Blob 대상;s3;azure Blob 대상
 title: Azure Blob 연결
 description: Azure Blob 저장 공간에 대한 라이브 아웃바운드 연결을 만들어 Adobe Experience Platform에서 CSV 데이터 파일을 주기적으로 내보냅니다.
 exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
-source-git-commit: f841b27a2d2700b0b68a386b89d1a5c62d3910ff
+source-git-commit: a07557ec398631ece0c8af6ec7b32e0e8593e24b
 workflow-type: tm+mt
-source-wordcount: '860'
+source-wordcount: '923'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 1%
 >* 데이터 흐름을 아직 만들지 않았다면 **[!UICONTROL Azure Blob]** 대상, 새 **[!UICONTROL Azure Blob 베타]** 파일로 내보내기 **[!UICONTROL Azure Blob]**.
 
 
-![나란히 보기에서 두 Azure Blob 대상 카드의 이미지입니다.](/help/destinations/assets/catalog/cloud-storage/blob/two-azure-blob-destination-cards.png)
+![나란히 보기에서 두 Azure Blob 대상 카드의 이미지입니다.](../../assets/catalog/cloud-storage/blob/two-azure-blob-destination-cards.png)
 
 새로운 기능 개선 사항 [!DNL Azure Blob] 대상 카드는 다음과 같습니다.
 
@@ -93,6 +93,8 @@ ht-degree: 1%
 * **[!UICONTROL 설명]**: 이 대상에 대한 설명을 입력합니다.
 * **[!UICONTROL 폴더 경로]**: 내보낸 파일을 호스팅할 대상 폴더의 경로를 입력합니다.
 * **[!UICONTROL 컨테이너]**: 이름 입력 [!DNL Azure Blob Storage] 이 대상에서 사용할 컨테이너입니다.
+* **[!UICONTROL 파일 유형]**: 내보낸 파일에 사용할 형식 Experience Platform을 선택합니다. 이 옵션은 **[!UICONTROL Azure Blob 베타]** 대상. 을(를) 선택할 때 [!UICONTROL CSV] 선택 사항 [파일 서식 옵션 구성](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL 압축 포맷]**: 내보낸 파일에 사용할 압축 유형을 Experience Platform에서 선택합니다. 이 옵션은 **[!UICONTROL Azure Blob 베타]** 대상.
 
 ### 경고 활성화 {#enable-alerts}
 

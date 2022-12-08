@@ -3,9 +3,9 @@ keywords: Amazon S3;S3 대상;s3;amazon s3
 title: Amazon S3 연결
 description: Amazon Web Services(AWS) S3 저장소에 대한 라이브 아웃바운드 연결을 만들어 Adobe Experience Platform의 CSV 데이터 파일을 고유한 S3 버킷으로 주기적으로 내보냅니다.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: f841b27a2d2700b0b68a386b89d1a5c62d3910ff
+source-git-commit: a07557ec398631ece0c8af6ec7b32e0e8593e24b
 workflow-type: tm+mt
-source-wordcount: '890'
+source-wordcount: '953'
 ht-degree: 0%
 
 ---
@@ -17,11 +17,11 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 >데이터 세트 내보내기 기능의 베타 릴리스와 향상된 파일 내보내기 기능을 사용하면 이제 두 가지 기능이 표시될 수 있습니다 [!DNL Amazon S3] 대상 카탈로그에 있는 카드.
->* 이미 파일을 로 내보내는 경우 **[!UICONTROL Amazon S3]** 대상: 새 데이터 흐름을 새로 만드세요 **[!UICONTROL Amazon S3 베타]** 대상.
+>* 이미 파일을 로 내보내는 경우 **[!UICONTROL Amazon S3]** 대상, 새 데이터 흐름 만들기 **[!UICONTROL Amazon S3 베타]** 대상.
 >* 데이터 흐름을 아직 만들지 않았다면 **[!UICONTROL Amazon S3]** 대상, 새 **[!UICONTROL Amazon S3 베타]** 파일로 내보내기 **[!UICONTROL Amazon S3]**.
 
 
-![나란히 보기에 있는 두 Amazon S3 대상 카드의 이미지입니다.](/help/destinations/assets/catalog/cloud-storage/amazon-s3/two-amazons3-destination-cards.png)
+![나란히 보기에 있는 두 Amazon S3 대상 카드의 이미지입니다.](../../assets/catalog/cloud-storage/amazon-s3/two-amazons3-destination-cards.png)
 
 새로운 기능 개선 사항 [!DNL Amazon S3] 대상 카드는 다음과 같습니다.
 
@@ -88,6 +88,9 @@ ht-degree: 0%
 * **[!UICONTROL 설명]**: 이 대상에 대한 설명을 입력합니다.
 * **[!UICONTROL 버킷 이름]**: 이름 입력 [!DNL Amazon S3] 이 대상에서 사용할 버킷입니다.
 * **[!UICONTROL 폴더 경로]**: 내보낸 파일을 호스팅할 대상 폴더의 경로를 입력합니다.
+* **[!UICONTROL 파일 유형]**: 내보낸 파일에 사용할 형식 Experience Platform을 선택합니다. 이 옵션은 **[!UICONTROL Amazon S3 베타]** 대상. 을(를) 선택할 때 [!UICONTROL CSV] 선택 사항 [파일 서식 옵션 구성](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL 압축 포맷]**: 내보낸 파일에 사용할 압축 유형을 Experience Platform에서 선택합니다. 이 옵션은 **[!UICONTROL Amazon S3 베타]** 대상.
+
 
 >[!TIP]
 >

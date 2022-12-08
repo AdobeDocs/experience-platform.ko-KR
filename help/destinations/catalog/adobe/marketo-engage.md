@@ -2,7 +2,7 @@
 title: Marketo Engage 대상
 description: Marketo Engage은 마케팅, 광고, 분석 및 상거래를 위한 유일한 CXM(엔드 투 엔드 고객 경험 관리) 솔루션입니다. CRM 리드 관리 및 고객 참여에서 계정 기반 마케팅 및 매출 기여도에 이르는 활동을 자동화하고 관리할 수 있습니다.
 exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
-source-git-commit: 9f305ee7824bd8790dec57ccbd2d9462ccfa8b49
+source-git-commit: e68bbc07f7d2e4e05b725cbef37a1810a5825742
 workflow-type: tm+mt
 source-wordcount: '870'
 ht-degree: 2%
@@ -20,7 +20,7 @@ ht-degree: 2%
 >* 데이터 흐름을 아직 만들지 않았다면 **[!UICONTROL Marketo V1]** 대상, 새 **[!UICONTROL Marketo V2]** 데이터를 Marketo에 연결하고 내보낼 수 있는 카드입니다.
 
 
-![나란히 보기에 있는 두 Marketo 대상 카드의 이미지입니다.](/help/destinations/assets/catalog/adobe/marketo-side-by-side-view.png)
+![나란히 보기에 있는 두 Marketo 대상 카드의 이미지입니다.](../..//assets/catalog/adobe/marketo-side-by-side-view.png)
 
 Marketo V2 대상의 개선 사항은 다음과 같습니다.
 
