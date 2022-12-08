@@ -5,24 +5,35 @@ title: 데이터 수집 모니터링
 topic-legacy: overview
 description: 이 사용 안내서에서는 Adobe Experience Platform 사용자 인터페이스 내에서 데이터를 모니터링하는 방법을 제공합니다. 이 안내서를 사용하려면 Adobe ID이 있고 Adobe Experience Platform에 액세스할 수 있어야 합니다.
 exl-id: 85711a06-2756-46f9-83ba-1568310c9f73
-source-git-commit: 3fadf7006c8ea058e469067b61950ed2d2d12e3f
+source-git-commit: dce7faa7fc680e37b537bf623c3a33e6c6e37169
 workflow-type: tm+mt
-source-wordcount: '618'
+source-wordcount: '654'
 ht-degree: 0%
 
 ---
 
 # 데이터 수집 모니터링
 
-데이터 수집을 사용하면 데이터를 Adobe Experience Platform에 수집할 수 있습니다. 일괄 처리 섭취 를 사용하면 다양한 파일 유형(예: CSV)을 사용하여 데이터를 삽입하거나 스트리밍 수집 기능을 사용하여 실시간으로 데이터를 [!DNL Platform]에 수집할 수 있습니다.
+데이터 수집을 사용하면 데이터를 Adobe Experience Platform에 수집할 수 있습니다. 일괄 처리 수집을 사용할 수 있습니다. 이 기능을 사용하면 다양한 파일 유형(예: CSV)을 사용하여 데이터를 삽입하거나 스트리밍 수집 기능을 사용하여 데이터를 수집할 수 있습니다 [!DNL Platform] 스트리밍 끝점을 실시간으로 사용합니다.
 
 이 사용 안내서에서는 Adobe Experience Platform 사용자 인터페이스 내에서 데이터를 모니터링하는 방법을 제공합니다. 이 안내서를 사용하려면 Adobe ID이 있고 Adobe Experience Platform에 액세스할 수 있어야 합니다.
 
-## 스트리밍 종단 간 데이터 수집 모니터링
+## 스트리밍 종단 간 데이터 수집 모니터링 {#monitor-streaming-end-to-end-data-ingestion}
 
-[Experience Platform UI](https://platform.adobe.com)의 왼쪽 탐색 메뉴에서 **[!UICONTROL 모니터링]**&#x200B;을 선택하고 **[!UICONTROL 스트리밍 종단간]**&#x200B;을 선택합니다.
+>[!CONTEXTUALHELP]
+>id="platform_ingestion_streaming_ingestionrate"
+>title="수집 비율"
+>abstract="초당 성공적으로 처리된 이벤트 수입니다."
+>text="Learn more in the documentation"
+>additional-url="http://www.adobe.com/go/monitor-dataflows-en" text="UI에서 소스에 대한 데이터 흐름 모니터링"
 
-**[!UICONTROL 스트리밍 종단 간]** 모니터링 페이지가 나타납니다. 이 작업 공간은 [!DNL Platform]에 의해 수신되는 스트리밍된 이벤트의 비율을 표시하는 그래프, [[!DNL Real-time Customer Profile]](../../profile/home.md)에 의해 성공적으로 처리된 스트리밍된 이벤트의 비율과 들어오는 데이터의 세부 목록을 표시하는 그래프를 제공합니다.
+>[!TIP]
+>
+>특정 날짜에 대한 총 이벤트를 계산하려면 다음 표현식을 사용합니다. `total events / day = ingestion rate * 60 * 60 * 24`.
+
+에서 [Experience Platform UI](https://platform.adobe.com), 선택 **[!UICONTROL 모니터링]** 왼쪽 탐색 메뉴에서 다음 을 클릭합니다. **[!UICONTROL 처음부터 끝까지 스트리밍]**.
+
+다음 **[!UICONTROL 처음부터 끝까지 스트리밍]** 모니터링 페이지가 나타납니다. 이 작업 공간에서는 수신되는 스트리밍 이벤트의 비율을 표시하는 그래프를 제공합니다 [!DNL Platform]에 의해 성공적으로 처리된 스트리밍된 이벤트의 비율을 표시하는 그래프입니다 [[!DNL Real-time Customer Profile]](../../profile/home.md)및 수신되는 데이터의 세부 목록을 추가했습니다.
 
 ![](../images/quality/monitor-data-flows/list-streams.png)
 
@@ -30,11 +41,11 @@ ht-degree: 0%
 
 ![](../images/quality/monitor-data-flows/events-received.png)
 
-아래 그래프는 지난 7일 동안 [!DNL Profile]에 의해 성공적으로 스트리밍된 이벤트 수를 보여줍니다. 강조 표시된 단추를 선택하여 다양한 기간을 표시하도록 이 날짜 범위를 조정할 수 있습니다.
+아래 그래프는 다음을 통해 성공적으로 스트리밍된 이벤트 처리 속도를 보여줍니다. [!DNL Profile] 지난 7일 동안 강조 표시된 단추를 선택하여 다양한 기간을 표시하도록 이 날짜 범위를 조정할 수 있습니다.
 
 >[!NOTE]
 >
->이 그래프에 데이터를 표시하려면 데이터가 **명시적으로**&#x200B;이(가) [!DNL Profile]에 대해 활성화되어 있어야 합니다. [!DNL Profile]에 대해 스트리밍 데이터를 활성화하는 방법에 대해 알아보려면 [데이터 세트 사용 안내서](../../catalog/datasets/user-guide.md#enable-a-dataset-for-real-time-customer-profile)를 참조하십시오.
+>데이터가 이 그래프에 표시되려면 데이터가 **명시적으로** 활성화됨 [!DNL Profile]. 에 대한 스트리밍 데이터를 활성화하는 방법을 알아봅니다. [!DNL Profile]를 읽고 [데이터 세트 사용 안내서](../../catalog/datasets/user-guide.md#enable-a-dataset-for-real-time-customer-profile).
 
 ![](../images/quality/monitor-data-flows/ingested-by-profile.png)
 
@@ -56,15 +67,15 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->수집된 행에 오류가 있는 경우, 결과 메시지가 잘못된 XDM을 생성하지 않는 한 이러한 행은 **삭제되지 않습니다.**
+>수집된 행에 오류가 있으면 이러한 행이 수행됩니다 **not** 결과 메시지가 잘못된 XDM을 생성하지 않는 한 삭제합니다.
 
 ![](../images/quality/monitor-data-flows/failed-batch-error.png)
 
 ## 일괄적으로 엔드 투 엔드 데이터 수집 모니터링
 
-[[!DNL Experience Platform UI]](https://platform.adobe.com)의 왼쪽 탐색 메뉴에서 **[!UICONTROL 모니터링]**&#x200B;을 선택합니다.
+에서 [[!DNL Experience Platform UI]](https://platform.adobe.com), 선택 **[!UICONTROL 모니터링]** 를 클릭합니다.
 
-이전에 수집된 일괄 처리 목록을 표시하는 **[!UICONTROL 일괄 처리 종료]** 모니터링 페이지가 나타납니다. 해당 레코드에 대한 자세한 정보를 위해 배치를 선택할 수 있습니다.
+다음 **[!UICONTROL 일괄적으로]** 이전에 수집된 일괄 처리 목록을 표시하는 모니터링 페이지가 나타납니다. 해당 레코드에 대한 자세한 정보를 위해 배치를 선택할 수 있습니다.
 
 ![](../images/quality/monitor-data-flows/batch-monitoring.png)
 
@@ -82,6 +93,6 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->수집된 행에 오류가 있는 경우, 결과 메시지가 잘못된 XDM을 생성하지 않는 한 이러한 행은 **삭제되지 않습니다.**
+>수집된 행에 오류가 있으면 이러한 행이 수행됩니다 **not** 결과 메시지가 잘못된 XDM을 생성하지 않는 한 삭제합니다.
 
 ![](../images/quality/monitor-data-flows/failed-streaming-error.png)
