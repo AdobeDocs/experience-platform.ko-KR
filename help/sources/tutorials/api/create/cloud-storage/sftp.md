@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Flow Service API를 사용하여 SFTP(Secure File Transfer Protocol) 서버에 Adobe Experience Platform을 연결하는 방법을 알아봅니다.
 exl-id: b965b4bf-0b55-43df-bb79-c89609a9a488
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: bf665a0041db8a44c39c787bb1f0f1100f61e135
 workflow-type: tm+mt
-source-wordcount: '800'
+source-wordcount: '837'
 ht-degree: 1%
 
 ---
@@ -44,6 +44,7 @@ ht-degree: 1%
 | `password` | 사용자 [!DNL SFTP] server. |
 | `privateKeyContent` | Base64로 인코딩된 SSH 개인 키 콘텐츠입니다. OpenSSH 키 유형은 RSA 또는 DSA로 분류해야 합니다. |
 | `passPhrase` | 키 파일 또는 키 컨텐츠가 암호 구문으로 보호되는 경우 개인 키를 해독하기 위한 암호 구문 또는 암호입니다. 만약 `privateKeyContent` 암호로 보호되어 있는 경우, 이 매개 변수는 개인 키 컨텐츠의 암호를 값으로 사용하여 사용해야 합니다. |
+| `maxConcurrentConnections` | 이 매개 변수를 사용하면 SFTP 서버에 연결할 때 플랫폼에서 만드는 동시 연결 수에 대한 최대 제한을 지정할 수 있습니다. 이 값은 SFTP에서 설정한 제한보다 작도록 설정해야 합니다. **참고**: 이 설정이 기존 SFTP 계정에 대해 활성화되면 기존 데이터 흐름에는 영향을 주지 않고 향후 데이터 흐름에만 영향을 줍니다. |
 | `connectionSpec.id` | 연결 사양은 기본 및 소스 연결 생성과 관련된 인증 사양이 포함된 소스의 커넥터 등록 정보를 반환합니다. 에 대한 연결 사양 ID [!DNL SFTP] is: `b7bf2577-4520-42c9-bae9-cad01560f7bc`. |
 
 ### 플랫폼 API 사용
@@ -54,69 +55,9 @@ Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용�
 
 기본 연결은 소스의 인증 자격 증명, 현재 연결 상태 및 고유한 기본 연결 ID를 포함하여 소스와 플랫폼 간의 정보를 유지합니다. 기본 연결 ID를 사용하면 소스 내에서 파일을 탐색 및 탐색하고 해당 데이터 유형 및 형식에 대한 정보를 포함하여 수집할 특정 항목을 식별할 수 있습니다.
 
+다음 [!DNL SFTP] 소스는 SSH 공개 키를 통해 기본 인증 및 인증을 모두 지원합니다.
+
 기본 연결 ID를 만들려면 `/connections` 제공하는 동안 엔드포인트 [!DNL SFTP] 요청 매개 변수의 일부로 인증 자격 증명.
-
-### 만들기 [!DNL SFTP] 기본 인증을 사용한 기본 연결
-
-을(를) 만들려면 [!DNL SFTP] 기본 인증을 사용하여 기본 연결에서 [!DNL Flow Service] 연결의 값을 제공하는 동안 API `host`, `userName`, 및 `password`.
-
-**API 형식**
-
-```http
-POST /connections
-```
-
-**요청**
-
-다음 요청은에 대한 기본 연결을 만듭니다. [!DNL SFTP] 기본 인증 사용:
-
-```shell
-curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/connections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d  '{
-        "name": "SFTP connector with password",
-        "description": "SFTP connector password",
-        "auth": {
-            "specName": "Basic Authentication for sftp",
-            "params": {
-                "host": "{HOST}",
-                "userName": "{USERNAME}",
-                "password": "{PASSWORD}"
-            }
-        },
-        "connectionSpec": {
-            "id": "b7bf2577-4520-42c9-bae9-cad01560f7bc",
-            "version": "1.0"
-        }
-    }'
-```
-
-| 속성 | 설명 |
-| -------- | ----------- |
-| `auth.params.host` | SFTP 서버의 호스트 이름입니다. |
-| `auth.params.username` | SFTP 서버와 연결된 사용자 이름입니다. |
-| `auth.params.password` | SFTP 서버와 연결된 암호입니다. |
-| `connectionSpec.id` | SFTP 서버 연결 사양 ID: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
-
-**응답**
-
-성공적인 응답은 고유 식별자(`id`) 내의 아무 곳에나 삽입할 수 있습니다. 이 ID는 다음 자습서에서 SFTP 서버를 탐색하는 데 필요합니다.
-
-```json
-{
-    "id": "bf367b0d-3d9b-4060-b67b-0d3d9bd06094",
-    "etag": "\"1700cc7b-0000-0200-0000-5e3b3fba0000\""
-}
-```
-
-### 만들기 [!DNL SFTP] SSH 공개 키 인증을 사용한 기본 연결
-
-을(를) 만들려면 [!DNL SFTP] SSH 공개 키 인증을 사용하여 기본 연결에서 [!DNL Flow Service] 연결의 값을 제공하는 동안 API `host`, `userName`, `privateKeyContent`, 및 `passPhrase`.
 
 >[!IMPORTANT]
 >
@@ -130,46 +71,96 @@ POST /connections
 
 **요청**
 
-다음 요청은에 대한 기본 연결을 만듭니다. [!DNL SFTP] SSH 공개 키 인증 사용:
+다음 요청은에 대한 기본 연결을 만듭니다. [!DNL SFTP]:
+
+>[!BEGINTABS]
+
+>[!TAB 기본 인증]
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/connections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "SFTP connector with SSH authentication",
-        "description": "SFTP connector with SSH authentication",
-        "auth": {
-            "specName": "SSH PublicKey Authentication for sftp",
-            "params": {
-                "host": "{HOST}",
-                "userName": "{USERNAME}",
-                "privateKeyContent": "{PRIVATE_KEY_CONTENT}",
-                "passPhrase": "{PASSPHRASE}"
-            }
-        },
-        "connectionSpec": {
-            "id": "b7bf2577-4520-42c9-bae9-cad01560f7bc",
-            "version": "1.0"
-        }
-    }'
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d  '{
+      "name": "SFTP connector with password",
+      "description": "SFTP connector password",
+      "auth": {
+          "specName": "Basic Authentication for sftp",
+          "params": {
+              "host": "{HOST}",
+              "port": 22,
+              "userName": "{USERNAME}",
+              "password": "{PASSWORD}",
+              "maxConcurrentConnections": 1
+          }
+      },
+      "connectionSpec": {
+          "id": "b7bf2577-4520-42c9-bae9-cad01560f7bc",
+          "version": "1.0"
+      }
+  }'
+```
+
+| 속성 | 설명 |
+| -------- | ----------- |
+| `auth.params.host` | SFTP 서버의 호스트 이름입니다. |
+| `auth.params.port` | SFTP 서버의 포트입니다. 이 정수 값은 기본적으로 22로 설정됩니다. |
+| `auth.params.username` | SFTP 서버와 연결된 사용자 이름입니다. |
+| `auth.params.password` | SFTP 서버와 연결된 암호입니다. |
+| `auth.params.maxConcurrentConnections` | Platform을 SFTP에 연결할 때 지정된 최대 동시 연결 수입니다. 활성화되면 이 값을 최소 1로 설정해야 합니다. |
+| `connectionSpec.id` | SFTP 서버 연결 사양 ID: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
+
+>[!TAB SSH 공개 키 인증]
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "SFTP connector with SSH authentication",
+      "description": "SFTP connector with SSH authentication",
+      "auth": {
+          "specName": "SSH PublicKey Authentication for sftp",
+          "params": {
+              "host": "{HOST}",
+              "port": 22,
+              "userName": "{USERNAME}",
+              "privateKeyContent": "{PRIVATE_KEY_CONTENT}",
+              "passPhrase": "{PASSPHRASE}",
+              "maxConcurrentConnections": 1
+
+          }
+      },
+      "connectionSpec": {
+          "id": "b7bf2577-4520-42c9-bae9-cad01560f7bc",
+          "version": "1.0"
+      }
+  }'
 ```
 
 | 속성 | 설명 |
 | -------- | ----------- |
 | `auth.params.host` | 의 호스트 이름 [!DNL SFTP] server. |
+| `auth.params.port` | SFTP 서버의 포트입니다. 이 정수 값은 기본적으로 22로 설정됩니다. |
 | `auth.params.username` | 사용자 이름과 연결된 사용자 이름 [!DNL SFTP] server. |
 | `auth.params.privateKeyContent` | Base64로 인코딩된 SSH 개인 키 콘텐츠입니다. OpenSSH 키 유형은 RSA 또는 DSA로 분류해야 합니다. |
 | `auth.params.passPhrase` | 키 파일 또는 키 컨텐츠가 암호 구문으로 보호되는 경우 개인 키를 해독하기 위한 암호 구문 또는 암호입니다. PrivateKeyContent가 암호로 보호된 경우 이 매개 변수는 PrivateKeyContent의 암호와 함께 값으로 사용해야 합니다. |
+| `auth.params.maxConcurrentConnections` | Platform을 SFTP에 연결할 때 지정된 최대 동시 연결 수입니다. 활성화되면 이 값을 최소 1로 설정해야 합니다. |
 | `connectionSpec.id` | 다음 [!DNL SFTP] 서버 연결 사양 ID: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
+
+>[!ENDTABS]
 
 **응답**
 
-성공적인 응답은 고유 식별자(`id`) 내의 아무 곳에나 삽입할 수 있습니다. 이 ID는 [!DNL SFTP] server를 참조하십시오.
+성공적인 응답은 고유 식별자(`id`) 내의 아무 곳에나 삽입할 수 있습니다. 이 ID는 다음 자습서에서 SFTP 서버를 탐색하는 데 필요합니다.
 
 ```json
 {
