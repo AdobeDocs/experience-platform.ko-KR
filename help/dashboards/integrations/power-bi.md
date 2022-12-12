@@ -1,13 +1,13 @@
 ---
 title: 플랫폼 대시보드에 대한 보고서 템플릿 Power BI
 description: 보고서 템플릿을 사용하여 Power BI을 사용하여 Experience Platform 데이터를 탐색합니다.
-source-git-commit: 19b0ce2c8125fa5253cbba34adbd2884e27b5133
+exl-id: fb98a79f-3d82-4e11-b08a-b7cb06414462
+source-git-commit: 36fc6f996b4ffd33f542eb9be4fbc50f3fcdd1cb
 workflow-type: tm+mt
 source-wordcount: '1472'
 ht-degree: 0%
 
 ---
-
 
 # 대시보드에 대한 Power BI 보고서 템플릿
 
