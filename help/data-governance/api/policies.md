@@ -1,24 +1,24 @@
 ---
 keywords: Experience Platform;홈;인기 항목;정책 적용;API 기반 적용;데이터 거버넌스
 solution: Experience Platform
-title: 데이터 사용 정책 API 엔드포인트
+title: 데이터 거버넌스 정책 API 엔드포인트
 topic-legacy: developer guide
-description: 데이터 사용 정책은 Experience Platform 내에서 데이터를 수행할 수 있도록 허용하거나 제한하는 마케팅 작업 종류를 설명하는 조직에서 사용하는 규칙입니다. /policy 엔드포인트는 데이터 사용 정책 보기, 만들기, 업데이트 또는 삭제와 관련된 모든 API 호출에 사용됩니다.
+description: 데이터 거버넌스 정책은 Experience Platform 내에서 데이터를 수행할 수 있도록 허용하거나 제한할 수 있는 마케팅 작업 종류를 설명하는 조직에서 사용하는 규칙입니다. /policy 엔드포인트는 데이터 거버넌스 정책 보기, 만들기, 업데이트 또는 삭제와 관련된 모든 API 호출에 사용됩니다.
 exl-id: 62a6f15b-4c12-4269-bf90-aaa04c147053
-source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '1840'
+source-wordcount: '1865'
 ht-degree: 2%
 
 ---
 
-# 데이터 사용 정책 끝점
+# 데이터 거버넌스 정책 엔드포인트
 
-데이터 사용 정책은 내에서 데이터를 수행할 수 있도록 허용되거나 제한된 마케팅 작업 종류를 설명하는 규칙입니다 [!DNL Experience Platform]. 다음 `/policies` 의 엔드포인트 [!DNL Policy Service API] 조직의 데이터 사용 정책을 프로그래밍 방식으로 관리할 수 있습니다.
+데이터 거버넌스 정책은 내에서 데이터를 수행할 수 있도록 허용되거나 제한된 마케팅 작업 종류를 설명하는 규칙입니다 [!DNL Experience Platform]. 다음 `/policies` 의 엔드포인트 [!DNL Policy Service API] 조직의 데이터 거버넌스 정책을 프로그래밍 방식으로 관리할 수 있습니다.
 
 >[!IMPORTANT]
 >
->이 종단점은 `/policies` 의 엔드포인트 [액세스 제어 API](../../access-control/abac/api/policies.md): 액세스 제어 정책을 관리하는 데 사용됩니다.
+>거버넌스 정책은 조직의 특정 플랫폼 사용자가 액세스할 수 있는 특정 데이터 속성을 결정하는 액세스 제어 정책과 혼동하지 않도록 합니다. 자세한 내용은 `/policies` 엔드포인트 가이드 [액세스 제어 API](../../access-control/abac/api/policies.md) 를 참조하십시오.
 
 ## 시작하기
 
@@ -611,7 +611,7 @@ curl -X DELETE \
 
 ## 활성화된 핵심 정책 목록 검색 {#list-enabled-core}
 
-기본적으로 활성화된 데이터 사용 정책만 평가에 참여합니다. 조직에 GET 요청을 수행하여 현재 조직에서 활성화한 핵심 정책 목록을 검색할 수 있습니다 `/enabledCorePolicies` 엔드포인트.
+기본적으로 활성화된 데이터 거버넌스 정책만 평가에 참여합니다. 조직에 GET 요청을 수행하여 현재 조직에서 활성화한 핵심 정책 목록을 검색할 수 있습니다 `/enabledCorePolicies` 엔드포인트.
 
 **API 형식**
 
@@ -663,7 +663,7 @@ curl -X GET \
 
 ## 활성화된 핵심 정책 목록 업데이트 {#update-enabled-core}
 
-기본적으로 활성화된 데이터 사용 정책만 평가에 참여합니다. 에 PUT 요청을 함으로써 `/enabledCorePolicies` endpoint, 단일 호출을 사용하여 조직에 대해 활성화된 핵심 정책 목록을 업데이트할 수 있습니다.
+기본적으로 활성화된 데이터 거버넌스 정책만 평가에 참여합니다. 에 PUT 요청을 함으로써 `/enabledCorePolicies` endpoint, 단일 호출을 사용하여 조직에 대해 활성화된 핵심 정책 목록을 업데이트할 수 있습니다.
 
 >[!NOTE]
 >

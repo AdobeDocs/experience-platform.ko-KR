@@ -5,16 +5,20 @@ title: UI에서 데이터 사용 정책 관리
 topic-legacy: policies
 description: Adobe Experience Platform 데이터 거버넌스는 데이터 사용 정책을 만들고 관리할 수 있는 사용자 인터페이스를 제공합니다. 이 문서에서는 Experience Platform 사용자 인터페이스의 정책 작업 영역에서 수행할 수 있는 작업에 대한 개요를 제공합니다.
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
-source-git-commit: 5776c691b7f3ec4cb544de59cf6beef162285399
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '1407'
+source-wordcount: '1411'
 ht-degree: 0%
 
 ---
 
 # UI에서 데이터 사용 정책 관리
 
-Adobe Experience Platform 데이터 거버넌스는 데이터 사용 정책을 만들고 관리할 수 있는 사용자 인터페이스를 제공합니다. 이 문서에서는 **정책** 작업 영역 [!DNL Experience Platform] 사용자 인터페이스.
+이 문서에서는 **[!UICONTROL 정책]** 작업 공간 을 사용하여 데이터 사용 정책을 만들고 관리합니다.
+
+>[!NOTE]
+>
+>UI에서 액세스 제어 정책을 관리하는 방법에 대한 자세한 내용은 [특성 기반 액세스 제어 UI 안내서](../../access-control/abac/ui/policies.md) 을 가리키도록 업데이트하는 것이 좋습니다.
 
 >[!IMPORTANT]
 >

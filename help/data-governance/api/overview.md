@@ -3,12 +3,12 @@ keywords: Experience Platform;홈;인기 있는 주제
 solution: Experience Platform
 title: 정책 서비스 API 안내서
 topic-legacy: developer guide
-description: 정책 서비스 API를 사용하여 개발자는 Experience Platform에서 데이터 사용 레이블 및 정책을 관리할 수 있습니다. API를 사용하여 주요 작업을 수행하는 방법을 알아보려면 이 안내서를 따르십시오.
+description: 정책 서비스 API를 사용하여 개발자는 Experience Platform에서 데이터 사용 레이블 및 정책을 관리할 수 있습니다. 이 안내서를 따라 API를 사용하여 주요 작업을 수행하는 방법에 대해 알아보십시오.
 exl-id: 23c05670-7107-4b96-bc24-0a51b5d267b2
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '504'
-ht-degree: 0%
+source-wordcount: '545'
+ht-degree: 3%
 
 ---
 
@@ -30,7 +30,13 @@ Adobe Experience Platform 데이터 거버넌스를 사용하면 고객 데이�
 
 ## 정책
 
-데이터 사용 정책은 내에서 데이터를 수행할 수 있도록 허용되거나 제한된 마케팅 작업 종류를 설명하는 규칙입니다 [!DNL Experience Platform]. 정책은 다음과 같이 정의됩니다.
+데이터 거버넌스 정책은 내에서 데이터를 수행할 수 있도록 허용되거나 제한된 마케팅 작업 종류를 설명하는 규칙입니다 [!DNL Experience Platform].
+
+>[!NOTE]
+>
+>데이터 거버넌스 정책은 조직의 특정 플랫폼 사용자가 액세스할 수 있는 특정 데이터 속성을 결정하는 액세스 제어 정책과 혼동하지 않도록 합니다. 다음 안내서를 참조하십시오. [속성 기반 액세스 제어](../../access-control/abac/overview.md) 추가 정보.
+
+데이터 거버넌스 정책은 다음과 같이 정의됩니다.
 
 1. 특정 마케팅 작업
 1. 작업이 제한되는 데이터 사용 레이블입니다

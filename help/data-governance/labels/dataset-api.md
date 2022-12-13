@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;홈;인기 항목;데이터 세트 api;데이터 사용 관리;데이터 사용 api
 solution: Experience Platform
-title: 'API를 사용하여 데이터 세트에 대한 데이터 사용 레이블 관리 '
+title: API를 사용하여 데이터 세트에 대한 데이터 사용 레이블 관리
 topic-legacy: developer guide
 description: 데이터 세트 서비스 API를 사용하면 데이터 세트에 대한 사용 레이블을 적용하고 편집할 수 있습니다. Adobe Experience Platform의 데이터 카탈로그 기능의 일부이지만 데이터 세트 메타데이터를 관리하는 카탈로그 서비스 API와는 별개입니다.
 exl-id: 24a8d870-eb81-4255-8e47-09ae7ad7a721
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 7e4c2ef8089276829604c9d8a8dd20a122b18c7a
 workflow-type: tm+mt
-source-wordcount: '803'
+source-wordcount: '816'
 ht-degree: 1%
 
 ---
@@ -15,6 +15,10 @@ ht-degree: 1%
 # API를 사용하여 데이터 세트에 대한 데이터 사용 레이블 관리
 
 다음 [[!DNL Dataset Service API]](https://www.adobe.io/experience-platform-apis/references/dataset-service/) 데이터 세트에 대한 사용 레이블을 적용하고 편집할 수 있습니다. Adobe Experience Platform의 데이터 카탈로그 기능의 일부이지만 이 기능과는 별개입니다 [!DNL Catalog Service] 데이터 세트 메타데이터를 관리하는 API입니다.
+
+>[!IMPORTANT]
+>
+>데이터 세트 수준에서 레이블을 적용하는 것은 데이터 거버넌스 사용 사례에만 지원됩니다. 데이터에 대한 액세스 정책을 만들려고 하는 경우 다음을 수행해야 합니다 [스키마에 레이블 적용](../../xdm/tutorials/labels.md) 데이터 세트가 기반으로 합니다. 다음 사항에 대한 개요를 참조하십시오. [속성 기반 액세스 제어](../../access-control/abac/overview.md) 추가 정보.
 
 이 문서에서는 [!DNL Dataset Service API]. API 호출을 사용하여 데이터 사용 레이블을 직접 관리하는 방법에 대한 단계는 를 참조하십시오. [레이블 끝점 안내서](../api/labels.md) 대상 [!DNL Policy Service API].
 
@@ -155,10 +159,6 @@ curl -X PUT \
 
 ## 다음 단계
 
-이 문서를 읽은 후에는 [!DNL Dataset Service] API.
-
-데이터 세트 및 필드 수준에서 데이터 사용 레이블을 추가하면 데이터 수집을 시작할 수 있습니다 [!DNL Experience Platform]. 자세한 내용은 [데이터 수집 설명서](../../ingestion/home.md).
-
-이제 적용한 레이블을 기반으로 데이터 사용 정책을 정의할 수도 있습니다. 자세한 내용은 [데이터 사용 정책 개요](../policies/overview.md).
+이 문서를 읽은 후에는 [!DNL Dataset Service] API. 이제 다음을 정의할 수 있습니다 [데이터 사용 정책](../policies/overview.md) 및 [액세스 제어 정책](../../access-control/abac/ui/policies.md) 적용한 레이블을 기준으로 합니다.
 
 의 데이터 세트 관리에 대한 자세한 내용은 [!DNL Experience Platform]를 참조하고 [데이터 세트 개요](../../catalog/datasets/overview.md).

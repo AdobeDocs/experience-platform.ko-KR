@@ -3,18 +3,18 @@ keywords: Experience Platform;홈;인기 항목;액세스 제어 권한;액세�
 solution: Experience Platform
 title: 참조 API 끝점
 topic-legacy: developer guide
-description: Adobe Experience Platform의 액세스 제어를 사용하면 Adobe Admin Console을 사용하여 다양한 플랫폼 기능에 대한 역할 및 권한을 관리할 수 있습니다. 액세스 제어 API에서 /acl/reference 종단점에 대한 GET 요청을 수행하여 모든 권한 및 리소스 유형의 이름을 나열할 수 있습니다. 그런 다음 API 호출에서 이러한 이름을 사용하여 현재 사용자에 대한 효과적인 정책을 볼 수 있습니다.
+description: 액세스 제어 API의 참조 끝점을 사용하면 사용 가능한 권한 및 리소스 유형의 이름을 볼 수 있습니다. 이 이름을 사용하여 현재 사용자에 대한 효과적인 액세스 제어 정책을 볼 수 있습니다.
 exl-id: 18d84d54-9258-4451-9aa8-7c647b45a8da
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '195'
+source-wordcount: '165'
 ht-degree: 1%
 
 ---
 
 # 참조 끝점
 
-에 GET 요청을 수행하여 모든 권한 및 리소스 유형의 이름을 나열할 수 있습니다 `/acl/reference` 엔드포인트. 그런 다음 API 호출에서 이러한 이름을 사용할 수 있습니다 [효과적인 정책 보기](./effective-policies.md) 현재 사용자의 경우
+에 GET 요청을 수행하여 모든 권한 및 리소스 유형의 이름을 나열할 수 있습니다 `/acl/reference` 엔드포인트. 그런 다음 API 호출에서 이러한 이름을 사용할 수 있습니다 [효과적인 액세스 제어 정책 보기](./effective-policies.md) 현재 사용자의 경우
 
 권한은 Adobe Admin Console을 통해 관리되는 정책이며 0개 이상의 리소스 유형 정책에 매핑됩니다. 리소스 유형은 특정 유형의 [!DNL Platform] 리소스(예: 데이터 세트 또는 스키마)
 

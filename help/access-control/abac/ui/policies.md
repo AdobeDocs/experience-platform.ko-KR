@@ -1,18 +1,22 @@
 ---
 keywords: Experience Platform;홈;인기 항목;액세스 제어;속성 기반 액세스 제어;ABAC
-title: 속성 기반 액세스 제어 정책 만들기
-description: 이 문서에서는 Adobe Experience Cloud의 권한 인터페이스를 통해 정책 관리에 대한 정보를 제공합니다
+title: 액세스 제어 정책 관리
+description: 이 문서에서는 Adobe Experience Cloud의 권한 인터페이스를 통해 액세스 제어 정책을 관리하는 방법에 대한 정보를 제공합니다.
 exl-id: 66820711-2db0-4621-908d-01187771de14
-source-git-commit: 1a755fa5480e036bde50617f01440cfabbaf64c2
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '678'
+source-wordcount: '726'
 ht-degree: 0%
 
 ---
 
-# 정책 관리
+# 액세스 제어 정책 관리
 
-정책은 허용 및 허용되지 않는 작업을 설정하기 위해 특성을 함께 가져오는 구문입니다. 정책은 로컬 또는 글로벌 정책일 수 있으며 다른 정책을 재정의할 수 있습니다.
+액세스 제어 정책은 허용 및 허용되지 않는 작업을 설정하기 위해 특성을 함께 가져오는 명령문입니다. 액세스 정책은 로컬 또는 글로벌 정책일 수 있으며 다른 정책을 재정의할 수 있습니다.
+
+>[!IMPORTANT]
+>
+>액세스 정책은 데이터 사용 정책과 혼동하지 않도록 합니다. 이 정책은 조직의 사용자가 액세스 권한이 있는 대신 Adobe Experience Platform에서 데이터를 사용하는 방법을 제어합니다. 만들기에 대한 안내서를 참조하십시오 [데이터 사용 정책](../../../data-governance/policies/create.md) 추가 정보.
 
 ## 새 정책 만들기
 

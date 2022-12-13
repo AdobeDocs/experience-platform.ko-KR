@@ -5,9 +5,9 @@ title: 데이터 거버넌스 개요
 topic-legacy: overview
 description: Adobe Experience Platform 데이터 거버넌스를 사용하면 고객 데이터를 관리하고 데이터 사용에 적용되는 규정, 제한 및 정책을 준수할 수 있습니다. 이 디자이너는 카탈로그 작성, 데이터 계보, 데이터 사용 레이블 지정, 데이터 사용 정책, 마케팅 작업을 위한 데이터 사용 제어 등 다양한 수준에서 Experience Platform 내에서 주요 역할을 합니다
 exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
-source-git-commit: 0c78b5dc420a1346c92bf9ed7864fa1733422a83
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '1431'
+source-wordcount: '1479'
 ht-degree: 0%
 
 ---
@@ -17,6 +17,10 @@ ht-degree: 0%
 Adobe Experience Platform의 핵심 기능 중 하나는 여러 엔터프라이즈 시스템의 데이터를 함께 가져와서 마케터가 고객을 식별, 이해 및 참여시킬 수 있도록 하는 것입니다. 이 데이터는 조직 또는 법적 규정에 의해 정의된 사용 제한을 받을 수 있습니다. 따라서 내에서 데이터 작업을 수행하는 것이 중요합니다 [!DNL Platform] 는 데이터 사용 정책을 준수합니다.
 
 Adobe Experience Platform 데이터 거버넌스를 사용하면 고객 데이터를 관리하고 데이터 사용에 적용되는 규정, 제한 및 정책을 준수할 수 있습니다. 이 구성 요소는 [!DNL Experience Platform] 카탈로그 작성, 데이터 계보, 데이터 사용 레이블 지정, 데이터 사용 정책 및 마케팅 작업을 위한 데이터 사용 제어 등의 다양한 수준에서 사용할 수 있습니다.
+
+>[!NOTE]
+>
+>Experience Platform에서 데이터 거버넌스는 작업을 수행하는 사용자에 관계없이, 데이터 사용 또는 활성화 방식에만 적용됩니다. 조직 내의 특정 플랫폼 사용자의 특정 데이터 필드에 대한 액세스를 제어하는 방법에 대한 자세한 내용은 [속성 기반 액세스 제어](../access-control/abac/overview.md) 을 가리키도록 업데이트하는 것이 좋습니다.
 
 ## 데이터 거버넌스 역할
 

@@ -1,9 +1,10 @@
 ---
 title: Data Governance End-to-End 안내서
 description: Adobe Experience Platform의 필드 및 데이터 세트에 대한 데이터 사용 제한을 적용하는 전체 프로세스를 따릅니다.
-source-git-commit: c8b2dba9b1e305f826830b8341bf1a6dde4e2da2
+exl-id: f18ae032-027a-4c97-868b-e04753237c81
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '1447'
+source-wordcount: '1513'
 ht-degree: 0%
 
 ---
@@ -16,7 +17,7 @@ Adobe Experience Platform의 특정 데이터 세트 및 필드에서 수행할 
 1. [데이터 거버넌스 정책 구성 및 활성화](#policy) 특정 마케팅 작업에 사용할 수 있는 레이블이 지정된 데이터 종류를 결정합니다.
 1. [대상에 마케팅 작업 적용](#destinations) 를 추가하여 해당 대상으로 전송된 데이터에 적용되는 정책을 나타냅니다.
 
-레이블, 정책 및 마케팅 작업 구성을 마치면 다음을 수행할 수 있습니다 [정책 적용 테스트](#test) 가 예상대로 작동하는지 확인합니다.
+레이블, 거버넌스 정책 및 마케팅 작업 구성을 완료하면 다음을 수행할 수 있습니다 [정책 적용 테스트](#test) 가 예상대로 작동하는지 확인합니다.
 
 이 안내서에서는 Platform UI에서 데이터 거버넌스 정책을 구성하고 적용하는 전체 프로세스를 안내합니다. 이 안내서에서 사용되는 기능에 대한 자세한 내용은 다음 항목에 대한 개요 설명서를 참조하십시오.
 
@@ -24,6 +25,10 @@ Adobe Experience Platform의 특정 데이터 세트 및 필드에서 수행할 
 * [데이터 사용 레이블](./labels/overview.md)
 * [데이터 사용 정책](./policies/overview.md)
 * [정책 적용](./enforcement/overview.md)
+
+>[!NOTE]
+>
+>이 안내서는 Experience Platform에서 데이터를 사용하거나 활성화하는 방법에 대한 정책을 설정하고 적용하는 방법에 중점을 둡니다. 제한하려는 경우 **액세스** 조직 내의 특정 플랫폼 사용자에 대한 데이터 자체에 대한 자세한 내용은 [속성 기반 액세스 제어](../access-control/abac/end-to-end-guide.md) 을 가리키도록 업데이트하는 것이 좋습니다. 속성 기반 액세스 제어는 레이블 및 정책을 사용하지만, 데이터 거버넌스와 다른 사용 사례에 사용됩니다.
 
 ## 레이블 적용 {#labels}
 

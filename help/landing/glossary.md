@@ -5,9 +5,9 @@ title: Adobe Experience Platform 용어
 topic-legacy: getting started
 description: Experience Platform의 중요한 용어에 대한 용어집입니다.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: b9b33a6c1df0810db32f3253205221fed8957dd5
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '7435'
+source-wordcount: '7433'
 ht-degree: 0%
 
 ---
@@ -106,7 +106,7 @@ ht-degree: 0%
 
 **콘솔**: in [!DNL Query Service]콘솔에서는 쿼리의 상태 및 작업에 대한 정보를 제공합니다. 콘솔에 연결 상태가 표시됩니다 [!DNL Query Service], 실행 중인 쿼리 작업과 이러한 쿼리에서 발생하는 모든 오류 메시지
 
-**계약(&quot;C&quot;) 레이블**: 계약(&quot;C&quot;) 데이터 사용 레이블은 계약 의무가 있거나 고객의 데이터 거버넌스 정책과 관련된 데이터를 분류하는 데 사용됩니다.
+**계약(&quot;C&quot;) 레이블**: 계약(&quot;C&quot;) 데이터 사용 레이블은 계약 의무가 있거나 조직의 데이터 거버넌스 정책과 관련된 데이터를 분류하는 데 사용됩니다.
 
 **C1 계약 레이블**: A `C1` 계약 데이터 사용 레이블은 개별 또는 장치 식별자를 포함하지 않고 Adobe Experience Cloud에서 집계된 양식으로만 데이터를 내보낼 수 있도록 지정합니다. 예를 들어, 소셜 네트워크에서 가져온 데이터입니다.
 
@@ -502,7 +502,7 @@ ht-degree: 0%
 
 **소스 커넥터**: 소스 커넥터(소스라고도 함)를 사용하면 여러 소스에서 데이터를 쉽게 수집할 수 있으므로 Experience Platform 서비스를 사용하여 데이터를 구조화, 레이블 지정 및 개선할 수 있습니다. 클라우드 기반 스토리지, 타사 소프트웨어 및 CRM 시스템과 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 
-**스트리밍 연결**: 스트리밍 연결은 Adobe이 제공하는 고유한 종단점으로, 데이터를 Experience Platform으로 스트리밍하기 위해 고객의 IMS 조직에 연결됩니다.
+**스트리밍 연결**: 스트리밍 연결은 Adobe이 제공하는 고유한 엔드포인트이며 데이터를 Experience Platform으로 스트리밍하기 위해 조직에 연결됩니다.
 
 **표준 ID 네임스페이스**: 표준 ID 네임스페이스는 Adobe에서 제공하는 사전 정의된 ID 네임스페이스이며, 이 네임스페이스는 고객을 식별하는 데 일반적으로 사용되는 업계 표준 솔루션을 나타냅니다.
 

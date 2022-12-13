@@ -1,23 +1,27 @@
 ---
 keywords: Experience Platform;홈;인기 항목;데이터 거버넌스;데이터 사용 정책
 solution: Experience Platform
-title: API에서 데이터 사용 정책 만들기
+title: API에서 데이터 거버넌스 정책 만들기
 topic-legacy: policies
 type: Tutorial
-description: 정책 서비스 API를 사용하면 데이터 사용 정책을 만들고 관리하여 특정 데이터 사용 레이블이 포함된 데이터에 대해 수행할 수 있는 마케팅 작업을 결정할 수 있습니다. 이 문서에서는 정책 서비스 API를 사용하여 정책을 만들기 위한 단계별 자습서를 제공합니다.
+description: 정책 서비스 API를 사용하여 데이터 거버넌스 정책을 만드는 방법을 알아봅니다.
 exl-id: 8483f8a1-efe8-4ebb-b074-e0577e5a81a4
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '1217'
+source-wordcount: '1200'
 ht-degree: 2%
 
 ---
 
-# API에서 데이터 사용 정책 만들기
+# API에서 데이터 거버넌스 정책 만들기
 
-다음 [정책 서비스 API](https://www.adobe.io/experience-platform-apis/references/policy-service/) 데이터 사용 정책을 만들고 관리하여 특정 데이터 사용 레이블을 포함하는 데이터에 대해 수행할 수 있는 마케팅 작업을 결정할 수 있습니다.
+다음 [정책 서비스 API](https://www.adobe.io/experience-platform-apis/references/policy-service/) 데이터 거버넌스 정책을 만들고 관리하여 특정 데이터 사용 레이블을 포함하는 데이터에 대해 수행할 수 있는 마케팅 작업을 결정할 수 있습니다.
 
-이 문서에서는 [!DNL Policy Service] API. API에서 사용할 수 있는 다양한 작업에 대한 보다 포괄적인 안내서는 를 참조하십시오. [정책 서비스 개발자 안내서](../api/getting-started.md).
+이 문서에서는 [!DNL Policy Service] API.
+
+>[!NOTE]
+>
+>액세스 제어 정책을 만드는 방법에 대한 단계는 `/policies` 엔드포인트 가이드 [액세스 제어 API](../../access-control/abac/api/policies.md). 동의 정책을 만드는 방법을 알아보려면 [정책 UI 안내서](./user-guide.md#consent-policy).
 
 ## 시작하기
 

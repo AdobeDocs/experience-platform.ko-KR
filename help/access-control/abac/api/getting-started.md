@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;홈;인기 항목;속성 기반 액세스 제어;속성 기반 액세스 제어
-title: 속성 기반 액세스 제어 시작
-description: 속성 기반 액세스 제어를 사용하면 Adobe Experience Platform 내에서 역할 및 정책을 프로그래밍 방식으로 관리할 수 있습니다. 이 안내서를 따라 API를 사용하여 주요 작업을 수행하는 방법에 대해 알아보십시오.
+title: 속성 기반 액세스 제어 API 시작하기
+description: 특성 기반 액세스 제어 API를 사용하면 Adobe Experience Platform 내에서 역할을 프로그래밍 방식으로 관리하고 정책에 액세스할 수 있습니다. 이 안내서를 따라 API를 사용하여 주요 작업을 수행하는 방법에 대해 알아보십시오.
 exl-id: d1a66afa-dff4-49d7-b57c-527f05977155
-source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
+source-git-commit: 54e15234d1b1050ea2cdb8b7d37c79a133a339f1
 workflow-type: tm+mt
-source-wordcount: '325'
+source-wordcount: '330'
 ht-degree: 4%
 
 ---
 
-# 특성 기반 액세스 제어 시작
+# 속성 기반 액세스 제어 API 시작
 
-이 개발자 가이드는 속성 기반 액세스 제어를 사용하여 Adobe Experience Platform의 역할, 제품, 권한 카테고리 및 권한 세트를 관리하는 데 도움이 되는 단계를 제공하며 다양한 작업을 수행하기 위한 샘플 API 호출을 포함합니다.
+이 개발자 가이드는 속성 기반 액세스 제어 API를 사용하여 Adobe Experience Platform의 역할, 제품, 권한 카테고리 및 권한 세트를 관리하는 데 도움이 되는 단계를 제공하며 다양한 작업을 수행하기 위한 샘플 API 호출을 포함합니다.
 
 ## 샘플 API 호출 읽기
 

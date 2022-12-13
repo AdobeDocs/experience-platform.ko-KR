@@ -3,22 +3,22 @@ keywords: Experience Platform;홈;인기 항목;액세스 제어;속성 기반 �
 title: 속성 기반 액세스 제어 찾아보기
 description: 이 문서에서는 Adobe Experience Cloud의 권한 인터페이스 사용에 대한 정보를 제공합니다
 exl-id: 39634bde-8858-44a6-b39a-776846654fc1
-source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '346'
+source-wordcount: '347'
 ht-degree: 4%
 
 ---
 
 # 권한 안내서
 
-권한 은 관리자가 사용자 역할 및 액세스 정책을 정의하여 제품 애플리케이션 내의 기능 및 개체에 대한 액세스 권한을 관리할 수 있는 Adobe Experience Cloud의 영역입니다.
+[!UICONTROL 권한] 는 관리자가 사용자 역할 및 액세스 정책을 정의하여 제품 애플리케이션 내의 기능 및 개체에 대한 액세스 권한을 관리할 수 있는 Adobe Experience Cloud 영역입니다.
 
-권한을 사용하여 다음을 구성할 수 있습니다.
+사용 [!UICONTROL 권한]를 구성할 수 있습니다.
 
+* [액세스 정책](./policies.md)
 * [레이블](./labels.md)
 * [권한](./permissions.md)
-* [정책](./permissions.md)
 * [역할](./roles.md)
 * [샌드박스](./sandboxes.md)
 * [사용자](./users.md)

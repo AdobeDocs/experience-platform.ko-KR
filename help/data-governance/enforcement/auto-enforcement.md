@@ -5,9 +5,9 @@ title: 자동 정책 적용
 topic-legacy: guide
 description: 이 문서에서는 Experience Platform의 대상에 세그먼트를 활성화할 때 데이터 사용 정책이 자동으로 적용되는 방식을 다룹니다.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: 5776c691b7f3ec4cb544de59cf6beef162285399
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '1700'
+source-wordcount: '1727'
 ht-degree: 0%
 
 ---
@@ -16,9 +16,13 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->자동화된 정책 적용은 구입한 조직에만 사용할 수 있습니다 **Adobe 의료 보호** 또는 **Adobe 개인 정보 보호 및 보안 차단**.
+>자동 정책 적용은 구입한 조직에만 사용할 수 있습니다 **Adobe 의료 보호** 또는 **Adobe 개인 정보 보호 및 보안 차단**.
 
-데이터가 레이블이 지정되고 사용 정책이 정의되면 정책에 따라 데이터 사용 규정을 적용할 수 있습니다. 대상 세그먼트를 대상으로 활성화할 때, Adobe Experience Platform에서는 위반이 발생하면 사용 정책을 자동으로 적용합니다.
+데이터가 레이블이 지정되고 데이터 사용 정책이 정의되면 정책에 따라 데이터 사용 규정을 적용할 수 있습니다. 대상 세그먼트를 대상으로 활성화할 때, Adobe Experience Platform에서는 위반이 발생하면 사용 정책을 자동으로 적용합니다.
+
+>[!NOTE]
+>
+>이 문서는 데이터 거버넌스 및 동의 정책의 시행에 중점을 둡니다. 액세스 제어 정책에 대한 자세한 내용은 [속성 기반 액세스 제어](../../access-control/abac/overview.md).
 
 ## 전제 조건
 

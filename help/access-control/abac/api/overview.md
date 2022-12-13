@@ -2,11 +2,11 @@
 keywords: Experience Platform;홈;인기 항목;api;속성 기반 액세스 제어;속성 기반 액세스 제어
 solution: Experience Platform
 title: 속성 기반 액세스 제어 API 안내서
-description: 속성 기반 액세스 제어 API를 사용하면 Adobe Experience Platform 내에서 역할 및 정책을 프로그래밍 방식으로 관리할 수 있습니다. 이 안내서를 따라 API를 사용하여 주요 작업을 수행하는 방법에 대해 알아보십시오.
+description: 속성 기반 액세스 제어 API를 사용하면 Adobe Experience Platform 내에서 역할 및 액세스 정책을 프로그래밍 방식으로 관리할 수 있습니다. 이 안내서를 따라 API를 사용하여 주요 작업을 수행하는 방법에 대해 알아보십시오.
 exl-id: 0fc32354-4869-4392-9501-b1dbea1bc55e
-source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '393'
+source-wordcount: '450'
 ht-degree: 4%
 
 ---
@@ -16,6 +16,10 @@ ht-degree: 4%
 속성 기반 액세스 제어는 관리자가 속성을 기반으로 특정 개체 및/또는 기능에 대한 액세스를 제어할 수 있도록 해주는 Adobe Experience Platform의 기능입니다. 속성은 스키마 필드나 세그먼트에 추가된 레이블과 같이 객체에 추가된 메타데이터일 수 있습니다. 관리자는 사용자 액세스 권한을 관리하기 위한 속성을 포함하는 액세스 정책을 정의합니다.
 
 속성 기반 액세스 제어 API는 Adobe Experience Platform 내의 역할, 제품, 권한 카테고리 및 권한 세트에 액세스하는 데 사용되며, 사용 가능한 모든 라이브러리 리소스에 액세스할 수 있는 사용자 인터페이스 및 RESTful API를 제공합니다.
+
+>[!IMPORTANT]
+>
+>속성 기반 액세스 제어는 Experience Platform의 데이터 거버넌스 기능과 혼동하지 않도록 합니다. 이 기능을 사용하면 조직의 사용자가 액세스할 수 있는 데이터 대신 레이블과 정책을 사용하여 플랫폼에서 데이터가 사용되는 방식을 제어할 수 있습니다. 자세한 내용은 [정책 서비스 API 안내서](../../../data-governance/api/overview.md) 를 참조하십시오.
 
 이러한 엔드포인트는 아래에 요약되어 있습니다. 자세한 내용은 개별 엔드포인트 안내서를 방문하여 을 참조하십시오. [시작 안내서](./getting-started.md) 필요한 헤더, 샘플 API 호출 읽기 등에 대한 중요한 정보를 제공합니다.
 

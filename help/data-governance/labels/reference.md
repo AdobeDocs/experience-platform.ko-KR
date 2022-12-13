@@ -5,9 +5,9 @@ title: 데이터 사용 레이블 용어집
 topic-legacy: labels
 description: 이 문서에서는 현재 Adobe Experience Platform에서 지원하는 모든 데이터 사용 레이블에 대해 간략하게 설명합니다.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: c29b6c7dc061ea910ebedcae1fa4beaa6def10b1
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '2117'
+source-wordcount: '2108'
 ht-degree: 1%
 
 ---
@@ -20,9 +20,9 @@ ht-degree: 1%
 >abstract="데이터 사용 레이블에는 몇 가지 카테고리가 있습니다. Adobe 정의 레이블에는 계약 레이블, ID 레이블 및 중요 레이블이 포함됩니다. 조직에서 정의한 레이블은 사용자 지정 레이블로 분류됩니다."
 >text="See the data usage labels glossary for more information on these label types."
 
-데이터 사용 레이블을 사용하면 해당 데이터에 적용되는 사용 정책에 따라 데이터 세트와 필드를 분류할 수 있습니다. Adobe Experience Platform 데이터 거버넌스에서는 데이터 카테고리를 시작하는 데 사용할 수 있는 몇 가지 핵심 데이터 사용 레이블을 기본적으로 제공합니다.
+데이터 사용 레이블을 사용하여 데이터 세트와 필드를 [거버넌스 정책](../policies/overview.md) 및 [액세스 제어 정책](../../access-control/abac/overview.md) 해당 데이터에 적용됩니다. Adobe Experience Platform에서는 데이터 분류를 시작하는 데 사용할 수 있는 몇 가지 핵심 데이터 사용 레이블을 제공합니다.
 
-이 문서에서는 현재 [!DNL Experience Platform]. 데이터 거버넌스에 대한 자세한 내용은 [데이터 거버넌스 개요](../home.md).
+이 문서에서는 Experience Platform이 현재 제공하는 핵심 데이터 사용 레이블에 대해 설명합니다.
 
 ## 계약 레이블
 
@@ -135,7 +135,7 @@ IAB: 4. 컨텐츠 선택, 전달, 보고: 정보를 수집하고 이전에 수�
 
 #### C10 {#c10}
 
-일부 데이터 사용 정책은 개인화를 위해 결합된 ID 데이터의 사용을 제한합니다. C10 레이블은 병합 정책이 &quot;개인 그래프&quot; 옵션을 사용하는 경우 세그먼트에 자동으로 적용됩니다.
+일부 데이터 거버넌스 정책은 개인화를 위해 결합된 ID 데이터의 사용을 제한합니다. C10 레이블은 병합 정책이 &quot;개인 그래프&quot; 옵션을 사용하는 경우 세그먼트에 자동으로 적용됩니다.
 
 #### C11 {#c11}
 

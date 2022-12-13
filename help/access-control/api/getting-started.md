@@ -5,9 +5,9 @@ title: Access Control API 안내서
 topic-legacy: developer guide
 description: Adobe Experience Platform의 액세스 제어를 사용하면 Adobe Admin Console을 사용하여 다양한 플랫폼 기능에 대한 역할 및 권한을 관리할 수 있습니다. 다음 섹션에서는 스키마 레지스트리 API를 성공적으로 호출하기 위해 개발자가 알아야 하는 추가 정보를 제공합니다.
 exl-id: 6fd956fb-ade4-48d3-843f-4c9a605945c9
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '385'
+source-wordcount: '386'
 ht-degree: 2%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 2%
 이 개발자 가이드는 요청에 대한 요청의 형식을 지정하는 방법에 대한 정보를 제공합니다. [[!DNL Access Control API]](https://www.adobe.io/experience-platform-apis/references/access-control/)및 은 다음 작업을 다룹니다.
 
 - [권한 및 리소스 유형의 목록 이름](./permissions-and-resource-types.md)
-- [현재 사용자에 대한 유효 정책 보기](./effective-policies.md)
+- [현재 사용자에 대한 유효한 액세스 정책 보기](./effective-policies.md)
 
 ## 시작하기
 
