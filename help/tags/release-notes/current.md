@@ -2,14 +2,20 @@
 title: 태그 및 이벤트 전달을 위한 릴리스 노트
 description: Adobe Experience Platform의 태그 및 이벤트 전달에 대한 최신 릴리스 정보입니다.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: c7344d0ac5b65c6abae6a040304f27dc7cd77cbb
+source-git-commit: 892d22a88546ff270af4f5b253a013015349898b
 workflow-type: tm+mt
-source-wordcount: '350'
-ht-degree: 6%
+source-wordcount: '418'
+ht-degree: 5%
 
 ---
 
 # 태그 및 이벤트 전달에 대한 릴리스 노트
+
+## 2022년 11월 23일
+
+* **[!DNL AWS]이벤트 전달을 위한 확장**: 이제 데이터를에 보낼 수 있습니다 [!DNL Amazon Web Services] ([!DNL AWS]) 사용 [이벤트 전달](../../tags/ui/event-forwarding/overview.md) 확장. 자세한 내용은 [[!DNL AWS] 확장 개요](../../tags/extensions/server/aws/overview.md) 추가 정보.
+* **[!DNL Google Ads Enhanced Conversions]이벤트 전달을 위한 확장**: 이제 변환 데이터를에 보낼 수 있습니다 [!DNL Google Ads] 사용 [이벤트 전달](../../tags/ui/event-forwarding/overview.md) 확장. 자세한 내용은 [[!DNL Google Ads Enhanced Conversions] 확장 개요](../../tags/extensions/server/google-ads-enhanced-conversions/overview.md) 추가 정보.
+* **[!DNL Microsoft Azure]이벤트 전달을 위한 확장**: 이제 데이터를에 보낼 수 있습니다 [!DNL Microsoft Azure] 사용 [이벤트 전달](../../tags/ui/event-forwarding/overview.md) 확장. 자세한 내용은 [[!DNL Microsoft Azure] 확장 개요](../../tags/extensions/server/azure/overview.md) 추가 정보.
 
 ## 2022년 10월 26일
 
