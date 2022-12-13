@@ -5,10 +5,10 @@ title: 스키마 구성 기본 사항
 topic-legacy: overview
 description: 이 문서에서는 Adobe Experience Platform에서 사용할 스키마를 구성하기 위한 XDM(Experience Data Model) 스키마와 빌딩 블록, 원칙 및 모범 사례를 소개합니다.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: a95e5cf02e993d6c761abd74c98c0967a89eb678
+source-git-commit: bd40388d710f8b135c0d36716b0ec59c8c9b78ee
 workflow-type: tm+mt
 source-wordcount: '4103'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 ## 스키마 이해
 
-스키마는 데이터의 구조와 형식을 나타내고 유효성을 검사하는 규칙 세트입니다. 높은 수준에서 스키마는 실제 개체(예: 사람)에 대한 추상적인 정의를 제공하고, 해당 개체의 각 인스턴스(이름, 성, 생일 등)에 어떤 데이터를 포함해야 하는지 설명합니다.
+스키마는 데이터의 구조와 형식을 나타내고 유효성을 검사하는 규칙 세트입니다. 스키마는 높은 수준에서 실제 개체(예: 사람)에 대한 추상적인 정의를 제공하고, 해당 개체의 각 인스턴스에 포함되어야 하는 데이터(예: 이름, 성, 생일 등)에 대한 개요를 제공합니다.
 
 스키마는 데이터 구조를 설명하는 것 외에도 데이터 간에 이동할 때 유효성이 확인될 수 있도록 데이터 제한 및 기대치를 적용합니다. 이러한 표준 정의를 사용하면 출처에 관계없이 일관되게 데이터를 해석할 수 있으며 응용 프로그램 간에 번역이 필요하지 않습니다.
 
@@ -60,7 +60,7 @@ Dell의 [!DNL Experience Platform] 빌드되어 있으며, 다음과 같이 알�
 
 이 프로세스를 지원하기 위해 스키마 내의 키 필드를 ID로 표시할 수 있습니다. 데이터를 수집하면 해당 필드의 데이터가 &quot;[!UICONTROL ID 그래프]해당 사용자에 대해 그런 다음 그래프 데이터에 [[!DNL Real-time Customer Profile]](../../profile/home.md) 및 기타 [!DNL Experience Platform] 각 개별 고객에 대한 결합 보기를 제공하는 서비스.
 
-일반적으로 &quot;[!UICONTROL ID]&quot; 포함: 이메일 주소, 전화 번호, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=ko-KR), CRM ID 또는 기타 고유한 ID 필드. 좋은 것일 수 있으므로 조직에 고유한 식별자를 고려해야 합니다. &quot;[!UICONTROL ID]&quot; 필드도 있습니다.
+일반적으로 &quot;[!UICONTROL ID]&quot; 포함: 이메일 주소, 전화 번호, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html), CRM ID 또는 기타 고유한 ID 필드. 좋은 것일 수 있으므로 조직에 고유한 식별자를 고려해야 합니다. &quot;[!UICONTROL ID]&quot; 필드도 있습니다.
 
 가장 강력한 프로필을 만들기 위해 데이터를 함께 가져올 수 있도록 하려면 스키마 계획 단계 동안 고객 ID를 고려하는 것이 중요합니다. 다음 사항에 대한 개요를 참조하십시오. [Adobe Experience Platform Identity 서비스](../../identity-service/home.md) id 정보를 통해 고객에게 디지털 경험을 제공하는 방법에 대해 자세히 알아보십시오.
 
@@ -235,7 +235,7 @@ Adobe은 몇 가지 표준(&quot;core&quot;) XDM 클래스를 제공합니다. �
 * 이중
 * 부울
 * 어레이
-* 개체
+* 오브젝트
 
 >[!TIP]
 >
@@ -253,7 +253,7 @@ Adobe은 몇 가지 표준(&quot;core&quot;) XDM 클래스를 제공합니다. �
 
 >[!NOTE]
 >
->맵 필드 유형을 사용하면 단일 키에 대한 여러 값을 포함하여 키-값 쌍 데이터를 사용할 수 있습니다. 맵은 표준 XDM 클래스 및 필드 그룹에서 찾을 수 있지만 스키마 레지스트리 API를 사용하여 사용자 지정 맵을 정의할 수도 있습니다. 다음에서 자습서를 참조하십시오. [사용자 지정 필드 정의](../tutorials/custom-fields-api.md#maps) 추가 정보.
+>맵 필드 유형을 사용하면 단일 키에 대한 여러 값을 포함하여 키-값 쌍 데이터를 사용할 수 있습니다. 맵은 표준 XDM 클래스 및 필드 그룹에서 찾을 수 있지만 스키마 레지스트리 API를 사용하여 사용자 지정 맵을 정의할 수도 있습니다. 다음에서 자습서를 참조하십시오. [사용자 지정 필드 정의](../tutorials/custom-fields-api.md#custom-maps) 추가 정보.
 
 ## 컴포지션 예
 

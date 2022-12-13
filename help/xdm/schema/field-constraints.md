@@ -5,7 +5,7 @@ title: XDM 필드 유형 제한
 topic-legacy: overview
 description: 매핑할 수 있는 다른 직렬화 형식 및 API에서 고유한 필드 유형을 정의하는 방법을 포함하여 XDM(Experience Data Model)의 필드 유형 제약 조건에 대한 참조입니다.
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
-source-git-commit: a3b4dd65b22bb04bcba52c44a09030f51454a9c8
+source-git-commit: bd40388d710f8b135c0d36716b0ec59c8c9b78ee
 workflow-type: tm+mt
 source-wordcount: '663'
 ht-degree: 6%
@@ -130,7 +130,7 @@ XDM은 JSON 스키마 위에 구축되므로 XDM 필드는 해당 유형을 정�
 >
 >아래 표에 나열된 표준 XDM 유형 중에서 [!UICONTROL 맵] 유형도 포함됩니다. 맵은 데이터가 특정 값에 매핑되는 키로 표시되거나, 키가 정적 스키마에 합리적으로 포함할 수 없고 데이터 값으로 처리되어야 하는 경우 표준 스키마에서 사용됩니다.
 >
->많은 표준 XDM 구성 요소가 맵 유형을 사용하며 다음을 수행할 수도 있습니다 [사용자 지정 맵 필드 정의](../tutorials/custom-fields-api.md#maps) 원하는 경우. 아래 표에 맵 유형의 포함은 기존 데이터가 현재 아래 나열된 형식으로 저장된 경우 XDM에 매핑하는 방법을 결정하는 데 도움이 되기 위한 것입니다.
+>많은 표준 XDM 구성 요소가 맵 유형을 사용하며 다음을 수행할 수도 있습니다 [사용자 지정 맵 필드 정의](../tutorials/custom-fields-api.md#custom-maps) 원하는 경우. 아래 표에 맵 유형의 포함은 기존 데이터가 현재 아래 나열된 형식으로 저장된 경우 XDM에 매핑하는 방법을 결정하는 데 도움이 되기 위한 것입니다.
 
 ### Parquet, Spark SQL 및 Java {#parquet}
 

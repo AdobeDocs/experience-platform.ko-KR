@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 데이터 유형 API 끝점
 description: 스키마 레지스트리 API의 /datatypes 종단점을 사용하면 경험 애플리케이션 내에서 XDM 데이터 유형을 프로그래밍 방식으로 관리할 수 있습니다.
 exl-id: 2a58d641-c681-40cf-acc8-7ad842cd6243
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 342da62b83d0d804b31744a580bcd3e38412ea51
 workflow-type: tm+mt
-source-wordcount: '1168'
-ht-degree: 4%
+source-wordcount: '1236'
+ht-degree: 3%
 
 ---
 
@@ -233,7 +233,11 @@ POST /tenant/datatypes
 
 **요청**
 
-데이터 유형을 정의할 필요는 없습니다 `meta:extends` 또는 `meta:intendedToExtend` 필드 및 충돌을 방지하기 위해 필드를 중첩할 필요가 없습니다.
+필드 그룹과 달리 데이터 유형을 정의할 필요가 없습니다 `meta:extends` 또는 `meta:intendedToExtend` 필드 및 충돌을 방지하기 위해 필드를 중첩할 필요가 없습니다.
+
+데이터 유형 자체의 필드 구조를 정의하는 데 있어 기본 유형(예: `string` 또는 `object`)를 참조하거나 `$ref` 속성을 사용합니다. 다음 안내서를 참조하십시오. [api에서 사용자 지정 XDM 필드 정의](../tutorials/custom-fields-api.md) 다양한 XDM 필드 유형에 대한 예상 형식에 대한 자세한 지침입니다.
+
+다음 요청은 하위 속성을 사용하여 &quot;속성 구성&quot; 개체 데이터 형식을 만듭니다 `yearBuilt`, `propertyType`, 및 `location`:
 
 ```SHELL
 curl -X POST \
@@ -244,17 +248,17 @@ curl -X POST \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
-        "title":"Property Construction",
-        "description":"Information related to the property construction",
-        "type":"object",
+        "title": "Property Construction",
+        "description": "Information related to the property construction",
+        "type": "object",
         "properties": {
           "yearBuilt": {
-            "type":"integer",
+            "type": "integer",
             "title": "Year Built",
             "description": "The year the property was constructed."
           },
           "propertyType": {
-            "type":"string",
+            "type": "string",
             "title": "Property Type",
             "description": "Type of building or structure in which the property exists.",
             "enum": [
@@ -267,8 +271,13 @@ curl -X POST \
               "mall": "Mall Space",
               "shoppingCenter": "Shopping Center"
             }
+          },
+          "location": {
+            "title": "Location",
+            "description": "The physical location of the property.",
+            "$ref": "https://ns.adobe.com/xdm/common/address"
           }
-        } 
+        }
       }'
 ```
 
@@ -278,8 +287,8 @@ curl -X POST \
 
 ```JSON
 {
-  "$id": "https://ns.adobe.com/{TENANT_ID}/datatypes/7602bc6e97e5786a31c95d9e6531a1596687433451d97bc1",
-  "meta:altId": "_{TENANT_ID}.datatypes.7602bc6e97e5786a31c95d9e6531a1596687433451d97bc1",
+  "$id": "https://ns.adobe.com/{TENANT_ID}/datatypes/669ffcc61cf5e94e8640dbe6a15f0f24eb3cd1ddbbfb6b36",
+  "meta:altId": "_{TENANT_ID}.datatypes.669ffcc61cf5e94e8640dbe6a15f0f24eb3cd1ddbbfb6b36",
   "meta:resourceType": "datatypes",
   "version": "1.0",
   "title": "Property Construction",
@@ -307,25 +316,34 @@ curl -X POST \
         "shoppingCenter": "Shopping Center"
       },
       "meta:xdmType": "string"
+    },
+    "location": {
+      "title": "Location",
+      "description": "The physical location of the property.",
+      "$ref": "https://ns.adobe.com/xdm/common/address",
+      "type": "object",
+      "meta:xdmType": "object"
     }
   },
-  "refs": [],
+  "refs": [
+    "https://ns.adobe.com/xdm/common/address"
+  ],
   "imsOrg": "{ORG_ID}",
   "meta:extensible": true,
   "meta:abstract": true,
   "meta:xdmType": "object",
   "meta:registryMetadata": {
-    "repo:createdDate": 1604524729435,
-    "repo:lastModifiedDate": 1604524729435,
+    "repo:createdDate": 1670885230789,
+    "repo:lastModifiedDate": 1670885230789,
     "xdm:createdClientId": "{CLIENT_ID}",
     "xdm:lastModifiedClientId": "{CLIENT_ID}",
     "xdm:createdUserId": "{USER_ID}",
     "xdm:lastModifiedUserId": "{USER_ID}",
-    "eTag": "1c838764342756868ca1297869f582a38d15f03ed0acfc97fda7532d22e942c7",
-    "meta:globalLibVersion": "1.15.4"
+    "eTag": "d3cc803a1f8daa06b7c150d882bd337d88f4d5d5f08d36cfc4c2849dc0255f7e",
+    "meta:globalLibVersion": "1.38.3.1"
   },
   "meta:containerId": "tenant",
-  "meta:sandboxId": "ff0f6870-c46d-11e9-8ca3-036939a64204",
+  "meta:sandboxId": "1bd86660-c5da-11e9-93d4-6d5fc3a66a8e",
   "meta:sandboxType": "production",
   "meta:tenantNamespace": "_{TENANT_ID}"
 }
@@ -371,12 +389,12 @@ curl -X PUT \
         "type": "object",
         "properties": {
           "yearBuilt": {
-            "type":"integer",
+            "type": "integer",
             "title": "Year Built",
             "description": "The year the property was constructed."
           },
           "propertyType": {
-            "type":"string",
+            "type": "string",
             "title": "Property Type",
             "description": "Type of building or structure in which the property exists.",
             "enum": [
@@ -533,7 +551,7 @@ curl -X PATCH \
     "property": {
       "properties": {
         "_{TENANT_ID}": {
-        "type":"object",
+        "type": "object",
         "properties": {
             "propertyName": {
               "type": "string",
