@@ -5,9 +5,9 @@ breadcrumb-title: 태그
 user-guide-description: 고객 경험을 향상시키기 위해 분석, 마케팅 및 광고 태그를 배포 및 관리하는 방법을 살펴볼 수 있습니다.
 feature: Tags
 solution: Data Collection
-source-git-commit: bf5346214fad66b3f470c74620b608d71639b85a
+source-git-commit: f2106d1e5bc0442df4d0ba84323821f6f2d9b1c7
 workflow-type: tm+mt
-source-wordcount: '971'
+source-wordcount: '965'
 ht-degree: 31%
 
 ---
@@ -213,11 +213,12 @@ ht-degree: 31%
       * [Google Analytics용 클라우드 커넥터](https://exchange.adobe.com/apps/ec/106542)
       * 코어 {#core}
          * [개요](./extensions/server/core/overview.md)
-      * [Facebook 전환 API](https://exchange.adobe.com/apps/ec/105509)
       * Google 광고 향상된 전환 {#google-ads-enhanced-conversions}
          * [개요](./extensions/server/google-ads-enhanced-conversions/overview.md)
       * [!DNL Mailchimp] Edge {#mailchimp}
          * [개요](./extensions/server/mailchimp/overview.md)
+      * [!DNL Meta Conversions API] {#meta}
+         * [개요](./extensions/server/meta/overview.md)
       * [!UICONTROL Microsoft Azure] {#azure}
          * [개요](./extensions/server/azure/overview.md)
       * [Pega 고객 결정 허브](https://exchange.adobe.com/apps/ec/107597)

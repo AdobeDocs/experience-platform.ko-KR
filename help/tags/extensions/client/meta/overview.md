@@ -1,9 +1,9 @@
 ---
 title: 메타 픽셀 확장 개요
 description: Adobe Experience Platform의 메타 픽셀 태그 확장에 대해 알아봅니다.
-source-git-commit: 87376172f89858bfa883084461544a2c50ba5009
+source-git-commit: a47e35a1b8c7ce2b0fa4ffe30fcdc7d22fc0f4c5
 workflow-type: tm+mt
-source-wordcount: '741'
+source-wordcount: '760'
 ht-degree: 0%
 
 ---
@@ -14,11 +14,9 @@ ht-degree: 0%
 
 다음 [!DNL Meta Pixel] 태그 확장을 사용하면 [!DNL Pixel] 기능이 포함되어 있습니다. 이 문서에서는 확장을 설치하고 [규칙](../../../ui/managing-resources/rules.md).
 
-<!-- (To include when Conversions API extension doc is published)
 >[!NOTE]
 >
->If you are trying to send server-side events to [!DNL Meta] rather than from the client side, use the [[!DNL Meta Conversions API] extension](../../server/meta/overview.md) instead.
--->
+>서버측 이벤트를 [!DNL Meta] 클라이언트 측에서 제공하는 대신 [[!DNL Meta Conversions API] 확장](../../server/meta/overview.md) 을 가리키도록 업데이트하는 것이 좋습니다.
 
 ## 전제 조건
 
