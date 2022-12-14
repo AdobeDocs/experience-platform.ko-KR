@@ -5,9 +5,9 @@ title: Edge Segmentation UI 안내서
 topic-legacy: ui guide
 description: Edge Segmentation은 Platform의 세그먼트를 즉시 평가하여 동일한 페이지와 다음 페이지 개인화 사용 사례를 가능하게 하는 기능입니다.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: 95ffd09b81b49c8c7d65695a2fbc0fcd97b12c9e
+source-git-commit: 8c7c1273feb2033bf338f7669a9b30d9459509f7
 workflow-type: tm+mt
-source-wordcount: '895'
+source-wordcount: '939'
 ht-degree: 0%
 
 ---
@@ -26,11 +26,9 @@ ht-degree: 0%
 >
 > 또한 에지 세그먼테이션 엔진은 가 있는 에지만 요청을 처리합니다 **하나** 에지 기반 기본 ID와 일치하는 기본 표시 id입니다.
 
-## 에지 세그멘테이션 쿼리 유형
+## 에지 세그멘테이션 쿼리 유형 {#query-types}
 
 현재 선택한 쿼리 유형만 에지 세그먼테이션으로 평가할 수 있습니다. 다음 섹션에서는 에지 세그먼테이션으로 평가할 수 있는 쿼리 유형 목록과 현재 지원되지 않는 쿼리 유형 목록을 제공합니다.
-
-### 지원되는 쿼리 유형 {#query-types}
 
 쿼리는 다음 표에 요약된 기준을 충족하는 경우 에지 세그먼테이션으로 평가할 수 있습니다.
 
@@ -54,6 +52,11 @@ ht-degree: 0%
 | 24시간 기간 내에 프로필이 있는 여러 이벤트 | 24시간의 시간 창 내에서 발생하는 하나 이상의 프로필 속성 및 여러 이벤트를 참조하는 모든 세그먼트 정의입니다. | 홈페이지를 방문한 미국 출신 **및** 지난 24시간 내에 체크아웃 페이지를 방문했습니다. | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [X: WHAT(eventType = "homePageView") WHEN(< 24 hours before now)]) and chain(xEvent, timestamp, [X: WHAT(eventType = "checkoutPageView") WHEN(< 24 hours before now)])` |
 | 세그먼트 | 하나 이상의 일괄 처리 또는 스트리밍 세그먼트를 포함하는 모든 세그먼트 정의. | 미국에 살고 &quot;기존 세그먼트&quot;에 있는 사람. | `homeAddress.countryCode = "US" and inSegment("existing segment")` |
 | 맵을 참조하는 쿼리 | 속성 맵을 참조하는 모든 세그먼트 정의입니다. | 외부 세그먼트 데이터를 기반으로 장바구니에 추가한 사람. | `chain(xEvent, timestamp, [A: WHAT(eventType = "addToCart") WHERE(externalSegmentMapProperty.values().exists(stringProperty="active"))])` |
+
+세그먼트 정의는 **not** 다음 시나리오에서 edge segmentation에 대해 활성화되어 있습니다.
+
+- 세그먼트 정의에는 단일 이벤트와 `inSegment` 이벤트.
+   - 그러나 세그먼트에 `inSegment` 이벤트는 프로필 전용, 세그먼트 정의 **will** edge segmentation에 대해 활성화되어 있습니다.
 
 ## 다음 단계
 

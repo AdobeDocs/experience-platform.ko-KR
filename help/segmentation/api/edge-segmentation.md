@@ -5,9 +5,9 @@ title: API를 사용한 Edge Segmentation
 topic-legacy: developer guide
 description: 이 문서에는 Adobe Experience Platform 세그멘테이션 서비스 API와 함께 에지 세그멘테이션을 사용하는 방법에 대한 예가 나와 있습니다.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: d2196d4d9cae4bdec160ce0c028d354a0db21cb5
+source-git-commit: 8c7c1273feb2033bf338f7669a9b30d9459509f7
 workflow-type: tm+mt
-source-wordcount: '1140'
+source-wordcount: '1187'
 ht-degree: 0%
 
 ---
@@ -60,6 +60,11 @@ Experience Platform API 엔드포인트를 성공적으로 호출하려면 다�
 | 맵을 참조하는 쿼리 | 속성 맵을 참조하는 모든 세그먼트 정의입니다. | 외부 세그먼트 데이터를 기반으로 장바구니에 추가한 사람. | `chain(xEvent, timestamp, [A: WHAT(eventType = "addToCart") WHERE(externalSegmentMapProperty.values().exists(stringProperty="active"))])` |
 
 또한 세그먼트가 **반드시** 에지 상태에서 활성화된 병합 정책에 연결 병합 정책에 대한 자세한 내용은 [정책 병합 안내서](../../profile/api/merge-policies.md).
+
+세그먼트 정의는 **not** 다음 시나리오에서 edge segmentation에 대해 활성화되어 있습니다.
+
+- 세그먼트 정의에는 단일 이벤트와 `inSegment` 이벤트.
+   - 그러나 세그먼트에 `inSegment` 이벤트는 프로필 전용, 세그먼트 정의 **will** edge segmentation에 대해 활성화되어 있습니다.
 
 ## 에지 세그먼테이션에 대해 활성화된 모든 세그먼트 검색
 

@@ -5,9 +5,9 @@ title: 스트리밍 세그먼테이션을 사용하여 거의 실시간으로 �
 topic-legacy: developer guide
 description: 이 문서에는 Adobe Experience Platform 세그멘테이션 서비스 API에서 스트리밍 세그멘테이션을 사용하는 방법에 대한 예가 나와 있습니다.
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: 30a12fee487609b4c85ba342963bb915e8152195
+source-git-commit: 8c7c1273feb2033bf338f7669a9b30d9459509f7
 workflow-type: tm+mt
-source-wordcount: '1938'
+source-wordcount: '1971'
 ht-degree: 1%
 
 ---
@@ -87,6 +87,8 @@ ht-degree: 1%
 
 - 세그먼트 정의에는 Adobe Audience Manager(AAM) 세그먼트 또는 트레이트가 포함됩니다.
 - 세그먼트 정의에는 여러 엔티티(다중 엔티티 쿼리)가 포함되어 있습니다.
+- 세그먼트 정의에는 단일 이벤트와 `inSegment` 이벤트.
+   - 그러나 세그먼트에 `inSegment` 이벤트는 프로필 전용, 세그먼트 정의 **will** 스트리밍 세그멘테이션을 사용하도록 설정되어 있습니다.
 
 스트리밍 세그멘테이션을 수행할 때 다음 지침이 적용됩니다.
 
