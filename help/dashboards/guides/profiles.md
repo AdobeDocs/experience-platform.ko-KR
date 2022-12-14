@@ -4,9 +4,9 @@ title: 프로필 대시보드 안내서
 description: Adobe Experience Platform은 조직의 실시간 고객 프로필 데이터에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: c4457d82c66be382ebb8619ce248f282fb45ed3a
+source-git-commit: af01ac288a8afe59105be5859b2d40de5e346963
 workflow-type: tm+mt
-source-wordcount: '3416'
+source-wordcount: '3381'
 ht-degree: 0%
 
 ---
@@ -275,14 +275,19 @@ ID에 대해 자세히 알아보려면 [Adobe Experience Platform Identity Servi
 
 ### [!UICONTROL ID로 세그먼트화되지 않은 프로필] {#unsegmented-profiles-by-identity}
 
+>!![NOTE]
+ID 위젯으로 세그먼트화되지 않은 프로필 위젯은 2022년 10월부터 더 이상 사용되지 않습니다.
+
+<!-- 
+
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_unsegmentedprofilesbyidentity"
->title="ID로 세그먼트화되지 않은 프로필"
->abstract="이 위젯은 세그먼트화되지 않은 프로필의 총 수를 고유 식별자로 분류합니다."
+>title="Unsegmented profiles by identity"
+>abstract="This widget categorizes the total number of unsegmented profiles by their unique identifier."
 
-다음 [!UICONTROL ID로 세그먼트화되지 않은 프로필] 위젯은 세그먼트화되지 않은 프로필의 총 수를 고유 식별자로 분류합니다. 쉽게 비교할 수 있도록 데이터가 막대 차트에 시각화됩니다.
+The [!UICONTROL Unsegmented Profiles by Identity] widget categorizes the total number of unsegmented profiles by their unique identifier. The data is visualized in a bar chart for ease of comparison. 
 
-![ID 위젯별로 세그먼트화되지 않은 프로필.](../images/profiles/unsegmented-profiles-by-identity.png)
+![The Unsegmented Profiles by Identity widget.](../images/profiles/unsegmented-profiles-by-identity.png) -->
 
 ### [!UICONTROL 대상자] {#audiences}
 
@@ -318,8 +323,7 @@ The visualization allows you to monitor the overall health of audiences within A
 ![대상 겹치기 보고서 대화 상자.](../images/profiles/profiles-audience-overlap-report-dialog.png)
 
 >[!NOTE]
->
->을(를) 선택합니다 **[!UICONTROL 겹치기]** 열 머리글 : 결과의 등급을 가장 높은 항목부터 가장 낮은 항목순으로 또는 가장 낮은 항목순으로 변경합니다.
+을(를) 선택합니다 **[!UICONTROL 겹치기]** 열 머리글 : 결과의 등급을 가장 높은 항목부터 가장 낮은 항목순으로 또는 가장 낮은 항목순으로 변경합니다.
 
 전체 보고서를 PDF 형식으로 다운로드하려면 옵션 메뉴(**`...`**) 뒤에 **[!UICONTROL 다운로드]**.
 
