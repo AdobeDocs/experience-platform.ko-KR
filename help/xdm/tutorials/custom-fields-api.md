@@ -2,9 +2,9 @@
 title: 스키마 레지스트리 API에서 XDM 필드 정의
 description: 스키마 레지스트리 API에서 사용자 지정 XDM(Experience Data Model) 리소스를 만들 때 다양한 필드를 정의하는 방법을 알아봅니다.
 exl-id: d79332e3-8448-42af-b250-882bcb0f1e7d
-source-git-commit: 0947eb38bdb18cb3783723cb11be79d3d32a3b76
+source-git-commit: 6277725cd69bc94325d3584177742df1a7fd4f95
 workflow-type: tm+mt
-source-wordcount: '1200'
+source-wordcount: '1199'
 ht-degree: 0%
 
 ---
@@ -79,7 +79,7 @@ ht-degree: 0%
 }
 ```
 
-각 값에 대한 선택적 고객 응대 레이블을 `meta:enum` 각 레이블이 해당 `enum` 값.
+원할 경우 아래의 각 값에 대해 고객 대상 레이블을 제공할 수 있습니다 `meta:enum` 각 레이블이 아래에 해당하는 값에 키로 지정된 속성 `enum`.
 
 ```json
 "sampleField": {
@@ -126,7 +126,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->없는 경우 `default` 값이 제공되고 enum 필드가 `required`: 이 필드에 대해 허용된 값이 없는 레코드는 수집 시 유효성 검사에 실패합니다.
+>없는 경우 `default` 값이 제공되고 enum 필드가 `required`: 이 필드에 대해 허용된 값이 없는 레코드는 수집 시 유효성 검사가 실패합니다.
 
 ## [!UICONTROL 숫자] {#number}
 
@@ -239,7 +239,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->없는 경우 `default` 값이 제공되고 부울 필드가 `required`: 이 필드에 대해 허용된 값이 없는 레코드는 수집 시 유효성 검사가 실패합니다.
+>없는 경우 `default` 값이 제공되고 부울 필드가 `required`: 이 필드에 대해 허용된 값이 없는 레코드는 수집 시 유효성 검사에 실패합니다.
 
 ## [!UICONTROL 날짜] {#date}
 
