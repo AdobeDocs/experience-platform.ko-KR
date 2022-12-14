@@ -3,9 +3,9 @@ title: 이벤트 전달 개요
 description: Platform Edge Network를 사용하여 태그 구현을 변경하지 않고 작업을 실행할 수 있도록 Adobe Experience Platform의 이벤트 전달에 대해 알아봅니다.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: c7344d0ac5b65c6abae6a040304f27dc7cd77cbb
+source-git-commit: d48b746b477ffa6977ce04b72fe77e8ddb95d691
 workflow-type: tm+mt
-source-wordcount: '959'
+source-wordcount: '996'
 ht-degree: 8%
 
 ---
@@ -89,7 +89,7 @@ Platform Edge Network에서 데이터를 참조하려면 해당 데이터에 올
 
 #### 규칙 작업 순서 {#action-sequencing}
 
-다음 [!UICONTROL 작업] 이벤트 전달 규칙의 섹션은 항상 순차적으로 실행됩니다. 규칙을 저장할 때 작업 순서가 올바른지 확인합니다. 이 실행 시퀀스는 태그를 사용할 수 있는 것처럼 비동기식으로 실행할 수 없습니다.
+다음 [!UICONTROL 작업] 이벤트 전달 규칙의 섹션은 항상 순차적으로 실행됩니다. 예를 들어, 규칙에 두 개의 작업이 있는 경우, 이전 작업이 완료될 때까지 두 번째 작업은 실행되지 않습니다(및 종단점에서 응답이 예상되는 경우, 해당 종단점은 응답했습니다). 규칙을 저장할 때 작업 순서가 올바른지 확인합니다. 이 실행 시퀀스는 태그 규칙을 사용할 때처럼 비동기식으로 실행할 수 없습니다.
 
 ## 비밀 {#secrets}
 
