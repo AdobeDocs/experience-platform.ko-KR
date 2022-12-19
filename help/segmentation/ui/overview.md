@@ -5,9 +5,9 @@ title: 세그멘테이션 서비스 UI 안내서
 topic-legacy: ui guide
 description: Adobe Experience Platform 세그멘테이션 서비스는 세그먼트 정의를 만들고 관리하기 위한 사용자 인터페이스를 제공합니다.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: d2790ddab74f989ebb5ca522ce44323033c53911
 workflow-type: tm+mt
-source-wordcount: '2375'
+source-wordcount: '2397'
 ht-degree: 1%
 
 ---
@@ -66,11 +66,11 @@ Experience Platform UI에서 **[!UICONTROL 세그먼트]** 왼쪽 탐색에서 �
 
 ![](../images/ui/overview/segment-browse-all.png)
 
-이 보기는 분류, 이탈, 프로필 수, 평가 방법, 만든 날짜 및 마지막 수정 날짜를 포함하여 세그먼트 정의에 대한 정보를 나열합니다.
+이 보기는 프로필 수, 만든 날짜 및 마지막 수정 날짜를 포함하여 세그먼트 정의에 대한 정보를 나열합니다.
 
-분류 에는 다음 각 상태에 속하는 프로필의 비율을 알려주는 막대 그래프가 표시됩니다. [!UICONTROL 실현], [!UICONTROL 기존], 및 [!UICONTROL 종료 중]. 또한, [!UICONTROL 찾아보기] 탭은 세그먼트 상태의 가장 정확한 분류입니다. 이 숫자가 에 명시된 것과 다른 경우 [!UICONTROL 개요] 탭에서 [!UICONTROL 찾아보기] 탭을 올바른 정보 소스로 사용하여 [!UICONTROL 개요] 탭 번호는 하루에 한 번만 업데이트됩니다.
+이미지를 선택하여 이 표시에 필드를 추가할 수 있습니다. 이러한 추가 필드에는 분류, 이탈, 평가 방법 및 작업 ID가 포함됩니다.
 
-![](../images/ui/overview/segment-browse-breakdown.png)
+분류를 선택하면 표시에 다음 각 상태에 속한 프로필의 비율을 나타내는 막대 그래프가 표시됩니다. [!UICONTROL 실현], [!UICONTROL 기존], 및 [!UICONTROL 종료 중]. 또한, [!UICONTROL 찾아보기] 탭은 세그먼트 상태의 가장 정확한 분류입니다. 이 숫자가 에 명시된 것과 다른 경우 [!UICONTROL 개요] 탭에서 [!UICONTROL 찾아보기] 탭을 올바른 정보 소스로 사용하여 [!UICONTROL 개요] 탭 번호는 하루에 한 번만 업데이트됩니다.
 
 | 상태 | 설명 |
 | ------ | ----------- |
