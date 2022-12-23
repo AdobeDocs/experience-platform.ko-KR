@@ -4,9 +4,9 @@ title: 실시간 고객 프로필 UI 안내서
 topic-legacy: guide
 description: 실시간 고객 프로필은 온라인, 오프라인, CRM 및 타사 데이터를 포함하여 여러 채널의 데이터를 결합함으로써 각 개별 고객에 대한 전체적인 보기를 만듭니다. 이 문서는 Adobe Experience Platform 사용자 인터페이스에서 실시간 고객 프로필과 상호 작용하는 안내서의 역할을 합니다.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: d2790ddab74f989ebb5ca522ce44323033c53911
+source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
 workflow-type: tm+mt
-source-wordcount: '1776'
+source-wordcount: '1951'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ Experience Platform UI에서 **[!UICONTROL 프로필]** 왼쪽 탐색에서 를 
 
 자세한 내용은 [프로필 대시보드 안내서](../../dashboards/guides/profiles.md).
 
-![](../../dashboards/images/profiles/dashboard-overview.png)
+![프로필 대시보드가 표시됩니다.](../../dashboards/images/profiles/dashboard-overview.png)
 
 ## [!UICONTROL 찾아보기] 탭 지표
 
@@ -51,7 +51,7 @@ Experience Platform UI에서 **[!UICONTROL 프로필]** 왼쪽 탐색에서 를 
 
 이 섹션에서는 이러한 지표 외에도 마지막으로 업데이트된 날짜 및 시간을 제공하여 지표가 마지막으로 평가된 시기를 표시합니다.
 
-![](../images/user-guide/browse-metrics.png)
+![프로필 지표가 표시되고 강조 표시됩니다.](../images/user-guide/browse-metrics.png)
 
 ### 프로필 수 {#profile-count}
 
@@ -75,7 +75,7 @@ Experience Platform UI에서 **[!UICONTROL 프로필]** 왼쪽 탐색에서 를 
 
 설정 **[!UICONTROL 찾아보기]** 탭에서 병합 정책을 사용하여 샘플 프로필을 보거나 id 네임스페이스 및 값을 사용하여 특정 프로필을 조회할 수 있습니다.
 
-![](../images/user-guide/none-selected.png)
+![조직에 속한 프로필이 표시됩니다.](../images/user-guide/none-selected.png)
 
 ### 찾아보기 기준 [!UICONTROL 병합 정책]
 
@@ -85,36 +85,35 @@ Experience Platform UI에서 **[!UICONTROL 프로필]** 왼쪽 탐색에서 를 
 >
 >선택한 병합 정책이 없으면 옆에 있는 선택기 단추를 사용하십시오 **[!UICONTROL 병합 정책]** 필드를 클릭하여 선택 대화 상자를 엽니다.
 
-![](../images/user-guide/browse-by-merge-policy.png)
+![병합 정책 선택기가 강조 표시됩니다.](../images/user-guide/browse-by-merge-policy.png)
 
 병합 정책을 **[!UICONTROL 병합 정책 선택]** 대화 상자에서 정책 이름 옆에 있는 라디오 단추를 선택한 다음 **[!UICONTROL 선택]** 로 돌아가기 [!UICONTROL 찾아보기] 탭. 그런 다음 을(를) 선택할 수 있습니다 **[!UICONTROL 보기]** 샘플 프로필을 새로 고치고 새 병합 정책이 적용된 프로필 샘플링을 확인합니다.
 
-![](../images/user-guide/select-merge-policy.png)
+![필터링할 병합 정책을 선택할 수 있는 대화 상자가 표시됩니다.](../images/user-guide/select-merge-policy.png)
 
 선택한 병합 정책이 적용된 후 조직의 프로필 저장소에서 최대 20개의 프로필 샘플을 나타내는 프로필입니다. 선택한 병합 정책에 대한 샘플 프로필은 조직의 프로필 저장소에 새 데이터가 추가되면 새로 고쳐집니다.
 
 샘플 프로필 중 하나의 세부 사항을 보려면 **[!UICONTROL 프로필 ID]**. 자세한 내용은 이 안내서의 뒷부분에 있는 섹션을 참조하십시오. [프로필 세부 정보 보기](#profile-detail).
 
-![](../images/user-guide/sample-profiles.png)
+![병합 정책과 일치하는 샘플 프로필이 표시됩니다.](../images/user-guide/sample-profiles.png)
 
 플랫폼 내의 병합 정책 및 역할에 대한 자세한 내용은 [정책 병합 개요](../merge-policies/overview.md).
-
 
 ### 찾아보기 기준 [!UICONTROL ID] {#browse-identity}
 
 설정 **[!UICONTROL 찾아보기]** 탭에서 id 네임스페이스를 사용하여 id 값으로 특정 프로필을 조회할 수 있습니다. ID로 검색하려면 병합 정책, ID 네임스페이스 및 ID 값을 제공해야 합니다.
 
-![](../images/user-guide/browse-by-merge-policy.png)
+![병합 정책 선택기가 강조 표시됩니다.](../images/user-guide/browse-by-merge-policy.png)
 
 필요한 경우 **[!UICONTROL 병합 정책]** 선택기를 클릭하여 열기 **[!UICONTROL 병합 정책 선택]** 대화 상자를 열고 사용할 병합 정책을 선택합니다.
 
-![](../images/user-guide/select-merge-policy.png)
+![필터링할 병합 정책을 선택할 수 있는 대화 상자가 표시됩니다.](../images/user-guide/select-merge-policy.png)
 
 그런 다음 **[!UICONTROL ID 네임스페이스]** 선택기를 클릭하여 열기 **[!UICONTROL ID 네임스페이스 선택]** 대화 상자를 열고 검색할 네임스페이스를 선택합니다. 조직에 네임스페이스가 많은 경우 대화 상자의 검색 막대를 사용하여 네임스페이스 이름을 입력할 수 있습니다.
 
 네임스페이스를 선택하여 추가 세부 정보를 보거나 라디오 단추를 선택하여 네임스페이스를 선택할 수 있습니다. 그런 다음 를 사용할 수 있습니다 **[!UICONTROL 선택]** 계속하십시오.
 
-![](../images/user-guide/select-identity-namespace.png)
+![필터링할 ID 네임스페이스를 선택할 수 있는 대화 상자가 표시됩니다.](../images/user-guide/select-identity-namespace.png)
 
 을(를) 선택한 후 [!UICONTROL ID 네임스페이스] 그리고 [!UICONTROL 찾아보기] 탭에서 **[!UICONTROL ID 값]** 선택한 네임스페이스와 관련되어 있습니다.
 
@@ -122,11 +121,11 @@ Experience Platform UI에서 **[!UICONTROL 프로필]** 왼쪽 탐색에서 를 
 >
 >이 값은 개별 고객 프로필에 한정되며 제공된 네임스페이스에 대한 올바른 항목이어야 합니다. 예를 들어 ID 네임스페이스 &quot;이메일&quot;을 선택하려면 유효한 이메일 주소 형식의 ID 값이 필요합니다.
 
-![](../images/user-guide/filter-identity-value.png)
+![필터링할 ID 값이 강조 표시됩니다.](../images/user-guide/filter-identity-value.png)
 
 값을 입력한 후 **[!UICONTROL 보기]** 및 값과 일치하는 단일 프로필이 반환됩니다. 을(를) 선택합니다 **[!UICONTROL 프로필 ID]** 프로필 세부 사항을 보려면 다음을 수행하십시오.
 
-![](../images/user-guide/filtered-identity-value.png)
+![ID 값과 일치하는 프로필이 강조 표시됩니다.](../images/user-guide/filtered-identity-value.png)
 
 ## 프로필 세부 사항 보기 {#profile-detail}
 
@@ -134,7 +133,7 @@ Experience Platform UI에서 **[!UICONTROL 프로필]** 왼쪽 탐색에서 를 
 
 표시되는 기본 필드는 기본 프로필 속성을 표시하도록 조직 수준에서 변경할 수도 있습니다. 속성을 추가 및 제거하고 대시보드 패널 크기를 조정하는 단계별 지침을 포함하여 이러한 필드를 사용자 지정하는 방법에 대한 자세한 내용은 다음을 참조하십시오 [프로필 세부 정보 사용자 지정 안내서](profile-customization.md).
 
-![](../images/user-guide/profile-detail.png)
+![세부 정보 탭이 강조 표시됩니다. 프로필 세부 사항이 표시됩니다.](../images/user-guide/profile-detail.png)
 
 사용 가능한 다른 탭을 선택하여 개별 고객 프로필과 관련된 추가 정보를 볼 수 있습니다. 이러한 탭에는 현재 프로필이 자격을 갖는 세그먼트를 보여주는 속성, 이벤트 및 세그먼트 멤버십 탭이 포함됩니다.
 
@@ -144,7 +143,7 @@ Experience Platform UI에서 **[!UICONTROL 프로필]** 왼쪽 탐색에서 를 
 
 이러한 속성은 다음 중 하나를 선택하여 JSON 개체로도 볼 수 있습니다 **[!UICONTROL JSON 보기]**. 이 기능은 프로필 속성을 Platform에 수집하는 방법을 이해하려는 모든 사용자에게 유용합니다.
 
-![](../images/user-guide/attributes.png)
+![속성 탭이 강조 표시됩니다. 프로필 속성이 표시됩니다.](../images/user-guide/attributes.png)
 
 ### 이벤트 탭
 
@@ -152,7 +151,7 @@ Experience Platform UI에서 **[!UICONTROL 프로필]** 왼쪽 탐색에서 를 
 
 이벤트를 을(를) 선택하여 JSON 개체로 볼 수도 있습니다 **[!UICONTROL JSON 보기]**. 이 기능은 플랫폼에서 이벤트가 캡처되는 방식을 이해하는 데 유용합니다.
 
-![](../images/user-guide/events.png)
+![이벤트 탭이 강조 표시됩니다. 프로필 이벤트가 표시됩니다.](../images/user-guide/events.png)
 
 ### 세그먼트 멤버십 탭
 
@@ -160,7 +159,7 @@ Experience Platform UI에서 **[!UICONTROL 프로필]** 왼쪽 탐색에서 를 
 
 Experience Platform의 세그멘테이션에 대한 자세한 내용은 [Adobe Experience Platform 세그멘테이션 서비스 설명서](../../segmentation/home.md).
 
-![](../images/user-guide/segment-membership.png)
+![세그먼트 멤버십 탭이 강조 표시됩니다. 프로필 세그먼트 멤버십 세부 사항이 표시됩니다.](../images/user-guide/segment-membership.png)
 
 ## 병합 정책
 
@@ -168,7 +167,7 @@ Experience Platform의 세그멘테이션에 대한 자세한 내용은 [Adobe E
 
 병합 정책에 대한 자세한 내용은 [정책 병합 개요](../merge-policies/overview.md).
 
-![](../images/user-guide/merge-policies.png)
+![병합 정책 탭이 강조 표시됩니다. 조직에 속하는 병합 정책이 표시됩니다.](../images/user-guide/merge-policies.png)
 
 ## 결합 스키마 {#union-schema}
 
@@ -176,7 +175,7 @@ Experience Platform의 세그멘테이션에 대한 자세한 내용은 [Adobe E
 
 결합 스키마에 대한 자세한 내용은 [결합 스키마 UI 안내서](union-schema.md).
 
-![](../images/user-guide/union-schema.png)
+![결합 스키마 탭이 강조 표시됩니다. 조직에 속한 결합 스키마가 표시됩니다.](../images/user-guide/union-schema.png)
 
 ## 다음 단계
 

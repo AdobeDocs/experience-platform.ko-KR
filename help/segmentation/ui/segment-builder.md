@@ -5,9 +5,9 @@ title: 세그먼트 빌더 UI 안내서
 topic-legacy: ui guide
 description: Adobe Experience Platform UI의 세그먼트 빌더에서는 프로필 데이터 요소와 상호 작용할 수 있는 풍부한 작업 공간을 제공합니다. 작업 공간에서는 데이터 속성을 표시하는 데 사용되는 드래그 앤 드롭 타일과 같이 규칙을 만들고 편집하기 위한 직관적인 컨트롤을 제공합니다.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 1d70aee1bd225268b8f2a2d1dc24d446bb4ce633
+source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
 workflow-type: tm+mt
-source-wordcount: '3082'
+source-wordcount: '3101'
 ht-degree: 1%
 
 ---
@@ -55,7 +55,7 @@ ht-degree: 1%
 
 기본적으로 데이터 저장소에서 채워진 스키마 필드만 표시됩니다. 여기에는 &quot;[!UICONTROL 이벤트 유형]&quot;. 다음과 같은 경우[!UICONTROL 이벤트 유형]&quot; 목록이 표시되지 않거나 &quot;[!UICONTROL 임의]&quot;[!UICONTROL 이벤트 유형]&quot;, 을(를) 선택합니다 **톱니바퀴 아이콘** 다음 **[!UICONTROL 필드]**&#x200B;를 선택하고 을 선택합니다. **[!UICONTROL 전체 XDM 스키마 표시]** 아래에 **[!UICONTROL 사용 가능한 필드]**. 을(를) 선택합니다 **톱니바퀴 아이콘** 다시 **[!UICONTROL 필드]** 탭하면 이제 여러 &quot;를 볼 수 있습니다.[!UICONTROL 이벤트 유형]&quot; 및 스키마 필드에 데이터가 포함되어 있는지 여부에 관계없이 표시됩니다.
 
-![](../images/ui/segment-builder/show-populated.png)
+![데이터가 있는 필드만 표시하거나 모든 XDM 필드를 표시하는 중 선택할 수 있는 라디오 단추가 강조 표시됩니다.](../images/ui/segment-builder/show-populated.png)
 
 #### Adobe Analytics 보고서 세트 데이터 세트
 

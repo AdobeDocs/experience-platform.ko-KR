@@ -5,9 +5,9 @@ title: 외부 대상 가져오기 및 사용
 description: Adobe Experience Platform에서 외부 대상을 사용하는 방법을 배우려면 이 자습서를 따르십시오.
 topic-legacy: tutorial
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
-source-git-commit: 13fd1e372a63b55c41893f41d1590d9dab9f7903
+source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
 workflow-type: tm+mt
-source-wordcount: '1445'
+source-wordcount: '1621'
 ht-degree: 0%
 
 ---
@@ -44,7 +44,7 @@ Adobe Experience Platform은 외부 대상을 가져오는 기능을 지원하�
 
 ID 네임스페이스를 만들려면 [identity namespace 안내서](../../identity-service/namespaces.md#manage-namespaces). ID 네임스페이스를 만들 때 ID 네임스페이스에 소스 세부 정보를 추가하고 해당 네임스페이스에 표시합니다 [!UICONTROL 유형] 로서의 **[!UICONTROL 비사용자 식별자]**.
 
-![](../images/tutorials/external-audiences/identity-namespace-info.png)
+![개인이 아닌 식별자는 ID 네임스페이스 만들기 모달에 강조 표시됩니다.](../images/tutorials/external-audiences/identity-namespace-info.png)
 
 ## 세그먼트 메타데이터에 대한 스키마 만들기
 
@@ -52,19 +52,19 @@ ID 네임스페이스를 만든 후 만들 세그먼트에 대한 새 스키마�
 
 스키마 작성을 시작하려면 먼저 을 선택합니다 **[!UICONTROL 스키마]** 왼쪽 탐색 막대에서 을 클릭하고 **[!UICONTROL 스키마 만들기]** 스키마 작업 영역의 오른쪽 상단 모서리에서 을(를) 클릭합니다. 여기에서 을 선택합니다. **[!UICONTROL 찾아보기]** 사용 가능한 스키마 유형의 전체 선택을 확인합니다.
 
-![](../images/tutorials/external-audiences/create-schema-browse.png)
+![스키마 만들기 와 찾아보기 가 모두 강조 표시됩니다.](../images/tutorials/external-audiences/create-schema-browse.png)
 
 사전 정의된 클래스인 세그먼트 정의를 만들려면, **[!UICONTROL 기존 클래스 사용]**. 이제 **[!UICONTROL 세그먼트 정의]** 클래스, 그 다음 **[!UICONTROL 클래스 할당]**.
 
-![](../images/tutorials/external-audiences/assign-class.png)
+![세그먼트 정의 클래스가 강조 표시됩니다.](../images/tutorials/external-audiences/assign-class.png)
 
 스키마가 만들어지면 세그먼트 ID가 포함될 필드를 지정해야 합니다. 이 필드는 기본 ID로 표시하고 이전에 만든 네임스페이스에 할당해야 합니다.
 
-![](../images/tutorials/external-audiences/mark-primary-identifier.png)
+![선택한 필드를 기본 ID로 표시하는 확인란은 스키마 편집기에서 강조 표시됩니다.](../images/tutorials/external-audiences/mark-primary-identifier.png)
 
 표시 후 `_id` 필드를 기본 ID로 선택하고 스키마 제목을 선택한 후 토글이 레이블이 지정됩니다 **[!UICONTROL 프로필]**. 선택 **[!UICONTROL 활성화]** 스키마를 활성화하려면 [!DNL Real-time Customer Profile].
 
-![](../images/tutorials/external-audiences/schema-profile.png)
+![프로파일에 대한 스키마를 활성화할 수 있는 토글이 스키마 편집기에서 강조 표시됩니다.](../images/tutorials/external-audiences/schema-profile.png)
 
 이제 이 스키마는 사용자가 만든 비개인 ID 네임스페이스에 기본 ID가 지정된 프로필에 대해 활성화됩니다. 따라서 이 스키마를 사용하여 Platform에 가져온 세그먼트 메타데이터는 다른 사람 관련 프로필 데이터와 병합되지 않고 프로필에 수집됩니다.
 
@@ -74,11 +74,11 @@ ID 네임스페이스를 만든 후 만들 세그먼트에 대한 새 스키마�
 
 데이터 세트를 만들려면 [데이터 세트 사용 안내서](../../catalog/datasets/user-guide.md#create). 다음을 수행해야 합니다 **[!UICONTROL 스키마에서 데이터 집합 만들기]** 옵션. 이전에 만든 스키마를 사용합니다.
 
-![](../images/tutorials/external-audiences/select-schema.png)
+![데이터 세트를 기반으로 할 스키마가 강조 표시됩니다.](../images/tutorials/external-audiences/select-schema.png)
 
 데이터 세트를 만든 후 [데이터 세트 사용 안내서](../../catalog/datasets/user-guide.md#enable-profile) 실시간 고객 프로필에 대해 이 데이터 세트를 사용하도록 설정하려면 다음을 수행하십시오.
 
-![](../images/tutorials/external-audiences/dataset-profile.png)
+![프로필에 대한 스키마를 활성화하는 토글이 데이터 세트 활동 페이지에서 강조 표시됩니다.](../images/tutorials/external-audiences/dataset-profile.png)
 
 ## 대상 데이터 설정 및 가져오기
 
@@ -94,7 +94,7 @@ ID 네임스페이스를 만든 후 만들 세그먼트에 대한 새 스키마�
 
 스트리밍 연결을 만들었으면 데이터를 보낼 수 있는 고유한 스트리밍 종단점에 액세스할 수 있습니다. 이러한 종단점으로 데이터를 보내는 방법에 대해 알아보려면 [레코드 데이터 스트리밍에 대한 자습서](../../ingestion/tutorials/streaming-record-data.md#ingest-data).
 
-![](../images/tutorials/external-audiences/get-streaming-endpoint.png)
+![스트리밍 연결에 대한 스트리밍 끝점은 소스 세부 사항 페이지에 강조 표시됩니다.](../images/tutorials/external-audiences/get-streaming-endpoint.png)
 
 ## 대상 메타데이터 구조
 
@@ -151,7 +151,7 @@ ID 네임스페이스를 만든 후 만들 세그먼트에 대한 새 스키마�
 
 가져온 대상을 설정한 후에는 세그먼테이션 프로세스의 일부로 사용할 수 있습니다. 외부 대상을 찾으려면 세그먼트 빌더로 이동하여 를 선택합니다 **[!UICONTROL 대상]** 탭에서 다음을 수행합니다. **[!UICONTROL 필드]** 섹션을 참조하십시오.
 
-![](../images/tutorials/external-audiences/external-audiences.png)
+![세그먼트 빌더에 있는 외부 대상 선택기가 강조 표시됩니다.](../images/tutorials/external-audiences/external-audiences.png)
 
 ## 다음 단계
 
@@ -165,15 +165,15 @@ ID 네임스페이스를 만든 후 만들 세그먼트에 대한 새 스키마�
 
 스키마 작성을 시작하려면 먼저 을 선택합니다 **[!UICONTROL 스키마]** 왼쪽 탐색 막대에서 을 클릭하고 **[!UICONTROL 스키마 만들기]** 스키마 작업 영역의 오른쪽 상단 모서리에서 을(를) 클릭합니다. 여기에서 을 선택합니다. **[!UICONTROL XDM 개별 프로필]**.
 
-![](../images/tutorials/external-audiences/create-schema-profile.png)
+![XDM 개별 프로필 영역이 강조 표시됩니다.](../images/tutorials/external-audiences/create-schema-profile.png)
 
 스키마가 만들어지면 스키마의 일부로 세그먼트 멤버십 필드 그룹을 추가해야 합니다. 이렇게 하려면 을(를) 선택합니다. [!UICONTROL 세그먼트 멤버십 세부 정보], 그 다음 [!UICONTROL 필드 그룹 추가].
 
-![](../images/tutorials/external-audiences/segment-membership-details.png)
+![세그먼트 멤버십 세부 사항 필드 그룹이 강조 표시됩니다.](../images/tutorials/external-audiences/segment-membership-details.png)
 
 또한 스키마가 **[!UICONTROL 프로필]**. 이렇게 하려면 필드를 기본 ID로 표시해야 합니다.
 
-![](../images/tutorials/external-audiences/external-segment-profile.png)
+![프로파일에 대한 스키마를 활성화할 수 있는 토글이 스키마 편집기에서 강조 표시됩니다.](../images/tutorials/external-audiences/external-segment-profile.png)
 
 ### 데이터 세트 설정
 
@@ -181,11 +181,11 @@ ID 네임스페이스를 만든 후 만들 세그먼트에 대한 새 스키마�
 
 데이터 세트를 만들려면 [데이터 세트 사용 안내서](../../catalog/datasets/user-guide.md#create). 다음을 수행해야 합니다 **[!UICONTROL 스키마에서 데이터 집합 만들기]** 옵션. 이전에 만든 스키마를 사용합니다.
 
-![](../images/tutorials/external-audiences/select-schema.png)
+![데이터베이스를 만드는 데 사용하는 스키마가 강조 표시됩니다.](../images/tutorials/external-audiences/select-schema.png)
 
 데이터 세트를 만든 후 [데이터 세트 사용 안내서](../../catalog/datasets/user-guide.md#enable-profile) 실시간 고객 프로필에 대해 이 데이터 세트를 사용하도록 설정하려면 다음을 수행하십시오.
 
-![](../images/tutorials/external-audiences/dataset-profile.png)
+![프로필에 대한 스키마를 활성화하는 토글은 데이터 세트 만들기 워크플로우에서 강조 표시됩니다.](../images/tutorials/external-audiences/dataset-profile.png)
 
 ## 외부 대상 멤버십 데이터 설정 및 가져오기
 
@@ -201,7 +201,7 @@ ID 네임스페이스를 만든 후 만들 세그먼트에 대한 새 스키마�
 
 스트리밍 연결을 만들었으면 데이터를 보낼 수 있는 고유한 스트리밍 종단점에 액세스할 수 있습니다. 이러한 종단점으로 데이터를 보내는 방법에 대해 알아보려면 [레코드 데이터 스트리밍에 대한 자습서](../../ingestion/tutorials/streaming-record-data.md#ingest-data).
 
-![](../images/tutorials/external-audiences/get-streaming-endpoint.png)
+![스트리밍 연결에 대한 스트리밍 끝점은 소스 세부 사항 페이지에 강조 표시됩니다.](../images/tutorials/external-audiences/get-streaming-endpoint.png)
 
 ## 세그먼트 멤버십 구조
 

@@ -5,9 +5,9 @@ title: 스트리밍 세그멘테이션 UI 안내서
 topic-legacy: ui guide
 description: Adobe Experience Platform의 스트리밍 세그멘테이션을 사용하면 데이터 다양성에 중점을 두고 거의 실시간으로 세그멘테이션을 수행할 수 있습니다. 스트리밍 세그먼테이션을 사용하면 이제 데이터가 플랫폼에 도달하면 세그먼트 자격이 발생하므로 세그먼테이션 작업을 예약하고 실행해야 하는 필요성을 완화합니다. 이 기능을 사용하면 이제 데이터가 Platform으로 전달되므로 대부분의 세그먼트 규칙을 평가할 수 있습니다. 즉, 세그먼트 멤버십은 예약된 세그먼테이션 작업을 실행하지 않고 최신 상태로 유지됩니다.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 8c7c1273feb2033bf338f7669a9b30d9459509f7
+source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
 workflow-type: tm+mt
-source-wordcount: '1371'
+source-wordcount: '1495'
 ht-degree: 0%
 
 ---
@@ -36,14 +36,14 @@ ht-degree: 0%
 
 | 쿼리 유형 | 세부 사항 | 예 |
 | ---------- | ------- | ------- |
-| 단일 이벤트 | 시간 제한 없이 단일 수신 이벤트를 참조하는 모든 세그먼트 정의입니다. | ![](../images/ui/streaming-segmentation/incoming-hit.png) |
-| 상대 시간 창 내의 단일 이벤트 | 단일 수신 이벤트를 참조하는 모든 세그먼트 정의입니다. | ![](../images/ui/streaming-segmentation/relative-hit-success.png) |
-| 시간 창이 있는 단일 이벤트 | 시간 창이 있는 단일 수신 이벤트를 참조하는 모든 세그먼트 정의입니다. | ![](../images/ui/streaming-segmentation/historic-time-window.png) |
+| 단일 이벤트 | 시간 제한 없이 단일 수신 이벤트를 참조하는 모든 세그먼트 정의입니다. | ![단일 이벤트의 예가 표시됩니다.](../images/ui/streaming-segmentation/incoming-hit.png) |
+| 상대 시간 창 내의 단일 이벤트 | 단일 수신 이벤트를 참조하는 모든 세그먼트 정의입니다. | ![상대 시간 창 내의 단일 이벤트의 예가 표시됩니다.](../images/ui/streaming-segmentation/relative-hit-success.png) |
+| 시간 창이 있는 단일 이벤트 | 시간 창이 있는 단일 수신 이벤트를 참조하는 모든 세그먼트 정의입니다. | ![시간 창이 있는 단일 이벤트의 예가 표시됩니다.](../images/ui/streaming-segmentation/historic-time-window.png) |
 | 프로필만 | 프로필 속성만 참조하는 모든 세그먼트 정의. |  |
-| 프로필 속성이 있는 단일 이벤트 | 시간 제한 없이 단일 수신 이벤트를 참조하는 모든 세그먼트 정의와 하나 이상의 프로필 속성을 참조합니다. **참고:** 이벤트가 발생하면 쿼리가 즉시 평가됩니다. 그러나 프로필 이벤트의 경우 통합하려면 24시간을 기다려야 합니다. | ![](../images/ui/streaming-segmentation/profile-hit.png) |
-| 상대 시간 창 내에 프로필 속성이 있는 단일 이벤트 | 단일 수신 이벤트와 하나 이상의 프로필 속성을 참조하는 모든 세그먼트 정의입니다. | ![](../images/ui/streaming-segmentation/profile-relative-success.png) |
-| 세그먼트 | 하나 이상의 일괄 처리 또는 스트리밍 세그먼트를 포함하는 모든 세그먼트 정의. **참고:** 세그먼트 세그먼트가 사용되는 경우 프로필 결격률이 발생합니다 **24시간마다**. | ![](../images/ui/streaming-segmentation/two-batches.png) |
-| 프로필 속성이 있는 여러 이벤트 | 여러 이벤트를 참조하는 모든 세그먼트 정의 **지난 24시간 내에** 및 (선택적)에는 하나 이상의 프로필 속성이 있습니다. | ![](../images/ui/streaming-segmentation/event-history-success.png) |
+| 프로필 속성이 있는 단일 이벤트 | 시간 제한 없이 단일 수신 이벤트를 참조하는 모든 세그먼트 정의와 하나 이상의 프로필 속성을 참조합니다. **참고:** 이벤트가 발생하면 쿼리가 즉시 평가됩니다. 그러나 프로필 이벤트의 경우 통합하려면 24시간을 기다려야 합니다. | ![프로필 속성이 있는 단일 이벤트의 예가 표시됩니다.](../images/ui/streaming-segmentation/profile-hit.png) |
+| 상대 시간 창 내에 프로필 속성이 있는 단일 이벤트 | 단일 수신 이벤트와 하나 이상의 프로필 속성을 참조하는 모든 세그먼트 정의입니다. | ![상대 시간 창 내에 프로필 속성이 있는 단일 이벤트의 예가 표시됩니다.](../images/ui/streaming-segmentation/profile-relative-success.png) |
+| 세그먼트 | 하나 이상의 일괄 처리 또는 스트리밍 세그먼트를 포함하는 모든 세그먼트 정의. **참고:** 세그먼트 세그먼트가 사용되는 경우 프로필 결격률이 발생합니다 **24시간마다**. | ![세그먼트 세그먼트의 예가 표시됩니다.](../images/ui/streaming-segmentation/two-batches.png) |
+| 프로필 속성이 있는 여러 이벤트 | 여러 이벤트를 참조하는 모든 세그먼트 정의 **지난 24시간 내에** 및 (선택적)에는 하나 이상의 프로필 속성이 있습니다. | ![프로필 속성이 있는 여러 이벤트의 예가 표시됩니다.](../images/ui/streaming-segmentation/event-history-success.png) |
 
 세그먼트 정의는 **not** 다음 시나리오에서 스트리밍 세그멘테이션에 대해 활성화되어 있습니다.
 
@@ -67,7 +67,7 @@ ht-degree: 0%
 
 스트리밍 사용 세그먼트를 만든 후 해당 세그먼트의 세부 사항을 볼 수 있습니다.
 
-![](../images/ui/streaming-segmentation/monitoring-streaming-segment.png)
+![세그먼트 세부 사항 페이지가 표시됩니다.](../images/ui/streaming-segmentation/monitoring-streaming-segment.png)
 
 특히, **[!UICONTROL 전체 적격]** 이 세그먼트에 대한 일괄 처리 및 스트리밍 평가를 기반으로 자격이 있는 총 대상 수를 표시하는 지표가 표시됩니다.
 
@@ -79,11 +79,11 @@ ht-degree: 0%
 >
 >이러한 상태에 대한 자세한 내용은 [세분화 개요](./overview.md#browse).
 
-![](../images/ui/streaming-segmentation/monitoring-streaming-segment-graph.png)
+![시간 경과에 따른 프로필 카드가 강조 표시되어 시간에 따른 프로필의 선 그래프를 표시합니다.](../images/ui/streaming-segmentation/monitoring-streaming-segment-graph.png)
 
 다음 옆에 있는 정보 버블을 선택하여 마지막 세그먼트 평가에 대한 추가 정보를 찾을 수 있습니다 **[!UICONTROL 전체 적격]**.
 
-![](../images/ui/streaming-segmentation/info-bubble.png)
+![Total qualified profiles에 대한 정보 버블이 선택되었습니다. 여기에는 마지막 세그먼트 평가 시간에 대한 정보가 표시됩니다.](../images/ui/streaming-segmentation/info-bubble.png)
 
 세그먼트 정의에 대한 자세한 내용은 [세그먼트 정의 세부 정보](#segment-details).
 
