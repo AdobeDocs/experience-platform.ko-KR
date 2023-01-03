@@ -5,9 +5,9 @@ title: Adobe Experience Platform 용어
 topic-legacy: getting started
 description: Experience Platform의 중요한 용어에 대한 용어집입니다.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 3bb0fc7b2807889d0a759e81c8ff728de3c0cbde
 workflow-type: tm+mt
-source-wordcount: '7433'
+source-wordcount: '7919'
 ht-degree: 0%
 
 ---
@@ -45,6 +45,8 @@ ht-degree: 0%
 **Amazon S3 버킷**: [!DNL Amazon S3] 버킷은 [!DNL Amazon] 에코시스템. 버킷에는 개체가 포함되어 있으며 각 개체는 고유한 개발자가 지정한 키를 사용하여 저장 및 검색됩니다.
 
 **Amazon S3 커넥터**: 다음 [!DNL Amazon] S3 커넥터를 사용하면 Experience Platform 고객이 안전하게 연결하고 액세스할 수 있습니다 [!DNL Amazon] S3 데이터.
+
+**아파**: 다음 [[!DNL Australia Privacy Act (Privacy Act)]](https://www.oaic.gov.au/privacy/the-privacy-act) 개인의 개인 정보를 홍보 및 보호하고, 오스트레일리아 정부 기관과 조직이 개인 정보를 처리하는 방법을 규제합니다. 다음 [!DNL Privacy Act] 민간 부문 조직에 적용되는 원칙을 포함합니다. 예를 들어, 개인은 개인 정보가 수집되는 이유와 사용 방법, 데이터 액세스, 삭제 및 개인 정보를 수정할 수 있는 능력을 이해할 수 있는 권한을 제공합니다.
 
 **저장 전략 추가**: &quot;추가&quot; 저장 전략은 연결을 통해 수집할 타사 데이터를 지정하고 데이터 세트 끝에 새 데이터 또는 행을 추가할 때 사용되는 옵션입니다. 이전에 수집된 행은 그대로 유지되며 마지막으로 예약된 실행 이후 생성된 행만 Experience Platform에 수집됩니다. 소스 시스템에서 변경된 모든 행은 Experience Platform 시 변경되지 않은 상태로 유지됩니다.
 
@@ -90,6 +92,8 @@ ht-degree: 0%
 
 **[!DNL Catalog Service]**: [!DNL Catalog Service] 경우에 따라 [!DNL Catalog])은 Adobe Experience Platform 내의 데이터 위치 및 계열에 대한 레코드 시스템입니다. Experience Platform에 수집되는 모든 데이터는 데이터 레이크에 파일 및 디렉터리로 저장되지만 [!DNL Catalog] 는 조회, 모니터링 및 데이터 거버넌스를 위해 이러한 파일 및 디렉토리에 대한 메타데이터와 설명을 포함합니다.
 
+**CCPA**: 다음 [[!DNL California Consumer Privacy Act (CCPA)]](https://oag.ca.gov/privacy/ccpa) 미국 캘리포니아 거주자를 위한 개인 정보 보호 권한 및 소비자 보호 강화 CCPA는 개인 데이터가 판매되었거나 공개되었는지의 여부 및 그 대상을 확인하거나 데이터를 제3자에게 판매하지 않도록 옵트아웃하는 권한을 포함하여 캘리포니아 거주자에게 새로운 데이터 개인 정보 보호 권한을 제공합니다.
+
 **클래스**: XDM(Experience Data Model)에서 클래스는 스키마를 만드는 데 사용되는 가장 작은 필드 집합을 정의하고 스키마가 나타내는 비즈니스 개체의 기본 동작을 정의합니다.
 
 **클라이언트**: 클라이언트는 에 연결되는 외부 도구 또는 애플리케이션입니다 [!DNL Query Service] via [!DNL PostgreSQL] 프로토콜 또는 HTTP API.
@@ -107,6 +111,8 @@ ht-degree: 0%
 **콘솔**: in [!DNL Query Service]콘솔에서는 쿼리의 상태 및 작업에 대한 정보를 제공합니다. 콘솔에 연결 상태가 표시됩니다 [!DNL Query Service], 실행 중인 쿼리 작업과 이러한 쿼리에서 발생하는 모든 오류 메시지
 
 **계약(&quot;C&quot;) 레이블**: 계약(&quot;C&quot;) 데이터 사용 레이블은 계약 의무가 있거나 조직의 데이터 거버넌스 정책과 관련된 데이터를 분류하는 데 사용됩니다.
+
+**CPRA**: 다음 [[!DNL California Consumer Privacy Rights Act (CPRA)]](https://cppa.ca.gov/regulations/consumer_privacy_act.html) 부분들을 확장하고 보정한다 [!DNL California Consumer Privacy Act (CCPA)]. 다음 [!DNL CPRA] 소비자 권한을 늘리고 중요한 개인 정보에 대한 더 광범위한 정의를 통해 적용되는 데이터 유형을 확장하여 캘리포니아에서 소비자 데이터 개인 정보에 대한 새로운 기준을 설정합니다. 또한 [!DNL CPRA] 데이터 개인 정보 보호 규칙 구현 및 시행을 위한 새로운 기관인 캘리포니아 개인 정보 보호 기관을 설립했습니다.
 
 **C1 계약 레이블**: A `C1` 계약 데이터 사용 레이블은 개별 또는 장치 식별자를 포함하지 않고 Adobe Experience Cloud에서 집계된 양식으로만 데이터를 내보낼 수 있도록 지정합니다. 예를 들어, 소셜 네트워크에서 가져온 데이터입니다.
 
@@ -262,6 +268,8 @@ ht-degree: 0%
 
 ## H
 
+**HIPAA**: 다음 [[!DNL Health Insurance Portability and Accountability Act (HIPAA)]](https://www.hhs.gov/hipaa/index.html) 는 의료 효율을 높이고, 의료 보험 휴대를 개선하며, 환자 및 의료 계획 구성원들의 개인 정보를 보호하기 위해 만들어진 미국 연방 법입니다. HIPAA에서 개인 사용자는 자신의 정보를 액세스하여 수정할 수 있으며 의료 기록 또는 건강 정보의 사본을 얻을 수 있습니다. 규정을 준수해야 하는 기업 및 업무 담당자는 HIPAA 규정을 준수해야 합니다.
+
 **호스트**: 태그 컨텍스트에서 호스트는 시스템이 빌드를 전달하는 데 필요한 위치, 도메인 및 사용자 자격 증명을 지정합니다.
 
 **시간별**: 예약된 파일 내보내기 컨텍스트에서 는 3, 6, 8 또는 12시간마다 증분 파일 내보내기를 예약합니다.
@@ -316,6 +324,8 @@ ht-degree: 0%
 
 ## L
 
+**LGPD**: 다음 [[!DNL Lei Geral de Proteção de Dados (LGPD)]](https://gdpr.eu/gdpr-vs-lgpd/) 브라질의 모든 개인 또는 자연인의 개인 데이터 처리를 조절하는 것을 목표로 하고 있다. LGPD는 브라질 시민들에게 개인 데이터를 액세스 및 삭제할 권리, 개인 데이터가 판매 또는 공개되었는지 여부(및 공개된 대상) 및 제3자에게 자신의 데이터를 판매하는 것을 옵트 아웃할 권리를 부여합니다.
+
 **라이브러리**: 태그 컨텍스트에서 라이브러리는 태그 라이브러리가 클라이언트 장치에서 작동하는 방법에 대한 지침을 포함하는 비즈니스 논리 세트입니다.
 
 **조회 엔터티**: 데이터 모델링 컨텍스트에서 조회 엔티티는 개별 사용자와 관련될 수 있지만 개인을 식별하는 데 직접 사용할 수 없는 개념을 나타냅니다. 이 카테고리에 속하는 엔티티는 XDM(사용자 지정 Experience Data Model) 클래스를 기반으로 하여 스키마로 표시되어야 합니다.
@@ -342,6 +352,8 @@ ht-degree: 0%
 
 ## N
 
+**[!DNL New Zealand Privacy Act]**: 다음 [[!DNL New Zealand Privacy Act]](https://www.privacy.org.nz/privacy-act-2020/privacy-principles/) 기관이 뉴질랜드 시민과 조직의 개인 정보를 수집, 사용, 공개, 저장 및 액세스하는 방법을 제어합니다. 2020년, 이 법의 최신 버전은 새로운 범죄, 증가하는 벌금, 데이터 위반 시 필수 알림, 개인 정보 보호 위원의 권한 증대를 포함한 이러한 개인 정보 보호 법에 대한 중요한 업데이트를 도입했습니다.
+
 **비프로덕션 샌드박스**: 비프로덕션 샌드박스는 일반적으로 개발 실험, 테스트 또는 실험에 사용되는 샌드박스입니다. 프로덕션 샌드박스와 달리 비프로덕션 샌드박스를 재설정하고 삭제할 수 있습니다.
 
 **[!DNL Notebooks]**: [!DNL Notebooks] 를 사용하여 작성합니다. [!DNL Jupyter Notebook] 및 를 실행하여 데이터 분석을 수행할 수 있습니다.
@@ -367,6 +379,8 @@ ht-degree: 0%
 **부분 수집**: 부분 처리를 사용하면 지정된 오류 임계값 내에서 배치 데이터의 유효한 레코드를 섭취할 수 있습니다. 실패한 레코드에 대한 오류 진단은 [!UICONTROL 모니터링] 또는 [!UICONTROL 소스] 데이터 흐름 실행 개요.
 
 **Parquet 파일**: Parquet 파일은 복잡한 중첩 데이터 구조가 있는 열 형식 저장소 파일 형식입니다. 스키마 데이터 세트를 채우려면 Parquet 파일이 필요합니다.
+
+**PDPA**: 다음 [[!DNL Personal Data Protection Act (PDPA)]](https://www.pdpc.gov.sg/Overview-of-PDPA/The-Legislation/Personal-Data-Protection-Act) 는 개인 데이터의 불법 수집, 사용 또는 공개로부터 태국 데이터 소유자를 보호하기 위해 도입되었습니다. 유럽 연합의 GDPR에서 영감을 받은 이 규정은 태국 시민들에게 저장된 개인 데이터에 대한 액세스 또는 삭제를 요청할 수 있는 권한을 부여합니다.
 
 **개인화된 오퍼**: 개인화된 오퍼는 자격 규칙 및 제한을 기반으로 사용자 정의 가능한 마케팅 메시지입니다.
 
@@ -529,6 +543,8 @@ ht-degree: 0%
 **결합 스키마**: 결합 스키마는 동일한 클래스를 공유하며 이 스키마에 대해 활성화된 스키마 통합입니다 [!DNL Real-time Customer Profile]. 조직에 대해 여러 결합 스키마가 있을 수 있지만 클래스당 하나의 결합 스키마만 있을 수 있습니다.
 
 ## V
+
+**VCDPA**: 다음 [[!DNL Virginia Consumer Data Protection Act (VCDPA)]](https://lis.virginia.gov/cgi-bin/legp604.exe?212+sum+HB2307) 개인 데이터에 액세스, 삭제 및 수정 권한을 포함하여 버지니아 거주자(&quot;소비자&quot;)에게 새로운 데이터 개인 정보 보호 권한을 제공합니다. 또한 소비자는 개인 데이터 판매를 거부하거나, 개인 데이터를 기반으로 프로파일링을 옵트아웃하고, 개인 광고 목적을 처리할 권리를 갖습니다.
 
 ## W
 

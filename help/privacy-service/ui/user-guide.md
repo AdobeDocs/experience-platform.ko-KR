@@ -5,10 +5,10 @@ title: Privacy Service UI의 개인 정보 작업 관리
 topic-legacy: UI guide
 description: Privacy Service 사용자 인터페이스를 사용하여 다양한 Experience Cloud 애플리케이션에서 개인 정보 보호 요청을 조정하고 모니터링하는 방법을 알아봅니다.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: 82dea48c732b3ddea957511c22f90bbd032ed9b7
+source-git-commit: 3bb0fc7b2807889d0a759e81c8ff728de3c0cbde
 workflow-type: tm+mt
-source-wordcount: '1100'
-ht-degree: 0%
+source-wordcount: '1151'
+ht-degree: 1%
 
 ---
 
@@ -24,13 +24,25 @@ ht-degree: 0%
 
 ### 규정 유형
 
-[!DNL Privacy Service] 에서는 여러 개인 정보 보호 규정에 대한 작업 요청을 지원합니다.
+[!DNL Privacy Service] 에서는 여러 개인 정보 보호 규정에 대한 작업 요청을 지원합니다. 다음 표에는 UI에 표시된 대로 지원되는 규정 및 해당 레이블이 나열되어 있습니다.
 
-* 다음 [!DNL California Consumer Privacy Act] ([!UICONTROL CCPA])
-* 유럽 연합 [!DNL General Data Protection Regulation] ([!UICONTROL GDPR])
-* 태국 [!DNL Personal Data Protection Act] ([!UICONTROL PDPA_THA])
-* 브라질 [!DNL Lei Geral de Proteção de Dados] ([!UICONTROL LGPD_BRA])
-* 뉴질랜드 [!DNL Privacy Act] ([!UICONTROL NZPA_NZL])
+| UI 레이블 | 규정 |
+| --- | --- |
+| [!UICONTROL CCPA] | [!DNL California Consumer Privacy Act] |
+| [!UICONTROL GDPR] | 유럽 연합 [!DNL General Data Protection Regulation] |
+| [!UICONTROL PDPA_THA] | 태국 [!DNL Personal Data Protection Act] |
+| [!UICONTROL LGPD_BRA] | 브라질 [!DNL Lei Geral de Proteção de Dados] |
+| [!UICONTROL NZPA_NZL] | 뉴질랜드 [!DNL Privacy Act] |
+| [!UICONTROL VCDPA_USA] | [!DNL Virginia Consumer Data Protection Act] |
+| [!UICONTROL CPRA_USA] | [!DNL California Consumer Privacy Rights Act (CPRA)] |
+| [!UICONTROL APA_AUS] | [!DNL Australia Privacy Act (Privacy Act)] |
+| [!UICONTROL HIPAA_AUS] | [!DNL Health Insurance Portability and Accountability Act] |
+
+{style=&quot;table-layout:auto&quot;}
+
+>[!NOTE]
+>
+>다음 사항에 대한 개요를 참조하십시오. [지원되는 개인 정보 보호 규정](../regulations/overview.md) 각 규정의 법적 문맥에 대한 자세한 정보.
 
 각 규정 유형에 대한 작업은 별도로 추적됩니다. 규칙 유형 간을 전환하려면 **[!UICONTROL 규정 유형]** 드롭다운 메뉴를 선택하고 목록에서 원하는 규칙을 선택합니다.
 

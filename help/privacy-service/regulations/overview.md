@@ -5,10 +5,10 @@ title: 개인 정보 보호 규정 개요
 topic-legacy: troubleshooting
 description: 이 문서에서는 Adobe Experience Cloud에서 지원하는 다양한 개인 정보 보호 규정에 대한 개요를 제공합니다.
 exl-id: 2ca946cf-94f8-4fd8-bb1a-7f06a5ab1256
-source-git-commit: 74624291b77e586c6adeb3e08b12a1dae92d419a
+source-git-commit: 3bb0fc7b2807889d0a759e81c8ff728de3c0cbde
 workflow-type: tm+mt
-source-wordcount: '721'
-ht-degree: 0%
+source-wordcount: '724'
+ht-degree: 1%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 이 문서에서는 Adobe Experience Cloud에서 지원하는 다양한 개인 정보 보호 규정에 대한 개요를 제공합니다.
 
-Adobe Experience Platform Privacy Service을 사용하여 Experience Cloud은 다음 규칙에 따라 액세스 및 삭제 요청을 지원합니다.
+사용 [Adobe Experience Platform Privacy Service](../home.md), Experience Cloud은 다음 규정에 따라 액세스 및 삭제 요청을 지원합니다.
 
 | 규정 | 설명 |
 | --- | --- |
@@ -29,6 +29,8 @@ Adobe Experience Platform Privacy Service을 사용하여 Experience Cloud은 �
 | 뉴질랜드 [!DNL Privacy Act] | 다음 [뉴질랜드 [!DNL Privacy Act]](https://www.privacy.org.nz/privacy-act-2020/privacy-principles/) 기관이 뉴질랜드 시민과 조직의 개인 정보를 수집, 사용, 공개, 저장 및 액세스하는 방법을 제어합니다. 2020년, 이 법의 최신 버전은 새로운 범죄, 증가하는 벌금, 데이터 위반 시 필수 알림, 개인 정보 보호 위원의 권한 증대를 포함한 이러한 개인 정보 보호 법에 대한 중요한 업데이트를 도입했습니다. |
 | PDPA(태국) | 다음 [[!DNL Personal Data Protection Act (PDPA)]](https://www.pdpc.gov.sg/Overview-of-PDPA/The-Legislation/Personal-Data-Protection-Act) 는 개인 데이터의 불법 수집, 사용 또는 공개로부터 태국 데이터 소유자를 보호하기 위해 도입되었습니다. 유럽 연합의 GDPR에서 영감을 받은 이 규정은 태국 시민들에게 저장된 개인 데이터에 대한 액세스 또는 삭제를 요청할 수 있는 권한을 부여합니다. |
 | VCDPA(버지니아) | 다음 [[!DNL Virginia Consumer Data Protection Act (VCDPA)]](https://lis.virginia.gov/cgi-bin/legp604.exe?212+sum+HB2307) 개인 데이터에 액세스, 삭제 및 수정 권한을 포함하여 버지니아 거주자(&quot;소비자&quot;)에게 새로운 데이터 개인 정보 보호 권한을 제공합니다. 또한 소비자는 개인 데이터 판매를 거부하거나, 개인 데이터를 기반으로 프로파일링을 옵트아웃하고, 개인 광고 목적을 처리할 권리를 갖습니다. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## 다음 단계
 

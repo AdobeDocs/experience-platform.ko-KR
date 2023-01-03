@@ -5,9 +5,9 @@ title: 개인 정보 작업 API 끝점
 topic-legacy: developer guide
 description: Privacy Service API를 사용하여 Experience Cloud 애플리케이션의 개인 정보 보호 작업을 관리하는 방법을 알아봅니다.
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: b126726aa7f7fe6070693fdecfdac1ec66050aa9
+source-git-commit: 3bb0fc7b2807889d0a759e81c8ff728de3c0cbde
 workflow-type: tm+mt
-source-wordcount: '1429'
+source-wordcount: '1451'
 ht-degree: 3%
 
 ---
@@ -37,7 +37,7 @@ GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{REGULATION}` | 질의할 규정 유형입니다. 허용되는 값은 다음과 같습니다. <ul><li>`gdpr` (유럽 연합)</li><li>`ccpa` (캘리포니아)</li><li>`lgpd_bra` (브라질)</li><li>`nzpa_nzl` (뉴질랜드)</li><li>`pdpa_tha` (태국)</li></ul> |
+| `{REGULATION}` | 질의할 규정 유형입니다. 허용되는 값은 다음과 같습니다. <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpra_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`vcdpa_usa`</li></ul><br>다음 사항에 대한 개요를 참조하십시오. [지원되는 규정](../regulations/overview.md) 를 참조하십시오. |
 | `{PAGE}` | 표시할 데이터의 페이지(0 기반 번호 지정 사용)입니다. 기본값은 `0`입니다. |
 | `{SIZE}` | 각 페이지에 표시할 결과 수입니다. 기본값은 입니다. `1` 최대값은 `100`. 최대값을 초과하면 API가 400 코드 오류를 반환합니다. |
 
@@ -161,7 +161,7 @@ curl -X POST \
 | `priority` | 요청 처리 우선순위를 설정하는 Adobe Analytics에서 사용하는 선택적 속성입니다. 허용되는 값은 다음과 같습니다 `normal` 및 `low`. If `priority` 이 생략되면 기본 동작은 `normal`. |
 | `analyticsDeleteMethod` | Adobe Analytics에서 개인 데이터를 처리하는 방법을 지정하는 선택적 속성입니다. 이 속성에 대해 가능한 두 개의 값이 허용됩니다. <ul><li>`anonymize`: 지정된 사용자 ID 컬렉션에서 참조하는 모든 데이터는 익명으로 수행됩니다. If `analyticsDeleteMethod` 생략하면 기본 동작입니다.</li><li>`purge`: 모든 데이터가 완전히 제거됩니다.</li></ul> |
 | `mergePolicyId` | 실시간 고객 프로필에 대해 개인 정보 보호 요청을 수행할 때(`profileService`)에서 특정 ID를 선택적으로 제공할 수 있습니다 [병합 정책](../../profile/merge-policies/overview.md) ID 결합에 사용할 구성 요소. 병합 정책을 지정하여 개인 정보 보호 요청에는 고객에 대한 데이터를 반환할 때 세그먼트 정보가 포함될 수 있습니다. 요청당 하나의 병합 정책만 지정할 수 있습니다. 병합 정책이 제공되지 않으면 세그먼테이션 정보가 응답에 포함되지 않습니다. |
-| `regulation` **(필수 여부)** | 개인 정보 보호 업무에 대한 규정. 다음 값이 허용됩니다. <ul><li>`gdpr` (유럽 연합)</li><li>`ccpa` (캘리포니아)</li><li>`lgpd_bra` (브라질)</li><li>`nzpa_nzl` (뉴질랜드)</li><li>`pdpa_tha` (태국)</li></ul> |
+| `regulation` **(필수 여부)** | 개인 정보 보호 업무에 대한 규정. 다음 값이 허용됩니다. <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpra_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`vcdpa_usa`</li></ul><br>다음 사항에 대한 개요를 참조하십시오. [지원되는 규정](../regulations/overview.md) 를 참조하십시오. |
 
 {style=&quot;table-layout:auto&quot;}
 
