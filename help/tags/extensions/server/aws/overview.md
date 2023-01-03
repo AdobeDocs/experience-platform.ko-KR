@@ -2,9 +2,9 @@
 title: AWS 확장 개요
 description: Adobe Experience Platform에서 이벤트 전달을 위한 AWS 확장에 대해 알아봅니다.
 exl-id: 826a96aa-2d64-4a8b-88cf-34a0b6c26df5
-source-git-commit: bfbad3c11df64526627e4ce2d766b527df678bca
+source-git-commit: b4ff3dbc9c62dceefdf2b842cafa65132dde41fc
 workflow-type: tm+mt
-source-wordcount: '837'
+source-wordcount: '847'
 ht-degree: 4%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 4%
 >
 >Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
 
-[[!DNL Amazon Web Services] ([!DNL AWS])](https://aws.amazon.com/) 은 분산 컴퓨팅, 데이터베이스 스토리지, 콘텐츠 전달 및 CRM(고객 관계 관리)과 같은 다양한 서비스를 제공하는 클라우드 컴퓨팅 플랫폼입니다.
+[[!DNL Amazon Web Services] ([!DNL AWS])](https://aws.amazon.com/) 은 CRM(고객 관계 관리) 및 ERP(엔터프라이즈 리소스 계획)를 위한 분산 컴퓨팅, 데이터베이스 스토리지, 컨텐츠 제공, SaaS(software-as-a-service) 통합 서비스와 같은 다양한 서비스를 제공하는 클라우드 컴퓨팅 플랫폼입니다.
 
 다음 [!DNL AWS] [이벤트 전달](../../../ui/event-forwarding/overview.md) 확장 활용 [[!DNL Amazon Kinesis Data Streams]](https://docs.aws.amazon.com/streams/latest/dev/introduction.html) Adobe Experience Platform Edge Network에서 로 이벤트를 전송하려면 [!DNL AWS] 추가 처리. 이 안내서에서는 확장을 설치하고 이벤트 전달 규칙에서 해당 기능을 사용하는 방법을 다룹니다.
 
