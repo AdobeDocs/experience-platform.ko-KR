@@ -3,7 +3,7 @@ title: Adobe Experience Platform Web SDK의 IAB TCF 2.0 지원
 description: Adobe Experience Platform Web SDK를 사용하여 IAB TCF 2.0 동의 환경 설정을 지원하는 방법을 알아봅니다
 keywords: 동의;설정 동의;프로필 개인 정보 필드 그룹;경험 이벤트 개인 정보 필드 그룹;개인 정보 필드 그룹;IAB TCF 2.0;Real-Time CDP;
 exl-id: 78e728f4-1604-40bf-9e21-a056024bbc98
-source-git-commit: e67b3a6f9f57a3971a5bfa755db3b1043bebc96b
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '861'
 ht-degree: 0%
@@ -29,7 +29,7 @@ IAB TCF 2.0을 사용하여 웹 SDK를 구현하려면 XDM(Experience Data Model
 
 SDK를 사용하여 Adobe Experience Platform에 동의 데이터를 전송하려면 다음 조건을 충족해야 합니다.
 
-- 스키마를 기반으로 하는 데이터 세트 [!DNL XDM Individual Profile] 클래스에는 사용할 수 있는 TCF 2.0 동의 필드가 포함되어 있습니다 [!DNL Real-time Customer Profile].
+- 스키마를 기반으로 하는 데이터 세트 [!DNL XDM Individual Profile] 클래스에는 사용할 수 있는 TCF 2.0 동의 필드가 포함되어 있습니다 [!DNL Real-Time Customer Profile].
 - 위에 언급된 플랫폼 및 프로필 사용 데이터 세트를 사용하여 설정된 데이터 스트림.
 
 다음 안내서를 참조하십시오. [TCF 2.0 규정 준수](../../../landing/governance-privacy-security/consent/iab/overview.md) 필요한 데이터 세트 및 데이터 스트림 생성에 대한 지침.

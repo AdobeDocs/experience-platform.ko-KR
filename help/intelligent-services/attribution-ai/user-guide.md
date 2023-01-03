@@ -5,7 +5,7 @@ title: Attribution AI UI 안내서
 topic-legacy: User guide
 description: 이 문서는 Intelligent Services 사용자 인터페이스의 Attribution AI과 상호 작용하기 위한 안내서의 역할을 합니다.
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-source-git-commit: cec2449525eb067fa7915073e929f9693a45575a
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2960'
 ht-degree: 1%

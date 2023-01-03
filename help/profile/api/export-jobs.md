@@ -5,7 +5,7 @@ topic-legacy: guide
 type: Documentation
 description: 실시간 고객 프로필을 사용하면 특성 데이터와 행동 데이터를 모두 포함하여 여러 소스에서 데이터를 결합하여 Adobe Experience Platform 내에서 개별 고객에 대한 단일 보기를 작성할 수 있습니다. 그런 다음 추가적인 처리를 위해 프로필 데이터를 데이터 세트에 내보낼 수 있습니다.
 exl-id: d51b1d1c-ae17-4945-b045-4001e4942b67
-source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1519'
 ht-degree: 2%
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # 프로필 내보내기 작업 끝점
 
-[!DNL Real-time Customer Profile] 속성 데이터와 동작 데이터를 모두 포함하여 여러 소스에서 데이터를 결합하여 개별 고객에 대한 단일 뷰를 작성할 수 있습니다. 그런 다음 추가적인 처리를 위해 프로필 데이터를 데이터 세트에 내보낼 수 있습니다. 예를 들어 [!DNL Profile] 활성화를 위해 데이터를 내보낼 수 있고, 프로필 속성을 보고용으로 내보낼 수 있습니다.
+[!DNL Real-Time Customer Profile] 속성 데이터와 동작 데이터를 모두 포함하여 여러 소스에서 데이터를 결합하여 개별 고객에 대한 단일 뷰를 작성할 수 있습니다. 그런 다음 추가적인 처리를 위해 프로필 데이터를 데이터 세트에 내보낼 수 있습니다. 예를 들어 [!DNL Profile] 활성화를 위해 데이터를 내보낼 수 있고, 프로필 속성을 보고용으로 내보낼 수 있습니다.
 
 이 문서에서는 [프로필 API](https://www.adobe.com/go/profile-apis-en).
 
@@ -26,11 +26,11 @@ ht-degree: 2%
 
 ## 시작하기
 
-이 안내서에서 사용되는 API 엔드포인트는 [!DNL Real-time Customer Profile] API. 계속하기 전에 [시작 안내서](getting-started.md) 관련 설명서에 대한 링크의 경우, 이 문서에서 샘플 API 호출을 읽는 안내서와 모든 호출을 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요 정보를 제공합니다 [!DNL Experience Platform] API.
+이 안내서에서 사용되는 API 엔드포인트는 [!DNL Real-Time Customer Profile] API. 계속하기 전에 [시작 안내서](getting-started.md) 관련 설명서에 대한 링크의 경우, 이 문서에서 샘플 API 호출을 읽는 안내서와 모든 호출을 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요 정보를 제공합니다 [!DNL Experience Platform] API.
 
 ## 내보내기 작업 만들기
 
-내보내기 [!DNL Profile] 데이터를 사용하려면 먼저 데이터를 내보낼 데이터 세트를 만든 다음 새 내보내기 작업을 시작해야 합니다. 두 단계 모두 Experience Platform API를 사용하여 카탈로그 서비스 API를 사용하고 나머지 단계는 실시간 고객 프로필 API를 사용하여 수행할 수 있습니다. 각 단계를 완료하기 위한 자세한 지침은 다음에 나오는 섹션에 요약되어 있습니다.
+내보내기 [!DNL Profile] 데이터를 사용하려면 먼저 데이터를 내보낼 데이터 세트를 만든 다음 새 내보내기 작업을 시작해야 합니다. 이 두 단계 모두 Experience Platform API를 사용하여 카탈로그 서비스 API를 사용하고 나머지 단계는 실시간 고객 프로필 API를 사용하여 수행할 수 있습니다. 각 단계를 완료하기 위한 자세한 지침은 다음에 나오는 섹션에 요약되어 있습니다.
 
 ### 대상 데이터 세트 만들기
 

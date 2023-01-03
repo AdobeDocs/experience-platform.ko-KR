@@ -5,7 +5,7 @@ title: Experience Platform에서 IAB TCF 2.0 지원
 topic-legacy: privacy events
 description: 세그먼트를 Adobe Experience Platform의 대상으로 활성화할 때 고객 동의 선택 사항을 전달하도록 데이터 작업 및 스키마를 구성하는 방법을 알아보십시오.
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2558'
 ht-degree: 1%
@@ -40,10 +40,10 @@ Adobe Experience Platform은 등록된 [IAB TCF 2.0 공급업체 목록](https:/
 
 * [XDM(경험 데이터 모델)](../../../../xdm/home.md): Experience Platform이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
 * [Adobe Experience Platform Identity 서비스](../../../../identity-service/home.md): 여러 장치 및 시스템에서 ID를 브리징하여 고객 경험 데이터의 분화로 인한 근본적인 문제를 해결합니다.
-* [실시간 고객 프로필](../../../../profile/home.md): 활용 [!DNL Identity Service] 데이터 세트에서 실시간으로 세부 고객 프로필을 만들 수 있습니다. [!DNL Real-time Customer Profile] Data Lake에서 데이터를 가져오고 별도의 데이터 저장소에서 고객 프로필을 유지합니다.
+* [실시간 고객 프로필](../../../../profile/home.md): 활용 [!DNL Identity Service] 데이터 세트에서 실시간으로 세부 고객 프로필을 만들 수 있습니다. [!DNL Real-Time Customer Profile] Data Lake에서 데이터를 가져오고 별도의 데이터 저장소에서 고객 프로필을 유지합니다.
 * [Adobe Experience Platform Web SDK](../../../../edge/home.md): 다양한 플랫폼 서비스를 고객 측 웹 사이트에 통합할 수 있는 클라이언트측 JavaScript 라이브러리입니다.
    * [SDK 동의 명령](../../../../edge/consent/supporting-consent.md): 이 안내서에 표시된 동의 관련 SDK 명령의 사용 사례 개요입니다.
-* [Adobe Experience Platform 세그멘테이션 서비스](../../../../segmentation/home.md): 나눌 수 있습니다 [!DNL Real-time Customer Profile] 유사한 트레이트를 공유하고 마케팅 전략과 유사하게 응답하는 개인 그룹에 데이터를 추가합니다.
+* [Adobe Experience Platform 세그멘테이션 서비스](../../../../segmentation/home.md): 나눌 수 있습니다 [!DNL Real-Time Customer Profile] 유사한 트레이트를 공유하고 마케팅 전략과 유사하게 응답하는 개인 그룹에 데이터를 추가합니다.
 
 위에 나열된 플랫폼 서비스 외에도 다음과 같은 정보를 숙지해야 합니다 [대상](../../../../data-governance/home.md) 플랫폼 생태계에서 EMC의 역할을 살펴볼 수 있습니다.
 
@@ -68,7 +68,7 @@ Adobe Audience Manager이 Platform과 공유한 모든 세그먼트( [!DNL Audie
 
 TCF 동의 데이터를 성공적으로 수집하면 다운스트림 Platform 서비스에서 다음 프로세스가 수행됩니다.
 
-1. [!DNL Real-time Customer Profile] 해당 고객 프로필에 대해 저장된 동의 데이터를 업데이트합니다.
+1. [!DNL Real-Time Customer Profile] 해당 고객 프로필에 대해 저장된 동의 데이터를 업데이트합니다.
 1. 플랫폼의 모든 ID에 대해 플랫폼(565)에 대한 공급업체 권한이 제공된 경우에만 플랫폼이 고객 ID를 처리합니다.
 1. 세그먼트를 TCF 2.0 공급업체 목록의 구성원에 속하는 대상으로 내보낼 때 플랫폼에는 두 플랫폼(565)에 대한 공급업체 권한이 있는 경우에만 프로필이 포함됩니다 *및* 개별 대상은 클러스터의 모든 ID에 대해 제공됩니다.
 
@@ -243,7 +243,7 @@ alloy("sendEvent", {
 
 >[!NOTE]
 >
->Adobe Audience Manager과 공유되는 모든 세그먼트에는 플랫폼 쌍과 동일한 TCF 2.0 동의 값이 포함됩니다. 이후 [!DNL Audience Manager] 플랫폼(565)과 동일한 공급업체 ID를 공유하며, 동일한 목적과 공급업체 권한이 필요합니다. 에서 문서를 참조하십시오. [IAB TCF용 Adobe Audience Manager 플러그인](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html) 추가 정보.
+>Adobe Audience Manager과 공유되는 모든 세그먼트에는 플랫폼 쌍과 동일한 TCF 2.0 동의 값이 포함됩니다. 이후 [!DNL Audience Manager] 플랫폼(565)과 동일한 공급업체 ID를 공유하며, 동일한 목적과 공급업체 권한이 필요합니다. 에서 문서를 참조하십시오. [IAB TCF용 Adobe Audience Manager 플러그인](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html?lang=ko-KR) 추가 정보.
 
 ## 구현 테스트 {#test-implementation}
 

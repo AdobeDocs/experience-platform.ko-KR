@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 데이터 과학 작업 공간 교육 과정
 description: 이 문서에서는 Adobe Experience Platform 데이터 과학 작업 공간 교육 과정에 대한 링크 및 설명을 제공합니다.
 exl-id: d814846e-52a9-46c6-831a-3399241959f2
-source-git-commit: 7733fe16984cacf04c1070e92673a7ee19eaea47
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '439'
 ht-degree: 1%

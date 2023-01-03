@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: September 8, 2020
 author: crhoades, ens25212
 exl-id: bf401f3a-b088-4cbd-9a64-224294b797b9
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '863'
 ht-degree: 6%
@@ -22,7 +22,7 @@ Adobe Experience Platform의 기존 기능 업데이트:
 - [[!DNL Destinations]](#destinations)
 - [[!DNL Observability Insights]](#observability)
 - [[!DNL Privacy Service]](#privacy)
-- [[!DNL Real-time Customer Profile]](#profile)
+- [[!DNL Real-Time Customer Profile]](#profile)
 - [[!DNL Segmentation Service]](#segmentation)
 - [[!DNL Sources]](#sources)
 
@@ -76,17 +76,17 @@ in [Real-time Customer Data Platform](../../rtcdp/overview.md), 대상은 대상
 
 ## 실시간 고객 프로필 {#profile}
 
-Adobe Experience Platform을 사용하면 고객이 브랜드와 상호 작용하는 위치와 시기에 관계없이 고객을 위해 조정되고 일관되며 적절한 경험을 제공할 수 있습니다. 사용 [!DNL Real-time Customer Profile]를 사용하면 온라인, 오프라인, CRM 및 타사 데이터를 포함하여 여러 채널의 데이터를 결합하는 각 개별 고객을 전체적으로 확인할 수 있습니다. [!DNL Profile] 서로 다른 고객 데이터를 모든 고객 상호 작용을 실행 가능하고 타임스탬프가 지정된 계정을 제공하는 통합 보기에 통합할 수 있습니다.
+Adobe Experience Platform을 사용하면 고객이 브랜드와 상호 작용하는 위치와 시기에 관계없이 고객을 위해 조정되고 일관되며 적절한 경험을 제공할 수 있습니다. 사용 [!DNL Real-Time Customer Profile]를 사용하면 온라인, 오프라인, CRM 및 타사 데이터를 포함하여 여러 채널의 데이터를 결합하는 각 개별 고객을 전체적으로 확인할 수 있습니다. [!DNL Profile] 서로 다른 고객 데이터를 모든 고객 상호 작용을 실행 가능하고 타임스탬프가 지정된 계정을 제공하는 통합 보기에 통합할 수 있습니다.
 
 | 기능 | 설명 |
 | ------- | ----------- |
 | 프로필 뷰어 | 플랫폼 UI에 있는 프로필 뷰어가 전체 사용자 지정을 사용하는 대시보드로 업데이트되었습니다. 이제 사용자는 다음 작업을 수행할 수 있습니다. <ul><li>기본 정보 위젯에서 선택한 표준 및 사용자 지정된 속성을 업데이트합니다.</li><li>사용자 지정 위젯 만들기, 편집 및 제거</li><li>위젯 크기 조정 및 재정렬</li></ul> |
 
-자세한 내용은 [!DNL Real-time Customer Profile], 자습서 및 작업 우수 사례 포함 [!DNL Profile] 데이터, [실시간 고객 프로필 개요](../../profile/home.md).
+자세한 내용은 [!DNL Real-Time Customer Profile], 자습서 및 작업 우수 사례 포함 [!DNL Profile] 데이터, [실시간 고객 프로필 개요](../../profile/home.md).
 
 ## 세분화 서비스 {#segmentation}
 
-Adobe Experience Platform 세그멘테이션 서비스에서는 세그먼트를 작성하고 대상의 대상을 생성할 수 있도록 해주는 사용자 인터페이스와 RESTful API를 제공합니다 [!DNL Real-time Customer Profile] 데이터. 이러한 세그먼트는 중앙에서 구성 및 관리됩니다 [!DNL Platform]모든 Adobe 애플리케이션에서 손쉽게 액세스할 수 있습니다.
+Adobe Experience Platform 세그멘테이션 서비스에서는 세그먼트를 작성하고 대상의 대상을 생성할 수 있도록 해주는 사용자 인터페이스와 RESTful API를 제공합니다 [!DNL Real-Time Customer Profile] 데이터. 이러한 세그먼트는 중앙에서 구성 및 관리됩니다 [!DNL Platform]모든 Adobe 애플리케이션에서 손쉽게 액세스할 수 있습니다.
 
 [!DNL Segmentation Service] 고객 기반 내의 마케팅 가능한 사람 그룹을 구분하는 기준을 설명하여 특정 프로필 하위 집합을 정의합니다. 세그먼트는 브랜드와의 고객 상호 작용을 나타내는 레코드 데이터(예: 인구 통계 정보) 또는 시계열 이벤트를 기반으로 할 수 있습니다.
 

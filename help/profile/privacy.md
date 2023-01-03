@@ -3,20 +3,20 @@ keywords: Experience Platform;홈;인기 있는 주제
 solution: Experience Platform
 title: 실시간 고객 프로필의 개인 정보 보호 요청 처리
 type: Documentation
-description: Adobe Experience Platform Privacy Service은 다양한 개인 정보 보호 규정에 따라 지정된 대로 고객 개인 데이터에 대한 액세스, 판매 거부 또는 삭제 요청을 처리합니다. 이 문서에서는 실시간 고객 프로필에 대한 개인 정보 보호 요청 처리와 관련된 필수 개념을 다룹니다.
+description: Adobe Experience Platform Privacy Service은 다양한 개인 정보 보호 규정에 따라 지정된 대로 고객 개인 데이터에 대한 액세스, 판매 거부 또는 삭제 요청을 처리합니다. 이 문서에서는 실시간 고객 프로필의 개인 정보 보호 요청 처리와 관련된 필수 개념을 다룹니다.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: 159a46fa227207bf161100e50bc286322ba2d00b
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1563'
 ht-degree: 0%
 
 ---
 
-# 의 개인 정보 보호 요청 처리 [!DNL Real-time Customer Profile]
+# 의 개인 정보 보호 요청 처리 [!DNL Real-Time Customer Profile]
 
 Adobe Experience Platform [!DNL Privacy Service] 는 GDPR(General Data Protection Regulation) 및 와 같은 개인 정보 보호 규정에 따라 지정된 대로 고객 개인 데이터에 대한 액세스, 판매 거부 또는 삭제 요청을 처리합니다 [!DNL California Consumer Privacy Act] (CCPA).
 
-이 문서에서는 [!DNL Real-time Customer Profile] Adobe Experience Platform 내에서 사용할 수 있습니다.
+이 문서에서는 [!DNL Real-Time Customer Profile] Adobe Experience Platform 내에서 사용할 수 있습니다.
 
 >[!NOTE]
 >
@@ -30,7 +30,7 @@ Adobe Experience Platform [!DNL Privacy Service] 는 GDPR(General Data Protectio
 
 * [[!DNL Privacy Service]](../privacy-service/home.md): Adobe Experience Cloud 애플리케이션에서 개인 데이터를 액세스, 판매 거부 또는 삭제하기 위한 고객 요청을 관리합니다.
 * [[!DNL Identity Service]](../identity-service/home.md): 여러 장치 및 시스템에서 ID를 브리징하여 고객 경험 데이터의 분화로 인한 근본적인 문제를 해결합니다.
-* [[!DNL Real-time Customer Profile]](home.md): 여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
+* [[!DNL Real-Time Customer Profile]](home.md): 여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
 
 ## ID 네임스페이스 이해 {#namespaces}
 
@@ -42,7 +42,7 @@ ID 서비스는 전역적으로 정의된(표준) 및 사용자 정의(사용자
 
 ## 요청 제출 {#submit}
 
-아래 섹션에서는 개인 정보 보호 요청을 수행하는 방법에 대해 간략하게 설명합니다 [!DNL Real-time Customer Profile] 사용 [!DNL Privacy Service] API 또는 UI. 이러한 섹션을 읽기 전에 [Privacy Service API](../privacy-service/api/getting-started.md) 또는 [Privacy Service UI](../privacy-service/ui/overview.md) 문서 를 참조하십시오.
+아래 섹션에서는 개인 정보 보호 요청을 수행하는 방법에 대해 간략하게 설명합니다 [!DNL Real-Time Customer Profile] 사용 [!DNL Privacy Service] API 또는 UI. 이러한 섹션을 읽기 전에 [Privacy Service API](../privacy-service/api/getting-started.md) 또는 [Privacy Service UI](../privacy-service/ui/overview.md) 문서 를 참조하십시오.
 
 >[!IMPORTANT]
 >
@@ -111,7 +111,7 @@ curl -X POST \
 
 ### UI 사용
 
-UI에서 작업 요청을 만들 때는 반드시 선택해야 합니다 **[!UICONTROL AEP Data Lake]** 및/또는 **[!UICONTROL 프로필]** 아래에 **[!UICONTROL 제품]** data lake 또는 [!DNL Real-time Customer Profile]각각 입니다.
+UI에서 작업 요청을 만들 때는 반드시 선택해야 합니다 **[!UICONTROL AEP Data Lake]** 및/또는 **[!UICONTROL 프로필]** 아래에 **[!UICONTROL 제품]** data lake 또는 [!DNL Real-Time Customer Profile]각각 입니다.
 
 ![제품 아래에 프로필 옵션이 선택된 상태로 UI에서 생성 중인 액세스 작업 요청](./images/privacy/product-value.png)
 

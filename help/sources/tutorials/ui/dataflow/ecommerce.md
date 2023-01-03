@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: 데이터 흐름은 소스에서 플랫폼 데이터 집합으로 데이터를 검색하고 수집하는 예약된 작업입니다. 이 자습서에서는 플랫폼 UI를 사용하여 전자 상거래 소스용 데이터 흐름을 만드는 방법에 대해 설명합니다.
 exl-id: ee1382c5-78ac-4765-8883-0a922772bb20
-source-git-commit: a9a443eda060606be4394dfc2e2707fe18618160
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1386'
 ht-degree: 0%
@@ -29,7 +29,7 @@ ht-degree: 0%
 * [[!DNL Experience Data Model (XDM)] 시스템](../../../../xdm/home.md): Experience Platform이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
    * [스키마 작성 기본 사항](../../../../xdm/schema/composition.md): 스키마 컴포지션의 주요 원칙 및 모범 사례를 포함하여 XDM 스키마의 기본 빌딩 블록에 대해 알아봅니다.
    * [스키마 편집기 자습서](../../../../xdm/tutorials/create-schema-ui.md): 스키마 편집기 UI를 사용하여 사용자 지정 스키마를 만드는 방법을 알아보십시오.
-* [[!DNL Real-time Customer Profile]](../../../../profile/home.md): 여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
+* [[!DNL Real-Time Customer Profile]](../../../../profile/home.md): 여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
 * [[!DNL Data Prep]](../../../../data-prep/home.md): 데이터 엔지니어가 XDM(Experience Data Model) 을 통해 데이터를 매핑, 변환 및 확인할 수 있습니다.
 
 ## 데이터 추가
@@ -139,9 +139,9 @@ ht-degree: 0%
 
 ## 다음 단계
 
-이 자습서를 따라 전자 상거래 소스에서 플랫폼으로 데이터를 가져오는 데이터 흐름을 성공적으로 만들었습니다. 이제 다운스트림에서 들어오는 데이터를 사용할 수 있습니다 [!DNL Platform] 와 같은 서비스 [!DNL Real-time Customer Profile] 및 [!DNL Data Science Workspace]. 자세한 내용은 다음 문서를 참조하십시오.
+이 자습서를 따라 전자 상거래 소스에서 플랫폼으로 데이터를 가져오는 데이터 흐름을 성공적으로 만들었습니다. 이제 다운스트림에서 들어오는 데이터를 사용할 수 있습니다 [!DNL Platform] 와 같은 서비스 [!DNL Real-Time Customer Profile] 및 [!DNL Data Science Workspace]. 자세한 내용은 다음 문서를 참조하십시오.
 
-* [[!DNL Real-time Customer Profile] 개요](../../../../profile/home.md)
+* [[!DNL Real-Time Customer Profile] 개요](../../../../profile/home.md)
 * [[!DNL Data Science Workspace] 개요](../../../../data-science-workspace/home.md)
 
 

@@ -5,7 +5,7 @@ title: 세그먼트 빌더 UI 안내서
 topic-legacy: ui guide
 description: Adobe Experience Platform UI의 세그먼트 빌더에서는 프로필 데이터 요소와 상호 작용할 수 있는 풍부한 작업 공간을 제공합니다. 작업 공간에서는 데이터 속성을 표시하는 데 사용되는 드래그 앤 드롭 타일과 같이 규칙을 만들고 편집하기 위한 직관적인 컨트롤을 제공합니다.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '3101'
 ht-degree: 1%
@@ -254,7 +254,7 @@ ht-degree: 1%
 
 ## 다음 단계 {#next-steps}
 
-세그먼트 빌더는 마케팅 가능한 대상을 [!DNL Real-time Customer Profile] 데이터. 이 안내서를 읽은 후에는 다음을 수행할 수 있습니다.
+세그먼트 빌더는 마케팅 가능한 대상을 [!DNL Real-Time Customer Profile] 데이터. 이 안내서를 읽은 후에는 다음을 수행할 수 있습니다.
 
 - 특성, 이벤트 및 기존 대상을 빌딩 블록으로 조합하여 세그먼트 정의를 만듭니다.
 - 규칙 빌더 캔버스 및 컨테이너를 사용하여 세그먼트 규칙이 실행되는 순서를 제어합니다.

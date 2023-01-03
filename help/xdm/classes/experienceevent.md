@@ -5,7 +5,7 @@ title: XDM ExperienceEvent 클래스
 topic-legacy: overview
 description: 이 문서에서는 XDM ExperienceEvent 클래스에 대한 개요와 이벤트 데이터 모델링에 대한 모범 사례를 제공합니다.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: 39e4ed1ff872de241bc07271cfb44310d41a2401
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1830'
 ht-degree: 1%
@@ -75,7 +75,7 @@ Adobe은 와 함께 사용할 여러 표준 필드 그룹을 제공합니다 [!D
 * [[!UICONTROL 장치 거래 세부 사항]](../field-groups/event/device-trade-in-details.md)
 * [[!UICONTROL 식사 예약]](../field-groups/event/dining-reservation.md)
 * [[!UICONTROL 최종 사용자 ID 세부 정보]](../field-groups/event/enduserids.md)
-* [[!UICONTROL 환경 세부 사항]](../field-groups/event/environment-details.md)
+* [[!UICONTROL 환경 세부 정보]](../field-groups/event/environment-details.md)
 * [[!UICONTROL 비행 예약]](../field-groups/event/flight-reservation.md)
 * [[!UICONTROL IAB TCF 2.0 동의]](../field-groups/event/iab.md)
 * [[!UICONTROL 숙박예약]](../field-groups/event/lodging-reservation.md)

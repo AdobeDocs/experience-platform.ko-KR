@@ -2,7 +2,7 @@
 title: Adobe Experience Platform 릴리스 노트 - 2021년 9월
 description: Adobe Experience Platform에 대한 2021년 9월 릴리스 노트입니다.
 exl-id: 96375409-803f-45af-805e-900207d972e4
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '377'
 ht-degree: 8%

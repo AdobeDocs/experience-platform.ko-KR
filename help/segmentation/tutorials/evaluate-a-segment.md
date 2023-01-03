@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: Adobe Experience Platform 세그멘테이션 서비스 API를 사용하여 세그먼트를 평가하고 세그먼트 결과에 액세스하는 방법을 알려면 이 자습서를 따르십시오.
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1595'
 ht-degree: 0%
@@ -21,8 +21,8 @@ ht-degree: 0%
 
 이 자습서에서는 다양한 자습서를 이해하고 있어야 합니다 [!DNL Adobe Experience Platform] 대상 세그먼트 만들기에 관련된 서비스입니다. 이 자습서를 시작하기 전에 다음 서비스에 대한 설명서를 검토하십시오.
 
-- [[!DNL Real-time Customer Profile]](../../profile/home.md): 여러 소스에서 집계된 데이터를 기반으로 통합된 고객 프로필을 실시간으로 제공합니다.
-- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): 대상 세그먼트를 [!DNL Real-time Customer Profile] 데이터.
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md): 여러 소스에서 집계된 데이터를 기반으로 통합된 고객 프로필을 실시간으로 제공합니다.
+- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): 대상 세그먼트를 [!DNL Real-Time Customer Profile] 데이터.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): 플랫폼이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다. 세그멘테이션을 가장 잘 사용하려면 데이터가 [데이터 모델링 우수 사례](../../xdm/schema/best-practices.md).
 - [샌드박스](../../sandboxes/home.md): [!DNL Experience Platform] 단일 파티션을 생성하는 가상 샌드박스 제공 [!DNL Platform] 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 별도의 가상 환경으로 인스턴스를 구축할 수 있습니다.
 
@@ -86,9 +86,9 @@ ht-degree: 0%
 
 ### 세그먼트 작업 만들기
 
-세그먼트 작업은 주문형 대상 세그먼트를 만드는 비동기 프로세스입니다. 세그먼트 정의 및 방법을 제어하는 병합 정책을 참조합니다 [!DNL Real-time Customer Profile] 프로필 조각에서 겹치는 속성을 병합합니다. 세그먼트 작업이 성공적으로 완료되면 처리 중에 발생할 수 있는 오류와 대상자의 최종 크기 등 세그먼트에 대한 다양한 정보를 수집할 수 있습니다. 현재 세그먼트 정의에 적격인 대상을 새로 고치려면 매번 세그먼트 작업을 실행해야 합니다.
+세그먼트 작업은 주문형 대상 세그먼트를 만드는 비동기 프로세스입니다. 세그먼트 정의 및 방법을 제어하는 병합 정책을 참조합니다 [!DNL Real-Time Customer Profile] 프로필 조각에서 겹치는 속성을 병합합니다. 세그먼트 작업이 성공적으로 완료되면 처리 중에 발생할 수 있는 오류와 대상자의 최종 크기 등 세그먼트에 대한 다양한 정보를 수집할 수 있습니다. 현재 세그먼트 정의에 적격인 대상을 새로 고치려면 매번 세그먼트 작업을 실행해야 합니다.
 
-에 POST 요청을 만들어 새 세그먼트 작업을 만들 수 있습니다 `/segment/jobs` 의 엔드포인트 [!DNL Real-time Customer Profile] API.
+에 POST 요청을 만들어 새 세그먼트 작업을 만들 수 있습니다 `/segment/jobs` 의 엔드포인트 [!DNL Real-Time Customer Profile] API.
 
 이 종단점 사용에 대한 자세한 내용은 [세그먼트 작업 끝점 안내서](../api/segment-jobs.md#create)
 
@@ -140,7 +140,7 @@ ht-degree: 0%
 
 ## 프로필 조회
 
-액세스할 특정 프로필을 알고 있는 경우 [!DNL Real-time Customer Profile] API. 개별 프로필에 액세스하는 전체 단계는 [프로필 API를 사용하여 실시간 고객 프로필 데이터에 액세스](../../profile/api/entities.md) 자습서입니다.
+액세스할 특정 프로필을 알고 있는 경우 [!DNL Real-Time Customer Profile] API. 개별 프로필에 액세스하는 전체 단계는 [프로필 API를 사용하여 실시간 고객 프로필 데이터에 액세스](../../profile/api/entities.md) 자습서입니다.
 
 ## 세그먼트 내보내기 {#export}
 
@@ -210,7 +210,7 @@ curl -X POST \
 
 ### 대상 구성원의 프로필 생성 {#generate-profiles}
 
-조합 지속 데이터 세트가 있을 경우, 에 POST 요청을 수행하여 대상 구성원을 데이터 집합에 유지하는 내보내기 작업을 만들 수 있습니다 `/export/jobs` 의 엔드포인트 [!DNL Real-time Customer Profile] 내보낼 세그먼트에 대한 데이터 세트 ID와 세그먼트 정보를 API로 제공하고 제공합니다.
+조합 지속 데이터 세트가 있을 경우, 에 POST 요청을 수행하여 대상 구성원을 데이터 집합에 유지하는 내보내기 작업을 만들 수 있습니다 `/export/jobs` 의 엔드포인트 [!DNL Real-Time Customer Profile] 내보낼 세그먼트에 대한 데이터 세트 ID와 세그먼트 정보를 API로 제공하고 제공합니다.
 
 이 종단점 사용에 대한 자세한 내용은 [작업 끝점 내보내기 안내서](../api/export-jobs.md#create)
 

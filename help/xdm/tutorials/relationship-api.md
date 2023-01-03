@@ -5,7 +5,7 @@ description: 이 문서에서는 스키마 레지스트리 API를 사용하여 �
 topic-legacy: tutorial
 type: Tutorial
 exl-id: ef9910b5-2777-4d8b-a6fe-aee51d809ad5
-source-git-commit: 65a6eca9450b3a3e19805917fb777881c08817a0
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1367'
 ht-degree: 2%
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 다양한 채널에서 고객과의 관계와 브랜드와의 상호 작용을 파악하는 기능은 Adobe Experience Platform의 중요한 부분입니다. 구조 내에서 이러한 관계 정의 [!DNL Experience Data Model] (XDM) 스키마를 사용하면 고객 데이터에 대한 복잡한 통찰력을 얻을 수 있습니다.
 
-스키마 관계는 결합 스키마 및 [!DNL Real-time Customer Profile]이는 동일한 클래스를 공유하는 스키마에만 적용됩니다. 다른 클래스에 속하는 두 스키마 간의 관계를 설정하려면 대상 스키마의 ID를 참조하는 소스 스키마에 전용 관계 필드를 추가해야 합니다.
+스키마 관계는 결합 스키마 및 [!DNL Real-Time Customer Profile]이는 동일한 클래스를 공유하는 스키마에만 적용됩니다. 다른 클래스에 속하는 두 스키마 간의 관계를 설정하려면 대상 스키마의 ID를 참조하는 소스 스키마에 전용 관계 필드를 추가해야 합니다.
 
 이 문서에서는 다음을 사용하여 조직에서 정의한 두 스키마 간의 일대일 관계를 정의하는 자습서를 제공합니다 [[!DNL Schema Registry API]](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
@@ -26,7 +26,7 @@ ht-degree: 2%
 
 * [Experience Platform의 XDM 시스템](../home.md): XDM 및 의 구현에 대한 개요입니다 [!DNL Experience Platform].
    * [스키마 작성 기본 사항](../schema/composition.md): XDM 스키마의 기본 구성 요소 소개.
-* [[!DNL Real-time Customer Profile]](../../profile/home.md): 여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
+* [[!DNL Real-Time Customer Profile]](../../profile/home.md): 여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
 * [샌드박스](../../sandboxes/home.md): [!DNL Experience Platform] 단일 파티션을 생성하는 가상 샌드박스 제공 [!DNL Platform] 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 별도의 가상 환경으로 인스턴스를 구축할 수 있습니다.
 
 이 자습서를 시작하기 전에 [개발자 안내서](../api/getting-started.md) 를 성공적으로 호출하기 위해 알고 있어야 하는 중요한 정보 [!DNL Schema Registry] API. 여기에는 다음이 포함됩니다 `{TENANT_ID}`, &quot;컨테이너&quot;의 개념 및 요청을 수행하는 데 필요한 헤더입니다(에는 [!DNL Accept] 헤더 및 가능한 값).
@@ -39,7 +39,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->관계를 설정하려면 두 스키마에 기본 ID가 정의되어 있어야 하며 [!DNL Real-time Customer Profile]. 의 섹션을 참조하십시오. [프로필에서 사용할 스키마 활성화](./create-schema-api.md#profile) 스키마 만들기 자습서에서 스키마를 구성하는 방법에 대한 지침이 필요한 경우 스키마 만들기 자습서에서 를 참조하십시오.
+>관계를 설정하려면 두 스키마에 기본 ID가 정의되어 있어야 하며 [!DNL Real-Time Customer Profile]. 의 섹션을 참조하십시오. [프로필에서 사용할 스키마 활성화](./create-schema-api.md#profile) 스키마 만들기 자습서에서 스키마를 구성하는 방법에 대한 지침이 필요한 경우 스키마 만들기 자습서에서 를 참조하십시오.
 
 두 스키마 간의 관계를 정의하려면 먼저 를 획득해야 합니다 `$id` 두 스키마 값. 표시 이름(`title`) 스키마를 찾을 수 있습니다 `$id` 에 GET 요청을 수행하여 값을 `/tenant/schemas` 의 엔드포인트 [!DNL Schema Registry] API.
 

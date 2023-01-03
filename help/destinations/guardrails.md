@@ -5,7 +5,8 @@ solution: Experience Platform
 product: experience platform
 type: Documentation
 description: 데이터 활성화 기본 사용량 및 비율 제한에 대해 자세히 알아보십시오 .
-source-git-commit: 69496d2e00ce866413786160d4524cabd03ae350
+exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1198'
 ht-degree: 4%
@@ -41,7 +42,7 @@ ht-degree: 4%
 
 | 가드레일 | 제한 | 제한 유형 | 설명 |
 | --- | --- | --- | --- |
-| 단일 대상에 대한 최대 세그먼트 수 | 250년 | 소프트 | 최대 250개의 세그먼트를 데이터 흐름의 단일 대상에 매핑하는 것이 좋습니다. <br><br> 대상에 250개가 넘는 세그먼트를 활성화해야 하는 경우 다음 중 하나를 수행할 수 있습니다. <ul><li> 더 이상 활성화하지 않을 세그먼트의 매핑을 취소하거나</li><li>새 데이터 흐름을 원하는 대상에 만들고 세그먼트를 이 새 데이터 로드에 매핑합니다.</li></ul> <br> 일부 대상의 경우 대상에 매핑된 세그먼트가 250개 미만으로 제한될 수 있습니다. 이러한 대상은 페이지의 각 섹션에서 아래에 자세히 표시됩니다. |
+| 단일 대상에 대한 최대 세그먼트 수 | 250 | 소프트 | 최대 250개의 세그먼트를 데이터 흐름의 단일 대상에 매핑하는 것이 좋습니다. <br><br> 대상에 250개가 넘는 세그먼트를 활성화해야 하는 경우 다음 중 하나를 수행할 수 있습니다. <ul><li> 더 이상 활성화하지 않을 세그먼트의 매핑을 취소하거나</li><li>새 데이터 흐름을 원하는 대상에 만들고 세그먼트를 이 새 데이터 로드에 매핑합니다.</li></ul> <br> 일부 대상의 경우 대상에 매핑된 세그먼트가 250개 미만으로 제한될 수 있습니다. 이러한 대상은 페이지의 각 섹션에서 아래에 자세히 표시됩니다. |
 | 최대 대상 수 | 100 | 소프트 | 연결 및 활성화할 수 있는 최대 100개의 대상을 만드는 것이 좋습니다 *샌드박스 당*. [Edge 개인화 대상(사용자 지정 개인화)](#edge-destinations-activation) 권장 대상 100개 중 최대 10개를 구성할 수 있습니다. |
 | 대상에 매핑된 최대 속성 수 | 50 | 소프트 | 여러 대상 및 대상 유형의 경우 내보낼 프로필 속성 및 ID를 선택하여 매핑할 수 있습니다. 최적의 성능을 위해 데이터 플로우에 최대 50개의 속성을 대상에 매핑해야 합니다. |
 | 대상에 활성화된 데이터 유형 | ID 및 ID 맵을 포함한 프로필 데이터 | 하드 | 현재 내보내기만 가능합니다 *프로필 레코드 속성* 대상 을 참조하십시오. 현재 이벤트 데이터를 설명하는 XDM 특성은 내보내기에서 지원되지 않습니다. |
@@ -66,7 +67,7 @@ ht-degree: 4%
 | 가드레일 | 제한 | 제한 유형 | 설명 |
 | --- | --- | --- | --- |
 | 활성화 빈도 | 3, 6, 8 또는 12시간마다 1회 전체 내보내기 또는 그 이상 빈번한 증분 내보내기. | 하드 | 다음 문서를 참조하십시오. [전체 파일 내보내기](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) 및 [증분 파일 내보내기](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) 설명서 섹션에 배치 내보내기에 대한 빈도 증분에 대한 자세한 내용이 나와 있습니다. |
-| 주어진 시간에 내보낼 수 있는 최대 세그먼트 수 | 100년 | 소프트 | 최대 100개의 세그먼트를 배치 대상 데이터 흐름에 추가하는 것이 좋습니다. |
+| 주어진 시간에 내보낼 수 있는 최대 세그먼트 수 | 100 | 소프트 | 최대 100개의 세그먼트를 배치 대상 데이터 흐름에 추가하는 것이 좋습니다. |
 | 활성화할 파일당 최대 행 수(레코드) | 500만 | 하드 | Adobe Experience Platform은 내보낸 파일을 파일당 500만 개의 레코드(행)로 자동으로 분할합니다. 각 행은 하나의 프로필을 나타냅니다. 파일 이름을 분할하면 파일이 더 큰 내보내기의 일부임을 나타내는 숫자가 추가됩니다. `filename.csv`, `filename_2.csv`, `filename_3.csv`. 자세한 내용은 [예약 섹션](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) 배치 대상 활성화 자습서입니다. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -121,5 +122,5 @@ ht-degree: 4%
 
 * 보호 기능 [데이터 수집](/help/ingestion/guardrails.md)
 * 보호 기능 [[!DNL Identity Service] 데이터](/help/identity-service/guardrails.md)
-* 보호 기능 [[!DNL Real-time Customer Profile] 데이터](/help/profile/guardrails.md)
+* 보호 기능 [[!DNL Real-Time Customer Profile] 데이터](/help/profile/guardrails.md)
 * 보호 기능 [[!DNL Query Service] 데이터](/help/query-service/guardrails.md)

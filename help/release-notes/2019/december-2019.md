@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: December 12, 2019
 author: ens71067
 exl-id: 98d50b90-38ed-4cc2-ad48-78b712b453f7
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '661'
 ht-degree: 6%
@@ -25,7 +25,7 @@ Adobe Experience Platform의 기존 기능 업데이트:
 
 ## [!DNL Segmentation Service] {#segmentation}
 
-Adobe Experience Platform 세그멘테이션 서비스에서는 세그먼트를 작성하고 대상의 대상을 생성할 수 있도록 해주는 사용자 인터페이스와 RESTful API를 제공합니다 [!DNL Real-time Customer Profile] 데이터. 이러한 세그먼트는 중앙에서 구성 및 관리됩니다 [!DNL Platform]모든 Adobe 애플리케이션에서 손쉽게 액세스할 수 있습니다.
+Adobe Experience Platform 세그멘테이션 서비스에서는 세그먼트를 작성하고 대상의 대상을 생성할 수 있도록 해주는 사용자 인터페이스와 RESTful API를 제공합니다 [!DNL Real-Time Customer Profile] 데이터. 이러한 세그먼트는 중앙에서 구성 및 관리됩니다 [!DNL Platform]모든 Adobe 애플리케이션에서 손쉽게 액세스할 수 있습니다.
 
 [!DNL Segmentation Service] 고객 기반 내의 마케팅 가능한 사람 그룹을 구분하는 기준을 설명하여 특정 프로필 하위 집합을 정의합니다. 세그먼트는 브랜드와의 고객 상호 작용을 나타내는 레코드 데이터(예: 인구 통계 정보) 또는 시계열 이벤트를 기반으로 할 수 있습니다.
 
@@ -71,7 +71,7 @@ Adobe Experience Platform은 외부 소스에서 데이터를 수집할 수 있�
 
 **알려진 문제**
 
-* 없음.
+* None.
 
 소스에 대한 자세한 내용은 [소스 개요](../../sources/home.md).
 
@@ -94,6 +94,6 @@ XDM은 디지털 경험의 힘을 향상시키기 위해 설계된 문서화된 
 
 **알려진 문제**
 
-* 없음
+* None
 
 를 사용하여 XDM을 사용하는 방법에 대해 자세히 알아보려면 [!DNL Schema Registry] API 및 [!DNL Schema Editor] 사용자 인터페이스를 참조하십시오. [XDM 시스템 설명서](../../xdm/home.md).

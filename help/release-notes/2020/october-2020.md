@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: October, 2020
 author: crhoades, ens28527
 exl-id: 89f5e2bd-8892-4d3f-a3fe-5433bb5ece7a
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1016'
 ht-degree: 4%
@@ -37,18 +37,18 @@ ht-degree: 4%
 
 ## 실시간 고객 프로필 {#profile}
 
-Adobe Experience Platform을 사용하면 고객이 브랜드와 상호 작용하는 위치와 시기에 관계없이 고객을 위해 조정되고 일관되며 적절한 경험을 제공할 수 있습니다. 사용 [!DNL Real-time Customer Profile]를 사용하면 온라인, 오프라인, CRM 및 타사 데이터를 포함하여 여러 채널의 데이터를 결합하는 각 개별 고객을 전체적으로 확인할 수 있습니다. [!DNL Profile] 서로 다른 고객 데이터를 모든 고객 상호 작용을 실행 가능하고 타임스탬프가 지정된 계정을 제공하는 통합 보기에 통합할 수 있습니다.
+Adobe Experience Platform을 사용하면 고객이 브랜드와 상호 작용하는 위치와 시기에 관계없이 고객을 위해 조정되고 일관되며 적절한 경험을 제공할 수 있습니다. 사용 [!DNL Real-Time Customer Profile]를 사용하면 온라인, 오프라인, CRM 및 타사 데이터를 포함하여 여러 채널의 데이터를 결합하는 각 개별 고객을 전체적으로 확인할 수 있습니다. [!DNL Profile] 서로 다른 고객 데이터를 모든 고객 상호 작용을 실행 가능하고 타임스탬프가 지정된 계정을 제공하는 통합 보기에 통합할 수 있습니다.
 
 | 기능 | 설명 |
 | ------- | ----------- |
 | 프로필 미리 보기 API 추가 | 프로필 미리 보기 API(`/previewsamplestatus`)에는 이제 IMS 조직 전체에서 총 프로필 조각의 분류를 확인할 수 있고 ID 네임스페이스 간에 프로필 조각의 분포를 볼 수 있습니다. |
 | 결합 스키마 보기 업데이트 | Experience Platform UI에서 사용자는 ID 및 관계 필드와 같은 표면 키 속성은 물론 결합 스키마에 기여하는 모든 스키마 및 데이터 세트에 대한 정보를 보다 쉽게 찾을 수 있습니다. 이러한 업데이트를 통해 프로필이 올바르게 구성되었는지, ID가 올바르게 결합되고, 데이터가 성공적으로 수집되었는지 문제를 해결하고 확인할 수 있습니다. |
 
-자세한 내용은 [!DNL Real-time Customer Profile], 자습서 및 작업 우수 사례 포함 [!DNL Profile] 데이터, [실시간 고객 프로필 개요](../../profile/home.md).
+자세한 내용은 [!DNL Real-Time Customer Profile], 자습서 및 작업 우수 사례 포함 [!DNL Profile] 데이터, [실시간 고객 프로필 개요](../../profile/home.md).
 
 ## 세분화 서비스 {#segmentation}
 
-Adobe Experience Platform 세그멘테이션 서비스에서는 세그먼트를 작성하고 대상의 대상을 생성할 수 있도록 해주는 사용자 인터페이스와 RESTful API를 제공합니다 [!DNL Real-time Customer Profile] 데이터. 이러한 세그먼트는 중앙에서 구성 및 관리됩니다 [!DNL Platform]모든 Adobe 애플리케이션에서 손쉽게 액세스할 수 있습니다.
+Adobe Experience Platform 세그멘테이션 서비스에서는 세그먼트를 작성하고 대상의 대상을 생성할 수 있도록 해주는 사용자 인터페이스와 RESTful API를 제공합니다 [!DNL Real-Time Customer Profile] 데이터. 이러한 세그먼트는 중앙에서 구성 및 관리됩니다 [!DNL Platform]모든 Adobe 애플리케이션에서 손쉽게 액세스할 수 있습니다.
 
 [!DNL Segmentation Service] 고객 기반 내의 마케팅 가능한 사람 그룹을 구분하는 기준을 설명하여 특정 프로필 하위 집합을 정의합니다. 세그먼트는 브랜드와의 고객 상호 작용을 나타내는 레코드 데이터(예: 인구 통계 정보) 또는 시계열 이벤트를 기반으로 할 수 있습니다.
 

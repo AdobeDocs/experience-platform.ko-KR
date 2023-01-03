@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: 이 자습서에서는 스키마 레지스트리 API를 사용하여 표준 클래스를 사용하여 스키마를 구성하는 단계를 안내합니다.
 exl-id: fa487a5f-d914-48f6-8d1b-001a60303f3d
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2422'
 ht-degree: 1%
@@ -25,7 +25,7 @@ ht-degree: 1%
 
 * [[!DNL Experience Data Model (XDM) System]](../home.md): 표준화된 프레임워크 [!DNL Experience Platform] 고객 경험 데이터를 구성합니다.
    * [스키마 작성 기본 사항](../schema/composition.md): 스키마 컴포지션의 주요 원칙 및 모범 사례를 포함하여 XDM 스키마의 기본 빌딩 블록에 대해 알아봅니다.
-* [[!DNL Real-time Customer Profile]](../../profile/home.md): 여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
+* [[!DNL Real-Time Customer Profile]](../../profile/home.md): 여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
 * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] 단일 파티션을 생성하는 가상 샌드박스 제공 [!DNL Platform] 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 별도의 가상 환경으로 인스턴스를 구축할 수 있습니다.
 
 이 자습서를 시작하기 전에 [개발자 안내서](../api/getting-started.md) 를 성공적으로 호출하기 위해 알고 있어야 하는 중요한 정보 [!DNL Schema Registry] API. 여기에는 다음이 포함됩니다 `{TENANT_ID}`, &quot;컨테이너&quot;의 개념 및 요청을 수행하는 데 필요한 헤더입니다(Accept 헤더와 가능한 값에 특별히 주의).
@@ -38,7 +38,7 @@ ht-degree: 1%
 
 ### 클래스 할당
 
-스키마 구성 프로세스는 클래스 선택으로 시작됩니다. 이 클래스는 데이터의 주요 행동 측면(레코드 및 시계열)과 수집할 데이터를 설명하는 데 필요한 최소 필드를 정의합니다.
+스키마 구성 프로세스는 클래스 선택과 함께 시작됩니다. 이 클래스는 데이터의 주요 행동 측면(레코드 및 시계열)과 수집할 데이터를 설명하는 데 필요한 최소 필드를 정의합니다.
 
 이 자습서에서 만드는 스키마는 [!DNL XDM Individual Profile] 클래스 이름을 지정합니다. [!DNL XDM Individual Profile] 는 레코드 동작을 정의하기 위해 Adobe에서 제공하는 표준 클래스입니다. 동작에 대한 자세한 내용은 [스키마 구성 기본 사항](../schema/composition.md).
 
@@ -955,7 +955,7 @@ curl -X PATCH \
 
 ### ID 설명자 정의
 
-스키마는에 데이터를 수집하는 데 사용됩니다 [!DNL Experience Platform]. 이 데이터는 궁극적으로 여러 서비스에서 사용되어 한 개인을 하나의 통합된 보기로 만듭니다. 이 프로세스를 지원하기 위해 키 필드를 &quot;ID&quot;로 표시할 수 있으며, 데이터 섭취 시 해당 필드의 데이터가 해당 개인의 &quot;Identity Graph&quot;에 삽입됩니다. 그런 다음 그래프 데이터에 [[!DNL Real-time Customer Profile]](../../profile/home.md) 및 기타 [!DNL Experience Platform] 각 개별 고객에 대한 결합된 보기를 제공하는 서비스.
+스키마는에 데이터를 수집하는 데 사용됩니다 [!DNL Experience Platform]. 이 데이터는 궁극적으로 여러 서비스에서 사용되어 한 개인을 하나의 통합된 보기로 만듭니다. 이 프로세스를 지원하기 위해 키 필드를 &quot;ID&quot;로 표시할 수 있으며, 데이터 섭취 시 해당 필드의 데이터가 해당 개인의 &quot;Identity Graph&quot;에 삽입됩니다. 그런 다음 그래프 데이터에 [[!DNL Real-Time Customer Profile]](../../profile/home.md) 및 기타 [!DNL Experience Platform] 각 개별 고객에 대한 결합된 보기를 제공하는 서비스.
 
 일반적으로 &quot;ID&quot;로 표시된 필드는 다음과 같습니다. 이메일 주소, 전화 번호, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html), CRM ID 또는 기타 고유한 ID 필드.
 
@@ -1016,9 +1016,9 @@ curl -X POST \
 }
 ```
 
-## 에서 사용할 스키마 활성화 [!DNL Real-time Customer Profile] {#profile}
+## 에서 사용할 스키마 활성화 [!DNL Real-Time Customer Profile] {#profile}
 
-에 &quot;union&quot; 태그를 추가하여 `meta:immutableTags` 속성을 사용하여 충성도 멤버 스키마를 활성화할 수 있습니다. [!DNL Real-time Customer Profile].
+에 &quot;union&quot; 태그를 추가하여 `meta:immutableTags` 속성을 사용하여 충성도 멤버 스키마를 활성화할 수 있습니다. [!DNL Real-Time Customer Profile].
 
 조합 보기 작업에 대한 자세한 내용은 [노조](../api/unions.md) 에서 [!DNL Schema Registry] 개발자 안내서.
 

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 경험 이벤트 만료
 description: 이 문서에서는 Adobe Experience Platform 데이터 세트 내에 있는 개별 Experience Event에 대한 만료 시간 구성에 대한 일반적인 지침을 제공합니다.
 exl-id: a91f2cd2-3a5d-42e6-81c3-0ec5bc644f5f
-source-git-commit: faf9e72f77f04b20d2399749eaacdb9ebdf412dc
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '466'
 ht-degree: 0%

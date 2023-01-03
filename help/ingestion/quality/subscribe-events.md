@@ -5,7 +5,7 @@ title: 데이터 수집 알림
 topic-legacy: overview
 description: 수집 프로세스 모니터링을 지원하기 위해 Adobe Experience Platform에서는 프로세스의 각 단계에서 게시되는 이벤트 세트에 가입할 수 있으므로 수집된 데이터의 상태와 가능한 오류를 알려줍니다.
 exl-id: fd34e1ab-f6f6-44f0-88ee-7020e9322c39
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '677'
 ht-degree: 2%
@@ -16,13 +16,13 @@ ht-degree: 2%
 
 데이터를 Adobe Experience Platform에 수집하는 프로세스는 여러 단계로 구성됩니다. 수집해야 하는 데이터 파일을 식별하면 [!DNL Platform]: 수집 프로세스가 시작되고 데이터가 성공적으로 수집되거나 실패할 때까지 각 단계가 연속적으로 발생합니다. 수집 프로세스는 [Adobe Experience Platform 데이터 수집 API](https://www.adobe.io/experience-platform-apis/references/data-ingestion/) 또는 [!DNL Experience Platform] 사용자 인터페이스.
 
-에 로드된 데이터 [!DNL Platform] 목적지에 도달하려면 여러 단계를 수행해야 합니다. [!DNL Data Lake] 또는 [!DNL Real-time Customer Profile] 데이터 저장소. 각 단계에는 데이터를 처리하고, 데이터를 확인한 다음, 다음 단계로 전달하기 전에 데이터를 저장하는 작업이 포함됩니다. 수집되는 데이터의 양에 따라 시간이 많이 소요되는 프로세스가 될 수 있으며 유효성 검사, 의미 체계 또는 처리 오류로 인해 프로세스가 실패할 가능성이 항상 있습니다. 오류가 발생하는 경우 데이터 문제를 수정한 후 수정된 데이터 파일을 사용하여 전체 수집 프로세스를 다시 시작해야 합니다.
+에 로드된 데이터 [!DNL Platform] 목적지에 도달하려면 여러 단계를 수행해야 합니다. [!DNL Data Lake] 또는 [!DNL Real-Time Customer Profile] 데이터 저장소. 각 단계에는 데이터를 처리하고, 데이터를 확인한 다음, 다음 단계로 전달하기 전에 데이터를 저장하는 작업이 포함됩니다. 수집되는 데이터의 양에 따라 시간이 많이 소요되는 프로세스가 될 수 있으며 유효성 검사, 의미 체계 또는 처리 오류로 인해 프로세스가 실패할 가능성이 항상 있습니다. 오류가 발생하는 경우 데이터 문제를 수정한 후 수정된 데이터 파일을 사용하여 전체 수집 프로세스를 다시 시작해야 합니다.
 
 수집 프로세스 모니터링을 지원하려면 [!DNL Experience Platform] 에서는 프로세스의 각 단계에서 게시한 이벤트 세트에 가입할 수 있도록 하여 수집된 데이터의 상태와 가능한 오류를 알려줍니다.
 
 ## 데이터 수집 알림에 웹 후크 등록
 
-데이터 수집 알림을 수신하려면 [Adobe 개발자 콘솔](https://www.adobe.com/go/devs_console_ui) Experience Platform 통합에 웹 후크를 등록하려면
+데이터 수집 알림을 수신하려면 [Adobe Developer 콘솔](https://www.adobe.com/go/devs_console_ui) Experience Platform 통합에 웹 후크를 등록하려면
 
 다음의 자습서를 따르십시오 [구독 [!DNL Adobe I/O Event] 알림](../../observability/alerts/subscribe.md) 를 참조하십시오.
 
@@ -86,9 +86,9 @@ ht-degree: 2%
 | --- | ---------------- | ------ | ----------------- |
 | `ing_load_success` | [!DNL Data Ingestion] | success | 일괄 처리가 [!DNL Data Lake]. |
 | `ing_load_failure` | [!DNL Data Ingestion] | 실패 | 일괄 처리를 [!DNL Data Lake]. |
-| `ps_load_success` | [!DNL Real-time Customer Profile] | 성공 | 일괄 처리를 [!DNL Profile] 데이터 저장소. |
-| `ps_load_failure` | [!DNL Real-time Customer Profile] | 실패 | 일괄 처리를 [!DNL Profile] 데이터 저장소. |
-| `ig_load_success` | [!DNL Identity Service] | 성공 | 데이터가 ID 그래프에 로드되었습니다. |
+| `ps_load_success` | [!DNL Real-Time Customer Profile] | success | 일괄 처리를 [!DNL Profile] 데이터 저장소. |
+| `ps_load_failure` | [!DNL Real-Time Customer Profile] | 실패 | 일괄 처리를 [!DNL Profile] 데이터 저장소. |
+| `ig_load_success` | [!DNL Identity Service] | success | 데이터가 ID 그래프에 로드되었습니다. |
 | `ig_load_failure` | [!DNL Identity Service] | 실패 | 데이터를 ID 그래프에 로드하지 못했습니다. |
 
 >[!NOTE]

@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: 이 자습서에서는 Adobe Experience Platform 사용자 인터페이스를 사용하여 CSV 파일을 기존 XDM 스키마에 매핑하는 방법을 설명합니다.
 exl-id: 15f55562-269d-421d-ad3a-5c10fb8f109c
-source-git-commit: 160a75a1811afa002717e167887550715eee5471
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '945'
 ht-degree: 1%
@@ -121,4 +121,4 @@ CSV 파일이 매핑되고 생성되면 CSV 파일을 통해 수집되는 데이
 
 ## 다음 단계
 
-이 자습서를 따라 플랫 CSV 파일을 XDM 스키마에 매핑하고 XDM에 수집했습니다 [!DNL Platform]. 이제 이 데이터를 다운스트림에서 사용할 수 있습니다 [!DNL Platform] 와 같은 서비스 [!DNL Real-time Customer Profile]. 다음 기간 동안 개요를 참조하십시오. [[!DNL Real-time Customer Profile]](../../../profile/home.md) 추가 정보.
+이 자습서를 따라 플랫 CSV 파일을 XDM 스키마에 매핑하고 XDM에 수집했습니다 [!DNL Platform]. 이제 이 데이터를 다운스트림에서 사용할 수 있습니다 [!DNL Platform] 와 같은 서비스 [!DNL Real-Time Customer Profile]. 다음 기간 동안 개요를 참조하십시오. [[!DNL Real-Time Customer Profile]](../../../profile/home.md) 추가 정보.

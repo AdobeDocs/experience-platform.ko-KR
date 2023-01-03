@@ -4,7 +4,7 @@ title: 병합 정책 UI 안내서
 type: Documentation
 description: Experience Platform에서 여러 소스의 데이터를 함께 가져올 때 병합 정책은 Platform이 데이터 우선 순위가 지정되는 방식과 통합 보기를 만들기 위해 결합할 데이터를 결정하는 데 사용하는 규칙입니다. 이 안내서에서는 Adobe Experience Platform 사용자 인터페이스를 사용하여 병합 정책 작업을 위한 단계별 지침을 제공합니다.
 exl-id: 0489217a-6a53-428c-a531-fd0a0e5bb71f
-source-git-commit: e94756254a24ecadd7359589cd14cfb0745c789c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2321'
 ht-degree: 0%

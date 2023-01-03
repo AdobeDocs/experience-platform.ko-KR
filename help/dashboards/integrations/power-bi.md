@@ -2,22 +2,22 @@
 title: Platform 대시보드용 Power BI 보고서 템플릿
 description: 보고서 템플릿을 사용함으로써 Power BI를 사용하여 Experience Platform 데이터를 탐색합니다.
 exl-id: fb98a79f-3d82-4e11-b08a-b7cb06414462
-source-git-commit: 36fc6f996b4ffd33f542eb9be4fbc50f3fcdd1cb
-workflow-type: ht
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+workflow-type: tm+mt
 source-wordcount: '1472'
-ht-degree: 100%
+ht-degree: 96%
 
 ---
 
 # 대시보드용 Power BI 보고서 템플릿
 
-Power BI 보고서 템플릿 기능을 사용하면 Adobe Experience Platform의 데이터로 채워진 강력한 보고서를 작성할 수 있습니다. 간소화된 설치 프로세스는 실시간 고객 프로필, 세그먼테이션 및 대상에 대한 표준 위젯을 자동으로 설치합니다. 이러한 설치를 통해 Power BI가 데이터 모델에 연결되므로 보고서 템플릿을 손쉽게 맞춤화하고 확장할 수도 있습니다. 이러한 보고서는 수신자의 Platform의 IMS 조직에 대한 자격 증명을 필요로 하지 않고도 조직 전체에 공유할 수 있습니다.
+Power BI 보고서 템플릿 기능을 사용하면 Adobe Experience Platform의 데이터로 채워진 강력한 보고서를 작성할 수 있습니다. 간소화된 설치 프로세스는 실시간 고객 프로필, 세그멘테이션 및 대상에 대한 표준 위젯을 자동으로 설치합니다. 이러한 설치를 통해 Power BI가 데이터 모델에 연결되므로 보고서 템플릿을 손쉽게 맞춤화하고 확장할 수도 있습니다. 이러한 보고서는 수신자의 Platform의 IMS 조직에 대한 자격 증명을 필요로 하지 않고도 조직 전체에 공유할 수 있습니다.
 
 이 문서에서는 Adobe Experience Platform을 Power BI 애플리케이션과 연결하고 보고서 템플릿을 사용하여 주요 Platform 데이터 인사이트를 외부 사용자와 공유하는 방법에 대한 지침을 제공합니다.
 
 ## 시작하기
 
-이 튜토리얼을 계속하기 전에 Experience Platform의 [스키마 구성](../../xdm/schema/composition.md)과, [공용 구조체 스키마](../../xdm/schema/composition.md#union)를 통해 어떻게 실시간 고객 프로필에 특성이 포함되어 있는지에 대해 잘 이해해 두는 것이 좋습니다.
+이 자습서를 계속하기 전에 을(를) 잘 이해하는 것이 좋습니다 [스키마 구성](../../xdm/schema/composition.md) 및 를 통해 실시간 고객 프로필에 속성이 포함되는 방법 [조합 스키마](../../xdm/schema/composition.md#union).
 
 Power BI 애플리케이션 통합을 설치하려면 먼저 사용자가 다음과 같은 Platform 권한을 획득해야 합니다.
 

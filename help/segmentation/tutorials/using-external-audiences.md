@@ -5,7 +5,7 @@ title: 외부 대상 가져오기 및 사용
 description: Adobe Experience Platform에서 외부 대상을 사용하는 방법을 배우려면 이 자습서를 따르십시오.
 topic-legacy: tutorial
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
-source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1621'
 ht-degree: 0%
@@ -62,7 +62,7 @@ ID 네임스페이스를 만든 후 만들 세그먼트에 대한 새 스키마�
 
 ![선택한 필드를 기본 ID로 표시하는 확인란은 스키마 편집기에서 강조 표시됩니다.](../images/tutorials/external-audiences/mark-primary-identifier.png)
 
-표시 후 `_id` 필드를 기본 ID로 선택하고 스키마 제목을 선택한 후 토글이 레이블이 지정됩니다 **[!UICONTROL 프로필]**. 선택 **[!UICONTROL 활성화]** 스키마를 활성화하려면 [!DNL Real-time Customer Profile].
+표시 후 `_id` 필드를 기본 ID로 선택하고 스키마 제목을 선택한 후 토글이 레이블이 지정됩니다 **[!UICONTROL 프로필]**. 선택 **[!UICONTROL 활성화]** 스키마를 활성화하려면 [!DNL Real-Time Customer Profile].
 
 ![프로파일에 대한 스키마를 활성화할 수 있는 토글이 스키마 편집기에서 강조 표시됩니다.](../images/tutorials/external-audiences/schema-profile.png)
 

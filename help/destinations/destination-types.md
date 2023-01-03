@@ -3,7 +3,7 @@ keywords: 대상;대상;대상 유형
 title: 대상 유형 및 카테고리
 description: Adobe Experience Platform의 다양한 대상 유형 및 카테고리에 대해 알아봅니다.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 606038116391e75ba4ffc36bab11757f963a8346
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '680'
 ht-degree: 0%

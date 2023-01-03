@@ -4,7 +4,7 @@ title: Real-time Customer Data Platform B2B Edition의 기본 보호 기능
 type: Documentation
 description: Adobe Experience Platform은 기존의 관계형 데이터 모델과 다른 고도로 비정규화된 하이브리드 데이터 모델을 사용합니다. 이 문서에서는 Adobe Real-time Customer Data Platform B2B Edition을 사용하여 최적의 시스템 성능을 위해 데이터를 모델링하는 데 도움이 되는 기본 사용 및 비율 제한을 제공합니다.
 exl-id: 8eff8c3f-a250-4aec-92a1-719ce4281272
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1602'
 ht-degree: 2%
@@ -119,9 +119,9 @@ Real-time Customer Data Platform B2B Edition을 사용하면 실시간 고객 �
 
 다음 [!DNL Profile] 저장소 데이터 모델은 두 가지 핵심 엔티티 유형으로 구성됩니다.
 
-* **기본 엔터티:** 기본 엔티티 또는 프로필 엔티티는 데이터를 함께 병합하여 개인에 대한 &quot;단일 진실의 소스&quot;를 만듭니다. 이 통합 데이터는 &quot;결합 보기&quot;라고 하는 것을 사용하여 표시됩니다. 결합 보기는 동일한 클래스를 구현하는 모든 스키마의 필드를 단일 결합 스키마에 집계합니다. 에 대한 결합 스키마 [!DNL Real-time Customer Profile] 는 모든 프로필 속성 및 행동 이벤트에 대한 컨테이너 역할을 하는 비정규화된 하이브리드 데이터 모델입니다.
+* **기본 엔터티:** 기본 엔티티 또는 프로필 엔티티는 데이터를 함께 병합하여 개인에 대한 &quot;단일 진실의 소스&quot;를 만듭니다. 이 통합 데이터는 &quot;결합 보기&quot;라고 하는 것을 사용하여 표시됩니다. 결합 보기는 동일한 클래스를 구현하는 모든 스키마의 필드를 단일 결합 스키마에 집계합니다. 에 대한 결합 스키마 [!DNL Real-Time Customer Profile] 는 모든 프로필 속성 및 행동 이벤트에 대한 컨테이너 역할을 하는 비정규화된 하이브리드 데이터 모델입니다.
 
-   시간 독립적인 속성(&quot;레코드 데이터&quot;라고도 함)은 [!DNL XDM Individual Profile], 시간 시리즈 데이터(&quot;이벤트 데이터&quot;라고도 함)는 를 사용하여 모델링됩니다 [!DNL XDM ExperienceEvent]. 레코드 및 시계열 데이터가 Adobe Experience Platform에서 수집되면 트리거됩니다 [!DNL Real-time Customer Profile] 사용할 수 있도록 활성화된 데이터 수집을 시작합니다. 수집된 상호 작용 및 세부 사항이 많을수록 더 강력한 개별 프로필이 생성됩니다.
+   시간 독립적인 속성(&quot;레코드 데이터&quot;라고도 함)은 [!DNL XDM Individual Profile], 시간 시리즈 데이터(&quot;이벤트 데이터&quot;라고도 함)는 를 사용하여 모델링됩니다 [!DNL XDM ExperienceEvent]. 레코드 및 시계열 데이터가 Adobe Experience Platform에서 수집되면 트리거됩니다 [!DNL Real-Time Customer Profile] 사용할 수 있도록 활성화된 데이터 수집을 시작합니다. 수집된 상호 작용 및 세부 사항이 많을수록 더 강력한 개별 프로필이 생성됩니다.
 
    ![](../profile/images/guardrails/profile-entity.png)
 

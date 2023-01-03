@@ -6,7 +6,7 @@ description: 이 문서에서는 Experience Platform 사용자 인터페이스�
 topic-legacy: tutorial
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1173'
 ht-degree: 0%
@@ -32,7 +32,7 @@ ht-degree: 0%
 
 다양한 채널에서 고객과의 관계와 브랜드와의 상호 작용을 파악하는 기능은 Adobe Experience Platform의 중요한 부분입니다. 구조 내에서 이러한 관계 정의 [!DNL Experience Data Model] (XDM) 스키마를 사용하면 고객 데이터에 대한 복잡한 통찰력을 얻을 수 있습니다.
 
-스키마 관계는 결합 스키마 및 [!DNL Real-time Customer Profile]이는 동일한 클래스를 공유하는 스키마에만 적용됩니다. 다른 클래스에 속하는 두 스키마 간의 관계를 설정하려면 대상 스키마의 ID를 참조하는 소스 스키마에 전용 관계 필드를 추가해야 합니다.
+스키마 관계는 결합 스키마 및 [!DNL Real-Time Customer Profile]이는 동일한 클래스를 공유하는 스키마에만 적용됩니다. 다른 클래스에 속하는 두 스키마 간의 관계를 설정하려면 대상 스키마의 ID를 참조하는 소스 스키마에 전용 관계 필드를 추가해야 합니다.
 
 이 문서에서는 [!DNL Experience Platform] 사용자 인터페이스. API를 사용하여 스키마 관계를 정의하는 단계는 [스키마 레지스트리 API를 사용하여 관계 정의](relationship-api.md).
 
@@ -54,7 +54,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->관계를 설정하려면 두 스키마에 기본 ID가 정의되어 있어야 하며 [!DNL Real-time Customer Profile]. 의 섹션을 참조하십시오. [프로필에서 사용할 스키마 활성화](./create-schema-ui.md#profile) 스키마 만들기 자습서에서 스키마를 구성하는 방법에 대한 지침이 필요한 경우 스키마 만들기 자습서에서 를 참조하십시오.
+>관계를 설정하려면 두 스키마에 기본 ID가 정의되어 있어야 하며 [!DNL Real-Time Customer Profile]. 의 섹션을 참조하십시오. [프로필에서 사용할 스키마 활성화](./create-schema-ui.md#profile) 스키마 만들기 자습서에서 스키마를 구성하는 방법에 대한 지침이 필요한 경우 스키마 만들기 자습서에서 를 참조하십시오.
 
 스키마 관계는 **소스 스키마** 는 **대상 스키마**. 다음에 나오는 단계에서, &quot;[!DNL Loyalty Members]&quot; 은 소스 스키마이고 &quot;[!DNL Hotels]는 대상 스키마로 작동합니다.
 
@@ -62,7 +62,7 @@ ht-degree: 0%
 
 ### [!DNL Loyalty Members] 스키마
 
-소스 스키마 &quot;[!DNL Loyalty Members]&quot; [!DNL XDM Individual Profile] 클래스 및 는 의 자습서에서 만들어진 스키마입니다 [UI에서 스키마 만들기](create-schema-ui.md). 여기에는 다음이 포함됩니다 `loyalty` 개체 아래의 `_tenantId` 네임스페이스에 따라 다릅니다. 이 필드 중 하나는 `loyaltyId`는 의 [!UICONTROL 이메일] 네임스페이스. 아래에 표시됨 **[!UICONTROL 스키마 속성]**&#x200B;에서 사용할 수 있도록 이 스키마가 활성화되었습니다. [!DNL Real-time Customer Profile].
+소스 스키마 &quot;[!DNL Loyalty Members]&quot; [!DNL XDM Individual Profile] 클래스 및 는 의 자습서에서 만들어진 스키마입니다 [UI에서 스키마 만들기](create-schema-ui.md). 여기에는 다음이 포함됩니다 `loyalty` 개체 아래의 `_tenantId` 네임스페이스에 따라 다릅니다. 이 필드 중 하나는 `loyaltyId`는 의 [!UICONTROL 이메일] 네임스페이스. 아래에 표시됨 **[!UICONTROL 스키마 속성]**&#x200B;에서 사용할 수 있도록 이 스키마가 활성화되었습니다. [!DNL Real-Time Customer Profile].
 
 ![](../images/tutorials/relationship/loyalty-members.png)
 
@@ -80,7 +80,7 @@ ht-degree: 0%
 >
 >사용자 지정 ID 네임스페이스를 만드는 방법을 알아보려면 [ID 서비스 설명서](../../identity-service/namespaces.md#manage-namespaces).
 
-기본 ID가 설정되면 대상 스키마가에 대해 활성화되어 있어야 합니다 [!DNL Real-time Customer Profile].
+기본 ID가 설정되면 대상 스키마가에 대해 활성화되어 있어야 합니다 [!DNL Real-Time Customer Profile].
 
 ![프로필에 사용](../images/tutorials/relationship/hotel-profile.png)
 

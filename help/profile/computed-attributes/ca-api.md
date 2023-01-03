@@ -5,7 +5,7 @@ topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platform에서 계산된 속성은 이벤트 수준 데이터를 프로필 수준 속성으로 집계하는 데 사용되는 함수입니다. 이러한 함수는 세그먼테이션, 활성화 및 개인화 간에 사용할 수 있도록 자동으로 계산됩니다. 이 안내서에서는 실시간 고객 프로필 API를 사용하여 계산된 속성을 생성, 보기, 업데이트 및 삭제하는 방법을 보여줍니다.
 exl-id: 6b35ff63-590b-4ef5-ab39-c36c39ab1d58
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2275'
 ht-degree: 2%
@@ -142,7 +142,7 @@ curl -X POST \
 | `positionPath` | 해체된 배열을 포함하는 배열 `path` 를 요청에서 전송된 필드에 추가합니다. |
 | `returnSchema.meta:xdmType` | 계산된 속성이 저장되는 필드의 유형입니다. |
 | `definedOn` | 계산된 속성이 정의된 결합 스키마를 표시하는 배열입니다. 조합 스키마당 하나의 개체를 포함합니다. 즉, 계산된 특성이 다른 클래스를 기반으로 한 여러 스키마에 추가된 경우 배열 내에 여러 개체가 있을 수 있습니다. |
-| `active` | 계산된 속성이 현재 활성 상태인지 여부를 표시하는 부울 값입니다. 기본적으로 값은 입니다. `true`. |
+| `active` | 계산된 속성이 현재 활성 상태인지 여부를 표시하는 부울 값입니다. 기본값은 `true`입니다.  |
 | `type` | 생성된 리소스의 유형이며, 이 경우 &quot;ComputedAttribute&quot;는 기본값입니다. |
 | `createEpoch` 및 `updateEpoch` | 계산된 속성이 만들어진 시간과 마지막으로 업데이트된 시간입니다. |
 
@@ -270,7 +270,7 @@ curl -X POST \
 | `positionPath` | 해체된 배열을 포함하는 배열 `path` 를 요청에서 전송된 필드에 추가합니다. |
 | `returnSchema.meta:xdmType` | 계산된 속성이 저장되는 필드의 유형입니다. |
 | `definedOn` | 계산된 속성이 정의된 결합 스키마를 표시하는 배열입니다. 조합 스키마당 하나의 개체를 포함합니다. 즉, 계산된 특성이 다른 클래스를 기반으로 한 여러 스키마에 추가된 경우 배열 내에 여러 개체가 있을 수 있습니다. |
-| `active` | 계산된 속성이 현재 활성 상태인지 여부를 표시하는 부울 값입니다. 기본적으로 값은 입니다. `true`. |
+| `active` | 계산된 속성이 현재 활성 상태인지 여부를 표시하는 부울 값입니다. 기본값은 `true`입니다.  |
 | `type` | 생성된 리소스의 유형이며, 이 경우 &quot;ComputedAttribute&quot;는 기본값입니다. |
 | `createEpoch` 및 `updateEpoch` | 계산된 속성이 만들어진 시간과 마지막으로 업데이트된 시간입니다. |
 

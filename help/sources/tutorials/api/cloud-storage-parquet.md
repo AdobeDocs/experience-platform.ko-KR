@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: 이 자습서에서는 Flow Service API를 사용하여 타사 클라우드 스토리지 시스템에서 Apache Parquet 데이터를 수집하는 단계를 안내합니다.
 exl-id: fb1b19d6-16bb-4a5f-9e81-f537bac95041
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1095'
 ht-degree: 2%
@@ -428,7 +428,7 @@ curl -X POST \
 
 ## 다음 단계
 
-이 자습서에 따라 서드파티 클라우드 스토리지 시스템에서 Parquet 데이터를 수집하기 위한 소스 커넥터를 만들었습니다. 이제 다운스트림에서 들어오는 데이터를 사용할 수 있습니다 [!DNL Platform] 와 같은 서비스 [!DNL Real-time Customer Profile] 및 [!DNL Data Science Workspace]. 자세한 내용은 다음 문서를 참조하십시오.
+이 자습서에 따라 서드파티 클라우드 스토리지 시스템에서 Parquet 데이터를 수집하기 위한 소스 커넥터를 만들었습니다. 이제 다운스트림에서 들어오는 데이터를 사용할 수 있습니다 [!DNL Platform] 와 같은 서비스 [!DNL Real-Time Customer Profile] 및 [!DNL Data Science Workspace]. 자세한 내용은 다음 문서를 참조하십시오.
 
 - [실시간 고객 프로필 개요](../../../profile/home.md)
 - [Data Science Workspace 개요](../../../data-science-workspace/home.md)

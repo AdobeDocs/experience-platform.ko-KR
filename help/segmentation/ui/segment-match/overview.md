@@ -5,7 +5,7 @@ title: 세그먼트 일치 개요
 topic-legacy: overview
 description: 세그먼트 일치 는 두 명 이상의 플랫폼 사용자가 안전하고 제어되며 개인 정보에 친숙한 방식으로 세그먼트 데이터를 교환할 수 있도록 해주는 Adobe Experience Platform의 세그먼트 공유 서비스입니다.
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: 2329065b938d97f48a23be5250fec535355db770
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1998'
 ht-degree: 0%
@@ -37,7 +37,7 @@ Adobe Experience Platform 세그먼트 일치 는 두 명 이상의 플랫폼 �
 
 ID 네임스페이스는 [Adobe Experience Platform Identity 서비스](../../../identity-service/home.md). 각 고객 ID에는 ID의 컨텍스트를 나타내는 연결된 네임스페이스가 포함되어 있습니다. 예를 들어 네임스페이스는 &quot;name&quot;이라는 값을 구분할 수 있습니다<span>@email.com&quot; 을 이메일 주소로 보내거나 &quot;443522&quot;을 숫자 CRM ID로 사용합니다.
 
-정규화된 ID에는 ID 값과 네임스페이스가 포함됩니다. 프로필 조각에서 레코드 데이터를 일치하는 경우(예: [!DNL Real-time Customer Profile] 프로필 데이터를 병합합니다.) ID 값과 네임스페이스가 모두 일치해야 합니다.
+정규화된 ID에는 ID 값과 네임스페이스가 포함됩니다. 프로필 조각에서 레코드 데이터를 일치하는 경우(예: [!DNL Real-Time Customer Profile] 프로필 데이터를 병합합니다.) ID 값과 네임스페이스가 모두 일치해야 합니다.
 
 의 컨텍스트에서 [!DNL Segment Match], 네임스페이스는 데이터를 공유할 때 겹치기 프로세스에서 사용됩니다.
 
@@ -204,4 +204,4 @@ A **피드** 는 데이터 그룹(세그먼트), 데이터를 노출하거나 �
 
 * [[!DNL Segmentation Service]](../../home.md)
 * [[!DNL Identity Service]](../../../identity-service/home.md)
-* [[!DNL Real-time Customer Profile] 개요](../../../profile/home.md)
+* [[!DNL Real-Time Customer Profile] 개요](../../../profile/home.md)

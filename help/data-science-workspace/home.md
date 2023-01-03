@@ -5,7 +5,7 @@ title: 데이터 과학 작업 공간 개요
 topic-legacy: overview
 description: 이 안내서에서는 Adobe Experience Platform의 데이터 과학 작업 공간과 관련된 주요 개념에 대한 개요를 제공합니다.
 exl-id: bef25073-0dfb-453d-8c32-7f44d917d62d
-source-git-commit: 4119242fef46d916e90e1dfb95f7e8fb9e8902f0
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2388'
 ht-degree: 0%
@@ -69,7 +69,7 @@ Adobe Experience Platform [!DNL Data Science Workspace] 에서는 기계 학습 
 
 데이터는 AI와 머신 러닝을 기반으로 합니다.
 
-[!DNL Data Science Workspace] 는 Data Lake를 비롯한 Adobe Experience Platform과 완전히 통합되었습니다. [!DNL Real-time Customer Profile], 및 [!DNL Unified Edge]. 빅데이터 및 심층 학습 라이브러리와 함께 Adobe Experience Platform에 저장된 모든 조직 데이터를 한 번에 탐색할 수 있습니다. [!DNL Spark] ML 및 [!DNL TensorFlow]. 필요한 항목을 찾지 못할 경우 XDM 표준화된 스키마를 사용하여 데이터 세트를 섭취합니다.
+[!DNL Data Science Workspace] 는 Data Lake를 비롯한 Adobe Experience Platform과 완전히 통합되었습니다. [!DNL Real-Time Customer Profile], 및 [!DNL Unified Edge]. 빅데이터 및 심층 학습 라이브러리와 함께 Adobe Experience Platform에 저장된 모든 조직 데이터를 한 번에 탐색할 수 있습니다. [!DNL Spark] ML 및 [!DNL TensorFlow]. 필요한 항목을 찾지 못할 경우 XDM 표준화된 스키마를 사용하여 데이터 세트를 섭취합니다.
 
 ### 사전 빌드된 기계 학습 레서피
 

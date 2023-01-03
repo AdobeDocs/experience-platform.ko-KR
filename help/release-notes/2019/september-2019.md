@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: September 13, 2019
 author: ens28527
 exl-id: 7f503046-a3b4-4fdb-833c-4205b6e9fa04
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '536'
 ht-degree: 5%
@@ -36,7 +36,7 @@ Adobe Experience Platform은 모든 유형의 데이터와 지연을 수집하�
 
 ## [!DNL Data Science Workspace] {#dsw}
 
-Adobe Experience Platform [!DNL Data Science Workspace] 는 내에서 완전히 관리되는 서비스입니다 [!DNL Experience Platform] 이를 통해 데이터 과학자가 시스템 학습 모델을 구축 및 운영하여 Adobe 솔루션 및 타사 시스템 전반에서 데이터와 컨텐츠를 통해 통찰력을 원활하게 생성할 수 있습니다. [!DNL Data Science Workspace] 는 [!DNL Platform] 및 는 XDM 데이터 탐색 및 준비 등 종단 간 데이터 과학 라이프사이클을 지원하고 모델 개발 및 운영 과정을 통해 자동으로 보강합니다 [!DNL Real-time Customer Profile] ( 머신 러닝 인사이트 사용)
+Adobe Experience Platform [!DNL Data Science Workspace] 는 내에서 완전히 관리되는 서비스입니다 [!DNL Experience Platform] 이를 통해 데이터 과학자가 시스템 학습 모델을 구축 및 운영하여 Adobe 솔루션 및 타사 시스템 전반에서 데이터와 컨텐츠를 통해 통찰력을 원활하게 생성할 수 있습니다. [!DNL Data Science Workspace] 는 [!DNL Platform] 및 는 XDM 데이터 탐색 및 준비 등 종단 간 데이터 과학 라이프사이클을 지원하고 모델 개발 및 운영 과정을 통해 자동으로 보강합니다 [!DNL Real-Time Customer Profile] ( 머신 러닝 인사이트 사용)
 
 **새로운 기능**
 
@@ -56,7 +56,7 @@ Adobe Experience Platform [!DNL Data Science Workspace] 는 내에서 완전히 
 
 ## [!DNL Query Service] {#query}
 
-[!DNL Query Service] 에서는 표준 SQL을 사용하여 Adobe Experience Platform에서 데이터를 쿼리하여 다양한 분석 및 데이터 관리 사용 사례를 지원합니다. 에서 데이터 세트에 가입할 수 있는 서버를 사용하지 않는 도구입니다 [!DNL Data Lake] 쿼리 결과를 보고에 사용할 새 데이터 세트로 캡처하고 [!DNL Data Science Workspace], 또는 를 수집하여 [!DNL Real-time Customer Profile].
+[!DNL Query Service] 에서는 표준 SQL을 사용하여 Adobe Experience Platform에서 데이터를 쿼리하여 다양한 분석 및 데이터 관리 사용 사례를 지원합니다. 에서 데이터 세트에 가입할 수 있는 서버를 사용하지 않는 도구입니다 [!DNL Data Lake] 쿼리 결과를 보고에 사용할 새 데이터 세트로 캡처하고 [!DNL Data Science Workspace], 또는 를 수집하여 [!DNL Real-Time Customer Profile].
 
 다음을 사용할 수 있습니다 [!DNL Query Service] 데이터 분석 에코시스템을 구축하려면 다양한 상호 작용 채널에서 고객의 사진을 만들어야 합니다. 이러한 채널에는 판매 지점 시스템, 웹, 모바일 또는 CRM 시스템이 포함될 수 있습니다.
 

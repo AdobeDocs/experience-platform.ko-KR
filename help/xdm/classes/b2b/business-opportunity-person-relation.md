@@ -2,7 +2,7 @@
 title: XDM 비즈니스 기회 개인 관계 분류
 description: 이 문서에서는 XDM(Experience Data Model)의 XDM 비즈니스 기회 개인 관계 클래스에 대한 개요를 제공합니다.
 exl-id: 7be193d2-52eb-4b28-953b-5e0fc21d8f93
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '368'
 ht-degree: 3%

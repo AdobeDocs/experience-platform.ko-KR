@@ -6,7 +6,7 @@ last-update: March 10, 2020
 author: ens71067
 keywords: 릴리스 노트;
 exl-id: 407c2bac-4c8a-4939-b3dd-788250f15650
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '855'
 ht-degree: 6%
@@ -61,7 +61,7 @@ Adobe Experience Platform은 모든 유형의 데이터와 지연을 수집하�
 
 **알려진 문제**
 
-* 없음
+* None
 
 Platform으로 데이터를 수집하는 방법에 대한 자세한 내용은 [데이터 수집 설명서](../../ingestion/home.md).
 
@@ -95,7 +95,7 @@ Adobe Experience Platform [!DNL Identity Service] 은 장치 및 시스템 전�
 
 **알려진 문제**
 
-* 없음
+* None
 
 에 대한 자세한 정보 [!DNL Identity Service]를 참조하고 [ID 서비스 개요](../../identity-service/home.md).
 
@@ -111,13 +111,13 @@ Adobe Experience Platform은 외부 소스에서 데이터를 수집할 수 있�
 | ------- | ----------- |
 | Adobe Audience Manager 커넥터에 사용되지 않는 신호 | Audience Manager의 신호 수준 데이터는 더 이상 전송되지 않습니다. 트레이트 및 세그먼트에 대한 세그먼트 멤버십은 계속 포함됩니다. 이 변경의 결과로 인바운드 데이터 세트는 더 이상 생성되지 않습니다. |
 | 이름이 변경된 데이터 세트 | Audience Manager 커넥터에서 생성한 데이터 세트에는 업데이트된 이름과 설명이 있습니다. |
-| 활성화 [!DNL Profile] Audience Manager에서 전환 | [!DNL Profile] 토글 기능을 활성화하거나 비활성화하여 데이터 세트를 [!DNL Real-time Customer Profile]. 토글은 기본적으로 활성화되어 있습니다. |
+| 활성화 [!DNL Profile] Audience Manager에서 전환 | [!DNL Profile] 토글 기능을 활성화하거나 비활성화하여 데이터 세트를 [!DNL Real-Time Customer Profile]. 토글은 기본적으로 활성화되어 있습니다. |
 | 클라우드 스토리지 시스템에 대한 UI 지원 | 에 대한 새 소스 커넥터 [!DNL Azure Data Lake Storage Gen2] ( UI) 아래에 그룹화됩니다. |
 | CRM 시스템에 대한 UI 지원 | 에 대한 새 소스 커넥터 [!DNL HubSpot], [!DNL Salesforce Service Cloud], 및 [!DNL ServiceNow] ( UI) 아래에 그룹화됩니다. |
 | 데이터베이스 시스템에 대한 UI 지원 | 에 대한 새 소스 커넥터 [!DNL AWS Redshift], [!DNL Google BigQuery], [!DNL MariaDB], [!DNL Microsoft SQL Server], 및 [!DNL MySQL] ( UI) 아래에 그룹화됩니다. |
 
 **알려진 문제**
 
-* 없음
+* None
 
 소스에 대해 자세히 알아보려면 [소스 개요](../../sources/home.md).

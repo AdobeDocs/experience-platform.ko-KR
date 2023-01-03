@@ -5,7 +5,7 @@ title: 이벤트 스키마에 대한 IAB TCF 2.0 동의 필드 그룹
 topic-legacy: overview
 description: 이 문서에서는 XDM ExperienceEvent 클래스에 대한 IAB TCF 2.0 동의 스키마 필드 그룹에 대한 개요를 제공합니다.
 exl-id: c236d0d4-27bd-45d7-a912-d0e93a609254
-source-git-commit: 046486d5e154b45fc2c2f5408eee235dddf46a4d
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '253'
 ht-degree: 1%

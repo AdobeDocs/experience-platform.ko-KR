@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: 이 자습서에서는 API를 사용하여 실시간 고객 프로필 대상 세그먼트에 대한 데이터 사용 규정을 적용하는 단계를 설명합니다.
 exl-id: 2299328c-d41a-4fdc-b7ed-72891569eaf2
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1368'
 ht-degree: 1%
@@ -15,15 +15,15 @@ ht-degree: 1%
 
 # API를 사용하여 대상 세그먼트에 대한 데이터 사용 규정 준수 적용
 
-이 자습서에서는 데이터 사용 규정을 적용하는 단계를 다룹니다 [!DNL Real-time Customer Profile] api를 사용하여 대상 세그먼트 를 참조하십시오.
+이 자습서에서는 데이터 사용 규정을 적용하는 단계를 다룹니다 [!DNL Real-Time Customer Profile] api를 사용하여 대상 세그먼트 를 참조하십시오.
 
 ## 시작하기
 
 이 자습서에서는 다음 구성 요소를 이해하고 있어야 합니다 [!DNL Adobe Experience Platform]:
 
-- [[!DNL Real-time Customer Profile]](../../profile/home.md): [!DNL Real-time Customer Profile] 는 일반 조회 엔티티 저장소이며, [!DNL Experience Data Model (XDM)] 데이터 내 [!DNL Platform]. 프로필은 다양한 엔터프라이즈 데이터 자산의 데이터를 병합하고 통합 프레젠테이션에서 해당 데이터에 대한 액세스 권한을 제공합니다.
-   - [병합 정책](../../profile/api/merge-policies.md): 에 사용되는 규칙 [!DNL Real-time Customer Profile] 특정 조건에서 통합 보기에 병합할 수 있는 데이터를 확인하려면 다음을 수행하십시오. 병합 정책은 데이터 거버넌스용으로 구성할 수 있습니다.
-- [[!DNL Segmentation]](../home.md): 방법 [!DNL Real-time Customer Profile] 프로필 저장소에 포함된 대규모 개인 그룹을 유사한 트레이트를 공유하고 마케팅 전략과 유사하게 응답하는 작은 그룹으로 분할합니다.
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md): [!DNL Real-Time Customer Profile] 는 일반 조회 엔티티 저장소이며, [!DNL Experience Data Model (XDM)] 데이터 내 [!DNL Platform]. 프로필은 다양한 엔터프라이즈 데이터 자산의 데이터를 병합하고 통합 프레젠테이션에서 해당 데이터에 대한 액세스 권한을 제공합니다.
+   - [병합 정책](../../profile/api/merge-policies.md): 에 사용되는 규칙 [!DNL Real-Time Customer Profile] 특정 조건에서 통합 보기에 병합할 수 있는 데이터를 확인하려면 다음을 수행하십시오. 병합 정책은 데이터 거버넌스용으로 구성할 수 있습니다.
+- [[!DNL Segmentation]](../home.md): 방법 [!DNL Real-Time Customer Profile] 프로필 저장소에 포함된 대규모 개인 그룹을 유사한 트레이트를 공유하고 마케팅 전략과 유사하게 응답하는 작은 그룹으로 분할합니다.
 - [데이터 거버넌스](../../data-governance/home.md): 데이터 거버넌스는 다음 구성 요소를 사용하여 데이터 사용 레이블 지정 및 실행을 위한 인프라를 제공합니다.
    - [데이터 사용 레이블](../../data-governance/labels/user-guide.md): 각 데이터를 처리할 민감도 수준 측면에서 데이터 세트 및 필드를 설명하는 데 사용되는 레이블입니다.
    - [데이터 사용 정책](../../data-governance/policies/overview.md): 특정 데이터 사용 레이블로 분류된 데이터에 허용되는 마케팅 작업을 나타내는 구성입니다.
@@ -58,7 +58,7 @@ ht-degree: 1%
 
 ## 세그먼트 정의에 대한 병합 정책 조회 {#merge-policy}
 
-이 워크플로우는 알려진 대상 세그먼트에 액세스하여 시작됩니다. 에서 사용할 수 있는 세그먼트 [!DNL Real-time Customer Profile] 세그먼트 정의 내에 병합 정책 ID를 포함합니다. 이 병합 정책에는 세그먼트에 포함할 데이터 세트에 대한 정보가 포함되어 있으며 이 정보에는 적용 가능한 데이터 사용 레이블이 포함됩니다.
+이 워크플로우는 알려진 대상 세그먼트에 액세스하여 시작됩니다. 에서 사용할 수 있는 세그먼트 [!DNL Real-Time Customer Profile] 세그먼트 정의 내에 병합 정책 ID를 포함합니다. 이 병합 정책에는 세그먼트에 포함할 데이터 세트에 대한 정보가 포함되어 있으며 이 정보에는 적용 가능한 데이터 사용 레이블이 포함됩니다.
 
 사용 [!DNL Segmentation] API를 사용하면 해당 ID로 세그먼트 정의를 조회하여 관련 병합 정책을 찾을 수 있습니다.
 

@@ -7,7 +7,7 @@ landing-page-description: 자주 묻는 질문에 대한 답변과 Experience Pl
 topic-legacy: getting started
 type: Documentation
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
-source-git-commit: da3e93f6c10c89c173fff786604ef844f56081be
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1851'
 ht-degree: 4%
@@ -89,9 +89,9 @@ UI를 사용하는지 또는 API를 사용하는지에 따라 다음 시스템 �
 | 상태 코드 | 설명 | 가능한 원인 |
 |--- | --- | ---|
 | 400 | 잘못된 요청 | 요청이 잘못 구성되었거나, 키 정보가 없거나, 잘못된 구문이 포함되어 있습니다. |
-| 401년 | 인증 실패 | 요청이 인증 검사를 통과하지 못했습니다. 액세스 토큰이 없거나 유효하지 않을 수 있습니다. 자세한 내용은 [OAuth 토큰 오류](#oauth-token-is-missing) 자세한 내용은 아래 섹션을 참조하십시오. |
-| 403년 | 금지됨 | 리소스를 찾았지만 볼 수 있는 자격 증명이 없습니다. |
-| 404년 | 없음 | 요청한 리소스를 서버에서 찾을 수 없습니다. 리소스가 삭제되었거나 요청된 경로가 잘못 입력되었을 수 있습니다. |
+| 401 | 인증 실패 | 요청이 인증 검사를 통과하지 못했습니다. 액세스 토큰이 없거나 유효하지 않을 수 있습니다. 자세한 내용은 [OAuth 토큰 오류](#oauth-token-is-missing) 자세한 내용은 아래 섹션을 참조하십시오. |
+| 403 | 금지됨 | 리소스를 찾았지만 볼 수 있는 자격 증명이 없습니다. |
+| 404 | 없음 | 요청한 리소스를 서버에서 찾을 수 없습니다. 리소스가 삭제되었거나 요청된 경로가 잘못 입력되었을 수 있습니다. |
 | 500 | 내부 서버 오류 | 서버측 오류입니다. 여러 개의 동시 호출을 수행하는 경우 API 제한에 도달하고 결과를 필터링해야 할 수 있습니다. (자세한 내용은 [!DNL Catalog Service] API 개발자 안내서 하위 안내서 [데이터 필터링](../catalog/api/filter-data.md) 추가 정보) 요청을 다시 시도하기 전에 잠시 기다렸다가 문제가 계속되면 관리자에게 문의하십시오. |
 
 ## 헤더 오류 요청 {#request-header-errors}
@@ -218,5 +218,5 @@ UI를 사용하는지 또는 API를 사용하는지에 따라 다음 시스템 �
 | [!DNL Catalog Service] | [[!DNL Catalog Service API]](https://www.adobe.io/experience-platform-apis/references/catalog/) |  |
 | [!DNL Experience Data Model] (XDM) | [[!DNL Schema Registry API]](https://www.adobe.io/experience-platform-apis/references/schema-registry/) | [[!DNL XDM System] FAQ 및 문제 해결 안내서](../xdm/troubleshooting-guide.md) |
 | [!DNL Flow Service] ([!DNL Sources] 및 [!DNL Destinations]) | [[!DNL Flow Service API]](https://www.adobe.io/experience-platform-apis/references/flow-service/) |  |
-| [!DNL Real-time Customer Profile] | [[!DNL Real-time Customer Profile API]](https://www.adobe.com/go/profile-apis-en) | [[!DNL Profile] 문제 해결 안내서](../profile/troubleshooting.md) |
+| [!DNL Real-Time Customer Profile] | [[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-en) | [[!DNL Profile] 문제 해결 안내서](../profile/troubleshooting.md) |
 | 샌드박스 | [샌드박스 API](https://www.adobe.io/experience-platform-apis/references/sandbox) | [샌드박스 문제 해결 안내서](../sandboxes/troubleshooting-guide.md) |

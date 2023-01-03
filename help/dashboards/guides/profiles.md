@@ -4,7 +4,7 @@ title: 프로필 대시보드 안내서
 description: Adobe Experience Platform은 조직의 실시간 고객 프로필 데이터에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: af01ac288a8afe59105be5859b2d40de5e346963
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '3381'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # [!UICONTROL 프로필] 대시보드
 
-Adobe Experience Platform UI(사용자 인터페이스)는 사용자 인터페이스에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다 [!DNL Real-time Customer Profile] 데이터를 캡처할 수 있습니다. 이 안내서에서는 UI에서 프로필 대시보드에 액세스하고 사용하는 방법을 간략하게 설명하고 대시보드에 표시되는 지표에 대한 정보를 제공합니다.
+Adobe Experience Platform UI(사용자 인터페이스)는 사용자 인터페이스에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다 [!DNL Real-Time Customer Profile] 데이터를 캡처할 수 있습니다. 이 안내서에서는 UI에서 프로필 대시보드에 액세스하고 사용하는 방법을 간략하게 설명하고 대시보드에 표시되는 지표에 대한 정보를 제공합니다.
 
 Experience Platform 사용자 인터페이스 내의 모든 프로필 기능에 대한 개요는 [실시간 고객 프로필 UI 안내서](../../profile/ui/user-guide.md).
 

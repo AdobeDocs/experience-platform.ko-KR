@@ -5,7 +5,7 @@ title: 세그먼트 정의 API 끝점
 topic-legacy: developer guide
 description: Adobe Experience Platform 세그멘테이션 서비스 API의 세그먼트 정의 종단점을 사용하면 조직의 세그먼트 정의를 프로그래밍 방식으로 관리할 수 있습니다.
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1188'
 ht-degree: 3%
@@ -14,7 +14,7 @@ ht-degree: 3%
 
 # 세그먼트 정의 끝점
 
-Adobe Experience Platform에서는 프로필 그룹에서 특정 속성 또는 동작 그룹을 정의하는 세그먼트를 만들 수 있습니다. 세그먼트 정의는 [!DNL Profile Query Language] (PQL). 이 개체를 PQL 술어라고도 합니다. PQL은 사용자가 제공하는 레코드 또는 시계열 데이터와 관련된 조건을 기반으로 세그먼트에 대한 규칙을 정의합니다 [!DNL Real-time Customer Profile]. 자세한 내용은 [PQL 안내서](../pql/overview.md) pql 쿼리 작성에 대한 자세한 정보.
+Adobe Experience Platform에서는 프로필 그룹에서 특정 속성 또는 동작 그룹을 정의하는 세그먼트를 만들 수 있습니다. 세그먼트 정의는 [!DNL Profile Query Language] (PQL). 이 개체를 PQL 술어라고도 합니다. PQL은 사용자가 제공하는 레코드 또는 시계열 데이터와 관련된 조건을 기반으로 세그먼트에 대한 규칙을 정의합니다 [!DNL Real-Time Customer Profile]. 자세한 내용은 [PQL 안내서](../pql/overview.md) pql 쿼리 작성에 대한 자세한 정보.
 
 이 안내서에서는 세그먼트 정의를 더 잘 이해하는 데 도움이 되는 정보를 제공하며 API를 사용하여 기본 작업을 수행하기 위한 샘플 API 호출을 포함합니다.
 

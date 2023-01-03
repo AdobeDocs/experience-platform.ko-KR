@@ -2,7 +2,8 @@
 keywords: Experience Platform;홈;인기 항목;Adobe Campaign Managed Cloud Services;캠페인;캠페인 관리 서비스
 title: Adobe Campaign Managed Cloud Services
 description: 사용자 인터페이스를 사용하여 Campaign 관리 Cloud Services을 Platform에 연결하는 방법을 알아봅니다
-source-git-commit: 99f65889aecf8c045dbb72053ebaca9429c3ebe1
+exl-id: 8f18bf73-ebf1-4b4e-a12b-964faa0e24cc
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '663'
 ht-degree: 0%
@@ -61,7 +62,7 @@ Adobe Campaign Managed Cloud Services 소스를 사용하면 Adobe Campaign v8 �
 
 >[!NOTE]
 >
->Campaign 데이터를 로 수집하려면 XDM ExperienceEvent 스키마가 프로필을 사용하도록 설정해야 합니다 [!DNL Real-time Customer Profile].
+>Campaign 데이터를 로 수집하려면 XDM ExperienceEvent 스키마가 프로필을 사용하도록 설정해야 합니다 [!DNL Real-Time Customer Profile].
 
 스키마를 만드는 방법에 대한 자세한 지침은 [UI에서 XDM 스키마 만들기](../../../xdm/tutorials/create-schema-ui.md).
 

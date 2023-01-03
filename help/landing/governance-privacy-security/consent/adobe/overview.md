@@ -5,7 +5,7 @@ title: Adobe Experience Platform의 동의 처리
 topic-legacy: getting started
 description: Adobe 2.0 표준을 사용하여 Adobe Experience Platform에서 고객 동의 신호를 처리하는 방법을 알아봅니다.
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
-source-git-commit: d380b4d2a75efb1c34010a30c619649a7b99643c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1567'
 ht-degree: 0%
@@ -28,7 +28,7 @@ Adobe Experience Platform을 사용하면 고객으로부터 수집한 동의 �
 
 * [XDM(경험 데이터 모델)](../../../../xdm/home.md): Experience Platform이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
 * [Adobe Experience Platform Identity 서비스](../../../../identity-service/home.md): 여러 장치 및 시스템에서 ID를 브리징하여 고객 경험 데이터의 분화로 인한 근본적인 문제를 해결합니다.
-* [실시간 고객 프로필](../../../../profile/home.md): 사용 [!DNL Identity Service] 데이터 세트에서 실시간으로 세부 고객 프로필을 만드는 기능. 실시간 고객 프로필은 Data Lake에서 데이터를 가져오고 별도의 데이터 저장소에서 고객 프로필을 유지합니다.
+* [실시간 고객 프로필](../../../../profile/home.md): 사용 [!DNL Identity Service] 데이터 세트에서 실시간으로 세부 고객 프로필을 만드는 기능. 실시간 고객 프로필은 Data Lake에서 데이터를 가져와 고유한 데이터 저장소에서 고객 프로필을 유지합니다.
 * [Adobe Experience Platform Web SDK](../../../../edge/home.md): 다양한 플랫폼 서비스를 고객 측 웹 사이트에 통합할 수 있는 클라이언트측 JavaScript 라이브러리입니다.
    * [SDK 동의 명령](../../../../edge/consent/supporting-consent.md): 이 안내서에 표시된 동의 관련 SDK 명령의 사용 사례 개요입니다.
 * [Adobe Experience Platform 세그멘테이션 서비스](../../../../segmentation/home.md): 실시간 고객 프로필 데이터를 유사한 트레이트를 공유하고 마케팅 전략과 유사하게 응답하는 개인 그룹으로 분할할 수 있습니다.

@@ -2,7 +2,7 @@
 title: 데칠레 기반 파생 속성 사용 사례
 description: 이 안내서에서는 Query Service를 사용하여 프로필 데이터에 사용할 데코일 기반 파생 속성을 만드는 데 필요한 단계를 보여줍니다.
 exl-id: 0ec6b511-b9fd-4447-b63d-85aa1f235436
-source-git-commit: c1ec6f949bd0ab9ec3b1ccc58baf74d8c71deca0
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1508'
 ht-degree: 2%
@@ -64,10 +64,10 @@ Query Service를 사용하여 카테고리적 분류가 포함된 데이터 세�
 
 | `.membershipNumber` | `.emailAddress.address` | `.transactionDate` | `.transactionType` | `.transactionDetails` | `.mileage` | `.loyaltyStatus` |
 |---|---|---|---|---|---|---|
-| C435678623 | sfeldmark1vr@studiopress.com | 2022-01-01 | STATUS_MILES | 새 멤버 | 5000년 | FLYER |
-| B789279247 | pgalton32n@barnesandnoble.com | 2022-02-01 | AWARD_MILES | JFK-FRA | 7500년 | 은 |
-| B789279247 | pgalton32n@barnesandnoble.com | 2022-02-01 | STATUS_MILES | JFK-FRA | 7500년 | 은 |
-| B789279247 | pgalton32n@barnesandnoble.com | 2022-02-10 | AWARD_MILES | FRA-JFK | 5000년 | 은 |
+| C435678623 | sfeldmark1vr@studiopress.com | 2022-01-01 | STATUS_MILES | 새 멤버 | 5000 | FLYER |
+| B789279247 | pgalton32n@barnesandnoble.com | 2022-02-01 | AWARD_MILES | JFK-FRA | 7500 | 은 |
+| B789279247 | pgalton32n@barnesandnoble.com | 2022-02-01 | STATUS_MILES | JFK-FRA | 7500 | 은 |
+| B789279247 | pgalton32n@barnesandnoble.com | 2022-02-10 | AWARD_MILES | FRA-JFK | 5000 | 은 |
 | A123487284 | rritson1zn@sciencedaily.com | 2022-01-07 | STATUS_MILES | 새 신용 카드 | 10000 | FLYER |
 
 {style=&quot;table-layout:auto&quot;}
@@ -299,4 +299,4 @@ GROUP BY rankings.membershipNumber
 
 ## 다음 단계
 
-위에 제공된 예제 사용 사례에서는 실시간 고객 프로필에서 데모를 사용할 수 있도록 하는 단계를 중점적으로 설명합니다. 이렇게 하면 사용자 인터페이스나 RESTful API를 통해 세그멘테이션 서비스가 이러한 decimal 버킷을 기반으로 대상을 생성할 수 있습니다. 자세한 내용은 [세그먼테이션 서비스 개요](../../segmentation/home.md) 세그먼트 만들기, 평가 및 액세스 방법에 대한 자세한 내용을 참조하십시오.
+위에 제공된 예제 사용 사례에서는 실시간 고객 프로필에서 데코일 속성을 사용할 수 있도록 하는 단계를 중점적으로 설명합니다. 이렇게 하면 사용자 인터페이스나 RESTful API를 통해 세그멘테이션 서비스가 이러한 decimal 버킷을 기반으로 대상을 생성할 수 있습니다. 자세한 내용은 [세그먼테이션 서비스 개요](../../segmentation/home.md) 세그먼트 만들기, 평가 및 액세스 방법에 대한 자세한 내용을 참조하십시오.

@@ -3,7 +3,7 @@ keywords: Experience Platform;ID;ID 서비스;문제 해결;보호 기능;지침
 title: ID 서비스에 대한 보호 기능
 description: 이 문서에서는 ID 그래프 사용을 최적화하는 데 도움이 되는 ID 서비스 데이터의 사용 및 비율 제한에 대한 정보를 제공합니다.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 672d98135492350ab6e12eec51649e6e5a7e4923
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '490'
 ht-degree: 2%
@@ -19,7 +19,7 @@ ht-degree: 2%
 다음 Experience Platform 서비스는 ID 데이터 모델링 작업에 관련되어 있습니다.
 
 * [ID](home.md): 플랫폼에 수집하여 다양한 데이터 소스에서 ID를 전달합니다.
-* [[!DNL Real-time Customer Profile]](../profile/home.md): 여러 소스의 데이터를 사용하여 통합 소비자 프로필을 만들 수 있습니다.
+* [[!DNL Real-Time Customer Profile]](../profile/home.md): 여러 소스의 데이터를 사용하여 통합 소비자 프로필을 만들 수 있습니다.
 
 ## 데이터 모델 제한
 
@@ -34,8 +34,8 @@ ht-degree: 2%
 | 그래프의 ID 수 | 150 | 이 제한은 샌드박스 수준에서 적용됩니다. 제한에 도달하면 ID 그래프가 업데이트되지 않습니다. **참고**: ID 그래프의 최대 ID 수 **개별 병합된 프로필용** 은 50입니다. 50개 이상의 ID를 갖는 ID 그래프를 기반으로 병합된 프로필은 실시간 고객 프로필에서 제외됩니다. 자세한 내용은 다음 안내서를 참조하십시오. [프로필 데이터에 대한 보호 기능](../profile/guardrails.md). |
 | XDM 레코드의 ID 수 | 20 | 필요한 최소 XDM 레코드 수는 2개입니다. |
 | 사용자 지정 네임스페이스 수 | None | 만들 수 있는 사용자 지정 네임스페이스의 수에는 제한이 없습니다. |
-| 그래프 수 | 없음 | 만들 수 있는 ID 그래프 수에는 제한이 없습니다. |
-| 네임스페이스 표시 이름 또는 ID 기호의 문자 수 | 없음 | 네임스페이스 표시 이름 또는 ID 심볼의 문자 수에는 제한이 없습니다. |
+| 그래프 수 | None | 만들 수 있는 ID 그래프 수에는 제한이 없습니다. |
+| 네임스페이스 표시 이름 또는 ID 기호의 문자 수 | None | 네임스페이스 표시 이름 또는 ID 심볼의 문자 수에는 제한이 없습니다. |
 
 ### ID 값 유효성 검사
 

@@ -4,16 +4,16 @@ title: UI의 프로필 세부 사항 사용자 지정
 description: 이 안내서에서는 Adobe Experience Platform UI에 실시간 고객 프로필 데이터가 표시되는 방식을 사용자 지정하는 단계별 지침을 제공합니다.
 topic-legacy: guide
 exl-id: 76cf8420-cc50-4a56-9f6d-5bfc01efcdb3
-source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1350'
 ht-degree: 0%
 
 ---
 
-# [!DNL Real-time Customer Profile] 세부 사용자 지정 {#profile-detail-customization}
+# [!DNL Real-Time Customer Profile] 세부 사용자 지정 {#profile-detail-customization}
 
-Adobe Experience Platform 사용자 인터페이스 내에서 를 보고 상호 작용할 수 있습니다 [!DNL Real-time Customer Profile] 데이터를 고객 프로필 형식으로 표시합니다. UI에 표시된 프로필 정보가 여러 프로필 조각에서 병합되어 각 개별 고객에 대한 단일 보기를 형성했습니다. 여기에는 기본 속성, 연결된 ID 및 채널 환경 설정과 같은 세부 사항이 포함됩니다. 프로필에 표시된 기본 필드를 조직 수준에서 변경하여 기본 설정을 표시할 수도 있습니다 [!DNL Profile] 속성을 사용합니다. 이 안내서에서는 다음 방법을 사용자 지정하는 단계별 지침을 제공합니다. [!DNL Profile] 데이터가 Platform UI 내에 표시됩니다.
+Adobe Experience Platform 사용자 인터페이스 내에서 를 보고 상호 작용할 수 있습니다 [!DNL Real-Time Customer Profile] 데이터를 고객 프로필 형식으로 표시합니다. UI에 표시된 프로필 정보가 여러 프로필 조각에서 병합되어 각 개별 고객에 대한 단일 보기를 형성했습니다. 여기에는 기본 속성, 연결된 ID 및 채널 환경 설정과 같은 세부 사항이 포함됩니다. 프로필에 표시된 기본 필드를 조직 수준에서 변경하여 기본 설정을 표시할 수도 있습니다 [!DNL Profile] 속성을 사용합니다. 이 안내서에서는 다음 방법을 사용자 지정하는 단계별 지침을 제공합니다. [!DNL Profile] 데이터가 Platform UI 내에 표시됩니다.
 
 프로필 UI에 대한 전체 안내서를 보려면 [프로필 UI 안내서](user-guide.md).
 

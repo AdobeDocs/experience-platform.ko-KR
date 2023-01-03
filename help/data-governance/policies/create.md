@@ -6,7 +6,7 @@ topic-legacy: policies
 type: Tutorial
 description: 정책 서비스 API를 사용하여 데이터 거버넌스 정책을 만드는 방법을 알아봅니다.
 exl-id: 8483f8a1-efe8-4ebb-b074-e0577e5a81a4
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1200'
 ht-degree: 2%
@@ -423,6 +423,6 @@ curl -X PATCH \
 
 이 자습서를 따라 마케팅 작업에 대한 데이터 사용 정책을 만들었습니다. 이제 의 자습서를 계속 진행할 수 있습니다. [데이터 사용 정책 적용](../enforcement/api-enforcement.md) 정책 위반을 확인하고 experience 애플리케이션에서 처리하는 방법을 알아봅니다.
 
-에서 사용 가능한 여러 작업에 대한 자세한 내용은 [!DNL Policy Service] API인 경우 [정책 서비스 개발자 안내서](../api/getting-started.md). 에 대한 정책 적용 방법에 대한 자세한 정보 [!DNL Real-time Customer Profile] 데이터는에서 자습서를 참조하십시오. [대상 세그먼트에 대한 데이터 사용 규정 준수 적용](../../segmentation/tutorials/governance.md).
+에서 사용 가능한 여러 작업에 대한 자세한 내용은 [!DNL Policy Service] API인 경우 [정책 서비스 개발자 안내서](../api/getting-started.md). 에 대한 정책 적용 방법에 대한 자세한 정보 [!DNL Real-Time Customer Profile] 데이터는에서 자습서를 참조하십시오. [대상 세그먼트에 대한 데이터 사용 규정 준수 적용](../../segmentation/tutorials/governance.md).
 
 에서 사용 정책을 관리하는 방법을 알아봅니다. [!DNL Experience Platform] 사용자 인터페이스의 경우 [정책 사용 안내서](user-guide.md).

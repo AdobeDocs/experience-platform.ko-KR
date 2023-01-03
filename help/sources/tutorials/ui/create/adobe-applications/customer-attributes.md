@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: UI에서 소스 연결을 만들어 고객 특성 프로필 데이터를 Adobe Experience Platform으로 가져오는 방법을 알아봅니다.
 exl-id: 66bdab8f-c00e-4ebe-8b8e-f9e12cf86bbe
-source-git-commit: b1b820c93ff1731b797f2b5e3ace7d2d6995b98b
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '623'
 ht-degree: 4%
@@ -76,7 +76,7 @@ ht-degree: 4%
 
 ## 다음 단계
 
-연결이 만들어지면 들어오는 데이터를 포함하도록 대상 스키마와 데이터 세트가 자동으로 생성됩니다. 초기 수집이 완료되면 고객 특성 프로필 데이터를 다음과 같은 다운스트림 Platform 서비스에서 사용할 수 있습니다 [!DNL Real-time Customer Profile] 및 [!DNL Segmentation Service]. 자세한 내용은 다음 문서를 참조하십시오.
+연결이 만들어지면 들어오는 데이터를 포함하도록 대상 스키마와 데이터 세트가 자동으로 생성됩니다. 초기 수집이 완료되면 고객 특성 프로필 데이터를 다음과 같은 다운스트림 Platform 서비스에서 사용할 수 있습니다 [!DNL Real-Time Customer Profile] 및 [!DNL Segmentation Service]. 자세한 내용은 다음 문서를 참조하십시오.
 
-* [[!DNL Real-time Customer Profile] 개요](../../../../../profile/home.md)
+* [[!DNL Real-Time Customer Profile] 개요](../../../../../profile/home.md)
 * [[!DNL Segmentation Service] 개요](../../../../../segmentation/home.md)

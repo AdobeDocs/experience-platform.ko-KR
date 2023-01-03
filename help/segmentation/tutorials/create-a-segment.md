@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: Adobe Experience Platform 세그멘테이션 서비스 API를 사용하여 세그먼트 정의를 개발, 테스트, 미리 보기 및 저장하는 방법을 알려면 이 자습서를 따르십시오.
 exl-id: 78684ae0-3721-4736-99f1-a7d1660dc849
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '948'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 이 자습서에서는 다양한 자습서를 이해하고 있어야 합니다 [!DNL Adobe Experience Platform] 대상 세그먼트 만들기에 관련된 서비스입니다. 이 자습서를 시작하기 전에 다음 서비스에 대한 설명서를 검토하십시오.
 
-- [[!DNL Real-time Customer Profile]](../../profile/home.md): 여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md): 여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
 - [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): 실시간 고객 프로필 데이터에서 대상 세그먼트를 작성할 수 있습니다.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): 표준화된 프레임워크 [!DNL Platform] 고객 경험 데이터를 구성합니다. 세그멘테이션을 가장 잘 사용하려면 데이터가 [데이터 모델링 우수 사례](../../xdm/schema/best-practices.md).
 
@@ -55,7 +55,7 @@ ht-degree: 0%
 
 ## 세그먼트 정의 개발
 
-세그먼테이션의 첫 번째 단계는 세그먼트 정의라고 하는 구문으로 표시되는 세그먼트를 정의하는 것입니다. 세그먼트 정의는 [!DNL Profile Query Language] (PQL). 이 개체를 PQL 술어라고도 합니다. PQL은 사용자가 제공하는 레코드 또는 시계열 데이터와 관련된 조건을 기반으로 세그먼트에 대한 규칙을 정의합니다 [!DNL Real-time Customer Profile]. 자세한 내용은 [PQL 안내서](../pql/overview.md) pql 쿼리 작성에 대한 자세한 정보.
+세그먼테이션의 첫 번째 단계는 세그먼트 정의라고 하는 구문으로 표시되는 세그먼트를 정의하는 것입니다. 세그먼트 정의는 [!DNL Profile Query Language] (PQL). 이 개체를 PQL 술어라고도 합니다. PQL은 사용자가 제공하는 레코드 또는 시계열 데이터와 관련된 조건을 기반으로 세그먼트에 대한 규칙을 정의합니다 [!DNL Real-Time Customer Profile]. 자세한 내용은 [PQL 안내서](../pql/overview.md) pql 쿼리 작성에 대한 자세한 정보.
 
 에 POST 요청을 만들어 새 세그먼트 정의를 만들 수 있습니다 `/segment/definitions` 의 엔드포인트 [!DNL Segmentation] API. 다음 예제에서는 세그먼트를 성공적으로 정의하기 위해 필요한 정보를 포함하여 정의 요청 형식을 지정하는 방법을 간략하게 설명합니다.
 
@@ -63,7 +63,7 @@ ht-degree: 0%
 
 ## 대상 예측 및 미리 보기 {#estimate-and-preview-an-audience}
 
-세그먼트 정의를 개발할 때 내에서 예측 및 미리 보기 도구를 사용할 수 있습니다 [!DNL Real-time Customer Profile] 예상되는 대상을 분리하는 데 도움이 되는 요약 수준 정보를 보려면 을 참조하십시오. 추정은 예상 대상 크기 및 신뢰 구간과 같은 세그먼트 정의에 대한 통계 정보를 제공합니다. 미리 보기는 세그먼트 정의에 대한 페이지 매김된 프로필 목록을 제공하여 결과를 예상과 비교할 수 있도록 합니다.
+세그먼트 정의를 개발할 때 내에서 예측 및 미리 보기 도구를 사용할 수 있습니다 [!DNL Real-Time Customer Profile] 예상되는 대상을 분리하는 데 도움이 되는 요약 수준 정보를 보려면 을 참조하십시오. 추정은 예상 대상 크기 및 신뢰 구간과 같은 세그먼트 정의에 대한 통계 정보를 제공합니다. 미리 보기는 세그먼트 정의에 대한 페이지 매김된 프로필 목록을 제공하여 결과를 예상과 비교할 수 있도록 합니다.
 
 대상을 추정하고 미리 보면 원하는 결과를 생성할 때까지 PQL 설명을 테스트 및 최적화하여 업데이트된 세그먼트 정의에서 사용할 수 있습니다.
 

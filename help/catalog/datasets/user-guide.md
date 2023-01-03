@@ -5,7 +5,7 @@ title: 데이터 세트 UI 안내서
 topic-legacy: datasets
 description: Adobe Experience Platform 사용자 인터페이스에서 데이터 세트로 작업할 때 일반적인 작업을 수행하는 방법을 알아봅니다.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1476'
 ht-degree: 0%
@@ -24,7 +24,7 @@ ht-degree: 0%
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): 표준화된 프레임워크 [!DNL Experience Platform] 고객 경험 데이터를 구성합니다.
    * [스키마 작성 기본 사항](../../xdm/schema/composition.md): 스키마 컴포지션의 주요 원칙 및 모범 사례를 포함하여 XDM 스키마의 기본 빌딩 블록에 대해 알아봅니다.
    * [스키마 편집기](../../xdm/tutorials/create-schema-ui.md): 를 사용하여 고유한 사용자 지정 XDM 스키마를 구축하는 방법을 알아보십시오 [!DNL Schema Editor] 내 [!DNL Platform] 사용자 인터페이스.
-* [[!DNL Real-time Customer Profile]](../../profile/home.md): 여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
+* [[!DNL Real-Time Customer Profile]](../../profile/home.md): 여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
 * [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): 고객 데이터 사용과 관련된 규정, 제한 및 정책을 준수하도록 하십시오.
 
 ## 데이터 세트 보기 {#view-datasets}
@@ -108,7 +108,7 @@ CSV 파일을 사용하여 데이터 세트를 만들면 임시 스키마를 만
 
 ## 실시간 고객 프로필에 대한 데이터 세트 활성화 {#enable-profile}
 
-모든 데이터 세트에는 수집된 데이터로 고객 프로필을 보강하는 기능이 있습니다. 이렇게 하려면 데이터 세트가 준수하는 스키마가에서 사용할 수 있어야 합니다 [!DNL Real-time Customer Profile]. 호환 가능한 스키마는 다음 요구 사항을 충족합니다.
+모든 데이터 세트에는 수집된 데이터로 고객 프로필을 보강하는 기능이 있습니다. 이렇게 하려면 데이터 세트가 준수하는 스키마가에서 사용할 수 있어야 합니다 [!DNL Real-Time Customer Profile]. 호환 가능한 스키마는 다음 요구 사항을 충족합니다.
 
 * 스키마에 ID 속성으로 지정된 속성이 하나 이상 있습니다.
 * 스키마에는 기본 ID로 정의된 ID 속성이 있습니다.

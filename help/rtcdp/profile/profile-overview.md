@@ -3,7 +3,7 @@ keywords: rtcdp 프로필;프로필 rtcdp;rtcdp ID;rtcdp 병합 정책;실시간
 title: Real-Time CDP의 실시간 고객 프로필 이해
 description: Adobe Real-time Customer Data Platform을 통해 실시간 고객 프로필을 사용하여 고객에게 적절하고 일관된 적절한 경험을 제공하는 방법을 알아봅니다.
 exl-id: de70948c-ffc1-49d3-a57c-25ad415752ff
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '457'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 ## 의 프로필 [!DNL Real-Time Customer Data Platform]
 
-[!DNL Adobe Real-Time Customer Data Platform] 은 고객이 브랜드와 상호 작용하는 위치와 시기에 관계없이 고객을 위해 체계적이고 일관된 경험을 제공할 수 있도록 해줍니다. 개인화된 이러한 경험을 통해 적시에 연관성 있고 전달할 수 있는 것은 사소한 이점이 없지만 Adobe Experience Platform의 일부인 실시간 고객 프로필을 사용하여 달성할 수 있습니다.
+[!DNL Adobe Real-Time Customer Data Platform] 은 고객이 브랜드와 상호 작용하는 위치와 시기에 관계없이 고객을 위해 체계적이고 일관된 경험을 제공할 수 있도록 해줍니다. 개인화된 이러한 경험을 통해 적시에 적절하고 유용하다고 느끼도록 제공하는 것은 작은 이점이 없지만 Adobe Experience Platform에 포함된 실시간 고객 프로필을 사용하여 완수할 수 있습니다.
 
 Real-Time CDP은 Experience Platform을 기반으로 구축되었으며 프로필 만들기를 포함한 많은 핵심 Experience Platform 기능과 기능을 사용합니다. 개별 고객의 이러한 집계된 보기는 고객 데이터를 저장하는 데 사용하는 다양한 시스템과 많은 마케팅 채널에서 가져온 데이터를 결합합니다.
 

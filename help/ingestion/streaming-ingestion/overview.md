@@ -5,7 +5,7 @@ title: 스트리밍 수집 개요
 topic-legacy: overview
 description: Adobe Experience Platform을 위한 스트리밍 수집에서는 사용자에게 클라이언트 및 서버측 장치에서 실시간으로 Experience Platform으로 데이터를 전송하는 방법을 제공합니다.
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '348'
 ht-degree: 2%
@@ -18,7 +18,7 @@ Adobe Experience Platform을 위한 스트리밍 수집에서는 사용자에게
 
 ## 스트리밍 수집으로 무엇을 수행할 수 있습니까?
 
-Adobe Experience Platform을 사용하면 통합 및 일관되고 적절한 경험을 생성하는 데 사용할 수 있습니다 [!DNL Real-time Customer Profile] 각 개별 고객에 대해 고려할 수 있습니다. 스트리밍 수집은 게재를 통해 이러한 프로필을 빌드하는 데 중요한 역할을 합니다 [!DNL Profile] 데이터를에 [!DNL Data Lake] 가능한 한 짧은 지연 시간.
+Adobe Experience Platform을 사용하면 통합 및 일관되고 적절한 경험을 생성하는 데 사용할 수 있습니다 [!DNL Real-Time Customer Profile] 각 개별 고객에 대해 고려할 수 있습니다. 스트리밍 수집은 게재를 통해 이러한 프로필을 빌드하는 데 중요한 역할을 합니다 [!DNL Profile] 데이터를에 [!DNL Data Lake] 가능한 한 짧은 지연 시간.
 
 다음 비디오는 스트리밍 수집 방법에 대한 이해를 지원하고 위의 개념을 간략하게 설명합니다.
 
@@ -32,7 +32,7 @@ Adobe Experience Platform을 사용하면 통합 및 일관되고 적절한 경�
 
 ### 데이터 세트로 스트리밍
 
-데이터가 깨끗하다고 확신하면 데이터 세트에 [!DNL Real-time Customer Profile] 및 [!DNL Identity Service].
+데이터가 깨끗하다고 확신하면 데이터 세트에 [!DNL Real-Time Customer Profile] 및 [!DNL Identity Service].
 
 데이터 집합 활성화에 대한 자세한 정보 [!DNL Profile] 및 [!DNL Identity Service]을(를) 참조하십시오. [데이터 세트 구성 안내서](../../profile/tutorials/dataset-configuration.md).
 

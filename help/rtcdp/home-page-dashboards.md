@@ -3,7 +3,7 @@ keywords: 지표 개요. rtcdp 지표 개요
 title: Real-time Customer Data Platform 홈페이지 및 대시보드
 description: 대시보드, 홈페이지 및 Adobe Experience Platform의 최초 사용자 경험
 exl-id: ced5b69c-5bb5-4e06-9cb4-938e36e6e5cc
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '620'
 ht-degree: 2%
@@ -28,14 +28,14 @@ Real-Time CDP에 로그인할 때 시스템에 데이터가 없으면 홈 페이
 
 * **리더보드** 대시보드 맨 위에 있습니다. 리드 보드는 시스템의 데이터 세트, 프로필, 세그먼트 및 대상 수를 보여줍니다.
 
-   ![이미지](assets/leaderboard.png)
+   ![image](assets/leaderboard.png)
 
 <!-- * **Metric cards** display beneath the leaderboard. Metric cards show additional information, such as percentages or trends. Metric cards appear as data is collected.
     ![image](assets/home-metrics.jpg)
 Some information is shown in different ways on both the leaderboard and metric cards. -->
 * **최근 항목** 시스템에 추가된 최신 데이터 세트, 소스, 세그먼트 및 대상 5개를 나열합니다.
 
-   ![이미지](assets/recent.png)
+   ![image](assets/recent.png)
 
 추가 지표(예: 프로필 및 세그먼트)는 Real-time Customer Data Platform의 다른 부분에서 사용할 수 있습니다.
 
@@ -47,7 +47,7 @@ Some information is shown in different ways on both the leaderboard and metric c
 
 ### 프로필
 
-다음 **[!UICONTROL 프로필]** 개수는 [!DNL Real-time Customer Profile]. 프로필 조각은 포함되지 않습니다. 총 대응 가능 대상입니다.
+다음 **[!UICONTROL 프로필]** 개수는 [!DNL Real-Time Customer Profile]. 프로필 조각은 포함되지 않습니다. 총 대응 가능 대상입니다.
 
 이 개수는 기본값을 사용합니다 [병합 정책](profile/merge-policies.md) 통합 프로필의 병합 정책 구성에 설정된 경우입니다.
 

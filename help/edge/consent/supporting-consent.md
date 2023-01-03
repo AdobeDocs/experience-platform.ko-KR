@@ -3,7 +3,7 @@ title: Adobe Experience Platform Web SDK를 사용하여 고객 동의 기본 �
 description: Adobe Experience Platform Web SDK를 사용하여 동의 환경 설정을 지원하는 방법을 알아봅니다.
 keywords: 동의;defaultConsent;기본 동의;setConsent;프로필 개인 정보 필드 그룹;경험 이벤트 개인 정보 필드 그룹;개인 정보 필드 그룹;
 exl-id: 647e4a84-4a66-45d6-8b05-d78786bca63a
-source-git-commit: 16c8972333fa67fa2e308445f4ad6282510370d1
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '950'
 ht-degree: 0%
@@ -138,7 +138,7 @@ alloy("setConsent", {
 });
 ```
 
-동의를 이러한 방식으로 설정하면 실시간 고객 프로필이 동의 정보로 업데이트됩니다. 이를 수행하려면 프로필 XDM 스키마에 [프로필 개인 정보 스키마 필드 그룹](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/profile/profile-privacy.schema.md). 이벤트를 보낼 때 IAB 동의 정보를 이벤트 XDM 개체에 수동으로 추가해야 합니다. SDK는 이벤트에 동의 정보를 자동으로 포함하지 않습니다. 이벤트에서 동의 정보를 보내려면 [경험 이벤트 개인 정보 필드 그룹](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/experience-event/experienceevent-privacy.schema.md) 경험 이벤트 스키마에 를 추가해야 합니다.
+이러한 방식으로 동의가 설정되면 실시간 고객 프로필이 동의 정보로 업데이트됩니다. 이를 수행하려면 프로필 XDM 스키마에 [프로필 개인 정보 스키마 필드 그룹](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/profile/profile-privacy.schema.md). 이벤트를 보낼 때 IAB 동의 정보를 이벤트 XDM 개체에 수동으로 추가해야 합니다. SDK는 이벤트에 동의 정보를 자동으로 포함하지 않습니다. 이벤트에서 동의 정보를 보내려면 [경험 이벤트 개인 정보 필드 그룹](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/experience-event/experienceevent-privacy.schema.md) 경험 이벤트 스키마에 를 추가해야 합니다.
 
 ## 하나의 요청에서 여러 표준 전송
 

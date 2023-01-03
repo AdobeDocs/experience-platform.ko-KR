@@ -1,23 +1,22 @@
 ---
-keywords: Experience Platform, 홈, 인기 있는 항목, 계정 모니터링, 데이터 흐름, 데이터 흐름, 대상 모니터링
-description: 대상은 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과의 사전 구축된 통합입니다. 대상을 사용하여 크로스채널 마케팅 캠페인, 이메일 캠페인, 타깃팅된 광고 및 기타 여러 가지 사용 사례에 대해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
+keywords: Experience Platform, 홈, 인기 항목, 계정 모니터링, 데이터 흐름 모니터링, 데이터 흐름, 대상
+description: 대상은 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과의 사전 구축된 통합입니다. 대상을 사용하여 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례에 대해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 solution: Experience Platform
 title: 데이터 흐름 모니터링
 topic-legacy: overview
 type: Tutorial
 exl-id: fbe35ee1-4ee8-4d67-976b-0c45f0168da4
-translation-type: tm+mt
-source-git-commit: 63158e7322ae91d5b36a7b2aa22fd93512f9bebb
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '131'
+source-wordcount: '132'
 ht-degree: 0%
 
 ---
 
 # 데이터 흐름 모니터링
 
-[!UICONTROL Destinations] Adobe Experience Platform의 데이터를 수많은 외부 파트너에 활성화할 수 있습니다.
+[!UICONTROL 대상] Adobe Experience Platform에서 수많은 외부 파트너에게 데이터를 활성화할 수 있습니다.
 
-데이터 파일은 [!DNL Platform] 간에 데이터를 이동하는 데이터 작업을 나타냅니다. 이러한 데이터 흐름은 서로 다른 서비스에 걸쳐 구성되며, 소스 커넥터에서 대상 데이터 세트로 데이터를 이동시키고, 이 데이터 흐름은 [!DNL Identity Service] 및[!DNL Real-time Customer Profile]에 의해 활용된 후 대상에 맞게 궁극적으로 활성화됩니다.
+데이터 흐름은 데이터를 이동하는 데이터 작업을 나타냅니다 [!DNL Platform]. 이러한 데이터 흐름은 다양한 서비스에 걸쳐 구성되어 있으므로, 소스 커넥터에서 대상 데이터 세트로 데이터를 이동한 다음 이 데이터 흐름을 사용 [!DNL Identity Service] 및[!DNL Real-Time Customer Profile] 궁극적으로 대상에 활성화하기 전에.
 
-대상에 대한 데이터 흐름 모니터링에 대한 자세한 내용은 UI](../../dataflows/ui/monitor-destinations.md) 튜토리얼에서 [대상에 대한 데이터 흐름 모니터링 을 참조하십시오.
+대상에 대한 데이터 흐름 모니터링에 대한 자세한 내용은 [UI에서 대상에 대한 데이터 흐름 모니터링](../../dataflows/ui/monitor-destinations.md) 자습서입니다.

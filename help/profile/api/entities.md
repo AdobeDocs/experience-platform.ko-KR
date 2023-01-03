@@ -5,7 +5,7 @@ topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platform을 사용하면 RESTful API 또는 사용자 인터페이스를 사용하여 실시간 고객 프로필 데이터에 액세스할 수 있습니다. 이 안내서에서는 프로필 API를 사용하여 일반적으로 "프로필"이라고 하는 엔티티에 액세스하는 방법을 간략하게 설명합니다.
 exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1732'
 ht-degree: 1%
@@ -14,11 +14,11 @@ ht-degree: 1%
 
 # 엔터티 끝점(프로필 액세스)
 
-Adobe Experience Platform에서 [!DNL Real-time Customer Profile] RESTful API 또는 사용자 인터페이스를 사용한 데이터. 이 안내서에서는 API를 사용하여 일반적으로 &quot;프로필&quot;이라고 하는 엔티티에 액세스하는 방법을 간략하게 설명합니다. 를 사용하여 프로필에 액세스하는 방법에 대한 자세한 내용은 [!DNL Platform] UI는 [프로필 사용 안내서](../ui/user-guide.md).
+Adobe Experience Platform에서 [!DNL Real-Time Customer Profile] RESTful API 또는 사용자 인터페이스를 사용한 데이터. 이 안내서에서는 API를 사용하여 일반적으로 &quot;프로필&quot;이라고 하는 엔티티에 액세스하는 방법을 간략하게 설명합니다. 를 사용하여 프로필에 액세스하는 방법에 대한 자세한 내용은 [!DNL Platform] UI는 [프로필 사용 안내서](../ui/user-guide.md).
 
 ## 시작하기
 
-이 안내서에서 사용되는 API 엔드포인트는 [[!DNL Real-time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). 계속하기 전에 [시작 안내서](getting-started.md) 관련 설명서에 대한 링크의 경우, 이 문서에서 샘플 API 호출을 읽는 안내서와 모든 호출을 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요 정보를 제공합니다 [!DNL Experience Platform] API.
+이 안내서에서 사용되는 API 엔드포인트는 [[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). 계속하기 전에 [시작 안내서](getting-started.md) 관련 설명서에 대한 링크의 경우, 이 문서에서 샘플 API 호출을 읽는 안내서와 모든 호출을 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요 정보를 제공합니다 [!DNL Experience Platform] API.
 
 ## ID로 프로필 데이터 액세스
 
@@ -888,7 +888,7 @@ curl -X GET \
 
 ## 다음 단계
 
-이 안내서를 따르면 액세스할 수 있습니다 [!DNL Real-time Customer Profile] 데이터 필드, 프로필 및 시계열 데이터. 에 저장된 다른 데이터 리소스에 액세스하는 방법을 알아보십시오 [!DNL Platform]를 참조하고 [데이터 액세스 개요](../../data-access/home.md).
+이 안내서를 따르면 액세스할 수 있습니다 [!DNL Real-Time Customer Profile] 데이터 필드, 프로필 및 시계열 데이터. 에 저장된 다른 데이터 리소스에 액세스하는 방법을 알아보십시오 [!DNL Platform]를 참조하고 [데이터 액세스 개요](../../data-access/home.md).
 
 ## 부록 {#appendix}
 

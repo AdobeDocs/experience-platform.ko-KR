@@ -4,7 +4,7 @@ title: API를 사용하여 프로필 및 ID 서비스에 대한 데이터 세트
 type: Tutorial
 description: 이 자습서에서는 Adobe Experience Platform API를 사용하여 실시간 고객 프로필 및 ID 서비스에 사용할 데이터 세트를 활성화하는 방법을 보여줍니다.
 exl-id: a115e126-6775-466d-ad7e-ee36b0b8b49c
-source-git-commit: 132407af947b97a1925799a1fb5e12caa2b0410c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1073'
 ht-degree: 1%
@@ -13,9 +13,9 @@ ht-degree: 1%
 
 # 데이터 집합 활성화 [!DNL Profile] 및 [!DNL Identity Service] api 사용
 
-이 자습서에서는 에서 사용할 데이터 세트를 활성화하는 프로세스에 대해 설명합니다 [!DNL Real-time Customer Profile] 및 [!DNL Identity Service], 다음 단계로 분류됩니다.
+이 자습서에서는 에서 사용할 데이터 세트를 활성화하는 프로세스에 대해 설명합니다 [!DNL Real-Time Customer Profile] 및 [!DNL Identity Service], 다음 단계로 분류됩니다.
 
-1. 에서 사용할 데이터 세트 활성화 [!DNL Real-time Customer Profile]다음 두 옵션 중 하나를 사용하여 다음을 수행합니다.
+1. 에서 사용할 데이터 세트 활성화 [!DNL Real-Time Customer Profile]다음 두 옵션 중 하나를 사용하여 다음을 수행합니다.
    - [새 데이터 세트 만들기](#create-a-dataset-enabled-for-profile-and-identity)
    - [기존 데이터 세트 구성](#configure-an-existing-dataset)
 1. [데이터 집합에 데이터 수집](#ingest-data-into-the-dataset)
@@ -26,9 +26,9 @@ ht-degree: 1%
 
 이 자습서에서는 프로필 사용 데이터 세트 관리와 관련된 여러 Adobe Experience Platform 서비스를 이해하고 있어야 합니다. 이 자습서를 시작하기 전에 이러한 관련 설명서에 대한 설명서를 검토하십시오 [!DNL Platform] 서비스:
 
-- [[!DNL Real-time Customer Profile]](../../profile/home.md): 여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
-- [[!DNL Identity Service]](../../identity-service/home.md): 사용 [!DNL Real-time Customer Profile] 수집되는 다양한 데이터 소스의 ID를 연결 [!DNL Platform].
-- [[!DNL Catalog Service]](../../catalog/home.md): 데이터 세트를 만들고 구성할 수 있는 RESTful API [!DNL Real-time Customer Profile] 및 [!DNL Identity Service].
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md): 여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
+- [[!DNL Identity Service]](../../identity-service/home.md): 사용 [!DNL Real-Time Customer Profile] 수집되는 다양한 데이터 소스의 ID를 연결 [!DNL Platform].
+- [[!DNL Catalog Service]](../../catalog/home.md): 데이터 세트를 만들고 구성할 수 있는 RESTful API [!DNL Real-Time Customer Profile] 및 [!DNL Identity Service].
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): 표준화된 프레임워크 [!DNL Platform] 고객 경험 데이터를 구성합니다.
 
 다음 섹션에서는 플랫폼 API를 성공적으로 호출하기 위해 알고 있어야 하는 추가 정보를 제공합니다.
@@ -51,7 +51,7 @@ ht-degree: 1%
 
 ## 프로필 및 ID에 대해 활성화된 데이터 세트 만들기 {#create-a-dataset-enabled-for-profile-and-identity}
 
-실시간 고객 프로필 및 ID 서비스를 만들 때 즉시 또는 데이터 세트를 만든 후 언제든지 데이터 세트를 활성화할 수 있습니다. 이미 생성된 데이터 세트를 활성화하려면 다음 단계를 수행하십시오. [기존 데이터 집합 구성](#configure-an-existing-dataset) 이 문서의 뒷부분에 있습니다.
+실시간 고객 프로필 및 ID 서비스를 만들 때 즉시 또는 데이터 세트가 만들어진 후 언제든지 데이터 세트를 활성화할 수 있습니다. 이미 생성된 데이터 세트를 활성화하려면 다음 단계를 수행하십시오. [기존 데이터 집합 구성](#configure-an-existing-dataset) 이 문서의 뒷부분에 있습니다.
 
 >[!NOTE]
 >
@@ -107,11 +107,11 @@ curl -X POST \
 
 ## 기존 데이터 세트 구성 {#configure-an-existing-dataset}
 
-다음 절차에서는에 이전에 만든 데이터 세트를 활성화하는 방법을 설명합니다 [!DNL Real-time Customer Profile] 및 [!DNL Identity Service]. 이미 프로필 사용 데이터 세트를 만든 경우 다음 단계를 계속 수행하십시오. [데이터 수집](#ingest-data-into-the-dataset).
+다음 절차에서는에 이전에 만든 데이터 세트를 활성화하는 방법을 설명합니다 [!DNL Real-Time Customer Profile] 및 [!DNL Identity Service]. 이미 프로필 사용 데이터 세트를 만든 경우 다음 단계를 계속 수행하십시오. [데이터 수집](#ingest-data-into-the-dataset).
 
 ### 데이터 세트가 활성화되어 있는지 확인합니다 {#check-if-the-dataset-is-enabled}
 
-사용 [!DNL Catalog] API인 경우 기존 데이터 세트에서 사용할 수 있는지 여부를 확인할 수 있습니다 [!DNL Real-time Customer Profile] 및 [!DNL Identity Service]. 다음 호출은 ID별로 데이터 집합에 대한 세부 사항을 검색합니다.
+사용 [!DNL Catalog] API인 경우 기존 데이터 세트에서 사용할 수 있는지 여부를 확인할 수 있습니다 [!DNL Real-Time Customer Profile] 및 [!DNL Identity Service]. 다음 호출은 ID별로 데이터 집합에 대한 세부 사항을 검색합니다.
 
 **API 형식**
 
@@ -185,7 +185,7 @@ curl -X GET \
 }
 ```
 
-아래에 `tags` 속성을 사용하여 `unifiedProfile` 및 `unifiedIdentity` 모두 값이 표시됩니다 `enabled:true`. 따라서, [!DNL Real-time Customer Profile] 및 [!DNL Identity Service] 이 데이터 세트에 대해 각각 활성화되어 있습니다.
+아래에 `tags` 속성을 사용하여 `unifiedProfile` 및 `unifiedIdentity` 모두 값이 표시됩니다 `enabled:true`. 따라서, [!DNL Real-Time Customer Profile] 및 [!DNL Identity Service] 이 데이터 세트에 대해 각각 활성화되어 있습니다.
 
 ### 데이터 집합 활성화 {#enable-the-dataset}
 
@@ -230,14 +230,14 @@ curl -X PATCH \
 
 ## 데이터 집합에 데이터 수집 {#ingest-data-into-the-dataset}
 
-둘 다 [!DNL Real-time Customer Profile] 및 [!DNL Identity Service] 데이터 세트에 수집하는 XDM 데이터를 사용합니다. 데이터를 데이터 집합에 업로드하는 방법에 대한 지침은 [api를 사용하여 데이터 세트 만들기](../../catalog/datasets/create.md). 사용자에게 전송할 데이터를 계획할 때 [!DNL Profile]-활성화된 데이터 세트에서 다음 모범 사례를 고려하십시오.
+둘 다 [!DNL Real-Time Customer Profile] 및 [!DNL Identity Service] 데이터 세트에 수집하는 XDM 데이터를 사용합니다. 데이터를 데이터 집합에 업로드하는 방법에 대한 지침은 [api를 사용하여 데이터 세트 만들기](../../catalog/datasets/create.md). 사용자에게 전송할 데이터를 계획할 때 [!DNL Profile]-활성화된 데이터 세트에서 다음 모범 사례를 고려하십시오.
 
 - 세그먼테이션 기준으로 사용할 데이터를 모두 포함합니다.
 - 프로필 데이터에서 확인할 수 있는 만큼 많은 식별자를 포함시켜 ID 그래프를 극대화합니다. 이렇게 하면 [!DNL Identity Service] 를 사용하여 데이터 세트 간에 ID를 보다 효과적으로 결합할 수 있습니다.
 
-## 데이터 수집 기준 확인 [!DNL Real-time Customer Profile] {#confirm-data-ingest-by-real-time-customer-profile}
+## 데이터 수집 기준 확인 [!DNL Real-Time Customer Profile] {#confirm-data-ingest-by-real-time-customer-profile}
 
-처음으로 데이터를 새 데이터 세트에 업로드하거나 새 ETL 또는 데이터 소스를 포함하는 프로세스의 일부로, 데이터가 예상대로 업로드되었는지 확인하기 위해 데이터를 신중하게 확인하는 것이 좋습니다. 사용 [!DNL Real-time Customer Profile] API에 액세스하여 데이터 세트에 로드될 때 배치 데이터를 검색할 수 있습니다. 예상한 엔티티를 검색할 수 없는 경우 데이터 세트에 대해 를 사용할 수 없습니다 [!DNL Real-time Customer Profile]. 데이터 세트가 활성화되었는지 확인한 후 소스 데이터 형식 및 식별자가 사용자의 기대를 지원하는지 확인합니다. 사용 방법에 대한 자세한 지침 [!DNL Real-time Customer Profile] 액세스할 API [!DNL Profile] 데이터, [엔티티 끝점 안내서](../../profile/api/entities.md)이라고도 하는 &quot;[!DNL Profile Access]&quot; API.
+처음으로 데이터를 새 데이터 세트에 업로드하거나 새 ETL 또는 데이터 소스를 포함하는 프로세스의 일부로, 데이터가 예상대로 업로드되었는지 확인하기 위해 데이터를 신중하게 확인하는 것이 좋습니다. 사용 [!DNL Real-Time Customer Profile] API에 액세스하여 데이터 세트에 로드될 때 배치 데이터를 검색할 수 있습니다. 예상한 엔티티를 검색할 수 없는 경우 데이터 세트에 대해 를 사용할 수 없습니다 [!DNL Real-Time Customer Profile]. 데이터 세트가 활성화되었는지 확인한 후 소스 데이터 형식 및 식별자가 사용자의 기대를 지원하는지 확인합니다. 사용 방법에 대한 자세한 지침 [!DNL Real-Time Customer Profile] 액세스할 API [!DNL Profile] 데이터, [엔티티 끝점 안내서](../../profile/api/entities.md)이라고도 하는 &quot;[!DNL Profile Access]&quot; API.
 
 ## ID 서비스별 데이터 수집 확인 {#confirm-data-ingest-by-identity-service}
 

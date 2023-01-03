@@ -4,7 +4,7 @@ title: 데이터 집합 Overlap Reports 생성
 type: Tutorial
 description: 이 자습서에서는 실시간 고객 프로필 API를 사용하여 데이터 집합 겹치기 보고서를 생성하는 데 필요한 단계를 설명합니다.
 exl-id: 90894ed3-b09e-435d-a9e3-18fd6dc8e907
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '888'
 ht-degree: 1%
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 이 보고서를 통해 데이터에 대한 통찰력을 제공할 수 있을 뿐만 아니라 특정 데이터의 수명 제한 설정과 같은 라이선스 사용을 최적화하는 작업을 수행할 수도 있습니다.
 
-이 자습서에서는 [!DNL Real-time Customer Profile] API를 사용하여 조직의 결과를 해석합니다.
+이 자습서에서는 [!DNL Real-Time Customer Profile] API를 사용하여 조직의 결과를 해석합니다.
 
 ## 시작하기
 

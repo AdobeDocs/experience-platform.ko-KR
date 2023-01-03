@@ -3,7 +3,7 @@ keywords: Experience Platform;홈;인기 있는 주제
 title: Identity 서비스에서 개인 정보 보호 요청 처리
 description: Adobe Experience Platform Privacy Service은 다양한 개인 정보 보호 규정에 따라 지정된 대로 고객 개인 데이터에 대한 액세스, 판매 거부 또는 삭제 요청을 처리합니다. 이 문서에서는 Identity 서비스의 개인 정보 보호 요청 처리와 관련된 필수 개념을 다룹니다.
 exl-id: ab84450b-1a4b-4fdd-b77d-508c86bbb073
-source-git-commit: 159a46fa227207bf161100e50bc286322ba2d00b
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1038'
 ht-degree: 0%
@@ -18,7 +18,7 @@ Adobe Experience Platform [!DNL Privacy Service] 는 GDPR(General Data Protectio
 
 >[!NOTE]
 >
->이 안내서에서는 Experience Platform의 ID 데이터 저장소에 대해 개인 정보 보호 요청을 하는 방법만 다룹니다. 플랫폼 데이터 레이크에 대해 개인 정보 보호 요청을 하려는 경우 또는 [!DNL Real-time Customer Profile]에서 참조할 수 있는 [data lake의 개인 정보 보호 요청 처리](../catalog/privacy.md) 및 [프로필에 대한 개인 정보 보호 요청 처리](../profile/privacy.md) 추가 정보.
+>이 안내서에서는 Experience Platform의 ID 데이터 저장소에 대해 개인 정보 보호 요청을 하는 방법만 다룹니다. 플랫폼 데이터 레이크에 대해 개인 정보 보호 요청을 하려는 경우 또는 [!DNL Real-Time Customer Profile]에서 참조할 수 있는 [data lake의 개인 정보 보호 요청 처리](../catalog/privacy.md) 및 [프로필에 대한 개인 정보 보호 요청 처리](../profile/privacy.md) 추가 정보.
 >
 >다른 Adobe Experience Cloud 애플리케이션에 대해 개인 정보 보호 요청을 수행하는 방법에 대한 단계는 [Privacy Service 설명서](../privacy-service/experience-cloud-apps.md).
 
@@ -28,7 +28,7 @@ Adobe Experience Platform [!DNL Privacy Service] 는 GDPR(General Data Protectio
 
 * [[!DNL Privacy Service]](../privacy-service/home.md): Adobe Experience Cloud 애플리케이션에서 개인 데이터를 액세스, 판매 거부 또는 삭제하기 위한 고객 요청을 관리합니다.
 * [[!DNL Identity Service]](../identity-service/home.md): 여러 장치 및 시스템에서 ID를 브리징하여 고객 경험 데이터의 분화로 인한 근본적인 문제를 해결합니다.
-* [[!DNL Real-time Customer Profile]](home.md): 여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
+* [[!DNL Real-Time Customer Profile]](home.md): 여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
 
 ## ID 네임스페이스 이해 {#namespaces}
 

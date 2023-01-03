@@ -5,7 +5,7 @@ title: API를 사용한 Edge Segmentation
 topic-legacy: developer guide
 description: 이 문서에는 Adobe Experience Platform 세그멘테이션 서비스 API와 함께 에지 세그멘테이션을 사용하는 방법에 대한 예가 나와 있습니다.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: 8c7c1273feb2033bf338f7669a9b30d9459509f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1187'
 ht-degree: 0%
@@ -32,8 +32,8 @@ Edge Segmentation은 Adobe Experience Platform의 세그먼트를 즉시 평가�
 
 이 개발자 안내서를 사용하려면 다양한 [!DNL Adobe Experience Platform] 에지 세그먼테이션과 관련된 서비스. 이 자습서를 시작하기 전에 다음 서비스에 대한 설명서를 검토하십시오.
 
-- [[!DNL Real-time Customer Profile]](../../profile/home.md): 여러 소스에서 집계된 데이터를 기반으로 실시간으로 통합 소비자 프로필을 제공합니다.
-- [[!DNL Segmentation]](../home.md): 에서 세그먼트와 대상을 만들 수 있는 기능을 제공합니다. [!DNL Real-time Customer Profile] 데이터.
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md): 여러 소스에서 집계된 데이터를 기반으로 실시간으로 통합 소비자 프로필을 제공합니다.
+- [[!DNL Segmentation]](../home.md): 에서 세그먼트와 대상을 만들 수 있는 기능을 제공합니다. [!DNL Real-Time Customer Profile] 데이터.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): 표준화된 프레임워크 [!DNL Platform] 고객 경험 데이터를 구성합니다.
 
 Experience Platform API 엔드포인트를 성공적으로 호출하려면 다음 안내서를 참조하십시오 [플랫폼 API 시작](../../landing/api-guide.md) 필요한 헤더와 샘플 API 호출을 읽는 방법에 대해 알아봅니다.

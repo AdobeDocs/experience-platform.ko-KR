@@ -5,7 +5,7 @@ title: 정책 평가 API 끝점
 topic-legacy: developer guide
 description: 마케팅 작업이 생성되고 정책이 정의되면 정책 서비스 API를 사용하여 특정 작업에 의해 정책이 위반되는지 평가할 수 있습니다. 반환된 제약 조건은 데이터 사용 레이블이 포함된 지정된 데이터에 대한 마케팅 작업을 시도하여 위반될 정책 집합을 만듭니다.
 exl-id: f9903939-268b-492c-aca7-63200bfe4179
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1542'
 ht-degree: 1%
@@ -682,6 +682,6 @@ curl -X POST \
 ]
 ```
 
-## 정책 평가 [!DNL Real-time Customer Profile]
+## 정책 평가 [!DNL Real-Time Customer Profile]
 
-다음 [!DNL Policy Service] API를 사용하여 [!DNL Real-time Customer Profile] 세그먼트 를 참조하십시오. 다음에서 자습서를 참조하십시오. [대상 세그먼트에 대한 데이터 사용 규정 준수 적용](../../segmentation/tutorials/governance.md) 추가 정보.
+다음 [!DNL Policy Service] API를 사용하여 [!DNL Real-Time Customer Profile] 세그먼트 를 참조하십시오. 다음에서 자습서를 참조하십시오. [대상 세그먼트에 대한 데이터 사용 규정 준수 적용](../../segmentation/tutorials/governance.md) 추가 정보.

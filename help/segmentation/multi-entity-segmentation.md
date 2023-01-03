@@ -5,7 +5,7 @@ title: 다중 엔티티 세그먼테이션 개요
 topic-legacy: overview
 description: 다중 엔티티 세그먼테이션은 제품, 스토어 또는 기타 비프로필 클래스를 기반으로 추가 데이터로 프로필 데이터를 확장하는 기능입니다. 연결되면 추가 클래스의 데이터를 프로필 스키마에 대한 기본 데이터 처럼 사용할 수 있게 됩니다.
 exl-id: 01a37fdc-2abe-4a84-b7da-fcbd141ff51f
-source-git-commit: d036ca8c3a378494f776c2bbb05e9d687bd2e201
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '699'
 ht-degree: 0%
@@ -14,15 +14,15 @@ ht-degree: 0%
 
 # 다중 엔티티 세그먼테이션 개요
 
-다중 엔티티 세그먼테이션은 Adobe Experience Platform의 일부로 사용할 수 있는 고급 기능입니다 [!DNL Segmentation Service]. 이 기능을 사용하면 다음을 확장할 수 있습니다 [!DNL Real-time Customer Profile] 제품 또는 스토어와 관련된 데이터와 같이 조직에서 정의할 수 있는 추가적인 &quot;비사용자&quot; 데이터(&quot;차원 엔티티&quot;라고도 함)가 있는 데이터. 다중 엔티티 세그먼테이션은 고유한 비즈니스 요구 사항과 관련된 데이터를 기반으로 대상 세그먼트를 정의할 때 유연성을 제공하며 데이터베이스 쿼리 전문 지식 없이도 수행할 수 있습니다. 다중 엔티티 세그먼테이션을 사용하면 비용이 많이 드는 데이터 스트림을 변경하거나 백엔드 데이터 병합을 기다리지 않고 세그먼트에 주요 데이터를 추가할 수 있습니다.
+다중 엔티티 세그먼테이션은 Adobe Experience Platform의 일부로 사용할 수 있는 고급 기능입니다 [!DNL Segmentation Service]. 이 기능을 사용하면 다음을 확장할 수 있습니다 [!DNL Real-Time Customer Profile] 제품 또는 스토어와 관련된 데이터와 같이 조직에서 정의할 수 있는 추가적인 &quot;비사용자&quot; 데이터(&quot;차원 엔티티&quot;라고도 함)가 있는 데이터. 다중 엔티티 세그먼테이션은 고유한 비즈니스 요구 사항과 관련된 데이터를 기반으로 대상 세그먼트를 정의할 때 유연성을 제공하며 데이터베이스를 쿼리하는 데 전문성이 없는 상태로 수행할 수 있습니다. 다중 엔티티 세그먼테이션을 사용하면 비용이 많이 드는 데이터 스트림을 변경하거나 백엔드 데이터 병합을 기다리지 않고 세그먼트에 주요 데이터를 추가할 수 있습니다.
 
 ## 시작하기
 
 다중 엔티티 세그먼테이션을 사용하려면 세그멘테이션과 관련된 다양한 Adobe Experience Platform 서비스를 이해하고 있어야 합니다. 이 안내서를 계속하기 전에 다음 설명서를 검토하십시오.
 
-* [[!DNL Real-time Customer Profile]](../profile/home.md): 여러 소스에서 집계된 데이터를 기반으로 실시간으로 통합 소비자 프로필을 제공합니다.
+* [[!DNL Real-Time Customer Profile]](../profile/home.md): 여러 소스에서 집계된 데이터를 기반으로 실시간으로 통합 소비자 프로필을 제공합니다.
    * [프로필 보호 기능](../profile/guardrails.md): 에서 지원하는 데이터 모델을 만드는 우수 사례 [!DNL Profile].
-* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): 세그먼트를 [!DNL Real-time Customer Profile] 데이터.
+* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): 세그먼트를 [!DNL Real-Time Customer Profile] 데이터.
 * [[!DNL Experience Data Model (XDM)]](../xdm/home.md): Experience Platform이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
    * [스키마 작성 기본 사항](../xdm/schema/composition.md#union): Experience Platform에 사용할 스키마를 구성하는 모범 사례에 대해 배웁니다. 세그멘테이션을 가장 잘 사용하려면 데이터가 [데이터 모델링 우수 사례](../xdm/schema/best-practices.md).
 

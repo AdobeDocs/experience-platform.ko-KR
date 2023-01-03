@@ -3,7 +3,7 @@ keywords: Experience Platform;프로필;실시간 고객 프로필;문제 해결
 title: 미리 보기 샘플 상태(프로필 미리 보기) API 끝점
 description: 실시간 고객 프로필 API의 미리 보기 샘플 상태 엔드포인트를 사용하면 프로필 데이터의 가장 성공적인 샘플을 미리 보고, 데이터 집합 및 ID별로 프로필 배포를 나열하고, 데이터 집합 겹치기, ID 겹치기 및 연결되지 않은 프로필을 보여주는 보고서를 생성할 수 있습니다.
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2874'
 ht-degree: 1%
@@ -22,7 +22,7 @@ Adobe Experience Platform을 사용하면 각 개별 고객을 위해 강력하�
 
 ## 시작하기
 
-이 안내서에서 사용되는 API 엔드포인트는 [[!DNL Real-time Customer Profile] API](https://www.adobe.com/go/profile-apis-en). 계속하기 전에 [시작 안내서](getting-started.md) 관련 설명서에 대한 링크의 경우, 이 문서에서 샘플 API 호출을 읽는 안내서와 모든 호출을 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요 정보를 제공합니다 [!DNL Experience Platform] API.
+이 안내서에서 사용되는 API 엔드포인트는 [[!DNL Real-Time Customer Profile] API](https://www.adobe.com/go/profile-apis-en). 계속하기 전에 [시작 안내서](getting-started.md) 관련 설명서에 대한 링크의 경우, 이 문서에서 샘플 API 호출을 읽는 안내서와 모든 호출을 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요 정보를 제공합니다 [!DNL Experience Platform] API.
 
 ## 프로필 조각과 병합된 프로필 비교
 

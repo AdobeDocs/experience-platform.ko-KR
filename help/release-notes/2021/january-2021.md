@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: January 27, 2021
 author: ens60013
 exl-id: 6fb92e35-922c-47ba-8cf4-44edd92acfa1
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '717'
 ht-degree: 5%
@@ -20,7 +20,7 @@ Adobe Experience Platform의 기존 기능 업데이트:
 
 - [[!DNL Data Prep]](#data-prep)
 - [[!DNL Destinations]](#destinations)
-- [[!DNL Real-time Customer Profile]](#profile)
+- [[!DNL Real-Time Customer Profile]](#profile)
 - [[!DNL Sources]](#sources)
 
 ## [!DNL Data Prep] {#data-prep}
@@ -64,7 +64,7 @@ Adobe Experience Platform을 사용하면 고객이 브랜드와 상호 작용�
 | 프로필 저장소에서 데이터 세트 삭제 | Experience Platform 데이터 레이크에서 데이터 세트를 삭제하면 프로필 스토어에서도 자동으로 삭제됩니다. 프로필 저장소에서 데이터 세트를 명시적으로 삭제하기 위해 더 이상 프로필 시스템 작업 API 엔드포인트를 사용할 필요가 없습니다. 자세한 내용은 [프로필 시스템 작업 API 끝점 안내서](../../profile/api/profile-system-jobs.md). |
 | 지정된 세그먼트에 대한 예상 ID 네임스페이스 수입니다 | 예상 프로필 수의 경우 이제 미리 보기 API가 다음을 보고합니다.<ul><li>주어진 네임스페이스에 대한 세그먼트에서 예상되는 프로필의 총 수입니다.</li><li>지정된 네임스페이스에 대한 프로필 조합 스키마에서 예상되는 프로필의 총 수입니다.</li></ul>자세한 내용은 [프로필 미리 보기 API 엔드포인트 안내서](../../profile/api/preview-sample-status.md). |
 
-작업 시 유용한 자습서 및 우수 사례를 비롯하여 실시간 고객 프로필에 대한 자세한 정보 [!DNL Profile] 데이터 읽기 [실시간 고객 프로필 개요](../../profile/home.md).
+작업 모범 사례 및 자습서를 비롯하여 실시간 고객 프로필에 대한 자세한 정보 [!DNL Profile] 데이터 읽기 [실시간 고객 프로필 개요](../../profile/home.md).
 
 ## [!DNL Sources] {#sources}
 

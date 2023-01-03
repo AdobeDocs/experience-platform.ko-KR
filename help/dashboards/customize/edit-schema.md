@@ -3,7 +3,7 @@ keywords: Experience Platform;사용자 인터페이스;UI;대시보드;대시�
 title: 사용자 지정 대시보드 위젯을 만들기 위한 스키마 편집
 description: 이 안내서에서는 Adobe Experience Platform 대시보드에 대한 사용자 지정 위젯을 만들기 위해 특성을 선택하고 조직의 스키마를 구성하기 위한 단계별 지침을 제공합니다.
 exl-id: a744eb24-5ba7-4971-9183-3f891e807863
-source-git-commit: 9b89effa6f90fb513fac9d0b826722ab05020036
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '498'
 ht-degree: 0%

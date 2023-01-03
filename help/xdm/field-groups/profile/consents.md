@@ -4,7 +4,7 @@ title: 동의 및 기본 설정 스키마 필드 그룹
 topic-legacy: overview
 description: 이 문서에서는 동의 및 기본 설정 스키마 필드 그룹에 대한 개요를 제공합니다.
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: 04e778d3318d60733772c2042c8bb272f0c87d5c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '941'
 ht-degree: 0%
@@ -182,7 +182,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->동의 데이터를에 보내려면 [!DNL Real-time Customer Profile]를 지정하는 경우, [!DNL Profile]사용 가능한 스키마 [!DNL XDM Individual Profile] 를 포함하는 클래스 [!UICONTROL 동의 및 기본 설정] 필드 그룹. 해당 스키마를 기반으로 만드는 데이터 집합도 활성화해야 합니다 [!DNL Profile]. 관련 특정 단계에 대해서는 위에 링크된 자습서 를 참조하십시오 [!DNL Real-time Customer Profile] 스키마 및 데이터 세트에 대한 요구 사항.
+>동의 데이터를에 보내려면 [!DNL Real-Time Customer Profile]를 지정하는 경우, [!DNL Profile]사용 가능한 스키마 [!DNL XDM Individual Profile] 를 포함하는 클래스 [!UICONTROL 동의 및 기본 설정] 필드 그룹. 해당 스키마를 기반으로 만드는 데이터 집합도 활성화해야 합니다 [!DNL Profile]. 관련 특정 단계에 대해서는 위에 링크된 자습서 를 참조하십시오 [!DNL Real-Time Customer Profile] 스키마 및 데이터 세트에 대한 요구 사항.
 >
 >또한 고객 프로필을 올바르게 업데이트하려면 병합 정책이 최신 동의 및 기본 설정 데이터가 포함된 데이터 세트에 우선 순위를 지정하도록 구성되어 있는지 확인해야 합니다. 다음 사항에 대한 개요를 참조하십시오. [정책 병합](../../../rtcdp/profile/merge-policies.md) 추가 정보.
 

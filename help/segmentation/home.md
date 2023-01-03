@@ -5,7 +5,7 @@ title: 세그먼테이션 서비스 개요
 topic-legacy: overview
 description: Adobe Experience Platform 세그멘테이션 서비스 및 플랫폼 생태계에서 수행하는 역할에 대해 알아봅니다.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1635'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # [!DNL Segmentation Service] 개요
 
-Adobe Experience Platform [!DNL Segmentation Service] 는 세그먼트를 작성하고 사용자의 세그먼트를 생성할 수 있도록 해주는 사용자 인터페이스 및 RESTful API를 제공합니다 [!DNL Real-time Customer Profile] 데이터. 이러한 세그먼트는 중앙에서 구성 및 관리됩니다 [!DNL Platform], 그리고 모든 Adobe 솔루션에서 쉽게 액세스할 수 있습니다.
+Adobe Experience Platform [!DNL Segmentation Service] 는 세그먼트를 작성하고 사용자의 세그먼트를 생성할 수 있도록 해주는 사용자 인터페이스 및 RESTful API를 제공합니다 [!DNL Real-Time Customer Profile] 데이터. 이러한 세그먼트는 중앙에서 구성 및 관리됩니다 [!DNL Platform], 그리고 모든 Adobe 솔루션에서 쉽게 액세스할 수 있습니다.
 
 이 문서에서는 [!DNL Segmentation Service] Adobe Experience Platform에서 수행하는 역할입니다.
 
@@ -63,7 +63,7 @@ Platform은 현재 세 가지 세그먼트 평가 방법을 지원합니다. 스
 
 ### 스트리밍 세그멘테이션 {#streaming}
 
-스트리밍 세그먼테이션은 사용자 활동에 대한 응답으로 세그먼트를 업데이트하는 지속적인 데이터 선택 프로세스입니다. 세그먼트가 만들어지고 저장되면, 들어오는 데이터에 대해 세그먼트 정의가 적용됩니다. [!DNL Real-time Customer Profile]. 세그먼트 추가 및 제거는 정기적으로 처리되므로 타겟 대상이 적절하도록 합니다.
+스트리밍 세그먼테이션은 사용자 활동에 대한 응답으로 세그먼트를 업데이트하는 지속적인 데이터 선택 프로세스입니다. 세그먼트가 만들어지고 저장되면, 들어오는 데이터에 대해 세그먼트 정의가 적용됩니다. [!DNL Real-Time Customer Profile]. 세그먼트 추가 및 제거는 정기적으로 처리되므로 타겟 대상이 적절하도록 합니다.
 
 스트리밍 세그멘테이션에 대한 자세한 내용은 [스트리밍 세그멘테이션 설명서](./api/streaming-segmentation.md).
 
@@ -160,7 +160,7 @@ Edge Segmentation에 대한 자세한 내용은 [API 설명서](./api/edge-segme
 
 ## 다중 엔티티 세그먼테이션 {#multi-entity}
 
-고급 다중 엔티티 세그먼테이션 기능을 사용하여 다음을 확장할 수 있습니다 [!DNL Real-time Customer Profile] 제품, 저장소 또는 기타 비개인을 기반으로 하는 &quot;차원&quot; 엔티티라고도 하는 추가 데이터가 있는 데이터. 결과적으로 [!DNL Segmentation Service] 세그먼트 정의 중에 추가 필드에 액세스할 수 있습니다. [!DNL Profile] 데이터 저장소. 다중 엔티티 세그먼테이션은 고유한 비즈니스 요구 사항과 관련된 데이터를 기반으로 대상을 식별할 때 유연성을 제공합니다. 사용 사례 및 워크플로우 등 자세한 내용은 [다중 엔티티 세그먼테이션 안내서](multi-entity-segmentation.md).
+고급 다중 엔티티 세그먼테이션 기능을 사용하여 다음을 확장할 수 있습니다 [!DNL Real-Time Customer Profile] 제품, 저장소 또는 기타 비개인을 기반으로 하는 &quot;차원&quot; 엔티티라고도 하는 추가 데이터가 있는 데이터. 결과적으로 [!DNL Segmentation Service] 세그먼트 정의 중에 추가 필드에 액세스할 수 있습니다. [!DNL Profile] 데이터 저장소. 다중 엔티티 세그먼테이션은 고유한 비즈니스 요구 사항과 관련된 데이터를 기반으로 대상을 식별할 때 유연성을 제공합니다. 사용 사례 및 워크플로우 등 자세한 내용은 [다중 엔티티 세그먼테이션 안내서](multi-entity-segmentation.md).
 
 ## [!DNL Segmentation Service] 데이터 유형
 
@@ -168,7 +168,7 @@ Edge Segmentation에 대한 자세한 내용은 [API 설명서](./api/edge-segme
 
 ## 다음 단계
 
-[!DNL Segmentation Service] 에서 세그먼트를 작성할 통합 워크플로우를 제공합니다. [!DNL Real-time Customer Profile] 데이터. 요약하면 다음과 같습니다.
+[!DNL Segmentation Service] 에서 세그먼트를 작성할 통합 워크플로우를 제공합니다. [!DNL Real-Time Customer Profile] 데이터. 요약하면 다음과 같습니다.
 
 - [!DNL Segmentation] 은 프로필 저장소에서 프로필 하위 집합을 정의하는 프로세스를 통해 원하는 마케팅 그룹의 동작이나 속성을 규명할 수 있습니다. [!DNL Segmentation Service] 이 프로세스를 가능하게 합니다.
 - 세그먼트를 계획할 때는 세그먼트를 다른 세그먼트에서 참조하고 세그먼트와 결합할 수 있다는 점에 유의하십시오.

@@ -5,7 +5,7 @@ title: Adobe Experience Platform API 시작하기
 topic-legacy: api guide
 description: Adobe Experience Platform은 서로 밀접하게 연결된 API 서비스를 제공합니다. 이 안내서에는 사용 가능한 서비스, CRUD 작업에 필요한 헤더, 오류 메시지, Postman 컬렉션 및 샘플 API 호출에 대한 정보가 포함되어 있습니다.
 exl-id: a362bcb4-a908-43a8-abd3-0e1d21cb9117
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1379'
 ht-degree: 0%
@@ -130,7 +130,7 @@ curl -X GET \
 | [[!DNL Policy Service] API 안내서](.././data-governance/api/overview.md) <br> (데이터 거버넌스) | 다음 [!DNL Policy Service] API를 사용하면 데이터 사용 레이블 및 정책을 만들고 관리하여 특정 데이터 사용 레이블을 포함하는 데이터에 대해 수행할 수 있는 마케팅 작업을 결정할 수 있습니다. 데이터 세트 및 필드에 레이블을 적용하려면 [[!DNL Dataset Service] API](.././data-governance/labels/dataset-api.md) 안내서 |
 | [[!DNL Privacy Service] API 안내서](.././privacy-service/api/getting-started.md) | 다음 [!DNL Privacy Service] API를 사용하여 개발자는 법적 개인 정보 보호 규정을 준수하여 Experience Cloud 애플리케이션에서 개인 데이터에 액세스하거나 삭제하기 위한 고객 요청을 만들고 관리할 수 있습니다. |
 | [[!DNL Query Service] API 안내서](.././query-service/api/getting-started.md) | 다음 [!DNL Query Service] API를 사용하여 개발자가 표준 SQL을 사용하여 Adobe Experience Platform 데이터를 쿼리할 수 있습니다. |
-| [[!DNL Real-time Customer Profile] API 안내서](.././profile/api/overview.md) | 개발자는 실시간 고객 프로필 API를 사용하여 프로필 보기, 병합 정책 만들기 및 업데이트, 프로필 데이터 내보내기 또는 샘플링, 더 이상 필요하지 않거나 오류가 추가된 프로필 데이터 삭제 등 프로필 데이터를 탐색 및 작업할 수 있습니다. |
+| [[!DNL Real-Time Customer Profile] API 안내서](.././profile/api/overview.md) | 개발자는 실시간 고객 프로필 API를 사용하여 프로필 보기, 병합 정책 만들기 및 업데이트, 프로필 데이터 내보내기 또는 샘플링, 더 이상 필요하지 않거나 오류가 추가된 프로필 데이터 삭제 등 프로필 데이터를 탐색 및 작업할 수 있습니다. |
 | [샌드박스 API 안내서](.././sandboxes/api/getting-started.md) | Sandbox API를 사용하여 개발자는 Adobe Experience Platform에서 분리된 가상 샌드박스 환경을 프로그래밍 방식으로 관리할 수 있습니다. |
 | [[!DNL Schema Registry] API 안내서](.././xdm/api/overview.md) <br> (XDM) | 다음 [!DNL Schema Registry] API를 사용하여 개발자는 Adobe Experience Platform 내의 모든 스키마 및 관련 XDM(Experience Data Model) 리소스를 프로그래밍 방식으로 관리할 수 있습니다. |
 | [[!DNL Segmentation Service] API 안내서](.././segmentation/api/overview.md) | 다음 [!DNL Segmentation Service] API를 사용하여 개발자가 Adobe Experience Platform에서 세그멘테이션 작업을 프로그래밍 방식으로 관리할 수 있습니다. 여기에는 세그먼트 작성 및 실시간 고객 프로필 데이터에서 대상 생성 등이 포함됩니다. |

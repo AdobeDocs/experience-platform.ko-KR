@@ -2,10 +2,10 @@
 title: 감사 로그 개요
 description: 감사 로그를 통해 Adobe Experience Platform에서 누가 어떤 작업을 수행했는지 확인하는 방법에 대해 알아봅니다.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: fdc61c920ee9ae2c66344e781334844d38b44806
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '944'
-ht-degree: 15%
+ht-degree: 27%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 15%
 
 시스템에서 수행되는 활동의 투명성과 가시성을 높이기 위해 Adobe Experience Platform을 사용하면 &quot;감사 로그&quot; 형태로 다양한 서비스 및 기능에 대한 사용자 활동을 감사할 수 있습니다. 이러한 로그는 플랫폼의 문제 해결에 도움이 될 수 있는 감사 추적을 형성하며 기업의 데이터 관리 정책 및 규정 요구 사항을 효과적으로 준수할 수 있도록 도와줍니다.
 
-기본적으로 감사 로그는 다음과 같습니다 **who** 수행됨 **what** 작업 및 **when**. 로그에 기록된 각 작업에는 작업 유형, 날짜 및 시간, 작업을 수행한 사용자의 이메일 ID 및 작업 유형과 관련된 추가 속성을 나타내는 메타데이터가 포함됩니다.
+기본적으로 감사 로그는 **어떤 사람**&#x200B;이 **어떤** 작업을 **언제** 수행했는지 알려 줍니다. 로그에 기록된 각 작업에는 작업 유형, 날짜 및 시간, 작업을 수행한 사용자의 이메일 ID 및 작업 유형과 관련된 추가 속성을 나타내는 메타데이터가 포함됩니다.
 
 이 문서에서는 UI 또는 API에서 감사 로그를 보고 관리하는 방법을 비롯하여 Platform의 감사 로그를 다룹니다.
 
@@ -33,35 +33,35 @@ ht-degree: 15%
 
 | 리소스 | 작업 |
 | --- | --- |
-| [액세스 제어 정책(속성 기반 액세스 제어)](../../../access-control/home.md) | <ul><li>선택 사항에서</li><li>업데이트</li><li>삭제</li></ul> |
-| [계정(Adobe)](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li>선택 사항에서</li><li>업데이트</li><li>삭제</li></ul> |
-| [Attribution AI 인스턴스](../../../intelligent-services/attribution-ai/overview.md) | <ul><li>선택 사항에서</li><li>업데이트</li><li>삭제</li><li>활성화</li><li>비활성화</li></ul> |
+| [액세스 제어 정책(속성 기반 액세스 제어)](../../../access-control/home.md) | <ul><li>만들기</li><li>업데이트</li><li>삭제</li></ul> |
+| [계정(Adobe)](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li>만들기</li><li>업데이트</li><li>삭제</li></ul> |
+| [Attribution AI 인스턴스](../../../intelligent-services/attribution-ai/overview.md) | <ul><li>만들기</li><li>업데이트</li><li>삭제</li><li>활성화</li><li>비활성화</li></ul> |
 | [감사 로그](../../../landing/governance-privacy-security/audit-logs/overview.md) | <ul><li>내보내기</li></ul> |
-| [클래스](../../../xdm/schema/composition.md#class) | <ul><li>선택 사항에서</li><li>업데이트</li><li>삭제</li></ul> |
-| [계산된 특성](../../../profile/computed-attributes/overview.md) | <ul><li>선택 사항에서</li><li>업데이트</li><li>삭제</li></ul> |
-| [고객 AI 인스턴스](../../../intelligent-services/customer-ai/overview.md) | <ul><li>선택 사항에서</li><li>업데이트</li><li>삭제</li><li>활성화</li><li>비활성화</li></ul> |
-| [데이터 세트](../../../catalog/datasets/overview.md) | <ul><li>선택 사항에서</li><li>업데이트</li><li>삭제</li><li>사용 [실시간 고객 프로필](../../../profile/home.md)</li><li>프로필에 대한 비활성화</li><li>데이터 추가</li><li>일괄 처리 삭제</li></ul> |
-| [데이터 스트림](../../../edge/datastreams/overview.md) | <ul><li>선택 사항에서</li><li>업데이트</li><li>삭제</li><li>활성화</li><li>비활성화</li><li>[매핑 편집](../../../edge/datastreams/data-prep.md)</li></ul> |
-| [데이터 유형](../../../xdm/schema/composition.md#data-type) | <ul><li>선택 사항에서</li><li>업데이트</li><li>삭제</li></ul> |
-| [대상](../../../destinations/home.md) | <ul><li>선택 사항에서</li><li>업데이트</li><li>삭제</li><li>활성화</li><li>비활성화</li><li>데이터 집합 활성화</li><li>데이터 집합 제거</li><li>프로필 활성화</li><li>프로필 제거</li></ul> |
-| [필드 그룹](../../../xdm/schema/composition.md#field-group) | <ul><li>선택 사항에서</li><li>업데이트</li><li>삭제</li></ul> |
+| [클래스](../../../xdm/schema/composition.md#class) | <ul><li>만들기</li><li>업데이트</li><li>삭제</li></ul> |
+| [계산된 특성](../../../profile/computed-attributes/overview.md) | <ul><li>만들기</li><li>업데이트</li><li>삭제</li></ul> |
+| [고객 AI 인스턴스](../../../intelligent-services/customer-ai/overview.md) | <ul><li>만들기</li><li>업데이트</li><li>삭제</li><li>활성화</li><li>비활성화</li></ul> |
+| [데이터 세트](../../../catalog/datasets/overview.md) | <ul><li>만들기</li><li>업데이트</li><li>삭제</li><li>사용 [실시간 고객 프로필](../../../profile/home.md)</li><li>프로필에 대한 비활성화</li><li>데이터 추가</li><li>일괄 처리 삭제</li></ul> |
+| [데이터 스트림](../../../edge/datastreams/overview.md) | <ul><li>만들기</li><li>업데이트</li><li>삭제</li><li>활성화</li><li>비활성화</li><li>[매핑 편집](../../../edge/datastreams/data-prep.md)</li></ul> |
+| [데이터 유형](../../../xdm/schema/composition.md#data-type) | <ul><li>만들기</li><li>업데이트</li><li>삭제</li></ul> |
+| [대상](../../../destinations/home.md) | <ul><li>만들기</li><li>업데이트</li><li>삭제</li><li>활성화</li><li>비활성화</li><li>데이터 집합 활성화</li><li>데이터 집합 제거</li><li>프로필 활성화</li><li>프로필 제거</li></ul> |
+| [필드 그룹](../../../xdm/schema/composition.md#field-group) | <ul><li>만들기</li><li>업데이트</li><li>삭제</li></ul> |
 | [ID 그래프](../../../identity-service/ui/identity-graph-viewer.md) | <ul><li>보기</li></ul> |
-| [ID 네임스페이스](../../../identity-service/ui/identity-graph-viewer.md) | <ul><li>선택 사항에서</li><li>업데이트</li></ul> |
-| [병합 정책](../../../profile/merge-policies/overview.md) | <ul><li>선택 사항에서</li><li>업데이트</li><li>삭제</li></ul> |
-| [제품 프로필](../../../access-control/home.md) | <ul><li>선택 사항에서</li><li>업데이트</li><li>삭제</li></ul> |
+| [ID 네임스페이스](../../../identity-service/ui/identity-graph-viewer.md) | <ul><li>만들기</li><li>업데이트</li></ul> |
+| [병합 정책](../../../profile/merge-policies/overview.md) | <ul><li>만들기</li><li>업데이트</li><li>삭제</li></ul> |
+| [제품 프로필](../../../access-control/home.md) | <ul><li>만들기</li><li>업데이트</li><li>삭제</li></ul> |
 | [쿼리](../../../query-service/ui/overview.md) | <ul><li>실행</li></ul> |
-| [쿼리 템플릿](../../../query-service/ui/overview.md) | <ul><li>선택 사항에서</li><li>업데이트</li><li>삭제</li></ul> |
-| [역할(속성 기반 액세스 제어)](../../../access-control/home.md) | <ul><li>선택 사항에서</li><li>업데이트</li><li>삭제</li><li>사용자 추가</li><li>사용자 제거</li></ul> |
-| [샌드박스](../../../sandboxes/home.md) | <ul><li>선택 사항에서</li><li>업데이트</li><li>재설정</li><li>삭제</li></ul> |
-| [예약된 쿼리](../../../query-service/ui/overview.md) | <ul><li>선택 사항에서</li><li>업데이트</li><li>삭제</li></ul> |
-| [스키마](../../../xdm/schema/composition.md) | <ul><li>선택 사항에서</li><li>업데이트</li><li>삭제</li><li>프로필에 사용</li></ul> |
-| [세그먼트](../../../segmentation/home.md) | <ul><li>선택 사항에서</li><li>삭제</li><li>세그먼트 활성화</li><li>세그먼트 제거</li></ul> |
-| [소스 데이터 흐름](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li>선택 사항에서</li><li>업데이트</li><li>삭제</li><li>활성화</li><li>비활성화</li><li>데이터 집합 활성화</li><li>데이터 집합 제거</li><li>프로필 활성화</li><li>프로필 제거</li></ul> |
-| [작업 순서](../../../hygiene/home.md) | <ul><li>선택 사항에서</li></ul> |
+| [쿼리 템플릿](../../../query-service/ui/overview.md) | <ul><li>만들기</li><li>업데이트</li><li>삭제</li></ul> |
+| [역할(속성 기반 액세스 제어)](../../../access-control/home.md) | <ul><li>만들기</li><li>업데이트</li><li>삭제</li><li>사용자 추가</li><li>사용자 제거</li></ul> |
+| [샌드박스](../../../sandboxes/home.md) | <ul><li>만들기</li><li>업데이트</li><li>재설정</li><li>삭제</li></ul> |
+| [예약된 쿼리](../../../query-service/ui/overview.md) | <ul><li>만들기</li><li>업데이트</li><li>삭제</li></ul> |
+| [스키마](../../../xdm/schema/composition.md) | <ul><li>만들기</li><li>업데이트</li><li>삭제</li><li>프로필에 사용</li></ul> |
+| [세그먼트](../../../segmentation/home.md) | <ul><li>만들기</li><li>삭제</li><li>세그먼트 활성화</li><li>세그먼트 제거</li></ul> |
+| [소스 데이터 흐름](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li>만들기</li><li>업데이트</li><li>삭제</li><li>활성화</li><li>비활성화</li><li>데이터 집합 활성화</li><li>데이터 집합 제거</li><li>프로필 활성화</li><li>프로필 제거</li></ul> |
+| [작업 순서](../../../hygiene/home.md) | <ul><li>만들기</li></ul> |
 
-## 감사 로그에 대한 액세스
+## 감사 로그 액세스
 
-조직에 대해 이 기능이 활성화되면 활동이 발생하면 감사 로그가 자동으로 수집됩니다. 수동으로 로그 수집을 활성화할 필요는 없습니다.
+조직에서 이 기능을 활성화하면 활동이 발생할 때 감사 로그가 자동으로 수집됩니다. 로그 수집을 수동으로 활성화할 필요가 없습니다.
 
 감사 로그를 보고 내보내려면 **[!UICONTROL 사용자 활동 로그 보기]** 액세스 제어 권한이 부여됨( [!UICONTROL 데이터 거버넌스] 카테고리). 플랫폼 기능에 대한 개별 권한을 관리하는 방법에 대한 자세한 내용은 [액세스 제어 설명서](../../../access-control/home.md).
 
@@ -88,7 +88,7 @@ ht-degree: 15%
 
 ![필터](../../images/audit-logs/filters.png)
 
-UI에서 감사 이벤트에 다음 필터를 사용할 수 있습니다.
+UI의 감사 이벤트에 사용할 수 있는 필터는 다음과 같습니다.
 
 | 필터 | 설명 |
 | --- | --- |
@@ -114,7 +114,7 @@ UI에서 감사 이벤트에 다음 필터를 사용할 수 있습니다.
 
 ## API에서 감사 로그 관리
 
-UI에서 수행할 수 있는 모든 작업은 API 호출을 사용하여 수행할 수도 있습니다. 자세한 내용은 [API 참조 문서](https://www.adobe.io/experience-platform-apis/references/audit-query/) 추가 정보.
+UI에서 수행할 수 있는 모든 작업은 API 호출을 사용하여 수행할 수도 있습니다. 자세한 내용은 [ API 참조 문서](https://www.adobe.io/experience-platform-apis/references/audit-query/)를 참조하십시오.
 
 ## Adobe Admin Console에 대한 감사 로그 관리
 

@@ -2,7 +2,7 @@
 title: Real-time Customer Data Platform B2B Edition에서 두 스키마 간의 관계 정의
 description: Adobe Real-time Customer Data Platform B2B Edition에서 두 스키마 간에 일대일 관계를 정의하는 방법을 알아봅니다.
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1403'
 ht-degree: 0%
@@ -69,7 +69,7 @@ Adobe Real-time Customer Data Platform B2B Edition은 다음을 포함하여 기
 
 소스 스키마 &quot;[!DNL Opportunities]&quot; [!UICONTROL XDM 비즈니스 기회] 클래스 이름을 지정합니다. 이 수업에서 제공한 필드 중 하나이고 `opportunityKey`는 스키마의 식별자 역할을 합니다. 특히, `sourceKey` 아래의 필드 `opportunityKey` 개체는 라는 사용자 지정 네임스페이스 아래에 스키마의 기본 ID로 설정됩니다. [!DNL B2B Opportunity].
 
-아래에 표시됨 **[!UICONTROL 스키마 속성]**&#x200B;에서 사용할 수 있도록 이 스키마가 활성화되었습니다. [!DNL Real-time Customer Profile].
+아래에 표시됨 **[!UICONTROL 스키마 속성]**&#x200B;에서 사용할 수 있도록 이 스키마가 활성화되었습니다. [!DNL Real-Time Customer Profile].
 
 ![기회 스키마](../images/tutorials/relationship-b2b/opportunities.png)
 

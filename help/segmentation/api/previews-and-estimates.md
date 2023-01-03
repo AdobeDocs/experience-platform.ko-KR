@@ -5,7 +5,7 @@ title: API 엔드포인트 미리 보기 및 예상
 topic-legacy: developer guide
 description: 세그먼트 정의가 개발되면 Adobe Experience Platform 내의 예측 및 미리 보기 도구를 사용하여 요약 수준 정보를 보고 예상 대상을 분리할 수 있습니다.
 exl-id: 2c204f29-825f-4a5e-a7f6-40fc69263614
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '978'
 ht-degree: 2%
@@ -250,4 +250,4 @@ curl -X GET https://platform.adobe.io/data/core/ups/estimate/MDoyOjRhNDVlODUzLWF
 
 ## 다음 단계
 
-이 안내서를 읽은 후에는 세그멘테이션 API를 사용하여 미리 보기 및 예측을 사용하는 방법을 더 잘 이해할 수 있어야 합니다. 전체 프로필 조각 및 특정 네임스페이스 또는 프로필 데이터 저장소 내 병합된 프로필 수와 같은 실시간 고객 프로필 데이터와 관련된 지표에 액세스하는 방법을 알려면 다음을 방문하십시오. [프로필 미리 보기 (`/previewsamplestatus`) endpoint 안내서](../../profile/api/preview-sample-status.md).
+이 안내서를 읽은 후에는 세그멘테이션 API를 사용하여 미리 보기 및 예측을 사용하는 방법을 더 잘 이해할 수 있어야 합니다. 전체 프로필 조각 및 특정 네임스페이스 또는 프로필 데이터 저장소 내 병합된 프로필 수 등 실시간 고객 프로필 데이터와 관련된 지표에 액세스하는 방법을 알려면 다음을 방문하십시오. [프로필 미리 보기 (`/previewsamplestatus`) endpoint 안내서](../../profile/api/preview-sample-status.md).

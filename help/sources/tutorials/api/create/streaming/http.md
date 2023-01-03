@@ -3,7 +3,7 @@ keywords: Experience Platform;홈;인기 항목;스트리밍 연결;스트리밍
 title: Flow Service API를 사용하여 HTTP API 스트리밍 연결 만들기
 description: 이 자습서에서는 Flow Service API를 사용하여 원시 및 XDM 데이터에 대한 HTTP API 소스를 사용하여 스트리밍 연결을 만드는 방법을 제공합니다
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: 2b3f8b7b0a19214a95a2ad76c9fecd70ffd91743
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1472'
 ht-degree: 2%
@@ -22,7 +22,7 @@ ht-degree: 2%
 이 안내서에서는 Adobe Experience Platform의 다음 구성 요소를 이해하고 있어야 합니다.
 
 * [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md): 표준화된 프레임워크 [!DNL Platform] 경험 데이터를 구성합니다.
-* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): 여러 소스에서 집계된 데이터를 기반으로 통합된 소비자 프로필을 실시간으로 제공합니다.
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): 여러 소스에서 집계된 데이터를 기반으로 통합된 소비자 프로필을 실시간으로 제공합니다.
 
 또한 스트리밍 연결을 만들려면 대상 XDM 스키마와 데이터 세트가 있어야 합니다. 이러한 단원을 만드는 방법을 알아보려면 [스트리밍 레코드 데이터](../../../../../ingestion/tutorials/streaming-record-data.md) 또는 [스트리밍 시계열 데이터](../../../../../ingestion/tutorials/streaming-time-series-data.md).
 

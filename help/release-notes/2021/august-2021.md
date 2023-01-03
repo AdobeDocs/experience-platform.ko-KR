@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: August 25, 2021
 author: ens28527
 exl-id: 0513b9dc-b16c-43b3-8e17-4be4499308d4
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '712'
 ht-degree: 6%
@@ -19,7 +19,7 @@ ht-degree: 6%
 Adobe Experience Platform의 기존 기능 업데이트:
 
 - [대상](#destinations)
-- [Observability Insights](#observability)
+- [가시성 통찰력](#observability)
 - [실시간 고객 프로필](#profile)
 - [소스](#sources)
 
@@ -47,7 +47,7 @@ Adobe Experience Platform의 기존 기능 업데이트:
 
 대상에 대한 자세한 내용은 [대상 개요](../../destinations/home.md).
 
-## 가시성 통찰력 {#observability}
+## Observability Insights {#observability}
 
 가시성 통찰력을 사용하면 통계 지표 및 이벤트 알림을 사용하여 플랫폼 활동을 모니터링할 수 있습니다.
 

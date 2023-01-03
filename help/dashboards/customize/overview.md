@@ -3,7 +3,7 @@ keywords: Experience Platform;사용자 인터페이스;UI;대시보드;대시�
 title: 대시보드 사용자 지정 개요
 description: Adobe Experience Platform 대시보드에 표시된 데이터를 사용자 지정할 수 있는 방법에 대해 자세히 알아보십시오.
 exl-id: efabdb61-4148-4b0e-b7a1-6e788b5e43a8
-source-git-commit: 27252d547afd30acc7b334d5054f1350dc0031b7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '480'
 ht-degree: 0%

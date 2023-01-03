@@ -1,12 +1,12 @@
 ---
 keywords: RTCDP;CDP;Real-time Customer Data Platform;실시간 고객 데이터 플랫폼;실시간 cdp;cdp;rtcdp
 title: Real-time Customer Data Platform 시작하기
-description: Adobe Real-time Customer Data Platform 구현을 설정할 때 이 샘플 시나리오를 예로 사용하십시오.
+description: Adobe Real-Time Customer Data Platform 구현을 설정할 때 이 샘플 시나리오를 예로 사용하십시오.
 exl-id: 9f775d33-27a1-4a49-a4c5-6300726a531b
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2333'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -73,7 +73,7 @@ Adobe Experience Platform에서 제공하는 Real-Time CDP을 통해 Luma의 마
 
 예를 들어, 식별되지 않은 방문자가 Luma 사이트에서 Men&#39;s 섹션으로 이동하고, 실행 중인 트레이트 셔츠를 봅니다.
 
-![이미지](assets/luma-sweatshirts.png)
+![image](assets/luma-sweatshirts.png)
 
 고객이 이러한 제품에 대해 자세히 알려면 이러한 제품 보기는 Adobe Analytics에서 수집되어 로 전송됩니다 [!DNL Experience Platform].
 
@@ -87,7 +87,7 @@ Luma는 방문자의 행동을 Adobe Experience Platform의 사용자 프로필�
 
 고객이 로그인했을 때, 그녀는 자신을 사라 로즈로 식별합니다.
 
-![이미지](assets/luma-login.png)
+![image](assets/luma-login.png)
 
 두 ID가 병합됩니다.
 
@@ -96,7 +96,7 @@ Luma는 방문자의 행동을 Adobe Experience Platform의 사용자 프로필�
 
 두 ID가 모두 [!DNL Experience Platform]. Luma는 이제 이 소비자에 대한 통합된 보기를 가지고 있습니다.
 
-사이트의 남성 섹션에서 익명의 방문자의 탐색 행동을 기반으로 고객이 남성이라고 가정했을 수 있습니다. 그녀가 로그인했기 때문에, 루마는 사라 로즈를 인식한다. Luma는 [!DNL Real-time Customer Profile] 여러 채널에서 전달된 메시지를 세분화하기 위해 다음을 수행하십시오.
+사이트의 남성 섹션에서 익명의 방문자의 탐색 행동을 기반으로 고객이 남성이라고 가정했을 수 있습니다. 그녀가 로그인했기 때문에, 루마는 사라 로즈를 인식한다. Luma는 [!DNL Real-Time Customer Profile] 여러 채널에서 전달된 메시지를 세분화하기 위해 다음을 수행하십시오.
 
 ## 사용자 경험 개인화
 
@@ -104,9 +104,9 @@ Luma는 방문자의 행동을 Adobe Experience Platform의 사용자 프로필�
 
 그녀는 홈페이지로 가서 더 찾아본다.
 
-![이미지](assets/luma-personal.png)
+![image](assets/luma-personal.png)
 
-Sarah는 자신을 기반으로 동적으로 전달되는 개인화된 홈 페이지 경험을 수신합니다 [!DNL Real-time Customer Profile] Adobe Experience Platform.
+Sarah는 자신을 기반으로 동적으로 전달되는 개인화된 홈 페이지 경험을 수신합니다 [!DNL Real-Time Customer Profile] Adobe Experience Platform.
 
 Labs는 과거 구입 내역 및 의류 및 장비 실행 선호도를 고려하는 Adobe Target의 Adobe Sensei 기반의 개인화 덕분에 관련 컨텐츠를 볼 수 있습니다. 루마는 또한 가장 최근 찾아보기를 바탕으로 남성용 카탈로그 콘텐츠를 남용으로 재단했다.
 
@@ -128,7 +128,7 @@ Adobe Experience Platform 기반의 Real-time Customer Data Platform은 고객 �
 
 Luma의 팀에는 모든 행동 및 고객 데이터가 한 곳에 있습니다.
 
-![이미지](assets/luma-dash.png)
+![image](assets/luma-dash.png)
 
 다음 모든 소스에서 데이터를 수집할 수 있습니다.
 
@@ -143,13 +143,13 @@ Luma의 팀에는 모든 행동 및 고객 데이터가 한 곳에 있습니다.
 
 사용 [!DNL Real-Time Customer Data Platform] 를 사용하십시오. Real-Time CDP에는 프로필에 빠르고 쉽게 추가할 수 있는 데이터 소스 카탈로그가 포함되어 있습니다.
 
-![이미지](assets/luma-source-cat.png)
+![image](assets/luma-source-cat.png)
 
 예를 들어 Luma의 CRM 데이터를 수집하려면 다음을 기준으로 카탈로그를 필터링합니다 *CRM*&#x200B;및 를 포함하는 모든 기본 제공 커넥터 *CRM* 나열됩니다. 추가하려면 [!DNL Microsoft Dynamics CRM] 데이터:
 
 1. 연결을 승인합니다.
 
-   ![이미지](assets/luma-source-auth.png)
+   ![image](assets/luma-source-auth.png)
 
 1. XDM 사전 매핑된 테이블 권장 목록에서 가져올 항목을 선택합니다.
 
@@ -168,7 +168,7 @@ Luma의 팀에는 모든 행동 및 고객 데이터가 한 곳에 있습니다.
 
 1. 일정을 설정합니다.
 
-   ![이미지](assets/luma-source-sched.png)
+   ![image](assets/luma-source-sched.png)
 
 다 끝났어 방금 추가했습니다. [!DNL Microsoft CRM] 를 데이터 소스로 사용 [!DNL Experience Platform].
 
@@ -195,11 +195,11 @@ Luma가 Sarah에 대해 가지고 있는 모든 프로필 정보. 여기에는 �
 
 Real-Time CDP 프로필은 이 360도 고객 보기를 기반으로 Luma 마케팅 팀의 워크플로우를 몇 주에서 몇 분으로 줄이고 개인화 가능성을 잠금 해제합니다. 이 프로필은 로그인하기 전에 사이트를 탐색할 때 사용한 행동 데이터를 기존 고객 프로필과 병합하여 Sarah에 대한 포괄적인 보기를 만듭니다.
 
-마케팅 팀은 향상된 기능을 사용할 수 있습니다. [!DNL Real-time Customer Profile] Luma를 사용하여 Sarah의 경험을 더 잘 개인화하고 브랜드 충성도를 높이기 위해.
+마케팅 팀은 향상된 기능을 사용할 수 있습니다. [!DNL Real-Time Customer Profile] Luma를 사용하여 Sarah의 경험을 더 잘 개인화하고 브랜드 충성도를 높이기 위해.
 
 ## 세그먼트
 
-강력한 Adobe Experience Platform 세그멘테이션 기능을 통해 마케터는 [!DNL Real-time Customer Profile].
+강력한 Adobe Experience Platform 세그멘테이션 기능을 통해 마케터는 [!DNL Real-Time Customer Profile].
 
 <!-- ![image](assets/luma-segments.png) -->
 
@@ -237,7 +237,7 @@ Loyalty member
 Real-Time CDP에서 Luma는 개인화를 위해 대상 세그먼트에 대해 원활하게 작동할 수 있습니다.\
 여기서는 Luma가 Adobe 솔루션과 비Adobe 솔루션 모두에 이 대상을 보낼 수 있는 모든 대상을 볼 수 있습니다.
 
-![이미지](assets/luma-dest.png)
+![image](assets/luma-dest.png)
 
 ### 대상 선택
 
@@ -276,7 +276,7 @@ Adobe Experience Platform에는 특정 대상에 대해 세그먼트를 활성�
 
 저장하면 시각적 데이터 흐름 캔버스에 통합 프로필에서 선택한 세 가지 대상에 매핑된 세그먼트가 표시됩니다.
 
-![이미지](assets/luma-flow.png)
+![image](assets/luma-flow.png)
 
 ## 교차 장치 ID 결합
 

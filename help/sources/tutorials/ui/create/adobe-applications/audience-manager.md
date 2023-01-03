@@ -3,7 +3,7 @@ keywords: Experience Platform;홈;인기 항목;Audience Manager 소스 커넥�
 title: UI에서 Adobe Audience Manager 소스 연결 만들기
 description: 이 자습서에서는 사용자 인터페이스를 사용하여 소비자 경험 이벤트 데이터를 Platform으로 가져올 수 있도록 Adobe Audience Manager에 대한 소스 연결을 만드는 단계를 안내합니다.
 exl-id: 90c4a719-aaad-4687-afd8-7a1c0c56f744
-source-git-commit: 9cdb8933d166445bf41ed314d7ffc7d5762e1adb
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '583'
 ht-degree: 0%

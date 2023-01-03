@@ -3,7 +3,7 @@ keywords: Experience Platform;홈;인기 항목;데이터 준비;데이터 준�
 title: 데이터 준비를 사용하여 프로필 서비스에 부분 행 업데이트 보내기
 description: 이 문서에서는 데이터 준비를 사용하여 프로필 서비스에 부분 행 업데이트를 보내는 방법에 대한 정보를 제공합니다.
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-source-git-commit: 4e24552c441c9096ef1139df66ad07d89f08a5d6
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1169'
 ht-degree: 1%

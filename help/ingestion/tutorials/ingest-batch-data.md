@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: Adobe Experience Platform을 사용하면 알려진 XDM(Experience Data Model) 스키마를 준수하는 Parquet 파일 형식 또는 데이터 배치 파일로 데이터를 쉽게 가져올 수 있습니다.
 exl-id: a4a7358d-b117-4d81-8cb0-3dbbfeccdcbd
-source-git-commit: e7fc8a168a48cc6fadda62efda9ee9eb3025ab51
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1322'
 ht-degree: 0%
@@ -75,23 +75,23 @@ Adobe Experience Platform에서 데이터를 로 쉽게 가져올 수 있습니�
 
 데이터 세트 작업 공간 오른쪽에는 **[!UICONTROL 정보]** 데이터 세트 ID, 이름, 설명, 테이블 이름, 스키마, 스트리밍 및 소스와 같은 새로운 데이터 세트에 대한 정보가 포함된 탭입니다. 정보 탭에는 데이터 세트를 만든 시기 및 마지막으로 수정한 날짜에 대한 정보도 포함되어 있습니다.
 
-또한 정보 탭에는  **[!UICONTROL 프로필]** 에서 사용할 데이터 세트를 활성화하는 데 사용되는 전환 [!DNL Real-time Customer Profile]. 이 토글 사용 및 [!DNL Real-time Customer Profile]에서는 다음에 나오는 섹션에 더 자세히 설명되어 있습니다.
+또한 정보 탭에는  **[!UICONTROL 프로필]** 에서 사용할 데이터 세트를 활성화하는 데 사용되는 전환 [!DNL Real-Time Customer Profile]. 이 토글 사용 및 [!DNL Real-Time Customer Profile]에서는 다음에 나오는 섹션에 더 자세히 설명되어 있습니다.
 
 ![데이터 집합 활동](../images/tutorials/ingest-batch-data/sample-dataset.png)
 
-## 데이터 집합 활성화 [!DNL Real-time Customer Profile]
+## 데이터 집합 활성화 [!DNL Real-Time Customer Profile]
 
 데이터 세트는 데이터를에 수집하는 데 사용됩니다 [!DNL Experience Platform]그리고 이러한 데이터는 궁극적으로 개인을 식별하고 여러 소스에서 오는 정보를 함께 연결하는 데 사용됩니다. 이렇게 결합된 정보를 [!DNL Real-Time Customer Profile]. 대상 [!DNL Platform] 에 포함해야 하는 정보를 [!DNL Real-Time Profile], 데이터 세트는 을 사용하여 포함할 수 있도록 표시할 수 있습니다 **[!UICONTROL 프로필]** 토글.
 
 기본적으로 이 토글은 꺼져 있습니다. 켜기로 선택한 경우 [!DNL Profile]를 지정하는 경우 데이터 집합에 수집된 모든 데이터는 개인을 식별하고 함께 결합하는 데 사용됩니다 [!DNL Real-Time Profile].
 
-에 대해 자세히 알아보려면 [!DNL Real-time Customer Profile] ID를 사용하여 작업하는 경우 [ID 서비스](../../identity-service/home.md) 설명서.
+에 대해 자세히 알아보려면 [!DNL Real-Time Customer Profile] ID를 사용하여 작업하는 경우 [ID 서비스](../../identity-service/home.md) 설명서.
 
-데이터 세트를 사용하려면 [!DNL Real-time Customer Profile]를 클릭하고 **[!UICONTROL 프로필]** 에서 전환 **[!UICONTROL 정보]** 탭.
+데이터 세트를 사용하려면 [!DNL Real-Time Customer Profile]를 클릭하고 **[!UICONTROL 프로필]** 에서 전환 **[!UICONTROL 정보]** 탭.
 
 ![프로필 전환](../images/tutorials/ingest-batch-data/dataset-profile-toggle.png)
 
-데이터 세트를 활성화할지 확인하는 대화 상자가 나타납니다 [!DNL Real-time Customer Profile].
+데이터 세트를 활성화할지 확인하는 대화 상자가 나타납니다 [!DNL Real-Time Customer Profile].
 
 ![프로필 활성화 대화 상자](../images/tutorials/ingest-batch-data/enable-dataset-for-profile.png)
 

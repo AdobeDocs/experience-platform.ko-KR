@@ -5,7 +5,7 @@ title: 결합 API 끝점
 description: 스키마 레지스트리 API의 /union 종단점을 사용하면 경험 애플리케이션에서 XDM 결합 스키마를 프로그래밍 방식으로 관리할 수 있습니다.
 topic-legacy: developer guide
 exl-id: d0ece235-72e8-49d9-856b-5dba44e16ee7
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '911'
 ht-degree: 3%
@@ -14,7 +14,7 @@ ht-degree: 3%
 
 # 결합 끝점
 
-결합(또는 결합 보기)은 동일한 클래스([!DNL XDM ExperienceEvent] 또는 [!DNL XDM Individual Profile]) 및에 대해 활성화되어 있습니다. [[!DNL Real-time Customer Profile]](../../profile/home.md).
+결합(또는 결합 보기)은 동일한 클래스([!DNL XDM ExperienceEvent] 또는 [!DNL XDM Individual Profile]) 및에 대해 활성화되어 있습니다. [[!DNL Real-Time Customer Profile]](../../profile/home.md).
 
 이 문서에서는 다양한 작업에 대한 샘플 호출을 포함하여 스키마 레지스트리 API에서 결합 작업을 위한 필수 개념을 다룹니다. XDM의 조합에 대한 일반적인 자세한 내용은 [스키마 구성 기본 사항](../schema/composition.md#union).
 
@@ -179,7 +179,7 @@ curl -X GET \
 }
 ```
 
-## 조합 멤버십에 대한 스키마 활성화 {#enable}
+## 결합 멤버십에 대한 스키마 활성화 {#enable}
 
 스키마를 클래스에 대한 조합에 포함하려면 `union` 태그를 스키마 `meta:immutableTags` 속성을 사용합니다. PATCH 요청을 수행하여 다음을 추가할 수 있습니다 `meta:immutableTags` 단일 문자열 값이 인 배열 `union` 해당 스키마로 변경. 자세한 내용은 [스키마 끝점 안내서](./schemas.md#union) 자세한 예
 

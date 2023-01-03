@@ -6,7 +6,7 @@ description: Flow Service API를 사용하여 Experience Platform에서 배치 �
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: 183830318a3dd5012f27a73a8dd2753638aff83f
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '3420'
 ht-degree: 2%
@@ -36,7 +36,7 @@ Platform 사용자 인터페이스를 사용하여 대상에 연결하고 데이
 이 안내서에서는 Adobe Experience Platform의 다음 구성 요소를 이해하고 있어야 합니다.
 
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): 표준화된 프레임워크 [!DNL Experience Platform] 고객 경험 데이터를 구성합니다.
-* [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] 에서 세그먼트를 작성하고 대상을 생성할 수 있습니다. [!DNL Adobe Experience Platform] 다음 [!DNL Real-time Customer Profile] 데이터.
+* [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] 에서 세그먼트를 작성하고 대상을 생성할 수 있습니다. [!DNL Adobe Experience Platform] 다음 [!DNL Real-Time Customer Profile] 데이터.
 * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] 단일 파티션을 생성하는 가상 샌드박스 제공 [!DNL Platform] 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 별도의 가상 환경으로 인스턴스를 구축할 수 있습니다.
 
 다음 섹션에서는 Platform에서 배치 대상으로 데이터를 활성화하기 위해 알고 있어야 하는 추가 정보를 제공합니다.

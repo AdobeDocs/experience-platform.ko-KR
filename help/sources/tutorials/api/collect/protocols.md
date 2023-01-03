@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: 이 자습서에서는 프로토콜 애플리케이션에서 데이터를 검색하고 소스 커넥터 및 API를 사용하여 플랫폼으로 수집하는 단계를 설명합니다.
 exl-id: e14e75c2-2a93-45d8-8056-f06075bd4b8d
-source-git-commit: 2d3fbbb5c743b8e172e3e64bda31ebf3278b4f5b
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1311'
 ht-degree: 1%
@@ -704,7 +704,7 @@ curl -X POST \
 
 ## 다음 단계
 
-이 자습서에 따라 예약된 대로 프로토콜 애플리케이션에서 데이터를 수집하기 위한 소스 커넥터를 만들었습니다. 이제 와 같은 다운스트림 Platform 서비스에서 들어오는 데이터를 사용할 수 있습니다. [!DNL Real-time Customer Profile] 및 [!DNL Data Science Workspace]. 자세한 내용은 다음 문서를 참조하십시오.
+이 자습서에 따라 예약된 대로 프로토콜 애플리케이션에서 데이터를 수집하기 위한 소스 커넥터를 만들었습니다. 이제 와 같은 다운스트림 Platform 서비스에서 들어오는 데이터를 사용할 수 있습니다. [!DNL Real-Time Customer Profile] 및 [!DNL Data Science Workspace]. 자세한 내용은 다음 문서를 참조하십시오.
 
 * [실시간 고객 프로필 개요](../../../../profile/home.md)
 * [Data Science Workspace 개요](../../../../data-science-workspace/home.md)

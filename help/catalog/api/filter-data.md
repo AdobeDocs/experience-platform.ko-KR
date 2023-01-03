@@ -5,7 +5,7 @@ title: 쿼리 매개 변수를 사용하여 카탈로그 데이터 필터링
 topic-legacy: developer guide
 description: 카탈로그 서비스 API를 사용하면 요청 쿼리 매개 변수를 사용하여 응답 데이터를 필터링할 수 있습니다. 카탈로그에 대한 우수 사례의 일부는 API의 로드를 줄이고 전체 성능을 개선하기 위해 모든 API 호출에서 필터를 사용하는 것입니다.
 exl-id: 0cdb5a7e-527b-46be-9ad8-5337c8dc72b7
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2121'
 ht-degree: 1%
@@ -210,7 +210,7 @@ curl -X GET \
 * 태그 이름은 IMS 조직에 고유합니다.
 * Adobe 프로세스는 특정 동작에 대한 태그를 활용할 수 있습니다. 이러한 태그의 이름에는 &quot;adobe&quot; 접두사가 표준 태그로 붙습니다. 따라서 태그 이름을 선언할 때에는 이 규칙을 사용하지 않아야 합니다.
 * 다음 태그 이름은 여러 곳에서 사용할 수 있도록 예약되어 있습니다 [!DNL Experience Platform], 따라서 를 조직의 태그 이름으로 선언할 수 없습니다.
-   * `unifiedProfile`: 이 태그 이름은 데이터 세트용으로 예약되어 있습니다. [[!DNL Real-time Customer Profile]](../../profile/home.md).
+   * `unifiedProfile`: 이 태그 이름은 데이터 세트용으로 예약되어 있습니다. [[!DNL Real-Time Customer Profile]](../../profile/home.md).
    * `unifiedIdentity`: 이 태그 이름은 데이터 세트용으로 예약되어 있습니다. [[!DNL Identity Service]](../../identity-service/home.md).
 
 다음은 를 포함하는 데이터 집합의 예입니다 `tags` 속성을 사용합니다. 해당 속성 내의 태그는 키-값 쌍의 형태를 취하며 각 태그 값은 단일 문자열을 포함하는 배열로 표시됩니다.

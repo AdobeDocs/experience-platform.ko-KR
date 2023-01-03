@@ -3,7 +3,7 @@ keywords: Experience Platform;홈;인기 항목;소스;커넥터;소스 커넥�
 title: Platform UI를 사용하여 Adobe Campaign Managed Cloud Services 소스 연결 만들기
 description: Platform UI를 사용하여 Adobe Experience Platform을 Adobe Campaign Managed Cloud Services에 연결하는 방법을 알아봅니다.
 exl-id: 067ed558-b239-4845-8c85-3bf9b1d4caed
-source-git-commit: b9f032c903da2bdb9f37179b1693119bf7b0029d
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1149'
 ht-degree: 1%
@@ -137,7 +137,7 @@ Campaign 인스턴스, 대상 매핑 및 스키마 이름에 대한 값을 제�
 
 ## 다음 단계
 
-이 자습서를 따라 Campaign v8 게재 로그 및 추적 로그 데이터를 Platform에 가져올 데이터 흐름을 성공적으로 만들었습니다. 이제 와 같은 다운스트림 Platform 서비스에서 들어오는 데이터를 사용할 수 있습니다. [!DNL Real-time Customer Profile] 및 [!DNL Data Science Workspace]. 자세한 내용은 다음 문서를 참조하십시오.
+이 자습서를 따라 Campaign v8 게재 로그 및 추적 로그 데이터를 Platform에 가져올 데이터 흐름을 성공적으로 만들었습니다. 이제 와 같은 다운스트림 Platform 서비스에서 들어오는 데이터를 사용할 수 있습니다. [!DNL Real-Time Customer Profile] 및 [!DNL Data Science Workspace]. 자세한 내용은 다음 문서를 참조하십시오.
 
-* [[!DNL Real-time Customer Profile] 개요](../../../../../profile/home.md)
+* [[!DNL Real-Time Customer Profile] 개요](../../../../../profile/home.md)
 * [[!DNL Data Science Workspace] 개요](../../../../../data-science-workspace/home.md)

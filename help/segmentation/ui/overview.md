@@ -5,7 +5,7 @@ title: 세그멘테이션 서비스 UI 안내서
 topic-legacy: ui guide
 description: Adobe Experience Platform 세그멘테이션 서비스는 세그먼트 정의를 만들고 관리하기 위한 사용자 인터페이스를 제공합니다.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2647'
 ht-degree: 1%
@@ -21,7 +21,7 @@ ht-degree: 1%
 세그먼트 정의를 사용하려면 [!DNL Experience Platform] 세그먼테이션과 관련된 서비스. 이 사용 안내서를 읽기 전에 다음 서비스에 대한 설명서를 검토하십시오.
 
 - [[!DNL Segmentation Service]](../home.md): [!DNL Segmentation Service] 에 저장된 데이터를 나눌 수 있습니다. [!DNL Experience Platform] 개인(예: 고객, 잠재 고객, 사용자 또는 조직)과 관련이 있습니다.
-- [[!DNL Real-time Customer Profile]](../../profile/home.md): 여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md): 여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
 - [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md): 수집할 여러 데이터 소스의 ID를 결합하여 고객 프로필을 만들 수 있습니다. [!DNL Platform].
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): 표준화된 프레임워크 [!DNL Platform] 고객 경험 데이터를 구성합니다. 세그멘테이션을 가장 잘 사용하려면 데이터가 [데이터 모델링 우수 사례](../../xdm/schema/best-practices.md).
 
@@ -156,7 +156,7 @@ Experience Platform UI에서 **[!UICONTROL 세그먼트]** 왼쪽 탐색에서 �
 | 1~2,000만 | 100만 |
 | 2천만 명 이상 | 합계의 5% |
 
-각각에 대한 자세한 정보 [!DNL Profile] 을(를) 선택하여 볼 수 있습니다. [!DNL Profile] ID. 프로필의 세부 사항에 대해 자세히 알아보려면 [[!DNL Real-time Customer Profile] 사용 안내서](../../profile/ui/user-guide.md#profile-detail).
+각각에 대한 자세한 정보 [!DNL Profile] 을(를) 선택하여 볼 수 있습니다. [!DNL Profile] ID. 프로필의 세부 사항에 대해 자세히 알아보려면 [[!DNL Real-Time Customer Profile] 사용 안내서](../../profile/ui/user-guide.md#profile-detail).
 
 ![세그먼트 정의에 대한 샘플 프로필이 강조 표시됩니다. 샘플 프로필 정보에는 프로필 ID, 이름, 성 및 개인 이메일이 포함되어 있습니다.](../images/ui/overview/segment-details-profiles.png)
 
@@ -176,7 +176,7 @@ Experience Platform UI에서 **[!UICONTROL 세그먼트]** 왼쪽 탐색에서 �
 
 ## 예약된 세그먼테이션 {#scheduled-segmentation}
 
-세그먼트 정의가 만들어지면 온디맨드 또는 예약된(연속) 평가를 통해 평가할 수 있습니다. 평가는 움직이는 것을 의미합니다 [!DNL Real-time Customer Profile] 해당 대상을 생성하기 위해 세그먼트 정의를 통한 데이터. 대상자를 만들면 대상자를 저장 및 저장하여 을 사용하여 내보낼 수 있습니다 [!DNL Experience Platform] API.
+세그먼트 정의가 만들어지면 온디맨드 또는 예약된(연속) 평가를 통해 평가할 수 있습니다. 평가는 움직이는 것을 의미합니다 [!DNL Real-Time Customer Profile] 해당 대상을 생성하기 위해 세그먼트 정의를 통한 데이터. 대상자를 만들면 대상자를 저장 및 저장하여 을 사용하여 내보낼 수 있습니다 [!DNL Experience Platform] API.
 
 주문형 평가에는 API를 사용하여 평가를 수행하고 필요에 따라 대상을 빌드하는 작업이 포함되지만, 예약된 평가(&#39;예약된 세그먼테이션&#39;이라고도 함)를 사용하면 특정 시간(최대, 일별)에 세그먼트 정의를 평가하는 반복 일정을 만들 수 있습니다.
 
@@ -294,6 +294,6 @@ Edge Segmentation은 Platform의 세그먼트를 즉시 평가하여 동일한 �
 
 ## 다음 단계 및 추가 리소스 {#next-steps}
 
-다음 [!DNL Segmentation Service] UI는 마케팅 가능한 대상을 [!DNL Real-time Customer Profile] 데이터.
+다음 [!DNL Segmentation Service] UI는 마케팅 가능한 대상을 [!DNL Real-Time Customer Profile] 데이터.
 
 에 대해 자세히 알아보려면 [!DNL Segmentation Service]을 클릭하여 문서를 계속 읽으십시오. 를 사용하는 방법을 배우려면 [!DNL Segmentation Service] API입니다. [[!DNL Segmentation Service] 개발자 안내서](../api/overview.md).

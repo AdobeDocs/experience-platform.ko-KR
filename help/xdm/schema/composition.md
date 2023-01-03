@@ -5,7 +5,7 @@ title: 스키마 구성 기본 사항
 topic-legacy: overview
 description: 이 문서에서는 Adobe Experience Platform에서 사용할 스키마를 구성하기 위한 XDM(Experience Data Model) 스키마와 빌딩 블록, 원칙 및 모범 사례를 소개합니다.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: bd40388d710f8b135c0d36716b0ec59c8c9b78ee
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '4103'
 ht-degree: 2%
@@ -58,7 +58,7 @@ Dell의 [!DNL Experience Platform] 빌드되어 있으며, 다음과 같이 알�
 
 스키마는에 데이터를 수집하는 데 사용됩니다 [!DNL Experience Platform]. 이 데이터는 여러 서비스에서 사용하여 개별 엔터티에 대한 단일 통합 보기를 만들 수 있습니다. 따라서 스키마를 생각할 때 고객 ID와 데이터가 어디에서 왔는지에 관계없이 대상을 식별하는 데 사용할 수 있는 필드를 고려하는 것이 중요합니다.
 
-이 프로세스를 지원하기 위해 스키마 내의 키 필드를 ID로 표시할 수 있습니다. 데이터를 수집하면 해당 필드의 데이터가 &quot;[!UICONTROL ID 그래프]해당 사용자에 대해 그런 다음 그래프 데이터에 [[!DNL Real-time Customer Profile]](../../profile/home.md) 및 기타 [!DNL Experience Platform] 각 개별 고객에 대한 결합 보기를 제공하는 서비스.
+이 프로세스를 지원하기 위해 스키마 내의 키 필드를 ID로 표시할 수 있습니다. 데이터를 수집하면 해당 필드의 데이터가 &quot;[!UICONTROL ID 그래프]해당 사용자에 대해 그런 다음 그래프 데이터에 [[!DNL Real-Time Customer Profile]](../../profile/home.md) 및 기타 [!DNL Experience Platform] 각 개별 고객에 대한 결합 보기를 제공하는 서비스.
 
 일반적으로 &quot;[!UICONTROL ID]&quot; 포함: 이메일 주소, 전화 번호, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html), CRM ID 또는 기타 고유한 ID 필드. 좋은 것일 수 있으므로 조직에 고유한 식별자를 고려해야 합니다. &quot;[!UICONTROL ID]&quot; 필드도 있습니다.
 
@@ -114,7 +114,7 @@ ID 데이터를 Platform으로 전송하는 방법에는 두 가지가 있습니
 
 >[!NOTE]
 >
->값이 기본 ID인지 여부를 나타내는 부울 값(`primary`)도 각 id 값에 제공할 수 있습니다. 기본 ID는에서 사용하려는 스키마에 대해서만 설정해야 합니다 [!DNL Real-time Customer Profile]. 의 섹션을 참조하십시오. [결합 스키마](#union) 추가 정보.
+>값이 기본 ID인지 여부를 나타내는 부울 값(`primary`)도 각 id 값에 제공할 수 있습니다. 기본 ID는에서 사용하려는 스키마에 대해서만 설정해야 합니다 [!DNL Real-Time Customer Profile]. 의 섹션을 참조하십시오. [결합 스키마](#union) 추가 정보.
 
 ### 스키마 진화 원칙 {#evolution}
 
@@ -273,7 +273,7 @@ While [!DNL Experience Platform] 특정 사용 사례에 대해 스키마를 작
 
 ![](../images/schema-composition/union.png)
 
-에 사용할 스키마를 활성화 [!DNL Real-time Customer Profile]를 입력하면 해당 클래스 유형에 대한 조합에 포함됩니다. [!DNL Profile] 고객 특성에 대한 강력하고 중앙 집중식 프로필과 고객이 통합한 모든 시스템에서 보유한 모든 이벤트의 타임스탬프가 지정된 계정을 제공합니다. [!DNL Platform]. [!DNL Profile] 조합 보기를 사용하여 이 데이터를 나타내고 각 개별 고객을 전체적으로 볼 수 있습니다.
+에 사용할 스키마를 활성화 [!DNL Real-Time Customer Profile]를 입력하면 해당 클래스 유형에 대한 조합에 포함됩니다. [!DNL Profile] 고객 특성에 대한 강력하고 중앙 집중식 프로필과 고객이 통합한 모든 시스템에서 보유한 모든 이벤트의 타임스탬프가 지정된 계정을 제공합니다. [!DNL Platform]. [!DNL Profile] 조합 보기를 사용하여 이 데이터를 나타내고 각 개별 고객을 전체적으로 볼 수 있습니다.
 
 작업에 대한 자세한 내용 [!DNL Profile]를 참조하고 [실시간 고객 프로필 개요](../../profile/home.md).
 

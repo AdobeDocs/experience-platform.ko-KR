@@ -4,7 +4,7 @@ title: 데이터 수집 API 시작하기
 type: Documentation
 description: API를 사용하여 Experience Platform에 데이터를 수집하기 전에 알아야 하는 주요 개념 및 기본 기능에 대해 간략하게 설명합니다.
 exl-id: 0653de2b-3268-478b-a23f-c458b6d3df7c
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '367'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 API 안내서를 사용하려면 데이터 작업과 관련된 여러 Adobe Experience Platform 서비스에 대한 작업 이해가 필요합니다. 데이터 수집 API를 사용하기 전에 다음 서비스에 대한 설명서를 검토하십시오.
 
 * [일괄 수집](./overview.md): 데이터를 Adobe Experience Platform에 배치 파일로 수집할 수 있습니다.
-* [[!DNL Real-time Customer Profile]](../home.md): 여러 소스에서 집계된 데이터를 기반으로 통합된 고객 프로필을 실시간으로 제공합니다.
+* [[!DNL Real-Time Customer Profile]](../home.md): 여러 소스에서 집계된 데이터를 기반으로 통합된 고객 프로필을 실시간으로 제공합니다.
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): 플랫폼이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
 * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] 단일 파티션을 생성하는 가상 샌드박스 제공 [!DNL Platform] 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 별도의 가상 환경으로 인스턴스를 구축할 수 있습니다.
 

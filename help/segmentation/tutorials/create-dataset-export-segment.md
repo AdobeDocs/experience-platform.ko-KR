@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: 이 자습서에서는 Experience Platform UI를 사용하여 대상 세그먼트를 내보내는 데 사용할 수 있는 데이터 세트를 만드는 데 필요한 단계를 안내합니다.
 exl-id: 1cd16e43-b050-42ba-a894-d7ea477b65f3
-source-git-commit: f7d204442c8bc2355671ba2adffff4c40ce08784
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '757'
 ht-degree: 0%
@@ -37,7 +37,7 @@ UI에서 결합 스키마를 보려면 **[!UICONTROL 프로필]** 왼쪽 탐색�
 
 >[!NOTE]
 >
->검색 창 옆에 있는 필터 아이콘을 선택하여 필터링 기능을 사용하여에 대해 활성화된 데이터 세트만 봅니다 [!DNL Real-time Customer Profile].
+>검색 창 옆에 있는 필터 아이콘을 선택하여 필터링 기능을 사용하여에 대해 활성화된 데이터 세트만 봅니다 [!DNL Real-Time Customer Profile].
 
 ![데이터 세트 작업 공간이 표시됩니다.](../images/tutorials/segment-export-dataset/browse.png)
 

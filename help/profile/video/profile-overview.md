@@ -9,7 +9,7 @@ audience: all
 doc-type: video
 activity: understand
 exl-id: cdc91194-771f-4026-808f-97d70db436d9
-source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '117'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # 실시간 고객 프로필 개요
 
-이 비디오에서는 Adobe Experience Platform 내의 실시간 고객 프로필에 대한 기본 이해를 제공하고 여러 소스의 데이터를 결합하여 각 개별 고객을 위한 중앙 프로필을 구성하는 방법을 간략하게 설명합니다. 실시간 고객 프로필 기능 및 기능에 대한 자세한 내용은 [실시간 고객 프로필 개요](../home.md).
+이 비디오에서는 Adobe Experience Platform 내의 실시간 고객 프로필에 대한 기본 이해를 제공하고 여러 소스의 데이터를 결합하여 각 개별 고객을 위한 중앙 프로필을 구성하는 방법을 간략하게 설명합니다. 실시간 고객 프로필 기능에 대한 자세한 내용은 [실시간 고객 프로필 개요](../home.md).
 
 >[!NOTE]
 >

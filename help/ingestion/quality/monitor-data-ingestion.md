@@ -5,7 +5,7 @@ title: 데이터 수집 모니터링
 topic-legacy: overview
 description: 이 사용 안내서에서는 Adobe Experience Platform 사용자 인터페이스 내에서 데이터를 모니터링하는 방법을 제공합니다. 이 안내서를 사용하려면 Adobe ID이 있고 Adobe Experience Platform에 액세스할 수 있어야 합니다.
 exl-id: 85711a06-2756-46f9-83ba-1568310c9f73
-source-git-commit: dce7faa7fc680e37b537bf623c3a33e6c6e37169
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '654'
 ht-degree: 0%
@@ -33,7 +33,7 @@ ht-degree: 0%
 
 에서 [Experience Platform UI](https://platform.adobe.com), 선택 **[!UICONTROL 모니터링]** 왼쪽 탐색 메뉴에서 다음 을 클릭합니다. **[!UICONTROL 처음부터 끝까지 스트리밍]**.
 
-다음 **[!UICONTROL 처음부터 끝까지 스트리밍]** 모니터링 페이지가 나타납니다. 이 작업 공간에서는 수신되는 스트리밍 이벤트의 비율을 표시하는 그래프를 제공합니다 [!DNL Platform]에 의해 성공적으로 처리된 스트리밍된 이벤트의 비율을 표시하는 그래프입니다 [[!DNL Real-time Customer Profile]](../../profile/home.md)및 수신되는 데이터의 세부 목록을 추가했습니다.
+다음 **[!UICONTROL 처음부터 끝까지 스트리밍]** 모니터링 페이지가 나타납니다. 이 작업 공간에서는 수신되는 스트리밍 이벤트의 비율을 표시하는 그래프를 제공합니다 [!DNL Platform]에 의해 성공적으로 처리된 스트리밍된 이벤트의 비율을 표시하는 그래프입니다 [[!DNL Real-Time Customer Profile]](../../profile/home.md)및 수신되는 데이터의 세부 목록을 추가했습니다.
 
 ![](../images/quality/monitor-data-flows/list-streams.png)
 

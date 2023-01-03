@@ -5,7 +5,7 @@ title: Audience Manager 소스 개요
 topic-legacy: overview
 description: Adobe Audience Manager 소스는 Audience Manager에 수집된 자사 데이터를 Adobe Experience Platform에 스트리밍합니다.
 exl-id: be90db33-69e1-4f42-9d1a-4f8f26405f0f
-source-git-commit: 37e810ce6faf40f9980841b2c9d6eb29e8b0e82a
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1059'
 ht-degree: 0%
@@ -83,5 +83,5 @@ Audience Manager 채우기 크기는 처음 Platform으로 세그먼트 세그�
 | Audience Manager 데이터 | 유형 | 지연 | 참고 |
 | --- | --- | --- | --- |
 | 실시간 데이터 | 이벤트 | &lt;25분 | Audience Manager 에지 노드에서 데이터 레이크에 표시되는 시간입니다. |
-| 실시간 데이터 | 프로필 업데이트 | &lt;10분 | 실시간 고객 프로필에 보고할 시간입니다. |
+| 실시간 데이터 | 프로필 업데이트 | &lt;10분 | 실시간 고객 프로필에 신고할 시간입니다. |
 | 실시간 및 온보딩된 데이터 | 프로필 업데이트 | 24-36시간 | DCS/PCS Edge 데이터 및 온보딩된 데이터를 통해 캡처되고 사용자 프로필로 처리되고 실시간 고객 프로필에 표시되는 시간입니다. 현재 이 데이터는 데이터 호수에 직접 도달하지 않습니다. Audience Manager 프로필 데이터 세트에 대해 프로필 전환을 활성화하여 이 데이터를 실시간 고객 프로필로 직접 수집할 수 있습니다. |

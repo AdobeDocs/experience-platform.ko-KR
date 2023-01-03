@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: 로컬 시스템을 위한 소스 연결을 만들어 로컬 파일을 Platform으로 가져오는 방법을 알아봅니다
 exl-id: 9ce15362-c30d-40cc-9d9c-caa650579390
-source-git-commit: 08805ed0d89d3d6908ddccdafda55d2f862e727e
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '770'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 0%
 * [[!DNL Experience Data Model (XDM)] 시스템](../../../../../xdm/home.md): 플랫폼이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
    * [스키마 작성 기본 사항](../../../../../xdm/schema/composition.md): 스키마 컴포지션의 주요 원칙 및 모범 사례를 포함하여 XDM 스키마의 기본 빌딩 블록에 대해 알아봅니다.
    * [스키마 편집기 자습서](../../../../../xdm/tutorials/create-schema-ui.md): 스키마 편집기 UI를 사용하여 사용자 지정 스키마를 만드는 방법을 알아보십시오.
-* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): 여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): 여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
 
 ## Platform에 로컬 파일 업로드
 
@@ -92,4 +92,4 @@ CSV 파일이 매핑되고 생성되면 모니터링 대시보드를 사용하�
 
 ## 다음 단계
 
-이 자습서를 따라 플랫 CSV 파일을 XDM 스키마에 매핑하고 플랫폼으로 수집했습니다. 이제 이 데이터를 다운스트림에서 사용할 수 있습니다 [!DNL Platform] 와 같은 서비스 [!DNL Real-time Customer Profile]. 다음 기간 동안 개요를 참조하십시오. [[!DNL Real-time Customer Profile]](../../../../../profile/home.md) 추가 정보.
+이 자습서를 따라 플랫 CSV 파일을 XDM 스키마에 매핑하고 플랫폼으로 수집했습니다. 이제 이 데이터를 다운스트림에서 사용할 수 있습니다 [!DNL Platform] 와 같은 서비스 [!DNL Real-Time Customer Profile]. 다음 기간 동안 개요를 참조하십시오. [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md) 추가 정보.

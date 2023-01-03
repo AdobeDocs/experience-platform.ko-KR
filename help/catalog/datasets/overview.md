@@ -5,7 +5,7 @@ title: 데이터 세트 개요
 topic-legacy: datasets
 description: 이 설명서는 Experience Platform의 데이터 세트에 대한 높은 수준의 개요를 제공합니다.
 exl-id: 51ecefb0-a699-4b1a-80f1-26c6ba92fcbf
-source-git-commit: 7e4c2ef8089276829604c9d8a8dd20a122b18c7a
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '784'
 ht-degree: 8%
@@ -61,10 +61,10 @@ Adobe Experience Platform 데이터 거버넌스를 사용하면 데이터 사�
 
 * [[!DNL Data Access API]](../../data-access/home.md): 데이터 세트 내에 저장된 파일의 컨텐츠에 액세스하고 다운로드할 수 있습니다.
 * [Adobe Experience Platform Identity 서비스](../../identity-service/home.md): 장치 및 시스템 간에 ID를 브리징하여 XDM 스키마에서 정의한 ID 필드를 기반으로 데이터 세트를 함께 연결합니다.
-* [[!DNL Real-time Customer Profile]](../../profile/home.md): 활용 [!DNL Identity Service] 데이터 세트에서 실시간으로 세부 고객 프로필을 만들 수 있습니다. [!DNL Real-time Customer Profile] 에서 데이터 가져오기 [!DNL Data Lake] 에서는 고객 프로필을 별도의 데이터 저장소에서 유지합니다.
-* [Adobe Experience Platform 세그멘테이션 서비스](../../segmentation/home.md): 세그먼트를 작성하고 페이지의 [!DNL Real-time Customer Profile] 데이터. 그런 다음 이러한 대상을 내의 고유한 데이터 세트로 내보낼 수 있습니다 [!DNL Data Lake].
+* [[!DNL Real-Time Customer Profile]](../../profile/home.md): 활용 [!DNL Identity Service] 데이터 세트에서 실시간으로 세부 고객 프로필을 만들 수 있습니다. [!DNL Real-Time Customer Profile] 에서 데이터 가져오기 [!DNL Data Lake] 에서는 고객 프로필을 별도의 데이터 저장소에서 유지합니다.
+* [Adobe Experience Platform 세그멘테이션 서비스](../../segmentation/home.md): 세그먼트를 작성하고 페이지의 [!DNL Real-Time Customer Profile] 데이터. 그런 다음 이러한 대상을 내의 고유한 데이터 세트로 내보낼 수 있습니다 [!DNL Data Lake].
 * [Adobe Experience Platform 데이터 과학 작업 공간](../../data-science-workspace/home.md): 머신 러닝 및 인공 지능을 사용하여 대규모 데이터 세트에서 통찰력을 얻을 수 있습니다.
-* [Adobe Experience Platform 쿼리 서비스](../../query-service/home.md): 표준 SQL을 사용하여 데이터를 쿼리할 수 있습니다. [!DNL Experience Platform], 내에서 데이터 세트 가입 [!DNL Data Lake] 쿼리 결과를 보고에 사용할 새로운 데이터 세트로 캡처하고 [!DNL Data Science Workspace], 또는 [!DNL Real-time Customer Profile].
+* [Adobe Experience Platform 쿼리 서비스](../../query-service/home.md): 표준 SQL을 사용하여 데이터를 쿼리할 수 있습니다. [!DNL Experience Platform], 내에서 데이터 세트 가입 [!DNL Data Lake] 쿼리 결과를 보고에 사용할 새로운 데이터 세트로 캡처하고 [!DNL Data Science Workspace], 또는 [!DNL Real-Time Customer Profile].
 * [Adobe Experience Platform 대상 서비스](../../destinations/home.md): 다음을 수행할 수 있습니다. [데이터 세트 내보내기](/help/destinations/ui/export-datasets.md) 보고 또는 데이터 과학 활동을 위해 원하는 클라우드 스토리지 또는 이메일 마케팅 대상에 추가합니다.
 
 ## 다음 단계

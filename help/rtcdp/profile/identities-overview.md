@@ -3,7 +3,7 @@ keywords: id rtcdp;rtcdp id;실시간 cdp ID
 title: Real-time Customer Data Platform의 ID
 description: Adobe Experience Platform Identity Service를 사용하면 여러 장치 및 시스템에서 ID를 함께 결합함으로써 고객 및 해당 행동을 보다 잘 파악할 수 있습니다.
 exl-id: 2b0d84de-9710-412e-ace7-56e3977245aa
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '431'
 ht-degree: 0%
@@ -28,4 +28,4 @@ ID 그래프는 서로 다른 ID 네임스페이스 간의 관계 맵으로, 고
 
 ## 다음 단계
 
-ID와 그 사이의 관계는 [!DNL Identity Service] 및 [!DNL Real-time Customer Profile] 각 개별 고객 및 상호 작용에 대한 전체 그림을 작성하기 위해. 자세한 내용은 [ID 서비스 설명서](../../identity-service/home.md).
+ID와 그 사이의 관계는 [!DNL Identity Service] 및 [!DNL Real-Time Customer Profile] 각 개별 고객 및 상호 작용에 대한 전체 그림을 작성하기 위해. 자세한 내용은 [ID 서비스 설명서](../../identity-service/home.md).

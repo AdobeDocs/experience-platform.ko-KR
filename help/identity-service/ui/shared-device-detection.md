@@ -5,7 +5,7 @@ description: 공유 장치 감지는 동일한 장치의 서로 다른 인증된
 hide: true
 hidefromtoc: true
 exl-id: 36318163-ba07-4209-b1be-dc193ab7ba41
-source-git-commit: 75362c67e1a8a31a449cb4c9dd618515325d36f0
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1363'
 ht-degree: 0%
@@ -92,7 +92,7 @@ When [!DNL Shared Device Detection] 이 활성화되어 있고, [!DNL Profile] �
 
 An **인증된 경험 이벤트** 는 장치에 로그인하는 동안 사용자가 완료한 작업입니다. 인증된 경험 이벤트의 경우 기본 ID는 **사용자 ID 네임스페이스** (로그인 ID). An **인증되지 않은 경험 이벤트** 는 장치에 로그인하지 않은 사용자가 완료한 작업입니다. 인증되지 않은 경험 이벤트의 경우 기본 ID는 **공유 ID 네임스페이스** (ECID).
 
-자세한 내용은  [[!DNL Real-time Customer Profile] 개요](../../profile/home.md).
+자세한 내용은  [[!DNL Real-Time Customer Profile] 개요](../../profile/home.md).
 
 ## 공유 장치 UI
 

@@ -5,7 +5,7 @@ title: Data Lake의 개인 정보 보호 요청 처리
 topic-legacy: overview
 description: Adobe Experience Platform Privacy Service은 법률 및 조직 개인 정보 보호 규정에 따라 지정된 대로 고객 개인 데이터에 대한 액세스, 판매 거부 또는 삭제 요청을 처리합니다. 이 문서에서는 데이터 레이크에 저장된 고객 데이터의 개인 정보 보호 요청 처리와 관련된 중요한 개념을 다룹니다.
 exl-id: c06b0a44-be1a-4938-9c3e-f5491a3dfc19
-source-git-commit: 159a46fa227207bf161100e50bc286322ba2d00b
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1428'
 ht-degree: 1%

@@ -6,7 +6,7 @@ title: Customer AI를 통해 인사이트 살펴보기
 topic-legacy: Discovering insights
 description: 이 문서는 Intelligent Services Customer AI 사용자 인터페이스의 서비스 인스턴스 인사이트와 상호 작용하기 위한 안내서의 역할을 합니다.
 exl-id: 8aaae963-4029-471e-be9b-814147a5f160
-source-git-commit: 417b3f885f75f107d2db06331053917a76c904c4
+source-git-commit: 165e5ccae5ca78b3912fef1ba0b3fd4567e231fb
 workflow-type: tm+mt
 source-wordcount: '2079'
 ht-degree: 1%
@@ -15,7 +15,7 @@ ht-degree: 1%
 
 # Customer AI를 통해 인사이트 살펴보기
 
-Customer AI 는 Intelligent Services의 일부로 마케터에게 Adobe Sensei을 활용하여 고객이 다음 조치를 취할 것을 예측할 수 있는 기능을 제공합니다. 고객 AI는 규모에 따라 개별 프로필에 대한 이탈 및 전환과 같은 사용자 지정 성향 점수를 생성하는 데 사용됩니다. 비즈니스 요구 사항을 머신 러닝 문제로 변환하거나 알고리즘을 선택하거나 교육 또는 배포하지 않아도 됩니다.
+Customer AI 는 Intelligent Services의 일부로 마케터에게 Adobe Sensei을 활용하여 고객이 다음 조치를 취할 것을 예측할 수 있는 기능을 제공합니다. 고객 AI는 규모에 따라 개별 프로필에 대한 이탈 및 전환과 같은 사용자 정의 성향 점수를 생성하는 데 사용됩니다. 비즈니스 요구 사항을 머신 러닝 문제로 변환하거나 알고리즘을 선택하거나 교육 또는 배포하지 않아도 됩니다.
 
 이 문서는 Intelligent Services Customer AI 사용자 인터페이스의 서비스 인스턴스 인사이트와 상호 작용하기 위한 안내서의 역할을 합니다.
 
@@ -145,17 +145,17 @@ Customer AI에서 데이터 세트를 두 개 이상 사용하는 경우 하이�
 
 전환율이 낮은 프로필은 adobe.com 웹 페이지를 최근 방문할 가능성이 적다는 것을 알 수 있습니다. &quot;마지막 webVisit 이후 일 수&quot; 인수에는 중간 성향 프로필의 26%와 비교하여 8% 범위만 있습니다. 이 숫자를 사용하여 계수에 대해 각 버킷 내의 분포를 비교할 수 있습니다. 이 정보를 사용하여 웹 방문의 최신성이 중간 성향 버킷에서와 마찬가지로 낮은 성향 버킷에서 영향을 주지 않음을 추론할 수 있습니다.
 
-### 세그먼트 만들기
+### 세그먼트를 만듭니다
 
 선택 **[!UICONTROL 세그먼트 만들기]** 낮은, 중간 및 높은 성향 대상에 대한 버킷에서 세그먼트 빌더로 리디렉션합니다.
 
 >[!NOTE]
 >
->다음 **[!UICONTROL 세그먼트 만들기]** 버튼은 데이터 세트에 대해 실시간 고객 프로필이 활성화된 경우에만 사용할 수 있습니다. 실시간 고객 프로필을 활성화하는 방법에 대한 자세한 내용은 [실시간 고객 프로필 개요](../../../rtcdp/overview.md).
+>다음 **[!UICONTROL 세그먼트 만들기]** 버튼은 데이터 세트에 실시간 고객 프로필이 활성화되어 있을 경우에만 사용할 수 있습니다. 실시간 고객 프로필을 활성화하는 방법에 대한 자세한 내용은 [실시간 고객 프로필 개요](../../../rtcdp/overview.md).
 
 ![세그먼트 만들기 를 클릭합니다](../images/insights/influential-factors-create-segment.png)
 
-![세그먼트 만들기](../images/insights/create-segment.png)
+![세그먼트를 만듭니다](../images/insights/create-segment.png)
 
 세그먼트 빌더를 사용하여 세그먼트를 정의합니다. 선택 시 **[!UICONTROL 세그먼트 만들기]** 인사이트 페이지에서 고객 AI는 선택한 버킷 정보를 세그먼트에 자동으로 추가합니다. 세그먼트 만들기를 완료하려면 **이름** 및 **설명** 세그먼트 빌더 사용자 인터페이스의 오른쪽 레일에 있는 컨테이너입니다. 세그먼트에 이름과 설명을 지정한 후, 을 선택합니다 **[!UICONTROL 저장]** 오른쪽 위에 있습니다.
 

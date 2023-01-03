@@ -3,7 +3,7 @@ keywords: 세분화; 세분화 rtcdp;실시간 고객 데이터 플랫폼 세그
 title: Real-time Customer Data Platform의 세그멘테이션 서비스
 description: Adobe Real-Time Customer Data Platform은 Adobe Experience Platform을 기반으로 구축되었으며 많은 Experience Platform 서비스 및 기능을 사용합니다. 세그멘테이션 서비스를 사용하여 고객을 유사한 트레이트를 가진 작은 그룹으로 분할하여 맞춤 마케팅을 제공할 수 있습니다.
 exl-id: 140667c0-e288-40c4-8c45-c275e348b84a
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '540'
 ht-degree: 4%

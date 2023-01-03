@@ -2,7 +2,7 @@
 title: XDM 비즈니스 마케팅 목록 구성원 클래스
 description: 이 문서에서는 XDM(Experience Data Model)의 XDM 비즈니스 마케팅 목록 멤버 클래스에 대한 개요를 제공합니다.
 exl-id: 069002c2-5583-4c59-84ee-c071e2acaaec
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '339'
 ht-degree: 2%

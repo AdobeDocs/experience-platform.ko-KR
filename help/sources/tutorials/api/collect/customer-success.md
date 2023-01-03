@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: 이 자습서에서는 고객 성공 시스템에서 데이터를 검색하고 소스 커넥터 및 API를 사용하여 플랫폼으로 수집하는 단계를 설명합니다.
 exl-id: 0fae04d0-164b-4113-a274-09677f4bbde5
-source-git-commit: 2d3fbbb5c743b8e172e3e64bda31ebf3278b4f5b
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1237'
 ht-degree: 1%
@@ -623,7 +623,7 @@ curl -X GET \
 
 ## 다음 단계
 
-이 자습서에 따라 예약된 대로 고객 성공 시스템에서 데이터를 수집하기 위한 소스 커넥터를 만들었습니다. 이제 다운스트림에서 들어오는 데이터를 사용할 수 있습니다 [!DNL Platform] 와 같은 서비스 [!DNL Real-time Customer Profile] 및 [!DNL Data Science Workspace]. 자세한 내용은 다음 문서를 참조하십시오.
+이 자습서에 따라 예약된 대로 고객 성공 시스템에서 데이터를 수집하기 위한 소스 커넥터를 만들었습니다. 이제 다운스트림에서 들어오는 데이터를 사용할 수 있습니다 [!DNL Platform] 와 같은 서비스 [!DNL Real-Time Customer Profile] 및 [!DNL Data Science Workspace]. 자세한 내용은 다음 문서를 참조하십시오.
 
 * [실시간 고객 프로필 개요](../../../../profile/home.md)
 * [Data Science Workspace 개요](../../../../data-science-workspace/home.md)

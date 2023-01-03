@@ -2,7 +2,7 @@
 title: XDM 비즈니스 개인 세부 정보 스키마 필드 그룹
 description: 이 문서에서는 XDM 비즈니스 개인 세부 정보 스키마 필드 그룹에 대한 개요를 제공합니다.
 exl-id: e9da5c1c-5a30-4cbc-beb2-cc5efe57cab0
-source-git-commit: 0084492ed467c5996a94c5c55a79c9faf8f5046e
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '601'
 ht-degree: 6%
@@ -17,7 +17,7 @@ ht-degree: 6%
 
 | 속성 | 데이터 유형 | 설명 |
 | --- | --- | --- |
-| `b2b` | 개체 | 사람에 대한 B2B 특정 세부 정보를 캡처하는 객체입니다. |
+| `b2b` | 오브젝트 | 사람에 대한 B2B 특정 세부 정보를 캡처하는 객체입니다. |
 | `b2b.accountKey` | [[!UICONTROL B2B 소스]](../../data-types/b2b-source.md) | 개인 관련 비즈니스 계정에 대한 복합 식별자입니다. |
 | `b2b.convertedContactKey` | [[!UICONTROL B2B 소스]](../../data-types/b2b-source.md) | 리드가 변환된 경우 연결된 연락처에 대한 복합 식별자입니다. |
 | `b2b.personKey` | [[!UICONTROL B2B 소스]](../../data-types/b2b-source.md) | 개인 또는 프로필 조각에 대한 복합 식별자입니다. |
@@ -35,8 +35,8 @@ ht-degree: 6%
 | `b2b.personStatus` | 문자열 | 개인의 현재 마케팅 또는 판매 상태입니다. |
 | `b2b.personType` | 문자열 | B2B 사람의 유형입니다. |
 | `extSourceSystemAudit` | [외부 소스 시스템 감사 속성](../../data-types/external-source-system-audit-attributes.md) | 업무 담당자 관계가 외부 소스 시스템에서 생성된 경우 이 객체는 해당 시스템에 대한 감사 속성을 캡처합니다. |
-| `extendedWorkDetails` | 개체 | 사람에 대한 추가 작업 관련 세부 정보를 캡처합니다. |
-| `extendedWorkDetails.assistantDetails` | 개체 | 개인 도우미와 관련된 다음 속성을 캡처합니다. <ul><li>`name`: ([개인 이름](../../data-types/person-name.md)) 도우미의 전체 이름입니다.</li><li>`phone`: ([전화 번호](../../data-types/phone-number.md)) 조수의 전화 번호입니다.</li></ul> |
+| `extendedWorkDetails` | 오브젝트 | 사람에 대한 추가 작업 관련 세부 정보를 캡처합니다. |
+| `extendedWorkDetails.assistantDetails` | 오브젝트 | 개인 도우미와 관련된 다음 속성을 캡처합니다. <ul><li>`name`: ([개인 이름](../../data-types/person-name.md)) 도우미의 전체 이름입니다.</li><li>`phone`: ([전화 번호](../../data-types/phone-number.md)) 조수의 전화 번호입니다.</li></ul> |
 | `extendedWorkDetails.departments` | 문자열 배열 | 개인이 근무하는 부서 이름 목록. |
 | `extendedWorkDetails.jobTitle` | 문자열 | 개인의 직함입니다. |
 | `extendedWorkDetails.photoUrl` | 문자열 | 사진 URL입니다. |
