@@ -5,9 +5,9 @@ title: UI에서 클래스 만들기 및 편집
 description: Experience Platform 사용자 인터페이스에서 클래스를 만들고 편집하는 방법을 알아봅니다.
 topic-legacy: user guide
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-source-git-commit: c83b5616f46f6f7d752979fa66a66fad16f16102
+source-git-commit: 7b642744f12ec33ff45a4b41cdb57bfe37396a56
 workflow-type: tm+mt
-source-wordcount: '999'
+source-wordcount: '893'
 ht-degree: 0%
 
 ---
@@ -50,10 +50,6 @@ Adobe은 다음을 포함한 몇 가지 표준(&quot;core&quot;) XDM 클래스�
 
 ## 기존 클래스 편집 {#edit}
 
->[!IMPORTANT]
->
->2022년 4월 30일 이후에 생성된 사용자 지정 클래스는 직접 편집할 수 없으며 현재 개발 중입니다. 해결 방법으로 다음을 수행할 수 있습니다 [사용자 지정 필드 그룹 만들기](./field-groups.md) 확장하려는 사용자 지정 클래스를 사용하는 각 스키마에 대해 재사용합니다. 2022년 4월 30일 이전에 만들어진 사용자 지정 클래스는 이 제한의 영향을 받지 않습니다.
-
 >[!NOTE]
 >
 >조직에서 정의한 사용자 정의 클래스만 완전히 편집하고 사용자 지정할 수 있습니다. Adobe으로 정의된 코어 클래스의 경우 개별 스키마 컨텍스트 내에서 해당 필드의 표시 이름만 편집할 수 있습니다. 의 섹션을 참조하십시오. [스키마 필드에 대한 표시 이름 편집](./schemas.md#display-names) 자세한 내용
@@ -73,10 +69,6 @@ Adobe은 다음을 포함한 몇 가지 표준(&quot;core&quot;) XDM 클래스�
 ![](../../images/ui/resources/classes/edit.png)
 
 ## 클래스에 필드 추가 {#add-fields}
-
->[!IMPORTANT]
->
->2022년 4월 30일 이후에 생성된 사용자 지정 클래스는 직접 편집할 수 없으며 현재 개발 중입니다. 해결 방법으로 다음을 수행할 수 있습니다 [사용자 지정 필드 그룹 만들기](./field-groups.md) 확장하려는 사용자 지정 클래스를 사용하는 각 스키마에 대해 재사용합니다. 2022년 4월 30일 이전에 만들어진 사용자 지정 클래스는 이 제한의 영향을 받지 않습니다.
 
 스키마에서 사용자 지정 클래스를 사용하는 스키마가 있으면 [!UICONTROL 스키마 편집기]를 눌러 클래스에 필드를 추가할 수 있습니다. 새 필드를 추가하려면 **더하기(+)** 스키마 이름 옆에 있는 아이콘을 클릭합니다.
 
