@@ -2,7 +2,7 @@
 title: B2B 소스 데이터 유형
 description: 이 문서에서는 B2B 소스 경험 데이터 모델(XDM) 데이터 유형에 대한 개요를 제공합니다.
 exl-id: 01b7d41c-1ab6-4cbc-b9b3-77b6af69faf3
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: e602f78470fe4eeb2a42e6333ba52096d8a9fe8a
 workflow-type: tm+mt
 source-wordcount: '273'
 ht-degree: 3%
@@ -23,7 +23,7 @@ ht-degree: 3%
 | --- | --- | --- |
 | `sourceID` | 문자열 | 소스 레코드에 대한 고유 ID입니다. |
 | `sourceInstanceID` | 문자열 | 소스 데이터의 인스턴스 또는 조직 ID입니다. |
-| `sourceKey` | 문자열 | 로 구성된 고유 식별자입니다 `sourceId`, `sourceInstanceId`, 및 `sourceType` 다음 형식으로 함께 연결합니다. `[sourceID]@$[sourceInstanceID].[sourceType]`.<br><br>Marketo과 같은 일부 소스 커넥터는 특정 식별자에 대해 이 값을 자동으로 연결합니다. 다른 항목은 를 사용하여 수동으로 연결해야 합니다 [데이터 준비 `concat` 함수](../../data-prep/functions.md#string), 예: `concat(id,"@${ORG_ID}.Marketo")` |
+| `sourceKey` | 문자열 | 로 구성된 고유 식별자입니다 `sourceId`, `sourceInstanceId`, 및 `sourceType` 다음 형식으로 함께 연결합니다. `[sourceID]@[sourceInstanceID].[sourceType]`.<br><br>Marketo과 같은 일부 소스 커넥터는 특정 식별자에 대해 이 값을 자동으로 연결합니다. 다른 항목은 를 사용하여 수동으로 연결해야 합니다 [데이터 준비 `concat` 함수](../../data-prep/functions.md#string), 예: `concat(id,"@${ORG_ID}.Marketo")` |
 | `sourceType` | 문자열 | 소스 데이터를 제공하는 플랫폼의 이름입니다. |
 
 {style=&quot;table-layout:auto&quot;}

@@ -2,9 +2,9 @@
 title: 규칙 구성 요소 끝점
 description: Reactor API에서 /rule_components 끝점을 호출하는 방법을 알아봅니다.
 exl-id: 8a878a89-7f41-45fc-88f3-17f0f743e29c
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: e602f78470fe4eeb2a42e6333ba52096d8a9fe8a
 workflow-type: tm+mt
-source-wordcount: '1205'
+source-wordcount: '1190'
 ht-degree: 6%
 
 ---
@@ -305,22 +305,22 @@ POST 요청을 만들어 새 규칙 구성 요소를 만들 수 있습니다.
 **API 형식**
 
 ```http
-POST /rules/{RULE_ID}/rule_components
+POST /properties/{PROPERTY_ID}/rule_components
 ```
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `RULE_ID` | 다음 `id` 규칙 구성 요소를 정의하는 규칙의 예입니다. |
+| `PROPERTY_ID` | 다음 `id` 규칙 구성 요소를 정의하는 속성의 두 가지 구성 요소를 참조할 수 있습니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **요청**
 
-다음 요청은 지정된 규칙에 대한 새 규칙 구성 요소를 만듭니다. 또한 호출은 규칙 구성 요소를 `relationships` 속성을 사용합니다. 다음 안내서를 참조하십시오. [관계](../guides/relationships.md) 추가 정보.
+다음 요청은 새 규칙 구성 요소를 만듭니다. 페이로드에서 `relationships` 속성은 구성 요소를 특정 규칙 및 기존 확장과 연결합니다. 다음 안내서를 참조하십시오. [관계](../guides/relationships.md) 추가 정보.
 
 ```shell
 curl -X POST \
-  https://reactor.adobe.io/rules/RLf7b4f416b2e04ae1ba857ae681fee5bc/rule_components \
+  https://reactor.adobe.io/properties/PR97596432a82549ceb8e2a5d9df05c0e1/rule_components \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -366,7 +366,7 @@ curl -X POST \
 | `attributes.rule_order` | 연결된 규칙이 실행될 우선순위를 나타내는 정수입니다. |
 | `attributes.settings` | 문자열로 표시되는 설정 JSON 개체. |
 | `attributes.timeout` | 시퀀스에서 실행되는 작업의 시간 제한을 나타내는 정수입니다. |
-| `relationships` | 규칙 구성 요소에 필요한 관계를 설정하는 객체입니다. 두 가지 관계를 설정해야 합니다. <ol><li>`extension`: 이 규칙 구성 요소를 정의하는 확장입니다. 확장 패키지가 `delegate_descriptor_id`.</li><li>`rules`: 이 구성 요소가 정의되는 규칙입니다. 요청 경로에 제공된 것과 동일한 규칙 ID여야 합니다.</li></ol>관계에 대한 자세한 내용은 [관계 안내서](../guides/relationships.md). |
+| `relationships` | 규칙 구성 요소에 필요한 관계를 설정하는 객체입니다. 두 가지 관계를 설정해야 합니다. <ol><li>`extension`: 이 규칙 구성 요소를 정의하는 확장입니다. 확장 패키지가 `delegate_descriptor_id`.</li><li>`rules`: 이 구성 요소가 정의되는 규칙입니다.</li></ol>관계에 대한 자세한 내용은 [관계 안내서](../guides/relationships.md). |
 | `type` | 만들어지는 리소스 유형입니다. 이 끝점의 경우 값은 `rule_components`. |
 
 {style=&quot;table-layout:auto&quot;}
