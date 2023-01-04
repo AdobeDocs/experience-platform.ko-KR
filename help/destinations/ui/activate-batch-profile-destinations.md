@@ -4,9 +4,9 @@ title: 대상자 데이터를 활성화하여 묶음 프로필 내보내기 대�
 type: Tutorial
 description: 세그먼트를 배치 프로필 기반 대상으로 보내 Adobe Experience Platform에서 보유한 대상 데이터를 활성화하는 방법을 알아봅니다.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 79fc200f4e56699013b1ba3f91f5e383cea77e2a
+source-git-commit: e2318509236fad5054ce82b384f399dd6cbbdc34
 workflow-type: tm+mt
-source-wordcount: '3411'
+source-wordcount: '3414'
 ht-degree: 0%
 
 ---
@@ -207,7 +207,7 @@ ht-degree: 0%
 
    ![소스 필드를 선택하는 방법을 강조 표시하는 이미지](../assets/ui/activate-batch-profile-destinations/select-target-field.png)
 
-1. 에서 **[!UICONTROL 필드 선택]** 페이지에서 대상으로 전송할 XDM 속성을 선택한 다음 **[!UICONTROL 선택]**.
+1. 에서 **[!UICONTROL 필드 선택]** 페이지에서 대상으로 보낼 XDM 특성 또는 ID 네임스페이스를 선택한 다음 **[!UICONTROL 선택]**.
 
    ![소스 필드로 사용할 수 있는 다양한 필드를 보여주는 이미지입니다.](../assets/ui/activate-batch-profile-destinations/target-field-page.png)
 
