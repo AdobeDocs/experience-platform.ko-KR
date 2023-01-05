@@ -5,7 +5,7 @@ title: 스키마 API 끝점
 description: 스키마 레지스트리 API의 /schema 종단점을 사용하면 경험 애플리케이션 내에서 XDM 스키마를 프로그래밍 방식으로 관리할 수 있습니다.
 topic-legacy: developer guide
 exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 666f424355fd1104971bb1566b72e207d00f4a56
 workflow-type: tm+mt
 source-wordcount: '1468'
 ht-degree: 4%
@@ -374,7 +374,7 @@ PATCH 요청을 사용하여 스키마의 일부를 업데이트할 수 있습�
 **API 형식**
 
 ```http
-PATCH /tenant/schema/{SCHEMA_ID} 
+PATCH /tenant/schemas/{SCHEMA_ID} 
 ```
 
 | 매개 변수 | 설명 |
@@ -465,7 +465,7 @@ curl -X PATCH\
 **API 형식**
 
 ```http
-PATCH /tenant/schema/{SCHEMA_ID} 
+PATCH /tenant/schemas/{SCHEMA_ID} 
 ```
 
 | 매개 변수 | 설명 |
