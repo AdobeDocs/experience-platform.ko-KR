@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;수집된 데이터;문제 해결;faq;수집;일괄 처리 수집;일괄 처리 수집
 solution: Experience Platform
 title: 배치 수집 문제 해결 안내서
-topic-legacy: troubleshooting
 description: 이 설명서는 Adobe Experience Platform 배치 데이터 수집 API와 관련된 FAQ에 대한 답변을 제공하는 데 도움이 됩니다.
 exl-id: 0a750d7e-a4ee-4a79-a697-b4b732478b2b
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '1416'
 ht-degree: 1%

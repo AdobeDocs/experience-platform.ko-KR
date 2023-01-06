@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;데이터 수집;데이터 위치;데이터 관리;데이터 관리;계보;계보;배치;일괄 처리;수집된 데이터
 solution: Experience Platform
 title: 데이터 수집 개요
-topic-legacy: overview
 description: 이 문서에서는 Platform으로 데이터를 수집하는 세 가지 주요 방법과 각 개요 설명서에 대한 링크를 통해 자세한 정보를 설명합니다.
 exl-id: c189dd4a-5c59-4189-a18c-a3e45a9ff01d
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '461'
 ht-degree: 14%

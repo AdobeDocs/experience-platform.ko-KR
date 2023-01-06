@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;데이터 수집;수집된 데이터;스트리밍;개요;스트리밍 수집;지연;스트리밍 지연
 solution: Experience Platform
 title: 스트리밍 수집 개요
-topic-legacy: overview
 description: Adobe Experience Platform을 위한 스트리밍 수집에서는 사용자에게 클라이언트 및 서버측 장치에서 실시간으로 Experience Platform으로 데이터를 전송하는 방법을 제공합니다.
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '348'
 ht-degree: 2%

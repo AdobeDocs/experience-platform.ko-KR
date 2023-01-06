@@ -2,11 +2,10 @@
 keywords: Experience Platform;홈;인기 항목;수집;일괄 처리 데이터 처리;자습서;일괄 처리 수집;자습서;ui 안내서;
 solution: Experience Platform
 title: Experience Platform에 데이터 수집
-topic-legacy: tutorial
 type: Tutorial
 description: Adobe Experience Platform을 사용하면 알려진 XDM(Experience Data Model) 스키마를 준수하는 Parquet 파일 형식 또는 데이터 배치 파일로 데이터를 쉽게 가져올 수 있습니다.
 exl-id: a4a7358d-b117-4d81-8cb0-3dbbfeccdcbd
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '1322'
 ht-degree: 0%

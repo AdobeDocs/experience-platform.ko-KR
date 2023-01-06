@@ -2,11 +2,10 @@
 keywords: Experience Platform;홈;인기 항목;스트리밍;스트리밍 수집;스트리밍 통합;스트리밍 수집 유효성 검사;유효성 검사;스트리밍 수집 유효성 검사;유효성 검사;동기 유효성 검사;비동기 유효성 검사;비동기 유효성 검사;비동기 유효성 검사;비동기 유효성 검사;
 solution: Experience Platform
 title: 스트리밍 수집 유효성 검사
-topic-legacy: tutorial
 type: Tutorial
 description: 스트리밍 수집 기능을 사용하면 스트리밍 끝점을 사용하여 실시간으로 Adobe Experience Platform에 데이터를 업로드할 수 있습니다. 스트리밍 수집 API는 동기식과 비동기식의 두 가지 유효성 검사 모드를 지원합니다.
 exl-id: 6e9ac943-6d73-44de-a13b-bef6041d3834
-source-git-commit: ec8eb0e805f7127dd8712fc3fe08057d1d8c10c1
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '917'
 ht-degree: 3%
@@ -206,7 +205,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID} \
 | ----------- | ------------- |
 | 200 | 성공. 동기 유효성 검사의 경우 유효성 검사 검사를 통과했음을 의미합니다. 비동기 유효성 검사의 경우 메시지를 성공적으로 수신했음을 의미합니다. 사용자는 데이터 집합을 관찰하여 최종 메시지 상태를 확인할 수 있습니다. |
 | 400 | 오류. 요청에 문제가 있습니다. 스트리밍 유효성 검사 서비스에서 자세한 내용이 포함된 오류 메시지를 받았습니다. |
-| 401년 | 오류. 요청이 허가되지 않았습니다. 베어러 토큰으로 요청해야 합니다. 액세스를 요청하는 방법에 대한 자세한 내용은 다음을 확인하십시오 [튜토리얼](https://www.adobe.com/go/platform-api-authentication-en) 또는 [블로그 게시물](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f). |
+| 401 | 오류. 요청이 허가되지 않았습니다. 베어러 토큰으로 요청해야 합니다. 액세스를 요청하는 방법에 대한 자세한 내용은 다음을 확인하십시오 [튜토리얼](https://www.adobe.com/go/platform-api-authentication-en) 또는 [블로그 게시물](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f). |
 | 500 | 오류. 내부 시스템 오류가 있습니다. |
-| 501년 | 오류. 이는 동기 유효성 검사가 **not** 이 위치에 대해 지원됩니다. |
-| 503년 | 오류. 현재 서비스를 사용할 수 없습니다. 클라이언트는 지수 백오프 전략을 사용하여 적어도 세 번 다시 시도해야 합니다. |
+| 501 | 오류. 이는 동기 유효성 검사가 **not** 이 위치에 대해 지원됩니다. |
+| 503 | 오류. 현재 서비스를 사용할 수 없습니다. 클라이언트는 지수 백오프 전략을 사용하여 적어도 세 번 다시 시도해야 합니다. |

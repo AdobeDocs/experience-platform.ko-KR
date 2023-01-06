@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;데이터 수집 알림;알림;가입 이벤트;데이터 수집 상태 이벤트;상태 이벤트;가입;상태 알림;
 solution: Experience Platform
 title: 데이터 수집 알림
-topic-legacy: overview
 description: 수집 프로세스 모니터링을 지원하기 위해 Adobe Experience Platform에서는 프로세스의 각 단계에서 게시되는 이벤트 세트에 가입할 수 있으므로 수집된 데이터의 상태와 가능한 오류를 알려줍니다.
 exl-id: fd34e1ab-f6f6-44f0-88ee-7020e9322c39
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '677'
 ht-degree: 2%

@@ -2,11 +2,10 @@
 keywords: Experience Platform;홈;인기 항목;실패한 배치 검색;실패한 배치;배치 수집;배치 처리 실패;배치 가져오기;실패한 배치 가져오기;실패한 배치 다운로드;실패한 배치 다운로드;실패한 배치 다운로드
 solution: Experience Platform
 title: 데이터 액세스 API를 사용하여 실패한 배치 검색
-topic-legacy: tutorial
 type: Tutorial
 description: 이 자습서에서는 데이터 수집 API를 사용하여 실패한 배치에 대한 정보를 검색하는 단계를 설명합니다.
 exl-id: 5fb9f28d-091e-4124-8d8e-b8a675938d3a
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '647'
 ht-degree: 2%

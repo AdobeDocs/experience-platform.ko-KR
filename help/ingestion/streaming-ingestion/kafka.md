@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;kafka;kafka 커넥터;Kafka;
 solution: Experience Platform
 title: Kafka 커넥터
-topic-legacy: overview
-description: Adobe Experience Platform용 스트림 커넥터는 Apache Kafka Connect를 기반으로 합니다. 이 라이브러리는 데이터 센터의 Kafka 항목에서 실시간으로 Experience Platform으로 바로 JSON 이벤트를 스트리밍하는 데 사용할 수 있습니다.
+description: Adobe Experience Platform용 스트림 커넥터는 Apache Kafka Connect를 기반으로 합니다. 이 라이브러리는 데이터 센터의 Kafka 주제에서 JSON 이벤트를 실시간으로 Experience Platform으로 직접 스트리밍하는 데 사용할 수 있습니다.
 exl-id: 062963e5-c727-4c2c-97db-8a9a5a7d903c
-source-git-commit: 04a43df2da34c563b3c919115e271843a279ac56
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '188'
 ht-degree: 0%

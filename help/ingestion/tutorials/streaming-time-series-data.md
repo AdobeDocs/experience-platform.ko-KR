@@ -2,11 +2,10 @@
 keywords: Experience Platform;홈;인기 항목;스트리밍 수집;섭취;시계열 데이터;스트림 시계열 데이터;
 solution: Experience Platform
 title: 스트리밍 수집 API를 사용한 스트림 시계열 데이터
-topic-legacy: tutorial
 type: Tutorial
 description: 이 자습서는 Adobe Experience Platform 데이터 수집 서비스 API의 일부인 스트리밍 수집 API를 사용하는 데 도움이 됩니다.
 exl-id: 720b15ea-217c-4c13-b68f-41d17b54d500
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '1204'
 ht-degree: 2%

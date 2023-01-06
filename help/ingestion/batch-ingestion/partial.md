@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;일괄 처리 섭취;부분 수집;부분 수집;오류 검색;오류 검색;부분 배치 수집;부분 배치 수집;부분적;수집;수집;수집
 solution: Experience Platform
 title: 부분 배치 수집 개요
-topic-legacy: overview
 description: 이 문서에서는 부분 배치 섭취 관리를 위한 자습서를 제공합니다.
 exl-id: 25a34da6-5b7c-4747-8ebd-52ba516b9dc3
-source-git-commit: d380b4d2a75efb1c34010a30c619649a7b99643c
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '945'
 ht-degree: 0%

@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;데이터 품질;품질;품질;지원되는 유효성 검사;유효성 검사;지원되는 유효성 검사;
 solution: Experience Platform
 title: 데이터 품질
-topic-legacy: overview
 description: 다음 문서에서는 Adobe Experience Platform에서 일괄 처리 및 스트리밍 통합에 대해 지원되는 검사 및 유효성 검사 동작에 대한 요약을 제공합니다.
 exl-id: 7ef40859-235a-4759-9492-c63e5fd80c8e
-source-git-commit: 7857b9a82dc1b5e12c9f8d757f6967b926124ec4
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '425'
 ht-degree: 5%

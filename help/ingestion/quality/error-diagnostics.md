@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;일괄 처리 수집;일괄 처리 수집;부분 수집;오류 검색;오류 검색;부분 배치 수집;부분 배치 수집;수집;부분;수집;수집;오류 진단;오류 진단 검색;오류 진단 가져오기;오류 가져오기;오류 가져오기;오류 검색
 solution: Experience Platform
 title: 데이터 수집 오류 진단 검색
-topic-legacy: overview
 description: 이 문서에서는 배치 수집 모니터링, 부분 배치 수집 오류 관리 및 부분 배치 수집 유형에 대한 참조에 대해 설명합니다.
 exl-id: b885fb00-b66d-453b-80b7-8821117c2041
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '979'
 ht-degree: 2%

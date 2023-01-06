@@ -2,11 +2,10 @@
 keywords: Experience Platform;홈;인기 항목;csv 매핑;csv 파일 매핑;csv 파일을 xdm에 매핑;xdm에 csv 매핑;ui 안내서;
 solution: Experience Platform
 title: 기존 XDM 스키마에 CSV 파일 매핑
-topic-legacy: tutorial
 type: Tutorial
 description: 이 자습서에서는 Adobe Experience Platform 사용자 인터페이스를 사용하여 CSV 파일을 기존 XDM 스키마에 매핑하는 방법을 설명합니다.
 exl-id: 15f55562-269d-421d-ad3a-5c10fb8f109c
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '945'
 ht-degree: 1%

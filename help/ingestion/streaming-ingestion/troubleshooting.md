@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;스트리밍;스트리밍 수집;문제 해결;스트리밍 수집 문제 해결;스트리밍 수집 faq;faq;
 solution: Experience Platform
 title: 스트리밍 수집 문제 해결 안내서
-topic-legacy: troubleshooting
 description: 이 문서에서는 Adobe Experience Platform의 수집 스트리밍에 대한 FAQ에 대한 답변을 제공합니다.
 exl-id: 5d5deccf-25b8-44c9-ae27-9a4713ced274
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '1025'
 ht-degree: 0%
