@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;csv 매핑;csv 파일 매핑;csv 파일을 xdm에 매핑;csv를 xdm에 매핑;ui 안내서;맵;매핑;필드 매핑;매핑 함수;
 solution: Experience Platform
 title: 데이터 준비 매핑 함수
-topic-legacy: overview
 description: 이 문서에서는 데이터 준비에 사용되는 매핑 기능을 소개합니다.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 714ce6eb1a77559a7bd1691afeac4a96e0877717
+source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
 workflow-type: tm+mt
 source-wordcount: '4367'
 ht-degree: 4%
@@ -167,8 +166,8 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | join_arrays | 배열을 서로 결합합니다. | <ul><li>어레이: **필수 여부** 요소를 추가할 배열입니다.</li><li>값: 상위 배열에 추가할 배열입니다.</li></ul> | join_&#x200B;arrays(ARRAY, VALUES) | join_arrays&#x200B;([&#39;a&#39;, &#39;b&#39;], [&#39;c&#39;], [&#39;d&#39;, &#39;e&#39;]) | [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;] |
 | to_array | 입력 목록을 가져와 배열로 변환합니다. | <ul><li>INCLUDE_NULLS: **필수 여부** 응답 배열에 null을 포함할지 여부를 나타내는 부울 값입니다.</li><li>값: **필수 여부** 배열로 변환할 요소입니다.</li></ul> | to_&#x200B;array(INCLUDE_NULLS, VALUES) | to_array(false, 1, null, 2, 3) | `[1, 2, 3]` |
 | size_of | 입력 크기를 반환합니다. | <ul><li>입력: **필수 여부** 크기를 찾으려는 개체입니다.</li></ul> | size_of(INPUT) | `size_of([1, 2, 3, 4])` | 4 |
-| upsert_array_append | 이 함수는 전체 입력 배열의 모든 요소를 프로필의 배열 끝에 추가하는 데 사용됩니다. 이 함수는 **전용** 업데이트 중에 적용할 수 있습니다. 삽입 문맥에서 사용하는 경우 이 함수는 입력을 그대로 반환합니다. | <ul><li>어레이: **필수 여부** 프로필에 배열을 추가할 배열입니다.</li></ul> | upsert_array_append(ARRAY) | `upsert_array_append([123, 456])` | [123,456] |
-| upsert_array_replace | 이 함수는 배열의 요소를 바꾸는 데 사용됩니다. 이 함수는 **전용** 업데이트 중에 적용할 수 있습니다. 삽입 문맥에서 사용하는 경우 이 함수는 입력을 그대로 반환합니다. | <ul><li>어레이: **필수 여부** 프로필에서 배열을 바꿀 배열입니다.</li></li> | upsert_array_replace(ARRAY) | `upsert_array_replace([123, 456], 1)` | [123,456] |
+| upsert_array_append | 이 함수는 전체 입력 배열의 모든 요소를 프로필의 배열 끝에 추가하는 데 사용됩니다. 이 함수는 **전용** 업데이트 중에 적용할 수 있습니다. 삽입 문맥에서 사용하는 경우 이 함수는 입력을 그대로 반환합니다. | <ul><li>어레이: **필수 여부** 프로필에 배열을 추가할 배열입니다.</li></ul> | upsert_array_append(ARRAY) | `upsert_array_append([123, 456])` | [123, 456] |
+| upsert_array_replace | 이 함수는 배열의 요소를 바꾸는 데 사용됩니다. 이 함수는 **전용** 업데이트 중에 적용할 수 있습니다. 삽입 문맥에서 사용하는 경우 이 함수는 입력을 그대로 반환합니다. | <ul><li>어레이: **필수 여부** 프로필에서 배열을 바꿀 배열입니다.</li></li> | upsert_array_replace(ARRAY) | `upsert_array_replace([123, 456], 1)` | [123, 456] |
 
 {style=&quot;table-layout:auto&quot;}
 

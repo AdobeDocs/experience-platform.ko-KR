@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;데이터 준비;api 안내서;매핑 세트
 solution: Experience Platform
 title: 매핑 집합 API 끝점
-topic-legacy: mapping sets
 description: Adobe Experience Platform API에서 '/mappingSets' 끝점을 사용하여 매핑 세트를 프로그래밍 방식으로 검색, 만들기, 업데이트 및 확인할 수 있습니다.
 exl-id: a4e4ddcd-164e-42aa-b7d1-ba59d70da142
-source-git-commit: b7800dd67c2d16747815f2cb3311ca9b6d6fa342
+source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
 workflow-type: tm+mt
 source-wordcount: '854'
 ht-degree: 3%

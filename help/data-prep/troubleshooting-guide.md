@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform;홈;인기 있는 주제
 title: 데이터 준비 문제 해결 안내서
-topic-legacy: troubleshooting
 description: 이 문서에서는 Adobe Experience Platform 데이터 준비에 대해 자주 묻는 질문과 답변을 제공합니다.
 exl-id: 810cfb2f-f80a-4aa7-ab3c-beb5de78708e
-source-git-commit: d0f5d1f55101ce15934289d4fcfd1f70c1b63fc7
+source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
 workflow-type: tm+mt
 source-wordcount: '342'
 ht-degree: 0%

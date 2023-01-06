@@ -2,9 +2,8 @@
 keywords: Experience Platform;홈;인기 항목;데이터 준비;api 안내서;샘플 데이터;
 solution: Experience Platform
 title: 샘플 데이터 API 끝점
-topic-legacy: sample data
-description: 'Adobe Experience Platform API에서 ''/samples'' 엔드포인트를 사용하여 매핑 샘플 데이터를 프로그래밍 방식으로 검색, 만들기, 업데이트 및 확인할 수 있습니다. '
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+description: Adobe Experience Platform API에서 '/samples' 엔드포인트를 사용하여 매핑 샘플 데이터를 프로그래밍 방식으로 검색, 만들기, 업데이트 및 확인할 수 있습니다.
+source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
 workflow-type: tm+mt
 source-wordcount: '401'
 ht-degree: 4%
