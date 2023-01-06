@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;제품 프로필
 solution: Experience Platform
 title: 제품 프로필에 대한 세부 사항 및 추가 서비스 관리
-topic-legacy: user guide
 description: 이 문서에서는 Adobe Admin Console에서 제품 프로필에 대한 세부 사항 및 추가 서비스를 관리하는 데 필요한 단계를 다룹니다. 프로필 설정 메뉴에서 프로필의 세부 사항을 구성하고 추가 서비스에 액세스할 수 있습니다.
 exl-id: ac9c2213-f2fb-44be-9334-87fada8a4717
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
 workflow-type: tm+mt
 source-wordcount: '303'
 ht-degree: 0%

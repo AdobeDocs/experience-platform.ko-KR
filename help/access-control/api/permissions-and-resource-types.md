@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;액세스 제어 권한;액세스 제어 리소스 유형;액세스 제어 api
 solution: Experience Platform
 title: 참조 API 끝점
-topic-legacy: developer guide
 description: 액세스 제어 API의 참조 끝점을 사용하면 사용 가능한 권한 및 리소스 유형의 이름을 볼 수 있습니다. 이 이름을 사용하여 현재 사용자에 대한 효과적인 액세스 제어 정책을 볼 수 있습니다.
 exl-id: 18d84d54-9258-4451-9aa8-7c647b45a8da
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
 workflow-type: tm+mt
 source-wordcount: '165'
 ht-degree: 1%

@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;문제 해결;액세스 제어
 solution: Experience Platform
 title: Access Control 문제 해결 안내서
-topic-legacy: troubleshooting guide
 description: 이 문서에서는 Adobe Experience Platform의 액세스 제어에 대해 자주 묻는 질문에 대한 답변을 제공합니다.
 exl-id: c299c0c4-dbee-4e6d-8af4-2446444bed69
-source-git-commit: 79ffdf35e27d74a64ea8e25544fdeeb293b58306
+source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
 workflow-type: tm+mt
 source-wordcount: '408'
 ht-degree: 0%

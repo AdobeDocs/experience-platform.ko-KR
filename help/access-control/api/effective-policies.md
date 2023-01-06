@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;유효 정책;액세스 제어 api
 solution: Experience Platform
 title: 유효 정책 API 끝점
-topic-legacy: developer guide
 description: Adobe Experience Platform용 액세스 제어 API를 사용하여 효과적인 액세스 정책을 보는 방법을 알아봅니다.
 exl-id: 555d73db-115d-4f4c-8bd2-b91477799591
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
 workflow-type: tm+mt
 source-wordcount: '295'
 ht-degree: 2%

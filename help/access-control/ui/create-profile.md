@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;제품 프로필
 solution: Experience Platform
 title: Adobe Admin Console에서 새 제품 프로필 만들기
-topic-legacy: user guide
 description: 이 문서에서는 Adobe Admin Console에서 새 제품 프로필을 만드는 데 필요한 단계에 대해 설명합니다. 새 프로필 만들기를 시작하려면 제품 프로필 탭으로 이동하여 새 프로필을 클릭합니다.
 exl-id: 47558f03-c3f7-4ead-affb-fcbfd7f1e918
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
 workflow-type: tm+mt
 source-wordcount: '322'
 ht-degree: 1%

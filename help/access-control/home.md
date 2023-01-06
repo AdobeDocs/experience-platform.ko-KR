@@ -1,11 +1,10 @@
 ---
 keywords: Experience Platform;홈;인기 항목;액세스 제어;adobe admin console
 solution: Experience Platform
-topic-legacy: overview
 title: 액세스 제어 개요
 description: Adobe Experience Platform에 대한 액세스 제어는 Adobe Admin Console을 통해 제공됩니다. 이 기능은 사용 권한 및 샌드박스를 사용자와 연결하는 Admin Console의 제품 프로필을 활용합니다.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: e2d3267715f693a321b2f4ce1bae0650f38c21d7
+source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
 workflow-type: tm+mt
 source-wordcount: '1419'
 ht-degree: 3%

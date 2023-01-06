@@ -1,16 +1,15 @@
 ---
 keywords: Experience Platform;프로필;실시간 고객 프로필;문제 해결;API;통합 프로필;통합 프로필;통합;프로필;rtcp;XDM 그래프
 title: Platform의 일반 액세스 가능성 기능
-topic-legacy: guide
 type: Documentation
 description: 키보드 탐색, 색상 팔레트 및 대비, 보조 기술 지원 등 Adobe Experience Platform에서 지원하는 일반적인 접근성 기능에 대해 자세히 알아보십시오.
-source-git-commit: 97f803f649b2c42b0449a2f8f0cff370ed1aba93
+exl-id: 4b7e2f2b-af51-4376-8a63-16c921cc7135
+source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
 workflow-type: tm+mt
 source-wordcount: '484'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
-
 
 # Experience Platform의 접근성 기능
 
@@ -20,7 +19,7 @@ Adobe Experience Platform은 음성 인식 소프트웨어 및 화면 판독기�
 
 장애가 있는 사용자는 디지털 컨텐츠에 액세스하고 소프트웨어 제품을 사용하기 위해 보조 기술로 알려진 하드웨어 및 소프트웨어에 자주 의존합니다. Adobe Experience Platform은 필요한 경우 시맨틱 코드, 텍스트 상당 항목, 레이블 및 ARIA와 같은 액세스 가능성 우수 사례를 사용하여 화면 판독기, 확대/축소 및 음성 인식 소프트웨어와 같은 여러 유형의 AT(보조 기술)를 지원합니다. UI(Experience Platform 사용자 인터페이스) 내의 대화형 요소는 해당 레이블, 액세스 가능한 이름 및 역할을 사용하여 목적과 해당 현재 상태를 모두 식별합니다. 이렇게 하면 화면 판독기와 같은 보조 기술이 사용자에게 레이블 및 기타 정보를 읽어 주어 사용자가 응용 프로그램 컨트롤과 쉽게 상호 작용할 수 있도록 합니다.
 
-## 키보드 액세스 가능성
+## 키보드 접근성
 
 Experience Platform은 전체 키보드 액세스 가능성을 지원하기 위해 노력하고 있습니다.
 
@@ -36,7 +35,7 @@ Experience Platform은 전체 키보드 액세스 가능성을 지원하기 위�
 
 ## 색상 팔레트 및 대비
 
-Experience Platform은 색상 대비 요구 사항을 포함하여 [WCAG 2.1 AA](https://www.w3.org/TR/WCAG/) 적합성을 준수하기 위해 최선을 다합니다. Experience Platform UI는 애플리케이션의 충분한 대비를 제공하여 시력이 낮거나 색각 이상이 있는 사용자가 편하게 볼 수 있도록 합니다.
+Experience Platform [WCAG 2.1 AA](https://www.w3.org/TR/WCAG/) 색상 대비 요구 사항을 포함하는 적합성 Experience Platform UI는 애플리케이션의 충분한 대비를 제공하여 시력이 낮거나 색각 이상이 있는 사용자가 편하게 볼 수 있도록 합니다.
 
 ![Experience Platform UI의 홈 페이지에 있는 색상 팔레트 및 대비.](images/homepage.png)
 
