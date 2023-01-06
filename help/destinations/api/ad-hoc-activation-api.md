@@ -3,10 +3,9 @@ keywords: Experience Platform;대상 api;임시 활성화;임시 세그먼트 �
 solution: Experience Platform
 title: 임시 활성화 API를 통해 대상자 세그먼트를 배치 대상에 활성화
 description: 이 문서에서는 활성화 전에 발생하는 세분화 작업을 포함하여 임시 활성화 API를 통해 대상 세그먼트를 활성화하는 종단 간 워크플로우를 보여줍니다.
-topic-legacy: tutorial
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: cdf96088be27cba1fb92f1348f002123614285fe
+source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '1563'
 ht-degree: 1%

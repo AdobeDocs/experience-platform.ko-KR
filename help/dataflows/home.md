@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;데이터 흐름;데이터 흐름;데이터 흐름;모니터링;데이터 흐름 모니터링;데이터 흐름 모니터링;모니터;데이터 흐름 모니터링;데이터 흐름 모니터링;흐름;흐름;흐름 서비스;
 solution: Experience Platform
 title: 데이터 흐름 개요
-topic-legacy: overview
 description: 이 문서에서는 Adobe Experience Platform에서 사용되는 방법을 설명하는 데이터 흐름들을 소개합니다.
 exl-id: 8fe08ffa-f095-4e9f-8bab-d060985f0236
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '238'
 ht-degree: 5%

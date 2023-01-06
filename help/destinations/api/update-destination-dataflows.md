@@ -2,11 +2,10 @@
 keywords: Experience Platform;홈;인기 항목;흐름 서비스;대상 데이터 흐름 업데이트
 solution: Experience Platform
 title: Flow Service API를 사용하여 대상 데이터 흐름 업데이트
-topic-legacy: overview
 type: Tutorial
 description: 이 자습서에서는 대상 데이터 흐름을 업데이트하는 단계를 설명합니다. 데이터 흐름을 활성화 또는 비활성화하거나, 기본 정보를 업데이트하거나, Flow Service API를 사용하여 세그먼트 및 속성을 추가 및 제거하는 방법을 알아봅니다.
 exl-id: 3f69ad12-940a-4aa1-a1ae-5ceea997a9ba
-source-git-commit: c35a29d4e9791b566d9633b651aecd2c16f88507
+source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '2408'
 ht-degree: 1%

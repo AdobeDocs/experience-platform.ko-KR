@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;세그먼트 모니터링;데이터 흐름 모니터링;데이터 흐름;세그멘테이션
 description: 세그먼테이션을 사용하면 실시간 고객 프로필 데이터에서 세그먼트와 대상을 만들 수 있습니다. 이 자습서에서는 Experience Platform 사용자 인터페이스를 사용하여 세그멘테이션 중에 데이터 흐름을 모니터링하는 방법에 대한 지침을 제공합니다.
 title: UI에서 세그먼트에 대한 데이터 흐름 모니터링
-topic-legacy: overview
 type: Tutorial
 exl-id: 32fd2ba1-0ff0-4ea7-8d55-80d53eebc02f
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '1923'
 ht-degree: 1%

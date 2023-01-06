@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;네임스페이스 목록;목록 네임스페이스
 solution: Experience Platform
 title: 사용 가능한 ID 네임스페이스 나열
-topic-legacy: API guide
 description: 사용 가능한 모든 네임스페이스를 나열합니다.
 exl-id: b65e5f86-143d-4ca5-8b3f-2c0a24433bbf
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 6d01bb4c5212ed1bb69b9a04c6bfafaad4b108f9
 workflow-type: tm+mt
 source-wordcount: '83'
 ht-degree: 4%

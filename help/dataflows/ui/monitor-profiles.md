@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;모니터 프로필;데이터 흐름 모니터링;데이터 흐름;프로필;실시간 고객 프로필
 description: 실시간 고객 프로필을 사용하면 온라인, 오프라인, CRM 및 타사 등 여러 채널의 데이터를 결합하여 각 개별 고객을 전체적으로 볼 수 있습니다. 이 자습서에서는 Experience Platform 사용자 인터페이스를 사용하여 프로필을 사용하여 데이터 흐름을 모니터링하는 방법에 대한 지침을 제공합니다.
 title: UI에서 프로필에 대한 데이터 흐름 모니터링
-topic-legacy: overview
 type: Tutorial
 exl-id: 00b624b2-f6d1-4ef2-abf2-52cede89b684
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '1074'
 ht-degree: 3%

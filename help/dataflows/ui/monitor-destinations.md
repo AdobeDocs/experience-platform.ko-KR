@@ -3,10 +3,9 @@ keywords: Experience Platform;홈;인기 항목;계정 모니터링;데이터 �
 description: 대상을 사용하면 Adobe Experience Platform에서 수많은 외부 파트너로 데이터를 활성화할 수 있습니다. 이 자습서에서는 Experience Platform 사용자 인터페이스를 사용하여 대상에 대한 데이터 흐름을 모니터링하는 방법에 대한 지침을 제공합니다.
 solution: Experience Platform
 title: UI에서 대상에 대한 데이터 흐름 모니터링
-topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '3211'
 ht-degree: 0%

@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;ID 네임스페이스;ID 네임스페이스
 solution: Experience Platform
 title: Identity Service 문제 해결 안내서
-topic-legacy: troubleshooting
 description: 이 문서에서는 Adobe Experience Platform Identity 서비스에 대해 자주 묻는 질문과 일반적인 오류에 대한 문제 해결 안내서를 제공합니다.
 exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
-source-git-commit: 3d308d18c926cabdf0bd4b52c0623d8ec9428ee8
+source-git-commit: ad9fb0bcc7bca55da432c72adc94d49e3c63ad6e
 workflow-type: tm+mt
 source-wordcount: '2180'
 ht-degree: 0%
@@ -40,7 +39,7 @@ ID 데이터는 개별 개인을 식별하는 데 사용할 수 있는 모든 �
 
 개인 ID 그래프는 결합된 ID와 연결된 ID 간의 관계가 조직에만 표시되는 개인 지도입니다.
 
-스트리밍 종단점에서 수집된 데이터에 둘 이상의 ID가 포함되거나 다음에 활성화된 데이터 세트로 전송되는 경우 [!DNL Identity Service]를 입력하면 해당 ID가 개인 ID 그래프에 연결됩니다. [!DNL Identity Service] 이 그래프를 활용하여 지정된 소비자 또는 엔티티에 대한 ID를 확보하여 ID 결합 및 프로필 병합을 허용합니다.
+스트리밍 종단점에서 수집된 데이터에 둘 이상의 ID가 포함되거나 다음에 사용할 수 있는 데이터 세트로 전송되는 경우 [!DNL Identity Service]를 입력하면 해당 ID가 개인 ID 그래프에 연결됩니다. [!DNL Identity Service] 이 그래프를 활용하여 지정된 소비자 또는 엔티티에 대한 ID를 확보하여 ID 결합 및 프로필 병합을 허용합니다.
 
 ## XDM 스키마 내에서 여러 ID 필드를 만들려면 어떻게 합니까?
 
