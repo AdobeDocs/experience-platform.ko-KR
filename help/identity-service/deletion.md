@@ -1,9 +1,9 @@
 ---
 title: Identity 서비스에서 삭제
 description: 이 문서에서는 Experience Platform에서 ID 데이터를 삭제하고 ID 그래프가 어떤 영향을 받을 수 있는지에 대한 명확한 설명을 제공하는 데 사용할 수 있는 다양한 메커니즘에 대한 개요를 제공합니다.
-source-git-commit: 506d47035622e45f72a8d92aeff6c5ec4e3d0856
+source-git-commit: 17e39f6e9d6e62e22f867de91d571593ba945c71
 workflow-type: tm+mt
-source-wordcount: '1333'
+source-wordcount: '1318'
 ht-degree: 1%
 
 ---
@@ -49,7 +49,7 @@ Privacy Service은 GDPR(General Data Protection Regulation) 및 CCPA(California 
 | 수락된 사용 사례 | 데이터 개인 정보 보호 요청(GDPR, CCPA)만 지원합니다. | Experience Platform에 저장된 데이터 관리. |
 | 예상 지연 | 일 - 주 | 일 |
 | 영향을 받는 서비스 | Privacy Service에서 단일 ID 삭제를 사용하여 데이터를 ID 서비스, 실시간 고객 프로필 또는 데이터 레이크에서 삭제할지 여부를 선택할 수 있습니다. | 데이터 위생에서 단일 ID를 삭제하면 ID 서비스, 실시간 고객 프로필 및 데이터 레이크에서 선택한 데이터가 삭제됩니다. |
-| 삭제 패턴 | ID 서비스에서 ID를 삭제합니다. | ID 서비스, 모든 데이터 세트 또는 단일 데이터 세트에 대한 모든 해당 링크와 ID를 삭제합니다. |
+| 삭제 패턴 | ID 서비스에서 ID를 삭제합니다. | ID 서비스에서 ID를 삭제합니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
